@@ -91,36 +91,173 @@ trait SchemaSpan extends js.Object {
 
 object SchemaSpan {
   @scala.inline
-  def apply(
-    attributes: SchemaAttributes = null,
-    childSpanCount: Int | Double = null,
-    displayName: SchemaTruncatableString = null,
-    endTime: String = null,
-    links: SchemaLinks = null,
-    name: String = null,
-    parentSpanId: String = null,
-    sameProcessAsParentSpan: js.UndefOr[Boolean] = js.undefined,
-    spanId: String = null,
-    stackTrace: SchemaStackTrace = null,
-    startTime: String = null,
-    status: SchemaStatus = null,
-    timeEvents: SchemaTimeEvents = null
-  ): SchemaSpan = {
+  def apply(): SchemaSpan = {
     val __obj = js.Dynamic.literal()
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (childSpanCount != null) __obj.updateDynamic("childSpanCount")(childSpanCount.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
-    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (parentSpanId != null) __obj.updateDynamic("parentSpanId")(parentSpanId.asInstanceOf[js.Any])
-    if (!js.isUndefined(sameProcessAsParentSpan)) __obj.updateDynamic("sameProcessAsParentSpan")(sameProcessAsParentSpan.asInstanceOf[js.Any])
-    if (spanId != null) __obj.updateDynamic("spanId")(spanId.asInstanceOf[js.Any])
-    if (stackTrace != null) __obj.updateDynamic("stackTrace")(stackTrace.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (timeEvents != null) __obj.updateDynamic("timeEvents")(timeEvents.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSpan]
   }
+  @scala.inline
+  implicit class SchemaSpanOps[Self <: SchemaSpan] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: SchemaAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildSpanCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childSpanCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildSpanCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childSpanCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: SchemaTruncatableString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinks(value: SchemaLinks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentSpanId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSpanId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentSpanId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSpanId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSameProcessAsParentSpan(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sameProcessAsParentSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSameProcessAsParentSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sameProcessAsParentSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpanId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spanId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpanId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spanId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackTrace(value: SchemaStackTrace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackTrace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackTrace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackTrace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: SchemaStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeEvents(value: SchemaTimeEvents): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeEvents")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

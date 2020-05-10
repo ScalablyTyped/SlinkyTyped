@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BlockWithoutTransactionData extends AbstractBlock {
-  var transactions: js.Array[String]
+  var transactions: js.Array[String] = js.native
 }
 
 object BlockWithoutTransactionData {
@@ -25,18 +26,24 @@ object BlockWithoutTransactionData {
     totalDifficulty: default,
     transactions: js.Array[String],
     transactionsRoot: String,
-    uncles: js.Array[String],
-    hash: String = null,
-    logsBloom: String = null,
-    nonce: String = null,
-    number: Int | Double = null
+    uncles: js.Array[String]
   ): BlockWithoutTransactionData = {
     val __obj = js.Dynamic.literal(difficulty = difficulty.asInstanceOf[js.Any], extraData = extraData.asInstanceOf[js.Any], gasLimit = gasLimit.asInstanceOf[js.Any], gasUsed = gasUsed.asInstanceOf[js.Any], miner = miner.asInstanceOf[js.Any], parentHash = parentHash.asInstanceOf[js.Any], sha3Uncles = sha3Uncles.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], stateRoot = stateRoot.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any], totalDifficulty = totalDifficulty.asInstanceOf[js.Any], transactions = transactions.asInstanceOf[js.Any], transactionsRoot = transactionsRoot.asInstanceOf[js.Any], uncles = uncles.asInstanceOf[js.Any])
-    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
-    if (logsBloom != null) __obj.updateDynamic("logsBloom")(logsBloom.asInstanceOf[js.Any])
-    if (nonce != null) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
-    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockWithoutTransactionData]
   }
+  @scala.inline
+  implicit class BlockWithoutTransactionDataOps[Self <: BlockWithoutTransactionData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransactions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactions")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

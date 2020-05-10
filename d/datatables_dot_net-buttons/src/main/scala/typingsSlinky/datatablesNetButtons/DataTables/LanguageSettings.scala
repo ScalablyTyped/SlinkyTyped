@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LanguageSettings extends js.Object {
-  var buttons: js.UndefOr[js.Object] = js.undefined
+  var buttons: js.UndefOr[js.Object] = js.native
 }
 
 object LanguageSettings {
   @scala.inline
-  def apply(buttons: js.Object = null): LanguageSettings = {
+  def apply(): LanguageSettings = {
     val __obj = js.Dynamic.literal()
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
     __obj.asInstanceOf[LanguageSettings]
   }
+  @scala.inline
+  implicit class LanguageSettingsOps[Self <: LanguageSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButtons(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

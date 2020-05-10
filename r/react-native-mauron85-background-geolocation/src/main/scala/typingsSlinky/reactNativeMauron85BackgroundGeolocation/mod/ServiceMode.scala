@@ -12,10 +12,8 @@ trait ServiceMode extends js.Object
 
 object ServiceMode {
   @scala.inline
-  def `0`: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationNumbers.`0` = 0.asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationNumbers.`1` = this.cast(1)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `1`: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationNumbers.`1` = 1.asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationNumbers.`1`]
 }
 

@@ -6,14 +6,14 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Pbf extends js.Object {
-  var buf: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var buf: js.typedarray.Uint8Array = js.native
   var length: Double = js.native
   var pos: Double = js.native
   var `type`: Double = js.native
   def destroy(): Unit = js.native
-  def finish(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def finish(): js.typedarray.Uint8Array = js.native
   def readBoolean(): Boolean = js.native
-  def readBytes(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def readBytes(): js.typedarray.Uint8Array = js.native
   def readDouble(): Double = js.native
   def readFields[T](
     readField: js.Function3[/* tag */ Double, /* result */ js.UndefOr[T], /* pbf */ js.UndefOr[this.type], Unit]
@@ -67,8 +67,8 @@ trait Pbf extends js.Object {
   def skip(`val`: Double): Unit = js.native
   def writeBoolean(`val`: Boolean): Unit = js.native
   def writeBooleanField(tag: Double, `val`: Boolean): Unit = js.native
-  def writeBytes(buffer: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
-  def writeBytesField(tag: Double, buffer: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+  def writeBytes(buffer: js.typedarray.Uint8Array): Unit = js.native
+  def writeBytesField(tag: Double, buffer: js.typedarray.Uint8Array): Unit = js.native
   def writeDouble(`val`: Double): Unit = js.native
   def writeDoubleField(tag: Double, `val`: Double): Unit = js.native
   def writeFixed32(`val`: Double): Unit = js.native

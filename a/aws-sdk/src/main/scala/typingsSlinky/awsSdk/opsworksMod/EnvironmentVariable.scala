@@ -22,10 +22,41 @@ trait EnvironmentVariable extends js.Object {
 
 object EnvironmentVariable {
   @scala.inline
-  def apply(Key: String, Value: String, Secure: js.UndefOr[scala.Boolean] = js.undefined): EnvironmentVariable = {
+  def apply(Key: String, Value: String): EnvironmentVariable = {
     val __obj = js.Dynamic.literal(Key = Key.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any])
-    if (!js.isUndefined(Secure)) __obj.updateDynamic("Secure")(Secure.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentVariable]
   }
+  @scala.inline
+  implicit class EnvironmentVariableOps[Self <: EnvironmentVariable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Secure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Secure")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

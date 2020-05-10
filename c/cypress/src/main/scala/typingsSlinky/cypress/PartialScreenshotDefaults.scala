@@ -11,42 +11,140 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<cypress.cypress.Cypress.ScreenshotDefaultsOptions> */
+@js.native
 trait PartialScreenshotDefaults extends js.Object {
-  var afterScreenshot: js.UndefOr[js.Function1[/* doc */ Document_, Unit]] = js.undefined
-  var beforeScreenshot: js.UndefOr[js.Function1[/* doc */ Document_, Unit]] = js.undefined
-  var blackout: js.UndefOr[js.Array[String]] = js.undefined
-  var capture: js.UndefOr[runner | viewport | fullPage] = js.undefined
-  var clip: js.UndefOr[Dimensions] = js.undefined
-  var disableTimersAndAnimations: js.UndefOr[Boolean] = js.undefined
-  var padding: js.UndefOr[Padding] = js.undefined
-  var scale: js.UndefOr[Boolean] = js.undefined
-  var screenshotOnRunFailure: js.UndefOr[Boolean] = js.undefined
+  var afterScreenshot: js.UndefOr[js.Function1[/* doc */ Document_, Unit]] = js.native
+  var beforeScreenshot: js.UndefOr[js.Function1[/* doc */ Document_, Unit]] = js.native
+  var blackout: js.UndefOr[js.Array[String]] = js.native
+  var capture: js.UndefOr[runner | viewport | fullPage] = js.native
+  var clip: js.UndefOr[Dimensions] = js.native
+  var disableTimersAndAnimations: js.UndefOr[Boolean] = js.native
+  var padding: js.UndefOr[Padding] = js.native
+  var scale: js.UndefOr[Boolean] = js.native
+  var screenshotOnRunFailure: js.UndefOr[Boolean] = js.native
 }
 
 object PartialScreenshotDefaults {
   @scala.inline
-  def apply(
-    afterScreenshot: /* doc */ Document_ => Unit = null,
-    beforeScreenshot: /* doc */ Document_ => Unit = null,
-    blackout: js.Array[String] = null,
-    capture: runner | viewport | fullPage = null,
-    clip: Dimensions = null,
-    disableTimersAndAnimations: js.UndefOr[Boolean] = js.undefined,
-    padding: Padding = null,
-    scale: js.UndefOr[Boolean] = js.undefined,
-    screenshotOnRunFailure: js.UndefOr[Boolean] = js.undefined
-  ): PartialScreenshotDefaults = {
+  def apply(): PartialScreenshotDefaults = {
     val __obj = js.Dynamic.literal()
-    if (afterScreenshot != null) __obj.updateDynamic("afterScreenshot")(js.Any.fromFunction1(afterScreenshot))
-    if (beforeScreenshot != null) __obj.updateDynamic("beforeScreenshot")(js.Any.fromFunction1(beforeScreenshot))
-    if (blackout != null) __obj.updateDynamic("blackout")(blackout.asInstanceOf[js.Any])
-    if (capture != null) __obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
-    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableTimersAndAnimations)) __obj.updateDynamic("disableTimersAndAnimations")(disableTimersAndAnimations.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (!js.isUndefined(screenshotOnRunFailure)) __obj.updateDynamic("screenshotOnRunFailure")(screenshotOnRunFailure.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialScreenshotDefaults]
   }
+  @scala.inline
+  implicit class PartialScreenshotDefaultsOps[Self <: PartialScreenshotDefaults] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterScreenshot(value: /* doc */ Document_ => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterScreenshot")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterScreenshot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterScreenshot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeScreenshot(value: /* doc */ Document_ => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeScreenshot")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeScreenshot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeScreenshot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlackout(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blackout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlackout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blackout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCapture(value: runner | viewport | fullPage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClip(value: Dimensions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableTimersAndAnimations(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTimersAndAnimations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableTimersAndAnimations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTimersAndAnimations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Padding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScale(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenshotOnRunFailure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshotOnRunFailure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenshotOnRunFailure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshotOnRunFailure")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

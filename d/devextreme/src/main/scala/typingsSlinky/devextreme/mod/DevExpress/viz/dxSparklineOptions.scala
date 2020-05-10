@@ -1,32 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonCancelComponentData
-import typingsSlinky.devextreme.AnonComponentTElementDxElementModelAny
-import typingsSlinky.devextreme.AnonElement
-import typingsSlinky.devextreme.AnonElementDxElementModelAny
-import typingsSlinky.devextreme.AnonFormatModel
-import typingsSlinky.devextreme.AnonModel
-import typingsSlinky.devextreme.AnonName
-import typingsSlinky.devextreme.AnonTargetAny
 import typingsSlinky.devextreme.devextremeStrings.area
 import typingsSlinky.devextreme.devextremeStrings.bar
 import typingsSlinky.devextreme.devextremeStrings.circle
 import typingsSlinky.devextreme.devextremeStrings.cross
-import typingsSlinky.devextreme.devextremeStrings.genericDotcarmine
-import typingsSlinky.devextreme.devextremeStrings.genericDotcontrast
-import typingsSlinky.devextreme.devextremeStrings.genericDotdark
-import typingsSlinky.devextreme.devextremeStrings.genericDotdarkmoon
-import typingsSlinky.devextreme.devextremeStrings.genericDotdarkviolet
-import typingsSlinky.devextreme.devextremeStrings.genericDotgreenmist
-import typingsSlinky.devextreme.devextremeStrings.genericDotlight
-import typingsSlinky.devextreme.devextremeStrings.genericDotsoftblue
-import typingsSlinky.devextreme.devextremeStrings.ios7Dotdefault
 import typingsSlinky.devextreme.devextremeStrings.line
-import typingsSlinky.devextreme.devextremeStrings.materialDotblueDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotlimeDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotorangeDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotpurpleDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDottealDotlight
 import typingsSlinky.devextreme.devextremeStrings.polygon
 import typingsSlinky.devextreme.devextremeStrings.spline
 import typingsSlinky.devextreme.devextremeStrings.splinearea
@@ -41,153 +19,331 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxSparklineOptions extends BaseSparklineOptions[dxSparkline] {
   /** Specifies the data source field that provides arguments for a sparkline. */
-  var argumentField: js.UndefOr[String] = js.undefined
+  var argumentField: js.UndefOr[String] = js.native
   /** Sets a color for the bars indicating negative values. Available for a sparkline of the bar type only. */
-  var barNegativeColor: js.UndefOr[String] = js.undefined
+  var barNegativeColor: js.UndefOr[String] = js.native
   /** Sets a color for the bars indicating positive values. Available for a sparkline of the bar type only. */
-  var barPositiveColor: js.UndefOr[String] = js.undefined
+  var barPositiveColor: js.UndefOr[String] = js.native
   /** Binds the widget to data. */
-  var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.undefined
+  var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.native
   /** Sets a color for the boundary of both the first and last points on a sparkline. */
-  var firstLastColor: js.UndefOr[String] = js.undefined
+  var firstLastColor: js.UndefOr[String] = js.native
   /** Specifies whether the sparkline should ignore null data points. */
-  var ignoreEmptyPoints: js.UndefOr[Boolean] = js.undefined
+  var ignoreEmptyPoints: js.UndefOr[Boolean] = js.native
   /** Sets a color for a line on a sparkline. Available for the sparklines of the line- and area-like types. */
-  var lineColor: js.UndefOr[String] = js.undefined
+  var lineColor: js.UndefOr[String] = js.native
   /** Specifies a width for a line on a sparkline. Available for the sparklines of the line- and area-like types. */
-  var lineWidth: js.UndefOr[Double] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.native
   /** Sets a color for the bars indicating the values that are less than the winloss threshold. Available for a sparkline of the winloss type only. */
-  var lossColor: js.UndefOr[String] = js.undefined
+  var lossColor: js.UndefOr[String] = js.native
   /** Sets a color for the boundary of the maximum point on a sparkline. */
-  var maxColor: js.UndefOr[String] = js.undefined
+  var maxColor: js.UndefOr[String] = js.native
   /** Specifies the maximum value of the sparkline's value axis. */
-  var maxValue: js.UndefOr[Double] = js.undefined
+  var maxValue: js.UndefOr[Double] = js.native
   /** Sets a color for the boundary of the minimum point on a sparkline. */
-  var minColor: js.UndefOr[String] = js.undefined
+  var minColor: js.UndefOr[String] = js.native
   /** Specifies the minimum value of the sparkline value axis. */
-  var minValue: js.UndefOr[Double] = js.undefined
+  var minValue: js.UndefOr[Double] = js.native
   /** Sets a color for points on a sparkline. Available for the sparklines of the line- and area-like types. */
-  var pointColor: js.UndefOr[String] = js.undefined
+  var pointColor: js.UndefOr[String] = js.native
   /** Specifies the diameter of sparkline points in pixels. Available for the sparklines of line- and area-like types. */
-  var pointSize: js.UndefOr[Double] = js.undefined
+  var pointSize: js.UndefOr[Double] = js.native
   /** Specifies a symbol to use as a point marker on a sparkline. Available for the sparklines of the line- and area-like types. */
-  var pointSymbol: js.UndefOr[circle | cross | polygon | square | triangle] = js.undefined
+  var pointSymbol: js.UndefOr[circle | cross | polygon | square | triangle] = js.native
   /** Specifies whether or not to indicate both the first and last values on a sparkline. */
-  var showFirstLast: js.UndefOr[Boolean] = js.undefined
+  var showFirstLast: js.UndefOr[Boolean] = js.native
   /** Specifies whether or not to indicate both the minimum and maximum values on a sparkline. */
-  var showMinMax: js.UndefOr[Boolean] = js.undefined
+  var showMinMax: js.UndefOr[Boolean] = js.native
   /** Determines the type of a sparkline. */
-  var `type`: js.UndefOr[area | bar | line | spline | splinearea | steparea | stepline | winloss] = js.undefined
+  var `type`: js.UndefOr[area | bar | line | spline | splinearea | steparea | stepline | winloss] = js.native
   /** Specifies the data source field that provides values for a sparkline. */
-  var valueField: js.UndefOr[String] = js.undefined
+  var valueField: js.UndefOr[String] = js.native
   /** Sets a color for the bars indicating the values greater than a winloss threshold. Available for a sparkline of the winloss type only. */
-  var winColor: js.UndefOr[String] = js.undefined
+  var winColor: js.UndefOr[String] = js.native
   /** Specifies a value that serves as a threshold for the sparkline of the winloss type. */
-  var winlossThreshold: js.UndefOr[Double] = js.undefined
+  var winlossThreshold: js.UndefOr[Double] = js.native
 }
 
 object dxSparklineOptions {
   @scala.inline
-  def apply(
-    argumentField: String = null,
-    barNegativeColor: String = null,
-    barPositiveColor: String = null,
-    bindingOptions: js.Any = null,
-    dataSource: js.Array[_] | DataSource | DataSourceOptions | String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    elementAttr: js.Any = null,
-    export: BaseWidgetExport = null,
-    firstLastColor: String = null,
-    height: Double | String | (js.Function0[Double | String]) = null,
-    ignoreEmptyPoints: js.UndefOr[Boolean] = js.undefined,
-    lineColor: String = null,
-    lineWidth: Int | Double = null,
-    loadingIndicator: BaseWidgetLoadingIndicator = null,
-    lossColor: String = null,
-    margin: BaseWidgetMargin = null,
-    maxColor: String = null,
-    maxValue: Int | Double = null,
-    minColor: String = null,
-    minValue: Int | Double = null,
-    onDisposing: /* e */ AnonModel[dxSparkline] => _ = null,
-    onDrawn: /* e */ AnonComponentTElementDxElementModelAny[dxSparkline] => _ = null,
-    onExported: /* e */ AnonComponentTElementDxElementModelAny[dxSparkline] => _ = null,
-    onExporting: /* e */ AnonFormatModel[dxSparkline] => _ = null,
-    onFileSaving: /* e */ AnonCancelComponentData[dxSparkline] => _ = null,
-    onIncidentOccurred: /* e */ AnonTargetAny[dxSparkline] => _ = null,
-    onInitialized: /* e */ AnonElement[dxSparkline] => _ = null,
-    onOptionChanged: /* e */ AnonName[dxSparkline] => _ = null,
-    onTooltipHidden: /* e */ AnonElementDxElementModelAny[dxSparkline] => _ = null,
-    onTooltipShown: /* e */ AnonElementDxElementModelAny[dxSparkline] => _ = null,
-    pathModified: js.UndefOr[Boolean] = js.undefined,
-    pointColor: String = null,
-    pointSize: Int | Double = null,
-    pointSymbol: circle | cross | polygon | square | triangle = null,
-    redrawOnResize: js.UndefOr[Boolean] = js.undefined,
-    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
-    showFirstLast: js.UndefOr[Boolean] = js.undefined,
-    showMinMax: js.UndefOr[Boolean] = js.undefined,
-    size: BaseWidgetSize = null,
-    theme: genericDotdark | genericDotlight | genericDotcontrast | ios7Dotdefault | genericDotcarmine | genericDotdarkmoon | genericDotdarkviolet | genericDotgreenmist | genericDotsoftblue | materialDotblueDotlight | materialDotlimeDotlight | materialDotorangeDotlight | materialDotpurpleDotlight | materialDottealDotlight = null,
-    title: BaseWidgetTitle | String = null,
-    tooltip: BaseSparklineTooltip = null,
-    `type`: area | bar | line | spline | splinearea | steparea | stepline | winloss = null,
-    valueField: String = null,
-    width: Double | String | (js.Function0[Double | String]) = null,
-    winColor: String = null,
-    winlossThreshold: Int | Double = null
-  ): dxSparklineOptions = {
+  def apply(): dxSparklineOptions = {
     val __obj = js.Dynamic.literal()
-    if (argumentField != null) __obj.updateDynamic("argumentField")(argumentField.asInstanceOf[js.Any])
-    if (barNegativeColor != null) __obj.updateDynamic("barNegativeColor")(barNegativeColor.asInstanceOf[js.Any])
-    if (barPositiveColor != null) __obj.updateDynamic("barPositiveColor")(barPositiveColor.asInstanceOf[js.Any])
-    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
-    if (export != null) __obj.updateDynamic("export")(export.asInstanceOf[js.Any])
-    if (firstLastColor != null) __obj.updateDynamic("firstLastColor")(firstLastColor.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreEmptyPoints)) __obj.updateDynamic("ignoreEmptyPoints")(ignoreEmptyPoints.asInstanceOf[js.Any])
-    if (lineColor != null) __obj.updateDynamic("lineColor")(lineColor.asInstanceOf[js.Any])
-    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
-    if (loadingIndicator != null) __obj.updateDynamic("loadingIndicator")(loadingIndicator.asInstanceOf[js.Any])
-    if (lossColor != null) __obj.updateDynamic("lossColor")(lossColor.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (maxColor != null) __obj.updateDynamic("maxColor")(maxColor.asInstanceOf[js.Any])
-    if (maxValue != null) __obj.updateDynamic("maxValue")(maxValue.asInstanceOf[js.Any])
-    if (minColor != null) __obj.updateDynamic("minColor")(minColor.asInstanceOf[js.Any])
-    if (minValue != null) __obj.updateDynamic("minValue")(minValue.asInstanceOf[js.Any])
-    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
-    if (onDrawn != null) __obj.updateDynamic("onDrawn")(js.Any.fromFunction1(onDrawn))
-    if (onExported != null) __obj.updateDynamic("onExported")(js.Any.fromFunction1(onExported))
-    if (onExporting != null) __obj.updateDynamic("onExporting")(js.Any.fromFunction1(onExporting))
-    if (onFileSaving != null) __obj.updateDynamic("onFileSaving")(js.Any.fromFunction1(onFileSaving))
-    if (onIncidentOccurred != null) __obj.updateDynamic("onIncidentOccurred")(js.Any.fromFunction1(onIncidentOccurred))
-    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
-    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
-    if (onTooltipHidden != null) __obj.updateDynamic("onTooltipHidden")(js.Any.fromFunction1(onTooltipHidden))
-    if (onTooltipShown != null) __obj.updateDynamic("onTooltipShown")(js.Any.fromFunction1(onTooltipShown))
-    if (!js.isUndefined(pathModified)) __obj.updateDynamic("pathModified")(pathModified.asInstanceOf[js.Any])
-    if (pointColor != null) __obj.updateDynamic("pointColor")(pointColor.asInstanceOf[js.Any])
-    if (pointSize != null) __obj.updateDynamic("pointSize")(pointSize.asInstanceOf[js.Any])
-    if (pointSymbol != null) __obj.updateDynamic("pointSymbol")(pointSymbol.asInstanceOf[js.Any])
-    if (!js.isUndefined(redrawOnResize)) __obj.updateDynamic("redrawOnResize")(redrawOnResize.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(showFirstLast)) __obj.updateDynamic("showFirstLast")(showFirstLast.asInstanceOf[js.Any])
-    if (!js.isUndefined(showMinMax)) __obj.updateDynamic("showMinMax")(showMinMax.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (valueField != null) __obj.updateDynamic("valueField")(valueField.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (winColor != null) __obj.updateDynamic("winColor")(winColor.asInstanceOf[js.Any])
-    if (winlossThreshold != null) __obj.updateDynamic("winlossThreshold")(winlossThreshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxSparklineOptions]
   }
+  @scala.inline
+  implicit class dxSparklineOptionsOps[Self <: dxSparklineOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgumentField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgumentField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarNegativeColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barNegativeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarNegativeColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barNegativeColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarPositiveColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barPositiveColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarPositiveColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barPositiveColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: js.Array[_] | DataSource | DataSourceOptions | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstLastColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstLastColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstLastColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstLastColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreEmptyPoints(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreEmptyPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEmptyPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLossColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lossColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLossColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lossColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointSymbol(value: circle | cross | polygon | square | triangle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointSymbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointSymbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowFirstLast(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFirstLast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowFirstLast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFirstLast")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowMinMax(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMinMax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowMinMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMinMax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: area | bar | line | spline | splinearea | steparea | stepline | winloss): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWinColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("winColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWinColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("winColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWinlossThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("winlossThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWinlossThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("winlossThreshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

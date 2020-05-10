@@ -4,39 +4,122 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RSA_JWK extends js.Object {
-  var d: js.UndefOr[String] = js.undefined
-  var dp: js.UndefOr[String] = js.undefined
-  var dq: js.UndefOr[String] = js.undefined
-  var e: String
-  var kty: String
-  var n: String
-  var p: js.UndefOr[String] = js.undefined
-  var q: js.UndefOr[String] = js.undefined
-  var qi: js.UndefOr[String] = js.undefined
+  var d: js.UndefOr[String] = js.native
+  var dp: js.UndefOr[String] = js.native
+  var dq: js.UndefOr[String] = js.native
+  var e: String = js.native
+  var kty: String = js.native
+  var n: String = js.native
+  var p: js.UndefOr[String] = js.native
+  var q: js.UndefOr[String] = js.native
+  var qi: js.UndefOr[String] = js.native
 }
 
 object RSA_JWK {
   @scala.inline
-  def apply(
-    e: String,
-    kty: String,
-    n: String,
-    d: String = null,
-    dp: String = null,
-    dq: String = null,
-    p: String = null,
-    q: String = null,
-    qi: String = null
-  ): RSA_JWK = {
+  def apply(e: String, kty: String, n: String): RSA_JWK = {
     val __obj = js.Dynamic.literal(e = e.asInstanceOf[js.Any], kty = kty.asInstanceOf[js.Any], n = n.asInstanceOf[js.Any])
-    if (d != null) __obj.updateDynamic("d")(d.asInstanceOf[js.Any])
-    if (dp != null) __obj.updateDynamic("dp")(dp.asInstanceOf[js.Any])
-    if (dq != null) __obj.updateDynamic("dq")(dq.asInstanceOf[js.Any])
-    if (p != null) __obj.updateDynamic("p")(p.asInstanceOf[js.Any])
-    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
-    if (qi != null) __obj.updateDynamic("qi")(qi.asInstanceOf[js.Any])
     __obj.asInstanceOf[RSA_JWK]
   }
+  @scala.inline
+  implicit class RSA_JWKOps[Self <: RSA_JWK] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("e")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withN(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withD(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutD: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDq(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dq")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDq: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dq")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withP(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutP: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQi(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qi")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

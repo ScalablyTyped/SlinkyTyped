@@ -2,38 +2,107 @@ package typingsSlinky.passportWindowsauth.mod
 
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.passportWindowsauth.AnonBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var getUserNameFromHeader: js.UndefOr[js.Function1[/* req */ Request_[ParamsDictionary], String]] = js.undefined
-  var integrated: js.UndefOr[Boolean] = js.undefined
-  var ldap: js.UndefOr[AnonBase] = js.undefined
-  var passReqToCallback: js.UndefOr[Boolean] = js.undefined
-  var passwordField: js.UndefOr[String] = js.undefined
-  var usernameField: js.UndefOr[String] = js.undefined
+  var getUserNameFromHeader: js.UndefOr[js.Function1[/* req */ Request_[ParamsDictionary, _, _, Query], String]] = js.native
+  var integrated: js.UndefOr[Boolean] = js.native
+  var ldap: js.UndefOr[AnonBase] = js.native
+  var passReqToCallback: js.UndefOr[Boolean] = js.native
+  var passwordField: js.UndefOr[String] = js.native
+  var usernameField: js.UndefOr[String] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    getUserNameFromHeader: /* req */ Request_[ParamsDictionary] => String = null,
-    integrated: js.UndefOr[Boolean] = js.undefined,
-    ldap: AnonBase = null,
-    passReqToCallback: js.UndefOr[Boolean] = js.undefined,
-    passwordField: String = null,
-    usernameField: String = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (getUserNameFromHeader != null) __obj.updateDynamic("getUserNameFromHeader")(js.Any.fromFunction1(getUserNameFromHeader))
-    if (!js.isUndefined(integrated)) __obj.updateDynamic("integrated")(integrated.asInstanceOf[js.Any])
-    if (ldap != null) __obj.updateDynamic("ldap")(ldap.asInstanceOf[js.Any])
-    if (!js.isUndefined(passReqToCallback)) __obj.updateDynamic("passReqToCallback")(passReqToCallback.asInstanceOf[js.Any])
-    if (passwordField != null) __obj.updateDynamic("passwordField")(passwordField.asInstanceOf[js.Any])
-    if (usernameField != null) __obj.updateDynamic("usernameField")(usernameField.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetUserNameFromHeader(value: /* req */ Request_[ParamsDictionary, _, _, Query] => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserNameFromHeader")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetUserNameFromHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserNameFromHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegrated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegrated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLdap(value: AnonBase): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ldap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLdap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ldap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassReqToCallback(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassReqToCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasswordField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasswordField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsernameField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usernameField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsernameField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usernameField")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

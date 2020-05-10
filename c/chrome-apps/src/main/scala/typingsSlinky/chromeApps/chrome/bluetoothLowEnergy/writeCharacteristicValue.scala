@@ -13,10 +13,6 @@ object writeCharacteristicValue extends js.Object {
     * @param value The value that should be sent to the remote characteristic as part of the write request.
     * @param callback Called when the write request has completed.
     */
-  def apply(
-    characteristicId: String,
-    value: scala.scalajs.js.typedarray.ArrayBuffer,
-    callback: js.Function0[Unit]
-  ): Unit = js.native
+  def apply(characteristicId: String, value: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
 }
 

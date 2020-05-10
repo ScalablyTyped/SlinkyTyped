@@ -22,10 +22,41 @@ trait CreateHomeRegionControlRequest extends js.Object {
 
 object CreateHomeRegionControlRequest {
   @scala.inline
-  def apply(HomeRegion: HomeRegion, Target: Target, DryRun: js.UndefOr[Boolean] = js.undefined): CreateHomeRegionControlRequest = {
+  def apply(HomeRegion: HomeRegion, Target: Target): CreateHomeRegionControlRequest = {
     val __obj = js.Dynamic.literal(HomeRegion = HomeRegion.asInstanceOf[js.Any], Target = Target.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateHomeRegionControlRequest]
   }
+  @scala.inline
+  implicit class CreateHomeRegionControlRequestOps[Self <: CreateHomeRegionControlRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHomeRegion(value: HomeRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HomeRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: Target): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: DryRun): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -30,18 +30,65 @@ trait SchemaEventUpdateResponse extends js.Object {
 
 object SchemaEventUpdateResponse {
   @scala.inline
-  def apply(
-    batchFailures: js.Array[SchemaEventBatchRecordFailure] = null,
-    eventFailures: js.Array[SchemaEventRecordFailure] = null,
-    kind: String = null,
-    playerEvents: js.Array[SchemaPlayerEvent] = null
-  ): SchemaEventUpdateResponse = {
+  def apply(): SchemaEventUpdateResponse = {
     val __obj = js.Dynamic.literal()
-    if (batchFailures != null) __obj.updateDynamic("batchFailures")(batchFailures.asInstanceOf[js.Any])
-    if (eventFailures != null) __obj.updateDynamic("eventFailures")(eventFailures.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (playerEvents != null) __obj.updateDynamic("playerEvents")(playerEvents.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEventUpdateResponse]
   }
+  @scala.inline
+  implicit class SchemaEventUpdateResponseOps[Self <: SchemaEventUpdateResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchFailures(value: js.Array[SchemaEventBatchRecordFailure]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchFailures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchFailures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchFailures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventFailures(value: js.Array[SchemaEventRecordFailure]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventFailures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventFailures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventFailures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayerEvents(value: js.Array[SchemaPlayerEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playerEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayerEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playerEvents")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

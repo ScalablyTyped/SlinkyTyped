@@ -26,17 +26,59 @@ trait SetUserPoolMfaConfigRequest extends js.Object {
 
 object SetUserPoolMfaConfigRequest {
   @scala.inline
-  def apply(
-    UserPoolId: UserPoolIdType,
-    MfaConfiguration: UserPoolMfaType = null,
-    SmsMfaConfiguration: SmsMfaConfigType = null,
-    SoftwareTokenMfaConfiguration: SoftwareTokenMfaConfigType = null
-  ): SetUserPoolMfaConfigRequest = {
+  def apply(UserPoolId: UserPoolIdType): SetUserPoolMfaConfigRequest = {
     val __obj = js.Dynamic.literal(UserPoolId = UserPoolId.asInstanceOf[js.Any])
-    if (MfaConfiguration != null) __obj.updateDynamic("MfaConfiguration")(MfaConfiguration.asInstanceOf[js.Any])
-    if (SmsMfaConfiguration != null) __obj.updateDynamic("SmsMfaConfiguration")(SmsMfaConfiguration.asInstanceOf[js.Any])
-    if (SoftwareTokenMfaConfiguration != null) __obj.updateDynamic("SoftwareTokenMfaConfiguration")(SoftwareTokenMfaConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetUserPoolMfaConfigRequest]
   }
+  @scala.inline
+  implicit class SetUserPoolMfaConfigRequestOps[Self <: SetUserPoolMfaConfigRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserPoolId(value: UserPoolIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMfaConfiguration(value: UserPoolMfaType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MfaConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMfaConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MfaConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmsMfaConfiguration(value: SmsMfaConfigType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SmsMfaConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmsMfaConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SmsMfaConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSoftwareTokenMfaConfiguration(value: SoftwareTokenMfaConfigType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SoftwareTokenMfaConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSoftwareTokenMfaConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SoftwareTokenMfaConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

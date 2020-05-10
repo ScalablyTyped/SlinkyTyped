@@ -56,26 +56,113 @@ trait SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends js
 
 object SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup {
   @scala.inline
-  def apply(
-    claimAppearances: js.Array[String] = null,
-    claimAuthor: SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor = null,
-    claimDate: String = null,
-    claimFirstAppearance: String = null,
-    claimLocation: String = null,
-    claimReviewed: String = null,
-    rating: SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimRating = null,
-    url: String = null
-  ): SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup = {
+  def apply(): SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup = {
     val __obj = js.Dynamic.literal()
-    if (claimAppearances != null) __obj.updateDynamic("claimAppearances")(claimAppearances.asInstanceOf[js.Any])
-    if (claimAuthor != null) __obj.updateDynamic("claimAuthor")(claimAuthor.asInstanceOf[js.Any])
-    if (claimDate != null) __obj.updateDynamic("claimDate")(claimDate.asInstanceOf[js.Any])
-    if (claimFirstAppearance != null) __obj.updateDynamic("claimFirstAppearance")(claimFirstAppearance.asInstanceOf[js.Any])
-    if (claimLocation != null) __obj.updateDynamic("claimLocation")(claimLocation.asInstanceOf[js.Any])
-    if (claimReviewed != null) __obj.updateDynamic("claimReviewed")(claimReviewed.asInstanceOf[js.Any])
-    if (rating != null) __obj.updateDynamic("rating")(rating.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup]
   }
+  @scala.inline
+  implicit class SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupOps[Self <: SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClaimAppearances(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimAppearances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaimAppearances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimAppearances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClaimAuthor(value: SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimAuthor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaimAuthor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimAuthor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClaimDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaimDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClaimFirstAppearance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimFirstAppearance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaimFirstAppearance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimFirstAppearance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClaimLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaimLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClaimReviewed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimReviewed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaimReviewed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimReviewed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRating(value: SchemaGoogleFactcheckingFactchecktoolsV1alpha1ClaimRating): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,9 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.dialogActionsDialogActionsMod.DialogActionsProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object dialogActionsMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[DialogActionsProps, ComponentState, js.Any] {
+    extends Component[DialogActionsProps, js.Object, js.Any] {
     def this(props: DialogActionsProps) = this()
     def this(props: DialogActionsProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[DialogActionsProps]]
+  object default extends TopLevel[ReactComponentClass[DialogActionsProps]]
   
 }
 

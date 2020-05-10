@@ -39,10 +39,6 @@ object graphQLErrorMod extends js.Object {
       * Enumerable, and appears in the result of JSON.stringify().
       */
     val locations: js.UndefOr[js.Array[SourceLocation]] = js.native
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
     /**
       * An array of GraphQL AST Nodes corresponding to this error.
       */

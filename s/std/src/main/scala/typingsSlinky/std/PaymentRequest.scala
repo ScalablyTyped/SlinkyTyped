@@ -65,7 +65,7 @@ trait PaymentRequest extends EventTarget {
   def removeEventListener_shippingaddresschange(
     `type`: shippingaddresschange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_shippingoptionchange(`type`: shippingoptionchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -79,7 +79,7 @@ trait PaymentRequest extends EventTarget {
   def removeEventListener_shippingoptionchange(
     `type`: shippingoptionchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def show(): js.Promise[PaymentResponse] = js.native
 }

@@ -64,7 +64,5 @@ class Collection_[T] ()
   def reset(models: js.Array[_], options: ResetOptions): Collection[T] = js.native
   def sort(): Collection[T] = js.native
   def sort(options: SortOptions): Collection[T] = js.native
-  /* CompleteClass */
-  override def toJSON(): js.Any = js.native
 }
 

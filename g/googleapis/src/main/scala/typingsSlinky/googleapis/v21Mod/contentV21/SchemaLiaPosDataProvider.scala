@@ -18,11 +18,41 @@ trait SchemaLiaPosDataProvider extends js.Object {
 
 object SchemaLiaPosDataProvider {
   @scala.inline
-  def apply(posDataProviderId: String = null, posExternalAccountId: String = null): SchemaLiaPosDataProvider = {
+  def apply(): SchemaLiaPosDataProvider = {
     val __obj = js.Dynamic.literal()
-    if (posDataProviderId != null) __obj.updateDynamic("posDataProviderId")(posDataProviderId.asInstanceOf[js.Any])
-    if (posExternalAccountId != null) __obj.updateDynamic("posExternalAccountId")(posExternalAccountId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLiaPosDataProvider]
   }
+  @scala.inline
+  implicit class SchemaLiaPosDataProviderOps[Self <: SchemaLiaPosDataProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPosDataProviderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("posDataProviderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosDataProviderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("posDataProviderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosExternalAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("posExternalAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosExternalAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("posExternalAccountId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

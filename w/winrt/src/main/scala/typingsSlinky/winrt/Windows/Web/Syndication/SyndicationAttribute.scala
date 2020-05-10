@@ -8,11 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class SyndicationAttribute () extends ISyndicationAttribute {
   def this(attributeName: String, attributeNamespace: String, attributeValue: String) = this()
-  /* CompleteClass */
-  override var name: String = js.native
-  /* CompleteClass */
-  override var namespace: String = js.native
-  /* CompleteClass */
-  override var value: String = js.native
 }
 

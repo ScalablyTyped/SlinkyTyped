@@ -4,49 +4,163 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var argv: js.UndefOr[js.Array[String]] = js.undefined
-  var autoHelp: js.UndefOr[Boolean] = js.undefined
-  var autoVersion: js.UndefOr[Boolean] = js.undefined
+  var argv: js.UndefOr[js.Array[String]] = js.native
+  var autoHelp: js.UndefOr[Boolean] = js.native
+  var autoVersion: js.UndefOr[Boolean] = js.native
   /**
     * Caution: Explicitly specifying undefined for booleanDefault
     * has different meaning from omitting key itself.
     */
-  var booleanDefault: js.UndefOr[Boolean | Null] = js.undefined
-  var description: js.UndefOr[String | Boolean] = js.undefined
-  var flags: js.UndefOr[typingsSlinky.minimistOptions.mod.Options] = js.undefined
-  var help: js.UndefOr[String | Boolean] = js.undefined
-  var inferType: js.UndefOr[Boolean] = js.undefined
-  var pkg: js.UndefOr[js.Any] = js.undefined
-  var version: js.UndefOr[String | Boolean] = js.undefined
+  var booleanDefault: js.UndefOr[Boolean | Null] = js.native
+  var description: js.UndefOr[String | Boolean] = js.native
+  var flags: js.UndefOr[typingsSlinky.minimistOptions.mod.Options] = js.native
+  var help: js.UndefOr[String | Boolean] = js.native
+  var inferType: js.UndefOr[Boolean] = js.native
+  var pkg: js.UndefOr[js.Any] = js.native
+  var version: js.UndefOr[String | Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    argv: js.Array[String] = null,
-    autoHelp: js.UndefOr[Boolean] = js.undefined,
-    autoVersion: js.UndefOr[Boolean] = js.undefined,
-    booleanDefault: js.UndefOr[Boolean] = js.undefined,
-    description: String | Boolean = null,
-    flags: typingsSlinky.minimistOptions.mod.Options = null,
-    help: String | Boolean = null,
-    inferType: js.UndefOr[Boolean] = js.undefined,
-    pkg: js.Any = null,
-    version: String | Boolean = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (argv != null) __obj.updateDynamic("argv")(argv.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoHelp)) __obj.updateDynamic("autoHelp")(autoHelp.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoVersion)) __obj.updateDynamic("autoVersion")(autoVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(booleanDefault)) __obj.updateDynamic("booleanDefault")(booleanDefault.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (flags != null) __obj.updateDynamic("flags")(flags.asInstanceOf[js.Any])
-    if (help != null) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
-    if (!js.isUndefined(inferType)) __obj.updateDynamic("inferType")(inferType.asInstanceOf[js.Any])
-    if (pkg != null) __obj.updateDynamic("pkg")(pkg.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgv(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argv")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoHelp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHelp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoHelp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHelp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoVersion(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBooleanDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBooleanDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBooleanDefaultNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanDefault")(null)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlags(value: typingsSlinky.minimistOptions.mod.Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHelp(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHelp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInferType(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inferType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInferType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inferType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPkg(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pkg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPkg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pkg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

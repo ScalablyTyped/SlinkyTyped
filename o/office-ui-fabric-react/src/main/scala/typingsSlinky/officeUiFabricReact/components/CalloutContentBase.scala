@@ -1,15 +1,16 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CalloutContentBase
-  extends SharedApply_ICalloutProps666297335[typingsSlinky.officeUiFabricReact.calloutContentBaseMod.CalloutContentBase] {
+object CalloutContentBase {
   @JSImport("office-ui-fabric-react/lib/components/Callout/CalloutContent.base", "CalloutContentBase")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ICalloutProps): SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.calloutContentBaseMod.CalloutContentBase] = new SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.calloutContentBaseMod.CalloutContentBase](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CalloutContentBase.type): SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.calloutContentBaseMod.CalloutContentBase] = new SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.calloutContentBaseMod.CalloutContentBase](js.Array(this.component, js.Dictionary.empty))()
 }
 

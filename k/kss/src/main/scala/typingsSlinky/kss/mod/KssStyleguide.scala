@@ -1,7 +1,6 @@
 package typingsSlinky.kss.mod
 
 import typingsSlinky.kss.kssBooleans.`false`
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ class KssStyleguide () extends js.Object {
   def referenceDelimiter(): String = js.native
   def sections(): js.Array[KssSection] = js.native
   def sections(query: String): `false` | KssSection | js.Array[KssSection] = js.native
-  def sections(query: RegExp): `false` | KssSection | js.Array[KssSection] = js.native
+  def sections(query: js.RegExp): `false` | KssSection | js.Array[KssSection] = js.native
   def sections(sections: js.Array[KssSection]): KssStyleguide = js.native
   def sections(sections: KssSection): KssStyleguide = js.native
   def toJSON(): js.Any = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.fsExtraPromise.mod
 
-import typingsSlinky.node.fsMod.WriteFileOptions
+import typingsSlinky.fsExtra.mod.WriteFileOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

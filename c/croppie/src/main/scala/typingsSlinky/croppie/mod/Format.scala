@@ -13,12 +13,10 @@ trait Format extends js.Object
 
 object Format {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def jpeg: typingsSlinky.croppie.croppieStrings.jpeg = "jpeg".asInstanceOf[typingsSlinky.croppie.croppieStrings.jpeg]
   @scala.inline
-  def jpeg: typingsSlinky.croppie.croppieStrings.jpeg = this.cast("jpeg")
+  def png: typingsSlinky.croppie.croppieStrings.png = "png".asInstanceOf[typingsSlinky.croppie.croppieStrings.png]
   @scala.inline
-  def png: typingsSlinky.croppie.croppieStrings.png = this.cast("png")
-  @scala.inline
-  def webp: typingsSlinky.croppie.croppieStrings.webp = this.cast("webp")
+  def webp: typingsSlinky.croppie.croppieStrings.webp = "webp".asInstanceOf[typingsSlinky.croppie.croppieStrings.webp]
 }
 

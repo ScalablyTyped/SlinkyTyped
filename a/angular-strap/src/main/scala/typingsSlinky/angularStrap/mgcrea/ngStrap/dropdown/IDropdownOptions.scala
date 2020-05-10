@@ -5,51 +5,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDropdownOptions extends js.Object {
-  var animation: js.UndefOr[String] = js.undefined
-  var container: js.UndefOr[String | Boolean] = js.undefined
-  var delay: js.UndefOr[Double | AnonHide] = js.undefined
-  var html: js.UndefOr[Boolean] = js.undefined
-  var onBeforeHide: js.UndefOr[js.Function1[/* dropdown */ IDropdown, Unit]] = js.undefined
-  var onBeforeShow: js.UndefOr[js.Function1[/* dropdown */ IDropdown, Unit]] = js.undefined
-  var onHide: js.UndefOr[js.Function1[/* dropdown */ IDropdown, Unit]] = js.undefined
-  var onShow: js.UndefOr[js.Function1[/* dropdown */ IDropdown, Unit]] = js.undefined
-  var placement: js.UndefOr[String] = js.undefined
-  var template: js.UndefOr[String] = js.undefined
-  var templateUrl: js.UndefOr[String] = js.undefined
-  var trigger: js.UndefOr[String] = js.undefined
+  var animation: js.UndefOr[String] = js.native
+  var container: js.UndefOr[String | Boolean] = js.native
+  var delay: js.UndefOr[Double | AnonHide] = js.native
+  var html: js.UndefOr[Boolean] = js.native
+  var onBeforeHide: js.UndefOr[js.Function1[/* dropdown */ IDropdown, Unit]] = js.native
+  var onBeforeShow: js.UndefOr[js.Function1[/* dropdown */ IDropdown, Unit]] = js.native
+  var onHide: js.UndefOr[js.Function1[/* dropdown */ IDropdown, Unit]] = js.native
+  var onShow: js.UndefOr[js.Function1[/* dropdown */ IDropdown, Unit]] = js.native
+  var placement: js.UndefOr[String] = js.native
+  var template: js.UndefOr[String] = js.native
+  var templateUrl: js.UndefOr[String] = js.native
+  var trigger: js.UndefOr[String] = js.native
 }
 
 object IDropdownOptions {
   @scala.inline
-  def apply(
-    animation: String = null,
-    container: String | Boolean = null,
-    delay: Double | AnonHide = null,
-    html: js.UndefOr[Boolean] = js.undefined,
-    onBeforeHide: /* dropdown */ IDropdown => Unit = null,
-    onBeforeShow: /* dropdown */ IDropdown => Unit = null,
-    onHide: /* dropdown */ IDropdown => Unit = null,
-    onShow: /* dropdown */ IDropdown => Unit = null,
-    placement: String = null,
-    template: String = null,
-    templateUrl: String = null,
-    trigger: String = null
-  ): IDropdownOptions = {
+  def apply(): IDropdownOptions = {
     val __obj = js.Dynamic.literal()
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (!js.isUndefined(html)) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
-    if (onBeforeHide != null) __obj.updateDynamic("onBeforeHide")(js.Any.fromFunction1(onBeforeHide))
-    if (onBeforeShow != null) __obj.updateDynamic("onBeforeShow")(js.Any.fromFunction1(onBeforeShow))
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction1(onHide))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction1(onShow))
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (templateUrl != null) __obj.updateDynamic("templateUrl")(templateUrl.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDropdownOptions]
   }
+  @scala.inline
+  implicit class IDropdownOptionsOps[Self <: IDropdownOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelay(value: Double | AnonHide): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtml(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtml: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBeforeHide(value: /* dropdown */ IDropdown => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeHide")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBeforeHide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeHide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBeforeShow(value: /* dropdown */ IDropdown => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeShow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBeforeShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeShow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHide(value: /* dropdown */ IDropdown => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnShow(value: /* dropdown */ IDropdown => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrigger(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrigger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

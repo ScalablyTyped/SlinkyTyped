@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class MaintenanceTrigger protected () extends IMaintenanceTrigger {
   def this(freshnessTime: Double, oneShot: Boolean) = this()
-  /* CompleteClass */
-  override var freshnessTime: Double = js.native
-  /* CompleteClass */
-  override var oneShot: Boolean = js.native
 }
 

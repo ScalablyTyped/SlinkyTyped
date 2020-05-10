@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonNewHeight extends js.Object {
-  var newHeight: Double
-  var newWidth: Double
+  var newHeight: Double = js.native
+  var newWidth: Double = js.native
 }
 
 object AnonNewHeight {
   @scala.inline
   def apply(newHeight: Double, newWidth: Double): AnonNewHeight = {
     val __obj = js.Dynamic.literal(newHeight = newHeight.asInstanceOf[js.Any], newWidth = newWidth.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonNewHeight]
   }
+  @scala.inline
+  implicit class AnonNewHeightOps[Self <: AnonNewHeight] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

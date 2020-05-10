@@ -4,24 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LCDI2COption extends LCDGeneralOption {
-  var backlight: js.UndefOr[Double] = js.undefined
-  var controller: String
+  var backlight: js.UndefOr[Double] = js.native
+  var controller: String = js.native
 }
 
 object LCDI2COption {
   @scala.inline
-  def apply(
-    controller: String,
-    backlight: Int | Double = null,
-    cols: Int | Double = null,
-    rows: Int | Double = null
-  ): LCDI2COption = {
+  def apply(controller: String): LCDI2COption = {
     val __obj = js.Dynamic.literal(controller = controller.asInstanceOf[js.Any])
-    if (backlight != null) __obj.updateDynamic("backlight")(backlight.asInstanceOf[js.Any])
-    if (cols != null) __obj.updateDynamic("cols")(cols.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[LCDI2COption]
   }
+  @scala.inline
+  implicit class LCDI2COptionOps[Self <: LCDI2COption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withController(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBacklight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBacklight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backlight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

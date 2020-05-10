@@ -7,12 +7,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClustersResource extends js.Object {
-  var nodePools: NodePoolsResource
+  var nodePools: NodePoolsResource = js.native
   /** Sets the addons of a specific cluster. */
-  def addons(request: AnonAlt): Request_[Operation]
+  def addons(request: AnonAlt): Request_[Operation] = js.native
   /** Completes master IP rotation. */
-  def completeIpRotation(request: AnonAlt): Request_[Operation]
+  def completeIpRotation(request: AnonAlt): Request_[Operation] = js.native
   /**
     * Creates a cluster, consisting of the specified number and type of Google
     * Compute Engine instances.
@@ -28,7 +29,7 @@ trait ClustersResource extends js.Object {
     * Finally, an entry is added to the project's global metadata indicating
     * which CIDR range is being used by the cluster.
     */
-  def create(request: AnonBearertoken): Request_[Operation]
+  def create(request: AnonBearertoken): Request_[Operation] = js.native
   /**
     * Deletes the cluster, including the Kubernetes endpoint and all worker
     * nodes.
@@ -40,40 +41,40 @@ trait ClustersResource extends js.Object {
     * (e.g. load balancer resources) will not be deleted if they weren't present
     * at the initial create time.
     */
-  def delete(request: AnonAlt): Request_[Operation]
+  def delete(request: AnonAlt): Request_[Operation] = js.native
   /** Gets the details of a specific cluster. */
-  def get(request: AnonAlt): Request_[Cluster]
+  def get(request: AnonAlt): Request_[Cluster] = js.native
   /** Enables or disables the ABAC authorization mechanism on a cluster. */
-  def legacyAbac(request: AnonAlt): Request_[Operation]
+  def legacyAbac(request: AnonAlt): Request_[Operation] = js.native
   /**
     * Lists all clusters owned by a project in either the specified zone or all
     * zones.
     */
-  def list(request: AnonBearertoken): Request_[ListClustersResponse]
+  def list(request: AnonBearertoken): Request_[ListClustersResponse] = js.native
   /** Sets the locations of a specific cluster. */
-  def locations(request: AnonAlt): Request_[Operation]
+  def locations(request: AnonAlt): Request_[Operation] = js.native
   /** Sets the logging service of a specific cluster. */
-  def logging(request: AnonAlt): Request_[Operation]
+  def logging(request: AnonAlt): Request_[Operation] = js.native
   /** Updates the master of a specific cluster. */
-  def master(request: AnonAlt): Request_[Operation]
+  def master(request: AnonAlt): Request_[Operation] = js.native
   /** Sets the monitoring service of a specific cluster. */
-  def monitoring(request: AnonAlt): Request_[Operation]
+  def monitoring(request: AnonAlt): Request_[Operation] = js.native
   /** Sets labels on a cluster. */
-  def resourceLabels(request: AnonAlt): Request_[Operation]
+  def resourceLabels(request: AnonAlt): Request_[Operation] = js.native
   /** Sets the maintenance policy for a cluster. */
-  def setMaintenancePolicy(request: AnonAlt): Request_[Operation]
+  def setMaintenancePolicy(request: AnonAlt): Request_[Operation] = js.native
   /**
     * Used to set master auth materials. Currently supports :-
     * Changing the admin password of a specific cluster.
     * This can be either via password generation or explicitly set the password.
     */
-  def setMasterAuth(request: AnonAlt): Request_[Operation]
+  def setMasterAuth(request: AnonAlt): Request_[Operation] = js.native
   /** Enables/Disables Network Policy for a cluster. */
-  def setNetworkPolicy(request: AnonAlt): Request_[Operation]
+  def setNetworkPolicy(request: AnonAlt): Request_[Operation] = js.native
   /** Start master IP rotation. */
-  def startIpRotation(request: AnonAlt): Request_[Operation]
+  def startIpRotation(request: AnonAlt): Request_[Operation] = js.native
   /** Updates the settings of a specific cluster. */
-  def update(request: AnonAlt): Request_[Operation]
+  def update(request: AnonAlt): Request_[Operation] = js.native
 }
 
 object ClustersResource {
@@ -99,8 +100,123 @@ object ClustersResource {
     update: AnonAlt => Request_[Operation]
   ): ClustersResource = {
     val __obj = js.Dynamic.literal(addons = js.Any.fromFunction1(addons), completeIpRotation = js.Any.fromFunction1(completeIpRotation), create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), legacyAbac = js.Any.fromFunction1(legacyAbac), list = js.Any.fromFunction1(list), locations = js.Any.fromFunction1(locations), logging = js.Any.fromFunction1(logging), master = js.Any.fromFunction1(master), monitoring = js.Any.fromFunction1(monitoring), nodePools = nodePools.asInstanceOf[js.Any], resourceLabels = js.Any.fromFunction1(resourceLabels), setMaintenancePolicy = js.Any.fromFunction1(setMaintenancePolicy), setMasterAuth = js.Any.fromFunction1(setMasterAuth), setNetworkPolicy = js.Any.fromFunction1(setNetworkPolicy), startIpRotation = js.Any.fromFunction1(startIpRotation), update = js.Any.fromFunction1(update))
-  
     __obj.asInstanceOf[ClustersResource]
   }
+  @scala.inline
+  implicit class ClustersResourceOps[Self <: ClustersResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddons(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addons")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCompleteIpRotation(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completeIpRotation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreate(value: AnonBearertoken => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonAlt => Request_[Cluster]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLegacyAbac(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyAbac")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonBearertoken => Request_[ListClustersResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLocations(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLogging(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMaster(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("master")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMonitoring(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitoring")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNodePools(value: NodePoolsResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePools")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceLabels(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLabels")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMaintenancePolicy(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaintenancePolicy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMasterAuth(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMasterAuth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetNetworkPolicy(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setNetworkPolicy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStartIpRotation(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIpRotation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: AnonAlt => Request_[Operation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,53 +1,77 @@
 package typingsSlinky.reactNativeIndicators.mod
 
-import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BarIndicatorProps extends BaseIndicatorProps {
   /**
     * Component color
     * @default 'rgb(0, 0, 0)'
     */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
   /**
     * Component count
     * @default 3
     */
-  var count: js.UndefOr[Double] = js.undefined
+  var count: js.UndefOr[Double] = js.native
   /**
     * Base component size
     * @default 40
     */
-  var size: js.UndefOr[Double] = js.undefined
+  var size: js.UndefOr[Double] = js.native
 }
 
 object BarIndicatorProps {
   @scala.inline
-  def apply(
-    animating: js.UndefOr[Boolean] = js.undefined,
-    animationDuration: Int | Double = null,
-    animationEasing: /* value */ Double => Double = null,
-    color: String = null,
-    count: Int | Double = null,
-    hidesWhenStopped: js.UndefOr[Boolean] = js.undefined,
-    interaction: js.UndefOr[Boolean] = js.undefined,
-    size: Int | Double = null,
-    style: StyleProp[ViewStyle] = null
-  ): BarIndicatorProps = {
+  def apply(): BarIndicatorProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animating)) __obj.updateDynamic("animating")(animating.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(js.Any.fromFunction1(animationEasing))
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidesWhenStopped)) __obj.updateDynamic("hidesWhenStopped")(hidesWhenStopped.asInstanceOf[js.Any])
-    if (!js.isUndefined(interaction)) __obj.updateDynamic("interaction")(interaction.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[BarIndicatorProps]
   }
+  @scala.inline
+  implicit class BarIndicatorPropsOps[Self <: BarIndicatorProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

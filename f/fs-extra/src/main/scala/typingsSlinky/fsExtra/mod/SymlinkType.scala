@@ -12,10 +12,8 @@ trait SymlinkType extends js.Object
 
 object SymlinkType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dir: typingsSlinky.fsExtra.fsExtraStrings.dir = "dir".asInstanceOf[typingsSlinky.fsExtra.fsExtraStrings.dir]
   @scala.inline
-  def dir: typingsSlinky.fsExtra.fsExtraStrings.dir = this.cast("dir")
-  @scala.inline
-  def file: typingsSlinky.fsExtra.fsExtraStrings.file = this.cast("file")
+  def file: typingsSlinky.fsExtra.fsExtraStrings.file = "file".asInstanceOf[typingsSlinky.fsExtra.fsExtraStrings.file]
 }
 

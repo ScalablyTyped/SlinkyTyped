@@ -47,28 +47,125 @@ trait ReportDefinitionState extends js.Object {
 
 object ReportDefinitionState {
   @scala.inline
-  def apply(
-    additionalArtifacts: Input[js.Array[Input[String]]] = null,
-    additionalSchemaElements: Input[js.Array[Input[String]]] = null,
-    compression: Input[String] = null,
-    format: Input[String] = null,
-    reportName: Input[String] = null,
-    s3Bucket: Input[String] = null,
-    s3Prefix: Input[String] = null,
-    s3Region: Input[String] = null,
-    timeUnit: Input[String] = null
-  ): ReportDefinitionState = {
+  def apply(): ReportDefinitionState = {
     val __obj = js.Dynamic.literal()
-    if (additionalArtifacts != null) __obj.updateDynamic("additionalArtifacts")(additionalArtifacts.asInstanceOf[js.Any])
-    if (additionalSchemaElements != null) __obj.updateDynamic("additionalSchemaElements")(additionalSchemaElements.asInstanceOf[js.Any])
-    if (compression != null) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (reportName != null) __obj.updateDynamic("reportName")(reportName.asInstanceOf[js.Any])
-    if (s3Bucket != null) __obj.updateDynamic("s3Bucket")(s3Bucket.asInstanceOf[js.Any])
-    if (s3Prefix != null) __obj.updateDynamic("s3Prefix")(s3Prefix.asInstanceOf[js.Any])
-    if (s3Region != null) __obj.updateDynamic("s3Region")(s3Region.asInstanceOf[js.Any])
-    if (timeUnit != null) __obj.updateDynamic("timeUnit")(timeUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReportDefinitionState]
   }
+  @scala.inline
+  implicit class ReportDefinitionStateOps[Self <: ReportDefinitionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalArtifacts(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalArtifacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalArtifacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalArtifacts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdditionalSchemaElements(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalSchemaElements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalSchemaElements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalSchemaElements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompression(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Bucket(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Bucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Bucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Prefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Prefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Region(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Region: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeUnit(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeUnit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

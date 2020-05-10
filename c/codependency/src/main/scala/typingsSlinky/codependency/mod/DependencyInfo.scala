@@ -4,29 +4,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DependencyInfo extends js.Object {
-  var installedVersion: String | Null
-  var isInstalled: Boolean | Null
-  var isValid: Boolean | Null
-  var pkgPath: String
-  var supportedRange: String | Null
+  var installedVersion: String | Null = js.native
+  var isInstalled: Boolean | Null = js.native
+  var isValid: Boolean | Null = js.native
+  var pkgPath: String = js.native
+  var supportedRange: String | Null = js.native
 }
 
 object DependencyInfo {
   @scala.inline
-  def apply(
-    pkgPath: String,
-    installedVersion: String = null,
-    isInstalled: js.UndefOr[Boolean] = js.undefined,
-    isValid: js.UndefOr[Boolean] = js.undefined,
-    supportedRange: String = null
-  ): DependencyInfo = {
+  def apply(pkgPath: String): DependencyInfo = {
     val __obj = js.Dynamic.literal(pkgPath = pkgPath.asInstanceOf[js.Any])
-    if (installedVersion != null) __obj.updateDynamic("installedVersion")(installedVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInstalled)) __obj.updateDynamic("isInstalled")(isInstalled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isValid)) __obj.updateDynamic("isValid")(isValid.asInstanceOf[js.Any])
-    if (supportedRange != null) __obj.updateDynamic("supportedRange")(supportedRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[DependencyInfo]
   }
+  @scala.inline
+  implicit class DependencyInfoOps[Self <: DependencyInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPkgPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pkgPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstalledVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("installedVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstalledVersionNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("installedVersion")(null)
+        ret
+    }
+    @scala.inline
+    def withIsInstalled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInstalled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsInstalledNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInstalled")(null)
+        ret
+    }
+    @scala.inline
+    def withIsValid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsValidNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(null)
+        ret
+    }
+    @scala.inline
+    def withSupportedRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportedRangeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedRange")(null)
+        ret
+    }
+  }
+  
 }
 

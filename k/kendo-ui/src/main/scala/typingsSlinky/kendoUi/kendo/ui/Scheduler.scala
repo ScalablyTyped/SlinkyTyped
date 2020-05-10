@@ -43,7 +43,7 @@ class Scheduler protected () extends Widget {
   def select(options: SchedulerSelectOptions): Unit = js.native
   def setDataSource(dataSource: SchedulerDataSource): Unit = js.native
   def slotByElement(element: JQuery): js.Any = js.native
-  def slotByElement(element: typingsSlinky.std.Element): js.Any = js.native
+  def slotByElement(element: Element): js.Any = js.native
   def slotByPosition(xPosition: Double, yPosition: Double): js.Any = js.native
   def view(): Unit = js.native
   def view(`type`: String): Unit = js.native

@@ -35,18 +35,65 @@ trait SchemaRiceDeltaEncoding extends js.Object {
 
 object SchemaRiceDeltaEncoding {
   @scala.inline
-  def apply(
-    encodedData: String = null,
-    firstValue: String = null,
-    numEntries: Int | Double = null,
-    riceParameter: Int | Double = null
-  ): SchemaRiceDeltaEncoding = {
+  def apply(): SchemaRiceDeltaEncoding = {
     val __obj = js.Dynamic.literal()
-    if (encodedData != null) __obj.updateDynamic("encodedData")(encodedData.asInstanceOf[js.Any])
-    if (firstValue != null) __obj.updateDynamic("firstValue")(firstValue.asInstanceOf[js.Any])
-    if (numEntries != null) __obj.updateDynamic("numEntries")(numEntries.asInstanceOf[js.Any])
-    if (riceParameter != null) __obj.updateDynamic("riceParameter")(riceParameter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRiceDeltaEncoding]
   }
+  @scala.inline
+  implicit class SchemaRiceDeltaEncodingOps[Self <: SchemaRiceDeltaEncoding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncodedData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodedData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncodedData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodedData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumEntries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numEntries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numEntries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRiceParameter(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("riceParameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRiceParameter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("riceParameter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

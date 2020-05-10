@@ -13,6 +13,7 @@ import typingsSlinky.expressServeStaticCore.mod.Handler
 import typingsSlinky.expressServeStaticCore.mod.NextFunction
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.PathParams
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.expressServeStaticCore.mod.RequestHandler
 import typingsSlinky.expressServeStaticCore.mod.RequestHandlerParams
@@ -35,11 +36,11 @@ object mod extends js.Object {
     @JSName("use")
     var use_Original: FeathersApplicationRequestHandler[T] = js.native
     def use(
-      handlers: ((RequestHandler[ParamsDictionary, _, _]) | (RequestHandlerParams[ParamsDictionary, _, _]))*
+      handlers: ((RequestHandler[ParamsDictionary, _, _, Query]) | (RequestHandlerParams[ParamsDictionary, _, _, Query]))*
     ): T = js.native
     def use(
       path: PathParams,
-      handlers: ((RequestHandler[ParamsDictionary, _, _]) | (RequestHandlerParams[ParamsDictionary, _, _]) | PartialServiceMethodsanyS | Application[_])*
+      handlers: ((RequestHandler[ParamsDictionary, _, _, Query]) | (RequestHandlerParams[ParamsDictionary, _, _, Query]) | PartialServiceMethodsanyS | Application[_])*
     ): T = js.native
   }
   
@@ -47,9 +48,9 @@ object mod extends js.Object {
   val original: js.Function0[Express] with Typeofexpress = js.native
   def Router(): typingsSlinky.expressServeStaticCore.mod.Router = js.native
   def Router(options: RouterOptions): typingsSlinky.expressServeStaticCore.mod.Router = js.native
-  def errorHandler(): ErrorRequestHandler[ParamsDictionary] = js.native
-  def errorHandler(options: AnonHtml): ErrorRequestHandler[ParamsDictionary] = js.native
-  def notFound(): typingsSlinky.express.mod.RequestHandler[ParamsDictionary] = js.native
+  def errorHandler(): ErrorRequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def errorHandler(options: AnonHtml): ErrorRequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def notFound(): typingsSlinky.express.mod.RequestHandler[ParamsDictionary, _, _, Query] = js.native
   /**
     * This is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser.
     * @since 4.16.0
@@ -63,10 +64,10 @@ object mod extends js.Object {
   @js.native
   object rest extends js.Object {
     @JSName("formatter")
-    var formatter_Original: typingsSlinky.express.mod.RequestHandler[ParamsDictionary] = js.native
+    var formatter_Original: typingsSlinky.express.mod.RequestHandler[ParamsDictionary, _, _, Query] = js.native
     def apply(): js.Function0[Unit] = js.native
-    def apply(handler: typingsSlinky.express.mod.RequestHandler[ParamsDictionary]): js.Function0[Unit] = js.native
-    def formatter(req: Request[ParamsDictionary, _, _], res: Response[_], next: NextFunction): js.Any = js.native
+    def apply(handler: typingsSlinky.express.mod.RequestHandler[ParamsDictionary, _, _, Query]): js.Function0[Unit] = js.native
+    def formatter(req: Request[ParamsDictionary, _, _, Query], res: Response[_], next: NextFunction): js.Any = js.native
   }
   
   /**
@@ -93,13 +94,13 @@ object mod extends js.Object {
   
   // TypeScript methods cannot be overloaded with a different signature. Derive two application types without the use methods.
   type ExpressAndFeathersApplicationWithoutUse[T] = (Omit[Application_, use]) with (Omit[typingsSlinky.feathersjsFeathers.mod.Application[T], use])
-  type FeathersApplicationRequestHandler[T] = IRouterHandler[T] with FeathersRouterMatcher[T] with (js.Function1[/* repeated */ RequestHandlerParams[ParamsDictionary, _, _], T])
+  type FeathersApplicationRequestHandler[T] = IRouterHandler[T] with FeathersRouterMatcher[T] with (js.Function1[/* repeated */ RequestHandlerParams[ParamsDictionary, _, _, Query], T])
   type FeathersRouterMatcher[T] = js.Function2[
     /* path */ PathParams, 
-    /* repeated */ (RequestHandler[ParamsDictionary, js.Any, js.Any]) | (RequestHandlerParams[ParamsDictionary, js.Any, js.Any]) | PartialServiceMethodsanyS | Application[js.Any], 
+    /* repeated */ (RequestHandler[ParamsDictionary, js.Any, js.Any, Query]) | (RequestHandlerParams[ParamsDictionary, js.Any, js.Any, Query]) | PartialServiceMethodsanyS | Application[js.Any], 
     T
   ]
   type FeathersServiceOptions = js.Any
-  type Omit[T, K] = Pick[T, Exclude[String, K]]
+  type Omit[T, K] = Pick[T, Exclude[/* keyof T */ String, K]]
 }
 

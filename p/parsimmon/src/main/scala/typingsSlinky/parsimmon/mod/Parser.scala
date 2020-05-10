@@ -1,6 +1,5 @@
 package typingsSlinky.parsimmon.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,7 +50,7 @@ trait Parser[T] extends js.Object {
   		 * parser.skip(Parsimmon.lookahead(anotherParser)).
   		 */
   def lookahead(arg: Parser[_]): Parser[T] = js.native
-  def lookahead(arg: RegExp): Parser[T] = js.native
+  def lookahead(arg: js.RegExp): Parser[T] = js.native
   /**
   		 * expects parser zero or more times, and yields an array of the results.
   		 */

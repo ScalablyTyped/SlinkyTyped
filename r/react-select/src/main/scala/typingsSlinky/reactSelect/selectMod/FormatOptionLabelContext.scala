@@ -12,10 +12,8 @@ trait FormatOptionLabelContext extends js.Object
 
 object FormatOptionLabelContext {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def menu: typingsSlinky.reactSelect.reactSelectStrings.menu = "menu".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.menu]
   @scala.inline
-  def menu: typingsSlinky.reactSelect.reactSelectStrings.menu = this.cast("menu")
-  @scala.inline
-  def value: typingsSlinky.reactSelect.reactSelectStrings.value = this.cast("value")
+  def value: typingsSlinky.reactSelect.reactSelectStrings.value = "value".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.value]
 }
 

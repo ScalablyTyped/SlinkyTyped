@@ -16,6 +16,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // see http://docs.angular-formly.com/docs/field-configuration-object
+@js.native
 trait IFieldObject extends js.Object {
   /**
   		 * Added in 6.18.0
@@ -23,36 +24,36 @@ trait IFieldObject extends js.Object {
   		 * Demo
   		 * see http://angular-formly.com/#/example/other/unique-value-async-validation
   		 */
-  var asyncValidators: js.UndefOr[StringDictionary[String | IExpressionFunction | IValidator]] = js.undefined
+  var asyncValidators: js.UndefOr[StringDictionary[String | IExpressionFunction | IValidator]] = js.native
   /**
   		 * You can specify your own class that will be applied to the formly-field directive (or ng-form of
   		 * a fieldGroup).
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#classname-string
   		 */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /**
   		 * This is a great way to add custom behavior to a specific field. It is injectable with the $scope of the
   		 * field, and anything else you have in your injector.
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#controller-controller-name-as-string--controller-f
   		 */
-  var controller: js.UndefOr[String | js.Function] = js.undefined
+  var controller: js.UndefOr[String | js.Function] = js.native
   /**
   		 * This is reserved for the developer. You have our guarantee to be able to use this and not worry about
   		 * future versions of formly overriding your usage and preventing you from upgrading :-)
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#data-object
   		 */
-  var data: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var data: js.UndefOr[StringDictionary[js.Any]] = js.native
   /**
   		 * Use defaultValue to initialize it the model. If this is provided and the value of the
   		 * model at compile-time is undefined, then the value of the model will be assigned to defaultValue.
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#defaultvalue-any
   		 */
-  var defaultValue: js.UndefOr[js.Any] = js.undefined
-  var elementAttributes: js.UndefOr[StringDictionary[String]] = js.undefined
+  var defaultValue: js.UndefOr[js.Any] = js.native
+  var elementAttributes: js.UndefOr[StringDictionary[String]] = js.native
   /**
   		 * An object where the key is a property to be set on the main field config and the value is an
   		 * expression used to assign that property. The value is a formly expressions. The returned value is
@@ -60,21 +61,21 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#expressionproperties-object
   		 */
-  var expressionProperties: js.UndefOr[StringDictionary[String | IExpressionFunction | IValidator]] = js.undefined
+  var expressionProperties: js.UndefOr[StringDictionary[String | IExpressionFunction | IValidator]] = js.native
   //ALL PROPERTIES BELOW ARE ADDED (So you should not be setting them yourself.)
   /**
   		 * This is the NgModelController for the field. It provides you with awesome stuff like $errors :-)
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#formcontrol-ngmodelcontroller
   		 */
-  var formControl: js.UndefOr[IFormController | js.Array[IFormController]] = js.undefined
+  var formControl: js.UndefOr[IFormController | js.Array[IFormController]] = js.native
   /**
   		 * Uses ng-if. Whether to hide the field. Defaults to false. If you wish this to be conditional, use
   		 * hideExpression. See below.
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#hide-boolean
   		 */
-  var hide: js.UndefOr[Boolean] = js.undefined
+  var hide: js.UndefOr[Boolean] = js.native
   /**
   		 * This is similar to expressionProperties with a slight difference. You should (hopefully) never
   		 * notice the difference with the most common use case. This is available due to limitations with
@@ -82,7 +83,7 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#hideexpression-string--function
   		 */
-  var hideExpression: js.UndefOr[String | IExpressionFunction] = js.undefined
+  var hideExpression: js.UndefOr[String | IExpressionFunction] = js.native
   /**
   		 * This allows you to specify the id of your field (which will be used for its name as well unless
   		 * a name is provided). Note, you can also override the id generation code using the formlyConfig
@@ -95,22 +96,22 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#id-string
   		 */
-  var id: js.UndefOr[String] = js.undefined
-  var initialValue: js.UndefOr[js.Any] = js.undefined
+  var id: js.UndefOr[String] = js.native
+  var initialValue: js.UndefOr[js.Any] = js.native
   /**
   		 * Can be set instead of type or template to use a custom html template form field. Works
   		 * just like a directive templateUrl and uses the $templateCache
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#key-string
   		 */
-  var key: js.UndefOr[String | Double] = js.undefined
+  var key: js.UndefOr[String | Double] = js.native
   /**
   		 * This allows you to specify a link function. It is invoked after your template has finished compiling.
   		 * You are passed the normal arguments for a normal link function.
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#link-link-function
   		 */
-  var link: js.UndefOr[IDirectiveLinkFn[IScope, JQLite, IAttributes, IController]] = js.undefined
+  var link: js.UndefOr[IDirectiveLinkFn[IScope, JQLite, IAttributes, IController]] = js.native
   /**
   		 * Allows you to take advantage of ng-model-options directive. Formly's built-in templateManipulator (see
   		 * below) will add this attribute to your ng-model element automatically if this property exists. Note,
@@ -119,7 +120,7 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#modeloptions
   		 */
-  var modelOptions: js.UndefOr[IModelOptions] = js.undefined
+  var modelOptions: js.UndefOr[IModelOptions] = js.native
   /**
   		 * If you wish to, you can specify a specific name for your ng-model. This is useful if you're posting
   		 * the form to a server using techniques of yester-year.
@@ -130,7 +131,7 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#name-string
   		 */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
   		 * This is used by ngModelAttrsTemplateManipulator to automatically add attributes to the ng-model element
   		 * of field templates. You will likely not use this often. This object is a little complex, but extremely
@@ -138,14 +139,14 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#ngmodelattrs-object
   		 */
-  var ngModelAttrs: js.UndefOr[AnonDictkey] = js.undefined
+  var ngModelAttrs: js.UndefOr[AnonDictkey] = js.native
   /**
   		 * This allows you to place attributes with string values on the ng-model element.
   		 * Easy to use alternative to ngModelAttrs option.
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#ngmodelelattrs-object
   		 */
-  var ngModelElAttrs: js.UndefOr[StringDictionary[String]] = js.undefined
+  var ngModelElAttrs: js.UndefOr[StringDictionary[String]] = js.native
   /**
   		 * Used to tell angular-formly to not attempt to add the formControl property to your object. This is useful
   		 * for things like validation, but not necessary if your "field" doesn't use ng-model (if it's just a horizontal
@@ -153,7 +154,7 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#noformcontrol-boolean
   		 */
-  var noFormControl: js.UndefOr[Boolean] = js.undefined
+  var noFormControl: js.UndefOr[Boolean] = js.native
   /**
   		 * Allows you to specify extra types to get options from. Duplicate options are overridden in later priority
   		 * (index 1 will override index 0 properties). Also, these are applied after the type's defaultOptions and
@@ -161,14 +162,14 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#optionstypes-string--array-of-strings
   		 */
-  var optionsTypes: js.UndefOr[String | js.Array[String]] = js.undefined
+  var optionsTypes: js.UndefOr[String | js.Array[String]] = js.native
   /**
   		 * Will reset the field's model and the field control to the last initialValue. This is used by the
   		 * formly-form's options.resetModel function.
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#resetmodel-function
   		 */
-  var resetModel: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var resetModel: js.UndefOr[js.Function0[Unit]] = js.native
   /**
   		 * It is not likely that you'll ever want to invoke this function. It simply runs the expressionProperties expressions.
   		 * It is used internally and you shouldn't have to use it, but you can if you want to, and any breaking changes to the
@@ -176,7 +177,7 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#runexpressions-function
   		 */
-  var runExpressions: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var runExpressions: js.UndefOr[js.Function0[Unit]] = js.native
   /**
   		 * Can be set instead of type or templateUrl to use a custom html
   		 * template form field. Recommended to be used with one-liners mostly
@@ -189,21 +190,21 @@ trait IFieldObject extends js.Object {
   		 */
   var template: js.UndefOr[
     String | (js.Function1[/* fieldConfiguration */ IFieldConfigurationObject, String | IPromise[String]])
-  ] = js.undefined
+  ] = js.native
   /**
   		 * Allows you to specify custom template manipulators for this specific field. (use defaultOptions in a
   		 * type configuration if you want it to apply to all fields of a certain type).
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#templatemanipulator-object-of-arrays-of-functions
   		 */
-  var templateManipulators: js.UndefOr[ITemplateManipulators] = js.undefined
+  var templateManipulators: js.UndefOr[ITemplateManipulators] = js.native
   /**
   		 * This is reserved for the templates. Any template-specific options go in here. Look at your specific
   		 * template implementation to know the options required for this.
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#templateoptions-object
   		 */
-  var templateOptions: js.UndefOr[ITemplateOptions] = js.undefined
+  var templateOptions: js.UndefOr[ITemplateOptions] = js.native
   /**
   		 * Can be set instead of type or template to use a custom html template form field. Works
   		 * just like a directive templateUrl and uses the $templateCache
@@ -212,25 +213,25 @@ trait IFieldObject extends js.Object {
   		 */
   var templateUrl: js.UndefOr[
     String | (js.Function1[/* fieldConfiguration */ IFieldConfigurationObject, String | IPromise[String]])
-  ] = js.undefined
+  ] = js.native
   /**
   		 * The type of field to be rendered. This is the recommended method
   		 * for defining fields. Types must be pre-defined using formlyConfig.
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#type-string
   		 */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
   		 * Will reset the field's initialValue to the current state of the model. Useful if you load the model asynchronously.
   		 * Invoke this when the model gets set. This is used by the formly-form's options.updateInitialValue function.
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#updateinitialvalue-function
   		 */
-  var updateInitialValue: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var updateInitialValue: js.UndefOr[js.Function0[Unit]] = js.native
   /**
   		 * An object with a few useful properties mostly handy when used in combination with ng-messages
   		 */
-  var validation: js.UndefOr[AnonErrorExistsAndShouldBeVisible] = js.undefined
+  var validation: js.UndefOr[AnonErrorExistsAndShouldBeVisible] = js.native
   /**
   		 * An object where the keys are the name of the validator and the values are Formly Expressions;
   		 *
@@ -240,7 +241,7 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#validators-object
   		 */
-  var validators: js.UndefOr[StringDictionary[String | IExpressionFunction | IValidator]] = js.undefined
+  var validators: js.UndefOr[StringDictionary[String | IExpressionFunction | IValidator]] = js.native
   /**
   		 * This is a getter/setter function for the value that your field is representing. Useful when using getterSetter: true
   		 * in the modelOptions (in fact, if you don't disable the ngModelAttrsTemplateManipulator that comes built-in with formly,
@@ -249,7 +250,7 @@ trait IFieldObject extends js.Object {
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#value-gettersetter-function
   		 */
    //Getter
-  var value: js.UndefOr[js.Function0[_] with (js.Function1[/* val */ js.Any, Unit])] = js.undefined
+  var value: js.UndefOr[js.Function0[_] with (js.Function1[/* val */ js.Any, Unit])] = js.native
    //Setter
   /**
   		 * An object which has at least two properties called expression and listener. The watch.expression is added
@@ -259,7 +260,7 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#watcher-objectarray-of-watches
   		 */
-  var watcher: js.UndefOr[IWatcher | js.Array[IWatcher]] = js.undefined
+  var watcher: js.UndefOr[IWatcher | js.Array[IWatcher]] = js.native
   /**
   		 * This makes reference to setWrapper in formlyConfig. It is expected to be the name of the wrapper. If
   		 * given an array, the formly field template will be wrapped by the first wrapper, then the second, then
@@ -268,81 +269,442 @@ trait IFieldObject extends js.Object {
   		 *
   		 * http://docs.angular-formly.com/docs/field-configuration-object#wrapper-string--array-of-strings
   		 */
-  var wrapper: js.UndefOr[String | js.Array[String]] = js.undefined
+  var wrapper: js.UndefOr[String | js.Array[String]] = js.native
 }
 
 object IFieldObject {
   @scala.inline
-  def apply(
-    asyncValidators: StringDictionary[String | IExpressionFunction | IValidator] = null,
-    className: String = null,
-    controller: String | js.Function = null,
-    data: StringDictionary[js.Any] = null,
-    defaultValue: js.Any = null,
-    elementAttributes: StringDictionary[String] = null,
-    expressionProperties: StringDictionary[String | IExpressionFunction | IValidator] = null,
-    formControl: IFormController | js.Array[IFormController] = null,
-    hide: js.UndefOr[Boolean] = js.undefined,
-    hideExpression: String | IExpressionFunction = null,
-    id: String = null,
-    initialValue: js.Any = null,
-    key: String | Double = null,
-    link: (IScope, JQLite, IAttributes, /* controller */ js.UndefOr[IController], /* transclude */ js.UndefOr[ITranscludeFunction]) => Unit = null,
-    modelOptions: IModelOptions = null,
-    name: String = null,
-    ngModelAttrs: AnonDictkey = null,
-    ngModelElAttrs: StringDictionary[String] = null,
-    noFormControl: js.UndefOr[Boolean] = js.undefined,
-    optionsTypes: String | js.Array[String] = null,
-    resetModel: () => Unit = null,
-    runExpressions: () => Unit = null,
-    template: String | (js.Function1[/* fieldConfiguration */ IFieldConfigurationObject, String | IPromise[String]]) = null,
-    templateManipulators: ITemplateManipulators = null,
-    templateOptions: ITemplateOptions = null,
-    templateUrl: String | (js.Function1[/* fieldConfiguration */ IFieldConfigurationObject, String | IPromise[String]]) = null,
-    `type`: String = null,
-    updateInitialValue: () => Unit = null,
-    validation: AnonErrorExistsAndShouldBeVisible = null,
-    validators: StringDictionary[String | IExpressionFunction | IValidator] = null,
-    value: js.Function0[_] with (js.Function1[/* val */ js.Any, Unit]) = null,
-    watcher: IWatcher | js.Array[IWatcher] = null,
-    wrapper: String | js.Array[String] = null
-  ): IFieldObject = {
+  def apply(): IFieldObject = {
     val __obj = js.Dynamic.literal()
-    if (asyncValidators != null) __obj.updateDynamic("asyncValidators")(asyncValidators.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (controller != null) __obj.updateDynamic("controller")(controller.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (elementAttributes != null) __obj.updateDynamic("elementAttributes")(elementAttributes.asInstanceOf[js.Any])
-    if (expressionProperties != null) __obj.updateDynamic("expressionProperties")(expressionProperties.asInstanceOf[js.Any])
-    if (formControl != null) __obj.updateDynamic("formControl")(formControl.asInstanceOf[js.Any])
-    if (!js.isUndefined(hide)) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
-    if (hideExpression != null) __obj.updateDynamic("hideExpression")(hideExpression.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (initialValue != null) __obj.updateDynamic("initialValue")(initialValue.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(js.Any.fromFunction5(link))
-    if (modelOptions != null) __obj.updateDynamic("modelOptions")(modelOptions.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (ngModelAttrs != null) __obj.updateDynamic("ngModelAttrs")(ngModelAttrs.asInstanceOf[js.Any])
-    if (ngModelElAttrs != null) __obj.updateDynamic("ngModelElAttrs")(ngModelElAttrs.asInstanceOf[js.Any])
-    if (!js.isUndefined(noFormControl)) __obj.updateDynamic("noFormControl")(noFormControl.asInstanceOf[js.Any])
-    if (optionsTypes != null) __obj.updateDynamic("optionsTypes")(optionsTypes.asInstanceOf[js.Any])
-    if (resetModel != null) __obj.updateDynamic("resetModel")(js.Any.fromFunction0(resetModel))
-    if (runExpressions != null) __obj.updateDynamic("runExpressions")(js.Any.fromFunction0(runExpressions))
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (templateManipulators != null) __obj.updateDynamic("templateManipulators")(templateManipulators.asInstanceOf[js.Any])
-    if (templateOptions != null) __obj.updateDynamic("templateOptions")(templateOptions.asInstanceOf[js.Any])
-    if (templateUrl != null) __obj.updateDynamic("templateUrl")(templateUrl.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (updateInitialValue != null) __obj.updateDynamic("updateInitialValue")(js.Any.fromFunction0(updateInitialValue))
-    if (validation != null) __obj.updateDynamic("validation")(validation.asInstanceOf[js.Any])
-    if (validators != null) __obj.updateDynamic("validators")(validators.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (watcher != null) __obj.updateDynamic("watcher")(watcher.asInstanceOf[js.Any])
-    if (wrapper != null) __obj.updateDynamic("wrapper")(wrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFieldObject]
   }
+  @scala.inline
+  implicit class IFieldObjectOps[Self <: IFieldObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsyncValidators(value: StringDictionary[String | IExpressionFunction | IValidator]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncValidators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsyncValidators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncValidators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withController(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutController: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElementAttributes(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElementAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpressionProperties(value: StringDictionary[String | IExpressionFunction | IValidator]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expressionProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpressionProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expressionProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormControl(value: IFormController | js.Array[IFormController]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHide(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideExpressionFunction3(value: (/* $viewValue */ js.Any, /* $modelValue */ js.Any, /* scope */ ITemplateScope) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideExpression")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withHideExpression(value: String | IExpressionFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(
+      value: (IScope, JQLite, IAttributes, /* controller */ js.UndefOr[IController], /* transclude */ js.UndefOr[ITranscludeFunction]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelOptions(value: IModelOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNgModelAttrs(value: AnonDictkey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ngModelAttrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNgModelAttrs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ngModelAttrs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNgModelElAttrs(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ngModelElAttrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNgModelElAttrs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ngModelElAttrs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoFormControl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noFormControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoFormControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noFormControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionsTypes(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionsTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionsTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionsTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetModel(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetModel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutResetModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetModel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunExpressions(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runExpressions")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutRunExpressions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runExpressions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateFunction1(value: /* fieldConfiguration */ IFieldConfigurationObject => String | IPromise[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTemplate(
+      value: String | (js.Function1[/* fieldConfiguration */ IFieldConfigurationObject, String | IPromise[String]])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateManipulators(value: ITemplateManipulators): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateManipulators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateManipulators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateManipulators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateOptions(value: ITemplateOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateUrlFunction1(value: /* fieldConfiguration */ IFieldConfigurationObject => String | IPromise[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTemplateUrl(
+      value: String | (js.Function1[/* fieldConfiguration */ IFieldConfigurationObject, String | IPromise[String]])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateInitialValue(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateInitialValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdateInitialValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateInitialValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidation(value: AnonErrorExistsAndShouldBeVisible): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidators(value: StringDictionary[String | IExpressionFunction | IValidator]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Function0[_] with (js.Function1[/* val */ js.Any, Unit])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWatcher(value: IWatcher | js.Array[IWatcher]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watcher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWatcher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watcher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapper(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

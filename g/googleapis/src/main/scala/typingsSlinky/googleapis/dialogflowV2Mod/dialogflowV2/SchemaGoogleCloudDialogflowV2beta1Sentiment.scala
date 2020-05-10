@@ -25,11 +25,41 @@ trait SchemaGoogleCloudDialogflowV2beta1Sentiment extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2beta1Sentiment {
   @scala.inline
-  def apply(magnitude: Int | Double = null, score: Int | Double = null): SchemaGoogleCloudDialogflowV2beta1Sentiment = {
+  def apply(): SchemaGoogleCloudDialogflowV2beta1Sentiment = {
     val __obj = js.Dynamic.literal()
-    if (magnitude != null) __obj.updateDynamic("magnitude")(magnitude.asInstanceOf[js.Any])
-    if (score != null) __obj.updateDynamic("score")(score.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1Sentiment]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2beta1SentimentOps[Self <: SchemaGoogleCloudDialogflowV2beta1Sentiment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMagnitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magnitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMagnitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("magnitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScore(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

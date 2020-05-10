@@ -14,14 +14,12 @@ trait imgAlgType extends js.Object
 
 object imgAlgType {
   @scala.inline
-  def atkinson: typingsSlinky.escPosEncoder.escPosEncoderStrings.atkinson = this.cast("atkinson")
+  def atkinson: typingsSlinky.escPosEncoder.escPosEncoderStrings.atkinson = "atkinson".asInstanceOf[typingsSlinky.escPosEncoder.escPosEncoderStrings.atkinson]
   @scala.inline
-  def bayer: typingsSlinky.escPosEncoder.escPosEncoderStrings.bayer = this.cast("bayer")
+  def bayer: typingsSlinky.escPosEncoder.escPosEncoderStrings.bayer = "bayer".asInstanceOf[typingsSlinky.escPosEncoder.escPosEncoderStrings.bayer]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def floydsteinberg: typingsSlinky.escPosEncoder.escPosEncoderStrings.floydsteinberg = "floydsteinberg".asInstanceOf[typingsSlinky.escPosEncoder.escPosEncoderStrings.floydsteinberg]
   @scala.inline
-  def floydsteinberg: typingsSlinky.escPosEncoder.escPosEncoderStrings.floydsteinberg = this.cast("floydsteinberg")
-  @scala.inline
-  def threshold: typingsSlinky.escPosEncoder.escPosEncoderStrings.threshold = this.cast("threshold")
+  def threshold: typingsSlinky.escPosEncoder.escPosEncoderStrings.threshold = "threshold".asInstanceOf[typingsSlinky.escPosEncoder.escPosEncoderStrings.threshold]
 }
 

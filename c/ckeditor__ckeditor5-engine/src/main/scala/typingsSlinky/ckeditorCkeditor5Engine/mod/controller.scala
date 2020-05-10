@@ -1,5 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.ckeditorCkeditor5Engine.Anon0
 import typingsSlinky.ckeditorCkeditor5Engine.AnonPriority
 import typingsSlinky.ckeditorCkeditor5Engine.mod.conversion.DowncastDispatcher
@@ -12,7 +13,6 @@ import typingsSlinky.ckeditorCkeditor5Engine.mod.model.SchemaContextDefinition
 import typingsSlinky.ckeditorCkeditor5Engine.mod.view.View
 import typingsSlinky.ckeditorCkeditor5Utils.mod.Emitter
 import typingsSlinky.ckeditorCkeditor5Utils.mod.Observable
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

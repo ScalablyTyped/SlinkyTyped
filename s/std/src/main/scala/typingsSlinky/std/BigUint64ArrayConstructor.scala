@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait BigUint64ArrayConstructor
   extends Instantiable0[BigUint64Array]
      with Instantiable1[
-      (/* buffer */ ArrayBufferLike) | (/* length */ Double) | (/* array */ Iterable[BigInt]), 
+      (/* buffer */ ArrayBufferLike) | (/* length */ Double) | (/* array */ js.Iterable[BigInt]), 
       BigUint64Array
     ]
      with Instantiable2[/* buffer */ ArrayBufferLike, /* byteOffset */ Double, BigUint64Array]

@@ -1,0 +1,44 @@
+package typingsSlinky.awsSdkClientS3Browser.typesOutputLocationMod
+
+import typingsSlinky.awsSdkClientS3Browser.typesS3LocationMod.UnmarshalledS3Location
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait UnmarshalledOutputLocation extends OutputLocation {
+  /**
+    * <p>Describes an S3 location that will receive the results of the restore request.</p>
+    */
+  @JSName("S3")
+  var S3_UnmarshalledOutputLocation: js.UndefOr[UnmarshalledS3Location] = js.native
+}
+
+object UnmarshalledOutputLocation {
+  @scala.inline
+  def apply(): UnmarshalledOutputLocation = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[UnmarshalledOutputLocation]
+  }
+  @scala.inline
+  implicit class UnmarshalledOutputLocationOps[Self <: UnmarshalledOutputLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withS3(value: UnmarshalledS3Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

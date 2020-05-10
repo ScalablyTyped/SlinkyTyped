@@ -23,10 +23,41 @@ trait MailFromArgs extends js.Object {
 
 object MailFromArgs {
   @scala.inline
-  def apply(domain: Input[String], mailFromDomain: Input[String], behaviorOnMxFailure: Input[String] = null): MailFromArgs = {
+  def apply(domain: Input[String], mailFromDomain: Input[String]): MailFromArgs = {
     val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any], mailFromDomain = mailFromDomain.asInstanceOf[js.Any])
-    if (behaviorOnMxFailure != null) __obj.updateDynamic("behaviorOnMxFailure")(behaviorOnMxFailure.asInstanceOf[js.Any])
     __obj.asInstanceOf[MailFromArgs]
   }
+  @scala.inline
+  implicit class MailFromArgsOps[Self <: MailFromArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMailFromDomain(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mailFromDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBehaviorOnMxFailure(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("behaviorOnMxFailure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBehaviorOnMxFailure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("behaviorOnMxFailure")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

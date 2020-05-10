@@ -1,6 +1,5 @@
 package typingsSlinky.winrt.Windows.Networking
 
-import typingsSlinky.winrt.Windows.Networking.Connectivity.IPInformation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,18 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class HostName protected () extends IHostName {
   def this(hostName: String) = this()
-  /* CompleteClass */
-  override var canonicalName: String = js.native
-  /* CompleteClass */
-  override var displayName: String = js.native
-  /* CompleteClass */
-  override var iPInformation: IPInformation = js.native
-  /* CompleteClass */
-  override var rawName: String = js.native
-  /* CompleteClass */
-  override var `type`: HostNameType = js.native
-  /* CompleteClass */
-  override def isEqual(hostName: HostName): Boolean = js.native
 }
 
 /* static members */

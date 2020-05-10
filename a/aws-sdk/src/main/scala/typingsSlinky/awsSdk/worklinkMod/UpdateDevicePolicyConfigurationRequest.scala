@@ -18,10 +18,35 @@ trait UpdateDevicePolicyConfigurationRequest extends js.Object {
 
 object UpdateDevicePolicyConfigurationRequest {
   @scala.inline
-  def apply(FleetArn: FleetArn, DeviceCaCertificate: CertificateChain = null): UpdateDevicePolicyConfigurationRequest = {
+  def apply(FleetArn: FleetArn): UpdateDevicePolicyConfigurationRequest = {
     val __obj = js.Dynamic.literal(FleetArn = FleetArn.asInstanceOf[js.Any])
-    if (DeviceCaCertificate != null) __obj.updateDynamic("DeviceCaCertificate")(DeviceCaCertificate.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDevicePolicyConfigurationRequest]
   }
+  @scala.inline
+  implicit class UpdateDevicePolicyConfigurationRequestOps[Self <: UpdateDevicePolicyConfigurationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFleetArn(value: FleetArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeviceCaCertificate(value: CertificateChain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceCaCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceCaCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceCaCertificate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

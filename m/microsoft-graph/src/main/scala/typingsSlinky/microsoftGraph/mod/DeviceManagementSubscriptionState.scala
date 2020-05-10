@@ -17,20 +17,18 @@ trait DeviceManagementSubscriptionState extends js.Object
 
 object DeviceManagementSubscriptionState {
   @scala.inline
-  def active: typingsSlinky.microsoftGraph.microsoftGraphStrings.active = this.cast("active")
+  def active: typingsSlinky.microsoftGraph.microsoftGraphStrings.active = "active".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.active]
   @scala.inline
-  def blocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked = this.cast("blocked")
+  def blocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked = "blocked".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deleted: typingsSlinky.microsoftGraph.microsoftGraphStrings.deleted = "deleted".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deleted]
   @scala.inline
-  def deleted: typingsSlinky.microsoftGraph.microsoftGraphStrings.deleted = this.cast("deleted")
+  def disabled: typingsSlinky.microsoftGraph.microsoftGraphStrings.disabled = "disabled".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.microsoftGraph.microsoftGraphStrings.disabled = this.cast("disabled")
+  def lockedOut: typingsSlinky.microsoftGraph.microsoftGraphStrings.lockedOut = "lockedOut".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lockedOut]
   @scala.inline
-  def lockedOut: typingsSlinky.microsoftGraph.microsoftGraphStrings.lockedOut = this.cast("lockedOut")
+  def pending: typingsSlinky.microsoftGraph.microsoftGraphStrings.pending = "pending".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.pending]
   @scala.inline
-  def pending: typingsSlinky.microsoftGraph.microsoftGraphStrings.pending = this.cast("pending")
-  @scala.inline
-  def warning: typingsSlinky.microsoftGraph.microsoftGraphStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.microsoftGraph.microsoftGraphStrings.warning = "warning".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.warning]
 }
 

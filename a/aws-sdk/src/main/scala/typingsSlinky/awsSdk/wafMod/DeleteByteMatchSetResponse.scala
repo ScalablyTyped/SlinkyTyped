@@ -14,10 +14,29 @@ trait DeleteByteMatchSetResponse extends js.Object {
 
 object DeleteByteMatchSetResponse {
   @scala.inline
-  def apply(ChangeToken: ChangeToken = null): DeleteByteMatchSetResponse = {
+  def apply(): DeleteByteMatchSetResponse = {
     val __obj = js.Dynamic.literal()
-    if (ChangeToken != null) __obj.updateDynamic("ChangeToken")(ChangeToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteByteMatchSetResponse]
   }
+  @scala.inline
+  implicit class DeleteByteMatchSetResponseOps[Self <: DeleteByteMatchSetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeToken(value: ChangeToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,7 +17,7 @@ object removeEventListener_reset extends js.Object {
   def apply(
     `type`: reset,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

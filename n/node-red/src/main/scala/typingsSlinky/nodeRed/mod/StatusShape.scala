@@ -12,10 +12,8 @@ trait StatusShape extends js.Object
 
 object StatusShape {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dot: typingsSlinky.nodeRed.nodeRedStrings.dot = "dot".asInstanceOf[typingsSlinky.nodeRed.nodeRedStrings.dot]
   @scala.inline
-  def dot: typingsSlinky.nodeRed.nodeRedStrings.dot = this.cast("dot")
-  @scala.inline
-  def ring: typingsSlinky.nodeRed.nodeRedStrings.ring = this.cast("ring")
+  def ring: typingsSlinky.nodeRed.nodeRedStrings.ring = "ring".asInstanceOf[typingsSlinky.nodeRed.nodeRedStrings.ring]
 }
 

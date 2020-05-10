@@ -12,7 +12,6 @@ import typingsSlinky.socketcluster.socketclusterStrings.masterMessage
 import typingsSlinky.socketcluster.socketclusterStrings.ready
 import typingsSlinky.socketcluster.socketclusterStrings.start
 import typingsSlinky.socketcluster.socketclusterStrings.warning
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,7 +66,7 @@ trait SCWorker extends EventEmitter {
   @JSName("removeMiddleware")
   def removeMiddleware_start(`type`: start, middlewareFn: middlewareFunction): Unit = js.native
   def respondToMaster(err: Null, data: js.Any, rid: Double): Unit = js.native
-  def respondToMaster(err: Error, data: js.Any, rid: Double): Unit = js.native
+  def respondToMaster(err: js.Error, data: js.Any, rid: Double): Unit = js.native
   def run(): Unit = js.native
   def sendToMaster(data: js.Any, callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Any, Unit]): Unit = js.native
   def setAuthEngine(authEngine: SCAuthEngine): Unit = js.native

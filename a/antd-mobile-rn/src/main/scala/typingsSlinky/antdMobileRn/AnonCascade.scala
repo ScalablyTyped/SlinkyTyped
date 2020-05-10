@@ -6,16 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCascade extends js.Object {
-  var cascade: Boolean
-  var cols: Double
-  var pickerPrefixCls: String
-  var popupPrefixCls: String
-  var prefixCls: String
-  var styles: StringDictionary[RegisteredStyle[_]]
-  var title: String
-  var triggerType: String
-  def format(values: js.Array[String]): String
+  var cascade: Boolean = js.native
+  var cols: Double = js.native
+  var pickerPrefixCls: String = js.native
+  var popupPrefixCls: String = js.native
+  var prefixCls: String = js.native
+  var styles: StringDictionary[RegisteredStyle[_]] = js.native
+  var title: String = js.native
+  var triggerType: String = js.native
+  def format(values: js.Array[String]): String = js.native
 }
 
 object AnonCascade {
@@ -32,8 +33,69 @@ object AnonCascade {
     triggerType: String
   ): AnonCascade = {
     val __obj = js.Dynamic.literal(cascade = cascade.asInstanceOf[js.Any], cols = cols.asInstanceOf[js.Any], format = js.Any.fromFunction1(format), pickerPrefixCls = pickerPrefixCls.asInstanceOf[js.Any], popupPrefixCls = popupPrefixCls.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], triggerType = triggerType.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonCascade]
   }
+  @scala.inline
+  implicit class AnonCascadeOps[Self <: AnonCascade] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCascade(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cascade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCols(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: js.Array[String] => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPickerPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerPrefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPopupPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupPrefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyles(value: StringDictionary[RegisteredStyle[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTriggerType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

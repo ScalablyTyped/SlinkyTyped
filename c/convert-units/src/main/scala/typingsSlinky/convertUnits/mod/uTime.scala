@@ -20,26 +20,24 @@ trait uTime extends js.Object
 
 object uTime {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def d: typingsSlinky.convertUnits.convertUnitsStrings.d = "d".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.d]
   @scala.inline
-  def d: typingsSlinky.convertUnits.convertUnitsStrings.d = this.cast("d")
+  def h: typingsSlinky.convertUnits.convertUnitsStrings.h = "h".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.h]
   @scala.inline
-  def h: typingsSlinky.convertUnits.convertUnitsStrings.h = this.cast("h")
+  def min: typingsSlinky.convertUnits.convertUnitsStrings.min = "min".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.min]
   @scala.inline
-  def min: typingsSlinky.convertUnits.convertUnitsStrings.min = this.cast("min")
+  def month: typingsSlinky.convertUnits.convertUnitsStrings.month = "month".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.month]
   @scala.inline
-  def month: typingsSlinky.convertUnits.convertUnitsStrings.month = this.cast("month")
+  def ms: typingsSlinky.convertUnits.convertUnitsStrings.ms = "ms".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.ms]
   @scala.inline
-  def ms: typingsSlinky.convertUnits.convertUnitsStrings.ms = this.cast("ms")
+  def mu: typingsSlinky.convertUnits.convertUnitsStrings.mu = "mu".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.mu]
   @scala.inline
-  def mu: typingsSlinky.convertUnits.convertUnitsStrings.mu = this.cast("mu")
+  def ns: typingsSlinky.convertUnits.convertUnitsStrings.ns = "ns".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.ns]
   @scala.inline
-  def ns: typingsSlinky.convertUnits.convertUnitsStrings.ns = this.cast("ns")
+  def s: typingsSlinky.convertUnits.convertUnitsStrings.s = "s".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.s]
   @scala.inline
-  def s: typingsSlinky.convertUnits.convertUnitsStrings.s = this.cast("s")
+  def week: typingsSlinky.convertUnits.convertUnitsStrings.week = "week".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.week]
   @scala.inline
-  def week: typingsSlinky.convertUnits.convertUnitsStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.convertUnits.convertUnitsStrings.year = this.cast("year")
+  def year: typingsSlinky.convertUnits.convertUnitsStrings.year = "year".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.year]
 }
 

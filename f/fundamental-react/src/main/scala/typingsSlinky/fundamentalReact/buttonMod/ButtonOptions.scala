@@ -6,16 +6,14 @@ import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.fundamentalReact.fundamentalReactStrings.emphasized
-  - typingsSlinky.fundamentalReact.fundamentalReactStrings.light
+  - typingsSlinky.fundamentalReact.fundamentalReactStrings.transparent
 */
 trait ButtonOptions extends js.Object
 
 object ButtonOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def emphasized: typingsSlinky.fundamentalReact.fundamentalReactStrings.emphasized = "emphasized".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.emphasized]
   @scala.inline
-  def emphasized: typingsSlinky.fundamentalReact.fundamentalReactStrings.emphasized = this.cast("emphasized")
-  @scala.inline
-  def light: typingsSlinky.fundamentalReact.fundamentalReactStrings.light = this.cast("light")
+  def transparent: typingsSlinky.fundamentalReact.fundamentalReactStrings.transparent = "transparent".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.transparent]
 }
 

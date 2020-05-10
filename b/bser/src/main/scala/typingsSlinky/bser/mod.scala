@@ -72,7 +72,7 @@ object mod extends js.Object {
   def dumpToBuffer(`val`: js.Any): Buffer = js.native
   def loadFromBuffer(input: InputWrapper): AnyWrapper | js.Array[AnyWrapper] = js.native
   type AnyWrapper = Boolean | IntWrapper | Null | String | js.Object
-  type InputWrapper = Buffer | String | TypedArray | scala.scalajs.js.typedarray.DataView | scala.scalajs.js.typedarray.ArrayBuffer | SharedArrayBuffer
+  type InputWrapper = Buffer | String | TypedArray | js.typedarray.DataView | js.typedarray.ArrayBuffer | SharedArrayBuffer
   type IntWrapper = Double | ^ 
 }
 

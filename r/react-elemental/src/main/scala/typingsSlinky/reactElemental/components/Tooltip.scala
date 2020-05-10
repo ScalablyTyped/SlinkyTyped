@@ -1,39 +1,42 @@
 package typingsSlinky.reactElemental.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactElemental.mod.TooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactElemental.mod.Tooltip] {
+object Tooltip {
   @JSImport("react-elemental", "Tooltip")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style, width */
-  def apply(
-    contents: ReactElement,
-    bottom: js.UndefOr[Boolean] = js.undefined,
-    offset: Int | Double = null,
-    persistent: js.UndefOr[Boolean] = js.undefined,
-    top: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactElemental.mod.Tooltip] = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any])
-    if (!js.isUndefined(bottom)) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (!js.isUndefined(persistent)) __obj.updateDynamic("persistent")(persistent.asInstanceOf[js.Any])
-    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactElemental.mod.Tooltip] {
+    @scala.inline
+    def bottom(value: Boolean): this.type = set("bottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def persistent(value: Boolean): this.type = set("persistent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def top(value: Boolean): this.type = set("top", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  type Props = TooltipProps
+  
+  def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(contents: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
+  }
 }
 

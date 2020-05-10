@@ -38,7 +38,7 @@ package object kafkaMod {
   type KafkaVersionStatus = typingsSlinky.awsSdk.kafkaMod._KafkaVersionStatus | java.lang.String
   type MaxResults = scala.Double
   type NodeType = typingsSlinky.awsSdk.awsSdkStrings.BROKER | java.lang.String
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.kafkaMod.Blob | java.lang.String
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kafkaMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2018-11-14`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

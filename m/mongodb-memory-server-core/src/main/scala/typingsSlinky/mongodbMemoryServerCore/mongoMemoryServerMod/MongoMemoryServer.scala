@@ -1,15 +1,12 @@
 package typingsSlinky.mongodbMemoryServerCore.mongoMemoryServerMod
 
 import typingsSlinky.mongodbMemoryServerCore.mongodbMemoryServerCoreBooleans.`false`
-import typingsSlinky.mongodbMemoryServerCore.typesMod.DebugFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MongoMemoryServer extends js.Object {
-  @JSName("debug")
-  var debug_Original: DebugFn = js.native
   var instanceInfoSync: MongoInstanceDataT | Null = js.native
   var opts: MongoMemoryServerOptsT = js.native
   var runningInstance: js.Promise[MongoInstanceDataT] | Null = js.native
@@ -18,7 +15,6 @@ trait MongoMemoryServer extends js.Object {
     * @private
     */
   def _startUpInstance(): js.Promise[MongoInstanceDataT] = js.native
-  def debug(args: js.Any*): js.Any = js.native
   /**
     * Ensure that the instance is running
     * -> throws if instance cannot be started

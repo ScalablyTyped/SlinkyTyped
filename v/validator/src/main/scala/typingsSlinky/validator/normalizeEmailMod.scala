@@ -1,6 +1,5 @@
 package typingsSlinky.validator
 
-import typingsSlinky.validator.mod.validator.NormalizeEmailOptions
 import typingsSlinky.validator.validatorBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +14,7 @@ object normalizeEmailMod extends js.Object {
     * @param [options] - Options
     */
   def default(email: String): String | `false` = js.native
-  def default(email: String, options: NormalizeEmailOptions): String | `false` = js.native
+  def default(email: String, options: typingsSlinky.validator.mod.validator.NormalizeEmailOptions): String | `false` = js.native
+  type NormalizeEmailOptions = typingsSlinky.validator.mod.validator.NormalizeEmailOptions
 }
 

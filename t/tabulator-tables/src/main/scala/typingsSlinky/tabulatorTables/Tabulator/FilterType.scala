@@ -19,24 +19,22 @@ trait FilterType extends js.Object
 
 object FilterType {
   @scala.inline
-  def Equalssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.Equalssign = this.cast("=")
+  def Equalssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.Equalssign = "=".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.Equalssign]
   @scala.inline
-  def ExclamationmarkEqualssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.ExclamationmarkEqualssign = this.cast("!=")
+  def ExclamationmarkEqualssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.ExclamationmarkEqualssign = "!=".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.ExclamationmarkEqualssign]
   @scala.inline
-  def Greaterthansign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.Greaterthansign = this.cast(">")
+  def Greaterthansign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.Greaterthansign]
   @scala.inline
-  def GreaterthansignEqualssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.GreaterthansignEqualssign = this.cast(">=")
+  def GreaterthansignEqualssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.GreaterthansignEqualssign]
   @scala.inline
-  def Lessthansign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.Lessthansign = this.cast("<")
+  def Lessthansign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.Lessthansign]
   @scala.inline
-  def LessthansignEqualssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.LessthansignEqualssign = this.cast("<=")
+  def LessthansignEqualssign: typingsSlinky.tabulatorTables.tabulatorTablesStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.LessthansignEqualssign]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def in: typingsSlinky.tabulatorTables.tabulatorTablesStrings.in = "in".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.in]
   @scala.inline
-  def in: typingsSlinky.tabulatorTables.tabulatorTablesStrings.in = this.cast("in")
+  def like: typingsSlinky.tabulatorTables.tabulatorTablesStrings.like = "like".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.like]
   @scala.inline
-  def like: typingsSlinky.tabulatorTables.tabulatorTablesStrings.like = this.cast("like")
-  @scala.inline
-  def regex: typingsSlinky.tabulatorTables.tabulatorTablesStrings.regex = this.cast("regex")
+  def regex: typingsSlinky.tabulatorTables.tabulatorTablesStrings.regex = "regex".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.regex]
 }
 

@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EachAsyncOptions extends js.Object {
   /** defaults to 1 */
-  var parallel: js.UndefOr[Double] = js.undefined
+  var parallel: js.UndefOr[Double] = js.native
 }
 
 object EachAsyncOptions {
   @scala.inline
-  def apply(parallel: Int | Double = null): EachAsyncOptions = {
+  def apply(): EachAsyncOptions = {
     val __obj = js.Dynamic.literal()
-    if (parallel != null) __obj.updateDynamic("parallel")(parallel.asInstanceOf[js.Any])
     __obj.asInstanceOf[EachAsyncOptions]
   }
+  @scala.inline
+  implicit class EachAsyncOptionsOps[Self <: EachAsyncOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParallel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParallel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

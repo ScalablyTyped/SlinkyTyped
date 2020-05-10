@@ -12,30 +12,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GitCreateTreeParamsTree extends js.Object {
-  var content: js.UndefOr[String] = js.undefined
-  var mode: js.UndefOr[`100644` | `100755` | `040000` | `160000` | `120000`] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var sha: js.UndefOr[String] = js.undefined
-  var `type`: js.UndefOr[blob | tree | commit] = js.undefined
+  var content: js.UndefOr[String] = js.native
+  var mode: js.UndefOr[`100644` | `100755` | `040000` | `160000` | `120000`] = js.native
+  var path: js.UndefOr[String] = js.native
+  var sha: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[blob | tree | commit] = js.native
 }
 
 object GitCreateTreeParamsTree {
   @scala.inline
-  def apply(
-    content: String = null,
-    mode: `100644` | `100755` | `040000` | `160000` | `120000` = null,
-    path: String = null,
-    sha: String = null,
-    `type`: blob | tree | commit = null
-  ): GitCreateTreeParamsTree = {
+  def apply(): GitCreateTreeParamsTree = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (sha != null) __obj.updateDynamic("sha")(sha.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GitCreateTreeParamsTree]
   }
+  @scala.inline
+  implicit class GitCreateTreeParamsTreeOps[Self <: GitCreateTreeParamsTree] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: `100644` | `100755` | `040000` | `160000` | `120000`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSha(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSha: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: blob | tree | commit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

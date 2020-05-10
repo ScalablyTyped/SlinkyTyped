@@ -38,8 +38,8 @@ object qrcode extends js.Object {
   def decode_utf8(s: String): String = js.native
   def getMiddleBrightnessPerArea(image: js.Array[Double]): js.Array[js.Array[Double]] = js.native
   def getPixel(x: Double, y: Double): Double = js.native
-  def grayScaleToBitmap(grayScale: js.Array[Double]): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def grayscale(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def grayScaleToBitmap(grayScale: js.Array[Double]): js.typedarray.Uint8Array = js.native
+  def grayscale(): js.typedarray.Uint8Array = js.native
   def isUrl(s: String): Boolean = js.native
   def orderBestPatterns(patterns: js.Array[AlignmentPattern]): Unit = js.native
   def process(ctx: CanvasRenderingContext2D): String = js.native

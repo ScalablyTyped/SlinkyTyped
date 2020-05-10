@@ -15,11 +15,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IAttachmentsCellModel extends ICellModel {
   /**
     * The cell attachments
     */
-  val attachments: IAttachmentsModel
+  val attachments: IAttachmentsModel = js.native
 }
 
 object IAttachmentsCellModel {
@@ -45,5 +46,19 @@ object IAttachmentsCellModel {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAttachmentsCellModel]
   }
+  @scala.inline
+  implicit class IAttachmentsCellModelOps[Self <: IAttachmentsCellModel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachments(value: IAttachmentsModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

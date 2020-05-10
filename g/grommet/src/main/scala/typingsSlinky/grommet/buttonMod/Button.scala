@@ -1,12 +1,12 @@
 package typingsSlinky.grommet.buttonMod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLButtonElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.grommetStrings.color
 import typingsSlinky.grommet.utilsMod.Omit
 import typingsSlinky.react.mod.ButtonHTMLAttributes
 import typingsSlinky.react.mod.DetailedHTMLProps
-import typingsSlinky.react.mod.FC
-import typingsSlinky.std.HTMLButtonElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @JSImport("grommet/components/Button", "Button")
 @js.native
 object Button extends TopLevel[
-      FC[
+      ReactComponentClass[
         ButtonProps with (Omit[
           DetailedHTMLProps[ButtonHTMLAttributes[HTMLButtonElement], HTMLButtonElement], 
           color

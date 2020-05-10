@@ -177,90 +177,497 @@ trait SchemaMobileDevice extends js.Object {
 
 object SchemaMobileDevice {
   @scala.inline
-  def apply(
-    adbStatus: js.UndefOr[Boolean] = js.undefined,
-    applications: js.Array[AnonDisplayName] = null,
-    basebandVersion: String = null,
-    bootloaderVersion: String = null,
-    brand: String = null,
-    buildNumber: String = null,
-    defaultLanguage: String = null,
-    developerOptionsStatus: js.UndefOr[Boolean] = js.undefined,
-    deviceCompromisedStatus: String = null,
-    deviceId: String = null,
-    devicePasswordStatus: String = null,
-    email: js.Array[String] = null,
-    encryptionStatus: String = null,
-    etag: String = null,
-    firstSync: String = null,
-    hardware: String = null,
-    hardwareId: String = null,
-    imei: String = null,
-    kernelVersion: String = null,
-    kind: String = null,
-    lastSync: String = null,
-    managedAccountIsOnOwnerProfile: js.UndefOr[Boolean] = js.undefined,
-    manufacturer: String = null,
-    meid: String = null,
-    model: String = null,
-    name: js.Array[String] = null,
-    networkOperator: String = null,
-    os: String = null,
-    otherAccountsInfo: js.Array[String] = null,
-    privilege: String = null,
-    releaseVersion: String = null,
-    resourceId: String = null,
-    securityPatchLevel: String = null,
-    serialNumber: String = null,
-    status: String = null,
-    supportsWorkProfile: js.UndefOr[Boolean] = js.undefined,
-    `type`: String = null,
-    unknownSourcesStatus: js.UndefOr[Boolean] = js.undefined,
-    userAgent: String = null,
-    wifiMacAddress: String = null
-  ): SchemaMobileDevice = {
+  def apply(): SchemaMobileDevice = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(adbStatus)) __obj.updateDynamic("adbStatus")(adbStatus.asInstanceOf[js.Any])
-    if (applications != null) __obj.updateDynamic("applications")(applications.asInstanceOf[js.Any])
-    if (basebandVersion != null) __obj.updateDynamic("basebandVersion")(basebandVersion.asInstanceOf[js.Any])
-    if (bootloaderVersion != null) __obj.updateDynamic("bootloaderVersion")(bootloaderVersion.asInstanceOf[js.Any])
-    if (brand != null) __obj.updateDynamic("brand")(brand.asInstanceOf[js.Any])
-    if (buildNumber != null) __obj.updateDynamic("buildNumber")(buildNumber.asInstanceOf[js.Any])
-    if (defaultLanguage != null) __obj.updateDynamic("defaultLanguage")(defaultLanguage.asInstanceOf[js.Any])
-    if (!js.isUndefined(developerOptionsStatus)) __obj.updateDynamic("developerOptionsStatus")(developerOptionsStatus.asInstanceOf[js.Any])
-    if (deviceCompromisedStatus != null) __obj.updateDynamic("deviceCompromisedStatus")(deviceCompromisedStatus.asInstanceOf[js.Any])
-    if (deviceId != null) __obj.updateDynamic("deviceId")(deviceId.asInstanceOf[js.Any])
-    if (devicePasswordStatus != null) __obj.updateDynamic("devicePasswordStatus")(devicePasswordStatus.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (encryptionStatus != null) __obj.updateDynamic("encryptionStatus")(encryptionStatus.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (firstSync != null) __obj.updateDynamic("firstSync")(firstSync.asInstanceOf[js.Any])
-    if (hardware != null) __obj.updateDynamic("hardware")(hardware.asInstanceOf[js.Any])
-    if (hardwareId != null) __obj.updateDynamic("hardwareId")(hardwareId.asInstanceOf[js.Any])
-    if (imei != null) __obj.updateDynamic("imei")(imei.asInstanceOf[js.Any])
-    if (kernelVersion != null) __obj.updateDynamic("kernelVersion")(kernelVersion.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (lastSync != null) __obj.updateDynamic("lastSync")(lastSync.asInstanceOf[js.Any])
-    if (!js.isUndefined(managedAccountIsOnOwnerProfile)) __obj.updateDynamic("managedAccountIsOnOwnerProfile")(managedAccountIsOnOwnerProfile.asInstanceOf[js.Any])
-    if (manufacturer != null) __obj.updateDynamic("manufacturer")(manufacturer.asInstanceOf[js.Any])
-    if (meid != null) __obj.updateDynamic("meid")(meid.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (networkOperator != null) __obj.updateDynamic("networkOperator")(networkOperator.asInstanceOf[js.Any])
-    if (os != null) __obj.updateDynamic("os")(os.asInstanceOf[js.Any])
-    if (otherAccountsInfo != null) __obj.updateDynamic("otherAccountsInfo")(otherAccountsInfo.asInstanceOf[js.Any])
-    if (privilege != null) __obj.updateDynamic("privilege")(privilege.asInstanceOf[js.Any])
-    if (releaseVersion != null) __obj.updateDynamic("releaseVersion")(releaseVersion.asInstanceOf[js.Any])
-    if (resourceId != null) __obj.updateDynamic("resourceId")(resourceId.asInstanceOf[js.Any])
-    if (securityPatchLevel != null) __obj.updateDynamic("securityPatchLevel")(securityPatchLevel.asInstanceOf[js.Any])
-    if (serialNumber != null) __obj.updateDynamic("serialNumber")(serialNumber.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (!js.isUndefined(supportsWorkProfile)) __obj.updateDynamic("supportsWorkProfile")(supportsWorkProfile.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(unknownSourcesStatus)) __obj.updateDynamic("unknownSourcesStatus")(unknownSourcesStatus.asInstanceOf[js.Any])
-    if (userAgent != null) __obj.updateDynamic("userAgent")(userAgent.asInstanceOf[js.Any])
-    if (wifiMacAddress != null) __obj.updateDynamic("wifiMacAddress")(wifiMacAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMobileDevice]
   }
+  @scala.inline
+  implicit class SchemaMobileDeviceOps[Self <: SchemaMobileDevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdbStatus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adbStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdbStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adbStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplications(value: js.Array[AnonDisplayName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBasebandVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basebandVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasebandVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basebandVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBootloaderVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootloaderVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootloaderVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootloaderVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrand(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuildNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeveloperOptionsStatus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("developerOptionsStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeveloperOptionsStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("developerOptionsStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceCompromisedStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCompromisedStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceCompromisedStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceCompromisedStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevicePasswordStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePasswordStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevicePasswordStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePasswordStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstSync(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHardware(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hardware")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHardware: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hardware")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHardwareId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHardwareId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImei(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imei")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImei: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imei")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKernelVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKernelVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastSync(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastSync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagedAccountIsOnOwnerProfile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedAccountIsOnOwnerProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedAccountIsOnOwnerProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedAccountIsOnOwnerProfile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManufacturer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManufacturer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkOperator(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkOperator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkOperator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOtherAccountsInfo(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otherAccountsInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOtherAccountsInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otherAccountsInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivilege(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilege")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivilege: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilege")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReleaseVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReleaseVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityPatchLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityPatchLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityPatchLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityPatchLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerialNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerialNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportsWorkProfile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsWorkProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportsWorkProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsWorkProfile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnknownSourcesStatus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownSourcesStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnknownSourcesStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unknownSourcesStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserAgent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWifiMacAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiMacAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWifiMacAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wifiMacAddress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

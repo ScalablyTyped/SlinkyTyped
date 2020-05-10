@@ -158,12 +158,12 @@ object ^ extends js.Object {
     * @function
     */
   def forEach(
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     stride: Double,
     offset: Double,
     count: Double,
     fn: js.Function2[/* a */ vec4 | js.Array[Double], /* b */ vec4 | js.Array[Double], Unit]
-  ): scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.typedarray.Float32Array = js.native
   /**
     * Perform some operation over an array of vec4s.
     *
@@ -177,7 +177,7 @@ object ^ extends js.Object {
     * @function
     */
   def forEach(
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     stride: Double,
     offset: Double,
     count: Double,
@@ -188,7 +188,7 @@ object ^ extends js.Object {
       Unit
     ],
     arg: js.Any
-  ): scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.typedarray.Float32Array = js.native
   /**
     * Creates a new vec4 initialized with the given values
     *

@@ -25,36 +25,34 @@ trait AlignItemsType extends js.Object
 
 object AlignItemsType {
   @scala.inline
-  def baseline: typingsSlinky.azdata.azdataStrings.baseline = this.cast("baseline")
+  def baseline: typingsSlinky.azdata.azdataStrings.baseline = "baseline".asInstanceOf[typingsSlinky.azdata.azdataStrings.baseline]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.azdata.azdataStrings.center = "center".asInstanceOf[typingsSlinky.azdata.azdataStrings.center]
   @scala.inline
-  def center: typingsSlinky.azdata.azdataStrings.center = this.cast("center")
+  def end: typingsSlinky.azdata.azdataStrings.end = "end".asInstanceOf[typingsSlinky.azdata.azdataStrings.end]
   @scala.inline
-  def end: typingsSlinky.azdata.azdataStrings.end = this.cast("end")
+  def `first baseline`: typingsSlinky.azdata.azdataStrings.`first baseline` = ("first baseline").asInstanceOf[typingsSlinky.azdata.azdataStrings.`first baseline`]
   @scala.inline
-  def `first baseline`: typingsSlinky.azdata.azdataStrings.`first baseline` = this.cast("first baseline")
+  def `flex-end`: typingsSlinky.azdata.azdataStrings.`flex-end` = "flex-end".asInstanceOf[typingsSlinky.azdata.azdataStrings.`flex-end`]
   @scala.inline
-  def `flex-end`: typingsSlinky.azdata.azdataStrings.`flex-end` = this.cast("flex-end")
+  def `flex-start`: typingsSlinky.azdata.azdataStrings.`flex-start` = "flex-start".asInstanceOf[typingsSlinky.azdata.azdataStrings.`flex-start`]
   @scala.inline
-  def `flex-start`: typingsSlinky.azdata.azdataStrings.`flex-start` = this.cast("flex-start")
+  def inherit: typingsSlinky.azdata.azdataStrings.inherit = "inherit".asInstanceOf[typingsSlinky.azdata.azdataStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.azdata.azdataStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.azdata.azdataStrings.initial = "initial".asInstanceOf[typingsSlinky.azdata.azdataStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.azdata.azdataStrings.initial = this.cast("initial")
+  def `last baseline`: typingsSlinky.azdata.azdataStrings.`last baseline` = ("last baseline").asInstanceOf[typingsSlinky.azdata.azdataStrings.`last baseline`]
   @scala.inline
-  def `last baseline`: typingsSlinky.azdata.azdataStrings.`last baseline` = this.cast("last baseline")
+  def normal: typingsSlinky.azdata.azdataStrings.normal = "normal".asInstanceOf[typingsSlinky.azdata.azdataStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.azdata.azdataStrings.normal = this.cast("normal")
+  def `safe center`: typingsSlinky.azdata.azdataStrings.`safe center` = ("safe center").asInstanceOf[typingsSlinky.azdata.azdataStrings.`safe center`]
   @scala.inline
-  def `safe center`: typingsSlinky.azdata.azdataStrings.`safe center` = this.cast("safe center")
+  def start: typingsSlinky.azdata.azdataStrings.start = "start".asInstanceOf[typingsSlinky.azdata.azdataStrings.start]
   @scala.inline
-  def start: typingsSlinky.azdata.azdataStrings.start = this.cast("start")
+  def stretch: typingsSlinky.azdata.azdataStrings.stretch = "stretch".asInstanceOf[typingsSlinky.azdata.azdataStrings.stretch]
   @scala.inline
-  def stretch: typingsSlinky.azdata.azdataStrings.stretch = this.cast("stretch")
+  def `unsafe center`: typingsSlinky.azdata.azdataStrings.`unsafe center` = ("unsafe center").asInstanceOf[typingsSlinky.azdata.azdataStrings.`unsafe center`]
   @scala.inline
-  def `unsafe center`: typingsSlinky.azdata.azdataStrings.`unsafe center` = this.cast("unsafe center")
-  @scala.inline
-  def unset: typingsSlinky.azdata.azdataStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.azdata.azdataStrings.unset = "unset".asInstanceOf[typingsSlinky.azdata.azdataStrings.unset]
 }
 

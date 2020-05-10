@@ -1,11 +1,10 @@
 package typingsSlinky.reactVirtualized.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactVirtualized.esCollectionMod.CollectionCellGroupRendererParams
 import typingsSlinky.reactVirtualized.esCollectionMod.CollectionCellRendererParams
 import typingsSlinky.reactVirtualized.esCollectionMod.CollectionCellSizeAndPosition
@@ -18,52 +17,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Collection
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactVirtualized.mod.Collection] {
+object Collection {
   @JSImport("react-virtualized", "Collection")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, style */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.Collection] {
+    @scala.inline
+    def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoHeight(value: Boolean): this.type = set("autoHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellGroupRenderer(value: /* params */ CollectionCellGroupRendererParams => js.Array[TagMod[Any]]): this.type = set("cellGroupRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontalOverscanSize(value: Double): this.type = set("horizontalOverscanSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noContentRenderer(value: () => ReactElement): this.type = set("noContentRenderer", js.Any.fromFunction0(value))
+    @scala.inline
+    def onScroll(value: /* params */ ScrollParams => _): this.type = set("onScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSectionRendered(value: /* params */ SectionRenderedParams => _): this.type = set("onSectionRendered", js.Any.fromFunction1(value))
+    @scala.inline
+    def scrollLeft(value: Double): this.type = set("scrollLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollToAlignment(value: Alignment): this.type = set("scrollToAlignment", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollToCell(value: Double): this.type = set("scrollToCell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollTop(value: Double): this.type = set("scrollTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sectionSize(value: Double): this.type = set("sectionSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalOverscanSize(value: Double): this.type = set("verticalOverscanSize", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: CollectionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     cellCount: Double,
     cellRenderer: /* params */ CollectionCellRendererParams => TagMod[Any],
     cellSizeAndPositionGetter: /* params */ Index => CollectionCellSizeAndPosition,
     height: Double,
-    width: Double,
-    `aria-label`: String = null,
-    autoHeight: js.UndefOr[Boolean] = js.undefined,
-    cellGroupRenderer: /* params */ CollectionCellGroupRendererParams => js.Array[TagMod[Any]] = null,
-    horizontalOverscanSize: Int | Double = null,
-    noContentRenderer: () => ReactElement = null,
-    onScroll: /* params */ ScrollParams => _ = null,
-    onSectionRendered: /* params */ SectionRenderedParams => _ = null,
-    scrollLeft: Int | Double = null,
-    scrollToAlignment: Alignment = null,
-    scrollToCell: Int | Double = null,
-    scrollTop: Int | Double = null,
-    sectionSize: Int | Double = null,
-    verticalOverscanSize: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.Collection] = {
-    val __obj = js.Dynamic.literal(cellCount = cellCount.asInstanceOf[js.Any], cellRenderer = js.Any.fromFunction1(cellRenderer), cellSizeAndPositionGetter = js.Any.fromFunction1(cellSizeAndPositionGetter), height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoHeight)) __obj.updateDynamic("autoHeight")(autoHeight.asInstanceOf[js.Any])
-    if (cellGroupRenderer != null) __obj.updateDynamic("cellGroupRenderer")(js.Any.fromFunction1(cellGroupRenderer))
-    if (horizontalOverscanSize != null) __obj.updateDynamic("horizontalOverscanSize")(horizontalOverscanSize.asInstanceOf[js.Any])
-    if (noContentRenderer != null) __obj.updateDynamic("noContentRenderer")(js.Any.fromFunction0(noContentRenderer))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (onSectionRendered != null) __obj.updateDynamic("onSectionRendered")(js.Any.fromFunction1(onSectionRendered))
-    if (scrollLeft != null) __obj.updateDynamic("scrollLeft")(scrollLeft.asInstanceOf[js.Any])
-    if (scrollToAlignment != null) __obj.updateDynamic("scrollToAlignment")(scrollToAlignment.asInstanceOf[js.Any])
-    if (scrollToCell != null) __obj.updateDynamic("scrollToCell")(scrollToCell.asInstanceOf[js.Any])
-    if (scrollTop != null) __obj.updateDynamic("scrollTop")(scrollTop.asInstanceOf[js.Any])
-    if (sectionSize != null) __obj.updateDynamic("sectionSize")(sectionSize.asInstanceOf[js.Any])
-    if (verticalOverscanSize != null) __obj.updateDynamic("verticalOverscanSize")(verticalOverscanSize.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    width: Double
+  ): Builder = {
+    val __props = js.Dynamic.literal(cellCount = cellCount.asInstanceOf[js.Any], cellRenderer = js.Any.fromFunction1(cellRenderer), cellSizeAndPositionGetter = js.Any.fromFunction1(cellSizeAndPositionGetter), height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CollectionProps]))
   }
-  type Props = CollectionProps
 }
 

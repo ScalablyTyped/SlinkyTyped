@@ -21,11 +21,11 @@ object geoPointMod extends js.Object {
     /**
       * Returns the latitude of this geo point, a number between -90 and 90.
       */
-    def latitude(): Double = js.native
+    def latitude: Double = js.native
     /**
       * Returns the longitude of this geo point, a number between -180 and 180.
       */
-    def longitude(): Double = js.native
+    def longitude: Double = js.native
   }
   
 }

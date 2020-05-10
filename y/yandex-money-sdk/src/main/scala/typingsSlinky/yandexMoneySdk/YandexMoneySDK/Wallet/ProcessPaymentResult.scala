@@ -6,56 +6,199 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProcessPaymentResult extends js.Object {
-  var account_unblock_uri: js.UndefOr[String] = js.undefined
-  var acs_params: js.UndefOr[AnonDictkey] = js.undefined
-  var acs_uri: js.UndefOr[String] = js.undefined
-  var balance: js.UndefOr[Double] = js.undefined
-  var credit_amount: js.UndefOr[Double] = js.undefined
-  var digital_goods: js.UndefOr[AnonArticle] = js.undefined
-  var error: js.UndefOr[String] = js.undefined
-  var hold_for_pickup_link: js.UndefOr[String] = js.undefined
-  var invoice_id: js.UndefOr[String] = js.undefined
-  var next_retry: js.UndefOr[Double] = js.undefined
-  var payee: js.UndefOr[String] = js.undefined
-  var payer: js.UndefOr[String] = js.undefined
-  var payment_id: js.UndefOr[String] = js.undefined
-  var status: String
+  var account_unblock_uri: js.UndefOr[String] = js.native
+  var acs_params: js.UndefOr[AnonDictkey] = js.native
+  var acs_uri: js.UndefOr[String] = js.native
+  var balance: js.UndefOr[Double] = js.native
+  var credit_amount: js.UndefOr[Double] = js.native
+  var digital_goods: js.UndefOr[AnonArticle] = js.native
+  var error: js.UndefOr[String] = js.native
+  var hold_for_pickup_link: js.UndefOr[String] = js.native
+  var invoice_id: js.UndefOr[String] = js.native
+  var next_retry: js.UndefOr[Double] = js.native
+  var payee: js.UndefOr[String] = js.native
+  var payer: js.UndefOr[String] = js.native
+  var payment_id: js.UndefOr[String] = js.native
+  var status: String = js.native
 }
 
 object ProcessPaymentResult {
   @scala.inline
-  def apply(
-    status: String,
-    account_unblock_uri: String = null,
-    acs_params: AnonDictkey = null,
-    acs_uri: String = null,
-    balance: Int | Double = null,
-    credit_amount: Int | Double = null,
-    digital_goods: AnonArticle = null,
-    error: String = null,
-    hold_for_pickup_link: String = null,
-    invoice_id: String = null,
-    next_retry: Int | Double = null,
-    payee: String = null,
-    payer: String = null,
-    payment_id: String = null
-  ): ProcessPaymentResult = {
+  def apply(status: String): ProcessPaymentResult = {
     val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    if (account_unblock_uri != null) __obj.updateDynamic("account_unblock_uri")(account_unblock_uri.asInstanceOf[js.Any])
-    if (acs_params != null) __obj.updateDynamic("acs_params")(acs_params.asInstanceOf[js.Any])
-    if (acs_uri != null) __obj.updateDynamic("acs_uri")(acs_uri.asInstanceOf[js.Any])
-    if (balance != null) __obj.updateDynamic("balance")(balance.asInstanceOf[js.Any])
-    if (credit_amount != null) __obj.updateDynamic("credit_amount")(credit_amount.asInstanceOf[js.Any])
-    if (digital_goods != null) __obj.updateDynamic("digital_goods")(digital_goods.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (hold_for_pickup_link != null) __obj.updateDynamic("hold_for_pickup_link")(hold_for_pickup_link.asInstanceOf[js.Any])
-    if (invoice_id != null) __obj.updateDynamic("invoice_id")(invoice_id.asInstanceOf[js.Any])
-    if (next_retry != null) __obj.updateDynamic("next_retry")(next_retry.asInstanceOf[js.Any])
-    if (payee != null) __obj.updateDynamic("payee")(payee.asInstanceOf[js.Any])
-    if (payer != null) __obj.updateDynamic("payer")(payer.asInstanceOf[js.Any])
-    if (payment_id != null) __obj.updateDynamic("payment_id")(payment_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessPaymentResult]
   }
+  @scala.inline
+  implicit class ProcessPaymentResultOps[Self <: ProcessPaymentResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccount_unblock_uri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("account_unblock_uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccount_unblock_uri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("account_unblock_uri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAcs_params(value: AnonDictkey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acs_params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcs_params: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acs_params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAcs_uri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acs_uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcs_uri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acs_uri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBalance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("balance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBalance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("balance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCredit_amount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credit_amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredit_amount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credit_amount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDigital_goods(value: AnonArticle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("digital_goods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDigital_goods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("digital_goods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHold_for_pickup_link(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hold_for_pickup_link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHold_for_pickup_link: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hold_for_pickup_link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvoice_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invoice_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvoice_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invoice_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNext_retry(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next_retry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNext_retry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next_retry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayee(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payee")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayee: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payee")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayment_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayment_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payment_id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -91,52 +91,269 @@ trait HIT extends js.Object {
 
 object HIT {
   @scala.inline
-  def apply(
-    AssignmentDurationInSeconds: Int | Double = null,
-    AutoApprovalDelayInSeconds: Int | Double = null,
-    CreationTime: js.Date = null,
-    Description: String = null,
-    Expiration: js.Date = null,
-    HITGroupId: EntityId = null,
-    HITId: EntityId = null,
-    HITLayoutId: EntityId = null,
-    HITReviewStatus: HITReviewStatus = null,
-    HITStatus: HITStatus = null,
-    HITTypeId: EntityId = null,
-    Keywords: String = null,
-    MaxAssignments: Int | Double = null,
-    NumberOfAssignmentsAvailable: Int | Double = null,
-    NumberOfAssignmentsCompleted: Int | Double = null,
-    NumberOfAssignmentsPending: Int | Double = null,
-    QualificationRequirements: QualificationRequirementList = null,
-    Question: String = null,
-    RequesterAnnotation: String = null,
-    Reward: CurrencyAmount = null,
-    Title: String = null
-  ): HIT = {
+  def apply(): HIT = {
     val __obj = js.Dynamic.literal()
-    if (AssignmentDurationInSeconds != null) __obj.updateDynamic("AssignmentDurationInSeconds")(AssignmentDurationInSeconds.asInstanceOf[js.Any])
-    if (AutoApprovalDelayInSeconds != null) __obj.updateDynamic("AutoApprovalDelayInSeconds")(AutoApprovalDelayInSeconds.asInstanceOf[js.Any])
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (Expiration != null) __obj.updateDynamic("Expiration")(Expiration.asInstanceOf[js.Any])
-    if (HITGroupId != null) __obj.updateDynamic("HITGroupId")(HITGroupId.asInstanceOf[js.Any])
-    if (HITId != null) __obj.updateDynamic("HITId")(HITId.asInstanceOf[js.Any])
-    if (HITLayoutId != null) __obj.updateDynamic("HITLayoutId")(HITLayoutId.asInstanceOf[js.Any])
-    if (HITReviewStatus != null) __obj.updateDynamic("HITReviewStatus")(HITReviewStatus.asInstanceOf[js.Any])
-    if (HITStatus != null) __obj.updateDynamic("HITStatus")(HITStatus.asInstanceOf[js.Any])
-    if (HITTypeId != null) __obj.updateDynamic("HITTypeId")(HITTypeId.asInstanceOf[js.Any])
-    if (Keywords != null) __obj.updateDynamic("Keywords")(Keywords.asInstanceOf[js.Any])
-    if (MaxAssignments != null) __obj.updateDynamic("MaxAssignments")(MaxAssignments.asInstanceOf[js.Any])
-    if (NumberOfAssignmentsAvailable != null) __obj.updateDynamic("NumberOfAssignmentsAvailable")(NumberOfAssignmentsAvailable.asInstanceOf[js.Any])
-    if (NumberOfAssignmentsCompleted != null) __obj.updateDynamic("NumberOfAssignmentsCompleted")(NumberOfAssignmentsCompleted.asInstanceOf[js.Any])
-    if (NumberOfAssignmentsPending != null) __obj.updateDynamic("NumberOfAssignmentsPending")(NumberOfAssignmentsPending.asInstanceOf[js.Any])
-    if (QualificationRequirements != null) __obj.updateDynamic("QualificationRequirements")(QualificationRequirements.asInstanceOf[js.Any])
-    if (Question != null) __obj.updateDynamic("Question")(Question.asInstanceOf[js.Any])
-    if (RequesterAnnotation != null) __obj.updateDynamic("RequesterAnnotation")(RequesterAnnotation.asInstanceOf[js.Any])
-    if (Reward != null) __obj.updateDynamic("Reward")(Reward.asInstanceOf[js.Any])
-    if (Title != null) __obj.updateDynamic("Title")(Title.asInstanceOf[js.Any])
     __obj.asInstanceOf[HIT]
   }
+  @scala.inline
+  implicit class HITOps[Self <: HIT] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignmentDurationInSeconds(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentDurationInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignmentDurationInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentDurationInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoApprovalDelayInSeconds(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoApprovalDelayInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoApprovalDelayInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoApprovalDelayInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpiration(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpiration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expiration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHITGroupId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHITGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITGroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHITId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHITId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHITLayoutId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITLayoutId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHITLayoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITLayoutId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHITReviewStatus(value: HITReviewStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITReviewStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHITReviewStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITReviewStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHITStatus(value: HITStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHITStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHITTypeId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITTypeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHITTypeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITTypeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeywords(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Keywords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeywords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Keywords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAssignments(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAssignments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAssignments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAssignments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfAssignmentsAvailable(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfAssignmentsAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfAssignmentsAvailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfAssignmentsAvailable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfAssignmentsCompleted(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfAssignmentsCompleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfAssignmentsCompleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfAssignmentsCompleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfAssignmentsPending(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfAssignmentsPending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfAssignmentsPending: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfAssignmentsPending")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQualificationRequirements(value: QualificationRequirementList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationRequirements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualificationRequirements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationRequirements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuestion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Question")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Question")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequesterAnnotation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterAnnotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReward(value: CurrencyAmount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reward")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReward: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reward")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,10 +18,35 @@ trait StandardsSubscriptionRequest extends js.Object {
 
 object StandardsSubscriptionRequest {
   @scala.inline
-  def apply(StandardsArn: NonEmptyString, StandardsInput: StandardsInputParameterMap = null): StandardsSubscriptionRequest = {
+  def apply(StandardsArn: NonEmptyString): StandardsSubscriptionRequest = {
     val __obj = js.Dynamic.literal(StandardsArn = StandardsArn.asInstanceOf[js.Any])
-    if (StandardsInput != null) __obj.updateDynamic("StandardsInput")(StandardsInput.asInstanceOf[js.Any])
     __obj.asInstanceOf[StandardsSubscriptionRequest]
   }
+  @scala.inline
+  implicit class StandardsSubscriptionRequestOps[Self <: StandardsSubscriptionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStandardsArn(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardsArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStandardsInput(value: StandardsInputParameterMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardsInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandardsInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardsInput")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

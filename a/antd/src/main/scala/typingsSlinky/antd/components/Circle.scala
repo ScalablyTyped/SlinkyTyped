@@ -1,10 +1,8 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.active
 import typingsSlinky.antd.antdStrings.bottom
 import typingsSlinky.antd.antdStrings.butt
@@ -20,57 +18,61 @@ import typingsSlinky.antd.circleMod.CircleProps
 import typingsSlinky.antd.progressProgressMod.ProgressGradient
 import typingsSlinky.antd.progressProgressMod.ProgressSize
 import typingsSlinky.antd.progressProgressMod.ProgressType
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Circle
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Circle {
   @JSImport("antd/lib/progress/Circle", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    prefixCls: String,
-    progressStatus: String,
-    format: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => TagMod[Any] = null,
-    gapDegree: Int | Double = null,
-    gapPosition: top | bottom | left | right = null,
-    percent: Int | Double = null,
-    showInfo: js.UndefOr[Boolean] = js.undefined,
-    size: ProgressSize = null,
-    status: normal | exception | active | success = null,
-    steps: Int | Double = null,
-    strokeColor: String | ProgressGradient = null,
-    strokeLinecap: butt | square | round = null,
-    strokeWidth: Int | Double = null,
-    successPercent: Int | Double = null,
-    trailColor: String = null,
-    `type`: ProgressType = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any], progressStatus = progressStatus.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(js.Any.fromFunction2(format))
-    if (gapDegree != null) __obj.updateDynamic("gapDegree")(gapDegree.asInstanceOf[js.Any])
-    if (gapPosition != null) __obj.updateDynamic("gapPosition")(gapPosition.asInstanceOf[js.Any])
-    if (percent != null) __obj.updateDynamic("percent")(percent.asInstanceOf[js.Any])
-    if (!js.isUndefined(showInfo)) __obj.updateDynamic("showInfo")(showInfo.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (steps != null) __obj.updateDynamic("steps")(steps.asInstanceOf[js.Any])
-    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
-    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (successPercent != null) __obj.updateDynamic("successPercent")(successPercent.asInstanceOf[js.Any])
-    if (trailColor != null) __obj.updateDynamic("trailColor")(trailColor.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => TagMod[Any]): this.type = set("format", js.Any.fromFunction2(value))
+    @scala.inline
+    def gapDegree(value: Double): this.type = set("gapDegree", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gapPosition(value: top | bottom | left | right): this.type = set("gapPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def percent(value: Double): this.type = set("percent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showInfo(value: Boolean): this.type = set("showInfo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: ProgressSize): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def status(value: normal | exception | active | success): this.type = set("status", value.asInstanceOf[js.Any])
+    @scala.inline
+    def steps(value: Double): this.type = set("steps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeColor(value: String | ProgressGradient): this.type = set("strokeColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeLinecap(value: butt | square | round): this.type = set("strokeLinecap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeWidth(value: Double): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def successPercent(value: Double): this.type = set("successPercent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trailColor(value: String): this.type = set("trailColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: ProgressType): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  type Props = CircleProps
+  
+  def withProps(p: CircleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(prefixCls: String, progressStatus: String): Builder = {
+    val __props = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any], progressStatus = progressStatus.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CircleProps]))
+  }
 }
 

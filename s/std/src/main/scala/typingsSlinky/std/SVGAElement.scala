@@ -45,11 +45,12 @@ trait SVGAElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGAElement")
 @js.native
-object SVGAElement extends Instantiable0[SVGAElement]
+object SVGAElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGAElement]
 

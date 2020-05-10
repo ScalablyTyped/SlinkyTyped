@@ -19,24 +19,22 @@ trait AlertPosition extends js.Object
 
 object AlertPosition {
   @scala.inline
-  def `bottom center`: typingsSlinky.reactAlert.reactAlertStrings.`bottom center` = this.cast("bottom center")
+  def `bottom center`: typingsSlinky.reactAlert.reactAlertStrings.`bottom center` = ("bottom center").asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.`bottom center`]
   @scala.inline
-  def `bottom left`: typingsSlinky.reactAlert.reactAlertStrings.`bottom left` = this.cast("bottom left")
+  def `bottom left`: typingsSlinky.reactAlert.reactAlertStrings.`bottom left` = ("bottom left").asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.`bottom left`]
   @scala.inline
-  def `bottom right`: typingsSlinky.reactAlert.reactAlertStrings.`bottom right` = this.cast("bottom right")
+  def `bottom right`: typingsSlinky.reactAlert.reactAlertStrings.`bottom right` = ("bottom right").asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.`bottom right`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def middle: typingsSlinky.reactAlert.reactAlertStrings.middle = "middle".asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.reactAlert.reactAlertStrings.middle = this.cast("middle")
+  def `middle left`: typingsSlinky.reactAlert.reactAlertStrings.`middle left` = ("middle left").asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.`middle left`]
   @scala.inline
-  def `middle left`: typingsSlinky.reactAlert.reactAlertStrings.`middle left` = this.cast("middle left")
+  def `middle right`: typingsSlinky.reactAlert.reactAlertStrings.`middle right` = ("middle right").asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.`middle right`]
   @scala.inline
-  def `middle right`: typingsSlinky.reactAlert.reactAlertStrings.`middle right` = this.cast("middle right")
+  def `top center`: typingsSlinky.reactAlert.reactAlertStrings.`top center` = ("top center").asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.`top center`]
   @scala.inline
-  def `top center`: typingsSlinky.reactAlert.reactAlertStrings.`top center` = this.cast("top center")
+  def `top left`: typingsSlinky.reactAlert.reactAlertStrings.`top left` = ("top left").asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.`top left`]
   @scala.inline
-  def `top left`: typingsSlinky.reactAlert.reactAlertStrings.`top left` = this.cast("top left")
-  @scala.inline
-  def `top right`: typingsSlinky.reactAlert.reactAlertStrings.`top right` = this.cast("top right")
+  def `top right`: typingsSlinky.reactAlert.reactAlertStrings.`top right` = ("top right").asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.`top right`]
 }
 

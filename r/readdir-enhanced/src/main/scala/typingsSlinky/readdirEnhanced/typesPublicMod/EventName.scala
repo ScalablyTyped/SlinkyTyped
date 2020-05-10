@@ -14,14 +14,12 @@ trait EventName extends js.Object
 
 object EventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def directory: typingsSlinky.readdirEnhanced.readdirEnhancedStrings.directory = "directory".asInstanceOf[typingsSlinky.readdirEnhanced.readdirEnhancedStrings.directory]
   @scala.inline
-  def directory: typingsSlinky.readdirEnhanced.readdirEnhancedStrings.directory = this.cast("directory")
+  def error: typingsSlinky.readdirEnhanced.readdirEnhancedStrings.error = "error".asInstanceOf[typingsSlinky.readdirEnhanced.readdirEnhancedStrings.error]
   @scala.inline
-  def error: typingsSlinky.readdirEnhanced.readdirEnhancedStrings.error = this.cast("error")
+  def file: typingsSlinky.readdirEnhanced.readdirEnhancedStrings.file = "file".asInstanceOf[typingsSlinky.readdirEnhanced.readdirEnhancedStrings.file]
   @scala.inline
-  def file: typingsSlinky.readdirEnhanced.readdirEnhancedStrings.file = this.cast("file")
-  @scala.inline
-  def symlink: typingsSlinky.readdirEnhanced.readdirEnhancedStrings.symlink = this.cast("symlink")
+  def symlink: typingsSlinky.readdirEnhanced.readdirEnhancedStrings.symlink = "symlink".asInstanceOf[typingsSlinky.readdirEnhanced.readdirEnhancedStrings.symlink]
 }
 

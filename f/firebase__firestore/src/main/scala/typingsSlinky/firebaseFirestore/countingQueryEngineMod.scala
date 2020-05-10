@@ -1,13 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
-import typingsSlinky.firebaseFirestore.collectionsMod.DocumentKeySet_
-import typingsSlinky.firebaseFirestore.collectionsMod.DocumentMap_
-import typingsSlinky.firebaseFirestore.localDocumentsViewMod.LocalDocumentsView
-import typingsSlinky.firebaseFirestore.persistenceMod.PersistenceTransaction
-import typingsSlinky.firebaseFirestore.persistencePromiseMod.PersistencePromise
 import typingsSlinky.firebaseFirestore.queryEngineMod.QueryEngine
-import typingsSlinky.firebaseFirestore.queryMod.Query
-import typingsSlinky.firebaseFirestore.snapshotVersionMod.SnapshotVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,18 +37,7 @@ object countingQueryEngineMod extends js.Object {
     val queryEngine: js.Any = js.native
     var wrapMutationQueue: js.Any = js.native
     var wrapRemoteDocumentCache: js.Any = js.native
-    /** Returns all local documents matching the specified query. */
-    /* CompleteClass */
-    override def getDocumentsMatchingQuery(
-      transaction: PersistenceTransaction,
-      query: Query,
-      lastLimboFreeSnapshotVersion: SnapshotVersion,
-      remoteKeys: DocumentKeySet_
-    ): PersistencePromise[DocumentMap_] = js.native
     def resetCounts(): Unit = js.native
-    /** Sets the document view to query against. */
-    /* CompleteClass */
-    override def setLocalDocumentsView(localDocuments: LocalDocumentsView): Unit = js.native
   }
   
 }

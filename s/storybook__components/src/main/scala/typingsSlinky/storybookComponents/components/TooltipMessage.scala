@@ -1,37 +1,37 @@
 package typingsSlinky.storybookComponents.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookComponents.AnonHref
 import typingsSlinky.storybookComponents.tooltipMessageMod.TooltipMessageProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TooltipMessage
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TooltipMessage {
   @JSImport("@storybook/components", "TooltipMessage")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    desc: TagMod[Any] = null,
-    links: js.Array[AnonHref] = null,
-    title: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (desc != null) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
-    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def descReactElement(value: ReactElement): this.type = set("desc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def desc(value: TagMod[Any]): this.type = set("desc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def links(value: js.Array[AnonHref]): this.type = set("links", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TooltipMessageProps
+  
+  def withProps(p: TooltipMessageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TooltipMessage.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

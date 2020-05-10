@@ -158,54 +158,281 @@ trait SchemaJobConfigurationQuery extends js.Object {
 
 object SchemaJobConfigurationQuery {
   @scala.inline
-  def apply(
-    allowLargeResults: js.UndefOr[Boolean] = js.undefined,
-    clustering: SchemaClustering = null,
-    createDisposition: String = null,
-    defaultDataset: SchemaDatasetReference = null,
-    destinationEncryptionConfiguration: SchemaEncryptionConfiguration = null,
-    destinationTable: SchemaTableReference = null,
-    flattenResults: js.UndefOr[Boolean] = js.undefined,
-    maximumBillingTier: Int | Double = null,
-    maximumBytesBilled: String = null,
-    parameterMode: String = null,
-    preserveNulls: js.UndefOr[Boolean] = js.undefined,
-    priority: String = null,
-    query: String = null,
-    queryParameters: js.Array[SchemaQueryParameter] = null,
-    rangePartitioning: SchemaRangePartitioning = null,
-    schemaUpdateOptions: js.Array[String] = null,
-    tableDefinitions: StringDictionary[SchemaExternalDataConfiguration] = null,
-    timePartitioning: SchemaTimePartitioning = null,
-    useLegacySql: js.UndefOr[Boolean] = js.undefined,
-    useQueryCache: js.UndefOr[Boolean] = js.undefined,
-    userDefinedFunctionResources: js.Array[SchemaUserDefinedFunctionResource] = null,
-    writeDisposition: String = null
-  ): SchemaJobConfigurationQuery = {
+  def apply(): SchemaJobConfigurationQuery = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowLargeResults)) __obj.updateDynamic("allowLargeResults")(allowLargeResults.asInstanceOf[js.Any])
-    if (clustering != null) __obj.updateDynamic("clustering")(clustering.asInstanceOf[js.Any])
-    if (createDisposition != null) __obj.updateDynamic("createDisposition")(createDisposition.asInstanceOf[js.Any])
-    if (defaultDataset != null) __obj.updateDynamic("defaultDataset")(defaultDataset.asInstanceOf[js.Any])
-    if (destinationEncryptionConfiguration != null) __obj.updateDynamic("destinationEncryptionConfiguration")(destinationEncryptionConfiguration.asInstanceOf[js.Any])
-    if (destinationTable != null) __obj.updateDynamic("destinationTable")(destinationTable.asInstanceOf[js.Any])
-    if (!js.isUndefined(flattenResults)) __obj.updateDynamic("flattenResults")(flattenResults.asInstanceOf[js.Any])
-    if (maximumBillingTier != null) __obj.updateDynamic("maximumBillingTier")(maximumBillingTier.asInstanceOf[js.Any])
-    if (maximumBytesBilled != null) __obj.updateDynamic("maximumBytesBilled")(maximumBytesBilled.asInstanceOf[js.Any])
-    if (parameterMode != null) __obj.updateDynamic("parameterMode")(parameterMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveNulls)) __obj.updateDynamic("preserveNulls")(preserveNulls.asInstanceOf[js.Any])
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (queryParameters != null) __obj.updateDynamic("queryParameters")(queryParameters.asInstanceOf[js.Any])
-    if (rangePartitioning != null) __obj.updateDynamic("rangePartitioning")(rangePartitioning.asInstanceOf[js.Any])
-    if (schemaUpdateOptions != null) __obj.updateDynamic("schemaUpdateOptions")(schemaUpdateOptions.asInstanceOf[js.Any])
-    if (tableDefinitions != null) __obj.updateDynamic("tableDefinitions")(tableDefinitions.asInstanceOf[js.Any])
-    if (timePartitioning != null) __obj.updateDynamic("timePartitioning")(timePartitioning.asInstanceOf[js.Any])
-    if (!js.isUndefined(useLegacySql)) __obj.updateDynamic("useLegacySql")(useLegacySql.asInstanceOf[js.Any])
-    if (!js.isUndefined(useQueryCache)) __obj.updateDynamic("useQueryCache")(useQueryCache.asInstanceOf[js.Any])
-    if (userDefinedFunctionResources != null) __obj.updateDynamic("userDefinedFunctionResources")(userDefinedFunctionResources.asInstanceOf[js.Any])
-    if (writeDisposition != null) __obj.updateDynamic("writeDisposition")(writeDisposition.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJobConfigurationQuery]
   }
+  @scala.inline
+  implicit class SchemaJobConfigurationQueryOps[Self <: SchemaJobConfigurationQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowLargeResults(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLargeResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowLargeResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLargeResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClustering(value: SchemaClustering): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clustering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClustering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clustering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateDisposition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createDisposition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateDisposition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createDisposition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultDataset(value: SchemaDatasetReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDataset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultDataset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDataset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationEncryptionConfiguration(value: SchemaEncryptionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationEncryptionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationEncryptionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationEncryptionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationTable(value: SchemaTableReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlattenResults(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flattenResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlattenResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flattenResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumBillingTier(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumBillingTier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumBillingTier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumBillingTier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumBytesBilled(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumBytesBilled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumBytesBilled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumBytesBilled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveNulls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveNulls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveNulls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveNulls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryParameters(value: js.Array[SchemaQueryParameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangePartitioning(value: SchemaRangePartitioning): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangePartitioning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangePartitioning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangePartitioning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaUpdateOptions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaUpdateOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaUpdateOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaUpdateOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableDefinitions(value: StringDictionary[SchemaExternalDataConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableDefinitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableDefinitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableDefinitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimePartitioning(value: SchemaTimePartitioning): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePartitioning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimePartitioning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePartitioning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseLegacySql(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useLegacySql")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseLegacySql: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useLegacySql")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseQueryCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useQueryCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseQueryCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useQueryCache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserDefinedFunctionResources(value: js.Array[SchemaUserDefinedFunctionResource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefinedFunctionResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserDefinedFunctionResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefinedFunctionResources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriteDisposition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeDisposition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWriteDisposition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeDisposition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

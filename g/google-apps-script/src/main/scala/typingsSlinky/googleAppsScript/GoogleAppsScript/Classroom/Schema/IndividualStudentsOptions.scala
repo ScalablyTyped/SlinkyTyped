@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IndividualStudentsOptions extends js.Object {
-  var studentIds: js.UndefOr[js.Array[String]] = js.undefined
+  var studentIds: js.UndefOr[js.Array[String]] = js.native
 }
 
 object IndividualStudentsOptions {
   @scala.inline
-  def apply(studentIds: js.Array[String] = null): IndividualStudentsOptions = {
+  def apply(): IndividualStudentsOptions = {
     val __obj = js.Dynamic.literal()
-    if (studentIds != null) __obj.updateDynamic("studentIds")(studentIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndividualStudentsOptions]
   }
+  @scala.inline
+  implicit class IndividualStudentsOptionsOps[Self <: IndividualStudentsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStudentIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("studentIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStudentIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("studentIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

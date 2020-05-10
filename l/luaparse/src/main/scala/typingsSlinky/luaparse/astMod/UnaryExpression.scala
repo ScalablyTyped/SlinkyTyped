@@ -1,6 +1,5 @@
 package typingsSlinky.luaparse.astMod
 
-import typingsSlinky.luaparse.AnonEnd
 import typingsSlinky.luaparse.luaparseStrings.Numbersign
 import typingsSlinky.luaparse.luaparseStrings.Tilde
 import typingsSlinky.luaparse.luaparseStrings.`-_`
@@ -9,11 +8,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnaryExpression
   extends Expression
      with Base[typingsSlinky.luaparse.luaparseStrings.UnaryExpression] {
-  var argument: Expression
-  var operator: not | `-_` | Tilde | Numbersign
+  var argument: Expression = js.native
+  var operator: not | `-_` | Tilde | Numbersign = js.native
 }
 
 object UnaryExpression {
@@ -21,13 +21,31 @@ object UnaryExpression {
   def apply(
     argument: Expression,
     operator: not | `-_` | Tilde | Numbersign,
-    `type`: typingsSlinky.luaparse.luaparseStrings.UnaryExpression,
-    loc: AnonEnd = null
+    `type`: typingsSlinky.luaparse.luaparseStrings.UnaryExpression
   ): UnaryExpression = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnaryExpression]
   }
+  @scala.inline
+  implicit class UnaryExpressionOps[Self <: UnaryExpression] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgument(value: Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOperator(value: not | `-_` | Tilde | Numbersign): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

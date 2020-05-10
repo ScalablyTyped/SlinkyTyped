@@ -21,8 +21,27 @@ object PatchGroupArgs {
   @scala.inline
   def apply(baselineId: Input[String], patchGroup: Input[String]): PatchGroupArgs = {
     val __obj = js.Dynamic.literal(baselineId = baselineId.asInstanceOf[js.Any], patchGroup = patchGroup.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PatchGroupArgs]
   }
+  @scala.inline
+  implicit class PatchGroupArgsOps[Self <: PatchGroupArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaselineId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baselineId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPatchGroup(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patchGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

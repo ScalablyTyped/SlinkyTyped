@@ -1,60 +1,149 @@
 package typingsSlinky.bizcharts.mod
 
-import slinky.core.TagMod
 import typingsSlinky.bizcharts.AnonOffsetX
 import typingsSlinky.bizcharts.AnonOffsetY
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FacetProps
   extends Props[js.Any] {
-  var autoSetAxis: js.UndefOr[Boolean] = js.undefined
-  var colTitle: js.UndefOr[AnonOffsetY] = js.undefined
+  var autoSetAxis: js.UndefOr[Boolean] = js.native
+  var colTitle: js.UndefOr[AnonOffsetY] = js.native
   var eachView: js.UndefOr[
     js.Function2[/* view */ js.UndefOr[js.Any], /* facet */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
-  var fields: js.UndefOr[String | js.Array[_]] = js.undefined
-  var margin: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var padding: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var rowTitle: js.UndefOr[AnonOffsetX] = js.undefined
-  var showTitle: js.UndefOr[Boolean] = js.undefined
-  var `type`: js.UndefOr[FacetType] = js.undefined
+  ] = js.native
+  var fields: js.UndefOr[String | js.Array[_]] = js.native
+  var margin: js.UndefOr[Double | js.Array[Double]] = js.native
+  var padding: js.UndefOr[Double | js.Array[Double]] = js.native
+  var rowTitle: js.UndefOr[AnonOffsetX] = js.native
+  var showTitle: js.UndefOr[Boolean] = js.native
+  var `type`: js.UndefOr[FacetType] = js.native
 }
 
 object FacetProps {
   @scala.inline
-  def apply(
-    autoSetAxis: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    colTitle: AnonOffsetY = null,
-    eachView: (/* view */ js.UndefOr[js.Any], /* facet */ js.UndefOr[js.Any]) => Unit = null,
-    fields: String | js.Array[_] = null,
-    key: Key = null,
-    margin: Double | js.Array[Double] = null,
-    padding: Double | js.Array[Double] = null,
-    ref: LegacyRef[js.Any] = null,
-    rowTitle: AnonOffsetX = null,
-    showTitle: js.UndefOr[Boolean] = js.undefined,
-    `type`: FacetType = null
-  ): FacetProps = {
+  def apply(): FacetProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoSetAxis)) __obj.updateDynamic("autoSetAxis")(autoSetAxis.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (colTitle != null) __obj.updateDynamic("colTitle")(colTitle.asInstanceOf[js.Any])
-    if (eachView != null) __obj.updateDynamic("eachView")(js.Any.fromFunction2(eachView))
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (rowTitle != null) __obj.updateDynamic("rowTitle")(rowTitle.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTitle)) __obj.updateDynamic("showTitle")(showTitle.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FacetProps]
   }
+  @scala.inline
+  implicit class FacetPropsOps[Self <: FacetProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoSetAxis(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSetAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoSetAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSetAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColTitle(value: AnonOffsetY): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEachView(value: (/* view */ js.UndefOr[js.Any], /* facet */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eachView")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutEachView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eachView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: String | js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowTitle(value: AnonOffsetX): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowTitle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: FacetType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

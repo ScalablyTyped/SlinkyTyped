@@ -12,10 +12,8 @@ trait EthernetAuthenticationType extends js.Object
 
 object EthernetAuthenticationType {
   @scala.inline
-  def `8021X`: typingsSlinky.chromeApps.chromeAppsStrings.`8021X` = this.cast("8021X")
+  def `8021X`: typingsSlinky.chromeApps.chromeAppsStrings.`8021X` = "8021X".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.`8021X`]
   @scala.inline
-  def None: typingsSlinky.chromeApps.chromeAppsStrings.None = this.cast("None")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def None: typingsSlinky.chromeApps.chromeAppsStrings.None = "None".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.None]
 }
 

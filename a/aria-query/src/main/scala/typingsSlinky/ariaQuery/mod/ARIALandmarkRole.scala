@@ -18,22 +18,20 @@ trait ARIALandmarkRole extends js.Object
 
 object ARIALandmarkRole {
   @scala.inline
-  def application: typingsSlinky.ariaQuery.ariaQueryStrings.application = this.cast("application")
+  def application: typingsSlinky.ariaQuery.ariaQueryStrings.application = "application".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.application]
   @scala.inline
-  def banner: typingsSlinky.ariaQuery.ariaQueryStrings.banner = this.cast("banner")
+  def banner: typingsSlinky.ariaQuery.ariaQueryStrings.banner = "banner".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.banner]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def complementary: typingsSlinky.ariaQuery.ariaQueryStrings.complementary = "complementary".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.complementary]
   @scala.inline
-  def complementary: typingsSlinky.ariaQuery.ariaQueryStrings.complementary = this.cast("complementary")
+  def contentinfo: typingsSlinky.ariaQuery.ariaQueryStrings.contentinfo = "contentinfo".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.contentinfo]
   @scala.inline
-  def contentinfo: typingsSlinky.ariaQuery.ariaQueryStrings.contentinfo = this.cast("contentinfo")
+  def form: typingsSlinky.ariaQuery.ariaQueryStrings.form = "form".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.form]
   @scala.inline
-  def form: typingsSlinky.ariaQuery.ariaQueryStrings.form = this.cast("form")
+  def main: typingsSlinky.ariaQuery.ariaQueryStrings.main = "main".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.main]
   @scala.inline
-  def main: typingsSlinky.ariaQuery.ariaQueryStrings.main = this.cast("main")
+  def navigation: typingsSlinky.ariaQuery.ariaQueryStrings.navigation = "navigation".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.navigation]
   @scala.inline
-  def navigation: typingsSlinky.ariaQuery.ariaQueryStrings.navigation = this.cast("navigation")
-  @scala.inline
-  def search: typingsSlinky.ariaQuery.ariaQueryStrings.search = this.cast("search")
+  def search: typingsSlinky.ariaQuery.ariaQueryStrings.search = "search".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.search]
 }
 

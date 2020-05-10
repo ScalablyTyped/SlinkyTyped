@@ -1,7 +1,6 @@
 package typingsSlinky.ethers.mod.ethers
 
 import typingsSlinky.ethers.AnonFrom
-import typingsSlinky.ethers.ethersStrings.Ξ
 import typingsSlinky.ethers.typesMod.Arrayish
 import typingsSlinky.ethers.typesMod.BigNumber
 import typingsSlinky.ethers.typesMod.BigNumberish
@@ -30,13 +29,13 @@ object utils extends js.Object {
   }
   
   val defaultAbiCoder: typingsSlinky.ethers.abiCoderMod.AbiCoder = js.native
-  val etherSymbol: Ξ = js.native
-  def arrayify(value: Arrayish): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def arrayify(value: BigNumber): scala.scalajs.js.typedarray.Uint8Array = js.native
+  val etherSymbol: /* "\\u039E" */ String = js.native
+  def arrayify(value: Arrayish): js.typedarray.Uint8Array = js.native
+  def arrayify(value: BigNumber): js.typedarray.Uint8Array = js.native
   def bigNumberify(value: BigNumberish): BigNumber = js.native
   def computePublicKey(key: Arrayish): String = js.native
   def computePublicKey(key: Arrayish, compressed: Boolean): String = js.native
-  def concat(objects: js.Array[Arrayish]): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def concat(objects: js.Array[Arrayish]): js.typedarray.Uint8Array = js.native
   def defineFrozen(`object`: js.Any, name: String, value: js.Any): Unit = js.native
   def defineReadOnly(`object`: js.Any, name: String, value: js.Any): Unit = js.native
   def fetchJson(connection: String, json: String, processFunc: js.Function1[/* value */ js.Any, _]): js.Promise[_] = js.native
@@ -70,7 +69,7 @@ object utils extends js.Object {
   def joinSignature(signature: Signature): String = js.native
   def keccak256(data: Arrayish): String = js.native
   def namehash(name: String): String = js.native
-  def padZeros(value: Arrayish, length: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def padZeros(value: Arrayish, length: Double): js.typedarray.Uint8Array = js.native
   def parseEther(ether: String): BigNumber = js.native
   def parseParamType(`type`: String): ParamType = js.native
   def parseSignature(fragment: String): EventFragment | FunctionFragment = js.native
@@ -78,7 +77,7 @@ object utils extends js.Object {
   def parseUnits(value: String): BigNumber = js.native
   def parseUnits(value: String, unitType: String): BigNumber = js.native
   def parseUnits(value: String, unitType: Double): BigNumber = js.native
-  def randomBytes(length: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def randomBytes(length: Double): js.typedarray.Uint8Array = js.native
   def resolveProperties(`object`: js.Any): js.Promise[_] = js.native
   def serializeTransaction(transaction: UnsignedTransaction): String = js.native
   def serializeTransaction(transaction: UnsignedTransaction, signature: Arrayish): String = js.native
@@ -90,9 +89,9 @@ object utils extends js.Object {
   def soliditySha256(types: js.Array[String], values: js.Array[_]): String = js.native
   def splitSignature(signature: Arrayish): Signature = js.native
   def splitSignature(signature: Signature): Signature = js.native
-  def stripZeros(value: Arrayish): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def toUtf8Bytes(str: String): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def toUtf8Bytes(str: String, form: UnicodeNormalizationForm): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def stripZeros(value: Arrayish): js.typedarray.Uint8Array = js.native
+  def toUtf8Bytes(str: String): js.typedarray.Uint8Array = js.native
+  def toUtf8Bytes(str: String, form: UnicodeNormalizationForm): js.typedarray.Uint8Array = js.native
   def toUtf8String(bytes: Arrayish): String = js.native
   def verifyMessage(message: String, signature: String): String = js.native
   def verifyMessage(message: String, signature: Signature): String = js.native
@@ -106,7 +105,7 @@ object utils extends js.Object {
   
   @js.native
   object base64 extends js.Object {
-    def decode(textData: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def decode(textData: String): js.typedarray.Uint8Array = js.native
     def encode(data: Arrayish): String = js.native
   }
   
@@ -123,15 +122,15 @@ object utils extends js.Object {
   
   @js.native
   object errors extends js.Object {
-    val CALL_EXCEPTION: typingsSlinky.ethers.ethersStrings.CALL_EXCEPTION = js.native
-    val INVALID_ARGUMENT: typingsSlinky.ethers.ethersStrings.INVALID_ARGUMENT = js.native
-    val MISSING_ARGUMENT: typingsSlinky.ethers.ethersStrings.MISSING_ARGUMENT = js.native
-    val MISSING_NEW: typingsSlinky.ethers.ethersStrings.MISSING_NEW = js.native
-    val NOT_IMPLEMENTED: typingsSlinky.ethers.ethersStrings.NOT_IMPLEMENTED = js.native
-    val NUMERIC_FAULT: typingsSlinky.ethers.ethersStrings.NUMERIC_FAULT = js.native
-    val UNEXPECTED_ARGUMENT: typingsSlinky.ethers.ethersStrings.UNEXPECTED_ARGUMENT = js.native
-    val UNKNOWN_ERROR: typingsSlinky.ethers.ethersStrings.UNKNOWN_ERROR = js.native
-    val UNSUPPORTED_OPERATION: typingsSlinky.ethers.ethersStrings.UNSUPPORTED_OPERATION = js.native
+    val CALL_EXCEPTION: /* "CALL_EXCEPTION" */ String = js.native
+    val INVALID_ARGUMENT: /* "INVALID_ARGUMENT" */ String = js.native
+    val MISSING_ARGUMENT: /* "MISSING_ARGUMENT" */ String = js.native
+    val MISSING_NEW: /* "MISSING_NEW" */ String = js.native
+    val NOT_IMPLEMENTED: /* "NOT_IMPLEMENTED" */ String = js.native
+    val NUMERIC_FAULT: /* "NUMERIC_FAULT" */ String = js.native
+    val UNEXPECTED_ARGUMENT: /* "UNEXPECTED_ARGUMENT" */ String = js.native
+    val UNKNOWN_ERROR: /* "UNKNOWN_ERROR" */ String = js.native
+    val UNSUPPORTED_OPERATION: /* "UNSUPPORTED_OPERATION" */ String = js.native
     def checkArgumentCount(count: Double, expectedCount: Double): Unit = js.native
     def checkArgumentCount(count: Double, expectedCount: Double, suffix: String): Unit = js.native
     def checkNew(self: js.Any, kind: js.Any): Unit = js.native

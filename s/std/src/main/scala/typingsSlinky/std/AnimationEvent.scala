@@ -17,10 +17,10 @@ trait AnimationEvent extends Event_ {
 @JSGlobal("AnimationEvent")
 @js.native
 object AnimationEvent
-  extends Instantiable1[/* type */ java.lang.String, AnimationEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.AnimationEvent]
      with Instantiable2[
       /* type */ java.lang.String, 
       /* animationEventInitDict */ AnimationEventInit, 
-      AnimationEvent
+      org.scalajs.dom.raw.AnimationEvent
     ]
 

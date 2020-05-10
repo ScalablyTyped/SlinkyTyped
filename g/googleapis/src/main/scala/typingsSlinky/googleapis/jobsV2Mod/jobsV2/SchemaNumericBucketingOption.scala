@@ -26,11 +26,41 @@ trait SchemaNumericBucketingOption extends js.Object {
 
 object SchemaNumericBucketingOption {
   @scala.inline
-  def apply(bucketBounds: js.Array[Double] = null, requiresMinMax: js.UndefOr[Boolean] = js.undefined): SchemaNumericBucketingOption = {
+  def apply(): SchemaNumericBucketingOption = {
     val __obj = js.Dynamic.literal()
-    if (bucketBounds != null) __obj.updateDynamic("bucketBounds")(bucketBounds.asInstanceOf[js.Any])
-    if (!js.isUndefined(requiresMinMax)) __obj.updateDynamic("requiresMinMax")(requiresMinMax.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNumericBucketingOption]
   }
+  @scala.inline
+  implicit class SchemaNumericBucketingOptionOps[Self <: SchemaNumericBucketingOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucketBounds(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketBounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequiresMinMax(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requiresMinMax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequiresMinMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requiresMinMax")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

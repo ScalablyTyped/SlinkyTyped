@@ -18,11 +18,41 @@ trait ReportExportConfig extends js.Object {
 
 object ReportExportConfig {
   @scala.inline
-  def apply(exportConfigType: ReportExportConfigType = null, s3Destination: S3ReportExportConfig = null): ReportExportConfig = {
+  def apply(): ReportExportConfig = {
     val __obj = js.Dynamic.literal()
-    if (exportConfigType != null) __obj.updateDynamic("exportConfigType")(exportConfigType.asInstanceOf[js.Any])
-    if (s3Destination != null) __obj.updateDynamic("s3Destination")(s3Destination.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReportExportConfig]
   }
+  @scala.inline
+  implicit class ReportExportConfigOps[Self <: ReportExportConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExportConfigType(value: ReportExportConfigType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportConfigType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExportConfigType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportConfigType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Destination(value: S3ReportExportConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Destination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Destination")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IWebElementFinders extends js.Object {
   /**
     * Schedule a command to find a descendant of this element. If the element
@@ -45,7 +46,7 @@ trait IWebElementFinders extends js.Object {
     *     commands against the located element. If the element is not found, the
     *     element will be invalidated and all scheduled commands aborted.
     */
-  def findElement(locator: Locator): WebElementPromise
+  def findElement(locator: Locator): WebElementPromise = js.native
   /**
     * Schedules a command to find all of the descendants of this element that
     * match the given search criteria.
@@ -55,7 +56,7 @@ trait IWebElementFinders extends js.Object {
     * @return {!Promise.<!Array.<!WebElement>>} A
     *     promise that will resolve to an array of WebElements.
     */
-  def findElements(locator: Locator): js.Promise[js.Array[WebElement]]
+  def findElements(locator: Locator): js.Promise[js.Array[WebElement]] = js.native
 }
 
 object IWebElementFinders {
@@ -65,8 +66,27 @@ object IWebElementFinders {
     findElements: Locator => js.Promise[js.Array[WebElement]]
   ): IWebElementFinders = {
     val __obj = js.Dynamic.literal(findElement = js.Any.fromFunction1(findElement), findElements = js.Any.fromFunction1(findElements))
-  
     __obj.asInstanceOf[IWebElementFinders]
   }
+  @scala.inline
+  implicit class IWebElementFindersOps[Self <: IWebElementFinders] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFindElement(value: Locator => WebElementPromise): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findElement")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindElements(value: Locator => js.Promise[js.Array[WebElement]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findElements")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

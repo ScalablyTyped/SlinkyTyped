@@ -35,12 +35,53 @@ trait SchemaRenewLeaseRequest extends js.Object {
 
 object SchemaRenewLeaseRequest {
   @scala.inline
-  def apply(leaseDuration: String = null, responseView: String = null, scheduleTime: String = null): SchemaRenewLeaseRequest = {
+  def apply(): SchemaRenewLeaseRequest = {
     val __obj = js.Dynamic.literal()
-    if (leaseDuration != null) __obj.updateDynamic("leaseDuration")(leaseDuration.asInstanceOf[js.Any])
-    if (responseView != null) __obj.updateDynamic("responseView")(responseView.asInstanceOf[js.Any])
-    if (scheduleTime != null) __obj.updateDynamic("scheduleTime")(scheduleTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRenewLeaseRequest]
   }
+  @scala.inline
+  implicit class SchemaRenewLeaseRequestOps[Self <: SchemaRenewLeaseRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLeaseDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeaseDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaseDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseView(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

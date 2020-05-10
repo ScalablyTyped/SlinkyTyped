@@ -1,5 +1,6 @@
 package typingsSlinky.mobx.observableMod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.mobx.internalMod.ObservableMap
 import typingsSlinky.mobx.internalMod.ObservableSet
 import typingsSlinky.mobx.observablearrayMod.IObservableArray
@@ -46,13 +47,13 @@ trait IObservableFactories extends js.Object {
     props: T,
     decorators: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? std.Function}
-    */ typingsSlinky.mobx.mobxStrings.IObservableFactories with js.Any
+    */ typingsSlinky.mobx.mobxStrings.IObservableFactories with TopLevel[js.Any]
   ): T with IObservableObject = js.native
   def `object`[T](
     props: T,
     decorators: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? std.Function}
-    */ typingsSlinky.mobx.mobxStrings.IObservableFactories with js.Any,
+    */ typingsSlinky.mobx.mobxStrings.IObservableFactories with TopLevel[js.Any],
     options: CreateObservableOptions
   ): T with IObservableObject = js.native
   /**

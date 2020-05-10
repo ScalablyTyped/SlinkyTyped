@@ -20,8 +20,27 @@ object CreateVpcPeeringAuthorizationInput {
   @scala.inline
   def apply(GameLiftAwsAccountId: NonZeroAndMaxString, PeerVpcId: NonZeroAndMaxString): CreateVpcPeeringAuthorizationInput = {
     val __obj = js.Dynamic.literal(GameLiftAwsAccountId = GameLiftAwsAccountId.asInstanceOf[js.Any], PeerVpcId = PeerVpcId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateVpcPeeringAuthorizationInput]
   }
+  @scala.inline
+  implicit class CreateVpcPeeringAuthorizationInputOps[Self <: CreateVpcPeeringAuthorizationInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGameLiftAwsAccountId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameLiftAwsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPeerVpcId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

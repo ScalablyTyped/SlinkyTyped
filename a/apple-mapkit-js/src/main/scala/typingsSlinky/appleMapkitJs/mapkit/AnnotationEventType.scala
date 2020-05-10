@@ -16,16 +16,14 @@ trait AnnotationEventType extends js.Object
 
 object AnnotationEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deselect: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.deselect = "deselect".asInstanceOf[typingsSlinky.appleMapkitJs.appleMapkitJsStrings.deselect]
   @scala.inline
-  def deselect: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.deselect = this.cast("deselect")
+  def `drag-end`: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`drag-end` = "drag-end".asInstanceOf[typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`drag-end`]
   @scala.inline
-  def `drag-end`: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`drag-end` = this.cast("drag-end")
+  def `drag-start`: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`drag-start` = "drag-start".asInstanceOf[typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`drag-start`]
   @scala.inline
-  def `drag-start`: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`drag-start` = this.cast("drag-start")
+  def dragging: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.dragging = "dragging".asInstanceOf[typingsSlinky.appleMapkitJs.appleMapkitJsStrings.dragging]
   @scala.inline
-  def dragging: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.dragging = this.cast("dragging")
-  @scala.inline
-  def select: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.select = this.cast("select")
+  def select: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.select = "select".asInstanceOf[typingsSlinky.appleMapkitJs.appleMapkitJsStrings.select]
 }
 

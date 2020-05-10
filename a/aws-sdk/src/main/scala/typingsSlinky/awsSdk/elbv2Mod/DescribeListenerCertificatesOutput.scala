@@ -18,11 +18,41 @@ trait DescribeListenerCertificatesOutput extends js.Object {
 
 object DescribeListenerCertificatesOutput {
   @scala.inline
-  def apply(Certificates: CertificateList = null, NextMarker: Marker = null): DescribeListenerCertificatesOutput = {
+  def apply(): DescribeListenerCertificatesOutput = {
     val __obj = js.Dynamic.literal()
-    if (Certificates != null) __obj.updateDynamic("Certificates")(Certificates.asInstanceOf[js.Any])
-    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeListenerCertificatesOutput]
   }
+  @scala.inline
+  implicit class DescribeListenerCertificatesOutputOps[Self <: DescribeListenerCertificatesOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificates(value: CertificateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextMarker(value: Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

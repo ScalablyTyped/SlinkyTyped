@@ -23,10 +23,29 @@ trait SchemaQueryList extends js.Object {
 
 object SchemaQueryList {
   @scala.inline
-  def apply(queries: js.Array[String] = null): SchemaQueryList = {
+  def apply(): SchemaQueryList = {
     val __obj = js.Dynamic.literal()
-    if (queries != null) __obj.updateDynamic("queries")(queries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQueryList]
   }
+  @scala.inline
+  implicit class SchemaQueryListOps[Self <: SchemaQueryList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQueries(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

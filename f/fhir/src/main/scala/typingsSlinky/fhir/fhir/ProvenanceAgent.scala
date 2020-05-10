@@ -7,75 +7,151 @@ import scala.scalajs.js.annotation._
 /**
   * Actor involved
   */
+@js.native
 trait ProvenanceAgent extends BackboneElement {
   /**
     * Contains extended information for property 'onBehalfOfUri'.
     */
-  var _onBehalfOfUri: js.UndefOr[Element] = js.undefined
+  var _onBehalfOfUri: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'whoUri'.
     */
-  var _whoUri: js.UndefOr[Element] = js.undefined
+  var _whoUri: js.UndefOr[Element] = js.native
   /**
     * Who the agent is representing
     */
-  var onBehalfOfReference: js.UndefOr[Reference] = js.undefined
+  var onBehalfOfReference: js.UndefOr[Reference] = js.native
   /**
     * Who the agent is representing
     */
-  var onBehalfOfUri: js.UndefOr[uri] = js.undefined
+  var onBehalfOfUri: js.UndefOr[uri] = js.native
   /**
     * Type of relationship between agents
     */
-  var relatedAgentType: js.UndefOr[CodeableConcept] = js.undefined
+  var relatedAgentType: js.UndefOr[CodeableConcept] = js.native
   /**
     * What the agents role was
     */
-  var role: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
+  var role: js.UndefOr[js.Array[CodeableConcept]] = js.native
   /**
     * Who participated
     */
-  var whoReference: js.UndefOr[Reference] = js.undefined
+  var whoReference: js.UndefOr[Reference] = js.native
   /**
     * Who participated
     */
-  var whoUri: js.UndefOr[uri] = js.undefined
+  var whoUri: js.UndefOr[uri] = js.native
 }
 
 object ProvenanceAgent {
   @scala.inline
-  def apply(
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _onBehalfOfUri: Element = null,
-    _whoUri: Element = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null,
-    onBehalfOfReference: Reference = null,
-    onBehalfOfUri: uri = null,
-    relatedAgentType: CodeableConcept = null,
-    role: js.Array[CodeableConcept] = null,
-    whoReference: Reference = null,
-    whoUri: uri = null
-  ): ProvenanceAgent = {
+  def apply(): ProvenanceAgent = {
     val __obj = js.Dynamic.literal()
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_onBehalfOfUri != null) __obj.updateDynamic("_onBehalfOfUri")(_onBehalfOfUri.asInstanceOf[js.Any])
-    if (_whoUri != null) __obj.updateDynamic("_whoUri")(_whoUri.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (onBehalfOfReference != null) __obj.updateDynamic("onBehalfOfReference")(onBehalfOfReference.asInstanceOf[js.Any])
-    if (onBehalfOfUri != null) __obj.updateDynamic("onBehalfOfUri")(onBehalfOfUri.asInstanceOf[js.Any])
-    if (relatedAgentType != null) __obj.updateDynamic("relatedAgentType")(relatedAgentType.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (whoReference != null) __obj.updateDynamic("whoReference")(whoReference.asInstanceOf[js.Any])
-    if (whoUri != null) __obj.updateDynamic("whoUri")(whoUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvenanceAgent]
   }
+  @scala.inline
+  implicit class ProvenanceAgentOps[Self <: ProvenanceAgent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_onBehalfOfUri(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_onBehalfOfUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_onBehalfOfUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_onBehalfOfUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_whoUri(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_whoUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_whoUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_whoUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBehalfOfReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBehalfOfReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnBehalfOfReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBehalfOfReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBehalfOfUri(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBehalfOfUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnBehalfOfUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBehalfOfUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelatedAgentType(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedAgentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelatedAgentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedAgentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: js.Array[CodeableConcept]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoUri(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

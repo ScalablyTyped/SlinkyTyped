@@ -1,6 +1,6 @@
 package typingsSlinky.marko
 
-import typingsSlinky.std.Node
+import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

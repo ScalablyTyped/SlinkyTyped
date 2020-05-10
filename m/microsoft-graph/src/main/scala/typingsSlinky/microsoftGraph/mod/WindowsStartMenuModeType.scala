@@ -13,12 +13,10 @@ trait WindowsStartMenuModeType extends js.Object
 
 object WindowsStartMenuModeType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fullScreen: typingsSlinky.microsoftGraph.microsoftGraphStrings.fullScreen = "fullScreen".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.fullScreen]
   @scala.inline
-  def fullScreen: typingsSlinky.microsoftGraph.microsoftGraphStrings.fullScreen = this.cast("fullScreen")
+  def nonFullScreen: typingsSlinky.microsoftGraph.microsoftGraphStrings.nonFullScreen = "nonFullScreen".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.nonFullScreen]
   @scala.inline
-  def nonFullScreen: typingsSlinky.microsoftGraph.microsoftGraphStrings.nonFullScreen = this.cast("nonFullScreen")
-  @scala.inline
-  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = this.cast("userDefined")
+  def userDefined: typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined = "userDefined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.userDefined]
 }
 

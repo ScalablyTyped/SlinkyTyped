@@ -13,12 +13,10 @@ trait MessageViewViewStates extends js.Object
 
 object MessageViewViewStates {
   @scala.inline
-  def COLLAPSED: typingsSlinky.inboxsdk.inboxsdkStrings.COLLAPSED = this.cast("COLLAPSED")
+  def COLLAPSED: typingsSlinky.inboxsdk.inboxsdkStrings.COLLAPSED = "COLLAPSED".asInstanceOf[typingsSlinky.inboxsdk.inboxsdkStrings.COLLAPSED]
   @scala.inline
-  def EXPANDED: typingsSlinky.inboxsdk.inboxsdkStrings.EXPANDED = this.cast("EXPANDED")
+  def EXPANDED: typingsSlinky.inboxsdk.inboxsdkStrings.EXPANDED = "EXPANDED".asInstanceOf[typingsSlinky.inboxsdk.inboxsdkStrings.EXPANDED]
   @scala.inline
-  def HIDDEN: typingsSlinky.inboxsdk.inboxsdkStrings.HIDDEN = this.cast("HIDDEN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def HIDDEN: typingsSlinky.inboxsdk.inboxsdkStrings.HIDDEN = "HIDDEN".asInstanceOf[typingsSlinky.inboxsdk.inboxsdkStrings.HIDDEN]
 }
 

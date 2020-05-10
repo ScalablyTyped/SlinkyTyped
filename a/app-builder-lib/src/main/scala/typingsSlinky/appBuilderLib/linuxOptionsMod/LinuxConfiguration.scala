@@ -1,18 +1,12 @@
 package typingsSlinky.appBuilderLib.linuxOptionsMod
 
-import typingsSlinky.appBuilderLib.coreMod.CompressionLevel
-import typingsSlinky.appBuilderLib.coreMod.Publish
 import typingsSlinky.appBuilderLib.coreMod.TargetConfigType
-import typingsSlinky.appBuilderLib.fileAssociationMod.FileAssociation
-import typingsSlinky.appBuilderLib.platformSpecificBuildOptionsMod.AsarOptions
-import typingsSlinky.appBuilderLib.platformSpecificBuildOptionsMod.FileSet
 import typingsSlinky.appBuilderLib.platformSpecificBuildOptionsMod.PlatformSpecificBuildOptions
-import typingsSlinky.appBuilderLib.platformSpecificBuildOptionsMod.Protocol
-import typingsSlinky.appBuilderLib.platformSpecificBuildOptionsMod.ReleaseInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LinuxConfiguration
   extends PlatformSpecificBuildOptions
      with CommonLinuxOptions {
@@ -20,22 +14,22 @@ trait LinuxConfiguration
     * The executable name. Defaults to `productName`.
     * Cannot be specified per target, allowed only in the `linux`.
     */
-  val executableName: js.UndefOr[String | Null] = js.undefined
+  val executableName: js.UndefOr[String | Null] = js.native
   /**
     * The path to icon set directory or one png file, relative to the [build resources](/configuration/configuration#MetadataDirectories-buildResources) or to the project directory. The icon filename must contain the size (e.g. 32x32.png) of the icon.
     * By default will be generated automatically based on the macOS icns file.
     */
   @JSName("icon")
-  val icon_LinuxConfiguration: js.UndefOr[String] = js.undefined
+  val icon_LinuxConfiguration: js.UndefOr[String] = js.native
   /**
     * The maintainer. Defaults to [author](/configuration/configuration#Metadata-author).
     */
-  val maintainer: js.UndefOr[String | Null] = js.undefined
+  val maintainer: js.UndefOr[String | Null] = js.native
   /**
     * backward compatibility + to allow specify fpm-only category for all possible fpm targets in one place
     * @private
     */
-  val packageCategory: js.UndefOr[String | Null] = js.undefined
+  val packageCategory: js.UndefOr[String | Null] = js.native
   /**
     * Target package type: list of `AppImage`, `snap`, `deb`, `rpm`, `freebsd`, `pacman`, `p5p`, `apk`, `7z`, `zip`, `tar.xz`, `tar.lz`, `tar.gz`, `tar.bz2`, `dir`.
     *
@@ -45,77 +39,128 @@ trait LinuxConfiguration
     * @default AppImage
     */
   @JSName("target")
-  val target_LinuxConfiguration: js.UndefOr[TargetConfigType] = js.undefined
+  val target_LinuxConfiguration: js.UndefOr[TargetConfigType] = js.native
   /**
     * The vendor. Defaults to [author](/configuration/configuration#Metadata-author).
     */
-  val vendor: js.UndefOr[String | Null] = js.undefined
+  val vendor: js.UndefOr[String | Null] = js.native
 }
 
 object LinuxConfiguration {
   @scala.inline
-  def apply(
-    appId: String = null,
-    artifactName: String = null,
-    asar: AsarOptions | Boolean = null,
-    asarUnpack: js.Array[String] | String = null,
-    category: String = null,
-    compression: CompressionLevel = null,
-    cscKeyPassword: String = null,
-    cscLink: String = null,
-    description: String = null,
-    desktop: js.Any = null,
-    detectUpdateChannel: js.UndefOr[Boolean] = js.undefined,
-    electronUpdaterCompatibility: String = null,
-    executableName: String = null,
-    extraFiles: (js.Array[FileSet | String]) | FileSet | String = null,
-    extraResources: (js.Array[FileSet | String]) | FileSet | String = null,
-    fileAssociations: js.Array[FileAssociation] | FileAssociation = null,
-    files: (js.Array[FileSet | String]) | FileSet | String = null,
-    forceCodeSigning: js.UndefOr[Boolean] = js.undefined,
-    generateUpdatesFilesForAllChannels: js.UndefOr[Boolean] = js.undefined,
-    icon: String = null,
-    maintainer: String = null,
-    mimeTypes: js.Array[String] = null,
-    packageCategory: String = null,
-    protocols: js.Array[Protocol] | Protocol = null,
-    publish: Publish = null,
-    releaseInfo: ReleaseInfo = null,
-    synopsis: String = null,
-    target: TargetConfigType = null,
-    vendor: String = null
-  ): LinuxConfiguration = {
+  def apply(): LinuxConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (appId != null) __obj.updateDynamic("appId")(appId.asInstanceOf[js.Any])
-    if (artifactName != null) __obj.updateDynamic("artifactName")(artifactName.asInstanceOf[js.Any])
-    if (asar != null) __obj.updateDynamic("asar")(asar.asInstanceOf[js.Any])
-    if (asarUnpack != null) __obj.updateDynamic("asarUnpack")(asarUnpack.asInstanceOf[js.Any])
-    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
-    if (compression != null) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
-    if (cscKeyPassword != null) __obj.updateDynamic("cscKeyPassword")(cscKeyPassword.asInstanceOf[js.Any])
-    if (cscLink != null) __obj.updateDynamic("cscLink")(cscLink.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (desktop != null) __obj.updateDynamic("desktop")(desktop.asInstanceOf[js.Any])
-    if (!js.isUndefined(detectUpdateChannel)) __obj.updateDynamic("detectUpdateChannel")(detectUpdateChannel.asInstanceOf[js.Any])
-    if (electronUpdaterCompatibility != null) __obj.updateDynamic("electronUpdaterCompatibility")(electronUpdaterCompatibility.asInstanceOf[js.Any])
-    if (executableName != null) __obj.updateDynamic("executableName")(executableName.asInstanceOf[js.Any])
-    if (extraFiles != null) __obj.updateDynamic("extraFiles")(extraFiles.asInstanceOf[js.Any])
-    if (extraResources != null) __obj.updateDynamic("extraResources")(extraResources.asInstanceOf[js.Any])
-    if (fileAssociations != null) __obj.updateDynamic("fileAssociations")(fileAssociations.asInstanceOf[js.Any])
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceCodeSigning)) __obj.updateDynamic("forceCodeSigning")(forceCodeSigning.asInstanceOf[js.Any])
-    if (!js.isUndefined(generateUpdatesFilesForAllChannels)) __obj.updateDynamic("generateUpdatesFilesForAllChannels")(generateUpdatesFilesForAllChannels.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (maintainer != null) __obj.updateDynamic("maintainer")(maintainer.asInstanceOf[js.Any])
-    if (mimeTypes != null) __obj.updateDynamic("mimeTypes")(mimeTypes.asInstanceOf[js.Any])
-    if (packageCategory != null) __obj.updateDynamic("packageCategory")(packageCategory.asInstanceOf[js.Any])
-    if (protocols != null) __obj.updateDynamic("protocols")(protocols.asInstanceOf[js.Any])
-    if (publish != null) __obj.updateDynamic("publish")(publish.asInstanceOf[js.Any])
-    if (releaseInfo != null) __obj.updateDynamic("releaseInfo")(releaseInfo.asInstanceOf[js.Any])
-    if (synopsis != null) __obj.updateDynamic("synopsis")(synopsis.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (vendor != null) __obj.updateDynamic("vendor")(vendor.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinuxConfiguration]
   }
+  @scala.inline
+  implicit class LinuxConfigurationOps[Self <: LinuxConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecutableName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executableName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutableNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executableName")(null)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaintainer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maintainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaintainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maintainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaintainerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maintainer")(null)
+        ret
+    }
+    @scala.inline
+    def withPackageCategory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageCategory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageCategory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackageCategoryNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageCategory")(null)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: TargetConfigType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(null)
+        ret
+    }
+    @scala.inline
+    def withVendor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVendor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVendorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(null)
+        ret
+    }
+  }
+  
 }
 

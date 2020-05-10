@@ -1,7 +1,7 @@
 package typingsSlinky.themeUi.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.HTMLProgressElement
+import org.scalajs.dom.raw.HTMLProgressElement
 import typingsSlinky.themeUiComponents.mod.ForwardRef
 import typingsSlinky.themeUiComponents.mod.ProgressProps
 import scala.scalajs.js

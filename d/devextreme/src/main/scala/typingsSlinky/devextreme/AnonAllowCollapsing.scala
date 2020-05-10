@@ -6,30 +6,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAllowCollapsing extends js.Object {
-  var allowCollapsing: js.UndefOr[Boolean] = js.undefined
-  var autoExpandAll: js.UndefOr[Boolean] = js.undefined
-  var contextMenuEnabled: js.UndefOr[Boolean] = js.undefined
-  var expandMode: js.UndefOr[buttonClick | rowClick] = js.undefined
-  var texts: js.UndefOr[AnonGroupByThisColumn] = js.undefined
+  var allowCollapsing: js.UndefOr[Boolean] = js.native
+  var autoExpandAll: js.UndefOr[Boolean] = js.native
+  var contextMenuEnabled: js.UndefOr[Boolean] = js.native
+  var expandMode: js.UndefOr[buttonClick | rowClick] = js.native
+  var texts: js.UndefOr[AnonGroupByThisColumn] = js.native
 }
 
 object AnonAllowCollapsing {
   @scala.inline
-  def apply(
-    allowCollapsing: js.UndefOr[Boolean] = js.undefined,
-    autoExpandAll: js.UndefOr[Boolean] = js.undefined,
-    contextMenuEnabled: js.UndefOr[Boolean] = js.undefined,
-    expandMode: buttonClick | rowClick = null,
-    texts: AnonGroupByThisColumn = null
-  ): AnonAllowCollapsing = {
+  def apply(): AnonAllowCollapsing = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowCollapsing)) __obj.updateDynamic("allowCollapsing")(allowCollapsing.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoExpandAll)) __obj.updateDynamic("autoExpandAll")(autoExpandAll.asInstanceOf[js.Any])
-    if (!js.isUndefined(contextMenuEnabled)) __obj.updateDynamic("contextMenuEnabled")(contextMenuEnabled.asInstanceOf[js.Any])
-    if (expandMode != null) __obj.updateDynamic("expandMode")(expandMode.asInstanceOf[js.Any])
-    if (texts != null) __obj.updateDynamic("texts")(texts.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAllowCollapsing]
   }
+  @scala.inline
+  implicit class AnonAllowCollapsingOps[Self <: AnonAllowCollapsing] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowCollapsing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCollapsing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowCollapsing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCollapsing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoExpandAll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpandAll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoExpandAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExpandAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextMenuEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextMenuEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandMode(value: buttonClick | rowClick): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTexts(value: AnonGroupByThisColumn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTexts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

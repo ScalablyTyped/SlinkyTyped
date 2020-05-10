@@ -23,32 +23,30 @@ trait FilledInputClassKey extends js.Object
 
 object FilledInputClassKey {
   @scala.inline
-  def adornedEnd: typingsSlinky.materialUiCore.materialUiCoreStrings.adornedEnd = this.cast("adornedEnd")
+  def adornedEnd: typingsSlinky.materialUiCore.materialUiCoreStrings.adornedEnd = "adornedEnd".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.adornedEnd]
   @scala.inline
-  def adornedStart: typingsSlinky.materialUiCore.materialUiCoreStrings.adornedStart = this.cast("adornedStart")
+  def adornedStart: typingsSlinky.materialUiCore.materialUiCoreStrings.adornedStart = "adornedStart".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.adornedStart]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = "error".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.error]
   @scala.inline
-  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = this.cast("error")
+  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = "focused".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.focused]
   @scala.inline
-  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = this.cast("focused")
+  def input: typingsSlinky.materialUiCore.materialUiCoreStrings.input = "input".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.input]
   @scala.inline
-  def input: typingsSlinky.materialUiCore.materialUiCoreStrings.input = this.cast("input")
+  def inputAdornedEnd: typingsSlinky.materialUiCore.materialUiCoreStrings.inputAdornedEnd = "inputAdornedEnd".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inputAdornedEnd]
   @scala.inline
-  def inputAdornedEnd: typingsSlinky.materialUiCore.materialUiCoreStrings.inputAdornedEnd = this.cast("inputAdornedEnd")
+  def inputAdornedStart: typingsSlinky.materialUiCore.materialUiCoreStrings.inputAdornedStart = "inputAdornedStart".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inputAdornedStart]
   @scala.inline
-  def inputAdornedStart: typingsSlinky.materialUiCore.materialUiCoreStrings.inputAdornedStart = this.cast("inputAdornedStart")
+  def inputMarginDense: typingsSlinky.materialUiCore.materialUiCoreStrings.inputMarginDense = "inputMarginDense".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inputMarginDense]
   @scala.inline
-  def inputMarginDense: typingsSlinky.materialUiCore.materialUiCoreStrings.inputMarginDense = this.cast("inputMarginDense")
+  def inputMultiline: typingsSlinky.materialUiCore.materialUiCoreStrings.inputMultiline = "inputMultiline".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inputMultiline]
   @scala.inline
-  def inputMultiline: typingsSlinky.materialUiCore.materialUiCoreStrings.inputMultiline = this.cast("inputMultiline")
+  def multiline: typingsSlinky.materialUiCore.materialUiCoreStrings.multiline = "multiline".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.multiline]
   @scala.inline
-  def multiline: typingsSlinky.materialUiCore.materialUiCoreStrings.multiline = this.cast("multiline")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
-  @scala.inline
-  def underline: typingsSlinky.materialUiCore.materialUiCoreStrings.underline = this.cast("underline")
+  def underline: typingsSlinky.materialUiCore.materialUiCoreStrings.underline = "underline".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.underline]
 }
 

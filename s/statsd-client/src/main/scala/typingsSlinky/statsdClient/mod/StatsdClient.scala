@@ -1,7 +1,6 @@
 package typingsSlinky.statsdClient.mod
 
 import typingsSlinky.statsdClient.AnonGetExpressMiddleware
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +31,7 @@ trait StatsdClient extends js.Object {
   def set(name: String, value: Double, tags: Tags): this.type = js.native
   def timing(name: String, startOrDuration: Double): this.type = js.native
   def timing(name: String, startOrDuration: Double, tags: Tags): this.type = js.native
-  def timing(name: String, startOrDuration: Date): this.type = js.native
-  def timing(name: String, startOrDuration: Date, tags: Tags): this.type = js.native
+  def timing(name: String, startOrDuration: js.Date): this.type = js.native
+  def timing(name: String, startOrDuration: js.Date, tags: Tags): this.type = js.native
 }
 

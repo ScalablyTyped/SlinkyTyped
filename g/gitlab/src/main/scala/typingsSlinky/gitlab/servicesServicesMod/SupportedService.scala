@@ -41,68 +41,66 @@ trait SupportedService extends js.Object
 
 object SupportedService {
   @scala.inline
-  def asana: typingsSlinky.gitlab.gitlabStrings.asana = this.cast("asana")
+  def asana: typingsSlinky.gitlab.gitlabStrings.asana = "asana".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.asana]
   @scala.inline
-  def assembla: typingsSlinky.gitlab.gitlabStrings.assembla = this.cast("assembla")
+  def assembla: typingsSlinky.gitlab.gitlabStrings.assembla = "assembla".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.assembla]
   @scala.inline
-  def bamboo: typingsSlinky.gitlab.gitlabStrings.bamboo = this.cast("bamboo")
+  def bamboo: typingsSlinky.gitlab.gitlabStrings.bamboo = "bamboo".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.bamboo]
   @scala.inline
-  def bugzilla: typingsSlinky.gitlab.gitlabStrings.bugzilla = this.cast("bugzilla")
+  def bugzilla: typingsSlinky.gitlab.gitlabStrings.bugzilla = "bugzilla".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.bugzilla]
   @scala.inline
-  def buildkite: typingsSlinky.gitlab.gitlabStrings.buildkite = this.cast("buildkite")
+  def buildkite: typingsSlinky.gitlab.gitlabStrings.buildkite = "buildkite".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.buildkite]
   @scala.inline
-  def campfire: typingsSlinky.gitlab.gitlabStrings.campfire = this.cast("campfire")
+  def campfire: typingsSlinky.gitlab.gitlabStrings.campfire = "campfire".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.campfire]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `custom-issue-tracker`: typingsSlinky.gitlab.gitlabStrings.`custom-issue-tracker` = "custom-issue-tracker".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`custom-issue-tracker`]
   @scala.inline
-  def `custom-issue-tracker`: typingsSlinky.gitlab.gitlabStrings.`custom-issue-tracker` = this.cast("custom-issue-tracker")
+  def `drone-ci`: typingsSlinky.gitlab.gitlabStrings.`drone-ci` = "drone-ci".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`drone-ci`]
   @scala.inline
-  def `drone-ci`: typingsSlinky.gitlab.gitlabStrings.`drone-ci` = this.cast("drone-ci")
+  def `emails-on-push`: typingsSlinky.gitlab.gitlabStrings.`emails-on-push` = "emails-on-push".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`emails-on-push`]
   @scala.inline
-  def `emails-on-push`: typingsSlinky.gitlab.gitlabStrings.`emails-on-push` = this.cast("emails-on-push")
+  def `external-wiki`: typingsSlinky.gitlab.gitlabStrings.`external-wiki` = "external-wiki".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`external-wiki`]
   @scala.inline
-  def `external-wiki`: typingsSlinky.gitlab.gitlabStrings.`external-wiki` = this.cast("external-wiki")
+  def flowdock: typingsSlinky.gitlab.gitlabStrings.flowdock = "flowdock".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.flowdock]
   @scala.inline
-  def flowdock: typingsSlinky.gitlab.gitlabStrings.flowdock = this.cast("flowdock")
+  def hangouts_chat: typingsSlinky.gitlab.gitlabStrings.hangouts_chat = "hangouts_chat".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.hangouts_chat]
   @scala.inline
-  def hangouts_chat: typingsSlinky.gitlab.gitlabStrings.hangouts_chat = this.cast("hangouts_chat")
+  def hipchat: typingsSlinky.gitlab.gitlabStrings.hipchat = "hipchat".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.hipchat]
   @scala.inline
-  def hipchat: typingsSlinky.gitlab.gitlabStrings.hipchat = this.cast("hipchat")
+  def irker: typingsSlinky.gitlab.gitlabStrings.irker = "irker".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.irker]
   @scala.inline
-  def irker: typingsSlinky.gitlab.gitlabStrings.irker = this.cast("irker")
+  def jenkins: typingsSlinky.gitlab.gitlabStrings.jenkins = "jenkins".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.jenkins]
   @scala.inline
-  def jenkins: typingsSlinky.gitlab.gitlabStrings.jenkins = this.cast("jenkins")
+  def `jenkins-deprecated`: typingsSlinky.gitlab.gitlabStrings.`jenkins-deprecated` = "jenkins-deprecated".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`jenkins-deprecated`]
   @scala.inline
-  def `jenkins-deprecated`: typingsSlinky.gitlab.gitlabStrings.`jenkins-deprecated` = this.cast("jenkins-deprecated")
+  def jira: typingsSlinky.gitlab.gitlabStrings.jira = "jira".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.jira]
   @scala.inline
-  def jira: typingsSlinky.gitlab.gitlabStrings.jira = this.cast("jira")
+  def kubernetes: typingsSlinky.gitlab.gitlabStrings.kubernetes = "kubernetes".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.kubernetes]
   @scala.inline
-  def kubernetes: typingsSlinky.gitlab.gitlabStrings.kubernetes = this.cast("kubernetes")
+  def mattermost: typingsSlinky.gitlab.gitlabStrings.mattermost = "mattermost".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.mattermost]
   @scala.inline
-  def mattermost: typingsSlinky.gitlab.gitlabStrings.mattermost = this.cast("mattermost")
+  def `mattermost-slash-commands`: typingsSlinky.gitlab.gitlabStrings.`mattermost-slash-commands` = "mattermost-slash-commands".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`mattermost-slash-commands`]
   @scala.inline
-  def `mattermost-slash-commands`: typingsSlinky.gitlab.gitlabStrings.`mattermost-slash-commands` = this.cast("mattermost-slash-commands")
+  def `microsoft-teams`: typingsSlinky.gitlab.gitlabStrings.`microsoft-teams` = "microsoft-teams".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`microsoft-teams`]
   @scala.inline
-  def `microsoft-teams`: typingsSlinky.gitlab.gitlabStrings.`microsoft-teams` = this.cast("microsoft-teams")
+  def `mock-ci`: typingsSlinky.gitlab.gitlabStrings.`mock-ci` = "mock-ci".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`mock-ci`]
   @scala.inline
-  def `mock-ci`: typingsSlinky.gitlab.gitlabStrings.`mock-ci` = this.cast("mock-ci")
+  def packagist: typingsSlinky.gitlab.gitlabStrings.packagist = "packagist".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.packagist]
   @scala.inline
-  def packagist: typingsSlinky.gitlab.gitlabStrings.packagist = this.cast("packagist")
+  def `pipelines-email`: typingsSlinky.gitlab.gitlabStrings.`pipelines-email` = "pipelines-email".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`pipelines-email`]
   @scala.inline
-  def `pipelines-email`: typingsSlinky.gitlab.gitlabStrings.`pipelines-email` = this.cast("pipelines-email")
+  def pivotaltracker: typingsSlinky.gitlab.gitlabStrings.pivotaltracker = "pivotaltracker".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.pivotaltracker]
   @scala.inline
-  def pivotaltracker: typingsSlinky.gitlab.gitlabStrings.pivotaltracker = this.cast("pivotaltracker")
+  def prometheus: typingsSlinky.gitlab.gitlabStrings.prometheus = "prometheus".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.prometheus]
   @scala.inline
-  def prometheus: typingsSlinky.gitlab.gitlabStrings.prometheus = this.cast("prometheus")
+  def pushover: typingsSlinky.gitlab.gitlabStrings.pushover = "pushover".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.pushover]
   @scala.inline
-  def pushover: typingsSlinky.gitlab.gitlabStrings.pushover = this.cast("pushover")
+  def redmine: typingsSlinky.gitlab.gitlabStrings.redmine = "redmine".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.redmine]
   @scala.inline
-  def redmine: typingsSlinky.gitlab.gitlabStrings.redmine = this.cast("redmine")
+  def slack: typingsSlinky.gitlab.gitlabStrings.slack = "slack".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.slack]
   @scala.inline
-  def slack: typingsSlinky.gitlab.gitlabStrings.slack = this.cast("slack")
+  def `slack-slash-commands`: typingsSlinky.gitlab.gitlabStrings.`slack-slash-commands` = "slack-slash-commands".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.`slack-slash-commands`]
   @scala.inline
-  def `slack-slash-commands`: typingsSlinky.gitlab.gitlabStrings.`slack-slash-commands` = this.cast("slack-slash-commands")
-  @scala.inline
-  def teamcity: typingsSlinky.gitlab.gitlabStrings.teamcity = this.cast("teamcity")
+  def teamcity: typingsSlinky.gitlab.gitlabStrings.teamcity = "teamcity".asInstanceOf[typingsSlinky.gitlab.gitlabStrings.teamcity]
 }
 

@@ -1,20 +1,15 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SeparatorBasicExample
-  extends ExternalComponentNoPropsWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.separatorBasicExampleMod.SeparatorBasicExample
-    ] {
+object SeparatorBasicExample {
   @JSImport("office-ui-fabric-react/lib/components/Separator/examples/Separator.Basic.Example", "SeparatorBasicExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.separatorBasicExampleMod.SeparatorBasicExample] = new SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.separatorBasicExampleMod.SeparatorBasicExample](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SeparatorBasicExample.type): SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.separatorBasicExampleMod.SeparatorBasicExample] = new SharedBuilder_Object_159303587[typingsSlinky.officeUiFabricReact.separatorBasicExampleMod.SeparatorBasicExample](js.Array(this.component, js.Dictionary.empty))()
 }
 

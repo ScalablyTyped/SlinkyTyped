@@ -1,49 +1,47 @@
 package typingsSlinky.reactBootstrap.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrap.mod.Sizes
 import typingsSlinky.reactBootstrap.popoverMod.PopoverProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Popover
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBootstrap.mod.Popover] {
+object Popover {
   @JSImport("react-bootstrap", "Popover")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    arrowOffsetLeft: Double | String = null,
-    arrowOffsetTop: Double | String = null,
-    bsClass: String = null,
-    bsSize: Sizes = null,
-    bsStyle: String = null,
-    placement: String = null,
-    positionLeft: Double | String = null,
-    positionTop: Double | String = null,
-    title: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Popover] = {
-    val __obj = js.Dynamic.literal()
-    if (arrowOffsetLeft != null) __obj.updateDynamic("arrowOffsetLeft")(arrowOffsetLeft.asInstanceOf[js.Any])
-    if (arrowOffsetTop != null) __obj.updateDynamic("arrowOffsetTop")(arrowOffsetTop.asInstanceOf[js.Any])
-    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
-    if (bsSize != null) __obj.updateDynamic("bsSize")(bsSize.asInstanceOf[js.Any])
-    if (bsStyle != null) __obj.updateDynamic("bsStyle")(bsStyle.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (positionLeft != null) __obj.updateDynamic("positionLeft")(positionLeft.asInstanceOf[js.Any])
-    if (positionTop != null) __obj.updateDynamic("positionTop")(positionTop.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Popover] {
+    @scala.inline
+    def arrowOffsetLeft(value: Double | String): this.type = set("arrowOffsetLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowOffsetTop(value: Double | String): this.type = set("arrowOffsetTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bsClass(value: String): this.type = set("bsClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bsSize(value: Sizes): this.type = set("bsSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bsStyle(value: String): this.type = set("bsStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placement(value: String): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positionLeft(value: Double | String): this.type = set("positionLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positionTop(value: Double | String): this.type = set("positionTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactBootstrap.mod.Popover] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactBootstrap.mod.Popover](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PopoverProps
+  
+  def withProps(p: PopoverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Popover.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

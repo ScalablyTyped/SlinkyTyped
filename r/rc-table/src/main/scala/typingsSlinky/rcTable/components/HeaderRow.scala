@@ -1,10 +1,8 @@
 package typingsSlinky.rcTable.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcTable.headerRowMod.RowProps
 import typingsSlinky.rcTable.interfaceMod.CellType
 import typingsSlinky.rcTable.interfaceMod.ColumnType
@@ -15,27 +13,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HeaderRow
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object HeaderRow {
   @JSImport("rc-table/lib/Header/HeaderRow", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder[RecordType] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object]
+  
+  def withProps[RecordType](p: RowProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply[RecordType](
-    cellComponent: CustomizeComponent[HTMLAttributes[HTMLElement]],
+    cellComponent: CustomizeComponent,
     cells: js.Array[CellType[RecordType]],
     flattenColumns: js.Array[ColumnType[RecordType]],
     index: Double,
     onHeaderRow: (js.Array[ColumnType[RecordType]], /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement],
-    rowComponent: CustomizeComponent[HTMLAttributes[HTMLElement]],
-    stickyOffsets: StickyOffsets,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(cellComponent = cellComponent.asInstanceOf[js.Any], cells = cells.asInstanceOf[js.Any], flattenColumns = flattenColumns.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], onHeaderRow = js.Any.fromFunction2(onHeaderRow), rowComponent = rowComponent.asInstanceOf[js.Any], stickyOffsets = stickyOffsets.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
+    rowComponent: CustomizeComponent,
+    stickyOffsets: StickyOffsets
+  ): Builder[RecordType] = {
+    val __props = js.Dynamic.literal(cellComponent = cellComponent.asInstanceOf[js.Any], cells = cells.asInstanceOf[js.Any], flattenColumns = flattenColumns.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], onHeaderRow = js.Any.fromFunction2(onHeaderRow), rowComponent = rowComponent.asInstanceOf[js.Any], stickyOffsets = stickyOffsets.asInstanceOf[js.Any])
+    new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[RowProps[RecordType]]))
   }
-  type Props = RowProps[js.Any]
 }
 

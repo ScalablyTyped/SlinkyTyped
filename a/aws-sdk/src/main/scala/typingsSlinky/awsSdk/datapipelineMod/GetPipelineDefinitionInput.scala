@@ -18,10 +18,35 @@ trait GetPipelineDefinitionInput extends js.Object {
 
 object GetPipelineDefinitionInput {
   @scala.inline
-  def apply(pipelineId: id, version: String = null): GetPipelineDefinitionInput = {
+  def apply(pipelineId: id): GetPipelineDefinitionInput = {
     val __obj = js.Dynamic.literal(pipelineId = pipelineId.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPipelineDefinitionInput]
   }
+  @scala.inline
+  implicit class GetPipelineDefinitionInputOps[Self <: GetPipelineDefinitionInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPipelineId(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

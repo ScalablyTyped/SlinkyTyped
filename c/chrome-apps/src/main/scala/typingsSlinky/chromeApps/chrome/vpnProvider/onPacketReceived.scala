@@ -2,7 +2,6 @@ package typingsSlinky.chromeApps.chrome.vpnProvider
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.chromeApps.chrome.events.Event
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,5 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.vpnProvider.onPacketReceived")
 @js.native
 object onPacketReceived
-  extends TopLevel[Event[js.Function1[/* data */ ArrayBuffer, Unit]]]
+  extends TopLevel[Event[js.Function1[/* data */ js.typedarray.ArrayBuffer, Unit]]]
 

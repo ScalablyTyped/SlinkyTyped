@@ -30,18 +30,65 @@ trait SchemaAndroidInfo extends js.Object {
 
 object SchemaAndroidInfo {
   @scala.inline
-  def apply(
-    androidFallbackLink: String = null,
-    androidLink: String = null,
-    androidMinPackageVersionCode: String = null,
-    androidPackageName: String = null
-  ): SchemaAndroidInfo = {
+  def apply(): SchemaAndroidInfo = {
     val __obj = js.Dynamic.literal()
-    if (androidFallbackLink != null) __obj.updateDynamic("androidFallbackLink")(androidFallbackLink.asInstanceOf[js.Any])
-    if (androidLink != null) __obj.updateDynamic("androidLink")(androidLink.asInstanceOf[js.Any])
-    if (androidMinPackageVersionCode != null) __obj.updateDynamic("androidMinPackageVersionCode")(androidMinPackageVersionCode.asInstanceOf[js.Any])
-    if (androidPackageName != null) __obj.updateDynamic("androidPackageName")(androidPackageName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAndroidInfo]
   }
+  @scala.inline
+  implicit class SchemaAndroidInfoOps[Self <: SchemaAndroidInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndroidFallbackLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidFallbackLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidFallbackLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidFallbackLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidMinPackageVersionCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidMinPackageVersionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidMinPackageVersionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidMinPackageVersionCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidPackageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidPackageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidPackageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidPackageName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

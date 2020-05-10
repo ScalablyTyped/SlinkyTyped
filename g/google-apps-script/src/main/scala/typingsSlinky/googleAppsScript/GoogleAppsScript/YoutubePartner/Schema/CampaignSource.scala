@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CampaignSource extends js.Object {
-  var sourceType: js.UndefOr[String] = js.undefined
-  var sourceValue: js.UndefOr[js.Array[String]] = js.undefined
+  var sourceType: js.UndefOr[String] = js.native
+  var sourceValue: js.UndefOr[js.Array[String]] = js.native
 }
 
 object CampaignSource {
   @scala.inline
-  def apply(sourceType: String = null, sourceValue: js.Array[String] = null): CampaignSource = {
+  def apply(): CampaignSource = {
     val __obj = js.Dynamic.literal()
-    if (sourceType != null) __obj.updateDynamic("sourceType")(sourceType.asInstanceOf[js.Any])
-    if (sourceValue != null) __obj.updateDynamic("sourceValue")(sourceValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[CampaignSource]
   }
+  @scala.inline
+  implicit class CampaignSourceOps[Self <: CampaignSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSourceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceValue(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

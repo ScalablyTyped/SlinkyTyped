@@ -18,14 +18,41 @@ trait ImagePermissions extends js.Object {
 
 object ImagePermissions {
   @scala.inline
-  def apply(
-    allowFleet: js.UndefOr[scala.Boolean] = js.undefined,
-    allowImageBuilder: js.UndefOr[scala.Boolean] = js.undefined
-  ): ImagePermissions = {
+  def apply(): ImagePermissions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowFleet)) __obj.updateDynamic("allowFleet")(allowFleet.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowImageBuilder)) __obj.updateDynamic("allowImageBuilder")(allowImageBuilder.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImagePermissions]
   }
+  @scala.inline
+  implicit class ImagePermissionsOps[Self <: ImagePermissions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowFleet(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFleet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowFleet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFleet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowImageBuilder(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowImageBuilder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowImageBuilder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowImageBuilder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

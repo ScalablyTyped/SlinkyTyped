@@ -1,14 +1,16 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import typingsSlinky.officeUiFabricReact.groupFooterTypesMod.IGroupFooterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GroupFooterBase extends SharedApply_IGroupFooterProps_880947676 {
+object GroupFooterBase {
   @JSImport("office-ui-fabric-react/lib/components/GroupedList/GroupFooter.base", "GroupFooterBase")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IGroupFooterProps): SharedBuilder_IGroupFooterProps_1687232494 = new SharedBuilder_IGroupFooterProps_1687232494(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GroupFooterBase.type): SharedBuilder_IGroupFooterProps_1687232494 = new SharedBuilder_IGroupFooterProps_1687232494(js.Array(this.component, js.Dictionary.empty))()
 }
 

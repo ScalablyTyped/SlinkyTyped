@@ -111,166 +111,167 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IntrinsicElements extends js.Object {
   // HTML
-  var a: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLAnchorElement]
-  var abbr: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var address: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var animate: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGAnimateElement]
-  var area: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLAreaElement]
-  var article: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var aside: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var audio: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLAudioElement]
-  var b: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var base: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLBaseElement]
-  var bdi: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var bdo: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var big: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var blockquote: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLQuoteElement]
-  var body: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLBodyElement]
-  var br: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLBRElement]
-  var button: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLButtonElement]
-  var canvas: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLCanvasElement]
-  var caption: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableCaptionElement]
-  var circle: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGCircleElement]
-  var cite: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var clipPath: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGClipPathElement]
-  var code: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var col: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableColElement]
-  var colgroup: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableColElement]
-  var data: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDataElement]
-  var datalist: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDataListElement]
-  var dd: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var defs: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGDefsElement]
-  var del: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLModElement]
-  var desc: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGDescElement]
-  var details: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDetailsElement]
-  var dfn: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var dialog: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDialogElement]
-  var div: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDivElement]
-  var dl: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDListElement]
-  var dt: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var ellipse: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGEllipseElement]
-  var em: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var embed: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLEmbedElement]
-  var feBlend: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEBlendElement]
-  var feColorMatrix: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEColorMatrixElement]
-  var feComponentTransfer: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEComponentTransferElement]
-  var feComposite: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFECompositeElement]
-  var feConvolveMatrix: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEConvolveMatrixElement]
-  var feDiffuseLighting: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEDiffuseLightingElement]
-  var feDisplacementMap: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEDisplacementMapElement]
-  var feFlood: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEFloodElement]
-  var feGaussianBlur: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEGaussianBlurElement]
-  var feImage: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEImageElement]
-  var feMerge: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEMergeElement]
-  var feMergeNode: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEMergeNodeElement]
-  var feMorphology: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEMorphologyElement]
-  var feOffset: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEOffsetElement]
-  var feSpecularLighting: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFESpecularLightingElement]
-  var feTile: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFETileElement]
-  var feTurbulence: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFETurbulenceElement]
-  var fieldset: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLFieldSetElement]
-  var figcaption: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var figure: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var filter: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFilterElement]
-  var footer: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var foreignObject: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGForeignObjectElement]
-  var form: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLFormElement]
-  var g: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGGElement]
-  var h1: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]
-  var h2: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]
-  var h3: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]
-  var h4: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]
-  var h5: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]
-  var h6: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]
-  var head: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadElement]
-  var header: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var hgroup: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var hr: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHRElement]
-  var html: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHtmlElement]
-  var i: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var iframe: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLIFrameElement]
-  var image: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGImageElement]
-  var img: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLImageElement]
-  var input: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLInputElement]
-  var ins: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLModElement]
-  var kbd: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var keygen: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLUnknownElement]
-  var label: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLabelElement]
-  var legend: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLegendElement]
-  var li: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLIElement]
-  var line: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGLineElement]
-  var linearGradient: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGLinearGradientElement]
-  var link: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLinkElement]
-  var main: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var map: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMapElement]
-  var mark: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var marker: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGMarkerElement]
-  var mask: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGMaskElement]
-  var menu: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMenuElement]
-  var menuitem: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLUnknownElement]
-  var meta: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMetaElement]
-  var meter: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMeterElement]
-  var nav: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var noscript: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var `object`: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLObjectElement]
-  var ol: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOListElement]
-  var optgroup: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOptGroupElement]
-  var option: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOptionElement]
-  var output: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOutputElement]
-  var p: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLParagraphElement]
-  var param: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLParamElement]
-  var path: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPathElement]
-  var pattern: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPatternElement]
-  var picture: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLPictureElement]
-  var polygon: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPolygonElement]
-  var polyline: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPolylineElement]
-  var pre: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLPreElement]
-  var progress: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLProgressElement]
-  var q: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLQuoteElement]
-  var radialGradient: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGRadialGradientElement]
-  var rect: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGRectElement]
-  var rp: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var rt: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var ruby: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var s: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var samp: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var script: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLScriptElement]
-  var section: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var select: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSelectElement]
-  var slot: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSlotElement]
-  var small: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var source: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSourceElement]
-  var span: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSpanElement]
-  var stop: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGStopElement]
-  var strong: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var style: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLStyleElement]
-  var sub: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var summary: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var sup: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
+  var a: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLAnchorElement] = js.native
+  var abbr: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var address: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var animate: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGAnimateElement] = js.native
+  var area: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLAreaElement] = js.native
+  var article: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var aside: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var audio: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLAudioElement] = js.native
+  var b: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var base: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLBaseElement] = js.native
+  var bdi: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var bdo: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var big: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var blockquote: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLQuoteElement] = js.native
+  var body: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLBodyElement] = js.native
+  var br: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLBRElement] = js.native
+  var button: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLButtonElement] = js.native
+  var canvas: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLCanvasElement] = js.native
+  var caption: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableCaptionElement] = js.native
+  var circle: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGCircleElement] = js.native
+  var cite: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var clipPath: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGClipPathElement] = js.native
+  var code: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var col: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableColElement] = js.native
+  var colgroup: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableColElement] = js.native
+  var data: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDataElement] = js.native
+  var datalist: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDataListElement] = js.native
+  var dd: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var defs: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGDefsElement] = js.native
+  var del: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLModElement] = js.native
+  var desc: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGDescElement] = js.native
+  var details: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDetailsElement] = js.native
+  var dfn: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var dialog: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDialogElement] = js.native
+  var div: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDivElement] = js.native
+  var dl: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDListElement] = js.native
+  var dt: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var ellipse: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGEllipseElement] = js.native
+  var em: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var embed: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLEmbedElement] = js.native
+  var feBlend: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEBlendElement] = js.native
+  var feColorMatrix: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEColorMatrixElement] = js.native
+  var feComponentTransfer: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEComponentTransferElement] = js.native
+  var feComposite: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFECompositeElement] = js.native
+  var feConvolveMatrix: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEConvolveMatrixElement] = js.native
+  var feDiffuseLighting: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEDiffuseLightingElement] = js.native
+  var feDisplacementMap: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEDisplacementMapElement] = js.native
+  var feFlood: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEFloodElement] = js.native
+  var feGaussianBlur: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEGaussianBlurElement] = js.native
+  var feImage: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEImageElement] = js.native
+  var feMerge: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEMergeElement] = js.native
+  var feMergeNode: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEMergeNodeElement] = js.native
+  var feMorphology: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEMorphologyElement] = js.native
+  var feOffset: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEOffsetElement] = js.native
+  var feSpecularLighting: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFESpecularLightingElement] = js.native
+  var feTile: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFETileElement] = js.native
+  var feTurbulence: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFETurbulenceElement] = js.native
+  var fieldset: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLFieldSetElement] = js.native
+  var figcaption: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var figure: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var filter: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFilterElement] = js.native
+  var footer: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var foreignObject: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGForeignObjectElement] = js.native
+  var form: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLFormElement] = js.native
+  var g: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGGElement] = js.native
+  var h1: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement] = js.native
+  var h2: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement] = js.native
+  var h3: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement] = js.native
+  var h4: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement] = js.native
+  var h5: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement] = js.native
+  var h6: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement] = js.native
+  var head: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadElement] = js.native
+  var header: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var hgroup: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var hr: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHRElement] = js.native
+  var html: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHtmlElement] = js.native
+  var i: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var iframe: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLIFrameElement] = js.native
+  var image: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGImageElement] = js.native
+  var img: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLImageElement] = js.native
+  var input: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLInputElement] = js.native
+  var ins: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLModElement] = js.native
+  var kbd: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var keygen: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLUnknownElement] = js.native
+  var label: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLabelElement] = js.native
+  var legend: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLegendElement] = js.native
+  var li: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLIElement] = js.native
+  var line: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGLineElement] = js.native
+  var linearGradient: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGLinearGradientElement] = js.native
+  var link: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLinkElement] = js.native
+  var main: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var map: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMapElement] = js.native
+  var mark: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var marker: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGMarkerElement] = js.native
+  var mask: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGMaskElement] = js.native
+  var menu: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMenuElement] = js.native
+  var menuitem: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLUnknownElement] = js.native
+  var meta: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMetaElement] = js.native
+  var meter: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMeterElement] = js.native
+  var nav: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var noscript: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var `object`: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLObjectElement] = js.native
+  var ol: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOListElement] = js.native
+  var optgroup: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOptGroupElement] = js.native
+  var option: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOptionElement] = js.native
+  var output: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOutputElement] = js.native
+  var p: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLParagraphElement] = js.native
+  var param: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLParamElement] = js.native
+  var path: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPathElement] = js.native
+  var pattern: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPatternElement] = js.native
+  var picture: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLPictureElement] = js.native
+  var polygon: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPolygonElement] = js.native
+  var polyline: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPolylineElement] = js.native
+  var pre: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLPreElement] = js.native
+  var progress: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLProgressElement] = js.native
+  var q: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLQuoteElement] = js.native
+  var radialGradient: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGRadialGradientElement] = js.native
+  var rect: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGRectElement] = js.native
+  var rp: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var rt: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var ruby: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var s: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var samp: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var script: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLScriptElement] = js.native
+  var section: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var select: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSelectElement] = js.native
+  var slot: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSlotElement] = js.native
+  var small: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var source: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSourceElement] = js.native
+  var span: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSpanElement] = js.native
+  var stop: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGStopElement] = js.native
+  var strong: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var style: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLStyleElement] = js.native
+  var sub: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var summary: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var sup: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
   //SVG
-  var svg: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGSVGElement]
-  var symbol: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGSymbolElement]
-  var table: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableElement]
-  var tbody: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableSectionElement]
-  var td: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableCellElement]
-  var text: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGTextElement]
-  var textarea: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTextAreaElement]
-  var tfoot: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableSectionElement]
-  var th: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableCellElement]
-  var thead: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableSectionElement]
-  var time: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTimeElement]
-  var title: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTitleElement]
-  var tr: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableRowElement]
-  var track: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTrackElement]
-  var tspan: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGTSpanElement]
-  var u: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var ul: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLUListElement]
-  var use: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGUseElement]
-  var `var`: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
-  var video: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLVideoElement]
-  var wbr: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]
+  var svg: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGSVGElement] = js.native
+  var symbol: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGSymbolElement] = js.native
+  var table: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableElement] = js.native
+  var tbody: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableSectionElement] = js.native
+  var td: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableCellElement] = js.native
+  var text: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGTextElement] = js.native
+  var textarea: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTextAreaElement] = js.native
+  var tfoot: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableSectionElement] = js.native
+  var th: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableCellElement] = js.native
+  var thead: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableSectionElement] = js.native
+  var time: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTimeElement] = js.native
+  var title: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTitleElement] = js.native
+  var tr: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableRowElement] = js.native
+  var track: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTrackElement] = js.native
+  var tspan: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGTSpanElement] = js.native
+  var u: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var ul: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLUListElement] = js.native
+  var use: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGUseElement] = js.native
+  var `var`: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
+  var video: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLVideoElement] = js.native
+  var wbr: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement] = js.native
 }
 
 object IntrinsicElements {
@@ -439,5 +440,955 @@ object IntrinsicElements {
     __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrinsicElements]
   }
+  @scala.inline
+  implicit class IntrinsicElementsOps[Self <: IntrinsicElements] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withA(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLAnchorElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbbr(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abbr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddress(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnimate(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGAnimateElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArea(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLAreaElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArticle(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("article")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAside(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aside")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAudio(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLAudioElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withB(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBase(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLBaseElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBdi(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bdi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBdo(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bdo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBig(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("big")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockquote(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLQuoteElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLBodyElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBr(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLBRElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButton(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLButtonElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCanvas(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLCanvasElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaption(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableCaptionElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCircle(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGCircleElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCite(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClipPath(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGClipPathElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCode(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCol(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableColElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColgroup(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableColElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDataElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDatalist(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDataListElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datalist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDd(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefs(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGDefsElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDel(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLModElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesc(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGDescElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetails(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDetailsElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDfn(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dfn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDialog(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDialogElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDiv(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDivElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("div")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDl(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLDListElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDt(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEllipse(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGEllipseElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEm(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmbed(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLEmbedElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeBlend(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEBlendElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feBlend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeColorMatrix(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEColorMatrixElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feColorMatrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeComponentTransfer(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEComponentTransferElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feComponentTransfer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeComposite(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFECompositeElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feComposite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeConvolveMatrix(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEConvolveMatrixElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feConvolveMatrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeDiffuseLighting(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEDiffuseLightingElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feDiffuseLighting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeDisplacementMap(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEDisplacementMapElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feDisplacementMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeFlood(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEFloodElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feFlood")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeGaussianBlur(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEGaussianBlurElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feGaussianBlur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeImage(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEImageElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeMerge(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEMergeElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feMerge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeMergeNode(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEMergeNodeElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feMergeNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeMorphology(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEMorphologyElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feMorphology")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeOffset(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFEOffsetElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeSpecularLighting(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFESpecularLightingElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feSpecularLighting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeTile(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFETileElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feTile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeTurbulence(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFETurbulenceElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feTurbulence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFieldset(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLFieldSetElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFigcaption(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("figcaption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFigure(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("figure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilter(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGFilterElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFooter(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForeignObject(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGForeignObjectElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForm(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLFormElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withG(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGGElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH1(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH2(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH3(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH4(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH5(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH6(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadingElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHead(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHeadElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeader(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHgroup(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHr(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHRElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLHtmlElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withI(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIframe(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLIFrameElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGImageElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImg(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLImageElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInput(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLInputElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIns(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLModElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKbd(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kbd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeygen(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLUnknownElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keygen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLabelElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLegend(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLegendElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLi(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLIElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLine(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGLineElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinearGradient(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGLinearGradientElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearGradient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLink(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLLinkElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMain(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMap(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMapElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMark(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarker(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGMarkerElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMask(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGMaskElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMenu(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMenuElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMenuitem(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLUnknownElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuitem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeta(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMetaElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeter(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLMeterElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNav(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNoscript(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noscript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObject(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLObjectElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOl(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOListElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptgroup(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOptGroupElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOption(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOptionElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutput(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLOutputElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withP(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLParagraphElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParam(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLParamElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("param")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPathElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPattern(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPatternElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPicture(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLPictureElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("picture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolygon(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPolygonElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolyline(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGPolylineElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polyline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPre(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLPreElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProgress(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLProgressElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQ(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLQuoteElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRadialGradient(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGRadialGradientElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radialGradient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRect(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGRectElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRp(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRt(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuby(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruby")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSamp(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScript(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLScriptElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSection(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelect(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSelectElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSlot(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSlotElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSmall(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSource(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSourceElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpan(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLSpanElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStop(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGStopElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrong(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyle(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLStyleElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSub(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sub")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSummary(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSup(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSvg(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGSVGElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGSymbolElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTable(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTbody(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableSectionElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTd(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableCellElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGTextElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextarea(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTextAreaElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTfoot(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableSectionElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tfoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTh(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableCellElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThead(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableSectionElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTime(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTimeElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTitleElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTr(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTableRowElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLTrackElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTspan(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGTSpanElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tspan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withU(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("u")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUl(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLUListElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUse(value: typingsSlinky.preact.jsxMod.JSXInternal.SVGAttributes[SVGUseElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVar(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("var")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideo(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLVideoElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWbr(value: typingsSlinky.preact.jsxMod.JSXInternal.HTMLAttributes[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wbr")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,27 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SharedTargeting extends js.Object {
   /** The list of values to exclude from targeting. Each value is AND'd together. */
-  var exclusions: js.UndefOr[js.Array[TargetingValue]] = js.undefined
+  var exclusions: js.UndefOr[js.Array[TargetingValue]] = js.native
   /** The list of value to include as part of the targeting. Each value is OR'd together. */
-  var inclusions: js.UndefOr[js.Array[TargetingValue]] = js.undefined
+  var inclusions: js.UndefOr[js.Array[TargetingValue]] = js.native
   /** The key representing the shared targeting criterion. */
-  var key: js.UndefOr[String] = js.undefined
+  var key: js.UndefOr[String] = js.native
 }
 
 object SharedTargeting {
   @scala.inline
-  def apply(
-    exclusions: js.Array[TargetingValue] = null,
-    inclusions: js.Array[TargetingValue] = null,
-    key: String = null
-  ): SharedTargeting = {
+  def apply(): SharedTargeting = {
     val __obj = js.Dynamic.literal()
-    if (exclusions != null) __obj.updateDynamic("exclusions")(exclusions.asInstanceOf[js.Any])
-    if (inclusions != null) __obj.updateDynamic("inclusions")(inclusions.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharedTargeting]
   }
+  @scala.inline
+  implicit class SharedTargetingOps[Self <: SharedTargeting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExclusions(value: js.Array[TargetingValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInclusions(value: js.Array[TargetingValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inclusions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclusions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inclusions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

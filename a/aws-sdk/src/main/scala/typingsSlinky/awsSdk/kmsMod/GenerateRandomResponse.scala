@@ -14,10 +14,35 @@ trait GenerateRandomResponse extends js.Object {
 
 object GenerateRandomResponse {
   @scala.inline
-  def apply(Plaintext: PlaintextType = null): GenerateRandomResponse = {
+  def apply(): GenerateRandomResponse = {
     val __obj = js.Dynamic.literal()
-    if (Plaintext != null) __obj.updateDynamic("Plaintext")(Plaintext.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateRandomResponse]
   }
+  @scala.inline
+  implicit class GenerateRandomResponseOps[Self <: GenerateRandomResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlaintextUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Plaintext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlaintext(value: PlaintextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Plaintext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaintext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Plaintext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

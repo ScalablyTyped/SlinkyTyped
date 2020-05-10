@@ -14,10 +14,8 @@ trait AdditionalMutatingArrayMethods extends js.Object
 
 object AdditionalMutatingArrayMethods {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def copyWithin: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.copyWithin = "copyWithin".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.copyWithin]
   @scala.inline
-  def copyWithin: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.copyWithin = this.cast("copyWithin")
-  @scala.inline
-  def fill: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.fill = this.cast("fill")
+  def fill: typingsSlinky.seamlessImmutable.seamlessImmutableStrings.fill = "fill".asInstanceOf[typingsSlinky.seamlessImmutable.seamlessImmutableStrings.fill]
 }
 

@@ -18,11 +18,41 @@ trait JobExecutionsRolloutConfig extends js.Object {
 
 object JobExecutionsRolloutConfig {
   @scala.inline
-  def apply(exponentialRate: ExponentialRolloutRate = null, maximumPerMinute: Int | Double = null): JobExecutionsRolloutConfig = {
+  def apply(): JobExecutionsRolloutConfig = {
     val __obj = js.Dynamic.literal()
-    if (exponentialRate != null) __obj.updateDynamic("exponentialRate")(exponentialRate.asInstanceOf[js.Any])
-    if (maximumPerMinute != null) __obj.updateDynamic("maximumPerMinute")(maximumPerMinute.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobExecutionsRolloutConfig]
   }
+  @scala.inline
+  implicit class JobExecutionsRolloutConfigOps[Self <: JobExecutionsRolloutConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExponentialRate(value: ExponentialRolloutRate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exponentialRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExponentialRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exponentialRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumPerMinute(value: MaxJobExecutionsPerMin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPerMinute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumPerMinute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPerMinute")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

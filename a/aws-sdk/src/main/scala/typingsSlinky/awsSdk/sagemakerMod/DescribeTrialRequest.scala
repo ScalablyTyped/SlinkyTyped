@@ -16,8 +16,21 @@ object DescribeTrialRequest {
   @scala.inline
   def apply(TrialName: ExperimentEntityName): DescribeTrialRequest = {
     val __obj = js.Dynamic.literal(TrialName = TrialName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeTrialRequest]
   }
+  @scala.inline
+  implicit class DescribeTrialRequestOps[Self <: DescribeTrialRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrialName(value: ExperimentEntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrialName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,21 @@
 package typingsSlinky.reactTagInput.components
 
+import typingsSlinky.reactTagInput.AnonId
+import typingsSlinky.reactTagInput.mod.ReactTagsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object WithOutContext
-  extends SharedApply_ReactTagsProps_742931415[typingsSlinky.reactTagInput.mod.WithOutContext] {
+object WithOutContext {
   @JSImport("react-tag-input", "WithOutContext")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ReactTagsProps): SharedBuilder_ReactTagsProps_1858233423[typingsSlinky.reactTagInput.mod.WithOutContext] = new SharedBuilder_ReactTagsProps_1858233423[typingsSlinky.reactTagInput.mod.WithOutContext](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(handleAddition: AnonId => Unit, handleDelete: Double => Unit): SharedBuilder_ReactTagsProps_1858233423[typingsSlinky.reactTagInput.mod.WithOutContext] = {
+    val __props = js.Dynamic.literal(handleAddition = js.Any.fromFunction1(handleAddition), handleDelete = js.Any.fromFunction1(handleDelete))
+    new SharedBuilder_ReactTagsProps_1858233423[typingsSlinky.reactTagInput.mod.WithOutContext](js.Array(this.component, __props.asInstanceOf[ReactTagsProps]))
+  }
 }
 

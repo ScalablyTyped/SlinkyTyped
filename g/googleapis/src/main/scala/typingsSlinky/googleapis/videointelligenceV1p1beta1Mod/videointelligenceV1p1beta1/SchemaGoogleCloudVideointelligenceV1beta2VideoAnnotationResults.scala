@@ -59,30 +59,137 @@ trait SchemaGoogleCloudVideointelligenceV1beta2VideoAnnotationResults extends js
 
 object SchemaGoogleCloudVideointelligenceV1beta2VideoAnnotationResults {
   @scala.inline
-  def apply(
-    error: SchemaGoogleRpcStatus = null,
-    explicitAnnotation: SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentAnnotation = null,
-    frameLabelAnnotations: js.Array[SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation] = null,
-    inputUri: String = null,
-    objectAnnotations: js.Array[SchemaGoogleCloudVideointelligenceV1beta2ObjectTrackingAnnotation] = null,
-    segmentLabelAnnotations: js.Array[SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation] = null,
-    shotAnnotations: js.Array[SchemaGoogleCloudVideointelligenceV1beta2VideoSegment] = null,
-    shotLabelAnnotations: js.Array[SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation] = null,
-    speechTranscriptions: js.Array[SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscription] = null,
-    textAnnotations: js.Array[SchemaGoogleCloudVideointelligenceV1beta2TextAnnotation] = null
-  ): SchemaGoogleCloudVideointelligenceV1beta2VideoAnnotationResults = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1beta2VideoAnnotationResults = {
     val __obj = js.Dynamic.literal()
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (explicitAnnotation != null) __obj.updateDynamic("explicitAnnotation")(explicitAnnotation.asInstanceOf[js.Any])
-    if (frameLabelAnnotations != null) __obj.updateDynamic("frameLabelAnnotations")(frameLabelAnnotations.asInstanceOf[js.Any])
-    if (inputUri != null) __obj.updateDynamic("inputUri")(inputUri.asInstanceOf[js.Any])
-    if (objectAnnotations != null) __obj.updateDynamic("objectAnnotations")(objectAnnotations.asInstanceOf[js.Any])
-    if (segmentLabelAnnotations != null) __obj.updateDynamic("segmentLabelAnnotations")(segmentLabelAnnotations.asInstanceOf[js.Any])
-    if (shotAnnotations != null) __obj.updateDynamic("shotAnnotations")(shotAnnotations.asInstanceOf[js.Any])
-    if (shotLabelAnnotations != null) __obj.updateDynamic("shotLabelAnnotations")(shotLabelAnnotations.asInstanceOf[js.Any])
-    if (speechTranscriptions != null) __obj.updateDynamic("speechTranscriptions")(speechTranscriptions.asInstanceOf[js.Any])
-    if (textAnnotations != null) __obj.updateDynamic("textAnnotations")(textAnnotations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1beta2VideoAnnotationResults]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1beta2VideoAnnotationResultsOps[Self <: SchemaGoogleCloudVideointelligenceV1beta2VideoAnnotationResults] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: SchemaGoogleRpcStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExplicitAnnotation(value: SchemaGoogleCloudVideointelligenceV1beta2ExplicitContentAnnotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExplicitAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explicitAnnotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameLabelAnnotations(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameLabelAnnotations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameLabelAnnotations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameLabelAnnotations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectAnnotations(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2ObjectTrackingAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectAnnotations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectAnnotations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectAnnotations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentLabelAnnotations(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentLabelAnnotations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentLabelAnnotations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentLabelAnnotations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShotAnnotations(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2VideoSegment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shotAnnotations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShotAnnotations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shotAnnotations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShotLabelAnnotations(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2LabelAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shotLabelAnnotations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShotLabelAnnotations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shotLabelAnnotations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeechTranscriptions(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscription]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speechTranscriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeechTranscriptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speechTranscriptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextAnnotations(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2TextAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAnnotations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextAnnotations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAnnotations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

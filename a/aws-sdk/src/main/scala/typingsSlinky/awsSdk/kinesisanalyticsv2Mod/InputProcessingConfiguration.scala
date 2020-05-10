@@ -16,8 +16,21 @@ object InputProcessingConfiguration {
   @scala.inline
   def apply(InputLambdaProcessor: InputLambdaProcessor): InputProcessingConfiguration = {
     val __obj = js.Dynamic.literal(InputLambdaProcessor = InputLambdaProcessor.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[InputProcessingConfiguration]
   }
+  @scala.inline
+  implicit class InputProcessingConfigurationOps[Self <: InputProcessingConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputLambdaProcessor(value: InputLambdaProcessor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLambdaProcessor")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

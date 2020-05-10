@@ -1,32 +1,22 @@
 package typingsSlinky.storybookComponents.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.storybookComponents.tabsMod.TabsStateProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabsState
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.storybookComponents.mod.TabsState] {
+object TabsState {
   @JSImport("@storybook/components", "TabsState")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    absolute: Boolean,
-    backgroundColor: String,
-    bordered: Boolean,
-    initial: String,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.storybookComponents.mod.TabsState] = {
-    val __obj = js.Dynamic.literal(absolute = absolute.asInstanceOf[js.Any], backgroundColor = backgroundColor.asInstanceOf[js.Any], bordered = bordered.asInstanceOf[js.Any], initial = initial.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: TabsStateProps): Default[tag.type, typingsSlinky.storybookComponents.mod.TabsState] = new Default[tag.type, typingsSlinky.storybookComponents.mod.TabsState](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(absolute: Boolean, backgroundColor: String, bordered: Boolean, initial: String): Default[tag.type, typingsSlinky.storybookComponents.mod.TabsState] = {
+    val __props = js.Dynamic.literal(absolute = absolute.asInstanceOf[js.Any], backgroundColor = backgroundColor.asInstanceOf[js.Any], bordered = bordered.asInstanceOf[js.Any], initial = initial.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.storybookComponents.mod.TabsState](js.Array(this.component, __props.asInstanceOf[TabsStateProps]))
   }
-  type Props = TabsStateProps
 }
 

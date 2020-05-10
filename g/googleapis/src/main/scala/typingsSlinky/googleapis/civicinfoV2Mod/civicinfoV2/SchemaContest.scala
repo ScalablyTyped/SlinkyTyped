@@ -143,60 +143,317 @@ trait SchemaContest extends js.Object {
 
 object SchemaContest {
   @scala.inline
-  def apply(
-    ballotPlacement: String = null,
-    ballotTitle: String = null,
-    candidates: js.Array[SchemaCandidate] = null,
-    district: SchemaElectoralDistrict = null,
-    electorateSpecifications: String = null,
-    id: String = null,
-    level: js.Array[String] = null,
-    numberElected: String = null,
-    numberVotingFor: String = null,
-    office: String = null,
-    primaryParty: String = null,
-    referendumBallotResponses: js.Array[String] = null,
-    referendumBrief: String = null,
-    referendumConStatement: String = null,
-    referendumEffectOfAbstain: String = null,
-    referendumPassageThreshold: String = null,
-    referendumProStatement: String = null,
-    referendumSubtitle: String = null,
-    referendumText: String = null,
-    referendumTitle: String = null,
-    referendumUrl: String = null,
-    roles: js.Array[String] = null,
-    sources: js.Array[SchemaSource] = null,
-    special: String = null,
-    `type`: String = null
-  ): SchemaContest = {
+  def apply(): SchemaContest = {
     val __obj = js.Dynamic.literal()
-    if (ballotPlacement != null) __obj.updateDynamic("ballotPlacement")(ballotPlacement.asInstanceOf[js.Any])
-    if (ballotTitle != null) __obj.updateDynamic("ballotTitle")(ballotTitle.asInstanceOf[js.Any])
-    if (candidates != null) __obj.updateDynamic("candidates")(candidates.asInstanceOf[js.Any])
-    if (district != null) __obj.updateDynamic("district")(district.asInstanceOf[js.Any])
-    if (electorateSpecifications != null) __obj.updateDynamic("electorateSpecifications")(electorateSpecifications.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (numberElected != null) __obj.updateDynamic("numberElected")(numberElected.asInstanceOf[js.Any])
-    if (numberVotingFor != null) __obj.updateDynamic("numberVotingFor")(numberVotingFor.asInstanceOf[js.Any])
-    if (office != null) __obj.updateDynamic("office")(office.asInstanceOf[js.Any])
-    if (primaryParty != null) __obj.updateDynamic("primaryParty")(primaryParty.asInstanceOf[js.Any])
-    if (referendumBallotResponses != null) __obj.updateDynamic("referendumBallotResponses")(referendumBallotResponses.asInstanceOf[js.Any])
-    if (referendumBrief != null) __obj.updateDynamic("referendumBrief")(referendumBrief.asInstanceOf[js.Any])
-    if (referendumConStatement != null) __obj.updateDynamic("referendumConStatement")(referendumConStatement.asInstanceOf[js.Any])
-    if (referendumEffectOfAbstain != null) __obj.updateDynamic("referendumEffectOfAbstain")(referendumEffectOfAbstain.asInstanceOf[js.Any])
-    if (referendumPassageThreshold != null) __obj.updateDynamic("referendumPassageThreshold")(referendumPassageThreshold.asInstanceOf[js.Any])
-    if (referendumProStatement != null) __obj.updateDynamic("referendumProStatement")(referendumProStatement.asInstanceOf[js.Any])
-    if (referendumSubtitle != null) __obj.updateDynamic("referendumSubtitle")(referendumSubtitle.asInstanceOf[js.Any])
-    if (referendumText != null) __obj.updateDynamic("referendumText")(referendumText.asInstanceOf[js.Any])
-    if (referendumTitle != null) __obj.updateDynamic("referendumTitle")(referendumTitle.asInstanceOf[js.Any])
-    if (referendumUrl != null) __obj.updateDynamic("referendumUrl")(referendumUrl.asInstanceOf[js.Any])
-    if (roles != null) __obj.updateDynamic("roles")(roles.asInstanceOf[js.Any])
-    if (sources != null) __obj.updateDynamic("sources")(sources.asInstanceOf[js.Any])
-    if (special != null) __obj.updateDynamic("special")(special.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContest]
   }
+  @scala.inline
+  implicit class SchemaContestOps[Self <: SchemaContest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBallotPlacement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ballotPlacement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBallotPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ballotPlacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBallotTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ballotTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBallotTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ballotTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCandidates(value: js.Array[SchemaCandidate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("candidates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCandidates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("candidates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistrict(value: SchemaElectoralDistrict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("district")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("district")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElectorateSpecifications(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electorateSpecifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElectorateSpecifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electorateSpecifications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberElected(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberElected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberElected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberElected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberVotingFor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberVotingFor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberVotingFor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberVotingFor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("office")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("office")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryParty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryParty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryParty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryParty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferendumBallotResponses(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumBallotResponses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferendumBallotResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumBallotResponses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferendumBrief(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumBrief")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferendumBrief: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumBrief")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferendumConStatement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumConStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferendumConStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumConStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferendumEffectOfAbstain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumEffectOfAbstain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferendumEffectOfAbstain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumEffectOfAbstain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferendumPassageThreshold(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumPassageThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferendumPassageThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumPassageThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferendumProStatement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumProStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferendumProStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumProStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferendumSubtitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumSubtitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferendumSubtitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumSubtitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferendumText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferendumText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferendumTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferendumTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferendumUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferendumUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referendumUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoles(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSources(value: js.Array[SchemaSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpecial(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("special")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpecial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("special")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

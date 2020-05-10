@@ -1,7 +1,7 @@
 package typingsSlinky.packery.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.NodeList
+import org.scalajs.dom.raw.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +15,12 @@ class Packery protected () extends js.Object {
     * [addItems Add item elements to the Packery instance]
     * @param {Array<Element>} elements [description]
     */
-  def addItems(elements: js.Array[typingsSlinky.std.Element]): Unit = js.native
+  def addItems(elements: js.Array[Element]): Unit = js.native
   /**
     * [addItems Add item elements to the Packery instance]
     * @param {Element} elements [description]
     */
-  def addItems(elements: typingsSlinky.std.Element): Unit = js.native
+  def addItems(elements: Element): Unit = js.native
   /**
     * [addItems Add item elements to the Packery instance]
     * @param {NodeList} elements [description]
@@ -30,12 +30,12 @@ class Packery protected () extends js.Object {
     * [appended Add and lay out newly appended item elements]
     * @param {Array<Element>} elements [description]
     */
-  def appended(elements: js.Array[typingsSlinky.std.Element]): Unit = js.native
+  def appended(elements: js.Array[Element]): Unit = js.native
   /**
     * [appended Add and lay out newly appended item elements]
     * @param {Element} elements [description]
     */
-  def appended(elements: typingsSlinky.std.Element): Unit = js.native
+  def appended(elements: Element): Unit = js.native
   /**
     * [appended Add and lay out newly appended item elements]
     * @param {NodeList} elements [description]
@@ -118,12 +118,12 @@ class Packery protected () extends js.Object {
     * [prepended Add and lay out newly prepended item elements at the beginning of layout]
     * @param {Array<Element>} elements [description]
     */
-  def prepended(elements: js.Array[typingsSlinky.std.Element]): Unit = js.native
+  def prepended(elements: js.Array[Element]): Unit = js.native
   /**
     * [prepended Add and lay out newly prepended item elements at the beginning of layout]
     * @param {Element} elements [description]
     */
-  def prepended(elements: typingsSlinky.std.Element): Unit = js.native
+  def prepended(elements: Element): Unit = js.native
   /**
     * [prepended Add and lay out newly prepended item elements at the beginning of layout]
     * @param {NodeList} elements [description]
@@ -137,12 +137,12 @@ class Packery protected () extends js.Object {
     * [remove Remove elements from the Packery instance, then from the DOM]
     * @param {Array<Element>} elements [description]
     */
-  def remove(elements: js.Array[typingsSlinky.std.Element]): Unit = js.native
+  def remove(elements: js.Array[Element]): Unit = js.native
   /**
     * [remove Remove elements from the Packery instance, then from the DOM]
     * @param {Element} elements [description]
     */
-  def remove(elements: typingsSlinky.std.Element): Unit = js.native
+  def remove(elements: Element): Unit = js.native
   /**
     * [remove Remove elements from the Packery instance, then from the DOM]
     * @param {NodeList} elements [description]
@@ -152,12 +152,12 @@ class Packery protected () extends js.Object {
     * [stamp Stamp the elements in the layout. Packery will lay out item elements around stamped element]
     * @param {Array<Element>} elements [description]
     */
-  def stamp(elements: js.Array[typingsSlinky.std.Element]): Unit = js.native
+  def stamp(elements: js.Array[Element]): Unit = js.native
   /**
     * [stamp Stamp the elements in the layout. Packery will lay out item elements around stamped element]
     * @param {Element} elements [description]
     */
-  def stamp(elements: typingsSlinky.std.Element): Unit = js.native
+  def stamp(elements: Element): Unit = js.native
   /**
     * [stamp Stamp the elements in the layout. Packery will lay out item elements around stamped element]
     * @param {NodeList} elements [description]
@@ -171,12 +171,12 @@ class Packery protected () extends js.Object {
     * [unstamp Un-stamp the elements, so that Packery will no longer layout item elements around them]
     * @param {Array<Element>} element [description]
     */
-  def unstamp(element: js.Array[typingsSlinky.std.Element]): Unit = js.native
+  def unstamp(element: js.Array[Element]): Unit = js.native
   /**
     * [unstamp Un-stamp the elements, so that Packery will no longer layout item elements around them]
     * @param {Element} element [description]
     */
-  def unstamp(element: typingsSlinky.std.Element): Unit = js.native
+  def unstamp(element: Element): Unit = js.native
   /**
     * [unstamp Un-stamp the elements, so that Packery will no longer layout item elements around them]
     * @param {NodeList} element [description]

@@ -1,15 +1,21 @@
 package typingsSlinky.reactNativeVectorIcons.components
 
+import typingsSlinky.reactNativeVectorIcons.iconMod.IconButtonProps
 import typingsSlinky.reactNativeVectorIcons.ioniconsMod.default.Button
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IoniconsButton extends SharedApply_IconButtonProps_225706644[Button] {
+object IoniconsButton {
   @JSImport("react-native-vector-icons/Ionicons", "default.Button")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IconButtonProps): SharedBuilder_IconButtonProps_1587742882[Button] = new SharedBuilder_IconButtonProps_1587742882[Button](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String): SharedBuilder_IconButtonProps_1587742882[Button] = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new SharedBuilder_IconButtonProps_1587742882[Button](js.Array(this.component, __props.asInstanceOf[IconButtonProps]))
+  }
 }
 

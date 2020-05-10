@@ -2,7 +2,6 @@ package typingsSlinky.dogapi.mod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dogapi.AnonAggregationkey
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ trait event extends js.Object {
   def create(
     title: String,
     text: String,
-    callback: js.Function2[/* err */ Error | Null, /* res */ EventCreateResponse, Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* res */ EventCreateResponse, Unit]
   ): Unit = js.native
   def create(
     title: String,

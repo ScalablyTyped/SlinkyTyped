@@ -1,7 +1,6 @@
 package typingsSlinky.anyDbTransaction.mod
 
 import typingsSlinky.anyDb.mod.Queryable
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +16,9 @@ object ^ extends js.Object {
   def apply(
     q: Queryable,
     beginStatement: String,
-    callback: js.Function2[/* error */ Error, /* transaction */ Transaction, Unit]
+    callback: js.Function2[/* error */ js.Error, /* transaction */ Transaction, Unit]
   ): Transaction = js.native
-  def apply(q: Queryable, callback: js.Function2[/* error */ Error, /* transaction */ Transaction, Unit]): Transaction = js.native
+  def apply(q: Queryable, callback: js.Function2[/* error */ js.Error, /* transaction */ Transaction, Unit]): Transaction = js.native
   def apply(q: Queryable, options: TransactionOptions): Transaction = js.native
   def apply(q: Queryable, options: TransactionOptions, beginStatement: String): Transaction = js.native
   def apply(
@@ -31,7 +30,7 @@ object ^ extends js.Object {
   def apply(
     q: Queryable,
     options: TransactionOptions,
-    callback: js.Function2[/* error */ Error, /* transaction */ Transaction, Unit]
+    callback: js.Function2[/* error */ js.Error, /* transaction */ Transaction, Unit]
   ): Transaction = js.native
 }
 

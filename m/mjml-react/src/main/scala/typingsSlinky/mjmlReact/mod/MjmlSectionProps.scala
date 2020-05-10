@@ -11,39 +11,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MjmlSectionProps extends js.Object {
-  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.undefined
-  var backgroundRepeat: js.UndefOr[BackgroundRepeatProperty] = js.undefined
-  var backgroundSize: js.UndefOr[BackgroundSizeProperty[String | Double]] = js.undefined
-  var backgroundUrl: js.UndefOr[String] = js.undefined
-  var direction: js.UndefOr[ltr | rtl] = js.undefined
-  var fullWidth: js.UndefOr[Boolean] = js.undefined
-  var textAlign: js.UndefOr[TextAlignProperty] = js.undefined
-  var verticalAlign: js.UndefOr[VerticalAlignProperty[String | Double]] = js.undefined
+  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
+  var backgroundRepeat: js.UndefOr[BackgroundRepeatProperty] = js.native
+  var backgroundSize: js.UndefOr[BackgroundSizeProperty[String | Double]] = js.native
+  var backgroundUrl: js.UndefOr[String] = js.native
+  var direction: js.UndefOr[ltr | rtl] = js.native
+  var fullWidth: js.UndefOr[Boolean] = js.native
+  var textAlign: js.UndefOr[TextAlignProperty] = js.native
+  var verticalAlign: js.UndefOr[VerticalAlignProperty[String | Double]] = js.native
 }
 
 object MjmlSectionProps {
   @scala.inline
-  def apply(
-    backgroundColor: BackgroundColorProperty = null,
-    backgroundRepeat: BackgroundRepeatProperty = null,
-    backgroundSize: BackgroundSizeProperty[String | Double] = null,
-    backgroundUrl: String = null,
-    direction: ltr | rtl = null,
-    fullWidth: js.UndefOr[Boolean] = js.undefined,
-    textAlign: TextAlignProperty = null,
-    verticalAlign: VerticalAlignProperty[String | Double] = null
-  ): MjmlSectionProps = {
+  def apply(): MjmlSectionProps = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (backgroundRepeat != null) __obj.updateDynamic("backgroundRepeat")(backgroundRepeat.asInstanceOf[js.Any])
-    if (backgroundSize != null) __obj.updateDynamic("backgroundSize")(backgroundSize.asInstanceOf[js.Any])
-    if (backgroundUrl != null) __obj.updateDynamic("backgroundUrl")(backgroundUrl.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullWidth)) __obj.updateDynamic("fullWidth")(fullWidth.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
     __obj.asInstanceOf[MjmlSectionProps]
   }
+  @scala.inline
+  implicit class MjmlSectionPropsOps[Self <: MjmlSectionProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: BackgroundColorProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundRepeat(value: BackgroundRepeatProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundRepeat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundRepeat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundRepeat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundSize(value: BackgroundSizeProperty[String | Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: ltr | rtl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextAlign(value: TextAlignProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalAlign(value: VerticalAlignProperty[String | Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

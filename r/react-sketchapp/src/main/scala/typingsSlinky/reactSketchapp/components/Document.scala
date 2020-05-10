@@ -1,17 +1,18 @@
 package typingsSlinky.reactSketchapp.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.reactSketchapp.mod.DocumentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Document
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactSketchapp.mod.Document] {
+object Document {
   @JSImport("react-sketchapp", "Document")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: DocumentProps): Default[tag.type, typingsSlinky.reactSketchapp.mod.Document] = new Default[tag.type, typingsSlinky.reactSketchapp.mod.Document](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Document.type): Default[tag.type, typingsSlinky.reactSketchapp.mod.Document] = new Default[tag.type, typingsSlinky.reactSketchapp.mod.Document](js.Array(this.component, js.Dictionary.empty))()
 }
 

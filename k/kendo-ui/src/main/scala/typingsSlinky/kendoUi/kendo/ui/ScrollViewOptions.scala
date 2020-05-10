@@ -5,54 +5,192 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ScrollViewOptions extends js.Object {
-  var autoBind: js.UndefOr[Boolean] = js.undefined
-  var bounceVelocityThreshold: js.UndefOr[Double] = js.undefined
-  var change: js.UndefOr[js.Function1[/* e */ ScrollViewChangeEvent, Unit]] = js.undefined
-  var contentHeight: js.UndefOr[Double | String] = js.undefined
-  var dataSource: js.UndefOr[DataSource | js.Any] = js.undefined
-  var duration: js.UndefOr[Double] = js.undefined
-  var emptyTemplate: js.UndefOr[String] = js.undefined
-  var enablePager: js.UndefOr[Boolean] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var page: js.UndefOr[Double] = js.undefined
-  var refresh: js.UndefOr[js.Function1[/* e */ ScrollViewRefreshEvent, Unit]] = js.undefined
-  var template: js.UndefOr[String] = js.undefined
-  var velocityThreshold: js.UndefOr[Double] = js.undefined
+  var autoBind: js.UndefOr[Boolean] = js.native
+  var bounceVelocityThreshold: js.UndefOr[Double] = js.native
+  var change: js.UndefOr[js.Function1[/* e */ ScrollViewChangeEvent, Unit]] = js.native
+  var contentHeight: js.UndefOr[Double | String] = js.native
+  var dataSource: js.UndefOr[DataSource | js.Any] = js.native
+  var duration: js.UndefOr[Double] = js.native
+  var emptyTemplate: js.UndefOr[String] = js.native
+  var enablePager: js.UndefOr[Boolean] = js.native
+  var name: js.UndefOr[String] = js.native
+  var page: js.UndefOr[Double] = js.native
+  var refresh: js.UndefOr[js.Function1[/* e */ ScrollViewRefreshEvent, Unit]] = js.native
+  var template: js.UndefOr[String] = js.native
+  var velocityThreshold: js.UndefOr[Double] = js.native
 }
 
 object ScrollViewOptions {
   @scala.inline
-  def apply(
-    autoBind: js.UndefOr[Boolean] = js.undefined,
-    bounceVelocityThreshold: Int | Double = null,
-    change: /* e */ ScrollViewChangeEvent => Unit = null,
-    contentHeight: Double | String = null,
-    dataSource: DataSource | js.Any = null,
-    duration: Int | Double = null,
-    emptyTemplate: String = null,
-    enablePager: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    page: Int | Double = null,
-    refresh: /* e */ ScrollViewRefreshEvent => Unit = null,
-    template: String = null,
-    velocityThreshold: Int | Double = null
-  ): ScrollViewOptions = {
+  def apply(): ScrollViewOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoBind)) __obj.updateDynamic("autoBind")(autoBind.asInstanceOf[js.Any])
-    if (bounceVelocityThreshold != null) __obj.updateDynamic("bounceVelocityThreshold")(bounceVelocityThreshold.asInstanceOf[js.Any])
-    if (change != null) __obj.updateDynamic("change")(js.Any.fromFunction1(change))
-    if (contentHeight != null) __obj.updateDynamic("contentHeight")(contentHeight.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (emptyTemplate != null) __obj.updateDynamic("emptyTemplate")(emptyTemplate.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablePager)) __obj.updateDynamic("enablePager")(enablePager.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (refresh != null) __obj.updateDynamic("refresh")(js.Any.fromFunction1(refresh))
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (velocityThreshold != null) __obj.updateDynamic("velocityThreshold")(velocityThreshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScrollViewOptions]
   }
+  @scala.inline
+  implicit class ScrollViewOptionsOps[Self <: ScrollViewOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoBind(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoBind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoBind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBounceVelocityThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounceVelocityThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounceVelocityThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounceVelocityThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChange(value: /* e */ ScrollViewChangeEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: DataSource | js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmptyTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmptyTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnablePager(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePager")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablePager: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePager")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefresh(value: /* e */ ScrollViewRefreshEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRefresh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVelocityThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("velocityThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVelocityThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("velocityThreshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

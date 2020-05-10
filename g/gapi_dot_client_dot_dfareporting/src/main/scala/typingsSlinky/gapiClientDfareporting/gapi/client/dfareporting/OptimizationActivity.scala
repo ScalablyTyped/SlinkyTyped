@@ -4,30 +4,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OptimizationActivity extends js.Object {
   /** Floodlight activity ID of this optimization activity. This is a required field. */
-  var floodlightActivityId: js.UndefOr[String] = js.undefined
+  var floodlightActivityId: js.UndefOr[String] = js.native
   /** Dimension value for the ID of the floodlight activity. This is a read-only, auto-generated field. */
-  var floodlightActivityIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
+  var floodlightActivityIdDimensionValue: js.UndefOr[DimensionValue] = js.native
   /**
     * Weight associated with this optimization. The weight assigned will be understood in proportion to the weights assigned to the other optimization
     * activities. Value must be greater than or equal to 1.
     */
-  var weight: js.UndefOr[Double] = js.undefined
+  var weight: js.UndefOr[Double] = js.native
 }
 
 object OptimizationActivity {
   @scala.inline
-  def apply(
-    floodlightActivityId: String = null,
-    floodlightActivityIdDimensionValue: DimensionValue = null,
-    weight: Int | Double = null
-  ): OptimizationActivity = {
+  def apply(): OptimizationActivity = {
     val __obj = js.Dynamic.literal()
-    if (floodlightActivityId != null) __obj.updateDynamic("floodlightActivityId")(floodlightActivityId.asInstanceOf[js.Any])
-    if (floodlightActivityIdDimensionValue != null) __obj.updateDynamic("floodlightActivityIdDimensionValue")(floodlightActivityIdDimensionValue.asInstanceOf[js.Any])
-    if (weight != null) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptimizationActivity]
   }
+  @scala.inline
+  implicit class OptimizationActivityOps[Self <: OptimizationActivity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFloodlightActivityId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightActivityId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightActivityIdDimensionValue(value: DimensionValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityIdDimensionValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightActivityIdDimensionValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityIdDimensionValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

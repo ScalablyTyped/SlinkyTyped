@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type Validate = js.Function3[
-    /* request */ typingsSlinky.hapi.mod.Request, 
+    /* request */ typingsSlinky.hapiHapi.mod.Request, 
     /* token */ java.lang.String, 
-    /* h */ typingsSlinky.hapi.mod.ResponseToolkit, 
+    /* h */ typingsSlinky.hapiHapi.mod.ResponseToolkit, 
     js.Promise[typingsSlinky.hapiAuthBearerToken.mod.ValidateReturn] | typingsSlinky.hapiAuthBearerToken.mod.ValidateReturn
   ]
 }

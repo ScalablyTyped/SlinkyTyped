@@ -15,10 +15,29 @@ trait SchemaRegionInstanceGroupManagersSetTemplateRequest extends js.Object {
 
 object SchemaRegionInstanceGroupManagersSetTemplateRequest {
   @scala.inline
-  def apply(instanceTemplate: String = null): SchemaRegionInstanceGroupManagersSetTemplateRequest = {
+  def apply(): SchemaRegionInstanceGroupManagersSetTemplateRequest = {
     val __obj = js.Dynamic.literal()
-    if (instanceTemplate != null) __obj.updateDynamic("instanceTemplate")(instanceTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegionInstanceGroupManagersSetTemplateRequest]
   }
+  @scala.inline
+  implicit class SchemaRegionInstanceGroupManagersSetTemplateRequestOps[Self <: SchemaRegionInstanceGroupManagersSetTemplateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceTemplate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

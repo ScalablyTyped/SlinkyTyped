@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkClientDynamodbBrowser
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientDynamodbBrowser.dynamoDBConfigurationMod.DynamoDBResolvedConfiguration
 import typingsSlinky.awsSdkClientDynamodbBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.outputTypesUnionMod.OutputTypesUnion
@@ -8,7 +9,6 @@ import typingsSlinky.awsSdkClientDynamodbBrowser.typesCreateBackupOutputMod.Crea
 import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +26,9 @@ object createBackupCommandMod extends js.Object {
           Blob
         ] {
     def this(input: CreateBackupInput) = this()
-    /* CompleteClass */
-    override val input: CreateBackupInput = js.native
-    val middlewareStack: MiddlewareStack[CreateBackupInput, CreateBackupOutput, org.scalajs.dom.raw.Blob] = js.native
+    val middlewareStack: MiddlewareStack[CreateBackupInput, CreateBackupOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
-      configuration: DynamoDBResolvedConfiguration
-    ): Handler[CreateBackupInput, CreateBackupOutput] = js.native
-    /* CompleteClass */
-    override def resolveMiddleware(
-      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[CreateBackupInput, CreateBackupOutput] = js.native
   }

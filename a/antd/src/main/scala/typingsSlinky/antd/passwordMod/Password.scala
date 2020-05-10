@@ -2,6 +2,8 @@ package typingsSlinky.antd.passwordMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLSpanElement
+import slinky.core.facade.ReactElement
+import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.FunctionComponentElement
 import typingsSlinky.react.mod.RefAttributes
@@ -15,10 +17,11 @@ trait Password
   var input: HTMLInputElement = js.native
   def blur(): Unit = js.native
   def focus(): Unit = js.native
-  def getIcon(): FunctionComponentElement[
+  def getIcon(prefixCls: String): FunctionComponentElement[
     (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_AntdIcon.AntdIconProps */ js.Any) with RefAttributes[HTMLSpanElement]
   ] = js.native
   def onVisibleChange(): Unit = js.native
+  def renderPassword(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
   def saveInput(instance: typingsSlinky.antd.inputInputMod.default): Unit = js.native
   def select(): Unit = js.native
 }

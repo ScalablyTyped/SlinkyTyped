@@ -4,20 +4,63 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBuckets extends js.Object {
-  var buckets: Double
-  var granularity: js.UndefOr[js.Any] = js.undefined
-  var groupBy: js.Any
-  var output: js.UndefOr[js.Object] = js.undefined
+  var buckets: Double = js.native
+  var granularity: js.UndefOr[js.Any] = js.native
+  var groupBy: js.Any = js.native
+  var output: js.UndefOr[js.Object] = js.native
 }
 
 object AnonBuckets {
   @scala.inline
-  def apply(buckets: Double, groupBy: js.Any, granularity: js.Any = null, output: js.Object = null): AnonBuckets = {
+  def apply(buckets: Double, groupBy: js.Any): AnonBuckets = {
     val __obj = js.Dynamic.literal(buckets = buckets.asInstanceOf[js.Any], groupBy = groupBy.asInstanceOf[js.Any])
-    if (granularity != null) __obj.updateDynamic("granularity")(granularity.asInstanceOf[js.Any])
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBuckets]
   }
+  @scala.inline
+  implicit class AnonBucketsOps[Self <: AnonBuckets] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuckets(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buckets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupBy(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGranularity(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGranularity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutput(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

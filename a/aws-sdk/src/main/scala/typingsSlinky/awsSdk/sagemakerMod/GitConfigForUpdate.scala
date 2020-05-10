@@ -14,10 +14,29 @@ trait GitConfigForUpdate extends js.Object {
 
 object GitConfigForUpdate {
   @scala.inline
-  def apply(SecretArn: SecretArn = null): GitConfigForUpdate = {
+  def apply(): GitConfigForUpdate = {
     val __obj = js.Dynamic.literal()
-    if (SecretArn != null) __obj.updateDynamic("SecretArn")(SecretArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[GitConfigForUpdate]
   }
+  @scala.inline
+  implicit class GitConfigForUpdateOps[Self <: GitConfigForUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSecretArn(value: SecretArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

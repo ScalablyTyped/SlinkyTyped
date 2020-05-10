@@ -32,50 +32,48 @@ trait ChipClassKey extends js.Object
 
 object ChipClassKey {
   @scala.inline
-  def avatar: typingsSlinky.materialUiCore.materialUiCoreStrings.avatar = this.cast("avatar")
+  def avatar: typingsSlinky.materialUiCore.materialUiCoreStrings.avatar = "avatar".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.avatar]
   @scala.inline
-  def avatarChildren: typingsSlinky.materialUiCore.materialUiCoreStrings.avatarChildren = this.cast("avatarChildren")
+  def avatarChildren: typingsSlinky.materialUiCore.materialUiCoreStrings.avatarChildren = "avatarChildren".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.avatarChildren]
   @scala.inline
-  def avatarPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.avatarPrimary = this.cast("avatarPrimary")
+  def avatarPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.avatarPrimary = "avatarPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.avatarPrimary]
   @scala.inline
-  def avatarSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.avatarSecondary = this.cast("avatarSecondary")
+  def avatarSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.avatarSecondary = "avatarSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.avatarSecondary]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clickable: typingsSlinky.materialUiCore.materialUiCoreStrings.clickable = "clickable".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.clickable]
   @scala.inline
-  def clickable: typingsSlinky.materialUiCore.materialUiCoreStrings.clickable = this.cast("clickable")
+  def clickablePrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.clickablePrimary = "clickablePrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.clickablePrimary]
   @scala.inline
-  def clickablePrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.clickablePrimary = this.cast("clickablePrimary")
+  def clickableSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.clickableSecondary = "clickableSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.clickableSecondary]
   @scala.inline
-  def clickableSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.clickableSecondary = this.cast("clickableSecondary")
+  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = "colorPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary]
   @scala.inline
-  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = this.cast("colorPrimary")
+  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = "colorSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary]
   @scala.inline
-  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = this.cast("colorSecondary")
+  def deletable: typingsSlinky.materialUiCore.materialUiCoreStrings.deletable = "deletable".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.deletable]
   @scala.inline
-  def deletable: typingsSlinky.materialUiCore.materialUiCoreStrings.deletable = this.cast("deletable")
+  def deletablePrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.deletablePrimary = "deletablePrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.deletablePrimary]
   @scala.inline
-  def deletablePrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.deletablePrimary = this.cast("deletablePrimary")
+  def deletableSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.deletableSecondary = "deletableSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.deletableSecondary]
   @scala.inline
-  def deletableSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.deletableSecondary = this.cast("deletableSecondary")
+  def deleteIcon: typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIcon = "deleteIcon".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIcon]
   @scala.inline
-  def deleteIcon: typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIcon = this.cast("deleteIcon")
+  def deleteIconOutlinedColorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconOutlinedColorPrimary = "deleteIconOutlinedColorPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconOutlinedColorPrimary]
   @scala.inline
-  def deleteIconOutlinedColorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconOutlinedColorPrimary = this.cast("deleteIconOutlinedColorPrimary")
+  def deleteIconOutlinedColorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconOutlinedColorSecondary = "deleteIconOutlinedColorSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconOutlinedColorSecondary]
   @scala.inline
-  def deleteIconOutlinedColorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconOutlinedColorSecondary = this.cast("deleteIconOutlinedColorSecondary")
+  def deleteIconPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconPrimary = "deleteIconPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconPrimary]
   @scala.inline
-  def deleteIconPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconPrimary = this.cast("deleteIconPrimary")
+  def deleteIconSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconSecondary = "deleteIconSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconSecondary]
   @scala.inline
-  def deleteIconSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.deleteIconSecondary = this.cast("deleteIconSecondary")
+  def label: typingsSlinky.materialUiCore.materialUiCoreStrings.label = "label".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.label]
   @scala.inline
-  def label: typingsSlinky.materialUiCore.materialUiCoreStrings.label = this.cast("label")
+  def outlined: typingsSlinky.materialUiCore.materialUiCoreStrings.outlined = "outlined".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.outlined]
   @scala.inline
-  def outlined: typingsSlinky.materialUiCore.materialUiCoreStrings.outlined = this.cast("outlined")
+  def outlinedPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.outlinedPrimary = "outlinedPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.outlinedPrimary]
   @scala.inline
-  def outlinedPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.outlinedPrimary = this.cast("outlinedPrimary")
+  def outlinedSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.outlinedSecondary = "outlinedSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.outlinedSecondary]
   @scala.inline
-  def outlinedSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.outlinedSecondary = this.cast("outlinedSecondary")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

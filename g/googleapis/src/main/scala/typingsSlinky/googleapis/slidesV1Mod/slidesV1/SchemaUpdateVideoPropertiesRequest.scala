@@ -31,12 +31,53 @@ trait SchemaUpdateVideoPropertiesRequest extends js.Object {
 
 object SchemaUpdateVideoPropertiesRequest {
   @scala.inline
-  def apply(fields: String = null, objectId: String = null, videoProperties: SchemaVideoProperties = null): SchemaUpdateVideoPropertiesRequest = {
+  def apply(): SchemaUpdateVideoPropertiesRequest = {
     val __obj = js.Dynamic.literal()
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
-    if (videoProperties != null) __obj.updateDynamic("videoProperties")(videoProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateVideoPropertiesRequest]
   }
+  @scala.inline
+  implicit class SchemaUpdateVideoPropertiesRequestOps[Self <: SchemaUpdateVideoPropertiesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFields(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoProperties(value: SchemaVideoProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoProperties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

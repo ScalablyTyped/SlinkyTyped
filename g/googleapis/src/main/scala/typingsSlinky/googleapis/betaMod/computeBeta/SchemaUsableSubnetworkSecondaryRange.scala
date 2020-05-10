@@ -24,11 +24,41 @@ trait SchemaUsableSubnetworkSecondaryRange extends js.Object {
 
 object SchemaUsableSubnetworkSecondaryRange {
   @scala.inline
-  def apply(ipCidrRange: String = null, rangeName: String = null): SchemaUsableSubnetworkSecondaryRange = {
+  def apply(): SchemaUsableSubnetworkSecondaryRange = {
     val __obj = js.Dynamic.literal()
-    if (ipCidrRange != null) __obj.updateDynamic("ipCidrRange")(ipCidrRange.asInstanceOf[js.Any])
-    if (rangeName != null) __obj.updateDynamic("rangeName")(rangeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUsableSubnetworkSecondaryRange]
   }
+  @scala.inline
+  implicit class SchemaUsableSubnetworkSecondaryRangeOps[Self <: SchemaUsableSubnetworkSecondaryRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIpCidrRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipCidrRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpCidrRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipCidrRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

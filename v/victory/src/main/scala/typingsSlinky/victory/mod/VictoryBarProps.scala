@@ -1,10 +1,6 @@
 package typingsSlinky.victory.mod
 
-import slinky.core.facade.ReactElement
-import typingsSlinky.victory.Anon1
 import typingsSlinky.victory.AnonBottom
-import typingsSlinky.victory.AnonXBoolean
-import typingsSlinky.victory.AnonY
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.end
 import typingsSlinky.victory.victoryStrings.labels
@@ -15,6 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VictoryBarProps
   extends VictoryMultiLabeableProps
      with VictoryCommonProps
@@ -24,14 +21,14 @@ trait VictoryBarProps
     * This prop may be given as “start”, “middle” or “end”. When this prop is not specified,
     * bars will have “middle” alignment relative to their data points.
     */
-  var alignment: js.UndefOr[start | middle | end] = js.undefined
+  var alignment: js.UndefOr[start | middle | end] = js.native
   /**
     * The barRatio prop specifies an approximate ratio between bar widths and spaces between bars.
     * When width is not specified via the barWidth prop or in bar styles, the barRatio prop will
     * be used to calculate a default width for each bar given the total number of bars in the data series
     * and the overall width of the chart.
     */
-  var barRatio: js.UndefOr[Double] = js.undefined
+  var barRatio: js.UndefOr[Double] = js.native
   /**
     * The barWidth prop is used to specify the width of each bar. This prop may be given as
     * a number of pixels or as a function that returns a number. When this prop is given as
@@ -39,18 +36,18 @@ trait VictoryBarProps
     * is not given, a default value will be calculated based on the overall dimensions of
     * the chart, and the number of bars.
     */
-  var barWidth: js.UndefOr[NumberOrCallback] = js.undefined
+  var barWidth: js.UndefOr[NumberOrCallback] = js.native
   /**
     * The cornerRadius prop specifies a radius to apply to each bar.
     * If this prop is given as a single number, the radius will only be applied to the top of each bar.
     * When this prop is given as a function, it will be evaluated with the arguments datum, and active.
     */
-  var cornerRadius: js.UndefOr[NumberOrCallback | AnonBottom] = js.undefined
+  var cornerRadius: js.UndefOr[NumberOrCallback | AnonBottom] = js.native
   /**
     * Similar to data accessor props `x` and `y`, this prop may be used to functionally
     * assign eventKeys to data
     */
-  var eventKey: js.UndefOr[StringOrNumberOrCallback] = js.undefined
+  var eventKey: js.UndefOr[StringOrNumberOrCallback] = js.native
   /**
     * The event prop take an array of event objects. Event objects are composed of
     * a target, an eventKey, and eventHandlers. Targets may be any valid style namespace
@@ -91,7 +88,7 @@ trait VictoryBarProps
     *   }
     * ]}
     */
-  var events: js.UndefOr[js.Array[EventPropTypeInterface[data | labels | parent, Double | String]]] = js.undefined
+  var events: js.UndefOr[js.Array[EventPropTypeInterface[data | labels | parent, Double | String]]] = js.native
   /**
     * The style prop specifies styles for your VictoryBar. Any valid inline style properties
     * will be applied. Height, width, and padding should be specified via the height,
@@ -101,75 +98,124 @@ trait VictoryBarProps
     * VictoryLabel, or any custom labelComponent.
     * @example {data: {fill: "red", width: 8}, labels: {fontSize: 12}}
     */
-  var style: js.UndefOr[VictoryStyleInterface] = js.undefined
+  var style: js.UndefOr[VictoryStyleInterface] = js.native
 }
 
 object VictoryBarProps {
   @scala.inline
-  def apply(
-    alignment: start | middle | end = null,
-    animate: Boolean | AnimatePropTypeInterface = null,
-    barRatio: Int | Double = null,
-    barWidth: NumberOrCallback = null,
-    categories: CategoryPropType = null,
-    containerComponent: ReactElement = null,
-    cornerRadius: NumberOrCallback | AnonBottom = null,
-    data: js.Array[_] = null,
-    dataComponent: ReactElement = null,
-    domain: DomainPropType = null,
-    eventKey: StringOrNumberOrCallback = null,
-    events: js.Array[EventPropTypeInterface[data | labels | parent, Double | String]] = null,
-    groupComponent: ReactElement = null,
-    height: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    labelComponent: ReactElement = null,
-    labels: js.Array[String] | (js.Function1[/* data */ js.Any, String]) = null,
-    maxDomain: Double | AnonY = null,
-    minDomain: Double | AnonY = null,
-    name: String = null,
-    padding: PaddingProps = null,
-    scale: ScalePropType | D3Scale | Anon1 = null,
-    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
-    standalone: js.UndefOr[Boolean] = js.undefined,
-    style: VictoryStyleInterface = null,
-    theme: VictoryThemeDefinition = null,
-    width: Int | Double = null,
-    x: DataGetterPropType = null,
-    y: DataGetterPropType = null,
-    y0: DataGetterPropType = null
-  ): VictoryBarProps = {
+  def apply(): VictoryBarProps = {
     val __obj = js.Dynamic.literal()
-    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
-    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (barRatio != null) __obj.updateDynamic("barRatio")(barRatio.asInstanceOf[js.Any])
-    if (barWidth != null) __obj.updateDynamic("barWidth")(barWidth.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
-    if (cornerRadius != null) __obj.updateDynamic("cornerRadius")(cornerRadius.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataComponent != null) __obj.updateDynamic("dataComponent")(dataComponent.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
-    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
-    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (y0 != null) __obj.updateDynamic("y0")(y0.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryBarProps]
   }
+  @scala.inline
+  implicit class VictoryBarPropsOps[Self <: VictoryBarProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignment(value: start | middle | end): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarWidthFunction1(value: /* args */ CallbackArgs => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBarWidth(value: NumberOrCallback): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCornerRadiusFunction1(value: /* args */ CallbackArgs => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCornerRadius(value: NumberOrCallback | AnonBottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCornerRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventKeyFunction1(value: /* args */ CallbackArgs => String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEventKey(value: StringOrNumberOrCallback): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: js.Array[EventPropTypeInterface[data | labels | parent, Double | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: VictoryStyleInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

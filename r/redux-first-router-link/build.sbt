@@ -1,20 +1,20 @@
 organization := "org.scalablytyped.slinky"
 name := "redux-first-router-link"
-version := "1.4-dt-20180806Z-834735"
+version := "1.4-dt-20180806Z-b44e31"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-89abae",
-  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20200226Z-86a01d",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-6bb503",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200227Z-f18fda",
-  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-9d78fe",
-  "org.scalablytyped.slinky" %%% "redux-first-router" % "2.1-dt-20200225Z-ea1d43",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-fa3762",
+  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20200226Z-2bae32",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-24495c",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-47fb9f",
+  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-e999f1",
+  "org.scalablytyped.slinky" %%% "redux-first-router" % "2.1-dt-20200225Z-84e62d",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

@@ -38,16 +38,53 @@ trait SchemaInstanceGroupManagerAutoHealingPolicy extends js.Object {
 
 object SchemaInstanceGroupManagerAutoHealingPolicy {
   @scala.inline
-  def apply(
-    healthCheck: String = null,
-    initialDelaySec: Int | Double = null,
-    maxUnavailable: SchemaFixedOrPercent = null
-  ): SchemaInstanceGroupManagerAutoHealingPolicy = {
+  def apply(): SchemaInstanceGroupManagerAutoHealingPolicy = {
     val __obj = js.Dynamic.literal()
-    if (healthCheck != null) __obj.updateDynamic("healthCheck")(healthCheck.asInstanceOf[js.Any])
-    if (initialDelaySec != null) __obj.updateDynamic("initialDelaySec")(initialDelaySec.asInstanceOf[js.Any])
-    if (maxUnavailable != null) __obj.updateDynamic("maxUnavailable")(maxUnavailable.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupManagerAutoHealingPolicy]
   }
+  @scala.inline
+  implicit class SchemaInstanceGroupManagerAutoHealingPolicyOps[Self <: SchemaInstanceGroupManagerAutoHealingPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHealthCheck(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("healthCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialDelaySec(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDelaySec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialDelaySec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDelaySec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxUnavailable(value: SchemaFixedOrPercent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUnavailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxUnavailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUnavailable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

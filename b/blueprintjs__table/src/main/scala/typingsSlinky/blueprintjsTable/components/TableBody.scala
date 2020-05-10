@@ -1,12 +1,10 @@
 package typingsSlinky.blueprintjsTable.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.commonCellMod.IFocusedCellCoordinates
 import typingsSlinky.blueprintjsTable.draggableMod.ICoordinateData
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
@@ -21,14 +19,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableBody
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsTable.tableBodyMod.TableBody] {
+object TableBody {
   @JSImport("@blueprintjs/table/lib/esm/tableBody", "TableBody")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.tableBodyMod.TableBody] {
+    @scala.inline
+    def bodyContextMenuRenderer(value: /* context */ IMenuContext => ReactElement): this.type = set("bodyContextMenuRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableMultipleSelection(value: Boolean): this.type = set("enableMultipleSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusedCell(value: IFocusedCellCoordinates): this.type = set("focusedCell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numFrozenColumns(value: Double): this.type = set("numFrozenColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numFrozenRows(value: Double): this.type = set("numFrozenRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCompleteRender(value: () => Unit): this.type = set("onCompleteRender", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSelectionEnd(value: /* regions */ js.Array[IRegion] => Unit): this.type = set("onSelectionEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderMode(value: BATCH | NONE): this.type = set("renderMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedRegionTransform(
+      value: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion
+    ): this.type = set("selectedRegionTransform", js.Any.fromFunction3(value))
+    @scala.inline
+    def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: ITableBodyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     cellRenderer: (/* rowIndex */ Double, /* columnIndex */ Double) => ReactElement,
     columnIndexEnd: Double,
@@ -40,33 +67,10 @@ object TableBody
     onSelection: js.Array[IRegion] => Unit,
     rowIndexEnd: Double,
     rowIndexStart: Double,
-    viewportRect: Rect,
-    bodyContextMenuRenderer: /* context */ IMenuContext => ReactElement = null,
-    enableMultipleSelection: js.UndefOr[Boolean] = js.undefined,
-    focusedCell: IFocusedCellCoordinates = null,
-    numFrozenColumns: Int | Double = null,
-    numFrozenRows: Int | Double = null,
-    onCompleteRender: () => Unit = null,
-    onSelectionEnd: /* regions */ js.Array[IRegion] => Unit = null,
-    renderMode: BATCH | NONE = null,
-    selectedRegionTransform: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion = null,
-    selectedRegions: js.Array[IRegion] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.tableBodyMod.TableBody] = {
-    val __obj = js.Dynamic.literal(cellRenderer = js.Any.fromFunction2(cellRenderer), columnIndexEnd = columnIndexEnd.asInstanceOf[js.Any], columnIndexStart = columnIndexStart.asInstanceOf[js.Any], grid = grid.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any], locator = locator.asInstanceOf[js.Any], onFocusedCell = js.Any.fromFunction1(onFocusedCell), onSelection = js.Any.fromFunction1(onSelection), rowIndexEnd = rowIndexEnd.asInstanceOf[js.Any], rowIndexStart = rowIndexStart.asInstanceOf[js.Any], viewportRect = viewportRect.asInstanceOf[js.Any])
-    if (bodyContextMenuRenderer != null) __obj.updateDynamic("bodyContextMenuRenderer")(js.Any.fromFunction1(bodyContextMenuRenderer))
-    if (!js.isUndefined(enableMultipleSelection)) __obj.updateDynamic("enableMultipleSelection")(enableMultipleSelection.asInstanceOf[js.Any])
-    if (focusedCell != null) __obj.updateDynamic("focusedCell")(focusedCell.asInstanceOf[js.Any])
-    if (numFrozenColumns != null) __obj.updateDynamic("numFrozenColumns")(numFrozenColumns.asInstanceOf[js.Any])
-    if (numFrozenRows != null) __obj.updateDynamic("numFrozenRows")(numFrozenRows.asInstanceOf[js.Any])
-    if (onCompleteRender != null) __obj.updateDynamic("onCompleteRender")(js.Any.fromFunction0(onCompleteRender))
-    if (onSelectionEnd != null) __obj.updateDynamic("onSelectionEnd")(js.Any.fromFunction1(onSelectionEnd))
-    if (renderMode != null) __obj.updateDynamic("renderMode")(renderMode.asInstanceOf[js.Any])
-    if (selectedRegionTransform != null) __obj.updateDynamic("selectedRegionTransform")(js.Any.fromFunction3(selectedRegionTransform))
-    if (selectedRegions != null) __obj.updateDynamic("selectedRegions")(selectedRegions.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    viewportRect: Rect
+  ): Builder = {
+    val __props = js.Dynamic.literal(cellRenderer = js.Any.fromFunction2(cellRenderer), columnIndexEnd = columnIndexEnd.asInstanceOf[js.Any], columnIndexStart = columnIndexStart.asInstanceOf[js.Any], grid = grid.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any], locator = locator.asInstanceOf[js.Any], onFocusedCell = js.Any.fromFunction1(onFocusedCell), onSelection = js.Any.fromFunction1(onSelection), rowIndexEnd = rowIndexEnd.asInstanceOf[js.Any], rowIndexStart = rowIndexStart.asInstanceOf[js.Any], viewportRect = viewportRect.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITableBodyProps]))
   }
-  type Props = ITableBodyProps
 }
 

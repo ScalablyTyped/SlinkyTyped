@@ -17,8 +17,8 @@ object mod extends js.Object {
   
   @js.native
   object default
-    extends Instantiable0[DOMTokenList]
-       with Instantiable1[/* initialValue */ String, DOMTokenList]
+    extends Instantiable0[org.scalajs.dom.raw.DOMTokenList]
+       with Instantiable1[/* initialValue */ String, org.scalajs.dom.raw.DOMTokenList]
   
 }
 

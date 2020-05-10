@@ -22,12 +22,53 @@ trait ConfigurationRecorder extends js.Object {
 
 object ConfigurationRecorder {
   @scala.inline
-  def apply(name: RecorderName = null, recordingGroup: RecordingGroup = null, roleARN: String = null): ConfigurationRecorder = {
+  def apply(): ConfigurationRecorder = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (recordingGroup != null) __obj.updateDynamic("recordingGroup")(recordingGroup.asInstanceOf[js.Any])
-    if (roleARN != null) __obj.updateDynamic("roleARN")(roleARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationRecorder]
   }
+  @scala.inline
+  implicit class ConfigurationRecorderOps[Self <: ConfigurationRecorder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: RecorderName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordingGroup(value: RecordingGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordingGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordingGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordingGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleARN(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

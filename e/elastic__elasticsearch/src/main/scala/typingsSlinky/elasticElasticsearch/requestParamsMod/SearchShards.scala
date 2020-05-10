@@ -8,50 +8,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SearchShards extends Generic {
-  var allow_no_indices: js.UndefOr[Boolean] = js.undefined
-  var expand_wildcards: js.UndefOr[open | closed | none | all] = js.undefined
-  var ignore_unavailable: js.UndefOr[Boolean] = js.undefined
-  var index: js.UndefOr[String | js.Array[String]] = js.undefined
-  var local: js.UndefOr[Boolean] = js.undefined
-  var preference: js.UndefOr[String] = js.undefined
-  var routing: js.UndefOr[String] = js.undefined
+  var allow_no_indices: js.UndefOr[Boolean] = js.native
+  var expand_wildcards: js.UndefOr[open | closed | none | all] = js.native
+  var ignore_unavailable: js.UndefOr[Boolean] = js.native
+  var index: js.UndefOr[String | js.Array[String]] = js.native
+  var local: js.UndefOr[Boolean] = js.native
+  var preference: js.UndefOr[String] = js.native
+  var routing: js.UndefOr[String] = js.native
 }
 
 object SearchShards {
   @scala.inline
-  def apply(
-    allow_no_indices: js.UndefOr[Boolean] = js.undefined,
-    error_trace: js.UndefOr[Boolean] = js.undefined,
-    expand_wildcards: open | closed | none | all = null,
-    filter_path: String | js.Array[String] = null,
-    human: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    ignore_unavailable: js.UndefOr[Boolean] = js.undefined,
-    index: String | js.Array[String] = null,
-    local: js.UndefOr[Boolean] = js.undefined,
-    method: String = null,
-    preference: String = null,
-    pretty: js.UndefOr[Boolean] = js.undefined,
-    routing: String = null,
-    source: String = null
-  ): SearchShards = {
+  def apply(): SearchShards = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allow_no_indices)) __obj.updateDynamic("allow_no_indices")(allow_no_indices.asInstanceOf[js.Any])
-    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.asInstanceOf[js.Any])
-    if (expand_wildcards != null) __obj.updateDynamic("expand_wildcards")(expand_wildcards.asInstanceOf[js.Any])
-    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
-    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignore_unavailable)) __obj.updateDynamic("ignore_unavailable")(ignore_unavailable.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (!js.isUndefined(local)) __obj.updateDynamic("local")(local.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (preference != null) __obj.updateDynamic("preference")(preference.asInstanceOf[js.Any])
-    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
-    if (routing != null) __obj.updateDynamic("routing")(routing.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchShards]
   }
+  @scala.inline
+  implicit class SearchShardsOps[Self <: SearchShards] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllow_no_indices(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_indices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllow_no_indices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_indices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpand_wildcards(value: open | closed | none | all): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_wildcards")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpand_wildcards: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_wildcards")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnore_unavailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_unavailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnore_unavailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_unavailable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRouting(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRouting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

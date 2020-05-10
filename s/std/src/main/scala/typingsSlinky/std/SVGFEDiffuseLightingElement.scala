@@ -49,11 +49,12 @@ trait SVGFEDiffuseLightingElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFEDiffuseLightingElement")
 @js.native
-object SVGFEDiffuseLightingElement extends Instantiable0[SVGFEDiffuseLightingElement]
+object SVGFEDiffuseLightingElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEDiffuseLightingElement]
 

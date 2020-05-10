@@ -1,7 +1,6 @@
 package typingsSlinky.rxLiteTime
 
 import typingsSlinky.rxCore.Rx.IScheduler
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,8 +25,8 @@ object Rx extends js.Object {
     def skipLastWithTime(duration: Double, scheduler: IScheduler): Observable[T] = js.native
     def skipUntilWithTime(duration: Double): Observable[T] = js.native
     def skipUntilWithTime(duration: Double, scheduler: IScheduler): Observable[T] = js.native
-    def skipUntilWithTime(startTime: Date): Observable[T] = js.native
-    def skipUntilWithTime(startTime: Date, scheduler: IScheduler): Observable[T] = js.native
+    def skipUntilWithTime(startTime: js.Date): Observable[T] = js.native
+    def skipUntilWithTime(startTime: js.Date, scheduler: IScheduler): Observable[T] = js.native
     def skipWithTime(duration: Double): Observable[T] = js.native
     def skipWithTime(duration: Double, scheduler: IScheduler): Observable[T] = js.native
     def takeLastBufferWithTime(duration: Double): Observable[js.Array[T]] = js.native
@@ -37,8 +36,8 @@ object Rx extends js.Object {
     def takeLastWithTime(duration: Double, timerScheduler: IScheduler, loopScheduler: IScheduler): Observable[T] = js.native
     def takeUntilWithTime(duration: Double): Observable[T] = js.native
     def takeUntilWithTime(duration: Double, scheduler: IScheduler): Observable[T] = js.native
-    def takeUntilWithTime(endTime: Date): Observable[T] = js.native
-    def takeUntilWithTime(endTime: Date, scheduler: IScheduler): Observable[T] = js.native
+    def takeUntilWithTime(endTime: js.Date): Observable[T] = js.native
+    def takeUntilWithTime(endTime: js.Date, scheduler: IScheduler): Observable[T] = js.native
     def takeWithTime(duration: Double): Observable[T] = js.native
     def takeWithTime(duration: Double, scheduler: IScheduler): Observable[T] = js.native
     /**

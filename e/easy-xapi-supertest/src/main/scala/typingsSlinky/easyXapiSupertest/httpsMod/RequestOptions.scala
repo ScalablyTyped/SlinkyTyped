@@ -4,60 +4,218 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RequestOptions extends js.Object {
-  var agent: js.UndefOr[js.Any] = js.undefined
-  var auth: js.UndefOr[String] = js.undefined
-  var ca: js.UndefOr[js.Any] = js.undefined
-  var cert: js.UndefOr[js.Any] = js.undefined
-  var ciphers: js.UndefOr[String] = js.undefined
-  var headers: js.UndefOr[js.Any] = js.undefined
-  var host: js.UndefOr[String] = js.undefined
-  var hostname: js.UndefOr[String] = js.undefined
-  var key: js.UndefOr[js.Any] = js.undefined
-  var method: js.UndefOr[String] = js.undefined
-  var passphrase: js.UndefOr[String] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var pfx: js.UndefOr[js.Any] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
-  var rejectUnauthorized: js.UndefOr[Boolean] = js.undefined
+  var agent: js.UndefOr[js.Any] = js.native
+  var auth: js.UndefOr[String] = js.native
+  var ca: js.UndefOr[js.Any] = js.native
+  var cert: js.UndefOr[js.Any] = js.native
+  var ciphers: js.UndefOr[String] = js.native
+  var headers: js.UndefOr[js.Any] = js.native
+  var host: js.UndefOr[String] = js.native
+  var hostname: js.UndefOr[String] = js.native
+  var key: js.UndefOr[js.Any] = js.native
+  var method: js.UndefOr[String] = js.native
+  var passphrase: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.native
+  var pfx: js.UndefOr[js.Any] = js.native
+  var port: js.UndefOr[Double] = js.native
+  var rejectUnauthorized: js.UndefOr[Boolean] = js.native
 }
 
 object RequestOptions {
   @scala.inline
-  def apply(
-    agent: js.Any = null,
-    auth: String = null,
-    ca: js.Any = null,
-    cert: js.Any = null,
-    ciphers: String = null,
-    headers: js.Any = null,
-    host: String = null,
-    hostname: String = null,
-    key: js.Any = null,
-    method: String = null,
-    passphrase: String = null,
-    path: String = null,
-    pfx: js.Any = null,
-    port: Int | Double = null,
-    rejectUnauthorized: js.UndefOr[Boolean] = js.undefined
-  ): RequestOptions = {
+  def apply(): RequestOptions = {
     val __obj = js.Dynamic.literal()
-    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (ca != null) __obj.updateDynamic("ca")(ca.asInstanceOf[js.Any])
-    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
-    if (ciphers != null) __obj.updateDynamic("ciphers")(ciphers.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (passphrase != null) __obj.updateDynamic("passphrase")(passphrase.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestOptions]
   }
+  @scala.inline
+  implicit class RequestOptionsOps[Self <: RequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCa(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ca")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCa: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ca")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCert(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCiphers(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ciphers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCiphers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ciphers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassphrase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passphrase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassphrase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passphrase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPfx(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pfx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPfx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pfx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRejectUnauthorized(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectUnauthorized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRejectUnauthorized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectUnauthorized")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

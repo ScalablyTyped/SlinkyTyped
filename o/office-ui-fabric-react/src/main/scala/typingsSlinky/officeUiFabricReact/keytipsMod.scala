@@ -4,20 +4,6 @@ import typingsSlinky.officeUiFabricReact.ikeytiptransitionkeyMod.IKeytipTransiti
 import typingsSlinky.officeUiFabricReact.keytipConfigMod.IKeytipConfig
 import typingsSlinky.officeUiFabricReact.keytipConfigMod.IKeytipConfigItem
 import typingsSlinky.officeUiFabricReact.keytipConfigMod.IKeytipConfigMap
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`-_`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`Comma `
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`data-ktp-execute-target`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`data-ktp-target`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`ktp-layer-id`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.enterKeytipMode
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.exitKeytipMode
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.keytipAdded
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.keytipRemoved
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.keytipUpdated
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.ktp
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.persistedKeytipAdded
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.persistedKeytipExecute
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.persistedKeytipRemoved
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,13 +15,13 @@ object keytipsMod extends js.Object {
   class KeytipManager ()
     extends typingsSlinky.officeUiFabricReact.keytipManagerMod.KeytipManager
   
-  val DATAKTP_EXECUTE_TARGET: `data-ktp-execute-target` = js.native
-  val DATAKTP_TARGET: `data-ktp-target` = js.native
-  val KTP_ARIA_SEPARATOR: `Comma ` = js.native
+  val DATAKTP_EXECUTE_TARGET: /* "data-ktp-execute-target" */ String = js.native
+  val DATAKTP_TARGET: /* "data-ktp-target" */ String = js.native
+  val KTP_ARIA_SEPARATOR: /* ", " */ String = js.native
   val KTP_FULL_PREFIX: String = js.native
-  val KTP_LAYER_ID: `ktp-layer-id` = js.native
-  val KTP_PREFIX: ktp = js.native
-  val KTP_SEPARATOR: `-_` = js.native
+  val KTP_LAYER_ID: /* "ktp-layer-id" */ String = js.native
+  val KTP_PREFIX: /* "ktp" */ String = js.native
+  val KTP_SEPARATOR: /* "-" */ String = js.native
   def buildKeytipConfigMap(config: IKeytipConfig): IKeytipConfigMap = js.native
   def constructKeytip(configMap: IKeytipConfigMap, parentSequence: js.Array[String], keytip: IKeytipConfigItem): Unit = js.native
   def getAriaDescribedBy(keySequences: js.Array[String]): String = js.native
@@ -47,14 +33,14 @@ object keytipsMod extends js.Object {
   def transitionKeysContain(keys: js.Array[IKeytipTransitionKey], key: IKeytipTransitionKey): Boolean = js.native
   @js.native
   object KeytipEvents extends js.Object {
-    val ENTER_KEYTIP_MODE: enterKeytipMode = js.native
-    val EXIT_KEYTIP_MODE: exitKeytipMode = js.native
-    val KEYTIP_ADDED: keytipAdded = js.native
-    val KEYTIP_REMOVED: keytipRemoved = js.native
-    val KEYTIP_UPDATED: keytipUpdated = js.native
-    val PERSISTED_KEYTIP_ADDED: persistedKeytipAdded = js.native
-    val PERSISTED_KEYTIP_EXECUTE: persistedKeytipExecute = js.native
-    val PERSISTED_KEYTIP_REMOVED: persistedKeytipRemoved = js.native
+    val ENTER_KEYTIP_MODE: /* "enterKeytipMode" */ String = js.native
+    val EXIT_KEYTIP_MODE: /* "exitKeytipMode" */ String = js.native
+    val KEYTIP_ADDED: /* "keytipAdded" */ String = js.native
+    val KEYTIP_REMOVED: /* "keytipRemoved" */ String = js.native
+    val KEYTIP_UPDATED: /* "keytipUpdated" */ String = js.native
+    val PERSISTED_KEYTIP_ADDED: /* "persistedKeytipAdded" */ String = js.native
+    val PERSISTED_KEYTIP_EXECUTE: /* "persistedKeytipExecute" */ String = js.native
+    val PERSISTED_KEYTIP_REMOVED: /* "persistedKeytipRemoved" */ String = js.native
   }
   
   /* static members */

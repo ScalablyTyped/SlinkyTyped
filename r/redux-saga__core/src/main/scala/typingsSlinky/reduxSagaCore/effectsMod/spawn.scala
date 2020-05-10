@@ -1,5 +1,6 @@
 package typingsSlinky.reduxSagaCore.effectsMod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.reduxSagaCore.AnonContext
 import typingsSlinky.reduxSagaCore.AnonFn
 import typingsSlinky.std.Parameters
@@ -16,7 +17,7 @@ object spawn extends js.Object {
   ): ForkEffect = js.native
   def apply[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.spawn with js.Any */, Name /* <: String */](
+    */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.spawn with TopLevel[js.Any] */, Name /* <: String */](
     ctxAndFnName: js.Tuple2[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
@@ -24,7 +25,7 @@ object spawn extends js.Object {
   ): ForkEffect = js.native
   def apply[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.spawn with js.Any */, Name /* <: String */](
+    */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.spawn with TopLevel[js.Any] */, Name /* <: String */](
     ctxAndFnName: AnonContext[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any

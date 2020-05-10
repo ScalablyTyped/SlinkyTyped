@@ -1,9 +1,7 @@
 package typingsSlinky.cathoQuantum.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.AnonBaseFontSize
 import typingsSlinky.cathoQuantum.AnonContent
 import typingsSlinky.cathoQuantum.accordionMod.AccordionProps
@@ -12,25 +10,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Accordion
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Accordion {
   @JSImport("@catho/quantum/Accordion", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    items: js.Array[AnonContent],
-    keepOnlyOneOpen: js.UndefOr[Boolean] = js.undefined,
-    theme: AnonBaseFontSize = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepOnlyOneOpen)) __obj.updateDynamic("keepOnlyOneOpen")(keepOnlyOneOpen.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def keepOnlyOneOpen(value: Boolean): this.type = set("keepOnlyOneOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: AnonBaseFontSize): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  type Props = AccordionProps
+  
+  def withProps(p: AccordionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(items: js.Array[AnonContent]): Builder = {
+    val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AccordionProps]))
+  }
 }
 

@@ -10,6 +10,6 @@ object newBatch extends js.Object {
   /**
     * Creates a batch object for batching individual requests.
     */
-  def apply[T](): Batch[T] = js.native
+  def apply(): Batch[_] = js.native
 }
 

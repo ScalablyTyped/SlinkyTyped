@@ -1,8 +1,9 @@
 package typingsSlinky.scrollreveal.scrollReveal
 
-import typingsSlinky.std.Element
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.NodeListOf
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Node
+import org.scalajs.dom.raw.NodeListOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +20,10 @@ trait ScrollRevealObject extends js.Object {
   def reveal(selector: HTMLElement, interval: Double): ScrollRevealObject = js.native
   def reveal(selector: HTMLElement, options: ScrollRevealObjectOptions): ScrollRevealObject = js.native
   def reveal(selector: HTMLElement, options: ScrollRevealObjectOptions, interval: Double): ScrollRevealObject = js.native
-  def reveal(selector: NodeListOf[Element]): ScrollRevealObject = js.native
-  def reveal(selector: NodeListOf[Element], interval: Double): ScrollRevealObject = js.native
-  def reveal(selector: NodeListOf[Element], options: ScrollRevealObjectOptions): ScrollRevealObject = js.native
-  def reveal(selector: NodeListOf[Element], options: ScrollRevealObjectOptions, interval: Double): ScrollRevealObject = js.native
+  def reveal(selector: NodeListOf[Element with Node]): ScrollRevealObject = js.native
+  def reveal(selector: NodeListOf[Element with Node], interval: Double): ScrollRevealObject = js.native
+  def reveal(selector: NodeListOf[Element with Node], options: ScrollRevealObjectOptions): ScrollRevealObject = js.native
+  def reveal(selector: NodeListOf[Element with Node], options: ScrollRevealObjectOptions, interval: Double): ScrollRevealObject = js.native
   def sync(): Unit = js.native
 }
 

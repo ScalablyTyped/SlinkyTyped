@@ -14,14 +14,12 @@ trait ClientTypes extends js.Object
 
 object ClientTypes {
   @scala.inline
-  def all: typingsSlinky.std.stdStrings.all = this.cast("all")
+  def all: typingsSlinky.std.stdStrings.all = "all".asInstanceOf[typingsSlinky.std.stdStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def sharedworker: typingsSlinky.std.stdStrings.sharedworker = "sharedworker".asInstanceOf[typingsSlinky.std.stdStrings.sharedworker]
   @scala.inline
-  def sharedworker: typingsSlinky.std.stdStrings.sharedworker = this.cast("sharedworker")
+  def window: typingsSlinky.std.stdStrings.window = "window".asInstanceOf[typingsSlinky.std.stdStrings.window]
   @scala.inline
-  def window: typingsSlinky.std.stdStrings.window = this.cast("window")
-  @scala.inline
-  def worker: typingsSlinky.std.stdStrings.worker = this.cast("worker")
+  def worker: typingsSlinky.std.stdStrings.worker = "worker".asInstanceOf[typingsSlinky.std.stdStrings.worker]
 }
 

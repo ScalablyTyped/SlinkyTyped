@@ -13,12 +13,10 @@ trait VisibilitySetting extends js.Object
 
 object VisibilitySetting {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hide: typingsSlinky.microsoftGraph.microsoftGraphStrings.hide = "hide".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.hide]
   @scala.inline
-  def hide: typingsSlinky.microsoftGraph.microsoftGraphStrings.hide = this.cast("hide")
+  def notConfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured = "notConfigured".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured]
   @scala.inline
-  def notConfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured = this.cast("notConfigured")
-  @scala.inline
-  def show: typingsSlinky.microsoftGraph.microsoftGraphStrings.show = this.cast("show")
+  def show: typingsSlinky.microsoftGraph.microsoftGraphStrings.show = "show".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.show]
 }
 

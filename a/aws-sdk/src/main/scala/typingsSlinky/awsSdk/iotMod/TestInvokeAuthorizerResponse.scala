@@ -30,20 +30,77 @@ trait TestInvokeAuthorizerResponse extends js.Object {
 
 object TestInvokeAuthorizerResponse {
   @scala.inline
-  def apply(
-    disconnectAfterInSeconds: Int | Double = null,
-    isAuthenticated: js.UndefOr[scala.Boolean] = js.undefined,
-    policyDocuments: PolicyDocuments = null,
-    principalId: PrincipalId = null,
-    refreshAfterInSeconds: Int | Double = null
-  ): TestInvokeAuthorizerResponse = {
+  def apply(): TestInvokeAuthorizerResponse = {
     val __obj = js.Dynamic.literal()
-    if (disconnectAfterInSeconds != null) __obj.updateDynamic("disconnectAfterInSeconds")(disconnectAfterInSeconds.asInstanceOf[js.Any])
-    if (!js.isUndefined(isAuthenticated)) __obj.updateDynamic("isAuthenticated")(isAuthenticated.asInstanceOf[js.Any])
-    if (policyDocuments != null) __obj.updateDynamic("policyDocuments")(policyDocuments.asInstanceOf[js.Any])
-    if (principalId != null) __obj.updateDynamic("principalId")(principalId.asInstanceOf[js.Any])
-    if (refreshAfterInSeconds != null) __obj.updateDynamic("refreshAfterInSeconds")(refreshAfterInSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestInvokeAuthorizerResponse]
   }
+  @scala.inline
+  implicit class TestInvokeAuthorizerResponseOps[Self <: TestInvokeAuthorizerResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisconnectAfterInSeconds(value: Seconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disconnectAfterInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisconnectAfterInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disconnectAfterInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsAuthenticated(value: IsAuthenticated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAuthenticated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsAuthenticated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAuthenticated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyDocuments(value: PolicyDocuments): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyDocuments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyDocuments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyDocuments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrincipalId(value: PrincipalId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrincipalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principalId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefreshAfterInSeconds(value: Seconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshAfterInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefreshAfterInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshAfterInSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

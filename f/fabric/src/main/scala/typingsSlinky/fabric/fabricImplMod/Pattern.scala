@@ -2,7 +2,6 @@ package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.CanvasPattern
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import org.scalajs.dom.raw.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +14,6 @@ class Pattern () extends IPatternOptions {
   	 * Unique identifier
   	 */
   var id: Double = js.native
-  /**
-  	 * The source for the pattern
-  	 */
-  /* CompleteClass */
-  override var source: String | HTMLImageElement = js.native
   def setOptions(options: IPatternOptions): Unit = js.native
   /**
   	 * Returns an instance of CanvasPattern

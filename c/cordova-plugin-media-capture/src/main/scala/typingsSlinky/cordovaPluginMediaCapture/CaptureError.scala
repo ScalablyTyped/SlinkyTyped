@@ -6,6 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Encapsulates the error code resulting from a failed media capture operation. */
+@js.native
 trait CaptureError extends js.Object {
   /**
     * One of the pre-defined error codes listed below.
@@ -20,8 +21,8 @@ trait CaptureError extends js.Object {
     *     CaptureError.CAPTURE_NOT_SUPPORTED
     *         The requested capture operation is not supported.
     */
-  var code: Double
-  var message: String
+  var code: Double = js.native
+  var message: String = js.native
 }
 
 @JSGlobal("CaptureError")

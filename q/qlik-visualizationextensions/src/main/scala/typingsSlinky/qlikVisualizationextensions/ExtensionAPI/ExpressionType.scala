@@ -14,12 +14,10 @@ trait ExpressionType extends js.Object
 
 object ExpressionType {
   @scala.inline
-  def _empty: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings._empty = this.cast("")
+  def _empty: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings._empty = "".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings._empty]
   @scala.inline
-  def always: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.always = this.cast("always")
+  def always: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.always = "always".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def optional: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.optional = this.cast("optional")
+  def optional: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.optional = "optional".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.optional]
 }
 

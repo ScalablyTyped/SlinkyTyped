@@ -34,10 +34,6 @@ object errorsMod extends js.Object {
     def this(message: String, code: Double) = this()
     def this(message: String, code: Double, statusCode: Double) = this()
     var code: Double = js.native
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
     var statusCode: Double = js.native
     /* protected */ def setUpStackTrace(): Unit = js.native
   }

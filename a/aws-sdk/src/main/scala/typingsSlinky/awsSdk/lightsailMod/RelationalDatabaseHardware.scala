@@ -22,12 +22,53 @@ trait RelationalDatabaseHardware extends js.Object {
 
 object RelationalDatabaseHardware {
   @scala.inline
-  def apply(cpuCount: Int | Double = null, diskSizeInGb: Int | Double = null, ramSizeInGb: Int | Double = null): RelationalDatabaseHardware = {
+  def apply(): RelationalDatabaseHardware = {
     val __obj = js.Dynamic.literal()
-    if (cpuCount != null) __obj.updateDynamic("cpuCount")(cpuCount.asInstanceOf[js.Any])
-    if (diskSizeInGb != null) __obj.updateDynamic("diskSizeInGb")(diskSizeInGb.asInstanceOf[js.Any])
-    if (ramSizeInGb != null) __obj.updateDynamic("ramSizeInGb")(ramSizeInGb.asInstanceOf[js.Any])
     __obj.asInstanceOf[RelationalDatabaseHardware]
   }
+  @scala.inline
+  implicit class RelationalDatabaseHardwareOps[Self <: RelationalDatabaseHardware] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCpuCount(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpuCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cpuCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskSizeInGb(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeInGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskSizeInGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeInGb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRamSizeInGb(value: float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ramSizeInGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRamSizeInGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ramSizeInGb")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

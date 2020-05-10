@@ -6,29 +6,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLoop extends js.Object {
-  var arcType: js.UndefOr[ArcType] = js.undefined
-  var granularity: js.UndefOr[Double] = js.undefined
-  var loop: js.UndefOr[Boolean] = js.undefined
-  var positions: js.Array[Cartesian3]
-  var width: js.UndefOr[Double] = js.undefined
+  var arcType: js.UndefOr[ArcType] = js.native
+  var granularity: js.UndefOr[Double] = js.native
+  var loop: js.UndefOr[Boolean] = js.native
+  var positions: js.Array[Cartesian3] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object AnonLoop {
   @scala.inline
-  def apply(
-    positions: js.Array[Cartesian3],
-    arcType: ArcType = null,
-    granularity: Int | Double = null,
-    loop: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): AnonLoop = {
+  def apply(positions: js.Array[Cartesian3]): AnonLoop = {
     val __obj = js.Dynamic.literal(positions = positions.asInstanceOf[js.Any])
-    if (arcType != null) __obj.updateDynamic("arcType")(arcType.asInstanceOf[js.Any])
-    if (granularity != null) __obj.updateDynamic("granularity")(granularity.asInstanceOf[js.Any])
-    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLoop]
   }
+  @scala.inline
+  implicit class AnonLoopOps[Self <: AnonLoop] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPositions(value: js.Array[Cartesian3]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArcType(value: ArcType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArcType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGranularity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGranularity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

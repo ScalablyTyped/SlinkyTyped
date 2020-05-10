@@ -1,32 +1,31 @@
 package typingsSlinky.reactColor.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactColor.checkboardMod.CheckboardProps
 import typingsSlinky.reactColor.checkboardMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Checkboard
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Checkboard {
   @JSImport("react-color/lib/components/common/Checkboard", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: size */
-  def apply(grey: String = null, white: String = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (grey != null) __obj.updateDynamic("grey")(grey.asInstanceOf[js.Any])
-    if (white != null) __obj.updateDynamic("white")(white.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def grey(value: String): this.type = set("grey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def white(value: String): this.type = set("white", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactColor.checkboardMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CheckboardProps
+  
+  def withProps(p: CheckboardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Checkboard.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

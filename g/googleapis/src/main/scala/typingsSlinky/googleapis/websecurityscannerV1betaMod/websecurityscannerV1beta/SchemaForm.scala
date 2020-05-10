@@ -21,11 +21,41 @@ trait SchemaForm extends js.Object {
 
 object SchemaForm {
   @scala.inline
-  def apply(actionUri: String = null, fields: js.Array[String] = null): SchemaForm = {
+  def apply(): SchemaForm = {
     val __obj = js.Dynamic.literal()
-    if (actionUri != null) __obj.updateDynamic("actionUri")(actionUri.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaForm]
   }
+  @scala.inline
+  implicit class SchemaFormOps[Self <: SchemaForm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

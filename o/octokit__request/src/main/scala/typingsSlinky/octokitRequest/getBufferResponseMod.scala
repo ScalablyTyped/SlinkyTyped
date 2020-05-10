@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@octokit/request/dist-types/get-buffer-response", JSImport.Namespace)
 @js.native
 object getBufferResponseMod extends js.Object {
-  def default(response: Response): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def default(response: Response): js.Promise[js.typedarray.ArrayBuffer] = js.native
 }
 

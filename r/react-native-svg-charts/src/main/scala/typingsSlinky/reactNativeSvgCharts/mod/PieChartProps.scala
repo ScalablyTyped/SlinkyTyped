@@ -1,85 +1,104 @@
 package typingsSlinky.reactNativeSvgCharts.mod
 
-import org.scalajs.dom.raw.CanvasRenderingContext2D
-import typingsSlinky.d3Path.mod.Path_
-import typingsSlinky.d3Scale.mod.ScaleBand_
-import typingsSlinky.d3Shape.mod.CurveGenerator
-import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeSvgCharts.AnonBottom
-import typingsSlinky.reactNativeSvgCharts.PartialPathProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PieChartProps[T /* <: PieChartData */] extends ChartProps[T] {
-  var innerRadius: js.UndefOr[Double | String] = js.undefined
-  var labelRadius: js.UndefOr[Double | String] = js.undefined
-  var outerRadius: js.UndefOr[Double | String] = js.undefined
-  var padAngle: js.UndefOr[Double] = js.undefined
-  var sort: js.UndefOr[SortFunction[T]] = js.undefined
-  var valueAccessor: js.UndefOr[AccessorFunction[T, Double]] = js.undefined
+  var innerRadius: js.UndefOr[Double | String] = js.native
+  var labelRadius: js.UndefOr[Double | String] = js.native
+  var outerRadius: js.UndefOr[Double | String] = js.native
+  var padAngle: js.UndefOr[Double] = js.native
+  var sort: js.UndefOr[SortFunction[T]] = js.native
+  var valueAccessor: js.UndefOr[AccessorFunction[T, Double]] = js.native
 }
 
 object PieChartProps {
   @scala.inline
-  def apply[T /* <: PieChartData */](
-    data: js.Array[T],
-    animate: js.UndefOr[Boolean] = js.undefined,
-    animationDuration: Int | Double = null,
-    contentInset: AnonBottom = null,
-    curve: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator = null,
-    gridMax: Int | Double = null,
-    gridMin: Int | Double = null,
-    gridProps: GridProps[_] = null,
-    height: Int | Double = null,
-    innerRadius: Double | String = null,
-    labelRadius: Double | String = null,
-    numberOfTicks: Int | Double = null,
-    outerRadius: Double | String = null,
-    padAngle: Int | Double = null,
-    sort: (T, T) => Double = null,
-    style: StyleProp[ViewStyle] = null,
-    svg: PartialPathProps = null,
-    valueAccessor: /* props */ AccessorFunctionProps[T] => Double = null,
-    width: Int | Double = null,
-    xAccessor: /* props */ AccessorFunctionProps[T] => Double = null,
-    xMax: Int | Double = null,
-    xMin: Int | Double = null,
-    xScale: () => (ScaleType[js.Any, js.Any]) | ScaleBand_[js.Any] = null,
-    yAccessor: /* props */ AccessorFunctionProps[T] => Double = null,
-    yMax: Int | Double = null,
-    yMin: Int | Double = null,
-    yScale: () => (ScaleType[js.Any, js.Any]) | ScaleBand_[js.Any] = null
-  ): PieChartProps[T] = {
+  def apply[T](data: js.Array[T]): PieChartProps[T] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (contentInset != null) __obj.updateDynamic("contentInset")(contentInset.asInstanceOf[js.Any])
-    if (curve != null) __obj.updateDynamic("curve")(js.Any.fromFunction1(curve))
-    if (gridMax != null) __obj.updateDynamic("gridMax")(gridMax.asInstanceOf[js.Any])
-    if (gridMin != null) __obj.updateDynamic("gridMin")(gridMin.asInstanceOf[js.Any])
-    if (gridProps != null) __obj.updateDynamic("gridProps")(gridProps.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
-    if (labelRadius != null) __obj.updateDynamic("labelRadius")(labelRadius.asInstanceOf[js.Any])
-    if (numberOfTicks != null) __obj.updateDynamic("numberOfTicks")(numberOfTicks.asInstanceOf[js.Any])
-    if (outerRadius != null) __obj.updateDynamic("outerRadius")(outerRadius.asInstanceOf[js.Any])
-    if (padAngle != null) __obj.updateDynamic("padAngle")(padAngle.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(js.Any.fromFunction2(sort))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (svg != null) __obj.updateDynamic("svg")(svg.asInstanceOf[js.Any])
-    if (valueAccessor != null) __obj.updateDynamic("valueAccessor")(js.Any.fromFunction1(valueAccessor))
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (xAccessor != null) __obj.updateDynamic("xAccessor")(js.Any.fromFunction1(xAccessor))
-    if (xMax != null) __obj.updateDynamic("xMax")(xMax.asInstanceOf[js.Any])
-    if (xMin != null) __obj.updateDynamic("xMin")(xMin.asInstanceOf[js.Any])
-    if (xScale != null) __obj.updateDynamic("xScale")(js.Any.fromFunction0(xScale))
-    if (yAccessor != null) __obj.updateDynamic("yAccessor")(js.Any.fromFunction1(yAccessor))
-    if (yMax != null) __obj.updateDynamic("yMax")(yMax.asInstanceOf[js.Any])
-    if (yMin != null) __obj.updateDynamic("yMin")(yMin.asInstanceOf[js.Any])
-    if (yScale != null) __obj.updateDynamic("yScale")(js.Any.fromFunction0(yScale))
     __obj.asInstanceOf[PieChartProps[T]]
   }
+  @scala.inline
+  implicit class PieChartPropsOps[Self[t] <: PieChartProps[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withInnerRadius(value: Double | String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerRadius: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelRadius(value: Double | String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelRadius: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOuterRadius(value: Double | String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOuterRadius: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadAngle(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadAngle: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: (T, T) => Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueAccessor(value: /* props */ AccessorFunctionProps[T] => Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAccessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutValueAccessor: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAccessor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

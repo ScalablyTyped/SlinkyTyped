@@ -1,11 +1,9 @@
 package typingsSlinky.victory.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.victory.mod.VictoryVoronoiContainerProps
 import typingsSlinky.victory.victoryStrings.x
@@ -14,54 +12,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object VictoryVoronoiContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryVoronoiContainer] {
+object VictoryVoronoiContainer {
   @JSImport("victory", "VictoryVoronoiContainer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style, title */
-  def apply(
-    activateData: js.UndefOr[Boolean] = js.undefined,
-    activateLabels: js.UndefOr[Boolean] = js.undefined,
-    desc: String = null,
-    disable: js.UndefOr[Boolean] = js.undefined,
-    events: DOMAttributes[_] = null,
-    height: Int | Double = null,
-    labelComponent: ReactElement = null,
-    labels: (/* point */ js.Any, /* index */ Double, /* points */ js.Array[_]) => String = null,
-    onActivated: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit = null,
-    onDeactivated: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit = null,
-    radius: Int | Double = null,
-    responsive: js.UndefOr[Boolean] = js.undefined,
-    voronoiBlacklist: js.Array[String] = null,
-    voronoiDimension: x | y = null,
-    voronoiPadding: Int | Double = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryVoronoiContainer] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(activateData)) __obj.updateDynamic("activateData")(activateData.asInstanceOf[js.Any])
-    if (!js.isUndefined(activateLabels)) __obj.updateDynamic("activateLabels")(activateLabels.asInstanceOf[js.Any])
-    if (desc != null) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
-    if (!js.isUndefined(disable)) __obj.updateDynamic("disable")(disable.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(js.Any.fromFunction3(labels))
-    if (onActivated != null) __obj.updateDynamic("onActivated")(js.Any.fromFunction2(onActivated))
-    if (onDeactivated != null) __obj.updateDynamic("onDeactivated")(js.Any.fromFunction2(onDeactivated))
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
-    if (voronoiBlacklist != null) __obj.updateDynamic("voronoiBlacklist")(voronoiBlacklist.asInstanceOf[js.Any])
-    if (voronoiDimension != null) __obj.updateDynamic("voronoiDimension")(voronoiDimension.asInstanceOf[js.Any])
-    if (voronoiPadding != null) __obj.updateDynamic("voronoiPadding")(voronoiPadding.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryVoronoiContainer] {
+    @scala.inline
+    def activateData(value: Boolean): this.type = set("activateData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activateLabels(value: Boolean): this.type = set("activateLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def desc(value: String): this.type = set("desc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disable(value: Boolean): this.type = set("disable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def events(value: DOMAttributes[_]): this.type = set("events", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelComponent(value: ReactElement): this.type = set("labelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labels(value: (/* point */ js.Any, /* index */ Double, /* points */ js.Array[_]) => String): this.type = set("labels", js.Any.fromFunction3(value))
+    @scala.inline
+    def onActivated(value: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit): this.type = set("onActivated", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDeactivated(value: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit): this.type = set("onDeactivated", js.Any.fromFunction2(value))
+    @scala.inline
+    def radius(value: Double): this.type = set("radius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def voronoiBlacklist(value: js.Array[String]): this.type = set("voronoiBlacklist", value.asInstanceOf[js.Any])
+    @scala.inline
+    def voronoiDimension(value: x | y): this.type = set("voronoiDimension", value.asInstanceOf[js.Any])
+    @scala.inline
+    def voronoiPadding(value: Double): this.type = set("voronoiPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryVoronoiContainer] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryVoronoiContainer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = VictoryVoronoiContainerProps
+  
+  def withProps(p: VictoryVoronoiContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: VictoryVoronoiContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

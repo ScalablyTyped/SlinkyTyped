@@ -7,7 +7,6 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.scBroker.mod.QueryOptions
 import typingsSlinky.scBroker.mod.SpliceOptions
 import typingsSlinky.scBrokerCluster.clientclusterMod.ClientCluster
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,7 @@ import scala.scalajs.js.annotation._
 class AbstractDataClient protected () extends EventEmitter {
   def this(dataClient: ClientCluster) = this()
   def add(keyChain: KeyChain, value: js.Any): Unit = js.native
-  def add(keyChain: KeyChain, value: js.Any, callback: js.Function1[/* err */ js.UndefOr[Error], Unit]): Unit = js.native
+  def add(keyChain: KeyChain, value: js.Any, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def add(keyChain: KeyChain, value: js.Any, getValue: Boolean): Unit = js.native
   def add(
     keyChain: KeyChain,
@@ -29,7 +28,7 @@ class AbstractDataClient protected () extends EventEmitter {
   def exec(query: js.Function1[/* datamap */ FlexiMap, Unit]): Unit = js.native
   def exec(
     query: js.Function1[/* datamap */ FlexiMap, Unit],
-    callback: js.Function2[/* err */ Error | Null, /* data */ js.Any, Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Any, Unit]
   ): Unit = js.native
   def exec(query: js.Function1[/* datamap */ FlexiMap, Unit], options: QueryOptions): Unit = js.native
   def exec(
@@ -46,7 +45,7 @@ class AbstractDataClient protected () extends EventEmitter {
   def getRange(
     keyChain: KeyChain,
     fromIndex: Double,
-    callback: js.Function2[/* err */ Error | Null, /* value */ js.Any, Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* value */ js.Any, Unit]
   ): Unit = js.native
   def getRange(
     keyChain: KeyChain,
@@ -57,7 +56,7 @@ class AbstractDataClient protected () extends EventEmitter {
   def hasKey(keyChain: KeyChain, callback: js.Function2[/* err */ js.Error | Null, /* data */ Boolean, Unit]): Unit = js.native
   def pop(keyChain: KeyChain, callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Any, Unit]): Unit = js.native
   def remove(keyChain: KeyChain): Unit = js.native
-  def remove(keyChain: KeyChain, callback: js.Function1[/* err */ js.UndefOr[Error], Unit]): Unit = js.native
+  def remove(keyChain: KeyChain, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def remove(keyChain: KeyChain, getValue: Boolean): Unit = js.native
   def remove(
     keyChain: KeyChain,
@@ -67,13 +66,17 @@ class AbstractDataClient protected () extends EventEmitter {
   def removeAll(): Unit = js.native
   def removeAll(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def removeRange(keyChain: KeyChain, fromIndex: Double): Unit = js.native
-  def removeRange(keyChain: KeyChain, fromIndex: Double, callback: js.Function1[/* err */ js.UndefOr[Error], Unit]): Unit = js.native
+  def removeRange(
+    keyChain: KeyChain,
+    fromIndex: Double,
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
   def removeRange(keyChain: KeyChain, fromIndex: Double, toIndex: Double): Unit = js.native
   def removeRange(
     keyChain: KeyChain,
     fromIndex: Double,
     toIndex: Double,
-    callback: js.Function1[/* err */ js.UndefOr[Error], Unit]
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
   ): Unit = js.native
   def removeRange(keyChain: KeyChain, fromIndex: Double, toIndex: Double, getValue: Boolean): Unit = js.native
   def removeRange(
@@ -84,7 +87,7 @@ class AbstractDataClient protected () extends EventEmitter {
     callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
   ): Unit = js.native
   def set(keyChain: KeyChain, value: js.Any): Unit = js.native
-  def set(keyChain: KeyChain, value: js.Any, callback: js.Function1[/* err */ js.UndefOr[Error], Unit]): Unit = js.native
+  def set(keyChain: KeyChain, value: js.Any, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def set(keyChain: KeyChain, value: js.Any, getValue: Boolean): Unit = js.native
   def set(
     keyChain: KeyChain,
@@ -93,7 +96,7 @@ class AbstractDataClient protected () extends EventEmitter {
     callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
   ): Unit = js.native
   def splice(keyChain: KeyChain): Unit = js.native
-  def splice(keyChain: KeyChain, callback: js.Function1[/* err */ js.UndefOr[Error], Unit]): Unit = js.native
+  def splice(keyChain: KeyChain, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def splice(keyChain: KeyChain, options: SpliceOptions): Unit = js.native
   def splice(
     keyChain: KeyChain,

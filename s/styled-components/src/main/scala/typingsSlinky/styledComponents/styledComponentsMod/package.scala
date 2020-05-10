@@ -28,10 +28,19 @@ package object styledComponentsMod {
   // Undeclared default props are augmented into the resulting allowable attributes
   // If declared props have indexed properties, ignore default props entirely as keyof gets widened
   // Wrap in an outer-level conditional type to allow distribution over props that are unions
-  type Defaultize[P, D] = ((typingsSlinky.std.Pick[P, typingsSlinky.std.Exclude[java.lang.String, java.lang.String]]) with (typingsSlinky.std.Partial[
-    typingsSlinky.std.Pick[P, typingsSlinky.std.Extract[java.lang.String, java.lang.String]]
+  type Defaultize[P, D] = ((typingsSlinky.std.Pick[
+    P, 
+    typingsSlinky.std.Exclude[/* keyof P */ java.lang.String, /* keyof D */ java.lang.String]
   ]) with (typingsSlinky.std.Partial[
-    typingsSlinky.std.Pick[D, typingsSlinky.std.Exclude[java.lang.String, java.lang.String]]
+    typingsSlinky.std.Pick[
+      P, 
+      typingsSlinky.std.Extract[/* keyof P */ java.lang.String, /* keyof D */ java.lang.String]
+    ]
+  ]) with (typingsSlinky.std.Partial[
+    typingsSlinky.std.Pick[
+      D, 
+      typingsSlinky.std.Exclude[/* keyof D */ java.lang.String, /* keyof P */ java.lang.String]
+    ]
   ])) | P
   type FalseyValue = js.UndefOr[scala.Null | typingsSlinky.styledComponents.styledComponentsBooleans.`false`]
   type GlobalStyleComponent[P, T] = slinky.core.ReactComponentClass[
@@ -53,7 +62,7 @@ package object styledComponentsMod {
   */
   type InterpolationValue = typingsSlinky.styledComponents.styledComponentsMod._InterpolationValue | java.lang.String | scala.Double | typingsSlinky.styledComponents.styledComponentsMod.FalseyValue
   // Helper type operators
-  type Omit[T, K /* <: java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
+  type Omit[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   // extracts React defaultProps
   type ReactDefaultProps[C] = js.Any
   type ReactDefaultizedProps[C, P] = P | (typingsSlinky.styledComponents.styledComponentsMod.Defaultize[P, js.Any])
@@ -62,17 +71,17 @@ package object styledComponentsMod {
     - typingsSlinky.styledComponents.styledComponentsMod.FlattenSimpleInterpolation
   */
   type SimpleInterpolation = typingsSlinky.styledComponents.styledComponentsMod._SimpleInterpolation | java.lang.String | scala.Double | typingsSlinky.styledComponents.styledComponentsMod.FalseyValue
-  type StyledComponent[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */, T /* <: js.Object */, O /* <: js.Object */, A /* <: java.lang.String */] = (// the "string" allows this to be used as an object key
+  type StyledComponent[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */, T /* <: js.Object */, O /* <: js.Object */, A /* <: /* keyof any */ java.lang.String */] = (// the "string" allows this to be used as an object key
   // I really want to avoid this if possible but it's the only way to use nesting with object styles...
   java.lang.String) with (typingsSlinky.styledComponents.styledComponentsMod.StyledComponentBase[C, T, O, A]) with (typingsSlinky.hoistNonReactStatics.mod.NonReactStatics[C, js.Object])
   type StyledComponentInnerAttrs[C /* <: typingsSlinky.styledComponents.styledComponentsMod.AnyStyledComponent */] = js.Any
   type StyledComponentInnerComponent[C /* <: slinky.core.ReactComponentClass[_] */] = C
   type StyledComponentInnerOtherProps[C /* <: typingsSlinky.styledComponents.styledComponentsMod.AnyStyledComponent */] = js.Any
   type StyledComponentProps[// The Component from whose props are derived
-  C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */, // The Theme from the current context
+  C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */, // The Theme from the current context
   T /* <: js.Object */, // The other props added by the template
   O /* <: js.Object */, // The props that are made optional by .attrs
-  A /* <: java.lang.String */] = (typingsSlinky.styledComponents.styledComponentsMod.WithOptionalTheme[
+  A /* <: /* keyof any */ java.lang.String */] = (typingsSlinky.styledComponents.styledComponentsMod.WithOptionalTheme[
     (typingsSlinky.styledComponents.styledComponentsMod.Omit[
       (typingsSlinky.styledComponents.styledComponentsMod.ReactDefaultizedProps[C, typingsSlinky.react.mod.ComponentPropsWithRef[C]]) with O, 
       A
@@ -81,11 +90,11 @@ package object styledComponentsMod {
     ]), 
     T
   ]) with typingsSlinky.styledComponents.styledComponentsMod.WithChildrenIfReactComponentClass[C]
-  type StyledComponentPropsWithAs[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */, T /* <: js.Object */, O /* <: js.Object */, A /* <: java.lang.String */] = (typingsSlinky.styledComponents.styledComponentsMod.StyledComponentProps[C, T, O, A]) with typingsSlinky.styledComponents.AnonForwardedAs[C]
-  type StyledComponentPropsWithRef[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */] = typingsSlinky.react.mod.ComponentPropsWithRef[
+  type StyledComponentPropsWithAs[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */, T /* <: js.Object */, O /* <: js.Object */, A /* <: /* keyof any */ java.lang.String */] = (typingsSlinky.styledComponents.styledComponentsMod.StyledComponentProps[C, T, O, A]) with typingsSlinky.styledComponents.AnonForwardedAs[C]
+  type StyledComponentPropsWithRef[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] = typingsSlinky.react.mod.ComponentPropsWithRef[
     C | typingsSlinky.styledComponents.styledComponentsMod.StyledComponentInnerComponent[C]
   ]
-  type StyledFunction[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */] = typingsSlinky.styledComponents.styledComponentsMod.ThemedStyledFunction[C, js.Any, js.Object, scala.Nothing]
+  type StyledFunction[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] = typingsSlinky.styledComponents.styledComponentsMod.ThemedStyledFunction[C, js.Any, js.Object, scala.Nothing]
   type StyledProps[P] = typingsSlinky.styledComponents.styledComponentsMod.ThemedStyledProps[
     P, 
     typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[typingsSlinky.styledComponents.styledComponentsMod.DefaultTheme]
@@ -114,7 +123,7 @@ package object styledComponentsMod {
   // we need to manually add a `children` field.
   // See https://github.com/DefinitelyTyped/DefinitelyTyped/pull/31945
   // and https://github.com/DefinitelyTyped/DefinitelyTyped/pull/32843
-  type WithChildrenIfReactComponentClass[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any */] = js.Object | typingsSlinky.styledComponents.AnonChildren
+  type WithChildrenIfReactComponentClass[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] = js.Object | typingsSlinky.styledComponents.AnonChildren
   type WithOptionalTheme[P /* <: typingsSlinky.styledComponents.AnonThemeT[T] */, T] = P with typingsSlinky.styledComponents.AnonThemeT[T]
   type WithThemeFnInterface[T /* <: js.Object */] = typingsSlinky.styledComponents.styledComponentsMod.BaseWithThemeFnInterface[typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[T]]
 }

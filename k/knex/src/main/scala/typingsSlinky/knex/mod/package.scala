@@ -51,7 +51,7 @@ package object mod {
   type Distinct[TRecord /* <: js.Object */, TResult] = typingsSlinky.knex.mod.ColumnNameQueryBuilder[TRecord, TResult]
   // If T can't be assigned to TBase fallback to an alternate type TAlt
   type IncompatibleToAlt[T, TBase, TAlt] = TAlt | T
-  type InferrableColumnDescriptor[TRecord /* <: js.Object */] = java.lang.String | (typingsSlinky.knex.mod.Ref[js.Any, js.Any]) | typingsSlinky.knex.mod.Dict[java.lang.String]
+  type InferrableColumnDescriptor[TRecord /* <: js.Object */] = (/* keyof TRecord */ java.lang.String) | (typingsSlinky.knex.mod.Ref[js.Any, js.Any]) | (typingsSlinky.knex.mod.Dict[/* keyof TRecord */ java.lang.String])
   type IntersectAliases[AliasUT] = typingsSlinky.knex.mod.UnionToIntersection[
     typingsSlinky.knex.mod.IncompatibleToAlt[js.Any, typingsSlinky.knex.mod.Dict[js.Any], js.Object]
   ]
@@ -69,12 +69,12 @@ package object mod {
   type Lookup[TRegistry /* <: js.Object */, TKey /* <: java.lang.String */, TDefault] = TDefault | (/* import warning: importer.ImportType#apply Failed type conversion: TRegistry[TKey] */ js.Any)
   // Retain the association of original keys with aliased keys at type level
   // to facilitates type-safe aliasing for object syntax
-  type MappedAliasType[TBase, TAliasMapping] = js.Object with typingsSlinky.knex.knexStrings.MappedAliasType with js.Any
+  type MappedAliasType[TBase, TAliasMapping] = js.Object with typingsSlinky.knex.knexStrings.MappedAliasType with org.scalablytyped.runtime.TopLevel[js.Any]
   type MaybeArray[T] = T | js.Array[T]
   type MySqlAlterTableBuilder = typingsSlinky.knex.mod.AlterTableBuilder
   // Boxing is necessary to prevent distribution of conditional types:
   // https://lorefnon.tech/2019/05/02/using-boxing-to-prevent-distribution-of-conditional-types/
-  type PartialOrAny[TBase, TKeys] = (typingsSlinky.knex.mod.SafePick[TBase, TKeys with java.lang.String]) | js.Object
+  type PartialOrAny[TBase, TKeys] = (typingsSlinky.knex.mod.SafePick[TBase, TKeys with (/* keyof TBase */ java.lang.String)]) | js.Object
   type PostgreSqlAlterTableBuilder = typingsSlinky.knex.mod.AlterTableBuilder
   //
   // QueryBuilder
@@ -97,7 +97,7 @@ package object mod {
       java.lang.String, 
       /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in string ]: string}
-    */ typingsSlinky.knex.knexStrings.RefBuilder with js.Any
+    */ typingsSlinky.knex.knexStrings.RefBuilder with org.scalablytyped.runtime.TopLevel[js.Any]
     ]
   ]
   // If we have more categories of deferred selection in future,
@@ -109,7 +109,7 @@ package object mod {
   // This is primarily to prevent type incompatibilities where target can be unknown.
   // While unknown can be assigned to any, Partial<unknown> can't be.
   type SafePartial[T] = typingsSlinky.std.Partial[T]
-  type SafePick[T, K /* <: java.lang.String */] = typingsSlinky.std.Pick[T, K]
+  type SafePick[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[T, K]
   type StrKey[T] = java.lang.String
   type TableDescriptor = java.lang.String | typingsSlinky.knex.mod.Raw[js.Any] | (typingsSlinky.knex.mod.QueryBuilder[js.Any, js.Array[typingsSlinky.knex.mod.SafePartial[js.Any]]])
   type Union[TRecord, TResult] = typingsSlinky.knex.mod.Intersect[TRecord, TResult]

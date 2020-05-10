@@ -7,48 +7,49 @@ import scala.scalajs.js.annotation._
 /**
   * Defines the functions used for converting values to strings.
   */
+@js.native
 trait XMLStringifier extends js.Object {
   /**
     * Escapes special characters in attribute values.
     */
-  var attEscape: js.UndefOr[js.Function1[/* v */ String, String]] = js.undefined
+  var attEscape: js.UndefOr[js.Function1[/* v */ String, String]] = js.native
   /**
     * Converts attribute value to string
     */
-  var attValue: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var attValue: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts the contents of a CDATA node to string
     */
-  var cdata: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var cdata: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts the contents of a comment node to string
     */
-  var comment: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var comment: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /** 
     * When prepended to a JS object key, converts the key-value pair 
     * to an attribute. 
     */
-  var convertAttKey: js.UndefOr[String] = js.undefined
+  var convertAttKey: js.UndefOr[String] = js.native
   /** 
     * When prepended to a JS object key, converts its value to a CDATA 
     * node. 
     */
-  var convertCDataKey: js.UndefOr[String] = js.undefined
+  var convertCDataKey: js.UndefOr[String] = js.native
   /** 
     * When prepended to a JS object key, converts its value to a 
     * comment node.
     */
-  var convertCommentKey: js.UndefOr[String] = js.undefined
+  var convertCommentKey: js.UndefOr[String] = js.native
   /** 
     * When prepended to a JS object key, converts the key-value pair 
     * to a processing instruction node. 
     */
-  var convertPIKey: js.UndefOr[String] = js.undefined
+  var convertPIKey: js.UndefOr[String] = js.native
   /** 
     * When prepended to a JS object key, converts its value to a raw 
     * text node. 
     */
-  var convertRawKey: js.UndefOr[String] = js.undefined
+  var convertRawKey: js.UndefOr[String] = js.native
   /** 
     * When prepended to a JS object key, converts its value to a text node. 
     * 
@@ -56,131 +57,398 @@ trait XMLStringifier extends js.Object {
     * nodes can be created by adding some unique text after each object 
     * key. For example: `{ '#text1': 'some text', '#text2': 'more text' };`
     */
-  var convertTextKey: js.UndefOr[String] = js.undefined
+  var convertTextKey: js.UndefOr[String] = js.native
   /**
     * Converts `!ATTLIST` node default value inside DocType to string
     */
-  var dtdAttDefault: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var dtdAttDefault: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts `!ATTLIST` node type inside DocType to string
     */
-  var dtdAttType: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var dtdAttType: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts `!ELEMENT` node content inside Doctype to string
     */
-  var dtdElementValue: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var dtdElementValue: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts `!ENTITY` node content inside Doctype to string
     */
-  var dtdEntityValue: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var dtdEntityValue: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts `!NOTATION` node content inside Doctype to string
     */
-  var dtdNData: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var dtdNData: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts DocType public identifier to string
     */
-  var dtdPubID: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var dtdPubID: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts DocType system identifier to string
     */
-  var dtdSysID: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var dtdSysID: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts processing instruction target to string
     */
-  var insTarget: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var insTarget: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts processing instruction value to string
     */
-  var insValue: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var insValue: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts an element or attribute name to string
     */
-  var name: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var name: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts the contents of a raw text node to string
     */
-  var raw: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var raw: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts the contents of a text node to string
     */
-  var text: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var text: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Escapes special characters in text.
     */
-  var textEscape: js.UndefOr[js.Function1[/* v */ String, String]] = js.undefined
+  var textEscape: js.UndefOr[js.Function1[/* v */ String, String]] = js.native
   /**
     * Converts XML encoding to string
     */
-  var xmlEncoding: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var xmlEncoding: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts standalone document declaration to string
     */
-  var xmlStandalone: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var xmlStandalone: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
   /**
     * Converts XML version to string
     */
-  var xmlVersion: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.undefined
+  var xmlVersion: js.UndefOr[js.Function1[/* v */ js.Any, String]] = js.native
 }
 
 object XMLStringifier {
   @scala.inline
-  def apply(
-    attEscape: /* v */ String => String = null,
-    attValue: /* v */ js.Any => String = null,
-    cdata: /* v */ js.Any => String = null,
-    comment: /* v */ js.Any => String = null,
-    convertAttKey: String = null,
-    convertCDataKey: String = null,
-    convertCommentKey: String = null,
-    convertPIKey: String = null,
-    convertRawKey: String = null,
-    convertTextKey: String = null,
-    dtdAttDefault: /* v */ js.Any => String = null,
-    dtdAttType: /* v */ js.Any => String = null,
-    dtdElementValue: /* v */ js.Any => String = null,
-    dtdEntityValue: /* v */ js.Any => String = null,
-    dtdNData: /* v */ js.Any => String = null,
-    dtdPubID: /* v */ js.Any => String = null,
-    dtdSysID: /* v */ js.Any => String = null,
-    insTarget: /* v */ js.Any => String = null,
-    insValue: /* v */ js.Any => String = null,
-    name: /* v */ js.Any => String = null,
-    raw: /* v */ js.Any => String = null,
-    text: /* v */ js.Any => String = null,
-    textEscape: /* v */ String => String = null,
-    xmlEncoding: /* v */ js.Any => String = null,
-    xmlStandalone: /* v */ js.Any => String = null,
-    xmlVersion: /* v */ js.Any => String = null
-  ): XMLStringifier = {
+  def apply(): XMLStringifier = {
     val __obj = js.Dynamic.literal()
-    if (attEscape != null) __obj.updateDynamic("attEscape")(js.Any.fromFunction1(attEscape))
-    if (attValue != null) __obj.updateDynamic("attValue")(js.Any.fromFunction1(attValue))
-    if (cdata != null) __obj.updateDynamic("cdata")(js.Any.fromFunction1(cdata))
-    if (comment != null) __obj.updateDynamic("comment")(js.Any.fromFunction1(comment))
-    if (convertAttKey != null) __obj.updateDynamic("convertAttKey")(convertAttKey.asInstanceOf[js.Any])
-    if (convertCDataKey != null) __obj.updateDynamic("convertCDataKey")(convertCDataKey.asInstanceOf[js.Any])
-    if (convertCommentKey != null) __obj.updateDynamic("convertCommentKey")(convertCommentKey.asInstanceOf[js.Any])
-    if (convertPIKey != null) __obj.updateDynamic("convertPIKey")(convertPIKey.asInstanceOf[js.Any])
-    if (convertRawKey != null) __obj.updateDynamic("convertRawKey")(convertRawKey.asInstanceOf[js.Any])
-    if (convertTextKey != null) __obj.updateDynamic("convertTextKey")(convertTextKey.asInstanceOf[js.Any])
-    if (dtdAttDefault != null) __obj.updateDynamic("dtdAttDefault")(js.Any.fromFunction1(dtdAttDefault))
-    if (dtdAttType != null) __obj.updateDynamic("dtdAttType")(js.Any.fromFunction1(dtdAttType))
-    if (dtdElementValue != null) __obj.updateDynamic("dtdElementValue")(js.Any.fromFunction1(dtdElementValue))
-    if (dtdEntityValue != null) __obj.updateDynamic("dtdEntityValue")(js.Any.fromFunction1(dtdEntityValue))
-    if (dtdNData != null) __obj.updateDynamic("dtdNData")(js.Any.fromFunction1(dtdNData))
-    if (dtdPubID != null) __obj.updateDynamic("dtdPubID")(js.Any.fromFunction1(dtdPubID))
-    if (dtdSysID != null) __obj.updateDynamic("dtdSysID")(js.Any.fromFunction1(dtdSysID))
-    if (insTarget != null) __obj.updateDynamic("insTarget")(js.Any.fromFunction1(insTarget))
-    if (insValue != null) __obj.updateDynamic("insValue")(js.Any.fromFunction1(insValue))
-    if (name != null) __obj.updateDynamic("name")(js.Any.fromFunction1(name))
-    if (raw != null) __obj.updateDynamic("raw")(js.Any.fromFunction1(raw))
-    if (text != null) __obj.updateDynamic("text")(js.Any.fromFunction1(text))
-    if (textEscape != null) __obj.updateDynamic("textEscape")(js.Any.fromFunction1(textEscape))
-    if (xmlEncoding != null) __obj.updateDynamic("xmlEncoding")(js.Any.fromFunction1(xmlEncoding))
-    if (xmlStandalone != null) __obj.updateDynamic("xmlStandalone")(js.Any.fromFunction1(xmlStandalone))
-    if (xmlVersion != null) __obj.updateDynamic("xmlVersion")(js.Any.fromFunction1(xmlVersion))
     __obj.asInstanceOf[XMLStringifier]
   }
+  @scala.inline
+  implicit class XMLStringifierOps[Self <: XMLStringifier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttEscape(value: /* v */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attEscape")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAttEscape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attEscape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttValue(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAttValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCdata(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cdata")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCdata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cdata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComment(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConvertAttKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertAttKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvertAttKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertAttKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConvertCDataKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertCDataKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvertCDataKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertCDataKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConvertCommentKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertCommentKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvertCommentKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertCommentKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConvertPIKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertPIKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvertPIKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertPIKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConvertRawKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertRawKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvertRawKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertRawKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConvertTextKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertTextKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvertTextKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertTextKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDtdAttDefault(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdAttDefault")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDtdAttDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdAttDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDtdAttType(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdAttType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDtdAttType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdAttType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDtdElementValue(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdElementValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDtdElementValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdElementValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDtdEntityValue(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdEntityValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDtdEntityValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdEntityValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDtdNData(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdNData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDtdNData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdNData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDtdPubID(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdPubID")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDtdPubID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdPubID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDtdSysID(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdSysID")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDtdSysID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtdSysID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsTarget(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insTarget")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsValue(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRaw(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRaw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextEscape(value: /* v */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textEscape")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTextEscape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textEscape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXmlEncoding(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlEncoding")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutXmlEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlEncoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXmlStandalone(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlStandalone")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutXmlStandalone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlStandalone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXmlVersion(value: /* v */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlVersion")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutXmlVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

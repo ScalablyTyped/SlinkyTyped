@@ -47,20 +47,77 @@ trait SchemaDeprecationStatus extends js.Object {
 
 object SchemaDeprecationStatus {
   @scala.inline
-  def apply(
-    deleted: String = null,
-    deprecated: String = null,
-    obsolete: String = null,
-    replacement: String = null,
-    state: String = null
-  ): SchemaDeprecationStatus = {
+  def apply(): SchemaDeprecationStatus = {
     val __obj = js.Dynamic.literal()
-    if (deleted != null) __obj.updateDynamic("deleted")(deleted.asInstanceOf[js.Any])
-    if (deprecated != null) __obj.updateDynamic("deprecated")(deprecated.asInstanceOf[js.Any])
-    if (obsolete != null) __obj.updateDynamic("obsolete")(obsolete.asInstanceOf[js.Any])
-    if (replacement != null) __obj.updateDynamic("replacement")(replacement.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeprecationStatus]
   }
+  @scala.inline
+  implicit class SchemaDeprecationStatusOps[Self <: SchemaDeprecationStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeleted(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeprecated(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeprecated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObsolete(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("obsolete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObsolete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("obsolete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplacement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replacement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

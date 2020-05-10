@@ -1,20 +1,26 @@
 package typingsSlinky.antDesignReactNative.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.antDesignReactNative.inputNumberMod.InputNumberProps
+import typingsSlinky.antDesignReactNative.inputNumberMod.InputNumberState
 import typingsSlinky.antDesignReactNative.inputNumberMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Could't extract props from TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object InputNumber
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any, js.Any]] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from P because couldn't resolve ClassTree. */
+object InputNumber {
   @JSImport("@ant-design/react-native/lib/stepper/InputNumber", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = js.Any
+  @scala.inline
+  class Builder[P <: InputNumberProps, S <: InputNumberState] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any, js.Any]]
+  
+  def apply[P <: InputNumberProps, S <: InputNumberState](p: P): Builder[P, S] = new Builder[P, S](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[P <: InputNumberProps, S <: InputNumberState](companion: InputNumber.type): Builder[P, S] = new Builder[P, S](js.Array(this.component, js.Dictionary.empty))()
 }
 

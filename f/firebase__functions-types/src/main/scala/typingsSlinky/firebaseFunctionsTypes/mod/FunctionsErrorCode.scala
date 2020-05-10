@@ -27,40 +27,38 @@ trait FunctionsErrorCode extends js.Object
 
 object FunctionsErrorCode {
   @scala.inline
-  def aborted: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.aborted = this.cast("aborted")
+  def aborted: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.aborted = "aborted".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.aborted]
   @scala.inline
-  def `already-exists`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`already-exists` = this.cast("already-exists")
+  def `already-exists`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`already-exists` = "already-exists".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`already-exists`]
   @scala.inline
-  def cancelled: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.cancelled = this.cast("cancelled")
+  def cancelled: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.cancelled = "cancelled".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.cancelled]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `data-loss`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`data-loss` = "data-loss".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`data-loss`]
   @scala.inline
-  def `data-loss`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`data-loss` = this.cast("data-loss")
+  def `deadline-exceeded`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`deadline-exceeded` = "deadline-exceeded".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`deadline-exceeded`]
   @scala.inline
-  def `deadline-exceeded`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`deadline-exceeded` = this.cast("deadline-exceeded")
+  def `failed-precondition`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`failed-precondition` = "failed-precondition".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`failed-precondition`]
   @scala.inline
-  def `failed-precondition`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`failed-precondition` = this.cast("failed-precondition")
+  def internal: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.internal = "internal".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.internal]
   @scala.inline
-  def internal: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.internal = this.cast("internal")
+  def `invalid-argument`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`invalid-argument` = "invalid-argument".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`invalid-argument`]
   @scala.inline
-  def `invalid-argument`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`invalid-argument` = this.cast("invalid-argument")
+  def `not-found`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`not-found` = "not-found".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`not-found`]
   @scala.inline
-  def `not-found`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`not-found` = this.cast("not-found")
+  def ok: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.ok = "ok".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.ok]
   @scala.inline
-  def ok: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.ok = this.cast("ok")
+  def `out-of-range`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`out-of-range` = "out-of-range".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`out-of-range`]
   @scala.inline
-  def `out-of-range`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`out-of-range` = this.cast("out-of-range")
+  def `permission-denied`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`permission-denied` = "permission-denied".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`permission-denied`]
   @scala.inline
-  def `permission-denied`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`permission-denied` = this.cast("permission-denied")
+  def `resource-exhausted`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`resource-exhausted` = "resource-exhausted".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`resource-exhausted`]
   @scala.inline
-  def `resource-exhausted`: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.`resource-exhausted` = this.cast("resource-exhausted")
+  def unauthenticated: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unauthenticated = "unauthenticated".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unauthenticated]
   @scala.inline
-  def unauthenticated: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unauthenticated = this.cast("unauthenticated")
+  def unavailable: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unavailable = "unavailable".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unavailable]
   @scala.inline
-  def unavailable: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unavailable = this.cast("unavailable")
+  def unimplemented: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unimplemented = "unimplemented".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unimplemented]
   @scala.inline
-  def unimplemented: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unimplemented = this.cast("unimplemented")
-  @scala.inline
-  def unknown: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unknown = "unknown".asInstanceOf[typingsSlinky.firebaseFunctionsTypes.firebaseFunctionsTypesStrings.unknown]
 }
 

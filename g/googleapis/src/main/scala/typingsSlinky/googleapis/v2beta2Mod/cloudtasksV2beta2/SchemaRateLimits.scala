@@ -62,16 +62,53 @@ trait SchemaRateLimits extends js.Object {
 
 object SchemaRateLimits {
   @scala.inline
-  def apply(
-    maxBurstSize: Int | Double = null,
-    maxConcurrentTasks: Int | Double = null,
-    maxTasksDispatchedPerSecond: Int | Double = null
-  ): SchemaRateLimits = {
+  def apply(): SchemaRateLimits = {
     val __obj = js.Dynamic.literal()
-    if (maxBurstSize != null) __obj.updateDynamic("maxBurstSize")(maxBurstSize.asInstanceOf[js.Any])
-    if (maxConcurrentTasks != null) __obj.updateDynamic("maxConcurrentTasks")(maxConcurrentTasks.asInstanceOf[js.Any])
-    if (maxTasksDispatchedPerSecond != null) __obj.updateDynamic("maxTasksDispatchedPerSecond")(maxTasksDispatchedPerSecond.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRateLimits]
   }
+  @scala.inline
+  implicit class SchemaRateLimitsOps[Self <: SchemaRateLimits] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxBurstSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBurstSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBurstSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBurstSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConcurrentTasks(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentTasks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConcurrentTasks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxConcurrentTasks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTasksDispatchedPerSecond(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTasksDispatchedPerSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTasksDispatchedPerSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTasksDispatchedPerSecond")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

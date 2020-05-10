@@ -20,8 +20,27 @@ object GetRecoveryPointRestoreMetadataInput {
   @scala.inline
   def apply(BackupVaultName: BackupVaultName, RecoveryPointArn: ARN): GetRecoveryPointRestoreMetadataInput = {
     val __obj = js.Dynamic.literal(BackupVaultName = BackupVaultName.asInstanceOf[js.Any], RecoveryPointArn = RecoveryPointArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetRecoveryPointRestoreMetadataInput]
   }
+  @scala.inline
+  implicit class GetRecoveryPointRestoreMetadataInputOps[Self <: GetRecoveryPointRestoreMetadataInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupVaultName(value: BackupVaultName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupVaultName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecoveryPointArn(value: ARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryPointArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

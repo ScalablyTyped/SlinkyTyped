@@ -1,11 +1,9 @@
 package typingsSlinky.reactNativeSvgCharts.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.d3Path.mod.Path_
 import typingsSlinky.d3Scale.mod.ScaleBand_
 import typingsSlinky.d3Shape.mod.CurveGenerator
@@ -25,77 +23,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StackedAreaChart
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeSvgCharts.mod.StackedAreaChart[js.Any]] {
+object StackedAreaChart {
   @JSImport("react-native-svg-charts", "StackedAreaChart")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T](
-    colors: js.Array[String],
-    data: js.Array[T],
-    keys: js.Array[String],
-    animate: js.UndefOr[Boolean] = js.undefined,
-    animationDuration: Int | Double = null,
-    contentInset: AnonBottom = null,
-    curve: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator = null,
-    extras: js.Array[_] = null,
-    gridMax: Int | Double = null,
-    gridMin: Int | Double = null,
-    gridProps: GridProps[_] = null,
-    height: Int | Double = null,
-    numberOfTicks: Int | Double = null,
-    offset: (/* series */ Series[js.Any, js.Any], /* order */ js.Array[Double]) => Unit = null,
-    order: /* series */ Series[js.Any, js.Any] => js.Array[Double] = null,
-    renderDecorator: () => js.Object = null,
-    renderGradient: /* props */ AnonColor[T] => ReactComponentClass[LinearGradientProps | RadialGradientProps] = null,
-    showGrid: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[ViewStyle] = null,
-    svg: PartialPathProps = null,
-    width: Int | Double = null,
-    xAccessor: /* props */ AccessorFunctionProps[T] => Double = null,
-    xMax: Int | Double = null,
-    xMin: Int | Double = null,
-    xScale: () => (ScaleType[js.Any, js.Any]) | ScaleBand_[js.Any] = null,
-    yAccessor: /* props */ AccessorFunctionProps[T] => Double = null,
-    yMax: Int | Double = null,
-    yMin: Int | Double = null,
-    yScale: () => (ScaleType[js.Any, js.Any]) | ScaleBand_[js.Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.StackedAreaChart[js.Any]] = {
-    val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (contentInset != null) __obj.updateDynamic("contentInset")(contentInset.asInstanceOf[js.Any])
-    if (curve != null) __obj.updateDynamic("curve")(js.Any.fromFunction1(curve))
-    if (extras != null) __obj.updateDynamic("extras")(extras.asInstanceOf[js.Any])
-    if (gridMax != null) __obj.updateDynamic("gridMax")(gridMax.asInstanceOf[js.Any])
-    if (gridMin != null) __obj.updateDynamic("gridMin")(gridMin.asInstanceOf[js.Any])
-    if (gridProps != null) __obj.updateDynamic("gridProps")(gridProps.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (numberOfTicks != null) __obj.updateDynamic("numberOfTicks")(numberOfTicks.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(js.Any.fromFunction2(offset))
-    if (order != null) __obj.updateDynamic("order")(js.Any.fromFunction1(order))
-    if (renderDecorator != null) __obj.updateDynamic("renderDecorator")(js.Any.fromFunction0(renderDecorator))
-    if (renderGradient != null) __obj.updateDynamic("renderGradient")(js.Any.fromFunction1(renderGradient))
-    if (!js.isUndefined(showGrid)) __obj.updateDynamic("showGrid")(showGrid.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (svg != null) __obj.updateDynamic("svg")(svg.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (xAccessor != null) __obj.updateDynamic("xAccessor")(js.Any.fromFunction1(xAccessor))
-    if (xMax != null) __obj.updateDynamic("xMax")(xMax.asInstanceOf[js.Any])
-    if (xMin != null) __obj.updateDynamic("xMin")(xMin.asInstanceOf[js.Any])
-    if (xScale != null) __obj.updateDynamic("xScale")(js.Any.fromFunction0(xScale))
-    if (yAccessor != null) __obj.updateDynamic("yAccessor")(js.Any.fromFunction1(yAccessor))
-    if (yMax != null) __obj.updateDynamic("yMax")(yMax.asInstanceOf[js.Any])
-    if (yMin != null) __obj.updateDynamic("yMin")(yMin.asInstanceOf[js.Any])
-    if (yScale != null) __obj.updateDynamic("yScale")(js.Any.fromFunction0(yScale))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeSvgCharts.mod.StackedAreaChart[js.Any]]]
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.StackedAreaChart[js.Any]] {
+    @scala.inline
+    def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationDuration(value: Double): this.type = set("animationDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentInset(value: AnonBottom): this.type = set("contentInset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def curve(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("curve", js.Any.fromFunction1(value))
+    @scala.inline
+    def extras(value: js.Array[_]): this.type = set("extras", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridMax(value: Double): this.type = set("gridMax", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridMin(value: Double): this.type = set("gridMin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridProps(value: GridProps[_]): this.type = set("gridProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numberOfTicks(value: Double): this.type = set("numberOfTicks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: (/* series */ Series[js.Any, js.Any], /* order */ js.Array[Double]) => Unit): this.type = set("offset", js.Any.fromFunction2(value))
+    @scala.inline
+    def order(value: /* series */ Series[js.Any, js.Any] => js.Array[Double]): this.type = set("order", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderDecorator(value: () => js.Object): this.type = set("renderDecorator", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderGradient(value: /* props */ AnonColor[T] => ReactComponentClass[LinearGradientProps | RadialGradientProps]): this.type = set("renderGradient", js.Any.fromFunction1(value))
+    @scala.inline
+    def showGrid(value: Boolean): this.type = set("showGrid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def svg(value: PartialPathProps): this.type = set("svg", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xAccessor(value: /* props */ AccessorFunctionProps[T] => Double): this.type = set("xAccessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def xMax(value: Double): this.type = set("xMax", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xMin(value: Double): this.type = set("xMin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xScale(value: () => (ScaleType[js.Any, js.Any]) | ScaleBand_[js.Any]): this.type = set("xScale", js.Any.fromFunction0(value))
+    @scala.inline
+    def yAccessor(value: /* props */ AccessorFunctionProps[T] => Double): this.type = set("yAccessor", js.Any.fromFunction1(value))
+    @scala.inline
+    def yMax(value: Double): this.type = set("yMax", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yMin(value: Double): this.type = set("yMin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yScale(value: () => (ScaleType[js.Any, js.Any]) | ScaleBand_[js.Any]): this.type = set("yScale", js.Any.fromFunction0(value))
   }
-  type Props = StackedAreaChartProps[js.Any]
+  
+  def withProps[T](p: StackedAreaChartProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](colors: js.Array[String], data: js.Array[T], keys: js.Array[/* keyof T */ String]): Builder[T] = {
+    val __props = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[StackedAreaChartProps[T]]))
+  }
 }
 

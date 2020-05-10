@@ -10,8 +10,9 @@ import scala.scalajs.js.annotation._
   * Implements some standard methods for comparing objects. Add this mixin to
   * any class you create that can compare its instances.
   */
+@js.native
 trait Comparable extends js.Object {
-  def compare(a: js.Any, b: js.Any): Double
+  def compare(a: js.Any, b: js.Any): Double = js.native
 }
 
 @JSImport("ember", "Ember.Comparable")

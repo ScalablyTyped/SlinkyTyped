@@ -14,10 +14,29 @@ trait SchemaUndeleteServiceAccountResponse extends js.Object {
 
 object SchemaUndeleteServiceAccountResponse {
   @scala.inline
-  def apply(restoredAccount: SchemaServiceAccount = null): SchemaUndeleteServiceAccountResponse = {
+  def apply(): SchemaUndeleteServiceAccountResponse = {
     val __obj = js.Dynamic.literal()
-    if (restoredAccount != null) __obj.updateDynamic("restoredAccount")(restoredAccount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUndeleteServiceAccountResponse]
   }
+  @scala.inline
+  implicit class SchemaUndeleteServiceAccountResponseOps[Self <: SchemaUndeleteServiceAccountResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRestoredAccount(value: SchemaServiceAccount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restoredAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestoredAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restoredAccount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

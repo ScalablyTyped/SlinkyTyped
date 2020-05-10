@@ -79,11 +79,7 @@ package object fileSystemProvider {
   type OpenedFileOffsetRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OpenedFileOffsetRequestedEventOptions, 
-      /* successCallback */ js.Function2[
-        /* data */ scala.scalajs.js.typedarray.ArrayBuffer, 
-        /* hasMore */ scala.Boolean, 
-        scala.Unit
-      ], 
+      /* successCallback */ js.Function2[/* data */ js.typedarray.ArrayBuffer, /* hasMore */ scala.Boolean, scala.Unit], 
       /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
       scala.Unit
     ]

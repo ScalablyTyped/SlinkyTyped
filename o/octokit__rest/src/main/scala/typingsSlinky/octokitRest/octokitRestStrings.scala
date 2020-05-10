@@ -471,7 +471,7 @@ object octokitRestStrings {
   @scala.inline
   def `Quotationmarkgh-pagesQuotationmark`: `Quotationmarkgh-pagesQuotationmark` = "\"gh-pages\"".asInstanceOf[`Quotationmarkgh-pagesQuotationmark`]
   @scala.inline
-  def `Quotationmarkmaster SlashdocsQuotationmark`: `Quotationmarkmaster SlashdocsQuotationmark` = "\"master /docs\"".asInstanceOf[`Quotationmarkmaster SlashdocsQuotationmark`]
+  def `Quotationmarkmaster SlashdocsQuotationmark`: `Quotationmarkmaster SlashdocsQuotationmark` = ("\"master /docs\"").asInstanceOf[`Quotationmarkmaster SlashdocsQuotationmark`]
   @scala.inline
   def QuotationmarkmasterQuotationmark: QuotationmarkmasterQuotationmark = "\"master\"".asInstanceOf[QuotationmarkmasterQuotationmark]
   @scala.inline
@@ -703,7 +703,7 @@ object octokitRestStrings {
   @scala.inline
   def token: token = "token".asInstanceOf[token]
   @scala.inline
-  def `too heated`: `too heated` = "too heated".asInstanceOf[`too heated`]
+  def `too heated`: `too heated` = ("too heated").asInstanceOf[`too heated`]
   @scala.inline
   def tree: tree = "tree".asInstanceOf[tree]
   @scala.inline

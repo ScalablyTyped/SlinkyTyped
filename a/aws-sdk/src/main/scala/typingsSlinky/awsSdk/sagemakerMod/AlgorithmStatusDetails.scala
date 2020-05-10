@@ -18,14 +18,41 @@ trait AlgorithmStatusDetails extends js.Object {
 
 object AlgorithmStatusDetails {
   @scala.inline
-  def apply(
-    ImageScanStatuses: AlgorithmStatusItemList = null,
-    ValidationStatuses: AlgorithmStatusItemList = null
-  ): AlgorithmStatusDetails = {
+  def apply(): AlgorithmStatusDetails = {
     val __obj = js.Dynamic.literal()
-    if (ImageScanStatuses != null) __obj.updateDynamic("ImageScanStatuses")(ImageScanStatuses.asInstanceOf[js.Any])
-    if (ValidationStatuses != null) __obj.updateDynamic("ValidationStatuses")(ValidationStatuses.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlgorithmStatusDetails]
   }
+  @scala.inline
+  implicit class AlgorithmStatusDetailsOps[Self <: AlgorithmStatusDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageScanStatuses(value: AlgorithmStatusItemList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageScanStatuses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageScanStatuses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageScanStatuses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationStatuses(value: AlgorithmStatusItemList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationStatuses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationStatuses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationStatuses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

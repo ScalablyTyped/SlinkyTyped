@@ -22,10 +22,41 @@ trait PutRoomSkillParameterRequest extends js.Object {
 
 object PutRoomSkillParameterRequest {
   @scala.inline
-  def apply(RoomSkillParameter: RoomSkillParameter, SkillId: SkillId, RoomArn: Arn = null): PutRoomSkillParameterRequest = {
+  def apply(RoomSkillParameter: RoomSkillParameter, SkillId: SkillId): PutRoomSkillParameterRequest = {
     val __obj = js.Dynamic.literal(RoomSkillParameter = RoomSkillParameter.asInstanceOf[js.Any], SkillId = SkillId.asInstanceOf[js.Any])
-    if (RoomArn != null) __obj.updateDynamic("RoomArn")(RoomArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutRoomSkillParameterRequest]
   }
+  @scala.inline
+  implicit class PutRoomSkillParameterRequestOps[Self <: PutRoomSkillParameterRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoomSkillParameter(value: RoomSkillParameter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomSkillParameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSkillId(value: SkillId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SkillId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoomArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoomArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoomArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

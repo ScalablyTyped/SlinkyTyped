@@ -6,209 +6,357 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IContextualMenuItemStyles extends IButtonStyles {
   /**
     * Styles for a menu item that is an anchor link.
     */
-  var anchorLink: IStyle
+  var anchorLink: IStyle = js.native
   /**
     * Default style for checkmark icons.
     */
-  var checkmarkIcon: IStyle
+  var checkmarkIcon: IStyle = js.native
   /**
     * Styles for a divider item of a ContextualMenu.
     */
-  var divider: IStyle
+  var divider: IStyle = js.native
   /**
     * Default icon color style for known icons.
     */
-  var iconColor: IStyle
+  var iconColor: IStyle = js.native
   /**
     * Styles for the icon element of a menu item.
     */
   @JSName("icon")
-  var icon_IContextualMenuItemStyles: IStyle
+  var icon_IContextualMenuItemStyles: IStyle = js.native
   /**
     * Styles for a menu item that is an anchor link.
     */
-  var item: IStyle
+  var item: IStyle = js.native
   /**
     * Styles for the label of a menu item.
     */
   @JSName("label")
-  var label_IContextualMenuItemStyles: IStyle
+  var label_IContextualMenuItemStyles: IStyle = js.native
   /**
     * Styles for the content inside the button/link of the menuItem.
     */
-  var linkContent: IStyle
+  var linkContent: IStyle = js.native
   /**
     * Styles for a menu item that is a link.
     */
-  var linkContentMenu: IStyle
+  var linkContentMenu: IStyle = js.native
   /**
     * Style for the root element.
     */
   @JSName("root")
-  var root_IContextualMenuItemStyles: IStyle
+  var root_IContextualMenuItemStyles: IStyle = js.native
   /**
     * Styles for the secondary text of a menu item.
     */
   @JSName("secondaryText")
-  var secondaryText_IContextualMenuItemStyles: IStyle
+  var secondaryText_IContextualMenuItemStyles: IStyle = js.native
   /**
     * Styles for the container of a split menu item.
     */
-  var splitContainer: IStyle
+  var splitContainer: IStyle = js.native
   /**
     * Styles for the menu portion of a split menu item.
     */
-  var splitMenu: IStyle
+  var splitMenu: IStyle = js.native
   /**
     * Styles for the primary portion of a split menu item.
     */
-  var splitPrimary: IStyle
+  var splitPrimary: IStyle = js.native
   /**
     * Styles for the submenu icon of a menu item.
     */
-  var subMenuIcon: IStyle
+  var subMenuIcon: IStyle = js.native
 }
 
 object IContextualMenuItemStyles {
   @scala.inline
-  def apply(
-    anchorLink: IStyle = null,
-    checkmarkIcon: IStyle = null,
-    description: IStyle = null,
-    descriptionChecked: IStyle = null,
-    descriptionDisabled: IStyle = null,
-    descriptionHovered: IStyle = null,
-    descriptionPressed: IStyle = null,
-    divider: IStyle = null,
-    flexContainer: IStyle = null,
-    icon: IStyle = null,
-    iconChecked: IStyle = null,
-    iconColor: IStyle = null,
-    iconDisabled: IStyle = null,
-    iconExpanded: IStyle = null,
-    iconExpandedHovered: IStyle = null,
-    iconHovered: IStyle = null,
-    iconPressed: IStyle = null,
-    item: IStyle = null,
-    label: IStyle = null,
-    labelChecked: IStyle = null,
-    labelDisabled: IStyle = null,
-    labelHovered: IStyle = null,
-    linkContent: IStyle = null,
-    linkContentMenu: IStyle = null,
-    menuIcon: IStyle = null,
-    menuIconChecked: IStyle = null,
-    menuIconDisabled: IStyle = null,
-    menuIconExpanded: IStyle = null,
-    menuIconExpandedHovered: IStyle = null,
-    menuIconHovered: IStyle = null,
-    menuIconPressed: IStyle = null,
-    root: IStyle = null,
-    rootChecked: IStyle = null,
-    rootCheckedDisabled: IStyle = null,
-    rootCheckedHovered: IStyle = null,
-    rootCheckedPressed: IStyle = null,
-    rootDisabled: IStyle = null,
-    rootExpanded: IStyle = null,
-    rootExpandedHovered: IStyle = null,
-    rootFocused: IStyle = null,
-    rootHasMenu: IStyle = null,
-    rootHovered: IStyle = null,
-    rootPressed: IStyle = null,
-    screenReaderText: IStyle = null,
-    secondaryText: IStyle = null,
-    splitButtonContainer: IStyle = null,
-    splitButtonContainerChecked: IStyle = null,
-    splitButtonContainerCheckedHovered: IStyle = null,
-    splitButtonContainerDisabled: IStyle = null,
-    splitButtonContainerFocused: IStyle = null,
-    splitButtonContainerHovered: IStyle = null,
-    splitButtonDivider: IStyle = null,
-    splitButtonDividerDisabled: IStyle = null,
-    splitButtonFlexContainer: IStyle = null,
-    splitButtonMenuButton: IStyle = null,
-    splitButtonMenuButtonChecked: IStyle = null,
-    splitButtonMenuButtonDisabled: IStyle = null,
-    splitButtonMenuButtonExpanded: IStyle = null,
-    splitButtonMenuIcon: IStyle = null,
-    splitButtonMenuIconDisabled: IStyle = null,
-    splitContainer: IStyle = null,
-    splitMenu: IStyle = null,
-    splitPrimary: IStyle = null,
-    subMenuIcon: IStyle = null,
-    textContainer: IStyle = null
-  ): IContextualMenuItemStyles = {
+  def apply(): IContextualMenuItemStyles = {
     val __obj = js.Dynamic.literal()
-    if (anchorLink != null) __obj.updateDynamic("anchorLink")(anchorLink.asInstanceOf[js.Any])
-    if (checkmarkIcon != null) __obj.updateDynamic("checkmarkIcon")(checkmarkIcon.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (descriptionChecked != null) __obj.updateDynamic("descriptionChecked")(descriptionChecked.asInstanceOf[js.Any])
-    if (descriptionDisabled != null) __obj.updateDynamic("descriptionDisabled")(descriptionDisabled.asInstanceOf[js.Any])
-    if (descriptionHovered != null) __obj.updateDynamic("descriptionHovered")(descriptionHovered.asInstanceOf[js.Any])
-    if (descriptionPressed != null) __obj.updateDynamic("descriptionPressed")(descriptionPressed.asInstanceOf[js.Any])
-    if (divider != null) __obj.updateDynamic("divider")(divider.asInstanceOf[js.Any])
-    if (flexContainer != null) __obj.updateDynamic("flexContainer")(flexContainer.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (iconChecked != null) __obj.updateDynamic("iconChecked")(iconChecked.asInstanceOf[js.Any])
-    if (iconColor != null) __obj.updateDynamic("iconColor")(iconColor.asInstanceOf[js.Any])
-    if (iconDisabled != null) __obj.updateDynamic("iconDisabled")(iconDisabled.asInstanceOf[js.Any])
-    if (iconExpanded != null) __obj.updateDynamic("iconExpanded")(iconExpanded.asInstanceOf[js.Any])
-    if (iconExpandedHovered != null) __obj.updateDynamic("iconExpandedHovered")(iconExpandedHovered.asInstanceOf[js.Any])
-    if (iconHovered != null) __obj.updateDynamic("iconHovered")(iconHovered.asInstanceOf[js.Any])
-    if (iconPressed != null) __obj.updateDynamic("iconPressed")(iconPressed.asInstanceOf[js.Any])
-    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelChecked != null) __obj.updateDynamic("labelChecked")(labelChecked.asInstanceOf[js.Any])
-    if (labelDisabled != null) __obj.updateDynamic("labelDisabled")(labelDisabled.asInstanceOf[js.Any])
-    if (labelHovered != null) __obj.updateDynamic("labelHovered")(labelHovered.asInstanceOf[js.Any])
-    if (linkContent != null) __obj.updateDynamic("linkContent")(linkContent.asInstanceOf[js.Any])
-    if (linkContentMenu != null) __obj.updateDynamic("linkContentMenu")(linkContentMenu.asInstanceOf[js.Any])
-    if (menuIcon != null) __obj.updateDynamic("menuIcon")(menuIcon.asInstanceOf[js.Any])
-    if (menuIconChecked != null) __obj.updateDynamic("menuIconChecked")(menuIconChecked.asInstanceOf[js.Any])
-    if (menuIconDisabled != null) __obj.updateDynamic("menuIconDisabled")(menuIconDisabled.asInstanceOf[js.Any])
-    if (menuIconExpanded != null) __obj.updateDynamic("menuIconExpanded")(menuIconExpanded.asInstanceOf[js.Any])
-    if (menuIconExpandedHovered != null) __obj.updateDynamic("menuIconExpandedHovered")(menuIconExpandedHovered.asInstanceOf[js.Any])
-    if (menuIconHovered != null) __obj.updateDynamic("menuIconHovered")(menuIconHovered.asInstanceOf[js.Any])
-    if (menuIconPressed != null) __obj.updateDynamic("menuIconPressed")(menuIconPressed.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (rootChecked != null) __obj.updateDynamic("rootChecked")(rootChecked.asInstanceOf[js.Any])
-    if (rootCheckedDisabled != null) __obj.updateDynamic("rootCheckedDisabled")(rootCheckedDisabled.asInstanceOf[js.Any])
-    if (rootCheckedHovered != null) __obj.updateDynamic("rootCheckedHovered")(rootCheckedHovered.asInstanceOf[js.Any])
-    if (rootCheckedPressed != null) __obj.updateDynamic("rootCheckedPressed")(rootCheckedPressed.asInstanceOf[js.Any])
-    if (rootDisabled != null) __obj.updateDynamic("rootDisabled")(rootDisabled.asInstanceOf[js.Any])
-    if (rootExpanded != null) __obj.updateDynamic("rootExpanded")(rootExpanded.asInstanceOf[js.Any])
-    if (rootExpandedHovered != null) __obj.updateDynamic("rootExpandedHovered")(rootExpandedHovered.asInstanceOf[js.Any])
-    if (rootFocused != null) __obj.updateDynamic("rootFocused")(rootFocused.asInstanceOf[js.Any])
-    if (rootHasMenu != null) __obj.updateDynamic("rootHasMenu")(rootHasMenu.asInstanceOf[js.Any])
-    if (rootHovered != null) __obj.updateDynamic("rootHovered")(rootHovered.asInstanceOf[js.Any])
-    if (rootPressed != null) __obj.updateDynamic("rootPressed")(rootPressed.asInstanceOf[js.Any])
-    if (screenReaderText != null) __obj.updateDynamic("screenReaderText")(screenReaderText.asInstanceOf[js.Any])
-    if (secondaryText != null) __obj.updateDynamic("secondaryText")(secondaryText.asInstanceOf[js.Any])
-    if (splitButtonContainer != null) __obj.updateDynamic("splitButtonContainer")(splitButtonContainer.asInstanceOf[js.Any])
-    if (splitButtonContainerChecked != null) __obj.updateDynamic("splitButtonContainerChecked")(splitButtonContainerChecked.asInstanceOf[js.Any])
-    if (splitButtonContainerCheckedHovered != null) __obj.updateDynamic("splitButtonContainerCheckedHovered")(splitButtonContainerCheckedHovered.asInstanceOf[js.Any])
-    if (splitButtonContainerDisabled != null) __obj.updateDynamic("splitButtonContainerDisabled")(splitButtonContainerDisabled.asInstanceOf[js.Any])
-    if (splitButtonContainerFocused != null) __obj.updateDynamic("splitButtonContainerFocused")(splitButtonContainerFocused.asInstanceOf[js.Any])
-    if (splitButtonContainerHovered != null) __obj.updateDynamic("splitButtonContainerHovered")(splitButtonContainerHovered.asInstanceOf[js.Any])
-    if (splitButtonDivider != null) __obj.updateDynamic("splitButtonDivider")(splitButtonDivider.asInstanceOf[js.Any])
-    if (splitButtonDividerDisabled != null) __obj.updateDynamic("splitButtonDividerDisabled")(splitButtonDividerDisabled.asInstanceOf[js.Any])
-    if (splitButtonFlexContainer != null) __obj.updateDynamic("splitButtonFlexContainer")(splitButtonFlexContainer.asInstanceOf[js.Any])
-    if (splitButtonMenuButton != null) __obj.updateDynamic("splitButtonMenuButton")(splitButtonMenuButton.asInstanceOf[js.Any])
-    if (splitButtonMenuButtonChecked != null) __obj.updateDynamic("splitButtonMenuButtonChecked")(splitButtonMenuButtonChecked.asInstanceOf[js.Any])
-    if (splitButtonMenuButtonDisabled != null) __obj.updateDynamic("splitButtonMenuButtonDisabled")(splitButtonMenuButtonDisabled.asInstanceOf[js.Any])
-    if (splitButtonMenuButtonExpanded != null) __obj.updateDynamic("splitButtonMenuButtonExpanded")(splitButtonMenuButtonExpanded.asInstanceOf[js.Any])
-    if (splitButtonMenuIcon != null) __obj.updateDynamic("splitButtonMenuIcon")(splitButtonMenuIcon.asInstanceOf[js.Any])
-    if (splitButtonMenuIconDisabled != null) __obj.updateDynamic("splitButtonMenuIconDisabled")(splitButtonMenuIconDisabled.asInstanceOf[js.Any])
-    if (splitContainer != null) __obj.updateDynamic("splitContainer")(splitContainer.asInstanceOf[js.Any])
-    if (splitMenu != null) __obj.updateDynamic("splitMenu")(splitMenu.asInstanceOf[js.Any])
-    if (splitPrimary != null) __obj.updateDynamic("splitPrimary")(splitPrimary.asInstanceOf[js.Any])
-    if (subMenuIcon != null) __obj.updateDynamic("subMenuIcon")(subMenuIcon.asInstanceOf[js.Any])
-    if (textContainer != null) __obj.updateDynamic("textContainer")(textContainer.asInstanceOf[js.Any])
     __obj.asInstanceOf[IContextualMenuItemStyles]
   }
+  @scala.inline
+  implicit class IContextualMenuItemStylesOps[Self <: IContextualMenuItemStyles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnchorLink(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchorLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnchorLinkNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorLink")(null)
+        ret
+    }
+    @scala.inline
+    def withCheckmarkIcon(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkmarkIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckmarkIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkmarkIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckmarkIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkmarkIcon")(null)
+        ret
+    }
+    @scala.inline
+    def withDivider(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("divider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDivider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("divider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDividerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("divider")(null)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(null)
+        ret
+    }
+    @scala.inline
+    def withIconColor(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconColorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconColor")(null)
+        ret
+    }
+    @scala.inline
+    def withItem(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(null)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(null)
+        ret
+    }
+    @scala.inline
+    def withLinkContent(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkContentNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkContent")(null)
+        ret
+    }
+    @scala.inline
+    def withLinkContentMenu(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkContentMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkContentMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkContentMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkContentMenuNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkContentMenu")(null)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(null)
+        ret
+    }
+    @scala.inline
+    def withSecondaryText(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondaryText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondaryTextNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryText")(null)
+        ret
+    }
+    @scala.inline
+    def withSplitContainer(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplitContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitContainerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitContainer")(null)
+        ret
+    }
+    @scala.inline
+    def withSplitMenu(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplitMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitMenuNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitMenu")(null)
+        ret
+    }
+    @scala.inline
+    def withSplitPrimary(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitPrimary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplitPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitPrimary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitPrimaryNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitPrimary")(null)
+        ret
+    }
+    @scala.inline
+    def withSubMenuIcon(value: IStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubMenuIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubMenuIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuIcon")(null)
+        ret
+    }
+  }
+  
 }
 

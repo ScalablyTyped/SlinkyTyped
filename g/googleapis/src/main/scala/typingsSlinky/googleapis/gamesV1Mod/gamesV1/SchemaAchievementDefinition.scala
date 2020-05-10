@@ -73,36 +73,173 @@ trait SchemaAchievementDefinition extends js.Object {
 
 object SchemaAchievementDefinition {
   @scala.inline
-  def apply(
-    achievementType: String = null,
-    description: String = null,
-    experiencePoints: String = null,
-    formattedTotalSteps: String = null,
-    id: String = null,
-    initialState: String = null,
-    isRevealedIconUrlDefault: js.UndefOr[Boolean] = js.undefined,
-    isUnlockedIconUrlDefault: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    name: String = null,
-    revealedIconUrl: String = null,
-    totalSteps: Int | Double = null,
-    unlockedIconUrl: String = null
-  ): SchemaAchievementDefinition = {
+  def apply(): SchemaAchievementDefinition = {
     val __obj = js.Dynamic.literal()
-    if (achievementType != null) __obj.updateDynamic("achievementType")(achievementType.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (experiencePoints != null) __obj.updateDynamic("experiencePoints")(experiencePoints.asInstanceOf[js.Any])
-    if (formattedTotalSteps != null) __obj.updateDynamic("formattedTotalSteps")(formattedTotalSteps.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (!js.isUndefined(isRevealedIconUrlDefault)) __obj.updateDynamic("isRevealedIconUrlDefault")(isRevealedIconUrlDefault.asInstanceOf[js.Any])
-    if (!js.isUndefined(isUnlockedIconUrlDefault)) __obj.updateDynamic("isUnlockedIconUrlDefault")(isUnlockedIconUrlDefault.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (revealedIconUrl != null) __obj.updateDynamic("revealedIconUrl")(revealedIconUrl.asInstanceOf[js.Any])
-    if (totalSteps != null) __obj.updateDynamic("totalSteps")(totalSteps.asInstanceOf[js.Any])
-    if (unlockedIconUrl != null) __obj.updateDynamic("unlockedIconUrl")(unlockedIconUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAchievementDefinition]
   }
+  @scala.inline
+  implicit class SchemaAchievementDefinitionOps[Self <: SchemaAchievementDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAchievementType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("achievementType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAchievementType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("achievementType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExperiencePoints(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experiencePoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExperiencePoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experiencePoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormattedTotalSteps(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedTotalSteps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormattedTotalSteps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedTotalSteps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRevealedIconUrlDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRevealedIconUrlDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsRevealedIconUrlDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRevealedIconUrlDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsUnlockedIconUrlDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUnlockedIconUrlDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsUnlockedIconUrlDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUnlockedIconUrlDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevealedIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revealedIconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevealedIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revealedIconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalSteps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSteps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalSteps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSteps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnlockedIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unlockedIconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnlockedIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unlockedIconUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

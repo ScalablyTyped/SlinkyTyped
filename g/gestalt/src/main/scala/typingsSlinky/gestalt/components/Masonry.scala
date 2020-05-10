@@ -1,11 +1,10 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.gestalt.AnonData
 import typingsSlinky.gestalt.gestaltStrings.MasonryDefaultLayout
 import typingsSlinky.gestalt.gestaltStrings.MasonryUniformRowLayout
 import typingsSlinky.gestalt.mod.MasonryProps
@@ -13,40 +12,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Masonry
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Masonry] {
+object Masonry {
   @JSImport("gestalt", "Masonry")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    comp: ReactComponentClass[js.Object],
-    items: js.Array[_],
-    columnWidth: Int | Double = null,
-    flexible: js.UndefOr[Boolean] = js.undefined,
-    gutterWidth: Int | Double = null,
-    layout: MasonryDefaultLayout | MasonryUniformRowLayout = null,
-    loadItems: () => Unit = null,
-    measurementStore: js.Any = null,
-    minCols: Int | Double = null,
-    scrollContainer: () => HTMLElement = null,
-    virtualize: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Masonry] = {
-    val __obj = js.Dynamic.literal(comp = comp.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
-    if (columnWidth != null) __obj.updateDynamic("columnWidth")(columnWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(flexible)) __obj.updateDynamic("flexible")(flexible.asInstanceOf[js.Any])
-    if (gutterWidth != null) __obj.updateDynamic("gutterWidth")(gutterWidth.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (loadItems != null) __obj.updateDynamic("loadItems")(js.Any.fromFunction0(loadItems))
-    if (measurementStore != null) __obj.updateDynamic("measurementStore")(measurementStore.asInstanceOf[js.Any])
-    if (minCols != null) __obj.updateDynamic("minCols")(minCols.asInstanceOf[js.Any])
-    if (scrollContainer != null) __obj.updateDynamic("scrollContainer")(js.Any.fromFunction0(scrollContainer))
-    if (!js.isUndefined(virtualize)) __obj.updateDynamic("virtualize")(virtualize.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Masonry] {
+    @scala.inline
+    def columnWidth(value: Double): this.type = set("columnWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexible(value: Boolean): this.type = set("flexible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gutterWidth(value: Double): this.type = set("gutterWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layout(value: MasonryDefaultLayout | MasonryUniformRowLayout): this.type = set("layout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadItems(value: () => Unit): this.type = set("loadItems", js.Any.fromFunction0(value))
+    @scala.inline
+    def measurementStore(value: js.Any): this.type = set("measurementStore", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minCols(value: Double): this.type = set("minCols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollContainer(value: () => HTMLElement): this.type = set("scrollContainer", js.Any.fromFunction0(value))
+    @scala.inline
+    def virtualBoundsBottom(value: Double): this.type = set("virtualBoundsBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def virtualBoundsTop(value: Double): this.type = set("virtualBoundsTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def virtualize(value: Boolean): this.type = set("virtualize", value.asInstanceOf[js.Any])
   }
-  type Props = MasonryProps
+  
+  def withProps(p: MasonryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(comp: ReactComponentClass[AnonData], items: js.Array[_]): Builder = {
+    val __props = js.Dynamic.literal(comp = comp.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MasonryProps]))
+  }
 }
 

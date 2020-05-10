@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   * In version 7.21.0: deleted
   * In version 6.6.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -37,12 +37,12 @@ class ListType protected () extends Type {
   @JSName("parameter")
   val parameter_FListType: IEntityType = js.native
   @JSName("containerAsBasicParameterType")
-  def containerAsBasicParameterType_MListType(): BasicParameterType = js.native
+  def containerAsBasicParameterType_MListType: BasicParameterType = js.native
   @JSName("containerAsJavaActionParameter")
-  def containerAsJavaActionParameter_MListType(): JavaActionParameter = js.native
+  def containerAsJavaActionParameter_MListType: JavaActionParameter = js.native
   @JSName("containerAsJavaAction")
-  def containerAsJavaAction_MListType(): JavaAction = js.native
-  def parameter(): EntityType = js.native
+  def containerAsJavaAction_MListType: JavaAction = js.native
+  def parameter: EntityType = js.native
   def parameter(newValue: EntityType): js.Any = js.native
 }
 

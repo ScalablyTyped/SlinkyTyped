@@ -16,18 +16,16 @@ trait ChatMemberStatus extends js.Object
 
 object ChatMemberStatus {
   @scala.inline
-  def administrator: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.administrator = this.cast("administrator")
+  def administrator: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.administrator = "administrator".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.administrator]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def creator: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.creator = "creator".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.creator]
   @scala.inline
-  def creator: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.creator = this.cast("creator")
+  def kicked: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.kicked = "kicked".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.kicked]
   @scala.inline
-  def kicked: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.kicked = this.cast("kicked")
+  def left: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.left = "left".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.left]
   @scala.inline
-  def left: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.left = this.cast("left")
+  def member: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.member = "member".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.member]
   @scala.inline
-  def member: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.member = this.cast("member")
-  @scala.inline
-  def restricted: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.restricted = this.cast("restricted")
+  def restricted: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.restricted = "restricted".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.restricted]
 }
 

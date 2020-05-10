@@ -14,10 +14,29 @@ trait HlsIngest extends js.Object {
 
 object HlsIngest {
   @scala.inline
-  def apply(IngestEndpoints: listOfIngestEndpoint = null): HlsIngest = {
+  def apply(): HlsIngest = {
     val __obj = js.Dynamic.literal()
-    if (IngestEndpoints != null) __obj.updateDynamic("IngestEndpoints")(IngestEndpoints.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsIngest]
   }
+  @scala.inline
+  implicit class HlsIngestOps[Self <: HlsIngest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIngestEndpoints(value: listOfIngestEndpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestEndpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIngestEndpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestEndpoints")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

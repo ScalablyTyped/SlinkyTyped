@@ -15,7 +15,7 @@ package object mod {
     ]
   ]
   type DynamicNumber = slinky.core.ReactComponentClass[typingsSlinky.reactDynamicNumber.mod.DynamicNumberProps]
-  type Omit[T, K /* <: java.lang.String */] = typingsSlinky.std.Pick[
+  type Omit[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[
     T, 
     /* import warning: importer.ImportType#apply Failed type conversion: {[ P in keyof T ]: P} & {[ P in K ]: never} & {[x: string] : never, [x: number] : never}[keyof T] */ js.Any
   ]

@@ -56,28 +56,125 @@ trait PipelineArgs extends js.Object {
 
 object PipelineArgs {
   @scala.inline
-  def apply(
-    inputBucket: Input[String],
-    role: Input[String],
-    awsKmsKeyArn: Input[String] = null,
-    contentConfig: Input[PipelineContentConfig] = null,
-    contentConfigPermissions: Input[js.Array[Input[PipelineContentConfigPermission]]] = null,
-    name: Input[String] = null,
-    notifications: Input[PipelineNotifications] = null,
-    outputBucket: Input[String] = null,
-    thumbnailConfig: Input[PipelineThumbnailConfig] = null,
-    thumbnailConfigPermissions: Input[js.Array[Input[PipelineThumbnailConfigPermission]]] = null
-  ): PipelineArgs = {
+  def apply(inputBucket: Input[String], role: Input[String]): PipelineArgs = {
     val __obj = js.Dynamic.literal(inputBucket = inputBucket.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any])
-    if (awsKmsKeyArn != null) __obj.updateDynamic("awsKmsKeyArn")(awsKmsKeyArn.asInstanceOf[js.Any])
-    if (contentConfig != null) __obj.updateDynamic("contentConfig")(contentConfig.asInstanceOf[js.Any])
-    if (contentConfigPermissions != null) __obj.updateDynamic("contentConfigPermissions")(contentConfigPermissions.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (notifications != null) __obj.updateDynamic("notifications")(notifications.asInstanceOf[js.Any])
-    if (outputBucket != null) __obj.updateDynamic("outputBucket")(outputBucket.asInstanceOf[js.Any])
-    if (thumbnailConfig != null) __obj.updateDynamic("thumbnailConfig")(thumbnailConfig.asInstanceOf[js.Any])
-    if (thumbnailConfigPermissions != null) __obj.updateDynamic("thumbnailConfigPermissions")(thumbnailConfigPermissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[PipelineArgs]
   }
+  @scala.inline
+  implicit class PipelineArgsOps[Self <: PipelineArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputBucket(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRole(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAwsKmsKeyArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsKmsKeyArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsKmsKeyArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsKmsKeyArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentConfig(value: Input[PipelineContentConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentConfigPermissions(value: Input[js.Array[Input[PipelineContentConfigPermission]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentConfigPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentConfigPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentConfigPermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotifications(value: Input[PipelineNotifications]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputBucket(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputBucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputBucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbnailConfig(value: Input[PipelineThumbnailConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbnailConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbnailConfigPermissions(value: Input[js.Array[Input[PipelineThumbnailConfigPermission]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailConfigPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbnailConfigPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailConfigPermissions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

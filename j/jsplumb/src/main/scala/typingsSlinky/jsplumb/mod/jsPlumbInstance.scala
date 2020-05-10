@@ -1,10 +1,10 @@
 package typingsSlinky.jsplumb.mod
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Selection
 import typingsSlinky.jsplumb.AnonEach
 import typingsSlinky.jsplumb.jsplumbStrings.click
 import typingsSlinky.jsplumb.jsplumbStrings.connection
-import typingsSlinky.std.Element
 import typingsSlinky.std.Event_
 import typingsSlinky.std.Map
 import scala.scalajs.js
@@ -68,7 +68,7 @@ class jsPlumbInstance () extends js.Object {
   def empty(el: Selector | String): Unit = js.native
   def empty(el: Element): Unit = js.native
   def fire(event: String, value: js.Object, originalEvent: Event_): Unit = js.native
-  def getAllConnections(): js.Object = js.native
+  def getAllConnections(): js.Array[Connection] = js.native
   def getConnections(scope: String, options: js.Object): js.Array[_] | (Map[_, _]) = js.native
   def getConnections(scope: String, options: js.Object, scope2: String): js.Array[_] | (Map[_, _]) = js.native
   def getConnections(scope: String, options: js.Object, scope2: String, source: Selector | String): js.Array[_] | (Map[_, _]) = js.native
@@ -87,7 +87,7 @@ class jsPlumbInstance () extends js.Object {
     target: Selector | String,
     flat: Boolean
   ): js.Array[_] | (Map[_, _]) = js.native
-  def getContainer(): org.scalajs.dom.raw.Element = js.native
+  def getContainer(): Element = js.native
   def getDefaultScope(): String = js.native
   def getEndpoint(uuid: String): Endpoint = js.native
   def getEndpoints(element: String): js.Array[Endpoint] = js.native
@@ -95,23 +95,19 @@ class jsPlumbInstance () extends js.Object {
   def getHoverPaintStyle(): Selection = js.native
   def getHoverPaintStyle(params: js.Object): Selection = js.native
   def getHoverPaintStyle(params: js.Object, scope: String): Selection = js.native
+  def getHoverPaintStyle(params: js.Object, scope: String, source: String | Element | Selector | js.Array[_]): Selection = js.native
   def getHoverPaintStyle(
     params: js.Object,
     scope: String,
-    source: String | org.scalajs.dom.raw.Element | Selector | js.Array[_]
+    source: String | Element | Selector | js.Array[_],
+    target: String | Element | Selector | js.Array[_]
   ): Selection = js.native
   def getHoverPaintStyle(
     params: js.Object,
     scope: String,
-    source: String | org.scalajs.dom.raw.Element | Selector | js.Array[_],
-    target: String | org.scalajs.dom.raw.Element | Selector | js.Array[_]
-  ): Selection = js.native
-  def getHoverPaintStyle(
-    params: js.Object,
-    scope: String,
-    source: String | org.scalajs.dom.raw.Element | Selector | js.Array[_],
-    target: String | org.scalajs.dom.raw.Element | Selector | js.Array[_],
-    element: String | org.scalajs.dom.raw.Element | Selector | js.Array[_]
+    source: String | Element | Selector | js.Array[_],
+    target: String | Element | Selector | js.Array[_],
+    element: String | Element | Selector | js.Array[_]
   ): Selection = js.native
   def getScope(Element: String): String = js.native
   def getScope(Element: Element): String = js.native
@@ -148,7 +144,7 @@ class jsPlumbInstance () extends js.Object {
     el: Selector | String,
     params: js.Object,
     endpoint: js.UndefOr[js.Array[_] | String],
-    parent: js.UndefOr[org.scalajs.dom.raw.Element | String],
+    parent: js.UndefOr[Element | String],
     scope: js.UndefOr[String],
     dragOptions: js.UndefOr[js.Object],
     deleteEndpointsOnEmpty: js.UndefOr[Boolean],
@@ -158,7 +154,7 @@ class jsPlumbInstance () extends js.Object {
     el: Element,
     params: js.Object,
     endpoint: js.UndefOr[js.Array[_] | String],
-    parent: js.UndefOr[org.scalajs.dom.raw.Element | String],
+    parent: js.UndefOr[Element | String],
     scope: js.UndefOr[String],
     dragOptions: js.UndefOr[js.Object],
     deleteEndpointsOnEmpty: js.UndefOr[Boolean],

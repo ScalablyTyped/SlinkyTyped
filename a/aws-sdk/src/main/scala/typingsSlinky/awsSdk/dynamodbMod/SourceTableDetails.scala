@@ -51,18 +51,96 @@ object SourceTableDetails {
     ProvisionedThroughput: ProvisionedThroughput,
     TableCreationDateTime: js.Date,
     TableId: TableId,
-    TableName: TableName,
-    BillingMode: BillingMode = null,
-    ItemCount: Int | scala.Double = null,
-    TableArn: TableArn = null,
-    TableSizeBytes: Int | scala.Double = null
+    TableName: TableName
   ): SourceTableDetails = {
     val __obj = js.Dynamic.literal(KeySchema = KeySchema.asInstanceOf[js.Any], ProvisionedThroughput = ProvisionedThroughput.asInstanceOf[js.Any], TableCreationDateTime = TableCreationDateTime.asInstanceOf[js.Any], TableId = TableId.asInstanceOf[js.Any], TableName = TableName.asInstanceOf[js.Any])
-    if (BillingMode != null) __obj.updateDynamic("BillingMode")(BillingMode.asInstanceOf[js.Any])
-    if (ItemCount != null) __obj.updateDynamic("ItemCount")(ItemCount.asInstanceOf[js.Any])
-    if (TableArn != null) __obj.updateDynamic("TableArn")(TableArn.asInstanceOf[js.Any])
-    if (TableSizeBytes != null) __obj.updateDynamic("TableSizeBytes")(TableSizeBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceTableDetails]
   }
+  @scala.inline
+  implicit class SourceTableDetailsOps[Self <: SourceTableDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeySchema(value: KeySchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySchema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughput(value: ProvisionedThroughput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTableCreationDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableCreationDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTableId(value: TableId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTableName(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBillingMode(value: BillingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemCount(value: ItemCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableArn(value: TableArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableSizeBytes(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableSizeBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

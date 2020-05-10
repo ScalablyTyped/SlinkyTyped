@@ -96,7 +96,7 @@ trait MediaStreamTrack extends EventTarget {
   def removeEventListener_ended(
     `type`: ended,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_isolationchange(`type`: isolationchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -110,7 +110,7 @@ trait MediaStreamTrack extends EventTarget {
   def removeEventListener_isolationchange(
     `type`: isolationchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mute(`type`: mute, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -124,7 +124,7 @@ trait MediaStreamTrack extends EventTarget {
   def removeEventListener_mute(
     `type`: mute,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_unmute(`type`: unmute, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -138,12 +138,13 @@ trait MediaStreamTrack extends EventTarget {
   def removeEventListener_unmute(
     `type`: unmute,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def stop(): Unit = js.native
 }
 
 @JSGlobal("MediaStreamTrack")
 @js.native
-object MediaStreamTrack extends Instantiable0[MediaStreamTrack]
+object MediaStreamTrack
+  extends Instantiable0[org.scalajs.dom.experimental.mediastream.MediaStreamTrack]
 

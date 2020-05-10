@@ -6,60 +6,180 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.leaflet.mod.GridLayerOptions because var conflicts: attribution, pane. Inlined bounds, className, keepBuffer, maxZoom, minZoom, noWrap, opacity, tileSize, updateInterval, updateWhenIdle, updateWhenZooming, zIndex */ trait GridLayerProps extends MapLayerProps {
-  var bounds: js.UndefOr[LatLngBoundsExpression] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var keepBuffer: js.UndefOr[Double] = js.undefined
-  var maxZoom: js.UndefOr[Double] = js.undefined
-  var minZoom: js.UndefOr[Double] = js.undefined
-  var noWrap: js.UndefOr[Boolean] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
-  var tileSize: js.UndefOr[Double | Point_] = js.undefined
-  var updateInterval: js.UndefOr[Double] = js.undefined
-  var updateWhenIdle: js.UndefOr[Boolean] = js.undefined
-  var updateWhenZooming: js.UndefOr[Boolean] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.leaflet.mod.GridLayerOptions because var conflicts: attribution, pane. Inlined bounds, className, keepBuffer, maxZoom, minZoom, noWrap, opacity, tileSize, updateInterval, updateWhenIdle, updateWhenZooming, zIndex */ @js.native
+trait GridLayerProps extends MapLayerProps {
+  var bounds: js.UndefOr[LatLngBoundsExpression] = js.native
+  var className: js.UndefOr[String] = js.native
+  var keepBuffer: js.UndefOr[Double] = js.native
+  var maxZoom: js.UndefOr[Double] = js.native
+  var minZoom: js.UndefOr[Double] = js.native
+  var noWrap: js.UndefOr[Boolean] = js.native
+  var opacity: js.UndefOr[Double] = js.native
+  var tileSize: js.UndefOr[Double | Point_] = js.native
+  var updateInterval: js.UndefOr[Double] = js.native
+  var updateWhenIdle: js.UndefOr[Boolean] = js.native
+  var updateWhenZooming: js.UndefOr[Boolean] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object GridLayerProps {
   @scala.inline
-  def apply(
-    attribution: String = null,
-    bounds: LatLngBoundsExpression = null,
-    children: Children = null,
-    className: String = null,
-    keepBuffer: Int | Double = null,
-    leaflet: LeafletContext = null,
-    maxZoom: Int | Double = null,
-    minZoom: Int | Double = null,
-    noWrap: js.UndefOr[Boolean] = js.undefined,
-    opacity: Int | Double = null,
-    pane: String = null,
-    tileSize: Double | Point_ = null,
-    updateInterval: Int | Double = null,
-    updateWhenIdle: js.UndefOr[Boolean] = js.undefined,
-    updateWhenZooming: js.UndefOr[Boolean] = js.undefined,
-    zIndex: Int | Double = null
-  ): GridLayerProps = {
+  def apply(): GridLayerProps = {
     val __obj = js.Dynamic.literal()
-    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (keepBuffer != null) __obj.updateDynamic("keepBuffer")(keepBuffer.asInstanceOf[js.Any])
-    if (leaflet != null) __obj.updateDynamic("leaflet")(leaflet.asInstanceOf[js.Any])
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(noWrap)) __obj.updateDynamic("noWrap")(noWrap.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
-    if (tileSize != null) __obj.updateDynamic("tileSize")(tileSize.asInstanceOf[js.Any])
-    if (updateInterval != null) __obj.updateDynamic("updateInterval")(updateInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(updateWhenIdle)) __obj.updateDynamic("updateWhenIdle")(updateWhenIdle.asInstanceOf[js.Any])
-    if (!js.isUndefined(updateWhenZooming)) __obj.updateDynamic("updateWhenZooming")(updateWhenZooming.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridLayerProps]
   }
+  @scala.inline
+  implicit class GridLayerPropsOps[Self <: GridLayerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBounds(value: LatLngBoundsExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepBuffer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepBuffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoWrap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoWrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noWrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileSize(value: Double | Point_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateWhenIdle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWhenIdle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateWhenIdle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWhenIdle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateWhenZooming(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWhenZooming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateWhenZooming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWhenZooming")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

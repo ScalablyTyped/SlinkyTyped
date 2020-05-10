@@ -1,7 +1,7 @@
 package typingsSlinky.meyda.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.AudioContext
+import org.scalajs.dom.raw.AudioContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

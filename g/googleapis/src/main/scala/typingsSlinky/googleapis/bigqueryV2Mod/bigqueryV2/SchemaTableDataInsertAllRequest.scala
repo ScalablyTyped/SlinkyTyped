@@ -40,20 +40,77 @@ trait SchemaTableDataInsertAllRequest extends js.Object {
 
 object SchemaTableDataInsertAllRequest {
   @scala.inline
-  def apply(
-    ignoreUnknownValues: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    rows: js.Array[AnonInsertId] = null,
-    skipInvalidRows: js.UndefOr[Boolean] = js.undefined,
-    templateSuffix: String = null
-  ): SchemaTableDataInsertAllRequest = {
+  def apply(): SchemaTableDataInsertAllRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ignoreUnknownValues)) __obj.updateDynamic("ignoreUnknownValues")(ignoreUnknownValues.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipInvalidRows)) __obj.updateDynamic("skipInvalidRows")(skipInvalidRows.asInstanceOf[js.Any])
-    if (templateSuffix != null) __obj.updateDynamic("templateSuffix")(templateSuffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableDataInsertAllRequest]
   }
+  @scala.inline
+  implicit class SchemaTableDataInsertAllRequestOps[Self <: SchemaTableDataInsertAllRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIgnoreUnknownValues(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnknownValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreUnknownValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnknownValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[AnonInsertId]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipInvalidRows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipInvalidRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipInvalidRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipInvalidRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateSuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateSuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateSuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateSuffix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

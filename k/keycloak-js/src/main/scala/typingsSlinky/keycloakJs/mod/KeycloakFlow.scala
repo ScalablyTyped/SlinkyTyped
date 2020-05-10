@@ -13,12 +13,10 @@ trait KeycloakFlow extends js.Object
 
 object KeycloakFlow {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hybrid: typingsSlinky.keycloakJs.keycloakJsStrings.hybrid = "hybrid".asInstanceOf[typingsSlinky.keycloakJs.keycloakJsStrings.hybrid]
   @scala.inline
-  def hybrid: typingsSlinky.keycloakJs.keycloakJsStrings.hybrid = this.cast("hybrid")
+  def `implicit`: typingsSlinky.keycloakJs.keycloakJsStrings.`implicit` = "implicit".asInstanceOf[typingsSlinky.keycloakJs.keycloakJsStrings.`implicit`]
   @scala.inline
-  def `implicit`: typingsSlinky.keycloakJs.keycloakJsStrings.`implicit` = this.cast("implicit")
-  @scala.inline
-  def standard: typingsSlinky.keycloakJs.keycloakJsStrings.standard = this.cast("standard")
+  def standard: typingsSlinky.keycloakJs.keycloakJsStrings.standard = "standard".asInstanceOf[typingsSlinky.keycloakJs.keycloakJsStrings.standard]
 }
 

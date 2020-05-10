@@ -26,7 +26,7 @@ object crypto extends js.Object {
     * @param algo Symmetric encryption algorithm
     * @returns Random bytes as a string to be used as a key
     */
-  def generateSessionKey(algo: symmetric): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def generateSessionKey(algo: symmetric): js.typedarray.Uint8Array = js.native
   /**
     * Returns the types comprising the encrypted session key of an algorithm
     * @param algo The public key algorithm
@@ -39,7 +39,7 @@ object crypto extends js.Object {
     * @param algo Symmetric encryption algorithm
     * @returns Random bytes with length equal to the block size of the cipher, plus the last two bytes repeated.
     */
-  def getPrefixRandom(algo: symmetric): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def getPrefixRandom(algo: symmetric): js.typedarray.Uint8Array = js.native
   /**
     * Returns the types comprising the private key of an algorithm
     * @param algo The public key algorithm

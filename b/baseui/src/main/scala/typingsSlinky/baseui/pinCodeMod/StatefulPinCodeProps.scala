@@ -9,6 +9,7 @@ import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.left
+import typingsSlinky.baseui.baseuiStrings.mini
 import typingsSlinky.baseui.baseuiStrings.none
 import typingsSlinky.baseui.baseuiStrings.right
 import typingsSlinky.baseui.inputMod.InputOverrides
@@ -37,6 +38,7 @@ trait StatefulPinCodeProps extends js.Object {
   var error: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var initialState: js.UndefOr[State] = js.native
+  var inputMode: js.UndefOr[String] = js.native
   var inputRef: js.UndefOr[Ref[HTMLInputElement]] = js.native
   var manageFocus: js.UndefOr[Boolean] = js.native
   var max: js.UndefOr[Double] = js.native
@@ -53,7 +55,7 @@ trait StatefulPinCodeProps extends js.Object {
   var positive: js.UndefOr[Boolean] = js.native
   var required: js.UndefOr[Boolean] = js.native
   var rows: js.UndefOr[Double] = js.native
-  var size: js.UndefOr[default_ | compact | large_] = js.native
+  var size: js.UndefOr[mini | default_ | compact | large_] = js.native
   var startEnhancer: js.UndefOr[(js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]] = js.native
   var stateReducer: js.UndefOr[js.Function3[change_, /* nextState */ State, /* currentState */ State, State]] = js.native
   var `type`: js.UndefOr[String] = js.native

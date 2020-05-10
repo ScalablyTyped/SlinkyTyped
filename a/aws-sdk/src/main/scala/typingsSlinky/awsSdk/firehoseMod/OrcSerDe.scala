@@ -50,30 +50,137 @@ trait OrcSerDe extends js.Object {
 
 object OrcSerDe {
   @scala.inline
-  def apply(
-    BlockSizeBytes: Int | Double = null,
-    BloomFilterColumns: ListOfNonEmptyStringsWithoutWhitespace = null,
-    BloomFilterFalsePositiveProbability: Int | Double = null,
-    Compression: OrcCompression = null,
-    DictionaryKeyThreshold: Int | Double = null,
-    EnablePadding: js.UndefOr[Boolean] = js.undefined,
-    FormatVersion: OrcFormatVersion = null,
-    PaddingTolerance: Int | Double = null,
-    RowIndexStride: Int | Double = null,
-    StripeSizeBytes: Int | Double = null
-  ): OrcSerDe = {
+  def apply(): OrcSerDe = {
     val __obj = js.Dynamic.literal()
-    if (BlockSizeBytes != null) __obj.updateDynamic("BlockSizeBytes")(BlockSizeBytes.asInstanceOf[js.Any])
-    if (BloomFilterColumns != null) __obj.updateDynamic("BloomFilterColumns")(BloomFilterColumns.asInstanceOf[js.Any])
-    if (BloomFilterFalsePositiveProbability != null) __obj.updateDynamic("BloomFilterFalsePositiveProbability")(BloomFilterFalsePositiveProbability.asInstanceOf[js.Any])
-    if (Compression != null) __obj.updateDynamic("Compression")(Compression.asInstanceOf[js.Any])
-    if (DictionaryKeyThreshold != null) __obj.updateDynamic("DictionaryKeyThreshold")(DictionaryKeyThreshold.asInstanceOf[js.Any])
-    if (!js.isUndefined(EnablePadding)) __obj.updateDynamic("EnablePadding")(EnablePadding.asInstanceOf[js.Any])
-    if (FormatVersion != null) __obj.updateDynamic("FormatVersion")(FormatVersion.asInstanceOf[js.Any])
-    if (PaddingTolerance != null) __obj.updateDynamic("PaddingTolerance")(PaddingTolerance.asInstanceOf[js.Any])
-    if (RowIndexStride != null) __obj.updateDynamic("RowIndexStride")(RowIndexStride.asInstanceOf[js.Any])
-    if (StripeSizeBytes != null) __obj.updateDynamic("StripeSizeBytes")(StripeSizeBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrcSerDe]
   }
+  @scala.inline
+  implicit class OrcSerDeOps[Self <: OrcSerDe] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlockSizeBytes(value: BlockSizeBytes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockSizeBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBloomFilterColumns(value: ListOfNonEmptyStringsWithoutWhitespace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BloomFilterColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBloomFilterColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BloomFilterColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBloomFilterFalsePositiveProbability(value: Proportion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BloomFilterFalsePositiveProbability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBloomFilterFalsePositiveProbability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BloomFilterFalsePositiveProbability")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompression(value: OrcCompression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Compression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Compression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDictionaryKeyThreshold(value: Proportion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DictionaryKeyThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDictionaryKeyThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DictionaryKeyThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnablePadding(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnablePadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablePadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnablePadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatVersion(value: OrcFormatVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FormatVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FormatVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingTolerance(value: Proportion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaddingTolerance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingTolerance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaddingTolerance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowIndexStride(value: OrcRowIndexStride): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowIndexStride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowIndexStride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowIndexStride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStripeSizeBytes(value: OrcStripeSizeBytes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StripeSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStripeSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StripeSizeBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.testingLibraryReact.mod
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLDocument
 import typingsSlinky.prettyFormat.mod.OptionsReceived
-import typingsSlinky.std.Element
-import typingsSlinky.std.HTMLDocument
 import typingsSlinky.testingLibraryDom.getQueriesForElementMod.BoundFunction
 import typingsSlinky.testingLibraryDom.queriesMod.AllByBoundAttribute
 import typingsSlinky.testingLibraryDom.queriesMod.AllByRole

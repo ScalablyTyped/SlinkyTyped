@@ -5,45 +5,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LocationTaskOptions extends js.Object {
-  var accuracy: js.UndefOr[LocationAccuracy] = js.undefined
-  var activityType: js.UndefOr[LocationActivityType] = js.undefined
-  var deferredUpdatesDistance: js.UndefOr[Double] = js.undefined
-  var deferredUpdatesInterval: js.UndefOr[Double] = js.undefined
-  var deferredUpdatesTimeout: js.UndefOr[Double] = js.undefined
-  var distanceInterval: js.UndefOr[Double] = js.undefined
-  var foregroundService: js.UndefOr[AnonNotificationBody] = js.undefined
-  var pausesUpdatesAutomatically: js.UndefOr[Boolean] = js.undefined
-  var showsBackgroundLocationIndicator: js.UndefOr[Boolean] = js.undefined
-  var timeInterval: js.UndefOr[Double] = js.undefined
+  var accuracy: js.UndefOr[LocationAccuracy] = js.native
+  var activityType: js.UndefOr[LocationActivityType] = js.native
+  var deferredUpdatesDistance: js.UndefOr[Double] = js.native
+  var deferredUpdatesInterval: js.UndefOr[Double] = js.native
+  var deferredUpdatesTimeout: js.UndefOr[Double] = js.native
+  var distanceInterval: js.UndefOr[Double] = js.native
+  var foregroundService: js.UndefOr[AnonNotificationBody] = js.native
+  var pausesUpdatesAutomatically: js.UndefOr[Boolean] = js.native
+  var showsBackgroundLocationIndicator: js.UndefOr[Boolean] = js.native
+  var timeInterval: js.UndefOr[Double] = js.native
 }
 
 object LocationTaskOptions {
   @scala.inline
-  def apply(
-    accuracy: LocationAccuracy = null,
-    activityType: LocationActivityType = null,
-    deferredUpdatesDistance: Int | Double = null,
-    deferredUpdatesInterval: Int | Double = null,
-    deferredUpdatesTimeout: Int | Double = null,
-    distanceInterval: Int | Double = null,
-    foregroundService: AnonNotificationBody = null,
-    pausesUpdatesAutomatically: js.UndefOr[Boolean] = js.undefined,
-    showsBackgroundLocationIndicator: js.UndefOr[Boolean] = js.undefined,
-    timeInterval: Int | Double = null
-  ): LocationTaskOptions = {
+  def apply(): LocationTaskOptions = {
     val __obj = js.Dynamic.literal()
-    if (accuracy != null) __obj.updateDynamic("accuracy")(accuracy.asInstanceOf[js.Any])
-    if (activityType != null) __obj.updateDynamic("activityType")(activityType.asInstanceOf[js.Any])
-    if (deferredUpdatesDistance != null) __obj.updateDynamic("deferredUpdatesDistance")(deferredUpdatesDistance.asInstanceOf[js.Any])
-    if (deferredUpdatesInterval != null) __obj.updateDynamic("deferredUpdatesInterval")(deferredUpdatesInterval.asInstanceOf[js.Any])
-    if (deferredUpdatesTimeout != null) __obj.updateDynamic("deferredUpdatesTimeout")(deferredUpdatesTimeout.asInstanceOf[js.Any])
-    if (distanceInterval != null) __obj.updateDynamic("distanceInterval")(distanceInterval.asInstanceOf[js.Any])
-    if (foregroundService != null) __obj.updateDynamic("foregroundService")(foregroundService.asInstanceOf[js.Any])
-    if (!js.isUndefined(pausesUpdatesAutomatically)) __obj.updateDynamic("pausesUpdatesAutomatically")(pausesUpdatesAutomatically.asInstanceOf[js.Any])
-    if (!js.isUndefined(showsBackgroundLocationIndicator)) __obj.updateDynamic("showsBackgroundLocationIndicator")(showsBackgroundLocationIndicator.asInstanceOf[js.Any])
-    if (timeInterval != null) __obj.updateDynamic("timeInterval")(timeInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationTaskOptions]
   }
+  @scala.inline
+  implicit class LocationTaskOptionsOps[Self <: LocationTaskOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccuracy(value: LocationAccuracy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccuracy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityType(value: LocationActivityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeferredUpdatesDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deferredUpdatesDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeferredUpdatesDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deferredUpdatesDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeferredUpdatesInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deferredUpdatesInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeferredUpdatesInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deferredUpdatesInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeferredUpdatesTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deferredUpdatesTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeferredUpdatesTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deferredUpdatesTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistanceInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistanceInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForegroundService(value: AnonNotificationBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foregroundService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForegroundService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foregroundService")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPausesUpdatesAutomatically(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pausesUpdatesAutomatically")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPausesUpdatesAutomatically: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pausesUpdatesAutomatically")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowsBackgroundLocationIndicator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showsBackgroundLocationIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowsBackgroundLocationIndicator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showsBackgroundLocationIndicator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeInterval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -24,11 +24,41 @@ trait SchemaRowDimensions extends js.Object {
 
 object SchemaRowDimensions {
   @scala.inline
-  def apply(publisherIdentifier: String = null, timeInterval: SchemaTimeInterval = null): SchemaRowDimensions = {
+  def apply(): SchemaRowDimensions = {
     val __obj = js.Dynamic.literal()
-    if (publisherIdentifier != null) __obj.updateDynamic("publisherIdentifier")(publisherIdentifier.asInstanceOf[js.Any])
-    if (timeInterval != null) __obj.updateDynamic("timeInterval")(timeInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRowDimensions]
   }
+  @scala.inline
+  implicit class SchemaRowDimensionsOps[Self <: SchemaRowDimensions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPublisherIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublisherIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeInterval(value: SchemaTimeInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeInterval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

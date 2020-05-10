@@ -14,10 +14,29 @@ trait SchemaGetOffersResponse extends js.Object {
 
 object SchemaGetOffersResponse {
   @scala.inline
-  def apply(products: js.Array[SchemaProduct] = null): SchemaGetOffersResponse = {
+  def apply(): SchemaGetOffersResponse = {
     val __obj = js.Dynamic.literal()
-    if (products != null) __obj.updateDynamic("products")(products.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetOffersResponse]
   }
+  @scala.inline
+  implicit class SchemaGetOffersResponseOps[Self <: SchemaGetOffersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProducts(value: js.Array[SchemaProduct]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("products")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProducts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("products")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

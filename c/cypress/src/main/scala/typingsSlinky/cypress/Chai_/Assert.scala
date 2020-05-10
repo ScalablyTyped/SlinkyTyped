@@ -6,7 +6,6 @@ import typingsSlinky.cypress.Object
 import typingsSlinky.std.Partial
 import typingsSlinky.std.ReadonlyMap
 import typingsSlinky.std.ReadonlySet
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.WeakSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -44,7 +43,7 @@ trait Assert extends js.Object {
     * @param constructor   Potential expected error constructor.
     * @param message   Message to display on error.
     */
-  def Throw(fn: js.Function, errType: js.Function, regExp: RegExp): Unit = js.native
+  def Throw(fn: js.Function, errType: js.Function, regExp: js.RegExp): Unit = js.native
   def Throw(fn: js.Function, message: String): Unit = js.native
   /**
     * Asserts that function will throw an error with message matching regexp.
@@ -53,7 +52,7 @@ trait Assert extends js.Object {
     * @param regExp   Potential expected message match.
     * @param message   Message to display on error.
     */
-  def Throw(fn: js.Function, regExp: RegExp): Unit = js.native
+  def Throw(fn: js.Function, regExp: js.RegExp): Unit = js.native
   /**
     * Asserts that the target is equal to expected, to within a +/- delta range.
     *
@@ -371,7 +370,7 @@ trait Assert extends js.Object {
     * @param constructor   Potential expected error constructor.
     * @param message   Message to display on error.
     */
-  def doesNotThrow(fn: js.Function, errType: js.Function, regExp: RegExp): Unit = js.native
+  def doesNotThrow(fn: js.Function, errType: js.Function, regExp: js.RegExp): Unit = js.native
   def doesNotThrow(fn: js.Function, message: String): Unit = js.native
   /**
     * Asserts that function will throw an error with message matching regexp.
@@ -380,7 +379,7 @@ trait Assert extends js.Object {
     * @param regExp   Potential expected message match.
     * @param message   Message to display on error.
     */
-  def doesNotThrow(fn: js.Function, regExp: RegExp): Unit = js.native
+  def doesNotThrow(fn: js.Function, regExp: js.RegExp): Unit = js.native
   /**
     * Asserts non-strict equality (==) of actual and expected.
     *
@@ -1495,7 +1494,7 @@ trait Assert extends js.Object {
     * @param constructor   Potential expected error constructor.
     * @param message   Message to display on error.
     */
-  def `throw`(fn: js.Function, constructor: js.Function, regExp: RegExp): Unit = js.native
+  def `throw`(fn: js.Function, constructor: js.Function, regExp: js.RegExp): Unit = js.native
   def `throw`(fn: js.Function, message: String): Unit = js.native
   /**
     * Asserts that function will throw an error with message matching regexp.
@@ -1504,7 +1503,7 @@ trait Assert extends js.Object {
     * @param regExp   Potential expected message match.
     * @param message   Message to display on error.
     */
-  def `throw`(fn: js.Function, regExp: RegExp): Unit = js.native
+  def `throw`(fn: js.Function, regExp: js.RegExp): Unit = js.native
   /**
     * Asserts that fn will throw an error.
     *
@@ -1522,7 +1521,7 @@ trait Assert extends js.Object {
     * @param constructor   Potential expected error constructor.
     * @param message   Message to display on error.
     */
-  def throws(fn: js.Function, errType: js.Function, regExp: RegExp): Unit = js.native
+  def throws(fn: js.Function, errType: js.Function, regExp: js.RegExp): Unit = js.native
   /**
     * Asserts that function will throw an error with message matching regexp.
     *
@@ -1530,8 +1529,8 @@ trait Assert extends js.Object {
     * @param errType  Potential expected message match or error constructor.
     * @param message   Message to display on error.
     */
-  def throws(fn: js.Function, errType: RegExp): Unit = js.native
-  def throws(fn: js.Function, errType: RegExp, message: String): Unit = js.native
+  def throws(fn: js.Function, errType: js.RegExp): Unit = js.native
+  def throws(fn: js.Function, errType: js.RegExp, message: String): Unit = js.native
   def throws(fn: js.Function, message: String): Unit = js.native
   /**
     * Asserts that value's type is name, as determined by Object.prototype.toString.

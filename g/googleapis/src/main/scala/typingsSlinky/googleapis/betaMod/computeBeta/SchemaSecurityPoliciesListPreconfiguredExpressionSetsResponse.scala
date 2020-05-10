@@ -11,10 +11,29 @@ trait SchemaSecurityPoliciesListPreconfiguredExpressionSetsResponse extends js.O
 
 object SchemaSecurityPoliciesListPreconfiguredExpressionSetsResponse {
   @scala.inline
-  def apply(preconfiguredExpressionSets: SchemaSecurityPoliciesWafConfig = null): SchemaSecurityPoliciesListPreconfiguredExpressionSetsResponse = {
+  def apply(): SchemaSecurityPoliciesListPreconfiguredExpressionSetsResponse = {
     val __obj = js.Dynamic.literal()
-    if (preconfiguredExpressionSets != null) __obj.updateDynamic("preconfiguredExpressionSets")(preconfiguredExpressionSets.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecurityPoliciesListPreconfiguredExpressionSetsResponse]
   }
+  @scala.inline
+  implicit class SchemaSecurityPoliciesListPreconfiguredExpressionSetsResponseOps[Self <: SchemaSecurityPoliciesListPreconfiguredExpressionSetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPreconfiguredExpressionSets(value: SchemaSecurityPoliciesWafConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preconfiguredExpressionSets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreconfiguredExpressionSets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preconfiguredExpressionSets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,20 +17,18 @@ trait YouTubePlayerQuality extends js.Object
 
 object YouTubePlayerQuality {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.ytPlayer.ytPlayerStrings.default = "default".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.default]
   @scala.inline
-  def default: typingsSlinky.ytPlayer.ytPlayerStrings.default = this.cast("default")
+  def hd1080: typingsSlinky.ytPlayer.ytPlayerStrings.hd1080 = "hd1080".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.hd1080]
   @scala.inline
-  def hd1080: typingsSlinky.ytPlayer.ytPlayerStrings.hd1080 = this.cast("hd1080")
+  def hd720: typingsSlinky.ytPlayer.ytPlayerStrings.hd720 = "hd720".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.hd720]
   @scala.inline
-  def hd720: typingsSlinky.ytPlayer.ytPlayerStrings.hd720 = this.cast("hd720")
+  def highres: typingsSlinky.ytPlayer.ytPlayerStrings.highres = "highres".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.highres]
   @scala.inline
-  def highres: typingsSlinky.ytPlayer.ytPlayerStrings.highres = this.cast("highres")
+  def large: typingsSlinky.ytPlayer.ytPlayerStrings.large = "large".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.large]
   @scala.inline
-  def large: typingsSlinky.ytPlayer.ytPlayerStrings.large = this.cast("large")
+  def medium: typingsSlinky.ytPlayer.ytPlayerStrings.medium = "medium".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.medium]
   @scala.inline
-  def medium: typingsSlinky.ytPlayer.ytPlayerStrings.medium = this.cast("medium")
-  @scala.inline
-  def small: typingsSlinky.ytPlayer.ytPlayerStrings.small = this.cast("small")
+  def small: typingsSlinky.ytPlayer.ytPlayerStrings.small = "small".asInstanceOf[typingsSlinky.ytPlayer.ytPlayerStrings.small]
 }
 

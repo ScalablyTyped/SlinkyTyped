@@ -13,10 +13,8 @@ trait ContextMenuMouseEvent extends js.Object
 
 object ContextMenuMouseEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def mousedown: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.mousedown = "mousedown".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.mousedown]
   @scala.inline
-  def mousedown: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.mousedown = this.cast("mousedown")
-  @scala.inline
-  def mouseup: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.mouseup = this.cast("mouseup")
+  def mouseup: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.mouseup = "mouseup".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.mouseup]
 }
 

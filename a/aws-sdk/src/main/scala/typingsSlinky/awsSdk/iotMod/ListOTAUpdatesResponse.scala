@@ -18,11 +18,41 @@ trait ListOTAUpdatesResponse extends js.Object {
 
 object ListOTAUpdatesResponse {
   @scala.inline
-  def apply(nextToken: NextToken = null, otaUpdates: OTAUpdatesSummary = null): ListOTAUpdatesResponse = {
+  def apply(): ListOTAUpdatesResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (otaUpdates != null) __obj.updateDynamic("otaUpdates")(otaUpdates.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListOTAUpdatesResponse]
   }
+  @scala.inline
+  implicit class ListOTAUpdatesResponseOps[Self <: ListOTAUpdatesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOtaUpdates(value: OTAUpdatesSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOtaUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otaUpdates")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

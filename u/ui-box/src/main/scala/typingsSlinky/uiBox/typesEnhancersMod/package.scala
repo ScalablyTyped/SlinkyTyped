@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object typesEnhancersMod {
   type BoxCssProps[CP] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof CP ]: CP[P] | number | false | null | undefined}
-    */ typingsSlinky.uiBox.uiBoxStrings.BoxCssProps with CP
+    */ typingsSlinky.uiBox.uiBoxStrings.BoxCssProps with org.scalablytyped.runtime.TopLevel[CP]
   type BoxPropValue = js.UndefOr[
     java.lang.String | scala.Double | typingsSlinky.uiBox.uiBoxBooleans.`false` | scala.Null
   ]

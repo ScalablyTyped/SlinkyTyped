@@ -1,27 +1,30 @@
 package typingsSlinky.fluentReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.fluentReact.mod.LocalizedProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Localized
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.fluentReact.mod.Localized] {
+object Localized {
   @JSImport("@fluent/react", "Localized")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(id: String, attrs: js.Object = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.fluentReact.mod.Localized] = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    if (attrs != null) __obj.updateDynamic("attrs")(attrs.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.fluentReact.mod.Localized] {
+    @scala.inline
+    def attrs(value: js.Object): this.type = set("attrs", value.asInstanceOf[js.Any])
   }
-  type Props = LocalizedProps
+  
+  def withProps(p: LocalizedProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LocalizedProps]))
+  }
 }
 

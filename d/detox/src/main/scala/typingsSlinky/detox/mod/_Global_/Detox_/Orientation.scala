@@ -12,10 +12,8 @@ trait Orientation extends js.Object
 
 object Orientation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def landscape: typingsSlinky.detox.detoxStrings.landscape = "landscape".asInstanceOf[typingsSlinky.detox.detoxStrings.landscape]
   @scala.inline
-  def landscape: typingsSlinky.detox.detoxStrings.landscape = this.cast("landscape")
-  @scala.inline
-  def portrait: typingsSlinky.detox.detoxStrings.portrait = this.cast("portrait")
+  def portrait: typingsSlinky.detox.detoxStrings.portrait = "portrait".asInstanceOf[typingsSlinky.detox.detoxStrings.portrait]
 }
 

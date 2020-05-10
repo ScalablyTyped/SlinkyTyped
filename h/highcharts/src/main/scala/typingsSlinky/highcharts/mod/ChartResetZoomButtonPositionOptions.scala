@@ -4,43 +4,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChartResetZoomButtonPositionOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The horizontal alignment of the
     * button.
     */
-  var align: js.UndefOr[String] = js.undefined
+  var align: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The vertical alignment of the
     * button.
     */
-  var verticalAlign: js.UndefOr[VerticalAlignValue] = js.undefined
+  var verticalAlign: js.UndefOr[VerticalAlignValue] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The horizontal offset of the
     * button.
     */
-  var x: js.UndefOr[Double] = js.undefined
+  var x: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The vertical offset of the
     * button.
     */
-  var y: js.UndefOr[Double] = js.undefined
+  var y: js.UndefOr[Double] = js.native
 }
 
 object ChartResetZoomButtonPositionOptions {
   @scala.inline
-  def apply(
-    align: String = null,
-    verticalAlign: VerticalAlignValue = null,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): ChartResetZoomButtonPositionOptions = {
+  def apply(): ChartResetZoomButtonPositionOptions = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartResetZoomButtonPositionOptions]
   }
+  @scala.inline
+  implicit class ChartResetZoomButtonPositionOptionsOps[Self <: ChartResetZoomButtonPositionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalAlign(value: VerticalAlignValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

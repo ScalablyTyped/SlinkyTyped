@@ -1,58 +1,72 @@
 package typingsSlinky.blueprintjsCore.rangeSliderMod
 
-import slinky.core.facade.ReactElement
-import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.multiSliderMod.ISliderBaseProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IRangeSliderProps extends ISliderBaseProps {
   /** Callback invoked when the range value changes. */
-  var onChange: js.UndefOr[js.Function1[/* value */ NumberRange, Unit]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* value */ NumberRange, Unit]] = js.native
   /** Callback invoked when a handle is released. */
-  var onRelease: js.UndefOr[js.Function1[/* value */ NumberRange, Unit]] = js.undefined
+  var onRelease: js.UndefOr[js.Function1[/* value */ NumberRange, Unit]] = js.native
   /**
     * Range value of slider. Handles will be rendered at each position in the range.
     * @default [0, 10]
     */
-  var value: js.UndefOr[NumberRange] = js.undefined
+  var value: js.UndefOr[NumberRange] = js.native
 }
 
 object IRangeSliderProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    intent: Intent = null,
-    labelPrecision: Int | Double = null,
-    labelRenderer: Boolean | (js.Function1[/* value */ Double, String | ReactElement]) = null,
-    labelStepSize: Int | Double = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    onChange: /* value */ NumberRange => Unit = null,
-    onRelease: /* value */ NumberRange => Unit = null,
-    showTrackFill: js.UndefOr[Boolean] = js.undefined,
-    stepSize: Int | Double = null,
-    value: NumberRange = null,
-    vertical: js.UndefOr[Boolean] = js.undefined
-  ): IRangeSliderProps = {
+  def apply(): IRangeSliderProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
-    if (labelPrecision != null) __obj.updateDynamic("labelPrecision")(labelPrecision.asInstanceOf[js.Any])
-    if (labelRenderer != null) __obj.updateDynamic("labelRenderer")(labelRenderer.asInstanceOf[js.Any])
-    if (labelStepSize != null) __obj.updateDynamic("labelStepSize")(labelStepSize.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onRelease != null) __obj.updateDynamic("onRelease")(js.Any.fromFunction1(onRelease))
-    if (!js.isUndefined(showTrackFill)) __obj.updateDynamic("showTrackFill")(showTrackFill.asInstanceOf[js.Any])
-    if (stepSize != null) __obj.updateDynamic("stepSize")(stepSize.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRangeSliderProps]
   }
+  @scala.inline
+  implicit class IRangeSliderPropsOps[Self <: IRangeSliderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnChange(value: /* value */ NumberRange => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRelease(value: /* value */ NumberRange => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRelease")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRelease: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRelease")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: NumberRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

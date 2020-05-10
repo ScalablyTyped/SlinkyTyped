@@ -16,18 +16,16 @@ trait InfoItemGroup extends js.Object
 
 object InfoItemGroup {
   @scala.inline
-  def capacitor: typingsSlinky.ionic.ionicStrings.capacitor = this.cast("capacitor")
+  def capacitor: typingsSlinky.ionic.ionicStrings.capacitor = "capacitor".asInstanceOf[typingsSlinky.ionic.ionicStrings.capacitor]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cordova: typingsSlinky.ionic.ionicStrings.cordova = "cordova".asInstanceOf[typingsSlinky.ionic.ionicStrings.cordova]
   @scala.inline
-  def cordova: typingsSlinky.ionic.ionicStrings.cordova = this.cast("cordova")
+  def environment: typingsSlinky.ionic.ionicStrings.environment = "environment".asInstanceOf[typingsSlinky.ionic.ionicStrings.environment]
   @scala.inline
-  def environment: typingsSlinky.ionic.ionicStrings.environment = this.cast("environment")
+  def ionic: typingsSlinky.ionic.ionicStrings.ionic = "ionic".asInstanceOf[typingsSlinky.ionic.ionicStrings.ionic]
   @scala.inline
-  def ionic: typingsSlinky.ionic.ionicStrings.ionic = this.cast("ionic")
+  def system: typingsSlinky.ionic.ionicStrings.system = "system".asInstanceOf[typingsSlinky.ionic.ionicStrings.system]
   @scala.inline
-  def system: typingsSlinky.ionic.ionicStrings.system = this.cast("system")
-  @scala.inline
-  def utility: typingsSlinky.ionic.ionicStrings.utility = this.cast("utility")
+  def utility: typingsSlinky.ionic.ionicStrings.utility = "utility".asInstanceOf[typingsSlinky.ionic.ionicStrings.utility]
 }
 

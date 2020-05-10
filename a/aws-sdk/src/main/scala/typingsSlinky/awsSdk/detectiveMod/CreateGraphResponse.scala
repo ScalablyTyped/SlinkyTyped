@@ -14,10 +14,29 @@ trait CreateGraphResponse extends js.Object {
 
 object CreateGraphResponse {
   @scala.inline
-  def apply(GraphArn: GraphArn = null): CreateGraphResponse = {
+  def apply(): CreateGraphResponse = {
     val __obj = js.Dynamic.literal()
-    if (GraphArn != null) __obj.updateDynamic("GraphArn")(GraphArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateGraphResponse]
   }
+  @scala.inline
+  implicit class CreateGraphResponseOps[Self <: CreateGraphResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGraphArn(value: GraphArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGraphArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GraphArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -24,18 +24,65 @@ trait SchemaSuggestResult extends js.Object {
 
 object SchemaSuggestResult {
   @scala.inline
-  def apply(
-    peopleSuggestion: SchemaPeopleSuggestion = null,
-    querySuggestion: SchemaQuerySuggestion = null,
-    source: SchemaSource = null,
-    suggestedQuery: String = null
-  ): SchemaSuggestResult = {
+  def apply(): SchemaSuggestResult = {
     val __obj = js.Dynamic.literal()
-    if (peopleSuggestion != null) __obj.updateDynamic("peopleSuggestion")(peopleSuggestion.asInstanceOf[js.Any])
-    if (querySuggestion != null) __obj.updateDynamic("querySuggestion")(querySuggestion.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (suggestedQuery != null) __obj.updateDynamic("suggestedQuery")(suggestedQuery.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSuggestResult]
   }
+  @scala.inline
+  implicit class SchemaSuggestResultOps[Self <: SchemaSuggestResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPeopleSuggestion(value: SchemaPeopleSuggestion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peopleSuggestion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeopleSuggestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peopleSuggestion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuerySuggestion(value: SchemaQuerySuggestion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("querySuggestion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuerySuggestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("querySuggestion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: SchemaSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedQuery(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedQuery")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

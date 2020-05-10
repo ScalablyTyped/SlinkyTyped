@@ -16,8 +16,21 @@ object DescribeScheduledAuditRequest {
   @scala.inline
   def apply(scheduledAuditName: ScheduledAuditName): DescribeScheduledAuditRequest = {
     val __obj = js.Dynamic.literal(scheduledAuditName = scheduledAuditName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeScheduledAuditRequest]
   }
+  @scala.inline
+  implicit class DescribeScheduledAuditRequestOps[Self <: DescribeScheduledAuditRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScheduledAuditName(value: ScheduledAuditName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledAuditName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

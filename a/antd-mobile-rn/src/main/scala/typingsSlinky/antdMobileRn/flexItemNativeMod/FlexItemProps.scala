@@ -1,6 +1,5 @@
 package typingsSlinky.antdMobileRn.flexItemNativeMod
 
-import slinky.core.TagMod
 import typingsSlinky.antdMobileRn.flexPropsTypeMod.FlexItemPropsType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -8,37 +7,107 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FlexItemProps extends FlexItemPropsType {
-  var flex: js.UndefOr[Double] = js.undefined
-  var onLongPress: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onPress: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onPressIn: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onPressOut: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var flex: js.UndefOr[Double] = js.native
+  var onLongPress: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPressIn: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPressOut: js.UndefOr[js.Function0[Unit]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
 object FlexItemProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    flex: Int | Double = null,
-    onLongPress: () => Unit = null,
-    onPress: () => Unit = null,
-    onPressIn: () => Unit = null,
-    onPressOut: () => Unit = null,
-    style: StyleProp[ViewStyle] = null
-  ): FlexItemProps = {
+  def apply(): FlexItemProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (flex != null) __obj.updateDynamic("flex")(flex.asInstanceOf[js.Any])
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction0(onLongPress))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
-    if (onPressIn != null) __obj.updateDynamic("onPressIn")(js.Any.fromFunction0(onPressIn))
-    if (onPressOut != null) __obj.updateDynamic("onPressOut")(js.Any.fromFunction0(onPressOut))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlexItemProps]
   }
+  @scala.inline
+  implicit class FlexItemPropsOps[Self <: FlexItemProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFlex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLongPress(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLongPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPress(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPressIn(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressIn")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPressIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPressOut(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressOut")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPressOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+  }
+  
 }
 

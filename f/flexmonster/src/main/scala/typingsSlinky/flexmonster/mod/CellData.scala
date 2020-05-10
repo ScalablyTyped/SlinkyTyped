@@ -4,93 +4,361 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CellData extends js.Object {
-  var columnIndex: js.UndefOr[Double] = js.undefined
-  var columns: js.UndefOr[js.Array[js.Object]] = js.undefined
-  var escapedLabel: js.UndefOr[String] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var hierarchy: js.UndefOr[Hierarchy] = js.undefined
-  var isClassicTotalRow: js.UndefOr[Boolean] = js.undefined
-  var isDrillThrough: js.UndefOr[Boolean] = js.undefined
-  var isGrandTotal: js.UndefOr[Boolean] = js.undefined
-  var isGrandTotalColumn: js.UndefOr[Boolean] = js.undefined
-  var isGrandTotalRow: js.UndefOr[Boolean] = js.undefined
-  var isTotal: js.UndefOr[Boolean] = js.undefined
-  var isTotalColumn: js.UndefOr[Boolean] = js.undefined
-  var isTotalRow: js.UndefOr[Boolean] = js.undefined
-  var label: js.UndefOr[String] = js.undefined
-  var level: js.UndefOr[Double] = js.undefined
-  var measure: js.UndefOr[MeasureObject] = js.undefined
-  var member: js.UndefOr[Member] = js.undefined
-  var recordId: js.UndefOr[String | js.Array[String]] = js.undefined
-  var rowData: js.UndefOr[js.Array[CellData]] = js.undefined
-  var rowIndex: js.UndefOr[Double] = js.undefined
-  var rows: js.UndefOr[js.Array[js.Object]] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var value: js.UndefOr[Double] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
-  var x: js.UndefOr[Double] = js.undefined
-  var y: js.UndefOr[Double] = js.undefined
+  var columnIndex: js.UndefOr[Double] = js.native
+  var columns: js.UndefOr[js.Array[js.Object]] = js.native
+  var escapedLabel: js.UndefOr[String] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var hierarchy: js.UndefOr[Hierarchy] = js.native
+  var isClassicTotalRow: js.UndefOr[Boolean] = js.native
+  var isDrillThrough: js.UndefOr[Boolean] = js.native
+  var isGrandTotal: js.UndefOr[Boolean] = js.native
+  var isGrandTotalColumn: js.UndefOr[Boolean] = js.native
+  var isGrandTotalRow: js.UndefOr[Boolean] = js.native
+  var isTotal: js.UndefOr[Boolean] = js.native
+  var isTotalColumn: js.UndefOr[Boolean] = js.native
+  var isTotalRow: js.UndefOr[Boolean] = js.native
+  var label: js.UndefOr[String] = js.native
+  var level: js.UndefOr[Double] = js.native
+  var measure: js.UndefOr[MeasureObject] = js.native
+  var member: js.UndefOr[Member] = js.native
+  var recordId: js.UndefOr[String | js.Array[String]] = js.native
+  var rowData: js.UndefOr[js.Array[CellData]] = js.native
+  var rowIndex: js.UndefOr[Double] = js.native
+  var rows: js.UndefOr[js.Array[js.Object]] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var value: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.native
+  var x: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.native
 }
 
 object CellData {
   @scala.inline
-  def apply(
-    columnIndex: Int | Double = null,
-    columns: js.Array[js.Object] = null,
-    escapedLabel: String = null,
-    height: Int | Double = null,
-    hierarchy: Hierarchy = null,
-    isClassicTotalRow: js.UndefOr[Boolean] = js.undefined,
-    isDrillThrough: js.UndefOr[Boolean] = js.undefined,
-    isGrandTotal: js.UndefOr[Boolean] = js.undefined,
-    isGrandTotalColumn: js.UndefOr[Boolean] = js.undefined,
-    isGrandTotalRow: js.UndefOr[Boolean] = js.undefined,
-    isTotal: js.UndefOr[Boolean] = js.undefined,
-    isTotalColumn: js.UndefOr[Boolean] = js.undefined,
-    isTotalRow: js.UndefOr[Boolean] = js.undefined,
-    label: String = null,
-    level: Int | Double = null,
-    measure: MeasureObject = null,
-    member: Member = null,
-    recordId: String | js.Array[String] = null,
-    rowData: js.Array[CellData] = null,
-    rowIndex: Int | Double = null,
-    rows: js.Array[js.Object] = null,
-    `type`: String = null,
-    value: Int | Double = null,
-    width: Int | Double = null,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): CellData = {
+  def apply(): CellData = {
     val __obj = js.Dynamic.literal()
-    if (columnIndex != null) __obj.updateDynamic("columnIndex")(columnIndex.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (escapedLabel != null) __obj.updateDynamic("escapedLabel")(escapedLabel.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (hierarchy != null) __obj.updateDynamic("hierarchy")(hierarchy.asInstanceOf[js.Any])
-    if (!js.isUndefined(isClassicTotalRow)) __obj.updateDynamic("isClassicTotalRow")(isClassicTotalRow.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDrillThrough)) __obj.updateDynamic("isDrillThrough")(isDrillThrough.asInstanceOf[js.Any])
-    if (!js.isUndefined(isGrandTotal)) __obj.updateDynamic("isGrandTotal")(isGrandTotal.asInstanceOf[js.Any])
-    if (!js.isUndefined(isGrandTotalColumn)) __obj.updateDynamic("isGrandTotalColumn")(isGrandTotalColumn.asInstanceOf[js.Any])
-    if (!js.isUndefined(isGrandTotalRow)) __obj.updateDynamic("isGrandTotalRow")(isGrandTotalRow.asInstanceOf[js.Any])
-    if (!js.isUndefined(isTotal)) __obj.updateDynamic("isTotal")(isTotal.asInstanceOf[js.Any])
-    if (!js.isUndefined(isTotalColumn)) __obj.updateDynamic("isTotalColumn")(isTotalColumn.asInstanceOf[js.Any])
-    if (!js.isUndefined(isTotalRow)) __obj.updateDynamic("isTotalRow")(isTotalRow.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (measure != null) __obj.updateDynamic("measure")(measure.asInstanceOf[js.Any])
-    if (member != null) __obj.updateDynamic("member")(member.asInstanceOf[js.Any])
-    if (recordId != null) __obj.updateDynamic("recordId")(recordId.asInstanceOf[js.Any])
-    if (rowData != null) __obj.updateDynamic("rowData")(rowData.asInstanceOf[js.Any])
-    if (rowIndex != null) __obj.updateDynamic("rowIndex")(rowIndex.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellData]
   }
+  @scala.inline
+  implicit class CellDataOps[Self <: CellData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: js.Array[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEscapedLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escapedLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEscapedLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escapedLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHierarchy(value: Hierarchy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHierarchy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsClassicTotalRow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isClassicTotalRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsClassicTotalRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isClassicTotalRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDrillThrough(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDrillThrough")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDrillThrough: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDrillThrough")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsGrandTotal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGrandTotal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsGrandTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGrandTotal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsGrandTotalColumn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGrandTotalColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsGrandTotalColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGrandTotalColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsGrandTotalRow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGrandTotalRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsGrandTotalRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGrandTotalRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTotal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTotal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTotal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTotalColumn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTotalColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTotalColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTotalColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTotalRow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTotalRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTotalRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTotalRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeasure(value: MeasureObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeasure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMember(value: Member): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("member")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMember: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("member")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordId(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowData(value: js.Array[CellData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

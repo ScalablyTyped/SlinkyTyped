@@ -1,13 +1,11 @@
 package typingsSlinky.reactSplitPane.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactSplitPane.mod.Size
+import typingsSlinky.reactSplitPane.mod.SplitPaneProps
 import typingsSlinky.reactSplitPane.mod.default
 import typingsSlinky.reactSplitPane.reactSplitPaneStrings.first
 import typingsSlinky.reactSplitPane.reactSplitPaneStrings.horizontal
@@ -17,58 +15,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactSplitPane
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactSplitPane {
   @JSImport("react-split-pane", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    allowResize: js.UndefOr[Boolean] = js.undefined,
-    defaultSize: Size = null,
-    maxSize: Size = null,
-    minSize: Size = null,
-    onChange: /* newSize */ Double => Unit = null,
-    onDragFinished: /* newSize */ Double => Unit = null,
-    onDragStarted: () => Unit = null,
-    onResizerClick: /* event */ MouseEvent => Unit = null,
-    onResizerDoubleClick: /* event */ MouseEvent => Unit = null,
-    pane1Style: CSSProperties = null,
-    pane2Style: CSSProperties = null,
-    paneStyle: CSSProperties = null,
-    primary: first | second = null,
-    resizerClassName: String = null,
-    resizerStyle: CSSProperties = null,
-    size: Size = null,
-    split: vertical | horizontal = null,
-    step: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowResize)) __obj.updateDynamic("allowResize")(allowResize.asInstanceOf[js.Any])
-    if (defaultSize != null) __obj.updateDynamic("defaultSize")(defaultSize.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onDragFinished != null) __obj.updateDynamic("onDragFinished")(js.Any.fromFunction1(onDragFinished))
-    if (onDragStarted != null) __obj.updateDynamic("onDragStarted")(js.Any.fromFunction0(onDragStarted))
-    if (onResizerClick != null) __obj.updateDynamic("onResizerClick")(js.Any.fromFunction1(onResizerClick))
-    if (onResizerDoubleClick != null) __obj.updateDynamic("onResizerDoubleClick")(js.Any.fromFunction1(onResizerDoubleClick))
-    if (pane1Style != null) __obj.updateDynamic("pane1Style")(pane1Style.asInstanceOf[js.Any])
-    if (pane2Style != null) __obj.updateDynamic("pane2Style")(pane2Style.asInstanceOf[js.Any])
-    if (paneStyle != null) __obj.updateDynamic("paneStyle")(paneStyle.asInstanceOf[js.Any])
-    if (primary != null) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
-    if (resizerClassName != null) __obj.updateDynamic("resizerClassName")(resizerClassName.asInstanceOf[js.Any])
-    if (resizerStyle != null) __obj.updateDynamic("resizerStyle")(resizerStyle.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (split != null) __obj.updateDynamic("split")(split.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def allowResize(value: Boolean): this.type = set("allowResize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSize(value: Size): this.type = set("defaultSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxSize(value: Size): this.type = set("maxSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minSize(value: Size): this.type = set("minSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* newSize */ Double => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragFinished(value: /* newSize */ Double => Unit): this.type = set("onDragFinished", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragStarted(value: () => Unit): this.type = set("onDragStarted", js.Any.fromFunction0(value))
+    @scala.inline
+    def onResizerClick(value: /* event */ MouseEvent => Unit): this.type = set("onResizerClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResizerDoubleClick(value: /* event */ MouseEvent => Unit): this.type = set("onResizerDoubleClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def pane1Style(value: CSSProperties): this.type = set("pane1Style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pane2Style(value: CSSProperties): this.type = set("pane2Style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paneStyle(value: CSSProperties): this.type = set("paneStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def primary(value: first | second): this.type = set("primary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resizerClassName(value: String): this.type = set("resizerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resizerStyle(value: CSSProperties): this.type = set("resizerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Size): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def split(value: vertical | horizontal): this.type = set("split", value.asInstanceOf[js.Any])
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSplitPane.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.reactSplitPane.mod.Props
+  
+  def withProps(p: SplitPaneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactSplitPane.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

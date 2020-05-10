@@ -42,25 +42,113 @@ trait GetObjectResponse extends js.Object {
 
 object GetObjectResponse {
   @scala.inline
-  def apply(
-    StatusCode: statusCode,
-    Body: PayloadBlob = null,
-    CacheControl: StringPrimitive = null,
-    ContentLength: Int | Double = null,
-    ContentRange: ContentRangePattern = null,
-    ContentType: ContentType = null,
-    ETag: ETag = null,
-    LastModified: js.Date = null
-  ): GetObjectResponse = {
+  def apply(StatusCode: statusCode): GetObjectResponse = {
     val __obj = js.Dynamic.literal(StatusCode = StatusCode.asInstanceOf[js.Any])
-    if (Body != null) __obj.updateDynamic("Body")(Body.asInstanceOf[js.Any])
-    if (CacheControl != null) __obj.updateDynamic("CacheControl")(CacheControl.asInstanceOf[js.Any])
-    if (ContentLength != null) __obj.updateDynamic("ContentLength")(ContentLength.asInstanceOf[js.Any])
-    if (ContentRange != null) __obj.updateDynamic("ContentRange")(ContentRange.asInstanceOf[js.Any])
-    if (ContentType != null) __obj.updateDynamic("ContentType")(ContentType.asInstanceOf[js.Any])
-    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
-    if (LastModified != null) __obj.updateDynamic("LastModified")(LastModified.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetObjectResponse]
   }
+  @scala.inline
+  implicit class GetObjectResponseOps[Self <: GetObjectResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatusCode(value: statusCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBodyUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: PayloadBlob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheControl(value: StringPrimitive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentLength(value: NonNegativeLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentRange(value: ContentRangePattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentType(value: ContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withETag(value: ETag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutETag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModified(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModified")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

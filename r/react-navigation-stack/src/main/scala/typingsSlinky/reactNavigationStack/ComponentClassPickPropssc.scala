@@ -2,7 +2,7 @@ package typingsSlinky.reactNavigationStack
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.react.mod.Component
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.GetDerivedStateFromError
 import typingsSlinky.react.mod.GetDerivedStateFromProps
@@ -16,12 +16,12 @@ import scala.scalajs.js.annotation._
 trait ComponentClassPickPropssc
   extends Instantiable1[
       /* props */ PickPropsscenenavigationp, 
-      Component[PickPropsscenenavigationp, js.Any, js.Any]
+      ReactComponentClass[PickPropsscenenavigationp]
     ]
      with Instantiable2[
       /* props */ PickPropsscenenavigationp, 
       /* context */ js.Any, 
-      Component[PickPropsscenenavigationp, js.Any, js.Any]
+      ReactComponentClass[PickPropsscenenavigationp]
     ] {
   val HEIGHT: Double = js.native
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native

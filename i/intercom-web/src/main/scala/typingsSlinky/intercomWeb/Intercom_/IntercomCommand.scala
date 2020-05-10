@@ -23,32 +23,30 @@ trait IntercomCommand extends js.Object
 
 object IntercomCommand {
   @scala.inline
-  def boot: typingsSlinky.intercomWeb.intercomWebStrings.boot = this.cast("boot")
+  def boot: typingsSlinky.intercomWeb.intercomWebStrings.boot = "boot".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.boot]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def getVisitorId: typingsSlinky.intercomWeb.intercomWebStrings.getVisitorId = "getVisitorId".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.getVisitorId]
   @scala.inline
-  def getVisitorId: typingsSlinky.intercomWeb.intercomWebStrings.getVisitorId = this.cast("getVisitorId")
+  def hide: typingsSlinky.intercomWeb.intercomWebStrings.hide = "hide".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.hide]
   @scala.inline
-  def hide: typingsSlinky.intercomWeb.intercomWebStrings.hide = this.cast("hide")
+  def onActivatorClick: typingsSlinky.intercomWeb.intercomWebStrings.onActivatorClick = "onActivatorClick".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.onActivatorClick]
   @scala.inline
-  def onActivatorClick: typingsSlinky.intercomWeb.intercomWebStrings.onActivatorClick = this.cast("onActivatorClick")
+  def onHide: typingsSlinky.intercomWeb.intercomWebStrings.onHide = "onHide".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.onHide]
   @scala.inline
-  def onHide: typingsSlinky.intercomWeb.intercomWebStrings.onHide = this.cast("onHide")
+  def onShow: typingsSlinky.intercomWeb.intercomWebStrings.onShow = "onShow".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.onShow]
   @scala.inline
-  def onShow: typingsSlinky.intercomWeb.intercomWebStrings.onShow = this.cast("onShow")
+  def onUnreadCountChange: typingsSlinky.intercomWeb.intercomWebStrings.onUnreadCountChange = "onUnreadCountChange".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.onUnreadCountChange]
   @scala.inline
-  def onUnreadCountChange: typingsSlinky.intercomWeb.intercomWebStrings.onUnreadCountChange = this.cast("onUnreadCountChange")
+  def show: typingsSlinky.intercomWeb.intercomWebStrings.show = "show".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.show]
   @scala.inline
-  def show: typingsSlinky.intercomWeb.intercomWebStrings.show = this.cast("show")
+  def showMessages: typingsSlinky.intercomWeb.intercomWebStrings.showMessages = "showMessages".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.showMessages]
   @scala.inline
-  def showMessages: typingsSlinky.intercomWeb.intercomWebStrings.showMessages = this.cast("showMessages")
+  def showNewMessage: typingsSlinky.intercomWeb.intercomWebStrings.showNewMessage = "showNewMessage".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.showNewMessage]
   @scala.inline
-  def showNewMessage: typingsSlinky.intercomWeb.intercomWebStrings.showNewMessage = this.cast("showNewMessage")
+  def shutdown: typingsSlinky.intercomWeb.intercomWebStrings.shutdown = "shutdown".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.shutdown]
   @scala.inline
-  def shutdown: typingsSlinky.intercomWeb.intercomWebStrings.shutdown = this.cast("shutdown")
+  def trackEvent: typingsSlinky.intercomWeb.intercomWebStrings.trackEvent = "trackEvent".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.trackEvent]
   @scala.inline
-  def trackEvent: typingsSlinky.intercomWeb.intercomWebStrings.trackEvent = this.cast("trackEvent")
-  @scala.inline
-  def update: typingsSlinky.intercomWeb.intercomWebStrings.update = this.cast("update")
+  def update: typingsSlinky.intercomWeb.intercomWebStrings.update = "update".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.update]
 }
 

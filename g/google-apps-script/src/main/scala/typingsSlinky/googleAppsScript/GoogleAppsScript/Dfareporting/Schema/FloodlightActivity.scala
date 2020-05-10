@@ -4,99 +4,387 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FloodlightActivity extends js.Object {
-  var accountId: js.UndefOr[String] = js.undefined
-  var advertiserId: js.UndefOr[String] = js.undefined
-  var advertiserIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
-  var cacheBustingType: js.UndefOr[String] = js.undefined
-  var countingMethod: js.UndefOr[String] = js.undefined
-  var defaultTags: js.UndefOr[js.Array[FloodlightActivityDynamicTag]] = js.undefined
-  var expectedUrl: js.UndefOr[String] = js.undefined
-  var floodlightActivityGroupId: js.UndefOr[String] = js.undefined
-  var floodlightActivityGroupName: js.UndefOr[String] = js.undefined
-  var floodlightActivityGroupTagString: js.UndefOr[String] = js.undefined
-  var floodlightActivityGroupType: js.UndefOr[String] = js.undefined
-  var floodlightConfigurationId: js.UndefOr[String] = js.undefined
-  var floodlightConfigurationIdDimensionValue: js.UndefOr[DimensionValue] = js.undefined
-  var floodlightTagType: js.UndefOr[String] = js.undefined
-  var hidden: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var idDimensionValue: js.UndefOr[DimensionValue] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var notes: js.UndefOr[String] = js.undefined
-  var publisherTags: js.UndefOr[js.Array[FloodlightActivityPublisherDynamicTag]] = js.undefined
-  var secure: js.UndefOr[Boolean] = js.undefined
-  var sslCompliant: js.UndefOr[Boolean] = js.undefined
-  var sslRequired: js.UndefOr[Boolean] = js.undefined
-  var subaccountId: js.UndefOr[String] = js.undefined
-  var tagFormat: js.UndefOr[String] = js.undefined
-  var tagString: js.UndefOr[String] = js.undefined
-  var userDefinedVariableTypes: js.UndefOr[js.Array[String]] = js.undefined
+  var accountId: js.UndefOr[String] = js.native
+  var advertiserId: js.UndefOr[String] = js.native
+  var advertiserIdDimensionValue: js.UndefOr[DimensionValue] = js.native
+  var cacheBustingType: js.UndefOr[String] = js.native
+  var countingMethod: js.UndefOr[String] = js.native
+  var defaultTags: js.UndefOr[js.Array[FloodlightActivityDynamicTag]] = js.native
+  var expectedUrl: js.UndefOr[String] = js.native
+  var floodlightActivityGroupId: js.UndefOr[String] = js.native
+  var floodlightActivityGroupName: js.UndefOr[String] = js.native
+  var floodlightActivityGroupTagString: js.UndefOr[String] = js.native
+  var floodlightActivityGroupType: js.UndefOr[String] = js.native
+  var floodlightConfigurationId: js.UndefOr[String] = js.native
+  var floodlightConfigurationIdDimensionValue: js.UndefOr[DimensionValue] = js.native
+  var floodlightTagType: js.UndefOr[String] = js.native
+  var hidden: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[String] = js.native
+  var idDimensionValue: js.UndefOr[DimensionValue] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var notes: js.UndefOr[String] = js.native
+  var publisherTags: js.UndefOr[js.Array[FloodlightActivityPublisherDynamicTag]] = js.native
+  var secure: js.UndefOr[Boolean] = js.native
+  var sslCompliant: js.UndefOr[Boolean] = js.native
+  var sslRequired: js.UndefOr[Boolean] = js.native
+  var subaccountId: js.UndefOr[String] = js.native
+  var tagFormat: js.UndefOr[String] = js.native
+  var tagString: js.UndefOr[String] = js.native
+  var userDefinedVariableTypes: js.UndefOr[js.Array[String]] = js.native
 }
 
 object FloodlightActivity {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    advertiserId: String = null,
-    advertiserIdDimensionValue: DimensionValue = null,
-    cacheBustingType: String = null,
-    countingMethod: String = null,
-    defaultTags: js.Array[FloodlightActivityDynamicTag] = null,
-    expectedUrl: String = null,
-    floodlightActivityGroupId: String = null,
-    floodlightActivityGroupName: String = null,
-    floodlightActivityGroupTagString: String = null,
-    floodlightActivityGroupType: String = null,
-    floodlightConfigurationId: String = null,
-    floodlightConfigurationIdDimensionValue: DimensionValue = null,
-    floodlightTagType: String = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    idDimensionValue: DimensionValue = null,
-    kind: String = null,
-    name: String = null,
-    notes: String = null,
-    publisherTags: js.Array[FloodlightActivityPublisherDynamicTag] = null,
-    secure: js.UndefOr[Boolean] = js.undefined,
-    sslCompliant: js.UndefOr[Boolean] = js.undefined,
-    sslRequired: js.UndefOr[Boolean] = js.undefined,
-    subaccountId: String = null,
-    tagFormat: String = null,
-    tagString: String = null,
-    userDefinedVariableTypes: js.Array[String] = null
-  ): FloodlightActivity = {
+  def apply(): FloodlightActivity = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (advertiserId != null) __obj.updateDynamic("advertiserId")(advertiserId.asInstanceOf[js.Any])
-    if (advertiserIdDimensionValue != null) __obj.updateDynamic("advertiserIdDimensionValue")(advertiserIdDimensionValue.asInstanceOf[js.Any])
-    if (cacheBustingType != null) __obj.updateDynamic("cacheBustingType")(cacheBustingType.asInstanceOf[js.Any])
-    if (countingMethod != null) __obj.updateDynamic("countingMethod")(countingMethod.asInstanceOf[js.Any])
-    if (defaultTags != null) __obj.updateDynamic("defaultTags")(defaultTags.asInstanceOf[js.Any])
-    if (expectedUrl != null) __obj.updateDynamic("expectedUrl")(expectedUrl.asInstanceOf[js.Any])
-    if (floodlightActivityGroupId != null) __obj.updateDynamic("floodlightActivityGroupId")(floodlightActivityGroupId.asInstanceOf[js.Any])
-    if (floodlightActivityGroupName != null) __obj.updateDynamic("floodlightActivityGroupName")(floodlightActivityGroupName.asInstanceOf[js.Any])
-    if (floodlightActivityGroupTagString != null) __obj.updateDynamic("floodlightActivityGroupTagString")(floodlightActivityGroupTagString.asInstanceOf[js.Any])
-    if (floodlightActivityGroupType != null) __obj.updateDynamic("floodlightActivityGroupType")(floodlightActivityGroupType.asInstanceOf[js.Any])
-    if (floodlightConfigurationId != null) __obj.updateDynamic("floodlightConfigurationId")(floodlightConfigurationId.asInstanceOf[js.Any])
-    if (floodlightConfigurationIdDimensionValue != null) __obj.updateDynamic("floodlightConfigurationIdDimensionValue")(floodlightConfigurationIdDimensionValue.asInstanceOf[js.Any])
-    if (floodlightTagType != null) __obj.updateDynamic("floodlightTagType")(floodlightTagType.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (idDimensionValue != null) __obj.updateDynamic("idDimensionValue")(idDimensionValue.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
-    if (publisherTags != null) __obj.updateDynamic("publisherTags")(publisherTags.asInstanceOf[js.Any])
-    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.asInstanceOf[js.Any])
-    if (!js.isUndefined(sslCompliant)) __obj.updateDynamic("sslCompliant")(sslCompliant.asInstanceOf[js.Any])
-    if (!js.isUndefined(sslRequired)) __obj.updateDynamic("sslRequired")(sslRequired.asInstanceOf[js.Any])
-    if (subaccountId != null) __obj.updateDynamic("subaccountId")(subaccountId.asInstanceOf[js.Any])
-    if (tagFormat != null) __obj.updateDynamic("tagFormat")(tagFormat.asInstanceOf[js.Any])
-    if (tagString != null) __obj.updateDynamic("tagString")(tagString.asInstanceOf[js.Any])
-    if (userDefinedVariableTypes != null) __obj.updateDynamic("userDefinedVariableTypes")(userDefinedVariableTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[FloodlightActivity]
   }
+  @scala.inline
+  implicit class FloodlightActivityOps[Self <: FloodlightActivity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdvertiserId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdvertiserIdDimensionValue(value: DimensionValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIdDimensionValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserIdDimensionValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserIdDimensionValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheBustingType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheBustingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheBustingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheBustingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountingMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countingMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountingMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countingMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTags(value: js.Array[FloodlightActivityDynamicTag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpectedUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpectedUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightActivityGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightActivityGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightActivityGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightActivityGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightActivityGroupTagString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupTagString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightActivityGroupTagString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupTagString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightActivityGroupType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightActivityGroupType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightActivityGroupType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightConfigurationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightConfigurationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightConfigurationIdDimensionValue(value: DimensionValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationIdDimensionValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightConfigurationIdDimensionValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightConfigurationIdDimensionValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightTagType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightTagType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightTagType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightTagType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdDimensionValue(value: DimensionValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdDimensionValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idDimensionValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublisherTags(value: js.Array[FloodlightActivityPublisherDynamicTag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublisherTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSslCompliant(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslCompliant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslCompliant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslCompliant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSslRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubaccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubaccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserDefinedVariableTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefinedVariableTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserDefinedVariableTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userDefinedVariableTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

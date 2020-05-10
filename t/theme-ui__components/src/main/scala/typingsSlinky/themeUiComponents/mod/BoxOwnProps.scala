@@ -1,12 +1,12 @@
 package typingsSlinky.themeUiComponents.mod
 
+import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.csstype.mod.GlobalsNumber
 import typingsSlinky.emotionCore.mod.InterpolationWithTheme
+import typingsSlinky.emotionSerialize.mod.Interpolation
 import typingsSlinky.styledSystem.mod.BackgroundColorProps
 import typingsSlinky.styledSystem.mod.OpacityProps
 import typingsSlinky.styledSystem.mod.RequiredTheme
-import typingsSlinky.styledSystem.mod.ResponsiveValue
 import typingsSlinky.styledSystem.mod.SpaceProps
 import typingsSlinky.styledSystem.mod.TextColorProps
 import typingsSlinky.styledSystem.mod.ThemeValue
@@ -16,97 +16,107 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BoxOwnProps
   extends SpaceProps[RequiredTheme, ThemeValue[space, RequiredTheme, js.Any]]
      with TextColorProps[RequiredTheme, ThemeValue[colors, RequiredTheme, js.Any]]
      with BackgroundColorProps[RequiredTheme, ThemeValue[colors, RequiredTheme, js.Any]]
      with OpacityProps[RequiredTheme] {
-  var as: js.UndefOr[ReactElement] = js.undefined
-  var css: js.UndefOr[InterpolationWithTheme[_]] = js.undefined
+  var as: js.UndefOr[ReactElement] = js.native
+  var css: js.UndefOr[InterpolationWithTheme[_]] = js.native
   var sx: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SxStyleProp */ js.Any
-  ] = js.undefined
-  var variant: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var variant: js.UndefOr[String] = js.native
 }
 
 object BoxOwnProps {
   @scala.inline
-  def apply(
-    as: ReactElement = null,
-    backgroundColor: ResponsiveValue[ThemeValue[colors, RequiredTheme, js.Any], RequiredTheme] = null,
-    bg: ResponsiveValue[ThemeValue[colors, RequiredTheme, js.Any], RequiredTheme] = null,
-    color: ResponsiveValue[ThemeValue[colors, RequiredTheme, js.Any], RequiredTheme] = null,
-    css: InterpolationWithTheme[_] = null,
-    m: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    margin: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    marginBottom: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    marginLeft: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    marginRight: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    marginTop: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    marginX: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    marginY: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    mb: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    ml: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    mr: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    mt: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    mx: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    my: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    opacity: ResponsiveValue[GlobalsNumber, RequiredTheme] = null,
-    p: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    padding: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    paddingBottom: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    paddingLeft: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    paddingRight: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    paddingTop: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    paddingX: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    paddingY: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    pb: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    pl: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    pr: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    pt: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    px: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    py: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
-    sx: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SxStyleProp */ js.Any = null,
-    variant: String = null
-  ): BoxOwnProps = {
+  def apply(): BoxOwnProps = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (bg != null) __obj.updateDynamic("bg")(bg.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
-    if (m != null) __obj.updateDynamic("m")(m.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (marginBottom != null) __obj.updateDynamic("marginBottom")(marginBottom.asInstanceOf[js.Any])
-    if (marginLeft != null) __obj.updateDynamic("marginLeft")(marginLeft.asInstanceOf[js.Any])
-    if (marginRight != null) __obj.updateDynamic("marginRight")(marginRight.asInstanceOf[js.Any])
-    if (marginTop != null) __obj.updateDynamic("marginTop")(marginTop.asInstanceOf[js.Any])
-    if (marginX != null) __obj.updateDynamic("marginX")(marginX.asInstanceOf[js.Any])
-    if (marginY != null) __obj.updateDynamic("marginY")(marginY.asInstanceOf[js.Any])
-    if (mb != null) __obj.updateDynamic("mb")(mb.asInstanceOf[js.Any])
-    if (ml != null) __obj.updateDynamic("ml")(ml.asInstanceOf[js.Any])
-    if (mr != null) __obj.updateDynamic("mr")(mr.asInstanceOf[js.Any])
-    if (mt != null) __obj.updateDynamic("mt")(mt.asInstanceOf[js.Any])
-    if (mx != null) __obj.updateDynamic("mx")(mx.asInstanceOf[js.Any])
-    if (my != null) __obj.updateDynamic("my")(my.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (p != null) __obj.updateDynamic("p")(p.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (paddingBottom != null) __obj.updateDynamic("paddingBottom")(paddingBottom.asInstanceOf[js.Any])
-    if (paddingLeft != null) __obj.updateDynamic("paddingLeft")(paddingLeft.asInstanceOf[js.Any])
-    if (paddingRight != null) __obj.updateDynamic("paddingRight")(paddingRight.asInstanceOf[js.Any])
-    if (paddingTop != null) __obj.updateDynamic("paddingTop")(paddingTop.asInstanceOf[js.Any])
-    if (paddingX != null) __obj.updateDynamic("paddingX")(paddingX.asInstanceOf[js.Any])
-    if (paddingY != null) __obj.updateDynamic("paddingY")(paddingY.asInstanceOf[js.Any])
-    if (pb != null) __obj.updateDynamic("pb")(pb.asInstanceOf[js.Any])
-    if (pl != null) __obj.updateDynamic("pl")(pl.asInstanceOf[js.Any])
-    if (pr != null) __obj.updateDynamic("pr")(pr.asInstanceOf[js.Any])
-    if (pt != null) __obj.updateDynamic("pt")(pt.asInstanceOf[js.Any])
-    if (px != null) __obj.updateDynamic("px")(px.asInstanceOf[js.Any])
-    if (py != null) __obj.updateDynamic("py")(py.asInstanceOf[js.Any])
-    if (sx != null) __obj.updateDynamic("sx")(sx.asInstanceOf[js.Any])
-    if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
     __obj.asInstanceOf[BoxOwnProps]
   }
+  @scala.inline
+  implicit class BoxOwnPropsOps[Self <: BoxOwnProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAsComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAs(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCssFunction1(value: _ => Interpolation[js.UndefOr[scala.Nothing]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCss(value: InterpolationWithTheme[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCssNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(null)
+        ret
+    }
+    @scala.inline
+    def withSx(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SxStyleProp */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariant(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

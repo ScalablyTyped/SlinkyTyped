@@ -82,42 +82,209 @@ trait SchemaNote extends js.Object {
 
 object SchemaNote {
   @scala.inline
-  def apply(
-    _package: SchemaPackage = null,
-    attestationAuthority: SchemaAuthority = null,
-    baseImage: SchemaBasis = null,
-    build: SchemaBuild = null,
-    createTime: String = null,
-    deployable: SchemaDeployable = null,
-    discovery: SchemaDiscovery = null,
-    expirationTime: String = null,
-    kind: String = null,
-    longDescription: String = null,
-    name: String = null,
-    relatedNoteNames: js.Array[String] = null,
-    relatedUrl: js.Array[SchemaRelatedUrl] = null,
-    shortDescription: String = null,
-    updateTime: String = null,
-    vulnerability: SchemaVulnerability = null
-  ): SchemaNote = {
+  def apply(): SchemaNote = {
     val __obj = js.Dynamic.literal()
-    if (_package != null) __obj.updateDynamic("package")(_package.asInstanceOf[js.Any])
-    if (attestationAuthority != null) __obj.updateDynamic("attestationAuthority")(attestationAuthority.asInstanceOf[js.Any])
-    if (baseImage != null) __obj.updateDynamic("baseImage")(baseImage.asInstanceOf[js.Any])
-    if (build != null) __obj.updateDynamic("build")(build.asInstanceOf[js.Any])
-    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
-    if (deployable != null) __obj.updateDynamic("deployable")(deployable.asInstanceOf[js.Any])
-    if (discovery != null) __obj.updateDynamic("discovery")(discovery.asInstanceOf[js.Any])
-    if (expirationTime != null) __obj.updateDynamic("expirationTime")(expirationTime.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (longDescription != null) __obj.updateDynamic("longDescription")(longDescription.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (relatedNoteNames != null) __obj.updateDynamic("relatedNoteNames")(relatedNoteNames.asInstanceOf[js.Any])
-    if (relatedUrl != null) __obj.updateDynamic("relatedUrl")(relatedUrl.asInstanceOf[js.Any])
-    if (shortDescription != null) __obj.updateDynamic("shortDescription")(shortDescription.asInstanceOf[js.Any])
-    if (updateTime != null) __obj.updateDynamic("updateTime")(updateTime.asInstanceOf[js.Any])
-    if (vulnerability != null) __obj.updateDynamic("vulnerability")(vulnerability.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNote]
   }
+  @scala.inline
+  implicit class SchemaNoteOps[Self <: SchemaNote] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_package(value: SchemaPackage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("package")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_package: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("package")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttestationAuthority(value: SchemaAuthority): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attestationAuthority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttestationAuthority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attestationAuthority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseImage(value: SchemaBasis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuild(value: SchemaBuild): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeployable(value: SchemaDeployable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deployable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeployable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deployable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiscovery(value: SchemaDiscovery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discovery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiscovery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discovery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLongDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLongDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelatedNoteNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedNoteNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelatedNoteNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedNoteNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelatedUrl(value: js.Array[SchemaRelatedUrl]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelatedUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVulnerability(value: SchemaVulnerability): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vulnerability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVulnerability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vulnerability")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

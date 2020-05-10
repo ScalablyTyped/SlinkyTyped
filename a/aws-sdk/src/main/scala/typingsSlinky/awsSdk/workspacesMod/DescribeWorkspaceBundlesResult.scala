@@ -18,11 +18,41 @@ trait DescribeWorkspaceBundlesResult extends js.Object {
 
 object DescribeWorkspaceBundlesResult {
   @scala.inline
-  def apply(Bundles: BundleList = null, NextToken: PaginationToken = null): DescribeWorkspaceBundlesResult = {
+  def apply(): DescribeWorkspaceBundlesResult = {
     val __obj = js.Dynamic.literal()
-    if (Bundles != null) __obj.updateDynamic("Bundles")(Bundles.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeWorkspaceBundlesResult]
   }
+  @scala.inline
+  implicit class DescribeWorkspaceBundlesResultOps[Self <: DescribeWorkspaceBundlesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBundles(value: BundleList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bundles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBundles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bundles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

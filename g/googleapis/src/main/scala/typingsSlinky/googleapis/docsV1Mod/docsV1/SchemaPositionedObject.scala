@@ -39,20 +39,77 @@ trait SchemaPositionedObject extends js.Object {
 
 object SchemaPositionedObject {
   @scala.inline
-  def apply(
-    objectId: String = null,
-    positionedObjectProperties: SchemaPositionedObjectProperties = null,
-    suggestedDeletionIds: js.Array[String] = null,
-    suggestedInsertionId: String = null,
-    suggestedPositionedObjectPropertiesChanges: StringDictionary[SchemaSuggestedPositionedObjectProperties] = null
-  ): SchemaPositionedObject = {
+  def apply(): SchemaPositionedObject = {
     val __obj = js.Dynamic.literal()
-    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
-    if (positionedObjectProperties != null) __obj.updateDynamic("positionedObjectProperties")(positionedObjectProperties.asInstanceOf[js.Any])
-    if (suggestedDeletionIds != null) __obj.updateDynamic("suggestedDeletionIds")(suggestedDeletionIds.asInstanceOf[js.Any])
-    if (suggestedInsertionId != null) __obj.updateDynamic("suggestedInsertionId")(suggestedInsertionId.asInstanceOf[js.Any])
-    if (suggestedPositionedObjectPropertiesChanges != null) __obj.updateDynamic("suggestedPositionedObjectPropertiesChanges")(suggestedPositionedObjectPropertiesChanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPositionedObject]
   }
+  @scala.inline
+  implicit class SchemaPositionedObjectOps[Self <: SchemaPositionedObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withObjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionedObjectProperties(value: SchemaPositionedObjectProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionedObjectProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositionedObjectProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionedObjectProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedDeletionIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedDeletionIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDeletionIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedInsertionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedInsertionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedInsertionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedPositionedObjectPropertiesChanges(value: StringDictionary[SchemaSuggestedPositionedObjectProperties]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedPositionedObjectPropertiesChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedPositionedObjectPropertiesChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedPositionedObjectPropertiesChanges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

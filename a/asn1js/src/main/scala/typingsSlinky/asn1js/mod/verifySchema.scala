@@ -15,6 +15,6 @@ object verifySchema extends js.Object {
     * @param {*} inputSchema Input ASN.1 schema to verify against to
     * @returns {{ verified: boolean, result?: any }}
     */
-  def apply(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer, inputSchema: js.Any): AnonResult = js.native
+  def apply(inputBuffer: js.typedarray.ArrayBuffer, inputSchema: js.Any): AnonResult = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojo.selector
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -98,8 +98,8 @@ trait acme extends js.Object {
     * @param filter
     * @param root               Optional
     */
-  def filter(nodeList: js.Array[org.scalajs.dom.raw.HTMLElement], filter: String): Unit = js.native
-  def filter(nodeList: js.Array[org.scalajs.dom.raw.HTMLElement], filter: String, root: String): Unit = js.native
-  def filter(nodeList: js.Array[org.scalajs.dom.raw.HTMLElement], filter: String, root: HTMLElement): Unit = js.native
+  def filter(nodeList: js.Array[HTMLElement], filter: String): Unit = js.native
+  def filter(nodeList: js.Array[HTMLElement], filter: String, root: String): Unit = js.native
+  def filter(nodeList: js.Array[HTMLElement], filter: String, root: HTMLElement): Unit = js.native
 }
 

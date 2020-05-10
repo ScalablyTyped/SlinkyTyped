@@ -13,12 +13,10 @@ trait horizontal extends js.Object
 
 object horizontal {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.materialUi.materialUiStrings.left = "left".asInstanceOf[typingsSlinky.materialUi.materialUiStrings.left]
   @scala.inline
-  def left: typingsSlinky.materialUi.materialUiStrings.left = this.cast("left")
+  def middle: typingsSlinky.materialUi.materialUiStrings.middle = "middle".asInstanceOf[typingsSlinky.materialUi.materialUiStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.materialUi.materialUiStrings.middle = this.cast("middle")
-  @scala.inline
-  def right: typingsSlinky.materialUi.materialUiStrings.right = this.cast("right")
+  def right: typingsSlinky.materialUi.materialUiStrings.right = "right".asInstanceOf[typingsSlinky.materialUi.materialUiStrings.right]
 }
 

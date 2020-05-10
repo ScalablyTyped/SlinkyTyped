@@ -1,6 +1,5 @@
 package typingsSlinky.uirouterCore
 
-import typingsSlinky.std.RegExp
 import typingsSlinky.uirouterCore.routerMod.UIRouter
 import typingsSlinky.uirouterCore.stateObjectMod.StateObject
 import typingsSlinky.uirouterCore.urlInterfaceMod.MatcherUrlRule
@@ -31,9 +30,9 @@ object urlRuleMod extends js.Object {
     def create(what: String): UrlRule = js.native
     def create(what: String, handler: String): UrlRule = js.native
     def create(what: String, handler: UrlRuleHandlerFn): UrlRule = js.native
-    def create(what: RegExp): UrlRule = js.native
-    def create(what: RegExp, handler: String): UrlRule = js.native
-    def create(what: RegExp, handler: UrlRuleHandlerFn): UrlRule = js.native
+    def create(what: js.RegExp): UrlRule = js.native
+    def create(what: js.RegExp, handler: String): UrlRule = js.native
+    def create(what: js.RegExp, handler: UrlRuleHandlerFn): UrlRule = js.native
     def create(what: StateObject): UrlRule = js.native
     def create(what: StateObject, handler: String): UrlRule = js.native
     def create(what: StateObject, handler: UrlRuleHandlerFn): UrlRule = js.native

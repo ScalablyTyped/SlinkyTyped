@@ -12,10 +12,8 @@ trait BodyType extends js.Object
 
 object BodyType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def html: typingsSlinky.microsoftGraph.microsoftGraphStrings.html = "html".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.html]
   @scala.inline
-  def html: typingsSlinky.microsoftGraph.microsoftGraphStrings.html = this.cast("html")
-  @scala.inline
-  def text: typingsSlinky.microsoftGraph.microsoftGraphStrings.text = this.cast("text")
+  def text: typingsSlinky.microsoftGraph.microsoftGraphStrings.text = "text".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.text]
 }
 

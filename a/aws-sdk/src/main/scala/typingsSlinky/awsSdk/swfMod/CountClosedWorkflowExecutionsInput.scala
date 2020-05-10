@@ -38,23 +38,95 @@ trait CountClosedWorkflowExecutionsInput extends js.Object {
 
 object CountClosedWorkflowExecutionsInput {
   @scala.inline
-  def apply(
-    domain: DomainName,
-    closeStatusFilter: CloseStatusFilter = null,
-    closeTimeFilter: ExecutionTimeFilter = null,
-    executionFilter: WorkflowExecutionFilter = null,
-    startTimeFilter: ExecutionTimeFilter = null,
-    tagFilter: TagFilter = null,
-    typeFilter: WorkflowTypeFilter = null
-  ): CountClosedWorkflowExecutionsInput = {
+  def apply(domain: DomainName): CountClosedWorkflowExecutionsInput = {
     val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any])
-    if (closeStatusFilter != null) __obj.updateDynamic("closeStatusFilter")(closeStatusFilter.asInstanceOf[js.Any])
-    if (closeTimeFilter != null) __obj.updateDynamic("closeTimeFilter")(closeTimeFilter.asInstanceOf[js.Any])
-    if (executionFilter != null) __obj.updateDynamic("executionFilter")(executionFilter.asInstanceOf[js.Any])
-    if (startTimeFilter != null) __obj.updateDynamic("startTimeFilter")(startTimeFilter.asInstanceOf[js.Any])
-    if (tagFilter != null) __obj.updateDynamic("tagFilter")(tagFilter.asInstanceOf[js.Any])
-    if (typeFilter != null) __obj.updateDynamic("typeFilter")(typeFilter.asInstanceOf[js.Any])
     __obj.asInstanceOf[CountClosedWorkflowExecutionsInput]
   }
+  @scala.inline
+  implicit class CountClosedWorkflowExecutionsInputOps[Self <: CountClosedWorkflowExecutionsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: DomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCloseStatusFilter(value: CloseStatusFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeStatusFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseStatusFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeStatusFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseTimeFilter(value: ExecutionTimeFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeTimeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseTimeFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeTimeFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionFilter(value: WorkflowExecutionFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTimeFilter(value: ExecutionTimeFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimeFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagFilter(value: TagFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeFilter(value: WorkflowTypeFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeFilter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

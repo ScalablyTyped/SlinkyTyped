@@ -18,14 +18,41 @@ trait RelationalDatabaseDataSourceConfig extends js.Object {
 
 object RelationalDatabaseDataSourceConfig {
   @scala.inline
-  def apply(
-    rdsHttpEndpointConfig: RdsHttpEndpointConfig = null,
-    relationalDatabaseSourceType: RelationalDatabaseSourceType = null
-  ): RelationalDatabaseDataSourceConfig = {
+  def apply(): RelationalDatabaseDataSourceConfig = {
     val __obj = js.Dynamic.literal()
-    if (rdsHttpEndpointConfig != null) __obj.updateDynamic("rdsHttpEndpointConfig")(rdsHttpEndpointConfig.asInstanceOf[js.Any])
-    if (relationalDatabaseSourceType != null) __obj.updateDynamic("relationalDatabaseSourceType")(relationalDatabaseSourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[RelationalDatabaseDataSourceConfig]
   }
+  @scala.inline
+  implicit class RelationalDatabaseDataSourceConfigOps[Self <: RelationalDatabaseDataSourceConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRdsHttpEndpointConfig(value: RdsHttpEndpointConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rdsHttpEndpointConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRdsHttpEndpointConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rdsHttpEndpointConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelationalDatabaseSourceType(value: RelationalDatabaseSourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationalDatabaseSourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelationalDatabaseSourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationalDatabaseSourceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

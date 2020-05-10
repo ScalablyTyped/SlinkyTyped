@@ -4,20 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PermissionChange extends js.Object {
   /** Lists all Permission objects added. */
-  var addedPermissions: js.UndefOr[js.Array[Permission]] = js.undefined
+  var addedPermissions: js.UndefOr[js.Array[Permission]] = js.native
   /** Lists all Permission objects removed. */
-  var removedPermissions: js.UndefOr[js.Array[Permission]] = js.undefined
+  var removedPermissions: js.UndefOr[js.Array[Permission]] = js.native
 }
 
 object PermissionChange {
   @scala.inline
-  def apply(addedPermissions: js.Array[Permission] = null, removedPermissions: js.Array[Permission] = null): PermissionChange = {
+  def apply(): PermissionChange = {
     val __obj = js.Dynamic.literal()
-    if (addedPermissions != null) __obj.updateDynamic("addedPermissions")(addedPermissions.asInstanceOf[js.Any])
-    if (removedPermissions != null) __obj.updateDynamic("removedPermissions")(removedPermissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[PermissionChange]
   }
+  @scala.inline
+  implicit class PermissionChangeOps[Self <: PermissionChange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddedPermissions(value: js.Array[Permission]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addedPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddedPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addedPermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemovedPermissions(value: js.Array[Permission]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removedPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemovedPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removedPermissions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

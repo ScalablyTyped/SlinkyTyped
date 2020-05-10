@@ -1,10 +1,11 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.antdMobileStrings._empty
 import typingsSlinky.antdMobile.antdMobileStrings.android
 import typingsSlinky.antdMobile.antdMobileStrings.bottom
@@ -22,46 +23,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ListItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ListItem {
   @JSImport("antd-mobile/lib/list/ListItem", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, onClick, style */
-  def apply(
-    activeStyle: CSSProperties = null,
-    align: top | middle | bottom = null,
-    arrow: horizontal | down | up | empty | _empty = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    error: js.UndefOr[Boolean] = js.undefined,
-    extra: TagMod[Any] = null,
-    multipleLine: js.UndefOr[Boolean] = js.undefined,
-    platform: android | ios = null,
-    prefixCls: String = null,
-    role: String = null,
-    thumb: TagMod[Any] = null,
-    wrap: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (activeStyle != null) __obj.updateDynamic("activeStyle")(activeStyle.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (arrow != null) __obj.updateDynamic("arrow")(arrow.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (!js.isUndefined(multipleLine)) __obj.updateDynamic("multipleLine")(multipleLine.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (thumb != null) __obj.updateDynamic("thumb")(thumb.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def activeStyle(value: CSSProperties): this.type = set("activeStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def align(value: top | middle | bottom): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrow(value: horizontal | down | up | empty | _empty): this.type = set("arrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multipleLine(value: Boolean): this.type = set("multipleLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def platform(value: android | ios): this.type = set("platform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thumbReactElement(value: ReactElement): this.type = set("thumb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thumb(value: TagMod[Any]): this.type = set("thumb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def thumbNull: this.type = set("thumb", null)
+    @scala.inline
+    def wrap(value: Boolean): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.antdMobile.listItemMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ListItemProps
+  
+  def withProps(p: ListItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ListItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

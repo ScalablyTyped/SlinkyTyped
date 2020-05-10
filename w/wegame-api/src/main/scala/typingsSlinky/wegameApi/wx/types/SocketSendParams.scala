@@ -4,26 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SocketSendParams extends js.Object {
-  var complete: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var data: String | scala.scalajs.js.typedarray.ArrayBuffer
-  var fail: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var success: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var complete: js.UndefOr[js.Function0[Unit]] = js.native
+  var data: String | js.typedarray.ArrayBuffer = js.native
+  var fail: js.UndefOr[js.Function0[Unit]] = js.native
+  var success: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object SocketSendParams {
   @scala.inline
-  def apply(
-    data: String | scala.scalajs.js.typedarray.ArrayBuffer,
-    complete: () => Unit = null,
-    fail: () => Unit = null,
-    success: () => Unit = null
-  ): SocketSendParams = {
+  def apply(data: String | js.typedarray.ArrayBuffer): SocketSendParams = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction0(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction0(success))
     __obj.asInstanceOf[SocketSendParams]
   }
+  @scala.inline
+  implicit class SocketSendParamsOps[Self <: SocketSendParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: String | js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFail(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutFail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

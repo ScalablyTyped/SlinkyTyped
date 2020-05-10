@@ -1,96 +1,256 @@
 package typingsSlinky.pacote.mod
 
-import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.npmlog.mod.Logger
+import typingsSlinky.ssri.mod.Integrity
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PacoteOptions extends js.Object {
-  /** Alias for `enjoy-by` */
-  var before: js.UndefOr[js.Date | String | Double] = js.undefined
-  /** Alias for `tag` */
-  var defaultTag: js.UndefOr[String] = js.undefined
   /**
-    * Expects a function that takes a single argument, `dir`, and returns a
-    * `ReadableStream` that outputs packaged tarball data. Used when creating
-    * tarballs for package specs that are not already packaged, such as git and
-    * directory dependencies. The default `opts.dirPacker` does not execute
-    * `prepare` scripts, even though npm itself does.
+    * When picking a manifest from a packument, only consider packages
+    * published before the specified date. Default `null`.
     */
-  var dirPacker: js.UndefOr[js.Function1[/* dir */ String, Readable]] = js.undefined
+  var before: js.UndefOr[js.Date | Null] = js.native
   /**
-    * If passed in, will be used while resolving to filter the versions for
-    * **registry dependencies** such that versions published **after**
-    * `opts.enjoy-by` are not considered -- as if they'd never been published.
+    * Where to store cache entries and temp files. Passed to
+    * [`cacache`](http://npm.im/cacache). Defaults to the same cache directory
+    * that npm will use by default, based on platform and environment.
     */
-  var `enjoy-by`: js.UndefOr[js.Date | String | Double] = js.undefined
-  /** Alias for `enjoy-by` */
-  var enjoyBy: js.UndefOr[js.Date | String | Double] = js.undefined
+  var cache: js.UndefOr[String] = js.native
   /**
-    * If `true`, the full packument will be fetched when doing metadata
-    * requests. By default, pacote only fetches the summarized packuments, also
-    * called "corgis".
+    * The default `dist-tag` to use when choosing a manifest from a packument.
+    * Defaults to `latest`.
     */
-  var `full-metadata`: js.UndefOr[Boolean] = js.undefined
+  var defaultTag: js.UndefOr[String] = js.native
   /**
-    * If false, deprecated versions will be skipped when selecting from
-    * registry range specifiers. If true, deprecations do not affect version
-    * selection.
+    * Minimum permission mode for extracted directories. Defaults to `0o777`.
     */
-  var `include-deprecated`: js.UndefOr[Boolean] = js.undefined
-  /** Alias for 'include-deprecated' */
-  var includeDeprecated: js.UndefOr[Boolean] = js.undefined
+  var dmode: js.UndefOr[Double] = js.native
   /**
-    * When fetching tarballs, this option can be passed in to skip registry
-    * metadata lookups when downloading tarballs. If the string is a `file:`
-    * URL, pacote will try to read the referenced local file before attempting
-    * to do any further lookups. This option does not bypass integrity checks
-    * when `opts.integrity` is passed in.
+    * Minimum permission mode for extracted files. Defaults to `0o666`.
     */
-  var resolved: js.UndefOr[String] = js.undefined
+  var fmode: js.UndefOr[Double] = js.native
   /**
-    * Package version resolution tag. When processing registry spec ranges,
-    * this option is used to determine what dist-tag to treat as "latest". For
-    * more details about how `pacote` selects versions and how `tag` is
-    * involved, see [the documentation for `npm-pick-manifest`](https://npm.im/npm-pick-manifest).
+    * Fetch the full metadata from the registry for packuments, including
+    * information not strictly required for installation (author, description,
+    * etc.) Defaults to `true` when `before` is set, since the version publish
+    * time is part of the extended packument metadata.
     */
-  var tag: js.UndefOr[String] = js.undefined
+  var fullMetadata: js.UndefOr[Boolean] = js.native
   /**
-    * Passed as an argument to [`npm-package-arg`](https://npm.im/npm-package-arg)
-    * when resolving `spec` arguments. Used to determine what path to resolve
-    * local path specs relatively from.
+    * Expected integrity of fetched package tarball. If specified, tarballs
+    * with mismatched integrity values will raise an `EINTEGRITY` error.
     */
-  var where: js.UndefOr[String] = js.undefined
+  var integrity: js.UndefOr[String | Integrity] = js.native
+  /**
+    * A logger object with methods for various log levels. Typically, this will
+    * be [`npmlog`](http://npm.im/npmlog) in the npm CLI use case, but if not
+    * specified, the default is a logger that emits 'log' events on the process
+    * object.
+    */
+  var log: js.UndefOr[Logger] = js.native
+  /**
+    * Prefer to revalidate cache entries, even when it would not be strictly
+    * necessary. Default `false`.
+    */
+  var preferOnline: js.UndefOr[Boolean] = js.native
+  /**
+    * The npm registry to use by default. Defaults to
+    * `https://registry.npmjs.org/`.
+    */
+  var registry: js.UndefOr[String] = js.native
+  /**
+    * Shortcut for looking up resolved values. Should be specified if known.
+    */
+  var resolved: js.UndefOr[String] = js.native
+  /**
+    * Permission mode mask for extracted files and directories. Defaults to
+    * `0o22`.
+    */
+  var umask: js.UndefOr[Double] = js.native
+  /**
+    * Base folder for resolving relative `file:` dependencies.
+    */
+  var where: js.UndefOr[String] = js.native
 }
 
 object PacoteOptions {
   @scala.inline
-  def apply(
-    before: js.Date | String | Double = null,
-    defaultTag: String = null,
-    dirPacker: /* dir */ String => Readable = null,
-    `enjoy-by`: js.Date | String | Double = null,
-    enjoyBy: js.Date | String | Double = null,
-    `full-metadata`: js.UndefOr[Boolean] = js.undefined,
-    `include-deprecated`: js.UndefOr[Boolean] = js.undefined,
-    includeDeprecated: js.UndefOr[Boolean] = js.undefined,
-    resolved: String = null,
-    tag: String = null,
-    where: String = null
-  ): PacoteOptions = {
+  def apply(): PacoteOptions = {
     val __obj = js.Dynamic.literal()
-    if (before != null) __obj.updateDynamic("before")(before.asInstanceOf[js.Any])
-    if (defaultTag != null) __obj.updateDynamic("defaultTag")(defaultTag.asInstanceOf[js.Any])
-    if (dirPacker != null) __obj.updateDynamic("dirPacker")(js.Any.fromFunction1(dirPacker))
-    if (`enjoy-by` != null) __obj.updateDynamic("enjoy-by")(`enjoy-by`.asInstanceOf[js.Any])
-    if (enjoyBy != null) __obj.updateDynamic("enjoyBy")(enjoyBy.asInstanceOf[js.Any])
-    if (!js.isUndefined(`full-metadata`)) __obj.updateDynamic("full-metadata")(`full-metadata`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`include-deprecated`)) __obj.updateDynamic("include-deprecated")(`include-deprecated`.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeDeprecated)) __obj.updateDynamic("includeDeprecated")(includeDeprecated.asInstanceOf[js.Any])
-    if (resolved != null) __obj.updateDynamic("resolved")(resolved.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[PacoteOptions]
   }
+  @scala.inline
+  implicit class PacoteOptionsOps[Self <: PacoteOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBefore(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(null)
+        ret
+    }
+    @scala.inline
+    def withCache(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDmode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dmode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDmode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dmode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFmode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fmode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFmode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fmode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullMetadata(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegrity(value: String | Integrity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegrity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLog(value: Logger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreferOnline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferOnline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreferOnline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferOnline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolved(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolved")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolved: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolved")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUmask(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("umask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUmask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("umask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhere(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhere: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

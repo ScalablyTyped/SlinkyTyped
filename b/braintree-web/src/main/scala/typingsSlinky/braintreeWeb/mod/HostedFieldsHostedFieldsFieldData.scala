@@ -19,12 +19,13 @@ import scala.scalajs.js.annotation._
   * return false.
   * @property {boolean} isValid Whether or not the value of the associated input is <i>fully</i> qualified for submission.
   */
+@js.native
 trait HostedFieldsHostedFieldsFieldData extends js.Object {
-  var container: HTMLElement
-  var isEmpty: Boolean
-  var isFocused: Boolean
-  var isPotentiallyValid: Boolean
-  var isValid: Boolean
+  var container: HTMLElement = js.native
+  var isEmpty: Boolean = js.native
+  var isFocused: Boolean = js.native
+  var isPotentiallyValid: Boolean = js.native
+  var isValid: Boolean = js.native
 }
 
 object HostedFieldsHostedFieldsFieldData {
@@ -37,8 +38,45 @@ object HostedFieldsHostedFieldsFieldData {
     isValid: Boolean
   ): HostedFieldsHostedFieldsFieldData = {
     val __obj = js.Dynamic.literal(container = container.asInstanceOf[js.Any], isEmpty = isEmpty.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isPotentiallyValid = isPotentiallyValid.asInstanceOf[js.Any], isValid = isValid.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[HostedFieldsHostedFieldsFieldData]
   }
+  @scala.inline
+  implicit class HostedFieldsHostedFieldsFieldDataOps[Self <: HostedFieldsHostedFieldsFieldData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainer(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsEmpty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmpty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsFocused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFocused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPotentiallyValid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPotentiallyValid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsValid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

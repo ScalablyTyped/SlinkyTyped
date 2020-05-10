@@ -7,150 +7,614 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait filemanagerConfig extends js.Object {
-  var animate: js.UndefOr[js.Any] = js.undefined
-  var borderless: js.UndefOr[Boolean] = js.undefined
-  var container: js.UndefOr[String | HTMLElement] = js.undefined
-  var css: js.UndefOr[js.Any] = js.undefined
-  var data: js.UndefOr[String | js.Array[_]] = js.undefined
-  var datathrottle: js.UndefOr[Double] = js.undefined
-  var datatype: js.UndefOr[String] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var filterMode: js.UndefOr[js.Any] = js.undefined
-  var gravity: js.UndefOr[Double] = js.undefined
-  var handlers: js.UndefOr[js.Any] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var hidden: js.UndefOr[Boolean] = js.undefined
-  var icons: js.UndefOr[js.Any] = js.undefined
-  var id: js.UndefOr[String | Double] = js.undefined
-  var legacyUploader: js.UndefOr[Boolean] = js.undefined
-  var maxHeight: js.UndefOr[Double] = js.undefined
-  var maxWidth: js.UndefOr[Double] = js.undefined
-  var menuFilter: js.UndefOr[WebixCallback] = js.undefined
-  var minHeight: js.UndefOr[Double] = js.undefined
-  var minWidth: js.UndefOr[Double] = js.undefined
-  var mode: js.UndefOr[String] = js.undefined
-  var modes: js.UndefOr[js.Array[_]] = js.undefined
-  var noFileCache: js.UndefOr[Boolean] = js.undefined
-  var on: js.UndefOr[EventHash] = js.undefined
-  var padding: js.UndefOr[js.Any] = js.undefined
-  var paddingX: js.UndefOr[Double] = js.undefined
-  var paddingY: js.UndefOr[Double] = js.undefined
-  var readonly: js.UndefOr[Boolean] = js.undefined
-  var ready: js.UndefOr[WebixCallback] = js.undefined
-  var removeMissed: js.UndefOr[Boolean] = js.undefined
-  var save: js.UndefOr[js.Any] = js.undefined
-  var scheme: js.UndefOr[js.Any] = js.undefined
-  var structure: js.UndefOr[js.Any] = js.undefined
-  var templateCreate: js.UndefOr[WebixCallback] = js.undefined
-  var templateDate: js.UndefOr[WebixCallback] = js.undefined
-  var templateIcon: js.UndefOr[WebixCallback] = js.undefined
-  var templateName: js.UndefOr[WebixCallback] = js.undefined
-  var templateSize: js.UndefOr[WebixCallback] = js.undefined
-  var templateType: js.UndefOr[WebixCallback] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var uploadProgress: js.UndefOr[js.Any] = js.undefined
-  var url: js.UndefOr[js.Any] = js.undefined
-  var view: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var animate: js.UndefOr[js.Any] = js.native
+  var borderless: js.UndefOr[Boolean] = js.native
+  var container: js.UndefOr[String | HTMLElement] = js.native
+  var css: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[String | js.Array[_]] = js.native
+  var datathrottle: js.UndefOr[Double] = js.native
+  var datatype: js.UndefOr[String] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var filterMode: js.UndefOr[js.Any] = js.native
+  var gravity: js.UndefOr[Double] = js.native
+  var handlers: js.UndefOr[js.Any] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var hidden: js.UndefOr[Boolean] = js.native
+  var icons: js.UndefOr[js.Any] = js.native
+  var id: js.UndefOr[String | Double] = js.native
+  var legacyUploader: js.UndefOr[Boolean] = js.native
+  var maxHeight: js.UndefOr[Double] = js.native
+  var maxWidth: js.UndefOr[Double] = js.native
+  var menuFilter: js.UndefOr[WebixCallback] = js.native
+  var minHeight: js.UndefOr[Double] = js.native
+  var minWidth: js.UndefOr[Double] = js.native
+  var mode: js.UndefOr[String] = js.native
+  var modes: js.UndefOr[js.Array[_]] = js.native
+  var noFileCache: js.UndefOr[Boolean] = js.native
+  var on: js.UndefOr[EventHash] = js.native
+  var padding: js.UndefOr[js.Any] = js.native
+  var paddingX: js.UndefOr[Double] = js.native
+  var paddingY: js.UndefOr[Double] = js.native
+  var readonly: js.UndefOr[Boolean] = js.native
+  var ready: js.UndefOr[WebixCallback] = js.native
+  var removeMissed: js.UndefOr[Boolean] = js.native
+  var save: js.UndefOr[js.Any] = js.native
+  var scheme: js.UndefOr[js.Any] = js.native
+  var structure: js.UndefOr[js.Any] = js.native
+  var templateCreate: js.UndefOr[WebixCallback] = js.native
+  var templateDate: js.UndefOr[WebixCallback] = js.native
+  var templateIcon: js.UndefOr[WebixCallback] = js.native
+  var templateName: js.UndefOr[WebixCallback] = js.native
+  var templateSize: js.UndefOr[WebixCallback] = js.native
+  var templateType: js.UndefOr[WebixCallback] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var uploadProgress: js.UndefOr[js.Any] = js.native
+  var url: js.UndefOr[js.Any] = js.native
+  var view: js.UndefOr[String] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object filemanagerConfig {
   @scala.inline
-  def apply(
-    animate: js.Any = null,
-    borderless: js.UndefOr[Boolean] = js.undefined,
-    container: String | HTMLElement = null,
-    css: js.Any = null,
-    data: String | js.Array[_] = null,
-    datathrottle: Int | Double = null,
-    datatype: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    filterMode: js.Any = null,
-    gravity: Int | Double = null,
-    handlers: js.Any = null,
-    height: Int | Double = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    icons: js.Any = null,
-    id: String | Double = null,
-    legacyUploader: js.UndefOr[Boolean] = js.undefined,
-    maxHeight: Int | Double = null,
-    maxWidth: Int | Double = null,
-    menuFilter: /* repeated */ js.Any => js.Any = null,
-    minHeight: Int | Double = null,
-    minWidth: Int | Double = null,
-    mode: String = null,
-    modes: js.Array[_] = null,
-    noFileCache: js.UndefOr[Boolean] = js.undefined,
-    on: EventHash = null,
-    padding: js.Any = null,
-    paddingX: Int | Double = null,
-    paddingY: Int | Double = null,
-    readonly: js.UndefOr[Boolean] = js.undefined,
-    ready: /* repeated */ js.Any => js.Any = null,
-    removeMissed: js.UndefOr[Boolean] = js.undefined,
-    save: js.Any = null,
-    scheme: js.Any = null,
-    structure: js.Any = null,
-    templateCreate: /* repeated */ js.Any => js.Any = null,
-    templateDate: /* repeated */ js.Any => js.Any = null,
-    templateIcon: /* repeated */ js.Any => js.Any = null,
-    templateName: /* repeated */ js.Any => js.Any = null,
-    templateSize: /* repeated */ js.Any => js.Any = null,
-    templateType: /* repeated */ js.Any => js.Any = null,
-    `type`: String = null,
-    uploadProgress: js.Any = null,
-    url: js.Any = null,
-    view: String = null,
-    width: Int | Double = null
-  ): filemanagerConfig = {
+  def apply(): filemanagerConfig = {
     val __obj = js.Dynamic.literal()
-    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderless)) __obj.updateDynamic("borderless")(borderless.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (datathrottle != null) __obj.updateDynamic("datathrottle")(datathrottle.asInstanceOf[js.Any])
-    if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (filterMode != null) __obj.updateDynamic("filterMode")(filterMode.asInstanceOf[js.Any])
-    if (gravity != null) __obj.updateDynamic("gravity")(gravity.asInstanceOf[js.Any])
-    if (handlers != null) __obj.updateDynamic("handlers")(handlers.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(legacyUploader)) __obj.updateDynamic("legacyUploader")(legacyUploader.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (menuFilter != null) __obj.updateDynamic("menuFilter")(js.Any.fromFunction1(menuFilter))
-    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (modes != null) __obj.updateDynamic("modes")(modes.asInstanceOf[js.Any])
-    if (!js.isUndefined(noFileCache)) __obj.updateDynamic("noFileCache")(noFileCache.asInstanceOf[js.Any])
-    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (paddingX != null) __obj.updateDynamic("paddingX")(paddingX.asInstanceOf[js.Any])
-    if (paddingY != null) __obj.updateDynamic("paddingY")(paddingY.asInstanceOf[js.Any])
-    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
-    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction1(ready))
-    if (!js.isUndefined(removeMissed)) __obj.updateDynamic("removeMissed")(removeMissed.asInstanceOf[js.Any])
-    if (save != null) __obj.updateDynamic("save")(save.asInstanceOf[js.Any])
-    if (scheme != null) __obj.updateDynamic("scheme")(scheme.asInstanceOf[js.Any])
-    if (structure != null) __obj.updateDynamic("structure")(structure.asInstanceOf[js.Any])
-    if (templateCreate != null) __obj.updateDynamic("templateCreate")(js.Any.fromFunction1(templateCreate))
-    if (templateDate != null) __obj.updateDynamic("templateDate")(js.Any.fromFunction1(templateDate))
-    if (templateIcon != null) __obj.updateDynamic("templateIcon")(js.Any.fromFunction1(templateIcon))
-    if (templateName != null) __obj.updateDynamic("templateName")(js.Any.fromFunction1(templateName))
-    if (templateSize != null) __obj.updateDynamic("templateSize")(js.Any.fromFunction1(templateSize))
-    if (templateType != null) __obj.updateDynamic("templateType")(js.Any.fromFunction1(templateType))
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (uploadProgress != null) __obj.updateDynamic("uploadProgress")(uploadProgress.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[filemanagerConfig]
   }
+  @scala.inline
+  implicit class filemanagerConfigOps[Self <: filemanagerConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimate(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderless(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderless")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderless: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderless")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContainer(value: String | HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCss(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: String | js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatathrottle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datathrottle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatathrottle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datathrottle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatatype(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatatype: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterMode(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGravity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGravity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gravity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandlers(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandlers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcons(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegacyUploader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyUploader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegacyUploader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legacyUploader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuFilter(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuFilter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMenuFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModes(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoFileCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noFileCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoFileCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noFileCache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOn(value: EventHash): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadonly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadonly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReady(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutReady: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveMissed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMissed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveMissed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMissed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSave(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheme(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStructure(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStructure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateCreate(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateCreate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTemplateCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateCreate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateDate(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateDate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTemplateDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateIcon(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateIcon")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTemplateIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateName(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTemplateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateSize(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTemplateSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateType(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTemplateType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadProgress(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withView(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

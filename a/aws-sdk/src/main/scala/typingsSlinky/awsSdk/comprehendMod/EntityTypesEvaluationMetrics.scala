@@ -22,16 +22,53 @@ trait EntityTypesEvaluationMetrics extends js.Object {
 
 object EntityTypesEvaluationMetrics {
   @scala.inline
-  def apply(
-    F1Score: Int | scala.Double = null,
-    Precision: Int | scala.Double = null,
-    Recall: Int | scala.Double = null
-  ): EntityTypesEvaluationMetrics = {
+  def apply(): EntityTypesEvaluationMetrics = {
     val __obj = js.Dynamic.literal()
-    if (F1Score != null) __obj.updateDynamic("F1Score")(F1Score.asInstanceOf[js.Any])
-    if (Precision != null) __obj.updateDynamic("Precision")(Precision.asInstanceOf[js.Any])
-    if (Recall != null) __obj.updateDynamic("Recall")(Recall.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntityTypesEvaluationMetrics]
   }
+  @scala.inline
+  implicit class EntityTypesEvaluationMetricsOps[Self <: EntityTypesEvaluationMetrics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withF1Score(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("F1Score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutF1Score: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("F1Score")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrecision(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Precision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrecision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Precision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecall(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Recall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Recall")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

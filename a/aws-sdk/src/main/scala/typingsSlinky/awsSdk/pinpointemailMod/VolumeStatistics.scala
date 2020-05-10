@@ -26,18 +26,65 @@ trait VolumeStatistics extends js.Object {
 
 object VolumeStatistics {
   @scala.inline
-  def apply(
-    InboxRawCount: Int | Double = null,
-    ProjectedInbox: Int | Double = null,
-    ProjectedSpam: Int | Double = null,
-    SpamRawCount: Int | Double = null
-  ): VolumeStatistics = {
+  def apply(): VolumeStatistics = {
     val __obj = js.Dynamic.literal()
-    if (InboxRawCount != null) __obj.updateDynamic("InboxRawCount")(InboxRawCount.asInstanceOf[js.Any])
-    if (ProjectedInbox != null) __obj.updateDynamic("ProjectedInbox")(ProjectedInbox.asInstanceOf[js.Any])
-    if (ProjectedSpam != null) __obj.updateDynamic("ProjectedSpam")(ProjectedSpam.asInstanceOf[js.Any])
-    if (SpamRawCount != null) __obj.updateDynamic("SpamRawCount")(SpamRawCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[VolumeStatistics]
   }
+  @scala.inline
+  implicit class VolumeStatisticsOps[Self <: VolumeStatistics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInboxRawCount(value: Volume): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxRawCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInboxRawCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxRawCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectedInbox(value: Volume): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectedInbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectedInbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectedInbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectedSpam(value: Volume): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectedSpam")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectedSpam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectedSpam")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpamRawCount(value: Volume): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpamRawCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpamRawCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpamRawCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

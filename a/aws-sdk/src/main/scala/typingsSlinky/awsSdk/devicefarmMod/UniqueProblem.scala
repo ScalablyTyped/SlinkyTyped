@@ -18,11 +18,41 @@ trait UniqueProblem extends js.Object {
 
 object UniqueProblem {
   @scala.inline
-  def apply(message: Message = null, problems: Problems = null): UniqueProblem = {
+  def apply(): UniqueProblem = {
     val __obj = js.Dynamic.literal()
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (problems != null) __obj.updateDynamic("problems")(problems.asInstanceOf[js.Any])
     __obj.asInstanceOf[UniqueProblem]
   }
+  @scala.inline
+  implicit class UniqueProblemOps[Self <: UniqueProblem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessage(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProblems(value: Problems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("problems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProblems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("problems")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

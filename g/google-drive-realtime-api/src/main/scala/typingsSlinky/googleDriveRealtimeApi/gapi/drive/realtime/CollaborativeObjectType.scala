@@ -13,12 +13,10 @@ trait CollaborativeObjectType extends js.Object
 
 object CollaborativeObjectType {
   @scala.inline
-  def EditableString: typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.EditableString = this.cast("EditableString")
+  def EditableString: typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.EditableString = "EditableString".asInstanceOf[typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.EditableString]
   @scala.inline
-  def List: typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.List = this.cast("List")
+  def List: typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.List = "List".asInstanceOf[typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.List]
   @scala.inline
-  def Map: typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.Map = this.cast("Map")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Map: typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.Map = "Map".asInstanceOf[typingsSlinky.googleDriveRealtimeApi.googleDriveRealtimeApiStrings.Map]
 }
 

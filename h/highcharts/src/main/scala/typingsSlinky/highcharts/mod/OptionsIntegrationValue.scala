@@ -12,10 +12,8 @@ trait OptionsIntegrationValue extends js.Object
 
 object OptionsIntegrationValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def euler: typingsSlinky.highcharts.highchartsStrings.euler = "euler".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.euler]
   @scala.inline
-  def euler: typingsSlinky.highcharts.highchartsStrings.euler = this.cast("euler")
-  @scala.inline
-  def verlet: typingsSlinky.highcharts.highchartsStrings.verlet = this.cast("verlet")
+  def verlet: typingsSlinky.highcharts.highchartsStrings.verlet = "verlet".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.verlet]
 }
 

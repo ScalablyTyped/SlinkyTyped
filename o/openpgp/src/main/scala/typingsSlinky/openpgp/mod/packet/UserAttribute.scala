@@ -32,11 +32,11 @@ class UserAttribute () extends js.Object {
     * parsing function for a user attribute packet (tag 17).
     * @param input payload of a tag 17 packet
     */
-  def read(input: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+  def read(input: js.typedarray.Uint8Array): Unit = js.native
   /**
     * Creates a binary representation of the user attribute packet
     * @returns string representation
     */
-  def write(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def write(): js.typedarray.Uint8Array = js.native
 }
 

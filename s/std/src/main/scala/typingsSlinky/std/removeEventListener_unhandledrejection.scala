@@ -20,7 +20,7 @@ object removeEventListener_unhandledrejection extends js.Object {
   def apply(
     `type`: unhandledrejection,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ PromiseRejectionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

@@ -16,8 +16,21 @@ object ActivateEventSourceRequest {
   @scala.inline
   def apply(Name: EventSourceName): ActivateEventSourceRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ActivateEventSourceRequest]
   }
+  @scala.inline
+  implicit class ActivateEventSourceRequestOps[Self <: ActivateEventSourceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: EventSourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

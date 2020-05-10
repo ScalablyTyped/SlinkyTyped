@@ -14,9 +14,6 @@ object foundationMod extends js.Object {
   @js.native
   class MDCTabScrollerFoundation () extends MDCFoundation[MDCTabScrollerAdapter] {
     def this(adapter: PartialMDCTabScrollerAdap) = this()
-    // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)
-    /* CompleteClass */
-    override def destroy(): Unit = js.native
     /**
       * @return Browser-specific {@link MDCTabScrollerRTL} instance.
       */
@@ -43,9 +40,6 @@ object foundationMod extends js.Object {
       * @param scrollXIncrement The value by which to increment the scroll position
       */
     def incrementScrollImmediate(scrollXIncrement: Double): Unit = js.native
-    // Subclasses should override this method to perform initialization routines (registering events, etc.)
-    /* CompleteClass */
-    override def init(): Unit = js.native
     /**
       * Scrolls to the given scrollX value
       */

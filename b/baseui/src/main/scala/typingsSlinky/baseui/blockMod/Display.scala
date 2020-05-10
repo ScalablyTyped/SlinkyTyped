@@ -51,88 +51,86 @@ trait Display extends js.Object
 
 object Display {
   @scala.inline
-  def block: typingsSlinky.baseui.baseuiStrings.block = this.cast("block")
+  def block: typingsSlinky.baseui.baseuiStrings.block = "block".asInstanceOf[typingsSlinky.baseui.baseuiStrings.block]
   @scala.inline
-  def `block flow`: typingsSlinky.baseui.baseuiStrings.`block flow` = this.cast("block flow")
+  def `block flow`: typingsSlinky.baseui.baseuiStrings.`block flow` = ("block flow").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`block flow`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def contents: typingsSlinky.baseui.baseuiStrings.contents = "contents".asInstanceOf[typingsSlinky.baseui.baseuiStrings.contents]
   @scala.inline
-  def contents: typingsSlinky.baseui.baseuiStrings.contents = this.cast("contents")
+  def flex: typingsSlinky.baseui.baseuiStrings.flex = "flex".asInstanceOf[typingsSlinky.baseui.baseuiStrings.flex]
   @scala.inline
-  def flex: typingsSlinky.baseui.baseuiStrings.flex = this.cast("flex")
+  def `flex run-in`: typingsSlinky.baseui.baseuiStrings.`flex run-in` = ("flex run-in").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`flex run-in`]
   @scala.inline
-  def `flex run-in`: typingsSlinky.baseui.baseuiStrings.`flex run-in` = this.cast("flex run-in")
+  def flow: typingsSlinky.baseui.baseuiStrings.flow = "flow".asInstanceOf[typingsSlinky.baseui.baseuiStrings.flow]
   @scala.inline
-  def flow: typingsSlinky.baseui.baseuiStrings.flow = this.cast("flow")
+  def `flow list-item block`: typingsSlinky.baseui.baseuiStrings.`flow list-item block` = ("flow list-item block").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`flow list-item block`]
   @scala.inline
-  def `flow list-item block`: typingsSlinky.baseui.baseuiStrings.`flow list-item block` = this.cast("flow list-item block")
+  def `flow-root`: typingsSlinky.baseui.baseuiStrings.`flow-root` = "flow-root".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`flow-root`]
   @scala.inline
-  def `flow-root`: typingsSlinky.baseui.baseuiStrings.`flow-root` = this.cast("flow-root")
+  def grid: typingsSlinky.baseui.baseuiStrings.grid = "grid".asInstanceOf[typingsSlinky.baseui.baseuiStrings.grid]
   @scala.inline
-  def grid: typingsSlinky.baseui.baseuiStrings.grid = this.cast("grid")
+  def inherit: typingsSlinky.baseui.baseuiStrings.inherit = "inherit".asInstanceOf[typingsSlinky.baseui.baseuiStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.baseui.baseuiStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.baseui.baseuiStrings.initial = "initial".asInstanceOf[typingsSlinky.baseui.baseuiStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.baseui.baseuiStrings.initial = this.cast("initial")
+  def `inline`: typingsSlinky.baseui.baseuiStrings.`inline` = "inline".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`inline`]
   @scala.inline
-  def `inline`: typingsSlinky.baseui.baseuiStrings.`inline` = this.cast("inline")
+  def `inline table`: typingsSlinky.baseui.baseuiStrings.`inline table` = ("inline table").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`inline table`]
   @scala.inline
-  def `inline table`: typingsSlinky.baseui.baseuiStrings.`inline table` = this.cast("inline table")
+  def `inline-block`: typingsSlinky.baseui.baseuiStrings.`inline-block` = "inline-block".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`inline-block`]
   @scala.inline
-  def `inline-block`: typingsSlinky.baseui.baseuiStrings.`inline-block` = this.cast("inline-block")
+  def `inline-flex`: typingsSlinky.baseui.baseuiStrings.`inline-flex` = "inline-flex".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`inline-flex`]
   @scala.inline
-  def `inline-flex`: typingsSlinky.baseui.baseuiStrings.`inline-flex` = this.cast("inline-flex")
+  def `inline-grid`: typingsSlinky.baseui.baseuiStrings.`inline-grid` = "inline-grid".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`inline-grid`]
   @scala.inline
-  def `inline-grid`: typingsSlinky.baseui.baseuiStrings.`inline-grid` = this.cast("inline-grid")
+  def `inline-table`: typingsSlinky.baseui.baseuiStrings.`inline-table` = "inline-table".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`inline-table`]
   @scala.inline
-  def `inline-table`: typingsSlinky.baseui.baseuiStrings.`inline-table` = this.cast("inline-table")
+  def `list-item`: typingsSlinky.baseui.baseuiStrings.`list-item` = "list-item".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`list-item`]
   @scala.inline
-  def `list-item`: typingsSlinky.baseui.baseuiStrings.`list-item` = this.cast("list-item")
+  def `list-item block`: typingsSlinky.baseui.baseuiStrings.`list-item block` = ("list-item block").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`list-item block`]
   @scala.inline
-  def `list-item block`: typingsSlinky.baseui.baseuiStrings.`list-item block` = this.cast("list-item block")
+  def `list-item block flow`: typingsSlinky.baseui.baseuiStrings.`list-item block flow` = ("list-item block flow").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`list-item block flow`]
   @scala.inline
-  def `list-item block flow`: typingsSlinky.baseui.baseuiStrings.`list-item block flow` = this.cast("list-item block flow")
+  def `list-item block flow-root`: typingsSlinky.baseui.baseuiStrings.`list-item block flow-root` = ("list-item block flow-root").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`list-item block flow-root`]
   @scala.inline
-  def `list-item block flow-root`: typingsSlinky.baseui.baseuiStrings.`list-item block flow-root` = this.cast("list-item block flow-root")
+  def `list-item flow`: typingsSlinky.baseui.baseuiStrings.`list-item flow` = ("list-item flow").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`list-item flow`]
   @scala.inline
-  def `list-item flow`: typingsSlinky.baseui.baseuiStrings.`list-item flow` = this.cast("list-item flow")
+  def `list-item flow-root`: typingsSlinky.baseui.baseuiStrings.`list-item flow-root` = ("list-item flow-root").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`list-item flow-root`]
   @scala.inline
-  def `list-item flow-root`: typingsSlinky.baseui.baseuiStrings.`list-item flow-root` = this.cast("list-item flow-root")
+  def `list-item inline`: typingsSlinky.baseui.baseuiStrings.`list-item inline` = ("list-item inline").asInstanceOf[typingsSlinky.baseui.baseuiStrings.`list-item inline`]
   @scala.inline
-  def `list-item inline`: typingsSlinky.baseui.baseuiStrings.`list-item inline` = this.cast("list-item inline")
+  def none: typingsSlinky.baseui.baseuiStrings.none = "none".asInstanceOf[typingsSlinky.baseui.baseuiStrings.none]
   @scala.inline
-  def none: typingsSlinky.baseui.baseuiStrings.none = this.cast("none")
+  def ruby: typingsSlinky.baseui.baseuiStrings.ruby = "ruby".asInstanceOf[typingsSlinky.baseui.baseuiStrings.ruby]
   @scala.inline
-  def ruby: typingsSlinky.baseui.baseuiStrings.ruby = this.cast("ruby")
+  def `ruby-base`: typingsSlinky.baseui.baseuiStrings.`ruby-base` = "ruby-base".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`ruby-base`]
   @scala.inline
-  def `ruby-base`: typingsSlinky.baseui.baseuiStrings.`ruby-base` = this.cast("ruby-base")
+  def `ruby-base-container`: typingsSlinky.baseui.baseuiStrings.`ruby-base-container` = "ruby-base-container".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`ruby-base-container`]
   @scala.inline
-  def `ruby-base-container`: typingsSlinky.baseui.baseuiStrings.`ruby-base-container` = this.cast("ruby-base-container")
+  def `ruby-text`: typingsSlinky.baseui.baseuiStrings.`ruby-text` = "ruby-text".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`ruby-text`]
   @scala.inline
-  def `ruby-text`: typingsSlinky.baseui.baseuiStrings.`ruby-text` = this.cast("ruby-text")
+  def `ruby-text-container`: typingsSlinky.baseui.baseuiStrings.`ruby-text-container` = "ruby-text-container".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`ruby-text-container`]
   @scala.inline
-  def `ruby-text-container`: typingsSlinky.baseui.baseuiStrings.`ruby-text-container` = this.cast("ruby-text-container")
+  def `run-in`: typingsSlinky.baseui.baseuiStrings.`run-in` = "run-in".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`run-in`]
   @scala.inline
-  def `run-in`: typingsSlinky.baseui.baseuiStrings.`run-in` = this.cast("run-in")
+  def table: typingsSlinky.baseui.baseuiStrings.table = "table".asInstanceOf[typingsSlinky.baseui.baseuiStrings.table]
   @scala.inline
-  def table: typingsSlinky.baseui.baseuiStrings.table = this.cast("table")
+  def `table-caption`: typingsSlinky.baseui.baseuiStrings.`table-caption` = "table-caption".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`table-caption`]
   @scala.inline
-  def `table-caption`: typingsSlinky.baseui.baseuiStrings.`table-caption` = this.cast("table-caption")
+  def `table-cell`: typingsSlinky.baseui.baseuiStrings.`table-cell` = "table-cell".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`table-cell`]
   @scala.inline
-  def `table-cell`: typingsSlinky.baseui.baseuiStrings.`table-cell` = this.cast("table-cell")
+  def `table-column`: typingsSlinky.baseui.baseuiStrings.`table-column` = "table-column".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`table-column`]
   @scala.inline
-  def `table-column`: typingsSlinky.baseui.baseuiStrings.`table-column` = this.cast("table-column")
+  def `table-column-group`: typingsSlinky.baseui.baseuiStrings.`table-column-group` = "table-column-group".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`table-column-group`]
   @scala.inline
-  def `table-column-group`: typingsSlinky.baseui.baseuiStrings.`table-column-group` = this.cast("table-column-group")
+  def `table-footer-group`: typingsSlinky.baseui.baseuiStrings.`table-footer-group` = "table-footer-group".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`table-footer-group`]
   @scala.inline
-  def `table-footer-group`: typingsSlinky.baseui.baseuiStrings.`table-footer-group` = this.cast("table-footer-group")
+  def `table-header-group`: typingsSlinky.baseui.baseuiStrings.`table-header-group` = "table-header-group".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`table-header-group`]
   @scala.inline
-  def `table-header-group`: typingsSlinky.baseui.baseuiStrings.`table-header-group` = this.cast("table-header-group")
+  def `table-row`: typingsSlinky.baseui.baseuiStrings.`table-row` = "table-row".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`table-row`]
   @scala.inline
-  def `table-row`: typingsSlinky.baseui.baseuiStrings.`table-row` = this.cast("table-row")
+  def `table-row-group`: typingsSlinky.baseui.baseuiStrings.`table-row-group` = "table-row-group".asInstanceOf[typingsSlinky.baseui.baseuiStrings.`table-row-group`]
   @scala.inline
-  def `table-row-group`: typingsSlinky.baseui.baseuiStrings.`table-row-group` = this.cast("table-row-group")
-  @scala.inline
-  def unset: typingsSlinky.baseui.baseuiStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.baseui.baseuiStrings.unset = "unset".asInstanceOf[typingsSlinky.baseui.baseuiStrings.unset]
 }
 

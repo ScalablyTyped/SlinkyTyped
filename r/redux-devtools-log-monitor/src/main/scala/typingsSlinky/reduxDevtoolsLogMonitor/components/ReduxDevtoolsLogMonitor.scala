@@ -1,10 +1,7 @@
 package typingsSlinky.reduxDevtoolsLogMonitor.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.base16.mod.ColorScheme
 import typingsSlinky.reduxDevtoolsLogMonitor.mod.ILogMonitorProps
 import typingsSlinky.reduxDevtoolsLogMonitor.mod.default
@@ -12,31 +9,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReduxDevtoolsLogMonitor
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReduxDevtoolsLogMonitor {
   @JSImport("redux-devtools-log-monitor", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    expandActionRoot: js.UndefOr[Boolean] = js.undefined,
-    expandStateRoot: js.UndefOr[Boolean] = js.undefined,
-    preserveScrollTop: js.UndefOr[Boolean] = js.undefined,
-    select: /* state */ js.Any => _ = null,
-    theme: String | ColorScheme = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(expandActionRoot)) __obj.updateDynamic("expandActionRoot")(expandActionRoot.asInstanceOf[js.Any])
-    if (!js.isUndefined(expandStateRoot)) __obj.updateDynamic("expandStateRoot")(expandStateRoot.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveScrollTop)) __obj.updateDynamic("preserveScrollTop")(preserveScrollTop.asInstanceOf[js.Any])
-    if (select != null) __obj.updateDynamic("select")(js.Any.fromFunction1(select))
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def expandActionRoot(value: Boolean): this.type = set("expandActionRoot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandStateRoot(value: Boolean): this.type = set("expandStateRoot", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preserveScrollTop(value: Boolean): this.type = set("preserveScrollTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def select(value: /* state */ js.Any => _): this.type = set("select", js.Any.fromFunction1(value))
+    @scala.inline
+    def theme(value: String | ColorScheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reduxDevtoolsLogMonitor.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ILogMonitorProps
+  
+  def withProps(p: ILogMonitorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReduxDevtoolsLogMonitor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

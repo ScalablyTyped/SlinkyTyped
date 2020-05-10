@@ -20,8 +20,27 @@ object VpcEndpointDnsEntry {
   @scala.inline
   def apply(dnsName: String, hostedZoneId: String): VpcEndpointDnsEntry = {
     val __obj = js.Dynamic.literal(dnsName = dnsName.asInstanceOf[js.Any], hostedZoneId = hostedZoneId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[VpcEndpointDnsEntry]
   }
+  @scala.inline
+  implicit class VpcEndpointDnsEntryOps[Self <: VpcEndpointDnsEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDnsName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostedZoneId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostedZoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

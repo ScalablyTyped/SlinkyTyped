@@ -12,10 +12,8 @@ trait GalleryChangedType extends js.Object
 
 object GalleryChangedType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def contents_changed: typingsSlinky.chromeApps.chromeAppsStrings.contents_changed = "contents_changed".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.contents_changed]
   @scala.inline
-  def contents_changed: typingsSlinky.chromeApps.chromeAppsStrings.contents_changed = this.cast("contents_changed")
-  @scala.inline
-  def watch_dropped: typingsSlinky.chromeApps.chromeAppsStrings.watch_dropped = this.cast("watch_dropped")
+  def watch_dropped: typingsSlinky.chromeApps.chromeAppsStrings.watch_dropped = "watch_dropped".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.watch_dropped]
 }
 

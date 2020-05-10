@@ -213,64 +213,341 @@ trait SchemaJobConfigurationLoad extends js.Object {
 
 object SchemaJobConfigurationLoad {
   @scala.inline
-  def apply(
-    allowJaggedRows: js.UndefOr[Boolean] = js.undefined,
-    allowQuotedNewlines: js.UndefOr[Boolean] = js.undefined,
-    autodetect: js.UndefOr[Boolean] = js.undefined,
-    clustering: SchemaClustering = null,
-    createDisposition: String = null,
-    destinationEncryptionConfiguration: SchemaEncryptionConfiguration = null,
-    destinationTable: SchemaTableReference = null,
-    destinationTableProperties: SchemaDestinationTableProperties = null,
-    encoding: String = null,
-    fieldDelimiter: String = null,
-    hivePartitioningMode: String = null,
-    ignoreUnknownValues: js.UndefOr[Boolean] = js.undefined,
-    maxBadRecords: Int | Double = null,
-    nullMarker: String = null,
-    projectionFields: js.Array[String] = null,
-    quote: String = null,
-    rangePartitioning: SchemaRangePartitioning = null,
-    schema: SchemaTableSchema = null,
-    schemaInline: String = null,
-    schemaInlineFormat: String = null,
-    schemaUpdateOptions: js.Array[String] = null,
-    skipLeadingRows: Int | Double = null,
-    sourceFormat: String = null,
-    sourceUris: js.Array[String] = null,
-    timePartitioning: SchemaTimePartitioning = null,
-    useAvroLogicalTypes: js.UndefOr[Boolean] = js.undefined,
-    writeDisposition: String = null
-  ): SchemaJobConfigurationLoad = {
+  def apply(): SchemaJobConfigurationLoad = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowJaggedRows)) __obj.updateDynamic("allowJaggedRows")(allowJaggedRows.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowQuotedNewlines)) __obj.updateDynamic("allowQuotedNewlines")(allowQuotedNewlines.asInstanceOf[js.Any])
-    if (!js.isUndefined(autodetect)) __obj.updateDynamic("autodetect")(autodetect.asInstanceOf[js.Any])
-    if (clustering != null) __obj.updateDynamic("clustering")(clustering.asInstanceOf[js.Any])
-    if (createDisposition != null) __obj.updateDynamic("createDisposition")(createDisposition.asInstanceOf[js.Any])
-    if (destinationEncryptionConfiguration != null) __obj.updateDynamic("destinationEncryptionConfiguration")(destinationEncryptionConfiguration.asInstanceOf[js.Any])
-    if (destinationTable != null) __obj.updateDynamic("destinationTable")(destinationTable.asInstanceOf[js.Any])
-    if (destinationTableProperties != null) __obj.updateDynamic("destinationTableProperties")(destinationTableProperties.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (fieldDelimiter != null) __obj.updateDynamic("fieldDelimiter")(fieldDelimiter.asInstanceOf[js.Any])
-    if (hivePartitioningMode != null) __obj.updateDynamic("hivePartitioningMode")(hivePartitioningMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreUnknownValues)) __obj.updateDynamic("ignoreUnknownValues")(ignoreUnknownValues.asInstanceOf[js.Any])
-    if (maxBadRecords != null) __obj.updateDynamic("maxBadRecords")(maxBadRecords.asInstanceOf[js.Any])
-    if (nullMarker != null) __obj.updateDynamic("nullMarker")(nullMarker.asInstanceOf[js.Any])
-    if (projectionFields != null) __obj.updateDynamic("projectionFields")(projectionFields.asInstanceOf[js.Any])
-    if (quote != null) __obj.updateDynamic("quote")(quote.asInstanceOf[js.Any])
-    if (rangePartitioning != null) __obj.updateDynamic("rangePartitioning")(rangePartitioning.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
-    if (schemaInline != null) __obj.updateDynamic("schemaInline")(schemaInline.asInstanceOf[js.Any])
-    if (schemaInlineFormat != null) __obj.updateDynamic("schemaInlineFormat")(schemaInlineFormat.asInstanceOf[js.Any])
-    if (schemaUpdateOptions != null) __obj.updateDynamic("schemaUpdateOptions")(schemaUpdateOptions.asInstanceOf[js.Any])
-    if (skipLeadingRows != null) __obj.updateDynamic("skipLeadingRows")(skipLeadingRows.asInstanceOf[js.Any])
-    if (sourceFormat != null) __obj.updateDynamic("sourceFormat")(sourceFormat.asInstanceOf[js.Any])
-    if (sourceUris != null) __obj.updateDynamic("sourceUris")(sourceUris.asInstanceOf[js.Any])
-    if (timePartitioning != null) __obj.updateDynamic("timePartitioning")(timePartitioning.asInstanceOf[js.Any])
-    if (!js.isUndefined(useAvroLogicalTypes)) __obj.updateDynamic("useAvroLogicalTypes")(useAvroLogicalTypes.asInstanceOf[js.Any])
-    if (writeDisposition != null) __obj.updateDynamic("writeDisposition")(writeDisposition.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJobConfigurationLoad]
   }
+  @scala.inline
+  implicit class SchemaJobConfigurationLoadOps[Self <: SchemaJobConfigurationLoad] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowJaggedRows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowJaggedRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowJaggedRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowJaggedRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowQuotedNewlines(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowQuotedNewlines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowQuotedNewlines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowQuotedNewlines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutodetect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autodetect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutodetect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autodetect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClustering(value: SchemaClustering): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clustering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClustering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clustering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateDisposition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createDisposition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateDisposition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createDisposition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationEncryptionConfiguration(value: SchemaEncryptionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationEncryptionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationEncryptionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationEncryptionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationTable(value: SchemaTableReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationTableProperties(value: SchemaDestinationTableProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationTableProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationTableProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationTableProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldDelimiter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldDelimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldDelimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHivePartitioningMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hivePartitioningMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHivePartitioningMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hivePartitioningMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreUnknownValues(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnknownValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreUnknownValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnknownValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBadRecords(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBadRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBadRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBadRecords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNullMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNullMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectionFields(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectionFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuote(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangePartitioning(value: SchemaRangePartitioning): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangePartitioning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangePartitioning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangePartitioning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: SchemaTableSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaInline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaInline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaInline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaInline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaInlineFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaInlineFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaInlineFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaInlineFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaUpdateOptions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaUpdateOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaUpdateOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaUpdateOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipLeadingRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLeadingRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipLeadingRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLeadingRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceUris(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUris")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceUris: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUris")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimePartitioning(value: SchemaTimePartitioning): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePartitioning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimePartitioning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePartitioning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseAvroLogicalTypes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useAvroLogicalTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseAvroLogicalTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useAvroLogicalTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriteDisposition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeDisposition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWriteDisposition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeDisposition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

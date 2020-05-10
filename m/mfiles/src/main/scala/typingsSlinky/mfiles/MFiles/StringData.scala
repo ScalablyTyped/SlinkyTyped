@@ -8,14 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.StringData")
 @js.native
-class StringData () extends IStringData {
-  /* CompleteClass */
-  override var AsString: String = js.native
-  /* CompleteClass */
-  override val StringDataType: MFStringDataType = js.native
-  /* CompleteClass */
-  override def Clone(): IStringData = js.native
-}
+class StringData () extends IStringData
 
 @JSGlobal("MFiles.StringData")
 @js.native

@@ -14,10 +14,41 @@ trait MaintenanceWindowTaskLoggingInfo extends js.Object {
 
 object MaintenanceWindowTaskLoggingInfo {
   @scala.inline
-  def apply(s3BucketName: Input[String], s3Region: Input[String], s3BucketPrefix: Input[String] = null): MaintenanceWindowTaskLoggingInfo = {
+  def apply(s3BucketName: Input[String], s3Region: Input[String]): MaintenanceWindowTaskLoggingInfo = {
     val __obj = js.Dynamic.literal(s3BucketName = s3BucketName.asInstanceOf[js.Any], s3Region = s3Region.asInstanceOf[js.Any])
-    if (s3BucketPrefix != null) __obj.updateDynamic("s3BucketPrefix")(s3BucketPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[MaintenanceWindowTaskLoggingInfo]
   }
+  @scala.inline
+  implicit class MaintenanceWindowTaskLoggingInfoOps[Self <: MaintenanceWindowTaskLoggingInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withS3BucketName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3Region(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3BucketPrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3BucketPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketPrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

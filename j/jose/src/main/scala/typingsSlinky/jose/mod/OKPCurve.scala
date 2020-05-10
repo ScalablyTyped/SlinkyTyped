@@ -14,14 +14,12 @@ trait OKPCurve extends js.Object
 
 object OKPCurve {
   @scala.inline
-  def Ed25519: typingsSlinky.jose.joseStrings.Ed25519 = this.cast("Ed25519")
+  def Ed25519: typingsSlinky.jose.joseStrings.Ed25519 = "Ed25519".asInstanceOf[typingsSlinky.jose.joseStrings.Ed25519]
   @scala.inline
-  def Ed448: typingsSlinky.jose.joseStrings.Ed448 = this.cast("Ed448")
+  def Ed448: typingsSlinky.jose.joseStrings.Ed448 = "Ed448".asInstanceOf[typingsSlinky.jose.joseStrings.Ed448]
   @scala.inline
-  def X25519: typingsSlinky.jose.joseStrings.X25519 = this.cast("X25519")
+  def X25519: typingsSlinky.jose.joseStrings.X25519 = "X25519".asInstanceOf[typingsSlinky.jose.joseStrings.X25519]
   @scala.inline
-  def X448: typingsSlinky.jose.joseStrings.X448 = this.cast("X448")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def X448: typingsSlinky.jose.joseStrings.X448 = "X448".asInstanceOf[typingsSlinky.jose.joseStrings.X448]
 }
 

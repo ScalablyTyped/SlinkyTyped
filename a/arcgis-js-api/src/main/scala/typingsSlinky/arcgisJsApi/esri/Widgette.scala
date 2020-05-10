@@ -6,13 +6,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Widgette extends js.Object {
   /**
     * The ID or node representing the DOM element containing the widget.  Note that once set, this property cannot be modified afterwards.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Widgette.html#container)
     */
-  var container: String | HTMLElement
+  var container: String | HTMLElement = js.native
   /**
     * Indicates whether the widget is visible.
     *
@@ -20,7 +21,7 @@ trait Widgette extends js.Object {
     *
     * @default true
     */
-  var visible: Boolean
+  var visible: Boolean = js.native
   /**
     * Destroys the widget instance. Call this method when the widget is no longer needed by the application.
     *
@@ -28,7 +29,7 @@ trait Widgette extends js.Object {
     *
     *
     */
-  def destroy(): Unit
+  def destroy(): Unit = js.native
   /**
     * Registers an event handler on the widget instance. Call this method to hook an event with a listener. See the [Events summary table](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Widgette.html#events-summary) for a list of supported events.
     *
@@ -38,7 +39,7 @@ trait Widgette extends js.Object {
     * @param listener The function to call when the event is fired.
     *
     */
-  def on(`type`: String, listener: js.Function): js.Any
+  def on(`type`: String, listener: js.Function): js.Any = js.native
 }
 
 @JSGlobal("__esri.Widgette")

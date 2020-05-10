@@ -20,8 +20,27 @@ object FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor
   @scala.inline
   def apply(parameterName: String, parameterValue: String): FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter = {
     val __obj = js.Dynamic.literal(parameterName = parameterName.asInstanceOf[js.Any], parameterValue = parameterValue.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter]
   }
+  @scala.inline
+  implicit class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterOps[Self <: FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParameterName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParameterValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

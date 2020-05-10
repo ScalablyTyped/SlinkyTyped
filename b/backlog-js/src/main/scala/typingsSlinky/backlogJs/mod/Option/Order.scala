@@ -12,10 +12,8 @@ trait Order extends js.Object
 
 object Order {
   @scala.inline
-  def asc: typingsSlinky.backlogJs.backlogJsStrings.asc = this.cast("asc")
+  def asc: typingsSlinky.backlogJs.backlogJsStrings.asc = "asc".asInstanceOf[typingsSlinky.backlogJs.backlogJsStrings.asc]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def desc: typingsSlinky.backlogJs.backlogJsStrings.desc = this.cast("desc")
+  def desc: typingsSlinky.backlogJs.backlogJsStrings.desc = "desc".asInstanceOf[typingsSlinky.backlogJs.backlogJsStrings.desc]
 }
 

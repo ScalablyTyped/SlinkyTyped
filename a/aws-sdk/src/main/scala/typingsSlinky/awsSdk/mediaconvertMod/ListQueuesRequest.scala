@@ -26,18 +26,65 @@ trait ListQueuesRequest extends js.Object {
 
 object ListQueuesRequest {
   @scala.inline
-  def apply(
-    ListBy: QueueListBy = null,
-    MaxResults: Int | Double = null,
-    NextToken: string = null,
-    Order: Order = null
-  ): ListQueuesRequest = {
+  def apply(): ListQueuesRequest = {
     val __obj = js.Dynamic.literal()
-    if (ListBy != null) __obj.updateDynamic("ListBy")(ListBy.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (Order != null) __obj.updateDynamic("Order")(Order.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListQueuesRequest]
   }
+  @scala.inline
+  implicit class ListQueuesRequestOps[Self <: ListQueuesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withListBy(value: QueueListBy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: integerMin1Max20): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: Order): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Order")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

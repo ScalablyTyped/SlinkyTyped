@@ -1,15 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.fibjs.fibjsNumbers.`0`
-import typingsSlinky.fibjs.fibjsNumbers.`10`
-import typingsSlinky.fibjs.fibjsNumbers.`1`
-import typingsSlinky.fibjs.fibjsNumbers.`2`
-import typingsSlinky.fibjs.fibjsNumbers.`3`
-import typingsSlinky.fibjs.fibjsNumbers.`4`
-import typingsSlinky.fibjs.fibjsNumbers.`5`
-import typingsSlinky.fibjs.fibjsNumbers.`6`
-import typingsSlinky.fibjs.fibjsNumbers.`7`
-import typingsSlinky.fibjs.fibjsNumbers.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,23 +13,23 @@ import scala.scalajs.js.annotation._
 @js.native
 object consoleMod extends js.Object {
   @JSName("ALERT")
-  val ALERT_ : `1` = js.native
+  val ALERT_ : /* 1 */ Double = js.native
   @JSName("CRIT")
-  val CRIT_ : `2` = js.native
+  val CRIT_ : /* 2 */ Double = js.native
   @JSName("DEBUG")
-  val DEBUG_ : `7` = js.native
+  val DEBUG_ : /* 7 */ Double = js.native
   @JSName("ERROR")
-  val ERROR_ : `3` = js.native
-  val FATAL: `0` = js.native
+  val ERROR_ : /* 3 */ Double = js.native
+  val FATAL: /* 0 */ Double = js.native
   @JSName("INFO")
-  val INFO_ : `6` = js.native
+  val INFO_ : /* 6 */ Double = js.native
   @JSName("NOTICE")
-  val NOTICE_ : `5` = js.native
-  val NOTSET: `10` = js.native
+  val NOTICE_ : /* 5 */ Double = js.native
+  val NOTSET: /* 10 */ Double = js.native
   @JSName("PRINT")
-  val PRINT_ : `9` = js.native
+  val PRINT_ : /* 9 */ Double = js.native
   @JSName("WARN")
-  val WARN_ : `4` = js.native
+  val WARN_ : /* 4 */ Double = js.native
   val height: Double = js.native
   val loglevel: Double = js.native
   val width: Double = js.native

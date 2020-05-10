@@ -1,6 +1,5 @@
 package typingsSlinky.bcryptjs
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +21,7 @@ object mod extends js.Object {
   def decodeBase64(s: String, len: Double): js.Array[Double] = js.native
   def encodeBase64(b: ReadonlyArrayLikenumber, len: Double): String = js.native
   def genSalt(): js.Promise[String] = js.native
-  def genSalt(callback: js.Function2[/* err */ Error, /* salt */ String, Unit]): Unit = js.native
+  def genSalt(callback: js.Function2[/* err */ js.Error, /* salt */ String, Unit]): Unit = js.native
   def genSalt(rounds: Double): js.Promise[String] = js.native
   def genSalt(rounds: Double, callback: js.Function2[/* err */ js.Error, /* salt */ String, Unit]): Unit = js.native
   def genSaltSync(): String = js.native

@@ -1,7 +1,6 @@
 package typingsSlinky.parsimmon.mod
 
 import typingsSlinky.parsimmon.parsimmonStrings._empty
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,6 @@ object lookahead extends js.Object {
   	 * Parses using arg, but does not consume what it parses. Yields an empty string.
   	 */
   def apply(arg: Parser[_]): Parser[_empty] = js.native
-  def apply(arg: RegExp): Parser[_empty] = js.native
+  def apply(arg: js.RegExp): Parser[_empty] = js.native
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.firebaseFirestore.localLruGarbageCollectorMod
 
-import typingsSlinky.firebaseFirestore.firebaseFirestoreNumbers.`-1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +21,7 @@ class LruParams protected () extends js.Object {
 @JSImport("@firebase/firestore/dist/src/local/lru_garbage_collector", "LruParams")
 @js.native
 object LruParams extends js.Object {
-  val COLLECTION_DISABLED: `-1` = js.native
+  val COLLECTION_DISABLED: /* -1 */ Double = js.native
   val DEFAULT: LruParams = js.native
   val DEFAULT_CACHE_SIZE_BYTES: Double = js.native
   val DEFAULT_COLLECTION_PERCENTILE: js.Any = js.native

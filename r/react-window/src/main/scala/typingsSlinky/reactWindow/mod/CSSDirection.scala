@@ -12,10 +12,8 @@ trait CSSDirection extends js.Object
 
 object CSSDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ltr: typingsSlinky.reactWindow.reactWindowStrings.ltr = "ltr".asInstanceOf[typingsSlinky.reactWindow.reactWindowStrings.ltr]
   @scala.inline
-  def ltr: typingsSlinky.reactWindow.reactWindowStrings.ltr = this.cast("ltr")
-  @scala.inline
-  def rtl: typingsSlinky.reactWindow.reactWindowStrings.rtl = this.cast("rtl")
+  def rtl: typingsSlinky.reactWindow.reactWindowStrings.rtl = "rtl".asInstanceOf[typingsSlinky.reactWindow.reactWindowStrings.rtl]
 }
 

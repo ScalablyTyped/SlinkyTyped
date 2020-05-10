@@ -1,6 +1,5 @@
 package typingsSlinky.rxjsCompat
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,11 +16,11 @@ trait FnCallThisDueWithObservableScheduler extends js.Object {
     scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
   ): js.Any = js.native
   def apply[T](
-    due: Date,
+    due: js.Date,
     withObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObservableInput<T> */ js.Any
   ): js.Any = js.native
   def apply[T](
-    due: Date,
+    due: js.Date,
     withObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ObservableInput<T> */ js.Any,
     scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
   ): js.Any = js.native

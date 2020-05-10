@@ -4,63 +4,231 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait KoaHelmetContentSecurityPolicyDirectives extends js.Object {
-  var baseUri: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var childSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var connectSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var defaultSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var fontSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var formAction: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var frameAncestors: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var frameSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var imgSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var mediaSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var objectSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var pluginTypes: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var reportUri: js.UndefOr[String] = js.undefined
-  var sandbox: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var scriptSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
-  var styleSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.undefined
+  var baseUri: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var childSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var connectSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var defaultSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var fontSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var formAction: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var frameAncestors: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var frameSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var imgSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var mediaSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var objectSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var pluginTypes: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var reportUri: js.UndefOr[String] = js.native
+  var sandbox: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var scriptSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
+  var styleSrc: js.UndefOr[js.Array[KoaHelmetCspDirectiveValue]] = js.native
 }
 
 object KoaHelmetContentSecurityPolicyDirectives {
   @scala.inline
-  def apply(
-    baseUri: js.Array[KoaHelmetCspDirectiveValue] = null,
-    childSrc: js.Array[KoaHelmetCspDirectiveValue] = null,
-    connectSrc: js.Array[KoaHelmetCspDirectiveValue] = null,
-    defaultSrc: js.Array[KoaHelmetCspDirectiveValue] = null,
-    fontSrc: js.Array[KoaHelmetCspDirectiveValue] = null,
-    formAction: js.Array[KoaHelmetCspDirectiveValue] = null,
-    frameAncestors: js.Array[KoaHelmetCspDirectiveValue] = null,
-    frameSrc: js.Array[KoaHelmetCspDirectiveValue] = null,
-    imgSrc: js.Array[KoaHelmetCspDirectiveValue] = null,
-    mediaSrc: js.Array[KoaHelmetCspDirectiveValue] = null,
-    objectSrc: js.Array[KoaHelmetCspDirectiveValue] = null,
-    pluginTypes: js.Array[KoaHelmetCspDirectiveValue] = null,
-    reportUri: String = null,
-    sandbox: js.Array[KoaHelmetCspDirectiveValue] = null,
-    scriptSrc: js.Array[KoaHelmetCspDirectiveValue] = null,
-    styleSrc: js.Array[KoaHelmetCspDirectiveValue] = null
-  ): KoaHelmetContentSecurityPolicyDirectives = {
+  def apply(): KoaHelmetContentSecurityPolicyDirectives = {
     val __obj = js.Dynamic.literal()
-    if (baseUri != null) __obj.updateDynamic("baseUri")(baseUri.asInstanceOf[js.Any])
-    if (childSrc != null) __obj.updateDynamic("childSrc")(childSrc.asInstanceOf[js.Any])
-    if (connectSrc != null) __obj.updateDynamic("connectSrc")(connectSrc.asInstanceOf[js.Any])
-    if (defaultSrc != null) __obj.updateDynamic("defaultSrc")(defaultSrc.asInstanceOf[js.Any])
-    if (fontSrc != null) __obj.updateDynamic("fontSrc")(fontSrc.asInstanceOf[js.Any])
-    if (formAction != null) __obj.updateDynamic("formAction")(formAction.asInstanceOf[js.Any])
-    if (frameAncestors != null) __obj.updateDynamic("frameAncestors")(frameAncestors.asInstanceOf[js.Any])
-    if (frameSrc != null) __obj.updateDynamic("frameSrc")(frameSrc.asInstanceOf[js.Any])
-    if (imgSrc != null) __obj.updateDynamic("imgSrc")(imgSrc.asInstanceOf[js.Any])
-    if (mediaSrc != null) __obj.updateDynamic("mediaSrc")(mediaSrc.asInstanceOf[js.Any])
-    if (objectSrc != null) __obj.updateDynamic("objectSrc")(objectSrc.asInstanceOf[js.Any])
-    if (pluginTypes != null) __obj.updateDynamic("pluginTypes")(pluginTypes.asInstanceOf[js.Any])
-    if (reportUri != null) __obj.updateDynamic("reportUri")(reportUri.asInstanceOf[js.Any])
-    if (sandbox != null) __obj.updateDynamic("sandbox")(sandbox.asInstanceOf[js.Any])
-    if (scriptSrc != null) __obj.updateDynamic("scriptSrc")(scriptSrc.asInstanceOf[js.Any])
-    if (styleSrc != null) __obj.updateDynamic("styleSrc")(styleSrc.asInstanceOf[js.Any])
     __obj.asInstanceOf[KoaHelmetContentSecurityPolicyDirectives]
   }
+  @scala.inline
+  implicit class KoaHelmetContentSecurityPolicyDirectivesOps[Self <: KoaHelmetContentSecurityPolicyDirectives] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseUri(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildSrc(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectSrc(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSrc(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSrc(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormAction(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameAncestors(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameAncestors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameAncestors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameAncestors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameSrc(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImgSrc(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImgSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediaSrc(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectSrc(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPluginTypes(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pluginTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPluginTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pluginTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSandbox(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSandbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScriptSrc(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScriptSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleSrc(value: js.Array[KoaHelmetCspDirectiveValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleSrc")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

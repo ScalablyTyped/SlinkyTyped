@@ -38,23 +38,95 @@ trait RegisterInstanceRequest extends js.Object {
 
 object RegisterInstanceRequest {
   @scala.inline
-  def apply(
-    StackId: String,
-    Hostname: String = null,
-    InstanceIdentity: InstanceIdentity = null,
-    PrivateIp: String = null,
-    PublicIp: String = null,
-    RsaPublicKey: String = null,
-    RsaPublicKeyFingerprint: String = null
-  ): RegisterInstanceRequest = {
+  def apply(StackId: String): RegisterInstanceRequest = {
     val __obj = js.Dynamic.literal(StackId = StackId.asInstanceOf[js.Any])
-    if (Hostname != null) __obj.updateDynamic("Hostname")(Hostname.asInstanceOf[js.Any])
-    if (InstanceIdentity != null) __obj.updateDynamic("InstanceIdentity")(InstanceIdentity.asInstanceOf[js.Any])
-    if (PrivateIp != null) __obj.updateDynamic("PrivateIp")(PrivateIp.asInstanceOf[js.Any])
-    if (PublicIp != null) __obj.updateDynamic("PublicIp")(PublicIp.asInstanceOf[js.Any])
-    if (RsaPublicKey != null) __obj.updateDynamic("RsaPublicKey")(RsaPublicKey.asInstanceOf[js.Any])
-    if (RsaPublicKeyFingerprint != null) __obj.updateDynamic("RsaPublicKeyFingerprint")(RsaPublicKeyFingerprint.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterInstanceRequest]
   }
+  @scala.inline
+  implicit class RegisterInstanceRequestOps[Self <: RegisterInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceIdentity(value: InstanceIdentity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIdentity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceIdentity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceIdentity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRsaPublicKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RsaPublicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRsaPublicKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RsaPublicKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRsaPublicKeyFingerprint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RsaPublicKeyFingerprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRsaPublicKeyFingerprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RsaPublicKeyFingerprint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

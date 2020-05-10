@@ -19,24 +19,22 @@ trait GoogleActionsOrdersV3PriceAttributeType extends js.Object
 
 object GoogleActionsOrdersV3PriceAttributeType {
   @scala.inline
-  def DELIVERY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY = this.cast("DELIVERY")
+  def DELIVERY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY = "DELIVERY".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY]
   @scala.inline
-  def DISCOUNT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DISCOUNT = this.cast("DISCOUNT")
+  def DISCOUNT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DISCOUNT = "DISCOUNT".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DISCOUNT]
   @scala.inline
-  def FEE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FEE = this.cast("FEE")
+  def FEE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FEE = "FEE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FEE]
   @scala.inline
-  def GRATUITY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GRATUITY = this.cast("GRATUITY")
+  def GRATUITY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GRATUITY = "GRATUITY".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GRATUITY]
   @scala.inline
-  def REGULAR: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REGULAR = this.cast("REGULAR")
+  def REGULAR: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REGULAR = "REGULAR".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REGULAR]
   @scala.inline
-  def SUBTOTAL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SUBTOTAL = this.cast("SUBTOTAL")
+  def SUBTOTAL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SUBTOTAL = "SUBTOTAL".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SUBTOTAL]
   @scala.inline
-  def TAX: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TAX = this.cast("TAX")
+  def TAX: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TAX = "TAX".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TAX]
   @scala.inline
-  def TOTAL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TOTAL = this.cast("TOTAL")
+  def TOTAL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TOTAL = "TOTAL".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TOTAL]
   @scala.inline
-  def TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED = this.cast("TYPE_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED = "TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED]
 }
 

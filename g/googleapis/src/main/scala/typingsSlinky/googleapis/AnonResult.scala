@@ -12,11 +12,41 @@ trait AnonResult extends js.Object {
 
 object AnonResult {
   @scala.inline
-  def apply(details: js.Array[AnonArgs] = null, result: AnonArgs = null): AnonResult = {
+  def apply(): AnonResult = {
     val __obj = js.Dynamic.literal()
-    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonResult]
   }
+  @scala.inline
+  implicit class AnonResultOps[Self <: AnonResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetails(value: js.Array[AnonArgs]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResult(value: AnonArgs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

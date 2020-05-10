@@ -1,14 +1,17 @@
 package typingsSlinky.reachTabs.components
 
+import typingsSlinky.reachTabs.mod.TabContainerProps
+import typingsSlinky.react.mod.LegacyRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabPanels extends SharedApply_TabContainerProps_635434563 {
+object TabPanels {
   @JSImport("@reach/tabs", "TabPanels")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TabContainerProps): SharedBuilder_TabContainerProps1057700810[LegacyRef[js.Any] with js.Object] = new SharedBuilder_TabContainerProps1057700810[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TabPanels.type): SharedBuilder_TabContainerProps1057700810[LegacyRef[js.Any] with js.Object] = new SharedBuilder_TabContainerProps1057700810[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

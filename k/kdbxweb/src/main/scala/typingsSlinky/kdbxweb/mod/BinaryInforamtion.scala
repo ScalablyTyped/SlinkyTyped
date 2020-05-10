@@ -4,17 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BinaryInforamtion extends js.Object {
-  var ref: String
-  var value: ProtectedValue | scala.scalajs.js.typedarray.ArrayBuffer
+  var ref: String = js.native
+  var value: ProtectedValue | js.typedarray.ArrayBuffer = js.native
 }
 
 object BinaryInforamtion {
   @scala.inline
-  def apply(ref: String, value: ProtectedValue | scala.scalajs.js.typedarray.ArrayBuffer): BinaryInforamtion = {
+  def apply(ref: String, value: ProtectedValue | js.typedarray.ArrayBuffer): BinaryInforamtion = {
     val __obj = js.Dynamic.literal(ref = ref.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BinaryInforamtion]
   }
+  @scala.inline
+  implicit class BinaryInforamtionOps[Self <: BinaryInforamtion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRef(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: ProtectedValue | js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

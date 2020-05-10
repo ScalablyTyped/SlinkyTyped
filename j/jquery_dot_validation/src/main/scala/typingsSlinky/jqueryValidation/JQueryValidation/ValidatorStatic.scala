@@ -42,7 +42,7 @@ trait ValidatorStatic extends js.Object {
   def addMethod(
     name: String,
     method: js.Function3[/* value */ js.Any, /* element */ HTMLElement, /* params */ js.Any, Boolean],
-    message: js.Function2[/* params */ js.Any, /* element */ typingsSlinky.std.HTMLElement, String]
+    message: js.Function2[/* params */ js.Any, /* element */ HTMLElement, String]
   ): Unit = js.native
   /**
     * Replaces {n} placeholders with arguments.

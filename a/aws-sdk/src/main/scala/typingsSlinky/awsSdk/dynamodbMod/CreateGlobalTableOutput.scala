@@ -14,10 +14,29 @@ trait CreateGlobalTableOutput extends js.Object {
 
 object CreateGlobalTableOutput {
   @scala.inline
-  def apply(GlobalTableDescription: GlobalTableDescription = null): CreateGlobalTableOutput = {
+  def apply(): CreateGlobalTableOutput = {
     val __obj = js.Dynamic.literal()
-    if (GlobalTableDescription != null) __obj.updateDynamic("GlobalTableDescription")(GlobalTableDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateGlobalTableOutput]
   }
+  @scala.inline
+  implicit class CreateGlobalTableOutputOps[Self <: CreateGlobalTableOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGlobalTableDescription(value: GlobalTableDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalTableDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

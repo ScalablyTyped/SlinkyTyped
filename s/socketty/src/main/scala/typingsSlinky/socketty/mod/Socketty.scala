@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Socketty extends js.Object {
   /**
     * Connect to a socketty server.
@@ -11,13 +12,13 @@ trait Socketty extends js.Object {
     * @param callback The callback to be run when the connection is open
     * @return A Socket
     */
-  def connect(url: String, callback: js.Function1[/* socket */ SockettySocket, Unit]): SockettySocket
+  def connect(url: String, callback: js.Function1[/* socket */ SockettySocket, Unit]): SockettySocket = js.native
   /**
     * Create a socketty server.
     * @param httpServer The HTTP server to use
     * @return A socketty server
     */
-  def createServer(httpServer: js.Any): SockettyServer
+  def createServer(httpServer: js.Any): SockettyServer = js.native
 }
 
 object Socketty {
@@ -27,8 +28,27 @@ object Socketty {
     createServer: js.Any => SockettyServer
   ): Socketty = {
     val __obj = js.Dynamic.literal(connect = js.Any.fromFunction2(connect), createServer = js.Any.fromFunction1(createServer))
-  
     __obj.asInstanceOf[Socketty]
   }
+  @scala.inline
+  implicit class SockettyOps[Self <: Socketty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnect(value: (String, js.Function1[/* socket */ SockettySocket, Unit]) => SockettySocket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCreateServer(value: js.Any => SockettyServer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createServer")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

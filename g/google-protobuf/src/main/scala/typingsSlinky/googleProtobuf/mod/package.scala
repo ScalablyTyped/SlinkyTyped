@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type AnyFieldType = typingsSlinky.googleProtobuf.mod.ScalarFieldType | typingsSlinky.googleProtobuf.mod.RepeatedFieldType | scala.scalajs.js.typedarray.Uint8Array
+  type AnyFieldType = typingsSlinky.googleProtobuf.mod.ScalarFieldType | typingsSlinky.googleProtobuf.mod.RepeatedFieldType | js.typedarray.Uint8Array
   type BinaryRead = js.Function2[
     /* msg */ js.Any, 
     /* reader */ typingsSlinky.googleProtobuf.mod.BinaryReadReader, 
@@ -27,13 +27,11 @@ package object mod {
     /* binaryWriter */ typingsSlinky.googleProtobuf.mod.BinaryWriter, 
     scala.Unit
   ]
-  type ByteSource = scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.Uint8Array | js.Array[scala.Double] | java.lang.String
+  type ByteSource = js.typedarray.ArrayBuffer | js.typedarray.Uint8Array | js.Array[scala.Double] | java.lang.String
   type FieldValue = js.UndefOr[
-    java.lang.String | scala.Double | scala.Boolean | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.googleProtobuf.mod.FieldValueArray
+    java.lang.String | scala.Double | scala.Boolean | js.typedarray.Uint8Array | typingsSlinky.googleProtobuf.mod.FieldValueArray
   ]
   type Map[K, V] = typingsSlinky.googleProtobuf.mod.Map_[K, V]
-  type RepeatedFieldType = js.Array[
-    typingsSlinky.googleProtobuf.mod.ScalarFieldType | scala.scalajs.js.typedarray.Uint8Array
-  ]
+  type RepeatedFieldType = js.Array[typingsSlinky.googleProtobuf.mod.ScalarFieldType | js.typedarray.Uint8Array]
   type ScalarFieldType = scala.Boolean | scala.Double | java.lang.String
 }

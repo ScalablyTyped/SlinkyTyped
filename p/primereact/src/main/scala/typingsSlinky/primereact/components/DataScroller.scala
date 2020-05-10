@@ -1,57 +1,54 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonFirst
 import typingsSlinky.primereact.dataScrollerMod.DataScrollerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DataScroller
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactDatascrollerMod.DataScroller] {
+object DataScroller {
   @JSImport("primereact/datascroller", "DataScroller")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, rows */
-  def apply(
-    buffer: Int | Double = null,
-    footer: js.Any = null,
-    header: js.Any = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    itemTemplate: /* item */ js.Any => js.UndefOr[ReactElement] = null,
-    `lazy`: js.UndefOr[Boolean] = js.undefined,
-    loader: js.Any = null,
-    onLazyLoad: /* e */ AnonFirst => Unit = null,
-    scrollHeight: js.Any = null,
-    style: js.Object = null,
-    value: js.Array[_] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDatascrollerMod.DataScroller] = {
-    val __obj = js.Dynamic.literal()
-    if (buffer != null) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(js.Any.fromFunction1(itemTemplate))
-    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (loader != null) __obj.updateDynamic("loader")(loader.asInstanceOf[js.Any])
-    if (onLazyLoad != null) __obj.updateDynamic("onLazyLoad")(js.Any.fromFunction1(onLazyLoad))
-    if (scrollHeight != null) __obj.updateDynamic("scrollHeight")(scrollHeight.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactDatascrollerMod.DataScroller] {
+    @scala.inline
+    def buffer(value: Double): this.type = set("buffer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footer(value: js.Any): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def header(value: js.Any): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemTemplate(value: /* item */ js.Any => js.UndefOr[ReactElement]): this.type = set("itemTemplate", js.Any.fromFunction1(value))
+    @scala.inline
+    def `lazy`(value: Boolean): this.type = set("lazy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loader(value: js.Any): this.type = set("loader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLazyLoad(value: /* e */ AnonFirst => Unit): this.type = set("onLazyLoad", js.Any.fromFunction1(value))
+    @scala.inline
+    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollHeight(value: js.Any): this.type = set("scrollHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDatascrollerMod.DataScroller] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactDatascrollerMod.DataScroller](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DataScrollerProps
+  
+  def withProps(p: DataScrollerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DataScroller.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

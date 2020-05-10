@@ -22,16 +22,53 @@ trait DefaultCategoricalHyperParameterRange extends js.Object {
 
 object DefaultCategoricalHyperParameterRange {
   @scala.inline
-  def apply(
-    isTunable: js.UndefOr[scala.Boolean] = js.undefined,
-    name: ParameterName = null,
-    values: CategoricalValues = null
-  ): DefaultCategoricalHyperParameterRange = {
+  def apply(): DefaultCategoricalHyperParameterRange = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(isTunable)) __obj.updateDynamic("isTunable")(isTunable.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultCategoricalHyperParameterRange]
   }
+  @scala.inline
+  implicit class DefaultCategoricalHyperParameterRangeOps[Self <: DefaultCategoricalHyperParameterRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsTunable(value: Tunable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTunable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTunable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTunable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: ParameterName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: CategoricalValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

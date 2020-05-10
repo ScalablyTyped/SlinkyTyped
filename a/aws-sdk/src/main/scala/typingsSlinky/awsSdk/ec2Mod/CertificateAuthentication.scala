@@ -14,10 +14,29 @@ trait CertificateAuthentication extends js.Object {
 
 object CertificateAuthentication {
   @scala.inline
-  def apply(ClientRootCertificateChain: String = null): CertificateAuthentication = {
+  def apply(): CertificateAuthentication = {
     val __obj = js.Dynamic.literal()
-    if (ClientRootCertificateChain != null) __obj.updateDynamic("ClientRootCertificateChain")(ClientRootCertificateChain.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateAuthentication]
   }
+  @scala.inline
+  implicit class CertificateAuthenticationOps[Self <: CertificateAuthentication] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientRootCertificateChain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRootCertificateChain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRootCertificateChain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRootCertificateChain")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

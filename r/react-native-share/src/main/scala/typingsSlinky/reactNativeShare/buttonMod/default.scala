@@ -1,12 +1,12 @@
 package typingsSlinky.reactNativeShare.buttonMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-native-share/Button", JSImport.Default)
 @js.native
-object default extends TopLevel[FC[ButtonProps]]
+object default extends TopLevel[ReactComponentClass[ButtonProps]]
 

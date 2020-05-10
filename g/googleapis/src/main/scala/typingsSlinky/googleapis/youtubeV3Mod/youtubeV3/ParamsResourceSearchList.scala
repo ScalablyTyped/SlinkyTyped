@@ -238,88 +238,401 @@ trait ParamsResourceSearchList extends StandardParameters {
 
 object ParamsResourceSearchList {
   @scala.inline
-  def apply(
-    alt: String = null,
-    auth: String | OAuth2Client | JWT | Compute | UserRefreshClient = null,
-    channelId: String = null,
-    channelType: String = null,
-    eventType: String = null,
-    fields: String = null,
-    forContentOwner: js.UndefOr[Boolean] = js.undefined,
-    forDeveloper: js.UndefOr[Boolean] = js.undefined,
-    forMine: js.UndefOr[Boolean] = js.undefined,
-    key: String = null,
-    location: String = null,
-    locationRadius: String = null,
-    maxResults: Int | Double = null,
-    oauth_token: String = null,
-    onBehalfOfContentOwner: String = null,
-    order: String = null,
-    pageToken: String = null,
-    part: String = null,
-    prettyPrint: js.UndefOr[Boolean] = js.undefined,
-    publishedAfter: String = null,
-    publishedBefore: String = null,
-    q: String = null,
-    quotaUser: String = null,
-    regionCode: String = null,
-    relatedToVideoId: String = null,
-    relevanceLanguage: String = null,
-    safeSearch: String = null,
-    topicId: String = null,
-    `type`: String = null,
-    userIp: String = null,
-    videoCaption: String = null,
-    videoCategoryId: String = null,
-    videoDefinition: String = null,
-    videoDimension: String = null,
-    videoDuration: String = null,
-    videoEmbeddable: String = null,
-    videoLicense: String = null,
-    videoSyndicated: String = null,
-    videoType: String = null
-  ): ParamsResourceSearchList = {
+  def apply(): ParamsResourceSearchList = {
     val __obj = js.Dynamic.literal()
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (channelId != null) __obj.updateDynamic("channelId")(channelId.asInstanceOf[js.Any])
-    if (channelType != null) __obj.updateDynamic("channelType")(channelType.asInstanceOf[js.Any])
-    if (eventType != null) __obj.updateDynamic("eventType")(eventType.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (!js.isUndefined(forContentOwner)) __obj.updateDynamic("forContentOwner")(forContentOwner.asInstanceOf[js.Any])
-    if (!js.isUndefined(forDeveloper)) __obj.updateDynamic("forDeveloper")(forDeveloper.asInstanceOf[js.Any])
-    if (!js.isUndefined(forMine)) __obj.updateDynamic("forMine")(forMine.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (locationRadius != null) __obj.updateDynamic("locationRadius")(locationRadius.asInstanceOf[js.Any])
-    if (maxResults != null) __obj.updateDynamic("maxResults")(maxResults.asInstanceOf[js.Any])
-    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
-    if (onBehalfOfContentOwner != null) __obj.updateDynamic("onBehalfOfContentOwner")(onBehalfOfContentOwner.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
-    if (part != null) __obj.updateDynamic("part")(part.asInstanceOf[js.Any])
-    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.asInstanceOf[js.Any])
-    if (publishedAfter != null) __obj.updateDynamic("publishedAfter")(publishedAfter.asInstanceOf[js.Any])
-    if (publishedBefore != null) __obj.updateDynamic("publishedBefore")(publishedBefore.asInstanceOf[js.Any])
-    if (q != null) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
-    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
-    if (regionCode != null) __obj.updateDynamic("regionCode")(regionCode.asInstanceOf[js.Any])
-    if (relatedToVideoId != null) __obj.updateDynamic("relatedToVideoId")(relatedToVideoId.asInstanceOf[js.Any])
-    if (relevanceLanguage != null) __obj.updateDynamic("relevanceLanguage")(relevanceLanguage.asInstanceOf[js.Any])
-    if (safeSearch != null) __obj.updateDynamic("safeSearch")(safeSearch.asInstanceOf[js.Any])
-    if (topicId != null) __obj.updateDynamic("topicId")(topicId.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
-    if (videoCaption != null) __obj.updateDynamic("videoCaption")(videoCaption.asInstanceOf[js.Any])
-    if (videoCategoryId != null) __obj.updateDynamic("videoCategoryId")(videoCategoryId.asInstanceOf[js.Any])
-    if (videoDefinition != null) __obj.updateDynamic("videoDefinition")(videoDefinition.asInstanceOf[js.Any])
-    if (videoDimension != null) __obj.updateDynamic("videoDimension")(videoDimension.asInstanceOf[js.Any])
-    if (videoDuration != null) __obj.updateDynamic("videoDuration")(videoDuration.asInstanceOf[js.Any])
-    if (videoEmbeddable != null) __obj.updateDynamic("videoEmbeddable")(videoEmbeddable.asInstanceOf[js.Any])
-    if (videoLicense != null) __obj.updateDynamic("videoLicense")(videoLicense.asInstanceOf[js.Any])
-    if (videoSyndicated != null) __obj.updateDynamic("videoSyndicated")(videoSyndicated.asInstanceOf[js.Any])
-    if (videoType != null) __obj.updateDynamic("videoType")(videoType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParamsResourceSearchList]
   }
+  @scala.inline
+  implicit class ParamsResourceSearchListOps[Self <: ParamsResourceSearchList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannelId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannelType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForContentOwner(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forContentOwner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForContentOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forContentOwner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForDeveloper(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forDeveloper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForDeveloper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forDeveloper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForMine(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forMine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForMine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forMine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationRadius(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBehalfOfContentOwner(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBehalfOfContentOwner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnBehalfOfContentOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBehalfOfContentOwner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPart(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("part")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("part")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublishedAfter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublishedAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublishedBefore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublishedBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegionCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelatedToVideoId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedToVideoId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelatedToVideoId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedToVideoId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelevanceLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relevanceLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelevanceLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relevanceLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSafeSearch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safeSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSafeSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safeSearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopicId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topicId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopicId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topicId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoCaption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoCaption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoCaption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoCaption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoCategoryId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoCategoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoCategoryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoCategoryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoDefinition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoDefinition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoDimension(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoDimension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoEmbeddable(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoEmbeddable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoEmbeddable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoEmbeddable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoLicense(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoLicense")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoLicense: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoLicense")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoSyndicated(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoSyndicated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoSyndicated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoSyndicated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

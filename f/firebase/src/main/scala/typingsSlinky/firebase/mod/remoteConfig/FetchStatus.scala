@@ -14,14 +14,12 @@ trait FetchStatus extends js.Object
 
 object FetchStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def failure: typingsSlinky.firebase.firebaseStrings.failure = "failure".asInstanceOf[typingsSlinky.firebase.firebaseStrings.failure]
   @scala.inline
-  def failure: typingsSlinky.firebase.firebaseStrings.failure = this.cast("failure")
+  def `no-fetch-yet`: typingsSlinky.firebase.firebaseStrings.`no-fetch-yet` = "no-fetch-yet".asInstanceOf[typingsSlinky.firebase.firebaseStrings.`no-fetch-yet`]
   @scala.inline
-  def `no-fetch-yet`: typingsSlinky.firebase.firebaseStrings.`no-fetch-yet` = this.cast("no-fetch-yet")
+  def success: typingsSlinky.firebase.firebaseStrings.success = "success".asInstanceOf[typingsSlinky.firebase.firebaseStrings.success]
   @scala.inline
-  def success: typingsSlinky.firebase.firebaseStrings.success = this.cast("success")
-  @scala.inline
-  def throttle: typingsSlinky.firebase.firebaseStrings.throttle = this.cast("throttle")
+  def throttle: typingsSlinky.firebase.firebaseStrings.throttle = "throttle".asInstanceOf[typingsSlinky.firebase.firebaseStrings.throttle]
 }
 

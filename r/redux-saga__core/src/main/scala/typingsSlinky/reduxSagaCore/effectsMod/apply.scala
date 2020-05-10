@@ -1,5 +1,6 @@
 package typingsSlinky.reduxSagaCore.effectsMod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Parameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,6 +9,14 @@ import scala.scalajs.js.annotation._
 @JSImport("@redux-saga/core/types/effects", "apply")
 @js.native
 object apply extends js.Object {
-  def apply[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](ctx: Ctx, fn: Fn, args: Parameters[Fn]): CallEffect = js.native
+  def apply[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in Name ]: (this : Ctx, args : ...any): any}
+    */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.apply with TopLevel[js.Any] */, Name /* <: String */](
+    ctx: Ctx,
+    fnName: Name,
+    args: Parameters[
+      /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
+    ]
+  ): CallEffect = js.native
 }
 

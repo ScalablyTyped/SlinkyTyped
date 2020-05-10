@@ -30,44 +30,42 @@ trait WorkTag extends js.Object
 
 object WorkTag {
   @scala.inline
-  def `0`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`0` = 0.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`1` = 1.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`1`]
   @scala.inline
-  def `10`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`10` = this.cast(10)
+  def `10`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`10` = 10.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`10`]
   @scala.inline
-  def `11`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`11` = this.cast(11)
+  def `11`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`11` = 11.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`11`]
   @scala.inline
-  def `12`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`12` = this.cast(12)
+  def `12`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`12` = 12.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`12`]
   @scala.inline
-  def `13`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`13` = this.cast(13)
+  def `13`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`13` = 13.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`13`]
   @scala.inline
-  def `14`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`14` = this.cast(14)
+  def `14`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`14` = 14.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`14`]
   @scala.inline
-  def `15`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`15` = this.cast(15)
+  def `15`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`15` = 15.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`15`]
   @scala.inline
-  def `16`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`16` = this.cast(16)
+  def `16`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`16` = 16.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`16`]
   @scala.inline
-  def `17`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`17` = this.cast(17)
+  def `17`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`17` = 17.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`17`]
   @scala.inline
-  def `18`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`18` = this.cast(18)
+  def `18`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`18` = 18.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`18`]
   @scala.inline
-  def `2`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`2` = this.cast(2)
+  def `2`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`2` = 2.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`2`]
   @scala.inline
-  def `3`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`3` = this.cast(3)
+  def `3`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`3` = 3.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`3`]
   @scala.inline
-  def `4`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`4` = this.cast(4)
+  def `4`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`4` = 4.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`4`]
   @scala.inline
-  def `5`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`5` = this.cast(5)
+  def `5`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`5` = 5.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`5`]
   @scala.inline
-  def `6`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`6` = this.cast(6)
+  def `6`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`6` = 6.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`6`]
   @scala.inline
-  def `7`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`7` = this.cast(7)
+  def `7`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`7` = 7.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`7`]
   @scala.inline
-  def `8`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`8` = this.cast(8)
+  def `8`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`8` = 8.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`8`]
   @scala.inline
-  def `9`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`9` = this.cast(9)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `9`: typingsSlinky.reactReconciler.reactReconcilerNumbers.`9` = 9.asInstanceOf[typingsSlinky.reactReconciler.reactReconcilerNumbers.`9`]
 }
 

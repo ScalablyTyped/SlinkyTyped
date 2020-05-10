@@ -5,24 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ViewportAddonParameter extends js.Object {
-  var defaultViewport: js.UndefOr[String] = js.undefined
-  var disable: js.UndefOr[Boolean] = js.undefined
-  var viewports: js.UndefOr[ViewportMap] = js.undefined
+  var defaultViewport: js.UndefOr[String] = js.native
+  var disable: js.UndefOr[Boolean] = js.native
+  var viewports: js.UndefOr[ViewportMap] = js.native
 }
 
 object ViewportAddonParameter {
   @scala.inline
-  def apply(
-    defaultViewport: String = null,
-    disable: js.UndefOr[Boolean] = js.undefined,
-    viewports: ViewportMap = null
-  ): ViewportAddonParameter = {
+  def apply(): ViewportAddonParameter = {
     val __obj = js.Dynamic.literal()
-    if (defaultViewport != null) __obj.updateDynamic("defaultViewport")(defaultViewport.asInstanceOf[js.Any])
-    if (!js.isUndefined(disable)) __obj.updateDynamic("disable")(disable.asInstanceOf[js.Any])
-    if (viewports != null) __obj.updateDynamic("viewports")(viewports.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewportAddonParameter]
   }
+  @scala.inline
+  implicit class ViewportAddonParameterOps[Self <: ViewportAddonParameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultViewport(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultViewport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultViewport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultViewport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewports(value: ViewportMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewports: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewports")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

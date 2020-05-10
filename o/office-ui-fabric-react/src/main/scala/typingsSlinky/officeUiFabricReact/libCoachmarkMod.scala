@@ -2,7 +2,6 @@ package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkProps
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`data-coachmarkid`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object libCoachmarkMod extends js.Object {
     def this(props: ICoachmarkProps) = this()
   }
   
-  val COACHMARK_ATTRIBUTE_NAME: `data-coachmarkid` = js.native
+  val COACHMARK_ATTRIBUTE_NAME: /* "data-coachmarkid" */ String = js.native
   val Coachmark: ReactComponentClass[ICoachmarkProps] = js.native
   /* static members */
   @js.native

@@ -18,11 +18,41 @@ trait GpuInfo extends js.Object {
 
 object GpuInfo {
   @scala.inline
-  def apply(Gpus: GpuDeviceInfoList = null, TotalGpuMemoryInMiB: Int | scala.Double = null): GpuInfo = {
+  def apply(): GpuInfo = {
     val __obj = js.Dynamic.literal()
-    if (Gpus != null) __obj.updateDynamic("Gpus")(Gpus.asInstanceOf[js.Any])
-    if (TotalGpuMemoryInMiB != null) __obj.updateDynamic("TotalGpuMemoryInMiB")(TotalGpuMemoryInMiB.asInstanceOf[js.Any])
     __obj.asInstanceOf[GpuInfo]
   }
+  @scala.inline
+  implicit class GpuInfoOps[Self <: GpuInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGpus(value: GpuDeviceInfoList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gpus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGpus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gpus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalGpuMemoryInMiB(value: totalGpuMemory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalGpuMemoryInMiB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalGpuMemoryInMiB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalGpuMemoryInMiB")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

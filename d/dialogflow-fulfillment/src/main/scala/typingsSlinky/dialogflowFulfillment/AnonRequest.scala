@@ -3,21 +3,42 @@ package typingsSlinky.dialogflowFulfillment
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRequest extends js.Object {
-  var request: Request_[ParamsDictionary]
-  var response: Response_
+  var request: Request_[ParamsDictionary, _, _, Query] = js.native
+  var response: Response_[_] = js.native
 }
 
 object AnonRequest {
   @scala.inline
-  def apply(request: Request_[ParamsDictionary], response: Response_): AnonRequest = {
+  def apply(request: Request_[ParamsDictionary, _, _, Query], response: Response_[_]): AnonRequest = {
     val __obj = js.Dynamic.literal(request = request.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonRequest]
   }
+  @scala.inline
+  implicit class AnonRequestOps[Self <: AnonRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequest(value: Request_[ParamsDictionary, _, _, Query]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResponse(value: Response_[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

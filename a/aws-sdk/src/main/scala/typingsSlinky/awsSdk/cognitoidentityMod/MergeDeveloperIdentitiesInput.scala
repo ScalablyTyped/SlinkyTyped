@@ -33,8 +33,39 @@ object MergeDeveloperIdentitiesInput {
     SourceUserIdentifier: DeveloperUserIdentifier
   ): MergeDeveloperIdentitiesInput = {
     val __obj = js.Dynamic.literal(DestinationUserIdentifier = DestinationUserIdentifier.asInstanceOf[js.Any], DeveloperProviderName = DeveloperProviderName.asInstanceOf[js.Any], IdentityPoolId = IdentityPoolId.asInstanceOf[js.Any], SourceUserIdentifier = SourceUserIdentifier.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MergeDeveloperIdentitiesInput]
   }
+  @scala.inline
+  implicit class MergeDeveloperIdentitiesInputOps[Self <: MergeDeveloperIdentitiesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationUserIdentifier(value: DeveloperUserIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationUserIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeveloperProviderName(value: DeveloperProviderName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeveloperProviderName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdentityPoolId(value: IdentityPoolId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceUserIdentifier(value: DeveloperUserIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUserIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

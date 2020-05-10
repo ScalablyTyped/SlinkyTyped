@@ -30,11 +30,11 @@ class SignedXml ()
   /* protected */ def ApplySigningCertificate(base64string: String): js.Promise[Unit] = js.native
   /* protected */ def CreateQualifyingProperties(): Unit = js.native
   def LoadXml(value: String, useContainer: Boolean): Unit = js.native
-  def LoadXml(value: typingsSlinky.std.Element, useContainer: Boolean): Unit = js.native
-  def Properties(): QualifyingProperties | Null = js.native
+  def LoadXml(value: Element, useContainer: Boolean): Unit = js.native
+  def Properties: QualifyingProperties | Null = js.native
   def Sign(algorithm: Algorithm, key: CryptoKey, data: Document_, options: OptionsXAdES): js.Promise[Signature] = js.native
-  def SignedProperties(): typingsSlinky.xadesjs.xmlMod.SignedProperties = js.native
-  def UnsignedProperties(): typingsSlinky.xadesjs.xmlMod.UnsignedProperties = js.native
+  def SignedProperties: typingsSlinky.xadesjs.xmlMod.SignedProperties = js.native
+  def UnsignedProperties: typingsSlinky.xadesjs.xmlMod.UnsignedProperties = js.native
   /* protected */ def VerifySigningCertificate(): js.Promise[X509Certificate | Null] = js.native
 }
 

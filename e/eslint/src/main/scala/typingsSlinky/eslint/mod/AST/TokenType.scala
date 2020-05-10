@@ -20,26 +20,24 @@ trait TokenType extends js.Object
 
 object TokenType {
   @scala.inline
-  def Boolean: typingsSlinky.eslint.eslintStrings.Boolean = this.cast("Boolean")
+  def Boolean: typingsSlinky.eslint.eslintStrings.Boolean = "Boolean".asInstanceOf[typingsSlinky.eslint.eslintStrings.Boolean]
   @scala.inline
-  def Identifier: typingsSlinky.eslint.eslintStrings.Identifier = this.cast("Identifier")
+  def Identifier: typingsSlinky.eslint.eslintStrings.Identifier = "Identifier".asInstanceOf[typingsSlinky.eslint.eslintStrings.Identifier]
   @scala.inline
-  def JSXIdentifier: typingsSlinky.eslint.eslintStrings.JSXIdentifier = this.cast("JSXIdentifier")
+  def JSXIdentifier: typingsSlinky.eslint.eslintStrings.JSXIdentifier = "JSXIdentifier".asInstanceOf[typingsSlinky.eslint.eslintStrings.JSXIdentifier]
   @scala.inline
-  def JSXText: typingsSlinky.eslint.eslintStrings.JSXText = this.cast("JSXText")
+  def JSXText: typingsSlinky.eslint.eslintStrings.JSXText = "JSXText".asInstanceOf[typingsSlinky.eslint.eslintStrings.JSXText]
   @scala.inline
-  def Keyword: typingsSlinky.eslint.eslintStrings.Keyword = this.cast("Keyword")
+  def Keyword: typingsSlinky.eslint.eslintStrings.Keyword = "Keyword".asInstanceOf[typingsSlinky.eslint.eslintStrings.Keyword]
   @scala.inline
-  def Null: typingsSlinky.eslint.eslintStrings.Null = this.cast("Null")
+  def Null: typingsSlinky.eslint.eslintStrings.Null = "Null".asInstanceOf[typingsSlinky.eslint.eslintStrings.Null]
   @scala.inline
-  def Numeric: typingsSlinky.eslint.eslintStrings.Numeric = this.cast("Numeric")
+  def Numeric: typingsSlinky.eslint.eslintStrings.Numeric = "Numeric".asInstanceOf[typingsSlinky.eslint.eslintStrings.Numeric]
   @scala.inline
-  def Punctuator: typingsSlinky.eslint.eslintStrings.Punctuator = this.cast("Punctuator")
+  def Punctuator: typingsSlinky.eslint.eslintStrings.Punctuator = "Punctuator".asInstanceOf[typingsSlinky.eslint.eslintStrings.Punctuator]
   @scala.inline
-  def RegularExpression: typingsSlinky.eslint.eslintStrings.RegularExpression = this.cast("RegularExpression")
+  def RegularExpression: typingsSlinky.eslint.eslintStrings.RegularExpression = "RegularExpression".asInstanceOf[typingsSlinky.eslint.eslintStrings.RegularExpression]
   @scala.inline
-  def String: typingsSlinky.eslint.eslintStrings.String = this.cast("String")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def String: typingsSlinky.eslint.eslintStrings.String = "String".asInstanceOf[typingsSlinky.eslint.eslintStrings.String]
 }
 

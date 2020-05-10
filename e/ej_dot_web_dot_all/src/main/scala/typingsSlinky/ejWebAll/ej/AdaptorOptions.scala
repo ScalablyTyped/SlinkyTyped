@@ -4,48 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AdaptorOptions extends js.Object {
-  var aggregates: js.UndefOr[String] = js.undefined
-  var count: js.UndefOr[String] = js.undefined
-  var from: js.UndefOr[String] = js.undefined
-  var group: js.UndefOr[String] = js.undefined
-  var requestType: js.UndefOr[String] = js.undefined
-  var search: js.UndefOr[String] = js.undefined
-  var select: js.UndefOr[String] = js.undefined
-  var skip: js.UndefOr[String] = js.undefined
-  var sortBy: js.UndefOr[String] = js.undefined
-  var take: js.UndefOr[String] = js.undefined
-  var where: js.UndefOr[String] = js.undefined
+  var aggregates: js.UndefOr[String] = js.native
+  var count: js.UndefOr[String] = js.native
+  var from: js.UndefOr[String] = js.native
+  var group: js.UndefOr[String] = js.native
+  var requestType: js.UndefOr[String] = js.native
+  var search: js.UndefOr[String] = js.native
+  var select: js.UndefOr[String] = js.native
+  var skip: js.UndefOr[String] = js.native
+  var sortBy: js.UndefOr[String] = js.native
+  var take: js.UndefOr[String] = js.native
+  var where: js.UndefOr[String] = js.native
 }
 
 object AdaptorOptions {
   @scala.inline
-  def apply(
-    aggregates: String = null,
-    count: String = null,
-    from: String = null,
-    group: String = null,
-    requestType: String = null,
-    search: String = null,
-    select: String = null,
-    skip: String = null,
-    sortBy: String = null,
-    take: String = null,
-    where: String = null
-  ): AdaptorOptions = {
+  def apply(): AdaptorOptions = {
     val __obj = js.Dynamic.literal()
-    if (aggregates != null) __obj.updateDynamic("aggregates")(aggregates.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (requestType != null) __obj.updateDynamic("requestType")(requestType.asInstanceOf[js.Any])
-    if (search != null) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
-    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
-    if (skip != null) __obj.updateDynamic("skip")(skip.asInstanceOf[js.Any])
-    if (sortBy != null) __obj.updateDynamic("sortBy")(sortBy.asInstanceOf[js.Any])
-    if (take != null) __obj.updateDynamic("take")(take.asInstanceOf[js.Any])
-    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdaptorOptions]
   }
+  @scala.inline
+  implicit class AdaptorOptionsOps[Self <: AdaptorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregates(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelect(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortBy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTake(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("take")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTake: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("take")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhere(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhere: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

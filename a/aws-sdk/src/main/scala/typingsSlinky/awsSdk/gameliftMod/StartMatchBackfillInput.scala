@@ -29,12 +29,48 @@ object StartMatchBackfillInput {
   def apply(
     ConfigurationName: MatchmakingConfigurationName,
     GameSessionArn: ArnStringModel,
-    Players: PlayerList,
-    TicketId: MatchmakingIdStringModel = null
+    Players: PlayerList
   ): StartMatchBackfillInput = {
     val __obj = js.Dynamic.literal(ConfigurationName = ConfigurationName.asInstanceOf[js.Any], GameSessionArn = GameSessionArn.asInstanceOf[js.Any], Players = Players.asInstanceOf[js.Any])
-    if (TicketId != null) __obj.updateDynamic("TicketId")(TicketId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartMatchBackfillInput]
   }
+  @scala.inline
+  implicit class StartMatchBackfillInputOps[Self <: StartMatchBackfillInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigurationName(value: MatchmakingConfigurationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGameSessionArn(value: ArnStringModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlayers(value: PlayerList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Players")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTicketId(value: MatchmakingIdStringModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TicketId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicketId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TicketId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

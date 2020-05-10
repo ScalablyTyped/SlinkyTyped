@@ -159,304 +159,302 @@ trait NamedColor extends _Color
 
 object NamedColor {
   @scala.inline
-  def aliceblue: typingsSlinky.csstype.csstypeStrings.aliceblue = this.cast("aliceblue")
+  def aliceblue: typingsSlinky.csstype.csstypeStrings.aliceblue = "aliceblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.aliceblue]
   @scala.inline
-  def antiquewhite: typingsSlinky.csstype.csstypeStrings.antiquewhite = this.cast("antiquewhite")
+  def antiquewhite: typingsSlinky.csstype.csstypeStrings.antiquewhite = "antiquewhite".asInstanceOf[typingsSlinky.csstype.csstypeStrings.antiquewhite]
   @scala.inline
-  def aqua: typingsSlinky.csstype.csstypeStrings.aqua = this.cast("aqua")
+  def aqua: typingsSlinky.csstype.csstypeStrings.aqua = "aqua".asInstanceOf[typingsSlinky.csstype.csstypeStrings.aqua]
   @scala.inline
-  def aquamarine: typingsSlinky.csstype.csstypeStrings.aquamarine = this.cast("aquamarine")
+  def aquamarine: typingsSlinky.csstype.csstypeStrings.aquamarine = "aquamarine".asInstanceOf[typingsSlinky.csstype.csstypeStrings.aquamarine]
   @scala.inline
-  def azure: typingsSlinky.csstype.csstypeStrings.azure = this.cast("azure")
+  def azure: typingsSlinky.csstype.csstypeStrings.azure = "azure".asInstanceOf[typingsSlinky.csstype.csstypeStrings.azure]
   @scala.inline
-  def beige: typingsSlinky.csstype.csstypeStrings.beige = this.cast("beige")
+  def beige: typingsSlinky.csstype.csstypeStrings.beige = "beige".asInstanceOf[typingsSlinky.csstype.csstypeStrings.beige]
   @scala.inline
-  def bisque: typingsSlinky.csstype.csstypeStrings.bisque = this.cast("bisque")
+  def bisque: typingsSlinky.csstype.csstypeStrings.bisque = "bisque".asInstanceOf[typingsSlinky.csstype.csstypeStrings.bisque]
   @scala.inline
-  def black: typingsSlinky.csstype.csstypeStrings.black = this.cast("black")
+  def black: typingsSlinky.csstype.csstypeStrings.black = "black".asInstanceOf[typingsSlinky.csstype.csstypeStrings.black]
   @scala.inline
-  def blanchedalmond: typingsSlinky.csstype.csstypeStrings.blanchedalmond = this.cast("blanchedalmond")
+  def blanchedalmond: typingsSlinky.csstype.csstypeStrings.blanchedalmond = "blanchedalmond".asInstanceOf[typingsSlinky.csstype.csstypeStrings.blanchedalmond]
   @scala.inline
-  def blue: typingsSlinky.csstype.csstypeStrings.blue = this.cast("blue")
+  def blue: typingsSlinky.csstype.csstypeStrings.blue = "blue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.blue]
   @scala.inline
-  def blueviolet: typingsSlinky.csstype.csstypeStrings.blueviolet = this.cast("blueviolet")
+  def blueviolet: typingsSlinky.csstype.csstypeStrings.blueviolet = "blueviolet".asInstanceOf[typingsSlinky.csstype.csstypeStrings.blueviolet]
   @scala.inline
-  def brown: typingsSlinky.csstype.csstypeStrings.brown = this.cast("brown")
+  def brown: typingsSlinky.csstype.csstypeStrings.brown = "brown".asInstanceOf[typingsSlinky.csstype.csstypeStrings.brown]
   @scala.inline
-  def burlywood: typingsSlinky.csstype.csstypeStrings.burlywood = this.cast("burlywood")
+  def burlywood: typingsSlinky.csstype.csstypeStrings.burlywood = "burlywood".asInstanceOf[typingsSlinky.csstype.csstypeStrings.burlywood]
   @scala.inline
-  def cadetblue: typingsSlinky.csstype.csstypeStrings.cadetblue = this.cast("cadetblue")
+  def cadetblue: typingsSlinky.csstype.csstypeStrings.cadetblue = "cadetblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.cadetblue]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chartreuse: typingsSlinky.csstype.csstypeStrings.chartreuse = "chartreuse".asInstanceOf[typingsSlinky.csstype.csstypeStrings.chartreuse]
   @scala.inline
-  def chartreuse: typingsSlinky.csstype.csstypeStrings.chartreuse = this.cast("chartreuse")
+  def chocolate: typingsSlinky.csstype.csstypeStrings.chocolate = "chocolate".asInstanceOf[typingsSlinky.csstype.csstypeStrings.chocolate]
   @scala.inline
-  def chocolate: typingsSlinky.csstype.csstypeStrings.chocolate = this.cast("chocolate")
+  def coral: typingsSlinky.csstype.csstypeStrings.coral = "coral".asInstanceOf[typingsSlinky.csstype.csstypeStrings.coral]
   @scala.inline
-  def coral: typingsSlinky.csstype.csstypeStrings.coral = this.cast("coral")
+  def cornflowerblue: typingsSlinky.csstype.csstypeStrings.cornflowerblue = "cornflowerblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.cornflowerblue]
   @scala.inline
-  def cornflowerblue: typingsSlinky.csstype.csstypeStrings.cornflowerblue = this.cast("cornflowerblue")
+  def cornsilk: typingsSlinky.csstype.csstypeStrings.cornsilk = "cornsilk".asInstanceOf[typingsSlinky.csstype.csstypeStrings.cornsilk]
   @scala.inline
-  def cornsilk: typingsSlinky.csstype.csstypeStrings.cornsilk = this.cast("cornsilk")
+  def crimson: typingsSlinky.csstype.csstypeStrings.crimson = "crimson".asInstanceOf[typingsSlinky.csstype.csstypeStrings.crimson]
   @scala.inline
-  def crimson: typingsSlinky.csstype.csstypeStrings.crimson = this.cast("crimson")
+  def cyan: typingsSlinky.csstype.csstypeStrings.cyan = "cyan".asInstanceOf[typingsSlinky.csstype.csstypeStrings.cyan]
   @scala.inline
-  def cyan: typingsSlinky.csstype.csstypeStrings.cyan = this.cast("cyan")
+  def darkblue: typingsSlinky.csstype.csstypeStrings.darkblue = "darkblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkblue]
   @scala.inline
-  def darkblue: typingsSlinky.csstype.csstypeStrings.darkblue = this.cast("darkblue")
+  def darkcyan: typingsSlinky.csstype.csstypeStrings.darkcyan = "darkcyan".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkcyan]
   @scala.inline
-  def darkcyan: typingsSlinky.csstype.csstypeStrings.darkcyan = this.cast("darkcyan")
+  def darkgoldenrod: typingsSlinky.csstype.csstypeStrings.darkgoldenrod = "darkgoldenrod".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkgoldenrod]
   @scala.inline
-  def darkgoldenrod: typingsSlinky.csstype.csstypeStrings.darkgoldenrod = this.cast("darkgoldenrod")
+  def darkgray: typingsSlinky.csstype.csstypeStrings.darkgray = "darkgray".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkgray]
   @scala.inline
-  def darkgray: typingsSlinky.csstype.csstypeStrings.darkgray = this.cast("darkgray")
+  def darkgreen: typingsSlinky.csstype.csstypeStrings.darkgreen = "darkgreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkgreen]
   @scala.inline
-  def darkgreen: typingsSlinky.csstype.csstypeStrings.darkgreen = this.cast("darkgreen")
+  def darkgrey: typingsSlinky.csstype.csstypeStrings.darkgrey = "darkgrey".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkgrey]
   @scala.inline
-  def darkgrey: typingsSlinky.csstype.csstypeStrings.darkgrey = this.cast("darkgrey")
+  def darkkhaki: typingsSlinky.csstype.csstypeStrings.darkkhaki = "darkkhaki".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkkhaki]
   @scala.inline
-  def darkkhaki: typingsSlinky.csstype.csstypeStrings.darkkhaki = this.cast("darkkhaki")
+  def darkmagenta: typingsSlinky.csstype.csstypeStrings.darkmagenta = "darkmagenta".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkmagenta]
   @scala.inline
-  def darkmagenta: typingsSlinky.csstype.csstypeStrings.darkmagenta = this.cast("darkmagenta")
+  def darkolivegreen: typingsSlinky.csstype.csstypeStrings.darkolivegreen = "darkolivegreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkolivegreen]
   @scala.inline
-  def darkolivegreen: typingsSlinky.csstype.csstypeStrings.darkolivegreen = this.cast("darkolivegreen")
+  def darkorange: typingsSlinky.csstype.csstypeStrings.darkorange = "darkorange".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkorange]
   @scala.inline
-  def darkorange: typingsSlinky.csstype.csstypeStrings.darkorange = this.cast("darkorange")
+  def darkorchid: typingsSlinky.csstype.csstypeStrings.darkorchid = "darkorchid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkorchid]
   @scala.inline
-  def darkorchid: typingsSlinky.csstype.csstypeStrings.darkorchid = this.cast("darkorchid")
+  def darkred: typingsSlinky.csstype.csstypeStrings.darkred = "darkred".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkred]
   @scala.inline
-  def darkred: typingsSlinky.csstype.csstypeStrings.darkred = this.cast("darkred")
+  def darksalmon: typingsSlinky.csstype.csstypeStrings.darksalmon = "darksalmon".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darksalmon]
   @scala.inline
-  def darksalmon: typingsSlinky.csstype.csstypeStrings.darksalmon = this.cast("darksalmon")
+  def darkseagreen: typingsSlinky.csstype.csstypeStrings.darkseagreen = "darkseagreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkseagreen]
   @scala.inline
-  def darkseagreen: typingsSlinky.csstype.csstypeStrings.darkseagreen = this.cast("darkseagreen")
+  def darkslateblue: typingsSlinky.csstype.csstypeStrings.darkslateblue = "darkslateblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkslateblue]
   @scala.inline
-  def darkslateblue: typingsSlinky.csstype.csstypeStrings.darkslateblue = this.cast("darkslateblue")
+  def darkslategray: typingsSlinky.csstype.csstypeStrings.darkslategray = "darkslategray".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkslategray]
   @scala.inline
-  def darkslategray: typingsSlinky.csstype.csstypeStrings.darkslategray = this.cast("darkslategray")
+  def darkslategrey: typingsSlinky.csstype.csstypeStrings.darkslategrey = "darkslategrey".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkslategrey]
   @scala.inline
-  def darkslategrey: typingsSlinky.csstype.csstypeStrings.darkslategrey = this.cast("darkslategrey")
+  def darkturquoise: typingsSlinky.csstype.csstypeStrings.darkturquoise = "darkturquoise".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkturquoise]
   @scala.inline
-  def darkturquoise: typingsSlinky.csstype.csstypeStrings.darkturquoise = this.cast("darkturquoise")
+  def darkviolet: typingsSlinky.csstype.csstypeStrings.darkviolet = "darkviolet".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darkviolet]
   @scala.inline
-  def darkviolet: typingsSlinky.csstype.csstypeStrings.darkviolet = this.cast("darkviolet")
+  def deeppink: typingsSlinky.csstype.csstypeStrings.deeppink = "deeppink".asInstanceOf[typingsSlinky.csstype.csstypeStrings.deeppink]
   @scala.inline
-  def deeppink: typingsSlinky.csstype.csstypeStrings.deeppink = this.cast("deeppink")
+  def deepskyblue: typingsSlinky.csstype.csstypeStrings.deepskyblue = "deepskyblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.deepskyblue]
   @scala.inline
-  def deepskyblue: typingsSlinky.csstype.csstypeStrings.deepskyblue = this.cast("deepskyblue")
+  def dimgray: typingsSlinky.csstype.csstypeStrings.dimgray = "dimgray".asInstanceOf[typingsSlinky.csstype.csstypeStrings.dimgray]
   @scala.inline
-  def dimgray: typingsSlinky.csstype.csstypeStrings.dimgray = this.cast("dimgray")
+  def dimgrey: typingsSlinky.csstype.csstypeStrings.dimgrey = "dimgrey".asInstanceOf[typingsSlinky.csstype.csstypeStrings.dimgrey]
   @scala.inline
-  def dimgrey: typingsSlinky.csstype.csstypeStrings.dimgrey = this.cast("dimgrey")
+  def dodgerblue: typingsSlinky.csstype.csstypeStrings.dodgerblue = "dodgerblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.dodgerblue]
   @scala.inline
-  def dodgerblue: typingsSlinky.csstype.csstypeStrings.dodgerblue = this.cast("dodgerblue")
+  def firebrick: typingsSlinky.csstype.csstypeStrings.firebrick = "firebrick".asInstanceOf[typingsSlinky.csstype.csstypeStrings.firebrick]
   @scala.inline
-  def firebrick: typingsSlinky.csstype.csstypeStrings.firebrick = this.cast("firebrick")
+  def floralwhite: typingsSlinky.csstype.csstypeStrings.floralwhite = "floralwhite".asInstanceOf[typingsSlinky.csstype.csstypeStrings.floralwhite]
   @scala.inline
-  def floralwhite: typingsSlinky.csstype.csstypeStrings.floralwhite = this.cast("floralwhite")
+  def forestgreen: typingsSlinky.csstype.csstypeStrings.forestgreen = "forestgreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.forestgreen]
   @scala.inline
-  def forestgreen: typingsSlinky.csstype.csstypeStrings.forestgreen = this.cast("forestgreen")
+  def fuchsia: typingsSlinky.csstype.csstypeStrings.fuchsia = "fuchsia".asInstanceOf[typingsSlinky.csstype.csstypeStrings.fuchsia]
   @scala.inline
-  def fuchsia: typingsSlinky.csstype.csstypeStrings.fuchsia = this.cast("fuchsia")
+  def gainsboro: typingsSlinky.csstype.csstypeStrings.gainsboro = "gainsboro".asInstanceOf[typingsSlinky.csstype.csstypeStrings.gainsboro]
   @scala.inline
-  def gainsboro: typingsSlinky.csstype.csstypeStrings.gainsboro = this.cast("gainsboro")
+  def ghostwhite: typingsSlinky.csstype.csstypeStrings.ghostwhite = "ghostwhite".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ghostwhite]
   @scala.inline
-  def ghostwhite: typingsSlinky.csstype.csstypeStrings.ghostwhite = this.cast("ghostwhite")
+  def gold: typingsSlinky.csstype.csstypeStrings.gold = "gold".asInstanceOf[typingsSlinky.csstype.csstypeStrings.gold]
   @scala.inline
-  def gold: typingsSlinky.csstype.csstypeStrings.gold = this.cast("gold")
+  def goldenrod: typingsSlinky.csstype.csstypeStrings.goldenrod = "goldenrod".asInstanceOf[typingsSlinky.csstype.csstypeStrings.goldenrod]
   @scala.inline
-  def goldenrod: typingsSlinky.csstype.csstypeStrings.goldenrod = this.cast("goldenrod")
+  def gray: typingsSlinky.csstype.csstypeStrings.gray = "gray".asInstanceOf[typingsSlinky.csstype.csstypeStrings.gray]
   @scala.inline
-  def gray: typingsSlinky.csstype.csstypeStrings.gray = this.cast("gray")
+  def green: typingsSlinky.csstype.csstypeStrings.green = "green".asInstanceOf[typingsSlinky.csstype.csstypeStrings.green]
   @scala.inline
-  def green: typingsSlinky.csstype.csstypeStrings.green = this.cast("green")
+  def greenyellow: typingsSlinky.csstype.csstypeStrings.greenyellow = "greenyellow".asInstanceOf[typingsSlinky.csstype.csstypeStrings.greenyellow]
   @scala.inline
-  def greenyellow: typingsSlinky.csstype.csstypeStrings.greenyellow = this.cast("greenyellow")
+  def grey: typingsSlinky.csstype.csstypeStrings.grey = "grey".asInstanceOf[typingsSlinky.csstype.csstypeStrings.grey]
   @scala.inline
-  def grey: typingsSlinky.csstype.csstypeStrings.grey = this.cast("grey")
+  def honeydew: typingsSlinky.csstype.csstypeStrings.honeydew = "honeydew".asInstanceOf[typingsSlinky.csstype.csstypeStrings.honeydew]
   @scala.inline
-  def honeydew: typingsSlinky.csstype.csstypeStrings.honeydew = this.cast("honeydew")
+  def hotpink: typingsSlinky.csstype.csstypeStrings.hotpink = "hotpink".asInstanceOf[typingsSlinky.csstype.csstypeStrings.hotpink]
   @scala.inline
-  def hotpink: typingsSlinky.csstype.csstypeStrings.hotpink = this.cast("hotpink")
+  def indianred: typingsSlinky.csstype.csstypeStrings.indianred = "indianred".asInstanceOf[typingsSlinky.csstype.csstypeStrings.indianred]
   @scala.inline
-  def indianred: typingsSlinky.csstype.csstypeStrings.indianred = this.cast("indianred")
+  def indigo: typingsSlinky.csstype.csstypeStrings.indigo = "indigo".asInstanceOf[typingsSlinky.csstype.csstypeStrings.indigo]
   @scala.inline
-  def indigo: typingsSlinky.csstype.csstypeStrings.indigo = this.cast("indigo")
+  def ivory: typingsSlinky.csstype.csstypeStrings.ivory = "ivory".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ivory]
   @scala.inline
-  def ivory: typingsSlinky.csstype.csstypeStrings.ivory = this.cast("ivory")
+  def khaki: typingsSlinky.csstype.csstypeStrings.khaki = "khaki".asInstanceOf[typingsSlinky.csstype.csstypeStrings.khaki]
   @scala.inline
-  def khaki: typingsSlinky.csstype.csstypeStrings.khaki = this.cast("khaki")
+  def lavender: typingsSlinky.csstype.csstypeStrings.lavender = "lavender".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lavender]
   @scala.inline
-  def lavender: typingsSlinky.csstype.csstypeStrings.lavender = this.cast("lavender")
+  def lavenderblush: typingsSlinky.csstype.csstypeStrings.lavenderblush = "lavenderblush".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lavenderblush]
   @scala.inline
-  def lavenderblush: typingsSlinky.csstype.csstypeStrings.lavenderblush = this.cast("lavenderblush")
+  def lawngreen: typingsSlinky.csstype.csstypeStrings.lawngreen = "lawngreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lawngreen]
   @scala.inline
-  def lawngreen: typingsSlinky.csstype.csstypeStrings.lawngreen = this.cast("lawngreen")
+  def lemonchiffon: typingsSlinky.csstype.csstypeStrings.lemonchiffon = "lemonchiffon".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lemonchiffon]
   @scala.inline
-  def lemonchiffon: typingsSlinky.csstype.csstypeStrings.lemonchiffon = this.cast("lemonchiffon")
+  def lightblue: typingsSlinky.csstype.csstypeStrings.lightblue = "lightblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightblue]
   @scala.inline
-  def lightblue: typingsSlinky.csstype.csstypeStrings.lightblue = this.cast("lightblue")
+  def lightcoral: typingsSlinky.csstype.csstypeStrings.lightcoral = "lightcoral".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightcoral]
   @scala.inline
-  def lightcoral: typingsSlinky.csstype.csstypeStrings.lightcoral = this.cast("lightcoral")
+  def lightcyan: typingsSlinky.csstype.csstypeStrings.lightcyan = "lightcyan".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightcyan]
   @scala.inline
-  def lightcyan: typingsSlinky.csstype.csstypeStrings.lightcyan = this.cast("lightcyan")
+  def lightgoldenrodyellow: typingsSlinky.csstype.csstypeStrings.lightgoldenrodyellow = "lightgoldenrodyellow".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightgoldenrodyellow]
   @scala.inline
-  def lightgoldenrodyellow: typingsSlinky.csstype.csstypeStrings.lightgoldenrodyellow = this.cast("lightgoldenrodyellow")
+  def lightgray: typingsSlinky.csstype.csstypeStrings.lightgray = "lightgray".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightgray]
   @scala.inline
-  def lightgray: typingsSlinky.csstype.csstypeStrings.lightgray = this.cast("lightgray")
+  def lightgreen: typingsSlinky.csstype.csstypeStrings.lightgreen = "lightgreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightgreen]
   @scala.inline
-  def lightgreen: typingsSlinky.csstype.csstypeStrings.lightgreen = this.cast("lightgreen")
+  def lightgrey: typingsSlinky.csstype.csstypeStrings.lightgrey = "lightgrey".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightgrey]
   @scala.inline
-  def lightgrey: typingsSlinky.csstype.csstypeStrings.lightgrey = this.cast("lightgrey")
+  def lightpink: typingsSlinky.csstype.csstypeStrings.lightpink = "lightpink".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightpink]
   @scala.inline
-  def lightpink: typingsSlinky.csstype.csstypeStrings.lightpink = this.cast("lightpink")
+  def lightsalmon: typingsSlinky.csstype.csstypeStrings.lightsalmon = "lightsalmon".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightsalmon]
   @scala.inline
-  def lightsalmon: typingsSlinky.csstype.csstypeStrings.lightsalmon = this.cast("lightsalmon")
+  def lightseagreen: typingsSlinky.csstype.csstypeStrings.lightseagreen = "lightseagreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightseagreen]
   @scala.inline
-  def lightseagreen: typingsSlinky.csstype.csstypeStrings.lightseagreen = this.cast("lightseagreen")
+  def lightskyblue: typingsSlinky.csstype.csstypeStrings.lightskyblue = "lightskyblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightskyblue]
   @scala.inline
-  def lightskyblue: typingsSlinky.csstype.csstypeStrings.lightskyblue = this.cast("lightskyblue")
+  def lightslategray: typingsSlinky.csstype.csstypeStrings.lightslategray = "lightslategray".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightslategray]
   @scala.inline
-  def lightslategray: typingsSlinky.csstype.csstypeStrings.lightslategray = this.cast("lightslategray")
+  def lightslategrey: typingsSlinky.csstype.csstypeStrings.lightslategrey = "lightslategrey".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightslategrey]
   @scala.inline
-  def lightslategrey: typingsSlinky.csstype.csstypeStrings.lightslategrey = this.cast("lightslategrey")
+  def lightsteelblue: typingsSlinky.csstype.csstypeStrings.lightsteelblue = "lightsteelblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightsteelblue]
   @scala.inline
-  def lightsteelblue: typingsSlinky.csstype.csstypeStrings.lightsteelblue = this.cast("lightsteelblue")
+  def lightyellow: typingsSlinky.csstype.csstypeStrings.lightyellow = "lightyellow".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lightyellow]
   @scala.inline
-  def lightyellow: typingsSlinky.csstype.csstypeStrings.lightyellow = this.cast("lightyellow")
+  def lime: typingsSlinky.csstype.csstypeStrings.lime = "lime".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lime]
   @scala.inline
-  def lime: typingsSlinky.csstype.csstypeStrings.lime = this.cast("lime")
+  def limegreen: typingsSlinky.csstype.csstypeStrings.limegreen = "limegreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.limegreen]
   @scala.inline
-  def limegreen: typingsSlinky.csstype.csstypeStrings.limegreen = this.cast("limegreen")
+  def linen: typingsSlinky.csstype.csstypeStrings.linen = "linen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.linen]
   @scala.inline
-  def linen: typingsSlinky.csstype.csstypeStrings.linen = this.cast("linen")
+  def magenta: typingsSlinky.csstype.csstypeStrings.magenta = "magenta".asInstanceOf[typingsSlinky.csstype.csstypeStrings.magenta]
   @scala.inline
-  def magenta: typingsSlinky.csstype.csstypeStrings.magenta = this.cast("magenta")
+  def maroon: typingsSlinky.csstype.csstypeStrings.maroon = "maroon".asInstanceOf[typingsSlinky.csstype.csstypeStrings.maroon]
   @scala.inline
-  def maroon: typingsSlinky.csstype.csstypeStrings.maroon = this.cast("maroon")
+  def mediumaquamarine: typingsSlinky.csstype.csstypeStrings.mediumaquamarine = "mediumaquamarine".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mediumaquamarine]
   @scala.inline
-  def mediumaquamarine: typingsSlinky.csstype.csstypeStrings.mediumaquamarine = this.cast("mediumaquamarine")
+  def mediumblue: typingsSlinky.csstype.csstypeStrings.mediumblue = "mediumblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mediumblue]
   @scala.inline
-  def mediumblue: typingsSlinky.csstype.csstypeStrings.mediumblue = this.cast("mediumblue")
+  def mediumorchid: typingsSlinky.csstype.csstypeStrings.mediumorchid = "mediumorchid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mediumorchid]
   @scala.inline
-  def mediumorchid: typingsSlinky.csstype.csstypeStrings.mediumorchid = this.cast("mediumorchid")
+  def mediumpurple: typingsSlinky.csstype.csstypeStrings.mediumpurple = "mediumpurple".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mediumpurple]
   @scala.inline
-  def mediumpurple: typingsSlinky.csstype.csstypeStrings.mediumpurple = this.cast("mediumpurple")
+  def mediumseagreen: typingsSlinky.csstype.csstypeStrings.mediumseagreen = "mediumseagreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mediumseagreen]
   @scala.inline
-  def mediumseagreen: typingsSlinky.csstype.csstypeStrings.mediumseagreen = this.cast("mediumseagreen")
+  def mediumslateblue: typingsSlinky.csstype.csstypeStrings.mediumslateblue = "mediumslateblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mediumslateblue]
   @scala.inline
-  def mediumslateblue: typingsSlinky.csstype.csstypeStrings.mediumslateblue = this.cast("mediumslateblue")
+  def mediumspringgreen: typingsSlinky.csstype.csstypeStrings.mediumspringgreen = "mediumspringgreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mediumspringgreen]
   @scala.inline
-  def mediumspringgreen: typingsSlinky.csstype.csstypeStrings.mediumspringgreen = this.cast("mediumspringgreen")
+  def mediumturquoise: typingsSlinky.csstype.csstypeStrings.mediumturquoise = "mediumturquoise".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mediumturquoise]
   @scala.inline
-  def mediumturquoise: typingsSlinky.csstype.csstypeStrings.mediumturquoise = this.cast("mediumturquoise")
+  def mediumvioletred: typingsSlinky.csstype.csstypeStrings.mediumvioletred = "mediumvioletred".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mediumvioletred]
   @scala.inline
-  def mediumvioletred: typingsSlinky.csstype.csstypeStrings.mediumvioletred = this.cast("mediumvioletred")
+  def midnightblue: typingsSlinky.csstype.csstypeStrings.midnightblue = "midnightblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.midnightblue]
   @scala.inline
-  def midnightblue: typingsSlinky.csstype.csstypeStrings.midnightblue = this.cast("midnightblue")
+  def mintcream: typingsSlinky.csstype.csstypeStrings.mintcream = "mintcream".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mintcream]
   @scala.inline
-  def mintcream: typingsSlinky.csstype.csstypeStrings.mintcream = this.cast("mintcream")
+  def mistyrose: typingsSlinky.csstype.csstypeStrings.mistyrose = "mistyrose".asInstanceOf[typingsSlinky.csstype.csstypeStrings.mistyrose]
   @scala.inline
-  def mistyrose: typingsSlinky.csstype.csstypeStrings.mistyrose = this.cast("mistyrose")
+  def moccasin: typingsSlinky.csstype.csstypeStrings.moccasin = "moccasin".asInstanceOf[typingsSlinky.csstype.csstypeStrings.moccasin]
   @scala.inline
-  def moccasin: typingsSlinky.csstype.csstypeStrings.moccasin = this.cast("moccasin")
+  def navajowhite: typingsSlinky.csstype.csstypeStrings.navajowhite = "navajowhite".asInstanceOf[typingsSlinky.csstype.csstypeStrings.navajowhite]
   @scala.inline
-  def navajowhite: typingsSlinky.csstype.csstypeStrings.navajowhite = this.cast("navajowhite")
+  def navy: typingsSlinky.csstype.csstypeStrings.navy = "navy".asInstanceOf[typingsSlinky.csstype.csstypeStrings.navy]
   @scala.inline
-  def navy: typingsSlinky.csstype.csstypeStrings.navy = this.cast("navy")
+  def oldlace: typingsSlinky.csstype.csstypeStrings.oldlace = "oldlace".asInstanceOf[typingsSlinky.csstype.csstypeStrings.oldlace]
   @scala.inline
-  def oldlace: typingsSlinky.csstype.csstypeStrings.oldlace = this.cast("oldlace")
+  def olive: typingsSlinky.csstype.csstypeStrings.olive = "olive".asInstanceOf[typingsSlinky.csstype.csstypeStrings.olive]
   @scala.inline
-  def olive: typingsSlinky.csstype.csstypeStrings.olive = this.cast("olive")
+  def olivedrab: typingsSlinky.csstype.csstypeStrings.olivedrab = "olivedrab".asInstanceOf[typingsSlinky.csstype.csstypeStrings.olivedrab]
   @scala.inline
-  def olivedrab: typingsSlinky.csstype.csstypeStrings.olivedrab = this.cast("olivedrab")
+  def orange: typingsSlinky.csstype.csstypeStrings.orange = "orange".asInstanceOf[typingsSlinky.csstype.csstypeStrings.orange]
   @scala.inline
-  def orange: typingsSlinky.csstype.csstypeStrings.orange = this.cast("orange")
+  def orangered: typingsSlinky.csstype.csstypeStrings.orangered = "orangered".asInstanceOf[typingsSlinky.csstype.csstypeStrings.orangered]
   @scala.inline
-  def orangered: typingsSlinky.csstype.csstypeStrings.orangered = this.cast("orangered")
+  def orchid: typingsSlinky.csstype.csstypeStrings.orchid = "orchid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.orchid]
   @scala.inline
-  def orchid: typingsSlinky.csstype.csstypeStrings.orchid = this.cast("orchid")
+  def palegoldenrod: typingsSlinky.csstype.csstypeStrings.palegoldenrod = "palegoldenrod".asInstanceOf[typingsSlinky.csstype.csstypeStrings.palegoldenrod]
   @scala.inline
-  def palegoldenrod: typingsSlinky.csstype.csstypeStrings.palegoldenrod = this.cast("palegoldenrod")
+  def palegreen: typingsSlinky.csstype.csstypeStrings.palegreen = "palegreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.palegreen]
   @scala.inline
-  def palegreen: typingsSlinky.csstype.csstypeStrings.palegreen = this.cast("palegreen")
+  def paleturquoise: typingsSlinky.csstype.csstypeStrings.paleturquoise = "paleturquoise".asInstanceOf[typingsSlinky.csstype.csstypeStrings.paleturquoise]
   @scala.inline
-  def paleturquoise: typingsSlinky.csstype.csstypeStrings.paleturquoise = this.cast("paleturquoise")
+  def palevioletred: typingsSlinky.csstype.csstypeStrings.palevioletred = "palevioletred".asInstanceOf[typingsSlinky.csstype.csstypeStrings.palevioletred]
   @scala.inline
-  def palevioletred: typingsSlinky.csstype.csstypeStrings.palevioletred = this.cast("palevioletred")
+  def papayawhip: typingsSlinky.csstype.csstypeStrings.papayawhip = "papayawhip".asInstanceOf[typingsSlinky.csstype.csstypeStrings.papayawhip]
   @scala.inline
-  def papayawhip: typingsSlinky.csstype.csstypeStrings.papayawhip = this.cast("papayawhip")
+  def peachpuff: typingsSlinky.csstype.csstypeStrings.peachpuff = "peachpuff".asInstanceOf[typingsSlinky.csstype.csstypeStrings.peachpuff]
   @scala.inline
-  def peachpuff: typingsSlinky.csstype.csstypeStrings.peachpuff = this.cast("peachpuff")
+  def peru: typingsSlinky.csstype.csstypeStrings.peru = "peru".asInstanceOf[typingsSlinky.csstype.csstypeStrings.peru]
   @scala.inline
-  def peru: typingsSlinky.csstype.csstypeStrings.peru = this.cast("peru")
+  def pink: typingsSlinky.csstype.csstypeStrings.pink = "pink".asInstanceOf[typingsSlinky.csstype.csstypeStrings.pink]
   @scala.inline
-  def pink: typingsSlinky.csstype.csstypeStrings.pink = this.cast("pink")
+  def plum: typingsSlinky.csstype.csstypeStrings.plum = "plum".asInstanceOf[typingsSlinky.csstype.csstypeStrings.plum]
   @scala.inline
-  def plum: typingsSlinky.csstype.csstypeStrings.plum = this.cast("plum")
+  def powderblue: typingsSlinky.csstype.csstypeStrings.powderblue = "powderblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.powderblue]
   @scala.inline
-  def powderblue: typingsSlinky.csstype.csstypeStrings.powderblue = this.cast("powderblue")
+  def purple: typingsSlinky.csstype.csstypeStrings.purple = "purple".asInstanceOf[typingsSlinky.csstype.csstypeStrings.purple]
   @scala.inline
-  def purple: typingsSlinky.csstype.csstypeStrings.purple = this.cast("purple")
+  def rebeccapurple: typingsSlinky.csstype.csstypeStrings.rebeccapurple = "rebeccapurple".asInstanceOf[typingsSlinky.csstype.csstypeStrings.rebeccapurple]
   @scala.inline
-  def rebeccapurple: typingsSlinky.csstype.csstypeStrings.rebeccapurple = this.cast("rebeccapurple")
+  def red: typingsSlinky.csstype.csstypeStrings.red = "red".asInstanceOf[typingsSlinky.csstype.csstypeStrings.red]
   @scala.inline
-  def red: typingsSlinky.csstype.csstypeStrings.red = this.cast("red")
+  def rosybrown: typingsSlinky.csstype.csstypeStrings.rosybrown = "rosybrown".asInstanceOf[typingsSlinky.csstype.csstypeStrings.rosybrown]
   @scala.inline
-  def rosybrown: typingsSlinky.csstype.csstypeStrings.rosybrown = this.cast("rosybrown")
+  def royalblue: typingsSlinky.csstype.csstypeStrings.royalblue = "royalblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.royalblue]
   @scala.inline
-  def royalblue: typingsSlinky.csstype.csstypeStrings.royalblue = this.cast("royalblue")
+  def saddlebrown: typingsSlinky.csstype.csstypeStrings.saddlebrown = "saddlebrown".asInstanceOf[typingsSlinky.csstype.csstypeStrings.saddlebrown]
   @scala.inline
-  def saddlebrown: typingsSlinky.csstype.csstypeStrings.saddlebrown = this.cast("saddlebrown")
+  def salmon: typingsSlinky.csstype.csstypeStrings.salmon = "salmon".asInstanceOf[typingsSlinky.csstype.csstypeStrings.salmon]
   @scala.inline
-  def salmon: typingsSlinky.csstype.csstypeStrings.salmon = this.cast("salmon")
+  def sandybrown: typingsSlinky.csstype.csstypeStrings.sandybrown = "sandybrown".asInstanceOf[typingsSlinky.csstype.csstypeStrings.sandybrown]
   @scala.inline
-  def sandybrown: typingsSlinky.csstype.csstypeStrings.sandybrown = this.cast("sandybrown")
+  def seagreen: typingsSlinky.csstype.csstypeStrings.seagreen = "seagreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.seagreen]
   @scala.inline
-  def seagreen: typingsSlinky.csstype.csstypeStrings.seagreen = this.cast("seagreen")
+  def seashell: typingsSlinky.csstype.csstypeStrings.seashell = "seashell".asInstanceOf[typingsSlinky.csstype.csstypeStrings.seashell]
   @scala.inline
-  def seashell: typingsSlinky.csstype.csstypeStrings.seashell = this.cast("seashell")
+  def sienna: typingsSlinky.csstype.csstypeStrings.sienna = "sienna".asInstanceOf[typingsSlinky.csstype.csstypeStrings.sienna]
   @scala.inline
-  def sienna: typingsSlinky.csstype.csstypeStrings.sienna = this.cast("sienna")
+  def silver: typingsSlinky.csstype.csstypeStrings.silver = "silver".asInstanceOf[typingsSlinky.csstype.csstypeStrings.silver]
   @scala.inline
-  def silver: typingsSlinky.csstype.csstypeStrings.silver = this.cast("silver")
+  def skyblue: typingsSlinky.csstype.csstypeStrings.skyblue = "skyblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.skyblue]
   @scala.inline
-  def skyblue: typingsSlinky.csstype.csstypeStrings.skyblue = this.cast("skyblue")
+  def slateblue: typingsSlinky.csstype.csstypeStrings.slateblue = "slateblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.slateblue]
   @scala.inline
-  def slateblue: typingsSlinky.csstype.csstypeStrings.slateblue = this.cast("slateblue")
+  def slategray: typingsSlinky.csstype.csstypeStrings.slategray = "slategray".asInstanceOf[typingsSlinky.csstype.csstypeStrings.slategray]
   @scala.inline
-  def slategray: typingsSlinky.csstype.csstypeStrings.slategray = this.cast("slategray")
+  def slategrey: typingsSlinky.csstype.csstypeStrings.slategrey = "slategrey".asInstanceOf[typingsSlinky.csstype.csstypeStrings.slategrey]
   @scala.inline
-  def slategrey: typingsSlinky.csstype.csstypeStrings.slategrey = this.cast("slategrey")
+  def snow: typingsSlinky.csstype.csstypeStrings.snow = "snow".asInstanceOf[typingsSlinky.csstype.csstypeStrings.snow]
   @scala.inline
-  def snow: typingsSlinky.csstype.csstypeStrings.snow = this.cast("snow")
+  def springgreen: typingsSlinky.csstype.csstypeStrings.springgreen = "springgreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.springgreen]
   @scala.inline
-  def springgreen: typingsSlinky.csstype.csstypeStrings.springgreen = this.cast("springgreen")
+  def steelblue: typingsSlinky.csstype.csstypeStrings.steelblue = "steelblue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.steelblue]
   @scala.inline
-  def steelblue: typingsSlinky.csstype.csstypeStrings.steelblue = this.cast("steelblue")
+  def tan: typingsSlinky.csstype.csstypeStrings.tan = "tan".asInstanceOf[typingsSlinky.csstype.csstypeStrings.tan]
   @scala.inline
-  def tan: typingsSlinky.csstype.csstypeStrings.tan = this.cast("tan")
+  def teal: typingsSlinky.csstype.csstypeStrings.teal = "teal".asInstanceOf[typingsSlinky.csstype.csstypeStrings.teal]
   @scala.inline
-  def teal: typingsSlinky.csstype.csstypeStrings.teal = this.cast("teal")
+  def thistle: typingsSlinky.csstype.csstypeStrings.thistle = "thistle".asInstanceOf[typingsSlinky.csstype.csstypeStrings.thistle]
   @scala.inline
-  def thistle: typingsSlinky.csstype.csstypeStrings.thistle = this.cast("thistle")
+  def tomato: typingsSlinky.csstype.csstypeStrings.tomato = "tomato".asInstanceOf[typingsSlinky.csstype.csstypeStrings.tomato]
   @scala.inline
-  def tomato: typingsSlinky.csstype.csstypeStrings.tomato = this.cast("tomato")
+  def transparent: typingsSlinky.csstype.csstypeStrings.transparent = "transparent".asInstanceOf[typingsSlinky.csstype.csstypeStrings.transparent]
   @scala.inline
-  def transparent: typingsSlinky.csstype.csstypeStrings.transparent = this.cast("transparent")
+  def turquoise: typingsSlinky.csstype.csstypeStrings.turquoise = "turquoise".asInstanceOf[typingsSlinky.csstype.csstypeStrings.turquoise]
   @scala.inline
-  def turquoise: typingsSlinky.csstype.csstypeStrings.turquoise = this.cast("turquoise")
+  def violet: typingsSlinky.csstype.csstypeStrings.violet = "violet".asInstanceOf[typingsSlinky.csstype.csstypeStrings.violet]
   @scala.inline
-  def violet: typingsSlinky.csstype.csstypeStrings.violet = this.cast("violet")
+  def wheat: typingsSlinky.csstype.csstypeStrings.wheat = "wheat".asInstanceOf[typingsSlinky.csstype.csstypeStrings.wheat]
   @scala.inline
-  def wheat: typingsSlinky.csstype.csstypeStrings.wheat = this.cast("wheat")
+  def white: typingsSlinky.csstype.csstypeStrings.white = "white".asInstanceOf[typingsSlinky.csstype.csstypeStrings.white]
   @scala.inline
-  def white: typingsSlinky.csstype.csstypeStrings.white = this.cast("white")
+  def whitesmoke: typingsSlinky.csstype.csstypeStrings.whitesmoke = "whitesmoke".asInstanceOf[typingsSlinky.csstype.csstypeStrings.whitesmoke]
   @scala.inline
-  def whitesmoke: typingsSlinky.csstype.csstypeStrings.whitesmoke = this.cast("whitesmoke")
+  def yellow: typingsSlinky.csstype.csstypeStrings.yellow = "yellow".asInstanceOf[typingsSlinky.csstype.csstypeStrings.yellow]
   @scala.inline
-  def yellow: typingsSlinky.csstype.csstypeStrings.yellow = this.cast("yellow")
-  @scala.inline
-  def yellowgreen: typingsSlinky.csstype.csstypeStrings.yellowgreen = this.cast("yellowgreen")
+  def yellowgreen: typingsSlinky.csstype.csstypeStrings.yellowgreen = "yellowgreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.yellowgreen]
 }
 

@@ -20,26 +20,24 @@ trait CallState extends js.Object
 
 object CallState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def established: typingsSlinky.microsoftGraph.microsoftGraphStrings.established = "established".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.established]
   @scala.inline
-  def established: typingsSlinky.microsoftGraph.microsoftGraphStrings.established = this.cast("established")
+  def establishing: typingsSlinky.microsoftGraph.microsoftGraphStrings.establishing = "establishing".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.establishing]
   @scala.inline
-  def establishing: typingsSlinky.microsoftGraph.microsoftGraphStrings.establishing = this.cast("establishing")
+  def hold: typingsSlinky.microsoftGraph.microsoftGraphStrings.hold = "hold".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.hold]
   @scala.inline
-  def hold: typingsSlinky.microsoftGraph.microsoftGraphStrings.hold = this.cast("hold")
+  def incoming: typingsSlinky.microsoftGraph.microsoftGraphStrings.incoming = "incoming".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.incoming]
   @scala.inline
-  def incoming: typingsSlinky.microsoftGraph.microsoftGraphStrings.incoming = this.cast("incoming")
+  def redirecting: typingsSlinky.microsoftGraph.microsoftGraphStrings.redirecting = "redirecting".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.redirecting]
   @scala.inline
-  def redirecting: typingsSlinky.microsoftGraph.microsoftGraphStrings.redirecting = this.cast("redirecting")
+  def terminated: typingsSlinky.microsoftGraph.microsoftGraphStrings.terminated = "terminated".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.terminated]
   @scala.inline
-  def terminated: typingsSlinky.microsoftGraph.microsoftGraphStrings.terminated = this.cast("terminated")
+  def terminating: typingsSlinky.microsoftGraph.microsoftGraphStrings.terminating = "terminating".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.terminating]
   @scala.inline
-  def terminating: typingsSlinky.microsoftGraph.microsoftGraphStrings.terminating = this.cast("terminating")
+  def transferAccepted: typingsSlinky.microsoftGraph.microsoftGraphStrings.transferAccepted = "transferAccepted".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.transferAccepted]
   @scala.inline
-  def transferAccepted: typingsSlinky.microsoftGraph.microsoftGraphStrings.transferAccepted = this.cast("transferAccepted")
+  def transferring: typingsSlinky.microsoftGraph.microsoftGraphStrings.transferring = "transferring".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.transferring]
   @scala.inline
-  def transferring: typingsSlinky.microsoftGraph.microsoftGraphStrings.transferring = this.cast("transferring")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

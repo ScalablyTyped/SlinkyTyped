@@ -4,19 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MemoryUsageDetails extends js.Object {
   // Docs: http://electronjs.org/docs/api/structures/memory-usage-details
-  var count: Double
-  var liveSize: Double
-  var size: Double
+  var count: Double = js.native
+  var liveSize: Double = js.native
+  var size: Double = js.native
 }
 
 object MemoryUsageDetails {
   @scala.inline
   def apply(count: Double, liveSize: Double, size: Double): MemoryUsageDetails = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], liveSize = liveSize.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MemoryUsageDetails]
   }
+  @scala.inline
+  implicit class MemoryUsageDetailsOps[Self <: MemoryUsageDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLiveSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

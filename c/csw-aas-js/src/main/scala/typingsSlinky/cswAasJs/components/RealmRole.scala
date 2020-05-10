@@ -1,27 +1,31 @@
 package typingsSlinky.cswAasJs.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cswAasJs.realmRoleMod.RealmRoleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RealmRole
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object RealmRole {
   @JSImport("csw-aas-js/dist/components/authorization/RealmRole", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(error: TagMod[Any], realmRole: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], realmRole = realmRole.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def error(value: TagMod[Any]): this.type = set("error", value.asInstanceOf[js.Any])
   }
-  type Props = RealmRoleProps
+  
+  def withProps(p: RealmRoleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(realmRole: String): Builder = {
+    val __props = js.Dynamic.literal(realmRole = realmRole.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[RealmRoleProps]))
+  }
 }
 

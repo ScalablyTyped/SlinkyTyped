@@ -4,54 +4,142 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDomain extends js.Object {
   /** Restricts the retrieved cookies to those whose domains match or are subdomains of this one. */
-  var domain: js.UndefOr[String] = js.undefined
+  var domain: js.UndefOr[String] = js.native
   /**
     * Restricts the retrieved cookies to those whose first-party domains match this one. This attribute is
     * required if First-Party Isolation is enabled. To not filter by a specific first-party domain, use `null` or
     * `undefined`.
     */
-  var firstPartyDomain: js.UndefOr[String] = js.undefined
+  var firstPartyDomain: js.UndefOr[String] = js.native
   /** Filters the cookies by name. */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** Restricts the retrieved cookies to those whose path exactly matches this string. */
-  var path: js.UndefOr[String] = js.undefined
+  var path: js.UndefOr[String] = js.native
   /** Filters the cookies by their Secure property. */
-  var secure: js.UndefOr[Boolean] = js.undefined
+  var secure: js.UndefOr[Boolean] = js.native
   /** Filters out session vs. persistent cookies. */
-  var session: js.UndefOr[Boolean] = js.undefined
+  var session: js.UndefOr[Boolean] = js.native
   /**
     * The cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be
     * used.
     */
-  var storeId: js.UndefOr[String] = js.undefined
+  var storeId: js.UndefOr[String] = js.native
   /** Restricts the retrieved cookies to those that would match the given URL. */
-  var url: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.native
 }
 
 object AnonDomain {
   @scala.inline
-  def apply(
-    domain: String = null,
-    firstPartyDomain: String = null,
-    name: String = null,
-    path: String = null,
-    secure: js.UndefOr[Boolean] = js.undefined,
-    session: js.UndefOr[Boolean] = js.undefined,
-    storeId: String = null,
-    url: String = null
-  ): AnonDomain = {
+  def apply(): AnonDomain = {
     val __obj = js.Dynamic.literal()
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (firstPartyDomain != null) __obj.updateDynamic("firstPartyDomain")(firstPartyDomain.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (!js.isUndefined(secure)) __obj.updateDynamic("secure")(secure.asInstanceOf[js.Any])
-    if (!js.isUndefined(session)) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (storeId != null) __obj.updateDynamic("storeId")(storeId.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDomain]
   }
+  @scala.inline
+  implicit class AnonDomainOps[Self <: AnonDomain] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstPartyDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPartyDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstPartyDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstPartyDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSession(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

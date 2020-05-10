@@ -30,20 +30,77 @@ trait DateArrayOptions extends js.Object {
 
 object DateArrayOptions {
   @scala.inline
-  def apply(
-    DefaultValue: FieldValue = null,
-    FacetEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    ReturnEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    SearchEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    SourceFields: FieldNameCommaList = null
-  ): DateArrayOptions = {
+  def apply(): DateArrayOptions = {
     val __obj = js.Dynamic.literal()
-    if (DefaultValue != null) __obj.updateDynamic("DefaultValue")(DefaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(FacetEnabled)) __obj.updateDynamic("FacetEnabled")(FacetEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(ReturnEnabled)) __obj.updateDynamic("ReturnEnabled")(ReturnEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(SearchEnabled)) __obj.updateDynamic("SearchEnabled")(SearchEnabled.asInstanceOf[js.Any])
-    if (SourceFields != null) __obj.updateDynamic("SourceFields")(SourceFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateArrayOptions]
   }
+  @scala.inline
+  implicit class DateArrayOptionsOps[Self <: DateArrayOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultValue(value: FieldValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFacetEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FacetEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFacetEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FacetEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceFields(value: FieldNameCommaList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceFields")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

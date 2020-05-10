@@ -12,7 +12,7 @@ package object mod {
   /**
     * Data represents the message payload received over the WebSocket.
     */
-  type Data = java.lang.String | typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.ArrayBuffer | js.Array[typingsSlinky.node.Buffer]
+  type Data = java.lang.String | typingsSlinky.node.Buffer | js.typedarray.ArrayBuffer | js.Array[typingsSlinky.node.Buffer]
   /**
     * VerifyClientCallbackAsync is an asynchronous callback used to inspect the
     * incoming message. The return value (boolean) of the function determines

@@ -1,8 +1,8 @@
 package typingsSlinky.firebaseFirestore.localSimpleDbMod
 
+import org.scalajs.dom.raw.IDBKeyRange
 import org.scalajs.dom.raw.IDBObjectStore
 import typingsSlinky.firebaseFirestore.localPersistencePromiseMod.PersistencePromise
-import typingsSlinky.std.IDBKeyRange
 import typingsSlinky.std.IDBValidKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,7 +34,7 @@ class SimpleDbStore[KeyType /* <: IDBValidKey */, ValueType /* <: js.Any */] pro
   def delete(key: KeyType): PersistencePromise[Unit] = js.native
   def delete(key: IDBKeyRange): PersistencePromise[Unit] = js.native
   def deleteAll(): PersistencePromise[Unit] = js.native
-  def deleteAll(index: String, range: org.scalajs.dom.raw.IDBKeyRange): PersistencePromise[Unit] = js.native
+  def deleteAll(index: String, range: IDBKeyRange): PersistencePromise[Unit] = js.native
   def deleteAll(range: IDBKeyRange): PersistencePromise[Unit] = js.native
   /**
     * Gets the object with the specified key from the specified store, or null
@@ -68,7 +68,7 @@ class SimpleDbStore[KeyType /* <: IDBValidKey */, ValueType /* <: js.Any */] pro
     */
   def iterateSerial(callback: js.Function2[/* k */ KeyType, /* v */ ValueType, PersistencePromise[Boolean]]): PersistencePromise[Unit] = js.native
   def loadAll(): PersistencePromise[js.Array[ValueType]] = js.native
-  def loadAll(index: String, range: org.scalajs.dom.raw.IDBKeyRange): PersistencePromise[js.Array[ValueType]] = js.native
+  def loadAll(index: String, range: IDBKeyRange): PersistencePromise[js.Array[ValueType]] = js.native
   def loadAll(range: IDBKeyRange): PersistencePromise[js.Array[ValueType]] = js.native
   def put(key: KeyType, value: ValueType): PersistencePromise[Unit] = js.native
   /**

@@ -4,44 +4,147 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Update extends js.Object {
-  var callback_query: js.UndefOr[CallbackQuery] = js.undefined
-  var channel_post: js.UndefOr[Message] = js.undefined
-  var chosen_inline_result: js.UndefOr[ChosenInlineResult] = js.undefined
-  var edited_channel_post: js.UndefOr[Message] = js.undefined
-  var edited_message: js.UndefOr[Message] = js.undefined
-  var inline_query: js.UndefOr[InlineQuery] = js.undefined
-  var message: js.UndefOr[Message] = js.undefined
-  var pre_checkout_query: js.UndefOr[PreCheckoutQuery] = js.undefined
-  var shipping_query: js.UndefOr[ShippingQuery] = js.undefined
-  var update_id: Double
+  var callback_query: js.UndefOr[CallbackQuery] = js.native
+  var channel_post: js.UndefOr[Message] = js.native
+  var chosen_inline_result: js.UndefOr[ChosenInlineResult] = js.native
+  var edited_channel_post: js.UndefOr[Message] = js.native
+  var edited_message: js.UndefOr[Message] = js.native
+  var inline_query: js.UndefOr[InlineQuery] = js.native
+  var message: js.UndefOr[Message] = js.native
+  var pre_checkout_query: js.UndefOr[PreCheckoutQuery] = js.native
+  var shipping_query: js.UndefOr[ShippingQuery] = js.native
+  var update_id: Double = js.native
 }
 
 object Update {
   @scala.inline
-  def apply(
-    update_id: Double,
-    callback_query: CallbackQuery = null,
-    channel_post: Message = null,
-    chosen_inline_result: ChosenInlineResult = null,
-    edited_channel_post: Message = null,
-    edited_message: Message = null,
-    inline_query: InlineQuery = null,
-    message: Message = null,
-    pre_checkout_query: PreCheckoutQuery = null,
-    shipping_query: ShippingQuery = null
-  ): Update = {
+  def apply(update_id: Double): Update = {
     val __obj = js.Dynamic.literal(update_id = update_id.asInstanceOf[js.Any])
-    if (callback_query != null) __obj.updateDynamic("callback_query")(callback_query.asInstanceOf[js.Any])
-    if (channel_post != null) __obj.updateDynamic("channel_post")(channel_post.asInstanceOf[js.Any])
-    if (chosen_inline_result != null) __obj.updateDynamic("chosen_inline_result")(chosen_inline_result.asInstanceOf[js.Any])
-    if (edited_channel_post != null) __obj.updateDynamic("edited_channel_post")(edited_channel_post.asInstanceOf[js.Any])
-    if (edited_message != null) __obj.updateDynamic("edited_message")(edited_message.asInstanceOf[js.Any])
-    if (inline_query != null) __obj.updateDynamic("inline_query")(inline_query.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (pre_checkout_query != null) __obj.updateDynamic("pre_checkout_query")(pre_checkout_query.asInstanceOf[js.Any])
-    if (shipping_query != null) __obj.updateDynamic("shipping_query")(shipping_query.asInstanceOf[js.Any])
     __obj.asInstanceOf[Update]
   }
+  @scala.inline
+  implicit class UpdateOps[Self <: Update] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUpdate_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallback_query(value: CallbackQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback_query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallback_query: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback_query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannel_post(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_post")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannel_post: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channel_post")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChosen_inline_result(value: ChosenInlineResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chosen_inline_result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChosen_inline_result: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chosen_inline_result")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdited_channel_post(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edited_channel_post")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdited_channel_post: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edited_channel_post")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdited_message(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edited_message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdited_message: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edited_message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInline_query(value: InlineQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inline_query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInline_query: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inline_query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPre_checkout_query(value: PreCheckoutQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre_checkout_query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPre_checkout_query: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre_checkout_query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShipping_query(value: ShippingQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping_query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShipping_query: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shipping_query")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

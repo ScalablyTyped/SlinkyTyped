@@ -20,10 +20,29 @@ trait SchemaDeleteDimensionGroupRequest extends js.Object {
 
 object SchemaDeleteDimensionGroupRequest {
   @scala.inline
-  def apply(range: SchemaDimensionRange = null): SchemaDeleteDimensionGroupRequest = {
+  def apply(): SchemaDeleteDimensionGroupRequest = {
     val __obj = js.Dynamic.literal()
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeleteDimensionGroupRequest]
   }
+  @scala.inline
+  implicit class SchemaDeleteDimensionGroupRequestOps[Self <: SchemaDeleteDimensionGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRange(value: SchemaDimensionRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,8 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.stickyTypesMod.IStickyProps
 import typingsSlinky.officeUiFabricReact.stickyTypesMod.StickyPositionType
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -12,31 +10,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Sticky
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.mod.Sticky] {
+object Sticky {
   @JSImport("office-ui-fabric-react", "Sticky")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    componentRef: IRefObject[IStickyProps] = null,
-    isScrollSynced: js.UndefOr[Boolean] = js.undefined,
-    stickyBackgroundColor: String = null,
-    stickyClassName: String = null,
-    stickyPosition: StickyPositionType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.Sticky] = {
-    val __obj = js.Dynamic.literal()
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(isScrollSynced)) __obj.updateDynamic("isScrollSynced")(isScrollSynced.asInstanceOf[js.Any])
-    if (stickyBackgroundColor != null) __obj.updateDynamic("stickyBackgroundColor")(stickyBackgroundColor.asInstanceOf[js.Any])
-    if (stickyClassName != null) __obj.updateDynamic("stickyClassName")(stickyClassName.asInstanceOf[js.Any])
-    if (stickyPosition != null) __obj.updateDynamic("stickyPosition")(stickyPosition.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.Sticky] {
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IStickyProps | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IStickyProps]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IStickyProps]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isScrollSynced(value: Boolean): this.type = set("isScrollSynced", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stickyBackgroundColor(value: String): this.type = set("stickyBackgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stickyClassName(value: String): this.type = set("stickyClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stickyPosition(value: StickyPositionType): this.type = set("stickyPosition", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.Sticky] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.officeUiFabricReact.mod.Sticky](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IStickyProps
+  
+  def withProps(p: IStickyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Sticky.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

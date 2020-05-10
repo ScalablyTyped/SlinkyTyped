@@ -18,11 +18,41 @@ trait PlatformApplication extends js.Object {
 
 object PlatformApplication {
   @scala.inline
-  def apply(Attributes: MapStringToString = null, PlatformApplicationArn: String = null): PlatformApplication = {
+  def apply(): PlatformApplication = {
     val __obj = js.Dynamic.literal()
-    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
-    if (PlatformApplicationArn != null) __obj.updateDynamic("PlatformApplicationArn")(PlatformApplicationArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlatformApplication]
   }
+  @scala.inline
+  implicit class PlatformApplicationOps[Self <: PlatformApplication] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: MapStringToString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformApplicationArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformApplicationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformApplicationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformApplicationArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

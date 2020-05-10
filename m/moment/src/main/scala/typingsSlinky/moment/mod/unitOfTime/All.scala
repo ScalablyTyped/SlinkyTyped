@@ -63,102 +63,100 @@ trait All extends js.Object
 
 object All {
   @scala.inline
-  def D: typingsSlinky.moment.momentStrings.D = this.cast("D")
+  def D: typingsSlinky.moment.momentStrings.D = "D".asInstanceOf[typingsSlinky.moment.momentStrings.D]
   @scala.inline
-  def DDD: typingsSlinky.moment.momentStrings.DDD = this.cast("DDD")
+  def DDD: typingsSlinky.moment.momentStrings.DDD = "DDD".asInstanceOf[typingsSlinky.moment.momentStrings.DDD]
   @scala.inline
-  def E: typingsSlinky.moment.momentStrings.E = this.cast("E")
+  def E: typingsSlinky.moment.momentStrings.E = "E".asInstanceOf[typingsSlinky.moment.momentStrings.E]
   @scala.inline
-  def GG: typingsSlinky.moment.momentStrings.GG = this.cast("GG")
+  def GG: typingsSlinky.moment.momentStrings.GG = "GG".asInstanceOf[typingsSlinky.moment.momentStrings.GG]
   @scala.inline
-  def M: typingsSlinky.moment.momentStrings.M = this.cast("M")
+  def M: typingsSlinky.moment.momentStrings.M = "M".asInstanceOf[typingsSlinky.moment.momentStrings.M]
   @scala.inline
-  def Q: typingsSlinky.moment.momentStrings.Q = this.cast("Q")
+  def Q: typingsSlinky.moment.momentStrings.Q = "Q".asInstanceOf[typingsSlinky.moment.momentStrings.Q]
   @scala.inline
-  def W: typingsSlinky.moment.momentStrings.W = this.cast("W")
+  def W: typingsSlinky.moment.momentStrings.W = "W".asInstanceOf[typingsSlinky.moment.momentStrings.W]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def d: d_ = "d".asInstanceOf[d_]
   @scala.inline
-  def d: d_ = this.cast("d")
+  def date: typingsSlinky.moment.momentStrings.date = "date".asInstanceOf[typingsSlinky.moment.momentStrings.date]
   @scala.inline
-  def date: typingsSlinky.moment.momentStrings.date = this.cast("date")
+  def dates: typingsSlinky.moment.momentStrings.dates = "dates".asInstanceOf[typingsSlinky.moment.momentStrings.dates]
   @scala.inline
-  def dates: typingsSlinky.moment.momentStrings.dates = this.cast("dates")
+  def day: typingsSlinky.moment.momentStrings.day = "day".asInstanceOf[typingsSlinky.moment.momentStrings.day]
   @scala.inline
-  def day: typingsSlinky.moment.momentStrings.day = this.cast("day")
+  def dayOfYear: typingsSlinky.moment.momentStrings.dayOfYear = "dayOfYear".asInstanceOf[typingsSlinky.moment.momentStrings.dayOfYear]
   @scala.inline
-  def dayOfYear: typingsSlinky.moment.momentStrings.dayOfYear = this.cast("dayOfYear")
+  def dayOfYears: typingsSlinky.moment.momentStrings.dayOfYears = "dayOfYears".asInstanceOf[typingsSlinky.moment.momentStrings.dayOfYears]
   @scala.inline
-  def dayOfYears: typingsSlinky.moment.momentStrings.dayOfYears = this.cast("dayOfYears")
+  def days: typingsSlinky.moment.momentStrings.days = "days".asInstanceOf[typingsSlinky.moment.momentStrings.days]
   @scala.inline
-  def days: typingsSlinky.moment.momentStrings.days = this.cast("days")
+  def e: e_ = "e".asInstanceOf[e_]
   @scala.inline
-  def e: e_ = this.cast("e")
+  def gg: gg_ = "gg".asInstanceOf[gg_]
   @scala.inline
-  def gg: gg_ = this.cast("gg")
+  def h: typingsSlinky.moment.momentStrings.h = "h".asInstanceOf[typingsSlinky.moment.momentStrings.h]
   @scala.inline
-  def h: typingsSlinky.moment.momentStrings.h = this.cast("h")
+  def hour: typingsSlinky.moment.momentStrings.hour = "hour".asInstanceOf[typingsSlinky.moment.momentStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.moment.momentStrings.hour = this.cast("hour")
+  def hours: typingsSlinky.moment.momentStrings.hours = "hours".asInstanceOf[typingsSlinky.moment.momentStrings.hours]
   @scala.inline
-  def hours: typingsSlinky.moment.momentStrings.hours = this.cast("hours")
+  def isoWeek: typingsSlinky.moment.momentStrings.isoWeek = "isoWeek".asInstanceOf[typingsSlinky.moment.momentStrings.isoWeek]
   @scala.inline
-  def isoWeek: typingsSlinky.moment.momentStrings.isoWeek = this.cast("isoWeek")
+  def isoWeekYear: typingsSlinky.moment.momentStrings.isoWeekYear = "isoWeekYear".asInstanceOf[typingsSlinky.moment.momentStrings.isoWeekYear]
   @scala.inline
-  def isoWeekYear: typingsSlinky.moment.momentStrings.isoWeekYear = this.cast("isoWeekYear")
+  def isoWeekYears: typingsSlinky.moment.momentStrings.isoWeekYears = "isoWeekYears".asInstanceOf[typingsSlinky.moment.momentStrings.isoWeekYears]
   @scala.inline
-  def isoWeekYears: typingsSlinky.moment.momentStrings.isoWeekYears = this.cast("isoWeekYears")
+  def isoWeekday: typingsSlinky.moment.momentStrings.isoWeekday = "isoWeekday".asInstanceOf[typingsSlinky.moment.momentStrings.isoWeekday]
   @scala.inline
-  def isoWeekday: typingsSlinky.moment.momentStrings.isoWeekday = this.cast("isoWeekday")
+  def isoWeekdays: typingsSlinky.moment.momentStrings.isoWeekdays = "isoWeekdays".asInstanceOf[typingsSlinky.moment.momentStrings.isoWeekdays]
   @scala.inline
-  def isoWeekdays: typingsSlinky.moment.momentStrings.isoWeekdays = this.cast("isoWeekdays")
+  def isoWeeks: typingsSlinky.moment.momentStrings.isoWeeks = "isoWeeks".asInstanceOf[typingsSlinky.moment.momentStrings.isoWeeks]
   @scala.inline
-  def isoWeeks: typingsSlinky.moment.momentStrings.isoWeeks = this.cast("isoWeeks")
+  def m: m_ = "m".asInstanceOf[m_]
   @scala.inline
-  def m: m_ = this.cast("m")
+  def millisecond: typingsSlinky.moment.momentStrings.millisecond = "millisecond".asInstanceOf[typingsSlinky.moment.momentStrings.millisecond]
   @scala.inline
-  def millisecond: typingsSlinky.moment.momentStrings.millisecond = this.cast("millisecond")
+  def milliseconds: typingsSlinky.moment.momentStrings.milliseconds = "milliseconds".asInstanceOf[typingsSlinky.moment.momentStrings.milliseconds]
   @scala.inline
-  def milliseconds: typingsSlinky.moment.momentStrings.milliseconds = this.cast("milliseconds")
+  def minute: typingsSlinky.moment.momentStrings.minute = "minute".asInstanceOf[typingsSlinky.moment.momentStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.moment.momentStrings.minute = this.cast("minute")
+  def minutes: typingsSlinky.moment.momentStrings.minutes = "minutes".asInstanceOf[typingsSlinky.moment.momentStrings.minutes]
   @scala.inline
-  def minutes: typingsSlinky.moment.momentStrings.minutes = this.cast("minutes")
+  def month: typingsSlinky.moment.momentStrings.month = "month".asInstanceOf[typingsSlinky.moment.momentStrings.month]
   @scala.inline
-  def month: typingsSlinky.moment.momentStrings.month = this.cast("month")
+  def months: typingsSlinky.moment.momentStrings.months = "months".asInstanceOf[typingsSlinky.moment.momentStrings.months]
   @scala.inline
-  def months: typingsSlinky.moment.momentStrings.months = this.cast("months")
+  def ms: typingsSlinky.moment.momentStrings.ms = "ms".asInstanceOf[typingsSlinky.moment.momentStrings.ms]
   @scala.inline
-  def ms: typingsSlinky.moment.momentStrings.ms = this.cast("ms")
+  def quarter: typingsSlinky.moment.momentStrings.quarter = "quarter".asInstanceOf[typingsSlinky.moment.momentStrings.quarter]
   @scala.inline
-  def quarter: typingsSlinky.moment.momentStrings.quarter = this.cast("quarter")
+  def quarters: typingsSlinky.moment.momentStrings.quarters = "quarters".asInstanceOf[typingsSlinky.moment.momentStrings.quarters]
   @scala.inline
-  def quarters: typingsSlinky.moment.momentStrings.quarters = this.cast("quarters")
+  def s: typingsSlinky.moment.momentStrings.s = "s".asInstanceOf[typingsSlinky.moment.momentStrings.s]
   @scala.inline
-  def s: typingsSlinky.moment.momentStrings.s = this.cast("s")
+  def second: typingsSlinky.moment.momentStrings.second = "second".asInstanceOf[typingsSlinky.moment.momentStrings.second]
   @scala.inline
-  def second: typingsSlinky.moment.momentStrings.second = this.cast("second")
+  def seconds: typingsSlinky.moment.momentStrings.seconds = "seconds".asInstanceOf[typingsSlinky.moment.momentStrings.seconds]
   @scala.inline
-  def seconds: typingsSlinky.moment.momentStrings.seconds = this.cast("seconds")
+  def w: w_ = "w".asInstanceOf[w_]
   @scala.inline
-  def w: w_ = this.cast("w")
+  def week: typingsSlinky.moment.momentStrings.week = "week".asInstanceOf[typingsSlinky.moment.momentStrings.week]
   @scala.inline
-  def week: typingsSlinky.moment.momentStrings.week = this.cast("week")
+  def weekYear: typingsSlinky.moment.momentStrings.weekYear = "weekYear".asInstanceOf[typingsSlinky.moment.momentStrings.weekYear]
   @scala.inline
-  def weekYear: typingsSlinky.moment.momentStrings.weekYear = this.cast("weekYear")
+  def weekYears: typingsSlinky.moment.momentStrings.weekYears = "weekYears".asInstanceOf[typingsSlinky.moment.momentStrings.weekYears]
   @scala.inline
-  def weekYears: typingsSlinky.moment.momentStrings.weekYears = this.cast("weekYears")
+  def weekday: typingsSlinky.moment.momentStrings.weekday = "weekday".asInstanceOf[typingsSlinky.moment.momentStrings.weekday]
   @scala.inline
-  def weekday: typingsSlinky.moment.momentStrings.weekday = this.cast("weekday")
+  def weekdays: typingsSlinky.moment.momentStrings.weekdays = "weekdays".asInstanceOf[typingsSlinky.moment.momentStrings.weekdays]
   @scala.inline
-  def weekdays: typingsSlinky.moment.momentStrings.weekdays = this.cast("weekdays")
+  def weeks: typingsSlinky.moment.momentStrings.weeks = "weeks".asInstanceOf[typingsSlinky.moment.momentStrings.weeks]
   @scala.inline
-  def weeks: typingsSlinky.moment.momentStrings.weeks = this.cast("weeks")
+  def y: typingsSlinky.moment.momentStrings.y = "y".asInstanceOf[typingsSlinky.moment.momentStrings.y]
   @scala.inline
-  def y: typingsSlinky.moment.momentStrings.y = this.cast("y")
+  def year: typingsSlinky.moment.momentStrings.year = "year".asInstanceOf[typingsSlinky.moment.momentStrings.year]
   @scala.inline
-  def year: typingsSlinky.moment.momentStrings.year = this.cast("year")
-  @scala.inline
-  def years: typingsSlinky.moment.momentStrings.years = this.cast("years")
+  def years: typingsSlinky.moment.momentStrings.years = "years".asInstanceOf[typingsSlinky.moment.momentStrings.years]
 }
 

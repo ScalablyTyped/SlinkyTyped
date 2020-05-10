@@ -25,16 +25,53 @@ trait SchemaListJobMessagesResponse extends js.Object {
 
 object SchemaListJobMessagesResponse {
   @scala.inline
-  def apply(
-    autoscalingEvents: js.Array[SchemaAutoscalingEvent] = null,
-    jobMessages: js.Array[SchemaJobMessage] = null,
-    nextPageToken: String = null
-  ): SchemaListJobMessagesResponse = {
+  def apply(): SchemaListJobMessagesResponse = {
     val __obj = js.Dynamic.literal()
-    if (autoscalingEvents != null) __obj.updateDynamic("autoscalingEvents")(autoscalingEvents.asInstanceOf[js.Any])
-    if (jobMessages != null) __obj.updateDynamic("jobMessages")(jobMessages.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListJobMessagesResponse]
   }
+  @scala.inline
+  implicit class SchemaListJobMessagesResponseOps[Self <: SchemaListJobMessagesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoscalingEvents(value: js.Array[SchemaAutoscalingEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoscalingEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobMessages(value: js.Array[SchemaJobMessage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobMessages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

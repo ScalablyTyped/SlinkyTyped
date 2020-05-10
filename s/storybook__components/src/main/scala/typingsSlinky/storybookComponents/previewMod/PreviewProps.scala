@@ -17,22 +17,89 @@ trait PreviewProps extends js.Object {
 
 object PreviewProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    columns: Int | Double = null,
-    isColumn: js.UndefOr[Boolean] = js.undefined,
-    isExpanded: js.UndefOr[Boolean] = js.undefined,
-    withSource: SourceProps = null,
-    withToolbar: js.UndefOr[Boolean] = js.undefined
-  ): PreviewProps = {
+  def apply(): PreviewProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (!js.isUndefined(isColumn)) __obj.updateDynamic("isColumn")(isColumn.asInstanceOf[js.Any])
-    if (!js.isUndefined(isExpanded)) __obj.updateDynamic("isExpanded")(isExpanded.asInstanceOf[js.Any])
-    if (withSource != null) __obj.updateDynamic("withSource")(withSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(withToolbar)) __obj.updateDynamic("withToolbar")(withToolbar.asInstanceOf[js.Any])
     __obj.asInstanceOf[PreviewProps]
   }
+  @scala.inline
+  implicit class PreviewPropsOps[Self <: PreviewProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsColumn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsExpanded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsExpanded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithSource(value: SourceProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithToolbar(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withToolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithToolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withToolbar")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

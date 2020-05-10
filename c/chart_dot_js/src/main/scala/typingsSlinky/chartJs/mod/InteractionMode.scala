@@ -19,24 +19,22 @@ trait InteractionMode extends js.Object
 
 object InteractionMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dataset: typingsSlinky.chartJs.chartJsStrings.dataset = "dataset".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.dataset]
   @scala.inline
-  def dataset: typingsSlinky.chartJs.chartJsStrings.dataset = this.cast("dataset")
+  def index: typingsSlinky.chartJs.chartJsStrings.index = "index".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.index]
   @scala.inline
-  def index: typingsSlinky.chartJs.chartJsStrings.index = this.cast("index")
+  def label: typingsSlinky.chartJs.chartJsStrings.label = "label".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.label]
   @scala.inline
-  def label: typingsSlinky.chartJs.chartJsStrings.label = this.cast("label")
+  def nearest: typingsSlinky.chartJs.chartJsStrings.nearest = "nearest".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.nearest]
   @scala.inline
-  def nearest: typingsSlinky.chartJs.chartJsStrings.nearest = this.cast("nearest")
+  def point: typingsSlinky.chartJs.chartJsStrings.point = "point".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.point]
   @scala.inline
-  def point: typingsSlinky.chartJs.chartJsStrings.point = this.cast("point")
+  def single: typingsSlinky.chartJs.chartJsStrings.single = "single".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.single]
   @scala.inline
-  def single: typingsSlinky.chartJs.chartJsStrings.single = this.cast("single")
+  def x: typingsSlinky.chartJs.chartJsStrings.x = "x".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.x]
   @scala.inline
-  def x: typingsSlinky.chartJs.chartJsStrings.x = this.cast("x")
+  def `x-axis`: typingsSlinky.chartJs.chartJsStrings.`x-axis` = "x-axis".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.`x-axis`]
   @scala.inline
-  def `x-axis`: typingsSlinky.chartJs.chartJsStrings.`x-axis` = this.cast("x-axis")
-  @scala.inline
-  def y: typingsSlinky.chartJs.chartJsStrings.y = this.cast("y")
+  def y: typingsSlinky.chartJs.chartJsStrings.y = "y".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.y]
 }
 

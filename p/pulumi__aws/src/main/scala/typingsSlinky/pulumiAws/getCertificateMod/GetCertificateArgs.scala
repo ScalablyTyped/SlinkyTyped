@@ -32,19 +32,71 @@ trait GetCertificateArgs extends js.Object {
 
 object GetCertificateArgs {
   @scala.inline
-  def apply(
-    domain: String,
-    keyTypes: js.Array[String] = null,
-    mostRecent: js.UndefOr[Boolean] = js.undefined,
-    statuses: js.Array[String] = null,
-    types: js.Array[String] = null
-  ): GetCertificateArgs = {
+  def apply(domain: String): GetCertificateArgs = {
     val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any])
-    if (keyTypes != null) __obj.updateDynamic("keyTypes")(keyTypes.asInstanceOf[js.Any])
-    if (!js.isUndefined(mostRecent)) __obj.updateDynamic("mostRecent")(mostRecent.asInstanceOf[js.Any])
-    if (statuses != null) __obj.updateDynamic("statuses")(statuses.asInstanceOf[js.Any])
-    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCertificateArgs]
   }
+  @scala.inline
+  implicit class GetCertificateArgsOps[Self <: GetCertificateArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMostRecent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mostRecent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMostRecent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mostRecent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatuses(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statuses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatuses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statuses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

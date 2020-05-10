@@ -1,13 +1,13 @@
 package typingsSlinky.officeUiFabricReact.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.detailsRowFieldsTypesMod.IDetailsRowFieldsProps
-import typingsSlinky.react.mod.FunctionComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react", "DetailsRowFields")
 @js.native
-object DetailsRowFields extends TopLevel[FunctionComponent[IDetailsRowFieldsProps]]
+object DetailsRowFields extends TopLevel[ReactComponentClass[IDetailsRowFieldsProps]]
 

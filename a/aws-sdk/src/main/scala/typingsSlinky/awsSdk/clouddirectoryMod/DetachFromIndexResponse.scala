@@ -14,10 +14,29 @@ trait DetachFromIndexResponse extends js.Object {
 
 object DetachFromIndexResponse {
   @scala.inline
-  def apply(DetachedObjectIdentifier: ObjectIdentifier = null): DetachFromIndexResponse = {
+  def apply(): DetachFromIndexResponse = {
     val __obj = js.Dynamic.literal()
-    if (DetachedObjectIdentifier != null) __obj.updateDynamic("DetachedObjectIdentifier")(DetachedObjectIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetachFromIndexResponse]
   }
+  @scala.inline
+  implicit class DetachFromIndexResponseOps[Self <: DetachFromIndexResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetachedObjectIdentifier(value: ObjectIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetachedObjectIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetachedObjectIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetachedObjectIdentifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

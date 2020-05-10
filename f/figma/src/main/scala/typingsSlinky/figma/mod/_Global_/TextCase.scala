@@ -14,14 +14,12 @@ trait TextCase extends js.Object
 
 object TextCase {
   @scala.inline
-  def LOWER: typingsSlinky.figma.figmaStrings.LOWER = this.cast("LOWER")
+  def LOWER: typingsSlinky.figma.figmaStrings.LOWER = "LOWER".asInstanceOf[typingsSlinky.figma.figmaStrings.LOWER]
   @scala.inline
-  def ORIGINAL: typingsSlinky.figma.figmaStrings.ORIGINAL = this.cast("ORIGINAL")
+  def ORIGINAL: typingsSlinky.figma.figmaStrings.ORIGINAL = "ORIGINAL".asInstanceOf[typingsSlinky.figma.figmaStrings.ORIGINAL]
   @scala.inline
-  def TITLE: typingsSlinky.figma.figmaStrings.TITLE = this.cast("TITLE")
+  def TITLE: typingsSlinky.figma.figmaStrings.TITLE = "TITLE".asInstanceOf[typingsSlinky.figma.figmaStrings.TITLE]
   @scala.inline
-  def UPPER: typingsSlinky.figma.figmaStrings.UPPER = this.cast("UPPER")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UPPER: typingsSlinky.figma.figmaStrings.UPPER = "UPPER".asInstanceOf[typingsSlinky.figma.figmaStrings.UPPER]
 }
 

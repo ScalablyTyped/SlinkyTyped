@@ -4,72 +4,270 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPalette extends js.Object {
-  var `0`: js.UndefOr[String] = js.undefined
-  var `100`: js.UndefOr[String] = js.undefined
-  var `200`: js.UndefOr[String] = js.undefined
-  var `300`: js.UndefOr[String] = js.undefined
-  var `400`: js.UndefOr[String] = js.undefined
-  var `50`: js.UndefOr[String] = js.undefined
-  var `500`: js.UndefOr[String] = js.undefined
-  var `600`: js.UndefOr[String] = js.undefined
-  var `700`: js.UndefOr[String] = js.undefined
-  var `800`: js.UndefOr[String] = js.undefined
-  var `900`: js.UndefOr[String] = js.undefined
-  var A100: js.UndefOr[String] = js.undefined
-  var A200: js.UndefOr[String] = js.undefined
-  var A400: js.UndefOr[String] = js.undefined
-  var A700: js.UndefOr[String] = js.undefined
-  var contrastDarkColors: js.UndefOr[String | js.Array[String]] = js.undefined
-  var contrastDefaultColor: js.UndefOr[String] = js.undefined
-  var contrastLightColors: js.UndefOr[String | js.Array[String]] = js.undefined
-  var contrastStrongLightColors: js.UndefOr[String | js.Array[String]] = js.undefined
+  var `0`: js.UndefOr[String] = js.native
+  var `100`: js.UndefOr[String] = js.native
+  var `200`: js.UndefOr[String] = js.native
+  var `300`: js.UndefOr[String] = js.native
+  var `400`: js.UndefOr[String] = js.native
+  var `50`: js.UndefOr[String] = js.native
+  var `500`: js.UndefOr[String] = js.native
+  var `600`: js.UndefOr[String] = js.native
+  var `700`: js.UndefOr[String] = js.native
+  var `800`: js.UndefOr[String] = js.native
+  var `900`: js.UndefOr[String] = js.native
+  var A100: js.UndefOr[String] = js.native
+  var A200: js.UndefOr[String] = js.native
+  var A400: js.UndefOr[String] = js.native
+  var A700: js.UndefOr[String] = js.native
+  var contrastDarkColors: js.UndefOr[String | js.Array[String]] = js.native
+  var contrastDefaultColor: js.UndefOr[String] = js.native
+  var contrastLightColors: js.UndefOr[String | js.Array[String]] = js.native
+  var contrastStrongLightColors: js.UndefOr[String | js.Array[String]] = js.native
 }
 
 object IPalette {
   @scala.inline
-  def apply(
-    `0`: String = null,
-    `100`: String = null,
-    `200`: String = null,
-    `300`: String = null,
-    `400`: String = null,
-    `50`: String = null,
-    `500`: String = null,
-    `600`: String = null,
-    `700`: String = null,
-    `800`: String = null,
-    `900`: String = null,
-    A100: String = null,
-    A200: String = null,
-    A400: String = null,
-    A700: String = null,
-    contrastDarkColors: String | js.Array[String] = null,
-    contrastDefaultColor: String = null,
-    contrastLightColors: String | js.Array[String] = null,
-    contrastStrongLightColors: String | js.Array[String] = null
-  ): IPalette = {
+  def apply(): IPalette = {
     val __obj = js.Dynamic.literal()
-    if (`0` != null) __obj.updateDynamic("0")(`0`.asInstanceOf[js.Any])
-    if (`100` != null) __obj.updateDynamic("100")(`100`.asInstanceOf[js.Any])
-    if (`200` != null) __obj.updateDynamic("200")(`200`.asInstanceOf[js.Any])
-    if (`300` != null) __obj.updateDynamic("300")(`300`.asInstanceOf[js.Any])
-    if (`400` != null) __obj.updateDynamic("400")(`400`.asInstanceOf[js.Any])
-    if (`50` != null) __obj.updateDynamic("50")(`50`.asInstanceOf[js.Any])
-    if (`500` != null) __obj.updateDynamic("500")(`500`.asInstanceOf[js.Any])
-    if (`600` != null) __obj.updateDynamic("600")(`600`.asInstanceOf[js.Any])
-    if (`700` != null) __obj.updateDynamic("700")(`700`.asInstanceOf[js.Any])
-    if (`800` != null) __obj.updateDynamic("800")(`800`.asInstanceOf[js.Any])
-    if (`900` != null) __obj.updateDynamic("900")(`900`.asInstanceOf[js.Any])
-    if (A100 != null) __obj.updateDynamic("A100")(A100.asInstanceOf[js.Any])
-    if (A200 != null) __obj.updateDynamic("A200")(A200.asInstanceOf[js.Any])
-    if (A400 != null) __obj.updateDynamic("A400")(A400.asInstanceOf[js.Any])
-    if (A700 != null) __obj.updateDynamic("A700")(A700.asInstanceOf[js.Any])
-    if (contrastDarkColors != null) __obj.updateDynamic("contrastDarkColors")(contrastDarkColors.asInstanceOf[js.Any])
-    if (contrastDefaultColor != null) __obj.updateDynamic("contrastDefaultColor")(contrastDefaultColor.asInstanceOf[js.Any])
-    if (contrastLightColors != null) __obj.updateDynamic("contrastLightColors")(contrastLightColors.asInstanceOf[js.Any])
-    if (contrastStrongLightColors != null) __obj.updateDynamic("contrastStrongLightColors")(contrastStrongLightColors.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPalette]
   }
+  @scala.inline
+  implicit class IPaletteOps[Self <: IPalette] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with0(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without0: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("0")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with100(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without100: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with200(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("200")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without200: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("200")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with300(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("300")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without300: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("300")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with400(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("400")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without400: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("400")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with50(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("50")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without50: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("50")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with500(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("500")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without500: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("500")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with600(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("600")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without600: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("600")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with700(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("700")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without700: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("700")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with800(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("800")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without800: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("800")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with900(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("900")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without900: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("900")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withA100(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("A100")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutA100: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("A100")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withA200(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("A200")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutA200: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("A200")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withA400(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("A400")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutA400: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("A400")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withA700(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("A700")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutA700: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("A700")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContrastDarkColors(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastDarkColors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContrastDarkColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastDarkColors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContrastDefaultColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastDefaultColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContrastDefaultColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastDefaultColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContrastLightColors(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastLightColors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContrastLightColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastLightColors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContrastStrongLightColors(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastStrongLightColors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContrastStrongLightColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contrastStrongLightColors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

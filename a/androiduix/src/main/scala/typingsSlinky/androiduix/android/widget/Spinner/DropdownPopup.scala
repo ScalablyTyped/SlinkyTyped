@@ -26,8 +26,6 @@ class DropdownPopup protected ()
   override def dismiss(): Unit = js.native
   /* InferMemberOverrides */
   override def getBackground(): Drawable = js.native
-  /* CompleteClass */
-  override def getHintText(): String = js.native
   /* InferMemberOverrides */
   override def getHorizontalOffset(): Double = js.native
   /* InferMemberOverrides */
@@ -40,11 +38,7 @@ class DropdownPopup protected ()
   override def setBackgroundDrawable(d: Drawable): Unit = js.native
   /* InferMemberOverrides */
   override def setHorizontalOffset(offset: Double): Unit = js.native
-  /* CompleteClass */
-  override def setPromptText(hintText: String): Unit = js.native
   /* InferMemberOverrides */
   override def setVerticalOffset(offset: Double): Unit = js.native
-  /* CompleteClass */
-  override def showPopup(textDirection: Double, textAlignment: Double): Unit = js.native
 }
 

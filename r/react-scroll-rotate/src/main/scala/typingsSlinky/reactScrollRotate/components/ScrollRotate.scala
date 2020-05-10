@@ -1,10 +1,7 @@
 package typingsSlinky.reactScrollRotate.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactScrollRotate.mod.ScrollRotateProps
 import typingsSlinky.reactScrollRotate.reactScrollRotateStrings.prec
 import typingsSlinky.reactScrollRotate.reactScrollRotateStrings.px
@@ -12,34 +9,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ScrollRotate
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactScrollRotate.mod.ScrollRotate] {
+object ScrollRotate {
   @JSImport("react-scroll-rotate", "ScrollRotate")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: target */
-  def apply(
-    animationDuration: Int | Double = null,
-    from: Int | Double = null,
-    loops: Int | Double = null,
-    method: px | prec = null,
-    throttle: Int | Double = null,
-    to: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactScrollRotate.mod.ScrollRotate] = {
-    val __obj = js.Dynamic.literal()
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (loops != null) __obj.updateDynamic("loops")(loops.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (throttle != null) __obj.updateDynamic("throttle")(throttle.asInstanceOf[js.Any])
-    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactScrollRotate.mod.ScrollRotate] {
+    @scala.inline
+    def animationDuration(value: Double): this.type = set("animationDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def from(value: Double): this.type = set("from", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loops(value: Double): this.type = set("loops", value.asInstanceOf[js.Any])
+    @scala.inline
+    def method(value: px | prec): this.type = set("method", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def throttle(value: Double): this.type = set("throttle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def to(value: Double): this.type = set("to", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactScrollRotate.mod.ScrollRotate] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactScrollRotate.mod.ScrollRotate](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ScrollRotateProps
+  
+  def withProps(p: ScrollRotateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ScrollRotate.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

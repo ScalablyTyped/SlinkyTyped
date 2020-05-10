@@ -18,11 +18,41 @@ trait ResourceSpec extends js.Object {
 
 object ResourceSpec {
   @scala.inline
-  def apply(EnvironmentArn: EnvironmentArn = null, InstanceType: AppInstanceType = null): ResourceSpec = {
+  def apply(): ResourceSpec = {
     val __obj = js.Dynamic.literal()
-    if (EnvironmentArn != null) __obj.updateDynamic("EnvironmentArn")(EnvironmentArn.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceSpec]
   }
+  @scala.inline
+  implicit class ResourceSpecOps[Self <: ResourceSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnvironmentArn(value: EnvironmentArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: AppInstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait TableError extends js.Object {
 
 object TableError {
   @scala.inline
-  def apply(ErrorDetail: ErrorDetail = null, TableName: NameString = null): TableError = {
+  def apply(): TableError = {
     val __obj = js.Dynamic.literal()
-    if (ErrorDetail != null) __obj.updateDynamic("ErrorDetail")(ErrorDetail.asInstanceOf[js.Any])
-    if (TableName != null) __obj.updateDynamic("TableName")(TableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableError]
   }
+  @scala.inline
+  implicit class TableErrorOps[Self <: TableError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorDetail(value: ErrorDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

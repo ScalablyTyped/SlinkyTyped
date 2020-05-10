@@ -10,12 +10,13 @@ import scala.scalajs.js.annotation._
 /**
   * The console panel renderer.
   */
+@js.native
 trait IContentFactory
   extends typingsSlinky.jupyterlabConsole.widgetMod.CodeConsole.IContentFactory {
   /**
     * Create a new console panel.
     */
-  def createConsole(options: typingsSlinky.jupyterlabConsole.widgetMod.CodeConsole.IOptions): CodeConsole
+  def createConsole(options: typingsSlinky.jupyterlabConsole.widgetMod.CodeConsole.IOptions): CodeConsole = js.native
 }
 
 /**

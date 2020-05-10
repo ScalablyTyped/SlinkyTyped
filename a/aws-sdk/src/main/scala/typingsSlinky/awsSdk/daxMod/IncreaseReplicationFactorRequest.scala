@@ -22,10 +22,41 @@ trait IncreaseReplicationFactorRequest extends js.Object {
 
 object IncreaseReplicationFactorRequest {
   @scala.inline
-  def apply(ClusterName: String, NewReplicationFactor: Integer, AvailabilityZones: AvailabilityZoneList = null): IncreaseReplicationFactorRequest = {
+  def apply(ClusterName: String, NewReplicationFactor: Integer): IncreaseReplicationFactorRequest = {
     val __obj = js.Dynamic.literal(ClusterName = ClusterName.asInstanceOf[js.Any], NewReplicationFactor = NewReplicationFactor.asInstanceOf[js.Any])
-    if (AvailabilityZones != null) __obj.updateDynamic("AvailabilityZones")(AvailabilityZones.asInstanceOf[js.Any])
     __obj.asInstanceOf[IncreaseReplicationFactorRequest]
   }
+  @scala.inline
+  implicit class IncreaseReplicationFactorRequestOps[Self <: IncreaseReplicationFactorRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewReplicationFactor(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewReplicationFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZones(value: AvailabilityZoneList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

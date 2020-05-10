@@ -1,11 +1,10 @@
 package typingsSlinky.stripejs.elementMod
 
-import typingsSlinky.stripejs.AnonEmpty
-import typingsSlinky.stripejs.AnonInvalid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IdealBankOptions extends BaseOptions {
   /**
     * A pre-filled value for the Element. Can be one of the banks listed in the
@@ -13,25 +12,34 @@ trait IdealBankOptions extends BaseOptions {
     *
     * @example 'abn_amro'
     */
-  var value: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[String] = js.native
 }
 
 object IdealBankOptions {
   @scala.inline
-  def apply(
-    classes: AnonEmpty = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    hideIcon: js.UndefOr[Boolean] = js.undefined,
-    style: AnonInvalid = null,
-    value: String = null
-  ): IdealBankOptions = {
+  def apply(): IdealBankOptions = {
     val __obj = js.Dynamic.literal()
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideIcon)) __obj.updateDynamic("hideIcon")(hideIcon.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdealBankOptions]
   }
+  @scala.inline
+  implicit class IdealBankOptionsOps[Self <: IdealBankOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

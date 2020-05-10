@@ -26,6 +26,7 @@ import scala.scalajs.js.annotation._
   *
   * The validations are implemented by validator.js.
   */
+@js.native
 trait DefineValidateOptions
   extends /**
   * custom validations are also possible
@@ -46,224 +47,548 @@ trait DefineValidateOptions
   /**
     * force specific substrings
     */
-  var contains: js.UndefOr[String | AnonMsgString] = js.undefined
+  var contains: js.UndefOr[String | AnonMsgString] = js.native
   /**
     * only allow a specific value
     */
   @JSName("equals")
-  var equals_FDefineValidateOptions: js.UndefOr[String | AnonMsgString] = js.undefined
+  var equals_FDefineValidateOptions: js.UndefOr[String | AnonMsgString] = js.native
   /**
     * is: ["^[a-z]+$",'i'] // will only allow letters
     * is: /^[a-z]+$/i      // same as the previous example using real RegExp
     */
-  var is: js.UndefOr[String | (js.Array[String | js.RegExp]) | js.RegExp | AnonArgs] = js.undefined
+  var is: js.UndefOr[String | (js.Array[String | js.RegExp]) | js.RegExp | AnonArgs] = js.native
   /**
     * only allow date strings after a specific date
     */
-  var isAfter: js.UndefOr[String | AnonArgsString] = js.undefined
+  var isAfter: js.UndefOr[String | AnonArgsString] = js.native
   /**
     * will only allow letters
     */
-  var isAlpha: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isAlpha: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * will only allow alphanumeric characters, so "_abc" will fail
     */
-  var isAlphanumeric: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isAlphanumeric: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * only allow arrays
     */
-  var isArray: js.UndefOr[Boolean | AnonArgsBoolean] = js.undefined
+  var isArray: js.UndefOr[Boolean | AnonArgsBoolean] = js.native
   /**
     * only allow date strings before a specific date
     */
-  var isBefore: js.UndefOr[String | AnonArgsString] = js.undefined
+  var isBefore: js.UndefOr[String | AnonArgsString] = js.native
   /**
     * check for valid credit card numbers
     */
-  var isCreditCard: js.UndefOr[Boolean | AnonArgsBoolean] = js.undefined
+  var isCreditCard: js.UndefOr[Boolean | AnonArgsBoolean] = js.native
   /**
     * only allow date strings
     */
-  var isDate: js.UndefOr[Boolean | AnonArgsBoolean] = js.undefined
+  var isDate: js.UndefOr[Boolean | AnonArgsBoolean] = js.native
   /**
     * checks for any numbers
     */
-  var isDecimal: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isDecimal: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * checks for email format (foo@bar.com)
     */
-  var isEmail: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isEmail: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * checks for valid floating point numbers
     */
-  var isFloat: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isFloat: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * checks for IPv4 (129.89.23.1) or IPv6 format
     */
-  var isIP: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isIP: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * checks for IPv4 (129.89.23.1)
     */
-  var isIPv4: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isIPv4: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * checks for IPv6 format
     */
-  var isIPv6: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isIPv6: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * check the value is one of these
     */
-  var isIn: js.UndefOr[js.Array[js.Array[String]] | AnonArgsMsg] = js.undefined
+  var isIn: js.UndefOr[js.Array[js.Array[String]] | AnonArgsMsg] = js.native
   /**
     * checks for valid integers
     */
-  var isInt: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isInt: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * checks for lowercase
     */
-  var isLowercase: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isLowercase: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * only allows null
     */
-  var isNull: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isNull: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * will only allow numbers
     */
-  var isNumeric: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isNumeric: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * only allow uuids
     */
   var isUUID: js.UndefOr[
     `3` | `4` | `5` | typingsSlinky.sequelize.sequelizeStrings.`3` | typingsSlinky.sequelize.sequelizeStrings.`4` | typingsSlinky.sequelize.sequelizeStrings.`5` | all | AnonArgsNumber
-  ] = js.undefined
+  ] = js.native
   /**
     * checks for uppercase
     */
-  var isUppercase: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isUppercase: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * checks for url format (http://foo.com)
     */
-  var isUrl: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var isUrl: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * only allow values with length between 2 and 10
     */
-  var len: js.UndefOr[(js.Tuple2[Double, Double]) | Anon0] = js.undefined
+  var len: js.UndefOr[(js.Tuple2[Double, Double]) | Anon0] = js.native
   /**
     * only allow values
     */
-  var max: js.UndefOr[Double | AnonArgsNumber] = js.undefined
+  var max: js.UndefOr[Double | AnonArgsNumber] = js.native
   /**
     * only allow values >= 23
     */
-  var min: js.UndefOr[Double | AnonArgsNumber] = js.undefined
+  var min: js.UndefOr[Double | AnonArgsNumber] = js.native
   /**
     * not: ["[a-z]",'i']  // will not allow letters
     */
-  var not: js.UndefOr[String | (js.Array[String | js.RegExp]) | js.RegExp | AnonArgs] = js.undefined
+  var not: js.UndefOr[String | (js.Array[String | js.RegExp]) | js.RegExp | AnonArgs] = js.native
   /**
     * don't allow specific substrings
     */
-  var notContains: js.UndefOr[js.Array[String] | String | AnonArgsMsgString] = js.undefined
+  var notContains: js.UndefOr[js.Array[String] | String | AnonArgsMsgString] = js.native
   /**
     * don't allow empty strings
     */
-  var notEmpty: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var notEmpty: js.UndefOr[Boolean | AnonMsgString] = js.native
   /**
     * check the value is not one of these
     */
-  var notIn: js.UndefOr[js.Array[js.Array[String]] | AnonArgsMsg] = js.undefined
+  var notIn: js.UndefOr[js.Array[js.Array[String]] | AnonArgsMsg] = js.native
   /**
     * won't allow null
     */
-  var notNull: js.UndefOr[Boolean | AnonMsgString] = js.undefined
+  var notNull: js.UndefOr[Boolean | AnonMsgString] = js.native
 }
 
 object DefineValidateOptions {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-    * custom validations are also possible
-    *
-    * Implementation notes :
-    *
-    * We can't enforce any other method to be a function, so :
-    *
-    * ```typescript
-    * [name: string] : ( value : any ) => boolean;
-    * ```
-    *
-    * doesn't work in combination with the properties above
-    *
-    * @see https://github.com/Microsoft/TypeScript/issues/1889
-    */
-  /* name */ StringDictionary[js.Any] = null,
-    contains: String | AnonMsgString = null,
-    equals: String | AnonMsgString = null,
-    is: String | (js.Array[String | js.RegExp]) | js.RegExp | AnonArgs = null,
-    isAfter: String | AnonArgsString = null,
-    isAlpha: Boolean | AnonMsgString = null,
-    isAlphanumeric: Boolean | AnonMsgString = null,
-    isArray: Boolean | AnonArgsBoolean = null,
-    isBefore: String | AnonArgsString = null,
-    isCreditCard: Boolean | AnonArgsBoolean = null,
-    isDate: Boolean | AnonArgsBoolean = null,
-    isDecimal: Boolean | AnonMsgString = null,
-    isEmail: Boolean | AnonMsgString = null,
-    isFloat: Boolean | AnonMsgString = null,
-    isIP: Boolean | AnonMsgString = null,
-    isIPv4: Boolean | AnonMsgString = null,
-    isIPv6: Boolean | AnonMsgString = null,
-    isIn: js.Array[js.Array[String]] | AnonArgsMsg = null,
-    isInt: Boolean | AnonMsgString = null,
-    isLowercase: Boolean | AnonMsgString = null,
-    isNull: Boolean | AnonMsgString = null,
-    isNumeric: Boolean | AnonMsgString = null,
-    isUUID: `3` | `4` | `5` | typingsSlinky.sequelize.sequelizeStrings.`3` | typingsSlinky.sequelize.sequelizeStrings.`4` | typingsSlinky.sequelize.sequelizeStrings.`5` | all | AnonArgsNumber = null,
-    isUppercase: Boolean | AnonMsgString = null,
-    isUrl: Boolean | AnonMsgString = null,
-    len: (js.Tuple2[Double, Double]) | Anon0 = null,
-    max: Double | AnonArgsNumber = null,
-    min: Double | AnonArgsNumber = null,
-    not: String | (js.Array[String | js.RegExp]) | js.RegExp | AnonArgs = null,
-    notContains: js.Array[String] | String | AnonArgsMsgString = null,
-    notEmpty: Boolean | AnonMsgString = null,
-    notIn: js.Array[js.Array[String]] | AnonArgsMsg = null,
-    notNull: Boolean | AnonMsgString = null
-  ): DefineValidateOptions = {
+  def apply(): DefineValidateOptions = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (contains != null) __obj.updateDynamic("contains")(contains.asInstanceOf[js.Any])
-    if (equals != null) __obj.updateDynamic("equals")(equals.asInstanceOf[js.Any])
-    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
-    if (isAfter != null) __obj.updateDynamic("isAfter")(isAfter.asInstanceOf[js.Any])
-    if (isAlpha != null) __obj.updateDynamic("isAlpha")(isAlpha.asInstanceOf[js.Any])
-    if (isAlphanumeric != null) __obj.updateDynamic("isAlphanumeric")(isAlphanumeric.asInstanceOf[js.Any])
-    if (isArray != null) __obj.updateDynamic("isArray")(isArray.asInstanceOf[js.Any])
-    if (isBefore != null) __obj.updateDynamic("isBefore")(isBefore.asInstanceOf[js.Any])
-    if (isCreditCard != null) __obj.updateDynamic("isCreditCard")(isCreditCard.asInstanceOf[js.Any])
-    if (isDate != null) __obj.updateDynamic("isDate")(isDate.asInstanceOf[js.Any])
-    if (isDecimal != null) __obj.updateDynamic("isDecimal")(isDecimal.asInstanceOf[js.Any])
-    if (isEmail != null) __obj.updateDynamic("isEmail")(isEmail.asInstanceOf[js.Any])
-    if (isFloat != null) __obj.updateDynamic("isFloat")(isFloat.asInstanceOf[js.Any])
-    if (isIP != null) __obj.updateDynamic("isIP")(isIP.asInstanceOf[js.Any])
-    if (isIPv4 != null) __obj.updateDynamic("isIPv4")(isIPv4.asInstanceOf[js.Any])
-    if (isIPv6 != null) __obj.updateDynamic("isIPv6")(isIPv6.asInstanceOf[js.Any])
-    if (isIn != null) __obj.updateDynamic("isIn")(isIn.asInstanceOf[js.Any])
-    if (isInt != null) __obj.updateDynamic("isInt")(isInt.asInstanceOf[js.Any])
-    if (isLowercase != null) __obj.updateDynamic("isLowercase")(isLowercase.asInstanceOf[js.Any])
-    if (isNull != null) __obj.updateDynamic("isNull")(isNull.asInstanceOf[js.Any])
-    if (isNumeric != null) __obj.updateDynamic("isNumeric")(isNumeric.asInstanceOf[js.Any])
-    if (isUUID != null) __obj.updateDynamic("isUUID")(isUUID.asInstanceOf[js.Any])
-    if (isUppercase != null) __obj.updateDynamic("isUppercase")(isUppercase.asInstanceOf[js.Any])
-    if (isUrl != null) __obj.updateDynamic("isUrl")(isUrl.asInstanceOf[js.Any])
-    if (len != null) __obj.updateDynamic("len")(len.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (not != null) __obj.updateDynamic("not")(not.asInstanceOf[js.Any])
-    if (notContains != null) __obj.updateDynamic("notContains")(notContains.asInstanceOf[js.Any])
-    if (notEmpty != null) __obj.updateDynamic("notEmpty")(notEmpty.asInstanceOf[js.Any])
-    if (notIn != null) __obj.updateDynamic("notIn")(notIn.asInstanceOf[js.Any])
-    if (notNull != null) __obj.updateDynamic("notNull")(notNull.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefineValidateOptions]
   }
+  @scala.inline
+  implicit class DefineValidateOptionsOps[Self <: DefineValidateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContains(value: String | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEquals(value: String | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEquals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs(value: String | (js.Array[String | js.RegExp]) | js.RegExp | AnonArgs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsAfter(value: String | AnonArgsString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsAlpha(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsAlpha: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlpha")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsAlphanumeric(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlphanumeric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsAlphanumeric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAlphanumeric")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsArray(value: Boolean | AnonArgsBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isArray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsArray: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isArray")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsBefore(value: String | AnonArgsString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsCreditCard(value: Boolean | AnonArgsBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCreditCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsCreditCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCreditCard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDate(value: Boolean | AnonArgsBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDecimal(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsEmail(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsFloat(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFloat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsFloat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFloat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsIP(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsIP: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIP")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsIPv4(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIPv4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsIPv4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIPv4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsIPv6(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIPv6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsIPv6: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIPv6")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsIn(value: js.Array[js.Array[String]] | AnonArgsMsg): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsInt(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLowercase(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLowercase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsLowercase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLowercase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsNull(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNull")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNull")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsNumeric(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNumeric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsNumeric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNumeric")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsUUID(
+      value: `3` | `4` | `5` | typingsSlinky.sequelize.sequelizeStrings.`3` | typingsSlinky.sequelize.sequelizeStrings.`4` | typingsSlinky.sequelize.sequelizeStrings.`5` | all | AnonArgsNumber
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUUID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsUUID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUUID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsUppercase(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUppercase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsUppercase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUppercase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsUrl(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLen(value: (js.Tuple2[Double, Double]) | Anon0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("len")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("len")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double | AnonArgsNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double | AnonArgsNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNot(value: String | (js.Array[String | js.RegExp]) | js.RegExp | AnonArgs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotContains(value: js.Array[String] | String | AnonArgsMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notContains")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotContains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notContains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotEmpty(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notEmpty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotEmpty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notEmpty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotIn(value: js.Array[js.Array[String]] | AnonArgsMsg): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotNull(value: Boolean | AnonMsgString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notNull")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notNull")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.piSpi
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +19,7 @@ object mod extends js.Object {
     def dataMode(): Double = js.native
     def dataMode(mode: mode): Unit = js.native
     def read(readcount: Double, cb: js.Function2[/* error */ js.Error, /* data */ Buffer, Unit]): Unit = js.native
-    def transfer(writebuf: Buffer, cb: js.Function2[/* error */ Error, /* data */ Buffer, Unit]): Unit = js.native
+    def transfer(writebuf: Buffer, cb: js.Function2[/* error */ js.Error, /* data */ Buffer, Unit]): Unit = js.native
     def transfer(
       writebuf: Buffer,
       readcount: Double,

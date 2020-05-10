@@ -22,15 +22,47 @@ trait GetConformancePackComplianceDetailsResponse extends js.Object {
 
 object GetConformancePackComplianceDetailsResponse {
   @scala.inline
-  def apply(
-    ConformancePackName: ConformancePackName,
-    ConformancePackRuleEvaluationResults: ConformancePackRuleEvaluationResultsList = null,
-    NextToken: NextToken = null
-  ): GetConformancePackComplianceDetailsResponse = {
+  def apply(ConformancePackName: ConformancePackName): GetConformancePackComplianceDetailsResponse = {
     val __obj = js.Dynamic.literal(ConformancePackName = ConformancePackName.asInstanceOf[js.Any])
-    if (ConformancePackRuleEvaluationResults != null) __obj.updateDynamic("ConformancePackRuleEvaluationResults")(ConformancePackRuleEvaluationResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConformancePackComplianceDetailsResponse]
   }
+  @scala.inline
+  implicit class GetConformancePackComplianceDetailsResponseOps[Self <: GetConformancePackComplianceDetailsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConformancePackName(value: ConformancePackName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConformancePackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConformancePackRuleEvaluationResults(value: ConformancePackRuleEvaluationResultsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConformancePackRuleEvaluationResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConformancePackRuleEvaluationResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConformancePackRuleEvaluationResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,17 +1,15 @@
 package typingsSlinky.reactToastify.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Bounce
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactToastify.mod.Bounce] {
+object Bounce {
   @JSImport("react-toastify", "Bounce")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[typingsSlinky.reactToastify.mod.Bounce] = new SharedBuilder_Object_159303587[typingsSlinky.reactToastify.mod.Bounce](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Bounce.type): SharedBuilder_Object_159303587[typingsSlinky.reactToastify.mod.Bounce] = new SharedBuilder_Object_159303587[typingsSlinky.reactToastify.mod.Bounce](js.Array(this.component, js.Dictionary.empty))()
 }
 

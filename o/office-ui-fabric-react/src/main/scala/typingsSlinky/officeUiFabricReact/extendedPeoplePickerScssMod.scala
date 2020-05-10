@@ -1,10 +1,5 @@
 package typingsSlinky.officeUiFabricReact
 
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.peoplePickerPersonaContent_8cc03844
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.peoplePickerPersona_8cc03844
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.peoplePicker_8cc03844
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.resultContent_8cc03844
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.resultItem_8cc03844
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,10 +7,10 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/components/ExtendedPicker/PeoplePicker/ExtendedPeoplePicker.scss", JSImport.Namespace)
 @js.native
 object extendedPeoplePickerScssMod extends js.Object {
-  val peoplePicker: peoplePicker_8cc03844 = js.native
-  val peoplePickerPersona: peoplePickerPersona_8cc03844 = js.native
-  val peoplePickerPersonaContent: peoplePickerPersonaContent_8cc03844 = js.native
-  val resultContent: resultContent_8cc03844 = js.native
-  val resultItem: resultItem_8cc03844 = js.native
+  val peoplePicker: /* "peoplePicker_be21407a" */ String = js.native
+  val peoplePickerPersona: /* "peoplePickerPersona_be21407a" */ String = js.native
+  val peoplePickerPersonaContent: /* "peoplePickerPersonaContent_be21407a" */ String = js.native
+  val resultContent: /* "resultContent_be21407a" */ String = js.native
+  val resultItem: /* "resultItem_be21407a" */ String = js.native
 }
 

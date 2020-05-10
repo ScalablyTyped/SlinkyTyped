@@ -10,7 +10,6 @@ import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IDetailsListProps
 import typingsSlinky.officeUiFabricReact.detailsRowCheckTypesMod.IDetailsRowCheckProps
 import typingsSlinky.officeUiFabricReact.detailsRowFieldsTypesMod.IDetailsRowFieldsProps
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.IDetailsRowBaseProps
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.change
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneState
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptions
@@ -68,7 +67,7 @@ object detailsListMod extends js.Object {
   val DetailsRow: ReactComponentClass[IDetailsRowBaseProps] = js.native
   val DetailsRowCheck: ReactComponentClass[IDetailsRowCheckProps] = js.native
   val DetailsRowFields: ReactComponentClass[IDetailsRowFieldsProps] = js.native
-  val SELECTION_CHANGE: change = js.native
+  val SELECTION_CHANGE: /* "change" */ String = js.native
   def buildColumns(
     items: js.Array[_],
     canResizeColumns: js.UndefOr[Boolean],

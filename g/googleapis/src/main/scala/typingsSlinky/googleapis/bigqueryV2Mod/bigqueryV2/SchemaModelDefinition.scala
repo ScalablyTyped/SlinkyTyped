@@ -24,11 +24,41 @@ trait SchemaModelDefinition extends js.Object {
 
 object SchemaModelDefinition {
   @scala.inline
-  def apply(modelOptions: AnonLabels = null, trainingRuns: js.Array[SchemaBqmlTrainingRun] = null): SchemaModelDefinition = {
+  def apply(): SchemaModelDefinition = {
     val __obj = js.Dynamic.literal()
-    if (modelOptions != null) __obj.updateDynamic("modelOptions")(modelOptions.asInstanceOf[js.Any])
-    if (trainingRuns != null) __obj.updateDynamic("trainingRuns")(trainingRuns.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaModelDefinition]
   }
+  @scala.inline
+  implicit class SchemaModelDefinitionOps[Self <: SchemaModelDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withModelOptions(value: AnonLabels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingRuns(value: js.Array[SchemaBqmlTrainingRun]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingRuns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingRuns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingRuns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

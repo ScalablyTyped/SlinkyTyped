@@ -1,8 +1,8 @@
 package typingsSlinky.papaparse.mod
 
+import org.scalajs.dom.raw.File
 import typingsSlinky.node.NodeJS.ReadWriteStream
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.std.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

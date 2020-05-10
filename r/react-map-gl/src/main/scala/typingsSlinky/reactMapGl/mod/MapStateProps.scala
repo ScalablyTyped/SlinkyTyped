@@ -6,78 +6,296 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-map-gl.react-map-gl.ViewportProps & react-map-gl.react-map-gl.InteractiveState> */
+@js.native
 trait MapStateProps extends js.Object {
-  var altitude: js.UndefOr[Double] = js.undefined
-  var bearing: js.UndefOr[Double] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var latitude: js.UndefOr[Double] = js.undefined
-  var longitude: js.UndefOr[Double] = js.undefined
-  var maxPitch: js.UndefOr[Double] = js.undefined
-  var maxZoom: js.UndefOr[Double] = js.undefined
-  var minPitch: js.UndefOr[Double] = js.undefined
-  var minZoom: js.UndefOr[Double] = js.undefined
-  var pitch: js.UndefOr[Double] = js.undefined
-  var startBearing: js.UndefOr[Double] = js.undefined
-  var startPanLngLat: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
-  var startPitch: js.UndefOr[Double] = js.undefined
-  var startZoom: js.UndefOr[Double] = js.undefined
-  var startZoomLngLat: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
-  var transitionDuration: js.UndefOr[Double | auto] = js.undefined
-  var transitionEasing: js.UndefOr[EasingFunction] = js.undefined
-  var transitionInterpolator: js.UndefOr[TransitionInterpolator] = js.undefined
-  var transitionInterruption: js.UndefOr[TRANSITION_EVENTS] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
-  var zoom: js.UndefOr[Double] = js.undefined
+  var altitude: js.UndefOr[Double] = js.native
+  var bearing: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var latitude: js.UndefOr[Double] = js.native
+  var longitude: js.UndefOr[Double] = js.native
+  var maxPitch: js.UndefOr[Double] = js.native
+  var maxZoom: js.UndefOr[Double] = js.native
+  var minPitch: js.UndefOr[Double] = js.native
+  var minZoom: js.UndefOr[Double] = js.native
+  var pitch: js.UndefOr[Double] = js.native
+  var startBearing: js.UndefOr[Double] = js.native
+  var startPanLngLat: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  var startPitch: js.UndefOr[Double] = js.native
+  var startZoom: js.UndefOr[Double] = js.native
+  var startZoomLngLat: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  var transitionDuration: js.UndefOr[Double | auto] = js.native
+  var transitionEasing: js.UndefOr[EasingFunction] = js.native
+  var transitionInterpolator: js.UndefOr[TransitionInterpolator] = js.native
+  var transitionInterruption: js.UndefOr[TRANSITION_EVENTS] = js.native
+  var width: js.UndefOr[Double] = js.native
+  var zoom: js.UndefOr[Double] = js.native
 }
 
 object MapStateProps {
   @scala.inline
-  def apply(
-    altitude: Int | Double = null,
-    bearing: Int | Double = null,
-    height: Int | Double = null,
-    latitude: Int | Double = null,
-    longitude: Int | Double = null,
-    maxPitch: Int | Double = null,
-    maxZoom: Int | Double = null,
-    minPitch: Int | Double = null,
-    minZoom: Int | Double = null,
-    pitch: Int | Double = null,
-    startBearing: Int | Double = null,
-    startPanLngLat: js.Tuple2[Double, Double] = null,
-    startPitch: Int | Double = null,
-    startZoom: Int | Double = null,
-    startZoomLngLat: js.Tuple2[Double, Double] = null,
-    transitionDuration: Double | auto = null,
-    transitionEasing: /* t */ Double => Double = null,
-    transitionInterpolator: TransitionInterpolator = null,
-    transitionInterruption: TRANSITION_EVENTS = null,
-    width: Int | Double = null,
-    zoom: Int | Double = null
-  ): MapStateProps = {
+  def apply(): MapStateProps = {
     val __obj = js.Dynamic.literal()
-    if (altitude != null) __obj.updateDynamic("altitude")(altitude.asInstanceOf[js.Any])
-    if (bearing != null) __obj.updateDynamic("bearing")(bearing.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (latitude != null) __obj.updateDynamic("latitude")(latitude.asInstanceOf[js.Any])
-    if (longitude != null) __obj.updateDynamic("longitude")(longitude.asInstanceOf[js.Any])
-    if (maxPitch != null) __obj.updateDynamic("maxPitch")(maxPitch.asInstanceOf[js.Any])
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minPitch != null) __obj.updateDynamic("minPitch")(minPitch.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
-    if (pitch != null) __obj.updateDynamic("pitch")(pitch.asInstanceOf[js.Any])
-    if (startBearing != null) __obj.updateDynamic("startBearing")(startBearing.asInstanceOf[js.Any])
-    if (startPanLngLat != null) __obj.updateDynamic("startPanLngLat")(startPanLngLat.asInstanceOf[js.Any])
-    if (startPitch != null) __obj.updateDynamic("startPitch")(startPitch.asInstanceOf[js.Any])
-    if (startZoom != null) __obj.updateDynamic("startZoom")(startZoom.asInstanceOf[js.Any])
-    if (startZoomLngLat != null) __obj.updateDynamic("startZoomLngLat")(startZoomLngLat.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (transitionEasing != null) __obj.updateDynamic("transitionEasing")(js.Any.fromFunction1(transitionEasing))
-    if (transitionInterpolator != null) __obj.updateDynamic("transitionInterpolator")(transitionInterpolator.asInstanceOf[js.Any])
-    if (transitionInterruption != null) __obj.updateDynamic("transitionInterruption")(transitionInterruption.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapStateProps]
   }
+  @scala.inline
+  implicit class MapStatePropsOps[Self <: MapStateProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAltitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAltitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBearing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bearing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBearing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bearing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLongitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLongitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxPitch(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPitch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPitch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinPitch(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinPitch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPitch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPitch(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPitch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pitch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartBearing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startBearing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartBearing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startBearing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartPanLngLat(value: js.Tuple2[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPanLngLat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartPanLngLat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPanLngLat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartPitch(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartPitch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPitch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartZoomLngLat(value: js.Tuple2[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startZoomLngLat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartZoomLngLat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startZoomLngLat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionDuration(value: Double | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionEasing(value: /* t */ Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionEasing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTransitionEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionInterpolator(value: TransitionInterpolator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionInterpolator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionInterpolator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionInterpolator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionInterruption(value: TRANSITION_EVENTS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionInterruption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionInterruption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionInterruption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

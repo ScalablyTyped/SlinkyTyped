@@ -15,16 +15,14 @@ trait StatisticSizeProp extends js.Object
 
 object StatisticSizeProp {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def huge: typingsSlinky.semanticUiReact.semanticUiReactStrings.huge = "huge".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.huge]
   @scala.inline
-  def huge: typingsSlinky.semanticUiReact.semanticUiReactStrings.huge = this.cast("huge")
+  def large: typingsSlinky.semanticUiReact.semanticUiReactStrings.large = "large".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.large]
   @scala.inline
-  def large: typingsSlinky.semanticUiReact.semanticUiReactStrings.large = this.cast("large")
+  def mini: typingsSlinky.semanticUiReact.semanticUiReactStrings.mini = "mini".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.mini]
   @scala.inline
-  def mini: typingsSlinky.semanticUiReact.semanticUiReactStrings.mini = this.cast("mini")
+  def small: typingsSlinky.semanticUiReact.semanticUiReactStrings.small = "small".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.small]
   @scala.inline
-  def small: typingsSlinky.semanticUiReact.semanticUiReactStrings.small = this.cast("small")
-  @scala.inline
-  def tiny: typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny = this.cast("tiny")
+  def tiny: typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny = "tiny".asInstanceOf[typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny]
 }
 

@@ -26,18 +26,65 @@ trait EntityRecognizerMetadata extends js.Object {
 
 object EntityRecognizerMetadata {
   @scala.inline
-  def apply(
-    EntityTypes: EntityRecognizerMetadataEntityTypesList = null,
-    EvaluationMetrics: EntityRecognizerEvaluationMetrics = null,
-    NumberOfTestDocuments: Int | scala.Double = null,
-    NumberOfTrainedDocuments: Int | scala.Double = null
-  ): EntityRecognizerMetadata = {
+  def apply(): EntityRecognizerMetadata = {
     val __obj = js.Dynamic.literal()
-    if (EntityTypes != null) __obj.updateDynamic("EntityTypes")(EntityTypes.asInstanceOf[js.Any])
-    if (EvaluationMetrics != null) __obj.updateDynamic("EvaluationMetrics")(EvaluationMetrics.asInstanceOf[js.Any])
-    if (NumberOfTestDocuments != null) __obj.updateDynamic("NumberOfTestDocuments")(NumberOfTestDocuments.asInstanceOf[js.Any])
-    if (NumberOfTrainedDocuments != null) __obj.updateDynamic("NumberOfTrainedDocuments")(NumberOfTrainedDocuments.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntityRecognizerMetadata]
   }
+  @scala.inline
+  implicit class EntityRecognizerMetadataOps[Self <: EntityRecognizerMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntityTypes(value: EntityRecognizerMetadataEntityTypesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntityTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluationMetrics(value: EntityRecognizerEvaluationMetrics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluationMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationMetrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfTestDocuments(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfTestDocuments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfTestDocuments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfTestDocuments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfTrainedDocuments(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfTrainedDocuments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfTrainedDocuments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfTrainedDocuments")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

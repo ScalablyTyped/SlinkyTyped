@@ -1,10 +1,7 @@
 package typingsSlinky.jupyterlabJsonExtension.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.jupyterlabJsonExtension.componentMod.IProps
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONValue
@@ -12,23 +9,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Component
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.jupyterlabJsonExtension.componentMod.Component] {
+object Component {
   @JSImport("@jupyterlab/json-extension/lib/component", "Component")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(data: JSONValue = null, metadata: JSONObject = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.jupyterlabJsonExtension.componentMod.Component] = {
-    val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.jupyterlabJsonExtension.componentMod.Component] {
+    @scala.inline
+    def data(value: JSONValue): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataNull: this.type = set("data", null)
+    @scala.inline
+    def metadata(value: JSONObject): this.type = set("metadata", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.jupyterlabJsonExtension.componentMod.Component] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.jupyterlabJsonExtension.componentMod.Component](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IProps
+  
+  def withProps(p: IProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Component.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -43,14 +43,72 @@ object DecisionTask {
     startedEventId: EventId,
     taskToken: TaskToken,
     workflowExecution: WorkflowExecution,
-    workflowType: WorkflowType,
-    nextPageToken: PageToken = null,
-    previousStartedEventId: Int | Double = null
+    workflowType: WorkflowType
   ): DecisionTask = {
     val __obj = js.Dynamic.literal(events = events.asInstanceOf[js.Any], startedEventId = startedEventId.asInstanceOf[js.Any], taskToken = taskToken.asInstanceOf[js.Any], workflowExecution = workflowExecution.asInstanceOf[js.Any], workflowType = workflowType.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (previousStartedEventId != null) __obj.updateDynamic("previousStartedEventId")(previousStartedEventId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecisionTask]
   }
+  @scala.inline
+  implicit class DecisionTaskOps[Self <: DecisionTask] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvents(value: HistoryEventList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartedEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startedEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskToken(value: TaskToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorkflowExecution(value: WorkflowExecution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorkflowType(value: WorkflowType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousStartedEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousStartedEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousStartedEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousStartedEventId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

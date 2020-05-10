@@ -42,18 +42,65 @@ trait SchemaGoogleCloudDialogflowV2beta1IntentTrainingPhrase extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2beta1IntentTrainingPhrase {
   @scala.inline
-  def apply(
-    name: String = null,
-    parts: js.Array[SchemaGoogleCloudDialogflowV2beta1IntentTrainingPhrasePart] = null,
-    timesAddedCount: Int | Double = null,
-    `type`: String = null
-  ): SchemaGoogleCloudDialogflowV2beta1IntentTrainingPhrase = {
+  def apply(): SchemaGoogleCloudDialogflowV2beta1IntentTrainingPhrase = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (parts != null) __obj.updateDynamic("parts")(parts.asInstanceOf[js.Any])
-    if (timesAddedCount != null) __obj.updateDynamic("timesAddedCount")(timesAddedCount.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1IntentTrainingPhrase]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2beta1IntentTrainingPhraseOps[Self <: SchemaGoogleCloudDialogflowV2beta1IntentTrainingPhrase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParts(value: js.Array[SchemaGoogleCloudDialogflowV2beta1IntentTrainingPhrasePart]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimesAddedCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timesAddedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimesAddedCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timesAddedCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

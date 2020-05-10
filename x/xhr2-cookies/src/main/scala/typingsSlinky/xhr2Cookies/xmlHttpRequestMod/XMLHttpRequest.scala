@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.httpsMod.Agent
-import typingsSlinky.std.ArrayBuffer
 import typingsSlinky.xhr2Cookies.AnonBaseUrl
 import typingsSlinky.xhr2Cookies.xmlHttpRequestEventTargetMod.ProgressEventListener
 import typingsSlinky.xhr2Cookies.xmlHttpRequestEventTargetMod.XMLHttpRequestEventTarget
@@ -47,7 +46,7 @@ class XMLHttpRequest () extends XMLHttpRequestEventTarget {
   var nodejsHttpsAgent: Agent = js.native
   var onreadystatechange: ProgressEventListener | Null = js.native
   var readyState: Double = js.native
-  var response: String | scala.scalajs.js.typedarray.ArrayBuffer | Buffer | js.Object | Null = js.native
+  var response: String | js.typedarray.ArrayBuffer | Buffer | js.Object | Null = js.native
   var responseText: String = js.native
   var responseType: String = js.native
   var responseUrl: String = js.native
@@ -87,7 +86,7 @@ class XMLHttpRequest () extends XMLHttpRequestEventTarget {
   def overrideMimeType(mimeType: String): Unit = js.native
   def send(): Unit = js.native
   def send(data: String): Unit = js.native
-  def send(data: ArrayBuffer): Unit = js.native
+  def send(data: js.typedarray.ArrayBuffer): Unit = js.native
   def setRequestHeader(name: String, value: js.Any): Unit = js.native
 }
 

@@ -12,10 +12,8 @@ trait OpenOrClosed extends js.Object
 
 object OpenOrClosed {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def closed: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.closed = "closed".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.closed = this.cast("closed")
-  @scala.inline
-  def open: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.open = this.cast("open")
+  def open: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.open = "open".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.open]
 }
 

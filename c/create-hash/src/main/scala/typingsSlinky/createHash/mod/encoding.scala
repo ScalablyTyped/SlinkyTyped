@@ -13,12 +13,10 @@ trait encoding extends js.Object
 
 object encoding {
   @scala.inline
-  def base64: typingsSlinky.createHash.createHashStrings.base64 = this.cast("base64")
+  def base64: typingsSlinky.createHash.createHashStrings.base64 = "base64".asInstanceOf[typingsSlinky.createHash.createHashStrings.base64]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hex: typingsSlinky.createHash.createHashStrings.hex = "hex".asInstanceOf[typingsSlinky.createHash.createHashStrings.hex]
   @scala.inline
-  def hex: typingsSlinky.createHash.createHashStrings.hex = this.cast("hex")
-  @scala.inline
-  def utf8: typingsSlinky.createHash.createHashStrings.utf8 = this.cast("utf8")
+  def utf8: typingsSlinky.createHash.createHashStrings.utf8 = "utf8".asInstanceOf[typingsSlinky.createHash.createHashStrings.utf8]
 }
 

@@ -6,7 +6,6 @@ import typingsSlinky.angularCore.mod.ElementRef
 import typingsSlinky.angularCore.mod.Renderer2
 import typingsSlinky.angularCore.mod.RendererFactory2
 import typingsSlinky.angularPlatformBrowser.mod.DomSanitizer
-import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularStrings.`[@ant-designSlashicons-angular]Colon`
 import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.IconDefinition
 import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.Manifest
 import typingsSlinky.antDesignIconsAngular.antDesignIconsAngularTypesMod.ThemeType
@@ -42,7 +41,7 @@ object antDesignIconsAngularMod extends js.Object {
     ) = this()
   }
   
-  val ANT_ICON_ANGULAR_CONSOLE_PREFIX: `[@ant-designSlashicons-angular]Colon` = js.native
+  val ANT_ICON_ANGULAR_CONSOLE_PREFIX: /* "[@ant-design/icons-angular]:" */ String = js.native
   val manifest: Manifest = js.native
   def DynamicLoadingTimeoutError(): js.Error = js.native
   def HttpModuleNotImport(): Null = js.native

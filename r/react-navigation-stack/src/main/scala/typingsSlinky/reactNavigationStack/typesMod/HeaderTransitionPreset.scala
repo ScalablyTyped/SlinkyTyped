@@ -12,10 +12,8 @@ trait HeaderTransitionPreset extends js.Object
 
 object HeaderTransitionPreset {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `fade-in-place`: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.`fade-in-place` = "fade-in-place".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.`fade-in-place`]
   @scala.inline
-  def `fade-in-place`: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.`fade-in-place` = this.cast("fade-in-place")
-  @scala.inline
-  def uikit: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.uikit = this.cast("uikit")
+  def uikit: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.uikit = "uikit".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.uikit]
 }
 

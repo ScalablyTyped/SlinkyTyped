@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait WorkspaceConfiguration
   extends /**
-		 * Readable dictionary that backs this configuration.
+		 * Additional debug type specific properties.
 		 */
 /* key */ StringDictionary[js.Any] {
   /**

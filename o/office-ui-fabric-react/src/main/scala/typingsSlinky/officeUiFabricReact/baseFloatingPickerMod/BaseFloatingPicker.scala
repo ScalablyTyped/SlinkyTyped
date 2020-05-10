@@ -13,7 +13,7 @@ import typingsSlinky.officeUiFabricReact.baseFloatingPickerTypesMod.IBaseFloatin
 import typingsSlinky.officeUiFabricReact.suggestionsControlMod.SuggestionsControl
 import typingsSlinky.officeUiFabricReact.suggestionsDottypesMod.ISuggestionsControlProps
 import typingsSlinky.officeUiFabricReact.suggestionsStoreMod.SuggestionsStore
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +21,11 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/components/FloatingPicker/BaseFloatingPicker", "BaseFloatingPicker")
 @js.native
 class BaseFloatingPicker[T, P /* <: IBaseFloatingPickerProps[T] */] protected ()
-  extends BaseComponent[P, IBaseFloatingPickerState]
+  extends Component[P, IBaseFloatingPickerState, js.Any]
      with IBaseFloatingPicker {
   def this(basePickerProps: P) = this()
   var SuggestionsControlOfProperType: Instantiable1[/* props */ ISuggestionsControlProps[T], SuggestionsControl[T]] = js.native
+  var _async: js.Any = js.native
   var _bindToInputElement: js.Any = js.native
   var _onResolveSuggestions: js.Any = js.native
   var _onValidateInput: js.Any = js.native

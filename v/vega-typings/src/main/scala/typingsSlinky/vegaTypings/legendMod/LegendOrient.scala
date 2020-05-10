@@ -19,24 +19,22 @@ trait LegendOrient extends js.Object
 
 object LegendOrient {
   @scala.inline
-  def bottom: typingsSlinky.vegaTypings.vegaTypingsStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.vegaTypings.vegaTypingsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.bottom]
   @scala.inline
-  def `bottom-left`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bottom-left` = this.cast("bottom-left")
+  def `bottom-left`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bottom-left` = "bottom-left".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bottom-left`]
   @scala.inline
-  def `bottom-right`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bottom-right` = this.cast("bottom-right")
+  def `bottom-right`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bottom-right` = "bottom-right".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bottom-right`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.vegaTypings.vegaTypingsStrings.left = "left".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.left]
   @scala.inline
-  def left: typingsSlinky.vegaTypings.vegaTypingsStrings.left = this.cast("left")
+  def none: typingsSlinky.vegaTypings.vegaTypingsStrings.none = "none".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.none]
   @scala.inline
-  def none: typingsSlinky.vegaTypings.vegaTypingsStrings.none = this.cast("none")
+  def right: typingsSlinky.vegaTypings.vegaTypingsStrings.right = "right".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.right]
   @scala.inline
-  def right: typingsSlinky.vegaTypings.vegaTypingsStrings.right = this.cast("right")
+  def top: typingsSlinky.vegaTypings.vegaTypingsStrings.top = "top".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.top]
   @scala.inline
-  def top: typingsSlinky.vegaTypings.vegaTypingsStrings.top = this.cast("top")
+  def `top-left`: typingsSlinky.vegaTypings.vegaTypingsStrings.`top-left` = "top-left".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`top-left`]
   @scala.inline
-  def `top-left`: typingsSlinky.vegaTypings.vegaTypingsStrings.`top-left` = this.cast("top-left")
-  @scala.inline
-  def `top-right`: typingsSlinky.vegaTypings.vegaTypingsStrings.`top-right` = this.cast("top-right")
+  def `top-right`: typingsSlinky.vegaTypings.vegaTypingsStrings.`top-right` = "top-right".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`top-right`]
 }
 

@@ -1,47 +1,41 @@
 package typingsSlinky.muiDatatables.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableColumnDef
 import typingsSlinky.muiDatatables.mod.MUIDataTableHead
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableHead
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TableHead {
   @JSImport("mui-datatables", "TableHead")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    classes: js.Object = null,
-    columns: js.Array[MUIDataTableColumnDef] = null,
-    count: Int | Double = null,
-    data: js.Array[_] = null,
-    options: js.Object = null,
-    page: js.Any = null,
-    selectedRows: js.Any = null,
-    setCellRef: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (selectedRows != null) __obj.updateDynamic("selectedRows")(selectedRows.asInstanceOf[js.Any])
-    if (setCellRef != null) __obj.updateDynamic("setCellRef")(setCellRef.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columns(value: js.Array[MUIDataTableColumnDef]): this.type = set("columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def count(value: Double): this.type = set("count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def page(value: js.Any): this.type = set("page", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedRows(value: js.Any): this.type = set("selectedRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCellRef(value: js.Any): this.type = set("setCellRef", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MUIDataTableHead
+  
+  def withProps(p: MUIDataTableHead): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableHead.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

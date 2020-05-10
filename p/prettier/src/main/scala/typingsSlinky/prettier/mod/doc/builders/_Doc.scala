@@ -19,17 +19,9 @@ object _Doc {
     __obj.asInstanceOf[_Doc]
   }
   @scala.inline
-  def Line_(
-    `type`: typingsSlinky.prettier.prettierStrings.line,
-    hard: js.UndefOr[Boolean] = js.undefined,
-    literal: js.UndefOr[Boolean] = js.undefined,
-    soft: js.UndefOr[Boolean] = js.undefined
-  ): _Doc = {
+  def Line_(`type`: typingsSlinky.prettier.prettierStrings.line): _Doc = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(hard)) __obj.updateDynamic("hard")(hard.asInstanceOf[js.Any])
-    if (!js.isUndefined(literal)) __obj.updateDynamic("literal")(literal.asInstanceOf[js.Any])
-    if (!js.isUndefined(soft)) __obj.updateDynamic("soft")(soft.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Doc]
   }
   @scala.inline

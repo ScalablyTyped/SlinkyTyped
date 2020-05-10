@@ -2,7 +2,6 @@ package typingsSlinky.apolloProtobufjs.mod
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,8 +52,8 @@ class Type protected () extends NamespaceBase {
     */
   def decode(reader: Reader): Message[js.Object] = js.native
   def decode(reader: Reader, length: Double): Message[js.Object] = js.native
-  def decode(reader: Uint8Array): Message[js.Object] = js.native
-  def decode(reader: Uint8Array, length: Double): Message[js.Object] = js.native
+  def decode(reader: js.typedarray.Uint8Array): Message[js.Object] = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Message[js.Object] = js.native
   /**
     * Decodes a message of this type preceeded by its byte length as a varint.
     * @param reader Reader or buffer to decode from
@@ -63,7 +62,7 @@ class Type protected () extends NamespaceBase {
     * @throws {util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): Message[js.Object] = js.native
-  def decodeDelimited(reader: Uint8Array): Message[js.Object] = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Message[js.Object] = js.native
   def encode(message: StringDictionary[js.Any]): Writer = js.native
   def encode(message: StringDictionary[js.Any], writer: Writer): Writer = js.native
   /**

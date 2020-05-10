@@ -16,8 +16,21 @@ object DeleteForecastRequest {
   @scala.inline
   def apply(ForecastArn: Arn): DeleteForecastRequest = {
     val __obj = js.Dynamic.literal(ForecastArn = ForecastArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteForecastRequest]
   }
+  @scala.inline
+  implicit class DeleteForecastRequestOps[Self <: DeleteForecastRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForecastArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

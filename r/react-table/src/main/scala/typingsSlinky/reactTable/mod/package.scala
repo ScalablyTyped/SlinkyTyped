@@ -5,26 +5,41 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
+  type Accessor[D /* <: js.Object */] = js.Function3[
+    /* originalRow */ D, 
+    /* index */ scala.Double, 
+    /* sub */ typingsSlinky.reactTable.AnonData[D], 
+    typingsSlinky.reactTable.mod.CellValue[js.Any]
+  ]
   type ActionType = typingsSlinky.reactTable.AnonType with (typingsSlinky.std.Record[java.lang.String, _])
   type AggregatedValue = js.Any
   type Aggregator[D /* <: js.Object */] = typingsSlinky.reactTable.mod.AggregatorFn[D] | typingsSlinky.reactTable.mod.DefaultAggregators | java.lang.String
   type AggregatorFn[D /* <: js.Object */] = js.Function3[
-    /* columnValues */ js.Array[typingsSlinky.reactTable.mod.CellValue], 
+    /* columnValues */ js.Array[typingsSlinky.reactTable.mod.CellValue[js.Any]], 
     /* rows */ js.Array[typingsSlinky.reactTable.mod.Row[D]], 
     /* isAggregated */ scala.Boolean, 
     typingsSlinky.reactTable.mod.AggregatedValue
   ]
-  type Cell[D /* <: js.Object */] = typingsSlinky.reactTable.mod.UseTableCellProps[D]
+  type Cell[D /* <: js.Object */, V] = typingsSlinky.reactTable.mod.UseTableCellProps[D, V]
   type CellPropGetter[D /* <: js.Object */] = typingsSlinky.reactTable.mod.PropGetter[
     D, 
     typingsSlinky.reactTable.mod.TableCellProps, 
     typingsSlinky.reactTable.AnonCell[D], 
     typingsSlinky.reactTable.PartialTableCellProps
   ]
-  type CellValue = js.Any
+  type CellValue[V] = V
+  type Column[D /* <: js.Object */] = typingsSlinky.reactTable.mod.ColumnGroup[D] | typingsSlinky.reactTable.mod.ColumnWithLooseAccessor[D] | typingsSlinky.reactTable.mod.ColumnWithStrictAccessor[D]
+  type ColumnGroup[D /* <: js.Object */] = typingsSlinky.reactTable.mod.ColumnInterface[D] with typingsSlinky.reactTable.mod.ColumnGroupInterface[D] with (typingsSlinky.reactTable.AnonHeader | typingsSlinky.reactTable.AnonId[D]) with typingsSlinky.reactTable.AnonAccessor[D]
+  type ColumnInterface[D /* <: js.Object */] = typingsSlinky.reactTable.mod.UseTableColumnOptions[D]
+  type ColumnWithLooseAccessor[D /* <: js.Object */] = typingsSlinky.reactTable.mod.ColumnInterface[D] with (typingsSlinky.reactTable.mod.ColumnInterfaceBasedOnValue[D, _]) with (typingsSlinky.reactTable.AnonHeader | typingsSlinky.reactTable.AnonIdIdType[D] | typingsSlinky.reactTable.Anon0[D]) with typingsSlinky.reactTable.Anon1[D]
+  type ColumnWithStrictAccessor[D /* <: js.Object */] = typingsSlinky.reactTable.mod.ColumnInterface[D] with (typingsSlinky.reactTable.mod.ValueOf[
+    /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ K in keyof D ]: {  accessor  :K} & react-table.react-table.ColumnInterfaceBasedOnValue<D, D[K]>}
+    */ typingsSlinky.reactTable.reactTableStrings.ColumnWithStrictAccessor with org.scalablytyped.runtime.TopLevel[D]
+  ])
   type FilterTypes[D /* <: js.Object */] = typingsSlinky.std.Record[java.lang.String, typingsSlinky.reactTable.mod.FilterValue]
   type FilterValue = js.Any
-  type Filters[D /* <: js.Object */] = js.Array[typingsSlinky.reactTable.AnonId[D]]
+  type Filters[D /* <: js.Object */] = js.Array[typingsSlinky.reactTable.AnonValue[D]]
   type FooterGroupPropGetter[D /* <: js.Object */] = typingsSlinky.reactTable.mod.PropGetter[
     D, 
     typingsSlinky.reactTable.mod.TableFooterGroupProps, 
@@ -72,7 +87,7 @@ package object mod {
     /* desc */ js.UndefOr[scala.Boolean], 
     scala.Double
   ]
-  type StringKey[D] = typingsSlinky.std.Extract[java.lang.String, java.lang.String]
+  type StringKey[D] = typingsSlinky.std.Extract[/* keyof D */ java.lang.String, java.lang.String]
   type TableBodyPropGetter[D /* <: js.Object */] = typingsSlinky.reactTable.mod.PropGetter[
     D, 
     typingsSlinky.reactTable.mod.TableBodyProps, 
@@ -105,4 +120,5 @@ package object mod {
   ]
   type UseRowStateLocalState[D /* <: js.Object */, T] = typingsSlinky.std.Record[typingsSlinky.reactTable.mod.IdType[D], T]
   type UseRowUpdater[T] = T | (js.Function1[/* prev */ T, T])
+  type ValueOf[T] = /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
 }

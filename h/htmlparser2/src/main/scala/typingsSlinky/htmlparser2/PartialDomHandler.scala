@@ -7,56 +7,186 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<domhandler.domhandler.DomHandler> */
+@js.native
 trait PartialDomHandler extends js.Object {
   var constructor: js.UndefOr[
     js.Function1[
       /* callback */ js.Function2[/* error */ js.Any, /* dom */ js.Array[DomElement], _], 
       js.Any
     ]
-  ] = js.undefined
-  var oncdatastart: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onclosetag: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var oncomment: js.UndefOr[js.Function1[/* data */ String, Unit]] = js.undefined
-  var oncommentend: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onend: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onerror: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.undefined
-  var onopentag: js.UndefOr[js.Function2[/* name */ String, /* attribs */ StringDictionary[String], Unit]] = js.undefined
-  var onparserinit: js.UndefOr[js.Function1[/* parser */ js.Any, Unit]] = js.undefined
-  var onprocessinginstruction: js.UndefOr[js.Function2[/* name */ String, /* data */ String, Unit]] = js.undefined
-  var onreset: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var ontext: js.UndefOr[js.Function1[/* data */ String, Unit]] = js.undefined
+  ] = js.native
+  var oncdatastart: js.UndefOr[js.Function0[Unit]] = js.native
+  var onclosetag: js.UndefOr[js.Function0[Unit]] = js.native
+  var oncomment: js.UndefOr[js.Function1[/* data */ String, Unit]] = js.native
+  var oncommentend: js.UndefOr[js.Function0[Unit]] = js.native
+  var onend: js.UndefOr[js.Function0[Unit]] = js.native
+  var onerror: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
+  var onopentag: js.UndefOr[js.Function2[/* name */ String, /* attribs */ StringDictionary[String], Unit]] = js.native
+  var onparserinit: js.UndefOr[js.Function1[/* parser */ js.Any, Unit]] = js.native
+  var onprocessinginstruction: js.UndefOr[js.Function2[/* name */ String, /* data */ String, Unit]] = js.native
+  var onreset: js.UndefOr[js.Function0[Unit]] = js.native
+  var ontext: js.UndefOr[js.Function1[/* data */ String, Unit]] = js.native
 }
 
 object PartialDomHandler {
   @scala.inline
-  def apply(
-    constructor: /* callback */ js.Function2[/* error */ js.Any, /* dom */ js.Array[DomElement], _] => js.Any = null,
-    oncdatastart: () => Unit = null,
-    onclosetag: () => Unit = null,
-    oncomment: /* data */ String => Unit = null,
-    oncommentend: () => Unit = null,
-    onend: () => Unit = null,
-    onerror: /* error */ js.Error => Unit = null,
-    onopentag: (/* name */ String, /* attribs */ StringDictionary[String]) => Unit = null,
-    onparserinit: /* parser */ js.Any => Unit = null,
-    onprocessinginstruction: (/* name */ String, /* data */ String) => Unit = null,
-    onreset: () => Unit = null,
-    ontext: /* data */ String => Unit = null
-  ): PartialDomHandler = {
+  def apply(): PartialDomHandler = {
     val __obj = js.Dynamic.literal()
-    if (constructor != null) __obj.updateDynamic("constructor")(js.Any.fromFunction1(constructor))
-    if (oncdatastart != null) __obj.updateDynamic("oncdatastart")(js.Any.fromFunction0(oncdatastart))
-    if (onclosetag != null) __obj.updateDynamic("onclosetag")(js.Any.fromFunction0(onclosetag))
-    if (oncomment != null) __obj.updateDynamic("oncomment")(js.Any.fromFunction1(oncomment))
-    if (oncommentend != null) __obj.updateDynamic("oncommentend")(js.Any.fromFunction0(oncommentend))
-    if (onend != null) __obj.updateDynamic("onend")(js.Any.fromFunction0(onend))
-    if (onerror != null) __obj.updateDynamic("onerror")(js.Any.fromFunction1(onerror))
-    if (onopentag != null) __obj.updateDynamic("onopentag")(js.Any.fromFunction2(onopentag))
-    if (onparserinit != null) __obj.updateDynamic("onparserinit")(js.Any.fromFunction1(onparserinit))
-    if (onprocessinginstruction != null) __obj.updateDynamic("onprocessinginstruction")(js.Any.fromFunction2(onprocessinginstruction))
-    if (onreset != null) __obj.updateDynamic("onreset")(js.Any.fromFunction0(onreset))
-    if (ontext != null) __obj.updateDynamic("ontext")(js.Any.fromFunction1(ontext))
     __obj.asInstanceOf[PartialDomHandler]
   }
+  @scala.inline
+  implicit class PartialDomHandlerOps[Self <: PartialDomHandler] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstructor(
+      value: /* callback */ js.Function2[/* error */ js.Any, /* dom */ js.Array[DomElement], _] => js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutConstructor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOncdatastart(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncdatastart")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOncdatastart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncdatastart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnclosetag(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclosetag")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnclosetag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclosetag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOncomment(value: /* data */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncomment")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOncomment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncomment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOncommentend(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncommentend")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOncommentend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncommentend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnend(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onend")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnerror(value: /* error */ js.Error => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnerror: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnopentag(value: (/* name */ String, /* attribs */ StringDictionary[String]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onopentag")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnopentag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onopentag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnparserinit(value: /* parser */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onparserinit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnparserinit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onparserinit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnprocessinginstruction(value: (/* name */ String, /* data */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessinginstruction")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnprocessinginstruction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onprocessinginstruction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnreset(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnreset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntext(value: /* data */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontext")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOntext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

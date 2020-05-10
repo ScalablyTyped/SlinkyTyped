@@ -1,7 +1,7 @@
 package typingsSlinky.themeUi.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.HTMLSelectElement
+import org.scalajs.dom.raw.HTMLSelectElement
 import typingsSlinky.themeUiComponents.mod.ForwardRef
 import typingsSlinky.themeUiComponents.mod.SelectProps
 import scala.scalajs.js

@@ -14,7 +14,7 @@ package object mod {
     /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<write.FnCall>[1] */ js.Any, 
     typingsSlinky.std.Record[java.lang.String, js.Any]
   ]
-  type Data = java.lang.String | typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array
+  type Data = java.lang.String | typingsSlinky.node.Buffer | js.typedarray.Uint8Array
   type Options = (typingsSlinky.std.Omit[
     typingsSlinky.node.fsMod.WriteFileOptions, 
     typingsSlinky.write.writeStrings.encoding

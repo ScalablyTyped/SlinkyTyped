@@ -22,16 +22,5 @@ class EmailValidator () extends Validator {
     */
   @JSName("registerOnValidatorChange")
   def registerOnValidatorChange_MEmailValidator(fn: js.Function0[Unit]): Unit = js.native
-  /**
-    * @description
-    * Method that performs synchronous validation against the provided control.
-    *
-    * @param control The control to validate against.
-    *
-    * @returns A map of validation errors if validation fails,
-    * otherwise null.
-    */
-  /* CompleteClass */
-  override def validate(control: AbstractControl): ValidationErrors | Null = js.native
 }
 

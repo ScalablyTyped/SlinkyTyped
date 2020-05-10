@@ -1,6 +1,5 @@
 package typingsSlinky.validator
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,6 +20,6 @@ object matchesMod extends js.Object {
     *
     * @param pattern - `/foo/i`
     */
-  def default(str: String, pattern: RegExp): Boolean = js.native
+  def default(str: String, pattern: js.RegExp): Boolean = js.native
 }
 

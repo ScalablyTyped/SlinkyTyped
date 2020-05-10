@@ -53,11 +53,7 @@ object mod extends js.Object {
       * where [x0, y0] is the top-left corner and [x1, y1] is the bottom-right corner.
       */
     def extent(
-      extent: ValueFn[
-          typingsSlinky.std.SVGGElement, 
-          Datum, 
-          js.Tuple2[js.Tuple2[Double, Double], js.Tuple2[Double, Double]]
-        ]
+      extent: ValueFn[SVGGElement, Datum, js.Tuple2[js.Tuple2[Double, Double], js.Tuple2[Double, Double]]]
     ): this.type = js.native
     /**
       * Returns the current filter function.
@@ -108,7 +104,7 @@ object mod extends js.Object {
       * @param group A D3 selection of SVG G elements.
       * @param selection Use null to clear the active brush selection.
       */
-    def move(group: Selection_[typingsSlinky.std.SVGGElement, Datum, _, _]): Unit = js.native
+    def move(group: Selection_[SVGGElement, Datum, _, _]): Unit = js.native
     /**
       * Sets the active selection of the brush on the specified SVG G element(s) selection
       * to the provided array.
@@ -119,7 +115,7 @@ object mod extends js.Object {
       * x1 is the maximum x-value, and y1 is the maximum y-value. For an x-brush, it must be defined as [x0, x1];
       * for a y-brush, it must be defined as [y0, y1].
       */
-    def move(group: Selection_[typingsSlinky.std.SVGGElement, Datum, _, _], selection: BrushSelection_): Unit = js.native
+    def move(group: Selection_[SVGGElement, Datum, _, _], selection: BrushSelection_): Unit = js.native
     /**
       * Sets the active selection of the brush on the specified SVG G element(s) selection
       * based on the array returned by a value function invoked for each selection element.
@@ -133,8 +129,8 @@ object mod extends js.Object {
       * for a y-brush, it must be defined as [y0, y1].
       */
     def move(
-      group: Selection_[typingsSlinky.std.SVGGElement, Datum, _, _],
-      selection: ValueFn[typingsSlinky.std.SVGGElement, Datum, BrushSelection_]
+      group: Selection_[SVGGElement, Datum, _, _],
+      selection: ValueFn[SVGGElement, Datum, BrushSelection_]
     ): Unit = js.native
     /**
       * Sets the active selection of the brush on the specified SVG G element(s) transition
@@ -146,7 +142,7 @@ object mod extends js.Object {
       * x1 is the maximum x-value, and y1 is the maximum y-value. For an x-brush, it must be defined as [x0, x1];
       * for a y-brush, it must be defined as [y0, y1].
       */
-    def move(group: TransitionLike[typingsSlinky.std.SVGGElement, Datum], selection: BrushSelection_): Unit = js.native
+    def move(group: TransitionLike[SVGGElement, Datum], selection: BrushSelection_): Unit = js.native
     /**
       * Sets the active selection of the brush on the specified SVG G element(s) transition
       * based on the array returned by a value function invoked for each transitioning element.
@@ -159,10 +155,7 @@ object mod extends js.Object {
       * x1 is the maximum x-value, and y1 is the maximum y-value. For an x-brush, it must be defined as [x0, x1];
       * for a y-brush, it must be defined as [y0, y1].
       */
-    def move(
-      group: TransitionLike[typingsSlinky.std.SVGGElement, Datum],
-      selection: ValueFn[typingsSlinky.std.SVGGElement, Datum, BrushSelection_]
-    ): Unit = js.native
+    def move(group: TransitionLike[SVGGElement, Datum], selection: ValueFn[SVGGElement, Datum, BrushSelection_]): Unit = js.native
     /**
       * Removes the current event listeners for the specified typenames, if any.
       *

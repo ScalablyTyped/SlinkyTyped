@@ -1160,6 +1160,9 @@ object pulumiAwsStrings {
   sealed trait ruby2Dot5 extends Runtime
   
   @js.native
+  sealed trait ruby2Dot7 extends Runtime
+  
+  @js.native
   sealed trait `sa-east-1` extends Region
   
   @js.native
@@ -1439,7 +1442,7 @@ object pulumiAwsStrings {
   @scala.inline
   def REMOVE: REMOVE = "REMOVE".asInstanceOf[REMOVE]
   @scala.inline
-  def `Red Hat Enterprise Linux`: `Red Hat Enterprise Linux` = "Red Hat Enterprise Linux".asInstanceOf[`Red Hat Enterprise Linux`]
+  def `Red Hat Enterprise Linux`: `Red Hat Enterprise Linux` = ("Red Hat Enterprise Linux").asInstanceOf[`Red Hat Enterprise Linux`]
   @scala.inline
   def SETFCAP: SETFCAP = "SETFCAP".asInstanceOf[SETFCAP]
   @scala.inline
@@ -1455,7 +1458,7 @@ object pulumiAwsStrings {
   @scala.inline
   def SRV: SRV = "SRV".asInstanceOf[SRV]
   @scala.inline
-  def `SUSE Linux`: `SUSE Linux` = "SUSE Linux".asInstanceOf[`SUSE Linux`]
+  def `SUSE Linux`: `SUSE Linux` = ("SUSE Linux").asInstanceOf[`SUSE Linux`]
   @scala.inline
   def SYSLOG: SYSLOG = "SYSLOG".asInstanceOf[SYSLOG]
   @scala.inline
@@ -1495,13 +1498,13 @@ object pulumiAwsStrings {
   @scala.inline
   def Windows: Windows = "Windows".asInstanceOf[Windows]
   @scala.inline
-  def `Windows with SQL Server`: `Windows with SQL Server` = "Windows with SQL Server".asInstanceOf[`Windows with SQL Server`]
+  def `Windows with SQL Server`: `Windows with SQL Server` = ("Windows with SQL Server").asInstanceOf[`Windows with SQL Server`]
   @scala.inline
-  def `Windows with SQL Server Enterprise`: `Windows with SQL Server Enterprise` = "Windows with SQL Server Enterprise".asInstanceOf[`Windows with SQL Server Enterprise`]
+  def `Windows with SQL Server Enterprise`: `Windows with SQL Server Enterprise` = ("Windows with SQL Server Enterprise").asInstanceOf[`Windows with SQL Server Enterprise`]
   @scala.inline
-  def `Windows with SQL Server Standard`: `Windows with SQL Server Standard` = "Windows with SQL Server Standard".asInstanceOf[`Windows with SQL Server Standard`]
+  def `Windows with SQL Server Standard`: `Windows with SQL Server Standard` = ("Windows with SQL Server Standard").asInstanceOf[`Windows with SQL Server Standard`]
   @scala.inline
-  def `Windows with SQL Server Web`: `Windows with SQL Server Web` = "Windows with SQL Server Web".asInstanceOf[`Windows with SQL Server Web`]
+  def `Windows with SQL Server Web`: `Windows with SQL Server Web` = ("Windows with SQL Server Web").asInstanceOf[`Windows with SQL Server Web`]
   @scala.inline
   def a1Dot2xlarge: a1Dot2xlarge = "a1.2xlarge".asInstanceOf[a1Dot2xlarge]
   @scala.inline
@@ -2038,6 +2041,8 @@ object pulumiAwsStrings {
   def rttime: rttime = "rttime".asInstanceOf[rttime]
   @scala.inline
   def ruby2Dot5: ruby2Dot5 = "ruby2.5".asInstanceOf[ruby2Dot5]
+  @scala.inline
+  def ruby2Dot7: ruby2Dot7 = "ruby2.7".asInstanceOf[ruby2Dot7]
   @scala.inline
   def `sa-east-1`: `sa-east-1` = "sa-east-1".asInstanceOf[`sa-east-1`]
   @scala.inline

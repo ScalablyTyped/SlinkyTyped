@@ -22,15 +22,6 @@ object libTransportMod extends js.Object {
     def this(logger: Logger, options: js.Any) = this()
     var logger: Logger = js.native
     /**
-      * The transport protocol.
-      *
-      * @remarks
-      * Formatted as defined for the Via header sent-protocol transport.
-      * https://tools.ietf.org/html/rfc3261#section-20.42
-      */
-    /* CompleteClass */
-    override val protocol: String = js.native
-    /**
       * FIXME: This needs to be reworked.
       * Some transport configuration which is controlling core behavior.
       * @internal
@@ -75,16 +66,6 @@ object libTransportMod extends js.Object {
       * @param e - Event
       */
     /* protected */ def onMessage(e: js.Any): Unit = js.native
-    /**
-      * Send a message.
-      *
-      * @remarks
-      * Resolves once message is sent. Otherwise rejects with an Error.
-      *
-      * @param message - Message to send.
-      */
-    /* CompleteClass */
-    override def send(message: String): js.Promise[Unit] = js.native
     def send(message: String, options: js.Any): js.Promise[Unit] = js.native
     /**
       * Called by send.

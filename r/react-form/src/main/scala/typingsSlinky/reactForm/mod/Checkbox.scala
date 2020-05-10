@@ -1,14 +1,14 @@
 package typingsSlinky.reactForm.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLInputElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.InputHTMLAttributes
-import typingsSlinky.react.mod.StatelessComponent
-import typingsSlinky.std.HTMLInputElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-form", "Checkbox")
 @js.native
-object Checkbox extends TopLevel[StatelessComponent[FieldProps with InputHTMLAttributes[HTMLInputElement]]]
+object Checkbox extends TopLevel[ReactComponentClass[FieldProps with InputHTMLAttributes[HTMLInputElement]]]
 

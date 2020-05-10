@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 /**
   * A StatefulSetSpec is the specification of a StatefulSet.
   */
+@js.native
 trait StatefulSetSpec extends js.Object {
   /**
     * podManagementPolicy controls how pods are created during initial scale up, when replacing
@@ -20,25 +21,25 @@ trait StatefulSetSpec extends js.Object {
     * opposite order. The alternative policy is `Parallel` which will create pods in parallel to
     * match the desired scale without waiting, and on scale down will delete all pods at once.
     */
-  var podManagementPolicy: js.UndefOr[Input[String]] = js.undefined
+  var podManagementPolicy: js.UndefOr[Input[String]] = js.native
   /**
     * replicas is the desired number of replicas of the given Template. These are replicas in the
     * sense that they are instantiations of the same Template, but individual replicas also have
     * a consistent identity. If unspecified, defaults to 1.
     */
-  var replicas: js.UndefOr[Input[Double]] = js.undefined
+  var replicas: js.UndefOr[Input[Double]] = js.native
   /**
     * revisionHistoryLimit is the maximum number of revisions that will be maintained in the
     * StatefulSet's revision history. The revision history consists of all revisions not
     * represented by a currently applied StatefulSetSpec version. The default value is 10.
     */
-  var revisionHistoryLimit: js.UndefOr[Input[Double]] = js.undefined
+  var revisionHistoryLimit: js.UndefOr[Input[Double]] = js.native
   /**
     * selector is a label query over pods that should match the replica count. It must match the
     * pod template's labels. More info:
     * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
     */
-  var selector: Input[LabelSelector]
+  var selector: Input[LabelSelector] = js.native
   /**
     * serviceName is the name of the service that governs this StatefulSet. This service must
     * exist before the StatefulSet, and is responsible for the network identity of the set. Pods
@@ -46,18 +47,18 @@ trait StatefulSetSpec extends js.Object {
     * pod-specific-string.serviceName.default.svc.cluster.local where "pod-specific-string" is
     * managed by the StatefulSet controller.
     */
-  var serviceName: Input[String]
+  var serviceName: Input[String] = js.native
   /**
     * template is the object that describes the pod that will be created if insufficient replicas
     * are detected. Each pod stamped out by the StatefulSet will fulfill this Template, but have
     * a unique identity from the rest of the StatefulSet.
     */
-  var template: Input[PodTemplateSpec]
+  var template: Input[PodTemplateSpec] = js.native
   /**
     * updateStrategy indicates the StatefulSetUpdateStrategy that will be employed to update Pods
     * in the StatefulSet when a revision is made to Template.
     */
-  var updateStrategy: js.UndefOr[Input[StatefulSetUpdateStrategy]] = js.undefined
+  var updateStrategy: js.UndefOr[Input[StatefulSetUpdateStrategy]] = js.native
   /**
     * volumeClaimTemplates is a list of claims that pods are allowed to reference. The
     * StatefulSet controller is responsible for mapping network identities to claims in a way
@@ -65,28 +66,100 @@ trait StatefulSetSpec extends js.Object {
     * matching (by name) volumeMount in one container in the template. A claim in this list takes
     * precedence over any volumes in the template, with the same name.
     */
-  var volumeClaimTemplates: js.UndefOr[Input[js.Array[Input[PersistentVolumeClaim]]]] = js.undefined
+  var volumeClaimTemplates: js.UndefOr[Input[js.Array[Input[PersistentVolumeClaim]]]] = js.native
 }
 
 object StatefulSetSpec {
   @scala.inline
-  def apply(
-    selector: Input[LabelSelector],
-    serviceName: Input[String],
-    template: Input[PodTemplateSpec],
-    podManagementPolicy: Input[String] = null,
-    replicas: Input[Double] = null,
-    revisionHistoryLimit: Input[Double] = null,
-    updateStrategy: Input[StatefulSetUpdateStrategy] = null,
-    volumeClaimTemplates: Input[js.Array[Input[PersistentVolumeClaim]]] = null
-  ): StatefulSetSpec = {
+  def apply(selector: Input[LabelSelector], serviceName: Input[String], template: Input[PodTemplateSpec]): StatefulSetSpec = {
     val __obj = js.Dynamic.literal(selector = selector.asInstanceOf[js.Any], serviceName = serviceName.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
-    if (podManagementPolicy != null) __obj.updateDynamic("podManagementPolicy")(podManagementPolicy.asInstanceOf[js.Any])
-    if (replicas != null) __obj.updateDynamic("replicas")(replicas.asInstanceOf[js.Any])
-    if (revisionHistoryLimit != null) __obj.updateDynamic("revisionHistoryLimit")(revisionHistoryLimit.asInstanceOf[js.Any])
-    if (updateStrategy != null) __obj.updateDynamic("updateStrategy")(updateStrategy.asInstanceOf[js.Any])
-    if (volumeClaimTemplates != null) __obj.updateDynamic("volumeClaimTemplates")(volumeClaimTemplates.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatefulSetSpec]
   }
+  @scala.inline
+  implicit class StatefulSetSpecOps[Self <: StatefulSetSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSelector(value: Input[LabelSelector]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: Input[PodTemplateSpec]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPodManagementPolicy(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("podManagementPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPodManagementPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("podManagementPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicas(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionHistoryLimit(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionHistoryLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionHistoryLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionHistoryLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateStrategy(value: Input[StatefulSetUpdateStrategy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeClaimTemplates(value: Input[js.Array[Input[PersistentVolumeClaim]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeClaimTemplates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeClaimTemplates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeClaimTemplates")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

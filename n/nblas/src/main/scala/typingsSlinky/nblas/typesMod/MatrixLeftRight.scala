@@ -12,10 +12,8 @@ trait MatrixLeftRight extends js.Object
 
 object MatrixLeftRight {
   @scala.inline
-  def `141`: typingsSlinky.nblas.nblasNumbers.`141` = this.cast(141)
+  def `141`: typingsSlinky.nblas.nblasNumbers.`141` = 141.asInstanceOf[typingsSlinky.nblas.nblasNumbers.`141`]
   @scala.inline
-  def `142`: typingsSlinky.nblas.nblasNumbers.`142` = this.cast(142)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `142`: typingsSlinky.nblas.nblasNumbers.`142` = 142.asInstanceOf[typingsSlinky.nblas.nblasNumbers.`142`]
 }
 

@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ComboComponentInfo extends ViewportComponentFullInfo {
   // 组合名
-  var name: String
+  var name: String = js.native
 }
 
 object ComboComponentInfo {
@@ -19,8 +20,21 @@ object ComboComponentInfo {
     name: String
   ): ComboComponentInfo = {
     val __obj = js.Dynamic.literal(childs = childs.asInstanceOf[js.Any], componentInfo = componentInfo.asInstanceOf[js.Any], mapUniqueKey = mapUniqueKey.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ComboComponentInfo]
   }
+  @scala.inline
+  implicit class ComboComponentInfoOps[Self <: ComboComponentInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

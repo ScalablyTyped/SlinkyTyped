@@ -1,0 +1,14 @@
+package typingsSlinky.msMacro
+
+import typingsSlinky.std.TemplateStringsArray
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("ms.macro", JSImport.Namespace)
+@js.native
+object mod extends js.Object {
+  def default(value: String): Double = js.native
+  def default(value: TemplateStringsArray): Double = js.native
+}
+

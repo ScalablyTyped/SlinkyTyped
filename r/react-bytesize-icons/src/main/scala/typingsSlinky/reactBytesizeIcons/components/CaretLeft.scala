@@ -1,15 +1,16 @@
 package typingsSlinky.reactBytesizeIcons.components
 
+import typingsSlinky.reactBytesizeIcons.mod.BytesizeIconsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CaretLeft
-  extends SharedApply_BytesizeIconsProps_1371331832[typingsSlinky.reactBytesizeIcons.mod.CaretLeft] {
+object CaretLeft {
   @JSImport("react-bytesize-icons", "CaretLeft")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: BytesizeIconsProps): SharedBuilder_BytesizeIconsProps1078280187[typingsSlinky.reactBytesizeIcons.mod.CaretLeft] = new SharedBuilder_BytesizeIconsProps1078280187[typingsSlinky.reactBytesizeIcons.mod.CaretLeft](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CaretLeft.type): SharedBuilder_BytesizeIconsProps1078280187[typingsSlinky.reactBytesizeIcons.mod.CaretLeft] = new SharedBuilder_BytesizeIconsProps1078280187[typingsSlinky.reactBytesizeIcons.mod.CaretLeft](js.Array(this.component, js.Dictionary.empty))()
 }
 

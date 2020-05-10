@@ -464,13 +464,6 @@ object Cameras extends js.Object {
         */
       var useBounds: Boolean = js.native
       /**
-        * The visible state of the Game Object.
-        * 
-        * An invisible Game Object will skip rendering, but will still process update logic.
-        */
-      /* CompleteClass */
-      override var visible: Boolean = js.native
-      /**
         * The width of the Camera viewport, in pixels.
         * 
         * The viewport is the area into which the Camera renders. Setting the viewport does
@@ -764,14 +757,6 @@ object Cameras extends js.Object {
       def setViewport(x: Double, y: Double, width: integer): BaseCamera = js.native
       def setViewport(x: Double, y: Double, width: integer, height: integer): BaseCamera = js.native
       /**
-        * Sets the visibility of this Game Object.
-        * 
-        * An invisible Game Object will skip rendering, but will still process update logic.
-        * @param value The visible state of the Game Object.
-        */
-      /* CompleteClass */
-      override def setVisible(value: Boolean): this.type = js.native
-      /**
         * Set the zoom value of the Camera.
         * 
         * Changing to a smaller value, such as 0.5, will cause the camera to 'zoom out'.
@@ -879,24 +864,6 @@ object Cameras extends js.Object {
         * To flash this camera see the `Camera.flash` method.
         */
       var flashEffect: Flash = js.native
-      /**
-        * The horizontally flipped state of the Game Object.
-        * 
-        * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-        * Flipping always takes place from the middle of the texture and does not impact the scale value.
-        * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-        */
-      /* CompleteClass */
-      override var flipX: Boolean = js.native
-      /**
-        * The vertically flipped state of the Game Object.
-        * 
-        * A Game Object that is flipped vertically will render inversed on the vertical axis (i.e. upside down)
-        * Flipping always takes place from the middle of the texture and does not impact the scale value.
-        * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-        */
-      /* CompleteClass */
-      override var flipY: Boolean = js.native
       /**
         * The values stored in this property are subtracted from the Camera targets position, allowing you to
         * offset the camera from the actual target x/y coordinates by this amount.
@@ -1129,11 +1096,6 @@ object Cameras extends js.Object {
         */
       def resetFX(): Camera = js.native
       /**
-        * Resets the horizontal and vertical flipped state of this Game Object back to their default un-flipped state.
-        */
-      /* CompleteClass */
-      override def resetFlip(): this.type = js.native
-      /**
         * Sets the Camera dead zone.
         * 
         * The deadzone is only used when the camera is following a target.
@@ -1154,33 +1116,6 @@ object Cameras extends js.Object {
       def setDeadzone(): Camera = js.native
       def setDeadzone(width: Double): Camera = js.native
       def setDeadzone(width: Double, height: Double): Camera = js.native
-      /**
-        * Sets the horizontal and vertical flipped state of this Game Object.
-        * 
-        * A Game Object that is flipped will render inversed on the flipped axis.
-        * Flipping always takes place from the middle of the texture and does not impact the scale value.
-        * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-        * @param x The horizontal flipped state. `false` for no flip, or `true` to be flipped.
-        * @param y The horizontal flipped state. `false` for no flip, or `true` to be flipped.
-        */
-      /* CompleteClass */
-      override def setFlip(x: Boolean, y: Boolean): this.type = js.native
-      /**
-        * Sets the horizontal flipped state of this Game Object.
-        * 
-        * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-        * Flipping always takes place from the middle of the texture and does not impact the scale value.
-        * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-        * @param value The flipped state. `false` for no flip, or `true` to be flipped.
-        */
-      /* CompleteClass */
-      override def setFlipX(value: Boolean): this.type = js.native
-      /**
-        * Sets the vertical flipped state of this Game Object.
-        * @param value The flipped state. `false` for no flip, or `true` to be flipped.
-        */
-      /* CompleteClass */
-      override def setFlipY(value: Boolean): this.type = js.native
       /**
         * Sets the horizontal and vertical offset of the camera from its follow target.
         * The values are subtracted from the targets position during the Cameras update step.
@@ -1320,20 +1255,6 @@ object Cameras extends js.Object {
         * Stops a Camera from following a Game Object, if previously set via `Camera.startFollow`.
         */
       def stopFollow(): Camera = js.native
-      /**
-        * Toggles the horizontal flipped state of this Game Object.
-        * 
-        * A Game Object that is flipped horizontally will render inversed on the horizontal axis.
-        * Flipping always takes place from the middle of the texture and does not impact the scale value.
-        * If this Game Object has a physics body, it will not change the body. This is a rendering toggle only.
-        */
-      /* CompleteClass */
-      override def toggleFlipX(): this.type = js.native
-      /**
-        * Toggles the vertical flipped state of this Game Object.
-        */
-      /* CompleteClass */
-      override def toggleFlipY(): this.type = js.native
       /**
         * This effect will zoom the Camera to the given scale, over the duration and with the ease specified.
         * @param zoom The target Camera zoom value.

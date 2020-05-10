@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LangOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Configure the accessibility
@@ -16,142 +17,142 @@ trait LangOptions extends js.Object {
     * accessibility.seriesDescriptionFormatter, and
     * accessibility.screenReaderSectionFormatter.
     */
-  var accessibility: js.UndefOr[LangAccessibilityOptions] = js.undefined
+  var accessibility: js.UndefOr[LangAccessibilityOptions] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Exporting module menu. The
     * tooltip title for the context menu holding print and export menu items.
     */
-  var contextButtonTitle: js.UndefOr[String] = js.undefined
+  var contextButtonTitle: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The default decimal point used
     * in the `Highcharts.numberFormat` method unless otherwise specified in the
     * function arguments.
     */
-  var decimalPoint: js.UndefOr[String] = js.undefined
+  var decimalPoint: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The text for the menu item.
     */
-  var downloadCSV: js.UndefOr[String] = js.undefined
+  var downloadCSV: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Exporting module only. The text
     * for the JPEG download menu item.
     */
-  var downloadJPEG: js.UndefOr[String] = js.undefined
+  var downloadJPEG: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Exporting module only. The text
     * for the PDF download menu item.
     */
-  var downloadPDF: js.UndefOr[String] = js.undefined
+  var downloadPDF: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Exporting module only. The text
     * for the PNG download menu item.
     */
-  var downloadPNG: js.UndefOr[String] = js.undefined
+  var downloadPNG: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Exporting module only. The text
     * for the SVG download menu item.
     */
-  var downloadSVG: js.UndefOr[String] = js.undefined
+  var downloadSVG: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The text for the menu item.
     */
-  var downloadXLS: js.UndefOr[String] = js.undefined
+  var downloadXLS: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highmaps) The text for the button that appears when drilling
     * down, linking back to the parent series. The parent series' name is
     * inserted for `{series.name}`.
     */
-  var drillUpText: js.UndefOr[String] = js.undefined
+  var drillUpText: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock) What to show in a date field for invalid dates.
     * Defaults to an empty string.
     */
-  var invalidDate: js.UndefOr[String] = js.undefined
+  var invalidDate: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The loading text that appears
     * when the chart is set into the loading state following a call to
     * `chart.showLoading`.
     */
-  var loading: js.UndefOr[String] = js.undefined
+  var loading: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An array containing the months
     * names. Corresponds to the `%B` format in `Highcharts.dateFormat()`.
     */
-  var months: js.UndefOr[js.Array[String]] = js.undefined
+  var months: js.UndefOr[js.Array[String]] = js.native
   /**
     * (Highcharts, Highstock) Configure the Popup strings in the chart.
     * Requires the `annotations.js` or `annotations-advanced.src.js` module to
     * be loaded.
     */
-  var navigation: js.UndefOr[js.Object | LangNavigationOptions] = js.undefined
+  var navigation: js.UndefOr[js.Object | LangNavigationOptions] = js.native
   /**
     * (Highcharts, Highstock) The text to display when the chart contains no
     * data.
     */
-  var noData: js.UndefOr[String] = js.undefined
+  var noData: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The magnitude of numericSymbols
     * replacements. Use 10000 for Japanese, Korean and various Chinese locales,
     * which use symbols for 10^4, 10^8 and 10^12.
     */
-  var numericSymbolMagnitude: js.UndefOr[Double] = js.undefined
+  var numericSymbolMagnitude: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Metric prefixes used to shorten
     * high numbers in axis labels. Replacing any of the positions with `null`
     * causes the full number to be written. Setting `numericSymbols` to `null`
     * disables shortening altogether.
     */
-  var numericSymbols: js.UndefOr[js.Array[String]] = js.undefined
+  var numericSymbols: js.UndefOr[js.Array[String]] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The text for the menu item.
     */
-  var openInCloud: js.UndefOr[String] = js.undefined
+  var openInCloud: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Exporting module only. The text
     * for the menu item to print the chart.
     */
-  var printChart: js.UndefOr[String] = js.undefined
+  var printChart: js.UndefOr[String] = js.native
   /**
     * (Highstock, Gantt) The text for the label for the "from" input box in the
     * range selector.
     */
-  var rangeSelectorFrom: js.UndefOr[String] = js.undefined
+  var rangeSelectorFrom: js.UndefOr[String] = js.native
   /**
     * (Highstock, Gantt) The text for the label for the "to" input box in the
     * range selector.
     */
-  var rangeSelectorTo: js.UndefOr[String] = js.undefined
+  var rangeSelectorTo: js.UndefOr[String] = js.native
   /**
     * (Highstock, Gantt) The text for the label for the range selector buttons.
     */
-  var rangeSelectorZoom: js.UndefOr[String] = js.undefined
+  var rangeSelectorZoom: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The text for the label appearing
     * when a chart is zoomed.
     */
-  var resetZoom: js.UndefOr[String] = js.undefined
+  var resetZoom: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The tooltip title for the label
     * appearing when a chart is zoomed.
     */
-  var resetZoomTitle: js.UndefOr[String] = js.undefined
+  var resetZoomTitle: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An array containing the months
     * names in abbreviated form. Corresponds to the `%b` format in
     * `Highcharts.dateFormat()`.
     */
-  var shortMonths: js.UndefOr[js.Array[String]] = js.undefined
+  var shortMonths: js.UndefOr[js.Array[String]] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Short week days, starting
     * Sunday. If not specified, Highcharts uses the first three letters of the
     * `lang.weekdays` option.
     */
-  var shortWeekdays: js.UndefOr[js.Array[String]] = js.undefined
+  var shortWeekdays: js.UndefOr[js.Array[String]] = js.native
   /**
     * (Highstock) Configure the stockTools GUI titles(hints) in the chart.
     * Requires the `stock-tools.js` module to be loaded.
     */
-  var stockTools: js.UndefOr[js.Object | LangStockToolsOptions] = js.undefined
+  var stockTools: js.UndefOr[js.Object | LangStockToolsOptions] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The default thousands separator
     * used in the `Highcharts.numberFormat` method unless otherwise specified
@@ -159,105 +160,442 @@ trait LangOptions extends js.Object {
     * recommended in ISO 31-0 and works across Anglo-American and continental
     * European languages.
     */
-  var thousandsSep: js.UndefOr[String] = js.undefined
+  var thousandsSep: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The text for the menu item.
     */
-  var viewData: js.UndefOr[String] = js.undefined
+  var viewData: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Exporting module only. View the
     * chart in full screen.
     */
-  var viewFullscreen: js.UndefOr[String] = js.undefined
+  var viewFullscreen: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) An array containing the weekday
     * names.
     */
-  var weekdays: js.UndefOr[js.Array[String]] = js.undefined
+  var weekdays: js.UndefOr[js.Array[String]] = js.native
   /**
     * (Highmaps) The title appearing on hovering the zoom in button. The text
     * itself defaults to "+" and can be changed in the button options.
     */
-  var zoomIn: js.UndefOr[String] = js.undefined
+  var zoomIn: js.UndefOr[String] = js.native
   /**
     * (Highmaps) The title appearing on hovering the zoom out button. The text
     * itself defaults to "-" and can be changed in the button options.
     */
-  var zoomOut: js.UndefOr[String] = js.undefined
+  var zoomOut: js.UndefOr[String] = js.native
 }
 
 object LangOptions {
   @scala.inline
-  def apply(
-    accessibility: LangAccessibilityOptions = null,
-    contextButtonTitle: String = null,
-    decimalPoint: String = null,
-    downloadCSV: String = null,
-    downloadJPEG: String = null,
-    downloadPDF: String = null,
-    downloadPNG: String = null,
-    downloadSVG: String = null,
-    downloadXLS: String = null,
-    drillUpText: String = null,
-    invalidDate: String = null,
-    loading: String = null,
-    months: js.Array[String] = null,
-    navigation: js.Object | LangNavigationOptions = null,
-    noData: String = null,
-    numericSymbolMagnitude: Int | Double = null,
-    numericSymbols: js.Array[String] = null,
-    openInCloud: String = null,
-    printChart: String = null,
-    rangeSelectorFrom: String = null,
-    rangeSelectorTo: String = null,
-    rangeSelectorZoom: String = null,
-    resetZoom: String = null,
-    resetZoomTitle: String = null,
-    shortMonths: js.Array[String] = null,
-    shortWeekdays: js.Array[String] = null,
-    stockTools: js.Object | LangStockToolsOptions = null,
-    thousandsSep: String = null,
-    viewData: String = null,
-    viewFullscreen: String = null,
-    weekdays: js.Array[String] = null,
-    zoomIn: String = null,
-    zoomOut: String = null
-  ): LangOptions = {
+  def apply(): LangOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
-    if (contextButtonTitle != null) __obj.updateDynamic("contextButtonTitle")(contextButtonTitle.asInstanceOf[js.Any])
-    if (decimalPoint != null) __obj.updateDynamic("decimalPoint")(decimalPoint.asInstanceOf[js.Any])
-    if (downloadCSV != null) __obj.updateDynamic("downloadCSV")(downloadCSV.asInstanceOf[js.Any])
-    if (downloadJPEG != null) __obj.updateDynamic("downloadJPEG")(downloadJPEG.asInstanceOf[js.Any])
-    if (downloadPDF != null) __obj.updateDynamic("downloadPDF")(downloadPDF.asInstanceOf[js.Any])
-    if (downloadPNG != null) __obj.updateDynamic("downloadPNG")(downloadPNG.asInstanceOf[js.Any])
-    if (downloadSVG != null) __obj.updateDynamic("downloadSVG")(downloadSVG.asInstanceOf[js.Any])
-    if (downloadXLS != null) __obj.updateDynamic("downloadXLS")(downloadXLS.asInstanceOf[js.Any])
-    if (drillUpText != null) __obj.updateDynamic("drillUpText")(drillUpText.asInstanceOf[js.Any])
-    if (invalidDate != null) __obj.updateDynamic("invalidDate")(invalidDate.asInstanceOf[js.Any])
-    if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (months != null) __obj.updateDynamic("months")(months.asInstanceOf[js.Any])
-    if (navigation != null) __obj.updateDynamic("navigation")(navigation.asInstanceOf[js.Any])
-    if (noData != null) __obj.updateDynamic("noData")(noData.asInstanceOf[js.Any])
-    if (numericSymbolMagnitude != null) __obj.updateDynamic("numericSymbolMagnitude")(numericSymbolMagnitude.asInstanceOf[js.Any])
-    if (numericSymbols != null) __obj.updateDynamic("numericSymbols")(numericSymbols.asInstanceOf[js.Any])
-    if (openInCloud != null) __obj.updateDynamic("openInCloud")(openInCloud.asInstanceOf[js.Any])
-    if (printChart != null) __obj.updateDynamic("printChart")(printChart.asInstanceOf[js.Any])
-    if (rangeSelectorFrom != null) __obj.updateDynamic("rangeSelectorFrom")(rangeSelectorFrom.asInstanceOf[js.Any])
-    if (rangeSelectorTo != null) __obj.updateDynamic("rangeSelectorTo")(rangeSelectorTo.asInstanceOf[js.Any])
-    if (rangeSelectorZoom != null) __obj.updateDynamic("rangeSelectorZoom")(rangeSelectorZoom.asInstanceOf[js.Any])
-    if (resetZoom != null) __obj.updateDynamic("resetZoom")(resetZoom.asInstanceOf[js.Any])
-    if (resetZoomTitle != null) __obj.updateDynamic("resetZoomTitle")(resetZoomTitle.asInstanceOf[js.Any])
-    if (shortMonths != null) __obj.updateDynamic("shortMonths")(shortMonths.asInstanceOf[js.Any])
-    if (shortWeekdays != null) __obj.updateDynamic("shortWeekdays")(shortWeekdays.asInstanceOf[js.Any])
-    if (stockTools != null) __obj.updateDynamic("stockTools")(stockTools.asInstanceOf[js.Any])
-    if (thousandsSep != null) __obj.updateDynamic("thousandsSep")(thousandsSep.asInstanceOf[js.Any])
-    if (viewData != null) __obj.updateDynamic("viewData")(viewData.asInstanceOf[js.Any])
-    if (viewFullscreen != null) __obj.updateDynamic("viewFullscreen")(viewFullscreen.asInstanceOf[js.Any])
-    if (weekdays != null) __obj.updateDynamic("weekdays")(weekdays.asInstanceOf[js.Any])
-    if (zoomIn != null) __obj.updateDynamic("zoomIn")(zoomIn.asInstanceOf[js.Any])
-    if (zoomOut != null) __obj.updateDynamic("zoomOut")(zoomOut.asInstanceOf[js.Any])
     __obj.asInstanceOf[LangOptions]
   }
+  @scala.inline
+  implicit class LangOptionsOps[Self <: LangOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessibility(value: LangAccessibilityOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextButtonTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextButtonTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextButtonTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextButtonTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecimalPoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecimalPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadCSV(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadCSV")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadCSV: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadCSV")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadJPEG(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadJPEG")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadJPEG: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadJPEG")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadPDF(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadPDF")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadPDF: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadPDF")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadPNG(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadPNG")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadPNG: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadPNG")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadSVG(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadSVG")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadSVG: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadSVG")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadXLS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadXLS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadXLS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadXLS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrillUpText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillUpText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrillUpText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillUpText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvalidDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvalidDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoading(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonths(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("months")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("months")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavigation(value: js.Object | LangNavigationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavigation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumericSymbolMagnitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numericSymbolMagnitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumericSymbolMagnitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numericSymbolMagnitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumericSymbols(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numericSymbols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumericSymbols: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numericSymbols")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenInCloud(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openInCloud")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenInCloud: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openInCloud")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrintChart(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printChart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrintChart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printChart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeSelectorFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeSelectorFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeSelectorTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeSelectorTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeSelectorZoom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeSelectorZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeSelectorZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetZoom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResetZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetZoomTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetZoomTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResetZoomTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetZoomTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortMonths(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortMonths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortMonths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortMonths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortWeekdays(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortWeekdays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortWeekdays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortWeekdays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStockTools(value: js.Object | LangStockToolsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stockTools")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStockTools: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stockTools")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThousandsSep(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thousandsSep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThousandsSep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thousandsSep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewFullscreen(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewFullscreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewFullscreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewFullscreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeekdays(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekdays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeekdays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekdays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomIn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomOut(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOut")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

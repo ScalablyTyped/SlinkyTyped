@@ -55,20 +55,77 @@ trait SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputs extends js.Objec
 
 object SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputs {
   @scala.inline
-  def apply(
-    arguments: js.Array[String] = null,
-    environmentVariables: js.Array[SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputsEnvironmentVariable] = null,
-    files: js.Array[SchemaGoogleDevtoolsRemoteworkersV1test2Digest] = null,
-    inlineBlobs: js.Array[SchemaGoogleDevtoolsRemoteworkersV1test2Blob] = null,
-    workingDirectory: String = null
-  ): SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputs = {
+  def apply(): SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputs = {
     val __obj = js.Dynamic.literal()
-    if (arguments != null) __obj.updateDynamic("arguments")(arguments.asInstanceOf[js.Any])
-    if (environmentVariables != null) __obj.updateDynamic("environmentVariables")(environmentVariables.asInstanceOf[js.Any])
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (inlineBlobs != null) __obj.updateDynamic("inlineBlobs")(inlineBlobs.asInstanceOf[js.Any])
-    if (workingDirectory != null) __obj.updateDynamic("workingDirectory")(workingDirectory.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputs]
   }
+  @scala.inline
+  implicit class SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputsOps[Self <: SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArguments(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArguments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentVariables(value: js.Array[SchemaGoogleDevtoolsRemoteworkersV1test2CommandTaskInputsEnvironmentVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiles(value: js.Array[SchemaGoogleDevtoolsRemoteworkersV1test2Digest]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineBlobs(value: js.Array[SchemaGoogleDevtoolsRemoteworkersV1test2Blob]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineBlobs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineBlobs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineBlobs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkingDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkingDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDirectory")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

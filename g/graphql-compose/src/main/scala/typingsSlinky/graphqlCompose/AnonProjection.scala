@@ -5,16 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonProjection extends js.Object {
-  var projection: js.UndefOr[ProjectionType] = js.undefined
+  var projection: js.UndefOr[ProjectionType] = js.native
 }
 
 object AnonProjection {
   @scala.inline
-  def apply(projection: ProjectionType = null): AnonProjection = {
+  def apply(): AnonProjection = {
     val __obj = js.Dynamic.literal()
-    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonProjection]
   }
+  @scala.inline
+  implicit class AnonProjectionOps[Self <: AnonProjection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjection(value: ProjectionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

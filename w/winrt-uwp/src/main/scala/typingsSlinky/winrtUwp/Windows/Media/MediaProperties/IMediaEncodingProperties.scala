@@ -5,13 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Describes the format of a media stream or media container. */
+@js.native
 trait IMediaEncodingProperties extends js.Object {
   /** Gets additional format properties. */
-  var properties: MediaPropertySet
+  var properties: MediaPropertySet = js.native
   /** Gets or sets the subtype of the format. */
-  var subtype: String
+  var subtype: String = js.native
   /** Gets the format type. */
-  var `type`: String
+  var `type`: String = js.native
 }
 
 object IMediaEncodingProperties {
@@ -21,5 +22,31 @@ object IMediaEncodingProperties {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMediaEncodingProperties]
   }
+  @scala.inline
+  implicit class IMediaEncodingPropertiesOps[Self <: IMediaEncodingProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProperties(value: MediaPropertySet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubtype(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

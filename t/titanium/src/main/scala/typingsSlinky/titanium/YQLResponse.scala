@@ -7,45 +7,56 @@ import scala.scalajs.js.annotation._
 /**
   * Properties passed to a yql callback to report a success or failure.
   */
-trait YQLResponse extends js.Object {
-  /**
-  	 * Error code. Returns 0 if `success` is `true`.
-  	 */
-  var code: js.UndefOr[Double] = js.undefined
+@js.native
+trait YQLResponse extends ErrorResponse {
   /**
   	 * The data payload received from the YQL.
   	 */
-  var data: js.UndefOr[js.Any] = js.undefined
-  /**
-  	 * Error message, if any returned.
-  	 */
-  var error: js.UndefOr[String] = js.undefined
+  var data: js.UndefOr[js.Any] = js.native
   /**
   	 * Error message, if any returned. Use `error` instead
+  	 * @deprecated
   	 */
-  var message: js.UndefOr[String] = js.undefined
-  /**
-  	 * Indicates if the operation succeeded.
-  	 */
-  var success: js.UndefOr[Boolean] = js.undefined
+  var message: js.UndefOr[java.lang.String] = js.native
 }
 
 object YQLResponse {
   @scala.inline
-  def apply(
-    code: Int | Double = null,
-    data: js.Any = null,
-    error: String = null,
-    message: String = null,
-    success: js.UndefOr[Boolean] = js.undefined
-  ): YQLResponse = {
+  def apply(): YQLResponse = {
     val __obj = js.Dynamic.literal()
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (!js.isUndefined(success)) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
     __obj.asInstanceOf[YQLResponse]
   }
+  @scala.inline
+  implicit class YQLResponseOps[Self <: YQLResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

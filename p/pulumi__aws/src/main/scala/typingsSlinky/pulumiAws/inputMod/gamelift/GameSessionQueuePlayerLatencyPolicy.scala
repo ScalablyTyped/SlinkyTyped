@@ -19,13 +19,35 @@ trait GameSessionQueuePlayerLatencyPolicy extends js.Object {
 
 object GameSessionQueuePlayerLatencyPolicy {
   @scala.inline
-  def apply(
-    maximumIndividualPlayerLatencyMilliseconds: Input[Double],
-    policyDurationSeconds: Input[Double] = null
-  ): GameSessionQueuePlayerLatencyPolicy = {
+  def apply(maximumIndividualPlayerLatencyMilliseconds: Input[Double]): GameSessionQueuePlayerLatencyPolicy = {
     val __obj = js.Dynamic.literal(maximumIndividualPlayerLatencyMilliseconds = maximumIndividualPlayerLatencyMilliseconds.asInstanceOf[js.Any])
-    if (policyDurationSeconds != null) __obj.updateDynamic("policyDurationSeconds")(policyDurationSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[GameSessionQueuePlayerLatencyPolicy]
   }
+  @scala.inline
+  implicit class GameSessionQueuePlayerLatencyPolicyOps[Self <: GameSessionQueuePlayerLatencyPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaximumIndividualPlayerLatencyMilliseconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumIndividualPlayerLatencyMilliseconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolicyDurationSeconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyDurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyDurationSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

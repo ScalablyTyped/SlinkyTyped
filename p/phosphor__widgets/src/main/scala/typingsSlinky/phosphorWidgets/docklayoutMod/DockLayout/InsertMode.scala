@@ -22,18 +22,16 @@ trait InsertMode extends js.Object
 
 object InsertMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `split-bottom`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-bottom` = "split-bottom".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-bottom`]
   @scala.inline
-  def `split-bottom`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-bottom` = this.cast("split-bottom")
+  def `split-left`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-left` = "split-left".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-left`]
   @scala.inline
-  def `split-left`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-left` = this.cast("split-left")
+  def `split-right`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-right` = "split-right".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-right`]
   @scala.inline
-  def `split-right`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-right` = this.cast("split-right")
+  def `split-top`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-top` = "split-top".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-top`]
   @scala.inline
-  def `split-top`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`split-top` = this.cast("split-top")
+  def `tab-after`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`tab-after` = "tab-after".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`tab-after`]
   @scala.inline
-  def `tab-after`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`tab-after` = this.cast("tab-after")
-  @scala.inline
-  def `tab-before`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`tab-before` = this.cast("tab-before")
+  def `tab-before`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`tab-before` = "tab-before".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`tab-before`]
 }
 

@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-dotDensity.html)
   */
+@js.native
 trait dotDensity extends js.Object {
   /**
     * Generates a [DotDensityRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html) based on one or more complementary numeric fields and/or Arcade expressions. This method will determine an appropriate [dotValue](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html#dotValue) for the data at the scale of the provided view.  For example, suppose you have a layer of U.S. counties with fields containing the total sales of various crops: wheat, soybeans, corn, cotton, and vegetables. If a feature has the following values for each field:
@@ -36,9 +37,10 @@ trait dotDensity extends js.Object {
     * @param params.outlineOptimizationEnabled Indicates whether the polygon outline width should vary based on view scale. When false, no outline will be used in the output renderer.
     * @param params.legendOptions Provides options for modifying [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) properties describing the visualization.
     * @param params.dotDensityScheme In authoring apps, the user may select a pre-defined dot density scheme. Pass the scheme object to this property to avoid getting one based on the `basemap`.
+    * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def createRenderer(params: dotDensityCreateRendererParams): js.Promise[RendererResult]
+  def createRenderer(params: dotDensityCreateRendererParams): js.Promise[RendererResult] = js.native
 }
 
 @JSGlobal("__esri.dotDensity")

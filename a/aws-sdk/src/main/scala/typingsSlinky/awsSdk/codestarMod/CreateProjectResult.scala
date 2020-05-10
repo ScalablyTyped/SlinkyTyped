@@ -26,16 +26,53 @@ trait CreateProjectResult extends js.Object {
 
 object CreateProjectResult {
   @scala.inline
-  def apply(
-    arn: ProjectArn,
-    id: ProjectId,
-    clientRequestToken: ClientRequestToken = null,
-    projectTemplateId: ProjectTemplateId = null
-  ): CreateProjectResult = {
+  def apply(arn: ProjectArn, id: ProjectId): CreateProjectResult = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
-    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
-    if (projectTemplateId != null) __obj.updateDynamic("projectTemplateId")(projectTemplateId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateProjectResult]
   }
+  @scala.inline
+  implicit class CreateProjectResultOps[Self <: CreateProjectResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: ProjectArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: ProjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectTemplateId(value: ProjectTemplateId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectTemplateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectTemplateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectTemplateId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

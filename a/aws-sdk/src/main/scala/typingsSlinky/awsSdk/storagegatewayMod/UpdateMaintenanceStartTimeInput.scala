@@ -27,17 +27,59 @@ trait UpdateMaintenanceStartTimeInput extends js.Object {
 
 object UpdateMaintenanceStartTimeInput {
   @scala.inline
-  def apply(
-    GatewayARN: GatewayARN,
-    HourOfDay: HourOfDay,
-    MinuteOfHour: MinuteOfHour,
-    DayOfMonth: Int | Double = null,
-    DayOfWeek: Int | Double = null
-  ): UpdateMaintenanceStartTimeInput = {
+  def apply(GatewayARN: GatewayARN, HourOfDay: HourOfDay, MinuteOfHour: MinuteOfHour): UpdateMaintenanceStartTimeInput = {
     val __obj = js.Dynamic.literal(GatewayARN = GatewayARN.asInstanceOf[js.Any], HourOfDay = HourOfDay.asInstanceOf[js.Any], MinuteOfHour = MinuteOfHour.asInstanceOf[js.Any])
-    if (DayOfMonth != null) __obj.updateDynamic("DayOfMonth")(DayOfMonth.asInstanceOf[js.Any])
-    if (DayOfWeek != null) __obj.updateDynamic("DayOfWeek")(DayOfWeek.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateMaintenanceStartTimeInput]
   }
+  @scala.inline
+  implicit class UpdateMaintenanceStartTimeInputOps[Self <: UpdateMaintenanceStartTimeInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHourOfDay(value: HourOfDay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HourOfDay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinuteOfHour(value: MinuteOfHour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinuteOfHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDayOfMonth(value: DayOfMonth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DayOfMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayOfMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DayOfMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDayOfWeek(value: DayOfWeek): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DayOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DayOfWeek")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

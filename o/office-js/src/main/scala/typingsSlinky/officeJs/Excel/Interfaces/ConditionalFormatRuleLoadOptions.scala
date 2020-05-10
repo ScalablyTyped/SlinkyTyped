@@ -40,3 +40,67 @@ trait ConditionalFormatRuleLoadOptions extends js.Object {
   var formulaR1C1: js.UndefOr[Boolean] = js.native
 }
 
+object ConditionalFormatRuleLoadOptions {
+  @scala.inline
+  def apply(): ConditionalFormatRuleLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ConditionalFormatRuleLoadOptions]
+  }
+  @scala.inline
+  implicit class ConditionalFormatRuleLoadOptionsOps[Self <: ConditionalFormatRuleLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormula(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormula: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormulaLocal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaLocal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormulaLocal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaLocal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormulaR1C1(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaR1C1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormulaR1C1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaR1C1")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

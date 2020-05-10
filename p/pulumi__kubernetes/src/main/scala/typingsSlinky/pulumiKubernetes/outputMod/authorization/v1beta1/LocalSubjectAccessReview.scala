@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   * given namespace. Having a namespace scoped resource makes it much easier to grant namespace
   * scoped policy that includes permissions checking.
   */
+@js.native
 trait LocalSubjectAccessReview extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -18,24 +19,24 @@ trait LocalSubjectAccessReview extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  val apiVersion: authorizationDotk8sDotioSlashv1beta1
+  val apiVersion: authorizationDotk8sDotioSlashv1beta1 = js.native
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.LocalSubjectAccessReview
-  val metadata: ObjectMeta
+  val kind: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.LocalSubjectAccessReview = js.native
+  val metadata: ObjectMeta = js.native
   /**
     * Spec holds information about the request being evaluated.  spec.namespace must be equal to
     * the namespace you made the request against.  If empty, it is defaulted.
     */
-  val spec: SubjectAccessReviewSpec
+  val spec: SubjectAccessReviewSpec = js.native
   /**
     * Status is filled in by the server and indicates whether the request is allowed or not
     */
-  val status: SubjectAccessReviewStatus
+  val status: SubjectAccessReviewStatus = js.native
 }
 
 object LocalSubjectAccessReview {
@@ -48,8 +49,45 @@ object LocalSubjectAccessReview {
     status: SubjectAccessReviewStatus
   ): LocalSubjectAccessReview = {
     val __obj = js.Dynamic.literal(apiVersion = apiVersion.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], spec = spec.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[LocalSubjectAccessReview]
   }
+  @scala.inline
+  implicit class LocalSubjectAccessReviewOps[Self <: LocalSubjectAccessReview] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiVersion(value: authorizationDotk8sDotioSlashv1beta1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.LocalSubjectAccessReview): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: ObjectMeta): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpec(value: SubjectAccessReviewSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: SubjectAccessReviewStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

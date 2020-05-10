@@ -1,6 +1,5 @@
 package typingsSlinky.cypress.sinonMod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,7 +52,7 @@ trait SinonFakeTimers extends js.Object {
     * without affecting timers, intervals or immediates.
     * @param now The new 'now' as a JavaScript Date
     */
-  def setSystemTime(date: Date): Unit = js.native
+  def setSystemTime(date: js.Date): Unit = js.native
   /**
     * Simulate the user changing the system clock while your program is running. It changes the 'now' timestamp
     * without affecting timers, intervals or immediates.

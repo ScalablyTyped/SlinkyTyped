@@ -20,11 +20,41 @@ trait SchemaInterconnectAttachmentsScopedList extends js.Object {
 
 object SchemaInterconnectAttachmentsScopedList {
   @scala.inline
-  def apply(interconnectAttachments: js.Array[SchemaInterconnectAttachment] = null, warning: AnonCode = null): SchemaInterconnectAttachmentsScopedList = {
+  def apply(): SchemaInterconnectAttachmentsScopedList = {
     val __obj = js.Dynamic.literal()
-    if (interconnectAttachments != null) __obj.updateDynamic("interconnectAttachments")(interconnectAttachments.asInstanceOf[js.Any])
-    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInterconnectAttachmentsScopedList]
   }
+  @scala.inline
+  implicit class SchemaInterconnectAttachmentsScopedListOps[Self <: SchemaInterconnectAttachmentsScopedList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInterconnectAttachments(value: js.Array[SchemaInterconnectAttachment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interconnectAttachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterconnectAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interconnectAttachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: AnonCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

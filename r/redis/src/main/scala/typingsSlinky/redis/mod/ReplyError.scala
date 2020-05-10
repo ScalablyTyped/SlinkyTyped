@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 @JSImport("redis", "ReplyError")
 @js.native
 class ReplyError () extends Error {
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
+  var args: js.UndefOr[js.Array[_]] = js.native
+  var code: String = js.native
+  var command: String = js.native
 }
 

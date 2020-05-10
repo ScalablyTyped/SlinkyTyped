@@ -7,75 +7,233 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxPolarChartCommonAxisSettings extends js.Object {
   /** Specifies whether to allow decimal values on the axis. When false, the axis contains integer values only. */
-  var allowDecimals: js.UndefOr[Boolean] = js.undefined
+  var allowDecimals: js.UndefOr[Boolean] = js.native
   /** Specifies the color of the line that represents an axis. */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
   /** Specifies the appearance of all the widget's constant lines. */
-  var constantLineStyle: js.UndefOr[dxPolarChartCommonAxisSettingsConstantLineStyle] = js.undefined
+  var constantLineStyle: js.UndefOr[dxPolarChartCommonAxisSettingsConstantLineStyle] = js.native
   /** Specifies whether ticks/grid lines of a discrete axis are located between labels or cross the labels. */
-  var discreteAxisDivisionMode: js.UndefOr[betweenLabels | crossLabels] = js.undefined
+  var discreteAxisDivisionMode: js.UndefOr[betweenLabels | crossLabels] = js.native
   /** Specifies whether to force the axis to start and end on ticks. */
-  var endOnTick: js.UndefOr[Boolean] = js.undefined
+  var endOnTick: js.UndefOr[Boolean] = js.native
   /** An object defining the configuration options for the grid lines of an axis in the PolarChart widget. */
-  var grid: js.UndefOr[AnonColorOpacity] = js.undefined
+  var grid: js.UndefOr[AnonColorOpacity] = js.native
   /** Indicates whether or not an axis is inverted. */
-  var inverted: js.UndefOr[Boolean] = js.undefined
+  var inverted: js.UndefOr[Boolean] = js.native
   /** An object defining the label configuration options that are common for all axes in the PolarChart widget. */
-  var label: js.UndefOr[dxPolarChartCommonAxisSettingsLabel] = js.undefined
+  var label: js.UndefOr[dxPolarChartCommonAxisSettingsLabel] = js.native
   /** Specifies the options of the minor grid. */
-  var minorGrid: js.UndefOr[AnonColorOpacity] = js.undefined
+  var minorGrid: js.UndefOr[AnonColorOpacity] = js.native
   /** Specifies the options of the minor ticks. */
-  var minorTick: js.UndefOr[dxPolarChartCommonAxisSettingsMinorTick] = js.undefined
+  var minorTick: js.UndefOr[dxPolarChartCommonAxisSettingsMinorTick] = js.native
   /** Specifies the opacity of the line that represents an axis. */
-  var opacity: js.UndefOr[Double] = js.undefined
+  var opacity: js.UndefOr[Double] = js.native
   /** An object defining configuration options for strip style. */
-  var stripStyle: js.UndefOr[dxPolarChartCommonAxisSettingsStripStyle] = js.undefined
+  var stripStyle: js.UndefOr[dxPolarChartCommonAxisSettingsStripStyle] = js.native
   /** An object defining the configuration options for axis ticks. */
-  var tick: js.UndefOr[dxPolarChartCommonAxisSettingsTick] = js.undefined
+  var tick: js.UndefOr[dxPolarChartCommonAxisSettingsTick] = js.native
   /** Indicates whether or not the line that represents an axis in a chart is visible. */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
   /** Specifies the width of the line that represents an axis in the chart. */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
 }
 
 object dxPolarChartCommonAxisSettings {
   @scala.inline
-  def apply(
-    allowDecimals: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    constantLineStyle: dxPolarChartCommonAxisSettingsConstantLineStyle = null,
-    discreteAxisDivisionMode: betweenLabels | crossLabels = null,
-    endOnTick: js.UndefOr[Boolean] = js.undefined,
-    grid: AnonColorOpacity = null,
-    inverted: js.UndefOr[Boolean] = js.undefined,
-    label: dxPolarChartCommonAxisSettingsLabel = null,
-    minorGrid: AnonColorOpacity = null,
-    minorTick: dxPolarChartCommonAxisSettingsMinorTick = null,
-    opacity: Int | Double = null,
-    stripStyle: dxPolarChartCommonAxisSettingsStripStyle = null,
-    tick: dxPolarChartCommonAxisSettingsTick = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): dxPolarChartCommonAxisSettings = {
+  def apply(): dxPolarChartCommonAxisSettings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (constantLineStyle != null) __obj.updateDynamic("constantLineStyle")(constantLineStyle.asInstanceOf[js.Any])
-    if (discreteAxisDivisionMode != null) __obj.updateDynamic("discreteAxisDivisionMode")(discreteAxisDivisionMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(endOnTick)) __obj.updateDynamic("endOnTick")(endOnTick.asInstanceOf[js.Any])
-    if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (minorGrid != null) __obj.updateDynamic("minorGrid")(minorGrid.asInstanceOf[js.Any])
-    if (minorTick != null) __obj.updateDynamic("minorTick")(minorTick.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (stripStyle != null) __obj.updateDynamic("stripStyle")(stripStyle.asInstanceOf[js.Any])
-    if (tick != null) __obj.updateDynamic("tick")(tick.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPolarChartCommonAxisSettings]
   }
+  @scala.inline
+  implicit class dxPolarChartCommonAxisSettingsOps[Self <: dxPolarChartCommonAxisSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowDecimals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDecimals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDecimals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConstantLineStyle(value: dxPolarChartCommonAxisSettingsConstantLineStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constantLineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstantLineStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constantLineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiscreteAxisDivisionMode(value: betweenLabels | crossLabels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discreteAxisDivisionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiscreteAxisDivisionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discreteAxisDivisionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndOnTick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOnTick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndOnTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOnTick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrid(value: AnonColorOpacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInverted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInverted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: dxPolarChartCommonAxisSettingsLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorGrid(value: AnonColorOpacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGrid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorGrid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorGrid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTick(value: dxPolarChartCommonAxisSettingsMinorTick): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStripStyle(value: dxPolarChartCommonAxisSettingsStripStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStripStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTick(value: dxPolarChartCommonAxisSettingsTick): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

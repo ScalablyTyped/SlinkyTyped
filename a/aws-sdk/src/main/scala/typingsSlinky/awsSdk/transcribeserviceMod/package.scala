@@ -68,6 +68,13 @@ package object transcribeserviceMod {
   type OutputLocationType = typingsSlinky.awsSdk.transcribeserviceMod._OutputLocationType | java.lang.String
   type Phrase = java.lang.String
   type Phrases = js.Array[typingsSlinky.awsSdk.transcribeserviceMod.Phrase]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.redacted
+    - typingsSlinky.awsSdk.awsSdkStrings.redacted_and_unredacted
+    - java.lang.String
+  */
+  type RedactionOutput = typingsSlinky.awsSdk.transcribeserviceMod._RedactionOutput | java.lang.String
+  type RedactionType = typingsSlinky.awsSdk.awsSdkStrings.PII | java.lang.String
   type TranscriptionJobName = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.QUEUED

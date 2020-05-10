@@ -26,18 +26,65 @@ trait AggregationAuthorization extends js.Object {
 
 object AggregationAuthorization {
   @scala.inline
-  def apply(
-    AggregationAuthorizationArn: String = null,
-    AuthorizedAccountId: AccountId = null,
-    AuthorizedAwsRegion: AwsRegion = null,
-    CreationTime: js.Date = null
-  ): AggregationAuthorization = {
+  def apply(): AggregationAuthorization = {
     val __obj = js.Dynamic.literal()
-    if (AggregationAuthorizationArn != null) __obj.updateDynamic("AggregationAuthorizationArn")(AggregationAuthorizationArn.asInstanceOf[js.Any])
-    if (AuthorizedAccountId != null) __obj.updateDynamic("AuthorizedAccountId")(AuthorizedAccountId.asInstanceOf[js.Any])
-    if (AuthorizedAwsRegion != null) __obj.updateDynamic("AuthorizedAwsRegion")(AuthorizedAwsRegion.asInstanceOf[js.Any])
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[AggregationAuthorization]
   }
+  @scala.inline
+  implicit class AggregationAuthorizationOps[Self <: AggregationAuthorization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregationAuthorizationArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregationAuthorizationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregationAuthorizationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregationAuthorizationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizedAccountId(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizedAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizedAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizedAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizedAwsRegion(value: AwsRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizedAwsRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizedAwsRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizedAwsRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

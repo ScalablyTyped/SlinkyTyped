@@ -1,7 +1,6 @@
 package typingsSlinky.vueI18n.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Date
 import typingsSlinky.vue.vueMod.Vue
 import typingsSlinky.vueI18n.mod.VueI18n.PluralizationRulesMap
 import scala.scalajs.js
@@ -33,11 +32,11 @@ trait VueI18n_ extends js.Object {
     key: typingsSlinky.vueI18n.mod.VueI18n.Path,
     locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
   ): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-  def d(value: Date): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-  def d(value: Date, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
-  def d(value: Date, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+  def d(value: js.Date): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+  def d(value: js.Date, args: StringDictionary[String]): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
+  def d(value: js.Date, key: typingsSlinky.vueI18n.mod.VueI18n.Path): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native
   def d(
-    value: Date,
+    value: js.Date,
     key: typingsSlinky.vueI18n.mod.VueI18n.Path,
     locale: typingsSlinky.vueI18n.mod.VueI18n.Locale
   ): typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult = js.native

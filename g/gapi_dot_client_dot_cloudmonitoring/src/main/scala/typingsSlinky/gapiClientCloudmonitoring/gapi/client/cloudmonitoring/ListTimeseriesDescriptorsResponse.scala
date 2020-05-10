@@ -4,38 +4,96 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListTimeseriesDescriptorsResponse extends js.Object {
   /** Identifies what kind of resource this is. Value: the fixed string "cloudmonitoring#listTimeseriesDescriptorsResponse". */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /**
     * Pagination token. If present, indicates that additional results are available for retrieval. To access the results past the pagination limit, set this
     * value to the pageToken query parameter.
     */
-  var nextPageToken: js.UndefOr[String] = js.undefined
+  var nextPageToken: js.UndefOr[String] = js.native
   /** The oldest timestamp of the interval of this query, as an RFC 3339 string. */
-  var oldest: js.UndefOr[String] = js.undefined
+  var oldest: js.UndefOr[String] = js.native
   /** The returned time series descriptors. */
-  var timeseries: js.UndefOr[js.Array[TimeseriesDescriptor]] = js.undefined
+  var timeseries: js.UndefOr[js.Array[TimeseriesDescriptor]] = js.native
   /** The youngest timestamp of the interval of this query, as an RFC 3339 string. */
-  var youngest: js.UndefOr[String] = js.undefined
+  var youngest: js.UndefOr[String] = js.native
 }
 
 object ListTimeseriesDescriptorsResponse {
   @scala.inline
-  def apply(
-    kind: String = null,
-    nextPageToken: String = null,
-    oldest: String = null,
-    timeseries: js.Array[TimeseriesDescriptor] = null,
-    youngest: String = null
-  ): ListTimeseriesDescriptorsResponse = {
+  def apply(): ListTimeseriesDescriptorsResponse = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (oldest != null) __obj.updateDynamic("oldest")(oldest.asInstanceOf[js.Any])
-    if (timeseries != null) __obj.updateDynamic("timeseries")(timeseries.asInstanceOf[js.Any])
-    if (youngest != null) __obj.updateDynamic("youngest")(youngest.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTimeseriesDescriptorsResponse]
   }
+  @scala.inline
+  implicit class ListTimeseriesDescriptorsResponseOps[Self <: ListTimeseriesDescriptorsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeseries(value: js.Array[TimeseriesDescriptor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeseries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeseries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeseries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYoungest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("youngest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYoungest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("youngest")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

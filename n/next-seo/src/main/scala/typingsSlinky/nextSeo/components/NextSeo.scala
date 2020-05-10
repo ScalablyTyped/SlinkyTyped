@@ -1,9 +1,7 @@
 package typingsSlinky.nextSeo.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.nextSeo.mod.Config
 import typingsSlinky.nextSeo.mod.NextSeoProps
 import typingsSlinky.nextSeo.mod.default
@@ -11,18 +9,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NextSeo
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object NextSeo {
   @JSImport("next-seo", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(config: Config, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: NextSeoProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(config: Config): Default[tag.type, default] = {
+    val __props = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
+    new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[NextSeoProps]))
   }
-  type Props = NextSeoProps
 }
 

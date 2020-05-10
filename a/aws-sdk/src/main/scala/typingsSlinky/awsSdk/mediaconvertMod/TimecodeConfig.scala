@@ -26,18 +26,65 @@ trait TimecodeConfig extends js.Object {
 
 object TimecodeConfig {
   @scala.inline
-  def apply(
-    Anchor: stringPattern010920405090509092 = null,
-    Source: TimecodeSource = null,
-    Start: stringPattern010920405090509092 = null,
-    TimestampOffset: stringPattern0940191020191209301 = null
-  ): TimecodeConfig = {
+  def apply(): TimecodeConfig = {
     val __obj = js.Dynamic.literal()
-    if (Anchor != null) __obj.updateDynamic("Anchor")(Anchor.asInstanceOf[js.Any])
-    if (Source != null) __obj.updateDynamic("Source")(Source.asInstanceOf[js.Any])
-    if (Start != null) __obj.updateDynamic("Start")(Start.asInstanceOf[js.Any])
-    if (TimestampOffset != null) __obj.updateDynamic("TimestampOffset")(TimestampOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimecodeConfig]
   }
+  @scala.inline
+  implicit class TimecodeConfigOps[Self <: TimecodeConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnchor(value: stringPattern010920405090509092): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Anchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: TimecodeSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: stringPattern010920405090509092): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestampOffset(value: stringPattern0940191020191209301): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestampOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampOffset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

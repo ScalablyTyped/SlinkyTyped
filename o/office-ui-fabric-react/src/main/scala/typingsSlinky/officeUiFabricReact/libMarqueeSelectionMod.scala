@@ -2,7 +2,6 @@ package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.marqueeSelectionTypesMod.IMarqueeSelectionProps
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.change
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneState
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptions
@@ -32,7 +31,7 @@ object libMarqueeSelectionMod extends js.Object {
   }
   
   val MarqueeSelection: ReactComponentClass[IMarqueeSelectionProps] = js.native
-  val SELECTION_CHANGE: change = js.native
+  val SELECTION_CHANGE: /* "change" */ String = js.native
   @js.native
   object SelectionDirection extends js.Object {
     /* 0 */ val horizontal: typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionDirection.horizontal with Double = js.native

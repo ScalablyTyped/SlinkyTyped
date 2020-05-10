@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonConstraint extends js.Object {
-  var constraint: js.UndefOr[String] = js.undefined
-  var fields: js.UndefOr[js.Array[String]] = js.undefined
-  var message: js.UndefOr[String] = js.undefined
-  var parent: js.UndefOr[js.Error] = js.undefined
-  var table: js.UndefOr[String] = js.undefined
+  var constraint: js.UndefOr[String] = js.native
+  var fields: js.UndefOr[js.Array[String]] = js.native
+  var message: js.UndefOr[String] = js.native
+  var parent: js.UndefOr[js.Error] = js.native
+  var table: js.UndefOr[String] = js.native
 }
 
 object AnonConstraint {
   @scala.inline
-  def apply(
-    constraint: String = null,
-    fields: js.Array[String] = null,
-    message: String = null,
-    parent: js.Error = null,
-    table: String = null
-  ): AnonConstraint = {
+  def apply(): AnonConstraint = {
     val __obj = js.Dynamic.literal()
-    if (constraint != null) __obj.updateDynamic("constraint")(constraint.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonConstraint]
   }
+  @scala.inline
+  implicit class AnonConstraintOps[Self <: AnonConstraint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstraint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstraint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Error): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTable(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

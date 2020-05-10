@@ -18,10 +18,35 @@ trait DescribeEventDetailsForOrganizationRequest extends js.Object {
 
 object DescribeEventDetailsForOrganizationRequest {
   @scala.inline
-  def apply(organizationEventDetailFilters: OrganizationEventDetailFiltersList, locale: locale = null): DescribeEventDetailsForOrganizationRequest = {
+  def apply(organizationEventDetailFilters: OrganizationEventDetailFiltersList): DescribeEventDetailsForOrganizationRequest = {
     val __obj = js.Dynamic.literal(organizationEventDetailFilters = organizationEventDetailFilters.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEventDetailsForOrganizationRequest]
   }
+  @scala.inline
+  implicit class DescribeEventDetailsForOrganizationRequestOps[Self <: DescribeEventDetailsForOrganizationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrganizationEventDetailFilters(value: OrganizationEventDetailFiltersList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organizationEventDetailFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocale(value: locale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

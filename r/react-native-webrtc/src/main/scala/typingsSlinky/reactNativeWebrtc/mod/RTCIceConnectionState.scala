@@ -17,20 +17,18 @@ trait RTCIceConnectionState extends js.Object
 
 object RTCIceConnectionState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def checking: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.checking = "checking".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.checking]
   @scala.inline
-  def checking: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.checking = this.cast("checking")
+  def closed: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.closed = "closed".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.closed = this.cast("closed")
+  def completed: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.completed = "completed".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.completed]
   @scala.inline
-  def completed: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.completed = this.cast("completed")
+  def connected: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.connected = "connected".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.connected]
   @scala.inline
-  def connected: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.connected = this.cast("connected")
+  def disconnected: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.disconnected = "disconnected".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.disconnected]
   @scala.inline
-  def disconnected: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.disconnected = this.cast("disconnected")
+  def failed: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.failed = "failed".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.failed = this.cast("failed")
-  @scala.inline
-  def `new`: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`new` = this.cast("new")
+  def `new`: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`new` = "new".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`new`]
 }
 

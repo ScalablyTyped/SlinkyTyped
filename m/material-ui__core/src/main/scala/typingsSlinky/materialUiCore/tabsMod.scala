@@ -1,10 +1,9 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.tabsTabsMod.TabsProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object tabsMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[TabsProps, ComponentState, js.Any] {
+    extends Component[TabsProps, js.Object, js.Any] {
     def this(props: TabsProps) = this()
     def this(props: TabsProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[TabsProps]]
+  object default extends TopLevel[ReactComponentClass[TabsProps]]
   
 }
 

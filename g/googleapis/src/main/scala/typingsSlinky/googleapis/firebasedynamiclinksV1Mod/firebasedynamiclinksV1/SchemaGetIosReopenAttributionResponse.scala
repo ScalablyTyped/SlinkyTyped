@@ -45,24 +45,101 @@ trait SchemaGetIosReopenAttributionResponse extends js.Object {
 
 object SchemaGetIosReopenAttributionResponse {
   @scala.inline
-  def apply(
-    deepLink: String = null,
-    invitationId: String = null,
-    iosMinAppVersion: String = null,
-    resolvedLink: String = null,
-    utmCampaign: String = null,
-    utmMedium: String = null,
-    utmSource: String = null
-  ): SchemaGetIosReopenAttributionResponse = {
+  def apply(): SchemaGetIosReopenAttributionResponse = {
     val __obj = js.Dynamic.literal()
-    if (deepLink != null) __obj.updateDynamic("deepLink")(deepLink.asInstanceOf[js.Any])
-    if (invitationId != null) __obj.updateDynamic("invitationId")(invitationId.asInstanceOf[js.Any])
-    if (iosMinAppVersion != null) __obj.updateDynamic("iosMinAppVersion")(iosMinAppVersion.asInstanceOf[js.Any])
-    if (resolvedLink != null) __obj.updateDynamic("resolvedLink")(resolvedLink.asInstanceOf[js.Any])
-    if (utmCampaign != null) __obj.updateDynamic("utmCampaign")(utmCampaign.asInstanceOf[js.Any])
-    if (utmMedium != null) __obj.updateDynamic("utmMedium")(utmMedium.asInstanceOf[js.Any])
-    if (utmSource != null) __obj.updateDynamic("utmSource")(utmSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetIosReopenAttributionResponse]
   }
+  @scala.inline
+  implicit class SchemaGetIosReopenAttributionResponseOps[Self <: SchemaGetIosReopenAttributionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeepLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deepLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeepLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deepLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIosMinAppVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosMinAppVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIosMinAppVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosMinAppVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvedLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolvedLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtmCampaign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmCampaign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtmCampaign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmCampaign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtmMedium(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmMedium")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtmMedium: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmMedium")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtmSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtmSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utmSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

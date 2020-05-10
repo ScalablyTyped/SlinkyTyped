@@ -2,49 +2,158 @@ package typingsSlinky.memoizee.mod
 
 import typingsSlinky.memoizee.memoizeeBooleans.`false`
 import typingsSlinky.memoizee.memoizeeBooleans.`true`
+import typingsSlinky.std.Parameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait Options extends js.Object {
-  var async: js.UndefOr[Boolean] = js.undefined
-  var dispose: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.undefined
-  var length: js.UndefOr[Double | `false`] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var maxAge: js.UndefOr[Double] = js.undefined
-  var normalizer: js.UndefOr[js.Function1[/* args */ js.Array[_], String]] = js.undefined
-  var preFetch: js.UndefOr[Double | `true`] = js.undefined
-  var primitive: js.UndefOr[Boolean] = js.undefined
-  var promise: js.UndefOr[Boolean] = js.undefined
-  var resolvers: js.UndefOr[js.Array[js.Function1[/* arg */ _, _]]] = js.undefined
+@js.native
+trait Options[F /* <: js.Function1[/* repeated */ js.Any, _] */] extends js.Object {
+  var async: js.UndefOr[Boolean] = js.native
+  var dispose: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.native
+  var length: js.UndefOr[Double | `false`] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var maxAge: js.UndefOr[Double] = js.native
+  var normalizer: js.UndefOr[js.Function1[/* args */ Parameters[F], String]] = js.native
+  var preFetch: js.UndefOr[Double | `true`] = js.native
+  var primitive: js.UndefOr[Boolean] = js.native
+  var promise: js.UndefOr[Boolean] = js.native
+  var resolvers: js.UndefOr[js.Array[js.Function1[/* arg */ _, _]]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    async: js.UndefOr[Boolean] = js.undefined,
-    dispose: /* value */ js.Any => Unit = null,
-    length: Double | `false` = null,
-    max: Int | Double = null,
-    maxAge: Int | Double = null,
-    normalizer: /* args */ js.Array[_] => String = null,
-    preFetch: Double | `true` = null,
-    primitive: js.UndefOr[Boolean] = js.undefined,
-    promise: js.UndefOr[Boolean] = js.undefined,
-    resolvers: js.Array[js.Function1[/* arg */ _, _]] = null
-  ): Options = {
+  def apply[F](): Options[F] = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(async)) __obj.updateDynamic("async")(async.asInstanceOf[js.Any])
-    if (dispose != null) __obj.updateDynamic("dispose")(js.Any.fromFunction1(dispose))
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
-    if (normalizer != null) __obj.updateDynamic("normalizer")(js.Any.fromFunction1(normalizer))
-    if (preFetch != null) __obj.updateDynamic("preFetch")(preFetch.asInstanceOf[js.Any])
-    if (!js.isUndefined(primitive)) __obj.updateDynamic("primitive")(primitive.asInstanceOf[js.Any])
-    if (!js.isUndefined(promise)) __obj.updateDynamic("promise")(promise.asInstanceOf[js.Any])
-    if (resolvers != null) __obj.updateDynamic("resolvers")(resolvers.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Options]
+    __obj.asInstanceOf[Options[F]]
   }
+  @scala.inline
+  implicit class OptionsOps[Self[f] <: Options[f], F] (val x: Self[F]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[F] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[F]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[F] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[F] with Other]
+    @scala.inline
+    def withAsync(value: Boolean): Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsync: Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDispose(value: /* value */ js.Any => Unit): Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDispose: Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double | `false`): Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAge(value: Double): Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAge: Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormalizer(value: /* args */ Parameters[F] => String): Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNormalizer: Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreFetch(value: Double | `true`): Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preFetch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreFetch: Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preFetch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimitive(value: Boolean): Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primitive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimitive: Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primitive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPromise(value: Boolean): Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromise: Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvers(value: js.Array[js.Function1[/* arg */ _, _]]): Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolvers: Self[F] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

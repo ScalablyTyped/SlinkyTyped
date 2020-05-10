@@ -46,25 +46,107 @@ trait UpdateJobExecutionRequest extends js.Object {
 
 object UpdateJobExecutionRequest {
   @scala.inline
-  def apply(
-    jobId: JobId,
-    status: JobExecutionStatus,
-    thingName: ThingName,
-    executionNumber: Int | Double = null,
-    expectedVersion: Int | Double = null,
-    includeJobDocument: js.UndefOr[Boolean] = js.undefined,
-    includeJobExecutionState: js.UndefOr[Boolean] = js.undefined,
-    statusDetails: DetailsMap = null,
-    stepTimeoutInMinutes: Int | Double = null
-  ): UpdateJobExecutionRequest = {
+  def apply(jobId: JobId, status: JobExecutionStatus, thingName: ThingName): UpdateJobExecutionRequest = {
     val __obj = js.Dynamic.literal(jobId = jobId.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], thingName = thingName.asInstanceOf[js.Any])
-    if (executionNumber != null) __obj.updateDynamic("executionNumber")(executionNumber.asInstanceOf[js.Any])
-    if (expectedVersion != null) __obj.updateDynamic("expectedVersion")(expectedVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeJobDocument)) __obj.updateDynamic("includeJobDocument")(includeJobDocument.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeJobExecutionState)) __obj.updateDynamic("includeJobExecutionState")(includeJobExecutionState.asInstanceOf[js.Any])
-    if (statusDetails != null) __obj.updateDynamic("statusDetails")(statusDetails.asInstanceOf[js.Any])
-    if (stepTimeoutInMinutes != null) __obj.updateDynamic("stepTimeoutInMinutes")(stepTimeoutInMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateJobExecutionRequest]
   }
+  @scala.inline
+  implicit class UpdateJobExecutionRequestOps[Self <: UpdateJobExecutionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobId(value: JobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: JobExecutionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThingName(value: ThingName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExecutionNumber(value: ExecutionNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpectedVersion(value: ExpectedVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpectedVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeJobDocument(value: IncludeJobDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeJobDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeJobDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeJobDocument")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeJobExecutionState(value: IncludeExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeJobExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeJobExecutionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeJobExecutionState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusDetails(value: DetailsMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepTimeoutInMinutes(value: StepTimeoutInMinutes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepTimeoutInMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepTimeoutInMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepTimeoutInMinutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

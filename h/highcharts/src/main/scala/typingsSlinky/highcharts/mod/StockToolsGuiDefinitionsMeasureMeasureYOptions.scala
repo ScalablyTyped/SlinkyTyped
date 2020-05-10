@@ -4,19 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StockToolsGuiDefinitionsMeasureMeasureYOptions extends js.Object {
   /**
     * (Highstock) A predefined background symbol for the button.
     */
-  var symbol: js.UndefOr[String] = js.undefined
+  var symbol: js.UndefOr[String] = js.native
 }
 
 object StockToolsGuiDefinitionsMeasureMeasureYOptions {
   @scala.inline
-  def apply(symbol: String = null): StockToolsGuiDefinitionsMeasureMeasureYOptions = {
+  def apply(): StockToolsGuiDefinitionsMeasureMeasureYOptions = {
     val __obj = js.Dynamic.literal()
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
     __obj.asInstanceOf[StockToolsGuiDefinitionsMeasureMeasureYOptions]
   }
+  @scala.inline
+  implicit class StockToolsGuiDefinitionsMeasureMeasureYOptionsOps[Self <: StockToolsGuiDefinitionsMeasureMeasureYOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSymbol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

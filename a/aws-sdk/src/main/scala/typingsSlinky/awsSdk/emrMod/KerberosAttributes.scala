@@ -30,18 +30,65 @@ trait KerberosAttributes extends js.Object {
 
 object KerberosAttributes {
   @scala.inline
-  def apply(
-    KdcAdminPassword: XmlStringMaxLen256,
-    Realm: XmlStringMaxLen256,
-    ADDomainJoinPassword: XmlStringMaxLen256 = null,
-    ADDomainJoinUser: XmlStringMaxLen256 = null,
-    CrossRealmTrustPrincipalPassword: XmlStringMaxLen256 = null
-  ): KerberosAttributes = {
+  def apply(KdcAdminPassword: XmlStringMaxLen256, Realm: XmlStringMaxLen256): KerberosAttributes = {
     val __obj = js.Dynamic.literal(KdcAdminPassword = KdcAdminPassword.asInstanceOf[js.Any], Realm = Realm.asInstanceOf[js.Any])
-    if (ADDomainJoinPassword != null) __obj.updateDynamic("ADDomainJoinPassword")(ADDomainJoinPassword.asInstanceOf[js.Any])
-    if (ADDomainJoinUser != null) __obj.updateDynamic("ADDomainJoinUser")(ADDomainJoinUser.asInstanceOf[js.Any])
-    if (CrossRealmTrustPrincipalPassword != null) __obj.updateDynamic("CrossRealmTrustPrincipalPassword")(CrossRealmTrustPrincipalPassword.asInstanceOf[js.Any])
     __obj.asInstanceOf[KerberosAttributes]
   }
+  @scala.inline
+  implicit class KerberosAttributesOps[Self <: KerberosAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKdcAdminPassword(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KdcAdminPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRealm(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Realm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withADDomainJoinPassword(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADDomainJoinPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutADDomainJoinPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADDomainJoinPassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withADDomainJoinUser(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADDomainJoinUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutADDomainJoinUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADDomainJoinUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossRealmTrustPrincipalPassword(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CrossRealmTrustPrincipalPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossRealmTrustPrincipalPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CrossRealmTrustPrincipalPassword")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

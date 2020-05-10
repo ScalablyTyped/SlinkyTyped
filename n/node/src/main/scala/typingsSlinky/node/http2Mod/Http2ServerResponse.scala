@@ -12,8 +12,6 @@ import typingsSlinky.node.nodeStrings.unpipe
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.node.tlsMod.TLSSocket
-import typingsSlinky.std.Error
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,10 +63,10 @@ class Http2ServerResponse protected () extends Stream {
   def end(data: String, callback: js.Function0[Unit]): Unit = js.native
   def end(data: String, encoding: String): Unit = js.native
   def end(data: String, encoding: String, callback: js.Function0[Unit]): Unit = js.native
-  def end(data: Uint8Array): Unit = js.native
-  def end(data: Uint8Array, callback: js.Function0[Unit]): Unit = js.native
-  def end(data: Uint8Array, encoding: String): Unit = js.native
-  def end(data: Uint8Array, encoding: String, callback: js.Function0[Unit]): Unit = js.native
+  def end(data: js.typedarray.Uint8Array): Unit = js.native
+  def end(data: js.typedarray.Uint8Array, callback: js.Function0[Unit]): Unit = js.native
+  def end(data: js.typedarray.Uint8Array, encoding: String): Unit = js.native
+  def end(data: js.typedarray.Uint8Array, encoding: String, callback: js.Function0[Unit]): Unit = js.native
   def getHeader(name: String): String = js.native
   def getHeaderNames(): js.Array[String] = js.native
   def getHeaders(): OutgoingHttpHeaders = js.native
@@ -128,13 +126,17 @@ class Http2ServerResponse protected () extends Stream {
   def setTimeout(msecs: Double): Unit = js.native
   def setTimeout(msecs: Double, callback: js.Function0[Unit]): Unit = js.native
   def write(chunk: String): Boolean = js.native
-  def write(chunk: String, callback: js.Function1[/* err */ Error, Unit]): Boolean = js.native
+  def write(chunk: String, callback: js.Function1[/* err */ js.Error, Unit]): Boolean = js.native
   def write(chunk: String, encoding: String): Boolean = js.native
   def write(chunk: String, encoding: String, callback: js.Function1[/* err */ js.Error, Unit]): Boolean = js.native
-  def write(chunk: Uint8Array): Boolean = js.native
-  def write(chunk: Uint8Array, callback: js.Function1[/* err */ Error, Unit]): Boolean = js.native
-  def write(chunk: Uint8Array, encoding: String): Boolean = js.native
-  def write(chunk: Uint8Array, encoding: String, callback: js.Function1[/* err */ js.Error, Unit]): Boolean = js.native
+  def write(chunk: js.typedarray.Uint8Array): Boolean = js.native
+  def write(chunk: js.typedarray.Uint8Array, callback: js.Function1[/* err */ js.Error, Unit]): Boolean = js.native
+  def write(chunk: js.typedarray.Uint8Array, encoding: String): Boolean = js.native
+  def write(
+    chunk: js.typedarray.Uint8Array,
+    encoding: String,
+    callback: js.Function1[/* err */ js.Error, Unit]
+  ): Boolean = js.native
   def writeContinue(): Unit = js.native
   def writeHead(statusCode: Double): this.type = js.native
   def writeHead(statusCode: Double, headers: OutgoingHttpHeaders): this.type = js.native

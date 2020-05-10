@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnKeyListener extends js.Object {
-  def onKey(v: typingsSlinky.androiduix.android.view.View, keyCode: Double, event: KeyEvent): Unit
+  def onKey(v: typingsSlinky.androiduix.android.view.View, keyCode: Double, event: KeyEvent): Unit = js.native
 }
 
 @JSGlobal("android.view.View.OnKeyListener")

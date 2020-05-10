@@ -25,19 +25,71 @@ trait CreateDataRepositoryTaskRequest extends js.Object {
 
 object CreateDataRepositoryTaskRequest {
   @scala.inline
-  def apply(
-    FileSystemId: FileSystemId,
-    Report: CompletionReport,
-    Type: DataRepositoryTaskType,
-    ClientRequestToken: ClientRequestToken = null,
-    Paths: DataRepositoryTaskPaths = null,
-    Tags: Tags = null
-  ): CreateDataRepositoryTaskRequest = {
+  def apply(FileSystemId: FileSystemId, Report: CompletionReport, Type: DataRepositoryTaskType): CreateDataRepositoryTaskRequest = {
     val __obj = js.Dynamic.literal(FileSystemId = FileSystemId.asInstanceOf[js.Any], Report = Report.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
-    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
-    if (Paths != null) __obj.updateDynamic("Paths")(Paths.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDataRepositoryTaskRequest]
   }
+  @scala.inline
+  implicit class CreateDataRepositoryTaskRequestOps[Self <: CreateDataRepositoryTaskRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileSystemId(value: FileSystemId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReport(value: CompletionReport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Report")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: DataRepositoryTaskType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaths(value: DataRepositoryTaskPaths): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Paths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

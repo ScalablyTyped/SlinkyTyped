@@ -16,11 +16,7 @@ object Event extends js.Object {
   def forward(source: js.Any, fromEventName: String, target: js.Any, toEventName: String): MapEventListener = js.native
   def hasListener(target: js.Any, eventName: String): Boolean = js.native
   def once(target: js.Any, eventName: String, listener: js.Function1[/* event */ js.Any, _]): MapEventListener = js.native
-  def removeDOMListener(
-    element: typingsSlinky.std.HTMLElement,
-    eventName: String,
-    listener: js.Function1[/* event */ js.Any, _]
-  ): Unit = js.native
+  def removeDOMListener(element: HTMLElement, eventName: String, listener: js.Function1[/* event */ js.Any, _]): Unit = js.native
   def removeDOMListener(listeners: js.Array[DOMEventListener]): Unit = js.native
   def removeDOMListener(listeners: DOMEventListener): Unit = js.native
   def removeListener(listeners: js.Array[MapEventListener]): Unit = js.native

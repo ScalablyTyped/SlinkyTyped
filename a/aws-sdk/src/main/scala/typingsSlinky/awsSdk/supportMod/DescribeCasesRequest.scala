@@ -46,28 +46,125 @@ trait DescribeCasesRequest extends js.Object {
 
 object DescribeCasesRequest {
   @scala.inline
-  def apply(
-    afterTime: AfterTime = null,
-    beforeTime: BeforeTime = null,
-    caseIdList: CaseIdList = null,
-    displayId: DisplayId = null,
-    includeCommunications: js.UndefOr[scala.Boolean] = js.undefined,
-    includeResolvedCases: js.UndefOr[scala.Boolean] = js.undefined,
-    language: Language = null,
-    maxResults: Int | scala.Double = null,
-    nextToken: NextToken = null
-  ): DescribeCasesRequest = {
+  def apply(): DescribeCasesRequest = {
     val __obj = js.Dynamic.literal()
-    if (afterTime != null) __obj.updateDynamic("afterTime")(afterTime.asInstanceOf[js.Any])
-    if (beforeTime != null) __obj.updateDynamic("beforeTime")(beforeTime.asInstanceOf[js.Any])
-    if (caseIdList != null) __obj.updateDynamic("caseIdList")(caseIdList.asInstanceOf[js.Any])
-    if (displayId != null) __obj.updateDynamic("displayId")(displayId.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeCommunications)) __obj.updateDynamic("includeCommunications")(includeCommunications.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeResolvedCases)) __obj.updateDynamic("includeResolvedCases")(includeResolvedCases.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (maxResults != null) __obj.updateDynamic("maxResults")(maxResults.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCasesRequest]
   }
+  @scala.inline
+  implicit class DescribeCasesRequestOps[Self <: DescribeCasesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterTime(value: AfterTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeTime(value: BeforeTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeforeTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaseIdList(value: CaseIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caseIdList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaseIdList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caseIdList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayId(value: DisplayId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeCommunications(value: IncludeCommunications): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCommunications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeCommunications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCommunications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeResolvedCases(value: IncludeResolvedCases): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeResolvedCases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeResolvedCases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeResolvedCases")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: Language): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: MaxResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

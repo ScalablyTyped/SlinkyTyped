@@ -2,6 +2,7 @@ package typingsSlinky.babelStandalone
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLCollection
+import typingsSlinky.babelCore.mod.BabelFileResult
 import typingsSlinky.babelCore.mod.FileResultCallback
 import typingsSlinky.babelCore.mod.TransformOptions
 import typingsSlinky.babelTypes.mod.Node
@@ -22,7 +23,7 @@ object mod extends js.Object {
   def registerPreset(name: String, preset: js.Function0[Unit]): Unit = js.native
   def registerPreset(name: String, preset: js.Object): Unit = js.native
   def registerPresets(newPresets: StringDictionary[js.Object | js.Function0[Unit]]): Unit = js.native
-  def transform(code: String, options: TransformOptions): String = js.native
+  def transform(code: String, options: TransformOptions): BabelFileResult = js.native
   def transformFromAst(ast: Node): Unit = js.native
   def transformFromAst(
     ast: Node,

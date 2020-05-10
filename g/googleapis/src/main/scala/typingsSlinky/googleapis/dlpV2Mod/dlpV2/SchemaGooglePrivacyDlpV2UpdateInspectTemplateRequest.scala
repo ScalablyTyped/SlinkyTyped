@@ -21,11 +21,41 @@ trait SchemaGooglePrivacyDlpV2UpdateInspectTemplateRequest extends js.Object {
 
 object SchemaGooglePrivacyDlpV2UpdateInspectTemplateRequest {
   @scala.inline
-  def apply(inspectTemplate: SchemaGooglePrivacyDlpV2InspectTemplate = null, updateMask: String = null): SchemaGooglePrivacyDlpV2UpdateInspectTemplateRequest = {
+  def apply(): SchemaGooglePrivacyDlpV2UpdateInspectTemplateRequest = {
     val __obj = js.Dynamic.literal()
-    if (inspectTemplate != null) __obj.updateDynamic("inspectTemplate")(inspectTemplate.asInstanceOf[js.Any])
-    if (updateMask != null) __obj.updateDynamic("updateMask")(updateMask.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2UpdateInspectTemplateRequest]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2UpdateInspectTemplateRequestOps[Self <: SchemaGooglePrivacyDlpV2UpdateInspectTemplateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInspectTemplate(value: SchemaGooglePrivacyDlpV2InspectTemplate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInspectTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateMask(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

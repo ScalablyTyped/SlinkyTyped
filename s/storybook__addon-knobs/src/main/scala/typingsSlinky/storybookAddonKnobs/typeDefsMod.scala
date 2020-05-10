@@ -1,5 +1,6 @@
 package typingsSlinky.storybookAddonKnobs
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.storybookAddonKnobs.typesMod.KnobType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +16,6 @@ object typeDefsMod extends js.Object {
   type KnobPlus[T /* <: KnobType */, K] = K with AnonGroupId[T]
   type Mutable[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {-readonly [ P in keyof T ]: T[P] extends std.Array<infer U>? std.Array<any> : T[P]}
-    */ typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.Mutable with js.Any
+    */ typingsSlinky.storybookAddonKnobs.storybookAddonKnobsStrings.Mutable with TopLevel[js.Any]
 }
 

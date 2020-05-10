@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/device.html](http://www.html5plus.org/doc/zh_cn/device.html)
   */
+@js.native
 trait PlusOs extends js.Object {
   /**
     * 系统语言信息
@@ -20,7 +21,7 @@ trait PlusOs extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/device.html](http://www.html5plus.org/doc/zh_cn/device.html)
     */
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
   /**
     * 系统的名称
     * 获取当前操作系统的名称，字符串类型数据。
@@ -33,7 +34,7 @@ trait PlusOs extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/device.html](http://www.html5plus.org/doc/zh_cn/device.html)
     */
-  var name: js.UndefOr[iOS | Android] = js.undefined
+  var name: js.UndefOr[iOS | Android] = js.native
   /**
     * 系统的供应商信息
     * 获取当前操作系统的供应商名称，字符串类型数据。
@@ -46,30 +47,77 @@ trait PlusOs extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/device.html](http://www.html5plus.org/doc/zh_cn/device.html)
     */
-  var vendor: js.UndefOr[Apple | Google] = js.undefined
+  var vendor: js.UndefOr[Apple | Google] = js.native
   /**
     * 系统版本信息
     * 获取当前操作系统的版本信息，字符串类型数据。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/device.html](http://www.html5plus.org/doc/zh_cn/device.html)
     */
-  var version: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.native
 }
 
 object PlusOs {
   @scala.inline
-  def apply(
-    language: String = null,
-    name: iOS | Android = null,
-    vendor: Apple | Google = null,
-    version: String = null
-  ): PlusOs = {
+  def apply(): PlusOs = {
     val __obj = js.Dynamic.literal()
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (vendor != null) __obj.updateDynamic("vendor")(vendor.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusOs]
   }
+  @scala.inline
+  implicit class PlusOsOps[Self <: PlusOs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: iOS | Android): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVendor(value: Apple | Google): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVendor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

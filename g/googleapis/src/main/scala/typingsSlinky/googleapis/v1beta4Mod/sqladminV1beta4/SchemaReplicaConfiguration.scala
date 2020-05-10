@@ -34,16 +34,53 @@ trait SchemaReplicaConfiguration extends js.Object {
 
 object SchemaReplicaConfiguration {
   @scala.inline
-  def apply(
-    failoverTarget: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    mysqlReplicaConfiguration: SchemaMySqlReplicaConfiguration = null
-  ): SchemaReplicaConfiguration = {
+  def apply(): SchemaReplicaConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(failoverTarget)) __obj.updateDynamic("failoverTarget")(failoverTarget.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (mysqlReplicaConfiguration != null) __obj.updateDynamic("mysqlReplicaConfiguration")(mysqlReplicaConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReplicaConfiguration]
   }
+  @scala.inline
+  implicit class SchemaReplicaConfigurationOps[Self <: SchemaReplicaConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailoverTarget(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailoverTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMysqlReplicaConfiguration(value: SchemaMySqlReplicaConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mysqlReplicaConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMysqlReplicaConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mysqlReplicaConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

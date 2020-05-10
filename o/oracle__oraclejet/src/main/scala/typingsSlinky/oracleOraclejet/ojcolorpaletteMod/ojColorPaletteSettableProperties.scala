@@ -22,14 +22,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojColorPaletteSettableProperties extends editableValueSettableProperties[^, ^, ^] {
-  var labelDisplay: auto | off
-  var labelledBy: String | Null
-  var layout: grid | list
-  var palette: js.Array[AnonLabel]
-  var swatchSize: xs | sm | lg
+  var labelDisplay: auto | off = js.native
+  var labelledBy: String | Null = js.native
+  var layout: grid | list = js.native
+  var palette: js.Array[AnonLabel] = js.native
+  var swatchSize: xs | sm | lg = js.native
   @JSName("translations")
-  var translations_ojColorPaletteSettableProperties: AnonLabelNone
+  var translations_ojColorPaletteSettableProperties: AnonLabelNone = js.native
 }
 
 object ojColorPaletteSettableProperties {
@@ -47,14 +48,60 @@ object ojColorPaletteSettableProperties {
     swatchSize: xs | sm | lg,
     translations: AnonLabelNone,
     valid: valid | pending | invalidHidden | invalidShown,
-    value: ^,
-    describedBy: String = null,
-    labelledBy: String = null
+    value: ^
   ): ojColorPaletteSettableProperties = {
     val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], help = help.asInstanceOf[js.Any], helpHints = helpHints.asInstanceOf[js.Any], labelDisplay = labelDisplay.asInstanceOf[js.Any], labelHint = labelHint.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], messagesCustom = messagesCustom.asInstanceOf[js.Any], palette = palette.asInstanceOf[js.Any], swatchSize = swatchSize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (describedBy != null) __obj.updateDynamic("describedBy")(describedBy.asInstanceOf[js.Any])
-    if (labelledBy != null) __obj.updateDynamic("labelledBy")(labelledBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojColorPaletteSettableProperties]
   }
+  @scala.inline
+  implicit class ojColorPaletteSettablePropertiesOps[Self <: ojColorPaletteSettableProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabelDisplay(value: auto | off): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLayout(value: grid | list): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPalette(value: js.Array[AnonLabel]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSwatchSize(value: xs | sm | lg): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swatchSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTranslations(value: AnonLabelNone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabelledBy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelledBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabelledByNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelledBy")(null)
+        ret
+    }
+  }
+  
 }
 

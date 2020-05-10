@@ -1,6 +1,5 @@
 package typingsSlinky.sqlite3Promise.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ object cached extends js.Object {
   def Database(filename: String): typingsSlinky.sqlite3.mod.Database = js.native
   def Database(
     filename: String,
-    callback: js.ThisFunction1[/* this */ typingsSlinky.sqlite3.mod.Database, /* err */ Error | Null, Unit]
+    callback: js.ThisFunction1[/* this */ typingsSlinky.sqlite3.mod.Database, /* err */ js.Error | Null, Unit]
   ): typingsSlinky.sqlite3.mod.Database = js.native
   def Database(filename: String, mode: Double): typingsSlinky.sqlite3.mod.Database = js.native
   def Database(

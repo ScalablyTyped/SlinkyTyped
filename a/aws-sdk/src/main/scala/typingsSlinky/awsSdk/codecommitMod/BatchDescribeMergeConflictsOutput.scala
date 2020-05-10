@@ -34,19 +34,71 @@ trait BatchDescribeMergeConflictsOutput extends js.Object {
 
 object BatchDescribeMergeConflictsOutput {
   @scala.inline
-  def apply(
-    conflicts: Conflicts,
-    destinationCommitId: ObjectId,
-    sourceCommitId: ObjectId,
-    baseCommitId: ObjectId = null,
-    errors: BatchDescribeMergeConflictsErrors = null,
-    nextToken: NextToken = null
-  ): BatchDescribeMergeConflictsOutput = {
+  def apply(conflicts: Conflicts, destinationCommitId: ObjectId, sourceCommitId: ObjectId): BatchDescribeMergeConflictsOutput = {
     val __obj = js.Dynamic.literal(conflicts = conflicts.asInstanceOf[js.Any], destinationCommitId = destinationCommitId.asInstanceOf[js.Any], sourceCommitId = sourceCommitId.asInstanceOf[js.Any])
-    if (baseCommitId != null) __obj.updateDynamic("baseCommitId")(baseCommitId.asInstanceOf[js.Any])
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDescribeMergeConflictsOutput]
   }
+  @scala.inline
+  implicit class BatchDescribeMergeConflictsOutputOps[Self <: BatchDescribeMergeConflictsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConflicts(value: Conflicts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conflicts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestinationCommitId(value: ObjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationCommitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceCommitId(value: ObjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceCommitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBaseCommitId(value: ObjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseCommitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseCommitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseCommitId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrors(value: BatchDescribeMergeConflictsErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

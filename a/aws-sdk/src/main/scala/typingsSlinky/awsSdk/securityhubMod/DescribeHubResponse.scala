@@ -18,11 +18,41 @@ trait DescribeHubResponse extends js.Object {
 
 object DescribeHubResponse {
   @scala.inline
-  def apply(HubArn: NonEmptyString = null, SubscribedAt: NonEmptyString = null): DescribeHubResponse = {
+  def apply(): DescribeHubResponse = {
     val __obj = js.Dynamic.literal()
-    if (HubArn != null) __obj.updateDynamic("HubArn")(HubArn.asInstanceOf[js.Any])
-    if (SubscribedAt != null) __obj.updateDynamic("SubscribedAt")(SubscribedAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeHubResponse]
   }
+  @scala.inline
+  implicit class DescribeHubResponseOps[Self <: DescribeHubResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHubArn(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HubArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHubArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HubArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscribedAt(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscribedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscribedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscribedAt")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

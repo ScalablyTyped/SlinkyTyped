@@ -18,11 +18,41 @@ trait SuppressedDestinationAttributes extends js.Object {
 
 object SuppressedDestinationAttributes {
   @scala.inline
-  def apply(FeedbackId: FeedbackId = null, MessageId: OutboundMessageId = null): SuppressedDestinationAttributes = {
+  def apply(): SuppressedDestinationAttributes = {
     val __obj = js.Dynamic.literal()
-    if (FeedbackId != null) __obj.updateDynamic("FeedbackId")(FeedbackId.asInstanceOf[js.Any])
-    if (MessageId != null) __obj.updateDynamic("MessageId")(MessageId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SuppressedDestinationAttributes]
   }
+  @scala.inline
+  implicit class SuppressedDestinationAttributesOps[Self <: SuppressedDestinationAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFeedbackId(value: FeedbackId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FeedbackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeedbackId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FeedbackId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageId(value: OutboundMessageId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

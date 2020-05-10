@@ -1,7 +1,6 @@
 package typingsSlinky.winrt.Windows.Devices.Enumeration
 
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterable
-import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,26 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Devices.Enumeration.DeviceInformation")
 @js.native
-class DeviceInformation () extends IDeviceInformation {
-  /* CompleteClass */
-  override var enclosureLocation: EnclosureLocation = js.native
-  /* CompleteClass */
-  override var id: String = js.native
-  /* CompleteClass */
-  override var isDefault: Boolean = js.native
-  /* CompleteClass */
-  override var isEnabled: Boolean = js.native
-  /* CompleteClass */
-  override var name: String = js.native
-  /* CompleteClass */
-  override var properties: IMapView[String, _] = js.native
-  /* CompleteClass */
-  override def getGlyphThumbnailAsync(): IAsyncOperation[DeviceThumbnail] = js.native
-  /* CompleteClass */
-  override def getThumbnailAsync(): IAsyncOperation[DeviceThumbnail] = js.native
-  /* CompleteClass */
-  override def update(updateInfo: DeviceInformationUpdate): Unit = js.native
-}
+class DeviceInformation () extends IDeviceInformation
 
 /* static members */
 @JSGlobal("Windows.Devices.Enumeration.DeviceInformation")

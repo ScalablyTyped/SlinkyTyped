@@ -16,7 +16,7 @@ package object mobileMod {
   type BundleVersion = java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.mobileMod.ClientApiVersions
   type ConsoleUrl = java.lang.String
-  type Contents = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.mobileMod.Blob | java.lang.String
+  type Contents = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.mobileMod.Blob | java.lang.String
   type Date = js.Date
   type DownloadUrl = java.lang.String
   type Feature = java.lang.String

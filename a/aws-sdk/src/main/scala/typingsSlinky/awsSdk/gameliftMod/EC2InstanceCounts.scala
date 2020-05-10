@@ -38,24 +38,101 @@ trait EC2InstanceCounts extends js.Object {
 
 object EC2InstanceCounts {
   @scala.inline
-  def apply(
-    ACTIVE: Int | scala.Double = null,
-    DESIRED: Int | scala.Double = null,
-    IDLE: Int | scala.Double = null,
-    MAXIMUM: Int | scala.Double = null,
-    MINIMUM: Int | scala.Double = null,
-    PENDING: Int | scala.Double = null,
-    TERMINATING: Int | scala.Double = null
-  ): EC2InstanceCounts = {
+  def apply(): EC2InstanceCounts = {
     val __obj = js.Dynamic.literal()
-    if (ACTIVE != null) __obj.updateDynamic("ACTIVE")(ACTIVE.asInstanceOf[js.Any])
-    if (DESIRED != null) __obj.updateDynamic("DESIRED")(DESIRED.asInstanceOf[js.Any])
-    if (IDLE != null) __obj.updateDynamic("IDLE")(IDLE.asInstanceOf[js.Any])
-    if (MAXIMUM != null) __obj.updateDynamic("MAXIMUM")(MAXIMUM.asInstanceOf[js.Any])
-    if (MINIMUM != null) __obj.updateDynamic("MINIMUM")(MINIMUM.asInstanceOf[js.Any])
-    if (PENDING != null) __obj.updateDynamic("PENDING")(PENDING.asInstanceOf[js.Any])
-    if (TERMINATING != null) __obj.updateDynamic("TERMINATING")(TERMINATING.asInstanceOf[js.Any])
     __obj.asInstanceOf[EC2InstanceCounts]
   }
+  @scala.inline
+  implicit class EC2InstanceCountsOps[Self <: EC2InstanceCounts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withACTIVE(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ACTIVE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutACTIVE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ACTIVE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDESIRED(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DESIRED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDESIRED: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DESIRED")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIDLE(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IDLE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIDLE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IDLE")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMAXIMUM(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MAXIMUM")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMAXIMUM: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MAXIMUM")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMINIMUM(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MINIMUM")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMINIMUM: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MINIMUM")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPENDING(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PENDING")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPENDING: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PENDING")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTERMINATING(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TERMINATING")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTERMINATING: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TERMINATING")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

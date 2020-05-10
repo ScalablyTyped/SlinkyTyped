@@ -6,20 +6,63 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a ColumnProperties. */
+@js.native
 trait IColumnProperties extends js.Object {
   /** ColumnProperties header */
-  var header: js.UndefOr[String | Null] = js.undefined
+  var header: js.UndefOr[String | Null] = js.native
   /** ColumnProperties horizontalAlignment */
-  var horizontalAlignment: js.UndefOr[HorizontalAlignment | Null] = js.undefined
+  var horizontalAlignment: js.UndefOr[HorizontalAlignment | Null] = js.native
 }
 
 object IColumnProperties {
   @scala.inline
-  def apply(header: String = null, horizontalAlignment: HorizontalAlignment = null): IColumnProperties = {
+  def apply(): IColumnProperties = {
     val __obj = js.Dynamic.literal()
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColumnProperties]
   }
+  @scala.inline
+  implicit class IColumnPropertiesOps[Self <: IColumnProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(null)
+        ret
+    }
+    @scala.inline
+    def withHorizontalAlignment(value: HorizontalAlignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalAlignmentNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(null)
+        ret
+    }
+  }
+  
 }
 

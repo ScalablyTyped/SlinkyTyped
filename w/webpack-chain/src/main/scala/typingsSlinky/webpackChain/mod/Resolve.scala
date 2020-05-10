@@ -1,6 +1,5 @@
 package typingsSlinky.webpackChain.mod
 
-import typingsSlinky.std.RegExp
 import typingsSlinky.webpack.mod.ResolvePlugin
 import typingsSlinky.webpackChain.AnonPath
 import scala.scalajs.js
@@ -21,14 +20,12 @@ class Resolve ()
   var plugins: TypedChainedMap[this.type, Plugin[this.type, ResolvePlugin]] = js.native
   def cachePredicate(value: js.Function1[/* data */ AnonPath, Boolean]): this.type = js.native
   def cacheWithContext(value: Boolean): this.type = js.native
-  /* CompleteClass */
-  override def end(): Config = js.native
   def enforceExtension(value: Boolean): this.type = js.native
   def enforceModuleExtension(value: Boolean): this.type = js.native
   def plugin(name: String): Plugin[this.type, ResolvePlugin] = js.native
   def symlinks(value: Boolean): this.type = js.native
-  def unsafeCache(value: js.Array[RegExp]): this.type = js.native
+  def unsafeCache(value: js.Array[js.RegExp]): this.type = js.native
   def unsafeCache(value: Boolean): this.type = js.native
-  def unsafeCache(value: RegExp): this.type = js.native
+  def unsafeCache(value: js.RegExp): this.type = js.native
 }
 

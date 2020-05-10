@@ -22,11 +22,41 @@ trait SchemaAchievementUpdateMultipleRequest extends js.Object {
 
 object SchemaAchievementUpdateMultipleRequest {
   @scala.inline
-  def apply(kind: String = null, updates: js.Array[SchemaAchievementUpdateRequest] = null): SchemaAchievementUpdateMultipleRequest = {
+  def apply(): SchemaAchievementUpdateMultipleRequest = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (updates != null) __obj.updateDynamic("updates")(updates.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAchievementUpdateMultipleRequest]
   }
+  @scala.inline
+  implicit class SchemaAchievementUpdateMultipleRequestOps[Self <: SchemaAchievementUpdateMultipleRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdates(value: js.Array[SchemaAchievementUpdateRequest]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updates")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

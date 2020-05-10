@@ -20,31 +20,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Impl extends js.Object {
   /**
     * Tab should reload content every time it is opened
     */
-  var alwaysRefresh: Boolean
+  var alwaysRefresh: Boolean = js.native
   /**
     * Settings object for $.api call
     *
     * @default false
     * @see {@link http://semantic-ui.com/behaviors/api.html}
     */
-  var apiSettings: ApiSettings
+  var apiSettings: ApiSettings = js.native
   // region Tab Settings
   /**
     * Whether tab should load remote content as same url as history
     *
     * @default false
     */
-  var auto: Boolean
+  var auto: Boolean = js.native
   /**
     * Tab should cache content after loading locally to avoid server trip on second load
     *
     * @default true
     */
-  var cache: Boolean
+  var cache: Boolean = js.native
   /**
     * Can be set to either response, DOM or html.
     * Using DOM will cache the a clone of the DOM tree, preserving all events as they existed on render.
@@ -53,23 +54,23 @@ trait Impl extends js.Object {
     *
     * @default 'response'
     */
-  var cacheType: response | DOM | html
+  var cacheType: response | DOM | html = js.native
   /**
     * If enabled limits tabs to children of passed context
     *
     * @default false
     */
-  var childrenOnly: Boolean
+  var childrenOnly: Boolean = js.native
   /**
     * Class names used to attach style to state
     */
-  var className: ClassNameSettings
+  var className: ClassNameSettings = js.native
   /**
     * Tabs are limited to those found inside this context
     *
     * @default false
     */
-  var context: `false` | String | JQuery
+  var context: `false` | String | JQuery = js.native
   /**
     * When set to siblings will only deactivate elements that are DOM siblings with the activated element.
     * When set to all the component will deactivate all other elements initialized at the same time.
@@ -77,14 +78,14 @@ trait Impl extends js.Object {
     * @default 'siblings'
     * @since 2.2
     */
-  var deactivate: siblings | all
+  var deactivate: siblings | all = js.native
   /**
     * Debug output to console
     */
-  var debug: Boolean
+  var debug: Boolean = js.native
   // endregion
   // region Debug Settings
-  var error: ErrorSettings
+  var error: ErrorSettings = js.native
   /**
     * Whether inline scripts in tab HTML should be parsed on tab load.
     * Defaults to once, parsing only on first load.
@@ -92,13 +93,13 @@ trait Impl extends js.Object {
     *
     * @default 'once'
     */
-  var evaluateScripts: once | Boolean
+  var evaluateScripts: once | Boolean = js.native
   /**
     * Whether to record history events for tab changes
     *
     * @default false
     */
-  var history: Boolean
+  var history: Boolean = js.native
   /**
     * Can be set to hash or state.
     * Hash will use an in-page link to create history events.
@@ -107,89 +108,89 @@ trait Impl extends js.Object {
     * @default 'hash'
     * @see {@link https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history}
     */
-  var historyType: hash | state
+  var historyType: hash | state = js.native
   /**
     * Do not load content remotely on first tab load. Useful when open tab is rendered on server.
     *
     * @default false
     */
-  var ignoreFirstLoad: Boolean
+  var ignoreFirstLoad: Boolean = js.native
   /**
     * When enabled only calls remote endpoint for tab data on first load and leaves the DOM undisturbed afterwards.
     *
     * @default false
     * @since 2.2.8
     */
-  var loadOnce: Boolean
+  var loadOnce: Boolean = js.native
   /**
     * Maximum amount of nested tabs allowed (avoids recursion)
     *
     * @default 25
     */
-  var maxDepth: Double
+  var maxDepth: Double = js.native
   /**
     * DOM metadata used by module
     */
-  var metadata: MetadataSettings
+  var metadata: MetadataSettings = js.native
   // endregion
   // region Debug Settings
   /**
     * Name used in log statements
     */
-  var name: String
+  var name: String = js.native
   // endregion
   // region Component Settings
   // region DOM Settings
   /**
     * Event namespace. Makes sure module teardown does not effect other events attached to an element.
     */
-  var namespace: String
+  var namespace: String = js.native
   /**
     * When using historyType state you must specify the base URL for all internal links.
     *
     * @default false
     */
-  var path: `false` | String
+  var path: `false` | String = js.native
   /**
     * Show console.table output with performance metrics
     */
-  var performance: Boolean
+  var performance: Boolean = js.native
   /**
     * Selectors used by module
     */
-  var selector: SelectorSettings
+  var selector: SelectorSettings = js.native
   /**
     * Silences all console output including error messages, regardless of other debug settings.
     */
-  var silent: Boolean
+  var silent: Boolean = js.native
   // endregion
   // region DOM Settings
   /**
     * Functions used to return content
     */
-  var templates: TemplatesSettings
+  var templates: TemplatesSettings = js.native
   /**
     * Debug output includes all internal behaviors
     */
-  var verbose: Boolean
+  var verbose: Boolean = js.native
   // endregion
   // region Callbacks
   /**
     * Callback only the first time a tab is loaded
     */
-  def onFirstLoad(tabPath: String, parameterArray: js.Array[_], historyEvent: js.Any): Unit
+  def onFirstLoad(tabPath: String, parameterArray: js.Array[_], historyEvent: js.Any): Unit = js.native
   /**
     * Callback every time a tab is loaded
     */
-  def onLoad(tabPath: String, parameterArray: js.Array[_], historyEvent: js.Any): Unit
+  def onLoad(tabPath: String, parameterArray: js.Array[_], historyEvent: js.Any): Unit = js.native
   /**
     * Called when a tab begins loading remote content
     */
-  def onRequest(tabPath: String): Unit
+  def onRequest(tabPath: String): Unit = js.native
   /**
     * Called after a tab becomes visible
     */
-  def onVisible(tabPath: String): Unit
+  def onVisible(tabPath: String): Unit = js.native
 }
 
 object Impl {
@@ -227,8 +228,195 @@ object Impl {
     verbose: Boolean
   ): Impl = {
     val __obj = js.Dynamic.literal(alwaysRefresh = alwaysRefresh.asInstanceOf[js.Any], apiSettings = apiSettings.asInstanceOf[js.Any], auto = auto.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], cacheType = cacheType.asInstanceOf[js.Any], childrenOnly = childrenOnly.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], deactivate = deactivate.asInstanceOf[js.Any], debug = debug.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], evaluateScripts = evaluateScripts.asInstanceOf[js.Any], history = history.asInstanceOf[js.Any], historyType = historyType.asInstanceOf[js.Any], ignoreFirstLoad = ignoreFirstLoad.asInstanceOf[js.Any], loadOnce = loadOnce.asInstanceOf[js.Any], maxDepth = maxDepth.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], namespace = namespace.asInstanceOf[js.Any], onFirstLoad = js.Any.fromFunction3(onFirstLoad), onLoad = js.Any.fromFunction3(onLoad), onRequest = js.Any.fromFunction1(onRequest), onVisible = js.Any.fromFunction1(onVisible), path = path.asInstanceOf[js.Any], performance = performance.asInstanceOf[js.Any], selector = selector.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any], templates = templates.asInstanceOf[js.Any], verbose = verbose.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Impl]
   }
+  @scala.inline
+  implicit class ImplOps[Self <: Impl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlwaysRefresh(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysRefresh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApiSettings(value: ApiSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuto(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auto")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCacheType(value: response | DOM | html): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildrenOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassName(value: ClassNameSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContext(value: `false` | String | JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeactivate(value: siblings | all): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deactivate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withError(value: ErrorSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvaluateScripts(value: once | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluateScripts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHistory(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("history")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHistoryType(value: hash | state): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("historyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIgnoreFirstLoad(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreFirstLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadOnce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: MetadataSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnFirstLoad(value: (String, js.Array[_], js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFirstLoad")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withOnLoad(value: (String, js.Array[_], js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withOnRequest(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRequest")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnVisible(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onVisible")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPath(value: `false` | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPerformance(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelector(value: SelectorSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplates(value: TemplatesSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerbose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

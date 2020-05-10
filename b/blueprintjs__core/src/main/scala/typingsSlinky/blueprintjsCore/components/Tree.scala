@@ -1,47 +1,61 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.treeMod.ITreeProps
 import typingsSlinky.blueprintjsCore.treeNodeMod.ITreeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tree
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.Tree[js.Any]] {
+object Tree {
   @JSImport("@blueprintjs/core", "Tree")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply[T](
-    contents: js.Array[ITreeNode[T]],
-    onNodeClick: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    onNodeCollapse: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    onNodeContextMenu: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    onNodeDoubleClick: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    onNodeExpand: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    onNodeMouseEnter: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    onNodeMouseLeave: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Tree[js.Any]] = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any])
-    if (onNodeClick != null) __obj.updateDynamic("onNodeClick")(js.Any.fromFunction3(onNodeClick))
-    if (onNodeCollapse != null) __obj.updateDynamic("onNodeCollapse")(js.Any.fromFunction3(onNodeCollapse))
-    if (onNodeContextMenu != null) __obj.updateDynamic("onNodeContextMenu")(js.Any.fromFunction3(onNodeContextMenu))
-    if (onNodeDoubleClick != null) __obj.updateDynamic("onNodeDoubleClick")(js.Any.fromFunction3(onNodeDoubleClick))
-    if (onNodeExpand != null) __obj.updateDynamic("onNodeExpand")(js.Any.fromFunction3(onNodeExpand))
-    if (onNodeMouseEnter != null) __obj.updateDynamic("onNodeMouseEnter")(js.Any.fromFunction3(onNodeMouseEnter))
-    if (onNodeMouseLeave != null) __obj.updateDynamic("onNodeMouseLeave")(js.Any.fromFunction3(onNodeMouseLeave))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.blueprintjsCore.mod.Tree[js.Any]]]
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.Tree[js.Any]] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onNodeClick(
+      value: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit
+    ): this.type = set("onNodeClick", js.Any.fromFunction3(value))
+    @scala.inline
+    def onNodeCollapse(
+      value: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit
+    ): this.type = set("onNodeCollapse", js.Any.fromFunction3(value))
+    @scala.inline
+    def onNodeContextMenu(
+      value: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit
+    ): this.type = set("onNodeContextMenu", js.Any.fromFunction3(value))
+    @scala.inline
+    def onNodeDoubleClick(
+      value: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit
+    ): this.type = set("onNodeDoubleClick", js.Any.fromFunction3(value))
+    @scala.inline
+    def onNodeExpand(
+      value: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit
+    ): this.type = set("onNodeExpand", js.Any.fromFunction3(value))
+    @scala.inline
+    def onNodeMouseEnter(
+      value: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit
+    ): this.type = set("onNodeMouseEnter", js.Any.fromFunction3(value))
+    @scala.inline
+    def onNodeMouseLeave(
+      value: (/* node */ ITreeNode[T], /* nodePath */ js.Array[Double], /* e */ SyntheticMouseEvent[HTMLElement]) => Unit
+    ): this.type = set("onNodeMouseLeave", js.Any.fromFunction3(value))
   }
-  type Props = ITreeProps[js.Any]
+  
+  def withProps[T](p: ITreeProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](contents: js.Array[ITreeNode[T]]): Builder[T] = {
+    val __props = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ITreeProps[T]]))
+  }
 }
 

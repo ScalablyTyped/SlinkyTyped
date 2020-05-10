@@ -1,20 +1,12 @@
 package typingsSlinky.linkifyjs.htmlMod
 
 import typingsSlinky.linkifyjs.PartialGlobalEventHandler
-import typingsSlinky.linkifyjs.PartialRecordLinkEntityTy
-import typingsSlinky.linkifyjs.PartialRecordLinkEntityTyEmail
-import typingsSlinky.linkifyjs.PartialRecordLinkEntityTyHashtag
-import typingsSlinky.linkifyjs.PartialRecordLinkEntityTyMention
-import typingsSlinky.linkifyjs.linkifyjsStrings.ftp
-import typingsSlinky.linkifyjs.linkifyjsStrings.ftps
-import typingsSlinky.linkifyjs.linkifyjsStrings.http
-import typingsSlinky.linkifyjs.linkifyjsStrings.https
 import typingsSlinky.linkifyjs.mod.LinkEntityType
-import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options
   extends typingsSlinky.linkifyjs.mod.Options {
   /**
@@ -27,7 +19,7 @@ trait Options
     */
   var events: js.UndefOr[
     PartialGlobalEventHandler | (js.Function2[/* href */ String, /* type */ LinkEntityType, PartialGlobalEventHandler])
-  ] = js.undefined
+  ] = js.native
   /**
     *  Prevent linkify from trying to parse links in the specified tags.
     *
@@ -35,37 +27,54 @@ trait Options
     *
     *  @default []
     */
-  var ignoreTags: js.UndefOr[js.Array[String]] = js.undefined
+  var ignoreTags: js.UndefOr[js.Array[String]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    attributes: (Record[String, String]) | (js.Function2[/* href */ String, /* type */ LinkEntityType, Record[String, String]]) = null,
-    className: String | PartialRecordLinkEntityTy | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) = null,
-    defaultProtocol: http | https | ftp | ftps | String = null,
-    events: PartialGlobalEventHandler | (js.Function2[/* href */ String, /* type */ LinkEntityType, PartialGlobalEventHandler]) = null,
-    format: (js.Function2[/* value */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyEmail = null,
-    formatHref: (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyEmail = null,
-    ignoreTags: js.Array[String] = null,
-    nl2br: js.UndefOr[Boolean] = js.undefined,
-    tagName: String | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyHashtag = null,
-    target: String | (js.Function2[/* href */ String, /* type */ LinkEntityType, String]) | PartialRecordLinkEntityTyHashtag = null,
-    validate: Boolean | (js.Function2[/* href */ String, /* type */ LinkEntityType, Boolean]) | PartialRecordLinkEntityTyMention = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultProtocol != null) __obj.updateDynamic("defaultProtocol")(defaultProtocol.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (formatHref != null) __obj.updateDynamic("formatHref")(formatHref.asInstanceOf[js.Any])
-    if (ignoreTags != null) __obj.updateDynamic("ignoreTags")(ignoreTags.asInstanceOf[js.Any])
-    if (!js.isUndefined(nl2br)) __obj.updateDynamic("nl2br")(nl2br.asInstanceOf[js.Any])
-    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (validate != null) __obj.updateDynamic("validate")(validate.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventsFunction2(value: (/* href */ String, /* type */ LinkEntityType) => PartialGlobalEventHandler): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withEvents(
+      value: PartialGlobalEventHandler | (js.Function2[/* href */ String, /* type */ LinkEntityType, PartialGlobalEventHandler])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

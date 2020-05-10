@@ -22,20 +22,18 @@ trait ProjectNamespaceKeyFieldValue extends js.Object
 
 object ProjectNamespaceKeyFieldValue {
   @scala.inline
-  def active_config: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.active_config = this.cast("active_config")
+  def active_config: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.active_config = "active_config".asInstanceOf[typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.active_config]
   @scala.inline
-  def active_config_etag: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.active_config_etag = this.cast("active_config_etag")
+  def active_config_etag: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.active_config_etag = "active_config_etag".asInstanceOf[typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.active_config_etag]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def last_fetch_status: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.last_fetch_status = "last_fetch_status".asInstanceOf[typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.last_fetch_status]
   @scala.inline
-  def last_fetch_status: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.last_fetch_status = this.cast("last_fetch_status")
+  def last_successful_fetch_response: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.last_successful_fetch_response = "last_successful_fetch_response".asInstanceOf[typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.last_successful_fetch_response]
   @scala.inline
-  def last_successful_fetch_response: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.last_successful_fetch_response = this.cast("last_successful_fetch_response")
+  def last_successful_fetch_timestamp_millis: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.last_successful_fetch_timestamp_millis = "last_successful_fetch_timestamp_millis".asInstanceOf[typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.last_successful_fetch_timestamp_millis]
   @scala.inline
-  def last_successful_fetch_timestamp_millis: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.last_successful_fetch_timestamp_millis = this.cast("last_successful_fetch_timestamp_millis")
+  def settings: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.settings = "settings".asInstanceOf[typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.settings]
   @scala.inline
-  def settings: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.settings = this.cast("settings")
-  @scala.inline
-  def throttle_metadata: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.throttle_metadata = this.cast("throttle_metadata")
+  def throttle_metadata: typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.throttle_metadata = "throttle_metadata".asInstanceOf[typingsSlinky.firebaseRemoteConfig.firebaseRemoteConfigStrings.throttle_metadata]
 }
 

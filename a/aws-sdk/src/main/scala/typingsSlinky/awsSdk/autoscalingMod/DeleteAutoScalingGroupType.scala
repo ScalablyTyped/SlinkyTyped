@@ -18,10 +18,35 @@ trait DeleteAutoScalingGroupType extends js.Object {
 
 object DeleteAutoScalingGroupType {
   @scala.inline
-  def apply(AutoScalingGroupName: ResourceName, ForceDelete: js.UndefOr[Boolean] = js.undefined): DeleteAutoScalingGroupType = {
+  def apply(AutoScalingGroupName: ResourceName): DeleteAutoScalingGroupType = {
     val __obj = js.Dynamic.literal(AutoScalingGroupName = AutoScalingGroupName.asInstanceOf[js.Any])
-    if (!js.isUndefined(ForceDelete)) __obj.updateDynamic("ForceDelete")(ForceDelete.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteAutoScalingGroupType]
   }
+  @scala.inline
+  implicit class DeleteAutoScalingGroupTypeOps[Self <: DeleteAutoScalingGroupType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoScalingGroupName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForceDelete(value: ForceDelete): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForceDelete")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

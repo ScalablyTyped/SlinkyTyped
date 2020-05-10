@@ -1,61 +1,70 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.countdownMod.CountdownProps
 import typingsSlinky.antd.countdownMod.default
+import typingsSlinky.antd.statisticUtilsMod.FormatConfig
 import typingsSlinky.antd.statisticUtilsMod.Formatter
 import typingsSlinky.antd.statisticUtilsMod.countdownValueType
+import typingsSlinky.antd.statisticUtilsMod.valueType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Countdown
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Countdown {
   @JSImport("antd/lib/statistic/Countdown", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    decimalSeparator: String = null,
-    format: String = null,
-    formatter: Formatter = null,
-    groupSeparator: String = null,
-    onFinish: () => Unit = null,
-    precision: Int | Double = null,
-    prefix: TagMod[Any] = null,
-    prefixCls: String = null,
-    suffix: TagMod[Any] = null,
-    title: TagMod[Any] = null,
-    value: countdownValueType = null,
-    valueRender: /* node */ TagMod[Any] => TagMod[Any] = null,
-    valueStyle: CSSProperties = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (decimalSeparator != null) __obj.updateDynamic("decimalSeparator")(decimalSeparator.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (groupSeparator != null) __obj.updateDynamic("groupSeparator")(groupSeparator.asInstanceOf[js.Any])
-    if (onFinish != null) __obj.updateDynamic("onFinish")(js.Any.fromFunction0(onFinish))
-    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueRender != null) __obj.updateDynamic("valueRender")(js.Any.fromFunction1(valueRender))
-    if (valueStyle != null) __obj.updateDynamic("valueStyle")(valueStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def decimalSeparator(value: String): this.type = set("decimalSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: String): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatterFunction2(value: (/* value */ valueType, /* config */ js.UndefOr[FormatConfig]) => TagMod[Any]): this.type = set("formatter", js.Any.fromFunction2(value))
+    @scala.inline
+    def formatter(value: Formatter): this.type = set("formatter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupSeparator(value: String): this.type = set("groupSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onFinish(value: () => Unit): this.type = set("onFinish", js.Any.fromFunction0(value))
+    @scala.inline
+    def precision(value: Double): this.type = set("precision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixReactElement(value: ReactElement): this.type = set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefix(value: TagMod[Any]): this.type = set("prefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suffixReactElement(value: ReactElement): this.type = set("suffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suffix(value: TagMod[Any]): this.type = set("suffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: countdownValueType): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueRender(value: /* node */ TagMod[Any] => TagMod[Any]): this.type = set("valueRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def valueStyle(value: CSSProperties): this.type = set("valueStyle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.countdownMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CountdownProps
+  
+  def withProps(p: CountdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Countdown.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

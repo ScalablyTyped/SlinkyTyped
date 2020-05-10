@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleTypePostalAddress extends js.Object {
   /**
     * Unstructured address lines describing the lower levels of an address.
@@ -29,7 +30,7 @@ trait GoogleTypePostalAddress extends js.Object {
     * addresses (as opposed to guessing which parts of the address should be
     * localities or administrative areas).
     */
-  var addressLines: js.UndefOr[js.Array[String]] = js.undefined
+  var addressLines: js.UndefOr[js.Array[String]] = js.native
   /**
     * Optional. Highest administrative subdivision which is used for postal
     * addresses of a country or region.
@@ -39,7 +40,7 @@ trait GoogleTypePostalAddress extends js.Object {
     * Many countries don't use an administrative area in postal addresses. E.g.
     * in Switzerland this should be left unpopulated.
     */
-  var administrativeArea: js.UndefOr[String] = js.undefined
+  var administrativeArea: js.UndefOr[String] = js.native
   /**
     * Optional. BCP-47 language code of the contents of this address (if
     * known). This is often the UI language of the input form or is expected
@@ -54,31 +55,31 @@ trait GoogleTypePostalAddress extends js.Object {
     *
     * Examples: \"zh-Hant\", \"ja\", \"ja-Latn\", \"en\".
     */
-  var languageCode: js.UndefOr[String] = js.undefined
+  var languageCode: js.UndefOr[String] = js.native
   /**
     * Optional. Generally refers to the city/town portion of the address.
     * Examples: US city, IT comune, UK post town.
     * In regions of the world where localities are not well defined or do not fit
     * into this structure well, leave locality empty and use address_lines.
     */
-  var locality: js.UndefOr[String] = js.undefined
+  var locality: js.UndefOr[String] = js.native
   /**
     * Optional. The name of the organization at the address.
     */
-  var organization: js.UndefOr[String] = js.undefined
+  var organization: js.UndefOr[String] = js.native
   /**
     * Optional. Postal code of the address. Not all countries use or require
     * postal codes to be present, but where they are used, they may trigger
     * additional validation with other parts of the address (e.g. state/zip
     * validation in the U.S.A.).
     */
-  var postalCode: js.UndefOr[String] = js.undefined
+  var postalCode: js.UndefOr[String] = js.native
   /**
     * Optional. The recipient at the address.
     * This field may, under certain circumstances, contain multiline information.
     * For example, it might contain \"care of\" information.
     */
-  var recipients: js.UndefOr[js.Array[String]] = js.undefined
+  var recipients: js.UndefOr[js.Array[String]] = js.native
   /**
     * Required. CLDR region code of the country/region of the address. This
     * is never inferred and it is up to the user to ensure the value is
@@ -86,14 +87,14 @@ trait GoogleTypePostalAddress extends js.Object {
     * http://www.unicode.org/cldr/charts/30/supplemental/territory_information.html
     * for details. Example: \"CH\" for Switzerland.
     */
-  var regionCode: js.UndefOr[String] = js.undefined
+  var regionCode: js.UndefOr[String] = js.native
   /**
     * The schema revision of the `PostalAddress`. This must be set to 0, which is
     * the latest revision.
     *
     * All new revisions **must** be backward compatible with old revisions.
     */
-  var revision: js.UndefOr[Double] = js.undefined
+  var revision: js.UndefOr[Double] = js.native
   /**
     * Optional. Additional, country-specific, sorting code. This is not used
     * in most regions. Where it is used, the value is either a string like
@@ -101,42 +102,159 @@ trait GoogleTypePostalAddress extends js.Object {
     * number alone, representing the \"sector code\" (Jamaica), \"delivery area
     * indicator\" (Malawi) or \"post office indicator\" (e.g. Côte d'Ivoire).
     */
-  var sortingCode: js.UndefOr[String] = js.undefined
+  var sortingCode: js.UndefOr[String] = js.native
   /**
     * Optional. Sublocality of the address.
     * For example, this can be neighborhoods, boroughs, districts.
     */
-  var sublocality: js.UndefOr[String] = js.undefined
+  var sublocality: js.UndefOr[String] = js.native
 }
 
 object GoogleTypePostalAddress {
   @scala.inline
-  def apply(
-    addressLines: js.Array[String] = null,
-    administrativeArea: String = null,
-    languageCode: String = null,
-    locality: String = null,
-    organization: String = null,
-    postalCode: String = null,
-    recipients: js.Array[String] = null,
-    regionCode: String = null,
-    revision: Int | Double = null,
-    sortingCode: String = null,
-    sublocality: String = null
-  ): GoogleTypePostalAddress = {
+  def apply(): GoogleTypePostalAddress = {
     val __obj = js.Dynamic.literal()
-    if (addressLines != null) __obj.updateDynamic("addressLines")(addressLines.asInstanceOf[js.Any])
-    if (administrativeArea != null) __obj.updateDynamic("administrativeArea")(administrativeArea.asInstanceOf[js.Any])
-    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
-    if (locality != null) __obj.updateDynamic("locality")(locality.asInstanceOf[js.Any])
-    if (organization != null) __obj.updateDynamic("organization")(organization.asInstanceOf[js.Any])
-    if (postalCode != null) __obj.updateDynamic("postalCode")(postalCode.asInstanceOf[js.Any])
-    if (recipients != null) __obj.updateDynamic("recipients")(recipients.asInstanceOf[js.Any])
-    if (regionCode != null) __obj.updateDynamic("regionCode")(regionCode.asInstanceOf[js.Any])
-    if (revision != null) __obj.updateDynamic("revision")(revision.asInstanceOf[js.Any])
-    if (sortingCode != null) __obj.updateDynamic("sortingCode")(sortingCode.asInstanceOf[js.Any])
-    if (sublocality != null) __obj.updateDynamic("sublocality")(sublocality.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleTypePostalAddress]
   }
+  @scala.inline
+  implicit class GoogleTypePostalAddressOps[Self <: GoogleTypePostalAddress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddressLines(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdministrativeArea(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("administrativeArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdministrativeArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("administrativeArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocality(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganization(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostalCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostalCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipients(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipients: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipients")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegionCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevision(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortingCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortingCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortingCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortingCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSublocality(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sublocality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSublocality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sublocality")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

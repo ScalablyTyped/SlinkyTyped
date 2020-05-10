@@ -4,22 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonConfirmation extends js.Object {
-  var confirmation: js.UndefOr[String] = js.undefined
-  var error: js.UndefOr[String] = js.undefined
-  var info: js.UndefOr[String] = js.undefined
-  var warning: js.UndefOr[String] = js.undefined
+  var confirmation: js.UndefOr[String] = js.native
+  var error: js.UndefOr[String] = js.native
+  var info: js.UndefOr[String] = js.native
+  var warning: js.UndefOr[String] = js.native
 }
 
 object AnonConfirmation {
   @scala.inline
-  def apply(confirmation: String = null, error: String = null, info: String = null, warning: String = null): AnonConfirmation = {
+  def apply(): AnonConfirmation = {
     val __obj = js.Dynamic.literal()
-    if (confirmation != null) __obj.updateDynamic("confirmation")(confirmation.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
-    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonConfirmation]
   }
+  @scala.inline
+  implicit class AnonConfirmationOps[Self <: AnonConfirmation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfirmation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfirmation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

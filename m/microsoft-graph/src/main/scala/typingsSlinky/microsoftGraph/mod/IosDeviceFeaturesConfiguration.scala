@@ -4,62 +4,96 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IosDeviceFeaturesConfiguration extends DeviceConfiguration {
   // Asset tag information for the device, displayed on the login window and lock screen.
-  var assetTagTemplate: js.UndefOr[String] = js.undefined
+  var assetTagTemplate: js.UndefOr[String] = js.native
   // A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
-  var homeScreenDockIcons: js.UndefOr[js.Array[IosHomeScreenItem]] = js.undefined
+  var homeScreenDockIcons: js.UndefOr[js.Array[IosHomeScreenItem]] = js.native
   // A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
-  var homeScreenPages: js.UndefOr[js.Array[IosHomeScreenPage]] = js.undefined
+  var homeScreenPages: js.UndefOr[js.Array[IosHomeScreenPage]] = js.native
   // A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-  var lockScreenFootnote: js.UndefOr[String] = js.undefined
+  var lockScreenFootnote: js.UndefOr[String] = js.native
   /**
     * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This
     * collection can contain a maximum of 500 elements.
     */
-  var notificationSettings: js.UndefOr[js.Array[IosNotificationSettings]] = js.undefined
+  var notificationSettings: js.UndefOr[js.Array[IosNotificationSettings]] = js.native
 }
 
 object IosDeviceFeaturesConfiguration {
   @scala.inline
-  def apply(
-    assetTagTemplate: String = null,
-    assignments: js.Array[DeviceConfigurationAssignment] = null,
-    createdDateTime: String = null,
-    description: String = null,
-    deviceSettingStateSummaries: js.Array[SettingStateDeviceSummary] = null,
-    deviceStatusOverview: DeviceConfigurationDeviceOverview = null,
-    deviceStatuses: js.Array[DeviceConfigurationDeviceStatus] = null,
-    displayName: String = null,
-    homeScreenDockIcons: js.Array[IosHomeScreenItem] = null,
-    homeScreenPages: js.Array[IosHomeScreenPage] = null,
-    id: String = null,
-    lastModifiedDateTime: String = null,
-    lockScreenFootnote: String = null,
-    notificationSettings: js.Array[IosNotificationSettings] = null,
-    userStatusOverview: DeviceConfigurationUserOverview = null,
-    userStatuses: js.Array[DeviceConfigurationUserStatus] = null,
-    version: Int | Double = null
-  ): IosDeviceFeaturesConfiguration = {
+  def apply(): IosDeviceFeaturesConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (assetTagTemplate != null) __obj.updateDynamic("assetTagTemplate")(assetTagTemplate.asInstanceOf[js.Any])
-    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
-    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (deviceSettingStateSummaries != null) __obj.updateDynamic("deviceSettingStateSummaries")(deviceSettingStateSummaries.asInstanceOf[js.Any])
-    if (deviceStatusOverview != null) __obj.updateDynamic("deviceStatusOverview")(deviceStatusOverview.asInstanceOf[js.Any])
-    if (deviceStatuses != null) __obj.updateDynamic("deviceStatuses")(deviceStatuses.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (homeScreenDockIcons != null) __obj.updateDynamic("homeScreenDockIcons")(homeScreenDockIcons.asInstanceOf[js.Any])
-    if (homeScreenPages != null) __obj.updateDynamic("homeScreenPages")(homeScreenPages.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
-    if (lockScreenFootnote != null) __obj.updateDynamic("lockScreenFootnote")(lockScreenFootnote.asInstanceOf[js.Any])
-    if (notificationSettings != null) __obj.updateDynamic("notificationSettings")(notificationSettings.asInstanceOf[js.Any])
-    if (userStatusOverview != null) __obj.updateDynamic("userStatusOverview")(userStatusOverview.asInstanceOf[js.Any])
-    if (userStatuses != null) __obj.updateDynamic("userStatuses")(userStatuses.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[IosDeviceFeaturesConfiguration]
   }
+  @scala.inline
+  implicit class IosDeviceFeaturesConfigurationOps[Self <: IosDeviceFeaturesConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssetTagTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetTagTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssetTagTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetTagTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeScreenDockIcons(value: js.Array[IosHomeScreenItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeScreenDockIcons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeScreenDockIcons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeScreenDockIcons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeScreenPages(value: js.Array[IosHomeScreenPage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeScreenPages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeScreenPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeScreenPages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLockScreenFootnote(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenFootnote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLockScreenFootnote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lockScreenFootnote")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationSettings(value: js.Array[IosNotificationSettings]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notificationSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

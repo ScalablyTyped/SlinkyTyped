@@ -1,10 +1,7 @@
 package typingsSlinky.wouter.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.wouter.PartialRouterPropschildre
 import typingsSlinky.wouter.mod.DefaultParams
 import typingsSlinky.wouter.mod.LocationHookOptions
@@ -15,27 +12,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Router
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Router {
   @JSImport("wouter", "Router")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    base: Path = null,
-    hook: /* options */ js.UndefOr[LocationHookOptions] => LocationTuple = null,
-    matcher: (/* pattern */ Path, /* path */ Path) => Match[DefaultParams] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
-    if (hook != null) __obj.updateDynamic("hook")(js.Any.fromFunction1(hook))
-    if (matcher != null) __obj.updateDynamic("matcher")(js.Any.fromFunction2(matcher))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def base(value: Path): this.type = set("base", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hook(value: /* options */ js.UndefOr[LocationHookOptions] => LocationTuple): this.type = set("hook", js.Any.fromFunction1(value))
+    @scala.inline
+    def matcher(value: (/* pattern */ Path, /* path */ Path) => Match[DefaultParams]): this.type = set("matcher", js.Any.fromFunction2(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PartialRouterPropschildre
+  
+  def withProps(p: PartialRouterPropschildre): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Router.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

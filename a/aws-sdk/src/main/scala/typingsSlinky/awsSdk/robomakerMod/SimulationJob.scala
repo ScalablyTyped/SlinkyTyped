@@ -90,50 +90,257 @@ trait SimulationJob extends js.Object {
 
 object SimulationJob {
   @scala.inline
-  def apply(
-    arn: Arn = null,
-    clientRequestToken: ClientRequestToken = null,
-    dataSources: DataSources = null,
-    failureBehavior: FailureBehavior = null,
-    failureCode: SimulationJobErrorCode = null,
-    failureReason: GenericString = null,
-    iamRole: IamRole = null,
-    lastStartedAt: js.Date = null,
-    lastUpdatedAt: js.Date = null,
-    loggingConfig: LoggingConfig = null,
-    maxJobDurationInSeconds: Int | Double = null,
-    name: Name = null,
-    networkInterface: NetworkInterface = null,
-    outputLocation: OutputLocation = null,
-    robotApplications: RobotApplicationConfigs = null,
-    simulationApplications: SimulationApplicationConfigs = null,
-    simulationTimeMillis: Int | Double = null,
-    status: SimulationJobStatus = null,
-    tags: TagMap = null,
-    vpcConfig: VPCConfigResponse = null
-  ): SimulationJob = {
+  def apply(): SimulationJob = {
     val __obj = js.Dynamic.literal()
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (clientRequestToken != null) __obj.updateDynamic("clientRequestToken")(clientRequestToken.asInstanceOf[js.Any])
-    if (dataSources != null) __obj.updateDynamic("dataSources")(dataSources.asInstanceOf[js.Any])
-    if (failureBehavior != null) __obj.updateDynamic("failureBehavior")(failureBehavior.asInstanceOf[js.Any])
-    if (failureCode != null) __obj.updateDynamic("failureCode")(failureCode.asInstanceOf[js.Any])
-    if (failureReason != null) __obj.updateDynamic("failureReason")(failureReason.asInstanceOf[js.Any])
-    if (iamRole != null) __obj.updateDynamic("iamRole")(iamRole.asInstanceOf[js.Any])
-    if (lastStartedAt != null) __obj.updateDynamic("lastStartedAt")(lastStartedAt.asInstanceOf[js.Any])
-    if (lastUpdatedAt != null) __obj.updateDynamic("lastUpdatedAt")(lastUpdatedAt.asInstanceOf[js.Any])
-    if (loggingConfig != null) __obj.updateDynamic("loggingConfig")(loggingConfig.asInstanceOf[js.Any])
-    if (maxJobDurationInSeconds != null) __obj.updateDynamic("maxJobDurationInSeconds")(maxJobDurationInSeconds.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (networkInterface != null) __obj.updateDynamic("networkInterface")(networkInterface.asInstanceOf[js.Any])
-    if (outputLocation != null) __obj.updateDynamic("outputLocation")(outputLocation.asInstanceOf[js.Any])
-    if (robotApplications != null) __obj.updateDynamic("robotApplications")(robotApplications.asInstanceOf[js.Any])
-    if (simulationApplications != null) __obj.updateDynamic("simulationApplications")(simulationApplications.asInstanceOf[js.Any])
-    if (simulationTimeMillis != null) __obj.updateDynamic("simulationTimeMillis")(simulationTimeMillis.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (vpcConfig != null) __obj.updateDynamic("vpcConfig")(vpcConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimulationJob]
   }
+  @scala.inline
+  implicit class SimulationJobOps[Self <: SimulationJob] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSources(value: DataSources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureBehavior(value: FailureBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureCode(value: SimulationJobErrorCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureReason(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIamRole(value: IamRole): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastStartedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStartedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastStartedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastStartedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggingConfig(value: LoggingConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoggingConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxJobDurationInSeconds(value: JobDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxJobDurationInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxJobDurationInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxJobDurationInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterface(value: NetworkInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterface")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterface: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterface")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputLocation(value: OutputLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRobotApplications(value: RobotApplicationConfigs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robotApplications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRobotApplications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robotApplications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimulationApplications(value: SimulationApplicationConfigs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationApplications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimulationApplications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationApplications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimulationTimeMillis(value: SimulationTimeMillis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationTimeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimulationTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationTimeMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: SimulationJobStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcConfig(value: VPCConfigResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

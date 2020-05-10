@@ -22,12 +22,53 @@ trait MasterUserOptions extends js.Object {
 
 object MasterUserOptions {
   @scala.inline
-  def apply(MasterUserARN: ARN = null, MasterUserName: Username = null, MasterUserPassword: Password = null): MasterUserOptions = {
+  def apply(): MasterUserOptions = {
     val __obj = js.Dynamic.literal()
-    if (MasterUserARN != null) __obj.updateDynamic("MasterUserARN")(MasterUserARN.asInstanceOf[js.Any])
-    if (MasterUserName != null) __obj.updateDynamic("MasterUserName")(MasterUserName.asInstanceOf[js.Any])
-    if (MasterUserPassword != null) __obj.updateDynamic("MasterUserPassword")(MasterUserPassword.asInstanceOf[js.Any])
     __obj.asInstanceOf[MasterUserOptions]
   }
+  @scala.inline
+  implicit class MasterUserOptionsOps[Self <: MasterUserOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMasterUserARN(value: ARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUserARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterUserARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUserARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterUserName(value: Username): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterUserName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUserName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterUserPassword(value: Password): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUserPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterUserPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUserPassword")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

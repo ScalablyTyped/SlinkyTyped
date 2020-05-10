@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IMenuExtender[T /* <: Widget */] extends js.Object {
   /**
     * An additional function that determines whether the extender
@@ -14,19 +15,44 @@ trait IMenuExtender[T /* <: Widget */] extends js.Object {
     * provided, the criterion is equivalent to
     * `tracker.has(widget) && extender.isEnabled(widget)`
     */
-  var isEnabled: js.UndefOr[js.Function1[/* widget */ T, Boolean]] = js.undefined
+  var isEnabled: js.UndefOr[js.Function1[/* widget */ T, Boolean]] = js.native
   /**
     * A widget tracker for identifying the appropriate extender.
     */
-  var tracker: IWidgetTracker[T]
+  var tracker: IWidgetTracker[T] = js.native
 }
 
 object IMenuExtender {
   @scala.inline
-  def apply[T /* <: Widget */](tracker: IWidgetTracker[T], isEnabled: /* widget */ T => Boolean = null): IMenuExtender[T] = {
+  def apply[T](tracker: IWidgetTracker[T]): IMenuExtender[T] = {
     val __obj = js.Dynamic.literal(tracker = tracker.asInstanceOf[js.Any])
-    if (isEnabled != null) __obj.updateDynamic("isEnabled")(js.Any.fromFunction1(isEnabled))
     __obj.asInstanceOf[IMenuExtender[T]]
   }
+  @scala.inline
+  implicit class IMenuExtenderOps[Self[t] <: IMenuExtender[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withTracker(value: IWidgetTracker[T]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsEnabled(value: /* widget */ T => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsEnabled: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

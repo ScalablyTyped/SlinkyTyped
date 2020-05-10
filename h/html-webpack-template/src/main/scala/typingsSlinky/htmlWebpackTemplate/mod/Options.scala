@@ -1,110 +1,173 @@
 package typingsSlinky.htmlWebpackTemplate.mod
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.htmlWebpackPlugin.htmlWebpackPluginBooleans.`false`
-import typingsSlinky.htmlWebpackPlugin.htmlWebpackPluginStrings.all
-import typingsSlinky.htmlWebpackPlugin.htmlWebpackPluginStrings.auto
-import typingsSlinky.htmlWebpackPlugin.htmlWebpackPluginStrings.body
-import typingsSlinky.htmlWebpackPlugin.htmlWebpackPluginStrings.dependency
-import typingsSlinky.htmlWebpackPlugin.htmlWebpackPluginStrings.head
-import typingsSlinky.htmlWebpackPlugin.htmlWebpackPluginStrings.manual
-import typingsSlinky.htmlWebpackPlugin.htmlWebpackPluginStrings.none
-import typingsSlinky.htmlWebpackPlugin.mod.MinifyOptions
-import typingsSlinky.htmlWebpackPlugin.mod.TemplateParametersAssets
-import typingsSlinky.webpack.mod.compilation.Chunk
-import typingsSlinky.webpack.mod.compilation.Compilation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options
   extends typingsSlinky.htmlWebpackPlugin.mod.Options {
   /** The <div> element id on which you plan to mount a JavaScript app. */
-  var appMountId: js.UndefOr[String] = js.undefined
+  var appMountId: js.UndefOr[String] = js.native
   /** An array of application element ids. */
-  var appMountIds: js.UndefOr[js.Array[String]] = js.undefined
+  var appMountIds: js.UndefOr[js.Array[String]] = js.native
   /**
   		 * Adjust the URL for relative URLs in the document (MDN).
   		 * https://developer.mozilla.org/en/docs/Web/HTML/Element/base
   		 */
-  var baseHref: js.UndefOr[String] = js.undefined
+  var baseHref: js.UndefOr[String] = js.native
   /** Insert the webpack-dev-server hot reload script at this host:port/path; e.g., http://localhost:3000. */
-  var devServer: js.UndefOr[String] = js.undefined
+  var devServer: js.UndefOr[String] = js.native
   /** Track usage of your site via Google Analytics. */
-  var googleAnalytics: js.UndefOr[GoogleAnalyticsOptions] = js.undefined
+  var googleAnalytics: js.UndefOr[GoogleAnalyticsOptions] = js.native
   /**
   		 * For use with inline-manifest-webpack-plugin.
   		 * https://github.com/szrenwei/inline-manifest-webpack-plugin
   		 */
-  var inlineManifestWebpackName: js.UndefOr[String] = js.undefined
+  var inlineManifestWebpackName: js.UndefOr[String] = js.native
   /** Array of <link> elements. */
-  var links: js.UndefOr[js.Array[Link]] = js.undefined
+  var links: js.UndefOr[js.Array[Link]] = js.native
   /** Sets appropriate meta tag for page scaling. */
-  var mobile: js.UndefOr[Boolean] = js.undefined
+  var mobile: js.UndefOr[Boolean] = js.native
   /** Array of external script imports to include on page. */
-  var scripts: js.UndefOr[js.Array[Script]] = js.undefined
+  var scripts: js.UndefOr[js.Array[Script]] = js.native
   /** Object that defines data you need to bootstrap a JavaScript app. */
-  var window: js.UndefOr[js.Object] = js.undefined
+  var window: js.UndefOr[js.Object] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    appMountId: String = null,
-    appMountIds: js.Array[String] = null,
-    baseHref: String = null,
-    cache: js.UndefOr[Boolean] = js.undefined,
-    chunks: all | js.Array[String] = null,
-    chunksSortMode: none | auto | dependency | manual | (js.Function2[/* a */ Chunk, /* b */ Chunk, Double]) = null,
-    devServer: String = null,
-    excludeChunks: js.Array[String] = null,
-    favicon: `false` | String = null,
-    filename: String = null,
-    googleAnalytics: GoogleAnalyticsOptions = null,
-    hash: js.UndefOr[Boolean] = js.undefined,
-    inject: body | head | Boolean = null,
-    inlineManifestWebpackName: String = null,
-    links: js.Array[Link] = null,
-    meta: `false` | StringDictionary[js.Any] = null,
-    minify: `false` | MinifyOptions = null,
-    mobile: js.UndefOr[Boolean] = js.undefined,
-    scripts: js.Array[Script] = null,
-    showErrors: js.UndefOr[Boolean] = js.undefined,
-    template: String = null,
-    templateContent: `false` | String | js.Promise[String] = null,
-    templateParameters: `false` | (js.Function3[/* compilation */ Compilation, /* assets */ TemplateParametersAssets, Options, _]) | StringDictionary[js.Any] = null,
-    title: String = null,
-    window: js.Object = null,
-    xhtml: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (appMountId != null) __obj.updateDynamic("appMountId")(appMountId.asInstanceOf[js.Any])
-    if (appMountIds != null) __obj.updateDynamic("appMountIds")(appMountIds.asInstanceOf[js.Any])
-    if (baseHref != null) __obj.updateDynamic("baseHref")(baseHref.asInstanceOf[js.Any])
-    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (chunks != null) __obj.updateDynamic("chunks")(chunks.asInstanceOf[js.Any])
-    if (chunksSortMode != null) __obj.updateDynamic("chunksSortMode")(chunksSortMode.asInstanceOf[js.Any])
-    if (devServer != null) __obj.updateDynamic("devServer")(devServer.asInstanceOf[js.Any])
-    if (excludeChunks != null) __obj.updateDynamic("excludeChunks")(excludeChunks.asInstanceOf[js.Any])
-    if (favicon != null) __obj.updateDynamic("favicon")(favicon.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (googleAnalytics != null) __obj.updateDynamic("googleAnalytics")(googleAnalytics.asInstanceOf[js.Any])
-    if (!js.isUndefined(hash)) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
-    if (inject != null) __obj.updateDynamic("inject")(inject.asInstanceOf[js.Any])
-    if (inlineManifestWebpackName != null) __obj.updateDynamic("inlineManifestWebpackName")(inlineManifestWebpackName.asInstanceOf[js.Any])
-    if (links != null) __obj.updateDynamic("links")(links.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (minify != null) __obj.updateDynamic("minify")(minify.asInstanceOf[js.Any])
-    if (!js.isUndefined(mobile)) __obj.updateDynamic("mobile")(mobile.asInstanceOf[js.Any])
-    if (scripts != null) __obj.updateDynamic("scripts")(scripts.asInstanceOf[js.Any])
-    if (!js.isUndefined(showErrors)) __obj.updateDynamic("showErrors")(showErrors.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (templateContent != null) __obj.updateDynamic("templateContent")(templateContent.asInstanceOf[js.Any])
-    if (templateParameters != null) __obj.updateDynamic("templateParameters")(templateParameters.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
-    if (!js.isUndefined(xhtml)) __obj.updateDynamic("xhtml")(xhtml.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppMountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appMountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppMountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appMountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppMountIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appMountIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppMountIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appMountIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseHref(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseHref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseHref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseHref")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevServer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devServer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevServer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devServer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoogleAnalytics(value: GoogleAnalyticsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleAnalytics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoogleAnalytics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleAnalytics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineManifestWebpackName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineManifestWebpackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineManifestWebpackName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineManifestWebpackName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinks(value: js.Array[Link]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMobile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMobile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScripts(value: js.Array[Script]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScripts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWindow(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -211,44 +211,221 @@ trait SchemaGoogleCloudMlV1TrainingInput extends js.Object {
 
 object SchemaGoogleCloudMlV1TrainingInput {
   @scala.inline
-  def apply(
-    args: js.Array[String] = null,
-    hyperparameters: SchemaGoogleCloudMlV1HyperparameterSpec = null,
-    jobDir: String = null,
-    masterConfig: SchemaGoogleCloudMlV1ReplicaConfig = null,
-    masterType: String = null,
-    packageUris: js.Array[String] = null,
-    parameterServerConfig: SchemaGoogleCloudMlV1ReplicaConfig = null,
-    parameterServerCount: String = null,
-    parameterServerType: String = null,
-    pythonModule: String = null,
-    pythonVersion: String = null,
-    region: String = null,
-    runtimeVersion: String = null,
-    scaleTier: String = null,
-    workerConfig: SchemaGoogleCloudMlV1ReplicaConfig = null,
-    workerCount: String = null,
-    workerType: String = null
-  ): SchemaGoogleCloudMlV1TrainingInput = {
+  def apply(): SchemaGoogleCloudMlV1TrainingInput = {
     val __obj = js.Dynamic.literal()
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (hyperparameters != null) __obj.updateDynamic("hyperparameters")(hyperparameters.asInstanceOf[js.Any])
-    if (jobDir != null) __obj.updateDynamic("jobDir")(jobDir.asInstanceOf[js.Any])
-    if (masterConfig != null) __obj.updateDynamic("masterConfig")(masterConfig.asInstanceOf[js.Any])
-    if (masterType != null) __obj.updateDynamic("masterType")(masterType.asInstanceOf[js.Any])
-    if (packageUris != null) __obj.updateDynamic("packageUris")(packageUris.asInstanceOf[js.Any])
-    if (parameterServerConfig != null) __obj.updateDynamic("parameterServerConfig")(parameterServerConfig.asInstanceOf[js.Any])
-    if (parameterServerCount != null) __obj.updateDynamic("parameterServerCount")(parameterServerCount.asInstanceOf[js.Any])
-    if (parameterServerType != null) __obj.updateDynamic("parameterServerType")(parameterServerType.asInstanceOf[js.Any])
-    if (pythonModule != null) __obj.updateDynamic("pythonModule")(pythonModule.asInstanceOf[js.Any])
-    if (pythonVersion != null) __obj.updateDynamic("pythonVersion")(pythonVersion.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (runtimeVersion != null) __obj.updateDynamic("runtimeVersion")(runtimeVersion.asInstanceOf[js.Any])
-    if (scaleTier != null) __obj.updateDynamic("scaleTier")(scaleTier.asInstanceOf[js.Any])
-    if (workerConfig != null) __obj.updateDynamic("workerConfig")(workerConfig.asInstanceOf[js.Any])
-    if (workerCount != null) __obj.updateDynamic("workerCount")(workerCount.asInstanceOf[js.Any])
-    if (workerType != null) __obj.updateDynamic("workerType")(workerType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1TrainingInput]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudMlV1TrainingInputOps[Self <: SchemaGoogleCloudMlV1TrainingInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHyperparameters(value: SchemaGoogleCloudMlV1HyperparameterSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperparameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHyperparameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperparameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobDir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterConfig(value: SchemaGoogleCloudMlV1ReplicaConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackageUris(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageUris")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageUris: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageUris")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterServerConfig(value: SchemaGoogleCloudMlV1ReplicaConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterServerConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterServerConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterServerConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterServerCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterServerCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterServerCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterServerCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterServerType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterServerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterServerType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterServerType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPythonModule(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pythonModule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPythonModule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pythonModule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPythonVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pythonVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPythonVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pythonVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuntimeVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuntimeVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleTier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleTier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleTier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleTier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerConfig(value: SchemaGoogleCloudMlV1ReplicaConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

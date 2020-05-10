@@ -22,11 +22,41 @@ trait SchemaCertDnsChallenge extends js.Object {
 
 object SchemaCertDnsChallenge {
   @scala.inline
-  def apply(domainName: String = null, token: String = null): SchemaCertDnsChallenge = {
+  def apply(): SchemaCertDnsChallenge = {
     val __obj = js.Dynamic.literal()
-    if (domainName != null) __obj.updateDynamic("domainName")(domainName.asInstanceOf[js.Any])
-    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCertDnsChallenge]
   }
+  @scala.inline
+  implicit class SchemaCertDnsChallengeOps[Self <: SchemaCertDnsChallenge] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,5 +13,6 @@ import scala.scalajs.js.annotation._
   * the module to conduct view transitions, otherwise this module returns null.
   *
   */
+@js.native
 trait transition extends js.Object
 

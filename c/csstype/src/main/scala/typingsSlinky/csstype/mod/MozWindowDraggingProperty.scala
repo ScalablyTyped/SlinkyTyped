@@ -17,20 +17,18 @@ trait MozWindowDraggingProperty extends js.Object
 
 object MozWindowDraggingProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def drag: typingsSlinky.csstype.csstypeStrings.drag = "drag".asInstanceOf[typingsSlinky.csstype.csstypeStrings.drag]
   @scala.inline
-  def drag: typingsSlinky.csstype.csstypeStrings.drag = this.cast("drag")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def `no-drag`: typingsSlinky.csstype.csstypeStrings.`no-drag` = "no-drag".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`no-drag`]
   @scala.inline
-  def `no-drag`: typingsSlinky.csstype.csstypeStrings.`no-drag` = this.cast("no-drag")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

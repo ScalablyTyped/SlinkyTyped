@@ -1,10 +1,7 @@
 package typingsSlinky.reactMapGl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.geojson.mod.Feature
 import typingsSlinky.geojson.mod.FeatureCollection
 import typingsSlinky.geojson.mod.GeoJsonProperties
@@ -18,64 +15,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Source
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMapGl.mod.Source] {
+object Source {
   @JSImport("react-map-gl", "Source")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id */
-  def apply(
-    `type`: String,
-    attribution: String = null,
-    bounds: js.Array[Double] = null,
-    buffer: Int | Double = null,
-    cluster: js.UndefOr[Boolean] = js.undefined,
-    clusterMaxZoom: Int | Double = null,
-    clusterProperties: js.Object = null,
-    clusterRadius: Int | Double = null,
-    coordinates: js.Array[js.Array[Double]] = null,
-    data: (Feature[Geometry, GeoJsonProperties]) | (FeatureCollection[Geometry, GeoJsonProperties]) | String = null,
-    encoding: terrarium | mapbox = null,
-    generateId: js.UndefOr[Boolean] = js.undefined,
-    lineMetrics: js.UndefOr[Boolean] = js.undefined,
-    maxzoom: Int | Double = null,
-    minzoom: Int | Double = null,
-    schema: xyz | tms = null,
-    tileSize: Int | Double = null,
-    tiles: js.Array[String] = null,
-    tolerance: Int | Double = null,
-    url: String = null,
-    urls: js.Array[String] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.Source] = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (buffer != null) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (!js.isUndefined(cluster)) __obj.updateDynamic("cluster")(cluster.asInstanceOf[js.Any])
-    if (clusterMaxZoom != null) __obj.updateDynamic("clusterMaxZoom")(clusterMaxZoom.asInstanceOf[js.Any])
-    if (clusterProperties != null) __obj.updateDynamic("clusterProperties")(clusterProperties.asInstanceOf[js.Any])
-    if (clusterRadius != null) __obj.updateDynamic("clusterRadius")(clusterRadius.asInstanceOf[js.Any])
-    if (coordinates != null) __obj.updateDynamic("coordinates")(coordinates.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (!js.isUndefined(generateId)) __obj.updateDynamic("generateId")(generateId.asInstanceOf[js.Any])
-    if (!js.isUndefined(lineMetrics)) __obj.updateDynamic("lineMetrics")(lineMetrics.asInstanceOf[js.Any])
-    if (maxzoom != null) __obj.updateDynamic("maxzoom")(maxzoom.asInstanceOf[js.Any])
-    if (minzoom != null) __obj.updateDynamic("minzoom")(minzoom.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
-    if (tileSize != null) __obj.updateDynamic("tileSize")(tileSize.asInstanceOf[js.Any])
-    if (tiles != null) __obj.updateDynamic("tiles")(tiles.asInstanceOf[js.Any])
-    if (tolerance != null) __obj.updateDynamic("tolerance")(tolerance.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (urls != null) __obj.updateDynamic("urls")(urls.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.Source] {
+    @scala.inline
+    def attribution(value: String): this.type = set("attribution", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bounds(value: js.Array[Double]): this.type = set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buffer(value: Double): this.type = set("buffer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cluster(value: Boolean): this.type = set("cluster", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clusterMaxZoom(value: Double): this.type = set("clusterMaxZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clusterProperties(value: js.Object): this.type = set("clusterProperties", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clusterRadius(value: Double): this.type = set("clusterRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def coordinates(value: js.Array[js.Array[Double]]): this.type = set("coordinates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(
+      value: (Feature[Geometry, GeoJsonProperties]) | (FeatureCollection[Geometry, GeoJsonProperties]) | String
+    ): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def encoding(value: terrarium | mapbox): this.type = set("encoding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def generateId(value: Boolean): this.type = set("generateId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lineMetrics(value: Boolean): this.type = set("lineMetrics", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxzoom(value: Double): this.type = set("maxzoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minzoom(value: Double): this.type = set("minzoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scheme(value: xyz | tms): this.type = set("scheme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tileSize(value: Double): this.type = set("tileSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tiles(value: js.Array[String]): this.type = set("tiles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tolerance(value: Double): this.type = set("tolerance", value.asInstanceOf[js.Any])
+    @scala.inline
+    def url(value: String): this.type = set("url", value.asInstanceOf[js.Any])
+    @scala.inline
+    def urls(value: js.Array[String]): this.type = set("urls", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.Source] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactMapGl.mod.Source](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SourceProps
+  
+  def withProps(p: SourceProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(`type`: String): Builder = {
+    val __props = js.Dynamic.literal()
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SourceProps]))
+  }
 }
 

@@ -5,60 +5,215 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IConnectionOptions extends js.Object {
-  var authid: js.UndefOr[String] = js.undefined
-  var authmethods: js.UndefOr[js.Array[String]] = js.undefined
-  var initial_retry_delay: js.UndefOr[Double] = js.undefined
-  var max_retries: js.UndefOr[Double] = js.undefined
-  var max_retry_delay: js.UndefOr[Double] = js.undefined
-  var onchallenge: js.UndefOr[OnChallengeHandler] = js.undefined
-  var protocols: js.UndefOr[js.Array[String]] = js.undefined
-  var realm: String
-  var retry_delay_growth: js.UndefOr[Double] = js.undefined
-  var retry_delay_jitter: js.UndefOr[Double] = js.undefined
-  var retry_if_unreachable: js.UndefOr[Boolean] = js.undefined
-  var transports: js.UndefOr[js.Array[ITransportDefinition]] = js.undefined
-  var url: js.UndefOr[String] = js.undefined
+  var authid: js.UndefOr[String] = js.native
+  var authmethods: js.UndefOr[js.Array[String]] = js.native
+  var initial_retry_delay: js.UndefOr[Double] = js.native
+  var max_retries: js.UndefOr[Double] = js.native
+  var max_retry_delay: js.UndefOr[Double] = js.native
+  var onchallenge: js.UndefOr[OnChallengeHandler] = js.native
+  var protocols: js.UndefOr[js.Array[String]] = js.native
+  var realm: String = js.native
+  var retry_delay_growth: js.UndefOr[Double] = js.native
+  var retry_delay_jitter: js.UndefOr[Double] = js.native
+  var retry_if_unreachable: js.UndefOr[Boolean] = js.native
+  var transports: js.UndefOr[js.Array[ITransportDefinition]] = js.native
+  var url: js.UndefOr[String] = js.native
   // use explicit deferred factory, e.g. jQuery.Deferred or Q.defer
-  var use_deferred: js.UndefOr[DeferFactory] = js.undefined
-  var use_es6_promises: js.UndefOr[Boolean] = js.undefined
+  var use_deferred: js.UndefOr[DeferFactory] = js.native
+  var use_es6_promises: js.UndefOr[Boolean] = js.native
 }
 
 object IConnectionOptions {
   @scala.inline
-  def apply(
-    realm: String,
-    authid: String = null,
-    authmethods: js.Array[String] = null,
-    initial_retry_delay: Int | Double = null,
-    max_retries: Int | Double = null,
-    max_retry_delay: Int | Double = null,
-    onchallenge: (/* session */ Session, /* method */ String, /* extra */ js.Any) => String | Promise_[String] = null,
-    protocols: js.Array[String] = null,
-    retry_delay_growth: Int | Double = null,
-    retry_delay_jitter: Int | Double = null,
-    retry_if_unreachable: js.UndefOr[Boolean] = js.undefined,
-    transports: js.Array[ITransportDefinition] = null,
-    url: String = null,
-    use_deferred: () => Promise_[js.Any] = null,
-    use_es6_promises: js.UndefOr[Boolean] = js.undefined
-  ): IConnectionOptions = {
+  def apply(realm: String): IConnectionOptions = {
     val __obj = js.Dynamic.literal(realm = realm.asInstanceOf[js.Any])
-    if (authid != null) __obj.updateDynamic("authid")(authid.asInstanceOf[js.Any])
-    if (authmethods != null) __obj.updateDynamic("authmethods")(authmethods.asInstanceOf[js.Any])
-    if (initial_retry_delay != null) __obj.updateDynamic("initial_retry_delay")(initial_retry_delay.asInstanceOf[js.Any])
-    if (max_retries != null) __obj.updateDynamic("max_retries")(max_retries.asInstanceOf[js.Any])
-    if (max_retry_delay != null) __obj.updateDynamic("max_retry_delay")(max_retry_delay.asInstanceOf[js.Any])
-    if (onchallenge != null) __obj.updateDynamic("onchallenge")(js.Any.fromFunction3(onchallenge))
-    if (protocols != null) __obj.updateDynamic("protocols")(protocols.asInstanceOf[js.Any])
-    if (retry_delay_growth != null) __obj.updateDynamic("retry_delay_growth")(retry_delay_growth.asInstanceOf[js.Any])
-    if (retry_delay_jitter != null) __obj.updateDynamic("retry_delay_jitter")(retry_delay_jitter.asInstanceOf[js.Any])
-    if (!js.isUndefined(retry_if_unreachable)) __obj.updateDynamic("retry_if_unreachable")(retry_if_unreachable.asInstanceOf[js.Any])
-    if (transports != null) __obj.updateDynamic("transports")(transports.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (use_deferred != null) __obj.updateDynamic("use_deferred")(js.Any.fromFunction0(use_deferred))
-    if (!js.isUndefined(use_es6_promises)) __obj.updateDynamic("use_es6_promises")(use_es6_promises.asInstanceOf[js.Any])
     __obj.asInstanceOf[IConnectionOptions]
   }
+  @scala.inline
+  implicit class IConnectionOptionsOps[Self <: IConnectionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRealm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthmethods(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authmethods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthmethods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authmethods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitial_retry_delay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initial_retry_delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitial_retry_delay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initial_retry_delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax_retries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_retries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax_retries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_retries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax_retry_delay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_retry_delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax_retry_delay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_retry_delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnchallenge(
+      value: (/* session */ Session, /* method */ String, /* extra */ js.Any) => String | Promise_[String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onchallenge")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnchallenge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onchallenge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocols(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocols: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocols")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetry_delay_growth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_delay_growth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetry_delay_growth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_delay_growth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetry_delay_jitter(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_delay_jitter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetry_delay_jitter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_delay_jitter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetry_if_unreachable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_if_unreachable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetry_if_unreachable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_if_unreachable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransports(value: js.Array[ITransportDefinition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransports: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUse_deferred(value: () => Promise_[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use_deferred")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutUse_deferred: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use_deferred")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUse_es6_promises(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use_es6_promises")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUse_es6_promises: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use_es6_promises")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

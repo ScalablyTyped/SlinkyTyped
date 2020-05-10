@@ -1,6 +1,5 @@
 package typingsSlinky.uirouterAngularjs
 
-import typingsSlinky.std.RegExp
 import typingsSlinky.uirouterCore.commonCommonMod.IInjectable
 import typingsSlinky.uirouterCore.coreservicesMod.InjectorLike
 import typingsSlinky.uirouterCore.coreservicesMod.LocationServices
@@ -155,8 +154,8 @@ object urlRouterProviderMod extends js.Object {
       *
       * Note: the handler may also invoke arbitrary code, such as `$state.go()`
       */
-    def when(what: RegExp, handler: String): this.type = js.native
-    def when(what: RegExp, handler: IInjectable): this.type = js.native
+    def when(what: js.RegExp, handler: String): this.type = js.native
+    def when(what: js.RegExp, handler: IInjectable): this.type = js.native
     def when(what: UrlMatcher, handler: String): this.type = js.native
     def when(what: UrlMatcher, handler: IInjectable): this.type = js.native
   }

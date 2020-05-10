@@ -18,11 +18,41 @@ trait DeleteImageRecipeResponse extends js.Object {
 
 object DeleteImageRecipeResponse {
   @scala.inline
-  def apply(imageRecipeArn: ImageRecipeArn = null, requestId: NonEmptyString = null): DeleteImageRecipeResponse = {
+  def apply(): DeleteImageRecipeResponse = {
     val __obj = js.Dynamic.literal()
-    if (imageRecipeArn != null) __obj.updateDynamic("imageRecipeArn")(imageRecipeArn.asInstanceOf[js.Any])
-    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteImageRecipeResponse]
   }
+  @scala.inline
+  implicit class DeleteImageRecipeResponseOps[Self <: DeleteImageRecipeResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageRecipeArn(value: ImageRecipeArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageRecipeArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageRecipeArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageRecipeArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

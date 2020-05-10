@@ -1,7 +1,6 @@
 package typingsSlinky.sharepoint.CUI
 
 import typingsSlinky.sharepoint.IEnumerable
-import typingsSlinky.sharepoint.IEnumerator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +10,6 @@ import scala.scalajs.js.annotation._
 class List[T] () extends IEnumerable[T] {
   def add(data: T): scala.Unit = js.native
   def clear(): scala.Unit = js.native
-  /* CompleteClass */
-  override def getEnumerator(): IEnumerator[T] = js.native
   def getEnumeratorAtPos(): ListEnumerator[T] = js.native
   def get_count(): Double = js.native
   def get_item(index: Double): T = js.native

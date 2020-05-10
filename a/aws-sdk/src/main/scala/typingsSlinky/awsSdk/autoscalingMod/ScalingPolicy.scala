@@ -23,6 +23,10 @@ trait ScalingPolicy extends js.Object {
     */
   var Cooldown: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.Cooldown] = js.native
   /**
+    * Indicates whether the policy is enabled (true) or disabled (false).
+    */
+  var Enabled: js.UndefOr[ScalingPolicyEnabled] = js.native
+  /**
     * The estimated time, in seconds, until a newly launched instance can contribute to the CloudWatch metrics.
     */
   var EstimatedInstanceWarmup: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.EstimatedInstanceWarmup] = js.native
@@ -66,38 +70,197 @@ trait ScalingPolicy extends js.Object {
 
 object ScalingPolicy {
   @scala.inline
-  def apply(
-    AdjustmentType: XmlStringMaxLen255 = null,
-    Alarms: Alarms = null,
-    AutoScalingGroupName: XmlStringMaxLen255 = null,
-    Cooldown: Int | Double = null,
-    EstimatedInstanceWarmup: Int | Double = null,
-    MetricAggregationType: XmlStringMaxLen32 = null,
-    MinAdjustmentMagnitude: Int | Double = null,
-    MinAdjustmentStep: Int | Double = null,
-    PolicyARN: ResourceName = null,
-    PolicyName: XmlStringMaxLen255 = null,
-    PolicyType: XmlStringMaxLen64 = null,
-    ScalingAdjustment: Int | Double = null,
-    StepAdjustments: StepAdjustments = null,
-    TargetTrackingConfiguration: TargetTrackingConfiguration = null
-  ): ScalingPolicy = {
+  def apply(): ScalingPolicy = {
     val __obj = js.Dynamic.literal()
-    if (AdjustmentType != null) __obj.updateDynamic("AdjustmentType")(AdjustmentType.asInstanceOf[js.Any])
-    if (Alarms != null) __obj.updateDynamic("Alarms")(Alarms.asInstanceOf[js.Any])
-    if (AutoScalingGroupName != null) __obj.updateDynamic("AutoScalingGroupName")(AutoScalingGroupName.asInstanceOf[js.Any])
-    if (Cooldown != null) __obj.updateDynamic("Cooldown")(Cooldown.asInstanceOf[js.Any])
-    if (EstimatedInstanceWarmup != null) __obj.updateDynamic("EstimatedInstanceWarmup")(EstimatedInstanceWarmup.asInstanceOf[js.Any])
-    if (MetricAggregationType != null) __obj.updateDynamic("MetricAggregationType")(MetricAggregationType.asInstanceOf[js.Any])
-    if (MinAdjustmentMagnitude != null) __obj.updateDynamic("MinAdjustmentMagnitude")(MinAdjustmentMagnitude.asInstanceOf[js.Any])
-    if (MinAdjustmentStep != null) __obj.updateDynamic("MinAdjustmentStep")(MinAdjustmentStep.asInstanceOf[js.Any])
-    if (PolicyARN != null) __obj.updateDynamic("PolicyARN")(PolicyARN.asInstanceOf[js.Any])
-    if (PolicyName != null) __obj.updateDynamic("PolicyName")(PolicyName.asInstanceOf[js.Any])
-    if (PolicyType != null) __obj.updateDynamic("PolicyType")(PolicyType.asInstanceOf[js.Any])
-    if (ScalingAdjustment != null) __obj.updateDynamic("ScalingAdjustment")(ScalingAdjustment.asInstanceOf[js.Any])
-    if (StepAdjustments != null) __obj.updateDynamic("StepAdjustments")(StepAdjustments.asInstanceOf[js.Any])
-    if (TargetTrackingConfiguration != null) __obj.updateDynamic("TargetTrackingConfiguration")(TargetTrackingConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScalingPolicy]
   }
+  @scala.inline
+  implicit class ScalingPolicyOps[Self <: ScalingPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdjustmentType(value: XmlStringMaxLen255): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustmentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdjustmentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustmentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlarms(value: Alarms): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Alarms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlarms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Alarms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoScalingGroupName(value: XmlStringMaxLen255): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoScalingGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCooldown(value: Cooldown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cooldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCooldown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cooldown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: ScalingPolicyEnabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedInstanceWarmup(value: EstimatedInstanceWarmup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedInstanceWarmup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedInstanceWarmup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedInstanceWarmup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricAggregationType(value: XmlStringMaxLen32): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricAggregationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricAggregationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricAggregationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinAdjustmentMagnitude(value: MinAdjustmentMagnitude): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinAdjustmentMagnitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinAdjustmentMagnitude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinAdjustmentMagnitude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinAdjustmentStep(value: MinAdjustmentStep): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinAdjustmentStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinAdjustmentStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinAdjustmentStep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyARN(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyName(value: XmlStringMaxLen255): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyType(value: XmlStringMaxLen64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScalingAdjustment(value: PolicyIncrement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingAdjustment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScalingAdjustment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingAdjustment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepAdjustments(value: StepAdjustments): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepAdjustments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepAdjustments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepAdjustments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetTrackingConfiguration(value: TargetTrackingConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTrackingConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetTrackingConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTrackingConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

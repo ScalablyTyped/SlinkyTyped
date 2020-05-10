@@ -20,90 +20,248 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ K in keyof express-validator.express-validator/src/chain/sanitizers.Sanitizers<any> ]:? express-validator.express-validator/src/middlewares/schema.SanitizerSchemaOptions<K>} */
+@js.native
 trait SanitizersSchema extends js.Object {
   var blacklist: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.blacklist]
-  ] = js.undefined
+  ] = js.native
   var customSanitizer: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.customSanitizer]
-  ] = js.undefined
+  ] = js.native
   var escape: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.escape]
-  ] = js.undefined
+  ] = js.native
   var ltrim: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.ltrim]
-  ] = js.undefined
+  ] = js.native
   var normalizeEmail: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.normalizeEmail]
-  ] = js.undefined
+  ] = js.native
   var rtrim: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.rtrim]
-  ] = js.undefined
+  ] = js.native
   var stripLow: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.stripLow]
-  ] = js.undefined
+  ] = js.native
   var toArray: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.toArray]
-  ] = js.undefined
+  ] = js.native
   var toBoolean: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.toBoolean]
-  ] = js.undefined
+  ] = js.native
   var toDate: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.toDate]
-  ] = js.undefined
+  ] = js.native
   var toFloat: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.toFloat]
-  ] = js.undefined
+  ] = js.native
   var toInt: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.toInt]
-  ] = js.undefined
+  ] = js.native
   var trim: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.trim]
-  ] = js.undefined
+  ] = js.native
   var unescape: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.unescape]
-  ] = js.undefined
+  ] = js.native
   var whitelist: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.whitelist]
-  ] = js.undefined
+  ] = js.native
 }
 
 object SanitizersSchema {
   @scala.inline
-  def apply(
-    blacklist: SanitizerSchemaOptions[blacklist] = null,
-    customSanitizer: SanitizerSchemaOptions[customSanitizer] = null,
-    escape: SanitizerSchemaOptions[escape] = null,
-    ltrim: SanitizerSchemaOptions[ltrim] = null,
-    normalizeEmail: SanitizerSchemaOptions[normalizeEmail] = null,
-    rtrim: SanitizerSchemaOptions[rtrim] = null,
-    stripLow: SanitizerSchemaOptions[stripLow] = null,
-    toArray: SanitizerSchemaOptions[toArray] = null,
-    toBoolean: SanitizerSchemaOptions[toBoolean] = null,
-    toDate: SanitizerSchemaOptions[toDate] = null,
-    toFloat: SanitizerSchemaOptions[toFloat] = null,
-    toInt: SanitizerSchemaOptions[toInt] = null,
-    trim: SanitizerSchemaOptions[trim] = null,
-    unescape: SanitizerSchemaOptions[unescape] = null,
-    whitelist: SanitizerSchemaOptions[whitelist] = null
-  ): SanitizersSchema = {
+  def apply(): SanitizersSchema = {
     val __obj = js.Dynamic.literal()
-    if (blacklist != null) __obj.updateDynamic("blacklist")(blacklist.asInstanceOf[js.Any])
-    if (customSanitizer != null) __obj.updateDynamic("customSanitizer")(customSanitizer.asInstanceOf[js.Any])
-    if (escape != null) __obj.updateDynamic("escape")(escape.asInstanceOf[js.Any])
-    if (ltrim != null) __obj.updateDynamic("ltrim")(ltrim.asInstanceOf[js.Any])
-    if (normalizeEmail != null) __obj.updateDynamic("normalizeEmail")(normalizeEmail.asInstanceOf[js.Any])
-    if (rtrim != null) __obj.updateDynamic("rtrim")(rtrim.asInstanceOf[js.Any])
-    if (stripLow != null) __obj.updateDynamic("stripLow")(stripLow.asInstanceOf[js.Any])
-    if (toArray != null) __obj.updateDynamic("toArray")(toArray.asInstanceOf[js.Any])
-    if (toBoolean != null) __obj.updateDynamic("toBoolean")(toBoolean.asInstanceOf[js.Any])
-    if (toDate != null) __obj.updateDynamic("toDate")(toDate.asInstanceOf[js.Any])
-    if (toFloat != null) __obj.updateDynamic("toFloat")(toFloat.asInstanceOf[js.Any])
-    if (toInt != null) __obj.updateDynamic("toInt")(toInt.asInstanceOf[js.Any])
-    if (trim != null) __obj.updateDynamic("trim")(trim.asInstanceOf[js.Any])
-    if (unescape != null) __obj.updateDynamic("unescape")(unescape.asInstanceOf[js.Any])
-    if (whitelist != null) __obj.updateDynamic("whitelist")(whitelist.asInstanceOf[js.Any])
     __obj.asInstanceOf[SanitizersSchema]
   }
+  @scala.inline
+  implicit class SanitizersSchemaOps[Self <: SanitizersSchema] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlacklist(value: SanitizerSchemaOptions[blacklist]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlacklist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomSanitizer(value: SanitizerSchemaOptions[customSanitizer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customSanitizer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomSanitizer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customSanitizer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEscape(value: SanitizerSchemaOptions[escape]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEscape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLtrim(value: SanitizerSchemaOptions[ltrim]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ltrim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLtrim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ltrim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormalizeEmail(value: SanitizerSchemaOptions[normalizeEmail]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNormalizeEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeEmail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRtrim(value: SanitizerSchemaOptions[rtrim]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtrim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRtrim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtrim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStripLow(value: SanitizerSchemaOptions[stripLow]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripLow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStripLow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripLow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToArray(value: SanitizerSchemaOptions[toArray]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toArray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToArray: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toArray")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToBoolean(value: SanitizerSchemaOptions[toBoolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toBoolean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToBoolean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toBoolean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToDate(value: SanitizerSchemaOptions[toDate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToFloat(value: SanitizerSchemaOptions[toFloat]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toFloat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToFloat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toFloat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToInt(value: SanitizerSchemaOptions[toInt]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrim(value: SanitizerSchemaOptions[trim]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnescape(value: SanitizerSchemaOptions[unescape]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unescape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnescape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unescape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhitelist(value: SanitizerSchemaOptions[whitelist]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhitelist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelist")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -50,27 +50,119 @@ trait CreateEndpointGroupRequest extends js.Object {
 
 object CreateEndpointGroupRequest {
   @scala.inline
-  def apply(
-    EndpointGroupRegion: GenericString,
-    IdempotencyToken: IdempotencyToken,
-    ListenerArn: GenericString,
-    EndpointConfigurations: EndpointConfigurations = null,
-    HealthCheckIntervalSeconds: Int | Double = null,
-    HealthCheckPath: GenericString = null,
-    HealthCheckPort: Int | Double = null,
-    HealthCheckProtocol: HealthCheckProtocol = null,
-    ThresholdCount: Int | Double = null,
-    TrafficDialPercentage: Int | Double = null
-  ): CreateEndpointGroupRequest = {
+  def apply(EndpointGroupRegion: GenericString, IdempotencyToken: IdempotencyToken, ListenerArn: GenericString): CreateEndpointGroupRequest = {
     val __obj = js.Dynamic.literal(EndpointGroupRegion = EndpointGroupRegion.asInstanceOf[js.Any], IdempotencyToken = IdempotencyToken.asInstanceOf[js.Any], ListenerArn = ListenerArn.asInstanceOf[js.Any])
-    if (EndpointConfigurations != null) __obj.updateDynamic("EndpointConfigurations")(EndpointConfigurations.asInstanceOf[js.Any])
-    if (HealthCheckIntervalSeconds != null) __obj.updateDynamic("HealthCheckIntervalSeconds")(HealthCheckIntervalSeconds.asInstanceOf[js.Any])
-    if (HealthCheckPath != null) __obj.updateDynamic("HealthCheckPath")(HealthCheckPath.asInstanceOf[js.Any])
-    if (HealthCheckPort != null) __obj.updateDynamic("HealthCheckPort")(HealthCheckPort.asInstanceOf[js.Any])
-    if (HealthCheckProtocol != null) __obj.updateDynamic("HealthCheckProtocol")(HealthCheckProtocol.asInstanceOf[js.Any])
-    if (ThresholdCount != null) __obj.updateDynamic("ThresholdCount")(ThresholdCount.asInstanceOf[js.Any])
-    if (TrafficDialPercentage != null) __obj.updateDynamic("TrafficDialPercentage")(TrafficDialPercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateEndpointGroupRequest]
   }
+  @scala.inline
+  implicit class CreateEndpointGroupRequestOps[Self <: CreateEndpointGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndpointGroupRegion(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointGroupRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdempotencyToken(value: IdempotencyToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdempotencyToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListenerArn(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListenerArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointConfigurations(value: EndpointConfigurations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointConfigurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthCheckIntervalSeconds(value: HealthCheckIntervalSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckIntervalSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthCheckIntervalSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckIntervalSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthCheckPath(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthCheckPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthCheckPort(value: HealthCheckPort): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthCheckPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthCheckProtocol(value: HealthCheckProtocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthCheckProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthCheckProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThresholdCount(value: ThresholdCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThresholdCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrafficDialPercentage(value: TrafficDialPercentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficDialPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrafficDialPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficDialPercentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

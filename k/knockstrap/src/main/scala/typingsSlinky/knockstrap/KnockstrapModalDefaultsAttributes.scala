@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait KnockstrapModalDefaultsAttributes extends js.Object {
-  var role: String
+  var role: String = js.native
 }
 
 object KnockstrapModalDefaultsAttributes {
   @scala.inline
   def apply(role: String): KnockstrapModalDefaultsAttributes = {
     val __obj = js.Dynamic.literal(role = role.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[KnockstrapModalDefaultsAttributes]
   }
+  @scala.inline
+  implicit class KnockstrapModalDefaultsAttributesOps[Self <: KnockstrapModalDefaultsAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

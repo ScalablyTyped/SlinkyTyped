@@ -15,16 +15,14 @@ trait PagerEventMap extends js.Object
 
 object PagerEventMap {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def pageMoved: typingsSlinky.tablesorter.tablesorterStrings.pageMoved = "pageMoved".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.pageMoved]
   @scala.inline
-  def pageMoved: typingsSlinky.tablesorter.tablesorterStrings.pageMoved = this.cast("pageMoved")
+  def pagerBeforeInitialized: typingsSlinky.tablesorter.tablesorterStrings.pagerBeforeInitialized = "pagerBeforeInitialized".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.pagerBeforeInitialized]
   @scala.inline
-  def pagerBeforeInitialized: typingsSlinky.tablesorter.tablesorterStrings.pagerBeforeInitialized = this.cast("pagerBeforeInitialized")
+  def pagerChange: typingsSlinky.tablesorter.tablesorterStrings.pagerChange = "pagerChange".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.pagerChange]
   @scala.inline
-  def pagerChange: typingsSlinky.tablesorter.tablesorterStrings.pagerChange = this.cast("pagerChange")
+  def pagerComplete: typingsSlinky.tablesorter.tablesorterStrings.pagerComplete = "pagerComplete".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.pagerComplete]
   @scala.inline
-  def pagerComplete: typingsSlinky.tablesorter.tablesorterStrings.pagerComplete = this.cast("pagerComplete")
-  @scala.inline
-  def pagerInitialized: typingsSlinky.tablesorter.tablesorterStrings.pagerInitialized = this.cast("pagerInitialized")
+  def pagerInitialized: typingsSlinky.tablesorter.tablesorterStrings.pagerInitialized = "pagerInitialized".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.pagerInitialized]
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.cqrsDomain.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,11 +43,11 @@ trait CqrsDomain extends js.Object {
     *                            `function(err, evts, aggregateData, meta){}` evts is of type Array, aggregateData and meta are an object
     */
   def handle(cmd: js.Any): Unit = js.native
-  def handle(cmd: js.Any, cb: js.Function1[/* err */ Error, Unit]): Unit = js.native
+  def handle(cmd: js.Any, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def handle(
     cmd: js.Any,
     cb: js.Function4[
-      /* err */ Error, 
+      /* err */ js.Error, 
       /* events */ js.Array[_], 
       /* aggregateData */ js.Any, 
       /* metaInfos */ HandleMetaInfos, 

@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
+@js.native
 trait ColumnPropertiesLoadOptions extends CellPropertiesLoadOptions {
   /**
     *
@@ -18,14 +19,14 @@ trait ColumnPropertiesLoadOptions extends CellPropertiesLoadOptions {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var columnHidden: js.UndefOr[Boolean] = js.undefined
+  var columnHidden: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether to load on the `columnIndex` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var columnIndex: js.UndefOr[Boolean] = js.undefined
+  var columnIndex: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether to load on the `format` property.
@@ -33,31 +34,58 @@ trait ColumnPropertiesLoadOptions extends CellPropertiesLoadOptions {
     * [Api set: ExcelApi 1.9]
     */
   @JSName("format")
-  var format_ColumnPropertiesLoadOptions: js.UndefOr[CellPropertiesFormatLoadOAutoIndent] = js.undefined
+  var format_ColumnPropertiesLoadOptions: js.UndefOr[CellPropertiesFormatLoadOAutoIndent] = js.native
 }
 
 object ColumnPropertiesLoadOptions {
   @scala.inline
-  def apply(
-    address: js.UndefOr[Boolean] = js.undefined,
-    addressLocal: js.UndefOr[Boolean] = js.undefined,
-    columnHidden: js.UndefOr[Boolean] = js.undefined,
-    columnIndex: js.UndefOr[Boolean] = js.undefined,
-    format: CellPropertiesFormatLoadOAutoIndent = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    hyperlink: js.UndefOr[Boolean] = js.undefined,
-    style: js.UndefOr[Boolean] = js.undefined
-  ): ColumnPropertiesLoadOptions = {
+  def apply(): ColumnPropertiesLoadOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(address)) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (!js.isUndefined(addressLocal)) __obj.updateDynamic("addressLocal")(addressLocal.asInstanceOf[js.Any])
-    if (!js.isUndefined(columnHidden)) __obj.updateDynamic("columnHidden")(columnHidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(columnIndex)) __obj.updateDynamic("columnIndex")(columnIndex.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(hyperlink)) __obj.updateDynamic("hyperlink")(hyperlink.asInstanceOf[js.Any])
-    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnPropertiesLoadOptions]
   }
+  @scala.inline
+  implicit class ColumnPropertiesLoadOptionsOps[Self <: ColumnPropertiesLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnIndex(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: CellPropertiesFormatLoadOAutoIndent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

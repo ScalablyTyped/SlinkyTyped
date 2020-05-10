@@ -1,38 +1,44 @@
 package typingsSlinky.awsSdkClientPinpointBrowser.typesSmsmessageMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.PROMOTIONAL
-import typingsSlinky.awsSdkClientPinpointBrowser.awsSdkClientPinpointBrowserStrings.TRANSACTIONAL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledSMSMessage extends SMSMessage {
   /**
     * Default message substitutions. Can be overridden by individual address substitutions.
     */
   @JSName("Substitutions")
-  var Substitutions_UnmarshalledSMSMessage: js.UndefOr[StringDictionary[js.Array[String]]] = js.undefined
+  var Substitutions_UnmarshalledSMSMessage: js.UndefOr[StringDictionary[js.Array[String]]] = js.native
 }
 
 object UnmarshalledSMSMessage {
   @scala.inline
-  def apply(
-    Body: String = null,
-    Keyword: String = null,
-    MessageType: TRANSACTIONAL | PROMOTIONAL | String = null,
-    OriginationNumber: String = null,
-    SenderId: String = null,
-    Substitutions: StringDictionary[js.Array[String]] = null
-  ): UnmarshalledSMSMessage = {
+  def apply(): UnmarshalledSMSMessage = {
     val __obj = js.Dynamic.literal()
-    if (Body != null) __obj.updateDynamic("Body")(Body.asInstanceOf[js.Any])
-    if (Keyword != null) __obj.updateDynamic("Keyword")(Keyword.asInstanceOf[js.Any])
-    if (MessageType != null) __obj.updateDynamic("MessageType")(MessageType.asInstanceOf[js.Any])
-    if (OriginationNumber != null) __obj.updateDynamic("OriginationNumber")(OriginationNumber.asInstanceOf[js.Any])
-    if (SenderId != null) __obj.updateDynamic("SenderId")(SenderId.asInstanceOf[js.Any])
-    if (Substitutions != null) __obj.updateDynamic("Substitutions")(Substitutions.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledSMSMessage]
   }
+  @scala.inline
+  implicit class UnmarshalledSMSMessageOps[Self <: UnmarshalledSMSMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubstitutions(value: StringDictionary[js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubstitutions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Substitutions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

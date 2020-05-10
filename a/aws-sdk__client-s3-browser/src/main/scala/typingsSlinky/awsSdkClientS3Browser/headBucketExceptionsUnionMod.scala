@@ -1,0 +1,13 @@
+package typingsSlinky.awsSdkClientS3Browser
+
+import typingsSlinky.awsSdkClientS3Browser.typesNoSuchBucketMod.NoSuchBucket
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-s3-browser/types/HeadBucketExceptionsUnion", JSImport.Namespace)
+@js.native
+object headBucketExceptionsUnionMod extends js.Object {
+  type HeadBucketExceptionsUnion = NoSuchBucket
+}
+

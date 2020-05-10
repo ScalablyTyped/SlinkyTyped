@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleCloudMlV1Model extends js.Object {
   /**
     * Output only. The default version of the model. This version will be used to
@@ -12,20 +13,20 @@ trait GoogleCloudMlV1Model extends js.Object {
     * You can change the default version by calling
     * [projects.methods.versions.setDefault](/ml-engine/reference/rest/v1/projects.models.versions/setDefault).
     */
-  var defaultVersion: js.UndefOr[GoogleCloudMlV1Version] = js.undefined
+  var defaultVersion: js.UndefOr[GoogleCloudMlV1Version] = js.native
   /** Optional. The description specified for the model when it was created. */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * Required. The name specified for the model when it was created.
     *
     * The model name must be unique within the project it is created in.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Optional. If true, enables StackDriver Logging for online prediction.
     * Default is false.
     */
-  var onlinePredictionLogging: js.UndefOr[Boolean] = js.undefined
+  var onlinePredictionLogging: js.UndefOr[Boolean] = js.native
   /**
     * Optional. The list of regions where the model is going to be deployed.
     * Currently only one region per model is supported.
@@ -37,25 +38,82 @@ trait GoogleCloudMlV1Model extends js.Object {
     * submitting the batch prediction job and does not take its value from
     * this field.
     */
-  var regions: js.UndefOr[js.Array[String]] = js.undefined
+  var regions: js.UndefOr[js.Array[String]] = js.native
 }
 
 object GoogleCloudMlV1Model {
   @scala.inline
-  def apply(
-    defaultVersion: GoogleCloudMlV1Version = null,
-    description: String = null,
-    name: String = null,
-    onlinePredictionLogging: js.UndefOr[Boolean] = js.undefined,
-    regions: js.Array[String] = null
-  ): GoogleCloudMlV1Model = {
+  def apply(): GoogleCloudMlV1Model = {
     val __obj = js.Dynamic.literal()
-    if (defaultVersion != null) __obj.updateDynamic("defaultVersion")(defaultVersion.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(onlinePredictionLogging)) __obj.updateDynamic("onlinePredictionLogging")(onlinePredictionLogging.asInstanceOf[js.Any])
-    if (regions != null) __obj.updateDynamic("regions")(regions.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleCloudMlV1Model]
   }
+  @scala.inline
+  implicit class GoogleCloudMlV1ModelOps[Self <: GoogleCloudMlV1Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultVersion(value: GoogleCloudMlV1Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlinePredictionLogging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlinePredictionLogging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlinePredictionLogging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlinePredictionLogging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

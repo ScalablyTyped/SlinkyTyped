@@ -1,65 +1,58 @@
 package typingsSlinky.mjmlReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.csstype.mod.ColorProperty
-import typingsSlinky.mjmlReact.mjmlReactStrings.hamburger
 import typingsSlinky.mjmlReact.mod.MjmlNavbarProps
 import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlNavbar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbar] {
+object MjmlNavbar {
   @JSImport("mjml-react", "MjmlNavbar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    align: String = null,
-    baseUrl: String = null,
-    hamburger: hamburger = null,
-    icoAlign: String = null,
-    icoClose: String = null,
-    icoColor: ColorProperty = null,
-    icoFontSize: String = null,
-    icoLineHeight: String = null,
-    icoOpen: String = null,
-    icoPadding: String = null,
-    icoPaddingBottom: String = null,
-    icoPaddingLeft: String = null,
-    icoPaddingRight: String = null,
-    icoPaddingTop: String = null,
-    icoTextDecoration: String = null,
-    icoTextTransform: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbar] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
-    if (hamburger != null) __obj.updateDynamic("hamburger")(hamburger.asInstanceOf[js.Any])
-    if (icoAlign != null) __obj.updateDynamic("icoAlign")(icoAlign.asInstanceOf[js.Any])
-    if (icoClose != null) __obj.updateDynamic("icoClose")(icoClose.asInstanceOf[js.Any])
-    if (icoColor != null) __obj.updateDynamic("icoColor")(icoColor.asInstanceOf[js.Any])
-    if (icoFontSize != null) __obj.updateDynamic("icoFontSize")(icoFontSize.asInstanceOf[js.Any])
-    if (icoLineHeight != null) __obj.updateDynamic("icoLineHeight")(icoLineHeight.asInstanceOf[js.Any])
-    if (icoOpen != null) __obj.updateDynamic("icoOpen")(icoOpen.asInstanceOf[js.Any])
-    if (icoPadding != null) __obj.updateDynamic("icoPadding")(icoPadding.asInstanceOf[js.Any])
-    if (icoPaddingBottom != null) __obj.updateDynamic("icoPaddingBottom")(icoPaddingBottom.asInstanceOf[js.Any])
-    if (icoPaddingLeft != null) __obj.updateDynamic("icoPaddingLeft")(icoPaddingLeft.asInstanceOf[js.Any])
-    if (icoPaddingRight != null) __obj.updateDynamic("icoPaddingRight")(icoPaddingRight.asInstanceOf[js.Any])
-    if (icoPaddingTop != null) __obj.updateDynamic("icoPaddingTop")(icoPaddingTop.asInstanceOf[js.Any])
-    if (icoTextDecoration != null) __obj.updateDynamic("icoTextDecoration")(icoTextDecoration.asInstanceOf[js.Any])
-    if (icoTextTransform != null) __obj.updateDynamic("icoTextTransform")(icoTextTransform.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbar] {
+    @scala.inline
+    def align(value: String): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def baseUrl(value: String): this.type = set("baseUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hamburger(value: typingsSlinky.mjmlReact.mjmlReactStrings.hamburger): this.type = set("hamburger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoAlign(value: String): this.type = set("icoAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoClose(value: String): this.type = set("icoClose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoColor(value: ColorProperty): this.type = set("icoColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoFontSize(value: String): this.type = set("icoFontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoLineHeight(value: String): this.type = set("icoLineHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoOpen(value: String): this.type = set("icoOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoPadding(value: String): this.type = set("icoPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoPaddingBottom(value: String): this.type = set("icoPaddingBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoPaddingLeft(value: String): this.type = set("icoPaddingLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoPaddingRight(value: String): this.type = set("icoPaddingRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoPaddingTop(value: String): this.type = set("icoPaddingTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoTextDecoration(value: String): this.type = set("icoTextDecoration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icoTextTransform(value: String): this.type = set("icoTextTransform", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbar] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MjmlNavbarProps with RequiredChildrenProps
+  
+  def withProps(p: MjmlNavbarProps with RequiredChildrenProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MjmlNavbar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

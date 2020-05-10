@@ -13,12 +13,10 @@ trait SocksCommandOption extends js.Object
 
 object SocksCommandOption {
   @scala.inline
-  def associate: typingsSlinky.socks.socksStrings.associate = this.cast("associate")
+  def associate: typingsSlinky.socks.socksStrings.associate = "associate".asInstanceOf[typingsSlinky.socks.socksStrings.associate]
   @scala.inline
-  def bind: typingsSlinky.socks.socksStrings.bind = this.cast("bind")
+  def bind: typingsSlinky.socks.socksStrings.bind = "bind".asInstanceOf[typingsSlinky.socks.socksStrings.bind]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def connect: typingsSlinky.socks.socksStrings.connect = this.cast("connect")
+  def connect: typingsSlinky.socks.socksStrings.connect = "connect".asInstanceOf[typingsSlinky.socks.socksStrings.connect]
 }
 

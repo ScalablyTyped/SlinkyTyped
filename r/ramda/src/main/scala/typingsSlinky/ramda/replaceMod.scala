@@ -1,6 +1,5 @@
 package typingsSlinky.ramda
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,15 +19,15 @@ object replaceMod extends js.Object {
     replacement: js.Function2[/* match */ String, /* repeated */ js.Any, String],
     str: String
   ): String = js.native
-  def default(pattern: RegExp): js.Function1[
+  def default(pattern: js.RegExp): js.Function1[
     /* replacement */ String | (js.Function2[/* match */ String, /* repeated */ js.Any, String]), 
     js.Function1[/* str */ String, String]
   ] = js.native
-  def default(pattern: RegExp, replacement: String): js.Function1[/* str */ String, String] = js.native
-  def default(pattern: RegExp, replacement: String, str: String): String = js.native
-  def default(pattern: RegExp, replacement: js.Function2[/* match */ String, /* repeated */ js.Any, String]): js.Function1[/* str */ String, String] = js.native
+  def default(pattern: js.RegExp, replacement: String): js.Function1[/* str */ String, String] = js.native
+  def default(pattern: js.RegExp, replacement: String, str: String): String = js.native
+  def default(pattern: js.RegExp, replacement: js.Function2[/* match */ String, /* repeated */ js.Any, String]): js.Function1[/* str */ String, String] = js.native
   def default(
-    pattern: RegExp,
+    pattern: js.RegExp,
     replacement: js.Function2[/* match */ String, /* repeated */ js.Any, String],
     str: String
   ): String = js.native

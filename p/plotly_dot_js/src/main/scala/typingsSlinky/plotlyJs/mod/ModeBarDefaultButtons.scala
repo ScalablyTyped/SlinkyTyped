@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.plotlyJs.plotlyJsStrings.lasso2d
   - typingsSlinky.plotlyJs.plotlyJsStrings.select2d
   - typingsSlinky.plotlyJs.plotlyJsStrings.sendDataToCloud
-  - typingsSlinky.plotlyJs.plotlyJsStrings.autoScale2d
   - typingsSlinky.plotlyJs.plotlyJsStrings.zoom2d
   - typingsSlinky.plotlyJs.plotlyJsStrings.pan2d
   - typingsSlinky.plotlyJs.plotlyJsStrings.zoomIn2d
   - typingsSlinky.plotlyJs.plotlyJsStrings.zoomOut2d
+  - typingsSlinky.plotlyJs.plotlyJsStrings.autoScale2d
   - typingsSlinky.plotlyJs.plotlyJsStrings.resetScale2d
   - typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestCartesian
   - typingsSlinky.plotlyJs.plotlyJsStrings.hoverCompareCartesian
@@ -38,62 +38,60 @@ trait ModeBarDefaultButtons extends js.Object
 
 object ModeBarDefaultButtons {
   @scala.inline
-  def autoScale2d: typingsSlinky.plotlyJs.plotlyJsStrings.autoScale2d = this.cast("autoScale2d")
+  def autoScale2d: typingsSlinky.plotlyJs.plotlyJsStrings.autoScale2d = "autoScale2d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.autoScale2d]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hoverClosest3d: typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosest3d = "hoverClosest3d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosest3d]
   @scala.inline
-  def hoverClosest3d: typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosest3d = this.cast("hoverClosest3d")
+  def hoverClosestCartesian: typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestCartesian = "hoverClosestCartesian".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestCartesian]
   @scala.inline
-  def hoverClosestCartesian: typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestCartesian = this.cast("hoverClosestCartesian")
+  def hoverClosestGeo: typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestGeo = "hoverClosestGeo".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestGeo]
   @scala.inline
-  def hoverClosestGeo: typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestGeo = this.cast("hoverClosestGeo")
+  def hoverClosestGl2d: typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestGl2d = "hoverClosestGl2d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestGl2d]
   @scala.inline
-  def hoverClosestGl2d: typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestGl2d = this.cast("hoverClosestGl2d")
+  def hoverClosestPie: typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestPie = "hoverClosestPie".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestPie]
   @scala.inline
-  def hoverClosestPie: typingsSlinky.plotlyJs.plotlyJsStrings.hoverClosestPie = this.cast("hoverClosestPie")
+  def hoverCompareCartesian: typingsSlinky.plotlyJs.plotlyJsStrings.hoverCompareCartesian = "hoverCompareCartesian".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.hoverCompareCartesian]
   @scala.inline
-  def hoverCompareCartesian: typingsSlinky.plotlyJs.plotlyJsStrings.hoverCompareCartesian = this.cast("hoverCompareCartesian")
+  def lasso2d: typingsSlinky.plotlyJs.plotlyJsStrings.lasso2d = "lasso2d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.lasso2d]
   @scala.inline
-  def lasso2d: typingsSlinky.plotlyJs.plotlyJsStrings.lasso2d = this.cast("lasso2d")
+  def orbitRotation: typingsSlinky.plotlyJs.plotlyJsStrings.orbitRotation = "orbitRotation".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.orbitRotation]
   @scala.inline
-  def orbitRotation: typingsSlinky.plotlyJs.plotlyJsStrings.orbitRotation = this.cast("orbitRotation")
+  def pan2d: typingsSlinky.plotlyJs.plotlyJsStrings.pan2d = "pan2d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.pan2d]
   @scala.inline
-  def pan2d: typingsSlinky.plotlyJs.plotlyJsStrings.pan2d = this.cast("pan2d")
+  def pan3d: typingsSlinky.plotlyJs.plotlyJsStrings.pan3d = "pan3d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.pan3d]
   @scala.inline
-  def pan3d: typingsSlinky.plotlyJs.plotlyJsStrings.pan3d = this.cast("pan3d")
+  def resetCameraDefault3d: typingsSlinky.plotlyJs.plotlyJsStrings.resetCameraDefault3d = "resetCameraDefault3d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.resetCameraDefault3d]
   @scala.inline
-  def resetCameraDefault3d: typingsSlinky.plotlyJs.plotlyJsStrings.resetCameraDefault3d = this.cast("resetCameraDefault3d")
+  def resetCameraLastSave3d: typingsSlinky.plotlyJs.plotlyJsStrings.resetCameraLastSave3d = "resetCameraLastSave3d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.resetCameraLastSave3d]
   @scala.inline
-  def resetCameraLastSave3d: typingsSlinky.plotlyJs.plotlyJsStrings.resetCameraLastSave3d = this.cast("resetCameraLastSave3d")
+  def resetGeo: typingsSlinky.plotlyJs.plotlyJsStrings.resetGeo = "resetGeo".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.resetGeo]
   @scala.inline
-  def resetGeo: typingsSlinky.plotlyJs.plotlyJsStrings.resetGeo = this.cast("resetGeo")
+  def resetScale2d: typingsSlinky.plotlyJs.plotlyJsStrings.resetScale2d = "resetScale2d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.resetScale2d]
   @scala.inline
-  def resetScale2d: typingsSlinky.plotlyJs.plotlyJsStrings.resetScale2d = this.cast("resetScale2d")
+  def resetViews: typingsSlinky.plotlyJs.plotlyJsStrings.resetViews = "resetViews".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.resetViews]
   @scala.inline
-  def resetViews: typingsSlinky.plotlyJs.plotlyJsStrings.resetViews = this.cast("resetViews")
+  def select2d: typingsSlinky.plotlyJs.plotlyJsStrings.select2d = "select2d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.select2d]
   @scala.inline
-  def select2d: typingsSlinky.plotlyJs.plotlyJsStrings.select2d = this.cast("select2d")
+  def sendDataToCloud: typingsSlinky.plotlyJs.plotlyJsStrings.sendDataToCloud = "sendDataToCloud".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.sendDataToCloud]
   @scala.inline
-  def sendDataToCloud: typingsSlinky.plotlyJs.plotlyJsStrings.sendDataToCloud = this.cast("sendDataToCloud")
+  def tableRotation: typingsSlinky.plotlyJs.plotlyJsStrings.tableRotation = "tableRotation".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.tableRotation]
   @scala.inline
-  def tableRotation: typingsSlinky.plotlyJs.plotlyJsStrings.tableRotation = this.cast("tableRotation")
+  def toImage: typingsSlinky.plotlyJs.plotlyJsStrings.toImage = "toImage".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.toImage]
   @scala.inline
-  def toImage: typingsSlinky.plotlyJs.plotlyJsStrings.toImage = this.cast("toImage")
+  def toggleHover: typingsSlinky.plotlyJs.plotlyJsStrings.toggleHover = "toggleHover".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.toggleHover]
   @scala.inline
-  def toggleHover: typingsSlinky.plotlyJs.plotlyJsStrings.toggleHover = this.cast("toggleHover")
+  def toggleSpikelines: typingsSlinky.plotlyJs.plotlyJsStrings.toggleSpikelines = "toggleSpikelines".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.toggleSpikelines]
   @scala.inline
-  def toggleSpikelines: typingsSlinky.plotlyJs.plotlyJsStrings.toggleSpikelines = this.cast("toggleSpikelines")
+  def zoom2d: typingsSlinky.plotlyJs.plotlyJsStrings.zoom2d = "zoom2d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.zoom2d]
   @scala.inline
-  def zoom2d: typingsSlinky.plotlyJs.plotlyJsStrings.zoom2d = this.cast("zoom2d")
+  def zoom3d: typingsSlinky.plotlyJs.plotlyJsStrings.zoom3d = "zoom3d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.zoom3d]
   @scala.inline
-  def zoom3d: typingsSlinky.plotlyJs.plotlyJsStrings.zoom3d = this.cast("zoom3d")
+  def zoomIn2d: typingsSlinky.plotlyJs.plotlyJsStrings.zoomIn2d = "zoomIn2d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.zoomIn2d]
   @scala.inline
-  def zoomIn2d: typingsSlinky.plotlyJs.plotlyJsStrings.zoomIn2d = this.cast("zoomIn2d")
+  def zoomInGeo: typingsSlinky.plotlyJs.plotlyJsStrings.zoomInGeo = "zoomInGeo".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.zoomInGeo]
   @scala.inline
-  def zoomInGeo: typingsSlinky.plotlyJs.plotlyJsStrings.zoomInGeo = this.cast("zoomInGeo")
+  def zoomOut2d: typingsSlinky.plotlyJs.plotlyJsStrings.zoomOut2d = "zoomOut2d".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.zoomOut2d]
   @scala.inline
-  def zoomOut2d: typingsSlinky.plotlyJs.plotlyJsStrings.zoomOut2d = this.cast("zoomOut2d")
-  @scala.inline
-  def zoomOutGeo: typingsSlinky.plotlyJs.plotlyJsStrings.zoomOutGeo = this.cast("zoomOutGeo")
+  def zoomOutGeo: typingsSlinky.plotlyJs.plotlyJsStrings.zoomOutGeo = "zoomOutGeo".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.zoomOutGeo]
 }
 

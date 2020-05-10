@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonGfm extends js.Object {
-  var gfm: js.UndefOr[Boolean] = js.undefined
-  var stripListLeaders: js.UndefOr[Boolean] = js.undefined
+  var gfm: js.UndefOr[Boolean] = js.native
+  var stripListLeaders: js.UndefOr[Boolean] = js.native
 }
 
 object AnonGfm {
   @scala.inline
-  def apply(gfm: js.UndefOr[Boolean] = js.undefined, stripListLeaders: js.UndefOr[Boolean] = js.undefined): AnonGfm = {
+  def apply(): AnonGfm = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(gfm)) __obj.updateDynamic("gfm")(gfm.asInstanceOf[js.Any])
-    if (!js.isUndefined(stripListLeaders)) __obj.updateDynamic("stripListLeaders")(stripListLeaders.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonGfm]
   }
+  @scala.inline
+  implicit class AnonGfmOps[Self <: AnonGfm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGfm(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gfm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGfm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gfm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStripListLeaders(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripListLeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStripListLeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripListLeaders")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

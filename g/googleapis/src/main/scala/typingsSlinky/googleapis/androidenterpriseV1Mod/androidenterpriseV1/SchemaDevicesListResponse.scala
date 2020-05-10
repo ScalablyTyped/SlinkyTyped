@@ -22,11 +22,41 @@ trait SchemaDevicesListResponse extends js.Object {
 
 object SchemaDevicesListResponse {
   @scala.inline
-  def apply(device: js.Array[SchemaDevice] = null, kind: String = null): SchemaDevicesListResponse = {
+  def apply(): SchemaDevicesListResponse = {
     val __obj = js.Dynamic.literal()
-    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDevicesListResponse]
   }
+  @scala.inline
+  implicit class SchemaDevicesListResponseOps[Self <: SchemaDevicesListResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevice(value: js.Array[SchemaDevice]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

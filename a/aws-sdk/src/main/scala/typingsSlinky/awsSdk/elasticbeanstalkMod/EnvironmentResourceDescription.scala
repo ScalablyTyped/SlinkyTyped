@@ -42,26 +42,113 @@ trait EnvironmentResourceDescription extends js.Object {
 
 object EnvironmentResourceDescription {
   @scala.inline
-  def apply(
-    AutoScalingGroups: AutoScalingGroupList = null,
-    EnvironmentName: EnvironmentName = null,
-    Instances: InstanceList = null,
-    LaunchConfigurations: LaunchConfigurationList = null,
-    LaunchTemplates: LaunchTemplateList = null,
-    LoadBalancers: LoadBalancerList = null,
-    Queues: QueueList = null,
-    Triggers: TriggerList = null
-  ): EnvironmentResourceDescription = {
+  def apply(): EnvironmentResourceDescription = {
     val __obj = js.Dynamic.literal()
-    if (AutoScalingGroups != null) __obj.updateDynamic("AutoScalingGroups")(AutoScalingGroups.asInstanceOf[js.Any])
-    if (EnvironmentName != null) __obj.updateDynamic("EnvironmentName")(EnvironmentName.asInstanceOf[js.Any])
-    if (Instances != null) __obj.updateDynamic("Instances")(Instances.asInstanceOf[js.Any])
-    if (LaunchConfigurations != null) __obj.updateDynamic("LaunchConfigurations")(LaunchConfigurations.asInstanceOf[js.Any])
-    if (LaunchTemplates != null) __obj.updateDynamic("LaunchTemplates")(LaunchTemplates.asInstanceOf[js.Any])
-    if (LoadBalancers != null) __obj.updateDynamic("LoadBalancers")(LoadBalancers.asInstanceOf[js.Any])
-    if (Queues != null) __obj.updateDynamic("Queues")(Queues.asInstanceOf[js.Any])
-    if (Triggers != null) __obj.updateDynamic("Triggers")(Triggers.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentResourceDescription]
   }
+  @scala.inline
+  implicit class EnvironmentResourceDescriptionOps[Self <: EnvironmentResourceDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoScalingGroups(value: AutoScalingGroupList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoScalingGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScalingGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentName(value: EnvironmentName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstances(value: InstanceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchConfigurations(value: LaunchConfigurationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchConfigurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchTemplates(value: LaunchTemplateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchTemplates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadBalancers(value: LoadBalancerList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueues(value: QueueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Queues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Queues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggers(value: TriggerList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Triggers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Triggers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

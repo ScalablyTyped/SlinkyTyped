@@ -5,7 +5,6 @@ import typingsSlinky.firebaseFirestore.coreTypesMod.OnlineState
 import typingsSlinky.firebaseFirestore.coreTypesMod.TargetId
 import typingsSlinky.firebaseFirestore.localLocalStoreMod.LocalStore
 import typingsSlinky.firebaseFirestore.localTargetDataMod.TargetData
-import typingsSlinky.firebaseFirestore.modelCollectionsMod.DocumentKeySet_
 import typingsSlinky.firebaseFirestore.remoteConnectivityMonitorMod.ConnectivityMonitor
 import typingsSlinky.firebaseFirestore.remoteDatastoreMod.Datastore
 import typingsSlinky.firebaseFirestore.remoteRemoteSyncerMod.RemoteSyncer
@@ -152,18 +151,6 @@ object remoteRemoteStoreMod extends js.Object {
       * Starts the write stream if necessary.
       */
     def fillWritePipeline(): js.Promise[Unit] = js.native
-    /**
-      * Returns the set of remote document keys for the given target ID as of the
-      * last raised snapshot.
-      */
-    /* CompleteClass */
-    override def getRemoteKeysForTarget(targetId: TargetId): DocumentKeySet_ = js.native
-    /**
-      * Returns the TargetData for an active target ID or 'null' if this target
-      * has become inactive
-      */
-    /* CompleteClass */
-    override def getTargetDataForTarget(targetId: TargetId): TargetData | Null = js.native
     def handleCredentialChange(): js.Promise[Unit] = js.native
     /**
       * Starts new listen for the given target. Uses resume token if provided. It

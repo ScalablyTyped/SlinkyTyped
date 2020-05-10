@@ -1,57 +1,92 @@
 package typingsSlinky.stripe.mod.subscriptions
 
-import typingsSlinky.stripe.mod.IDateFilter
 import typingsSlinky.stripe.mod.IListOptionsCreated
 import typingsSlinky.stripe.stripeStrings.all
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISubscriptionListOptions extends IListOptionsCreated {
   /**
     * The billing mode of the subscriptions to retrieve. Either "charge_automatically" or "send_invoice".
     */
-  var billing: js.UndefOr[SubscriptionBilling] = js.undefined
+  var billing: js.UndefOr[SubscriptionBilling] = js.native
   /**
     * The ID of the customer whose subscriptions will be retrieved
     */
-  var customer: js.UndefOr[String] = js.undefined
+  var customer: js.UndefOr[String] = js.native
   /**
     * The ID of the plan whose subscriptions will be retrieved
     */
-  var plan: js.UndefOr[String] = js.undefined
+  var plan: js.UndefOr[String] = js.native
   /**
     * The status of the subscriptions to retrieve.
     */
-  var status: js.UndefOr[SubscriptionStatus | all] = js.undefined
+  var status: js.UndefOr[SubscriptionStatus | all] = js.native
 }
 
 object ISubscriptionListOptions {
   @scala.inline
-  def apply(
-    billing: SubscriptionBilling = null,
-    created: String | IDateFilter = null,
-    customer: String = null,
-    ending_before: String = null,
-    expand: js.Array[String] = null,
-    include: js.Array[String] = null,
-    limit: Int | Double = null,
-    plan: String = null,
-    starting_after: String = null,
-    status: SubscriptionStatus | all = null
-  ): ISubscriptionListOptions = {
+  def apply(): ISubscriptionListOptions = {
     val __obj = js.Dynamic.literal()
-    if (billing != null) __obj.updateDynamic("billing")(billing.asInstanceOf[js.Any])
-    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
-    if (customer != null) __obj.updateDynamic("customer")(customer.asInstanceOf[js.Any])
-    if (ending_before != null) __obj.updateDynamic("ending_before")(ending_before.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (plan != null) __obj.updateDynamic("plan")(plan.asInstanceOf[js.Any])
-    if (starting_after != null) __obj.updateDynamic("starting_after")(starting_after.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISubscriptionListOptions]
   }
+  @scala.inline
+  implicit class ISubscriptionListOptionsOps[Self <: ISubscriptionListOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBilling(value: SubscriptionBilling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBilling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlan(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: SubscriptionStatus | all): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

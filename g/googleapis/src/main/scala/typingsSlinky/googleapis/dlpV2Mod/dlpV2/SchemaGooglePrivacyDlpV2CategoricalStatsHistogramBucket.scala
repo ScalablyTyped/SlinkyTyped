@@ -31,20 +31,77 @@ trait SchemaGooglePrivacyDlpV2CategoricalStatsHistogramBucket extends js.Object 
 
 object SchemaGooglePrivacyDlpV2CategoricalStatsHistogramBucket {
   @scala.inline
-  def apply(
-    bucketSize: String = null,
-    bucketValueCount: String = null,
-    bucketValues: js.Array[SchemaGooglePrivacyDlpV2ValueFrequency] = null,
-    valueFrequencyLowerBound: String = null,
-    valueFrequencyUpperBound: String = null
-  ): SchemaGooglePrivacyDlpV2CategoricalStatsHistogramBucket = {
+  def apply(): SchemaGooglePrivacyDlpV2CategoricalStatsHistogramBucket = {
     val __obj = js.Dynamic.literal()
-    if (bucketSize != null) __obj.updateDynamic("bucketSize")(bucketSize.asInstanceOf[js.Any])
-    if (bucketValueCount != null) __obj.updateDynamic("bucketValueCount")(bucketValueCount.asInstanceOf[js.Any])
-    if (bucketValues != null) __obj.updateDynamic("bucketValues")(bucketValues.asInstanceOf[js.Any])
-    if (valueFrequencyLowerBound != null) __obj.updateDynamic("valueFrequencyLowerBound")(valueFrequencyLowerBound.asInstanceOf[js.Any])
-    if (valueFrequencyUpperBound != null) __obj.updateDynamic("valueFrequencyUpperBound")(valueFrequencyUpperBound.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2CategoricalStatsHistogramBucket]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2CategoricalStatsHistogramBucketOps[Self <: SchemaGooglePrivacyDlpV2CategoricalStatsHistogramBucket] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucketSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketValueCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValueCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketValueCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValueCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketValues(value: js.Array[SchemaGooglePrivacyDlpV2ValueFrequency]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueFrequencyLowerBound(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFrequencyLowerBound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueFrequencyLowerBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFrequencyLowerBound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueFrequencyUpperBound(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFrequencyUpperBound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueFrequencyUpperBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueFrequencyUpperBound")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

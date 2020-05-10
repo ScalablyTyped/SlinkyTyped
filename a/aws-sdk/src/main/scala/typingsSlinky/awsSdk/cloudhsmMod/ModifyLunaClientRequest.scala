@@ -20,8 +20,27 @@ object ModifyLunaClientRequest {
   @scala.inline
   def apply(Certificate: Certificate, ClientArn: ClientArn): ModifyLunaClientRequest = {
     val __obj = js.Dynamic.literal(Certificate = Certificate.asInstanceOf[js.Any], ClientArn = ClientArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ModifyLunaClientRequest]
   }
+  @scala.inline
+  implicit class ModifyLunaClientRequestOps[Self <: ModifyLunaClientRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificate(value: Certificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientArn(value: ClientArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

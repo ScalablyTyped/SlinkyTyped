@@ -5,41 +5,134 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined localtunnel.localtunnel.TunnelConfig & {  port  :number} */
+@js.native
 trait TunnelConfigportnumber extends js.Object {
-  var allow_invalid_cert: js.UndefOr[Boolean] = js.undefined
-  var host: js.UndefOr[String] = js.undefined
-  var local_ca: js.UndefOr[String] = js.undefined
-  var local_cert: js.UndefOr[String] = js.undefined
-  var local_host: js.UndefOr[String] = js.undefined
-  var local_https: js.UndefOr[Boolean] = js.undefined
-  var local_key: js.UndefOr[String] = js.undefined
-  var port: Double
-  var subdomain: js.UndefOr[String] = js.undefined
+  var allow_invalid_cert: js.UndefOr[Boolean] = js.native
+  var host: js.UndefOr[String] = js.native
+  var local_ca: js.UndefOr[String] = js.native
+  var local_cert: js.UndefOr[String] = js.native
+  var local_host: js.UndefOr[String] = js.native
+  var local_https: js.UndefOr[Boolean] = js.native
+  var local_key: js.UndefOr[String] = js.native
+  var port: Double = js.native
+  var subdomain: js.UndefOr[String] = js.native
 }
 
 object TunnelConfigportnumber {
   @scala.inline
-  def apply(
-    port: Double,
-    allow_invalid_cert: js.UndefOr[Boolean] = js.undefined,
-    host: String = null,
-    local_ca: String = null,
-    local_cert: String = null,
-    local_host: String = null,
-    local_https: js.UndefOr[Boolean] = js.undefined,
-    local_key: String = null,
-    subdomain: String = null
-  ): TunnelConfigportnumber = {
+  def apply(port: Double): TunnelConfigportnumber = {
     val __obj = js.Dynamic.literal(port = port.asInstanceOf[js.Any])
-    if (!js.isUndefined(allow_invalid_cert)) __obj.updateDynamic("allow_invalid_cert")(allow_invalid_cert.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (local_ca != null) __obj.updateDynamic("local_ca")(local_ca.asInstanceOf[js.Any])
-    if (local_cert != null) __obj.updateDynamic("local_cert")(local_cert.asInstanceOf[js.Any])
-    if (local_host != null) __obj.updateDynamic("local_host")(local_host.asInstanceOf[js.Any])
-    if (!js.isUndefined(local_https)) __obj.updateDynamic("local_https")(local_https.asInstanceOf[js.Any])
-    if (local_key != null) __obj.updateDynamic("local_key")(local_key.asInstanceOf[js.Any])
-    if (subdomain != null) __obj.updateDynamic("subdomain")(subdomain.asInstanceOf[js.Any])
     __obj.asInstanceOf[TunnelConfigportnumber]
   }
+  @scala.inline
+  implicit class TunnelConfigportnumberOps[Self <: TunnelConfigportnumber] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllow_invalid_cert(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_invalid_cert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllow_invalid_cert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_invalid_cert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocal_ca(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_ca")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocal_ca: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_ca")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocal_cert(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_cert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocal_cert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_cert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocal_host(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocal_host: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocal_https(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_https")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocal_https: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_https")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocal_key(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocal_key: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubdomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subdomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubdomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subdomain")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

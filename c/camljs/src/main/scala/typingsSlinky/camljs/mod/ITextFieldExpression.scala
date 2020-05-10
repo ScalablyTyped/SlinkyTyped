@@ -4,21 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ITextFieldExpression extends js.Object {
   /** Checks whether the value of the field begins with the specified substring */
-  def BeginsWith(value: String): IExpression
+  def BeginsWith(value: String): IExpression = js.native
   /** Checks whether the value of the field contains the specified substring */
-  def Contains(value: String): IExpression
+  def Contains(value: String): IExpression = js.native
   /** Checks whether the value of the field is equal to the specified value */
-  def EqualTo(value: String): IExpression
+  def EqualTo(value: String): IExpression = js.native
   /** Checks whether the value of the field is equal to one of the specified values */
-  def In(arrayOfValues: js.Array[String]): IExpression
+  def In(arrayOfValues: js.Array[String]): IExpression = js.native
   /** Checks whether the value of the field was not specified by user */
-  def IsNotNull(): IExpression
+  def IsNotNull(): IExpression = js.native
   /** Checks whether the value of the field was specified by user */
-  def IsNull(): IExpression
+  def IsNull(): IExpression = js.native
   /** Checks whether the value of the field is not equal to the specified value */
-  def NotEqualTo(value: String): IExpression
+  def NotEqualTo(value: String): IExpression = js.native
 }
 
 object ITextFieldExpression {
@@ -33,8 +34,57 @@ object ITextFieldExpression {
     NotEqualTo: String => IExpression
   ): ITextFieldExpression = {
     val __obj = js.Dynamic.literal(BeginsWith = js.Any.fromFunction1(BeginsWith), Contains = js.Any.fromFunction1(Contains), EqualTo = js.Any.fromFunction1(EqualTo), In = js.Any.fromFunction1(In), IsNotNull = js.Any.fromFunction0(IsNotNull), IsNull = js.Any.fromFunction0(IsNull), NotEqualTo = js.Any.fromFunction1(NotEqualTo))
-  
     __obj.asInstanceOf[ITextFieldExpression]
   }
+  @scala.inline
+  implicit class ITextFieldExpressionOps[Self <: ITextFieldExpression] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeginsWith(value: String => IExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginsWith")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withContains(value: String => IExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEqualTo(value: String => IExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EqualTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIn(value: js.Array[String] => IExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("In")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsNotNull(value: () => IExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsNotNull")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsNull(value: () => IExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsNull")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNotEqualTo(value: String => IExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotEqualTo")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

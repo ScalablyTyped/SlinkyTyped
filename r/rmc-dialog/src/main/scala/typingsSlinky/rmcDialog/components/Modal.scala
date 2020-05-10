@@ -1,9 +1,7 @@
 package typingsSlinky.rmcDialog.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.rmcDialog.modalMod.IModalPropTypes
 import typingsSlinky.rmcDialog.modalMod.default
@@ -15,38 +13,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Modal
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Modal {
   @JSImport("rmc-dialog/lib/Modal", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    animationType: none | fade | `slide-up` | `slide-down`,
-    visible: Boolean,
-    animateAppear: js.UndefOr[Boolean] = js.undefined,
-    animationDuration: Int | Double = null,
-    maskClosable: js.UndefOr[Boolean] = js.undefined,
-    maskStyle: ViewStyle = null,
-    onAnimationEnd: /* visible */ Boolean => Unit = null,
-    onClose: () => Unit = null,
-    style: js.Object = null,
-    wrapStyle: ViewStyle = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(animationType = animationType.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
-    if (!js.isUndefined(animateAppear)) __obj.updateDynamic("animateAppear")(animateAppear.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (!js.isUndefined(maskClosable)) __obj.updateDynamic("maskClosable")(maskClosable.asInstanceOf[js.Any])
-    if (maskStyle != null) __obj.updateDynamic("maskStyle")(maskStyle.asInstanceOf[js.Any])
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (wrapStyle != null) __obj.updateDynamic("wrapStyle")(wrapStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def animateAppear(value: Boolean): this.type = set("animateAppear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationDuration(value: Double): this.type = set("animationDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskClosable(value: Boolean): this.type = set("maskClosable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskStyle(value: ViewStyle): this.type = set("maskStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAnimationEnd(value: /* visible */ Boolean => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapStyle(value: ViewStyle): this.type = set("wrapStyle", value.asInstanceOf[js.Any])
   }
-  type Props = IModalPropTypes
+  
+  def withProps(p: IModalPropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(animationType: none | fade | `slide-up` | `slide-down`, visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(animationType = animationType.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IModalPropTypes]))
+  }
 }
 

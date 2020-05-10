@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Typeofwhale extends js.Object {
   ////////////////////
   // Alarms
@@ -13,7 +14,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 22.
     * Permissions:  "alarms"
     */
-  val alarms: Typeofalarms
+  val alarms: Typeofalarms = js.native
   ////////////////////
   // Bookmarks
   ////////////////////
@@ -22,7 +23,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 5.
     * Permissions:  "bookmarks"
     */
-  val bookmarks: Typeofbookmarks
+  val bookmarks: Typeofbookmarks = js.native
   ////////////////////
   // Browser Action
   ////////////////////
@@ -31,7 +32,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 5.
     * Manifest:  "browser_action": {...}
     */
-  val browserAction: TypeofbrowserAction
+  val browserAction: TypeofbrowserAction = js.native
   ////////////////////
   // Browsing Data
   ////////////////////
@@ -40,7 +41,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 19.
     * Permissions:  "browsingData"
     */
-  val browsingData: TypeofbrowsingData
+  val browsingData: TypeofbrowsingData = js.native
   ////////////////////
   // Commands
   ////////////////////
@@ -49,7 +50,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 25.
     * Manifest:  "commands": {...}
     */
-  val commands: Typeofcommands
+  val commands: Typeofcommands = js.native
   ////////////////////
   // Content Settings
   ////////////////////
@@ -58,7 +59,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 16.
     * Permissions:  "contentSettings"
     */
-  val contentSettings: TypeofcontentSettings
+  val contentSettings: TypeofcontentSettings = js.native
   ////////////////////
   // Context Menus
   ////////////////////
@@ -67,7 +68,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 6.
     * Permissions:  "contextMenus"
     */
-  val contextMenus: TypeofcontextMenus
+  val contextMenus: TypeofcontextMenus = js.native
   ////////////////////
   // Cookies
   ////////////////////
@@ -76,7 +77,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 6.
     * Permissions:  "cookies", host permissions
     */
-  val cookies: Typeofcookies
+  val cookies: Typeofcookies = js.native
   ////////////////////
   // Declarative Content
   ////////////////////
@@ -85,7 +86,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 33.
     * Permissions:  "declarativeContent"
     */
-  val declarativeContent: TypeofdeclarativeContent
+  val declarativeContent: TypeofdeclarativeContent = js.native
   ////////////////////
   // DesktopCapture
   ////////////////////
@@ -94,9 +95,9 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 34.
     * Permissions:  "desktopCapture"
     */
-  val desktopCapture: TypeofdesktopCapture
-  val devtools: Typeofdevtools
-  val downloads: Typeofdownloads
+  val desktopCapture: TypeofdesktopCapture = js.native
+  val devtools: Typeofdevtools = js.native
+  val downloads: Typeofdownloads = js.native
   ////////////////////
   // Events
   ////////////////////
@@ -104,7 +105,7 @@ trait Typeofwhale extends js.Object {
     * The chrome.events namespace contains common types used by APIs dispatching events to notify you when something interesting happens.
     * Availability: Since Chrome 21.
     */
-  val events: js.Any
+  val events: js.Any = js.native
   ////////////////////
   // Extension
   ////////////////////
@@ -112,7 +113,7 @@ trait Typeofwhale extends js.Object {
     * The chrome.extension API has utilities that can be used by any extension page. It includes support for exchanging messages between an extension and its content scripts or between extensions, as described in detail in Message Passing.
     * Availability: Since Chrome 5.
     */
-  val extension: Typeofextension
+  val extension: Typeofextension = js.native
   ////////////////////
   // Font Settings
   ////////////////////
@@ -121,7 +122,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 22.
     * Permissions:  "fontSettings"
     */
-  val fontSettings: TypeoffontSettings
+  val fontSettings: TypeoffontSettings = js.native
   ////////////////////
   // Google Cloud Messaging
   ////////////////////
@@ -130,7 +131,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 35.
     * Permissions:  "gcm"
     */
-  val gcm: Typeofgcm
+  val gcm: Typeofgcm = js.native
   ////////////////////
   // History
   ////////////////////
@@ -139,7 +140,7 @@ trait Typeofwhale extends js.Object {
     * Availability: Since Chrome 5.
     * Permissions:  "history"
     */
-  val history: Typeofhistory
+  val history: Typeofhistory = js.native
   ////////////////////
   // i18n
   ////////////////////
@@ -147,7 +148,7 @@ trait Typeofwhale extends js.Object {
     * Use the chrome.i18n infrastructure to implement internationalization across your whole app or extension.
     * @since Chrome 5.
     */
-  val i18n: Typeofi18n
+  val i18n: Typeofi18n = js.native
   ////////////////////
   // Idle
   ////////////////////
@@ -156,7 +157,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "idle"
     * @since Chrome 6.
     */
-  val idle: Typeofidle
+  val idle: Typeofidle = js.native
   ////////////////////
   // Management
   ////////////////////
@@ -165,7 +166,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "management"
     * @since Chrome 8.
     */
-  val management: Typeofmanagement
+  val management: Typeofmanagement = js.native
   ////////////////////
   // Notifications
   // https://developer.chrome.com/extensions/notifications
@@ -175,7 +176,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "notifications"
     * @since Chrome 28.
     */
-  val notifications: Typeofnotifications
+  val notifications: Typeofnotifications = js.native
   ////////////////////
   // Omnibox
   ////////////////////
@@ -184,7 +185,7 @@ trait Typeofwhale extends js.Object {
     * Manifest:  "omnibox": {...}
     * @since Chrome 9.
     */
-  val omnibox: Typeofomnibox
+  val omnibox: Typeofomnibox = js.native
   ////////////////////
   // Page Action
   ////////////////////
@@ -193,7 +194,7 @@ trait Typeofwhale extends js.Object {
     * Manifest:  "page_action": {...}
     * @since Chrome 5.
     */
-  val pageAction: TypeofpageAction
+  val pageAction: TypeofpageAction = js.native
   ////////////////////
   // Page Capture
   ////////////////////
@@ -202,7 +203,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "pageCapture"
     * @since Chrome 18.
     */
-  val pageCapture: TypeofpageCapture
+  val pageCapture: TypeofpageCapture = js.native
   ////////////////////
   // Permissions
   ////////////////////
@@ -210,7 +211,7 @@ trait Typeofwhale extends js.Object {
     * Use the chrome.permissions API to request declared optional permissions at run time rather than install time, so users understand why the permissions are needed and grant only those that are necessary.
     * @since Chrome 16.
     */
-  val permissions: Typeofpermissions
+  val permissions: Typeofpermissions = js.native
   ////////////////////
   // Power
   ////////////////////
@@ -219,7 +220,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "power"
     * @since Chrome 27.
     */
-  val power: Typeofpower
+  val power: Typeofpower = js.native
   ////////////////////
   // Printer Provider
   ////////////////////
@@ -228,7 +229,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "printerProvider"
     * @since Chrome 44.
     */
-  val printerProvider: TypeofprinterProvider
+  val printerProvider: TypeofprinterProvider = js.native
   ////////////////////
   // Privacy
   ////////////////////
@@ -238,7 +239,7 @@ trait Typeofwhale extends js.Object {
     * The Chrome Privacy Whitepaper gives background detail regarding the features which this API can control.
     * @since Chrome 18.
     */
-  val privacy: Typeofprivacy
+  val privacy: Typeofprivacy = js.native
   ////////////////////
   // Proxy
   ////////////////////
@@ -247,7 +248,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "proxy"
     * @since Chrome 13.
     */
-  val proxy: Typeofproxy
+  val proxy: Typeofproxy = js.native
   ////////////////////
   // Runtime
   ////////////////////
@@ -255,8 +256,8 @@ trait Typeofwhale extends js.Object {
     * Use the chrome.runtime API to retrieve the background page, return details about the manifest, and listen for and respond to events in the app or extension lifecycle. You can also use this API to convert the relative path of URLs to fully-qualified URLs.
     * @since Chrome 22
     */
-  val runtime: Typeofruntime
-  val sidebarAction: TypeofsidebarAction
+  val runtime: Typeofruntime = js.native
+  val sidebarAction: TypeofsidebarAction = js.native
   ////////////////////
   // Storage
   ////////////////////
@@ -265,8 +266,8 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "storage"
     * @since Chrome 20.
     */
-  val storage: Typeofstorage
-  val system: Typeofsystem
+  val storage: Typeofstorage = js.native
+  val system: Typeofsystem = js.native
   ////////////////////
   // TabCapture
   ////////////////////
@@ -275,7 +276,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "tabCapture"
     * @since Chrome 31.
     */
-  val tabCapture: TypeoftabCapture
+  val tabCapture: TypeoftabCapture = js.native
   ////////////////////
   // Tabs
   ////////////////////
@@ -284,8 +285,8 @@ trait Typeofwhale extends js.Object {
     * Permissions: The majority of the chrome.tabs API can be used without declaring any permission. However, the "tabs" permission is required in order to populate the url, title, and favIconUrl properties of Tab.
     * @since Chrome 5.
     */
-  val tabs: Typeoftabs
-  val topSites: TypeoftopSites
+  val tabs: Typeoftabs = js.native
+  val topSites: TypeoftopSites = js.native
   ////////////////////
   // Text to Speech
   ////////////////////
@@ -294,7 +295,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "tts"
     * @since Chrome 14.
     */
-  val tts: Typeoftts
+  val tts: Typeoftts = js.native
   ////////////////////
   // Text to Speech Engine
   ////////////////////
@@ -303,7 +304,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "ttsEngine"
     * @since Chrome 14.
     */
-  val ttsEngine: TypeofttsEngine
+  val ttsEngine: TypeofttsEngine = js.native
   ////////////////////
   // Types
   ////////////////////
@@ -311,7 +312,7 @@ trait Typeofwhale extends js.Object {
     * The chrome.types API contains type declarations for Chrome.
     * @since Chrome 13.
     */
-  val types: js.Any
+  val types: js.Any = js.native
   ////////////////////
   // Web Navigation
   ////////////////////
@@ -320,7 +321,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "webNavigation"
     * @since Chrome 16.
     */
-  val webNavigation: TypeofwebNavigation
+  val webNavigation: TypeofwebNavigation = js.native
   ////////////////////
   // Web Request
   ////////////////////
@@ -329,7 +330,7 @@ trait Typeofwhale extends js.Object {
     * Permissions:  "webRequest", host permissions
     * @since Chrome 17.
     */
-  val webRequest: TypeofwebRequest
+  val webRequest: TypeofwebRequest = js.native
   ////////////////////
   // Windows
   ////////////////////
@@ -338,7 +339,7 @@ trait Typeofwhale extends js.Object {
     * Permissions: The chrome.windows API can be used without declaring any permission. However, the "tabs" permission is required in order to populate the url, title, and favIconUrl properties of Tab objects.
     * @since Chrome 5.
     */
-  val windows: Typeofwindows
+  val windows: Typeofwindows = js.native
 }
 
 object Typeofwhale {
@@ -388,8 +389,267 @@ object Typeofwhale {
     windows: Typeofwindows
   ): Typeofwhale = {
     val __obj = js.Dynamic.literal(alarms = alarms.asInstanceOf[js.Any], bookmarks = bookmarks.asInstanceOf[js.Any], browserAction = browserAction.asInstanceOf[js.Any], browsingData = browsingData.asInstanceOf[js.Any], commands = commands.asInstanceOf[js.Any], contentSettings = contentSettings.asInstanceOf[js.Any], contextMenus = contextMenus.asInstanceOf[js.Any], cookies = cookies.asInstanceOf[js.Any], declarativeContent = declarativeContent.asInstanceOf[js.Any], desktopCapture = desktopCapture.asInstanceOf[js.Any], devtools = devtools.asInstanceOf[js.Any], downloads = downloads.asInstanceOf[js.Any], events = events.asInstanceOf[js.Any], extension = extension.asInstanceOf[js.Any], fontSettings = fontSettings.asInstanceOf[js.Any], gcm = gcm.asInstanceOf[js.Any], history = history.asInstanceOf[js.Any], i18n = i18n.asInstanceOf[js.Any], idle = idle.asInstanceOf[js.Any], management = management.asInstanceOf[js.Any], notifications = notifications.asInstanceOf[js.Any], omnibox = omnibox.asInstanceOf[js.Any], pageAction = pageAction.asInstanceOf[js.Any], pageCapture = pageCapture.asInstanceOf[js.Any], permissions = permissions.asInstanceOf[js.Any], power = power.asInstanceOf[js.Any], printerProvider = printerProvider.asInstanceOf[js.Any], privacy = privacy.asInstanceOf[js.Any], proxy = proxy.asInstanceOf[js.Any], runtime = runtime.asInstanceOf[js.Any], sidebarAction = sidebarAction.asInstanceOf[js.Any], storage = storage.asInstanceOf[js.Any], system = system.asInstanceOf[js.Any], tabCapture = tabCapture.asInstanceOf[js.Any], tabs = tabs.asInstanceOf[js.Any], topSites = topSites.asInstanceOf[js.Any], tts = tts.asInstanceOf[js.Any], ttsEngine = ttsEngine.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any], webNavigation = webNavigation.asInstanceOf[js.Any], webRequest = webRequest.asInstanceOf[js.Any], windows = windows.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Typeofwhale]
   }
+  @scala.inline
+  implicit class TypeofwhaleOps[Self <: Typeofwhale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlarms(value: Typeofalarms): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alarms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBookmarks(value: Typeofbookmarks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBrowserAction(value: TypeofbrowserAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBrowsingData(value: TypeofbrowsingData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browsingData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommands(value: Typeofcommands): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentSettings(value: TypeofcontentSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContextMenus(value: TypeofcontextMenus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCookies(value: Typeofcookies): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclarativeContent(value: TypeofdeclarativeContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declarativeContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesktopCapture(value: TypeofdesktopCapture): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desktopCapture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDevtools(value: Typeofdevtools): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devtools")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDownloads(value: Typeofdownloads): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvents(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtension(value: Typeofextension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFontSettings(value: TypeoffontSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGcm(value: Typeofgcm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHistory(value: Typeofhistory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("history")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withI18n(value: Typeofi18n): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdle(value: Typeofidle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManagement(value: Typeofmanagement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("management")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotifications(value: Typeofnotifications): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOmnibox(value: Typeofomnibox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("omnibox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageAction(value: TypeofpageAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageCapture(value: TypeofpageCapture): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageCapture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: Typeofpermissions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPower(value: Typeofpower): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("power")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrinterProvider(value: TypeofprinterProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printerProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivacy(value: Typeofprivacy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privacy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProxy(value: Typeofproxy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuntime(value: Typeofruntime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSidebarAction(value: TypeofsidebarAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidebarAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStorage(value: Typeofstorage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSystem(value: Typeofsystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("system")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTabCapture(value: TypeoftabCapture): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabCapture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTabs(value: Typeoftabs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTopSites(value: TypeoftopSites): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topSites")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTts(value: Typeoftts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTtsEngine(value: TypeofttsEngine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ttsEngine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebNavigation(value: TypeofwebNavigation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webNavigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebRequest(value: TypeofwebRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWindows(value: Typeofwindows): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windows")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

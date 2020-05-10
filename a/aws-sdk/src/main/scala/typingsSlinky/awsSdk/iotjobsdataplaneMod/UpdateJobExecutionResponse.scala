@@ -18,11 +18,41 @@ trait UpdateJobExecutionResponse extends js.Object {
 
 object UpdateJobExecutionResponse {
   @scala.inline
-  def apply(executionState: JobExecutionState = null, jobDocument: JobDocument = null): UpdateJobExecutionResponse = {
+  def apply(): UpdateJobExecutionResponse = {
     val __obj = js.Dynamic.literal()
-    if (executionState != null) __obj.updateDynamic("executionState")(executionState.asInstanceOf[js.Any])
-    if (jobDocument != null) __obj.updateDynamic("jobDocument")(jobDocument.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateJobExecutionResponse]
   }
+  @scala.inline
+  implicit class UpdateJobExecutionResponseOps[Self <: UpdateJobExecutionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecutionState(value: JobExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobDocument(value: JobDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobDocument")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

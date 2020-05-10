@@ -1,14 +1,16 @@
 package typingsSlinky.reactIntl.components
 
+import typingsSlinky.reactIntl.DateTimeFormatOptionsCustChildren
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormattedDateParts extends SharedApply_DateTimeFormatOptionsCustChildren_1947559189 {
+object FormattedDateParts {
   @JSImport("react-intl", "FormattedDateParts")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: DateTimeFormatOptionsCustChildren): SharedBuilder_DateTimeFormatOptionsCustChildren452318662 = new SharedBuilder_DateTimeFormatOptionsCustChildren452318662(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FormattedDateParts.type): SharedBuilder_DateTimeFormatOptionsCustChildren452318662 = new SharedBuilder_DateTimeFormatOptionsCustChildren452318662(js.Array(this.component, js.Dictionary.empty))()
 }
 

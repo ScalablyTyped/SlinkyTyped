@@ -1,32 +1,41 @@
 package typingsSlinky.instagramPrivateApi.directThreadBroadcastMediaOptionsMod
 
-import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.once
-import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.replayable
-import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DirectThreadBroadcastVideoStoryOptions extends DirectThreadBroadcastStoryOptions {
-  var coverImage: Buffer
-  var video: Buffer
+  var coverImage: Buffer = js.native
+  var video: Buffer = js.native
 }
 
 object DirectThreadBroadcastVideoStoryOptions {
   @scala.inline
-  def apply(
-    coverImage: Buffer,
-    video: Buffer,
-    replyType: story | String = null,
-    uploadId: Int | Double = null,
-    viewMode: replayable | once | String = null
-  ): DirectThreadBroadcastVideoStoryOptions = {
+  def apply(coverImage: Buffer, video: Buffer): DirectThreadBroadcastVideoStoryOptions = {
     val __obj = js.Dynamic.literal(coverImage = coverImage.asInstanceOf[js.Any], video = video.asInstanceOf[js.Any])
-    if (replyType != null) __obj.updateDynamic("replyType")(replyType.asInstanceOf[js.Any])
-    if (uploadId != null) __obj.updateDynamic("uploadId")(uploadId.asInstanceOf[js.Any])
-    if (viewMode != null) __obj.updateDynamic("viewMode")(viewMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectThreadBroadcastVideoStoryOptions]
   }
+  @scala.inline
+  implicit class DirectThreadBroadcastVideoStoryOptionsOps[Self <: DirectThreadBroadcastVideoStoryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoverImage(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideo(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

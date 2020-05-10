@@ -36,8 +36,6 @@ abstract class Node protected ()
     * Render index (document order index) of the last render call.
     */
   var index: Double = js.native
-  /* CompleteClass */
-  override var options: INodeOptions = js.native
   /**
     * Parent node.
     */
@@ -56,8 +54,6 @@ abstract class Node protected ()
   def append(node: Node): Unit = js.native
   def collectAncestors(s: js.Any): Unit = js.native
   def collectDescendants(s: js.Any): Unit = js.native
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
   /**
     * Remove node from its parent.
     */

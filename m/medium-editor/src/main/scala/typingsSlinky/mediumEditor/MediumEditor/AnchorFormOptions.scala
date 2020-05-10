@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnchorFormOptions extends js.Object {
-  var customClassOption: js.UndefOr[String] = js.undefined
-  var customClassOptionText: js.UndefOr[String] = js.undefined
-  var linkValidation: js.UndefOr[Boolean] = js.undefined
-  var placeholderText: js.UndefOr[String] = js.undefined
-  var targetCheckbox: js.UndefOr[Boolean] = js.undefined
-  var targetCheckboxText: js.UndefOr[String] = js.undefined
+  var customClassOption: js.UndefOr[String] = js.native
+  var customClassOptionText: js.UndefOr[String] = js.native
+  var linkValidation: js.UndefOr[Boolean] = js.native
+  var placeholderText: js.UndefOr[String] = js.native
+  var targetCheckbox: js.UndefOr[Boolean] = js.native
+  var targetCheckboxText: js.UndefOr[String] = js.native
 }
 
 object AnchorFormOptions {
   @scala.inline
-  def apply(
-    customClassOption: String = null,
-    customClassOptionText: String = null,
-    linkValidation: js.UndefOr[Boolean] = js.undefined,
-    placeholderText: String = null,
-    targetCheckbox: js.UndefOr[Boolean] = js.undefined,
-    targetCheckboxText: String = null
-  ): AnchorFormOptions = {
+  def apply(): AnchorFormOptions = {
     val __obj = js.Dynamic.literal()
-    if (customClassOption != null) __obj.updateDynamic("customClassOption")(customClassOption.asInstanceOf[js.Any])
-    if (customClassOptionText != null) __obj.updateDynamic("customClassOptionText")(customClassOptionText.asInstanceOf[js.Any])
-    if (!js.isUndefined(linkValidation)) __obj.updateDynamic("linkValidation")(linkValidation.asInstanceOf[js.Any])
-    if (placeholderText != null) __obj.updateDynamic("placeholderText")(placeholderText.asInstanceOf[js.Any])
-    if (!js.isUndefined(targetCheckbox)) __obj.updateDynamic("targetCheckbox")(targetCheckbox.asInstanceOf[js.Any])
-    if (targetCheckboxText != null) __obj.updateDynamic("targetCheckboxText")(targetCheckboxText.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnchorFormOptions]
   }
+  @scala.inline
+  implicit class AnchorFormOptionsOps[Self <: AnchorFormOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomClassOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customClassOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomClassOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customClassOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomClassOptionText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customClassOptionText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomClassOptionText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customClassOptionText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkValidation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkValidation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkValidation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholderText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholderText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetCheckbox(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCheckbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetCheckbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCheckbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetCheckboxText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCheckboxText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetCheckboxText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetCheckboxText")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

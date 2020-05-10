@@ -33,35 +33,36 @@ import scala.scalajs.js.annotation._
   * 
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Read
   */
+@js.native
 trait Entities extends js.Object {
   /**
     * Gets the physical addresses (street or mailing addresses) found in an email message or appointment.
     */
-  var addresses: js.Array[String]
+  var addresses: js.Array[String] = js.native
   /**
     * Gets the contacts found in an email address or appointment.
     */
-  var contacts: js.Array[Contact]
+  var contacts: js.Array[Contact] = js.native
   /**
     * Gets the email addresses found in an email message or appointment.
     */
-  var emailAddresses: js.Array[String]
+  var emailAddresses: js.Array[String] = js.native
   /**
     * Gets the meeting suggestions found in an email message.
     */
-  var meetingSuggestions: js.Array[MeetingSuggestion]
+  var meetingSuggestions: js.Array[MeetingSuggestion] = js.native
   /**
     * Gets the phone numbers found in an email message or appointment.
     */
-  var phoneNumbers: js.Array[PhoneNumber]
+  var phoneNumbers: js.Array[PhoneNumber] = js.native
   /**
     * Gets the task suggestions found in an email message or appointment.
     */
-  var taskSuggestions: js.Array[String]
+  var taskSuggestions: js.Array[String] = js.native
   /**
     * Gets the Internet URLs present in an email message or appointment.
     */
-  var urls: js.Array[String]
+  var urls: js.Array[String] = js.native
 }
 
 object Entities {
@@ -76,8 +77,57 @@ object Entities {
     urls: js.Array[String]
   ): Entities = {
     val __obj = js.Dynamic.literal(addresses = addresses.asInstanceOf[js.Any], contacts = contacts.asInstanceOf[js.Any], emailAddresses = emailAddresses.asInstanceOf[js.Any], meetingSuggestions = meetingSuggestions.asInstanceOf[js.Any], phoneNumbers = phoneNumbers.asInstanceOf[js.Any], taskSuggestions = taskSuggestions.asInstanceOf[js.Any], urls = urls.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Entities]
   }
+  @scala.inline
+  implicit class EntitiesOps[Self <: Entities] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddresses(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContacts(value: js.Array[Contact]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmailAddresses(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeetingSuggestions(value: js.Array[MeetingSuggestion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meetingSuggestions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPhoneNumbers(value: js.Array[PhoneNumber]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumbers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskSuggestions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskSuggestions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrls(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

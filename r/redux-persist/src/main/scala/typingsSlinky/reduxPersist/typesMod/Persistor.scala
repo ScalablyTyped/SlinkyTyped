@@ -8,14 +8,15 @@ import scala.scalajs.js.annotation._
   * A persistor is a redux store unto itself, allowing you to purge stored state, flush all
   * pending state serialization and immediately write to disk
   */
+@js.native
 trait Persistor extends js.Object {
-  def dispatch(action: PersistorAction): PersistorAction
-  def flush(): js.Promise[_]
-  def getState(): PersistorState
-  def pause(): Unit
-  def persist(): Unit
-  def purge(): js.Promise[_]
-  def subscribe(callback: PersistorSubscribeCallback): js.Function0[_]
+  def dispatch(action: PersistorAction): PersistorAction = js.native
+  def flush(): js.Promise[_] = js.native
+  def getState(): PersistorState = js.native
+  def pause(): Unit = js.native
+  def persist(): Unit = js.native
+  def purge(): js.Promise[_] = js.native
+  def subscribe(callback: PersistorSubscribeCallback): js.Function0[_] = js.native
 }
 
 object Persistor {
@@ -30,8 +31,57 @@ object Persistor {
     subscribe: PersistorSubscribeCallback => js.Function0[_]
   ): Persistor = {
     val __obj = js.Dynamic.literal(dispatch = js.Any.fromFunction1(dispatch), flush = js.Any.fromFunction0(flush), getState = js.Any.fromFunction0(getState), pause = js.Any.fromFunction0(pause), persist = js.Any.fromFunction0(persist), purge = js.Any.fromFunction0(purge), subscribe = js.Any.fromFunction1(subscribe))
-  
     __obj.asInstanceOf[Persistor]
   }
+  @scala.inline
+  implicit class PersistorOps[Self <: Persistor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDispatch(value: PersistorAction => PersistorAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFlush(value: () => js.Promise[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetState(value: () => PersistorState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPause(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPersist(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persist")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPurge(value: () => js.Promise[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purge")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSubscribe(value: PersistorSubscribeCallback => js.Function0[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscribe")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

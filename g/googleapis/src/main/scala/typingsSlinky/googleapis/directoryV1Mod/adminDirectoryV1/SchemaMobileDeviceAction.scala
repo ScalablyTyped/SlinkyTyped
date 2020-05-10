@@ -18,10 +18,29 @@ trait SchemaMobileDeviceAction extends js.Object {
 
 object SchemaMobileDeviceAction {
   @scala.inline
-  def apply(action: String = null): SchemaMobileDeviceAction = {
+  def apply(): SchemaMobileDeviceAction = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMobileDeviceAction]
   }
+  @scala.inline
+  implicit class SchemaMobileDeviceActionOps[Self <: SchemaMobileDeviceAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

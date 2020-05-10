@@ -14,10 +14,29 @@ trait RejectTransitGatewayPeeringAttachmentResult extends js.Object {
 
 object RejectTransitGatewayPeeringAttachmentResult {
   @scala.inline
-  def apply(TransitGatewayPeeringAttachment: TransitGatewayPeeringAttachment = null): RejectTransitGatewayPeeringAttachmentResult = {
+  def apply(): RejectTransitGatewayPeeringAttachmentResult = {
     val __obj = js.Dynamic.literal()
-    if (TransitGatewayPeeringAttachment != null) __obj.updateDynamic("TransitGatewayPeeringAttachment")(TransitGatewayPeeringAttachment.asInstanceOf[js.Any])
     __obj.asInstanceOf[RejectTransitGatewayPeeringAttachmentResult]
   }
+  @scala.inline
+  implicit class RejectTransitGatewayPeeringAttachmentResultOps[Self <: RejectTransitGatewayPeeringAttachmentResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransitGatewayPeeringAttachment(value: TransitGatewayPeeringAttachment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayPeeringAttachment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitGatewayPeeringAttachment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayPeeringAttachment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

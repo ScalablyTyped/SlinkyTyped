@@ -18,11 +18,41 @@ trait ListFailuresForLicenseConfigurationOperationsResponse extends js.Object {
 
 object ListFailuresForLicenseConfigurationOperationsResponse {
   @scala.inline
-  def apply(LicenseOperationFailureList: LicenseOperationFailureList = null, NextToken: String = null): ListFailuresForLicenseConfigurationOperationsResponse = {
+  def apply(): ListFailuresForLicenseConfigurationOperationsResponse = {
     val __obj = js.Dynamic.literal()
-    if (LicenseOperationFailureList != null) __obj.updateDynamic("LicenseOperationFailureList")(LicenseOperationFailureList.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListFailuresForLicenseConfigurationOperationsResponse]
   }
+  @scala.inline
+  implicit class ListFailuresForLicenseConfigurationOperationsResponseOps[Self <: ListFailuresForLicenseConfigurationOperationsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLicenseOperationFailureList(value: LicenseOperationFailureList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseOperationFailureList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseOperationFailureList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseOperationFailureList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait SameSiteSetting extends js.Object
 
 object SameSiteSetting {
   @scala.inline
-  def Lax: typingsSlinky.puppeteer.puppeteerStrings.Lax = this.cast("Lax")
+  def Lax: typingsSlinky.puppeteer.puppeteerStrings.Lax = "Lax".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.Lax]
   @scala.inline
-  def Strict: typingsSlinky.puppeteer.puppeteerStrings.Strict = this.cast("Strict")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Strict: typingsSlinky.puppeteer.puppeteerStrings.Strict = "Strict".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.Strict]
 }
 

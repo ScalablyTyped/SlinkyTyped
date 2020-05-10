@@ -9,4 +9,5 @@ package object esListMod {
     /* props */ typingsSlinky.reactVirtualized.esListMod.ListRowProps, 
     slinky.core.TagMod[scala.Any]
   ]
+  type RenderedRows = typingsSlinky.reactVirtualized.mod.OverscanIndexRange with typingsSlinky.reactVirtualized.mod.IndexRange
 }

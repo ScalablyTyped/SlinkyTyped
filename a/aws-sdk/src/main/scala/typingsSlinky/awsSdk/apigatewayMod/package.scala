@@ -215,7 +215,7 @@ package object apigatewayMod {
     - java.lang.String
   */
   type VpcLinkStatus = typingsSlinky.awsSdk.apigatewayMod._VpcLinkStatus | java.lang.String
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.apigatewayMod.Blob | java.lang.String
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.apigatewayMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2015-07-09`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

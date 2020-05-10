@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   * No visual effects are included.
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.widget.CalendarMonthYear because Inheritance from two classes. Inlined 
 - typingsSlinky.dojo.dojox.widget.CalendarDay because Inheritance from two classes. Inlined parent */ @JSGlobal("dojox.widget.Calendar")
 @js.native

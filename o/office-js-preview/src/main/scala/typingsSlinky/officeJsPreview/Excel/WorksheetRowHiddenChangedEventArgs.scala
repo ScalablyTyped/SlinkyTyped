@@ -16,6 +16,7 @@ import scala.scalajs.js.annotation._
   * [Api set: ExcelApi BETA (PREVIEW ONLY)]
   * @beta
   */
+@js.native
 trait WorksheetRowHiddenChangedEventArgs extends js.Object {
   /**
     *
@@ -24,7 +25,7 @@ trait WorksheetRowHiddenChangedEventArgs extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var address: String
+  var address: String = js.native
   /**
     *
     * Gets the type of change that represents how the event was triggered. See `Excel.RowHiddenChangeType` for details.
@@ -32,7 +33,7 @@ trait WorksheetRowHiddenChangedEventArgs extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var changeType: RowHiddenChangeType | Unhidden | Hidden
+  var changeType: RowHiddenChangeType | Unhidden | Hidden = js.native
   /**
     *
     * Gets the source of the event. See Excel.EventSource for details.
@@ -40,7 +41,7 @@ trait WorksheetRowHiddenChangedEventArgs extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var source: EventSource | Local | Remote
+  var source: EventSource | Local | Remote = js.native
   /**
     *
     * Gets the type of the event. See Excel.EventType for details.
@@ -48,7 +49,7 @@ trait WorksheetRowHiddenChangedEventArgs extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var `type`: WorksheetRowHiddenChanged
+  var `type`: WorksheetRowHiddenChanged = js.native
   /**
     *
     * Gets the id of the worksheet in which the data changed.
@@ -56,7 +57,7 @@ trait WorksheetRowHiddenChangedEventArgs extends js.Object {
     * [Api set: ExcelApi BETA (PREVIEW ONLY)]
     * @beta
     */
-  var worksheetId: String
+  var worksheetId: String = js.native
 }
 
 object WorksheetRowHiddenChangedEventArgs {
@@ -72,5 +73,43 @@ object WorksheetRowHiddenChangedEventArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorksheetRowHiddenChangedEventArgs]
   }
+  @scala.inline
+  implicit class WorksheetRowHiddenChangedEventArgsOps[Self <: WorksheetRowHiddenChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChangeType(value: RowHiddenChangeType | Unhidden | Hidden): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSource(value: EventSource | Local | Remote): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: WorksheetRowHiddenChanged): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorksheetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worksheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

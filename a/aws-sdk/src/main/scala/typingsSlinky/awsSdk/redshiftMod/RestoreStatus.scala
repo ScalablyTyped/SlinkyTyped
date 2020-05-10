@@ -34,22 +34,89 @@ trait RestoreStatus extends js.Object {
 
 object RestoreStatus {
   @scala.inline
-  def apply(
-    CurrentRestoreRateInMegaBytesPerSecond: Int | scala.Double = null,
-    ElapsedTimeInSeconds: Int | scala.Double = null,
-    EstimatedTimeToCompletionInSeconds: Int | scala.Double = null,
-    ProgressInMegaBytes: Int | scala.Double = null,
-    SnapshotSizeInMegaBytes: Int | scala.Double = null,
-    Status: String = null
-  ): RestoreStatus = {
+  def apply(): RestoreStatus = {
     val __obj = js.Dynamic.literal()
-    if (CurrentRestoreRateInMegaBytesPerSecond != null) __obj.updateDynamic("CurrentRestoreRateInMegaBytesPerSecond")(CurrentRestoreRateInMegaBytesPerSecond.asInstanceOf[js.Any])
-    if (ElapsedTimeInSeconds != null) __obj.updateDynamic("ElapsedTimeInSeconds")(ElapsedTimeInSeconds.asInstanceOf[js.Any])
-    if (EstimatedTimeToCompletionInSeconds != null) __obj.updateDynamic("EstimatedTimeToCompletionInSeconds")(EstimatedTimeToCompletionInSeconds.asInstanceOf[js.Any])
-    if (ProgressInMegaBytes != null) __obj.updateDynamic("ProgressInMegaBytes")(ProgressInMegaBytes.asInstanceOf[js.Any])
-    if (SnapshotSizeInMegaBytes != null) __obj.updateDynamic("SnapshotSizeInMegaBytes")(SnapshotSizeInMegaBytes.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreStatus]
   }
+  @scala.inline
+  implicit class RestoreStatusOps[Self <: RestoreStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentRestoreRateInMegaBytesPerSecond(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentRestoreRateInMegaBytesPerSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentRestoreRateInMegaBytesPerSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentRestoreRateInMegaBytesPerSecond")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElapsedTimeInSeconds(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElapsedTimeInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElapsedTimeInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElapsedTimeInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedTimeToCompletionInSeconds(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedTimeToCompletionInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedTimeToCompletionInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EstimatedTimeToCompletionInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressInMegaBytes(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressInMegaBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressInMegaBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgressInMegaBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapshotSizeInMegaBytes(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotSizeInMegaBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapshotSizeInMegaBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotSizeInMegaBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

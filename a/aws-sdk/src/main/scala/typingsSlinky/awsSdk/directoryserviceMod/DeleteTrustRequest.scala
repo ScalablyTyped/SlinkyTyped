@@ -18,10 +18,35 @@ trait DeleteTrustRequest extends js.Object {
 
 object DeleteTrustRequest {
   @scala.inline
-  def apply(TrustId: TrustId, DeleteAssociatedConditionalForwarder: js.UndefOr[Boolean] = js.undefined): DeleteTrustRequest = {
+  def apply(TrustId: TrustId): DeleteTrustRequest = {
     val __obj = js.Dynamic.literal(TrustId = TrustId.asInstanceOf[js.Any])
-    if (!js.isUndefined(DeleteAssociatedConditionalForwarder)) __obj.updateDynamic("DeleteAssociatedConditionalForwarder")(DeleteAssociatedConditionalForwarder.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteTrustRequest]
   }
+  @scala.inline
+  implicit class DeleteTrustRequestOps[Self <: DeleteTrustRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrustId(value: TrustId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrustId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteAssociatedConditionalForwarder(value: DeleteAssociatedConditionalForwarder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteAssociatedConditionalForwarder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteAssociatedConditionalForwarder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteAssociatedConditionalForwarder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

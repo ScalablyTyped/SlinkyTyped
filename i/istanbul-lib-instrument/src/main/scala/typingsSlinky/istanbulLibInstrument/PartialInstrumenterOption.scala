@@ -5,39 +5,127 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<istanbul-lib-instrument.istanbul-lib-instrument.InstrumenterOptions> */
+@js.native
 trait PartialInstrumenterOption extends js.Object {
-  var autoWrap: js.UndefOr[Boolean] = js.undefined
-  var compact: js.UndefOr[Boolean] = js.undefined
-  var coverageVariable: js.UndefOr[String] = js.undefined
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var esModules: js.UndefOr[Boolean] = js.undefined
-  var preserveComments: js.UndefOr[Boolean] = js.undefined
-  var produceSourceMap: js.UndefOr[Boolean] = js.undefined
-  var sourceMapUrlCallback: js.UndefOr[js.Function2[/* filename */ String, /* url */ String, Unit]] = js.undefined
+  var autoWrap: js.UndefOr[Boolean] = js.native
+  var compact: js.UndefOr[Boolean] = js.native
+  var coverageVariable: js.UndefOr[String] = js.native
+  var debug: js.UndefOr[Boolean] = js.native
+  var esModules: js.UndefOr[Boolean] = js.native
+  var preserveComments: js.UndefOr[Boolean] = js.native
+  var produceSourceMap: js.UndefOr[Boolean] = js.native
+  var sourceMapUrlCallback: js.UndefOr[js.Function2[/* filename */ String, /* url */ String, Unit]] = js.native
 }
 
 object PartialInstrumenterOption {
   @scala.inline
-  def apply(
-    autoWrap: js.UndefOr[Boolean] = js.undefined,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    coverageVariable: String = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    esModules: js.UndefOr[Boolean] = js.undefined,
-    preserveComments: js.UndefOr[Boolean] = js.undefined,
-    produceSourceMap: js.UndefOr[Boolean] = js.undefined,
-    sourceMapUrlCallback: (/* filename */ String, /* url */ String) => Unit = null
-  ): PartialInstrumenterOption = {
+  def apply(): PartialInstrumenterOption = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoWrap)) __obj.updateDynamic("autoWrap")(autoWrap.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (coverageVariable != null) __obj.updateDynamic("coverageVariable")(coverageVariable.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (!js.isUndefined(esModules)) __obj.updateDynamic("esModules")(esModules.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveComments)) __obj.updateDynamic("preserveComments")(preserveComments.asInstanceOf[js.Any])
-    if (!js.isUndefined(produceSourceMap)) __obj.updateDynamic("produceSourceMap")(produceSourceMap.asInstanceOf[js.Any])
-    if (sourceMapUrlCallback != null) __obj.updateDynamic("sourceMapUrlCallback")(js.Any.fromFunction2(sourceMapUrlCallback))
     __obj.asInstanceOf[PartialInstrumenterOption]
   }
+  @scala.inline
+  implicit class PartialInstrumenterOptionOps[Self <: PartialInstrumenterOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoWrap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoWrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoverageVariable(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverageVariable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoverageVariable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverageVariable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEsModules(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("esModules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEsModules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("esModules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveComments(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveComments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveComments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProduceSourceMap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("produceSourceMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProduceSourceMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("produceSourceMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceMapUrlCallback(value: (/* filename */ String, /* url */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapUrlCallback")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSourceMapUrlCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMapUrlCallback")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

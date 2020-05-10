@@ -1,14 +1,17 @@
 package typingsSlinky.officeUiFabricReact.mod
 
 import typingsSlinky.officeUiFabricReact.AnonOnRenderItem
+import typingsSlinky.officeUiFabricReact.tagPickerTypesMod.ITagPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react", "TagPickerBase")
 @js.native
-class TagPickerBase ()
-  extends typingsSlinky.officeUiFabricReact.libPickersMod.TagPickerBase
+class TagPickerBase protected ()
+  extends typingsSlinky.officeUiFabricReact.libPickersMod.TagPickerBase {
+  def this(props: ITagPickerProps) = this()
+}
 
 /* static members */
 @JSImport("office-ui-fabric-react", "TagPickerBase")

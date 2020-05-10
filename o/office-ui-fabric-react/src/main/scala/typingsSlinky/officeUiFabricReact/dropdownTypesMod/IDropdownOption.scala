@@ -1,47 +1,44 @@
 package typingsSlinky.officeUiFabricReact.dropdownTypesMod
 
 import typingsSlinky.officeUiFabricReact.selectableOptionTypesMod.ISelectableOption
-import typingsSlinky.officeUiFabricReact.selectableOptionTypesMod.SelectableOptionMenuItemType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDropdownOption extends ISelectableOption {
   /**
     * Deprecated at v.65.1, use `selected` instead.
     * @deprecated Use `selected` instead.
     */
-  var isSelected: js.UndefOr[Boolean] = js.undefined
+  var isSelected: js.UndefOr[Boolean] = js.native
 }
 
 object IDropdownOption {
   @scala.inline
-  def apply(
-    key: String | Double,
-    text: String,
-    ariaLabel: String = null,
-    data: js.Any = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    index: Int | Double = null,
-    isSelected: js.UndefOr[Boolean] = js.undefined,
-    itemType: SelectableOptionMenuItemType = null,
-    selected: js.UndefOr[Boolean] = js.undefined,
-    title: String = null
-  ): IDropdownOption = {
+  def apply(key: String | Double, text: String): IDropdownOption = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
-    if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.asInstanceOf[js.Any])
-    if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDropdownOption]
   }
+  @scala.inline
+  implicit class IDropdownOptionOps[Self <: IDropdownOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsSelected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -24,11 +24,41 @@ trait SchemaListMetricDescriptorsResponse extends js.Object {
 
 object SchemaListMetricDescriptorsResponse {
   @scala.inline
-  def apply(metricDescriptors: js.Array[SchemaMetricDescriptor] = null, nextPageToken: String = null): SchemaListMetricDescriptorsResponse = {
+  def apply(): SchemaListMetricDescriptorsResponse = {
     val __obj = js.Dynamic.literal()
-    if (metricDescriptors != null) __obj.updateDynamic("metricDescriptors")(metricDescriptors.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListMetricDescriptorsResponse]
   }
+  @scala.inline
+  implicit class SchemaListMetricDescriptorsResponseOps[Self <: SchemaListMetricDescriptorsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetricDescriptors(value: js.Array[SchemaMetricDescriptor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricDescriptors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricDescriptors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricDescriptors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -2,17 +2,20 @@ package typingsSlinky.cryptoRandomString.mod
 
 import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.`url-safe`
 import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.base64
+import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.distinguishable
 import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.hex
 import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.numeric
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeOption extends js.Object {
   /**
   	Use only characters from a predefined set of allowed characters.
   	Cannot be set at the same time as the `characters` option.
   	@default 'hex'
+  	The `distinguishable` set contains only uppercase characters that are not easily confused: `CDEHKMPRTUWXY012458`. It can be useful if you need to print out a short string that you'd like users to read and type back in with minimal errors. For example, reading a code off of a screen that needs to be typed into a phone to connect two devices.
   	@example
   	```
   	cryptoRandomString({length: 10});
@@ -23,17 +26,38 @@ trait TypeOption extends js.Object {
   	//=> 'VEjfNW3Yej'
   	cryptoRandomString({length: 10, type: 'numeric'});
   	//=> '8314659141'
+  	cryptoRandomString({length: 6, type: 'distinguishable'});
+  	//=> 'CDEHKM'
   	```
   	*/
-  var `type`: js.UndefOr[hex | base64 | `url-safe` | numeric] = js.undefined
+  var `type`: js.UndefOr[hex | base64 | `url-safe` | numeric | distinguishable] = js.native
 }
 
 object TypeOption {
   @scala.inline
-  def apply(`type`: hex | base64 | `url-safe` | numeric = null): TypeOption = {
+  def apply(): TypeOption = {
     val __obj = js.Dynamic.literal()
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeOption]
   }
+  @scala.inline
+  implicit class TypeOptionOps[Self <: TypeOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: hex | base64 | `url-safe` | numeric | distinguishable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

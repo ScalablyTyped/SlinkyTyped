@@ -1,8 +1,16 @@
 package typingsSlinky.awsSdk
 
 import typingsSlinky.awsSdk.s3Mod.BucketName
+import typingsSlinky.awsSdk.s3Mod.IfMatch
+import typingsSlinky.awsSdk.s3Mod.IfNoneMatch
 import typingsSlinky.awsSdk.s3Mod.ObjectKey
 import typingsSlinky.awsSdk.s3Mod.ObjectVersionId
+import typingsSlinky.awsSdk.s3Mod.PartNumber
+import typingsSlinky.awsSdk.s3Mod.Range
+import typingsSlinky.awsSdk.s3Mod.RequestPayer
+import typingsSlinky.awsSdk.s3Mod.SSECustomerAlgorithm
+import typingsSlinky.awsSdk.s3Mod.SSECustomerKey
+import typingsSlinky.awsSdk.s3Mod.SSECustomerKeyMD5
 import typingsSlinky.awsSdk.serviceMod.WaiterConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -62,5 +70,183 @@ trait HeadObjectRequestwaiterWa extends js.Object {
     * VersionId used to reference a specific version of the object.
     */
   var VersionId: js.UndefOr[ObjectVersionId] = js.native
+}
+
+object HeadObjectRequestwaiterWa {
+  @scala.inline
+  def apply(Bucket: BucketName, Key: ObjectKey): HeadObjectRequestwaiterWa = {
+    val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any], Key = Key.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HeadObjectRequestwaiterWa]
+  }
+  @scala.inline
+  implicit class HeadObjectRequestwaiterWaOps[Self <: HeadObjectRequestwaiterWa] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: ObjectKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$waiter(value: WaiterConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$waiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$waiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIfMatch(value: IfMatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IfMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIfMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IfMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIfModifiedSince(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IfModifiedSince")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIfModifiedSince: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IfModifiedSince")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIfNoneMatch(value: IfNoneMatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IfNoneMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIfNoneMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IfNoneMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIfUnmodifiedSince(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IfUnmodifiedSince")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIfUnmodifiedSince: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IfUnmodifiedSince")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartNumber(value: PartNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestPayer(value: RequestPayer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestPayer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestPayer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSECustomerAlgorithm(value: SSECustomerAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSECustomerAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSECustomerKeyUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSSECustomerKey(value: SSECustomerKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSECustomerKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSECustomerKeyMD5(value: SSECustomerKeyMD5): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSECustomerKeyMD5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSECustomerKeyMD5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionId(value: ObjectVersionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

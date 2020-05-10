@@ -26,17 +26,59 @@ trait ListTestGridSessionArtifactsRequest extends js.Object {
 
 object ListTestGridSessionArtifactsRequest {
   @scala.inline
-  def apply(
-    sessionArn: DeviceFarmArn,
-    maxResult: Int | scala.Double = null,
-    nextToken: PaginationToken = null,
-    `type`: TestGridSessionArtifactCategory = null
-  ): ListTestGridSessionArtifactsRequest = {
+  def apply(sessionArn: DeviceFarmArn): ListTestGridSessionArtifactsRequest = {
     val __obj = js.Dynamic.literal(sessionArn = sessionArn.asInstanceOf[js.Any])
-    if (maxResult != null) __obj.updateDynamic("maxResult")(maxResult.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTestGridSessionArtifactsRequest]
   }
+  @scala.inline
+  implicit class ListTestGridSessionArtifactsRequestOps[Self <: ListTestGridSessionArtifactsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSessionArn(value: DeviceFarmArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxResult(value: MaxPageSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResult")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: TestGridSessionArtifactCategory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

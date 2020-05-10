@@ -62,4 +62,5 @@ package object transitionMod {
     /* status */ typingsSlinky.reactTransitionGroup.transitionMod.TransitionStatus, 
     slinky.core.TagMod[scala.Any]
   ])
+  type TransitionStatus = /* "entering" */ java.lang.String
 }

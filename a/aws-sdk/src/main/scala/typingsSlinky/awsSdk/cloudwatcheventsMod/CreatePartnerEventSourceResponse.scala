@@ -14,10 +14,29 @@ trait CreatePartnerEventSourceResponse extends js.Object {
 
 object CreatePartnerEventSourceResponse {
   @scala.inline
-  def apply(EventSourceArn: String = null): CreatePartnerEventSourceResponse = {
+  def apply(): CreatePartnerEventSourceResponse = {
     val __obj = js.Dynamic.literal()
-    if (EventSourceArn != null) __obj.updateDynamic("EventSourceArn")(EventSourceArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePartnerEventSourceResponse]
   }
+  @scala.inline
+  implicit class CreatePartnerEventSourceResponseOps[Self <: CreatePartnerEventSourceResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventSourceArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventSourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventSourceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventSourceArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

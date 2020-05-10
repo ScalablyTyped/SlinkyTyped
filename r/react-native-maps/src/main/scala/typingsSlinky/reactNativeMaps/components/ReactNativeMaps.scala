@@ -1,15 +1,17 @@
 package typingsSlinky.reactNativeMaps.components
 
+import typingsSlinky.reactNativeMaps.mod.MapViewProps
 import typingsSlinky.reactNativeMaps.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeMaps extends SharedApply_MapViewProps388203057[default] {
+object ReactNativeMaps {
   @JSImport("react-native-maps", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: MapViewProps): SharedBuilder_MapViewProps_1186437086[default] = new SharedBuilder_MapViewProps_1186437086[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativeMaps.type): SharedBuilder_MapViewProps_1186437086[default] = new SharedBuilder_MapViewProps_1186437086[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

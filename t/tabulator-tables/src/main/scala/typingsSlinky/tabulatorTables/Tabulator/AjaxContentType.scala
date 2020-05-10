@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AjaxContentType extends js.Object {
-  var headers: JSONRecord
-  def body(url: String, config: js.Any, params: js.Any): js.Any
+  var headers: JSONRecord = js.native
+  def body(url: String, config: js.Any, params: js.Any): js.Any = js.native
 }
 
 object AjaxContentType {
   @scala.inline
   def apply(body: (String, js.Any, js.Any) => js.Any, headers: JSONRecord): AjaxContentType = {
     val __obj = js.Dynamic.literal(body = js.Any.fromFunction3(body), headers = headers.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AjaxContentType]
   }
+  @scala.inline
+  implicit class AjaxContentTypeOps[Self <: AjaxContentType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBody(value: (String, js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: JSONRecord): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -17,12 +17,53 @@ trait SchemaBasicPerfSampleSeries extends js.Object {
 
 object SchemaBasicPerfSampleSeries {
   @scala.inline
-  def apply(perfMetricType: String = null, perfUnit: String = null, sampleSeriesLabel: String = null): SchemaBasicPerfSampleSeries = {
+  def apply(): SchemaBasicPerfSampleSeries = {
     val __obj = js.Dynamic.literal()
-    if (perfMetricType != null) __obj.updateDynamic("perfMetricType")(perfMetricType.asInstanceOf[js.Any])
-    if (perfUnit != null) __obj.updateDynamic("perfUnit")(perfUnit.asInstanceOf[js.Any])
-    if (sampleSeriesLabel != null) __obj.updateDynamic("sampleSeriesLabel")(sampleSeriesLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBasicPerfSampleSeries]
   }
+  @scala.inline
+  implicit class SchemaBasicPerfSampleSeriesOps[Self <: SchemaBasicPerfSampleSeries] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPerfMetricType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perfMetricType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerfMetricType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perfMetricType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerfUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perfUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerfUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perfUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleSeriesLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSeriesLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleSeriesLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSeriesLabel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

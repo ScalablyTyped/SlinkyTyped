@@ -1,11 +1,8 @@
 package typingsSlinky.reactNativeScrollableTabView.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.Animated.Value
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.TextStyle
@@ -15,53 +12,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ScrollableTabBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeScrollableTabView.mod.ScrollableTabBar] {
+object ScrollableTabBar {
   @JSImport("react-native-scrollable-tab-view", "ScrollableTabBar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    activeTab: Int | Double = null,
-    activeTextColor: String = null,
-    backgroundColor: String = null,
-    containerWidth: Int | Double = null,
-    goToPage: /* pageNumber */ Double => Unit = null,
-    inactiveTextColor: String = null,
-    renderTab: (/* name */ String, /* pageIndex */ Double, /* isTabActive */ Boolean, /* onPressHandler */ js.Function1[/* pageNumber */ Double, Unit], /* onLayoutHandler */ js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]) => ReactElement = null,
-    scrollOffset: Int | Double = null,
-    scrollValue: Value = null,
-    style: ViewStyle = null,
-    tabStyle: ViewStyle = null,
-    tabs: js.Array[ReactElement] = null,
-    tabsContainerStyle: ViewStyle = null,
-    textStyle: TextStyle = null,
-    underlineStyle: ViewStyle = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeScrollableTabView.mod.ScrollableTabBar] = {
-    val __obj = js.Dynamic.literal()
-    if (activeTab != null) __obj.updateDynamic("activeTab")(activeTab.asInstanceOf[js.Any])
-    if (activeTextColor != null) __obj.updateDynamic("activeTextColor")(activeTextColor.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (containerWidth != null) __obj.updateDynamic("containerWidth")(containerWidth.asInstanceOf[js.Any])
-    if (goToPage != null) __obj.updateDynamic("goToPage")(js.Any.fromFunction1(goToPage))
-    if (inactiveTextColor != null) __obj.updateDynamic("inactiveTextColor")(inactiveTextColor.asInstanceOf[js.Any])
-    if (renderTab != null) __obj.updateDynamic("renderTab")(js.Any.fromFunction5(renderTab))
-    if (scrollOffset != null) __obj.updateDynamic("scrollOffset")(scrollOffset.asInstanceOf[js.Any])
-    if (scrollValue != null) __obj.updateDynamic("scrollValue")(scrollValue.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tabStyle != null) __obj.updateDynamic("tabStyle")(tabStyle.asInstanceOf[js.Any])
-    if (tabs != null) __obj.updateDynamic("tabs")(tabs.asInstanceOf[js.Any])
-    if (tabsContainerStyle != null) __obj.updateDynamic("tabsContainerStyle")(tabsContainerStyle.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (underlineStyle != null) __obj.updateDynamic("underlineStyle")(underlineStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeScrollableTabView.mod.ScrollableTabBar] {
+    @scala.inline
+    def activeTab(value: Double): this.type = set("activeTab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeTextColor(value: String): this.type = set("activeTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerWidth(value: Double): this.type = set("containerWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def goToPage(value: /* pageNumber */ Double => Unit): this.type = set("goToPage", js.Any.fromFunction1(value))
+    @scala.inline
+    def inactiveTextColor(value: String): this.type = set("inactiveTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderTab(
+      value: (/* name */ String, /* pageIndex */ Double, /* isTabActive */ Boolean, /* onPressHandler */ js.Function1[/* pageNumber */ Double, Unit], /* onLayoutHandler */ js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]) => ReactElement
+    ): this.type = set("renderTab", js.Any.fromFunction5(value))
+    @scala.inline
+    def scrollOffset(value: Double): this.type = set("scrollOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollValue(value: Value): this.type = set("scrollValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: ViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabStyle(value: ViewStyle): this.type = set("tabStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabs(value: js.Array[ReactElement]): this.type = set("tabs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabsContainerStyle(value: ViewStyle): this.type = set("tabsContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyle(value: TextStyle): this.type = set("textStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineStyle(value: ViewStyle): this.type = set("underlineStyle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeScrollableTabView.mod.ScrollableTabBar] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeScrollableTabView.mod.ScrollableTabBar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TabBarPropsScrollableTabB
+  
+  def withProps(p: TabBarPropsScrollableTabB): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ScrollableTabBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -18,10 +18,35 @@ trait DetectStackDriftInput extends js.Object {
 
 object DetectStackDriftInput {
   @scala.inline
-  def apply(StackName: StackNameOrId, LogicalResourceIds: LogicalResourceIds = null): DetectStackDriftInput = {
+  def apply(StackName: StackNameOrId): DetectStackDriftInput = {
     val __obj = js.Dynamic.literal(StackName = StackName.asInstanceOf[js.Any])
-    if (LogicalResourceIds != null) __obj.updateDynamic("LogicalResourceIds")(LogicalResourceIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectStackDriftInput]
   }
+  @scala.inline
+  implicit class DetectStackDriftInputOps[Self <: DetectStackDriftInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackName(value: StackNameOrId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLogicalResourceIds(value: LogicalResourceIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogicalResourceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogicalResourceIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogicalResourceIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

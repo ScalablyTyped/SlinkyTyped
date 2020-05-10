@@ -1,5 +1,6 @@
 package typingsSlinky.jspdf.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jspdf.AnonAlign
 import typingsSlinky.jspdf.AnonArc
 import typingsSlinky.jspdf.AnonCollections
@@ -9,7 +10,6 @@ import typingsSlinky.jspdf.jspdfStrings.l
 import typingsSlinky.jspdf.jspdfStrings.landscape
 import typingsSlinky.jspdf.jspdfStrings.p
 import typingsSlinky.jspdf.jspdfStrings.portrait
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -88,13 +88,13 @@ trait jsPDF extends js.Object {
   def addSVG(svgtext: String, x: Double, y: Double): jsPDF = js.native
   def addSVG(svgtext: String, x: Double, y: Double, w: Double): jsPDF = js.native
   def addSVG(svgtext: String, x: Double, y: Double, w: Double, h: Double): jsPDF = js.native
-  def arrayBufferToBase64(arrayBuffer: scala.scalajs.js.typedarray.ArrayBuffer): String = js.native
+  def arrayBufferToBase64(arrayBuffer: js.typedarray.ArrayBuffer): String = js.native
   def arrayBufferToBinaryString(buffer: js.Any): String = js.native
   def arrayMax(array: js.Array[_]): Double = js.native
   def arrayMax(array: js.Array[_], comparisonFn: js.Function): Double = js.native
   // jsPDF plugin: AutoPrint
   def autoPrint(): jsPDF = js.native
-  def binaryStringToUint8Array(binary_string: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def binaryStringToUint8Array(binary_string: String): js.typedarray.Uint8Array = js.native
   def calculateLineHeight(headerNames: js.Array[String], columnWidths: js.Array[Double], model: js.Array[_]): Double = js.native
   def cell(x: Double, y: Double, w: Double, h: Double, txt: String, ln: Double, align: String): jsPDF = js.native
   def cellAddPage(): Unit = js.native

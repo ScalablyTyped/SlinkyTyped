@@ -11,20 +11,21 @@ import scala.scalajs.js.annotation._
   *     <li>Decay: 5 ticks per body part of the deceased creep</li>
   * </ul>
   */
+@js.native
 trait Tombstone extends RoomObject {
   /**
     * An object containing the deceased creep.
     */
-  var creep: AnyCreep
+  var creep: AnyCreep = js.native
   /**
     * Time of death.
     */
-  var deathTime: Double
+  var deathTime: Double = js.native
   /**
     * A unique object identificator.
     * You can use {@link Game.getObjectById} method to retrieve an object instance by its id.
     */
-  var id: Id[this.type]
+  var id: Id[this.type] = js.native
   /**
     * An object with the tombstone contents.
     * Each object key is one of the RESOURCE_* constants, values are resources amounts.
@@ -32,11 +33,11 @@ trait Tombstone extends RoomObject {
     * other resources are undefined when empty.
     * You can use lodash.sum to get the total amount of contents.
     */
-  var store: StoreDefinitionUnlimited
+  var store: StoreDefinitionUnlimited = js.native
   /**
     * The amount of game ticks before this tombstone decays.
     */
-  var ticksToDecay: Double
+  var ticksToDecay: Double = js.native
 }
 
 @JSGlobal("Tombstone")

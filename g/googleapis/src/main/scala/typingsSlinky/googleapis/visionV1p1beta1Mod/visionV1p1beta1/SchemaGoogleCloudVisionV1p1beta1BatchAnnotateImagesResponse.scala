@@ -17,10 +17,29 @@ trait SchemaGoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse extends js.Obj
 
 object SchemaGoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse {
   @scala.inline
-  def apply(responses: js.Array[SchemaGoogleCloudVisionV1p1beta1AnnotateImageResponse] = null): SchemaGoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse = {
+  def apply(): SchemaGoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse = {
     val __obj = js.Dynamic.literal()
-    if (responses != null) __obj.updateDynamic("responses")(responses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p1beta1BatchAnnotateImagesResponseOps[Self <: SchemaGoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponses(value: js.Array[SchemaGoogleCloudVisionV1p1beta1AnnotateImageResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

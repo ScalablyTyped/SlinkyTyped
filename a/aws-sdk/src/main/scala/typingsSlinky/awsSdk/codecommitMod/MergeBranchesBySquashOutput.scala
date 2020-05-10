@@ -18,11 +18,41 @@ trait MergeBranchesBySquashOutput extends js.Object {
 
 object MergeBranchesBySquashOutput {
   @scala.inline
-  def apply(commitId: ObjectId = null, treeId: ObjectId = null): MergeBranchesBySquashOutput = {
+  def apply(): MergeBranchesBySquashOutput = {
     val __obj = js.Dynamic.literal()
-    if (commitId != null) __obj.updateDynamic("commitId")(commitId.asInstanceOf[js.Any])
-    if (treeId != null) __obj.updateDynamic("treeId")(treeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MergeBranchesBySquashOutput]
   }
+  @scala.inline
+  implicit class MergeBranchesBySquashOutputOps[Self <: MergeBranchesBySquashOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommitId(value: ObjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTreeId(value: ObjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTreeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treeId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

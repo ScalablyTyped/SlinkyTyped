@@ -17,6 +17,6 @@ class Message protected ()
     */
   def this(payload: String) = this()
   def this(payload: TypedArray) = this()
-  def this(payload: scala.scalajs.js.typedarray.ArrayBuffer) = this()
+  def this(payload: js.typedarray.ArrayBuffer) = this()
 }
 

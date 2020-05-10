@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation._
 @JSImport("typedarray-pool", "mallocInt32")
 @js.native
 object mallocInt32 extends js.Object {
-  def apply(n: Double): scala.scalajs.js.typedarray.Int32Array = js.native
+  def apply(n: Double): js.typedarray.Int32Array = js.native
 }
 

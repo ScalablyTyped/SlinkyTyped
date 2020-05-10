@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,10 +15,10 @@ trait MQuery extends js.Object {
   def apply[T](): MQueryResultSet[T] = js.native
   def apply[T](`object`: T): MQueryResultSet[T] = js.native
   def apply[T](`object`: MQueryResultSet[T]): MQueryResultSet[T] = js.native
-  def contains(container: org.scalajs.dom.raw.HTMLElement, contained: org.scalajs.dom.raw.HTMLElement): Boolean = js.native
-  def data(element: org.scalajs.dom.raw.HTMLElement): js.Any = js.native
-  def data(element: org.scalajs.dom.raw.HTMLElement, key: String): js.Any = js.native
-  def data(element: org.scalajs.dom.raw.HTMLElement, key: String, value: js.Any): js.Any = js.native
+  def contains(container: HTMLElement, contained: HTMLElement): Boolean = js.native
+  def data(element: HTMLElement): js.Any = js.native
+  def data(element: HTMLElement, key: String): js.Any = js.native
+  def data(element: HTMLElement, key: String, value: js.Any): js.Any = js.native
   def every[T](
     obj: js.Array[T],
     fn: js.Function2[/* elementOfArray */ T, /* indexInArray */ js.UndefOr[Double], Boolean]
@@ -75,7 +75,7 @@ trait MQuery extends js.Object {
     fn: js.Function2[/* elementOfArray */ T, /* indexInArray */ js.UndefOr[Double], Unit],
     context: js.Any
   ): Unit = js.native
-  def hasData(element: org.scalajs.dom.raw.HTMLElement): Boolean = js.native
+  def hasData(element: HTMLElement): Boolean = js.native
   def indexOf[T](obj: js.Array[T], `object`: T): Double = js.native
   def indexOf[T](obj: js.Array[T], `object`: T, startIndex: Double): Double = js.native
   def isArray(obj: js.Any): Boolean = js.native
@@ -108,8 +108,8 @@ trait MQuery extends js.Object {
   def proxy(context: js.Any, name: String, args: js.Any*): js.Any = js.native
   def proxy(fn: js.Function1[/* repeated */ js.Any, _], context: js.Any, args: js.Any*): js.Function1[/* repeated */ js.Any, _] = js.native
   def ready(callback: js.Function0[Unit]): Unit = js.native
-  def removeData(element: org.scalajs.dom.raw.HTMLElement): MQueryResultSetElements = js.native
-  def removeData(element: org.scalajs.dom.raw.HTMLElement, name: String): MQueryResultSetElements = js.native
+  def removeData(element: HTMLElement): MQueryResultSetElements = js.native
+  def removeData(element: HTMLElement, name: String): MQueryResultSetElements = js.native
   def some[T](
     obj: js.Array[T],
     fn: js.Function2[/* elementOfArray */ T, /* indexInArray */ js.UndefOr[Double], Boolean]

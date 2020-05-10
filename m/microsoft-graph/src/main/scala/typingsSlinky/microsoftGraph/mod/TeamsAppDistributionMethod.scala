@@ -14,14 +14,12 @@ trait TeamsAppDistributionMethod extends js.Object
 
 object TeamsAppDistributionMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def organization: typingsSlinky.microsoftGraph.microsoftGraphStrings.organization = "organization".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.organization]
   @scala.inline
-  def organization: typingsSlinky.microsoftGraph.microsoftGraphStrings.organization = this.cast("organization")
+  def sideloaded: typingsSlinky.microsoftGraph.microsoftGraphStrings.sideloaded = "sideloaded".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sideloaded]
   @scala.inline
-  def sideloaded: typingsSlinky.microsoftGraph.microsoftGraphStrings.sideloaded = this.cast("sideloaded")
+  def store: typingsSlinky.microsoftGraph.microsoftGraphStrings.store = "store".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.store]
   @scala.inline
-  def store: typingsSlinky.microsoftGraph.microsoftGraphStrings.store = this.cast("store")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

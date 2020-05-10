@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-type.html)
   */
+@js.native
 trait `type` extends js.Object {
   /**
     * Generates a [PointCloudUniqueValueRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudUniqueValueRenderer.html) based on a given field of a [PointCloudLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-PointCloudLayer.html). This renderer visualizes points of the same type, usually from the `CLASS_CODE` field or an equivalent field that stores information related to the classification of the data (e.g. low vegetation, high vegetation, ground, etc.). The generated renderer visualizes each point with a standard predefined color matching the class code of the point.  All that's required is a layer instance and field name. You can optionally set the size and density of the points to suit the needs of the desired visualization.
@@ -23,9 +24,10 @@ trait `type` extends js.Object {
     * @param params.density The number of points per inch in the view.
     * @param params.typeScheme In authoring apps, the user may select a pre-defined type scheme. Pass the scheme object to this property to avoid getting one based on the `basemap`.
     * @param params.statistics A statistics object generated from the [uniqueValues](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-statistics-uniqueValues.html) function. If statistics for the field have already been generated, then pass the object here to avoid making a second statistics query to the server.
+    * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def createPCClassRenderer(params: typeCreatePCClassRendererParams): js.Promise[PCClassRendererResult]
+  def createPCClassRenderer(params: typeCreatePCClassRendererParams): js.Promise[PCClassRendererResult] = js.native
   /**
     * Generates a [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html) that may be applied directly to a [Layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html) that supports renderers. The renderer contains unique symbols representing a string or a numeric value returned from the indicated field.  In most cases you will provide a `layer`, `basemap`, and `field` to generate this renderer. This is a scenario in which the values of the field aren't well known and the user doesn't know which colors to use in the visualization. You can also use a `valueExpression` instead of a `field` to visualize features based on a value returned from a script executed at runtime.
     *
@@ -72,9 +74,11 @@ trait `type` extends js.Object {
     * replace | Removes the geometry/texture color and applies the symbol `color`.
     * multiply | Multiplies geometry/texture color value with the symbol `color` value. The result is a darker color. Multiplying with white keeps the geometry color the same.
     * @param params.returnAllCodedValues Indicates that all domain codes should be returned if the given field has domain values.
+    * @param params.edgesType Indicates whether to add edges to the output renderer. This setting only applies to mesh SceneLayers.  **Possible Values:** solid | none
+    * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def createRenderer(params: typeCreateRendererParams): js.Promise[typeRendererResult]
+  def createRenderer(params: typeCreateRendererParams): js.Promise[typeRendererResult] = js.native
 }
 
 @JSGlobal("__esri.type")

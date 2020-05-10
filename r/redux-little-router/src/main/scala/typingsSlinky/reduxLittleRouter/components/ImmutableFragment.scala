@@ -1,15 +1,16 @@
 package typingsSlinky.reduxLittleRouter.components
 
+import typingsSlinky.reduxLittleRouter.mod.FragmentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ImmutableFragment
-  extends SharedApply_FragmentProps409829048[typingsSlinky.reduxLittleRouter.mod.ImmutableFragment] {
+object ImmutableFragment {
   @JSImport("redux-little-router", "ImmutableFragment")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: FragmentProps): SharedBuilder_FragmentProps514414898[typingsSlinky.reduxLittleRouter.mod.ImmutableFragment] = new SharedBuilder_FragmentProps514414898[typingsSlinky.reduxLittleRouter.mod.ImmutableFragment](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ImmutableFragment.type): SharedBuilder_FragmentProps514414898[typingsSlinky.reduxLittleRouter.mod.ImmutableFragment] = new SharedBuilder_FragmentProps514414898[typingsSlinky.reduxLittleRouter.mod.ImmutableFragment](js.Array(this.component, js.Dictionary.empty))()
 }
 

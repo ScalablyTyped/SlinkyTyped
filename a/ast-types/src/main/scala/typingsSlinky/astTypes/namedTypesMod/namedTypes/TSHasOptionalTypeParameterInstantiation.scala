@@ -7,8 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TSHasOptionalTypeParameterInstantiation extends js.Object {
-  var typeParameters: js.UndefOr[TSTypeParameterInstantiationKind | Null] = js.undefined
+  var typeParameters: js.UndefOr[TSTypeParameterInstantiationKind | Null] = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSHasOptionalTypeParameterInstantiation")

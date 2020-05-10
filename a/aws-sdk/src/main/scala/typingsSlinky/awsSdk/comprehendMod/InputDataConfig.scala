@@ -18,10 +18,35 @@ trait InputDataConfig extends js.Object {
 
 object InputDataConfig {
   @scala.inline
-  def apply(S3Uri: S3Uri, InputFormat: InputFormat = null): InputDataConfig = {
+  def apply(S3Uri: S3Uri): InputDataConfig = {
     val __obj = js.Dynamic.literal(S3Uri = S3Uri.asInstanceOf[js.Any])
-    if (InputFormat != null) __obj.updateDynamic("InputFormat")(InputFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputDataConfig]
   }
+  @scala.inline
+  implicit class InputDataConfigOps[Self <: InputDataConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withS3Uri(value: S3Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputFormat(value: InputFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

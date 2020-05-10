@@ -19,10 +19,35 @@ trait CertificateValidationArgs extends js.Object {
 
 object CertificateValidationArgs {
   @scala.inline
-  def apply(certificateArn: Input[String], validationRecordFqdns: Input[js.Array[Input[String]]] = null): CertificateValidationArgs = {
+  def apply(certificateArn: Input[String]): CertificateValidationArgs = {
     val __obj = js.Dynamic.literal(certificateArn = certificateArn.asInstanceOf[js.Any])
-    if (validationRecordFqdns != null) __obj.updateDynamic("validationRecordFqdns")(validationRecordFqdns.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateValidationArgs]
   }
+  @scala.inline
+  implicit class CertificateValidationArgsOps[Self <: CertificateValidationArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValidationRecordFqdns(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationRecordFqdns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationRecordFqdns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationRecordFqdns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

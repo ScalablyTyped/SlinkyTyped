@@ -18,10 +18,35 @@ trait LabelingJobInputConfig extends js.Object {
 
 object LabelingJobInputConfig {
   @scala.inline
-  def apply(DataSource: LabelingJobDataSource, DataAttributes: LabelingJobDataAttributes = null): LabelingJobInputConfig = {
+  def apply(DataSource: LabelingJobDataSource): LabelingJobInputConfig = {
     val __obj = js.Dynamic.literal(DataSource = DataSource.asInstanceOf[js.Any])
-    if (DataAttributes != null) __obj.updateDynamic("DataAttributes")(DataAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelingJobInputConfig]
   }
+  @scala.inline
+  implicit class LabelingJobInputConfigOps[Self <: LabelingJobInputConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSource(value: LabelingJobDataSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataAttributes(value: LabelingJobDataAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

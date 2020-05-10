@@ -61,7 +61,7 @@ object MapField extends js.Object {
     * @returns Decorator function
     */
   def d[T /* <: StringDictionary[
-    Double | Long | String | Boolean | scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8Array | js.Array[Double] | typingsSlinky.apolloProtobufjs.mod.Message[js.Object]
+    Double | Long | String | Boolean | js.typedarray.Uint8Array | js.Array[Double] | typingsSlinky.apolloProtobufjs.mod.Message[js.Object]
   ] */](
     fieldId: Double,
     fieldKeyType: int32 | uint32 | sint32 | fixed32 | sfixed32 | int64 | uint64 | sint64 | fixed64 | sfixed64 | bool | string,

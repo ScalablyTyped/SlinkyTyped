@@ -51,28 +51,125 @@ trait UpdateAuthorizerRequest extends js.Object {
 
 object UpdateAuthorizerRequest {
   @scala.inline
-  def apply(
-    ApiId: string,
-    AuthorizerId: string,
-    AuthorizerCredentialsArn: Arn = null,
-    AuthorizerResultTtlInSeconds: Int | Double = null,
-    AuthorizerType: AuthorizerType = null,
-    AuthorizerUri: UriWithLengthBetween1And2048 = null,
-    IdentitySource: IdentitySourceList = null,
-    IdentityValidationExpression: StringWithLengthBetween0And1024 = null,
-    JwtConfiguration: JWTConfiguration = null,
-    Name: StringWithLengthBetween1And128 = null
-  ): UpdateAuthorizerRequest = {
+  def apply(ApiId: string, AuthorizerId: string): UpdateAuthorizerRequest = {
     val __obj = js.Dynamic.literal(ApiId = ApiId.asInstanceOf[js.Any], AuthorizerId = AuthorizerId.asInstanceOf[js.Any])
-    if (AuthorizerCredentialsArn != null) __obj.updateDynamic("AuthorizerCredentialsArn")(AuthorizerCredentialsArn.asInstanceOf[js.Any])
-    if (AuthorizerResultTtlInSeconds != null) __obj.updateDynamic("AuthorizerResultTtlInSeconds")(AuthorizerResultTtlInSeconds.asInstanceOf[js.Any])
-    if (AuthorizerType != null) __obj.updateDynamic("AuthorizerType")(AuthorizerType.asInstanceOf[js.Any])
-    if (AuthorizerUri != null) __obj.updateDynamic("AuthorizerUri")(AuthorizerUri.asInstanceOf[js.Any])
-    if (IdentitySource != null) __obj.updateDynamic("IdentitySource")(IdentitySource.asInstanceOf[js.Any])
-    if (IdentityValidationExpression != null) __obj.updateDynamic("IdentityValidationExpression")(IdentityValidationExpression.asInstanceOf[js.Any])
-    if (JwtConfiguration != null) __obj.updateDynamic("JwtConfiguration")(JwtConfiguration.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateAuthorizerRequest]
   }
+  @scala.inline
+  implicit class UpdateAuthorizerRequestOps[Self <: UpdateAuthorizerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthorizerId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthorizerCredentialsArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerCredentialsArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizerCredentialsArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerCredentialsArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizerResultTtlInSeconds(value: IntegerWithLengthBetween0And3600): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerResultTtlInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizerResultTtlInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerResultTtlInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizerType(value: AuthorizerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizerType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizerUri(value: UriWithLengthBetween1And2048): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizerUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizerUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentitySource(value: IdentitySourceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentitySource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentitySource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentitySource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentityValidationExpression(value: StringWithLengthBetween0And1024): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityValidationExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityValidationExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityValidationExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJwtConfiguration(value: JWTConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JwtConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJwtConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JwtConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: StringWithLengthBetween1And128): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

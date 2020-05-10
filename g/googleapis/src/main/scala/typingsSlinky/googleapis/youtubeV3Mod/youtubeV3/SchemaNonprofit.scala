@@ -21,11 +21,41 @@ trait SchemaNonprofit extends js.Object {
 
 object SchemaNonprofit {
   @scala.inline
-  def apply(nonprofitId: SchemaNonprofitId = null, nonprofitLegalName: String = null): SchemaNonprofit = {
+  def apply(): SchemaNonprofit = {
     val __obj = js.Dynamic.literal()
-    if (nonprofitId != null) __obj.updateDynamic("nonprofitId")(nonprofitId.asInstanceOf[js.Any])
-    if (nonprofitLegalName != null) __obj.updateDynamic("nonprofitLegalName")(nonprofitLegalName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNonprofit]
   }
+  @scala.inline
+  implicit class SchemaNonprofitOps[Self <: SchemaNonprofit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNonprofitId(value: SchemaNonprofitId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonprofitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonprofitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonprofitId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonprofitLegalName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonprofitLegalName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonprofitLegalName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonprofitLegalName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

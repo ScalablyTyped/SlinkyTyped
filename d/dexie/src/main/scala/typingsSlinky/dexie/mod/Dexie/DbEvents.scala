@@ -1,10 +1,10 @@
 package typingsSlinky.dexie.mod.Dexie
 
+import org.scalajs.dom.raw.IDBVersionChangeEvent
 import typingsSlinky.dexie.dexieStrings.blocked
 import typingsSlinky.dexie.dexieStrings.populate
 import typingsSlinky.dexie.dexieStrings.ready
 import typingsSlinky.dexie.dexieStrings.versionchange
-import typingsSlinky.std.IDBVersionChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

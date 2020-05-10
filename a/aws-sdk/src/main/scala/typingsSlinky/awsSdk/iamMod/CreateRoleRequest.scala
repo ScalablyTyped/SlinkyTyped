@@ -38,22 +38,89 @@ trait CreateRoleRequest extends js.Object {
 
 object CreateRoleRequest {
   @scala.inline
-  def apply(
-    AssumeRolePolicyDocument: policyDocumentType,
-    RoleName: roleNameType,
-    Description: roleDescriptionType = null,
-    MaxSessionDuration: Int | Double = null,
-    Path: pathType = null,
-    PermissionsBoundary: arnType = null,
-    Tags: tagListType = null
-  ): CreateRoleRequest = {
+  def apply(AssumeRolePolicyDocument: policyDocumentType, RoleName: roleNameType): CreateRoleRequest = {
     val __obj = js.Dynamic.literal(AssumeRolePolicyDocument = AssumeRolePolicyDocument.asInstanceOf[js.Any], RoleName = RoleName.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (MaxSessionDuration != null) __obj.updateDynamic("MaxSessionDuration")(MaxSessionDuration.asInstanceOf[js.Any])
-    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
-    if (PermissionsBoundary != null) __obj.updateDynamic("PermissionsBoundary")(PermissionsBoundary.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRoleRequest]
   }
+  @scala.inline
+  implicit class CreateRoleRequestOps[Self <: CreateRoleRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssumeRolePolicyDocument(value: policyDocumentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssumeRolePolicyDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleName(value: roleNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: roleDescriptionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSessionDuration(value: roleMaxSessionDurationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSessionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSessionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxSessionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: pathType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissionsBoundary(value: arnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissionsBoundary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: tagListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

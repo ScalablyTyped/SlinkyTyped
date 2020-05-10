@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PolylineDrawActionProperties extends DrawActionProperties {
   /**
     * The drawing mode. It is only relevant when the action is first created. Its value cannot be changed during the action lifecycle.  **Possible Values:**
@@ -22,16 +23,34 @@ trait PolylineDrawActionProperties extends DrawActionProperties {
     *
     * @default hybrid
     */
-  var mode: js.UndefOr[hybrid | freehand | click] = js.undefined
+  var mode: js.UndefOr[hybrid | freehand | click] = js.native
 }
 
 object PolylineDrawActionProperties {
   @scala.inline
-  def apply(mode: hybrid | freehand | click = null, view: MapViewProperties = null): PolylineDrawActionProperties = {
+  def apply(): PolylineDrawActionProperties = {
     val __obj = js.Dynamic.literal()
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolylineDrawActionProperties]
   }
+  @scala.inline
+  implicit class PolylineDrawActionPropertiesOps[Self <: PolylineDrawActionProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMode(value: hybrid | freehand | click): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

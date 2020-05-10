@@ -14,14 +14,12 @@ trait IssuingDisputeStatus extends js.Object
 
 object IssuingDisputeStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def lost: typingsSlinky.stripe.stripeStrings.lost = "lost".asInstanceOf[typingsSlinky.stripe.stripeStrings.lost]
   @scala.inline
-  def lost: typingsSlinky.stripe.stripeStrings.lost = this.cast("lost")
+  def under_review: typingsSlinky.stripe.stripeStrings.under_review = "under_review".asInstanceOf[typingsSlinky.stripe.stripeStrings.under_review]
   @scala.inline
-  def under_review: typingsSlinky.stripe.stripeStrings.under_review = this.cast("under_review")
+  def unsubmitted: typingsSlinky.stripe.stripeStrings.unsubmitted = "unsubmitted".asInstanceOf[typingsSlinky.stripe.stripeStrings.unsubmitted]
   @scala.inline
-  def unsubmitted: typingsSlinky.stripe.stripeStrings.unsubmitted = this.cast("unsubmitted")
-  @scala.inline
-  def won: typingsSlinky.stripe.stripeStrings.won = this.cast("won")
+  def won: typingsSlinky.stripe.stripeStrings.won = "won".asInstanceOf[typingsSlinky.stripe.stripeStrings.won]
 }
 

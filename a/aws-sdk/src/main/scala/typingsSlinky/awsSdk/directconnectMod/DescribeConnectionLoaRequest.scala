@@ -22,15 +22,47 @@ trait DescribeConnectionLoaRequest extends js.Object {
 
 object DescribeConnectionLoaRequest {
   @scala.inline
-  def apply(
-    connectionId: ConnectionId,
-    loaContentType: LoaContentType = null,
-    providerName: ProviderName = null
-  ): DescribeConnectionLoaRequest = {
+  def apply(connectionId: ConnectionId): DescribeConnectionLoaRequest = {
     val __obj = js.Dynamic.literal(connectionId = connectionId.asInstanceOf[js.Any])
-    if (loaContentType != null) __obj.updateDynamic("loaContentType")(loaContentType.asInstanceOf[js.Any])
-    if (providerName != null) __obj.updateDynamic("providerName")(providerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeConnectionLoaRequest]
   }
+  @scala.inline
+  implicit class DescribeConnectionLoaRequestOps[Self <: DescribeConnectionLoaRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionId(value: ConnectionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoaContentType(value: LoaContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loaContentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoaContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loaContentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProviderName(value: ProviderName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProviderName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providerName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

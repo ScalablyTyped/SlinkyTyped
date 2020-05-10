@@ -14,10 +14,29 @@ trait GetLaunchTemplateDataResult extends js.Object {
 
 object GetLaunchTemplateDataResult {
   @scala.inline
-  def apply(LaunchTemplateData: ResponseLaunchTemplateData = null): GetLaunchTemplateDataResult = {
+  def apply(): GetLaunchTemplateDataResult = {
     val __obj = js.Dynamic.literal()
-    if (LaunchTemplateData != null) __obj.updateDynamic("LaunchTemplateData")(LaunchTemplateData.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLaunchTemplateDataResult]
   }
+  @scala.inline
+  implicit class GetLaunchTemplateDataResultOps[Self <: GetLaunchTemplateDataResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLaunchTemplateData(value: ResponseLaunchTemplateData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchTemplateData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

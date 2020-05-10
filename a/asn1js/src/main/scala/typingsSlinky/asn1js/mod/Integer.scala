@@ -1,6 +1,5 @@
 package typingsSlinky.asn1js.mod
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,6 +28,6 @@ class Integer () extends BaseBlock[LocalIntegerValueBlock] {
     * @memberOf Integer
     */
   def isEqual(otherValue: Integer): scala.Boolean = js.native
-  def isEqual(otherValue: ArrayBuffer): scala.Boolean = js.native
+  def isEqual(otherValue: js.typedarray.ArrayBuffer): scala.Boolean = js.native
 }
 

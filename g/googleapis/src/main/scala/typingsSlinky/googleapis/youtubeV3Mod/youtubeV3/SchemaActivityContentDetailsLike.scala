@@ -18,10 +18,29 @@ trait SchemaActivityContentDetailsLike extends js.Object {
 
 object SchemaActivityContentDetailsLike {
   @scala.inline
-  def apply(resourceId: SchemaResourceId = null): SchemaActivityContentDetailsLike = {
+  def apply(): SchemaActivityContentDetailsLike = {
     val __obj = js.Dynamic.literal()
-    if (resourceId != null) __obj.updateDynamic("resourceId")(resourceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaActivityContentDetailsLike]
   }
+  @scala.inline
+  implicit class SchemaActivityContentDetailsLikeOps[Self <: SchemaActivityContentDetailsLike] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceId(value: SchemaResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,11 +22,41 @@ trait SchemaJobPlacement extends js.Object {
 
 object SchemaJobPlacement {
   @scala.inline
-  def apply(clusterName: String = null, clusterUuid: String = null): SchemaJobPlacement = {
+  def apply(): SchemaJobPlacement = {
     val __obj = js.Dynamic.literal()
-    if (clusterName != null) __obj.updateDynamic("clusterName")(clusterName.asInstanceOf[js.Any])
-    if (clusterUuid != null) __obj.updateDynamic("clusterUuid")(clusterUuid.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJobPlacement]
   }
+  @scala.inline
+  implicit class SchemaJobPlacementOps[Self <: SchemaJobPlacement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterUuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterUuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterUuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterUuid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

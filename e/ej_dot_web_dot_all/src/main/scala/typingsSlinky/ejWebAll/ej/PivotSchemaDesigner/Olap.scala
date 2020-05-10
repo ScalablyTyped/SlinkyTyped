@@ -4,24 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Olap extends js.Object {
   /** Allows the user to view the KPI elements in tree-view inside PivotTable Field List. This is only applicable for OLAP datasource.
     * @Default {false}
     */
-  var showKPI: js.UndefOr[Boolean] = js.undefined
+  var showKPI: js.UndefOr[Boolean] = js.native
   /** Allows the user to view the named sets in tree-view inside PivotTable Field List. This is only applicable for OLAP datasource.
     * @Default {false}
     */
-  var showNamedSets: js.UndefOr[Boolean] = js.undefined
+  var showNamedSets: js.UndefOr[Boolean] = js.native
 }
 
 object Olap {
   @scala.inline
-  def apply(showKPI: js.UndefOr[Boolean] = js.undefined, showNamedSets: js.UndefOr[Boolean] = js.undefined): Olap = {
+  def apply(): Olap = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(showKPI)) __obj.updateDynamic("showKPI")(showKPI.asInstanceOf[js.Any])
-    if (!js.isUndefined(showNamedSets)) __obj.updateDynamic("showNamedSets")(showNamedSets.asInstanceOf[js.Any])
     __obj.asInstanceOf[Olap]
   }
+  @scala.inline
+  implicit class OlapOps[Self <: Olap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShowKPI(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showKPI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowKPI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showKPI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowNamedSets(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showNamedSets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowNamedSets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showNamedSets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

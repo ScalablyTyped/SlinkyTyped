@@ -56,32 +56,149 @@ trait VpcEndpointServiceState extends js.Object {
 
 object VpcEndpointServiceState {
   @scala.inline
-  def apply(
-    acceptanceRequired: Input[Boolean] = null,
-    allowedPrincipals: Input[js.Array[Input[String]]] = null,
-    availabilityZones: Input[js.Array[Input[String]]] = null,
-    baseEndpointDnsNames: Input[js.Array[Input[String]]] = null,
-    managesVpcEndpoints: Input[Boolean] = null,
-    networkLoadBalancerArns: Input[js.Array[Input[String]]] = null,
-    privateDnsName: Input[String] = null,
-    serviceName: Input[String] = null,
-    serviceType: Input[String] = null,
-    state: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null
-  ): VpcEndpointServiceState = {
+  def apply(): VpcEndpointServiceState = {
     val __obj = js.Dynamic.literal()
-    if (acceptanceRequired != null) __obj.updateDynamic("acceptanceRequired")(acceptanceRequired.asInstanceOf[js.Any])
-    if (allowedPrincipals != null) __obj.updateDynamic("allowedPrincipals")(allowedPrincipals.asInstanceOf[js.Any])
-    if (availabilityZones != null) __obj.updateDynamic("availabilityZones")(availabilityZones.asInstanceOf[js.Any])
-    if (baseEndpointDnsNames != null) __obj.updateDynamic("baseEndpointDnsNames")(baseEndpointDnsNames.asInstanceOf[js.Any])
-    if (managesVpcEndpoints != null) __obj.updateDynamic("managesVpcEndpoints")(managesVpcEndpoints.asInstanceOf[js.Any])
-    if (networkLoadBalancerArns != null) __obj.updateDynamic("networkLoadBalancerArns")(networkLoadBalancerArns.asInstanceOf[js.Any])
-    if (privateDnsName != null) __obj.updateDynamic("privateDnsName")(privateDnsName.asInstanceOf[js.Any])
-    if (serviceName != null) __obj.updateDynamic("serviceName")(serviceName.asInstanceOf[js.Any])
-    if (serviceType != null) __obj.updateDynamic("serviceType")(serviceType.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcEndpointServiceState]
   }
+  @scala.inline
+  implicit class VpcEndpointServiceStateOps[Self <: VpcEndpointServiceState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceptanceRequired(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptanceRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptanceRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptanceRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedPrincipals(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedPrincipals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedPrincipals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedPrincipals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZones(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZones")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseEndpointDnsNames(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseEndpointDnsNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseEndpointDnsNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseEndpointDnsNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagesVpcEndpoints(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managesVpcEndpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagesVpcEndpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managesVpcEndpoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkLoadBalancerArns(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkLoadBalancerArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkLoadBalancerArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkLoadBalancerArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateDnsName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateDnsName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateDnsName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateDnsName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

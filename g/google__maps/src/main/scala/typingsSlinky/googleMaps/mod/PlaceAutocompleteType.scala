@@ -15,16 +15,14 @@ trait PlaceAutocompleteType extends js.Object
 
 object PlaceAutocompleteType {
   @scala.inline
-  def LeftparenthesiscitiesRightparenthesis: typingsSlinky.googleMaps.googleMapsStrings.LeftparenthesiscitiesRightparenthesis = this.cast("(cities)")
+  def LeftparenthesiscitiesRightparenthesis: typingsSlinky.googleMaps.googleMapsStrings.LeftparenthesiscitiesRightparenthesis = "(cities)".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.LeftparenthesiscitiesRightparenthesis]
   @scala.inline
-  def LeftparenthesisregionsRightparenthesis: typingsSlinky.googleMaps.googleMapsStrings.LeftparenthesisregionsRightparenthesis = this.cast("(regions)")
+  def LeftparenthesisregionsRightparenthesis: typingsSlinky.googleMaps.googleMapsStrings.LeftparenthesisregionsRightparenthesis = "(regions)".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.LeftparenthesisregionsRightparenthesis]
   @scala.inline
-  def address: typingsSlinky.googleMaps.googleMapsStrings.address = this.cast("address")
+  def address: typingsSlinky.googleMaps.googleMapsStrings.address = "address".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.address]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def establishment: typingsSlinky.googleMaps.googleMapsStrings.establishment = "establishment".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.establishment]
   @scala.inline
-  def establishment: typingsSlinky.googleMaps.googleMapsStrings.establishment = this.cast("establishment")
-  @scala.inline
-  def geocode: typingsSlinky.googleMaps.googleMapsStrings.geocode = this.cast("geocode")
+  def geocode: typingsSlinky.googleMaps.googleMapsStrings.geocode = "geocode".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.geocode]
 }
 

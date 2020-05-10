@@ -16,18 +16,16 @@ trait TouchEventType extends js.Object
 
 object TouchEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def tap: typingsSlinky.aliApp.aliAppStrings.tap = "tap".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.tap]
   @scala.inline
-  def tap: typingsSlinky.aliApp.aliAppStrings.tap = this.cast("tap")
+  def touchcancel: typingsSlinky.aliApp.aliAppStrings.touchcancel = "touchcancel".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.touchcancel]
   @scala.inline
-  def touchcancel: typingsSlinky.aliApp.aliAppStrings.touchcancel = this.cast("touchcancel")
+  def touchend: typingsSlinky.aliApp.aliAppStrings.touchend = "touchend".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.touchend]
   @scala.inline
-  def touchend: typingsSlinky.aliApp.aliAppStrings.touchend = this.cast("touchend")
+  def touchforcechange: typingsSlinky.aliApp.aliAppStrings.touchforcechange = "touchforcechange".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.touchforcechange]
   @scala.inline
-  def touchforcechange: typingsSlinky.aliApp.aliAppStrings.touchforcechange = this.cast("touchforcechange")
+  def touchmove: typingsSlinky.aliApp.aliAppStrings.touchmove = "touchmove".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.touchmove]
   @scala.inline
-  def touchmove: typingsSlinky.aliApp.aliAppStrings.touchmove = this.cast("touchmove")
-  @scala.inline
-  def touchstart: typingsSlinky.aliApp.aliAppStrings.touchstart = this.cast("touchstart")
+  def touchstart: typingsSlinky.aliApp.aliAppStrings.touchstart = "touchstart".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.touchstart]
 }
 

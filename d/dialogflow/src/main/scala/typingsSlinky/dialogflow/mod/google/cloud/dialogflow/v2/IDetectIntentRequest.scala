@@ -5,35 +5,123 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of a DetectIntentRequest. */
+@js.native
 trait IDetectIntentRequest extends js.Object {
   /** DetectIntentRequest inputAudio */
-  var inputAudio: js.UndefOr[scala.scalajs.js.typedarray.Uint8Array | Null] = js.undefined
+  var inputAudio: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
   /** DetectIntentRequest outputAudioConfig */
-  var outputAudioConfig: js.UndefOr[IOutputAudioConfig | Null] = js.undefined
+  var outputAudioConfig: js.UndefOr[IOutputAudioConfig | Null] = js.native
   /** DetectIntentRequest queryInput */
-  var queryInput: js.UndefOr[IQueryInput | Null] = js.undefined
+  var queryInput: js.UndefOr[IQueryInput | Null] = js.native
   /** DetectIntentRequest queryParams */
-  var queryParams: js.UndefOr[IQueryParameters | Null] = js.undefined
+  var queryParams: js.UndefOr[IQueryParameters | Null] = js.native
   /** DetectIntentRequest session */
-  var session: js.UndefOr[String | Null] = js.undefined
+  var session: js.UndefOr[String | Null] = js.native
 }
 
 object IDetectIntentRequest {
   @scala.inline
-  def apply(
-    inputAudio: scala.scalajs.js.typedarray.Uint8Array = null,
-    outputAudioConfig: IOutputAudioConfig = null,
-    queryInput: IQueryInput = null,
-    queryParams: IQueryParameters = null,
-    session: String = null
-  ): IDetectIntentRequest = {
+  def apply(): IDetectIntentRequest = {
     val __obj = js.Dynamic.literal()
-    if (inputAudio != null) __obj.updateDynamic("inputAudio")(inputAudio.asInstanceOf[js.Any])
-    if (outputAudioConfig != null) __obj.updateDynamic("outputAudioConfig")(outputAudioConfig.asInstanceOf[js.Any])
-    if (queryInput != null) __obj.updateDynamic("queryInput")(queryInput.asInstanceOf[js.Any])
-    if (queryParams != null) __obj.updateDynamic("queryParams")(queryParams.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDetectIntentRequest]
   }
+  @scala.inline
+  implicit class IDetectIntentRequestOps[Self <: IDetectIntentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputAudio(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputAudio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputAudio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputAudio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputAudioNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputAudio")(null)
+        ret
+    }
+    @scala.inline
+    def withOutputAudioConfig(value: IOutputAudioConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputAudioConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputAudioConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputAudioConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputAudioConfigNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputAudioConfig")(null)
+        ret
+    }
+    @scala.inline
+    def withQueryInput(value: IQueryInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryInputNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryInput")(null)
+        ret
+    }
+    @scala.inline
+    def withQueryParams(value: IQueryParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryParamsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParams")(null)
+        ret
+    }
+    @scala.inline
+    def withSession(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(null)
+        ret
+    }
+  }
+  
 }
 

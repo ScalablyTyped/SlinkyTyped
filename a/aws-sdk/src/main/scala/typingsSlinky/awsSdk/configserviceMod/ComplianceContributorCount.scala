@@ -18,11 +18,41 @@ trait ComplianceContributorCount extends js.Object {
 
 object ComplianceContributorCount {
   @scala.inline
-  def apply(CapExceeded: js.UndefOr[scala.Boolean] = js.undefined, CappedCount: Int | Double = null): ComplianceContributorCount = {
+  def apply(): ComplianceContributorCount = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(CapExceeded)) __obj.updateDynamic("CapExceeded")(CapExceeded.asInstanceOf[js.Any])
-    if (CappedCount != null) __obj.updateDynamic("CappedCount")(CappedCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComplianceContributorCount]
   }
+  @scala.inline
+  implicit class ComplianceContributorCountOps[Self <: ComplianceContributorCount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCapExceeded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CapExceeded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapExceeded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CapExceeded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCappedCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CappedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCappedCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CappedCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

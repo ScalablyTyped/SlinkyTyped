@@ -23,11 +23,6 @@ class Renderer ()
   var _tabID: js.Any = js.native
   var _tabKeys: js.Any = js.native
   /**
-    * A selector which matches the close icon node in a tab.
-    */
-  /* CompleteClass */
-  override val closeIconSelector: String = js.native
-  /**
     * Create the class name for the tab icon.
     *
     * @param data - The data to use for the tab.
@@ -96,14 +91,5 @@ class Renderer ()
     * @returns A virtual element representing the tab label.
     */
   def renderLabel(data: IRenderData[_]): VirtualElement = js.native
-  /**
-    * Render the virtual element for a tab.
-    *
-    * @param data - The data to use for rendering the tab.
-    *
-    * @returns A virtual element representing the tab.
-    */
-  /* CompleteClass */
-  override def renderTab(data: IRenderData[js.Any]): VirtualElement = js.native
 }
 

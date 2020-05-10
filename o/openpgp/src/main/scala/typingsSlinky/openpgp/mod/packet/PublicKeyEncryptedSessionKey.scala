@@ -49,11 +49,11 @@ class PublicKeyEncryptedSessionKey () extends js.Object {
     *        input at position
     * @returns Object representation
     */
-  def read(input: scala.scalajs.js.typedarray.Uint8Array, position: Integer, len: Integer): PublicKeyEncryptedSessionKey = js.native
+  def read(input: js.typedarray.Uint8Array, position: Integer, len: Integer): PublicKeyEncryptedSessionKey = js.native
   /**
     * Create a string representation of a tag 1 packet
     * @returns The Uint8Array representation
     */
-  def write(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def write(): js.typedarray.Uint8Array = js.native
 }
 

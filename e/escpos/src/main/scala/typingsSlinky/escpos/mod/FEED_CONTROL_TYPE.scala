@@ -16,18 +16,16 @@ trait FEED_CONTROL_TYPE extends js.Object
 
 object FEED_CONTROL_TYPE {
   @scala.inline
-  def CR: typingsSlinky.escpos.escposStrings.CR = this.cast("CR")
+  def CR: typingsSlinky.escpos.escposStrings.CR = "CR".asInstanceOf[typingsSlinky.escpos.escposStrings.CR]
   @scala.inline
-  def FF: typingsSlinky.escpos.escposStrings.FF = this.cast("FF")
+  def FF: typingsSlinky.escpos.escposStrings.FF = "FF".asInstanceOf[typingsSlinky.escpos.escposStrings.FF]
   @scala.inline
-  def GLF: typingsSlinky.escpos.escposStrings.GLF = this.cast("GLF")
+  def GLF: typingsSlinky.escpos.escposStrings.GLF = "GLF".asInstanceOf[typingsSlinky.escpos.escposStrings.GLF]
   @scala.inline
-  def HT: typingsSlinky.escpos.escposStrings.HT = this.cast("HT")
+  def HT: typingsSlinky.escpos.escposStrings.HT = "HT".asInstanceOf[typingsSlinky.escpos.escposStrings.HT]
   @scala.inline
-  def LF: typingsSlinky.escpos.escposStrings.LF = this.cast("LF")
+  def LF: typingsSlinky.escpos.escposStrings.LF = "LF".asInstanceOf[typingsSlinky.escpos.escposStrings.LF]
   @scala.inline
-  def VT: typingsSlinky.escpos.escposStrings.VT = this.cast("VT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VT: typingsSlinky.escpos.escposStrings.VT = "VT".asInstanceOf[typingsSlinky.escpos.escposStrings.VT]
 }
 

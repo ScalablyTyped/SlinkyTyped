@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DOML2DeprecatedColorProperty extends js.Object {
-  var color: java.lang.String
+  var color: java.lang.String = js.native
 }
 
 object DOML2DeprecatedColorProperty {
   @scala.inline
   def apply(color: java.lang.String): DOML2DeprecatedColorProperty = {
     val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DOML2DeprecatedColorProperty]
   }
+  @scala.inline
+  implicit class DOML2DeprecatedColorPropertyOps[Self <: DOML2DeprecatedColorProperty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

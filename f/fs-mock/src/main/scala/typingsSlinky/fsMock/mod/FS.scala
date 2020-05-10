@@ -16,7 +16,6 @@ import typingsSlinky.node.fsMod.FSWatcher
 import typingsSlinky.node.fsMod.ReadStream
 import typingsSlinky.node.fsMod.Stats
 import typingsSlinky.node.fsMod.WriteStream
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -100,15 +99,15 @@ trait FS extends js.Object {
     mtime: Double,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException], Unit]
   ): Unit = js.native
-  def futimes(fd: Double, atime: Date, mtime: Date): Unit = js.native
+  def futimes(fd: Double, atime: js.Date, mtime: js.Date): Unit = js.native
   def futimes(
     fd: Double,
-    atime: Date,
-    mtime: Date,
+    atime: js.Date,
+    mtime: js.Date,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException], Unit]
   ): Unit = js.native
   def futimesSync(fd: Double, atime: Double, mtime: Double): Unit = js.native
-  def futimesSync(fd: Double, atime: Date, mtime: Date): Unit = js.native
+  def futimesSync(fd: Double, atime: js.Date, mtime: js.Date): Unit = js.native
   def lchmod(path: String, mode: String): Unit = js.native
   def lchmod(path: String, mode: String, callback: js.Function1[/* err */ js.UndefOr[ErrnoException], Unit]): Unit = js.native
   def lchmod(path: String, mode: Double): Unit = js.native
@@ -247,15 +246,15 @@ trait FS extends js.Object {
     mtime: Double,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException], Unit]
   ): Unit = js.native
-  def utimes(path: String, atime: Date, mtime: Date): Unit = js.native
+  def utimes(path: String, atime: js.Date, mtime: js.Date): Unit = js.native
   def utimes(
     path: String,
-    atime: Date,
-    mtime: Date,
+    atime: js.Date,
+    mtime: js.Date,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException], Unit]
   ): Unit = js.native
   def utimesSync(path: String, atime: Double, mtime: Double): Unit = js.native
-  def utimesSync(path: String, atime: Date, mtime: Date): Unit = js.native
+  def utimesSync(path: String, atime: js.Date, mtime: js.Date): Unit = js.native
   def watch(filename: String): FSWatcher = js.native
   def watch(filename: String, listener: js.Function2[/* event */ String, /* filename */ String, _]): FSWatcher = js.native
   def watch(filename: String, options: AnonPersistent): FSWatcher = js.native

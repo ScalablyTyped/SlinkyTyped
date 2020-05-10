@@ -27,40 +27,38 @@ trait uVolume extends js.Object
 
 object uVolume {
   @scala.inline
-  def Tbs: typingsSlinky.convertUnits.convertUnitsStrings.Tbs = this.cast("Tbs")
+  def Tbs: typingsSlinky.convertUnits.convertUnitsStrings.Tbs = "Tbs".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.Tbs]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cm3: typingsSlinky.convertUnits.convertUnitsStrings.cm3 = "cm3".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.cm3]
   @scala.inline
-  def cm3: typingsSlinky.convertUnits.convertUnitsStrings.cm3 = this.cast("cm3")
+  def cup: typingsSlinky.convertUnits.convertUnitsStrings.cup = "cup".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.cup]
   @scala.inline
-  def cup: typingsSlinky.convertUnits.convertUnitsStrings.cup = this.cast("cup")
+  def `fl-oz`: typingsSlinky.convertUnits.convertUnitsStrings.`fl-oz` = "fl-oz".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.`fl-oz`]
   @scala.inline
-  def `fl-oz`: typingsSlinky.convertUnits.convertUnitsStrings.`fl-oz` = this.cast("fl-oz")
+  def ft3: typingsSlinky.convertUnits.convertUnitsStrings.ft3 = "ft3".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.ft3]
   @scala.inline
-  def ft3: typingsSlinky.convertUnits.convertUnitsStrings.ft3 = this.cast("ft3")
+  def gal: typingsSlinky.convertUnits.convertUnitsStrings.gal = "gal".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.gal]
   @scala.inline
-  def gal: typingsSlinky.convertUnits.convertUnitsStrings.gal = this.cast("gal")
+  def in3: typingsSlinky.convertUnits.convertUnitsStrings.in3 = "in3".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.in3]
   @scala.inline
-  def in3: typingsSlinky.convertUnits.convertUnitsStrings.in3 = this.cast("in3")
+  def kl: typingsSlinky.convertUnits.convertUnitsStrings.kl = "kl".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kl]
   @scala.inline
-  def kl: typingsSlinky.convertUnits.convertUnitsStrings.kl = this.cast("kl")
+  def km3: typingsSlinky.convertUnits.convertUnitsStrings.km3 = "km3".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.km3]
   @scala.inline
-  def km3: typingsSlinky.convertUnits.convertUnitsStrings.km3 = this.cast("km3")
+  def l: typingsSlinky.convertUnits.convertUnitsStrings.l = "l".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.l]
   @scala.inline
-  def l: typingsSlinky.convertUnits.convertUnitsStrings.l = this.cast("l")
+  def m3: typingsSlinky.convertUnits.convertUnitsStrings.m3 = "m3".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.m3]
   @scala.inline
-  def m3: typingsSlinky.convertUnits.convertUnitsStrings.m3 = this.cast("m3")
+  def ml: typingsSlinky.convertUnits.convertUnitsStrings.ml = "ml".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.ml]
   @scala.inline
-  def ml: typingsSlinky.convertUnits.convertUnitsStrings.ml = this.cast("ml")
+  def mm3: typingsSlinky.convertUnits.convertUnitsStrings.mm3 = "mm3".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.mm3]
   @scala.inline
-  def mm3: typingsSlinky.convertUnits.convertUnitsStrings.mm3 = this.cast("mm3")
+  def pnt: typingsSlinky.convertUnits.convertUnitsStrings.pnt = "pnt".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.pnt]
   @scala.inline
-  def pnt: typingsSlinky.convertUnits.convertUnitsStrings.pnt = this.cast("pnt")
+  def qt: typingsSlinky.convertUnits.convertUnitsStrings.qt = "qt".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.qt]
   @scala.inline
-  def qt: typingsSlinky.convertUnits.convertUnitsStrings.qt = this.cast("qt")
+  def tsp: typingsSlinky.convertUnits.convertUnitsStrings.tsp = "tsp".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.tsp]
   @scala.inline
-  def tsp: typingsSlinky.convertUnits.convertUnitsStrings.tsp = this.cast("tsp")
-  @scala.inline
-  def yd3: typingsSlinky.convertUnits.convertUnitsStrings.yd3 = this.cast("yd3")
+  def yd3: typingsSlinky.convertUnits.convertUnitsStrings.yd3 = "yd3".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.yd3]
 }
 

@@ -4,43 +4,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AffineTransform extends js.Object {
   /** The X coordinate scaling element. */
-  var scaleX: js.UndefOr[Double] = js.undefined
+  var scaleX: js.UndefOr[Double] = js.native
   /** The Y coordinate scaling element. */
-  var scaleY: js.UndefOr[Double] = js.undefined
+  var scaleY: js.UndefOr[Double] = js.native
   /** The X coordinate shearing element. */
-  var shearX: js.UndefOr[Double] = js.undefined
+  var shearX: js.UndefOr[Double] = js.native
   /** The Y coordinate shearing element. */
-  var shearY: js.UndefOr[Double] = js.undefined
+  var shearY: js.UndefOr[Double] = js.native
   /** The X coordinate translation element. */
-  var translateX: js.UndefOr[Double] = js.undefined
+  var translateX: js.UndefOr[Double] = js.native
   /** The Y coordinate translation element. */
-  var translateY: js.UndefOr[Double] = js.undefined
+  var translateY: js.UndefOr[Double] = js.native
   /** The units for translate elements. */
-  var unit: js.UndefOr[String] = js.undefined
+  var unit: js.UndefOr[String] = js.native
 }
 
 object AffineTransform {
   @scala.inline
-  def apply(
-    scaleX: Int | Double = null,
-    scaleY: Int | Double = null,
-    shearX: Int | Double = null,
-    shearY: Int | Double = null,
-    translateX: Int | Double = null,
-    translateY: Int | Double = null,
-    unit: String = null
-  ): AffineTransform = {
+  def apply(): AffineTransform = {
     val __obj = js.Dynamic.literal()
-    if (scaleX != null) __obj.updateDynamic("scaleX")(scaleX.asInstanceOf[js.Any])
-    if (scaleY != null) __obj.updateDynamic("scaleY")(scaleY.asInstanceOf[js.Any])
-    if (shearX != null) __obj.updateDynamic("shearX")(shearX.asInstanceOf[js.Any])
-    if (shearY != null) __obj.updateDynamic("shearY")(shearY.asInstanceOf[js.Any])
-    if (translateX != null) __obj.updateDynamic("translateX")(translateX.asInstanceOf[js.Any])
-    if (translateY != null) __obj.updateDynamic("translateY")(translateY.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[AffineTransform]
   }
+  @scala.inline
+  implicit class AffineTransformOps[Self <: AffineTransform] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScaleX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShearX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shearX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShearX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shearX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShearY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shearY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShearY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shearY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslateX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslateX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslateY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslateY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

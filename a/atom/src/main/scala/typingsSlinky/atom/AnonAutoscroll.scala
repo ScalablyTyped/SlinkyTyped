@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAutoscroll extends js.Object {
-  var autoscroll: js.UndefOr[Boolean] = js.undefined
+  var autoscroll: js.UndefOr[Boolean] = js.native
 }
 
 object AnonAutoscroll {
   @scala.inline
-  def apply(autoscroll: js.UndefOr[Boolean] = js.undefined): AnonAutoscroll = {
+  def apply(): AnonAutoscroll = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoscroll)) __obj.updateDynamic("autoscroll")(autoscroll.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAutoscroll]
   }
+  @scala.inline
+  implicit class AnonAutoscrollOps[Self <: AnonAutoscroll] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoscroll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoscroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscroll")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

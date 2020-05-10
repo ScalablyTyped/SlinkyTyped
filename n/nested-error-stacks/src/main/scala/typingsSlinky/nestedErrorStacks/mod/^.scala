@@ -10,9 +10,5 @@ import scala.scalajs.js.annotation._
 class ^ () extends Error {
   def this(message: js.Any) = this()
   def this(message: js.Any, nested: js.Error) = this()
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
 }
 

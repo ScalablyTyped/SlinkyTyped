@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotDemaParamsOptions extends js.Object {
   /**
     * (Highstock) The point index which indicator calculations will base. For
@@ -14,22 +15,52 @@ trait PlotDemaParamsOptions extends js.Object {
     * index is set to 3 which means that the ema indicator will be calculated
     * using Close values.
     */
-  var index: js.UndefOr[Double] = js.undefined
+  var index: js.UndefOr[Double] = js.native
   /**
     * (Highstock) The base period for indicator calculations. This is the
     * number of data points which are taken into account for the indicator
     * calculations.
     */
-  var period: js.UndefOr[Double] = js.undefined
+  var period: js.UndefOr[Double] = js.native
 }
 
 object PlotDemaParamsOptions {
   @scala.inline
-  def apply(index: Int | Double = null, period: Int | Double = null): PlotDemaParamsOptions = {
+  def apply(): PlotDemaParamsOptions = {
     val __obj = js.Dynamic.literal()
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (period != null) __obj.updateDynamic("period")(period.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotDemaParamsOptions]
   }
+  @scala.inline
+  implicit class PlotDemaParamsOptionsOps[Self <: PlotDemaParamsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -34,20 +34,77 @@ trait SchemaLeaderboardScoreRank extends js.Object {
 
 object SchemaLeaderboardScoreRank {
   @scala.inline
-  def apply(
-    formattedNumScores: String = null,
-    formattedRank: String = null,
-    kind: String = null,
-    numScores: String = null,
-    rank: String = null
-  ): SchemaLeaderboardScoreRank = {
+  def apply(): SchemaLeaderboardScoreRank = {
     val __obj = js.Dynamic.literal()
-    if (formattedNumScores != null) __obj.updateDynamic("formattedNumScores")(formattedNumScores.asInstanceOf[js.Any])
-    if (formattedRank != null) __obj.updateDynamic("formattedRank")(formattedRank.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (numScores != null) __obj.updateDynamic("numScores")(numScores.asInstanceOf[js.Any])
-    if (rank != null) __obj.updateDynamic("rank")(rank.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLeaderboardScoreRank]
   }
+  @scala.inline
+  implicit class SchemaLeaderboardScoreRankOps[Self <: SchemaLeaderboardScoreRank] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormattedNumScores(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedNumScores")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormattedNumScores: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedNumScores")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormattedRank(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedRank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormattedRank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedRank")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumScores(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numScores")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumScores: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numScores")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRank(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

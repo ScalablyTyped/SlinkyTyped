@@ -7,74 +7,145 @@ import scala.scalajs.js.annotation._
 /**
   * When no match in the mappings
   */
+@js.native
 trait ConceptMapGroupUnmapped extends BackboneElement {
   /**
     * Contains extended information for property 'code'.
     */
-  var _code: js.UndefOr[Element] = js.undefined
+  var _code: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'display'.
     */
-  var _display: js.UndefOr[Element] = js.undefined
+  var _display: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'mode'.
     */
-  var _mode: js.UndefOr[Element] = js.undefined
+  var _mode: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'url'.
     */
-  var _url: js.UndefOr[Element] = js.undefined
+  var _url: js.UndefOr[Element] = js.native
   /**
     * Fixed code when mode = fixed
     */
-  var code: js.UndefOr[typingsSlinky.fhir.fhir.code] = js.undefined
+  var code: js.UndefOr[typingsSlinky.fhir.fhir.code] = js.native
   /**
     * Display for the code
     */
-  var display: js.UndefOr[String] = js.undefined
+  var display: js.UndefOr[String] = js.native
   /**
     * provided | fixed | other-map
     */
-  var mode: code
+  var mode: code = js.native
   /**
     * Canonical URL for other concept map
     */
-  var url: js.UndefOr[uri] = js.undefined
+  var url: js.UndefOr[uri] = js.native
 }
 
 object ConceptMapGroupUnmapped {
   @scala.inline
-  def apply(
-    mode: code,
-    _code: Element = null,
-    _display: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _mode: Element = null,
-    _url: Element = null,
-    code: code = null,
-    display: String = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null,
-    url: uri = null
-  ): ConceptMapGroupUnmapped = {
+  def apply(mode: code): ConceptMapGroupUnmapped = {
     val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any])
-    if (_code != null) __obj.updateDynamic("_code")(_code.asInstanceOf[js.Any])
-    if (_display != null) __obj.updateDynamic("_display")(_display.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_mode != null) __obj.updateDynamic("_mode")(_mode.asInstanceOf[js.Any])
-    if (_url != null) __obj.updateDynamic("_url")(_url.asInstanceOf[js.Any])
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConceptMapGroupUnmapped]
   }
+  @scala.inline
+  implicit class ConceptMapGroupUnmappedOps[Self <: ConceptMapGroupUnmapped] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMode(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_code(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_code: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_display(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_display: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_mode(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_mode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_url(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCode(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

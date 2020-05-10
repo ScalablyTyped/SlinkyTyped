@@ -1,11 +1,9 @@
 package typingsSlinky.grommet.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.AnonLeft
 import typingsSlinky.grommet.AnonMultiple
 import typingsSlinky.grommet.dropMod.DropProps
@@ -24,82 +22,106 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Select
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.mod.Select] {
+object Select {
   @JSImport("grommet", "Select")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id, multiple, name, open */
-  def apply(
-    options: js.Array[String | Boolean | Double | ReactElement | js.Object],
-    a11yTitle: A11yTitleType = null,
-    alignSelf: AlignSelfType = null,
-    closeOnChange: js.UndefOr[Boolean] = js.undefined,
-    disabled: Boolean | (js.Array[Double | String | js.Object]) = null,
-    disabledKey: String | (js.Function1[/* repeated */ js.Any, _]) = null,
-    dropAlign: AnonLeft = null,
-    dropHeight: xsmall | small | medium | large | xlarge | String = null,
-    dropProps: DropProps = null,
-    dropTarget: js.Object = null,
-    emptySearchMessage: String = null,
-    focusIndicator: js.UndefOr[Boolean] = js.undefined,
-    gridArea: GridAreaType = null,
-    icon: Boolean | (js.Function1[/* repeated */ js.Any, _]) | TagMod[Any] = null,
-    labelKey: String | (js.Function1[/* repeated */ js.Any, _]) = null,
-    margin: MarginType = null,
-    messages: AnonMultiple = null,
-    onChange: /* repeated */ js.Any => Unit = null,
-    onClose: /* repeated */ js.Any => _ = null,
-    onMore: /* repeated */ js.Any => _ = null,
-    onOpen: /* repeated */ js.Any => _ = null,
-    onSearch: /* search */ String => Unit = null,
-    placeholder: PlaceHolderType = null,
-    plain: js.UndefOr[Boolean] = js.undefined,
-    replace: js.UndefOr[Boolean] = js.undefined,
-    searchPlaceholder: String = null,
-    selected: Double | js.Array[Double] = null,
-    size: small | medium | large | xlarge | String = null,
-    value: String | ReactElement | js.Object | (js.Array[String | js.Object]) = null,
-    valueKey: String | (js.Function1[/* repeated */ js.Any, _]) = null,
-    valueLabel: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.grommet.mod.Select] = {
-    val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
-    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnChange)) __obj.updateDynamic("closeOnChange")(closeOnChange.asInstanceOf[js.Any])
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (disabledKey != null) __obj.updateDynamic("disabledKey")(disabledKey.asInstanceOf[js.Any])
-    if (dropAlign != null) __obj.updateDynamic("dropAlign")(dropAlign.asInstanceOf[js.Any])
-    if (dropHeight != null) __obj.updateDynamic("dropHeight")(dropHeight.asInstanceOf[js.Any])
-    if (dropProps != null) __obj.updateDynamic("dropProps")(dropProps.asInstanceOf[js.Any])
-    if (dropTarget != null) __obj.updateDynamic("dropTarget")(dropTarget.asInstanceOf[js.Any])
-    if (emptySearchMessage != null) __obj.updateDynamic("emptySearchMessage")(emptySearchMessage.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusIndicator)) __obj.updateDynamic("focusIndicator")(focusIndicator.asInstanceOf[js.Any])
-    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (labelKey != null) __obj.updateDynamic("labelKey")(labelKey.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
-    if (onMore != null) __obj.updateDynamic("onMore")(js.Any.fromFunction1(onMore))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction1(onOpen))
-    if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction1(onSearch))
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (!js.isUndefined(plain)) __obj.updateDynamic("plain")(plain.asInstanceOf[js.Any])
-    if (!js.isUndefined(replace)) __obj.updateDynamic("replace")(replace.asInstanceOf[js.Any])
-    if (searchPlaceholder != null) __obj.updateDynamic("searchPlaceholder")(searchPlaceholder.asInstanceOf[js.Any])
-    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueKey != null) __obj.updateDynamic("valueKey")(valueKey.asInstanceOf[js.Any])
-    if (valueLabel != null) __obj.updateDynamic("valueLabel")(valueLabel.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.grommet.mod.Select] {
+    @scala.inline
+    def a11yTitle(value: A11yTitleType): this.type = set("a11yTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnChange(value: Boolean): this.type = set("closeOnChange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean | (js.Array[Double | String | js.Object])): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledKeyFunction1(value: /* repeated */ js.Any => _): this.type = set("disabledKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def disabledKey(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("disabledKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropAlign(value: AnonLeft): this.type = set("dropAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropHeight(value: xsmall | small | medium | large | xlarge | String): this.type = set("dropHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropProps(value: DropProps): this.type = set("dropProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropTarget(value: js.Object): this.type = set("dropTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptySearchMessage(value: String): this.type = set("emptySearchMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusIndicator(value: Boolean): this.type = set("focusIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridArea(value: GridAreaType): this.type = set("gridArea", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconFunction1(value: /* repeated */ js.Any => _): this.type = set("icon", js.Any.fromFunction1(value))
+    @scala.inline
+    def icon(value: Boolean | (js.Function1[/* repeated */ js.Any, _]) | TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelKeyFunction1(value: /* repeated */ js.Any => _): this.type = set("labelKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelKey(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("labelKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: MarginType): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def messages(value: AnonMultiple): this.type = set("messages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* repeated */ js.Any => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClose(value: /* repeated */ js.Any => _): this.type = set("onClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMore(value: /* repeated */ js.Any => _): this.type = set("onMore", js.Any.fromFunction1(value))
+    @scala.inline
+    def onOpen(value: /* repeated */ js.Any => _): this.type = set("onOpen", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSearch(value: /* search */ String => Unit): this.type = set("onSearch", js.Any.fromFunction1(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: PlaceHolderType): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def plain(value: Boolean): this.type = set("plain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def replace(value: Boolean): this.type = set("replace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def searchPlaceholder(value: String): this.type = set("searchPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selected(value: Double | js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: small | medium | large | xlarge | String): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueReactElement(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String | ReactElement | js.Object | (js.Array[String | js.Object])): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueKeyFunction1(value: /* repeated */ js.Any => _): this.type = set("valueKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def valueKey(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("valueKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueLabelReactElement(value: ReactElement): this.type = set("valueLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueLabel(value: TagMod[Any]): this.type = set("valueLabel", value.asInstanceOf[js.Any])
   }
-  type Props = SelectProps
+  
+  def withProps(p: SelectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(options: js.Array[String | Boolean | Double | ReactElement | js.Object]): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SelectProps]))
+  }
 }
 

@@ -9,13 +9,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IParseOptions extends js.Object {
-  var allowDots: js.UndefOr[Boolean] = js.undefined
-  var allowPrototypes: js.UndefOr[Boolean] = js.undefined
-  var arrayLimit: js.UndefOr[Double] = js.undefined
-  var charset: js.UndefOr[`utf-8` | `iso-8859-1`] = js.undefined
-  var charsetSentinel: js.UndefOr[Boolean] = js.undefined
-  var comma: js.UndefOr[Boolean] = js.undefined
+  var allowDots: js.UndefOr[Boolean] = js.native
+  var allowPrototypes: js.UndefOr[Boolean] = js.native
+  var arrayLimit: js.UndefOr[Double] = js.native
+  var charset: js.UndefOr[`utf-8` | `iso-8859-1`] = js.native
+  var charsetSentinel: js.UndefOr[Boolean] = js.native
+  var comma: js.UndefOr[Boolean] = js.native
   var decoder: js.UndefOr[
     js.Function4[
       /* str */ String, 
@@ -24,53 +25,218 @@ trait IParseOptions extends js.Object {
       /* type */ key | value, 
       _
     ]
-  ] = js.undefined
-  var delimiter: js.UndefOr[String | js.RegExp] = js.undefined
-  var depth: js.UndefOr[Double | `false`] = js.undefined
-  var ignoreQueryPrefix: js.UndefOr[Boolean] = js.undefined
-  var interpretNumericEntities: js.UndefOr[Boolean] = js.undefined
-  var parameterLimit: js.UndefOr[Double] = js.undefined
-  var parseArrays: js.UndefOr[Boolean] = js.undefined
-  var plainObjects: js.UndefOr[Boolean] = js.undefined
-  var strictNullHandling: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var delimiter: js.UndefOr[String | js.RegExp] = js.native
+  var depth: js.UndefOr[Double | `false`] = js.native
+  var ignoreQueryPrefix: js.UndefOr[Boolean] = js.native
+  var interpretNumericEntities: js.UndefOr[Boolean] = js.native
+  var parameterLimit: js.UndefOr[Double] = js.native
+  var parseArrays: js.UndefOr[Boolean] = js.native
+  var plainObjects: js.UndefOr[Boolean] = js.native
+  var strictNullHandling: js.UndefOr[Boolean] = js.native
 }
 
 object IParseOptions {
   @scala.inline
-  def apply(
-    allowDots: js.UndefOr[Boolean] = js.undefined,
-    allowPrototypes: js.UndefOr[Boolean] = js.undefined,
-    arrayLimit: Int | Double = null,
-    charset: `utf-8` | `iso-8859-1` = null,
-    charsetSentinel: js.UndefOr[Boolean] = js.undefined,
-    comma: js.UndefOr[Boolean] = js.undefined,
-    decoder: (/* str */ String, /* defaultDecoder */ defaultDecoder, /* charset */ String, /* type */ key | value) => _ = null,
-    delimiter: String | js.RegExp = null,
-    depth: Double | `false` = null,
-    ignoreQueryPrefix: js.UndefOr[Boolean] = js.undefined,
-    interpretNumericEntities: js.UndefOr[Boolean] = js.undefined,
-    parameterLimit: Int | Double = null,
-    parseArrays: js.UndefOr[Boolean] = js.undefined,
-    plainObjects: js.UndefOr[Boolean] = js.undefined,
-    strictNullHandling: js.UndefOr[Boolean] = js.undefined
-  ): IParseOptions = {
+  def apply(): IParseOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowDots)) __obj.updateDynamic("allowDots")(allowDots.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowPrototypes)) __obj.updateDynamic("allowPrototypes")(allowPrototypes.asInstanceOf[js.Any])
-    if (arrayLimit != null) __obj.updateDynamic("arrayLimit")(arrayLimit.asInstanceOf[js.Any])
-    if (charset != null) __obj.updateDynamic("charset")(charset.asInstanceOf[js.Any])
-    if (!js.isUndefined(charsetSentinel)) __obj.updateDynamic("charsetSentinel")(charsetSentinel.asInstanceOf[js.Any])
-    if (!js.isUndefined(comma)) __obj.updateDynamic("comma")(comma.asInstanceOf[js.Any])
-    if (decoder != null) __obj.updateDynamic("decoder")(js.Any.fromFunction4(decoder))
-    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
-    if (depth != null) __obj.updateDynamic("depth")(depth.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreQueryPrefix)) __obj.updateDynamic("ignoreQueryPrefix")(ignoreQueryPrefix.asInstanceOf[js.Any])
-    if (!js.isUndefined(interpretNumericEntities)) __obj.updateDynamic("interpretNumericEntities")(interpretNumericEntities.asInstanceOf[js.Any])
-    if (parameterLimit != null) __obj.updateDynamic("parameterLimit")(parameterLimit.asInstanceOf[js.Any])
-    if (!js.isUndefined(parseArrays)) __obj.updateDynamic("parseArrays")(parseArrays.asInstanceOf[js.Any])
-    if (!js.isUndefined(plainObjects)) __obj.updateDynamic("plainObjects")(plainObjects.asInstanceOf[js.Any])
-    if (!js.isUndefined(strictNullHandling)) __obj.updateDynamic("strictNullHandling")(strictNullHandling.asInstanceOf[js.Any])
     __obj.asInstanceOf[IParseOptions]
   }
+  @scala.inline
+  implicit class IParseOptionsOps[Self <: IParseOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowDots(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowPrototypes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPrototypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowPrototypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPrototypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArrayLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCharset(value: `utf-8` | `iso-8859-1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCharsetSentinel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charsetSentinel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharsetSentinel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charsetSentinel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComma(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comma")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComma: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comma")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecoder(
+      value: (/* str */ String, /* defaultDecoder */ defaultDecoder, /* charset */ String, /* type */ key | value) => _
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decoder")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutDecoder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decoder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelimiterRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelimiter(value: String | js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDepth(value: Double | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreQueryPrefix(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreQueryPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreQueryPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreQueryPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterpretNumericEntities(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interpretNumericEntities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterpretNumericEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interpretNumericEntities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParseArrays(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseArrays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParseArrays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseArrays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlainObjects(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plainObjects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlainObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plainObjects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrictNullHandling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictNullHandling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrictNullHandling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictNullHandling")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

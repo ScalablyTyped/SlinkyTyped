@@ -207,7 +207,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_audioend(
     `type`: audioend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_audiostart(`type`: audiostart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -221,7 +221,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_audiostart(
     `type`: audiostart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_end(`type`: end, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -235,7 +235,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_end(
     `type`: end,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -249,7 +249,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_nomatch(
@@ -266,7 +266,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_nomatch(
     `type`: nomatch,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechRecognitionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_result(
@@ -283,7 +283,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_result(
     `type`: result,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechRecognitionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_soundend(`type`: soundend, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -297,7 +297,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_soundend(
     `type`: soundend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_soundstart(`type`: soundstart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -311,7 +311,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_soundstart(
     `type`: soundstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_speechend(`type`: speechend, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -325,7 +325,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_speechend(
     `type`: speechend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_speechstart(`type`: speechstart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -339,7 +339,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_speechstart(
     `type`: speechstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_start(`type`: start, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -353,7 +353,7 @@ trait SpeechRecognition extends EventTarget {
   def removeEventListener_start(
     `type`: start,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def start(): Unit = js.native
   def stop(): Unit = js.native

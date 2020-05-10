@@ -22,14 +22,41 @@ trait GetUserAttributeVerificationCodeRequest extends js.Object {
 
 object GetUserAttributeVerificationCodeRequest {
   @scala.inline
-  def apply(
-    AccessToken: TokenModelType,
-    AttributeName: AttributeNameType,
-    ClientMetadata: ClientMetadataType = null
-  ): GetUserAttributeVerificationCodeRequest = {
+  def apply(AccessToken: TokenModelType, AttributeName: AttributeNameType): GetUserAttributeVerificationCodeRequest = {
     val __obj = js.Dynamic.literal(AccessToken = AccessToken.asInstanceOf[js.Any], AttributeName = AttributeName.asInstanceOf[js.Any])
-    if (ClientMetadata != null) __obj.updateDynamic("ClientMetadata")(ClientMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetUserAttributeVerificationCodeRequest]
   }
+  @scala.inline
+  implicit class GetUserAttributeVerificationCodeRequestOps[Self <: GetUserAttributeVerificationCodeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessToken(value: TokenModelType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeName(value: AttributeNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientMetadata(value: ClientMetadataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

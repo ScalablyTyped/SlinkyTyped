@@ -16,18 +16,16 @@ trait RequestCache extends js.Object
 
 object RequestCache {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.std.stdStrings.default = "default".asInstanceOf[typingsSlinky.std.stdStrings.default]
   @scala.inline
-  def default: typingsSlinky.std.stdStrings.default = this.cast("default")
+  def `force-cache`: typingsSlinky.std.stdStrings.`force-cache` = "force-cache".asInstanceOf[typingsSlinky.std.stdStrings.`force-cache`]
   @scala.inline
-  def `force-cache`: typingsSlinky.std.stdStrings.`force-cache` = this.cast("force-cache")
+  def `no-cache`: typingsSlinky.std.stdStrings.`no-cache` = "no-cache".asInstanceOf[typingsSlinky.std.stdStrings.`no-cache`]
   @scala.inline
-  def `no-cache`: typingsSlinky.std.stdStrings.`no-cache` = this.cast("no-cache")
+  def `no-store`: typingsSlinky.std.stdStrings.`no-store` = "no-store".asInstanceOf[typingsSlinky.std.stdStrings.`no-store`]
   @scala.inline
-  def `no-store`: typingsSlinky.std.stdStrings.`no-store` = this.cast("no-store")
+  def `only-if-cached`: typingsSlinky.std.stdStrings.`only-if-cached` = "only-if-cached".asInstanceOf[typingsSlinky.std.stdStrings.`only-if-cached`]
   @scala.inline
-  def `only-if-cached`: typingsSlinky.std.stdStrings.`only-if-cached` = this.cast("only-if-cached")
-  @scala.inline
-  def reload: typingsSlinky.std.stdStrings.reload = this.cast("reload")
+  def reload: typingsSlinky.std.stdStrings.reload = "reload".asInstanceOf[typingsSlinky.std.stdStrings.reload]
 }
 

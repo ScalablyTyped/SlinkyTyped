@@ -18,10 +18,35 @@ trait GetFunctionRequest extends js.Object {
 
 object GetFunctionRequest {
   @scala.inline
-  def apply(FunctionName: NamespacedFunctionName, Qualifier: Qualifier = null): GetFunctionRequest = {
+  def apply(FunctionName: NamespacedFunctionName): GetFunctionRequest = {
     val __obj = js.Dynamic.literal(FunctionName = FunctionName.asInstanceOf[js.Any])
-    if (Qualifier != null) __obj.updateDynamic("Qualifier")(Qualifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetFunctionRequest]
   }
+  @scala.inline
+  implicit class GetFunctionRequestOps[Self <: GetFunctionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFunctionName(value: NamespacedFunctionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQualifier(value: Qualifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

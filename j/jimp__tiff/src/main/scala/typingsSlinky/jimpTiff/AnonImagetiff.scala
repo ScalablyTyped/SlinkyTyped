@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonImagetiff extends js.Object {
   @JSName("image/tiff")
-  var imageSlashtiff: js.Array[String]
+  var imageSlashtiff: js.Array[String] = js.native
 }
 
 object AnonImagetiff {
@@ -16,5 +17,19 @@ object AnonImagetiff {
     __obj.updateDynamic("image/tiff")(imageSlashtiff.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonImagetiff]
   }
+  @scala.inline
+  implicit class AnonImagetiffOps[Self <: AnonImagetiff] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImageSlashtiff(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image/tiff")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

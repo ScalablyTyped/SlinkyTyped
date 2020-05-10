@@ -5,66 +5,164 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AskmethatRatingOptions extends js.Object {
   /**
     * Color when the rating is not hovered
     */
-  var backgroundColor: js.UndefOr[String] = js.undefined
+  var backgroundColor: js.UndefOr[String] = js.native
   /**
     * Class to display as rating (FontAwesome or Rating for exemple)
     */
-  var fontClass: js.UndefOr[String] = js.undefined
-  var hoverColor: js.UndefOr[String] = js.undefined
+  var fontClass: js.UndefOr[String] = js.native
+  var hoverColor: js.UndefOr[String] = js.native
   /**
     * Input name (Default is AskmethatRating)
     */
-  var inputName: js.UndefOr[String] = js.undefined
+  var inputName: js.UndefOr[String] = js.native
   /**
     * Maximum rating that the plugin display
     */
-  var maxRating: js.UndefOr[Double] = js.undefined
+  var maxRating: js.UndefOr[Double] = js.native
   /**
     * Mininmum rating that the user can set
     */
-  var minRating: js.UndefOr[Double] = js.undefined
+  var minRating: js.UndefOr[Double] = js.native
   /**
     * options if popover is set. Put element as readonly
     */
-  var popover: js.UndefOr[AskmethatRatingPopoverOptions] = js.undefined
+  var popover: js.UndefOr[AskmethatRatingPopoverOptions] = js.native
   /**
     * Set the rating to readonly
     */
-  var readonly: js.UndefOr[Boolean] = js.undefined
+  var readonly: js.UndefOr[Boolean] = js.native
   /**
     * The stepping for the rating
     */
-  var step: js.UndefOr[AskmethatRatingSteps] = js.undefined
+  var step: js.UndefOr[AskmethatRatingSteps] = js.native
 }
 
 object AskmethatRatingOptions {
   @scala.inline
-  def apply(
-    backgroundColor: String = null,
-    fontClass: String = null,
-    hoverColor: String = null,
-    inputName: String = null,
-    maxRating: Int | Double = null,
-    minRating: Int | Double = null,
-    popover: AskmethatRatingPopoverOptions = null,
-    readonly: js.UndefOr[Boolean] = js.undefined,
-    step: AskmethatRatingSteps = null
-  ): AskmethatRatingOptions = {
+  def apply(): AskmethatRatingOptions = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (fontClass != null) __obj.updateDynamic("fontClass")(fontClass.asInstanceOf[js.Any])
-    if (hoverColor != null) __obj.updateDynamic("hoverColor")(hoverColor.asInstanceOf[js.Any])
-    if (inputName != null) __obj.updateDynamic("inputName")(inputName.asInstanceOf[js.Any])
-    if (maxRating != null) __obj.updateDynamic("maxRating")(maxRating.asInstanceOf[js.Any])
-    if (minRating != null) __obj.updateDynamic("minRating")(minRating.asInstanceOf[js.Any])
-    if (popover != null) __obj.updateDynamic("popover")(popover.asInstanceOf[js.Any])
-    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
     __obj.asInstanceOf[AskmethatRatingOptions]
   }
+  @scala.inline
+  implicit class AskmethatRatingOptionsOps[Self <: AskmethatRatingOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopover(value: AskmethatRatingPopoverOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadonly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadonly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: AskmethatRatingSteps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

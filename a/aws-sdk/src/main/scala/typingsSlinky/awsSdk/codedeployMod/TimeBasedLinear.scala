@@ -18,11 +18,41 @@ trait TimeBasedLinear extends js.Object {
 
 object TimeBasedLinear {
   @scala.inline
-  def apply(linearInterval: Int | Double = null, linearPercentage: Int | Double = null): TimeBasedLinear = {
+  def apply(): TimeBasedLinear = {
     val __obj = js.Dynamic.literal()
-    if (linearInterval != null) __obj.updateDynamic("linearInterval")(linearInterval.asInstanceOf[js.Any])
-    if (linearPercentage != null) __obj.updateDynamic("linearPercentage")(linearPercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeBasedLinear]
   }
+  @scala.inline
+  implicit class TimeBasedLinearOps[Self <: TimeBasedLinear] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLinearInterval(value: WaitTimeInMins): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinearInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinearPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinearPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearPercentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

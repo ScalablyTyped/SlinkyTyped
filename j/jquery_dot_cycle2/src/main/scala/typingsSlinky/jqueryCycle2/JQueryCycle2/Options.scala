@@ -4,144 +4,572 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var allowWrap: js.UndefOr[Boolean] = js.undefined
-  var autoHeight: js.UndefOr[js.Any] = js.undefined
+  var allowWrap: js.UndefOr[Boolean] = js.native
+  var autoHeight: js.UndefOr[js.Any] = js.native
    // number or string
-  var autoSelector: js.UndefOr[String] = js.undefined
-  var caption: js.UndefOr[String] = js.undefined
-  var captionTemplate: js.UndefOr[String] = js.undefined
-  var continueAuto: js.UndefOr[Boolean] = js.undefined
-  var delay: js.UndefOr[Double] = js.undefined
-  var disabledClass: js.UndefOr[String] = js.undefined
-  var easing: js.UndefOr[String] = js.undefined
-  var fx: js.UndefOr[String] = js.undefined
-  var hideNonActive: js.UndefOr[Boolean] = js.undefined
-  var loader: js.UndefOr[js.Any] = js.undefined
+  var autoSelector: js.UndefOr[String] = js.native
+  var caption: js.UndefOr[String] = js.native
+  var captionTemplate: js.UndefOr[String] = js.native
+  var continueAuto: js.UndefOr[Boolean] = js.native
+  var delay: js.UndefOr[Double] = js.native
+  var disabledClass: js.UndefOr[String] = js.native
+  var easing: js.UndefOr[String] = js.native
+  var fx: js.UndefOr[String] = js.native
+  var hideNonActive: js.UndefOr[Boolean] = js.native
+  var loader: js.UndefOr[js.Any] = js.native
    // boolean or 'wait'
-  var log: js.UndefOr[Boolean] = js.undefined
-  var loop: js.UndefOr[Double] = js.undefined
-  var manualSpeed: js.UndefOr[Double] = js.undefined
-  var manualTrump: js.UndefOr[Boolean] = js.undefined
-  var next: js.UndefOr[String] = js.undefined
-  var nextEvent: js.UndefOr[String] = js.undefined
-  var overlay: js.UndefOr[String] = js.undefined
-  var overlayTemplate: js.UndefOr[String] = js.undefined
-  var pager: js.UndefOr[String] = js.undefined
-  var pagerActivateClass: js.UndefOr[String] = js.undefined
-  var pagerEvent: js.UndefOr[String] = js.undefined
-  var pagerTemplate: js.UndefOr[String] = js.undefined
-  var pauseOnHover: js.UndefOr[js.Any] = js.undefined
+  var log: js.UndefOr[Boolean] = js.native
+  var loop: js.UndefOr[Double] = js.native
+  var manualSpeed: js.UndefOr[Double] = js.native
+  var manualTrump: js.UndefOr[Boolean] = js.native
+  var next: js.UndefOr[String] = js.native
+  var nextEvent: js.UndefOr[String] = js.native
+  var overlay: js.UndefOr[String] = js.native
+  var overlayTemplate: js.UndefOr[String] = js.native
+  var pager: js.UndefOr[String] = js.native
+  var pagerActivateClass: js.UndefOr[String] = js.native
+  var pagerEvent: js.UndefOr[String] = js.native
+  var pagerTemplate: js.UndefOr[String] = js.native
+  var pauseOnHover: js.UndefOr[js.Any] = js.native
    // boolean or string
-  var paused: js.UndefOr[Boolean] = js.undefined
-  var prev: js.UndefOr[String] = js.undefined
-  var prevEvent: js.UndefOr[String] = js.undefined
-  var progressive: js.UndefOr[String] = js.undefined
-  var random: js.UndefOr[Boolean] = js.undefined
-  var reverse: js.UndefOr[Boolean] = js.undefined
-  var slideActiveClass: js.UndefOr[String] = js.undefined
-  var slideClass: js.UndefOr[String] = js.undefined
-  var slideCss: js.UndefOr[js.Any] = js.undefined
-  var slides: js.UndefOr[String] = js.undefined
-  var speed: js.UndefOr[Double] = js.undefined
-  var startingSlide: js.UndefOr[Double] = js.undefined
-  var swipe: js.UndefOr[Boolean] = js.undefined
-  var sync: js.UndefOr[Boolean] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
-  var tmplRegex: js.UndefOr[String] = js.undefined
-  var updateView: js.UndefOr[Double] = js.undefined
+  var paused: js.UndefOr[Boolean] = js.native
+  var prev: js.UndefOr[String] = js.native
+  var prevEvent: js.UndefOr[String] = js.native
+  var progressive: js.UndefOr[String] = js.native
+  var random: js.UndefOr[Boolean] = js.native
+  var reverse: js.UndefOr[Boolean] = js.native
+  var slideActiveClass: js.UndefOr[String] = js.native
+  var slideClass: js.UndefOr[String] = js.native
+  var slideCss: js.UndefOr[js.Any] = js.native
+  var slides: js.UndefOr[String] = js.native
+  var speed: js.UndefOr[Double] = js.native
+  var startingSlide: js.UndefOr[Double] = js.native
+  var swipe: js.UndefOr[Boolean] = js.native
+  var sync: js.UndefOr[Boolean] = js.native
+  var timeout: js.UndefOr[Double] = js.native
+  var tmplRegex: js.UndefOr[String] = js.native
+  var updateView: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    allowWrap: js.UndefOr[Boolean] = js.undefined,
-    autoHeight: js.Any = null,
-    autoSelector: String = null,
-    caption: String = null,
-    captionTemplate: String = null,
-    continueAuto: js.UndefOr[Boolean] = js.undefined,
-    delay: Int | Double = null,
-    disabledClass: String = null,
-    easing: String = null,
-    fx: String = null,
-    hideNonActive: js.UndefOr[Boolean] = js.undefined,
-    loader: js.Any = null,
-    log: js.UndefOr[Boolean] = js.undefined,
-    loop: Int | Double = null,
-    manualSpeed: Int | Double = null,
-    manualTrump: js.UndefOr[Boolean] = js.undefined,
-    next: String = null,
-    nextEvent: String = null,
-    overlay: String = null,
-    overlayTemplate: String = null,
-    pager: String = null,
-    pagerActivateClass: String = null,
-    pagerEvent: String = null,
-    pagerTemplate: String = null,
-    pauseOnHover: js.Any = null,
-    paused: js.UndefOr[Boolean] = js.undefined,
-    prev: String = null,
-    prevEvent: String = null,
-    progressive: String = null,
-    random: js.UndefOr[Boolean] = js.undefined,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    slideActiveClass: String = null,
-    slideClass: String = null,
-    slideCss: js.Any = null,
-    slides: String = null,
-    speed: Int | Double = null,
-    startingSlide: Int | Double = null,
-    swipe: js.UndefOr[Boolean] = js.undefined,
-    sync: js.UndefOr[Boolean] = js.undefined,
-    timeout: Int | Double = null,
-    tmplRegex: String = null,
-    updateView: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowWrap)) __obj.updateDynamic("allowWrap")(allowWrap.asInstanceOf[js.Any])
-    if (autoHeight != null) __obj.updateDynamic("autoHeight")(autoHeight.asInstanceOf[js.Any])
-    if (autoSelector != null) __obj.updateDynamic("autoSelector")(autoSelector.asInstanceOf[js.Any])
-    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
-    if (captionTemplate != null) __obj.updateDynamic("captionTemplate")(captionTemplate.asInstanceOf[js.Any])
-    if (!js.isUndefined(continueAuto)) __obj.updateDynamic("continueAuto")(continueAuto.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (disabledClass != null) __obj.updateDynamic("disabledClass")(disabledClass.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (fx != null) __obj.updateDynamic("fx")(fx.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideNonActive)) __obj.updateDynamic("hideNonActive")(hideNonActive.asInstanceOf[js.Any])
-    if (loader != null) __obj.updateDynamic("loader")(loader.asInstanceOf[js.Any])
-    if (!js.isUndefined(log)) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
-    if (loop != null) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (manualSpeed != null) __obj.updateDynamic("manualSpeed")(manualSpeed.asInstanceOf[js.Any])
-    if (!js.isUndefined(manualTrump)) __obj.updateDynamic("manualTrump")(manualTrump.asInstanceOf[js.Any])
-    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
-    if (nextEvent != null) __obj.updateDynamic("nextEvent")(nextEvent.asInstanceOf[js.Any])
-    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
-    if (overlayTemplate != null) __obj.updateDynamic("overlayTemplate")(overlayTemplate.asInstanceOf[js.Any])
-    if (pager != null) __obj.updateDynamic("pager")(pager.asInstanceOf[js.Any])
-    if (pagerActivateClass != null) __obj.updateDynamic("pagerActivateClass")(pagerActivateClass.asInstanceOf[js.Any])
-    if (pagerEvent != null) __obj.updateDynamic("pagerEvent")(pagerEvent.asInstanceOf[js.Any])
-    if (pagerTemplate != null) __obj.updateDynamic("pagerTemplate")(pagerTemplate.asInstanceOf[js.Any])
-    if (pauseOnHover != null) __obj.updateDynamic("pauseOnHover")(pauseOnHover.asInstanceOf[js.Any])
-    if (!js.isUndefined(paused)) __obj.updateDynamic("paused")(paused.asInstanceOf[js.Any])
-    if (prev != null) __obj.updateDynamic("prev")(prev.asInstanceOf[js.Any])
-    if (prevEvent != null) __obj.updateDynamic("prevEvent")(prevEvent.asInstanceOf[js.Any])
-    if (progressive != null) __obj.updateDynamic("progressive")(progressive.asInstanceOf[js.Any])
-    if (!js.isUndefined(random)) __obj.updateDynamic("random")(random.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (slideActiveClass != null) __obj.updateDynamic("slideActiveClass")(slideActiveClass.asInstanceOf[js.Any])
-    if (slideClass != null) __obj.updateDynamic("slideClass")(slideClass.asInstanceOf[js.Any])
-    if (slideCss != null) __obj.updateDynamic("slideCss")(slideCss.asInstanceOf[js.Any])
-    if (slides != null) __obj.updateDynamic("slides")(slides.asInstanceOf[js.Any])
-    if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
-    if (startingSlide != null) __obj.updateDynamic("startingSlide")(startingSlide.asInstanceOf[js.Any])
-    if (!js.isUndefined(swipe)) __obj.updateDynamic("swipe")(swipe.asInstanceOf[js.Any])
-    if (!js.isUndefined(sync)) __obj.updateDynamic("sync")(sync.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (tmplRegex != null) __obj.updateDynamic("tmplRegex")(tmplRegex.asInstanceOf[js.Any])
-    if (updateView != null) __obj.updateDynamic("updateView")(updateView.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowWrap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowWrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowWrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoHeight(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSelector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinueAuto(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueAuto")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinueAuto: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueAuto")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabledClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabledClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFx(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideNonActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideNonActive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideNonActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideNonActive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoader(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLog(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManualSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manualSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManualSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manualSpeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManualTrump(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manualTrump")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManualTrump: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manualTrump")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextEvent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlay(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPager(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pager")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPager: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pager")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPagerActivateClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagerActivateClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPagerActivateClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagerActivateClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPagerEvent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagerEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPagerEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagerEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPagerTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagerTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPagerTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagerTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPauseOnHover(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseOnHover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPauseOnHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseOnHover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrev(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrev: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prev")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevEvent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRandom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("random")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRandom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("random")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlideActiveClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideActiveClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlideActiveClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideActiveClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlideClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlideClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlideCss(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideCss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlideCss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideCss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlides(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartingSlide(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startingSlide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartingSlide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startingSlide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwipe(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwipe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSync(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTmplRegex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tmplRegex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTmplRegex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tmplRegex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateView(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateView")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

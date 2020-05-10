@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation._
 @JSImport("typedarray-pool", "freeDataView")
 @js.native
 object freeDataView extends js.Object {
-  def apply(view: scala.scalajs.js.typedarray.DataView): Unit = js.native
+  def apply(view: js.typedarray.DataView): Unit = js.native
 }
 

@@ -1,10 +1,9 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.stepStepMod.StepProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object stepMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[StepProps, ComponentState, js.Any] {
+    extends Component[StepProps, js.Object, js.Any] {
     def this(props: StepProps) = this()
     def this(props: StepProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[StepProps]]
+  object default extends TopLevel[ReactComponentClass[StepProps]]
   
 }
 

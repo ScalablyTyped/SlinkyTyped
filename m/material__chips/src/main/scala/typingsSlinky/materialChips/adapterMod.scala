@@ -17,8 +17,8 @@ object adapterMod extends js.Object {
       */
     def appendChip(text: String): Element = js.native
     def appendChip(text: String, leadingIcon: Null, trailingIcon: Element): Element = js.native
-    def appendChip(text: String, leadingIcon: typingsSlinky.std.Element): Element = js.native
-    def appendChip(text: String, leadingIcon: typingsSlinky.std.Element, trailingIcon: Element): Element = js.native
+    def appendChip(text: String, leadingIcon: Element): Element = js.native
+    def appendChip(text: String, leadingIcon: Element, trailingIcon: Element): Element = js.native
     /**
       * Deregisters an event handler on the root element for a given event.
       */

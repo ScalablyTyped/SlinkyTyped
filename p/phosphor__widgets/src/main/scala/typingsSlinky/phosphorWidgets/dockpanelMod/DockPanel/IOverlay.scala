@@ -8,11 +8,12 @@ import scala.scalajs.js.annotation._
 /**
   * An object which manages the overlay node for a dock panel.
   */
+@js.native
 trait IOverlay extends js.Object {
   /**
     * The DOM node for the overlay.
     */
-  val node: HTMLDivElement
+  val node: HTMLDivElement = js.native
   /**
     * Hide the overlay node.
     *
@@ -22,7 +23,7 @@ trait IOverlay extends js.Object {
     * #### Notes
     * This is called whenever the overlay node should been hidden.
     */
-  def hide(delay: Double): Unit
+  def hide(delay: Double): Unit = js.native
   /**
     * Show the overlay using the given overlay geometry.
     *
@@ -35,15 +36,40 @@ trait IOverlay extends js.Object {
     * This is called on every mouse move event during a drag in order
     * to update the position of the overlay. It should be efficient.
     */
-  def show(geo: IOverlayGeometry): Unit
+  def show(geo: IOverlayGeometry): Unit = js.native
 }
 
 object IOverlay {
   @scala.inline
   def apply(hide: Double => Unit, node: HTMLDivElement, show: IOverlayGeometry => Unit): IOverlay = {
     val __obj = js.Dynamic.literal(hide = js.Any.fromFunction1(hide), node = node.asInstanceOf[js.Any], show = js.Any.fromFunction1(show))
-  
     __obj.asInstanceOf[IOverlay]
   }
+  @scala.inline
+  implicit class IOverlayOps[Self <: IOverlay] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHide(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNode(value: HTMLDivElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShow(value: IOverlayGeometry => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

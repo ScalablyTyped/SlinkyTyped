@@ -1,10 +1,7 @@
 package typingsSlinky.reactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StatusBarProps
 import typingsSlinky.reactNative.mod.StatusBarStyle
 import typingsSlinky.reactNative.reactNativeStrings.fade
@@ -13,34 +10,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StatusBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNative.mod.StatusBar] {
+object StatusBar {
   @JSImport("react-native", "StatusBar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: hidden */
-  def apply(
-    animated: js.UndefOr[Boolean] = js.undefined,
-    backgroundColor: String = null,
-    barStyle: StatusBarStyle = null,
-    networkActivityIndicatorVisible: js.UndefOr[Boolean] = js.undefined,
-    showHideTransition: fade | slide = null,
-    translucent: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNative.mod.StatusBar] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (barStyle != null) __obj.updateDynamic("barStyle")(barStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(networkActivityIndicatorVisible)) __obj.updateDynamic("networkActivityIndicatorVisible")(networkActivityIndicatorVisible.asInstanceOf[js.Any])
-    if (showHideTransition != null) __obj.updateDynamic("showHideTransition")(showHideTransition.asInstanceOf[js.Any])
-    if (!js.isUndefined(translucent)) __obj.updateDynamic("translucent")(translucent.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.StatusBar] {
+    @scala.inline
+    def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def barStyle(value: StatusBarStyle): this.type = set("barStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def networkActivityIndicatorVisible(value: Boolean): this.type = set("networkActivityIndicatorVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showHideTransition(value: fade | slide): this.type = set("showHideTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def translucent(value: Boolean): this.type = set("translucent", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNative.mod.StatusBar] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNative.mod.StatusBar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StatusBarProps
+  
+  def withProps(p: StatusBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StatusBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

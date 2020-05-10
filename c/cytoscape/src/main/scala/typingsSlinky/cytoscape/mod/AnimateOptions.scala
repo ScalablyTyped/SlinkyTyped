@@ -1,45 +1,68 @@
 package typingsSlinky.cytoscape.mod
 
-import typingsSlinky.cytoscape.mod.Css.TransitionTimingFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnimateOptions extends AnimationOptions {
   /** complete - A function to call when the animation is done. */
-  var complete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var complete: js.UndefOr[js.Function0[Unit]] = js.native
   /** queue - A boolean indicating whether to queue the animation. */
-  var queue: js.UndefOr[Boolean] = js.undefined
+  var queue: js.UndefOr[Boolean] = js.native
   /** step - A function to call each time the animation steps. */
-  var step: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var step: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object AnimateOptions {
   @scala.inline
-  def apply(
-    center: CenterOptions = null,
-    complete: () => Unit = null,
-    duration: Int | Double = null,
-    easing: TransitionTimingFunction = null,
-    fit: AnimationFitOptions = null,
-    pan: Position = null,
-    panBy: Position = null,
-    queue: js.UndefOr[Boolean] = js.undefined,
-    step: () => Unit = null,
-    zoom: ZoomOptions = null
-  ): AnimateOptions = {
+  def apply(): AnimateOptions = {
     val __obj = js.Dynamic.literal()
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (fit != null) __obj.updateDynamic("fit")(fit.asInstanceOf[js.Any])
-    if (pan != null) __obj.updateDynamic("pan")(pan.asInstanceOf[js.Any])
-    if (panBy != null) __obj.updateDynamic("panBy")(panBy.asInstanceOf[js.Any])
-    if (!js.isUndefined(queue)) __obj.updateDynamic("queue")(queue.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(js.Any.fromFunction0(step))
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimateOptions]
   }
+  @scala.inline
+  implicit class AnimateOptionsOps[Self <: AnimateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

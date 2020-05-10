@@ -12,10 +12,8 @@ trait ItemKind extends js.Object
 
 object ItemKind {
   @scala.inline
-  def Information: typingsSlinky.bpmnModdle.bpmnModdleStrings.Information = this.cast("Information")
+  def Information: typingsSlinky.bpmnModdle.bpmnModdleStrings.Information = "Information".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Information]
   @scala.inline
-  def Physical: typingsSlinky.bpmnModdle.bpmnModdleStrings.Physical = this.cast("Physical")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Physical: typingsSlinky.bpmnModdle.bpmnModdleStrings.Physical = "Physical".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Physical]
 }
 

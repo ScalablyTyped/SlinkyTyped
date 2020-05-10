@@ -28,7 +28,7 @@ object Tooltip extends js.Object {
   /**
     * Init Tooltip
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Tooltip = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialTooltipOptions): typingsSlinky.materializeCss.M.Tooltip = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Tooltip = js.native
+  def init(els: Element, options: PartialTooltipOptions): typingsSlinky.materializeCss.M.Tooltip = js.native
 }
 

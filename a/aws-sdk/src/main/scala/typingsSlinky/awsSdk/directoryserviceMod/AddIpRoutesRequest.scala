@@ -24,14 +24,41 @@ trait AddIpRoutesRequest extends js.Object {
 
 object AddIpRoutesRequest {
   @scala.inline
-  def apply(
-    DirectoryId: DirectoryId,
-    IpRoutes: IpRoutes,
-    UpdateSecurityGroupForDirectoryControllers: js.UndefOr[Boolean] = js.undefined
-  ): AddIpRoutesRequest = {
+  def apply(DirectoryId: DirectoryId, IpRoutes: IpRoutes): AddIpRoutesRequest = {
     val __obj = js.Dynamic.literal(DirectoryId = DirectoryId.asInstanceOf[js.Any], IpRoutes = IpRoutes.asInstanceOf[js.Any])
-    if (!js.isUndefined(UpdateSecurityGroupForDirectoryControllers)) __obj.updateDynamic("UpdateSecurityGroupForDirectoryControllers")(UpdateSecurityGroupForDirectoryControllers.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddIpRoutesRequest]
   }
+  @scala.inline
+  implicit class AddIpRoutesRequestOps[Self <: AddIpRoutesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryId(value: DirectoryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIpRoutes(value: IpRoutes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpRoutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateSecurityGroupForDirectoryControllers(value: UpdateSecurityGroupForDirectoryControllers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateSecurityGroupForDirectoryControllers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateSecurityGroupForDirectoryControllers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateSecurityGroupForDirectoryControllers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

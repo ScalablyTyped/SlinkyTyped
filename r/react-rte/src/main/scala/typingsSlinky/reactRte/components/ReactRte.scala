@@ -1,56 +1,65 @@
 package typingsSlinky.reactRte.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.draftJs.mod.ContentBlock
 import typingsSlinky.reactRte.mod.CustomControl
 import typingsSlinky.reactRte.mod.EditorValue
+import typingsSlinky.reactRte.mod.Props
 import typingsSlinky.reactRte.mod.ToolbarConfig
 import typingsSlinky.reactRte.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactRte
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactRte {
   @JSImport("react-rte", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, className, disabled, placeholder, readOnly */
-  def apply(
-    value: EditorValue,
-    blockStyleFn: /* block */ ContentBlock => js.UndefOr[String] = null,
-    customControls: js.Array[CustomControl] = null,
-    editorClassName: String = null,
-    editorStyle: js.Object = null,
-    handleReturn: /* event */ js.Object => Boolean = null,
-    keyBindingFn: /* event */ js.Object => js.UndefOr[String] = null,
-    onChange: /* value */ EditorValue => js.Any = null,
-    rootStyle: js.Object = null,
-    toolbarClassName: String = null,
-    toolbarConfig: ToolbarConfig = null,
-    toolbarStyle: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (blockStyleFn != null) __obj.updateDynamic("blockStyleFn")(js.Any.fromFunction1(blockStyleFn))
-    if (customControls != null) __obj.updateDynamic("customControls")(customControls.asInstanceOf[js.Any])
-    if (editorClassName != null) __obj.updateDynamic("editorClassName")(editorClassName.asInstanceOf[js.Any])
-    if (editorStyle != null) __obj.updateDynamic("editorStyle")(editorStyle.asInstanceOf[js.Any])
-    if (handleReturn != null) __obj.updateDynamic("handleReturn")(js.Any.fromFunction1(handleReturn))
-    if (keyBindingFn != null) __obj.updateDynamic("keyBindingFn")(js.Any.fromFunction1(keyBindingFn))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (rootStyle != null) __obj.updateDynamic("rootStyle")(rootStyle.asInstanceOf[js.Any])
-    if (toolbarClassName != null) __obj.updateDynamic("toolbarClassName")(toolbarClassName.asInstanceOf[js.Any])
-    if (toolbarConfig != null) __obj.updateDynamic("toolbarConfig")(toolbarConfig.asInstanceOf[js.Any])
-    if (toolbarStyle != null) __obj.updateDynamic("toolbarStyle")(toolbarStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def blockStyleFn(value: /* block */ ContentBlock => js.UndefOr[String]): this.type = set("blockStyleFn", js.Any.fromFunction1(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customControls(value: js.Array[CustomControl]): this.type = set("customControls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editorClassName(value: String): this.type = set("editorClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editorStyle(value: js.Object): this.type = set("editorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleReturn(value: /* event */ js.Object => Boolean): this.type = set("handleReturn", js.Any.fromFunction1(value))
+    @scala.inline
+    def keyBindingFn(value: /* event */ js.Object => js.UndefOr[String]): this.type = set("keyBindingFn", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* value */ EditorValue => js.Any): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rootStyle(value: js.Object): this.type = set("rootStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbarClassName(value: String): this.type = set("toolbarClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbarConfig(value: ToolbarConfig): this.type = set("toolbarConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbarStyle(value: js.Object): this.type = set("toolbarStyle", value.asInstanceOf[js.Any])
   }
-  type Props = typingsSlinky.reactRte.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(value: EditorValue): Builder = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
 }
 

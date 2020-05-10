@@ -14,14 +14,12 @@ trait ExpandWildcards extends js.Object
 
 object ExpandWildcards {
   @scala.inline
-  def all: typingsSlinky.elasticsearch.elasticsearchStrings.all = this.cast("all")
+  def all: typingsSlinky.elasticsearch.elasticsearchStrings.all = "all".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def closed: typingsSlinky.elasticsearch.elasticsearchStrings.closed = "closed".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.elasticsearch.elasticsearchStrings.closed = this.cast("closed")
+  def none: typingsSlinky.elasticsearch.elasticsearchStrings.none = "none".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.none]
   @scala.inline
-  def none: typingsSlinky.elasticsearch.elasticsearchStrings.none = this.cast("none")
-  @scala.inline
-  def open: typingsSlinky.elasticsearch.elasticsearchStrings.open = this.cast("open")
+  def open: typingsSlinky.elasticsearch.elasticsearchStrings.open = "open".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.open]
 }
 

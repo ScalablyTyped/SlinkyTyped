@@ -17,6 +17,6 @@ abstract class Tracker () extends EventEmitter {
     * @param width The pixel canvas width.
     * @param height The pixel data height.
     */
-  def track(pixels: scala.scalajs.js.typedarray.Uint8ClampedArray, width: Double, height: Double): Unit = js.native
+  def track(pixels: js.typedarray.Uint8ClampedArray, width: Double, height: Double): Unit = js.native
 }
 

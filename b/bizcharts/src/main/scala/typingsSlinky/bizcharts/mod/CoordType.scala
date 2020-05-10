@@ -14,14 +14,12 @@ trait CoordType extends js.Object
 
 object CoordType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def helix: typingsSlinky.bizcharts.bizchartsStrings.helix = "helix".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.helix]
   @scala.inline
-  def helix: typingsSlinky.bizcharts.bizchartsStrings.helix = this.cast("helix")
+  def polar: typingsSlinky.bizcharts.bizchartsStrings.polar = "polar".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.polar]
   @scala.inline
-  def polar: typingsSlinky.bizcharts.bizchartsStrings.polar = this.cast("polar")
+  def rect: typingsSlinky.bizcharts.bizchartsStrings.rect = "rect".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.rect]
   @scala.inline
-  def rect: typingsSlinky.bizcharts.bizchartsStrings.rect = this.cast("rect")
-  @scala.inline
-  def theta: typingsSlinky.bizcharts.bizchartsStrings.theta = this.cast("theta")
+  def theta: typingsSlinky.bizcharts.bizchartsStrings.theta = "theta".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.theta]
 }
 

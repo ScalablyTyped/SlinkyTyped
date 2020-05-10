@@ -22,16 +22,53 @@ trait DescribeComponentConfigurationResponse extends js.Object {
 
 object DescribeComponentConfigurationResponse {
   @scala.inline
-  def apply(
-    ComponentConfiguration: ComponentConfiguration = null,
-    Monitor: js.UndefOr[Boolean] = js.undefined,
-    Tier: Tier = null
-  ): DescribeComponentConfigurationResponse = {
+  def apply(): DescribeComponentConfigurationResponse = {
     val __obj = js.Dynamic.literal()
-    if (ComponentConfiguration != null) __obj.updateDynamic("ComponentConfiguration")(ComponentConfiguration.asInstanceOf[js.Any])
-    if (!js.isUndefined(Monitor)) __obj.updateDynamic("Monitor")(Monitor.asInstanceOf[js.Any])
-    if (Tier != null) __obj.updateDynamic("Tier")(Tier.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeComponentConfigurationResponse]
   }
+  @scala.inline
+  implicit class DescribeComponentConfigurationResponseOps[Self <: DescribeComponentConfigurationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponentConfiguration(value: ComponentConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponentConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonitor(value: Monitor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonitor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Monitor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTier(value: Tier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

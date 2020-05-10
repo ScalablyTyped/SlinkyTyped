@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.fx
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,7 +65,7 @@ trait flip extends js.Object {
     * @param options The parameters passed to the timeline animation. Includes:keys: Array: An array of objects, with style properties and values.duration: Duration of the animation in milliseconds.  Defaults to 1000.
     * @param node The node to manipulate
     */
-  def animateTimeline(options: js.Object, node: org.scalajs.dom.raw.HTMLElement): Unit = js.native
+  def animateTimeline(options: js.Object, node: HTMLElement): Unit = js.native
   /**
     * Animate a node flipping following a specific direction
     * Returns an animation that will flip the

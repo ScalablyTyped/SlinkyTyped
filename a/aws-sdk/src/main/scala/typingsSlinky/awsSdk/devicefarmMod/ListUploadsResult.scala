@@ -18,11 +18,41 @@ trait ListUploadsResult extends js.Object {
 
 object ListUploadsResult {
   @scala.inline
-  def apply(nextToken: PaginationToken = null, uploads: Uploads = null): ListUploadsResult = {
+  def apply(): ListUploadsResult = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (uploads != null) __obj.updateDynamic("uploads")(uploads.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListUploadsResult]
   }
+  @scala.inline
+  implicit class ListUploadsResultOps[Self <: ListUploadsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploads(value: Uploads): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploads: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploads")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,13 +7,11 @@ import typingsSlinky.devextreme.AnonAscendingText
 import typingsSlinky.devextreme.AnonBrokenRules
 import typingsSlinky.devextreme.AnonCancelComponent
 import typingsSlinky.devextreme.AnonComponentData
-import typingsSlinky.devextreme.AnonComponentElement
 import typingsSlinky.devextreme.AnonCurrentDeselectedRowKeys
 import typingsSlinky.devextreme.AnonCustomLoad
 import typingsSlinky.devextreme.AnonCustomizeText
 import typingsSlinky.devextreme.AnonDataElement
 import typingsSlinky.devextreme.AnonEditOnKeyPress
-import typingsSlinky.devextreme.AnonElement
 import typingsSlinky.devextreme.AnonElementKey
 import typingsSlinky.devextreme.AnonEmptyPanelText
 import typingsSlinky.devextreme.AnonEnabled
@@ -24,8 +22,6 @@ import typingsSlinky.devextreme.AnonHeight
 import typingsSlinky.devextreme.AnonHighlightCaseSensitive
 import typingsSlinky.devextreme.AnonIndicatorSrc
 import typingsSlinky.devextreme.AnonKey
-import typingsSlinky.devextreme.AnonModel
-import typingsSlinky.devextreme.AnonName
 import typingsSlinky.devextreme.AnonNewData
 import typingsSlinky.devextreme.AnonPromise
 import typingsSlinky.devextreme.AnonToolbarOptions
@@ -38,317 +34,961 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridBaseOptions[T] extends WidgetOptions[T] {
   /** Specifies whether a user can reorder columns. */
-  var allowColumnReordering: js.UndefOr[Boolean] = js.undefined
+  var allowColumnReordering: js.UndefOr[Boolean] = js.native
   /** Specifies whether a user can resize columns. */
-  var allowColumnResizing: js.UndefOr[Boolean] = js.undefined
+  var allowColumnResizing: js.UndefOr[Boolean] = js.native
   /** Automatically scrolls to the focused row when the focusedRowKey is changed. */
-  var autoNavigateToFocusedRow: js.UndefOr[Boolean] = js.undefined
+  var autoNavigateToFocusedRow: js.UndefOr[Boolean] = js.native
   /** Specifies whether data should be cached. */
-  var cacheEnabled: js.UndefOr[Boolean] = js.undefined
+  var cacheEnabled: js.UndefOr[Boolean] = js.native
   /** Enables a hint that appears when a user hovers the mouse pointer over a cell with truncated content. */
-  var cellHintEnabled: js.UndefOr[Boolean] = js.undefined
+  var cellHintEnabled: js.UndefOr[Boolean] = js.native
   /** Specifies whether columns should adjust their widths to the content. */
-  var columnAutoWidth: js.UndefOr[Boolean] = js.undefined
+  var columnAutoWidth: js.UndefOr[Boolean] = js.native
   /** Configures the column chooser. */
-  var columnChooser: js.UndefOr[AnonEmptyPanelText] = js.undefined
+  var columnChooser: js.UndefOr[AnonEmptyPanelText] = js.native
   /** Configures column fixing. */
-  var columnFixing: js.UndefOr[AnonEnabled] = js.undefined
+  var columnFixing: js.UndefOr[AnonEnabled] = js.native
   /** Specifies whether the widget should hide columns to adapt to the screen or container size. Ignored if allowColumnResizing is true and columnResizingMode is "widget". */
-  var columnHidingEnabled: js.UndefOr[Boolean] = js.undefined
+  var columnHidingEnabled: js.UndefOr[Boolean] = js.native
   /** Specifies the minimum width of columns. */
-  var columnMinWidth: js.UndefOr[Double] = js.undefined
+  var columnMinWidth: js.UndefOr[Double] = js.native
   /** Specifies how the widget resizes columns. Applies only if allowColumnResizing is true. */
-  var columnResizingMode: js.UndefOr[nextColumn | widget] = js.undefined
+  var columnResizingMode: js.UndefOr[nextColumn | widget] = js.native
   /** Specifies the width for all data columns. Has a lower priority than the column.width option. */
-  var columnWidth: js.UndefOr[Double] = js.undefined
+  var columnWidth: js.UndefOr[Double] = js.native
   /** Overridden. */
-  var columns: js.UndefOr[js.Array[GridBaseColumn | String]] = js.undefined
+  var columns: js.UndefOr[js.Array[GridBaseColumn | String]] = js.native
   /** Binds the widget to data. */
-  var dataSource: js.UndefOr[String | js.Array[_] | DataSource | DataSourceOptions] = js.undefined
+  var dataSource: js.UndefOr[String | js.Array[_] | DataSource | DataSourceOptions] = js.native
   /** Specifies the format in which date-time values should be sent to the server. Use it only if you do not specify the dataSource at design time. */
-  var dateSerializationFormat: js.UndefOr[String] = js.undefined
+  var dateSerializationFormat: js.UndefOr[String] = js.native
   /** Overriden. */
-  var editing: js.UndefOr[GridBaseEditing] = js.undefined
+  var editing: js.UndefOr[GridBaseEditing] = js.native
   /** Indicates whether to show the error row. */
-  var errorRowEnabled: js.UndefOr[Boolean] = js.undefined
+  var errorRowEnabled: js.UndefOr[Boolean] = js.native
   /** Configures the integrated filter builder. */
-  var filterBuilder: js.UndefOr[dxFilterBuilderOptions] = js.undefined
+  var filterBuilder: js.UndefOr[dxFilterBuilderOptions] = js.native
   /** Configures the popup in which the integrated filter builder is shown. */
-  var filterBuilderPopup: js.UndefOr[dxPopupOptions[dxPopup]] = js.undefined
+  var filterBuilderPopup: js.UndefOr[dxPopupOptions[dxPopup]] = js.native
   /** Configures the filter panel. */
-  var filterPanel: js.UndefOr[AnonCustomizeText[T]] = js.undefined
+  var filterPanel: js.UndefOr[AnonCustomizeText[T]] = js.native
   /** Configures the filter row. */
-  var filterRow: js.UndefOr[AnonApplyFilter] = js.undefined
+  var filterRow: js.UndefOr[AnonApplyFilter] = js.native
   /** Specifies whether to synchronize the filter row, header filter, and filter builder. The synchronized filter expression is stored in the filterValue option. */
-  var filterSyncEnabled: js.UndefOr[Boolean | auto] = js.undefined
+  var filterSyncEnabled: js.UndefOr[Boolean | auto] = js.native
   /** Specifies a filter expression. */
-  var filterValue: js.UndefOr[String | js.Array[_] | js.Function] = js.undefined
+  var filterValue: js.UndefOr[String | js.Array[_] | js.Function] = js.native
   /** Specifies the index of the column focused initially or currently in the data row area. */
-  var focusedColumnIndex: js.UndefOr[Double] = js.undefined
+  var focusedColumnIndex: js.UndefOr[Double] = js.native
   /** Specifies whether the focused row feature is enabled. */
-  var focusedRowEnabled: js.UndefOr[Boolean] = js.undefined
+  var focusedRowEnabled: js.UndefOr[Boolean] = js.native
   /** Specifies the initially or currently focused grid row's index. Use it when focusedRowEnabled is true. */
-  var focusedRowIndex: js.UndefOr[Double] = js.undefined
+  var focusedRowIndex: js.UndefOr[Double] = js.native
   /** Specifies initially or currently focused grid row's key. Use it when focusedRowEnabled is true. */
-  var focusedRowKey: js.UndefOr[js.Any] = js.undefined
+  var focusedRowKey: js.UndefOr[js.Any] = js.native
   /** Configures the header filter feature. */
-  var headerFilter: js.UndefOr[AnonHeight] = js.undefined
+  var headerFilter: js.UndefOr[AnonHeight] = js.native
   /** Specifies whether to highlight rows and cells with edited data. repaintChangesOnly should be true. */
-  var highlightChanges: js.UndefOr[Boolean] = js.undefined
+  var highlightChanges: js.UndefOr[Boolean] = js.native
   /** Configures keyboard navigation. */
-  var keyboardNavigation: js.UndefOr[AnonEditOnKeyPress] = js.undefined
+  var keyboardNavigation: js.UndefOr[AnonEditOnKeyPress] = js.native
   /** Configures the load panel. */
-  var loadPanel: js.UndefOr[AnonIndicatorSrc] = js.undefined
+  var loadPanel: js.UndefOr[AnonIndicatorSrc] = js.native
   /** Specifies text shown when the widget does not display any data. */
-  var noDataText: js.UndefOr[String] = js.undefined
+  var noDataText: js.UndefOr[String] = js.native
   /** A function that is executed before an adaptive detail row is rendered. */
-  var onAdaptiveDetailRowPreparing: js.UndefOr[js.Function1[/* e */ AnonFormOptions[T], _]] = js.undefined
+  var onAdaptiveDetailRowPreparing: js.UndefOr[js.Function1[/* e */ AnonFormOptions[T], _]] = js.native
   /** A function that is executed when an error occurs in the data source. */
-  var onDataErrorOccurred: js.UndefOr[js.Function1[/* e */ AnonError[T], _]] = js.undefined
+  var onDataErrorOccurred: js.UndefOr[js.Function1[/* e */ AnonError[T], _]] = js.native
   /** A function that is executed before a new row is added to the widget. */
-  var onInitNewRow: js.UndefOr[js.Function1[/* e */ AnonPromise[T], _]] = js.undefined
+  var onInitNewRow: js.UndefOr[js.Function1[/* e */ AnonPromise[T], _]] = js.native
   /** A function that is executed when the widget is in focus and a key has been pressed down. */
-  var onKeyDown: js.UndefOr[js.Function1[/* e */ AnonHandled[T], _]] = js.undefined
+  var onKeyDown: js.UndefOr[js.Function1[/* e */ AnonHandled[T], _]] = js.native
   /** A function that is executed after a row is collapsed. */
-  var onRowCollapsed: js.UndefOr[js.Function1[/* e */ AnonKey[T], _]] = js.undefined
+  var onRowCollapsed: js.UndefOr[js.Function1[/* e */ AnonKey[T], _]] = js.native
   /** A function that is executed before a row is collapsed. */
-  var onRowCollapsing: js.UndefOr[js.Function1[/* e */ AnonCancelComponent[T], _]] = js.undefined
+  var onRowCollapsing: js.UndefOr[js.Function1[/* e */ AnonCancelComponent[T], _]] = js.native
   /** A function that is executed after a row is expanded. */
-  var onRowExpanded: js.UndefOr[js.Function1[/* e */ AnonKey[T], _]] = js.undefined
+  var onRowExpanded: js.UndefOr[js.Function1[/* e */ AnonKey[T], _]] = js.native
   /** A function that is executed before a row is expanded. */
-  var onRowExpanding: js.UndefOr[js.Function1[/* e */ AnonCancelComponent[T], _]] = js.undefined
+  var onRowExpanding: js.UndefOr[js.Function1[/* e */ AnonCancelComponent[T], _]] = js.native
   /** A function that is executed after a new row has been inserted into the data source. */
-  var onRowInserted: js.UndefOr[js.Function1[/* e */ AnonComponentData[T], _]] = js.undefined
+  var onRowInserted: js.UndefOr[js.Function1[/* e */ AnonComponentData[T], _]] = js.native
   /** A function that is executed before a new row is inserted into the data source. */
-  var onRowInserting: js.UndefOr[js.Function1[/* e */ AnonDataElement[T], _]] = js.undefined
+  var onRowInserting: js.UndefOr[js.Function1[/* e */ AnonDataElement[T], _]] = js.native
   /** A function that is executed after a row has been removed from the data source. */
-  var onRowRemoved: js.UndefOr[js.Function1[/* e */ AnonComponentData[T], _]] = js.undefined
+  var onRowRemoved: js.UndefOr[js.Function1[/* e */ AnonComponentData[T], _]] = js.native
   /** A function that is executed before a row is removed from the data source. */
-  var onRowRemoving: js.UndefOr[js.Function1[/* e */ AnonElementKey[T], _]] = js.undefined
+  var onRowRemoving: js.UndefOr[js.Function1[/* e */ AnonElementKey[T], _]] = js.native
   /** A function that is executed after a row has been updated in the data source. */
-  var onRowUpdated: js.UndefOr[js.Function1[/* e */ AnonComponentData[T], _]] = js.undefined
+  var onRowUpdated: js.UndefOr[js.Function1[/* e */ AnonComponentData[T], _]] = js.native
   /** A function that is executed before a row is updated in the data source. */
-  var onRowUpdating: js.UndefOr[js.Function1[/* e */ AnonNewData[T], _]] = js.undefined
+  var onRowUpdating: js.UndefOr[js.Function1[/* e */ AnonNewData[T], _]] = js.native
   /** A function that is executed after cells in a row are validated against validation rules. */
-  var onRowValidating: js.UndefOr[js.Function1[/* e */ AnonBrokenRules[T], _]] = js.undefined
+  var onRowValidating: js.UndefOr[js.Function1[/* e */ AnonBrokenRules[T], _]] = js.native
   /** A function that is executed after selecting a row or clearing its selection. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonCurrentDeselectedRowKeys[T], _]] = js.undefined
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonCurrentDeselectedRowKeys[T], _]] = js.native
   /** A function that is executed before the toolbar is created. */
-  var onToolbarPreparing: js.UndefOr[js.Function1[/* e */ AnonToolbarOptions[T], _]] = js.undefined
+  var onToolbarPreparing: js.UndefOr[js.Function1[/* e */ AnonToolbarOptions[T], _]] = js.native
   /** Configures the pager. */
-  var pager: js.UndefOr[AnonAllowedPageSizes] = js.undefined
+  var pager: js.UndefOr[AnonAllowedPageSizes] = js.native
   /** Configures paging. */
-  var paging: js.UndefOr[GridBasePaging] = js.undefined
+  var paging: js.UndefOr[GridBasePaging] = js.native
   /** Specifies whether to render the filter row, command columns, and columns with showEditorAlways set to true after other elements. */
-  var renderAsync: js.UndefOr[Boolean] = js.undefined
+  var renderAsync: js.UndefOr[Boolean] = js.native
   /** Specifies whether to repaint only those cells whose data changed. */
-  var repaintChangesOnly: js.UndefOr[Boolean] = js.undefined
+  var repaintChangesOnly: js.UndefOr[Boolean] = js.native
   /** Specifies whether rows should be shaded differently. */
-  var rowAlternationEnabled: js.UndefOr[Boolean] = js.undefined
+  var rowAlternationEnabled: js.UndefOr[Boolean] = js.native
   /** Configures row reordering using drag and drop gestures. */
-  var rowDragging: js.UndefOr[AnonAllowDropInsideItem] = js.undefined
+  var rowDragging: js.UndefOr[AnonAllowDropInsideItem] = js.native
   /** Overridden. A configuration object specifying scrolling options. */
-  var scrolling: js.UndefOr[GridBaseScrolling] = js.undefined
+  var scrolling: js.UndefOr[GridBaseScrolling] = js.native
   /** Configures the search panel. */
-  var searchPanel: js.UndefOr[AnonHighlightCaseSensitive] = js.undefined
+  var searchPanel: js.UndefOr[AnonHighlightCaseSensitive] = js.native
   /** Allows you to select rows or determine which rows are selected. */
-  var selectedRowKeys: js.UndefOr[js.Array[_]] = js.undefined
+  var selectedRowKeys: js.UndefOr[js.Array[_]] = js.native
   /** Overridden. */
-  var selection: js.UndefOr[GridBaseSelection] = js.undefined
+  var selection: js.UndefOr[GridBaseSelection] = js.native
   /** Specifies whether the outer borders of the widget are visible. */
-  var showBorders: js.UndefOr[Boolean] = js.undefined
+  var showBorders: js.UndefOr[Boolean] = js.native
   /** Specifies whether column headers are visible. */
-  var showColumnHeaders: js.UndefOr[Boolean] = js.undefined
+  var showColumnHeaders: js.UndefOr[Boolean] = js.native
   /** Specifies whether vertical lines that separate one column from another are visible. */
-  var showColumnLines: js.UndefOr[Boolean] = js.undefined
+  var showColumnLines: js.UndefOr[Boolean] = js.native
   /** Specifies whether horizontal lines that separate one row from another are visible. */
-  var showRowLines: js.UndefOr[Boolean] = js.undefined
+  var showRowLines: js.UndefOr[Boolean] = js.native
   /** Configures runtime sorting. */
-  var sorting: js.UndefOr[AnonAscendingText] = js.undefined
+  var sorting: js.UndefOr[AnonAscendingText] = js.native
   /** Configures state storing. */
-  var stateStoring: js.UndefOr[AnonCustomLoad] = js.undefined
+  var stateStoring: js.UndefOr[AnonCustomLoad] = js.native
   /** Specifies whether to enable two-way data binding. */
-  var twoWayBindingEnabled: js.UndefOr[Boolean] = js.undefined
+  var twoWayBindingEnabled: js.UndefOr[Boolean] = js.native
   /** Specifies whether text that does not fit into a column should be wrapped. */
-  var wordWrapEnabled: js.UndefOr[Boolean] = js.undefined
+  var wordWrapEnabled: js.UndefOr[Boolean] = js.native
 }
 
 object GridBaseOptions {
   @scala.inline
-  def apply[T](
-    accessKey: String = null,
-    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    allowColumnReordering: js.UndefOr[Boolean] = js.undefined,
-    allowColumnResizing: js.UndefOr[Boolean] = js.undefined,
-    autoNavigateToFocusedRow: js.UndefOr[Boolean] = js.undefined,
-    bindingOptions: js.Any = null,
-    cacheEnabled: js.UndefOr[Boolean] = js.undefined,
-    cellHintEnabled: js.UndefOr[Boolean] = js.undefined,
-    columnAutoWidth: js.UndefOr[Boolean] = js.undefined,
-    columnChooser: AnonEmptyPanelText = null,
-    columnFixing: AnonEnabled = null,
-    columnHidingEnabled: js.UndefOr[Boolean] = js.undefined,
-    columnMinWidth: Int | Double = null,
-    columnResizingMode: nextColumn | widget = null,
-    columnWidth: Int | Double = null,
-    columns: js.Array[GridBaseColumn | String] = null,
-    dataSource: String | js.Array[_] | DataSource | DataSourceOptions = null,
-    dateSerializationFormat: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    editing: GridBaseEditing = null,
-    elementAttr: js.Any = null,
-    errorRowEnabled: js.UndefOr[Boolean] = js.undefined,
-    filterBuilder: dxFilterBuilderOptions = null,
-    filterBuilderPopup: dxPopupOptions[dxPopup] = null,
-    filterPanel: AnonCustomizeText[T] = null,
-    filterRow: AnonApplyFilter = null,
-    filterSyncEnabled: Boolean | auto = null,
-    filterValue: String | js.Array[_] | js.Function = null,
-    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    focusedColumnIndex: Int | Double = null,
-    focusedRowEnabled: js.UndefOr[Boolean] = js.undefined,
-    focusedRowIndex: Int | Double = null,
-    focusedRowKey: js.Any = null,
-    headerFilter: AnonHeight = null,
-    height: Double | String | (js.Function0[Double | String]) = null,
-    highlightChanges: js.UndefOr[Boolean] = js.undefined,
-    hint: String = null,
-    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    keyboardNavigation: AnonEditOnKeyPress = null,
-    loadPanel: AnonIndicatorSrc = null,
-    noDataText: String = null,
-    onAdaptiveDetailRowPreparing: /* e */ AnonFormOptions[T] => _ = null,
-    onContentReady: /* e */ AnonComponentElement[T] => _ = null,
-    onDataErrorOccurred: /* e */ AnonError[T] => _ = null,
-    onDisposing: /* e */ AnonModel[T] => _ = null,
-    onInitNewRow: /* e */ AnonPromise[T] => _ = null,
-    onInitialized: /* e */ AnonElement[T] => _ = null,
-    onKeyDown: /* e */ AnonHandled[T] => _ = null,
-    onOptionChanged: /* e */ AnonName[T] => _ = null,
-    onRowCollapsed: /* e */ AnonKey[T] => _ = null,
-    onRowCollapsing: /* e */ AnonCancelComponent[T] => _ = null,
-    onRowExpanded: /* e */ AnonKey[T] => _ = null,
-    onRowExpanding: /* e */ AnonCancelComponent[T] => _ = null,
-    onRowInserted: /* e */ AnonComponentData[T] => _ = null,
-    onRowInserting: /* e */ AnonDataElement[T] => _ = null,
-    onRowRemoved: /* e */ AnonComponentData[T] => _ = null,
-    onRowRemoving: /* e */ AnonElementKey[T] => _ = null,
-    onRowUpdated: /* e */ AnonComponentData[T] => _ = null,
-    onRowUpdating: /* e */ AnonNewData[T] => _ = null,
-    onRowValidating: /* e */ AnonBrokenRules[T] => _ = null,
-    onSelectionChanged: /* e */ AnonCurrentDeselectedRowKeys[T] => _ = null,
-    onToolbarPreparing: /* e */ AnonToolbarOptions[T] => _ = null,
-    pager: AnonAllowedPageSizes = null,
-    paging: GridBasePaging = null,
-    renderAsync: js.UndefOr[Boolean] = js.undefined,
-    repaintChangesOnly: js.UndefOr[Boolean] = js.undefined,
-    rowAlternationEnabled: js.UndefOr[Boolean] = js.undefined,
-    rowDragging: AnonAllowDropInsideItem = null,
-    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
-    scrolling: GridBaseScrolling = null,
-    searchPanel: AnonHighlightCaseSensitive = null,
-    selectedRowKeys: js.Array[_] = null,
-    selection: GridBaseSelection = null,
-    showBorders: js.UndefOr[Boolean] = js.undefined,
-    showColumnHeaders: js.UndefOr[Boolean] = js.undefined,
-    showColumnLines: js.UndefOr[Boolean] = js.undefined,
-    showRowLines: js.UndefOr[Boolean] = js.undefined,
-    sorting: AnonAscendingText = null,
-    stateStoring: AnonCustomLoad = null,
-    tabIndex: Int | Double = null,
-    twoWayBindingEnabled: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Double | String | (js.Function0[Double | String]) = null,
-    wordWrapEnabled: js.UndefOr[Boolean] = js.undefined
-  ): GridBaseOptions[T] = {
+  def apply[T](): GridBaseOptions[T] = {
     val __obj = js.Dynamic.literal()
-    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowColumnReordering)) __obj.updateDynamic("allowColumnReordering")(allowColumnReordering.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowColumnResizing)) __obj.updateDynamic("allowColumnResizing")(allowColumnResizing.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoNavigateToFocusedRow)) __obj.updateDynamic("autoNavigateToFocusedRow")(autoNavigateToFocusedRow.asInstanceOf[js.Any])
-    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(cacheEnabled)) __obj.updateDynamic("cacheEnabled")(cacheEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(cellHintEnabled)) __obj.updateDynamic("cellHintEnabled")(cellHintEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(columnAutoWidth)) __obj.updateDynamic("columnAutoWidth")(columnAutoWidth.asInstanceOf[js.Any])
-    if (columnChooser != null) __obj.updateDynamic("columnChooser")(columnChooser.asInstanceOf[js.Any])
-    if (columnFixing != null) __obj.updateDynamic("columnFixing")(columnFixing.asInstanceOf[js.Any])
-    if (!js.isUndefined(columnHidingEnabled)) __obj.updateDynamic("columnHidingEnabled")(columnHidingEnabled.asInstanceOf[js.Any])
-    if (columnMinWidth != null) __obj.updateDynamic("columnMinWidth")(columnMinWidth.asInstanceOf[js.Any])
-    if (columnResizingMode != null) __obj.updateDynamic("columnResizingMode")(columnResizingMode.asInstanceOf[js.Any])
-    if (columnWidth != null) __obj.updateDynamic("columnWidth")(columnWidth.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (dateSerializationFormat != null) __obj.updateDynamic("dateSerializationFormat")(dateSerializationFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (editing != null) __obj.updateDynamic("editing")(editing.asInstanceOf[js.Any])
-    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
-    if (!js.isUndefined(errorRowEnabled)) __obj.updateDynamic("errorRowEnabled")(errorRowEnabled.asInstanceOf[js.Any])
-    if (filterBuilder != null) __obj.updateDynamic("filterBuilder")(filterBuilder.asInstanceOf[js.Any])
-    if (filterBuilderPopup != null) __obj.updateDynamic("filterBuilderPopup")(filterBuilderPopup.asInstanceOf[js.Any])
-    if (filterPanel != null) __obj.updateDynamic("filterPanel")(filterPanel.asInstanceOf[js.Any])
-    if (filterRow != null) __obj.updateDynamic("filterRow")(filterRow.asInstanceOf[js.Any])
-    if (filterSyncEnabled != null) __obj.updateDynamic("filterSyncEnabled")(filterSyncEnabled.asInstanceOf[js.Any])
-    if (filterValue != null) __obj.updateDynamic("filterValue")(filterValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.asInstanceOf[js.Any])
-    if (focusedColumnIndex != null) __obj.updateDynamic("focusedColumnIndex")(focusedColumnIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusedRowEnabled)) __obj.updateDynamic("focusedRowEnabled")(focusedRowEnabled.asInstanceOf[js.Any])
-    if (focusedRowIndex != null) __obj.updateDynamic("focusedRowIndex")(focusedRowIndex.asInstanceOf[js.Any])
-    if (focusedRowKey != null) __obj.updateDynamic("focusedRowKey")(focusedRowKey.asInstanceOf[js.Any])
-    if (headerFilter != null) __obj.updateDynamic("headerFilter")(headerFilter.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightChanges)) __obj.updateDynamic("highlightChanges")(highlightChanges.asInstanceOf[js.Any])
-    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.asInstanceOf[js.Any])
-    if (keyboardNavigation != null) __obj.updateDynamic("keyboardNavigation")(keyboardNavigation.asInstanceOf[js.Any])
-    if (loadPanel != null) __obj.updateDynamic("loadPanel")(loadPanel.asInstanceOf[js.Any])
-    if (noDataText != null) __obj.updateDynamic("noDataText")(noDataText.asInstanceOf[js.Any])
-    if (onAdaptiveDetailRowPreparing != null) __obj.updateDynamic("onAdaptiveDetailRowPreparing")(js.Any.fromFunction1(onAdaptiveDetailRowPreparing))
-    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
-    if (onDataErrorOccurred != null) __obj.updateDynamic("onDataErrorOccurred")(js.Any.fromFunction1(onDataErrorOccurred))
-    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
-    if (onInitNewRow != null) __obj.updateDynamic("onInitNewRow")(js.Any.fromFunction1(onInitNewRow))
-    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
-    if (onRowCollapsed != null) __obj.updateDynamic("onRowCollapsed")(js.Any.fromFunction1(onRowCollapsed))
-    if (onRowCollapsing != null) __obj.updateDynamic("onRowCollapsing")(js.Any.fromFunction1(onRowCollapsing))
-    if (onRowExpanded != null) __obj.updateDynamic("onRowExpanded")(js.Any.fromFunction1(onRowExpanded))
-    if (onRowExpanding != null) __obj.updateDynamic("onRowExpanding")(js.Any.fromFunction1(onRowExpanding))
-    if (onRowInserted != null) __obj.updateDynamic("onRowInserted")(js.Any.fromFunction1(onRowInserted))
-    if (onRowInserting != null) __obj.updateDynamic("onRowInserting")(js.Any.fromFunction1(onRowInserting))
-    if (onRowRemoved != null) __obj.updateDynamic("onRowRemoved")(js.Any.fromFunction1(onRowRemoved))
-    if (onRowRemoving != null) __obj.updateDynamic("onRowRemoving")(js.Any.fromFunction1(onRowRemoving))
-    if (onRowUpdated != null) __obj.updateDynamic("onRowUpdated")(js.Any.fromFunction1(onRowUpdated))
-    if (onRowUpdating != null) __obj.updateDynamic("onRowUpdating")(js.Any.fromFunction1(onRowUpdating))
-    if (onRowValidating != null) __obj.updateDynamic("onRowValidating")(js.Any.fromFunction1(onRowValidating))
-    if (onSelectionChanged != null) __obj.updateDynamic("onSelectionChanged")(js.Any.fromFunction1(onSelectionChanged))
-    if (onToolbarPreparing != null) __obj.updateDynamic("onToolbarPreparing")(js.Any.fromFunction1(onToolbarPreparing))
-    if (pager != null) __obj.updateDynamic("pager")(pager.asInstanceOf[js.Any])
-    if (paging != null) __obj.updateDynamic("paging")(paging.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderAsync)) __obj.updateDynamic("renderAsync")(renderAsync.asInstanceOf[js.Any])
-    if (!js.isUndefined(repaintChangesOnly)) __obj.updateDynamic("repaintChangesOnly")(repaintChangesOnly.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowAlternationEnabled)) __obj.updateDynamic("rowAlternationEnabled")(rowAlternationEnabled.asInstanceOf[js.Any])
-    if (rowDragging != null) __obj.updateDynamic("rowDragging")(rowDragging.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.asInstanceOf[js.Any])
-    if (scrolling != null) __obj.updateDynamic("scrolling")(scrolling.asInstanceOf[js.Any])
-    if (searchPanel != null) __obj.updateDynamic("searchPanel")(searchPanel.asInstanceOf[js.Any])
-    if (selectedRowKeys != null) __obj.updateDynamic("selectedRowKeys")(selectedRowKeys.asInstanceOf[js.Any])
-    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
-    if (!js.isUndefined(showBorders)) __obj.updateDynamic("showBorders")(showBorders.asInstanceOf[js.Any])
-    if (!js.isUndefined(showColumnHeaders)) __obj.updateDynamic("showColumnHeaders")(showColumnHeaders.asInstanceOf[js.Any])
-    if (!js.isUndefined(showColumnLines)) __obj.updateDynamic("showColumnLines")(showColumnLines.asInstanceOf[js.Any])
-    if (!js.isUndefined(showRowLines)) __obj.updateDynamic("showRowLines")(showRowLines.asInstanceOf[js.Any])
-    if (sorting != null) __obj.updateDynamic("sorting")(sorting.asInstanceOf[js.Any])
-    if (stateStoring != null) __obj.updateDynamic("stateStoring")(stateStoring.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(twoWayBindingEnabled)) __obj.updateDynamic("twoWayBindingEnabled")(twoWayBindingEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (!js.isUndefined(wordWrapEnabled)) __obj.updateDynamic("wordWrapEnabled")(wordWrapEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridBaseOptions[T]]
   }
+  @scala.inline
+  implicit class GridBaseOptionsOps[Self[t] <: GridBaseOptions[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withAllowColumnReordering(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowColumnReordering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowColumnReordering: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowColumnReordering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowColumnResizing(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowColumnResizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowColumnResizing: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowColumnResizing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoNavigateToFocusedRow(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoNavigateToFocusedRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoNavigateToFocusedRow: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoNavigateToFocusedRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheEnabled(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheEnabled: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellHintEnabled(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHintEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellHintEnabled: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHintEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnAutoWidth(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnAutoWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnAutoWidth: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnAutoWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnChooser(value: AnonEmptyPanelText): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnChooser: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnFixing(value: AnonEnabled): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnFixing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnFixing: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnFixing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnHidingEnabled(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHidingEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnHidingEnabled: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHidingEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnMinWidth(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnMinWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnMinWidth: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnMinWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnResizingMode(value: nextColumn | widget): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnResizingMode: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnWidth(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnWidth: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: js.Array[GridBaseColumn | String]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: String | js.Array[_] | DataSource | DataSourceOptions): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateSerializationFormat(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateSerializationFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateSerializationFormat: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateSerializationFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditing(value: GridBaseEditing): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditing: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorRowEnabled(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorRowEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorRowEnabled: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorRowEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterBuilder(value: dxFilterBuilderOptions): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterBuilder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterBuilder: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterBuilder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterBuilderPopup(value: dxPopupOptions[dxPopup]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterBuilderPopup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterBuilderPopup: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterBuilderPopup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterPanel(value: AnonCustomizeText[T]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterPanel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterPanel: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterPanel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterRow(value: AnonApplyFilter): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterRow: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterSyncEnabled(value: Boolean | auto): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterSyncEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterSyncEnabled: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterSyncEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterValue(value: String | js.Array[_] | js.Function): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterValue: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocusedColumnIndex(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedColumnIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocusedColumnIndex: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedColumnIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocusedRowEnabled(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedRowEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocusedRowEnabled: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedRowEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocusedRowIndex(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedRowIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocusedRowIndex: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedRowIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocusedRowKey(value: js.Any): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedRowKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocusedRowKey: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedRowKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderFilter(value: AnonHeight): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderFilter: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightChanges(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightChanges: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightChanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyboardNavigation(value: AnonEditOnKeyPress): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardNavigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyboardNavigation: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardNavigation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadPanel(value: AnonIndicatorSrc): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadPanel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadPanel: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadPanel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoDataText(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noDataText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoDataText: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noDataText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAdaptiveDetailRowPreparing(value: /* e */ AnonFormOptions[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdaptiveDetailRowPreparing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAdaptiveDetailRowPreparing: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAdaptiveDetailRowPreparing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDataErrorOccurred(value: /* e */ AnonError[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDataErrorOccurred")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDataErrorOccurred: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDataErrorOccurred")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnInitNewRow(value: /* e */ AnonPromise[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitNewRow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnInitNewRow: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitNewRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyDown(value: /* e */ AnonHandled[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyDown: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowCollapsed(value: /* e */ AnonKey[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowCollapsed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowCollapsed: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowCollapsed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowCollapsing(value: /* e */ AnonCancelComponent[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowCollapsing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowCollapsing: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowCollapsing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowExpanded(value: /* e */ AnonKey[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowExpanded")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowExpanded: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowExpanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowExpanding(value: /* e */ AnonCancelComponent[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowExpanding")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowExpanding: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowExpanding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowInserted(value: /* e */ AnonComponentData[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowInserted")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowInserted: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowInserted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowInserting(value: /* e */ AnonDataElement[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowInserting")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowInserting: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowInserting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowRemoved(value: /* e */ AnonComponentData[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowRemoved")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowRemoved: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowRemoved")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowRemoving(value: /* e */ AnonElementKey[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowRemoving")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowRemoving: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowRemoving")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowUpdated(value: /* e */ AnonComponentData[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowUpdated")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowUpdated: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowUpdating(value: /* e */ AnonNewData[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowUpdating")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowUpdating: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowUpdating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRowValidating(value: /* e */ AnonBrokenRules[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowValidating")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRowValidating: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRowValidating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelectionChanged(value: /* e */ AnonCurrentDeselectedRowKeys[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelectionChanged: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnToolbarPreparing(value: /* e */ AnonToolbarOptions[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onToolbarPreparing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnToolbarPreparing: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onToolbarPreparing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPager(value: AnonAllowedPageSizes): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pager")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPager: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pager")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaging(value: GridBasePaging): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaging: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderAsync(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAsync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderAsync: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepaintChangesOnly(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repaintChangesOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepaintChangesOnly: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repaintChangesOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowAlternationEnabled(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowAlternationEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowAlternationEnabled: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowAlternationEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowDragging(value: AnonAllowDropInsideItem): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowDragging: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDragging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrolling(value: GridBaseScrolling): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrolling: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchPanel(value: AnonHighlightCaseSensitive): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchPanel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchPanel: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchPanel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedRowKeys(value: js.Array[_]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRowKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedRowKeys: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRowKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelection(value: GridBaseSelection): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelection: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowBorders(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showBorders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowBorders: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showBorders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowColumnHeaders(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowColumnHeaders: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowColumnLines(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowColumnLines: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showColumnLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowRowLines(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showRowLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowRowLines: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showRowLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSorting(value: AnonAscendingText): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSorting: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateStoring(value: AnonCustomLoad): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateStoring")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateStoring: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateStoring")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTwoWayBindingEnabled(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("twoWayBindingEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTwoWayBindingEnabled: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("twoWayBindingEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWordWrapEnabled(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrapEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWordWrapEnabled: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrapEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

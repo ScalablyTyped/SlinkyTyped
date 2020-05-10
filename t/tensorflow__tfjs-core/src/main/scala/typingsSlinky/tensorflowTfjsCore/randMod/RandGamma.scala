@@ -22,7 +22,5 @@ class RandGamma protected () extends RandomGamma {
   var dtype: js.UndefOr[js.Any] = js.native
   var randn: js.Any = js.native
   var randu: js.Any = js.native
-  /* CompleteClass */
-  override def nextValue(): Double = js.native
 }
 

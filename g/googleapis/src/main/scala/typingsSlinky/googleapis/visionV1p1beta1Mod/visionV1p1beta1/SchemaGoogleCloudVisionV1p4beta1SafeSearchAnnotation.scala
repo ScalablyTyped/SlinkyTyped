@@ -41,20 +41,77 @@ trait SchemaGoogleCloudVisionV1p4beta1SafeSearchAnnotation extends js.Object {
 
 object SchemaGoogleCloudVisionV1p4beta1SafeSearchAnnotation {
   @scala.inline
-  def apply(
-    adult: String = null,
-    medical: String = null,
-    racy: String = null,
-    spoof: String = null,
-    violence: String = null
-  ): SchemaGoogleCloudVisionV1p4beta1SafeSearchAnnotation = {
+  def apply(): SchemaGoogleCloudVisionV1p4beta1SafeSearchAnnotation = {
     val __obj = js.Dynamic.literal()
-    if (adult != null) __obj.updateDynamic("adult")(adult.asInstanceOf[js.Any])
-    if (medical != null) __obj.updateDynamic("medical")(medical.asInstanceOf[js.Any])
-    if (racy != null) __obj.updateDynamic("racy")(racy.asInstanceOf[js.Any])
-    if (spoof != null) __obj.updateDynamic("spoof")(spoof.asInstanceOf[js.Any])
-    if (violence != null) __obj.updateDynamic("violence")(violence.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p4beta1SafeSearchAnnotation]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p4beta1SafeSearchAnnotationOps[Self <: SchemaGoogleCloudVisionV1p4beta1SafeSearchAnnotation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdult(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adult")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedical(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medical")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRacy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("racy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRacy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("racy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpoof(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spoof")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpoof: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spoof")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViolence(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("violence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViolence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("violence")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

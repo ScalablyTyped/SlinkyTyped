@@ -6,12 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Plugin extends js.Object {
-  var onStart: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onStop: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onStart: js.UndefOr[js.Function0[Unit]] = js.native
+  var onStop: js.UndefOr[js.Function0[Unit]] = js.native
   var onTransitionCancel: js.UndefOr[
     js.Function2[/* toState */ js.UndefOr[State], /* fromState */ js.UndefOr[State], Unit]
-  ] = js.undefined
+  ] = js.native
   var onTransitionError: js.UndefOr[
     js.Function3[
       /* toState */ js.UndefOr[State], 
@@ -19,10 +20,10 @@ trait Plugin extends js.Object {
       /* err */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var onTransitionStart: js.UndefOr[
     js.Function2[/* toState */ js.UndefOr[State], /* fromState */ js.UndefOr[State], Unit]
-  ] = js.undefined
+  ] = js.native
   var onTransitionSuccess: js.UndefOr[
     js.Function3[
       /* toState */ js.UndefOr[State], 
@@ -30,30 +31,111 @@ trait Plugin extends js.Object {
       /* opts */ js.UndefOr[NavigationOptions], 
       Unit
     ]
-  ] = js.undefined
-  var teardown: js.UndefOr[js.Function0[Unit]] = js.undefined
+  ] = js.native
+  var teardown: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object Plugin {
   @scala.inline
-  def apply(
-    onStart: () => Unit = null,
-    onStop: () => Unit = null,
-    onTransitionCancel: (/* toState */ js.UndefOr[State], /* fromState */ js.UndefOr[State]) => Unit = null,
-    onTransitionError: (/* toState */ js.UndefOr[State], /* fromState */ js.UndefOr[State], /* err */ js.UndefOr[js.Any]) => Unit = null,
-    onTransitionStart: (/* toState */ js.UndefOr[State], /* fromState */ js.UndefOr[State]) => Unit = null,
-    onTransitionSuccess: (/* toState */ js.UndefOr[State], /* fromState */ js.UndefOr[State], /* opts */ js.UndefOr[NavigationOptions]) => Unit = null,
-    teardown: () => Unit = null
-  ): Plugin = {
+  def apply(): Plugin = {
     val __obj = js.Dynamic.literal()
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction0(onStart))
-    if (onStop != null) __obj.updateDynamic("onStop")(js.Any.fromFunction0(onStop))
-    if (onTransitionCancel != null) __obj.updateDynamic("onTransitionCancel")(js.Any.fromFunction2(onTransitionCancel))
-    if (onTransitionError != null) __obj.updateDynamic("onTransitionError")(js.Any.fromFunction3(onTransitionError))
-    if (onTransitionStart != null) __obj.updateDynamic("onTransitionStart")(js.Any.fromFunction2(onTransitionStart))
-    if (onTransitionSuccess != null) __obj.updateDynamic("onTransitionSuccess")(js.Any.fromFunction3(onTransitionSuccess))
-    if (teardown != null) __obj.updateDynamic("teardown")(js.Any.fromFunction0(teardown))
     __obj.asInstanceOf[Plugin]
   }
+  @scala.inline
+  implicit class PluginOps[Self <: Plugin] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnStart(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTransitionCancel(value: (/* toState */ js.UndefOr[State], /* fromState */ js.UndefOr[State]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionCancel")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTransitionCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionCancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTransitionError(
+      value: (/* toState */ js.UndefOr[State], /* fromState */ js.UndefOr[State], /* err */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionError")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTransitionError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTransitionStart(value: (/* toState */ js.UndefOr[State], /* fromState */ js.UndefOr[State]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionStart")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTransitionStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTransitionSuccess(
+      value: (/* toState */ js.UndefOr[State], /* fromState */ js.UndefOr[State], /* opts */ js.UndefOr[NavigationOptions]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionSuccess")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTransitionSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTransitionSuccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeardown(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teardown")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutTeardown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teardown")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

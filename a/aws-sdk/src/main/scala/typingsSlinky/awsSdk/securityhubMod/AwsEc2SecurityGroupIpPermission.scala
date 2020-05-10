@@ -38,24 +38,101 @@ trait AwsEc2SecurityGroupIpPermission extends js.Object {
 
 object AwsEc2SecurityGroupIpPermission {
   @scala.inline
-  def apply(
-    FromPort: Int | scala.Double = null,
-    IpProtocol: NonEmptyString = null,
-    IpRanges: AwsEc2SecurityGroupIpRangeList = null,
-    Ipv6Ranges: AwsEc2SecurityGroupIpv6RangeList = null,
-    PrefixListIds: AwsEc2SecurityGroupPrefixListIdList = null,
-    ToPort: Int | scala.Double = null,
-    UserIdGroupPairs: AwsEc2SecurityGroupUserIdGroupPairList = null
-  ): AwsEc2SecurityGroupIpPermission = {
+  def apply(): AwsEc2SecurityGroupIpPermission = {
     val __obj = js.Dynamic.literal()
-    if (FromPort != null) __obj.updateDynamic("FromPort")(FromPort.asInstanceOf[js.Any])
-    if (IpProtocol != null) __obj.updateDynamic("IpProtocol")(IpProtocol.asInstanceOf[js.Any])
-    if (IpRanges != null) __obj.updateDynamic("IpRanges")(IpRanges.asInstanceOf[js.Any])
-    if (Ipv6Ranges != null) __obj.updateDynamic("Ipv6Ranges")(Ipv6Ranges.asInstanceOf[js.Any])
-    if (PrefixListIds != null) __obj.updateDynamic("PrefixListIds")(PrefixListIds.asInstanceOf[js.Any])
-    if (ToPort != null) __obj.updateDynamic("ToPort")(ToPort.asInstanceOf[js.Any])
-    if (UserIdGroupPairs != null) __obj.updateDynamic("UserIdGroupPairs")(UserIdGroupPairs.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsEc2SecurityGroupIpPermission]
   }
+  @scala.inline
+  implicit class AwsEc2SecurityGroupIpPermissionOps[Self <: AwsEc2SecurityGroupIpPermission] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFromPort(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpProtocol(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpRanges(value: AwsEc2SecurityGroupIpRangeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6Ranges(value: AwsEc2SecurityGroupIpv6RangeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Ranges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Ranges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Ranges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixListIds(value: AwsEc2SecurityGroupPrefixListIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixListIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixListIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixListIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToPort(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ToPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ToPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserIdGroupPairs(value: AwsEc2SecurityGroupUserIdGroupPairList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserIdGroupPairs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserIdGroupPairs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserIdGroupPairs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

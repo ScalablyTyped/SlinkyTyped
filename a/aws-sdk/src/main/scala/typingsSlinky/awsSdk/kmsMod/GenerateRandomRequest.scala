@@ -18,11 +18,41 @@ trait GenerateRandomRequest extends js.Object {
 
 object GenerateRandomRequest {
   @scala.inline
-  def apply(CustomKeyStoreId: CustomKeyStoreIdType = null, NumberOfBytes: Int | Double = null): GenerateRandomRequest = {
+  def apply(): GenerateRandomRequest = {
     val __obj = js.Dynamic.literal()
-    if (CustomKeyStoreId != null) __obj.updateDynamic("CustomKeyStoreId")(CustomKeyStoreId.asInstanceOf[js.Any])
-    if (NumberOfBytes != null) __obj.updateDynamic("NumberOfBytes")(NumberOfBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateRandomRequest]
   }
+  @scala.inline
+  implicit class GenerateRandomRequestOps[Self <: GenerateRandomRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomKeyStoreId(value: CustomKeyStoreIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomKeyStoreId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomKeyStoreId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomKeyStoreId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfBytes(value: NumberOfBytesType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

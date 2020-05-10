@@ -14,10 +14,29 @@ trait DisassociateTransitGatewayRouteTableResult extends js.Object {
 
 object DisassociateTransitGatewayRouteTableResult {
   @scala.inline
-  def apply(Association: TransitGatewayAssociation = null): DisassociateTransitGatewayRouteTableResult = {
+  def apply(): DisassociateTransitGatewayRouteTableResult = {
     val __obj = js.Dynamic.literal()
-    if (Association != null) __obj.updateDynamic("Association")(Association.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisassociateTransitGatewayRouteTableResult]
   }
+  @scala.inline
+  implicit class DisassociateTransitGatewayRouteTableResultOps[Self <: DisassociateTransitGatewayRouteTableResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociation(value: TransitGatewayAssociation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Association")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Association")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

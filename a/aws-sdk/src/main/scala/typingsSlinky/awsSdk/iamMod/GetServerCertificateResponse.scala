@@ -16,8 +16,21 @@ object GetServerCertificateResponse {
   @scala.inline
   def apply(ServerCertificate: ServerCertificate): GetServerCertificateResponse = {
     val __obj = js.Dynamic.literal(ServerCertificate = ServerCertificate.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetServerCertificateResponse]
   }
+  @scala.inline
+  implicit class GetServerCertificateResponseOps[Self <: GetServerCertificateResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServerCertificate(value: ServerCertificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

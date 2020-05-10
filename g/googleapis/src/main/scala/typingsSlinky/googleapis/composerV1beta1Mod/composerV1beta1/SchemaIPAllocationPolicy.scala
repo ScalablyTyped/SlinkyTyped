@@ -58,20 +58,77 @@ trait SchemaIPAllocationPolicy extends js.Object {
 
 object SchemaIPAllocationPolicy {
   @scala.inline
-  def apply(
-    clusterIpv4CidrBlock: String = null,
-    clusterSecondaryRangeName: String = null,
-    servicesIpv4CidrBlock: String = null,
-    servicesSecondaryRangeName: String = null,
-    useIpAliases: js.UndefOr[Boolean] = js.undefined
-  ): SchemaIPAllocationPolicy = {
+  def apply(): SchemaIPAllocationPolicy = {
     val __obj = js.Dynamic.literal()
-    if (clusterIpv4CidrBlock != null) __obj.updateDynamic("clusterIpv4CidrBlock")(clusterIpv4CidrBlock.asInstanceOf[js.Any])
-    if (clusterSecondaryRangeName != null) __obj.updateDynamic("clusterSecondaryRangeName")(clusterSecondaryRangeName.asInstanceOf[js.Any])
-    if (servicesIpv4CidrBlock != null) __obj.updateDynamic("servicesIpv4CidrBlock")(servicesIpv4CidrBlock.asInstanceOf[js.Any])
-    if (servicesSecondaryRangeName != null) __obj.updateDynamic("servicesSecondaryRangeName")(servicesSecondaryRangeName.asInstanceOf[js.Any])
-    if (!js.isUndefined(useIpAliases)) __obj.updateDynamic("useIpAliases")(useIpAliases.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIPAllocationPolicy]
   }
+  @scala.inline
+  implicit class SchemaIPAllocationPolicyOps[Self <: SchemaIPAllocationPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterIpv4CidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterIpv4CidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterIpv4CidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterIpv4CidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterSecondaryRangeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterSecondaryRangeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterSecondaryRangeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterSecondaryRangeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServicesIpv4CidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicesIpv4CidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServicesIpv4CidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicesIpv4CidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServicesSecondaryRangeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicesSecondaryRangeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServicesSecondaryRangeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicesSecondaryRangeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseIpAliases(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useIpAliases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseIpAliases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useIpAliases")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

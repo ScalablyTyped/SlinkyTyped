@@ -23,7 +23,5 @@ class Query[R /* <: QueryResultRow */, I /* <: js.Array[_] */] ()
   def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("on")
   def on_row(event: row, listener: js.Function2[/* row */ R, /* result */ js.UndefOr[ResultBuilder[R]], Unit]): this.type = js.native
-  /* CompleteClass */
-  override def submit(connection: Connection): Unit = js.native
 }
 

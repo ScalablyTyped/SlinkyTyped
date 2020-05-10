@@ -42,24 +42,107 @@ trait ReEncryptRequest extends js.Object {
 
 object ReEncryptRequest {
   @scala.inline
-  def apply(
-    CiphertextBlob: CiphertextType,
-    DestinationKeyId: KeyIdType,
-    DestinationEncryptionAlgorithm: EncryptionAlgorithmSpec = null,
-    DestinationEncryptionContext: EncryptionContextType = null,
-    GrantTokens: GrantTokenList = null,
-    SourceEncryptionAlgorithm: EncryptionAlgorithmSpec = null,
-    SourceEncryptionContext: EncryptionContextType = null,
-    SourceKeyId: KeyIdType = null
-  ): ReEncryptRequest = {
+  def apply(CiphertextBlob: CiphertextType, DestinationKeyId: KeyIdType): ReEncryptRequest = {
     val __obj = js.Dynamic.literal(CiphertextBlob = CiphertextBlob.asInstanceOf[js.Any], DestinationKeyId = DestinationKeyId.asInstanceOf[js.Any])
-    if (DestinationEncryptionAlgorithm != null) __obj.updateDynamic("DestinationEncryptionAlgorithm")(DestinationEncryptionAlgorithm.asInstanceOf[js.Any])
-    if (DestinationEncryptionContext != null) __obj.updateDynamic("DestinationEncryptionContext")(DestinationEncryptionContext.asInstanceOf[js.Any])
-    if (GrantTokens != null) __obj.updateDynamic("GrantTokens")(GrantTokens.asInstanceOf[js.Any])
-    if (SourceEncryptionAlgorithm != null) __obj.updateDynamic("SourceEncryptionAlgorithm")(SourceEncryptionAlgorithm.asInstanceOf[js.Any])
-    if (SourceEncryptionContext != null) __obj.updateDynamic("SourceEncryptionContext")(SourceEncryptionContext.asInstanceOf[js.Any])
-    if (SourceKeyId != null) __obj.updateDynamic("SourceKeyId")(SourceKeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReEncryptRequest]
   }
+  @scala.inline
+  implicit class ReEncryptRequestOps[Self <: ReEncryptRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCiphertextBlobUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CiphertextBlob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCiphertextBlob(value: CiphertextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CiphertextBlob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestinationKeyId(value: KeyIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestinationEncryptionAlgorithm(value: EncryptionAlgorithmSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationEncryptionAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationEncryptionAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationEncryptionAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationEncryptionContext(value: EncryptionContextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationEncryptionContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationEncryptionContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationEncryptionContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrantTokens(value: GrantTokenList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantTokens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTokens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceEncryptionAlgorithm(value: EncryptionAlgorithmSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceEncryptionAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceEncryptionAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceEncryptionAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceEncryptionContext(value: EncryptionContextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceEncryptionContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceEncryptionContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceEncryptionContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceKeyId(value: KeyIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceKeyId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

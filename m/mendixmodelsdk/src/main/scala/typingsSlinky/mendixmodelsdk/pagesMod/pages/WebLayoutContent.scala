@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 8.0.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -36,14 +36,14 @@ class WebLayoutContent protected () extends LayoutContent {
   @JSName("model")
   var model_FWebLayoutContent: IModel = js.native
   @JSName("containerAsLayout")
-  def containerAsLayout_MWebLayoutContent(): Layout = js.native
+  def containerAsLayout_MWebLayoutContent: Layout = js.native
   def layoutCall(): js.Any = js.native
   def layoutCall(newValue: LayoutCall): js.Any = js.native
   @JSName("layoutCall")
-  def layoutCall_Union(): LayoutCall | Null = js.native
-  def layoutType(): LayoutType = js.native
+  def layoutCall_Union: LayoutCall | Null = js.native
+  def layoutType: LayoutType = js.native
   def layoutType(newValue: LayoutType): js.Any = js.native
-  def widgets(): IList[Widget] = js.native
+  def widgets: IList[Widget] = js.native
 }
 
 /* static members */

@@ -1,11 +1,8 @@
 package typingsSlinky.victory.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.victory.Anon1
 import typingsSlinky.victory.AnonAxisLabel
 import typingsSlinky.victory.AnonXBoolean
@@ -32,90 +29,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object VictoryAxis
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryAxis] {
+object VictoryAxis {
   @JSImport("victory", "VictoryAxis")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
-  def apply(
-    animate: Boolean | AnimatePropTypeInterface = null,
-    axisComponent: ReactElement = null,
-    axisLabelComponent: ReactElement = null,
-    axisValue: Double | String | js.Object = null,
-    containerComponent: ReactElement = null,
-    crossAxis: js.UndefOr[Boolean] = js.undefined,
-    dependentAxis: js.UndefOr[Boolean] = js.undefined,
-    domain: DomainPropType = null,
-    events: js.Array[
-      EventPropTypeInterface[axis | axisLabel | grid | ticks | tickLabels | parent, Double | String]
-    ] = null,
-    fixLabelOverlap: js.UndefOr[Boolean] = js.undefined,
-    gridComponent: ReactElement = null,
-    groupComponent: ReactElement = null,
-    height: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    invertAxis: js.UndefOr[Boolean] = js.undefined,
-    label: js.Any = null,
-    maxDomain: Double | AnonY = null,
-    minDomain: Double | AnonY = null,
-    offsetX: Int | Double = null,
-    offsetY: Int | Double = null,
-    orientation: top | bottom | left | right = null,
-    padding: PaddingProps = null,
-    scale: ScalePropType | D3Scale | Anon1 = null,
-    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
-    standalone: js.UndefOr[Boolean] = js.undefined,
-    style: AnonAxisLabel = null,
-    theme: VictoryThemeDefinition = null,
-    tickComponent: ReactElement = null,
-    tickCount: Int | Double = null,
-    tickFormat: js.Array[_] | (js.Function3[/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_], String | Double]) = null,
-    tickLabelComponent: ReactElement = null,
-    tickValues: js.Array[_] = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAxis] = {
-    val __obj = js.Dynamic.literal()
-    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (axisComponent != null) __obj.updateDynamic("axisComponent")(axisComponent.asInstanceOf[js.Any])
-    if (axisLabelComponent != null) __obj.updateDynamic("axisLabelComponent")(axisLabelComponent.asInstanceOf[js.Any])
-    if (axisValue != null) __obj.updateDynamic("axisValue")(axisValue.asInstanceOf[js.Any])
-    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
-    if (!js.isUndefined(crossAxis)) __obj.updateDynamic("crossAxis")(crossAxis.asInstanceOf[js.Any])
-    if (!js.isUndefined(dependentAxis)) __obj.updateDynamic("dependentAxis")(dependentAxis.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixLabelOverlap)) __obj.updateDynamic("fixLabelOverlap")(fixLabelOverlap.asInstanceOf[js.Any])
-    if (gridComponent != null) __obj.updateDynamic("gridComponent")(gridComponent.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (!js.isUndefined(invertAxis)) __obj.updateDynamic("invertAxis")(invertAxis.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
-    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
-    if (offsetX != null) __obj.updateDynamic("offsetX")(offsetX.asInstanceOf[js.Any])
-    if (offsetY != null) __obj.updateDynamic("offsetY")(offsetY.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
-    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tickComponent != null) __obj.updateDynamic("tickComponent")(tickComponent.asInstanceOf[js.Any])
-    if (tickCount != null) __obj.updateDynamic("tickCount")(tickCount.asInstanceOf[js.Any])
-    if (tickFormat != null) __obj.updateDynamic("tickFormat")(tickFormat.asInstanceOf[js.Any])
-    if (tickLabelComponent != null) __obj.updateDynamic("tickLabelComponent")(tickLabelComponent.asInstanceOf[js.Any])
-    if (tickValues != null) __obj.updateDynamic("tickValues")(tickValues.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAxis] {
+    @scala.inline
+    def animate(value: Boolean | AnimatePropTypeInterface): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisComponent(value: ReactElement): this.type = set("axisComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisLabelComponent(value: ReactElement): this.type = set("axisLabelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisValue(value: Double | String | js.Object): this.type = set("axisValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerComponent(value: ReactElement): this.type = set("containerComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def crossAxis(value: Boolean): this.type = set("crossAxis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dependentAxis(value: Boolean): this.type = set("dependentAxis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def domain(value: DomainPropType): this.type = set("domain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def events(
+      value: js.Array[
+          EventPropTypeInterface[axis | axisLabel | grid | ticks | tickLabels | parent, Double | String]
+        ]
+    ): this.type = set("events", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixLabelOverlap(value: Boolean): this.type = set("fixLabelOverlap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def gridComponent(value: ReactElement): this.type = set("gridComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponent(value: ReactElement): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def invertAxis(value: Boolean): this.type = set("invertAxis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: js.Any): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDomain(value: Double | AnonY): this.type = set("maxDomain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDomain(value: Double | AnonY): this.type = set("minDomain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetX(value: Double): this.type = set("offsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetY(value: Double): this.type = set("offsetY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def orientation(value: top | bottom | left | right): this.type = set("orientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: PaddingProps): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: ScalePropType | D3Scale | Anon1): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def singleQuadrantDomainPadding(value: Boolean | AnonXBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def standalone(value: Boolean): this.type = set("standalone", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: AnonAxisLabel): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: VictoryThemeDefinition): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickComponent(value: ReactElement): this.type = set("tickComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickCount(value: Double): this.type = set("tickCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickFormatFunction3(value: (/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_]) => String | Double): this.type = set("tickFormat", js.Any.fromFunction3(value))
+    @scala.inline
+    def tickFormat(
+      value: js.Array[_] | (js.Function3[/* tick */ js.Any, /* index */ Double, /* ticks */ js.Array[_], String | Double])
+    ): this.type = set("tickFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickLabelComponent(value: ReactElement): this.type = set("tickLabelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tickValues(value: js.Array[_]): this.type = set("tickValues", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAxis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryAxis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = VictoryAxisProps
+  
+  def withProps(p: VictoryAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: VictoryAxis.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

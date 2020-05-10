@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CloudWatchLogsEvent extends js.Object {
-  var awslogs: CloudWatchLogsEventData
+  var awslogs: CloudWatchLogsEventData = js.native
 }
 
 object CloudWatchLogsEvent {
   @scala.inline
   def apply(awslogs: CloudWatchLogsEventData): CloudWatchLogsEvent = {
     val __obj = js.Dynamic.literal(awslogs = awslogs.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CloudWatchLogsEvent]
   }
+  @scala.inline
+  implicit class CloudWatchLogsEventOps[Self <: CloudWatchLogsEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwslogs(value: CloudWatchLogsEventData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awslogs")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

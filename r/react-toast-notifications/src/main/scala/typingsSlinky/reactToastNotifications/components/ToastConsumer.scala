@@ -1,17 +1,18 @@
 package typingsSlinky.reactToastNotifications.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.reactToastNotifications.mod.ToastConsumerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ToastConsumer
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactToastNotifications.mod.ToastConsumer] {
+object ToastConsumer {
   @JSImport("react-toast-notifications", "ToastConsumer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ToastConsumerProps): Default[tag.type, typingsSlinky.reactToastNotifications.mod.ToastConsumer] = new Default[tag.type, typingsSlinky.reactToastNotifications.mod.ToastConsumer](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ToastConsumer.type): Default[tag.type, typingsSlinky.reactToastNotifications.mod.ToastConsumer] = new Default[tag.type, typingsSlinky.reactToastNotifications.mod.ToastConsumer](js.Array(this.component, js.Dictionary.empty))()
 }
 

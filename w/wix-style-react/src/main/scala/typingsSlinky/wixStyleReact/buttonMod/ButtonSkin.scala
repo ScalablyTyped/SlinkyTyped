@@ -18,22 +18,20 @@ trait ButtonSkin extends js.Object
 
 object ButtonSkin {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dark: typingsSlinky.wixStyleReact.wixStyleReactStrings.dark = "dark".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.wixStyleReact.wixStyleReactStrings.dark = this.cast("dark")
+  def destructive: typingsSlinky.wixStyleReact.wixStyleReactStrings.destructive = "destructive".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.destructive]
   @scala.inline
-  def destructive: typingsSlinky.wixStyleReact.wixStyleReactStrings.destructive = this.cast("destructive")
+  def inverted: typingsSlinky.wixStyleReact.wixStyleReactStrings.inverted = "inverted".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.inverted]
   @scala.inline
-  def inverted: typingsSlinky.wixStyleReact.wixStyleReactStrings.inverted = this.cast("inverted")
+  def light: typingsSlinky.wixStyleReact.wixStyleReactStrings.light = "light".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.light]
   @scala.inline
-  def light: typingsSlinky.wixStyleReact.wixStyleReactStrings.light = this.cast("light")
+  def premium: typingsSlinky.wixStyleReact.wixStyleReactStrings.premium = "premium".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.premium]
   @scala.inline
-  def premium: typingsSlinky.wixStyleReact.wixStyleReactStrings.premium = this.cast("premium")
+  def `premium-light`: typingsSlinky.wixStyleReact.wixStyleReactStrings.`premium-light` = "premium-light".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.`premium-light`]
   @scala.inline
-  def `premium-light`: typingsSlinky.wixStyleReact.wixStyleReactStrings.`premium-light` = this.cast("premium-light")
+  def standard: typingsSlinky.wixStyleReact.wixStyleReactStrings.standard = "standard".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.standard]
   @scala.inline
-  def standard: typingsSlinky.wixStyleReact.wixStyleReactStrings.standard = this.cast("standard")
-  @scala.inline
-  def transparent: typingsSlinky.wixStyleReact.wixStyleReactStrings.transparent = this.cast("transparent")
+  def transparent: typingsSlinky.wixStyleReact.wixStyleReactStrings.transparent = "transparent".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.transparent]
 }
 

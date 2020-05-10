@@ -4,19 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UserSummary extends UserOrOrgSummary {
-  var followers_url: String
-  var following_url: String
-  var gists_url: String
-  var gravatar_id: String
-  var html_url: String
-  var organizations_url: String
-  var received_events_url: String
-  var site_admin: Boolean
-  var starred_url: String
-  var subscriptions_url: String
+  var followers_url: String = js.native
+  var following_url: String = js.native
+  var gists_url: String = js.native
+  var gravatar_id: String = js.native
+  var html_url: String = js.native
+  var organizations_url: String = js.native
+  var received_events_url: String = js.native
+  var site_admin: Boolean = js.native
+  var starred_url: String = js.native
+  var subscriptions_url: String = js.native
   @JSName("type")
-  var type_UserSummary: typingsSlinky.typedGithubApi.typedGithubApiStrings.User
+  var type_UserSummary: typingsSlinky.typedGithubApi.typedGithubApiStrings.User = js.native
 }
 
 object UserSummary {
@@ -44,5 +45,79 @@ object UserSummary {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserSummary]
   }
+  @scala.inline
+  implicit class UserSummaryOps[Self <: UserSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFollowers_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followers_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFollowing_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("following_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGists_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gists_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGravatar_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gravatar_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrganizations_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organizations_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReceived_events_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("received_events_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSite_admin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("site_admin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStarred_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starred_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubscriptions_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: typingsSlinky.typedGithubApi.typedGithubApiStrings.User): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

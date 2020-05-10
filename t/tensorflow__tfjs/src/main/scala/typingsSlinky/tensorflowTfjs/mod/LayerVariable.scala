@@ -1,6 +1,7 @@
 package typingsSlinky.tensorflowTfjs.mod
 
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.constraintsMod.Constraint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,24 +25,17 @@ class LayerVariable protected ()
     * variable after optimize updates
     * @throws ValueError if `name` is `null` or `undefined`.
     */
-  def this(`val`: typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]) = this()
+  def this(`val`: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]) = this()
+  def this(`val`: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], dtype: DataType) = this()
+  def this(`val`: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], dtype: DataType, name: String) = this()
   def this(
-    `val`: typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank],
-    dtype: DataType
-  ) = this()
-  def this(
-    `val`: typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank],
-    dtype: DataType,
-    name: String
-  ) = this()
-  def this(
-    `val`: typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank],
+    `val`: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank],
     dtype: DataType,
     name: String,
     trainable: Boolean
   ) = this()
   def this(
-    `val`: typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank],
+    `val`: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank],
     dtype: DataType,
     name: String,
     trainable: Boolean,

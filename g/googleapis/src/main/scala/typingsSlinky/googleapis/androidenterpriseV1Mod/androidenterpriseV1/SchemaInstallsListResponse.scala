@@ -23,11 +23,41 @@ trait SchemaInstallsListResponse extends js.Object {
 
 object SchemaInstallsListResponse {
   @scala.inline
-  def apply(install: js.Array[SchemaInstall] = null, kind: String = null): SchemaInstallsListResponse = {
+  def apply(): SchemaInstallsListResponse = {
     val __obj = js.Dynamic.literal()
-    if (install != null) __obj.updateDynamic("install")(install.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstallsListResponse]
   }
+  @scala.inline
+  implicit class SchemaInstallsListResponseOps[Self <: SchemaInstallsListResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstall(value: js.Array[SchemaInstall]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("install")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("install")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

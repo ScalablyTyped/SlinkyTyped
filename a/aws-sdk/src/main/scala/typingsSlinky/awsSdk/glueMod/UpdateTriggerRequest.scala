@@ -20,8 +20,27 @@ object UpdateTriggerRequest {
   @scala.inline
   def apply(Name: NameString, TriggerUpdate: TriggerUpdate): UpdateTriggerRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], TriggerUpdate = TriggerUpdate.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UpdateTriggerRequest]
   }
+  @scala.inline
+  implicit class UpdateTriggerRequestOps[Self <: UpdateTriggerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTriggerUpdate(value: TriggerUpdate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TriggerUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

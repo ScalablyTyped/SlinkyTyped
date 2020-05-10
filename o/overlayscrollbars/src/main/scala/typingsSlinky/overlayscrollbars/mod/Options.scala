@@ -9,54 +9,223 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var autoUpdate: js.UndefOr[Boolean | Null] = js.undefined
-  var autoUpdateInterval: js.UndefOr[Double] = js.undefined
-  var callbacks: js.UndefOr[AnonOnContentSizeChanged] = js.undefined
-  var className: js.UndefOr[String | Null] = js.undefined
-  var clipAlways: js.UndefOr[Boolean] = js.undefined
-  var nativeScrollbarsOverlaid: js.UndefOr[AnonInitialize] = js.undefined
-  var normalizeRTL: js.UndefOr[Boolean] = js.undefined
-  var overflowBehavior: js.UndefOr[AnonXOverflowBehavior] = js.undefined
-  var paddingAbsolute: js.UndefOr[Boolean] = js.undefined
-  var resize: js.UndefOr[ResizeBehavior] = js.undefined
-  var scrollbars: js.UndefOr[AnonAutoHide] = js.undefined
-  var sizeAutoCapable: js.UndefOr[Boolean] = js.undefined
-  var textarea: js.UndefOr[AnonDynHeight] = js.undefined
+  var autoUpdate: js.UndefOr[Boolean | Null] = js.native
+  var autoUpdateInterval: js.UndefOr[Double] = js.native
+  var callbacks: js.UndefOr[AnonOnContentSizeChanged] = js.native
+  var className: js.UndefOr[String | Null] = js.native
+  var clipAlways: js.UndefOr[Boolean] = js.native
+  var nativeScrollbarsOverlaid: js.UndefOr[AnonInitialize] = js.native
+  var normalizeRTL: js.UndefOr[Boolean] = js.native
+  var overflowBehavior: js.UndefOr[AnonXOverflowBehavior] = js.native
+  var paddingAbsolute: js.UndefOr[Boolean] = js.native
+  var resize: js.UndefOr[ResizeBehavior] = js.native
+  var scrollbars: js.UndefOr[AnonAutoHide] = js.native
+  var sizeAutoCapable: js.UndefOr[Boolean] = js.native
+  var textarea: js.UndefOr[AnonDynHeight] = js.native
+  var updateOnLoad: js.UndefOr[String | js.Array[String] | Null] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    autoUpdate: js.UndefOr[Boolean] = js.undefined,
-    autoUpdateInterval: Int | Double = null,
-    callbacks: AnonOnContentSizeChanged = null,
-    className: String = null,
-    clipAlways: js.UndefOr[Boolean] = js.undefined,
-    nativeScrollbarsOverlaid: AnonInitialize = null,
-    normalizeRTL: js.UndefOr[Boolean] = js.undefined,
-    overflowBehavior: AnonXOverflowBehavior = null,
-    paddingAbsolute: js.UndefOr[Boolean] = js.undefined,
-    resize: ResizeBehavior = null,
-    scrollbars: AnonAutoHide = null,
-    sizeAutoCapable: js.UndefOr[Boolean] = js.undefined,
-    textarea: AnonDynHeight = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoUpdate)) __obj.updateDynamic("autoUpdate")(autoUpdate.asInstanceOf[js.Any])
-    if (autoUpdateInterval != null) __obj.updateDynamic("autoUpdateInterval")(autoUpdateInterval.asInstanceOf[js.Any])
-    if (callbacks != null) __obj.updateDynamic("callbacks")(callbacks.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(clipAlways)) __obj.updateDynamic("clipAlways")(clipAlways.asInstanceOf[js.Any])
-    if (nativeScrollbarsOverlaid != null) __obj.updateDynamic("nativeScrollbarsOverlaid")(nativeScrollbarsOverlaid.asInstanceOf[js.Any])
-    if (!js.isUndefined(normalizeRTL)) __obj.updateDynamic("normalizeRTL")(normalizeRTL.asInstanceOf[js.Any])
-    if (overflowBehavior != null) __obj.updateDynamic("overflowBehavior")(overflowBehavior.asInstanceOf[js.Any])
-    if (!js.isUndefined(paddingAbsolute)) __obj.updateDynamic("paddingAbsolute")(paddingAbsolute.asInstanceOf[js.Any])
-    if (resize != null) __obj.updateDynamic("resize")(resize.asInstanceOf[js.Any])
-    if (scrollbars != null) __obj.updateDynamic("scrollbars")(scrollbars.asInstanceOf[js.Any])
-    if (!js.isUndefined(sizeAutoCapable)) __obj.updateDynamic("sizeAutoCapable")(sizeAutoCapable.asInstanceOf[js.Any])
-    if (textarea != null) __obj.updateDynamic("textarea")(textarea.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoUpdate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoUpdateNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdate")(null)
+        ret
+    }
+    @scala.inline
+    def withAutoUpdateInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdateInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoUpdateInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdateInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallbacks(value: AnonOnContentSizeChanged): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallbacks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(null)
+        ret
+    }
+    @scala.inline
+    def withClipAlways(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipAlways")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipAlways: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipAlways")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNativeScrollbarsOverlaid(value: AnonInitialize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeScrollbarsOverlaid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNativeScrollbarsOverlaid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeScrollbarsOverlaid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormalizeRTL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeRTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNormalizeRTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeRTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowBehavior(value: AnonXOverflowBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingAbsolute(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingAbsolute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingAbsolute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingAbsolute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResize(value: ResizeBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollbars(value: AnonAutoHide): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollbars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeAutoCapable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeAutoCapable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeAutoCapable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeAutoCapable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextarea(value: AnonDynHeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextarea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateOnLoad(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOnLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateOnLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOnLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateOnLoadNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateOnLoad")(null)
+        ret
+    }
+  }
+  
 }
 

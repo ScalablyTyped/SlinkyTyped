@@ -19,24 +19,22 @@ trait Key extends js.Object
 
 object Key {
   @scala.inline
-  def block: typingsSlinky.sloc.slocStrings.block = this.cast("block")
+  def block: typingsSlinky.sloc.slocStrings.block = "block".asInstanceOf[typingsSlinky.sloc.slocStrings.block]
   @scala.inline
-  def blockEmpty: typingsSlinky.sloc.slocStrings.blockEmpty = this.cast("blockEmpty")
+  def blockEmpty: typingsSlinky.sloc.slocStrings.blockEmpty = "blockEmpty".asInstanceOf[typingsSlinky.sloc.slocStrings.blockEmpty]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def comment: typingsSlinky.sloc.slocStrings.comment = "comment".asInstanceOf[typingsSlinky.sloc.slocStrings.comment]
   @scala.inline
-  def comment: typingsSlinky.sloc.slocStrings.comment = this.cast("comment")
+  def empty: typingsSlinky.sloc.slocStrings.empty = "empty".asInstanceOf[typingsSlinky.sloc.slocStrings.empty]
   @scala.inline
-  def empty: typingsSlinky.sloc.slocStrings.empty = this.cast("empty")
+  def mixed: typingsSlinky.sloc.slocStrings.mixed = "mixed".asInstanceOf[typingsSlinky.sloc.slocStrings.mixed]
   @scala.inline
-  def mixed: typingsSlinky.sloc.slocStrings.mixed = this.cast("mixed")
+  def single: typingsSlinky.sloc.slocStrings.single = "single".asInstanceOf[typingsSlinky.sloc.slocStrings.single]
   @scala.inline
-  def single: typingsSlinky.sloc.slocStrings.single = this.cast("single")
+  def source: typingsSlinky.sloc.slocStrings.source = "source".asInstanceOf[typingsSlinky.sloc.slocStrings.source]
   @scala.inline
-  def source: typingsSlinky.sloc.slocStrings.source = this.cast("source")
+  def todo: typingsSlinky.sloc.slocStrings.todo = "todo".asInstanceOf[typingsSlinky.sloc.slocStrings.todo]
   @scala.inline
-  def todo: typingsSlinky.sloc.slocStrings.todo = this.cast("todo")
-  @scala.inline
-  def total: typingsSlinky.sloc.slocStrings.total = this.cast("total")
+  def total: typingsSlinky.sloc.slocStrings.total = "total".asInstanceOf[typingsSlinky.sloc.slocStrings.total]
 }
 

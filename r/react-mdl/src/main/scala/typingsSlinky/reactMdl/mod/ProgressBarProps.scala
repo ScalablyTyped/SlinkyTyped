@@ -6,30 +6,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProgressBarProps
   extends AllHTMLAttributes[js.Any]
      with ClassAttributes[js.Any] {
-  var buffer: js.UndefOr[Double] = js.undefined
-  var indeterminate: js.UndefOr[Boolean] = js.undefined
-  var progress: js.UndefOr[Double] = js.undefined
+  var buffer: js.UndefOr[Double] = js.native
+  var indeterminate: js.UndefOr[Boolean] = js.native
+  var progress: js.UndefOr[Double] = js.native
 }
 
 object ProgressBarProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[js.Any] = null,
-    ClassAttributes: ClassAttributes[js.Any] = null,
-    buffer: Int | Double = null,
-    indeterminate: js.UndefOr[Boolean] = js.undefined,
-    progress: Int | Double = null
-  ): ProgressBarProps = {
+  def apply(): ProgressBarProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (buffer != null) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (!js.isUndefined(indeterminate)) __obj.updateDynamic("indeterminate")(indeterminate.asInstanceOf[js.Any])
-    if (progress != null) __obj.updateDynamic("progress")(progress.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressBarProps]
   }
+  @scala.inline
+  implicit class ProgressBarPropsOps[Self <: ProgressBarProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuffer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndeterminate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indeterminate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndeterminate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indeterminate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgress(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

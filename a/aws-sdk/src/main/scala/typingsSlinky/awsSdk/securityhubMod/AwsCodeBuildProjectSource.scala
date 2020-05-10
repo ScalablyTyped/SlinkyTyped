@@ -26,18 +26,65 @@ trait AwsCodeBuildProjectSource extends js.Object {
 
 object AwsCodeBuildProjectSource {
   @scala.inline
-  def apply(
-    GitCloneDepth: Int | scala.Double = null,
-    InsecureSsl: js.UndefOr[scala.Boolean] = js.undefined,
-    Location: NonEmptyString = null,
-    Type: NonEmptyString = null
-  ): AwsCodeBuildProjectSource = {
+  def apply(): AwsCodeBuildProjectSource = {
     val __obj = js.Dynamic.literal()
-    if (GitCloneDepth != null) __obj.updateDynamic("GitCloneDepth")(GitCloneDepth.asInstanceOf[js.Any])
-    if (!js.isUndefined(InsecureSsl)) __obj.updateDynamic("InsecureSsl")(InsecureSsl.asInstanceOf[js.Any])
-    if (Location != null) __obj.updateDynamic("Location")(Location.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsCodeBuildProjectSource]
   }
+  @scala.inline
+  implicit class AwsCodeBuildProjectSourceOps[Self <: AwsCodeBuildProjectSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGitCloneDepth(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GitCloneDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGitCloneDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GitCloneDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsecureSsl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsecureSsl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsecureSsl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsecureSsl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

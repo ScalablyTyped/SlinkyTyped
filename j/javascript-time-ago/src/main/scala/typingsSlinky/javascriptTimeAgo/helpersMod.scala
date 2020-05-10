@@ -2,7 +2,6 @@ package typingsSlinky.javascriptTimeAgo
 
 import typingsSlinky.javascriptTimeAgo.gradationMod.Gradation
 import typingsSlinky.javascriptTimeAgo.gradationMod.Unit
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object helpersMod extends js.Object {
   val month: Double = js.native
   val year: Double = js.native
   def getDate(value: Double): js.Date = js.native
-  def getDate(value: Date): js.Date = js.native
+  def getDate(value: js.Date): js.Date = js.native
   def getStep(gradation: js.Array[Gradation], unit: Unit): js.UndefOr[Gradation] = js.native
 }
 

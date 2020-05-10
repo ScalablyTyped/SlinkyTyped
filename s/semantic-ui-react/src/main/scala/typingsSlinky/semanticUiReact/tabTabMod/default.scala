@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.tabTabMod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("semantic-ui-react/dist/commonjs/modules/Tab/Tab", JSImport.Default)
 @js.native
 class default protected ()
-  extends Component[TabProps, ComponentState, js.Any] {
+  extends Component[TabProps, js.Object, js.Any] {
   def this(props: TabProps) = this()
   def this(props: TabProps, context: js.Any) = this()
 }

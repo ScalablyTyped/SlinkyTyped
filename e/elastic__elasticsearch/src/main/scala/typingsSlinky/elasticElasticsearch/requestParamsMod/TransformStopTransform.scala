@@ -4,46 +4,95 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TransformStopTransform extends Generic {
-  var allow_no_match: js.UndefOr[Boolean] = js.undefined
-  var force: js.UndefOr[Boolean] = js.undefined
-  var timeout: js.UndefOr[String] = js.undefined
-  var transform_id: String
-  var wait_for_checkpoint: js.UndefOr[Boolean] = js.undefined
-  var wait_for_completion: js.UndefOr[Boolean] = js.undefined
+  var allow_no_match: js.UndefOr[Boolean] = js.native
+  var force: js.UndefOr[Boolean] = js.native
+  var timeout: js.UndefOr[String] = js.native
+  var transform_id: String = js.native
+  var wait_for_checkpoint: js.UndefOr[Boolean] = js.native
+  var wait_for_completion: js.UndefOr[Boolean] = js.native
 }
 
 object TransformStopTransform {
   @scala.inline
-  def apply(
-    transform_id: String,
-    allow_no_match: js.UndefOr[Boolean] = js.undefined,
-    error_trace: js.UndefOr[Boolean] = js.undefined,
-    filter_path: String | js.Array[String] = null,
-    force: js.UndefOr[Boolean] = js.undefined,
-    human: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    method: String = null,
-    pretty: js.UndefOr[Boolean] = js.undefined,
-    source: String = null,
-    timeout: String = null,
-    wait_for_checkpoint: js.UndefOr[Boolean] = js.undefined,
-    wait_for_completion: js.UndefOr[Boolean] = js.undefined
-  ): TransformStopTransform = {
+  def apply(transform_id: String): TransformStopTransform = {
     val __obj = js.Dynamic.literal(transform_id = transform_id.asInstanceOf[js.Any])
-    if (!js.isUndefined(allow_no_match)) __obj.updateDynamic("allow_no_match")(allow_no_match.asInstanceOf[js.Any])
-    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.asInstanceOf[js.Any])
-    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
-    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.asInstanceOf[js.Any])
-    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(wait_for_checkpoint)) __obj.updateDynamic("wait_for_checkpoint")(wait_for_checkpoint.asInstanceOf[js.Any])
-    if (!js.isUndefined(wait_for_completion)) __obj.updateDynamic("wait_for_completion")(wait_for_completion.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformStopTransform]
   }
+  @scala.inline
+  implicit class TransformStopTransformOps[Self <: TransformStopTransform] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransform_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllow_no_match(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_match")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllow_no_match: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_match")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWait_for_checkpoint(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait_for_checkpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWait_for_checkpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait_for_checkpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWait_for_completion(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait_for_completion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWait_for_completion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait_for_completion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,30 +22,28 @@ trait DisplayInternal extends _DisplayProperty
 
 object DisplayInternal {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `ruby-base`: typingsSlinky.csstype.csstypeStrings.`ruby-base` = "ruby-base".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ruby-base`]
   @scala.inline
-  def `ruby-base`: typingsSlinky.csstype.csstypeStrings.`ruby-base` = this.cast("ruby-base")
+  def `ruby-base-container`: typingsSlinky.csstype.csstypeStrings.`ruby-base-container` = "ruby-base-container".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ruby-base-container`]
   @scala.inline
-  def `ruby-base-container`: typingsSlinky.csstype.csstypeStrings.`ruby-base-container` = this.cast("ruby-base-container")
+  def `ruby-text`: typingsSlinky.csstype.csstypeStrings.`ruby-text` = "ruby-text".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ruby-text`]
   @scala.inline
-  def `ruby-text`: typingsSlinky.csstype.csstypeStrings.`ruby-text` = this.cast("ruby-text")
+  def `ruby-text-container`: typingsSlinky.csstype.csstypeStrings.`ruby-text-container` = "ruby-text-container".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ruby-text-container`]
   @scala.inline
-  def `ruby-text-container`: typingsSlinky.csstype.csstypeStrings.`ruby-text-container` = this.cast("ruby-text-container")
+  def `table-caption`: typingsSlinky.csstype.csstypeStrings.`table-caption` = "table-caption".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`table-caption`]
   @scala.inline
-  def `table-caption`: typingsSlinky.csstype.csstypeStrings.`table-caption` = this.cast("table-caption")
+  def `table-cell`: typingsSlinky.csstype.csstypeStrings.`table-cell` = "table-cell".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`table-cell`]
   @scala.inline
-  def `table-cell`: typingsSlinky.csstype.csstypeStrings.`table-cell` = this.cast("table-cell")
+  def `table-column`: typingsSlinky.csstype.csstypeStrings.`table-column` = "table-column".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`table-column`]
   @scala.inline
-  def `table-column`: typingsSlinky.csstype.csstypeStrings.`table-column` = this.cast("table-column")
+  def `table-column-group`: typingsSlinky.csstype.csstypeStrings.`table-column-group` = "table-column-group".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`table-column-group`]
   @scala.inline
-  def `table-column-group`: typingsSlinky.csstype.csstypeStrings.`table-column-group` = this.cast("table-column-group")
+  def `table-footer-group`: typingsSlinky.csstype.csstypeStrings.`table-footer-group` = "table-footer-group".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`table-footer-group`]
   @scala.inline
-  def `table-footer-group`: typingsSlinky.csstype.csstypeStrings.`table-footer-group` = this.cast("table-footer-group")
+  def `table-header-group`: typingsSlinky.csstype.csstypeStrings.`table-header-group` = "table-header-group".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`table-header-group`]
   @scala.inline
-  def `table-header-group`: typingsSlinky.csstype.csstypeStrings.`table-header-group` = this.cast("table-header-group")
+  def `table-row`: typingsSlinky.csstype.csstypeStrings.`table-row` = "table-row".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`table-row`]
   @scala.inline
-  def `table-row`: typingsSlinky.csstype.csstypeStrings.`table-row` = this.cast("table-row")
-  @scala.inline
-  def `table-row-group`: typingsSlinky.csstype.csstypeStrings.`table-row-group` = this.cast("table-row-group")
+  def `table-row-group`: typingsSlinky.csstype.csstypeStrings.`table-row-group` = "table-row-group".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`table-row-group`]
 }
 

@@ -12,10 +12,8 @@ trait YPosition extends js.Object
 
 object YPosition {
   @scala.inline
-  def bottom: typingsSlinky.angularUiNotification.angularUiNotificationStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.angularUiNotification.angularUiNotificationStrings.bottom = "bottom".asInstanceOf[typingsSlinky.angularUiNotification.angularUiNotificationStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def top: typingsSlinky.angularUiNotification.angularUiNotificationStrings.top = this.cast("top")
+  def top: typingsSlinky.angularUiNotification.angularUiNotificationStrings.top = "top".asInstanceOf[typingsSlinky.angularUiNotification.angularUiNotificationStrings.top]
 }
 

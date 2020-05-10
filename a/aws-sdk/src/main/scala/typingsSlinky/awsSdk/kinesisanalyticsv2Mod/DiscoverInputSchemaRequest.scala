@@ -30,19 +30,71 @@ trait DiscoverInputSchemaRequest extends js.Object {
 
 object DiscoverInputSchemaRequest {
   @scala.inline
-  def apply(
-    ServiceExecutionRole: RoleARN,
-    InputProcessingConfiguration: InputProcessingConfiguration = null,
-    InputStartingPositionConfiguration: InputStartingPositionConfiguration = null,
-    ResourceARN: ResourceARN = null,
-    S3Configuration: S3Configuration = null
-  ): DiscoverInputSchemaRequest = {
+  def apply(ServiceExecutionRole: RoleARN): DiscoverInputSchemaRequest = {
     val __obj = js.Dynamic.literal(ServiceExecutionRole = ServiceExecutionRole.asInstanceOf[js.Any])
-    if (InputProcessingConfiguration != null) __obj.updateDynamic("InputProcessingConfiguration")(InputProcessingConfiguration.asInstanceOf[js.Any])
-    if (InputStartingPositionConfiguration != null) __obj.updateDynamic("InputStartingPositionConfiguration")(InputStartingPositionConfiguration.asInstanceOf[js.Any])
-    if (ResourceARN != null) __obj.updateDynamic("ResourceARN")(ResourceARN.asInstanceOf[js.Any])
-    if (S3Configuration != null) __obj.updateDynamic("S3Configuration")(S3Configuration.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiscoverInputSchemaRequest]
   }
+  @scala.inline
+  implicit class DiscoverInputSchemaRequestOps[Self <: DiscoverInputSchemaRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceExecutionRole(value: RoleARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceExecutionRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputProcessingConfiguration(value: InputProcessingConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputProcessingConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputProcessingConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputProcessingConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputStartingPositionConfiguration(value: InputStartingPositionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputStartingPositionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputStartingPositionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputStartingPositionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceARN(value: ResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Configuration(value: S3Configuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Configuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Configuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Configuration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

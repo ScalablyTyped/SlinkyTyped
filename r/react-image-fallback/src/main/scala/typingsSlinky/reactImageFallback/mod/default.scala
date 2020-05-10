@@ -1,9 +1,9 @@
 package typingsSlinky.reactImageFallback.mod
 
+import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.ImgHTMLAttributes
-import typingsSlinky.std.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

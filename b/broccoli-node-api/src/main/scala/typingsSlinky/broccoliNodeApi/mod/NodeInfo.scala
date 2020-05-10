@@ -1,49 +1,41 @@
 package typingsSlinky.broccoliNodeApi.mod
 
-import typingsSlinky.broccoliNodeApi.AnonCachePath
-import typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.source
-import typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* Inlined broccoli-node-api.broccoli-node-api.NodeInfoMap[broccoli-node-api.broccoli-node-api.NodeType] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.broccoliNodeApi.mod.SourceNodeInfo
-  - typingsSlinky.broccoliNodeApi.mod.TransformNodeInfo
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.needsCache
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.setup
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.getCallbackObject
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.volatile
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.watched
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.persistentOutput
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.inputNodes
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.trackInputChanges
+  - typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.sourceDirectory
 */
 trait NodeInfo extends js.Object
 
 object NodeInfo {
   @scala.inline
-  def SourceNodeInfo(
-    instantiationStack: String,
-    name: String,
-    nodeType: source,
-    sourceDirectory: String,
-    watched: Boolean,
-    annotation: String = null
-  ): NodeInfo = {
-    val __obj = js.Dynamic.literal(instantiationStack = instantiationStack.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nodeType = nodeType.asInstanceOf[js.Any], sourceDirectory = sourceDirectory.asInstanceOf[js.Any], watched = watched.asInstanceOf[js.Any])
-    if (annotation != null) __obj.updateDynamic("annotation")(annotation.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NodeInfo]
-  }
+  def getCallbackObject: typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.getCallbackObject = "getCallbackObject".asInstanceOf[typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.getCallbackObject]
   @scala.inline
-  def TransformNodeInfo(
-    getCallbackObject: () => CallbackObject,
-    inputNodes: js.Array[InputNode],
-    instantiationStack: String,
-    name: String,
-    needsCache: Boolean,
-    nodeType: transform,
-    persistentOutput: Boolean,
-    setup: (FeatureSet, AnonCachePath) => Unit,
-    trackInputChanges: Boolean,
-    volatile: Boolean,
-    annotation: String = null
-  ): NodeInfo = {
-    val __obj = js.Dynamic.literal(getCallbackObject = js.Any.fromFunction0(getCallbackObject), inputNodes = inputNodes.asInstanceOf[js.Any], instantiationStack = instantiationStack.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], needsCache = needsCache.asInstanceOf[js.Any], nodeType = nodeType.asInstanceOf[js.Any], persistentOutput = persistentOutput.asInstanceOf[js.Any], setup = js.Any.fromFunction2(setup), trackInputChanges = trackInputChanges.asInstanceOf[js.Any], volatile = volatile.asInstanceOf[js.Any])
-    if (annotation != null) __obj.updateDynamic("annotation")(annotation.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NodeInfo]
-  }
+  def inputNodes: typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.inputNodes = "inputNodes".asInstanceOf[typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.inputNodes]
+  @scala.inline
+  def needsCache: typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.needsCache = "needsCache".asInstanceOf[typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.needsCache]
+  @scala.inline
+  def persistentOutput: typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.persistentOutput = "persistentOutput".asInstanceOf[typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.persistentOutput]
+  @scala.inline
+  def setup: typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.setup = "setup".asInstanceOf[typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.setup]
+  @scala.inline
+  def sourceDirectory: typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.sourceDirectory = "sourceDirectory".asInstanceOf[typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.sourceDirectory]
+  @scala.inline
+  def trackInputChanges: typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.trackInputChanges = "trackInputChanges".asInstanceOf[typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.trackInputChanges]
+  @scala.inline
+  def volatile: typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.volatile = "volatile".asInstanceOf[typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.volatile]
+  @scala.inline
+  def watched: typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.watched = "watched".asInstanceOf[typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.watched]
 }
 

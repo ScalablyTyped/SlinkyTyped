@@ -22,30 +22,28 @@ trait ARIAAbstractRole extends js.Object
 
 object ARIAAbstractRole {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def command: typingsSlinky.ariaQuery.ariaQueryStrings.command = "command".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.command]
   @scala.inline
-  def command: typingsSlinky.ariaQuery.ariaQueryStrings.command = this.cast("command")
+  def composite: typingsSlinky.ariaQuery.ariaQueryStrings.composite = "composite".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.composite]
   @scala.inline
-  def composite: typingsSlinky.ariaQuery.ariaQueryStrings.composite = this.cast("composite")
+  def input: typingsSlinky.ariaQuery.ariaQueryStrings.input = "input".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.input]
   @scala.inline
-  def input: typingsSlinky.ariaQuery.ariaQueryStrings.input = this.cast("input")
+  def landmark: typingsSlinky.ariaQuery.ariaQueryStrings.landmark = "landmark".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.landmark]
   @scala.inline
-  def landmark: typingsSlinky.ariaQuery.ariaQueryStrings.landmark = this.cast("landmark")
+  def range: typingsSlinky.ariaQuery.ariaQueryStrings.range = "range".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.range]
   @scala.inline
-  def range: typingsSlinky.ariaQuery.ariaQueryStrings.range = this.cast("range")
+  def roletype: typingsSlinky.ariaQuery.ariaQueryStrings.roletype = "roletype".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.roletype]
   @scala.inline
-  def roletype: typingsSlinky.ariaQuery.ariaQueryStrings.roletype = this.cast("roletype")
+  def section: typingsSlinky.ariaQuery.ariaQueryStrings.section = "section".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.section]
   @scala.inline
-  def section: typingsSlinky.ariaQuery.ariaQueryStrings.section = this.cast("section")
+  def sectionhead: typingsSlinky.ariaQuery.ariaQueryStrings.sectionhead = "sectionhead".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.sectionhead]
   @scala.inline
-  def sectionhead: typingsSlinky.ariaQuery.ariaQueryStrings.sectionhead = this.cast("sectionhead")
+  def select: typingsSlinky.ariaQuery.ariaQueryStrings.select = "select".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.select]
   @scala.inline
-  def select: typingsSlinky.ariaQuery.ariaQueryStrings.select = this.cast("select")
+  def structure: typingsSlinky.ariaQuery.ariaQueryStrings.structure = "structure".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.structure]
   @scala.inline
-  def structure: typingsSlinky.ariaQuery.ariaQueryStrings.structure = this.cast("structure")
+  def widget: typingsSlinky.ariaQuery.ariaQueryStrings.widget = "widget".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.widget]
   @scala.inline
-  def widget: typingsSlinky.ariaQuery.ariaQueryStrings.widget = this.cast("widget")
-  @scala.inline
-  def window: typingsSlinky.ariaQuery.ariaQueryStrings.window = this.cast("window")
+  def window: typingsSlinky.ariaQuery.ariaQueryStrings.window = "window".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.window]
 }
 

@@ -55,20 +55,77 @@ trait SchemaSource extends js.Object {
 
 object SchemaSource {
   @scala.inline
-  def apply(
-    baseSpecs: js.Array[StringDictionary[_]] = null,
-    codec: StringDictionary[js.Any] = null,
-    doesNotNeedSplitting: js.UndefOr[Boolean] = js.undefined,
-    metadata: SchemaSourceMetadata = null,
-    spec: StringDictionary[js.Any] = null
-  ): SchemaSource = {
+  def apply(): SchemaSource = {
     val __obj = js.Dynamic.literal()
-    if (baseSpecs != null) __obj.updateDynamic("baseSpecs")(baseSpecs.asInstanceOf[js.Any])
-    if (codec != null) __obj.updateDynamic("codec")(codec.asInstanceOf[js.Any])
-    if (!js.isUndefined(doesNotNeedSplitting)) __obj.updateDynamic("doesNotNeedSplitting")(doesNotNeedSplitting.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (spec != null) __obj.updateDynamic("spec")(spec.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSource]
   }
+  @scala.inline
+  implicit class SchemaSourceOps[Self <: SchemaSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseSpecs(value: js.Array[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseSpecs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseSpecs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseSpecs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodec(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoesNotNeedSplitting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doesNotNeedSplitting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoesNotNeedSplitting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doesNotNeedSplitting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: SchemaSourceMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpec(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

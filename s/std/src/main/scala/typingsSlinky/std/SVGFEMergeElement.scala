@@ -44,11 +44,12 @@ trait SVGFEMergeElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFEMergeElement")
 @js.native
-object SVGFEMergeElement extends Instantiable0[SVGFEMergeElement]
+object SVGFEMergeElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEMergeElement]
 

@@ -7,54 +7,198 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RequestOptions extends js.Object {
-  var auth: js.UndefOr[AnonUsername | AnonBearer] = js.undefined
-  var body: js.UndefOr[js.Any] = js.undefined
-  var encoding: js.UndefOr[String | Null] = js.undefined
-  var followRedirect: js.UndefOr[Boolean] = js.undefined
-  var form: js.UndefOr[js.Any] = js.undefined
-  var headers: js.UndefOr[StringDictionary[js.UndefOr[String]]] = js.undefined
-  var json: js.UndefOr[Boolean] = js.undefined
-  var maxRedirects: js.UndefOr[Double] = js.undefined
-  var qs: js.UndefOr[js.Object] = js.undefined
-  var returnBodyOnError: js.UndefOr[Boolean] = js.undefined
-  var sslProtocol: js.UndefOr[Double] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
-  var useQuerystring: js.UndefOr[Boolean] = js.undefined
+  var auth: js.UndefOr[AnonUsername | AnonBearer] = js.native
+  var body: js.UndefOr[js.Any] = js.native
+  var encoding: js.UndefOr[String | Null] = js.native
+  var followRedirect: js.UndefOr[Boolean] = js.native
+  var form: js.UndefOr[js.Any] = js.native
+  var headers: js.UndefOr[StringDictionary[js.UndefOr[String]]] = js.native
+  var json: js.UndefOr[Boolean] = js.native
+  var maxRedirects: js.UndefOr[Double] = js.native
+  var qs: js.UndefOr[js.Object] = js.native
+  var returnBodyOnError: js.UndefOr[Boolean] = js.native
+  var sslProtocol: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.native
+  var useQuerystring: js.UndefOr[Boolean] = js.native
 }
 
 object RequestOptions {
   @scala.inline
-  def apply(
-    auth: AnonUsername | AnonBearer = null,
-    body: js.Any = null,
-    encoding: String = null,
-    followRedirect: js.UndefOr[Boolean] = js.undefined,
-    form: js.Any = null,
-    headers: StringDictionary[js.UndefOr[String]] = null,
-    json: js.UndefOr[Boolean] = js.undefined,
-    maxRedirects: Int | Double = null,
-    qs: js.Object = null,
-    returnBodyOnError: js.UndefOr[Boolean] = js.undefined,
-    sslProtocol: Int | Double = null,
-    timeout: Int | Double = null,
-    useQuerystring: js.UndefOr[Boolean] = js.undefined
-  ): RequestOptions = {
+  def apply(): RequestOptions = {
     val __obj = js.Dynamic.literal()
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (!js.isUndefined(followRedirect)) __obj.updateDynamic("followRedirect")(followRedirect.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (!js.isUndefined(json)) __obj.updateDynamic("json")(json.asInstanceOf[js.Any])
-    if (maxRedirects != null) __obj.updateDynamic("maxRedirects")(maxRedirects.asInstanceOf[js.Any])
-    if (qs != null) __obj.updateDynamic("qs")(qs.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnBodyOnError)) __obj.updateDynamic("returnBodyOnError")(returnBodyOnError.asInstanceOf[js.Any])
-    if (sslProtocol != null) __obj.updateDynamic("sslProtocol")(sslProtocol.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(useQuerystring)) __obj.updateDynamic("useQuerystring")(useQuerystring.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestOptions]
   }
+  @scala.inline
+  implicit class RequestOptionsOps[Self <: RequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: AnonUsername | AnonBearer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncodingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(null)
+        ret
+    }
+    @scala.inline
+    def withFollowRedirect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowRedirect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followRedirect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForm(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: StringDictionary[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJson(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJson: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRedirects(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRedirects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRedirects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQs(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnBodyOnError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnBodyOnError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnBodyOnError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnBodyOnError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSslProtocol(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseQuerystring(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useQuerystring")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseQuerystring: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useQuerystring")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

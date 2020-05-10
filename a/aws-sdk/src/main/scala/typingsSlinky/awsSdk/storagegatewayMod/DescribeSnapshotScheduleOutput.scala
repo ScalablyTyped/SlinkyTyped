@@ -34,22 +34,89 @@ trait DescribeSnapshotScheduleOutput extends js.Object {
 
 object DescribeSnapshotScheduleOutput {
   @scala.inline
-  def apply(
-    Description: Description = null,
-    RecurrenceInHours: Int | Double = null,
-    StartAt: Int | Double = null,
-    Tags: Tags = null,
-    Timezone: GatewayTimezone = null,
-    VolumeARN: VolumeARN = null
-  ): DescribeSnapshotScheduleOutput = {
+  def apply(): DescribeSnapshotScheduleOutput = {
     val __obj = js.Dynamic.literal()
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (RecurrenceInHours != null) __obj.updateDynamic("RecurrenceInHours")(RecurrenceInHours.asInstanceOf[js.Any])
-    if (StartAt != null) __obj.updateDynamic("StartAt")(StartAt.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (Timezone != null) __obj.updateDynamic("Timezone")(Timezone.asInstanceOf[js.Any])
-    if (VolumeARN != null) __obj.updateDynamic("VolumeARN")(VolumeARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSnapshotScheduleOutput]
   }
+  @scala.inline
+  implicit class DescribeSnapshotScheduleOutputOps[Self <: DescribeSnapshotScheduleOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecurrenceInHours(value: RecurrenceInHours): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecurrenceInHours")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecurrenceInHours: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecurrenceInHours")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAt(value: HourOfDay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimezone(value: GatewayTimezone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimezone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timezone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeARN(value: VolumeARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

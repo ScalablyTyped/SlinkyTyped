@@ -58,32 +58,149 @@ trait SimulatePrincipalPolicyRequest extends js.Object {
 
 object SimulatePrincipalPolicyRequest {
   @scala.inline
-  def apply(
-    ActionNames: ActionNameListType,
-    PolicySourceArn: arnType,
-    CallerArn: ResourceNameType = null,
-    ContextEntries: ContextEntryListType = null,
-    Marker: markerType = null,
-    MaxItems: Int | Double = null,
-    PermissionsBoundaryPolicyInputList: SimulationPolicyListType = null,
-    PolicyInputList: SimulationPolicyListType = null,
-    ResourceArns: ResourceNameListType = null,
-    ResourceHandlingOption: ResourceHandlingOptionType = null,
-    ResourceOwner: ResourceNameType = null,
-    ResourcePolicy: policyDocumentType = null
-  ): SimulatePrincipalPolicyRequest = {
+  def apply(ActionNames: ActionNameListType, PolicySourceArn: arnType): SimulatePrincipalPolicyRequest = {
     val __obj = js.Dynamic.literal(ActionNames = ActionNames.asInstanceOf[js.Any], PolicySourceArn = PolicySourceArn.asInstanceOf[js.Any])
-    if (CallerArn != null) __obj.updateDynamic("CallerArn")(CallerArn.asInstanceOf[js.Any])
-    if (ContextEntries != null) __obj.updateDynamic("ContextEntries")(ContextEntries.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (MaxItems != null) __obj.updateDynamic("MaxItems")(MaxItems.asInstanceOf[js.Any])
-    if (PermissionsBoundaryPolicyInputList != null) __obj.updateDynamic("PermissionsBoundaryPolicyInputList")(PermissionsBoundaryPolicyInputList.asInstanceOf[js.Any])
-    if (PolicyInputList != null) __obj.updateDynamic("PolicyInputList")(PolicyInputList.asInstanceOf[js.Any])
-    if (ResourceArns != null) __obj.updateDynamic("ResourceArns")(ResourceArns.asInstanceOf[js.Any])
-    if (ResourceHandlingOption != null) __obj.updateDynamic("ResourceHandlingOption")(ResourceHandlingOption.asInstanceOf[js.Any])
-    if (ResourceOwner != null) __obj.updateDynamic("ResourceOwner")(ResourceOwner.asInstanceOf[js.Any])
-    if (ResourcePolicy != null) __obj.updateDynamic("ResourcePolicy")(ResourcePolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimulatePrincipalPolicyRequest]
   }
+  @scala.inline
+  implicit class SimulatePrincipalPolicyRequestOps[Self <: SimulatePrincipalPolicyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionNames(value: ActionNameListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolicySourceArn(value: arnType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicySourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallerArn(value: ResourceNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallerArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextEntries(value: ContextEntryListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContextEntries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContextEntries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: markerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxItems(value: maxItemsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissionsBoundaryPolicyInputList(value: SimulationPolicyListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryPolicyInputList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissionsBoundaryPolicyInputList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryPolicyInputList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyInputList(value: SimulationPolicyListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyInputList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyInputList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyInputList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceArns(value: ResourceNameListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceHandlingOption(value: ResourceHandlingOptionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceHandlingOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceHandlingOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceHandlingOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceOwner(value: ResourceNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceOwner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceOwner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourcePolicy(value: policyDocumentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourcePolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourcePolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

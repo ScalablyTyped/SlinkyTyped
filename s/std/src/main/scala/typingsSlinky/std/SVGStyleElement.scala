@@ -16,5 +16,6 @@ trait SVGStyleElement extends SVGElement {
 
 @JSGlobal("SVGStyleElement")
 @js.native
-object SVGStyleElement extends Instantiable0[SVGStyleElement]
+object SVGStyleElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGStyleElement]
 

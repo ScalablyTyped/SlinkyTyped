@@ -14,10 +14,29 @@ trait PutOrganizationConformancePackResponse extends js.Object {
 
 object PutOrganizationConformancePackResponse {
   @scala.inline
-  def apply(OrganizationConformancePackArn: StringWithCharLimit256 = null): PutOrganizationConformancePackResponse = {
+  def apply(): PutOrganizationConformancePackResponse = {
     val __obj = js.Dynamic.literal()
-    if (OrganizationConformancePackArn != null) __obj.updateDynamic("OrganizationConformancePackArn")(OrganizationConformancePackArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutOrganizationConformancePackResponse]
   }
+  @scala.inline
+  implicit class PutOrganizationConformancePackResponseOps[Self <: PutOrganizationConformancePackResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrganizationConformancePackArn(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConformancePackArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationConformancePackArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConformancePackArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

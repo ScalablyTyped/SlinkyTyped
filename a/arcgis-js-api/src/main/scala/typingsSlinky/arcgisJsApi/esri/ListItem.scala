@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListItem extends js.Object {
   /**
     * Whether the actional panel is open in the LayerList.
@@ -13,25 +14,25 @@ trait ListItem extends js.Object {
     *
     * @default false
     */
-  var actionsOpen: Boolean
+  var actionsOpen: Boolean = js.native
   /**
     * A nested 2-dimensional collection of actions that could be triggered on the item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#actionsSections)
     */
-  var actionsSections: Collection[Collection[ActionButton | ActionToggle]]
+  var actionsSections: Collection[Collection[ActionButton | ActionToggle]] = js.native
   /**
     * When a layer contains sublayers, this property is a Collection of ListItem objects belonging to the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#children)
     */
-  var children: Collection[ListItem]
+  var children: Collection[ListItem] = js.native
   /**
     * The Error object returned if an error occurred.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#error)
     */
-  val error: Error
+  val error: Error = js.native
   /**
     * The layer associated with the triggered action.
     *
@@ -39,13 +40,13 @@ trait ListItem extends js.Object {
     *
     * @default null
     */
-  var layer: Layer
+  var layer: Layer = js.native
   /**
     * The [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) displaying data for the associated [layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#layer).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#layerView)
     */
-  val layerView: LayerView
+  val layerView: LayerView = js.native
   /**
     * Whether the layer is open in the LayerList.
     *
@@ -53,13 +54,13 @@ trait ListItem extends js.Object {
     *
     * @default false
     */
-  var open: Boolean
+  var open: Boolean = js.native
   /**
     * Allows you to display custom content for each ListItem in the [LayerList](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html) widget.  A common scenario for using ListItemPanel is to display a [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) widget within each list item. The `legend` keyword can be used in the [content](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItemPanel.html#content) property of the panel to display a legend for each layer in the LayerList.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#panel)
     */
-  var panel: ListItemPanel
+  var panel: ListItemPanel = js.native
   /**
     * The parent of this item
     *
@@ -67,13 +68,13 @@ trait ListItem extends js.Object {
     *
     * @default null
     */
-  var parent: ListItem
+  var parent: ListItem = js.native
   /**
     * The title of the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#title)
     */
-  var title: String
+  var title: String = js.native
   /**
     * Value is `true` when the layer is updating; for example, if it is in the process of fetching data.
     *
@@ -81,19 +82,19 @@ trait ListItem extends js.Object {
     *
     * @default false
     */
-  val updating: Boolean
+  val updating: Boolean = js.native
   /**
     * The view from which the widget will operate.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#view)
     */
-  var view: MapView | SceneView
+  var view: MapView | SceneView = js.native
   /**
     * Indicates how to manage the visibility of the children layers.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#visibilityMode)
     */
-  val visibilityMode: String
+  val visibilityMode: String = js.native
   /**
     * Indicates if the ListItem is visible.
     *
@@ -101,7 +102,7 @@ trait ListItem extends js.Object {
     *
     * @default true
     */
-  var visible: Boolean
+  var visible: Boolean = js.native
   /**
     * Whether the layer is visible at the current scale or not.
     *
@@ -109,7 +110,7 @@ trait ListItem extends js.Object {
     *
     * @default true
     */
-  val visibleAtCurrentScale: Boolean
+  val visibleAtCurrentScale: Boolean = js.native
 }
 
 @JSGlobal("__esri.ListItem")

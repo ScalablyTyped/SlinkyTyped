@@ -34,7 +34,7 @@ object mod extends js.Object {
       * A `Cancelable` that is already signaled.
       */
     val canceled: CancelableCancelSignal = js.native
-    val name: typingsSlinky.esfxCancelable.esfxCancelableStrings.Cancelable = js.native
+    val name: /* "Cancelable" */ String = js.native
     /**
       * A `Cancelable` that can never be signaled.
       */
@@ -72,7 +72,7 @@ object mod extends js.Object {
       * A well-known symbol used to define a method to retrieve the `CancelSignal` for an object.
       */
     val cancelSignal: js.Symbol = js.native
-    val name: typingsSlinky.esfxCancelable.esfxCancelableStrings.CancelableSource = js.native
+    val name: /* "CancelableSource" */ String = js.native
     /**
       * Determines whether a value is a `CancelableSource` object.
       */

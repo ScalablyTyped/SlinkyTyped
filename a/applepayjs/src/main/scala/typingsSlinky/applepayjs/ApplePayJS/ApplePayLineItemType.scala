@@ -15,10 +15,8 @@ trait ApplePayLineItemType extends js.Object
 
 object ApplePayLineItemType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `final`: typingsSlinky.applepayjs.applepayjsStrings.`final` = "final".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.`final`]
   @scala.inline
-  def `final`: typingsSlinky.applepayjs.applepayjsStrings.`final` = this.cast("final")
-  @scala.inline
-  def pending: typingsSlinky.applepayjs.applepayjsStrings.pending = this.cast("pending")
+  def pending: typingsSlinky.applepayjs.applepayjsStrings.pending = "pending".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.pending]
 }
 

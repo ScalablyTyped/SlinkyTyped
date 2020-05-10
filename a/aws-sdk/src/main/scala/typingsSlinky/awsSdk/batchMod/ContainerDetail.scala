@@ -94,52 +94,269 @@ trait ContainerDetail extends js.Object {
 
 object ContainerDetail {
   @scala.inline
-  def apply(
-    command: StringList = null,
-    containerInstanceArn: String = null,
-    environment: EnvironmentVariables = null,
-    exitCode: Int | Double = null,
-    image: String = null,
-    instanceType: String = null,
-    jobRoleArn: String = null,
-    linuxParameters: LinuxParameters = null,
-    logStreamName: String = null,
-    memory: Int | Double = null,
-    mountPoints: MountPoints = null,
-    networkInterfaces: NetworkInterfaceList = null,
-    privileged: js.UndefOr[scala.Boolean] = js.undefined,
-    readonlyRootFilesystem: js.UndefOr[scala.Boolean] = js.undefined,
-    reason: String = null,
-    resourceRequirements: ResourceRequirements = null,
-    taskArn: String = null,
-    ulimits: Ulimits = null,
-    user: String = null,
-    vcpus: Int | Double = null,
-    volumes: Volumes = null
-  ): ContainerDetail = {
+  def apply(): ContainerDetail = {
     val __obj = js.Dynamic.literal()
-    if (command != null) __obj.updateDynamic("command")(command.asInstanceOf[js.Any])
-    if (containerInstanceArn != null) __obj.updateDynamic("containerInstanceArn")(containerInstanceArn.asInstanceOf[js.Any])
-    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
-    if (exitCode != null) __obj.updateDynamic("exitCode")(exitCode.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (instanceType != null) __obj.updateDynamic("instanceType")(instanceType.asInstanceOf[js.Any])
-    if (jobRoleArn != null) __obj.updateDynamic("jobRoleArn")(jobRoleArn.asInstanceOf[js.Any])
-    if (linuxParameters != null) __obj.updateDynamic("linuxParameters")(linuxParameters.asInstanceOf[js.Any])
-    if (logStreamName != null) __obj.updateDynamic("logStreamName")(logStreamName.asInstanceOf[js.Any])
-    if (memory != null) __obj.updateDynamic("memory")(memory.asInstanceOf[js.Any])
-    if (mountPoints != null) __obj.updateDynamic("mountPoints")(mountPoints.asInstanceOf[js.Any])
-    if (networkInterfaces != null) __obj.updateDynamic("networkInterfaces")(networkInterfaces.asInstanceOf[js.Any])
-    if (!js.isUndefined(privileged)) __obj.updateDynamic("privileged")(privileged.asInstanceOf[js.Any])
-    if (!js.isUndefined(readonlyRootFilesystem)) __obj.updateDynamic("readonlyRootFilesystem")(readonlyRootFilesystem.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
-    if (resourceRequirements != null) __obj.updateDynamic("resourceRequirements")(resourceRequirements.asInstanceOf[js.Any])
-    if (taskArn != null) __obj.updateDynamic("taskArn")(taskArn.asInstanceOf[js.Any])
-    if (ulimits != null) __obj.updateDynamic("ulimits")(ulimits.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
-    if (vcpus != null) __obj.updateDynamic("vcpus")(vcpus.asInstanceOf[js.Any])
-    if (volumes != null) __obj.updateDynamic("volumes")(volumes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContainerDetail]
   }
+  @scala.inline
+  implicit class ContainerDetailOps[Self <: ContainerDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommand(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerInstanceArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerInstanceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerInstanceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerInstanceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironment(value: EnvironmentVariables): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExitCode(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinuxParameters(value: LinuxParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linuxParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinuxParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linuxParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogStreamName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogStreamName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemory(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMountPoints(value: MountPoints): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMountPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mountPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaces(value: NetworkInterfaceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivileged(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privileged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivileged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privileged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadonlyRootFilesystem(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonlyRootFilesystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadonlyRootFilesystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonlyRootFilesystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceRequirements(value: ResourceRequirements): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRequirements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceRequirements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceRequirements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUlimits(value: Ulimits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ulimits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUlimits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ulimits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVcpus(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vcpus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVcpus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vcpus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumes(value: Volumes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

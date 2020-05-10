@@ -26,17 +26,59 @@ trait ReferenceDataSourceUpdate extends js.Object {
 
 object ReferenceDataSourceUpdate {
   @scala.inline
-  def apply(
-    ReferenceId: Id,
-    ReferenceSchemaUpdate: SourceSchema = null,
-    S3ReferenceDataSourceUpdate: S3ReferenceDataSourceUpdate = null,
-    TableNameUpdate: InAppTableName = null
-  ): ReferenceDataSourceUpdate = {
+  def apply(ReferenceId: Id): ReferenceDataSourceUpdate = {
     val __obj = js.Dynamic.literal(ReferenceId = ReferenceId.asInstanceOf[js.Any])
-    if (ReferenceSchemaUpdate != null) __obj.updateDynamic("ReferenceSchemaUpdate")(ReferenceSchemaUpdate.asInstanceOf[js.Any])
-    if (S3ReferenceDataSourceUpdate != null) __obj.updateDynamic("S3ReferenceDataSourceUpdate")(S3ReferenceDataSourceUpdate.asInstanceOf[js.Any])
-    if (TableNameUpdate != null) __obj.updateDynamic("TableNameUpdate")(TableNameUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReferenceDataSourceUpdate]
   }
+  @scala.inline
+  implicit class ReferenceDataSourceUpdateOps[Self <: ReferenceDataSourceUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReferenceId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferenceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReferenceSchemaUpdate(value: SourceSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferenceSchemaUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferenceSchemaUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferenceSchemaUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3ReferenceDataSourceUpdate(value: S3ReferenceDataSourceUpdate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3ReferenceDataSourceUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3ReferenceDataSourceUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3ReferenceDataSourceUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableNameUpdate(value: InAppTableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableNameUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableNameUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableNameUpdate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.jestSnapshot
 
-import typingsSlinky.jestSnapshot.jestSnapshotStrings.`1`
-import typingsSlinky.jestSnapshot.jestSnapshotStrings.httpsColonSlashSlashgooDotglSlashfbAQLP
 import typingsSlinky.jestTypes.configMod.SnapshotUpdateState
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -11,8 +9,8 @@ import scala.scalajs.js.annotation._
 @JSImport("jest-snapshot/build/utils", JSImport.Namespace)
 @js.native
 object utilsMod extends js.Object {
-  val SNAPSHOT_GUIDE_LINK: httpsColonSlashSlashgooDotglSlashfbAQLP = js.native
-  val SNAPSHOT_VERSION: `1` = js.native
+  val SNAPSHOT_GUIDE_LINK: /* "https://goo.gl/fbAQLP" */ String = js.native
+  val SNAPSHOT_VERSION: /* "1" */ String = js.native
   val SNAPSHOT_VERSION_WARNING: String = js.native
   def deepMerge(target: js.Any, source: js.Any): js.Any = js.native
   def ensureDirectoryExists(filePath: String): Unit = js.native

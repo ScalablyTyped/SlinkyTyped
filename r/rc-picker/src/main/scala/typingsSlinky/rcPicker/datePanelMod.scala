@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("rc-picker/lib/panels/DatePanel", JSImport.Namespace)
 @js.native
 object datePanelMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.rcPicker.dateBodyMod.DateBodyPassProps because var conflicts: disabledDate. Inlined dateRender, prefixColumn, rowClassName */ @js.native
   trait DatePanelProps[DateType] extends PanelSharedProps[DateType] {
     var active: js.UndefOr[Boolean] = js.native

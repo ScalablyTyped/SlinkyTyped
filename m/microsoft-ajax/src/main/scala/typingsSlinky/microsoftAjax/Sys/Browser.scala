@@ -9,36 +9,37 @@ import scala.scalajs.js.annotation._
   * The Sys.Browser object determines which browser is being used and provides some information about it. You can use this object to help customize your code to the unique requirements or capabilities of the browser.
   * @see {@link http://msdn.microsoft.com/en-us/library/cc679064(v=vs.100).aspx}
   */
+@js.native
 trait Browser extends js.Object {
   //#region Fields
   /**
     * Gets an object that represents the user agent of the browser.
     */
-  var agent: js.Any
+  var agent: js.Any = js.native
   /**
     * Gets a value that indicates the document compatibility mode of the browser.
     * @return
     *
     */
-  var documentMode: Double
+  var documentMode: Double = js.native
   /*
     * Gets a value that indicates whether the browser supports debug statements.
     * @return
     *   True if the browser supports debug statements
     */
-  var hasDebuggerStatement: Boolean
+  var hasDebuggerStatement: Boolean = js.native
   /**
     * Gets the name of the browser.
     * @return
     *   The name of the browser
     */
-  var name: String
+  var name: String = js.native
   /*
     * Gets the version number of the browser.
     * @return
     *   The version of the browser
     */
-  var version: Double
+  var version: Double = js.native
 }
 
 @JSGlobal("Sys.Browser")

@@ -1,18 +1,24 @@
 package typingsSlinky.mongooseDelete
 
+import typingsSlinky.mongoose.mod.FilterQuery
 import typingsSlinky.mongoose.mod.ModelUpdateOptions
+import typingsSlinky.mongoose.mod.UpdateQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait FnCallConditionsDocOptionsCallback extends js.Object {
-  def apply(conditions: js.Any, doc: js.Any): Queryany = js.native
-  def apply(conditions: js.Any, doc: js.Any, callback: js.Function2[/* err */ js.Any, /* raw */ js.Any, Unit]): Queryany = js.native
-  def apply(conditions: js.Any, doc: js.Any, options: ModelUpdateOptions): Queryany = js.native
+  def apply(conditions: FilterQuery[_], doc: UpdateQuery[_]): Queryany = js.native
   def apply(
-    conditions: js.Any,
-    doc: js.Any,
+    conditions: FilterQuery[_],
+    doc: UpdateQuery[_],
+    callback: js.Function2[/* err */ js.Any, /* raw */ js.Any, Unit]
+  ): Queryany = js.native
+  def apply(conditions: FilterQuery[_], doc: UpdateQuery[_], options: ModelUpdateOptions): Queryany = js.native
+  def apply(
+    conditions: FilterQuery[_],
+    doc: UpdateQuery[_],
     options: ModelUpdateOptions,
     callback: js.Function2[/* err */ js.Any, /* raw */ js.Any, Unit]
   ): Queryany = js.native

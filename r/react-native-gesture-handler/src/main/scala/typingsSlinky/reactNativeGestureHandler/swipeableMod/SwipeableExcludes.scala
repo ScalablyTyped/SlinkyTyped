@@ -34,52 +34,50 @@ trait SwipeableExcludes extends js.Object
 
 object SwipeableExcludes {
   @scala.inline
-  def activeOffsetX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.activeOffsetX = this.cast("activeOffsetX")
+  def activeOffsetX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.activeOffsetX = "activeOffsetX".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.activeOffsetX]
   @scala.inline
-  def activeOffsetY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.activeOffsetY = this.cast("activeOffsetY")
+  def activeOffsetY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.activeOffsetY = "activeOffsetY".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.activeOffsetY]
   @scala.inline
-  def avgTouches: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.avgTouches = this.cast("avgTouches")
+  def avgTouches: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.avgTouches = "avgTouches".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.avgTouches]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def enabled: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.enabled = "enabled".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.enabled]
   @scala.inline
-  def enabled: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.enabled = this.cast("enabled")
+  def failOffsetX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.failOffsetX = "failOffsetX".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.failOffsetX]
   @scala.inline
-  def failOffsetX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.failOffsetX = this.cast("failOffsetX")
+  def failOffsetY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.failOffsetY = "failOffsetY".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.failOffsetY]
   @scala.inline
-  def failOffsetY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.failOffsetY = this.cast("failOffsetY")
+  def hitSlop: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.hitSlop = "hitSlop".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.hitSlop]
   @scala.inline
-  def hitSlop: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.hitSlop = this.cast("hitSlop")
+  def id: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.id = "id".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.id]
   @scala.inline
-  def id: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.id = this.cast("id")
+  def maxDeltaX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxDeltaX = "maxDeltaX".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxDeltaX]
   @scala.inline
-  def maxDeltaX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxDeltaX = this.cast("maxDeltaX")
+  def maxDeltaY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxDeltaY = "maxDeltaY".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxDeltaY]
   @scala.inline
-  def maxDeltaY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxDeltaY = this.cast("maxDeltaY")
+  def maxPointers: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxPointers = "maxPointers".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxPointers]
   @scala.inline
-  def maxPointers: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.maxPointers = this.cast("maxPointers")
+  def minDeltaX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDeltaX = "minDeltaX".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDeltaX]
   @scala.inline
-  def minDeltaX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDeltaX = this.cast("minDeltaX")
+  def minDeltaY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDeltaY = "minDeltaY".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDeltaY]
   @scala.inline
-  def minDeltaY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDeltaY = this.cast("minDeltaY")
+  def minDist: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDist = "minDist".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDist]
   @scala.inline
-  def minDist: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minDist = this.cast("minDist")
+  def minOffsetX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minOffsetX = "minOffsetX".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minOffsetX]
   @scala.inline
-  def minOffsetX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minOffsetX = this.cast("minOffsetX")
+  def minOffsetY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minOffsetY = "minOffsetY".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minOffsetY]
   @scala.inline
-  def minOffsetY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minOffsetY = this.cast("minOffsetY")
+  def minPointers: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minPointers = "minPointers".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minPointers]
   @scala.inline
-  def minPointers: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minPointers = this.cast("minPointers")
+  def minVelocity: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocity = "minVelocity".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocity]
   @scala.inline
-  def minVelocity: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocity = this.cast("minVelocity")
+  def minVelocityX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocityX = "minVelocityX".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocityX]
   @scala.inline
-  def minVelocityX: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocityX = this.cast("minVelocityX")
+  def minVelocityY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocityY = "minVelocityY".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocityY]
   @scala.inline
-  def minVelocityY: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.minVelocityY = this.cast("minVelocityY")
+  def shouldCancelWhenOutside: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.shouldCancelWhenOutside = "shouldCancelWhenOutside".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.shouldCancelWhenOutside]
   @scala.inline
-  def shouldCancelWhenOutside: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.shouldCancelWhenOutside = this.cast("shouldCancelWhenOutside")
+  def simultaneousHandlers: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.simultaneousHandlers = "simultaneousHandlers".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.simultaneousHandlers]
   @scala.inline
-  def simultaneousHandlers: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.simultaneousHandlers = this.cast("simultaneousHandlers")
-  @scala.inline
-  def waitFor: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.waitFor = this.cast("waitFor")
+  def waitFor: typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.waitFor = "waitFor".asInstanceOf[typingsSlinky.reactNativeGestureHandler.reactNativeGestureHandlerStrings.waitFor]
 }
 

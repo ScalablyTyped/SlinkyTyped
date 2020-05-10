@@ -24,14 +24,41 @@ trait SchemaListNotificationChannelDescriptorsResponse extends js.Object {
 
 object SchemaListNotificationChannelDescriptorsResponse {
   @scala.inline
-  def apply(
-    channelDescriptors: js.Array[SchemaNotificationChannelDescriptor] = null,
-    nextPageToken: String = null
-  ): SchemaListNotificationChannelDescriptorsResponse = {
+  def apply(): SchemaListNotificationChannelDescriptorsResponse = {
     val __obj = js.Dynamic.literal()
-    if (channelDescriptors != null) __obj.updateDynamic("channelDescriptors")(channelDescriptors.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListNotificationChannelDescriptorsResponse]
   }
+  @scala.inline
+  implicit class SchemaListNotificationChannelDescriptorsResponseOps[Self <: SchemaListNotificationChannelDescriptorsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannelDescriptors(value: js.Array[SchemaNotificationChannelDescriptor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelDescriptors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelDescriptors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelDescriptors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

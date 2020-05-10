@@ -13,12 +13,10 @@ trait USBRequestType extends js.Object
 
 object USBRequestType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `class`: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.`class` = "class".asInstanceOf[typingsSlinky.w3cWebUsb.w3cWebUsbStrings.`class`]
   @scala.inline
-  def `class`: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.`class` = this.cast("class")
+  def standard: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.standard = "standard".asInstanceOf[typingsSlinky.w3cWebUsb.w3cWebUsbStrings.standard]
   @scala.inline
-  def standard: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.standard = this.cast("standard")
-  @scala.inline
-  def vendor: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.vendor = this.cast("vendor")
+  def vendor: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.vendor = "vendor".asInstanceOf[typingsSlinky.w3cWebUsb.w3cWebUsbStrings.vendor]
 }
 

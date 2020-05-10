@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RecentGamesDto extends js.Object {
-  var games: js.Array[GameDto]
-  var summonerId: Double
+  var games: js.Array[GameDto] = js.native
+  var summonerId: Double = js.native
 }
 
 object RecentGamesDto {
   @scala.inline
   def apply(games: js.Array[GameDto], summonerId: Double): RecentGamesDto = {
     val __obj = js.Dynamic.literal(games = games.asInstanceOf[js.Any], summonerId = summonerId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RecentGamesDto]
   }
+  @scala.inline
+  implicit class RecentGamesDtoOps[Self <: RecentGamesDto] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGames(value: js.Array[GameDto]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("games")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSummonerId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summonerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

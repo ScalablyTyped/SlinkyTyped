@@ -30,20 +30,77 @@ trait MovSettings extends js.Object {
 
 object MovSettings {
   @scala.inline
-  def apply(
-    ClapAtom: MovClapAtom = null,
-    CslgAtom: MovCslgAtom = null,
-    Mpeg2FourCCControl: MovMpeg2FourCCControl = null,
-    PaddingControl: MovPaddingControl = null,
-    Reference: MovReference = null
-  ): MovSettings = {
+  def apply(): MovSettings = {
     val __obj = js.Dynamic.literal()
-    if (ClapAtom != null) __obj.updateDynamic("ClapAtom")(ClapAtom.asInstanceOf[js.Any])
-    if (CslgAtom != null) __obj.updateDynamic("CslgAtom")(CslgAtom.asInstanceOf[js.Any])
-    if (Mpeg2FourCCControl != null) __obj.updateDynamic("Mpeg2FourCCControl")(Mpeg2FourCCControl.asInstanceOf[js.Any])
-    if (PaddingControl != null) __obj.updateDynamic("PaddingControl")(PaddingControl.asInstanceOf[js.Any])
-    if (Reference != null) __obj.updateDynamic("Reference")(Reference.asInstanceOf[js.Any])
     __obj.asInstanceOf[MovSettings]
   }
+  @scala.inline
+  implicit class MovSettingsOps[Self <: MovSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClapAtom(value: MovClapAtom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClapAtom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClapAtom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClapAtom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCslgAtom(value: MovCslgAtom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CslgAtom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCslgAtom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CslgAtom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMpeg2FourCCControl(value: MovMpeg2FourCCControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mpeg2FourCCControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMpeg2FourCCControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mpeg2FourCCControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingControl(value: MovPaddingControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaddingControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaddingControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReference(value: MovReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reference")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

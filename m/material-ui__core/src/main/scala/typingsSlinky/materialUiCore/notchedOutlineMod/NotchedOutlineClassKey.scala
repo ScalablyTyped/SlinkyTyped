@@ -15,16 +15,14 @@ trait NotchedOutlineClassKey extends js.Object
 
 object NotchedOutlineClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = "error".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.error]
   @scala.inline
-  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = this.cast("error")
+  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = "focused".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.focused]
   @scala.inline
-  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = this.cast("focused")
+  def legend: typingsSlinky.materialUiCore.materialUiCoreStrings.legend = "legend".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.legend]
   @scala.inline
-  def legend: typingsSlinky.materialUiCore.materialUiCoreStrings.legend = this.cast("legend")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

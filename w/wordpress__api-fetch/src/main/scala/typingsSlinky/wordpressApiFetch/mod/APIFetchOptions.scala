@@ -1,82 +1,96 @@
 package typingsSlinky.wordpressApiFetch.mod
 
-import org.scalajs.dom.experimental.AbortSignal
-import org.scalajs.dom.experimental.ReferrerPolicy
-import org.scalajs.dom.experimental.RequestCache
-import org.scalajs.dom.experimental.RequestCredentials
-import org.scalajs.dom.experimental.RequestMode
-import org.scalajs.dom.experimental.RequestRedirect
-import typingsSlinky.std.BodyInit
-import typingsSlinky.std.HeadersInit
 import typingsSlinky.std.RequestInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait APIFetchOptions extends RequestInit {
   /**
     * Shorthand to be used in place of body, accepts an object value to be
     * stringified to JSON.
     */
-  var data: js.UndefOr[js.Object] = js.undefined
+  var data: js.UndefOr[js.Object] = js.native
   /**
     * Unlike `fetch`, the `Promise` return value of `apiFetch` will resolve to the
     * parsed JSON result. Disable this behavior by passing `parse` as `false`.
     *
     * @defaultValue true
     */
-  var parse: js.UndefOr[Boolean] = js.undefined
+  var parse: js.UndefOr[Boolean] = js.native
   /**
     * Shorthand to be used in place of url, appended to the REST API root URL
     * for the current site.
     */
-  var path: js.UndefOr[String] = js.undefined
+  var path: js.UndefOr[String] = js.native
   /**
     * Absolute URL to the endpoint from which to fetch.
     */
-  var url: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.native
 }
 
 object APIFetchOptions {
   @scala.inline
-  def apply(
-    body: BodyInit = null,
-    cache: RequestCache = null,
-    credentials: RequestCredentials = null,
-    data: js.Object = null,
-    headers: HeadersInit = null,
-    integrity: String = null,
-    keepalive: js.UndefOr[Boolean] = js.undefined,
-    method: String = null,
-    mode: RequestMode = null,
-    parse: js.UndefOr[Boolean] = js.undefined,
-    path: String = null,
-    redirect: RequestRedirect = null,
-    referrer: String = null,
-    referrerPolicy: ReferrerPolicy = null,
-    signal: AbortSignal = null,
-    url: String = null,
-    window: js.Any = null
-  ): APIFetchOptions = {
+  def apply(): APIFetchOptions = {
     val __obj = js.Dynamic.literal()
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (integrity != null) __obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepalive)) __obj.updateDynamic("keepalive")(keepalive.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (!js.isUndefined(parse)) __obj.updateDynamic("parse")(parse.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (redirect != null) __obj.updateDynamic("redirect")(redirect.asInstanceOf[js.Any])
-    if (referrer != null) __obj.updateDynamic("referrer")(referrer.asInstanceOf[js.Any])
-    if (referrerPolicy != null) __obj.updateDynamic("referrerPolicy")(referrerPolicy.asInstanceOf[js.Any])
-    if (signal != null) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[APIFetchOptions]
   }
+  @scala.inline
+  implicit class APIFetchOptionsOps[Self <: APIFetchOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

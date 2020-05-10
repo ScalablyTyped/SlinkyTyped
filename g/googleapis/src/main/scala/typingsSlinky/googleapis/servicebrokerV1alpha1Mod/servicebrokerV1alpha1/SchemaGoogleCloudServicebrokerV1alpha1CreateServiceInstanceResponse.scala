@@ -25,11 +25,41 @@ trait SchemaGoogleCloudServicebrokerV1alpha1CreateServiceInstanceResponse extend
 
 object SchemaGoogleCloudServicebrokerV1alpha1CreateServiceInstanceResponse {
   @scala.inline
-  def apply(description: String = null, operation: String = null): SchemaGoogleCloudServicebrokerV1alpha1CreateServiceInstanceResponse = {
+  def apply(): SchemaGoogleCloudServicebrokerV1alpha1CreateServiceInstanceResponse = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (operation != null) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudServicebrokerV1alpha1CreateServiceInstanceResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudServicebrokerV1alpha1CreateServiceInstanceResponseOps[Self <: SchemaGoogleCloudServicebrokerV1alpha1CreateServiceInstanceResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,35 +8,103 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ToggleProps extends js.Object {
-  var addElement: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.undefined
-  var elementsToHighlight: js.Array[NodeResult]
-  var highlightedElementsMap: js.UndefOr[Map[HTMLElement, HighlightedElementData]] = js.undefined
-  var indeterminate: js.UndefOr[Boolean] = js.undefined
-  var isToggledOn: js.UndefOr[Boolean] = js.undefined
-  var toggleId: js.UndefOr[String] = js.undefined
-  var `type`: RuleType
+  var addElement: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.native
+  var elementsToHighlight: js.Array[NodeResult] = js.native
+  var highlightedElementsMap: js.UndefOr[Map[HTMLElement, HighlightedElementData]] = js.native
+  var indeterminate: js.UndefOr[Boolean] = js.native
+  var isToggledOn: js.UndefOr[Boolean] = js.native
+  var toggleId: js.UndefOr[String] = js.native
+  var `type`: RuleType = js.native
 }
 
 object ToggleProps {
   @scala.inline
-  def apply(
-    elementsToHighlight: js.Array[NodeResult],
-    `type`: RuleType,
-    addElement: /* data */ js.Any => Unit = null,
-    highlightedElementsMap: Map[HTMLElement, HighlightedElementData] = null,
-    indeterminate: js.UndefOr[Boolean] = js.undefined,
-    isToggledOn: js.UndefOr[Boolean] = js.undefined,
-    toggleId: String = null
-  ): ToggleProps = {
+  def apply(elementsToHighlight: js.Array[NodeResult], `type`: RuleType): ToggleProps = {
     val __obj = js.Dynamic.literal(elementsToHighlight = elementsToHighlight.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (addElement != null) __obj.updateDynamic("addElement")(js.Any.fromFunction1(addElement))
-    if (highlightedElementsMap != null) __obj.updateDynamic("highlightedElementsMap")(highlightedElementsMap.asInstanceOf[js.Any])
-    if (!js.isUndefined(indeterminate)) __obj.updateDynamic("indeterminate")(indeterminate.asInstanceOf[js.Any])
-    if (!js.isUndefined(isToggledOn)) __obj.updateDynamic("isToggledOn")(isToggledOn.asInstanceOf[js.Any])
-    if (toggleId != null) __obj.updateDynamic("toggleId")(toggleId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToggleProps]
   }
+  @scala.inline
+  implicit class TogglePropsOps[Self <: ToggleProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElementsToHighlight(value: js.Array[NodeResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementsToHighlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: RuleType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddElement(value: /* data */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addElement")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAddElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightedElementsMap(value: Map[HTMLElement, HighlightedElementData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightedElementsMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightedElementsMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightedElementsMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndeterminate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indeterminate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndeterminate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indeterminate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsToggledOn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isToggledOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsToggledOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isToggledOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher
 
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,5 @@ class FlingRunnable protected () extends Runnable {
   var mScroller: js.Any = js.native
   def cancelFling(): Unit = js.native
   def fling(viewWidth: Double, viewHeight: Double, velocityX: Double, velocityY: Double): Unit = js.native
-  /* CompleteClass */
-  override def run(): js.Any = js.native
 }
 

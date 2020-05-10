@@ -21,14 +21,41 @@ trait SchemaMove extends js.Object {
 
 object SchemaMove {
   @scala.inline
-  def apply(
-    addedParents: js.Array[SchemaTargetReference] = null,
-    removedParents: js.Array[SchemaTargetReference] = null
-  ): SchemaMove = {
+  def apply(): SchemaMove = {
     val __obj = js.Dynamic.literal()
-    if (addedParents != null) __obj.updateDynamic("addedParents")(addedParents.asInstanceOf[js.Any])
-    if (removedParents != null) __obj.updateDynamic("removedParents")(removedParents.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMove]
   }
+  @scala.inline
+  implicit class SchemaMoveOps[Self <: SchemaMove] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddedParents(value: js.Array[SchemaTargetReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addedParents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddedParents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addedParents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemovedParents(value: js.Array[SchemaTargetReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removedParents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemovedParents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removedParents")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

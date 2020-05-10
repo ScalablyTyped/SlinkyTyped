@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
-import typingsSlinky.std.HTMLTextAreaElement
+import org.scalajs.dom.raw.HTMLTextAreaElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgPivotViewDataSelectorOptions
   extends /**
-	 * Option for IgPivotViewDataSelectorOptions
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
@@ -17,34 +18,66 @@ trait IgPivotViewDataSelectorOptions
   	 * paramType="string" The unique name of the item.
   	 * returnType="bool"  The function must return true if the item should be accepted.
   	 */
-  var customMoveValidation: js.UndefOr[js.Function] = js.undefined
+  var customMoveValidation: js.UndefOr[js.Function] = js.native
   /**
   	 * Settings for the drag and drop functionality of the igPivotDataSelector.
   	 */
-  var dragAndDropSettings: js.UndefOr[IgPivotViewDataSelectorOptionsDragAndDropSettings] = js.undefined
+  var dragAndDropSettings: js.UndefOr[IgPivotViewDataSelectorOptionsDragAndDropSettings] = js.native
   /**
   	 * Specifies the parent for the drop downs.
   	 */
-  var dropDownParent: js.UndefOr[js.Any] = js.undefined
+  var dropDownParent: js.UndefOr[js.Any] = js.native
 }
 
 object IgPivotViewDataSelectorOptions {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for IgPivotViewDataSelectorOptions
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    customMoveValidation: js.Function = null,
-    dragAndDropSettings: IgPivotViewDataSelectorOptionsDragAndDropSettings = null,
-    dropDownParent: js.Any = null
-  ): IgPivotViewDataSelectorOptions = {
+  def apply(): IgPivotViewDataSelectorOptions = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (customMoveValidation != null) __obj.updateDynamic("customMoveValidation")(customMoveValidation.asInstanceOf[js.Any])
-    if (dragAndDropSettings != null) __obj.updateDynamic("dragAndDropSettings")(dragAndDropSettings.asInstanceOf[js.Any])
-    if (dropDownParent != null) __obj.updateDynamic("dropDownParent")(dropDownParent.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgPivotViewDataSelectorOptions]
   }
+  @scala.inline
+  implicit class IgPivotViewDataSelectorOptionsOps[Self <: IgPivotViewDataSelectorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomMoveValidation(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMoveValidation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomMoveValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customMoveValidation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragAndDropSettings(value: IgPivotViewDataSelectorOptionsDragAndDropSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAndDropSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragAndDropSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragAndDropSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDropDownParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownParent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropDownParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownParent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

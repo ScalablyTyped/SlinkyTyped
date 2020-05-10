@@ -1,11 +1,10 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.cancel
 import typingsSlinky.antd.antdStrings.ok
@@ -18,72 +17,96 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ConfirmDialog
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ConfirmDialog {
   @JSImport("antd/lib/modal/ConfirmDialog", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style, type */
-  def apply(
-    close: /* repeated */ js.Any => Unit,
-    afterClose: () => Unit = null,
-    autoFocusButton: ok | cancel = null,
-    cancelButtonProps: NativeButtonProps = null,
-    cancelText: TagMod[Any] = null,
-    centered: js.UndefOr[Boolean] = js.undefined,
-    content: TagMod[Any] = null,
-    getContainer: String | HTMLElement | getContainerFunc | `false` = null,
-    icon: TagMod[Any] = null,
-    keyboard: js.UndefOr[Boolean] = js.undefined,
-    mask: js.UndefOr[Boolean] = js.undefined,
-    maskClosable: js.UndefOr[Boolean] = js.undefined,
-    maskStyle: CSSProperties = null,
-    maskTransitionName: String = null,
-    okButtonProps: NativeButtonProps = null,
-    okCancel: js.UndefOr[Boolean] = js.undefined,
-    okText: TagMod[Any] = null,
-    okType: ButtonType = null,
-    onCancel: /* repeated */ js.Any => _ = null,
-    onOk: /* repeated */ js.Any => _ = null,
-    prefixCls: String = null,
-    title: TagMod[Any] = null,
-    transitionName: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: String | Double = null,
-    zIndex: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(close = js.Any.fromFunction1(close))
-    if (afterClose != null) __obj.updateDynamic("afterClose")(js.Any.fromFunction0(afterClose))
-    if (autoFocusButton != null) __obj.updateDynamic("autoFocusButton")(autoFocusButton.asInstanceOf[js.Any])
-    if (cancelButtonProps != null) __obj.updateDynamic("cancelButtonProps")(cancelButtonProps.asInstanceOf[js.Any])
-    if (cancelText != null) __obj.updateDynamic("cancelText")(cancelText.asInstanceOf[js.Any])
-    if (!js.isUndefined(centered)) __obj.updateDynamic("centered")(centered.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (getContainer != null) __obj.updateDynamic("getContainer")(getContainer.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.asInstanceOf[js.Any])
-    if (!js.isUndefined(mask)) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (!js.isUndefined(maskClosable)) __obj.updateDynamic("maskClosable")(maskClosable.asInstanceOf[js.Any])
-    if (maskStyle != null) __obj.updateDynamic("maskStyle")(maskStyle.asInstanceOf[js.Any])
-    if (maskTransitionName != null) __obj.updateDynamic("maskTransitionName")(maskTransitionName.asInstanceOf[js.Any])
-    if (okButtonProps != null) __obj.updateDynamic("okButtonProps")(okButtonProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(okCancel)) __obj.updateDynamic("okCancel")(okCancel.asInstanceOf[js.Any])
-    if (okText != null) __obj.updateDynamic("okText")(okText.asInstanceOf[js.Any])
-    if (okType != null) __obj.updateDynamic("okType")(okType.asInstanceOf[js.Any])
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction1(onCancel))
-    if (onOk != null) __obj.updateDynamic("onOk")(js.Any.fromFunction1(onOk))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def afterClose(value: () => Unit): this.type = set("afterClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def autoFocusButton(value: ok | cancel): this.type = set("autoFocusButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocusButtonNull: this.type = set("autoFocusButton", null)
+    @scala.inline
+    def cancelButtonProps(value: NativeButtonProps): this.type = set("cancelButtonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelTextReactElement(value: ReactElement): this.type = set("cancelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelText(value: TagMod[Any]): this.type = set("cancelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def centered(value: Boolean): this.type = set("centered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: TagMod[Any]): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getContainerFunction0(value: () => HTMLElement): this.type = set("getContainer", js.Any.fromFunction0(value))
+    @scala.inline
+    def getContainer(value: String | HTMLElement | getContainerFunc | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getContainerNull: this.type = set("getContainer", null)
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyboard(value: Boolean): this.type = set("keyboard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mask(value: Boolean): this.type = set("mask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskClosable(value: Boolean): this.type = set("maskClosable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskStyle(value: CSSProperties): this.type = set("maskStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okButtonProps(value: NativeButtonProps): this.type = set("okButtonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okCancel(value: Boolean): this.type = set("okCancel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okText(value: TagMod[Any]): this.type = set("okText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okType(value: ButtonType): this.type = set("okType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCancel(value: /* repeated */ js.Any => _): this.type = set("onCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onOk(value: /* repeated */ js.Any => _): this.type = set("onOk", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
-  type Props = ConfirmDialogProps
+  
+  def withProps(p: ConfirmDialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(close: /* repeated */ js.Any => Unit): Builder = {
+    val __props = js.Dynamic.literal(close = js.Any.fromFunction1(close))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ConfirmDialogProps]))
+  }
 }
 

@@ -23,12 +23,53 @@ trait NotebookInstanceLifecycleConfigurationArgs extends js.Object {
 
 object NotebookInstanceLifecycleConfigurationArgs {
   @scala.inline
-  def apply(name: Input[String] = null, onCreate: Input[String] = null, onStart: Input[String] = null): NotebookInstanceLifecycleConfigurationArgs = {
+  def apply(): NotebookInstanceLifecycleConfigurationArgs = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onCreate != null) __obj.updateDynamic("onCreate")(onCreate.asInstanceOf[js.Any])
-    if (onStart != null) __obj.updateDynamic("onStart")(onStart.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotebookInstanceLifecycleConfigurationArgs]
   }
+  @scala.inline
+  implicit class NotebookInstanceLifecycleConfigurationArgsOps[Self <: NotebookInstanceLifecycleConfigurationArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCreate(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnStart(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

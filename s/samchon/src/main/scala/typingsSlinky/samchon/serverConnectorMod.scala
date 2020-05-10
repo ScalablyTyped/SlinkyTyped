@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("samchon/protocol/communicator/server_connector/ServerConnector", JSImport.Namespace)
 @js.native
 object serverConnectorMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.samchon.iprotocolMod.IProtocol because Already inherited
   - typingsSlinky.samchon.icommunicatorMod.ICommunicator because Already inherited
   - typingsSlinky.samchon.iserverconnectorMod.IServerConnector because var conflicts: onClose. Inlined onConnect, connect */ @js.native

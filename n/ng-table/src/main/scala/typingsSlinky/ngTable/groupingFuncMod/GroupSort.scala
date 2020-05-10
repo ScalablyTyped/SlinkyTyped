@@ -13,12 +13,10 @@ trait GroupSort extends js.Object
 
 object GroupSort {
   @scala.inline
-  def _empty: typingsSlinky.ngTable.ngTableStrings._empty = this.cast("")
+  def _empty: typingsSlinky.ngTable.ngTableStrings._empty = "".asInstanceOf[typingsSlinky.ngTable.ngTableStrings._empty]
   @scala.inline
-  def asc: typingsSlinky.ngTable.ngTableStrings.asc = this.cast("asc")
+  def asc: typingsSlinky.ngTable.ngTableStrings.asc = "asc".asInstanceOf[typingsSlinky.ngTable.ngTableStrings.asc]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def desc: typingsSlinky.ngTable.ngTableStrings.desc = this.cast("desc")
+  def desc: typingsSlinky.ngTable.ngTableStrings.desc = "desc".asInstanceOf[typingsSlinky.ngTable.ngTableStrings.desc]
 }
 

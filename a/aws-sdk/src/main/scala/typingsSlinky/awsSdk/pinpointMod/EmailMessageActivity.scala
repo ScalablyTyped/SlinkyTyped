@@ -26,18 +26,65 @@ trait EmailMessageActivity extends js.Object {
 
 object EmailMessageActivity {
   @scala.inline
-  def apply(
-    MessageConfig: JourneyEmailMessage = null,
-    NextActivity: string = null,
-    TemplateName: string = null,
-    TemplateVersion: string = null
-  ): EmailMessageActivity = {
+  def apply(): EmailMessageActivity = {
     val __obj = js.Dynamic.literal()
-    if (MessageConfig != null) __obj.updateDynamic("MessageConfig")(MessageConfig.asInstanceOf[js.Any])
-    if (NextActivity != null) __obj.updateDynamic("NextActivity")(NextActivity.asInstanceOf[js.Any])
-    if (TemplateName != null) __obj.updateDynamic("TemplateName")(TemplateName.asInstanceOf[js.Any])
-    if (TemplateVersion != null) __obj.updateDynamic("TemplateVersion")(TemplateVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailMessageActivity]
   }
+  @scala.inline
+  implicit class EmailMessageActivityOps[Self <: EmailMessageActivity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessageConfig(value: JourneyEmailMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextActivity(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextActivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateVersion(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

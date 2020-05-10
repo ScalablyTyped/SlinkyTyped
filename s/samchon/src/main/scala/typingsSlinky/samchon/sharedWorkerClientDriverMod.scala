@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("samchon/protocol/communicator/client_driver/SharedWorkerClientDriver", JSImport.Namespace)
 @js.native
 object sharedWorkerClientDriverMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.samchon.iprotocolMod.IProtocol because Already inherited
   - typingsSlinky.samchon.icommunicatorMod.ICommunicator because Already inherited
   - typingsSlinky.samchon.iclientdriverMod.IClientDriver because var conflicts: onClose. Inlined listen */ @js.native

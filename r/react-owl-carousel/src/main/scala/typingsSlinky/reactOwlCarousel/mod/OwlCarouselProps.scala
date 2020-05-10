@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -84,882 +85,3424 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react-owl-carousel.react-owl-carousel/umd/options.Options & react-owl-carousel.react-owl-carousel.ComponentProps */
+@js.native
 trait OwlCarouselProps extends js.Object {
-  var URLhashListener: js.UndefOr[Boolean] = js.undefined
-  val about: js.UndefOr[String] = js.undefined
-  val accept: js.UndefOr[String] = js.undefined
-  val acceptCharset: js.UndefOr[String] = js.undefined
-  val accessKey: js.UndefOr[String] = js.undefined
-  val action: js.UndefOr[String] = js.undefined
-  val allowFullScreen: js.UndefOr[Boolean] = js.undefined
-  val allowTransparency: js.UndefOr[Boolean] = js.undefined
-  val alt: js.UndefOr[String] = js.undefined
-  var animateIn: js.UndefOr[String | Boolean] = js.undefined
-  var animateOut: js.UndefOr[String | Boolean] = js.undefined
-  val `aria-activedescendant`: js.UndefOr[String] = js.undefined
-  val `aria-atomic`: js.UndefOr[Boolean] = js.undefined
+  var URLhashListener: js.UndefOr[Boolean] = js.native
+  val about: js.UndefOr[String] = js.native
+  val accept: js.UndefOr[String] = js.native
+  val acceptCharset: js.UndefOr[String] = js.native
+  val accessKey: js.UndefOr[String] = js.native
+  val action: js.UndefOr[String] = js.native
+  val allowFullScreen: js.UndefOr[Boolean] = js.native
+  val allowTransparency: js.UndefOr[Boolean] = js.native
+  val alt: js.UndefOr[String] = js.native
+  var animateIn: js.UndefOr[String | Boolean] = js.native
+  var animateOut: js.UndefOr[String | Boolean] = js.native
+  val `aria-activedescendant`: js.UndefOr[String] = js.native
+  val `aria-atomic`: js.UndefOr[Boolean] = js.native
   val `aria-autocomplete`: js.UndefOr[
     none | `inline` | typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.list | both
-  ] = js.undefined
-  val `aria-busy`: js.UndefOr[Boolean] = js.undefined
-  val `aria-checked`: js.UndefOr[Boolean | mixed] = js.undefined
-  val `aria-colcount`: js.UndefOr[Double] = js.undefined
-  val `aria-colindex`: js.UndefOr[Double] = js.undefined
-  val `aria-colspan`: js.UndefOr[Double] = js.undefined
-  val `aria-controls`: js.UndefOr[String] = js.undefined
+  ] = js.native
+  val `aria-busy`: js.UndefOr[Boolean] = js.native
+  val `aria-checked`: js.UndefOr[Boolean | mixed] = js.native
+  val `aria-colcount`: js.UndefOr[Double] = js.native
+  val `aria-colindex`: js.UndefOr[Double] = js.native
+  val `aria-colspan`: js.UndefOr[Double] = js.native
+  val `aria-controls`: js.UndefOr[String] = js.native
   val `aria-current`: js.UndefOr[
     Boolean | page | typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.step | location | date | time
-  ] = js.undefined
-  val `aria-describedby`: js.UndefOr[String] = js.undefined
-  val `aria-details`: js.UndefOr[String] = js.undefined
-  val `aria-disabled`: js.UndefOr[Boolean] = js.undefined
-  val `aria-dropeffect`: js.UndefOr[none | copy | execute | link | move | popup] = js.undefined
-  val `aria-errormessage`: js.UndefOr[String] = js.undefined
-  val `aria-expanded`: js.UndefOr[Boolean] = js.undefined
-  val `aria-flowto`: js.UndefOr[String] = js.undefined
-  val `aria-grabbed`: js.UndefOr[Boolean] = js.undefined
-  val `aria-haspopup`: js.UndefOr[Boolean | menu | listbox | tree | grid | dialog] = js.undefined
-  val `aria-hidden`: js.UndefOr[Boolean] = js.undefined
-  val `aria-invalid`: js.UndefOr[Boolean | grammar | spelling] = js.undefined
-  val `aria-keyshortcuts`: js.UndefOr[String] = js.undefined
-  val `aria-label`: js.UndefOr[String] = js.undefined
-  val `aria-labelledby`: js.UndefOr[String] = js.undefined
-  val `aria-level`: js.UndefOr[Double] = js.undefined
-  val `aria-live`: js.UndefOr[off | assertive | polite] = js.undefined
-  val `aria-modal`: js.UndefOr[Boolean] = js.undefined
-  val `aria-multiline`: js.UndefOr[Boolean] = js.undefined
-  val `aria-multiselectable`: js.UndefOr[Boolean] = js.undefined
-  val `aria-orientation`: js.UndefOr[horizontal | vertical] = js.undefined
-  val `aria-owns`: js.UndefOr[String] = js.undefined
-  val `aria-placeholder`: js.UndefOr[String] = js.undefined
-  val `aria-posinset`: js.UndefOr[Double] = js.undefined
-  val `aria-pressed`: js.UndefOr[Boolean | mixed] = js.undefined
-  val `aria-readonly`: js.UndefOr[Boolean] = js.undefined
-  val `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.undefined
-  val `aria-required`: js.UndefOr[Boolean] = js.undefined
-  val `aria-roledescription`: js.UndefOr[String] = js.undefined
-  val `aria-rowcount`: js.UndefOr[Double] = js.undefined
-  val `aria-rowindex`: js.UndefOr[Double] = js.undefined
-  val `aria-rowspan`: js.UndefOr[Double] = js.undefined
-  val `aria-selected`: js.UndefOr[Boolean] = js.undefined
-  val `aria-setsize`: js.UndefOr[Double] = js.undefined
-  val `aria-sort`: js.UndefOr[none | ascending | descending | other] = js.undefined
-  val `aria-valuemax`: js.UndefOr[Double] = js.undefined
-  val `aria-valuemin`: js.UndefOr[Double] = js.undefined
-  val `aria-valuenow`: js.UndefOr[Double] = js.undefined
-  val `aria-valuetext`: js.UndefOr[String] = js.undefined
-  val as: js.UndefOr[String] = js.undefined
-  val async: js.UndefOr[Boolean] = js.undefined
-  val autoCapitalize: js.UndefOr[String] = js.undefined
-  val autoComplete: js.UndefOr[String] = js.undefined
-  val autoCorrect: js.UndefOr[String] = js.undefined
-  val autoFocus: js.UndefOr[Boolean] = js.undefined
-  var autoHeightClass: js.UndefOr[String] = js.undefined
-  val autoPlay: js.UndefOr[Boolean] = js.undefined
-  val autoSave: js.UndefOr[String] = js.undefined
-  var autoWidth: js.UndefOr[Boolean] = js.undefined
-  var autoplay: js.UndefOr[Boolean] = js.undefined
-  var autoplayHoverPause: js.UndefOr[Boolean] = js.undefined
-  var autoplaySpeed: js.UndefOr[Double | Boolean] = js.undefined
-  var autoplayTimeout: js.UndefOr[Double] = js.undefined
-  var callbacks: js.UndefOr[Boolean] = js.undefined
-  val capture: js.UndefOr[Boolean | String] = js.undefined
-  val cellPadding: js.UndefOr[Double | String] = js.undefined
-  val cellSpacing: js.UndefOr[Double | String] = js.undefined
-  var center: js.UndefOr[Boolean] = js.undefined
-  val challenge: js.UndefOr[String] = js.undefined
-  val charSet: js.UndefOr[String] = js.undefined
-  val checked: js.UndefOr[Boolean] = js.undefined
-  val children: js.UndefOr[TagMod[Any]] = js.undefined
-  val cite: js.UndefOr[String] = js.undefined
-  val classID: js.UndefOr[String] = js.undefined
-  val className: js.UndefOr[String] = js.undefined
-  val colSpan: js.UndefOr[Double] = js.undefined
-  val color: js.UndefOr[String] = js.undefined
-  val cols: js.UndefOr[Double] = js.undefined
-  val content: js.UndefOr[String] = js.undefined
-  val contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
-  val contextMenu: js.UndefOr[String] = js.undefined
-  val controls: js.UndefOr[Boolean] = js.undefined
-  var controlsClass: js.UndefOr[String] = js.undefined
-  val coords: js.UndefOr[String] = js.undefined
-  val crossOrigin: js.UndefOr[String] = js.undefined
-  val dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.undefined
-  val data: js.UndefOr[String] = js.undefined
-  val datatype: js.UndefOr[String] = js.undefined
-  val dateTime: js.UndefOr[String] = js.undefined
-  val default: js.UndefOr[Boolean] = js.undefined
-  val defaultChecked: js.UndefOr[Boolean] = js.undefined
-  val defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.undefined
-  val defer: js.UndefOr[Boolean] = js.undefined
-  val dir: js.UndefOr[String] = js.undefined
-  val disabled: js.UndefOr[Boolean] = js.undefined
-  var dotClass: js.UndefOr[String] = js.undefined
-  var dotData: js.UndefOr[Boolean] = js.undefined
-  var dots: js.UndefOr[Boolean] = js.undefined
-  var dotsClass: js.UndefOr[String] = js.undefined
-  var dotsContainer: js.UndefOr[String | Boolean] = js.undefined
-  var dotsEach: js.UndefOr[Double | Boolean] = js.undefined
-  var dotsSpeed: js.UndefOr[Double | Boolean] = js.undefined
-  val download: js.UndefOr[js.Any] = js.undefined
-  var dragClass: js.UndefOr[String] = js.undefined
-  var dragEndSpeed: js.UndefOr[Double | Boolean] = js.undefined
-  val draggable: js.UndefOr[Booleanish] = js.undefined
-  val encType: js.UndefOr[String] = js.undefined
-  var fallbackEasing: js.UndefOr[String] = js.undefined
-  var fluidSpeed: js.UndefOr[Double | Boolean] = js.undefined
-  val form: js.UndefOr[String] = js.undefined
-  val formAction: js.UndefOr[String] = js.undefined
-  val formEncType: js.UndefOr[String] = js.undefined
-  val formMethod: js.UndefOr[String] = js.undefined
-  val formNoValidate: js.UndefOr[Boolean] = js.undefined
-  val formTarget: js.UndefOr[String] = js.undefined
-  val frameBorder: js.UndefOr[Double | String] = js.undefined
-  var freeDrag: js.UndefOr[Boolean] = js.undefined
-  var grabClass: js.UndefOr[String] = js.undefined
-  val headers: js.UndefOr[String] = js.undefined
-  val height: js.UndefOr[Double | String] = js.undefined
-  val hidden: js.UndefOr[Boolean] = js.undefined
-  val high: js.UndefOr[Double] = js.undefined
-  val href: js.UndefOr[String] = js.undefined
-  val hrefLang: js.UndefOr[String] = js.undefined
-  val htmlFor: js.UndefOr[String] = js.undefined
-  val httpEquiv: js.UndefOr[String] = js.undefined
-  val id: js.UndefOr[String] = js.undefined
-  var info: js.UndefOr[HandlerCallback] = js.undefined
-  val inlist: js.UndefOr[js.Any] = js.undefined
-  val inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.undefined
-  val integrity: js.UndefOr[String] = js.undefined
-  val is: js.UndefOr[String] = js.undefined
-  var itemElement: js.UndefOr[String] = js.undefined
-  val itemID: js.UndefOr[String] = js.undefined
-  val itemProp: js.UndefOr[String] = js.undefined
-  val itemRef: js.UndefOr[String] = js.undefined
-  val itemScope: js.UndefOr[Boolean] = js.undefined
-  val itemType: js.UndefOr[String] = js.undefined
-  var items: js.UndefOr[Double] = js.undefined
-  val keyParams: js.UndefOr[String] = js.undefined
-  val keyType: js.UndefOr[String] = js.undefined
-  val kind: js.UndefOr[String] = js.undefined
-  val label: js.UndefOr[String] = js.undefined
-  val lang: js.UndefOr[String] = js.undefined
-  var lazyContent: js.UndefOr[Boolean] = js.undefined
-  var lazyLoad: js.UndefOr[Boolean] = js.undefined
-  val list: js.UndefOr[String] = js.undefined
-  var loadedClass: js.UndefOr[String] = js.undefined
-  var loadingClass: js.UndefOr[String] = js.undefined
-  var loop: js.UndefOr[Boolean] = js.undefined
-  val low: js.UndefOr[Double] = js.undefined
-  val manifest: js.UndefOr[String] = js.undefined
-  var margin: js.UndefOr[Double] = js.undefined
-  val marginHeight: js.UndefOr[Double] = js.undefined
-  val marginWidth: js.UndefOr[Double] = js.undefined
-  val max: js.UndefOr[Double | String] = js.undefined
-  val maxLength: js.UndefOr[Double] = js.undefined
-  val media: js.UndefOr[String] = js.undefined
-  val mediaGroup: js.UndefOr[String] = js.undefined
-  var merge: js.UndefOr[Boolean] = js.undefined
-  var mergeFit: js.UndefOr[Boolean] = js.undefined
-  val method: js.UndefOr[String] = js.undefined
-  val min: js.UndefOr[Double | String] = js.undefined
-  val minLength: js.UndefOr[Double] = js.undefined
-  var mouseDrag: js.UndefOr[Boolean] = js.undefined
-  val multiple: js.UndefOr[Boolean] = js.undefined
-  val muted: js.UndefOr[Boolean] = js.undefined
-  val name: js.UndefOr[String] = js.undefined
-  var nav: js.UndefOr[Boolean] = js.undefined
-  var navClass: js.UndefOr[js.Array[String]] = js.undefined
-  var navContainer: js.UndefOr[String | Boolean] = js.undefined
-  var navContainerClass: js.UndefOr[String] = js.undefined
-  var navElement: js.UndefOr[String] = js.undefined
-  var navSpeed: js.UndefOr[Double | Boolean] = js.undefined
-  var navText: js.UndefOr[js.Array[String]] = js.undefined
-  var nestedItemSelector: js.UndefOr[String] = js.undefined
-  val noValidate: js.UndefOr[Boolean] = js.undefined
-  val nonce: js.UndefOr[String] = js.undefined
-  val onAbort: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onAnimationEnd: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.undefined
-  val onAnimationIteration: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.undefined
-  val onAnimationStart: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.undefined
-  val onAuxClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  val onBeforeInput: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.undefined
-  val onBlur: js.UndefOr[FocusEventHandler[HTMLDivElement]] = js.undefined
-  val onCanPlay: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onCanPlayThrough: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  var onChange: js.UndefOr[HandlerCallback with FormEventHandler[HTMLDivElement]] = js.undefined
-  var onChanged: js.UndefOr[HandlerCallback] = js.undefined
-  val onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  val onCompositionEnd: js.UndefOr[CompositionEventHandler[HTMLDivElement]] = js.undefined
-  val onCompositionStart: js.UndefOr[CompositionEventHandler[HTMLDivElement]] = js.undefined
-  val onCompositionUpdate: js.UndefOr[CompositionEventHandler[HTMLDivElement]] = js.undefined
-  val onContextMenu: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  val onCopy: js.UndefOr[ClipboardEventHandler[HTMLDivElement]] = js.undefined
-  val onCut: js.UndefOr[ClipboardEventHandler[HTMLDivElement]] = js.undefined
-  val onDoubleClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  var onDrag: js.UndefOr[HandlerCallback with DragEventHandler[HTMLDivElement]] = js.undefined
-  val onDragEnd: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.undefined
-  val onDragEnter: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.undefined
-  val onDragExit: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.undefined
-  val onDragLeave: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.undefined
-  val onDragOver: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.undefined
-  val onDragStart: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.undefined
-  var onDragged: js.UndefOr[HandlerCallback] = js.undefined
-  val onDrop: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.undefined
-  val onDurationChange: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onEmptied: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onEncrypted: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onEnded: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onError: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onFocus: js.UndefOr[FocusEventHandler[HTMLDivElement]] = js.undefined
-  var onInitialize: js.UndefOr[HandlerCallback] = js.undefined
-  var onInitialized: js.UndefOr[HandlerCallback] = js.undefined
-  val onInput: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.undefined
-  val onInvalid: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.undefined
-  val onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] = js.undefined
-  val onKeyPress: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] = js.undefined
-  val onKeyUp: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] = js.undefined
-  val onLoad: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  var onLoadLazy: js.UndefOr[HandlerCallback] = js.undefined
-  val onLoadStart: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onLoadedData: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  var onLoadedLazy: js.UndefOr[HandlerCallback] = js.undefined
-  val onLoadedMetadata: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onMouseDown: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  val onMouseEnter: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  val onMouseLeave: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  val onMouseMove: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  val onMouseOut: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  val onMouseOver: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  val onMouseUp: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  val onPaste: js.UndefOr[ClipboardEventHandler[HTMLDivElement]] = js.undefined
-  val onPause: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onPlay: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  var onPlayVideo: js.UndefOr[HandlerCallback] = js.undefined
-  val onPlaying: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onPointerCancel: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.undefined
-  val onPointerDown: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.undefined
-  val onPointerEnter: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.undefined
-  val onPointerLeave: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.undefined
-  val onPointerMove: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.undefined
-  val onPointerOut: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.undefined
-  val onPointerOver: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.undefined
-  val onPointerUp: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.undefined
-  val onProgress: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onRateChange: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  var onRefresh: js.UndefOr[HandlerCallback] = js.undefined
-  var onRefreshed: js.UndefOr[HandlerCallback] = js.undefined
-  val onReset: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.undefined
-  var onResize: js.UndefOr[HandlerCallback] = js.undefined
-  var onResized: js.UndefOr[HandlerCallback] = js.undefined
-  val onScroll: js.UndefOr[UIEventHandler[HTMLDivElement]] = js.undefined
-  val onSeeked: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onSeeking: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onSelect: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onStalled: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  var onStopVideo: js.UndefOr[HandlerCallback] = js.undefined
-  val onSubmit: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.undefined
-  val onSuspend: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onTimeUpdate: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onTouchCancel: js.UndefOr[TouchEventHandler[HTMLDivElement]] = js.undefined
-  val onTouchEnd: js.UndefOr[TouchEventHandler[HTMLDivElement]] = js.undefined
-  val onTouchMove: js.UndefOr[TouchEventHandler[HTMLDivElement]] = js.undefined
-  val onTouchStart: js.UndefOr[TouchEventHandler[HTMLDivElement]] = js.undefined
-  val onTransitionEnd: js.UndefOr[TransitionEventHandler[HTMLDivElement]] = js.undefined
-  var onTranslate: js.UndefOr[HandlerCallback] = js.undefined
-  var onTranslated: js.UndefOr[HandlerCallback] = js.undefined
-  val onVolumeChange: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onWaiting: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
-  val onWheel: js.UndefOr[WheelEventHandler[HTMLDivElement]] = js.undefined
-  val open: js.UndefOr[Boolean] = js.undefined
-  val optimum: js.UndefOr[Double] = js.undefined
-  val pattern: js.UndefOr[String] = js.undefined
-  val placeholder: js.UndefOr[String] = js.undefined
-  val playsInline: js.UndefOr[Boolean] = js.undefined
-  val poster: js.UndefOr[String] = js.undefined
-  val prefix: js.UndefOr[String] = js.undefined
-  val preload: js.UndefOr[String] = js.undefined
-  val property: js.UndefOr[String] = js.undefined
-  var pullDrag: js.UndefOr[Boolean] = js.undefined
-  val radioGroup: js.UndefOr[String] = js.undefined
-  val readOnly: js.UndefOr[Boolean] = js.undefined
-  var refreshClass: js.UndefOr[String] = js.undefined
-  val rel: js.UndefOr[String] = js.undefined
-  val required: js.UndefOr[Boolean] = js.undefined
-  val resource: js.UndefOr[String] = js.undefined
-  var responsive: js.UndefOr[StringDictionary[Options]] = js.undefined
-  var responsiveBaseElement: js.UndefOr[Element] = js.undefined
-  var responsiveClass: js.UndefOr[String | Boolean] = js.undefined
-  var responsiveRefreshRate: js.UndefOr[Double] = js.undefined
-  val results: js.UndefOr[Double] = js.undefined
-  val reversed: js.UndefOr[Boolean] = js.undefined
-  var rewind: js.UndefOr[Boolean] = js.undefined
-  val role: js.UndefOr[String] = js.undefined
-  val rowSpan: js.UndefOr[Double] = js.undefined
-  val rows: js.UndefOr[Double] = js.undefined
-  var rtlClass: js.UndefOr[String] = js.undefined
-  val sandbox: js.UndefOr[String] = js.undefined
-  val scope: js.UndefOr[String] = js.undefined
-  val scoped: js.UndefOr[Boolean] = js.undefined
-  val scrolling: js.UndefOr[String] = js.undefined
-  val seamless: js.UndefOr[Boolean] = js.undefined
-  val security: js.UndefOr[String] = js.undefined
-  val selected: js.UndefOr[Boolean] = js.undefined
-  val shape: js.UndefOr[String] = js.undefined
-  val size: js.UndefOr[Double] = js.undefined
-  val sizes: js.UndefOr[String] = js.undefined
-  var slideBy: js.UndefOr[Double | String] = js.undefined
-  val slot: js.UndefOr[String] = js.undefined
-  var smartSpeed: js.UndefOr[Double | Boolean] = js.undefined
-  val span: js.UndefOr[Double] = js.undefined
-  val spellCheck: js.UndefOr[Booleanish] = js.undefined
-  val src: js.UndefOr[String] = js.undefined
-  val srcDoc: js.UndefOr[String] = js.undefined
-  val srcLang: js.UndefOr[String] = js.undefined
-  val srcSet: js.UndefOr[String] = js.undefined
-  var stageClass: js.UndefOr[String] = js.undefined
-  var stageElement: js.UndefOr[String] = js.undefined
-  var stageOuterClass: js.UndefOr[String] = js.undefined
-  var stagePadding: js.UndefOr[Double] = js.undefined
-  val start: js.UndefOr[Double] = js.undefined
-  var startPosition: js.UndefOr[Double | String] = js.undefined
-  val step: js.UndefOr[Double | String] = js.undefined
-  val style: js.UndefOr[CSSProperties] = js.undefined
-  val summary: js.UndefOr[String] = js.undefined
-  val suppressContentEditableWarning: js.UndefOr[Boolean] = js.undefined
-  val suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined
-  val tabIndex: js.UndefOr[Double] = js.undefined
-  val target: js.UndefOr[String] = js.undefined
-  val title: js.UndefOr[String] = js.undefined
-  var touchDrag: js.UndefOr[Boolean] = js.undefined
-  val translate: js.UndefOr[yes | no] = js.undefined
-  val `type`: js.UndefOr[String] = js.undefined
-  val typeof: js.UndefOr[String] = js.undefined
-  val unselectable: js.UndefOr[on | off] = js.undefined
-  val useMap: js.UndefOr[String] = js.undefined
-  val value: js.UndefOr[String | js.Array[String] | Double] = js.undefined
-  var video: js.UndefOr[Boolean] = js.undefined
-  var videoHeight: js.UndefOr[Double | Boolean] = js.undefined
-  var videoWidth: js.UndefOr[Double | Boolean] = js.undefined
-  val vocab: js.UndefOr[String] = js.undefined
-  val width: js.UndefOr[Double | String] = js.undefined
-  val wmode: js.UndefOr[String] = js.undefined
-  val wrap: js.UndefOr[String] = js.undefined
+  ] = js.native
+  val `aria-describedby`: js.UndefOr[String] = js.native
+  val `aria-details`: js.UndefOr[String] = js.native
+  val `aria-disabled`: js.UndefOr[Boolean] = js.native
+  val `aria-dropeffect`: js.UndefOr[none | copy | execute | link | move | popup] = js.native
+  val `aria-errormessage`: js.UndefOr[String] = js.native
+  val `aria-expanded`: js.UndefOr[Boolean] = js.native
+  val `aria-flowto`: js.UndefOr[String] = js.native
+  val `aria-grabbed`: js.UndefOr[Boolean] = js.native
+  val `aria-haspopup`: js.UndefOr[Boolean | menu | listbox | tree | grid | dialog] = js.native
+  val `aria-hidden`: js.UndefOr[Boolean] = js.native
+  val `aria-invalid`: js.UndefOr[Boolean | grammar | spelling] = js.native
+  val `aria-keyshortcuts`: js.UndefOr[String] = js.native
+  val `aria-label`: js.UndefOr[String] = js.native
+  val `aria-labelledby`: js.UndefOr[String] = js.native
+  val `aria-level`: js.UndefOr[Double] = js.native
+  val `aria-live`: js.UndefOr[off | assertive | polite] = js.native
+  val `aria-modal`: js.UndefOr[Boolean] = js.native
+  val `aria-multiline`: js.UndefOr[Boolean] = js.native
+  val `aria-multiselectable`: js.UndefOr[Boolean] = js.native
+  val `aria-orientation`: js.UndefOr[horizontal | vertical] = js.native
+  val `aria-owns`: js.UndefOr[String] = js.native
+  val `aria-placeholder`: js.UndefOr[String] = js.native
+  val `aria-posinset`: js.UndefOr[Double] = js.native
+  val `aria-pressed`: js.UndefOr[Boolean | mixed] = js.native
+  val `aria-readonly`: js.UndefOr[Boolean] = js.native
+  val `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  val `aria-required`: js.UndefOr[Boolean] = js.native
+  val `aria-roledescription`: js.UndefOr[String] = js.native
+  val `aria-rowcount`: js.UndefOr[Double] = js.native
+  val `aria-rowindex`: js.UndefOr[Double] = js.native
+  val `aria-rowspan`: js.UndefOr[Double] = js.native
+  val `aria-selected`: js.UndefOr[Boolean] = js.native
+  val `aria-setsize`: js.UndefOr[Double] = js.native
+  val `aria-sort`: js.UndefOr[none | ascending | descending | other] = js.native
+  val `aria-valuemax`: js.UndefOr[Double] = js.native
+  val `aria-valuemin`: js.UndefOr[Double] = js.native
+  val `aria-valuenow`: js.UndefOr[Double] = js.native
+  val `aria-valuetext`: js.UndefOr[String] = js.native
+  val as: js.UndefOr[String] = js.native
+  val async: js.UndefOr[Boolean] = js.native
+  val autoCapitalize: js.UndefOr[String] = js.native
+  val autoComplete: js.UndefOr[String] = js.native
+  val autoCorrect: js.UndefOr[String] = js.native
+  val autoFocus: js.UndefOr[Boolean] = js.native
+  var autoHeightClass: js.UndefOr[String] = js.native
+  val autoPlay: js.UndefOr[Boolean] = js.native
+  val autoSave: js.UndefOr[String] = js.native
+  var autoWidth: js.UndefOr[Boolean] = js.native
+  var autoplay: js.UndefOr[Boolean] = js.native
+  var autoplayHoverPause: js.UndefOr[Boolean] = js.native
+  var autoplaySpeed: js.UndefOr[Double | Boolean] = js.native
+  var autoplayTimeout: js.UndefOr[Double] = js.native
+  var callbacks: js.UndefOr[Boolean] = js.native
+  val capture: js.UndefOr[Boolean | String] = js.native
+  val cellPadding: js.UndefOr[Double | String] = js.native
+  val cellSpacing: js.UndefOr[Double | String] = js.native
+  var center: js.UndefOr[Boolean] = js.native
+  val challenge: js.UndefOr[String] = js.native
+  val charSet: js.UndefOr[String] = js.native
+  val checked: js.UndefOr[Boolean] = js.native
+  val children: js.UndefOr[TagMod[Any]] = js.native
+  val cite: js.UndefOr[String] = js.native
+  val classID: js.UndefOr[String] = js.native
+  val className: js.UndefOr[String] = js.native
+  val colSpan: js.UndefOr[Double] = js.native
+  val color: js.UndefOr[String] = js.native
+  val cols: js.UndefOr[Double] = js.native
+  val content: js.UndefOr[String] = js.native
+  val contentEditable: js.UndefOr[Booleanish | inherit] = js.native
+  val contextMenu: js.UndefOr[String] = js.native
+  val controls: js.UndefOr[Boolean] = js.native
+  var controlsClass: js.UndefOr[String] = js.native
+  val coords: js.UndefOr[String] = js.native
+  val crossOrigin: js.UndefOr[String] = js.native
+  val dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  val data: js.UndefOr[String] = js.native
+  val datatype: js.UndefOr[String] = js.native
+  val dateTime: js.UndefOr[String] = js.native
+  val default: js.UndefOr[Boolean] = js.native
+  val defaultChecked: js.UndefOr[Boolean] = js.native
+  val defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.native
+  val defer: js.UndefOr[Boolean] = js.native
+  val dir: js.UndefOr[String] = js.native
+  val disabled: js.UndefOr[Boolean] = js.native
+  var dotClass: js.UndefOr[String] = js.native
+  var dotData: js.UndefOr[Boolean] = js.native
+  var dots: js.UndefOr[Boolean] = js.native
+  var dotsClass: js.UndefOr[String] = js.native
+  var dotsContainer: js.UndefOr[String | Boolean] = js.native
+  var dotsEach: js.UndefOr[Double | Boolean] = js.native
+  var dotsSpeed: js.UndefOr[Double | Boolean] = js.native
+  val download: js.UndefOr[js.Any] = js.native
+  var dragClass: js.UndefOr[String] = js.native
+  var dragEndSpeed: js.UndefOr[Double | Boolean] = js.native
+  val draggable: js.UndefOr[Booleanish] = js.native
+  val encType: js.UndefOr[String] = js.native
+  var fallbackEasing: js.UndefOr[String] = js.native
+  var fluidSpeed: js.UndefOr[Double | Boolean] = js.native
+  val form: js.UndefOr[String] = js.native
+  val formAction: js.UndefOr[String] = js.native
+  val formEncType: js.UndefOr[String] = js.native
+  val formMethod: js.UndefOr[String] = js.native
+  val formNoValidate: js.UndefOr[Boolean] = js.native
+  val formTarget: js.UndefOr[String] = js.native
+  val frameBorder: js.UndefOr[Double | String] = js.native
+  var freeDrag: js.UndefOr[Boolean] = js.native
+  var grabClass: js.UndefOr[String] = js.native
+  val headers: js.UndefOr[String] = js.native
+  val height: js.UndefOr[Double | String] = js.native
+  val hidden: js.UndefOr[Boolean] = js.native
+  val high: js.UndefOr[Double] = js.native
+  val href: js.UndefOr[String] = js.native
+  val hrefLang: js.UndefOr[String] = js.native
+  val htmlFor: js.UndefOr[String] = js.native
+  val httpEquiv: js.UndefOr[String] = js.native
+  val id: js.UndefOr[String] = js.native
+  var info: js.UndefOr[HandlerCallback] = js.native
+  val inlist: js.UndefOr[js.Any] = js.native
+  val inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
+  val integrity: js.UndefOr[String] = js.native
+  val is: js.UndefOr[String] = js.native
+  var itemElement: js.UndefOr[String] = js.native
+  val itemID: js.UndefOr[String] = js.native
+  val itemProp: js.UndefOr[String] = js.native
+  val itemRef: js.UndefOr[String] = js.native
+  val itemScope: js.UndefOr[Boolean] = js.native
+  val itemType: js.UndefOr[String] = js.native
+  var items: js.UndefOr[Double] = js.native
+  val keyParams: js.UndefOr[String] = js.native
+  val keyType: js.UndefOr[String] = js.native
+  val kind: js.UndefOr[String] = js.native
+  val label: js.UndefOr[String] = js.native
+  val lang: js.UndefOr[String] = js.native
+  var lazyContent: js.UndefOr[Boolean] = js.native
+  var lazyLoad: js.UndefOr[Boolean] = js.native
+  val list: js.UndefOr[String] = js.native
+  var loadedClass: js.UndefOr[String] = js.native
+  var loadingClass: js.UndefOr[String] = js.native
+  var loop: js.UndefOr[Boolean] = js.native
+  val low: js.UndefOr[Double] = js.native
+  val manifest: js.UndefOr[String] = js.native
+  var margin: js.UndefOr[Double] = js.native
+  val marginHeight: js.UndefOr[Double] = js.native
+  val marginWidth: js.UndefOr[Double] = js.native
+  val max: js.UndefOr[Double | String] = js.native
+  val maxLength: js.UndefOr[Double] = js.native
+  val media: js.UndefOr[String] = js.native
+  val mediaGroup: js.UndefOr[String] = js.native
+  var merge: js.UndefOr[Boolean] = js.native
+  var mergeFit: js.UndefOr[Boolean] = js.native
+  val method: js.UndefOr[String] = js.native
+  val min: js.UndefOr[Double | String] = js.native
+  val minLength: js.UndefOr[Double] = js.native
+  var mouseDrag: js.UndefOr[Boolean] = js.native
+  val multiple: js.UndefOr[Boolean] = js.native
+  val muted: js.UndefOr[Boolean] = js.native
+  val name: js.UndefOr[String] = js.native
+  var nav: js.UndefOr[Boolean] = js.native
+  var navClass: js.UndefOr[js.Array[String]] = js.native
+  var navContainer: js.UndefOr[String | Boolean] = js.native
+  var navContainerClass: js.UndefOr[String] = js.native
+  var navElement: js.UndefOr[String] = js.native
+  var navSpeed: js.UndefOr[Double | Boolean] = js.native
+  var navText: js.UndefOr[js.Array[String]] = js.native
+  var nestedItemSelector: js.UndefOr[String] = js.native
+  val noValidate: js.UndefOr[Boolean] = js.native
+  val nonce: js.UndefOr[String] = js.native
+  val onAbort: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onAnimationEnd: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.native
+  val onAnimationIteration: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.native
+  val onAnimationStart: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.native
+  val onAuxClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  val onBeforeInput: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.native
+  val onBlur: js.UndefOr[FocusEventHandler[HTMLDivElement]] = js.native
+  val onCanPlay: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onCanPlayThrough: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  var onChange: js.UndefOr[HandlerCallback with FormEventHandler[HTMLDivElement]] = js.native
+  var onChanged: js.UndefOr[HandlerCallback] = js.native
+  val onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  val onCompositionEnd: js.UndefOr[CompositionEventHandler[HTMLDivElement]] = js.native
+  val onCompositionStart: js.UndefOr[CompositionEventHandler[HTMLDivElement]] = js.native
+  val onCompositionUpdate: js.UndefOr[CompositionEventHandler[HTMLDivElement]] = js.native
+  val onContextMenu: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  val onCopy: js.UndefOr[ClipboardEventHandler[HTMLDivElement]] = js.native
+  val onCut: js.UndefOr[ClipboardEventHandler[HTMLDivElement]] = js.native
+  val onDoubleClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  var onDrag: js.UndefOr[HandlerCallback with DragEventHandler[HTMLDivElement]] = js.native
+  val onDragEnd: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.native
+  val onDragEnter: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.native
+  val onDragExit: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.native
+  val onDragLeave: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.native
+  val onDragOver: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.native
+  val onDragStart: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.native
+  var onDragged: js.UndefOr[HandlerCallback] = js.native
+  val onDrop: js.UndefOr[DragEventHandler[HTMLDivElement]] = js.native
+  val onDurationChange: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onEmptied: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onEncrypted: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onEnded: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onError: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onFocus: js.UndefOr[FocusEventHandler[HTMLDivElement]] = js.native
+  var onInitialize: js.UndefOr[HandlerCallback] = js.native
+  var onInitialized: js.UndefOr[HandlerCallback] = js.native
+  val onInput: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.native
+  val onInvalid: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.native
+  val onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] = js.native
+  val onKeyPress: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] = js.native
+  val onKeyUp: js.UndefOr[KeyboardEventHandler[HTMLDivElement]] = js.native
+  val onLoad: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  var onLoadLazy: js.UndefOr[HandlerCallback] = js.native
+  val onLoadStart: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onLoadedData: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  var onLoadedLazy: js.UndefOr[HandlerCallback] = js.native
+  val onLoadedMetadata: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onMouseDown: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  val onMouseEnter: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  val onMouseLeave: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  val onMouseMove: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  val onMouseOut: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  val onMouseOver: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  val onMouseUp: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  val onPaste: js.UndefOr[ClipboardEventHandler[HTMLDivElement]] = js.native
+  val onPause: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onPlay: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  var onPlayVideo: js.UndefOr[HandlerCallback] = js.native
+  val onPlaying: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onPointerCancel: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.native
+  val onPointerDown: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.native
+  val onPointerEnter: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.native
+  val onPointerLeave: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.native
+  val onPointerMove: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.native
+  val onPointerOut: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.native
+  val onPointerOver: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.native
+  val onPointerUp: js.UndefOr[PointerEventHandler[HTMLDivElement]] = js.native
+  val onProgress: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onRateChange: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  var onRefresh: js.UndefOr[HandlerCallback] = js.native
+  var onRefreshed: js.UndefOr[HandlerCallback] = js.native
+  val onReset: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.native
+  var onResize: js.UndefOr[HandlerCallback] = js.native
+  var onResized: js.UndefOr[HandlerCallback] = js.native
+  val onScroll: js.UndefOr[UIEventHandler[HTMLDivElement]] = js.native
+  val onSeeked: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onSeeking: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onSelect: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onStalled: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  var onStopVideo: js.UndefOr[HandlerCallback] = js.native
+  val onSubmit: js.UndefOr[FormEventHandler[HTMLDivElement]] = js.native
+  val onSuspend: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onTimeUpdate: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onTouchCancel: js.UndefOr[TouchEventHandler[HTMLDivElement]] = js.native
+  val onTouchEnd: js.UndefOr[TouchEventHandler[HTMLDivElement]] = js.native
+  val onTouchMove: js.UndefOr[TouchEventHandler[HTMLDivElement]] = js.native
+  val onTouchStart: js.UndefOr[TouchEventHandler[HTMLDivElement]] = js.native
+  val onTransitionEnd: js.UndefOr[TransitionEventHandler[HTMLDivElement]] = js.native
+  var onTranslate: js.UndefOr[HandlerCallback] = js.native
+  var onTranslated: js.UndefOr[HandlerCallback] = js.native
+  val onVolumeChange: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onWaiting: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
+  val onWheel: js.UndefOr[WheelEventHandler[HTMLDivElement]] = js.native
+  val open: js.UndefOr[Boolean] = js.native
+  val optimum: js.UndefOr[Double] = js.native
+  val pattern: js.UndefOr[String] = js.native
+  val placeholder: js.UndefOr[String] = js.native
+  val playsInline: js.UndefOr[Boolean] = js.native
+  val poster: js.UndefOr[String] = js.native
+  val prefix: js.UndefOr[String] = js.native
+  val preload: js.UndefOr[String] = js.native
+  val property: js.UndefOr[String] = js.native
+  var pullDrag: js.UndefOr[Boolean] = js.native
+  val radioGroup: js.UndefOr[String] = js.native
+  val readOnly: js.UndefOr[Boolean] = js.native
+  var refreshClass: js.UndefOr[String] = js.native
+  val rel: js.UndefOr[String] = js.native
+  val required: js.UndefOr[Boolean] = js.native
+  val resource: js.UndefOr[String] = js.native
+  var responsive: js.UndefOr[StringDictionary[Options]] = js.native
+  var responsiveBaseElement: js.UndefOr[Element] = js.native
+  var responsiveClass: js.UndefOr[String | Boolean] = js.native
+  var responsiveRefreshRate: js.UndefOr[Double] = js.native
+  val results: js.UndefOr[Double] = js.native
+  val reversed: js.UndefOr[Boolean] = js.native
+  var rewind: js.UndefOr[Boolean] = js.native
+  val role: js.UndefOr[String] = js.native
+  val rowSpan: js.UndefOr[Double] = js.native
+  val rows: js.UndefOr[Double] = js.native
+  var rtlClass: js.UndefOr[String] = js.native
+  val sandbox: js.UndefOr[String] = js.native
+  val scope: js.UndefOr[String] = js.native
+  val scoped: js.UndefOr[Boolean] = js.native
+  val scrolling: js.UndefOr[String] = js.native
+  val seamless: js.UndefOr[Boolean] = js.native
+  val security: js.UndefOr[String] = js.native
+  val selected: js.UndefOr[Boolean] = js.native
+  val shape: js.UndefOr[String] = js.native
+  val size: js.UndefOr[Double] = js.native
+  val sizes: js.UndefOr[String] = js.native
+  var slideBy: js.UndefOr[Double | String] = js.native
+  val slot: js.UndefOr[String] = js.native
+  var smartSpeed: js.UndefOr[Double | Boolean] = js.native
+  val span: js.UndefOr[Double] = js.native
+  val spellCheck: js.UndefOr[Booleanish] = js.native
+  val src: js.UndefOr[String] = js.native
+  val srcDoc: js.UndefOr[String] = js.native
+  val srcLang: js.UndefOr[String] = js.native
+  val srcSet: js.UndefOr[String] = js.native
+  var stageClass: js.UndefOr[String] = js.native
+  var stageElement: js.UndefOr[String] = js.native
+  var stageOuterClass: js.UndefOr[String] = js.native
+  var stagePadding: js.UndefOr[Double] = js.native
+  val start: js.UndefOr[Double] = js.native
+  var startPosition: js.UndefOr[Double | String] = js.native
+  val step: js.UndefOr[Double | String] = js.native
+  val style: js.UndefOr[CSSProperties] = js.native
+  val summary: js.UndefOr[String] = js.native
+  val suppressContentEditableWarning: js.UndefOr[Boolean] = js.native
+  val suppressHydrationWarning: js.UndefOr[Boolean] = js.native
+  val tabIndex: js.UndefOr[Double] = js.native
+  val target: js.UndefOr[String] = js.native
+  val title: js.UndefOr[String] = js.native
+  var touchDrag: js.UndefOr[Boolean] = js.native
+  val translate: js.UndefOr[yes | no] = js.native
+  val `type`: js.UndefOr[String] = js.native
+  val typeof: js.UndefOr[String] = js.native
+  val unselectable: js.UndefOr[on | off] = js.native
+  val useMap: js.UndefOr[String] = js.native
+  val value: js.UndefOr[String | js.Array[String] | Double] = js.native
+  var video: js.UndefOr[Boolean] = js.native
+  var videoHeight: js.UndefOr[Double | Boolean] = js.native
+  var videoWidth: js.UndefOr[Double | Boolean] = js.native
+  val vocab: js.UndefOr[String] = js.native
+  val width: js.UndefOr[Double | String] = js.native
+  val wmode: js.UndefOr[String] = js.native
+  val wrap: js.UndefOr[String] = js.native
 }
 
 object OwlCarouselProps {
   @scala.inline
-  def apply(
-    URLhashListener: js.UndefOr[Boolean] = js.undefined,
-    about: String = null,
-    accept: String = null,
-    acceptCharset: String = null,
-    accessKey: String = null,
-    action: String = null,
-    allowFullScreen: js.UndefOr[Boolean] = js.undefined,
-    allowTransparency: js.UndefOr[Boolean] = js.undefined,
-    alt: String = null,
-    animateIn: String | Boolean = null,
-    animateOut: String | Boolean = null,
-    `aria-activedescendant`: String = null,
-    `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
-    `aria-autocomplete`: none | `inline` | list | both = null,
-    `aria-busy`: js.UndefOr[Boolean] = js.undefined,
-    `aria-checked`: Boolean | mixed = null,
-    `aria-colcount`: Int | Double = null,
-    `aria-colindex`: Int | Double = null,
-    `aria-colspan`: Int | Double = null,
-    `aria-controls`: String = null,
-    `aria-current`: Boolean | page | step | location | date | time = null,
-    `aria-describedby`: String = null,
-    `aria-details`: String = null,
-    `aria-disabled`: js.UndefOr[Boolean] = js.undefined,
-    `aria-dropeffect`: none | copy | execute | link | move | popup = null,
-    `aria-errormessage`: String = null,
-    `aria-expanded`: js.UndefOr[Boolean] = js.undefined,
-    `aria-flowto`: String = null,
-    `aria-grabbed`: js.UndefOr[Boolean] = js.undefined,
-    `aria-haspopup`: Boolean | menu | listbox | tree | grid | dialog = null,
-    `aria-hidden`: js.UndefOr[Boolean] = js.undefined,
-    `aria-invalid`: Boolean | grammar | spelling = null,
-    `aria-keyshortcuts`: String = null,
-    `aria-label`: String = null,
-    `aria-labelledby`: String = null,
-    `aria-level`: Int | Double = null,
-    `aria-live`: off | assertive | polite = null,
-    `aria-modal`: js.UndefOr[Boolean] = js.undefined,
-    `aria-multiline`: js.UndefOr[Boolean] = js.undefined,
-    `aria-multiselectable`: js.UndefOr[Boolean] = js.undefined,
-    `aria-orientation`: horizontal | vertical = null,
-    `aria-owns`: String = null,
-    `aria-placeholder`: String = null,
-    `aria-posinset`: Int | Double = null,
-    `aria-pressed`: Boolean | mixed = null,
-    `aria-readonly`: js.UndefOr[Boolean] = js.undefined,
-    `aria-relevant`: additions | (`additions text`) | all | removals | text = null,
-    `aria-required`: js.UndefOr[Boolean] = js.undefined,
-    `aria-roledescription`: String = null,
-    `aria-rowcount`: Int | Double = null,
-    `aria-rowindex`: Int | Double = null,
-    `aria-rowspan`: Int | Double = null,
-    `aria-selected`: js.UndefOr[Boolean] = js.undefined,
-    `aria-setsize`: Int | Double = null,
-    `aria-sort`: none | ascending | descending | other = null,
-    `aria-valuemax`: Int | Double = null,
-    `aria-valuemin`: Int | Double = null,
-    `aria-valuenow`: Int | Double = null,
-    `aria-valuetext`: String = null,
-    as: String = null,
-    async: js.UndefOr[Boolean] = js.undefined,
-    autoCapitalize: String = null,
-    autoComplete: String = null,
-    autoCorrect: String = null,
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    autoHeightClass: String = null,
-    autoPlay: js.UndefOr[Boolean] = js.undefined,
-    autoSave: String = null,
-    autoWidth: js.UndefOr[Boolean] = js.undefined,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    autoplayHoverPause: js.UndefOr[Boolean] = js.undefined,
-    autoplaySpeed: Double | Boolean = null,
-    autoplayTimeout: Int | Double = null,
-    callbacks: js.UndefOr[Boolean] = js.undefined,
-    capture: Boolean | String = null,
-    cellPadding: Double | String = null,
-    cellSpacing: Double | String = null,
-    center: js.UndefOr[Boolean] = js.undefined,
-    challenge: String = null,
-    charSet: String = null,
-    checked: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    cite: String = null,
-    classID: String = null,
-    className: String = null,
-    colSpan: Int | Double = null,
-    color: String = null,
-    cols: Int | Double = null,
-    content: String = null,
-    contentEditable: Booleanish | inherit = null,
-    contextMenu: String = null,
-    controls: js.UndefOr[Boolean] = js.undefined,
-    controlsClass: String = null,
-    coords: String = null,
-    crossOrigin: String = null,
-    dangerouslySetInnerHTML: AnonHtml = null,
-    data: String = null,
-    datatype: String = null,
-    dateTime: String = null,
-    default: js.UndefOr[Boolean] = js.undefined,
-    defaultChecked: js.UndefOr[Boolean] = js.undefined,
-    defaultValue: String | Double | js.Array[String] = null,
-    defer: js.UndefOr[Boolean] = js.undefined,
-    dir: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    dotClass: String = null,
-    dotData: js.UndefOr[Boolean] = js.undefined,
-    dots: js.UndefOr[Boolean] = js.undefined,
-    dotsClass: String = null,
-    dotsContainer: String | Boolean = null,
-    dotsEach: Double | Boolean = null,
-    dotsSpeed: Double | Boolean = null,
-    download: js.Any = null,
-    dragClass: String = null,
-    dragEndSpeed: Double | Boolean = null,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    encType: String = null,
-    fallbackEasing: String = null,
-    fluidSpeed: Double | Boolean = null,
-    form: String = null,
-    formAction: String = null,
-    formEncType: String = null,
-    formMethod: String = null,
-    formNoValidate: js.UndefOr[Boolean] = js.undefined,
-    formTarget: String = null,
-    frameBorder: Double | String = null,
-    freeDrag: js.UndefOr[Boolean] = js.undefined,
-    grabClass: String = null,
-    headers: String = null,
-    height: Double | String = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    high: Int | Double = null,
-    href: String = null,
-    hrefLang: String = null,
-    htmlFor: String = null,
-    httpEquiv: String = null,
-    id: String = null,
-    info: /* repeated */ js.Any => Unit = null,
-    inlist: js.Any = null,
-    inputMode: none | text | tel | url | email | numeric | decimal | search = null,
-    integrity: String = null,
-    is: String = null,
-    itemElement: String = null,
-    itemID: String = null,
-    itemProp: String = null,
-    itemRef: String = null,
-    itemScope: js.UndefOr[Boolean] = js.undefined,
-    itemType: String = null,
-    items: Int | Double = null,
-    keyParams: String = null,
-    keyType: String = null,
-    kind: String = null,
-    label: String = null,
-    lang: String = null,
-    lazyContent: js.UndefOr[Boolean] = js.undefined,
-    lazyLoad: js.UndefOr[Boolean] = js.undefined,
-    list: String = null,
-    loadedClass: String = null,
-    loadingClass: String = null,
-    loop: js.UndefOr[Boolean] = js.undefined,
-    low: Int | Double = null,
-    manifest: String = null,
-    margin: Int | Double = null,
-    marginHeight: Int | Double = null,
-    marginWidth: Int | Double = null,
-    max: Double | String = null,
-    maxLength: Int | Double = null,
-    media: String = null,
-    mediaGroup: String = null,
-    merge: js.UndefOr[Boolean] = js.undefined,
-    mergeFit: js.UndefOr[Boolean] = js.undefined,
-    method: String = null,
-    min: Double | String = null,
-    minLength: Int | Double = null,
-    mouseDrag: js.UndefOr[Boolean] = js.undefined,
-    multiple: js.UndefOr[Boolean] = js.undefined,
-    muted: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    nav: js.UndefOr[Boolean] = js.undefined,
-    navClass: js.Array[String] = null,
-    navContainer: String | Boolean = null,
-    navContainerClass: String = null,
-    navElement: String = null,
-    navSpeed: Double | Boolean = null,
-    navText: js.Array[String] = null,
-    nestedItemSelector: String = null,
-    noValidate: js.UndefOr[Boolean] = js.undefined,
-    nonce: String = null,
-    onAbort: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onAnimationEnd: SyntheticAnimationEvent[HTMLDivElement] => Unit = null,
-    onAnimationIteration: SyntheticAnimationEvent[HTMLDivElement] => Unit = null,
-    onAnimationStart: SyntheticAnimationEvent[HTMLDivElement] => Unit = null,
-    onAuxClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
-    onBlur: SyntheticFocusEvent[HTMLDivElement] => Unit = null,
-    onCanPlay: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onCanPlayThrough: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onChange: HandlerCallback with FormEventHandler[HTMLDivElement] = null,
-    onChanged: /* repeated */ js.Any => Unit = null,
-    onClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onCompositionEnd: SyntheticCompositionEvent[HTMLDivElement] => Unit = null,
-    onCompositionStart: SyntheticCompositionEvent[HTMLDivElement] => Unit = null,
-    onCompositionUpdate: SyntheticCompositionEvent[HTMLDivElement] => Unit = null,
-    onContextMenu: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onCopy: SyntheticClipboardEvent[HTMLDivElement] => Unit = null,
-    onCut: SyntheticClipboardEvent[HTMLDivElement] => Unit = null,
-    onDoubleClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onDrag: HandlerCallback with DragEventHandler[HTMLDivElement] = null,
-    onDragEnd: DragEvent[HTMLDivElement] => Unit = null,
-    onDragEnter: DragEvent[HTMLDivElement] => Unit = null,
-    onDragExit: DragEvent[HTMLDivElement] => Unit = null,
-    onDragLeave: DragEvent[HTMLDivElement] => Unit = null,
-    onDragOver: DragEvent[HTMLDivElement] => Unit = null,
-    onDragStart: DragEvent[HTMLDivElement] => Unit = null,
-    onDragged: /* repeated */ js.Any => Unit = null,
-    onDrop: DragEvent[HTMLDivElement] => Unit = null,
-    onDurationChange: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onEmptied: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onEncrypted: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onEnded: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onError: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onFocus: SyntheticFocusEvent[HTMLDivElement] => Unit = null,
-    onInitialize: /* repeated */ js.Any => Unit = null,
-    onInitialized: /* repeated */ js.Any => Unit = null,
-    onInput: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
-    onInvalid: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[HTMLDivElement] => Unit = null,
-    onKeyPress: SyntheticKeyboardEvent[HTMLDivElement] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[HTMLDivElement] => Unit = null,
-    onLoad: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onLoadLazy: /* repeated */ js.Any => Unit = null,
-    onLoadStart: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onLoadedData: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onLoadedLazy: /* repeated */ js.Any => Unit = null,
-    onLoadedMetadata: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onMouseDown: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onMouseEnter: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onMouseLeave: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onMouseMove: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onMouseOut: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onMouseOver: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onMouseUp: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onPaste: SyntheticClipboardEvent[HTMLDivElement] => Unit = null,
-    onPause: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onPlay: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onPlayVideo: /* repeated */ js.Any => Unit = null,
-    onPlaying: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
-    onPointerCancel: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
-    onPointerDown: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
-    onPointerEnter: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
-    onPointerLeave: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
-    onPointerMove: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
-    onPointerOut: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
-    onPointerOver: SyntheticPointerEvent[HTMLDivElement] => Unit = null
-  ): OwlCarouselProps = {
+  def apply(): OwlCarouselProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(URLhashListener)) __obj.updateDynamic("URLhashListener")(URLhashListener.asInstanceOf[js.Any])
-    if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
-    if (accept != null) __obj.updateDynamic("accept")(accept.asInstanceOf[js.Any])
-    if (acceptCharset != null) __obj.updateDynamic("acceptCharset")(acceptCharset.asInstanceOf[js.Any])
-    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowFullScreen)) __obj.updateDynamic("allowFullScreen")(allowFullScreen.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowTransparency)) __obj.updateDynamic("allowTransparency")(allowTransparency.asInstanceOf[js.Any])
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
-    if (animateIn != null) __obj.updateDynamic("animateIn")(animateIn.asInstanceOf[js.Any])
-    if (animateOut != null) __obj.updateDynamic("animateOut")(animateOut.asInstanceOf[js.Any])
-    if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
-    if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-busy`)) __obj.updateDynamic("aria-busy")(`aria-busy`.asInstanceOf[js.Any])
-    if (`aria-checked` != null) __obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
-    if (`aria-colcount` != null) __obj.updateDynamic("aria-colcount")(`aria-colcount`.asInstanceOf[js.Any])
-    if (`aria-colindex` != null) __obj.updateDynamic("aria-colindex")(`aria-colindex`.asInstanceOf[js.Any])
-    if (`aria-colspan` != null) __obj.updateDynamic("aria-colspan")(`aria-colspan`.asInstanceOf[js.Any])
-    if (`aria-controls` != null) __obj.updateDynamic("aria-controls")(`aria-controls`.asInstanceOf[js.Any])
-    if (`aria-current` != null) __obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
-    if (`aria-describedby` != null) __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
-    if (`aria-details` != null) __obj.updateDynamic("aria-details")(`aria-details`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-disabled`)) __obj.updateDynamic("aria-disabled")(`aria-disabled`.asInstanceOf[js.Any])
-    if (`aria-dropeffect` != null) __obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
-    if (`aria-errormessage` != null) __obj.updateDynamic("aria-errormessage")(`aria-errormessage`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-expanded`)) __obj.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])
-    if (`aria-flowto` != null) __obj.updateDynamic("aria-flowto")(`aria-flowto`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-grabbed`)) __obj.updateDynamic("aria-grabbed")(`aria-grabbed`.asInstanceOf[js.Any])
-    if (`aria-haspopup` != null) __obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-hidden`)) __obj.updateDynamic("aria-hidden")(`aria-hidden`.asInstanceOf[js.Any])
-    if (`aria-invalid` != null) __obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
-    if (`aria-keyshortcuts` != null) __obj.updateDynamic("aria-keyshortcuts")(`aria-keyshortcuts`.asInstanceOf[js.Any])
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
-    if (`aria-level` != null) __obj.updateDynamic("aria-level")(`aria-level`.asInstanceOf[js.Any])
-    if (`aria-live` != null) __obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-modal`)) __obj.updateDynamic("aria-modal")(`aria-modal`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-multiline`)) __obj.updateDynamic("aria-multiline")(`aria-multiline`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-multiselectable`)) __obj.updateDynamic("aria-multiselectable")(`aria-multiselectable`.asInstanceOf[js.Any])
-    if (`aria-orientation` != null) __obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
-    if (`aria-owns` != null) __obj.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
-    if (`aria-placeholder` != null) __obj.updateDynamic("aria-placeholder")(`aria-placeholder`.asInstanceOf[js.Any])
-    if (`aria-posinset` != null) __obj.updateDynamic("aria-posinset")(`aria-posinset`.asInstanceOf[js.Any])
-    if (`aria-pressed` != null) __obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-readonly`)) __obj.updateDynamic("aria-readonly")(`aria-readonly`.asInstanceOf[js.Any])
-    if (`aria-relevant` != null) __obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-required`)) __obj.updateDynamic("aria-required")(`aria-required`.asInstanceOf[js.Any])
-    if (`aria-roledescription` != null) __obj.updateDynamic("aria-roledescription")(`aria-roledescription`.asInstanceOf[js.Any])
-    if (`aria-rowcount` != null) __obj.updateDynamic("aria-rowcount")(`aria-rowcount`.asInstanceOf[js.Any])
-    if (`aria-rowindex` != null) __obj.updateDynamic("aria-rowindex")(`aria-rowindex`.asInstanceOf[js.Any])
-    if (`aria-rowspan` != null) __obj.updateDynamic("aria-rowspan")(`aria-rowspan`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`aria-selected`)) __obj.updateDynamic("aria-selected")(`aria-selected`.asInstanceOf[js.Any])
-    if (`aria-setsize` != null) __obj.updateDynamic("aria-setsize")(`aria-setsize`.asInstanceOf[js.Any])
-    if (`aria-sort` != null) __obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
-    if (`aria-valuemax` != null) __obj.updateDynamic("aria-valuemax")(`aria-valuemax`.asInstanceOf[js.Any])
-    if (`aria-valuemin` != null) __obj.updateDynamic("aria-valuemin")(`aria-valuemin`.asInstanceOf[js.Any])
-    if (`aria-valuenow` != null) __obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
-    if (`aria-valuetext` != null) __obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (!js.isUndefined(async)) __obj.updateDynamic("async")(async.asInstanceOf[js.Any])
-    if (autoCapitalize != null) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
-    if (autoComplete != null) __obj.updateDynamic("autoComplete")(autoComplete.asInstanceOf[js.Any])
-    if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
-    if (autoHeightClass != null) __obj.updateDynamic("autoHeightClass")(autoHeightClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoPlay)) __obj.updateDynamic("autoPlay")(autoPlay.asInstanceOf[js.Any])
-    if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoWidth)) __obj.updateDynamic("autoWidth")(autoWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplayHoverPause)) __obj.updateDynamic("autoplayHoverPause")(autoplayHoverPause.asInstanceOf[js.Any])
-    if (autoplaySpeed != null) __obj.updateDynamic("autoplaySpeed")(autoplaySpeed.asInstanceOf[js.Any])
-    if (autoplayTimeout != null) __obj.updateDynamic("autoplayTimeout")(autoplayTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(callbacks)) __obj.updateDynamic("callbacks")(callbacks.asInstanceOf[js.Any])
-    if (capture != null) __obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
-    if (cellPadding != null) __obj.updateDynamic("cellPadding")(cellPadding.asInstanceOf[js.Any])
-    if (cellSpacing != null) __obj.updateDynamic("cellSpacing")(cellSpacing.asInstanceOf[js.Any])
-    if (!js.isUndefined(center)) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (challenge != null) __obj.updateDynamic("challenge")(challenge.asInstanceOf[js.Any])
-    if (charSet != null) __obj.updateDynamic("charSet")(charSet.asInstanceOf[js.Any])
-    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (cite != null) __obj.updateDynamic("cite")(cite.asInstanceOf[js.Any])
-    if (classID != null) __obj.updateDynamic("classID")(classID.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (colSpan != null) __obj.updateDynamic("colSpan")(colSpan.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (cols != null) __obj.updateDynamic("cols")(cols.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
-    if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
-    if (!js.isUndefined(controls)) __obj.updateDynamic("controls")(controls.asInstanceOf[js.Any])
-    if (controlsClass != null) __obj.updateDynamic("controlsClass")(controlsClass.asInstanceOf[js.Any])
-    if (coords != null) __obj.updateDynamic("coords")(coords.asInstanceOf[js.Any])
-    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
-    if (dangerouslySetInnerHTML != null) __obj.updateDynamic("dangerouslySetInnerHTML")(dangerouslySetInnerHTML.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
-    if (dateTime != null) __obj.updateDynamic("dateTime")(dateTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(default)) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(defer)) __obj.updateDynamic("defer")(defer.asInstanceOf[js.Any])
-    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (dotClass != null) __obj.updateDynamic("dotClass")(dotClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(dotData)) __obj.updateDynamic("dotData")(dotData.asInstanceOf[js.Any])
-    if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
-    if (dotsClass != null) __obj.updateDynamic("dotsClass")(dotsClass.asInstanceOf[js.Any])
-    if (dotsContainer != null) __obj.updateDynamic("dotsContainer")(dotsContainer.asInstanceOf[js.Any])
-    if (dotsEach != null) __obj.updateDynamic("dotsEach")(dotsEach.asInstanceOf[js.Any])
-    if (dotsSpeed != null) __obj.updateDynamic("dotsSpeed")(dotsSpeed.asInstanceOf[js.Any])
-    if (download != null) __obj.updateDynamic("download")(download.asInstanceOf[js.Any])
-    if (dragClass != null) __obj.updateDynamic("dragClass")(dragClass.asInstanceOf[js.Any])
-    if (dragEndSpeed != null) __obj.updateDynamic("dragEndSpeed")(dragEndSpeed.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
-    if (encType != null) __obj.updateDynamic("encType")(encType.asInstanceOf[js.Any])
-    if (fallbackEasing != null) __obj.updateDynamic("fallbackEasing")(fallbackEasing.asInstanceOf[js.Any])
-    if (fluidSpeed != null) __obj.updateDynamic("fluidSpeed")(fluidSpeed.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
-    if (formAction != null) __obj.updateDynamic("formAction")(formAction.asInstanceOf[js.Any])
-    if (formEncType != null) __obj.updateDynamic("formEncType")(formEncType.asInstanceOf[js.Any])
-    if (formMethod != null) __obj.updateDynamic("formMethod")(formMethod.asInstanceOf[js.Any])
-    if (!js.isUndefined(formNoValidate)) __obj.updateDynamic("formNoValidate")(formNoValidate.asInstanceOf[js.Any])
-    if (formTarget != null) __obj.updateDynamic("formTarget")(formTarget.asInstanceOf[js.Any])
-    if (frameBorder != null) __obj.updateDynamic("frameBorder")(frameBorder.asInstanceOf[js.Any])
-    if (!js.isUndefined(freeDrag)) __obj.updateDynamic("freeDrag")(freeDrag.asInstanceOf[js.Any])
-    if (grabClass != null) __obj.updateDynamic("grabClass")(grabClass.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (high != null) __obj.updateDynamic("high")(high.asInstanceOf[js.Any])
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (hrefLang != null) __obj.updateDynamic("hrefLang")(hrefLang.asInstanceOf[js.Any])
-    if (htmlFor != null) __obj.updateDynamic("htmlFor")(htmlFor.asInstanceOf[js.Any])
-    if (httpEquiv != null) __obj.updateDynamic("httpEquiv")(httpEquiv.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (info != null) __obj.updateDynamic("info")(js.Any.fromFunction1(info))
-    if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
-    if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
-    if (integrity != null) __obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
-    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
-    if (itemElement != null) __obj.updateDynamic("itemElement")(itemElement.asInstanceOf[js.Any])
-    if (itemID != null) __obj.updateDynamic("itemID")(itemID.asInstanceOf[js.Any])
-    if (itemProp != null) __obj.updateDynamic("itemProp")(itemProp.asInstanceOf[js.Any])
-    if (itemRef != null) __obj.updateDynamic("itemRef")(itemRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(itemScope)) __obj.updateDynamic("itemScope")(itemScope.asInstanceOf[js.Any])
-    if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (keyParams != null) __obj.updateDynamic("keyParams")(keyParams.asInstanceOf[js.Any])
-    if (keyType != null) __obj.updateDynamic("keyType")(keyType.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
-    if (!js.isUndefined(lazyContent)) __obj.updateDynamic("lazyContent")(lazyContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(lazyLoad)) __obj.updateDynamic("lazyLoad")(lazyLoad.asInstanceOf[js.Any])
-    if (list != null) __obj.updateDynamic("list")(list.asInstanceOf[js.Any])
-    if (loadedClass != null) __obj.updateDynamic("loadedClass")(loadedClass.asInstanceOf[js.Any])
-    if (loadingClass != null) __obj.updateDynamic("loadingClass")(loadingClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (low != null) __obj.updateDynamic("low")(low.asInstanceOf[js.Any])
-    if (manifest != null) __obj.updateDynamic("manifest")(manifest.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (marginHeight != null) __obj.updateDynamic("marginHeight")(marginHeight.asInstanceOf[js.Any])
-    if (marginWidth != null) __obj.updateDynamic("marginWidth")(marginWidth.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
-    if (mediaGroup != null) __obj.updateDynamic("mediaGroup")(mediaGroup.asInstanceOf[js.Any])
-    if (!js.isUndefined(merge)) __obj.updateDynamic("merge")(merge.asInstanceOf[js.Any])
-    if (!js.isUndefined(mergeFit)) __obj.updateDynamic("mergeFit")(mergeFit.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(mouseDrag)) __obj.updateDynamic("mouseDrag")(mouseDrag.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.asInstanceOf[js.Any])
-    if (!js.isUndefined(muted)) __obj.updateDynamic("muted")(muted.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(nav)) __obj.updateDynamic("nav")(nav.asInstanceOf[js.Any])
-    if (navClass != null) __obj.updateDynamic("navClass")(navClass.asInstanceOf[js.Any])
-    if (navContainer != null) __obj.updateDynamic("navContainer")(navContainer.asInstanceOf[js.Any])
-    if (navContainerClass != null) __obj.updateDynamic("navContainerClass")(navContainerClass.asInstanceOf[js.Any])
-    if (navElement != null) __obj.updateDynamic("navElement")(navElement.asInstanceOf[js.Any])
-    if (navSpeed != null) __obj.updateDynamic("navSpeed")(navSpeed.asInstanceOf[js.Any])
-    if (navText != null) __obj.updateDynamic("navText")(navText.asInstanceOf[js.Any])
-    if (nestedItemSelector != null) __obj.updateDynamic("nestedItemSelector")(nestedItemSelector.asInstanceOf[js.Any])
-    if (!js.isUndefined(noValidate)) __obj.updateDynamic("noValidate")(noValidate.asInstanceOf[js.Any])
-    if (nonce != null) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
-    if (onAbort != null) __obj.updateDynamic("onAbort")(js.Any.fromFunction1(onAbort))
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (onAnimationIteration != null) __obj.updateDynamic("onAnimationIteration")(js.Any.fromFunction1(onAnimationIteration))
-    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
-    if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
-    if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onCanPlay != null) __obj.updateDynamic("onCanPlay")(js.Any.fromFunction1(onCanPlay))
-    if (onCanPlayThrough != null) __obj.updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(onCanPlayThrough))
-    if (onChange != null) __obj.updateDynamic("onChange")(onChange.asInstanceOf[js.Any])
-    if (onChanged != null) __obj.updateDynamic("onChanged")(js.Any.fromFunction1(onChanged))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onCompositionEnd != null) __obj.updateDynamic("onCompositionEnd")(js.Any.fromFunction1(onCompositionEnd))
-    if (onCompositionStart != null) __obj.updateDynamic("onCompositionStart")(js.Any.fromFunction1(onCompositionStart))
-    if (onCompositionUpdate != null) __obj.updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(onCompositionUpdate))
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
-    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
-    if (onCut != null) __obj.updateDynamic("onCut")(js.Any.fromFunction1(onCut))
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(js.Any.fromFunction1(onDoubleClick))
-    if (onDrag != null) __obj.updateDynamic("onDrag")(onDrag.asInstanceOf[js.Any])
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
-    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
-    if (onDragExit != null) __obj.updateDynamic("onDragExit")(js.Any.fromFunction1(onDragExit))
-    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
-    if (onDragOver != null) __obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
-    if (onDragged != null) __obj.updateDynamic("onDragged")(js.Any.fromFunction1(onDragged))
-    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
-    if (onDurationChange != null) __obj.updateDynamic("onDurationChange")(js.Any.fromFunction1(onDurationChange))
-    if (onEmptied != null) __obj.updateDynamic("onEmptied")(js.Any.fromFunction1(onEmptied))
-    if (onEncrypted != null) __obj.updateDynamic("onEncrypted")(js.Any.fromFunction1(onEncrypted))
-    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction1(onEnded))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onInitialize != null) __obj.updateDynamic("onInitialize")(js.Any.fromFunction1(onInitialize))
-    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
-    if (onInput != null) __obj.updateDynamic("onInput")(js.Any.fromFunction1(onInput))
-    if (onInvalid != null) __obj.updateDynamic("onInvalid")(js.Any.fromFunction1(onInvalid))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
-    if (onLoadLazy != null) __obj.updateDynamic("onLoadLazy")(js.Any.fromFunction1(onLoadLazy))
-    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(js.Any.fromFunction1(onLoadStart))
-    if (onLoadedData != null) __obj.updateDynamic("onLoadedData")(js.Any.fromFunction1(onLoadedData))
-    if (onLoadedLazy != null) __obj.updateDynamic("onLoadedLazy")(js.Any.fromFunction1(onLoadedLazy))
-    if (onLoadedMetadata != null) __obj.updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(onLoadedMetadata))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
-    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
-    if (onPaste != null) __obj.updateDynamic("onPaste")(js.Any.fromFunction1(onPaste))
-    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
-    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
-    if (onPlayVideo != null) __obj.updateDynamic("onPlayVideo")(js.Any.fromFunction1(onPlayVideo))
-    if (onPlaying != null) __obj.updateDynamic("onPlaying")(js.Any.fromFunction1(onPlaying))
-    if (onPointerCancel != null) __obj.updateDynamic("onPointerCancel")(js.Any.fromFunction1(onPointerCancel))
-    if (onPointerDown != null) __obj.updateDynamic("onPointerDown")(js.Any.fromFunction1(onPointerDown))
-    if (onPointerEnter != null) __obj.updateDynamic("onPointerEnter")(js.Any.fromFunction1(onPointerEnter))
-    if (onPointerLeave != null) __obj.updateDynamic("onPointerLeave")(js.Any.fromFunction1(onPointerLeave))
-    if (onPointerMove != null) __obj.updateDynamic("onPointerMove")(js.Any.fromFunction1(onPointerMove))
-    if (onPointerOut != null) __obj.updateDynamic("onPointerOut")(js.Any.fromFunction1(onPointerOut))
-    if (onPointerOver != null) __obj.updateDynamic("onPointerOver")(js.Any.fromFunction1(onPointerOver))
     __obj.asInstanceOf[OwlCarouselProps]
   }
+  @scala.inline
+  implicit class OwlCarouselPropsOps[Self <: OwlCarouselProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withURLhashListener(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("URLhashListener")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutURLhashListener: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("URLhashListener")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAbout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("about")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("about")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccept(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAcceptCharset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptCharset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptCharset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptCharset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowFullScreen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFullScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowFullScreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFullScreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowTransparency(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTransparency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowTransparency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTransparency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimateIn(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animateIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimateIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animateIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimateOut(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animateOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimateOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animateOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-activedescendant`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-activedescendant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-activedescendant`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-activedescendant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-atomic`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-atomic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-atomic`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-atomic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-autocomplete`(value: none | `inline` | list | both): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-autocomplete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-autocomplete`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-autocomplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-busy`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-busy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-busy`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-busy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-checked`(value: Boolean | mixed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-checked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-checked`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-checked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-colcount`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colcount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-colcount`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colcount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-colindex`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colindex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-colindex`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colindex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-colspan`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colspan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-colspan`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-colspan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-controls`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-controls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-controls`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-controls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-current`(value: Boolean | page | step | location | date | time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-current")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-current`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-current")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-describedby`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-describedby")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-describedby`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-describedby")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-details`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-details`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-details")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-disabled`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-disabled`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-dropeffect`(value: none | copy | execute | link | move | popup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-dropeffect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-dropeffect`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-dropeffect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-errormessage`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-errormessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-errormessage`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-errormessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-expanded`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-expanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-expanded`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-expanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-flowto`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-flowto")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-flowto`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-flowto")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-grabbed`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-grabbed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-grabbed`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-grabbed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-haspopup`(value: Boolean | menu | listbox | tree | grid | dialog): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-haspopup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-haspopup`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-haspopup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-hidden`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-hidden`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-invalid`(value: Boolean | grammar | spelling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-invalid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-invalid`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-invalid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-keyshortcuts`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-keyshortcuts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-keyshortcuts`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-keyshortcuts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-label`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-label`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-labelledby`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-labelledby`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-level`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-level`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-live`(value: off | assertive | polite): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-live")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-live`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-live")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-modal`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-modal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-modal`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-modal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-multiline`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-multiline`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-multiselectable`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiselectable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-multiselectable`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-multiselectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-orientation`(value: horizontal | vertical): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-orientation`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-owns`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-owns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-owns`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-owns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-placeholder`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-placeholder`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-posinset`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-posinset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-posinset`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-posinset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-pressed`(value: Boolean | mixed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-pressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-pressed`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-pressed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-readonly`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-readonly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-readonly`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-readonly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-relevant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-relevant`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-relevant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-required`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-required")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-required`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-required")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-roledescription`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-roledescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-roledescription`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-roledescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-rowcount`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowcount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-rowcount`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowcount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-rowindex`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowindex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-rowindex`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowindex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-rowspan`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowspan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-rowspan`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-rowspan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-selected`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-selected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-selected`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-selected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-setsize`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-setsize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-setsize`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-setsize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-sort`(value: none | ascending | descending | other): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-sort`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-sort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-valuemax`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-valuemax`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-valuemin`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-valuemin`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuemin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-valuenow`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuenow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-valuenow`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuenow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-valuetext`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuetext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-valuetext`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-valuetext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAsync(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("async")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoCapitalize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCapitalize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCapitalize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCapitalize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoComplete(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoCorrect(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCorrect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCorrect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoHeightClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeightClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoHeightClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHeightClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoPlay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoPlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoSave(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoSave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplayHoverPause(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayHoverPause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplayHoverPause: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayHoverPause")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplaySpeed(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplaySpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplaySpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplaySpeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplayTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplayTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallbacks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallbacks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCapture(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellPadding(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellSpacing(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCenter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChallenge(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("challenge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChallenge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("challenge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCharSet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChecked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCite(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColSpan(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCols(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCols: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentEditable(value: Booleanish | inherit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEditable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentEditable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEditable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextMenu(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControlsClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControlsClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlsClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoords(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossOrigin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDangerouslySetInnerHTML(value: AnonHtml): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDangerouslySetInnerHTML: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatatype(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatatype: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultChecked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChecked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChecked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: String | Double | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDots(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotsClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotsClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotsContainer(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotsContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotsEach(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsEach")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotsEach: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsEach")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotsSpeed(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotsSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotsSpeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownload(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("download")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragEndSpeed(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEndSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragEndSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragEndSpeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDraggable(value: Booleanish): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDraggable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFallbackEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFallbackEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFluidSpeed(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fluidSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFluidSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fluidSpeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormEncType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formEncType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormEncType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formEncType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormNoValidate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formNoValidate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormNoValidate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formNoValidate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormTarget(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameBorder(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameBorder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameBorder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFreeDrag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freeDrag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFreeDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freeDrag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrabClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grabClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrabClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grabClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHigh(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHigh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHref(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHrefLang(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hrefLang")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHrefLang: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hrefLang")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlFor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlFor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlFor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpEquiv(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpEquiv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpEquiv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpEquiv")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfo(value: /* repeated */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlist(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputMode(value: none | text | tel | url | email | numeric | decimal | search): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegrity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegrity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemElement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemProp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemProp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemProp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemProp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemRef(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemScope(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyParams(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLang(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLang: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLazyContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLazyContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLazyLoad(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLazyLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withList(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadedClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadedClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadedClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadedClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadingClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadingClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManifest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManifest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedia(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedia: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediaGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMerge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMerge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMergeFit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeFit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMergeFit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeFit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMouseDrag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDrag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMouseDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDrag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiple(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("muted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNav(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNav: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavClass(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavContainer(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavContainerClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainerClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavContainerClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navContainerClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavElement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavSpeed(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navSpeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavText(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNestedItemSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedItemSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNestedItemSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedItemSelector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoValidate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noValidate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoValidate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noValidate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonce(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAbort(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAbort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAnimationEnd(value: SyntheticAnimationEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAnimationEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAnimationIteration(value: SyntheticAnimationEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationIteration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAnimationIteration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationIteration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAnimationStart(value: SyntheticAnimationEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAnimationStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAnimationStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAuxClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAuxClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAuxClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAuxClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBeforeInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBeforeInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBlur(value: SyntheticFocusEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCanPlay(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCanPlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCanPlayThrough(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCanPlayThrough: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: HandlerCallback with FormEventHandler[HTMLDivElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChanged(value: /* repeated */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCompositionEnd(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCompositionEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCompositionStart(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCompositionStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCompositionUpdate(value: SyntheticCompositionEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCompositionUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompositionUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnContextMenu(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnContextMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCopy(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCopy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCopy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCopy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCut(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDoubleClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDoubleClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDrag(value: HandlerCallback with DragEventHandler[HTMLDivElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragEnd(value: DragEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragEnter(value: DragEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragExit(value: DragEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragExit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragExit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragLeave(value: DragEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragLeave")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragLeave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragOver(value: DragEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragOver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragStart(value: DragEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragged(value: /* repeated */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDragged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDrop(value: DragEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDurationChange(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDurationChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEmptied(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnEmptied: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEncrypted(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEnded(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnEnded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnError(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFocus(value: SyntheticFocusEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnInitialize(value: /* repeated */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnInitialize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnInitialized(value: /* repeated */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialized")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnInitialized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialized")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnInvalid(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnInvalid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyDown(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyPress(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyUp(value: SyntheticKeyboardEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLoad(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLoadLazy(value: /* repeated */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadLazy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLoadLazy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadLazy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLoadStart(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLoadStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLoadedData(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLoadedData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLoadedLazy(value: /* repeated */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedLazy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLoadedLazy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedLazy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLoadedMetadata(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLoadedMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseDown(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseEnter(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseLeave(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseLeave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseMove(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseOut(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseOver(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOver")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseOver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseUp(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPaste(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPaste")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPaste: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPaste")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPause(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPause: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPlay(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPlayVideo(value: /* repeated */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlayVideo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPlayVideo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlayVideo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPlaying(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPlaying: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPointerCancel(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerCancel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPointerCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerCancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPointerDown(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPointerDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPointerEnter(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerEnter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPointerEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPointerLeave(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerLeave")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPointerLeave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPointerMove(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerMove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPointerMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPointerOut(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPointerOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPointerOver(value: SyntheticPointerEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOver")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPointerOver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPointerOver")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

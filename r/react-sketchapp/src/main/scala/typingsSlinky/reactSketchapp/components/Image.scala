@@ -1,9 +1,7 @@
 package typingsSlinky.reactSketchapp.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSketchapp.imageMod.ImageProps
 import typingsSlinky.reactSketchapp.imageMod.default
 import typingsSlinky.reactSketchapp.propsMod.NumberProp
@@ -11,29 +9,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Image
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Image {
   @JSImport("react-sketchapp/lib/components/Svg/Image", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    height: NumberProp,
-    href: String,
-    width: NumberProp,
-    preserveAspectRatio: String = null,
-    x: NumberProp = null,
-    y: NumberProp = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], href = href.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def preserveAspectRatio(value: String): this.type = set("preserveAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def x(value: NumberProp): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y(value: NumberProp): this.type = set("y", value.asInstanceOf[js.Any])
   }
-  type Props = ImageProps
+  
+  def withProps(p: ImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(height: NumberProp, href: String, width: NumberProp): Builder = {
+    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], href = href.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ImageProps]))
+  }
 }
 

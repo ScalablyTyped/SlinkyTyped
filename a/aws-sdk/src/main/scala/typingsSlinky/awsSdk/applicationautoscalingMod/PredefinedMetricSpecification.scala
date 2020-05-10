@@ -18,10 +18,35 @@ trait PredefinedMetricSpecification extends js.Object {
 
 object PredefinedMetricSpecification {
   @scala.inline
-  def apply(PredefinedMetricType: MetricType, ResourceLabel: ResourceLabel = null): PredefinedMetricSpecification = {
+  def apply(PredefinedMetricType: MetricType): PredefinedMetricSpecification = {
     val __obj = js.Dynamic.literal(PredefinedMetricType = PredefinedMetricType.asInstanceOf[js.Any])
-    if (ResourceLabel != null) __obj.updateDynamic("ResourceLabel")(ResourceLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[PredefinedMetricSpecification]
   }
+  @scala.inline
+  implicit class PredefinedMetricSpecificationOps[Self <: PredefinedMetricSpecification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPredefinedMetricType(value: MetricType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredefinedMetricType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceLabel(value: ResourceLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLabel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

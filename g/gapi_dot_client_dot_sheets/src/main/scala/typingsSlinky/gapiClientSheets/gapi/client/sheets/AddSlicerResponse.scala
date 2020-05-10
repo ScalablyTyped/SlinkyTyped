@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AddSlicerResponse extends js.Object {
   /** The newly added slicer. */
-  var slicer: js.UndefOr[Slicer] = js.undefined
+  var slicer: js.UndefOr[Slicer] = js.native
 }
 
 object AddSlicerResponse {
   @scala.inline
-  def apply(slicer: Slicer = null): AddSlicerResponse = {
+  def apply(): AddSlicerResponse = {
     val __obj = js.Dynamic.literal()
-    if (slicer != null) __obj.updateDynamic("slicer")(slicer.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddSlicerResponse]
   }
+  @scala.inline
+  implicit class AddSlicerResponseOps[Self <: AddSlicerResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSlicer(value: Slicer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slicer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlicer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slicer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

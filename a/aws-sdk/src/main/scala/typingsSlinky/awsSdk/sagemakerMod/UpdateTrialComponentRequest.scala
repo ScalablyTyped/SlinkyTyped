@@ -54,31 +54,143 @@ trait UpdateTrialComponentRequest extends js.Object {
 
 object UpdateTrialComponentRequest {
   @scala.inline
-  def apply(
-    TrialComponentName: ExperimentEntityName,
-    DisplayName: ExperimentEntityName = null,
-    EndTime: js.Date = null,
-    InputArtifacts: TrialComponentArtifacts = null,
-    InputArtifactsToRemove: ListTrialComponentKey256 = null,
-    OutputArtifacts: TrialComponentArtifacts = null,
-    OutputArtifactsToRemove: ListTrialComponentKey256 = null,
-    Parameters: TrialComponentParameters = null,
-    ParametersToRemove: ListTrialComponentKey256 = null,
-    StartTime: js.Date = null,
-    Status: TrialComponentStatus = null
-  ): UpdateTrialComponentRequest = {
+  def apply(TrialComponentName: ExperimentEntityName): UpdateTrialComponentRequest = {
     val __obj = js.Dynamic.literal(TrialComponentName = TrialComponentName.asInstanceOf[js.Any])
-    if (DisplayName != null) __obj.updateDynamic("DisplayName")(DisplayName.asInstanceOf[js.Any])
-    if (EndTime != null) __obj.updateDynamic("EndTime")(EndTime.asInstanceOf[js.Any])
-    if (InputArtifacts != null) __obj.updateDynamic("InputArtifacts")(InputArtifacts.asInstanceOf[js.Any])
-    if (InputArtifactsToRemove != null) __obj.updateDynamic("InputArtifactsToRemove")(InputArtifactsToRemove.asInstanceOf[js.Any])
-    if (OutputArtifacts != null) __obj.updateDynamic("OutputArtifacts")(OutputArtifacts.asInstanceOf[js.Any])
-    if (OutputArtifactsToRemove != null) __obj.updateDynamic("OutputArtifactsToRemove")(OutputArtifactsToRemove.asInstanceOf[js.Any])
-    if (Parameters != null) __obj.updateDynamic("Parameters")(Parameters.asInstanceOf[js.Any])
-    if (ParametersToRemove != null) __obj.updateDynamic("ParametersToRemove")(ParametersToRemove.asInstanceOf[js.Any])
-    if (StartTime != null) __obj.updateDynamic("StartTime")(StartTime.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTrialComponentRequest]
   }
+  @scala.inline
+  implicit class UpdateTrialComponentRequestOps[Self <: UpdateTrialComponentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrialComponentName(value: ExperimentEntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrialComponentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: ExperimentEntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputArtifacts(value: TrialComponentArtifacts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputArtifacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputArtifacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputArtifacts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputArtifactsToRemove(value: ListTrialComponentKey256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputArtifactsToRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputArtifactsToRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputArtifactsToRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputArtifacts(value: TrialComponentArtifacts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputArtifacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputArtifacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputArtifacts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputArtifactsToRemove(value: ListTrialComponentKey256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputArtifactsToRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputArtifactsToRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputArtifactsToRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: TrialComponentParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParametersToRemove(value: ListTrialComponentKey256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParametersToRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParametersToRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParametersToRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: TrialComponentStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,6 +17,8 @@ import typingsSlinky.node.AnonEncodingWithFileTypes
 import typingsSlinky.node.AnonFlagMode
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
+import typingsSlinky.node.MakeDirectoryOptionsrecur
+import typingsSlinky.node.MakeDirectoryOptionsrecurMode
 import typingsSlinky.node.fsMod.Dir
 import typingsSlinky.node.fsMod.Dirent
 import typingsSlinky.node.fsMod.MakeDirectoryOptions
@@ -25,7 +27,6 @@ import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.RmDirAsyncOptions
 import typingsSlinky.node.fsMod.Stats
 import typingsSlinky.node.fsMod.promises.FileHandle
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -124,13 +125,13 @@ trait Typeofpromises extends js.Object {
     */
   def futimes(handle: FileHandle, atime: String, mtime: String): js.Promise[Unit] = js.native
   def futimes(handle: FileHandle, atime: String, mtime: Double): js.Promise[Unit] = js.native
-  def futimes(handle: FileHandle, atime: String, mtime: Date): js.Promise[Unit] = js.native
+  def futimes(handle: FileHandle, atime: String, mtime: js.Date): js.Promise[Unit] = js.native
   def futimes(handle: FileHandle, atime: Double, mtime: String): js.Promise[Unit] = js.native
   def futimes(handle: FileHandle, atime: Double, mtime: Double): js.Promise[Unit] = js.native
-  def futimes(handle: FileHandle, atime: Double, mtime: Date): js.Promise[Unit] = js.native
-  def futimes(handle: FileHandle, atime: Date, mtime: String): js.Promise[Unit] = js.native
-  def futimes(handle: FileHandle, atime: Date, mtime: Double): js.Promise[Unit] = js.native
-  def futimes(handle: FileHandle, atime: Date, mtime: Date): js.Promise[Unit] = js.native
+  def futimes(handle: FileHandle, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+  def futimes(handle: FileHandle, atime: js.Date, mtime: String): js.Promise[Unit] = js.native
+  def futimes(handle: FileHandle, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
+  def futimes(handle: FileHandle, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
   /**
     * Asynchronous lchmod(2) - Change permissions of a file. Does not dereference symbolic links.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -163,7 +164,15 @@ trait Typeofpromises extends js.Object {
   def mkdir(path: PathLike): js.Promise[Unit] = js.native
   def mkdir(path: PathLike, options: String): js.Promise[Unit] = js.native
   def mkdir(path: PathLike, options: Double): js.Promise[Unit] = js.native
-  def mkdir(path: PathLike, options: MakeDirectoryOptions): js.Promise[Unit] = js.native
+  /**
+    * Asynchronous mkdir(2) - create a directory.
+    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * @param options Either the file mode, or an object optionally specifying the file mode and whether parent folders
+    * should be created. If a string is passed, it is parsed as an octal integer. If not specified, defaults to `0o777`.
+    */
+  def mkdir(path: PathLike, options: MakeDirectoryOptionsrecur): js.Promise[String] = js.native
+  def mkdir(path: PathLike, options: MakeDirectoryOptionsrecurMode): js.Promise[Unit] = js.native
+  def mkdir(path: PathLike, options: MakeDirectoryOptions): js.Promise[js.UndefOr[String]] = js.native
   /**
     * Asynchronously creates a unique temporary directory.
     * Generates six random characters to be appended behind a required `prefix` to create a unique temporary directory.
@@ -205,14 +214,14 @@ trait Typeofpromises extends js.Object {
     * @param position The offset from the beginning of the file from which data should be read. If
     * `null`, data will be read from the current position.
     */
-  def read[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-  def read[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-  def read[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-  def read[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-  def read[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-  def read[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-  def read[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-  def read[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
+  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
+  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
+  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
+  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
+  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
+  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
+  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
+  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
   /**
     * Asynchronously reads the entire contents of a file.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -347,13 +356,13 @@ trait Typeofpromises extends js.Object {
     */
   def utimes(path: PathLike, atime: String, mtime: String): js.Promise[Unit] = js.native
   def utimes(path: PathLike, atime: String, mtime: Double): js.Promise[Unit] = js.native
-  def utimes(path: PathLike, atime: String, mtime: Date): js.Promise[Unit] = js.native
+  def utimes(path: PathLike, atime: String, mtime: js.Date): js.Promise[Unit] = js.native
   def utimes(path: PathLike, atime: Double, mtime: String): js.Promise[Unit] = js.native
   def utimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = js.native
-  def utimes(path: PathLike, atime: Double, mtime: Date): js.Promise[Unit] = js.native
-  def utimes(path: PathLike, atime: Date, mtime: String): js.Promise[Unit] = js.native
-  def utimes(path: PathLike, atime: Date, mtime: Double): js.Promise[Unit] = js.native
-  def utimes(path: PathLike, atime: Date, mtime: Date): js.Promise[Unit] = js.native
+  def utimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+  def utimes(path: PathLike, atime: js.Date, mtime: String): js.Promise[Unit] = js.native
+  def utimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
+  def utimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
   /**
     * Asynchronously writes `string` to the file referenced by the supplied `FileHandle`.
     * It is unsafe to call `fsPromises.write()` multiple times on the same file without waiting for the `Promise`
@@ -377,14 +386,14 @@ trait Typeofpromises extends js.Object {
     * @param length The number of bytes to write. If not supplied, defaults to `buffer.length - offset`.
     * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
     */
-  def write[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-  def write[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-  def write[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-  def write[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-  def write[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-  def write[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-  def write[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-  def write[TBuffer /* <: scala.scalajs.js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
+  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
+  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
+  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
+  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
+  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
+  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
+  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
+  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
   /**
     * Asynchronously writes data to a file, replacing the file if it already exists.
     * It is unsafe to call `fsPromises.writeFile()` multiple times on the same file without waiting for the `Promise` to be resolved (or rejected).

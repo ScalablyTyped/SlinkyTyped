@@ -14,14 +14,12 @@ trait NeedleReadWriteHttpVerbs extends js.Object
 
 object NeedleReadWriteHttpVerbs {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def delete: typingsSlinky.needle.needleStrings.delete = "delete".asInstanceOf[typingsSlinky.needle.needleStrings.delete]
   @scala.inline
-  def delete: typingsSlinky.needle.needleStrings.delete = this.cast("delete")
+  def patch: typingsSlinky.needle.needleStrings.patch = "patch".asInstanceOf[typingsSlinky.needle.needleStrings.patch]
   @scala.inline
-  def patch: typingsSlinky.needle.needleStrings.patch = this.cast("patch")
+  def post: typingsSlinky.needle.needleStrings.post = "post".asInstanceOf[typingsSlinky.needle.needleStrings.post]
   @scala.inline
-  def post: typingsSlinky.needle.needleStrings.post = this.cast("post")
-  @scala.inline
-  def put: typingsSlinky.needle.needleStrings.put = this.cast("put")
+  def put: typingsSlinky.needle.needleStrings.put = "put".asInstanceOf[typingsSlinky.needle.needleStrings.put]
 }
 

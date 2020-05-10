@@ -14,8 +14,6 @@ class DOFConstraint protected () extends Constraint {
   def configureAngularMotor(which: Double, low_angle: Double, high_angle: Double, velocity: Double, max_force: Double): Unit = js.native
   def disableAngularMotor(which: Double): Unit = js.native
   def enableAngularMotor(which: Double): Unit = js.native
-  /* CompleteClass */
-  override def getDefinition(): js.Any = js.native
   def setAngularLowerLimit(limit: Vector3): Unit = js.native
   def setAngularUpperLimit(limit: Vector3): Unit = js.native
   def setLinearLowerLimit(limit: Vector3): Unit = js.native

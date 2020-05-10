@@ -1,0 +1,257 @@
+package typingsSlinky.echarts.echarts.EChartOption.SeriesGraph
+
+import typingsSlinky.echarts.AnonBorderRadius
+import typingsSlinky.echarts.AnonBorderType
+import typingsSlinky.echarts.AnonItemStyleAnonBorderTypeLabelAnonDistance
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CategoryObject extends js.Object {
+  /**
+    * @see https://echarts.apache.org/en/option.html#series-graph.categories.emphasis
+    */
+  var emphasis: js.UndefOr[AnonItemStyleAnonBorderTypeLabelAnonDistance] = js.native
+  /**
+    * The style of node in this category.
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-graph.categories.itemStyle
+    */
+  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  /**
+    * The label style of node in this category.
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-graph.categories.label
+    */
+  var label: js.UndefOr[AnonBorderRadius] = js.native
+  /**
+    * Name of category, which is used to correspond with
+    * [legend](https://echarts.apache.org/en/option.html#legend)
+    * and the content of
+    * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
+    * .
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-graph.categories.name
+    */
+  var name: js.UndefOr[String] = js.native
+  /**
+    * Symbol of node of this category.
+    *
+    * Icon types provided by ECharts includes `'circle'`, `'rect'`,
+    * `'roundRect'`, `'triangle'`, `'diamond'`, `'pin'`, `'arrow'`,
+    * `'none'`
+    *
+    * It can be set to an image with `'image://url'` , in which
+    * URL is the link to an image, or `dataURI` of an image.
+    *
+    * An image URL example:
+    *
+    * ```
+    * 'image://http://xxx.xxx.xxx/a/b.png'
+    *
+    * ```
+    *
+    * A `dataURI` example:
+    *
+    * [see doc](https://echarts.apache.org/en/option.html#series-graph.graph.categories)
+    *
+    * Icons can be set to arbitrary vector path via `'path://'`
+    * in ECharts.
+    * As compared with raster image, vector paths prevent from
+    * jagging and blurring when scaled, and have a better control
+    * over changing colors.
+    * Size of vectoer icon will be adapted automatically.
+    * Refer to
+    * [SVG PathData](http://www.w3.org/TR/SVG/paths.html#PathData)
+    * for more information about format of path.
+    * You may export vector paths from tools like Adobe Illustrator.
+    *
+    * For example:
+    *
+    * [see doc](https://echarts.apache.org/en/option.html#series-graph.graph.categories)
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-graph.categories.symbol
+    */
+  var symbol: js.UndefOr[String] = js.native
+  /**
+    * Whether to keep aspect for symbols in the form of `path://`.
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-graph.categories.symbolKeepAspect
+    */
+  var symbolKeepAspect: js.UndefOr[Boolean] = js.native
+  /**
+    * Offset of node of this category symbol relative to original
+    * position.
+    * By default, symbol will be put in the center position of
+    * data.
+    * But if symbol is from user-defined vector path or image,
+    * you may not expect symbol to be in center.
+    * In this case, you may use this attribute to set offset to
+    * default position.
+    * It can be in absolute pixel value, or in relative percentage
+    * value.
+    *
+    * For example, `[0, '50%']` means to move upside side position
+    * of symbol height.
+    * It can be used to make the arrow in the bottom to be at data
+    * position when symbol is pin.
+    *
+    *
+    * @default
+    * [0, 0]
+    * @see https://echarts.apache.org/en/option.html#series-graph.categories.symbolOffset
+    */
+  var symbolOffset: js.UndefOr[js.Array[_]] = js.native
+  /**
+    * Rotate degree of node of this category symbol.
+    * Note that when `symbol` is set to be `'arrow'` in `markLine`,
+    * `symbolRotate` value will be ignored, and compulsively use
+    * tangent angle.
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-graph.categories.symbolRotate
+    */
+  var symbolRotate: js.UndefOr[Double] = js.native
+  /**
+    * node of this category symbol size.
+    * It can be set to single numbers like `10`, or use an array
+    * to represent width and height.
+    * For example, `[20, 10]` means symbol width is `20`, and height
+    * is`10`.
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-graph.categories.symbolSize
+    */
+  var symbolSize: js.UndefOr[js.Array[_] | Double] = js.native
+}
+
+object CategoryObject {
+  @scala.inline
+  def apply(): CategoryObject = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[CategoryObject]
+  }
+  @scala.inline
+  implicit class CategoryObjectOps[Self <: CategoryObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmphasis(value: AnonItemStyleAnonBorderTypeLabelAnonDistance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: AnonBorderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonBorderRadius): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolKeepAspect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolKeepAspect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolKeepAspect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolKeepAspect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolOffset(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolRotate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolRotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolRotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolSize(value: js.Array[_] | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

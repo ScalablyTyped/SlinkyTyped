@@ -4,25 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IIRFilterOptions extends AudioNodeOptions {
-  var feedback: js.Array[Double]
-  var feedforward: js.Array[Double]
+  var feedback: js.Array[Double] = js.native
+  var feedforward: js.Array[Double] = js.native
 }
 
 object IIRFilterOptions {
   @scala.inline
-  def apply(
-    feedback: js.Array[Double],
-    feedforward: js.Array[Double],
-    channelCount: Int | Double = null,
-    channelCountMode: ChannelCountMode = null,
-    channelInterpretation: ChannelInterpretation = null
-  ): IIRFilterOptions = {
+  def apply(feedback: js.Array[Double], feedforward: js.Array[Double]): IIRFilterOptions = {
     val __obj = js.Dynamic.literal(feedback = feedback.asInstanceOf[js.Any], feedforward = feedforward.asInstanceOf[js.Any])
-    if (channelCount != null) __obj.updateDynamic("channelCount")(channelCount.asInstanceOf[js.Any])
-    if (channelCountMode != null) __obj.updateDynamic("channelCountMode")(channelCountMode.asInstanceOf[js.Any])
-    if (channelInterpretation != null) __obj.updateDynamic("channelInterpretation")(channelInterpretation.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIRFilterOptions]
   }
+  @scala.inline
+  implicit class IIRFilterOptionsOps[Self <: IIRFilterOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFeedback(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeedforward(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feedforward")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

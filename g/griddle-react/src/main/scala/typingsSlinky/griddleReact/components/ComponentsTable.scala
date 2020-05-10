@@ -1,39 +1,33 @@
 package typingsSlinky.griddleReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.griddleReact.mod.components.Table
 import typingsSlinky.griddleReact.mod.components.TableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ComponentsTable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Table] {
+object ComponentsTable {
   @JSImport("griddle-react", "components.Table")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    NoResults: js.Any = null,
-    TableBody: js.Any = null,
-    TableHeading: js.Any = null,
-    visibleRows: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, Table] = {
-    val __obj = js.Dynamic.literal()
-    if (NoResults != null) __obj.updateDynamic("NoResults")(NoResults.asInstanceOf[js.Any])
-    if (TableBody != null) __obj.updateDynamic("TableBody")(TableBody.asInstanceOf[js.Any])
-    if (TableHeading != null) __obj.updateDynamic("TableHeading")(TableHeading.asInstanceOf[js.Any])
-    if (visibleRows != null) __obj.updateDynamic("visibleRows")(visibleRows.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Table] {
+    @scala.inline
+    def NoResults(value: js.Any): this.type = set("NoResults", value.asInstanceOf[js.Any])
+    @scala.inline
+    def TableBody(value: js.Any): this.type = set("TableBody", value.asInstanceOf[js.Any])
+    @scala.inline
+    def TableHeading(value: js.Any): this.type = set("TableHeading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visibleRows(value: Double): this.type = set("visibleRows", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Table] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.griddleReact.mod.components.Table](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TableProps
+  
+  def withProps(p: TableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ComponentsTable.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

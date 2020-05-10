@@ -1,39 +1,50 @@
 package typingsSlinky.pegjs.mod
 
 import typingsSlinky.pegjs.pegjsStrings.bare
-import typingsSlinky.pegjs.pegjsStrings.size
 import typingsSlinky.pegjs.pegjsStrings.source
-import typingsSlinky.pegjs.pegjsStrings.speed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OutputFormatBare extends BuildOptionsBase {
   /** format of the genreated parser (`"amd"`, `"bare"`, `"commonjs"`, `"globals"`, or `"umd"`); valid only when `output` is set to `"source"` (default: `"bare"`) */
-  var format: js.UndefOr[bare] = js.undefined
+  var format: js.UndefOr[bare] = js.native
   /** if set to `"parser"`, the method will return generated parser object; if set to `"source"`, it will return parser source code as a string (default: `"parser"`) */
-  var output: source
+  var output: source = js.native
 }
 
 object OutputFormatBare {
   @scala.inline
-  def apply(
-    output: source,
-    allowedStartRules: js.Array[String] = null,
-    cache: js.UndefOr[Boolean] = js.undefined,
-    format: bare = null,
-    optimize: speed | size = null,
-    plugins: js.Array[_] = null,
-    trace: js.UndefOr[Boolean] = js.undefined
-  ): OutputFormatBare = {
+  def apply(output: source): OutputFormatBare = {
     val __obj = js.Dynamic.literal(output = output.asInstanceOf[js.Any])
-    if (allowedStartRules != null) __obj.updateDynamic("allowedStartRules")(allowedStartRules.asInstanceOf[js.Any])
-    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (optimize != null) __obj.updateDynamic("optimize")(optimize.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (!js.isUndefined(trace)) __obj.updateDynamic("trace")(trace.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputFormatBare]
   }
+  @scala.inline
+  implicit class OutputFormatBareOps[Self <: OutputFormatBare] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOutput(value: source): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: bare): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

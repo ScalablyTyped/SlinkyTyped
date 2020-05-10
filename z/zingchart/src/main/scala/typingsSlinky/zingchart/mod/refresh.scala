@@ -5,61 +5,149 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait refresh extends js.Object {
   /**
     * Enabling true will allow dynamic value range of the scale pertaining to the values. false (default) | true
     */
-  var `adjust-scale`: js.UndefOr[Boolean] = js.undefined
-  var curtain: js.UndefOr[AnonCalloutoffset] = js.undefined
+  var `adjust-scale`: js.UndefOr[Boolean] = js.native
+  var curtain: js.UndefOr[AnonCalloutoffset] = js.native
   /**
     * Sets the timeout between two refresh operations. If value is smaller than 50, seconds are assumed, otherwise milliseconds are assu
     * med. 5 | 10 | ...
     */
-  var interval: js.UndefOr[Double] = js.undefined
+  var interval: js.UndefOr[Double] = js.native
   /**
     * Sets the max amount of nodes visible in the graph. 5 | 10 | ...
     */
-  var `max-ticks`: js.UndefOr[Double] = js.undefined
+  var `max-ticks`: js.UndefOr[Double] = js.native
   /**
     * The number of nodes before starting the feed from 0 again. 500 | 1000 | ...
     */
-  var `reset-timeout`: js.UndefOr[Double] = js.undefined
+  var `reset-timeout`: js.UndefOr[Double] = js.native
   /**
     * Defines the specific type of feed. http | js | websockets
     */
-  var transport: js.UndefOr[String] = js.undefined
+  var transport: js.UndefOr[String] = js.native
   /**
     * Sets the type of data refresh, full being the only option at loader's level. "full"
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * The url path for the feed. feed() | https://myPhpFunction.php | wss://websockets.zingchart.com:8889
     */
-  var url: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.native
 }
 
 object refresh {
   @scala.inline
-  def apply(
-    `adjust-scale`: js.UndefOr[Boolean] = js.undefined,
-    curtain: AnonCalloutoffset = null,
-    interval: Int | Double = null,
-    `max-ticks`: Int | Double = null,
-    `reset-timeout`: Int | Double = null,
-    transport: String = null,
-    `type`: String = null,
-    url: String = null
-  ): refresh = {
+  def apply(): refresh = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(`adjust-scale`)) __obj.updateDynamic("adjust-scale")(`adjust-scale`.asInstanceOf[js.Any])
-    if (curtain != null) __obj.updateDynamic("curtain")(curtain.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (`max-ticks` != null) __obj.updateDynamic("max-ticks")(`max-ticks`.asInstanceOf[js.Any])
-    if (`reset-timeout` != null) __obj.updateDynamic("reset-timeout")(`reset-timeout`.asInstanceOf[js.Any])
-    if (transport != null) __obj.updateDynamic("transport")(transport.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[refresh]
   }
+  @scala.inline
+  implicit class refreshOps[Self <: refresh] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withAdjust-scale`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjust-scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAdjust-scale`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjust-scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurtain(value: AnonCalloutoffset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curtain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurtain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curtain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMax-ticks`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max-ticks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMax-ticks`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max-ticks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withReset-timeout`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset-timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutReset-timeout`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset-timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransport(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

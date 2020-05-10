@@ -1,9 +1,7 @@
 package typingsSlinky.reactabularTable.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactabularTable.PartialCSSStyleDeclaratio
 import typingsSlinky.reactabularTable.mod.Column
 import typingsSlinky.reactabularTable.mod.ProviderProps
@@ -12,26 +10,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Provider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactabularTable.mod.Provider] {
+object Provider {
   @JSImport("reactabular-table", "Provider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    columns: js.Array[Column],
-    renderers: Renderers = null,
-    style: PartialCSSStyleDeclaratio = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactabularTable.mod.Provider] = {
-    val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any])
-    if (renderers != null) __obj.updateDynamic("renderers")(renderers.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactabularTable.mod.Provider] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderers(value: Renderers): this.type = set("renderers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: PartialCSSStyleDeclaratio): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = ProviderProps
+  
+  def withProps(p: ProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(columns: js.Array[Column]): Builder = {
+    val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ProviderProps]))
+  }
 }
 

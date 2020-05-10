@@ -7,51 +7,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCompressVertices extends js.Object {
-  var allowPicking: js.UndefOr[Boolean] = js.undefined
-  var appearance: js.UndefOr[Appearance] = js.undefined
-  var asynchronous: js.UndefOr[Boolean] = js.undefined
-  var classificationType: js.UndefOr[ClassificationType] = js.undefined
-  var compressVertices: js.UndefOr[Boolean] = js.undefined
-  var debugShowBoundingVolume: js.UndefOr[Boolean] = js.undefined
-  var debugShowShadowVolume: js.UndefOr[Boolean] = js.undefined
-  var geometryInstances: js.UndefOr[js.Array[GeometryInstance] | GeometryInstance] = js.undefined
-  var interleave: js.UndefOr[Boolean] = js.undefined
-  var releaseGeometryInstances: js.UndefOr[Boolean] = js.undefined
-  var show: js.UndefOr[Boolean] = js.undefined
-  var vertexCacheOptimize: js.UndefOr[Boolean] = js.undefined
+  var allowPicking: js.UndefOr[Boolean] = js.native
+  var appearance: js.UndefOr[Appearance] = js.native
+  var asynchronous: js.UndefOr[Boolean] = js.native
+  var classificationType: js.UndefOr[ClassificationType] = js.native
+  var compressVertices: js.UndefOr[Boolean] = js.native
+  var debugShowBoundingVolume: js.UndefOr[Boolean] = js.native
+  var debugShowShadowVolume: js.UndefOr[Boolean] = js.native
+  var geometryInstances: js.UndefOr[js.Array[GeometryInstance] | GeometryInstance] = js.native
+  var interleave: js.UndefOr[Boolean] = js.native
+  var releaseGeometryInstances: js.UndefOr[Boolean] = js.native
+  var show: js.UndefOr[Boolean] = js.native
+  var vertexCacheOptimize: js.UndefOr[Boolean] = js.native
 }
 
 object AnonCompressVertices {
   @scala.inline
-  def apply(
-    allowPicking: js.UndefOr[Boolean] = js.undefined,
-    appearance: Appearance = null,
-    asynchronous: js.UndefOr[Boolean] = js.undefined,
-    classificationType: ClassificationType = null,
-    compressVertices: js.UndefOr[Boolean] = js.undefined,
-    debugShowBoundingVolume: js.UndefOr[Boolean] = js.undefined,
-    debugShowShadowVolume: js.UndefOr[Boolean] = js.undefined,
-    geometryInstances: js.Array[GeometryInstance] | GeometryInstance = null,
-    interleave: js.UndefOr[Boolean] = js.undefined,
-    releaseGeometryInstances: js.UndefOr[Boolean] = js.undefined,
-    show: js.UndefOr[Boolean] = js.undefined,
-    vertexCacheOptimize: js.UndefOr[Boolean] = js.undefined
-  ): AnonCompressVertices = {
+  def apply(): AnonCompressVertices = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowPicking)) __obj.updateDynamic("allowPicking")(allowPicking.asInstanceOf[js.Any])
-    if (appearance != null) __obj.updateDynamic("appearance")(appearance.asInstanceOf[js.Any])
-    if (!js.isUndefined(asynchronous)) __obj.updateDynamic("asynchronous")(asynchronous.asInstanceOf[js.Any])
-    if (classificationType != null) __obj.updateDynamic("classificationType")(classificationType.asInstanceOf[js.Any])
-    if (!js.isUndefined(compressVertices)) __obj.updateDynamic("compressVertices")(compressVertices.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugShowBoundingVolume)) __obj.updateDynamic("debugShowBoundingVolume")(debugShowBoundingVolume.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugShowShadowVolume)) __obj.updateDynamic("debugShowShadowVolume")(debugShowShadowVolume.asInstanceOf[js.Any])
-    if (geometryInstances != null) __obj.updateDynamic("geometryInstances")(geometryInstances.asInstanceOf[js.Any])
-    if (!js.isUndefined(interleave)) __obj.updateDynamic("interleave")(interleave.asInstanceOf[js.Any])
-    if (!js.isUndefined(releaseGeometryInstances)) __obj.updateDynamic("releaseGeometryInstances")(releaseGeometryInstances.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertexCacheOptimize)) __obj.updateDynamic("vertexCacheOptimize")(vertexCacheOptimize.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCompressVertices]
   }
+  @scala.inline
+  implicit class AnonCompressVerticesOps[Self <: AnonCompressVertices] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowPicking(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPicking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowPicking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPicking")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppearance(value: Appearance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppearance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAsynchronous(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asynchronous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsynchronous: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asynchronous")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassificationType(value: ClassificationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassificationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompressVertices(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressVertices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompressVertices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressVertices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugShowBoundingVolume(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowBoundingVolume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugShowBoundingVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowBoundingVolume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugShowShadowVolume(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowShadowVolume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugShowShadowVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowShadowVolume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeometryInstances(value: js.Array[GeometryInstance] | GeometryInstance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeometryInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryInstances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterleave(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interleave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterleave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interleave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReleaseGeometryInstances(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseGeometryInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReleaseGeometryInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseGeometryInstances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertexCacheOptimize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexCacheOptimize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertexCacheOptimize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexCacheOptimize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

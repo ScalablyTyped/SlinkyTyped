@@ -18,10 +18,29 @@ trait SchemaBatchUpdatePhotosResponse extends js.Object {
 
 object SchemaBatchUpdatePhotosResponse {
   @scala.inline
-  def apply(results: js.Array[SchemaPhotoResponse] = null): SchemaBatchUpdatePhotosResponse = {
+  def apply(): SchemaBatchUpdatePhotosResponse = {
     val __obj = js.Dynamic.literal()
-    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchUpdatePhotosResponse]
   }
+  @scala.inline
+  implicit class SchemaBatchUpdatePhotosResponseOps[Self <: SchemaBatchUpdatePhotosResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResults(value: js.Array[SchemaPhotoResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

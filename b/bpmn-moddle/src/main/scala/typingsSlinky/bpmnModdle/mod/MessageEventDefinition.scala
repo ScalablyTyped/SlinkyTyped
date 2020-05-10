@@ -10,3 +10,31 @@ trait MessageEventDefinition extends BaseElement {
   var operationRef: Operation = js.native
 }
 
+object MessageEventDefinition {
+  @scala.inline
+  def apply($parent: TypeDerived, $type: ElementType, id: String, messageRef: Message, operationRef: Operation): MessageEventDefinition = {
+    val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], messageRef = messageRef.asInstanceOf[js.Any], operationRef = operationRef.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MessageEventDefinition]
+  }
+  @scala.inline
+  implicit class MessageEventDefinitionOps[Self <: MessageEventDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessageRef(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOperationRef(value: Operation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

@@ -15,7 +15,7 @@ class Utf8String () extends BaseBlock[LocalUtf8StringValueBlock] {
     * 
     * @memberOf Utf8String
     */
-  def fromBuffer(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
+  def fromBuffer(inputBuffer: js.typedarray.ArrayBuffer): Unit = js.native
   /**
     * Function converting JavaScript string into ASN.1 internal class
     * 

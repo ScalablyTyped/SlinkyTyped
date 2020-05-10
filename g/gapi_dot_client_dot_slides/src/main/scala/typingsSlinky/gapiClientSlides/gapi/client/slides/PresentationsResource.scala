@@ -7,8 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PresentationsResource extends js.Object {
-  var pages: PagesResource
+  var pages: PagesResource = js.native
   /**
     * Applies one or more updates to the presentation.
     *
@@ -32,15 +33,15 @@ trait PresentationsResource extends js.Object {
     * the updates in your request are guaranteed to be applied together
     * atomically.
     */
-  def batchUpdate(request: AnonBearertoken): Request_[BatchUpdatePresentationResponse]
+  def batchUpdate(request: AnonBearertoken): Request_[BatchUpdatePresentationResponse] = js.native
   /**
     * Creates a new presentation using the title given in the request. Other
     * fields in the request are ignored.
     * Returns the created presentation.
     */
-  def create(request: AnonCallback): Request_[Presentation]
+  def create(request: AnonCallback): Request_[Presentation] = js.native
   /** Gets the latest version of the specified presentation. */
-  def get(request: AnonBearertoken): Request_[Presentation]
+  def get(request: AnonBearertoken): Request_[Presentation] = js.native
 }
 
 object PresentationsResource {
@@ -52,8 +53,39 @@ object PresentationsResource {
     pages: PagesResource
   ): PresentationsResource = {
     val __obj = js.Dynamic.literal(batchUpdate = js.Any.fromFunction1(batchUpdate), create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), pages = pages.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PresentationsResource]
   }
+  @scala.inline
+  implicit class PresentationsResourceOps[Self <: PresentationsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchUpdate(value: AnonBearertoken => Request_[BatchUpdatePresentationResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreate(value: AnonCallback => Request_[Presentation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonBearertoken => Request_[Presentation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPages(value: PagesResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

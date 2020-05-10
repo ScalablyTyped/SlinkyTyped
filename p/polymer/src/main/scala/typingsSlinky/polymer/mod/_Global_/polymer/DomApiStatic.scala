@@ -1,7 +1,7 @@
 package typingsSlinky.polymer.mod._Global_.polymer
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.std.Event_
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

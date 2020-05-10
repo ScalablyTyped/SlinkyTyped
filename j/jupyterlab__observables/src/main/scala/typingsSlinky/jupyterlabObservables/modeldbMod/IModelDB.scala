@@ -9,32 +9,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IModelDB extends IDisposable {
   /**
     * The base path for the `IModelDB`. This is prepended
     * to all the paths that are passed in to the member
     * functions of the object.
     */
-  val basePath: String
+  val basePath: String = js.native
   /**
     * A map of the currently active collaborators
     * for the database, including the local user.
     */
-  val collaborators: js.UndefOr[ICollaboratorMap] = js.undefined
+  val collaborators: js.UndefOr[ICollaboratorMap] = js.native
   /**
     * A promise that resolves when the database
     * has connected to its backend, if any.
     */
-  val connected: js.Promise[Unit]
+  val connected: js.Promise[Unit] = js.native
   /**
     * Whether the database is collaborative.
     */
-  val isCollaborative: Boolean
+  val isCollaborative: Boolean = js.native
   /**
     * Whether the database has been populated
     * with model values prior to connection.
     */
-  val isPrepopulated: Boolean
+  val isPrepopulated: Boolean = js.native
   /**
     * Create an undoable list and insert it in the database.
     *
@@ -46,7 +47,7 @@ trait IModelDB extends IDisposable {
     * The list can only store objects that are simple
     * JSON Objects and primitives.
     */
-  def createList[T /* <: JSONValue */](path: String): IObservableUndoableList[T]
+  def createList[T /* <: JSONValue */](path: String): IObservableUndoableList[T] = js.native
   /**
     * Create a map and insert it in the database.
     *
@@ -58,7 +59,7 @@ trait IModelDB extends IDisposable {
     * The map can only store objects that are simple
     * JSON Objects and primitives.
     */
-  def createMap(path: String): IObservableJSON
+  def createMap(path: String): IObservableJSON = js.native
   /**
     * Create a string and insert it in the database.
     *
@@ -66,7 +67,7 @@ trait IModelDB extends IDisposable {
     *
     * @returns the string that was created.
     */
-  def createString(path: String): IObservableString
+  def createString(path: String): IObservableString = js.native
   /**
     * Create an opaque value and insert it in the database.
     *
@@ -74,7 +75,7 @@ trait IModelDB extends IDisposable {
     *
     * @returns the value that was created.
     */
-  def createValue(path: String): IObservableValue
+  def createValue(path: String): IObservableValue = js.native
   /**
     * Get a value for a path.
     *
@@ -82,14 +83,14 @@ trait IModelDB extends IDisposable {
     *
     * @returns an `IObservable`.
     */
-  def get(path: String): js.UndefOr[IObservable]
+  def get(path: String): js.UndefOr[IObservable] = js.native
   /**
     * Get a value at a path, or `undefined if it has not been set
     * That value must already have been created using `createValue`.
     *
     * @param path: the path for the value.
     */
-  def getValue(path: String): js.UndefOr[JSONValue]
+  def getValue(path: String): js.UndefOr[JSONValue] = js.native
   /**
     * Whether the `IModelDB` has an object at this path.
     *
@@ -97,7 +98,7 @@ trait IModelDB extends IDisposable {
     *
     * @returns a boolean for whether an object is at `path`.
     */
-  def has(path: String): Boolean
+  def has(path: String): Boolean = js.native
   /**
     * Set a value at a path. That value must already have
     * been created using `createValue`.
@@ -106,7 +107,7 @@ trait IModelDB extends IDisposable {
     *
     * @param value: the new value.
     */
-  def setValue(path: String, value: JSONValue): Unit
+  def setValue(path: String, value: JSONValue): Unit = js.native
   /**
     * Create a view onto a subtree of the model database.
     *
@@ -115,7 +116,7 @@ trait IModelDB extends IDisposable {
     * @returns an `IModelDB` with a view onto the original
     *   `IModelDB`, with `basePath` prepended to all paths.
     */
-  def view(basePath: String): IModelDB
+  def view(basePath: String): IModelDB = js.native
 }
 
 object IModelDB {
@@ -135,12 +136,108 @@ object IModelDB {
     isDisposed: Boolean,
     isPrepopulated: Boolean,
     setValue: (String, JSONValue) => Unit,
-    view: String => IModelDB,
-    collaborators: ICollaboratorMap = null
+    view: String => IModelDB
   ): IModelDB = {
     val __obj = js.Dynamic.literal(basePath = basePath.asInstanceOf[js.Any], connected = connected.asInstanceOf[js.Any], createList = js.Any.fromFunction1(createList), createMap = js.Any.fromFunction1(createMap), createString = js.Any.fromFunction1(createString), createValue = js.Any.fromFunction1(createValue), dispose = js.Any.fromFunction0(dispose), get = js.Any.fromFunction1(get), getValue = js.Any.fromFunction1(getValue), has = js.Any.fromFunction1(has), isCollaborative = isCollaborative.asInstanceOf[js.Any], isDisposed = isDisposed.asInstanceOf[js.Any], isPrepopulated = isPrepopulated.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue), view = js.Any.fromFunction1(view))
-    if (collaborators != null) __obj.updateDynamic("collaborators")(collaborators.asInstanceOf[js.Any])
     __obj.asInstanceOf[IModelDB]
   }
+  @scala.inline
+  implicit class IModelDBOps[Self <: IModelDB] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBasePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConnected(value: js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateList(value: String => IObservableUndoableList[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createList")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateMap(value: String => IObservableJSON): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createMap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateString(value: String => IObservableString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateValue(value: String => IObservableValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: String => js.UndefOr[IObservable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetValue(value: String => js.UndefOr[JSONValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHas(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsCollaborative(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollaborative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPrepopulated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrepopulated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetValue(value: (String, JSONValue) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withView(value: String => IModelDB): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCollaborators(value: ICollaboratorMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collaborators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollaborators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collaborators")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

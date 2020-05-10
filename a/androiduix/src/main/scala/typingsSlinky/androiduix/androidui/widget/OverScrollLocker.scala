@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OverScrollLocker extends js.Object {
-  def getScrollContentBottom(): Double
-  def lockOverScrollBottom(lockBottom: Double): Unit
-  def lockOverScrollTop(lockTop: Double): Unit
+  def getScrollContentBottom(): Double = js.native
+  def lockOverScrollBottom(lockBottom: Double): Unit = js.native
+  def lockOverScrollTop(lockTop: Double): Unit = js.native
 }
 
 @JSGlobal("androidui.widget.OverScrollLocker")

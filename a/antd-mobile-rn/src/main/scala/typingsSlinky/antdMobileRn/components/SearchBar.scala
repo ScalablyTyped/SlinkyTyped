@@ -1,9 +1,7 @@
 package typingsSlinky.antdMobileRn.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobileRn.AnonNativeEvent
 import typingsSlinky.antdMobileRn.searchBarIndexNativeMod.SearchBarNativeProps
 import typingsSlinky.antdMobileRn.searchBarStyleIndexNativeMod.ISearchBarStyle
@@ -13,52 +11,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SearchBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.antdMobileRn.mod.SearchBar] {
+object SearchBar {
   @JSImport("antd-mobile-rn", "SearchBar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, disabled, placeholder */
-  def apply(
-    styles: ISearchBarStyle,
-    cancelText: String = null,
-    defaultValue: String = null,
-    focused: js.UndefOr[Boolean] = js.undefined,
-    maxLength: Int | Double = null,
-    onBlur: () => Unit = null,
-    onCancel: /* value */ String => Unit = null,
-    onChange: /* value */ String => Unit = null,
-    onChangeText: /* text */ String => Unit = null,
-    onClear: /* value */ String => Unit = null,
-    onFocus: () => Unit = null,
-    onSubmit: /* value */ String => Unit = null,
-    onSubmitEditing: /* event */ AnonNativeEvent => Unit = null,
-    showCancelButton: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[TextStyle] = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.SearchBar] = {
-    val __obj = js.Dynamic.literal(styles = styles.asInstanceOf[js.Any])
-    if (cancelText != null) __obj.updateDynamic("cancelText")(cancelText.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(focused)) __obj.updateDynamic("focused")(focused.asInstanceOf[js.Any])
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction0(onBlur))
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction1(onCancel))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onChangeText != null) __obj.updateDynamic("onChangeText")(js.Any.fromFunction1(onChangeText))
-    if (onClear != null) __obj.updateDynamic("onClear")(js.Any.fromFunction1(onClear))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction0(onFocus))
-    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
-    if (onSubmitEditing != null) __obj.updateDynamic("onSubmitEditing")(js.Any.fromFunction1(onSubmitEditing))
-    if (!js.isUndefined(showCancelButton)) __obj.updateDynamic("showCancelButton")(showCancelButton.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.SearchBar] {
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelText(value: String): this.type = set("cancelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focused(value: Boolean): this.type = set("focused", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: () => Unit): this.type = set("onBlur", js.Any.fromFunction0(value))
+    @scala.inline
+    def onCancel(value: /* value */ String => Unit): this.type = set("onCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* value */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChangeText(value: /* text */ String => Unit): this.type = set("onChangeText", js.Any.fromFunction1(value))
+    @scala.inline
+    def onClear(value: /* value */ String => Unit): this.type = set("onClear", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: () => Unit): this.type = set("onFocus", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSubmit(value: /* value */ String => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSubmitEditing(value: /* event */ AnonNativeEvent => Unit): this.type = set("onSubmitEditing", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showCancelButton(value: Boolean): this.type = set("showCancelButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[TextStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = SearchBarNativeProps
+  
+  def withProps(p: SearchBarNativeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(styles: ISearchBarStyle): Builder = {
+    val __props = js.Dynamic.literal(styles = styles.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SearchBarNativeProps]))
+  }
 }
 

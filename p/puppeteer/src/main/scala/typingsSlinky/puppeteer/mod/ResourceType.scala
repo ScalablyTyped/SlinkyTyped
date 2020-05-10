@@ -23,32 +23,30 @@ trait ResourceType extends js.Object
 
 object ResourceType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def document: typingsSlinky.puppeteer.puppeteerStrings.document = "document".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.document]
   @scala.inline
-  def document: typingsSlinky.puppeteer.puppeteerStrings.document = this.cast("document")
+  def eventsource: typingsSlinky.puppeteer.puppeteerStrings.eventsource = "eventsource".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.eventsource]
   @scala.inline
-  def eventsource: typingsSlinky.puppeteer.puppeteerStrings.eventsource = this.cast("eventsource")
+  def fetch: typingsSlinky.puppeteer.puppeteerStrings.fetch = "fetch".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.fetch]
   @scala.inline
-  def fetch: typingsSlinky.puppeteer.puppeteerStrings.fetch = this.cast("fetch")
+  def font: typingsSlinky.puppeteer.puppeteerStrings.font = "font".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.font]
   @scala.inline
-  def font: typingsSlinky.puppeteer.puppeteerStrings.font = this.cast("font")
+  def image: typingsSlinky.puppeteer.puppeteerStrings.image = "image".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.image]
   @scala.inline
-  def image: typingsSlinky.puppeteer.puppeteerStrings.image = this.cast("image")
+  def manifest: typingsSlinky.puppeteer.puppeteerStrings.manifest = "manifest".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.manifest]
   @scala.inline
-  def manifest: typingsSlinky.puppeteer.puppeteerStrings.manifest = this.cast("manifest")
+  def media: typingsSlinky.puppeteer.puppeteerStrings.media = "media".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.media]
   @scala.inline
-  def media: typingsSlinky.puppeteer.puppeteerStrings.media = this.cast("media")
+  def other: typingsSlinky.puppeteer.puppeteerStrings.other = "other".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.other]
   @scala.inline
-  def other: typingsSlinky.puppeteer.puppeteerStrings.other = this.cast("other")
+  def script: typingsSlinky.puppeteer.puppeteerStrings.script = "script".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.script]
   @scala.inline
-  def script: typingsSlinky.puppeteer.puppeteerStrings.script = this.cast("script")
+  def stylesheet: typingsSlinky.puppeteer.puppeteerStrings.stylesheet = "stylesheet".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.stylesheet]
   @scala.inline
-  def stylesheet: typingsSlinky.puppeteer.puppeteerStrings.stylesheet = this.cast("stylesheet")
+  def texttrack: typingsSlinky.puppeteer.puppeteerStrings.texttrack = "texttrack".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.texttrack]
   @scala.inline
-  def texttrack: typingsSlinky.puppeteer.puppeteerStrings.texttrack = this.cast("texttrack")
+  def websocket: typingsSlinky.puppeteer.puppeteerStrings.websocket = "websocket".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.websocket]
   @scala.inline
-  def websocket: typingsSlinky.puppeteer.puppeteerStrings.websocket = this.cast("websocket")
-  @scala.inline
-  def xhr: typingsSlinky.puppeteer.puppeteerStrings.xhr = this.cast("xhr")
+  def xhr: typingsSlinky.puppeteer.puppeteerStrings.xhr = "xhr".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.xhr]
 }
 

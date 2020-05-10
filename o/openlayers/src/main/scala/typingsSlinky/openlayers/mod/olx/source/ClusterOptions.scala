@@ -10,41 +10,134 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClusterOptions extends js.Object {
-  var attributions: js.UndefOr[AttributionLike] = js.undefined
-  var distance: js.UndefOr[Double] = js.undefined
-  var extent: js.UndefOr[Extent_] = js.undefined
-  var format: js.UndefOr[Feature] = js.undefined
-  var geometryFunction: js.UndefOr[js.Function1[/* feature */ typingsSlinky.openlayers.mod.Feature, Point]] = js.undefined
-  var logo: js.UndefOr[String] = js.undefined
-  var projection: js.UndefOr[ProjectionLike] = js.undefined
-  var source: Vector
-  var wrapX: js.UndefOr[Boolean] = js.undefined
+  var attributions: js.UndefOr[AttributionLike] = js.native
+  var distance: js.UndefOr[Double] = js.native
+  var extent: js.UndefOr[Extent_] = js.native
+  var format: js.UndefOr[Feature] = js.native
+  var geometryFunction: js.UndefOr[js.Function1[/* feature */ typingsSlinky.openlayers.mod.Feature, Point]] = js.native
+  var logo: js.UndefOr[String] = js.native
+  var projection: js.UndefOr[ProjectionLike] = js.native
+  var source: Vector = js.native
+  var wrapX: js.UndefOr[Boolean] = js.native
 }
 
 object ClusterOptions {
   @scala.inline
-  def apply(
-    source: Vector,
-    attributions: AttributionLike = null,
-    distance: Int | Double = null,
-    extent: Extent_ = null,
-    format: Feature = null,
-    geometryFunction: /* feature */ typingsSlinky.openlayers.mod.Feature => Point = null,
-    logo: String = null,
-    projection: ProjectionLike = null,
-    wrapX: js.UndefOr[Boolean] = js.undefined
-  ): ClusterOptions = {
+  def apply(source: Vector): ClusterOptions = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
-    if (attributions != null) __obj.updateDynamic("attributions")(attributions.asInstanceOf[js.Any])
-    if (distance != null) __obj.updateDynamic("distance")(distance.asInstanceOf[js.Any])
-    if (extent != null) __obj.updateDynamic("extent")(extent.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (geometryFunction != null) __obj.updateDynamic("geometryFunction")(js.Any.fromFunction1(geometryFunction))
-    if (logo != null) __obj.updateDynamic("logo")(logo.asInstanceOf[js.Any])
-    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapX)) __obj.updateDynamic("wrapX")(wrapX.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterOptions]
   }
+  @scala.inline
+  implicit class ClusterOptionsOps[Self <: ClusterOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSource(value: Vector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributions(value: AttributionLike): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtent(value: Extent_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: Feature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeometryFunction(value: /* feature */ typingsSlinky.openlayers.mod.Feature => Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryFunction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGeometryFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjection(value: ProjectionLike): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapX(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapX")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

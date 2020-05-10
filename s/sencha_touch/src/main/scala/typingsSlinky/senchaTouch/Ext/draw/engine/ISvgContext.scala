@@ -1,14 +1,13 @@
 package typingsSlinky.senchaTouch.Ext.draw.engine
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.senchaTouch.Ext.Array
 import typingsSlinky.senchaTouch.Ext.IBase
-import typingsSlinky.senchaTouch.Ext.IClass
 import typingsSlinky.senchaTouch.Ext.draw.engine.svgcontext.IGradient
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISvgContext extends IBase {
   /** [Method] Adds points to the subpath such that the arc described by the circumference of the circle described by the arguments
   		* @param x Number
@@ -28,7 +27,7 @@ trait ISvgContext extends IBase {
       /* anticlockwise */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Arc command using svg parameters
   		* @param r1 Number
   		* @param r2 Number
@@ -49,7 +48,7 @@ trait ISvgContext extends IBase {
       /* y2 */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Adds an arc with the given control points and radius to the current subpath connected to the previous point by a str
   		* @param x1 Number
   		* @param y1 Number
@@ -70,9 +69,9 @@ trait ISvgContext extends IBase {
       /* rotation */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Resets the current default path  */
-  var beginPath: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var beginPath: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Adds the given point to the current subpath connected to the previous one by a cubic B zier curve with the given con
   		* @param x1 Number
   		* @param y1 Number
@@ -91,11 +90,11 @@ trait ISvgContext extends IBase {
       /* y3 */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Clears the context  */
-  var clear: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var clear: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Marks the current subpath as closed and starts a new subpath with a point the same as the start and end of the newly  */
-  var closePath: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var closePath: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Returns an object that represents a linear gradient that paints along the line given by the coordinates represented b
   		* @param x0 Number
   		* @param y0 Number
@@ -111,7 +110,7 @@ trait ISvgContext extends IBase {
       /* y1 */ js.UndefOr[Double], 
       IGradient
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Returns a CanvasGradient object that represents a radial gradient that paints along the cone given by the circles rep
   		* @param x0 Number
   		* @param y0 Number
@@ -131,7 +130,7 @@ trait ISvgContext extends IBase {
       /* r1 */ js.UndefOr[Double], 
       IGradient
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Draws the given image onto the canvas
   		* @param image HTMLElement
   		* @param sx Number
@@ -156,7 +155,7 @@ trait ISvgContext extends IBase {
       /* dh */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Adds points to the subpath such that the arc described by the circumference of the ellipse described by the arguments
   		* @param x Number
   		* @param y Number
@@ -179,9 +178,9 @@ trait ISvgContext extends IBase {
       /* anticlockwise */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Fills the subpaths of the current default path or the given path with the current fill style  */
-  var fill: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var fill: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Paints the given rectangle onto the canvas using the current fill style
   		* @param x Number
   		* @param y Number
@@ -196,14 +195,14 @@ trait ISvgContext extends IBase {
       /* height */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Note After the method guarantees the transform matrix will be inverted
   		* @param attr Object The attribute object
   		* @param transformFillStroke Boolean Indicate whether to transform fill and stroke. If this is not given, then uses attr.transformFillStroke instead.
   		*/
   var fillStroke: js.UndefOr[
     js.Function2[/* attr */ js.UndefOr[js.Any], /* transformFillStroke */ js.UndefOr[Boolean], Unit]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Fills the given text at the given position
   		* @param text String
   		* @param x Number
@@ -216,17 +215,17 @@ trait ISvgContext extends IBase {
       /* y */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Adds the given point to the current subpath connected to the previous one by a straight line
   		* @param x Number
   		* @param y Number
   		*/
-  var lineTo: js.UndefOr[js.Function2[/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], Unit]] = js.undefined
+  var lineTo: js.UndefOr[js.Function2[/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Creates a new subpath with the given point
   		* @param x Number
   		* @param y Number
   		*/
-  var moveTo: js.UndefOr[js.Function2[/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], Unit]] = js.undefined
+  var moveTo: js.UndefOr[js.Function2[/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Adds a new closed subpath to the path representing the given rectangle
   		* @param x Number
   		* @param y Number
@@ -241,11 +240,11 @@ trait ISvgContext extends IBase {
       /* height */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Pops the state stack and restores the state  */
-  var restore: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var restore: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Pushes the context state to the state stack  */
-  var save: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var save: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Changes the transformation matrix to the matrix given by the arguments as described below
   		* @param xx Number
   		* @param yx Number
@@ -264,9 +263,9 @@ trait ISvgContext extends IBase {
       /* dy */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Strokes the subpaths of the current default path or the given path with the current stroke style  */
-  var stroke: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var stroke: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Paints the box that outlines the given rectangle onto the canvas using the current stroke style
   		* @param x Number
   		* @param y Number
@@ -281,7 +280,7 @@ trait ISvgContext extends IBase {
       /* height */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Strokes the given text at the given position
   		* @param text String
   		* @param x Number
@@ -294,7 +293,7 @@ trait ISvgContext extends IBase {
       /* y */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Changes the transformation matrix to apply the matrix given by the arguments as described below
   		* @param xx Number
   		* @param yx Number
@@ -313,99 +312,352 @@ trait ISvgContext extends IBase {
       /* dy */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object ISvgContext {
   @scala.inline
-  def apply(
-    alias: Array = null,
-    alternateClassName: js.Any = null,
-    arc: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* radius */ js.UndefOr[Double], /* startAngle */ js.UndefOr[Double], /* endAngle */ js.UndefOr[Double], /* anticlockwise */ js.UndefOr[Double]) => Unit = null,
-    arcSvg: (/* r1 */ js.UndefOr[Double], /* r2 */ js.UndefOr[Double], /* rotation */ js.UndefOr[Double], /* large */ js.UndefOr[Double], /* swipe */ js.UndefOr[Double], /* x2 */ js.UndefOr[Double], /* y2 */ js.UndefOr[Double]) => Unit = null,
-    arcTo: (/* x1 */ js.UndefOr[Double], /* y1 */ js.UndefOr[Double], /* x2 */ js.UndefOr[Double], /* y2 */ js.UndefOr[Double], /* radiusX */ js.UndefOr[Double], /* radiusY */ js.UndefOr[Double], /* rotation */ js.UndefOr[Double]) => Unit = null,
-    beginPath: () => Unit = null,
-    bezierCurveTo: (/* x1 */ js.UndefOr[Double], /* y1 */ js.UndefOr[Double], /* x2 */ js.UndefOr[Double], /* y2 */ js.UndefOr[Double], /* x3 */ js.UndefOr[Double], /* y3 */ js.UndefOr[Double]) => Unit = null,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    clear: () => Unit = null,
-    closePath: () => Unit = null,
-    config: js.Any = null,
-    createLinearGradient: (/* x0 */ js.UndefOr[Double], /* y0 */ js.UndefOr[Double], /* x1 */ js.UndefOr[Double], /* y1 */ js.UndefOr[Double]) => IGradient = null,
-    createRadialGradient: (/* x0 */ js.UndefOr[Double], /* y0 */ js.UndefOr[Double], /* r0 */ js.UndefOr[Double], /* x1 */ js.UndefOr[Double], /* y1 */ js.UndefOr[Double], /* r1 */ js.UndefOr[Double]) => IGradient = null,
-    destroy: () => Unit = null,
-    drawImage: (/* image */ js.UndefOr[HTMLElement], /* sx */ js.UndefOr[Double], /* sy */ js.UndefOr[Double], /* sw */ js.UndefOr[Double], /* sh */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double], /* dw */ js.UndefOr[Double], /* dh */ js.UndefOr[Double]) => Unit = null,
-    ellipse: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* radiusX */ js.UndefOr[Double], /* radiusY */ js.UndefOr[Double], /* rotation */ js.UndefOr[Double], /* startAngle */ js.UndefOr[Double], /* endAngle */ js.UndefOr[Double], /* anticlockwise */ js.UndefOr[Double]) => Unit = null,
-    extend: String = null,
-    fill: () => Unit = null,
-    fillRect: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* width */ js.UndefOr[Double], /* height */ js.UndefOr[Double]) => Unit = null,
-    fillStroke: (/* attr */ js.UndefOr[js.Any], /* transformFillStroke */ js.UndefOr[Boolean]) => Unit = null,
-    fillText: (/* text */ js.UndefOr[String], /* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Unit = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    inheritableStatics: js.Any = null,
-    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
-    lineTo: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Unit = null,
-    mixins: js.Any = null,
-    moveTo: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Unit = null,
-    platformConfig: js.Any = null,
-    rect: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* width */ js.UndefOr[Double], /* height */ js.UndefOr[Double]) => Unit = null,
-    restore: () => Unit = null,
-    save: () => Unit = null,
-    self: IClass = null,
-    setTransform: (/* xx */ js.UndefOr[Double], /* yx */ js.UndefOr[Double], /* xy */ js.UndefOr[Double], /* yy */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double]) => Unit = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    statics: js.Any = null,
-    stroke: () => Unit = null,
-    strokeRect: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* width */ js.UndefOr[Double], /* height */ js.UndefOr[Double]) => Unit = null,
-    strokeText: (/* text */ js.UndefOr[String], /* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Unit = null,
-    transform: (/* xx */ js.UndefOr[Double], /* yx */ js.UndefOr[Double], /* xy */ js.UndefOr[Double], /* yy */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double]) => Unit = null,
-    uses: Array = null
-  ): ISvgContext = {
+  def apply(): ISvgContext = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (arc != null) __obj.updateDynamic("arc")(js.Any.fromFunction6(arc))
-    if (arcSvg != null) __obj.updateDynamic("arcSvg")(js.Any.fromFunction7(arcSvg))
-    if (arcTo != null) __obj.updateDynamic("arcTo")(js.Any.fromFunction7(arcTo))
-    if (beginPath != null) __obj.updateDynamic("beginPath")(js.Any.fromFunction0(beginPath))
-    if (bezierCurveTo != null) __obj.updateDynamic("bezierCurveTo")(js.Any.fromFunction6(bezierCurveTo))
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (clear != null) __obj.updateDynamic("clear")(js.Any.fromFunction0(clear))
-    if (closePath != null) __obj.updateDynamic("closePath")(js.Any.fromFunction0(closePath))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (createLinearGradient != null) __obj.updateDynamic("createLinearGradient")(js.Any.fromFunction4(createLinearGradient))
-    if (createRadialGradient != null) __obj.updateDynamic("createRadialGradient")(js.Any.fromFunction6(createRadialGradient))
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
-    if (drawImage != null) __obj.updateDynamic("drawImage")(js.Any.fromFunction9(drawImage))
-    if (ellipse != null) __obj.updateDynamic("ellipse")(js.Any.fromFunction8(ellipse))
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(js.Any.fromFunction0(fill))
-    if (fillRect != null) __obj.updateDynamic("fillRect")(js.Any.fromFunction4(fillRect))
-    if (fillStroke != null) __obj.updateDynamic("fillStroke")(js.Any.fromFunction2(fillStroke))
-    if (fillText != null) __obj.updateDynamic("fillText")(js.Any.fromFunction3(fillText))
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (lineTo != null) __obj.updateDynamic("lineTo")(js.Any.fromFunction2(lineTo))
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (moveTo != null) __obj.updateDynamic("moveTo")(js.Any.fromFunction2(moveTo))
-    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
-    if (rect != null) __obj.updateDynamic("rect")(js.Any.fromFunction4(rect))
-    if (restore != null) __obj.updateDynamic("restore")(js.Any.fromFunction0(restore))
-    if (save != null) __obj.updateDynamic("save")(js.Any.fromFunction0(save))
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (setTransform != null) __obj.updateDynamic("setTransform")(js.Any.fromFunction6(setTransform))
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(js.Any.fromFunction0(stroke))
-    if (strokeRect != null) __obj.updateDynamic("strokeRect")(js.Any.fromFunction4(strokeRect))
-    if (strokeText != null) __obj.updateDynamic("strokeText")(js.Any.fromFunction3(strokeText))
-    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction6(transform))
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISvgContext]
   }
+  @scala.inline
+  implicit class ISvgContextOps[Self <: ISvgContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArc(
+      value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* radius */ js.UndefOr[Double], /* startAngle */ js.UndefOr[Double], /* endAngle */ js.UndefOr[Double], /* anticlockwise */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arc")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withoutArc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArcSvg(
+      value: (/* r1 */ js.UndefOr[Double], /* r2 */ js.UndefOr[Double], /* rotation */ js.UndefOr[Double], /* large */ js.UndefOr[Double], /* swipe */ js.UndefOr[Double], /* x2 */ js.UndefOr[Double], /* y2 */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcSvg")(js.Any.fromFunction7(value))
+        ret
+    }
+    @scala.inline
+    def withoutArcSvg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcSvg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArcTo(
+      value: (/* x1 */ js.UndefOr[Double], /* y1 */ js.UndefOr[Double], /* x2 */ js.UndefOr[Double], /* y2 */ js.UndefOr[Double], /* radiusX */ js.UndefOr[Double], /* radiusY */ js.UndefOr[Double], /* rotation */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcTo")(js.Any.fromFunction7(value))
+        ret
+    }
+    @scala.inline
+    def withoutArcTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeginPath(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginPath")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeginPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBezierCurveTo(
+      value: (/* x1 */ js.UndefOr[Double], /* y1 */ js.UndefOr[Double], /* x2 */ js.UndefOr[Double], /* y2 */ js.UndefOr[Double], /* x3 */ js.UndefOr[Double], /* y3 */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bezierCurveTo")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withoutBezierCurveTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bezierCurveTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutClear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClosePath(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closePath")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutClosePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateLinearGradient(
+      value: (/* x0 */ js.UndefOr[Double], /* y0 */ js.UndefOr[Double], /* x1 */ js.UndefOr[Double], /* y1 */ js.UndefOr[Double]) => IGradient
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLinearGradient")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreateLinearGradient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLinearGradient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateRadialGradient(
+      value: (/* x0 */ js.UndefOr[Double], /* y0 */ js.UndefOr[Double], /* r0 */ js.UndefOr[Double], /* x1 */ js.UndefOr[Double], /* y1 */ js.UndefOr[Double], /* r1 */ js.UndefOr[Double]) => IGradient
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRadialGradient")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreateRadialGradient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRadialGradient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawImage(
+      value: (/* image */ js.UndefOr[HTMLElement], /* sx */ js.UndefOr[Double], /* sy */ js.UndefOr[Double], /* sw */ js.UndefOr[Double], /* sh */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double], /* dw */ js.UndefOr[Double], /* dh */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImage")(js.Any.fromFunction9(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrawImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEllipse(
+      value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* radiusX */ js.UndefOr[Double], /* radiusY */ js.UndefOr[Double], /* rotation */ js.UndefOr[Double], /* startAngle */ js.UndefOr[Double], /* endAngle */ js.UndefOr[Double], /* anticlockwise */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipse")(js.Any.fromFunction8(value))
+        ret
+    }
+    @scala.inline
+    def withoutEllipse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillRect(
+      value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* width */ js.UndefOr[Double], /* height */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillRect")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutFillRect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillRect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillStroke(value: (/* attr */ js.UndefOr[js.Any], /* transformFillStroke */ js.UndefOr[Boolean]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillStroke")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFillStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillStroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillText(
+      value: (/* text */ js.UndefOr[String], /* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillText")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutFillText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineTo(value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineTo")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutLineTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveTo(value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveTo")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutMoveTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRect(
+      value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* width */ js.UndefOr[Double], /* height */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutRect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestore(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutRestore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSave(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetTransform(
+      value: (/* xx */ js.UndefOr[Double], /* yx */ js.UndefOr[Double], /* xy */ js.UndefOr[Double], /* yy */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTransform")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTransform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeRect(
+      value: (/* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], /* width */ js.UndefOr[Double], /* height */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeRect")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutStrokeRect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeRect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeText(
+      value: (/* text */ js.UndefOr[String], /* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeText")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutStrokeText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransform(
+      value: (/* xx */ js.UndefOr[Double], /* yx */ js.UndefOr[Double], /* xy */ js.UndefOr[Double], /* yy */ js.UndefOr[Double], /* dx */ js.UndefOr[Double], /* dy */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withoutTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

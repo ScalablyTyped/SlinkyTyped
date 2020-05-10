@@ -22,14 +22,41 @@ trait DeleteApplicationVersionMessage extends js.Object {
 
 object DeleteApplicationVersionMessage {
   @scala.inline
-  def apply(
-    ApplicationName: ApplicationName,
-    VersionLabel: VersionLabel,
-    DeleteSourceBundle: js.UndefOr[Boolean] = js.undefined
-  ): DeleteApplicationVersionMessage = {
+  def apply(ApplicationName: ApplicationName, VersionLabel: VersionLabel): DeleteApplicationVersionMessage = {
     val __obj = js.Dynamic.literal(ApplicationName = ApplicationName.asInstanceOf[js.Any], VersionLabel = VersionLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(DeleteSourceBundle)) __obj.updateDynamic("DeleteSourceBundle")(DeleteSourceBundle.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteApplicationVersionMessage]
   }
+  @scala.inline
+  implicit class DeleteApplicationVersionMessageOps[Self <: DeleteApplicationVersionMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationName(value: ApplicationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersionLabel(value: VersionLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteSourceBundle(value: DeleteSourceBundle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteSourceBundle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteSourceBundle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteSourceBundle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

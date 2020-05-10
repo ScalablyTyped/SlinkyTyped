@@ -28,14 +28,14 @@ trait ReadableStream[R] extends js.Object {
 @JSGlobal("ReadableStream")
 @js.native
 object ReadableStream
-  extends Instantiable0[ReadableStream[js.Object]]
+  extends Instantiable0[org.scalajs.dom.experimental.ReadableStream[js.Object]]
      with Instantiable1[
       (/* underlyingSource */ UnderlyingByteSource) | (/* underlyingSource */ UnderlyingSource[js.Object]), 
-      ReadableStream[js.Object | Uint8Array]
+      org.scalajs.dom.experimental.ReadableStream[js.Object | js.typedarray.Uint8Array]
     ]
      with Instantiable2[
       (/* underlyingSource */ UnderlyingByteSource) | (/* underlyingSource */ UnderlyingSource[js.Object]), 
       (/* strategy */ AnonSize) | (/* strategy */ QueuingStrategy[js.Object]), 
-      ReadableStream[js.Object | Uint8Array]
+      org.scalajs.dom.experimental.ReadableStream[js.Object | js.typedarray.Uint8Array]
     ]
 

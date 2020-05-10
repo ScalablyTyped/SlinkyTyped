@@ -18,11 +18,41 @@ trait FaceDetection extends js.Object {
 
 object FaceDetection {
   @scala.inline
-  def apply(Face: FaceDetail = null, Timestamp: Int | Double = null): FaceDetection = {
+  def apply(): FaceDetection = {
     val __obj = js.Dynamic.literal()
-    if (Face != null) __obj.updateDynamic("Face")(Face.asInstanceOf[js.Any])
-    if (Timestamp != null) __obj.updateDynamic("Timestamp")(Timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaceDetection]
   }
+  @scala.inline
+  implicit class FaceDetectionOps[Self <: FaceDetection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFace(value: FaceDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Face")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Face")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

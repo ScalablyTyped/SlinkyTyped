@@ -24,11 +24,41 @@ trait SchemaDerivedSource extends js.Object {
 
 object SchemaDerivedSource {
   @scala.inline
-  def apply(derivationMode: String = null, source: SchemaSource = null): SchemaDerivedSource = {
+  def apply(): SchemaDerivedSource = {
     val __obj = js.Dynamic.literal()
-    if (derivationMode != null) __obj.updateDynamic("derivationMode")(derivationMode.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDerivedSource]
   }
+  @scala.inline
+  implicit class SchemaDerivedSourceOps[Self <: SchemaDerivedSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDerivationMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("derivationMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDerivationMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("derivationMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: SchemaSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

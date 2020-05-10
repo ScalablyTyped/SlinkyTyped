@@ -52,3 +52,63 @@ trait ILocalStorageServiceProvider extends IServiceProvider {
   def setStorageType(storageType: String): ILocalStorageServiceProvider = js.native
 }
 
+object ILocalStorageServiceProvider {
+  @scala.inline
+  def apply(
+    $get: js.Any,
+    setDefaultToCookie: Boolean => ILocalStorageServiceProvider,
+    setNotify: (Boolean, Boolean) => ILocalStorageServiceProvider,
+    setPrefix: String => ILocalStorageServiceProvider,
+    setStorageCookie: (Double, String, Boolean) => ILocalStorageServiceProvider,
+    setStorageCookieDomain: String => ILocalStorageServiceProvider,
+    setStorageType: String => ILocalStorageServiceProvider
+  ): ILocalStorageServiceProvider = {
+    val __obj = js.Dynamic.literal($get = $get.asInstanceOf[js.Any], setDefaultToCookie = js.Any.fromFunction1(setDefaultToCookie), setNotify = js.Any.fromFunction2(setNotify), setPrefix = js.Any.fromFunction1(setPrefix), setStorageCookie = js.Any.fromFunction3(setStorageCookie), setStorageCookieDomain = js.Any.fromFunction1(setStorageCookieDomain), setStorageType = js.Any.fromFunction1(setStorageType))
+    __obj.asInstanceOf[ILocalStorageServiceProvider]
+  }
+  @scala.inline
+  implicit class ILocalStorageServiceProviderOps[Self <: ILocalStorageServiceProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetDefaultToCookie(value: Boolean => ILocalStorageServiceProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaultToCookie")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetNotify(value: (Boolean, Boolean) => ILocalStorageServiceProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setNotify")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetPrefix(value: String => ILocalStorageServiceProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrefix")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStorageCookie(value: (Double, String, Boolean) => ILocalStorageServiceProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStorageCookie")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetStorageCookieDomain(value: String => ILocalStorageServiceProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStorageCookieDomain")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStorageType(value: String => ILocalStorageServiceProvider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStorageType")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

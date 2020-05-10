@@ -5,22 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgetNetworkType extends BaseParams {
   @JSName("success")
-  def success_MIgetNetworkType(res: AnonNetworkType): Unit
+  def success_MIgetNetworkType(res: AnonNetworkType): Unit = js.native
 }
 
 object IgetNetworkType {
   @scala.inline
-  def apply(
-    success: AnonNetworkType => Unit,
-    complete: /* repeated */ js.Any => Unit = null,
-    fail: /* repeated */ js.Any => Unit = null
-  ): IgetNetworkType = {
+  def apply(success: AnonNetworkType => Unit): IgetNetworkType = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
     __obj.asInstanceOf[IgetNetworkType]
   }
+  @scala.inline
+  implicit class IgetNetworkTypeOps[Self <: IgetNetworkType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSuccess(value: AnonNetworkType => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

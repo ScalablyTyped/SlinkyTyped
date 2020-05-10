@@ -1,36 +1,41 @@
 package typingsSlinky.scrollIntoViewIfNeeded.mod
 
-import typingsSlinky.scrollIntoViewIfNeeded.typesMod.CustomScrollBoundary
 import typingsSlinky.scrollIntoViewIfNeeded.typesMod.ScrollBehavior
-import typingsSlinky.scrollIntoViewIfNeeded.typesMod.ScrollLogicalPosition
-import typingsSlinky.scrollIntoViewIfNeeded.typesMod.ScrollMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StandardBehaviorOptions
   extends typingsSlinky.scrollIntoViewIfNeeded.typesMod.Options {
-  var behavior: js.UndefOr[ScrollBehavior] = js.undefined
+  var behavior: js.UndefOr[ScrollBehavior] = js.native
 }
 
 object StandardBehaviorOptions {
   @scala.inline
-  def apply(
-    behavior: ScrollBehavior = null,
-    block: ScrollLogicalPosition = null,
-    boundary: CustomScrollBoundary = null,
-    `inline`: ScrollLogicalPosition = null,
-    scrollMode: ScrollMode = null,
-    skipOverflowHiddenElements: js.UndefOr[Boolean] = js.undefined
-  ): StandardBehaviorOptions = {
+  def apply(): StandardBehaviorOptions = {
     val __obj = js.Dynamic.literal()
-    if (behavior != null) __obj.updateDynamic("behavior")(behavior.asInstanceOf[js.Any])
-    if (block != null) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])
-    if (boundary != null) __obj.updateDynamic("boundary")(boundary.asInstanceOf[js.Any])
-    if (`inline` != null) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (scrollMode != null) __obj.updateDynamic("scrollMode")(scrollMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipOverflowHiddenElements)) __obj.updateDynamic("skipOverflowHiddenElements")(skipOverflowHiddenElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[StandardBehaviorOptions]
   }
+  @scala.inline
+  implicit class StandardBehaviorOptionsOps[Self <: StandardBehaviorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBehavior(value: ScrollBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

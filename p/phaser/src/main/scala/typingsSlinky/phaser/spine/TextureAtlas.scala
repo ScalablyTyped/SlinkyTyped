@@ -11,8 +11,6 @@ class TextureAtlas protected () extends Disposable {
   var load: js.Any = js.native
   var pages: js.Array[TextureAtlasPage] = js.native
   var regions: js.Array[TextureAtlasRegion] = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def findRegion(name: String): TextureAtlasRegion = js.native
 }
 

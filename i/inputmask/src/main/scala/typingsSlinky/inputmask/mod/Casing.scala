@@ -13,12 +13,10 @@ trait Casing extends js.Object
 
 object Casing {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def lower: typingsSlinky.inputmask.inputmaskStrings.lower = "lower".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.lower]
   @scala.inline
-  def lower: typingsSlinky.inputmask.inputmaskStrings.lower = this.cast("lower")
+  def title: typingsSlinky.inputmask.inputmaskStrings.title = "title".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.title]
   @scala.inline
-  def title: typingsSlinky.inputmask.inputmaskStrings.title = this.cast("title")
-  @scala.inline
-  def upper: typingsSlinky.inputmask.inputmaskStrings.upper = this.cast("upper")
+  def upper: typingsSlinky.inputmask.inputmaskStrings.upper = "upper".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.upper]
 }
 

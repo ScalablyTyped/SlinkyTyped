@@ -9,3 +9,25 @@ trait ResourceAssignmentExpression extends BaseElement {
   var expression: Expression = js.native
 }
 
+object ResourceAssignmentExpression {
+  @scala.inline
+  def apply($parent: TypeDerived, $type: ElementType, expression: Expression, id: String): ResourceAssignmentExpression = {
+    val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ResourceAssignmentExpression]
+  }
+  @scala.inline
+  implicit class ResourceAssignmentExpressionOps[Self <: ResourceAssignmentExpression] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExpression(value: Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

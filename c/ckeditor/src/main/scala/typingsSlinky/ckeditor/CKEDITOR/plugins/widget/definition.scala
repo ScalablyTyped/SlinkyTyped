@@ -11,93 +11,321 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait definition extends feature {
-  var button: js.UndefOr[String] = js.undefined
-  var data: js.UndefOr[js.Function1[/* evt */ eventInfo, Unit]] = js.undefined
-  var defaults: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var dialog: js.UndefOr[String] = js.undefined
-  var downcast: js.UndefOr[String | (js.Function1[/* element */ element, Unit])] = js.undefined
-  var downcasts: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var draggable: js.UndefOr[Boolean] = js.undefined
-  var edit: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var editables: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var getLabel: js.UndefOr[js.Function0[_]] = js.undefined
-  var init: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var `inline`: js.UndefOr[Boolean] = js.undefined
-  var insert: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var mask: js.UndefOr[Boolean] = js.undefined
-  var parts: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var pathName: js.UndefOr[String] = js.undefined
-  var styleToAllowedContentRules: js.UndefOr[js.Function1[/* style */ style, allowedContentRules]] = js.undefined
-  var styleableElements: js.UndefOr[String] = js.undefined
-  var template: js.UndefOr[String | typingsSlinky.ckeditor.CKEDITOR.template] = js.undefined
-  var upcast: js.UndefOr[String | (js.Function2[/* element */ element, /* data */ js.Any, Boolean])] = js.undefined
-  var upcastPriority: js.UndefOr[Double] = js.undefined
-  var upcasts: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var button: js.UndefOr[String] = js.native
+  var data: js.UndefOr[js.Function1[/* evt */ eventInfo, Unit]] = js.native
+  var defaults: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var dialog: js.UndefOr[String] = js.native
+  var downcast: js.UndefOr[String | (js.Function1[/* element */ element, Unit])] = js.native
+  var downcasts: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var draggable: js.UndefOr[Boolean] = js.native
+  var edit: js.UndefOr[js.Function0[Unit]] = js.native
+  var editables: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var getLabel: js.UndefOr[js.Function0[_]] = js.native
+  var init: js.UndefOr[js.Function0[Unit]] = js.native
+  var `inline`: js.UndefOr[Boolean] = js.native
+  var insert: js.UndefOr[js.Function0[Unit]] = js.native
+  var mask: js.UndefOr[Boolean] = js.native
+  var parts: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var pathName: js.UndefOr[String] = js.native
+  var styleToAllowedContentRules: js.UndefOr[js.Function1[/* style */ style, allowedContentRules]] = js.native
+  var styleableElements: js.UndefOr[String] = js.native
+  var template: js.UndefOr[String | typingsSlinky.ckeditor.CKEDITOR.template] = js.native
+  var upcast: js.UndefOr[String | (js.Function2[/* element */ element, /* data */ js.Any, Boolean])] = js.native
+  var upcastPriority: js.UndefOr[Double] = js.native
+  var upcasts: js.UndefOr[StringDictionary[js.Any]] = js.native
 }
 
 object definition {
   @scala.inline
-  def apply(
-    allowedContent: allowedContentRules = null,
-    button: String = null,
-    contentForms: js.Any = null,
-    contentTransformations: js.Any = null,
-    data: /* evt */ eventInfo => Unit = null,
-    defaults: StringDictionary[js.Any] = null,
-    dialog: String = null,
-    downcast: String | (js.Function1[/* element */ element, Unit]) = null,
-    downcasts: StringDictionary[js.Any] = null,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    edit: () => Unit = null,
-    editables: StringDictionary[js.Any] = null,
-    getLabel: () => _ = null,
-    init: () => Unit = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    insert: () => Unit = null,
-    mask: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    parts: StringDictionary[js.Any] = null,
-    pathName: String = null,
-    requiredContent: String | style = null,
-    styleToAllowedContentRules: /* style */ style => allowedContentRules = null,
-    styleableElements: String = null,
-    template: String | template = null,
-    toFeature: () => feature = null,
-    upcast: String | (js.Function2[/* element */ element, /* data */ js.Any, Boolean]) = null,
-    upcastPriority: Int | Double = null,
-    upcasts: StringDictionary[js.Any] = null
-  ): definition = {
+  def apply(): definition = {
     val __obj = js.Dynamic.literal()
-    if (allowedContent != null) __obj.updateDynamic("allowedContent")(allowedContent.asInstanceOf[js.Any])
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (contentForms != null) __obj.updateDynamic("contentForms")(contentForms.asInstanceOf[js.Any])
-    if (contentTransformations != null) __obj.updateDynamic("contentTransformations")(contentTransformations.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(js.Any.fromFunction1(data))
-    if (defaults != null) __obj.updateDynamic("defaults")(defaults.asInstanceOf[js.Any])
-    if (dialog != null) __obj.updateDynamic("dialog")(dialog.asInstanceOf[js.Any])
-    if (downcast != null) __obj.updateDynamic("downcast")(downcast.asInstanceOf[js.Any])
-    if (downcasts != null) __obj.updateDynamic("downcasts")(downcasts.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
-    if (edit != null) __obj.updateDynamic("edit")(js.Any.fromFunction0(edit))
-    if (editables != null) __obj.updateDynamic("editables")(editables.asInstanceOf[js.Any])
-    if (getLabel != null) __obj.updateDynamic("getLabel")(js.Any.fromFunction0(getLabel))
-    if (init != null) __obj.updateDynamic("init")(js.Any.fromFunction0(init))
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (insert != null) __obj.updateDynamic("insert")(js.Any.fromFunction0(insert))
-    if (!js.isUndefined(mask)) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (parts != null) __obj.updateDynamic("parts")(parts.asInstanceOf[js.Any])
-    if (pathName != null) __obj.updateDynamic("pathName")(pathName.asInstanceOf[js.Any])
-    if (requiredContent != null) __obj.updateDynamic("requiredContent")(requiredContent.asInstanceOf[js.Any])
-    if (styleToAllowedContentRules != null) __obj.updateDynamic("styleToAllowedContentRules")(js.Any.fromFunction1(styleToAllowedContentRules))
-    if (styleableElements != null) __obj.updateDynamic("styleableElements")(styleableElements.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (toFeature != null) __obj.updateDynamic("toFeature")(js.Any.fromFunction0(toFeature))
-    if (upcast != null) __obj.updateDynamic("upcast")(upcast.asInstanceOf[js.Any])
-    if (upcastPriority != null) __obj.updateDynamic("upcastPriority")(upcastPriority.asInstanceOf[js.Any])
-    if (upcasts != null) __obj.updateDynamic("upcasts")(upcasts.asInstanceOf[js.Any])
     __obj.asInstanceOf[definition]
   }
+  @scala.inline
+  implicit class definitionOps[Self <: definition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButton(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: /* evt */ eventInfo => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaults(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialog(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDowncastFunction1(value: /* element */ element => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downcast")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDowncast(value: String | (js.Function1[/* element */ element, Unit])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downcast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDowncast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downcast")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDowncasts(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downcasts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDowncasts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downcasts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDraggable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDraggable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdit(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutEdit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditables(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetLabel(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLabel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInit(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsert(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMask(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParts(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleToAllowedContentRules(value: /* style */ style => allowedContentRules): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleToAllowedContentRules")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutStyleToAllowedContentRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleToAllowedContentRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleableElements(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleableElements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleableElements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleableElements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: String | template): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpcastFunction2(value: (/* element */ element, /* data */ js.Any) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upcast")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUpcast(value: String | (js.Function2[/* element */ element, /* data */ js.Any, Boolean])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upcast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpcast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upcast")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpcastPriority(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upcastPriority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpcastPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upcastPriority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpcasts(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upcasts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpcasts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upcasts")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

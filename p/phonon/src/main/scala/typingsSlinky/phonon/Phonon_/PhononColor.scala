@@ -13,10 +13,8 @@ trait PhononColor extends js.Object
 
 object PhononColor {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def negative: typingsSlinky.phonon.phononStrings.negative = "negative".asInstanceOf[typingsSlinky.phonon.phononStrings.negative]
   @scala.inline
-  def negative: typingsSlinky.phonon.phononStrings.negative = this.cast("negative")
-  @scala.inline
-  def positive: typingsSlinky.phonon.phononStrings.positive = this.cast("positive")
+  def positive: typingsSlinky.phonon.phononStrings.positive = "positive".asInstanceOf[typingsSlinky.phonon.phononStrings.positive]
 }
 

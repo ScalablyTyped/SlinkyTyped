@@ -19,20 +19,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
+@js.native
 trait ImportDeclaration
   extends ASTNode
      with DeclarationKind
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var importKind: js.UndefOr[value | `type`] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var source: LiteralKind
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var importKind: js.UndefOr[value | `type`] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var source: LiteralKind = js.native
   var specifiers: js.UndefOr[
     js.Array[ImportSpecifierKind | ImportNamespaceSpecifierKind | ImportDefaultSpecifierKind]
-  ] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ImportDeclaration
+  ] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ImportDeclaration = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ImportDeclaration")

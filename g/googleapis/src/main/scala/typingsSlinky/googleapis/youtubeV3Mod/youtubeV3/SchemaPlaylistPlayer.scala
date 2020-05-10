@@ -14,10 +14,29 @@ trait SchemaPlaylistPlayer extends js.Object {
 
 object SchemaPlaylistPlayer {
   @scala.inline
-  def apply(embedHtml: String = null): SchemaPlaylistPlayer = {
+  def apply(): SchemaPlaylistPlayer = {
     val __obj = js.Dynamic.literal()
-    if (embedHtml != null) __obj.updateDynamic("embedHtml")(embedHtml.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPlaylistPlayer]
   }
+  @scala.inline
+  implicit class SchemaPlaylistPlayerOps[Self <: SchemaPlaylistPlayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmbedHtml(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embedHtml")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbedHtml: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embedHtml")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

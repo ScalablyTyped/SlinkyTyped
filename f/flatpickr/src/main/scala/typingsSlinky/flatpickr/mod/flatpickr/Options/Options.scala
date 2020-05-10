@@ -12,6 +12,7 @@ import typingsSlinky.flatpickr.flatpickrStrings.static
 import typingsSlinky.flatpickr.flatpickrStrings.time
 import typingsSlinky.flatpickr.globalsMod._Global_.Date
 import typingsSlinky.flatpickr.globalsMod._Global_.HTMLElement
+import typingsSlinky.flatpickr.instanceMod.Instance
 import typingsSlinky.flatpickr.localeMod.CustomLocale
 import typingsSlinky.flatpickr.localeMod.Locale
 import typingsSlinky.flatpickr.localeMod.key
@@ -20,233 +21,943 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined flatpickr.flatpickr/dist/types/options.Options */
+@js.native
 trait Options extends js.Object {
-  var allowInput: js.UndefOr[Boolean] = js.undefined
-  var altFormat: js.UndefOr[String] = js.undefined
-  var altInput: js.UndefOr[Boolean] = js.undefined
-  var altInputClass: js.UndefOr[String] = js.undefined
-  var animate: js.UndefOr[Boolean] = js.undefined
-  var appendTo: js.UndefOr[HTMLElement] = js.undefined
-  var ariaDateFormat: js.UndefOr[String] = js.undefined
-  var clickOpens: js.UndefOr[Boolean] = js.undefined
-  var closeOnSelect: js.UndefOr[Boolean] = js.undefined
-  var conjunction: js.UndefOr[String] = js.undefined
-  var dateFormat: js.UndefOr[String] = js.undefined
+  var allowInput: js.UndefOr[Boolean] = js.native
+  var altFormat: js.UndefOr[String] = js.native
+  var altInput: js.UndefOr[Boolean] = js.native
+  var altInputClass: js.UndefOr[String] = js.native
+  var animate: js.UndefOr[Boolean] = js.native
+  var appendTo: js.UndefOr[HTMLElement] = js.native
+  var ariaDateFormat: js.UndefOr[String] = js.native
+  var clickOpens: js.UndefOr[Boolean] = js.native
+  var closeOnSelect: js.UndefOr[Boolean] = js.native
+  var conjunction: js.UndefOr[String] = js.native
+  var dateFormat: js.UndefOr[String] = js.native
   var defaultDate: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.DateOption | js.Array[typingsSlinky.flatpickr.optionsMod.DateOption]
-  ] = js.undefined
-  var defaultHour: js.UndefOr[Double] = js.undefined
-  var defaultMinute: js.UndefOr[Double] = js.undefined
-  var defaultSeconds: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var defaultHour: js.UndefOr[Double] = js.native
+  var defaultMinute: js.UndefOr[Double] = js.native
+  var defaultSeconds: js.UndefOr[Double] = js.native
   var disable: js.UndefOr[
     js.Array[
       typingsSlinky.flatpickr.optionsMod.DateLimit[typingsSlinky.flatpickr.optionsMod.DateOption]
     ]
-  ] = js.undefined
-  var disableMobile: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var disableMobile: js.UndefOr[Boolean] = js.native
   var enable: js.UndefOr[
     js.Array[
       typingsSlinky.flatpickr.optionsMod.DateLimit[typingsSlinky.flatpickr.optionsMod.DateOption]
     ]
-  ] = js.undefined
-  var enableSeconds: js.UndefOr[Boolean] = js.undefined
-  var enableTime: js.UndefOr[Boolean] = js.undefined
-  var errorHandler: js.UndefOr[js.Function1[/* e */ js.Error, Unit]] = js.undefined
-  var formatDate: js.UndefOr[js.Function3[/* date */ Date, /* format */ String, /* locale */ Locale, String]] = js.undefined
-  var getWeek: js.UndefOr[js.Function1[/* date */ Date, String | Double]] = js.undefined
-  var hourIncrement: js.UndefOr[Double] = js.undefined
-  var ignoredFocusElements: js.UndefOr[js.Array[HTMLElement]] = js.undefined
-  var `inline`: js.UndefOr[Boolean] = js.undefined
-  var locale: js.UndefOr[key | CustomLocale] = js.undefined
-  var maxDate: js.UndefOr[typingsSlinky.flatpickr.optionsMod.DateOption] = js.undefined
-  var maxTime: js.UndefOr[typingsSlinky.flatpickr.optionsMod.DateOption] = js.undefined
-  var minDate: js.UndefOr[typingsSlinky.flatpickr.optionsMod.DateOption] = js.undefined
-  var minTime: js.UndefOr[typingsSlinky.flatpickr.optionsMod.DateOption] = js.undefined
-  var minuteIncrement: js.UndefOr[Double] = js.undefined
-  var mode: js.UndefOr[single | multiple | range | time] = js.undefined
-  var monthSelectorType: js.UndefOr[dropdown | static] = js.undefined
-  var nextArrow: js.UndefOr[String] = js.undefined
-  var noCalendar: js.UndefOr[Boolean] = js.undefined
-  var now: js.UndefOr[typingsSlinky.flatpickr.optionsMod.DateOption] = js.undefined
+  ] = js.native
+  var enableSeconds: js.UndefOr[Boolean] = js.native
+  var enableTime: js.UndefOr[Boolean] = js.native
+  var errorHandler: js.UndefOr[js.Function1[/* e */ js.Error, Unit]] = js.native
+  var formatDate: js.UndefOr[js.Function3[/* date */ Date, /* format */ String, /* locale */ Locale, String]] = js.native
+  var getWeek: js.UndefOr[js.Function1[/* date */ Date, String | Double]] = js.native
+  var hourIncrement: js.UndefOr[Double] = js.native
+  var ignoredFocusElements: js.UndefOr[js.Array[HTMLElement]] = js.native
+  var `inline`: js.UndefOr[Boolean] = js.native
+  var locale: js.UndefOr[key | CustomLocale] = js.native
+  var maxDate: js.UndefOr[typingsSlinky.flatpickr.optionsMod.DateOption] = js.native
+  var maxTime: js.UndefOr[typingsSlinky.flatpickr.optionsMod.DateOption] = js.native
+  var minDate: js.UndefOr[typingsSlinky.flatpickr.optionsMod.DateOption] = js.native
+  var minTime: js.UndefOr[typingsSlinky.flatpickr.optionsMod.DateOption] = js.native
+  var minuteIncrement: js.UndefOr[Double] = js.native
+  var mode: js.UndefOr[single | multiple | range | time] = js.native
+  var monthSelectorType: js.UndefOr[dropdown | static] = js.native
+  var nextArrow: js.UndefOr[String] = js.native
+  var noCalendar: js.UndefOr[Boolean] = js.native
+  var now: js.UndefOr[typingsSlinky.flatpickr.optionsMod.DateOption] = js.native
   var onChange: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onClose: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onDayCreate: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onDestroy: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onKeyDown: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onMonthChange: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onOpen: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onParseConfig: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onPreCalendarPosition: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onReady: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onValueUpdate: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
+  ] = js.native
   var onYearChange: js.UndefOr[
     typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]
-  ] = js.undefined
-  var parseDate: js.UndefOr[js.Function2[/* date */ String, /* format */ String, Date]] = js.undefined
-  var plugins: js.UndefOr[js.Array[typingsSlinky.flatpickr.optionsMod.Plugin[js.Object]]] = js.undefined
-  var position: js.UndefOr[auto | above | below] = js.undefined
-  var positionElement: js.UndefOr[Element] = js.undefined
-  var prevArrow: js.UndefOr[String] = js.undefined
-  var shorthandCurrentMonth: js.UndefOr[Boolean] = js.undefined
-  var showMonths: js.UndefOr[Double] = js.undefined
-  var static: js.UndefOr[Boolean] = js.undefined
-  var time_24hr: js.UndefOr[Boolean] = js.undefined
-  var weekNumbers: js.UndefOr[Boolean] = js.undefined
-  var wrap: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var parseDate: js.UndefOr[js.Function2[/* date */ String, /* format */ String, Date]] = js.native
+  var plugins: js.UndefOr[js.Array[typingsSlinky.flatpickr.optionsMod.Plugin[js.Object]]] = js.native
+  var position: js.UndefOr[auto | above | below] = js.native
+  var positionElement: js.UndefOr[Element] = js.native
+  var prevArrow: js.UndefOr[String] = js.native
+  var shorthandCurrentMonth: js.UndefOr[Boolean] = js.native
+  var showMonths: js.UndefOr[Double] = js.native
+  var static: js.UndefOr[Boolean] = js.native
+  var time_24hr: js.UndefOr[Boolean] = js.native
+  var weekNumbers: js.UndefOr[Boolean] = js.native
+  var wrap: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    allowInput: js.UndefOr[Boolean] = js.undefined,
-    altFormat: String = null,
-    altInput: js.UndefOr[Boolean] = js.undefined,
-    altInputClass: String = null,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    appendTo: HTMLElement = null,
-    ariaDateFormat: String = null,
-    clickOpens: js.UndefOr[Boolean] = js.undefined,
-    closeOnSelect: js.UndefOr[Boolean] = js.undefined,
-    conjunction: String = null,
-    dateFormat: String = null,
-    defaultDate: typingsSlinky.flatpickr.optionsMod.DateOption | js.Array[typingsSlinky.flatpickr.optionsMod.DateOption] = null,
-    defaultHour: Int | Double = null,
-    defaultMinute: Int | Double = null,
-    defaultSeconds: Int | Double = null,
-    disable: js.Array[
-      typingsSlinky.flatpickr.optionsMod.DateLimit[typingsSlinky.flatpickr.optionsMod.DateOption]
-    ] = null,
-    disableMobile: js.UndefOr[Boolean] = js.undefined,
-    enable: js.Array[
-      typingsSlinky.flatpickr.optionsMod.DateLimit[typingsSlinky.flatpickr.optionsMod.DateOption]
-    ] = null,
-    enableSeconds: js.UndefOr[Boolean] = js.undefined,
-    enableTime: js.UndefOr[Boolean] = js.undefined,
-    errorHandler: /* e */ js.Error => Unit = null,
-    formatDate: (/* date */ Date, /* format */ String, /* locale */ Locale) => String = null,
-    getWeek: /* date */ Date => String | Double = null,
-    hourIncrement: Int | Double = null,
-    ignoredFocusElements: js.Array[HTMLElement] = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    locale: key | CustomLocale = null,
-    maxDate: typingsSlinky.flatpickr.optionsMod.DateOption = null,
-    maxTime: typingsSlinky.flatpickr.optionsMod.DateOption = null,
-    minDate: typingsSlinky.flatpickr.optionsMod.DateOption = null,
-    minTime: typingsSlinky.flatpickr.optionsMod.DateOption = null,
-    minuteIncrement: Int | Double = null,
-    mode: single | multiple | range | time = null,
-    monthSelectorType: dropdown | static = null,
-    nextArrow: String = null,
-    noCalendar: js.UndefOr[Boolean] = js.undefined,
-    now: typingsSlinky.flatpickr.optionsMod.DateOption = null,
-    onChange: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onClose: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onDayCreate: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onDestroy: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onKeyDown: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onMonthChange: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onOpen: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onParseConfig: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onPreCalendarPosition: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onReady: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onValueUpdate: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    onYearChange: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook] = null,
-    parseDate: (/* date */ String, /* format */ String) => Date = null,
-    plugins: js.Array[typingsSlinky.flatpickr.optionsMod.Plugin[js.Object]] = null,
-    position: auto | above | below = null,
-    positionElement: Element = null,
-    prevArrow: String = null,
-    shorthandCurrentMonth: js.UndefOr[Boolean] = js.undefined,
-    showMonths: Int | Double = null,
-    static: js.UndefOr[Boolean] = js.undefined,
-    time_24hr: js.UndefOr[Boolean] = js.undefined,
-    weekNumbers: js.UndefOr[Boolean] = js.undefined,
-    wrap: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowInput)) __obj.updateDynamic("allowInput")(allowInput.asInstanceOf[js.Any])
-    if (altFormat != null) __obj.updateDynamic("altFormat")(altFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(altInput)) __obj.updateDynamic("altInput")(altInput.asInstanceOf[js.Any])
-    if (altInputClass != null) __obj.updateDynamic("altInputClass")(altInputClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
-    if (ariaDateFormat != null) __obj.updateDynamic("ariaDateFormat")(ariaDateFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickOpens)) __obj.updateDynamic("clickOpens")(clickOpens.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnSelect)) __obj.updateDynamic("closeOnSelect")(closeOnSelect.asInstanceOf[js.Any])
-    if (conjunction != null) __obj.updateDynamic("conjunction")(conjunction.asInstanceOf[js.Any])
-    if (dateFormat != null) __obj.updateDynamic("dateFormat")(dateFormat.asInstanceOf[js.Any])
-    if (defaultDate != null) __obj.updateDynamic("defaultDate")(defaultDate.asInstanceOf[js.Any])
-    if (defaultHour != null) __obj.updateDynamic("defaultHour")(defaultHour.asInstanceOf[js.Any])
-    if (defaultMinute != null) __obj.updateDynamic("defaultMinute")(defaultMinute.asInstanceOf[js.Any])
-    if (defaultSeconds != null) __obj.updateDynamic("defaultSeconds")(defaultSeconds.asInstanceOf[js.Any])
-    if (disable != null) __obj.updateDynamic("disable")(disable.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableMobile)) __obj.updateDynamic("disableMobile")(disableMobile.asInstanceOf[js.Any])
-    if (enable != null) __obj.updateDynamic("enable")(enable.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableSeconds)) __obj.updateDynamic("enableSeconds")(enableSeconds.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableTime)) __obj.updateDynamic("enableTime")(enableTime.asInstanceOf[js.Any])
-    if (errorHandler != null) __obj.updateDynamic("errorHandler")(js.Any.fromFunction1(errorHandler))
-    if (formatDate != null) __obj.updateDynamic("formatDate")(js.Any.fromFunction3(formatDate))
-    if (getWeek != null) __obj.updateDynamic("getWeek")(js.Any.fromFunction1(getWeek))
-    if (hourIncrement != null) __obj.updateDynamic("hourIncrement")(hourIncrement.asInstanceOf[js.Any])
-    if (ignoredFocusElements != null) __obj.updateDynamic("ignoredFocusElements")(ignoredFocusElements.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (maxTime != null) __obj.updateDynamic("maxTime")(maxTime.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (minTime != null) __obj.updateDynamic("minTime")(minTime.asInstanceOf[js.Any])
-    if (minuteIncrement != null) __obj.updateDynamic("minuteIncrement")(minuteIncrement.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (monthSelectorType != null) __obj.updateDynamic("monthSelectorType")(monthSelectorType.asInstanceOf[js.Any])
-    if (nextArrow != null) __obj.updateDynamic("nextArrow")(nextArrow.asInstanceOf[js.Any])
-    if (!js.isUndefined(noCalendar)) __obj.updateDynamic("noCalendar")(noCalendar.asInstanceOf[js.Any])
-    if (now != null) __obj.updateDynamic("now")(now.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(onChange.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(onClose.asInstanceOf[js.Any])
-    if (onDayCreate != null) __obj.updateDynamic("onDayCreate")(onDayCreate.asInstanceOf[js.Any])
-    if (onDestroy != null) __obj.updateDynamic("onDestroy")(onDestroy.asInstanceOf[js.Any])
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(onKeyDown.asInstanceOf[js.Any])
-    if (onMonthChange != null) __obj.updateDynamic("onMonthChange")(onMonthChange.asInstanceOf[js.Any])
-    if (onOpen != null) __obj.updateDynamic("onOpen")(onOpen.asInstanceOf[js.Any])
-    if (onParseConfig != null) __obj.updateDynamic("onParseConfig")(onParseConfig.asInstanceOf[js.Any])
-    if (onPreCalendarPosition != null) __obj.updateDynamic("onPreCalendarPosition")(onPreCalendarPosition.asInstanceOf[js.Any])
-    if (onReady != null) __obj.updateDynamic("onReady")(onReady.asInstanceOf[js.Any])
-    if (onValueUpdate != null) __obj.updateDynamic("onValueUpdate")(onValueUpdate.asInstanceOf[js.Any])
-    if (onYearChange != null) __obj.updateDynamic("onYearChange")(onYearChange.asInstanceOf[js.Any])
-    if (parseDate != null) __obj.updateDynamic("parseDate")(js.Any.fromFunction2(parseDate))
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (positionElement != null) __obj.updateDynamic("positionElement")(positionElement.asInstanceOf[js.Any])
-    if (prevArrow != null) __obj.updateDynamic("prevArrow")(prevArrow.asInstanceOf[js.Any])
-    if (!js.isUndefined(shorthandCurrentMonth)) __obj.updateDynamic("shorthandCurrentMonth")(shorthandCurrentMonth.asInstanceOf[js.Any])
-    if (showMonths != null) __obj.updateDynamic("showMonths")(showMonths.asInstanceOf[js.Any])
-    if (!js.isUndefined(static)) __obj.updateDynamic("static")(static.asInstanceOf[js.Any])
-    if (!js.isUndefined(time_24hr)) __obj.updateDynamic("time_24hr")(time_24hr.asInstanceOf[js.Any])
-    if (!js.isUndefined(weekNumbers)) __obj.updateDynamic("weekNumbers")(weekNumbers.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: typingsSlinky.flatpickr.mod.flatpickr.Options.Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowInput(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAltFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAltFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAltInput(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAltInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAltInputClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altInputClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAltInputClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altInputClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppendTo(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppendTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAriaDateFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaDateFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAriaDateFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaDateFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClickOpens(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickOpens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickOpens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickOpens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseOnSelect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseOnSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConjunction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conjunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConjunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conjunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultDate(
+      value: typingsSlinky.flatpickr.optionsMod.DateOption | js.Array[typingsSlinky.flatpickr.optionsMod.DateOption]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultHour(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultMinute(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMinute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultMinute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMinute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisable(
+      value: js.Array[
+          typingsSlinky.flatpickr.optionsMod.DateLimit[typingsSlinky.flatpickr.optionsMod.DateOption]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableMobile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableMobile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableMobile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableMobile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnable(
+      value: js.Array[
+          typingsSlinky.flatpickr.optionsMod.DateLimit[typingsSlinky.flatpickr.optionsMod.DateOption]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableSeconds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableTime(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorHandler(value: /* e */ js.Error => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandler")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutErrorHandler: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandler")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatDate(value: (/* date */ Date, /* format */ String, /* locale */ Locale) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatDate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutFormatDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetWeek(value: /* date */ Date => String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getWeek")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHourIncrement(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hourIncrement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHourIncrement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hourIncrement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoredFocusElements(value: js.Array[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoredFocusElements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoredFocusElements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoredFocusElements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: key | CustomLocale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDate(value: typingsSlinky.flatpickr.optionsMod.DateOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTime(value: typingsSlinky.flatpickr.optionsMod.DateOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDate(value: typingsSlinky.flatpickr.optionsMod.DateOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinTime(value: typingsSlinky.flatpickr.optionsMod.DateOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinuteIncrement(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteIncrement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinuteIncrement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteIncrement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: single | multiple | range | time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonthSelectorType(value: dropdown | static): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthSelectorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonthSelectorType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthSelectorType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextArrow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextArrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextArrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextArrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoCalendar(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noCalendar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoCalendar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noCalendar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNow(value: typingsSlinky.flatpickr.optionsMod.DateOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("now")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("now")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChangeFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCloseFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnClose(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDayCreateFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDayCreate")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnDayCreate(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDayCreate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDayCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDayCreate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDestroyFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDestroy")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnDestroy(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDestroy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDestroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyDownFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnKeyDown(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMonthChangeFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMonthChange")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnMonthChange(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMonthChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnMonthChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMonthChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpenFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnOpen(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnParseConfigFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onParseConfig")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnParseConfig(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onParseConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnParseConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onParseConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPreCalendarPositionFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreCalendarPosition")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnPreCalendarPosition(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreCalendarPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnPreCalendarPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreCalendarPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnReadyFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnReady(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnReady: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnValueUpdateFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onValueUpdate")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnValueUpdate(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onValueUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnValueUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onValueUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnYearChangeFunction4(
+      value: (/* dates */ js.Array[Date], /* currentDateString */ String, /* self */ Instance, /* data */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onYearChange")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnYearChange(value: typingsSlinky.flatpickr.optionsMod.Hook | js.Array[typingsSlinky.flatpickr.optionsMod.Hook]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onYearChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnYearChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onYearChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParseDate(value: (/* date */ String, /* format */ String) => Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseDate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutParseDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Array[typingsSlinky.flatpickr.optionsMod.Plugin[js.Object]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: auto | above | below): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositionElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevArrow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevArrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevArrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevArrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShorthandCurrentMonth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shorthandCurrentMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShorthandCurrentMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shorthandCurrentMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowMonths(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMonths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowMonths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMonths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTime_24hr(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time_24hr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTime_24hr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time_24hr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeekNumbers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekNumbers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeekNumbers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekNumbers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

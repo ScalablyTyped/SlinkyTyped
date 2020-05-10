@@ -23,7 +23,7 @@ object pointEventHandlerMod extends js.Object {
         Unit
       ] = js.native
     def on(
-      dom: typingsSlinky.std.HTMLElement,
+      dom: HTMLElement,
       eventName: EEventName,
       handler: js.Function1[/* event */ DomEvent, Unit],
       priority: Double

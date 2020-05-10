@@ -19,24 +19,22 @@ trait Anchor extends js.Object
 
 object Anchor {
   @scala.inline
-  def bottom: typingsSlinky.mapboxGl.mapboxGlStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.mapboxGl.mapboxGlStrings.bottom = "bottom".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.bottom]
   @scala.inline
-  def `bottom-left`: typingsSlinky.mapboxGl.mapboxGlStrings.`bottom-left` = this.cast("bottom-left")
+  def `bottom-left`: typingsSlinky.mapboxGl.mapboxGlStrings.`bottom-left` = "bottom-left".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.`bottom-left`]
   @scala.inline
-  def `bottom-right`: typingsSlinky.mapboxGl.mapboxGlStrings.`bottom-right` = this.cast("bottom-right")
+  def `bottom-right`: typingsSlinky.mapboxGl.mapboxGlStrings.`bottom-right` = "bottom-right".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.`bottom-right`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.mapboxGl.mapboxGlStrings.center = "center".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.center]
   @scala.inline
-  def center: typingsSlinky.mapboxGl.mapboxGlStrings.center = this.cast("center")
+  def left: typingsSlinky.mapboxGl.mapboxGlStrings.left = "left".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.left]
   @scala.inline
-  def left: typingsSlinky.mapboxGl.mapboxGlStrings.left = this.cast("left")
+  def right: typingsSlinky.mapboxGl.mapboxGlStrings.right = "right".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.right]
   @scala.inline
-  def right: typingsSlinky.mapboxGl.mapboxGlStrings.right = this.cast("right")
+  def top: typingsSlinky.mapboxGl.mapboxGlStrings.top = "top".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.top]
   @scala.inline
-  def top: typingsSlinky.mapboxGl.mapboxGlStrings.top = this.cast("top")
+  def `top-left`: typingsSlinky.mapboxGl.mapboxGlStrings.`top-left` = "top-left".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.`top-left`]
   @scala.inline
-  def `top-left`: typingsSlinky.mapboxGl.mapboxGlStrings.`top-left` = this.cast("top-left")
-  @scala.inline
-  def `top-right`: typingsSlinky.mapboxGl.mapboxGlStrings.`top-right` = this.cast("top-right")
+  def `top-right`: typingsSlinky.mapboxGl.mapboxGlStrings.`top-right` = "top-right".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.`top-right`]
 }
 

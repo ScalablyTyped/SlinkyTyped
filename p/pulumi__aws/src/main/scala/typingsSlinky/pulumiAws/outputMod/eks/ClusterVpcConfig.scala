@@ -18,9 +18,6 @@ trait ClusterVpcConfig extends js.Object {
     * Indicates whether or not the Amazon EKS public API server endpoint is enabled. Default is `true`.
     */
   var endpointPublicAccess: js.UndefOr[Boolean] = js.native
-  /**
-    * <elided>
-    */
   var publicAccessCidrs: js.Array[String] = js.native
   /**
     * List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.
@@ -42,16 +39,78 @@ object ClusterVpcConfig {
     clusterSecurityGroupId: String,
     publicAccessCidrs: js.Array[String],
     subnetIds: js.Array[String],
-    vpcId: String,
-    endpointPrivateAccess: js.UndefOr[Boolean] = js.undefined,
-    endpointPublicAccess: js.UndefOr[Boolean] = js.undefined,
-    securityGroupIds: js.Array[String] = null
+    vpcId: String
   ): ClusterVpcConfig = {
     val __obj = js.Dynamic.literal(clusterSecurityGroupId = clusterSecurityGroupId.asInstanceOf[js.Any], publicAccessCidrs = publicAccessCidrs.asInstanceOf[js.Any], subnetIds = subnetIds.asInstanceOf[js.Any], vpcId = vpcId.asInstanceOf[js.Any])
-    if (!js.isUndefined(endpointPrivateAccess)) __obj.updateDynamic("endpointPrivateAccess")(endpointPrivateAccess.asInstanceOf[js.Any])
-    if (!js.isUndefined(endpointPublicAccess)) __obj.updateDynamic("endpointPublicAccess")(endpointPublicAccess.asInstanceOf[js.Any])
-    if (securityGroupIds != null) __obj.updateDynamic("securityGroupIds")(securityGroupIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterVpcConfig]
   }
+  @scala.inline
+  implicit class ClusterVpcConfigOps[Self <: ClusterVpcConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterSecurityGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterSecurityGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublicAccessCidrs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicAccessCidrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubnetIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointPrivateAccess(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointPrivateAccess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointPrivateAccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointPrivateAccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpointPublicAccess(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointPublicAccess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointPublicAccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointPublicAccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroupIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroupIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroupIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

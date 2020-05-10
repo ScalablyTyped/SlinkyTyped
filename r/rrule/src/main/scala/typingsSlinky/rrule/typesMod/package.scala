@@ -12,5 +12,4 @@ package object typesMod {
   */
   type ByWeekday = typingsSlinky.rrule.typesMod._ByWeekday | scala.Double
   type IterResultType[M /* <: typingsSlinky.rrule.typesMod.QueryMethodTypes */] = js.Date | scala.Null | js.Array[js.Date]
-  type QueryMethodTypes = java.lang.String
 }

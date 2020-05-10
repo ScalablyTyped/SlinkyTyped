@@ -5,18 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCutOffNumber extends js.Object {
-  var cutOffNumber: js.UndefOr[Double] = js.undefined
-  var exclude: js.UndefOr[js.Array[unit]] = js.undefined
+  var cutOffNumber: js.UndefOr[Double] = js.native
+  var exclude: js.UndefOr[js.Array[unit]] = js.native
 }
 
 object AnonCutOffNumber {
   @scala.inline
-  def apply(cutOffNumber: Int | Double = null, exclude: js.Array[unit] = null): AnonCutOffNumber = {
+  def apply(): AnonCutOffNumber = {
     val __obj = js.Dynamic.literal()
-    if (cutOffNumber != null) __obj.updateDynamic("cutOffNumber")(cutOffNumber.asInstanceOf[js.Any])
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCutOffNumber]
   }
+  @scala.inline
+  implicit class AnonCutOffNumberOps[Self <: AnonCutOffNumber] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCutOffNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cutOffNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCutOffNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cutOffNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclude(value: js.Array[unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

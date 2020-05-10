@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDescription extends js.Object {
-  var description: AnonToString | js.Function0[String] | String
+  var description: AnonToString | js.Function0[String] | String = js.native
 }
 
 object AnonDescription {
   @scala.inline
   def apply(description: AnonToString | js.Function0[String] | String): AnonDescription = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonDescription]
   }
+  @scala.inline
+  implicit class AnonDescriptionOps[Self <: AnonDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescriptionFunction0(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDescription(value: AnonToString | js.Function0[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

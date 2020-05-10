@@ -35,7 +35,7 @@ object regularexpressionsMod extends js.Object {
     /**
       * See: {@link https://docs.mendix.com/refguide7/regular-expressions relevant section in reference guide}
       */
-    /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+    /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
     - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
     - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -55,8 +55,8 @@ object regularexpressionsMod extends js.Object {
       @JSName("model")
       var model_FRegularExpression: IModel = js.native
       @JSName("containerAsFolderBase")
-      def containerAsFolderBase_MRegularExpression(): FolderBase = js.native
-      def regEx(): String = js.native
+      def containerAsFolderBase_MRegularExpression: FolderBase = js.native
+      def regEx: String = js.native
       def regEx(newValue: String): js.Any = js.native
     }
     

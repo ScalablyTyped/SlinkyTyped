@@ -15,14 +15,41 @@ trait SchemaVoterInfoRequest extends js.Object {
 
 object SchemaVoterInfoRequest {
   @scala.inline
-  def apply(
-    contextParams: SchemaContextParams = null,
-    voterInfoSegmentResult: SchemaVoterInfoSegmentResult = null
-  ): SchemaVoterInfoRequest = {
+  def apply(): SchemaVoterInfoRequest = {
     val __obj = js.Dynamic.literal()
-    if (contextParams != null) __obj.updateDynamic("contextParams")(contextParams.asInstanceOf[js.Any])
-    if (voterInfoSegmentResult != null) __obj.updateDynamic("voterInfoSegmentResult")(voterInfoSegmentResult.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVoterInfoRequest]
   }
+  @scala.inline
+  implicit class SchemaVoterInfoRequestOps[Self <: SchemaVoterInfoRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContextParams(value: SchemaContextParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoterInfoSegmentResult(value: SchemaVoterInfoSegmentResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voterInfoSegmentResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoterInfoSegmentResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voterInfoSegmentResult")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

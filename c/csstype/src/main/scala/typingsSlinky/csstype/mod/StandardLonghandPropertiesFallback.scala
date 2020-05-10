@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
   /**
     * The CSS **`align-content`** property sets how the browser distributes space between and around content items along the cross-axis of a flexbox container, and the main-axis of a grid container.
@@ -31,7 +32,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/align-content
     */
-  var alignContent: js.UndefOr[AlignContentProperty | js.Array[AlignContentProperty]] = js.undefined
+  var alignContent: js.UndefOr[AlignContentProperty | js.Array[AlignContentProperty]] = js.native
   /**
     * The CSS **`align-items`** property sets the `align-self` value on all direct children as a group. The align-self property sets the alignment of an item within its containing block. In Flexbox it controls the alignment of items on the Cross Axis, in Grid Layout it controls the alignment of items on the Block Axis within their grid area.
     *
@@ -58,7 +59,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/align-items
     */
-  var alignItems: js.UndefOr[AlignItemsProperty | js.Array[AlignItemsProperty]] = js.undefined
+  var alignItems: js.UndefOr[AlignItemsProperty | js.Array[AlignItemsProperty]] = js.native
   /**
     * The **`align-self`** CSS property aligns flex items of the current flex line overriding the `align-items` value. If any of the item's cross-axis margin is set to `auto`, then `align-self` is ignored. In Grid layout `align-self` aligns the item inside the grid area.
     *
@@ -85,7 +86,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/align-self
     */
-  var alignSelf: js.UndefOr[AlignSelfProperty | js.Array[AlignSelfProperty]] = js.undefined
+  var alignSelf: js.UndefOr[AlignSelfProperty | js.Array[AlignSelfProperty]] = js.native
   /**
     * The **`animation-delay`** CSS property sets when an animation starts. The animation can start later, immediately from its beginning, or immediately and partway through the animation.
     *
@@ -98,7 +99,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/animation-delay
     */
-  var animationDelay: js.UndefOr[GlobalsString | js.Array[GlobalsString]] = js.undefined
+  var animationDelay: js.UndefOr[GlobalsString | js.Array[GlobalsString]] = js.native
   /**
     * The **`animation-direction`** CSS property sets whether an animation should play forwards, backwards, or alternating back and forth.
     *
@@ -111,7 +112,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/animation-direction
     */
-  var animationDirection: js.UndefOr[AnimationDirectionProperty | js.Array[AnimationDirectionProperty]] = js.undefined
+  var animationDirection: js.UndefOr[AnimationDirectionProperty | js.Array[AnimationDirectionProperty]] = js.native
   /**
     * The **`animation-duration`** CSS property sets the length of time that an animation takes to complete one cycle.
     *
@@ -124,7 +125,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/animation-duration
     */
-  var animationDuration: js.UndefOr[GlobalsString | js.Array[GlobalsString]] = js.undefined
+  var animationDuration: js.UndefOr[GlobalsString | js.Array[GlobalsString]] = js.native
   /**
     * The **`animation-fill-mode`** CSS property sets how a CSS animation applies styles to its target before and after its execution.
     *
@@ -137,7 +138,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/animation-fill-mode
     */
-  var animationFillMode: js.UndefOr[AnimationFillModeProperty | js.Array[AnimationFillModeProperty]] = js.undefined
+  var animationFillMode: js.UndefOr[AnimationFillModeProperty | js.Array[AnimationFillModeProperty]] = js.native
   /**
     * The **`animation-iteration-count`** CSS property sets the number of times an animation cycle should be played before stopping.
     *
@@ -150,7 +151,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/animation-iteration-count
     */
-  var animationIterationCount: js.UndefOr[AnimationIterationCountProperty | js.Array[AnimationIterationCountProperty]] = js.undefined
+  var animationIterationCount: js.UndefOr[AnimationIterationCountProperty | js.Array[AnimationIterationCountProperty]] = js.native
   /**
     * The **`animation-name`** CSS property sets one or more animations to apply to an element. Each name is an `@keyframes` at-rule that sets the property values for the animation sequence.
     *
@@ -163,7 +164,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/animation-name
     */
-  var animationName: js.UndefOr[AnimationNameProperty | js.Array[AnimationNameProperty]] = js.undefined
+  var animationName: js.UndefOr[AnimationNameProperty | js.Array[AnimationNameProperty]] = js.native
   /**
     * The **`animation-play-state`** CSS property sets whether an animation is running or paused.
     *
@@ -176,7 +177,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/animation-play-state
     */
-  var animationPlayState: js.UndefOr[AnimationPlayStateProperty | js.Array[AnimationPlayStateProperty]] = js.undefined
+  var animationPlayState: js.UndefOr[AnimationPlayStateProperty | js.Array[AnimationPlayStateProperty]] = js.native
   /**
     * The `**animation-timing-function**` CSS property sets how an animation progresses through the duration of each cycle.
     *
@@ -189,7 +190,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/animation-timing-function
     */
-  var animationTimingFunction: js.UndefOr[AnimationTimingFunctionProperty | js.Array[AnimationTimingFunctionProperty]] = js.undefined
+  var animationTimingFunction: js.UndefOr[AnimationTimingFunctionProperty | js.Array[AnimationTimingFunctionProperty]] = js.native
   /**
     * The **`-moz-appearance`** CSS property is used in Gecko (Firefox) to display an element using platform-native styling based on the operating system's theme.
     *
@@ -201,7 +202,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/appearance
     */
-  var appearance: js.UndefOr[AppearanceProperty | js.Array[AppearanceProperty]] = js.undefined
+  var appearance: js.UndefOr[AppearanceProperty | js.Array[AppearanceProperty]] = js.native
   /**
     * The **`backdrop-filter`** CSS property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything _behind_ the element, to see the effect you must make the element or its background at least partially transparent.
     *
@@ -213,7 +214,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/backdrop-filter
     */
-  var backdropFilter: js.UndefOr[BackdropFilterProperty | js.Array[BackdropFilterProperty]] = js.undefined
+  var backdropFilter: js.UndefOr[BackdropFilterProperty | js.Array[BackdropFilterProperty]] = js.native
   /**
     * The **`backface-visibility`** CSS property sets whether the back face of an element is visible when turned towards the user.
     *
@@ -226,7 +227,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/backface-visibility
     */
-  var backfaceVisibility: js.UndefOr[BackfaceVisibilityProperty | js.Array[BackfaceVisibilityProperty]] = js.undefined
+  var backfaceVisibility: js.UndefOr[BackfaceVisibilityProperty | js.Array[BackfaceVisibilityProperty]] = js.native
   /**
     * The **`background-attachment`** CSS property sets whether a background image's position is fixed within the viewport, or scrolls with its containing block.
     *
@@ -238,7 +239,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/background-attachment
     */
-  var backgroundAttachment: js.UndefOr[BackgroundAttachmentProperty | js.Array[BackgroundAttachmentProperty]] = js.undefined
+  var backgroundAttachment: js.UndefOr[BackgroundAttachmentProperty | js.Array[BackgroundAttachmentProperty]] = js.native
   /**
     * The **`background-blend-mode`** CSS property sets how an element's background images should blend with each other and with the element's background color.
     *
@@ -250,7 +251,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/background-blend-mode
     */
-  var backgroundBlendMode: js.UndefOr[BackgroundBlendModeProperty | js.Array[BackgroundBlendModeProperty]] = js.undefined
+  var backgroundBlendMode: js.UndefOr[BackgroundBlendModeProperty | js.Array[BackgroundBlendModeProperty]] = js.native
   /**
     * The **`background-clip`** CSS property sets whether an element's background `<color>` or `<image>` extends underneath its border.
     *
@@ -262,7 +263,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/background-clip
     */
-  var backgroundClip: js.UndefOr[BackgroundClipProperty | js.Array[BackgroundClipProperty]] = js.undefined
+  var backgroundClip: js.UndefOr[BackgroundClipProperty | js.Array[BackgroundClipProperty]] = js.native
   /**
     * The **`background-color`** CSS property sets the background color of an element.
     *
@@ -274,7 +275,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/background-color
     */
-  var backgroundColor: js.UndefOr[BackgroundColorProperty | js.Array[BackgroundColorProperty]] = js.undefined
+  var backgroundColor: js.UndefOr[BackgroundColorProperty | js.Array[BackgroundColorProperty]] = js.native
   /**
     * The **`background-image`** CSS property sets one or more background images on an element.
     *
@@ -286,7 +287,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/background-image
     */
-  var backgroundImage: js.UndefOr[BackgroundImageProperty | js.Array[BackgroundImageProperty]] = js.undefined
+  var backgroundImage: js.UndefOr[BackgroundImageProperty | js.Array[BackgroundImageProperty]] = js.native
   /**
     * The **`background-origin`** CSS property sets the _background positioning area_. In other words, it sets the origin position of an image set with the `background-image` property.
     *
@@ -298,7 +299,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/background-origin
     */
-  var backgroundOrigin: js.UndefOr[BackgroundOriginProperty | js.Array[BackgroundOriginProperty]] = js.undefined
+  var backgroundOrigin: js.UndefOr[BackgroundOriginProperty | js.Array[BackgroundOriginProperty]] = js.native
   /**
     * The **`background-position`** CSS property sets the initial position for each background image. The position is relative to the position layer set by `background-origin`.
     *
@@ -312,7 +313,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var backgroundPosition: js.UndefOr[
     BackgroundPositionProperty[TLength] | js.Array[BackgroundPositionProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`background-position-x`** CSS property sets the initial horizontal position for each background image. The position is relative to the position layer set by `background-origin`.
     *
@@ -326,7 +327,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var backgroundPositionX: js.UndefOr[
     BackgroundPositionXProperty[TLength] | js.Array[BackgroundPositionXProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`background-position-y`** CSS property sets the initial vertical position, relative to the background position layer defined by `background-origin`, for each defined background image.
     *
@@ -340,7 +341,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var backgroundPositionY: js.UndefOr[
     BackgroundPositionYProperty[TLength] | js.Array[BackgroundPositionYProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`background-repeat`** CSS property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.
     *
@@ -352,7 +353,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/background-repeat
     */
-  var backgroundRepeat: js.UndefOr[BackgroundRepeatProperty | js.Array[BackgroundRepeatProperty]] = js.undefined
+  var backgroundRepeat: js.UndefOr[BackgroundRepeatProperty | js.Array[BackgroundRepeatProperty]] = js.native
   /**
     * The **`background-size`** CSS property sets the size of the element's background image. The image can be left to its natural size, stretched, or constrained to fit the available space.
     *
@@ -365,9 +366,9 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/background-size
     */
-  var backgroundSize: js.UndefOr[BackgroundSizeProperty[TLength] | js.Array[BackgroundSizeProperty[TLength]]] = js.undefined
+  var backgroundSize: js.UndefOr[BackgroundSizeProperty[TLength] | js.Array[BackgroundSizeProperty[TLength]]] = js.native
   /** **Initial value**: `clip` */
-  var blockOverflow: js.UndefOr[BlockOverflowProperty | js.Array[BlockOverflowProperty]] = js.undefined
+  var blockOverflow: js.UndefOr[BlockOverflowProperty | js.Array[BlockOverflowProperty]] = js.native
   /**
     * The **`block-size`** CSS property defines the horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the `width` or the `height` property, depending on the value of `writing-mode`.
     *
@@ -379,7 +380,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/block-size
     */
-  var blockSize: js.UndefOr[BlockSizeProperty[TLength] | js.Array[BlockSizeProperty[TLength]]] = js.undefined
+  var blockSize: js.UndefOr[BlockSizeProperty[TLength] | js.Array[BlockSizeProperty[TLength]]] = js.native
   /**
     * The **`border-block-color`** CSS property defines the color of the logical block borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color` and `border-bottom-color`, or `border-right-color` and `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -391,7 +392,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-block-color
     */
-  var borderBlockColor: js.UndefOr[BorderBlockColorProperty | js.Array[BorderBlockColorProperty]] = js.undefined
+  var borderBlockColor: js.UndefOr[BorderBlockColorProperty | js.Array[BorderBlockColorProperty]] = js.native
   /**
     * The **`border-block-end-color`** CSS property defines the color of the logical block-end border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color`, `border-right-color`, `border-bottom-color`, or `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -403,7 +404,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-block-end-color
     */
-  var borderBlockEndColor: js.UndefOr[BorderBlockEndColorProperty | js.Array[BorderBlockEndColorProperty]] = js.undefined
+  var borderBlockEndColor: js.UndefOr[BorderBlockEndColorProperty | js.Array[BorderBlockEndColorProperty]] = js.native
   /**
     * The **`border-block-end-style`** CSS property defines the style of the logical block end border of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-style`, `border-right-style`, `border-bottom-style`, or `border-left-style` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -415,7 +416,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-block-end-style
     */
-  var borderBlockEndStyle: js.UndefOr[BorderBlockEndStyleProperty | js.Array[BorderBlockEndStyleProperty]] = js.undefined
+  var borderBlockEndStyle: js.UndefOr[BorderBlockEndStyleProperty | js.Array[BorderBlockEndStyleProperty]] = js.native
   /**
     * The **`border-block-end-width`** CSS property defines the width of the logical block-end border of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-width`, `border-right-width`, `border-bottom-width`, or `border-left-width` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -429,7 +430,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderBlockEndWidth: js.UndefOr[
     BorderBlockEndWidthProperty[TLength] | js.Array[BorderBlockEndWidthProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-block-start-color`** CSS property defines the color of the logical block-start border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color`, `border-right-color`, `border-bottom-color`, or `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -441,7 +442,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-block-start-color
     */
-  var borderBlockStartColor: js.UndefOr[BorderBlockStartColorProperty | js.Array[BorderBlockStartColorProperty]] = js.undefined
+  var borderBlockStartColor: js.UndefOr[BorderBlockStartColorProperty | js.Array[BorderBlockStartColorProperty]] = js.native
   /**
     * The **`border-block-start-style`** CSS property defines the style of the logical block start border of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-style`, `border-right-style`, `border-bottom-style`, or `border-left-style` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -453,7 +454,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-block-start-style
     */
-  var borderBlockStartStyle: js.UndefOr[BorderBlockStartStyleProperty | js.Array[BorderBlockStartStyleProperty]] = js.undefined
+  var borderBlockStartStyle: js.UndefOr[BorderBlockStartStyleProperty | js.Array[BorderBlockStartStyleProperty]] = js.native
   /**
     * The **`border-block-start-width`** CSS property defines the width of the logical block-start border of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-width`, `border-right-width`, `border-bottom-width`, or `border-left-width` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -467,7 +468,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderBlockStartWidth: js.UndefOr[
     BorderBlockStartWidthProperty[TLength] | js.Array[BorderBlockStartWidthProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-block-style`** CSS property defines the style of the logical block borders of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-style` and `border-bottom-style`, or `border-left-style` and `border-right-style` properties depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -479,7 +480,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-block-style
     */
-  var borderBlockStyle: js.UndefOr[BorderBlockStyleProperty | js.Array[BorderBlockStyleProperty]] = js.undefined
+  var borderBlockStyle: js.UndefOr[BorderBlockStyleProperty | js.Array[BorderBlockStyleProperty]] = js.native
   /**
     * The **`border-block-width`** CSS property defines the width of the logical block borders of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-width` and `border-bottom-width`, or `border-left-width`, and `border-right-width` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -491,7 +492,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-block-width
     */
-  var borderBlockWidth: js.UndefOr[BorderBlockWidthProperty[TLength] | js.Array[BorderBlockWidthProperty[TLength]]] = js.undefined
+  var borderBlockWidth: js.UndefOr[BorderBlockWidthProperty[TLength] | js.Array[BorderBlockWidthProperty[TLength]]] = js.native
   /**
     * The **`border-bottom-color`** CSS property sets the color of an element's bottom border. It can also be set with the shorthand CSS properties `border-color` or `border-bottom`.
     *
@@ -503,7 +504,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-color
     */
-  var borderBottomColor: js.UndefOr[BorderBottomColorProperty | js.Array[BorderBottomColorProperty]] = js.undefined
+  var borderBottomColor: js.UndefOr[BorderBottomColorProperty | js.Array[BorderBottomColorProperty]] = js.native
   /**
     * The **`border-bottom-left-radius`** CSS property rounds the bottom-left corner of an element.
     *
@@ -518,7 +519,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderBottomLeftRadius: js.UndefOr[
     BorderBottomLeftRadiusProperty[TLength] | js.Array[BorderBottomLeftRadiusProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-bottom-right-radius`** CSS property rounds the bottom-right corner of an element.
     *
@@ -533,7 +534,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderBottomRightRadius: js.UndefOr[
     BorderBottomRightRadiusProperty[TLength] | js.Array[BorderBottomRightRadiusProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-bottom-style`** CSS property sets the line style of an element's bottom `border`.
     *
@@ -545,7 +546,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-style
     */
-  var borderBottomStyle: js.UndefOr[BorderBottomStyleProperty | js.Array[BorderBottomStyleProperty]] = js.undefined
+  var borderBottomStyle: js.UndefOr[BorderBottomStyleProperty | js.Array[BorderBottomStyleProperty]] = js.native
   /**
     * The **`border-bottom-width`** CSS property sets the width of the bottom border of a box.
     *
@@ -559,7 +560,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderBottomWidth: js.UndefOr[
     BorderBottomWidthProperty[TLength] | js.Array[BorderBottomWidthProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-collapse`** CSS property sets whether cells inside a `<table>` have shared or separate borders.
     *
@@ -571,7 +572,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-collapse
     */
-  var borderCollapse: js.UndefOr[BorderCollapseProperty | js.Array[BorderCollapseProperty]] = js.undefined
+  var borderCollapse: js.UndefOr[BorderCollapseProperty | js.Array[BorderCollapseProperty]] = js.native
   /**
     * The **`border-end-end-radius`** CSS property defines a logical border radius on an element, which maps to a physical border radius that depends on on the element's `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -585,7 +586,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderEndEndRadius: js.UndefOr[
     BorderEndEndRadiusProperty[TLength] | js.Array[BorderEndEndRadiusProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-end-start-radius`** CSS property defines a logical border radius on an element, which maps to a physical border radius depending on the element's `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -599,7 +600,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderEndStartRadius: js.UndefOr[
     BorderEndStartRadiusProperty[TLength] | js.Array[BorderEndStartRadiusProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-image-outset`** CSS property sets the distance by which an element's border image is set out from its border box.
     *
@@ -613,7 +614,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderImageOutset: js.UndefOr[
     BorderImageOutsetProperty[TLength] | js.Array[BorderImageOutsetProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-image-repeat`** CSS property defines how the edge regions of a source image are adjusted to fit the dimensions of an element's border image.
     *
@@ -625,7 +626,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-image-repeat
     */
-  var borderImageRepeat: js.UndefOr[BorderImageRepeatProperty | js.Array[BorderImageRepeatProperty]] = js.undefined
+  var borderImageRepeat: js.UndefOr[BorderImageRepeatProperty | js.Array[BorderImageRepeatProperty]] = js.native
   /**
     * The **`border-image-slice`** CSS property divides the image specified by `border-image-source` into regions. These regions form the components of an element's border image.
     *
@@ -637,7 +638,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-image-slice
     */
-  var borderImageSlice: js.UndefOr[BorderImageSliceProperty | js.Array[BorderImageSliceProperty]] = js.undefined
+  var borderImageSlice: js.UndefOr[BorderImageSliceProperty | js.Array[BorderImageSliceProperty]] = js.native
   /**
     * The **`border-image-source`** CSS property sets the source image used to create an element's border image.
     *
@@ -649,7 +650,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-image-source
     */
-  var borderImageSource: js.UndefOr[BorderImageSourceProperty | js.Array[BorderImageSourceProperty]] = js.undefined
+  var borderImageSource: js.UndefOr[BorderImageSourceProperty | js.Array[BorderImageSourceProperty]] = js.native
   /**
     * The **`border-image-width`** CSS property sets the width of an element's border image.
     *
@@ -661,7 +662,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-image-width
     */
-  var borderImageWidth: js.UndefOr[BorderImageWidthProperty[TLength] | js.Array[BorderImageWidthProperty[TLength]]] = js.undefined
+  var borderImageWidth: js.UndefOr[BorderImageWidthProperty[TLength] | js.Array[BorderImageWidthProperty[TLength]]] = js.native
   /**
     * The **`border-inline-color`** CSS property defines the color of the logical inline borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color` and `border-bottom-color`, or `border-right-color` and `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -673,7 +674,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-color
     */
-  var borderInlineColor: js.UndefOr[BorderInlineColorProperty | js.Array[BorderInlineColorProperty]] = js.undefined
+  var borderInlineColor: js.UndefOr[BorderInlineColorProperty | js.Array[BorderInlineColorProperty]] = js.native
   /**
     * The **`border-inline-end-color`** CSS property defines the color of the logical inline-end border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color`, `border-right-color`, `border-bottom-color`, or `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -686,7 +687,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-end-color
     */
-  var borderInlineEndColor: js.UndefOr[BorderInlineEndColorProperty | js.Array[BorderInlineEndColorProperty]] = js.undefined
+  var borderInlineEndColor: js.UndefOr[BorderInlineEndColorProperty | js.Array[BorderInlineEndColorProperty]] = js.native
   /**
     * The **`border-inline-end-style`** CSS property defines the style of the logical inline end border of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-style`, `border-right-style`, `border-bottom-style`, or `border-left-style` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -699,7 +700,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-end-style
     */
-  var borderInlineEndStyle: js.UndefOr[BorderInlineEndStyleProperty | js.Array[BorderInlineEndStyleProperty]] = js.undefined
+  var borderInlineEndStyle: js.UndefOr[BorderInlineEndStyleProperty | js.Array[BorderInlineEndStyleProperty]] = js.native
   /**
     * The **`border-inline-end-width`** CSS property defines the width of the logical inline-end border of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-width`, `border-right-width`, `border-bottom-width`, or `border-left-width` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -714,7 +715,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderInlineEndWidth: js.UndefOr[
     BorderInlineEndWidthProperty[TLength] | js.Array[BorderInlineEndWidthProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-inline-start-color`** CSS property defines the color of the logical inline start border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color`, `border-right-color`, `border-bottom-color`, or `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -727,7 +728,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-start-color
     */
-  var borderInlineStartColor: js.UndefOr[BorderInlineStartColorProperty | js.Array[BorderInlineStartColorProperty]] = js.undefined
+  var borderInlineStartColor: js.UndefOr[BorderInlineStartColorProperty | js.Array[BorderInlineStartColorProperty]] = js.native
   /**
     * The **`border-inline-start-style`** CSS property defines the style of the logical inline start border of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-style`, `border-right-style`, `border-bottom-style`, or `border-left-style` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -740,7 +741,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-start-style
     */
-  var borderInlineStartStyle: js.UndefOr[BorderInlineStartStyleProperty | js.Array[BorderInlineStartStyleProperty]] = js.undefined
+  var borderInlineStartStyle: js.UndefOr[BorderInlineStartStyleProperty | js.Array[BorderInlineStartStyleProperty]] = js.native
   /**
     * The **`border-inline-start-width`** CSS property defines the width of the logical inline-start border of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-width`, `border-right-width`, `border-bottom-width`, or `border-left-width` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -754,7 +755,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderInlineStartWidth: js.UndefOr[
     BorderInlineStartWidthProperty[TLength] | js.Array[BorderInlineStartWidthProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-inline-style`** CSS property defines the style of the logical inline borders of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-style` and `border-bottom-style`, or `border-left-style` and `border-right-style` properties depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -766,7 +767,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-style
     */
-  var borderInlineStyle: js.UndefOr[BorderInlineStyleProperty | js.Array[BorderInlineStyleProperty]] = js.undefined
+  var borderInlineStyle: js.UndefOr[BorderInlineStyleProperty | js.Array[BorderInlineStyleProperty]] = js.native
   /**
     * The **`border-inline-width`** CSS property defines the width of the logical inline borders of an element, which maps to a physical border width depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-width` and `border-bottom-width`, or `border-left-width`, and `border-right-width` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -780,7 +781,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderInlineWidth: js.UndefOr[
     BorderInlineWidthProperty[TLength] | js.Array[BorderInlineWidthProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-left-color`** CSS property sets the color of an element's left border. It can also be set with the shorthand CSS properties `border-color` or `border-left`.
     *
@@ -792,7 +793,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-left-color
     */
-  var borderLeftColor: js.UndefOr[BorderLeftColorProperty | js.Array[BorderLeftColorProperty]] = js.undefined
+  var borderLeftColor: js.UndefOr[BorderLeftColorProperty | js.Array[BorderLeftColorProperty]] = js.native
   /**
     * The **`border-left-style`** CSS property sets the line style of an element's left `border`.
     *
@@ -804,7 +805,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-left-style
     */
-  var borderLeftStyle: js.UndefOr[BorderLeftStyleProperty | js.Array[BorderLeftStyleProperty]] = js.undefined
+  var borderLeftStyle: js.UndefOr[BorderLeftStyleProperty | js.Array[BorderLeftStyleProperty]] = js.native
   /**
     * The **`border-left-width`** CSS property sets the width of the left border of an element.
     *
@@ -816,7 +817,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-left-width
     */
-  var borderLeftWidth: js.UndefOr[BorderLeftWidthProperty[TLength] | js.Array[BorderLeftWidthProperty[TLength]]] = js.undefined
+  var borderLeftWidth: js.UndefOr[BorderLeftWidthProperty[TLength] | js.Array[BorderLeftWidthProperty[TLength]]] = js.native
   /**
     * The **`border-right-color`** CSS property sets the color of an element's right border. It can also be set with the shorthand CSS properties `border-color` or `border-right`.
     *
@@ -828,7 +829,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-right-color
     */
-  var borderRightColor: js.UndefOr[BorderRightColorProperty | js.Array[BorderRightColorProperty]] = js.undefined
+  var borderRightColor: js.UndefOr[BorderRightColorProperty | js.Array[BorderRightColorProperty]] = js.native
   /**
     * The **`border-right-style`** CSS property sets the line style of an element's right `border`.
     *
@@ -840,7 +841,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-right-style
     */
-  var borderRightStyle: js.UndefOr[BorderRightStyleProperty | js.Array[BorderRightStyleProperty]] = js.undefined
+  var borderRightStyle: js.UndefOr[BorderRightStyleProperty | js.Array[BorderRightStyleProperty]] = js.native
   /**
     * The **`border-right-width`** CSS property sets the width of the right border of an element.
     *
@@ -852,7 +853,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-right-width
     */
-  var borderRightWidth: js.UndefOr[BorderRightWidthProperty[TLength] | js.Array[BorderRightWidthProperty[TLength]]] = js.undefined
+  var borderRightWidth: js.UndefOr[BorderRightWidthProperty[TLength] | js.Array[BorderRightWidthProperty[TLength]]] = js.native
   /**
     * The **`border-spacing`** CSS property sets the distance between the borders of adjacent `<table>` cells. This property applies only when `border-collapse` is `separate`.
     *
@@ -864,7 +865,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-spacing
     */
-  var borderSpacing: js.UndefOr[BorderSpacingProperty[TLength] | js.Array[BorderSpacingProperty[TLength]]] = js.undefined
+  var borderSpacing: js.UndefOr[BorderSpacingProperty[TLength] | js.Array[BorderSpacingProperty[TLength]]] = js.native
   /**
     * The **`border-start-end-radius`** CSS property defines a logical border radius on an element, which maps to a physical border radius depending on the element's `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -878,7 +879,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderStartEndRadius: js.UndefOr[
     BorderStartEndRadiusProperty[TLength] | js.Array[BorderStartEndRadiusProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-start-start-radius`** CSS property defines a logical border radius on an element, which maps to a physical border radius that depends on the element's `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -892,7 +893,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderStartStartRadius: js.UndefOr[
     BorderStartStartRadiusProperty[TLength] | js.Array[BorderStartStartRadiusProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-top-color`** CSS property sets the color of an element's top border. It can also be set with the shorthand CSS properties `border-color` or `border-top`.
     *
@@ -904,7 +905,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-top-color
     */
-  var borderTopColor: js.UndefOr[BorderTopColorProperty | js.Array[BorderTopColorProperty]] = js.undefined
+  var borderTopColor: js.UndefOr[BorderTopColorProperty | js.Array[BorderTopColorProperty]] = js.native
   /**
     * The **`border-top-left-radius`** CSS property rounds the top-left corner of an element.
     *
@@ -919,7 +920,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderTopLeftRadius: js.UndefOr[
     BorderTopLeftRadiusProperty[TLength] | js.Array[BorderTopLeftRadiusProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-top-right-radius`** CSS property rounds the top-right corner of an element.
     *
@@ -934,7 +935,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var borderTopRightRadius: js.UndefOr[
     BorderTopRightRadiusProperty[TLength] | js.Array[BorderTopRightRadiusProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`border-top-style`** CSS property sets the line style of an element's top `border`.
     *
@@ -946,7 +947,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-top-style
     */
-  var borderTopStyle: js.UndefOr[BorderTopStyleProperty | js.Array[BorderTopStyleProperty]] = js.undefined
+  var borderTopStyle: js.UndefOr[BorderTopStyleProperty | js.Array[BorderTopStyleProperty]] = js.native
   /**
     * The **`border-top-width`** CSS property sets the width of the top border of an element.
     *
@@ -958,7 +959,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/border-top-width
     */
-  var borderTopWidth: js.UndefOr[BorderTopWidthProperty[TLength] | js.Array[BorderTopWidthProperty[TLength]]] = js.undefined
+  var borderTopWidth: js.UndefOr[BorderTopWidthProperty[TLength] | js.Array[BorderTopWidthProperty[TLength]]] = js.native
   /**
     * The **`bottom`** CSS property participates in specifying the vertical position of a _positioned element_. It has no effect on non-positioned elements.
     *
@@ -970,7 +971,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/bottom
     */
-  var bottom: js.UndefOr[BottomProperty[TLength] | js.Array[BottomProperty[TLength]]] = js.undefined
+  var bottom: js.UndefOr[BottomProperty[TLength] | js.Array[BottomProperty[TLength]]] = js.native
   /**
     * The **`box-decoration-break`** CSS property specifies how an element's fragments should be rendered when broken across multiple lines, columns, or pages.
     *
@@ -982,7 +983,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/box-decoration-break
     */
-  var boxDecorationBreak: js.UndefOr[BoxDecorationBreakProperty | js.Array[BoxDecorationBreakProperty]] = js.undefined
+  var boxDecorationBreak: js.UndefOr[BoxDecorationBreakProperty | js.Array[BoxDecorationBreakProperty]] = js.native
   /**
     * The **`box-shadow`** CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radii, and color.
     *
@@ -995,7 +996,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/box-shadow
     */
-  var boxShadow: js.UndefOr[BoxShadowProperty | js.Array[BoxShadowProperty]] = js.undefined
+  var boxShadow: js.UndefOr[BoxShadowProperty | js.Array[BoxShadowProperty]] = js.native
   /**
     * The **`box-sizing`** CSS property defines how the user agent should calculate the total width and height of an element.
     *
@@ -1008,7 +1009,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/box-sizing
     */
-  var boxSizing: js.UndefOr[BoxSizingProperty | js.Array[BoxSizingProperty]] = js.undefined
+  var boxSizing: js.UndefOr[BoxSizingProperty | js.Array[BoxSizingProperty]] = js.native
   /**
     * The **`break-after`** CSS property defines how page, column, or region breaks should behave after a generated box. If there is no generated box, the property is ignored.
     *
@@ -1042,7 +1043,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/break-after
     */
-  var breakAfter: js.UndefOr[BreakAfterProperty | js.Array[BreakAfterProperty]] = js.undefined
+  var breakAfter: js.UndefOr[BreakAfterProperty | js.Array[BreakAfterProperty]] = js.native
   /**
     * The **`break-before`** CSS property sets how page, column, or region breaks should behave before a generated box. If there is no generated box, the property is ignored.
     *
@@ -1076,7 +1077,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/break-before
     */
-  var breakBefore: js.UndefOr[BreakBeforeProperty | js.Array[BreakBeforeProperty]] = js.undefined
+  var breakBefore: js.UndefOr[BreakBeforeProperty | js.Array[BreakBeforeProperty]] = js.native
   /**
     * The **`break-inside`** CSS property defines how page, column, or region breaks should behave inside a generated box. If there is no generated box, the property is ignored.
     *
@@ -1110,7 +1111,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/break-inside
     */
-  var breakInside: js.UndefOr[BreakInsideProperty | js.Array[BreakInsideProperty]] = js.undefined
+  var breakInside: js.UndefOr[BreakInsideProperty | js.Array[BreakInsideProperty]] = js.native
   /**
     * The **`caption-side`** CSS property puts the content of a table's `<caption>` on the specified side. The values are relative to the `writing-mode` of the table.
     *
@@ -1122,7 +1123,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/caption-side
     */
-  var captionSide: js.UndefOr[CaptionSideProperty | js.Array[CaptionSideProperty]] = js.undefined
+  var captionSide: js.UndefOr[CaptionSideProperty | js.Array[CaptionSideProperty]] = js.native
   /**
     * The **`caret-color`** CSS property sets the color of the insertion caret, the visible marker where the next character typed will be inserted. The caret appears in elements such as `<input>` or those with the `contenteditable` attribute. The caret is typically a thin vertical line that flashes to help make it more noticeable. By default, it is black, but its color can be altered with this property.
     *
@@ -1134,7 +1135,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/caret-color
     */
-  var caretColor: js.UndefOr[CaretColorProperty | js.Array[CaretColorProperty]] = js.undefined
+  var caretColor: js.UndefOr[CaretColorProperty | js.Array[CaretColorProperty]] = js.native
   /**
     * The **`clear`** CSS property sets whether an element must be moved below (cleared) floating elements that precede it. The `clear` property applies to floating and non-floating elements.
     *
@@ -1146,7 +1147,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/clear
     */
-  var clear: js.UndefOr[ClearProperty | js.Array[ClearProperty]] = js.undefined
+  var clear: js.UndefOr[ClearProperty | js.Array[ClearProperty]] = js.native
   /**
     * The `**clip-path**` CSS property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
     *
@@ -1159,7 +1160,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/clip-path
     */
-  var clipPath: js.UndefOr[ClipPathProperty | js.Array[ClipPathProperty]] = js.undefined
+  var clipPath: js.UndefOr[ClipPathProperty | js.Array[ClipPathProperty]] = js.native
   /**
     * The **`color`** CSS property sets the foreground color value of an element's text and text decorations, and sets the `currentcolor` value. `currentcolor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as `border-color`.
     *
@@ -1171,7 +1172,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/color
     */
-  var color: js.UndefOr[ColorProperty | js.Array[ColorProperty]] = js.undefined
+  var color: js.UndefOr[ColorProperty | js.Array[ColorProperty]] = js.native
   /**
     * The **`color-adjust`** CSS property sets what, if anything, the user agent may do to optimize the appearance of the element on the output device. By default, the browser is allowed to make any adjustments to the element's appearance it determines to be necessary and prudent given the type and capabilities of the output device.
     *
@@ -1183,7 +1184,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/color-adjust
     */
-  var colorAdjust: js.UndefOr[ColorAdjustProperty | js.Array[ColorAdjustProperty]] = js.undefined
+  var colorAdjust: js.UndefOr[ColorAdjustProperty | js.Array[ColorAdjustProperty]] = js.native
   /**
     * The **`column-count`** CSS property breaks an element's content into the specified number of columns.
     *
@@ -1196,7 +1197,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/column-count
     */
-  var columnCount: js.UndefOr[ColumnCountProperty | js.Array[ColumnCountProperty]] = js.undefined
+  var columnCount: js.UndefOr[ColumnCountProperty | js.Array[ColumnCountProperty]] = js.native
   /**
     * The **`column-fill`** CSS property controls how an element's contents are balanced when broken into columns.
     *
@@ -1209,7 +1210,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/column-fill
     */
-  var columnFill: js.UndefOr[ColumnFillProperty | js.Array[ColumnFillProperty]] = js.undefined
+  var columnFill: js.UndefOr[ColumnFillProperty | js.Array[ColumnFillProperty]] = js.native
   /**
     * The **`column-gap`** CSS property sets the size of the gap (gutter) between an element's columns.
     *
@@ -1245,7 +1246,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/column-gap
     */
-  var columnGap: js.UndefOr[ColumnGapProperty[TLength] | js.Array[ColumnGapProperty[TLength]]] = js.undefined
+  var columnGap: js.UndefOr[ColumnGapProperty[TLength] | js.Array[ColumnGapProperty[TLength]]] = js.native
   /**
     * The **`column-rule-color`** CSS property sets the color of the rule (line) drawn between columns in a multi-column layout.
     *
@@ -1258,7 +1259,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/column-rule-color
     */
-  var columnRuleColor: js.UndefOr[ColumnRuleColorProperty | js.Array[ColumnRuleColorProperty]] = js.undefined
+  var columnRuleColor: js.UndefOr[ColumnRuleColorProperty | js.Array[ColumnRuleColorProperty]] = js.native
   /**
     * The **`column-rule-style`** CSS property sets the style of the line drawn between columns in a multi-column layout.
     *
@@ -1271,7 +1272,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/column-rule-style
     */
-  var columnRuleStyle: js.UndefOr[ColumnRuleStyleProperty | js.Array[ColumnRuleStyleProperty]] = js.undefined
+  var columnRuleStyle: js.UndefOr[ColumnRuleStyleProperty | js.Array[ColumnRuleStyleProperty]] = js.native
   /**
     * The **`column-rule-width`** CSS property sets the width of the rule (line) drawn between columns in a multi-column layout.
     *
@@ -1284,7 +1285,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/column-rule-width
     */
-  var columnRuleWidth: js.UndefOr[ColumnRuleWidthProperty[TLength] | js.Array[ColumnRuleWidthProperty[TLength]]] = js.undefined
+  var columnRuleWidth: js.UndefOr[ColumnRuleWidthProperty[TLength] | js.Array[ColumnRuleWidthProperty[TLength]]] = js.native
   /**
     * The **`column-span`** CSS property makes it possible for an element to span across all columns when its value is set to `all`.
     *
@@ -1297,7 +1298,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/column-span
     */
-  var columnSpan: js.UndefOr[ColumnSpanProperty | js.Array[ColumnSpanProperty]] = js.undefined
+  var columnSpan: js.UndefOr[ColumnSpanProperty | js.Array[ColumnSpanProperty]] = js.native
   /**
     * The **`column-width`** CSS property specifies the ideal column width in a multi-column layout. The container will have as many columns as can fit without any of them having a width less than the `column-width` value. If the width of the container is narrower than the specified value, the single column's width will be smaller than the declared column width.
     *
@@ -1310,7 +1311,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/column-width
     */
-  var columnWidth: js.UndefOr[ColumnWidthProperty[TLength] | js.Array[ColumnWidthProperty[TLength]]] = js.undefined
+  var columnWidth: js.UndefOr[ColumnWidthProperty[TLength] | js.Array[ColumnWidthProperty[TLength]]] = js.native
   /**
     * The **`contain`** CSS property allows an author to indicate that an element and its contents are, as much as possible, _independent_ of the rest of the document tree. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited area of the DOM and not the entire page.
     *
@@ -1322,7 +1323,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/contain
     */
-  var contain: js.UndefOr[ContainProperty | js.Array[ContainProperty]] = js.undefined
+  var contain: js.UndefOr[ContainProperty | js.Array[ContainProperty]] = js.native
   /**
     * The **`content`** CSS property replaces an element with a generated value. Objects inserted using the `content` property are _anonymous replaced elements._
     *
@@ -1334,7 +1335,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/content
     */
-  var content: js.UndefOr[ContentProperty | js.Array[ContentProperty]] = js.undefined
+  var content: js.UndefOr[ContentProperty | js.Array[ContentProperty]] = js.native
   /**
     * The **`counter-increment`** CSS property increases or decreases the value of a CSS counter by a given value.
     *
@@ -1346,7 +1347,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/counter-increment
     */
-  var counterIncrement: js.UndefOr[CounterIncrementProperty | js.Array[CounterIncrementProperty]] = js.undefined
+  var counterIncrement: js.UndefOr[CounterIncrementProperty | js.Array[CounterIncrementProperty]] = js.native
   /**
     * The **`counter-reset`** CSS property resets a CSS counter to a given value.
     *
@@ -1358,7 +1359,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/counter-reset
     */
-  var counterReset: js.UndefOr[CounterResetProperty | js.Array[CounterResetProperty]] = js.undefined
+  var counterReset: js.UndefOr[CounterResetProperty | js.Array[CounterResetProperty]] = js.native
   /**
     * The **`counter-set`** CSS property sets a CSS counter to a given value. It manipulates the value of existing counters, and will only create new counters if there isn't already a counter of the given name on the element.
     *
@@ -1370,7 +1371,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/counter-set
     */
-  var counterSet: js.UndefOr[CounterSetProperty | js.Array[CounterSetProperty]] = js.undefined
+  var counterSet: js.UndefOr[CounterSetProperty | js.Array[CounterSetProperty]] = js.native
   /**
     * The **`cursor`** CSS property sets mouse cursor to display when the mouse pointer is over an element.
     *
@@ -1382,7 +1383,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/cursor
     */
-  var cursor: js.UndefOr[CursorProperty | js.Array[CursorProperty]] = js.undefined
+  var cursor: js.UndefOr[CursorProperty | js.Array[CursorProperty]] = js.native
   /**
     * The **`direction`** CSS property sets the direction of text, table columns, and horizontal overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for those written from left to right (like English and most other languages).
     *
@@ -1394,7 +1395,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/direction
     */
-  var direction: js.UndefOr[DirectionProperty | js.Array[DirectionProperty]] = js.undefined
+  var direction: js.UndefOr[DirectionProperty | js.Array[DirectionProperty]] = js.native
   /**
     * The **`display`** CSS property defines the _display type_ of an element, which consists of the two basic qualities of how an element generates boxes — the **outer display type** defining how the box participates in flow layout, and the **inner display type** defining how the children of the box are laid out.
     *
@@ -1406,7 +1407,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/display
     */
-  var display: js.UndefOr[DisplayProperty | js.Array[DisplayProperty]] = js.undefined
+  var display: js.UndefOr[DisplayProperty | js.Array[DisplayProperty]] = js.native
   /**
     * The **`empty-cells`** CSS property sets whether borders and backgrounds appear around `<table>` cells that have no visible content.
     *
@@ -1418,7 +1419,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/empty-cells
     */
-  var emptyCells: js.UndefOr[EmptyCellsProperty | js.Array[EmptyCellsProperty]] = js.undefined
+  var emptyCells: js.UndefOr[EmptyCellsProperty | js.Array[EmptyCellsProperty]] = js.native
   /**
     * The **`filter`** CSS property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.
     *
@@ -1431,7 +1432,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/filter
     */
-  var filter: js.UndefOr[FilterProperty | js.Array[FilterProperty]] = js.undefined
+  var filter: js.UndefOr[FilterProperty | js.Array[FilterProperty]] = js.native
   /**
     * The **`flex-basis`** CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with `box-sizing`.
     *
@@ -1444,7 +1445,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/flex-basis
     */
-  var flexBasis: js.UndefOr[FlexBasisProperty[TLength] | js.Array[FlexBasisProperty[TLength]]] = js.undefined
+  var flexBasis: js.UndefOr[FlexBasisProperty[TLength] | js.Array[FlexBasisProperty[TLength]]] = js.native
   /**
     * The **`flex-direction`** CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).
     *
@@ -1457,7 +1458,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/flex-direction
     */
-  var flexDirection: js.UndefOr[FlexDirectionProperty | js.Array[FlexDirectionProperty]] = js.undefined
+  var flexDirection: js.UndefOr[FlexDirectionProperty | js.Array[FlexDirectionProperty]] = js.native
   /**
     * The **`flex-grow`** CSS property sets how much of the available space in the flex container should be assigned to that item (the flex grow factor). If all sibling items have the same flex grow factor, then all items will receive the same share of available space, otherwise it is distributed according to the ratio defined by the different flex grow factors.
     *
@@ -1470,7 +1471,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/flex-grow
     */
-  var flexGrow: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.undefined
+  var flexGrow: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.native
   /**
     * The **`flex-shrink`** CSS property sets the flex shrink factor of a flex item. If the size of flex items is larger than the flex container, items shrink to fit according to `flex-shrink`.
     *
@@ -1483,7 +1484,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/flex-shrink
     */
-  var flexShrink: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.undefined
+  var flexShrink: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.native
   /**
     * The **`flex-wrap`** CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
     *
@@ -1496,7 +1497,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/flex-wrap
     */
-  var flexWrap: js.UndefOr[FlexWrapProperty | js.Array[FlexWrapProperty]] = js.undefined
+  var flexWrap: js.UndefOr[FlexWrapProperty | js.Array[FlexWrapProperty]] = js.native
   /**
     * The **`float`** CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to absolute positioning).
     *
@@ -1508,7 +1509,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/float
     */
-  var float: js.UndefOr[FloatProperty | js.Array[FloatProperty]] = js.undefined
+  var float: js.UndefOr[FloatProperty | js.Array[FloatProperty]] = js.native
   /**
     * The **`font-family`** CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
     *
@@ -1520,7 +1521,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-family
     */
-  var fontFamily: js.UndefOr[FontFamilyProperty | js.Array[FontFamilyProperty]] = js.undefined
+  var fontFamily: js.UndefOr[FontFamilyProperty | js.Array[FontFamilyProperty]] = js.native
   /**
     * The **`font-feature-settings`** CSS property controls advanced typographic features in OpenType fonts.
     *
@@ -1533,7 +1534,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-feature-settings
     */
-  var fontFeatureSettings: js.UndefOr[FontFeatureSettingsProperty | js.Array[FontFeatureSettingsProperty]] = js.undefined
+  var fontFeatureSettings: js.UndefOr[FontFeatureSettingsProperty | js.Array[FontFeatureSettingsProperty]] = js.native
   /**
     * The **`font-kerning`** CSS property sets the use of the kerning information stored in a font.
     *
@@ -1545,7 +1546,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-kerning
     */
-  var fontKerning: js.UndefOr[FontKerningProperty | js.Array[FontKerningProperty]] = js.undefined
+  var fontKerning: js.UndefOr[FontKerningProperty | js.Array[FontKerningProperty]] = js.native
   /**
     * The **`font-language-override`** CSS property controls the use of language-specific glyphs in a typeface.
     *
@@ -1558,7 +1559,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-language-override
     */
-  var fontLanguageOverride: js.UndefOr[FontLanguageOverrideProperty | js.Array[FontLanguageOverrideProperty]] = js.undefined
+  var fontLanguageOverride: js.UndefOr[FontLanguageOverrideProperty | js.Array[FontLanguageOverrideProperty]] = js.native
   /**
     * The **`font-optical-sizing`** CSS property sets whether text rendering is optimized for viewing at different sizes. This only works for fonts that have an optical size variation axis.
     *
@@ -1570,7 +1571,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-optical-sizing
     */
-  var fontOpticalSizing: js.UndefOr[FontOpticalSizingProperty | js.Array[FontOpticalSizingProperty]] = js.undefined
+  var fontOpticalSizing: js.UndefOr[FontOpticalSizingProperty | js.Array[FontOpticalSizingProperty]] = js.native
   /**
     * The **`font-size`** CSS property sets the size of the font. This property is also used to compute the size of `em`, `ex`, and other relative `<length>` units.
     *
@@ -1582,7 +1583,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-size
     */
-  var fontSize: js.UndefOr[FontSizeProperty[TLength] | js.Array[FontSizeProperty[TLength]]] = js.undefined
+  var fontSize: js.UndefOr[FontSizeProperty[TLength] | js.Array[FontSizeProperty[TLength]]] = js.native
   /**
     * The **`font-size-adjust`** CSS property sets how the font size should be chosen based on the height of lowercase rather than capital letters.
     *
@@ -1594,7 +1595,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-size-adjust
     */
-  var fontSizeAdjust: js.UndefOr[FontSizeAdjustProperty | js.Array[FontSizeAdjustProperty]] = js.undefined
+  var fontSizeAdjust: js.UndefOr[FontSizeAdjustProperty | js.Array[FontSizeAdjustProperty]] = js.native
   /**
     * The **`font-stretch`** CSS property selects a normal, condensed, or expanded face from a font.
     *
@@ -1606,7 +1607,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-stretch
     */
-  var fontStretch: js.UndefOr[FontStretchProperty | js.Array[FontStretchProperty]] = js.undefined
+  var fontStretch: js.UndefOr[FontStretchProperty | js.Array[FontStretchProperty]] = js.native
   /**
     * The **`font-style`** CSS property sets whether a font should be styled with a normal, italic, or oblique face from its `font-family`.
     *
@@ -1618,7 +1619,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-style
     */
-  var fontStyle: js.UndefOr[FontStyleProperty | js.Array[FontStyleProperty]] = js.undefined
+  var fontStyle: js.UndefOr[FontStyleProperty | js.Array[FontStyleProperty]] = js.native
   /**
     * The **`font-synthesis`** CSS property controls which missing typefaces, bold or italic, may be synthesized by the browser.
     *
@@ -1630,7 +1631,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-synthesis
     */
-  var fontSynthesis: js.UndefOr[FontSynthesisProperty | js.Array[FontSynthesisProperty]] = js.undefined
+  var fontSynthesis: js.UndefOr[FontSynthesisProperty | js.Array[FontSynthesisProperty]] = js.native
   /**
     * The **font-variant** CSS property is a shorthand for the longhand properties `font-variant-caps`, `font-variant-numeric`, `font-variant-alternates`, `font-variant-ligatures`, and `font-variant-east-asian`. You can also set the CSS Level 2 (Revision 1) values of `font-variant`, (that is, `normal` or `small-caps`), by using the `font` shorthand.
     *
@@ -1642,7 +1643,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-variant
     */
-  var fontVariant: js.UndefOr[FontVariantProperty | js.Array[FontVariantProperty]] = js.undefined
+  var fontVariant: js.UndefOr[FontVariantProperty | js.Array[FontVariantProperty]] = js.native
   /**
     * The **`font-variant-caps`** CSS property controls the use of alternate glyphs for capital letters.
     *
@@ -1654,7 +1655,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-variant-caps
     */
-  var fontVariantCaps: js.UndefOr[FontVariantCapsProperty | js.Array[FontVariantCapsProperty]] = js.undefined
+  var fontVariantCaps: js.UndefOr[FontVariantCapsProperty | js.Array[FontVariantCapsProperty]] = js.native
   /**
     * The **`font-variant-east-asian`** CSS property controls the use of alternate glyphs for East Asian scripts, like Japanese and Chinese.
     *
@@ -1666,7 +1667,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-variant-east-asian
     */
-  var fontVariantEastAsian: js.UndefOr[FontVariantEastAsianProperty | js.Array[FontVariantEastAsianProperty]] = js.undefined
+  var fontVariantEastAsian: js.UndefOr[FontVariantEastAsianProperty | js.Array[FontVariantEastAsianProperty]] = js.native
   /**
     * The **`font-variant-ligatures`** CSS property controls which ligatures and contextual forms are used in textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
     *
@@ -1679,7 +1680,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-variant-ligatures
     */
-  var fontVariantLigatures: js.UndefOr[FontVariantLigaturesProperty | js.Array[FontVariantLigaturesProperty]] = js.undefined
+  var fontVariantLigatures: js.UndefOr[FontVariantLigaturesProperty | js.Array[FontVariantLigaturesProperty]] = js.native
   /**
     * The **`font-variant-numeric`** CSS property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
     *
@@ -1691,7 +1692,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-variant-numeric
     */
-  var fontVariantNumeric: js.UndefOr[FontVariantNumericProperty | js.Array[FontVariantNumericProperty]] = js.undefined
+  var fontVariantNumeric: js.UndefOr[FontVariantNumericProperty | js.Array[FontVariantNumericProperty]] = js.native
   /**
     * The **`font-variant-position`** CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
     *
@@ -1703,7 +1704,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-variant-position
     */
-  var fontVariantPosition: js.UndefOr[FontVariantPositionProperty | js.Array[FontVariantPositionProperty]] = js.undefined
+  var fontVariantPosition: js.UndefOr[FontVariantPositionProperty | js.Array[FontVariantPositionProperty]] = js.native
   /**
     * The **`font-variation-settings`** CSS property provides low-level control over variable font characteristics, by specifying the four letter axis names of the characteristics you want to vary, along with their values.
     *
@@ -1715,7 +1716,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-variation-settings
     */
-  var fontVariationSettings: js.UndefOr[FontVariationSettingsProperty | js.Array[FontVariationSettingsProperty]] = js.undefined
+  var fontVariationSettings: js.UndefOr[FontVariationSettingsProperty | js.Array[FontVariationSettingsProperty]] = js.native
   /**
     * The **`font-weight`** CSS property specifies the weight (or boldness) of the font. The font weights available to you will depend on the `font-family` you are using. Some fonts are only available in `normal` and `bold`.
     *
@@ -1727,7 +1728,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/font-weight
     */
-  var fontWeight: js.UndefOr[FontWeightProperty | js.Array[FontWeightProperty]] = js.undefined
+  var fontWeight: js.UndefOr[FontWeightProperty | js.Array[FontWeightProperty]] = js.native
   /**
     * The **`grid-auto-columns`** CSS property specifies the size of an implicitly-created grid column track.
     *
@@ -1740,7 +1741,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-auto-columns
     */
-  var gridAutoColumns: js.UndefOr[GridAutoColumnsProperty[TLength] | js.Array[GridAutoColumnsProperty[TLength]]] = js.undefined
+  var gridAutoColumns: js.UndefOr[GridAutoColumnsProperty[TLength] | js.Array[GridAutoColumnsProperty[TLength]]] = js.native
   /**
     * The **`grid-auto-flow`** CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.
     *
@@ -1752,7 +1753,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-auto-flow
     */
-  var gridAutoFlow: js.UndefOr[GridAutoFlowProperty | js.Array[GridAutoFlowProperty]] = js.undefined
+  var gridAutoFlow: js.UndefOr[GridAutoFlowProperty | js.Array[GridAutoFlowProperty]] = js.native
   /**
     * The **`grid-auto-rows`** CSS property specifies the size of an implicitly-created grid row track.
     *
@@ -1765,7 +1766,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-auto-rows
     */
-  var gridAutoRows: js.UndefOr[GridAutoRowsProperty[TLength] | js.Array[GridAutoRowsProperty[TLength]]] = js.undefined
+  var gridAutoRows: js.UndefOr[GridAutoRowsProperty[TLength] | js.Array[GridAutoRowsProperty[TLength]]] = js.native
   /**
     * The **`grid-column-end`** CSS property specifies a grid item’s end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its grid area.
     *
@@ -1777,7 +1778,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-column-end
     */
-  var gridColumnEnd: js.UndefOr[GridColumnEndProperty | js.Array[GridColumnEndProperty]] = js.undefined
+  var gridColumnEnd: js.UndefOr[GridColumnEndProperty | js.Array[GridColumnEndProperty]] = js.native
   /**
     * The **`grid-column-start`** CSS property specifies a grid item’s start position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement. This start position defines the block-start edge of the grid area.
     *
@@ -1789,7 +1790,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-column-start
     */
-  var gridColumnStart: js.UndefOr[GridColumnStartProperty | js.Array[GridColumnStartProperty]] = js.undefined
+  var gridColumnStart: js.UndefOr[GridColumnStartProperty | js.Array[GridColumnStartProperty]] = js.native
   /**
     * The **`grid-row-end`** CSS property specifies a grid item’s end position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-end edge of its grid area.
     *
@@ -1801,7 +1802,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-row-end
     */
-  var gridRowEnd: js.UndefOr[GridRowEndProperty | js.Array[GridRowEndProperty]] = js.undefined
+  var gridRowEnd: js.UndefOr[GridRowEndProperty | js.Array[GridRowEndProperty]] = js.native
   /**
     * The **`grid-row-start`** CSS property specifies a grid item’s start position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start edge of its grid area.
     *
@@ -1813,7 +1814,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-row-start
     */
-  var gridRowStart: js.UndefOr[GridRowStartProperty | js.Array[GridRowStartProperty]] = js.undefined
+  var gridRowStart: js.UndefOr[GridRowStartProperty | js.Array[GridRowStartProperty]] = js.native
   /**
     * The **`grid-template-areas`** CSS property specifies named grid areas.
     *
@@ -1825,7 +1826,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-template-areas
     */
-  var gridTemplateAreas: js.UndefOr[GridTemplateAreasProperty | js.Array[GridTemplateAreasProperty]] = js.undefined
+  var gridTemplateAreas: js.UndefOr[GridTemplateAreasProperty | js.Array[GridTemplateAreasProperty]] = js.native
   /**
     * The **`grid-template-columns`** CSS property defines the line names and track sizing functions of the grid columns.
     *
@@ -1839,7 +1840,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var gridTemplateColumns: js.UndefOr[
     GridTemplateColumnsProperty[TLength] | js.Array[GridTemplateColumnsProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`grid-template-rows`** CSS property defines the line names and track sizing functions of the grid rows.
     *
@@ -1851,7 +1852,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/grid-template-rows
     */
-  var gridTemplateRows: js.UndefOr[GridTemplateRowsProperty[TLength] | js.Array[GridTemplateRowsProperty[TLength]]] = js.undefined
+  var gridTemplateRows: js.UndefOr[GridTemplateRowsProperty[TLength] | js.Array[GridTemplateRowsProperty[TLength]]] = js.native
   /**
     * The **`hanging-punctuation`** CSS property specifies whether a punctuation mark should hang at the start or end of a line of text. Hanging punctuation may be placed outside the line box.
     *
@@ -1863,7 +1864,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/hanging-punctuation
     */
-  var hangingPunctuation: js.UndefOr[HangingPunctuationProperty | js.Array[HangingPunctuationProperty]] = js.undefined
+  var hangingPunctuation: js.UndefOr[HangingPunctuationProperty | js.Array[HangingPunctuationProperty]] = js.native
   /**
     * The **`height`** CSS property specifies the height of an element. By default, the property defines the height of the content area. If `box-sizing` is set to `border-box`, however, it instead determines the height of the border area.
     *
@@ -1875,7 +1876,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/height
     */
-  var height: js.UndefOr[HeightProperty[TLength] | js.Array[HeightProperty[TLength]]] = js.undefined
+  var height: js.UndefOr[HeightProperty[TLength] | js.Array[HeightProperty[TLength]]] = js.native
   /**
     * The **`hyphens`** CSS property specifies how words should be hyphenated when text wraps across multiple lines. You can prevent hyphenation entirely, use hyphenation in manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
     *
@@ -1888,7 +1889,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/hyphens
     */
-  var hyphens: js.UndefOr[HyphensProperty | js.Array[HyphensProperty]] = js.undefined
+  var hyphens: js.UndefOr[HyphensProperty | js.Array[HyphensProperty]] = js.native
   /**
     * The **`image-orientation`** CSS property specifies a layout-independent correction to the orientation of an image. It should _not_ be used for any other orientation adjustments; instead, the `transform` property should be used with the `rotate` `<transform-function>`.
     *
@@ -1900,7 +1901,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/image-orientation
     */
-  var imageOrientation: js.UndefOr[ImageOrientationProperty | js.Array[ImageOrientationProperty]] = js.undefined
+  var imageOrientation: js.UndefOr[ImageOrientationProperty | js.Array[ImageOrientationProperty]] = js.native
   /**
     * The **`image-rendering`** CSS property sets an image scaling algorithm. The property applies to an element itself, to any images set in its other properties, and to its descendants.
     *
@@ -1912,9 +1913,9 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/image-rendering
     */
-  var imageRendering: js.UndefOr[ImageRenderingProperty | js.Array[ImageRenderingProperty]] = js.undefined
+  var imageRendering: js.UndefOr[ImageRenderingProperty | js.Array[ImageRenderingProperty]] = js.native
   /** **Initial value**: `1dppx` */
-  var imageResolution: js.UndefOr[ImageResolutionProperty | js.Array[ImageResolutionProperty]] = js.undefined
+  var imageResolution: js.UndefOr[ImageResolutionProperty | js.Array[ImageResolutionProperty]] = js.native
   /**
     * The `initial-letter` CSS property sets styling for dropped, raised, and sunken initial letters.
     *
@@ -1926,7 +1927,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/initial-letter
     */
-  var initialLetter: js.UndefOr[InitialLetterProperty | js.Array[InitialLetterProperty]] = js.undefined
+  var initialLetter: js.UndefOr[InitialLetterProperty | js.Array[InitialLetterProperty]] = js.native
   /**
     * The **`inline-size`** CSS property defines the horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the `width` or the `height` property, depending on the value of `writing-mode`.
     *
@@ -1938,7 +1939,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/inline-size
     */
-  var inlineSize: js.UndefOr[InlineSizeProperty[TLength] | js.Array[InlineSizeProperty[TLength]]] = js.undefined
+  var inlineSize: js.UndefOr[InlineSizeProperty[TLength] | js.Array[InlineSizeProperty[TLength]]] = js.native
   /**
     * The **`inset`** CSS property defines the logical block and inline start and end offsets of an element, which map to physical offsets depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top` and `bottom`, or `right` and `left` properties depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -1950,7 +1951,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/inset
     */
-  var inset: js.UndefOr[InsetProperty[TLength] | js.Array[InsetProperty[TLength]]] = js.undefined
+  var inset: js.UndefOr[InsetProperty[TLength] | js.Array[InsetProperty[TLength]]] = js.native
   /**
     * The **`inset-block`** CSS property defines the logical block start and end offsets of an element, which maps to physical offsets depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top` and `bottom`, or `right` and `left` properties depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -1962,7 +1963,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/inset-block
     */
-  var insetBlock: js.UndefOr[InsetBlockProperty[TLength] | js.Array[InsetBlockProperty[TLength]]] = js.undefined
+  var insetBlock: js.UndefOr[InsetBlockProperty[TLength] | js.Array[InsetBlockProperty[TLength]]] = js.native
   /**
     * The **`inset-block-end`** CSS property defines the logical block end offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -1974,7 +1975,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/inset-block-end
     */
-  var insetBlockEnd: js.UndefOr[InsetBlockEndProperty[TLength] | js.Array[InsetBlockEndProperty[TLength]]] = js.undefined
+  var insetBlockEnd: js.UndefOr[InsetBlockEndProperty[TLength] | js.Array[InsetBlockEndProperty[TLength]]] = js.native
   /**
     * The **`inset-block-start`** CSS property defines the logical block start offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -1986,7 +1987,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/inset-block-start
     */
-  var insetBlockStart: js.UndefOr[InsetBlockStartProperty[TLength] | js.Array[InsetBlockStartProperty[TLength]]] = js.undefined
+  var insetBlockStart: js.UndefOr[InsetBlockStartProperty[TLength] | js.Array[InsetBlockStartProperty[TLength]]] = js.native
   /**
     * The **`inset-inline`** CSS property defines the logical block start and end offsets of an element, which maps to physical offsets depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top` and `bottom`, or `right` and `left` properties depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -1998,7 +1999,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/inset-inline
     */
-  var insetInline: js.UndefOr[InsetInlineProperty[TLength] | js.Array[InsetInlineProperty[TLength]]] = js.undefined
+  var insetInline: js.UndefOr[InsetInlineProperty[TLength] | js.Array[InsetInlineProperty[TLength]]] = js.native
   /**
     * The **`inset-inline-end`** CSS property defines the logical inline end inset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -2010,7 +2011,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/inset-inline-end
     */
-  var insetInlineEnd: js.UndefOr[InsetInlineEndProperty[TLength] | js.Array[InsetInlineEndProperty[TLength]]] = js.undefined
+  var insetInlineEnd: js.UndefOr[InsetInlineEndProperty[TLength] | js.Array[InsetInlineEndProperty[TLength]]] = js.native
   /**
     * The **`inset-inline-start`** CSS property defines the logical inline start inset of an element, which maps to a physical offset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -2022,7 +2023,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/inset-inline-start
     */
-  var insetInlineStart: js.UndefOr[InsetInlineStartProperty[TLength] | js.Array[InsetInlineStartProperty[TLength]]] = js.undefined
+  var insetInlineStart: js.UndefOr[InsetInlineStartProperty[TLength] | js.Array[InsetInlineStartProperty[TLength]]] = js.native
   /**
     * The **`isolation`** CSS property determines whether an element must create a new stacking context.
     *
@@ -2034,7 +2035,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/isolation
     */
-  var isolation: js.UndefOr[IsolationProperty | js.Array[IsolationProperty]] = js.undefined
+  var isolation: js.UndefOr[IsolationProperty | js.Array[IsolationProperty]] = js.native
   /**
     * The CSS **`justify-content`** property defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container.
     *
@@ -2061,7 +2062,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/justify-content
     */
-  var justifyContent: js.UndefOr[JustifyContentProperty | js.Array[JustifyContentProperty]] = js.undefined
+  var justifyContent: js.UndefOr[JustifyContentProperty | js.Array[JustifyContentProperty]] = js.native
   /**
     * The CSS **`justify-items`** property defines the default `justify-self` for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
     *
@@ -2087,7 +2088,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/justify-items
     */
-  var justifyItems: js.UndefOr[JustifyItemsProperty | js.Array[JustifyItemsProperty]] = js.undefined
+  var justifyItems: js.UndefOr[JustifyItemsProperty | js.Array[JustifyItemsProperty]] = js.native
   /**
     * The CSS **`justify-self`** property set the way a box is justified inside its alignment container along the appropriate axis.
     *
@@ -2113,7 +2114,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/justify-self
     */
-  var justifySelf: js.UndefOr[JustifySelfProperty | js.Array[JustifySelfProperty]] = js.undefined
+  var justifySelf: js.UndefOr[JustifySelfProperty | js.Array[JustifySelfProperty]] = js.native
   /**
     * The **`left`** CSS property participates in specifying the horizontal position of a _positioned element_. It has no effect on non-positioned elements.
     *
@@ -2125,7 +2126,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/left
     */
-  var left: js.UndefOr[LeftProperty[TLength] | js.Array[LeftProperty[TLength]]] = js.undefined
+  var left: js.UndefOr[LeftProperty[TLength] | js.Array[LeftProperty[TLength]]] = js.native
   /**
     * The **`letter-spacing`** CSS property sets the spacing behavior between text characters.
     *
@@ -2137,7 +2138,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/letter-spacing
     */
-  var letterSpacing: js.UndefOr[LetterSpacingProperty[TLength] | js.Array[LetterSpacingProperty[TLength]]] = js.undefined
+  var letterSpacing: js.UndefOr[LetterSpacingProperty[TLength] | js.Array[LetterSpacingProperty[TLength]]] = js.native
   /**
     * The **`line-break`** CSS property sets how to break lines of Chinese, Japanese, or Korean (CJK) text when working with punctuation and symbols.
     *
@@ -2150,7 +2151,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/line-break
     */
-  var lineBreak: js.UndefOr[LineBreakProperty | js.Array[LineBreakProperty]] = js.undefined
+  var lineBreak: js.UndefOr[LineBreakProperty | js.Array[LineBreakProperty]] = js.native
   /**
     * The **`line-height`** CSS property sets the amount of space used for lines, such as in text. On block-level elements, it specifies the minimum height of line boxes within the element. On non-replaced inline elements, it specifies the height that is used to calculate line box height.
     *
@@ -2162,7 +2163,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/line-height
     */
-  var lineHeight: js.UndefOr[LineHeightProperty[TLength] | js.Array[LineHeightProperty[TLength]]] = js.undefined
+  var lineHeight: js.UndefOr[LineHeightProperty[TLength] | js.Array[LineHeightProperty[TLength]]] = js.native
   /**
     * The **`line-height-step`** CSS property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.
     *
@@ -2174,7 +2175,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/line-height-step
     */
-  var lineHeightStep: js.UndefOr[LineHeightStepProperty[TLength] | js.Array[LineHeightStepProperty[TLength]]] = js.undefined
+  var lineHeightStep: js.UndefOr[LineHeightStepProperty[TLength] | js.Array[LineHeightStepProperty[TLength]]] = js.native
   /**
     * The **`list-style-image`** CSS property sets an image to be used as the list item marker.
     *
@@ -2186,7 +2187,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/list-style-image
     */
-  var listStyleImage: js.UndefOr[ListStyleImageProperty | js.Array[ListStyleImageProperty]] = js.undefined
+  var listStyleImage: js.UndefOr[ListStyleImageProperty | js.Array[ListStyleImageProperty]] = js.native
   /**
     * The **`list-style-position`** CSS property sets the position of the `::marker` relative to a list item.
     *
@@ -2198,7 +2199,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/list-style-position
     */
-  var listStylePosition: js.UndefOr[ListStylePositionProperty | js.Array[ListStylePositionProperty]] = js.undefined
+  var listStylePosition: js.UndefOr[ListStylePositionProperty | js.Array[ListStylePositionProperty]] = js.native
   /**
     * The **`list-style-type`** CSS property sets the marker (such as a disc, character, or custom counter style) of a list item element.
     *
@@ -2210,7 +2211,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/list-style-type
     */
-  var listStyleType: js.UndefOr[ListStyleTypeProperty | js.Array[ListStyleTypeProperty]] = js.undefined
+  var listStyleType: js.UndefOr[ListStyleTypeProperty | js.Array[ListStyleTypeProperty]] = js.native
   /**
     * The **`margin-block`** CSS property defines the logical block start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
     *
@@ -2222,7 +2223,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-block
     */
-  var marginBlock: js.UndefOr[MarginBlockProperty[TLength] | js.Array[MarginBlockProperty[TLength]]] = js.undefined
+  var marginBlock: js.UndefOr[MarginBlockProperty[TLength] | js.Array[MarginBlockProperty[TLength]]] = js.native
   /**
     * The **`margin-block-end`** CSS property defines the logical block end margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation.
     *
@@ -2234,7 +2235,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-block-end
     */
-  var marginBlockEnd: js.UndefOr[MarginBlockEndProperty[TLength] | js.Array[MarginBlockEndProperty[TLength]]] = js.undefined
+  var marginBlockEnd: js.UndefOr[MarginBlockEndProperty[TLength] | js.Array[MarginBlockEndProperty[TLength]]] = js.native
   /**
     * The **`margin-block-start`** CSS property defines the logical block start margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation.
     *
@@ -2246,7 +2247,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-block-start
     */
-  var marginBlockStart: js.UndefOr[MarginBlockStartProperty[TLength] | js.Array[MarginBlockStartProperty[TLength]]] = js.undefined
+  var marginBlockStart: js.UndefOr[MarginBlockStartProperty[TLength] | js.Array[MarginBlockStartProperty[TLength]]] = js.native
   /**
     * The **`margin-bottom`** CSS property sets the margin area on the bottom of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
     *
@@ -2258,7 +2259,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
     */
-  var marginBottom: js.UndefOr[MarginBottomProperty[TLength] | js.Array[MarginBottomProperty[TLength]]] = js.undefined
+  var marginBottom: js.UndefOr[MarginBottomProperty[TLength] | js.Array[MarginBottomProperty[TLength]]] = js.native
   /**
     * The **`margin-inline`** CSS property defines the logical inline start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
     *
@@ -2270,7 +2271,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-inline
     */
-  var marginInline: js.UndefOr[MarginInlineProperty[TLength] | js.Array[MarginInlineProperty[TLength]]] = js.undefined
+  var marginInline: js.UndefOr[MarginInlineProperty[TLength] | js.Array[MarginInlineProperty[TLength]]] = js.native
   /**
     * The **`margin-inline-end`** CSS property defines the logical inline end margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation. In other words, it corresponds to the `margin-top`, `margin-right`, `margin-bottom` or `margin-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -2283,7 +2284,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-inline-end
     */
-  var marginInlineEnd: js.UndefOr[MarginInlineEndProperty[TLength] | js.Array[MarginInlineEndProperty[TLength]]] = js.undefined
+  var marginInlineEnd: js.UndefOr[MarginInlineEndProperty[TLength] | js.Array[MarginInlineEndProperty[TLength]]] = js.native
   /**
     * The **`margin-inline-start`** CSS property defines the logical inline start margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation. It corresponds to the `margin-top`, `margin-right`, `margin-bottom`, or `margin-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -2298,7 +2299,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var marginInlineStart: js.UndefOr[
     MarginInlineStartProperty[TLength] | js.Array[MarginInlineStartProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`margin-left`** CSS property sets the margin area on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
     *
@@ -2310,7 +2311,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-left
     */
-  var marginLeft: js.UndefOr[MarginLeftProperty[TLength] | js.Array[MarginLeftProperty[TLength]]] = js.undefined
+  var marginLeft: js.UndefOr[MarginLeftProperty[TLength] | js.Array[MarginLeftProperty[TLength]]] = js.native
   /**
     * The **`margin-right`** CSS property sets the margin area on the right side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
     *
@@ -2322,7 +2323,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
     */
-  var marginRight: js.UndefOr[MarginRightProperty[TLength] | js.Array[MarginRightProperty[TLength]]] = js.undefined
+  var marginRight: js.UndefOr[MarginRightProperty[TLength] | js.Array[MarginRightProperty[TLength]]] = js.native
   /**
     * The **`margin-top`** CSS property sets the margin area on the top of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
     *
@@ -2334,43 +2335,43 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-top
     */
-  var marginTop: js.UndefOr[MarginTopProperty[TLength] | js.Array[MarginTopProperty[TLength]]] = js.undefined
+  var marginTop: js.UndefOr[MarginTopProperty[TLength] | js.Array[MarginTopProperty[TLength]]] = js.native
   /**
     * The **`mask-border-mode`** CSS property specifies the blending mode used in a mask border.
     *
     * **Initial value**: `alpha`
     */
-  var maskBorderMode: js.UndefOr[MaskBorderModeProperty | js.Array[MaskBorderModeProperty]] = js.undefined
+  var maskBorderMode: js.UndefOr[MaskBorderModeProperty | js.Array[MaskBorderModeProperty]] = js.native
   /**
     * The **`mask-border-outset`** CSS property specifies the distance by which an element's mask border is set out from its border box.
     *
     * **Initial value**: `0`
     */
-  var maskBorderOutset: js.UndefOr[MaskBorderOutsetProperty[TLength] | js.Array[MaskBorderOutsetProperty[TLength]]] = js.undefined
+  var maskBorderOutset: js.UndefOr[MaskBorderOutsetProperty[TLength] | js.Array[MaskBorderOutsetProperty[TLength]]] = js.native
   /**
     * The **`mask-border-repeat`** CSS property sets how the edge regions of a source image are adjusted to fit the dimensions of an element's mask border.
     *
     * **Initial value**: `stretch`
     */
-  var maskBorderRepeat: js.UndefOr[MaskBorderRepeatProperty | js.Array[MaskBorderRepeatProperty]] = js.undefined
+  var maskBorderRepeat: js.UndefOr[MaskBorderRepeatProperty | js.Array[MaskBorderRepeatProperty]] = js.native
   /**
     * The **`mask-border-slice`** CSS property divides the image set by `mask-border-source` into regions. These regions are used to form the components of an element's mask border.
     *
     * **Initial value**: `0`
     */
-  var maskBorderSlice: js.UndefOr[MaskBorderSliceProperty | js.Array[MaskBorderSliceProperty]] = js.undefined
+  var maskBorderSlice: js.UndefOr[MaskBorderSliceProperty | js.Array[MaskBorderSliceProperty]] = js.native
   /**
     * The **`mask-border-source`** CSS property sets the source image used to create an element's mask border.
     *
     * **Initial value**: `none`
     */
-  var maskBorderSource: js.UndefOr[MaskBorderSourceProperty | js.Array[MaskBorderSourceProperty]] = js.undefined
+  var maskBorderSource: js.UndefOr[MaskBorderSourceProperty | js.Array[MaskBorderSourceProperty]] = js.native
   /**
     * The **`mask-border-width`** CSS property sets the width of an element's mask border.
     *
     * **Initial value**: `auto`
     */
-  var maskBorderWidth: js.UndefOr[MaskBorderWidthProperty[TLength] | js.Array[MaskBorderWidthProperty[TLength]]] = js.undefined
+  var maskBorderWidth: js.UndefOr[MaskBorderWidthProperty[TLength] | js.Array[MaskBorderWidthProperty[TLength]]] = js.native
   /**
     * The **`mask-clip`** CSS property determines the area, which is affected by a mask. The painted content of an element must be restricted to this area.
     *
@@ -2382,7 +2383,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mask-clip
     */
-  var maskClip: js.UndefOr[MaskClipProperty | js.Array[MaskClipProperty]] = js.undefined
+  var maskClip: js.UndefOr[MaskClipProperty | js.Array[MaskClipProperty]] = js.native
   /**
     * The **`mask-composite`** CSS property represents a compositing operation used on the current mask layer with the mask layers below it.
     *
@@ -2394,7 +2395,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mask-composite
     */
-  var maskComposite: js.UndefOr[MaskCompositeProperty | js.Array[MaskCompositeProperty]] = js.undefined
+  var maskComposite: js.UndefOr[MaskCompositeProperty | js.Array[MaskCompositeProperty]] = js.native
   /**
     * The **`mask-image`** CSS property sets the image that is used as mask layer for an element.
     *
@@ -2406,7 +2407,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mask-image
     */
-  var maskImage: js.UndefOr[MaskImageProperty | js.Array[MaskImageProperty]] = js.undefined
+  var maskImage: js.UndefOr[MaskImageProperty | js.Array[MaskImageProperty]] = js.native
   /**
     * The **`mask-mode`** CSS property sets whether the mask reference defined by `mask-image` is treated as a luminance or alpha mask.
     *
@@ -2418,7 +2419,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mask-mode
     */
-  var maskMode: js.UndefOr[MaskModeProperty | js.Array[MaskModeProperty]] = js.undefined
+  var maskMode: js.UndefOr[MaskModeProperty | js.Array[MaskModeProperty]] = js.native
   /**
     * The **`mask-origin`** CSS property sets the origin of a mask.
     *
@@ -2430,7 +2431,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mask-origin
     */
-  var maskOrigin: js.UndefOr[MaskOriginProperty | js.Array[MaskOriginProperty]] = js.undefined
+  var maskOrigin: js.UndefOr[MaskOriginProperty | js.Array[MaskOriginProperty]] = js.native
   /**
     * The **`mask-position`** CSS property sets the initial position, relative to the mask position layer set by `mask-origin`, for each defined mask image.
     *
@@ -2442,7 +2443,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mask-position
     */
-  var maskPosition: js.UndefOr[MaskPositionProperty[TLength] | js.Array[MaskPositionProperty[TLength]]] = js.undefined
+  var maskPosition: js.UndefOr[MaskPositionProperty[TLength] | js.Array[MaskPositionProperty[TLength]]] = js.native
   /**
     * The **`mask-repeat`** CSS property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
     *
@@ -2454,7 +2455,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mask-repeat
     */
-  var maskRepeat: js.UndefOr[MaskRepeatProperty | js.Array[MaskRepeatProperty]] = js.undefined
+  var maskRepeat: js.UndefOr[MaskRepeatProperty | js.Array[MaskRepeatProperty]] = js.native
   /**
     * The **`mask-size`** CSS property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.
     *
@@ -2466,7 +2467,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mask-size
     */
-  var maskSize: js.UndefOr[MaskSizeProperty[TLength] | js.Array[MaskSizeProperty[TLength]]] = js.undefined
+  var maskSize: js.UndefOr[MaskSizeProperty[TLength] | js.Array[MaskSizeProperty[TLength]]] = js.native
   /**
     * The **`mask-type`** CSS property sets whether an SVG `<mask>` element is used as a _luminance_ or an _alpha_ mask. It applies to the `<mask>` element itself.
     *
@@ -2478,7 +2479,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mask-type
     */
-  var maskType: js.UndefOr[MaskTypeProperty | js.Array[MaskTypeProperty]] = js.undefined
+  var maskType: js.UndefOr[MaskTypeProperty | js.Array[MaskTypeProperty]] = js.native
   /**
     * The `**max-block-size**` CSS property specifies the maximum size of an element in the direction opposite that of the writing direction as specified by `writing-mode`. That is, if the writing direction is horizontal, then `max-block-size` is equivalent to `max-height`; if the writing direction is vertical, `max-block-size` is the same as `max-width`.
     *
@@ -2490,7 +2491,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/max-block-size
     */
-  var maxBlockSize: js.UndefOr[MaxBlockSizeProperty[TLength] | js.Array[MaxBlockSizeProperty[TLength]]] = js.undefined
+  var maxBlockSize: js.UndefOr[MaxBlockSizeProperty[TLength] | js.Array[MaxBlockSizeProperty[TLength]]] = js.native
   /**
     * The **`max-height`** CSS property sets the maximum height of an element. It prevents the used value of the `height` property from becoming larger than the value specified for `max-height`.
     *
@@ -2502,7 +2503,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/max-height
     */
-  var maxHeight: js.UndefOr[MaxHeightProperty[TLength] | js.Array[MaxHeightProperty[TLength]]] = js.undefined
+  var maxHeight: js.UndefOr[MaxHeightProperty[TLength] | js.Array[MaxHeightProperty[TLength]]] = js.native
   /**
     * The **`max-inline-size`** CSS property defines the horizontal or vertical maximum size of an element's block depending on its writing mode. It corresponds to the `max-width` or the `max-height` property depending on the value defined for `writing-mode`. If the writing mode is vertically oriented, the value of `max-inline-size` relates to the maximal height of the element, otherwise it relates to the maximal width of the element. It relates to `max-block-size`, which defines the other dimension of the element.
     *
@@ -2515,9 +2516,9 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/max-inline-size
     */
-  var maxInlineSize: js.UndefOr[MaxInlineSizeProperty[TLength] | js.Array[MaxInlineSizeProperty[TLength]]] = js.undefined
+  var maxInlineSize: js.UndefOr[MaxInlineSizeProperty[TLength] | js.Array[MaxInlineSizeProperty[TLength]]] = js.native
   /** **Initial value**: `none` */
-  var maxLines: js.UndefOr[MaxLinesProperty | js.Array[MaxLinesProperty]] = js.undefined
+  var maxLines: js.UndefOr[MaxLinesProperty | js.Array[MaxLinesProperty]] = js.native
   /**
     * The **`max-width`** CSS property sets the maximum width of an element. It prevents the used value of the `width` property from becoming larger than the value specified by `max-width`.
     *
@@ -2529,7 +2530,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/max-width
     */
-  var maxWidth: js.UndefOr[MaxWidthProperty[TLength] | js.Array[MaxWidthProperty[TLength]]] = js.undefined
+  var maxWidth: js.UndefOr[MaxWidthProperty[TLength] | js.Array[MaxWidthProperty[TLength]]] = js.native
   /**
     * The **`min-block-size`** CSS property defines the minimum horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the `min-width` or the `min-height` property, depending on the value of `writing-mode`.
     *
@@ -2541,7 +2542,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/min-block-size
     */
-  var minBlockSize: js.UndefOr[MinBlockSizeProperty[TLength] | js.Array[MinBlockSizeProperty[TLength]]] = js.undefined
+  var minBlockSize: js.UndefOr[MinBlockSizeProperty[TLength] | js.Array[MinBlockSizeProperty[TLength]]] = js.native
   /**
     * The **`min-height`** CSS property sets the minimum height of an element. It prevents the used value of the `height` property from becoming smaller than the value specified for `min-height`.
     *
@@ -2553,7 +2554,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/min-height
     */
-  var minHeight: js.UndefOr[MinHeightProperty[TLength] | js.Array[MinHeightProperty[TLength]]] = js.undefined
+  var minHeight: js.UndefOr[MinHeightProperty[TLength] | js.Array[MinHeightProperty[TLength]]] = js.native
   /**
     * The **`min-inline-size`** CSS property defines the horizontal or vertical minimal size of an element's block, depending on its writing mode. It corresponds to either the `min-width` or the `min-height` property, depending on the value of `writing-mode`.
     *
@@ -2565,7 +2566,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/min-inline-size
     */
-  var minInlineSize: js.UndefOr[MinInlineSizeProperty[TLength] | js.Array[MinInlineSizeProperty[TLength]]] = js.undefined
+  var minInlineSize: js.UndefOr[MinInlineSizeProperty[TLength] | js.Array[MinInlineSizeProperty[TLength]]] = js.native
   /**
     * The **`min-width`** CSS property sets the minimum width of an element. It prevents the used value of the `width` property from becoming smaller than the value specified for `min-width`.
     *
@@ -2577,7 +2578,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/min-width
     */
-  var minWidth: js.UndefOr[MinWidthProperty[TLength] | js.Array[MinWidthProperty[TLength]]] = js.undefined
+  var minWidth: js.UndefOr[MinWidthProperty[TLength] | js.Array[MinWidthProperty[TLength]]] = js.native
   /**
     * The **`mix-blend-mode`** CSS property sets how an element's content should blend with the content of the element's parent and the element's background.
     *
@@ -2589,7 +2590,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/mix-blend-mode
     */
-  var mixBlendMode: js.UndefOr[MixBlendModeProperty | js.Array[MixBlendModeProperty]] = js.undefined
+  var mixBlendMode: js.UndefOr[MixBlendModeProperty | js.Array[MixBlendModeProperty]] = js.native
   /**
     * The **`offset-distance`** CSS property specifies a position along an `offset-path`.
     *
@@ -2602,7 +2603,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/offset-distance
     */
-  var motionDistance: js.UndefOr[OffsetDistanceProperty[TLength] | js.Array[OffsetDistanceProperty[TLength]]] = js.undefined
+  var motionDistance: js.UndefOr[OffsetDistanceProperty[TLength] | js.Array[OffsetDistanceProperty[TLength]]] = js.native
   /**
     * The **`offset-path`** CSS property specifies a motion path for an element to follow and defines the element's positioning within the parent container or SVG coordinate system.
     *
@@ -2615,7 +2616,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/offset-path
     */
-  var motionPath: js.UndefOr[OffsetPathProperty | js.Array[OffsetPathProperty]] = js.undefined
+  var motionPath: js.UndefOr[OffsetPathProperty | js.Array[OffsetPathProperty]] = js.native
   /**
     * The **`offset-rotate`** CSS property defines the direction of the element while positioning along the offset path.
     *
@@ -2628,7 +2629,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/offset-rotate
     */
-  var motionRotation: js.UndefOr[OffsetRotateProperty | js.Array[OffsetRotateProperty]] = js.undefined
+  var motionRotation: js.UndefOr[OffsetRotateProperty | js.Array[OffsetRotateProperty]] = js.native
   /**
     * The **`object-fit`** CSS property sets how the content of a replaced element, such as an `<img>` or `<video>`, should be resized to fit its container.
     *
@@ -2640,7 +2641,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/object-fit
     */
-  var objectFit: js.UndefOr[ObjectFitProperty | js.Array[ObjectFitProperty]] = js.undefined
+  var objectFit: js.UndefOr[ObjectFitProperty | js.Array[ObjectFitProperty]] = js.native
   /**
     * The **`object-position`** CSS property specifies the alignment of the selected replaced element's contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
     *
@@ -2652,9 +2653,9 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/object-position
     */
-  var objectPosition: js.UndefOr[ObjectPositionProperty[TLength] | js.Array[ObjectPositionProperty[TLength]]] = js.undefined
+  var objectPosition: js.UndefOr[ObjectPositionProperty[TLength] | js.Array[ObjectPositionProperty[TLength]]] = js.native
   /** **Initial value**: `auto` */
-  var offsetAnchor: js.UndefOr[OffsetAnchorProperty[TLength] | js.Array[OffsetAnchorProperty[TLength]]] = js.undefined
+  var offsetAnchor: js.UndefOr[OffsetAnchorProperty[TLength] | js.Array[OffsetAnchorProperty[TLength]]] = js.native
   /**
     * The **`offset-distance`** CSS property specifies a position along an `offset-path`.
     *
@@ -2667,7 +2668,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/offset-distance
     */
-  var offsetDistance: js.UndefOr[OffsetDistanceProperty[TLength] | js.Array[OffsetDistanceProperty[TLength]]] = js.undefined
+  var offsetDistance: js.UndefOr[OffsetDistanceProperty[TLength] | js.Array[OffsetDistanceProperty[TLength]]] = js.native
   /**
     * The **`offset-path`** CSS property specifies a motion path for an element to follow and defines the element's positioning within the parent container or SVG coordinate system.
     *
@@ -2680,9 +2681,9 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/offset-path
     */
-  var offsetPath: js.UndefOr[OffsetPathProperty | js.Array[OffsetPathProperty]] = js.undefined
+  var offsetPath: js.UndefOr[OffsetPathProperty | js.Array[OffsetPathProperty]] = js.native
   /** **Initial value**: `auto` */
-  var offsetPosition: js.UndefOr[OffsetPositionProperty[TLength] | js.Array[OffsetPositionProperty[TLength]]] = js.undefined
+  var offsetPosition: js.UndefOr[OffsetPositionProperty[TLength] | js.Array[OffsetPositionProperty[TLength]]] = js.native
   /**
     * The **`offset-rotate`** CSS property defines the direction of the element while positioning along the offset path.
     *
@@ -2695,7 +2696,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/offset-rotate
     */
-  var offsetRotate: js.UndefOr[OffsetRotateProperty | js.Array[OffsetRotateProperty]] = js.undefined
+  var offsetRotate: js.UndefOr[OffsetRotateProperty | js.Array[OffsetRotateProperty]] = js.native
   /**
     * The **`offset-rotate`** CSS property defines the direction of the element while positioning along the offset path.
     *
@@ -2708,7 +2709,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/offset-rotate
     */
-  var offsetRotation: js.UndefOr[OffsetRotateProperty | js.Array[OffsetRotateProperty]] = js.undefined
+  var offsetRotation: js.UndefOr[OffsetRotateProperty | js.Array[OffsetRotateProperty]] = js.native
   /**
     * The **`opacity`** CSS property sets the transparency of an element or the degree to which content behind an element is visible.
     *
@@ -2720,7 +2721,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/opacity
     */
-  var opacity: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.undefined
+  var opacity: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.native
   /**
     * The **`order`** CSS property sets the order to lay out an item in a flex or grid container. Items in a container are sorted by ascending `order` value and then by their source code order.
     *
@@ -2733,7 +2734,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/order
     */
-  var order: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.undefined
+  var order: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.native
   /**
     * The **`orphans`** CSS property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a page, region, or column.
     *
@@ -2745,7 +2746,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/orphans
     */
-  var orphans: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.undefined
+  var orphans: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.native
   /**
     * The **`outline-color`** CSS property sets the color of an element's outline.
     *
@@ -2757,7 +2758,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/outline-color
     */
-  var outlineColor: js.UndefOr[OutlineColorProperty | js.Array[OutlineColorProperty]] = js.undefined
+  var outlineColor: js.UndefOr[OutlineColorProperty | js.Array[OutlineColorProperty]] = js.native
   /**
     * The **`outline-offset`** CSS property sets the amount of space between an outline and the edge or border of an element.
     *
@@ -2769,7 +2770,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/outline-offset
     */
-  var outlineOffset: js.UndefOr[OutlineOffsetProperty[TLength] | js.Array[OutlineOffsetProperty[TLength]]] = js.undefined
+  var outlineOffset: js.UndefOr[OutlineOffsetProperty[TLength] | js.Array[OutlineOffsetProperty[TLength]]] = js.native
   /**
     * The **`outline-style`** CSS property sets the style of an element's outline. An outline is a line that is drawn around an element, outside the `border`.
     *
@@ -2781,7 +2782,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/outline-style
     */
-  var outlineStyle: js.UndefOr[OutlineStyleProperty | js.Array[OutlineStyleProperty]] = js.undefined
+  var outlineStyle: js.UndefOr[OutlineStyleProperty | js.Array[OutlineStyleProperty]] = js.native
   /**
     * The **`outline-width`** CSS property sets the thickness of an element's outline. An outline is a line that is drawn around an element, outside the `border`.
     *
@@ -2793,7 +2794,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/outline-width
     */
-  var outlineWidth: js.UndefOr[OutlineWidthProperty[TLength] | js.Array[OutlineWidthProperty[TLength]]] = js.undefined
+  var outlineWidth: js.UndefOr[OutlineWidthProperty[TLength] | js.Array[OutlineWidthProperty[TLength]]] = js.native
   /**
     * The **`overflow`** CSS property sets what to do when an element's content is too big to fit in its block formatting context. It is a shorthand for `overflow-x` and `overflow-y`.
     *
@@ -2805,7 +2806,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overflow
     */
-  var overflow: js.UndefOr[OverflowProperty | js.Array[OverflowProperty]] = js.undefined
+  var overflow: js.UndefOr[OverflowProperty | js.Array[OverflowProperty]] = js.native
   /**
     * **Initial value**: `auto`
     *
@@ -2815,7 +2816,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overflow-anchor
     */
-  var overflowAnchor: js.UndefOr[OverflowAnchorProperty | js.Array[OverflowAnchorProperty]] = js.undefined
+  var overflowAnchor: js.UndefOr[OverflowAnchorProperty | js.Array[OverflowAnchorProperty]] = js.native
   /**
     * **Initial value**: `auto`
     *
@@ -2825,7 +2826,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overflow-block
     */
-  var overflowBlock: js.UndefOr[OverflowBlockProperty | js.Array[OverflowBlockProperty]] = js.undefined
+  var overflowBlock: js.UndefOr[OverflowBlockProperty | js.Array[OverflowBlockProperty]] = js.native
   /**
     * The **`overflow-clip-box`** CSS property specifies relative to which box the clipping happens when there is an overflow. It is short hand for the `overflow-clip-box-inline` and `overflow-clip-box-block` properties.
     *
@@ -2837,7 +2838,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Mozilla/CSS/overflow-clip-box
     */
-  var overflowClipBox: js.UndefOr[OverflowClipBoxProperty | js.Array[OverflowClipBoxProperty]] = js.undefined
+  var overflowClipBox: js.UndefOr[OverflowClipBoxProperty | js.Array[OverflowClipBoxProperty]] = js.native
   /**
     * **Initial value**: `auto`
     *
@@ -2847,7 +2848,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overflow-inline
     */
-  var overflowInline: js.UndefOr[OverflowInlineProperty | js.Array[OverflowInlineProperty]] = js.undefined
+  var overflowInline: js.UndefOr[OverflowInlineProperty | js.Array[OverflowInlineProperty]] = js.native
   /**
     * The `**overflow-wrap**` CSS property sets whether the browser should insert line breaks within words to prevent text from overflowing its content box.
     *
@@ -2860,7 +2861,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overflow-wrap
     */
-  var overflowWrap: js.UndefOr[OverflowWrapProperty | js.Array[OverflowWrapProperty]] = js.undefined
+  var overflowWrap: js.UndefOr[OverflowWrapProperty | js.Array[OverflowWrapProperty]] = js.native
   /**
     * The **`overflow-x`** CSS property sets what shows when content overflows a block-level element's left and right edges. This may be nothing, a scroll bar, or the overflow content.
     *
@@ -2872,7 +2873,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overflow-x
     */
-  var overflowX: js.UndefOr[OverflowXProperty | js.Array[OverflowXProperty]] = js.undefined
+  var overflowX: js.UndefOr[OverflowXProperty | js.Array[OverflowXProperty]] = js.native
   /**
     * The **`overflow-y`** CSS property sets what shows when content overflows a block-level element's top and bottom edges. This may be nothing, a scroll bar, or the overflow content.
     *
@@ -2884,7 +2885,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overflow-y
     */
-  var overflowY: js.UndefOr[OverflowYProperty | js.Array[OverflowYProperty]] = js.undefined
+  var overflowY: js.UndefOr[OverflowYProperty | js.Array[OverflowYProperty]] = js.native
   /**
     * The **`overscroll-behavior`** CSS property sets what a browser does when reaching the boundary of a scrolling area. It's a shorthand for `overscroll-behavior-x` and `overscroll-behavior-y`.
     *
@@ -2896,7 +2897,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overscroll-behavior
     */
-  var overscrollBehavior: js.UndefOr[OverscrollBehaviorProperty | js.Array[OverscrollBehaviorProperty]] = js.undefined
+  var overscrollBehavior: js.UndefOr[OverscrollBehaviorProperty | js.Array[OverscrollBehaviorProperty]] = js.native
   /**
     * The **`overscroll-behavior-x`** CSS property sets the browser's behavior when the horizontal boundary of a scrolling area is reached.
     *
@@ -2908,7 +2909,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overscroll-behavior-x
     */
-  var overscrollBehaviorX: js.UndefOr[OverscrollBehaviorXProperty | js.Array[OverscrollBehaviorXProperty]] = js.undefined
+  var overscrollBehaviorX: js.UndefOr[OverscrollBehaviorXProperty | js.Array[OverscrollBehaviorXProperty]] = js.native
   /**
     * The **`overscroll-behavior-y`** CSS property sets the browser's behavior when the vertical boundary of a scrolling area is reached.
     *
@@ -2920,7 +2921,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overscroll-behavior-y
     */
-  var overscrollBehaviorY: js.UndefOr[OverscrollBehaviorYProperty | js.Array[OverscrollBehaviorYProperty]] = js.undefined
+  var overscrollBehaviorY: js.UndefOr[OverscrollBehaviorYProperty | js.Array[OverscrollBehaviorYProperty]] = js.native
   /**
     * The **`padding-block`** CSS property defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
     *
@@ -2932,7 +2933,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-block
     */
-  var paddingBlock: js.UndefOr[PaddingBlockProperty[TLength] | js.Array[PaddingBlockProperty[TLength]]] = js.undefined
+  var paddingBlock: js.UndefOr[PaddingBlockProperty[TLength] | js.Array[PaddingBlockProperty[TLength]]] = js.native
   /**
     * The **`padding-block-end`** CSS property defines the logical block end padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the `padding-top`, `padding-right`, `padding-bottom`, or `padding-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -2944,7 +2945,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-block-end
     */
-  var paddingBlockEnd: js.UndefOr[PaddingBlockEndProperty[TLength] | js.Array[PaddingBlockEndProperty[TLength]]] = js.undefined
+  var paddingBlockEnd: js.UndefOr[PaddingBlockEndProperty[TLength] | js.Array[PaddingBlockEndProperty[TLength]]] = js.native
   /**
     * The **`padding-block-start`** CSS property defines the logical block start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the `padding-top`, `padding-right`, `padding-bottom`, or `padding-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -2958,7 +2959,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var paddingBlockStart: js.UndefOr[
     PaddingBlockStartProperty[TLength] | js.Array[PaddingBlockStartProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`padding-bottom`** CSS property sets the height of the padding area on the bottom of an element.
     *
@@ -2970,7 +2971,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-bottom
     */
-  var paddingBottom: js.UndefOr[PaddingBottomProperty[TLength] | js.Array[PaddingBottomProperty[TLength]]] = js.undefined
+  var paddingBottom: js.UndefOr[PaddingBottomProperty[TLength] | js.Array[PaddingBottomProperty[TLength]]] = js.native
   /**
     * The **`padding-inline`** CSS property defines the logical inline start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
     *
@@ -2982,7 +2983,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-inline
     */
-  var paddingInline: js.UndefOr[PaddingInlineProperty[TLength] | js.Array[PaddingInlineProperty[TLength]]] = js.undefined
+  var paddingInline: js.UndefOr[PaddingInlineProperty[TLength] | js.Array[PaddingInlineProperty[TLength]]] = js.native
   /**
     * The **`padding-inline-end`** CSS property defines the logical inline end padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the `padding-top`, `padding-right`, `padding-bottom`, or `padding-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -2995,7 +2996,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-inline-end
     */
-  var paddingInlineEnd: js.UndefOr[PaddingInlineEndProperty[TLength] | js.Array[PaddingInlineEndProperty[TLength]]] = js.undefined
+  var paddingInlineEnd: js.UndefOr[PaddingInlineEndProperty[TLength] | js.Array[PaddingInlineEndProperty[TLength]]] = js.native
   /**
     * The **`padding-inline-start`** CSS property defines the logical inline start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the `padding-top`, `padding-right`, `padding-bottom`, or `padding-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
     *
@@ -3010,7 +3011,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var paddingInlineStart: js.UndefOr[
     PaddingInlineStartProperty[TLength] | js.Array[PaddingInlineStartProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The **`padding-left`** CSS property sets the width of the padding area on the left side of an element.
     *
@@ -3022,7 +3023,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-left
     */
-  var paddingLeft: js.UndefOr[PaddingLeftProperty[TLength] | js.Array[PaddingLeftProperty[TLength]]] = js.undefined
+  var paddingLeft: js.UndefOr[PaddingLeftProperty[TLength] | js.Array[PaddingLeftProperty[TLength]]] = js.native
   /**
     * The **`padding-right`** CSS property sets the width of the padding area on the right side of an element.
     *
@@ -3034,7 +3035,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-right
     */
-  var paddingRight: js.UndefOr[PaddingRightProperty[TLength] | js.Array[PaddingRightProperty[TLength]]] = js.undefined
+  var paddingRight: js.UndefOr[PaddingRightProperty[TLength] | js.Array[PaddingRightProperty[TLength]]] = js.native
   /**
     * The **`padding-top`** padding area on the top of an element.
     *
@@ -3046,7 +3047,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-top
     */
-  var paddingTop: js.UndefOr[PaddingTopProperty[TLength] | js.Array[PaddingTopProperty[TLength]]] = js.undefined
+  var paddingTop: js.UndefOr[PaddingTopProperty[TLength] | js.Array[PaddingTopProperty[TLength]]] = js.native
   /**
     * The **`page-break-after`** CSS property adjusts page breaks _after_ the current element.
     *
@@ -3058,7 +3059,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/page-break-after
     */
-  var pageBreakAfter: js.UndefOr[PageBreakAfterProperty | js.Array[PageBreakAfterProperty]] = js.undefined
+  var pageBreakAfter: js.UndefOr[PageBreakAfterProperty | js.Array[PageBreakAfterProperty]] = js.native
   /**
     * The **`page-break-before`** CSS property adjusts page breaks _before_ the current element.
     *
@@ -3070,7 +3071,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/page-break-before
     */
-  var pageBreakBefore: js.UndefOr[PageBreakBeforeProperty | js.Array[PageBreakBeforeProperty]] = js.undefined
+  var pageBreakBefore: js.UndefOr[PageBreakBeforeProperty | js.Array[PageBreakBeforeProperty]] = js.native
   /**
     * The **`page-break-inside`** CSS property adjusts page breaks _inside_ the current element.
     *
@@ -3082,7 +3083,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/page-break-inside
     */
-  var pageBreakInside: js.UndefOr[PageBreakInsideProperty | js.Array[PageBreakInsideProperty]] = js.undefined
+  var pageBreakInside: js.UndefOr[PageBreakInsideProperty | js.Array[PageBreakInsideProperty]] = js.native
   /**
     * The **`paint-order`** CSS property lets you control the order in which the fill and stroke (and painting markers) of text content and shapes are drawn.
     *
@@ -3094,7 +3095,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/paint-order
     */
-  var paintOrder: js.UndefOr[PaintOrderProperty | js.Array[PaintOrderProperty]] = js.undefined
+  var paintOrder: js.UndefOr[PaintOrderProperty | js.Array[PaintOrderProperty]] = js.native
   /**
     * The **`perspective`** CSS property determines the distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective. Each 3D element with z>0 becomes larger; each 3D-element with z<0 becomes smaller. The strength of the effect is determined by the value of this property.
     *
@@ -3107,7 +3108,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/perspective
     */
-  var perspective: js.UndefOr[PerspectiveProperty[TLength] | js.Array[PerspectiveProperty[TLength]]] = js.undefined
+  var perspective: js.UndefOr[PerspectiveProperty[TLength] | js.Array[PerspectiveProperty[TLength]]] = js.native
   /**
     * The **`perspective-origin`** CSS property determines the position at which the viewer is looking. It is used as the _vanishing point_ by the `perspective` property.
     *
@@ -3122,7 +3123,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var perspectiveOrigin: js.UndefOr[
     PerspectiveOriginProperty[TLength] | js.Array[PerspectiveOriginProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `**place-content**` CSS property is a shorthand for `align-content` and `justify-content`. It can be used in any layout method which utilizes both of these alignment values.
     *
@@ -3156,7 +3157,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/place-content
     */
-  var placeContent: js.UndefOr[PlaceContentProperty | js.Array[PlaceContentProperty]] = js.undefined
+  var placeContent: js.UndefOr[PlaceContentProperty | js.Array[PlaceContentProperty]] = js.native
   /**
     * The **`pointer-events`** CSS property sets under what circumstances (if any) a particular graphic element can become the target of mouse events.
     *
@@ -3168,7 +3169,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/pointer-events
     */
-  var pointerEvents: js.UndefOr[PointerEventsProperty | js.Array[PointerEventsProperty]] = js.undefined
+  var pointerEvents: js.UndefOr[PointerEventsProperty | js.Array[PointerEventsProperty]] = js.native
   /**
     * The **`position`** CSS property sets how an element is positioned in a document. The `top`, `right`, `bottom`, and `left` properties determine the final location of positioned elements.
     *
@@ -3180,7 +3181,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/position
     */
-  var position: js.UndefOr[PositionProperty | js.Array[PositionProperty]] = js.undefined
+  var position: js.UndefOr[PositionProperty | js.Array[PositionProperty]] = js.native
   /**
     * The **`quotes`** CSS property sets how quotation marks appear.
     *
@@ -3192,7 +3193,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/quotes
     */
-  var quotes: js.UndefOr[QuotesProperty | js.Array[QuotesProperty]] = js.undefined
+  var quotes: js.UndefOr[QuotesProperty | js.Array[QuotesProperty]] = js.native
   /**
     * The **`resize`** CSS property sets whether an element is resizable, and if so, in which directions.
     *
@@ -3204,7 +3205,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/resize
     */
-  var resize: js.UndefOr[ResizeProperty | js.Array[ResizeProperty]] = js.undefined
+  var resize: js.UndefOr[ResizeProperty | js.Array[ResizeProperty]] = js.native
   /**
     * The **`right`** CSS property participates in specifying the horizontal position of a _positioned element_. It has no effect on non-positioned elements.
     *
@@ -3216,7 +3217,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/right
     */
-  var right: js.UndefOr[RightProperty[TLength] | js.Array[RightProperty[TLength]]] = js.undefined
+  var right: js.UndefOr[RightProperty[TLength] | js.Array[RightProperty[TLength]]] = js.native
   /**
     * The **`rotate`** CSS property allows you to specify rotation transforms individually and independantly of the `transform` property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` value.
     *
@@ -3228,7 +3229,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/rotate
     */
-  var rotate: js.UndefOr[RotateProperty | js.Array[RotateProperty]] = js.undefined
+  var rotate: js.UndefOr[RotateProperty | js.Array[RotateProperty]] = js.native
   /**
     * The **`row-gap`** CSS property sets the size of the gap (gutter) between an element's grid rows.
     *
@@ -3255,7 +3256,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/row-gap
     */
-  var rowGap: js.UndefOr[RowGapProperty[TLength] | js.Array[RowGapProperty[TLength]]] = js.undefined
+  var rowGap: js.UndefOr[RowGapProperty[TLength] | js.Array[RowGapProperty[TLength]]] = js.native
   /**
     * The `**ruby-align**` CSS property defines the distribution of the different ruby elements over the base.
     *
@@ -3267,9 +3268,9 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/ruby-align
     */
-  var rubyAlign: js.UndefOr[RubyAlignProperty | js.Array[RubyAlignProperty]] = js.undefined
+  var rubyAlign: js.UndefOr[RubyAlignProperty | js.Array[RubyAlignProperty]] = js.native
   /** **Initial value**: `separate` */
-  var rubyMerge: js.UndefOr[RubyMergeProperty | js.Array[RubyMergeProperty]] = js.undefined
+  var rubyMerge: js.UndefOr[RubyMergeProperty | js.Array[RubyMergeProperty]] = js.native
   /**
     * The `**ruby-position**` CSS property defines the position of a ruby element relatives to its base element. It can be position over the element (`over`), under it (`under`), or between the characters, on their right side (`inter-character`).
     *
@@ -3281,7 +3282,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/ruby-position
     */
-  var rubyPosition: js.UndefOr[RubyPositionProperty | js.Array[RubyPositionProperty]] = js.undefined
+  var rubyPosition: js.UndefOr[RubyPositionProperty | js.Array[RubyPositionProperty]] = js.native
   /**
     * The **`scale`** CSS property allows you to specify scale transforms individually and independantly of the `transform` property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` value.
     *
@@ -3293,7 +3294,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scale
     */
-  var scale: js.UndefOr[ScaleProperty | js.Array[ScaleProperty]] = js.undefined
+  var scale: js.UndefOr[ScaleProperty | js.Array[ScaleProperty]] = js.native
   /**
     * The **`scroll-behavior`** CSS property sets the behavior for a scrolling box when scrolling is triggered by the navigation or CSSOM scrolling APIs.
     *
@@ -3305,7 +3306,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scroll-behavior
     */
-  var scrollBehavior: js.UndefOr[ScrollBehaviorProperty | js.Array[ScrollBehaviorProperty]] = js.undefined
+  var scrollBehavior: js.UndefOr[ScrollBehaviorProperty | js.Array[ScrollBehaviorProperty]] = js.native
   /**
     * The **`scroll-margin`** property is a shorthand property which sets all of the `scroll-margin` longhands, assigning values much like the `margin` property does for the `margin-*` longhands.
     *
@@ -3317,7 +3318,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin
     */
-  var scrollMargin: js.UndefOr[ScrollMarginProperty[TLength] | js.Array[ScrollMarginProperty[TLength]]] = js.undefined
+  var scrollMargin: js.UndefOr[ScrollMarginProperty[TLength] | js.Array[ScrollMarginProperty[TLength]]] = js.native
   /**
     * The `scroll-margin-block` property is a shorthand property which sets the scroll-margin longhands in the block dimension.
     *
@@ -3331,7 +3332,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollMarginBlock: js.UndefOr[
     ScrollMarginBlockProperty[TLength] | js.Array[ScrollMarginBlockProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-margin-block-end` property defines the margin of the scroll snap area at the end of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
     *
@@ -3345,7 +3346,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollMarginBlockEnd: js.UndefOr[
     ScrollMarginBlockEndProperty[TLength] | js.Array[ScrollMarginBlockEndProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-margin-block-start` property defines the margin of the scroll snap area at the start of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
     *
@@ -3359,7 +3360,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollMarginBlockStart: js.UndefOr[
     ScrollMarginBlockStartProperty[TLength] | js.Array[ScrollMarginBlockStartProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-margin-bottom` property defines the bottom margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
     *
@@ -3373,7 +3374,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollMarginBottom: js.UndefOr[
     ScrollMarginBottomProperty[TLength] | js.Array[ScrollMarginBottomProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-margin-inline` property is a shorthand property which sets the scroll-margin longhands in the inline dimension.
     *
@@ -3387,7 +3388,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollMarginInline: js.UndefOr[
     ScrollMarginInlineProperty[TLength] | js.Array[ScrollMarginInlineProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-margin-inline-end` property defines the margin of the scroll snap area at the end of the inline dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
     *
@@ -3401,7 +3402,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollMarginInlineEnd: js.UndefOr[
     ScrollMarginInlineEndProperty[TLength] | js.Array[ScrollMarginInlineEndProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-margin-inline-start` property defines the margin of the scroll snap area at the start of the inline dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
     *
@@ -3415,7 +3416,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollMarginInlineStart: js.UndefOr[
     ScrollMarginInlineStartProperty[TLength] | js.Array[ScrollMarginInlineStartProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-margin-left` property defines the left margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
     *
@@ -3427,7 +3428,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-left
     */
-  var scrollMarginLeft: js.UndefOr[ScrollMarginLeftProperty[TLength] | js.Array[ScrollMarginLeftProperty[TLength]]] = js.undefined
+  var scrollMarginLeft: js.UndefOr[ScrollMarginLeftProperty[TLength] | js.Array[ScrollMarginLeftProperty[TLength]]] = js.native
   /**
     * The `scroll-margin-right` property defines the right margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
     *
@@ -3441,7 +3442,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollMarginRight: js.UndefOr[
     ScrollMarginRightProperty[TLength] | js.Array[ScrollMarginRightProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-margin-top` property defines the top margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
     *
@@ -3453,7 +3454,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-top
     */
-  var scrollMarginTop: js.UndefOr[ScrollMarginTopProperty[TLength] | js.Array[ScrollMarginTopProperty[TLength]]] = js.undefined
+  var scrollMarginTop: js.UndefOr[ScrollMarginTopProperty[TLength] | js.Array[ScrollMarginTopProperty[TLength]]] = js.native
   /**
     * The scroll-padding property is a shorthand property which sets all of the scroll-padding longhands, assigning values much like the padding property does for the padding-\* longhands.  
     
@@ -3467,7 +3468,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     * 
     * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding
     */
-  var scrollPadding: js.UndefOr[ScrollPaddingProperty[TLength] | js.Array[ScrollPaddingProperty[TLength]]] = js.undefined
+  var scrollPadding: js.UndefOr[ScrollPaddingProperty[TLength] | js.Array[ScrollPaddingProperty[TLength]]] = js.native
   /**
     * The `scroll-padding-block` property is a shorthand property which sets the scroll-padding longhands for the block dimension.  
     
@@ -3483,7 +3484,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollPaddingBlock: js.UndefOr[
     ScrollPaddingBlockProperty[TLength] | js.Array[ScrollPaddingBlockProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-padding-block-end` property defines offsets for the end edge in the block dimension of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
     *
@@ -3497,7 +3498,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollPaddingBlockEnd: js.UndefOr[
     ScrollPaddingBlockEndProperty[TLength] | js.Array[ScrollPaddingBlockEndProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-padding-block-start` property defines offsets for the start edge in the block dimension of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
     *
@@ -3511,7 +3512,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollPaddingBlockStart: js.UndefOr[
     ScrollPaddingBlockStartProperty[TLength] | js.Array[ScrollPaddingBlockStartProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-padding-bottom` property defines offsets for the bottom of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
     *
@@ -3525,7 +3526,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollPaddingBottom: js.UndefOr[
     ScrollPaddingBottomProperty[TLength] | js.Array[ScrollPaddingBottomProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-padding-inline` property is a shorthand property which sets the scroll-padding longhands for the inline dimension.  
     
@@ -3541,7 +3542,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollPaddingInline: js.UndefOr[
     ScrollPaddingInlineProperty[TLength] | js.Array[ScrollPaddingInlineProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-padding-inline-end` property defines offsets for the end edge in the inline dimension of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
     *
@@ -3555,7 +3556,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollPaddingInlineEnd: js.UndefOr[
     ScrollPaddingInlineEndProperty[TLength] | js.Array[ScrollPaddingInlineEndProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-padding-inline-start` property defines offsets for the start edge in the inline dimension of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
     *
@@ -3569,7 +3570,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollPaddingInlineStart: js.UndefOr[
     ScrollPaddingInlineStartProperty[TLength] | js.Array[ScrollPaddingInlineStartProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-padding-left` property defines offsets for the left of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
     *
@@ -3583,7 +3584,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollPaddingLeft: js.UndefOr[
     ScrollPaddingLeftProperty[TLength] | js.Array[ScrollPaddingLeftProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-padding-right` property defines offsets for the right of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
     *
@@ -3597,7 +3598,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     */
   var scrollPaddingRight: js.UndefOr[
     ScrollPaddingRightProperty[TLength] | js.Array[ScrollPaddingRightProperty[TLength]]
-  ] = js.undefined
+  ] = js.native
   /**
     * The `scroll-padding-top` property defines offsets for the top of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
     *
@@ -3609,7 +3610,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-top
     */
-  var scrollPaddingTop: js.UndefOr[ScrollPaddingTopProperty[TLength] | js.Array[ScrollPaddingTopProperty[TLength]]] = js.undefined
+  var scrollPaddingTop: js.UndefOr[ScrollPaddingTopProperty[TLength] | js.Array[ScrollPaddingTopProperty[TLength]]] = js.native
   /**
     * The `scroll-snap-align` property specifies the box’s snap position as an alignment of its snap area (as the alignment subject) within its snap container’s snapport (as the alignment container). The two values specify the snapping alignment in the block axis and inline axis, respectively. If only one value is specified, the second value defaults to the same value.
     *
@@ -3621,7 +3622,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scroll-snap-align
     */
-  var scrollSnapAlign: js.UndefOr[ScrollSnapAlignProperty | js.Array[ScrollSnapAlignProperty]] = js.undefined
+  var scrollSnapAlign: js.UndefOr[ScrollSnapAlignProperty | js.Array[ScrollSnapAlignProperty]] = js.native
   /**
     * The **`scroll-snap-stop`** CSS property defines whether the scroll container is allowed to "pass over" possible snap positions.
     *
@@ -3633,7 +3634,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scroll-snap-stop
     */
-  var scrollSnapStop: js.UndefOr[ScrollSnapStopProperty | js.Array[ScrollSnapStopProperty]] = js.undefined
+  var scrollSnapStop: js.UndefOr[ScrollSnapStopProperty | js.Array[ScrollSnapStopProperty]] = js.native
   /**
     * The **`scroll-snap-type`** CSS property sets how strictly snap points are enforced on the scroll container in case there is one.
     *
@@ -3646,7 +3647,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scroll-snap-type
     */
-  var scrollSnapType: js.UndefOr[ScrollSnapTypeProperty | js.Array[ScrollSnapTypeProperty]] = js.undefined
+  var scrollSnapType: js.UndefOr[ScrollSnapTypeProperty | js.Array[ScrollSnapTypeProperty]] = js.native
   /**
     * The **`scrollbar-color`** CSS property sets the color of the scrollbar track and thumb.
     *
@@ -3658,7 +3659,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scrollbar-color
     */
-  var scrollbarColor: js.UndefOr[ScrollbarColorProperty | js.Array[ScrollbarColorProperty]] = js.undefined
+  var scrollbarColor: js.UndefOr[ScrollbarColorProperty | js.Array[ScrollbarColorProperty]] = js.native
   /**
     * The `scrollbar-width` property allows the author to set the maximum thickness of an element’s scrollbars when they are shown.
     *
@@ -3670,7 +3671,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/scrollbar-width
     */
-  var scrollbarWidth: js.UndefOr[ScrollbarWidthProperty | js.Array[ScrollbarWidthProperty]] = js.undefined
+  var scrollbarWidth: js.UndefOr[ScrollbarWidthProperty | js.Array[ScrollbarWidthProperty]] = js.native
   /**
     * The **`shape-image-threshold`** CSS property sets the alpha channel threshold used to extract the shape using an image as the value for `shape-outside`.
     *
@@ -3682,7 +3683,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/shape-image-threshold
     */
-  var shapeImageThreshold: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.undefined
+  var shapeImageThreshold: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.native
   /**
     * The **`shape-margin`** CSS property sets a margin for a CSS shape created using `shape-outside`.
     *
@@ -3694,7 +3695,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/shape-margin
     */
-  var shapeMargin: js.UndefOr[ShapeMarginProperty[TLength] | js.Array[ShapeMarginProperty[TLength]]] = js.undefined
+  var shapeMargin: js.UndefOr[ShapeMarginProperty[TLength] | js.Array[ShapeMarginProperty[TLength]]] = js.native
   /**
     * The **`shape-outside`** CSS property defines a shape—which may be non-rectangular—around which adjacent inline content should wrap. By default, inline content wraps around its margin box; `shape-outside` provides a way to customize this wrapping, making it possible to wrap text around complex objects rather than simple boxes.
     *
@@ -3706,7 +3707,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/shape-outside
     */
-  var shapeOutside: js.UndefOr[ShapeOutsideProperty | js.Array[ShapeOutsideProperty]] = js.undefined
+  var shapeOutside: js.UndefOr[ShapeOutsideProperty | js.Array[ShapeOutsideProperty]] = js.native
   /**
     * The **`tab-size`** CSS property is used to customize the width of a tab (`U+0009`) character.
     *
@@ -3718,7 +3719,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/tab-size
     */
-  var tabSize: js.UndefOr[TabSizeProperty[TLength] | js.Array[TabSizeProperty[TLength]]] = js.undefined
+  var tabSize: js.UndefOr[TabSizeProperty[TLength] | js.Array[TabSizeProperty[TLength]]] = js.native
   /**
     * The **`table-layout`** CSS property sets the algorithm used to lay out `<table>` cells, rows, and columns.
     *
@@ -3730,7 +3731,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/table-layout
     */
-  var tableLayout: js.UndefOr[TableLayoutProperty | js.Array[TableLayoutProperty]] = js.undefined
+  var tableLayout: js.UndefOr[TableLayoutProperty | js.Array[TableLayoutProperty]] = js.native
   /**
     * The **`text-align`** CSS property sets the horizontal alignment of an inline or table-cell box. This means it works like `vertical-align` but in the horizontal direction.
     *
@@ -3742,7 +3743,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-align
     */
-  var textAlign: js.UndefOr[TextAlignProperty | js.Array[TextAlignProperty]] = js.undefined
+  var textAlign: js.UndefOr[TextAlignProperty | js.Array[TextAlignProperty]] = js.native
   /**
     * The **`text-align-last`** CSS property sets how the last line of a block or a line, right before a forced line break, is aligned.
     *
@@ -3754,7 +3755,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-align-last
     */
-  var textAlignLast: js.UndefOr[TextAlignLastProperty | js.Array[TextAlignLastProperty]] = js.undefined
+  var textAlignLast: js.UndefOr[TextAlignLastProperty | js.Array[TextAlignLastProperty]] = js.native
   /**
     * The **`text-combine-upright`** CSS property sets the combination of characters into the space of a single character. If the combined text is wider than 1em, the user agent must fit the contents within 1em. The resulting composition is treated as a single upright glyph for layout and decoration. This property only has an effect in vertical writing modes.
     *
@@ -3766,7 +3767,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-combine-upright
     */
-  var textCombineUpright: js.UndefOr[TextCombineUprightProperty | js.Array[TextCombineUprightProperty]] = js.undefined
+  var textCombineUpright: js.UndefOr[TextCombineUprightProperty | js.Array[TextCombineUprightProperty]] = js.native
   /**
     * The **`text-decoration-color`** CSS property sets the color of decorations added to text by `text-decoration-line`.
     *
@@ -3778,7 +3779,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-color
     */
-  var textDecorationColor: js.UndefOr[TextDecorationColorProperty | js.Array[TextDecorationColorProperty]] = js.undefined
+  var textDecorationColor: js.UndefOr[TextDecorationColorProperty | js.Array[TextDecorationColorProperty]] = js.native
   /**
     * The **`text-decoration-line`** CSS property sets the kind of decoration that is used on text in an element, such as an underline or overline.
     *
@@ -3790,7 +3791,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-line
     */
-  var textDecorationLine: js.UndefOr[TextDecorationLineProperty | js.Array[TextDecorationLineProperty]] = js.undefined
+  var textDecorationLine: js.UndefOr[TextDecorationLineProperty | js.Array[TextDecorationLineProperty]] = js.native
   /**
     * The **`text-decoration-skip`** CSS property sets what parts of an element’s content any text decoration affecting the element must skip over. It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.
     *
@@ -3803,7 +3804,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-skip
     */
-  var textDecorationSkip: js.UndefOr[TextDecorationSkipProperty | js.Array[TextDecorationSkipProperty]] = js.undefined
+  var textDecorationSkip: js.UndefOr[TextDecorationSkipProperty | js.Array[TextDecorationSkipProperty]] = js.native
   /**
     * The **`text-decoration-skip-ink`** CSS property specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.
     *
@@ -3815,7 +3816,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-skip-ink
     */
-  var textDecorationSkipInk: js.UndefOr[TextDecorationSkipInkProperty | js.Array[TextDecorationSkipInkProperty]] = js.undefined
+  var textDecorationSkipInk: js.UndefOr[TextDecorationSkipInkProperty | js.Array[TextDecorationSkipInkProperty]] = js.native
   /**
     * The **`text-decoration-style`** CSS property sets the style of the lines specified by `text-decoration-line`. The style applies to all lines that are set with `text-decoration-line`.
     *
@@ -3827,7 +3828,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-decoration-style
     */
-  var textDecorationStyle: js.UndefOr[TextDecorationStyleProperty | js.Array[TextDecorationStyleProperty]] = js.undefined
+  var textDecorationStyle: js.UndefOr[TextDecorationStyleProperty | js.Array[TextDecorationStyleProperty]] = js.native
   /**
     * The **`text-emphasis-color`** CSS property sets the color of emphasis marks. This value can also be set using the `text-emphasis` shorthand.
     *
@@ -3839,7 +3840,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-emphasis-color
     */
-  var textEmphasisColor: js.UndefOr[TextEmphasisColorProperty | js.Array[TextEmphasisColorProperty]] = js.undefined
+  var textEmphasisColor: js.UndefOr[TextEmphasisColorProperty | js.Array[TextEmphasisColorProperty]] = js.native
   /**
     * The **`text-emphasis-position`** CSS property sets where emphasis marks are drawn. Like ruby text, if there isn't enough room for emphasis marks, the line height is increased.
     *
@@ -3851,7 +3852,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-emphasis-position
     */
-  var textEmphasisPosition: js.UndefOr[GlobalsString | js.Array[GlobalsString]] = js.undefined
+  var textEmphasisPosition: js.UndefOr[GlobalsString | js.Array[GlobalsString]] = js.native
   /**
     * The **`text-emphasis-style`** CSS property sets the appearance of emphasis marks. It can also be set, and reset, using the `text-emphasis` shorthand.
     *
@@ -3863,7 +3864,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-emphasis-style
     */
-  var textEmphasisStyle: js.UndefOr[TextEmphasisStyleProperty | js.Array[TextEmphasisStyleProperty]] = js.undefined
+  var textEmphasisStyle: js.UndefOr[TextEmphasisStyleProperty | js.Array[TextEmphasisStyleProperty]] = js.native
   /**
     * The **`text-indent`** CSS property sets the length of empty space (indentation) that is put before lines of text in a block.
     *
@@ -3875,7 +3876,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-indent
     */
-  var textIndent: js.UndefOr[TextIndentProperty[TLength] | js.Array[TextIndentProperty[TLength]]] = js.undefined
+  var textIndent: js.UndefOr[TextIndentProperty[TLength] | js.Array[TextIndentProperty[TLength]]] = js.native
   /**
     * The **`text-justify`** CSS property sets what type of justification should be applied to text when `text-align``: justify;` is set on an element.
     *
@@ -3887,7 +3888,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-justify
     */
-  var textJustify: js.UndefOr[TextJustifyProperty | js.Array[TextJustifyProperty]] = js.undefined
+  var textJustify: js.UndefOr[TextJustifyProperty | js.Array[TextJustifyProperty]] = js.native
   /**
     * The **`text-orientation`** CSS property sets the orientation of the text characters in a line. It only affects text in vertical mode (when `writing-mode` is not `horizontal-tb`). It is useful for controlling the display of languages that use vertical script, and also for making vertical table headers.
     *
@@ -3899,7 +3900,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-orientation
     */
-  var textOrientation: js.UndefOr[TextOrientationProperty | js.Array[TextOrientationProperty]] = js.undefined
+  var textOrientation: js.UndefOr[TextOrientationProperty | js.Array[TextOrientationProperty]] = js.native
   /**
     * The **`text-overflow`** CSS property sets how hidden overflow content is signaled to users. It can be clipped, display an ellipsis ('`…`'), or display a custom string.
     *
@@ -3911,7 +3912,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-overflow
     */
-  var textOverflow: js.UndefOr[TextOverflowProperty | js.Array[TextOverflowProperty]] = js.undefined
+  var textOverflow: js.UndefOr[TextOverflowProperty | js.Array[TextOverflowProperty]] = js.native
   /**
     * The **`text-rendering`** CSS property provides information to the rendering engine about what to optimize for when rendering text.
     *
@@ -3923,7 +3924,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-rendering
     */
-  var textRendering: js.UndefOr[TextRenderingProperty | js.Array[TextRenderingProperty]] = js.undefined
+  var textRendering: js.UndefOr[TextRenderingProperty | js.Array[TextRenderingProperty]] = js.native
   /**
     * The **`text-shadow`** CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its `decorations`. Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
     *
@@ -3935,7 +3936,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-shadow
     */
-  var textShadow: js.UndefOr[TextShadowProperty | js.Array[TextShadowProperty]] = js.undefined
+  var textShadow: js.UndefOr[TextShadowProperty | js.Array[TextShadowProperty]] = js.native
   /**
     * The **`text-size-adjust`** CSS property controls the text inflation algorithm used on some smartphones and tablets. Other browsers will ignore this property.
     *
@@ -3947,7 +3948,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-size-adjust
     */
-  var textSizeAdjust: js.UndefOr[TextSizeAdjustProperty | js.Array[TextSizeAdjustProperty]] = js.undefined
+  var textSizeAdjust: js.UndefOr[TextSizeAdjustProperty | js.Array[TextSizeAdjustProperty]] = js.native
   /**
     * The **`text-transform`** CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby
     *
@@ -3959,7 +3960,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-transform
     */
-  var textTransform: js.UndefOr[TextTransformProperty | js.Array[TextTransformProperty]] = js.undefined
+  var textTransform: js.UndefOr[TextTransformProperty | js.Array[TextTransformProperty]] = js.native
   /**
     * The **`text-underline-position`** CSS property specifies the position of the underline which is set using the `text-decoration` property's `underline` value.
     *
@@ -3971,7 +3972,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/text-underline-position
     */
-  var textUnderlinePosition: js.UndefOr[TextUnderlinePositionProperty | js.Array[TextUnderlinePositionProperty]] = js.undefined
+  var textUnderlinePosition: js.UndefOr[TextUnderlinePositionProperty | js.Array[TextUnderlinePositionProperty]] = js.native
   /**
     * The **`top`** CSS property participates in specifying the vertical position of a _positioned element_. It has no effect on non-positioned elements.
     *
@@ -3983,7 +3984,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/top
     */
-  var top: js.UndefOr[TopProperty[TLength] | js.Array[TopProperty[TLength]]] = js.undefined
+  var top: js.UndefOr[TopProperty[TLength] | js.Array[TopProperty[TLength]]] = js.native
   /**
     * The **`touch-action`** CSS property sets how a region can be manipulated by a touchscreen user (for example, by zooming features built into the browser).
     *
@@ -3996,7 +3997,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/touch-action
     */
-  var touchAction: js.UndefOr[TouchActionProperty | js.Array[TouchActionProperty]] = js.undefined
+  var touchAction: js.UndefOr[TouchActionProperty | js.Array[TouchActionProperty]] = js.native
   /**
     * The **`transform`** CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model.
     *
@@ -4009,7 +4010,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/transform
     */
-  var transform: js.UndefOr[TransformProperty | js.Array[TransformProperty]] = js.undefined
+  var transform: js.UndefOr[TransformProperty | js.Array[TransformProperty]] = js.native
   /**
     * The **`transform-box`** CSS property defines the layout box to which the `transform` and `transform-origin` properties relate.
     *
@@ -4021,7 +4022,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/transform-box
     */
-  var transformBox: js.UndefOr[TransformBoxProperty | js.Array[TransformBoxProperty]] = js.undefined
+  var transformBox: js.UndefOr[TransformBoxProperty | js.Array[TransformBoxProperty]] = js.native
   /**
     * The **`transform-origin`** CSS property sets the origin for an element's transformations.
     *
@@ -4034,7 +4035,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/transform-origin
     */
-  var transformOrigin: js.UndefOr[TransformOriginProperty[TLength] | js.Array[TransformOriginProperty[TLength]]] = js.undefined
+  var transformOrigin: js.UndefOr[TransformOriginProperty[TLength] | js.Array[TransformOriginProperty[TLength]]] = js.native
   /**
     * The **`transform-style`** CSS property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
     *
@@ -4047,7 +4048,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/transform-style
     */
-  var transformStyle: js.UndefOr[TransformStyleProperty | js.Array[TransformStyleProperty]] = js.undefined
+  var transformStyle: js.UndefOr[TransformStyleProperty | js.Array[TransformStyleProperty]] = js.native
   /**
     * The **`transition-delay`** CSS property specifies the duration to wait before starting a property's transition effect when its value changes.
     *
@@ -4060,7 +4061,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/transition-delay
     */
-  var transitionDelay: js.UndefOr[GlobalsString | js.Array[GlobalsString]] = js.undefined
+  var transitionDelay: js.UndefOr[GlobalsString | js.Array[GlobalsString]] = js.native
   /**
     * The **`transition-duration`** CSS property sets the length of time a transition animation should take to complete. By default, the value is `0s`, meaning that no animation will occur.
     *
@@ -4073,7 +4074,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/transition-duration
     */
-  var transitionDuration: js.UndefOr[GlobalsString | js.Array[GlobalsString]] = js.undefined
+  var transitionDuration: js.UndefOr[GlobalsString | js.Array[GlobalsString]] = js.native
   /**
     * The **`transition-property`** CSS property sets the CSS properties to which a transition effect should be applied.
     *
@@ -4086,7 +4087,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/transition-property
     */
-  var transitionProperty: js.UndefOr[TransitionPropertyProperty | js.Array[TransitionPropertyProperty]] = js.undefined
+  var transitionProperty: js.UndefOr[TransitionPropertyProperty | js.Array[TransitionPropertyProperty]] = js.native
   /**
     * The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a transition effect.
     *
@@ -4099,7 +4100,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/transition-timing-function
     */
-  var transitionTimingFunction: js.UndefOr[TransitionTimingFunctionProperty | js.Array[TransitionTimingFunctionProperty]] = js.undefined
+  var transitionTimingFunction: js.UndefOr[TransitionTimingFunctionProperty | js.Array[TransitionTimingFunctionProperty]] = js.native
   /**
     * The **`translate`** CSS property allows you to specify translation transforms individually and independantly of the `transform` property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` value.
     *
@@ -4111,7 +4112,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/translate
     */
-  var translate: js.UndefOr[TranslateProperty[TLength] | js.Array[TranslateProperty[TLength]]] = js.undefined
+  var translate: js.UndefOr[TranslateProperty[TLength] | js.Array[TranslateProperty[TLength]]] = js.native
   /**
     * The **`unicode-bidi`** CSS property, together with the `direction` property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The `unicode-bidi` property overrides this algorithm and allows the developer to control the text embedding.
     *
@@ -4123,7 +4124,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/unicode-bidi
     */
-  var unicodeBidi: js.UndefOr[UnicodeBidiProperty | js.Array[UnicodeBidiProperty]] = js.undefined
+  var unicodeBidi: js.UndefOr[UnicodeBidiProperty | js.Array[UnicodeBidiProperty]] = js.native
   /**
     * The `**user-select**` CSS property controls whether the user can select text. This doesn't have any effect on content loaded as chrome, except in textboxes.
     *
@@ -4136,7 +4137,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/user-select
     */
-  var userSelect: js.UndefOr[UserSelectProperty | js.Array[UserSelectProperty]] = js.undefined
+  var userSelect: js.UndefOr[UserSelectProperty | js.Array[UserSelectProperty]] = js.native
   /**
     * The **`vertical-align`** CSS property sets vertical alignment of an inline or table-cell box.
     *
@@ -4148,7 +4149,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/vertical-align
     */
-  var verticalAlign: js.UndefOr[VerticalAlignProperty[TLength] | js.Array[VerticalAlignProperty[TLength]]] = js.undefined
+  var verticalAlign: js.UndefOr[VerticalAlignProperty[TLength] | js.Array[VerticalAlignProperty[TLength]]] = js.native
   /**
     * The **`visibility`** CSS property shows or hides an element without changing the layout of a document. The property can also hide rows or columns in a `<table>`.
     *
@@ -4160,7 +4161,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/visibility
     */
-  var visibility: js.UndefOr[VisibilityProperty | js.Array[VisibilityProperty]] = js.undefined
+  var visibility: js.UndefOr[VisibilityProperty | js.Array[VisibilityProperty]] = js.native
   /**
     * The **`white-space`** CSS property sets how white space inside an element is handled.
     *
@@ -4172,7 +4173,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/white-space
     */
-  var whiteSpace: js.UndefOr[WhiteSpaceProperty | js.Array[WhiteSpaceProperty]] = js.undefined
+  var whiteSpace: js.UndefOr[WhiteSpaceProperty | js.Array[WhiteSpaceProperty]] = js.native
   /**
     * The **`widows`** CSS property sets the minimum number of lines in a block container that must be shown at the _top_ of a page, region, or column.
     *
@@ -4184,7 +4185,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/widows
     */
-  var widows: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.undefined
+  var widows: js.UndefOr[GlobalsNumber | js.Array[GlobalsNumber]] = js.native
   /**
     * The **`width`** CSS property sets an element's width. By default it sets the width of the content area, but if `box-sizing` is set to `border-box`, it sets the width of the border area.
     *
@@ -4196,7 +4197,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/width
     */
-  var width: js.UndefOr[WidthProperty[TLength] | js.Array[WidthProperty[TLength]]] = js.undefined
+  var width: js.UndefOr[WidthProperty[TLength] | js.Array[WidthProperty[TLength]]] = js.native
   /**
     * The **`will-change`** CSS property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required.
     *
@@ -4208,7 +4209,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/will-change
     */
-  var willChange: js.UndefOr[WillChangeProperty | js.Array[WillChangeProperty]] = js.undefined
+  var willChange: js.UndefOr[WillChangeProperty | js.Array[WillChangeProperty]] = js.native
   /**
     * The **`word-break`** CSS property sets whether line breaks appear wherever the text would otherwise overflow its content box.
     *
@@ -4220,7 +4221,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/word-break
     */
-  var wordBreak: js.UndefOr[WordBreakProperty | js.Array[WordBreakProperty]] = js.undefined
+  var wordBreak: js.UndefOr[WordBreakProperty | js.Array[WordBreakProperty]] = js.native
   /**
     * The **`word-spacing`** CSS property sets the length of space between words and between tags.
     *
@@ -4232,7 +4233,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/word-spacing
     */
-  var wordSpacing: js.UndefOr[WordSpacingProperty[TLength] | js.Array[WordSpacingProperty[TLength]]] = js.undefined
+  var wordSpacing: js.UndefOr[WordSpacingProperty[TLength] | js.Array[WordSpacingProperty[TLength]]] = js.native
   /**
     * The `**overflow-wrap**` CSS property sets whether the browser should insert line breaks within words to prevent text from overflowing its content box.
     *
@@ -4244,7 +4245,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/overflow-wrap
     */
-  var wordWrap: js.UndefOr[WordWrapProperty | js.Array[WordWrapProperty]] = js.undefined
+  var wordWrap: js.UndefOr[WordWrapProperty | js.Array[WordWrapProperty]] = js.native
   /**
     * The **`writing-mode`** CSS property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress.
     *
@@ -4256,7 +4257,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/writing-mode
     */
-  var writingMode: js.UndefOr[WritingModeProperty | js.Array[WritingModeProperty]] = js.undefined
+  var writingMode: js.UndefOr[WritingModeProperty | js.Array[WritingModeProperty]] = js.native
   /**
     * The **`z-index`** CSS property sets the z-order of a positioned element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.
     *
@@ -4268,7 +4269,7 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/z-index
     */
-  var zIndex: js.UndefOr[ZIndexProperty | js.Array[ZIndexProperty]] = js.undefined
+  var zIndex: js.UndefOr[ZIndexProperty | js.Array[ZIndexProperty]] = js.native
   /**
     * The non-standard **`zoom`** CSS property can be used to control the magnification level of an element. `transform: scale()` should be used instead of this property, if possible. However, unlike CSS Transforms, `zoom` affects the layout size of the element.
     *
@@ -4280,6 +4281,3072 @@ trait StandardLonghandPropertiesFallback[TLength] extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/zoom
     */
-  var zoom: js.UndefOr[ZoomProperty | js.Array[ZoomProperty]] = js.undefined
+  var zoom: js.UndefOr[ZoomProperty | js.Array[ZoomProperty]] = js.native
+}
+
+object StandardLonghandPropertiesFallback {
+  @scala.inline
+  def apply[TLength](): StandardLonghandPropertiesFallback[TLength] = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[StandardLonghandPropertiesFallback[TLength]]
+  }
+  @scala.inline
+  implicit class StandardLonghandPropertiesFallbackOps[Self[tlength] <: StandardLonghandPropertiesFallback[tlength], TLength] (val x: Self[TLength]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TLength] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TLength]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TLength] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TLength] with Other]
+    @scala.inline
+    def withAlignContent(value: AlignContentProperty | js.Array[AlignContentProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignContent: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignItems(value: AlignItemsProperty | js.Array[AlignItemsProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignItems: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignSelf(value: AlignSelfProperty | js.Array[AlignSelfProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignSelf: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelay(value: GlobalsString | js.Array[GlobalsString]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelay: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDirection(value: AnimationDirectionProperty | js.Array[AnimationDirectionProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDirection: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDuration(value: GlobalsString | js.Array[GlobalsString]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationFillMode(value: AnimationFillModeProperty | js.Array[AnimationFillModeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationFillMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationFillMode: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationFillMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationIterationCount(value: AnimationIterationCountProperty | js.Array[AnimationIterationCountProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationIterationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationIterationCount: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationIterationCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationName(value: AnimationNameProperty | js.Array[AnimationNameProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationName: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationPlayState(value: AnimationPlayStateProperty | js.Array[AnimationPlayStateProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationPlayState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationPlayState: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationPlayState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationTimingFunction(value: AnimationTimingFunctionProperty | js.Array[AnimationTimingFunctionProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationTimingFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationTimingFunction: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationTimingFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppearance(value: AppearanceProperty | js.Array[AppearanceProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppearance: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackdropFilter(value: BackdropFilterProperty | js.Array[BackdropFilterProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackdropFilter: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackfaceVisibility(value: BackfaceVisibilityProperty | js.Array[BackfaceVisibilityProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backfaceVisibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackfaceVisibility: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backfaceVisibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundAttachment(value: BackgroundAttachmentProperty | js.Array[BackgroundAttachmentProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundAttachment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundAttachment: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundAttachment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundBlendMode(value: BackgroundBlendModeProperty | js.Array[BackgroundBlendModeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundBlendMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundBlendMode: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundBlendMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundClip(value: BackgroundClipProperty | js.Array[BackgroundClipProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundClip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundClip: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundClip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundColor(value: BackgroundColorProperty | js.Array[BackgroundColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundImage(value: BackgroundImageProperty | js.Array[BackgroundImageProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundImage: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundOrigin(value: BackgroundOriginProperty | js.Array[BackgroundOriginProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundOrigin: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundPosition(value: BackgroundPositionProperty[TLength] | js.Array[BackgroundPositionProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundPosition: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundPositionX(value: BackgroundPositionXProperty[TLength] | js.Array[BackgroundPositionXProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundPositionX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundPositionX: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundPositionX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundPositionY(value: BackgroundPositionYProperty[TLength] | js.Array[BackgroundPositionYProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundPositionY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundPositionY: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundPositionY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundRepeat(value: BackgroundRepeatProperty | js.Array[BackgroundRepeatProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundRepeat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundRepeat: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundRepeat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundSize(value: BackgroundSizeProperty[TLength] | js.Array[BackgroundSizeProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundSize: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockOverflow(value: BlockOverflowProperty | js.Array[BlockOverflowProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockOverflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockOverflow: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockOverflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockSize(value: BlockSizeProperty[TLength] | js.Array[BlockSizeProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockSize: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBlockColor(value: BorderBlockColorProperty | js.Array[BorderBlockColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBlockColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBlockEndColor(value: BorderBlockEndColorProperty | js.Array[BorderBlockEndColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockEndColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBlockEndColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockEndColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBlockEndStyle(value: BorderBlockEndStyleProperty | js.Array[BorderBlockEndStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockEndStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBlockEndStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockEndStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBlockEndWidth(value: BorderBlockEndWidthProperty[TLength] | js.Array[BorderBlockEndWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockEndWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBlockEndWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockEndWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBlockStartColor(value: BorderBlockStartColorProperty | js.Array[BorderBlockStartColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockStartColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBlockStartColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockStartColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBlockStartStyle(value: BorderBlockStartStyleProperty | js.Array[BorderBlockStartStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockStartStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBlockStartStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockStartStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBlockStartWidth(value: BorderBlockStartWidthProperty[TLength] | js.Array[BorderBlockStartWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockStartWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBlockStartWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockStartWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBlockStyle(value: BorderBlockStyleProperty | js.Array[BorderBlockStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBlockStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBlockWidth(value: BorderBlockWidthProperty[TLength] | js.Array[BorderBlockWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBlockWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBlockWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBottomColor(value: BorderBottomColorProperty | js.Array[BorderBottomColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBottomColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBottomLeftRadius(value: BorderBottomLeftRadiusProperty[TLength] | js.Array[BorderBottomLeftRadiusProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomLeftRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBottomLeftRadius: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomLeftRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBottomRightRadius(
+      value: BorderBottomRightRadiusProperty[TLength] | js.Array[BorderBottomRightRadiusProperty[TLength]]
+    ): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomRightRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBottomRightRadius: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomRightRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBottomStyle(value: BorderBottomStyleProperty | js.Array[BorderBottomStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBottomStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBottomWidth(value: BorderBottomWidthProperty[TLength] | js.Array[BorderBottomWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBottomWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderCollapse(value: BorderCollapseProperty | js.Array[BorderCollapseProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderCollapse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderCollapse: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderCollapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderEndEndRadius(value: BorderEndEndRadiusProperty[TLength] | js.Array[BorderEndEndRadiusProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderEndEndRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderEndEndRadius: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderEndEndRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderEndStartRadius(value: BorderEndStartRadiusProperty[TLength] | js.Array[BorderEndStartRadiusProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderEndStartRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderEndStartRadius: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderEndStartRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderImageOutset(value: BorderImageOutsetProperty[TLength] | js.Array[BorderImageOutsetProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImageOutset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderImageOutset: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImageOutset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderImageRepeat(value: BorderImageRepeatProperty | js.Array[BorderImageRepeatProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImageRepeat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderImageRepeat: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImageRepeat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderImageSlice(value: BorderImageSliceProperty | js.Array[BorderImageSliceProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImageSlice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderImageSlice: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImageSlice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderImageSource(value: BorderImageSourceProperty | js.Array[BorderImageSourceProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImageSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderImageSource: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImageSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderImageWidth(value: BorderImageWidthProperty[TLength] | js.Array[BorderImageWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImageWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderImageWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderImageWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderInlineColor(value: BorderInlineColorProperty | js.Array[BorderInlineColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderInlineColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderInlineEndColor(value: BorderInlineEndColorProperty | js.Array[BorderInlineEndColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineEndColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderInlineEndColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineEndColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderInlineEndStyle(value: BorderInlineEndStyleProperty | js.Array[BorderInlineEndStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineEndStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderInlineEndStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineEndStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderInlineEndWidth(value: BorderInlineEndWidthProperty[TLength] | js.Array[BorderInlineEndWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineEndWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderInlineEndWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineEndWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderInlineStartColor(value: BorderInlineStartColorProperty | js.Array[BorderInlineStartColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineStartColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderInlineStartColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineStartColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderInlineStartStyle(value: BorderInlineStartStyleProperty | js.Array[BorderInlineStartStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineStartStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderInlineStartStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineStartStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderInlineStartWidth(value: BorderInlineStartWidthProperty[TLength] | js.Array[BorderInlineStartWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineStartWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderInlineStartWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineStartWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderInlineStyle(value: BorderInlineStyleProperty | js.Array[BorderInlineStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderInlineStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderInlineWidth(value: BorderInlineWidthProperty[TLength] | js.Array[BorderInlineWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderInlineWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderInlineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderLeftColor(value: BorderLeftColorProperty | js.Array[BorderLeftColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderLeftColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderLeftStyle(value: BorderLeftStyleProperty | js.Array[BorderLeftStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderLeftStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderLeftWidth(value: BorderLeftWidthProperty[TLength] | js.Array[BorderLeftWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderLeftWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderRightColor(value: BorderRightColorProperty | js.Array[BorderRightColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderRightColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderRightStyle(value: BorderRightStyleProperty | js.Array[BorderRightStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderRightStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderRightWidth(value: BorderRightWidthProperty[TLength] | js.Array[BorderRightWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderRightWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderSpacing(value: BorderSpacingProperty[TLength] | js.Array[BorderSpacingProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderSpacing: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderStartEndRadius(value: BorderStartEndRadiusProperty[TLength] | js.Array[BorderStartEndRadiusProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStartEndRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderStartEndRadius: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStartEndRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderStartStartRadius(value: BorderStartStartRadiusProperty[TLength] | js.Array[BorderStartStartRadiusProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStartStartRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderStartStartRadius: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStartStartRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderTopColor(value: BorderTopColorProperty | js.Array[BorderTopColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderTopColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderTopLeftRadius(value: BorderTopLeftRadiusProperty[TLength] | js.Array[BorderTopLeftRadiusProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopLeftRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderTopLeftRadius: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopLeftRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderTopRightRadius(value: BorderTopRightRadiusProperty[TLength] | js.Array[BorderTopRightRadiusProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopRightRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderTopRightRadius: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopRightRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderTopStyle(value: BorderTopStyleProperty | js.Array[BorderTopStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderTopStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderTopWidth(value: BorderTopWidthProperty[TLength] | js.Array[BorderTopWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderTopWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBottom(value: BottomProperty[TLength] | js.Array[BottomProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottom: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoxDecorationBreak(value: BoxDecorationBreakProperty | js.Array[BoxDecorationBreakProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxDecorationBreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoxDecorationBreak: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxDecorationBreak")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoxShadow(value: BoxShadowProperty | js.Array[BoxShadowProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoxShadow: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxShadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoxSizing(value: BoxSizingProperty | js.Array[BoxSizingProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxSizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoxSizing: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxSizing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBreakAfter(value: BreakAfterProperty | js.Array[BreakAfterProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreakAfter: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBreakBefore(value: BreakBeforeProperty | js.Array[BreakBeforeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreakBefore: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBreakInside(value: BreakInsideProperty | js.Array[BreakInsideProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakInside")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreakInside: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakInside")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionSide(value: CaptionSideProperty | js.Array[CaptionSideProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionSide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionSide: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captionSide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaretColor(value: CaretColorProperty | js.Array[CaretColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caretColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaretColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caretColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClear(value: ClearProperty | js.Array[ClearProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClear: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipPath(value: ClipPathProperty | js.Array[ClipPathProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipPath: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: ColorProperty | js.Array[ColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorAdjust(value: ColorAdjustProperty | js.Array[ColorAdjustProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAdjust")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorAdjust: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAdjust")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnCount(value: ColumnCountProperty | js.Array[ColumnCountProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnCount: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnFill(value: ColumnFillProperty | js.Array[ColumnFillProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnFill: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnFill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnGap(value: ColumnGapProperty[TLength] | js.Array[ColumnGapProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnGap: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnRuleColor(value: ColumnRuleColorProperty | js.Array[ColumnRuleColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnRuleColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnRuleColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnRuleColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnRuleStyle(value: ColumnRuleStyleProperty | js.Array[ColumnRuleStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnRuleStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnRuleStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnRuleStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnRuleWidth(value: ColumnRuleWidthProperty[TLength] | js.Array[ColumnRuleWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnRuleWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnRuleWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnRuleWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnSpan(value: ColumnSpanProperty | js.Array[ColumnSpanProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnSpan: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnWidth(value: ColumnWidthProperty[TLength] | js.Array[ColumnWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContain(value: ContainProperty | js.Array[ContainProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContain: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: ContentProperty | js.Array[ContentProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCounterIncrement(value: CounterIncrementProperty | js.Array[CounterIncrementProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterIncrement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCounterIncrement: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterIncrement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCounterReset(value: CounterResetProperty | js.Array[CounterResetProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterReset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCounterReset: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterReset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCounterSet(value: CounterSetProperty | js.Array[CounterSetProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCounterSet: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursor(value: CursorProperty | js.Array[CursorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: DirectionProperty | js.Array[DirectionProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: DisplayProperty | js.Array[DisplayProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmptyCells(value: EmptyCellsProperty | js.Array[EmptyCellsProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyCells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmptyCells: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emptyCells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: FilterProperty | js.Array[FilterProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlexBasis(value: FlexBasisProperty[TLength] | js.Array[FlexBasisProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexBasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlexBasis: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexBasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlexDirection(value: FlexDirectionProperty | js.Array[FlexDirectionProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlexDirection: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlexGrow(value: GlobalsNumber | js.Array[GlobalsNumber]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexGrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlexGrow: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexGrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlexShrink(value: GlobalsNumber | js.Array[GlobalsNumber]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexShrink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlexShrink: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexShrink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlexWrap(value: FlexWrapProperty | js.Array[FlexWrapProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlexWrap: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flexWrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloat(value: FloatProperty | js.Array[FloatProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloat: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("float")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: FontFamilyProperty | js.Array[FontFamilyProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFeatureSettings(value: FontFeatureSettingsProperty | js.Array[FontFeatureSettingsProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFeatureSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFeatureSettings: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFeatureSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontKerning(value: FontKerningProperty | js.Array[FontKerningProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontKerning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontKerning: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontKerning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontLanguageOverride(value: FontLanguageOverrideProperty | js.Array[FontLanguageOverrideProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontLanguageOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontLanguageOverride: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontLanguageOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontOpticalSizing(value: FontOpticalSizingProperty | js.Array[FontOpticalSizingProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontOpticalSizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontOpticalSizing: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontOpticalSizing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: FontSizeProperty[TLength] | js.Array[FontSizeProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSizeAdjust(value: FontSizeAdjustProperty | js.Array[FontSizeAdjustProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeAdjust")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSizeAdjust: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizeAdjust")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStretch(value: FontStretchProperty | js.Array[FontStretchProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStretch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStretch: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStretch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStyle(value: FontStyleProperty | js.Array[FontStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSynthesis(value: FontSynthesisProperty | js.Array[FontSynthesisProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSynthesis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSynthesis: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSynthesis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariant(value: FontVariantProperty | js.Array[FontVariantProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariant: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariantCaps(value: FontVariantCapsProperty | js.Array[FontVariantCapsProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantCaps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariantCaps: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantCaps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariantEastAsian(value: FontVariantEastAsianProperty | js.Array[FontVariantEastAsianProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantEastAsian")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariantEastAsian: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantEastAsian")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariantLigatures(value: FontVariantLigaturesProperty | js.Array[FontVariantLigaturesProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantLigatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariantLigatures: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantLigatures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariantNumeric(value: FontVariantNumericProperty | js.Array[FontVariantNumericProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantNumeric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariantNumeric: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantNumeric")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariantPosition(value: FontVariantPositionProperty | js.Array[FontVariantPositionProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariantPosition: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariantPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontVariationSettings(value: FontVariationSettingsProperty | js.Array[FontVariationSettingsProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontVariationSettings: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontVariationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeight(value: FontWeightProperty | js.Array[FontWeightProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeight: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridAutoColumns(value: GridAutoColumnsProperty[TLength] | js.Array[GridAutoColumnsProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridAutoColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridAutoColumns: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridAutoColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridAutoFlow(value: GridAutoFlowProperty | js.Array[GridAutoFlowProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridAutoFlow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridAutoFlow: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridAutoFlow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridAutoRows(value: GridAutoRowsProperty[TLength] | js.Array[GridAutoRowsProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridAutoRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridAutoRows: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridAutoRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridColumnEnd(value: GridColumnEndProperty | js.Array[GridColumnEndProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColumnEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridColumnEnd: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColumnEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridColumnStart(value: GridColumnStartProperty | js.Array[GridColumnStartProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColumnStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridColumnStart: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridColumnStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridRowEnd(value: GridRowEndProperty | js.Array[GridRowEndProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRowEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridRowEnd: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRowEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridRowStart(value: GridRowStartProperty | js.Array[GridRowStartProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRowStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridRowStart: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRowStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridTemplateAreas(value: GridTemplateAreasProperty | js.Array[GridTemplateAreasProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridTemplateAreas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridTemplateAreas: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridTemplateAreas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridTemplateColumns(value: GridTemplateColumnsProperty[TLength] | js.Array[GridTemplateColumnsProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridTemplateColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridTemplateColumns: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridTemplateColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridTemplateRows(value: GridTemplateRowsProperty[TLength] | js.Array[GridTemplateRowsProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridTemplateRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridTemplateRows: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridTemplateRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHangingPunctuation(value: HangingPunctuationProperty | js.Array[HangingPunctuationProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hangingPunctuation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHangingPunctuation: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hangingPunctuation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: HeightProperty[TLength] | js.Array[HeightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHyphens(value: HyphensProperty | js.Array[HyphensProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyphens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHyphens: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyphens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageOrientation(value: ImageOrientationProperty | js.Array[ImageOrientationProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageOrientation: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageOrientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageRendering(value: ImageRenderingProperty | js.Array[ImageRenderingProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageRendering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageRendering: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageResolution(value: ImageResolutionProperty | js.Array[ImageResolutionProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageResolution: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageResolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialLetter(value: InitialLetterProperty | js.Array[InitialLetterProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLetter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialLetter: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLetter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineSize(value: InlineSizeProperty[TLength] | js.Array[InlineSizeProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineSize: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInset(value: InsetProperty[TLength] | js.Array[InsetProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInset: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsetBlock(value: InsetBlockProperty[TLength] | js.Array[InsetBlockProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsetBlock: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsetBlockEnd(value: InsetBlockEndProperty[TLength] | js.Array[InsetBlockEndProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetBlockEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsetBlockEnd: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetBlockEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsetBlockStart(value: InsetBlockStartProperty[TLength] | js.Array[InsetBlockStartProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetBlockStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsetBlockStart: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetBlockStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsetInline(value: InsetInlineProperty[TLength] | js.Array[InsetInlineProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetInline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsetInline: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetInline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsetInlineEnd(value: InsetInlineEndProperty[TLength] | js.Array[InsetInlineEndProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetInlineEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsetInlineEnd: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetInlineEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsetInlineStart(value: InsetInlineStartProperty[TLength] | js.Array[InsetInlineStartProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetInlineStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsetInlineStart: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insetInlineStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsolation(value: IsolationProperty | js.Array[IsolationProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isolation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsolation: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isolation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJustifyContent(value: JustifyContentProperty | js.Array[JustifyContentProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJustifyContent: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJustifyItems(value: JustifyItemsProperty | js.Array[JustifyItemsProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJustifyItems: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJustifySelf(value: JustifySelfProperty | js.Array[JustifySelfProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifySelf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJustifySelf: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifySelf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: LeftProperty[TLength] | js.Array[LeftProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLetterSpacing(value: LetterSpacingProperty[TLength] | js.Array[LetterSpacingProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLetterSpacing: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineBreak(value: LineBreakProperty | js.Array[LineBreakProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineBreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineBreak: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineBreak")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineHeight(value: LineHeightProperty[TLength] | js.Array[LineHeightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineHeight: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineHeightStep(value: LineHeightStepProperty[TLength] | js.Array[LineHeightStepProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeightStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineHeightStep: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeightStep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListStyleImage(value: ListStyleImageProperty | js.Array[ListStyleImageProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyleImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListStyleImage: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyleImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListStylePosition(value: ListStylePositionProperty | js.Array[ListStylePositionProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listStylePosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListStylePosition: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listStylePosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListStyleType(value: ListStyleTypeProperty | js.Array[ListStyleTypeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyleType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListStyleType: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyleType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginBlock(value: MarginBlockProperty[TLength] | js.Array[MarginBlockProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginBlock: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginBlockEnd(value: MarginBlockEndProperty[TLength] | js.Array[MarginBlockEndProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBlockEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginBlockEnd: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBlockEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginBlockStart(value: MarginBlockStartProperty[TLength] | js.Array[MarginBlockStartProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBlockStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginBlockStart: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBlockStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginBottom(value: MarginBottomProperty[TLength] | js.Array[MarginBottomProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginBottom: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginInline(value: MarginInlineProperty[TLength] | js.Array[MarginInlineProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginInline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginInline: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginInline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginInlineEnd(value: MarginInlineEndProperty[TLength] | js.Array[MarginInlineEndProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginInlineEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginInlineEnd: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginInlineEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginInlineStart(value: MarginInlineStartProperty[TLength] | js.Array[MarginInlineStartProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginInlineStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginInlineStart: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginInlineStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginLeft(value: MarginLeftProperty[TLength] | js.Array[MarginLeftProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginLeft: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginRight(value: MarginRightProperty[TLength] | js.Array[MarginRightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginRight: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginTop(value: MarginTopProperty[TLength] | js.Array[MarginTopProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginTop: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskBorderMode(value: MaskBorderModeProperty | js.Array[MaskBorderModeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskBorderMode: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskBorderOutset(value: MaskBorderOutsetProperty[TLength] | js.Array[MaskBorderOutsetProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderOutset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskBorderOutset: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderOutset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskBorderRepeat(value: MaskBorderRepeatProperty | js.Array[MaskBorderRepeatProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderRepeat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskBorderRepeat: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderRepeat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskBorderSlice(value: MaskBorderSliceProperty | js.Array[MaskBorderSliceProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderSlice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskBorderSlice: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderSlice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskBorderSource(value: MaskBorderSourceProperty | js.Array[MaskBorderSourceProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskBorderSource: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskBorderWidth(value: MaskBorderWidthProperty[TLength] | js.Array[MaskBorderWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskBorderWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskBorderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskClip(value: MaskClipProperty | js.Array[MaskClipProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskClip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskClip: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskClip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskComposite(value: MaskCompositeProperty | js.Array[MaskCompositeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskComposite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskComposite: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskComposite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskImage(value: MaskImageProperty | js.Array[MaskImageProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskImage: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskMode(value: MaskModeProperty | js.Array[MaskModeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskMode: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskOrigin(value: MaskOriginProperty | js.Array[MaskOriginProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskOrigin: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskPosition(value: MaskPositionProperty[TLength] | js.Array[MaskPositionProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskPosition: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskRepeat(value: MaskRepeatProperty | js.Array[MaskRepeatProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskRepeat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskRepeat: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskRepeat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskSize(value: MaskSizeProperty[TLength] | js.Array[MaskSizeProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskSize: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskType(value: MaskTypeProperty | js.Array[MaskTypeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskType: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBlockSize(value: MaxBlockSizeProperty[TLength] | js.Array[MaxBlockSizeProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBlockSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBlockSize: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBlockSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxHeight(value: MaxHeightProperty[TLength] | js.Array[MaxHeightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxHeight: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxInlineSize(value: MaxInlineSizeProperty[TLength] | js.Array[MaxInlineSizeProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInlineSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxInlineSize: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInlineSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxLines(value: MaxLinesProperty | js.Array[MaxLinesProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLines: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: MaxWidthProperty[TLength] | js.Array[MaxWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinBlockSize(value: MinBlockSizeProperty[TLength] | js.Array[MinBlockSizeProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minBlockSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinBlockSize: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minBlockSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinHeight(value: MinHeightProperty[TLength] | js.Array[MinHeightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinHeight: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinInlineSize(value: MinInlineSizeProperty[TLength] | js.Array[MinInlineSizeProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minInlineSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinInlineSize: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minInlineSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinWidth(value: MinWidthProperty[TLength] | js.Array[MinWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMixBlendMode(value: MixBlendModeProperty | js.Array[MixBlendModeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mixBlendMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMixBlendMode: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mixBlendMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMotionDistance(value: OffsetDistanceProperty[TLength] | js.Array[OffsetDistanceProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motionDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMotionDistance: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motionDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMotionPath(value: OffsetPathProperty | js.Array[OffsetPathProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motionPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMotionPath: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motionPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMotionRotation(value: OffsetRotateProperty | js.Array[OffsetRotateProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motionRotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMotionRotation: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motionRotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectFit(value: ObjectFitProperty | js.Array[ObjectFitProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectFit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectFit: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectFit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectPosition(value: ObjectPositionProperty[TLength] | js.Array[ObjectPositionProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectPosition: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetAnchor(value: OffsetAnchorProperty[TLength] | js.Array[OffsetAnchorProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetAnchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetAnchor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetAnchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetDistance(value: OffsetDistanceProperty[TLength] | js.Array[OffsetDistanceProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetDistance: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetPath(value: OffsetPathProperty | js.Array[OffsetPathProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetPath: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetPosition(value: OffsetPositionProperty[TLength] | js.Array[OffsetPositionProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetPosition: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetRotate(value: OffsetRotateProperty | js.Array[OffsetRotateProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetRotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetRotate: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetRotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetRotation(value: OffsetRotateProperty | js.Array[OffsetRotateProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetRotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetRotation: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetRotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: GlobalsNumber | js.Array[GlobalsNumber]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: GlobalsNumber | js.Array[GlobalsNumber]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrphans(value: GlobalsNumber | js.Array[GlobalsNumber]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orphans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrphans: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orphans")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineColor(value: OutlineColorProperty | js.Array[OutlineColorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineColor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineOffset(value: OutlineOffsetProperty[TLength] | js.Array[OutlineOffsetProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineOffset: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineStyle(value: OutlineStyleProperty | js.Array[OutlineStyleProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineStyle: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutlineWidth(value: OutlineWidthProperty[TLength] | js.Array[OutlineWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutlineWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outlineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflow(value: OverflowProperty | js.Array[OverflowProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflow: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowAnchor(value: OverflowAnchorProperty | js.Array[OverflowAnchorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowAnchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowAnchor: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowAnchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowBlock(value: OverflowBlockProperty | js.Array[OverflowBlockProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowBlock: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowClipBox(value: OverflowClipBoxProperty | js.Array[OverflowClipBoxProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowClipBox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowClipBox: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowClipBox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowInline(value: OverflowInlineProperty | js.Array[OverflowInlineProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowInline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowInline: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowInline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowWrap(value: OverflowWrapProperty | js.Array[OverflowWrapProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowWrap: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowWrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowX(value: OverflowXProperty | js.Array[OverflowXProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowX: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowY(value: OverflowYProperty | js.Array[OverflowYProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowY: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverscrollBehavior(value: OverscrollBehaviorProperty | js.Array[OverscrollBehaviorProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overscrollBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverscrollBehavior: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overscrollBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverscrollBehaviorX(value: OverscrollBehaviorXProperty | js.Array[OverscrollBehaviorXProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overscrollBehaviorX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverscrollBehaviorX: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overscrollBehaviorX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverscrollBehaviorY(value: OverscrollBehaviorYProperty | js.Array[OverscrollBehaviorYProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overscrollBehaviorY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverscrollBehaviorY: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overscrollBehaviorY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingBlock(value: PaddingBlockProperty[TLength] | js.Array[PaddingBlockProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingBlock: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingBlockEnd(value: PaddingBlockEndProperty[TLength] | js.Array[PaddingBlockEndProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBlockEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingBlockEnd: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBlockEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingBlockStart(value: PaddingBlockStartProperty[TLength] | js.Array[PaddingBlockStartProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBlockStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingBlockStart: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBlockStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingBottom(value: PaddingBottomProperty[TLength] | js.Array[PaddingBottomProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingBottom: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingInline(value: PaddingInlineProperty[TLength] | js.Array[PaddingInlineProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingInline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingInline: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingInline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingInlineEnd(value: PaddingInlineEndProperty[TLength] | js.Array[PaddingInlineEndProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingInlineEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingInlineEnd: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingInlineEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingInlineStart(value: PaddingInlineStartProperty[TLength] | js.Array[PaddingInlineStartProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingInlineStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingInlineStart: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingInlineStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingLeft(value: PaddingLeftProperty[TLength] | js.Array[PaddingLeftProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingLeft: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingRight(value: PaddingRightProperty[TLength] | js.Array[PaddingRightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingRight: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingTop(value: PaddingTopProperty[TLength] | js.Array[PaddingTopProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingTop: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageBreakAfter(value: PageBreakAfterProperty | js.Array[PageBreakAfterProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageBreakAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageBreakAfter: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageBreakAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageBreakBefore(value: PageBreakBeforeProperty | js.Array[PageBreakBeforeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageBreakBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageBreakBefore: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageBreakBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageBreakInside(value: PageBreakInsideProperty | js.Array[PageBreakInsideProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageBreakInside")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageBreakInside: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageBreakInside")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaintOrder(value: PaintOrderProperty | js.Array[PaintOrderProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paintOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaintOrder: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paintOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerspective(value: PerspectiveProperty[TLength] | js.Array[PerspectiveProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perspective")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerspective: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perspective")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerspectiveOrigin(value: PerspectiveOriginProperty[TLength] | js.Array[PerspectiveOriginProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perspectiveOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerspectiveOrigin: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perspectiveOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceContent(value: PlaceContentProperty | js.Array[PlaceContentProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceContent: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointerEvents(value: PointerEventsProperty | js.Array[PointerEventsProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointerEvents: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: PositionProperty | js.Array[PositionProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotes(value: QuotesProperty | js.Array[QuotesProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotes: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResize(value: ResizeProperty | js.Array[ResizeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResize: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRight(value: RightProperty[TLength] | js.Array[RightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRight: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotate(value: RotateProperty | js.Array[RotateProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotate: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowGap(value: RowGapProperty[TLength] | js.Array[RowGapProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowGap: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRubyAlign(value: RubyAlignProperty | js.Array[RubyAlignProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rubyAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRubyAlign: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rubyAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRubyMerge(value: RubyMergeProperty | js.Array[RubyMergeProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rubyMerge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRubyMerge: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rubyMerge")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

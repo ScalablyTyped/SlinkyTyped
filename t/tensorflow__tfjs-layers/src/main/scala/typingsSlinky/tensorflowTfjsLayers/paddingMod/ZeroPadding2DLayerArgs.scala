@@ -1,15 +1,12 @@
 package typingsSlinky.tensorflowTfjsLayers.paddingMod
 
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.DataFormat
-import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ZeroPadding2DLayerArgs extends LayerArgs {
   /**
     * One of `'channelsLast'` (default) and `'channelsFirst'`.
@@ -20,7 +17,7 @@ trait ZeroPadding2DLayerArgs extends LayerArgs {
     * corresponds to inputs with shape
     * `[batch, channels, height, width]`.
     */
-  var dataFormat: js.UndefOr[DataFormat] = js.undefined
+  var dataFormat: js.UndefOr[DataFormat] = js.native
   /**
     * Integer, or `Array` of 2 integers, or `Array` of 2 `Array`s, each of
     * which is an `Array` of 2 integers.
@@ -33,35 +30,48 @@ trait ZeroPadding2DLayerArgs extends LayerArgs {
     */
   var padding: js.UndefOr[
     Double | (js.Tuple2[Double | (js.Tuple2[Double, Double]), Double | (js.Tuple2[Double, Double])])
-  ] = js.undefined
+  ] = js.native
 }
 
 object ZeroPadding2DLayerArgs {
   @scala.inline
-  def apply(
-    batchInputShape: Shape = null,
-    batchSize: Int | Double = null,
-    dataFormat: DataFormat = null,
-    dtype: DataType = null,
-    inputDType: DataType = null,
-    inputShape: Shape = null,
-    name: String = null,
-    padding: Double | (js.Tuple2[Double | (js.Tuple2[Double, Double]), Double | (js.Tuple2[Double, Double])]) = null,
-    trainable: js.UndefOr[Boolean] = js.undefined,
-    weights: js.Array[Tensor_[Rank]] = null
-  ): ZeroPadding2DLayerArgs = {
+  def apply(): ZeroPadding2DLayerArgs = {
     val __obj = js.Dynamic.literal()
-    if (batchInputShape != null) __obj.updateDynamic("batchInputShape")(batchInputShape.asInstanceOf[js.Any])
-    if (batchSize != null) __obj.updateDynamic("batchSize")(batchSize.asInstanceOf[js.Any])
-    if (dataFormat != null) __obj.updateDynamic("dataFormat")(dataFormat.asInstanceOf[js.Any])
-    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
-    if (inputDType != null) __obj.updateDynamic("inputDType")(inputDType.asInstanceOf[js.Any])
-    if (inputShape != null) __obj.updateDynamic("inputShape")(inputShape.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.asInstanceOf[js.Any])
-    if (weights != null) __obj.updateDynamic("weights")(weights.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZeroPadding2DLayerArgs]
   }
+  @scala.inline
+  implicit class ZeroPadding2DLayerArgsOps[Self <: ZeroPadding2DLayerArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataFormat(value: DataFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(
+      value: Double | (js.Tuple2[Double | (js.Tuple2[Double, Double]), Double | (js.Tuple2[Double, Double])])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

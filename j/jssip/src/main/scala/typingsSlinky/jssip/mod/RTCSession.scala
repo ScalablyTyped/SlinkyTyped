@@ -1,7 +1,6 @@
 package typingsSlinky.jssip.mod
 
 import org.scalajs.dom.experimental.webrtc.RTCPeerConnection
-import org.scalajs.dom.raw.DOMError
 import typingsSlinky.jssip.jssipStrings.accepted
 import typingsSlinky.jssip.jssipStrings.confirmed
 import typingsSlinky.jssip.jssipStrings.connecting
@@ -65,7 +64,7 @@ class RTCSession () extends js.Object {
   @JSName("on")
   def on_failed(eventName: failed, handler: EventHandler[SessionFailedEvent]): Unit = js.native
   @JSName("on")
-  def on_getusermediafailed(eventName: getusermediafailed, handler: EventHandler[DOMError]): Unit = js.native
+  def on_getusermediafailed(eventName: getusermediafailed, handler: EventHandler[SessionUserMediaFailedEvent]): Unit = js.native
   @JSName("on")
   def on_hold(eventName: hold, handler: EventHandler[SessionHoldEvent]): Unit = js.native
   @JSName("on")
@@ -79,13 +78,25 @@ class RTCSession () extends js.Object {
   @JSName("on")
   def on_peerconnection(eventName: peerconnection, handler: EventHandler[RTCPeerConnection]): Unit = js.native
   @JSName("on")
-  def on_peerconnectioncreateanswerfailed(eventName: peerconnectionColoncreateanswerfailed, handler: EventHandler[DOMError]): Unit = js.native
+  def on_peerconnectioncreateanswerfailed(
+    eventName: peerconnectionColoncreateanswerfailed,
+    handler: EventHandler[SessionCreateAnswerFailedEvent]
+  ): Unit = js.native
   @JSName("on")
-  def on_peerconnectioncreateofferfailed(eventName: peerconnectionColoncreateofferfailed, handler: EventHandler[DOMError]): Unit = js.native
+  def on_peerconnectioncreateofferfailed(
+    eventName: peerconnectionColoncreateofferfailed,
+    handler: EventHandler[SessionCreateOfferFailedEvent]
+  ): Unit = js.native
   @JSName("on")
-  def on_peerconnectionsetlocaldescriptionfailed(eventName: peerconnectionColonsetlocaldescriptionfailed, handler: EventHandler[DOMError]): Unit = js.native
+  def on_peerconnectionsetlocaldescriptionfailed(
+    eventName: peerconnectionColonsetlocaldescriptionfailed,
+    handler: EventHandler[SessionSetLocalDescriptionFailedEvent]
+  ): Unit = js.native
   @JSName("on")
-  def on_peerconnectionsetremotedescriptionfailed(eventName: peerconnectionColonsetremotedescriptionfailed, handler: EventHandler[DOMError]): Unit = js.native
+  def on_peerconnectionsetremotedescriptionfailed(
+    eventName: peerconnectionColonsetremotedescriptionfailed,
+    handler: EventHandler[SessionSetRemoteDescriptionFailedEvent]
+  ): Unit = js.native
   @JSName("on")
   def on_progress(eventName: progress, handler: EventHandler[SessionProgressEvent]): Unit = js.native
   @JSName("on")

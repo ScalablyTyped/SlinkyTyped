@@ -20,8 +20,27 @@ object DnsRecord {
   @scala.inline
   def apply(TTL: RecordTTL, Type: RecordType): DnsRecord = {
     val __obj = js.Dynamic.literal(TTL = TTL.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DnsRecord]
   }
+  @scala.inline
+  implicit class DnsRecordOps[Self <: DnsRecord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTTL(value: RecordTTL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: RecordType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

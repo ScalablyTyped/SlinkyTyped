@@ -17,14 +17,12 @@ trait Platform extends js.Object
 
 object Platform {
   @scala.inline
-  def ANDROID: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.ANDROID = this.cast("ANDROID")
+  def ANDROID: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.ANDROID = "ANDROID".asInstanceOf[typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.ANDROID]
   @scala.inline
-  def IOS: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.IOS = this.cast("IOS")
+  def IOS: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.IOS = "IOS".asInstanceOf[typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.IOS]
   @scala.inline
-  def MOBILE_WEB: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.MOBILE_WEB = this.cast("MOBILE_WEB")
+  def MOBILE_WEB: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.MOBILE_WEB = "MOBILE_WEB".asInstanceOf[typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.MOBILE_WEB]
   @scala.inline
-  def WEB: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.WEB = this.cast("WEB")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WEB: typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.WEB = "WEB".asInstanceOf[typingsSlinky.facebookInstantGames.facebookInstantGamesStrings.WEB]
 }
 

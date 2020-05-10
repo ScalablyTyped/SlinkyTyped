@@ -1,7 +1,6 @@
 package typingsSlinky.write.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +16,14 @@ object ^ extends js.Object {
   def apply(filepath: String, data: Buffer, callback: Callback[Buffer]): Unit = js.native
   def apply(filepath: String, data: Buffer, options: Options): js.Promise[Result[Buffer]] = js.native
   def apply(filepath: String, data: Buffer, options: Options, callback: Callback[Buffer]): Unit = js.native
-  def apply(filepath: String, data: Uint8Array): js.Promise[Result[scala.scalajs.js.typedarray.Uint8Array]] = js.native
-  def apply(filepath: String, data: Uint8Array, callback: Callback[Uint8Array]): Unit = js.native
-  def apply(filepath: String, data: Uint8Array, options: Options): js.Promise[Result[scala.scalajs.js.typedarray.Uint8Array]] = js.native
-  def apply(filepath: String, data: Uint8Array, options: Options, callback: Callback[Uint8Array]): Unit = js.native
+  def apply(filepath: String, data: js.typedarray.Uint8Array): js.Promise[Result[js.typedarray.Uint8Array]] = js.native
+  def apply(filepath: String, data: js.typedarray.Uint8Array, callback: Callback[js.typedarray.Uint8Array]): Unit = js.native
+  def apply(filepath: String, data: js.typedarray.Uint8Array, options: Options): js.Promise[Result[js.typedarray.Uint8Array]] = js.native
+  def apply(
+    filepath: String,
+    data: js.typedarray.Uint8Array,
+    options: Options,
+    callback: Callback[js.typedarray.Uint8Array]
+  ): Unit = js.native
 }
 

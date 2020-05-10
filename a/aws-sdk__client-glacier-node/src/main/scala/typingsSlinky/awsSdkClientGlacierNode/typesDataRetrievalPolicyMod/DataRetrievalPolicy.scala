@@ -5,19 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DataRetrievalPolicy extends js.Object {
   /**
     * <p>The policy rule. Although this is a list type, currently there must be only one rule, which contains a Strategy field and optionally a BytesPerHour field.</p>
     */
-  var Rules: js.UndefOr[js.Array[DataRetrievalRule] | js.Iterable[DataRetrievalRule]] = js.undefined
+  var Rules: js.UndefOr[js.Array[DataRetrievalRule] | js.Iterable[DataRetrievalRule]] = js.native
 }
 
 object DataRetrievalPolicy {
   @scala.inline
-  def apply(Rules: js.Array[DataRetrievalRule] | js.Iterable[DataRetrievalRule] = null): DataRetrievalPolicy = {
+  def apply(): DataRetrievalPolicy = {
     val __obj = js.Dynamic.literal()
-    if (Rules != null) __obj.updateDynamic("Rules")(Rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataRetrievalPolicy]
   }
+  @scala.inline
+  implicit class DataRetrievalPolicyOps[Self <: DataRetrievalPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRulesIterable(value: js.Iterable[DataRetrievalRule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRules(value: js.Array[DataRetrievalRule] | js.Iterable[DataRetrievalRule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

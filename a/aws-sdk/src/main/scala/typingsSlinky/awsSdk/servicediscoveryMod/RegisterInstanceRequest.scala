@@ -26,15 +26,47 @@ trait RegisterInstanceRequest extends js.Object {
 
 object RegisterInstanceRequest {
   @scala.inline
-  def apply(
-    Attributes: Attributes,
-    InstanceId: ResourceId,
-    ServiceId: ResourceId,
-    CreatorRequestId: ResourceId = null
-  ): RegisterInstanceRequest = {
+  def apply(Attributes: Attributes, InstanceId: ResourceId, ServiceId: ResourceId): RegisterInstanceRequest = {
     val __obj = js.Dynamic.literal(Attributes = Attributes.asInstanceOf[js.Any], InstanceId = InstanceId.asInstanceOf[js.Any], ServiceId = ServiceId.asInstanceOf[js.Any])
-    if (CreatorRequestId != null) __obj.updateDynamic("CreatorRequestId")(CreatorRequestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterInstanceRequest]
   }
+  @scala.inline
+  implicit class RegisterInstanceRequestOps[Self <: RegisterInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: Attributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreatorRequestId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatorRequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatorRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatorRequestId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

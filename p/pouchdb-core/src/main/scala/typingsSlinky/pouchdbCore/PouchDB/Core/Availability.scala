@@ -14,14 +14,12 @@ trait Availability extends js.Object
 
 object Availability {
   @scala.inline
-  def available: typingsSlinky.pouchdbCore.pouchdbCoreStrings.available = this.cast("available")
+  def available: typingsSlinky.pouchdbCore.pouchdbCoreStrings.available = "available".asInstanceOf[typingsSlinky.pouchdbCore.pouchdbCoreStrings.available]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def compacted: typingsSlinky.pouchdbCore.pouchdbCoreStrings.compacted = "compacted".asInstanceOf[typingsSlinky.pouchdbCore.pouchdbCoreStrings.compacted]
   @scala.inline
-  def compacted: typingsSlinky.pouchdbCore.pouchdbCoreStrings.compacted = this.cast("compacted")
+  def missing: typingsSlinky.pouchdbCore.pouchdbCoreStrings.missing = "missing".asInstanceOf[typingsSlinky.pouchdbCore.pouchdbCoreStrings.missing]
   @scala.inline
-  def missing: typingsSlinky.pouchdbCore.pouchdbCoreStrings.missing = this.cast("missing")
-  @scala.inline
-  def `not compacted`: typingsSlinky.pouchdbCore.pouchdbCoreStrings.`not compacted` = this.cast("not compacted")
+  def `not compacted`: typingsSlinky.pouchdbCore.pouchdbCoreStrings.`not compacted` = ("not compacted").asInstanceOf[typingsSlinky.pouchdbCore.pouchdbCoreStrings.`not compacted`]
 }
 

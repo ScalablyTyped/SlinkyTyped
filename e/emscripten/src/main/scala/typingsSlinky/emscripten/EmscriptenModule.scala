@@ -13,19 +13,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EmscriptenModule extends js.Object {
   var FAST_MEMORY: Double = js.native
-  var FHEAP: scala.scalajs.js.typedarray.Float64Array = js.native
+  var FHEAP: js.typedarray.Float64Array = js.native
   // USE_TYPED_ARRAYS == 1
-  var HEAP: scala.scalajs.js.typedarray.Int32Array = js.native
-  var HEAP16: scala.scalajs.js.typedarray.Int16Array = js.native
-  var HEAP32: scala.scalajs.js.typedarray.Int32Array = js.native
+  var HEAP: js.typedarray.Int32Array = js.native
+  var HEAP16: js.typedarray.Int16Array = js.native
+  var HEAP32: js.typedarray.Int32Array = js.native
   // USE_TYPED_ARRAYS == 2
-  var HEAP8: scala.scalajs.js.typedarray.Int8Array = js.native
-  var HEAPF32: scala.scalajs.js.typedarray.Float32Array = js.native
-  var HEAPF64: scala.scalajs.js.typedarray.Float64Array = js.native
-  var HEAPU16: scala.scalajs.js.typedarray.Uint16Array = js.native
-  var HEAPU32: scala.scalajs.js.typedarray.Uint32Array = js.native
-  var HEAPU8: scala.scalajs.js.typedarray.Uint8Array = js.native
-  var IHEAP: scala.scalajs.js.typedarray.Int32Array = js.native
+  var HEAP8: js.typedarray.Int8Array = js.native
+  var HEAPF32: js.typedarray.Float32Array = js.native
+  var HEAPF64: js.typedarray.Float64Array = js.native
+  var HEAPU16: js.typedarray.Uint16Array = js.native
+  var HEAPU32: js.typedarray.Uint32Array = js.native
+  var HEAPU8: js.typedarray.Uint8Array = js.native
+  var IHEAP: js.typedarray.Int32Array = js.native
   var TOTAL_MEMORY: Double = js.native
   var TOTAL_STACK: Double = js.native
   var arguments: js.Array[String] = js.native
@@ -40,7 +40,7 @@ trait EmscriptenModule extends js.Object {
   var preinitializedWebGLContext: WebGLRenderingContext = js.native
   var preloadedAudios: js.Any = js.native
   var preloadedImages: js.Any = js.native
-  var wasmBinary: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var wasmBinary: js.typedarray.ArrayBuffer = js.native
   /**
     * Initializes an EmscriptenModule object and returns it. The initialized
     * obejct will be passed to then(). Works only when -s MODULARIZE=1 is
@@ -59,7 +59,7 @@ trait EmscriptenModule extends js.Object {
   def addOnPreMain(cb: js.Function0[_]): Unit = js.native
   def addOnPreRun(cb: js.Function0[_]): Unit = js.native
   def destroy(`object`: js.Object): Unit = js.native
-  def getPreloadedPackage(remotePackageName: String, remotePackageSize: Double): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def getPreloadedPackage(remotePackageName: String, remotePackageSize: Double): js.typedarray.ArrayBuffer = js.native
   def instantiateWasm(
     imports: WebAssemblyImports,
     successCallback: js.Function1[/* module */ typingsSlinky.emscripten.WebAssembly.Module, Unit]

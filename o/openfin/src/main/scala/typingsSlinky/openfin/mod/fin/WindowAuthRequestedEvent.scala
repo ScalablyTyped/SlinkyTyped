@@ -6,8 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WindowAuthRequestedEvent extends WindowBaseEvent {
-  var authInfo: AnonHost
+  var authInfo: AnonHost = js.native
 }
 
 object WindowAuthRequestedEvent {
@@ -17,5 +18,19 @@ object WindowAuthRequestedEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowAuthRequestedEvent]
   }
+  @scala.inline
+  implicit class WindowAuthRequestedEventOps[Self <: WindowAuthRequestedEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthInfo(value: AnonHost): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,27 +1,23 @@
 package typingsSlinky.reactNativeFlipCard.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactNativeFlipCard.mod.FaceProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Face
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeFlipCard.mod.Face] {
+object Face {
   @JSImport("react-native-flip-card", "Face")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(chilren: js.Array[ReactElement], _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactNativeFlipCard.mod.Face] = {
-    val __obj = js.Dynamic.literal(chilren = chilren.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: FaceProps): Default[tag.type, typingsSlinky.reactNativeFlipCard.mod.Face] = new Default[tag.type, typingsSlinky.reactNativeFlipCard.mod.Face](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(chilren: js.Array[ReactElement]): Default[tag.type, typingsSlinky.reactNativeFlipCard.mod.Face] = {
+    val __props = js.Dynamic.literal(chilren = chilren.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.reactNativeFlipCard.mod.Face](js.Array(this.component, __props.asInstanceOf[FaceProps]))
   }
-  type Props = FaceProps
 }
 

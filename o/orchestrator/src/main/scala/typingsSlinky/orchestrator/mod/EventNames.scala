@@ -18,22 +18,20 @@ trait EventNames extends js.Object
 
 object EventNames {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def err: typingsSlinky.orchestrator.orchestratorStrings.err = "err".asInstanceOf[typingsSlinky.orchestrator.orchestratorStrings.err]
   @scala.inline
-  def err: typingsSlinky.orchestrator.orchestratorStrings.err = this.cast("err")
+  def start: typingsSlinky.orchestrator.orchestratorStrings.start = "start".asInstanceOf[typingsSlinky.orchestrator.orchestratorStrings.start]
   @scala.inline
-  def start: typingsSlinky.orchestrator.orchestratorStrings.start = this.cast("start")
+  def stop: typingsSlinky.orchestrator.orchestratorStrings.stop = "stop".asInstanceOf[typingsSlinky.orchestrator.orchestratorStrings.stop]
   @scala.inline
-  def stop: typingsSlinky.orchestrator.orchestratorStrings.stop = this.cast("stop")
+  def task_err: typingsSlinky.orchestrator.orchestratorStrings.task_err = "task_err".asInstanceOf[typingsSlinky.orchestrator.orchestratorStrings.task_err]
   @scala.inline
-  def task_err: typingsSlinky.orchestrator.orchestratorStrings.task_err = this.cast("task_err")
+  def task_not_found: typingsSlinky.orchestrator.orchestratorStrings.task_not_found = "task_not_found".asInstanceOf[typingsSlinky.orchestrator.orchestratorStrings.task_not_found]
   @scala.inline
-  def task_not_found: typingsSlinky.orchestrator.orchestratorStrings.task_not_found = this.cast("task_not_found")
+  def task_recursion: typingsSlinky.orchestrator.orchestratorStrings.task_recursion = "task_recursion".asInstanceOf[typingsSlinky.orchestrator.orchestratorStrings.task_recursion]
   @scala.inline
-  def task_recursion: typingsSlinky.orchestrator.orchestratorStrings.task_recursion = this.cast("task_recursion")
+  def task_start: typingsSlinky.orchestrator.orchestratorStrings.task_start = "task_start".asInstanceOf[typingsSlinky.orchestrator.orchestratorStrings.task_start]
   @scala.inline
-  def task_start: typingsSlinky.orchestrator.orchestratorStrings.task_start = this.cast("task_start")
-  @scala.inline
-  def task_stop: typingsSlinky.orchestrator.orchestratorStrings.task_stop = this.cast("task_stop")
+  def task_stop: typingsSlinky.orchestrator.orchestratorStrings.task_stop = "task_stop".asInstanceOf[typingsSlinky.orchestrator.orchestratorStrings.task_stop]
 }
 

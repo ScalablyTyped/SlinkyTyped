@@ -5,30 +5,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpinnerEvents extends js.Object {
-  var change: js.UndefOr[SpinnerEvent[js.Object]] = js.undefined
-  var create: js.UndefOr[SpinnerEvent[js.Object]] = js.undefined
-  var spin: js.UndefOr[SpinnerEvent[SpinnerUIParam]] = js.undefined
-  var start: js.UndefOr[SpinnerEvent[js.Object]] = js.undefined
-  var stop: js.UndefOr[SpinnerEvent[js.Object]] = js.undefined
+  var change: js.UndefOr[SpinnerEvent[js.Object]] = js.native
+  var create: js.UndefOr[SpinnerEvent[js.Object]] = js.native
+  var spin: js.UndefOr[SpinnerEvent[SpinnerUIParam]] = js.native
+  var start: js.UndefOr[SpinnerEvent[js.Object]] = js.native
+  var stop: js.UndefOr[SpinnerEvent[js.Object]] = js.native
 }
 
 object SpinnerEvents {
   @scala.inline
-  def apply(
-    change: (/* event */ JQueryEventObject, js.Object) => Unit = null,
-    create: (/* event */ JQueryEventObject, js.Object) => Unit = null,
-    spin: (/* event */ JQueryEventObject, SpinnerUIParam) => Unit = null,
-    start: (/* event */ JQueryEventObject, js.Object) => Unit = null,
-    stop: (/* event */ JQueryEventObject, js.Object) => Unit = null
-  ): SpinnerEvents = {
+  def apply(): SpinnerEvents = {
     val __obj = js.Dynamic.literal()
-    if (change != null) __obj.updateDynamic("change")(js.Any.fromFunction2(change))
-    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
-    if (spin != null) __obj.updateDynamic("spin")(js.Any.fromFunction2(spin))
-    if (start != null) __obj.updateDynamic("start")(js.Any.fromFunction2(start))
-    if (stop != null) __obj.updateDynamic("stop")(js.Any.fromFunction2(stop))
     __obj.asInstanceOf[SpinnerEvents]
   }
+  @scala.inline
+  implicit class SpinnerEventsOps[Self <: SpinnerEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChange(value: (/* event */ JQueryEventObject, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreate(value: (/* event */ JQueryEventObject, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpin(value: (/* event */ JQueryEventObject, SpinnerUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spin")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSpin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: (/* event */ JQueryEventObject, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStop(value: (/* event */ JQueryEventObject, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

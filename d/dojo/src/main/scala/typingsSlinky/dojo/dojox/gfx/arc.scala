@@ -10,12 +10,13 @@ import scala.scalajs.js.annotation._
   * This module contains the core graphics Arc functions.
   *
   */
+@js.native
 trait arc extends js.Object {
   /**
     * an object with properties of an arc around a unit circle from 0 to pi/4
     *
     */
-  var curvePI4: js.Object
+  var curvePI4: js.Object = js.native
   /**
     * calculates an arc as a series of Bezier curves
     * given the last point and a standard set of SVG arc parameters,
@@ -40,14 +41,14 @@ trait arc extends js.Object {
     sweep: Boolean,
     x: Double,
     y: Double
-  ): js.Array[_]
+  ): js.Array[_] = js.native
   /**
     * return a start point, 1st and 2nd control points, and an end point of
     * a an arc, which is reflected on the x axis
     *
     * @param alpha angle in radians, the arc will be 2 * angle size
     */
-  def unitArcAsBezier(alpha: Double): Unit
+  def unitArcAsBezier(alpha: Double): Unit = js.native
 }
 
 object arc {
@@ -58,8 +59,33 @@ object arc {
     unitArcAsBezier: Double => Unit
   ): arc = {
     val __obj = js.Dynamic.literal(arcAsBezier = js.Any.fromFunction8(arcAsBezier), curvePI4 = curvePI4.asInstanceOf[js.Any], unitArcAsBezier = js.Any.fromFunction1(unitArcAsBezier))
-  
     __obj.asInstanceOf[arc]
   }
+  @scala.inline
+  implicit class arcOps[Self <: arc] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArcAsBezier(value: (js.Object, Double, Double, Double, Boolean, Boolean, Double, Double) => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arcAsBezier")(js.Any.fromFunction8(value))
+        ret
+    }
+    @scala.inline
+    def withCurvePI4(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curvePI4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnitArcAsBezier(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitArcAsBezier")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

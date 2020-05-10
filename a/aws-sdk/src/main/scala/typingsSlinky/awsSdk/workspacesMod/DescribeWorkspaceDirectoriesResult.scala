@@ -18,11 +18,41 @@ trait DescribeWorkspaceDirectoriesResult extends js.Object {
 
 object DescribeWorkspaceDirectoriesResult {
   @scala.inline
-  def apply(Directories: DirectoryList = null, NextToken: PaginationToken = null): DescribeWorkspaceDirectoriesResult = {
+  def apply(): DescribeWorkspaceDirectoriesResult = {
     val __obj = js.Dynamic.literal()
-    if (Directories != null) __obj.updateDynamic("Directories")(Directories.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeWorkspaceDirectoriesResult]
   }
+  @scala.inline
+  implicit class DescribeWorkspaceDirectoriesResultOps[Self <: DescribeWorkspaceDirectoriesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectories(value: DirectoryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Directories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Directories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

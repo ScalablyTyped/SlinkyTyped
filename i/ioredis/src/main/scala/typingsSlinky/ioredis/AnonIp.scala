@@ -4,18 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIp extends js.Object {
-  var ip: String
-  var port: String
-  var prio: js.UndefOr[Double] = js.undefined
+  var ip: String = js.native
+  var port: String = js.native
+  var prio: js.UndefOr[Double] = js.native
 }
 
 object AnonIp {
   @scala.inline
-  def apply(ip: String, port: String, prio: Int | Double = null): AnonIp = {
+  def apply(ip: String, port: String): AnonIp = {
     val __obj = js.Dynamic.literal(ip = ip.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
-    if (prio != null) __obj.updateDynamic("prio")(prio.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonIp]
   }
+  @scala.inline
+  implicit class AnonIpOps[Self <: AnonIp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prio")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

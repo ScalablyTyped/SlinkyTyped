@@ -30,16 +30,53 @@ trait ListHealthChecksResponse extends js.Object {
 
 object ListHealthChecksResponse {
   @scala.inline
-  def apply(
-    HealthChecks: HealthChecks,
-    IsTruncated: PageTruncated,
-    Marker: PageMarker,
-    MaxItems: PageMaxItems,
-    NextMarker: PageMarker = null
-  ): ListHealthChecksResponse = {
+  def apply(HealthChecks: HealthChecks, IsTruncated: PageTruncated, Marker: PageMarker, MaxItems: PageMaxItems): ListHealthChecksResponse = {
     val __obj = js.Dynamic.literal(HealthChecks = HealthChecks.asInstanceOf[js.Any], IsTruncated = IsTruncated.asInstanceOf[js.Any], Marker = Marker.asInstanceOf[js.Any], MaxItems = MaxItems.asInstanceOf[js.Any])
-    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListHealthChecksResponse]
   }
+  @scala.inline
+  implicit class ListHealthChecksResponseOps[Self <: ListHealthChecksResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHealthChecks(value: HealthChecks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthChecks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsTruncated(value: PageTruncated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarker(value: PageMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxItems(value: PageMaxItems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextMarker(value: PageMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

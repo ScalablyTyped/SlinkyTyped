@@ -27,40 +27,38 @@ trait Format extends js.Object
 
 object Format {
   @scala.inline
-  def androidDotxml: typingsSlinky.theo.theoStrings.androidDotxml = this.cast("android.xml")
+  def androidDotxml: typingsSlinky.theo.theoStrings.androidDotxml = "android.xml".asInstanceOf[typingsSlinky.theo.theoStrings.androidDotxml]
   @scala.inline
-  def auraDottokens: typingsSlinky.theo.theoStrings.auraDottokens = this.cast("aura.tokens")
+  def auraDottokens: typingsSlinky.theo.theoStrings.auraDottokens = "aura.tokens".asInstanceOf[typingsSlinky.theo.theoStrings.auraDottokens]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def commonDotjs: typingsSlinky.theo.theoStrings.commonDotjs = "common.js".asInstanceOf[typingsSlinky.theo.theoStrings.commonDotjs]
   @scala.inline
-  def commonDotjs: typingsSlinky.theo.theoStrings.commonDotjs = this.cast("common.js")
+  def cssmodulesDotcss: typingsSlinky.theo.theoStrings.cssmodulesDotcss = "cssmodules.css".asInstanceOf[typingsSlinky.theo.theoStrings.cssmodulesDotcss]
   @scala.inline
-  def cssmodulesDotcss: typingsSlinky.theo.theoStrings.cssmodulesDotcss = this.cast("cssmodules.css")
+  def `custom-propertiesDotcss`: typingsSlinky.theo.theoStrings.`custom-propertiesDotcss` = "custom-properties.css".asInstanceOf[typingsSlinky.theo.theoStrings.`custom-propertiesDotcss`]
   @scala.inline
-  def `custom-propertiesDotcss`: typingsSlinky.theo.theoStrings.`custom-propertiesDotcss` = this.cast("custom-properties.css")
+  def html: typingsSlinky.theo.theoStrings.html = "html".asInstanceOf[typingsSlinky.theo.theoStrings.html]
   @scala.inline
-  def html: typingsSlinky.theo.theoStrings.html = this.cast("html")
+  def iosDotjson: typingsSlinky.theo.theoStrings.iosDotjson = "ios.json".asInstanceOf[typingsSlinky.theo.theoStrings.iosDotjson]
   @scala.inline
-  def iosDotjson: typingsSlinky.theo.theoStrings.iosDotjson = this.cast("ios.json")
+  def json: typingsSlinky.theo.theoStrings.json = "json".asInstanceOf[typingsSlinky.theo.theoStrings.json]
   @scala.inline
-  def json: typingsSlinky.theo.theoStrings.json = this.cast("json")
+  def less: typingsSlinky.theo.theoStrings.less = "less".asInstanceOf[typingsSlinky.theo.theoStrings.less]
   @scala.inline
-  def less: typingsSlinky.theo.theoStrings.less = this.cast("less")
+  def listDotscss: typingsSlinky.theo.theoStrings.listDotscss = "list.scss".asInstanceOf[typingsSlinky.theo.theoStrings.listDotscss]
   @scala.inline
-  def listDotscss: typingsSlinky.theo.theoStrings.listDotscss = this.cast("list.scss")
+  def mapDotcss: typingsSlinky.theo.theoStrings.mapDotcss = "map.css".asInstanceOf[typingsSlinky.theo.theoStrings.mapDotcss]
   @scala.inline
-  def mapDotcss: typingsSlinky.theo.theoStrings.mapDotcss = this.cast("map.css")
+  def mapDotvariableDotscss: typingsSlinky.theo.theoStrings.mapDotvariableDotscss = "map.variable.scss".asInstanceOf[typingsSlinky.theo.theoStrings.mapDotvariableDotscss]
   @scala.inline
-  def mapDotvariableDotscss: typingsSlinky.theo.theoStrings.mapDotvariableDotscss = this.cast("map.variable.scss")
+  def moduleDotjs: typingsSlinky.theo.theoStrings.moduleDotjs = "module.js".asInstanceOf[typingsSlinky.theo.theoStrings.moduleDotjs]
   @scala.inline
-  def moduleDotjs: typingsSlinky.theo.theoStrings.moduleDotjs = this.cast("module.js")
+  def rawDotjson: typingsSlinky.theo.theoStrings.rawDotjson = "raw.json".asInstanceOf[typingsSlinky.theo.theoStrings.rawDotjson]
   @scala.inline
-  def rawDotjson: typingsSlinky.theo.theoStrings.rawDotjson = this.cast("raw.json")
+  def sass: typingsSlinky.theo.theoStrings.sass = "sass".asInstanceOf[typingsSlinky.theo.theoStrings.sass]
   @scala.inline
-  def sass: typingsSlinky.theo.theoStrings.sass = this.cast("sass")
+  def scss: typingsSlinky.theo.theoStrings.scss = "scss".asInstanceOf[typingsSlinky.theo.theoStrings.scss]
   @scala.inline
-  def scss: typingsSlinky.theo.theoStrings.scss = this.cast("scss")
-  @scala.inline
-  def styl: typingsSlinky.theo.theoStrings.styl = this.cast("styl")
+  def styl: typingsSlinky.theo.theoStrings.styl = "styl".asInstanceOf[typingsSlinky.theo.theoStrings.styl]
 }
 

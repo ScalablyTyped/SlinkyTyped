@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BucketBySession extends js.Object {
   /** Specifies that only sessions of duration longer than minDurationMillis are considered and used as a container for aggregated data. */
-  var minDurationMillis: js.UndefOr[String] = js.undefined
+  var minDurationMillis: js.UndefOr[String] = js.native
 }
 
 object BucketBySession {
   @scala.inline
-  def apply(minDurationMillis: String = null): BucketBySession = {
+  def apply(): BucketBySession = {
     val __obj = js.Dynamic.literal()
-    if (minDurationMillis != null) __obj.updateDynamic("minDurationMillis")(minDurationMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketBySession]
   }
+  @scala.inline
+  implicit class BucketBySessionOps[Self <: BucketBySession] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinDurationMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDurationMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinDurationMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDurationMillis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

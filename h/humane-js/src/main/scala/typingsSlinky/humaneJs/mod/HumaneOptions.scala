@@ -5,29 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HumaneOptions extends HumaneMessageOptions {
-  var baseCls: js.UndefOr[String] = js.undefined
-  var container: js.UndefOr[Element] = js.undefined
+  var baseCls: js.UndefOr[String] = js.native
+  var container: js.UndefOr[Element] = js.native
 }
 
 object HumaneOptions {
   @scala.inline
-  def apply(
-    addnCls: String = null,
-    baseCls: String = null,
-    clickToClose: js.UndefOr[Boolean] = js.undefined,
-    container: Element = null,
-    timeout: Int | Double = null,
-    waitForMove: js.UndefOr[Boolean] = js.undefined
-  ): HumaneOptions = {
+  def apply(): HumaneOptions = {
     val __obj = js.Dynamic.literal()
-    if (addnCls != null) __obj.updateDynamic("addnCls")(addnCls.asInstanceOf[js.Any])
-    if (baseCls != null) __obj.updateDynamic("baseCls")(baseCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickToClose)) __obj.updateDynamic("clickToClose")(clickToClose.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(waitForMove)) __obj.updateDynamic("waitForMove")(waitForMove.asInstanceOf[js.Any])
     __obj.asInstanceOf[HumaneOptions]
   }
+  @scala.inline
+  implicit class HumaneOptionsOps[Self <: HumaneOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

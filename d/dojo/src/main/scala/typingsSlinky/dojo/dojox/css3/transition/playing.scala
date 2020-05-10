@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait playing extends js.Object
 
 /**

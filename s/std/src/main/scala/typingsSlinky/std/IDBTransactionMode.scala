@@ -14,12 +14,10 @@ trait IDBTransactionMode extends js.Object
 
 object IDBTransactionMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def readonly: readonly_ = "readonly".asInstanceOf[readonly_]
   @scala.inline
-  def readonly: readonly_ = this.cast("readonly")
+  def readwrite: typingsSlinky.std.stdStrings.readwrite = "readwrite".asInstanceOf[typingsSlinky.std.stdStrings.readwrite]
   @scala.inline
-  def readwrite: typingsSlinky.std.stdStrings.readwrite = this.cast("readwrite")
-  @scala.inline
-  def versionchange: typingsSlinky.std.stdStrings.versionchange = this.cast("versionchange")
+  def versionchange: typingsSlinky.std.stdStrings.versionchange = "versionchange".asInstanceOf[typingsSlinky.std.stdStrings.versionchange]
 }
 

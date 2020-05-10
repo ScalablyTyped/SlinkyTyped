@@ -34,22 +34,89 @@ trait HlsContentProtection extends js.Object {
 
 object HlsContentProtection {
   @scala.inline
-  def apply(
-    InitializationVector: ZeroTo255String = null,
-    Key: Base64EncodedString = null,
-    KeyMd5: Base64EncodedString = null,
-    KeyStoragePolicy: KeyStoragePolicy = null,
-    LicenseAcquisitionUrl: ZeroTo512String = null,
-    Method: HlsContentProtectionMethod = null
-  ): HlsContentProtection = {
+  def apply(): HlsContentProtection = {
     val __obj = js.Dynamic.literal()
-    if (InitializationVector != null) __obj.updateDynamic("InitializationVector")(InitializationVector.asInstanceOf[js.Any])
-    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
-    if (KeyMd5 != null) __obj.updateDynamic("KeyMd5")(KeyMd5.asInstanceOf[js.Any])
-    if (KeyStoragePolicy != null) __obj.updateDynamic("KeyStoragePolicy")(KeyStoragePolicy.asInstanceOf[js.Any])
-    if (LicenseAcquisitionUrl != null) __obj.updateDynamic("LicenseAcquisitionUrl")(LicenseAcquisitionUrl.asInstanceOf[js.Any])
-    if (Method != null) __obj.updateDynamic("Method")(Method.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsContentProtection]
   }
+  @scala.inline
+  implicit class HlsContentProtectionOps[Self <: HlsContentProtection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInitializationVector(value: ZeroTo255String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitializationVector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitializationVector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitializationVector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: Base64EncodedString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyMd5(value: Base64EncodedString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyMd5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyMd5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyMd5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyStoragePolicy(value: KeyStoragePolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyStoragePolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyStoragePolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyStoragePolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLicenseAcquisitionUrl(value: ZeroTo512String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseAcquisitionUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLicenseAcquisitionUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LicenseAcquisitionUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: HlsContentProtectionMethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Method")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

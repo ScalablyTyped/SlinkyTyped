@@ -4,34 +4,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Guardian extends js.Object {
   /** Identifier for the guardian. */
-  var guardianId: js.UndefOr[String] = js.undefined
+  var guardianId: js.UndefOr[String] = js.native
   /** User profile for the guardian. */
-  var guardianProfile: js.UndefOr[UserProfile] = js.undefined
+  var guardianProfile: js.UndefOr[UserProfile] = js.native
   /**
     * The email address to which the initial guardian invitation was sent.
     * This field is only visible to domain administrators.
     */
-  var invitedEmailAddress: js.UndefOr[String] = js.undefined
+  var invitedEmailAddress: js.UndefOr[String] = js.native
   /** Identifier for the student to whom the guardian relationship applies. */
-  var studentId: js.UndefOr[String] = js.undefined
+  var studentId: js.UndefOr[String] = js.native
 }
 
 object Guardian {
   @scala.inline
-  def apply(
-    guardianId: String = null,
-    guardianProfile: UserProfile = null,
-    invitedEmailAddress: String = null,
-    studentId: String = null
-  ): Guardian = {
+  def apply(): Guardian = {
     val __obj = js.Dynamic.literal()
-    if (guardianId != null) __obj.updateDynamic("guardianId")(guardianId.asInstanceOf[js.Any])
-    if (guardianProfile != null) __obj.updateDynamic("guardianProfile")(guardianProfile.asInstanceOf[js.Any])
-    if (invitedEmailAddress != null) __obj.updateDynamic("invitedEmailAddress")(invitedEmailAddress.asInstanceOf[js.Any])
-    if (studentId != null) __obj.updateDynamic("studentId")(studentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Guardian]
   }
+  @scala.inline
+  implicit class GuardianOps[Self <: Guardian] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGuardianId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guardianId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuardianId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guardianId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuardianProfile(value: UserProfile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guardianProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuardianProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guardianProfile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitedEmailAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedEmailAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitedEmailAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedEmailAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStudentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("studentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStudentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("studentId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

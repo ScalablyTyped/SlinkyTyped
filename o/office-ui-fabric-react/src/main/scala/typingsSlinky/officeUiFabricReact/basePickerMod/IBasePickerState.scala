@@ -4,45 +4,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IBasePickerState extends js.Object {
-  var isFocused: js.UndefOr[Boolean] = js.undefined
-  var isMostRecentlyUsedVisible: js.UndefOr[Boolean] = js.undefined
-  var isResultsFooterVisible: js.UndefOr[Boolean] = js.undefined
-  var isSearching: js.UndefOr[Boolean] = js.undefined
-  var items: js.UndefOr[js.Any] = js.undefined
-  var moreSuggestionsAvailable: js.UndefOr[Boolean] = js.undefined
-  var selectedIndices: js.UndefOr[js.Array[Double]] = js.undefined
-  var suggestedDisplayValue: js.UndefOr[String] = js.undefined
-  var suggestionsLoading: js.UndefOr[Boolean] = js.undefined
-  var suggestionsVisible: js.UndefOr[Boolean] = js.undefined
+  var isFocused: js.UndefOr[Boolean] = js.native
+  var isMostRecentlyUsedVisible: js.UndefOr[Boolean] = js.native
+  var isResultsFooterVisible: js.UndefOr[Boolean] = js.native
+  var isSearching: js.UndefOr[Boolean] = js.native
+  var items: js.UndefOr[js.Any] = js.native
+  var moreSuggestionsAvailable: js.UndefOr[Boolean] = js.native
+  var selectedIndices: js.UndefOr[js.Array[Double]] = js.native
+  var suggestedDisplayValue: js.UndefOr[String] = js.native
+  var suggestionsLoading: js.UndefOr[Boolean] = js.native
+  var suggestionsVisible: js.UndefOr[Boolean] = js.native
 }
 
 object IBasePickerState {
   @scala.inline
-  def apply(
-    isFocused: js.UndefOr[Boolean] = js.undefined,
-    isMostRecentlyUsedVisible: js.UndefOr[Boolean] = js.undefined,
-    isResultsFooterVisible: js.UndefOr[Boolean] = js.undefined,
-    isSearching: js.UndefOr[Boolean] = js.undefined,
-    items: js.Any = null,
-    moreSuggestionsAvailable: js.UndefOr[Boolean] = js.undefined,
-    selectedIndices: js.Array[Double] = null,
-    suggestedDisplayValue: String = null,
-    suggestionsLoading: js.UndefOr[Boolean] = js.undefined,
-    suggestionsVisible: js.UndefOr[Boolean] = js.undefined
-  ): IBasePickerState = {
+  def apply(): IBasePickerState = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(isFocused)) __obj.updateDynamic("isFocused")(isFocused.asInstanceOf[js.Any])
-    if (!js.isUndefined(isMostRecentlyUsedVisible)) __obj.updateDynamic("isMostRecentlyUsedVisible")(isMostRecentlyUsedVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(isResultsFooterVisible)) __obj.updateDynamic("isResultsFooterVisible")(isResultsFooterVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSearching)) __obj.updateDynamic("isSearching")(isSearching.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (!js.isUndefined(moreSuggestionsAvailable)) __obj.updateDynamic("moreSuggestionsAvailable")(moreSuggestionsAvailable.asInstanceOf[js.Any])
-    if (selectedIndices != null) __obj.updateDynamic("selectedIndices")(selectedIndices.asInstanceOf[js.Any])
-    if (suggestedDisplayValue != null) __obj.updateDynamic("suggestedDisplayValue")(suggestedDisplayValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(suggestionsLoading)) __obj.updateDynamic("suggestionsLoading")(suggestionsLoading.asInstanceOf[js.Any])
-    if (!js.isUndefined(suggestionsVisible)) __obj.updateDynamic("suggestionsVisible")(suggestionsVisible.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBasePickerState]
   }
+  @scala.inline
+  implicit class IBasePickerStateOps[Self <: IBasePickerState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsFocused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFocused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsFocused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFocused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsMostRecentlyUsedVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMostRecentlyUsedVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsMostRecentlyUsedVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMostRecentlyUsedVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsResultsFooterVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResultsFooterVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsResultsFooterVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResultsFooterVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsSearching(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSearching")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsSearching: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSearching")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoreSuggestionsAvailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moreSuggestionsAvailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoreSuggestionsAvailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moreSuggestionsAvailable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedIndices(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIndices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedIndices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIndices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedDisplayValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDisplayValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedDisplayValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedDisplayValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestionsLoading(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestionsLoading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestionsLoading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestionsLoading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestionsVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestionsVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestionsVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestionsVisible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

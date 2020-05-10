@@ -13,12 +13,10 @@ trait ConfirmationStatuses extends js.Object
 
 object ConfirmationStatuses {
   @scala.inline
-  def CONFIRMED: typingsSlinky.alexaSdk.alexaSdkStrings.CONFIRMED = this.cast("CONFIRMED")
+  def CONFIRMED: typingsSlinky.alexaSdk.alexaSdkStrings.CONFIRMED = "CONFIRMED".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.CONFIRMED]
   @scala.inline
-  def DENIED: typingsSlinky.alexaSdk.alexaSdkStrings.DENIED = this.cast("DENIED")
+  def DENIED: typingsSlinky.alexaSdk.alexaSdkStrings.DENIED = "DENIED".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.DENIED]
   @scala.inline
-  def NONE: typingsSlinky.alexaSdk.alexaSdkStrings.NONE = this.cast("NONE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def NONE: typingsSlinky.alexaSdk.alexaSdkStrings.NONE = "NONE".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.NONE]
 }
 

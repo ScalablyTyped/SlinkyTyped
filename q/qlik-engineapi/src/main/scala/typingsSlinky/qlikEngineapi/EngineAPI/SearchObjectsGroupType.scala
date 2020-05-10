@@ -12,10 +12,8 @@ trait SearchObjectsGroupType extends js.Object
 
 object SearchObjectsGroupType {
   @scala.inline
-  def DatasetType: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DatasetType = this.cast("DatasetType")
+  def DatasetType: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DatasetType = "DatasetType".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DatasetType]
   @scala.inline
-  def GenericObjectsType: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.GenericObjectsType = this.cast("GenericObjectsType")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def GenericObjectsType: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.GenericObjectsType = "GenericObjectsType".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.GenericObjectsType]
 }
 

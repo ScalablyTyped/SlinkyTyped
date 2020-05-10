@@ -16,9 +16,6 @@ import scala.scalajs.js.annotation._
 
 object openfinStrings {
   @js.native
-  sealed trait `Not implemented in this environment` extends js.Object
-  
-  @js.native
   sealed trait `abnormal-termination` extends js.Object
   
   @js.native
@@ -322,9 +319,6 @@ object openfinStrings {
   
   @js.native
   sealed trait `object` extends js.Object
-  
-  @js.native
-  sealed trait `of-window-message` extends js.Object
   
   @js.native
   sealed trait `options-changed` extends js.Object
@@ -659,8 +653,6 @@ object openfinStrings {
   sealed trait xhr extends js.Object
   
   @scala.inline
-  def `Not implemented in this environment`: `Not implemented in this environment` = "Not implemented in this environment".asInstanceOf[`Not implemented in this environment`]
-  @scala.inline
   def `abnormal-termination`: `abnormal-termination` = "abnormal-termination".asInstanceOf[`abnormal-termination`]
   @scala.inline
   def application: application = "application".asInstanceOf[application]
@@ -749,7 +741,7 @@ object openfinStrings {
   @scala.inline
   def error: error = "error".asInstanceOf[error]
   @scala.inline
-  def `external connection`: `external connection` = "external connection".asInstanceOf[`external connection`]
+  def `external connection`: `external connection` = ("external connection").asInstanceOf[`external connection`]
   @scala.inline
   def `external-process-exited`: `external-process-exited` = "external-process-exited".asInstanceOf[`external-process-exited`]
   @scala.inline
@@ -848,8 +840,6 @@ object openfinStrings {
   def notification: notification = "notification".asInstanceOf[notification]
   @scala.inline
   def `object`: `object` = "object".asInstanceOf[`object`]
-  @scala.inline
-  def `of-window-message`: `of-window-message` = "of-window-message".asInstanceOf[`of-window-message`]
   @scala.inline
   def `options-changed`: `options-changed` = "options-changed".asInstanceOf[`options-changed`]
   @scala.inline

@@ -248,6 +248,7 @@ import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.samp
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.script
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.section
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.select
+import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.slot
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.small
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.source
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.span
@@ -326,6 +327,7 @@ import typingsSlinky.react.mod.QuoteHTMLAttributes
 import typingsSlinky.react.mod.SVGProps
 import typingsSlinky.react.mod.ScriptHTMLAttributes
 import typingsSlinky.react.mod.SelectHTMLAttributes
+import typingsSlinky.react.mod.SlotHTMLAttributes
 import typingsSlinky.react.mod.SourceHTMLAttributes
 import typingsSlinky.react.mod.StyleHTMLAttributes
 import typingsSlinky.react.mod.TableHTMLAttributes
@@ -338,6 +340,7 @@ import typingsSlinky.react.mod.VideoHTMLAttributes
 import typingsSlinky.react.mod.WebViewHTMLAttributes
 import typingsSlinky.std.HTMLDataElement
 import typingsSlinky.std.HTMLDialogElement
+import typingsSlinky.std.HTMLSlotElement
 import typingsSlinky.std.HTMLTableDataCellElement
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.std.HTMLTemplateElement
@@ -810,6 +813,12 @@ trait StyledComponent[InnerProps, StyleProps, Theme /* <: js.Object */]
   @JSName("withComponent")
   def withComponent_select(tag: select): StyledComponent[
     DetailedHTMLProps[SelectHTMLAttributes[HTMLSelectElement], HTMLSelectElement], 
+    StyleProps, 
+    Theme
+  ] = js.native
+  @JSName("withComponent")
+  def withComponent_slot(tag: slot): StyledComponent[
+    DetailedHTMLProps[SlotHTMLAttributes[HTMLSlotElement], HTMLSlotElement], 
     StyleProps, 
     Theme
   ] = js.native

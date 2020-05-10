@@ -27,7 +27,7 @@ object programMod extends js.Object {
     def sendFloat4(name: String, data: js.Any): Unit = js.native
     def sendMatrix3(name: String, data: js.Any): Unit = js.native
     def sendMatrix4(name: String, data: js.Any): Unit = js.native
-    def sendMatrix4Array(name: String, data: scala.scalajs.js.typedarray.Float32Array): Unit = js.native
+    def sendMatrix4Array(name: String, data: js.typedarray.Float32Array): Unit = js.native
     def sendNum1(name: String, data: js.Any): Unit = js.native
     def sendSampleArray(name: String, data: js.Any): Unit = js.native
     def sendStructureData(name: String, `type`: EVariableType, data: js.Any): Unit = js.native

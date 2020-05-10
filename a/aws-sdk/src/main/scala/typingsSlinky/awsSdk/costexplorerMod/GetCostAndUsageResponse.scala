@@ -22,16 +22,53 @@ trait GetCostAndUsageResponse extends js.Object {
 
 object GetCostAndUsageResponse {
   @scala.inline
-  def apply(
-    GroupDefinitions: GroupDefinitions = null,
-    NextPageToken: NextPageToken = null,
-    ResultsByTime: ResultsByTime = null
-  ): GetCostAndUsageResponse = {
+  def apply(): GetCostAndUsageResponse = {
     val __obj = js.Dynamic.literal()
-    if (GroupDefinitions != null) __obj.updateDynamic("GroupDefinitions")(GroupDefinitions.asInstanceOf[js.Any])
-    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
-    if (ResultsByTime != null) __obj.updateDynamic("ResultsByTime")(ResultsByTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCostAndUsageResponse]
   }
+  @scala.inline
+  implicit class GetCostAndUsageResponseOps[Self <: GetCostAndUsageResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupDefinitions(value: GroupDefinitions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupDefinitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupDefinitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupDefinitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: NextPageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResultsByTime(value: ResultsByTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultsByTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultsByTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultsByTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

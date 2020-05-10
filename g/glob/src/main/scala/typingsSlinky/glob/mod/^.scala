@@ -1,6 +1,5 @@
 package typingsSlinky.glob.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
 object ^ extends js.Object {
   var Glob: IGlobStatic = js.native
   var GlobSync: IGlobSyncStatic = js.native
-  def apply(pattern: String, cb: js.Function2[/* err */ Error | Null, /* matches */ js.Array[String], Unit]): Unit = js.native
+  def apply(pattern: String, cb: js.Function2[/* err */ js.Error | Null, /* matches */ js.Array[String], Unit]): Unit = js.native
   def apply(
     pattern: String,
     options: IOptions,

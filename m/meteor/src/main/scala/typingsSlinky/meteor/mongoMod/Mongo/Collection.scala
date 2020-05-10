@@ -2,12 +2,13 @@ package typingsSlinky.meteor.mongoMod.Mongo
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.meteor.AnonArrayFilters
 import typingsSlinky.meteor.AnonFetch
 import typingsSlinky.meteor.AnonInsertedId
 import typingsSlinky.meteor.AnonLimit
 import typingsSlinky.meteor.AnonMulti
-import typingsSlinky.meteor.AnonMultiBoolean
 import typingsSlinky.meteor.AnonSkip
+import typingsSlinky.mongodb.mod.Db
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,8 +39,8 @@ trait Collection[T] extends js.Object {
   def findOne(selector: Selector[T], options: AnonSkip): js.UndefOr[T] = js.native
   def insert(doc: OptionalId[T]): String = js.native
   def insert(doc: OptionalId[T], callback: js.Function): String = js.native
-  def rawCollection(): js.Any = js.native
-  def rawDatabase(): js.Any = js.native
+  def rawCollection(): typingsSlinky.mongodb.mod.Collection[T] = js.native
+  def rawDatabase(): Db = js.native
   def remove(selector: String): Double = js.native
   def remove(selector: String, callback: js.Function): Double = js.native
   def remove(selector: ObjectID): Double = js.native
@@ -47,23 +48,23 @@ trait Collection[T] extends js.Object {
   def remove(selector: Selector[T]): Double = js.native
   def remove(selector: Selector[T], callback: js.Function): Double = js.native
   def update(selector: String, modifier: Modifier[T]): Double = js.native
-  def update(selector: String, modifier: Modifier[T], options: AnonMulti): Double = js.native
-  def update(selector: String, modifier: Modifier[T], options: AnonMulti, callback: js.Function): Double = js.native
+  def update(selector: String, modifier: Modifier[T], options: AnonArrayFilters): Double = js.native
+  def update(selector: String, modifier: Modifier[T], options: AnonArrayFilters, callback: js.Function): Double = js.native
   def update(selector: ObjectID, modifier: Modifier[T]): Double = js.native
-  def update(selector: ObjectID, modifier: Modifier[T], options: AnonMulti): Double = js.native
-  def update(selector: ObjectID, modifier: Modifier[T], options: AnonMulti, callback: js.Function): Double = js.native
+  def update(selector: ObjectID, modifier: Modifier[T], options: AnonArrayFilters): Double = js.native
+  def update(selector: ObjectID, modifier: Modifier[T], options: AnonArrayFilters, callback: js.Function): Double = js.native
   def update(selector: Selector[T], modifier: Modifier[T]): Double = js.native
-  def update(selector: Selector[T], modifier: Modifier[T], options: AnonMulti): Double = js.native
-  def update(selector: Selector[T], modifier: Modifier[T], options: AnonMulti, callback: js.Function): Double = js.native
+  def update(selector: Selector[T], modifier: Modifier[T], options: AnonArrayFilters): Double = js.native
+  def update(selector: Selector[T], modifier: Modifier[T], options: AnonArrayFilters, callback: js.Function): Double = js.native
   def upsert(selector: String, modifier: Modifier[T]): AnonInsertedId = js.native
-  def upsert(selector: String, modifier: Modifier[T], options: AnonMultiBoolean): AnonInsertedId = js.native
-  def upsert(selector: String, modifier: Modifier[T], options: AnonMultiBoolean, callback: js.Function): AnonInsertedId = js.native
+  def upsert(selector: String, modifier: Modifier[T], options: AnonMulti): AnonInsertedId = js.native
+  def upsert(selector: String, modifier: Modifier[T], options: AnonMulti, callback: js.Function): AnonInsertedId = js.native
   def upsert(selector: ObjectID, modifier: Modifier[T]): AnonInsertedId = js.native
-  def upsert(selector: ObjectID, modifier: Modifier[T], options: AnonMultiBoolean): AnonInsertedId = js.native
-  def upsert(selector: ObjectID, modifier: Modifier[T], options: AnonMultiBoolean, callback: js.Function): AnonInsertedId = js.native
+  def upsert(selector: ObjectID, modifier: Modifier[T], options: AnonMulti): AnonInsertedId = js.native
+  def upsert(selector: ObjectID, modifier: Modifier[T], options: AnonMulti, callback: js.Function): AnonInsertedId = js.native
   def upsert(selector: Selector[T], modifier: Modifier[T]): AnonInsertedId = js.native
-  def upsert(selector: Selector[T], modifier: Modifier[T], options: AnonMultiBoolean): AnonInsertedId = js.native
-  def upsert(selector: Selector[T], modifier: Modifier[T], options: AnonMultiBoolean, callback: js.Function): AnonInsertedId = js.native
+  def upsert(selector: Selector[T], modifier: Modifier[T], options: AnonMulti): AnonInsertedId = js.native
+  def upsert(selector: Selector[T], modifier: Modifier[T], options: AnonMulti, callback: js.Function): AnonInsertedId = js.native
 }
 
 @JSImport("meteor/mongo", "Mongo.Collection")

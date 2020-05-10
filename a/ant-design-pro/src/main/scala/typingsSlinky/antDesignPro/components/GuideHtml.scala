@@ -1,10 +1,7 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.bizchartsMod.Guide.Html
 import typingsSlinky.bizcharts.mod.AlignXType
 import typingsSlinky.bizcharts.mod.AlignYType
@@ -13,35 +10,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GuideHtml
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Html] {
+object GuideHtml {
   @JSImport("ant-design-pro/lib/Charts/bizcharts", "Guide.Html")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    alignX: AlignXType = null,
-    alignY: AlignYType = null,
-    html: String = null,
-    offsetX: Int | Double = null,
-    offsetY: Int | Double = null,
-    position: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _]) = null,
-    zIndex: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, Html] = {
-    val __obj = js.Dynamic.literal()
-    if (alignX != null) __obj.updateDynamic("alignX")(alignX.asInstanceOf[js.Any])
-    if (alignY != null) __obj.updateDynamic("alignY")(alignY.asInstanceOf[js.Any])
-    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
-    if (offsetX != null) __obj.updateDynamic("offsetX")(offsetX.asInstanceOf[js.Any])
-    if (offsetY != null) __obj.updateDynamic("offsetY")(offsetY.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Html] {
+    @scala.inline
+    def alignX(value: AlignXType): this.type = set("alignX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alignY(value: AlignYType): this.type = set("alignY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def html(value: String): this.type = set("html", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetX(value: Double): this.type = set("offsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetY(value: Double): this.type = set("offsetY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positionFunction2(value: (/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any]) => _): this.type = set("position", js.Any.fromFunction2(value))
+    @scala.inline
+    def position(
+      value: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _])
+    ): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Html] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antDesignPro.bizchartsMod.Guide.Html](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HtmlProps
+  
+  def withProps(p: HtmlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GuideHtml.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

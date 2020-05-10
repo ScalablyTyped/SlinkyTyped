@@ -1,8 +1,8 @@
 package typingsSlinky.skatejs.mod
 
+import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.skatejs.typesMod.EventOptions
 import typingsSlinky.skatejs.typesMod.HTMLElementClass
-import typingsSlinky.std.EventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

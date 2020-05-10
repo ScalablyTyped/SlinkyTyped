@@ -1,6 +1,6 @@
 package typingsSlinky.stylefire
 
-import typingsSlinky.std.Element
+import org.scalajs.dom.raw.Element
 import typingsSlinky.std.Window_
 import typingsSlinky.stylefire.buildMod.SVGAttrs
 import typingsSlinky.stylefire.svgTypesMod.Dimensions

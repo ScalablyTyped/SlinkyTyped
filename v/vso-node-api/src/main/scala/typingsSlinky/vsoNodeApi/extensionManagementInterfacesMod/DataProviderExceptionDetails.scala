@@ -4,27 +4,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DataProviderExceptionDetails extends js.Object {
   /**
     * The type of the exception that was thrown.
     */
-  var exceptionType: String
+  var exceptionType: String = js.native
   /**
     * Message that is associated with the exception.
     */
-  var message: String
+  var message: String = js.native
   /**
     * The StackTrace from the exception turned into a string.
     */
-  var stackTrace: String
+  var stackTrace: String = js.native
 }
 
 object DataProviderExceptionDetails {
   @scala.inline
   def apply(exceptionType: String, message: String, stackTrace: String): DataProviderExceptionDetails = {
     val __obj = js.Dynamic.literal(exceptionType = exceptionType.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], stackTrace = stackTrace.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DataProviderExceptionDetails]
   }
+  @scala.inline
+  implicit class DataProviderExceptionDetailsOps[Self <: DataProviderExceptionDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExceptionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exceptionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackTrace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackTrace")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

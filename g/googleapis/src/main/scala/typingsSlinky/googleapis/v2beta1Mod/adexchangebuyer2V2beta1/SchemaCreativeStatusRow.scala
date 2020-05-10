@@ -28,16 +28,53 @@ trait SchemaCreativeStatusRow extends js.Object {
 
 object SchemaCreativeStatusRow {
   @scala.inline
-  def apply(
-    bidCount: SchemaMetricValue = null,
-    creativeStatusId: Int | Double = null,
-    rowDimensions: SchemaRowDimensions = null
-  ): SchemaCreativeStatusRow = {
+  def apply(): SchemaCreativeStatusRow = {
     val __obj = js.Dynamic.literal()
-    if (bidCount != null) __obj.updateDynamic("bidCount")(bidCount.asInstanceOf[js.Any])
-    if (creativeStatusId != null) __obj.updateDynamic("creativeStatusId")(creativeStatusId.asInstanceOf[js.Any])
-    if (rowDimensions != null) __obj.updateDynamic("rowDimensions")(rowDimensions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreativeStatusRow]
   }
+  @scala.inline
+  implicit class SchemaCreativeStatusRowOps[Self <: SchemaCreativeStatusRow] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBidCount(value: SchemaMetricValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bidCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBidCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bidCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreativeStatusId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeStatusId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeStatusId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeStatusId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowDimensions(value: SchemaRowDimensions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDimensions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

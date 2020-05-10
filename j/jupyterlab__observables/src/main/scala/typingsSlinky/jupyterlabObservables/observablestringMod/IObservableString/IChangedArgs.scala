@@ -7,19 +7,20 @@ import scala.scalajs.js.annotation._
 /**
   * The changed args object which is emitted by an observable string.
   */
+@js.native
 trait IChangedArgs extends js.Object {
   /**
     * The end index of the change.
     */
-  var end: Double
+  var end: Double = js.native
   /**
     * The starting index of the change.
     */
-  var start: Double
+  var start: Double = js.native
   /**
     * The type of change undergone by the list.
     */
-  var `type`: ChangeType
+  var `type`: ChangeType = js.native
   /**
     * The value of the change.
     *
@@ -33,7 +34,7 @@ trait IChangedArgs extends js.Object {
     * If `ChangeType` is remove this is the
     * value of the removed substring.
     */
-  var value: String
+  var value: String = js.native
 }
 
 object IChangedArgs {
@@ -43,5 +44,37 @@ object IChangedArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IChangedArgs]
   }
+  @scala.inline
+  implicit class IChangedArgsOps[Self <: IChangedArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: ChangeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

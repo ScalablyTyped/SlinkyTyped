@@ -24,6 +24,6 @@ trait Text
 @JSGlobal("Text")
 @js.native
 object Text
-  extends Instantiable0[Text]
-     with Instantiable1[/* data */ java.lang.String, Text]
+  extends Instantiable0[org.scalajs.dom.raw.Text]
+     with Instantiable1[/* data */ java.lang.String, org.scalajs.dom.raw.Text]
 

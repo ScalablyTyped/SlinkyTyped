@@ -7,6 +7,15 @@ import scala.scalajs.js.annotation._
 package object mod {
   type CastError = typingsSlinky.mongoose.mod.Error.CastError
   type ClientSession = typingsSlinky.mongodb.mod.ClientSession
+  /* Helper type to extract a definition type from a Document type */
+  type DocumentDefinition[T] = typingsSlinky.mongoose.mod.Omit[
+    T, 
+    typingsSlinky.std.Exclude[
+      typingsSlinky.mongoose.mongooseStrings.__v, 
+      typingsSlinky.mongoose.mongooseStrings._id
+    ]
+  ]
+  type FilterQuery[T] = typingsSlinky.mongoose.mod.MongooseFilterQuery[typingsSlinky.mongoose.mod.DocumentDefinition[T]]
   // Because the mongoose Map type shares a name with the default global interface,
   // this type alias has to exist outside of the namespace
   type GlobalMap[K, V] = typingsSlinky.std.Map[K, V]
@@ -27,6 +36,8 @@ package object mod {
     /* docs */ js.Array[js.Any], 
     js.Promise[js.Any] | scala.Unit
   ]
+  type MongooseFilterQuery[T] = typingsSlinky.mongoose.mongooseStrings.MongooseFilterQuery with org.scalablytyped.runtime.TopLevel[js.Any] with typingsSlinky.mongodb.mod.RootQuerySelector[T]
+  type MongooseUpdateQuery[S] = typingsSlinky.mongodb.mod.UpdateQuery[S] with typingsSlinky.mongodb.mod.MatchKeysAndValues[S]
   /*
     * Some mongoose classes have the same name as the native JS classes
     * Keep references to native classes using a "Native" prefix
@@ -34,6 +45,8 @@ package object mod {
   type NativeBuffer = typingsSlinky.node.TypeofBuffer
   type NativeDate = typingsSlinky.std.DateConstructor
   type NativeError = typingsSlinky.std.ErrorConstructor
+  // We can use TypeScript Omit once minimum required TypeScript Version is above 3.5
+  type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   /*
     * section query.js
     * http://mongoosejs.com/docs/api.html#query-js
@@ -55,4 +68,5 @@ package object mod {
   ]
   type SchemaTypeOpts[T] = typingsSlinky.mongoose.mod.SchemaTypeOpts_[T]
   type TagSet = org.scalablytyped.runtime.StringDictionary[java.lang.String]
+  type UpdateQuery[D] = typingsSlinky.mongoose.mod.MongooseUpdateQuery[typingsSlinky.mongoose.mod.DocumentDefinition[D]]
 }

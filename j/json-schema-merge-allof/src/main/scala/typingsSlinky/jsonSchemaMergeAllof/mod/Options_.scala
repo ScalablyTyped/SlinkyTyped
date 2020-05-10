@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options_[Schema /* <: JSONSchema */] extends js.Object {
   /**
     * **ignoreAdditionalProperties** default **false**
@@ -19,7 +20,7 @@ trait Options_[Schema /* <: JSONSchema */] extends js.Object {
     * false during the merge process. The resulting schema will still get
     * additionalProperties set to false.
     */
-  var ignoreAdditionalProperties: js.UndefOr[Boolean] = js.undefined
+  var ignoreAdditionalProperties: js.UndefOr[Boolean] = js.native
   /**
     * **resolvers** Object
     *
@@ -48,19 +49,46 @@ trait Options_[Schema /* <: JSONSchema */] extends js.Object {
     *   schemas
     * - **options** the options mergeAllOf was called with
     */
-  var resolvers: js.UndefOr[Partial[Resolvers[Schema]] with AnonDefaultResolver[Schema]] = js.undefined
+  var resolvers: js.UndefOr[Partial[Resolvers[Schema]] with AnonDefaultResolver[Schema]] = js.native
 }
 
 object Options_ {
   @scala.inline
-  def apply[Schema /* <: JSONSchema */](
-    ignoreAdditionalProperties: js.UndefOr[Boolean] = js.undefined,
-    resolvers: Partial[Resolvers[Schema]] with AnonDefaultResolver[Schema] = null
-  ): Options_[Schema] = {
+  def apply[Schema](): Options_[Schema] = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ignoreAdditionalProperties)) __obj.updateDynamic("ignoreAdditionalProperties")(ignoreAdditionalProperties.asInstanceOf[js.Any])
-    if (resolvers != null) __obj.updateDynamic("resolvers")(resolvers.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options_[Schema]]
   }
+  @scala.inline
+  implicit class Options_Ops[Self[schema] <: Options_[schema], Schema] (val x: Self[Schema]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Schema] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Schema]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[Schema] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Schema] with Other]
+    @scala.inline
+    def withIgnoreAdditionalProperties(value: Boolean): Self[Schema] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreAdditionalProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreAdditionalProperties: Self[Schema] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreAdditionalProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvers(value: Partial[Resolvers[Schema]] with AnonDefaultResolver[Schema]): Self[Schema] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolvers: Self[Schema] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

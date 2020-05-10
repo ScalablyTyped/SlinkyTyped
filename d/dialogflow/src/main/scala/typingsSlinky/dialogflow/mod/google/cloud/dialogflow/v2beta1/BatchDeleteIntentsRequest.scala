@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,8 +51,8 @@ object BatchDeleteIntentsRequest extends js.Object {
     */
   def decode(reader: Reader): BatchDeleteIntentsRequest = js.native
   def decode(reader: Reader, length: Double): BatchDeleteIntentsRequest = js.native
-  def decode(reader: Uint8Array): BatchDeleteIntentsRequest = js.native
-  def decode(reader: Uint8Array, length: Double): BatchDeleteIntentsRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array): BatchDeleteIntentsRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): BatchDeleteIntentsRequest = js.native
   /**
     * Decodes a BatchDeleteIntentsRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -62,7 +61,7 @@ object BatchDeleteIntentsRequest extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): BatchDeleteIntentsRequest = js.native
-  def decodeDelimited(reader: Uint8Array): BatchDeleteIntentsRequest = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): BatchDeleteIntentsRequest = js.native
   /**
     * Encodes the specified BatchDeleteIntentsRequest message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.BatchDeleteIntentsRequest.verify|verify} messages.
     * @param message BatchDeleteIntentsRequest message or plain object to encode

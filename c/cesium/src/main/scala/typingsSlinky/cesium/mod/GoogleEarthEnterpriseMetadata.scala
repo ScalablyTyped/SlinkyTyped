@@ -11,7 +11,7 @@ class GoogleEarthEnterpriseMetadata protected () extends js.Object {
   def this(resourceOrUrl: String) = this()
   def this(resourceOrUrl: Resource) = this()
   var imageryPresent: Boolean = js.native
-  var key: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var key: js.typedarray.ArrayBuffer = js.native
   var negativeAltitudeExponentBias: Double = js.native
   var negativeAltitudeThreshold: Double = js.native
   var protoImagery: Boolean = js.native

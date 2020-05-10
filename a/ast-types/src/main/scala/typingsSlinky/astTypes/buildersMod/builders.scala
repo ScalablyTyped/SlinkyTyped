@@ -399,7 +399,6 @@ import typingsSlinky.astTypes.namedTypesMod.namedTypes.VoidTypeAnnotation
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.WhileStatement
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.WithStatement
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.YieldExpression
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -1466,7 +1465,7 @@ trait builders
   def literal(value: String): Literal = js.native
   def literal(value: Boolean): Literal = js.native
   def literal(value: Double): Literal = js.native
-  def literal(value: RegExp): Literal = js.native
+  def literal(value: js.RegExp): Literal = js.native
   def logicalExpression(operator: AmpersandAmpersand, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
   def logicalExpression(operator: QuestionmarkQuestionmark, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
   def logicalExpression(operator: VerticallineVerticalline, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native

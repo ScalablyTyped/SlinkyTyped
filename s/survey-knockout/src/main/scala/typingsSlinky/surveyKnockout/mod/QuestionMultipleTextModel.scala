@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.surveyKnockout.mod.IParentElement because var conflicts: isReadOnly. Inlined addElement
 - typingsSlinky.surveyKnockout.mod.ISurveyElement because Already inherited
 - typingsSlinky.surveyKnockout.mod.IPanel because var conflicts: containsErrors, isPage, isPanel, isReadOnly, isVisible, name, parent. Inlined getChildrenLayoutType, getQuestionTitleLocation, elementWidthChanged, indexOf, elements

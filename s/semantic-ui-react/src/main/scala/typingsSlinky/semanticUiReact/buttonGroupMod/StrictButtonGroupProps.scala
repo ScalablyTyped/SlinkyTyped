@@ -1,6 +1,7 @@
 package typingsSlinky.semanticUiReact.buttonGroupMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.buttonButtonMod.ButtonProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
@@ -16,103 +17,343 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StrictButtonGroupProps extends js.Object {
   /** An element type to render as (string or function). */
-  var as: js.UndefOr[js.Any] = js.undefined
+  var as: js.UndefOr[js.Any] = js.native
   /** Groups can be attached to other content. */
-  var attached: js.UndefOr[Boolean | left | right | top | bottom] = js.undefined
+  var attached: js.UndefOr[Boolean | left | right | top | bottom] = js.native
   /** Groups can be less pronounced. */
-  var basic: js.UndefOr[Boolean] = js.undefined
+  var basic: js.UndefOr[Boolean] = js.native
   /** Array of shorthand Button values. */
-  var buttons: js.UndefOr[SemanticShorthandCollection[ButtonProps]] = js.undefined
+  var buttons: js.UndefOr[SemanticShorthandCollection[ButtonProps]] = js.native
   /** Primary content. */
-  var children: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.UndefOr[TagMod[Any]] = js.native
   /** Additional classes. */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /** Groups can have a shared color. */
-  var color: js.UndefOr[SemanticCOLORS] = js.undefined
+  var color: js.UndefOr[SemanticCOLORS] = js.native
   /** Groups can reduce their padding to fit into tighter spaces. */
-  var compact: js.UndefOr[Boolean] = js.undefined
+  var compact: js.UndefOr[Boolean] = js.native
   /** Shorthand for primary content. */
-  var content: js.UndefOr[SemanticShorthandContent] = js.undefined
+  var content: js.UndefOr[SemanticShorthandContent] = js.native
   /** Groups can be aligned to the left or right of its container. */
-  var floated: js.UndefOr[SemanticFLOATS] = js.undefined
+  var floated: js.UndefOr[SemanticFLOATS] = js.native
   /** Groups can take the width of their container. */
-  var fluid: js.UndefOr[Boolean] = js.undefined
+  var fluid: js.UndefOr[Boolean] = js.native
   /** Groups can be formatted as icons. */
-  var icon: js.UndefOr[Boolean] = js.undefined
+  var icon: js.UndefOr[Boolean] = js.native
   /** Groups can be formatted to appear on dark backgrounds. */
-  var inverted: js.UndefOr[Boolean] = js.undefined
+  var inverted: js.UndefOr[Boolean] = js.native
   /** Groups can be formatted as labeled icon buttons. */
-  var labeled: js.UndefOr[Boolean] = js.undefined
+  var labeled: js.UndefOr[Boolean] = js.native
   /** Groups can hint towards a negative consequence. */
-  var negative: js.UndefOr[Boolean] = js.undefined
+  var negative: js.UndefOr[Boolean] = js.native
   /** Groups can hint towards a positive consequence. */
-  var positive: js.UndefOr[Boolean] = js.undefined
+  var positive: js.UndefOr[Boolean] = js.native
   /** Groups can be formatted to show different levels of emphasis. */
-  var primary: js.UndefOr[Boolean] = js.undefined
+  var primary: js.UndefOr[Boolean] = js.native
   /** Groups can be formatted to show different levels of emphasis. */
-  var secondary: js.UndefOr[Boolean] = js.undefined
+  var secondary: js.UndefOr[Boolean] = js.native
   /** Groups can have different sizes. */
-  var size: js.UndefOr[SemanticSIZES] = js.undefined
+  var size: js.UndefOr[SemanticSIZES] = js.native
   /** Groups can be formatted to toggle on and off. */
-  var toggle: js.UndefOr[Boolean] = js.undefined
+  var toggle: js.UndefOr[Boolean] = js.native
   /** Groups can be formatted to appear vertically. */
-  var vertical: js.UndefOr[Boolean] = js.undefined
+  var vertical: js.UndefOr[Boolean] = js.native
   /** Groups can have their widths divided evenly. */
-  var widths: js.UndefOr[SemanticWIDTHS] = js.undefined
+  var widths: js.UndefOr[SemanticWIDTHS] = js.native
 }
 
 object StrictButtonGroupProps {
   @scala.inline
-  def apply(
-    as: js.Any = null,
-    attached: Boolean | left | right | top | bottom = null,
-    basic: js.UndefOr[Boolean] = js.undefined,
-    buttons: SemanticShorthandCollection[ButtonProps] = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    color: SemanticCOLORS = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    content: SemanticShorthandContent = null,
-    floated: SemanticFLOATS = null,
-    fluid: js.UndefOr[Boolean] = js.undefined,
-    icon: js.UndefOr[Boolean] = js.undefined,
-    inverted: js.UndefOr[Boolean] = js.undefined,
-    labeled: js.UndefOr[Boolean] = js.undefined,
-    negative: js.UndefOr[Boolean] = js.undefined,
-    positive: js.UndefOr[Boolean] = js.undefined,
-    primary: js.UndefOr[Boolean] = js.undefined,
-    secondary: js.UndefOr[Boolean] = js.undefined,
-    size: SemanticSIZES = null,
-    toggle: js.UndefOr[Boolean] = js.undefined,
-    vertical: js.UndefOr[Boolean] = js.undefined,
-    widths: SemanticWIDTHS = null
-  ): StrictButtonGroupProps = {
+  def apply(): StrictButtonGroupProps = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (attached != null) __obj.updateDynamic("attached")(attached.asInstanceOf[js.Any])
-    if (!js.isUndefined(basic)) __obj.updateDynamic("basic")(basic.asInstanceOf[js.Any])
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (floated != null) __obj.updateDynamic("floated")(floated.asInstanceOf[js.Any])
-    if (!js.isUndefined(fluid)) __obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
-    if (!js.isUndefined(icon)) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
-    if (!js.isUndefined(labeled)) __obj.updateDynamic("labeled")(labeled.asInstanceOf[js.Any])
-    if (!js.isUndefined(negative)) __obj.updateDynamic("negative")(negative.asInstanceOf[js.Any])
-    if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
-    if (!js.isUndefined(primary)) __obj.updateDynamic("primary")(primary.asInstanceOf[js.Any])
-    if (!js.isUndefined(secondary)) __obj.updateDynamic("secondary")(secondary.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(toggle)) __obj.updateDynamic("toggle")(toggle.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
-    if (widths != null) __obj.updateDynamic("widths")(widths.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictButtonGroupProps]
   }
+  @scala.inline
+  implicit class StrictButtonGroupPropsOps[Self <: StrictButtonGroupProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttached(value: Boolean | left | right | top | bottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attached")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttached: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attached")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBasic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtons(value: SemanticShorthandCollection[ButtonProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: SemanticCOLORS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContent(value: SemanticShorthandContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloated(value: SemanticFLOATS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFluid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fluid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFluid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fluid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInverted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInverted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabeled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labeled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabeled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labeled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegative(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negative")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: SemanticSIZES): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertical(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidths(value: SemanticWIDTHS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widths")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

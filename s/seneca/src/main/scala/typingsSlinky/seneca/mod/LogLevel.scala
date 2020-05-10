@@ -15,14 +15,12 @@ trait LogLevel extends js.Object
 
 object LogLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debugPlussign: typingsSlinky.seneca.senecaStrings.debugPlussign = "debug+".asInstanceOf[typingsSlinky.seneca.senecaStrings.debugPlussign]
   @scala.inline
-  def debugPlussign: typingsSlinky.seneca.senecaStrings.debugPlussign = this.cast("debug+")
+  def infoPlussign: typingsSlinky.seneca.senecaStrings.infoPlussign = "info+".asInstanceOf[typingsSlinky.seneca.senecaStrings.infoPlussign]
   @scala.inline
-  def infoPlussign: typingsSlinky.seneca.senecaStrings.infoPlussign = this.cast("info+")
+  def none: typingsSlinky.seneca.senecaStrings.none = "none".asInstanceOf[typingsSlinky.seneca.senecaStrings.none]
   @scala.inline
-  def none: typingsSlinky.seneca.senecaStrings.none = this.cast("none")
-  @scala.inline
-  def warnPlussign: typingsSlinky.seneca.senecaStrings.warnPlussign = this.cast("warn+")
+  def warnPlussign: typingsSlinky.seneca.senecaStrings.warnPlussign = "warn+".asInstanceOf[typingsSlinky.seneca.senecaStrings.warnPlussign]
 }
 

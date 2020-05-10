@@ -12,10 +12,8 @@ trait ScopeEnum extends js.Object
 
 object ScopeEnum {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def incognito_session_only: typingsSlinky.naverWhale.naverWhaleStrings.incognito_session_only = "incognito_session_only".asInstanceOf[typingsSlinky.naverWhale.naverWhaleStrings.incognito_session_only]
   @scala.inline
-  def incognito_session_only: typingsSlinky.naverWhale.naverWhaleStrings.incognito_session_only = this.cast("incognito_session_only")
-  @scala.inline
-  def regular: typingsSlinky.naverWhale.naverWhaleStrings.regular = this.cast("regular")
+  def regular: typingsSlinky.naverWhale.naverWhaleStrings.regular = "regular".asInstanceOf[typingsSlinky.naverWhale.naverWhaleStrings.regular]
 }
 

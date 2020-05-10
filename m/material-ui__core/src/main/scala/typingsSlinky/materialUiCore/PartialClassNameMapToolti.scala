@@ -19,26 +19,113 @@ trait PartialClassNameMapToolti extends js.Object {
 
 object PartialClassNameMapToolti {
   @scala.inline
-  def apply(
-    popper: String = null,
-    popperInteractive: String = null,
-    tooltip: String = null,
-    tooltipPlacementBottom: String = null,
-    tooltipPlacementLeft: String = null,
-    tooltipPlacementRight: String = null,
-    tooltipPlacementTop: String = null,
-    touch: String = null
-  ): PartialClassNameMapToolti = {
+  def apply(): PartialClassNameMapToolti = {
     val __obj = js.Dynamic.literal()
-    if (popper != null) __obj.updateDynamic("popper")(popper.asInstanceOf[js.Any])
-    if (popperInteractive != null) __obj.updateDynamic("popperInteractive")(popperInteractive.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipPlacementBottom != null) __obj.updateDynamic("tooltipPlacementBottom")(tooltipPlacementBottom.asInstanceOf[js.Any])
-    if (tooltipPlacementLeft != null) __obj.updateDynamic("tooltipPlacementLeft")(tooltipPlacementLeft.asInstanceOf[js.Any])
-    if (tooltipPlacementRight != null) __obj.updateDynamic("tooltipPlacementRight")(tooltipPlacementRight.asInstanceOf[js.Any])
-    if (tooltipPlacementTop != null) __obj.updateDynamic("tooltipPlacementTop")(tooltipPlacementTop.asInstanceOf[js.Any])
-    if (touch != null) __obj.updateDynamic("touch")(touch.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapToolti]
   }
+  @scala.inline
+  implicit class PartialClassNameMapTooltiOps[Self <: PartialClassNameMapToolti] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPopper(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopperInteractive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popperInteractive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopperInteractive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popperInteractive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipPlacementBottom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacementBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipPlacementBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacementBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipPlacementLeft(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacementLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipPlacementLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacementLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipPlacementRight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacementRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipPlacementRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacementRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipPlacementTop(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacementTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipPlacementTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipPlacementTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTouch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTouch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touch")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

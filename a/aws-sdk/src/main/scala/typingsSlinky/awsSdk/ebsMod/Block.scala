@@ -18,11 +18,41 @@ trait Block extends js.Object {
 
 object Block {
   @scala.inline
-  def apply(BlockIndex: Int | Double = null, BlockToken: BlockToken = null): Block = {
+  def apply(): Block = {
     val __obj = js.Dynamic.literal()
-    if (BlockIndex != null) __obj.updateDynamic("BlockIndex")(BlockIndex.asInstanceOf[js.Any])
-    if (BlockToken != null) __obj.updateDynamic("BlockToken")(BlockToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[Block]
   }
+  @scala.inline
+  implicit class BlockOps[Self <: Block] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlockIndex(value: BlockIndex): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockToken(value: BlockToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

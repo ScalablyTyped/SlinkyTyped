@@ -44,8 +44,6 @@ class LokiPartitioningAdapter protected () extends LokiPersistenceAdapter {
     */
   @JSName("exportDatabase")
   def exportDatabase_MLokiPartitioningAdapter(dbname: String, dbref: Loki, callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
-  /* CompleteClass */
-  override def loadDatabase(dbname: String, callback: js.Function1[/* value */ js.Any, Unit]): Unit = js.native
   /**
     * Used to sequentially load the next page of collection partition, one at a time.
     *

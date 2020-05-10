@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 /**
   * <InfiniteScroll /> properties.
   */
+@js.native
 trait InfiniteScrollProps
   extends AllHTMLAttributes[typingsSlinky.reactInfiniteScroller.mod.InfiniteScroll.InfiniteScroll]
      with ClassAttributes[typingsSlinky.reactInfiniteScroller.mod.InfiniteScroll.InfiniteScroll] {
@@ -18,88 +19,196 @@ trait InfiniteScrollProps
     * Name of the element that the component should render as.
     * Defaults to 'div'.
     */
-  var element: js.UndefOr[String] = js.undefined
+  var element: js.UndefOr[String] = js.native
   /**
     * Override method to return a different scroll listener if it's not the immediate parent of InfiniteScroll.
     */
-  var getScrollParent: js.UndefOr[js.Function0[HTMLElement | Null]] = js.undefined
+  var getScrollParent: js.UndefOr[js.Function0[HTMLElement | Null]] = js.native
   /**
     * Whether there are more items to be loaded. Event listeners are removed if false.
     * Defaults to false.
     */
-  var hasMore: js.UndefOr[Boolean] = js.undefined
+  var hasMore: js.UndefOr[Boolean] = js.native
   /**
     * Whether the component should load the first set of items.
     * Defaults to true.
     */
-  var initialLoad: js.UndefOr[Boolean] = js.undefined
+  var initialLoad: js.UndefOr[Boolean] = js.native
   /**
     * Whether new items should be loaded when user scrolls to the top of the scrollable area.
     * Default to false.
     */
-  var isReverse: js.UndefOr[Boolean] = js.undefined
+  var isReverse: js.UndefOr[Boolean] = js.native
   /**
     * Loader component for indicating "loading more".
     */
-  var loader: js.UndefOr[ReactElement] = js.undefined
+  var loader: js.UndefOr[ReactElement] = js.native
   /**
     * The number of the first page to load, with the default of 0, the first page is 1.
     * Defaults to 0.
     */
-  var pageStart: js.UndefOr[Double] = js.undefined
+  var pageStart: js.UndefOr[Double] = js.native
   /**
     * The distance in pixels before the end of the items that will trigger a call to loadMore.
     * Defaults to 250.
     */
-  var threshold: js.UndefOr[Double] = js.undefined
+  var threshold: js.UndefOr[Double] = js.native
   /**
     * Proxy to the useCapture option of the added event listeners.
     * Defaults to false.
     */
-  var useCapture: js.UndefOr[Boolean] = js.undefined
+  var useCapture: js.UndefOr[Boolean] = js.native
   /**
     * Add scroll listeners to the window, or else, the component's parentNode.
     * Defaults to true.
     */
-  var useWindow: js.UndefOr[Boolean] = js.undefined
+  var useWindow: js.UndefOr[Boolean] = js.native
   /**
     * A callback for when more items are requested by the user.
     * Page param is next page index.
     */
-  def loadMore(page: Double): Unit
+  def loadMore(page: Double): Unit = js.native
 }
 
 object InfiniteScrollProps {
   @scala.inline
-  def apply(
-    loadMore: Double => Unit,
-    AllHTMLAttributes: AllHTMLAttributes[typingsSlinky.reactInfiniteScroller.mod.InfiniteScroll.InfiniteScroll] = null,
-    ClassAttributes: ClassAttributes[typingsSlinky.reactInfiniteScroller.mod.InfiniteScroll.InfiniteScroll] = null,
-    element: String = null,
-    getScrollParent: () => HTMLElement | Null = null,
-    hasMore: js.UndefOr[Boolean] = js.undefined,
-    initialLoad: js.UndefOr[Boolean] = js.undefined,
-    isReverse: js.UndefOr[Boolean] = js.undefined,
-    loader: ReactElement = null,
-    pageStart: Int | Double = null,
-    threshold: Int | Double = null,
-    useCapture: js.UndefOr[Boolean] = js.undefined,
-    useWindow: js.UndefOr[Boolean] = js.undefined
-  ): InfiniteScrollProps = {
+  def apply(loadMore: Double => Unit): InfiniteScrollProps = {
     val __obj = js.Dynamic.literal(loadMore = js.Any.fromFunction1(loadMore))
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (getScrollParent != null) __obj.updateDynamic("getScrollParent")(js.Any.fromFunction0(getScrollParent))
-    if (!js.isUndefined(hasMore)) __obj.updateDynamic("hasMore")(hasMore.asInstanceOf[js.Any])
-    if (!js.isUndefined(initialLoad)) __obj.updateDynamic("initialLoad")(initialLoad.asInstanceOf[js.Any])
-    if (!js.isUndefined(isReverse)) __obj.updateDynamic("isReverse")(isReverse.asInstanceOf[js.Any])
-    if (loader != null) __obj.updateDynamic("loader")(loader.asInstanceOf[js.Any])
-    if (pageStart != null) __obj.updateDynamic("pageStart")(pageStart.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
-    if (!js.isUndefined(useCapture)) __obj.updateDynamic("useCapture")(useCapture.asInstanceOf[js.Any])
-    if (!js.isUndefined(useWindow)) __obj.updateDynamic("useWindow")(useWindow.asInstanceOf[js.Any])
     __obj.asInstanceOf[InfiniteScrollProps]
   }
+  @scala.inline
+  implicit class InfiniteScrollPropsOps[Self <: InfiniteScrollProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadMore(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMore")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withElement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetScrollParent(value: () => HTMLElement | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollParent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetScrollParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollParent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasMore(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasMore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialLoad(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsReverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsReverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoader(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseCapture(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useCapture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseCapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useCapture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseWindow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useWindow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

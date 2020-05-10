@@ -30,17 +30,59 @@ trait DefaultRouteTableArgs extends js.Object {
 
 object DefaultRouteTableArgs {
   @scala.inline
-  def apply(
-    defaultRouteTableId: Input[String],
-    propagatingVgws: Input[js.Array[Input[String]]] = null,
-    routes: Input[js.Array[Input[DefaultRouteTableRoute]]] = null,
-    tags: Input[StringDictionary[_]] = null
-  ): DefaultRouteTableArgs = {
+  def apply(defaultRouteTableId: Input[String]): DefaultRouteTableArgs = {
     val __obj = js.Dynamic.literal(defaultRouteTableId = defaultRouteTableId.asInstanceOf[js.Any])
-    if (propagatingVgws != null) __obj.updateDynamic("propagatingVgws")(propagatingVgws.asInstanceOf[js.Any])
-    if (routes != null) __obj.updateDynamic("routes")(routes.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultRouteTableArgs]
   }
+  @scala.inline
+  implicit class DefaultRouteTableArgsOps[Self <: DefaultRouteTableArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultRouteTableId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRouteTableId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPropagatingVgws(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propagatingVgws")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPropagatingVgws: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propagatingVgws")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoutes(value: Input[js.Array[Input[DefaultRouteTableRoute]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

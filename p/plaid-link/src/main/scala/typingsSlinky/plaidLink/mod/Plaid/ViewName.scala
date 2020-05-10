@@ -20,26 +20,24 @@ trait ViewName extends js.Object
 
 object ViewName {
   @scala.inline
-  def CONNECTED: typingsSlinky.plaidLink.plaidLinkStrings.CONNECTED = this.cast("CONNECTED")
+  def CONNECTED: typingsSlinky.plaidLink.plaidLinkStrings.CONNECTED = "CONNECTED".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.CONNECTED]
   @scala.inline
-  def CREDENTIAL: typingsSlinky.plaidLink.plaidLinkStrings.CREDENTIAL = this.cast("CREDENTIAL")
+  def CREDENTIAL: typingsSlinky.plaidLink.plaidLinkStrings.CREDENTIAL = "CREDENTIAL".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.CREDENTIAL]
   @scala.inline
-  def ERROR: typingsSlinky.plaidLink.plaidLinkStrings.ERROR = this.cast("ERROR")
+  def ERROR: typingsSlinky.plaidLink.plaidLinkStrings.ERROR = "ERROR".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.ERROR]
   @scala.inline
-  def EXIT: typingsSlinky.plaidLink.plaidLinkStrings.EXIT = this.cast("EXIT")
+  def EXIT: typingsSlinky.plaidLink.plaidLinkStrings.EXIT = "EXIT".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.EXIT]
   @scala.inline
-  def LOADING: typingsSlinky.plaidLink.plaidLinkStrings.LOADING = this.cast("LOADING")
+  def LOADING: typingsSlinky.plaidLink.plaidLinkStrings.LOADING = "LOADING".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.LOADING]
   @scala.inline
-  def MFA: typingsSlinky.plaidLink.plaidLinkStrings.MFA = this.cast("MFA")
+  def MFA: typingsSlinky.plaidLink.plaidLinkStrings.MFA = "MFA".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.MFA]
   @scala.inline
-  def NUMBERS: typingsSlinky.plaidLink.plaidLinkStrings.NUMBERS = this.cast("NUMBERS")
+  def NUMBERS: typingsSlinky.plaidLink.plaidLinkStrings.NUMBERS = "NUMBERS".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.NUMBERS]
   @scala.inline
-  def RECAPTCHA: typingsSlinky.plaidLink.plaidLinkStrings.RECAPTCHA = this.cast("RECAPTCHA")
+  def RECAPTCHA: typingsSlinky.plaidLink.plaidLinkStrings.RECAPTCHA = "RECAPTCHA".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.RECAPTCHA]
   @scala.inline
-  def SELECT_ACCOUNT: typingsSlinky.plaidLink.plaidLinkStrings.SELECT_ACCOUNT = this.cast("SELECT_ACCOUNT")
+  def SELECT_ACCOUNT: typingsSlinky.plaidLink.plaidLinkStrings.SELECT_ACCOUNT = "SELECT_ACCOUNT".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.SELECT_ACCOUNT]
   @scala.inline
-  def SELECT_INSTITUTION: typingsSlinky.plaidLink.plaidLinkStrings.SELECT_INSTITUTION = this.cast("SELECT_INSTITUTION")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SELECT_INSTITUTION: typingsSlinky.plaidLink.plaidLinkStrings.SELECT_INSTITUTION = "SELECT_INSTITUTION".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.SELECT_INSTITUTION]
 }
 

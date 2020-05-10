@@ -42,26 +42,113 @@ trait CreateKeyRequest extends js.Object {
 
 object CreateKeyRequest {
   @scala.inline
-  def apply(
-    BypassPolicyLockoutSafetyCheck: js.UndefOr[Boolean] = js.undefined,
-    CustomKeyStoreId: CustomKeyStoreIdType = null,
-    CustomerMasterKeySpec: CustomerMasterKeySpec = null,
-    Description: DescriptionType = null,
-    KeyUsage: KeyUsageType = null,
-    Origin: OriginType = null,
-    Policy: PolicyType = null,
-    Tags: TagList = null
-  ): CreateKeyRequest = {
+  def apply(): CreateKeyRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(BypassPolicyLockoutSafetyCheck)) __obj.updateDynamic("BypassPolicyLockoutSafetyCheck")(BypassPolicyLockoutSafetyCheck.asInstanceOf[js.Any])
-    if (CustomKeyStoreId != null) __obj.updateDynamic("CustomKeyStoreId")(CustomKeyStoreId.asInstanceOf[js.Any])
-    if (CustomerMasterKeySpec != null) __obj.updateDynamic("CustomerMasterKeySpec")(CustomerMasterKeySpec.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (KeyUsage != null) __obj.updateDynamic("KeyUsage")(KeyUsage.asInstanceOf[js.Any])
-    if (Origin != null) __obj.updateDynamic("Origin")(Origin.asInstanceOf[js.Any])
-    if (Policy != null) __obj.updateDynamic("Policy")(Policy.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateKeyRequest]
   }
+  @scala.inline
+  implicit class CreateKeyRequestOps[Self <: CreateKeyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBypassPolicyLockoutSafetyCheck(value: BooleanType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BypassPolicyLockoutSafetyCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBypassPolicyLockoutSafetyCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BypassPolicyLockoutSafetyCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomKeyStoreId(value: CustomKeyStoreIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomKeyStoreId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomKeyStoreId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomKeyStoreId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomerMasterKeySpec(value: CustomerMasterKeySpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerMasterKeySpec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerMasterKeySpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerMasterKeySpec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: DescriptionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyUsage(value: KeyUsageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyUsage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyUsage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyUsage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: OriginType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Origin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicy(value: PolicyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

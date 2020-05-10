@@ -55,7 +55,7 @@ trait Cluster extends js.Object {
     */
   var ClusterSnapshotCopyStatus: js.UndefOr[typingsSlinky.awsSdk.redshiftMod.ClusterSnapshotCopyStatus] = js.native
   /**
-    *  The current state of the cluster. Possible values are the following:    available     available, prep-for-resize     available, resize-cleanup     cancelling-resize     creating     deleting     final-snapshot     hardware-failure     incompatible-hsm     incompatible-network     incompatible-parameters     incompatible-restore     modifying     rebooting     renaming     resizing     rotating-keys     storage-full     updating-hsm   
+    *  The current state of the cluster. Possible values are the following:    available     available, prep-for-resize     available, resize-cleanup     cancelling-resize     creating     deleting     final-snapshot     hardware-failure     incompatible-hsm     incompatible-network     incompatible-parameters     incompatible-restore     modifying     paused     rebooting     renaming     resizing     rotating-keys     storage-full     updating-hsm   
     */
   var ClusterStatus: js.UndefOr[String] = js.native
   /**
@@ -194,102 +194,569 @@ trait Cluster extends js.Object {
 
 object Cluster {
   @scala.inline
-  def apply(
-    AllowVersionUpgrade: js.UndefOr[scala.Boolean] = js.undefined,
-    AutomatedSnapshotRetentionPeriod: Int | scala.Double = null,
-    AvailabilityZone: String = null,
-    ClusterAvailabilityStatus: String = null,
-    ClusterCreateTime: js.Date = null,
-    ClusterIdentifier: String = null,
-    ClusterNodes: ClusterNodesList = null,
-    ClusterParameterGroups: ClusterParameterGroupStatusList = null,
-    ClusterPublicKey: String = null,
-    ClusterRevisionNumber: String = null,
-    ClusterSecurityGroups: ClusterSecurityGroupMembershipList = null,
-    ClusterSnapshotCopyStatus: ClusterSnapshotCopyStatus = null,
-    ClusterStatus: String = null,
-    ClusterSubnetGroupName: String = null,
-    ClusterVersion: String = null,
-    DBName: String = null,
-    DataTransferProgress: DataTransferProgress = null,
-    DeferredMaintenanceWindows: DeferredMaintenanceWindowsList = null,
-    ElasticIpStatus: ElasticIpStatus = null,
-    ElasticResizeNumberOfNodeOptions: String = null,
-    Encrypted: js.UndefOr[scala.Boolean] = js.undefined,
-    Endpoint: Endpoint = null,
-    EnhancedVpcRouting: js.UndefOr[scala.Boolean] = js.undefined,
-    ExpectedNextSnapshotScheduleTime: js.Date = null,
-    ExpectedNextSnapshotScheduleTimeStatus: String = null,
-    HsmStatus: HsmStatus = null,
-    IamRoles: ClusterIamRoleList = null,
-    KmsKeyId: String = null,
-    MaintenanceTrackName: String = null,
-    ManualSnapshotRetentionPeriod: Int | scala.Double = null,
-    MasterUsername: String = null,
-    ModifyStatus: String = null,
-    NextMaintenanceWindowStartTime: js.Date = null,
-    NodeType: String = null,
-    NumberOfNodes: Int | scala.Double = null,
-    PendingActions: PendingActionsList = null,
-    PendingModifiedValues: PendingModifiedValues = null,
-    PreferredMaintenanceWindow: String = null,
-    PubliclyAccessible: js.UndefOr[scala.Boolean] = js.undefined,
-    ResizeInfo: ResizeInfo = null,
-    RestoreStatus: RestoreStatus = null,
-    SnapshotScheduleIdentifier: String = null,
-    SnapshotScheduleState: ScheduleState = null,
-    Tags: TagList = null,
-    VpcId: String = null,
-    VpcSecurityGroups: VpcSecurityGroupMembershipList = null
-  ): Cluster = {
+  def apply(): Cluster = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(AllowVersionUpgrade)) __obj.updateDynamic("AllowVersionUpgrade")(AllowVersionUpgrade.asInstanceOf[js.Any])
-    if (AutomatedSnapshotRetentionPeriod != null) __obj.updateDynamic("AutomatedSnapshotRetentionPeriod")(AutomatedSnapshotRetentionPeriod.asInstanceOf[js.Any])
-    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
-    if (ClusterAvailabilityStatus != null) __obj.updateDynamic("ClusterAvailabilityStatus")(ClusterAvailabilityStatus.asInstanceOf[js.Any])
-    if (ClusterCreateTime != null) __obj.updateDynamic("ClusterCreateTime")(ClusterCreateTime.asInstanceOf[js.Any])
-    if (ClusterIdentifier != null) __obj.updateDynamic("ClusterIdentifier")(ClusterIdentifier.asInstanceOf[js.Any])
-    if (ClusterNodes != null) __obj.updateDynamic("ClusterNodes")(ClusterNodes.asInstanceOf[js.Any])
-    if (ClusterParameterGroups != null) __obj.updateDynamic("ClusterParameterGroups")(ClusterParameterGroups.asInstanceOf[js.Any])
-    if (ClusterPublicKey != null) __obj.updateDynamic("ClusterPublicKey")(ClusterPublicKey.asInstanceOf[js.Any])
-    if (ClusterRevisionNumber != null) __obj.updateDynamic("ClusterRevisionNumber")(ClusterRevisionNumber.asInstanceOf[js.Any])
-    if (ClusterSecurityGroups != null) __obj.updateDynamic("ClusterSecurityGroups")(ClusterSecurityGroups.asInstanceOf[js.Any])
-    if (ClusterSnapshotCopyStatus != null) __obj.updateDynamic("ClusterSnapshotCopyStatus")(ClusterSnapshotCopyStatus.asInstanceOf[js.Any])
-    if (ClusterStatus != null) __obj.updateDynamic("ClusterStatus")(ClusterStatus.asInstanceOf[js.Any])
-    if (ClusterSubnetGroupName != null) __obj.updateDynamic("ClusterSubnetGroupName")(ClusterSubnetGroupName.asInstanceOf[js.Any])
-    if (ClusterVersion != null) __obj.updateDynamic("ClusterVersion")(ClusterVersion.asInstanceOf[js.Any])
-    if (DBName != null) __obj.updateDynamic("DBName")(DBName.asInstanceOf[js.Any])
-    if (DataTransferProgress != null) __obj.updateDynamic("DataTransferProgress")(DataTransferProgress.asInstanceOf[js.Any])
-    if (DeferredMaintenanceWindows != null) __obj.updateDynamic("DeferredMaintenanceWindows")(DeferredMaintenanceWindows.asInstanceOf[js.Any])
-    if (ElasticIpStatus != null) __obj.updateDynamic("ElasticIpStatus")(ElasticIpStatus.asInstanceOf[js.Any])
-    if (ElasticResizeNumberOfNodeOptions != null) __obj.updateDynamic("ElasticResizeNumberOfNodeOptions")(ElasticResizeNumberOfNodeOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(Encrypted)) __obj.updateDynamic("Encrypted")(Encrypted.asInstanceOf[js.Any])
-    if (Endpoint != null) __obj.updateDynamic("Endpoint")(Endpoint.asInstanceOf[js.Any])
-    if (!js.isUndefined(EnhancedVpcRouting)) __obj.updateDynamic("EnhancedVpcRouting")(EnhancedVpcRouting.asInstanceOf[js.Any])
-    if (ExpectedNextSnapshotScheduleTime != null) __obj.updateDynamic("ExpectedNextSnapshotScheduleTime")(ExpectedNextSnapshotScheduleTime.asInstanceOf[js.Any])
-    if (ExpectedNextSnapshotScheduleTimeStatus != null) __obj.updateDynamic("ExpectedNextSnapshotScheduleTimeStatus")(ExpectedNextSnapshotScheduleTimeStatus.asInstanceOf[js.Any])
-    if (HsmStatus != null) __obj.updateDynamic("HsmStatus")(HsmStatus.asInstanceOf[js.Any])
-    if (IamRoles != null) __obj.updateDynamic("IamRoles")(IamRoles.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
-    if (MaintenanceTrackName != null) __obj.updateDynamic("MaintenanceTrackName")(MaintenanceTrackName.asInstanceOf[js.Any])
-    if (ManualSnapshotRetentionPeriod != null) __obj.updateDynamic("ManualSnapshotRetentionPeriod")(ManualSnapshotRetentionPeriod.asInstanceOf[js.Any])
-    if (MasterUsername != null) __obj.updateDynamic("MasterUsername")(MasterUsername.asInstanceOf[js.Any])
-    if (ModifyStatus != null) __obj.updateDynamic("ModifyStatus")(ModifyStatus.asInstanceOf[js.Any])
-    if (NextMaintenanceWindowStartTime != null) __obj.updateDynamic("NextMaintenanceWindowStartTime")(NextMaintenanceWindowStartTime.asInstanceOf[js.Any])
-    if (NodeType != null) __obj.updateDynamic("NodeType")(NodeType.asInstanceOf[js.Any])
-    if (NumberOfNodes != null) __obj.updateDynamic("NumberOfNodes")(NumberOfNodes.asInstanceOf[js.Any])
-    if (PendingActions != null) __obj.updateDynamic("PendingActions")(PendingActions.asInstanceOf[js.Any])
-    if (PendingModifiedValues != null) __obj.updateDynamic("PendingModifiedValues")(PendingModifiedValues.asInstanceOf[js.Any])
-    if (PreferredMaintenanceWindow != null) __obj.updateDynamic("PreferredMaintenanceWindow")(PreferredMaintenanceWindow.asInstanceOf[js.Any])
-    if (!js.isUndefined(PubliclyAccessible)) __obj.updateDynamic("PubliclyAccessible")(PubliclyAccessible.asInstanceOf[js.Any])
-    if (ResizeInfo != null) __obj.updateDynamic("ResizeInfo")(ResizeInfo.asInstanceOf[js.Any])
-    if (RestoreStatus != null) __obj.updateDynamic("RestoreStatus")(RestoreStatus.asInstanceOf[js.Any])
-    if (SnapshotScheduleIdentifier != null) __obj.updateDynamic("SnapshotScheduleIdentifier")(SnapshotScheduleIdentifier.asInstanceOf[js.Any])
-    if (SnapshotScheduleState != null) __obj.updateDynamic("SnapshotScheduleState")(SnapshotScheduleState.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
-    if (VpcSecurityGroups != null) __obj.updateDynamic("VpcSecurityGroups")(VpcSecurityGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cluster]
   }
+  @scala.inline
+  implicit class ClusterOps[Self <: Cluster] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowVersionUpgrade(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowVersionUpgrade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowVersionUpgrade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllowVersionUpgrade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutomatedSnapshotRetentionPeriod(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomatedSnapshotRetentionPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutomatedSnapshotRetentionPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomatedSnapshotRetentionPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterAvailabilityStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterAvailabilityStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterAvailabilityStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterAvailabilityStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterCreateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterCreateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterCreateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterNodes(value: ClusterNodesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterNodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterParameterGroups(value: ClusterParameterGroupStatusList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterParameterGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterParameterGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterParameterGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterPublicKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterPublicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterPublicKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterPublicKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterRevisionNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterRevisionNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterRevisionNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterRevisionNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterSecurityGroups(value: ClusterSecurityGroupMembershipList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterSecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterSecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterSecurityGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterSnapshotCopyStatus(value: ClusterSnapshotCopyStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterSnapshotCopyStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterSnapshotCopyStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterSnapshotCopyStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterSubnetGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterSubnetGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterSubnetGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterSubnetGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataTransferProgress(value: DataTransferProgress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataTransferProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataTransferProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataTransferProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeferredMaintenanceWindows(value: DeferredMaintenanceWindowsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferredMaintenanceWindows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeferredMaintenanceWindows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeferredMaintenanceWindows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticIpStatus(value: ElasticIpStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticIpStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticIpStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticIpStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElasticResizeNumberOfNodeOptions(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticResizeNumberOfNodeOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElasticResizeNumberOfNodeOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ElasticResizeNumberOfNodeOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncrypted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncrypted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encrypted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: Endpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnhancedVpcRouting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnhancedVpcRouting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnhancedVpcRouting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnhancedVpcRouting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpectedNextSnapshotScheduleTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpectedNextSnapshotScheduleTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpectedNextSnapshotScheduleTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpectedNextSnapshotScheduleTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpectedNextSnapshotScheduleTimeStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpectedNextSnapshotScheduleTimeStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpectedNextSnapshotScheduleTimeStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpectedNextSnapshotScheduleTimeStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsmStatus(value: HsmStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIamRoles(value: ClusterIamRoleList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamRoles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaintenanceTrackName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaintenanceTrackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaintenanceTrackName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaintenanceTrackName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManualSnapshotRetentionPeriod(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotRetentionPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManualSnapshotRetentionPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotRetentionPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUsername")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUsername")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModifyStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifyStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModifyStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModifyStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextMaintenanceWindowStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMaintenanceWindowStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMaintenanceWindowStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMaintenanceWindowStartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NodeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfNodes(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfNodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPendingActions(value: PendingActionsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPendingActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPendingModifiedValues(value: PendingModifiedValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingModifiedValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPendingModifiedValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingModifiedValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreferredMaintenanceWindow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMaintenanceWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreferredMaintenanceWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredMaintenanceWindow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPubliclyAccessible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PubliclyAccessible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPubliclyAccessible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PubliclyAccessible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizeInfo(value: ResizeInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResizeInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizeInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResizeInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestoreStatus(value: RestoreStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestoreStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapshotScheduleIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotScheduleIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapshotScheduleIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotScheduleIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapshotScheduleState(value: ScheduleState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotScheduleState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapshotScheduleState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotScheduleState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcSecurityGroups(value: VpcSecurityGroupMembershipList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcSecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroups")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

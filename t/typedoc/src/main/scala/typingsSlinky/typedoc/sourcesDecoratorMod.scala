@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("typedoc/dist/lib/utils/options/sources/decorator", JSImport.Namespace)
 @js.native
 object sourcesDecoratorMod extends js.Object {
-  def Option[K /* <: String */](
+  def Option[K /* <: /* keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TypeDocOptionMap * / any */ String */](
     option: AnonName[K] with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KeyToDeclaration<K> */ js.Any)
   ): js.Function2[
     /* target */ AnonApplication | AnonOptions, 

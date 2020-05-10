@@ -4,23 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProductAspect extends js.Object {
   /** The name of the aspect. */
-  var aspectName: js.UndefOr[String] = js.undefined
+  var aspectName: js.UndefOr[String] = js.native
   /** The name of the destination. Leave out to apply to all destinations. */
-  var destinationName: js.UndefOr[String] = js.undefined
+  var destinationName: js.UndefOr[String] = js.native
   /** Whether the aspect is required, excluded or should be validated. */
-  var intention: js.UndefOr[String] = js.undefined
+  var intention: js.UndefOr[String] = js.native
 }
 
 object ProductAspect {
   @scala.inline
-  def apply(aspectName: String = null, destinationName: String = null, intention: String = null): ProductAspect = {
+  def apply(): ProductAspect = {
     val __obj = js.Dynamic.literal()
-    if (aspectName != null) __obj.updateDynamic("aspectName")(aspectName.asInstanceOf[js.Any])
-    if (destinationName != null) __obj.updateDynamic("destinationName")(destinationName.asInstanceOf[js.Any])
-    if (intention != null) __obj.updateDynamic("intention")(intention.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProductAspect]
   }
+  @scala.inline
+  implicit class ProductAspectOps[Self <: ProductAspect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAspectName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAspectName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntention(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intention")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntention: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intention")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

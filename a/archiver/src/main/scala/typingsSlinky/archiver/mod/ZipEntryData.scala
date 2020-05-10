@@ -1,32 +1,40 @@
 package typingsSlinky.archiver.mod
 
-import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ZipEntryData extends EntryData {
   /** Sets the compression method to STORE */
-  var store: js.UndefOr[Boolean] = js.undefined
+  var store: js.UndefOr[Boolean] = js.native
 }
 
 object ZipEntryData {
   @scala.inline
-  def apply(
-    name: String,
-    date: js.Date | String = null,
-    mode: Int | Double = null,
-    prefix: String = null,
-    stats: Stats = null,
-    store: js.UndefOr[Boolean] = js.undefined
-  ): ZipEntryData = {
+  def apply(name: String): ZipEntryData = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (stats != null) __obj.updateDynamic("stats")(stats.asInstanceOf[js.Any])
-    if (!js.isUndefined(store)) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZipEntryData]
   }
+  @scala.inline
+  implicit class ZipEntryDataOps[Self <: ZipEntryData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStore(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

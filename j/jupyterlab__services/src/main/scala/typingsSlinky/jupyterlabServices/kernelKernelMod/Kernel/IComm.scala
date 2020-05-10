@@ -47,9 +47,7 @@ trait IComm extends IDisposable {
   def close(
     data: JSONValue,
     metadata: JSONObject,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ]
+    buffers: js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView]
   ): IShellFuture[IShellMessage[ShellMessageType], IShellMessage[ShellMessageType]] = js.native
   /**
     * Callback for a comm close event.
@@ -87,9 +85,7 @@ trait IComm extends IDisposable {
   def open(
     data: JSONValue,
     metadata: JSONObject,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ]
+    buffers: js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView]
   ): IShellFuture[IShellMessage[ShellMessageType], IShellMessage[ShellMessageType]] = js.native
   /**
     * Send a `comm_msg` message to the kernel.
@@ -112,16 +108,12 @@ trait IComm extends IDisposable {
   def send(
     data: JSONValue,
     metadata: JSONObject,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ]
+    buffers: js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView]
   ): IShellFuture[IShellMessage[ShellMessageType], IShellMessage[ShellMessageType]] = js.native
   def send(
     data: JSONValue,
     metadata: JSONObject,
-    buffers: js.Array[
-      scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView
-    ],
+    buffers: js.Array[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView],
     disposeOnDone: Boolean
   ): IShellFuture[IShellMessage[ShellMessageType], IShellMessage[ShellMessageType]] = js.native
 }

@@ -1,38 +1,40 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.avatarItemMod.AvatarItemProps
 import typingsSlinky.antDesignPro.avatarItemMod.SizeType
 import typingsSlinky.antDesignPro.avatarItemMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AvatarItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object AvatarItem {
   @JSImport("ant-design-pro/lib/AvatarList/AvatarItem", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    src: String,
-    tips: TagMod[Any],
-    onClick: () => Unit = null,
-    size: SizeType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any], tips = tips.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def onClick(value: () => Unit): this.type = set("onClick", js.Any.fromFunction0(value))
+    @scala.inline
+    def size(value: SizeType): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tips(value: TagMod[Any]): this.type = set("tips", value.asInstanceOf[js.Any])
   }
-  type Props = AvatarItemProps
+  
+  def withProps(p: AvatarItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(src: String): Builder = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AvatarItemProps]))
+  }
 }
 

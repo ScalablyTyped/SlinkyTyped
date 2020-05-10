@@ -6,8 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.UI.Input.Inking.InkRecognizer")
 @js.native
-class InkRecognizer () extends IInkRecognizer {
-  /* CompleteClass */
-  override var name: String = js.native
-}
+class InkRecognizer () extends IInkRecognizer
 

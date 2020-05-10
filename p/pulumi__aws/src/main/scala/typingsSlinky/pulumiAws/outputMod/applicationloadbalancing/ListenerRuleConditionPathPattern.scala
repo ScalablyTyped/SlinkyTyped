@@ -16,8 +16,21 @@ object ListenerRuleConditionPathPattern {
   @scala.inline
   def apply(values: js.Array[String]): ListenerRuleConditionPathPattern = {
     val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ListenerRuleConditionPathPattern]
   }
+  @scala.inline
+  implicit class ListenerRuleConditionPathPatternOps[Self <: ListenerRuleConditionPathPattern] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValues(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

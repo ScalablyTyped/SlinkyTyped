@@ -26,14 +26,41 @@ trait SchemaProcessingOptions extends js.Object {
 
 object SchemaProcessingOptions {
   @scala.inline
-  def apply(
-    disableStreetAddressResolution: js.UndefOr[Boolean] = js.undefined,
-    htmlSanitization: String = null
-  ): SchemaProcessingOptions = {
+  def apply(): SchemaProcessingOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disableStreetAddressResolution)) __obj.updateDynamic("disableStreetAddressResolution")(disableStreetAddressResolution.asInstanceOf[js.Any])
-    if (htmlSanitization != null) __obj.updateDynamic("htmlSanitization")(htmlSanitization.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProcessingOptions]
   }
+  @scala.inline
+  implicit class SchemaProcessingOptionsOps[Self <: SchemaProcessingOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisableStreetAddressResolution(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStreetAddressResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableStreetAddressResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStreetAddressResolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlSanitization(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlSanitization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlSanitization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlSanitization")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

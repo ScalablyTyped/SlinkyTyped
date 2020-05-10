@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.node.NodeJS.EventEmitter because Already inherited
 - typingsSlinky.node.eventsMod.EventEmitter because Already inherited
 - typingsSlinky.node.NodeJS.EventEmitter because Already inherited

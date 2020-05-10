@@ -27,11 +27,41 @@ trait SchemaCryptoKeyVersionTemplate extends js.Object {
 
 object SchemaCryptoKeyVersionTemplate {
   @scala.inline
-  def apply(algorithm: String = null, protectionLevel: String = null): SchemaCryptoKeyVersionTemplate = {
+  def apply(): SchemaCryptoKeyVersionTemplate = {
     val __obj = js.Dynamic.literal()
-    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
-    if (protectionLevel != null) __obj.updateDynamic("protectionLevel")(protectionLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCryptoKeyVersionTemplate]
   }
+  @scala.inline
+  implicit class SchemaCryptoKeyVersionTemplateOps[Self <: SchemaCryptoKeyVersionTemplate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtectionLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectionLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtectionLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectionLevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

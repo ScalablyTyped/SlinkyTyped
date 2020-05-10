@@ -6,27 +6,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAlbumid extends js.Object {
-  var album_id: Double
-  var album_name: String
-  var artist_id: Double
-  var artist_name: String
-  var commontrack_id: Double
-  var explicit: TBoolean
-  var has_lyrics: TBoolean
-  var has_richsync: TBoolean
-  var has_subtitles: TBoolean
-  var instrumental: TBoolean
-  var num_favourite: Double
-  var primary_genres: PrimaryGenres
-  var restricted: TBoolean
-  var track_edit_url: String
-  var track_id: Double
-  var track_name: String
-  var track_name_translation_list: js.Array[_]
-  var track_rating: Double
-  var track_share_url: String
-  var updated_time: String
+  var album_id: Double = js.native
+  var album_name: String = js.native
+  var artist_id: Double = js.native
+  var artist_name: String = js.native
+  var commontrack_id: Double = js.native
+  var explicit: TBoolean = js.native
+  var has_lyrics: TBoolean = js.native
+  var has_richsync: TBoolean = js.native
+  var has_subtitles: TBoolean = js.native
+  var instrumental: TBoolean = js.native
+  var num_favourite: Double = js.native
+  var primary_genres: PrimaryGenres = js.native
+  var restricted: TBoolean = js.native
+  var track_edit_url: String = js.native
+  var track_id: Double = js.native
+  var track_name: String = js.native
+  var track_name_translation_list: js.Array[_] = js.native
+  var track_rating: Double = js.native
+  var track_share_url: String = js.native
+  var updated_time: String = js.native
 }
 
 object AnonAlbumid {
@@ -54,8 +55,135 @@ object AnonAlbumid {
     updated_time: String
   ): AnonAlbumid = {
     val __obj = js.Dynamic.literal(album_id = album_id.asInstanceOf[js.Any], album_name = album_name.asInstanceOf[js.Any], artist_id = artist_id.asInstanceOf[js.Any], artist_name = artist_name.asInstanceOf[js.Any], commontrack_id = commontrack_id.asInstanceOf[js.Any], explicit = explicit.asInstanceOf[js.Any], has_lyrics = has_lyrics.asInstanceOf[js.Any], has_richsync = has_richsync.asInstanceOf[js.Any], has_subtitles = has_subtitles.asInstanceOf[js.Any], instrumental = instrumental.asInstanceOf[js.Any], num_favourite = num_favourite.asInstanceOf[js.Any], primary_genres = primary_genres.asInstanceOf[js.Any], restricted = restricted.asInstanceOf[js.Any], track_edit_url = track_edit_url.asInstanceOf[js.Any], track_id = track_id.asInstanceOf[js.Any], track_name = track_name.asInstanceOf[js.Any], track_name_translation_list = track_name_translation_list.asInstanceOf[js.Any], track_rating = track_rating.asInstanceOf[js.Any], track_share_url = track_share_url.asInstanceOf[js.Any], updated_time = updated_time.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonAlbumid]
   }
+  @scala.inline
+  implicit class AnonAlbumidOps[Self <: AnonAlbumid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlbum_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("album_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlbum_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("album_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArtist_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artist_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArtist_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artist_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommontrack_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commontrack_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExplicit(value: TBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explicit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHas_lyrics(value: TBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_lyrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHas_richsync(value: TBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_richsync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHas_subtitles(value: TBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_subtitles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstrumental(value: TBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instrumental")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNum_favourite(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("num_favourite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrimary_genres(value: PrimaryGenres): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primary_genres")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestricted(value: TBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restricted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack_edit_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track_edit_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack_name_translation_list(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track_name_translation_list")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack_rating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track_rating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack_share_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track_share_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdated_time(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

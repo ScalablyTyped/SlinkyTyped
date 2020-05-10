@@ -17,12 +17,10 @@ trait AuthorizationScopeOptions extends js.Object
 
 object AuthorizationScopeOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def postal_code: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.postal_code = "postal_code".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.postal_code]
   @scala.inline
-  def postal_code: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.postal_code = this.cast("postal_code")
+  def profile: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.profile = "profile".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.profile]
   @scala.inline
-  def profile: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.profile = this.cast("profile")
-  @scala.inline
-  def profileColonuser_id: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.profileColonuser_id = this.cast("profile:user_id")
+  def profileColonuser_id: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.profileColonuser_id = "profile:user_id".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.profileColonuser_id]
 }
 

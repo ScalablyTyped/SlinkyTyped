@@ -32,3 +32,83 @@ trait PickStyledComponentBasean extends StyledComponentInterpolation {
   ] = js.native
 }
 
+object PickStyledComponentBasean {
+  @scala.inline
+  def apply(
+    DollarDollartypeof: js.Symbol,
+    withComponent: /* component */ AnyStyledComponent => StyledComponent[
+      StyledComponentInnerComponent[AnyStyledComponent], 
+      _, 
+      js.Any with StyledComponentInnerOtherProps[AnyStyledComponent], 
+      _ | StyledComponentInnerAttrs[AnyStyledComponent]
+    ]
+  ): PickStyledComponentBasean = {
+    val __obj = js.Dynamic.literal(withComponent = js.Any.fromFunction1(withComponent))
+    __obj.updateDynamic("$$typeof")(DollarDollartypeof.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PickStyledComponentBasean]
+  }
+  @scala.inline
+  implicit class PickStyledComponentBaseanOps[Self <: PickStyledComponentBasean] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDollarDollartypeof(value: js.Symbol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$$typeof")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWithComponent(
+      value: /* component */ AnyStyledComponent => StyledComponent[
+          StyledComponentInnerComponent[AnyStyledComponent], 
+          _, 
+          js.Any with StyledComponentInnerOtherProps[AnyStyledComponent], 
+          _ | StyledComponentInnerAttrs[AnyStyledComponent]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withComponent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDefaultProps(value: Partial[StyledComponentProps[_, _, _, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPropTypes(value: WeakValidationMap[StyledComponentProps[_, _, _, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPropTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propTypes")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

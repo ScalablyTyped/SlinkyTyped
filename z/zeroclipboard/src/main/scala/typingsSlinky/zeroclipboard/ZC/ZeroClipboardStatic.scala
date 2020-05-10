@@ -2,8 +2,8 @@ package typingsSlinky.zeroclipboard.ZC
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Element
 import typingsSlinky.zeroclipboard.zeroclipboardStrings.activeClass
 import typingsSlinky.zeroclipboard.zeroclipboardStrings.autoActivate
 import typingsSlinky.zeroclipboard.zeroclipboardStrings.bubbleEvents
@@ -39,7 +39,7 @@ trait ZeroClipboardStatic
     * @param {Element} element
     * @deprecated: The preferred method to use is focus but the alias activate is available for backward compatibility's sake.
     */
-  def activate(element: org.scalajs.dom.raw.Element): Unit = js.native
+  def activate(element: Element): Unit = js.native
   /**
     * Return the currently "activated" element that the Flash SWF object is in front of it.
     * @return {HTMLElement} or {null}
@@ -119,7 +119,7 @@ trait ZeroClipboardStatic
     * @param {Element} element
     * @since 2.1.0
     */
-  def focus(element: org.scalajs.dom.raw.Element): Unit = js.native
+  def focus(element: Element): Unit = js.native
   /**
     * Indicates if Flash Player is definitely unusable (disabled, outdated, unavailable, or deactivated).
     * IMPORTANT: This method should be considered private.

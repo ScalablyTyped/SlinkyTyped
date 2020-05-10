@@ -4,34 +4,108 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DataGroupOptions extends js.Object {
-  var drawPoints: js.UndefOr[Graph2dDrawPointsOption | js.Function0[Unit]] = js.undefined
+  var drawPoints: js.UndefOr[Graph2dDrawPointsOption | js.Function0[Unit]] = js.native
    // TODO
-  var excludeFromLegend: js.UndefOr[Boolean] = js.undefined
-  var interpolation: js.UndefOr[Boolean | InterpolationOptions] = js.undefined
-  var shaded: js.UndefOr[Graph2dShadedOption] = js.undefined
-  var style: js.UndefOr[String] = js.undefined
-  var yAxisOrientation: js.UndefOr[RightLeftEnumType] = js.undefined
+  var excludeFromLegend: js.UndefOr[Boolean] = js.native
+  var interpolation: js.UndefOr[Boolean | InterpolationOptions] = js.native
+  var shaded: js.UndefOr[Graph2dShadedOption] = js.native
+  var style: js.UndefOr[String] = js.native
+  var yAxisOrientation: js.UndefOr[RightLeftEnumType] = js.native
 }
 
 object DataGroupOptions {
   @scala.inline
-  def apply(
-    drawPoints: Graph2dDrawPointsOption | js.Function0[Unit] = null,
-    excludeFromLegend: js.UndefOr[Boolean] = js.undefined,
-    interpolation: Boolean | InterpolationOptions = null,
-    shaded: Graph2dShadedOption = null,
-    style: String = null,
-    yAxisOrientation: RightLeftEnumType = null
-  ): DataGroupOptions = {
+  def apply(): DataGroupOptions = {
     val __obj = js.Dynamic.literal()
-    if (drawPoints != null) __obj.updateDynamic("drawPoints")(drawPoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(excludeFromLegend)) __obj.updateDynamic("excludeFromLegend")(excludeFromLegend.asInstanceOf[js.Any])
-    if (interpolation != null) __obj.updateDynamic("interpolation")(interpolation.asInstanceOf[js.Any])
-    if (shaded != null) __obj.updateDynamic("shaded")(shaded.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (yAxisOrientation != null) __obj.updateDynamic("yAxisOrientation")(yAxisOrientation.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataGroupOptions]
   }
+  @scala.inline
+  implicit class DataGroupOptionsOps[Self <: DataGroupOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDrawPointsFunction0(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawPoints")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDrawPoints(value: Graph2dDrawPointsOption | js.Function0[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrawPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludeFromLegend(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeFromLegend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludeFromLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeFromLegend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterpolation(value: Boolean | InterpolationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterpolation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interpolation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShaded(value: Graph2dShadedOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shaded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShaded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shaded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYAxisOrientation(value: RightLeftEnumType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYAxisOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisOrientation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

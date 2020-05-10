@@ -15,14 +15,12 @@ trait QueryParamTypes extends js.Object
 
 object QueryParamTypes {
   @scala.inline
-  def array: typingsSlinky.emberController.emberControllerStrings.array = this.cast("array")
+  def array: typingsSlinky.emberController.emberControllerStrings.array = "array".asInstanceOf[typingsSlinky.emberController.emberControllerStrings.array]
   @scala.inline
-  def boolean: typingsSlinky.emberController.emberControllerStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.emberController.emberControllerStrings.boolean = "boolean".asInstanceOf[typingsSlinky.emberController.emberControllerStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def number: typingsSlinky.emberController.emberControllerStrings.number = "number".asInstanceOf[typingsSlinky.emberController.emberControllerStrings.number]
   @scala.inline
-  def number: typingsSlinky.emberController.emberControllerStrings.number = this.cast("number")
-  @scala.inline
-  def string: typingsSlinky.emberController.emberControllerStrings.string = this.cast("string")
+  def string: typingsSlinky.emberController.emberControllerStrings.string = "string".asInstanceOf[typingsSlinky.emberController.emberControllerStrings.string]
 }
 

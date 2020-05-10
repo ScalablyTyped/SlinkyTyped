@@ -16,18 +16,16 @@ trait DirectiveTypes extends js.Object
 
 object DirectiveTypes {
   @scala.inline
-  def AudioPlayerDotClearQueue: typingsSlinky.alexaSdk.alexaSdkStrings.AudioPlayerDotClearQueue = this.cast("AudioPlayer.ClearQueue")
+  def AudioPlayerDotClearQueue: typingsSlinky.alexaSdk.alexaSdkStrings.AudioPlayerDotClearQueue = "AudioPlayer.ClearQueue".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.AudioPlayerDotClearQueue]
   @scala.inline
-  def AudioPlayerDotPlay: typingsSlinky.alexaSdk.alexaSdkStrings.AudioPlayerDotPlay = this.cast("AudioPlayer.Play")
+  def AudioPlayerDotPlay: typingsSlinky.alexaSdk.alexaSdkStrings.AudioPlayerDotPlay = "AudioPlayer.Play".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.AudioPlayerDotPlay]
   @scala.inline
-  def AudioPlayerDotStop: typingsSlinky.alexaSdk.alexaSdkStrings.AudioPlayerDotStop = this.cast("AudioPlayer.Stop")
+  def AudioPlayerDotStop: typingsSlinky.alexaSdk.alexaSdkStrings.AudioPlayerDotStop = "AudioPlayer.Stop".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.AudioPlayerDotStop]
   @scala.inline
-  def DisplayDotRenderTemplate: typingsSlinky.alexaSdk.alexaSdkStrings.DisplayDotRenderTemplate = this.cast("Display.RenderTemplate")
+  def DisplayDotRenderTemplate: typingsSlinky.alexaSdk.alexaSdkStrings.DisplayDotRenderTemplate = "Display.RenderTemplate".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.DisplayDotRenderTemplate]
   @scala.inline
-  def Hint: typingsSlinky.alexaSdk.alexaSdkStrings.Hint = this.cast("Hint")
+  def Hint: typingsSlinky.alexaSdk.alexaSdkStrings.Hint = "Hint".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.Hint]
   @scala.inline
-  def VideoAppDotLaunch: typingsSlinky.alexaSdk.alexaSdkStrings.VideoAppDotLaunch = this.cast("VideoApp.Launch")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VideoAppDotLaunch: typingsSlinky.alexaSdk.alexaSdkStrings.VideoAppDotLaunch = "VideoApp.Launch".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.VideoAppDotLaunch]
 }
 

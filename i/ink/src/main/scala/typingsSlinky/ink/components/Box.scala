@@ -1,10 +1,7 @@
 package typingsSlinky.ink.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.ink.inkStrings.`column-reverse`
 import typingsSlinky.ink.inkStrings.`flex-end`
 import typingsSlinky.ink.inkStrings.`flex-start`
@@ -24,68 +21,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Box
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.ink.mod.Box] {
+object Box {
   @JSImport("ink", "Box")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: height, width */
-  def apply(
-    alignItems: `flex-start` | center | `flex-end` = null,
-    flexBasis: String | Double = null,
-    flexDirection: row | `row-reverse` | column | `column-reverse` = null,
-    flexGrow: Int | Double = null,
-    flexShrink: Int | Double = null,
-    justifyContent: `flex-start` | center | `flex-end` | `space-between` | `space-around` = null,
-    margin: Int | Double = null,
-    marginBottom: Int | Double = null,
-    marginLeft: Int | Double = null,
-    marginRight: Int | Double = null,
-    marginTop: Int | Double = null,
-    marginX: Int | Double = null,
-    marginY: Int | Double = null,
-    minHeight: Int | Double = null,
-    minWidth: Int | Double = null,
-    padding: Int | Double = null,
-    paddingBottom: Int | Double = null,
-    paddingLeft: Int | Double = null,
-    paddingRight: Int | Double = null,
-    paddingTop: Int | Double = null,
-    paddingX: Int | Double = null,
-    paddingY: Int | Double = null,
-    textWrap: wrap | truncate | `truncate-start` | `truncate-middle` | `truncate-end` = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.ink.mod.Box] = {
-    val __obj = js.Dynamic.literal()
-    if (alignItems != null) __obj.updateDynamic("alignItems")(alignItems.asInstanceOf[js.Any])
-    if (flexBasis != null) __obj.updateDynamic("flexBasis")(flexBasis.asInstanceOf[js.Any])
-    if (flexDirection != null) __obj.updateDynamic("flexDirection")(flexDirection.asInstanceOf[js.Any])
-    if (flexGrow != null) __obj.updateDynamic("flexGrow")(flexGrow.asInstanceOf[js.Any])
-    if (flexShrink != null) __obj.updateDynamic("flexShrink")(flexShrink.asInstanceOf[js.Any])
-    if (justifyContent != null) __obj.updateDynamic("justifyContent")(justifyContent.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (marginBottom != null) __obj.updateDynamic("marginBottom")(marginBottom.asInstanceOf[js.Any])
-    if (marginLeft != null) __obj.updateDynamic("marginLeft")(marginLeft.asInstanceOf[js.Any])
-    if (marginRight != null) __obj.updateDynamic("marginRight")(marginRight.asInstanceOf[js.Any])
-    if (marginTop != null) __obj.updateDynamic("marginTop")(marginTop.asInstanceOf[js.Any])
-    if (marginX != null) __obj.updateDynamic("marginX")(marginX.asInstanceOf[js.Any])
-    if (marginY != null) __obj.updateDynamic("marginY")(marginY.asInstanceOf[js.Any])
-    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (paddingBottom != null) __obj.updateDynamic("paddingBottom")(paddingBottom.asInstanceOf[js.Any])
-    if (paddingLeft != null) __obj.updateDynamic("paddingLeft")(paddingLeft.asInstanceOf[js.Any])
-    if (paddingRight != null) __obj.updateDynamic("paddingRight")(paddingRight.asInstanceOf[js.Any])
-    if (paddingTop != null) __obj.updateDynamic("paddingTop")(paddingTop.asInstanceOf[js.Any])
-    if (paddingX != null) __obj.updateDynamic("paddingX")(paddingX.asInstanceOf[js.Any])
-    if (paddingY != null) __obj.updateDynamic("paddingY")(paddingY.asInstanceOf[js.Any])
-    if (textWrap != null) __obj.updateDynamic("textWrap")(textWrap.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.ink.mod.Box] {
+    @scala.inline
+    def alignItems(value: `flex-start` | center | `flex-end`): this.type = set("alignItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexBasis(value: String | Double): this.type = set("flexBasis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexDirection(value: row | `row-reverse` | column | `column-reverse`): this.type = set("flexDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexGrow(value: Double): this.type = set("flexGrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexShrink(value: Double): this.type = set("flexShrink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def justifyContent(value: `flex-start` | center | `flex-end` | `space-between` | `space-around`): this.type = set("justifyContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Double): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marginBottom(value: Double): this.type = set("marginBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marginLeft(value: Double): this.type = set("marginLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marginRight(value: Double): this.type = set("marginRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marginTop(value: Double): this.type = set("marginTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marginX(value: Double): this.type = set("marginX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marginY(value: Double): this.type = set("marginY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minHeight(value: Double): this.type = set("minHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minWidth(value: Double): this.type = set("minWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: Double): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingBottom(value: Double): this.type = set("paddingBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingLeft(value: Double): this.type = set("paddingLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingRight(value: Double): this.type = set("paddingRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingTop(value: Double): this.type = set("paddingTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingX(value: Double): this.type = set("paddingX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingY(value: Double): this.type = set("paddingY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textWrap(value: wrap | truncate | `truncate-start` | `truncate-middle` | `truncate-end`): this.type = set("textWrap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.ink.mod.Box] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.ink.mod.Box](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BoxProps
+  
+  def withProps(p: BoxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Box.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

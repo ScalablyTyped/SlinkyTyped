@@ -16,8 +16,8 @@ trait W2Layout
   def content(`type`: String): js.Array[HTMLElement] | W2Object = js.native
   def content(`type`: String, content: js.Object): Unit = js.native
   def content(`type`: String, content: js.Object, transition: String): Unit = js.native
-  def content(`type`: String, content: typingsSlinky.std.HTMLElement): Unit = js.native
-  def content(`type`: String, content: typingsSlinky.std.HTMLElement, transition: String): Unit = js.native
+  def content(`type`: String, content: HTMLElement): Unit = js.native
+  def content(`type`: String, content: HTMLElement, transition: String): Unit = js.native
   def el(`type`: String): HTMLElement = js.native
   def get(`type`: String): W2Panel = js.native
   def hide(`type`: String): Unit = js.native

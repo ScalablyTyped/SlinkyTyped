@@ -1,10 +1,8 @@
 package typingsSlinky.reactNativePopupDialog.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -16,34 +14,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DialogButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativePopupDialog.mod.DialogButton] {
+object DialogButton {
   @JSImport("react-native-popup-dialog", "DialogButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    text: String,
-    activeOpacity: Int | Double = null,
-    align: AlignTypes = null,
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    style: StyleProp[ViewStyle] = null,
-    textStyle: StyleProp[TextStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativePopupDialog.mod.DialogButton] = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    if (activeOpacity != null) __obj.updateDynamic("activeOpacity")(activeOpacity.asInstanceOf[js.Any])
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativePopupDialog.mod.DialogButton] {
+    @scala.inline
+    def activeOpacity(value: Double): this.type = set("activeOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def align(value: AlignTypes): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def textStyle(value: StyleProp[TextStyle]): this.type = set("textStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyleNull: this.type = set("textStyle", null)
   }
-  type Props = DialogButtonProps
+  
+  def withProps(p: DialogButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(text: String): Builder = {
+    val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DialogButtonProps]))
+  }
 }
 

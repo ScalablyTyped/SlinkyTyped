@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkMiddlewareInputDefault
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.awsSdkTypes.middlewareMod.Middleware
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,6 +12,6 @@ object mod extends js.Object {
   def inputDefault[Input /* <: js.Object */](inputBag: InputDefaultArgs[Input]): Middleware[Input, _] = js.native
   type InputDefaultArgs[Input /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ field in keyof Input ]:? Input[field]}
-    */ typingsSlinky.awsSdkMiddlewareInputDefault.awsSdkMiddlewareInputDefaultStrings.InputDefaultArgs with Input
+    */ typingsSlinky.awsSdkMiddlewareInputDefault.awsSdkMiddlewareInputDefaultStrings.InputDefaultArgs with TopLevel[Input]
 }
 

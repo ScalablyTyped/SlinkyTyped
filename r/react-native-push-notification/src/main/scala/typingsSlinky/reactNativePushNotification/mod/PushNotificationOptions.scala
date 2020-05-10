@@ -5,33 +5,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PushNotificationOptions extends js.Object {
-  var onNotification: js.UndefOr[js.Function1[/* notification */ PushNotification, Unit]] = js.undefined
-  var onRegister: js.UndefOr[js.Function1[/* token */ AnonOs, Unit]] = js.undefined
-  var permissions: js.UndefOr[PushNotificationPermissions] = js.undefined
-  var popInitialNotification: js.UndefOr[Boolean] = js.undefined
-  var requestPermissions: js.UndefOr[Boolean] = js.undefined
-  var senderID: js.UndefOr[String] = js.undefined
+  var onNotification: js.UndefOr[js.Function1[/* notification */ PushNotification, Unit]] = js.native
+  var onRegister: js.UndefOr[js.Function1[/* token */ AnonOs, Unit]] = js.native
+  var permissions: js.UndefOr[PushNotificationPermissions] = js.native
+  var popInitialNotification: js.UndefOr[Boolean] = js.native
+  var requestPermissions: js.UndefOr[Boolean] = js.native
+  var senderID: js.UndefOr[String] = js.native
 }
 
 object PushNotificationOptions {
   @scala.inline
-  def apply(
-    onNotification: /* notification */ PushNotification => Unit = null,
-    onRegister: /* token */ AnonOs => Unit = null,
-    permissions: PushNotificationPermissions = null,
-    popInitialNotification: js.UndefOr[Boolean] = js.undefined,
-    requestPermissions: js.UndefOr[Boolean] = js.undefined,
-    senderID: String = null
-  ): PushNotificationOptions = {
+  def apply(): PushNotificationOptions = {
     val __obj = js.Dynamic.literal()
-    if (onNotification != null) __obj.updateDynamic("onNotification")(js.Any.fromFunction1(onNotification))
-    if (onRegister != null) __obj.updateDynamic("onRegister")(js.Any.fromFunction1(onRegister))
-    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
-    if (!js.isUndefined(popInitialNotification)) __obj.updateDynamic("popInitialNotification")(popInitialNotification.asInstanceOf[js.Any])
-    if (!js.isUndefined(requestPermissions)) __obj.updateDynamic("requestPermissions")(requestPermissions.asInstanceOf[js.Any])
-    if (senderID != null) __obj.updateDynamic("senderID")(senderID.asInstanceOf[js.Any])
     __obj.asInstanceOf[PushNotificationOptions]
   }
+  @scala.inline
+  implicit class PushNotificationOptionsOps[Self <: PushNotificationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnNotification(value: /* notification */ PushNotification => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNotification")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNotification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRegister(value: /* token */ AnonOs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRegister")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRegister: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRegister")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: PushNotificationPermissions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopInitialNotification(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popInitialNotification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopInitialNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popInitialNotification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestPermissions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSenderID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("senderID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSenderID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("senderID")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

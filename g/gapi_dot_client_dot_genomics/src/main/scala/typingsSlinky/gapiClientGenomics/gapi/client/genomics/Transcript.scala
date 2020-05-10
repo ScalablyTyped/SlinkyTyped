@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Transcript extends js.Object {
   /**
     * The range of the coding sequence for this transcript, if any. To determine
@@ -20,7 +21,7 @@ trait Transcript extends js.Object {
     * match the expected reference reading frame and coding exon reference bases
     * cannot necessarily be concatenated to produce the original transcript mRNA.
     */
-  var codingSequence: js.UndefOr[CodingSequence] = js.undefined
+  var codingSequence: js.UndefOr[CodingSequence] = js.native
   /**
     * The <a href="http://en.wikipedia.org/wiki/Exon">exons</a> that compose
     * this transcript. This field should be unset for genomes where transcript
@@ -37,19 +38,60 @@ trait Transcript extends js.Object {
     *
     * Exons are ordered by start position and may not overlap.
     */
-  var exons: js.UndefOr[js.Array[Exon]] = js.undefined
+  var exons: js.UndefOr[js.Array[Exon]] = js.native
   /** The annotation ID of the gene from which this transcript is transcribed. */
-  var geneId: js.UndefOr[String] = js.undefined
+  var geneId: js.UndefOr[String] = js.native
 }
 
 object Transcript {
   @scala.inline
-  def apply(codingSequence: CodingSequence = null, exons: js.Array[Exon] = null, geneId: String = null): Transcript = {
+  def apply(): Transcript = {
     val __obj = js.Dynamic.literal()
-    if (codingSequence != null) __obj.updateDynamic("codingSequence")(codingSequence.asInstanceOf[js.Any])
-    if (exons != null) __obj.updateDynamic("exons")(exons.asInstanceOf[js.Any])
-    if (geneId != null) __obj.updateDynamic("geneId")(geneId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Transcript]
   }
+  @scala.inline
+  implicit class TranscriptOps[Self <: Transcript] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCodingSequence(value: CodingSequence): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codingSequence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodingSequence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codingSequence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExons(value: js.Array[Exon]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeneId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geneId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

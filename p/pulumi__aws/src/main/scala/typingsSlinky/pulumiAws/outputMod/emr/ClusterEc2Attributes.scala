@@ -22,18 +22,90 @@ object ClusterEc2Attributes {
     emrManagedMasterSecurityGroup: String,
     emrManagedSlaveSecurityGroup: String,
     instanceProfile: String,
-    serviceAccessSecurityGroup: String,
-    additionalMasterSecurityGroups: String = null,
-    additionalSlaveSecurityGroups: String = null,
-    keyName: String = null,
-    subnetId: String = null
+    serviceAccessSecurityGroup: String
   ): ClusterEc2Attributes = {
     val __obj = js.Dynamic.literal(emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup.asInstanceOf[js.Any], emrManagedSlaveSecurityGroup = emrManagedSlaveSecurityGroup.asInstanceOf[js.Any], instanceProfile = instanceProfile.asInstanceOf[js.Any], serviceAccessSecurityGroup = serviceAccessSecurityGroup.asInstanceOf[js.Any])
-    if (additionalMasterSecurityGroups != null) __obj.updateDynamic("additionalMasterSecurityGroups")(additionalMasterSecurityGroups.asInstanceOf[js.Any])
-    if (additionalSlaveSecurityGroups != null) __obj.updateDynamic("additionalSlaveSecurityGroups")(additionalSlaveSecurityGroups.asInstanceOf[js.Any])
-    if (keyName != null) __obj.updateDynamic("keyName")(keyName.asInstanceOf[js.Any])
-    if (subnetId != null) __obj.updateDynamic("subnetId")(subnetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterEc2Attributes]
   }
+  @scala.inline
+  implicit class ClusterEc2AttributesOps[Self <: ClusterEc2Attributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmrManagedMasterSecurityGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emrManagedMasterSecurityGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmrManagedSlaveSecurityGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emrManagedSlaveSecurityGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceProfile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceAccessSecurityGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccessSecurityGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdditionalMasterSecurityGroups(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalMasterSecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalMasterSecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalMasterSecurityGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdditionalSlaveSecurityGroups(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalSlaveSecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalSlaveSecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalSlaveSecurityGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

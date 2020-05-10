@@ -13,9 +13,6 @@ import scala.scalajs.js.annotation._
 
 object jupyterlabCoreutilsStrings {
   @js.native
-  sealed trait GraveaccentGraveaccentGraveaccent extends js.Object
-  
-  @js.native
   sealed trait array extends Primitive
   
   @js.native
@@ -135,8 +132,6 @@ object jupyterlabCoreutilsStrings {
   @js.native
   sealed trait `when-hidden` extends Standby
   
-  @scala.inline
-  def GraveaccentGraveaccentGraveaccent: GraveaccentGraveaccentGraveaccent = "```".asInstanceOf[GraveaccentGraveaccentGraveaccent]
   @scala.inline
   def array: array = "array".asInstanceOf[array]
   @scala.inline

@@ -45,18 +45,65 @@ trait SchemaGooglePrivacyDlpV2CharacterMaskConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2CharacterMaskConfig {
   @scala.inline
-  def apply(
-    charactersToIgnore: js.Array[SchemaGooglePrivacyDlpV2CharsToIgnore] = null,
-    maskingCharacter: String = null,
-    numberToMask: Int | Double = null,
-    reverseOrder: js.UndefOr[Boolean] = js.undefined
-  ): SchemaGooglePrivacyDlpV2CharacterMaskConfig = {
+  def apply(): SchemaGooglePrivacyDlpV2CharacterMaskConfig = {
     val __obj = js.Dynamic.literal()
-    if (charactersToIgnore != null) __obj.updateDynamic("charactersToIgnore")(charactersToIgnore.asInstanceOf[js.Any])
-    if (maskingCharacter != null) __obj.updateDynamic("maskingCharacter")(maskingCharacter.asInstanceOf[js.Any])
-    if (numberToMask != null) __obj.updateDynamic("numberToMask")(numberToMask.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverseOrder)) __obj.updateDynamic("reverseOrder")(reverseOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2CharacterMaskConfig]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2CharacterMaskConfigOps[Self <: SchemaGooglePrivacyDlpV2CharacterMaskConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCharactersToIgnore(value: js.Array[SchemaGooglePrivacyDlpV2CharsToIgnore]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charactersToIgnore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharactersToIgnore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charactersToIgnore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskingCharacter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskingCharacter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskingCharacter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskingCharacter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberToMask(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberToMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberToMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberToMask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverseOrder(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverseOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseOrder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

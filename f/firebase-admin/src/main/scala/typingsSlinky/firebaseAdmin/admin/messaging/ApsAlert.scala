@@ -4,48 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ApsAlert extends js.Object {
-  var actionLocKey: js.UndefOr[String] = js.undefined
-  var body: js.UndefOr[String] = js.undefined
-  var launchImage: js.UndefOr[String] = js.undefined
-  var locArgs: js.UndefOr[js.Array[String]] = js.undefined
-  var locKey: js.UndefOr[String] = js.undefined
-  var subtitle: js.UndefOr[String] = js.undefined
-  var subtitleLocArgs: js.UndefOr[js.Array[String]] = js.undefined
-  var subtitleLocKey: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var titleLocArgs: js.UndefOr[js.Array[String]] = js.undefined
-  var titleLocKey: js.UndefOr[String] = js.undefined
+  var actionLocKey: js.UndefOr[String] = js.native
+  var body: js.UndefOr[String] = js.native
+  var launchImage: js.UndefOr[String] = js.native
+  var locArgs: js.UndefOr[js.Array[String]] = js.native
+  var locKey: js.UndefOr[String] = js.native
+  var subtitle: js.UndefOr[String] = js.native
+  var subtitleLocArgs: js.UndefOr[js.Array[String]] = js.native
+  var subtitleLocKey: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
+  var titleLocArgs: js.UndefOr[js.Array[String]] = js.native
+  var titleLocKey: js.UndefOr[String] = js.native
 }
 
 object ApsAlert {
   @scala.inline
-  def apply(
-    actionLocKey: String = null,
-    body: String = null,
-    launchImage: String = null,
-    locArgs: js.Array[String] = null,
-    locKey: String = null,
-    subtitle: String = null,
-    subtitleLocArgs: js.Array[String] = null,
-    subtitleLocKey: String = null,
-    title: String = null,
-    titleLocArgs: js.Array[String] = null,
-    titleLocKey: String = null
-  ): ApsAlert = {
+  def apply(): ApsAlert = {
     val __obj = js.Dynamic.literal()
-    if (actionLocKey != null) __obj.updateDynamic("actionLocKey")(actionLocKey.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (launchImage != null) __obj.updateDynamic("launchImage")(launchImage.asInstanceOf[js.Any])
-    if (locArgs != null) __obj.updateDynamic("locArgs")(locArgs.asInstanceOf[js.Any])
-    if (locKey != null) __obj.updateDynamic("locKey")(locKey.asInstanceOf[js.Any])
-    if (subtitle != null) __obj.updateDynamic("subtitle")(subtitle.asInstanceOf[js.Any])
-    if (subtitleLocArgs != null) __obj.updateDynamic("subtitleLocArgs")(subtitleLocArgs.asInstanceOf[js.Any])
-    if (subtitleLocKey != null) __obj.updateDynamic("subtitleLocKey")(subtitleLocKey.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleLocArgs != null) __obj.updateDynamic("titleLocArgs")(titleLocArgs.asInstanceOf[js.Any])
-    if (titleLocKey != null) __obj.updateDynamic("titleLocKey")(titleLocKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApsAlert]
   }
+  @scala.inline
+  implicit class ApsAlertOps[Self <: ApsAlert] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionLocKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionLocKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionLocKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionLocKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocArgs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locArgs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locArgs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubtitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubtitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubtitleLocArgs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleLocArgs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubtitleLocArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleLocArgs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubtitleLocKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleLocKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubtitleLocKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleLocKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleLocArgs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLocArgs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleLocArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLocArgs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleLocKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLocKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleLocKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleLocKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLabelHue extends js.Object {
-  var labelHue: js.UndefOr[String] = js.undefined
-  var labelOpacity: js.UndefOr[String] = js.undefined
-  var labelSatLum: js.UndefOr[String] = js.undefined
-  var labelThumbDesc: js.UndefOr[String] = js.undefined
+  var labelHue: js.UndefOr[String] = js.native
+  var labelOpacity: js.UndefOr[String] = js.native
+  var labelSatLum: js.UndefOr[String] = js.native
+  var labelThumbDesc: js.UndefOr[String] = js.native
 }
 
 object AnonLabelHue {
   @scala.inline
-  def apply(
-    labelHue: String = null,
-    labelOpacity: String = null,
-    labelSatLum: String = null,
-    labelThumbDesc: String = null
-  ): AnonLabelHue = {
+  def apply(): AnonLabelHue = {
     val __obj = js.Dynamic.literal()
-    if (labelHue != null) __obj.updateDynamic("labelHue")(labelHue.asInstanceOf[js.Any])
-    if (labelOpacity != null) __obj.updateDynamic("labelOpacity")(labelOpacity.asInstanceOf[js.Any])
-    if (labelSatLum != null) __obj.updateDynamic("labelSatLum")(labelSatLum.asInstanceOf[js.Any])
-    if (labelThumbDesc != null) __obj.updateDynamic("labelThumbDesc")(labelThumbDesc.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLabelHue]
   }
+  @scala.inline
+  implicit class AnonLabelHueOps[Self <: AnonLabelHue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabelHue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelHue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelOpacity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelSatLum(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSatLum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelSatLum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSatLum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelThumbDesc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelThumbDesc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelThumbDesc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelThumbDesc")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

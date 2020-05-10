@@ -19,14 +19,41 @@ trait UserPoolDeviceConfiguration extends js.Object {
 
 object UserPoolDeviceConfiguration {
   @scala.inline
-  def apply(
-    challengeRequiredOnNewDevice: Input[Boolean] = null,
-    deviceOnlyRememberedOnUserPrompt: Input[Boolean] = null
-  ): UserPoolDeviceConfiguration = {
+  def apply(): UserPoolDeviceConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (challengeRequiredOnNewDevice != null) __obj.updateDynamic("challengeRequiredOnNewDevice")(challengeRequiredOnNewDevice.asInstanceOf[js.Any])
-    if (deviceOnlyRememberedOnUserPrompt != null) __obj.updateDynamic("deviceOnlyRememberedOnUserPrompt")(deviceOnlyRememberedOnUserPrompt.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserPoolDeviceConfiguration]
   }
+  @scala.inline
+  implicit class UserPoolDeviceConfigurationOps[Self <: UserPoolDeviceConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChallengeRequiredOnNewDevice(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("challengeRequiredOnNewDevice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChallengeRequiredOnNewDevice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("challengeRequiredOnNewDevice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceOnlyRememberedOnUserPrompt(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceOnlyRememberedOnUserPrompt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceOnlyRememberedOnUserPrompt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceOnlyRememberedOnUserPrompt")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

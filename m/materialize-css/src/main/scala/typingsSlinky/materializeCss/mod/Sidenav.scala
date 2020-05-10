@@ -28,7 +28,7 @@ object Sidenav extends js.Object {
   /**
     * Init Sidenav
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Sidenav = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialSidenavOptions): typingsSlinky.materializeCss.M.Sidenav = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Sidenav = js.native
+  def init(els: Element, options: PartialSidenavOptions): typingsSlinky.materializeCss.M.Sidenav = js.native
 }
 

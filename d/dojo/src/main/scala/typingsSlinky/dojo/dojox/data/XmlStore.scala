@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.data
 
+import org.scalajs.dom.raw.Attr
 import typingsSlinky.dojo.dojo.data.api.Item
 import typingsSlinky.dojo.dojo.data.api.Request
-import typingsSlinky.std.Attr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

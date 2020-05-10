@@ -7,42 +7,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Auth0LockShowOptions extends js.Object {
-  var allowForgotPassword: js.UndefOr[Boolean] = js.undefined
-  var allowLogin: js.UndefOr[Boolean] = js.undefined
-  var allowSignUp: js.UndefOr[Boolean] = js.undefined
-  var allowedConnections: js.UndefOr[js.Array[String]] = js.undefined
-  var auth: js.UndefOr[Auth0LockAuthOptions] = js.undefined
-  var flashMessage: js.UndefOr[Auth0LockFlashMessageOptions] = js.undefined
-  var initialScreen: js.UndefOr[login | signUp | forgotPassword] = js.undefined
-  var languageDictionary: js.UndefOr[js.Any] = js.undefined
-  var rememberLastLogin: js.UndefOr[Boolean] = js.undefined
+  var allowForgotPassword: js.UndefOr[Boolean] = js.native
+  var allowLogin: js.UndefOr[Boolean] = js.native
+  var allowSignUp: js.UndefOr[Boolean] = js.native
+  var allowedConnections: js.UndefOr[js.Array[String]] = js.native
+  var auth: js.UndefOr[Auth0LockAuthOptions] = js.native
+  var flashMessage: js.UndefOr[Auth0LockFlashMessageOptions] = js.native
+  var initialScreen: js.UndefOr[login | signUp | forgotPassword] = js.native
+  var languageDictionary: js.UndefOr[js.Any] = js.native
+  var rememberLastLogin: js.UndefOr[Boolean] = js.native
 }
 
 object Auth0LockShowOptions {
   @scala.inline
-  def apply(
-    allowForgotPassword: js.UndefOr[Boolean] = js.undefined,
-    allowLogin: js.UndefOr[Boolean] = js.undefined,
-    allowSignUp: js.UndefOr[Boolean] = js.undefined,
-    allowedConnections: js.Array[String] = null,
-    auth: Auth0LockAuthOptions = null,
-    flashMessage: Auth0LockFlashMessageOptions = null,
-    initialScreen: login | signUp | forgotPassword = null,
-    languageDictionary: js.Any = null,
-    rememberLastLogin: js.UndefOr[Boolean] = js.undefined
-  ): Auth0LockShowOptions = {
+  def apply(): Auth0LockShowOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowForgotPassword)) __obj.updateDynamic("allowForgotPassword")(allowForgotPassword.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowLogin)) __obj.updateDynamic("allowLogin")(allowLogin.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowSignUp)) __obj.updateDynamic("allowSignUp")(allowSignUp.asInstanceOf[js.Any])
-    if (allowedConnections != null) __obj.updateDynamic("allowedConnections")(allowedConnections.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (flashMessage != null) __obj.updateDynamic("flashMessage")(flashMessage.asInstanceOf[js.Any])
-    if (initialScreen != null) __obj.updateDynamic("initialScreen")(initialScreen.asInstanceOf[js.Any])
-    if (languageDictionary != null) __obj.updateDynamic("languageDictionary")(languageDictionary.asInstanceOf[js.Any])
-    if (!js.isUndefined(rememberLastLogin)) __obj.updateDynamic("rememberLastLogin")(rememberLastLogin.asInstanceOf[js.Any])
     __obj.asInstanceOf[Auth0LockShowOptions]
   }
+  @scala.inline
+  implicit class Auth0LockShowOptionsOps[Self <: Auth0LockShowOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowForgotPassword(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowForgotPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowForgotPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowForgotPassword")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowLogin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLogin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowLogin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLogin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowSignUp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSignUp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowSignUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSignUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedConnections(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedConnections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedConnections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedConnections")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuth(value: Auth0LockAuthOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlashMessage(value: Auth0LockFlashMessageOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flashMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlashMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flashMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialScreen(value: login | signUp | forgotPassword): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialScreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialScreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageDictionary(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageDictionary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageDictionary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageDictionary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRememberLastLogin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rememberLastLogin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRememberLastLogin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rememberLastLogin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

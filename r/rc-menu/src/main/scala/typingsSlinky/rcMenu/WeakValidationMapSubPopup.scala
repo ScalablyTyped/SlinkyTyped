@@ -22,139 +22,529 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react.react.WeakValidationMap<rc-menu.rc-menu/lib/SubPopupMenu.SubPopupMenuProps> */
+@js.native
 trait WeakValidationMapSubPopup extends js.Object {
-  var activeKey: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var builtinPlacements: js.UndefOr[Validator[js.UndefOr[BuiltinPlacements | Null]]] = js.undefined
-  var children: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
-  var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var defaultActiveFirst: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
-  var defaultOpenKeys: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null]]] = js.undefined
-  var defaultSelectedKeys: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null]]] = js.undefined
-  var direction: js.UndefOr[Validator[js.UndefOr[ltr | rtl | Null]]] = js.undefined
-  var eventKey: js.UndefOr[Validator[js.UndefOr[Key | Null]]] = js.undefined
-  var expandIcon: js.UndefOr[Validator[js.UndefOr[Null | RenderIconType]]] = js.undefined
-  var focusable: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
-  var forceSubMenuRender: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
-  var id: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var inlineIndent: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
-  var itemIcon: js.UndefOr[Validator[js.UndefOr[Null | RenderIconType]]] = js.undefined
-  var level: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
-  var manualRef: js.UndefOr[Validator[js.UndefOr[LegacyFunctionRef | Null]]] = js.undefined
-  var mode: js.UndefOr[Validator[js.UndefOr[MenuMode | Null]]] = js.undefined
+  var activeKey: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  var builtinPlacements: js.UndefOr[Validator[js.UndefOr[BuiltinPlacements | Null]]] = js.native
+  var children: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.native
+  var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  var defaultActiveFirst: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
+  var defaultOpenKeys: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null]]] = js.native
+  var defaultSelectedKeys: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null]]] = js.native
+  var direction: js.UndefOr[Validator[js.UndefOr[ltr | rtl | Null]]] = js.native
+  var eventKey: js.UndefOr[Validator[js.UndefOr[Key | Null]]] = js.native
+  var expandIcon: js.UndefOr[Validator[js.UndefOr[Null | RenderIconType]]] = js.native
+  var focusable: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
+  var forceSubMenuRender: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
+  var id: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  var inlineIndent: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
+  var itemIcon: js.UndefOr[Validator[js.UndefOr[Null | RenderIconType]]] = js.native
+  var level: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
+  var manualRef: js.UndefOr[Validator[js.UndefOr[LegacyFunctionRef | Null]]] = js.native
+  var mode: js.UndefOr[Validator[js.UndefOr[MenuMode | Null]]] = js.native
   var motion: js.UndefOr[
     Validator[
       js.UndefOr[
         (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ _) | Null
       ]
     ]
-  ] = js.undefined
-  var multiple: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
-  var onClick: js.UndefOr[Validator[js.UndefOr[MenuClickEventHandler | Null]]] = js.undefined
-  var onDeselect: js.UndefOr[Validator[js.UndefOr[Null | SelectEventHandler]]] = js.undefined
-  var onDestroy: js.UndefOr[Validator[js.UndefOr[DestroyEventHandler | Null]]] = js.undefined
-  var onOpenChange: js.UndefOr[Validator[js.UndefOr[Null | OpenEventHandler]]] = js.undefined
-  var onSelect: js.UndefOr[Validator[js.UndefOr[Null | SelectEventHandler]]] = js.undefined
-  var openKeys: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null]]] = js.undefined
-  var overflowedIndicator: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.undefined
-  var parentMenu: js.UndefOr[Validator[js.UndefOr[Null | ReactInstance]]] = js.undefined
-  var prefixCls: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var role: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var selectedKeys: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null]]] = js.undefined
-  var store: js.UndefOr[Validator[js.UndefOr[MiniStore | Null]]] = js.undefined
-  var style: js.UndefOr[Validator[js.UndefOr[CSSProperties | Null]]] = js.undefined
-  var subMenuCloseDelay: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
-  var subMenuOpenDelay: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
-  var theme: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
-  var triggerSubMenuAction: js.UndefOr[Validator[js.UndefOr[Null | TriggerSubMenuAction]]] = js.undefined
-  var visible: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  ] = js.native
+  var multiple: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
+  var onClick: js.UndefOr[Validator[js.UndefOr[MenuClickEventHandler | Null]]] = js.native
+  var onDeselect: js.UndefOr[Validator[js.UndefOr[Null | SelectEventHandler]]] = js.native
+  var onDestroy: js.UndefOr[Validator[js.UndefOr[DestroyEventHandler | Null]]] = js.native
+  var onOpenChange: js.UndefOr[Validator[js.UndefOr[Null | OpenEventHandler]]] = js.native
+  var onSelect: js.UndefOr[Validator[js.UndefOr[Null | SelectEventHandler]]] = js.native
+  var openKeys: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null]]] = js.native
+  var overflowedIndicator: js.UndefOr[Validator[js.UndefOr[Null | TagMod[Any]]]] = js.native
+  var parentMenu: js.UndefOr[Validator[js.UndefOr[Null | ReactInstance]]] = js.native
+  var prefixCls: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  var role: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  var selectedKeys: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null]]] = js.native
+  var store: js.UndefOr[Validator[js.UndefOr[MiniStore | Null]]] = js.native
+  var style: js.UndefOr[Validator[js.UndefOr[CSSProperties | Null]]] = js.native
+  var subMenuCloseDelay: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
+  var subMenuOpenDelay: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
+  var theme: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  var triggerSubMenuAction: js.UndefOr[Validator[js.UndefOr[Null | TriggerSubMenuAction]]] = js.native
+  var visible: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
 }
 
 object WeakValidationMapSubPopup {
   @scala.inline
-  def apply(
-    activeKey: Validator[js.UndefOr[Null | String]] = null,
-    builtinPlacements: Validator[js.UndefOr[BuiltinPlacements | Null]] = null,
-    children: Validator[js.UndefOr[Null | TagMod[Any]]] = null,
-    className: Validator[js.UndefOr[Null | String]] = null,
-    defaultActiveFirst: Validator[js.UndefOr[Boolean | Null]] = null,
-    defaultOpenKeys: Validator[js.UndefOr[js.Array[String] | Null]] = null,
-    defaultSelectedKeys: Validator[js.UndefOr[js.Array[String] | Null]] = null,
-    direction: Validator[js.UndefOr[ltr | rtl | Null]] = null,
-    eventKey: Validator[js.UndefOr[Key | Null]] = null,
-    expandIcon: Validator[js.UndefOr[Null | RenderIconType]] = null,
-    focusable: Validator[js.UndefOr[Boolean | Null]] = null,
-    forceSubMenuRender: Validator[js.UndefOr[Boolean | Null]] = null,
-    id: Validator[js.UndefOr[Null | String]] = null,
-    inlineIndent: Validator[js.UndefOr[Double | Null]] = null,
-    itemIcon: Validator[js.UndefOr[Null | RenderIconType]] = null,
-    level: Validator[js.UndefOr[Double | Null]] = null,
-    manualRef: Validator[js.UndefOr[LegacyFunctionRef | Null]] = null,
-    mode: Validator[js.UndefOr[MenuMode | Null]] = null,
-    motion: Validator[
-      js.UndefOr[
-        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ _) | Null
-      ]
-    ] = null,
-    multiple: Validator[js.UndefOr[Boolean | Null]] = null,
-    onClick: Validator[js.UndefOr[MenuClickEventHandler | Null]] = null,
-    onDeselect: Validator[js.UndefOr[Null | SelectEventHandler]] = null,
-    onDestroy: Validator[js.UndefOr[DestroyEventHandler | Null]] = null,
-    onOpenChange: Validator[js.UndefOr[Null | OpenEventHandler]] = null,
-    onSelect: Validator[js.UndefOr[Null | SelectEventHandler]] = null,
-    openKeys: Validator[js.UndefOr[js.Array[String] | Null]] = null,
-    overflowedIndicator: Validator[js.UndefOr[Null | TagMod[Any]]] = null,
-    parentMenu: Validator[js.UndefOr[Null | ReactInstance]] = null,
-    prefixCls: Validator[js.UndefOr[Null | String]] = null,
-    role: Validator[js.UndefOr[Null | String]] = null,
-    selectedKeys: Validator[js.UndefOr[js.Array[String] | Null]] = null,
-    store: Validator[js.UndefOr[MiniStore | Null]] = null,
-    style: Validator[js.UndefOr[CSSProperties | Null]] = null,
-    subMenuCloseDelay: Validator[js.UndefOr[Double | Null]] = null,
-    subMenuOpenDelay: Validator[js.UndefOr[Double | Null]] = null,
-    theme: Validator[js.UndefOr[Null | String]] = null,
-    triggerSubMenuAction: Validator[js.UndefOr[Null | TriggerSubMenuAction]] = null,
-    visible: Validator[js.UndefOr[Boolean | Null]] = null
-  ): WeakValidationMapSubPopup = {
+  def apply(): WeakValidationMapSubPopup = {
     val __obj = js.Dynamic.literal()
-    if (activeKey != null) __obj.updateDynamic("activeKey")(activeKey.asInstanceOf[js.Any])
-    if (builtinPlacements != null) __obj.updateDynamic("builtinPlacements")(builtinPlacements.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (defaultActiveFirst != null) __obj.updateDynamic("defaultActiveFirst")(defaultActiveFirst.asInstanceOf[js.Any])
-    if (defaultOpenKeys != null) __obj.updateDynamic("defaultOpenKeys")(defaultOpenKeys.asInstanceOf[js.Any])
-    if (defaultSelectedKeys != null) __obj.updateDynamic("defaultSelectedKeys")(defaultSelectedKeys.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
-    if (expandIcon != null) __obj.updateDynamic("expandIcon")(expandIcon.asInstanceOf[js.Any])
-    if (focusable != null) __obj.updateDynamic("focusable")(focusable.asInstanceOf[js.Any])
-    if (forceSubMenuRender != null) __obj.updateDynamic("forceSubMenuRender")(forceSubMenuRender.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inlineIndent != null) __obj.updateDynamic("inlineIndent")(inlineIndent.asInstanceOf[js.Any])
-    if (itemIcon != null) __obj.updateDynamic("itemIcon")(itemIcon.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (manualRef != null) __obj.updateDynamic("manualRef")(manualRef.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (motion != null) __obj.updateDynamic("motion")(motion.asInstanceOf[js.Any])
-    if (multiple != null) __obj.updateDynamic("multiple")(multiple.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
-    if (onDeselect != null) __obj.updateDynamic("onDeselect")(onDeselect.asInstanceOf[js.Any])
-    if (onDestroy != null) __obj.updateDynamic("onDestroy")(onDestroy.asInstanceOf[js.Any])
-    if (onOpenChange != null) __obj.updateDynamic("onOpenChange")(onOpenChange.asInstanceOf[js.Any])
-    if (onSelect != null) __obj.updateDynamic("onSelect")(onSelect.asInstanceOf[js.Any])
-    if (openKeys != null) __obj.updateDynamic("openKeys")(openKeys.asInstanceOf[js.Any])
-    if (overflowedIndicator != null) __obj.updateDynamic("overflowedIndicator")(overflowedIndicator.asInstanceOf[js.Any])
-    if (parentMenu != null) __obj.updateDynamic("parentMenu")(parentMenu.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
-    if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (subMenuCloseDelay != null) __obj.updateDynamic("subMenuCloseDelay")(subMenuCloseDelay.asInstanceOf[js.Any])
-    if (subMenuOpenDelay != null) __obj.updateDynamic("subMenuOpenDelay")(subMenuOpenDelay.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (triggerSubMenuAction != null) __obj.updateDynamic("triggerSubMenuAction")(triggerSubMenuAction.asInstanceOf[js.Any])
-    if (visible != null) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[WeakValidationMapSubPopup]
   }
+  @scala.inline
+  implicit class WeakValidationMapSubPopupOps[Self <: WeakValidationMapSubPopup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveKey(value: Validator[js.UndefOr[Null | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuiltinPlacements(value: Validator[js.UndefOr[BuiltinPlacements | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("builtinPlacements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuiltinPlacements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("builtinPlacements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildren(value: Validator[js.UndefOr[Null | TagMod[Any]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: Validator[js.UndefOr[Null | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultActiveFirst(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActiveFirst")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultActiveFirst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActiveFirst")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultOpenKeys(value: Validator[js.UndefOr[js.Array[String] | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpenKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultOpenKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOpenKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSelectedKeys(value: Validator[js.UndefOr[js.Array[String] | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSelectedKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSelectedKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSelectedKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: Validator[js.UndefOr[ltr | rtl | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventKey(value: Validator[js.UndefOr[Key | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandIcon(value: Validator[js.UndefOr[Null | RenderIconType]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocusable(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocusable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceSubMenuRender(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSubMenuRender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceSubMenuRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSubMenuRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: Validator[js.UndefOr[Null | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineIndent(value: Validator[js.UndefOr[Double | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineIndent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineIndent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineIndent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemIcon(value: Validator[js.UndefOr[Null | RenderIconType]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: Validator[js.UndefOr[Double | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManualRef(value: Validator[js.UndefOr[LegacyFunctionRef | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manualRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManualRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manualRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: Validator[js.UndefOr[MenuMode | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMotion(
+      value: Validator[
+          js.UndefOr[
+            (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ _) | Null
+          ]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMotion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiple(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: Validator[js.UndefOr[MenuClickEventHandler | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDeselect(value: Validator[js.UndefOr[Null | SelectEventHandler]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeselect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDeselect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeselect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDestroy(value: Validator[js.UndefOr[DestroyEventHandler | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDestroy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDestroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpenChange(value: Validator[js.UndefOr[Null | OpenEventHandler]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnOpenChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelect(value: Validator[js.UndefOr[Null | SelectEventHandler]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenKeys(value: Validator[js.UndefOr[js.Array[String] | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowedIndicator(value: Validator[js.UndefOr[Null | TagMod[Any]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowedIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowedIndicator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowedIndicator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentMenu(value: Validator[js.UndefOr[Null | ReactInstance]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: Validator[js.UndefOr[Null | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: Validator[js.UndefOr[Null | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedKeys(value: Validator[js.UndefOr[js.Array[String] | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStore(value: Validator[js.UndefOr[MiniStore | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Validator[js.UndefOr[CSSProperties | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubMenuCloseDelay(value: Validator[js.UndefOr[Double | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuCloseDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubMenuCloseDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuCloseDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubMenuOpenDelay(value: Validator[js.UndefOr[Double | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuOpenDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubMenuOpenDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subMenuOpenDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: Validator[js.UndefOr[Null | String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerSubMenuAction(value: Validator[js.UndefOr[Null | TriggerSubMenuAction]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerSubMenuAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerSubMenuAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerSubMenuAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Validator[js.UndefOr[Boolean | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

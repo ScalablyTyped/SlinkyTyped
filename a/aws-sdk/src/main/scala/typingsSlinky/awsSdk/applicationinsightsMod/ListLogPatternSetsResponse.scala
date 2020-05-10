@@ -22,16 +22,53 @@ trait ListLogPatternSetsResponse extends js.Object {
 
 object ListLogPatternSetsResponse {
   @scala.inline
-  def apply(
-    LogPatternSets: LogPatternSetList = null,
-    NextToken: PaginationToken = null,
-    ResourceGroupName: ResourceGroupName = null
-  ): ListLogPatternSetsResponse = {
+  def apply(): ListLogPatternSetsResponse = {
     val __obj = js.Dynamic.literal()
-    if (LogPatternSets != null) __obj.updateDynamic("LogPatternSets")(LogPatternSets.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (ResourceGroupName != null) __obj.updateDynamic("ResourceGroupName")(ResourceGroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListLogPatternSetsResponse]
   }
+  @scala.inline
+  implicit class ListLogPatternSetsResponseOps[Self <: ListLogPatternSetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogPatternSets(value: LogPatternSetList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogPatternSets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogPatternSets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogPatternSets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceGroupName(value: ResourceGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceGroupName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -32,8 +32,33 @@ object RegexMatchSetRegexMatchTuple {
     textTransformation: Input[String]
   ): RegexMatchSetRegexMatchTuple = {
     val __obj = js.Dynamic.literal(fieldToMatch = fieldToMatch.asInstanceOf[js.Any], regexPatternSetId = regexPatternSetId.asInstanceOf[js.Any], textTransformation = textTransformation.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RegexMatchSetRegexMatchTuple]
   }
+  @scala.inline
+  implicit class RegexMatchSetRegexMatchTupleOps[Self <: RegexMatchSetRegexMatchTuple] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFieldToMatch(value: Input[RegexMatchSetRegexMatchTupleFieldToMatch]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldToMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegexPatternSetId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regexPatternSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextTransformation(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textTransformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

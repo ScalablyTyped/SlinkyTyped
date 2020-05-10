@@ -17,20 +17,18 @@ trait LogSpec extends js.Object
 
 object LogSpec {
   @scala.inline
-  def all: typingsSlinky.seneca.senecaStrings.all = this.cast("all")
+  def all: typingsSlinky.seneca.senecaStrings.all = "all".asInstanceOf[typingsSlinky.seneca.senecaStrings.all]
   @scala.inline
-  def any: typingsSlinky.seneca.senecaStrings.any = this.cast("any")
+  def any: typingsSlinky.seneca.senecaStrings.any = "any".asInstanceOf[typingsSlinky.seneca.senecaStrings.any]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def print: typingsSlinky.seneca.senecaStrings.print = "print".asInstanceOf[typingsSlinky.seneca.senecaStrings.print]
   @scala.inline
-  def print: typingsSlinky.seneca.senecaStrings.print = this.cast("print")
+  def quiet: typingsSlinky.seneca.senecaStrings.quiet = "quiet".asInstanceOf[typingsSlinky.seneca.senecaStrings.quiet]
   @scala.inline
-  def quiet: typingsSlinky.seneca.senecaStrings.quiet = this.cast("quiet")
+  def silent: typingsSlinky.seneca.senecaStrings.silent = "silent".asInstanceOf[typingsSlinky.seneca.senecaStrings.silent]
   @scala.inline
-  def silent: typingsSlinky.seneca.senecaStrings.silent = this.cast("silent")
+  def standard: typingsSlinky.seneca.senecaStrings.standard = "standard".asInstanceOf[typingsSlinky.seneca.senecaStrings.standard]
   @scala.inline
-  def standard: typingsSlinky.seneca.senecaStrings.standard = this.cast("standard")
-  @scala.inline
-  def test: typingsSlinky.seneca.senecaStrings.test = this.cast("test")
+  def test: typingsSlinky.seneca.senecaStrings.test = "test".asInstanceOf[typingsSlinky.seneca.senecaStrings.test]
 }
 

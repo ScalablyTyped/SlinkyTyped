@@ -10,134 +10,338 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChangesOptions extends js.Object {
   /** Include attachments. */
-  var attachments: js.UndefOr[Boolean] = js.undefined
+  var attachments: js.UndefOr[Boolean] = js.native
   /**
     * Only available for http databases, this configures how many changes to fetch at a time.
     * Increasing this can reduce the number of requests made. Default is 25.
     */
-  var batch_size: js.UndefOr[Double] = js.undefined
+  var batch_size: js.UndefOr[Double] = js.native
   /** Return attachment data as Blobs/Buffers, instead of as base64-encoded strings. */
-  var binary: js.UndefOr[Boolean] = js.undefined
+  var binary: js.UndefOr[Boolean] = js.native
   /** Include conflicts. */
-  var conflicts: js.UndefOr[Boolean] = js.undefined
+  var conflicts: js.UndefOr[Boolean] = js.native
   /** Reverse the order of the output documents. */
-  var descending: js.UndefOr[Boolean] = js.undefined
+  var descending: js.UndefOr[Boolean] = js.native
   /** Only show changes for docs with these ids (array of strings). */
-  var doc_ids: js.UndefOr[js.Array[String]] = js.undefined
+  var doc_ids: js.UndefOr[js.Array[String]] = js.native
   /**
     * Reference a filter function from a design document to selectively get updates.
     * To use a view function, pass '_view' here and provide a reference to the view function in options.view.
     * See filtered changes for details.
     */
-  var filter: js.UndefOr[String | (js.Function2[/* doc */ js.Any, /* params */ js.Any, _])] = js.undefined
+  var filter: js.UndefOr[String | (js.Function2[/* doc */ js.Any, /* params */ js.Any, _])] = js.native
   /**
     * For http adapter only, time in milliseconds for server to give a heartbeat to keep long connections open.
     * Defaults to 10000 (10 seconds), use false to disable the default.
     */
-  var heartbeat: js.UndefOr[Double | `false`] = js.undefined
+  var heartbeat: js.UndefOr[Double | `false`] = js.native
   /** Include contents for each document. */
-  var include_docs: js.UndefOr[Boolean] = js.undefined
+  var include_docs: js.UndefOr[Boolean] = js.native
   /** Maximum number of documents to return. */
-  var limit: js.UndefOr[Double | `false`] = js.undefined
+  var limit: js.UndefOr[Double | `false`] = js.native
   /**
     * Does "live" changes.
     */
-  var live: js.UndefOr[Boolean] = js.undefined
+  var live: js.UndefOr[Boolean] = js.native
   /**
     * Object containing properties that are passed to the filter function, e.g. {"foo:"bar"},
     * where "bar" will be available in the filter function as params.query.foo.
     * To access the params, define your filter function like function (doc, params).
     */
-  var query_params: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var query_params: js.UndefOr[StringDictionary[js.Any]] = js.native
   /**
     * (previously options.returnDocs): Is available for non-http databases and defaults to true.
     * Passing false prevents the changes feed from keeping all the documents in memory – in other
     * words complete always has an empty results array, and the change event is the only way to get the event.
     * Useful for large change sets where otherwise you would run out of memory.
     */
-  var return_docs: js.UndefOr[Boolean] = js.undefined
+  var return_docs: js.UndefOr[Boolean] = js.native
   /**
     * Filter using a query/pouchdb-find selector. Note: Selectors are not supported in CouchDB 1.x.
     * Cannot be used in combination with the filter option.
     */
-  var selector: js.UndefOr[Selector] = js.undefined
+  var selector: js.UndefOr[Selector] = js.native
   /**
     * Only available for http databases. Specifies that seq information only be generated every N changes.
     * Larger values can improve changes throughput with CouchDB 2.0 and later.
     * Note that last_seq is always populated regardless.
     */
-  var seq_interval: js.UndefOr[Double] = js.undefined
+  var seq_interval: js.UndefOr[Double] = js.native
   /**
     * Start the results from the change immediately after the given sequence number.
     * You can also pass `'now'` if you want only new changes (when `live` is `true`).
     *
     */
-  var since: js.UndefOr[now | Double | String] = js.undefined
+  var since: js.UndefOr[now | Double | String] = js.native
   /**
     * Specifies how many revisions are returned in the changes array.
     * The default, 'main_only', will only return the current “winning” revision;
     * 'all_docs' will return all leaf revisions (including conflicts and deleted former conflicts).
     * Most likely you won’t need this unless you’re writing a replicator.
     */
-  var style: js.UndefOr[main_only | all_docs] = js.undefined
+  var style: js.UndefOr[main_only | all_docs] = js.native
   /**
     * Request timeout (in milliseconds).
     */
-  var timeout: js.UndefOr[Double | `false`] = js.undefined
+  var timeout: js.UndefOr[Double | `false`] = js.native
   /**
     * Specify a view function (e.g. 'design_doc_name/view_name' or 'view_name' as shorthand for 'view_name/view_name') to act as a filter.
     * Documents counted as “passed” for a view filter if a map function emits at least one record for them.
     * Note: options.filter must be set to '_view' for this option to work.
     */
-  var view: js.UndefOr[String] = js.undefined
+  var view: js.UndefOr[String] = js.native
 }
 
 object ChangesOptions {
   @scala.inline
-  def apply(
-    attachments: js.UndefOr[Boolean] = js.undefined,
-    batch_size: Int | Double = null,
-    binary: js.UndefOr[Boolean] = js.undefined,
-    conflicts: js.UndefOr[Boolean] = js.undefined,
-    descending: js.UndefOr[Boolean] = js.undefined,
-    doc_ids: js.Array[String] = null,
-    filter: String | (js.Function2[/* doc */ js.Any, /* params */ js.Any, _]) = null,
-    heartbeat: Double | `false` = null,
-    include_docs: js.UndefOr[Boolean] = js.undefined,
-    limit: Double | `false` = null,
-    live: js.UndefOr[Boolean] = js.undefined,
-    query_params: StringDictionary[js.Any] = null,
-    return_docs: js.UndefOr[Boolean] = js.undefined,
-    selector: Selector = null,
-    seq_interval: Int | Double = null,
-    since: now | Double | String = null,
-    style: main_only | all_docs = null,
-    timeout: Double | `false` = null,
-    view: String = null
-  ): ChangesOptions = {
+  def apply(): ChangesOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(attachments)) __obj.updateDynamic("attachments")(attachments.asInstanceOf[js.Any])
-    if (batch_size != null) __obj.updateDynamic("batch_size")(batch_size.asInstanceOf[js.Any])
-    if (!js.isUndefined(binary)) __obj.updateDynamic("binary")(binary.asInstanceOf[js.Any])
-    if (!js.isUndefined(conflicts)) __obj.updateDynamic("conflicts")(conflicts.asInstanceOf[js.Any])
-    if (!js.isUndefined(descending)) __obj.updateDynamic("descending")(descending.asInstanceOf[js.Any])
-    if (doc_ids != null) __obj.updateDynamic("doc_ids")(doc_ids.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (heartbeat != null) __obj.updateDynamic("heartbeat")(heartbeat.asInstanceOf[js.Any])
-    if (!js.isUndefined(include_docs)) __obj.updateDynamic("include_docs")(include_docs.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (!js.isUndefined(live)) __obj.updateDynamic("live")(live.asInstanceOf[js.Any])
-    if (query_params != null) __obj.updateDynamic("query_params")(query_params.asInstanceOf[js.Any])
-    if (!js.isUndefined(return_docs)) __obj.updateDynamic("return_docs")(return_docs.asInstanceOf[js.Any])
-    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
-    if (seq_interval != null) __obj.updateDynamic("seq_interval")(seq_interval.asInstanceOf[js.Any])
-    if (since != null) __obj.updateDynamic("since")(since.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangesOptions]
   }
+  @scala.inline
+  implicit class ChangesOptionsOps[Self <: ChangesOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachments(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBatch_size(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batch_size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatch_size: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batch_size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBinary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBinary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConflicts(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conflicts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConflicts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conflicts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescending(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescending: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descending")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoc_ids(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doc_ids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoc_ids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doc_ids")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterFunction2(value: (/* doc */ js.Any, /* params */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFilter(value: String | (js.Function2[/* doc */ js.Any, /* params */ js.Any, _])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeartbeat(value: Double | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heartbeat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeartbeat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heartbeat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInclude_docs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include_docs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude_docs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include_docs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Double | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("live")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("live")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery_params(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query_params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery_params: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query_params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturn_docs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("return_docs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturn_docs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("return_docs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelector(value: Selector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeq_interval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seq_interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeq_interval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seq_interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSince(value: now | Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSince: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: main_only | all_docs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withView(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

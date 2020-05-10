@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Holidays_ extends js.Object {
-  var active: HolidaysMapping
-  var active_last: HolidaysMapping
+  var active: HolidaysMapping = js.native
+  var active_last: HolidaysMapping = js.native
 }
 
 object Holidays_ {
   @scala.inline
   def apply(active: HolidaysMapping, active_last: HolidaysMapping): Holidays_ = {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], active_last = active_last.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Holidays_]
   }
+  @scala.inline
+  implicit class Holidays_Ops[Self <: Holidays_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: HolidaysMapping): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActive_last(value: HolidaysMapping): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active_last")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

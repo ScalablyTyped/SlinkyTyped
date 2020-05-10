@@ -72,5 +72,6 @@ import scala.scalajs.js.annotation._
   * Note: the dojox/gfx/tests/test_filter.html test shows the rendering of all the predefined filters.
   *
   */
+@js.native
 trait filters extends js.Object
 

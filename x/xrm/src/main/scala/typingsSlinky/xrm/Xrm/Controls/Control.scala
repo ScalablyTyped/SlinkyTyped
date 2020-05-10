@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   *
   * @see {@link UiElement}
   */
+@js.native
 trait Control
   extends UiLabelElement
      with UiCanGetVisibleElement {
@@ -29,7 +30,7 @@ trait Control
     * * customcontrol: <namespace>.<name> (A custom control for mobile phone and tablet clients).
     * * customsubgrid: <namespace>.<name> (A custom dataset control for mobile phone and tablet clients).
     */
-  def getControlType(): ControlType | String
+  def getControlType(): ControlType | String = js.native
   /**
     * Gets the name of the control on the form.
     * @returns The name of the control.
@@ -44,12 +45,12 @@ trait Control
     *              business process flow. These controls have a unique name like the following:
     *              header_process_<attribute name>.
     */
-  def getName(): String
+  def getName(): String = js.native
   /**
     * Gets a reference to the Section parent of the control.
     * @returns The parent Section.
     */
-  def getParent(): Section
+  def getParent(): Section = js.native
 }
 
 object Control {
@@ -63,8 +64,33 @@ object Control {
     setLabel: String => Unit
   ): Control = {
     val __obj = js.Dynamic.literal(getControlType = js.Any.fromFunction0(getControlType), getLabel = js.Any.fromFunction0(getLabel), getName = js.Any.fromFunction0(getName), getParent = js.Any.fromFunction0(getParent), getVisible = js.Any.fromFunction0(getVisible), setLabel = js.Any.fromFunction1(setLabel))
-  
     __obj.asInstanceOf[Control]
   }
+  @scala.inline
+  implicit class ControlOps[Self <: Control] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetControlType(value: () => ControlType | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getControlType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetParent(value: () => Section): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getParent")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -15,16 +15,14 @@ trait WebsiteType extends js.Object
 
 object WebsiteType {
   @scala.inline
-  def blog: typingsSlinky.microsoftGraph.microsoftGraphStrings.blog = this.cast("blog")
+  def blog: typingsSlinky.microsoftGraph.microsoftGraphStrings.blog = "blog".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.blog]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def home: typingsSlinky.microsoftGraph.microsoftGraphStrings.home = "home".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.home]
   @scala.inline
-  def home: typingsSlinky.microsoftGraph.microsoftGraphStrings.home = this.cast("home")
+  def other: typingsSlinky.microsoftGraph.microsoftGraphStrings.other = "other".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.other]
   @scala.inline
-  def other: typingsSlinky.microsoftGraph.microsoftGraphStrings.other = this.cast("other")
+  def profile: typingsSlinky.microsoftGraph.microsoftGraphStrings.profile = "profile".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.profile]
   @scala.inline
-  def profile: typingsSlinky.microsoftGraph.microsoftGraphStrings.profile = this.cast("profile")
-  @scala.inline
-  def work: typingsSlinky.microsoftGraph.microsoftGraphStrings.work = this.cast("work")
+  def work: typingsSlinky.microsoftGraph.microsoftGraphStrings.work = "work".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.work]
 }
 

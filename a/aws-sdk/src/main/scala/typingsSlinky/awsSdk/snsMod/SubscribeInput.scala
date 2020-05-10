@@ -30,18 +30,65 @@ trait SubscribeInput extends js.Object {
 
 object SubscribeInput {
   @scala.inline
-  def apply(
-    Protocol: protocol,
-    TopicArn: topicARN,
-    Attributes: SubscriptionAttributesMap = null,
-    Endpoint: endpoint = null,
-    ReturnSubscriptionArn: js.UndefOr[Boolean] = js.undefined
-  ): SubscribeInput = {
+  def apply(Protocol: protocol, TopicArn: topicARN): SubscribeInput = {
     val __obj = js.Dynamic.literal(Protocol = Protocol.asInstanceOf[js.Any], TopicArn = TopicArn.asInstanceOf[js.Any])
-    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
-    if (Endpoint != null) __obj.updateDynamic("Endpoint")(Endpoint.asInstanceOf[js.Any])
-    if (!js.isUndefined(ReturnSubscriptionArn)) __obj.updateDynamic("ReturnSubscriptionArn")(ReturnSubscriptionArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscribeInput]
   }
+  @scala.inline
+  implicit class SubscribeInputOps[Self <: SubscribeInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProtocol(value: protocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTopicArn(value: topicARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributes(value: SubscriptionAttributesMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: endpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Endpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnSubscriptionArn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnSubscriptionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnSubscriptionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnSubscriptionArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

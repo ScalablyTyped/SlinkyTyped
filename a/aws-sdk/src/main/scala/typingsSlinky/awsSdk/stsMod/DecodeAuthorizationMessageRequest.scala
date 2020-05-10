@@ -16,8 +16,21 @@ object DecodeAuthorizationMessageRequest {
   @scala.inline
   def apply(EncodedMessage: encodedMessageType): DecodeAuthorizationMessageRequest = {
     val __obj = js.Dynamic.literal(EncodedMessage = EncodedMessage.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DecodeAuthorizationMessageRequest]
   }
+  @scala.inline
+  implicit class DecodeAuthorizationMessageRequestOps[Self <: DecodeAuthorizationMessageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncodedMessage(value: encodedMessageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodedMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

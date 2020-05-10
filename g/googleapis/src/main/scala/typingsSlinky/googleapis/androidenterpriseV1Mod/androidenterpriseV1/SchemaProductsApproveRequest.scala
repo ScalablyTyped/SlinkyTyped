@@ -28,11 +28,41 @@ trait SchemaProductsApproveRequest extends js.Object {
 
 object SchemaProductsApproveRequest {
   @scala.inline
-  def apply(approvalUrlInfo: SchemaApprovalUrlInfo = null, approvedPermissions: String = null): SchemaProductsApproveRequest = {
+  def apply(): SchemaProductsApproveRequest = {
     val __obj = js.Dynamic.literal()
-    if (approvalUrlInfo != null) __obj.updateDynamic("approvalUrlInfo")(approvalUrlInfo.asInstanceOf[js.Any])
-    if (approvedPermissions != null) __obj.updateDynamic("approvedPermissions")(approvedPermissions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProductsApproveRequest]
   }
+  @scala.inline
+  implicit class SchemaProductsApproveRequestOps[Self <: SchemaProductsApproveRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApprovalUrlInfo(value: SchemaApprovalUrlInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalUrlInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalUrlInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalUrlInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApprovedPermissions(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvedPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovedPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvedPermissions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnTouchListener extends js.Object {
-  def onTouch(v: typingsSlinky.androiduix.android.view.View, event: MotionEvent): Unit
+  def onTouch(v: typingsSlinky.androiduix.android.view.View, event: MotionEvent): Unit = js.native
 }
 
 @JSGlobal("android.view.View.OnTouchListener")

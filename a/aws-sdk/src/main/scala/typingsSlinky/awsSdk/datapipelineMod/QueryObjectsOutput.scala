@@ -22,12 +22,53 @@ trait QueryObjectsOutput extends js.Object {
 
 object QueryObjectsOutput {
   @scala.inline
-  def apply(hasMoreResults: js.UndefOr[Boolean] = js.undefined, ids: idList = null, marker: String = null): QueryObjectsOutput = {
+  def apply(): QueryObjectsOutput = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(hasMoreResults)) __obj.updateDynamic("hasMoreResults")(hasMoreResults.asInstanceOf[js.Any])
-    if (ids != null) __obj.updateDynamic("ids")(ids.asInstanceOf[js.Any])
-    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryObjectsOutput]
   }
+  @scala.inline
+  implicit class QueryObjectsOutputOps[Self <: QueryObjectsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHasMoreResults(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMoreResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasMoreResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMoreResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIds(value: idList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ids")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DiagramConnectionEndCap extends js.Object {
-  var fill: js.UndefOr[String | DiagramConnectionEndCapFill] = js.undefined
-  var stroke: js.UndefOr[String | DiagramConnectionEndCapStroke] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
+  var fill: js.UndefOr[String | DiagramConnectionEndCapFill] = js.native
+  var stroke: js.UndefOr[String | DiagramConnectionEndCapStroke] = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object DiagramConnectionEndCap {
   @scala.inline
-  def apply(
-    fill: String | DiagramConnectionEndCapFill = null,
-    stroke: String | DiagramConnectionEndCapStroke = null,
-    `type`: String = null
-  ): DiagramConnectionEndCap = {
+  def apply(): DiagramConnectionEndCap = {
     val __obj = js.Dynamic.literal()
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiagramConnectionEndCap]
   }
+  @scala.inline
+  implicit class DiagramConnectionEndCapOps[Self <: DiagramConnectionEndCap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFill(value: String | DiagramConnectionEndCapFill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: String | DiagramConnectionEndCapStroke): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

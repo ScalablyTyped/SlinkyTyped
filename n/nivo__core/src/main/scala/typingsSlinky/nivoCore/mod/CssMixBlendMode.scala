@@ -26,38 +26,36 @@ trait CssMixBlendMode extends js.Object
 
 object CssMixBlendMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def color: typingsSlinky.nivoCore.nivoCoreStrings.color = "color".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.color]
   @scala.inline
-  def color: typingsSlinky.nivoCore.nivoCoreStrings.color = this.cast("color")
+  def `color-burn`: typingsSlinky.nivoCore.nivoCoreStrings.`color-burn` = "color-burn".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`color-burn`]
   @scala.inline
-  def `color-burn`: typingsSlinky.nivoCore.nivoCoreStrings.`color-burn` = this.cast("color-burn")
+  def `color-dodge`: typingsSlinky.nivoCore.nivoCoreStrings.`color-dodge` = "color-dodge".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`color-dodge`]
   @scala.inline
-  def `color-dodge`: typingsSlinky.nivoCore.nivoCoreStrings.`color-dodge` = this.cast("color-dodge")
+  def darken: typingsSlinky.nivoCore.nivoCoreStrings.darken = "darken".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.darken]
   @scala.inline
-  def darken: typingsSlinky.nivoCore.nivoCoreStrings.darken = this.cast("darken")
+  def difference: typingsSlinky.nivoCore.nivoCoreStrings.difference = "difference".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.difference]
   @scala.inline
-  def difference: typingsSlinky.nivoCore.nivoCoreStrings.difference = this.cast("difference")
+  def exclusion: typingsSlinky.nivoCore.nivoCoreStrings.exclusion = "exclusion".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.exclusion]
   @scala.inline
-  def exclusion: typingsSlinky.nivoCore.nivoCoreStrings.exclusion = this.cast("exclusion")
+  def `hard-light`: typingsSlinky.nivoCore.nivoCoreStrings.`hard-light` = "hard-light".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`hard-light`]
   @scala.inline
-  def `hard-light`: typingsSlinky.nivoCore.nivoCoreStrings.`hard-light` = this.cast("hard-light")
+  def hue: typingsSlinky.nivoCore.nivoCoreStrings.hue = "hue".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.hue]
   @scala.inline
-  def hue: typingsSlinky.nivoCore.nivoCoreStrings.hue = this.cast("hue")
+  def lighten: typingsSlinky.nivoCore.nivoCoreStrings.lighten = "lighten".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.lighten]
   @scala.inline
-  def lighten: typingsSlinky.nivoCore.nivoCoreStrings.lighten = this.cast("lighten")
+  def luminosity: typingsSlinky.nivoCore.nivoCoreStrings.luminosity = "luminosity".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.luminosity]
   @scala.inline
-  def luminosity: typingsSlinky.nivoCore.nivoCoreStrings.luminosity = this.cast("luminosity")
+  def multiply: typingsSlinky.nivoCore.nivoCoreStrings.multiply = "multiply".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.multiply]
   @scala.inline
-  def multiply: typingsSlinky.nivoCore.nivoCoreStrings.multiply = this.cast("multiply")
+  def normal: typingsSlinky.nivoCore.nivoCoreStrings.normal = "normal".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.nivoCore.nivoCoreStrings.normal = this.cast("normal")
+  def overlay: typingsSlinky.nivoCore.nivoCoreStrings.overlay = "overlay".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.overlay]
   @scala.inline
-  def overlay: typingsSlinky.nivoCore.nivoCoreStrings.overlay = this.cast("overlay")
+  def saturation: typingsSlinky.nivoCore.nivoCoreStrings.saturation = "saturation".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.saturation]
   @scala.inline
-  def saturation: typingsSlinky.nivoCore.nivoCoreStrings.saturation = this.cast("saturation")
+  def screen: typingsSlinky.nivoCore.nivoCoreStrings.screen = "screen".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.screen]
   @scala.inline
-  def screen: typingsSlinky.nivoCore.nivoCoreStrings.screen = this.cast("screen")
-  @scala.inline
-  def `soft-light`: typingsSlinky.nivoCore.nivoCoreStrings.`soft-light` = this.cast("soft-light")
+  def `soft-light`: typingsSlinky.nivoCore.nivoCoreStrings.`soft-light` = "soft-light".asInstanceOf[typingsSlinky.nivoCore.nivoCoreStrings.`soft-light`]
 }
 

@@ -1,10 +1,10 @@
 package typingsSlinky.dojo.dojo.base
 
 import org.scalajs.dom.raw.HTMLDocument
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.dojo.base.declare.DeclareCreatedObject
 import typingsSlinky.dojo.dojo.promise.Promise
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -1490,7 +1490,7 @@ trait kernel_ extends js.Object {
     * @param evt native event object
     * @param sender node to treat as "currentTarget"
     */
-  def fixEvent(evt: Event_, sender: org.scalajs.dom.raw.HTMLElement): Event_ = js.native
+  def fixEvent(evt: Event_, sender: HTMLElement): Event_ = js.native
   /**
     * In RTL direction, scrollLeft should be a negative value, but IE
     * returns a positive one. All codes using documentElement.scrollLeft
@@ -1658,8 +1658,8 @@ trait kernel_ extends js.Object {
     * @param node
     * @param computedStyle               OptionalThis parameter accepts computed styles object.If this parameter is omitted, the functions will calldojo/dom-style.getComputedStyle to get one. It is a better way, callingdojo/dom-style.getComputedStyle once, and then pass the reference to thiscomputedStyle parameter. Wherever possible, reuse the returnedobject of dojo/dom-style.getComputedStyle().
     */
-  def getBorderExtents(node: org.scalajs.dom.raw.HTMLElement): js.Object = js.native
-  def getBorderExtents(node: org.scalajs.dom.raw.HTMLElement, computedStyle: js.Object): js.Object = js.native
+  def getBorderExtents(node: HTMLElement): js.Object = js.native
+  def getBorderExtents(node: HTMLElement, computedStyle: js.Object): js.Object = js.native
   /**
     * Returns a "computed style" object.
     * Gets a "computed style" object which can be used to gather
@@ -1677,7 +1677,7 @@ trait kernel_ extends js.Object {
     *
     * @param node A reference to a DOM node. Does NOT support taking anID string for speed reasons.
     */
-  def getComputedStyle(node: org.scalajs.dom.raw.HTMLElement): Unit = js.native
+  def getComputedStyle(node: HTMLElement): Unit = js.native
   /**
     * Returns an object that encodes the width, height, left and top
     * positions of the node's content box, irrespective of the
@@ -1686,8 +1686,8 @@ trait kernel_ extends js.Object {
     * @param node
     * @param computedStyle               OptionalThis parameter accepts computed styles object.If this parameter is omitted, the functions will calldojo/dom-style.getComputedStyle to get one. It is a better way, callingdojo/dom-style.getComputedStyle once, and then pass the reference to thiscomputedStyle parameter. Wherever possible, reuse the returnedobject of dojo/dom-style.getComputedStyle().
     */
-  def getContentBox(node: org.scalajs.dom.raw.HTMLElement): js.Object = js.native
-  def getContentBox(node: org.scalajs.dom.raw.HTMLElement, computedStyle: js.Object): js.Object = js.native
+  def getContentBox(node: HTMLElement): js.Object = js.native
+  def getContentBox(node: HTMLElement, computedStyle: js.Object): js.Object = js.native
   /**
     * returns the offset in x and y from the document body to the
     * visual edge of the page for IE
@@ -1723,8 +1723,8 @@ trait kernel_ extends js.Object {
     * @param node
     * @param computedStyle               OptionalThis parameter accepts computed styles object.If this parameter is omitted, the functions will calldojo/dom-style.getComputedStyle to get one. It is a better way, callingdojo/dom-style.getComputedStyle once, and then pass the reference to thiscomputedStyle parameter. Wherever possible, reuse the returnedobject of dojo/dom-style.getComputedStyle().
     */
-  def getMarginBox(node: org.scalajs.dom.raw.HTMLElement): js.Object = js.native
-  def getMarginBox(node: org.scalajs.dom.raw.HTMLElement, computedStyle: js.Object): js.Object = js.native
+  def getMarginBox(node: HTMLElement): js.Object = js.native
+  def getMarginBox(node: HTMLElement, computedStyle: js.Object): js.Object = js.native
   /**
     * returns object with properties useful for box fitting with
     * regards to box margins (i.e., the outer-box).
@@ -1739,8 +1739,8 @@ trait kernel_ extends js.Object {
     * @param node
     * @param computedStyle               OptionalThis parameter accepts computed styles object.If this parameter is omitted, the functions will calldojo/dom-style.getComputedStyle to get one. It is a better way, callingdojo/dom-style.getComputedStyle once, and then pass the reference to thiscomputedStyle parameter. Wherever possible, reuse the returnedobject of dojo/dom-style.getComputedStyle().
     */
-  def getMarginExtents(node: org.scalajs.dom.raw.HTMLElement): js.Object = js.native
-  def getMarginExtents(node: org.scalajs.dom.raw.HTMLElement, computedStyle: js.Object): js.Object = js.native
+  def getMarginExtents(node: HTMLElement): js.Object = js.native
+  def getMarginExtents(node: HTMLElement, computedStyle: js.Object): js.Object = js.native
   /**
     * returns an object that encodes the width and height of
     * the node's margin box
@@ -1786,8 +1786,8 @@ trait kernel_ extends js.Object {
     * @param node
     * @param computedStyle               OptionalThis parameter accepts computed styles object.If this parameter is omitted, the functions will calldojo/dom-style.getComputedStyle to get one. It is a better way, callingdojo/dom-style.getComputedStyle once, and then pass the reference to thiscomputedStyle parameter. Wherever possible, reuse the returnedobject of dojo/dom-style.getComputedStyle().
     */
-  def getPadBorderExtents(node: org.scalajs.dom.raw.HTMLElement): js.Object = js.native
-  def getPadBorderExtents(node: org.scalajs.dom.raw.HTMLElement, computedStyle: js.Object): js.Object = js.native
+  def getPadBorderExtents(node: HTMLElement): js.Object = js.native
+  def getPadBorderExtents(node: HTMLElement, computedStyle: js.Object): js.Object = js.native
   /**
     * Returns object with special values specifically useful for node
     * fitting.
@@ -1805,8 +1805,8 @@ trait kernel_ extends js.Object {
     * @param node
     * @param computedStyle               OptionalThis parameter accepts computed styles object.If this parameter is omitted, the functions will calldojo/dom-style.getComputedStyle to get one. It is a better way, callingdojo/dom-style.getComputedStyle once, and then pass the reference to thiscomputedStyle parameter. Wherever possible, reuse the returnedobject of dojo/dom-style.getComputedStyle().
     */
-  def getPadExtents(node: org.scalajs.dom.raw.HTMLElement): js.Object = js.native
-  def getPadExtents(node: org.scalajs.dom.raw.HTMLElement, computedStyle: js.Object): js.Object = js.native
+  def getPadExtents(node: HTMLElement): js.Object = js.native
+  def getPadExtents(node: HTMLElement, computedStyle: js.Object): js.Object = js.native
   /**
     * Gets a property on an HTML element.
     * Handles normalized getting of properties on DOM nodes.
@@ -2087,9 +2087,9 @@ trait kernel_ extends js.Object {
     * @param refNode id or node reference to use as basis for placement
     * @param position               Optionalstring noting the position of node relative to refNode or anumber indicating the location in the childNodes collection of refNode.Accepted string values are:beforeafterreplaceonlyfirstlast"first" and "last" indicate positions as children of refNode, "replace" replaces refNode,"only" replaces all children.  position defaults to "last" if not specified
     */
-  def place(node: String, refNode: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: String, refNode: String, position: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: String, refNode: String, position: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def place(node: String, refNode: String): HTMLElement = js.native
+  def place(node: String, refNode: String, position: String): HTMLElement = js.native
+  def place(node: String, refNode: String, position: Double): HTMLElement = js.native
   /**
     * Attempt to insert node into the DOM, choosing from various positioning options.
     * Returns the first argument resolved to a DOM node.
@@ -2098,9 +2098,9 @@ trait kernel_ extends js.Object {
     * @param refNode id or node reference to use as basis for placement
     * @param position               Optionalstring noting the position of node relative to refNode or anumber indicating the location in the childNodes collection of refNode.Accepted string values are:beforeafterreplaceonlyfirstlast"first" and "last" indicate positions as children of refNode, "replace" replaces refNode,"only" replaces all children.  position defaults to "last" if not specified
     */
-  def place(node: String, refNode: HTMLElement): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: String, refNode: HTMLElement, position: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: String, refNode: HTMLElement, position: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def place(node: String, refNode: HTMLElement): HTMLElement = js.native
+  def place(node: String, refNode: HTMLElement, position: String): HTMLElement = js.native
+  def place(node: String, refNode: HTMLElement, position: Double): HTMLElement = js.native
   /**
     * Attempt to insert node into the DOM, choosing from various positioning options.
     * Returns the first argument resolved to a DOM node.
@@ -2109,9 +2109,9 @@ trait kernel_ extends js.Object {
     * @param refNode id or node reference to use as basis for placement
     * @param position               Optionalstring noting the position of node relative to refNode or anumber indicating the location in the childNodes collection of refNode.Accepted string values are:beforeafterreplaceonlyfirstlast"first" and "last" indicate positions as children of refNode, "replace" replaces refNode,"only" replaces all children.  position defaults to "last" if not specified
     */
-  def place(node: HTMLElement, refNode: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: HTMLElement, refNode: String, position: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: HTMLElement, refNode: String, position: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def place(node: HTMLElement, refNode: String): HTMLElement = js.native
+  def place(node: HTMLElement, refNode: String, position: String): HTMLElement = js.native
+  def place(node: HTMLElement, refNode: String, position: Double): HTMLElement = js.native
   /**
     * Attempt to insert node into the DOM, choosing from various positioning options.
     * Returns the first argument resolved to a DOM node.
@@ -2120,9 +2120,9 @@ trait kernel_ extends js.Object {
     * @param refNode id or node reference to use as basis for placement
     * @param position               Optionalstring noting the position of node relative to refNode or anumber indicating the location in the childNodes collection of refNode.Accepted string values are:beforeafterreplaceonlyfirstlast"first" and "last" indicate positions as children of refNode, "replace" replaces refNode,"only" replaces all children.  position defaults to "last" if not specified
     */
-  def place(node: HTMLElement, refNode: HTMLElement): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: HTMLElement, refNode: HTMLElement, position: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: HTMLElement, refNode: HTMLElement, position: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def place(node: HTMLElement, refNode: HTMLElement): HTMLElement = js.native
+  def place(node: HTMLElement, refNode: HTMLElement, position: String): HTMLElement = js.native
+  def place(node: HTMLElement, refNode: HTMLElement, position: Double): HTMLElement = js.native
   /**
     * require one or more modules based on which host environment
     * Dojo is currently operating in
@@ -2626,8 +2626,8 @@ trait kernel_ extends js.Object {
     * @param box hash with optional "w", and "h" properties for "width", and "height"respectively. All specified properties should have numeric values in whole pixels.
     * @param computedStyle               OptionalThis parameter accepts computed styles object.If this parameter is omitted, the functions will calldojo/dom-style.getComputedStyle to get one. It is a better way, callingdojo/dom-style.getComputedStyle once, and then pass the reference to thiscomputedStyle parameter. Wherever possible, reuse the returnedobject of dojo/dom-style.getComputedStyle().
     */
-  def setContentSize(node: org.scalajs.dom.raw.HTMLElement, box: js.Object): Unit = js.native
-  def setContentSize(node: org.scalajs.dom.raw.HTMLElement, box: js.Object, computedStyle: js.Object): Unit = js.native
+  def setContentSize(node: HTMLElement, box: js.Object): Unit = js.native
+  def setContentSize(node: HTMLElement, box: js.Object, computedStyle: js.Object): Unit = js.native
   /**
     * changes the behavior of many core Dojo functions that deal with
     * namespace and DOM lookup, changing them to work in a new global
@@ -2649,8 +2649,8 @@ trait kernel_ extends js.Object {
     * @param box hash with optional "l", "t", "w", and "h" properties for "left", "right", "width", and "height"respectively. All specified properties should have numeric values in whole pixels.
     * @param computedStyle               OptionalThis parameter accepts computed styles object.If this parameter is omitted, the functions will calldojo/dom-style.getComputedStyle to get one. It is a better way, callingdojo/dom-style.getComputedStyle once, and then pass the reference to thiscomputedStyle parameter. Wherever possible, reuse the returnedobject of dojo/dom-style.getComputedStyle().
     */
-  def setMarginBox(node: org.scalajs.dom.raw.HTMLElement, box: js.Object): Unit = js.native
-  def setMarginBox(node: org.scalajs.dom.raw.HTMLElement, box: js.Object, computedStyle: js.Object): Unit = js.native
+  def setMarginBox(node: HTMLElement, box: js.Object): Unit = js.native
+  def setMarginBox(node: HTMLElement, box: js.Object, computedStyle: js.Object): Unit = js.native
   /**
     * Sets a property on an HTML element.
     * Handles normalized setting of properties on DOM nodes.
@@ -2909,7 +2909,7 @@ trait kernel_ extends js.Object {
     * @param node
     * @param value
     */
-  def toPixelValue(node: org.scalajs.dom.raw.HTMLElement, value: String): Double = js.native
+  def toPixelValue(node: HTMLElement, value: String): Double = js.native
   /**
     * Adds a class to node if not present, or removes if present.
     * Pass a boolean condition if you want to explicitly add or remove.

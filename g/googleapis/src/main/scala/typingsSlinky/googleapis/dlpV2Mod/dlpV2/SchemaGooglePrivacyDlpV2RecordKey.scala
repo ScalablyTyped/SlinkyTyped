@@ -20,16 +20,53 @@ trait SchemaGooglePrivacyDlpV2RecordKey extends js.Object {
 
 object SchemaGooglePrivacyDlpV2RecordKey {
   @scala.inline
-  def apply(
-    bigQueryKey: SchemaGooglePrivacyDlpV2BigQueryKey = null,
-    datastoreKey: SchemaGooglePrivacyDlpV2DatastoreKey = null,
-    idValues: js.Array[String] = null
-  ): SchemaGooglePrivacyDlpV2RecordKey = {
+  def apply(): SchemaGooglePrivacyDlpV2RecordKey = {
     val __obj = js.Dynamic.literal()
-    if (bigQueryKey != null) __obj.updateDynamic("bigQueryKey")(bigQueryKey.asInstanceOf[js.Any])
-    if (datastoreKey != null) __obj.updateDynamic("datastoreKey")(datastoreKey.asInstanceOf[js.Any])
-    if (idValues != null) __obj.updateDynamic("idValues")(idValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2RecordKey]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2RecordKeyOps[Self <: SchemaGooglePrivacyDlpV2RecordKey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBigQueryKey(value: SchemaGooglePrivacyDlpV2BigQueryKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bigQueryKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBigQueryKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bigQueryKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatastoreKey(value: SchemaGooglePrivacyDlpV2DatastoreKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datastoreKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatastoreKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datastoreKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdValues(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idValues")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

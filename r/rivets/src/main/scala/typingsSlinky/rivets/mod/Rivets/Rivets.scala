@@ -1,9 +1,9 @@
 package typingsSlinky.rivets.mod.Rivets
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jquery.JQuery_
 import typingsSlinky.rivets.AnonHandler
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

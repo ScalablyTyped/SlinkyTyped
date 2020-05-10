@@ -14,14 +14,12 @@ trait TransitionState extends js.Object
 
 object TransitionState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def entered: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.entered = "entered".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.entered]
   @scala.inline
-  def entered: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.entered = this.cast("entered")
+  def entering: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.entering = "entering".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.entering]
   @scala.inline
-  def entering: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.entering = this.cast("entering")
+  def exited: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.exited = "exited".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.exited]
   @scala.inline
-  def exited: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.exited = this.cast("exited")
-  @scala.inline
-  def exiting: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.exiting = this.cast("exiting")
+  def exiting: typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.exiting = "exiting".asInstanceOf[typingsSlinky.reactToastNotifications.reactToastNotificationsStrings.exiting]
 }
 

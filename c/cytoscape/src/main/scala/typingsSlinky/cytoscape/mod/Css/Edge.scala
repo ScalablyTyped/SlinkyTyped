@@ -43,15 +43,16 @@ import scala.scalajs.js.annotation._
 /* Inlined parent std.Partial<cytoscape.cytoscape.Css.SegmentsEdges> */
 /* Inlined parent std.Partial<cytoscape.cytoscape.Css.Visibility<cytoscape.cytoscape.EdgeSingular>> */
 /* Inlined parent std.Partial<cytoscape.cytoscape.Css.Labels<cytoscape.cytoscape.EdgeSingular>> */
+@js.native
 trait Edge extends js.Object {
   /** The size of the arrow. */
-  var `arrow-scale`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
-  var color: js.UndefOr[PropertyValue[EdgeSingular, Colour]] = js.undefined
-  var `control-point-distance`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
-  var `control-point-distances`: js.UndefOr[PropertyValueEdge[String]] = js.undefined
-  var `control-point-step-size`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
-  var `control-point-weight`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
-  var `control-point-weights`: js.UndefOr[PropertyValueEdge[String]] = js.undefined
+  var `arrow-scale`: js.UndefOr[PropertyValueEdge[Double]] = js.native
+  var color: js.UndefOr[PropertyValue[EdgeSingular, Colour]] = js.native
+  var `control-point-distance`: js.UndefOr[PropertyValueEdge[Double]] = js.native
+  var `control-point-distances`: js.UndefOr[PropertyValueEdge[String]] = js.native
+  var `control-point-step-size`: js.UndefOr[PropertyValueEdge[Double]] = js.native
+  var `control-point-weight`: js.UndefOr[PropertyValueEdge[Double]] = js.native
+  var `control-point-weights`: js.UndefOr[PropertyValueEdge[String]] = js.native
   /**
     * The curving method used to separate two or more edges between two nodes;
     * may be
@@ -65,292 +66,1609 @@ trait Edge extends js.Object {
     */
   var `curve-style`: js.UndefOr[
     PropertyValueEdge[haystack | straight | bezier | `unbundled-bezier` | segments | taxi]
-  ] = js.undefined
-  var display: js.UndefOr[PropertyValue[EdgeSingular, none | displayed]] = js.undefined
-  var `edge-distances`: js.UndefOr[PropertyValueEdge[intersection | `node-position`]] = js.undefined
-  var `font-family`: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.undefined
-  var `font-size`: js.UndefOr[PropertyValue[EdgeSingular, Double | String]] = js.undefined
-  var `font-style`: js.UndefOr[PropertyValue[EdgeSingular, FontStyle]] = js.undefined
-  var `font-weight`: js.UndefOr[PropertyValue[EdgeSingular, FontWeight]] = js.undefined
-  var `haystack-radius`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
-  var label: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.undefined
+  ] = js.native
+  var display: js.UndefOr[PropertyValue[EdgeSingular, none | displayed]] = js.native
+  var `edge-distances`: js.UndefOr[PropertyValueEdge[intersection | `node-position`]] = js.native
+  var `font-family`: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.native
+  var `font-size`: js.UndefOr[PropertyValue[EdgeSingular, Double | String]] = js.native
+  var `font-style`: js.UndefOr[PropertyValue[EdgeSingular, FontStyle]] = js.native
+  var `font-weight`: js.UndefOr[PropertyValue[EdgeSingular, FontWeight]] = js.native
+  var `haystack-radius`: js.UndefOr[PropertyValueEdge[Double]] = js.native
+  var label: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.native
   /**
     * The cap of the edge's line.
     */
-  var `line-cap`: js.UndefOr[PropertyValueEdge[butt | round | square]] = js.undefined
+  var `line-cap`: js.UndefOr[PropertyValueEdge[butt | round | square]] = js.native
   /**
     * The colour of the edge’s line.
     */
-  var `line-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
+  var `line-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
   /**
     * The dashed line offset.
     */
-  var `line-dash-offset`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
+  var `line-dash-offset`: js.UndefOr[PropertyValueEdge[Double]] = js.native
   /**
     * The dashed line pattern which specifies alternating lengths of lines and gaps.
     */
-  var `line-dash-pattern`: js.UndefOr[js.Array[PropertyValueEdge[Double]]] = js.undefined
+  var `line-dash-pattern`: js.UndefOr[js.Array[PropertyValueEdge[Double]]] = js.native
   /**
     * The filling style of the edge's line.
     */
-  var `line-fill`: js.UndefOr[PropertyValueEdge[solid | `linear-gradient` | `radial-gradient`]] = js.undefined
-  var `line-gradient-stop-colours`: js.UndefOr[js.Array[PropertyValueEdge[Colour]]] = js.undefined
-  var `line-gradient-stop-positions`: js.UndefOr[js.Array[PropertyValueEdge[Double]]] = js.undefined
+  var `line-fill`: js.UndefOr[PropertyValueEdge[solid | `linear-gradient` | `radial-gradient`]] = js.native
+  var `line-gradient-stop-colours`: js.UndefOr[js.Array[PropertyValueEdge[Colour]]] = js.native
+  var `line-gradient-stop-positions`: js.UndefOr[js.Array[PropertyValueEdge[Double]]] = js.native
   /**
     * The style of the edge’s line.
     */
-  var `line-style`: js.UndefOr[PropertyValueEdge[LineStyle]] = js.undefined
+  var `line-style`: js.UndefOr[PropertyValueEdge[LineStyle]] = js.native
   /** The colour of the edge’s "mid-source" arrow. */
-  var `mid-source-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
+  var `mid-source-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
   /** The fill state of the edge’s mid-source arrow. */
-  var `mid-source-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.undefined
+  var `mid-source-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.native
   /** The shape of the edge’s mid-source arrow. */
-  var `mid-source-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.undefined
+  var `mid-source-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.native
   /** The colour of the edge’s "mid-target" arrow. */
-  var `mid-target-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
+  var `mid-target-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
   /** The fill state of the edge’s mid-target arrow. */
-  var `mid-target-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.undefined
+  var `mid-target-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.native
   /** The shape of the edge’s mid-target arrow. */
-  var `mid-target-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.undefined
-  var `min-zoomed-font-size`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var opacity: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `overlay-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
-  var `overlay-opacity`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
-  var `overlay-padding`: js.UndefOr[PropertyValueEdge[Double | String]] = js.undefined
-  var `segment-distances`: js.UndefOr[PropertyValueEdge[String]] = js.undefined
-  var `segment-weights`: js.UndefOr[PropertyValueEdge[String]] = js.undefined
+  var `mid-target-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.native
+  var `min-zoomed-font-size`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var opacity: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `overlay-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
+  var `overlay-opacity`: js.UndefOr[PropertyValueEdge[Double]] = js.native
+  var `overlay-padding`: js.UndefOr[PropertyValueEdge[Double | String]] = js.native
+  var `segment-distances`: js.UndefOr[PropertyValueEdge[String]] = js.native
+  var `segment-weights`: js.UndefOr[PropertyValueEdge[String]] = js.native
   /** The colour of the edge’s source arrow. */
-  var `source-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
+  var `source-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
   /** The fill state of the edge’s source arrow. */
-  var `source-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.undefined
+  var `source-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.native
   /** The shape of the edge’s source arrow. */
-  var `source-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.undefined
-  var `source-label`: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.undefined
-  var `source-text-margin-x`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `source-text-margin-y`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `source-text-offset`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `source-text-rotation`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
+  var `source-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.native
+  var `source-label`: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.native
+  var `source-text-margin-x`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `source-text-margin-y`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `source-text-offset`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `source-text-rotation`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
   /** The colour of the edge’s target arrow. */
-  var `target-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
+  var `target-arrow-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
   /** The fill state of the edge’s target arrow. */
-  var `target-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.undefined
+  var `target-arrow-fill`: js.UndefOr[PropertyValueEdge[ArrowFill]] = js.native
   /** The shape of the edge’s target arrow. */
-  var `target-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.undefined
+  var `target-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.native
   /**
     * The distance the edge ends from its target.
     */
-  var `target-distance-from-node`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
-  var `target-label`: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.undefined
-  var `target-text-margin-x`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `target-text-margin-y`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `target-text-offset`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `target-text-rotation`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-background-color`: js.UndefOr[PropertyValue[EdgeSingular, Colour]] = js.undefined
-  var `text-background-opacity`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-background-padding`: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.undefined
-  var `text-background-shape`: js.UndefOr[PropertyValue[EdgeSingular, rectangle | roundrectangle]] = js.undefined
-  var `text-border-color`: js.UndefOr[PropertyValue[EdgeSingular, Colour]] = js.undefined
-  var `text-border-opacity`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-border-style`: js.UndefOr[PropertyValue[EdgeSingular, LineStyle]] = js.undefined
-  var `text-border-width`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-events`: js.UndefOr[PropertyValue[EdgeSingular, yes | no]] = js.undefined
-  var `text-halign`: js.UndefOr[PropertyValue[EdgeSingular, left | center | right]] = js.undefined
-  var `text-margin-x`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-margin-y`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-max-width`: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.undefined
-  var `text-opacity`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-outline-color`: js.UndefOr[PropertyValue[EdgeSingular, Colour]] = js.undefined
-  var `text-outline-opacity`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-outline-width`: js.UndefOr[PropertyValue[EdgeSingular, Double | String]] = js.undefined
-  var `text-rotation`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-shadow-blur`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-shadow-color`: js.UndefOr[PropertyValue[EdgeSingular, Colour]] = js.undefined
-  var `text-shadow-offset-x`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-shadow-offset-y`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-shadow-opacity`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
-  var `text-transform`: js.UndefOr[PropertyValue[EdgeSingular, TextTranformation]] = js.undefined
-  var `text-valign`: js.UndefOr[PropertyValue[EdgeSingular, top | center | bottom]] = js.undefined
-  var `text-wrap`: js.UndefOr[PropertyValue[EdgeSingular, none | wrap | ellipsis]] = js.undefined
-  var visibility: js.UndefOr[PropertyValue[EdgeSingular, none | visible]] = js.undefined
+  var `target-distance-from-node`: js.UndefOr[PropertyValueEdge[Double]] = js.native
+  var `target-label`: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.native
+  var `target-text-margin-x`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `target-text-margin-y`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `target-text-offset`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `target-text-rotation`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-background-color`: js.UndefOr[PropertyValue[EdgeSingular, Colour]] = js.native
+  var `text-background-opacity`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-background-padding`: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.native
+  var `text-background-shape`: js.UndefOr[PropertyValue[EdgeSingular, rectangle | roundrectangle]] = js.native
+  var `text-border-color`: js.UndefOr[PropertyValue[EdgeSingular, Colour]] = js.native
+  var `text-border-opacity`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-border-style`: js.UndefOr[PropertyValue[EdgeSingular, LineStyle]] = js.native
+  var `text-border-width`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-events`: js.UndefOr[PropertyValue[EdgeSingular, yes | no]] = js.native
+  var `text-halign`: js.UndefOr[PropertyValue[EdgeSingular, left | center | right]] = js.native
+  var `text-margin-x`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-margin-y`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-max-width`: js.UndefOr[PropertyValue[EdgeSingular, String]] = js.native
+  var `text-opacity`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-outline-color`: js.UndefOr[PropertyValue[EdgeSingular, Colour]] = js.native
+  var `text-outline-opacity`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-outline-width`: js.UndefOr[PropertyValue[EdgeSingular, Double | String]] = js.native
+  var `text-rotation`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-shadow-blur`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-shadow-color`: js.UndefOr[PropertyValue[EdgeSingular, Colour]] = js.native
+  var `text-shadow-offset-x`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-shadow-offset-y`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-shadow-opacity`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
+  var `text-transform`: js.UndefOr[PropertyValue[EdgeSingular, TextTranformation]] = js.native
+  var `text-valign`: js.UndefOr[PropertyValue[EdgeSingular, top | center | bottom]] = js.native
+  var `text-wrap`: js.UndefOr[PropertyValue[EdgeSingular, none | wrap | ellipsis]] = js.native
+  var visibility: js.UndefOr[PropertyValue[EdgeSingular, none | visible]] = js.native
   /**
     * The width of an edge’s line.
     */
-  var width: js.UndefOr[PropertyValueEdge[Double | String]] = js.undefined
-  var `z-index`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.undefined
+  var width: js.UndefOr[PropertyValueEdge[Double | String]] = js.native
+  var `z-index`: js.UndefOr[PropertyValue[EdgeSingular, Double]] = js.native
 }
 
 object Edge {
   @scala.inline
-  def apply(
-    `arrow-scale`: PropertyValueEdge[Double] = null,
-    color: PropertyValue[EdgeSingular, Colour] = null,
-    `control-point-distance`: PropertyValueEdge[Double] = null,
-    `control-point-distances`: PropertyValueEdge[String] = null,
-    `control-point-step-size`: PropertyValueEdge[Double] = null,
-    `control-point-weight`: PropertyValueEdge[Double] = null,
-    `control-point-weights`: PropertyValueEdge[String] = null,
-    `curve-style`: PropertyValueEdge[haystack | straight | bezier | `unbundled-bezier` | segments | taxi] = null,
-    display: PropertyValue[EdgeSingular, none | displayed] = null,
-    `edge-distances`: PropertyValueEdge[intersection | `node-position`] = null,
-    `font-family`: PropertyValue[EdgeSingular, String] = null,
-    `font-size`: PropertyValue[EdgeSingular, Double | String] = null,
-    `font-style`: PropertyValue[EdgeSingular, FontStyle] = null,
-    `font-weight`: PropertyValue[EdgeSingular, FontWeight] = null,
-    `haystack-radius`: PropertyValueEdge[Double] = null,
-    label: PropertyValue[EdgeSingular, String] = null,
-    `line-cap`: PropertyValueEdge[butt | round | square] = null,
-    `line-color`: PropertyValueEdge[Colour] = null,
-    `line-dash-offset`: PropertyValueEdge[Double] = null,
-    `line-dash-pattern`: js.Array[PropertyValueEdge[Double]] = null,
-    `line-fill`: PropertyValueEdge[solid | `linear-gradient` | `radial-gradient`] = null,
-    `line-gradient-stop-colours`: js.Array[PropertyValueEdge[Colour]] = null,
-    `line-gradient-stop-positions`: js.Array[PropertyValueEdge[Double]] = null,
-    `line-style`: PropertyValueEdge[LineStyle] = null,
-    `mid-source-arrow-color`: PropertyValueEdge[Colour] = null,
-    `mid-source-arrow-fill`: PropertyValueEdge[ArrowFill] = null,
-    `mid-source-arrow-shape`: PropertyValueEdge[ArrowShape] = null,
-    `mid-target-arrow-color`: PropertyValueEdge[Colour] = null,
-    `mid-target-arrow-fill`: PropertyValueEdge[ArrowFill] = null,
-    `mid-target-arrow-shape`: PropertyValueEdge[ArrowShape] = null,
-    `min-zoomed-font-size`: PropertyValue[EdgeSingular, Double] = null,
-    opacity: PropertyValue[EdgeSingular, Double] = null,
-    `overlay-color`: PropertyValueEdge[Colour] = null,
-    `overlay-opacity`: PropertyValueEdge[Double] = null,
-    `overlay-padding`: PropertyValueEdge[Double | String] = null,
-    `segment-distances`: PropertyValueEdge[String] = null,
-    `segment-weights`: PropertyValueEdge[String] = null,
-    `source-arrow-color`: PropertyValueEdge[Colour] = null,
-    `source-arrow-fill`: PropertyValueEdge[ArrowFill] = null,
-    `source-arrow-shape`: PropertyValueEdge[ArrowShape] = null,
-    `source-label`: PropertyValue[EdgeSingular, String] = null,
-    `source-text-margin-x`: PropertyValue[EdgeSingular, Double] = null,
-    `source-text-margin-y`: PropertyValue[EdgeSingular, Double] = null,
-    `source-text-offset`: PropertyValue[EdgeSingular, Double] = null,
-    `source-text-rotation`: PropertyValue[EdgeSingular, Double] = null,
-    `target-arrow-color`: PropertyValueEdge[Colour] = null,
-    `target-arrow-fill`: PropertyValueEdge[ArrowFill] = null,
-    `target-arrow-shape`: PropertyValueEdge[ArrowShape] = null,
-    `target-distance-from-node`: PropertyValueEdge[Double] = null,
-    `target-label`: PropertyValue[EdgeSingular, String] = null,
-    `target-text-margin-x`: PropertyValue[EdgeSingular, Double] = null,
-    `target-text-margin-y`: PropertyValue[EdgeSingular, Double] = null,
-    `target-text-offset`: PropertyValue[EdgeSingular, Double] = null,
-    `target-text-rotation`: PropertyValue[EdgeSingular, Double] = null,
-    `text-background-color`: PropertyValue[EdgeSingular, Colour] = null,
-    `text-background-opacity`: PropertyValue[EdgeSingular, Double] = null,
-    `text-background-padding`: PropertyValue[EdgeSingular, String] = null,
-    `text-background-shape`: PropertyValue[EdgeSingular, rectangle | roundrectangle] = null,
-    `text-border-color`: PropertyValue[EdgeSingular, Colour] = null,
-    `text-border-opacity`: PropertyValue[EdgeSingular, Double] = null,
-    `text-border-style`: PropertyValue[EdgeSingular, LineStyle] = null,
-    `text-border-width`: PropertyValue[EdgeSingular, Double] = null,
-    `text-events`: PropertyValue[EdgeSingular, yes | no] = null,
-    `text-halign`: PropertyValue[EdgeSingular, left | center | right] = null,
-    `text-margin-x`: PropertyValue[EdgeSingular, Double] = null,
-    `text-margin-y`: PropertyValue[EdgeSingular, Double] = null,
-    `text-max-width`: PropertyValue[EdgeSingular, String] = null,
-    `text-opacity`: PropertyValue[EdgeSingular, Double] = null,
-    `text-outline-color`: PropertyValue[EdgeSingular, Colour] = null,
-    `text-outline-opacity`: PropertyValue[EdgeSingular, Double] = null,
-    `text-outline-width`: PropertyValue[EdgeSingular, Double | String] = null,
-    `text-rotation`: PropertyValue[EdgeSingular, Double] = null,
-    `text-shadow-blur`: PropertyValue[EdgeSingular, Double] = null,
-    `text-shadow-color`: PropertyValue[EdgeSingular, Colour] = null,
-    `text-shadow-offset-x`: PropertyValue[EdgeSingular, Double] = null,
-    `text-shadow-offset-y`: PropertyValue[EdgeSingular, Double] = null,
-    `text-shadow-opacity`: PropertyValue[EdgeSingular, Double] = null,
-    `text-transform`: PropertyValue[EdgeSingular, TextTranformation] = null,
-    `text-valign`: PropertyValue[EdgeSingular, top | center | bottom] = null,
-    `text-wrap`: PropertyValue[EdgeSingular, none | wrap | ellipsis] = null,
-    visibility: PropertyValue[EdgeSingular, none | visible] = null,
-    width: PropertyValueEdge[Double | String] = null,
-    `z-index`: PropertyValue[EdgeSingular, Double] = null
-  ): Edge = {
+  def apply(): Edge = {
     val __obj = js.Dynamic.literal()
-    if (`arrow-scale` != null) __obj.updateDynamic("arrow-scale")(`arrow-scale`.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (`control-point-distance` != null) __obj.updateDynamic("control-point-distance")(`control-point-distance`.asInstanceOf[js.Any])
-    if (`control-point-distances` != null) __obj.updateDynamic("control-point-distances")(`control-point-distances`.asInstanceOf[js.Any])
-    if (`control-point-step-size` != null) __obj.updateDynamic("control-point-step-size")(`control-point-step-size`.asInstanceOf[js.Any])
-    if (`control-point-weight` != null) __obj.updateDynamic("control-point-weight")(`control-point-weight`.asInstanceOf[js.Any])
-    if (`control-point-weights` != null) __obj.updateDynamic("control-point-weights")(`control-point-weights`.asInstanceOf[js.Any])
-    if (`curve-style` != null) __obj.updateDynamic("curve-style")(`curve-style`.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (`edge-distances` != null) __obj.updateDynamic("edge-distances")(`edge-distances`.asInstanceOf[js.Any])
-    if (`font-family` != null) __obj.updateDynamic("font-family")(`font-family`.asInstanceOf[js.Any])
-    if (`font-size` != null) __obj.updateDynamic("font-size")(`font-size`.asInstanceOf[js.Any])
-    if (`font-style` != null) __obj.updateDynamic("font-style")(`font-style`.asInstanceOf[js.Any])
-    if (`font-weight` != null) __obj.updateDynamic("font-weight")(`font-weight`.asInstanceOf[js.Any])
-    if (`haystack-radius` != null) __obj.updateDynamic("haystack-radius")(`haystack-radius`.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (`line-cap` != null) __obj.updateDynamic("line-cap")(`line-cap`.asInstanceOf[js.Any])
-    if (`line-color` != null) __obj.updateDynamic("line-color")(`line-color`.asInstanceOf[js.Any])
-    if (`line-dash-offset` != null) __obj.updateDynamic("line-dash-offset")(`line-dash-offset`.asInstanceOf[js.Any])
-    if (`line-dash-pattern` != null) __obj.updateDynamic("line-dash-pattern")(`line-dash-pattern`.asInstanceOf[js.Any])
-    if (`line-fill` != null) __obj.updateDynamic("line-fill")(`line-fill`.asInstanceOf[js.Any])
-    if (`line-gradient-stop-colours` != null) __obj.updateDynamic("line-gradient-stop-colours")(`line-gradient-stop-colours`.asInstanceOf[js.Any])
-    if (`line-gradient-stop-positions` != null) __obj.updateDynamic("line-gradient-stop-positions")(`line-gradient-stop-positions`.asInstanceOf[js.Any])
-    if (`line-style` != null) __obj.updateDynamic("line-style")(`line-style`.asInstanceOf[js.Any])
-    if (`mid-source-arrow-color` != null) __obj.updateDynamic("mid-source-arrow-color")(`mid-source-arrow-color`.asInstanceOf[js.Any])
-    if (`mid-source-arrow-fill` != null) __obj.updateDynamic("mid-source-arrow-fill")(`mid-source-arrow-fill`.asInstanceOf[js.Any])
-    if (`mid-source-arrow-shape` != null) __obj.updateDynamic("mid-source-arrow-shape")(`mid-source-arrow-shape`.asInstanceOf[js.Any])
-    if (`mid-target-arrow-color` != null) __obj.updateDynamic("mid-target-arrow-color")(`mid-target-arrow-color`.asInstanceOf[js.Any])
-    if (`mid-target-arrow-fill` != null) __obj.updateDynamic("mid-target-arrow-fill")(`mid-target-arrow-fill`.asInstanceOf[js.Any])
-    if (`mid-target-arrow-shape` != null) __obj.updateDynamic("mid-target-arrow-shape")(`mid-target-arrow-shape`.asInstanceOf[js.Any])
-    if (`min-zoomed-font-size` != null) __obj.updateDynamic("min-zoomed-font-size")(`min-zoomed-font-size`.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (`overlay-color` != null) __obj.updateDynamic("overlay-color")(`overlay-color`.asInstanceOf[js.Any])
-    if (`overlay-opacity` != null) __obj.updateDynamic("overlay-opacity")(`overlay-opacity`.asInstanceOf[js.Any])
-    if (`overlay-padding` != null) __obj.updateDynamic("overlay-padding")(`overlay-padding`.asInstanceOf[js.Any])
-    if (`segment-distances` != null) __obj.updateDynamic("segment-distances")(`segment-distances`.asInstanceOf[js.Any])
-    if (`segment-weights` != null) __obj.updateDynamic("segment-weights")(`segment-weights`.asInstanceOf[js.Any])
-    if (`source-arrow-color` != null) __obj.updateDynamic("source-arrow-color")(`source-arrow-color`.asInstanceOf[js.Any])
-    if (`source-arrow-fill` != null) __obj.updateDynamic("source-arrow-fill")(`source-arrow-fill`.asInstanceOf[js.Any])
-    if (`source-arrow-shape` != null) __obj.updateDynamic("source-arrow-shape")(`source-arrow-shape`.asInstanceOf[js.Any])
-    if (`source-label` != null) __obj.updateDynamic("source-label")(`source-label`.asInstanceOf[js.Any])
-    if (`source-text-margin-x` != null) __obj.updateDynamic("source-text-margin-x")(`source-text-margin-x`.asInstanceOf[js.Any])
-    if (`source-text-margin-y` != null) __obj.updateDynamic("source-text-margin-y")(`source-text-margin-y`.asInstanceOf[js.Any])
-    if (`source-text-offset` != null) __obj.updateDynamic("source-text-offset")(`source-text-offset`.asInstanceOf[js.Any])
-    if (`source-text-rotation` != null) __obj.updateDynamic("source-text-rotation")(`source-text-rotation`.asInstanceOf[js.Any])
-    if (`target-arrow-color` != null) __obj.updateDynamic("target-arrow-color")(`target-arrow-color`.asInstanceOf[js.Any])
-    if (`target-arrow-fill` != null) __obj.updateDynamic("target-arrow-fill")(`target-arrow-fill`.asInstanceOf[js.Any])
-    if (`target-arrow-shape` != null) __obj.updateDynamic("target-arrow-shape")(`target-arrow-shape`.asInstanceOf[js.Any])
-    if (`target-distance-from-node` != null) __obj.updateDynamic("target-distance-from-node")(`target-distance-from-node`.asInstanceOf[js.Any])
-    if (`target-label` != null) __obj.updateDynamic("target-label")(`target-label`.asInstanceOf[js.Any])
-    if (`target-text-margin-x` != null) __obj.updateDynamic("target-text-margin-x")(`target-text-margin-x`.asInstanceOf[js.Any])
-    if (`target-text-margin-y` != null) __obj.updateDynamic("target-text-margin-y")(`target-text-margin-y`.asInstanceOf[js.Any])
-    if (`target-text-offset` != null) __obj.updateDynamic("target-text-offset")(`target-text-offset`.asInstanceOf[js.Any])
-    if (`target-text-rotation` != null) __obj.updateDynamic("target-text-rotation")(`target-text-rotation`.asInstanceOf[js.Any])
-    if (`text-background-color` != null) __obj.updateDynamic("text-background-color")(`text-background-color`.asInstanceOf[js.Any])
-    if (`text-background-opacity` != null) __obj.updateDynamic("text-background-opacity")(`text-background-opacity`.asInstanceOf[js.Any])
-    if (`text-background-padding` != null) __obj.updateDynamic("text-background-padding")(`text-background-padding`.asInstanceOf[js.Any])
-    if (`text-background-shape` != null) __obj.updateDynamic("text-background-shape")(`text-background-shape`.asInstanceOf[js.Any])
-    if (`text-border-color` != null) __obj.updateDynamic("text-border-color")(`text-border-color`.asInstanceOf[js.Any])
-    if (`text-border-opacity` != null) __obj.updateDynamic("text-border-opacity")(`text-border-opacity`.asInstanceOf[js.Any])
-    if (`text-border-style` != null) __obj.updateDynamic("text-border-style")(`text-border-style`.asInstanceOf[js.Any])
-    if (`text-border-width` != null) __obj.updateDynamic("text-border-width")(`text-border-width`.asInstanceOf[js.Any])
-    if (`text-events` != null) __obj.updateDynamic("text-events")(`text-events`.asInstanceOf[js.Any])
-    if (`text-halign` != null) __obj.updateDynamic("text-halign")(`text-halign`.asInstanceOf[js.Any])
-    if (`text-margin-x` != null) __obj.updateDynamic("text-margin-x")(`text-margin-x`.asInstanceOf[js.Any])
-    if (`text-margin-y` != null) __obj.updateDynamic("text-margin-y")(`text-margin-y`.asInstanceOf[js.Any])
-    if (`text-max-width` != null) __obj.updateDynamic("text-max-width")(`text-max-width`.asInstanceOf[js.Any])
-    if (`text-opacity` != null) __obj.updateDynamic("text-opacity")(`text-opacity`.asInstanceOf[js.Any])
-    if (`text-outline-color` != null) __obj.updateDynamic("text-outline-color")(`text-outline-color`.asInstanceOf[js.Any])
-    if (`text-outline-opacity` != null) __obj.updateDynamic("text-outline-opacity")(`text-outline-opacity`.asInstanceOf[js.Any])
-    if (`text-outline-width` != null) __obj.updateDynamic("text-outline-width")(`text-outline-width`.asInstanceOf[js.Any])
-    if (`text-rotation` != null) __obj.updateDynamic("text-rotation")(`text-rotation`.asInstanceOf[js.Any])
-    if (`text-shadow-blur` != null) __obj.updateDynamic("text-shadow-blur")(`text-shadow-blur`.asInstanceOf[js.Any])
-    if (`text-shadow-color` != null) __obj.updateDynamic("text-shadow-color")(`text-shadow-color`.asInstanceOf[js.Any])
-    if (`text-shadow-offset-x` != null) __obj.updateDynamic("text-shadow-offset-x")(`text-shadow-offset-x`.asInstanceOf[js.Any])
-    if (`text-shadow-offset-y` != null) __obj.updateDynamic("text-shadow-offset-y")(`text-shadow-offset-y`.asInstanceOf[js.Any])
-    if (`text-shadow-opacity` != null) __obj.updateDynamic("text-shadow-opacity")(`text-shadow-opacity`.asInstanceOf[js.Any])
-    if (`text-transform` != null) __obj.updateDynamic("text-transform")(`text-transform`.asInstanceOf[js.Any])
-    if (`text-valign` != null) __obj.updateDynamic("text-valign")(`text-valign`.asInstanceOf[js.Any])
-    if (`text-wrap` != null) __obj.updateDynamic("text-wrap")(`text-wrap`.asInstanceOf[js.Any])
-    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (`z-index` != null) __obj.updateDynamic("z-index")(`z-index`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Edge]
   }
+  @scala.inline
+  implicit class EdgeOps[Self <: Edge] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withArrow-scaleFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrow-scale")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withArrow-scale`(value: PropertyValueEdge[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrow-scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutArrow-scale`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrow-scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorFunction1(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withColor(value: PropertyValue[EdgeSingular, Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withControl-point-distanceFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-distance")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withControl-point-distance`(value: PropertyValueEdge[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-distance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutControl-point-distance`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-distance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withControl-point-distancesFunction1`(value: EdgeSingular => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-distances")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withControl-point-distances`(value: PropertyValueEdge[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-distances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutControl-point-distances`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-distances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withControl-point-step-sizeFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-step-size")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withControl-point-step-size`(value: PropertyValueEdge[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-step-size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutControl-point-step-size`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-step-size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withControl-point-weightFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-weight")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withControl-point-weight`(value: PropertyValueEdge[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutControl-point-weight`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-weight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withControl-point-weightsFunction1`(value: EdgeSingular => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-weights")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withControl-point-weights`(value: PropertyValueEdge[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-weights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutControl-point-weights`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control-point-weights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withCurve-styleFunction1`(value: EdgeSingular => haystack | straight | bezier | `unbundled-bezier` | segments | taxi): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve-style")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withCurve-style`(value: PropertyValueEdge[haystack | straight | bezier | `unbundled-bezier` | segments | taxi]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutCurve-style`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve-style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayFunction1(value: EdgeSingular => none | displayed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: PropertyValue[EdgeSingular, none | displayed]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withEdge-distancesFunction1`(value: EdgeSingular => intersection | `node-position`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edge-distances")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withEdge-distances`(value: PropertyValueEdge[intersection | `node-position`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edge-distances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutEdge-distances`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edge-distances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withFont-familyFunction1`(value: EdgeSingular => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-family")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withFont-family`(value: PropertyValue[EdgeSingular, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutFont-family`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-family")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withFont-sizeFunction1`(value: EdgeSingular => Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-size")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withFont-size`(value: PropertyValue[EdgeSingular, Double | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutFont-size`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withFont-styleFunction1`(value: EdgeSingular => FontStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-style")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withFont-style`(value: PropertyValue[EdgeSingular, FontStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutFont-style`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withFont-weightFunction1`(value: EdgeSingular => FontWeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-weight")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withFont-weight`(value: PropertyValue[EdgeSingular, FontWeight]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutFont-weight`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font-weight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withHaystack-radiusFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("haystack-radius")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withHaystack-radius`(value: PropertyValueEdge[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("haystack-radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutHaystack-radius`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("haystack-radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelFunction1(value: EdgeSingular => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLabel(value: PropertyValue[EdgeSingular, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-capFunction1`(value: EdgeSingular => butt | round | square): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-cap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withLine-cap`(value: PropertyValueEdge[butt | round | square]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-cap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-cap`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-cap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withLine-color`(value: PropertyValueEdge[Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-dash-offsetFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-dash-offset")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withLine-dash-offset`(value: PropertyValueEdge[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-dash-offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-dash-offset`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-dash-offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-dash-pattern`(value: js.Array[PropertyValueEdge[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-dash-pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-dash-pattern`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-dash-pattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-fillFunction1`(value: EdgeSingular => solid | `linear-gradient` | `radial-gradient`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-fill")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withLine-fill`(value: PropertyValueEdge[solid | `linear-gradient` | `radial-gradient`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-fill`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-gradient-stop-colours`(value: js.Array[PropertyValueEdge[Colour]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-gradient-stop-colours")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-gradient-stop-colours`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-gradient-stop-colours")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-gradient-stop-positions`(value: js.Array[PropertyValueEdge[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-gradient-stop-positions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-gradient-stop-positions`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-gradient-stop-positions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-styleFunction1`(value: EdgeSingular => LineStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-style")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withLine-style`(value: PropertyValueEdge[LineStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-style`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMid-source-arrow-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withMid-source-arrow-color`(value: PropertyValueEdge[Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMid-source-arrow-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMid-source-arrow-fillFunction1`(value: EdgeSingular => ArrowFill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-fill")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withMid-source-arrow-fill`(value: PropertyValueEdge[ArrowFill]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMid-source-arrow-fill`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMid-source-arrow-shapeFunction1`(value: EdgeSingular => ArrowShape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-shape")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withMid-source-arrow-shape`(value: PropertyValueEdge[ArrowShape]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-shape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMid-source-arrow-shape`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-source-arrow-shape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMid-target-arrow-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withMid-target-arrow-color`(value: PropertyValueEdge[Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMid-target-arrow-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMid-target-arrow-fillFunction1`(value: EdgeSingular => ArrowFill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-fill")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withMid-target-arrow-fill`(value: PropertyValueEdge[ArrowFill]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMid-target-arrow-fill`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMid-target-arrow-shapeFunction1`(value: EdgeSingular => ArrowShape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-shape")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withMid-target-arrow-shape`(value: PropertyValueEdge[ArrowShape]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-shape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMid-target-arrow-shape`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mid-target-arrow-shape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMin-zoomed-font-sizeFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min-zoomed-font-size")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withMin-zoomed-font-size`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min-zoomed-font-size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMin-zoomed-font-size`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min-zoomed-font-size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacityFunction1(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withOverlay-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withOverlay-color`(value: PropertyValueEdge[Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutOverlay-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withOverlay-opacityFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay-opacity")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withOverlay-opacity`(value: PropertyValueEdge[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay-opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutOverlay-opacity`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay-opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withOverlay-paddingFunction1`(value: EdgeSingular => Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay-padding")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withOverlay-padding`(value: PropertyValueEdge[Double | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay-padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutOverlay-padding`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay-padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSegment-distancesFunction1`(value: EdgeSingular => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment-distances")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withSegment-distances`(value: PropertyValueEdge[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment-distances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSegment-distances`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment-distances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSegment-weightsFunction1`(value: EdgeSingular => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment-weights")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withSegment-weights`(value: PropertyValueEdge[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment-weights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSegment-weights`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment-weights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSource-arrow-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withSource-arrow-color`(value: PropertyValueEdge[Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSource-arrow-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSource-arrow-fillFunction1`(value: EdgeSingular => ArrowFill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-fill")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withSource-arrow-fill`(value: PropertyValueEdge[ArrowFill]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSource-arrow-fill`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSource-arrow-shapeFunction1`(value: EdgeSingular => ArrowShape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-shape")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withSource-arrow-shape`(value: PropertyValueEdge[ArrowShape]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-shape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSource-arrow-shape`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-arrow-shape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSource-labelFunction1`(value: EdgeSingular => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-label")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withSource-label`(value: PropertyValue[EdgeSingular, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSource-label`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSource-text-margin-xFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-margin-x")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withSource-text-margin-x`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-margin-x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSource-text-margin-x`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-margin-x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSource-text-margin-yFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-margin-y")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withSource-text-margin-y`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-margin-y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSource-text-margin-y`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-margin-y")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSource-text-offsetFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-offset")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withSource-text-offset`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSource-text-offset`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSource-text-rotationFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-rotation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withSource-text-rotation`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSource-text-rotation`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source-text-rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withTarget-arrow-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withTarget-arrow-color`(value: PropertyValueEdge[Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutTarget-arrow-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withTarget-arrow-fillFunction1`(value: EdgeSingular => ArrowFill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-fill")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withTarget-arrow-fill`(value: PropertyValueEdge[ArrowFill]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutTarget-arrow-fill`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withTarget-arrow-shapeFunction1`(value: EdgeSingular => ArrowShape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-shape")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withTarget-arrow-shape`(value: PropertyValueEdge[ArrowShape]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-shape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutTarget-arrow-shape`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-arrow-shape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withTarget-distance-from-nodeFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-distance-from-node")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withTarget-distance-from-node`(value: PropertyValueEdge[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-distance-from-node")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutTarget-distance-from-node`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-distance-from-node")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withTarget-labelFunction1`(value: EdgeSingular => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-label")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withTarget-label`(value: PropertyValue[EdgeSingular, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutTarget-label`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withTarget-text-margin-xFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-margin-x")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withTarget-text-margin-x`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-margin-x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutTarget-text-margin-x`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-margin-x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withTarget-text-margin-yFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-margin-y")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withTarget-text-margin-y`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-margin-y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutTarget-text-margin-y`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-margin-y")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withTarget-text-offsetFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-offset")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withTarget-text-offset`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutTarget-text-offset`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withTarget-text-rotationFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-rotation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withTarget-text-rotation`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutTarget-text-rotation`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-text-rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-background-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-background-color`(value: PropertyValue[EdgeSingular, Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-background-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-background-opacityFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-opacity")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-background-opacity`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-background-opacity`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-background-paddingFunction1`(value: EdgeSingular => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-padding")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-background-padding`(value: PropertyValue[EdgeSingular, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-background-padding`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-background-shapeFunction1`(value: EdgeSingular => rectangle | roundrectangle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-shape")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-background-shape`(value: PropertyValue[EdgeSingular, rectangle | roundrectangle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-shape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-background-shape`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-background-shape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-border-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-border-color`(value: PropertyValue[EdgeSingular, Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-border-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-border-opacityFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-opacity")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-border-opacity`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-border-opacity`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-border-styleFunction1`(value: EdgeSingular => LineStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-style")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-border-style`(value: PropertyValue[EdgeSingular, LineStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-border-style`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-border-widthFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-width")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-border-width`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-border-width`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-border-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-eventsFunction1`(value: EdgeSingular => yes | no): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-events")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-events`(value: PropertyValue[EdgeSingular, yes | no]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-events`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-halignFunction1`(value: EdgeSingular => left | center | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-halign")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-halign`(value: PropertyValue[EdgeSingular, left | center | right]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-halign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-halign`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-halign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-margin-xFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-margin-x")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-margin-x`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-margin-x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-margin-x`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-margin-x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-margin-yFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-margin-y")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-margin-y`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-margin-y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-margin-y`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-margin-y")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-max-widthFunction1`(value: EdgeSingular => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-max-width")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-max-width`(value: PropertyValue[EdgeSingular, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-max-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-max-width`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-max-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-opacityFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-opacity")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-opacity`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-opacity`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-outline-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-outline-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-outline-color`(value: PropertyValue[EdgeSingular, Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-outline-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-outline-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-outline-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-outline-opacityFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-outline-opacity")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-outline-opacity`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-outline-opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-outline-opacity`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-outline-opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-outline-widthFunction1`(value: EdgeSingular => Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-outline-width")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-outline-width`(value: PropertyValue[EdgeSingular, Double | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-outline-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-outline-width`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-outline-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-rotationFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-rotation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-rotation`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-rotation`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-shadow-blurFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-blur")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-shadow-blur`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-blur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-shadow-blur`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-blur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-shadow-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-shadow-color`(value: PropertyValue[EdgeSingular, Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-shadow-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-shadow-offset-xFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-offset-x")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-shadow-offset-x`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-offset-x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-shadow-offset-x`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-offset-x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-shadow-offset-yFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-offset-y")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-shadow-offset-y`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-offset-y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-shadow-offset-y`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-offset-y")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-shadow-opacityFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-opacity")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-shadow-opacity`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-shadow-opacity`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-shadow-opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-transformFunction1`(value: EdgeSingular => TextTranformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-transform")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-transform`(value: PropertyValue[EdgeSingular, TextTranformation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-transform`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-transform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-valignFunction1`(value: EdgeSingular => top | center | bottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-valign")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-valign`(value: PropertyValue[EdgeSingular, top | center | bottom]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-valign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-valign`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-valign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-wrapFunction1`(value: EdgeSingular => none | wrap | ellipsis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-wrap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withText-wrap`(value: PropertyValue[EdgeSingular, none | wrap | ellipsis]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-wrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-wrap`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-wrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibilityFunction1(value: EdgeSingular => none | visible): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withVisibility(value: PropertyValue[EdgeSingular, none | visible]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidthFunction1(value: EdgeSingular => Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWidth(value: PropertyValueEdge[Double | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withZ-indexFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z-index")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withZ-index`(value: PropertyValue[EdgeSingular, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z-index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutZ-index`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z-index")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

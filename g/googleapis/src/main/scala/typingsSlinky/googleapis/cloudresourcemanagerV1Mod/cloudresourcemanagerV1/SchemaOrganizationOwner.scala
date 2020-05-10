@@ -20,10 +20,29 @@ trait SchemaOrganizationOwner extends js.Object {
 
 object SchemaOrganizationOwner {
   @scala.inline
-  def apply(directoryCustomerId: String = null): SchemaOrganizationOwner = {
+  def apply(): SchemaOrganizationOwner = {
     val __obj = js.Dynamic.literal()
-    if (directoryCustomerId != null) __obj.updateDynamic("directoryCustomerId")(directoryCustomerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrganizationOwner]
   }
+  @scala.inline
+  implicit class SchemaOrganizationOwnerOps[Self <: SchemaOrganizationOwner] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryCustomerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryCustomerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoryCustomerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directoryCustomerId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

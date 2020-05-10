@@ -50,27 +50,119 @@ trait SubmitJobRequest extends js.Object {
 
 object SubmitJobRequest {
   @scala.inline
-  def apply(
-    jobDefinition: String,
-    jobName: String,
-    jobQueue: String,
-    arrayProperties: ArrayProperties = null,
-    containerOverrides: ContainerOverrides = null,
-    dependsOn: JobDependencyList = null,
-    nodeOverrides: NodeOverrides = null,
-    parameters: ParametersMap = null,
-    retryStrategy: RetryStrategy = null,
-    timeout: JobTimeout = null
-  ): SubmitJobRequest = {
+  def apply(jobDefinition: String, jobName: String, jobQueue: String): SubmitJobRequest = {
     val __obj = js.Dynamic.literal(jobDefinition = jobDefinition.asInstanceOf[js.Any], jobName = jobName.asInstanceOf[js.Any], jobQueue = jobQueue.asInstanceOf[js.Any])
-    if (arrayProperties != null) __obj.updateDynamic("arrayProperties")(arrayProperties.asInstanceOf[js.Any])
-    if (containerOverrides != null) __obj.updateDynamic("containerOverrides")(containerOverrides.asInstanceOf[js.Any])
-    if (dependsOn != null) __obj.updateDynamic("dependsOn")(dependsOn.asInstanceOf[js.Any])
-    if (nodeOverrides != null) __obj.updateDynamic("nodeOverrides")(nodeOverrides.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
-    if (retryStrategy != null) __obj.updateDynamic("retryStrategy")(retryStrategy.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubmitJobRequest]
   }
+  @scala.inline
+  implicit class SubmitJobRequestOps[Self <: SubmitJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobDefinition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJobName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJobQueue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobQueue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrayProperties(value: ArrayProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerOverrides(value: ContainerOverrides): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerOverrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerOverrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependsOn(value: JobDependencyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependsOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependsOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependsOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeOverrides(value: NodeOverrides): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeOverrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeOverrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: ParametersMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryStrategy(value: RetryStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: JobTimeout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

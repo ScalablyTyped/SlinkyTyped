@@ -1,0 +1,43 @@
+package typingsSlinky.awsSdkClientS3Browser.typesTransitionMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait UnmarshalledTransition extends Transition {
+  /**
+    * <p>Indicates at what date the object is to be moved or deleted. Should be in GMT ISO 8601 Format.</p>
+    */
+  @JSName("Date")
+  var Date_UnmarshalledTransition: js.UndefOr[js.Date] = js.native
+}
+
+object UnmarshalledTransition {
+  @scala.inline
+  def apply(): UnmarshalledTransition = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[UnmarshalledTransition]
+  }
+  @scala.inline
+  implicit class UnmarshalledTransitionOps[Self <: UnmarshalledTransition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Date")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

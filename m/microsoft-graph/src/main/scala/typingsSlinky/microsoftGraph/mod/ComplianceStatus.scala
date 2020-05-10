@@ -19,22 +19,20 @@ trait ComplianceStatus extends js.Object
 
 object ComplianceStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def compliant: typingsSlinky.microsoftGraph.microsoftGraphStrings.compliant = "compliant".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.compliant]
   @scala.inline
-  def compliant: typingsSlinky.microsoftGraph.microsoftGraphStrings.compliant = this.cast("compliant")
+  def conflict: typingsSlinky.microsoftGraph.microsoftGraphStrings.conflict = "conflict".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.conflict]
   @scala.inline
-  def conflict: typingsSlinky.microsoftGraph.microsoftGraphStrings.conflict = this.cast("conflict")
+  def error: typingsSlinky.microsoftGraph.microsoftGraphStrings.error = "error".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.error]
   @scala.inline
-  def error: typingsSlinky.microsoftGraph.microsoftGraphStrings.error = this.cast("error")
+  def nonCompliant: typingsSlinky.microsoftGraph.microsoftGraphStrings.nonCompliant = "nonCompliant".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.nonCompliant]
   @scala.inline
-  def nonCompliant: typingsSlinky.microsoftGraph.microsoftGraphStrings.nonCompliant = this.cast("nonCompliant")
+  def notApplicable: typingsSlinky.microsoftGraph.microsoftGraphStrings.notApplicable = "notApplicable".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notApplicable]
   @scala.inline
-  def notApplicable: typingsSlinky.microsoftGraph.microsoftGraphStrings.notApplicable = this.cast("notApplicable")
+  def notAssigned: typingsSlinky.microsoftGraph.microsoftGraphStrings.notAssigned = "notAssigned".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notAssigned]
   @scala.inline
-  def notAssigned: typingsSlinky.microsoftGraph.microsoftGraphStrings.notAssigned = this.cast("notAssigned")
+  def remediated: typingsSlinky.microsoftGraph.microsoftGraphStrings.remediated = "remediated".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.remediated]
   @scala.inline
-  def remediated: typingsSlinky.microsoftGraph.microsoftGraphStrings.remediated = this.cast("remediated")
-  @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
 }
 

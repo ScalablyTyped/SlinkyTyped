@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
+@js.native
 trait CustomDataValidation extends js.Object {
   /**
     *
@@ -17,15 +18,28 @@ trait CustomDataValidation extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var formula: String
+  var formula: String = js.native
 }
 
 object CustomDataValidation {
   @scala.inline
   def apply(formula: String): CustomDataValidation = {
     val __obj = js.Dynamic.literal(formula = formula.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CustomDataValidation]
   }
+  @scala.inline
+  implicit class CustomDataValidationOps[Self <: CustomDataValidation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormula(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

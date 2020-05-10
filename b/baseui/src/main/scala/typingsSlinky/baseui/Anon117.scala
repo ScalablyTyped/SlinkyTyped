@@ -7,18 +7,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Anon117 extends js.Object {
-  var dialCode: Plussign352
-  var id: LU
-  var label: Luxembourg
+  var dialCode: Plussign352 = js.native
+  var id: LU = js.native
+  var label: Luxembourg = js.native
 }
 
 object Anon117 {
   @scala.inline
   def apply(dialCode: Plussign352, id: LU, label: Luxembourg): Anon117 = {
     val __obj = js.Dynamic.literal(dialCode = dialCode.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Anon117]
   }
+  @scala.inline
+  implicit class Anon117Ops[Self <: Anon117] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDialCode(value: Plussign352): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: LU): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: Luxembourg): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

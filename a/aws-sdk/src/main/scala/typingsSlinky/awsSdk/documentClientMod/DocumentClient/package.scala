@@ -63,7 +63,7 @@ package object DocumentClient {
     - java.lang.String
   */
   type BillingMode = typingsSlinky.awsSdk.documentClientMod.DocumentClient._BillingMode | java.lang.String
-  type BinaryAttributeValue = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.documentClientMod.DocumentClient.Blob | java.lang.String
+  type BinaryAttributeValue = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.documentClientMod.DocumentClient.Blob | java.lang.String
   type BinarySetAttributeValue = js.Array[typingsSlinky.awsSdk.documentClientMod.DocumentClient.BinaryAttributeValue]
   type BooleanAttributeValue = scala.Boolean
   type BooleanObject = scala.Boolean
@@ -394,5 +394,5 @@ package object DocumentClient {
     - typingsSlinky.std.Float64Array
     - typingsSlinky.node.streamMod.Stream
   */
-  type binaryType = typingsSlinky.awsSdk.documentClientMod.DocumentClient._binaryType | typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.DataView | scala.scalajs.js.typedarray.Int8Array | scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8ClampedArray | scala.scalajs.js.typedarray.Int16Array | scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Int32Array | scala.scalajs.js.typedarray.Uint32Array | scala.scalajs.js.typedarray.Float32Array | scala.scalajs.js.typedarray.Float64Array | typingsSlinky.node.streamMod.Stream
+  type binaryType = typingsSlinky.awsSdk.documentClientMod.DocumentClient._binaryType | typingsSlinky.node.Buffer | js.typedarray.ArrayBuffer | js.typedarray.DataView | js.typedarray.Int8Array | js.typedarray.Uint8Array | js.typedarray.Uint8ClampedArray | js.typedarray.Int16Array | js.typedarray.Uint16Array | js.typedarray.Int32Array | js.typedarray.Uint32Array | js.typedarray.Float32Array | js.typedarray.Float64Array | typingsSlinky.node.streamMod.Stream
 }

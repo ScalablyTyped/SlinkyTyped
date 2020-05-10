@@ -28,7 +28,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 7.9.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -48,21 +48,21 @@ class ListType protected () extends EntityType {
   @JSName("model")
   var model_FListType: IModel = js.native
   @JSName("containerAsAppServiceActionParameter")
-  def containerAsAppServiceActionParameter_MListType(): AppServiceActionParameter = js.native
+  def containerAsAppServiceActionParameter_MListType: AppServiceActionParameter = js.native
   @JSName("containerAsAppServiceAction")
-  def containerAsAppServiceAction_MListType(): AppServiceAction = js.native
+  def containerAsAppServiceAction_MListType: AppServiceAction = js.native
   @JSName("containerAsConstant")
-  def containerAsConstant_MListType(): Constant = js.native
+  def containerAsConstant_MListType: Constant = js.native
   @JSName("containerAsDataSetParameter")
-  def containerAsDataSetParameter_MListType(): DataSetParameter = js.native
+  def containerAsDataSetParameter_MListType: DataSetParameter = js.native
   @JSName("containerAsDocumentTemplateParameter")
-  def containerAsDocumentTemplateParameter_MListType(): DocumentTemplateParameter = js.native
+  def containerAsDocumentTemplateParameter_MListType: DocumentTemplateParameter = js.native
   @JSName("containerAsImportMapping")
-  def containerAsImportMapping_MListType(): ImportMapping = js.native
+  def containerAsImportMapping_MListType: ImportMapping = js.native
   @JSName("containerAsMicroflowBase")
-  def containerAsMicroflowBase_MListType(): MicroflowBase = js.native
+  def containerAsMicroflowBase_MListType: MicroflowBase = js.native
   @JSName("containerAsMicroflowParameterBase")
-  def containerAsMicroflowParameterBase_MListType(): MicroflowParameterBase = js.native
+  def containerAsMicroflowParameterBase_MListType: MicroflowParameterBase = js.native
 }
 
 /* static members */

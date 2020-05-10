@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation._
 @JSImport("kdbxweb", "Random")
 @js.native
 object Random extends js.Object {
-  def getBytes(len: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def getBytes(len: Double): js.typedarray.Uint8Array = js.native
 }
 

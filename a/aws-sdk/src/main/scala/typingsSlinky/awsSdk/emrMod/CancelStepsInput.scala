@@ -22,14 +22,41 @@ trait CancelStepsInput extends js.Object {
 
 object CancelStepsInput {
   @scala.inline
-  def apply(
-    ClusterId: XmlStringMaxLen256,
-    StepIds: StepIdsList,
-    StepCancellationOption: StepCancellationOption = null
-  ): CancelStepsInput = {
+  def apply(ClusterId: XmlStringMaxLen256, StepIds: StepIdsList): CancelStepsInput = {
     val __obj = js.Dynamic.literal(ClusterId = ClusterId.asInstanceOf[js.Any], StepIds = StepIds.asInstanceOf[js.Any])
-    if (StepCancellationOption != null) __obj.updateDynamic("StepCancellationOption")(StepCancellationOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[CancelStepsInput]
   }
+  @scala.inline
+  implicit class CancelStepsInputOps[Self <: CancelStepsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterId(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStepIds(value: StepIdsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStepCancellationOption(value: StepCancellationOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepCancellationOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepCancellationOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepCancellationOption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

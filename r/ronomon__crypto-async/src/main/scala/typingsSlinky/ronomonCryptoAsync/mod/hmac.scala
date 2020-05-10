@@ -1,7 +1,6 @@
 package typingsSlinky.ronomonCryptoAsync.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +24,7 @@ object hmac extends js.Object {
     algorithm: String,
     key: Buffer,
     source: Buffer,
-    cb: js.Function2[/* error */ js.UndefOr[Error], /* hmac */ Buffer, Unit]
+    cb: js.Function2[/* error */ js.UndefOr[js.Error], /* hmac */ Buffer, Unit]
   ): Unit = js.native
 }
 

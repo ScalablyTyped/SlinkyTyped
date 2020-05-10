@@ -1,5 +1,6 @@
 package typingsSlinky.simpleOauth2
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.simpleOauth2.mod.AuthorizationTokenConfig
 import typingsSlinky.simpleOauth2.mod.Token
 import typingsSlinky.simpleOauth2.mod.WreckHttpOptions
@@ -15,7 +16,7 @@ trait AnonAuthorizeURL[ClientIdName /* <: String */] extends js.Object {
     */
   def authorizeURL(): String = js.native
   def authorizeURL(
-    params: typingsSlinky.simpleOauth2.simpleOauth2Strings.AnonAuthorizeURL with js.Any with AnonRedirecturi
+    params: typingsSlinky.simpleOauth2.simpleOauth2Strings.AnonAuthorizeURL with TopLevel[js.Any] with AnonRedirecturi
   ): String = js.native
   /** Returns the Access Token object */
   def getToken(params: AuthorizationTokenConfig): js.Promise[Token] = js.native

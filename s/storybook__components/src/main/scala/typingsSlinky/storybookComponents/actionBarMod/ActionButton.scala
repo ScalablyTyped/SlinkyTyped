@@ -1,10 +1,10 @@
 package typingsSlinky.storybookComponents.actionBarMod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLButtonElement
 import typingsSlinky.emotionStyledBase.mod.StyledComponent
 import typingsSlinky.react.mod.ButtonHTMLAttributes
 import typingsSlinky.react.mod.DetailedHTMLProps
-import typingsSlinky.std.HTMLButtonElement
 import typingsSlinky.storybookComponents.AnonDisabled
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js

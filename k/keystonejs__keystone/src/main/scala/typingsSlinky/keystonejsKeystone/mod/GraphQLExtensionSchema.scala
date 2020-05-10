@@ -5,24 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GraphQLExtensionSchema extends js.Object {
-  var mutations: js.UndefOr[js.Array[GraphQLExtension[_, _]]] = js.undefined
-  var queries: js.UndefOr[js.Array[GraphQLExtension[_, _]]] = js.undefined
-  var types: js.UndefOr[js.Array[AnonType]] = js.undefined
+  var mutations: js.UndefOr[js.Array[GraphQLExtension[_, _]]] = js.native
+  var queries: js.UndefOr[js.Array[GraphQLExtension[_, _]]] = js.native
+  var types: js.UndefOr[js.Array[AnonType]] = js.native
 }
 
 object GraphQLExtensionSchema {
   @scala.inline
-  def apply(
-    mutations: js.Array[GraphQLExtension[_, _]] = null,
-    queries: js.Array[GraphQLExtension[_, _]] = null,
-    types: js.Array[AnonType] = null
-  ): GraphQLExtensionSchema = {
+  def apply(): GraphQLExtensionSchema = {
     val __obj = js.Dynamic.literal()
-    if (mutations != null) __obj.updateDynamic("mutations")(mutations.asInstanceOf[js.Any])
-    if (queries != null) __obj.updateDynamic("queries")(queries.asInstanceOf[js.Any])
-    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLExtensionSchema]
   }
+  @scala.inline
+  implicit class GraphQLExtensionSchemaOps[Self <: GraphQLExtensionSchema] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMutations(value: js.Array[GraphQLExtension[_, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMutations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueries(value: js.Array[GraphQLExtension[_, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypes(value: js.Array[AnonType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

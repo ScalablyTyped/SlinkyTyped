@@ -13,12 +13,10 @@ trait HorizontalAlignment extends js.Object
 
 object HorizontalAlignment {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.center = "center".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.center]
   @scala.inline
-  def center: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.center = this.cast("center")
+  def left: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.left = "left".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.right = this.cast("right")
+  def right: typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.right = "right".asInstanceOf[typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.right]
 }
 

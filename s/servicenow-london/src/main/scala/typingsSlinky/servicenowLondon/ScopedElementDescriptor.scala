@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ScopedElementDescriptor extends js.Object {
   /**
     * Returns the encryption type used for attachments on the element's table.
@@ -22,7 +23,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(isEdge);
     * // null
     */
-  def getAttachmentEncryptionType(): String
+  def getAttachmentEncryptionType(): String = js.native
   /**
     * Returns the element's encryption type.
     *
@@ -40,7 +41,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(isEdge);
     * // null
     */
-  def getEncryptionType(): String
+  def getEncryptionType(): String = js.native
   /**
     * Returns the element's internal data type.
     *
@@ -56,7 +57,7 @@ trait ScopedElementDescriptor extends js.Object {
     * var isEdge = ed.getInternalType();
     * gs.info(isEdge);
     */
-  def getInternalType(): String
+  def getInternalType(): String = js.native
   /**
     * Returns the element's label.
     *
@@ -73,7 +74,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(isEdge);
     * // Priority
     */
-  def getLabel(): String
+  def getLabel(): String = js.native
   /**
     * Returns the element's length.
     *
@@ -90,7 +91,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(isEdge);
     * // 40
     */
-  def getLength(): Double
+  def getLength(): Double = js.native
   /**
     * Returns the element's name.
     *
@@ -107,7 +108,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(isEdge);
     * // priority
     */
-  def getName(): String
+  def getName(): String = js.native
   /**
     * Returns the element's plural label.
     *
@@ -120,7 +121,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(ed.getPlural());
     * // Incidents
     */
-  def getPlural(): String
+  def getPlural(): String = js.native
   /**
     * Returns true if an encrypted attachment has been added to the table.
     *
@@ -137,7 +138,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(isEdge);
     * // false
     */
-  def hasAttachmentsEncrypted(): Boolean
+  def hasAttachmentsEncrypted(): Boolean = js.native
   /**
     * Returns true if the element is an automatically generated or system field.
     *
@@ -153,7 +154,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(isEdge);
     * // false
     */
-  def isAutoOrSysID(): Boolean
+  def isAutoOrSysID(): Boolean = js.native
   /**
     * Returns true if the element is defined as a dropdown choice in its dictionary
     * definition.
@@ -173,7 +174,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(isChoiceTable);
     * // true
     */
-  def isChoiceTable(): Boolean
+  def isChoiceTable(): Boolean = js.native
   /**
     * Returns true if an element is encrypted.
     *
@@ -190,7 +191,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(isEdge)
     * // false
     */
-  def isEdgeEncrypted(): Boolean
+  def isEdgeEncrypted(): Boolean = js.native
   /**
     * Returns true if the element is a virtual element.
     *
@@ -210,7 +211,7 @@ trait ScopedElementDescriptor extends js.Object {
     * gs.info(isVirtual);
     * // false
     */
-  def isVirtual(): Boolean
+  def isVirtual(): Boolean = js.native
 }
 
 object ScopedElementDescriptor {
@@ -230,8 +231,87 @@ object ScopedElementDescriptor {
     isVirtual: () => Boolean
   ): ScopedElementDescriptor = {
     val __obj = js.Dynamic.literal(getAttachmentEncryptionType = js.Any.fromFunction0(getAttachmentEncryptionType), getEncryptionType = js.Any.fromFunction0(getEncryptionType), getInternalType = js.Any.fromFunction0(getInternalType), getLabel = js.Any.fromFunction0(getLabel), getLength = js.Any.fromFunction0(getLength), getName = js.Any.fromFunction0(getName), getPlural = js.Any.fromFunction0(getPlural), hasAttachmentsEncrypted = js.Any.fromFunction0(hasAttachmentsEncrypted), isAutoOrSysID = js.Any.fromFunction0(isAutoOrSysID), isChoiceTable = js.Any.fromFunction0(isChoiceTable), isEdgeEncrypted = js.Any.fromFunction0(isEdgeEncrypted), isVirtual = js.Any.fromFunction0(isVirtual))
-  
     __obj.asInstanceOf[ScopedElementDescriptor]
   }
+  @scala.inline
+  implicit class ScopedElementDescriptorOps[Self <: ScopedElementDescriptor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAttachmentEncryptionType(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttachmentEncryptionType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEncryptionType(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEncryptionType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetInternalType(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getInternalType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLabel(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLabel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLength(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLength")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPlural(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPlural")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHasAttachmentsEncrypted(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasAttachmentsEncrypted")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsAutoOrSysID(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAutoOrSysID")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsChoiceTable(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isChoiceTable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsEdgeEncrypted(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEdgeEncrypted")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsVirtual(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVirtual")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MSFIDOSignatureAssertion extends MSAssertion {
-  val signature: MSFIDOSignature
+  val signature: MSFIDOSignature = js.native
 }
 
 @JSGlobal("MSFIDOSignatureAssertion")

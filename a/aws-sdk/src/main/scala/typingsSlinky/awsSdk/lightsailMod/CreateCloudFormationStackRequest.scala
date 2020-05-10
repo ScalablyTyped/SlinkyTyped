@@ -16,8 +16,21 @@ object CreateCloudFormationStackRequest {
   @scala.inline
   def apply(instances: InstanceEntryList): CreateCloudFormationStackRequest = {
     val __obj = js.Dynamic.literal(instances = instances.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateCloudFormationStackRequest]
   }
+  @scala.inline
+  implicit class CreateCloudFormationStackRequestOps[Self <: CreateCloudFormationStackRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstances(value: InstanceEntryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

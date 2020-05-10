@@ -8,39 +8,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var annotate: js.UndefOr[Boolean] = js.undefined
-  var bare: js.UndefOr[Boolean] = js.undefined
-  var colSep: js.UndefOr[String] = js.undefined
-  var decimalMark: js.UndefOr[String] = js.undefined
-  var dir: js.UndefOr[ltr | rtl] = js.undefined
-  var display: js.UndefOr[`inline` | block] = js.undefined
-  var rowSep: js.UndefOr[String] = js.undefined
-  var standalone: js.UndefOr[Boolean] = js.undefined
+  var annotate: js.UndefOr[Boolean] = js.native
+  var bare: js.UndefOr[Boolean] = js.native
+  var colSep: js.UndefOr[String] = js.native
+  var decimalMark: js.UndefOr[String] = js.native
+  var dir: js.UndefOr[ltr | rtl] = js.native
+  var display: js.UndefOr[`inline` | block] = js.native
+  var rowSep: js.UndefOr[String] = js.native
+  var standalone: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    annotate: js.UndefOr[Boolean] = js.undefined,
-    bare: js.UndefOr[Boolean] = js.undefined,
-    colSep: String = null,
-    decimalMark: String = null,
-    dir: ltr | rtl = null,
-    display: `inline` | block = null,
-    rowSep: String = null,
-    standalone: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(annotate)) __obj.updateDynamic("annotate")(annotate.asInstanceOf[js.Any])
-    if (!js.isUndefined(bare)) __obj.updateDynamic("bare")(bare.asInstanceOf[js.Any])
-    if (colSep != null) __obj.updateDynamic("colSep")(colSep.asInstanceOf[js.Any])
-    if (decimalMark != null) __obj.updateDynamic("decimalMark")(decimalMark.asInstanceOf[js.Any])
-    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (rowSep != null) __obj.updateDynamic("rowSep")(rowSep.asInstanceOf[js.Any])
-    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnnotate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnnotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBare(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bare")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBare: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bare")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColSep(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colSep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColSep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colSep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecimalMark(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalMark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecimalMark: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimalMark")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDir(value: ltr | rtl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: `inline` | block): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowSep(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowSep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStandalone(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standalone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandalone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standalone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

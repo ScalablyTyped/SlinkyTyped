@@ -26,18 +26,65 @@ trait CertificateInfo extends js.Object {
 
 object CertificateInfo {
   @scala.inline
-  def apply(
-    CertificateId: CertificateId = null,
-    CommonName: CertificateCN = null,
-    ExpiryDateTime: js.Date = null,
-    State: CertificateState = null
-  ): CertificateInfo = {
+  def apply(): CertificateInfo = {
     val __obj = js.Dynamic.literal()
-    if (CertificateId != null) __obj.updateDynamic("CertificateId")(CertificateId.asInstanceOf[js.Any])
-    if (CommonName != null) __obj.updateDynamic("CommonName")(CommonName.asInstanceOf[js.Any])
-    if (ExpiryDateTime != null) __obj.updateDynamic("ExpiryDateTime")(ExpiryDateTime.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateInfo]
   }
+  @scala.inline
+  implicit class CertificateInfoOps[Self <: CertificateInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateId(value: CertificateId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommonName(value: CertificateCN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommonName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommonName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpiryDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpiryDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpiryDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpiryDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: CertificateState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

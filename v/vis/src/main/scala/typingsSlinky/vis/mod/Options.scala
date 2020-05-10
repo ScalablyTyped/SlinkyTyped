@@ -4,61 +4,209 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var autoResize: js.UndefOr[Boolean] = js.undefined
-  var clickToUse: js.UndefOr[Boolean] = js.undefined
-  var configure: js.UndefOr[js.Any] = js.undefined
+  var autoResize: js.UndefOr[Boolean] = js.native
+  var clickToUse: js.UndefOr[Boolean] = js.native
+  var configure: js.UndefOr[js.Any] = js.native
    // http://visjs.org/docs/network/configure.html#
-  var edges: js.UndefOr[EdgeOptions] = js.undefined
-  var groups: js.UndefOr[js.Any] = js.undefined
-  var height: js.UndefOr[String] = js.undefined
+  var edges: js.UndefOr[EdgeOptions] = js.native
+  var groups: js.UndefOr[js.Any] = js.native
+  var height: js.UndefOr[String] = js.native
    // http://visjs.org/docs/network/layout.html
-  var interaction: js.UndefOr[js.Any] = js.undefined
-  var layout: js.UndefOr[js.Any] = js.undefined
-  var locale: js.UndefOr[String] = js.undefined
-  var locales: js.UndefOr[Locales] = js.undefined
+  var interaction: js.UndefOr[js.Any] = js.native
+  var layout: js.UndefOr[js.Any] = js.native
+  var locale: js.UndefOr[String] = js.native
+  var locales: js.UndefOr[Locales] = js.native
    // visjs.org/docs/network/interaction.html?keywords=edges
-  var manipulation: js.UndefOr[js.Any] = js.undefined
-  var nodes: js.UndefOr[NodeOptions] = js.undefined
+  var manipulation: js.UndefOr[js.Any] = js.native
+  var nodes: js.UndefOr[NodeOptions] = js.native
    // http://visjs.org/docs/network/manipulation.html#
-  var physics: js.UndefOr[js.Any] = js.undefined
-  var width: js.UndefOr[String] = js.undefined
+  var physics: js.UndefOr[js.Any] = js.native
+  var width: js.UndefOr[String] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    autoResize: js.UndefOr[Boolean] = js.undefined,
-    clickToUse: js.UndefOr[Boolean] = js.undefined,
-    configure: js.Any = null,
-    edges: EdgeOptions = null,
-    groups: js.Any = null,
-    height: String = null,
-    interaction: js.Any = null,
-    layout: js.Any = null,
-    locale: String = null,
-    locales: Locales = null,
-    manipulation: js.Any = null,
-    nodes: NodeOptions = null,
-    physics: js.Any = null,
-    width: String = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoResize)) __obj.updateDynamic("autoResize")(autoResize.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickToUse)) __obj.updateDynamic("clickToUse")(clickToUse.asInstanceOf[js.Any])
-    if (configure != null) __obj.updateDynamic("configure")(configure.asInstanceOf[js.Any])
-    if (edges != null) __obj.updateDynamic("edges")(edges.asInstanceOf[js.Any])
-    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (interaction != null) __obj.updateDynamic("interaction")(interaction.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (locales != null) __obj.updateDynamic("locales")(locales.asInstanceOf[js.Any])
-    if (manipulation != null) __obj.updateDynamic("manipulation")(manipulation.asInstanceOf[js.Any])
-    if (nodes != null) __obj.updateDynamic("nodes")(nodes.asInstanceOf[js.Any])
-    if (physics != null) __obj.updateDynamic("physics")(physics.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoResize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClickToUse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickToUse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickToUse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickToUse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigure(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdges(value: EdgeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroups(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInteraction(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInteraction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interaction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocales(value: Locales): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocales: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locales")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManipulation(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manipulation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManipulation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manipulation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodes(value: NodeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhysics(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("physics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhysics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("physics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

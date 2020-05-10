@@ -16,18 +16,16 @@ trait UnitOfTrim extends js.Object
 
 object UnitOfTrim {
   @scala.inline
-  def all: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.all = this.cast("all")
+  def all: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.all = "all".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.all]
   @scala.inline
-  def both: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.both = this.cast("both")
+  def both: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.both = "both".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.both]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `final`: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.`final` = "final".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.`final`]
   @scala.inline
-  def `final`: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.`final` = this.cast("final")
+  def large: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.large = "large".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.large]
   @scala.inline
-  def large: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.large = this.cast("large")
+  def mid: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.mid = "mid".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.mid]
   @scala.inline
-  def mid: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.mid = this.cast("mid")
-  @scala.inline
-  def small: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.small = this.cast("small")
+  def small: typingsSlinky.momentDurationFormat.momentDurationFormatStrings.small = "small".asInstanceOf[typingsSlinky.momentDurationFormat.momentDurationFormatStrings.small]
 }
 

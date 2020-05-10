@@ -191,368 +191,366 @@ trait CurrencyType extends js.Object
 
 object CurrencyType {
   @scala.inline
-  def AED: typingsSlinky.squareConnect.squareConnectStrings.AED = this.cast("AED")
+  def AED: typingsSlinky.squareConnect.squareConnectStrings.AED = "AED".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.AED]
   @scala.inline
-  def AFN: typingsSlinky.squareConnect.squareConnectStrings.AFN = this.cast("AFN")
+  def AFN: typingsSlinky.squareConnect.squareConnectStrings.AFN = "AFN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.AFN]
   @scala.inline
-  def ALL: typingsSlinky.squareConnect.squareConnectStrings.ALL = this.cast("ALL")
+  def ALL: typingsSlinky.squareConnect.squareConnectStrings.ALL = "ALL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ALL]
   @scala.inline
-  def AMD: typingsSlinky.squareConnect.squareConnectStrings.AMD = this.cast("AMD")
+  def AMD: typingsSlinky.squareConnect.squareConnectStrings.AMD = "AMD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.AMD]
   @scala.inline
-  def ANG: typingsSlinky.squareConnect.squareConnectStrings.ANG = this.cast("ANG")
+  def ANG: typingsSlinky.squareConnect.squareConnectStrings.ANG = "ANG".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ANG]
   @scala.inline
-  def AOA: typingsSlinky.squareConnect.squareConnectStrings.AOA = this.cast("AOA")
+  def AOA: typingsSlinky.squareConnect.squareConnectStrings.AOA = "AOA".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.AOA]
   @scala.inline
-  def ARS: typingsSlinky.squareConnect.squareConnectStrings.ARS = this.cast("ARS")
+  def ARS: typingsSlinky.squareConnect.squareConnectStrings.ARS = "ARS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ARS]
   @scala.inline
-  def AUD: typingsSlinky.squareConnect.squareConnectStrings.AUD = this.cast("AUD")
+  def AUD: typingsSlinky.squareConnect.squareConnectStrings.AUD = "AUD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.AUD]
   @scala.inline
-  def AWG: typingsSlinky.squareConnect.squareConnectStrings.AWG = this.cast("AWG")
+  def AWG: typingsSlinky.squareConnect.squareConnectStrings.AWG = "AWG".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.AWG]
   @scala.inline
-  def AZN: typingsSlinky.squareConnect.squareConnectStrings.AZN = this.cast("AZN")
+  def AZN: typingsSlinky.squareConnect.squareConnectStrings.AZN = "AZN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.AZN]
   @scala.inline
-  def BAM: typingsSlinky.squareConnect.squareConnectStrings.BAM = this.cast("BAM")
+  def BAM: typingsSlinky.squareConnect.squareConnectStrings.BAM = "BAM".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BAM]
   @scala.inline
-  def BBD: typingsSlinky.squareConnect.squareConnectStrings.BBD = this.cast("BBD")
+  def BBD: typingsSlinky.squareConnect.squareConnectStrings.BBD = "BBD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BBD]
   @scala.inline
-  def BDT: typingsSlinky.squareConnect.squareConnectStrings.BDT = this.cast("BDT")
+  def BDT: typingsSlinky.squareConnect.squareConnectStrings.BDT = "BDT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BDT]
   @scala.inline
-  def BGN: typingsSlinky.squareConnect.squareConnectStrings.BGN = this.cast("BGN")
+  def BGN: typingsSlinky.squareConnect.squareConnectStrings.BGN = "BGN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BGN]
   @scala.inline
-  def BHD: typingsSlinky.squareConnect.squareConnectStrings.BHD = this.cast("BHD")
+  def BHD: typingsSlinky.squareConnect.squareConnectStrings.BHD = "BHD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BHD]
   @scala.inline
-  def BIF: typingsSlinky.squareConnect.squareConnectStrings.BIF = this.cast("BIF")
+  def BIF: typingsSlinky.squareConnect.squareConnectStrings.BIF = "BIF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BIF]
   @scala.inline
-  def BMD: typingsSlinky.squareConnect.squareConnectStrings.BMD = this.cast("BMD")
+  def BMD: typingsSlinky.squareConnect.squareConnectStrings.BMD = "BMD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BMD]
   @scala.inline
-  def BND: typingsSlinky.squareConnect.squareConnectStrings.BND = this.cast("BND")
+  def BND: typingsSlinky.squareConnect.squareConnectStrings.BND = "BND".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BND]
   @scala.inline
-  def BOB: typingsSlinky.squareConnect.squareConnectStrings.BOB = this.cast("BOB")
+  def BOB: typingsSlinky.squareConnect.squareConnectStrings.BOB = "BOB".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BOB]
   @scala.inline
-  def BOV: typingsSlinky.squareConnect.squareConnectStrings.BOV = this.cast("BOV")
+  def BOV: typingsSlinky.squareConnect.squareConnectStrings.BOV = "BOV".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BOV]
   @scala.inline
-  def BRL: typingsSlinky.squareConnect.squareConnectStrings.BRL = this.cast("BRL")
+  def BRL: typingsSlinky.squareConnect.squareConnectStrings.BRL = "BRL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BRL]
   @scala.inline
-  def BSD: typingsSlinky.squareConnect.squareConnectStrings.BSD = this.cast("BSD")
+  def BSD: typingsSlinky.squareConnect.squareConnectStrings.BSD = "BSD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BSD]
   @scala.inline
-  def BTC: typingsSlinky.squareConnect.squareConnectStrings.BTC = this.cast("BTC")
+  def BTC: typingsSlinky.squareConnect.squareConnectStrings.BTC = "BTC".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BTC]
   @scala.inline
-  def BTN: typingsSlinky.squareConnect.squareConnectStrings.BTN = this.cast("BTN")
+  def BTN: typingsSlinky.squareConnect.squareConnectStrings.BTN = "BTN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BTN]
   @scala.inline
-  def BWP: typingsSlinky.squareConnect.squareConnectStrings.BWP = this.cast("BWP")
+  def BWP: typingsSlinky.squareConnect.squareConnectStrings.BWP = "BWP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BWP]
   @scala.inline
-  def BYR: typingsSlinky.squareConnect.squareConnectStrings.BYR = this.cast("BYR")
+  def BYR: typingsSlinky.squareConnect.squareConnectStrings.BYR = "BYR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BYR]
   @scala.inline
-  def BZD: typingsSlinky.squareConnect.squareConnectStrings.BZD = this.cast("BZD")
+  def BZD: typingsSlinky.squareConnect.squareConnectStrings.BZD = "BZD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.BZD]
   @scala.inline
-  def CAD: typingsSlinky.squareConnect.squareConnectStrings.CAD = this.cast("CAD")
+  def CAD: typingsSlinky.squareConnect.squareConnectStrings.CAD = "CAD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CAD]
   @scala.inline
-  def CDF: typingsSlinky.squareConnect.squareConnectStrings.CDF = this.cast("CDF")
+  def CDF: typingsSlinky.squareConnect.squareConnectStrings.CDF = "CDF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CDF]
   @scala.inline
-  def CHE: typingsSlinky.squareConnect.squareConnectStrings.CHE = this.cast("CHE")
+  def CHE: typingsSlinky.squareConnect.squareConnectStrings.CHE = "CHE".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CHE]
   @scala.inline
-  def CHF: typingsSlinky.squareConnect.squareConnectStrings.CHF = this.cast("CHF")
+  def CHF: typingsSlinky.squareConnect.squareConnectStrings.CHF = "CHF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CHF]
   @scala.inline
-  def CHW: typingsSlinky.squareConnect.squareConnectStrings.CHW = this.cast("CHW")
+  def CHW: typingsSlinky.squareConnect.squareConnectStrings.CHW = "CHW".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CHW]
   @scala.inline
-  def CLF: typingsSlinky.squareConnect.squareConnectStrings.CLF = this.cast("CLF")
+  def CLF: typingsSlinky.squareConnect.squareConnectStrings.CLF = "CLF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CLF]
   @scala.inline
-  def CLP: typingsSlinky.squareConnect.squareConnectStrings.CLP = this.cast("CLP")
+  def CLP: typingsSlinky.squareConnect.squareConnectStrings.CLP = "CLP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CLP]
   @scala.inline
-  def CNY: typingsSlinky.squareConnect.squareConnectStrings.CNY = this.cast("CNY")
+  def CNY: typingsSlinky.squareConnect.squareConnectStrings.CNY = "CNY".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CNY]
   @scala.inline
-  def COP: typingsSlinky.squareConnect.squareConnectStrings.COP = this.cast("COP")
+  def COP: typingsSlinky.squareConnect.squareConnectStrings.COP = "COP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.COP]
   @scala.inline
-  def COU: typingsSlinky.squareConnect.squareConnectStrings.COU = this.cast("COU")
+  def COU: typingsSlinky.squareConnect.squareConnectStrings.COU = "COU".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.COU]
   @scala.inline
-  def CRC: typingsSlinky.squareConnect.squareConnectStrings.CRC = this.cast("CRC")
+  def CRC: typingsSlinky.squareConnect.squareConnectStrings.CRC = "CRC".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CRC]
   @scala.inline
-  def CUC: typingsSlinky.squareConnect.squareConnectStrings.CUC = this.cast("CUC")
+  def CUC: typingsSlinky.squareConnect.squareConnectStrings.CUC = "CUC".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CUC]
   @scala.inline
-  def CUP: typingsSlinky.squareConnect.squareConnectStrings.CUP = this.cast("CUP")
+  def CUP: typingsSlinky.squareConnect.squareConnectStrings.CUP = "CUP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CUP]
   @scala.inline
-  def CVE: typingsSlinky.squareConnect.squareConnectStrings.CVE = this.cast("CVE")
+  def CVE: typingsSlinky.squareConnect.squareConnectStrings.CVE = "CVE".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CVE]
   @scala.inline
-  def CZK: typingsSlinky.squareConnect.squareConnectStrings.CZK = this.cast("CZK")
+  def CZK: typingsSlinky.squareConnect.squareConnectStrings.CZK = "CZK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.CZK]
   @scala.inline
-  def DJF: typingsSlinky.squareConnect.squareConnectStrings.DJF = this.cast("DJF")
+  def DJF: typingsSlinky.squareConnect.squareConnectStrings.DJF = "DJF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.DJF]
   @scala.inline
-  def DKK: typingsSlinky.squareConnect.squareConnectStrings.DKK = this.cast("DKK")
+  def DKK: typingsSlinky.squareConnect.squareConnectStrings.DKK = "DKK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.DKK]
   @scala.inline
-  def DOP: typingsSlinky.squareConnect.squareConnectStrings.DOP = this.cast("DOP")
+  def DOP: typingsSlinky.squareConnect.squareConnectStrings.DOP = "DOP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.DOP]
   @scala.inline
-  def DZD: typingsSlinky.squareConnect.squareConnectStrings.DZD = this.cast("DZD")
+  def DZD: typingsSlinky.squareConnect.squareConnectStrings.DZD = "DZD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.DZD]
   @scala.inline
-  def EGP: typingsSlinky.squareConnect.squareConnectStrings.EGP = this.cast("EGP")
+  def EGP: typingsSlinky.squareConnect.squareConnectStrings.EGP = "EGP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.EGP]
   @scala.inline
-  def ERN: typingsSlinky.squareConnect.squareConnectStrings.ERN = this.cast("ERN")
+  def ERN: typingsSlinky.squareConnect.squareConnectStrings.ERN = "ERN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ERN]
   @scala.inline
-  def ETB: typingsSlinky.squareConnect.squareConnectStrings.ETB = this.cast("ETB")
+  def ETB: typingsSlinky.squareConnect.squareConnectStrings.ETB = "ETB".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ETB]
   @scala.inline
-  def EUR: typingsSlinky.squareConnect.squareConnectStrings.EUR = this.cast("EUR")
+  def EUR: typingsSlinky.squareConnect.squareConnectStrings.EUR = "EUR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.EUR]
   @scala.inline
-  def FJD: typingsSlinky.squareConnect.squareConnectStrings.FJD = this.cast("FJD")
+  def FJD: typingsSlinky.squareConnect.squareConnectStrings.FJD = "FJD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.FJD]
   @scala.inline
-  def FKP: typingsSlinky.squareConnect.squareConnectStrings.FKP = this.cast("FKP")
+  def FKP: typingsSlinky.squareConnect.squareConnectStrings.FKP = "FKP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.FKP]
   @scala.inline
-  def GBP: typingsSlinky.squareConnect.squareConnectStrings.GBP = this.cast("GBP")
+  def GBP: typingsSlinky.squareConnect.squareConnectStrings.GBP = "GBP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.GBP]
   @scala.inline
-  def GEL: typingsSlinky.squareConnect.squareConnectStrings.GEL = this.cast("GEL")
+  def GEL: typingsSlinky.squareConnect.squareConnectStrings.GEL = "GEL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.GEL]
   @scala.inline
-  def GHS: typingsSlinky.squareConnect.squareConnectStrings.GHS = this.cast("GHS")
+  def GHS: typingsSlinky.squareConnect.squareConnectStrings.GHS = "GHS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.GHS]
   @scala.inline
-  def GIP: typingsSlinky.squareConnect.squareConnectStrings.GIP = this.cast("GIP")
+  def GIP: typingsSlinky.squareConnect.squareConnectStrings.GIP = "GIP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.GIP]
   @scala.inline
-  def GMD: typingsSlinky.squareConnect.squareConnectStrings.GMD = this.cast("GMD")
+  def GMD: typingsSlinky.squareConnect.squareConnectStrings.GMD = "GMD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.GMD]
   @scala.inline
-  def GNF: typingsSlinky.squareConnect.squareConnectStrings.GNF = this.cast("GNF")
+  def GNF: typingsSlinky.squareConnect.squareConnectStrings.GNF = "GNF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.GNF]
   @scala.inline
-  def GTQ: typingsSlinky.squareConnect.squareConnectStrings.GTQ = this.cast("GTQ")
+  def GTQ: typingsSlinky.squareConnect.squareConnectStrings.GTQ = "GTQ".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.GTQ]
   @scala.inline
-  def GYD: typingsSlinky.squareConnect.squareConnectStrings.GYD = this.cast("GYD")
+  def GYD: typingsSlinky.squareConnect.squareConnectStrings.GYD = "GYD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.GYD]
   @scala.inline
-  def HKD: typingsSlinky.squareConnect.squareConnectStrings.HKD = this.cast("HKD")
+  def HKD: typingsSlinky.squareConnect.squareConnectStrings.HKD = "HKD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.HKD]
   @scala.inline
-  def HNL: typingsSlinky.squareConnect.squareConnectStrings.HNL = this.cast("HNL")
+  def HNL: typingsSlinky.squareConnect.squareConnectStrings.HNL = "HNL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.HNL]
   @scala.inline
-  def HRK: typingsSlinky.squareConnect.squareConnectStrings.HRK = this.cast("HRK")
+  def HRK: typingsSlinky.squareConnect.squareConnectStrings.HRK = "HRK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.HRK]
   @scala.inline
-  def HTG: typingsSlinky.squareConnect.squareConnectStrings.HTG = this.cast("HTG")
+  def HTG: typingsSlinky.squareConnect.squareConnectStrings.HTG = "HTG".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.HTG]
   @scala.inline
-  def HUF: typingsSlinky.squareConnect.squareConnectStrings.HUF = this.cast("HUF")
+  def HUF: typingsSlinky.squareConnect.squareConnectStrings.HUF = "HUF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.HUF]
   @scala.inline
-  def IDR: typingsSlinky.squareConnect.squareConnectStrings.IDR = this.cast("IDR")
+  def IDR: typingsSlinky.squareConnect.squareConnectStrings.IDR = "IDR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.IDR]
   @scala.inline
-  def ILS: typingsSlinky.squareConnect.squareConnectStrings.ILS = this.cast("ILS")
+  def ILS: typingsSlinky.squareConnect.squareConnectStrings.ILS = "ILS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ILS]
   @scala.inline
-  def INR: typingsSlinky.squareConnect.squareConnectStrings.INR = this.cast("INR")
+  def INR: typingsSlinky.squareConnect.squareConnectStrings.INR = "INR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.INR]
   @scala.inline
-  def IQD: typingsSlinky.squareConnect.squareConnectStrings.IQD = this.cast("IQD")
+  def IQD: typingsSlinky.squareConnect.squareConnectStrings.IQD = "IQD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.IQD]
   @scala.inline
-  def IRR: typingsSlinky.squareConnect.squareConnectStrings.IRR = this.cast("IRR")
+  def IRR: typingsSlinky.squareConnect.squareConnectStrings.IRR = "IRR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.IRR]
   @scala.inline
-  def ISK: typingsSlinky.squareConnect.squareConnectStrings.ISK = this.cast("ISK")
+  def ISK: typingsSlinky.squareConnect.squareConnectStrings.ISK = "ISK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ISK]
   @scala.inline
-  def JMD: typingsSlinky.squareConnect.squareConnectStrings.JMD = this.cast("JMD")
+  def JMD: typingsSlinky.squareConnect.squareConnectStrings.JMD = "JMD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.JMD]
   @scala.inline
-  def JOD: typingsSlinky.squareConnect.squareConnectStrings.JOD = this.cast("JOD")
+  def JOD: typingsSlinky.squareConnect.squareConnectStrings.JOD = "JOD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.JOD]
   @scala.inline
-  def JPY: typingsSlinky.squareConnect.squareConnectStrings.JPY = this.cast("JPY")
+  def JPY: typingsSlinky.squareConnect.squareConnectStrings.JPY = "JPY".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.JPY]
   @scala.inline
-  def KES: typingsSlinky.squareConnect.squareConnectStrings.KES = this.cast("KES")
+  def KES: typingsSlinky.squareConnect.squareConnectStrings.KES = "KES".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.KES]
   @scala.inline
-  def KGS: typingsSlinky.squareConnect.squareConnectStrings.KGS = this.cast("KGS")
+  def KGS: typingsSlinky.squareConnect.squareConnectStrings.KGS = "KGS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.KGS]
   @scala.inline
-  def KHR: typingsSlinky.squareConnect.squareConnectStrings.KHR = this.cast("KHR")
+  def KHR: typingsSlinky.squareConnect.squareConnectStrings.KHR = "KHR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.KHR]
   @scala.inline
-  def KMF: typingsSlinky.squareConnect.squareConnectStrings.KMF = this.cast("KMF")
+  def KMF: typingsSlinky.squareConnect.squareConnectStrings.KMF = "KMF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.KMF]
   @scala.inline
-  def KPW: typingsSlinky.squareConnect.squareConnectStrings.KPW = this.cast("KPW")
+  def KPW: typingsSlinky.squareConnect.squareConnectStrings.KPW = "KPW".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.KPW]
   @scala.inline
-  def KRW: typingsSlinky.squareConnect.squareConnectStrings.KRW = this.cast("KRW")
+  def KRW: typingsSlinky.squareConnect.squareConnectStrings.KRW = "KRW".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.KRW]
   @scala.inline
-  def KWD: typingsSlinky.squareConnect.squareConnectStrings.KWD = this.cast("KWD")
+  def KWD: typingsSlinky.squareConnect.squareConnectStrings.KWD = "KWD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.KWD]
   @scala.inline
-  def KYD: typingsSlinky.squareConnect.squareConnectStrings.KYD = this.cast("KYD")
+  def KYD: typingsSlinky.squareConnect.squareConnectStrings.KYD = "KYD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.KYD]
   @scala.inline
-  def KZT: typingsSlinky.squareConnect.squareConnectStrings.KZT = this.cast("KZT")
+  def KZT: typingsSlinky.squareConnect.squareConnectStrings.KZT = "KZT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.KZT]
   @scala.inline
-  def LAK: typingsSlinky.squareConnect.squareConnectStrings.LAK = this.cast("LAK")
+  def LAK: typingsSlinky.squareConnect.squareConnectStrings.LAK = "LAK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.LAK]
   @scala.inline
-  def LBP: typingsSlinky.squareConnect.squareConnectStrings.LBP = this.cast("LBP")
+  def LBP: typingsSlinky.squareConnect.squareConnectStrings.LBP = "LBP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.LBP]
   @scala.inline
-  def LKR: typingsSlinky.squareConnect.squareConnectStrings.LKR = this.cast("LKR")
+  def LKR: typingsSlinky.squareConnect.squareConnectStrings.LKR = "LKR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.LKR]
   @scala.inline
-  def LRD: typingsSlinky.squareConnect.squareConnectStrings.LRD = this.cast("LRD")
+  def LRD: typingsSlinky.squareConnect.squareConnectStrings.LRD = "LRD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.LRD]
   @scala.inline
-  def LSL: typingsSlinky.squareConnect.squareConnectStrings.LSL = this.cast("LSL")
+  def LSL: typingsSlinky.squareConnect.squareConnectStrings.LSL = "LSL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.LSL]
   @scala.inline
-  def LTL: typingsSlinky.squareConnect.squareConnectStrings.LTL = this.cast("LTL")
+  def LTL: typingsSlinky.squareConnect.squareConnectStrings.LTL = "LTL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.LTL]
   @scala.inline
-  def LVL: typingsSlinky.squareConnect.squareConnectStrings.LVL = this.cast("LVL")
+  def LVL: typingsSlinky.squareConnect.squareConnectStrings.LVL = "LVL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.LVL]
   @scala.inline
-  def LYD: typingsSlinky.squareConnect.squareConnectStrings.LYD = this.cast("LYD")
+  def LYD: typingsSlinky.squareConnect.squareConnectStrings.LYD = "LYD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.LYD]
   @scala.inline
-  def MAD: typingsSlinky.squareConnect.squareConnectStrings.MAD = this.cast("MAD")
+  def MAD: typingsSlinky.squareConnect.squareConnectStrings.MAD = "MAD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MAD]
   @scala.inline
-  def MDL: typingsSlinky.squareConnect.squareConnectStrings.MDL = this.cast("MDL")
+  def MDL: typingsSlinky.squareConnect.squareConnectStrings.MDL = "MDL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MDL]
   @scala.inline
-  def MGA: typingsSlinky.squareConnect.squareConnectStrings.MGA = this.cast("MGA")
+  def MGA: typingsSlinky.squareConnect.squareConnectStrings.MGA = "MGA".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MGA]
   @scala.inline
-  def MKD: typingsSlinky.squareConnect.squareConnectStrings.MKD = this.cast("MKD")
+  def MKD: typingsSlinky.squareConnect.squareConnectStrings.MKD = "MKD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MKD]
   @scala.inline
-  def MMK: typingsSlinky.squareConnect.squareConnectStrings.MMK = this.cast("MMK")
+  def MMK: typingsSlinky.squareConnect.squareConnectStrings.MMK = "MMK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MMK]
   @scala.inline
-  def MNT: typingsSlinky.squareConnect.squareConnectStrings.MNT = this.cast("MNT")
+  def MNT: typingsSlinky.squareConnect.squareConnectStrings.MNT = "MNT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MNT]
   @scala.inline
-  def MOP: typingsSlinky.squareConnect.squareConnectStrings.MOP = this.cast("MOP")
+  def MOP: typingsSlinky.squareConnect.squareConnectStrings.MOP = "MOP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MOP]
   @scala.inline
-  def MRO: typingsSlinky.squareConnect.squareConnectStrings.MRO = this.cast("MRO")
+  def MRO: typingsSlinky.squareConnect.squareConnectStrings.MRO = "MRO".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MRO]
   @scala.inline
-  def MUR: typingsSlinky.squareConnect.squareConnectStrings.MUR = this.cast("MUR")
+  def MUR: typingsSlinky.squareConnect.squareConnectStrings.MUR = "MUR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MUR]
   @scala.inline
-  def MVR: typingsSlinky.squareConnect.squareConnectStrings.MVR = this.cast("MVR")
+  def MVR: typingsSlinky.squareConnect.squareConnectStrings.MVR = "MVR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MVR]
   @scala.inline
-  def MWK: typingsSlinky.squareConnect.squareConnectStrings.MWK = this.cast("MWK")
+  def MWK: typingsSlinky.squareConnect.squareConnectStrings.MWK = "MWK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MWK]
   @scala.inline
-  def MXN: typingsSlinky.squareConnect.squareConnectStrings.MXN = this.cast("MXN")
+  def MXN: typingsSlinky.squareConnect.squareConnectStrings.MXN = "MXN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MXN]
   @scala.inline
-  def MXV: typingsSlinky.squareConnect.squareConnectStrings.MXV = this.cast("MXV")
+  def MXV: typingsSlinky.squareConnect.squareConnectStrings.MXV = "MXV".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MXV]
   @scala.inline
-  def MYR: typingsSlinky.squareConnect.squareConnectStrings.MYR = this.cast("MYR")
+  def MYR: typingsSlinky.squareConnect.squareConnectStrings.MYR = "MYR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MYR]
   @scala.inline
-  def MZN: typingsSlinky.squareConnect.squareConnectStrings.MZN = this.cast("MZN")
+  def MZN: typingsSlinky.squareConnect.squareConnectStrings.MZN = "MZN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MZN]
   @scala.inline
-  def NAD: typingsSlinky.squareConnect.squareConnectStrings.NAD = this.cast("NAD")
+  def NAD: typingsSlinky.squareConnect.squareConnectStrings.NAD = "NAD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.NAD]
   @scala.inline
-  def NGN: typingsSlinky.squareConnect.squareConnectStrings.NGN = this.cast("NGN")
+  def NGN: typingsSlinky.squareConnect.squareConnectStrings.NGN = "NGN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.NGN]
   @scala.inline
-  def NIO: typingsSlinky.squareConnect.squareConnectStrings.NIO = this.cast("NIO")
+  def NIO: typingsSlinky.squareConnect.squareConnectStrings.NIO = "NIO".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.NIO]
   @scala.inline
-  def NOK: typingsSlinky.squareConnect.squareConnectStrings.NOK = this.cast("NOK")
+  def NOK: typingsSlinky.squareConnect.squareConnectStrings.NOK = "NOK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.NOK]
   @scala.inline
-  def NPR: typingsSlinky.squareConnect.squareConnectStrings.NPR = this.cast("NPR")
+  def NPR: typingsSlinky.squareConnect.squareConnectStrings.NPR = "NPR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.NPR]
   @scala.inline
-  def NZD: typingsSlinky.squareConnect.squareConnectStrings.NZD = this.cast("NZD")
+  def NZD: typingsSlinky.squareConnect.squareConnectStrings.NZD = "NZD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.NZD]
   @scala.inline
-  def OMR: typingsSlinky.squareConnect.squareConnectStrings.OMR = this.cast("OMR")
+  def OMR: typingsSlinky.squareConnect.squareConnectStrings.OMR = "OMR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.OMR]
   @scala.inline
-  def PAB: typingsSlinky.squareConnect.squareConnectStrings.PAB = this.cast("PAB")
+  def PAB: typingsSlinky.squareConnect.squareConnectStrings.PAB = "PAB".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PAB]
   @scala.inline
-  def PEN: typingsSlinky.squareConnect.squareConnectStrings.PEN = this.cast("PEN")
+  def PEN: typingsSlinky.squareConnect.squareConnectStrings.PEN = "PEN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PEN]
   @scala.inline
-  def PGK: typingsSlinky.squareConnect.squareConnectStrings.PGK = this.cast("PGK")
+  def PGK: typingsSlinky.squareConnect.squareConnectStrings.PGK = "PGK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PGK]
   @scala.inline
-  def PHP: typingsSlinky.squareConnect.squareConnectStrings.PHP = this.cast("PHP")
+  def PHP: typingsSlinky.squareConnect.squareConnectStrings.PHP = "PHP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PHP]
   @scala.inline
-  def PKR: typingsSlinky.squareConnect.squareConnectStrings.PKR = this.cast("PKR")
+  def PKR: typingsSlinky.squareConnect.squareConnectStrings.PKR = "PKR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PKR]
   @scala.inline
-  def PLN: typingsSlinky.squareConnect.squareConnectStrings.PLN = this.cast("PLN")
+  def PLN: typingsSlinky.squareConnect.squareConnectStrings.PLN = "PLN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PLN]
   @scala.inline
-  def PYG: typingsSlinky.squareConnect.squareConnectStrings.PYG = this.cast("PYG")
+  def PYG: typingsSlinky.squareConnect.squareConnectStrings.PYG = "PYG".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PYG]
   @scala.inline
-  def QAR: typingsSlinky.squareConnect.squareConnectStrings.QAR = this.cast("QAR")
+  def QAR: typingsSlinky.squareConnect.squareConnectStrings.QAR = "QAR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.QAR]
   @scala.inline
-  def RON: typingsSlinky.squareConnect.squareConnectStrings.RON = this.cast("RON")
+  def RON: typingsSlinky.squareConnect.squareConnectStrings.RON = "RON".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.RON]
   @scala.inline
-  def RSD: typingsSlinky.squareConnect.squareConnectStrings.RSD = this.cast("RSD")
+  def RSD: typingsSlinky.squareConnect.squareConnectStrings.RSD = "RSD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.RSD]
   @scala.inline
-  def RUB: typingsSlinky.squareConnect.squareConnectStrings.RUB = this.cast("RUB")
+  def RUB: typingsSlinky.squareConnect.squareConnectStrings.RUB = "RUB".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.RUB]
   @scala.inline
-  def RWF: typingsSlinky.squareConnect.squareConnectStrings.RWF = this.cast("RWF")
+  def RWF: typingsSlinky.squareConnect.squareConnectStrings.RWF = "RWF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.RWF]
   @scala.inline
-  def SAR: typingsSlinky.squareConnect.squareConnectStrings.SAR = this.cast("SAR")
+  def SAR: typingsSlinky.squareConnect.squareConnectStrings.SAR = "SAR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SAR]
   @scala.inline
-  def SBD: typingsSlinky.squareConnect.squareConnectStrings.SBD = this.cast("SBD")
+  def SBD: typingsSlinky.squareConnect.squareConnectStrings.SBD = "SBD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SBD]
   @scala.inline
-  def SCR: typingsSlinky.squareConnect.squareConnectStrings.SCR = this.cast("SCR")
+  def SCR: typingsSlinky.squareConnect.squareConnectStrings.SCR = "SCR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SCR]
   @scala.inline
-  def SDG: typingsSlinky.squareConnect.squareConnectStrings.SDG = this.cast("SDG")
+  def SDG: typingsSlinky.squareConnect.squareConnectStrings.SDG = "SDG".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SDG]
   @scala.inline
-  def SEK: typingsSlinky.squareConnect.squareConnectStrings.SEK = this.cast("SEK")
+  def SEK: typingsSlinky.squareConnect.squareConnectStrings.SEK = "SEK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SEK]
   @scala.inline
-  def SGD: typingsSlinky.squareConnect.squareConnectStrings.SGD = this.cast("SGD")
+  def SGD: typingsSlinky.squareConnect.squareConnectStrings.SGD = "SGD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SGD]
   @scala.inline
-  def SHP: typingsSlinky.squareConnect.squareConnectStrings.SHP = this.cast("SHP")
+  def SHP: typingsSlinky.squareConnect.squareConnectStrings.SHP = "SHP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SHP]
   @scala.inline
-  def SLL: typingsSlinky.squareConnect.squareConnectStrings.SLL = this.cast("SLL")
+  def SLL: typingsSlinky.squareConnect.squareConnectStrings.SLL = "SLL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SLL]
   @scala.inline
-  def SOS: typingsSlinky.squareConnect.squareConnectStrings.SOS = this.cast("SOS")
+  def SOS: typingsSlinky.squareConnect.squareConnectStrings.SOS = "SOS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SOS]
   @scala.inline
-  def SRD: typingsSlinky.squareConnect.squareConnectStrings.SRD = this.cast("SRD")
+  def SRD: typingsSlinky.squareConnect.squareConnectStrings.SRD = "SRD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SRD]
   @scala.inline
-  def SSP: typingsSlinky.squareConnect.squareConnectStrings.SSP = this.cast("SSP")
+  def SSP: typingsSlinky.squareConnect.squareConnectStrings.SSP = "SSP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SSP]
   @scala.inline
-  def STD: typingsSlinky.squareConnect.squareConnectStrings.STD = this.cast("STD")
+  def STD: typingsSlinky.squareConnect.squareConnectStrings.STD = "STD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.STD]
   @scala.inline
-  def SVC: typingsSlinky.squareConnect.squareConnectStrings.SVC = this.cast("SVC")
+  def SVC: typingsSlinky.squareConnect.squareConnectStrings.SVC = "SVC".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SVC]
   @scala.inline
-  def SYP: typingsSlinky.squareConnect.squareConnectStrings.SYP = this.cast("SYP")
+  def SYP: typingsSlinky.squareConnect.squareConnectStrings.SYP = "SYP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SYP]
   @scala.inline
-  def SZL: typingsSlinky.squareConnect.squareConnectStrings.SZL = this.cast("SZL")
+  def SZL: typingsSlinky.squareConnect.squareConnectStrings.SZL = "SZL".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SZL]
   @scala.inline
-  def THB: typingsSlinky.squareConnect.squareConnectStrings.THB = this.cast("THB")
+  def THB: typingsSlinky.squareConnect.squareConnectStrings.THB = "THB".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.THB]
   @scala.inline
-  def TJS: typingsSlinky.squareConnect.squareConnectStrings.TJS = this.cast("TJS")
+  def TJS: typingsSlinky.squareConnect.squareConnectStrings.TJS = "TJS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TJS]
   @scala.inline
-  def TMT: typingsSlinky.squareConnect.squareConnectStrings.TMT = this.cast("TMT")
+  def TMT: typingsSlinky.squareConnect.squareConnectStrings.TMT = "TMT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TMT]
   @scala.inline
-  def TND: typingsSlinky.squareConnect.squareConnectStrings.TND = this.cast("TND")
+  def TND: typingsSlinky.squareConnect.squareConnectStrings.TND = "TND".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TND]
   @scala.inline
-  def TOP: typingsSlinky.squareConnect.squareConnectStrings.TOP = this.cast("TOP")
+  def TOP: typingsSlinky.squareConnect.squareConnectStrings.TOP = "TOP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TOP]
   @scala.inline
-  def TRY: typingsSlinky.squareConnect.squareConnectStrings.TRY = this.cast("TRY")
+  def TRY: typingsSlinky.squareConnect.squareConnectStrings.TRY = "TRY".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TRY]
   @scala.inline
-  def TTD: typingsSlinky.squareConnect.squareConnectStrings.TTD = this.cast("TTD")
+  def TTD: typingsSlinky.squareConnect.squareConnectStrings.TTD = "TTD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TTD]
   @scala.inline
-  def TWD: typingsSlinky.squareConnect.squareConnectStrings.TWD = this.cast("TWD")
+  def TWD: typingsSlinky.squareConnect.squareConnectStrings.TWD = "TWD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TWD]
   @scala.inline
-  def TZS: typingsSlinky.squareConnect.squareConnectStrings.TZS = this.cast("TZS")
+  def TZS: typingsSlinky.squareConnect.squareConnectStrings.TZS = "TZS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TZS]
   @scala.inline
-  def UAH: typingsSlinky.squareConnect.squareConnectStrings.UAH = this.cast("UAH")
+  def UAH: typingsSlinky.squareConnect.squareConnectStrings.UAH = "UAH".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.UAH]
   @scala.inline
-  def UGX: typingsSlinky.squareConnect.squareConnectStrings.UGX = this.cast("UGX")
+  def UGX: typingsSlinky.squareConnect.squareConnectStrings.UGX = "UGX".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.UGX]
   @scala.inline
-  def UNKNOWN_CURRENCY: typingsSlinky.squareConnect.squareConnectStrings.UNKNOWN_CURRENCY = this.cast("UNKNOWN_CURRENCY")
+  def UNKNOWN_CURRENCY: typingsSlinky.squareConnect.squareConnectStrings.UNKNOWN_CURRENCY = "UNKNOWN_CURRENCY".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.UNKNOWN_CURRENCY]
   @scala.inline
-  def USD: typingsSlinky.squareConnect.squareConnectStrings.USD = this.cast("USD")
+  def USD: typingsSlinky.squareConnect.squareConnectStrings.USD = "USD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.USD]
   @scala.inline
-  def USN: typingsSlinky.squareConnect.squareConnectStrings.USN = this.cast("USN")
+  def USN: typingsSlinky.squareConnect.squareConnectStrings.USN = "USN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.USN]
   @scala.inline
-  def USS: typingsSlinky.squareConnect.squareConnectStrings.USS = this.cast("USS")
+  def USS: typingsSlinky.squareConnect.squareConnectStrings.USS = "USS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.USS]
   @scala.inline
-  def UYI: typingsSlinky.squareConnect.squareConnectStrings.UYI = this.cast("UYI")
+  def UYI: typingsSlinky.squareConnect.squareConnectStrings.UYI = "UYI".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.UYI]
   @scala.inline
-  def UYU: typingsSlinky.squareConnect.squareConnectStrings.UYU = this.cast("UYU")
+  def UYU: typingsSlinky.squareConnect.squareConnectStrings.UYU = "UYU".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.UYU]
   @scala.inline
-  def UZS: typingsSlinky.squareConnect.squareConnectStrings.UZS = this.cast("UZS")
+  def UZS: typingsSlinky.squareConnect.squareConnectStrings.UZS = "UZS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.UZS]
   @scala.inline
-  def VEF: typingsSlinky.squareConnect.squareConnectStrings.VEF = this.cast("VEF")
+  def VEF: typingsSlinky.squareConnect.squareConnectStrings.VEF = "VEF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.VEF]
   @scala.inline
-  def VND: typingsSlinky.squareConnect.squareConnectStrings.VND = this.cast("VND")
+  def VND: typingsSlinky.squareConnect.squareConnectStrings.VND = "VND".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.VND]
   @scala.inline
-  def VUV: typingsSlinky.squareConnect.squareConnectStrings.VUV = this.cast("VUV")
+  def VUV: typingsSlinky.squareConnect.squareConnectStrings.VUV = "VUV".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.VUV]
   @scala.inline
-  def WST: typingsSlinky.squareConnect.squareConnectStrings.WST = this.cast("WST")
+  def WST: typingsSlinky.squareConnect.squareConnectStrings.WST = "WST".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.WST]
   @scala.inline
-  def XAF: typingsSlinky.squareConnect.squareConnectStrings.XAF = this.cast("XAF")
+  def XAF: typingsSlinky.squareConnect.squareConnectStrings.XAF = "XAF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XAF]
   @scala.inline
-  def XAG: typingsSlinky.squareConnect.squareConnectStrings.XAG = this.cast("XAG")
+  def XAG: typingsSlinky.squareConnect.squareConnectStrings.XAG = "XAG".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XAG]
   @scala.inline
-  def XAU: typingsSlinky.squareConnect.squareConnectStrings.XAU = this.cast("XAU")
+  def XAU: typingsSlinky.squareConnect.squareConnectStrings.XAU = "XAU".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XAU]
   @scala.inline
-  def XBA: typingsSlinky.squareConnect.squareConnectStrings.XBA = this.cast("XBA")
+  def XBA: typingsSlinky.squareConnect.squareConnectStrings.XBA = "XBA".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XBA]
   @scala.inline
-  def XBB: typingsSlinky.squareConnect.squareConnectStrings.XBB = this.cast("XBB")
+  def XBB: typingsSlinky.squareConnect.squareConnectStrings.XBB = "XBB".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XBB]
   @scala.inline
-  def XBC: typingsSlinky.squareConnect.squareConnectStrings.XBC = this.cast("XBC")
+  def XBC: typingsSlinky.squareConnect.squareConnectStrings.XBC = "XBC".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XBC]
   @scala.inline
-  def XBD: typingsSlinky.squareConnect.squareConnectStrings.XBD = this.cast("XBD")
+  def XBD: typingsSlinky.squareConnect.squareConnectStrings.XBD = "XBD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XBD]
   @scala.inline
-  def XCD: typingsSlinky.squareConnect.squareConnectStrings.XCD = this.cast("XCD")
+  def XCD: typingsSlinky.squareConnect.squareConnectStrings.XCD = "XCD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XCD]
   @scala.inline
-  def XDR: typingsSlinky.squareConnect.squareConnectStrings.XDR = this.cast("XDR")
+  def XDR: typingsSlinky.squareConnect.squareConnectStrings.XDR = "XDR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XDR]
   @scala.inline
-  def XOF: typingsSlinky.squareConnect.squareConnectStrings.XOF = this.cast("XOF")
+  def XOF: typingsSlinky.squareConnect.squareConnectStrings.XOF = "XOF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XOF]
   @scala.inline
-  def XPD: typingsSlinky.squareConnect.squareConnectStrings.XPD = this.cast("XPD")
+  def XPD: typingsSlinky.squareConnect.squareConnectStrings.XPD = "XPD".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XPD]
   @scala.inline
-  def XPF: typingsSlinky.squareConnect.squareConnectStrings.XPF = this.cast("XPF")
+  def XPF: typingsSlinky.squareConnect.squareConnectStrings.XPF = "XPF".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XPF]
   @scala.inline
-  def XPT: typingsSlinky.squareConnect.squareConnectStrings.XPT = this.cast("XPT")
+  def XPT: typingsSlinky.squareConnect.squareConnectStrings.XPT = "XPT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XPT]
   @scala.inline
-  def XTS: typingsSlinky.squareConnect.squareConnectStrings.XTS = this.cast("XTS")
+  def XTS: typingsSlinky.squareConnect.squareConnectStrings.XTS = "XTS".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XTS]
   @scala.inline
-  def XXX: typingsSlinky.squareConnect.squareConnectStrings.XXX = this.cast("XXX")
+  def XXX: typingsSlinky.squareConnect.squareConnectStrings.XXX = "XXX".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.XXX]
   @scala.inline
-  def YER: typingsSlinky.squareConnect.squareConnectStrings.YER = this.cast("YER")
+  def YER: typingsSlinky.squareConnect.squareConnectStrings.YER = "YER".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.YER]
   @scala.inline
-  def ZAR: typingsSlinky.squareConnect.squareConnectStrings.ZAR = this.cast("ZAR")
+  def ZAR: typingsSlinky.squareConnect.squareConnectStrings.ZAR = "ZAR".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ZAR]
   @scala.inline
-  def ZMK: typingsSlinky.squareConnect.squareConnectStrings.ZMK = this.cast("ZMK")
+  def ZMK: typingsSlinky.squareConnect.squareConnectStrings.ZMK = "ZMK".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ZMK]
   @scala.inline
-  def ZMW: typingsSlinky.squareConnect.squareConnectStrings.ZMW = this.cast("ZMW")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ZMW: typingsSlinky.squareConnect.squareConnectStrings.ZMW = "ZMW".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ZMW]
 }
 

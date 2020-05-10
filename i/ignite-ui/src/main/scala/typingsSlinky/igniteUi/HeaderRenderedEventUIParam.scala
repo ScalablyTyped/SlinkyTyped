@@ -5,24 +5,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HeaderRenderedEventUIParam extends js.Object {
   /**
   	 * Gets a reference to the grid.
   	 */
-  var owner: js.UndefOr[js.Any] = js.undefined
+  var owner: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets a reference to headers table DOM element.
   	 */
-  var table: js.UndefOr[Element] = js.undefined
+  var table: js.UndefOr[Element] = js.native
 }
 
 object HeaderRenderedEventUIParam {
   @scala.inline
-  def apply(owner: js.Any = null, table: Element = null): HeaderRenderedEventUIParam = {
+  def apply(): HeaderRenderedEventUIParam = {
     val __obj = js.Dynamic.literal()
-    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
-    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeaderRenderedEventUIParam]
   }
+  @scala.inline
+  implicit class HeaderRenderedEventUIParamOps[Self <: HeaderRenderedEventUIParam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOwner(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTable(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

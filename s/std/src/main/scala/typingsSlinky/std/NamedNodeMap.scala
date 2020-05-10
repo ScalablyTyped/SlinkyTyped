@@ -8,8 +8,9 @@ import scala.scalajs.js.annotation._
 
 /** A collection of Attr objects. Objects inside a NamedNodeMap are not in any particular order, unlike NodeList, although they may be accessed by an index as in an array. */
 @js.native
-trait NamedNodeMap extends /* index */ NumberDictionary[Attr] {
-  @JSName(scala.scalajs.js.Symbol.iterator)
+trait NamedNodeMap
+  extends /* index */ NumberDictionary[org.scalajs.dom.raw.Attr] {
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.Attr]] = js.native
   val length: Double = js.native
   def getNamedItem(qualifiedName: java.lang.String): org.scalajs.dom.raw.Attr | Null = js.native
@@ -25,5 +26,6 @@ trait NamedNodeMap extends /* index */ NumberDictionary[Attr] {
 
 @JSGlobal("NamedNodeMap")
 @js.native
-object NamedNodeMap extends Instantiable0[NamedNodeMap]
+object NamedNodeMap
+  extends Instantiable0[org.scalajs.dom.raw.NamedNodeMap]
 

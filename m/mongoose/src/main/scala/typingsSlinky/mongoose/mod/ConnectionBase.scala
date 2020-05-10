@@ -4,10 +4,9 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.mongodb.mod.CollectionCreateOptions
 import typingsSlinky.mongodb.mod.Db
 import typingsSlinky.mongodb.mod.DefaultSchema
-import typingsSlinky.mongoose.ConnectionthenPromiseConnCatch
+import typingsSlinky.mongoose.ConnectionthenPromiseConn
 import typingsSlinky.mongoose.PickConnectionOptionsauto
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -87,7 +86,7 @@ trait ConnectionBase extends EventEmitter {
     * @returns this
     */
   def deleteModel(name: String): Connection_ = js.native
-  def deleteModel(name: RegExp): Connection_ = js.native
+  def deleteModel(name: js.RegExp): Connection_ = js.native
   /** Helper for dropCollection() */
   def dropCollection(name: String): js.Promise[Unit] = js.native
   def dropCollection(name: String, callback: js.Function1[/* err */ js.Any, Unit]): js.Promise[Unit] = js.native
@@ -126,13 +125,13 @@ trait ConnectionBase extends EventEmitter {
     */
   def openUri(uri: String): js.Promise[Connection_] = js.native
   def openUri(uri: String, callback: js.Function2[/* err */ js.Any, /* conn */ js.UndefOr[Connection_], Unit]): Connection_ = js.native
-  def openUri(uri: String, options: ConnectionOptions): ConnectionthenPromiseConnCatch = js.native
+  def openUri(uri: String, options: ConnectionOptions): js.Promise[Connection_] = js.native
   def openUri(
     uri: String,
     options: ConnectionOptions,
     callback: js.Function2[/* err */ js.Any, /* conn */ js.UndefOr[Connection_], Unit]
-  ): ConnectionthenPromiseConnCatch = js.native
+  ): ConnectionthenPromiseConn = js.native
   @JSName("openUri")
-  def openUri_Promise(uri: String, options: ConnectionOptions): js.Promise[Connection_] = js.native
+  def openUri_ConnectionthenPromiseConn(uri: String, options: ConnectionOptions): ConnectionthenPromiseConn = js.native
 }
 

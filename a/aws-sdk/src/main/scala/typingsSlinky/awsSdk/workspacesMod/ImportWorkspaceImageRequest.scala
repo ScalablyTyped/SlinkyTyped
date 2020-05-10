@@ -34,12 +34,54 @@ object ImportWorkspaceImageRequest {
     Ec2ImageId: Ec2ImageId,
     ImageDescription: WorkspaceImageDescription,
     ImageName: WorkspaceImageName,
-    IngestionProcess: WorkspaceImageIngestionProcess,
-    Tags: TagList = null
+    IngestionProcess: WorkspaceImageIngestionProcess
   ): ImportWorkspaceImageRequest = {
     val __obj = js.Dynamic.literal(Ec2ImageId = Ec2ImageId.asInstanceOf[js.Any], ImageDescription = ImageDescription.asInstanceOf[js.Any], ImageName = ImageName.asInstanceOf[js.Any], IngestionProcess = IngestionProcess.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportWorkspaceImageRequest]
   }
+  @scala.inline
+  implicit class ImportWorkspaceImageRequestOps[Self <: ImportWorkspaceImageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEc2ImageId(value: Ec2ImageId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2ImageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImageDescription(value: WorkspaceImageDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImageName(value: WorkspaceImageName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIngestionProcess(value: WorkspaceImageIngestionProcess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestionProcess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

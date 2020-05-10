@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.documentCardDetailsTypesMod.IDocumentCardDetailsProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object documentCardDetailsBaseMod extends js.Object {
   @js.native
-  class DocumentCardDetailsBase ()
-    extends BaseComponent[IDocumentCardDetailsProps, js.Any] {
+  class DocumentCardDetailsBase protected ()
+    extends Component[IDocumentCardDetailsProps, js.Any, js.Any] {
+    def this(props: IDocumentCardDetailsProps) = this()
     var _classNames: js.Any = js.native
   }
   

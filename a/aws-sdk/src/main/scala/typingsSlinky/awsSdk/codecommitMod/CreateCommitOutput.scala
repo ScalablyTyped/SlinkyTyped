@@ -30,20 +30,77 @@ trait CreateCommitOutput extends js.Object {
 
 object CreateCommitOutput {
   @scala.inline
-  def apply(
-    commitId: ObjectId = null,
-    filesAdded: FilesMetadata = null,
-    filesDeleted: FilesMetadata = null,
-    filesUpdated: FilesMetadata = null,
-    treeId: ObjectId = null
-  ): CreateCommitOutput = {
+  def apply(): CreateCommitOutput = {
     val __obj = js.Dynamic.literal()
-    if (commitId != null) __obj.updateDynamic("commitId")(commitId.asInstanceOf[js.Any])
-    if (filesAdded != null) __obj.updateDynamic("filesAdded")(filesAdded.asInstanceOf[js.Any])
-    if (filesDeleted != null) __obj.updateDynamic("filesDeleted")(filesDeleted.asInstanceOf[js.Any])
-    if (filesUpdated != null) __obj.updateDynamic("filesUpdated")(filesUpdated.asInstanceOf[js.Any])
-    if (treeId != null) __obj.updateDynamic("treeId")(treeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCommitOutput]
   }
+  @scala.inline
+  implicit class CreateCommitOutputOps[Self <: CreateCommitOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommitId(value: ObjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilesAdded(value: FilesMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesAdded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilesAdded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesAdded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilesDeleted(value: FilesMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesDeleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilesDeleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesDeleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilesUpdated(value: FilesMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilesUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filesUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTreeId(value: ObjectId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTreeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treeId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListBidResponsesWithoutBidsResponse extends js.Object {
   /**
     * List of rows, with counts of bid responses without bids aggregated by
     * status.
     */
-  var bidResponseWithoutBidsStatusRows: js.UndefOr[js.Array[BidResponseWithoutBidsStatusRow]] = js.undefined
+  var bidResponseWithoutBidsStatusRows: js.UndefOr[js.Array[BidResponseWithoutBidsStatusRow]] = js.native
   /**
     * A token to retrieve the next page of results.
     * Pass this value in the
@@ -18,19 +19,46 @@ trait ListBidResponsesWithoutBidsResponse extends js.Object {
     * accounts.filterSets.bidResponsesWithoutBids.list
     * method to retrieve the next page of results.
     */
-  var nextPageToken: js.UndefOr[String] = js.undefined
+  var nextPageToken: js.UndefOr[String] = js.native
 }
 
 object ListBidResponsesWithoutBidsResponse {
   @scala.inline
-  def apply(
-    bidResponseWithoutBidsStatusRows: js.Array[BidResponseWithoutBidsStatusRow] = null,
-    nextPageToken: String = null
-  ): ListBidResponsesWithoutBidsResponse = {
+  def apply(): ListBidResponsesWithoutBidsResponse = {
     val __obj = js.Dynamic.literal()
-    if (bidResponseWithoutBidsStatusRows != null) __obj.updateDynamic("bidResponseWithoutBidsStatusRows")(bidResponseWithoutBidsStatusRows.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBidResponsesWithoutBidsResponse]
   }
+  @scala.inline
+  implicit class ListBidResponsesWithoutBidsResponseOps[Self <: ListBidResponsesWithoutBidsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBidResponseWithoutBidsStatusRows(value: js.Array[BidResponseWithoutBidsStatusRow]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bidResponseWithoutBidsStatusRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBidResponseWithoutBidsStatusRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bidResponseWithoutBidsStatusRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -192,6 +192,27 @@ object barPlotMod extends js.Object {
     /* protected */ def position(): ITransformableAccessorScaleBinding[_, Double] = js.native
   }
   
+  /* keyof plottable.AnonMiddle */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.start
+    - typingsSlinky.plottable.plottableStrings.end
+    - typingsSlinky.plottable.plottableStrings.middle
+  */
+  trait BarAlignment extends js.Object
+  
+  /* keyof plottable.AnonHorizontal */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.vertical
+    - typingsSlinky.plottable.plottableStrings.horizontal
+  */
+  trait BarOrientation extends js.Object
+  
+  /* keyof plottable.AnonEnd */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.start
+    - typingsSlinky.plottable.plottableStrings.end
+    - typingsSlinky.plottable.plottableStrings.middle
+    - typingsSlinky.plottable.plottableStrings.outside
+  */
+  trait LabelsPosition extends js.Object
+  
   /* static members */
   @js.native
   object Bar extends js.Object {
@@ -230,8 +251,5 @@ object barPlotMod extends js.Object {
     var start: typingsSlinky.plottable.plottableStrings.start = js.native
   }
   
-  type BarAlignment = String
-  type BarOrientation = String
-  type LabelsPosition = String
 }
 

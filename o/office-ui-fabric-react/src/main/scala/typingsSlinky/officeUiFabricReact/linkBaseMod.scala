@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.linkTypesMod.ILink
 import typingsSlinky.officeUiFabricReact.linkTypesMod.ILinkProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,16 +11,14 @@ import scala.scalajs.js.annotation._
 @js.native
 object linkBaseMod extends js.Object {
   @js.native
-  class LinkBase ()
-    extends BaseComponent[ILinkProps, js.Any]
+  class LinkBase protected ()
+    extends Component[ILinkProps, js.Object, js.Any]
        with ILink {
+    def this(props: ILinkProps) = this()
     var _adjustPropsForRootType: js.Any = js.native
     var _getRootType: js.Any = js.native
     var _link: js.Any = js.native
     var _onClick: js.Any = js.native
-    /** Sets focus to the link. */
-    /* CompleteClass */
-    override def focus(): Unit = js.native
   }
   
 }

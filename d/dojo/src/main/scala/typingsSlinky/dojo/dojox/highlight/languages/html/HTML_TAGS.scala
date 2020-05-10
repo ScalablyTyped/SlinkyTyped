@@ -9,379 +9,380 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait HTML_TAGS extends js.Object {
   /**
     *
     */
-  var a: Double
+  var a: Double = js.native
   /**
     *
     */
-  var abbr: Double
+  var abbr: Double = js.native
   /**
     *
     */
-  var acronym: Double
+  var acronym: Double = js.native
   /**
     *
     */
-  var address: Double
+  var address: Double = js.native
   /**
     *
     */
-  var applet: Double
+  var applet: Double = js.native
   /**
     *
     */
-  var area: Double
+  var area: Double = js.native
   /**
     *
     */
-  var b: Double
+  var b: Double = js.native
   /**
     *
     */
-  var base: Double
+  var base: Double = js.native
   /**
     *
     */
-  var basefont: Double
+  var basefont: Double = js.native
   /**
     *
     */
-  var bdo: Double
+  var bdo: Double = js.native
   /**
     *
     */
-  var big: Double
+  var big: Double = js.native
   /**
     *
     */
-  var blockquote: Double
+  var blockquote: Double = js.native
   /**
     *
     */
-  var body: Double
+  var body: Double = js.native
   /**
     *
     */
-  var br: Double
+  var br: Double = js.native
   /**
     *
     */
-  var button: Double
+  var button: Double = js.native
   /**
     *
     */
-  var caption: Double
+  var caption: Double = js.native
   /**
     *
     */
-  var center: Double
+  var center: Double = js.native
   /**
     *
     */
-  var cite: Double
+  var cite: Double = js.native
   /**
     *
     */
-  var code: Double
+  var code: Double = js.native
   /**
     *
     */
-  var col: Double
+  var col: Double = js.native
   /**
     *
     */
-  var colgroup: Double
+  var colgroup: Double = js.native
   /**
     *
     */
-  var dd: Double
+  var dd: Double = js.native
   /**
     *
     */
-  var del: Double
+  var del: Double = js.native
   /**
     *
     */
-  var dfn: Double
+  var dfn: Double = js.native
   /**
     *
     */
-  var dir: Double
+  var dir: Double = js.native
   /**
     *
     */
-  var div: Double
+  var div: Double = js.native
   /**
     *
     */
-  var dl: Double
+  var dl: Double = js.native
   /**
     *
     */
-  var dt: Double
+  var dt: Double = js.native
   /**
     *
     */
-  var em: Double
+  var em: Double = js.native
   /**
     *
     */
-  var fieldset: Double
+  var fieldset: Double = js.native
   /**
     *
     */
-  var font: Double
+  var font: Double = js.native
   /**
     *
     */
-  var form: Double
+  var form: Double = js.native
   /**
     *
     */
-  var frame: Double
+  var frame: Double = js.native
   /**
     *
     */
-  var frameset: Double
+  var frameset: Double = js.native
   /**
     *
     */
-  var h1: Double
+  var h1: Double = js.native
   /**
     *
     */
-  var h2: Double
+  var h2: Double = js.native
   /**
     *
     */
-  var h3: Double
+  var h3: Double = js.native
   /**
     *
     */
-  var h4: Double
+  var h4: Double = js.native
   /**
     *
     */
-  var h5: Double
+  var h5: Double = js.native
   /**
     *
     */
-  var h6: Double
+  var h6: Double = js.native
   /**
     *
     */
-  var head: Double
+  var head: Double = js.native
   /**
     *
     */
-  var hr: Double
+  var hr: Double = js.native
   /**
     *
     */
-  var html: Double
+  var html: Double = js.native
   /**
     *
     */
-  var i: Double
+  var i: Double = js.native
   /**
     *
     */
-  var iframe: Double
+  var iframe: Double = js.native
   /**
     *
     */
-  var img: Double
+  var img: Double = js.native
   /**
     *
     */
-  var input: Double
+  var input: Double = js.native
   /**
     *
     */
-  var ins: Double
+  var ins: Double = js.native
   /**
     *
     */
-  var isindex: Double
+  var isindex: Double = js.native
   /**
     *
     */
-  var kbd: Double
+  var kbd: Double = js.native
   /**
     *
     */
-  var label: Double
+  var label: Double = js.native
   /**
     *
     */
-  var legend: Double
+  var legend: Double = js.native
   /**
     *
     */
-  var li: Double
+  var li: Double = js.native
   /**
     *
     */
-  var link: Double
+  var link: Double = js.native
   /**
     *
     */
-  var map: Double
+  var map: Double = js.native
   /**
     *
     */
-  var menu: Double
+  var menu: Double = js.native
   /**
     *
     */
-  var meta: Double
+  var meta: Double = js.native
   /**
     *
     */
-  var noframes: Double
+  var noframes: Double = js.native
   /**
     *
     */
-  var noscript: Double
+  var noscript: Double = js.native
   /**
     *
     */
-  var `object`: Double
+  var `object`: Double = js.native
   /**
     *
     */
-  var ol: Double
+  var ol: Double = js.native
   /**
     *
     */
-  var optgroup: Double
+  var optgroup: Double = js.native
   /**
     *
     */
-  var option: Double
+  var option: Double = js.native
   /**
     *
     */
-  var p: Double
+  var p: Double = js.native
   /**
     *
     */
-  var param: Double
+  var param: Double = js.native
   /**
     *
     */
-  var pre: Double
+  var pre: Double = js.native
   /**
     *
     */
-  var q: Double
+  var q: Double = js.native
   /**
     *
     */
-  var s: Double
+  var s: Double = js.native
   /**
     *
     */
-  var samp: Double
+  var samp: Double = js.native
   /**
     *
     */
-  var script: Double
+  var script: Double = js.native
   /**
     *
     */
-  var select: Double
+  var select: Double = js.native
   /**
     *
     */
-  var small: Double
+  var small: Double = js.native
   /**
     *
     */
-  var span: Double
+  var span: Double = js.native
   /**
     *
     */
-  var strike: Double
+  var strike: Double = js.native
   /**
     *
     */
-  var strong: Double
+  var strong: Double = js.native
   /**
     *
     */
-  var style: Double
+  var style: Double = js.native
   /**
     *
     */
-  var sub: Double
+  var sub: Double = js.native
   /**
     *
     */
-  var sup: Double
+  var sup: Double = js.native
   /**
     *
     */
-  var table: Double
+  var table: Double = js.native
   /**
     *
     */
-  var tbody: Double
+  var tbody: Double = js.native
   /**
     *
     */
-  var td: Double
+  var td: Double = js.native
   /**
     *
     */
-  var textarea: Double
+  var textarea: Double = js.native
   /**
     *
     */
-  var tfoot: Double
+  var tfoot: Double = js.native
   /**
     *
     */
-  var th: Double
+  var th: Double = js.native
   /**
     *
     */
-  var thead: Double
+  var thead: Double = js.native
   /**
     *
     */
-  var title: Double
+  var title: Double = js.native
   /**
     *
     */
-  var tr: Double
+  var tr: Double = js.native
   /**
     *
     */
-  var tt: Double
+  var tt: Double = js.native
   /**
     *
     */
-  var u: Double
+  var u: Double = js.native
   /**
     *
     */
-  var ul: Double
+  var ul: Double = js.native
   /**
     *
     */
-  var `var`: Double
+  var `var`: Double = js.native
   /**
     *
     */
-  var xml: Double
+  var xml: Double = js.native
   /**
     *
     */
-  var xmlns: Double
+  var xmlns: Double = js.native
 }
 
 object HTML_TAGS {
@@ -486,5 +487,571 @@ object HTML_TAGS {
     __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTML_TAGS]
   }
+  @scala.inline
+  implicit class HTML_TAGSOps[Self <: HTML_TAGS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withA(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbbr(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abbr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcronym(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acronym")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddress(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApplet(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArea(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withB(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBase(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBasefont(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basefont")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBdo(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bdo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBig(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("big")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockquote(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBr(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButton(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaption(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCenter(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCite(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCol(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColgroup(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDfn(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dfn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDir(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDiv(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("div")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDl(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDt(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEm(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFieldset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFont(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForm(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrame(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrameset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH1(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH3(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH4(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH5(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH6(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHead(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHr(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withI(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIframe(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImg(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInput(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsindex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isindex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKbd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kbd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLegend(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLi(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLink(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMenu(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeta(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNoframes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noframes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNoscript(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noscript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObject(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOl(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptgroup(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOption(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withP(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParam(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("param")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPre(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScript(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelect(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSmall(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpan(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrike(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strike")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrong(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSub(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sub")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSup(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTable(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTbody(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextarea(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTfoot(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tfoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTh(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThead(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTr(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTt(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withU(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("u")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUl(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVar(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("var")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withXml(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xml")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withXmlns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlns")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

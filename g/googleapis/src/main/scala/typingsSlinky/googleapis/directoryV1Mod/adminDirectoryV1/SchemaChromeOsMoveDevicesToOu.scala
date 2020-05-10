@@ -18,10 +18,29 @@ trait SchemaChromeOsMoveDevicesToOu extends js.Object {
 
 object SchemaChromeOsMoveDevicesToOu {
   @scala.inline
-  def apply(deviceIds: js.Array[String] = null): SchemaChromeOsMoveDevicesToOu = {
+  def apply(): SchemaChromeOsMoveDevicesToOu = {
     val __obj = js.Dynamic.literal()
-    if (deviceIds != null) __obj.updateDynamic("deviceIds")(deviceIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChromeOsMoveDevicesToOu]
   }
+  @scala.inline
+  implicit class SchemaChromeOsMoveDevicesToOuOps[Self <: SchemaChromeOsMoveDevicesToOu] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

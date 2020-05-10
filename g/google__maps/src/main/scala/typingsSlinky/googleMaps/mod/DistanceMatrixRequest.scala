@@ -4,18 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DistanceMatrixRequest extends js.Object {
   /**
     * Specifies the desired time of arrival for transit requests, in seconds since midnight, January 1, 1970 UTC.
     * You can specify either `departure_time` or `arrival_time`, but not both.
     * Note that `arrival_time` must be specified as an integer.
     */
-  var arrival_time: js.UndefOr[js.Date | Double] = js.undefined
+  var arrival_time: js.UndefOr[js.Date | Double] = js.native
   /**
     * Introduces restrictions to the route. Valid values are specified in the Restrictions section of this document.
     * Only one restriction can be specified.
     */
-  var avoid: js.UndefOr[js.Array[TravelRestriction]] = js.undefined
+  var avoid: js.UndefOr[js.Array[TravelRestriction]] = js.native
   /**
     * The desired time of departure. You can specify the time as an integer in seconds since midnight, January 1, 1970 UTC.
     * Alternatively, you can specify a value of now, which sets the departure time to the current time (correct to the nearest second).
@@ -34,12 +35,12 @@ trait DistanceMatrixRequest extends js.Object {
     *    **Note:** Distance Matrix requests specifying `departure_time` when `mode=driving` are limited
     *    to a maximum of 100 elements per request. The number of origins times the number of destinations defines the number of elements.
     */
-  var departure_time: js.UndefOr[js.Date | Double] = js.undefined
+  var departure_time: js.UndefOr[js.Date | Double] = js.native
   /**
     * One or more locations to use as the finishing point for calculating travel distance and time.
     * The options for the destinations parameter are the same as for the origins parameter, described above.
     */
-  var destinations: js.Array[LatLng]
+  var destinations: js.Array[LatLng] = js.native
   /**
     * The language in which to return results.
     *  - If `language` is not supplied, the API attempts to use the preferred language as specified in the `Accept-Language` header,
@@ -54,14 +55,14 @@ trait DistanceMatrixRequest extends js.Object {
     *    such as the abbreviations for street types, or synonyms that may be valid in one language but not in another.
     *    For example, utca and tér are synonyms for street in Hungarian.
     */
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
   /**
     * Specifies the mode of transport to use when calculating distance.
     * Valid values and other request details are specified in the Travel Modes section of this document.
     *
     * @default TravelMode.driving
     */
-  var mode: js.UndefOr[TravelMode] = js.undefined
+  var mode: js.UndefOr[TravelMode] = js.native
   /**
     * The starting point for calculating travel distance and time.
     * You can supply one or more locations separated by the pipe character (`|`), in the form of an address, latitude/longitude coordinates,
@@ -91,14 +92,14 @@ trait DistanceMatrixRequest extends js.Object {
     *     - You can also include multiple encoded polylines, separated by the pipe character (`|`).
     *       For example: `origins=enc:wc~oAwquwMdlTxiKtqLyiK:|enc:c~vnAamswMvlTor@tjGi}L:|enc:udymA{~bxM:`
     */
-  var origins: js.Array[LatLng]
+  var origins: js.Array[LatLng] = js.native
   /**
     * The region code, specified as a [ccTLD](https://en.wikipedia.org/wiki/CcTLD) (country code top-level domain) two-character value.
     * Most ccTLD codes are identical to ISO 3166-1 codes, with some exceptions.
     * This parameter will only influence, not fully restrict, results from the geocoder.
     * If more relevant results exist outside of the specified region, they may be included.
     */
-  var region: js.UndefOr[String] = js.undefined
+  var region: js.UndefOr[String] = js.native
   /**
     * Specifies the assumptions to use when calculating time in traffic.
     * This setting affects the value returned in the `duration_in_traffic` field in the response,
@@ -109,47 +110,176 @@ trait DistanceMatrixRequest extends js.Object {
     *
     * @default TrafficModel.best_guess
     */
-  var traffic_model: js.UndefOr[TrafficModel] = js.undefined
+  var traffic_model: js.UndefOr[TrafficModel] = js.native
   /** Specifies one or more preferred modes of transit. This parameter may only be specified for requests where the `mode` is `transit`. */
-  var transit_mode: js.UndefOr[js.Array[TransitMode]] = js.undefined
+  var transit_mode: js.UndefOr[js.Array[TransitMode]] = js.native
   /**
     * Specifies preferences for transit requests. Using this parameter, you can bias the options returned,
     * rather than accepting the default best route chosen by the API.
     * This parameter may only be specified for requests where the `mode` is `transit`.
     */
-  var transit_routing_preference: js.UndefOr[TransitRoutingPreference] = js.undefined
+  var transit_routing_preference: js.UndefOr[TransitRoutingPreference] = js.native
   /** Specifies the unit system to use when expressing distance as text. */
-  var units: js.UndefOr[UnitSystem] = js.undefined
+  var units: js.UndefOr[UnitSystem] = js.native
 }
 
 object DistanceMatrixRequest {
   @scala.inline
-  def apply(
-    destinations: js.Array[LatLng],
-    origins: js.Array[LatLng],
-    arrival_time: js.Date | Double = null,
-    avoid: js.Array[TravelRestriction] = null,
-    departure_time: js.Date | Double = null,
-    language: String = null,
-    mode: TravelMode = null,
-    region: String = null,
-    traffic_model: TrafficModel = null,
-    transit_mode: js.Array[TransitMode] = null,
-    transit_routing_preference: TransitRoutingPreference = null,
-    units: UnitSystem = null
-  ): DistanceMatrixRequest = {
+  def apply(destinations: js.Array[LatLng], origins: js.Array[LatLng]): DistanceMatrixRequest = {
     val __obj = js.Dynamic.literal(destinations = destinations.asInstanceOf[js.Any], origins = origins.asInstanceOf[js.Any])
-    if (arrival_time != null) __obj.updateDynamic("arrival_time")(arrival_time.asInstanceOf[js.Any])
-    if (avoid != null) __obj.updateDynamic("avoid")(avoid.asInstanceOf[js.Any])
-    if (departure_time != null) __obj.updateDynamic("departure_time")(departure_time.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (traffic_model != null) __obj.updateDynamic("traffic_model")(traffic_model.asInstanceOf[js.Any])
-    if (transit_mode != null) __obj.updateDynamic("transit_mode")(transit_mode.asInstanceOf[js.Any])
-    if (transit_routing_preference != null) __obj.updateDynamic("transit_routing_preference")(transit_routing_preference.asInstanceOf[js.Any])
-    if (units != null) __obj.updateDynamic("units")(units.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistanceMatrixRequest]
   }
+  @scala.inline
+  implicit class DistanceMatrixRequestOps[Self <: DistanceMatrixRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinations(value: js.Array[LatLng]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrigins(value: js.Array[LatLng]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrival_timeDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrival_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrival_time(value: js.Date | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrival_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrival_time: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrival_time")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvoid(value: js.Array[TravelRestriction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avoid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvoid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avoid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeparture_timeDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("departure_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeparture_time(value: js.Date | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("departure_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeparture_time: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("departure_time")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: TravelMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTraffic_model(value: TrafficModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("traffic_model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTraffic_model: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("traffic_model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransit_mode(value: js.Array[TransitMode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transit_mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransit_mode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transit_mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransit_routing_preference(value: TransitRoutingPreference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transit_routing_preference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransit_routing_preference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transit_routing_preference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnits(value: UnitSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

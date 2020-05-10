@@ -6,12 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EntityState extends IEnum {
-  var Added: EntityStateSymbol
-  var Deleted: EntityStateSymbol
-  var Detached: EntityStateSymbol
-  var Modified: EntityStateSymbol
-  var Unchanged: EntityStateSymbol
+  var Added: EntityStateSymbol = js.native
+  var Deleted: EntityStateSymbol = js.native
+  var Detached: EntityStateSymbol = js.native
+  var Modified: EntityStateSymbol = js.native
+  var Unchanged: EntityStateSymbol = js.native
 }
 
 @JSGlobal("breeze.EntityState")

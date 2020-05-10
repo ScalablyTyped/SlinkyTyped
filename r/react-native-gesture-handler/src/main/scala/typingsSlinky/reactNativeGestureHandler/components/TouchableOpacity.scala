@@ -1,17 +1,15 @@
 package typingsSlinky.reactNativeGestureHandler.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityStates
 import typingsSlinky.reactNative.mod.AccessibilityTrait
+import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
@@ -19,7 +17,6 @@ import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.TargetedEvent
-import typingsSlinky.reactNative.mod.TouchableOpacityProperties
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
 import typingsSlinky.reactNative.reactNativeStrings.assertive
@@ -31,106 +28,120 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeGestureHandler.mod.ContainedTouchableProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TouchableOpacity
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeGestureHandler.mod.TouchableOpacity] {
-  @JSImport("react-native-gesture-handler", "TouchableOpacity")
-  @js.native
-  object componentImport extends js.Object
+object TouchableOpacity {
+  object TouchableOpacityProps {
+    @JSImport("react-native-gesture-handler", "TouchableOpacity")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.TouchableOpacity] {
+      @scala.inline
+      def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityElementsHidden(value: Boolean): this.type = set("accessibilityElementsHidden", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityHint(value: String): this.type = set("accessibilityHint", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityIgnoresInvertColors(value: Boolean): this.type = set("accessibilityIgnoresInvertColors", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityLabel(value: String): this.type = set("accessibilityLabel", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityLiveRegion(value: none | polite | assertive): this.type = set("accessibilityLiveRegion", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityStates(value: js.Array[AccessibilityStates]): this.type = set("accessibilityStates", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessibilityViewIsModal(value: Boolean): this.type = set("accessibilityViewIsModal", value.asInstanceOf[js.Any])
+      @scala.inline
+      def accessible(value: Boolean): this.type = set("accessible", value.asInstanceOf[js.Any])
+      @scala.inline
+      def activeOpacity(value: Double): this.type = set("activeOpacity", value.asInstanceOf[js.Any])
+      @scala.inline
+      def delayLongPress(value: Double): this.type = set("delayLongPress", value.asInstanceOf[js.Any])
+      @scala.inline
+      def delayPressIn(value: Double): this.type = set("delayPressIn", value.asInstanceOf[js.Any])
+      @scala.inline
+      def delayPressOut(value: Double): this.type = set("delayPressOut", value.asInstanceOf[js.Any])
+      @scala.inline
+      def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+      @scala.inline
+      def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
+      @scala.inline
+      def hitSlop(value: Insets): this.type = set("hitSlop", value.asInstanceOf[js.Any])
+      @scala.inline
+      def importantForAccessibility(value: auto | yes | no | `no-hide-descendants`): this.type = set("importantForAccessibility", value.asInstanceOf[js.Any])
+      @scala.inline
+      def onAccessibilityAction(value: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit): this.type = set("onAccessibilityAction", js.Any.fromFunction1(value))
+      @scala.inline
+      def onAccessibilityEscape(value: () => Unit): this.type = set("onAccessibilityEscape", js.Any.fromFunction0(value))
+      @scala.inline
+      def onAccessibilityTap(value: () => Unit): this.type = set("onAccessibilityTap", js.Any.fromFunction0(value))
+      @scala.inline
+      def onBlur(value: SyntheticEvent[NodeHandle, TargetedEvent] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+      @scala.inline
+      def onFocus(value: SyntheticEvent[NodeHandle, TargetedEvent] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+      @scala.inline
+      def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+      @scala.inline
+      def onLongPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onLongPress", js.Any.fromFunction1(value))
+      @scala.inline
+      def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))
+      @scala.inline
+      def onPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
+      @scala.inline
+      def onPressIn(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onPressIn", js.Any.fromFunction1(value))
+      @scala.inline
+      def onPressOut(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onPressOut", js.Any.fromFunction1(value))
+      @scala.inline
+      def pressRetentionOffset(value: Insets): this.type = set("pressRetentionOffset", value.asInstanceOf[js.Any])
+      @scala.inline
+      def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+      @scala.inline
+      def styleNull: this.type = set("style", null)
+      @scala.inline
+      def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
+      @scala.inline
+      def tvParallaxProperties(value: TVParallaxProperties): this.type = set("tvParallaxProperties", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: typingsSlinky.reactNative.mod.TouchableOpacityProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: TouchableOpacityProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def TouchableOpacityProps(
-    accessibilityActions: js.Array[AccessibilityActionInfo] = null,
-    accessibilityComponentType: none | button | radiobutton_checked | radiobutton_unchecked = null,
-    accessibilityElementsHidden: js.UndefOr[Boolean] = js.undefined,
-    accessibilityHint: String = null,
-    accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.undefined,
-    accessibilityLabel: String = null,
-    accessibilityLiveRegion: none | polite | assertive = null,
-    accessibilityRole: AccessibilityRole = null,
-    accessibilityState: AccessibilityState = null,
-    accessibilityStates: js.Array[AccessibilityStates] = null,
-    accessibilityTraits: AccessibilityTrait | js.Array[AccessibilityTrait] = null,
-    accessibilityViewIsModal: js.UndefOr[Boolean] = js.undefined,
-    accessible: js.UndefOr[Boolean] = js.undefined,
-    activeOpacity: Int | Double = null,
-    delayLongPress: Int | Double = null,
-    delayPressIn: Int | Double = null,
-    delayPressOut: Int | Double = null,
-    hasTVPreferredFocus: js.UndefOr[Boolean] = js.undefined,
-    hitSlop: Insets = null,
-    importantForAccessibility: auto | yes | no | `no-hide-descendants` = null,
-    onAccessibilityAction: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit = null,
-    onAccessibilityEscape: () => Unit = null,
-    onAccessibilityTap: () => Unit = null,
-    onBlur: SyntheticEvent[NodeHandle, TargetedEvent] => Unit = null,
-    onFocus: SyntheticEvent[NodeHandle, TargetedEvent] => Unit = null,
-    onLayout: /* event */ LayoutChangeEvent => Unit = null,
-    onLongPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onMagicTap: () => Unit = null,
-    onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPressIn: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPressOut: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    pressRetentionOffset: Insets = null,
-    style: StyleProp[ViewStyle] = null,
-    testID: String = null,
-    tvParallaxProperties: TVParallaxProperties = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.TouchableOpacity] = {
-    val __obj = js.Dynamic.literal()
-    if (accessibilityActions != null) __obj.updateDynamic("accessibilityActions")(accessibilityActions.asInstanceOf[js.Any])
-    if (accessibilityComponentType != null) __obj.updateDynamic("accessibilityComponentType")(accessibilityComponentType.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityElementsHidden)) __obj.updateDynamic("accessibilityElementsHidden")(accessibilityElementsHidden.asInstanceOf[js.Any])
-    if (accessibilityHint != null) __obj.updateDynamic("accessibilityHint")(accessibilityHint.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityIgnoresInvertColors)) __obj.updateDynamic("accessibilityIgnoresInvertColors")(accessibilityIgnoresInvertColors.asInstanceOf[js.Any])
-    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
-    if (accessibilityLiveRegion != null) __obj.updateDynamic("accessibilityLiveRegion")(accessibilityLiveRegion.asInstanceOf[js.Any])
-    if (accessibilityRole != null) __obj.updateDynamic("accessibilityRole")(accessibilityRole.asInstanceOf[js.Any])
-    if (accessibilityState != null) __obj.updateDynamic("accessibilityState")(accessibilityState.asInstanceOf[js.Any])
-    if (accessibilityStates != null) __obj.updateDynamic("accessibilityStates")(accessibilityStates.asInstanceOf[js.Any])
-    if (accessibilityTraits != null) __obj.updateDynamic("accessibilityTraits")(accessibilityTraits.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessibilityViewIsModal)) __obj.updateDynamic("accessibilityViewIsModal")(accessibilityViewIsModal.asInstanceOf[js.Any])
-    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.asInstanceOf[js.Any])
-    if (activeOpacity != null) __obj.updateDynamic("activeOpacity")(activeOpacity.asInstanceOf[js.Any])
-    if (delayLongPress != null) __obj.updateDynamic("delayLongPress")(delayLongPress.asInstanceOf[js.Any])
-    if (delayPressIn != null) __obj.updateDynamic("delayPressIn")(delayPressIn.asInstanceOf[js.Any])
-    if (delayPressOut != null) __obj.updateDynamic("delayPressOut")(delayPressOut.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasTVPreferredFocus)) __obj.updateDynamic("hasTVPreferredFocus")(hasTVPreferredFocus.asInstanceOf[js.Any])
-    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
-    if (importantForAccessibility != null) __obj.updateDynamic("importantForAccessibility")(importantForAccessibility.asInstanceOf[js.Any])
-    if (onAccessibilityAction != null) __obj.updateDynamic("onAccessibilityAction")(js.Any.fromFunction1(onAccessibilityAction))
-    if (onAccessibilityEscape != null) __obj.updateDynamic("onAccessibilityEscape")(js.Any.fromFunction0(onAccessibilityEscape))
-    if (onAccessibilityTap != null) __obj.updateDynamic("onAccessibilityTap")(js.Any.fromFunction0(onAccessibilityTap))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onLayout != null) __obj.updateDynamic("onLayout")(js.Any.fromFunction1(onLayout))
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction1(onLongPress))
-    if (onMagicTap != null) __obj.updateDynamic("onMagicTap")(js.Any.fromFunction0(onMagicTap))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
-    if (onPressIn != null) __obj.updateDynamic("onPressIn")(js.Any.fromFunction1(onPressIn))
-    if (onPressOut != null) __obj.updateDynamic("onPressOut")(js.Any.fromFunction1(onPressOut))
-    if (pressRetentionOffset != null) __obj.updateDynamic("pressRetentionOffset")(pressRetentionOffset.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
-    if (tvParallaxProperties != null) __obj.updateDynamic("tvParallaxProperties")(tvParallaxProperties.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  object ContainedTouchableProperties {
+    @JSImport("react-native-gesture-handler", "TouchableOpacity")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.TouchableOpacity] {
+      @scala.inline
+      def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+      @scala.inline
+      def containerStyleNull: this.type = set("containerStyle", null)
+    }
+    
+    def withProps(p: typingsSlinky.reactNativeGestureHandler.mod.ContainedTouchableProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: ContainedTouchableProperties.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   }
-  /* The following DOM/SVG props were specified: disabled */
-  def ContainedTouchableProperties(containerStyle: StyleProp[ViewStyle] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.TouchableOpacity] = {
-    val __obj = js.Dynamic.literal()
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
-  }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.TouchableOpacity] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeGestureHandler.mod.TouchableOpacity](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TouchableOpacityProperties | ContainedTouchableProperties
+  
 }
 

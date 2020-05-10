@@ -19,24 +19,22 @@ trait BARCODE_TYPE extends js.Object
 
 object BARCODE_TYPE {
   @scala.inline
-  def CODE128: typingsSlinky.escpos.escposStrings.CODE128 = this.cast("CODE128")
+  def CODE128: typingsSlinky.escpos.escposStrings.CODE128 = "CODE128".asInstanceOf[typingsSlinky.escpos.escposStrings.CODE128]
   @scala.inline
-  def CODE39: typingsSlinky.escpos.escposStrings.CODE39 = this.cast("CODE39")
+  def CODE39: typingsSlinky.escpos.escposStrings.CODE39 = "CODE39".asInstanceOf[typingsSlinky.escpos.escposStrings.CODE39]
   @scala.inline
-  def CODE93: typingsSlinky.escpos.escposStrings.CODE93 = this.cast("CODE93")
+  def CODE93: typingsSlinky.escpos.escposStrings.CODE93 = "CODE93".asInstanceOf[typingsSlinky.escpos.escposStrings.CODE93]
   @scala.inline
-  def EAN13: typingsSlinky.escpos.escposStrings.EAN13 = this.cast("EAN13")
+  def EAN13: typingsSlinky.escpos.escposStrings.EAN13 = "EAN13".asInstanceOf[typingsSlinky.escpos.escposStrings.EAN13]
   @scala.inline
-  def EAN8: typingsSlinky.escpos.escposStrings.EAN8 = this.cast("EAN8")
+  def EAN8: typingsSlinky.escpos.escposStrings.EAN8 = "EAN8".asInstanceOf[typingsSlinky.escpos.escposStrings.EAN8]
   @scala.inline
-  def ITF: typingsSlinky.escpos.escposStrings.ITF = this.cast("ITF")
+  def ITF: typingsSlinky.escpos.escposStrings.ITF = "ITF".asInstanceOf[typingsSlinky.escpos.escposStrings.ITF]
   @scala.inline
-  def NW7: typingsSlinky.escpos.escposStrings.NW7 = this.cast("NW7")
+  def NW7: typingsSlinky.escpos.escposStrings.NW7 = "NW7".asInstanceOf[typingsSlinky.escpos.escposStrings.NW7]
   @scala.inline
-  def UPC_A: typingsSlinky.escpos.escposStrings.UPC_A = this.cast("UPC_A")
+  def UPC_A: typingsSlinky.escpos.escposStrings.UPC_A = "UPC_A".asInstanceOf[typingsSlinky.escpos.escposStrings.UPC_A]
   @scala.inline
-  def UPC_E: typingsSlinky.escpos.escposStrings.UPC_E = this.cast("UPC_E")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UPC_E: typingsSlinky.escpos.escposStrings.UPC_E = "UPC_E".asInstanceOf[typingsSlinky.escpos.escposStrings.UPC_E]
 }
 

@@ -24,11 +24,41 @@ trait SchemaCreateProfileRequest extends js.Object {
 
 object SchemaCreateProfileRequest {
   @scala.inline
-  def apply(deployment: SchemaDeployment = null, profileType: js.Array[String] = null): SchemaCreateProfileRequest = {
+  def apply(): SchemaCreateProfileRequest = {
     val __obj = js.Dynamic.literal()
-    if (deployment != null) __obj.updateDynamic("deployment")(deployment.asInstanceOf[js.Any])
-    if (profileType != null) __obj.updateDynamic("profileType")(profileType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateProfileRequest]
   }
+  @scala.inline
+  implicit class SchemaCreateProfileRequestOps[Self <: SchemaCreateProfileRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeployment(value: SchemaDeployment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deployment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeployment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deployment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileType(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,29 @@
 package typingsSlinky.titanium.Titanium.UI
 
-import typingsSlinky.titanium.ScrollViewAnimationProperties
-import typingsSlinky.titanium.contentOffsetOption
-import typingsSlinky.titanium.zoomScaleOption
+import typingsSlinky.titanium.AnimatedOptions
+import typingsSlinky.titanium.Point
+import typingsSlinky.titanium.titaniumStrings.click
+import typingsSlinky.titanium.titaniumStrings.dblclick
+import typingsSlinky.titanium.titaniumStrings.doubletap
+import typingsSlinky.titanium.titaniumStrings.dragEnd
+import typingsSlinky.titanium.titaniumStrings.dragStart
+import typingsSlinky.titanium.titaniumStrings.dragend_
+import typingsSlinky.titanium.titaniumStrings.dragstart_
+import typingsSlinky.titanium.titaniumStrings.focus
+import typingsSlinky.titanium.titaniumStrings.keypressed
+import typingsSlinky.titanium.titaniumStrings.longclick
+import typingsSlinky.titanium.titaniumStrings.longpress
+import typingsSlinky.titanium.titaniumStrings.pinch
+import typingsSlinky.titanium.titaniumStrings.postlayout
+import typingsSlinky.titanium.titaniumStrings.scale
+import typingsSlinky.titanium.titaniumStrings.scroll
+import typingsSlinky.titanium.titaniumStrings.singletap
+import typingsSlinky.titanium.titaniumStrings.swipe
+import typingsSlinky.titanium.titaniumStrings.touchcancel
+import typingsSlinky.titanium.titaniumStrings.touchend
+import typingsSlinky.titanium.titaniumStrings.touchmove
+import typingsSlinky.titanium.titaniumStrings.touchstart
+import typingsSlinky.titanium.titaniumStrings.twofingertap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +31,9 @@ import scala.scalajs.js.annotation._
 /**
 		 * A view that contains a horizontally and/or vertically-scrollable region of content.
 		 */
+@JSGlobal("Titanium.UI.ScrollView")
 @js.native
-trait ScrollView extends View {
+class ScrollView () extends View {
   /**
   			 * Determines whether this scroll view can cancel subview touches in order to scroll instead.
   			 */
@@ -23,7 +45,7 @@ trait ScrollView extends View {
   /**
   			 * X and Y coordinates to which to reposition the top-left point of the scrollable region.
   			 */
-  var contentOffset: js.Any = js.native
+  var contentOffset: Point = js.native
   /**
   			 * Width of the scrollable region.
   			 */
@@ -93,91 +115,227 @@ trait ScrollView extends View {
   			 * Scaling factor of the scroll view's content.
   			 */
   var zoomScale: Double = js.native
+  @JSName("addEventListener")
+  def addEventListener_dragEnd(
+    name: dragEnd,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollView_DragEndEvent, Unit]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dragStart(
+    name: dragStart,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollView_DragStartEvent, Unit]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dragend(
+    name: dragend_,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollViewDragendEvent, Unit]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_dragstart(
+    name: dragstart_,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollViewDragstartEvent, Unit]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_scale(
+    name: scale,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollViewScaleEvent, Unit]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_scroll(
+    name: scroll,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollViewScrollEvent, Unit]
+  ): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_click(name: click, event: ScrollViewClickEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_dblclick(name: dblclick, event: ScrollViewDblclickEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_doubletap(name: doubletap, event: ScrollViewDoubletapEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_dragEnd(name: dragEnd): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_dragEnd(name: dragEnd, event: ScrollView_DragEndEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_dragStart(name: dragStart): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_dragStart(name: dragStart, event: ScrollView_DragStartEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_dragend(name: dragend_): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_dragend(name: dragend_, event: ScrollViewDragendEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_dragstart(name: dragstart_): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_dragstart(name: dragstart_, event: ScrollViewDragstartEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_focus(name: focus, event: ScrollViewFocusEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_keypressed(name: keypressed, event: ScrollViewKeypressedEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_longclick(name: longclick, event: ScrollViewLongclickEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_longpress(name: longpress, event: ScrollViewLongpressEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_pinch(name: pinch, event: ScrollViewPinchEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_postlayout(name: postlayout, event: ScrollViewPostlayoutEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_scale(name: scale): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_scale(name: scale, event: ScrollViewScaleEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_scroll(name: scroll): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_scroll(name: scroll, event: ScrollViewScrollEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_singletap(name: singletap, event: ScrollViewSingletapEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_swipe(name: swipe, event: ScrollViewSwipeEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_touchcancel(name: touchcancel, event: ScrollViewTouchcancelEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_touchend(name: touchend, event: ScrollViewTouchendEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_touchmove(name: touchmove, event: ScrollViewTouchmoveEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_touchstart(name: touchstart, event: ScrollViewTouchstartEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_twofingertap(name: twofingertap, event: ScrollViewTwofingertapEvent): Unit = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.canCancelEvents> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.canCancelEvents> instead.
   			 */
   def getCanCancelEvents(): Boolean = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.contentHeight> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.contentHeight> instead.
   			 */
   def getContentHeight(): Double | String = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.contentOffset> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.contentOffset> instead.
   			 */
-  def getContentOffset(): js.Any = js.native
+  def getContentOffset(): Point = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.contentWidth> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.contentWidth> instead.
   			 */
   def getContentWidth(): Double | String = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.decelerationRate> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.decelerationRate> instead.
   			 */
   def getDecelerationRate(): Double = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.disableBounce> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.disableBounce> instead.
   			 */
   def getDisableBounce(): Boolean = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.horizontalBounce> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.horizontalBounce> instead.
   			 */
   def getHorizontalBounce(): Boolean = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.keyboardDismissMode> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.keyboardDismissMode> instead.
   			 */
   def getKeyboardDismissMode(): Double = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.maxZoomScale> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.maxZoomScale> instead.
   			 */
   def getMaxZoomScale(): Double = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.minZoomScale> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.minZoomScale> instead.
   			 */
   def getMinZoomScale(): Double = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.overScrollMode> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.overScrollMode> instead.
   			 */
   def getOverScrollMode(): Double = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.refreshControl> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.refreshControl> instead.
   			 */
   def getRefreshControl(): RefreshControl = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.scrollIndicatorStyle> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.scrollIndicatorStyle> instead.
   			 */
   def getScrollIndicatorStyle(): Double = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.scrollType> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.scrollType> instead.
   			 */
   def getScrollType(): String = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.scrollingEnabled> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.scrollingEnabled> instead.
   			 */
   def getScrollingEnabled(): Boolean = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.scrollsToTop> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.scrollsToTop> instead.
   			 */
   def getScrollsToTop(): Boolean = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.showHorizontalScrollIndicator> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.showHorizontalScrollIndicator> instead.
   			 */
   def getShowHorizontalScrollIndicator(): Boolean = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.showVerticalScrollIndicator> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.showVerticalScrollIndicator> instead.
   			 */
   def getShowVerticalScrollIndicator(): Boolean = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.verticalBounce> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.verticalBounce> instead.
   			 */
   def getVerticalBounce(): Boolean = js.native
   /**
   			 * Gets the value of the <Titanium.UI.ScrollView.zoomScale> property.
+  			 * @deprecated Access <Titanium.UI.ScrollView.zoomScale> instead.
   			 */
   def getZoomScale(): Double = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_dragEnd(
+    name: dragEnd,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollView_DragEndEvent, Unit]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_dragStart(
+    name: dragStart,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollView_DragStartEvent, Unit]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_dragend(
+    name: dragend_,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollViewDragendEvent, Unit]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_dragstart(
+    name: dragstart_,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollViewDragstartEvent, Unit]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_scale(
+    name: scale,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollViewScaleEvent, Unit]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_scroll(
+    name: scroll,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ ScrollViewScrollEvent, Unit]
+  ): Unit = js.native
   /**
   			 * Moves the specified coordinate of the scrollable region into the viewable area.
   			 */
   def scrollTo(x: Double, y: Double): Unit = js.native
-  def scrollTo(x: Double, y: Double, animation: ScrollViewAnimationProperties): Unit = js.native
+  def scrollTo(x: Double, y: Double, options: AnimatedOptions): Unit = js.native
   /**
   			 * Moves the end of the scrollable region into the viewable area.
   			 */
@@ -188,93 +346,105 @@ trait ScrollView extends View {
   def scrollToTop(): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.canCancelEvents> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.canCancelEvents> instead.
   			 */
   def setCanCancelEvents(canCancelEvents: Boolean): Unit = js.native
-  /**
-  			 * Sets the value of the <Titanium.UI.ScrollView.contentHeight> property.
-  			 */
   def setContentHeight(contentHeight: String): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.contentHeight> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.contentHeight> instead.
   			 */
   def setContentHeight(contentHeight: Double): Unit = js.native
   /**
   			 * Sets the value of the [contentOffset](Titanium.UI.ScrollView.contentOffset) property.
   			 */
-  def setContentOffset(contentOffsetXY: js.Any): Unit = js.native
-  def setContentOffset(contentOffsetXY: js.Any, animated: contentOffsetOption): Unit = js.native
-  /**
-  			 * Sets the value of the <Titanium.UI.ScrollView.contentWidth> property.
-  			 */
+  def setContentOffset(contentOffsetXY: Point): Unit = js.native
+  def setContentOffset(contentOffsetXY: Point, animated: AnimatedOptions): Unit = js.native
   def setContentWidth(contentWidth: String): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.contentWidth> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.contentWidth> instead.
   			 */
   def setContentWidth(contentWidth: Double): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.decelerationRate> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.decelerationRate> instead.
   			 */
   def setDecelerationRate(decelerationRate: Double): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.disableBounce> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.disableBounce> instead.
   			 */
   def setDisableBounce(disableBounce: Boolean): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.horizontalBounce> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.horizontalBounce> instead.
   			 */
   def setHorizontalBounce(horizontalBounce: Boolean): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.keyboardDismissMode> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.keyboardDismissMode> instead.
   			 */
   def setKeyboardDismissMode(keyboardDismissMode: Double): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.maxZoomScale> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.maxZoomScale> instead.
   			 */
   def setMaxZoomScale(maxZoomScale: Double): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.minZoomScale> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.minZoomScale> instead.
   			 */
   def setMinZoomScale(minZoomScale: Double): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.overScrollMode> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.overScrollMode> instead.
   			 */
   def setOverScrollMode(overScrollMode: Double): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.refreshControl> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.refreshControl> instead.
   			 */
   def setRefreshControl(refreshControl: RefreshControl): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.scrollIndicatorStyle> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.scrollIndicatorStyle> instead.
   			 */
   def setScrollIndicatorStyle(scrollIndicatorStyle: Double): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.scrollType> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.scrollType> instead.
   			 */
   def setScrollType(scrollType: String): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.scrollingEnabled> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.scrollingEnabled> instead.
   			 */
   def setScrollingEnabled(scrollingEnabled: Boolean): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.scrollsToTop> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.scrollsToTop> instead.
   			 */
   def setScrollsToTop(scrollsToTop: Boolean): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.showHorizontalScrollIndicator> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.showHorizontalScrollIndicator> instead.
   			 */
   def setShowHorizontalScrollIndicator(showHorizontalScrollIndicator: Boolean): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.showVerticalScrollIndicator> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.showVerticalScrollIndicator> instead.
   			 */
   def setShowVerticalScrollIndicator(showVerticalScrollIndicator: Boolean): Unit = js.native
   /**
   			 * Sets the value of the <Titanium.UI.ScrollView.verticalBounce> property.
+  			 * @deprecated Set the value using <Titanium.UI.ScrollView.verticalBounce> instead.
   			 */
   def setVerticalBounce(verticalBounce: Boolean): Unit = js.native
   /**
   			 * Sets the value of the [zoomScale](Titanium.UI.ScrollView.zoomScale) property.
   			 */
   def setZoomScale(zoomScale: Double): Unit = js.native
-  def setZoomScale(zoomScale: Double, animated: zoomScaleOption): Unit = js.native
+  def setZoomScale(zoomScale: Double, options: AnimatedOptions): Unit = js.native
 }
 

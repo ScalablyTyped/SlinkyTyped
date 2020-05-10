@@ -1,10 +1,7 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.pickerPropsTypeMod.PickerData
 import typingsSlinky.antDesignReactNative.pickerViewMod.default
 import typingsSlinky.antDesignReactNative.pickerViewPickerViewMod.PickerViewProps
@@ -14,40 +11,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PickerView
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object PickerView {
   @JSImport("@ant-design/react-native/lib/picker-view", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: cols */
-  def apply(
-    cascade: js.UndefOr[Boolean] = js.undefined,
-    data: js.Array[js.Array[PickerData] | PickerData] = null,
-    indicatorStyle: StyleProp[ViewStyle] = null,
-    itemStyle: StyleProp[ViewStyle] = null,
-    onChange: /* value */ js.UndefOr[js.Any] => Unit = null,
-    onScrollChange: /* value */ js.UndefOr[js.Any] => Unit = null,
-    styles: js.Any = null,
-    value: js.Array[_] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cascade)) __obj.updateDynamic("cascade")(cascade.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (indicatorStyle != null) __obj.updateDynamic("indicatorStyle")(indicatorStyle.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onScrollChange != null) __obj.updateDynamic("onScrollChange")(js.Any.fromFunction1(onScrollChange))
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def cascade(value: Boolean): this.type = set("cascade", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[js.Array[PickerData] | PickerData]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorStyle(value: StyleProp[ViewStyle]): this.type = set("indicatorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorStyleNull: this.type = set("indicatorStyle", null)
+    @scala.inline
+    def itemStyle(value: StyleProp[ViewStyle]): this.type = set("itemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemStyleNull: this.type = set("itemStyle", null)
+    @scala.inline
+    def onChange(value: /* value */ js.UndefOr[js.Any] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onScrollChange(value: /* value */ js.UndefOr[js.Any] => Unit): this.type = set("onScrollChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: js.Any): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.antDesignReactNative.pickerViewMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PickerViewProps
+  
+  def withProps(p: PickerViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PickerView.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

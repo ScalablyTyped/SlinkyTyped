@@ -14,7 +14,7 @@ package object commonMod {
     - typingsSlinky.reactDayPicker.commonMod.BeforeAfterModifier
     - typingsSlinky.reactDayPicker.commonMod.DaysOfWeekModifier
     - typingsSlinky.reactDayPicker.commonMod.FunctionModifier
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
   */
   type Modifier = js.UndefOr[
     typingsSlinky.reactDayPicker.commonMod._Modifier | js.Date | typingsSlinky.reactDayPicker.commonMod.FunctionModifier

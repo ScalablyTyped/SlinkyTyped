@@ -11,14 +11,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDataPackagePropertySet
   extends IMap[String, js.Any] {
-  var applicationListingUri: Uri
-  var applicationName: String
-  var description: String
-  var fileTypes: IVector[String]
-  var thumbnail: IRandomAccessStreamReference
-  var title: String
+  var applicationListingUri: Uri = js.native
+  var applicationName: String = js.native
+  var description: String = js.native
+  var fileTypes: IVector[String] = js.native
+  var thumbnail: IRandomAccessStreamReference = js.native
+  var title: String = js.native
 }
 
 object IDataPackagePropertySet {
@@ -40,8 +41,51 @@ object IDataPackagePropertySet {
     title: String
   ): IDataPackagePropertySet = {
     val __obj = js.Dynamic.literal(applicationListingUri = applicationListingUri.asInstanceOf[js.Any], applicationName = applicationName.asInstanceOf[js.Any], clear = js.Any.fromFunction0(clear), description = description.asInstanceOf[js.Any], fileTypes = fileTypes.asInstanceOf[js.Any], first = js.Any.fromFunction0(first), getView = js.Any.fromFunction0(getView), hasKey = js.Any.fromFunction1(hasKey), insert = js.Any.fromFunction2(insert), lookup = js.Any.fromFunction1(lookup), remove = js.Any.fromFunction1(remove), size = size.asInstanceOf[js.Any], thumbnail = thumbnail.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IDataPackagePropertySet]
   }
+  @scala.inline
+  implicit class IDataPackagePropertySetOps[Self <: IDataPackagePropertySet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationListingUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationListingUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApplicationName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileTypes(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThumbnail(value: IRandomAccessStreamReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

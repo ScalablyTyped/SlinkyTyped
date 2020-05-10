@@ -5,17 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InvalidInputError extends Error {
   @JSName("name")
-  var name_InvalidInputError: typingsSlinky.roll.rollStrings.InvalidInputError
+  var name_InvalidInputError: typingsSlinky.roll.rollStrings.InvalidInputError = js.native
 }
 
 object InvalidInputError {
   @scala.inline
-  def apply(message: String, name: typingsSlinky.roll.rollStrings.InvalidInputError, stack: String = null): InvalidInputError = {
+  def apply(message: String, name: typingsSlinky.roll.rollStrings.InvalidInputError): InvalidInputError = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidInputError]
   }
+  @scala.inline
+  implicit class InvalidInputErrorOps[Self <: InvalidInputError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: typingsSlinky.roll.rollStrings.InvalidInputError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

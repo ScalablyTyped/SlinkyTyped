@@ -27,77 +27,477 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonClientExtension extends js.Object {
-  var Argument: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Argument]] = js.undefined
-  var ClientExtension: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.ClientExtension]] = js.undefined
-  var Condition: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Condition]] = js.undefined
-  var Defer: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Defer]] = js.undefined
-  var Directive: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Directive]] = js.undefined
-  var Fragment: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Fragment]] = js.undefined
-  var FragmentSpread: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.FragmentSpread]] = js.undefined
-  var InlineDataFragmentSpread: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.InlineDataFragmentSpread]] = js.undefined
-  var InlineFragment: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.InlineFragment]] = js.undefined
-  var LinkedField: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.LinkedField]] = js.undefined
-  var Literal: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Literal]] = js.undefined
-  var LocalArgumentDefinition: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.LocalArgumentDefinition]] = js.undefined
-  var ModuleImport: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.ModuleImport]] = js.undefined
-  var Request: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Request]] = js.undefined
-  var Root: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Root]] = js.undefined
-  var RootArgumentDefinition: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.RootArgumentDefinition]] = js.undefined
-  var ScalarField: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.ScalarField]] = js.undefined
-  var SplitOperation: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.SplitOperation]] = js.undefined
-  var Stream: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Stream]] = js.undefined
-  var Variable: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Variable]] = js.undefined
+  var Argument: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Argument]] = js.native
+  var ClientExtension: js.UndefOr[VisitFn[typingsSlinky.relayCompiler.iRMod.ClientExtension]] = js.native
+  var Condition: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Condition]] = js.native
+  var Defer: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Defer]] = js.native
+  var Directive: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Directive]] = js.native
+  var Fragment: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Fragment]] = js.native
+  var FragmentSpread: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.FragmentSpread]] = js.native
+  var InlineDataFragmentSpread: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.InlineDataFragmentSpread]] = js.native
+  var InlineFragment: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.InlineFragment]] = js.native
+  var LinkedField: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.LinkedField]] = js.native
+  var Literal: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Literal]] = js.native
+  var LocalArgumentDefinition: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.LocalArgumentDefinition]] = js.native
+  var ModuleImport: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.ModuleImport]] = js.native
+  var Request: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Request]] = js.native
+  var Root: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Root]] = js.native
+  var RootArgumentDefinition: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.RootArgumentDefinition]] = js.native
+  var ScalarField: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.ScalarField]] = js.native
+  var SplitOperation: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.SplitOperation]] = js.native
+  var Stream: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Stream]] = js.native
+  var Variable: js.UndefOr[NodeVisitorObject[typingsSlinky.relayCompiler.iRMod.Variable]] = js.native
 }
 
 object AnonClientExtension {
   @scala.inline
-  def apply(
-    Argument: NodeVisitorObject[Argument] = null,
-    ClientExtension: (ClientExtension, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
-  // These correspond to array indices in `path`.
-  js.Any = null,
-    Condition: NodeVisitorObject[Condition] = null,
-    Defer: NodeVisitorObject[Defer] = null,
-    Directive: NodeVisitorObject[Directive] = null,
-    Fragment: NodeVisitorObject[Fragment] = null,
-    FragmentSpread: NodeVisitorObject[FragmentSpread] = null,
-    InlineDataFragmentSpread: NodeVisitorObject[InlineDataFragmentSpread] = null,
-    InlineFragment: NodeVisitorObject[InlineFragment] = null,
-    LinkedField: NodeVisitorObject[LinkedField] = null,
-    Literal: NodeVisitorObject[Literal] = null,
-    LocalArgumentDefinition: NodeVisitorObject[LocalArgumentDefinition] = null,
-    ModuleImport: NodeVisitorObject[ModuleImport] = null,
-    Request: NodeVisitorObject[Request] = null,
-    Root: NodeVisitorObject[Root] = null,
-    RootArgumentDefinition: NodeVisitorObject[RootArgumentDefinition] = null,
-    ScalarField: NodeVisitorObject[ScalarField] = null,
-    SplitOperation: NodeVisitorObject[SplitOperation] = null,
-    Stream: NodeVisitorObject[Stream] = null,
-    Variable: NodeVisitorObject[Variable] = null
-  ): AnonClientExtension = {
+  def apply(): AnonClientExtension = {
     val __obj = js.Dynamic.literal()
-    if (Argument != null) __obj.updateDynamic("Argument")(Argument.asInstanceOf[js.Any])
-    if (ClientExtension != null) __obj.updateDynamic("ClientExtension")(js.Any.fromFunction5(ClientExtension))
-    if (Condition != null) __obj.updateDynamic("Condition")(Condition.asInstanceOf[js.Any])
-    if (Defer != null) __obj.updateDynamic("Defer")(Defer.asInstanceOf[js.Any])
-    if (Directive != null) __obj.updateDynamic("Directive")(Directive.asInstanceOf[js.Any])
-    if (Fragment != null) __obj.updateDynamic("Fragment")(Fragment.asInstanceOf[js.Any])
-    if (FragmentSpread != null) __obj.updateDynamic("FragmentSpread")(FragmentSpread.asInstanceOf[js.Any])
-    if (InlineDataFragmentSpread != null) __obj.updateDynamic("InlineDataFragmentSpread")(InlineDataFragmentSpread.asInstanceOf[js.Any])
-    if (InlineFragment != null) __obj.updateDynamic("InlineFragment")(InlineFragment.asInstanceOf[js.Any])
-    if (LinkedField != null) __obj.updateDynamic("LinkedField")(LinkedField.asInstanceOf[js.Any])
-    if (Literal != null) __obj.updateDynamic("Literal")(Literal.asInstanceOf[js.Any])
-    if (LocalArgumentDefinition != null) __obj.updateDynamic("LocalArgumentDefinition")(LocalArgumentDefinition.asInstanceOf[js.Any])
-    if (ModuleImport != null) __obj.updateDynamic("ModuleImport")(ModuleImport.asInstanceOf[js.Any])
-    if (Request != null) __obj.updateDynamic("Request")(Request.asInstanceOf[js.Any])
-    if (Root != null) __obj.updateDynamic("Root")(Root.asInstanceOf[js.Any])
-    if (RootArgumentDefinition != null) __obj.updateDynamic("RootArgumentDefinition")(RootArgumentDefinition.asInstanceOf[js.Any])
-    if (ScalarField != null) __obj.updateDynamic("ScalarField")(ScalarField.asInstanceOf[js.Any])
-    if (SplitOperation != null) __obj.updateDynamic("SplitOperation")(SplitOperation.asInstanceOf[js.Any])
-    if (Stream != null) __obj.updateDynamic("Stream")(Stream.asInstanceOf[js.Any])
-    if (Variable != null) __obj.updateDynamic("Variable")(Variable.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonClientExtension]
   }
+  @scala.inline
+  implicit class AnonClientExtensionOps[Self <: AnonClientExtension] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgumentFunction5(
+      value: (Argument, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Argument")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withArgument(value: NodeVisitorObject[Argument]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Argument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Argument")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientExtension(
+      value: (ClientExtension, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientExtension")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutClientExtension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientExtension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditionFunction5(
+      value: (Condition, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withCondition(value: NodeVisitorObject[Condition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeferFunction5(
+      value: (Defer, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Defer")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withDefer(value: NodeVisitorObject[Defer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Defer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Defer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectiveFunction5(
+      value: (Directive, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Directive")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withDirective(value: NodeVisitorObject[Directive]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Directive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirective: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Directive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFragmentFunction5(
+      value: (Fragment, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fragment")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withFragment(value: NodeVisitorObject[Fragment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fragment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fragment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFragmentSpreadFunction5(
+      value: (FragmentSpread, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSpread")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withFragmentSpread(value: NodeVisitorObject[FragmentSpread]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSpread")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragmentSpread: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSpread")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineDataFragmentSpreadFunction5(
+      value: (InlineDataFragmentSpread, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineDataFragmentSpread")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withInlineDataFragmentSpread(value: NodeVisitorObject[InlineDataFragmentSpread]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineDataFragmentSpread")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineDataFragmentSpread: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineDataFragmentSpread")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineFragmentFunction5(
+      value: (InlineFragment, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineFragment")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withInlineFragment(value: NodeVisitorObject[InlineFragment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineFragment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineFragment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InlineFragment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkedFieldFunction5(
+      value: (LinkedField, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkedField")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withLinkedField(value: NodeVisitorObject[LinkedField]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkedField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkedField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LinkedField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiteralFunction5(
+      value: (Literal, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Literal")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withLiteral(value: NodeVisitorObject[Literal]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Literal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLiteral: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Literal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalArgumentDefinitionFunction5(
+      value: (LocalArgumentDefinition, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalArgumentDefinition")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withLocalArgumentDefinition(value: NodeVisitorObject[LocalArgumentDefinition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalArgumentDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalArgumentDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalArgumentDefinition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModuleImportFunction5(
+      value: (ModuleImport, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModuleImport")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withModuleImport(value: NodeVisitorObject[ModuleImport]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModuleImport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModuleImport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModuleImport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestFunction5(
+      value: (Request, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Request")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withRequest(value: NodeVisitorObject[Request]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Request")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootFunction5(
+      value: (Root, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withRoot(value: NodeVisitorObject[Root]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootArgumentDefinitionFunction5(
+      value: (RootArgumentDefinition, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootArgumentDefinition")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withRootArgumentDefinition(value: NodeVisitorObject[RootArgumentDefinition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootArgumentDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootArgumentDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootArgumentDefinition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScalarFieldFunction5(
+      value: (ScalarField, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalarField")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withScalarField(value: NodeVisitorObject[ScalarField]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalarField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScalarField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalarField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitOperationFunction5(
+      value: (SplitOperation, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplitOperation")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withSplitOperation(value: NodeVisitorObject[SplitOperation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplitOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplitOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplitOperation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamFunction5(
+      value: (Stream, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stream")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withStream(value: NodeVisitorObject[Stream]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariableFunction5(
+      value: (Variable, /* key */ js.UndefOr[js.Any], /* parent */ js.UndefOr[Null | VisitNode | js.Array[VisitNode]], /* path */ js.UndefOr[js.Array[js.Any]], /* ancestors */ js.UndefOr[js.Array[VisitNode | js.Array[VisitNode]]]) => // Note: ancestors includes arrays which contain the visited node
+    // These correspond to array indices in `path`.
+    js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Variable")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withVariable(value: NodeVisitorObject[Variable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Variable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Variable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

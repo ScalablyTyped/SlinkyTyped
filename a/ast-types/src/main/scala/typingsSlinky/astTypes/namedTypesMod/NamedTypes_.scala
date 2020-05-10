@@ -259,533 +259,1805 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NamedTypes_ extends js.Object {
-  var AnyTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.AnyTypeAnnotation]
-  var ArrayExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ArrayExpression]
-  var ArrayPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ArrayPattern]
-  var ArrayTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ArrayTypeAnnotation]
-  var ArrowFunctionExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ArrowFunctionExpression]
-  var AssignmentExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.AssignmentExpression]
-  var AssignmentPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.AssignmentPattern]
-  var AwaitExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.AwaitExpression]
-  var BigIntLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BigIntLiteral]
-  var BinaryExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BinaryExpression]
-  var BindExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BindExpression]
-  var Block: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Block]
-  var BlockStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BlockStatement]
-  var BooleanLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BooleanLiteral]
-  var BooleanLiteralTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BooleanLiteralTypeAnnotation]
-  var BooleanTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BooleanTypeAnnotation]
-  var BreakStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BreakStatement]
-  var CallExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.CallExpression]
-  var CatchClause: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.CatchClause]
-  var ClassBody: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassBody]
-  var ClassDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassDeclaration]
-  var ClassExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassExpression]
-  var ClassImplements: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassImplements]
-  var ClassMethod: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassMethod]
-  var ClassPrivateMethod: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassPrivateMethod]
-  var ClassPrivateProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassPrivateProperty]
-  var ClassProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassProperty]
-  var ClassPropertyDefinition: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassPropertyDefinition]
-  var Comment: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Comment]
-  var CommentBlock: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.CommentBlock]
-  var CommentLine: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.CommentLine]
-  var ComprehensionBlock: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ComprehensionBlock]
-  var ComprehensionExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ComprehensionExpression]
-  var ConditionalExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ConditionalExpression]
-  var ContinueStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ContinueStatement]
-  var DebuggerStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DebuggerStatement]
-  var Declaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Declaration]
-  var DeclareClass: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareClass]
-  var DeclareExportAllDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareExportAllDeclaration]
-  var DeclareExportDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareExportDeclaration]
-  var DeclareFunction: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareFunction]
-  var DeclareInterface: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareInterface]
-  var DeclareModule: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareModule]
-  var DeclareModuleExports: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareModuleExports]
-  var DeclareOpaqueType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareOpaqueType]
-  var DeclareTypeAlias: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareTypeAlias]
-  var DeclareVariable: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareVariable]
-  var DeclaredPredicate: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclaredPredicate]
-  var Decorator: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Decorator]
-  var Directive: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Directive]
-  var DirectiveLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DirectiveLiteral]
-  var DoExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DoExpression]
-  var DoWhileStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DoWhileStatement]
-  var EmptyStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.EmptyStatement]
-  var EmptyTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.EmptyTypeAnnotation]
-  var ExistentialTypeParam: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExistentialTypeParam]
-  var ExistsTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExistsTypeAnnotation]
-  var ExportAllDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportAllDeclaration]
-  var ExportBatchSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportBatchSpecifier]
-  var ExportDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportDeclaration]
-  var ExportDefaultDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportDefaultDeclaration]
-  var ExportDefaultSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportDefaultSpecifier]
-  var ExportNamedDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportNamedDeclaration]
-  var ExportNamespaceSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportNamespaceSpecifier]
-  var ExportSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportSpecifier]
-  var Expression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Expression]
-  var ExpressionStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExpressionStatement]
-  var File: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.File]
-  var Flow: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Flow]
-  var FlowPredicate: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FlowPredicate]
-  var FlowType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FlowType]
-  var ForAwaitStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ForAwaitStatement]
-  var ForInStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ForInStatement]
-  var ForOfStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ForOfStatement]
-  var ForStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ForStatement]
-  var Function: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Function]
-  var FunctionDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FunctionDeclaration]
-  var FunctionExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FunctionExpression]
-  var FunctionTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FunctionTypeAnnotation]
-  var FunctionTypeParam: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FunctionTypeParam]
-  var GeneratorExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.GeneratorExpression]
-  var GenericTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.GenericTypeAnnotation]
-  var Identifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Identifier]
-  var IfStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.IfStatement]
-  var Import: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Import]
-  var ImportDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ImportDeclaration]
-  var ImportDefaultSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ImportDefaultSpecifier]
-  var ImportNamespaceSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ImportNamespaceSpecifier]
-  var ImportSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ImportSpecifier]
-  var InferredPredicate: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.InferredPredicate]
-  var InterfaceDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.InterfaceDeclaration]
-  var InterfaceExtends: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.InterfaceExtends]
-  var InterfaceTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.InterfaceTypeAnnotation]
-  var InterpreterDirective: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.InterpreterDirective]
-  var IntersectionTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.IntersectionTypeAnnotation]
-  var JSXAttribute: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXAttribute]
-  var JSXClosingElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXClosingElement]
-  var JSXClosingFragment: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXClosingFragment]
-  var JSXElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXElement]
-  var JSXEmptyExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXEmptyExpression]
-  var JSXExpressionContainer: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXExpressionContainer]
-  var JSXFragment: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXFragment]
-  var JSXIdentifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXIdentifier]
-  var JSXMemberExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXMemberExpression]
-  var JSXNamespacedName: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXNamespacedName]
-  var JSXOpeningElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXOpeningElement]
-  var JSXOpeningFragment: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXOpeningFragment]
-  var JSXSpreadAttribute: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXSpreadAttribute]
-  var JSXSpreadChild: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXSpreadChild]
-  var JSXText: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXText]
-  var LabeledStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.LabeledStatement]
-  var Line: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Line]
-  var Literal: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Literal]
-  var LogicalExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.LogicalExpression]
-  var MemberExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.MemberExpression]
-  var MemberTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.MemberTypeAnnotation]
-  var MetaProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.MetaProperty]
-  var MethodDefinition: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.MethodDefinition]
-  var MixedTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.MixedTypeAnnotation]
-  var ModuleSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ModuleSpecifier]
-  var NewExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NewExpression]
-  var Node: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Node]
-  var Noop: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Noop]
-  var NullLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NullLiteral]
-  var NullLiteralTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NullLiteralTypeAnnotation]
-  var NullTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NullTypeAnnotation]
-  var NullableTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NullableTypeAnnotation]
-  var NumberLiteralTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NumberLiteralTypeAnnotation]
-  var NumberTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NumberTypeAnnotation]
-  var NumericLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NumericLiteral]
-  var NumericLiteralTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NumericLiteralTypeAnnotation]
-  var ObjectExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectExpression]
-  var ObjectMethod: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectMethod]
-  var ObjectPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectPattern]
-  var ObjectProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectProperty]
-  var ObjectTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeAnnotation]
-  var ObjectTypeCallProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeCallProperty]
-  var ObjectTypeIndexer: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeIndexer]
-  var ObjectTypeInternalSlot: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeInternalSlot]
-  var ObjectTypeProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeProperty]
-  var ObjectTypeSpreadProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeSpreadProperty]
-  var OpaqueType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.OpaqueType]
-  var OptionalCallExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.OptionalCallExpression]
-  var OptionalMemberExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.OptionalMemberExpression]
-  var ParenthesizedExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ParenthesizedExpression]
-  var Pattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Pattern]
-  var Position: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Position]
-  var Printable: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Printable]
-  var PrivateName: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.PrivateName]
-  var Program: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Program]
-  var Property: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Property]
-  var PropertyPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.PropertyPattern]
-  var QualifiedTypeIdentifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.QualifiedTypeIdentifier]
-  var RegExpLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.RegExpLiteral]
-  var RestElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.RestElement]
-  var RestProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.RestProperty]
-  var ReturnStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ReturnStatement]
-  var SequenceExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SequenceExpression]
-  var SourceLocation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SourceLocation]
-  var Specifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Specifier]
-  var SpreadElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SpreadElement]
-  var SpreadElementPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SpreadElementPattern]
-  var SpreadProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SpreadProperty]
-  var SpreadPropertyPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SpreadPropertyPattern]
-  var Statement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Statement]
-  var StringLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.StringLiteral]
-  var StringLiteralTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.StringLiteralTypeAnnotation]
-  var StringTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.StringTypeAnnotation]
-  var Super: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Super]
-  var SwitchCase: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SwitchCase]
-  var SwitchStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SwitchStatement]
-  var TSAnyKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSAnyKeyword]
-  var TSArrayType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSArrayType]
-  var TSAsExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSAsExpression]
-  var TSBigIntKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSBigIntKeyword]
-  var TSBooleanKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSBooleanKeyword]
-  var TSCallSignatureDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSCallSignatureDeclaration]
-  var TSConditionalType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSConditionalType]
-  var TSConstructSignatureDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSConstructSignatureDeclaration]
-  var TSConstructorType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSConstructorType]
-  var TSDeclareFunction: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSDeclareFunction]
-  var TSDeclareMethod: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSDeclareMethod]
-  var TSEnumDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSEnumDeclaration]
-  var TSEnumMember: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSEnumMember]
-  var TSExportAssignment: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSExportAssignment]
-  var TSExpressionWithTypeArguments: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSExpressionWithTypeArguments]
-  var TSExternalModuleReference: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSExternalModuleReference]
-  var TSFunctionType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSFunctionType]
-  var TSHasOptionalTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSHasOptionalTypeAnnotation]
+  var AnyTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.AnyTypeAnnotation] = js.native
+  var ArrayExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ArrayExpression] = js.native
+  var ArrayPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ArrayPattern] = js.native
+  var ArrayTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ArrayTypeAnnotation] = js.native
+  var ArrowFunctionExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ArrowFunctionExpression] = js.native
+  var AssignmentExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.AssignmentExpression] = js.native
+  var AssignmentPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.AssignmentPattern] = js.native
+  var AwaitExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.AwaitExpression] = js.native
+  var BigIntLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BigIntLiteral] = js.native
+  var BinaryExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BinaryExpression] = js.native
+  var BindExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BindExpression] = js.native
+  var Block: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Block] = js.native
+  var BlockStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BlockStatement] = js.native
+  var BooleanLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BooleanLiteral] = js.native
+  var BooleanLiteralTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BooleanLiteralTypeAnnotation] = js.native
+  var BooleanTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BooleanTypeAnnotation] = js.native
+  var BreakStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.BreakStatement] = js.native
+  var CallExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.CallExpression] = js.native
+  var CatchClause: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.CatchClause] = js.native
+  var ClassBody: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassBody] = js.native
+  var ClassDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassDeclaration] = js.native
+  var ClassExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassExpression] = js.native
+  var ClassImplements: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassImplements] = js.native
+  var ClassMethod: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassMethod] = js.native
+  var ClassPrivateMethod: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassPrivateMethod] = js.native
+  var ClassPrivateProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassPrivateProperty] = js.native
+  var ClassProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassProperty] = js.native
+  var ClassPropertyDefinition: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassPropertyDefinition] = js.native
+  var Comment: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Comment] = js.native
+  var CommentBlock: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.CommentBlock] = js.native
+  var CommentLine: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.CommentLine] = js.native
+  var ComprehensionBlock: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ComprehensionBlock] = js.native
+  var ComprehensionExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ComprehensionExpression] = js.native
+  var ConditionalExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ConditionalExpression] = js.native
+  var ContinueStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ContinueStatement] = js.native
+  var DebuggerStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DebuggerStatement] = js.native
+  var Declaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Declaration] = js.native
+  var DeclareClass: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareClass] = js.native
+  var DeclareExportAllDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareExportAllDeclaration] = js.native
+  var DeclareExportDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareExportDeclaration] = js.native
+  var DeclareFunction: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareFunction] = js.native
+  var DeclareInterface: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareInterface] = js.native
+  var DeclareModule: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareModule] = js.native
+  var DeclareModuleExports: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareModuleExports] = js.native
+  var DeclareOpaqueType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareOpaqueType] = js.native
+  var DeclareTypeAlias: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareTypeAlias] = js.native
+  var DeclareVariable: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclareVariable] = js.native
+  var DeclaredPredicate: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DeclaredPredicate] = js.native
+  var Decorator: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Decorator] = js.native
+  var Directive: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Directive] = js.native
+  var DirectiveLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DirectiveLiteral] = js.native
+  var DoExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DoExpression] = js.native
+  var DoWhileStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.DoWhileStatement] = js.native
+  var EmptyStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.EmptyStatement] = js.native
+  var EmptyTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.EmptyTypeAnnotation] = js.native
+  var ExistentialTypeParam: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExistentialTypeParam] = js.native
+  var ExistsTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExistsTypeAnnotation] = js.native
+  var ExportAllDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportAllDeclaration] = js.native
+  var ExportBatchSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportBatchSpecifier] = js.native
+  var ExportDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportDeclaration] = js.native
+  var ExportDefaultDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportDefaultDeclaration] = js.native
+  var ExportDefaultSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportDefaultSpecifier] = js.native
+  var ExportNamedDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportNamedDeclaration] = js.native
+  var ExportNamespaceSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportNamespaceSpecifier] = js.native
+  var ExportSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExportSpecifier] = js.native
+  var Expression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Expression] = js.native
+  var ExpressionStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ExpressionStatement] = js.native
+  var File: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.File] = js.native
+  var Flow: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Flow] = js.native
+  var FlowPredicate: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FlowPredicate] = js.native
+  var FlowType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FlowType] = js.native
+  var ForAwaitStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ForAwaitStatement] = js.native
+  var ForInStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ForInStatement] = js.native
+  var ForOfStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ForOfStatement] = js.native
+  var ForStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ForStatement] = js.native
+  var Function: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Function] = js.native
+  var FunctionDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FunctionDeclaration] = js.native
+  var FunctionExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FunctionExpression] = js.native
+  var FunctionTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FunctionTypeAnnotation] = js.native
+  var FunctionTypeParam: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.FunctionTypeParam] = js.native
+  var GeneratorExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.GeneratorExpression] = js.native
+  var GenericTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.GenericTypeAnnotation] = js.native
+  var Identifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Identifier] = js.native
+  var IfStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.IfStatement] = js.native
+  var Import: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Import] = js.native
+  var ImportDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ImportDeclaration] = js.native
+  var ImportDefaultSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ImportDefaultSpecifier] = js.native
+  var ImportNamespaceSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ImportNamespaceSpecifier] = js.native
+  var ImportSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ImportSpecifier] = js.native
+  var InferredPredicate: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.InferredPredicate] = js.native
+  var InterfaceDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.InterfaceDeclaration] = js.native
+  var InterfaceExtends: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.InterfaceExtends] = js.native
+  var InterfaceTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.InterfaceTypeAnnotation] = js.native
+  var InterpreterDirective: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.InterpreterDirective] = js.native
+  var IntersectionTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.IntersectionTypeAnnotation] = js.native
+  var JSXAttribute: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXAttribute] = js.native
+  var JSXClosingElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXClosingElement] = js.native
+  var JSXClosingFragment: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXClosingFragment] = js.native
+  var JSXElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXElement] = js.native
+  var JSXEmptyExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXEmptyExpression] = js.native
+  var JSXExpressionContainer: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXExpressionContainer] = js.native
+  var JSXFragment: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXFragment] = js.native
+  var JSXIdentifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXIdentifier] = js.native
+  var JSXMemberExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXMemberExpression] = js.native
+  var JSXNamespacedName: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXNamespacedName] = js.native
+  var JSXOpeningElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXOpeningElement] = js.native
+  var JSXOpeningFragment: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXOpeningFragment] = js.native
+  var JSXSpreadAttribute: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXSpreadAttribute] = js.native
+  var JSXSpreadChild: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXSpreadChild] = js.native
+  var JSXText: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.JSXText] = js.native
+  var LabeledStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.LabeledStatement] = js.native
+  var Line: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Line] = js.native
+  var Literal: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Literal] = js.native
+  var LogicalExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.LogicalExpression] = js.native
+  var MemberExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.MemberExpression] = js.native
+  var MemberTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.MemberTypeAnnotation] = js.native
+  var MetaProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.MetaProperty] = js.native
+  var MethodDefinition: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.MethodDefinition] = js.native
+  var MixedTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.MixedTypeAnnotation] = js.native
+  var ModuleSpecifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ModuleSpecifier] = js.native
+  var NewExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NewExpression] = js.native
+  var Node: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Node] = js.native
+  var Noop: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Noop] = js.native
+  var NullLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NullLiteral] = js.native
+  var NullLiteralTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NullLiteralTypeAnnotation] = js.native
+  var NullTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NullTypeAnnotation] = js.native
+  var NullableTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NullableTypeAnnotation] = js.native
+  var NumberLiteralTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NumberLiteralTypeAnnotation] = js.native
+  var NumberTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NumberTypeAnnotation] = js.native
+  var NumericLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NumericLiteral] = js.native
+  var NumericLiteralTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.NumericLiteralTypeAnnotation] = js.native
+  var ObjectExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectExpression] = js.native
+  var ObjectMethod: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectMethod] = js.native
+  var ObjectPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectPattern] = js.native
+  var ObjectProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectProperty] = js.native
+  var ObjectTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeAnnotation] = js.native
+  var ObjectTypeCallProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeCallProperty] = js.native
+  var ObjectTypeIndexer: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeIndexer] = js.native
+  var ObjectTypeInternalSlot: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeInternalSlot] = js.native
+  var ObjectTypeProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeProperty] = js.native
+  var ObjectTypeSpreadProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeSpreadProperty] = js.native
+  var OpaqueType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.OpaqueType] = js.native
+  var OptionalCallExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.OptionalCallExpression] = js.native
+  var OptionalMemberExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.OptionalMemberExpression] = js.native
+  var ParenthesizedExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ParenthesizedExpression] = js.native
+  var Pattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Pattern] = js.native
+  var Position: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Position] = js.native
+  var Printable: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Printable] = js.native
+  var PrivateName: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.PrivateName] = js.native
+  var Program: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Program] = js.native
+  var Property: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Property] = js.native
+  var PropertyPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.PropertyPattern] = js.native
+  var QualifiedTypeIdentifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.QualifiedTypeIdentifier] = js.native
+  var RegExpLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.RegExpLiteral] = js.native
+  var RestElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.RestElement] = js.native
+  var RestProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.RestProperty] = js.native
+  var ReturnStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ReturnStatement] = js.native
+  var SequenceExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SequenceExpression] = js.native
+  var SourceLocation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SourceLocation] = js.native
+  var Specifier: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Specifier] = js.native
+  var SpreadElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SpreadElement] = js.native
+  var SpreadElementPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SpreadElementPattern] = js.native
+  var SpreadProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SpreadProperty] = js.native
+  var SpreadPropertyPattern: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SpreadPropertyPattern] = js.native
+  var Statement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Statement] = js.native
+  var StringLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.StringLiteral] = js.native
+  var StringLiteralTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.StringLiteralTypeAnnotation] = js.native
+  var StringTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.StringTypeAnnotation] = js.native
+  var Super: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Super] = js.native
+  var SwitchCase: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SwitchCase] = js.native
+  var SwitchStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.SwitchStatement] = js.native
+  var TSAnyKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSAnyKeyword] = js.native
+  var TSArrayType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSArrayType] = js.native
+  var TSAsExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSAsExpression] = js.native
+  var TSBigIntKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSBigIntKeyword] = js.native
+  var TSBooleanKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSBooleanKeyword] = js.native
+  var TSCallSignatureDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSCallSignatureDeclaration] = js.native
+  var TSConditionalType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSConditionalType] = js.native
+  var TSConstructSignatureDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSConstructSignatureDeclaration] = js.native
+  var TSConstructorType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSConstructorType] = js.native
+  var TSDeclareFunction: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSDeclareFunction] = js.native
+  var TSDeclareMethod: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSDeclareMethod] = js.native
+  var TSEnumDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSEnumDeclaration] = js.native
+  var TSEnumMember: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSEnumMember] = js.native
+  var TSExportAssignment: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSExportAssignment] = js.native
+  var TSExpressionWithTypeArguments: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSExpressionWithTypeArguments] = js.native
+  var TSExternalModuleReference: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSExternalModuleReference] = js.native
+  var TSFunctionType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSFunctionType] = js.native
+  var TSHasOptionalTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSHasOptionalTypeAnnotation] = js.native
   var TSHasOptionalTypeParameterInstantiation: Type[
     typingsSlinky.astTypes.namedTypesMod.namedTypes.TSHasOptionalTypeParameterInstantiation
-  ]
-  var TSHasOptionalTypeParameters: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSHasOptionalTypeParameters]
-  var TSImportEqualsDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSImportEqualsDeclaration]
-  var TSImportType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSImportType]
-  var TSIndexSignature: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSIndexSignature]
-  var TSIndexedAccessType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSIndexedAccessType]
-  var TSInferType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSInferType]
-  var TSInterfaceBody: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSInterfaceBody]
-  var TSInterfaceDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSInterfaceDeclaration]
-  var TSIntersectionType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSIntersectionType]
-  var TSLiteralType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSLiteralType]
-  var TSMappedType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSMappedType]
-  var TSMethodSignature: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSMethodSignature]
-  var TSModuleBlock: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSModuleBlock]
-  var TSModuleDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSModuleDeclaration]
-  var TSNamespaceExportDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNamespaceExportDeclaration]
-  var TSNeverKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNeverKeyword]
-  var TSNonNullExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNonNullExpression]
-  var TSNullKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNullKeyword]
-  var TSNumberKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNumberKeyword]
-  var TSObjectKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSObjectKeyword]
-  var TSOptionalType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSOptionalType]
-  var TSParameterProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSParameterProperty]
-  var TSParenthesizedType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSParenthesizedType]
-  var TSPropertySignature: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSPropertySignature]
-  var TSQualifiedName: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSQualifiedName]
-  var TSRestType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSRestType]
-  var TSStringKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSStringKeyword]
-  var TSSymbolKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSSymbolKeyword]
-  var TSThisType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSThisType]
-  var TSTupleType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTupleType]
-  var TSType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSType]
-  var TSTypeAliasDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeAliasDeclaration]
-  var TSTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeAnnotation]
-  var TSTypeAssertion: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeAssertion]
-  var TSTypeLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeLiteral]
-  var TSTypeOperator: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeOperator]
-  var TSTypeParameter: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeParameter]
-  var TSTypeParameterDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeParameterDeclaration]
-  var TSTypeParameterInstantiation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeParameterInstantiation]
-  var TSTypePredicate: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypePredicate]
-  var TSTypeQuery: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeQuery]
-  var TSTypeReference: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeReference]
-  var TSUndefinedKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSUndefinedKeyword]
-  var TSUnionType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSUnionType]
-  var TSUnknownKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSUnknownKeyword]
-  var TSVoidKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSVoidKeyword]
-  var TaggedTemplateExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TaggedTemplateExpression]
-  var TemplateElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TemplateElement]
-  var TemplateLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TemplateLiteral]
-  var ThisExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ThisExpression]
-  var ThisTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ThisTypeAnnotation]
-  var ThrowStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ThrowStatement]
-  var TryStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TryStatement]
-  var TupleTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TupleTypeAnnotation]
-  var TypeAlias: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeAlias]
-  var TypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeAnnotation]
-  var TypeCastExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeCastExpression]
-  var TypeParameter: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeParameter]
-  var TypeParameterDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeParameterDeclaration]
-  var TypeParameterInstantiation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeParameterInstantiation]
-  var TypeofTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeofTypeAnnotation]
-  var UnaryExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.UnaryExpression]
-  var UnionTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.UnionTypeAnnotation]
-  var UpdateExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.UpdateExpression]
-  var VariableDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.VariableDeclaration]
-  var VariableDeclarator: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.VariableDeclarator]
-  var Variance: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Variance]
-  var VoidTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.VoidTypeAnnotation]
-  var WhileStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.WhileStatement]
-  var WithStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.WithStatement]
-  var YieldExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.YieldExpression]
+  ] = js.native
+  var TSHasOptionalTypeParameters: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSHasOptionalTypeParameters] = js.native
+  var TSImportEqualsDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSImportEqualsDeclaration] = js.native
+  var TSImportType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSImportType] = js.native
+  var TSIndexSignature: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSIndexSignature] = js.native
+  var TSIndexedAccessType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSIndexedAccessType] = js.native
+  var TSInferType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSInferType] = js.native
+  var TSInterfaceBody: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSInterfaceBody] = js.native
+  var TSInterfaceDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSInterfaceDeclaration] = js.native
+  var TSIntersectionType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSIntersectionType] = js.native
+  var TSLiteralType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSLiteralType] = js.native
+  var TSMappedType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSMappedType] = js.native
+  var TSMethodSignature: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSMethodSignature] = js.native
+  var TSModuleBlock: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSModuleBlock] = js.native
+  var TSModuleDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSModuleDeclaration] = js.native
+  var TSNamespaceExportDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNamespaceExportDeclaration] = js.native
+  var TSNeverKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNeverKeyword] = js.native
+  var TSNonNullExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNonNullExpression] = js.native
+  var TSNullKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNullKeyword] = js.native
+  var TSNumberKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNumberKeyword] = js.native
+  var TSObjectKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSObjectKeyword] = js.native
+  var TSOptionalType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSOptionalType] = js.native
+  var TSParameterProperty: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSParameterProperty] = js.native
+  var TSParenthesizedType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSParenthesizedType] = js.native
+  var TSPropertySignature: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSPropertySignature] = js.native
+  var TSQualifiedName: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSQualifiedName] = js.native
+  var TSRestType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSRestType] = js.native
+  var TSStringKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSStringKeyword] = js.native
+  var TSSymbolKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSSymbolKeyword] = js.native
+  var TSThisType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSThisType] = js.native
+  var TSTupleType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTupleType] = js.native
+  var TSType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSType] = js.native
+  var TSTypeAliasDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeAliasDeclaration] = js.native
+  var TSTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeAnnotation] = js.native
+  var TSTypeAssertion: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeAssertion] = js.native
+  var TSTypeLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeLiteral] = js.native
+  var TSTypeOperator: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeOperator] = js.native
+  var TSTypeParameter: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeParameter] = js.native
+  var TSTypeParameterDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeParameterDeclaration] = js.native
+  var TSTypeParameterInstantiation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeParameterInstantiation] = js.native
+  var TSTypePredicate: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypePredicate] = js.native
+  var TSTypeQuery: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeQuery] = js.native
+  var TSTypeReference: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeReference] = js.native
+  var TSUndefinedKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSUndefinedKeyword] = js.native
+  var TSUnionType: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSUnionType] = js.native
+  var TSUnknownKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSUnknownKeyword] = js.native
+  var TSVoidKeyword: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TSVoidKeyword] = js.native
+  var TaggedTemplateExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TaggedTemplateExpression] = js.native
+  var TemplateElement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TemplateElement] = js.native
+  var TemplateLiteral: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TemplateLiteral] = js.native
+  var ThisExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ThisExpression] = js.native
+  var ThisTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ThisTypeAnnotation] = js.native
+  var ThrowStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.ThrowStatement] = js.native
+  var TryStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TryStatement] = js.native
+  var TupleTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TupleTypeAnnotation] = js.native
+  var TypeAlias: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeAlias] = js.native
+  var TypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeAnnotation] = js.native
+  var TypeCastExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeCastExpression] = js.native
+  var TypeParameter: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeParameter] = js.native
+  var TypeParameterDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeParameterDeclaration] = js.native
+  var TypeParameterInstantiation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeParameterInstantiation] = js.native
+  var TypeofTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.TypeofTypeAnnotation] = js.native
+  var UnaryExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.UnaryExpression] = js.native
+  var UnionTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.UnionTypeAnnotation] = js.native
+  var UpdateExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.UpdateExpression] = js.native
+  var VariableDeclaration: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.VariableDeclaration] = js.native
+  var VariableDeclarator: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.VariableDeclarator] = js.native
+  var Variance: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.Variance] = js.native
+  var VoidTypeAnnotation: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.VoidTypeAnnotation] = js.native
+  var WhileStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.WhileStatement] = js.native
+  var WithStatement: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.WithStatement] = js.native
+  var YieldExpression: Type[typingsSlinky.astTypes.namedTypesMod.namedTypes.YieldExpression] = js.native
 }
 
 object NamedTypes_ {
   @scala.inline
-  def apply(
-    AnyTypeAnnotation: Type[AnyTypeAnnotation],
-    ArrayExpression: Type[ArrayExpression],
-    ArrayPattern: Type[ArrayPattern],
-    ArrayTypeAnnotation: Type[ArrayTypeAnnotation],
-    ArrowFunctionExpression: Type[ArrowFunctionExpression],
-    AssignmentExpression: Type[AssignmentExpression],
-    AssignmentPattern: Type[AssignmentPattern],
-    AwaitExpression: Type[AwaitExpression],
-    BigIntLiteral: Type[BigIntLiteral],
-    BinaryExpression: Type[BinaryExpression],
-    BindExpression: Type[BindExpression],
-    Block: Type[Block],
-    BlockStatement: Type[BlockStatement],
-    BooleanLiteral: Type[BooleanLiteral],
-    BooleanLiteralTypeAnnotation: Type[BooleanLiteralTypeAnnotation],
-    BooleanTypeAnnotation: Type[BooleanTypeAnnotation],
-    BreakStatement: Type[BreakStatement],
-    CallExpression: Type[CallExpression],
-    CatchClause: Type[CatchClause],
-    ClassBody: Type[ClassBody],
-    ClassDeclaration: Type[ClassDeclaration],
-    ClassExpression: Type[ClassExpression],
-    ClassImplements: Type[ClassImplements],
-    ClassMethod: Type[ClassMethod],
-    ClassPrivateMethod: Type[ClassPrivateMethod],
-    ClassPrivateProperty: Type[ClassPrivateProperty],
-    ClassProperty: Type[ClassProperty],
-    ClassPropertyDefinition: Type[ClassPropertyDefinition],
-    Comment: Type[Comment],
-    CommentBlock: Type[CommentBlock],
-    CommentLine: Type[CommentLine],
-    ComprehensionBlock: Type[ComprehensionBlock],
-    ComprehensionExpression: Type[ComprehensionExpression],
-    ConditionalExpression: Type[ConditionalExpression],
-    ContinueStatement: Type[ContinueStatement],
-    DebuggerStatement: Type[DebuggerStatement],
-    Declaration: Type[Declaration],
-    DeclareClass: Type[DeclareClass],
-    DeclareExportAllDeclaration: Type[DeclareExportAllDeclaration],
-    DeclareExportDeclaration: Type[DeclareExportDeclaration],
-    DeclareFunction: Type[DeclareFunction],
-    DeclareInterface: Type[DeclareInterface],
-    DeclareModule: Type[DeclareModule],
-    DeclareModuleExports: Type[DeclareModuleExports],
-    DeclareOpaqueType: Type[DeclareOpaqueType],
-    DeclareTypeAlias: Type[DeclareTypeAlias],
-    DeclareVariable: Type[DeclareVariable],
-    DeclaredPredicate: Type[DeclaredPredicate],
-    Decorator: Type[Decorator],
-    Directive: Type[Directive],
-    DirectiveLiteral: Type[DirectiveLiteral],
-    DoExpression: Type[DoExpression],
-    DoWhileStatement: Type[DoWhileStatement],
-    EmptyStatement: Type[EmptyStatement],
-    EmptyTypeAnnotation: Type[EmptyTypeAnnotation],
-    ExistentialTypeParam: Type[ExistentialTypeParam],
-    ExistsTypeAnnotation: Type[ExistsTypeAnnotation],
-    ExportAllDeclaration: Type[ExportAllDeclaration],
-    ExportBatchSpecifier: Type[ExportBatchSpecifier],
-    ExportDeclaration: Type[ExportDeclaration],
-    ExportDefaultDeclaration: Type[ExportDefaultDeclaration],
-    ExportDefaultSpecifier: Type[ExportDefaultSpecifier],
-    ExportNamedDeclaration: Type[ExportNamedDeclaration],
-    ExportNamespaceSpecifier: Type[ExportNamespaceSpecifier],
-    ExportSpecifier: Type[ExportSpecifier],
-    Expression: Type[Expression],
-    ExpressionStatement: Type[ExpressionStatement],
-    File: Type[File],
-    Flow: Type[Flow],
-    FlowPredicate: Type[FlowPredicate],
-    FlowType: Type[FlowType],
-    ForAwaitStatement: Type[ForAwaitStatement],
-    ForInStatement: Type[ForInStatement],
-    ForOfStatement: Type[ForOfStatement],
-    ForStatement: Type[ForStatement],
-    Function: Type[Function],
-    FunctionDeclaration: Type[FunctionDeclaration],
-    FunctionExpression: Type[FunctionExpression],
-    FunctionTypeAnnotation: Type[FunctionTypeAnnotation],
-    FunctionTypeParam: Type[FunctionTypeParam],
-    GeneratorExpression: Type[GeneratorExpression],
-    GenericTypeAnnotation: Type[GenericTypeAnnotation],
-    Identifier: Type[Identifier],
-    IfStatement: Type[IfStatement],
-    Import: Type[Import],
-    ImportDeclaration: Type[ImportDeclaration],
-    ImportDefaultSpecifier: Type[ImportDefaultSpecifier],
-    ImportNamespaceSpecifier: Type[ImportNamespaceSpecifier],
-    ImportSpecifier: Type[ImportSpecifier],
-    InferredPredicate: Type[InferredPredicate],
-    InterfaceDeclaration: Type[InterfaceDeclaration],
-    InterfaceExtends: Type[InterfaceExtends],
-    InterfaceTypeAnnotation: Type[InterfaceTypeAnnotation],
-    InterpreterDirective: Type[InterpreterDirective],
-    IntersectionTypeAnnotation: Type[IntersectionTypeAnnotation],
-    JSXAttribute: Type[JSXAttribute],
-    JSXClosingElement: Type[JSXClosingElement],
-    JSXClosingFragment: Type[JSXClosingFragment],
-    JSXElement: Type[JSXElement],
-    JSXEmptyExpression: Type[JSXEmptyExpression],
-    JSXExpressionContainer: Type[JSXExpressionContainer],
-    JSXFragment: Type[JSXFragment],
-    JSXIdentifier: Type[JSXIdentifier],
-    JSXMemberExpression: Type[JSXMemberExpression],
-    JSXNamespacedName: Type[JSXNamespacedName],
-    JSXOpeningElement: Type[JSXOpeningElement],
-    JSXOpeningFragment: Type[JSXOpeningFragment],
-    JSXSpreadAttribute: Type[JSXSpreadAttribute],
-    JSXSpreadChild: Type[JSXSpreadChild],
-    JSXText: Type[JSXText],
-    LabeledStatement: Type[LabeledStatement],
-    Line: Type[Line],
-    Literal: Type[Literal],
-    LogicalExpression: Type[LogicalExpression],
-    MemberExpression: Type[MemberExpression],
-    MemberTypeAnnotation: Type[MemberTypeAnnotation],
-    MetaProperty: Type[MetaProperty],
-    MethodDefinition: Type[MethodDefinition],
-    MixedTypeAnnotation: Type[MixedTypeAnnotation],
-    ModuleSpecifier: Type[ModuleSpecifier],
-    NewExpression: Type[NewExpression],
-    Node: Type[Node],
-    Noop: Type[Noop],
-    NullLiteral: Type[NullLiteral],
-    NullLiteralTypeAnnotation: Type[NullLiteralTypeAnnotation],
-    NullTypeAnnotation: Type[NullTypeAnnotation],
-    NullableTypeAnnotation: Type[NullableTypeAnnotation],
-    NumberLiteralTypeAnnotation: Type[NumberLiteralTypeAnnotation],
-    NumberTypeAnnotation: Type[NumberTypeAnnotation],
-    NumericLiteral: Type[NumericLiteral],
-    NumericLiteralTypeAnnotation: Type[NumericLiteralTypeAnnotation],
-    ObjectExpression: Type[ObjectExpression],
-    ObjectMethod: Type[ObjectMethod],
-    ObjectPattern: Type[ObjectPattern],
-    ObjectProperty: Type[ObjectProperty],
-    ObjectTypeAnnotation: Type[ObjectTypeAnnotation],
-    ObjectTypeCallProperty: Type[ObjectTypeCallProperty],
-    ObjectTypeIndexer: Type[ObjectTypeIndexer],
-    ObjectTypeInternalSlot: Type[ObjectTypeInternalSlot],
-    ObjectTypeProperty: Type[ObjectTypeProperty],
-    ObjectTypeSpreadProperty: Type[ObjectTypeSpreadProperty],
-    OpaqueType: Type[OpaqueType],
-    OptionalCallExpression: Type[OptionalCallExpression],
-    OptionalMemberExpression: Type[OptionalMemberExpression],
-    ParenthesizedExpression: Type[ParenthesizedExpression],
-    Pattern: Type[Pattern],
-    Position: Type[Position],
-    Printable: Type[Printable],
-    PrivateName: Type[PrivateName],
-    Program: Type[Program],
-    Property: Type[Property],
-    PropertyPattern: Type[PropertyPattern],
-    QualifiedTypeIdentifier: Type[QualifiedTypeIdentifier],
-    RegExpLiteral: Type[RegExpLiteral],
-    RestElement: Type[RestElement],
-    RestProperty: Type[RestProperty],
-    ReturnStatement: Type[ReturnStatement],
-    SequenceExpression: Type[SequenceExpression],
-    SourceLocation: Type[SourceLocation],
-    Specifier: Type[Specifier],
-    SpreadElement: Type[SpreadElement],
-    SpreadElementPattern: Type[SpreadElementPattern],
-    SpreadProperty: Type[SpreadProperty],
-    SpreadPropertyPattern: Type[SpreadPropertyPattern],
-    Statement: Type[Statement],
-    StringLiteral: Type[StringLiteral],
-    StringLiteralTypeAnnotation: Type[StringLiteralTypeAnnotation],
-    StringTypeAnnotation: Type[StringTypeAnnotation],
-    Super: Type[Super],
-    SwitchCase: Type[SwitchCase],
-    SwitchStatement: Type[SwitchStatement],
-    TSAnyKeyword: Type[TSAnyKeyword],
-    TSArrayType: Type[TSArrayType],
-    TSAsExpression: Type[TSAsExpression],
-    TSBigIntKeyword: Type[TSBigIntKeyword],
-    TSBooleanKeyword: Type[TSBooleanKeyword],
-    TSCallSignatureDeclaration: Type[TSCallSignatureDeclaration],
-    TSConditionalType: Type[TSConditionalType],
-    TSConstructSignatureDeclaration: Type[TSConstructSignatureDeclaration],
-    TSConstructorType: Type[TSConstructorType],
-    TSDeclareFunction: Type[TSDeclareFunction],
-    TSDeclareMethod: Type[TSDeclareMethod],
-    TSEnumDeclaration: Type[TSEnumDeclaration],
-    TSEnumMember: Type[TSEnumMember],
-    TSExportAssignment: Type[TSExportAssignment],
-    TSExpressionWithTypeArguments: Type[TSExpressionWithTypeArguments],
-    TSExternalModuleReference: Type[TSExternalModuleReference],
-    TSFunctionType: Type[TSFunctionType],
-    TSHasOptionalTypeAnnotation: Type[TSHasOptionalTypeAnnotation],
-    TSHasOptionalTypeParameterInstantiation: Type[TSHasOptionalTypeParameterInstantiation],
-    TSHasOptionalTypeParameters: Type[TSHasOptionalTypeParameters],
-    TSImportEqualsDeclaration: Type[TSImportEqualsDeclaration],
-    TSImportType: Type[TSImportType],
-    TSIndexSignature: Type[TSIndexSignature],
-    TSIndexedAccessType: Type[TSIndexedAccessType],
-    TSInferType: Type[TSInferType],
-    TSInterfaceBody: Type[TSInterfaceBody],
-    TSInterfaceDeclaration: Type[TSInterfaceDeclaration],
-    TSIntersectionType: Type[TSIntersectionType],
-    TSLiteralType: Type[TSLiteralType],
-    TSMappedType: Type[TSMappedType],
-    TSMethodSignature: Type[TSMethodSignature],
-    TSModuleBlock: Type[TSModuleBlock],
-    TSModuleDeclaration: Type[TSModuleDeclaration],
-    TSNamespaceExportDeclaration: Type[TSNamespaceExportDeclaration],
-    TSNeverKeyword: Type[TSNeverKeyword],
-    TSNonNullExpression: Type[TSNonNullExpression],
-    TSNullKeyword: Type[TSNullKeyword],
-    TSNumberKeyword: Type[TSNumberKeyword],
-    TSObjectKeyword: Type[TSObjectKeyword],
-    TSOptionalType: Type[TSOptionalType],
-    TSParameterProperty: Type[TSParameterProperty],
-    TSParenthesizedType: Type[TSParenthesizedType],
-    TSPropertySignature: Type[TSPropertySignature],
-    TSQualifiedName: Type[TSQualifiedName],
-    TSRestType: Type[TSRestType],
-    TSStringKeyword: Type[TSStringKeyword],
-    TSSymbolKeyword: Type[TSSymbolKeyword],
-    TSThisType: Type[TSThisType],
-    TSTupleType: Type[TSTupleType],
-    TSType: Type[TSType],
-    TSTypeAliasDeclaration: Type[TSTypeAliasDeclaration],
-    TSTypeAnnotation: Type[TSTypeAnnotation],
-    TSTypeAssertion: Type[TSTypeAssertion],
-    TSTypeLiteral: Type[TSTypeLiteral],
-    TSTypeOperator: Type[TSTypeOperator],
-    TSTypeParameter: Type[TSTypeParameter],
-    TSTypeParameterDeclaration: Type[TSTypeParameterDeclaration],
-    TSTypeParameterInstantiation: Type[TSTypeParameterInstantiation],
-    TSTypePredicate: Type[TSTypePredicate],
-    TSTypeQuery: Type[TSTypeQuery],
-    TSTypeReference: Type[TSTypeReference],
-    TSUndefinedKeyword: Type[TSUndefinedKeyword],
-    TSUnionType: Type[TSUnionType],
-    TSUnknownKeyword: Type[TSUnknownKeyword],
-    TSVoidKeyword: Type[TSVoidKeyword],
-    TaggedTemplateExpression: Type[TaggedTemplateExpression],
-    TemplateElement: Type[TemplateElement],
-    TemplateLiteral: Type[TemplateLiteral],
-    ThisExpression: Type[ThisExpression],
-    ThisTypeAnnotation: Type[ThisTypeAnnotation],
-    ThrowStatement: Type[ThrowStatement],
-    TryStatement: Type[TryStatement],
-    TupleTypeAnnotation: Type[TupleTypeAnnotation],
-    TypeAlias: Type[TypeAlias],
-    TypeAnnotation: Type[TypeAnnotation],
-    TypeCastExpression: Type[TypeCastExpression],
-    TypeParameter: Type[TypeParameter],
-    TypeParameterDeclaration: Type[TypeParameterDeclaration],
-    TypeParameterInstantiation: Type[TypeParameterInstantiation],
-    TypeofTypeAnnotation: Type[TypeofTypeAnnotation],
-    UnaryExpression: Type[UnaryExpression],
-    UnionTypeAnnotation: Type[UnionTypeAnnotation],
-    UpdateExpression: Type[UpdateExpression]
-  ): NamedTypes_ = {
-    val __obj = js.Dynamic.literal(AnyTypeAnnotation = AnyTypeAnnotation.asInstanceOf[js.Any], ArrayExpression = ArrayExpression.asInstanceOf[js.Any], ArrayPattern = ArrayPattern.asInstanceOf[js.Any], ArrayTypeAnnotation = ArrayTypeAnnotation.asInstanceOf[js.Any], ArrowFunctionExpression = ArrowFunctionExpression.asInstanceOf[js.Any], AssignmentExpression = AssignmentExpression.asInstanceOf[js.Any], AssignmentPattern = AssignmentPattern.asInstanceOf[js.Any], AwaitExpression = AwaitExpression.asInstanceOf[js.Any], BigIntLiteral = BigIntLiteral.asInstanceOf[js.Any], BinaryExpression = BinaryExpression.asInstanceOf[js.Any], BindExpression = BindExpression.asInstanceOf[js.Any], Block = Block.asInstanceOf[js.Any], BlockStatement = BlockStatement.asInstanceOf[js.Any], BooleanLiteral = BooleanLiteral.asInstanceOf[js.Any], BooleanLiteralTypeAnnotation = BooleanLiteralTypeAnnotation.asInstanceOf[js.Any], BooleanTypeAnnotation = BooleanTypeAnnotation.asInstanceOf[js.Any], BreakStatement = BreakStatement.asInstanceOf[js.Any], CallExpression = CallExpression.asInstanceOf[js.Any], CatchClause = CatchClause.asInstanceOf[js.Any], ClassBody = ClassBody.asInstanceOf[js.Any], ClassDeclaration = ClassDeclaration.asInstanceOf[js.Any], ClassExpression = ClassExpression.asInstanceOf[js.Any], ClassImplements = ClassImplements.asInstanceOf[js.Any], ClassMethod = ClassMethod.asInstanceOf[js.Any], ClassPrivateMethod = ClassPrivateMethod.asInstanceOf[js.Any], ClassPrivateProperty = ClassPrivateProperty.asInstanceOf[js.Any], ClassProperty = ClassProperty.asInstanceOf[js.Any], ClassPropertyDefinition = ClassPropertyDefinition.asInstanceOf[js.Any], Comment = Comment.asInstanceOf[js.Any], CommentBlock = CommentBlock.asInstanceOf[js.Any], CommentLine = CommentLine.asInstanceOf[js.Any], ComprehensionBlock = ComprehensionBlock.asInstanceOf[js.Any], ComprehensionExpression = ComprehensionExpression.asInstanceOf[js.Any], ConditionalExpression = ConditionalExpression.asInstanceOf[js.Any], ContinueStatement = ContinueStatement.asInstanceOf[js.Any], DebuggerStatement = DebuggerStatement.asInstanceOf[js.Any], Declaration = Declaration.asInstanceOf[js.Any], DeclareClass = DeclareClass.asInstanceOf[js.Any], DeclareExportAllDeclaration = DeclareExportAllDeclaration.asInstanceOf[js.Any], DeclareExportDeclaration = DeclareExportDeclaration.asInstanceOf[js.Any], DeclareFunction = DeclareFunction.asInstanceOf[js.Any], DeclareInterface = DeclareInterface.asInstanceOf[js.Any], DeclareModule = DeclareModule.asInstanceOf[js.Any], DeclareModuleExports = DeclareModuleExports.asInstanceOf[js.Any], DeclareOpaqueType = DeclareOpaqueType.asInstanceOf[js.Any], DeclareTypeAlias = DeclareTypeAlias.asInstanceOf[js.Any], DeclareVariable = DeclareVariable.asInstanceOf[js.Any], DeclaredPredicate = DeclaredPredicate.asInstanceOf[js.Any], Decorator = Decorator.asInstanceOf[js.Any], Directive = Directive.asInstanceOf[js.Any], DirectiveLiteral = DirectiveLiteral.asInstanceOf[js.Any], DoExpression = DoExpression.asInstanceOf[js.Any], DoWhileStatement = DoWhileStatement.asInstanceOf[js.Any], EmptyStatement = EmptyStatement.asInstanceOf[js.Any], EmptyTypeAnnotation = EmptyTypeAnnotation.asInstanceOf[js.Any], ExistentialTypeParam = ExistentialTypeParam.asInstanceOf[js.Any], ExistsTypeAnnotation = ExistsTypeAnnotation.asInstanceOf[js.Any], ExportAllDeclaration = ExportAllDeclaration.asInstanceOf[js.Any], ExportBatchSpecifier = ExportBatchSpecifier.asInstanceOf[js.Any], ExportDeclaration = ExportDeclaration.asInstanceOf[js.Any], ExportDefaultDeclaration = ExportDefaultDeclaration.asInstanceOf[js.Any], ExportDefaultSpecifier = ExportDefaultSpecifier.asInstanceOf[js.Any], ExportNamedDeclaration = ExportNamedDeclaration.asInstanceOf[js.Any], ExportNamespaceSpecifier = ExportNamespaceSpecifier.asInstanceOf[js.Any], ExportSpecifier = ExportSpecifier.asInstanceOf[js.Any], Expression = Expression.asInstanceOf[js.Any], ExpressionStatement = ExpressionStatement.asInstanceOf[js.Any], File = File.asInstanceOf[js.Any], Flow = Flow.asInstanceOf[js.Any], FlowPredicate = FlowPredicate.asInstanceOf[js.Any], FlowType = FlowType.asInstanceOf[js.Any], ForAwaitStatement = ForAwaitStatement.asInstanceOf[js.Any], ForInStatement = ForInStatement.asInstanceOf[js.Any], ForOfStatement = ForOfStatement.asInstanceOf[js.Any], ForStatement = ForStatement.asInstanceOf[js.Any], Function = Function.asInstanceOf[js.Any], FunctionDeclaration = FunctionDeclaration.asInstanceOf[js.Any], FunctionExpression = FunctionExpression.asInstanceOf[js.Any], FunctionTypeAnnotation = FunctionTypeAnnotation.asInstanceOf[js.Any], FunctionTypeParam = FunctionTypeParam.asInstanceOf[js.Any], GeneratorExpression = GeneratorExpression.asInstanceOf[js.Any], GenericTypeAnnotation = GenericTypeAnnotation.asInstanceOf[js.Any], Identifier = Identifier.asInstanceOf[js.Any], IfStatement = IfStatement.asInstanceOf[js.Any], Import = Import.asInstanceOf[js.Any], ImportDeclaration = ImportDeclaration.asInstanceOf[js.Any], ImportDefaultSpecifier = ImportDefaultSpecifier.asInstanceOf[js.Any], ImportNamespaceSpecifier = ImportNamespaceSpecifier.asInstanceOf[js.Any], ImportSpecifier = ImportSpecifier.asInstanceOf[js.Any], InferredPredicate = InferredPredicate.asInstanceOf[js.Any], InterfaceDeclaration = InterfaceDeclaration.asInstanceOf[js.Any], InterfaceExtends = InterfaceExtends.asInstanceOf[js.Any], InterfaceTypeAnnotation = InterfaceTypeAnnotation.asInstanceOf[js.Any], InterpreterDirective = InterpreterDirective.asInstanceOf[js.Any], IntersectionTypeAnnotation = IntersectionTypeAnnotation.asInstanceOf[js.Any], JSXAttribute = JSXAttribute.asInstanceOf[js.Any], JSXClosingElement = JSXClosingElement.asInstanceOf[js.Any], JSXClosingFragment = JSXClosingFragment.asInstanceOf[js.Any], JSXElement = JSXElement.asInstanceOf[js.Any], JSXEmptyExpression = JSXEmptyExpression.asInstanceOf[js.Any], JSXExpressionContainer = JSXExpressionContainer.asInstanceOf[js.Any], JSXFragment = JSXFragment.asInstanceOf[js.Any], JSXIdentifier = JSXIdentifier.asInstanceOf[js.Any], JSXMemberExpression = JSXMemberExpression.asInstanceOf[js.Any], JSXNamespacedName = JSXNamespacedName.asInstanceOf[js.Any], JSXOpeningElement = JSXOpeningElement.asInstanceOf[js.Any], JSXOpeningFragment = JSXOpeningFragment.asInstanceOf[js.Any], JSXSpreadAttribute = JSXSpreadAttribute.asInstanceOf[js.Any], JSXSpreadChild = JSXSpreadChild.asInstanceOf[js.Any], JSXText = JSXText.asInstanceOf[js.Any], LabeledStatement = LabeledStatement.asInstanceOf[js.Any], Line = Line.asInstanceOf[js.Any], Literal = Literal.asInstanceOf[js.Any], LogicalExpression = LogicalExpression.asInstanceOf[js.Any], MemberExpression = MemberExpression.asInstanceOf[js.Any], MemberTypeAnnotation = MemberTypeAnnotation.asInstanceOf[js.Any], MetaProperty = MetaProperty.asInstanceOf[js.Any], MethodDefinition = MethodDefinition.asInstanceOf[js.Any], MixedTypeAnnotation = MixedTypeAnnotation.asInstanceOf[js.Any], ModuleSpecifier = ModuleSpecifier.asInstanceOf[js.Any], NewExpression = NewExpression.asInstanceOf[js.Any], Node = Node.asInstanceOf[js.Any], Noop = Noop.asInstanceOf[js.Any], NullLiteral = NullLiteral.asInstanceOf[js.Any], NullLiteralTypeAnnotation = NullLiteralTypeAnnotation.asInstanceOf[js.Any], NullTypeAnnotation = NullTypeAnnotation.asInstanceOf[js.Any], NullableTypeAnnotation = NullableTypeAnnotation.asInstanceOf[js.Any], NumberLiteralTypeAnnotation = NumberLiteralTypeAnnotation.asInstanceOf[js.Any], NumberTypeAnnotation = NumberTypeAnnotation.asInstanceOf[js.Any], NumericLiteral = NumericLiteral.asInstanceOf[js.Any], NumericLiteralTypeAnnotation = NumericLiteralTypeAnnotation.asInstanceOf[js.Any], ObjectExpression = ObjectExpression.asInstanceOf[js.Any], ObjectMethod = ObjectMethod.asInstanceOf[js.Any], ObjectPattern = ObjectPattern.asInstanceOf[js.Any], ObjectProperty = ObjectProperty.asInstanceOf[js.Any], ObjectTypeAnnotation = ObjectTypeAnnotation.asInstanceOf[js.Any], ObjectTypeCallProperty = ObjectTypeCallProperty.asInstanceOf[js.Any], ObjectTypeIndexer = ObjectTypeIndexer.asInstanceOf[js.Any], ObjectTypeInternalSlot = ObjectTypeInternalSlot.asInstanceOf[js.Any], ObjectTypeProperty = ObjectTypeProperty.asInstanceOf[js.Any], ObjectTypeSpreadProperty = ObjectTypeSpreadProperty.asInstanceOf[js.Any], OpaqueType = OpaqueType.asInstanceOf[js.Any], OptionalCallExpression = OptionalCallExpression.asInstanceOf[js.Any], OptionalMemberExpression = OptionalMemberExpression.asInstanceOf[js.Any], ParenthesizedExpression = ParenthesizedExpression.asInstanceOf[js.Any], Pattern = Pattern.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any], Printable = Printable.asInstanceOf[js.Any], PrivateName = PrivateName.asInstanceOf[js.Any], Program = Program.asInstanceOf[js.Any], Property = Property.asInstanceOf[js.Any], PropertyPattern = PropertyPattern.asInstanceOf[js.Any], QualifiedTypeIdentifier = QualifiedTypeIdentifier.asInstanceOf[js.Any], RegExpLiteral = RegExpLiteral.asInstanceOf[js.Any], RestElement = RestElement.asInstanceOf[js.Any], RestProperty = RestProperty.asInstanceOf[js.Any], ReturnStatement = ReturnStatement.asInstanceOf[js.Any], SequenceExpression = SequenceExpression.asInstanceOf[js.Any], SourceLocation = SourceLocation.asInstanceOf[js.Any], Specifier = Specifier.asInstanceOf[js.Any], SpreadElement = SpreadElement.asInstanceOf[js.Any], SpreadElementPattern = SpreadElementPattern.asInstanceOf[js.Any], SpreadProperty = SpreadProperty.asInstanceOf[js.Any], SpreadPropertyPattern = SpreadPropertyPattern.asInstanceOf[js.Any], Statement = Statement.asInstanceOf[js.Any], StringLiteral = StringLiteral.asInstanceOf[js.Any], StringLiteralTypeAnnotation = StringLiteralTypeAnnotation.asInstanceOf[js.Any], StringTypeAnnotation = StringTypeAnnotation.asInstanceOf[js.Any], Super = Super.asInstanceOf[js.Any], SwitchCase = SwitchCase.asInstanceOf[js.Any], SwitchStatement = SwitchStatement.asInstanceOf[js.Any], TSAnyKeyword = TSAnyKeyword.asInstanceOf[js.Any], TSArrayType = TSArrayType.asInstanceOf[js.Any], TSAsExpression = TSAsExpression.asInstanceOf[js.Any], TSBigIntKeyword = TSBigIntKeyword.asInstanceOf[js.Any], TSBooleanKeyword = TSBooleanKeyword.asInstanceOf[js.Any], TSCallSignatureDeclaration = TSCallSignatureDeclaration.asInstanceOf[js.Any], TSConditionalType = TSConditionalType.asInstanceOf[js.Any], TSConstructSignatureDeclaration = TSConstructSignatureDeclaration.asInstanceOf[js.Any], TSConstructorType = TSConstructorType.asInstanceOf[js.Any], TSDeclareFunction = TSDeclareFunction.asInstanceOf[js.Any], TSDeclareMethod = TSDeclareMethod.asInstanceOf[js.Any], TSEnumDeclaration = TSEnumDeclaration.asInstanceOf[js.Any], TSEnumMember = TSEnumMember.asInstanceOf[js.Any], TSExportAssignment = TSExportAssignment.asInstanceOf[js.Any], TSExpressionWithTypeArguments = TSExpressionWithTypeArguments.asInstanceOf[js.Any], TSExternalModuleReference = TSExternalModuleReference.asInstanceOf[js.Any], TSFunctionType = TSFunctionType.asInstanceOf[js.Any], TSHasOptionalTypeAnnotation = TSHasOptionalTypeAnnotation.asInstanceOf[js.Any], TSHasOptionalTypeParameterInstantiation = TSHasOptionalTypeParameterInstantiation.asInstanceOf[js.Any], TSHasOptionalTypeParameters = TSHasOptionalTypeParameters.asInstanceOf[js.Any], TSImportEqualsDeclaration = TSImportEqualsDeclaration.asInstanceOf[js.Any], TSImportType = TSImportType.asInstanceOf[js.Any], TSIndexSignature = TSIndexSignature.asInstanceOf[js.Any], TSIndexedAccessType = TSIndexedAccessType.asInstanceOf[js.Any], TSInferType = TSInferType.asInstanceOf[js.Any], TSInterfaceBody = TSInterfaceBody.asInstanceOf[js.Any], TSInterfaceDeclaration = TSInterfaceDeclaration.asInstanceOf[js.Any], TSIntersectionType = TSIntersectionType.asInstanceOf[js.Any], TSLiteralType = TSLiteralType.asInstanceOf[js.Any], TSMappedType = TSMappedType.asInstanceOf[js.Any], TSMethodSignature = TSMethodSignature.asInstanceOf[js.Any], TSModuleBlock = TSModuleBlock.asInstanceOf[js.Any], TSModuleDeclaration = TSModuleDeclaration.asInstanceOf[js.Any], TSNamespaceExportDeclaration = TSNamespaceExportDeclaration.asInstanceOf[js.Any], TSNeverKeyword = TSNeverKeyword.asInstanceOf[js.Any], TSNonNullExpression = TSNonNullExpression.asInstanceOf[js.Any], TSNullKeyword = TSNullKeyword.asInstanceOf[js.Any], TSNumberKeyword = TSNumberKeyword.asInstanceOf[js.Any], TSObjectKeyword = TSObjectKeyword.asInstanceOf[js.Any], TSOptionalType = TSOptionalType.asInstanceOf[js.Any], TSParameterProperty = TSParameterProperty.asInstanceOf[js.Any], TSParenthesizedType = TSParenthesizedType.asInstanceOf[js.Any], TSPropertySignature = TSPropertySignature.asInstanceOf[js.Any], TSQualifiedName = TSQualifiedName.asInstanceOf[js.Any], TSRestType = TSRestType.asInstanceOf[js.Any], TSStringKeyword = TSStringKeyword.asInstanceOf[js.Any], TSSymbolKeyword = TSSymbolKeyword.asInstanceOf[js.Any], TSThisType = TSThisType.asInstanceOf[js.Any], TSTupleType = TSTupleType.asInstanceOf[js.Any], TSType = TSType.asInstanceOf[js.Any], TSTypeAliasDeclaration = TSTypeAliasDeclaration.asInstanceOf[js.Any], TSTypeAnnotation = TSTypeAnnotation.asInstanceOf[js.Any], TSTypeAssertion = TSTypeAssertion.asInstanceOf[js.Any], TSTypeLiteral = TSTypeLiteral.asInstanceOf[js.Any], TSTypeOperator = TSTypeOperator.asInstanceOf[js.Any], TSTypeParameter = TSTypeParameter.asInstanceOf[js.Any], TSTypeParameterDeclaration = TSTypeParameterDeclaration.asInstanceOf[js.Any], TSTypeParameterInstantiation = TSTypeParameterInstantiation.asInstanceOf[js.Any], TSTypePredicate = TSTypePredicate.asInstanceOf[js.Any], TSTypeQuery = TSTypeQuery.asInstanceOf[js.Any], TSTypeReference = TSTypeReference.asInstanceOf[js.Any], TSUndefinedKeyword = TSUndefinedKeyword.asInstanceOf[js.Any], TSUnionType = TSUnionType.asInstanceOf[js.Any], TSUnknownKeyword = TSUnknownKeyword.asInstanceOf[js.Any], TSVoidKeyword = TSVoidKeyword.asInstanceOf[js.Any], TaggedTemplateExpression = TaggedTemplateExpression.asInstanceOf[js.Any], TemplateElement = TemplateElement.asInstanceOf[js.Any], TemplateLiteral = TemplateLiteral.asInstanceOf[js.Any], ThisExpression = ThisExpression.asInstanceOf[js.Any], ThisTypeAnnotation = ThisTypeAnnotation.asInstanceOf[js.Any], ThrowStatement = ThrowStatement.asInstanceOf[js.Any], TryStatement = TryStatement.asInstanceOf[js.Any], TupleTypeAnnotation = TupleTypeAnnotation.asInstanceOf[js.Any], TypeAlias = TypeAlias.asInstanceOf[js.Any], TypeAnnotation = TypeAnnotation.asInstanceOf[js.Any], TypeCastExpression = TypeCastExpression.asInstanceOf[js.Any], TypeParameter = TypeParameter.asInstanceOf[js.Any], TypeParameterDeclaration = TypeParameterDeclaration.asInstanceOf[js.Any], TypeParameterInstantiation = TypeParameterInstantiation.asInstanceOf[js.Any], TypeofTypeAnnotation = TypeofTypeAnnotation.asInstanceOf[js.Any], UnaryExpression = UnaryExpression.asInstanceOf[js.Any], UnionTypeAnnotation = UnionTypeAnnotation.asInstanceOf[js.Any], UpdateExpression = UpdateExpression.asInstanceOf[js.Any])
-  
-    __obj.asInstanceOf[NamedTypes_]
+  implicit class NamedTypes_Ops[Self <: NamedTypes_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnyTypeAnnotation(value: Type[AnyTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AnyTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrayExpression(value: Type[ArrayExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrayPattern(value: Type[ArrayPattern]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrayTypeAnnotation(value: Type[ArrayTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrowFunctionExpression(value: Type[ArrowFunctionExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrowFunctionExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssignmentExpression(value: Type[AssignmentExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssignmentPattern(value: Type[AssignmentPattern]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAwaitExpression(value: Type[AwaitExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwaitExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBigIntLiteral(value: Type[BigIntLiteral]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BigIntLiteral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBinaryExpression(value: Type[BinaryExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBindExpression(value: Type[BindExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BindExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlock(value: Type[Block]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Block")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockStatement(value: Type[BlockStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBooleanLiteral(value: Type[BooleanLiteral]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanLiteral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBooleanLiteralTypeAnnotation(value: Type[BooleanLiteralTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanLiteralTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBooleanTypeAnnotation(value: Type[BooleanTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBreakStatement(value: Type[BreakStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BreakStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallExpression(value: Type[CallExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCatchClause(value: Type[CatchClause]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CatchClause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassBody(value: Type[ClassBody]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassDeclaration(value: Type[ClassDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassExpression(value: Type[ClassExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassImplements(value: Type[ClassImplements]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassImplements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassMethod(value: Type[ClassMethod]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassPrivateMethod(value: Type[ClassPrivateMethod]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassPrivateMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassPrivateProperty(value: Type[ClassPrivateProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassPrivateProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassProperty(value: Type[ClassProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassPropertyDefinition(value: Type[ClassPropertyDefinition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClassPropertyDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComment(value: Type[Comment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommentBlock(value: Type[CommentBlock]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommentBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommentLine(value: Type[CommentLine]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommentLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComprehensionBlock(value: Type[ComprehensionBlock]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComprehensionBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComprehensionExpression(value: Type[ComprehensionExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComprehensionExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConditionalExpression(value: Type[ConditionalExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionalExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContinueStatement(value: Type[ContinueStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinueStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDebuggerStatement(value: Type[DebuggerStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DebuggerStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclaration(value: Type[Declaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Declaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareClass(value: Type[DeclareClass]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareExportAllDeclaration(value: Type[DeclareExportAllDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareExportAllDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareExportDeclaration(value: Type[DeclareExportDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareExportDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareFunction(value: Type[DeclareFunction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareInterface(value: Type[DeclareInterface]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareInterface")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareModule(value: Type[DeclareModule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareModule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareModuleExports(value: Type[DeclareModuleExports]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareModuleExports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareOpaqueType(value: Type[DeclareOpaqueType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareOpaqueType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareTypeAlias(value: Type[DeclareTypeAlias]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareTypeAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclareVariable(value: Type[DeclareVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareVariable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeclaredPredicate(value: Type[DeclaredPredicate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeclaredPredicate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDecorator(value: Type[Decorator]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Decorator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirective(value: Type[Directive]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Directive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirectiveLiteral(value: Type[DirectiveLiteral]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectiveLiteral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDoExpression(value: Type[DoExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DoExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDoWhileStatement(value: Type[DoWhileStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DoWhileStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmptyStatement(value: Type[EmptyStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmptyStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmptyTypeAnnotation(value: Type[EmptyTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmptyTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExistentialTypeParam(value: Type[ExistentialTypeParam]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExistentialTypeParam")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExistsTypeAnnotation(value: Type[ExistsTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExistsTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportAllDeclaration(value: Type[ExportAllDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportAllDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportBatchSpecifier(value: Type[ExportBatchSpecifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportBatchSpecifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportDeclaration(value: Type[ExportDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportDefaultDeclaration(value: Type[ExportDefaultDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportDefaultDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportDefaultSpecifier(value: Type[ExportDefaultSpecifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportDefaultSpecifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportNamedDeclaration(value: Type[ExportNamedDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportNamedDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportNamespaceSpecifier(value: Type[ExportNamespaceSpecifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportNamespaceSpecifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportSpecifier(value: Type[ExportSpecifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportSpecifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpression(value: Type[Expression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpressionStatement(value: Type[ExpressionStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFile(value: Type[File]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("File")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlow(value: Type[Flow]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Flow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlowPredicate(value: Type[FlowPredicate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowPredicate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlowType(value: Type[FlowType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForAwaitStatement(value: Type[ForAwaitStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForAwaitStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForInStatement(value: Type[ForInStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForInStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForOfStatement(value: Type[ForOfStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForOfStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForStatement(value: Type[ForStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFunction(value: Type[Function]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFunctionDeclaration(value: Type[FunctionDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFunctionExpression(value: Type[FunctionExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFunctionTypeAnnotation(value: Type[FunctionTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFunctionTypeParam(value: Type[FunctionTypeParam]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionTypeParam")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGeneratorExpression(value: Type[GeneratorExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeneratorExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGenericTypeAnnotation(value: Type[GenericTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GenericTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: Type[Identifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIfStatement(value: Type[IfStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IfStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImport(value: Type[Import]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Import")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImportDeclaration(value: Type[ImportDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImportDefaultSpecifier(value: Type[ImportDefaultSpecifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportDefaultSpecifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImportNamespaceSpecifier(value: Type[ImportNamespaceSpecifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportNamespaceSpecifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImportSpecifier(value: Type[ImportSpecifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportSpecifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInferredPredicate(value: Type[InferredPredicate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InferredPredicate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterfaceDeclaration(value: Type[InterfaceDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InterfaceDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterfaceExtends(value: Type[InterfaceExtends]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InterfaceExtends")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterfaceTypeAnnotation(value: Type[InterfaceTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InterfaceTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterpreterDirective(value: Type[InterpreterDirective]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InterpreterDirective")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIntersectionTypeAnnotation(value: Type[IntersectionTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntersectionTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXAttribute(value: Type[JSXAttribute]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXAttribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXClosingElement(value: Type[JSXClosingElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXClosingElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXClosingFragment(value: Type[JSXClosingFragment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXClosingFragment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXElement(value: Type[JSXElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXEmptyExpression(value: Type[JSXEmptyExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXEmptyExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXExpressionContainer(value: Type[JSXExpressionContainer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXExpressionContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXFragment(value: Type[JSXFragment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXFragment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXIdentifier(value: Type[JSXIdentifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXMemberExpression(value: Type[JSXMemberExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXMemberExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXNamespacedName(value: Type[JSXNamespacedName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXNamespacedName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXOpeningElement(value: Type[JSXOpeningElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXOpeningElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXOpeningFragment(value: Type[JSXOpeningFragment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXOpeningFragment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXSpreadAttribute(value: Type[JSXSpreadAttribute]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXSpreadAttribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXSpreadChild(value: Type[JSXSpreadChild]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXSpreadChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJSXText(value: Type[JSXText]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JSXText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabeledStatement(value: Type[LabeledStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LabeledStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLine(value: Type[Line]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLiteral(value: Type[Literal]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Literal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLogicalExpression(value: Type[LogicalExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogicalExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMemberExpression(value: Type[MemberExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMemberTypeAnnotation(value: Type[MemberTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemberTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetaProperty(value: Type[MetaProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetaProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMethodDefinition(value: Type[MethodDefinition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MethodDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMixedTypeAnnotation(value: Type[MixedTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MixedTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModuleSpecifier(value: Type[ModuleSpecifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModuleSpecifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewExpression(value: Type[NewExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNode(value: Type[Node]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Node")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNoop(value: Type[Noop]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Noop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNullLiteral(value: Type[NullLiteral]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NullLiteral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNullLiteralTypeAnnotation(value: Type[NullLiteralTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NullLiteralTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNullTypeAnnotation(value: Type[NullTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NullTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNullableTypeAnnotation(value: Type[NullableTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NullableTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumberLiteralTypeAnnotation(value: Type[NumberLiteralTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberLiteralTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumberTypeAnnotation(value: Type[NumberTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumericLiteral(value: Type[NumericLiteral]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumericLiteral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumericLiteralTypeAnnotation(value: Type[NumericLiteralTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumericLiteralTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectExpression(value: Type[ObjectExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectMethod(value: Type[ObjectMethod]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectPattern(value: Type[ObjectPattern]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectProperty(value: Type[ObjectProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectTypeAnnotation(value: Type[ObjectTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectTypeCallProperty(value: Type[ObjectTypeCallProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeCallProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectTypeIndexer(value: Type[ObjectTypeIndexer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeIndexer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectTypeInternalSlot(value: Type[ObjectTypeInternalSlot]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeInternalSlot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectTypeProperty(value: Type[ObjectTypeProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectTypeSpreadProperty(value: Type[ObjectTypeSpreadProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeSpreadProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpaqueType(value: Type[OpaqueType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OpaqueType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptionalCallExpression(value: Type[OptionalCallExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionalCallExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptionalMemberExpression(value: Type[OptionalMemberExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionalMemberExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParenthesizedExpression(value: Type[ParenthesizedExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParenthesizedExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPattern(value: Type[Pattern]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Type[Position]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrintable(value: Type[Printable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Printable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivateName(value: Type[PrivateName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProgram(value: Type[Program]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Program")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperty(value: Type[Property]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPropertyPattern(value: Type[PropertyPattern]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PropertyPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQualifiedTypeIdentifier(value: Type[QualifiedTypeIdentifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualifiedTypeIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegExpLiteral(value: Type[RegExpLiteral]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegExpLiteral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestElement(value: Type[RestElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestProperty(value: Type[RestProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReturnStatement(value: Type[ReturnStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSequenceExpression(value: Type[SequenceExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceLocation(value: Type[SourceLocation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpecifier(value: Type[Specifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Specifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpreadElement(value: Type[SpreadElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpreadElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpreadElementPattern(value: Type[SpreadElementPattern]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpreadElementPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpreadProperty(value: Type[SpreadProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpreadProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpreadPropertyPattern(value: Type[SpreadPropertyPattern]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpreadPropertyPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatement(value: Type[Statement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStringLiteral(value: Type[StringLiteral]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StringLiteral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStringLiteralTypeAnnotation(value: Type[StringLiteralTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StringLiteralTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStringTypeAnnotation(value: Type[StringTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StringTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuper(value: Type[Super]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Super")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSwitchCase(value: Type[SwitchCase]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SwitchCase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSwitchStatement(value: Type[SwitchStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SwitchStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSAnyKeyword(value: Type[TSAnyKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSAnyKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSArrayType(value: Type[TSArrayType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSArrayType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSAsExpression(value: Type[TSAsExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSAsExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSBigIntKeyword(value: Type[TSBigIntKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSBigIntKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSBooleanKeyword(value: Type[TSBooleanKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSBooleanKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSCallSignatureDeclaration(value: Type[TSCallSignatureDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSCallSignatureDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSConditionalType(value: Type[TSConditionalType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSConditionalType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSConstructSignatureDeclaration(value: Type[TSConstructSignatureDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSConstructSignatureDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSConstructorType(value: Type[TSConstructorType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSConstructorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSDeclareFunction(value: Type[TSDeclareFunction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSDeclareFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSDeclareMethod(value: Type[TSDeclareMethod]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSDeclareMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSEnumDeclaration(value: Type[TSEnumDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSEnumDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSEnumMember(value: Type[TSEnumMember]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSEnumMember")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSExportAssignment(value: Type[TSExportAssignment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSExportAssignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSExpressionWithTypeArguments(value: Type[TSExpressionWithTypeArguments]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSExpressionWithTypeArguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSExternalModuleReference(value: Type[TSExternalModuleReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSExternalModuleReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSFunctionType(value: Type[TSFunctionType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSFunctionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSHasOptionalTypeAnnotation(value: Type[TSHasOptionalTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSHasOptionalTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSHasOptionalTypeParameterInstantiation(value: Type[TSHasOptionalTypeParameterInstantiation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSHasOptionalTypeParameterInstantiation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSHasOptionalTypeParameters(value: Type[TSHasOptionalTypeParameters]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSHasOptionalTypeParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSImportEqualsDeclaration(value: Type[TSImportEqualsDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSImportEqualsDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSImportType(value: Type[TSImportType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSImportType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSIndexSignature(value: Type[TSIndexSignature]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSIndexSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSIndexedAccessType(value: Type[TSIndexedAccessType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSIndexedAccessType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSInferType(value: Type[TSInferType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSInferType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSInterfaceBody(value: Type[TSInterfaceBody]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSInterfaceBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSInterfaceDeclaration(value: Type[TSInterfaceDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSInterfaceDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSIntersectionType(value: Type[TSIntersectionType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSIntersectionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSLiteralType(value: Type[TSLiteralType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSLiteralType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSMappedType(value: Type[TSMappedType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSMappedType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSMethodSignature(value: Type[TSMethodSignature]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSMethodSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSModuleBlock(value: Type[TSModuleBlock]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSModuleBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSModuleDeclaration(value: Type[TSModuleDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSModuleDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSNamespaceExportDeclaration(value: Type[TSNamespaceExportDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSNamespaceExportDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSNeverKeyword(value: Type[TSNeverKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSNeverKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSNonNullExpression(value: Type[TSNonNullExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSNonNullExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSNullKeyword(value: Type[TSNullKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSNullKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSNumberKeyword(value: Type[TSNumberKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSNumberKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSObjectKeyword(value: Type[TSObjectKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSObjectKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSOptionalType(value: Type[TSOptionalType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSOptionalType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSParameterProperty(value: Type[TSParameterProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSParameterProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSParenthesizedType(value: Type[TSParenthesizedType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSParenthesizedType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSPropertySignature(value: Type[TSPropertySignature]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSPropertySignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSQualifiedName(value: Type[TSQualifiedName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSQualifiedName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSRestType(value: Type[TSRestType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSRestType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSStringKeyword(value: Type[TSStringKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSStringKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSSymbolKeyword(value: Type[TSSymbolKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSSymbolKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSThisType(value: Type[TSThisType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSThisType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTupleType(value: Type[TSTupleType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTupleType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSType(value: Type[TSType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypeAliasDeclaration(value: Type[TSTypeAliasDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeAliasDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypeAnnotation(value: Type[TSTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypeAssertion(value: Type[TSTypeAssertion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeAssertion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypeLiteral(value: Type[TSTypeLiteral]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeLiteral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypeOperator(value: Type[TSTypeOperator]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypeParameter(value: Type[TSTypeParameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeParameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypeParameterDeclaration(value: Type[TSTypeParameterDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeParameterDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypeParameterInstantiation(value: Type[TSTypeParameterInstantiation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeParameterInstantiation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypePredicate(value: Type[TSTypePredicate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypePredicate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypeQuery(value: Type[TSTypeQuery]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSTypeReference(value: Type[TSTypeReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSUndefinedKeyword(value: Type[TSUndefinedKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSUndefinedKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSUnionType(value: Type[TSUnionType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSUnionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSUnknownKeyword(value: Type[TSUnknownKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSUnknownKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTSVoidKeyword(value: Type[TSVoidKeyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TSVoidKeyword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaggedTemplateExpression(value: Type[TaggedTemplateExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaggedTemplateExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplateElement(value: Type[TemplateElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplateLiteral(value: Type[TemplateLiteral]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateLiteral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThisExpression(value: Type[ThisExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThisExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThisTypeAnnotation(value: Type[ThisTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThisTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThrowStatement(value: Type[ThrowStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThrowStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTryStatement(value: Type[TryStatement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TryStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTupleTypeAnnotation(value: Type[TupleTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TupleTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeAlias(value: Type[TypeAlias]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeAnnotation(value: Type[TypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeCastExpression(value: Type[TypeCastExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeCastExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeParameter(value: Type[TypeParameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeParameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeParameterDeclaration(value: Type[TypeParameterDeclaration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeParameterDeclaration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeParameterInstantiation(value: Type[TypeParameterInstantiation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeParameterInstantiation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeofTypeAnnotation(value: Type[TypeofTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeofTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnaryExpression(value: Type[UnaryExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnaryExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnionTypeAnnotation(value: Type[UnionTypeAnnotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnionTypeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateExpression(value: Type[UpdateExpression]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
   }
+  
 }
 

@@ -34,22 +34,89 @@ trait HTTPRequest extends js.Object {
 
 object HTTPRequest {
   @scala.inline
-  def apply(
-    ClientIP: IPString = null,
-    Country: Country = null,
-    HTTPVersion: HTTPVersion = null,
-    Headers: HTTPHeaders = null,
-    Method: HTTPMethod = null,
-    URI: URIString = null
-  ): HTTPRequest = {
+  def apply(): HTTPRequest = {
     val __obj = js.Dynamic.literal()
-    if (ClientIP != null) __obj.updateDynamic("ClientIP")(ClientIP.asInstanceOf[js.Any])
-    if (Country != null) __obj.updateDynamic("Country")(Country.asInstanceOf[js.Any])
-    if (HTTPVersion != null) __obj.updateDynamic("HTTPVersion")(HTTPVersion.asInstanceOf[js.Any])
-    if (Headers != null) __obj.updateDynamic("Headers")(Headers.asInstanceOf[js.Any])
-    if (Method != null) __obj.updateDynamic("Method")(Method.asInstanceOf[js.Any])
-    if (URI != null) __obj.updateDynamic("URI")(URI.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTTPRequest]
   }
+  @scala.inline
+  implicit class HTTPRequestOps[Self <: HTTPRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientIP(value: IPString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientIP: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIP")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountry(value: Country): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHTTPVersion(value: HTTPVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HTTPVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHTTPVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HTTPVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: HTTPHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: HTTPMethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withURI(value: URIString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("URI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("URI")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,47 +1,51 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.AnonValue
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.AnonValueString
-import typingsSlinky.gestalt.gestaltStrings.down
-import typingsSlinky.gestalt.gestaltStrings.left
-import typingsSlinky.gestalt.gestaltStrings.right
-import typingsSlinky.gestalt.gestaltStrings.up
 import typingsSlinky.gestalt.mod.TextAreaProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TextArea
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.TextArea] {
+object TextArea {
   @JSImport("gestalt", "TextArea")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, name, placeholder, rows */
-  def apply(
-    id: String,
-    onChange: AnonValue => Unit,
-    errorMessage: String = null,
-    idealErrorDirection: up | right | down | left = null,
-    onBlur: /* args */ AnonValueString => Unit = null,
-    onFocus: /* args */ AnonValueString => Unit = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.TextArea] = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
-    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
-    if (idealErrorDirection != null) __obj.updateDynamic("idealErrorDirection")(idealErrorDirection.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.TextArea] {
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorMessage(value: String): this.type = set("errorMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def helperText(value: String): this.type = set("helperText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: /* args */ AnonValueString => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: /* args */ AnonValueString => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: /* args */ AnonValueString => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = TextAreaProps
+  
+  def withProps(p: TextAreaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(id: String, onChange: AnonValueString => Unit): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
+    new Builder(js.Array(this.component, __props.asInstanceOf[TextAreaProps]))
+  }
 }
 

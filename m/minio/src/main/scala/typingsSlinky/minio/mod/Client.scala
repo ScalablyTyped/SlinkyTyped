@@ -5,7 +5,6 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpsMod.AgentOptions
 import typingsSlinky.node.streamMod.Stream
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -88,14 +87,14 @@ class Client protected () extends js.Object {
     objectName: String,
     expiry: Double,
     respHeaders: StringDictionary[js.Any],
-    requestDate: Date
+    requestDate: js.Date
   ): js.Promise[String] = js.native
   def presignedGetObject(
     bucketName: String,
     objectName: String,
     expiry: Double,
     respHeaders: StringDictionary[js.Any],
-    requestDate: Date,
+    requestDate: js.Date,
     callback: ResultCallback[String]
   ): Unit = js.native
   def presignedPostPolicy(policy: PostPolicy): js.Promise[PostPolicyResult] = js.native
@@ -136,7 +135,7 @@ class Client protected () extends js.Object {
     objectName: String,
     expiry: Double,
     reqParams: StringDictionary[js.Any],
-    requestDate: Date
+    requestDate: js.Date
   ): js.Promise[String] = js.native
   def presignedUrl(
     httpMethod: String,
@@ -144,7 +143,7 @@ class Client protected () extends js.Object {
     objectName: String,
     expiry: Double,
     reqParams: StringDictionary[js.Any],
-    requestDate: Date,
+    requestDate: js.Date,
     callback: ResultCallback[String]
   ): Unit = js.native
   def putObject(bucketName: String, objectName: String, stream: String): js.Promise[String] = js.native

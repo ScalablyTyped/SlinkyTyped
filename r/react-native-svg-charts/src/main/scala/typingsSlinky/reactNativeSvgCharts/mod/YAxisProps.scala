@@ -1,50 +1,79 @@
 package typingsSlinky.reactNativeSvgCharts.mod
 
-import typingsSlinky.d3Scale.mod.ScaleBand_
-import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeSvgCharts.AnonTop
-import typingsSlinky.reactNativeSvgCharts.PartialTextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait YAxisProps[T] extends AxisProps[T] {
-  var contentInset: js.UndefOr[AnonTop] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
-  var yAccessor: js.UndefOr[AccessorFunction[T, _]] = js.undefined
+  var contentInset: js.UndefOr[AnonTop] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
+  var yAccessor: js.UndefOr[AccessorFunction[T, _]] = js.native
 }
 
 object YAxisProps {
   @scala.inline
-  def apply[T](
-    data: js.Array[T],
-    contentInset: AnonTop = null,
-    formatLabel: (/* value */ js.Any, /* index */ Double) => Double | String = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    numberOfTicks: Int | Double = null,
-    scale: () => (ScaleType[js.Any, js.Any]) | ScaleBand_[js.Any] = null,
-    spacingInner: Int | Double = null,
-    spacingOuter: Int | Double = null,
-    style: StyleProp[ViewStyle] = null,
-    svg: PartialTextProps = null,
-    yAccessor: /* props */ AccessorFunctionProps[T] => _ = null
-  ): YAxisProps[T] = {
+  def apply[T](data: js.Array[T]): YAxisProps[T] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (contentInset != null) __obj.updateDynamic("contentInset")(contentInset.asInstanceOf[js.Any])
-    if (formatLabel != null) __obj.updateDynamic("formatLabel")(js.Any.fromFunction2(formatLabel))
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (numberOfTicks != null) __obj.updateDynamic("numberOfTicks")(numberOfTicks.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(js.Any.fromFunction0(scale))
-    if (spacingInner != null) __obj.updateDynamic("spacingInner")(spacingInner.asInstanceOf[js.Any])
-    if (spacingOuter != null) __obj.updateDynamic("spacingOuter")(spacingOuter.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (svg != null) __obj.updateDynamic("svg")(svg.asInstanceOf[js.Any])
-    if (yAccessor != null) __obj.updateDynamic("yAccessor")(js.Any.fromFunction1(yAccessor))
     __obj.asInstanceOf[YAxisProps[T]]
   }
+  @scala.inline
+  implicit class YAxisPropsOps[Self[t] <: YAxisProps[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withContentInset(value: AnonTop): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentInset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentInset: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentInset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYAccessor(value: /* props */ AccessorFunctionProps[T] => _): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAccessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutYAccessor: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAccessor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

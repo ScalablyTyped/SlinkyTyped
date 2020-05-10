@@ -27,7 +27,7 @@ package object ioteventsdataMod {
   type MessageId = java.lang.String
   type Messages = js.Array[typingsSlinky.awsSdk.ioteventsdataMod.Message]
   type NextToken = java.lang.String
-  type Payload = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.ioteventsdataMod.Blob | java.lang.String
+  type Payload = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.ioteventsdataMod.Blob | java.lang.String
   type Seconds = scala.Double
   type StateName = java.lang.String
   type TimerDefinitions = js.Array[typingsSlinky.awsSdk.ioteventsdataMod.TimerDefinition]

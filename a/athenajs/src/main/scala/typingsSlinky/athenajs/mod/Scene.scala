@@ -1,6 +1,6 @@
 package typingsSlinky.athenajs.mod
 
-import typingsSlinky.std.HTMLImageElement
+import org.scalajs.dom.raw.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

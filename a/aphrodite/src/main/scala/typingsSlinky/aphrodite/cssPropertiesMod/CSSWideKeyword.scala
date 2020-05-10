@@ -16,12 +16,10 @@ trait CSSWideKeyword extends js.Object
 
 object CSSWideKeyword {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inherit: typingsSlinky.aphrodite.aphroditeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.aphrodite.aphroditeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.aphrodite.aphroditeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.aphrodite.aphroditeStrings.initial = "initial".asInstanceOf[typingsSlinky.aphrodite.aphroditeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.aphrodite.aphroditeStrings.initial = this.cast("initial")
-  @scala.inline
-  def unset: typingsSlinky.aphrodite.aphroditeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.aphrodite.aphroditeStrings.unset = "unset".asInstanceOf[typingsSlinky.aphrodite.aphroditeStrings.unset]
 }
 

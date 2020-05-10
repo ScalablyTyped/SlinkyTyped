@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("tcomb", "Error")
 @js.native
 object Error
-  extends TopLevel[Irreducible_[typingsSlinky.std.Error]]
+  extends TopLevel[Irreducible_[js.Error]]
 

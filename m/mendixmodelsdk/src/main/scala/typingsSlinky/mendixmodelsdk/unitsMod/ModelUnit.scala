@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined 
@@ -24,8 +24,8 @@ abstract class ModelUnit protected () extends AbstractElement {
   @JSName("container")
   val container_FModelUnit: StructuralUnit = js.native
   @JSName("isLoaded")
-  def isLoaded_MModelUnit(): Boolean = js.native
+  def isLoaded_MModelUnit: Boolean = js.native
   @JSName("unit")
-  def unit_MModelUnit(): this.type = js.native
+  def unit_MModelUnit: this.type = js.native
 }
 

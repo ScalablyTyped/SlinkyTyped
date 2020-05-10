@@ -2,7 +2,6 @@ package typingsSlinky.openpgp.mod.packet
 
 import typingsSlinky.openpgp.mod.Integer
 import typingsSlinky.openpgp.mod.ReadableStream
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,18 +42,18 @@ class List () extends js.Object {
     * @param packet Packet to push
     */
   def push(packet: js.Object): Unit = js.native
-  def read(A: ReadableStream[Uint8Array]): Unit = js.native
+  def read(A: ReadableStream[js.typedarray.Uint8Array]): Unit = js.native
   /**
     * Reads a stream of binary data and interprents it as a list of packets.
     * @param A Uint8Array of bytes.
     */
-  def read(A: Uint8Array): Unit = js.native
+  def read(A: js.typedarray.Uint8Array): Unit = js.native
   /**
     * Creates a binary representation of openpgp objects contained within the
     * class instance.
     * @returns A Uint8Array containing valid openpgp packets.
     */
-  def write(): scala.scalajs.js.typedarray.Uint8Array | ReadableStream[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def write(): js.typedarray.Uint8Array | ReadableStream[js.typedarray.Uint8Array] = js.native
 }
 
 /* static members */

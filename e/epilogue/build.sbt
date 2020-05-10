@@ -1,27 +1,28 @@
 organization := "org.scalablytyped.slinky"
 name := "epilogue"
-version := "0.7-dt-20200227Z-f5c30a"
+version := "0.7-dt-20200227Z-4318b0"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20200302Z-a7b277",
-  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-ed4596",
-  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200226Z-b2d5a0",
-  "org.scalablytyped.slinky" %%% "continuation-local-storage" % "3.2-dt-20200225Z-56f432",
-  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200227Z-17932f",
-  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200225Z-62466e",
-  "org.scalablytyped.slinky" %%% "lodash" % "4.14-dt-20200302Z-29d3df",
-  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20191126Z-e728ff",
-  "org.scalablytyped.slinky" %%% "node" % "13.7-dt-20200228Z-eb4e34",
-  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-6f090d",
-  "org.scalablytyped.slinky" %%% "sequelize" % "4.28.0-dt-20200225Z-957f01",
-  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200227Z-3c94e9",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f",
-  "org.scalablytyped.slinky" %%% "validator" % "12.0-dt-20191226Z-b5141e")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20200302Z-1b60d9",
+  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-e2128c",
+  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200226Z-196a23",
+  "org.scalablytyped.slinky" %%% "continuation-local-storage" % "3.2-dt-20200225Z-1866bf",
+  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200409Z-5ef924",
+  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200415Z-f286fc",
+  "org.scalablytyped.slinky" %%% "lodash" % "4.14-dt-20200417Z-4d62ba",
+  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20191126Z-46fc76",
+  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-6c3110",
+  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200225Z-632c59",
+  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-3e2563",
+  "org.scalablytyped.slinky" %%% "sequelize" % "4.28.0-dt-20200225Z-197419",
+  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200227Z-16be36",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
+  "org.scalablytyped.slinky" %%% "validator" % "13.0-dt-20200407Z-3adfb2")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

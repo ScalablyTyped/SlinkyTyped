@@ -55,26 +55,113 @@ trait SchemaRoomLeaveDiagnostics extends js.Object {
 
 object SchemaRoomLeaveDiagnostics {
   @scala.inline
-  def apply(
-    androidNetworkSubtype: Int | Double = null,
-    androidNetworkType: Int | Double = null,
-    iosNetworkType: Int | Double = null,
-    kind: String = null,
-    networkOperatorCode: String = null,
-    networkOperatorName: String = null,
-    peerSession: js.Array[SchemaPeerSessionDiagnostics] = null,
-    socketsUsed: js.UndefOr[Boolean] = js.undefined
-  ): SchemaRoomLeaveDiagnostics = {
+  def apply(): SchemaRoomLeaveDiagnostics = {
     val __obj = js.Dynamic.literal()
-    if (androidNetworkSubtype != null) __obj.updateDynamic("androidNetworkSubtype")(androidNetworkSubtype.asInstanceOf[js.Any])
-    if (androidNetworkType != null) __obj.updateDynamic("androidNetworkType")(androidNetworkType.asInstanceOf[js.Any])
-    if (iosNetworkType != null) __obj.updateDynamic("iosNetworkType")(iosNetworkType.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (networkOperatorCode != null) __obj.updateDynamic("networkOperatorCode")(networkOperatorCode.asInstanceOf[js.Any])
-    if (networkOperatorName != null) __obj.updateDynamic("networkOperatorName")(networkOperatorName.asInstanceOf[js.Any])
-    if (peerSession != null) __obj.updateDynamic("peerSession")(peerSession.asInstanceOf[js.Any])
-    if (!js.isUndefined(socketsUsed)) __obj.updateDynamic("socketsUsed")(socketsUsed.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRoomLeaveDiagnostics]
   }
+  @scala.inline
+  implicit class SchemaRoomLeaveDiagnosticsOps[Self <: SchemaRoomLeaveDiagnostics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndroidNetworkSubtype(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidNetworkSubtype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidNetworkSubtype: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidNetworkSubtype")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidNetworkType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidNetworkType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidNetworkType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidNetworkType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIosNetworkType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosNetworkType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIosNetworkType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosNetworkType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkOperatorCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkOperatorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkOperatorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkOperatorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkOperatorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkOperatorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkOperatorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkOperatorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerSession(value: js.Array[SchemaPeerSessionDiagnostics]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peerSession")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("peerSession")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSocketsUsed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketsUsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSocketsUsed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketsUsed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

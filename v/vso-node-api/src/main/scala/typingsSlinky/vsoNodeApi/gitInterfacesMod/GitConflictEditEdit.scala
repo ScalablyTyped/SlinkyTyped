@@ -5,11 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GitConflictEditEdit extends GitConflict {
-  var baseBlob: GitBlobRef
-  var resolution: GitResolutionMergeContent
-  var sourceBlob: GitBlobRef
-  var targetBlob: GitBlobRef
+  var baseBlob: GitBlobRef = js.native
+  var resolution: GitResolutionMergeContent = js.native
+  var sourceBlob: GitBlobRef = js.native
+  var targetBlob: GitBlobRef = js.native
 }
 
 object GitConflictEditEdit {
@@ -34,8 +35,39 @@ object GitConflictEditEdit {
     url: String
   ): GitConflictEditEdit = {
     val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], baseBlob = baseBlob.asInstanceOf[js.Any], conflictId = conflictId.asInstanceOf[js.Any], conflictPath = conflictPath.asInstanceOf[js.Any], conflictType = conflictType.asInstanceOf[js.Any], mergeBaseCommit = mergeBaseCommit.asInstanceOf[js.Any], mergeOrigin = mergeOrigin.asInstanceOf[js.Any], mergeSourceCommit = mergeSourceCommit.asInstanceOf[js.Any], mergeTargetCommit = mergeTargetCommit.asInstanceOf[js.Any], resolution = resolution.asInstanceOf[js.Any], resolutionError = resolutionError.asInstanceOf[js.Any], resolutionStatus = resolutionStatus.asInstanceOf[js.Any], resolvedBy = resolvedBy.asInstanceOf[js.Any], resolvedDate = resolvedDate.asInstanceOf[js.Any], sourceBlob = sourceBlob.asInstanceOf[js.Any], targetBlob = targetBlob.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GitConflictEditEdit]
   }
+  @scala.inline
+  implicit class GitConflictEditEditOps[Self <: GitConflictEditEdit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseBlob(value: GitBlobRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseBlob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResolution(value: GitResolutionMergeContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceBlob(value: GitBlobRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceBlob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetBlob(value: GitBlobRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetBlob")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -6,17 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonChromeresources extends js.Object {
-  var chrome_resources: StringDictionary[ExtensionURL | StringDictionary[ExtensionURL]]
-  var version: String
+  var chrome_resources: StringDictionary[ExtensionURL | StringDictionary[ExtensionURL]] = js.native
+  var version: String = js.native
 }
 
 object AnonChromeresources {
   @scala.inline
   def apply(chrome_resources: StringDictionary[ExtensionURL | StringDictionary[ExtensionURL]], version: String): AnonChromeresources = {
     val __obj = js.Dynamic.literal(chrome_resources = chrome_resources.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonChromeresources]
   }
+  @scala.inline
+  implicit class AnonChromeresourcesOps[Self <: AnonChromeresources] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChrome_resources(value: StringDictionary[ExtensionURL | StringDictionary[ExtensionURL]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

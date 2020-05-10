@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.coreMod
 
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import scala.scalajs.js
@@ -15,7 +15,7 @@ class Dropout protected () extends Layer {
   val noiseShape: js.Any = js.native
   val rate: js.Any = js.native
   val seed: js.Any = js.native
-  /* protected */ def getNoiseShape(input: Tensor_[Rank]): Shape = js.native
+  /* protected */ def getNoiseShape(input: Tensor[Rank]): Shape = js.native
 }
 
 /* static members */

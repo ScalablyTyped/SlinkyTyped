@@ -1,43 +1,49 @@
 package typingsSlinky.expo.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.expo.appLoadingMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AppLoading
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  @JSImport("expo/build/launch/AppLoading", JSImport.Default)
-  @js.native
-  object componentImport extends js.Object
+object AppLoading {
+  object AnonAutoHideSplash {
+    @JSImport("expo/build/launch/AppLoading", JSImport.Default)
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, default] {
+      @scala.inline
+      def autoHideSplash(value: Boolean): this.type = set("autoHideSplash", value.asInstanceOf[js.Any])
+      @scala.inline
+      def onError(value: /* error */ js.Error => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+      @scala.inline
+      def onFinish(value: () => Unit): this.type = set("onFinish", js.Any.fromFunction0(value))
+      @scala.inline
+      def startAsync(value: () => js.Promise[Unit]): this.type = set("startAsync", js.Any.fromFunction0(value))
+    }
+    
+    def withProps(p: typingsSlinky.expo.AnonAutoHideSplash): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: AnonAutoHideSplash.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
   
-  override val component: String | js.Object = this.componentImport
-  def AnonAutoHideSplash(
-    autoHideSplash: js.UndefOr[Boolean] = js.undefined,
-    onError: /* error */ js.Error => Unit = null,
-    onFinish: () => Unit = null,
-    startAsync: () => js.Promise[Unit] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoHideSplash)) __obj.updateDynamic("autoHideSplash")(autoHideSplash.asInstanceOf[js.Any])
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onFinish != null) __obj.updateDynamic("onFinish")(js.Any.fromFunction0(onFinish))
-    if (startAsync != null) __obj.updateDynamic("startAsync")(js.Any.fromFunction0(startAsync))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  object AnonOnError {
+    @JSImport("expo/build/launch/AppLoading", JSImport.Default)
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: typingsSlinky.expo.AnonOnError): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(onError: Null, onFinish: Null, startAsync: Null): Default[tag.type, default] = {
+        val __props = js.Dynamic.literal(onError = onError.asInstanceOf[js.Any], onFinish = onFinish.asInstanceOf[js.Any], startAsync = startAsync.asInstanceOf[js.Any])
+        new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[typingsSlinky.expo.AnonOnError]))
+    }
   }
-  def AnonOnError(onError: Null, onFinish: Null, startAsync: Null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(onError = onError.asInstanceOf[js.Any], onFinish = onFinish.asInstanceOf[js.Any], startAsync = startAsync.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
-  }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.expo.appLoadingMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.expo.appLoadingMod.Props
+  
 }
 

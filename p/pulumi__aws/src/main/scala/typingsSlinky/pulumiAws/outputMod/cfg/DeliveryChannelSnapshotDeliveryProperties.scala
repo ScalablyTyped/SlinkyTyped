@@ -16,10 +16,29 @@ trait DeliveryChannelSnapshotDeliveryProperties extends js.Object {
 
 object DeliveryChannelSnapshotDeliveryProperties {
   @scala.inline
-  def apply(deliveryFrequency: String = null): DeliveryChannelSnapshotDeliveryProperties = {
+  def apply(): DeliveryChannelSnapshotDeliveryProperties = {
     val __obj = js.Dynamic.literal()
-    if (deliveryFrequency != null) __obj.updateDynamic("deliveryFrequency")(deliveryFrequency.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeliveryChannelSnapshotDeliveryProperties]
   }
+  @scala.inline
+  implicit class DeliveryChannelSnapshotDeliveryPropertiesOps[Self <: DeliveryChannelSnapshotDeliveryProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeliveryFrequency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryFrequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryFrequency")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

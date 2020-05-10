@@ -22,16 +22,53 @@ trait ModifyGlobalClusterMessage extends js.Object {
 
 object ModifyGlobalClusterMessage {
   @scala.inline
-  def apply(
-    DeletionProtection: js.UndefOr[scala.Boolean] = js.undefined,
-    GlobalClusterIdentifier: String = null,
-    NewGlobalClusterIdentifier: String = null
-  ): ModifyGlobalClusterMessage = {
+  def apply(): ModifyGlobalClusterMessage = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(DeletionProtection)) __obj.updateDynamic("DeletionProtection")(DeletionProtection.asInstanceOf[js.Any])
-    if (GlobalClusterIdentifier != null) __obj.updateDynamic("GlobalClusterIdentifier")(GlobalClusterIdentifier.asInstanceOf[js.Any])
-    if (NewGlobalClusterIdentifier != null) __obj.updateDynamic("NewGlobalClusterIdentifier")(NewGlobalClusterIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyGlobalClusterMessage]
   }
+  @scala.inline
+  implicit class ModifyGlobalClusterMessageOps[Self <: ModifyGlobalClusterMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeletionProtection(value: BooleanOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionProtection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionProtection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionProtection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalClusterIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalClusterIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewGlobalClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewGlobalClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewGlobalClusterIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewGlobalClusterIdentifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

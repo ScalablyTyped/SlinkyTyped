@@ -30,20 +30,77 @@ trait DescribeLunaClientResponse extends js.Object {
 
 object DescribeLunaClientResponse {
   @scala.inline
-  def apply(
-    Certificate: Certificate = null,
-    CertificateFingerprint: CertificateFingerprint = null,
-    ClientArn: ClientArn = null,
-    Label: Label = null,
-    LastModifiedTimestamp: Timestamp = null
-  ): DescribeLunaClientResponse = {
+  def apply(): DescribeLunaClientResponse = {
     val __obj = js.Dynamic.literal()
-    if (Certificate != null) __obj.updateDynamic("Certificate")(Certificate.asInstanceOf[js.Any])
-    if (CertificateFingerprint != null) __obj.updateDynamic("CertificateFingerprint")(CertificateFingerprint.asInstanceOf[js.Any])
-    if (ClientArn != null) __obj.updateDynamic("ClientArn")(ClientArn.asInstanceOf[js.Any])
-    if (Label != null) __obj.updateDynamic("Label")(Label.asInstanceOf[js.Any])
-    if (LastModifiedTimestamp != null) __obj.updateDynamic("LastModifiedTimestamp")(LastModifiedTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLunaClientResponse]
   }
+  @scala.inline
+  implicit class DescribeLunaClientResponseOps[Self <: DescribeLunaClientResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificate(value: Certificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificateFingerprint(value: CertificateFingerprint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateFingerprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateFingerprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateFingerprint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientArn(value: ClientArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: Label): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTimestamp(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTimestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

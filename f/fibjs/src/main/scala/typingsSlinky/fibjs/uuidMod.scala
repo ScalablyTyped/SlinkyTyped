@@ -1,9 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.fibjs.fibjsNumbers.`0`
-import typingsSlinky.fibjs.fibjsNumbers.`1`
-import typingsSlinky.fibjs.fibjsNumbers.`2`
-import typingsSlinky.fibjs.fibjsNumbers.`3`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +12,10 @@ import scala.scalajs.js.annotation._
 @JSImport("uuid", JSImport.Namespace)
 @js.native
 object uuidMod extends js.Object {
-  val DNS: `0` = js.native
-  val OID: `2` = js.native
-  val URL: `1` = js.native
-  val X509: `3` = js.native
+  val DNS: /* 0 */ Double = js.native
+  val OID: /* 2 */ Double = js.native
+  val URL: /* 1 */ Double = js.native
+  val X509: /* 3 */ Double = js.native
   val hostID: Double = js.native
   def md5(ns: Double, name: String): ClassBuffer = js.native
   def node(): ClassBuffer = js.native

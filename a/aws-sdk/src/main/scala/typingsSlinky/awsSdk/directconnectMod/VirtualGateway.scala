@@ -18,11 +18,41 @@ trait VirtualGateway extends js.Object {
 
 object VirtualGateway {
   @scala.inline
-  def apply(virtualGatewayId: VirtualGatewayId = null, virtualGatewayState: VirtualGatewayState = null): VirtualGateway = {
+  def apply(): VirtualGateway = {
     val __obj = js.Dynamic.literal()
-    if (virtualGatewayId != null) __obj.updateDynamic("virtualGatewayId")(virtualGatewayId.asInstanceOf[js.Any])
-    if (virtualGatewayState != null) __obj.updateDynamic("virtualGatewayState")(virtualGatewayState.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualGateway]
   }
+  @scala.inline
+  implicit class VirtualGatewayOps[Self <: VirtualGateway] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVirtualGatewayId(value: VirtualGatewayId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualGatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVirtualGatewayId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualGatewayId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVirtualGatewayState(value: VirtualGatewayState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualGatewayState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVirtualGatewayState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("virtualGatewayState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

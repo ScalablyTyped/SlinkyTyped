@@ -18,11 +18,41 @@ trait EstimatedResourceSize extends js.Object {
 
 object EstimatedResourceSize {
   @scala.inline
-  def apply(estimatedOn: js.Date = null, estimatedSizeInBytes: Int | Double = null): EstimatedResourceSize = {
+  def apply(): EstimatedResourceSize = {
     val __obj = js.Dynamic.literal()
-    if (estimatedOn != null) __obj.updateDynamic("estimatedOn")(estimatedOn.asInstanceOf[js.Any])
-    if (estimatedSizeInBytes != null) __obj.updateDynamic("estimatedSizeInBytes")(estimatedSizeInBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[EstimatedResourceSize]
   }
+  @scala.inline
+  implicit class EstimatedResourceSizeOps[Self <: EstimatedResourceSize] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEstimatedOn(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedSizeInBytes(value: SizeInBytes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedSizeInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedSizeInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedSizeInBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

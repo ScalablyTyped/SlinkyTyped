@@ -30,19 +30,71 @@ trait DescribeCommunicationsRequest extends js.Object {
 
 object DescribeCommunicationsRequest {
   @scala.inline
-  def apply(
-    caseId: CaseId,
-    afterTime: AfterTime = null,
-    beforeTime: BeforeTime = null,
-    maxResults: Int | scala.Double = null,
-    nextToken: NextToken = null
-  ): DescribeCommunicationsRequest = {
+  def apply(caseId: CaseId): DescribeCommunicationsRequest = {
     val __obj = js.Dynamic.literal(caseId = caseId.asInstanceOf[js.Any])
-    if (afterTime != null) __obj.updateDynamic("afterTime")(afterTime.asInstanceOf[js.Any])
-    if (beforeTime != null) __obj.updateDynamic("beforeTime")(beforeTime.asInstanceOf[js.Any])
-    if (maxResults != null) __obj.updateDynamic("maxResults")(maxResults.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCommunicationsRequest]
   }
+  @scala.inline
+  implicit class DescribeCommunicationsRequestOps[Self <: DescribeCommunicationsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaseId(value: CaseId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caseId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAfterTime(value: AfterTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeTime(value: BeforeTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeforeTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: MaxResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

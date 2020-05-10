@@ -39,18 +39,18 @@ object mod extends js.Object {
     def create(input: String, value: js.Any): Blot = js.native
     def create(input: Scope): Blot = js.native
     def create(input: Scope, value: js.Any): Blot = js.native
-    def create(input: typingsSlinky.std.Node): Blot = js.native
-    def create(input: typingsSlinky.std.Node, value: js.Any): Blot = js.native
+    def create(input: Node): Blot = js.native
+    def create(input: Node, value: js.Any): Blot = js.native
     def find(): Blot | Null = js.native
     def find(node: Null, bubble: Boolean): Blot | Null = js.native
-    def find(node: typingsSlinky.std.Node): Blot | Null = js.native
-    def find(node: typingsSlinky.std.Node, bubble: Boolean): Blot | Null = js.native
+    def find(node: Node): Blot | Null = js.native
+    def find(node: Node, bubble: Boolean): Blot | Null = js.native
     def query(query: String): typingsSlinky.parchment.attributorMod.default | BlotConstructor | Null = js.native
     def query(query: String, scope: Scope): typingsSlinky.parchment.attributorMod.default | BlotConstructor | Null = js.native
     def query(query: Scope): typingsSlinky.parchment.attributorMod.default | BlotConstructor | Null = js.native
     def query(query: Scope, scope: Scope): typingsSlinky.parchment.attributorMod.default | BlotConstructor | Null = js.native
-    def query(query: typingsSlinky.std.Node): typingsSlinky.parchment.attributorMod.default | BlotConstructor | Null = js.native
-    def query(query: typingsSlinky.std.Node, scope: Scope): typingsSlinky.parchment.attributorMod.default | BlotConstructor | Null = js.native
+    def query(query: Node): typingsSlinky.parchment.attributorMod.default | BlotConstructor | Null = js.native
+    def query(query: Node, scope: Scope): typingsSlinky.parchment.attributorMod.default | BlotConstructor | Null = js.native
     def register(Definitions: js.Any*): js.Any = js.native
   }
   

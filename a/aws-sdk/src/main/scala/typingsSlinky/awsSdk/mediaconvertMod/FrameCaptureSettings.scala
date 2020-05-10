@@ -26,18 +26,65 @@ trait FrameCaptureSettings extends js.Object {
 
 object FrameCaptureSettings {
   @scala.inline
-  def apply(
-    FramerateDenominator: Int | Double = null,
-    FramerateNumerator: Int | Double = null,
-    MaxCaptures: Int | Double = null,
-    Quality: Int | Double = null
-  ): FrameCaptureSettings = {
+  def apply(): FrameCaptureSettings = {
     val __obj = js.Dynamic.literal()
-    if (FramerateDenominator != null) __obj.updateDynamic("FramerateDenominator")(FramerateDenominator.asInstanceOf[js.Any])
-    if (FramerateNumerator != null) __obj.updateDynamic("FramerateNumerator")(FramerateNumerator.asInstanceOf[js.Any])
-    if (MaxCaptures != null) __obj.updateDynamic("MaxCaptures")(MaxCaptures.asInstanceOf[js.Any])
-    if (Quality != null) __obj.updateDynamic("Quality")(Quality.asInstanceOf[js.Any])
     __obj.asInstanceOf[FrameCaptureSettings]
   }
+  @scala.inline
+  implicit class FrameCaptureSettingsOps[Self <: FrameCaptureSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFramerateDenominator(value: integerMin1Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateDenominator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramerateDenominator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateDenominator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFramerateNumerator(value: integerMin1Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateNumerator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramerateNumerator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FramerateNumerator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxCaptures(value: integerMin1Max10000000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCaptures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxCaptures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCaptures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuality(value: integerMin1Max100): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Quality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Quality")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,12 +1,12 @@
 package typingsSlinky.baseui.tableMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("baseui/table", "Filter")
 @js.native
-object Filter extends TopLevel[FC[FilterProps]]
+object Filter extends TopLevel[ReactComponentClass[FilterProps]]
 

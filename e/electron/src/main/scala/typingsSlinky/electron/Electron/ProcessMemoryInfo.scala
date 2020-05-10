@@ -4,22 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProcessMemoryInfo extends js.Object {
   // Docs: http://electronjs.org/docs/api/structures/process-memory-info
   /**
     * The amount of memory not shared by other processes, such as JS heap or HTML
     * content in Kilobytes.
     */
-  var `private`: Double
+  var `private`: Double = js.native
   /**
     * and The amount of memory currently pinned to actual physical RAM in Kilobytes.
     */
-  var residentSet: Double
+  var residentSet: Double = js.native
   /**
     * The amount of memory shared between processes, typically memory consumed by the
     * Electron code itself in Kilobytes.
     */
-  var shared: Double
+  var shared: Double = js.native
 }
 
 object ProcessMemoryInfo {
@@ -29,5 +30,31 @@ object ProcessMemoryInfo {
     __obj.updateDynamic("private")(`private`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessMemoryInfo]
   }
+  @scala.inline
+  implicit class ProcessMemoryInfoOps[Self <: ProcessMemoryInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrivate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResidentSet(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("residentSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShared(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shared")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

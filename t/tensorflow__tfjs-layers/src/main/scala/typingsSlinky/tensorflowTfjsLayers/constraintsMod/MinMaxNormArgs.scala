@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MinMaxNormArgs extends js.Object {
   /**
     * Axis along which to calculate norms.
@@ -18,15 +19,15 @@ trait MinMaxNormArgs extends js.Object {
     * to constrain the weights of each filter tensor of size
     * `[rows, cols, inputDepth]`.
     */
-  var axis: js.UndefOr[Double] = js.undefined
+  var axis: js.UndefOr[Double] = js.native
   /**
     * Maximum norm for incoming weights
     */
-  var maxValue: js.UndefOr[Double] = js.undefined
+  var maxValue: js.UndefOr[Double] = js.native
   /**
     * Minimum norm for incoming weights
     */
-  var minValue: js.UndefOr[Double] = js.undefined
+  var minValue: js.UndefOr[Double] = js.native
   /**
     * Rate for enforcing the constraint: weights will be rescaled to yield:
     * `(1 - rate) * norm + rate * norm.clip(minValue, maxValue)`.
@@ -35,23 +36,70 @@ trait MinMaxNormArgs extends js.Object {
     * weights will be rescaled at each step to slowly move
     * towards a value inside the desired interval.
     */
-  var rate: js.UndefOr[Double] = js.undefined
+  var rate: js.UndefOr[Double] = js.native
 }
 
 object MinMaxNormArgs {
   @scala.inline
-  def apply(
-    axis: Int | Double = null,
-    maxValue: Int | Double = null,
-    minValue: Int | Double = null,
-    rate: Int | Double = null
-  ): MinMaxNormArgs = {
+  def apply(): MinMaxNormArgs = {
     val __obj = js.Dynamic.literal()
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (maxValue != null) __obj.updateDynamic("maxValue")(maxValue.asInstanceOf[js.Any])
-    if (minValue != null) __obj.updateDynamic("minValue")(minValue.asInstanceOf[js.Any])
-    if (rate != null) __obj.updateDynamic("rate")(rate.asInstanceOf[js.Any])
     __obj.asInstanceOf[MinMaxNormArgs]
   }
+  @scala.inline
+  implicit class MinMaxNormArgsOps[Self <: MinMaxNormArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAxis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

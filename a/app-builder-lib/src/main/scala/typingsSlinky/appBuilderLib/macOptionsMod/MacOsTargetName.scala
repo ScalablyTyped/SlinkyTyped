@@ -23,30 +23,28 @@ trait MacOsTargetName extends js.Object
 
 object MacOsTargetName {
   @scala.inline
-  def `7z`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`7z` = this.cast("7z")
+  def `7z`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`7z` = "7z".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.`7z`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: default_ = "default".asInstanceOf[default_]
   @scala.inline
-  def default: default_ = this.cast("default")
+  def dir: typingsSlinky.appBuilderLib.appBuilderLibStrings.dir = "dir".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.dir]
   @scala.inline
-  def dir: typingsSlinky.appBuilderLib.appBuilderLibStrings.dir = this.cast("dir")
+  def dmg: typingsSlinky.appBuilderLib.appBuilderLibStrings.dmg = "dmg".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.dmg]
   @scala.inline
-  def dmg: typingsSlinky.appBuilderLib.appBuilderLibStrings.dmg = this.cast("dmg")
+  def mas: typingsSlinky.appBuilderLib.appBuilderLibStrings.mas = "mas".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.mas]
   @scala.inline
-  def mas: typingsSlinky.appBuilderLib.appBuilderLibStrings.mas = this.cast("mas")
+  def `mas-dev`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`mas-dev` = "mas-dev".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.`mas-dev`]
   @scala.inline
-  def `mas-dev`: typingsSlinky.appBuilderLib.appBuilderLibStrings.`mas-dev` = this.cast("mas-dev")
+  def pkg: typingsSlinky.appBuilderLib.appBuilderLibStrings.pkg = "pkg".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.pkg]
   @scala.inline
-  def pkg: typingsSlinky.appBuilderLib.appBuilderLibStrings.pkg = this.cast("pkg")
+  def tarDotbz2: typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotbz2 = "tar.bz2".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotbz2]
   @scala.inline
-  def tarDotbz2: typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotbz2 = this.cast("tar.bz2")
+  def tarDotgz: typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotgz = "tar.gz".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotgz]
   @scala.inline
-  def tarDotgz: typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotgz = this.cast("tar.gz")
+  def tarDotlz: typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotlz = "tar.lz".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotlz]
   @scala.inline
-  def tarDotlz: typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotlz = this.cast("tar.lz")
+  def tarDotxz: typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotxz = "tar.xz".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotxz]
   @scala.inline
-  def tarDotxz: typingsSlinky.appBuilderLib.appBuilderLibStrings.tarDotxz = this.cast("tar.xz")
-  @scala.inline
-  def zip: typingsSlinky.appBuilderLib.appBuilderLibStrings.zip = this.cast("zip")
+  def zip: typingsSlinky.appBuilderLib.appBuilderLibStrings.zip = "zip".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.zip]
 }
 

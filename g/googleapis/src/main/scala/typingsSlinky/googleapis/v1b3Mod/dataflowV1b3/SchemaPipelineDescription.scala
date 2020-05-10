@@ -28,16 +28,53 @@ trait SchemaPipelineDescription extends js.Object {
 
 object SchemaPipelineDescription {
   @scala.inline
-  def apply(
-    displayData: js.Array[SchemaDisplayData] = null,
-    executionPipelineStage: js.Array[SchemaExecutionStageSummary] = null,
-    originalPipelineTransform: js.Array[SchemaTransformSummary] = null
-  ): SchemaPipelineDescription = {
+  def apply(): SchemaPipelineDescription = {
     val __obj = js.Dynamic.literal()
-    if (displayData != null) __obj.updateDynamic("displayData")(displayData.asInstanceOf[js.Any])
-    if (executionPipelineStage != null) __obj.updateDynamic("executionPipelineStage")(executionPipelineStage.asInstanceOf[js.Any])
-    if (originalPipelineTransform != null) __obj.updateDynamic("originalPipelineTransform")(originalPipelineTransform.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPipelineDescription]
   }
+  @scala.inline
+  implicit class SchemaPipelineDescriptionOps[Self <: SchemaPipelineDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayData(value: js.Array[SchemaDisplayData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionPipelineStage(value: js.Array[SchemaExecutionStageSummary]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionPipelineStage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionPipelineStage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionPipelineStage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalPipelineTransform(value: js.Array[SchemaTransformSummary]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPipelineTransform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalPipelineTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalPipelineTransform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

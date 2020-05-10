@@ -1,12 +1,10 @@
 package typingsSlinky.emojiMart.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.emojiMart.dataMod.Data
 import typingsSlinky.emojiMart.nimbleEmojiIndexMod.CustomEmoji
 import typingsSlinky.emojiMart.nimbleEmojiIndexMod.EmojiData
@@ -18,80 +16,87 @@ import typingsSlinky.emojiMart.sharedPropsMod.CustomIcons
 import typingsSlinky.emojiMart.sharedPropsMod.EmojiSet
 import typingsSlinky.emojiMart.sharedPropsMod.EmojiSheetSize
 import typingsSlinky.emojiMart.sharedPropsMod.PartialI18n
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NimblePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object NimblePicker {
   @JSImport("emoji-mart/dist-es/components/picker/nimble-picker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, style, title */
-  def apply(
-    data: Data,
-    backgroundImageFn: (/* set */ EmojiSet, /* sheetSize */ EmojiSheetSize) => String = null,
-    color: String = null,
-    custom: js.Array[CustomEmoji] = null,
-    darkMode: js.UndefOr[Boolean] = js.undefined,
-    defaultSkin: EmojiSkin = null,
-    emoji: String = null,
-    emojiSize: Int | Double = null,
-    emojiTooltip: js.UndefOr[Boolean] = js.undefined,
-    emojisToShowFilter: /* emoji */ EmojiData => Boolean = null,
-    exclude: js.Array[CategoryName] = null,
-    i18n: PartialI18n = null,
-    icons: CustomIcons = null,
-    include: js.Array[CategoryName] = null,
-    native: js.UndefOr[Boolean] = js.undefined,
-    notFound: () => ReactComponentClass[js.Object] = null,
-    notFoundEmoji: String = null,
-    onClick: (/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit = null,
-    onSelect: /* emoji */ EmojiData => Unit = null,
-    onSkinChange: /* skin */ EmojiSkin => Unit = null,
-    perLine: Int | Double = null,
-    recent: js.Array[String] = null,
-    set: EmojiSet = null,
-    sheetSize: EmojiSheetSize = null,
-    showPreview: js.UndefOr[Boolean] = js.undefined,
-    showSkinTones: js.UndefOr[Boolean] = js.undefined,
-    skin: EmojiSkin = null,
-    skinEmoji: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (backgroundImageFn != null) __obj.updateDynamic("backgroundImageFn")(js.Any.fromFunction2(backgroundImageFn))
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (custom != null) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
-    if (!js.isUndefined(darkMode)) __obj.updateDynamic("darkMode")(darkMode.asInstanceOf[js.Any])
-    if (defaultSkin != null) __obj.updateDynamic("defaultSkin")(defaultSkin.asInstanceOf[js.Any])
-    if (emoji != null) __obj.updateDynamic("emoji")(emoji.asInstanceOf[js.Any])
-    if (emojiSize != null) __obj.updateDynamic("emojiSize")(emojiSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(emojiTooltip)) __obj.updateDynamic("emojiTooltip")(emojiTooltip.asInstanceOf[js.Any])
-    if (emojisToShowFilter != null) __obj.updateDynamic("emojisToShowFilter")(js.Any.fromFunction1(emojisToShowFilter))
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (i18n != null) __obj.updateDynamic("i18n")(i18n.asInstanceOf[js.Any])
-    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (!js.isUndefined(native)) __obj.updateDynamic("native")(native.asInstanceOf[js.Any])
-    if (notFound != null) __obj.updateDynamic("notFound")(js.Any.fromFunction0(notFound))
-    if (notFoundEmoji != null) __obj.updateDynamic("notFoundEmoji")(notFoundEmoji.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (onSkinChange != null) __obj.updateDynamic("onSkinChange")(js.Any.fromFunction1(onSkinChange))
-    if (perLine != null) __obj.updateDynamic("perLine")(perLine.asInstanceOf[js.Any])
-    if (recent != null) __obj.updateDynamic("recent")(recent.asInstanceOf[js.Any])
-    if (set != null) __obj.updateDynamic("set")(set.asInstanceOf[js.Any])
-    if (sheetSize != null) __obj.updateDynamic("sheetSize")(sheetSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(showPreview)) __obj.updateDynamic("showPreview")(showPreview.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSkinTones)) __obj.updateDynamic("showSkinTones")(showSkinTones.asInstanceOf[js.Any])
-    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
-    if (skinEmoji != null) __obj.updateDynamic("skinEmoji")(skinEmoji.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundImageFn(value: (/* set */ EmojiSet, /* sheetSize */ EmojiSheetSize) => String): this.type = set("backgroundImageFn", js.Any.fromFunction2(value))
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def custom(value: js.Array[CustomEmoji]): this.type = set("custom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def darkMode(value: Boolean): this.type = set("darkMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSkin(value: EmojiSkin): this.type = set("defaultSkin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emoji(value: String): this.type = set("emoji", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emojiSize(value: Double): this.type = set("emojiSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emojiTooltip(value: Boolean): this.type = set("emojiTooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emojisToShowFilter(value: /* emoji */ EmojiData => Boolean): this.type = set("emojisToShowFilter", js.Any.fromFunction1(value))
+    @scala.inline
+    def exclude(value: js.Array[CategoryName]): this.type = set("exclude", value.asInstanceOf[js.Any])
+    @scala.inline
+    def i18n(value: PartialI18n): this.type = set("i18n", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icons(value: CustomIcons): this.type = set("icons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def include(value: js.Array[CategoryName]): this.type = set("include", value.asInstanceOf[js.Any])
+    @scala.inline
+    def native(value: Boolean): this.type = set("native", value.asInstanceOf[js.Any])
+    @scala.inline
+    def notFound(value: () => ReactComponentClass[js.Object]): this.type = set("notFound", js.Any.fromFunction0(value))
+    @scala.inline
+    def notFoundEmoji(value: String): this.type = set("notFoundEmoji", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* emoji */ EmojiData, /* e */ SyntheticMouseEvent[HTMLElement]) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSelect(value: /* emoji */ EmojiData => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSkinChange(value: /* skin */ EmojiSkin => Unit): this.type = set("onSkinChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def perLine(value: Double): this.type = set("perLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def recent(value: js.Array[String]): this.type = set("recent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def set(value: EmojiSet): this.type = set("set", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sheetSize(value: EmojiSheetSize): this.type = set("sheetSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showPreview(value: Boolean): this.type = set("showPreview", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSkinTones(value: Boolean): this.type = set("showSkinTones", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skin(value: EmojiSkin): this.type = set("skin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skinEmoji(value: String): this.type = set("skinEmoji", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  type Props = NimblePickerProps
+  
+  def withProps(p: NimblePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: Data): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[NimblePickerProps]))
+  }
 }
 

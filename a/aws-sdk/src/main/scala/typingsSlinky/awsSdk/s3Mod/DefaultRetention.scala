@@ -22,12 +22,53 @@ trait DefaultRetention extends js.Object {
 
 object DefaultRetention {
   @scala.inline
-  def apply(Days: Int | Double = null, Mode: ObjectLockRetentionMode = null, Years: Int | Double = null): DefaultRetention = {
+  def apply(): DefaultRetention = {
     val __obj = js.Dynamic.literal()
-    if (Days != null) __obj.updateDynamic("Days")(Days.asInstanceOf[js.Any])
-    if (Mode != null) __obj.updateDynamic("Mode")(Mode.asInstanceOf[js.Any])
-    if (Years != null) __obj.updateDynamic("Years")(Years.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultRetention]
   }
+  @scala.inline
+  implicit class DefaultRetentionOps[Self <: DefaultRetention] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDays(value: Days): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: ObjectLockRetentionMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYears(value: Years): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Years")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYears: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Years")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

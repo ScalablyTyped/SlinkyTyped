@@ -18,18 +18,16 @@ trait TeamsAsyncOperationStatus extends js.Object
 
 object TeamsAsyncOperationStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def failed: failed_ = "failed".asInstanceOf[failed_]
   @scala.inline
-  def failed: failed_ = this.cast("failed")
+  def inProgress: typingsSlinky.microsoftGraph.microsoftGraphStrings.inProgress = "inProgress".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.inProgress]
   @scala.inline
-  def inProgress: typingsSlinky.microsoftGraph.microsoftGraphStrings.inProgress = this.cast("inProgress")
+  def invalid: typingsSlinky.microsoftGraph.microsoftGraphStrings.invalid = "invalid".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.invalid]
   @scala.inline
-  def invalid: typingsSlinky.microsoftGraph.microsoftGraphStrings.invalid = this.cast("invalid")
+  def notStarted: notStarted_ = "notStarted".asInstanceOf[notStarted_]
   @scala.inline
-  def notStarted: notStarted_ = this.cast("notStarted")
+  def succeeded: typingsSlinky.microsoftGraph.microsoftGraphStrings.succeeded = "succeeded".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.succeeded]
   @scala.inline
-  def succeeded: typingsSlinky.microsoftGraph.microsoftGraphStrings.succeeded = this.cast("succeeded")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

@@ -4,93 +4,361 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimelineItem extends js.Object {
-  var attachments: js.UndefOr[js.Array[Attachment]] = js.undefined
-  var bundleId: js.UndefOr[String] = js.undefined
-  var canonicalUrl: js.UndefOr[String] = js.undefined
-  var created: js.UndefOr[String] = js.undefined
-  var creator: js.UndefOr[Contact] = js.undefined
-  var displayTime: js.UndefOr[String] = js.undefined
-  var etag: js.UndefOr[String] = js.undefined
-  var html: js.UndefOr[String] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var inReplyTo: js.UndefOr[String] = js.undefined
-  var isBundleCover: js.UndefOr[Boolean] = js.undefined
-  var isDeleted: js.UndefOr[Boolean] = js.undefined
-  var isPinned: js.UndefOr[Boolean] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var location: js.UndefOr[Location] = js.undefined
-  var menuItems: js.UndefOr[js.Array[MenuItem]] = js.undefined
-  var notification: js.UndefOr[NotificationConfig] = js.undefined
-  var pinScore: js.UndefOr[Double] = js.undefined
-  var recipients: js.UndefOr[js.Array[Contact]] = js.undefined
-  var selfLink: js.UndefOr[String] = js.undefined
-  var sourceItemId: js.UndefOr[String] = js.undefined
-  var speakableText: js.UndefOr[String] = js.undefined
-  var speakableType: js.UndefOr[String] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var updated: js.UndefOr[String] = js.undefined
+  var attachments: js.UndefOr[js.Array[Attachment]] = js.native
+  var bundleId: js.UndefOr[String] = js.native
+  var canonicalUrl: js.UndefOr[String] = js.native
+  var created: js.UndefOr[String] = js.native
+  var creator: js.UndefOr[Contact] = js.native
+  var displayTime: js.UndefOr[String] = js.native
+  var etag: js.UndefOr[String] = js.native
+  var html: js.UndefOr[String] = js.native
+  var id: js.UndefOr[String] = js.native
+  var inReplyTo: js.UndefOr[String] = js.native
+  var isBundleCover: js.UndefOr[Boolean] = js.native
+  var isDeleted: js.UndefOr[Boolean] = js.native
+  var isPinned: js.UndefOr[Boolean] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var location: js.UndefOr[Location] = js.native
+  var menuItems: js.UndefOr[js.Array[MenuItem]] = js.native
+  var notification: js.UndefOr[NotificationConfig] = js.native
+  var pinScore: js.UndefOr[Double] = js.native
+  var recipients: js.UndefOr[js.Array[Contact]] = js.native
+  var selfLink: js.UndefOr[String] = js.native
+  var sourceItemId: js.UndefOr[String] = js.native
+  var speakableText: js.UndefOr[String] = js.native
+  var speakableType: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
+  var updated: js.UndefOr[String] = js.native
 }
 
 object TimelineItem {
   @scala.inline
-  def apply(
-    attachments: js.Array[Attachment] = null,
-    bundleId: String = null,
-    canonicalUrl: String = null,
-    created: String = null,
-    creator: Contact = null,
-    displayTime: String = null,
-    etag: String = null,
-    html: String = null,
-    id: String = null,
-    inReplyTo: String = null,
-    isBundleCover: js.UndefOr[Boolean] = js.undefined,
-    isDeleted: js.UndefOr[Boolean] = js.undefined,
-    isPinned: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    location: Location = null,
-    menuItems: js.Array[MenuItem] = null,
-    notification: NotificationConfig = null,
-    pinScore: Int | Double = null,
-    recipients: js.Array[Contact] = null,
-    selfLink: String = null,
-    sourceItemId: String = null,
-    speakableText: String = null,
-    speakableType: String = null,
-    text: String = null,
-    title: String = null,
-    updated: String = null
-  ): TimelineItem = {
+  def apply(): TimelineItem = {
     val __obj = js.Dynamic.literal()
-    if (attachments != null) __obj.updateDynamic("attachments")(attachments.asInstanceOf[js.Any])
-    if (bundleId != null) __obj.updateDynamic("bundleId")(bundleId.asInstanceOf[js.Any])
-    if (canonicalUrl != null) __obj.updateDynamic("canonicalUrl")(canonicalUrl.asInstanceOf[js.Any])
-    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
-    if (creator != null) __obj.updateDynamic("creator")(creator.asInstanceOf[js.Any])
-    if (displayTime != null) __obj.updateDynamic("displayTime")(displayTime.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inReplyTo != null) __obj.updateDynamic("inReplyTo")(inReplyTo.asInstanceOf[js.Any])
-    if (!js.isUndefined(isBundleCover)) __obj.updateDynamic("isBundleCover")(isBundleCover.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDeleted)) __obj.updateDynamic("isDeleted")(isDeleted.asInstanceOf[js.Any])
-    if (!js.isUndefined(isPinned)) __obj.updateDynamic("isPinned")(isPinned.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (menuItems != null) __obj.updateDynamic("menuItems")(menuItems.asInstanceOf[js.Any])
-    if (notification != null) __obj.updateDynamic("notification")(notification.asInstanceOf[js.Any])
-    if (pinScore != null) __obj.updateDynamic("pinScore")(pinScore.asInstanceOf[js.Any])
-    if (recipients != null) __obj.updateDynamic("recipients")(recipients.asInstanceOf[js.Any])
-    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
-    if (sourceItemId != null) __obj.updateDynamic("sourceItemId")(sourceItemId.asInstanceOf[js.Any])
-    if (speakableText != null) __obj.updateDynamic("speakableText")(speakableText.asInstanceOf[js.Any])
-    if (speakableType != null) __obj.updateDynamic("speakableType")(speakableType.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimelineItem]
   }
+  @scala.inline
+  implicit class TimelineItemOps[Self <: TimelineItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachments(value: js.Array[Attachment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBundleId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBundleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanonicalUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canonicalUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanonicalUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canonicalUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreated(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreator(value: Contact): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtml(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtml: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInReplyTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inReplyTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInReplyTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inReplyTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsBundleCover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBundleCover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsBundleCover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBundleCover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDeleted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDeleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsPinned(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPinned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsPinned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPinned")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuItems(value: js.Array[MenuItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotification(value: NotificationConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPinScore(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinScore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPinScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinScore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipients(value: js.Array[Contact]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipients: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipients")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceItemId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceItemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceItemId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceItemId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeakableText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speakableText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeakableText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speakableText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeakableType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speakableType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeakableType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("speakableType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdated(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

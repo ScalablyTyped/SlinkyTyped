@@ -75,7 +75,7 @@ trait DocumentAndElementEventHandlers extends js.Object {
   def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_copy(
@@ -92,7 +92,7 @@ trait DocumentAndElementEventHandlers extends js.Object {
   def removeEventListener_copy(
     `type`: copy,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cut(
@@ -109,7 +109,7 @@ trait DocumentAndElementEventHandlers extends js.Object {
   def removeEventListener_cut(
     `type`: cut,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_paste(
@@ -126,7 +126,7 @@ trait DocumentAndElementEventHandlers extends js.Object {
   def removeEventListener_paste(
     `type`: paste,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ClipboardEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

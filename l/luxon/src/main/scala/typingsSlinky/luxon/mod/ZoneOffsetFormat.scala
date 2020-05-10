@@ -13,12 +13,10 @@ trait ZoneOffsetFormat extends js.Object
 
 object ZoneOffsetFormat {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def narrow: typingsSlinky.luxon.luxonStrings.narrow = "narrow".asInstanceOf[typingsSlinky.luxon.luxonStrings.narrow]
   @scala.inline
-  def narrow: typingsSlinky.luxon.luxonStrings.narrow = this.cast("narrow")
+  def short: typingsSlinky.luxon.luxonStrings.short = "short".asInstanceOf[typingsSlinky.luxon.luxonStrings.short]
   @scala.inline
-  def short: typingsSlinky.luxon.luxonStrings.short = this.cast("short")
-  @scala.inline
-  def techie: typingsSlinky.luxon.luxonStrings.techie = this.cast("techie")
+  def techie: typingsSlinky.luxon.luxonStrings.techie = "techie".asInstanceOf[typingsSlinky.luxon.luxonStrings.techie]
 }
 

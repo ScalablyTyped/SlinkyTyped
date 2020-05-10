@@ -15,10 +15,8 @@ trait ColumnRegion extends js.Object
 
 object ColumnRegion {
   @scala.inline
-  def body: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.body = this.cast("body")
+  def body: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.body = "body".asInstanceOf[typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.body]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def `row-header`: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`row-header` = this.cast("row-header")
+  def `row-header`: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`row-header` = "row-header".asInstanceOf[typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`row-header`]
 }
 

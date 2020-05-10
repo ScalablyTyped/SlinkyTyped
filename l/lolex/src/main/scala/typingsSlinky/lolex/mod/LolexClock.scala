@@ -1,6 +1,5 @@
 package typingsSlinky.lolex.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -101,7 +100,7 @@ trait LolexClock[TTimerId /* <: TimerId */] extends GlobalTimers[TTimerId] {
     */
   def setSystemTime(): Unit = js.native
   def setSystemTime(now: Double): Unit = js.native
-  def setSystemTime(now: Date): Unit = js.native
+  def setSystemTime(now: js.Date): Unit = js.native
   def tick(time: String): Unit = js.native
   /**
     * Advance the clock, firing callbacks if necessary.

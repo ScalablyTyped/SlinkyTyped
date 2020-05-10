@@ -28,7 +28,7 @@ object CharacterCounter extends js.Object {
   /**
     * Init CharacterCounter
     */
-  def init(els: typingsSlinky.std.Element): CharacterCounter = js.native
-  def init(els: typingsSlinky.std.Element, options: Partial[js.UndefOr[scala.Nothing]]): CharacterCounter = js.native
+  def init(els: Element): CharacterCounter = js.native
+  def init(els: Element, options: Partial[js.UndefOr[scala.Nothing]]): CharacterCounter = js.native
 }
 

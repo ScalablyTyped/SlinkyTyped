@@ -14,19 +14,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DataLayerProperties extends js.Object {
   /**
     * The geometry to apply to the spatial filter. The spatial relationship as specified by [spatialRelationship](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-DataLayer.html#spatialRelationship) is applied to this geometry while performing the query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-DataLayer.html#geometry)
     */
-  var geometry: js.UndefOr[GeometryProperties] = js.undefined
+  var geometry: js.UndefOr[GeometryProperties] = js.native
   /**
     * The name of the data layer in the map service that is being referenced.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-DataLayer.html#name)
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * The spatial relationship to be applied on the input geometry while performing the query.
     *
@@ -47,32 +48,91 @@ trait DataLayerProperties extends js.Object {
     */
   var spatialRelationship: js.UndefOr[
     intersects | contains | crosses | `envelope-intersects` | `index-intersects` | overlaps | touches | within | relation
-  ] = js.undefined
-  var `type`: js.UndefOr[layer] = js.undefined
+  ] = js.native
+  var `type`: js.UndefOr[layer] = js.native
   /**
     * A where clause for the query. Any legal SQL where clause operating on the fields in the layer is allowed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-DataLayer.html#where)
     */
-  var where: js.UndefOr[String] = js.undefined
+  var where: js.UndefOr[String] = js.native
 }
 
 object DataLayerProperties {
   @scala.inline
-  def apply(
-    geometry: GeometryProperties = null,
-    name: String = null,
-    spatialRelationship: intersects | contains | crosses | `envelope-intersects` | `index-intersects` | overlaps | touches | within | relation = null,
-    `type`: layer = null,
-    where: String = null
-  ): DataLayerProperties = {
+  def apply(): DataLayerProperties = {
     val __obj = js.Dynamic.literal()
-    if (geometry != null) __obj.updateDynamic("geometry")(geometry.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (spatialRelationship != null) __obj.updateDynamic("spatialRelationship")(spatialRelationship.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataLayerProperties]
   }
+  @scala.inline
+  implicit class DataLayerPropertiesOps[Self <: DataLayerProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGeometry(value: GeometryProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeometry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpatialRelationship(
+      value: intersects | contains | crosses | `envelope-intersects` | `index-intersects` | overlaps | touches | within | relation
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialRelationship")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpatialRelationship: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialRelationship")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: layer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhere(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhere: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("where")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

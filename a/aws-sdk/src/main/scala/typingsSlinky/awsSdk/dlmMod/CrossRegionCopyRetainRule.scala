@@ -18,11 +18,41 @@ trait CrossRegionCopyRetainRule extends js.Object {
 
 object CrossRegionCopyRetainRule {
   @scala.inline
-  def apply(Interval: Int | Double = null, IntervalUnit: RetentionIntervalUnitValues = null): CrossRegionCopyRetainRule = {
+  def apply(): CrossRegionCopyRetainRule = {
     val __obj = js.Dynamic.literal()
-    if (Interval != null) __obj.updateDynamic("Interval")(Interval.asInstanceOf[js.Any])
-    if (IntervalUnit != null) __obj.updateDynamic("IntervalUnit")(IntervalUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[CrossRegionCopyRetainRule]
   }
+  @scala.inline
+  implicit class CrossRegionCopyRetainRuleOps[Self <: CrossRegionCopyRetainRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInterval(value: Interval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntervalUnit(value: RetentionIntervalUnitValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntervalUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntervalUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntervalUnit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -34,12 +34,54 @@ object CreateListenerRequest {
     AcceleratorArn: GenericString,
     IdempotencyToken: IdempotencyToken,
     PortRanges: PortRanges,
-    Protocol: Protocol,
-    ClientAffinity: ClientAffinity = null
+    Protocol: Protocol
   ): CreateListenerRequest = {
     val __obj = js.Dynamic.literal(AcceleratorArn = AcceleratorArn.asInstanceOf[js.Any], IdempotencyToken = IdempotencyToken.asInstanceOf[js.Any], PortRanges = PortRanges.asInstanceOf[js.Any], Protocol = Protocol.asInstanceOf[js.Any])
-    if (ClientAffinity != null) __obj.updateDynamic("ClientAffinity")(ClientAffinity.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateListenerRequest]
   }
+  @scala.inline
+  implicit class CreateListenerRequestOps[Self <: CreateListenerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceleratorArn(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceleratorArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdempotencyToken(value: IdempotencyToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdempotencyToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPortRanges(value: PortRanges): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: Protocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientAffinity(value: ClientAffinity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientAffinity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientAffinity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientAffinity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

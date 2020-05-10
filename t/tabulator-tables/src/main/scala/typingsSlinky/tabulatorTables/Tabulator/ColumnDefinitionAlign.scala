@@ -13,12 +13,10 @@ trait ColumnDefinitionAlign extends js.Object
 
 object ColumnDefinitionAlign {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.tabulatorTables.tabulatorTablesStrings.center = "center".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.center]
   @scala.inline
-  def center: typingsSlinky.tabulatorTables.tabulatorTablesStrings.center = this.cast("center")
+  def left: typingsSlinky.tabulatorTables.tabulatorTablesStrings.left = "left".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.left]
   @scala.inline
-  def left: typingsSlinky.tabulatorTables.tabulatorTablesStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.tabulatorTables.tabulatorTablesStrings.right = this.cast("right")
+  def right: typingsSlinky.tabulatorTables.tabulatorTablesStrings.right = "right".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.right]
 }
 

@@ -14,10 +14,29 @@ trait ListServiceSpecificCredentialsResponse extends js.Object {
 
 object ListServiceSpecificCredentialsResponse {
   @scala.inline
-  def apply(ServiceSpecificCredentials: ServiceSpecificCredentialsListType = null): ListServiceSpecificCredentialsResponse = {
+  def apply(): ListServiceSpecificCredentialsResponse = {
     val __obj = js.Dynamic.literal()
-    if (ServiceSpecificCredentials != null) __obj.updateDynamic("ServiceSpecificCredentials")(ServiceSpecificCredentials.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListServiceSpecificCredentialsResponse]
   }
+  @scala.inline
+  implicit class ListServiceSpecificCredentialsResponseOps[Self <: ListServiceSpecificCredentialsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceSpecificCredentials(value: ServiceSpecificCredentialsListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceSpecificCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceSpecificCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceSpecificCredentials")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

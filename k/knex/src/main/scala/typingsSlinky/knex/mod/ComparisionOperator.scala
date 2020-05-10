@@ -16,18 +16,16 @@ trait ComparisionOperator extends js.Object
 
 object ComparisionOperator {
   @scala.inline
-  def Equalssign: typingsSlinky.knex.knexStrings.Equalssign = this.cast("=")
+  def Equalssign: typingsSlinky.knex.knexStrings.Equalssign = "=".asInstanceOf[typingsSlinky.knex.knexStrings.Equalssign]
   @scala.inline
-  def Greaterthansign: typingsSlinky.knex.knexStrings.Greaterthansign = this.cast(">")
+  def Greaterthansign: typingsSlinky.knex.knexStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.knex.knexStrings.Greaterthansign]
   @scala.inline
-  def GreaterthansignEqualssign: typingsSlinky.knex.knexStrings.GreaterthansignEqualssign = this.cast(">=")
+  def GreaterthansignEqualssign: typingsSlinky.knex.knexStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.knex.knexStrings.GreaterthansignEqualssign]
   @scala.inline
-  def Lessthansign: typingsSlinky.knex.knexStrings.Lessthansign = this.cast("<")
+  def Lessthansign: typingsSlinky.knex.knexStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.knex.knexStrings.Lessthansign]
   @scala.inline
-  def LessthansignEqualssign: typingsSlinky.knex.knexStrings.LessthansignEqualssign = this.cast("<=")
+  def LessthansignEqualssign: typingsSlinky.knex.knexStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.knex.knexStrings.LessthansignEqualssign]
   @scala.inline
-  def LessthansignGreaterthansign: typingsSlinky.knex.knexStrings.LessthansignGreaterthansign = this.cast("<>")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def LessthansignGreaterthansign: typingsSlinky.knex.knexStrings.LessthansignGreaterthansign = "<>".asInstanceOf[typingsSlinky.knex.knexStrings.LessthansignGreaterthansign]
 }
 

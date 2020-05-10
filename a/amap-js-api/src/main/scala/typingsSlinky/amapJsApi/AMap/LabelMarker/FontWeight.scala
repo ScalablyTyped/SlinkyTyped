@@ -13,12 +13,10 @@ trait FontWeight extends js.Object
 
 object FontWeight {
   @scala.inline
-  def bold: typingsSlinky.amapJsApi.amapJsApiStrings.bold = this.cast("bold")
+  def bold: typingsSlinky.amapJsApi.amapJsApiStrings.bold = "bold".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.bold]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def normal: typingsSlinky.amapJsApi.amapJsApiStrings.normal = "normal".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.amapJsApi.amapJsApiStrings.normal = this.cast("normal")
-  @scala.inline
-  def thin: typingsSlinky.amapJsApi.amapJsApiStrings.thin = this.cast("thin")
+  def thin: typingsSlinky.amapJsApi.amapJsApiStrings.thin = "thin".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.thin]
 }
 

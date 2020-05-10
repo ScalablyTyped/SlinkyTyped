@@ -22,16 +22,53 @@ trait RollbackInfo extends js.Object {
 
 object RollbackInfo {
   @scala.inline
-  def apply(
-    rollbackDeploymentId: DeploymentId = null,
-    rollbackMessage: Description = null,
-    rollbackTriggeringDeploymentId: DeploymentId = null
-  ): RollbackInfo = {
+  def apply(): RollbackInfo = {
     val __obj = js.Dynamic.literal()
-    if (rollbackDeploymentId != null) __obj.updateDynamic("rollbackDeploymentId")(rollbackDeploymentId.asInstanceOf[js.Any])
-    if (rollbackMessage != null) __obj.updateDynamic("rollbackMessage")(rollbackMessage.asInstanceOf[js.Any])
-    if (rollbackTriggeringDeploymentId != null) __obj.updateDynamic("rollbackTriggeringDeploymentId")(rollbackTriggeringDeploymentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[RollbackInfo]
   }
+  @scala.inline
+  implicit class RollbackInfoOps[Self <: RollbackInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRollbackDeploymentId(value: DeploymentId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rollbackDeploymentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRollbackDeploymentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rollbackDeploymentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRollbackMessage(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rollbackMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRollbackMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rollbackMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRollbackTriggeringDeploymentId(value: DeploymentId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rollbackTriggeringDeploymentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRollbackTriggeringDeploymentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rollbackTriggeringDeploymentId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

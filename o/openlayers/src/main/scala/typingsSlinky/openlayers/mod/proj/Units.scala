@@ -20,18 +20,16 @@ trait Units extends js.Object
 
 object Units {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def degrees: typingsSlinky.openlayers.openlayersStrings.degrees = "degrees".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.degrees]
   @scala.inline
-  def degrees: typingsSlinky.openlayers.openlayersStrings.degrees = this.cast("degrees")
+  def ft: typingsSlinky.openlayers.openlayersStrings.ft = "ft".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.ft]
   @scala.inline
-  def ft: typingsSlinky.openlayers.openlayersStrings.ft = this.cast("ft")
+  def m: typingsSlinky.openlayers.openlayersStrings.m = "m".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.m]
   @scala.inline
-  def m: typingsSlinky.openlayers.openlayersStrings.m = this.cast("m")
+  def pixels: typingsSlinky.openlayers.openlayersStrings.pixels = "pixels".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.pixels]
   @scala.inline
-  def pixels: typingsSlinky.openlayers.openlayersStrings.pixels = this.cast("pixels")
+  def `tile-pixels`: typingsSlinky.openlayers.openlayersStrings.`tile-pixels` = "tile-pixels".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.`tile-pixels`]
   @scala.inline
-  def `tile-pixels`: typingsSlinky.openlayers.openlayersStrings.`tile-pixels` = this.cast("tile-pixels")
-  @scala.inline
-  def `us-ft`: typingsSlinky.openlayers.openlayersStrings.`us-ft` = this.cast("us-ft")
+  def `us-ft`: typingsSlinky.openlayers.openlayersStrings.`us-ft` = "us-ft".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.`us-ft`]
 }
 

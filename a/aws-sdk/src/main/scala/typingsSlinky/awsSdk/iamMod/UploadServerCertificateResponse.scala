@@ -14,10 +14,29 @@ trait UploadServerCertificateResponse extends js.Object {
 
 object UploadServerCertificateResponse {
   @scala.inline
-  def apply(ServerCertificateMetadata: ServerCertificateMetadata = null): UploadServerCertificateResponse = {
+  def apply(): UploadServerCertificateResponse = {
     val __obj = js.Dynamic.literal()
-    if (ServerCertificateMetadata != null) __obj.updateDynamic("ServerCertificateMetadata")(ServerCertificateMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadServerCertificateResponse]
   }
+  @scala.inline
+  implicit class UploadServerCertificateResponseOps[Self <: UploadServerCertificateResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServerCertificateMetadata(value: ServerCertificateMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertificateMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerCertificateMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertificateMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

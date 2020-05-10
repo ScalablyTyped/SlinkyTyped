@@ -68,25 +68,25 @@ class Model () extends js.Object {
   @JSName("$knex")
   def $knex(): Knex[_, js.Array[_]] = js.native
   @JSName("$loadRelated")
-  def $loadRelated[QM /* <: Model */](expression: String): QueryBuilder[
+  def $loadRelated[QM /* <: Model */](expression: /* keyof this */ String): QueryBuilder[
     QM, 
     QM, 
     /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   @JSName("$loadRelated")
-  def $loadRelated[QM /* <: Model */](expression: String, filters: Filters[QM]): QueryBuilder[
+  def $loadRelated[QM /* <: Model */](expression: /* keyof this */ String, filters: Filters[QM]): QueryBuilder[
     QM, 
     QM, 
     /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   @JSName("$loadRelated")
-  def $loadRelated[QM /* <: Model */](expression: String, filters: Filters[QM], trxOrKnex: Knex[_, js.Array[_]]): QueryBuilder[
+  def $loadRelated[QM /* <: Model */](expression: /* keyof this */ String, filters: Filters[QM], trxOrKnex: Knex[_, js.Array[_]]): QueryBuilder[
     QM, 
     QM, 
     /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   @JSName("$loadRelated")
-  def $loadRelated[QM /* <: Model */](expression: String, filters: Filters[QM], trxOrKnex: Transaction_): QueryBuilder[
+  def $loadRelated[QM /* <: Model */](expression: /* keyof this */ String, filters: Filters[QM], trxOrKnex: Transaction_): QueryBuilder[
     QM, 
     QM, 
     /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
@@ -160,30 +160,30 @@ class Model () extends js.Object {
     * signatue, but the following signature.
     */
   @JSName("$relatedQuery")
-  def $relatedQuery[K /* <: String */, V /* <: (/* import warning: importer.ImportType#apply Failed type conversion: this[K] */ js.Any) with Model */](relationName: K): QueryBuilder[V, V, V] = js.native
+  def $relatedQuery[K /* <: /* keyof this */ String */, V /* <: (/* import warning: importer.ImportType#apply Failed type conversion: this[K] */ js.Any) with Model */](relationName: K): QueryBuilder[V, V, V] = js.native
   @JSName("$relatedQuery")
-  def $relatedQuery[K /* <: String */, V /* <: (/* import warning: importer.ImportType#apply Failed type conversion: this[K] */ js.Any) with Model */](relationName: K, trxOrKnex: Knex[_, js.Array[_]]): QueryBuilder[V, V, V] = js.native
+  def $relatedQuery[K /* <: /* keyof this */ String */, V /* <: (/* import warning: importer.ImportType#apply Failed type conversion: this[K] */ js.Any) with Model */](relationName: K, trxOrKnex: Knex[_, js.Array[_]]): QueryBuilder[V, V, V] = js.native
   @JSName("$relatedQuery")
-  def $relatedQuery[K /* <: String */, V /* <: (/* import warning: importer.ImportType#apply Failed type conversion: this[K] */ js.Any) with Model */](relationName: K, trxOrKnex: Transaction_): QueryBuilder[V, V, V] = js.native
+  def $relatedQuery[K /* <: /* keyof this */ String */, V /* <: (/* import warning: importer.ImportType#apply Failed type conversion: this[K] */ js.Any) with Model */](relationName: K, trxOrKnex: Transaction_): QueryBuilder[V, V, V] = js.native
   /**
     * Builds a query that only affects the models related to this instance
     * through a relation. Note that this signature requires a
     * type cast (like `bob.$relatedQuery<Animal>('pets')`).
     */
   @JSName("$relatedQuery")
-  def $relatedQuery[QM /* <: Model */, RM](relationName: String): QueryBuilder[
+  def $relatedQuery[QM /* <: Model */, RM](relationName: /* keyof this */ String): QueryBuilder[
     QM, 
     RM, 
     /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   @JSName("$relatedQuery")
-  def $relatedQuery[QM /* <: Model */, RM](relationName: String, trxOrKnex: Knex[_, js.Array[_]]): QueryBuilder[
+  def $relatedQuery[QM /* <: Model */, RM](relationName: /* keyof this */ String, trxOrKnex: Knex[_, js.Array[_]]): QueryBuilder[
     QM, 
     RM, 
     /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
   ] = js.native
   @JSName("$relatedQuery")
-  def $relatedQuery[QM /* <: Model */, RM](relationName: String, trxOrKnex: Transaction_): QueryBuilder[
+  def $relatedQuery[QM /* <: Model */, RM](relationName: /* keyof this */ String, trxOrKnex: Transaction_): QueryBuilder[
     QM, 
     RM, 
     /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _

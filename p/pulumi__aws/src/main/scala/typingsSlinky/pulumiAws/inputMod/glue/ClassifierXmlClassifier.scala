@@ -21,8 +21,27 @@ object ClassifierXmlClassifier {
   @scala.inline
   def apply(classification: Input[String], rowTag: Input[String]): ClassifierXmlClassifier = {
     val __obj = js.Dynamic.literal(classification = classification.asInstanceOf[js.Any], rowTag = rowTag.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ClassifierXmlClassifier]
   }
+  @scala.inline
+  implicit class ClassifierXmlClassifierOps[Self <: ClassifierXmlClassifier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassification(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRowTag(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -14,10 +14,29 @@ trait CreateSavingsPlanResponse extends js.Object {
 
 object CreateSavingsPlanResponse {
   @scala.inline
-  def apply(savingsPlanId: SavingsPlanId = null): CreateSavingsPlanResponse = {
+  def apply(): CreateSavingsPlanResponse = {
     val __obj = js.Dynamic.literal()
-    if (savingsPlanId != null) __obj.updateDynamic("savingsPlanId")(savingsPlanId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSavingsPlanResponse]
   }
+  @scala.inline
+  implicit class CreateSavingsPlanResponseOps[Self <: CreateSavingsPlanResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSavingsPlanId(value: SavingsPlanId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("savingsPlanId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSavingsPlanId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("savingsPlanId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

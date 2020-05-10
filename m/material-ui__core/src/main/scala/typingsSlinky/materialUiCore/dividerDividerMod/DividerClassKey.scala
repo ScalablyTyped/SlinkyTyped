@@ -15,16 +15,14 @@ trait DividerClassKey extends js.Object
 
 object DividerClassKey {
   @scala.inline
-  def absolute: typingsSlinky.materialUiCore.materialUiCoreStrings.absolute = this.cast("absolute")
+  def absolute: typingsSlinky.materialUiCore.materialUiCoreStrings.absolute = "absolute".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.absolute]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inset: typingsSlinky.materialUiCore.materialUiCoreStrings.inset = "inset".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inset]
   @scala.inline
-  def inset: typingsSlinky.materialUiCore.materialUiCoreStrings.inset = this.cast("inset")
+  def light: typingsSlinky.materialUiCore.materialUiCoreStrings.light = "light".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.light]
   @scala.inline
-  def light: typingsSlinky.materialUiCore.materialUiCoreStrings.light = this.cast("light")
+  def middle: typingsSlinky.materialUiCore.materialUiCoreStrings.middle = "middle".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.materialUiCore.materialUiCoreStrings.middle = this.cast("middle")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

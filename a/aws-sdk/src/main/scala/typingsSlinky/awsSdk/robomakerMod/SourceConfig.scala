@@ -22,12 +22,53 @@ trait SourceConfig extends js.Object {
 
 object SourceConfig {
   @scala.inline
-  def apply(architecture: Architecture = null, s3Bucket: S3Bucket = null, s3Key: S3Key = null): SourceConfig = {
+  def apply(): SourceConfig = {
     val __obj = js.Dynamic.literal()
-    if (architecture != null) __obj.updateDynamic("architecture")(architecture.asInstanceOf[js.Any])
-    if (s3Bucket != null) __obj.updateDynamic("s3Bucket")(s3Bucket.asInstanceOf[js.Any])
-    if (s3Key != null) __obj.updateDynamic("s3Key")(s3Key.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceConfig]
   }
+  @scala.inline
+  implicit class SourceConfigOps[Self <: SourceConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArchitecture(value: Architecture): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("architecture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchitecture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("architecture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Bucket(value: S3Bucket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Bucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Bucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Key(value: S3Key): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Key: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Key")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

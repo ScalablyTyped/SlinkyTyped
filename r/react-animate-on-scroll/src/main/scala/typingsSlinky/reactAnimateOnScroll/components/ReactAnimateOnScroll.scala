@@ -1,50 +1,45 @@
 package typingsSlinky.reactAnimateOnScroll.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactAnimateOnScroll.mod.ScrollAnimationProps
 import typingsSlinky.reactAnimateOnScroll.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactAnimateOnScroll
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactAnimateOnScroll {
   @JSImport("react-animate-on-scroll", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    animateIn: String = null,
-    animateOnce: js.UndefOr[Boolean] = js.undefined,
-    animateOut: String = null,
-    delay: Int | Double = null,
-    duration: Int | Double = null,
-    initiallyVisible: js.UndefOr[Boolean] = js.undefined,
-    offset: Int | Double = null,
-    scrollableParentSelector: String = null,
-    style: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (animateIn != null) __obj.updateDynamic("animateIn")(animateIn.asInstanceOf[js.Any])
-    if (!js.isUndefined(animateOnce)) __obj.updateDynamic("animateOnce")(animateOnce.asInstanceOf[js.Any])
-    if (animateOut != null) __obj.updateDynamic("animateOut")(animateOut.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (!js.isUndefined(initiallyVisible)) __obj.updateDynamic("initiallyVisible")(initiallyVisible.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (scrollableParentSelector != null) __obj.updateDynamic("scrollableParentSelector")(scrollableParentSelector.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def animateIn(value: String): this.type = set("animateIn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animateOnce(value: Boolean): this.type = set("animateOnce", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animateOut(value: String): this.type = set("animateOut", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initiallyVisible(value: Boolean): this.type = set("initiallyVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollableParentSelector(value: String): this.type = set("scrollableParentSelector", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactAnimateOnScroll.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ScrollAnimationProps
+  
+  def withProps(p: ScrollAnimationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactAnimateOnScroll.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

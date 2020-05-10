@@ -23,16 +23,53 @@ trait SchemaSkippedDetail extends js.Object {
 
 object SchemaSkippedDetail {
   @scala.inline
-  def apply(
-    incompatibleAppVersion: js.UndefOr[Boolean] = js.undefined,
-    incompatibleArchitecture: js.UndefOr[Boolean] = js.undefined,
-    incompatibleDevice: js.UndefOr[Boolean] = js.undefined
-  ): SchemaSkippedDetail = {
+  def apply(): SchemaSkippedDetail = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(incompatibleAppVersion)) __obj.updateDynamic("incompatibleAppVersion")(incompatibleAppVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(incompatibleArchitecture)) __obj.updateDynamic("incompatibleArchitecture")(incompatibleArchitecture.asInstanceOf[js.Any])
-    if (!js.isUndefined(incompatibleDevice)) __obj.updateDynamic("incompatibleDevice")(incompatibleDevice.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSkippedDetail]
   }
+  @scala.inline
+  implicit class SchemaSkippedDetailOps[Self <: SchemaSkippedDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIncompatibleAppVersion(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incompatibleAppVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncompatibleAppVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incompatibleAppVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncompatibleArchitecture(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incompatibleArchitecture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncompatibleArchitecture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incompatibleArchitecture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncompatibleDevice(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incompatibleDevice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncompatibleDevice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incompatibleDevice")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

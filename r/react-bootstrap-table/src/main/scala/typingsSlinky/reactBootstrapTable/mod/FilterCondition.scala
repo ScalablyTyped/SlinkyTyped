@@ -12,10 +12,8 @@ trait FilterCondition extends js.Object
 
 object FilterCondition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def eq: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.eq = "eq".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.eq]
   @scala.inline
-  def eq: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.eq = this.cast("eq")
-  @scala.inline
-  def like: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.like = this.cast("like")
+  def like: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.like = "like".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.like]
 }
 

@@ -5,24 +5,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CommandLineOptions
   extends /* propName */ StringDictionary[js.Any] {
   /**
     * Command-line arguments not parsed by `commandLineArgs`.
     */
-  var _unknown: js.UndefOr[js.Array[String]] = js.undefined
+  var _unknown: js.UndefOr[js.Array[String]] = js.native
 }
 
 object CommandLineOptions {
   @scala.inline
-  def apply(
-    StringDictionary: /* propName */ StringDictionary[js.Any] = null,
-    _unknown: js.Array[String] = null
-  ): CommandLineOptions = {
+  def apply(): CommandLineOptions = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (_unknown != null) __obj.updateDynamic("_unknown")(_unknown.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommandLineOptions]
   }
+  @scala.inline
+  implicit class CommandLineOptionsOps[Self <: CommandLineOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_unknown(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_unknown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_unknown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_unknown")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

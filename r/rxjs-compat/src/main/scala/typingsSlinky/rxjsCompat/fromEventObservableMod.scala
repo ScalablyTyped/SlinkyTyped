@@ -1,6 +1,6 @@
 package typingsSlinky.rxjsCompat
 
-import typingsSlinky.std.EventListenerOptions
+import org.scalajs.dom.raw.EventListenerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

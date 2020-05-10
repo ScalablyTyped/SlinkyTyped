@@ -1,6 +1,6 @@
 package typingsSlinky.jqueryGridster
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,11 +66,7 @@ trait Gridster extends js.Object {
   	**/
   def remove_widget(el: JQuery, callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
   def remove_widget(el: JQuery, silent: Boolean): Gridster = js.native
-  def remove_widget(
-    el: JQuery,
-    silent: Boolean,
-    callback: js.Function1[/* el */ org.scalajs.dom.raw.HTMLElement, Unit]
-  ): Gridster = js.native
+  def remove_widget(el: JQuery, silent: Boolean, callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
   /**
   	* Remove a widget from the grid.
   	* @param el The jQuery wrapped HTMLElement you want to remove.
@@ -84,11 +80,7 @@ trait Gridster extends js.Object {
   	**/
   def remove_widget(el: HTMLElement, callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
   def remove_widget(el: HTMLElement, silent: Boolean): Gridster = js.native
-  def remove_widget(
-    el: HTMLElement,
-    silent: Boolean,
-    callback: js.Function1[/* el */ org.scalajs.dom.raw.HTMLElement, Unit]
-  ): Gridster = js.native
+  def remove_widget(el: HTMLElement, silent: Boolean, callback: js.Function1[/* el */ HTMLElement, Unit]): Gridster = js.native
   /**
   	* Change the size of a widget.
   	* @param $widget The jQuery wrapped HTMLElement that represents the widget is going to be resized.
@@ -118,7 +110,7 @@ trait Gridster extends js.Object {
   	* @return Returns an array of objects with the data specified in the serialized_params option.
   	**/
   def serialize[T](): js.Array[T] = js.native
-  def serialize[T]($widgets: js.Array[org.scalajs.dom.raw.HTMLElement]): js.Array[T] = js.native
+  def serialize[T]($widgets: js.Array[HTMLElement]): js.Array[T] = js.native
   /**
   	* Returns a serialized array of the widgets that have changed their position.
   	* @return Returns an array of objects with the data specified in the serialized_params option.

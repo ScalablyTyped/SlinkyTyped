@@ -21,11 +21,41 @@ trait SchemaShellTask extends js.Object {
 
 object SchemaShellTask {
   @scala.inline
-  def apply(command: String = null, exitCode: Int | Double = null): SchemaShellTask = {
+  def apply(): SchemaShellTask = {
     val __obj = js.Dynamic.literal()
-    if (command != null) __obj.updateDynamic("command")(command.asInstanceOf[js.Any])
-    if (exitCode != null) __obj.updateDynamic("exitCode")(exitCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaShellTask]
   }
+  @scala.inline
+  implicit class SchemaShellTaskOps[Self <: SchemaShellTask] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommand(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExitCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

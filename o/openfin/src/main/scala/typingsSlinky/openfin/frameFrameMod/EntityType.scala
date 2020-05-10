@@ -15,16 +15,14 @@ trait EntityType extends js.Object
 
 object EntityType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `external connection`: typingsSlinky.openfin.openfinStrings.`external connection` = ("external connection").asInstanceOf[typingsSlinky.openfin.openfinStrings.`external connection`]
   @scala.inline
-  def `external connection`: typingsSlinky.openfin.openfinStrings.`external connection` = this.cast("external connection")
+  def iframe: typingsSlinky.openfin.openfinStrings.iframe = "iframe".asInstanceOf[typingsSlinky.openfin.openfinStrings.iframe]
   @scala.inline
-  def iframe: typingsSlinky.openfin.openfinStrings.iframe = this.cast("iframe")
+  def unknown: typingsSlinky.openfin.openfinStrings.unknown = "unknown".asInstanceOf[typingsSlinky.openfin.openfinStrings.unknown]
   @scala.inline
-  def unknown: typingsSlinky.openfin.openfinStrings.unknown = this.cast("unknown")
+  def view: typingsSlinky.openfin.openfinStrings.view = "view".asInstanceOf[typingsSlinky.openfin.openfinStrings.view]
   @scala.inline
-  def view: typingsSlinky.openfin.openfinStrings.view = this.cast("view")
-  @scala.inline
-  def window: typingsSlinky.openfin.openfinStrings.window = this.cast("window")
+  def window: typingsSlinky.openfin.openfinStrings.window = "window".asInstanceOf[typingsSlinky.openfin.openfinStrings.window]
 }
 

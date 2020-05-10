@@ -40,64 +40,62 @@ trait PreviewType extends js.Object
 
 object PreviewType {
   @scala.inline
-  def AddNoise: typingsSlinky.gm.gmStrings.AddNoise = this.cast("AddNoise")
+  def AddNoise: typingsSlinky.gm.gmStrings.AddNoise = "AddNoise".asInstanceOf[typingsSlinky.gm.gmStrings.AddNoise]
   @scala.inline
-  def Blur: typingsSlinky.gm.gmStrings.Blur = this.cast("Blur")
+  def Blur: typingsSlinky.gm.gmStrings.Blur = "Blur".asInstanceOf[typingsSlinky.gm.gmStrings.Blur]
   @scala.inline
-  def Brightness: typingsSlinky.gm.gmStrings.Brightness = this.cast("Brightness")
+  def Brightness: typingsSlinky.gm.gmStrings.Brightness = "Brightness".asInstanceOf[typingsSlinky.gm.gmStrings.Brightness]
   @scala.inline
-  def CharcoalDrawing: typingsSlinky.gm.gmStrings.CharcoalDrawing = this.cast("CharcoalDrawing")
+  def CharcoalDrawing: typingsSlinky.gm.gmStrings.CharcoalDrawing = "CharcoalDrawing".asInstanceOf[typingsSlinky.gm.gmStrings.CharcoalDrawing]
   @scala.inline
-  def Despeckle: typingsSlinky.gm.gmStrings.Despeckle = this.cast("Despeckle")
+  def Despeckle: typingsSlinky.gm.gmStrings.Despeckle = "Despeckle".asInstanceOf[typingsSlinky.gm.gmStrings.Despeckle]
   @scala.inline
-  def Dull: typingsSlinky.gm.gmStrings.Dull = this.cast("Dull")
+  def Dull: typingsSlinky.gm.gmStrings.Dull = "Dull".asInstanceOf[typingsSlinky.gm.gmStrings.Dull]
   @scala.inline
-  def EdgeDetect: typingsSlinky.gm.gmStrings.EdgeDetect = this.cast("EdgeDetect")
+  def EdgeDetect: typingsSlinky.gm.gmStrings.EdgeDetect = "EdgeDetect".asInstanceOf[typingsSlinky.gm.gmStrings.EdgeDetect]
   @scala.inline
-  def Gamma: typingsSlinky.gm.gmStrings.Gamma = this.cast("Gamma")
+  def Gamma: typingsSlinky.gm.gmStrings.Gamma = "Gamma".asInstanceOf[typingsSlinky.gm.gmStrings.Gamma]
   @scala.inline
-  def Grayscale: Grayscale_ = this.cast("Grayscale")
+  def Grayscale: Grayscale_ = "Grayscale".asInstanceOf[Grayscale_]
   @scala.inline
-  def Hue: typingsSlinky.gm.gmStrings.Hue = this.cast("Hue")
+  def Hue: typingsSlinky.gm.gmStrings.Hue = "Hue".asInstanceOf[typingsSlinky.gm.gmStrings.Hue]
   @scala.inline
-  def Implode: typingsSlinky.gm.gmStrings.Implode = this.cast("Implode")
+  def Implode: typingsSlinky.gm.gmStrings.Implode = "Implode".asInstanceOf[typingsSlinky.gm.gmStrings.Implode]
   @scala.inline
-  def JPEG: typingsSlinky.gm.gmStrings.JPEG = this.cast("JPEG")
+  def JPEG: typingsSlinky.gm.gmStrings.JPEG = "JPEG".asInstanceOf[typingsSlinky.gm.gmStrings.JPEG]
   @scala.inline
-  def OilPaint: typingsSlinky.gm.gmStrings.OilPaint = this.cast("OilPaint")
+  def OilPaint: typingsSlinky.gm.gmStrings.OilPaint = "OilPaint".asInstanceOf[typingsSlinky.gm.gmStrings.OilPaint]
   @scala.inline
-  def Quantize: typingsSlinky.gm.gmStrings.Quantize = this.cast("Quantize")
+  def Quantize: typingsSlinky.gm.gmStrings.Quantize = "Quantize".asInstanceOf[typingsSlinky.gm.gmStrings.Quantize]
   @scala.inline
-  def Raise: typingsSlinky.gm.gmStrings.Raise = this.cast("Raise")
+  def Raise: typingsSlinky.gm.gmStrings.Raise = "Raise".asInstanceOf[typingsSlinky.gm.gmStrings.Raise]
   @scala.inline
-  def ReduceNoise: typingsSlinky.gm.gmStrings.ReduceNoise = this.cast("ReduceNoise")
+  def ReduceNoise: typingsSlinky.gm.gmStrings.ReduceNoise = "ReduceNoise".asInstanceOf[typingsSlinky.gm.gmStrings.ReduceNoise]
   @scala.inline
-  def Roll: typingsSlinky.gm.gmStrings.Roll = this.cast("Roll")
+  def Roll: typingsSlinky.gm.gmStrings.Roll = "Roll".asInstanceOf[typingsSlinky.gm.gmStrings.Roll]
   @scala.inline
-  def Rotate: typingsSlinky.gm.gmStrings.Rotate = this.cast("Rotate")
+  def Rotate: typingsSlinky.gm.gmStrings.Rotate = "Rotate".asInstanceOf[typingsSlinky.gm.gmStrings.Rotate]
   @scala.inline
-  def Saturation: typingsSlinky.gm.gmStrings.Saturation = this.cast("Saturation")
+  def Saturation: typingsSlinky.gm.gmStrings.Saturation = "Saturation".asInstanceOf[typingsSlinky.gm.gmStrings.Saturation]
   @scala.inline
-  def Segment: typingsSlinky.gm.gmStrings.Segment = this.cast("Segment")
+  def Segment: typingsSlinky.gm.gmStrings.Segment = "Segment".asInstanceOf[typingsSlinky.gm.gmStrings.Segment]
   @scala.inline
-  def Shade: typingsSlinky.gm.gmStrings.Shade = this.cast("Shade")
+  def Shade: typingsSlinky.gm.gmStrings.Shade = "Shade".asInstanceOf[typingsSlinky.gm.gmStrings.Shade]
   @scala.inline
-  def Sharpen: typingsSlinky.gm.gmStrings.Sharpen = this.cast("Sharpen")
+  def Sharpen: typingsSlinky.gm.gmStrings.Sharpen = "Sharpen".asInstanceOf[typingsSlinky.gm.gmStrings.Sharpen]
   @scala.inline
-  def Shear: typingsSlinky.gm.gmStrings.Shear = this.cast("Shear")
+  def Shear: typingsSlinky.gm.gmStrings.Shear = "Shear".asInstanceOf[typingsSlinky.gm.gmStrings.Shear]
   @scala.inline
-  def Solarize: typingsSlinky.gm.gmStrings.Solarize = this.cast("Solarize")
+  def Solarize: typingsSlinky.gm.gmStrings.Solarize = "Solarize".asInstanceOf[typingsSlinky.gm.gmStrings.Solarize]
   @scala.inline
-  def Spiff: typingsSlinky.gm.gmStrings.Spiff = this.cast("Spiff")
+  def Spiff: typingsSlinky.gm.gmStrings.Spiff = "Spiff".asInstanceOf[typingsSlinky.gm.gmStrings.Spiff]
   @scala.inline
-  def Spread: typingsSlinky.gm.gmStrings.Spread = this.cast("Spread")
+  def Spread: typingsSlinky.gm.gmStrings.Spread = "Spread".asInstanceOf[typingsSlinky.gm.gmStrings.Spread]
   @scala.inline
-  def Swirl: typingsSlinky.gm.gmStrings.Swirl = this.cast("Swirl")
+  def Swirl: typingsSlinky.gm.gmStrings.Swirl = "Swirl".asInstanceOf[typingsSlinky.gm.gmStrings.Swirl]
   @scala.inline
-  def Threshold: typingsSlinky.gm.gmStrings.Threshold = this.cast("Threshold")
+  def Threshold: typingsSlinky.gm.gmStrings.Threshold = "Threshold".asInstanceOf[typingsSlinky.gm.gmStrings.Threshold]
   @scala.inline
-  def Wave: typingsSlinky.gm.gmStrings.Wave = this.cast("Wave")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Wave: typingsSlinky.gm.gmStrings.Wave = "Wave".asInstanceOf[typingsSlinky.gm.gmStrings.Wave]
 }
 

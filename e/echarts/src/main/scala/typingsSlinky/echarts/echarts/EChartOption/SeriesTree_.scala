@@ -33,6 +33,7 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-tree
   */
+@js.native
 trait SeriesTree_ extends js.Object {
   /**
     * Distance between tree component and the bottom side of the container.
@@ -45,7 +46,7 @@ trait SeriesTree_ extends js.Object {
     * 12%
     * @see https://echarts.apache.org/en/option.html#series-tree.bottom
     */
-  var bottom: js.UndefOr[Double | String] = js.undefined
+  var bottom: js.UndefOr[Double | String] = js.native
   /**
     * [series-tree.data](https://echarts.apache.org/en/option.html#series-tree.data)
     * the data format is a tree structure，for example：
@@ -55,11 +56,11 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data
     */
-  var data: js.UndefOr[js.Array[DataObject]] = js.undefined
+  var data: js.UndefOr[js.Array[DataObject]] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-tree.emphasis
     */
-  var emphasis: js.UndefOr[AnonLineStyleAnonCurvenessShadowBlur] = js.undefined
+  var emphasis: js.UndefOr[AnonLineStyleAnonCurvenessShadowBlur] = js.native
   /**
     * Subtree collapses and expands interaction, `default true`.
     * As the drawing area is limited, and usually the nodes of a tree
@@ -84,14 +85,14 @@ trait SeriesTree_ extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-tree.expandAndCollapse
     */
-  var expandAndCollapse: js.UndefOr[Boolean] = js.undefined
+  var expandAndCollapse: js.UndefOr[Boolean] = js.native
   /**
     * Height of tree component.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.height
     */
-  var height: js.UndefOr[Double | String] = js.undefined
+  var height: js.UndefOr[Double | String] = js.native
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -100,7 +101,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.id
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * The initial level (depth) of the tree.
     * The root node is the 0th layer, then the first layer, the second
@@ -119,7 +120,7 @@ trait SeriesTree_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-tree.initialTreeDepth
     */
-  var initialTreeDepth: js.UndefOr[Double] = js.undefined
+  var initialTreeDepth: js.UndefOr[Double] = js.native
   /**
     * The style of each node in the tree, where \[itemStyle.color\]
     * (~ series-tree.itemStyle.color)
@@ -129,7 +130,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderType] = js.native
   /**
     * `label` describes the style of the text corresponding to each
     * node.
@@ -137,7 +138,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.label
     */
-  var label: js.UndefOr[AnonBorderRadius] = js.undefined
+  var label: js.UndefOr[AnonBorderRadius] = js.native
   /**
     * The layout of the tree, which can be `orthogonal` and `radial`
     * 。Here the `orthogonal` layout is what we usually refer to the
@@ -160,7 +161,7 @@ trait SeriesTree_ extends js.Object {
     * "orthogonal"
     * @see https://echarts.apache.org/en/option.html#series-tree.layout
     */
-  var layout: js.UndefOr[String] = js.undefined
+  var layout: js.UndefOr[String] = js.native
   /**
     * Leaf node special configuration, such as the above tree diagram
     * example, the leaf node and non-leaf node label location is different.
@@ -168,7 +169,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.leaves
     */
-  var leaves: js.UndefOr[AnonEmphasisItemStyle] = js.undefined
+  var leaves: js.UndefOr[AnonEmphasisItemStyle] = js.native
   /**
     * Distance between tree component and the left side of the container.
     *
@@ -184,14 +185,14 @@ trait SeriesTree_ extends js.Object {
     * 12%
     * @see https://echarts.apache.org/en/option.html#series-tree.left
     */
-  var left: js.UndefOr[Double | String] = js.undefined
+  var left: js.UndefOr[Double | String] = js.native
   /**
     * Defines the style of the tree edge.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonCurvenessShadowBlur] = js.undefined
+  var lineStyle: js.UndefOr[AnonCurvenessShadowBlur] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -202,7 +203,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.name
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * The direction of the `orthogonal` layout in the tree diagram.
     * That means this configuration takes effect only if `layout =
@@ -218,7 +219,7 @@ trait SeriesTree_ extends js.Object {
     * "LR"
     * @see https://echarts.apache.org/en/option.html#series-tree.orient
     */
-  var orient: js.UndefOr[String] = js.undefined
+  var orient: js.UndefOr[String] = js.native
   /**
     * Distance between tree component and the right side of the container.
     *
@@ -230,7 +231,7 @@ trait SeriesTree_ extends js.Object {
     * 12%
     * @see https://echarts.apache.org/en/option.html#series-tree.right
     */
-  var right: js.UndefOr[Double | String] = js.undefined
+  var right: js.UndefOr[Double | String] = js.native
   /**
     * Whether to enable mouse zooming and translating.
     * `false` by default.
@@ -241,7 +242,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.roam
     */
-  var roam: js.UndefOr[Boolean | String] = js.undefined
+  var roam: js.UndefOr[Boolean | String] = js.native
   /**
     * Symbol of .
     *
@@ -282,14 +283,14 @@ trait SeriesTree_ extends js.Object {
     * "emptyCircle"
     * @see https://echarts.apache.org/en/option.html#series-tree.symbol
     */
-  var symbol: js.UndefOr[String] = js.undefined
+  var symbol: js.UndefOr[String] = js.native
   /**
     * Whether to keep aspect for symbols in the form of `path://`.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.symbolKeepAspect
     */
-  var symbolKeepAspect: js.UndefOr[Boolean] = js.undefined
+  var symbolKeepAspect: js.UndefOr[Boolean] = js.native
   /**
     * Offset of symbol relative to original position.
     * By default, symbol will be put in the center position of data.
@@ -310,7 +311,7 @@ trait SeriesTree_ extends js.Object {
     * [0, 0]
     * @see https://echarts.apache.org/en/option.html#series-tree.symbolOffset
     */
-  var symbolOffset: js.UndefOr[js.Array[_]] = js.undefined
+  var symbolOffset: js.UndefOr[js.Array[_]] = js.native
   /**
     * Rotate degree of symbol.
     * Note that when `symbol` is set to be `'arrow'` in `markLine`,
@@ -320,7 +321,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.symbolRotate
     */
-  var symbolRotate: js.UndefOr[Double] = js.undefined
+  var symbolRotate: js.UndefOr[Double] = js.native
   /**
     * symbol size.
     * It can be set to single numbers like `10`, or use an array to
@@ -346,14 +347,14 @@ trait SeriesTree_ extends js.Object {
     * 7
     * @see https://echarts.apache.org/en/option.html#series-tree.symbolSize
     */
-  var symbolSize: js.UndefOr[js.Array[_] | js.Function | Double] = js.undefined
+  var symbolSize: js.UndefOr[js.Array[_] | js.Function | Double] = js.native
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
   /**
     * Distance between tree component and the top side of the container.
     *
@@ -369,20 +370,20 @@ trait SeriesTree_ extends js.Object {
     * 12%
     * @see https://echarts.apache.org/en/option.html#series-tree.top
     */
-  var top: js.UndefOr[Double | String] = js.undefined
+  var top: js.UndefOr[Double | String] = js.native
   /**
     * @default
     * "tree"
     * @see https://echarts.apache.org/en/option.html#series-tree.type
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * Width of tree component.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.width
     */
-  var width: js.UndefOr[Double | String] = js.undefined
+  var width: js.UndefOr[Double | String] = js.native
   /**
     * `z` value of all graghical elements in , which controls order
     * of drawing graphical components.
@@ -397,7 +398,7 @@ trait SeriesTree_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-tree.z
     */
-  var z: js.UndefOr[Double] = js.undefined
+  var z: js.UndefOr[Double] = js.native
   /**
     * `zlevel` value of all graghical elements in .
     *
@@ -415,71 +416,358 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.undefined
+  var zlevel: js.UndefOr[Double] = js.native
 }
 
 object SeriesTree_ {
   @scala.inline
-  def apply(
-    bottom: Double | String = null,
-    data: js.Array[DataObject] = null,
-    emphasis: AnonLineStyleAnonCurvenessShadowBlur = null,
-    expandAndCollapse: js.UndefOr[Boolean] = js.undefined,
-    height: Double | String = null,
-    id: String = null,
-    initialTreeDepth: Int | Double = null,
-    itemStyle: AnonBorderType = null,
-    label: AnonBorderRadius = null,
-    layout: String = null,
-    leaves: AnonEmphasisItemStyle = null,
-    left: Double | String = null,
-    lineStyle: AnonCurvenessShadowBlur = null,
-    name: String = null,
-    orient: String = null,
-    right: Double | String = null,
-    roam: Boolean | String = null,
-    symbol: String = null,
-    symbolKeepAspect: js.UndefOr[Boolean] = js.undefined,
-    symbolOffset: js.Array[_] = null,
-    symbolRotate: Int | Double = null,
-    symbolSize: js.Array[_] | js.Function | Double = null,
-    tooltip: AnonExtraCssText = null,
-    top: Double | String = null,
-    `type`: String = null,
-    width: Double | String = null,
-    z: Int | Double = null,
-    zlevel: Int | Double = null
-  ): SeriesTree_ = {
+  def apply(): SeriesTree_ = {
     val __obj = js.Dynamic.literal()
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
-    if (!js.isUndefined(expandAndCollapse)) __obj.updateDynamic("expandAndCollapse")(expandAndCollapse.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (initialTreeDepth != null) __obj.updateDynamic("initialTreeDepth")(initialTreeDepth.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (leaves != null) __obj.updateDynamic("leaves")(leaves.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (lineStyle != null) __obj.updateDynamic("lineStyle")(lineStyle.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (orient != null) __obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (roam != null) __obj.updateDynamic("roam")(roam.asInstanceOf[js.Any])
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
-    if (!js.isUndefined(symbolKeepAspect)) __obj.updateDynamic("symbolKeepAspect")(symbolKeepAspect.asInstanceOf[js.Any])
-    if (symbolOffset != null) __obj.updateDynamic("symbolOffset")(symbolOffset.asInstanceOf[js.Any])
-    if (symbolRotate != null) __obj.updateDynamic("symbolRotate")(symbolRotate.asInstanceOf[js.Any])
-    if (symbolSize != null) __obj.updateDynamic("symbolSize")(symbolSize.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
-    if (zlevel != null) __obj.updateDynamic("zlevel")(zlevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesTree_]
   }
+  @scala.inline
+  implicit class SeriesTree_Ops[Self <: SeriesTree_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBottom(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[DataObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmphasis(value: AnonLineStyleAnonCurvenessShadowBlur): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpandAndCollapse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAndCollapse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpandAndCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandAndCollapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialTreeDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialTreeDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialTreeDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialTreeDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: AnonBorderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonBorderRadius): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeaves(value: AnonEmphasisItemStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaves")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeaves: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaves")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineStyle(value: AnonCurvenessShadowBlur): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrient(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoam(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roam")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roam")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolKeepAspect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolKeepAspect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolKeepAspect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolKeepAspect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolOffset(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolRotate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolRotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolRotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolSize(value: js.Array[_] | js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: AnonExtraCssText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZlevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZlevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

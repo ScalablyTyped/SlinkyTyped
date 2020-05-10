@@ -15,14 +15,41 @@ trait ReplicaGlobalSecondaryIndexAutoScalingUpdate extends js.Object {
 
 object ReplicaGlobalSecondaryIndexAutoScalingUpdate {
   @scala.inline
-  def apply(
-    IndexName: IndexName = null,
-    ProvisionedReadCapacityAutoScalingUpdate: AutoScalingSettingsUpdate = null
-  ): ReplicaGlobalSecondaryIndexAutoScalingUpdate = {
+  def apply(): ReplicaGlobalSecondaryIndexAutoScalingUpdate = {
     val __obj = js.Dynamic.literal()
-    if (IndexName != null) __obj.updateDynamic("IndexName")(IndexName.asInstanceOf[js.Any])
-    if (ProvisionedReadCapacityAutoScalingUpdate != null) __obj.updateDynamic("ProvisionedReadCapacityAutoScalingUpdate")(ProvisionedReadCapacityAutoScalingUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicaGlobalSecondaryIndexAutoScalingUpdate]
   }
+  @scala.inline
+  implicit class ReplicaGlobalSecondaryIndexAutoScalingUpdateOps[Self <: ReplicaGlobalSecondaryIndexAutoScalingUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndexName(value: IndexName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedReadCapacityAutoScalingUpdate(value: AutoScalingSettingsUpdate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedReadCapacityAutoScalingUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedReadCapacityAutoScalingUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedReadCapacityAutoScalingUpdate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

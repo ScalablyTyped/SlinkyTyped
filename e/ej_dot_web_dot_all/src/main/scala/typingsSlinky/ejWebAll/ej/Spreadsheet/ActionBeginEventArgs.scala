@@ -4,65 +4,173 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ActionBeginEventArgs extends js.Object {
   /** Returns the applied style format object.
     */
-  var afterFormat: js.UndefOr[js.Any] = js.undefined
+  var afterFormat: js.UndefOr[js.Any] = js.native
   /** Returns the applied style format object.
     */
-  var beforeFormat: js.UndefOr[js.Any] = js.undefined
+  var beforeFormat: js.UndefOr[js.Any] = js.native
   /** Returns selected columns while sorting or filtering begins.
     */
-  var colSelected: js.UndefOr[Double] = js.undefined
+  var colSelected: js.UndefOr[Double] = js.native
   /** Return column name while sorting.
     */
-  var columnName: js.UndefOr[String] = js.undefined
+  var columnName: js.UndefOr[String] = js.native
   /** Returns goto index while paging.
     */
-  var gotoIdx: js.UndefOr[Double] = js.undefined
+  var gotoIdx: js.UndefOr[Double] = js.native
   /** Returns boolean value. If create new sheet it returns true.
     */
-  var newSheet: js.UndefOr[Boolean] = js.undefined
+  var newSheet: js.UndefOr[Boolean] = js.native
   /** Returns the cell range.
     */
-  var range: js.UndefOr[js.Array[_]] = js.undefined
+  var range: js.UndefOr[js.Array[_]] = js.native
   /** Returns the action format.
     */
-  var reqType: js.UndefOr[String] = js.undefined
+  var reqType: js.UndefOr[String] = js.native
   /** Returns the sheet index.
     */
-  var sheetIdx: js.UndefOr[Double] = js.undefined
+  var sheetIdx: js.UndefOr[Double] = js.native
   /** Returns sort direction while sort action begins.
     */
-  var sortDirection: js.UndefOr[String] = js.undefined
+  var sortDirection: js.UndefOr[String] = js.native
 }
 
 object ActionBeginEventArgs {
   @scala.inline
-  def apply(
-    afterFormat: js.Any = null,
-    beforeFormat: js.Any = null,
-    colSelected: Int | Double = null,
-    columnName: String = null,
-    gotoIdx: Int | Double = null,
-    newSheet: js.UndefOr[Boolean] = js.undefined,
-    range: js.Array[_] = null,
-    reqType: String = null,
-    sheetIdx: Int | Double = null,
-    sortDirection: String = null
-  ): ActionBeginEventArgs = {
+  def apply(): ActionBeginEventArgs = {
     val __obj = js.Dynamic.literal()
-    if (afterFormat != null) __obj.updateDynamic("afterFormat")(afterFormat.asInstanceOf[js.Any])
-    if (beforeFormat != null) __obj.updateDynamic("beforeFormat")(beforeFormat.asInstanceOf[js.Any])
-    if (colSelected != null) __obj.updateDynamic("colSelected")(colSelected.asInstanceOf[js.Any])
-    if (columnName != null) __obj.updateDynamic("columnName")(columnName.asInstanceOf[js.Any])
-    if (gotoIdx != null) __obj.updateDynamic("gotoIdx")(gotoIdx.asInstanceOf[js.Any])
-    if (!js.isUndefined(newSheet)) __obj.updateDynamic("newSheet")(newSheet.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (reqType != null) __obj.updateDynamic("reqType")(reqType.asInstanceOf[js.Any])
-    if (sheetIdx != null) __obj.updateDynamic("sheetIdx")(sheetIdx.asInstanceOf[js.Any])
-    if (sortDirection != null) __obj.updateDynamic("sortDirection")(sortDirection.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionBeginEventArgs]
   }
+  @scala.inline
+  implicit class ActionBeginEventArgsOps[Self <: ActionBeginEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterFormat(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeFormat(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeforeFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColSelected(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colSelected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colSelected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGotoIdx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoIdx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGotoIdx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoIdx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewSheet(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSheet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewSheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReqType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reqType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReqType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reqType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSheetIdx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetIdx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSheetIdx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetIdx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortDirection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

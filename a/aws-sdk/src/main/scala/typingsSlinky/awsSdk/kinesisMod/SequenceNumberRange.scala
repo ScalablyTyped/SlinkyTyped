@@ -18,10 +18,35 @@ trait SequenceNumberRange extends js.Object {
 
 object SequenceNumberRange {
   @scala.inline
-  def apply(StartingSequenceNumber: SequenceNumber, EndingSequenceNumber: SequenceNumber = null): SequenceNumberRange = {
+  def apply(StartingSequenceNumber: SequenceNumber): SequenceNumberRange = {
     val __obj = js.Dynamic.literal(StartingSequenceNumber = StartingSequenceNumber.asInstanceOf[js.Any])
-    if (EndingSequenceNumber != null) __obj.updateDynamic("EndingSequenceNumber")(EndingSequenceNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SequenceNumberRange]
   }
+  @scala.inline
+  implicit class SequenceNumberRangeOps[Self <: SequenceNumberRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStartingSequenceNumber(value: SequenceNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartingSequenceNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndingSequenceNumber(value: SequenceNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndingSequenceNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndingSequenceNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndingSequenceNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

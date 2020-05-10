@@ -1,6 +1,5 @@
 package typingsSlinky.ava.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -210,8 +209,8 @@ trait Assertions extends js.Object {
   /**
   	 * Assert that the function throws [an error](https://www.npmjs.com/package/is-error). If so, returns the error value.
   	 */
-  def throws[ThrownError /* <: js.Error */](fn: js.Function0[_], regex: RegExp): ThrownError = js.native
-  def throws[ThrownError /* <: js.Error */](fn: js.Function0[_], regex: RegExp, message: String): ThrownError = js.native
+  def throws[ThrownError /* <: js.Error */](fn: js.Function0[_], regex: js.RegExp): ThrownError = js.native
+  def throws[ThrownError /* <: js.Error */](fn: js.Function0[_], regex: js.RegExp, message: String): ThrownError = js.native
   /**
   	 * Assert that the async function throws [an error](https://www.npmjs.com/package/is-error). If so, returns the error
   	 * value. You must await the result.
@@ -260,8 +259,8 @@ trait Assertions extends js.Object {
   	 * Assert that the async function throws [an error](https://www.npmjs.com/package/is-error), or the promise rejects
   	 * with one. If so, returns a promise for the error value, which must be awaited.
   	 */
-  def throwsAsync[ThrownError /* <: js.Error */](fn: js.Function0[js.Thenable[_]], regex: RegExp): js.Promise[ThrownError] = js.native
-  def throwsAsync[ThrownError /* <: js.Error */](fn: js.Function0[js.Thenable[_]], regex: RegExp, message: String): js.Promise[ThrownError] = js.native
+  def throwsAsync[ThrownError /* <: js.Error */](fn: js.Function0[js.Thenable[_]], regex: js.RegExp): js.Promise[ThrownError] = js.native
+  def throwsAsync[ThrownError /* <: js.Error */](fn: js.Function0[js.Thenable[_]], regex: js.RegExp, message: String): js.Promise[ThrownError] = js.native
   /**
   	 * Assert that the promise rejects with [an error](https://www.npmjs.com/package/is-error). If so, returns the
   	 * rejection reason. You must await the result.
@@ -310,8 +309,8 @@ trait Assertions extends js.Object {
   	 * Assert that the async function throws [an error](https://www.npmjs.com/package/is-error), or the promise rejects
   	 * with one. If so, returns a promise for the error value, which must be awaited.
   	 */
-  def throwsAsync[ThrownError /* <: js.Error */](promise: js.Thenable[_], regex: RegExp): js.Promise[ThrownError] = js.native
-  def throwsAsync[ThrownError /* <: js.Error */](promise: js.Thenable[_], regex: RegExp, message: String): js.Promise[ThrownError] = js.native
+  def throwsAsync[ThrownError /* <: js.Error */](promise: js.Thenable[_], regex: js.RegExp): js.Promise[ThrownError] = js.native
+  def throwsAsync[ThrownError /* <: js.Error */](promise: js.Thenable[_], regex: js.RegExp, message: String): js.Promise[ThrownError] = js.native
   /** Assert that `actual` is strictly true. */
   /** Assert that `actual` is strictly true. */
   def `true`(actual: js.Any): Unit = js.native

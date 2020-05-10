@@ -13,17 +13,17 @@ trait INBlas
   def axpy(x: FloatArray, y: FloatArray, a: Double): Unit = js.native
   def caxpy(
     n: Double,
-    alpha: scala.scalajs.js.typedarray.Float32Array,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    alpha: js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def ccopy(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def cgbmv(
@@ -32,13 +32,13 @@ trait INBlas
     n: Double,
     kl: Double,
     ku: Double,
-    alpha: scala.scalajs.js.typedarray.Float32Array,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    alpha: js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    beta: scala.scalajs.js.typedarray.Float32Array,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    beta: js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def cgemm(
@@ -47,40 +47,35 @@ trait INBlas
     m: Double,
     n: Double,
     k: Double,
-    alpha: scala.scalajs.js.typedarray.Float32Array,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    alpha: js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
     ldb: Double,
-    beta: scala.scalajs.js.typedarray.Float32Array,
-    c: scala.scalajs.js.typedarray.Float32Array,
+    beta: js.typedarray.Float32Array,
+    c: js.typedarray.Float32Array,
     ldc: Double
   ): Unit = js.native
   def cgemv(
     trans: MatrixTrans,
     m: Double,
     n: Double,
-    alpha: scala.scalajs.js.typedarray.Float32Array,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    alpha: js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    beta: scala.scalajs.js.typedarray.Float32Array,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    beta: js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def copy(x: FloatArray, y: FloatArray): Unit = js.native
-  def cscal(
-    n: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
-    x: scala.scalajs.js.typedarray.Float32Array,
-    incx: Double
-  ): Unit = js.native
+  def cscal(n: Double, a: js.typedarray.Float32Array, x: js.typedarray.Float32Array, incx: Double): Unit = js.native
   def cswap(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def csymm(
@@ -88,13 +83,13 @@ trait INBlas
     uplo: MatrixUpperLower,
     m: Double,
     n: Double,
-    alpha: scala.scalajs.js.typedarray.Float32Array,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    alpha: js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
     ldb: Double,
-    beta: scala.scalajs.js.typedarray.Float32Array,
-    c: scala.scalajs.js.typedarray.Float32Array,
+    beta: js.typedarray.Float32Array,
+    c: js.typedarray.Float32Array,
     ldc: Double
   ): Unit = js.native
   def csyr2k(
@@ -102,13 +97,13 @@ trait INBlas
     trans: MatrixTrans,
     n: Double,
     k: Double,
-    alpha: scala.scalajs.js.typedarray.Float32Array,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    alpha: js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
     ldb: Double,
-    beta: scala.scalajs.js.typedarray.Float32Array,
-    c: scala.scalajs.js.typedarray.Float32Array,
+    beta: js.typedarray.Float32Array,
+    c: js.typedarray.Float32Array,
     ldc: Double
   ): Unit = js.native
   def csyrk(
@@ -116,11 +111,11 @@ trait INBlas
     trans: MatrixTrans,
     n: Double,
     k: Double,
-    alpha: scala.scalajs.js.typedarray.Float32Array,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    alpha: js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    beta: scala.scalajs.js.typedarray.Float32Array,
-    c: scala.scalajs.js.typedarray.Float32Array,
+    beta: js.typedarray.Float32Array,
+    c: js.typedarray.Float32Array,
     ldc: Double
   ): Unit = js.native
   def ctbmv(
@@ -129,9 +124,9 @@ trait INBlas
     diag: MatrixUnit,
     n: Double,
     k: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def ctbsv(
@@ -140,9 +135,9 @@ trait INBlas
     diag: MatrixUnit,
     n: Double,
     k: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def ctpmv(
@@ -150,8 +145,8 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    ap: scala.scalajs.js.typedarray.Float32Array,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    ap: js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def ctpsv(
@@ -159,8 +154,8 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    ap: scala.scalajs.js.typedarray.Float32Array,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    ap: js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def ctrmm(
@@ -170,10 +165,10 @@ trait INBlas
     diag: MatrixUnit,
     m: Double,
     n: Double,
-    alpha: scala.scalajs.js.typedarray.Float32Array,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    alpha: js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
     ldb: Double
   ): Unit = js.native
   def ctrmv(
@@ -181,9 +176,9 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def ctrsm(
@@ -193,10 +188,10 @@ trait INBlas
     diag: MatrixUnit,
     m: Double,
     n: Double,
-    alpha: scala.scalajs.js.typedarray.Float32Array,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    alpha: js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
     ldb: Double
   ): Unit = js.native
   def ctrsv(
@@ -204,32 +199,32 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
-  def dasum(n: Double, x: scala.scalajs.js.typedarray.Float64Array, incx: Double): Double = js.native
+  def dasum(n: Double, x: js.typedarray.Float64Array, incx: Double): Double = js.native
   def daxpy(
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def dcopy(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def ddot(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Double = js.native
   def dgbmv(
@@ -239,12 +234,12 @@ trait INBlas
     kl: Double,
     ku: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
     beta: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def dgemm(
@@ -254,12 +249,12 @@ trait INBlas
     n: Double,
     k: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
     ldb: Double,
     beta: Double,
-    c: scala.scalajs.js.typedarray.Float64Array,
+    c: js.typedarray.Float64Array,
     ldc: Double
   ): Unit = js.native
   def dgemv(
@@ -267,104 +262,104 @@ trait INBlas
     m: Double,
     n: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
     beta: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def dger(
     m: Double,
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double
   ): Unit = js.native
-  def dnrm2(n: Double, x: scala.scalajs.js.typedarray.Float64Array, incx: Double): Double = js.native
+  def dnrm2(n: Double, x: js.typedarray.Float64Array, incx: Double): Double = js.native
   def dot(x: FloatArray, y: FloatArray): Double = js.native
   def drot(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double,
     c: Double,
     s: Double
   ): Unit = js.native
   def drotg(
-    a: scala.scalajs.js.typedarray.Float64Array,
-    b: scala.scalajs.js.typedarray.Float64Array,
-    c: scala.scalajs.js.typedarray.Float64Array,
-    s: scala.scalajs.js.typedarray.Float64Array
+    a: js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
+    c: js.typedarray.Float64Array,
+    s: js.typedarray.Float64Array
   ): Unit = js.native
   def drotm(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def drotmg(
-    d1: scala.scalajs.js.typedarray.Float64Array,
-    d2: scala.scalajs.js.typedarray.Float64Array,
-    x1: scala.scalajs.js.typedarray.Float64Array,
-    y1: scala.scalajs.js.typedarray.Float64Array,
-    param: scala.scalajs.js.typedarray.Float64Array
+    d1: js.typedarray.Float64Array,
+    d2: js.typedarray.Float64Array,
+    x1: js.typedarray.Float64Array,
+    y1: js.typedarray.Float64Array,
+    param: js.typedarray.Float64Array
   ): Unit = js.native
   def dsbmv(
     uplo: MatrixUpperLower,
     n: Double,
     k: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
     beta: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
-  def dscal(n: Double, a: Double, x: scala.scalajs.js.typedarray.Float64Array, incx: Double): Unit = js.native
+  def dscal(n: Double, a: Double, x: js.typedarray.Float64Array, incx: Double): Unit = js.native
   def dspmv(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    ap: scala.scalajs.js.typedarray.Float64Array,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    ap: js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
     beta: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def dspr(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    ap: scala.scalajs.js.typedarray.Float64Array
+    ap: js.typedarray.Float64Array
   ): Unit = js.native
   def dspr2(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double,
-    ap: scala.scalajs.js.typedarray.Float64Array
+    ap: js.typedarray.Float64Array
   ): Unit = js.native
   def dswap(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def dsymm(
@@ -373,44 +368,44 @@ trait INBlas
     m: Double,
     n: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
     ldb: Double,
     beta: Double,
-    c: scala.scalajs.js.typedarray.Float64Array,
+    c: js.typedarray.Float64Array,
     ldc: Double
   ): Unit = js.native
   def dsymv(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
     beta: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def dsyr(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double
   ): Unit = js.native
   def dsyr2(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double
   ): Unit = js.native
   def dsyr2k(
@@ -419,12 +414,12 @@ trait INBlas
     n: Double,
     k: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
     ldb: Double,
     beta: Double,
-    c: scala.scalajs.js.typedarray.Float64Array,
+    c: js.typedarray.Float64Array,
     ldc: Double
   ): Unit = js.native
   def dsyrk(
@@ -433,10 +428,10 @@ trait INBlas
     n: Double,
     k: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
     beta: Double,
-    c: scala.scalajs.js.typedarray.Float64Array,
+    c: js.typedarray.Float64Array,
     ldc: Double
   ): Unit = js.native
   def dtbmv(
@@ -445,9 +440,9 @@ trait INBlas
     diag: MatrixUnit,
     n: Double,
     k: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
   def dtbsv(
@@ -456,9 +451,9 @@ trait INBlas
     diag: MatrixUnit,
     n: Double,
     k: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
   def dtpmv(
@@ -466,8 +461,8 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    ap: scala.scalajs.js.typedarray.Float64Array,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    ap: js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
   def dtpsv(
@@ -475,8 +470,8 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    ap: scala.scalajs.js.typedarray.Float64Array,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    ap: js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
   def dtrmm(
@@ -487,9 +482,9 @@ trait INBlas
     m: Double,
     n: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
     ldb: Double
   ): Unit = js.native
   def dtrmv(
@@ -497,9 +492,9 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
   def dtrsm(
@@ -510,9 +505,9 @@ trait INBlas
     m: Double,
     n: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
     ldb: Double
   ): Unit = js.native
   def dtrsv(
@@ -520,13 +515,13 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
-  def dzasum(n: Double, x: scala.scalajs.js.typedarray.Float64Array, incx: Double): Double = js.native
-  def dznrm2(n: Double, x: scala.scalajs.js.typedarray.Float64Array, incx: Double): Double = js.native
+  def dzasum(n: Double, x: js.typedarray.Float64Array, incx: Double): Double = js.native
+  def dznrm2(n: Double, x: js.typedarray.Float64Array, incx: Double): Double = js.native
   def gbmv(a: FloatArray, x: FloatArray, y: FloatArray): Unit = js.native
   def gbmv(a: FloatArray, x: FloatArray, y: FloatArray, kl: Double): Unit = js.native
   def gbmv(a: FloatArray, x: FloatArray, y: FloatArray, kl: Double, ku: Double): Unit = js.native
@@ -584,22 +579,22 @@ trait INBlas
   def ger(a: FloatArray, x: FloatArray, y: FloatArray): Unit = js.native
   def ger(a: FloatArray, x: FloatArray, y: FloatArray, alpha: Double): Unit = js.native
   def iamax(x: FloatArray): Double = js.native
-  def icamax(n: Double, x: scala.scalajs.js.typedarray.Float32Array, incx: Double): Double = js.native
-  def idamax(n: Double, x: scala.scalajs.js.typedarray.Float64Array, incx: Double): Double = js.native
-  def isamax(n: Double, x: scala.scalajs.js.typedarray.Float32Array, incx: Double): Double = js.native
-  def izamax(n: Double, x: scala.scalajs.js.typedarray.Float64Array, incx: Double): Double = js.native
+  def icamax(n: Double, x: js.typedarray.Float32Array, incx: Double): Double = js.native
+  def idamax(n: Double, x: js.typedarray.Float64Array, incx: Double): Double = js.native
+  def isamax(n: Double, x: js.typedarray.Float32Array, incx: Double): Double = js.native
+  def izamax(n: Double, x: js.typedarray.Float64Array, incx: Double): Double = js.native
   def nrm2(x: FloatArray): Double = js.native
   def rot(x: FloatArray, y: FloatArray, c: Double, s: Double): Unit = js.native
   def rotg(a: FloatArray, b: FloatArray, c: FloatArray, s: FloatArray): Unit = js.native
   def rotm(x: FloatArray, y: FloatArray, param: FloatArray): Unit = js.native
   def rotmg(d1: FloatArray, d2: FloatArray, x1: FloatArray, y1: FloatArray, param: FloatArray): Unit = js.native
-  def sasum(n: Double, x: scala.scalajs.js.typedarray.Float32Array, incx: Double): Double = js.native
+  def sasum(n: Double, x: js.typedarray.Float32Array, incx: Double): Double = js.native
   def saxpy(
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def sbmv(a: FloatArray, x: FloatArray, y: FloatArray): Unit = js.native
@@ -616,20 +611,20 @@ trait INBlas
     beta: Double
   ): Unit = js.native
   def scal(x: FloatArray, a: Double): Unit = js.native
-  def scasum(n: Double, x: scala.scalajs.js.typedarray.Float32Array, incx: Double): Double = js.native
-  def scnrm2(n: Double, x: scala.scalajs.js.typedarray.Float32Array, incx: Double): Double = js.native
+  def scasum(n: Double, x: js.typedarray.Float32Array, incx: Double): Double = js.native
+  def scnrm2(n: Double, x: js.typedarray.Float32Array, incx: Double): Double = js.native
   def scopy(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def sdot(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Double = js.native
   def sgbmv(
@@ -639,12 +634,12 @@ trait INBlas
     kl: Double,
     ku: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
     beta: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def sgemm(
@@ -654,12 +649,12 @@ trait INBlas
     n: Double,
     k: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
     ldb: Double,
     beta: Double,
-    c: scala.scalajs.js.typedarray.Float32Array,
+    c: js.typedarray.Float32Array,
     ldc: Double
   ): Unit = js.native
   def sgemv(
@@ -667,26 +662,26 @@ trait INBlas
     m: Double,
     n: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
     beta: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def sger(
     m: Double,
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double
   ): Unit = js.native
-  def snrm2(n: Double, x: scala.scalajs.js.typedarray.Float32Array, incx: Double): Double = js.native
+  def snrm2(n: Double, x: js.typedarray.Float32Array, incx: Double): Double = js.native
   def spmv(ap: FloatArray, x: FloatArray, y: FloatArray): Unit = js.native
   def spmv(ap: FloatArray, x: FloatArray, y: FloatArray, uplo: MatrixUpperLower): Unit = js.native
   def spmv(ap: FloatArray, x: FloatArray, y: FloatArray, uplo: MatrixUpperLower, alpha: Double): Unit = js.native
@@ -699,81 +694,81 @@ trait INBlas
   def spr2(ap: FloatArray, x: FloatArray, y: FloatArray, uplo: MatrixUpperLower, alpha: Double): Unit = js.native
   def srot(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double,
     c: Double,
     s: Double
   ): Unit = js.native
   def srotg(
-    a: scala.scalajs.js.typedarray.Float32Array,
-    b: scala.scalajs.js.typedarray.Float32Array,
-    c: scala.scalajs.js.typedarray.Float32Array,
-    s: scala.scalajs.js.typedarray.Float32Array
+    a: js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
+    c: js.typedarray.Float32Array,
+    s: js.typedarray.Float32Array
   ): Unit = js.native
   def srotm(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def srotmg(
-    d1: scala.scalajs.js.typedarray.Float32Array,
-    d2: scala.scalajs.js.typedarray.Float32Array,
-    x1: scala.scalajs.js.typedarray.Float32Array,
-    y1: scala.scalajs.js.typedarray.Float32Array,
-    param: scala.scalajs.js.typedarray.Float32Array
+    d1: js.typedarray.Float32Array,
+    d2: js.typedarray.Float32Array,
+    x1: js.typedarray.Float32Array,
+    y1: js.typedarray.Float32Array,
+    param: js.typedarray.Float32Array
   ): Unit = js.native
   def ssbmv(
     uplo: MatrixUpperLower,
     n: Double,
     k: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
     beta: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
-  def sscal(n: Double, a: Double, x: scala.scalajs.js.typedarray.Float32Array, incx: Double): Unit = js.native
+  def sscal(n: Double, a: Double, x: js.typedarray.Float32Array, incx: Double): Unit = js.native
   def sspmv(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    ap: scala.scalajs.js.typedarray.Float32Array,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    ap: js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
     beta: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def sspr(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    ap: scala.scalajs.js.typedarray.Float32Array
+    ap: js.typedarray.Float32Array
   ): Unit = js.native
   def sspr2(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double,
-    ap: scala.scalajs.js.typedarray.Float32Array
+    ap: js.typedarray.Float32Array
   ): Unit = js.native
   def sswap(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def ssymm(
@@ -782,44 +777,44 @@ trait INBlas
     m: Double,
     n: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
     ldb: Double,
     beta: Double,
-    c: scala.scalajs.js.typedarray.Float32Array,
+    c: js.typedarray.Float32Array,
     ldc: Double
   ): Unit = js.native
   def ssymv(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
     beta: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double
   ): Unit = js.native
   def ssyr(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double
   ): Unit = js.native
   def ssyr2(
     uplo: MatrixUpperLower,
     n: Double,
     alpha: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float32Array,
+    y: js.typedarray.Float32Array,
     incy: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double
   ): Unit = js.native
   def ssyr2k(
@@ -828,12 +823,12 @@ trait INBlas
     n: Double,
     k: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
     ldb: Double,
     beta: Double,
-    c: scala.scalajs.js.typedarray.Float32Array,
+    c: js.typedarray.Float32Array,
     ldc: Double
   ): Unit = js.native
   def ssyrk(
@@ -842,10 +837,10 @@ trait INBlas
     n: Double,
     k: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
     beta: Double,
-    c: scala.scalajs.js.typedarray.Float32Array,
+    c: js.typedarray.Float32Array,
     ldc: Double
   ): Unit = js.native
   def stbmv(
@@ -854,9 +849,9 @@ trait INBlas
     diag: MatrixUnit,
     n: Double,
     k: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def stbsv(
@@ -865,9 +860,9 @@ trait INBlas
     diag: MatrixUnit,
     n: Double,
     k: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def stpmv(
@@ -875,8 +870,8 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    ap: scala.scalajs.js.typedarray.Float32Array,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    ap: js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def stpsv(
@@ -884,8 +879,8 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    ap: scala.scalajs.js.typedarray.Float32Array,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    ap: js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def strmm(
@@ -896,9 +891,9 @@ trait INBlas
     m: Double,
     n: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
     ldb: Double
   ): Unit = js.native
   def strmv(
@@ -906,9 +901,9 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def strsm(
@@ -919,9 +914,9 @@ trait INBlas
     m: Double,
     n: Double,
     alpha: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float32Array,
+    b: js.typedarray.Float32Array,
     ldb: Double
   ): Unit = js.native
   def strsv(
@@ -929,9 +924,9 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    a: scala.scalajs.js.typedarray.Float32Array,
+    a: js.typedarray.Float32Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float32Array,
+    x: js.typedarray.Float32Array,
     incx: Double
   ): Unit = js.native
   def swap(x: FloatArray, y: FloatArray): Unit = js.native
@@ -1123,17 +1118,17 @@ trait INBlas
   def trsv(a: FloatArray, x: FloatArray, uplo: MatrixUpperLower, trans: MatrixTrans, diag: MatrixUnit): Unit = js.native
   def zaxpy(
     n: Double,
-    alpha: scala.scalajs.js.typedarray.Float64Array,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    alpha: js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def zcopy(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def zgbmv(
@@ -1142,13 +1137,13 @@ trait INBlas
     n: Double,
     kl: Double,
     ku: Double,
-    alpha: scala.scalajs.js.typedarray.Float64Array,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    alpha: js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    beta: scala.scalajs.js.typedarray.Float64Array,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    beta: js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def zgemm(
@@ -1157,39 +1152,34 @@ trait INBlas
     m: Double,
     n: Double,
     k: Double,
-    alpha: scala.scalajs.js.typedarray.Float64Array,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    alpha: js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
     ldb: Double,
-    beta: scala.scalajs.js.typedarray.Float64Array,
-    c: scala.scalajs.js.typedarray.Float64Array,
+    beta: js.typedarray.Float64Array,
+    c: js.typedarray.Float64Array,
     ldc: Double
   ): Unit = js.native
   def zgemv(
     trans: MatrixTrans,
     m: Double,
     n: Double,
-    alpha: scala.scalajs.js.typedarray.Float64Array,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    alpha: js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    beta: scala.scalajs.js.typedarray.Float64Array,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    beta: js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
-  def zscal(
-    n: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
-    x: scala.scalajs.js.typedarray.Float64Array,
-    incx: Double
-  ): Unit = js.native
+  def zscal(n: Double, a: js.typedarray.Float64Array, x: js.typedarray.Float64Array, incx: Double): Unit = js.native
   def zswap(
     n: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double,
-    y: scala.scalajs.js.typedarray.Float64Array,
+    y: js.typedarray.Float64Array,
     incy: Double
   ): Unit = js.native
   def zsymm(
@@ -1197,13 +1187,13 @@ trait INBlas
     uplo: MatrixUpperLower,
     m: Double,
     n: Double,
-    alpha: scala.scalajs.js.typedarray.Float64Array,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    alpha: js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
     ldb: Double,
-    beta: scala.scalajs.js.typedarray.Float64Array,
-    c: scala.scalajs.js.typedarray.Float64Array,
+    beta: js.typedarray.Float64Array,
+    c: js.typedarray.Float64Array,
     ldc: Double
   ): Unit = js.native
   def zsyr2k(
@@ -1211,13 +1201,13 @@ trait INBlas
     trans: MatrixTrans,
     n: Double,
     k: Double,
-    alpha: scala.scalajs.js.typedarray.Float64Array,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    alpha: js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
     ldb: Double,
-    beta: scala.scalajs.js.typedarray.Float64Array,
-    c: scala.scalajs.js.typedarray.Float64Array,
+    beta: js.typedarray.Float64Array,
+    c: js.typedarray.Float64Array,
     ldc: Double
   ): Unit = js.native
   def zsyrk(
@@ -1225,11 +1215,11 @@ trait INBlas
     trans: MatrixTrans,
     n: Double,
     k: Double,
-    alpha: scala.scalajs.js.typedarray.Float64Array,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    alpha: js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    beta: scala.scalajs.js.typedarray.Float64Array,
-    c: scala.scalajs.js.typedarray.Float64Array,
+    beta: js.typedarray.Float64Array,
+    c: js.typedarray.Float64Array,
     ldc: Double
   ): Unit = js.native
   def ztbmv(
@@ -1238,9 +1228,9 @@ trait INBlas
     diag: MatrixUnit,
     n: Double,
     k: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
   def ztbsv(
@@ -1249,9 +1239,9 @@ trait INBlas
     diag: MatrixUnit,
     n: Double,
     k: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
   def ztpmv(
@@ -1259,8 +1249,8 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    ap: scala.scalajs.js.typedarray.Float64Array,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    ap: js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
   def ztpsv(
@@ -1268,8 +1258,8 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    ap: scala.scalajs.js.typedarray.Float64Array,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    ap: js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
   def ztrmm(
@@ -1279,10 +1269,10 @@ trait INBlas
     diag: MatrixUnit,
     m: Double,
     n: Double,
-    alpha: scala.scalajs.js.typedarray.Float64Array,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    alpha: js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
     ldb: Double
   ): Unit = js.native
   def ztrmv(
@@ -1290,9 +1280,9 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
   def ztrsm(
@@ -1302,10 +1292,10 @@ trait INBlas
     diag: MatrixUnit,
     m: Double,
     n: Double,
-    alpha: scala.scalajs.js.typedarray.Float64Array,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    alpha: js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    b: scala.scalajs.js.typedarray.Float64Array,
+    b: js.typedarray.Float64Array,
     ldb: Double
   ): Unit = js.native
   def ztrsv(
@@ -1313,9 +1303,9 @@ trait INBlas
     trans: MatrixTrans,
     diag: MatrixUnit,
     n: Double,
-    a: scala.scalajs.js.typedarray.Float64Array,
+    a: js.typedarray.Float64Array,
     lda: Double,
-    x: scala.scalajs.js.typedarray.Float64Array,
+    x: js.typedarray.Float64Array,
     incx: Double
   ): Unit = js.native
 }

@@ -1,10 +1,9 @@
 package typingsSlinky.rmcCalendar.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.rmcCalendar.calendarMod.default
 import typingsSlinky.rmcCalendar.calendarPropsMod.SelectDateType
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.ExtraData
@@ -20,72 +19,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Calendar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Calendar {
   @JSImport("rmc-calendar/lib/Calendar", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style, title */
-  def apply(
-    defaultDate: js.Date = null,
-    defaultTimeValue: js.Date = null,
-    defaultValue: SelectDateType = null,
-    enterDirection: horizontal | vertical = null,
-    getDateExtra: /* date */ js.Date => ExtraData = null,
-    infiniteOpt: js.UndefOr[Boolean] = js.undefined,
-    initalMonths: Int | Double = null,
-    locale: Locale = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    onCancel: () => Unit = null,
-    onClear: () => Unit = null,
-    onConfirm: (/* startDateTime */ js.UndefOr[js.Date], /* endDateTime */ js.UndefOr[js.Date]) => Unit = null,
-    onSelect: (/* date */ js.Date, /* state */ js.UndefOr[js.Tuple2[js.UndefOr[js.Date], js.UndefOr[js.Date]]]) => SelectDateType | Unit = null,
-    onSelectHasDisableDate: /* date */ js.Array[js.Date] => Unit = null,
-    pickTime: js.UndefOr[Boolean] = js.undefined,
-    prefixCls: String = null,
-    renderHeader: /* prop */ PropsType => TagMod[Any] = null,
-    renderShortcut: /* select */ js.Function2[/* startDate */ js.UndefOr[js.Date], /* endDate */ js.UndefOr[js.Date], Unit] => TagMod[Any] = null,
-    rowSize: normal | xl = null,
-    showShortcut: js.UndefOr[Boolean] = js.undefined,
-    timePickerPickerPrefixCls: String = null,
-    timePickerPrefixCls: String = null,
-    `type`: one | range = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (defaultDate != null) __obj.updateDynamic("defaultDate")(defaultDate.asInstanceOf[js.Any])
-    if (defaultTimeValue != null) __obj.updateDynamic("defaultTimeValue")(defaultTimeValue.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (enterDirection != null) __obj.updateDynamic("enterDirection")(enterDirection.asInstanceOf[js.Any])
-    if (getDateExtra != null) __obj.updateDynamic("getDateExtra")(js.Any.fromFunction1(getDateExtra))
-    if (!js.isUndefined(infiniteOpt)) __obj.updateDynamic("infiniteOpt")(infiniteOpt.asInstanceOf[js.Any])
-    if (initalMonths != null) __obj.updateDynamic("initalMonths")(initalMonths.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction0(onCancel))
-    if (onClear != null) __obj.updateDynamic("onClear")(js.Any.fromFunction0(onClear))
-    if (onConfirm != null) __obj.updateDynamic("onConfirm")(js.Any.fromFunction2(onConfirm))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
-    if (onSelectHasDisableDate != null) __obj.updateDynamic("onSelectHasDisableDate")(js.Any.fromFunction1(onSelectHasDisableDate))
-    if (!js.isUndefined(pickTime)) __obj.updateDynamic("pickTime")(pickTime.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (renderHeader != null) __obj.updateDynamic("renderHeader")(js.Any.fromFunction1(renderHeader))
-    if (renderShortcut != null) __obj.updateDynamic("renderShortcut")(js.Any.fromFunction1(renderShortcut))
-    if (rowSize != null) __obj.updateDynamic("rowSize")(rowSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(showShortcut)) __obj.updateDynamic("showShortcut")(showShortcut.asInstanceOf[js.Any])
-    if (timePickerPickerPrefixCls != null) __obj.updateDynamic("timePickerPickerPrefixCls")(timePickerPickerPrefixCls.asInstanceOf[js.Any])
-    if (timePickerPrefixCls != null) __obj.updateDynamic("timePickerPrefixCls")(timePickerPrefixCls.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def defaultDate(value: js.Date): this.type = set("defaultDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultTimeValue(value: js.Date): this.type = set("defaultTimeValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: SelectDateType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enterDirection(value: horizontal | vertical): this.type = set("enterDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getDateExtra(value: /* date */ js.Date => ExtraData): this.type = set("getDateExtra", js.Any.fromFunction1(value))
+    @scala.inline
+    def infiniteOpt(value: Boolean): this.type = set("infiniteOpt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initalMonths(value: Double): this.type = set("initalMonths", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: Locale): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCancel(value: () => Unit): this.type = set("onCancel", js.Any.fromFunction0(value))
+    @scala.inline
+    def onClear(value: () => Unit): this.type = set("onClear", js.Any.fromFunction0(value))
+    @scala.inline
+    def onConfirm(value: (/* startDateTime */ js.UndefOr[js.Date], /* endDateTime */ js.UndefOr[js.Date]) => Unit): this.type = set("onConfirm", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSelect(
+      value: (/* date */ js.Date, /* state */ js.UndefOr[js.Tuple2[js.UndefOr[js.Date], js.UndefOr[js.Date]]]) => SelectDateType | Unit
+    ): this.type = set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSelectHasDisableDate(value: /* date */ js.Array[js.Date] => Unit): this.type = set("onSelectHasDisableDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def pickTime(value: Boolean): this.type = set("pickTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderHeader(value: /* prop */ PropsType => TagMod[Any]): this.type = set("renderHeader", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderShortcut(
+      value: /* select */ js.Function2[/* startDate */ js.UndefOr[js.Date], /* endDate */ js.UndefOr[js.Date], Unit] => TagMod[Any]
+    ): this.type = set("renderShortcut", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowSize(value: normal | xl): this.type = set("rowSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showShortcut(value: Boolean): this.type = set("showShortcut", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePickerPickerPrefixCls(value: String): this.type = set("timePickerPickerPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePickerPrefixCls(value: String): this.type = set("timePickerPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: one | range): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rmcCalendar.calendarMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.rmcCalendar.calendarPropsMod.PropsType
+  
+  def withProps(p: typingsSlinky.rmcCalendar.calendarPropsMod.PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Calendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

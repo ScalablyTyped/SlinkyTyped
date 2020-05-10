@@ -32,18 +32,65 @@ trait SchemaMailPhishing extends js.Object {
 
 object SchemaMailPhishing {
   @scala.inline
-  def apply(
-    domainId: SchemaDomainId = null,
-    isInternal: js.UndefOr[Boolean] = js.undefined,
-    maliciousEntity: SchemaMaliciousEntity = null,
-    messages: js.Array[SchemaGmailMessageInfo] = null
-  ): SchemaMailPhishing = {
+  def apply(): SchemaMailPhishing = {
     val __obj = js.Dynamic.literal()
-    if (domainId != null) __obj.updateDynamic("domainId")(domainId.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInternal)) __obj.updateDynamic("isInternal")(isInternal.asInstanceOf[js.Any])
-    if (maliciousEntity != null) __obj.updateDynamic("maliciousEntity")(maliciousEntity.asInstanceOf[js.Any])
-    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMailPhishing]
   }
+  @scala.inline
+  implicit class SchemaMailPhishingOps[Self <: SchemaMailPhishing] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainId(value: SchemaDomainId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsInternal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInternal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsInternal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInternal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaliciousEntity(value: SchemaMaliciousEntity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maliciousEntity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaliciousEntity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maliciousEntity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessages(value: js.Array[SchemaGmailMessageInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

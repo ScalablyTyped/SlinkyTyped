@@ -10,7 +10,6 @@ import typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNo
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -103,8 +102,8 @@ object QueryPlanNode extends js.Object {
     */
   def decode(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode = js.native
   def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode = js.native
-  def decode(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode = js.native
-  def decode(reader: Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode = js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode = js.native
   /**
     * Decodes a QueryPlanNode message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -113,7 +112,7 @@ object QueryPlanNode extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode = js.native
-  def decodeDelimited(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode = js.native
   /**
     * Encodes the specified QueryPlanNode message. Does not implicitly {@link Trace.QueryPlanNode.verify|verify} messages.
     * @param message QueryPlanNode message or plain object to encode
@@ -173,8 +172,8 @@ object QueryPlanNode extends js.Object {
       */
     def decode(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FetchNode = js.native
     def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FetchNode = js.native
-    def decode(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FetchNode = js.native
-    def decode(reader: Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FetchNode = js.native
+    def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FetchNode = js.native
+    def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FetchNode = js.native
     /**
       * Decodes a FetchNode message from the specified reader or buffer, length delimited.
       * @param reader Reader or buffer to decode from
@@ -183,7 +182,7 @@ object QueryPlanNode extends js.Object {
       * @throws {$protobuf.util.ProtocolError} If required fields are missing
       */
     def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FetchNode = js.native
-    def decodeDelimited(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FetchNode = js.native
+    def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FetchNode = js.native
     /**
       * Encodes the specified FetchNode message. Does not implicitly {@link Trace.QueryPlanNode.FetchNode.verify|verify} messages.
       * @param message FetchNode message or plain object to encode
@@ -245,8 +244,8 @@ object QueryPlanNode extends js.Object {
       */
     def decode(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FlattenNode = js.native
     def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FlattenNode = js.native
-    def decode(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FlattenNode = js.native
-    def decode(reader: Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FlattenNode = js.native
+    def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FlattenNode = js.native
+    def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FlattenNode = js.native
     /**
       * Decodes a FlattenNode message from the specified reader or buffer, length delimited.
       * @param reader Reader or buffer to decode from
@@ -255,7 +254,7 @@ object QueryPlanNode extends js.Object {
       * @throws {$protobuf.util.ProtocolError} If required fields are missing
       */
     def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FlattenNode = js.native
-    def decodeDelimited(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FlattenNode = js.native
+    def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.FlattenNode = js.native
     /**
       * Encodes the specified FlattenNode message. Does not implicitly {@link Trace.QueryPlanNode.FlattenNode.verify|verify} messages.
       * @param message FlattenNode message or plain object to encode
@@ -317,8 +316,8 @@ object QueryPlanNode extends js.Object {
       */
     def decode(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ParallelNode = js.native
     def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ParallelNode = js.native
-    def decode(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ParallelNode = js.native
-    def decode(reader: Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ParallelNode = js.native
+    def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ParallelNode = js.native
+    def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ParallelNode = js.native
     /**
       * Decodes a ParallelNode message from the specified reader or buffer, length delimited.
       * @param reader Reader or buffer to decode from
@@ -327,7 +326,7 @@ object QueryPlanNode extends js.Object {
       * @throws {$protobuf.util.ProtocolError} If required fields are missing
       */
     def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ParallelNode = js.native
-    def decodeDelimited(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ParallelNode = js.native
+    def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ParallelNode = js.native
     /**
       * Encodes the specified ParallelNode message. Does not implicitly {@link Trace.QueryPlanNode.ParallelNode.verify|verify} messages.
       * @param message ParallelNode message or plain object to encode
@@ -389,8 +388,8 @@ object QueryPlanNode extends js.Object {
       */
     def decode(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ResponsePathElement = js.native
     def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ResponsePathElement = js.native
-    def decode(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ResponsePathElement = js.native
-    def decode(reader: Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ResponsePathElement = js.native
+    def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ResponsePathElement = js.native
+    def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ResponsePathElement = js.native
     /**
       * Decodes a ResponsePathElement message from the specified reader or buffer, length delimited.
       * @param reader Reader or buffer to decode from
@@ -399,7 +398,7 @@ object QueryPlanNode extends js.Object {
       * @throws {$protobuf.util.ProtocolError} If required fields are missing
       */
     def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ResponsePathElement = js.native
-    def decodeDelimited(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ResponsePathElement = js.native
+    def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.ResponsePathElement = js.native
     /**
       * Encodes the specified ResponsePathElement message. Does not implicitly {@link Trace.QueryPlanNode.ResponsePathElement.verify|verify} messages.
       * @param message ResponsePathElement message or plain object to encode
@@ -463,8 +462,8 @@ object QueryPlanNode extends js.Object {
       */
     def decode(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.SequenceNode = js.native
     def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.SequenceNode = js.native
-    def decode(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.SequenceNode = js.native
-    def decode(reader: Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.SequenceNode = js.native
+    def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.SequenceNode = js.native
+    def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.SequenceNode = js.native
     /**
       * Decodes a SequenceNode message from the specified reader or buffer, length delimited.
       * @param reader Reader or buffer to decode from
@@ -473,7 +472,7 @@ object QueryPlanNode extends js.Object {
       * @throws {$protobuf.util.ProtocolError} If required fields are missing
       */
     def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.SequenceNode = js.native
-    def decodeDelimited(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.SequenceNode = js.native
+    def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.QueryPlanNode.SequenceNode = js.native
     /**
       * Encodes the specified SequenceNode message. Does not implicitly {@link Trace.QueryPlanNode.SequenceNode.verify|verify} messages.
       * @param message SequenceNode message or plain object to encode

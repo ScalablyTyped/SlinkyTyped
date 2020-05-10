@@ -1,64 +1,62 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.antdMobileNumbers.`1`
 import typingsSlinky.antdMobile.antdMobileNumbers.`2`
 import typingsSlinky.antdMobile.menuMod.default
 import typingsSlinky.antdMobile.menuPropsTypeMod.DataItem
 import typingsSlinky.antdMobile.menuPropsTypeMod.MenuProps
 import typingsSlinky.antdMobile.menuPropsTypeMod.ValueType
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Menu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Menu {
   @JSImport("antd-mobile/lib/menu", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    MenuSelectContanerPrefixCls: String = null,
-    data: js.Array[DataItem] = null,
-    defaultValue: ValueType = null,
-    height: Int | Double = null,
-    level: `1` | `2` = null,
-    multiSelect: js.UndefOr[Boolean] = js.undefined,
-    multiSelectMenuBtnsCls: String = null,
-    onCancel: () => Unit = null,
-    onChange: /* value */ js.UndefOr[ValueType] => Unit = null,
-    onOk: /* value */ js.UndefOr[ValueType] => Unit = null,
-    prefixCls: String = null,
-    radioPrefixCls: String = null,
-    subMenuPrefixCls: String = null,
-    value: ValueType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (MenuSelectContanerPrefixCls != null) __obj.updateDynamic("MenuSelectContanerPrefixCls")(MenuSelectContanerPrefixCls.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiSelect)) __obj.updateDynamic("multiSelect")(multiSelect.asInstanceOf[js.Any])
-    if (multiSelectMenuBtnsCls != null) __obj.updateDynamic("multiSelectMenuBtnsCls")(multiSelectMenuBtnsCls.asInstanceOf[js.Any])
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction0(onCancel))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onOk != null) __obj.updateDynamic("onOk")(js.Any.fromFunction1(onOk))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (radioPrefixCls != null) __obj.updateDynamic("radioPrefixCls")(radioPrefixCls.asInstanceOf[js.Any])
-    if (subMenuPrefixCls != null) __obj.updateDynamic("subMenuPrefixCls")(subMenuPrefixCls.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def MenuSelectContanerPrefixCls(value: String): this.type = set("MenuSelectContanerPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[DataItem]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: ValueType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def level(value: `1` | `2`): this.type = set("level", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiSelect(value: Boolean): this.type = set("multiSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiSelectMenuBtnsCls(value: String): this.type = set("multiSelectMenuBtnsCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCancel(value: () => Unit): this.type = set("onCancel", js.Any.fromFunction0(value))
+    @scala.inline
+    def onChange(value: /* value */ js.UndefOr[ValueType] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onOk(value: /* value */ js.UndefOr[ValueType] => Unit): this.type = set("onOk", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radioPrefixCls(value: String): this.type = set("radioPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subMenuPrefixCls(value: String): this.type = set("subMenuPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: ValueType): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antdMobile.menuMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MenuProps
+  
+  def withProps(p: MenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Menu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

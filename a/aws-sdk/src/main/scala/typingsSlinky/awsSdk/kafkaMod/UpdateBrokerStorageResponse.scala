@@ -22,11 +22,41 @@ trait UpdateBrokerStorageResponse extends js.Object {
 
 object UpdateBrokerStorageResponse {
   @scala.inline
-  def apply(ClusterArn: string = null, ClusterOperationArn: string = null): UpdateBrokerStorageResponse = {
+  def apply(): UpdateBrokerStorageResponse = {
     val __obj = js.Dynamic.literal()
-    if (ClusterArn != null) __obj.updateDynamic("ClusterArn")(ClusterArn.asInstanceOf[js.Any])
-    if (ClusterOperationArn != null) __obj.updateDynamic("ClusterOperationArn")(ClusterOperationArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateBrokerStorageResponse]
   }
+  @scala.inline
+  implicit class UpdateBrokerStorageResponseOps[Self <: UpdateBrokerStorageResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterOperationArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterOperationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterOperationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterOperationArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

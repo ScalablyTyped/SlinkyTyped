@@ -23,11 +23,41 @@ trait SchemaWorkflowTemplatePlacement extends js.Object {
 
 object SchemaWorkflowTemplatePlacement {
   @scala.inline
-  def apply(clusterSelector: SchemaClusterSelector = null, managedCluster: SchemaManagedCluster = null): SchemaWorkflowTemplatePlacement = {
+  def apply(): SchemaWorkflowTemplatePlacement = {
     val __obj = js.Dynamic.literal()
-    if (clusterSelector != null) __obj.updateDynamic("clusterSelector")(clusterSelector.asInstanceOf[js.Any])
-    if (managedCluster != null) __obj.updateDynamic("managedCluster")(managedCluster.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkflowTemplatePlacement]
   }
+  @scala.inline
+  implicit class SchemaWorkflowTemplatePlacementOps[Self <: SchemaWorkflowTemplatePlacement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterSelector(value: SchemaClusterSelector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterSelector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagedCluster(value: SchemaManagedCluster): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedCluster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedCluster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedCluster")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

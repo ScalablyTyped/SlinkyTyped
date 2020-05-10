@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBleedRatio extends js.Object {
-  var bleedRatio: js.UndefOr[Double] = js.undefined
-  var clipToRenderBounds: js.UndefOr[Boolean] = js.undefined
-  var fieldNames: js.UndefOr[js.Array[String]] = js.undefined
-  var simplifyEnabled: js.UndefOr[Boolean] = js.undefined
-  var version: js.UndefOr[String] = js.undefined
+  var bleedRatio: js.UndefOr[Double] = js.native
+  var clipToRenderBounds: js.UndefOr[Boolean] = js.native
+  var fieldNames: js.UndefOr[js.Array[String]] = js.native
+  var simplifyEnabled: js.UndefOr[Boolean] = js.native
+  var version: js.UndefOr[String] = js.native
 }
 
 object AnonBleedRatio {
   @scala.inline
-  def apply(
-    bleedRatio: Int | Double = null,
-    clipToRenderBounds: js.UndefOr[Boolean] = js.undefined,
-    fieldNames: js.Array[String] = null,
-    simplifyEnabled: js.UndefOr[Boolean] = js.undefined,
-    version: String = null
-  ): AnonBleedRatio = {
+  def apply(): AnonBleedRatio = {
     val __obj = js.Dynamic.literal()
-    if (bleedRatio != null) __obj.updateDynamic("bleedRatio")(bleedRatio.asInstanceOf[js.Any])
-    if (!js.isUndefined(clipToRenderBounds)) __obj.updateDynamic("clipToRenderBounds")(clipToRenderBounds.asInstanceOf[js.Any])
-    if (fieldNames != null) __obj.updateDynamic("fieldNames")(fieldNames.asInstanceOf[js.Any])
-    if (!js.isUndefined(simplifyEnabled)) __obj.updateDynamic("simplifyEnabled")(simplifyEnabled.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBleedRatio]
   }
+  @scala.inline
+  implicit class AnonBleedRatioOps[Self <: AnonBleedRatio] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBleedRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bleedRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBleedRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bleedRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipToRenderBounds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipToRenderBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipToRenderBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipToRenderBounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimplifyEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simplifyEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimplifyEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simplifyEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

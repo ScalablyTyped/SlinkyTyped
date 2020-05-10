@@ -35,6 +35,8 @@ import typingsSlinky.antd.progressProgressMod.ProgressType
 import typingsSlinky.antd.radioInterfaceMod.RadioGroupButtonStyle
 import typingsSlinky.antd.renderListBodyMod.OmitProp
 import typingsSlinky.antd.responsiveObserveMod.Breakpoint
+import typingsSlinky.antd.resultMod.ExceptionStatusType
+import typingsSlinky.antd.resultMod.ResultStatusType
 import typingsSlinky.antd.siderMod.CollapseType
 import typingsSlinky.antd.siderMod.SiderTheme
 import typingsSlinky.antd.sizeContextMod._SizeType
@@ -150,7 +152,16 @@ object antdStrings {
   sealed trait `-webkit-sticky` extends js.Object
   
   @js.native
-  sealed trait `4Dot0Dot0` extends js.Object
+  sealed trait `403` extends ExceptionStatusType
+  
+  @js.native
+  sealed trait `404` extends ExceptionStatusType
+  
+  @js.native
+  sealed trait `4Dot0Dot4` extends js.Object
+  
+  @js.native
+  sealed trait `500` extends ExceptionStatusType
   
   @js.native
   sealed trait POST extends js.Object
@@ -160,12 +171,6 @@ object antdStrings {
   
   @js.native
   sealed trait SECRET_COMBOBOX_MODE_DO_NOT_USE extends js.Object
-  
-  @js.native
-  sealed trait SELECT_ALL extends js.Object
-  
-  @js.native
-  sealed trait SELECT_INVERT extends js.Object
   
   @js.native
   sealed trait _empty extends ValidateStatus
@@ -764,6 +769,7 @@ object antdStrings {
     extends IconType
        with NoticeType
        with PresetStatusColorType
+       with ResultStatusType
        with UploadFileStatus
        with ValidateStatus
   
@@ -926,6 +932,7 @@ object antdStrings {
   sealed trait info
     extends IconType
        with NoticeType
+       with ResultStatusType
   
   @js.native
   sealed trait inherit extends js.Object
@@ -970,9 +977,6 @@ object antdStrings {
   
   @js.native
   sealed trait `inter-word` extends js.Object
-  
-  @js.native
-  sealed trait internalMark extends js.Object
   
   @js.native
   sealed trait isolate extends js.Object
@@ -1875,6 +1879,7 @@ object antdStrings {
     extends IconType
        with NoticeType
        with PresetStatusColorType
+       with ResultStatusType
        with UploadFileStatus
        with ValidateStatus
   
@@ -2108,6 +2113,7 @@ object antdStrings {
        with IconType
        with NoticeType
        with PresetStatusColorType
+       with ResultStatusType
        with ValidateStatus
   
   @js.native
@@ -2212,17 +2218,19 @@ object antdStrings {
   @scala.inline
   def `-webkit-sticky`: `-webkit-sticky` = "-webkit-sticky".asInstanceOf[`-webkit-sticky`]
   @scala.inline
-  def `4Dot0Dot0`: `4Dot0Dot0` = "4.0.0".asInstanceOf[`4Dot0Dot0`]
+  def `403`: `403` = "403".asInstanceOf[`403`]
+  @scala.inline
+  def `404`: `404` = "404".asInstanceOf[`404`]
+  @scala.inline
+  def `4Dot0Dot4`: `4Dot0Dot4` = "4.0.4".asInstanceOf[`4Dot0Dot4`]
+  @scala.inline
+  def `500`: `500` = "500".asInstanceOf[`500`]
   @scala.inline
   def POST: POST = "POST".asInstanceOf[POST]
   @scala.inline
   def PUT: PUT = "PUT".asInstanceOf[PUT]
   @scala.inline
   def SECRET_COMBOBOX_MODE_DO_NOT_USE: SECRET_COMBOBOX_MODE_DO_NOT_USE = "SECRET_COMBOBOX_MODE_DO_NOT_USE".asInstanceOf[SECRET_COMBOBOX_MODE_DO_NOT_USE]
-  @scala.inline
-  def SELECT_ALL: SELECT_ALL = "SELECT_ALL".asInstanceOf[SELECT_ALL]
-  @scala.inline
-  def SELECT_INVERT: SELECT_INVERT = "SELECT_INVERT".asInstanceOf[SELECT_INVERT]
   @scala.inline
   def _empty: _empty = "".asInstanceOf[_empty]
   @scala.inline
@@ -2234,7 +2242,7 @@ object antdStrings {
   @scala.inline
   def additions: additions = "additions".asInstanceOf[additions]
   @scala.inline
-  def `additions text`: `additions text` = "additions text".asInstanceOf[`additions text`]
+  def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   @scala.inline
   def after: after = "after".asInstanceOf[after]
   @scala.inline
@@ -2729,8 +2737,6 @@ object antdStrings {
   def `inter-character`: `inter-character` = "inter-character".asInstanceOf[`inter-character`]
   @scala.inline
   def `inter-word`: `inter-word` = "inter-word".asInstanceOf[`inter-word`]
-  @scala.inline
-  def internalMark: internalMark = "internalMark".asInstanceOf[internalMark]
   @scala.inline
   def isolate: isolate = "isolate".asInstanceOf[isolate]
   @scala.inline

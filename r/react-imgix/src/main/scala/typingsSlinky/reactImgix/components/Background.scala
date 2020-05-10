@@ -1,9 +1,7 @@
 package typingsSlinky.reactImgix.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.reactImgix.mod.BackgroundProps
 import typingsSlinky.reactImgix.mod.ImgixHTMLAttributes
@@ -12,28 +10,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Background
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Background {
   @JSImport("react-imgix", "Background")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    src: String,
-    disableLibraryParam: js.UndefOr[Boolean] = js.undefined,
-    htmlAttributes: ImgixHTMLAttributes = null,
-    imgixParams: ImigixParams = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableLibraryParam)) __obj.updateDynamic("disableLibraryParam")(disableLibraryParam.asInstanceOf[js.Any])
-    if (htmlAttributes != null) __obj.updateDynamic("htmlAttributes")(htmlAttributes.asInstanceOf[js.Any])
-    if (imgixParams != null) __obj.updateDynamic("imgixParams")(imgixParams.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableLibraryParam(value: Boolean): this.type = set("disableLibraryParam", value.asInstanceOf[js.Any])
+    @scala.inline
+    def htmlAttributes(value: ImgixHTMLAttributes): this.type = set("htmlAttributes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imgixParams(value: ImigixParams): this.type = set("imgixParams", value.asInstanceOf[js.Any])
   }
-  type Props = PropsWithChildren[BackgroundProps]
+  
+  def withProps(p: PropsWithChildren[BackgroundProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(src: String): Builder = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[BackgroundProps]]))
+  }
 }
 

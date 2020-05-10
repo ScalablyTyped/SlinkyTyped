@@ -1,8 +1,7 @@
 package typingsSlinky.reactContentLoader.holderMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
+import slinky.core.ReactComponentClass
 import typingsSlinky.reactNativeSvg.mod.CircleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,5 +17,5 @@ class Circle protected ()
 
 @JSImport("react-content-loader/dist/native/Holder", "Circle")
 @js.native
-object Circle extends TopLevel[ComponentClass[CircleProps, ComponentState]]
+object Circle extends TopLevel[ReactComponentClass[CircleProps]]
 

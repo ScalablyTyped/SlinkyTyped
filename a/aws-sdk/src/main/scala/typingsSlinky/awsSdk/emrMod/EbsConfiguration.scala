@@ -18,14 +18,41 @@ trait EbsConfiguration extends js.Object {
 
 object EbsConfiguration {
   @scala.inline
-  def apply(
-    EbsBlockDeviceConfigs: EbsBlockDeviceConfigList = null,
-    EbsOptimized: js.UndefOr[scala.Boolean] = js.undefined
-  ): EbsConfiguration = {
+  def apply(): EbsConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (EbsBlockDeviceConfigs != null) __obj.updateDynamic("EbsBlockDeviceConfigs")(EbsBlockDeviceConfigs.asInstanceOf[js.Any])
-    if (!js.isUndefined(EbsOptimized)) __obj.updateDynamic("EbsOptimized")(EbsOptimized.asInstanceOf[js.Any])
     __obj.asInstanceOf[EbsConfiguration]
   }
+  @scala.inline
+  implicit class EbsConfigurationOps[Self <: EbsConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEbsBlockDeviceConfigs(value: EbsBlockDeviceConfigList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsBlockDeviceConfigs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEbsBlockDeviceConfigs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsBlockDeviceConfigs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEbsOptimized(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsOptimized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEbsOptimized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsOptimized")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

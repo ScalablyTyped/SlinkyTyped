@@ -18,11 +18,41 @@ trait AccountAttribute extends js.Object {
 
 object AccountAttribute {
   @scala.inline
-  def apply(AttributeName: String = null, AttributeValues: AttributeValueList = null): AccountAttribute = {
+  def apply(): AccountAttribute = {
     val __obj = js.Dynamic.literal()
-    if (AttributeName != null) __obj.updateDynamic("AttributeName")(AttributeName.asInstanceOf[js.Any])
-    if (AttributeValues != null) __obj.updateDynamic("AttributeValues")(AttributeValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountAttribute]
   }
+  @scala.inline
+  implicit class AccountAttributeOps[Self <: AccountAttribute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeValues(value: AttributeValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValues")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

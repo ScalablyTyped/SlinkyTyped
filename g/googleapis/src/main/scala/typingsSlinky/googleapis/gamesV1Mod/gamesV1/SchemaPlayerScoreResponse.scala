@@ -45,22 +45,89 @@ trait SchemaPlayerScoreResponse extends js.Object {
 
 object SchemaPlayerScoreResponse {
   @scala.inline
-  def apply(
-    beatenScoreTimeSpans: js.Array[String] = null,
-    formattedScore: String = null,
-    kind: String = null,
-    leaderboardId: String = null,
-    scoreTag: String = null,
-    unbeatenScores: js.Array[SchemaPlayerScore] = null
-  ): SchemaPlayerScoreResponse = {
+  def apply(): SchemaPlayerScoreResponse = {
     val __obj = js.Dynamic.literal()
-    if (beatenScoreTimeSpans != null) __obj.updateDynamic("beatenScoreTimeSpans")(beatenScoreTimeSpans.asInstanceOf[js.Any])
-    if (formattedScore != null) __obj.updateDynamic("formattedScore")(formattedScore.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (leaderboardId != null) __obj.updateDynamic("leaderboardId")(leaderboardId.asInstanceOf[js.Any])
-    if (scoreTag != null) __obj.updateDynamic("scoreTag")(scoreTag.asInstanceOf[js.Any])
-    if (unbeatenScores != null) __obj.updateDynamic("unbeatenScores")(unbeatenScores.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPlayerScoreResponse]
   }
+  @scala.inline
+  implicit class SchemaPlayerScoreResponseOps[Self <: SchemaPlayerScoreResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeatenScoreTimeSpans(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beatenScoreTimeSpans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeatenScoreTimeSpans: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beatenScoreTimeSpans")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormattedScore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedScore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormattedScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedScore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeaderboardId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaderboardId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeaderboardId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaderboardId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScoreTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScoreTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnbeatenScores(value: js.Array[SchemaPlayerScore]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unbeatenScores")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnbeatenScores: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unbeatenScores")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

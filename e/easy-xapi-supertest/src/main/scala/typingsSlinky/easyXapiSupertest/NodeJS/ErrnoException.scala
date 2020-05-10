@@ -5,31 +5,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ErrnoException extends Error {
-  var code: js.UndefOr[String] = js.undefined
-  var errno: js.UndefOr[Double] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var syscall: js.UndefOr[String] = js.undefined
+  var code: js.UndefOr[String] = js.native
+  var errno: js.UndefOr[Double] = js.native
+  var path: js.UndefOr[String] = js.native
+  var syscall: js.UndefOr[String] = js.native
 }
 
 object ErrnoException {
   @scala.inline
-  def apply(
-    message: String,
-    name: String,
-    code: String = null,
-    errno: Int | Double = null,
-    path: String = null,
-    stack: String = null,
-    syscall: String = null
-  ): ErrnoException = {
+  def apply(message: String, name: String): ErrnoException = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (errno != null) __obj.updateDynamic("errno")(errno.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
-    if (syscall != null) __obj.updateDynamic("syscall")(syscall.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrnoException]
   }
+  @scala.inline
+  implicit class ErrnoExceptionOps[Self <: ErrnoException] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrno(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errno")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrno: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errno")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSyscall(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syscall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyscall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syscall")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

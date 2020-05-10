@@ -420,6 +420,7 @@ package object iotMod {
   type KeyValue = java.lang.String
   type LaserMaxResults = scala.Double
   type LastModifiedDate = js.Date
+  type LogGroupName = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DEBUG
     - typingsSlinky.awsSdk.awsSdkStrings.INFO
@@ -471,7 +472,7 @@ package object iotMod {
   */
   type MitigationActionType = typingsSlinky.awsSdk.iotMod._MitigationActionType | java.lang.String
   type MqttClientId = java.lang.String
-  type MqttPassword = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotMod.Blob | java.lang.String
+  type MqttPassword = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotMod.Blob | java.lang.String
   type MqttUsername = java.lang.String
   type NextToken = java.lang.String
   type NonCompliantChecksCount = scala.Double
@@ -635,7 +636,7 @@ package object iotMod {
   type SetAsActive = scala.Boolean
   type SetAsActiveFlag = scala.Boolean
   type SetAsDefault = scala.Boolean
-  type Signature = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotMod.Blob | java.lang.String
+  type Signature = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotMod.Blob | java.lang.String
   type SignatureAlgorithm = java.lang.String
   type SigningJobId = java.lang.String
   type SigningProfileName = java.lang.String

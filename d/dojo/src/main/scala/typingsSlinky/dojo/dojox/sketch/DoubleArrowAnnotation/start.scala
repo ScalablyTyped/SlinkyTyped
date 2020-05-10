@@ -10,15 +10,16 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait start extends js.Object {
   /**
     *
     */
-  var x: Double
+  var x: Double = js.native
   /**
     *
     */
-  var y: Double
+  var y: Double = js.native
 }
 
 /**

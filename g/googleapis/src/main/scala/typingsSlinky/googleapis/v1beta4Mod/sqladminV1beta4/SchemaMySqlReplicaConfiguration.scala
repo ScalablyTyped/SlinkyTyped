@@ -65,32 +65,149 @@ trait SchemaMySqlReplicaConfiguration extends js.Object {
 
 object SchemaMySqlReplicaConfiguration {
   @scala.inline
-  def apply(
-    caCertificate: String = null,
-    clientCertificate: String = null,
-    clientKey: String = null,
-    connectRetryInterval: Int | Double = null,
-    dumpFilePath: String = null,
-    kind: String = null,
-    masterHeartbeatPeriod: String = null,
-    password: String = null,
-    sslCipher: String = null,
-    username: String = null,
-    verifyServerCertificate: js.UndefOr[Boolean] = js.undefined
-  ): SchemaMySqlReplicaConfiguration = {
+  def apply(): SchemaMySqlReplicaConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (caCertificate != null) __obj.updateDynamic("caCertificate")(caCertificate.asInstanceOf[js.Any])
-    if (clientCertificate != null) __obj.updateDynamic("clientCertificate")(clientCertificate.asInstanceOf[js.Any])
-    if (clientKey != null) __obj.updateDynamic("clientKey")(clientKey.asInstanceOf[js.Any])
-    if (connectRetryInterval != null) __obj.updateDynamic("connectRetryInterval")(connectRetryInterval.asInstanceOf[js.Any])
-    if (dumpFilePath != null) __obj.updateDynamic("dumpFilePath")(dumpFilePath.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (masterHeartbeatPeriod != null) __obj.updateDynamic("masterHeartbeatPeriod")(masterHeartbeatPeriod.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (sslCipher != null) __obj.updateDynamic("sslCipher")(sslCipher.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
-    if (!js.isUndefined(verifyServerCertificate)) __obj.updateDynamic("verifyServerCertificate")(verifyServerCertificate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMySqlReplicaConfiguration]
   }
+  @scala.inline
+  implicit class SchemaMySqlReplicaConfigurationOps[Self <: SchemaMySqlReplicaConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaCertificate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caCertificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientCertificate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientCertificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectRetryInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectRetryInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectRetryInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectRetryInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDumpFilePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dumpFilePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDumpFilePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dumpFilePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterHeartbeatPeriod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterHeartbeatPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterHeartbeatPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterHeartbeatPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSslCipher(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslCipher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslCipher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslCipher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerifyServerCertificate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyServerCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerifyServerCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyServerCertificate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

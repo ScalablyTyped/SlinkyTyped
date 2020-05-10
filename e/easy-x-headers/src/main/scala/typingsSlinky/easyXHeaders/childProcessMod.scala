@@ -3,7 +3,6 @@ package typingsSlinky.easyXHeaders
 import typingsSlinky.easyXHeaders.eventsMod.EventEmitter
 import typingsSlinky.easyXHeaders.streamMod.Readable
 import typingsSlinky.easyXHeaders.streamMod.Writable
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +27,7 @@ object childProcessMod extends js.Object {
   def exec(
     command: String,
     callback: js.Function3[
-      /* error */ Error, 
+      /* error */ js.Error, 
       /* stdout */ typingsSlinky.node.Buffer, 
       /* stderr */ typingsSlinky.node.Buffer, 
       Unit
@@ -51,7 +50,7 @@ object childProcessMod extends js.Object {
     file: String,
     args: js.Array[String],
     callback: js.Function3[
-      /* error */ Error, 
+      /* error */ js.Error, 
       /* stdout */ typingsSlinky.node.Buffer, 
       /* stderr */ typingsSlinky.node.Buffer, 
       Unit
@@ -72,7 +71,7 @@ object childProcessMod extends js.Object {
   def execFile(
     file: String,
     callback: js.Function3[
-      /* error */ Error, 
+      /* error */ js.Error, 
       /* stdout */ typingsSlinky.node.Buffer, 
       /* stderr */ typingsSlinky.node.Buffer, 
       Unit

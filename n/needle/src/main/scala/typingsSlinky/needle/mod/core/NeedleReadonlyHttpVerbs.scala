@@ -12,10 +12,8 @@ trait NeedleReadonlyHttpVerbs extends js.Object
 
 object NeedleReadonlyHttpVerbs {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def get: typingsSlinky.needle.needleStrings.get = "get".asInstanceOf[typingsSlinky.needle.needleStrings.get]
   @scala.inline
-  def get: typingsSlinky.needle.needleStrings.get = this.cast("get")
-  @scala.inline
-  def head: typingsSlinky.needle.needleStrings.head = this.cast("head")
+  def head: typingsSlinky.needle.needleStrings.head = "head".asInstanceOf[typingsSlinky.needle.needleStrings.head]
 }
 

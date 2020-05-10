@@ -14,10 +14,29 @@ trait UpdateWebACLResponse extends js.Object {
 
 object UpdateWebACLResponse {
   @scala.inline
-  def apply(ChangeToken: ChangeToken = null): UpdateWebACLResponse = {
+  def apply(): UpdateWebACLResponse = {
     val __obj = js.Dynamic.literal()
-    if (ChangeToken != null) __obj.updateDynamic("ChangeToken")(ChangeToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateWebACLResponse]
   }
+  @scala.inline
+  implicit class UpdateWebACLResponseOps[Self <: UpdateWebACLResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeToken(value: ChangeToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

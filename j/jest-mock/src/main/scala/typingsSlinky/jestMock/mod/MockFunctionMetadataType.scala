@@ -18,22 +18,20 @@ trait MockFunctionMetadataType extends js.Object
 
 object MockFunctionMetadataType {
   @scala.inline
-  def array: typingsSlinky.jestMock.jestMockStrings.array = this.cast("array")
+  def array: typingsSlinky.jestMock.jestMockStrings.array = "array".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.array]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def collection: typingsSlinky.jestMock.jestMockStrings.collection = "collection".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.collection]
   @scala.inline
-  def collection: typingsSlinky.jestMock.jestMockStrings.collection = this.cast("collection")
+  def constant: typingsSlinky.jestMock.jestMockStrings.constant = "constant".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.constant]
   @scala.inline
-  def constant: typingsSlinky.jestMock.jestMockStrings.constant = this.cast("constant")
+  def function: typingsSlinky.jestMock.jestMockStrings.function = "function".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.function]
   @scala.inline
-  def function: typingsSlinky.jestMock.jestMockStrings.function = this.cast("function")
+  def `null`: typingsSlinky.jestMock.jestMockStrings.`null` = "null".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.`null`]
   @scala.inline
-  def `null`: typingsSlinky.jestMock.jestMockStrings.`null` = this.cast("null")
+  def `object`: typingsSlinky.jestMock.jestMockStrings.`object` = "object".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.jestMock.jestMockStrings.`object` = this.cast("object")
+  def regexp: typingsSlinky.jestMock.jestMockStrings.regexp = "regexp".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.regexp]
   @scala.inline
-  def regexp: typingsSlinky.jestMock.jestMockStrings.regexp = this.cast("regexp")
-  @scala.inline
-  def undefined: typingsSlinky.jestMock.jestMockStrings.undefined = this.cast("undefined")
+  def undefined: typingsSlinky.jestMock.jestMockStrings.undefined = "undefined".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.undefined]
 }
 

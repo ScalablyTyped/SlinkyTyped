@@ -13,12 +13,10 @@ trait ReleaseType extends js.Object
 
 object ReleaseType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def major: typingsSlinky.conventionalRecommendedBump.conventionalRecommendedBumpStrings.major = "major".asInstanceOf[typingsSlinky.conventionalRecommendedBump.conventionalRecommendedBumpStrings.major]
   @scala.inline
-  def major: typingsSlinky.conventionalRecommendedBump.conventionalRecommendedBumpStrings.major = this.cast("major")
+  def minor: typingsSlinky.conventionalRecommendedBump.conventionalRecommendedBumpStrings.minor = "minor".asInstanceOf[typingsSlinky.conventionalRecommendedBump.conventionalRecommendedBumpStrings.minor]
   @scala.inline
-  def minor: typingsSlinky.conventionalRecommendedBump.conventionalRecommendedBumpStrings.minor = this.cast("minor")
-  @scala.inline
-  def patch: typingsSlinky.conventionalRecommendedBump.conventionalRecommendedBumpStrings.patch = this.cast("patch")
+  def patch: typingsSlinky.conventionalRecommendedBump.conventionalRecommendedBumpStrings.patch = "patch".asInstanceOf[typingsSlinky.conventionalRecommendedBump.conventionalRecommendedBumpStrings.patch]
 }
 

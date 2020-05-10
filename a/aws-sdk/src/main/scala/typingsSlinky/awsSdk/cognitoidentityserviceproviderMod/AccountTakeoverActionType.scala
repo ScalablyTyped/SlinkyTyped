@@ -20,8 +20,27 @@ object AccountTakeoverActionType {
   @scala.inline
   def apply(EventAction: AccountTakeoverEventActionType, Notify: AccountTakeoverActionNotifyType): AccountTakeoverActionType = {
     val __obj = js.Dynamic.literal(EventAction = EventAction.asInstanceOf[js.Any], Notify = Notify.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AccountTakeoverActionType]
   }
+  @scala.inline
+  implicit class AccountTakeoverActionTypeOps[Self <: AccountTakeoverActionType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventAction(value: AccountTakeoverEventActionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotify(value: AccountTakeoverActionNotifyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Notify")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

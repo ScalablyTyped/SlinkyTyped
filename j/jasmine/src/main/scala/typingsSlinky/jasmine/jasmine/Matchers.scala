@@ -3,8 +3,6 @@ package typingsSlinky.jasmine.jasmine
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.Instantiable4
-import typingsSlinky.std.Error
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -96,16 +94,16 @@ trait Matchers[T]
     */
   def toMatch(expected: String): Boolean = js.native
   def toMatch(expected: String, expectationFailOutput: js.Any): Boolean = js.native
-  def toMatch(expected: RegExp): Boolean = js.native
-  def toMatch(expected: RegExp, expectationFailOutput: js.Any): Boolean = js.native
+  def toMatch(expected: js.RegExp): Boolean = js.native
+  def toMatch(expected: js.RegExp, expectationFailOutput: js.Any): Boolean = js.native
   def toThrow(): Boolean = js.native
   def toThrow(expected: js.Any): Boolean = js.native
   def toThrowError(): Boolean = js.native
-  def toThrowError(expected: Instantiable1[/* args (repeated) */ js.Any, Error]): Boolean = js.native
-  def toThrowError(expected: Instantiable1[/* args (repeated) */ js.Any, Error], message: String): Boolean = js.native
-  def toThrowError(expected: Instantiable1[/* args (repeated) */ js.Any, Error], message: RegExp): Boolean = js.native
+  def toThrowError(expected: Instantiable1[/* args (repeated) */ js.Any, js.Error]): Boolean = js.native
+  def toThrowError(expected: Instantiable1[/* args (repeated) */ js.Any, js.Error], message: String): Boolean = js.native
+  def toThrowError(expected: Instantiable1[/* args (repeated) */ js.Any, js.Error], message: js.RegExp): Boolean = js.native
   def toThrowError(message: String): Boolean = js.native
-  def toThrowError(message: RegExp): Boolean = js.native
+  def toThrowError(message: js.RegExp): Boolean = js.native
   def toThrowMatching(predicate: js.Function1[/* thrown */ js.Any, Boolean]): Boolean = js.native
   /**
     * Add some context for an expect.

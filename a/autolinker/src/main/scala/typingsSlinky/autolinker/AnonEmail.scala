@@ -16,13 +16,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEmail extends js.Object {
-  var Email: Instantiable0[EmailMatcher]
-  var Hashtag: Instantiable1[/* cfg */ HashtagMatcherConfig, HashtagMatcher]
-  var Matcher: Instantiable1[/* cfg */ MatcherConfig, typingsSlinky.autolinker.matcherMatcherMod.Matcher]
-  var Mention: Instantiable1[/* cfg */ MentionMatcherConfig, MentionMatcher]
-  var Phone: Instantiable0[PhoneMatcher]
-  var Url: Instantiable1[/* cfg */ UrlMatcherConfig, UrlMatcher]
+  var Email: Instantiable0[EmailMatcher] = js.native
+  var Hashtag: Instantiable1[/* cfg */ HashtagMatcherConfig, HashtagMatcher] = js.native
+  var Matcher: Instantiable1[/* cfg */ MatcherConfig, typingsSlinky.autolinker.matcherMatcherMod.Matcher] = js.native
+  var Mention: Instantiable1[/* cfg */ MentionMatcherConfig, MentionMatcher] = js.native
+  var Phone: Instantiable0[PhoneMatcher] = js.native
+  var Url: Instantiable1[/* cfg */ UrlMatcherConfig, UrlMatcher] = js.native
 }
 
 object AnonEmail {
@@ -36,8 +37,51 @@ object AnonEmail {
     Url: Instantiable1[/* cfg */ UrlMatcherConfig, UrlMatcher]
   ): AnonEmail = {
     val __obj = js.Dynamic.literal(Email = Email.asInstanceOf[js.Any], Hashtag = Hashtag.asInstanceOf[js.Any], Matcher = Matcher.asInstanceOf[js.Any], Mention = Mention.asInstanceOf[js.Any], Phone = Phone.asInstanceOf[js.Any], Url = Url.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonEmail]
   }
+  @scala.inline
+  implicit class AnonEmailOps[Self <: AnonEmail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmail(value: Instantiable0[EmailMatcher]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHashtag(value: Instantiable1[/* cfg */ HashtagMatcherConfig, HashtagMatcher]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hashtag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMatcher(value: Instantiable1[/* cfg */ MatcherConfig, Matcher]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Matcher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMention(value: Instantiable1[/* cfg */ MentionMatcherConfig, MentionMatcher]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mention")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPhone(value: Instantiable0[PhoneMatcher]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Phone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: Instantiable1[/* cfg */ UrlMatcherConfig, UrlMatcher]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

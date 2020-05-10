@@ -15,16 +15,14 @@ trait BackupStatus extends js.Object
 
 object BackupStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fileready_disabled: typingsSlinky.nodeHueApi.nodeHueApiStrings.fileready_disabled = "fileready_disabled".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.fileready_disabled]
   @scala.inline
-  def fileready_disabled: typingsSlinky.nodeHueApi.nodeHueApiStrings.fileready_disabled = this.cast("fileready_disabled")
+  def idle: typingsSlinky.nodeHueApi.nodeHueApiStrings.idle = "idle".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.idle]
   @scala.inline
-  def idle: typingsSlinky.nodeHueApi.nodeHueApiStrings.idle = this.cast("idle")
+  def prepare_restore: typingsSlinky.nodeHueApi.nodeHueApiStrings.prepare_restore = "prepare_restore".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.prepare_restore]
   @scala.inline
-  def prepare_restore: typingsSlinky.nodeHueApi.nodeHueApiStrings.prepare_restore = this.cast("prepare_restore")
+  def restoring: typingsSlinky.nodeHueApi.nodeHueApiStrings.restoring = "restoring".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.restoring]
   @scala.inline
-  def restoring: typingsSlinky.nodeHueApi.nodeHueApiStrings.restoring = this.cast("restoring")
-  @scala.inline
-  def startmigration: typingsSlinky.nodeHueApi.nodeHueApiStrings.startmigration = this.cast("startmigration")
+  def startmigration: typingsSlinky.nodeHueApi.nodeHueApiStrings.startmigration = "startmigration".asInstanceOf[typingsSlinky.nodeHueApi.nodeHueApiStrings.startmigration]
 }
 

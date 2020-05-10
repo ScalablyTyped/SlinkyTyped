@@ -10,7 +10,6 @@ import typingsSlinky.ssh2SftpClient.ssh2SftpClientStrings.`-_`
 import typingsSlinky.ssh2SftpClient.ssh2SftpClientStrings.d
 import typingsSlinky.ssh2SftpClient.ssh2SftpClientStrings.l
 import typingsSlinky.ssh2Streams.mod.TransferOptions
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +38,7 @@ trait sftp extends js.Object {
   def get(path: String, dst: WritableStream, options: TransferOptions): js.Promise[String | WritableStream | Buffer] = js.native
   def list(remoteFilePath: String): js.Promise[js.Array[FileInfo]] = js.native
   def list(remoteFilePath: String, pattern: String): js.Promise[js.Array[FileInfo]] = js.native
-  def list(remoteFilePath: String, pattern: RegExp): js.Promise[js.Array[FileInfo]] = js.native
+  def list(remoteFilePath: String, pattern: js.RegExp): js.Promise[js.Array[FileInfo]] = js.native
   def mkdir(remoteFilePath: String): js.Promise[String] = js.native
   def mkdir(remoteFilePath: String, recursive: Boolean): js.Promise[String] = js.native
   def on(event: String, callback: js.Function1[/* repeated */ js.Any, Unit]): Unit = js.native

@@ -1,9 +1,7 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.AnonName
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
@@ -13,25 +11,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GroupAvatar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.GroupAvatar] {
+object GroupAvatar {
   @JSImport("gestalt", "GroupAvatar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    collaborators: js.Array[AnonName],
-    outline: js.UndefOr[Boolean] = js.undefined,
-    size: sm | md | lg = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.GroupAvatar] = {
-    val __obj = js.Dynamic.literal(collaborators = collaborators.asInstanceOf[js.Any])
-    if (!js.isUndefined(outline)) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.GroupAvatar] {
+    @scala.inline
+    def outline(value: Boolean): this.type = set("outline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: sm | md | lg): this.type = set("size", value.asInstanceOf[js.Any])
   }
-  type Props = GroupAvatarProps
+  
+  def withProps(p: GroupAvatarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(collaborators: js.Array[AnonName]): Builder = {
+    val __props = js.Dynamic.literal(collaborators = collaborators.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[GroupAvatarProps]))
+  }
 }
 

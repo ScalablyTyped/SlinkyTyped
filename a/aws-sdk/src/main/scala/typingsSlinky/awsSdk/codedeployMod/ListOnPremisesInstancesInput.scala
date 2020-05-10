@@ -22,16 +22,53 @@ trait ListOnPremisesInstancesInput extends js.Object {
 
 object ListOnPremisesInstancesInput {
   @scala.inline
-  def apply(
-    nextToken: NextToken = null,
-    registrationStatus: RegistrationStatus = null,
-    tagFilters: TagFilterList = null
-  ): ListOnPremisesInstancesInput = {
+  def apply(): ListOnPremisesInstancesInput = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (registrationStatus != null) __obj.updateDynamic("registrationStatus")(registrationStatus.asInstanceOf[js.Any])
-    if (tagFilters != null) __obj.updateDynamic("tagFilters")(tagFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListOnPremisesInstancesInput]
   }
+  @scala.inline
+  implicit class ListOnPremisesInstancesInputOps[Self <: ListOnPremisesInstancesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistrationStatus(value: RegistrationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistrationStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagFilters(value: TagFilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFilters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

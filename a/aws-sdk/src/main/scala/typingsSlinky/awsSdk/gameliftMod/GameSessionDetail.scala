@@ -18,11 +18,41 @@ trait GameSessionDetail extends js.Object {
 
 object GameSessionDetail {
   @scala.inline
-  def apply(GameSession: GameSession = null, ProtectionPolicy: ProtectionPolicy = null): GameSessionDetail = {
+  def apply(): GameSessionDetail = {
     val __obj = js.Dynamic.literal()
-    if (GameSession != null) __obj.updateDynamic("GameSession")(GameSession.asInstanceOf[js.Any])
-    if (ProtectionPolicy != null) __obj.updateDynamic("ProtectionPolicy")(ProtectionPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[GameSessionDetail]
   }
+  @scala.inline
+  implicit class GameSessionDetailOps[Self <: GameSessionDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGameSession(value: GameSession): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSession")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGameSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSession")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtectionPolicy(value: ProtectionPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProtectionPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtectionPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProtectionPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

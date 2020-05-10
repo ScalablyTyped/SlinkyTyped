@@ -5,20 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFetchSize extends js.Object {
-  var fetchSize: js.UndefOr[Double] = js.undefined
-  var maxCount: js.UndefOr[Double] = js.undefined
-  var scroller: js.UndefOr[Element] = js.undefined
+  var fetchSize: js.UndefOr[Double] = js.native
+  var maxCount: js.UndefOr[Double] = js.native
+  var scroller: js.UndefOr[Element] = js.native
 }
 
 object AnonFetchSize {
   @scala.inline
-  def apply(fetchSize: Int | Double = null, maxCount: Int | Double = null, scroller: Element = null): AnonFetchSize = {
+  def apply(): AnonFetchSize = {
     val __obj = js.Dynamic.literal()
-    if (fetchSize != null) __obj.updateDynamic("fetchSize")(fetchSize.asInstanceOf[js.Any])
-    if (maxCount != null) __obj.updateDynamic("maxCount")(maxCount.asInstanceOf[js.Any])
-    if (scroller != null) __obj.updateDynamic("scroller")(scroller.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFetchSize]
   }
+  @scala.inline
+  implicit class AnonFetchSizeOps[Self <: AnonFetchSize] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFetchSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFetchSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScroller(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScroller: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroller")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

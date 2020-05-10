@@ -16,10 +16,8 @@ trait DraftHandleValue extends js.Object
 
 object DraftHandleValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def handled: typingsSlinky.draftJs.draftJsStrings.handled = "handled".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.handled]
   @scala.inline
-  def handled: typingsSlinky.draftJs.draftJsStrings.handled = this.cast("handled")
-  @scala.inline
-  def `not-handled`: typingsSlinky.draftJs.draftJsStrings.`not-handled` = this.cast("not-handled")
+  def `not-handled`: typingsSlinky.draftJs.draftJsStrings.`not-handled` = "not-handled".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.`not-handled`]
 }
 

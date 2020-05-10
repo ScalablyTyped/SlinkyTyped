@@ -20,24 +20,22 @@ trait ImageType extends js.Object
 
 object ImageType {
   @scala.inline
-  def Bilevel: typingsSlinky.gm.gmStrings.Bilevel = this.cast("Bilevel")
+  def Bilevel: typingsSlinky.gm.gmStrings.Bilevel = "Bilevel".asInstanceOf[typingsSlinky.gm.gmStrings.Bilevel]
   @scala.inline
-  def ColorSeparation: typingsSlinky.gm.gmStrings.ColorSeparation = this.cast("ColorSeparation")
+  def ColorSeparation: typingsSlinky.gm.gmStrings.ColorSeparation = "ColorSeparation".asInstanceOf[typingsSlinky.gm.gmStrings.ColorSeparation]
   @scala.inline
-  def ColorSeparationMatte: typingsSlinky.gm.gmStrings.ColorSeparationMatte = this.cast("ColorSeparationMatte")
+  def ColorSeparationMatte: typingsSlinky.gm.gmStrings.ColorSeparationMatte = "ColorSeparationMatte".asInstanceOf[typingsSlinky.gm.gmStrings.ColorSeparationMatte]
   @scala.inline
-  def Grayscale: Grayscale_ = this.cast("Grayscale")
+  def Grayscale: Grayscale_ = "Grayscale".asInstanceOf[Grayscale_]
   @scala.inline
-  def Optimize: typingsSlinky.gm.gmStrings.Optimize = this.cast("Optimize")
+  def Optimize: typingsSlinky.gm.gmStrings.Optimize = "Optimize".asInstanceOf[typingsSlinky.gm.gmStrings.Optimize]
   @scala.inline
-  def Palette: typingsSlinky.gm.gmStrings.Palette = this.cast("Palette")
+  def Palette: typingsSlinky.gm.gmStrings.Palette = "Palette".asInstanceOf[typingsSlinky.gm.gmStrings.Palette]
   @scala.inline
-  def PaletteMatte: typingsSlinky.gm.gmStrings.PaletteMatte = this.cast("PaletteMatte")
+  def PaletteMatte: typingsSlinky.gm.gmStrings.PaletteMatte = "PaletteMatte".asInstanceOf[typingsSlinky.gm.gmStrings.PaletteMatte]
   @scala.inline
-  def TrueColor: typingsSlinky.gm.gmStrings.TrueColor = this.cast("TrueColor")
+  def TrueColor: typingsSlinky.gm.gmStrings.TrueColor = "TrueColor".asInstanceOf[typingsSlinky.gm.gmStrings.TrueColor]
   @scala.inline
-  def TrueColorMatte: typingsSlinky.gm.gmStrings.TrueColorMatte = this.cast("TrueColorMatte")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TrueColorMatte: typingsSlinky.gm.gmStrings.TrueColorMatte = "TrueColorMatte".asInstanceOf[typingsSlinky.gm.gmStrings.TrueColorMatte]
 }
 

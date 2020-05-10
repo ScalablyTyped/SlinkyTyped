@@ -7,14 +7,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DisputeGateway extends js.Object {
-  def accept(disputeId: String): js.Promise[ValidatedResponse[Dispute]]
-  def addFileEvidence(disputeId: String, evidence: AnonCategory): js.Promise[ValidatedResponse[Evidence]]
-  def addTextEvidence(disputeId: String, evidence: AnonContent): js.Promise[ValidatedResponse[Evidence]]
-  def finalize(disputeId: String): js.Promise[ValidatedResponse[Dispute]]
-  def find(disputeId: String): js.Promise[Dispute]
-  def removeEvidence(disputeId: String, evidenceId: String): js.Promise[ValidatedResponse[Dispute]]
-  def search(searchFn: js.Any): Readable
+  def accept(disputeId: String): js.Promise[ValidatedResponse[Dispute]] = js.native
+  def addFileEvidence(disputeId: String, evidence: AnonCategory): js.Promise[ValidatedResponse[Evidence]] = js.native
+  def addTextEvidence(disputeId: String, evidence: AnonContent): js.Promise[ValidatedResponse[Evidence]] = js.native
+  def finalize(disputeId: String): js.Promise[ValidatedResponse[Dispute]] = js.native
+  def find(disputeId: String): js.Promise[Dispute] = js.native
+  def removeEvidence(disputeId: String, evidenceId: String): js.Promise[ValidatedResponse[Dispute]] = js.native
+  def search(searchFn: js.Any): Readable = js.native
 }
 
 object DisputeGateway {
@@ -29,8 +30,57 @@ object DisputeGateway {
     search: js.Any => Readable
   ): DisputeGateway = {
     val __obj = js.Dynamic.literal(accept = js.Any.fromFunction1(accept), addFileEvidence = js.Any.fromFunction2(addFileEvidence), addTextEvidence = js.Any.fromFunction2(addTextEvidence), finalize = js.Any.fromFunction1(finalize), find = js.Any.fromFunction1(find), removeEvidence = js.Any.fromFunction2(removeEvidence), search = js.Any.fromFunction1(search))
-  
     __obj.asInstanceOf[DisputeGateway]
   }
+  @scala.inline
+  implicit class DisputeGatewayOps[Self <: DisputeGateway] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccept(value: String => js.Promise[ValidatedResponse[Dispute]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accept")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddFileEvidence(value: (String, AnonCategory) => js.Promise[ValidatedResponse[Evidence]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addFileEvidence")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withAddTextEvidence(value: (String, AnonContent) => js.Promise[ValidatedResponse[Evidence]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addTextEvidence")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFinalize(value: String => js.Promise[ValidatedResponse[Dispute]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFind(value: String => js.Promise[Dispute]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("find")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveEvidence(value: (String, String) => js.Promise[ValidatedResponse[Dispute]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEvidence")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSearch(value: js.Any => Readable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

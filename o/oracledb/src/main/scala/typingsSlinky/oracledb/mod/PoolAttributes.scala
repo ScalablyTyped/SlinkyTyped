@@ -9,18 +9,19 @@ import scala.scalajs.js.annotation._
   * The properties provided override the default pooling properties of the Oracledb object.
   * If an attribute is not set, or is null, the value of the related Oracledb property will be used.
   */
+@js.native
 trait PoolAttributes extends js.Object {
   /**
     * Further statistics can be enabled by setting the createPool() poolAttrs parameter _enableStats to true.
     * Statistics can be output to the console by calling the pool._logStats() method.
     */
-  var _enableStats: js.UndefOr[Boolean] = js.undefined
+  var _enableStats: js.UndefOr[Boolean] = js.native
   /**
     * An alias of connectionString. Only one of the properties should be used.
     * The Oracle database instance used by connections in the pool.
     * The string can be an Easy Connect string, or a Net Service Name from a tnsnames.ora file, or the name of a local Oracle database instance.
     */
-  var connectString: js.UndefOr[String] = js.undefined
+  var connectString: js.UndefOr[String] = js.native
   /**
     * An alias of connectString. Only one of the properties should be used.
     * The Oracle database instance used by connections in the pool.
@@ -28,14 +29,14 @@ trait PoolAttributes extends js.Object {
     *
     * @since 2.1
     */
-  var connectionString: js.UndefOr[String] = js.undefined
+  var connectionString: js.UndefOr[String] = js.native
   /**
     * Sets the name used for Edition-Based Redefinition by connections in the pool.
     * This optional property overrides the oracledb.edition property.
     *
     * @since 2.2
     */
-  var edition: js.UndefOr[String] = js.undefined
+  var edition: js.UndefOr[String] = js.native
   /**
     * Indicate whether Oracle Call Interface events mode should be enabled for this pool.
     * This optional property overrides the oracledb.events property.
@@ -43,7 +44,7 @@ trait PoolAttributes extends js.Object {
     * @default false
     * @since 2.2
     */
-  var events: js.UndefOr[Boolean] = js.undefined
+  var events: js.UndefOr[Boolean] = js.native
   /**
     * Indicate whether pooled connections should be established using External Authentication.
     * This optional property overrides the oracledb.externalAuth property.
@@ -52,7 +53,7 @@ trait PoolAttributes extends js.Object {
     * @default false
     * @since 0.5
     */
-  var externalAuth: js.UndefOr[Boolean] = js.undefined
+  var externalAuth: js.UndefOr[Boolean] = js.native
   /**
     * Indicate whether connections in the pool all have the same credentials (a ‘homogeneous’ pool), or whether different credentials can be used (a ‘heterogeneous’ pool).
     * When set to false, the user name and password can be omitted from the connection.createPool() call, but will need to be given for subsequent pool.getConnection() calls.
@@ -63,26 +64,26 @@ trait PoolAttributes extends js.Object {
     * @default true
     * @since 2.3
     */
-  var homogeneous: js.UndefOr[Boolean] = js.undefined
+  var homogeneous: js.UndefOr[Boolean] = js.native
   /**
     * The password of the database user used by connections in the pool. A password is also necessary if a proxy user is specified at pool creation.
     * If homogeneous is false, then the password may be omitted at pool creation but given in subsequent pool.getConnection() calls.
     */
-  var password: js.UndefOr[String] = js.undefined
+  var password: js.UndefOr[String] = js.native
   /**
     * The poolAlias is an optional property that is used to explicitly add pools to the connection pool cache.
     * If a pool alias is provided, then the new pool will be added to the connection pool cache and the poolAlias value can then be used with methods that utilize the connection pool cache, such as oracledb.getPool() and oracledb.getConnection().
     *
     * @since 1.11
     */
-  var poolAlias: js.UndefOr[String] = js.undefined
+  var poolAlias: js.UndefOr[String] = js.native
   /**
     * The number of connections that are opened whenever a connection request exceeds the number of currently open connections.
     * This optional property overrides the oracledb.poolIncrement property.
     *
     * @default 1
     */
-  var poolIncrement: js.UndefOr[Double] = js.undefined
+  var poolIncrement: js.UndefOr[Double] = js.native
   /**
     * The maximum number of connections to which a connection pool can grow.
     * This optional property overrides the oracledb.poolMax property.
@@ -90,21 +91,21 @@ trait PoolAttributes extends js.Object {
     *
     * @default 4
     */
-  var poolMax: js.UndefOr[Double] = js.undefined
+  var poolMax: js.UndefOr[Double] = js.native
   /**
     * The maximum number of connections per shard for connection pools. This ensures that the pool is balanced towards each shard.
     * This optional property overrides the oracledb.poolMaxPerShard property.
     * 
     * @since 4.1
     */
-  var poolMaxPerShard: js.UndefOr[Double] = js.undefined
+  var poolMaxPerShard: js.UndefOr[Double] = js.native
   /**
     * The minimum number of connections a connection pool maintains, even when there is no activity to the target database.
     * This optional property overrides the oracledb.poolMin property.
     *
     * @default 0
     */
-  var poolMin: js.UndefOr[Double] = js.undefined
+  var poolMin: js.UndefOr[Double] = js.native
   /**
     * When a pool getConnection() is called and the connection has been idle in the pool for
     * at least poolPingInterval seconds, an internal “ping” will be performed first to check the aliveness of the connection.
@@ -112,7 +113,7 @@ trait PoolAttributes extends js.Object {
     *
     * @default 60
     */
-  var poolPingInterval: js.UndefOr[Double] = js.undefined
+  var poolPingInterval: js.UndefOr[Double] = js.native
   /**
     * The number of seconds after which idle connections (unused in the pool) may be terminated.
     * Idle connections are terminated only when the pool is accessed.
@@ -120,7 +121,7 @@ trait PoolAttributes extends js.Object {
     *
     * @default 60
     */
-  var poolTimeout: js.UndefOr[Double] = js.undefined
+  var poolTimeout: js.UndefOr[Double] = js.native
   /**
     * The number of milliseconds after which connection requests waiting in the connection request queue are terminated.
     * If queueTimeout is set to 0, then queued connection requests are never terminated.
@@ -128,7 +129,7 @@ trait PoolAttributes extends js.Object {
     *
     * @default 60000
     */
-  var queueTimeout: js.UndefOr[Double] = js.undefined
+  var queueTimeout: js.UndefOr[Double] = js.native
   /**
     * When sessionCallback is a Node.js function, it will be invoked for each pool.getConnection() call that will return a newly created connection in the pool.
     * It will also be called if pool.getConnection() requests a connection from the pool with a given tag, and that tag value does not match the connection’s current actual tag.
@@ -157,68 +158,275 @@ trait PoolAttributes extends js.Object {
       /* callback */ js.Function1[/* error */ js.UndefOr[DBError], Unit], 
       Unit
     ])
-  ] = js.undefined
+  ] = js.native
   /**
     * The number of statements to be cached in the statement cache of each connection in the pool.
     * This optional property overrides the oracledb.stmtCacheSize property.
     */
-  var stmtCacheSize: js.UndefOr[Double] = js.undefined
+  var stmtCacheSize: js.UndefOr[Double] = js.native
   /**
     * The database user name for connections in the pool. Can be a simple user name or a proxy of the form alison[fred].
     * If homogeneous is false, then the pool user name and password need to be specified only if the application wants that user to proxy the users supplied in subsequent pool.getConnection() calls.
     */
-  var user: js.UndefOr[String] = js.undefined
+  var user: js.UndefOr[String] = js.native
 }
 
 object PoolAttributes {
   @scala.inline
-  def apply(
-    _enableStats: js.UndefOr[Boolean] = js.undefined,
-    connectString: String = null,
-    connectionString: String = null,
-    edition: String = null,
-    events: js.UndefOr[Boolean] = js.undefined,
-    externalAuth: js.UndefOr[Boolean] = js.undefined,
-    homogeneous: js.UndefOr[Boolean] = js.undefined,
-    password: String = null,
-    poolAlias: String = null,
-    poolIncrement: Int | Double = null,
-    poolMax: Int | Double = null,
-    poolMaxPerShard: Int | Double = null,
-    poolMin: Int | Double = null,
-    poolPingInterval: Int | Double = null,
-    poolTimeout: Int | Double = null,
-    queueTimeout: Int | Double = null,
-    sessionCallback: String | (js.Function3[
-      /* connection */ Connection, 
-      /* requestedTag */ String, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[DBError], Unit], 
-      Unit
-    ]) = null,
-    stmtCacheSize: Int | Double = null,
-    user: String = null
-  ): PoolAttributes = {
+  def apply(): PoolAttributes = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(_enableStats)) __obj.updateDynamic("_enableStats")(_enableStats.asInstanceOf[js.Any])
-    if (connectString != null) __obj.updateDynamic("connectString")(connectString.asInstanceOf[js.Any])
-    if (connectionString != null) __obj.updateDynamic("connectionString")(connectionString.asInstanceOf[js.Any])
-    if (edition != null) __obj.updateDynamic("edition")(edition.asInstanceOf[js.Any])
-    if (!js.isUndefined(events)) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (!js.isUndefined(externalAuth)) __obj.updateDynamic("externalAuth")(externalAuth.asInstanceOf[js.Any])
-    if (!js.isUndefined(homogeneous)) __obj.updateDynamic("homogeneous")(homogeneous.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (poolAlias != null) __obj.updateDynamic("poolAlias")(poolAlias.asInstanceOf[js.Any])
-    if (poolIncrement != null) __obj.updateDynamic("poolIncrement")(poolIncrement.asInstanceOf[js.Any])
-    if (poolMax != null) __obj.updateDynamic("poolMax")(poolMax.asInstanceOf[js.Any])
-    if (poolMaxPerShard != null) __obj.updateDynamic("poolMaxPerShard")(poolMaxPerShard.asInstanceOf[js.Any])
-    if (poolMin != null) __obj.updateDynamic("poolMin")(poolMin.asInstanceOf[js.Any])
-    if (poolPingInterval != null) __obj.updateDynamic("poolPingInterval")(poolPingInterval.asInstanceOf[js.Any])
-    if (poolTimeout != null) __obj.updateDynamic("poolTimeout")(poolTimeout.asInstanceOf[js.Any])
-    if (queueTimeout != null) __obj.updateDynamic("queueTimeout")(queueTimeout.asInstanceOf[js.Any])
-    if (sessionCallback != null) __obj.updateDynamic("sessionCallback")(sessionCallback.asInstanceOf[js.Any])
-    if (stmtCacheSize != null) __obj.updateDynamic("stmtCacheSize")(stmtCacheSize.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[PoolAttributes]
   }
+  @scala.inline
+  implicit class PoolAttributesOps[Self <: PoolAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_enableStats(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_enableStats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_enableStats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_enableStats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalAuth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalAuth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalAuth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomogeneous(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homogeneous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomogeneous: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homogeneous")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoolAlias(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolAlias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoolAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolAlias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoolIncrement(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolIncrement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoolIncrement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolIncrement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoolMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolMax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoolMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolMax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoolMaxPerShard(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolMaxPerShard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoolMaxPerShard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolMaxPerShard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoolMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolMin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoolMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolMin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoolPingInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolPingInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoolPingInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolPingInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoolTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoolTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poolTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueueTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queueTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueueTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queueTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionCallbackFunction3(
+      value: (/* connection */ Connection, /* requestedTag */ String, /* callback */ js.Function1[/* error */ js.UndefOr[DBError], Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionCallback")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSessionCallback(
+      value: String | (js.Function3[
+          /* connection */ Connection, 
+          /* requestedTag */ String, 
+          /* callback */ js.Function1[/* error */ js.UndefOr[DBError], Unit], 
+          Unit
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStmtCacheSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stmtCacheSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStmtCacheSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stmtCacheSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,51 +1,46 @@
 package typingsSlinky.reactSticky.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSticky.mod.StickyProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Sticky
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactSticky.mod.Sticky] {
+object Sticky {
   @JSImport("react-sticky", "Sticky")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    bottomOffset: Int | Double = null,
-    disableCompensation: js.UndefOr[Boolean] = js.undefined,
-    disableHardwareAcceleration: js.UndefOr[Boolean] = js.undefined,
-    isActive: js.UndefOr[Boolean] = js.undefined,
-    onStickyStateChange: /* isSticky */ Boolean => Unit = null,
-    relative: js.UndefOr[Boolean] = js.undefined,
-    stickyClassName: String = null,
-    stickyStyle: js.Any = null,
-    style: js.Any = null,
-    topOffset: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactSticky.mod.Sticky] = {
-    val __obj = js.Dynamic.literal()
-    if (bottomOffset != null) __obj.updateDynamic("bottomOffset")(bottomOffset.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableCompensation)) __obj.updateDynamic("disableCompensation")(disableCompensation.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableHardwareAcceleration)) __obj.updateDynamic("disableHardwareAcceleration")(disableHardwareAcceleration.asInstanceOf[js.Any])
-    if (!js.isUndefined(isActive)) __obj.updateDynamic("isActive")(isActive.asInstanceOf[js.Any])
-    if (onStickyStateChange != null) __obj.updateDynamic("onStickyStateChange")(js.Any.fromFunction1(onStickyStateChange))
-    if (!js.isUndefined(relative)) __obj.updateDynamic("relative")(relative.asInstanceOf[js.Any])
-    if (stickyClassName != null) __obj.updateDynamic("stickyClassName")(stickyClassName.asInstanceOf[js.Any])
-    if (stickyStyle != null) __obj.updateDynamic("stickyStyle")(stickyStyle.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (topOffset != null) __obj.updateDynamic("topOffset")(topOffset.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactSticky.mod.Sticky] {
+    @scala.inline
+    def bottomOffset(value: Double): this.type = set("bottomOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableCompensation(value: Boolean): this.type = set("disableCompensation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableHardwareAcceleration(value: Boolean): this.type = set("disableHardwareAcceleration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isActive(value: Boolean): this.type = set("isActive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onStickyStateChange(value: /* isSticky */ Boolean => Unit): this.type = set("onStickyStateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def relative(value: Boolean): this.type = set("relative", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stickyClassName(value: String): this.type = set("stickyClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stickyStyle(value: js.Any): this.type = set("stickyStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def topOffset(value: Double): this.type = set("topOffset", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactSticky.mod.Sticky] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSticky.mod.Sticky](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StickyProps
+  
+  def withProps(p: StickyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Sticky.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

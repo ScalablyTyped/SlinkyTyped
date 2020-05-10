@@ -57,28 +57,125 @@ trait PermissionState extends js.Object {
 
 object PermissionState {
   @scala.inline
-  def apply(
-    action: Input[String] = null,
-    eventSourceToken: Input[String] = null,
-    function: Input[String | Function] = null,
-    principal: Input[String] = null,
-    qualifier: Input[String] = null,
-    sourceAccount: Input[String] = null,
-    sourceArn: Input[String] = null,
-    statementId: Input[String] = null,
-    statementIdPrefix: Input[String] = null
-  ): PermissionState = {
+  def apply(): PermissionState = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (eventSourceToken != null) __obj.updateDynamic("eventSourceToken")(eventSourceToken.asInstanceOf[js.Any])
-    if (function != null) __obj.updateDynamic("function")(function.asInstanceOf[js.Any])
-    if (principal != null) __obj.updateDynamic("principal")(principal.asInstanceOf[js.Any])
-    if (qualifier != null) __obj.updateDynamic("qualifier")(qualifier.asInstanceOf[js.Any])
-    if (sourceAccount != null) __obj.updateDynamic("sourceAccount")(sourceAccount.asInstanceOf[js.Any])
-    if (sourceArn != null) __obj.updateDynamic("sourceArn")(sourceArn.asInstanceOf[js.Any])
-    if (statementId != null) __obj.updateDynamic("statementId")(statementId.asInstanceOf[js.Any])
-    if (statementIdPrefix != null) __obj.updateDynamic("statementIdPrefix")(statementIdPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[PermissionState]
   }
+  @scala.inline
+  implicit class PermissionStateOps[Self <: PermissionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventSourceToken(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventSourceToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventSourceToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventSourceToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFunction(value: Input[String | Function]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrincipal(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrincipal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("principal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQualifier(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qualifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceAccount(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAccount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatementId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statementId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatementId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statementId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatementIdPrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statementIdPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatementIdPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statementIdPrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

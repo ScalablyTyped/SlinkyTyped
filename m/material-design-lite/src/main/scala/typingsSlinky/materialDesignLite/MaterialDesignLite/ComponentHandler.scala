@@ -1,9 +1,9 @@
 package typingsSlinky.materialDesignLite.MaterialDesignLite
 
+import org.scalajs.dom.raw.HTMLCollection
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.HTMLCollection
-import typingsSlinky.std.Node
-import typingsSlinky.std.NodeList
+import org.scalajs.dom.raw.Node
+import org.scalajs.dom.raw.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -93,7 +93,7 @@ trait ComponentHandler extends js.Object {
     * @param {!Array<!Element>} elements
     * The elements we wish to upgrade.
     */
-  def upgradeElements(elements: js.Array[typingsSlinky.std.HTMLElement]): Unit = js.native
+  def upgradeElements(elements: js.Array[HTMLElement]): Unit = js.native
   /**
     * Upgrades a specific list of elements rather than all in the DOM.
     *
@@ -107,7 +107,7 @@ trait ComponentHandler extends js.Object {
     * @param {!Element} elements
     * The elements we wish to upgrade.
     */
-  def upgradeElements(elements: typingsSlinky.std.HTMLElement): Unit = js.native
+  def upgradeElements(elements: HTMLElement): Unit = js.native
   /**
     * Upgrades a specific list of elements rather than all in the DOM.
     *

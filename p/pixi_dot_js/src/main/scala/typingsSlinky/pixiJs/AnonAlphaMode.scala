@@ -11,51 +11,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAlphaMode extends js.Object {
-  var alphaMode: js.UndefOr[ALPHA_MODES] = js.undefined
-  var anisotropicLevel: js.UndefOr[Double] = js.undefined
-  var format: js.UndefOr[FORMATS] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var mipmap: js.UndefOr[MIPMAP_MODES] = js.undefined
-  var resolution: js.UndefOr[Double] = js.undefined
-  var resourceOptions: js.UndefOr[js.Any] = js.undefined
-  var scaleMode: js.UndefOr[SCALE_MODES] = js.undefined
-  var target: js.UndefOr[TARGETS] = js.undefined
-  var `type`: js.UndefOr[TYPES] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
-  var wrapMode: js.UndefOr[WRAP_MODES] = js.undefined
+  var alphaMode: js.UndefOr[ALPHA_MODES] = js.native
+  var anisotropicLevel: js.UndefOr[Double] = js.native
+  var format: js.UndefOr[FORMATS] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var mipmap: js.UndefOr[MIPMAP_MODES] = js.native
+  var resolution: js.UndefOr[Double] = js.native
+  var resourceOptions: js.UndefOr[js.Any] = js.native
+  var scaleMode: js.UndefOr[SCALE_MODES] = js.native
+  var target: js.UndefOr[TARGETS] = js.native
+  var `type`: js.UndefOr[TYPES] = js.native
+  var width: js.UndefOr[Double] = js.native
+  var wrapMode: js.UndefOr[WRAP_MODES] = js.native
 }
 
 object AnonAlphaMode {
   @scala.inline
-  def apply(
-    alphaMode: ALPHA_MODES = null,
-    anisotropicLevel: Int | Double = null,
-    format: FORMATS = null,
-    height: Int | Double = null,
-    mipmap: MIPMAP_MODES = null,
-    resolution: Int | Double = null,
-    resourceOptions: js.Any = null,
-    scaleMode: SCALE_MODES = null,
-    target: TARGETS = null,
-    `type`: TYPES = null,
-    width: Int | Double = null,
-    wrapMode: WRAP_MODES = null
-  ): AnonAlphaMode = {
+  def apply(): AnonAlphaMode = {
     val __obj = js.Dynamic.literal()
-    if (alphaMode != null) __obj.updateDynamic("alphaMode")(alphaMode.asInstanceOf[js.Any])
-    if (anisotropicLevel != null) __obj.updateDynamic("anisotropicLevel")(anisotropicLevel.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (mipmap != null) __obj.updateDynamic("mipmap")(mipmap.asInstanceOf[js.Any])
-    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
-    if (resourceOptions != null) __obj.updateDynamic("resourceOptions")(resourceOptions.asInstanceOf[js.Any])
-    if (scaleMode != null) __obj.updateDynamic("scaleMode")(scaleMode.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (wrapMode != null) __obj.updateDynamic("wrapMode")(wrapMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAlphaMode]
   }
+  @scala.inline
+  implicit class AnonAlphaModeOps[Self <: AnonAlphaMode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlphaMode(value: ALPHA_MODES): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlphaMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alphaMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnisotropicLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anisotropicLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnisotropicLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anisotropicLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: FORMATS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMipmap(value: MIPMAP_MODES): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mipmap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMipmap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mipmap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolution(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceOptions(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleMode(value: SCALE_MODES): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: TARGETS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: TYPES): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapMode(value: WRAP_MODES): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

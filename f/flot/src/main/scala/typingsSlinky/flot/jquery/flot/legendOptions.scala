@@ -6,52 +6,160 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait legendOptions extends js.Object {
                   //number of pixels or [x margin, y margin]
-  var backgroundColor: js.UndefOr[js.Any] = js.undefined
+  var backgroundColor: js.UndefOr[js.Any] = js.native
          //null or color
-  var backgroundOpacity: js.UndefOr[Double] = js.undefined
+  var backgroundOpacity: js.UndefOr[Double] = js.native
     // between 0 and 1
-  var container: js.UndefOr[JQuery_[HTMLElement]] = js.undefined
+  var container: js.UndefOr[JQuery_[HTMLElement]] = js.native
    //  null or (fn: string, series object -> string)
-  var labelBoxBorderColor: js.UndefOr[js.Any] = js.undefined
-  var labelFormatter: js.UndefOr[js.Function2[/* label */ String, /* series */ js.Any, String]] = js.undefined
+  var labelBoxBorderColor: js.UndefOr[js.Any] = js.native
+  var labelFormatter: js.UndefOr[js.Function2[/* label */ String, /* series */ js.Any, String]] = js.native
              //"ne" or "nw" or "se" or "sw"
-  var margin: js.UndefOr[js.Any] = js.undefined
+  var margin: js.UndefOr[js.Any] = js.native
      //color
-  var noColumns: js.UndefOr[Double] = js.undefined
-  var position: js.UndefOr[String] = js.undefined
-  var show: js.UndefOr[Boolean] = js.undefined
+  var noColumns: js.UndefOr[Double] = js.native
+  var position: js.UndefOr[String] = js.native
+  var show: js.UndefOr[Boolean] = js.native
            // null or jQuery object/DOM element/jQuery expression
-  var sorted: js.UndefOr[js.Any] = js.undefined
+  var sorted: js.UndefOr[js.Any] = js.native
 }
 
 object legendOptions {
   @scala.inline
-  def apply(
-    backgroundColor: js.Any = null,
-    backgroundOpacity: Int | Double = null,
-    container: JQuery_[HTMLElement] = null,
-    labelBoxBorderColor: js.Any = null,
-    labelFormatter: (/* label */ String, /* series */ js.Any) => String = null,
-    margin: js.Any = null,
-    noColumns: Int | Double = null,
-    position: String = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    sorted: js.Any = null
-  ): legendOptions = {
+  def apply(): legendOptions = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (backgroundOpacity != null) __obj.updateDynamic("backgroundOpacity")(backgroundOpacity.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (labelBoxBorderColor != null) __obj.updateDynamic("labelBoxBorderColor")(labelBoxBorderColor.asInstanceOf[js.Any])
-    if (labelFormatter != null) __obj.updateDynamic("labelFormatter")(js.Any.fromFunction2(labelFormatter))
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (noColumns != null) __obj.updateDynamic("noColumns")(noColumns.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (sorted != null) __obj.updateDynamic("sorted")(sorted.asInstanceOf[js.Any])
     __obj.asInstanceOf[legendOptions]
   }
+  @scala.inline
+  implicit class legendOptionsOps[Self <: legendOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: JQuery_[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelBoxBorderColor(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelBoxBorderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelBoxBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelBoxBorderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelFormatter(value: (/* label */ String, /* series */ js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormatter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutLabelFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoColumns(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSorted(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sorted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSorted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sorted")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

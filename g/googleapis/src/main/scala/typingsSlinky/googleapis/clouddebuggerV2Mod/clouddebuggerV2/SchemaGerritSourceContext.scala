@@ -35,20 +35,77 @@ trait SchemaGerritSourceContext extends js.Object {
 
 object SchemaGerritSourceContext {
   @scala.inline
-  def apply(
-    aliasContext: SchemaAliasContext = null,
-    aliasName: String = null,
-    gerritProject: String = null,
-    hostUri: String = null,
-    revisionId: String = null
-  ): SchemaGerritSourceContext = {
+  def apply(): SchemaGerritSourceContext = {
     val __obj = js.Dynamic.literal()
-    if (aliasContext != null) __obj.updateDynamic("aliasContext")(aliasContext.asInstanceOf[js.Any])
-    if (aliasName != null) __obj.updateDynamic("aliasName")(aliasName.asInstanceOf[js.Any])
-    if (gerritProject != null) __obj.updateDynamic("gerritProject")(gerritProject.asInstanceOf[js.Any])
-    if (hostUri != null) __obj.updateDynamic("hostUri")(hostUri.asInstanceOf[js.Any])
-    if (revisionId != null) __obj.updateDynamic("revisionId")(revisionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGerritSourceContext]
   }
+  @scala.inline
+  implicit class SchemaGerritSourceContextOps[Self <: SchemaGerritSourceContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAliasContext(value: SchemaAliasContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliasContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAliasContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliasContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAliasName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliasName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAliasName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliasName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGerritProject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gerritProject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGerritProject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gerritProject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

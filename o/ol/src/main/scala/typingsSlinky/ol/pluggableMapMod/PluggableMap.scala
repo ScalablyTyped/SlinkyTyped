@@ -1,6 +1,7 @@
 package typingsSlinky.ol.pluggableMapMod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.eventsMod.EventsKey
 import typingsSlinky.ol.objectMod.ObjectEvent
@@ -23,7 +24,6 @@ import typingsSlinky.ol.olStrings.singleclick
 import typingsSlinky.ol.pixelMod.Pixel
 import typingsSlinky.ol.sizeMod.Size
 import typingsSlinky.std.Event_
-import typingsSlinky.std.TouchEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,7 +62,7 @@ trait PluggableMap
     callback: js.ThisFunction2[
       /* this */ S, 
       /* p0 */ typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default], 
-      /* p1 */ scala.scalajs.js.typedarray.Uint8ClampedArray | scala.scalajs.js.typedarray.Uint8Array, 
+      /* p1 */ js.typedarray.Uint8ClampedArray | js.typedarray.Uint8Array, 
       T
     ]
   ): T = js.native
@@ -71,7 +71,7 @@ trait PluggableMap
     callback: js.ThisFunction2[
       /* this */ S, 
       /* p0 */ typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default], 
-      /* p1 */ scala.scalajs.js.typedarray.Uint8ClampedArray | scala.scalajs.js.typedarray.Uint8Array, 
+      /* p1 */ js.typedarray.Uint8ClampedArray | js.typedarray.Uint8Array, 
       T
     ],
     opt_options: AtPixelOptions
@@ -229,7 +229,7 @@ trait PluggableMap
   def setSize(size: Size): Unit = js.native
   def setTarget(): Unit = js.native
   def setTarget(target: String): Unit = js.native
-  def setTarget(target: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setTarget(target: HTMLElement): Unit = js.native
   def setView(view: typingsSlinky.ol.viewMod.default): Unit = js.native
   @JSName("un")
   def un_changelayerGroup(`type`: changeColonlayerGroup, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native

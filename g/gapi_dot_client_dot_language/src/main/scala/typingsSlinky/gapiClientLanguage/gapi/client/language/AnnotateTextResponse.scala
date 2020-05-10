@@ -4,53 +4,111 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnnotateTextResponse extends js.Object {
   /**
     * The overall sentiment for the document. Populated if the user enables
     * AnnotateTextRequest.Features.extract_document_sentiment.
     */
-  var documentSentiment: js.UndefOr[Sentiment] = js.undefined
+  var documentSentiment: js.UndefOr[Sentiment] = js.native
   /**
     * Entities, along with their semantic information, in the input document.
     * Populated if the user enables
     * AnnotateTextRequest.Features.extract_entities.
     */
-  var entities: js.UndefOr[js.Array[Entity]] = js.undefined
+  var entities: js.UndefOr[js.Array[Entity]] = js.native
   /**
     * The language of the text, which will be the same as the language specified
     * in the request or, if not specified, the automatically-detected language.
     * See Document.language field for more details.
     */
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
   /**
     * Sentences in the input document. Populated if the user enables
     * AnnotateTextRequest.Features.extract_syntax.
     */
-  var sentences: js.UndefOr[js.Array[Sentence]] = js.undefined
+  var sentences: js.UndefOr[js.Array[Sentence]] = js.native
   /**
     * Tokens, along with their syntactic information, in the input document.
     * Populated if the user enables
     * AnnotateTextRequest.Features.extract_syntax.
     */
-  var tokens: js.UndefOr[js.Array[Token]] = js.undefined
+  var tokens: js.UndefOr[js.Array[Token]] = js.native
 }
 
 object AnnotateTextResponse {
   @scala.inline
-  def apply(
-    documentSentiment: Sentiment = null,
-    entities: js.Array[Entity] = null,
-    language: String = null,
-    sentences: js.Array[Sentence] = null,
-    tokens: js.Array[Token] = null
-  ): AnnotateTextResponse = {
+  def apply(): AnnotateTextResponse = {
     val __obj = js.Dynamic.literal()
-    if (documentSentiment != null) __obj.updateDynamic("documentSentiment")(documentSentiment.asInstanceOf[js.Any])
-    if (entities != null) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (sentences != null) __obj.updateDynamic("sentences")(sentences.asInstanceOf[js.Any])
-    if (tokens != null) __obj.updateDynamic("tokens")(tokens.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotateTextResponse]
   }
+  @scala.inline
+  implicit class AnnotateTextResponseOps[Self <: AnnotateTextResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentSentiment(value: Sentiment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSentiment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentSentiment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSentiment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntities(value: js.Array[Entity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSentences(value: js.Array[Sentence]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sentences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSentences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sentences")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokens(value: js.Array[Token]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,18 +16,16 @@ trait RequestCache extends js.Object
 
 object RequestCache {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.default = "default".asInstanceOf[typingsSlinky.apolloServerEnv.apolloServerEnvStrings.default]
   @scala.inline
-  def default: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.default = this.cast("default")
+  def `force-cache`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`force-cache` = "force-cache".asInstanceOf[typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`force-cache`]
   @scala.inline
-  def `force-cache`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`force-cache` = this.cast("force-cache")
+  def `no-cache`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`no-cache` = "no-cache".asInstanceOf[typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`no-cache`]
   @scala.inline
-  def `no-cache`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`no-cache` = this.cast("no-cache")
+  def `no-store`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`no-store` = "no-store".asInstanceOf[typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`no-store`]
   @scala.inline
-  def `no-store`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`no-store` = this.cast("no-store")
+  def `only-if-cached`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`only-if-cached` = "only-if-cached".asInstanceOf[typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`only-if-cached`]
   @scala.inline
-  def `only-if-cached`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`only-if-cached` = this.cast("only-if-cached")
-  @scala.inline
-  def reload: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.reload = this.cast("reload")
+  def reload: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.reload = "reload".asInstanceOf[typingsSlinky.apolloServerEnv.apolloServerEnvStrings.reload]
 }
 

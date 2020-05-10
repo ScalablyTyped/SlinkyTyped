@@ -30,19 +30,71 @@ trait StartContentModerationRequest extends js.Object {
 
 object StartContentModerationRequest {
   @scala.inline
-  def apply(
-    Video: Video,
-    ClientRequestToken: ClientRequestToken = null,
-    JobTag: JobTag = null,
-    MinConfidence: Int | Double = null,
-    NotificationChannel: NotificationChannel = null
-  ): StartContentModerationRequest = {
+  def apply(Video: Video): StartContentModerationRequest = {
     val __obj = js.Dynamic.literal(Video = Video.asInstanceOf[js.Any])
-    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
-    if (JobTag != null) __obj.updateDynamic("JobTag")(JobTag.asInstanceOf[js.Any])
-    if (MinConfidence != null) __obj.updateDynamic("MinConfidence")(MinConfidence.asInstanceOf[js.Any])
-    if (NotificationChannel != null) __obj.updateDynamic("NotificationChannel")(NotificationChannel.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartContentModerationRequest]
   }
+  @scala.inline
+  implicit class StartContentModerationRequestOps[Self <: StartContentModerationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVideo(value: Video): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Video")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobTag(value: JobTag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinConfidence(value: Percent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinConfidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinConfidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationChannel(value: NotificationChannel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationChannel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationChannel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationChannel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

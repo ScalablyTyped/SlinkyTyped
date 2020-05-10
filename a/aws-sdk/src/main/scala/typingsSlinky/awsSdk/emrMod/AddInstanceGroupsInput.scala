@@ -20,8 +20,27 @@ object AddInstanceGroupsInput {
   @scala.inline
   def apply(InstanceGroups: InstanceGroupConfigList, JobFlowId: XmlStringMaxLen256): AddInstanceGroupsInput = {
     val __obj = js.Dynamic.literal(InstanceGroups = InstanceGroups.asInstanceOf[js.Any], JobFlowId = JobFlowId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AddInstanceGroupsInput]
   }
+  @scala.inline
+  implicit class AddInstanceGroupsInputOps[Self <: AddInstanceGroupsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceGroups(value: InstanceGroupConfigList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJobFlowId(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobFlowId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

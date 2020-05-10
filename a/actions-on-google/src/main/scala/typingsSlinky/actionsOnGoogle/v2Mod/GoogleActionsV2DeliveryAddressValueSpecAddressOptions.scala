@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleActionsV2DeliveryAddressValueSpecAddressOptions extends js.Object {
   /**
     * App can optionally pass a short text giving user a hint why delivery
@@ -11,15 +12,34 @@ trait GoogleActionsV2DeliveryAddressValueSpecAddressOptions extends js.Object {
     * [determining the service area].\", the text in `[]` is the custom TTS
     * that should be populated here.
     */
-  var reason: js.UndefOr[String] = js.undefined
+  var reason: js.UndefOr[String] = js.native
 }
 
 object GoogleActionsV2DeliveryAddressValueSpecAddressOptions {
   @scala.inline
-  def apply(reason: String = null): GoogleActionsV2DeliveryAddressValueSpecAddressOptions = {
+  def apply(): GoogleActionsV2DeliveryAddressValueSpecAddressOptions = {
     val __obj = js.Dynamic.literal()
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2DeliveryAddressValueSpecAddressOptions]
   }
+  @scala.inline
+  implicit class GoogleActionsV2DeliveryAddressValueSpecAddressOptionsOps[Self <: GoogleActionsV2DeliveryAddressValueSpecAddressOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

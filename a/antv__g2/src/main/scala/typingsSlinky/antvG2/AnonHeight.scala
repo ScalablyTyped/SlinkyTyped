@@ -4,57 +4,145 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHeight extends js.Object {
   /**
     * 图片结束位置， 值为原始数据值，支持 callback
     */
-  var end: js.UndefOr[js.Any | js.Function | (js.Array[String | Double])] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
+  var end: js.UndefOr[js.Any | js.Function | (js.Array[String | Double])] = js.native
+  var height: js.UndefOr[Double] = js.native
   /**
     * x 方向的偏移量
     */
-  var offsetX: js.UndefOr[Double] = js.undefined
+  var offsetX: js.UndefOr[Double] = js.native
   /**
     * y 方向偏移量
     */
-  var offsetY: js.UndefOr[Double] = js.undefined
+  var offsetY: js.UndefOr[Double] = js.native
   /**
     * 图片路径
     */
-  var src: js.UndefOr[String] = js.undefined
+  var src: js.UndefOr[String] = js.native
   /**
     * 图片起始位置， 值为原始数据值，支持 callback
     */
-  var start: js.UndefOr[js.Any | js.Function | (js.Array[String | Double])] = js.undefined
+  var start: js.UndefOr[js.Any | js.Function | (js.Array[String | Double])] = js.native
   /**
     * 指定 giude 是否绘制在 canvas 最上层，默认为 false, 即绘制在最下层
     */
-  var top: js.UndefOr[Boolean] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var top: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object AnonHeight {
   @scala.inline
-  def apply(
-    end: js.Any | js.Function | (js.Array[String | Double]) = null,
-    height: Int | Double = null,
-    offsetX: Int | Double = null,
-    offsetY: Int | Double = null,
-    src: String = null,
-    start: js.Any | js.Function | (js.Array[String | Double]) = null,
-    top: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): AnonHeight = {
+  def apply(): AnonHeight = {
     val __obj = js.Dynamic.literal()
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (offsetX != null) __obj.updateDynamic("offsetX")(offsetX.asInstanceOf[js.Any])
-    if (offsetY != null) __obj.updateDynamic("offsetY")(offsetY.asInstanceOf[js.Any])
-    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHeight]
   }
+  @scala.inline
+  implicit class AnonHeightOps[Self <: AnonHeight] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: js.Any | js.Function | (js.Array[String | Double])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: js.Any | js.Function | (js.Array[String | Double])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

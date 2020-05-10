@@ -8,72 +8,270 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<rrule.rrule/dist/esm/src/types.Options> */
+@js.native
 trait PartialOptions extends js.Object {
-  var byeaster: js.UndefOr[Double] = js.undefined
-  var byhour: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var byminute: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var bymonth: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var bymonthday: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var bynmonthday: js.UndefOr[js.Array[Double]] = js.undefined
-  var bynweekday: js.UndefOr[js.Array[js.Array[Double]]] = js.undefined
-  var bysecond: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var bysetpos: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var byweekday: js.UndefOr[ByWeekday | js.Array[ByWeekday]] = js.undefined
-  var byweekno: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var byyearday: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var count: js.UndefOr[Double] = js.undefined
-  var dtstart: js.UndefOr[js.Date] = js.undefined
-  var freq: js.UndefOr[Frequency] = js.undefined
-  var interval: js.UndefOr[Double] = js.undefined
-  var tzid: js.UndefOr[String] = js.undefined
-  var until: js.UndefOr[js.Date] = js.undefined
-  var wkst: js.UndefOr[Weekday | Double] = js.undefined
+  var byeaster: js.UndefOr[Double] = js.native
+  var byhour: js.UndefOr[Double | js.Array[Double]] = js.native
+  var byminute: js.UndefOr[Double | js.Array[Double]] = js.native
+  var bymonth: js.UndefOr[Double | js.Array[Double]] = js.native
+  var bymonthday: js.UndefOr[Double | js.Array[Double]] = js.native
+  var bynmonthday: js.UndefOr[js.Array[Double]] = js.native
+  var bynweekday: js.UndefOr[js.Array[js.Array[Double]]] = js.native
+  var bysecond: js.UndefOr[Double | js.Array[Double]] = js.native
+  var bysetpos: js.UndefOr[Double | js.Array[Double]] = js.native
+  var byweekday: js.UndefOr[ByWeekday | js.Array[ByWeekday]] = js.native
+  var byweekno: js.UndefOr[Double | js.Array[Double]] = js.native
+  var byyearday: js.UndefOr[Double | js.Array[Double]] = js.native
+  var count: js.UndefOr[Double] = js.native
+  var dtstart: js.UndefOr[js.Date] = js.native
+  var freq: js.UndefOr[Frequency] = js.native
+  var interval: js.UndefOr[Double] = js.native
+  var tzid: js.UndefOr[String] = js.native
+  var until: js.UndefOr[js.Date] = js.native
+  var wkst: js.UndefOr[Weekday | Double] = js.native
 }
 
 object PartialOptions {
   @scala.inline
-  def apply(
-    byeaster: Int | Double = null,
-    byhour: Double | js.Array[Double] = null,
-    byminute: Double | js.Array[Double] = null,
-    bymonth: Double | js.Array[Double] = null,
-    bymonthday: Double | js.Array[Double] = null,
-    bynmonthday: js.Array[Double] = null,
-    bynweekday: js.Array[js.Array[Double]] = null,
-    bysecond: Double | js.Array[Double] = null,
-    bysetpos: Double | js.Array[Double] = null,
-    byweekday: ByWeekday | js.Array[ByWeekday] = null,
-    byweekno: Double | js.Array[Double] = null,
-    byyearday: Double | js.Array[Double] = null,
-    count: Int | Double = null,
-    dtstart: js.Date = null,
-    freq: Frequency = null,
-    interval: Int | Double = null,
-    tzid: String = null,
-    until: js.Date = null,
-    wkst: Weekday | Double = null
-  ): PartialOptions = {
+  def apply(): PartialOptions = {
     val __obj = js.Dynamic.literal()
-    if (byeaster != null) __obj.updateDynamic("byeaster")(byeaster.asInstanceOf[js.Any])
-    if (byhour != null) __obj.updateDynamic("byhour")(byhour.asInstanceOf[js.Any])
-    if (byminute != null) __obj.updateDynamic("byminute")(byminute.asInstanceOf[js.Any])
-    if (bymonth != null) __obj.updateDynamic("bymonth")(bymonth.asInstanceOf[js.Any])
-    if (bymonthday != null) __obj.updateDynamic("bymonthday")(bymonthday.asInstanceOf[js.Any])
-    if (bynmonthday != null) __obj.updateDynamic("bynmonthday")(bynmonthday.asInstanceOf[js.Any])
-    if (bynweekday != null) __obj.updateDynamic("bynweekday")(bynweekday.asInstanceOf[js.Any])
-    if (bysecond != null) __obj.updateDynamic("bysecond")(bysecond.asInstanceOf[js.Any])
-    if (bysetpos != null) __obj.updateDynamic("bysetpos")(bysetpos.asInstanceOf[js.Any])
-    if (byweekday != null) __obj.updateDynamic("byweekday")(byweekday.asInstanceOf[js.Any])
-    if (byweekno != null) __obj.updateDynamic("byweekno")(byweekno.asInstanceOf[js.Any])
-    if (byyearday != null) __obj.updateDynamic("byyearday")(byyearday.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (dtstart != null) __obj.updateDynamic("dtstart")(dtstart.asInstanceOf[js.Any])
-    if (freq != null) __obj.updateDynamic("freq")(freq.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (tzid != null) __obj.updateDynamic("tzid")(tzid.asInstanceOf[js.Any])
-    if (until != null) __obj.updateDynamic("until")(until.asInstanceOf[js.Any])
-    if (wkst != null) __obj.updateDynamic("wkst")(wkst.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialOptions]
   }
+  @scala.inline
+  implicit class PartialOptionsOps[Self <: PartialOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withByeaster(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byeaster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByeaster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byeaster")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByhour(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byhour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByhour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byhour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByminute(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byminute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByminute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byminute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBymonth(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bymonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBymonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bymonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBymonthday(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bymonthday")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBymonthday: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bymonthday")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBynmonthday(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bynmonthday")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBynmonthday: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bynmonthday")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBynweekday(value: js.Array[js.Array[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bynweekday")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBynweekday: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bynweekday")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBysecond(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bysecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBysecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bysecond")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBysetpos(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bysetpos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBysetpos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bysetpos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByweekday(value: ByWeekday | js.Array[ByWeekday]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byweekday")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByweekday: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byweekday")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByweekno(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byweekno")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByweekno: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byweekno")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByyearday(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byyearday")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByyearday: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byyearday")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDtstart(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtstart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDtstart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtstart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFreq(value: Frequency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freq")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFreq: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freq")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTzid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tzid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTzid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tzid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUntil(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUntil: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWkst(value: Weekday | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wkst")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWkst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wkst")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

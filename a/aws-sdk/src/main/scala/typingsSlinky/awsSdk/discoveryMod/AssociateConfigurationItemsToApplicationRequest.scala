@@ -20,8 +20,27 @@ object AssociateConfigurationItemsToApplicationRequest {
   @scala.inline
   def apply(applicationConfigurationId: ApplicationId, configurationIds: ConfigurationIdList): AssociateConfigurationItemsToApplicationRequest = {
     val __obj = js.Dynamic.literal(applicationConfigurationId = applicationConfigurationId.asInstanceOf[js.Any], configurationIds = configurationIds.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AssociateConfigurationItemsToApplicationRequest]
   }
+  @scala.inline
+  implicit class AssociateConfigurationItemsToApplicationRequestOps[Self <: AssociateConfigurationItemsToApplicationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationConfigurationId(value: ApplicationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationConfigurationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfigurationIds(value: ConfigurationIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

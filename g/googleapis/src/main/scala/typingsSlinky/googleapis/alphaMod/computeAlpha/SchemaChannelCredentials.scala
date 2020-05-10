@@ -24,11 +24,41 @@ trait SchemaChannelCredentials extends js.Object {
 
 object SchemaChannelCredentials {
   @scala.inline
-  def apply(certificates: SchemaTlsCertificatePaths = null, channelCredentialType: String = null): SchemaChannelCredentials = {
+  def apply(): SchemaChannelCredentials = {
     val __obj = js.Dynamic.literal()
-    if (certificates != null) __obj.updateDynamic("certificates")(certificates.asInstanceOf[js.Any])
-    if (channelCredentialType != null) __obj.updateDynamic("channelCredentialType")(channelCredentialType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChannelCredentials]
   }
+  @scala.inline
+  implicit class SchemaChannelCredentialsOps[Self <: SchemaChannelCredentials] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificates(value: SchemaTlsCertificatePaths): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannelCredentialType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCredentialType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelCredentialType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCredentialType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

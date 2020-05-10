@@ -54,3 +54,79 @@ trait ParamsResourceBillingaccountsSinksUpdate extends StandardParameters {
   var updateMask: js.UndefOr[String] = js.native
 }
 
+object ParamsResourceBillingaccountsSinksUpdate {
+  @scala.inline
+  def apply(): ParamsResourceBillingaccountsSinksUpdate = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceBillingaccountsSinksUpdate]
+  }
+  @scala.inline
+  implicit class ParamsResourceBillingaccountsSinksUpdateOps[Self <: ParamsResourceBillingaccountsSinksUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestBody(value: SchemaLogSink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSinkName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sinkName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSinkName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sinkName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniqueWriterIdentity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueWriterIdentity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniqueWriterIdentity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueWriterIdentity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateMask(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMask")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

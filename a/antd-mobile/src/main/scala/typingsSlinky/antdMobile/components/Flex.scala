@@ -1,10 +1,9 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import org.scalajs.dom.raw.HTMLDivElement
+import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.antdMobileStrings.`column-reverse`
 import typingsSlinky.antdMobile.antdMobileStrings.`row-reverse`
 import typingsSlinky.antdMobile.antdMobileStrings.`wrap-reverse`
@@ -18,45 +17,47 @@ import typingsSlinky.antdMobile.antdMobileStrings.nowrap
 import typingsSlinky.antdMobile.antdMobileStrings.row
 import typingsSlinky.antdMobile.antdMobileStrings.start
 import typingsSlinky.antdMobile.antdMobileStrings.stretch
-import typingsSlinky.antdMobile.antdMobileStrings.wrap
 import typingsSlinky.antdMobile.flexFlexMod.FlexProps
 import typingsSlinky.antdMobile.flexMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Flex
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Flex {
   @JSImport("antd-mobile/lib/flex", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, onClick, style */
-  def apply(
-    align: start | center | end | baseline | stretch = null,
-    alignContent: start | end | center | between | around | stretch = null,
-    direction: row | `row-reverse` | column | `column-reverse` = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    justify: start | end | center | between | around = null,
-    prefixCls: String = null,
-    role: String = null,
-    wrap: nowrap | wrap | `wrap-reverse` = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (alignContent != null) __obj.updateDynamic("alignContent")(alignContent.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (justify != null) __obj.updateDynamic("justify")(justify.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (wrap != null) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def align(value: start | center | end | baseline | stretch): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alignContent(value: start | end | center | between | around | stretch): this.type = set("alignContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: row | `row-reverse` | column | `column-reverse`): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def justify(value: start | end | center | between | around): this.type = set("justify", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrap(value: nowrap | typingsSlinky.antdMobile.antdMobileStrings.wrap | `wrap-reverse`): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.antdMobile.flexMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FlexProps
+  
+  def withProps(p: FlexProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Flex.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

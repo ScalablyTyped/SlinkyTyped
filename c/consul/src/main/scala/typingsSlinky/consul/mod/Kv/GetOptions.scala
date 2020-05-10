@@ -1,52 +1,100 @@
 package typingsSlinky.consul.mod.Kv
 
 import typingsSlinky.consul.mod.CommonOptions
-import typingsSlinky.node.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetOptions extends CommonOptions {
-  var buffer: js.UndefOr[Boolean] = js.undefined
-  var index: js.UndefOr[String] = js.undefined
-  var key: String
-  var raw: js.UndefOr[Boolean] = js.undefined
-  var recurse: js.UndefOr[Boolean] = js.undefined
+  var buffer: js.UndefOr[Boolean] = js.native
+  var index: js.UndefOr[String] = js.native
+  var key: String = js.native
+  var raw: js.UndefOr[Boolean] = js.native
+  var recurse: js.UndefOr[Boolean] = js.native
   @JSName("wait")
-  var wait_FGetOptions: js.UndefOr[String] = js.undefined
+  var wait_FGetOptions: js.UndefOr[String] = js.native
 }
 
 object GetOptions {
   @scala.inline
-  def apply(
-    key: String,
-    buffer: js.UndefOr[Boolean] = js.undefined,
-    consistent: js.UndefOr[Boolean] = js.undefined,
-    ctx: EventEmitter = null,
-    dc: String = null,
-    index: String = null,
-    raw: js.UndefOr[Boolean] = js.undefined,
-    recurse: js.UndefOr[Boolean] = js.undefined,
-    stale: js.UndefOr[Boolean] = js.undefined,
-    timeout: Int | Double = null,
-    token: String = null,
-    wait: String = null,
-    wan: js.UndefOr[Boolean] = js.undefined
-  ): GetOptions = {
+  def apply(key: String): GetOptions = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
-    if (!js.isUndefined(buffer)) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (!js.isUndefined(consistent)) __obj.updateDynamic("consistent")(consistent.asInstanceOf[js.Any])
-    if (ctx != null) __obj.updateDynamic("ctx")(ctx.asInstanceOf[js.Any])
-    if (dc != null) __obj.updateDynamic("dc")(dc.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (!js.isUndefined(raw)) __obj.updateDynamic("raw")(raw.asInstanceOf[js.Any])
-    if (!js.isUndefined(recurse)) __obj.updateDynamic("recurse")(recurse.asInstanceOf[js.Any])
-    if (!js.isUndefined(stale)) __obj.updateDynamic("stale")(stale.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
-    if (wait != null) __obj.updateDynamic("wait")(wait.asInstanceOf[js.Any])
-    if (!js.isUndefined(wan)) __obj.updateDynamic("wan")(wan.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetOptions]
   }
+  @scala.inline
+  implicit class GetOptionsOps[Self <: GetOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBuffer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRaw(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRaw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecurse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecurse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWait(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWait: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

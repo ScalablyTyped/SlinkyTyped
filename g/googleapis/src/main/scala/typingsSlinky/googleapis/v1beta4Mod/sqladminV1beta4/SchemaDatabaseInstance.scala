@@ -156,64 +156,341 @@ trait SchemaDatabaseInstance extends js.Object {
 
 object SchemaDatabaseInstance {
   @scala.inline
-  def apply(
-    backendType: String = null,
-    connectionName: String = null,
-    currentDiskSize: String = null,
-    databaseVersion: String = null,
-    diskEncryptionConfiguration: SchemaDiskEncryptionConfiguration = null,
-    diskEncryptionStatus: SchemaDiskEncryptionStatus = null,
-    etag: String = null,
-    failoverReplica: AnonAvailable = null,
-    gceZone: String = null,
-    instanceType: String = null,
-    ipAddresses: js.Array[SchemaIpMapping] = null,
-    ipv6Address: String = null,
-    kind: String = null,
-    masterInstanceName: String = null,
-    maxDiskSize: String = null,
-    name: String = null,
-    onPremisesConfiguration: SchemaOnPremisesConfiguration = null,
-    project: String = null,
-    region: String = null,
-    replicaConfiguration: SchemaReplicaConfiguration = null,
-    replicaNames: js.Array[String] = null,
-    selfLink: String = null,
-    serverCaCert: SchemaSslCert = null,
-    serviceAccountEmailAddress: String = null,
-    settings: SchemaSettings = null,
-    state: String = null,
-    suspensionReason: js.Array[String] = null
-  ): SchemaDatabaseInstance = {
+  def apply(): SchemaDatabaseInstance = {
     val __obj = js.Dynamic.literal()
-    if (backendType != null) __obj.updateDynamic("backendType")(backendType.asInstanceOf[js.Any])
-    if (connectionName != null) __obj.updateDynamic("connectionName")(connectionName.asInstanceOf[js.Any])
-    if (currentDiskSize != null) __obj.updateDynamic("currentDiskSize")(currentDiskSize.asInstanceOf[js.Any])
-    if (databaseVersion != null) __obj.updateDynamic("databaseVersion")(databaseVersion.asInstanceOf[js.Any])
-    if (diskEncryptionConfiguration != null) __obj.updateDynamic("diskEncryptionConfiguration")(diskEncryptionConfiguration.asInstanceOf[js.Any])
-    if (diskEncryptionStatus != null) __obj.updateDynamic("diskEncryptionStatus")(diskEncryptionStatus.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (failoverReplica != null) __obj.updateDynamic("failoverReplica")(failoverReplica.asInstanceOf[js.Any])
-    if (gceZone != null) __obj.updateDynamic("gceZone")(gceZone.asInstanceOf[js.Any])
-    if (instanceType != null) __obj.updateDynamic("instanceType")(instanceType.asInstanceOf[js.Any])
-    if (ipAddresses != null) __obj.updateDynamic("ipAddresses")(ipAddresses.asInstanceOf[js.Any])
-    if (ipv6Address != null) __obj.updateDynamic("ipv6Address")(ipv6Address.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (masterInstanceName != null) __obj.updateDynamic("masterInstanceName")(masterInstanceName.asInstanceOf[js.Any])
-    if (maxDiskSize != null) __obj.updateDynamic("maxDiskSize")(maxDiskSize.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onPremisesConfiguration != null) __obj.updateDynamic("onPremisesConfiguration")(onPremisesConfiguration.asInstanceOf[js.Any])
-    if (project != null) __obj.updateDynamic("project")(project.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (replicaConfiguration != null) __obj.updateDynamic("replicaConfiguration")(replicaConfiguration.asInstanceOf[js.Any])
-    if (replicaNames != null) __obj.updateDynamic("replicaNames")(replicaNames.asInstanceOf[js.Any])
-    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
-    if (serverCaCert != null) __obj.updateDynamic("serverCaCert")(serverCaCert.asInstanceOf[js.Any])
-    if (serviceAccountEmailAddress != null) __obj.updateDynamic("serviceAccountEmailAddress")(serviceAccountEmailAddress.asInstanceOf[js.Any])
-    if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (suspensionReason != null) __obj.updateDynamic("suspensionReason")(suspensionReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDatabaseInstance]
   }
+  @scala.inline
+  implicit class SchemaDatabaseInstanceOps[Self <: SchemaDatabaseInstance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackendType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backendType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackendType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backendType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentDiskSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDiskSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentDiskSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDiskSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabaseVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabaseVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskEncryptionConfiguration(value: SchemaDiskEncryptionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskEncryptionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskEncryptionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskEncryptionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskEncryptionStatus(value: SchemaDiskEncryptionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskEncryptionStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskEncryptionStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskEncryptionStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailoverReplica(value: AnonAvailable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverReplica")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailoverReplica: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverReplica")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGceZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gceZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGceZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gceZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpAddresses(value: js.Array[SchemaIpMapping]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6Address(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6Address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Address: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv6Address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterInstanceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterInstanceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterInstanceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterInstanceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDiskSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDiskSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDiskSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDiskSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPremisesConfiguration(value: SchemaOnPremisesConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPremisesConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnPremisesConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPremisesConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicaConfiguration(value: SchemaReplicaConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicaConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicaConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicaConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicaNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicaNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicaNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicaNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerCaCert(value: SchemaSslCert): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCaCert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerCaCert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCaCert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAccountEmailAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountEmailAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAccountEmailAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccountEmailAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSettings(value: SchemaSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuspensionReason(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suspensionReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuspensionReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suspensionReason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

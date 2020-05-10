@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +22,7 @@ class Any () extends IAny {
   var type_url_Any: String = js.native
   /** Any value. */
   @JSName("value")
-  var value_Any: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var value_Any: js.typedarray.Uint8Array = js.native
   /**
     * Converts this Any to JSON.
     * @returns JSON object
@@ -52,8 +51,8 @@ object Any extends js.Object {
     */
   def decode(reader: Reader): Any = js.native
   def decode(reader: Reader, length: Double): Any = js.native
-  def decode(reader: Uint8Array): Any = js.native
-  def decode(reader: Uint8Array, length: Double): Any = js.native
+  def decode(reader: js.typedarray.Uint8Array): Any = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): Any = js.native
   /**
     * Decodes an Any message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -62,7 +61,7 @@ object Any extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): Any = js.native
-  def decodeDelimited(reader: Uint8Array): Any = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): Any = js.native
   /**
     * Encodes the specified Any message. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
     * @param message Any message or plain object to encode

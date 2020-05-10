@@ -22,11 +22,47 @@ trait UpdateTagsForResourceMessage extends js.Object {
 
 object UpdateTagsForResourceMessage {
   @scala.inline
-  def apply(ResourceArn: ResourceArn, TagsToAdd: TagList = null, TagsToRemove: TagKeyList = null): UpdateTagsForResourceMessage = {
+  def apply(ResourceArn: ResourceArn): UpdateTagsForResourceMessage = {
     val __obj = js.Dynamic.literal(ResourceArn = ResourceArn.asInstanceOf[js.Any])
-    if (TagsToAdd != null) __obj.updateDynamic("TagsToAdd")(TagsToAdd.asInstanceOf[js.Any])
-    if (TagsToRemove != null) __obj.updateDynamic("TagsToRemove")(TagsToRemove.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTagsForResourceMessage]
   }
+  @scala.inline
+  implicit class UpdateTagsForResourceMessageOps[Self <: UpdateTagsForResourceMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceArn(value: ResourceArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTagsToAdd(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsToAdd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagsToAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsToAdd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagsToRemove(value: TagKeyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsToRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagsToRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagsToRemove")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

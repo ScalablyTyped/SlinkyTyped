@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "gl-fbo"
-version := "2.0-dt-20200219Z-749c81"
+version := "2.0-dt-20200219Z-2482f7"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "gl-texture2d" % "2.1-dt-20180801Z-e9a1ad",
-  "org.scalablytyped.slinky" %%% "ndarray" % "1.0-dt-20190212Z-f9d5e9",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "gl-texture2d" % "2.1-dt-20180801Z-cd94e6",
+  "org.scalablytyped.slinky" %%% "ndarray" % "1.0-dt-20190212Z-783423",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

@@ -19,10 +19,29 @@ trait SchemaUrlCrawlErrorsCountsQueryResponse extends js.Object {
 
 object SchemaUrlCrawlErrorsCountsQueryResponse {
   @scala.inline
-  def apply(countPerTypes: js.Array[SchemaUrlCrawlErrorCountsPerType] = null): SchemaUrlCrawlErrorsCountsQueryResponse = {
+  def apply(): SchemaUrlCrawlErrorsCountsQueryResponse = {
     val __obj = js.Dynamic.literal()
-    if (countPerTypes != null) __obj.updateDynamic("countPerTypes")(countPerTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUrlCrawlErrorsCountsQueryResponse]
   }
+  @scala.inline
+  implicit class SchemaUrlCrawlErrorsCountsQueryResponseOps[Self <: SchemaUrlCrawlErrorsCountsQueryResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountPerTypes(value: js.Array[SchemaUrlCrawlErrorCountsPerType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countPerTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountPerTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countPerTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

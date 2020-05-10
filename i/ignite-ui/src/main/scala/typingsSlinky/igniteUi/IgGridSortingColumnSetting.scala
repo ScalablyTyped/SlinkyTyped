@@ -5,26 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgGridSortingColumnSetting
   extends /**
-	 * Option for IgGridSortingColumnSetting
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Enables/disables sorting on the specified column. By default all columns are sortable.
   	 *
   	 */
-  var allowSorting: js.UndefOr[Boolean] = js.undefined
+  var allowSorting: js.UndefOr[Boolean] = js.native
   /**
   	 * Identifies the grid column by index. Either key or index must be set in every column setting.
   	 *
   	 */
-  var columnIndex: js.UndefOr[Double] = js.undefined
+  var columnIndex: js.UndefOr[Double] = js.native
   /**
   	 * Identifies the grid column by key. Either key or index must be set in every column setting.
   	 *
   	 */
-  var columnKey: js.UndefOr[String] = js.undefined
+  var columnKey: js.UndefOr[String] = js.native
   /**
   	 * Reference to a function (string or function) used for custom comparison.
   	 * The function accepts the following arguments:
@@ -41,7 +42,7 @@ trait IgGridSortingColumnSetting
   	 * "string" The name of the function as a string located in the global window object.
   	 * "function" Function which will be used for custom comparison.
   	 */
-  var compareFunc: js.UndefOr[String | js.Function] = js.undefined
+  var compareFunc: js.UndefOr[String | js.Function] = js.native
   /**
   	 * The current (or default) sort direction. If this setting is specified, the column will be rendered sorted according to this option.
   	 *
@@ -50,7 +51,7 @@ trait IgGridSortingColumnSetting
   	 * "asc" The initial sort of the column data will be in ascending order.
   	 * "desc" The initial sort of the column data will be in descending order.
   	 */
-  var currentSortDirection: js.UndefOr[String] = js.undefined
+  var currentSortDirection: js.UndefOr[String] = js.native
   /**
   	 * This will be the first sort direction when the column hasn't been sorted before.
   	 *
@@ -59,32 +60,94 @@ trait IgGridSortingColumnSetting
   	 * "asc" The first sort of the column data will be in ascending order.
   	 * "desc" The first sort of the column data will be in descending order.
   	 */
-  var firstSortDirection: js.UndefOr[String] = js.undefined
+  var firstSortDirection: js.UndefOr[String] = js.native
 }
 
 object IgGridSortingColumnSetting {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for IgGridSortingColumnSetting
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    allowSorting: js.UndefOr[Boolean] = js.undefined,
-    columnIndex: Int | Double = null,
-    columnKey: String = null,
-    compareFunc: String | js.Function = null,
-    currentSortDirection: String = null,
-    firstSortDirection: String = null
-  ): IgGridSortingColumnSetting = {
+  def apply(): IgGridSortingColumnSetting = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(allowSorting)) __obj.updateDynamic("allowSorting")(allowSorting.asInstanceOf[js.Any])
-    if (columnIndex != null) __obj.updateDynamic("columnIndex")(columnIndex.asInstanceOf[js.Any])
-    if (columnKey != null) __obj.updateDynamic("columnKey")(columnKey.asInstanceOf[js.Any])
-    if (compareFunc != null) __obj.updateDynamic("compareFunc")(compareFunc.asInstanceOf[js.Any])
-    if (currentSortDirection != null) __obj.updateDynamic("currentSortDirection")(currentSortDirection.asInstanceOf[js.Any])
-    if (firstSortDirection != null) __obj.updateDynamic("firstSortDirection")(firstSortDirection.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgGridSortingColumnSetting]
   }
+  @scala.inline
+  implicit class IgGridSortingColumnSettingOps[Self <: IgGridSortingColumnSetting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowSorting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSorting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowSorting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSorting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompareFunc(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareFunc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompareFunc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareFunc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentSortDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSortDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentSortDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSortDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstSortDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSortDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstSortDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstSortDirection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,29 +1,40 @@
 package typingsSlinky.bookshelf.mod
 
-import typingsSlinky.knex.mod.Transaction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DestroyOptions extends SyncOptions {
   /** @default true */
-  var require: js.UndefOr[Boolean] = js.undefined
+  var require: js.UndefOr[Boolean] = js.native
 }
 
 object DestroyOptions {
   @scala.inline
-  def apply(
-    debug: js.UndefOr[Boolean] = js.undefined,
-    require: js.UndefOr[Boolean] = js.undefined,
-    transacting: Transaction[_, _] = null,
-    withSchema: String = null
-  ): DestroyOptions = {
+  def apply(): DestroyOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (!js.isUndefined(require)) __obj.updateDynamic("require")(require.asInstanceOf[js.Any])
-    if (transacting != null) __obj.updateDynamic("transacting")(transacting.asInstanceOf[js.Any])
-    if (withSchema != null) __obj.updateDynamic("withSchema")(withSchema.asInstanceOf[js.Any])
     __obj.asInstanceOf[DestroyOptions]
   }
+  @scala.inline
+  implicit class DestroyOptionsOps[Self <: DestroyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequire(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequire: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

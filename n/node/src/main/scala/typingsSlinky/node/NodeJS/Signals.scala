@@ -47,80 +47,78 @@ trait Signals extends js.Object
 
 object Signals {
   @scala.inline
-  def SIGABRT: typingsSlinky.node.nodeStrings.SIGABRT = this.cast("SIGABRT")
+  def SIGABRT: typingsSlinky.node.nodeStrings.SIGABRT = "SIGABRT".asInstanceOf[typingsSlinky.node.nodeStrings.SIGABRT]
   @scala.inline
-  def SIGALRM: typingsSlinky.node.nodeStrings.SIGALRM = this.cast("SIGALRM")
+  def SIGALRM: typingsSlinky.node.nodeStrings.SIGALRM = "SIGALRM".asInstanceOf[typingsSlinky.node.nodeStrings.SIGALRM]
   @scala.inline
-  def SIGBREAK: typingsSlinky.node.nodeStrings.SIGBREAK = this.cast("SIGBREAK")
+  def SIGBREAK: typingsSlinky.node.nodeStrings.SIGBREAK = "SIGBREAK".asInstanceOf[typingsSlinky.node.nodeStrings.SIGBREAK]
   @scala.inline
-  def SIGBUS: typingsSlinky.node.nodeStrings.SIGBUS = this.cast("SIGBUS")
+  def SIGBUS: typingsSlinky.node.nodeStrings.SIGBUS = "SIGBUS".asInstanceOf[typingsSlinky.node.nodeStrings.SIGBUS]
   @scala.inline
-  def SIGCHLD: typingsSlinky.node.nodeStrings.SIGCHLD = this.cast("SIGCHLD")
+  def SIGCHLD: typingsSlinky.node.nodeStrings.SIGCHLD = "SIGCHLD".asInstanceOf[typingsSlinky.node.nodeStrings.SIGCHLD]
   @scala.inline
-  def SIGCONT: typingsSlinky.node.nodeStrings.SIGCONT = this.cast("SIGCONT")
+  def SIGCONT: typingsSlinky.node.nodeStrings.SIGCONT = "SIGCONT".asInstanceOf[typingsSlinky.node.nodeStrings.SIGCONT]
   @scala.inline
-  def SIGFPE: typingsSlinky.node.nodeStrings.SIGFPE = this.cast("SIGFPE")
+  def SIGFPE: typingsSlinky.node.nodeStrings.SIGFPE = "SIGFPE".asInstanceOf[typingsSlinky.node.nodeStrings.SIGFPE]
   @scala.inline
-  def SIGHUP: typingsSlinky.node.nodeStrings.SIGHUP = this.cast("SIGHUP")
+  def SIGHUP: typingsSlinky.node.nodeStrings.SIGHUP = "SIGHUP".asInstanceOf[typingsSlinky.node.nodeStrings.SIGHUP]
   @scala.inline
-  def SIGILL: typingsSlinky.node.nodeStrings.SIGILL = this.cast("SIGILL")
+  def SIGILL: typingsSlinky.node.nodeStrings.SIGILL = "SIGILL".asInstanceOf[typingsSlinky.node.nodeStrings.SIGILL]
   @scala.inline
-  def SIGINFO: typingsSlinky.node.nodeStrings.SIGINFO = this.cast("SIGINFO")
+  def SIGINFO: typingsSlinky.node.nodeStrings.SIGINFO = "SIGINFO".asInstanceOf[typingsSlinky.node.nodeStrings.SIGINFO]
   @scala.inline
-  def SIGINT: typingsSlinky.node.nodeStrings.SIGINT = this.cast("SIGINT")
+  def SIGINT: typingsSlinky.node.nodeStrings.SIGINT = "SIGINT".asInstanceOf[typingsSlinky.node.nodeStrings.SIGINT]
   @scala.inline
-  def SIGIO: typingsSlinky.node.nodeStrings.SIGIO = this.cast("SIGIO")
+  def SIGIO: typingsSlinky.node.nodeStrings.SIGIO = "SIGIO".asInstanceOf[typingsSlinky.node.nodeStrings.SIGIO]
   @scala.inline
-  def SIGIOT: typingsSlinky.node.nodeStrings.SIGIOT = this.cast("SIGIOT")
+  def SIGIOT: typingsSlinky.node.nodeStrings.SIGIOT = "SIGIOT".asInstanceOf[typingsSlinky.node.nodeStrings.SIGIOT]
   @scala.inline
-  def SIGKILL: typingsSlinky.node.nodeStrings.SIGKILL = this.cast("SIGKILL")
+  def SIGKILL: typingsSlinky.node.nodeStrings.SIGKILL = "SIGKILL".asInstanceOf[typingsSlinky.node.nodeStrings.SIGKILL]
   @scala.inline
-  def SIGLOST: typingsSlinky.node.nodeStrings.SIGLOST = this.cast("SIGLOST")
+  def SIGLOST: typingsSlinky.node.nodeStrings.SIGLOST = "SIGLOST".asInstanceOf[typingsSlinky.node.nodeStrings.SIGLOST]
   @scala.inline
-  def SIGPIPE: typingsSlinky.node.nodeStrings.SIGPIPE = this.cast("SIGPIPE")
+  def SIGPIPE: typingsSlinky.node.nodeStrings.SIGPIPE = "SIGPIPE".asInstanceOf[typingsSlinky.node.nodeStrings.SIGPIPE]
   @scala.inline
-  def SIGPOLL: typingsSlinky.node.nodeStrings.SIGPOLL = this.cast("SIGPOLL")
+  def SIGPOLL: typingsSlinky.node.nodeStrings.SIGPOLL = "SIGPOLL".asInstanceOf[typingsSlinky.node.nodeStrings.SIGPOLL]
   @scala.inline
-  def SIGPROF: typingsSlinky.node.nodeStrings.SIGPROF = this.cast("SIGPROF")
+  def SIGPROF: typingsSlinky.node.nodeStrings.SIGPROF = "SIGPROF".asInstanceOf[typingsSlinky.node.nodeStrings.SIGPROF]
   @scala.inline
-  def SIGPWR: typingsSlinky.node.nodeStrings.SIGPWR = this.cast("SIGPWR")
+  def SIGPWR: typingsSlinky.node.nodeStrings.SIGPWR = "SIGPWR".asInstanceOf[typingsSlinky.node.nodeStrings.SIGPWR]
   @scala.inline
-  def SIGQUIT: typingsSlinky.node.nodeStrings.SIGQUIT = this.cast("SIGQUIT")
+  def SIGQUIT: typingsSlinky.node.nodeStrings.SIGQUIT = "SIGQUIT".asInstanceOf[typingsSlinky.node.nodeStrings.SIGQUIT]
   @scala.inline
-  def SIGSEGV: typingsSlinky.node.nodeStrings.SIGSEGV = this.cast("SIGSEGV")
+  def SIGSEGV: typingsSlinky.node.nodeStrings.SIGSEGV = "SIGSEGV".asInstanceOf[typingsSlinky.node.nodeStrings.SIGSEGV]
   @scala.inline
-  def SIGSTKFLT: typingsSlinky.node.nodeStrings.SIGSTKFLT = this.cast("SIGSTKFLT")
+  def SIGSTKFLT: typingsSlinky.node.nodeStrings.SIGSTKFLT = "SIGSTKFLT".asInstanceOf[typingsSlinky.node.nodeStrings.SIGSTKFLT]
   @scala.inline
-  def SIGSTOP: typingsSlinky.node.nodeStrings.SIGSTOP = this.cast("SIGSTOP")
+  def SIGSTOP: typingsSlinky.node.nodeStrings.SIGSTOP = "SIGSTOP".asInstanceOf[typingsSlinky.node.nodeStrings.SIGSTOP]
   @scala.inline
-  def SIGSYS: typingsSlinky.node.nodeStrings.SIGSYS = this.cast("SIGSYS")
+  def SIGSYS: typingsSlinky.node.nodeStrings.SIGSYS = "SIGSYS".asInstanceOf[typingsSlinky.node.nodeStrings.SIGSYS]
   @scala.inline
-  def SIGTERM: typingsSlinky.node.nodeStrings.SIGTERM = this.cast("SIGTERM")
+  def SIGTERM: typingsSlinky.node.nodeStrings.SIGTERM = "SIGTERM".asInstanceOf[typingsSlinky.node.nodeStrings.SIGTERM]
   @scala.inline
-  def SIGTRAP: typingsSlinky.node.nodeStrings.SIGTRAP = this.cast("SIGTRAP")
+  def SIGTRAP: typingsSlinky.node.nodeStrings.SIGTRAP = "SIGTRAP".asInstanceOf[typingsSlinky.node.nodeStrings.SIGTRAP]
   @scala.inline
-  def SIGTSTP: typingsSlinky.node.nodeStrings.SIGTSTP = this.cast("SIGTSTP")
+  def SIGTSTP: typingsSlinky.node.nodeStrings.SIGTSTP = "SIGTSTP".asInstanceOf[typingsSlinky.node.nodeStrings.SIGTSTP]
   @scala.inline
-  def SIGTTIN: typingsSlinky.node.nodeStrings.SIGTTIN = this.cast("SIGTTIN")
+  def SIGTTIN: typingsSlinky.node.nodeStrings.SIGTTIN = "SIGTTIN".asInstanceOf[typingsSlinky.node.nodeStrings.SIGTTIN]
   @scala.inline
-  def SIGTTOU: typingsSlinky.node.nodeStrings.SIGTTOU = this.cast("SIGTTOU")
+  def SIGTTOU: typingsSlinky.node.nodeStrings.SIGTTOU = "SIGTTOU".asInstanceOf[typingsSlinky.node.nodeStrings.SIGTTOU]
   @scala.inline
-  def SIGUNUSED: typingsSlinky.node.nodeStrings.SIGUNUSED = this.cast("SIGUNUSED")
+  def SIGUNUSED: typingsSlinky.node.nodeStrings.SIGUNUSED = "SIGUNUSED".asInstanceOf[typingsSlinky.node.nodeStrings.SIGUNUSED]
   @scala.inline
-  def SIGURG: typingsSlinky.node.nodeStrings.SIGURG = this.cast("SIGURG")
+  def SIGURG: typingsSlinky.node.nodeStrings.SIGURG = "SIGURG".asInstanceOf[typingsSlinky.node.nodeStrings.SIGURG]
   @scala.inline
-  def SIGUSR1: typingsSlinky.node.nodeStrings.SIGUSR1 = this.cast("SIGUSR1")
+  def SIGUSR1: typingsSlinky.node.nodeStrings.SIGUSR1 = "SIGUSR1".asInstanceOf[typingsSlinky.node.nodeStrings.SIGUSR1]
   @scala.inline
-  def SIGUSR2: typingsSlinky.node.nodeStrings.SIGUSR2 = this.cast("SIGUSR2")
+  def SIGUSR2: typingsSlinky.node.nodeStrings.SIGUSR2 = "SIGUSR2".asInstanceOf[typingsSlinky.node.nodeStrings.SIGUSR2]
   @scala.inline
-  def SIGVTALRM: typingsSlinky.node.nodeStrings.SIGVTALRM = this.cast("SIGVTALRM")
+  def SIGVTALRM: typingsSlinky.node.nodeStrings.SIGVTALRM = "SIGVTALRM".asInstanceOf[typingsSlinky.node.nodeStrings.SIGVTALRM]
   @scala.inline
-  def SIGWINCH: typingsSlinky.node.nodeStrings.SIGWINCH = this.cast("SIGWINCH")
+  def SIGWINCH: typingsSlinky.node.nodeStrings.SIGWINCH = "SIGWINCH".asInstanceOf[typingsSlinky.node.nodeStrings.SIGWINCH]
   @scala.inline
-  def SIGXCPU: typingsSlinky.node.nodeStrings.SIGXCPU = this.cast("SIGXCPU")
+  def SIGXCPU: typingsSlinky.node.nodeStrings.SIGXCPU = "SIGXCPU".asInstanceOf[typingsSlinky.node.nodeStrings.SIGXCPU]
   @scala.inline
-  def SIGXFSZ: typingsSlinky.node.nodeStrings.SIGXFSZ = this.cast("SIGXFSZ")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SIGXFSZ: typingsSlinky.node.nodeStrings.SIGXFSZ = "SIGXFSZ".asInstanceOf[typingsSlinky.node.nodeStrings.SIGXFSZ]
 }
 

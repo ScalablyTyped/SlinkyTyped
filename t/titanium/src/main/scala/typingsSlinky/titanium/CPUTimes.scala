@@ -7,45 +7,103 @@ import scala.scalajs.js.annotation._
 /**
   * Simple object holding the data for a logical cpu execution times.
   */
+@js.native
 trait CPUTimes extends js.Object {
   /**
   	 * The number of milliseconds the CPU has spent in idle mode.
   	 */
-  var idle: js.UndefOr[Double] = js.undefined
+  var idle: js.UndefOr[Double] = js.native
   /**
   	 * The number of milliseconds the CPU has spent in irq mode.
   	 */
-  var irq: js.UndefOr[Double] = js.undefined
+  var irq: js.UndefOr[Double] = js.native
   /**
   	 * The number of milliseconds the CPU has spent in nice mode.
   	 */
-  var nice: js.UndefOr[Double] = js.undefined
+  var nice: js.UndefOr[Double] = js.native
   /**
   	 * The number of milliseconds the CPU has spent in sys mode.
   	 */
-  var sys: js.UndefOr[Double] = js.undefined
+  var sys: js.UndefOr[Double] = js.native
   /**
   	 * The number of milliseconds the CPU has spent in user mode.
   	 */
-  var user: js.UndefOr[Double] = js.undefined
+  var user: js.UndefOr[Double] = js.native
 }
 
 object CPUTimes {
   @scala.inline
-  def apply(
-    idle: Int | Double = null,
-    irq: Int | Double = null,
-    nice: Int | Double = null,
-    sys: Int | Double = null,
-    user: Int | Double = null
-  ): CPUTimes = {
+  def apply(): CPUTimes = {
     val __obj = js.Dynamic.literal()
-    if (idle != null) __obj.updateDynamic("idle")(idle.asInstanceOf[js.Any])
-    if (irq != null) __obj.updateDynamic("irq")(irq.asInstanceOf[js.Any])
-    if (nice != null) __obj.updateDynamic("nice")(nice.asInstanceOf[js.Any])
-    if (sys != null) __obj.updateDynamic("sys")(sys.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[CPUTimes]
   }
+  @scala.inline
+  implicit class CPUTimesOps[Self <: CPUTimes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIrq(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("irq")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIrq: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("irq")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNice(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSys(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

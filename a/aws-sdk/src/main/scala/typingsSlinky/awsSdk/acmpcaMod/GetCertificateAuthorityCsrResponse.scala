@@ -14,10 +14,29 @@ trait GetCertificateAuthorityCsrResponse extends js.Object {
 
 object GetCertificateAuthorityCsrResponse {
   @scala.inline
-  def apply(Csr: CsrBody = null): GetCertificateAuthorityCsrResponse = {
+  def apply(): GetCertificateAuthorityCsrResponse = {
     val __obj = js.Dynamic.literal()
-    if (Csr != null) __obj.updateDynamic("Csr")(Csr.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCertificateAuthorityCsrResponse]
   }
+  @scala.inline
+  implicit class GetCertificateAuthorityCsrResponseOps[Self <: GetCertificateAuthorityCsrResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCsr(value: CsrBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Csr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCsr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Csr")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

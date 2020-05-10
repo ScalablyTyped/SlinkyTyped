@@ -4,27 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleCloudVideointelligenceV1beta2Entity extends js.Object {
   /** Textual description, e.g. `Fixed-gear bicycle`. */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * Opaque entity ID. Some IDs may be available in
     * [Google Knowledge Graph Search
     * API](https://developers.google.com/knowledge-graph/).
     */
-  var entityId: js.UndefOr[String] = js.undefined
+  var entityId: js.UndefOr[String] = js.native
   /** Language code for `description` in BCP-47 format. */
-  var languageCode: js.UndefOr[String] = js.undefined
+  var languageCode: js.UndefOr[String] = js.native
 }
 
 object GoogleCloudVideointelligenceV1beta2Entity {
   @scala.inline
-  def apply(description: String = null, entityId: String = null, languageCode: String = null): GoogleCloudVideointelligenceV1beta2Entity = {
+  def apply(): GoogleCloudVideointelligenceV1beta2Entity = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (entityId != null) __obj.updateDynamic("entityId")(entityId.asInstanceOf[js.Any])
-    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleCloudVideointelligenceV1beta2Entity]
   }
+  @scala.inline
+  implicit class GoogleCloudVideointelligenceV1beta2EntityOps[Self <: GoogleCloudVideointelligenceV1beta2Entity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

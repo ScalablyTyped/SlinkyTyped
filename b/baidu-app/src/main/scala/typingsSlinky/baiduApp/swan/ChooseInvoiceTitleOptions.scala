@@ -7,24 +7,38 @@ import scala.scalajs.js.annotation._
 
 // #endregion
 // #region
+@js.native
 trait ChooseInvoiceTitleOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_ChooseInvoiceTitleOptions: js.UndefOr[js.Function1[/* res */ AnonBankAccount, Unit]] = js.undefined
+  var success_ChooseInvoiceTitleOptions: js.UndefOr[js.Function1[/* res */ AnonBankAccount, Unit]] = js.native
 }
 
 object ChooseInvoiceTitleOptions {
   @scala.inline
-  def apply(
-    complete: /* res */ js.Any => Unit = null,
-    fail: js.Any => Unit = null,
-    success: /* res */ AnonBankAccount => Unit = null
-  ): ChooseInvoiceTitleOptions = {
+  def apply(): ChooseInvoiceTitleOptions = {
     val __obj = js.Dynamic.literal()
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction1(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction1(success))
     __obj.asInstanceOf[ChooseInvoiceTitleOptions]
   }
+  @scala.inline
+  implicit class ChooseInvoiceTitleOptionsOps[Self <: ChooseInvoiceTitleOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSuccess(value: /* res */ AnonBankAccount => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

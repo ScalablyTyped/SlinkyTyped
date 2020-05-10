@@ -1,5 +1,6 @@
 package typingsSlinky.angularCore
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.angularCore.mod.ContentQueriesFunction
 import typingsSlinky.angularCore.mod.DirectiveDefFeature
 import typingsSlinky.angularCore.mod.FactoryFn
@@ -84,7 +85,7 @@ trait AnonExportAs[T] extends js.Object {
   var inputs: js.UndefOr[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]:? string | [string, string] | undefined}
-    */ typingsSlinky.angularCore.angularCoreStrings.AnonExportAs with js.Any
+    */ typingsSlinky.angularCore.angularCoreStrings.AnonExportAs with TopLevel[js.Any]
   ] = js.native
   /**
     * A map of output names.
@@ -99,7 +100,7 @@ trait AnonExportAs[T] extends js.Object {
   var outputs: js.UndefOr[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]:? string | undefined}
-    */ typingsSlinky.angularCore.angularCoreStrings.AnonExportAs with js.Any
+    */ typingsSlinky.angularCore.angularCoreStrings.AnonExportAs with TopLevel[js.Any]
   ] = js.native
   /** The selectors that will be used to match nodes to this directive. */
   var selectors: js.Array[js.Array[String | SelectorFlags]] = js.native

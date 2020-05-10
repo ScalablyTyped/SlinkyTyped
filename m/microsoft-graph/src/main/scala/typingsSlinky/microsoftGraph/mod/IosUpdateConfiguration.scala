@@ -4,55 +4,79 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IosUpdateConfiguration extends DeviceConfiguration {
   // Active Hours End (active hours mean the time window when updates install should not happen)
-  var activeHoursEnd: js.UndefOr[String] = js.undefined
+  var activeHoursEnd: js.UndefOr[String] = js.native
   // Active Hours Start (active hours mean the time window when updates install should not happen)
-  var activeHoursStart: js.UndefOr[String] = js.undefined
+  var activeHoursStart: js.UndefOr[String] = js.native
   // Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-  var scheduledInstallDays: js.UndefOr[js.Array[DayOfWeek]] = js.undefined
+  var scheduledInstallDays: js.UndefOr[js.Array[DayOfWeek]] = js.native
   // UTC Time Offset indicated in minutes
-  var utcTimeOffsetInMinutes: js.UndefOr[Double] = js.undefined
+  var utcTimeOffsetInMinutes: js.UndefOr[Double] = js.native
 }
 
 object IosUpdateConfiguration {
   @scala.inline
-  def apply(
-    activeHoursEnd: String = null,
-    activeHoursStart: String = null,
-    assignments: js.Array[DeviceConfigurationAssignment] = null,
-    createdDateTime: String = null,
-    description: String = null,
-    deviceSettingStateSummaries: js.Array[SettingStateDeviceSummary] = null,
-    deviceStatusOverview: DeviceConfigurationDeviceOverview = null,
-    deviceStatuses: js.Array[DeviceConfigurationDeviceStatus] = null,
-    displayName: String = null,
-    id: String = null,
-    lastModifiedDateTime: String = null,
-    scheduledInstallDays: js.Array[DayOfWeek] = null,
-    userStatusOverview: DeviceConfigurationUserOverview = null,
-    userStatuses: js.Array[DeviceConfigurationUserStatus] = null,
-    utcTimeOffsetInMinutes: Int | Double = null,
-    version: Int | Double = null
-  ): IosUpdateConfiguration = {
+  def apply(): IosUpdateConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (activeHoursEnd != null) __obj.updateDynamic("activeHoursEnd")(activeHoursEnd.asInstanceOf[js.Any])
-    if (activeHoursStart != null) __obj.updateDynamic("activeHoursStart")(activeHoursStart.asInstanceOf[js.Any])
-    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
-    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (deviceSettingStateSummaries != null) __obj.updateDynamic("deviceSettingStateSummaries")(deviceSettingStateSummaries.asInstanceOf[js.Any])
-    if (deviceStatusOverview != null) __obj.updateDynamic("deviceStatusOverview")(deviceStatusOverview.asInstanceOf[js.Any])
-    if (deviceStatuses != null) __obj.updateDynamic("deviceStatuses")(deviceStatuses.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
-    if (scheduledInstallDays != null) __obj.updateDynamic("scheduledInstallDays")(scheduledInstallDays.asInstanceOf[js.Any])
-    if (userStatusOverview != null) __obj.updateDynamic("userStatusOverview")(userStatusOverview.asInstanceOf[js.Any])
-    if (userStatuses != null) __obj.updateDynamic("userStatuses")(userStatuses.asInstanceOf[js.Any])
-    if (utcTimeOffsetInMinutes != null) __obj.updateDynamic("utcTimeOffsetInMinutes")(utcTimeOffsetInMinutes.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[IosUpdateConfiguration]
   }
+  @scala.inline
+  implicit class IosUpdateConfigurationOps[Self <: IosUpdateConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveHoursEnd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeHoursEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveHoursEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeHoursEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActiveHoursStart(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeHoursStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveHoursStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeHoursStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduledInstallDays(value: js.Array[DayOfWeek]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledInstallDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduledInstallDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledInstallDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtcTimeOffsetInMinutes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utcTimeOffsetInMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtcTimeOffsetInMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utcTimeOffsetInMinutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

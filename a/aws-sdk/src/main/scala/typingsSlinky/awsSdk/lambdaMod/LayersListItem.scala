@@ -22,16 +22,53 @@ trait LayersListItem extends js.Object {
 
 object LayersListItem {
   @scala.inline
-  def apply(
-    LatestMatchingVersion: LayerVersionsListItem = null,
-    LayerArn: LayerArn = null,
-    LayerName: LayerName = null
-  ): LayersListItem = {
+  def apply(): LayersListItem = {
     val __obj = js.Dynamic.literal()
-    if (LatestMatchingVersion != null) __obj.updateDynamic("LatestMatchingVersion")(LatestMatchingVersion.asInstanceOf[js.Any])
-    if (LayerArn != null) __obj.updateDynamic("LayerArn")(LayerArn.asInstanceOf[js.Any])
-    if (LayerName != null) __obj.updateDynamic("LayerName")(LayerName.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayersListItem]
   }
+  @scala.inline
+  implicit class LayersListItemOps[Self <: LayersListItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLatestMatchingVersion(value: LayerVersionsListItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestMatchingVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestMatchingVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestMatchingVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayerArn(value: LayerArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayerArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayerName(value: LayerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LayerName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

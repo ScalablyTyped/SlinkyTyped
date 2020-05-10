@@ -7,9 +7,6 @@ import scala.scalajs.js.annotation._
 
 object firebaseAppStrings {
   @js.native
-  sealed trait `[DEFAULT]` extends js.Object
-  
-  @js.native
   sealed trait `app-deleted` extends AppError
   
   @js.native
@@ -61,10 +58,11 @@ object firebaseAppStrings {
   sealed trait `invalid-app-argument` extends AppError
   
   @js.native
+  sealed trait `invalid-log-argument` extends AppError
+  
+  @js.native
   sealed trait `no-app` extends AppError
   
-  @scala.inline
-  def `[DEFAULT]`: `[DEFAULT]` = "[DEFAULT]".asInstanceOf[`[DEFAULT]`]
   @scala.inline
   def `app-deleted`: `app-deleted` = "app-deleted".asInstanceOf[`app-deleted`]
   @scala.inline
@@ -99,6 +97,8 @@ object firebaseAppStrings {
   def `fire-rtdb`: `fire-rtdb` = "fire-rtdb".asInstanceOf[`fire-rtdb`]
   @scala.inline
   def `invalid-app-argument`: `invalid-app-argument` = "invalid-app-argument".asInstanceOf[`invalid-app-argument`]
+  @scala.inline
+  def `invalid-log-argument`: `invalid-log-argument` = "invalid-log-argument".asInstanceOf[`invalid-log-argument`]
   @scala.inline
   def `no-app`: `no-app` = "no-app".asInstanceOf[`no-app`]
 }

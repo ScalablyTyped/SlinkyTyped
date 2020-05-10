@@ -74,7 +74,7 @@ object dnd extends js.Object {
       *
       * @param node Node to deselect (id or DOM Node)
       */
-    def deselectNode(node: typingsSlinky.std.HTMLElement): js.Function = js.native
+    def deselectNode(node: HTMLElement): js.Function = js.native
     /**
       * inserts an array of new nodes before/after an anchor node
       *
@@ -94,7 +94,7 @@ object dnd extends js.Object {
       *
       * @param node Node to check (id or DOM Node)
       */
-    def isSelected(node: typingsSlinky.std.HTMLElement): js.Any = js.native
+    def isSelected(node: HTMLElement): js.Any = js.native
     /**
       * selects nodes by bounding box
       *
@@ -118,7 +118,7 @@ object dnd extends js.Object {
       * @param node Node to select (id or DOM Node)
       * @param add               OptionalIf true, node is added to selection, otherwise currentselection is removed, and node will be the only selection.
       */
-    def selectNode(node: typingsSlinky.std.HTMLElement, add: Boolean): js.Function = js.native
+    def selectNode(node: HTMLElement, add: Boolean): js.Function = js.native
     /**
       * shifts the currently selected dnd item forwards and backwards.
       * One possible use would be to allow a user select different

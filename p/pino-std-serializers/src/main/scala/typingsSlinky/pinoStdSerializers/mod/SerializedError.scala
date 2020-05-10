@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SerializedError
   extends /* key */ NumberDictionary[js.Any]
      with /**
@@ -15,40 +16,60 @@ trait SerializedError
   /**
     * The supplied error message.
     */
-  var message: String
+  var message: String = js.native
   /**
     * Non-enumerable. The original Error object. This will not be included in the logged output.
     * This is available for subsequent serializers to use.
     */
-  var raw: js.Error
+  var raw: js.Error = js.native
   /**
     * The stack when the error was generated.
     */
-  var stack: String
+  var stack: String = js.native
   /**
     * The name of the object's constructor.
     */
-  var `type`: String
+  var `type`: String = js.native
 }
 
 object SerializedError {
   @scala.inline
-  def apply(
-    message: String,
-    raw: js.Error,
-    stack: String,
-    `type`: String,
-    NumberDictionary: /* key */ NumberDictionary[js.Any] = null,
-    StringDictionary: /**
-    * Any other extra properties that have been attached to the object will also be present on the serialized object.
-    */
-  /* key */ StringDictionary[js.Any] = null
-  ): SerializedError = {
+  def apply(message: String, raw: js.Error, stack: String, `type`: String): SerializedError = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], stack = stack.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[SerializedError]
   }
+  @scala.inline
+  implicit class SerializedErrorOps[Self <: SerializedError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRaw(value: js.Error): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStack(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

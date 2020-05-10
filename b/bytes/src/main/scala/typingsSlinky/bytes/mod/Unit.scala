@@ -28,30 +28,28 @@ trait Unit extends js.Object
 
 object Unit {
   @scala.inline
-  def B: typingsSlinky.bytes.bytesStrings.B = this.cast("B")
+  def B: typingsSlinky.bytes.bytesStrings.B = "B".asInstanceOf[typingsSlinky.bytes.bytesStrings.B]
   @scala.inline
-  def GB: typingsSlinky.bytes.bytesStrings.GB = this.cast("GB")
+  def GB: typingsSlinky.bytes.bytesStrings.GB = "GB".asInstanceOf[typingsSlinky.bytes.bytesStrings.GB]
   @scala.inline
-  def KB: typingsSlinky.bytes.bytesStrings.KB = this.cast("KB")
+  def KB: typingsSlinky.bytes.bytesStrings.KB = "KB".asInstanceOf[typingsSlinky.bytes.bytesStrings.KB]
   @scala.inline
-  def MB: typingsSlinky.bytes.bytesStrings.MB = this.cast("MB")
+  def MB: typingsSlinky.bytes.bytesStrings.MB = "MB".asInstanceOf[typingsSlinky.bytes.bytesStrings.MB]
   @scala.inline
-  def PB: typingsSlinky.bytes.bytesStrings.PB = this.cast("PB")
+  def PB: typingsSlinky.bytes.bytesStrings.PB = "PB".asInstanceOf[typingsSlinky.bytes.bytesStrings.PB]
   @scala.inline
-  def TB: typingsSlinky.bytes.bytesStrings.TB = this.cast("TB")
+  def TB: typingsSlinky.bytes.bytesStrings.TB = "TB".asInstanceOf[typingsSlinky.bytes.bytesStrings.TB]
   @scala.inline
-  def b: b_ = this.cast("b")
+  def b: b_ = "b".asInstanceOf[b_]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def gb: gb_ = "gb".asInstanceOf[gb_]
   @scala.inline
-  def gb: gb_ = this.cast("gb")
+  def kb: kb_ = "kb".asInstanceOf[kb_]
   @scala.inline
-  def kb: kb_ = this.cast("kb")
+  def mb: mb_ = "mb".asInstanceOf[mb_]
   @scala.inline
-  def mb: mb_ = this.cast("mb")
+  def pb: pb_ = "pb".asInstanceOf[pb_]
   @scala.inline
-  def pb: pb_ = this.cast("pb")
-  @scala.inline
-  def tb: tb_ = this.cast("tb")
+  def tb: tb_ = "tb".asInstanceOf[tb_]
 }
 

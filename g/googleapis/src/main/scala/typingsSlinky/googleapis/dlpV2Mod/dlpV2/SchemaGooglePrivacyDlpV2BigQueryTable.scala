@@ -30,12 +30,53 @@ trait SchemaGooglePrivacyDlpV2BigQueryTable extends js.Object {
 
 object SchemaGooglePrivacyDlpV2BigQueryTable {
   @scala.inline
-  def apply(datasetId: String = null, projectId: String = null, tableId: String = null): SchemaGooglePrivacyDlpV2BigQueryTable = {
+  def apply(): SchemaGooglePrivacyDlpV2BigQueryTable = {
     val __obj = js.Dynamic.literal()
-    if (datasetId != null) __obj.updateDynamic("datasetId")(datasetId.asInstanceOf[js.Any])
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (tableId != null) __obj.updateDynamic("tableId")(tableId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2BigQueryTable]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2BigQueryTableOps[Self <: SchemaGooglePrivacyDlpV2BigQueryTable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatasetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

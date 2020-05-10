@@ -13,9 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IAttributes
   extends /**
-  * this is necessary to be able to access the scoped attributes. it's not very elegant
-  * because you have to use attrs['foo'] instead of attrs.foo but I don't know of a better way
-  * this should really be limited to return string but it creates this problem: http://stackoverflow.com/q/17201854/165656
+  * Indexer which should return ng.INgModelController for most properties but cannot because of "All named properties must be assignable to string indexer type" constraint - see https://github.com/Microsoft/TypeScript/issues/272
   */
 /* name */ StringDictionary[js.Any] {
   /**
@@ -66,5 +64,71 @@ trait IAttributes
     */
   @JSName("$updateClass")
   def $updateClass(newClasses: String, oldClasses: String): Unit = js.native
+}
+
+object IAttributes {
+  @scala.inline
+  def apply(
+    $addClass: String => Unit,
+    $attr: js.Object,
+    $normalize: String => String,
+    $observe: (String, js.Function1[/* value */ js.UndefOr[js.Any], _]) => Function,
+    $removeClass: String => Unit,
+    $set: (String, js.Any) => Unit,
+    $updateClass: (String, String) => Unit
+  ): IAttributes = {
+    val __obj = js.Dynamic.literal($addClass = js.Any.fromFunction1($addClass), $attr = $attr.asInstanceOf[js.Any], $normalize = js.Any.fromFunction1($normalize), $observe = js.Any.fromFunction2($observe), $removeClass = js.Any.fromFunction1($removeClass), $set = js.Any.fromFunction2($set), $updateClass = js.Any.fromFunction2($updateClass))
+    __obj.asInstanceOf[IAttributes]
+  }
+  @scala.inline
+  implicit class IAttributesOps[Self <: IAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$addClass(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$addClass")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def with$attr(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$attr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$normalize(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$normalize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def with$observe(value: (String, js.Function1[/* value */ js.UndefOr[js.Any], _]) => Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$observe")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def with$removeClass(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$removeClass")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def with$set(value: (String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$set")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def with$updateClass(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$updateClass")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

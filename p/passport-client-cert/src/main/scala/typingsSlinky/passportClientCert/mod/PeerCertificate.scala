@@ -5,15 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PeerCertificate extends js.Object {
-  var fingerprint: String
-  var issuer: Certificate
-  var issuerInfo: Certificate
-  var raw: js.Any
-  var serialNumber: String
-  var subject: Certificate
-  var valid_from: String
-  var valid_to: String
+  var fingerprint: String = js.native
+  var issuer: Certificate = js.native
+  var issuerInfo: Certificate = js.native
+  var raw: js.Any = js.native
+  var serialNumber: String = js.native
+  var subject: Certificate = js.native
+  var valid_from: String = js.native
+  var valid_to: String = js.native
 }
 
 object PeerCertificate {
@@ -29,8 +30,63 @@ object PeerCertificate {
     valid_to: String
   ): PeerCertificate = {
     val __obj = js.Dynamic.literal(fingerprint = fingerprint.asInstanceOf[js.Any], issuer = issuer.asInstanceOf[js.Any], issuerInfo = issuerInfo.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], serialNumber = serialNumber.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any], valid_from = valid_from.asInstanceOf[js.Any], valid_to = valid_to.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PeerCertificate]
   }
+  @scala.inline
+  implicit class PeerCertificateOps[Self <: PeerCertificate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFingerprint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIssuer(value: Certificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIssuerInfo(value: Certificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issuerInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRaw(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSerialNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serialNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubject(value: Certificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValid_from(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valid_from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValid_to(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valid_to")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

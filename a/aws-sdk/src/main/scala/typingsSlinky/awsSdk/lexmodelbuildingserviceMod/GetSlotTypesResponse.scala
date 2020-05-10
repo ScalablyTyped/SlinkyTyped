@@ -18,11 +18,41 @@ trait GetSlotTypesResponse extends js.Object {
 
 object GetSlotTypesResponse {
   @scala.inline
-  def apply(nextToken: NextToken = null, slotTypes: SlotTypeMetadataList = null): GetSlotTypesResponse = {
+  def apply(): GetSlotTypesResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (slotTypes != null) __obj.updateDynamic("slotTypes")(slotTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSlotTypesResponse]
   }
+  @scala.inline
+  implicit class GetSlotTypesResponseOps[Self <: GetSlotTypesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlotTypes(value: SlotTypeMetadataList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlotTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

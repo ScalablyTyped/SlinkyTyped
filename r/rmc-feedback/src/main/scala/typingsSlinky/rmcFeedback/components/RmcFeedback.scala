@@ -1,15 +1,17 @@
 package typingsSlinky.rmcFeedback.components
 
 import typingsSlinky.rmcFeedback.mod.default
+import typingsSlinky.rmcFeedback.propTypesMod.ITouchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RmcFeedback extends SharedApply_ITouchProps32144790[default] {
+object RmcFeedback {
   @JSImport("rmc-feedback", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ITouchProps): SharedBuilder_ITouchProps1919177276[default] = new SharedBuilder_ITouchProps1919177276[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RmcFeedback.type): SharedBuilder_ITouchProps1919177276[default] = new SharedBuilder_ITouchProps1919177276[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

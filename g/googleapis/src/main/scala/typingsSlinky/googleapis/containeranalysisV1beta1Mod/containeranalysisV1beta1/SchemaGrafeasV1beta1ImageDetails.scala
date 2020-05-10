@@ -17,10 +17,29 @@ trait SchemaGrafeasV1beta1ImageDetails extends js.Object {
 
 object SchemaGrafeasV1beta1ImageDetails {
   @scala.inline
-  def apply(derivedImage: SchemaDerived = null): SchemaGrafeasV1beta1ImageDetails = {
+  def apply(): SchemaGrafeasV1beta1ImageDetails = {
     val __obj = js.Dynamic.literal()
-    if (derivedImage != null) __obj.updateDynamic("derivedImage")(derivedImage.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGrafeasV1beta1ImageDetails]
   }
+  @scala.inline
+  implicit class SchemaGrafeasV1beta1ImageDetailsOps[Self <: SchemaGrafeasV1beta1ImageDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDerivedImage(value: SchemaDerived): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("derivedImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDerivedImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("derivedImage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,12 +8,13 @@ import scala.scalajs.js.annotation._
 /**
   * PriorityLevelConfigurationSpec specifies the configuration of a priority level.
   */
+@js.native
 trait PriorityLevelConfigurationSpec extends js.Object {
   /**
     * `limited` specifies how requests are handled for a Limited priority level. This field must
     * be non-empty if and only if `type` is `"Limited"`.
     */
-  var limited: js.UndefOr[Input[LimitedPriorityLevelConfiguration]] = js.undefined
+  var limited: js.UndefOr[Input[LimitedPriorityLevelConfiguration]] = js.native
   /**
     * `type` indicates whether this priority level is subject to limitation on request execution.
     * A value of `"Exempt"` means that requests of this priority level are not subject to a limit
@@ -22,16 +23,41 @@ trait PriorityLevelConfigurationSpec extends js.Object {
     * _are_ subject to limits and (b) some of the server's limited capacity is made available
     * exclusively to this priority level. Required.
     */
-  var `type`: Input[String]
+  var `type`: Input[String] = js.native
 }
 
 object PriorityLevelConfigurationSpec {
   @scala.inline
-  def apply(`type`: Input[String], limited: Input[LimitedPriorityLevelConfiguration] = null): PriorityLevelConfigurationSpec = {
+  def apply(`type`: Input[String]): PriorityLevelConfigurationSpec = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (limited != null) __obj.updateDynamic("limited")(limited.asInstanceOf[js.Any])
     __obj.asInstanceOf[PriorityLevelConfigurationSpec]
   }
+  @scala.inline
+  implicit class PriorityLevelConfigurationSpecOps[Self <: PriorityLevelConfigurationSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLimited(value: Input[LimitedPriorityLevelConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limited")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimited: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limited")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,93 +1,93 @@
 package typingsSlinky.cassandraDriver.mod
 
-import typingsSlinky.cassandraDriver.AnonAddressResolution
-import typingsSlinky.cassandraDriver.AnonCoalescingThreshold
-import typingsSlinky.cassandraDriver.AnonCopyBuffer
-import typingsSlinky.cassandraDriver.AnonCoreConnectionsPerHost
 import typingsSlinky.cassandraDriver.AnonEnabled
-import typingsSlinky.cassandraDriver.AnonMaxSchemaAgreementWaitSeconds
-import typingsSlinky.cassandraDriver.AnonPassword
-import typingsSlinky.cassandraDriver.AnonSecureConnectBundle
-import typingsSlinky.cassandraDriver.authMod.auth.AuthProvider
-import typingsSlinky.cassandraDriver.metricsMod.metrics.ClientMetrics
-import typingsSlinky.cassandraDriver.trackerMod.tracker.RequestTracker
 import typingsSlinky.cassandraDriver.typesMod.types.Uuid
-import typingsSlinky.node.tlsMod.ConnectionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DseClientOptions extends ClientOptions {
-  var applicationName: js.UndefOr[String] = js.undefined
-  var applicationVersion: js.UndefOr[String] = js.undefined
-  var graphOptions: js.UndefOr[GraphOptions] = js.undefined
-  var id: js.UndefOr[Uuid] = js.undefined
-  var monitorReporting: js.UndefOr[AnonEnabled] = js.undefined
+  var applicationName: js.UndefOr[String] = js.native
+  var applicationVersion: js.UndefOr[String] = js.native
+  var graphOptions: js.UndefOr[GraphOptions] = js.native
+  var id: js.UndefOr[Uuid] = js.native
+  var monitorReporting: js.UndefOr[AnonEnabled] = js.native
 }
 
 object DseClientOptions {
   @scala.inline
-  def apply(
-    applicationName: String = null,
-    applicationVersion: String = null,
-    authProvider: AuthProvider = null,
-    cloud: AnonSecureConnectBundle = null,
-    contactPoints: js.Array[String] = null,
-    credentials: AnonPassword = null,
-    encoding: AnonCopyBuffer = null,
-    graphOptions: GraphOptions = null,
-    id: Uuid = null,
-    isMetadataSyncEnabled: js.UndefOr[Boolean] = js.undefined,
-    keyspace: String = null,
-    localDataCenter: String = null,
-    maxPrepared: Int | Double = null,
-    metrics: ClientMetrics = null,
-    monitorReporting: AnonEnabled = null,
-    policies: AnonAddressResolution = null,
-    pooling: AnonCoreConnectionsPerHost = null,
-    prepareOnAllHosts: js.UndefOr[Boolean] = js.undefined,
-    profiles: js.Array[ExecutionProfile] = null,
-    promiseFactory: /* handler */ js.Function1[
-      /* callback */ js.Function2[/* err */ js.Error, /* result */ js.UndefOr[js.Any], Unit], 
-      Unit
-    ] => js.Promise[_] = null,
-    protocolOptions: AnonMaxSchemaAgreementWaitSeconds = null,
-    queryOptions: QueryOptions = null,
-    rePrepareOnUp: js.UndefOr[Boolean] = js.undefined,
-    refreshSchemaDelay: Int | Double = null,
-    requestTracker: RequestTracker = null,
-    socketOptions: AnonCoalescingThreshold = null,
-    sslOptions: ConnectionOptions = null
-  ): DseClientOptions = {
+  def apply(): DseClientOptions = {
     val __obj = js.Dynamic.literal()
-    if (applicationName != null) __obj.updateDynamic("applicationName")(applicationName.asInstanceOf[js.Any])
-    if (applicationVersion != null) __obj.updateDynamic("applicationVersion")(applicationVersion.asInstanceOf[js.Any])
-    if (authProvider != null) __obj.updateDynamic("authProvider")(authProvider.asInstanceOf[js.Any])
-    if (cloud != null) __obj.updateDynamic("cloud")(cloud.asInstanceOf[js.Any])
-    if (contactPoints != null) __obj.updateDynamic("contactPoints")(contactPoints.asInstanceOf[js.Any])
-    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (graphOptions != null) __obj.updateDynamic("graphOptions")(graphOptions.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(isMetadataSyncEnabled)) __obj.updateDynamic("isMetadataSyncEnabled")(isMetadataSyncEnabled.asInstanceOf[js.Any])
-    if (keyspace != null) __obj.updateDynamic("keyspace")(keyspace.asInstanceOf[js.Any])
-    if (localDataCenter != null) __obj.updateDynamic("localDataCenter")(localDataCenter.asInstanceOf[js.Any])
-    if (maxPrepared != null) __obj.updateDynamic("maxPrepared")(maxPrepared.asInstanceOf[js.Any])
-    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
-    if (monitorReporting != null) __obj.updateDynamic("monitorReporting")(monitorReporting.asInstanceOf[js.Any])
-    if (policies != null) __obj.updateDynamic("policies")(policies.asInstanceOf[js.Any])
-    if (pooling != null) __obj.updateDynamic("pooling")(pooling.asInstanceOf[js.Any])
-    if (!js.isUndefined(prepareOnAllHosts)) __obj.updateDynamic("prepareOnAllHosts")(prepareOnAllHosts.asInstanceOf[js.Any])
-    if (profiles != null) __obj.updateDynamic("profiles")(profiles.asInstanceOf[js.Any])
-    if (promiseFactory != null) __obj.updateDynamic("promiseFactory")(js.Any.fromFunction1(promiseFactory))
-    if (protocolOptions != null) __obj.updateDynamic("protocolOptions")(protocolOptions.asInstanceOf[js.Any])
-    if (queryOptions != null) __obj.updateDynamic("queryOptions")(queryOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(rePrepareOnUp)) __obj.updateDynamic("rePrepareOnUp")(rePrepareOnUp.asInstanceOf[js.Any])
-    if (refreshSchemaDelay != null) __obj.updateDynamic("refreshSchemaDelay")(refreshSchemaDelay.asInstanceOf[js.Any])
-    if (requestTracker != null) __obj.updateDynamic("requestTracker")(requestTracker.asInstanceOf[js.Any])
-    if (socketOptions != null) __obj.updateDynamic("socketOptions")(socketOptions.asInstanceOf[js.Any])
-    if (sslOptions != null) __obj.updateDynamic("sslOptions")(sslOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DseClientOptions]
   }
+  @scala.inline
+  implicit class DseClientOptionsOps[Self <: DseClientOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplicationVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGraphOptions(value: GraphOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graphOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGraphOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graphOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: Uuid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonitorReporting(value: AnonEnabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorReporting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonitorReporting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorReporting")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -29,6 +29,7 @@ class SMTPServer () extends EventEmitter {
   def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
    // tslint:disable-line unified-signatures
   /** Closes the server */
+  def close(): Unit = js.native
   def close(callback: js.Function0[Unit]): Unit = js.native
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native

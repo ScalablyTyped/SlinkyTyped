@@ -35,21 +35,83 @@ trait SharePointConfiguration extends js.Object {
 
 object SharePointConfiguration {
   @scala.inline
-  def apply(
-    SecretArn: SecretArn,
-    SharePointVersion: SharePointVersion,
-    Urls: SharePointUrlList,
-    CrawlAttachments: js.UndefOr[scala.Boolean] = js.undefined,
-    DocumentTitleFieldName: DataSourceFieldName = null,
-    FieldMappings: DataSourceToIndexFieldMappingList = null,
-    VpcConfiguration: DataSourceVpcConfiguration = null
-  ): SharePointConfiguration = {
+  def apply(SecretArn: SecretArn, SharePointVersion: SharePointVersion, Urls: SharePointUrlList): SharePointConfiguration = {
     val __obj = js.Dynamic.literal(SecretArn = SecretArn.asInstanceOf[js.Any], SharePointVersion = SharePointVersion.asInstanceOf[js.Any], Urls = Urls.asInstanceOf[js.Any])
-    if (!js.isUndefined(CrawlAttachments)) __obj.updateDynamic("CrawlAttachments")(CrawlAttachments.asInstanceOf[js.Any])
-    if (DocumentTitleFieldName != null) __obj.updateDynamic("DocumentTitleFieldName")(DocumentTitleFieldName.asInstanceOf[js.Any])
-    if (FieldMappings != null) __obj.updateDynamic("FieldMappings")(FieldMappings.asInstanceOf[js.Any])
-    if (VpcConfiguration != null) __obj.updateDynamic("VpcConfiguration")(VpcConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharePointConfiguration]
   }
+  @scala.inline
+  implicit class SharePointConfigurationOps[Self <: SharePointConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSecretArn(value: SecretArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSharePointVersion(value: SharePointVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharePointVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrls(value: SharePointUrlList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Urls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCrawlAttachments(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CrawlAttachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrawlAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CrawlAttachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentTitleFieldName(value: DataSourceFieldName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentTitleFieldName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentTitleFieldName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentTitleFieldName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldMappings(value: DataSourceToIndexFieldMappingList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldMappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcConfiguration(value: DataSourceVpcConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

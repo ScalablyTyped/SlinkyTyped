@@ -28,15 +28,15 @@ trait Cursor[TValue, TKey] extends js.Object {
     * @param key Optional. The key to position the cursor at. If no key is specified, the cursor advances to the immediate next position, based on the its direction.
     * @returns The cursor after having been continued to the next or specified record. */
   def continue(): js.Promise[Cursor[TValue, TKey]] = js.native
-  def continue(key: typingsSlinky.std.IDBKeyRange): js.Promise[Cursor[TValue, TKey]] = js.native
+  def continue(key: IDBKeyRange): js.Promise[Cursor[TValue, TKey]] = js.native
   def continue(key: IDBValidKey): js.Promise[Cursor[TValue, TKey]] = js.native
   /** Sets the cursor to the given index key and primary key given as arguments.
     * @param key The key to position the cursor at.
     * @param primaryKey The primary key to position the cursor at.
     * @returns The cursor after having been continued to the next or specified record. */
   def continuePrimaryKey(): js.Promise[Cursor[TValue, TKey]] = js.native
-  def continuePrimaryKey(key: typingsSlinky.std.IDBKeyRange): js.Promise[Cursor[TValue, TKey]] = js.native
-  def continuePrimaryKey(key: typingsSlinky.std.IDBKeyRange, primaryKey: TKey): js.Promise[Cursor[TValue, TKey]] = js.native
+  def continuePrimaryKey(key: IDBKeyRange): js.Promise[Cursor[TValue, TKey]] = js.native
+  def continuePrimaryKey(key: IDBKeyRange, primaryKey: TKey): js.Promise[Cursor[TValue, TKey]] = js.native
   def continuePrimaryKey(key: IDBValidKey): js.Promise[Cursor[TValue, TKey]] = js.native
   def continuePrimaryKey(key: IDBValidKey, primaryKey: TKey): js.Promise[Cursor[TValue, TKey]] = js.native
   /** Returns a Promise of an IDBRequest object that (in a separate thread) deletes the record at the cursor's position, without changing the cursor's position.

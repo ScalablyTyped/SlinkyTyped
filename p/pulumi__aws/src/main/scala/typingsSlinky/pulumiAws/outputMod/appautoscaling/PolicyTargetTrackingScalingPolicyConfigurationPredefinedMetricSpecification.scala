@@ -12,10 +12,35 @@ trait PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificatio
 
 object PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification {
   @scala.inline
-  def apply(predefinedMetricType: String, resourceLabel: String = null): PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification = {
+  def apply(predefinedMetricType: String): PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification = {
     val __obj = js.Dynamic.literal(predefinedMetricType = predefinedMetricType.asInstanceOf[js.Any])
-    if (resourceLabel != null) __obj.updateDynamic("resourceLabel")(resourceLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification]
   }
+  @scala.inline
+  implicit class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationOps[Self <: PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPredefinedMetricType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predefinedMetricType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLabel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

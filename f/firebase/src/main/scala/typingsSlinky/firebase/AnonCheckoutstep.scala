@@ -5,24 +5,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCheckoutstep
   extends /* key */ StringDictionary[js.Any] {
-  var checkout_option: js.UndefOr[String] = js.undefined
-  var checkout_step: js.UndefOr[Double] = js.undefined
+  var checkout_option: js.UndefOr[String] = js.native
+  var checkout_step: js.UndefOr[Double] = js.native
 }
 
 object AnonCheckoutstep {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    checkout_option: String = null,
-    checkout_step: Int | Double = null
-  ): AnonCheckoutstep = {
+  def apply(): AnonCheckoutstep = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (checkout_option != null) __obj.updateDynamic("checkout_option")(checkout_option.asInstanceOf[js.Any])
-    if (checkout_step != null) __obj.updateDynamic("checkout_step")(checkout_step.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCheckoutstep]
   }
+  @scala.inline
+  implicit class AnonCheckoutstepOps[Self <: AnonCheckoutstep] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCheckout_option(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkout_option")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckout_option: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkout_option")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckout_step(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkout_step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckout_step: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkout_step")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

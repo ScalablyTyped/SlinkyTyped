@@ -7,17 +7,37 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<@ant-design/react-native.@ant-design/react-native/lib/list/style.ListStyle, 'Brief' | 'BriefText'> */
+@js.native
 trait PickListStyleBriefBriefTe extends js.Object {
-  var Brief: ViewStyle
-  var BriefText: TextStyle
+  var Brief: ViewStyle = js.native
+  var BriefText: TextStyle = js.native
 }
 
 object PickListStyleBriefBriefTe {
   @scala.inline
   def apply(Brief: ViewStyle, BriefText: TextStyle): PickListStyleBriefBriefTe = {
     val __obj = js.Dynamic.literal(Brief = Brief.asInstanceOf[js.Any], BriefText = BriefText.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PickListStyleBriefBriefTe]
   }
+  @scala.inline
+  implicit class PickListStyleBriefBriefTeOps[Self <: PickListStyleBriefBriefTe] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrief(value: ViewStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Brief")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBriefText(value: TextStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BriefText")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

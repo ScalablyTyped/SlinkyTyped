@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait templateDefinitions extends js.Object {
-  var close: js.UndefOr[String] = js.undefined
-  var content: js.UndefOr[String] = js.undefined
-  var panel: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var triangle: js.UndefOr[String] = js.undefined
-  var triangleInner: js.UndefOr[String] = js.undefined
-  var triangleOuter: js.UndefOr[String] = js.undefined
+  var close: js.UndefOr[String] = js.native
+  var content: js.UndefOr[String] = js.native
+  var panel: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
+  var triangle: js.UndefOr[String] = js.native
+  var triangleInner: js.UndefOr[String] = js.native
+  var triangleOuter: js.UndefOr[String] = js.native
 }
 
 object templateDefinitions {
   @scala.inline
-  def apply(
-    close: String = null,
-    content: String = null,
-    panel: String = null,
-    title: String = null,
-    triangle: String = null,
-    triangleInner: String = null,
-    triangleOuter: String = null
-  ): templateDefinitions = {
+  def apply(): templateDefinitions = {
     val __obj = js.Dynamic.literal()
-    if (close != null) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (panel != null) __obj.updateDynamic("panel")(panel.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (triangle != null) __obj.updateDynamic("triangle")(triangle.asInstanceOf[js.Any])
-    if (triangleInner != null) __obj.updateDynamic("triangleInner")(triangleInner.asInstanceOf[js.Any])
-    if (triangleOuter != null) __obj.updateDynamic("triangleOuter")(triangleOuter.asInstanceOf[js.Any])
     __obj.asInstanceOf[templateDefinitions]
   }
+  @scala.inline
+  implicit class templateDefinitionsOps[Self <: templateDefinitions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPanel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPanel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriangle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triangle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriangle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triangle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriangleInner(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triangleInner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriangleInner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triangleInner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriangleOuter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triangleOuter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriangleOuter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triangleOuter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

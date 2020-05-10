@@ -14,10 +14,29 @@ trait DescribeRdsDbInstancesResult extends js.Object {
 
 object DescribeRdsDbInstancesResult {
   @scala.inline
-  def apply(RdsDbInstances: RdsDbInstances = null): DescribeRdsDbInstancesResult = {
+  def apply(): DescribeRdsDbInstancesResult = {
     val __obj = js.Dynamic.literal()
-    if (RdsDbInstances != null) __obj.updateDynamic("RdsDbInstances")(RdsDbInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeRdsDbInstancesResult]
   }
+  @scala.inline
+  implicit class DescribeRdsDbInstancesResultOps[Self <: DescribeRdsDbInstancesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRdsDbInstances(value: RdsDbInstances): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RdsDbInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRdsDbInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RdsDbInstances")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

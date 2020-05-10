@@ -1,11 +1,10 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonClose
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.bottom
@@ -34,66 +33,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StatefulTooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object StatefulTooltip {
   @JSImport("baseui/tooltip", "StatefulTooltip")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, id */
-  def apply(
-    accessibilityType: none | menu | tooltip = null,
-    animateOutTime: Int | Double = null,
-    content: TagMod[Any] | (js.Function1[/* args */ AnonClose, TagMod[Any]]) = null,
-    `data-baseweb`: String = null,
-    dismissOnClickOutside: js.UndefOr[Boolean] = js.undefined,
-    dismissOnEsc: js.UndefOr[Boolean] = js.undefined,
-    focusLock: js.UndefOr[Boolean] = js.undefined,
-    ignoreBoundary: js.UndefOr[Boolean] = js.undefined,
-    initialState: State = null,
-    mountNode: HTMLElement = null,
-    onClose: () => _ = null,
-    onMouseEnterDelay: Int | Double = null,
-    onMouseLeaveDelay: Int | Double = null,
-    onOpen: () => _ = null,
-    overrides: Overrides = null,
-    placement: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top = null,
-    popperOptions: js.Any = null,
-    renderAll: js.UndefOr[Boolean] = js.undefined,
-    returnFocus: js.UndefOr[Boolean] = js.undefined,
-    showArrow: js.UndefOr[Boolean] = js.undefined,
-    stateReducer: (/* stateChangeType */ open | close, /* nextState */ State, /* currentState */ State) => State = null,
-    triggerType: click | hover = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (accessibilityType != null) __obj.updateDynamic("accessibilityType")(accessibilityType.asInstanceOf[js.Any])
-    if (animateOutTime != null) __obj.updateDynamic("animateOutTime")(animateOutTime.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (`data-baseweb` != null) __obj.updateDynamic("data-baseweb")(`data-baseweb`.asInstanceOf[js.Any])
-    if (!js.isUndefined(dismissOnClickOutside)) __obj.updateDynamic("dismissOnClickOutside")(dismissOnClickOutside.asInstanceOf[js.Any])
-    if (!js.isUndefined(dismissOnEsc)) __obj.updateDynamic("dismissOnEsc")(dismissOnEsc.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusLock)) __obj.updateDynamic("focusLock")(focusLock.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreBoundary)) __obj.updateDynamic("ignoreBoundary")(ignoreBoundary.asInstanceOf[js.Any])
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (mountNode != null) __obj.updateDynamic("mountNode")(mountNode.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (onMouseEnterDelay != null) __obj.updateDynamic("onMouseEnterDelay")(onMouseEnterDelay.asInstanceOf[js.Any])
-    if (onMouseLeaveDelay != null) __obj.updateDynamic("onMouseLeaveDelay")(onMouseLeaveDelay.asInstanceOf[js.Any])
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction0(onOpen))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (popperOptions != null) __obj.updateDynamic("popperOptions")(popperOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnFocus)) __obj.updateDynamic("returnFocus")(returnFocus.asInstanceOf[js.Any])
-    if (!js.isUndefined(showArrow)) __obj.updateDynamic("showArrow")(showArrow.asInstanceOf[js.Any])
-    if (stateReducer != null) __obj.updateDynamic("stateReducer")(js.Any.fromFunction3(stateReducer))
-    if (triggerType != null) __obj.updateDynamic("triggerType")(triggerType.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def accessibilityType(value: none | menu | tooltip): this.type = set("accessibilityType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animateOutTime(value: Double): this.type = set("animateOutTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentFunction1(value: /* args */ AnonClose => TagMod[Any]): this.type = set("content", js.Any.fromFunction1(value))
+    @scala.inline
+    def content(value: TagMod[Any] | (js.Function1[/* args */ AnonClose, TagMod[Any]])): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `data-baseweb`(value: String): this.type = set("data-baseweb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dismissOnClickOutside(value: Boolean): this.type = set("dismissOnClickOutside", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dismissOnEsc(value: Boolean): this.type = set("dismissOnEsc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusLock(value: Boolean): this.type = set("focusLock", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoreBoundary(value: Boolean): this.type = set("ignoreBoundary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialState(value: State): this.type = set("initialState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mountNode(value: HTMLElement): this.type = set("mountNode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: () => _): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMouseEnterDelay(value: Double): this.type = set("onMouseEnterDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseLeaveDelay(value: Double): this.type = set("onMouseLeaveDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onOpen(value: () => _): this.type = set("onOpen", js.Any.fromFunction0(value))
+    @scala.inline
+    def overrides(value: Overrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placement(
+      value: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
+    ): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popperOptions(value: js.Any): this.type = set("popperOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderAll(value: Boolean): this.type = set("renderAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def returnFocus(value: Boolean): this.type = set("returnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showArrow(value: Boolean): this.type = set("showArrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stateReducer(
+      value: (/* stateChangeType */ open | close, /* nextState */ State, /* currentState */ State) => State
+    ): this.type = set("stateReducer", js.Any.fromFunction3(value))
+    @scala.inline
+    def triggerType(value: click | hover): this.type = set("triggerType", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StatefulTooltipProps
+  
+  def withProps(p: StatefulTooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StatefulTooltip.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

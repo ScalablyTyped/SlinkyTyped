@@ -5,28 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IteratorMultiArgumentsOptions[EmittedType /* <: js.Array[_] */] extends IteratorOptions[EmittedType] {
   @JSName("multiArgs")
-  var multiArgs_IteratorMultiArgumentsOptions: `true`
+  var multiArgs_IteratorMultiArgumentsOptions: `true` = js.native
 }
 
 object IteratorMultiArgumentsOptions {
   @scala.inline
-  def apply[EmittedType /* <: js.Array[_] */](
-    multiArgs: `true`,
-    filter: EmittedType => Boolean = null,
-    limit: Int | Double = null,
-    rejectionEvents: js.Array[String | js.Symbol] = null,
-    resolutionEvents: js.Array[String | js.Symbol] = null,
-    timeout: Int | Double = null
-  ): IteratorMultiArgumentsOptions[EmittedType] = {
+  def apply[EmittedType](multiArgs: `true`): IteratorMultiArgumentsOptions[EmittedType] = {
     val __obj = js.Dynamic.literal(multiArgs = multiArgs.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (rejectionEvents != null) __obj.updateDynamic("rejectionEvents")(rejectionEvents.asInstanceOf[js.Any])
-    if (resolutionEvents != null) __obj.updateDynamic("resolutionEvents")(resolutionEvents.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[IteratorMultiArgumentsOptions[EmittedType]]
   }
+  @scala.inline
+  implicit class IteratorMultiArgumentsOptionsOps[Self[emittedtype] <: IteratorMultiArgumentsOptions[emittedtype], EmittedType] (val x: Self[EmittedType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[EmittedType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[EmittedType]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[EmittedType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[EmittedType] with Other]
+    @scala.inline
+    def withMultiArgs(value: `true`): Self[EmittedType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiArgs")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

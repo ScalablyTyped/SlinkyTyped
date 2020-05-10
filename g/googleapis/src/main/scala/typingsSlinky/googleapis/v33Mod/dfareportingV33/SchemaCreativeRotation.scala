@@ -34,18 +34,65 @@ trait SchemaCreativeRotation extends js.Object {
 
 object SchemaCreativeRotation {
   @scala.inline
-  def apply(
-    creativeAssignments: js.Array[SchemaCreativeAssignment] = null,
-    creativeOptimizationConfigurationId: String = null,
-    `type`: String = null,
-    weightCalculationStrategy: String = null
-  ): SchemaCreativeRotation = {
+  def apply(): SchemaCreativeRotation = {
     val __obj = js.Dynamic.literal()
-    if (creativeAssignments != null) __obj.updateDynamic("creativeAssignments")(creativeAssignments.asInstanceOf[js.Any])
-    if (creativeOptimizationConfigurationId != null) __obj.updateDynamic("creativeOptimizationConfigurationId")(creativeOptimizationConfigurationId.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (weightCalculationStrategy != null) __obj.updateDynamic("weightCalculationStrategy")(weightCalculationStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreativeRotation]
   }
+  @scala.inline
+  implicit class SchemaCreativeRotationOps[Self <: SchemaCreativeRotation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreativeAssignments(value: js.Array[SchemaCreativeAssignment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeAssignments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeAssignments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeAssignments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreativeOptimizationConfigurationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeOptimizationConfigurationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeOptimizationConfigurationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeOptimizationConfigurationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeightCalculationStrategy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightCalculationStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeightCalculationStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weightCalculationStrategy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

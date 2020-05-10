@@ -18,11 +18,41 @@ trait DeregisterTargetFromMaintenanceWindowResult extends js.Object {
 
 object DeregisterTargetFromMaintenanceWindowResult {
   @scala.inline
-  def apply(WindowId: MaintenanceWindowId = null, WindowTargetId: MaintenanceWindowTargetId = null): DeregisterTargetFromMaintenanceWindowResult = {
+  def apply(): DeregisterTargetFromMaintenanceWindowResult = {
     val __obj = js.Dynamic.literal()
-    if (WindowId != null) __obj.updateDynamic("WindowId")(WindowId.asInstanceOf[js.Any])
-    if (WindowTargetId != null) __obj.updateDynamic("WindowTargetId")(WindowTargetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeregisterTargetFromMaintenanceWindowResult]
   }
+  @scala.inline
+  implicit class DeregisterTargetFromMaintenanceWindowResultOps[Self <: DeregisterTargetFromMaintenanceWindowResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWindowId(value: MaintenanceWindowId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindowId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWindowTargetId(value: MaintenanceWindowTargetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowTargetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindowTargetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowTargetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

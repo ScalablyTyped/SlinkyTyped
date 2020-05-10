@@ -40,22 +40,89 @@ trait SchemaPartialGroupByKeyInstruction extends js.Object {
 
 object SchemaPartialGroupByKeyInstruction {
   @scala.inline
-  def apply(
-    input: SchemaInstructionInput = null,
-    inputElementCodec: StringDictionary[js.Any] = null,
-    originalCombineValuesInputStoreName: String = null,
-    originalCombineValuesStepName: String = null,
-    sideInputs: js.Array[SchemaSideInputInfo] = null,
-    valueCombiningFn: StringDictionary[js.Any] = null
-  ): SchemaPartialGroupByKeyInstruction = {
+  def apply(): SchemaPartialGroupByKeyInstruction = {
     val __obj = js.Dynamic.literal()
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (inputElementCodec != null) __obj.updateDynamic("inputElementCodec")(inputElementCodec.asInstanceOf[js.Any])
-    if (originalCombineValuesInputStoreName != null) __obj.updateDynamic("originalCombineValuesInputStoreName")(originalCombineValuesInputStoreName.asInstanceOf[js.Any])
-    if (originalCombineValuesStepName != null) __obj.updateDynamic("originalCombineValuesStepName")(originalCombineValuesStepName.asInstanceOf[js.Any])
-    if (sideInputs != null) __obj.updateDynamic("sideInputs")(sideInputs.asInstanceOf[js.Any])
-    if (valueCombiningFn != null) __obj.updateDynamic("valueCombiningFn")(valueCombiningFn.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPartialGroupByKeyInstruction]
   }
+  @scala.inline
+  implicit class SchemaPartialGroupByKeyInstructionOps[Self <: SchemaPartialGroupByKeyInstruction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInput(value: SchemaInstructionInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputElementCodec(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputElementCodec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputElementCodec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputElementCodec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalCombineValuesInputStoreName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalCombineValuesInputStoreName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalCombineValuesInputStoreName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalCombineValuesInputStoreName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalCombineValuesStepName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalCombineValuesStepName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalCombineValuesStepName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalCombineValuesStepName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSideInputs(value: js.Array[SchemaSideInputInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sideInputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSideInputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sideInputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueCombiningFn(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueCombiningFn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueCombiningFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueCombiningFn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

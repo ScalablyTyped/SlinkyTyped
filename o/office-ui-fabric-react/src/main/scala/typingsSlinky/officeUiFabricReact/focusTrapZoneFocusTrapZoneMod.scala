@@ -45,12 +45,6 @@ object focusTrapZoneFocusTrapZoneMod extends js.Object {
     def componentDidUpdate_MFocusTrapZone(prevProps: IFocusTrapZoneProps): Unit = js.native
     @JSName("componentWillUnmount")
     def componentWillUnmount_MFocusTrapZone(): Unit = js.native
-    /**
-      * Sets focus to a descendant in the Trap Zone.
-      * See firstFocusableSelector and focusPreviouslyFocusedInnerElement for details.
-      */
-    /* CompleteClass */
-    override def focus(): Unit = js.native
   }
   
   /* static members */

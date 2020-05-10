@@ -11,6 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Impl extends js.Object {
   /**
     * Whether visibility conditions should be checked on calls to refresh.
@@ -18,153 +19,153 @@ trait Impl extends js.Object {
     *
     * @default true
     */
-  var checkOnRefresh: Boolean
+  var checkOnRefresh: Boolean = js.native
   // endregion
   // region DOM Settings
   /**
     * Class names used to attach style to state
     */
-  var className: ClassNameSettings
+  var className: ClassNameSettings = js.native
   /**
     * The scroll context visibility should use.
     *
     * @default 'window'
     */
-  var context: String | JQuery
+  var context: String | JQuery = js.native
   /**
     * When set to true a callback will occur anytime an element passes a condition not just immediately after the threshold is met.
     *
     * @default false
     */
-  var continuous: Boolean
+  var continuous: Boolean = js.native
   /**
     * Debug output to console
     */
-  var debug: Boolean
+  var debug: Boolean = js.native
   /**
     * When using type: image allows you to specify transition duration
     *
     * @default 1000
     */
-  var duration: Double
+  var duration: Double = js.native
   // endregion
   // region Debug Settings
-  var error: ErrorSettings
+  var error: ErrorSettings = js.native
   /**
     * Whether element calculations should include its margin
     *
     * @default false
     */
-  var includeMargin: Boolean
+  var includeMargin: Boolean = js.native
   /**
     * Whether visibility conditions should be checked immediately on init
     *
     * @default true
     */
-  var initialCheck: Boolean
+  var initialCheck: Boolean = js.native
   // endregion
   // region Debug Settings
   /**
     * Name used in log statements
     */
-  var name: String
+  var name: String = js.native
   // endregion
   // region Component Settings
   // region DOM Settings
   /**
     * Event namespace. Makes sure module teardown does not effect other events attached to an element.
     */
-  var namespace: String
+  var namespace: String = js.native
   /**
     * Whether to automatically refresh content when changes are made to the element's DOM subtree
     *
     * @default true
     */
-  var observeChanges: Boolean
+  var observeChanges: Boolean = js.native
   /**
     * Value that context scrollTop should be adjusted in pixels. Useful for making content appear below content fixed to the page.
     *
     * @default 0
     */
-  var offset: Double
+  var offset: Double = js.native
   // region Functionality
   /**
     * When set to false a callback will occur each time an element passes the threshold for a condition.
     *
     * @default true
     */
-  var once: Boolean
+  var once: Boolean = js.native
   /**
     * Show console.table output with performance metrics
     */
-  var performance: Boolean
+  var performance: Boolean = js.native
   /**
     * Whether visibility conditions should be checked on window load. This ensures that after images load content positions will be updated correctly.
     *
     * @default true
     */
-  var refreshOnLoad: Boolean
+  var refreshOnLoad: Boolean = js.native
   /**
     * Whether visibility conditions should be checked on window resize. Useful when content resizes causes continuous changes in position
     *
     * @default true
     */
-  var refreshOnResize: Boolean
+  var refreshOnResize: Boolean = js.native
   /**
     * Silences all console output including error messages, regardless of other debug settings.
     */
-  var silent: Boolean
+  var silent: Boolean = js.native
   /**
     * When set to an integer, scroll position will be debounced using this ms value. false will debounce with requestAnimationFrame.
     *
     * @default false
     */
-  var throttle: `false` | Double
+  var throttle: `false` | Double = js.native
   /**
     * When using type: image allows you to specify transition when showing a loaded image
     *
     * @default false
     */
-  var transition: `false` | String
+  var transition: `false` | String = js.native
   /**
     * Set to image to load images when on screen. Set to fixed to add class name fixed when passed.
     *
     * @default false
     */
-  var `type`: `false` | image | fixed
+  var `type`: `false` | image | fixed = js.native
   /**
     * Debug output includes all internal behaviors
     */
-  var verbose: Boolean
+  var verbose: Boolean = js.native
   /**
     * Specify a z-index when using type: 'fixed'.
     *
     * @default 1
     * @since 2.2
     */
-  var zIndex: Double
+  var zIndex: Double = js.native
   /**
     * Occurs after all img initialized at the same time have loaded.
     *
     * @since 2.2
     */
-  def onAllLoaded(): Unit
+  def onAllLoaded(): Unit = js.native
   /**
     * Element's bottom edge has passed top of screen
     */
-  def onBottomPassed(): Unit
+  def onBottomPassed(): Unit = js.native
   /**
     * Element's bottom edge has not passed top of screen
     */
-  def onBottomPassedReverse(): Unit
+  def onBottomPassedReverse(): Unit = js.native
   /**
     * Element's bottom edge has passed bottom of screen
     */
-  def onBottomVisible(): Unit
+  def onBottomVisible(): Unit = js.native
   /**
     * Element's bottom edge has not passed bottom of screen
     */
-  def onBottomVisibleReverse(): Unit
+  def onBottomVisibleReverse(): Unit = js.native
   // endregion
   // region Fixed Callbacks
   /**
@@ -172,7 +173,7 @@ trait Impl extends js.Object {
     *
     * @since 2.2
     */
-  def onFixed(): Unit
+  def onFixed(): Unit = js.native
   // endregion
   // region Image Callbacks
   /**
@@ -180,51 +181,51 @@ trait Impl extends js.Object {
     *
     * @since 2.2
     */
-  def onLoad(): Unit
-  def onOffScreen(): Unit
-  def onOnScreen(): Unit
+  def onLoad(): Unit = js.native
+  def onOffScreen(): Unit = js.native
+  def onOnScreen(): Unit = js.native
   /**
     * Any part of an element is visible on screen
     */
-  def onPassing(): Unit
+  def onPassing(): Unit = js.native
   /**
     * Element's top has not passed top of screen but bottom has
     */
-  def onPassingReverse(): Unit
+  def onPassingReverse(): Unit = js.native
   /**
     * Occurs whenever element's visibility is refreshed
     */
-  def onRefresh(): Unit
+  def onRefresh(): Unit = js.native
   /**
     * Element's top edge has passed top of the screen
     */
-  def onTopPassed(): Unit
+  def onTopPassed(): Unit = js.native
   /**
     * Element's top edge has not passed top of the screen
     */
-  def onTopPassedReverse(): Unit
+  def onTopPassedReverse(): Unit = js.native
   // endregion
   // region Visibility Callbacks
   /**
     * Element's top edge has passed bottom of screen
     */
-  def onTopVisible(): Unit
+  def onTopVisible(): Unit = js.native
   /**
     * Element's top edge has not passed bottom of screen
     */
-  def onTopVisibleReverse(): Unit
+  def onTopVisibleReverse(): Unit = js.native
   /**
     * Occurs after element has been removed from fixed position
     *
     * @since 2.2
     */
-  def onUnfixed(): Unit
+  def onUnfixed(): Unit = js.native
   // endregion
   // region Utility Callbacks
   /**
     * Occurs each time an elements calculations are updated
     */
-  def onUpdate(calculations: ElementCalculations): Unit
+  def onUpdate(calculations: ElementCalculations): Unit = js.native
 }
 
 object Impl {
@@ -276,5 +277,259 @@ object Impl {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Impl]
   }
+  @scala.inline
+  implicit class ImplOps[Self <: Impl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCheckOnRefresh(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkOnRefresh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassName(value: ClassNameSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContext(value: String | JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContinuous(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withError(value: ErrorSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIncludeMargin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitialCheck(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObserveChanges(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("observeChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnAllLoaded(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAllLoaded")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnBottomPassed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomPassed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnBottomPassedReverse(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomPassedReverse")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnBottomVisible(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnBottomVisibleReverse(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBottomVisibleReverse")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnFixed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFixed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnLoad(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnOffScreen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOffScreen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnOnScreen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOnScreen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnPassing(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPassing")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnPassingReverse(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPassingReverse")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnRefresh(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRefresh")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnTopPassed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopPassed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnTopPassedReverse(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopPassedReverse")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnTopVisible(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnTopVisibleReverse(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTopVisibleReverse")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnUnfixed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnfixed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnUpdate(value: ElementCalculations => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPerformance(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRefreshOnLoad(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshOnLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRefreshOnResize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshOnResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThrottle(value: `false` | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransition(value: `false` | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: `false` | image | fixed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerbose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.arrayForeach
 
 import org.scalajs.dom.raw.Node
-import typingsSlinky.std.NodeListOf
+import org.scalajs.dom.raw.NodeListOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object mod extends js.Object {
   * @param thisArg  An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
   */
   def apply[T /* <: Node */](
-    arr: NodeListOf[T],
+    arr: NodeListOf[T with Node],
     callbackfn: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], Unit]
   ): Unit = js.native
   def apply[T, U](
@@ -29,7 +29,7 @@ object mod extends js.Object {
     thisArg: U
   ): Unit = js.native
   def apply[T /* <: Node */, U](
-    arr: NodeListOf[T],
+    arr: NodeListOf[T with Node],
     callbackfn: js.ThisFunction3[/* this */ U, /* value */ T, /* index */ Double, /* array */ js.Array[T], Unit],
     thisArg: U
   ): Unit = js.native

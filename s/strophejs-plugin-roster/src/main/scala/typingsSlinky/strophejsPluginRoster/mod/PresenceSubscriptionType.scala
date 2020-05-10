@@ -14,14 +14,12 @@ trait PresenceSubscriptionType extends js.Object
 
 object PresenceSubscriptionType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def subscribe: typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.subscribe = "subscribe".asInstanceOf[typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.subscribe]
   @scala.inline
-  def subscribe: typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.subscribe = this.cast("subscribe")
+  def subscribed: typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.subscribed = "subscribed".asInstanceOf[typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.subscribed]
   @scala.inline
-  def subscribed: typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.subscribed = this.cast("subscribed")
+  def unsubscribe: typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.unsubscribe = "unsubscribe".asInstanceOf[typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.unsubscribe]
   @scala.inline
-  def unsubscribe: typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.unsubscribe = this.cast("unsubscribe")
-  @scala.inline
-  def unsubscribed: typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.unsubscribed = this.cast("unsubscribed")
+  def unsubscribed: typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.unsubscribed = "unsubscribed".asInstanceOf[typingsSlinky.strophejsPluginRoster.strophejsPluginRosterStrings.unsubscribed]
 }
 

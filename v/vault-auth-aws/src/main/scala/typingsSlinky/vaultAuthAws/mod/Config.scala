@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Config extends js.Object {
-  var apiVersion: js.UndefOr[String] = js.undefined
-  var certFilePath: js.UndefOr[String] = js.undefined
-  var followAllRedirects: js.UndefOr[Boolean] = js.undefined
-  var host: js.UndefOr[String] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
-  var ssl: js.UndefOr[Boolean] = js.undefined
-  var sslRejectUnAuthorized: js.UndefOr[Boolean] = js.undefined
-  var vaultAppName: js.UndefOr[String] = js.undefined
-  var vaultLoginUrl: js.UndefOr[String] = js.undefined
+  var apiVersion: js.UndefOr[String] = js.native
+  var certFilePath: js.UndefOr[String] = js.native
+  var followAllRedirects: js.UndefOr[Boolean] = js.native
+  var host: js.UndefOr[String] = js.native
+  var port: js.UndefOr[Double] = js.native
+  var ssl: js.UndefOr[Boolean] = js.native
+  var sslRejectUnAuthorized: js.UndefOr[Boolean] = js.native
+  var vaultAppName: js.UndefOr[String] = js.native
+  var vaultLoginUrl: js.UndefOr[String] = js.native
 }
 
 object Config {
   @scala.inline
-  def apply(
-    apiVersion: String = null,
-    certFilePath: String = null,
-    followAllRedirects: js.UndefOr[Boolean] = js.undefined,
-    host: String = null,
-    port: Int | Double = null,
-    ssl: js.UndefOr[Boolean] = js.undefined,
-    sslRejectUnAuthorized: js.UndefOr[Boolean] = js.undefined,
-    vaultAppName: String = null,
-    vaultLoginUrl: String = null
-  ): Config = {
+  def apply(): Config = {
     val __obj = js.Dynamic.literal()
-    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
-    if (certFilePath != null) __obj.updateDynamic("certFilePath")(certFilePath.asInstanceOf[js.Any])
-    if (!js.isUndefined(followAllRedirects)) __obj.updateDynamic("followAllRedirects")(followAllRedirects.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (!js.isUndefined(ssl)) __obj.updateDynamic("ssl")(ssl.asInstanceOf[js.Any])
-    if (!js.isUndefined(sslRejectUnAuthorized)) __obj.updateDynamic("sslRejectUnAuthorized")(sslRejectUnAuthorized.asInstanceOf[js.Any])
-    if (vaultAppName != null) __obj.updateDynamic("vaultAppName")(vaultAppName.asInstanceOf[js.Any])
-    if (vaultLoginUrl != null) __obj.updateDynamic("vaultLoginUrl")(vaultLoginUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
+  @scala.inline
+  implicit class ConfigOps[Self <: Config] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertFilePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certFilePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertFilePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certFilePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowAllRedirects(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followAllRedirects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowAllRedirects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followAllRedirects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSsl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSsl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSslRejectUnAuthorized(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslRejectUnAuthorized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslRejectUnAuthorized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslRejectUnAuthorized")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVaultAppName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vaultAppName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVaultAppName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vaultAppName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVaultLoginUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vaultLoginUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVaultLoginUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vaultLoginUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,5 +17,6 @@ trait HTMLParagraphElement extends HTMLElement {
 
 @JSGlobal("HTMLParagraphElement")
 @js.native
-object HTMLParagraphElement extends Instantiable0[HTMLParagraphElement]
+object HTMLParagraphElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLParagraphElement]
 

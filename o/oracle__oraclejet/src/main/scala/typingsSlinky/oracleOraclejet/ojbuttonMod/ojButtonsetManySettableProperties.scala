@@ -12,12 +12,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojButtonsetManySettableProperties extends baseComponentSettableProperties {
-  var chroming: full | half | outlined
-  var disabled: Boolean
-  var display: all | icons
-  var focusManagement: oneTabstop | none
-  var value: js.Array[_] | Null
+  var chroming: full | half | outlined = js.native
+  var disabled: Boolean = js.native
+  var display: all | icons = js.native
+  var focusManagement: oneTabstop | none = js.native
+  var value: js.Array[_] | Null = js.native
 }
 
 object ojButtonsetManySettableProperties {
@@ -26,14 +27,54 @@ object ojButtonsetManySettableProperties {
     chroming: full | half | outlined,
     disabled: Boolean,
     display: all | icons,
-    focusManagement: oneTabstop | none,
-    translations: js.Object = null,
-    value: js.Array[_] = null
+    focusManagement: oneTabstop | none
   ): ojButtonsetManySettableProperties = {
     val __obj = js.Dynamic.literal(chroming = chroming.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], display = display.asInstanceOf[js.Any], focusManagement = focusManagement.asInstanceOf[js.Any])
-    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojButtonsetManySettableProperties]
   }
+  @scala.inline
+  implicit class ojButtonsetManySettablePropertiesOps[Self <: ojButtonsetManySettableProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChroming(value: full | half | outlined): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chroming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: all | icons): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFocusManagement(value: oneTabstop | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusManagement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
+        ret
+    }
+  }
+  
 }
 

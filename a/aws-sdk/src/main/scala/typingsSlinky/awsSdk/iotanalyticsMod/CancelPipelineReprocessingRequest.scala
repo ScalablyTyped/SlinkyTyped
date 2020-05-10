@@ -20,8 +20,27 @@ object CancelPipelineReprocessingRequest {
   @scala.inline
   def apply(pipelineName: PipelineName, reprocessingId: ReprocessingId): CancelPipelineReprocessingRequest = {
     val __obj = js.Dynamic.literal(pipelineName = pipelineName.asInstanceOf[js.Any], reprocessingId = reprocessingId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CancelPipelineReprocessingRequest]
   }
+  @scala.inline
+  implicit class CancelPipelineReprocessingRequestOps[Self <: CancelPipelineReprocessingRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPipelineName(value: PipelineName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReprocessingId(value: ReprocessingId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reprocessingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

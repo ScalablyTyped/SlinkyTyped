@@ -37,20 +37,77 @@ trait SchemaAdministrationRegion extends js.Object {
 
 object SchemaAdministrationRegion {
   @scala.inline
-  def apply(
-    electionAdministrationBody: SchemaAdministrativeBody = null,
-    id: String = null,
-    local_jurisdiction: SchemaAdministrationRegion = null,
-    name: String = null,
-    sources: js.Array[SchemaSource] = null
-  ): SchemaAdministrationRegion = {
+  def apply(): SchemaAdministrationRegion = {
     val __obj = js.Dynamic.literal()
-    if (electionAdministrationBody != null) __obj.updateDynamic("electionAdministrationBody")(electionAdministrationBody.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (local_jurisdiction != null) __obj.updateDynamic("local_jurisdiction")(local_jurisdiction.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (sources != null) __obj.updateDynamic("sources")(sources.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAdministrationRegion]
   }
+  @scala.inline
+  implicit class SchemaAdministrationRegionOps[Self <: SchemaAdministrationRegion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElectionAdministrationBody(value: SchemaAdministrativeBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionAdministrationBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElectionAdministrationBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electionAdministrationBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocal_jurisdiction(value: SchemaAdministrationRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_jurisdiction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocal_jurisdiction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local_jurisdiction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSources(value: js.Array[SchemaSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

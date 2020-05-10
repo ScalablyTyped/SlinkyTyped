@@ -15,63 +15,236 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DrawOptions extends js.Object {
-  var clickTolerance: js.UndefOr[Double] = js.undefined
-  var condition: js.UndefOr[EventsConditionType] = js.undefined
-  var features: js.UndefOr[Collection[Feature]] = js.undefined
-  var finishCondition: js.UndefOr[EventsConditionType] = js.undefined
-  var freehand: js.UndefOr[Boolean] = js.undefined
-  var freehandCondition: js.UndefOr[EventsConditionType] = js.undefined
-  var geometryFunction: js.UndefOr[DrawGeometryFunctionType] = js.undefined
-  var geometryName: js.UndefOr[String] = js.undefined
-  var maxPoints: js.UndefOr[Double] = js.undefined
-  var minPoints: js.UndefOr[Double] = js.undefined
-  var snapTolerance: js.UndefOr[Double] = js.undefined
-  var source: js.UndefOr[Vector] = js.undefined
-  var stopClick: js.UndefOr[Boolean] = js.undefined
-  var style: js.UndefOr[Style | js.Array[Style] | StyleFunction] = js.undefined
-  var `type`: GeometryType
-  var wrapX: js.UndefOr[Boolean] = js.undefined
+  var clickTolerance: js.UndefOr[Double] = js.native
+  var condition: js.UndefOr[EventsConditionType] = js.native
+  var features: js.UndefOr[Collection[Feature]] = js.native
+  var finishCondition: js.UndefOr[EventsConditionType] = js.native
+  var freehand: js.UndefOr[Boolean] = js.native
+  var freehandCondition: js.UndefOr[EventsConditionType] = js.native
+  var geometryFunction: js.UndefOr[DrawGeometryFunctionType] = js.native
+  var geometryName: js.UndefOr[String] = js.native
+  var maxPoints: js.UndefOr[Double] = js.native
+  var minPoints: js.UndefOr[Double] = js.native
+  var snapTolerance: js.UndefOr[Double] = js.native
+  var source: js.UndefOr[Vector] = js.native
+  var stopClick: js.UndefOr[Boolean] = js.native
+  var style: js.UndefOr[Style | js.Array[Style] | StyleFunction] = js.native
+  var `type`: GeometryType = js.native
+  var wrapX: js.UndefOr[Boolean] = js.native
 }
 
 object DrawOptions {
   @scala.inline
-  def apply(
-    `type`: GeometryType,
-    clickTolerance: Int | Double = null,
-    condition: /* event */ MapBrowserEvent => Boolean = null,
-    features: Collection[Feature] = null,
-    finishCondition: /* event */ MapBrowserEvent => Boolean = null,
-    freehand: js.UndefOr[Boolean] = js.undefined,
-    freehandCondition: /* event */ MapBrowserEvent => Boolean = null,
-    geometryFunction: (/* coords */ Coordinate_ | (js.Array[js.Array[Coordinate_] | Coordinate_]), /* geo */ js.UndefOr[SimpleGeometry]) => SimpleGeometry = null,
-    geometryName: String = null,
-    maxPoints: Int | Double = null,
-    minPoints: Int | Double = null,
-    snapTolerance: Int | Double = null,
-    source: Vector = null,
-    stopClick: js.UndefOr[Boolean] = js.undefined,
-    style: Style | js.Array[Style] | StyleFunction = null,
-    wrapX: js.UndefOr[Boolean] = js.undefined
-  ): DrawOptions = {
+  def apply(`type`: GeometryType): DrawOptions = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (clickTolerance != null) __obj.updateDynamic("clickTolerance")(clickTolerance.asInstanceOf[js.Any])
-    if (condition != null) __obj.updateDynamic("condition")(js.Any.fromFunction1(condition))
-    if (features != null) __obj.updateDynamic("features")(features.asInstanceOf[js.Any])
-    if (finishCondition != null) __obj.updateDynamic("finishCondition")(js.Any.fromFunction1(finishCondition))
-    if (!js.isUndefined(freehand)) __obj.updateDynamic("freehand")(freehand.asInstanceOf[js.Any])
-    if (freehandCondition != null) __obj.updateDynamic("freehandCondition")(js.Any.fromFunction1(freehandCondition))
-    if (geometryFunction != null) __obj.updateDynamic("geometryFunction")(js.Any.fromFunction2(geometryFunction))
-    if (geometryName != null) __obj.updateDynamic("geometryName")(geometryName.asInstanceOf[js.Any])
-    if (maxPoints != null) __obj.updateDynamic("maxPoints")(maxPoints.asInstanceOf[js.Any])
-    if (minPoints != null) __obj.updateDynamic("minPoints")(minPoints.asInstanceOf[js.Any])
-    if (snapTolerance != null) __obj.updateDynamic("snapTolerance")(snapTolerance.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (!js.isUndefined(stopClick)) __obj.updateDynamic("stopClick")(stopClick.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapX)) __obj.updateDynamic("wrapX")(wrapX.asInstanceOf[js.Any])
     __obj.asInstanceOf[DrawOptions]
   }
+  @scala.inline
+  implicit class DrawOptionsOps[Self <: DrawOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: GeometryType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClickTolerance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickTolerance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickTolerance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickTolerance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCondition(value: /* event */ MapBrowserEvent => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFeatures(value: Collection[Feature]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("features")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinishCondition(value: /* event */ MapBrowserEvent => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finishCondition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFinishCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finishCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFreehand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freehand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFreehand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freehand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFreehandCondition(value: /* event */ MapBrowserEvent => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freehandCondition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFreehandCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freehandCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeometryFunction(
+      value: (/* coords */ Coordinate_ | (js.Array[js.Array[Coordinate_] | Coordinate_]), /* geo */ js.UndefOr[SimpleGeometry]) => SimpleGeometry
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryFunction")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutGeometryFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeometryName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeometryName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxPoints(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinPoints(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapTolerance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapTolerance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapTolerance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapTolerance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: Vector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleFunction2(
+      value: (/* feature */ Feature | typingsSlinky.openlayers.mod.render.Feature, /* resolution */ Double) => Style | js.Array[Style] | Null
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Style | js.Array[Style] | StyleFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapX(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapX")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -24,49 +24,62 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent theme-ui.theme-ui.Omit<styled-system.styled-system.Theme<styled-system.styled-system.TLengthStyledSystem>, 'colors'> */
+@js.native
 trait Theme extends js.Object {
-  var borderStyles: js.UndefOr[typingsSlinky.styledSystem.mod.ObjectOrArray[BorderProperty[js.Object], String]] = js.undefined
+  var borderStyles: js.UndefOr[
+    typingsSlinky.styledSystem.mod.ObjectOrArray[BorderProperty[js.Object], /* keyof any */ String]
+  ] = js.native
   var borderWidths: js.UndefOr[
-    typingsSlinky.styledSystem.mod.ObjectOrArray[BorderWidthProperty[TLengthStyledSystem], String]
-  ] = js.undefined
-  var borders: js.UndefOr[typingsSlinky.styledSystem.mod.ObjectOrArray[BorderProperty[js.Object], String]] = js.undefined
+    typingsSlinky.styledSystem.mod.ObjectOrArray[BorderWidthProperty[TLengthStyledSystem], /* keyof any */ String]
+  ] = js.native
+  var borders: js.UndefOr[
+    typingsSlinky.styledSystem.mod.ObjectOrArray[BorderProperty[js.Object], /* keyof any */ String]
+  ] = js.native
   var breakpoints: js.UndefOr[
-    typingsSlinky.styledSystem.mod.ObjectOrArray[Double | String | js.Symbol, String]
-  ] = js.undefined
+    typingsSlinky.styledSystem.mod.ObjectOrArray[Double | String | js.Symbol, /* keyof any */ String]
+  ] = js.native
   var buttons: js.UndefOr[
-    typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], String]
-  ] = js.undefined
+    typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String]
+  ] = js.native
   var colorStyles: js.UndefOr[
-    typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], String]
-  ] = js.undefined
+    typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String]
+  ] = js.native
   /**
     * Define the colors that are available through this theme
     */
-  var colors: js.UndefOr[ColorModemodeskstringColo] = js.undefined
-  var fontSizes: js.UndefOr[typingsSlinky.styledSystem.mod.ObjectOrArray[FontSizeProperty[Double], String]] = js.undefined
-  var fontWeights: js.UndefOr[typingsSlinky.styledSystem.mod.ObjectOrArray[FontWeightProperty, String]] = js.undefined
-  var fonts: js.UndefOr[typingsSlinky.styledSystem.mod.ObjectOrArray[FontFamilyProperty, String]] = js.undefined
+  var colors: js.UndefOr[ColorModemodeskstringColo] = js.native
+  var fontSizes: js.UndefOr[
+    typingsSlinky.styledSystem.mod.ObjectOrArray[FontSizeProperty[Double], /* keyof any */ String]
+  ] = js.native
+  var fontWeights: js.UndefOr[
+    typingsSlinky.styledSystem.mod.ObjectOrArray[FontWeightProperty, /* keyof any */ String]
+  ] = js.native
+  var fonts: js.UndefOr[
+    typingsSlinky.styledSystem.mod.ObjectOrArray[FontFamilyProperty, /* keyof any */ String]
+  ] = js.native
   /**
     * Provide a value here to enable color modes
     */
-  var initialColorModeName: js.UndefOr[String] = js.undefined
+  var initialColorModeName: js.UndefOr[String] = js.native
   var letterSpacings: js.UndefOr[
-    typingsSlinky.styledSystem.mod.ObjectOrArray[LetterSpacingProperty[TLengthStyledSystem], String]
-  ] = js.undefined
+    typingsSlinky.styledSystem.mod.ObjectOrArray[LetterSpacingProperty[TLengthStyledSystem], /* keyof any */ String]
+  ] = js.native
   var lineHeights: js.UndefOr[
-    typingsSlinky.styledSystem.mod.ObjectOrArray[LineHeightProperty[TLengthStyledSystem], String]
-  ] = js.undefined
-  var mediaQueries: js.UndefOr[StringDictionary[String]] = js.undefined
+    typingsSlinky.styledSystem.mod.ObjectOrArray[LineHeightProperty[TLengthStyledSystem], /* keyof any */ String]
+  ] = js.native
+  var mediaQueries: js.UndefOr[StringDictionary[String]] = js.native
   var radii: js.UndefOr[
-    typingsSlinky.styledSystem.mod.ObjectOrArray[BorderRadiusProperty[TLengthStyledSystem], String]
-  ] = js.undefined
-  var shadows: js.UndefOr[typingsSlinky.styledSystem.mod.ObjectOrArray[BoxShadowProperty, String]] = js.undefined
+    typingsSlinky.styledSystem.mod.ObjectOrArray[BorderRadiusProperty[TLengthStyledSystem], /* keyof any */ String]
+  ] = js.native
+  var shadows: js.UndefOr[
+    typingsSlinky.styledSystem.mod.ObjectOrArray[BoxShadowProperty, /* keyof any */ String]
+  ] = js.native
   var sizes: js.UndefOr[
-    typingsSlinky.styledSystem.mod.ObjectOrArray[HeightProperty[js.Object] | WidthProperty[js.Object], String]
-  ] = js.undefined
+    typingsSlinky.styledSystem.mod.ObjectOrArray[HeightProperty[js.Object] | WidthProperty[js.Object], /* keyof any */ String]
+  ] = js.native
   var space: js.UndefOr[
-    typingsSlinky.styledSystem.mod.ObjectOrArray[MarginProperty[Double | String], String]
-  ] = js.undefined
+    typingsSlinky.styledSystem.mod.ObjectOrArray[MarginProperty[Double | String], /* keyof any */ String]
+  ] = js.native
   /**
     * Styles for elements rendered in MDX can be added to the theme.styles
     * object. This is the primary, low-level way to control typographic and
@@ -74,70 +87,325 @@ trait Theme extends js.Object {
     * with @styled-system/css and have access to base theme values like colors,
     * fonts, etc.
     */
-  var styles: js.UndefOr[PinStyledTagsSystemStyleO] = js.undefined
+  var styles: js.UndefOr[PinStyledTagsSystemStyleO] = js.native
   var textStyles: js.UndefOr[
-    typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], String]
-  ] = js.undefined
+    typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String]
+  ] = js.native
   /**
     * Enable/disable custom CSS properties/variables if lower browser
     * support is required (for eg. IE 11).
     *
     * References: https://theme-ui.com/color-modes/#turn-off-custom-properties
     */
-  var useCustomProperties: js.UndefOr[Boolean] = js.undefined
-  var zIndices: js.UndefOr[typingsSlinky.styledSystem.mod.ObjectOrArray[ZIndexProperty, String]] = js.undefined
+  var useCustomProperties: js.UndefOr[Boolean] = js.native
+  var zIndices: js.UndefOr[
+    typingsSlinky.styledSystem.mod.ObjectOrArray[ZIndexProperty, /* keyof any */ String]
+  ] = js.native
 }
 
 object Theme {
   @scala.inline
-  def apply(
-    borderStyles: typingsSlinky.styledSystem.mod.ObjectOrArray[BorderProperty[js.Object], String] = null,
-    borderWidths: typingsSlinky.styledSystem.mod.ObjectOrArray[BorderWidthProperty[TLengthStyledSystem], String] = null,
-    borders: typingsSlinky.styledSystem.mod.ObjectOrArray[BorderProperty[js.Object], String] = null,
-    breakpoints: typingsSlinky.styledSystem.mod.ObjectOrArray[Double | String | js.Symbol, String] = null,
-    buttons: typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], String] = null,
-    colorStyles: typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], String] = null,
-    colors: ColorModemodeskstringColo = null,
-    fontSizes: typingsSlinky.styledSystem.mod.ObjectOrArray[FontSizeProperty[Double], String] = null,
-    fontWeights: typingsSlinky.styledSystem.mod.ObjectOrArray[FontWeightProperty, String] = null,
-    fonts: typingsSlinky.styledSystem.mod.ObjectOrArray[FontFamilyProperty, String] = null,
-    initialColorModeName: String = null,
-    letterSpacings: typingsSlinky.styledSystem.mod.ObjectOrArray[LetterSpacingProperty[TLengthStyledSystem], String] = null,
-    lineHeights: typingsSlinky.styledSystem.mod.ObjectOrArray[LineHeightProperty[TLengthStyledSystem], String] = null,
-    mediaQueries: StringDictionary[String] = null,
-    radii: typingsSlinky.styledSystem.mod.ObjectOrArray[BorderRadiusProperty[TLengthStyledSystem], String] = null,
-    shadows: typingsSlinky.styledSystem.mod.ObjectOrArray[BoxShadowProperty, String] = null,
-    sizes: typingsSlinky.styledSystem.mod.ObjectOrArray[HeightProperty[js.Object] | WidthProperty[js.Object], String] = null,
-    space: typingsSlinky.styledSystem.mod.ObjectOrArray[MarginProperty[Double | String], String] = null,
-    styles: PinStyledTagsSystemStyleO = null,
-    textStyles: typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], String] = null,
-    useCustomProperties: js.UndefOr[Boolean] = js.undefined,
-    zIndices: typingsSlinky.styledSystem.mod.ObjectOrArray[ZIndexProperty, String] = null
-  ): Theme = {
+  def apply(): Theme = {
     val __obj = js.Dynamic.literal()
-    if (borderStyles != null) __obj.updateDynamic("borderStyles")(borderStyles.asInstanceOf[js.Any])
-    if (borderWidths != null) __obj.updateDynamic("borderWidths")(borderWidths.asInstanceOf[js.Any])
-    if (borders != null) __obj.updateDynamic("borders")(borders.asInstanceOf[js.Any])
-    if (breakpoints != null) __obj.updateDynamic("breakpoints")(breakpoints.asInstanceOf[js.Any])
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (colorStyles != null) __obj.updateDynamic("colorStyles")(colorStyles.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (fontSizes != null) __obj.updateDynamic("fontSizes")(fontSizes.asInstanceOf[js.Any])
-    if (fontWeights != null) __obj.updateDynamic("fontWeights")(fontWeights.asInstanceOf[js.Any])
-    if (fonts != null) __obj.updateDynamic("fonts")(fonts.asInstanceOf[js.Any])
-    if (initialColorModeName != null) __obj.updateDynamic("initialColorModeName")(initialColorModeName.asInstanceOf[js.Any])
-    if (letterSpacings != null) __obj.updateDynamic("letterSpacings")(letterSpacings.asInstanceOf[js.Any])
-    if (lineHeights != null) __obj.updateDynamic("lineHeights")(lineHeights.asInstanceOf[js.Any])
-    if (mediaQueries != null) __obj.updateDynamic("mediaQueries")(mediaQueries.asInstanceOf[js.Any])
-    if (radii != null) __obj.updateDynamic("radii")(radii.asInstanceOf[js.Any])
-    if (shadows != null) __obj.updateDynamic("shadows")(shadows.asInstanceOf[js.Any])
-    if (sizes != null) __obj.updateDynamic("sizes")(sizes.asInstanceOf[js.Any])
-    if (space != null) __obj.updateDynamic("space")(space.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (textStyles != null) __obj.updateDynamic("textStyles")(textStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(useCustomProperties)) __obj.updateDynamic("useCustomProperties")(useCustomProperties.asInstanceOf[js.Any])
-    if (zIndices != null) __obj.updateDynamic("zIndices")(zIndices.asInstanceOf[js.Any])
     __obj.asInstanceOf[Theme]
   }
+  @scala.inline
+  implicit class ThemeOps[Self <: Theme] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBorderStyles(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[BorderProperty[js.Object], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidths(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[BorderWidthProperty[TLengthStyledSystem], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorders(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[BorderProperty[js.Object], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBreakpoints(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[Double | String | js.Symbol, /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreakpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtons(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorStyles(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColors(value: ColorModemodeskstringColo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSizes(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[FontSizeProperty[Double], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSizes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontWeights(value: typingsSlinky.styledSystem.mod.ObjectOrArray[FontWeightProperty, /* keyof any */ String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontWeights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFonts(value: typingsSlinky.styledSystem.mod.ObjectOrArray[FontFamilyProperty, /* keyof any */ String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fonts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFonts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fonts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialColorModeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialColorModeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialColorModeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialColorModeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLetterSpacings(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[LetterSpacingProperty[TLengthStyledSystem], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLetterSpacings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineHeights(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[LineHeightProperty[TLengthStyledSystem], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineHeights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediaQueries(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaQueries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaQueries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaQueries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadii(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[BorderRadiusProperty[TLengthStyledSystem], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radii")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadii: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radii")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadows(value: typingsSlinky.styledSystem.mod.ObjectOrArray[BoxShadowProperty, /* keyof any */ String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizes(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[HeightProperty[js.Object] | WidthProperty[js.Object], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpace(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[MarginProperty[Double | String], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: PinStyledTagsSystemStyleO): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyles(
+      value: typingsSlinky.styledSystem.mod.ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseCustomProperties(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useCustomProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseCustomProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useCustomProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndices(value: typingsSlinky.styledSystem.mod.ObjectOrArray[ZIndexProperty, /* keyof any */ String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndices")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait PaymentIntentUserProvidedCancellationReason extends js.Object
 
 object PaymentIntentUserProvidedCancellationReason {
   @scala.inline
-  def abandoned: typingsSlinky.stripe.stripeStrings.abandoned = this.cast("abandoned")
+  def abandoned: typingsSlinky.stripe.stripeStrings.abandoned = "abandoned".asInstanceOf[typingsSlinky.stripe.stripeStrings.abandoned]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def duplicate: typingsSlinky.stripe.stripeStrings.duplicate = "duplicate".asInstanceOf[typingsSlinky.stripe.stripeStrings.duplicate]
   @scala.inline
-  def duplicate: typingsSlinky.stripe.stripeStrings.duplicate = this.cast("duplicate")
+  def fraudulent: typingsSlinky.stripe.stripeStrings.fraudulent = "fraudulent".asInstanceOf[typingsSlinky.stripe.stripeStrings.fraudulent]
   @scala.inline
-  def fraudulent: typingsSlinky.stripe.stripeStrings.fraudulent = this.cast("fraudulent")
-  @scala.inline
-  def requested_by_customer: typingsSlinky.stripe.stripeStrings.requested_by_customer = this.cast("requested_by_customer")
+  def requested_by_customer: typingsSlinky.stripe.stripeStrings.requested_by_customer = "requested_by_customer".asInstanceOf[typingsSlinky.stripe.stripeStrings.requested_by_customer]
 }
 

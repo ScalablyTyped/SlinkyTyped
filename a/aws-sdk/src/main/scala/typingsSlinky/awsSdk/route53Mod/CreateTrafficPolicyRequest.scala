@@ -22,10 +22,41 @@ trait CreateTrafficPolicyRequest extends js.Object {
 
 object CreateTrafficPolicyRequest {
   @scala.inline
-  def apply(Document: TrafficPolicyDocument, Name: TrafficPolicyName, Comment: TrafficPolicyComment = null): CreateTrafficPolicyRequest = {
+  def apply(Document: TrafficPolicyDocument, Name: TrafficPolicyName): CreateTrafficPolicyRequest = {
     val __obj = js.Dynamic.literal(Document = Document.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-    if (Comment != null) __obj.updateDynamic("Comment")(Comment.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTrafficPolicyRequest]
   }
+  @scala.inline
+  implicit class CreateTrafficPolicyRequestOps[Self <: CreateTrafficPolicyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocument(value: TrafficPolicyDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Document")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: TrafficPolicyName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComment(value: TrafficPolicyComment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

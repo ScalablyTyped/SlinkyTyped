@@ -18,16 +18,16 @@ package object mod {
     scala.Unit
   ]
   type CallOptions = js.Any
-  type CreateNamedRequest[N /* <: java.lang.String */, T] = typingsSlinky.googleCloudTasks.mod.ParentRequest with typingsSlinky.googleCloudTasks.googleCloudTasksStrings.CreateNamedRequest with js.Any
-  type EnhancedPick[T, Req /* <: java.lang.String */, Opt /* <: java.lang.String */] = (typingsSlinky.std.Required[typingsSlinky.std.Pick[T, Req]]) with (typingsSlinky.std.Partial[typingsSlinky.std.Pick[T, Req]])
+  type CreateNamedRequest[N /* <: java.lang.String */, T] = typingsSlinky.googleCloudTasks.mod.ParentRequest with typingsSlinky.googleCloudTasks.googleCloudTasksStrings.CreateNamedRequest with org.scalablytyped.runtime.TopLevel[js.Any]
+  type EnhancedPick[T, Req /* <: /* keyof T */ java.lang.String */, Opt /* <: /* keyof T */ java.lang.String */] = (typingsSlinky.std.Required[typingsSlinky.std.Pick[T, Req]]) with (typingsSlinky.std.Partial[typingsSlinky.std.Pick[T, Req]])
   type GoogleAuth = js.Any
   type GoogleAuthOptions = js.Any
   type GoogleError = js.Any
-  type Keys[T] = java.lang.String
+  type Keys[T] = /* keyof T */ java.lang.String
   type ProjectIdCallback = js.Function2[
     /* err */ js.UndefOr[js.Error | scala.Null], 
     /* projectId */ js.UndefOr[java.lang.String | scala.Null], 
     scala.Unit
   ]
-  type UpdateNamedRequest[N /* <: java.lang.String */, T] = typingsSlinky.googleCloudTasks.mod.ParentRequest with typingsSlinky.googleCloudTasks.googleCloudTasksStrings.UpdateNamedRequest with js.Any
+  type UpdateNamedRequest[N /* <: java.lang.String */, T] = typingsSlinky.googleCloudTasks.mod.ParentRequest with typingsSlinky.googleCloudTasks.googleCloudTasksStrings.UpdateNamedRequest with org.scalablytyped.runtime.TopLevel[js.Any]
 }

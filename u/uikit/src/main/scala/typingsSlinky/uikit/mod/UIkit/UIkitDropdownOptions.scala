@@ -4,48 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UIkitDropdownOptions extends js.Object {
-  var animation: js.UndefOr[String] = js.undefined
-  var boundary: js.UndefOr[String] = js.undefined
-  var `boundary-align`: js.UndefOr[Boolean] = js.undefined
-  var `delay-hide`: js.UndefOr[Double] = js.undefined
-  var `delay-show`: js.UndefOr[Double] = js.undefined
-  var duration: js.UndefOr[Double] = js.undefined
-  var flip: js.UndefOr[Boolean | String] = js.undefined
-  var mode: js.UndefOr[String] = js.undefined
-  var offset: js.UndefOr[Double] = js.undefined
-  var pos: js.UndefOr[String] = js.undefined
-  var toggle: js.UndefOr[String | Boolean] = js.undefined
+  var animation: js.UndefOr[String] = js.native
+  var boundary: js.UndefOr[String] = js.native
+  var `boundary-align`: js.UndefOr[Boolean] = js.native
+  var `delay-hide`: js.UndefOr[Double] = js.native
+  var `delay-show`: js.UndefOr[Double] = js.native
+  var duration: js.UndefOr[Double] = js.native
+  var flip: js.UndefOr[Boolean | String] = js.native
+  var mode: js.UndefOr[String] = js.native
+  var offset: js.UndefOr[Double] = js.native
+  var pos: js.UndefOr[String] = js.native
+  var toggle: js.UndefOr[String | Boolean] = js.native
 }
 
 object UIkitDropdownOptions {
   @scala.inline
-  def apply(
-    animation: String = null,
-    boundary: String = null,
-    `boundary-align`: js.UndefOr[Boolean] = js.undefined,
-    `delay-hide`: Int | Double = null,
-    `delay-show`: Int | Double = null,
-    duration: Int | Double = null,
-    flip: Boolean | String = null,
-    mode: String = null,
-    offset: Int | Double = null,
-    pos: String = null,
-    toggle: String | Boolean = null
-  ): UIkitDropdownOptions = {
+  def apply(): UIkitDropdownOptions = {
     val __obj = js.Dynamic.literal()
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (boundary != null) __obj.updateDynamic("boundary")(boundary.asInstanceOf[js.Any])
-    if (!js.isUndefined(`boundary-align`)) __obj.updateDynamic("boundary-align")(`boundary-align`.asInstanceOf[js.Any])
-    if (`delay-hide` != null) __obj.updateDynamic("delay-hide")(`delay-hide`.asInstanceOf[js.Any])
-    if (`delay-show` != null) __obj.updateDynamic("delay-show")(`delay-show`.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (flip != null) __obj.updateDynamic("flip")(flip.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (pos != null) __obj.updateDynamic("pos")(pos.asInstanceOf[js.Any])
-    if (toggle != null) __obj.updateDynamic("toggle")(toggle.asInstanceOf[js.Any])
     __obj.asInstanceOf[UIkitDropdownOptions]
   }
+  @scala.inline
+  implicit class UIkitDropdownOptionsOps[Self <: UIkitDropdownOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoundary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withBoundary-align`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary-align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutBoundary-align`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary-align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withDelay-hide`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay-hide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutDelay-hide`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay-hide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withDelay-show`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay-show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutDelay-show`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay-show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlip(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPos(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggle(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

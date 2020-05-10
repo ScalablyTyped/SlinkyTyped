@@ -13,10 +13,8 @@ trait ExtensionType extends js.Object
 
 object ExtensionType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def extension: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.extension = "extension".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.extension]
   @scala.inline
-  def extension: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.extension = this.cast("extension")
-  @scala.inline
-  def theme: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.theme = this.cast("theme")
+  def theme: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.theme = "theme".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.theme]
 }
 

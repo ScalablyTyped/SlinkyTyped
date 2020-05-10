@@ -12,10 +12,8 @@ trait Graph2dDrawPointsStyle extends js.Object
 
 object Graph2dDrawPointsStyle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def circle: typingsSlinky.vis.visStrings.circle = "circle".asInstanceOf[typingsSlinky.vis.visStrings.circle]
   @scala.inline
-  def circle: typingsSlinky.vis.visStrings.circle = this.cast("circle")
-  @scala.inline
-  def square: typingsSlinky.vis.visStrings.square = this.cast("square")
+  def square: typingsSlinky.vis.visStrings.square = "square".asInstanceOf[typingsSlinky.vis.visStrings.square]
 }
 

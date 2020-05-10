@@ -15,16 +15,14 @@ trait DefaultAggregators extends js.Object
 
 object DefaultAggregators {
   @scala.inline
-  def average: typingsSlinky.reactTable.reactTableStrings.average = this.cast("average")
+  def average: typingsSlinky.reactTable.reactTableStrings.average = "average".asInstanceOf[typingsSlinky.reactTable.reactTableStrings.average]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def count: typingsSlinky.reactTable.reactTableStrings.count = "count".asInstanceOf[typingsSlinky.reactTable.reactTableStrings.count]
   @scala.inline
-  def count: typingsSlinky.reactTable.reactTableStrings.count = this.cast("count")
+  def median: typingsSlinky.reactTable.reactTableStrings.median = "median".asInstanceOf[typingsSlinky.reactTable.reactTableStrings.median]
   @scala.inline
-  def median: typingsSlinky.reactTable.reactTableStrings.median = this.cast("median")
+  def sum: typingsSlinky.reactTable.reactTableStrings.sum = "sum".asInstanceOf[typingsSlinky.reactTable.reactTableStrings.sum]
   @scala.inline
-  def sum: typingsSlinky.reactTable.reactTableStrings.sum = this.cast("sum")
-  @scala.inline
-  def uniqueCount: typingsSlinky.reactTable.reactTableStrings.uniqueCount = this.cast("uniqueCount")
+  def uniqueCount: typingsSlinky.reactTable.reactTableStrings.uniqueCount = "uniqueCount".asInstanceOf[typingsSlinky.reactTable.reactTableStrings.uniqueCount]
 }
 

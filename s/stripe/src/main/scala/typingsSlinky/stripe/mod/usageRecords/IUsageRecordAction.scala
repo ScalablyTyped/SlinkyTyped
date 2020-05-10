@@ -12,10 +12,8 @@ trait IUsageRecordAction extends js.Object
 
 object IUsageRecordAction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def increment: typingsSlinky.stripe.stripeStrings.increment = "increment".asInstanceOf[typingsSlinky.stripe.stripeStrings.increment]
   @scala.inline
-  def increment: typingsSlinky.stripe.stripeStrings.increment = this.cast("increment")
-  @scala.inline
-  def set: typingsSlinky.stripe.stripeStrings.set = this.cast("set")
+  def set: typingsSlinky.stripe.stripeStrings.set = "set".asInstanceOf[typingsSlinky.stripe.stripeStrings.set]
 }
 

@@ -533,7 +533,7 @@ package object ssmMod {
   type MaintenanceWindowId = java.lang.String
   type MaintenanceWindowIdentityList = js.Array[typingsSlinky.awsSdk.ssmMod.MaintenanceWindowIdentity]
   type MaintenanceWindowLambdaClientContext = java.lang.String
-  type MaintenanceWindowLambdaPayload = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.ssmMod.Blob | java.lang.String
+  type MaintenanceWindowLambdaPayload = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.ssmMod.Blob | java.lang.String
   type MaintenanceWindowLambdaQualifier = java.lang.String
   type MaintenanceWindowMaxResults = scala.Double
   type MaintenanceWindowName = java.lang.String
@@ -854,7 +854,7 @@ package object ssmMod {
   type PatchSourceName = java.lang.String
   type PatchSourceProduct = java.lang.String
   type PatchSourceProductList = js.Array[typingsSlinky.awsSdk.ssmMod.PatchSourceProduct]
-  type PatchStringDate = java.lang.String
+  type PatchStringDateTime = java.lang.String
   type PatchTitle = java.lang.String
   type PatchUnreportedNotApplicableCount = scala.Double
   type PatchVendor = java.lang.String
@@ -891,6 +891,7 @@ package object ssmMod {
   type ResourceCountByStatus = java.lang.String
   type ResourceDataSyncAWSKMSKeyARN = java.lang.String
   type ResourceDataSyncCreatedTime = js.Date
+  type ResourceDataSyncDestinationDataSharingType = java.lang.String
   type ResourceDataSyncIncludeFutureRegions = scala.Boolean
   type ResourceDataSyncItemList = js.Array[typingsSlinky.awsSdk.ssmMod.ResourceDataSyncItem]
   type ResourceDataSyncLastModifiedTime = js.Date

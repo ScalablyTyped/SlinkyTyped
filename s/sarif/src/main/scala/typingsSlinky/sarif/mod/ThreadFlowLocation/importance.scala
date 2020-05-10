@@ -13,12 +13,10 @@ trait importance extends js.Object
 
 object importance {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def essential: typingsSlinky.sarif.sarifStrings.essential = "essential".asInstanceOf[typingsSlinky.sarif.sarifStrings.essential]
   @scala.inline
-  def essential: typingsSlinky.sarif.sarifStrings.essential = this.cast("essential")
+  def important: typingsSlinky.sarif.sarifStrings.important = "important".asInstanceOf[typingsSlinky.sarif.sarifStrings.important]
   @scala.inline
-  def important: typingsSlinky.sarif.sarifStrings.important = this.cast("important")
-  @scala.inline
-  def unimportant: typingsSlinky.sarif.sarifStrings.unimportant = this.cast("unimportant")
+  def unimportant: typingsSlinky.sarif.sarifStrings.unimportant = "unimportant".asInstanceOf[typingsSlinky.sarif.sarifStrings.unimportant]
 }
 

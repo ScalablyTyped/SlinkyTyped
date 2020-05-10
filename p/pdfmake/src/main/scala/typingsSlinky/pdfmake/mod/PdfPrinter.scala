@@ -1,0 +1,17 @@
+package typingsSlinky.pdfmake.mod
+
+import typingsSlinky.pdfkit.PDFKit.PDFDocument
+import typingsSlinky.pdfmake.interfacesMod.BufferOptions
+import typingsSlinky.pdfmake.interfacesMod.TDocumentDefinitions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+// 'export =' syntax forbids any other export.
+// tslint:disable-next-line: strict-export-declare-modifiers
+@js.native
+trait PdfPrinter extends js.Object {
+  def createPdfKitDocument(docDefinition: TDocumentDefinitions): PDFDocument = js.native
+  def createPdfKitDocument(docDefinition: TDocumentDefinitions, options: BufferOptions): PDFDocument = js.native
+}
+

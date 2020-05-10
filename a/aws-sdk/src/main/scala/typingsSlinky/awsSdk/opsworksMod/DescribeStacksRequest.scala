@@ -14,10 +14,29 @@ trait DescribeStacksRequest extends js.Object {
 
 object DescribeStacksRequest {
   @scala.inline
-  def apply(StackIds: Strings = null): DescribeStacksRequest = {
+  def apply(): DescribeStacksRequest = {
     val __obj = js.Dynamic.literal()
-    if (StackIds != null) __obj.updateDynamic("StackIds")(StackIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeStacksRequest]
   }
+  @scala.inline
+  implicit class DescribeStacksRequestOps[Self <: DescribeStacksRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackIds(value: Strings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

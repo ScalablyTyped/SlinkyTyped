@@ -8,12 +8,13 @@ import scala.scalajs.js.annotation._
 /**
   * TopologySpreadConstraint specifies how to spread matching pods among the given topology.
   */
+@js.native
 trait TopologySpreadConstraint extends js.Object {
   /**
     * LabelSelector is used to find matching pods. Pods that match this label selector are
     * counted to determine the number of pods in their corresponding topology domain.
     */
-  val labelSelector: LabelSelector
+  val labelSelector: LabelSelector = js.native
   /**
     * MaxSkew describes the degree to which pods may be unevenly distributed. It's the maximum
     * permitted difference between the number of matching pods in any two topology domains of a
@@ -24,13 +25,13 @@ trait TopologySpreadConstraint extends js.Object {
     * if MaxSkew is 2, incoming pod can be scheduled onto any zone. It's a required field.
     * Default value is 1 and 0 is not allowed.
     */
-  val maxSkew: Double
+  val maxSkew: Double = js.native
   /**
     * TopologyKey is the key of node labels. Nodes that have a label with this key and identical
     * values are considered to be in the same topology. We consider each <key, value> as a
     * "bucket", and try to put balanced number of pods into each bucket. It's a required field.
     */
-  val topologyKey: String
+  val topologyKey: String = js.native
   /**
     * WhenUnsatisfiable indicates how to deal with a pod if it doesn't satisfy the spread
     * constraint. - DoNotSchedule (default) tells the scheduler not to schedule it -
@@ -42,15 +43,46 @@ trait TopologySpreadConstraint extends js.Object {
     * ActualSkew(2-1) on zone2(zone3) satisfies MaxSkew(1). In other words, the cluster can still
     * be imbalanced, but scheduler won't make it *more* imbalanced. It's a required field.
     */
-  val whenUnsatisfiable: String
+  val whenUnsatisfiable: String = js.native
 }
 
 object TopologySpreadConstraint {
   @scala.inline
   def apply(labelSelector: LabelSelector, maxSkew: Double, topologyKey: String, whenUnsatisfiable: String): TopologySpreadConstraint = {
     val __obj = js.Dynamic.literal(labelSelector = labelSelector.asInstanceOf[js.Any], maxSkew = maxSkew.asInstanceOf[js.Any], topologyKey = topologyKey.asInstanceOf[js.Any], whenUnsatisfiable = whenUnsatisfiable.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TopologySpreadConstraint]
   }
+  @scala.inline
+  implicit class TopologySpreadConstraintOps[Self <: TopologySpreadConstraint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabelSelector(value: LabelSelector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxSkew(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSkew")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTopologyKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topologyKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWhenUnsatisfiable(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whenUnsatisfiable")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

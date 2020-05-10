@@ -5,7 +5,6 @@ import typingsSlinky.std.BooleanConstructor
 import typingsSlinky.std.FunctionConstructor
 import typingsSlinky.std.NumberConstructor
 import typingsSlinky.std.ObjectConstructor
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.RegExpConstructor
 import typingsSlinky.std.StringConstructor
 import typingsSlinky.typpy.typpyBooleans.`true`
@@ -44,7 +43,7 @@ trait CompareFn extends js.Object {
    // tslint:disable-line:ban-types
   def apply(input: Double, compareTo: number): Boolean = js.native
   def apply(input: Null, compareTo: `null`): `true` = js.native
-  def apply(input: RegExp, compareTo: RegExpConstructor): `true` = js.native
-  def apply(input: RegExp, compareTo: regexp): `true` = js.native
+  def apply(input: js.RegExp, compareTo: RegExpConstructor): `true` = js.native
+  def apply(input: js.RegExp, compareTo: regexp): `true` = js.native
 }
 

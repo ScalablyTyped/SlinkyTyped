@@ -18,10 +18,35 @@ trait AddAttachmentsToSetRequest extends js.Object {
 
 object AddAttachmentsToSetRequest {
   @scala.inline
-  def apply(attachments: Attachments, attachmentSetId: AttachmentSetId = null): AddAttachmentsToSetRequest = {
+  def apply(attachments: Attachments): AddAttachmentsToSetRequest = {
     val __obj = js.Dynamic.literal(attachments = attachments.asInstanceOf[js.Any])
-    if (attachmentSetId != null) __obj.updateDynamic("attachmentSetId")(attachmentSetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddAttachmentsToSetRequest]
   }
+  @scala.inline
+  implicit class AddAttachmentsToSetRequestOps[Self <: AddAttachmentsToSetRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachments(value: Attachments): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttachmentSetId(value: AttachmentSetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachmentSetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait OrderByDirection extends js.Object
 
 object OrderByDirection {
   @scala.inline
-  def asc: typingsSlinky.firebase.firebaseStrings.asc = this.cast("asc")
+  def asc: typingsSlinky.firebase.firebaseStrings.asc = "asc".asInstanceOf[typingsSlinky.firebase.firebaseStrings.asc]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def desc: typingsSlinky.firebase.firebaseStrings.desc = this.cast("desc")
+  def desc: typingsSlinky.firebase.firebaseStrings.desc = "desc".asInstanceOf[typingsSlinky.firebase.firebaseStrings.desc]
 }
 

@@ -95,30 +95,10 @@ object resources extends js.Object {
       * @readonly
       */
     val source: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | SVGElement = js.native
-    def upload(
-      renderer: Renderer,
-      baseTexture: BaseTexture,
-      glTexture: GLTexture,
-      source: typingsSlinky.std.HTMLCanvasElement
-    ): Boolean = js.native
-    def upload(
-      renderer: Renderer,
-      baseTexture: BaseTexture,
-      glTexture: GLTexture,
-      source: typingsSlinky.std.HTMLImageElement
-    ): Boolean = js.native
-    def upload(
-      renderer: Renderer,
-      baseTexture: BaseTexture,
-      glTexture: GLTexture,
-      source: typingsSlinky.std.HTMLVideoElement
-    ): Boolean = js.native
-    def upload(
-      renderer: Renderer,
-      baseTexture: BaseTexture,
-      glTexture: GLTexture,
-      source: typingsSlinky.std.SVGElement
-    ): Boolean = js.native
+    def upload(renderer: Renderer, baseTexture: BaseTexture, glTexture: GLTexture, source: HTMLCanvasElement): Boolean = js.native
+    def upload(renderer: Renderer, baseTexture: BaseTexture, glTexture: GLTexture, source: HTMLImageElement): Boolean = js.native
+    def upload(renderer: Renderer, baseTexture: BaseTexture, glTexture: GLTexture, source: HTMLVideoElement): Boolean = js.native
+    def upload(renderer: Renderer, baseTexture: BaseTexture, glTexture: GLTexture, source: SVGElement): Boolean = js.native
   }
   
   /**
@@ -129,16 +109,16 @@ object resources extends js.Object {
     */
   @js.native
   class BufferResource protected () extends Resource {
-    def this(source: scala.scalajs.js.typedarray.Float32Array, options: AnonHeightWidth) = this()
-    def this(source: scala.scalajs.js.typedarray.Uint32Array, options: AnonHeightWidth) = this()
-    def this(source: scala.scalajs.js.typedarray.Uint8Array, options: AnonHeightWidth) = this()
+    def this(source: js.typedarray.Float32Array, options: AnonHeightWidth) = this()
+    def this(source: js.typedarray.Uint32Array, options: AnonHeightWidth) = this()
+    def this(source: js.typedarray.Uint8Array, options: AnonHeightWidth) = this()
     /**
       * Source array
       * Cannot be ClampedUint8Array because it cant be uploaded to WebGL
       *
       * @member {Float32Array|Uint8Array|Uint32Array} PIXI.resources.BufferResource#data
       */
-    var data: scala.scalajs.js.typedarray.Float32Array | scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint32Array = js.native
+    var data: js.typedarray.Float32Array | js.typedarray.Uint8Array | js.typedarray.Uint32Array = js.native
   }
   
   /**
@@ -558,7 +538,7 @@ object resources extends js.Object {
       * @param {HTMLCanvasElement|OffscreenCanvas} source - The source object
       * @return {boolean} `true` if source is HTMLCanvasElement or OffscreenCanvas
       */
-    def test(source: typingsSlinky.std.HTMLCanvasElement): Boolean = js.native
+    def test(source: HTMLCanvasElement): Boolean = js.native
     def test(source: OffscreenCanvas): Boolean = js.native
   }
   

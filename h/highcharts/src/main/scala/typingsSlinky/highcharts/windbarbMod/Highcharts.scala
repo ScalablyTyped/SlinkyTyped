@@ -23,14 +23,12 @@ import typingsSlinky.highcharts.mod.Dictionary
 import typingsSlinky.highcharts.mod.EventCallbackFunction
 import typingsSlinky.highcharts.mod.EventOptionsObject
 import typingsSlinky.highcharts.mod.HTMLAttributes
-import typingsSlinky.highcharts.mod.HTMLDOMElement
 import typingsSlinky.highcharts.mod.LegendOptions
 import typingsSlinky.highcharts.mod.ObjectEachCallbackFunction
 import typingsSlinky.highcharts.mod.OffsetObject
 import typingsSlinky.highcharts.mod.Options
 import typingsSlinky.highcharts.mod.RelativeSize
 import typingsSlinky.highcharts.mod.SVGAttributes
-import typingsSlinky.highcharts.mod.SVGDOMElement
 import typingsSlinky.highcharts.mod.SeriesOptionsType
 import typingsSlinky.highcharts.mod.TimeFormatCallbackFunction
 import typingsSlinky.highcharts.mod.TimeOptions
@@ -389,42 +387,42 @@ object Highcharts extends js.Object {
   def animObject(): AnimationOptionsObject = js.native
   def animObject(animation: Boolean): AnimationOptionsObject = js.native
   def animObject(animation: AnimationOptionsObject): AnimationOptionsObject = js.native
-  def animate(el: HTMLDOMElement, params: CSSObject): Unit = js.native
-  def animate(el: HTMLDOMElement, params: CSSObject, opt: AnimationOptionsObject): Unit = js.native
-  def animate(el: HTMLDOMElement, params: SVGAttributes): Unit = js.native
-  def animate(el: HTMLDOMElement, params: SVGAttributes, opt: AnimationOptionsObject): Unit = js.native
+  def animate(el: HTMLElement, params: CSSObject): Unit = js.native
+  def animate(el: HTMLElement, params: CSSObject, opt: AnimationOptionsObject): Unit = js.native
+  def animate(el: HTMLElement, params: SVGAttributes): Unit = js.native
+  def animate(el: HTMLElement, params: SVGAttributes, opt: AnimationOptionsObject): Unit = js.native
   def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: CSSObject): Unit = js.native
   def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: CSSObject, opt: AnimationOptionsObject): Unit = js.native
   def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: SVGAttributes): Unit = js.native
   def animate(el: typingsSlinky.highcharts.mod.SVGElement, params: SVGAttributes, opt: AnimationOptionsObject): Unit = js.native
   def arrayMax(data: js.Array[_]): Double = js.native
   def arrayMin(data: js.Array[_]): Double = js.native
-  def attr(elem: HTMLDOMElement): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLDOMElement, prop: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLDOMElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLDOMElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLDOMElement, prop: HTMLAttributes): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLDOMElement, prop: HTMLAttributes, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLDOMElement, prop: HTMLAttributes, value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLDOMElement, prop: SVGAttributes): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLDOMElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: HTMLDOMElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: SVGDOMElement): js.UndefOr[String | Null] = js.native
-  def attr(elem: SVGDOMElement, prop: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: SVGDOMElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: SVGDOMElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: SVGDOMElement, prop: HTMLAttributes): js.UndefOr[String | Null] = js.native
-  def attr(elem: SVGDOMElement, prop: HTMLAttributes, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: SVGDOMElement, prop: HTMLAttributes, value: Double): js.UndefOr[String | Null] = js.native
-  def attr(elem: SVGDOMElement, prop: SVGAttributes): js.UndefOr[String | Null] = js.native
-  def attr(elem: SVGDOMElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
-  def attr(elem: SVGDOMElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: HTMLAttributes): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: HTMLAttributes, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: HTMLAttributes, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: SVGAttributes): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: HTMLElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: String, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: HTMLAttributes): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: HTMLAttributes, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: HTMLAttributes, value: Double): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes, value: String): js.UndefOr[String | Null] = js.native
+  def attr(elem: org.scalajs.dom.raw.SVGElement, prop: SVGAttributes, value: Double): js.UndefOr[String | Null] = js.native
   def chart(options: Options): Chart_ = js.native
   def chart(options: Options, callback: ChartCallbackFunction): Chart_ = js.native
   def chart(renderTo: String, options: Options): Chart_ = js.native
   def chart(renderTo: String, options: Options, callback: ChartCallbackFunction): Chart_ = js.native
-  def chart(renderTo: HTMLDOMElement, options: Options): Chart_ = js.native
-  def chart(renderTo: HTMLDOMElement, options: Options, callback: ChartCallbackFunction): Chart_ = js.native
+  def chart(renderTo: HTMLElement, options: Options): Chart_ = js.native
+  def chart(renderTo: HTMLElement, options: Options, callback: ChartCallbackFunction): Chart_ = js.native
   def clearTimeout(id: Double): Unit = js.native
   def color(input: ColorType): Color_ = js.native
   def correctFloat(num: Double): Double = js.native
@@ -434,8 +432,8 @@ object Highcharts extends js.Object {
   def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject): HTMLElement = js.native
   def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject, parent: HTMLElement): HTMLElement = js.native
   def createElement(tag: String, attribs: HTMLAttributes, styles: CSSObject, parent: HTMLElement, nopad: Boolean): HTMLElement = js.native
-  def css(el: HTMLDOMElement, styles: CSSObject): Unit = js.native
-  def css(el: SVGDOMElement, styles: CSSObject): Unit = js.native
+  def css(el: HTMLElement, styles: CSSObject): Unit = js.native
+  def css(el: org.scalajs.dom.raw.SVGElement, styles: CSSObject): Unit = js.native
   def dateFormat(format: String, timestamp: Double): String = js.native
   def dateFormat(format: String, timestamp: Double, capitalize: Boolean): String = js.native
   def defined(obj: js.Any): Boolean = js.native
@@ -619,7 +617,7 @@ object Highcharts extends js.Object {
   object SVGRenderer
     extends TopLevel[
           Instantiable7[
-            /* container */ HTMLDOMElement, 
+            HTMLElement, 
             /* width */ Double, 
             /* height */ Double, 
             js.UndefOr[/* style */ CSSObject], 

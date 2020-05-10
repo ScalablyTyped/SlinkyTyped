@@ -8,8 +8,6 @@ import typingsSlinky.elliptic.mod.ec.KeyPairOptions
 import typingsSlinky.elliptic.mod.ec.SignOptions
 import typingsSlinky.elliptic.mod.ec.Signature
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +38,12 @@ class ec_ protected () extends js.Object {
     enc: String
   ): Double = js.native
   def getKeyRecoveryParam(
-    e: Error,
+    e: js.Error,
     signature: SignatureInput,
     Q: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any
   ): Double = js.native
   def getKeyRecoveryParam(
-    e: Error,
+    e: js.Error,
     signature: SignatureInput,
     Q: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
     enc: String
@@ -58,8 +56,8 @@ class ec_ protected () extends js.Object {
   def keyFromPrivate(priv: KeyPair, enc: String): KeyPair = js.native
   def keyFromPrivate(priv: Buffer): KeyPair = js.native
   def keyFromPrivate(priv: Buffer, enc: String): KeyPair = js.native
-  def keyFromPrivate(priv: Uint8Array): KeyPair = js.native
-  def keyFromPrivate(priv: Uint8Array, enc: String): KeyPair = js.native
+  def keyFromPrivate(priv: js.typedarray.Uint8Array): KeyPair = js.native
+  def keyFromPrivate(priv: js.typedarray.Uint8Array, enc: String): KeyPair = js.native
   def keyFromPublic(pub: String): KeyPair = js.native
   def keyFromPublic(pub: String, enc: String): KeyPair = js.native
   def keyFromPublic(pub: js.Array[Double]): KeyPair = js.native
@@ -70,8 +68,8 @@ class ec_ protected () extends js.Object {
   def keyFromPublic(pub: KeyPair, enc: String): KeyPair = js.native
   def keyFromPublic(pub: Buffer): KeyPair = js.native
   def keyFromPublic(pub: Buffer, enc: String): KeyPair = js.native
-  def keyFromPublic(pub: Uint8Array): KeyPair = js.native
-  def keyFromPublic(pub: Uint8Array, enc: String): KeyPair = js.native
+  def keyFromPublic(pub: js.typedarray.Uint8Array): KeyPair = js.native
+  def keyFromPublic(pub: js.typedarray.Uint8Array, enc: String): KeyPair = js.native
   def keyPair(options: KeyPairOptions): KeyPair = js.native
   def recoverPubKey(msg: BNInput, signature: SignatureInput, j: Double): js.Any = js.native
   def recoverPubKey(msg: BNInput, signature: SignatureInput, j: Double, enc: String): js.Any = js.native

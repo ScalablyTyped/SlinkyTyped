@@ -22,15 +22,47 @@ trait DeleteRelationalDatabaseRequest extends js.Object {
 
 object DeleteRelationalDatabaseRequest {
   @scala.inline
-  def apply(
-    relationalDatabaseName: ResourceName,
-    finalRelationalDatabaseSnapshotName: ResourceName = null,
-    skipFinalSnapshot: js.UndefOr[Boolean] = js.undefined
-  ): DeleteRelationalDatabaseRequest = {
+  def apply(relationalDatabaseName: ResourceName): DeleteRelationalDatabaseRequest = {
     val __obj = js.Dynamic.literal(relationalDatabaseName = relationalDatabaseName.asInstanceOf[js.Any])
-    if (finalRelationalDatabaseSnapshotName != null) __obj.updateDynamic("finalRelationalDatabaseSnapshotName")(finalRelationalDatabaseSnapshotName.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipFinalSnapshot)) __obj.updateDynamic("skipFinalSnapshot")(skipFinalSnapshot.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteRelationalDatabaseRequest]
   }
+  @scala.inline
+  implicit class DeleteRelationalDatabaseRequestOps[Self <: DeleteRelationalDatabaseRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRelationalDatabaseName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationalDatabaseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFinalRelationalDatabaseSnapshotName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalRelationalDatabaseSnapshotName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalRelationalDatabaseSnapshotName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalRelationalDatabaseSnapshotName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipFinalSnapshot(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipFinalSnapshot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipFinalSnapshot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipFinalSnapshot")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

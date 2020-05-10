@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExecuteOptions extends js.Object {
-  var method: js.UndefOr[String] = js.undefined
-  var migrations: js.UndefOr[js.Array[String]] = js.undefined
+  var method: js.UndefOr[String] = js.native
+  var migrations: js.UndefOr[js.Array[String]] = js.native
 }
 
 object ExecuteOptions {
   @scala.inline
-  def apply(method: String = null, migrations: js.Array[String] = null): ExecuteOptions = {
+  def apply(): ExecuteOptions = {
     val __obj = js.Dynamic.literal()
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (migrations != null) __obj.updateDynamic("migrations")(migrations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecuteOptions]
   }
+  @scala.inline
+  implicit class ExecuteOptionsOps[Self <: ExecuteOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMigrations(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migrations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMigrations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migrations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

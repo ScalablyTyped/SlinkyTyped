@@ -11,87 +11,407 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-native-elements.react-native-elements.ButtonGroupProps> */
+@js.native
 trait PartialButtonGroupProps extends js.Object {
-  var Component: js.UndefOr[ReactComponentClass[_]] = js.undefined
-  var activeOpacity: js.UndefOr[Double] = js.undefined
-  var buttonStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var buttons: js.UndefOr[js.Array[ElementObject | String]] = js.undefined
-  var containerBorderRadius: js.UndefOr[Double] = js.undefined
-  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var disabled: js.UndefOr[Boolean | js.Array[Double]] = js.undefined
-  var disabledSelectedStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var disabledSelectedTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
-  var disabledStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var disabledTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
-  var innerBorderStyle: js.UndefOr[InnerBorderStyleProperty] = js.undefined
-  var lastBorderStyle: js.UndefOr[StyleProp[TextStyle | ViewStyle]] = js.undefined
-  var onHideUnderlay: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onPress: js.UndefOr[js.Function1[/* selectedIndex */ Double, Unit]] = js.undefined
-  var onShowUnderlay: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var selectMultiple: js.UndefOr[Boolean] = js.undefined
-  var selectedButtonStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var selectedIndex: js.UndefOr[Double] = js.undefined
-  var selectedIndexes: js.UndefOr[js.Array[Double]] = js.undefined
-  var selectedTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
-  var setOpacityTo: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.undefined
-  var textStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
-  var underlayColor: js.UndefOr[String] = js.undefined
+  var Component: js.UndefOr[ReactComponentClass[_]] = js.native
+  var activeOpacity: js.UndefOr[Double] = js.native
+  var buttonStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var buttons: js.UndefOr[js.Array[ElementObject | String]] = js.native
+  var containerBorderRadius: js.UndefOr[Double] = js.native
+  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var disabled: js.UndefOr[Boolean | js.Array[Double]] = js.native
+  var disabledSelectedStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var disabledSelectedTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var disabledStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var disabledTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var innerBorderStyle: js.UndefOr[InnerBorderStyleProperty] = js.native
+  var lastBorderStyle: js.UndefOr[StyleProp[TextStyle | ViewStyle]] = js.native
+  var onHideUnderlay: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPress: js.UndefOr[js.Function1[/* selectedIndex */ Double, Unit]] = js.native
+  var onShowUnderlay: js.UndefOr[js.Function0[Unit]] = js.native
+  var selectMultiple: js.UndefOr[Boolean] = js.native
+  var selectedButtonStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var selectedIndex: js.UndefOr[Double] = js.native
+  var selectedIndexes: js.UndefOr[js.Array[Double]] = js.native
+  var selectedTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var setOpacityTo: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
+  var textStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  var underlayColor: js.UndefOr[String] = js.native
 }
 
 object PartialButtonGroupProps {
   @scala.inline
-  def apply(
-    Component: ReactComponentClass[_] = null,
-    activeOpacity: Int | Double = null,
-    buttonStyle: StyleProp[ViewStyle] = null,
-    buttons: js.Array[ElementObject | String] = null,
-    containerBorderRadius: Int | Double = null,
-    containerStyle: StyleProp[ViewStyle] = null,
-    disabled: Boolean | js.Array[Double] = null,
-    disabledSelectedStyle: StyleProp[ViewStyle] = null,
-    disabledSelectedTextStyle: StyleProp[TextStyle] = null,
-    disabledStyle: StyleProp[ViewStyle] = null,
-    disabledTextStyle: StyleProp[TextStyle] = null,
-    innerBorderStyle: InnerBorderStyleProperty = null,
-    lastBorderStyle: StyleProp[TextStyle | ViewStyle] = null,
-    onHideUnderlay: () => Unit = null,
-    onPress: /* selectedIndex */ Double => Unit = null,
-    onShowUnderlay: () => Unit = null,
-    selectMultiple: js.UndefOr[Boolean] = js.undefined,
-    selectedButtonStyle: StyleProp[ViewStyle] = null,
-    selectedIndex: Int | Double = null,
-    selectedIndexes: js.Array[Double] = null,
-    selectedTextStyle: StyleProp[TextStyle] = null,
-    setOpacityTo: /* value */ Double => Unit = null,
-    textStyle: StyleProp[TextStyle] = null,
-    underlayColor: String = null
-  ): PartialButtonGroupProps = {
+  def apply(): PartialButtonGroupProps = {
     val __obj = js.Dynamic.literal()
-    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
-    if (activeOpacity != null) __obj.updateDynamic("activeOpacity")(activeOpacity.asInstanceOf[js.Any])
-    if (buttonStyle != null) __obj.updateDynamic("buttonStyle")(buttonStyle.asInstanceOf[js.Any])
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (containerBorderRadius != null) __obj.updateDynamic("containerBorderRadius")(containerBorderRadius.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (disabledSelectedStyle != null) __obj.updateDynamic("disabledSelectedStyle")(disabledSelectedStyle.asInstanceOf[js.Any])
-    if (disabledSelectedTextStyle != null) __obj.updateDynamic("disabledSelectedTextStyle")(disabledSelectedTextStyle.asInstanceOf[js.Any])
-    if (disabledStyle != null) __obj.updateDynamic("disabledStyle")(disabledStyle.asInstanceOf[js.Any])
-    if (disabledTextStyle != null) __obj.updateDynamic("disabledTextStyle")(disabledTextStyle.asInstanceOf[js.Any])
-    if (innerBorderStyle != null) __obj.updateDynamic("innerBorderStyle")(innerBorderStyle.asInstanceOf[js.Any])
-    if (lastBorderStyle != null) __obj.updateDynamic("lastBorderStyle")(lastBorderStyle.asInstanceOf[js.Any])
-    if (onHideUnderlay != null) __obj.updateDynamic("onHideUnderlay")(js.Any.fromFunction0(onHideUnderlay))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
-    if (onShowUnderlay != null) __obj.updateDynamic("onShowUnderlay")(js.Any.fromFunction0(onShowUnderlay))
-    if (!js.isUndefined(selectMultiple)) __obj.updateDynamic("selectMultiple")(selectMultiple.asInstanceOf[js.Any])
-    if (selectedButtonStyle != null) __obj.updateDynamic("selectedButtonStyle")(selectedButtonStyle.asInstanceOf[js.Any])
-    if (selectedIndex != null) __obj.updateDynamic("selectedIndex")(selectedIndex.asInstanceOf[js.Any])
-    if (selectedIndexes != null) __obj.updateDynamic("selectedIndexes")(selectedIndexes.asInstanceOf[js.Any])
-    if (selectedTextStyle != null) __obj.updateDynamic("selectedTextStyle")(selectedTextStyle.asInstanceOf[js.Any])
-    if (setOpacityTo != null) __obj.updateDynamic("setOpacityTo")(js.Any.fromFunction1(setOpacityTo))
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (underlayColor != null) __obj.updateDynamic("underlayColor")(underlayColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialButtonGroupProps]
   }
+  @scala.inline
+  implicit class PartialButtonGroupPropsOps[Self <: PartialButtonGroupProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponentFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponentComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActiveOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withButtons(value: js.Array[ElementObject | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerBorderRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBorderRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerBorderRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBorderRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabledSelectedStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSelectedStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabledSelectedStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSelectedStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabledSelectedStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSelectedStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withDisabledSelectedTextStyle(value: StyleProp[TextStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSelectedTextStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabledSelectedTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSelectedTextStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabledSelectedTextStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledSelectedTextStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withDisabledStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabledStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabledStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withDisabledTextStyle(value: StyleProp[TextStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledTextStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabledTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledTextStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabledTextStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledTextStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withInnerBorderStyle(value: InnerBorderStyleProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerBorderStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerBorderStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerBorderStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastBorderStyle(value: StyleProp[TextStyle | ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastBorderStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastBorderStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastBorderStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastBorderStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastBorderStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withOnHideUnderlay(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHideUnderlay")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHideUnderlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHideUnderlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPress(value: /* selectedIndex */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnShowUnderlay(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowUnderlay")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnShowUnderlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowUnderlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectMultiple(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectMultiple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectMultiple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectMultiple")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedButtonStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedButtonStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedButtonStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedButtonStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedButtonStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedButtonStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withSelectedIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedIndexes(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIndexes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedIndexes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedIndexes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedTextStyle(value: StyleProp[TextStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTextStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTextStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedTextStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTextStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withSetOpacityTo(value: /* value */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOpacityTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetOpacityTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOpacityTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyle(value: StyleProp[TextStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withUnderlayColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underlayColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnderlayColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underlayColor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

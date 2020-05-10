@@ -1,7 +1,7 @@
 package typingsSlinky.reactAriaModal.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactAriaModal.PickAriaModalPropstitleId
 import typingsSlinky.reactAriaModal.PickAriaModalPropstitleTe
 import typingsSlinky.reactAriaModal.mod.AriaModalProps
@@ -11,14 +11,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Couldn't find props for TypeRef(QualifiedName(IArray(Name(<intersection>))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactAriaModal), Name(mod), Name(AriaModalProps))),IArray(),NoComments), TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactAriaModal), Name(mod), Name(RequiredAriaTypes))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactAriaModal), Name(PickAriaModalPropstitleId))),IArray(),NoComments), TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactAriaModal), Name(PickAriaModalPropstitleTe))),IArray(),NoComments)),NoComments)),NoComments) because: Couldn't find props for TypeRef(QualifiedName(IArray(Name(<intersection>))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactAriaModal), Name(reactAriaModalStrings), Name(RequiredAriaTypes))),IArray(),Comments(0)), TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactAriaModal), Name(PickAriaModalPropstitleId))),IArray(),NoComments), TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),NoComments)),NoComments) because: Could't extract props from TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),NoComments) because couldn't resolve ClassTree., Couldn't find props for TypeRef(QualifiedName(IArray(Name(<intersection>))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactAriaModal), Name(reactAriaModalStrings), Name(RequiredAriaTypes))),IArray(),Comments(0)), TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),NoComments), TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactAriaModal), Name(PickAriaModalPropstitleTe))),IArray(),NoComments)),NoComments) because: Could't extract props from TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object ReactAriaModal
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reactAriaModal.mod.AriaModalProps with (typingsSlinky.reactAriaModal.mod.RequiredAriaTypes[
+typingsSlinky.reactAriaModal.PickAriaModalPropstitleId, 
+typingsSlinky.reactAriaModal.PickAriaModalPropstitleTe]) because: IArray(Couldn't find props for typingsSlinky.reactAriaModal.reactAriaModalStrings.RequiredAriaTypes with typingsSlinky.reactAriaModal.PickAriaModalPropstitleId with js.Any because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.), Couldn't find props for typingsSlinky.reactAriaModal.reactAriaModalStrings.RequiredAriaTypes with js.Any with typingsSlinky.reactAriaModal.PickAriaModalPropstitleTe because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.)) */
+object ReactAriaModal {
   @JSImport("react-aria-modal", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = AriaModalProps with (RequiredAriaTypes[PickAriaModalPropstitleId, PickAriaModalPropstitleTe])
+  def apply(p: AriaModalProps with (RequiredAriaTypes[PickAriaModalPropstitleId, PickAriaModalPropstitleTe])): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactAriaModal.type): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, js.Dictionary.empty))()
 }
 

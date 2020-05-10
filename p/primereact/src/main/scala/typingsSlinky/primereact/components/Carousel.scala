@@ -1,66 +1,63 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonPage
 import typingsSlinky.primereact.carouselCarouselMod.CarouselProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Carousel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.carouselMod.Carousel] {
+object Carousel {
   @JSImport("primereact/carousel", "Carousel")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
-  def apply(
-    autoplayInterval: Int | Double = null,
-    circular: js.UndefOr[Boolean] = js.undefined,
-    containerClassName: String = null,
-    contentClassName: String = null,
-    dotsContainerClassName: String = null,
-    footer: js.Any = null,
-    header: js.Any = null,
-    itemTemplate: js.Any = null,
-    numScroll: Int | Double = null,
-    numVisible: Int | Double = null,
-    onPageChange: /* e */ AnonPage => Unit = null,
-    orientation: String = null,
-    page: Int | Double = null,
-    responsiveOptions: js.Any = null,
-    style: js.Object = null,
-    value: js.Any = null,
-    verticalViewPortHeight: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.carouselMod.Carousel] = {
-    val __obj = js.Dynamic.literal()
-    if (autoplayInterval != null) __obj.updateDynamic("autoplayInterval")(autoplayInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(circular)) __obj.updateDynamic("circular")(circular.asInstanceOf[js.Any])
-    if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
-    if (contentClassName != null) __obj.updateDynamic("contentClassName")(contentClassName.asInstanceOf[js.Any])
-    if (dotsContainerClassName != null) __obj.updateDynamic("dotsContainerClassName")(dotsContainerClassName.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(itemTemplate.asInstanceOf[js.Any])
-    if (numScroll != null) __obj.updateDynamic("numScroll")(numScroll.asInstanceOf[js.Any])
-    if (numVisible != null) __obj.updateDynamic("numVisible")(numVisible.asInstanceOf[js.Any])
-    if (onPageChange != null) __obj.updateDynamic("onPageChange")(js.Any.fromFunction1(onPageChange))
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (responsiveOptions != null) __obj.updateDynamic("responsiveOptions")(responsiveOptions.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (verticalViewPortHeight != null) __obj.updateDynamic("verticalViewPortHeight")(verticalViewPortHeight.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.carouselMod.Carousel] {
+    @scala.inline
+    def autoplayInterval(value: Double): this.type = set("autoplayInterval", value.asInstanceOf[js.Any])
+    @scala.inline
+    def circular(value: Boolean): this.type = set("circular", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerClassName(value: String): this.type = set("containerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentClassName(value: String): this.type = set("contentClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dotsContainerClassName(value: String): this.type = set("dotsContainerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footer(value: js.Any): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def header(value: js.Any): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemTemplate(value: js.Any): this.type = set("itemTemplate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numScroll(value: Double): this.type = set("numScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numVisible(value: Double): this.type = set("numVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPageChange(value: /* e */ AnonPage => Unit): this.type = set("onPageChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def orientation(value: String): this.type = set("orientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def page(value: Double): this.type = set("page", value.asInstanceOf[js.Any])
+    @scala.inline
+    def responsiveOptions(value: js.Any): this.type = set("responsiveOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalViewPortHeight(value: String): this.type = set("verticalViewPortHeight", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.carouselMod.Carousel] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.carouselMod.Carousel](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CarouselProps
+  
+  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Carousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

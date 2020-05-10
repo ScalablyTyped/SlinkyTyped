@@ -2,56 +2,73 @@ package typingsSlinky.reactRouterNavigation.mod
 
 import slinky.core.TagMod
 import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactRouterNavigation.reactRouterNavigationStrings.bottom
-import typingsSlinky.reactRouterNavigation.reactRouterNavigationStrings.top
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BottomNavigationProps extends TabBarProps {
-  var children: js.UndefOr[js.Array[TagMod[Any]]] = js.undefined
-  var `lazy`: js.UndefOr[Boolean] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var children: js.UndefOr[js.Array[TagMod[Any]]] = js.native
+  var `lazy`: js.UndefOr[Boolean] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
 object BottomNavigationProps {
   @scala.inline
-  def apply(
-    children: js.Array[TagMod[Any]] = null,
-    hideTabBar: js.UndefOr[Boolean] = js.undefined,
-    label: String = null,
-    labelStyle: StyleProp[TextStyle] = null,
-    `lazy`: js.UndefOr[Boolean] = js.undefined,
-    renderLabel: /* props */ TabSubViewProps => TagMod[Any] = null,
-    renderTabBar: /* props */ TabSubViewProps => TagMod[Any] = null,
-    renderTabIcon: /* props */ TabSubViewProps => TagMod[Any] = null,
-    style: StyleProp[ViewStyle] = null,
-    tabActiveTintColor: String = null,
-    tabBarIndicatorStyle: StyleProp[ViewStyle] = null,
-    tabBarPosition: top | bottom = null,
-    tabBarStyle: StyleProp[ViewStyle] = null,
-    tabStyle: StyleProp[ViewStyle] = null,
-    tabTintColor: String = null
-  ): BottomNavigationProps = {
+  def apply(): BottomNavigationProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideTabBar)) __obj.updateDynamic("hideTabBar")(hideTabBar.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (renderLabel != null) __obj.updateDynamic("renderLabel")(js.Any.fromFunction1(renderLabel))
-    if (renderTabBar != null) __obj.updateDynamic("renderTabBar")(js.Any.fromFunction1(renderTabBar))
-    if (renderTabIcon != null) __obj.updateDynamic("renderTabIcon")(js.Any.fromFunction1(renderTabIcon))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tabActiveTintColor != null) __obj.updateDynamic("tabActiveTintColor")(tabActiveTintColor.asInstanceOf[js.Any])
-    if (tabBarIndicatorStyle != null) __obj.updateDynamic("tabBarIndicatorStyle")(tabBarIndicatorStyle.asInstanceOf[js.Any])
-    if (tabBarPosition != null) __obj.updateDynamic("tabBarPosition")(tabBarPosition.asInstanceOf[js.Any])
-    if (tabBarStyle != null) __obj.updateDynamic("tabBarStyle")(tabBarStyle.asInstanceOf[js.Any])
-    if (tabStyle != null) __obj.updateDynamic("tabStyle")(tabStyle.asInstanceOf[js.Any])
-    if (tabTintColor != null) __obj.updateDynamic("tabTintColor")(tabTintColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[BottomNavigationProps]
   }
+  @scala.inline
+  implicit class BottomNavigationPropsOps[Self <: BottomNavigationProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: js.Array[TagMod[Any]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLazy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLazy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -30,20 +30,77 @@ trait PendingModifiedValues extends js.Object {
 
 object PendingModifiedValues {
   @scala.inline
-  def apply(
-    AuthTokenStatus: AuthTokenUpdateStatus = null,
-    CacheNodeIdsToRemove: CacheNodeIdsList = null,
-    CacheNodeType: String = null,
-    EngineVersion: String = null,
-    NumCacheNodes: Int | scala.Double = null
-  ): PendingModifiedValues = {
+  def apply(): PendingModifiedValues = {
     val __obj = js.Dynamic.literal()
-    if (AuthTokenStatus != null) __obj.updateDynamic("AuthTokenStatus")(AuthTokenStatus.asInstanceOf[js.Any])
-    if (CacheNodeIdsToRemove != null) __obj.updateDynamic("CacheNodeIdsToRemove")(CacheNodeIdsToRemove.asInstanceOf[js.Any])
-    if (CacheNodeType != null) __obj.updateDynamic("CacheNodeType")(CacheNodeType.asInstanceOf[js.Any])
-    if (EngineVersion != null) __obj.updateDynamic("EngineVersion")(EngineVersion.asInstanceOf[js.Any])
-    if (NumCacheNodes != null) __obj.updateDynamic("NumCacheNodes")(NumCacheNodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[PendingModifiedValues]
   }
+  @scala.inline
+  implicit class PendingModifiedValuesOps[Self <: PendingModifiedValues] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthTokenStatus(value: AuthTokenUpdateStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthTokenStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthTokenStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthTokenStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheNodeIdsToRemove(value: CacheNodeIdsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeIdsToRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheNodeIdsToRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeIdsToRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheNodeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheNodeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngineVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumCacheNodes(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumCacheNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumCacheNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumCacheNodes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

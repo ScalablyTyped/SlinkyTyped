@@ -14,14 +14,12 @@ trait OrientationTypes extends js.Object
 
 object OrientationTypes {
   @scala.inline
-  def bottom: typingsSlinky.victory.victoryStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.victory.victoryStrings.bottom = "bottom".asInstanceOf[typingsSlinky.victory.victoryStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.victory.victoryStrings.left = "left".asInstanceOf[typingsSlinky.victory.victoryStrings.left]
   @scala.inline
-  def left: typingsSlinky.victory.victoryStrings.left = this.cast("left")
+  def right: typingsSlinky.victory.victoryStrings.right = "right".asInstanceOf[typingsSlinky.victory.victoryStrings.right]
   @scala.inline
-  def right: typingsSlinky.victory.victoryStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.victory.victoryStrings.top = this.cast("top")
+  def top: typingsSlinky.victory.victoryStrings.top = "top".asInstanceOf[typingsSlinky.victory.victoryStrings.top]
 }
 

@@ -22,12 +22,53 @@ trait CustomerManagedChannelS3StorageSummary extends js.Object {
 
 object CustomerManagedChannelS3StorageSummary {
   @scala.inline
-  def apply(bucket: BucketName = null, keyPrefix: S3KeyPrefix = null, roleArn: RoleArn = null): CustomerManagedChannelS3StorageSummary = {
+  def apply(): CustomerManagedChannelS3StorageSummary = {
     val __obj = js.Dynamic.literal()
-    if (bucket != null) __obj.updateDynamic("bucket")(bucket.asInstanceOf[js.Any])
-    if (keyPrefix != null) __obj.updateDynamic("keyPrefix")(keyPrefix.asInstanceOf[js.Any])
-    if (roleArn != null) __obj.updateDynamic("roleArn")(roleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomerManagedChannelS3StorageSummary]
   }
+  @scala.inline
+  implicit class CustomerManagedChannelS3StorageSummaryOps[Self <: CustomerManagedChannelS3StorageSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyPrefix(value: S3KeyPrefix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

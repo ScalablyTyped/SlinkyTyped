@@ -17,10 +17,29 @@ trait SchemaEntrypoint extends js.Object {
 
 object SchemaEntrypoint {
   @scala.inline
-  def apply(shell: String = null): SchemaEntrypoint = {
+  def apply(): SchemaEntrypoint = {
     val __obj = js.Dynamic.literal()
-    if (shell != null) __obj.updateDynamic("shell")(shell.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEntrypoint]
   }
+  @scala.inline
+  implicit class SchemaEntrypointOps[Self <: SchemaEntrypoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShell(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shell")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

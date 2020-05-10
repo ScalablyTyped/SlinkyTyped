@@ -31,18 +31,65 @@ trait SchemaFolderOperation extends js.Object {
 
 object SchemaFolderOperation {
   @scala.inline
-  def apply(
-    destinationParent: String = null,
-    displayName: String = null,
-    operationType: String = null,
-    sourceParent: String = null
-  ): SchemaFolderOperation = {
+  def apply(): SchemaFolderOperation = {
     val __obj = js.Dynamic.literal()
-    if (destinationParent != null) __obj.updateDynamic("destinationParent")(destinationParent.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (operationType != null) __obj.updateDynamic("operationType")(operationType.asInstanceOf[js.Any])
-    if (sourceParent != null) __obj.updateDynamic("sourceParent")(sourceParent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFolderOperation]
   }
+  @scala.inline
+  implicit class SchemaFolderOperationOps[Self <: SchemaFolderOperation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationParent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationParent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationParent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceParent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceParent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceParent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

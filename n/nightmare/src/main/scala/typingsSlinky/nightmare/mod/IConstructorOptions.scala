@@ -6,96 +6,364 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IConstructorOptions extends js.Object {
-  var cookiesFile: js.UndefOr[String] = js.undefined
-  var electronPath: js.UndefOr[String] = js.undefined
-  var executionTimeout: js.UndefOr[Double] = js.undefined
+  var cookiesFile: js.UndefOr[String] = js.native
+  var electronPath: js.UndefOr[String] = js.native
+  var executionTimeout: js.UndefOr[Double] = js.native
   //in ms
-  var gotoTimeout: js.UndefOr[Double] = js.undefined
-  var ignoreDownloads: js.UndefOr[Boolean] = js.undefined
-  var ignoreSslErrors: js.UndefOr[Boolean] = js.undefined
-  var interval: js.UndefOr[js.Any] = js.undefined
-  var loadImages: js.UndefOr[Boolean] = js.undefined
-  var maxDownloadRequestWait: js.UndefOr[Double] = js.undefined
-  var openDevTools: js.UndefOr[AnonMode] = js.undefined
-  var paths: js.UndefOr[AnonDownloads] = js.undefined
-  var phantomPath: js.UndefOr[String] = js.undefined
-  var pollInterval: js.UndefOr[Double] = js.undefined
+  var gotoTimeout: js.UndefOr[Double] = js.native
+  var ignoreDownloads: js.UndefOr[Boolean] = js.native
+  var ignoreSslErrors: js.UndefOr[Boolean] = js.native
+  var interval: js.UndefOr[js.Any] = js.native
+  var loadImages: js.UndefOr[Boolean] = js.native
+  var maxDownloadRequestWait: js.UndefOr[Double] = js.native
+  var openDevTools: js.UndefOr[AnonMode] = js.native
+  var paths: js.UndefOr[AnonDownloads] = js.native
+  var phantomPath: js.UndefOr[String] = js.native
+  var pollInterval: js.UndefOr[Double] = js.native
    // number | string;
-  var port: js.UndefOr[Double] = js.undefined
-  var proxy: js.UndefOr[String] = js.undefined
-  var proxyAuth: js.UndefOr[String] = js.undefined
-  var proxyType: js.UndefOr[String] = js.undefined
-  var show: js.UndefOr[Boolean] = js.undefined
-  var sslProtocol: js.UndefOr[String] = js.undefined
-  var timeout: js.UndefOr[js.Any] = js.undefined
-  var typeInterval: js.UndefOr[Double] = js.undefined
+  var port: js.UndefOr[Double] = js.native
+  var proxy: js.UndefOr[String] = js.native
+  var proxyAuth: js.UndefOr[String] = js.native
+  var proxyType: js.UndefOr[String] = js.native
+  var show: js.UndefOr[Boolean] = js.native
+  var sslProtocol: js.UndefOr[String] = js.native
+  var timeout: js.UndefOr[js.Any] = js.native
+  var typeInterval: js.UndefOr[Double] = js.native
     // number | string;
-  var waitTimeout: js.UndefOr[Double] = js.undefined
-  var weak: js.UndefOr[Boolean] = js.undefined
-  var webSecurity: js.UndefOr[Boolean] = js.undefined
-  var x: js.UndefOr[Double] = js.undefined
-  var y: js.UndefOr[Double] = js.undefined
+  var waitTimeout: js.UndefOr[Double] = js.native
+  var weak: js.UndefOr[Boolean] = js.native
+  var webSecurity: js.UndefOr[Boolean] = js.native
+  var x: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.native
 }
 
 object IConstructorOptions {
   @scala.inline
-  def apply(
-    cookiesFile: String = null,
-    electronPath: String = null,
-    executionTimeout: Int | Double = null,
-    gotoTimeout: Int | Double = null,
-    ignoreDownloads: js.UndefOr[Boolean] = js.undefined,
-    ignoreSslErrors: js.UndefOr[Boolean] = js.undefined,
-    interval: js.Any = null,
-    loadImages: js.UndefOr[Boolean] = js.undefined,
-    maxDownloadRequestWait: Int | Double = null,
-    openDevTools: AnonMode = null,
-    paths: AnonDownloads = null,
-    phantomPath: String = null,
-    pollInterval: Int | Double = null,
-    port: Int | Double = null,
-    proxy: String = null,
-    proxyAuth: String = null,
-    proxyType: String = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    sslProtocol: String = null,
-    timeout: js.Any = null,
-    typeInterval: Int | Double = null,
-    waitTimeout: Int | Double = null,
-    weak: js.UndefOr[Boolean] = js.undefined,
-    webSecurity: js.UndefOr[Boolean] = js.undefined,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): IConstructorOptions = {
+  def apply(): IConstructorOptions = {
     val __obj = js.Dynamic.literal()
-    if (cookiesFile != null) __obj.updateDynamic("cookiesFile")(cookiesFile.asInstanceOf[js.Any])
-    if (electronPath != null) __obj.updateDynamic("electronPath")(electronPath.asInstanceOf[js.Any])
-    if (executionTimeout != null) __obj.updateDynamic("executionTimeout")(executionTimeout.asInstanceOf[js.Any])
-    if (gotoTimeout != null) __obj.updateDynamic("gotoTimeout")(gotoTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreDownloads)) __obj.updateDynamic("ignoreDownloads")(ignoreDownloads.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreSslErrors)) __obj.updateDynamic("ignoreSslErrors")(ignoreSslErrors.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (!js.isUndefined(loadImages)) __obj.updateDynamic("loadImages")(loadImages.asInstanceOf[js.Any])
-    if (maxDownloadRequestWait != null) __obj.updateDynamic("maxDownloadRequestWait")(maxDownloadRequestWait.asInstanceOf[js.Any])
-    if (openDevTools != null) __obj.updateDynamic("openDevTools")(openDevTools.asInstanceOf[js.Any])
-    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
-    if (phantomPath != null) __obj.updateDynamic("phantomPath")(phantomPath.asInstanceOf[js.Any])
-    if (pollInterval != null) __obj.updateDynamic("pollInterval")(pollInterval.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (proxy != null) __obj.updateDynamic("proxy")(proxy.asInstanceOf[js.Any])
-    if (proxyAuth != null) __obj.updateDynamic("proxyAuth")(proxyAuth.asInstanceOf[js.Any])
-    if (proxyType != null) __obj.updateDynamic("proxyType")(proxyType.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (sslProtocol != null) __obj.updateDynamic("sslProtocol")(sslProtocol.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (typeInterval != null) __obj.updateDynamic("typeInterval")(typeInterval.asInstanceOf[js.Any])
-    if (waitTimeout != null) __obj.updateDynamic("waitTimeout")(waitTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(weak)) __obj.updateDynamic("weak")(weak.asInstanceOf[js.Any])
-    if (!js.isUndefined(webSecurity)) __obj.updateDynamic("webSecurity")(webSecurity.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[IConstructorOptions]
   }
+  @scala.inline
+  implicit class IConstructorOptionsOps[Self <: IConstructorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCookiesFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookiesFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCookiesFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookiesFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElectronPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electronPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElectronPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("electronPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGotoTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGotoTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gotoTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreDownloads(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDownloads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreDownloads: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDownloads")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreSslErrors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreSslErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreSslErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreSslErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadImages(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadImages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDownloadRequestWait(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDownloadRequestWait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDownloadRequestWait: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDownloadRequestWait")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenDevTools(value: AnonMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openDevTools")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenDevTools: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openDevTools")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaths(value: AnonDownloads): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhantomPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phantomPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhantomPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phantomPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPollInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pollInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPollInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pollInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxyAuth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyAuth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxyAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyAuth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxyType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxyType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSslProtocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSslProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sslProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeak(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeak: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weak")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebSecurity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webSecurity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebSecurity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webSecurity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

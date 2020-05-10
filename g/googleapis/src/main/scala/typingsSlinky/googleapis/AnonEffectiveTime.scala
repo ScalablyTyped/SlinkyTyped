@@ -13,16 +13,53 @@ trait AnonEffectiveTime extends js.Object {
 
 object AnonEffectiveTime {
   @scala.inline
-  def apply(
-    effectiveTime: String = null,
-    isLocked: js.UndefOr[Boolean] = js.undefined,
-    retentionPeriod: String = null
-  ): AnonEffectiveTime = {
+  def apply(): AnonEffectiveTime = {
     val __obj = js.Dynamic.literal()
-    if (effectiveTime != null) __obj.updateDynamic("effectiveTime")(effectiveTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLocked)) __obj.updateDynamic("isLocked")(isLocked.asInstanceOf[js.Any])
-    if (retentionPeriod != null) __obj.updateDynamic("retentionPeriod")(retentionPeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonEffectiveTime]
   }
+  @scala.inline
+  implicit class AnonEffectiveTimeOps[Self <: AnonEffectiveTime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEffectiveTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEffectiveTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effectiveTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLocked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLocked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsLocked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLocked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetentionPeriod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetentionPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retentionPeriod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAddViaPoints extends js.Object {
-  var addViaPoints: js.UndefOr[Boolean] = js.undefined
-  var addWayPoints: js.UndefOr[Boolean] = js.undefined
-  var editViaPoints: js.UndefOr[Boolean] = js.undefined
-  var editWayPoints: js.UndefOr[Boolean] = js.undefined
-  var removeViaPoints: js.UndefOr[Boolean] = js.undefined
-  var removeWayPoints: js.UndefOr[Boolean] = js.undefined
+  var addViaPoints: js.UndefOr[Boolean] = js.native
+  var addWayPoints: js.UndefOr[Boolean] = js.native
+  var editViaPoints: js.UndefOr[Boolean] = js.native
+  var editWayPoints: js.UndefOr[Boolean] = js.native
+  var removeViaPoints: js.UndefOr[Boolean] = js.native
+  var removeWayPoints: js.UndefOr[Boolean] = js.native
 }
 
 object AnonAddViaPoints {
   @scala.inline
-  def apply(
-    addViaPoints: js.UndefOr[Boolean] = js.undefined,
-    addWayPoints: js.UndefOr[Boolean] = js.undefined,
-    editViaPoints: js.UndefOr[Boolean] = js.undefined,
-    editWayPoints: js.UndefOr[Boolean] = js.undefined,
-    removeViaPoints: js.UndefOr[Boolean] = js.undefined,
-    removeWayPoints: js.UndefOr[Boolean] = js.undefined
-  ): AnonAddViaPoints = {
+  def apply(): AnonAddViaPoints = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(addViaPoints)) __obj.updateDynamic("addViaPoints")(addViaPoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(addWayPoints)) __obj.updateDynamic("addWayPoints")(addWayPoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(editViaPoints)) __obj.updateDynamic("editViaPoints")(editViaPoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(editWayPoints)) __obj.updateDynamic("editWayPoints")(editWayPoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeViaPoints)) __obj.updateDynamic("removeViaPoints")(removeViaPoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeWayPoints)) __obj.updateDynamic("removeWayPoints")(removeWayPoints.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAddViaPoints]
   }
+  @scala.inline
+  implicit class AnonAddViaPointsOps[Self <: AnonAddViaPoints] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddViaPoints(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addViaPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddViaPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addViaPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddWayPoints(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addWayPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddWayPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addWayPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditViaPoints(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editViaPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditViaPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editViaPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditWayPoints(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editWayPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditWayPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editWayPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveViaPoints(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeViaPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveViaPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeViaPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveWayPoints(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeWayPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveWayPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeWayPoints")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

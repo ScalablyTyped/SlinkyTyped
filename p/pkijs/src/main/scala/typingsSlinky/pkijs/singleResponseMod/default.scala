@@ -8,20 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class default () extends SingleResponse {
   def this(params: js.Any) = this()
-  /* CompleteClass */
-  override var certID: typingsSlinky.pkijs.certIDMod.default = js.native
-  /* CompleteClass */
-  override var certStatus: js.Any = js.native
-  /* CompleteClass */
-  override var singleExtensions: js.Array[typingsSlinky.pkijs.extensionMod.default] = js.native
-  /* CompleteClass */
-  override var thisUpdate: js.Date = js.native
-  /* CompleteClass */
-  override def fromSchema(schema: js.Any): Unit = js.native
-  /* CompleteClass */
-  override def toJSON(): js.Any = js.native
-  /* CompleteClass */
-  override def toSchema(): js.Any = js.native
 }
 
 /* static members */

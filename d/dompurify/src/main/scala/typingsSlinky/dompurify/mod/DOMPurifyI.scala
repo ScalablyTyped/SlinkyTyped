@@ -3,13 +3,13 @@ package typingsSlinky.dompurify.mod
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Node
 import typingsSlinky.dompurify.ConfigRETURNDOMFRAGMENTfa
 import typingsSlinky.dompurify.ConfigRETURNDOMFRAGMENTtr
 import typingsSlinky.dompurify.ConfigRETURNDOMtrue
 import typingsSlinky.dompurify.ConfigRETURNTRUSTEDTYPEtr
 import typingsSlinky.dompurify.dompurifyStrings.uponSanitizeAttribute
 import typingsSlinky.dompurify.dompurifyStrings.uponSanitizeElement
-import typingsSlinky.std.Node
 import typingsSlinky.trustedTypes.mod._Global_.TrustedHTML
 import scala.scalajs.js
 import scala.scalajs.js.`|`

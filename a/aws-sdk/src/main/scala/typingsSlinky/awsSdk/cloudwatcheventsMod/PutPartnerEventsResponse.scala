@@ -11,18 +11,48 @@ trait PutPartnerEventsResponse extends js.Object {
     */
   var Entries: js.UndefOr[PutPartnerEventsResultEntryList] = js.native
   /**
-    * The number of events from this operation that couldn't be written to the partner event bus.
+    * The number of events from this operation that could not be written to the partner event bus.
     */
   var FailedEntryCount: js.UndefOr[Integer] = js.native
 }
 
 object PutPartnerEventsResponse {
   @scala.inline
-  def apply(Entries: PutPartnerEventsResultEntryList = null, FailedEntryCount: Int | Double = null): PutPartnerEventsResponse = {
+  def apply(): PutPartnerEventsResponse = {
     val __obj = js.Dynamic.literal()
-    if (Entries != null) __obj.updateDynamic("Entries")(Entries.asInstanceOf[js.Any])
-    if (FailedEntryCount != null) __obj.updateDynamic("FailedEntryCount")(FailedEntryCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutPartnerEventsResponse]
   }
+  @scala.inline
+  implicit class PutPartnerEventsResponseOps[Self <: PutPartnerEventsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntries(value: PutPartnerEventsResultEntryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Entries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Entries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailedEntryCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedEntryCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedEntryCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedEntryCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

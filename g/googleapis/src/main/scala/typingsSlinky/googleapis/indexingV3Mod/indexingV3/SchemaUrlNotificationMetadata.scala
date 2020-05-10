@@ -26,16 +26,53 @@ trait SchemaUrlNotificationMetadata extends js.Object {
 
 object SchemaUrlNotificationMetadata {
   @scala.inline
-  def apply(
-    latestRemove: SchemaUrlNotification = null,
-    latestUpdate: SchemaUrlNotification = null,
-    url: String = null
-  ): SchemaUrlNotificationMetadata = {
+  def apply(): SchemaUrlNotificationMetadata = {
     val __obj = js.Dynamic.literal()
-    if (latestRemove != null) __obj.updateDynamic("latestRemove")(latestRemove.asInstanceOf[js.Any])
-    if (latestUpdate != null) __obj.updateDynamic("latestUpdate")(latestUpdate.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUrlNotificationMetadata]
   }
+  @scala.inline
+  implicit class SchemaUrlNotificationMetadataOps[Self <: SchemaUrlNotificationMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLatestRemove(value: SchemaUrlNotification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestUpdate(value: SchemaUrlNotification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

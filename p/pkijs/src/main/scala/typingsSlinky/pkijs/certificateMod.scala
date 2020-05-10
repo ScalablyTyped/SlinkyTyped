@@ -15,7 +15,7 @@ object certificateMod extends js.Object {
   trait Certificate extends js.Object {
     var extensions: js.UndefOr[js.Array[typingsSlinky.pkijs.extensionMod.default]] = js.native
     var issuer: typingsSlinky.pkijs.relativeDistinguishedNamesMod.default = js.native
-    var issuerUniqueID: js.UndefOr[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    var issuerUniqueID: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
     var notAfter: typingsSlinky.pkijs.timeMod.default = js.native
     var notBefore: typingsSlinky.pkijs.timeMod.default = js.native
     var serialNumber: Integer = js.native
@@ -24,8 +24,8 @@ object certificateMod extends js.Object {
     var signatureValue: BitString = js.native
     var subject: typingsSlinky.pkijs.relativeDistinguishedNamesMod.default = js.native
     var subjectPublicKeyInfo: typingsSlinky.pkijs.publicKeyInfoMod.default = js.native
-    var subjectUniqueID: js.UndefOr[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    var tbs: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+    var subjectUniqueID: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
+    var tbs: js.typedarray.ArrayBuffer = js.native
     var version: Double = js.native
     /**
       * Create ASN.1 schema for existing values of TBS part for the certificate
@@ -35,7 +35,7 @@ object certificateMod extends js.Object {
     /**
       * Get SHA-1 hash value for subject public key
       */
-    def getKeyHash(): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def getKeyHash(): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     /**
       * Importing public key for current certificate
       */
@@ -43,16 +43,16 @@ object certificateMod extends js.Object {
     def getPublicKey(parameters: js.Any): js.Thenable[CryptoKey] = js.native
     /**
       * Make a signature for current value from TBS section
-      * 
+      *
       * @param {CryptoKey} privateKey Private key for "subjectPublicKeyInfo" structure
       * @param {string} [hashAlgorithm="SHA-1"] Hashing algorithm
       */
-    def sign(privateKey: CryptoKey): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def sign(privateKey: CryptoKey, hashAlgorithm: String): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def sign(privateKey: CryptoKey): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def sign(privateKey: CryptoKey, hashAlgorithm: String): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def toJSON(): js.Any = js.native
     /**
       * Convert current object to asn1js object and set correct values
-      * 
+      *
       * @param {boolean} [encodeFlag]
       * @returns {*}
       */

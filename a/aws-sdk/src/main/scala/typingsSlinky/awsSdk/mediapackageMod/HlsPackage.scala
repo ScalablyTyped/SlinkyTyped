@@ -58,32 +58,149 @@ trait HlsPackage extends js.Object {
 
 object HlsPackage {
   @scala.inline
-  def apply(
-    AdMarkers: AdMarkers = null,
-    AdTriggers: AdTriggers = null,
-    AdsOnDeliveryRestrictions: AdsOnDeliveryRestrictions = null,
-    Encryption: HlsEncryption = null,
-    IncludeIframeOnlyStream: js.UndefOr[Boolean] = js.undefined,
-    PlaylistType: PlaylistType = null,
-    PlaylistWindowSeconds: Int | Double = null,
-    ProgramDateTimeIntervalSeconds: Int | Double = null,
-    SegmentDurationSeconds: Int | Double = null,
-    StreamSelection: StreamSelection = null,
-    UseAudioRenditionGroup: js.UndefOr[Boolean] = js.undefined
-  ): HlsPackage = {
+  def apply(): HlsPackage = {
     val __obj = js.Dynamic.literal()
-    if (AdMarkers != null) __obj.updateDynamic("AdMarkers")(AdMarkers.asInstanceOf[js.Any])
-    if (AdTriggers != null) __obj.updateDynamic("AdTriggers")(AdTriggers.asInstanceOf[js.Any])
-    if (AdsOnDeliveryRestrictions != null) __obj.updateDynamic("AdsOnDeliveryRestrictions")(AdsOnDeliveryRestrictions.asInstanceOf[js.Any])
-    if (Encryption != null) __obj.updateDynamic("Encryption")(Encryption.asInstanceOf[js.Any])
-    if (!js.isUndefined(IncludeIframeOnlyStream)) __obj.updateDynamic("IncludeIframeOnlyStream")(IncludeIframeOnlyStream.asInstanceOf[js.Any])
-    if (PlaylistType != null) __obj.updateDynamic("PlaylistType")(PlaylistType.asInstanceOf[js.Any])
-    if (PlaylistWindowSeconds != null) __obj.updateDynamic("PlaylistWindowSeconds")(PlaylistWindowSeconds.asInstanceOf[js.Any])
-    if (ProgramDateTimeIntervalSeconds != null) __obj.updateDynamic("ProgramDateTimeIntervalSeconds")(ProgramDateTimeIntervalSeconds.asInstanceOf[js.Any])
-    if (SegmentDurationSeconds != null) __obj.updateDynamic("SegmentDurationSeconds")(SegmentDurationSeconds.asInstanceOf[js.Any])
-    if (StreamSelection != null) __obj.updateDynamic("StreamSelection")(StreamSelection.asInstanceOf[js.Any])
-    if (!js.isUndefined(UseAudioRenditionGroup)) __obj.updateDynamic("UseAudioRenditionGroup")(UseAudioRenditionGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsPackage]
   }
+  @scala.inline
+  implicit class HlsPackageOps[Self <: HlsPackage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdMarkers(value: AdMarkers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdMarkers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdMarkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdMarkers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdTriggers(value: AdTriggers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdTriggers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdTriggers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdTriggers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdsOnDeliveryRestrictions(value: AdsOnDeliveryRestrictions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdsOnDeliveryRestrictions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdsOnDeliveryRestrictions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdsOnDeliveryRestrictions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryption(value: HlsEncryption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeIframeOnlyStream(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeIframeOnlyStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeIframeOnlyStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeIframeOnlyStream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaylistType(value: PlaylistType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaylistType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaylistType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaylistType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaylistWindowSeconds(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaylistWindowSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaylistWindowSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaylistWindowSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgramDateTimeIntervalSeconds(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramDateTimeIntervalSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgramDateTimeIntervalSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramDateTimeIntervalSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentDurationSeconds(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentDurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentDurationSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamSelection(value: StreamSelection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseAudioRenditionGroup(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseAudioRenditionGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseAudioRenditionGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseAudioRenditionGroup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

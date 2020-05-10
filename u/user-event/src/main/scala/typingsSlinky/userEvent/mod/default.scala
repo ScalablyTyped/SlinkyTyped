@@ -1,6 +1,6 @@
 package typingsSlinky.userEvent.mod
 
-import typingsSlinky.std.Element
+import org.scalajs.dom.raw.Element
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

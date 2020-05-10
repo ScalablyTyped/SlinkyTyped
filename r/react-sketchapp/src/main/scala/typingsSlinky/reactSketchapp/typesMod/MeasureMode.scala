@@ -13,12 +13,10 @@ trait MeasureMode extends js.Object
 
 object MeasureMode {
   @scala.inline
-  def `at-most`: typingsSlinky.reactSketchapp.reactSketchappStrings.`at-most` = this.cast("at-most")
+  def `at-most`: typingsSlinky.reactSketchapp.reactSketchappStrings.`at-most` = "at-most".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.`at-most`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def exactly: typingsSlinky.reactSketchapp.reactSketchappStrings.exactly = "exactly".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.exactly]
   @scala.inline
-  def exactly: typingsSlinky.reactSketchapp.reactSketchappStrings.exactly = this.cast("exactly")
-  @scala.inline
-  def undefined: typingsSlinky.reactSketchapp.reactSketchappStrings.undefined = this.cast("undefined")
+  def undefined: typingsSlinky.reactSketchapp.reactSketchappStrings.undefined = "undefined".asInstanceOf[typingsSlinky.reactSketchapp.reactSketchappStrings.undefined]
 }
 

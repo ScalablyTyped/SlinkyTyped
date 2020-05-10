@@ -48,7 +48,7 @@ trait FileSystem extends js.Object {
   		 * @param uri The uri of the file.
   		 * @return An array of bytes or a thenable that resolves to such.
   		 */
-  def readFile(uri: Uri): Thenable[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def readFile(uri: Uri): Thenable[js.typedarray.Uint8Array] = js.native
   /**
   		 * Rename a file or folder.
   		 *
@@ -71,6 +71,6 @@ trait FileSystem extends js.Object {
   		 * @param uri The uri of the file.
   		 * @param content The new content of the file.
   		 */
-  def writeFile(uri: Uri, content: scala.scalajs.js.typedarray.Uint8Array): Thenable[Unit] = js.native
+  def writeFile(uri: Uri, content: js.typedarray.Uint8Array): Thenable[Unit] = js.native
 }
 

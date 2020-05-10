@@ -42,26 +42,113 @@ trait ThirdPartyJobData extends js.Object {
 
 object ThirdPartyJobData {
   @scala.inline
-  def apply(
-    actionConfiguration: ActionConfiguration = null,
-    actionTypeId: ActionTypeId = null,
-    artifactCredentials: AWSSessionCredentials = null,
-    continuationToken: ContinuationToken = null,
-    encryptionKey: EncryptionKey = null,
-    inputArtifacts: ArtifactList = null,
-    outputArtifacts: ArtifactList = null,
-    pipelineContext: PipelineContext = null
-  ): ThirdPartyJobData = {
+  def apply(): ThirdPartyJobData = {
     val __obj = js.Dynamic.literal()
-    if (actionConfiguration != null) __obj.updateDynamic("actionConfiguration")(actionConfiguration.asInstanceOf[js.Any])
-    if (actionTypeId != null) __obj.updateDynamic("actionTypeId")(actionTypeId.asInstanceOf[js.Any])
-    if (artifactCredentials != null) __obj.updateDynamic("artifactCredentials")(artifactCredentials.asInstanceOf[js.Any])
-    if (continuationToken != null) __obj.updateDynamic("continuationToken")(continuationToken.asInstanceOf[js.Any])
-    if (encryptionKey != null) __obj.updateDynamic("encryptionKey")(encryptionKey.asInstanceOf[js.Any])
-    if (inputArtifacts != null) __obj.updateDynamic("inputArtifacts")(inputArtifacts.asInstanceOf[js.Any])
-    if (outputArtifacts != null) __obj.updateDynamic("outputArtifacts")(outputArtifacts.asInstanceOf[js.Any])
-    if (pipelineContext != null) __obj.updateDynamic("pipelineContext")(pipelineContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThirdPartyJobData]
   }
+  @scala.inline
+  implicit class ThirdPartyJobDataOps[Self <: ThirdPartyJobData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionConfiguration(value: ActionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActionTypeId(value: ActionTypeId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionTypeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionTypeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionTypeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArtifactCredentials(value: AWSSessionCredentials): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArtifactCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactCredentials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinuationToken(value: ContinuationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinuationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuationToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionKey(value: EncryptionKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputArtifacts(value: ArtifactList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputArtifacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputArtifacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputArtifacts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputArtifacts(value: ArtifactList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputArtifacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputArtifacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputArtifacts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPipelineContext(value: PipelineContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPipelineContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineContext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

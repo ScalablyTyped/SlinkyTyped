@@ -26,17 +26,59 @@ trait ListDomainsInput extends js.Object {
 
 object ListDomainsInput {
   @scala.inline
-  def apply(
-    registrationStatus: RegistrationStatus,
-    maximumPageSize: Int | Double = null,
-    nextPageToken: PageToken = null,
-    reverseOrder: js.UndefOr[Boolean] = js.undefined
-  ): ListDomainsInput = {
+  def apply(registrationStatus: RegistrationStatus): ListDomainsInput = {
     val __obj = js.Dynamic.literal(registrationStatus = registrationStatus.asInstanceOf[js.Any])
-    if (maximumPageSize != null) __obj.updateDynamic("maximumPageSize")(maximumPageSize.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverseOrder)) __obj.updateDynamic("reverseOrder")(reverseOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDomainsInput]
   }
+  @scala.inline
+  implicit class ListDomainsInputOps[Self <: ListDomainsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegistrationStatus(value: RegistrationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaximumPageSize(value: PageSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumPageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverseOrder(value: ReverseOrder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverseOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseOrder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

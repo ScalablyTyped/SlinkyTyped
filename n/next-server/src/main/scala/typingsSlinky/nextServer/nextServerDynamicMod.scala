@@ -17,6 +17,6 @@ object nextServerDynamicMod extends js.Object {
   def default[P](dynamicOptions: DynamicOptions[P], options: DynamicOptions[P]): ReactComponentClass[P] = js.native
   def default[P](dynamicOptions: Loader[P]): ReactComponentClass[P] = js.native
   def default[P](dynamicOptions: Loader[P], options: DynamicOptions[P]): ReactComponentClass[P] = js.native
-  def noSSR[P](LoadableInitializer: LoadableFn[P], loadableOptions: LoadableOptions[P]): ReactComponentClass[P] | ReactComponentClass[P] | js.Function0[ReactElement] = js.native
+  def noSSR[P](LoadableInitializer: LoadableFn[P], loadableOptions: LoadableOptions[P]): ReactComponentClass[P] | js.Function0[ReactElement] = js.native
 }
 

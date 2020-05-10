@@ -63,6 +63,7 @@ trait GuardianInvitationsResource extends js.Object {
     * `invitation_id`. May also be returned if the student exists, but the
     * requesting user does not have access to see that student.
     */
+  def get(): Request_[GuardianInvitation] = js.native
   def get(request: AnonInvitationId): Request_[GuardianInvitation] = js.native
   /**
     * Returns a list of guardian invitations that the requesting user is
@@ -82,6 +83,7 @@ trait GuardianInvitationsResource extends js.Object {
     * &#42; `NOT_FOUND` if a `student_id` is specified, and its format can be
     * recognized, but Classroom has no record of that student.
     */
+  def list(): Request_[ListGuardianInvitationsResponse] = js.native
   def list(request: AnonInvitedEmailAddress): Request_[ListGuardianInvitationsResponse] = js.native
   /**
     * Modifies a guardian invitation.

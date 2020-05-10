@@ -11,5 +11,6 @@ trait SVGMetadataElement extends SVGElement
 
 @JSGlobal("SVGMetadataElement")
 @js.native
-object SVGMetadataElement extends Instantiable0[SVGMetadataElement]
+object SVGMetadataElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGMetadataElement]
 

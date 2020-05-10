@@ -7,34 +7,78 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PagerItemProps
   extends AllHTMLAttributes[PagerItem]
      with ClassAttributes[PagerItem] {
-  var eventKey: js.UndefOr[js.Any] = js.undefined
-  var next: js.UndefOr[Boolean] = js.undefined
+  var eventKey: js.UndefOr[js.Any] = js.native
+  var next: js.UndefOr[Boolean] = js.native
   @JSName("onSelect")
-  var onSelect_PagerItemProps: js.UndefOr[SelectCallback] = js.undefined
-  var previous: js.UndefOr[Boolean] = js.undefined
+  var onSelect_PagerItemProps: js.UndefOr[SelectCallback] = js.native
+  var previous: js.UndefOr[Boolean] = js.native
 }
 
 object PagerItemProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[PagerItem] = null,
-    ClassAttributes: ClassAttributes[PagerItem] = null,
-    eventKey: js.Any = null,
-    next: js.UndefOr[Boolean] = js.undefined,
-    onSelect: SelectCallback = null,
-    previous: js.UndefOr[Boolean] = js.undefined
-  ): PagerItemProps = {
+  def apply(): PagerItemProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(next)) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
-    if (onSelect != null) __obj.updateDynamic("onSelect")(onSelect.asInstanceOf[js.Any])
-    if (!js.isUndefined(previous)) __obj.updateDynamic("previous")(previous.asInstanceOf[js.Any])
     __obj.asInstanceOf[PagerItemProps]
   }
+  @scala.inline
+  implicit class PagerItemPropsOps[Self <: PagerItemProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventKey(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNext(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelect(value: SelectCallback): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevious(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevious: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

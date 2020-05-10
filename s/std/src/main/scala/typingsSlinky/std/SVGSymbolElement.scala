@@ -44,11 +44,12 @@ trait SVGSymbolElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGSymbolElement")
 @js.native
-object SVGSymbolElement extends Instantiable0[SVGSymbolElement]
+object SVGSymbolElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGSymbolElement]
 

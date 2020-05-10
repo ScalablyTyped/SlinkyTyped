@@ -1,11 +1,6 @@
 package typingsSlinky.tensorflowTfjsConverter
 
-import typingsSlinky.tensorflowTfjsConverter.executionContextMod.ExecutionContext
-import typingsSlinky.tensorflowTfjsConverter.operationsTypesMod.Node
-import typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.control
-import typingsSlinky.tensorflowTfjsConverter.typesMod.NamedTensorsMap
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
+import typingsSlinky.tensorflowTfjsConverter.operationsTypesMod.InternalOpAsyncExecutor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@tensorflow/tfjs-converter/dist/src/operations/executors/control_executor", JSImport.Namespace)
 @js.native
 object controlExecutorMod extends js.Object {
-  val CATEGORY: control = js.native
-  def executeOp(node: Node, tensorMap: NamedTensorsMap, context: ExecutionContext): js.Promise[js.Array[Tensor_[Rank]]] = js.native
+  val CATEGORY: /* "control" */ String = js.native
+  val executeOp: InternalOpAsyncExecutor = js.native
 }
 

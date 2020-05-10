@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnClickListener extends js.Object {
-  def onClick(v: typingsSlinky.androiduix.android.view.View): Unit
+  def onClick(v: typingsSlinky.androiduix.android.view.View): Unit = js.native
 }
 
 @JSGlobal("android.view.View.OnClickListener")

@@ -1,12 +1,10 @@
 package typingsSlinky.materialUiCore.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLSelectElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.select.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.AnonNode
 import typingsSlinky.materialUiCore.materialUiCoreStrings.filled
 import typingsSlinky.materialUiCore.materialUiCoreStrings.outlined
@@ -18,34 +16,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NativeSelectInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object NativeSelectInput {
   @JSImport("@material-ui/core/NativeSelect/NativeSelectInput", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, name */
-  def apply(
-    IconComponent: ReactComponentClass[_] = null,
-    inputRef: /* ref */ HTMLSelectElement | AnonNode => Unit = null,
-    onChange: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any]) => Unit = null,
-    value: (js.Array[String | Double | Boolean]) | String | Double | Boolean = null,
-    variant: standard | outlined | filled = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (IconComponent != null) __obj.updateDynamic("IconComponent")(IconComponent.asInstanceOf[js.Any])
-    if (inputRef != null) __obj.updateDynamic("inputRef")(js.Any.fromFunction1(inputRef))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def IconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def IconComponentComponentClass(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def IconComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRef(value: /* ref */ HTMLSelectElement | AnonNode => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def variant(value: standard | outlined | filled): this.type = set("variant", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.select.tag.type, 
-  typingsSlinky.materialUiCore.nativeSelectInputMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = NativeSelectInputProps
+  
+  def withProps(p: NativeSelectInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: NativeSelectInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

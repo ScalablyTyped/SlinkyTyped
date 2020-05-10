@@ -18,11 +18,41 @@ trait ListNodegroupsResponse extends js.Object {
 
 object ListNodegroupsResponse {
   @scala.inline
-  def apply(nextToken: String = null, nodegroups: StringList = null): ListNodegroupsResponse = {
+  def apply(): ListNodegroupsResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (nodegroups != null) __obj.updateDynamic("nodegroups")(nodegroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListNodegroupsResponse]
   }
+  @scala.inline
+  implicit class ListNodegroupsResponseOps[Self <: ListNodegroupsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodegroups(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodegroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodegroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodegroups")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,21 @@
 package typingsSlinky.rmcAlign.components
 
+import typingsSlinky.rmcAlign.alignMod.IAlignProps
 import typingsSlinky.rmcAlign.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RmcAlign extends SharedApply_IAlignProps485369091[default] {
+object RmcAlign {
   @JSImport("rmc-align", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IAlignProps): SharedBuilder_IAlignProps_1056058104[default] = new SharedBuilder_IAlignProps_1056058104[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(target: () => Unit): SharedBuilder_IAlignProps_1056058104[default] = {
+    val __props = js.Dynamic.literal(target = js.Any.fromFunction0(target))
+    new SharedBuilder_IAlignProps_1056058104[default](js.Array(this.component, __props.asInstanceOf[IAlignProps]))
+  }
 }
 

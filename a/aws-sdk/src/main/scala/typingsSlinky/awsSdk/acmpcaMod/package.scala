@@ -49,12 +49,12 @@ package object acmpcaMod {
   */
   type CertificateAuthorityType = typingsSlinky.awsSdk.acmpcaMod._CertificateAuthorityType | java.lang.String
   type CertificateBody = java.lang.String
-  type CertificateBodyBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmpcaMod.Blob | java.lang.String
+  type CertificateBodyBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmpcaMod.Blob | java.lang.String
   type CertificateChain = java.lang.String
-  type CertificateChainBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmpcaMod.Blob | java.lang.String
+  type CertificateChainBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmpcaMod.Blob | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.acmpcaMod.ClientApiVersions
   type CountryCodeString = java.lang.String
-  type CsrBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmpcaMod.Blob | java.lang.String
+  type CsrBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.acmpcaMod.Blob | java.lang.String
   type CsrBody = java.lang.String
   type DistinguishedNameQualifierString = java.lang.String
   /* Rewritten from type alias, can be one of: 

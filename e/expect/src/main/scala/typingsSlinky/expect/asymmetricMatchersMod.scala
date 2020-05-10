@@ -1,7 +1,6 @@
 package typingsSlinky.expect
 
 import typingsSlinky.std.Record
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,7 +52,8 @@ object asymmetricMatchersMod extends js.Object {
   }
   
   @js.native
-  trait StringMatching_ extends AsymmetricMatcher[RegExp] {
+  trait StringMatching_
+    extends AsymmetricMatcher[js.RegExp] {
     def asymmetricMatch(other: String): Boolean = js.native
     def getExpectedType(): String = js.native
   }
@@ -66,9 +66,9 @@ object asymmetricMatchersMod extends js.Object {
   def objectNotContaining(sample: Record[String, _]): ObjectContaining_ = js.native
   def stringContaining(expected: String): StringContaining_ = js.native
   def stringMatching(expected: String): StringMatching_ = js.native
-  def stringMatching(expected: RegExp): StringMatching_ = js.native
+  def stringMatching(expected: js.RegExp): StringMatching_ = js.native
   def stringNotContaining(expected: String): StringContaining_ = js.native
   def stringNotMatching(expected: String): StringMatching_ = js.native
-  def stringNotMatching(expected: RegExp): StringMatching_ = js.native
+  def stringNotMatching(expected: js.RegExp): StringMatching_ = js.native
 }
 

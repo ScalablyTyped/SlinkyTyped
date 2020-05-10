@@ -1,9 +1,9 @@
 package typingsSlinky.chromeApps.chrome.app
 
-import typingsSlinky.chromeApps.chromeAppsStrings.fullscreen
-import typingsSlinky.chromeApps.chromeAppsStrings.maximized
-import typingsSlinky.chromeApps.chromeAppsStrings.minimized
-import typingsSlinky.chromeApps.chromeAppsStrings.normal
+import typingsSlinky.chromeApps.chromeAppsStrings.fullscreen_
+import typingsSlinky.chromeApps.chromeAppsStrings.maximized_
+import typingsSlinky.chromeApps.chromeAppsStrings.minimized_
+import typingsSlinky.chromeApps.chromeAppsStrings.normal_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.app._State")
 @js.native
 object State extends js.Object {
-  var FULLSCREEN: fullscreen = js.native
-  var MAXIMIZED: maximized = js.native
-  var MINIMIZED: minimized = js.native
-  var NORMAL: normal = js.native
+  var FULLSCREEN: fullscreen_ = js.native
+  var MAXIMIZED: maximized_ = js.native
+  var MINIMIZED: minimized_ = js.native
+  var NORMAL: normal_ = js.native
 }
 

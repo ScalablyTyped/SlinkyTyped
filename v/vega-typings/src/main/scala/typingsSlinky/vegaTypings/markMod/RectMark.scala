@@ -1,57 +1,40 @@
 package typingsSlinky.vegaTypings.markMod
 
 import typingsSlinky.vegaTypings.encodeMod.Encodable
-import typingsSlinky.vegaTypings.encodeMod.Encode
 import typingsSlinky.vegaTypings.encodeMod.RectEncodeEntry
-import typingsSlinky.vegaTypings.onTriggerMod.OnMarkTrigger
-import typingsSlinky.vegaTypings.signalMod.SignalRef
-import typingsSlinky.vegaTypings.transformMod.Transforms
 import typingsSlinky.vegaTypings.vegaTypingsStrings.rect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RectMark
   extends BaseMark
      with Encodable[RectEncodeEntry]
      with Mark {
-  var `type`: rect
+  var `type`: rect = js.native
 }
 
 object RectMark {
   @scala.inline
-  def apply(
-    `type`: rect,
-    clip: Clip = null,
-    description: String = null,
-    encode: Encode[RectEncodeEntry] = null,
-    from: From = null,
-    interactive: Boolean | SignalRef = null,
-    key: String = null,
-    name: String = null,
-    on: js.Array[OnMarkTrigger] = null,
-    role: String = null,
-    sort: Compare = null,
-    style: String | js.Array[String] = null,
-    transform: js.Array[Transforms] = null,
-    zindex: Int | Double = null
-  ): RectMark = {
+  def apply(`type`: rect): RectMark = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (encode != null) __obj.updateDynamic("encode")(encode.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (interactive != null) __obj.updateDynamic("interactive")(interactive.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (zindex != null) __obj.updateDynamic("zindex")(zindex.asInstanceOf[js.Any])
     __obj.asInstanceOf[RectMark]
   }
+  @scala.inline
+  implicit class RectMarkOps[Self <: RectMark] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

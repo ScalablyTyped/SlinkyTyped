@@ -19,11 +19,41 @@ trait ClaimDevicesByClaimCodeResponse extends js.Object {
 
 object ClaimDevicesByClaimCodeResponse {
   @scala.inline
-  def apply(ClaimCode: stringMin12Max40 = null, Total: Int | Double = null): ClaimDevicesByClaimCodeResponse = {
+  def apply(): ClaimDevicesByClaimCodeResponse = {
     val __obj = js.Dynamic.literal()
-    if (ClaimCode != null) __obj.updateDynamic("ClaimCode")(ClaimCode.asInstanceOf[js.Any])
-    if (Total != null) __obj.updateDynamic("Total")(Total.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClaimDevicesByClaimCodeResponse]
   }
+  @scala.inline
+  implicit class ClaimDevicesByClaimCodeResponseOps[Self <: ClaimDevicesByClaimCodeResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClaimCode(value: stringMin12Max40): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClaimCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaimCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClaimCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

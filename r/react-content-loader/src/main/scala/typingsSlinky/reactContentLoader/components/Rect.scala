@@ -1,11 +1,8 @@
 package typingsSlinky.reactContentLoader.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNativeSvg.mod.Color
@@ -30,142 +27,142 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Rect
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactContentLoader.nativeMod.Rect] {
+object Rect {
   @JSImport("react-content-loader/dist/native", "Rect")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id */
-  def apply(
-    clipPath: String = null,
-    clipRule: FillRule = null,
-    delayLongPress: Int | Double = null,
-    delayPressIn: Int | Double = null,
-    delayPressOut: Int | Double = null,
-    fill: Color = null,
-    fillOpacity: NumberProp = null,
-    fillRule: FillRule = null,
-    height: NumberProp = null,
-    marker: String = null,
-    markerEnd: String = null,
-    markerMid: String = null,
-    markerStart: String = null,
-    mask: String = null,
-    onLongPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onMoveShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
-    onMoveShouldSetResponderCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
-    onPress: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPressIn: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onPressOut: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderEnd: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderGrant: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderMove: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderReject: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderRelease: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderStart: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderTerminate: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit = null,
-    onResponderTerminationRequest: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
-    onStartShouldSetResponder: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
-    onStartShouldSetResponderCapture: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean = null,
-    opacity: NumberProp = null,
-    origin: NumberArray = null,
-    originX: NumberProp = null,
-    originY: NumberProp = null,
-    pointerEvents: `box-none` | none | `box-only` | auto = null,
-    rotation: NumberProp = null,
-    rx: NumberProp = null,
-    ry: NumberProp = null,
-    scale: NumberArray = null,
-    scaleX: NumberProp = null,
-    scaleY: NumberProp = null,
-    skew: NumberArray = null,
-    skewX: NumberProp = null,
-    skewY: NumberProp = null,
-    stroke: Color = null,
-    strokeDasharray: js.Array[NumberProp] | NumberProp = null,
-    strokeDashoffset: NumberProp = null,
-    strokeLinecap: Linecap = null,
-    strokeLinejoin: Linejoin = null,
-    strokeMiterlimit: NumberProp = null,
-    strokeOpacity: NumberProp = null,
-    strokeWidth: NumberProp = null,
-    transform: ColumnMajorTransformMatrix | String | TransformObject = null,
-    translate: NumberArray = null,
-    translateX: NumberProp = null,
-    translateY: NumberProp = null,
-    vectorEffect: none | `non-scaling-stroke` | nonScalingStroke | default | inherit | uri = null,
-    width: NumberProp = null,
-    x: NumberProp = null,
-    y: NumberProp = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactContentLoader.nativeMod.Rect] = {
-    val __obj = js.Dynamic.literal()
-    if (clipPath != null) __obj.updateDynamic("clipPath")(clipPath.asInstanceOf[js.Any])
-    if (clipRule != null) __obj.updateDynamic("clipRule")(clipRule.asInstanceOf[js.Any])
-    if (delayLongPress != null) __obj.updateDynamic("delayLongPress")(delayLongPress.asInstanceOf[js.Any])
-    if (delayPressIn != null) __obj.updateDynamic("delayPressIn")(delayPressIn.asInstanceOf[js.Any])
-    if (delayPressOut != null) __obj.updateDynamic("delayPressOut")(delayPressOut.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (fillRule != null) __obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
-    if (markerEnd != null) __obj.updateDynamic("markerEnd")(markerEnd.asInstanceOf[js.Any])
-    if (markerMid != null) __obj.updateDynamic("markerMid")(markerMid.asInstanceOf[js.Any])
-    if (markerStart != null) __obj.updateDynamic("markerStart")(markerStart.asInstanceOf[js.Any])
-    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction1(onLongPress))
-    if (onMoveShouldSetResponder != null) __obj.updateDynamic("onMoveShouldSetResponder")(js.Any.fromFunction1(onMoveShouldSetResponder))
-    if (onMoveShouldSetResponderCapture != null) __obj.updateDynamic("onMoveShouldSetResponderCapture")(js.Any.fromFunction1(onMoveShouldSetResponderCapture))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
-    if (onPressIn != null) __obj.updateDynamic("onPressIn")(js.Any.fromFunction1(onPressIn))
-    if (onPressOut != null) __obj.updateDynamic("onPressOut")(js.Any.fromFunction1(onPressOut))
-    if (onResponderEnd != null) __obj.updateDynamic("onResponderEnd")(js.Any.fromFunction1(onResponderEnd))
-    if (onResponderGrant != null) __obj.updateDynamic("onResponderGrant")(js.Any.fromFunction1(onResponderGrant))
-    if (onResponderMove != null) __obj.updateDynamic("onResponderMove")(js.Any.fromFunction1(onResponderMove))
-    if (onResponderReject != null) __obj.updateDynamic("onResponderReject")(js.Any.fromFunction1(onResponderReject))
-    if (onResponderRelease != null) __obj.updateDynamic("onResponderRelease")(js.Any.fromFunction1(onResponderRelease))
-    if (onResponderStart != null) __obj.updateDynamic("onResponderStart")(js.Any.fromFunction1(onResponderStart))
-    if (onResponderTerminate != null) __obj.updateDynamic("onResponderTerminate")(js.Any.fromFunction1(onResponderTerminate))
-    if (onResponderTerminationRequest != null) __obj.updateDynamic("onResponderTerminationRequest")(js.Any.fromFunction1(onResponderTerminationRequest))
-    if (onStartShouldSetResponder != null) __obj.updateDynamic("onStartShouldSetResponder")(js.Any.fromFunction1(onStartShouldSetResponder))
-    if (onStartShouldSetResponderCapture != null) __obj.updateDynamic("onStartShouldSetResponderCapture")(js.Any.fromFunction1(onStartShouldSetResponderCapture))
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (originX != null) __obj.updateDynamic("originX")(originX.asInstanceOf[js.Any])
-    if (originY != null) __obj.updateDynamic("originY")(originY.asInstanceOf[js.Any])
-    if (pointerEvents != null) __obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (rx != null) __obj.updateDynamic("rx")(rx.asInstanceOf[js.Any])
-    if (ry != null) __obj.updateDynamic("ry")(ry.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (scaleX != null) __obj.updateDynamic("scaleX")(scaleX.asInstanceOf[js.Any])
-    if (scaleY != null) __obj.updateDynamic("scaleY")(scaleY.asInstanceOf[js.Any])
-    if (skew != null) __obj.updateDynamic("skew")(skew.asInstanceOf[js.Any])
-    if (skewX != null) __obj.updateDynamic("skewX")(skewX.asInstanceOf[js.Any])
-    if (skewY != null) __obj.updateDynamic("skewY")(skewY.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeDasharray != null) __obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
-    if (strokeDashoffset != null) __obj.updateDynamic("strokeDashoffset")(strokeDashoffset.asInstanceOf[js.Any])
-    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
-    if (strokeLinejoin != null) __obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
-    if (strokeMiterlimit != null) __obj.updateDynamic("strokeMiterlimit")(strokeMiterlimit.asInstanceOf[js.Any])
-    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
-    if (translateX != null) __obj.updateDynamic("translateX")(translateX.asInstanceOf[js.Any])
-    if (translateY != null) __obj.updateDynamic("translateY")(translateY.asInstanceOf[js.Any])
-    if (vectorEffect != null) __obj.updateDynamic("vectorEffect")(vectorEffect.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactContentLoader.nativeMod.Rect] {
+    @scala.inline
+    def clipPath(value: String): this.type = set("clipPath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clipRule(value: FillRule): this.type = set("clipRule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delayLongPress(value: Double): this.type = set("delayLongPress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delayPressIn(value: Double): this.type = set("delayPressIn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delayPressOut(value: Double): this.type = set("delayPressOut", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: Color): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fillOpacity(value: NumberProp): this.type = set("fillOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fillRule(value: FillRule): this.type = set("fillRule", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: NumberProp): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def marker(value: String): this.type = set("marker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markerEnd(value: String): this.type = set("markerEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markerMid(value: String): this.type = set("markerMid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markerStart(value: String): this.type = set("markerStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mask(value: String): this.type = set("mask", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLongPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onLongPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMoveShouldSetResponder(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponder", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMoveShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponderCapture", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPressIn(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onPressIn", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPressOut(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onPressOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderGrant(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderGrant", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderMove(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderReject(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderReject", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderRelease(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderRelease", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderStart(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderTerminate(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderTerminate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderTerminationRequest(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onResponderTerminationRequest", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStartShouldSetResponder(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onStartShouldSetResponder", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStartShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onStartShouldSetResponderCapture", js.Any.fromFunction1(value))
+    @scala.inline
+    def opacity(value: NumberProp): this.type = set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def origin(value: NumberArray): this.type = set("origin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def originX(value: NumberProp): this.type = set("originX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def originY(value: NumberProp): this.type = set("originY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rotation(value: NumberProp): this.type = set("rotation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rx(value: NumberProp): this.type = set("rx", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ry(value: NumberProp): this.type = set("ry", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: NumberArray): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scaleX(value: NumberProp): this.type = set("scaleX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scaleY(value: NumberProp): this.type = set("scaleY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skew(value: NumberArray): this.type = set("skew", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skewX(value: NumberProp): this.type = set("skewX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skewY(value: NumberProp): this.type = set("skewY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stroke(value: Color): this.type = set("stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeDasharray(value: js.Array[NumberProp] | NumberProp): this.type = set("strokeDasharray", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeDashoffset(value: NumberProp): this.type = set("strokeDashoffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeLinecap(value: Linecap): this.type = set("strokeLinecap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeLinejoin(value: Linejoin): this.type = set("strokeLinejoin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeMiterlimit(value: NumberProp): this.type = set("strokeMiterlimit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeOpacity(value: NumberProp): this.type = set("strokeOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeWidth(value: NumberProp): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transform(value: ColumnMajorTransformMatrix | String | TransformObject): this.type = set("transform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def translate(value: NumberArray): this.type = set("translate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def translateX(value: NumberProp): this.type = set("translateX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def translateY(value: NumberProp): this.type = set("translateY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def vectorEffect(value: none | `non-scaling-stroke` | nonScalingStroke | default | inherit | uri): this.type = set("vectorEffect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: NumberProp): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def x(value: NumberProp): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y(value: NumberProp): this.type = set("y", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactContentLoader.nativeMod.Rect] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactContentLoader.nativeMod.Rect](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = RectProps
+  
+  def withProps(p: RectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Rect.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

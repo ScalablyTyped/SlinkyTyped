@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeJoi.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +9,6 @@ import scala.scalajs.js.annotation._
 object assert extends js.Object {
   def apply(value: js.Any, schema: SchemaLike): Unit = js.native
   def apply(value: js.Any, schema: SchemaLike, message: String): Unit = js.native
-  def apply(value: js.Any, schema: SchemaLike, message: Error): Unit = js.native
+  def apply(value: js.Any, schema: SchemaLike, message: js.Error): Unit = js.native
 }
 

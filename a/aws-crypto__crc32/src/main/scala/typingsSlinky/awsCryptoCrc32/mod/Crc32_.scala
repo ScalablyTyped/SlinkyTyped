@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 class Crc32_ () extends js.Object {
   var checksum: js.Any = js.native
   def digest(): Double = js.native
-  def update(data: scala.scalajs.js.typedarray.Uint8Array): this.type = js.native
+  def update(data: js.typedarray.Uint8Array): this.type = js.native
 }
 

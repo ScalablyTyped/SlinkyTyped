@@ -1,6 +1,5 @@
 package typingsSlinky.pAll.mod
 
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +11,8 @@ object ^ extends js.Object {
   var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof pAll */ js.Any = js.native
   def apply[Result1](tasks: js.Array[PromiseFactory[Result1]]): js.Promise[js.Array[Result1]] = js.native
   def apply[Result1](tasks: js.Array[PromiseFactory[Result1]], options: Options): js.Promise[js.Array[Result1]] = js.native
-  def apply[TAll](tasks: Iterable[PromiseFactory[TAll]]): js.Promise[js.Array[TAll]] = js.native
-  def apply[TAll](tasks: Iterable[PromiseFactory[TAll]], options: Options): js.Promise[js.Array[TAll]] = js.native
+  def apply[TAll](tasks: js.Iterable[PromiseFactory[TAll]]): js.Promise[js.Array[TAll]] = js.native
+  def apply[TAll](tasks: js.Iterable[PromiseFactory[TAll]], options: Options): js.Promise[js.Array[TAll]] = js.native
   def apply[Result1, Result2](tasks: js.Tuple2[PromiseFactory[Result1], PromiseFactory[Result2]]): js.Promise[js.Tuple2[Result1, Result2]] = js.native
   def apply[Result1, Result2](tasks: js.Tuple2[PromiseFactory[Result1], PromiseFactory[Result2]], options: Options): js.Promise[js.Tuple2[Result1, Result2]] = js.native
   def apply[Result1, Result2, Result3](tasks: js.Tuple3[PromiseFactory[Result1], PromiseFactory[Result2], PromiseFactory[Result3]]): js.Promise[js.Tuple3[Result1, Result2, Result3]] = js.native

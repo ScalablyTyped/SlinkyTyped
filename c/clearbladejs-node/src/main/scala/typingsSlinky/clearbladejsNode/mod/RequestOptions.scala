@@ -4,43 +4,141 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RequestOptions extends js.Object {
-  var URI: js.UndefOr[String] = js.undefined
-  var authToken: js.UndefOr[String] = js.undefined
-  var body: js.UndefOr[String] = js.undefined
-  var endpoint: js.UndefOr[String] = js.undefined
-  var method: js.UndefOr[String] = js.undefined
-  var qs: js.UndefOr[String] = js.undefined
-  var systemKey: String
-  var systemSecret: String
-  var useUser: js.UndefOr[Boolean] = js.undefined
-  var user: js.UndefOr[APIUser] = js.undefined
+  var URI: js.UndefOr[String] = js.native
+  var authToken: js.UndefOr[String] = js.native
+  var body: js.UndefOr[String] = js.native
+  var endpoint: js.UndefOr[String] = js.native
+  var method: js.UndefOr[String] = js.native
+  var qs: js.UndefOr[String] = js.native
+  var systemKey: String = js.native
+  var systemSecret: String = js.native
+  var useUser: js.UndefOr[Boolean] = js.native
+  var user: js.UndefOr[APIUser] = js.native
 }
 
 object RequestOptions {
   @scala.inline
-  def apply(
-    systemKey: String,
-    systemSecret: String,
-    URI: String = null,
-    authToken: String = null,
-    body: String = null,
-    endpoint: String = null,
-    method: String = null,
-    qs: String = null,
-    useUser: js.UndefOr[Boolean] = js.undefined,
-    user: APIUser = null
-  ): RequestOptions = {
+  def apply(systemKey: String, systemSecret: String): RequestOptions = {
     val __obj = js.Dynamic.literal(systemKey = systemKey.asInstanceOf[js.Any], systemSecret = systemSecret.asInstanceOf[js.Any])
-    if (URI != null) __obj.updateDynamic("URI")(URI.asInstanceOf[js.Any])
-    if (authToken != null) __obj.updateDynamic("authToken")(authToken.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (qs != null) __obj.updateDynamic("qs")(qs.asInstanceOf[js.Any])
-    if (!js.isUndefined(useUser)) __obj.updateDynamic("useUser")(useUser.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestOptions]
   }
+  @scala.inline
+  implicit class RequestOptionsOps[Self <: RequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSystemKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSystemSecret(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemSecret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withURI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("URI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("URI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseUser(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: APIUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

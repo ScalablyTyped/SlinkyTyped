@@ -18,11 +18,41 @@ trait ListByteMatchSetsResponse extends js.Object {
 
 object ListByteMatchSetsResponse {
   @scala.inline
-  def apply(ByteMatchSets: ByteMatchSetSummaries = null, NextMarker: NextMarker = null): ListByteMatchSetsResponse = {
+  def apply(): ListByteMatchSetsResponse = {
     val __obj = js.Dynamic.literal()
-    if (ByteMatchSets != null) __obj.updateDynamic("ByteMatchSets")(ByteMatchSets.asInstanceOf[js.Any])
-    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListByteMatchSetsResponse]
   }
+  @scala.inline
+  implicit class ListByteMatchSetsResponseOps[Self <: ListByteMatchSetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withByteMatchSets(value: ByteMatchSetSummaries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByteMatchSets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByteMatchSets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByteMatchSets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextMarker(value: NextMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

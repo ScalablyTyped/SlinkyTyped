@@ -16,22 +16,89 @@ trait CaptionSelectorSettings extends js.Object {
 
 object CaptionSelectorSettings {
   @scala.inline
-  def apply(
-    AribSourceSettings: AribSourceSettings = null,
-    DvbSubSourceSettings: DvbSubSourceSettings = null,
-    EmbeddedSourceSettings: EmbeddedSourceSettings = null,
-    Scte20SourceSettings: Scte20SourceSettings = null,
-    Scte27SourceSettings: Scte27SourceSettings = null,
-    TeletextSourceSettings: TeletextSourceSettings = null
-  ): CaptionSelectorSettings = {
+  def apply(): CaptionSelectorSettings = {
     val __obj = js.Dynamic.literal()
-    if (AribSourceSettings != null) __obj.updateDynamic("AribSourceSettings")(AribSourceSettings.asInstanceOf[js.Any])
-    if (DvbSubSourceSettings != null) __obj.updateDynamic("DvbSubSourceSettings")(DvbSubSourceSettings.asInstanceOf[js.Any])
-    if (EmbeddedSourceSettings != null) __obj.updateDynamic("EmbeddedSourceSettings")(EmbeddedSourceSettings.asInstanceOf[js.Any])
-    if (Scte20SourceSettings != null) __obj.updateDynamic("Scte20SourceSettings")(Scte20SourceSettings.asInstanceOf[js.Any])
-    if (Scte27SourceSettings != null) __obj.updateDynamic("Scte27SourceSettings")(Scte27SourceSettings.asInstanceOf[js.Any])
-    if (TeletextSourceSettings != null) __obj.updateDynamic("TeletextSourceSettings")(TeletextSourceSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaptionSelectorSettings]
   }
+  @scala.inline
+  implicit class CaptionSelectorSettingsOps[Self <: CaptionSelectorSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAribSourceSettings(value: AribSourceSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AribSourceSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAribSourceSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AribSourceSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDvbSubSourceSettings(value: DvbSubSourceSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSubSourceSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDvbSubSourceSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSubSourceSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmbeddedSourceSettings(value: EmbeddedSourceSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbeddedSourceSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbeddedSourceSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbeddedSourceSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScte20SourceSettings(value: Scte20SourceSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte20SourceSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScte20SourceSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte20SourceSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScte27SourceSettings(value: Scte27SourceSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte27SourceSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScte27SourceSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte27SourceSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeletextSourceSettings(value: TeletextSourceSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextSourceSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeletextSourceSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextSourceSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

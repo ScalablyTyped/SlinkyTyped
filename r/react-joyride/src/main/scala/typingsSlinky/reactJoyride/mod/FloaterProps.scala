@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FloaterProps extends js.Object {
-  var disableAnimation: js.UndefOr[Boolean] = js.undefined
-  var options: js.UndefOr[GenericObject] = js.undefined
-  var styles: js.UndefOr[GenericObject] = js.undefined
-  var wrapperOptions: js.UndefOr[GenericObject] = js.undefined
+  var disableAnimation: js.UndefOr[Boolean] = js.native
+  var options: js.UndefOr[GenericObject] = js.native
+  var styles: js.UndefOr[GenericObject] = js.native
+  var wrapperOptions: js.UndefOr[GenericObject] = js.native
 }
 
 object FloaterProps {
   @scala.inline
-  def apply(
-    disableAnimation: js.UndefOr[Boolean] = js.undefined,
-    options: GenericObject = null,
-    styles: GenericObject = null,
-    wrapperOptions: GenericObject = null
-  ): FloaterProps = {
+  def apply(): FloaterProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disableAnimation)) __obj.updateDynamic("disableAnimation")(disableAnimation.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (wrapperOptions != null) __obj.updateDynamic("wrapperOptions")(wrapperOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[FloaterProps]
   }
+  @scala.inline
+  implicit class FloaterPropsOps[Self <: FloaterProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisableAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: GenericObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: GenericObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapperOptions(value: GenericObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapperOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

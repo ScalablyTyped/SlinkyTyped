@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.teachingBubbleBaseMod.ITeachingBubbleState
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object teachingBubbleContentBaseMod extends js.Object {
   @js.native
-  class TeachingBubbleContentBase protected () extends BaseComponent[ITeachingBubbleProps, ITeachingBubbleState] {
+  class TeachingBubbleContentBase protected ()
+    extends Component[ITeachingBubbleProps, ITeachingBubbleState, js.Any] {
     def this(props: ITeachingBubbleProps) = this()
     var _onKeyDown: js.Any = js.native
     var rootElement: ReactRef[HTMLDivElement] = js.native

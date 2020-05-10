@@ -13,14 +13,5 @@ class AbortErrorCls protected () extends AbortErrorClass {
   	*/
   def this(message: String) = this()
   def this(message: js.Error) = this()
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
-  /* CompleteClass */
-  @JSName("name")
-  override val name_AbortErrorClass: typingsSlinky.pRetry.pRetryStrings.AbortError = js.native
-  /* CompleteClass */
-  override val originalError: js.Error = js.native
 }
 

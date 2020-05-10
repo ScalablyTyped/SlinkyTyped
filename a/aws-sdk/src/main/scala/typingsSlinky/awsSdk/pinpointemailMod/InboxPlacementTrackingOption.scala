@@ -18,11 +18,41 @@ trait InboxPlacementTrackingOption extends js.Object {
 
 object InboxPlacementTrackingOption {
   @scala.inline
-  def apply(Global: js.UndefOr[Boolean] = js.undefined, TrackedIsps: IspNameList = null): InboxPlacementTrackingOption = {
+  def apply(): InboxPlacementTrackingOption = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Global)) __obj.updateDynamic("Global")(Global.asInstanceOf[js.Any])
-    if (TrackedIsps != null) __obj.updateDynamic("TrackedIsps")(TrackedIsps.asInstanceOf[js.Any])
     __obj.asInstanceOf[InboxPlacementTrackingOption]
   }
+  @scala.inline
+  implicit class InboxPlacementTrackingOptionOps[Self <: InboxPlacementTrackingOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGlobal(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Global")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Global")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackedIsps(value: IspNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrackedIsps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackedIsps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrackedIsps")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

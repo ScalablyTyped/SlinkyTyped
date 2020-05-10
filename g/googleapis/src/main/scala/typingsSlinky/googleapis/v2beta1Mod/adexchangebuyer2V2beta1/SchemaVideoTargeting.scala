@@ -24,11 +24,41 @@ trait SchemaVideoTargeting extends js.Object {
 
 object SchemaVideoTargeting {
   @scala.inline
-  def apply(excludedPositionTypes: js.Array[String] = null, targetedPositionTypes: js.Array[String] = null): SchemaVideoTargeting = {
+  def apply(): SchemaVideoTargeting = {
     val __obj = js.Dynamic.literal()
-    if (excludedPositionTypes != null) __obj.updateDynamic("excludedPositionTypes")(excludedPositionTypes.asInstanceOf[js.Any])
-    if (targetedPositionTypes != null) __obj.updateDynamic("targetedPositionTypes")(targetedPositionTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVideoTargeting]
   }
+  @scala.inline
+  implicit class SchemaVideoTargetingOps[Self <: SchemaVideoTargeting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExcludedPositionTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedPositionTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludedPositionTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedPositionTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetedPositionTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedPositionTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetedPositionTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetedPositionTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,20 +1,33 @@
 package typingsSlinky.mongodb
 
-import typingsSlinky.mongodb.mod.ExtractIdType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait Anon2[TSchema] extends js.Object {
-  var _id: ExtractIdType[TSchema]
+@js.native
+trait Anon2 extends js.Object {
+  var _id: js.Any = js.native
 }
 
 object Anon2 {
   @scala.inline
-  def apply[TSchema](_id: ExtractIdType[TSchema]): Anon2[TSchema] = {
+  def apply(_id: js.Any): Anon2 = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any])
-  
-    __obj.asInstanceOf[Anon2[TSchema]]
+    __obj.asInstanceOf[Anon2]
   }
+  @scala.inline
+  implicit class Anon2Ops[Self <: Anon2] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_id(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.blueprintjsCore.menuItemMod
 
+import org.scalajs.dom.raw.HTMLAnchorElement
 import typingsSlinky.blueprintjsCore.commonMod.AbstractPureComponent2
 import typingsSlinky.react.mod.AnchorHTMLAttributes
-import typingsSlinky.std.HTMLAnchorElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var callbackParams: js.UndefOr[js.Array[_]] = js.undefined
-  var intersectionPercentage: js.UndefOr[Double] = js.undefined
-  var rootMargin: js.UndefOr[String] = js.undefined
-  var scrollDimmer: js.UndefOr[Double] = js.undefined
-  var threshold: js.UndefOr[js.Array[Double]] = js.undefined
-  var unobserve: js.UndefOr[Boolean] = js.undefined
+  var callbackParams: js.UndefOr[js.Array[_]] = js.native
+  var intersectionPercentage: js.UndefOr[Double] = js.native
+  var rootMargin: js.UndefOr[String] = js.native
+  var scrollDimmer: js.UndefOr[Double] = js.native
+  var threshold: js.UndefOr[js.Array[Double]] = js.native
+  var unobserve: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    callbackParams: js.Array[_] = null,
-    intersectionPercentage: Int | Double = null,
-    rootMargin: String = null,
-    scrollDimmer: Int | Double = null,
-    threshold: js.Array[Double] = null,
-    unobserve: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (callbackParams != null) __obj.updateDynamic("callbackParams")(callbackParams.asInstanceOf[js.Any])
-    if (intersectionPercentage != null) __obj.updateDynamic("intersectionPercentage")(intersectionPercentage.asInstanceOf[js.Any])
-    if (rootMargin != null) __obj.updateDynamic("rootMargin")(rootMargin.asInstanceOf[js.Any])
-    if (scrollDimmer != null) __obj.updateDynamic("scrollDimmer")(scrollDimmer.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
-    if (!js.isUndefined(unobserve)) __obj.updateDynamic("unobserve")(unobserve.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallbackParams(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallbackParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntersectionPercentage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersectionPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntersectionPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersectionPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootMargin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollDimmer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollDimmer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollDimmer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollDimmer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnobserve(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unobserve")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnobserve: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unobserve")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

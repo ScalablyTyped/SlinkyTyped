@@ -12,6 +12,6 @@ object request extends js.Object {
     * Creates a HTTP request for making RESTful requests.
     * An object encapsulating the various arguments for this method.
     */
-  def apply[T](args: AnonBody): Request_[T] = js.native
+  def apply(args: AnonBody): Request_[_] = js.native
 }
 

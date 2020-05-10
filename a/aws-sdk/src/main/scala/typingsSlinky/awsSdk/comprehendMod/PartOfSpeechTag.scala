@@ -18,11 +18,41 @@ trait PartOfSpeechTag extends js.Object {
 
 object PartOfSpeechTag {
   @scala.inline
-  def apply(Score: Int | scala.Double = null, Tag: PartOfSpeechTagType = null): PartOfSpeechTag = {
+  def apply(): PartOfSpeechTag = {
     val __obj = js.Dynamic.literal()
-    if (Score != null) __obj.updateDynamic("Score")(Score.asInstanceOf[js.Any])
-    if (Tag != null) __obj.updateDynamic("Tag")(Tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartOfSpeechTag]
   }
+  @scala.inline
+  implicit class PartOfSpeechTagOps[Self <: PartOfSpeechTag] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScore(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Score")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: PartOfSpeechTagType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

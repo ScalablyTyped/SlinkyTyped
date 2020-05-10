@@ -17,20 +17,18 @@ trait StrictCompilerOption extends js.Object
 
 object StrictCompilerOption {
   @scala.inline
-  def alwaysStrict: typingsSlinky.tsutils.tsutilsStrings.alwaysStrict = this.cast("alwaysStrict")
+  def alwaysStrict: typingsSlinky.tsutils.tsutilsStrings.alwaysStrict = "alwaysStrict".asInstanceOf[typingsSlinky.tsutils.tsutilsStrings.alwaysStrict]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def noImplicitAny: typingsSlinky.tsutils.tsutilsStrings.noImplicitAny = "noImplicitAny".asInstanceOf[typingsSlinky.tsutils.tsutilsStrings.noImplicitAny]
   @scala.inline
-  def noImplicitAny: typingsSlinky.tsutils.tsutilsStrings.noImplicitAny = this.cast("noImplicitAny")
+  def noImplicitThis: typingsSlinky.tsutils.tsutilsStrings.noImplicitThis = "noImplicitThis".asInstanceOf[typingsSlinky.tsutils.tsutilsStrings.noImplicitThis]
   @scala.inline
-  def noImplicitThis: typingsSlinky.tsutils.tsutilsStrings.noImplicitThis = this.cast("noImplicitThis")
+  def strictBindCallApply: typingsSlinky.tsutils.tsutilsStrings.strictBindCallApply = "strictBindCallApply".asInstanceOf[typingsSlinky.tsutils.tsutilsStrings.strictBindCallApply]
   @scala.inline
-  def strictBindCallApply: typingsSlinky.tsutils.tsutilsStrings.strictBindCallApply = this.cast("strictBindCallApply")
+  def strictFunctionTypes: typingsSlinky.tsutils.tsutilsStrings.strictFunctionTypes = "strictFunctionTypes".asInstanceOf[typingsSlinky.tsutils.tsutilsStrings.strictFunctionTypes]
   @scala.inline
-  def strictFunctionTypes: typingsSlinky.tsutils.tsutilsStrings.strictFunctionTypes = this.cast("strictFunctionTypes")
+  def strictNullChecks: typingsSlinky.tsutils.tsutilsStrings.strictNullChecks = "strictNullChecks".asInstanceOf[typingsSlinky.tsutils.tsutilsStrings.strictNullChecks]
   @scala.inline
-  def strictNullChecks: typingsSlinky.tsutils.tsutilsStrings.strictNullChecks = this.cast("strictNullChecks")
-  @scala.inline
-  def strictPropertyInitialization: typingsSlinky.tsutils.tsutilsStrings.strictPropertyInitialization = this.cast("strictPropertyInitialization")
+  def strictPropertyInitialization: typingsSlinky.tsutils.tsutilsStrings.strictPropertyInitialization = "strictPropertyInitialization".asInstanceOf[typingsSlinky.tsutils.tsutilsStrings.strictPropertyInitialization]
 }
 

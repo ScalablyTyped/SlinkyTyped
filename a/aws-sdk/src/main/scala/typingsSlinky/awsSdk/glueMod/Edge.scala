@@ -18,11 +18,41 @@ trait Edge extends js.Object {
 
 object Edge {
   @scala.inline
-  def apply(DestinationId: NameString = null, SourceId: NameString = null): Edge = {
+  def apply(): Edge = {
     val __obj = js.Dynamic.literal()
-    if (DestinationId != null) __obj.updateDynamic("DestinationId")(DestinationId.asInstanceOf[js.Any])
-    if (SourceId != null) __obj.updateDynamic("SourceId")(SourceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Edge]
   }
+  @scala.inline
+  implicit class EdgeOps[Self <: Edge] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationId(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceId(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,28 +21,26 @@ trait AttributeType extends js.Object
 
 object AttributeType {
   @scala.inline
-  def array: typingsSlinky.waterline.waterlineStrings.array = this.cast("array")
+  def array: typingsSlinky.waterline.waterlineStrings.array = "array".asInstanceOf[typingsSlinky.waterline.waterlineStrings.array]
   @scala.inline
-  def binary: typingsSlinky.waterline.waterlineStrings.binary = this.cast("binary")
+  def binary: typingsSlinky.waterline.waterlineStrings.binary = "binary".asInstanceOf[typingsSlinky.waterline.waterlineStrings.binary]
   @scala.inline
-  def boolean: typingsSlinky.waterline.waterlineStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.waterline.waterlineStrings.boolean = "boolean".asInstanceOf[typingsSlinky.waterline.waterlineStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.waterline.waterlineStrings.date = "date".asInstanceOf[typingsSlinky.waterline.waterlineStrings.date]
   @scala.inline
-  def date: typingsSlinky.waterline.waterlineStrings.date = this.cast("date")
+  def datetime: typingsSlinky.waterline.waterlineStrings.datetime = "datetime".asInstanceOf[typingsSlinky.waterline.waterlineStrings.datetime]
   @scala.inline
-  def datetime: typingsSlinky.waterline.waterlineStrings.datetime = this.cast("datetime")
+  def float: typingsSlinky.waterline.waterlineStrings.float = "float".asInstanceOf[typingsSlinky.waterline.waterlineStrings.float]
   @scala.inline
-  def float: typingsSlinky.waterline.waterlineStrings.float = this.cast("float")
+  def integer: typingsSlinky.waterline.waterlineStrings.integer = "integer".asInstanceOf[typingsSlinky.waterline.waterlineStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.waterline.waterlineStrings.integer = this.cast("integer")
+  def json: typingsSlinky.waterline.waterlineStrings.json = "json".asInstanceOf[typingsSlinky.waterline.waterlineStrings.json]
   @scala.inline
-  def json: typingsSlinky.waterline.waterlineStrings.json = this.cast("json")
+  def string: typingsSlinky.waterline.waterlineStrings.string = "string".asInstanceOf[typingsSlinky.waterline.waterlineStrings.string]
   @scala.inline
-  def string: typingsSlinky.waterline.waterlineStrings.string = this.cast("string")
+  def text: typingsSlinky.waterline.waterlineStrings.text = "text".asInstanceOf[typingsSlinky.waterline.waterlineStrings.text]
   @scala.inline
-  def text: typingsSlinky.waterline.waterlineStrings.text = this.cast("text")
-  @scala.inline
-  def time: typingsSlinky.waterline.waterlineStrings.time = this.cast("time")
+  def time: typingsSlinky.waterline.waterlineStrings.time = "time".asInstanceOf[typingsSlinky.waterline.waterlineStrings.time]
 }
 

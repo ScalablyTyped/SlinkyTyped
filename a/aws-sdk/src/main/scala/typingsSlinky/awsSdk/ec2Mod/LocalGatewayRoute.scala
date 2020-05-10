@@ -13,11 +13,11 @@ trait LocalGatewayRoute extends js.Object {
   /**
     * The ID of the local gateway route table.
     */
-  var LocalGatewayRouteTableId: js.UndefOr[String] = js.native
+  var LocalGatewayRouteTableId: js.UndefOr[LocalGatewayRoutetableId] = js.native
   /**
     * The ID of the virtual interface group.
     */
-  var LocalGatewayVirtualInterfaceGroupId: js.UndefOr[String] = js.native
+  var LocalGatewayVirtualInterfaceGroupId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.LocalGatewayVirtualInterfaceGroupId] = js.native
   /**
     * The state of the route.
     */
@@ -30,20 +30,77 @@ trait LocalGatewayRoute extends js.Object {
 
 object LocalGatewayRoute {
   @scala.inline
-  def apply(
-    DestinationCidrBlock: String = null,
-    LocalGatewayRouteTableId: String = null,
-    LocalGatewayVirtualInterfaceGroupId: String = null,
-    State: LocalGatewayRouteState = null,
-    Type: LocalGatewayRouteType = null
-  ): LocalGatewayRoute = {
+  def apply(): LocalGatewayRoute = {
     val __obj = js.Dynamic.literal()
-    if (DestinationCidrBlock != null) __obj.updateDynamic("DestinationCidrBlock")(DestinationCidrBlock.asInstanceOf[js.Any])
-    if (LocalGatewayRouteTableId != null) __obj.updateDynamic("LocalGatewayRouteTableId")(LocalGatewayRouteTableId.asInstanceOf[js.Any])
-    if (LocalGatewayVirtualInterfaceGroupId != null) __obj.updateDynamic("LocalGatewayVirtualInterfaceGroupId")(LocalGatewayVirtualInterfaceGroupId.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocalGatewayRoute]
   }
+  @scala.inline
+  implicit class LocalGatewayRouteOps[Self <: LocalGatewayRoute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationCidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationCidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationCidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationCidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalGatewayRouteTableId(value: LocalGatewayRoutetableId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayRouteTableId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalGatewayRouteTableId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayRouteTableId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalGatewayVirtualInterfaceGroupId(value: LocalGatewayVirtualInterfaceGroupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayVirtualInterfaceGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalGatewayVirtualInterfaceGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayVirtualInterfaceGroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: LocalGatewayRouteState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: LocalGatewayRouteType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

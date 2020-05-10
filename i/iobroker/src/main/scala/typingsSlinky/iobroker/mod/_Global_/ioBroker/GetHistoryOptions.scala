@@ -11,54 +11,192 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetHistoryOptions extends js.Object {
-  var ack: js.UndefOr[Boolean] = js.undefined
-  var addID: js.UndefOr[Boolean] = js.undefined
-  var aggregate: js.UndefOr[minmax | min | max | average | total | count | none] = js.undefined
-  var count: js.UndefOr[Double] = js.undefined
-  var end: js.UndefOr[Double] = js.undefined
-  var from: js.UndefOr[Boolean] = js.undefined
-  var ignoreNull: js.UndefOr[Boolean] = js.undefined
-  var instance: js.UndefOr[String] = js.undefined
-  var limit: js.UndefOr[Double] = js.undefined
-  var q: js.UndefOr[Boolean] = js.undefined
-  var sessionId: js.UndefOr[js.Any] = js.undefined
-  var start: js.UndefOr[Double] = js.undefined
-  var step: js.UndefOr[Double] = js.undefined
+  var ack: js.UndefOr[Boolean] = js.native
+  var addID: js.UndefOr[Boolean] = js.native
+  var aggregate: js.UndefOr[minmax | min | max | average | total | count | none] = js.native
+  var count: js.UndefOr[Double] = js.native
+  var end: js.UndefOr[Double] = js.native
+  var from: js.UndefOr[Boolean] = js.native
+  var ignoreNull: js.UndefOr[Boolean] = js.native
+  var instance: js.UndefOr[String] = js.native
+  var limit: js.UndefOr[Double] = js.native
+  var q: js.UndefOr[Boolean] = js.native
+  var sessionId: js.UndefOr[js.Any] = js.native
+  var start: js.UndefOr[Double] = js.native
+  var step: js.UndefOr[Double] = js.native
 }
 
 object GetHistoryOptions {
   @scala.inline
-  def apply(
-    ack: js.UndefOr[Boolean] = js.undefined,
-    addID: js.UndefOr[Boolean] = js.undefined,
-    aggregate: minmax | min | max | average | total | count | none = null,
-    count: Int | Double = null,
-    end: Int | Double = null,
-    from: js.UndefOr[Boolean] = js.undefined,
-    ignoreNull: js.UndefOr[Boolean] = js.undefined,
-    instance: String = null,
-    limit: Int | Double = null,
-    q: js.UndefOr[Boolean] = js.undefined,
-    sessionId: js.Any = null,
-    start: Int | Double = null,
-    step: Int | Double = null
-  ): GetHistoryOptions = {
+  def apply(): GetHistoryOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ack)) __obj.updateDynamic("ack")(ack.asInstanceOf[js.Any])
-    if (!js.isUndefined(addID)) __obj.updateDynamic("addID")(addID.asInstanceOf[js.Any])
-    if (aggregate != null) __obj.updateDynamic("aggregate")(aggregate.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (!js.isUndefined(from)) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreNull)) __obj.updateDynamic("ignoreNull")(ignoreNull.asInstanceOf[js.Any])
-    if (instance != null) __obj.updateDynamic("instance")(instance.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (!js.isUndefined(q)) __obj.updateDynamic("q")(q.asInstanceOf[js.Any])
-    if (sessionId != null) __obj.updateDynamic("sessionId")(sessionId.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetHistoryOptions]
   }
+  @scala.inline
+  implicit class GetHistoryOptionsOps[Self <: GetHistoryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAck(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddID(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAggregate(value: minmax | min | max | average | total | count | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreNull(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreNull")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreNull")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionId(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

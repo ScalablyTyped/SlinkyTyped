@@ -1,15 +1,16 @@
 package typingsSlinky.antdMobileRn.components
 
+import typingsSlinky.antdMobileRn.flexNativeMod.FlexProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Flex
-  extends SharedApply_FlexProps_1736847457[typingsSlinky.antdMobileRn.mod.Flex] {
+object Flex {
   @JSImport("antd-mobile-rn", "Flex")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: FlexProps): SharedBuilder_FlexProps_1633308177[typingsSlinky.antdMobileRn.mod.Flex] = new SharedBuilder_FlexProps_1633308177[typingsSlinky.antdMobileRn.mod.Flex](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Flex.type): SharedBuilder_FlexProps_1633308177[typingsSlinky.antdMobileRn.mod.Flex] = new SharedBuilder_FlexProps_1633308177[typingsSlinky.antdMobileRn.mod.Flex](js.Array(this.component, js.Dictionary.empty))()
 }
 

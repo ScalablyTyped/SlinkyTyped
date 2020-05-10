@@ -1,10 +1,7 @@
 package typingsSlinky.reactFlex.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFlex.mod.ItemProps
 import typingsSlinky.reactFlex.reactFlexStrings.`fit-content`
 import typingsSlinky.reactFlex.reactFlexStrings.`max-content`
@@ -17,49 +14,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Item
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactFlex.mod.Item] {
+object Item {
   @JSImport("react-flex", "Item")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    alignContent: String = null,
-    alignItems: String = null,
-    column: js.UndefOr[Boolean] = js.undefined,
-    display: String = null,
-    flex: Double | String | Boolean = null,
-    flexBasis: Double | none | auto | content | `fit-content` | `min-content` | `max-content` | fit = null,
-    flexGrow: Double | String | Boolean = null,
-    flexShrink: Double | String = null,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    justifyContent: String = null,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    row: js.UndefOr[Boolean] = js.undefined,
-    style: js.Any = null,
-    wrap: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactFlex.mod.Item] = {
-    val __obj = js.Dynamic.literal()
-    if (alignContent != null) __obj.updateDynamic("alignContent")(alignContent.asInstanceOf[js.Any])
-    if (alignItems != null) __obj.updateDynamic("alignItems")(alignItems.asInstanceOf[js.Any])
-    if (!js.isUndefined(column)) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (flex != null) __obj.updateDynamic("flex")(flex.asInstanceOf[js.Any])
-    if (flexBasis != null) __obj.updateDynamic("flexBasis")(flexBasis.asInstanceOf[js.Any])
-    if (flexGrow != null) __obj.updateDynamic("flexGrow")(flexGrow.asInstanceOf[js.Any])
-    if (flexShrink != null) __obj.updateDynamic("flexShrink")(flexShrink.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (justifyContent != null) __obj.updateDynamic("justifyContent")(justifyContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (!js.isUndefined(row)) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactFlex.mod.Item] {
+    @scala.inline
+    def alignContent(value: String): this.type = set("alignContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alignItems(value: String): this.type = set("alignItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def column(value: Boolean): this.type = set("column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def display(value: String): this.type = set("display", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flex(value: Double | String | Boolean): this.type = set("flex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexBasis(value: Double | none | auto | content | `fit-content` | `min-content` | `max-content` | fit): this.type = set("flexBasis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexGrow(value: Double | String | Boolean): this.type = set("flexGrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flexShrink(value: Double | String): this.type = set("flexShrink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def justifyContent(value: String): this.type = set("justifyContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reverse(value: Boolean): this.type = set("reverse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def row(value: Boolean): this.type = set("row", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrap(value: Boolean): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactFlex.mod.Item] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactFlex.mod.Item](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ItemProps
+  
+  def withProps(p: ItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Item.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

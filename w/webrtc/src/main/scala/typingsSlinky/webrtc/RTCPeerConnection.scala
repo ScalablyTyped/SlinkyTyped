@@ -1,5 +1,7 @@
 package typingsSlinky.webrtc
 
+import org.scalajs.dom.experimental.webrtc.RTCIceCandidate
+import org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit
 import org.scalajs.dom.experimental.webrtc.RTCSessionDescription
 import org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit
 import org.scalajs.dom.experimental.webrtc.RTCSignalingState
@@ -7,8 +9,6 @@ import org.scalajs.dom.experimental.webrtc.RTCStatsReport
 import typingsSlinky.std.EventTarget
 import typingsSlinky.std.Event_
 import typingsSlinky.std.RTCAnswerOptions
-import typingsSlinky.std.RTCIceCandidate
-import typingsSlinky.std.RTCIceCandidateInit
 import typingsSlinky.std.RTCPeerConnectionErrorCallback
 import typingsSlinky.std.RTCPeerConnectionState
 import typingsSlinky.std.RTCSessionDescriptionCallback

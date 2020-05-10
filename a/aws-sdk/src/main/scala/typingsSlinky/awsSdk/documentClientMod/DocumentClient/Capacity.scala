@@ -22,16 +22,53 @@ trait Capacity extends js.Object {
 
 object Capacity {
   @scala.inline
-  def apply(
-    CapacityUnits: Int | scala.Double = null,
-    ReadCapacityUnits: Int | scala.Double = null,
-    WriteCapacityUnits: Int | scala.Double = null
-  ): Capacity = {
+  def apply(): Capacity = {
     val __obj = js.Dynamic.literal()
-    if (CapacityUnits != null) __obj.updateDynamic("CapacityUnits")(CapacityUnits.asInstanceOf[js.Any])
-    if (ReadCapacityUnits != null) __obj.updateDynamic("ReadCapacityUnits")(ReadCapacityUnits.asInstanceOf[js.Any])
-    if (WriteCapacityUnits != null) __obj.updateDynamic("WriteCapacityUnits")(WriteCapacityUnits.asInstanceOf[js.Any])
     __obj.asInstanceOf[Capacity]
   }
+  @scala.inline
+  implicit class CapacityOps[Self <: Capacity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCapacityUnits(value: ConsumedCapacityUnits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapacityUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CapacityUnits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadCapacityUnits(value: ConsumedCapacityUnits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadCapacityUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadCapacityUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadCapacityUnits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriteCapacityUnits(value: ConsumedCapacityUnits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteCapacityUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWriteCapacityUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WriteCapacityUnits")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

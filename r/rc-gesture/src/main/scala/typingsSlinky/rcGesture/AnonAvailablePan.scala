@@ -7,25 +7,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAvailablePan extends js.Object {
-  var availablePan: js.UndefOr[Boolean] = js.undefined
-  var direction: js.UndefOr[Double] = js.undefined
-  var moveStatus: js.UndefOr[SingeFingerMoveStatus] = js.undefined
-  var mutliFingerStatus: js.UndefOr[js.Array[MultiFingerStatus]] = js.undefined
-  var pan: js.UndefOr[Boolean] = js.undefined
-  var pinch: js.UndefOr[Boolean] = js.undefined
-  var preTouches: js.Array[Finger]
-  var press: js.UndefOr[Boolean] = js.undefined
-  var rotate: js.UndefOr[Boolean] = js.undefined
-  var rotation: js.UndefOr[Double] = js.undefined
-  var scale: js.UndefOr[Double] = js.undefined
-  var srcEvent: js.Any
-  var startMutliFingerStatus: js.UndefOr[js.Array[MultiFingerStatus]] = js.undefined
-  var startTime: Double
-  var startTouches: js.Array[Finger]
-  var swipe: js.UndefOr[Boolean] = js.undefined
-  var time: Double
-  var touches: js.Array[Finger]
+  var availablePan: js.UndefOr[Boolean] = js.native
+  var direction: js.UndefOr[Double] = js.native
+  var moveStatus: js.UndefOr[SingeFingerMoveStatus] = js.native
+  var mutliFingerStatus: js.UndefOr[js.Array[MultiFingerStatus]] = js.native
+  var pan: js.UndefOr[Boolean] = js.native
+  var pinch: js.UndefOr[Boolean] = js.native
+  var preTouches: js.Array[Finger] = js.native
+  var press: js.UndefOr[Boolean] = js.native
+  var rotate: js.UndefOr[Boolean] = js.native
+  var rotation: js.UndefOr[Double] = js.native
+  var scale: js.UndefOr[Double] = js.native
+  var srcEvent: js.Any = js.native
+  var startMutliFingerStatus: js.UndefOr[js.Array[MultiFingerStatus]] = js.native
+  var startTime: Double = js.native
+  var startTouches: js.Array[Finger] = js.native
+  var swipe: js.UndefOr[Boolean] = js.native
+  var time: Double = js.native
+  var touches: js.Array[Finger] = js.native
 }
 
 object AnonAvailablePan {
@@ -36,34 +37,198 @@ object AnonAvailablePan {
     startTime: Double,
     startTouches: js.Array[Finger],
     time: Double,
-    touches: js.Array[Finger],
-    availablePan: js.UndefOr[Boolean] = js.undefined,
-    direction: Int | Double = null,
-    moveStatus: SingeFingerMoveStatus = null,
-    mutliFingerStatus: js.Array[MultiFingerStatus] = null,
-    pan: js.UndefOr[Boolean] = js.undefined,
-    pinch: js.UndefOr[Boolean] = js.undefined,
-    press: js.UndefOr[Boolean] = js.undefined,
-    rotate: js.UndefOr[Boolean] = js.undefined,
-    rotation: Int | Double = null,
-    scale: Int | Double = null,
-    startMutliFingerStatus: js.Array[MultiFingerStatus] = null,
-    swipe: js.UndefOr[Boolean] = js.undefined
+    touches: js.Array[Finger]
   ): AnonAvailablePan = {
     val __obj = js.Dynamic.literal(preTouches = preTouches.asInstanceOf[js.Any], srcEvent = srcEvent.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any], startTouches = startTouches.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], touches = touches.asInstanceOf[js.Any])
-    if (!js.isUndefined(availablePan)) __obj.updateDynamic("availablePan")(availablePan.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (moveStatus != null) __obj.updateDynamic("moveStatus")(moveStatus.asInstanceOf[js.Any])
-    if (mutliFingerStatus != null) __obj.updateDynamic("mutliFingerStatus")(mutliFingerStatus.asInstanceOf[js.Any])
-    if (!js.isUndefined(pan)) __obj.updateDynamic("pan")(pan.asInstanceOf[js.Any])
-    if (!js.isUndefined(pinch)) __obj.updateDynamic("pinch")(pinch.asInstanceOf[js.Any])
-    if (!js.isUndefined(press)) __obj.updateDynamic("press")(press.asInstanceOf[js.Any])
-    if (!js.isUndefined(rotate)) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (startMutliFingerStatus != null) __obj.updateDynamic("startMutliFingerStatus")(startMutliFingerStatus.asInstanceOf[js.Any])
-    if (!js.isUndefined(swipe)) __obj.updateDynamic("swipe")(swipe.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAvailablePan]
   }
+  @scala.inline
+  implicit class AnonAvailablePanOps[Self <: AnonAvailablePan] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPreTouches(value: js.Array[Finger]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preTouches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSrcEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("srcEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTouches(value: js.Array[Finger]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTouches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTouches(value: js.Array[Finger]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvailablePan(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availablePan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailablePan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availablePan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveStatus(value: SingeFingerMoveStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMutliFingerStatus(value: js.Array[MultiFingerStatus]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutliFingerStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMutliFingerStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mutliFingerStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPan(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPinch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPinch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pinch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPress(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("press")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("press")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartMutliFingerStatus(value: js.Array[MultiFingerStatus]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMutliFingerStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartMutliFingerStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMutliFingerStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwipe(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwipe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipe")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

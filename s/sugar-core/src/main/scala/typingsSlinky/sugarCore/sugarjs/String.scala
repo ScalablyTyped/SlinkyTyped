@@ -44,7 +44,7 @@ object String extends js.Object {
     def localeCompare(that: java.lang.String, locales: js.Array[java.lang.String]): SugarDefaultChainable[Double] = js.native
     def localeCompare(that: java.lang.String, locales: js.Array[java.lang.String], options: CollatorOptions): SugarDefaultChainable[Double] = js.native
     def `match`(regexp: java.lang.String): SugarDefaultChainable[RegExpMatchArray | Null] = js.native
-    def `match`(regexp: typingsSlinky.std.RegExp): SugarDefaultChainable[RegExpMatchArray | Null] = js.native
+    def `match`(regexp: js.RegExp): SugarDefaultChainable[RegExpMatchArray | Null] = js.native
     def normalize(): SugarDefaultChainable[java.lang.String] = js.native
     def normalize(form: java.lang.String): SugarDefaultChainable[java.lang.String] = js.native
     @JSName("normalize")
@@ -61,21 +61,21 @@ object String extends js.Object {
       searchValue: java.lang.String,
       replacer: js.Function2[/* substring */ java.lang.String, /* repeated */ js.Any, java.lang.String]
     ): SugarDefaultChainable[java.lang.String] = js.native
-    def replace(searchValue: typingsSlinky.std.RegExp, replaceValue: java.lang.String): SugarDefaultChainable[java.lang.String] = js.native
+    def replace(searchValue: js.RegExp, replaceValue: java.lang.String): SugarDefaultChainable[java.lang.String] = js.native
     def replace(
-      searchValue: typingsSlinky.std.RegExp,
+      searchValue: js.RegExp,
       replacer: js.Function2[/* substring */ java.lang.String, /* repeated */ js.Any, java.lang.String]
     ): SugarDefaultChainable[java.lang.String] = js.native
     def search(regexp: java.lang.String): SugarDefaultChainable[Double] = js.native
-    def search(regexp: typingsSlinky.std.RegExp): SugarDefaultChainable[Double] = js.native
+    def search(regexp: js.RegExp): SugarDefaultChainable[Double] = js.native
     def slice(): SugarDefaultChainable[java.lang.String] = js.native
     def slice(start: Double): SugarDefaultChainable[java.lang.String] = js.native
     def slice(start: Double, end: Double): SugarDefaultChainable[java.lang.String] = js.native
     def small(): SugarDefaultChainable[java.lang.String] = js.native
     def split(separator: java.lang.String): SugarDefaultChainable[js.Array[java.lang.String]] = js.native
     def split(separator: java.lang.String, limit: Double): SugarDefaultChainable[js.Array[java.lang.String]] = js.native
-    def split(separator: typingsSlinky.std.RegExp): SugarDefaultChainable[js.Array[java.lang.String]] = js.native
-    def split(separator: typingsSlinky.std.RegExp, limit: Double): SugarDefaultChainable[js.Array[java.lang.String]] = js.native
+    def split(separator: js.RegExp): SugarDefaultChainable[js.Array[java.lang.String]] = js.native
+    def split(separator: js.RegExp, limit: Double): SugarDefaultChainable[js.Array[java.lang.String]] = js.native
     def startsWith(searchString: java.lang.String): SugarDefaultChainable[Boolean] = js.native
     def startsWith(searchString: java.lang.String, position: Double): SugarDefaultChainable[Boolean] = js.native
     def strike(): SugarDefaultChainable[java.lang.String] = js.native

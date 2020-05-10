@@ -22,12 +22,53 @@ trait GetIdentityPoolRolesResponse extends js.Object {
 
 object GetIdentityPoolRolesResponse {
   @scala.inline
-  def apply(IdentityPoolId: IdentityPoolId = null, RoleMappings: RoleMappingMap = null, Roles: RolesMap = null): GetIdentityPoolRolesResponse = {
+  def apply(): GetIdentityPoolRolesResponse = {
     val __obj = js.Dynamic.literal()
-    if (IdentityPoolId != null) __obj.updateDynamic("IdentityPoolId")(IdentityPoolId.asInstanceOf[js.Any])
-    if (RoleMappings != null) __obj.updateDynamic("RoleMappings")(RoleMappings.asInstanceOf[js.Any])
-    if (Roles != null) __obj.updateDynamic("Roles")(Roles.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetIdentityPoolRolesResponse]
   }
+  @scala.inline
+  implicit class GetIdentityPoolRolesResponseOps[Self <: GetIdentityPoolRolesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdentityPoolId(value: IdentityPoolId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentityPoolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityPoolId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleMappings(value: RoleMappingMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleMappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoles(value: RolesMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Roles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Roles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

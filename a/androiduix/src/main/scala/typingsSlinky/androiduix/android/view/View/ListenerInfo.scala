@@ -1,7 +1,7 @@
 package typingsSlinky.androiduix.android.view.View
 
-import typingsSlinky.androiduix.java.lang.util.concurrent.CopyOnWriteArrayList
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.lang.util.concurrent.CopyOnWriteArrayList
+import typingsSlinky.androiduix.java_.util.ArrayList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

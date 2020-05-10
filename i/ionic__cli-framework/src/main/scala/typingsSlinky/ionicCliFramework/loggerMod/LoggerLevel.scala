@@ -14,14 +14,12 @@ trait LoggerLevel extends js.Object
 
 object LoggerLevel {
   @scala.inline
-  def DEBUG: typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.DEBUG = this.cast("DEBUG")
+  def DEBUG: typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.DEBUG = "DEBUG".asInstanceOf[typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.DEBUG]
   @scala.inline
-  def ERROR: typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.ERROR = this.cast("ERROR")
+  def ERROR: typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.ERROR = "ERROR".asInstanceOf[typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.ERROR]
   @scala.inline
-  def INFO: typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.INFO = this.cast("INFO")
+  def INFO: typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.INFO = "INFO".asInstanceOf[typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.INFO]
   @scala.inline
-  def WARN: typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.WARN = this.cast("WARN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WARN: typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.WARN = "WARN".asInstanceOf[typingsSlinky.ionicCliFramework.ionicCliFrameworkStrings.WARN]
 }
 

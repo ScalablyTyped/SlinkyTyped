@@ -15,16 +15,14 @@ trait uAngle extends js.Object
 
 object uAngle {
   @scala.inline
-  def arcmin: typingsSlinky.convertUnits.convertUnitsStrings.arcmin = this.cast("arcmin")
+  def arcmin: typingsSlinky.convertUnits.convertUnitsStrings.arcmin = "arcmin".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.arcmin]
   @scala.inline
-  def arcsec: typingsSlinky.convertUnits.convertUnitsStrings.arcsec = this.cast("arcsec")
+  def arcsec: typingsSlinky.convertUnits.convertUnitsStrings.arcsec = "arcsec".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.arcsec]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deg: typingsSlinky.convertUnits.convertUnitsStrings.deg = "deg".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.deg]
   @scala.inline
-  def deg: typingsSlinky.convertUnits.convertUnitsStrings.deg = this.cast("deg")
+  def grad: typingsSlinky.convertUnits.convertUnitsStrings.grad = "grad".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.grad]
   @scala.inline
-  def grad: typingsSlinky.convertUnits.convertUnitsStrings.grad = this.cast("grad")
-  @scala.inline
-  def rad: typingsSlinky.convertUnits.convertUnitsStrings.rad = this.cast("rad")
+  def rad: typingsSlinky.convertUnits.convertUnitsStrings.rad = "rad".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.rad]
 }
 

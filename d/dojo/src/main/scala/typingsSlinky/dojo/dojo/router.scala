@@ -1,6 +1,5 @@
 package typingsSlinky.dojo.dojo
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -105,7 +104,7 @@ object router extends js.Object {
       * @param route A string or regular expression which will be used whenmonitoring hash changes.
       * @param callback When the hash matches a pattern as described in the route,this callback will be executed. It will receive an eventobject that will have several properties:params: Either an array or object of properties pulledfrom the new hasholdPath: The hash in its state before the changenewPath: The new hash being shifted topreventDefault: A method that will stop hash changesfrom being actually applied to the active hash. This onlyworks if the hash change was initiated using router.go,as changes initiated more directly to the location.hashproperty will already be in placestopImmediatePropagation: When called, will stop anyfurther bound callbacks on this particular route frombeing executed. If two distinct routes are bound that aredifferent, but both happen to match the current hash insome way, this will not keep other routes from receivingnotice of the change.
       */
-    def register(route: RegExp, callback: js.Function): js.Any = js.native
+    def register(route: js.RegExp, callback: js.Function): js.Any = js.native
     /**
       * Registers a route to a handling callback, except before
       * any previously registered callbacks
@@ -129,7 +128,7 @@ object router extends js.Object {
       * @param route
       * @param callback
       */
-    def registerBefore(route: RegExp, callback: js.Function): js.Any = js.native
+    def registerBefore(route: js.RegExp, callback: js.Function): js.Any = js.native
     /**
       * This method must be called to activate the router. Until
       * startup is called, no hash changes will trigger route

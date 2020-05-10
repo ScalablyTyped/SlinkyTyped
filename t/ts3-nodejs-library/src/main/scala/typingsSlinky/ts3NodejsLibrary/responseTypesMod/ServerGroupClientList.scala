@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ServerGroupClientList extends js.Object {
-  var cldbid: Double
-  var client_nickname: String
-  var client_unique_identifier: String
+  var cldbid: Double = js.native
+  var client_nickname: String = js.native
+  var client_unique_identifier: String = js.native
 }
 
 object ServerGroupClientList {
   @scala.inline
   def apply(cldbid: Double, client_nickname: String, client_unique_identifier: String): ServerGroupClientList = {
     val __obj = js.Dynamic.literal(cldbid = cldbid.asInstanceOf[js.Any], client_nickname = client_nickname.asInstanceOf[js.Any], client_unique_identifier = client_unique_identifier.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ServerGroupClientList]
   }
+  @scala.inline
+  implicit class ServerGroupClientListOps[Self <: ServerGroupClientList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCldbid(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cldbid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClient_nickname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client_nickname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClient_unique_identifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client_unique_identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

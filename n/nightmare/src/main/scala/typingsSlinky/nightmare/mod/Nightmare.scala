@@ -21,7 +21,6 @@ import typingsSlinky.nightmare.nightmareStrings.resourceRequested
 import typingsSlinky.nightmare.nightmareStrings.timeout
 import typingsSlinky.nightmare.nightmareStrings.urlChanged
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -174,7 +173,7 @@ trait Nightmare extends js.Object {
   @JSName("once")
   def once_urlChanged(event: urlChanged, cb: js.Function1[/* targetUrl */ String, Unit]): Nightmare = js.native
   def path(): String = js.native
-  def pdf(cb: js.Function2[/* err */ Error, /* data */ Buffer, Unit]): Nightmare = js.native
+  def pdf(cb: js.Function2[/* err */ js.Error, /* data */ Buffer, Unit]): Nightmare = js.native
   def pdf(path: String): Nightmare = js.native
   def pdf(path: String, options: js.Object): Nightmare = js.native
   def refresh(): Nightmare = js.native

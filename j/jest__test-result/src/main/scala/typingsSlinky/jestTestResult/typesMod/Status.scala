@@ -16,18 +16,16 @@ trait Status extends js.Object
 
 object Status {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.jestTestResult.jestTestResultStrings.disabled = "disabled".asInstanceOf[typingsSlinky.jestTestResult.jestTestResultStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.jestTestResult.jestTestResultStrings.disabled = this.cast("disabled")
+  def failed: typingsSlinky.jestTestResult.jestTestResultStrings.failed = "failed".asInstanceOf[typingsSlinky.jestTestResult.jestTestResultStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.jestTestResult.jestTestResultStrings.failed = this.cast("failed")
+  def passed: typingsSlinky.jestTestResult.jestTestResultStrings.passed = "passed".asInstanceOf[typingsSlinky.jestTestResult.jestTestResultStrings.passed]
   @scala.inline
-  def passed: typingsSlinky.jestTestResult.jestTestResultStrings.passed = this.cast("passed")
+  def pending: typingsSlinky.jestTestResult.jestTestResultStrings.pending = "pending".asInstanceOf[typingsSlinky.jestTestResult.jestTestResultStrings.pending]
   @scala.inline
-  def pending: typingsSlinky.jestTestResult.jestTestResultStrings.pending = this.cast("pending")
+  def skipped: typingsSlinky.jestTestResult.jestTestResultStrings.skipped = "skipped".asInstanceOf[typingsSlinky.jestTestResult.jestTestResultStrings.skipped]
   @scala.inline
-  def skipped: typingsSlinky.jestTestResult.jestTestResultStrings.skipped = this.cast("skipped")
-  @scala.inline
-  def todo: typingsSlinky.jestTestResult.jestTestResultStrings.todo = this.cast("todo")
+  def todo: typingsSlinky.jestTestResult.jestTestResultStrings.todo = "todo".asInstanceOf[typingsSlinky.jestTestResult.jestTestResultStrings.todo]
 }
 

@@ -10,59 +10,171 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options
   extends /* option */ StringDictionary[js.Any] {
   /**
     * @deprecated Use {request: {agent}} instead. See https://github.com/octokit/request.js#request
     */
-  var agent: js.UndefOr[Agent] = js.undefined
+  var agent: js.UndefOr[Agent] = js.native
   var auth: js.UndefOr[
     String | AnonOn2fa | AnonClientId | (js.Function0[String | js.Promise[String]]) | js.Any
-  ] = js.undefined
-  var authStrategy: js.UndefOr[js.Any] = js.undefined
-  var baseUrl: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var authStrategy: js.UndefOr[js.Any] = js.native
+  var baseUrl: js.UndefOr[String] = js.native
   /**
     * @deprecated Use {userAgent, previews} instead. See https://github.com/octokit/request.js#request
     */
-  var headers: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var log: js.UndefOr[AnonDebug] = js.undefined
-  var previews: js.UndefOr[js.Array[String]] = js.undefined
-  var request: js.UndefOr[AnonAgent] = js.undefined
+  var headers: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var log: js.UndefOr[AnonDebug] = js.native
+  var previews: js.UndefOr[js.Array[String]] = js.native
+  var request: js.UndefOr[AnonAgent] = js.native
   /**
     * @deprecated Use {request: {timeout}} instead. See https://github.com/octokit/request.js#request
     */
-  var timeout: js.UndefOr[Double] = js.undefined
-  var userAgent: js.UndefOr[String] = js.undefined
+  var timeout: js.UndefOr[Double] = js.native
+  var userAgent: js.UndefOr[String] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    StringDictionary: /* option */ StringDictionary[js.Any] = null,
-    agent: Agent = null,
-    auth: String | AnonOn2fa | AnonClientId | (js.Function0[String | js.Promise[String]]) | js.Any = null,
-    authStrategy: js.Any = null,
-    baseUrl: String = null,
-    headers: StringDictionary[js.Any] = null,
-    log: AnonDebug = null,
-    previews: js.Array[String] = null,
-    request: AnonAgent = null,
-    timeout: Int | Double = null,
-    userAgent: String = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (authStrategy != null) __obj.updateDynamic("authStrategy")(authStrategy.asInstanceOf[js.Any])
-    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (log != null) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
-    if (previews != null) __obj.updateDynamic("previews")(previews.asInstanceOf[js.Any])
-    if (request != null) __obj.updateDynamic("request")(request.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (userAgent != null) __obj.updateDynamic("userAgent")(userAgent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgent(value: Agent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthFunction0(value: () => String | js.Promise[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withAuth(value: String | AnonOn2fa | AnonClientId | (js.Function0[String | js.Promise[String]]) | js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthStrategy(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLog(value: AnonDebug): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviews(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previews")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviews: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previews")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequest(value: AnonAgent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserAgent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

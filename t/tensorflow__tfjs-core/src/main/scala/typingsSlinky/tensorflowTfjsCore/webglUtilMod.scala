@@ -42,8 +42,8 @@ object webglUtilMod extends js.Object {
   def createFragmentShader(gl: WebGLRenderingContext, debug: Boolean, fragmentShaderSource: String): WebGLShader = js.native
   def createFramebuffer(gl: WebGLRenderingContext, debug: Boolean): WebGLFramebuffer = js.native
   def createProgram(gl: WebGLRenderingContext, debug: Boolean): WebGLProgram = js.native
-  def createStaticIndexBuffer(gl: WebGLRenderingContext, debug: Boolean, data: scala.scalajs.js.typedarray.Uint16Array): WebGLBuffer = js.native
-  def createStaticVertexBuffer(gl: WebGLRenderingContext, debug: Boolean, data: scala.scalajs.js.typedarray.Float32Array): WebGLBuffer = js.native
+  def createStaticIndexBuffer(gl: WebGLRenderingContext, debug: Boolean, data: js.typedarray.Uint16Array): WebGLBuffer = js.native
+  def createStaticVertexBuffer(gl: WebGLRenderingContext, debug: Boolean, data: js.typedarray.Float32Array): WebGLBuffer = js.native
   def createTexture(gl: WebGLRenderingContext, debug: Boolean): WebGLTexture = js.native
   def createVertexShader(gl: WebGLRenderingContext, debug: Boolean, vertexShaderSource: String): WebGLShader = js.native
   def getBatchDim(shape: js.Array[Double]): Double = js.native

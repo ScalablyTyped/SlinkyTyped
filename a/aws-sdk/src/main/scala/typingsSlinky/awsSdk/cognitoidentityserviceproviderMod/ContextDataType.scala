@@ -30,16 +30,53 @@ trait ContextDataType extends js.Object {
 
 object ContextDataType {
   @scala.inline
-  def apply(
-    HttpHeaders: HttpHeaderList,
-    IpAddress: StringType,
-    ServerName: StringType,
-    ServerPath: StringType,
-    EncodedData: StringType = null
-  ): ContextDataType = {
+  def apply(HttpHeaders: HttpHeaderList, IpAddress: StringType, ServerName: StringType, ServerPath: StringType): ContextDataType = {
     val __obj = js.Dynamic.literal(HttpHeaders = HttpHeaders.asInstanceOf[js.Any], IpAddress = IpAddress.asInstanceOf[js.Any], ServerName = ServerName.asInstanceOf[js.Any], ServerPath = ServerPath.asInstanceOf[js.Any])
-    if (EncodedData != null) __obj.updateDynamic("EncodedData")(EncodedData.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextDataType]
   }
+  @scala.inline
+  implicit class ContextDataTypeOps[Self <: ContextDataType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHttpHeaders(value: HttpHeaderList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIpAddress(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerName(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerPath(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncodedData(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodedData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncodedData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodedData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

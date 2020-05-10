@@ -1,11 +1,9 @@
 package typingsSlinky.reactNativeTabView.components
 
 import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -20,6 +18,7 @@ import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.auto
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.bottom
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.none
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.top
+import typingsSlinky.reactNativeTabView.tabViewMod.Props
 import typingsSlinky.reactNativeTabView.tabViewMod.default
 import typingsSlinky.reactNativeTabView.typesMod.NavigationState
 import typingsSlinky.reactNativeTabView.typesMod.Route
@@ -28,16 +27,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabView
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+object TabView {
   @JSImport("react-native-tab-view/lib/typescript/src/TabView", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T /* <: Route */](
+  @scala.inline
+  class Builder[T <: Route] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]] {
+    @scala.inline
+    def initialLayout(value: AnonHeight): this.type = set("initialLayout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSwipeEnd(value: () => Unit): this.type = set("onSwipeEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSwipeStart(value: () => Unit): this.type = set("onSwipeStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def position(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Animated.Value<number> */ js.Any
+    ): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sceneContainerStyle(value: StyleProp[ViewStyle]): this.type = set("sceneContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sceneContainerStyleNull: this.type = set("sceneContainerStyle", null)
+    @scala.inline
+    def springVelocityScale(value: Double): this.type = set("springVelocityScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def swipeVelocityImpact(value: Double): this.type = set("swipeVelocityImpact", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps[T <: Route](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T <: Route](
     gestureHandlerProps: ComponentProps[Instantiable0[PanGestureHandler]],
     keyboardDismissMode: none | `on-drag` | auto,
+    `lazy`: Boolean,
     lazyPreloadDistance: Double,
     navigationState: NavigationState[T],
     onIndexChange: Double => Unit,
@@ -48,35 +78,11 @@ object TabView
     springConfig: AnonDamping,
     swipeEnabled: Boolean,
     tabBarPosition: top | bottom,
-    timingConfig: AnonDuration,
-    `lazy`: Boolean,
-    initialLayout: AnonHeight = null,
-    onSwipeEnd: () => Unit = null,
-    onSwipeStart: () => Unit = null,
-    position: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Animated.Value<number> */ js.Any = null,
-    removeClippedSubviews: js.UndefOr[Boolean] = js.undefined,
-    sceneContainerStyle: StyleProp[ViewStyle] = null,
-    springVelocityScale: Int | Double = null,
-    style: StyleProp[ViewStyle] = null,
-    swipeVelocityImpact: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any]] = {
-    val __obj = js.Dynamic.literal(gestureHandlerProps = gestureHandlerProps.asInstanceOf[js.Any], keyboardDismissMode = keyboardDismissMode.asInstanceOf[js.Any], lazyPreloadDistance = lazyPreloadDistance.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], onIndexChange = js.Any.fromFunction1(onIndexChange), renderLazyPlaceholder = js.Any.fromFunction1(renderLazyPlaceholder), renderPager = js.Any.fromFunction1(renderPager), renderScene = js.Any.fromFunction1(renderScene), renderTabBar = js.Any.fromFunction1(renderTabBar), springConfig = springConfig.asInstanceOf[js.Any], swipeEnabled = swipeEnabled.asInstanceOf[js.Any], tabBarPosition = tabBarPosition.asInstanceOf[js.Any], timingConfig = timingConfig.asInstanceOf[js.Any])
-    __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (initialLayout != null) __obj.updateDynamic("initialLayout")(initialLayout.asInstanceOf[js.Any])
-    if (onSwipeEnd != null) __obj.updateDynamic("onSwipeEnd")(js.Any.fromFunction0(onSwipeEnd))
-    if (onSwipeStart != null) __obj.updateDynamic("onSwipeStart")(js.Any.fromFunction0(onSwipeStart))
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeClippedSubviews)) __obj.updateDynamic("removeClippedSubviews")(removeClippedSubviews.asInstanceOf[js.Any])
-    if (sceneContainerStyle != null) __obj.updateDynamic("sceneContainerStyle")(sceneContainerStyle.asInstanceOf[js.Any])
-    if (springVelocityScale != null) __obj.updateDynamic("springVelocityScale")(springVelocityScale.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (swipeVelocityImpact != null) __obj.updateDynamic("swipeVelocityImpact")(swipeVelocityImpact.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeTabView.tabViewMod.default[js.Any]]]
+    timingConfig: AnonDuration
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(gestureHandlerProps = gestureHandlerProps.asInstanceOf[js.Any], keyboardDismissMode = keyboardDismissMode.asInstanceOf[js.Any], lazyPreloadDistance = lazyPreloadDistance.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], onIndexChange = js.Any.fromFunction1(onIndexChange), renderLazyPlaceholder = js.Any.fromFunction1(renderLazyPlaceholder), renderPager = js.Any.fromFunction1(renderPager), renderScene = js.Any.fromFunction1(renderScene), renderTabBar = js.Any.fromFunction1(renderTabBar), springConfig = springConfig.asInstanceOf[js.Any], swipeEnabled = swipeEnabled.asInstanceOf[js.Any], tabBarPosition = tabBarPosition.asInstanceOf[js.Any], timingConfig = timingConfig.asInstanceOf[js.Any])
+    __props.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T]]))
   }
-  type Props = typingsSlinky.reactNativeTabView.tabViewMod.Props[js.Any]
 }
 

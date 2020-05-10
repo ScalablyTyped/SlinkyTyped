@@ -78,44 +78,221 @@ trait GetCommandInvocationResult extends js.Object {
 
 object GetCommandInvocationResult {
   @scala.inline
-  def apply(
-    CloudWatchOutputConfig: CloudWatchOutputConfig = null,
-    CommandId: CommandId = null,
-    Comment: Comment = null,
-    DocumentName: DocumentName = null,
-    DocumentVersion: DocumentVersion = null,
-    ExecutionElapsedTime: StringDateTime = null,
-    ExecutionEndDateTime: StringDateTime = null,
-    ExecutionStartDateTime: StringDateTime = null,
-    InstanceId: InstanceId = null,
-    PluginName: CommandPluginName = null,
-    ResponseCode: Int | Double = null,
-    StandardErrorContent: StandardErrorContent = null,
-    StandardErrorUrl: Url = null,
-    StandardOutputContent: StandardOutputContent = null,
-    StandardOutputUrl: Url = null,
-    Status: CommandInvocationStatus = null,
-    StatusDetails: StatusDetails = null
-  ): GetCommandInvocationResult = {
+  def apply(): GetCommandInvocationResult = {
     val __obj = js.Dynamic.literal()
-    if (CloudWatchOutputConfig != null) __obj.updateDynamic("CloudWatchOutputConfig")(CloudWatchOutputConfig.asInstanceOf[js.Any])
-    if (CommandId != null) __obj.updateDynamic("CommandId")(CommandId.asInstanceOf[js.Any])
-    if (Comment != null) __obj.updateDynamic("Comment")(Comment.asInstanceOf[js.Any])
-    if (DocumentName != null) __obj.updateDynamic("DocumentName")(DocumentName.asInstanceOf[js.Any])
-    if (DocumentVersion != null) __obj.updateDynamic("DocumentVersion")(DocumentVersion.asInstanceOf[js.Any])
-    if (ExecutionElapsedTime != null) __obj.updateDynamic("ExecutionElapsedTime")(ExecutionElapsedTime.asInstanceOf[js.Any])
-    if (ExecutionEndDateTime != null) __obj.updateDynamic("ExecutionEndDateTime")(ExecutionEndDateTime.asInstanceOf[js.Any])
-    if (ExecutionStartDateTime != null) __obj.updateDynamic("ExecutionStartDateTime")(ExecutionStartDateTime.asInstanceOf[js.Any])
-    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
-    if (PluginName != null) __obj.updateDynamic("PluginName")(PluginName.asInstanceOf[js.Any])
-    if (ResponseCode != null) __obj.updateDynamic("ResponseCode")(ResponseCode.asInstanceOf[js.Any])
-    if (StandardErrorContent != null) __obj.updateDynamic("StandardErrorContent")(StandardErrorContent.asInstanceOf[js.Any])
-    if (StandardErrorUrl != null) __obj.updateDynamic("StandardErrorUrl")(StandardErrorUrl.asInstanceOf[js.Any])
-    if (StandardOutputContent != null) __obj.updateDynamic("StandardOutputContent")(StandardOutputContent.asInstanceOf[js.Any])
-    if (StandardOutputUrl != null) __obj.updateDynamic("StandardOutputUrl")(StandardOutputUrl.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (StatusDetails != null) __obj.updateDynamic("StatusDetails")(StatusDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCommandInvocationResult]
   }
+  @scala.inline
+  implicit class GetCommandInvocationResultOps[Self <: GetCommandInvocationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudWatchOutputConfig(value: CloudWatchOutputConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchOutputConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudWatchOutputConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchOutputConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommandId(value: CommandId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommandId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommandId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommandId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComment(value: Comment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentName(value: DocumentName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentVersion(value: DocumentVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionElapsedTime(value: StringDateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionElapsedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionElapsedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionElapsedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionEndDateTime(value: StringDateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionEndDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionEndDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionEndDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionStartDateTime(value: StringDateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionStartDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionStartDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionStartDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: InstanceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPluginName(value: CommandPluginName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PluginName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPluginName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PluginName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseCode(value: ResponseCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResponseCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStandardErrorContent(value: StandardErrorContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardErrorContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandardErrorContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardErrorContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStandardErrorUrl(value: Url): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardErrorUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandardErrorUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardErrorUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStandardOutputContent(value: StandardOutputContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardOutputContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandardOutputContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardOutputContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStandardOutputUrl(value: Url): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardOutputUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandardOutputUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardOutputUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: CommandInvocationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusDetails(value: StatusDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

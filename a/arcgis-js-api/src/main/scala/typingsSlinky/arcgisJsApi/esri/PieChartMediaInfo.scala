@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PieChartMediaInfo
   extends JSONSupport
      with MediaInfo
@@ -16,7 +17,7 @@ trait PieChartMediaInfo
     *
     * @default pie-chart
     */
-  val `type`: String
+  val `type`: String = js.native
 }
 
 @JSGlobal("__esri.PieChartMediaInfo")

@@ -17,24 +17,101 @@ trait EndpointS3Settings extends js.Object {
 
 object EndpointS3Settings {
   @scala.inline
-  def apply(
-    bucketFolder: String = null,
-    bucketName: String = null,
-    compressionType: String = null,
-    csvDelimiter: String = null,
-    csvRowDelimiter: String = null,
-    externalTableDefinition: String = null,
-    serviceAccessRoleArn: String = null
-  ): EndpointS3Settings = {
+  def apply(): EndpointS3Settings = {
     val __obj = js.Dynamic.literal()
-    if (bucketFolder != null) __obj.updateDynamic("bucketFolder")(bucketFolder.asInstanceOf[js.Any])
-    if (bucketName != null) __obj.updateDynamic("bucketName")(bucketName.asInstanceOf[js.Any])
-    if (compressionType != null) __obj.updateDynamic("compressionType")(compressionType.asInstanceOf[js.Any])
-    if (csvDelimiter != null) __obj.updateDynamic("csvDelimiter")(csvDelimiter.asInstanceOf[js.Any])
-    if (csvRowDelimiter != null) __obj.updateDynamic("csvRowDelimiter")(csvRowDelimiter.asInstanceOf[js.Any])
-    if (externalTableDefinition != null) __obj.updateDynamic("externalTableDefinition")(externalTableDefinition.asInstanceOf[js.Any])
-    if (serviceAccessRoleArn != null) __obj.updateDynamic("serviceAccessRoleArn")(serviceAccessRoleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointS3Settings]
   }
+  @scala.inline
+  implicit class EndpointS3SettingsOps[Self <: EndpointS3Settings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucketFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketFolder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompressionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompressionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCsvDelimiter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csvDelimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCsvDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csvDelimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCsvRowDelimiter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csvRowDelimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCsvRowDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csvRowDelimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalTableDefinition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalTableDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalTableDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalTableDefinition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAccessRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccessRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAccessRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAccessRoleArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

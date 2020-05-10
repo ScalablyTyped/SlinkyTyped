@@ -1,8 +1,6 @@
 package typingsSlinky.jqueryAjaxfile.Chai_
 
 import typingsSlinky.jqueryAjaxfile.Object
-import typingsSlinky.std.Error
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,17 +77,17 @@ trait Assertion
   def Throw(constructor: js.Function): Assertion = js.native
   def Throw(constructor: js.Function, expected: String): Assertion = js.native
   def Throw(constructor: js.Function, expected: String, message: String): Assertion = js.native
-  def Throw(constructor: js.Function, expected: RegExp): Assertion = js.native
-  def Throw(constructor: js.Function, expected: RegExp, message: String): Assertion = js.native
-  def Throw(constructor: Error): Assertion = js.native
-  def Throw(constructor: Error, expected: String): Assertion = js.native
-  def Throw(constructor: Error, expected: String, message: String): Assertion = js.native
-  def Throw(constructor: Error, expected: RegExp): Assertion = js.native
-  def Throw(constructor: Error, expected: RegExp, message: String): Assertion = js.native
+  def Throw(constructor: js.Function, expected: js.RegExp): Assertion = js.native
+  def Throw(constructor: js.Function, expected: js.RegExp, message: String): Assertion = js.native
+  def Throw(constructor: js.Error): Assertion = js.native
+  def Throw(constructor: js.Error, expected: String): Assertion = js.native
+  def Throw(constructor: js.Error, expected: String, message: String): Assertion = js.native
+  def Throw(constructor: js.Error, expected: js.RegExp): Assertion = js.native
+  def Throw(constructor: js.Error, expected: js.RegExp, message: String): Assertion = js.native
   def Throw(expected: String): Assertion = js.native
   def Throw(expected: String, message: String): Assertion = js.native
-  def Throw(expected: RegExp): Assertion = js.native
-  def Throw(expected: RegExp, message: String): Assertion = js.native
+  def Throw(expected: js.RegExp): Assertion = js.native
+  def Throw(expected: js.RegExp, message: String): Assertion = js.native
   def a(`type`: String): Assertion = js.native
   def a(`type`: String, message: String): Assertion = js.native
   def an(`type`: String): Assertion = js.native
@@ -139,8 +137,8 @@ trait Assertion
   def lengthOf(length: Double, message: String): Assertion = js.native
   def `match`(regexp: String): Assertion = js.native
   def `match`(regexp: String, message: String): Assertion = js.native
-  def `match`(regexp: RegExp): Assertion = js.native
-  def `match`(regexp: RegExp, message: String): Assertion = js.native
+  def `match`(regexp: js.RegExp): Assertion = js.native
+  def `match`(regexp: js.RegExp, message: String): Assertion = js.native
   def members(set: js.Array[_]): Assertion = js.native
   def members(set: js.Array[_], message: String): Assertion = js.native
   def not(`type`: String): Assertion = js.native
@@ -164,32 +162,32 @@ trait Assertion
   def `throw`(constructor: js.Function): Assertion = js.native
   def `throw`(constructor: js.Function, expected: String): Assertion = js.native
   def `throw`(constructor: js.Function, expected: String, message: String): Assertion = js.native
-  def `throw`(constructor: js.Function, expected: RegExp): Assertion = js.native
-  def `throw`(constructor: js.Function, expected: RegExp, message: String): Assertion = js.native
-  def `throw`(constructor: Error): Assertion = js.native
-  def `throw`(constructor: Error, expected: String): Assertion = js.native
-  def `throw`(constructor: Error, expected: String, message: String): Assertion = js.native
-  def `throw`(constructor: Error, expected: RegExp): Assertion = js.native
-  def `throw`(constructor: Error, expected: RegExp, message: String): Assertion = js.native
+  def `throw`(constructor: js.Function, expected: js.RegExp): Assertion = js.native
+  def `throw`(constructor: js.Function, expected: js.RegExp, message: String): Assertion = js.native
+  def `throw`(constructor: js.Error): Assertion = js.native
+  def `throw`(constructor: js.Error, expected: String): Assertion = js.native
+  def `throw`(constructor: js.Error, expected: String, message: String): Assertion = js.native
+  def `throw`(constructor: js.Error, expected: js.RegExp): Assertion = js.native
+  def `throw`(constructor: js.Error, expected: js.RegExp, message: String): Assertion = js.native
   def `throw`(expected: String): Assertion = js.native
   def `throw`(expected: String, message: String): Assertion = js.native
-  def `throw`(expected: RegExp): Assertion = js.native
-  def `throw`(expected: RegExp, message: String): Assertion = js.native
+  def `throw`(expected: js.RegExp): Assertion = js.native
+  def `throw`(expected: js.RegExp, message: String): Assertion = js.native
   def throws(): Assertion = js.native
   def throws(constructor: js.Function): Assertion = js.native
   def throws(constructor: js.Function, expected: String): Assertion = js.native
   def throws(constructor: js.Function, expected: String, message: String): Assertion = js.native
-  def throws(constructor: js.Function, expected: RegExp): Assertion = js.native
-  def throws(constructor: js.Function, expected: RegExp, message: String): Assertion = js.native
-  def throws(constructor: Error): Assertion = js.native
-  def throws(constructor: Error, expected: String): Assertion = js.native
-  def throws(constructor: Error, expected: String, message: String): Assertion = js.native
-  def throws(constructor: Error, expected: RegExp): Assertion = js.native
-  def throws(constructor: Error, expected: RegExp, message: String): Assertion = js.native
+  def throws(constructor: js.Function, expected: js.RegExp): Assertion = js.native
+  def throws(constructor: js.Function, expected: js.RegExp, message: String): Assertion = js.native
+  def throws(constructor: js.Error): Assertion = js.native
+  def throws(constructor: js.Error, expected: String): Assertion = js.native
+  def throws(constructor: js.Error, expected: String, message: String): Assertion = js.native
+  def throws(constructor: js.Error, expected: js.RegExp): Assertion = js.native
+  def throws(constructor: js.Error, expected: js.RegExp, message: String): Assertion = js.native
   def throws(expected: String): Assertion = js.native
   def throws(expected: String, message: String): Assertion = js.native
-  def throws(expected: RegExp): Assertion = js.native
-  def throws(expected: RegExp, message: String): Assertion = js.native
+  def throws(expected: js.RegExp): Assertion = js.native
+  def throws(expected: js.RegExp, message: String): Assertion = js.native
   def `true`(`type`: String): Assertion = js.native
   def `true`(`type`: String, message: String): Assertion = js.native
   def undefined(`type`: String): Assertion = js.native

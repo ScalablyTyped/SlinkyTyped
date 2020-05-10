@@ -1,6 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore.engineMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.tensorflowTfjsCore.AnonFactory
 import typingsSlinky.tensorflowTfjsCore.AnonGrads
 import typingsSlinky.tensorflowTfjsCore.backendMod.DataMover
@@ -107,13 +108,6 @@ class Engine protected ()
   def makeTensorFromDataId(dataId: DataId, shape: js.Array[Double], dtype: DataType): Tensor[Rank] = js.native
   def makeTensorFromDataId(dataId: DataId, shape: js.Array[Double], dtype: DataType, backend: KernelBackend): Tensor[Rank] = js.native
   def memory(): MemoryInfo = js.native
-  /**
-    * To be called by backends whenever they see a dataId that they don't own.
-    * Upon calling this method, the mover will fetch the tensor from another
-    * backend and register it with the current active backend.
-    */
-  /* CompleteClass */
-  override def moveData(backend: KernelBackend, dataId: DataId): Unit = js.native
   def profile(query: js.Function0[TensorContainer]): js.Promise[ProfileInfo] = js.native
   def ready(): js.Promise[Unit] = js.native
   def registerBackend(backendName: String, factory: js.Function0[KernelBackend | js.Promise[KernelBackend]]): Boolean = js.native
@@ -168,7 +162,7 @@ class Engine protected ()
       /* saved */ js.Array[Tensor[Rank]], 
       /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof I ]: (): I[P]}
-    */ typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.Engine with I
+    */ typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.Engine with TopLevel[I]
     ]
   ): T = js.native
   def runKernelFunc[T /* <: Tensor[Rank] | js.Array[Tensor[Rank]] */, I /* <: NamedTensorMap */](
@@ -179,7 +173,7 @@ class Engine protected ()
       /* saved */ js.Array[Tensor[Rank]], 
       /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof I ]: (): I[P]}
-    */ typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.Engine with I
+    */ typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.Engine with TopLevel[I]
     ],
     kernelName: String
   ): T = js.native
@@ -191,7 +185,7 @@ class Engine protected ()
       /* saved */ js.Array[Tensor[Rank]], 
       /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof I ]: (): I[P]}
-    */ typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.Engine with I
+    */ typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.Engine with TopLevel[I]
     ],
     kernelName: String,
     attrs: NamedAttrMap
@@ -204,7 +198,7 @@ class Engine protected ()
       /* saved */ js.Array[Tensor[Rank]], 
       /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof I ]: (): I[P]}
-    */ typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.Engine with I
+    */ typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.Engine with TopLevel[I]
     ],
     kernelName: String,
     attrs: NamedAttrMap,
@@ -218,7 +212,7 @@ class Engine protected ()
       /* saved */ js.Array[Tensor[Rank]], 
       /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof I ]: (): I[P]}
-    */ typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.Engine with I
+    */ typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.Engine with TopLevel[I]
     ],
     kernelName: String,
     attrs: NamedAttrMap,

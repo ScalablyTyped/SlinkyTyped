@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ValidatorOptions extends js.Object {
-  var custom: js.UndefOr[js.Any] = js.undefined
-  var delay: js.UndefOr[Double] = js.undefined
-  var disable: js.UndefOr[Boolean] = js.undefined
-  var feedback: js.UndefOr[js.Any] = js.undefined
-  var focus: js.UndefOr[Boolean] = js.undefined
-  var html: js.UndefOr[Boolean] = js.undefined
+  var custom: js.UndefOr[js.Any] = js.native
+  var delay: js.UndefOr[Double] = js.native
+  var disable: js.UndefOr[Boolean] = js.native
+  var feedback: js.UndefOr[js.Any] = js.native
+  var focus: js.UndefOr[Boolean] = js.native
+  var html: js.UndefOr[Boolean] = js.native
 }
 
 object ValidatorOptions {
   @scala.inline
-  def apply(
-    custom: js.Any = null,
-    delay: Int | Double = null,
-    disable: js.UndefOr[Boolean] = js.undefined,
-    feedback: js.Any = null,
-    focus: js.UndefOr[Boolean] = js.undefined,
-    html: js.UndefOr[Boolean] = js.undefined
-  ): ValidatorOptions = {
+  def apply(): ValidatorOptions = {
     val __obj = js.Dynamic.literal()
-    if (custom != null) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (!js.isUndefined(disable)) __obj.updateDynamic("disable")(disable.asInstanceOf[js.Any])
-    if (feedback != null) __obj.updateDynamic("feedback")(feedback.asInstanceOf[js.Any])
-    if (!js.isUndefined(focus)) __obj.updateDynamic("focus")(focus.asInstanceOf[js.Any])
-    if (!js.isUndefined(html)) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidatorOptions]
   }
+  @scala.inline
+  implicit class ValidatorOptionsOps[Self <: ValidatorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustom(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFeedback(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeedback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtml(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtml: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

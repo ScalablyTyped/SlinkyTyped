@@ -4,75 +4,283 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Order extends js.Object {
-  var availGroupId: js.UndefOr[String] = js.undefined
-  var channelId: js.UndefOr[String] = js.undefined
-  var contentType: js.UndefOr[String] = js.undefined
-  var country: js.UndefOr[String] = js.undefined
-  var customId: js.UndefOr[String] = js.undefined
-  var dvdReleaseDate: js.UndefOr[Date] = js.undefined
-  var estDates: js.UndefOr[DateRange] = js.undefined
-  var events: js.UndefOr[js.Array[StateCompleted]] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var movie: js.UndefOr[String] = js.undefined
-  var originalReleaseDate: js.UndefOr[Date] = js.undefined
-  var priority: js.UndefOr[String] = js.undefined
-  var productionHouse: js.UndefOr[String] = js.undefined
-  var purchaseOrder: js.UndefOr[String] = js.undefined
-  var requirements: js.UndefOr[Requirements] = js.undefined
-  var show: js.UndefOr[ShowDetails] = js.undefined
-  var status: js.UndefOr[String] = js.undefined
-  var videoId: js.UndefOr[String] = js.undefined
-  var vodDates: js.UndefOr[DateRange] = js.undefined
+  var availGroupId: js.UndefOr[String] = js.native
+  var channelId: js.UndefOr[String] = js.native
+  var contentType: js.UndefOr[String] = js.native
+  var country: js.UndefOr[String] = js.native
+  var customId: js.UndefOr[String] = js.native
+  var dvdReleaseDate: js.UndefOr[Date] = js.native
+  var estDates: js.UndefOr[DateRange] = js.native
+  var events: js.UndefOr[js.Array[StateCompleted]] = js.native
+  var id: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var movie: js.UndefOr[String] = js.native
+  var originalReleaseDate: js.UndefOr[Date] = js.native
+  var priority: js.UndefOr[String] = js.native
+  var productionHouse: js.UndefOr[String] = js.native
+  var purchaseOrder: js.UndefOr[String] = js.native
+  var requirements: js.UndefOr[Requirements] = js.native
+  var show: js.UndefOr[ShowDetails] = js.native
+  var status: js.UndefOr[String] = js.native
+  var videoId: js.UndefOr[String] = js.native
+  var vodDates: js.UndefOr[DateRange] = js.native
 }
 
 object Order {
   @scala.inline
-  def apply(
-    availGroupId: String = null,
-    channelId: String = null,
-    contentType: String = null,
-    country: String = null,
-    customId: String = null,
-    dvdReleaseDate: Date = null,
-    estDates: DateRange = null,
-    events: js.Array[StateCompleted] = null,
-    id: String = null,
-    kind: String = null,
-    movie: String = null,
-    originalReleaseDate: Date = null,
-    priority: String = null,
-    productionHouse: String = null,
-    purchaseOrder: String = null,
-    requirements: Requirements = null,
-    show: ShowDetails = null,
-    status: String = null,
-    videoId: String = null,
-    vodDates: DateRange = null
-  ): Order = {
+  def apply(): Order = {
     val __obj = js.Dynamic.literal()
-    if (availGroupId != null) __obj.updateDynamic("availGroupId")(availGroupId.asInstanceOf[js.Any])
-    if (channelId != null) __obj.updateDynamic("channelId")(channelId.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (customId != null) __obj.updateDynamic("customId")(customId.asInstanceOf[js.Any])
-    if (dvdReleaseDate != null) __obj.updateDynamic("dvdReleaseDate")(dvdReleaseDate.asInstanceOf[js.Any])
-    if (estDates != null) __obj.updateDynamic("estDates")(estDates.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (movie != null) __obj.updateDynamic("movie")(movie.asInstanceOf[js.Any])
-    if (originalReleaseDate != null) __obj.updateDynamic("originalReleaseDate")(originalReleaseDate.asInstanceOf[js.Any])
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
-    if (productionHouse != null) __obj.updateDynamic("productionHouse")(productionHouse.asInstanceOf[js.Any])
-    if (purchaseOrder != null) __obj.updateDynamic("purchaseOrder")(purchaseOrder.asInstanceOf[js.Any])
-    if (requirements != null) __obj.updateDynamic("requirements")(requirements.asInstanceOf[js.Any])
-    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (videoId != null) __obj.updateDynamic("videoId")(videoId.asInstanceOf[js.Any])
-    if (vodDates != null) __obj.updateDynamic("vodDates")(vodDates.asInstanceOf[js.Any])
     __obj.asInstanceOf[Order]
   }
+  @scala.inline
+  implicit class OrderOps[Self <: Order] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availGroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannelId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDvdReleaseDate(value: Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dvdReleaseDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDvdReleaseDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dvdReleaseDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstDates(value: DateRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estDates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstDates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estDates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: js.Array[StateCompleted]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMovie(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("movie")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMovie: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("movie")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalReleaseDate(value: Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalReleaseDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalReleaseDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalReleaseDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductionHouse(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productionHouse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductionHouse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productionHouse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPurchaseOrder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPurchaseOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequirements(value: Requirements): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequirements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: ShowDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVodDates(value: DateRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vodDates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVodDates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vodDates")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

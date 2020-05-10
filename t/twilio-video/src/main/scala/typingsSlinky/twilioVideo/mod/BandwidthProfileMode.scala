@@ -13,12 +13,10 @@ trait BandwidthProfileMode extends js.Object
 
 object BandwidthProfileMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def collaboration: typingsSlinky.twilioVideo.twilioVideoStrings.collaboration = "collaboration".asInstanceOf[typingsSlinky.twilioVideo.twilioVideoStrings.collaboration]
   @scala.inline
-  def collaboration: typingsSlinky.twilioVideo.twilioVideoStrings.collaboration = this.cast("collaboration")
+  def grid: typingsSlinky.twilioVideo.twilioVideoStrings.grid = "grid".asInstanceOf[typingsSlinky.twilioVideo.twilioVideoStrings.grid]
   @scala.inline
-  def grid: typingsSlinky.twilioVideo.twilioVideoStrings.grid = this.cast("grid")
-  @scala.inline
-  def presentation: typingsSlinky.twilioVideo.twilioVideoStrings.presentation = this.cast("presentation")
+  def presentation: typingsSlinky.twilioVideo.twilioVideoStrings.presentation = "presentation".asInstanceOf[typingsSlinky.twilioVideo.twilioVideoStrings.presentation]
 }
 

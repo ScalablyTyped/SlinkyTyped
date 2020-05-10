@@ -14,10 +14,29 @@ trait GetInstanceAccessDetailsResult extends js.Object {
 
 object GetInstanceAccessDetailsResult {
   @scala.inline
-  def apply(accessDetails: InstanceAccessDetails = null): GetInstanceAccessDetailsResult = {
+  def apply(): GetInstanceAccessDetailsResult = {
     val __obj = js.Dynamic.literal()
-    if (accessDetails != null) __obj.updateDynamic("accessDetails")(accessDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInstanceAccessDetailsResult]
   }
+  @scala.inline
+  implicit class GetInstanceAccessDetailsResultOps[Self <: GetInstanceAccessDetailsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessDetails(value: InstanceAccessDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessDetails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -20,26 +20,24 @@ trait WritingModeProperty extends js.Object
 
 object WritingModeProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `horizontal-tb`: typingsSlinky.csstype.csstypeStrings.`horizontal-tb` = "horizontal-tb".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`horizontal-tb`]
   @scala.inline
-  def `horizontal-tb`: typingsSlinky.csstype.csstypeStrings.`horizontal-tb` = this.cast("horizontal-tb")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def `sideways-lr`: typingsSlinky.csstype.csstypeStrings.`sideways-lr` = "sideways-lr".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`sideways-lr`]
   @scala.inline
-  def `sideways-lr`: typingsSlinky.csstype.csstypeStrings.`sideways-lr` = this.cast("sideways-lr")
+  def `sideways-rl`: typingsSlinky.csstype.csstypeStrings.`sideways-rl` = "sideways-rl".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`sideways-rl`]
   @scala.inline
-  def `sideways-rl`: typingsSlinky.csstype.csstypeStrings.`sideways-rl` = this.cast("sideways-rl")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
   @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def `vertical-lr`: typingsSlinky.csstype.csstypeStrings.`vertical-lr` = "vertical-lr".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`vertical-lr`]
   @scala.inline
-  def `vertical-lr`: typingsSlinky.csstype.csstypeStrings.`vertical-lr` = this.cast("vertical-lr")
-  @scala.inline
-  def `vertical-rl`: typingsSlinky.csstype.csstypeStrings.`vertical-rl` = this.cast("vertical-rl")
+  def `vertical-rl`: typingsSlinky.csstype.csstypeStrings.`vertical-rl` = "vertical-rl".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`vertical-rl`]
 }
 

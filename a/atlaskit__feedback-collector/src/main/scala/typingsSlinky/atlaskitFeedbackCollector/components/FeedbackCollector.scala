@@ -1,9 +1,7 @@
 package typingsSlinky.atlaskitFeedbackCollector.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.atlaskitFeedbackCollector.mod.FeedbackCollectorProps
 import typingsSlinky.atlaskitFeedbackCollector.mod.FieldType
 import typingsSlinky.atlaskitFeedbackCollector.mod.FieldValueType
@@ -12,70 +10,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FeedbackCollector
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object FeedbackCollector {
   @JSImport("@atlaskit/feedback-collector", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    email: String,
-    embeddableKey: String,
-    name: String,
-    requestTypeId: String,
-    additionalFields: js.Array[FieldType] = null,
-    canBeContactedDefaultValue: FieldValueType = null,
-    canBeContactedFieldId: String = null,
-    customerNameDefaultValue: FieldValueType = null,
-    customerNameFieldId: String = null,
-    descriptionDefaultValue: FieldValueType = null,
-    descriptionFieldId: String = null,
-    emailDefaultValue: FieldValueType = null,
-    emailFieldId: String = null,
-    enrollInResearchDefaultValue: FieldValueType = null,
-    enrollInResearchFieldId: String = null,
-    onClose: () => Unit = null,
-    onSubmit: () => Unit = null,
-    summaryDefaultValue: FieldValueType = null,
-    summaryFieldId: String = null,
-    summaryTruncateLength: Int | Double = null,
-    timeoutOnSubmit: Int | Double = null,
-    typeBugDefaultValue: FieldValueType = null,
-    typeCommentDefaultValue: FieldValueType = null,
-    typeEmptyDefaultValue: FieldValueType = null,
-    typeFieldId: String = null,
-    typeQuestionDefaultValue: FieldValueType = null,
-    typeSuggestionDefaultValue: FieldValueType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(email = email.asInstanceOf[js.Any], embeddableKey = embeddableKey.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], requestTypeId = requestTypeId.asInstanceOf[js.Any])
-    if (additionalFields != null) __obj.updateDynamic("additionalFields")(additionalFields.asInstanceOf[js.Any])
-    if (canBeContactedDefaultValue != null) __obj.updateDynamic("canBeContactedDefaultValue")(canBeContactedDefaultValue.asInstanceOf[js.Any])
-    if (canBeContactedFieldId != null) __obj.updateDynamic("canBeContactedFieldId")(canBeContactedFieldId.asInstanceOf[js.Any])
-    if (customerNameDefaultValue != null) __obj.updateDynamic("customerNameDefaultValue")(customerNameDefaultValue.asInstanceOf[js.Any])
-    if (customerNameFieldId != null) __obj.updateDynamic("customerNameFieldId")(customerNameFieldId.asInstanceOf[js.Any])
-    if (descriptionDefaultValue != null) __obj.updateDynamic("descriptionDefaultValue")(descriptionDefaultValue.asInstanceOf[js.Any])
-    if (descriptionFieldId != null) __obj.updateDynamic("descriptionFieldId")(descriptionFieldId.asInstanceOf[js.Any])
-    if (emailDefaultValue != null) __obj.updateDynamic("emailDefaultValue")(emailDefaultValue.asInstanceOf[js.Any])
-    if (emailFieldId != null) __obj.updateDynamic("emailFieldId")(emailFieldId.asInstanceOf[js.Any])
-    if (enrollInResearchDefaultValue != null) __obj.updateDynamic("enrollInResearchDefaultValue")(enrollInResearchDefaultValue.asInstanceOf[js.Any])
-    if (enrollInResearchFieldId != null) __obj.updateDynamic("enrollInResearchFieldId")(enrollInResearchFieldId.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction0(onSubmit))
-    if (summaryDefaultValue != null) __obj.updateDynamic("summaryDefaultValue")(summaryDefaultValue.asInstanceOf[js.Any])
-    if (summaryFieldId != null) __obj.updateDynamic("summaryFieldId")(summaryFieldId.asInstanceOf[js.Any])
-    if (summaryTruncateLength != null) __obj.updateDynamic("summaryTruncateLength")(summaryTruncateLength.asInstanceOf[js.Any])
-    if (timeoutOnSubmit != null) __obj.updateDynamic("timeoutOnSubmit")(timeoutOnSubmit.asInstanceOf[js.Any])
-    if (typeBugDefaultValue != null) __obj.updateDynamic("typeBugDefaultValue")(typeBugDefaultValue.asInstanceOf[js.Any])
-    if (typeCommentDefaultValue != null) __obj.updateDynamic("typeCommentDefaultValue")(typeCommentDefaultValue.asInstanceOf[js.Any])
-    if (typeEmptyDefaultValue != null) __obj.updateDynamic("typeEmptyDefaultValue")(typeEmptyDefaultValue.asInstanceOf[js.Any])
-    if (typeFieldId != null) __obj.updateDynamic("typeFieldId")(typeFieldId.asInstanceOf[js.Any])
-    if (typeQuestionDefaultValue != null) __obj.updateDynamic("typeQuestionDefaultValue")(typeQuestionDefaultValue.asInstanceOf[js.Any])
-    if (typeSuggestionDefaultValue != null) __obj.updateDynamic("typeSuggestionDefaultValue")(typeSuggestionDefaultValue.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def additionalFields(value: js.Array[FieldType]): this.type = set("additionalFields", value.asInstanceOf[js.Any])
+    @scala.inline
+    def canBeContactedDefaultValue(value: FieldValueType): this.type = set("canBeContactedDefaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def canBeContactedFieldId(value: String): this.type = set("canBeContactedFieldId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customerNameDefaultValue(value: FieldValueType): this.type = set("customerNameDefaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customerNameFieldId(value: String): this.type = set("customerNameFieldId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def descriptionDefaultValue(value: FieldValueType): this.type = set("descriptionDefaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def descriptionFieldId(value: String): this.type = set("descriptionFieldId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emailDefaultValue(value: FieldValueType): this.type = set("emailDefaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emailFieldId(value: String): this.type = set("emailFieldId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enrollInResearchDefaultValue(value: FieldValueType): this.type = set("enrollInResearchDefaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enrollInResearchFieldId(value: String): this.type = set("enrollInResearchFieldId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSubmit(value: () => Unit): this.type = set("onSubmit", js.Any.fromFunction0(value))
+    @scala.inline
+    def summaryDefaultValue(value: FieldValueType): this.type = set("summaryDefaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def summaryFieldId(value: String): this.type = set("summaryFieldId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def summaryTruncateLength(value: Double): this.type = set("summaryTruncateLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timeoutOnSubmit(value: Double): this.type = set("timeoutOnSubmit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typeBugDefaultValue(value: FieldValueType): this.type = set("typeBugDefaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typeCommentDefaultValue(value: FieldValueType): this.type = set("typeCommentDefaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typeEmptyDefaultValue(value: FieldValueType): this.type = set("typeEmptyDefaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typeFieldId(value: String): this.type = set("typeFieldId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typeQuestionDefaultValue(value: FieldValueType): this.type = set("typeQuestionDefaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def typeSuggestionDefaultValue(value: FieldValueType): this.type = set("typeSuggestionDefaultValue", value.asInstanceOf[js.Any])
   }
-  type Props = FeedbackCollectorProps
+  
+  def withProps(p: FeedbackCollectorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(email: String, embeddableKey: String, name: String, requestTypeId: String): Builder = {
+    val __props = js.Dynamic.literal(email = email.asInstanceOf[js.Any], embeddableKey = embeddableKey.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], requestTypeId = requestTypeId.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[FeedbackCollectorProps]))
+  }
 }
 

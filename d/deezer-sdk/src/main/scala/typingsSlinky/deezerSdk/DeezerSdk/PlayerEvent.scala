@@ -31,30 +31,28 @@ trait PlayerEvent extends js.Object
 
 object PlayerEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def current_track: typingsSlinky.deezerSdk.deezerSdkStrings.current_track = "current_track".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.current_track]
   @scala.inline
-  def current_track: typingsSlinky.deezerSdk.deezerSdkStrings.current_track = this.cast("current_track")
+  def mute_changed: typingsSlinky.deezerSdk.deezerSdkStrings.mute_changed = "mute_changed".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.mute_changed]
   @scala.inline
-  def mute_changed: typingsSlinky.deezerSdk.deezerSdkStrings.mute_changed = this.cast("mute_changed")
+  def player_buffering: typingsSlinky.deezerSdk.deezerSdkStrings.player_buffering = "player_buffering".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.player_buffering]
   @scala.inline
-  def player_buffering: typingsSlinky.deezerSdk.deezerSdkStrings.player_buffering = this.cast("player_buffering")
+  def player_loaded: typingsSlinky.deezerSdk.deezerSdkStrings.player_loaded = "player_loaded".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.player_loaded]
   @scala.inline
-  def player_loaded: typingsSlinky.deezerSdk.deezerSdkStrings.player_loaded = this.cast("player_loaded")
+  def player_paused: typingsSlinky.deezerSdk.deezerSdkStrings.player_paused = "player_paused".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.player_paused]
   @scala.inline
-  def player_paused: typingsSlinky.deezerSdk.deezerSdkStrings.player_paused = this.cast("player_paused")
+  def player_play: typingsSlinky.deezerSdk.deezerSdkStrings.player_play = "player_play".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.player_play]
   @scala.inline
-  def player_play: typingsSlinky.deezerSdk.deezerSdkStrings.player_play = this.cast("player_play")
+  def player_position: typingsSlinky.deezerSdk.deezerSdkStrings.player_position = "player_position".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.player_position]
   @scala.inline
-  def player_position: typingsSlinky.deezerSdk.deezerSdkStrings.player_position = this.cast("player_position")
+  def repeat_changed: typingsSlinky.deezerSdk.deezerSdkStrings.repeat_changed = "repeat_changed".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.repeat_changed]
   @scala.inline
-  def repeat_changed: typingsSlinky.deezerSdk.deezerSdkStrings.repeat_changed = this.cast("repeat_changed")
+  def shuffle_changed: typingsSlinky.deezerSdk.deezerSdkStrings.shuffle_changed = "shuffle_changed".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.shuffle_changed]
   @scala.inline
-  def shuffle_changed: typingsSlinky.deezerSdk.deezerSdkStrings.shuffle_changed = this.cast("shuffle_changed")
+  def track_end: typingsSlinky.deezerSdk.deezerSdkStrings.track_end = "track_end".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.track_end]
   @scala.inline
-  def track_end: typingsSlinky.deezerSdk.deezerSdkStrings.track_end = this.cast("track_end")
+  def tracklist_changed: typingsSlinky.deezerSdk.deezerSdkStrings.tracklist_changed = "tracklist_changed".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.tracklist_changed]
   @scala.inline
-  def tracklist_changed: typingsSlinky.deezerSdk.deezerSdkStrings.tracklist_changed = this.cast("tracklist_changed")
-  @scala.inline
-  def volume_changed: typingsSlinky.deezerSdk.deezerSdkStrings.volume_changed = this.cast("volume_changed")
+  def volume_changed: typingsSlinky.deezerSdk.deezerSdkStrings.volume_changed = "volume_changed".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.volume_changed]
 }
 

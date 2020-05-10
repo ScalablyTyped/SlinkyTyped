@@ -8,41 +8,129 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a WebExtension dictionary manifest.json file */
+@js.native
 trait WebExtensionDictionaryManifest extends js.Object {
-  var applications: js.UndefOr[AnonGecko] = js.undefined
-  var author: js.UndefOr[String] = js.undefined
-  var browser_specific_settings: js.UndefOr[AnonEdge] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var dictionaries: StringDictionary[String]
-  var homepage_url: js.UndefOr[String] = js.undefined
-  var manifest_version: Double
-  var name: String
-  var short_name: js.UndefOr[String] = js.undefined
-  var version: String
+  var applications: js.UndefOr[AnonGecko] = js.native
+  var author: js.UndefOr[String] = js.native
+  var browser_specific_settings: js.UndefOr[AnonEdge] = js.native
+  var description: js.UndefOr[String] = js.native
+  var dictionaries: StringDictionary[String] = js.native
+  var homepage_url: js.UndefOr[String] = js.native
+  var manifest_version: Double = js.native
+  var name: String = js.native
+  var short_name: js.UndefOr[String] = js.native
+  var version: String = js.native
 }
 
 object WebExtensionDictionaryManifest {
   @scala.inline
-  def apply(
-    dictionaries: StringDictionary[String],
-    manifest_version: Double,
-    name: String,
-    version: String,
-    applications: AnonGecko = null,
-    author: String = null,
-    browser_specific_settings: AnonEdge = null,
-    description: String = null,
-    homepage_url: String = null,
-    short_name: String = null
-  ): WebExtensionDictionaryManifest = {
+  def apply(dictionaries: StringDictionary[String], manifest_version: Double, name: String, version: String): WebExtensionDictionaryManifest = {
     val __obj = js.Dynamic.literal(dictionaries = dictionaries.asInstanceOf[js.Any], manifest_version = manifest_version.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
-    if (applications != null) __obj.updateDynamic("applications")(applications.asInstanceOf[js.Any])
-    if (author != null) __obj.updateDynamic("author")(author.asInstanceOf[js.Any])
-    if (browser_specific_settings != null) __obj.updateDynamic("browser_specific_settings")(browser_specific_settings.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (homepage_url != null) __obj.updateDynamic("homepage_url")(homepage_url.asInstanceOf[js.Any])
-    if (short_name != null) __obj.updateDynamic("short_name")(short_name.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebExtensionDictionaryManifest]
   }
+  @scala.inline
+  implicit class WebExtensionDictionaryManifestOps[Self <: WebExtensionDictionaryManifest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDictionaries(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManifest_version(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest_version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApplications(value: AnonGecko): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowser_specific_settings(value: AnonEdge): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browser_specific_settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowser_specific_settings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browser_specific_settings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomepage_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homepage_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomepage_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homepage_url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShort_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("short_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShort_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("short_name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

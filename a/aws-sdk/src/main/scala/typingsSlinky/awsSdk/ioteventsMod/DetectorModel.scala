@@ -18,14 +18,41 @@ trait DetectorModel extends js.Object {
 
 object DetectorModel {
   @scala.inline
-  def apply(
-    detectorModelConfiguration: DetectorModelConfiguration = null,
-    detectorModelDefinition: DetectorModelDefinition = null
-  ): DetectorModel = {
+  def apply(): DetectorModel = {
     val __obj = js.Dynamic.literal()
-    if (detectorModelConfiguration != null) __obj.updateDynamic("detectorModelConfiguration")(detectorModelConfiguration.asInstanceOf[js.Any])
-    if (detectorModelDefinition != null) __obj.updateDynamic("detectorModelDefinition")(detectorModelDefinition.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectorModel]
   }
+  @scala.inline
+  implicit class DetectorModelOps[Self <: DetectorModel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetectorModelConfiguration(value: DetectorModelConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectorModelConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetectorModelDefinition(value: DetectorModelDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectorModelDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectorModelDefinition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

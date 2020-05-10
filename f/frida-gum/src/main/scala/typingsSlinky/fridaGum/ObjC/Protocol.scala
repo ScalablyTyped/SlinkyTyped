@@ -14,8 +14,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Protocol protected () extends ObjectWrapper {
   def this(handle: NativePointer) = this()
-  /* CompleteClass */
-  override var handle: NativePointer = js.native
   /**
     * Methods declared by this protocol.
     */

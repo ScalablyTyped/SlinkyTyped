@@ -79,24 +79,101 @@ trait SchemaFieldTransform extends js.Object {
 
 object SchemaFieldTransform {
   @scala.inline
-  def apply(
-    appendMissingElements: SchemaArrayValue = null,
-    fieldPath: String = null,
-    increment: SchemaValue = null,
-    maximum: SchemaValue = null,
-    minimum: SchemaValue = null,
-    removeAllFromArray: SchemaArrayValue = null,
-    setToServerValue: String = null
-  ): SchemaFieldTransform = {
+  def apply(): SchemaFieldTransform = {
     val __obj = js.Dynamic.literal()
-    if (appendMissingElements != null) __obj.updateDynamic("appendMissingElements")(appendMissingElements.asInstanceOf[js.Any])
-    if (fieldPath != null) __obj.updateDynamic("fieldPath")(fieldPath.asInstanceOf[js.Any])
-    if (increment != null) __obj.updateDynamic("increment")(increment.asInstanceOf[js.Any])
-    if (maximum != null) __obj.updateDynamic("maximum")(maximum.asInstanceOf[js.Any])
-    if (minimum != null) __obj.updateDynamic("minimum")(minimum.asInstanceOf[js.Any])
-    if (removeAllFromArray != null) __obj.updateDynamic("removeAllFromArray")(removeAllFromArray.asInstanceOf[js.Any])
-    if (setToServerValue != null) __obj.updateDynamic("setToServerValue")(setToServerValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFieldTransform]
   }
+  @scala.inline
+  implicit class SchemaFieldTransformOps[Self <: SchemaFieldTransform] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppendMissingElements(value: SchemaArrayValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendMissingElements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppendMissingElements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendMissingElements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncrement(value: SchemaValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncrement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximum(value: SchemaValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimum(value: SchemaValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveAllFromArray(value: SchemaArrayValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAllFromArray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveAllFromArray: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAllFromArray")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetToServerValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setToServerValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetToServerValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setToServerValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

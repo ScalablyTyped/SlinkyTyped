@@ -2416,7 +2416,7 @@ object cypressStrings {
   @scala.inline
   def hook: hook = "hook".asInstanceOf[hook]
   @scala.inline
-  def `hook end`: `hook end` = "hook end".asInstanceOf[`hook end`]
+  def `hook end`: `hook end` = ("hook end").asInstanceOf[`hook end`]
   @scala.inline
   def host: host = "host".asInstanceOf[host]
   @scala.inline
@@ -2958,7 +2958,7 @@ object cypressStrings {
   @scala.inline
   def suite: suite = "suite".asInstanceOf[suite]
   @scala.inline
-  def `suite end`: `suite end` = "suite end".asInstanceOf[`suite end`]
+  def `suite end`: `suite end` = ("suite end").asInstanceOf[`suite end`]
   @scala.inline
   def summary: summary = "summary".asInstanceOf[summary]
   @scala.inline
@@ -2988,7 +2988,7 @@ object cypressStrings {
   @scala.inline
   def test: test = "test".asInstanceOf[test]
   @scala.inline
-  def `test end`: `test end` = "test end".asInstanceOf[`test end`]
+  def `test end`: `test end` = ("test end").asInstanceOf[`test end`]
   @scala.inline
   def testColonafterColonrun: testColonafterColonrun = "test:after:run".asInstanceOf[testColonafterColonrun]
   @scala.inline

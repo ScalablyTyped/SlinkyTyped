@@ -1,7 +1,6 @@
 package typingsSlinky.antd
 
 import typingsSlinky.antd.antdBooleans.`false`
-import typingsSlinky.antd.antdNumbers.`10`
 import typingsSlinky.antd.paginationPaginationMod.PaginationConfig
 import typingsSlinky.antd.tableInterfaceMod.TablePaginationConfig
 import scala.scalajs.js
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("antd/lib/table/hooks/usePagination", JSImport.Namespace)
 @js.native
 object usePaginationMod extends js.Object {
-  val DEFAULT_PAGE_SIZE: `10` = js.native
+  val DEFAULT_PAGE_SIZE: /* 10 */ Double = js.native
   def default(
     total: Double,
     pagination: js.UndefOr[scala.Nothing],

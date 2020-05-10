@@ -12,7 +12,7 @@ object sendPacket extends js.Object {
     * @param data The IP packet to be sent to the platform.
     * @param callback Called when the packet is sent or if there is an error.
     */
-  def apply(data: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
-  def apply(data: scala.scalajs.js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
+  def apply(data: js.typedarray.ArrayBuffer): Unit = js.native
+  def apply(data: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
 }
 

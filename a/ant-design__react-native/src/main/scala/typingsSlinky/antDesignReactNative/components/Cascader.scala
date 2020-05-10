@@ -1,9 +1,7 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.cascaderMod.default
 import typingsSlinky.antDesignReactNative.cascaderTypesMod.CascaderDataItem
 import typingsSlinky.antDesignReactNative.cascaderTypesMod.CascaderProps
@@ -14,38 +12,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Cascader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Cascader {
   @JSImport("@ant-design/react-native/lib/picker/cascader", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: cols, disabled */
-  def apply(
-    data: js.Array[CascaderDataItem],
-    defaultValue: CascaderValue = null,
-    indicatorStyle: StyleProp[ViewStyle] = null,
-    onChange: /* value */ CascaderValue => Unit = null,
-    onScrollChange: /* value */ CascaderValue => Unit = null,
-    pickerItemStyle: StyleProp[ViewStyle] = null,
-    rootNativeProps: js.Object = null,
-    style: StyleProp[ViewStyle] = null,
-    value: CascaderValue = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (indicatorStyle != null) __obj.updateDynamic("indicatorStyle")(indicatorStyle.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onScrollChange != null) __obj.updateDynamic("onScrollChange")(js.Any.fromFunction1(onScrollChange))
-    if (pickerItemStyle != null) __obj.updateDynamic("pickerItemStyle")(pickerItemStyle.asInstanceOf[js.Any])
-    if (rootNativeProps != null) __obj.updateDynamic("rootNativeProps")(rootNativeProps.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: CascaderValue): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorStyle(value: StyleProp[ViewStyle]): this.type = set("indicatorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorStyleNull: this.type = set("indicatorStyle", null)
+    @scala.inline
+    def onChange(value: /* value */ CascaderValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onScrollChange(value: /* value */ CascaderValue => Unit): this.type = set("onScrollChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def pickerItemStyle(value: StyleProp[ViewStyle]): this.type = set("pickerItemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pickerItemStyleNull: this.type = set("pickerItemStyle", null)
+    @scala.inline
+    def rootNativeProps(value: js.Object): this.type = set("rootNativeProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def value(value: CascaderValue): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = CascaderProps
+  
+  def withProps(p: CascaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[CascaderDataItem]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CascaderProps]))
+  }
 }
 

@@ -9,7 +9,7 @@ package object libIslotsMod {
   type ExtractShorthand[TUnion] = java.lang.String | scala.Double | scala.Boolean
   type ISlotDefinition[TSlots] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ slot in keyof TSlots ]: react.react.ElementType<@uifabric/foundation.@uifabric/foundation/lib/ISlots.ExtractProps<TSlots[slot]>>}
-    */ typingsSlinky.uifabricFoundation.uifabricFoundationStrings.ISlotDefinition with TSlots
+    */ typingsSlinky.uifabricFoundation.uifabricFoundationStrings.ISlotDefinition with org.scalablytyped.runtime.TopLevel[TSlots]
   type ISlotFactory[TProps /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidProps */, TShorthandProp /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidShorthand */] = js.Function4[
     /* componentProps */ TProps with typingsSlinky.uifabricFoundation.libIslotsMod.IProcessedSlotProps, 
     /* userProps */ typingsSlinky.uifabricFoundation.libIslotsMod.ISlotProp[TProps, TShorthandProp], 
@@ -25,7 +25,7 @@ package object libIslotsMod {
   ]
   type ISlots[TSlots] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ slot in keyof TSlots ]: @uifabric/foundation.@uifabric/foundation/lib/ISlots.ISlot<@uifabric/foundation.@uifabric/foundation/lib/ISlots.ExtractProps<TSlots[slot]>>}
-    */ typingsSlinky.uifabricFoundation.uifabricFoundationStrings.ISlots with TSlots
+    */ typingsSlinky.uifabricFoundation.uifabricFoundationStrings.ISlots with org.scalablytyped.runtime.TopLevel[TSlots]
   type ISlottableComponentType[TProps /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidProps */, TShorthandProp /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidShorthand */] = slinky.core.ReactComponentClass[TProps] with (typingsSlinky.uifabricFoundation.libIslotsMod.ISlotCreator[TProps, TShorthandProp])
   type ISlottableProps[TSlots] = TSlots with typingsSlinky.uifabricFoundation.AnonSlots[TSlots]
   type ISlottableReactType[TProps /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidProps */, TShorthandProp /* <: typingsSlinky.uifabricFoundation.libIslotsMod.ValidShorthand */] = slinky.core.facade.ReactElement with (typingsSlinky.uifabricFoundation.libIslotsMod.ISlotCreator[TProps, TShorthandProp])

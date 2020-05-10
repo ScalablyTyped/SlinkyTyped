@@ -31,48 +31,46 @@ trait StateOverride extends js.Object
 
 object StateOverride {
   @scala.inline
-  def authority: typingsSlinky.whatwgUrl.whatwgUrlStrings.authority = this.cast("authority")
+  def authority: typingsSlinky.whatwgUrl.whatwgUrlStrings.authority = "authority".asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.authority]
   @scala.inline
-  def `cannot-be-a-base-URL path`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`cannot-be-a-base-URL path` = this.cast("cannot-be-a-base-URL path")
+  def `cannot-be-a-base-URL path`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`cannot-be-a-base-URL path` = ("cannot-be-a-base-URL path").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`cannot-be-a-base-URL path`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def file: typingsSlinky.whatwgUrl.whatwgUrlStrings.file = "file".asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.file]
   @scala.inline
-  def file: typingsSlinky.whatwgUrl.whatwgUrlStrings.file = this.cast("file")
+  def `file host`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`file host` = ("file host").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`file host`]
   @scala.inline
-  def `file host`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`file host` = this.cast("file host")
+  def `file slash`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`file slash` = ("file slash").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`file slash`]
   @scala.inline
-  def `file slash`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`file slash` = this.cast("file slash")
+  def fragment: typingsSlinky.whatwgUrl.whatwgUrlStrings.fragment = "fragment".asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.fragment]
   @scala.inline
-  def fragment: typingsSlinky.whatwgUrl.whatwgUrlStrings.fragment = this.cast("fragment")
+  def host: typingsSlinky.whatwgUrl.whatwgUrlStrings.host = "host".asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.host]
   @scala.inline
-  def host: typingsSlinky.whatwgUrl.whatwgUrlStrings.host = this.cast("host")
+  def hostname: typingsSlinky.whatwgUrl.whatwgUrlStrings.hostname = "hostname".asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.hostname]
   @scala.inline
-  def hostname: typingsSlinky.whatwgUrl.whatwgUrlStrings.hostname = this.cast("hostname")
+  def `no scheme`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`no scheme` = ("no scheme").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`no scheme`]
   @scala.inline
-  def `no scheme`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`no scheme` = this.cast("no scheme")
+  def path: typingsSlinky.whatwgUrl.whatwgUrlStrings.path = "path".asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.path]
   @scala.inline
-  def path: typingsSlinky.whatwgUrl.whatwgUrlStrings.path = this.cast("path")
+  def `path or authority`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`path or authority` = ("path or authority").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`path or authority`]
   @scala.inline
-  def `path or authority`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`path or authority` = this.cast("path or authority")
+  def `path start`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`path start` = ("path start").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`path start`]
   @scala.inline
-  def `path start`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`path start` = this.cast("path start")
+  def port: typingsSlinky.whatwgUrl.whatwgUrlStrings.port = "port".asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.port]
   @scala.inline
-  def port: typingsSlinky.whatwgUrl.whatwgUrlStrings.port = this.cast("port")
+  def query: typingsSlinky.whatwgUrl.whatwgUrlStrings.query = "query".asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.query]
   @scala.inline
-  def query: typingsSlinky.whatwgUrl.whatwgUrlStrings.query = this.cast("query")
+  def relative: typingsSlinky.whatwgUrl.whatwgUrlStrings.relative = "relative".asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.relative]
   @scala.inline
-  def relative: typingsSlinky.whatwgUrl.whatwgUrlStrings.relative = this.cast("relative")
+  def `relative slash`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`relative slash` = ("relative slash").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`relative slash`]
   @scala.inline
-  def `relative slash`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`relative slash` = this.cast("relative slash")
+  def scheme: typingsSlinky.whatwgUrl.whatwgUrlStrings.scheme = "scheme".asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.scheme]
   @scala.inline
-  def scheme: typingsSlinky.whatwgUrl.whatwgUrlStrings.scheme = this.cast("scheme")
+  def `scheme start`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`scheme start` = ("scheme start").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`scheme start`]
   @scala.inline
-  def `scheme start`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`scheme start` = this.cast("scheme start")
+  def `special authority ignore slashes`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`special authority ignore slashes` = ("special authority ignore slashes").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`special authority ignore slashes`]
   @scala.inline
-  def `special authority ignore slashes`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`special authority ignore slashes` = this.cast("special authority ignore slashes")
+  def `special authority slashes`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`special authority slashes` = ("special authority slashes").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`special authority slashes`]
   @scala.inline
-  def `special authority slashes`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`special authority slashes` = this.cast("special authority slashes")
-  @scala.inline
-  def `special relative or authority`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`special relative or authority` = this.cast("special relative or authority")
+  def `special relative or authority`: typingsSlinky.whatwgUrl.whatwgUrlStrings.`special relative or authority` = ("special relative or authority").asInstanceOf[typingsSlinky.whatwgUrl.whatwgUrlStrings.`special relative or authority`]
 }
 

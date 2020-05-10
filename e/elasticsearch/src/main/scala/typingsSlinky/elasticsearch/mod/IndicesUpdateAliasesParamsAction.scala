@@ -7,20 +7,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IndicesUpdateAliasesParamsAction extends js.Object {
-  var add: js.UndefOr[AnonAlias] = js.undefined
-  var remove: js.UndefOr[AnonIndices] = js.undefined
-  var remove_index: js.UndefOr[AnonIndexString] = js.undefined
+  var add: js.UndefOr[AnonAlias] = js.native
+  var remove: js.UndefOr[AnonIndices] = js.native
+  var remove_index: js.UndefOr[AnonIndexString] = js.native
 }
 
 object IndicesUpdateAliasesParamsAction {
   @scala.inline
-  def apply(add: AnonAlias = null, remove: AnonIndices = null, remove_index: AnonIndexString = null): IndicesUpdateAliasesParamsAction = {
+  def apply(): IndicesUpdateAliasesParamsAction = {
     val __obj = js.Dynamic.literal()
-    if (add != null) __obj.updateDynamic("add")(add.asInstanceOf[js.Any])
-    if (remove != null) __obj.updateDynamic("remove")(remove.asInstanceOf[js.Any])
-    if (remove_index != null) __obj.updateDynamic("remove_index")(remove_index.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndicesUpdateAliasesParamsAction]
   }
+  @scala.inline
+  implicit class IndicesUpdateAliasesParamsActionOps[Self <: IndicesUpdateAliasesParamsAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: AnonAlias): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemove(value: AnonIndices): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemove_index(value: AnonIndexString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove_index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemove_index: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove_index")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

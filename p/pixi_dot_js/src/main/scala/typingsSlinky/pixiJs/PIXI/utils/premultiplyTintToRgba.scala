@@ -18,8 +18,8 @@ object premultiplyTintToRgba extends js.Object {
     * @param {boolean} [premultiply=true] do premultiply it
     * @returns {Float32Array} vec4 rgba
     */
-  def apply(tint: Double, alpha: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-  def apply(tint: Double, alpha: Double, out: scala.scalajs.js.typedarray.Float32Array): scala.scalajs.js.typedarray.Float32Array = js.native
-  def apply(tint: Double, alpha: Double, out: scala.scalajs.js.typedarray.Float32Array, premultiply: Boolean): scala.scalajs.js.typedarray.Float32Array = js.native
+  def apply(tint: Double, alpha: Double): js.typedarray.Float32Array = js.native
+  def apply(tint: Double, alpha: Double, out: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
+  def apply(tint: Double, alpha: Double, out: js.typedarray.Float32Array, premultiply: Boolean): js.typedarray.Float32Array = js.native
 }
 

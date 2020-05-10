@@ -1,9 +1,8 @@
 package typingsSlinky.formik.errorMessageMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +10,12 @@ import scala.scalajs.js.annotation._
 @JSImport("formik/dist/ErrorMessage", "ErrorMessage")
 @js.native
 class ErrorMessage protected ()
-  extends Component[ErrorMessageProps, ComponentState, js.Any] {
+  extends Component[ErrorMessageProps, js.Object, js.Any] {
   def this(props: ErrorMessageProps) = this()
   def this(props: ErrorMessageProps, context: js.Any) = this()
 }
 
 @JSImport("formik/dist/ErrorMessage", "ErrorMessage")
 @js.native
-object ErrorMessage extends TopLevel[ComponentType[ErrorMessageProps]]
+object ErrorMessage extends TopLevel[ReactComponentClass[ErrorMessageProps]]
 

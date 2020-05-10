@@ -9,6 +9,7 @@ package object normalizationSerializationMod {
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.BatchNormalization, 
     typingsSlinky.tensorflowTfjsLayers.normalizationSerializationMod.BatchNormalizationLayerConfig
   ]
+  /* Inlined @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/layers/normalization_serialization.NormalizationLayerSerialization['class_name'] */
   type NormalizationLayerClassName = typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.BatchNormalization
   type NormalizationLayerSerialization = typingsSlinky.tensorflowTfjsLayers.normalizationSerializationMod.BatchNormalizationLayerSerialization
 }

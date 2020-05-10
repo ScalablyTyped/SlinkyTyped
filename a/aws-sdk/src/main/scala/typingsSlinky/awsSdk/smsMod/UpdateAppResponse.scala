@@ -22,12 +22,53 @@ trait UpdateAppResponse extends js.Object {
 
 object UpdateAppResponse {
   @scala.inline
-  def apply(appSummary: AppSummary = null, serverGroups: ServerGroups = null, tags: Tags = null): UpdateAppResponse = {
+  def apply(): UpdateAppResponse = {
     val __obj = js.Dynamic.literal()
-    if (appSummary != null) __obj.updateDynamic("appSummary")(appSummary.asInstanceOf[js.Any])
-    if (serverGroups != null) __obj.updateDynamic("serverGroups")(serverGroups.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateAppResponse]
   }
+  @scala.inline
+  implicit class UpdateAppResponseOps[Self <: UpdateAppResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppSummary(value: AppSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerGroups(value: ServerGroups): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

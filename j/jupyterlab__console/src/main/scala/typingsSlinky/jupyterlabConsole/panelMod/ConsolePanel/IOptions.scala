@@ -13,47 +13,48 @@ import scala.scalajs.js.annotation._
 /**
   * The initialization options for a console panel.
   */
+@js.native
 trait IOptions extends js.Object {
   /**
     * The base path for a new console.
     */
-  var basePath: js.UndefOr[String] = js.undefined
+  var basePath: js.UndefOr[String] = js.native
   /**
     * The content factory for the panel.
     */
-  var contentFactory: IContentFactory
+  var contentFactory: IContentFactory = js.native
   /**
     * A kernel preference.
     */
-  var kernelPreference: js.UndefOr[IKernelPreference] = js.undefined
+  var kernelPreference: js.UndefOr[IKernelPreference] = js.native
   /**
     * The service manager used by the panel.
     */
-  var manager: IManager
+  var manager: IManager = js.native
   /**
     * The service used to look up mime types.
     */
-  var mimeTypeService: IEditorMimeTypeService
+  var mimeTypeService: IEditorMimeTypeService = js.native
   /**
     * The model factory for the console widget.
     */
-  var modelFactory: js.UndefOr[IModelFactory] = js.undefined
+  var modelFactory: js.UndefOr[IModelFactory] = js.native
   /**
     * The name of the console.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * The path of an existing console.
     */
-  var path: js.UndefOr[String] = js.undefined
+  var path: js.UndefOr[String] = js.native
   /**
     * The rendermime instance used by the panel.
     */
-  var rendermime: IRenderMimeRegistry
+  var rendermime: IRenderMimeRegistry = js.native
   /**
     * A function to call when the kernel is busy.
     */
-  var setBusy: js.UndefOr[js.Function0[IDisposable]] = js.undefined
+  var setBusy: js.UndefOr[js.Function0[IDisposable]] = js.native
 }
 
 object IOptions {
@@ -62,22 +63,114 @@ object IOptions {
     contentFactory: IContentFactory,
     manager: IManager,
     mimeTypeService: IEditorMimeTypeService,
-    rendermime: IRenderMimeRegistry,
-    basePath: String = null,
-    kernelPreference: IKernelPreference = null,
-    modelFactory: IModelFactory = null,
-    name: String = null,
-    path: String = null,
-    setBusy: () => IDisposable = null
+    rendermime: IRenderMimeRegistry
   ): IOptions = {
     val __obj = js.Dynamic.literal(contentFactory = contentFactory.asInstanceOf[js.Any], manager = manager.asInstanceOf[js.Any], mimeTypeService = mimeTypeService.asInstanceOf[js.Any], rendermime = rendermime.asInstanceOf[js.Any])
-    if (basePath != null) __obj.updateDynamic("basePath")(basePath.asInstanceOf[js.Any])
-    if (kernelPreference != null) __obj.updateDynamic("kernelPreference")(kernelPreference.asInstanceOf[js.Any])
-    if (modelFactory != null) __obj.updateDynamic("modelFactory")(modelFactory.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (setBusy != null) __obj.updateDynamic("setBusy")(js.Any.fromFunction0(setBusy))
     __obj.asInstanceOf[IOptions]
   }
+  @scala.inline
+  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentFactory(value: IContentFactory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentFactory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManager(value: IManager): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manager")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMimeTypeService(value: IEditorMimeTypeService): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypeService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRendermime(value: IRenderMimeRegistry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rendermime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBasePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKernelPreference(value: IKernelPreference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelPreference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKernelPreference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelPreference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelFactory(value: IModelFactory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelFactory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelFactory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelFactory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetBusy(value: () => IDisposable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBusy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetBusy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBusy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

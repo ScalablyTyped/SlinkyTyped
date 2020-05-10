@@ -12,10 +12,8 @@ trait Direction extends js.Object
 
 object Direction {
   @scala.inline
-  def backward: typingsSlinky.entriaRelayExperimental.entriaRelayExperimentalStrings.backward = this.cast("backward")
+  def backward: typingsSlinky.entriaRelayExperimental.entriaRelayExperimentalStrings.backward = "backward".asInstanceOf[typingsSlinky.entriaRelayExperimental.entriaRelayExperimentalStrings.backward]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def forward: typingsSlinky.entriaRelayExperimental.entriaRelayExperimentalStrings.forward = this.cast("forward")
+  def forward: typingsSlinky.entriaRelayExperimental.entriaRelayExperimentalStrings.forward = "forward".asInstanceOf[typingsSlinky.entriaRelayExperimental.entriaRelayExperimentalStrings.forward]
 }
 

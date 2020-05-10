@@ -51,20 +51,77 @@ trait SchemaChangePlanRequest extends js.Object {
 
 object SchemaChangePlanRequest {
   @scala.inline
-  def apply(
-    dealCode: String = null,
-    kind: String = null,
-    planName: String = null,
-    purchaseOrderId: String = null,
-    seats: SchemaSeats = null
-  ): SchemaChangePlanRequest = {
+  def apply(): SchemaChangePlanRequest = {
     val __obj = js.Dynamic.literal()
-    if (dealCode != null) __obj.updateDynamic("dealCode")(dealCode.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (planName != null) __obj.updateDynamic("planName")(planName.asInstanceOf[js.Any])
-    if (purchaseOrderId != null) __obj.updateDynamic("purchaseOrderId")(purchaseOrderId.asInstanceOf[js.Any])
-    if (seats != null) __obj.updateDynamic("seats")(seats.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChangePlanRequest]
   }
+  @scala.inline
+  implicit class SchemaChangePlanRequestOps[Self <: SchemaChangePlanRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDealCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dealCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDealCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dealCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlanName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("planName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlanName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("planName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPurchaseOrderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseOrderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPurchaseOrderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purchaseOrderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeats(value: SchemaSeats): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seats")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

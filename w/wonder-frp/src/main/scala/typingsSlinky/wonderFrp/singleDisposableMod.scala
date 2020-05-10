@@ -17,8 +17,6 @@ object singleDisposableMod extends js.Object {
     def this(dispose: IDisposable) = this()
     var _disposable: js.Any = js.native
     var _isDisposed: js.Any = js.native
-    /* CompleteClass */
-    override def dispose(): Unit = js.native
     def setDispose(disposable: IDisposable): Unit = js.native
   }
   

@@ -1,7 +1,5 @@
 package typingsSlinky.textEncodingUtf8.mod.TextEncoding
 
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.ArrayBufferView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,9 +10,9 @@ trait TextDecoder extends js.Object {
   var fatal: Boolean = js.native
   var ignoreBOM: Boolean = js.native
   def decode(): String = js.native
-  def decode(input: ArrayBuffer): String = js.native
-  def decode(input: ArrayBufferView): String = js.native
-  def decode(input: ArrayBufferView, options: TextDecodeOptions): String = js.native
-  def decode(input: ArrayBuffer, options: TextDecodeOptions): String = js.native
+  def decode(input: js.typedarray.ArrayBuffer): String = js.native
+  def decode(input: js.typedarray.ArrayBufferView): String = js.native
+  def decode(input: js.typedarray.ArrayBufferView, options: TextDecodeOptions): String = js.native
+  def decode(input: js.typedarray.ArrayBuffer, options: TextDecodeOptions): String = js.native
 }
 

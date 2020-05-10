@@ -14,14 +14,12 @@ trait SameSitePolicy extends js.Object
 
 object SameSitePolicy {
   @scala.inline
-  def Lax: typingsSlinky.hapiHapi.hapiHapiStrings.Lax = this.cast("Lax")
+  def Lax: typingsSlinky.hapiHapi.hapiHapiStrings.Lax = "Lax".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.Lax]
   @scala.inline
-  def None: typingsSlinky.hapiHapi.hapiHapiStrings.None = this.cast("None")
+  def None: typingsSlinky.hapiHapi.hapiHapiStrings.None = "None".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.None]
   @scala.inline
-  def Strict: typingsSlinky.hapiHapi.hapiHapiStrings.Strict = this.cast("Strict")
+  def Strict: typingsSlinky.hapiHapi.hapiHapiStrings.Strict = "Strict".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.Strict]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def `false`: typingsSlinky.hapiHapi.hapiHapiBooleans.`false` = this.cast(false)
+  def `false`: typingsSlinky.hapiHapi.hapiHapiBooleans.`false` = false.asInstanceOf[typingsSlinky.hapiHapi.hapiHapiBooleans.`false`]
 }
 

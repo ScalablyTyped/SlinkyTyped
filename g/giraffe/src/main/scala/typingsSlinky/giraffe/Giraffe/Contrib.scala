@@ -27,8 +27,6 @@ object Contrib extends js.Object {
   class Controller ()
     extends EventsMixin
        with GiraffeObject {
-    /* CompleteClass */
-    override var app: App_ = js.native
     /**
       * Faulty overgeneralization of Backbone.Events.on, for historical
       * reasons.

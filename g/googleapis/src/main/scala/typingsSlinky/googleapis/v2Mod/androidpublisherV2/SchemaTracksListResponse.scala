@@ -16,11 +16,41 @@ trait SchemaTracksListResponse extends js.Object {
 
 object SchemaTracksListResponse {
   @scala.inline
-  def apply(kind: String = null, tracks: js.Array[SchemaTrack] = null): SchemaTracksListResponse = {
+  def apply(): SchemaTracksListResponse = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (tracks != null) __obj.updateDynamic("tracks")(tracks.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTracksListResponse]
   }
+  @scala.inline
+  implicit class SchemaTracksListResponseOps[Self <: SchemaTracksListResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTracks(value: js.Array[SchemaTrack]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTracks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tracks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

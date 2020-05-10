@@ -18,10 +18,29 @@ trait SchemaGoogleApiServiceusageV1OperationMetadata extends js.Object {
 
 object SchemaGoogleApiServiceusageV1OperationMetadata {
   @scala.inline
-  def apply(resourceNames: js.Array[String] = null): SchemaGoogleApiServiceusageV1OperationMetadata = {
+  def apply(): SchemaGoogleApiServiceusageV1OperationMetadata = {
     val __obj = js.Dynamic.literal()
-    if (resourceNames != null) __obj.updateDynamic("resourceNames")(resourceNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleApiServiceusageV1OperationMetadata]
   }
+  @scala.inline
+  implicit class SchemaGoogleApiServiceusageV1OperationMetadataOps[Self <: SchemaGoogleApiServiceusageV1OperationMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

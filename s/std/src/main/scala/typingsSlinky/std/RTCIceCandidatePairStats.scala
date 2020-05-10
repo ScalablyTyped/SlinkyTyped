@@ -4,58 +4,193 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RTCIceCandidatePairStats extends RTCStats {
-  var availableIncomingBitrate: js.UndefOr[Double] = js.undefined
-  var availableOutgoingBitrate: js.UndefOr[Double] = js.undefined
-  var bytesReceived: js.UndefOr[Double] = js.undefined
-  var bytesSent: js.UndefOr[Double] = js.undefined
-  var localCandidateId: js.UndefOr[java.lang.String] = js.undefined
-  var nominated: js.UndefOr[scala.Boolean] = js.undefined
-  var priority: js.UndefOr[Double] = js.undefined
-  var readable: js.UndefOr[scala.Boolean] = js.undefined
-  var remoteCandidateId: js.UndefOr[java.lang.String] = js.undefined
-  var roundTripTime: js.UndefOr[Double] = js.undefined
-  var state: js.UndefOr[RTCStatsIceCandidatePairState] = js.undefined
-  var transportId: js.UndefOr[java.lang.String] = js.undefined
-  var writable: js.UndefOr[scala.Boolean] = js.undefined
+  var availableIncomingBitrate: js.UndefOr[Double] = js.native
+  var availableOutgoingBitrate: js.UndefOr[Double] = js.native
+  var bytesReceived: js.UndefOr[Double] = js.native
+  var bytesSent: js.UndefOr[Double] = js.native
+  var localCandidateId: js.UndefOr[java.lang.String] = js.native
+  var nominated: js.UndefOr[scala.Boolean] = js.native
+  var priority: js.UndefOr[Double] = js.native
+  var readable: js.UndefOr[scala.Boolean] = js.native
+  var remoteCandidateId: js.UndefOr[java.lang.String] = js.native
+  var roundTripTime: js.UndefOr[Double] = js.native
+  var state: js.UndefOr[RTCStatsIceCandidatePairState] = js.native
+  var transportId: js.UndefOr[java.lang.String] = js.native
+  var writable: js.UndefOr[scala.Boolean] = js.native
 }
 
 object RTCIceCandidatePairStats {
   @scala.inline
-  def apply(
-    id: java.lang.String,
-    timestamp: Double,
-    `type`: org.scalajs.dom.experimental.webrtc.RTCStatsType,
-    availableIncomingBitrate: Int | Double = null,
-    availableOutgoingBitrate: Int | Double = null,
-    bytesReceived: Int | Double = null,
-    bytesSent: Int | Double = null,
-    localCandidateId: java.lang.String = null,
-    nominated: js.UndefOr[scala.Boolean] = js.undefined,
-    priority: Int | Double = null,
-    readable: js.UndefOr[scala.Boolean] = js.undefined,
-    remoteCandidateId: java.lang.String = null,
-    roundTripTime: Int | Double = null,
-    state: RTCStatsIceCandidatePairState = null,
-    transportId: java.lang.String = null,
-    writable: js.UndefOr[scala.Boolean] = js.undefined
-  ): RTCIceCandidatePairStats = {
+  def apply(id: java.lang.String, timestamp: Double, `type`: org.scalajs.dom.experimental.webrtc.RTCStatsType): RTCIceCandidatePairStats = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (availableIncomingBitrate != null) __obj.updateDynamic("availableIncomingBitrate")(availableIncomingBitrate.asInstanceOf[js.Any])
-    if (availableOutgoingBitrate != null) __obj.updateDynamic("availableOutgoingBitrate")(availableOutgoingBitrate.asInstanceOf[js.Any])
-    if (bytesReceived != null) __obj.updateDynamic("bytesReceived")(bytesReceived.asInstanceOf[js.Any])
-    if (bytesSent != null) __obj.updateDynamic("bytesSent")(bytesSent.asInstanceOf[js.Any])
-    if (localCandidateId != null) __obj.updateDynamic("localCandidateId")(localCandidateId.asInstanceOf[js.Any])
-    if (!js.isUndefined(nominated)) __obj.updateDynamic("nominated")(nominated.asInstanceOf[js.Any])
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
-    if (!js.isUndefined(readable)) __obj.updateDynamic("readable")(readable.asInstanceOf[js.Any])
-    if (remoteCandidateId != null) __obj.updateDynamic("remoteCandidateId")(remoteCandidateId.asInstanceOf[js.Any])
-    if (roundTripTime != null) __obj.updateDynamic("roundTripTime")(roundTripTime.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (transportId != null) __obj.updateDynamic("transportId")(transportId.asInstanceOf[js.Any])
-    if (!js.isUndefined(writable)) __obj.updateDynamic("writable")(writable.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCIceCandidatePairStats]
   }
+  @scala.inline
+  implicit class RTCIceCandidatePairStatsOps[Self <: RTCIceCandidatePairStats] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailableIncomingBitrate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableIncomingBitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailableIncomingBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableIncomingBitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailableOutgoingBitrate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableOutgoingBitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailableOutgoingBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableOutgoingBitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesReceived(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesReceived")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesReceived: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesReceived")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesSent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesSent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesSent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesSent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalCandidateId(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localCandidateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalCandidateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localCandidateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNominated(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nominated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNominated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nominated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadable(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoteCandidateId(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteCandidateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoteCandidateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteCandidateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoundTripTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundTripTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoundTripTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundTripTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: RTCStatsIceCandidatePairState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransportId(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transportId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransportId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transportId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWritable(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWritable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,23 +13,50 @@ trait AcceptVpcEndpointConnectionsRequest extends js.Object {
   /**
     * The ID of the VPC endpoint service.
     */
-  var ServiceId: typingsSlinky.awsSdk.ec2Mod.ServiceId = js.native
+  var ServiceId: VpcEndpointServiceId = js.native
   /**
     * The IDs of one or more interface VPC endpoints.
     */
-  var VpcEndpointIds: ValueStringList = js.native
+  var VpcEndpointIds: VpcEndpointIdList = js.native
 }
 
 object AcceptVpcEndpointConnectionsRequest {
   @scala.inline
-  def apply(
-    ServiceId: ServiceId,
-    VpcEndpointIds: ValueStringList,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined
-  ): AcceptVpcEndpointConnectionsRequest = {
+  def apply(ServiceId: VpcEndpointServiceId, VpcEndpointIds: VpcEndpointIdList): AcceptVpcEndpointConnectionsRequest = {
     val __obj = js.Dynamic.literal(ServiceId = ServiceId.asInstanceOf[js.Any], VpcEndpointIds = VpcEndpointIds.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
     __obj.asInstanceOf[AcceptVpcEndpointConnectionsRequest]
   }
+  @scala.inline
+  implicit class AcceptVpcEndpointConnectionsRequestOps[Self <: AcceptVpcEndpointConnectionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceId(value: VpcEndpointServiceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpcEndpointIds(value: VpcEndpointIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

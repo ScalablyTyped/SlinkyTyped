@@ -1,51 +1,63 @@
 package typingsSlinky.antDesignProLayout.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
 import typingsSlinky.antDesignProLayout.pageHeaderWrapperMod.PageHeaderWrapperProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PageHeaderWrapper
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object PageHeaderWrapper {
   @JSImport("@ant-design/pro-layout/lib/PageHeaderWrapper", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    content: TagMod[Any] = null,
-    extraContent: TagMod[Any] = null,
-    onTabChange: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps * / any['onChange'] */ js.Any = null,
-    pageHeaderRender: /* props */ PageHeaderWrapperProps => TagMod[Any] = null,
-    tabActiveKey: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps * / any['activeKey'] */ js.Any = null,
-    tabBarExtraContent: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps * / any['tabBarExtraContent'] */ js.Any = null,
-    tabList: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabPaneProps */ _
-    ] = null,
-    tabProps: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps */ js.Any = null,
-    title: TagMod[Any] | `false` = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (extraContent != null) __obj.updateDynamic("extraContent")(extraContent.asInstanceOf[js.Any])
-    if (onTabChange != null) __obj.updateDynamic("onTabChange")(onTabChange.asInstanceOf[js.Any])
-    if (pageHeaderRender != null) __obj.updateDynamic("pageHeaderRender")(js.Any.fromFunction1(pageHeaderRender))
-    if (tabActiveKey != null) __obj.updateDynamic("tabActiveKey")(tabActiveKey.asInstanceOf[js.Any])
-    if (tabBarExtraContent != null) __obj.updateDynamic("tabBarExtraContent")(tabBarExtraContent.asInstanceOf[js.Any])
-    if (tabList != null) __obj.updateDynamic("tabList")(tabList.asInstanceOf[js.Any])
-    if (tabProps != null) __obj.updateDynamic("tabProps")(tabProps.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: TagMod[Any]): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extraContentReactElement(value: ReactElement): this.type = set("extraContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extraContent(value: TagMod[Any]): this.type = set("extraContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onTabChange(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps * / any['onChange'] */ js.Any
+    ): this.type = set("onTabChange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pageHeaderRender(value: /* props */ PageHeaderWrapperProps => TagMod[Any]): this.type = set("pageHeaderRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def tabActiveKey(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps * / any['activeKey'] */ js.Any
+    ): this.type = set("tabActiveKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarExtraContent(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps * / any['tabBarExtraContent'] */ js.Any
+    ): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabList(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabPaneProps */ _
+        ]
+    ): this.type = set("tabList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabProps(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TabsProps */ js.Any
+    ): this.type = set("tabProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any] | `false`): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PageHeaderWrapperProps
+  
+  def withProps(p: PageHeaderWrapperProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PageHeaderWrapper.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

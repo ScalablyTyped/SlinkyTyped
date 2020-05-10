@@ -2,7 +2,6 @@ package typingsSlinky.chromeApps.chrome.certificateProvider
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.chromeApps.chrome.events.Event
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ object onCertificatesRequested
       Event[
         js.Function2[
           /* certificates */ js.Array[CertificateInfo], 
-          /* callback */ js.Function1[/* rejectedCertificates */ js.Array[ArrayBuffer], Unit], 
+          /* callback */ js.Function1[/* rejectedCertificates */ js.Array[js.typedarray.ArrayBuffer], Unit], 
           js.Any
         ]
       ]

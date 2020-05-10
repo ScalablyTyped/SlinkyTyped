@@ -18,14 +18,41 @@ trait GetOrganizationConfigRuleDetailedStatusResponse extends js.Object {
 
 object GetOrganizationConfigRuleDetailedStatusResponse {
   @scala.inline
-  def apply(
-    NextToken: String = null,
-    OrganizationConfigRuleDetailedStatus: OrganizationConfigRuleDetailedStatus = null
-  ): GetOrganizationConfigRuleDetailedStatusResponse = {
+  def apply(): GetOrganizationConfigRuleDetailedStatusResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (OrganizationConfigRuleDetailedStatus != null) __obj.updateDynamic("OrganizationConfigRuleDetailedStatus")(OrganizationConfigRuleDetailedStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetOrganizationConfigRuleDetailedStatusResponse]
   }
+  @scala.inline
+  implicit class GetOrganizationConfigRuleDetailedStatusResponseOps[Self <: GetOrganizationConfigRuleDetailedStatusResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationConfigRuleDetailedStatus(value: OrganizationConfigRuleDetailedStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfigRuleDetailedStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationConfigRuleDetailedStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfigRuleDetailedStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

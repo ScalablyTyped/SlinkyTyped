@@ -15,16 +15,14 @@ trait DocumentType extends js.Object
 
 object DocumentType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def document: typingsSlinky.carbone.carboneStrings.document = "document".asInstanceOf[typingsSlinky.carbone.carboneStrings.document]
   @scala.inline
-  def document: typingsSlinky.carbone.carboneStrings.document = this.cast("document")
+  def graphics: typingsSlinky.carbone.carboneStrings.graphics = "graphics".asInstanceOf[typingsSlinky.carbone.carboneStrings.graphics]
   @scala.inline
-  def graphics: typingsSlinky.carbone.carboneStrings.graphics = this.cast("graphics")
+  def presentation: typingsSlinky.carbone.carboneStrings.presentation = "presentation".asInstanceOf[typingsSlinky.carbone.carboneStrings.presentation]
   @scala.inline
-  def presentation: typingsSlinky.carbone.carboneStrings.presentation = this.cast("presentation")
+  def spreadsheet: typingsSlinky.carbone.carboneStrings.spreadsheet = "spreadsheet".asInstanceOf[typingsSlinky.carbone.carboneStrings.spreadsheet]
   @scala.inline
-  def spreadsheet: typingsSlinky.carbone.carboneStrings.spreadsheet = this.cast("spreadsheet")
-  @scala.inline
-  def web: typingsSlinky.carbone.carboneStrings.web = this.cast("web")
+  def web: typingsSlinky.carbone.carboneStrings.web = "web".asInstanceOf[typingsSlinky.carbone.carboneStrings.web]
 }
 

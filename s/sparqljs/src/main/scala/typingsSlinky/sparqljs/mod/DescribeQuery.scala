@@ -8,11 +8,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DescribeQuery
   extends Query
      with BaseQuery {
-  var queryType: DESCRIBE
-  var variables: js.Array[Asterisk | Variable]
+  var queryType: DESCRIBE = js.native
+  var variables: js.Array[Asterisk | Variable] = js.native
 }
 
 object DescribeQuery {
@@ -21,17 +22,31 @@ object DescribeQuery {
     prefixes: StringDictionary[String],
     queryType: DESCRIBE,
     `type`: query,
-    variables: js.Array[Asterisk | Variable],
-    base: String = null,
-    values: js.Array[ValuePatternRow] = null,
-    where: js.Array[Pattern] = null
+    variables: js.Array[Asterisk | Variable]
   ): DescribeQuery = {
     val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], queryType = queryType.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
-    if (where != null) __obj.updateDynamic("where")(where.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeQuery]
   }
+  @scala.inline
+  implicit class DescribeQueryOps[Self <: DescribeQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQueryType(value: DESCRIBE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVariables(value: js.Array[Asterisk | Variable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

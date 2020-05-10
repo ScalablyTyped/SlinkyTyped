@@ -1,10 +1,7 @@
 package typingsSlinky.reactGeosuggest.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.googlemaps.google.maps.LatLng
 import typingsSlinky.googlemaps.google.maps.LatLngBounds
 import typingsSlinky.googlemaps.google.maps.places.AutocompletePrediction
@@ -19,88 +16,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactGeosuggest
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactGeosuggest {
   @JSImport("react-geosuggest", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoComplete, className, disabled, label, placeholder */
-  def apply(
-    autoActivateFirstSuggest: js.UndefOr[Boolean] = js.undefined,
-    bounds: LatLngBounds = null,
-    country: String | js.Array[String] = null,
-    fixtures: js.Array[Fixture] = null,
-    getSuggestLabel: /* googleSuggest */ AutocompletePrediction => String = null,
-    googleMaps: Typeofmaps = null,
-    highlightMatch: js.UndefOr[Boolean] = js.undefined,
-    ignoreEnter: js.UndefOr[Boolean] = js.undefined,
-    ignoreTab: js.UndefOr[Boolean] = js.undefined,
-    initialValue: String = null,
-    inputClassName: String = null,
-    location: LatLng = null,
-    maxFixtures: Int | Double = null,
-    minLength: Int | Double = null,
-    onActivateSuggest: /* suggest */ Suggest => Unit = null,
-    onBlur: /* value */ js.Any => Unit = null,
-    onChange: /* value */ js.Any => Unit = null,
-    onFocus: /* value */ js.Any => Unit = null,
-    onKeyDown: /* event */ js.Any => Unit = null,
-    onKeyPress: /* event */ js.Any => Unit = null,
-    onSuggestNoResults: /* userInput */ String => Unit = null,
-    onSuggestSelect: /* suggest */ Suggest => Unit = null,
-    onUpdateSuggests: (/* suggests */ js.Any, /* activeSuggest */ js.Any) => Unit = null,
-    queryDelay: Int | Double = null,
-    radius: Int | Double = null,
-    renderSuggestItem: /* googleSuggest */ AutocompletePrediction => _ = null,
-    skipSuggest: /* googleSuggest */ AutocompletePrediction => Boolean = null,
-    style: Styles = null,
-    suggestItemActiveClassName: String = null,
-    suggestItemClassName: String = null,
-    suggestsClassName: String = null,
-    suggestsHiddenClassName: String = null,
-    types: js.Array[QueryType] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoActivateFirstSuggest)) __obj.updateDynamic("autoActivateFirstSuggest")(autoActivateFirstSuggest.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (fixtures != null) __obj.updateDynamic("fixtures")(fixtures.asInstanceOf[js.Any])
-    if (getSuggestLabel != null) __obj.updateDynamic("getSuggestLabel")(js.Any.fromFunction1(getSuggestLabel))
-    if (googleMaps != null) __obj.updateDynamic("googleMaps")(googleMaps.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightMatch)) __obj.updateDynamic("highlightMatch")(highlightMatch.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreEnter)) __obj.updateDynamic("ignoreEnter")(ignoreEnter.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreTab)) __obj.updateDynamic("ignoreTab")(ignoreTab.asInstanceOf[js.Any])
-    if (initialValue != null) __obj.updateDynamic("initialValue")(initialValue.asInstanceOf[js.Any])
-    if (inputClassName != null) __obj.updateDynamic("inputClassName")(inputClassName.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (maxFixtures != null) __obj.updateDynamic("maxFixtures")(maxFixtures.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
-    if (onActivateSuggest != null) __obj.updateDynamic("onActivateSuggest")(js.Any.fromFunction1(onActivateSuggest))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onSuggestNoResults != null) __obj.updateDynamic("onSuggestNoResults")(js.Any.fromFunction1(onSuggestNoResults))
-    if (onSuggestSelect != null) __obj.updateDynamic("onSuggestSelect")(js.Any.fromFunction1(onSuggestSelect))
-    if (onUpdateSuggests != null) __obj.updateDynamic("onUpdateSuggests")(js.Any.fromFunction2(onUpdateSuggests))
-    if (queryDelay != null) __obj.updateDynamic("queryDelay")(queryDelay.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (renderSuggestItem != null) __obj.updateDynamic("renderSuggestItem")(js.Any.fromFunction1(renderSuggestItem))
-    if (skipSuggest != null) __obj.updateDynamic("skipSuggest")(js.Any.fromFunction1(skipSuggest))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (suggestItemActiveClassName != null) __obj.updateDynamic("suggestItemActiveClassName")(suggestItemActiveClassName.asInstanceOf[js.Any])
-    if (suggestItemClassName != null) __obj.updateDynamic("suggestItemClassName")(suggestItemClassName.asInstanceOf[js.Any])
-    if (suggestsClassName != null) __obj.updateDynamic("suggestsClassName")(suggestsClassName.asInstanceOf[js.Any])
-    if (suggestsHiddenClassName != null) __obj.updateDynamic("suggestsHiddenClassName")(suggestsHiddenClassName.asInstanceOf[js.Any])
-    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def autoActivateFirstSuggest(value: Boolean): this.type = set("autoActivateFirstSuggest", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bounds(value: LatLngBounds): this.type = set("bounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def country(value: String | js.Array[String]): this.type = set("country", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixtures(value: js.Array[Fixture]): this.type = set("fixtures", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getSuggestLabel(value: /* googleSuggest */ AutocompletePrediction => String): this.type = set("getSuggestLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def googleMaps(value: Typeofmaps): this.type = set("googleMaps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightMatch(value: Boolean): this.type = set("highlightMatch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoreEnter(value: Boolean): this.type = set("ignoreEnter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoreTab(value: Boolean): this.type = set("ignoreTab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialValue(value: String): this.type = set("initialValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputClassName(value: String): this.type = set("inputClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def location(value: LatLng): this.type = set("location", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxFixtures(value: Double): this.type = set("maxFixtures", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minLength(value: Double): this.type = set("minLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onActivateSuggest(value: /* suggest */ Suggest => Unit): this.type = set("onActivateSuggest", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBlur(value: /* value */ js.Any => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* value */ js.Any => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: /* value */ js.Any => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: /* event */ js.Any => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyPress(value: /* event */ js.Any => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSuggestNoResults(value: /* userInput */ String => Unit): this.type = set("onSuggestNoResults", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSuggestSelect(value: /* suggest */ Suggest => Unit): this.type = set("onSuggestSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onUpdateSuggests(value: (/* suggests */ js.Any, /* activeSuggest */ js.Any) => Unit): this.type = set("onUpdateSuggests", js.Any.fromFunction2(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def queryDelay(value: Double): this.type = set("queryDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radius(value: Double): this.type = set("radius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderSuggestItem(value: /* googleSuggest */ AutocompletePrediction => _): this.type = set("renderSuggestItem", js.Any.fromFunction1(value))
+    @scala.inline
+    def skipSuggest(value: /* googleSuggest */ AutocompletePrediction => Boolean): this.type = set("skipSuggest", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: Styles): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suggestItemActiveClassName(value: String): this.type = set("suggestItemActiveClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suggestItemClassName(value: String): this.type = set("suggestItemClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suggestsClassName(value: String): this.type = set("suggestsClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def suggestsHiddenClassName(value: String): this.type = set("suggestsHiddenClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def types(value: js.Array[QueryType]): this.type = set("types", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactGeosuggest.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GeosuggestProps
+  
+  def withProps(p: GeosuggestProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactGeosuggest.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

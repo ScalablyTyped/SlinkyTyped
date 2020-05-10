@@ -1,32 +1,40 @@
 package typingsSlinky.node.http2Mod
 
 import typingsSlinky.node.NodeJS.ErrnoException
-import typingsSlinky.node.fsMod.Stats
-import typingsSlinky.node.httpMod.OutgoingHttpHeaders
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ServerStreamFileResponseOptionsWithError extends ServerStreamFileResponseOptions {
-  var onError: js.UndefOr[js.Function1[/* err */ ErrnoException, Unit]] = js.undefined
+  var onError: js.UndefOr[js.Function1[/* err */ ErrnoException, Unit]] = js.native
 }
 
 object ServerStreamFileResponseOptionsWithError {
   @scala.inline
-  def apply(
-    length: Int | Double = null,
-    offset: Int | Double = null,
-    onError: /* err */ ErrnoException => Unit = null,
-    statCheck: (/* stats */ Stats, /* headers */ OutgoingHttpHeaders, /* statOptions */ StatOptions) => Unit | Boolean = null,
-    waitForTrailers: js.UndefOr[Boolean] = js.undefined
-  ): ServerStreamFileResponseOptionsWithError = {
+  def apply(): ServerStreamFileResponseOptionsWithError = {
     val __obj = js.Dynamic.literal()
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (statCheck != null) __obj.updateDynamic("statCheck")(js.Any.fromFunction3(statCheck))
-    if (!js.isUndefined(waitForTrailers)) __obj.updateDynamic("waitForTrailers")(waitForTrailers.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerStreamFileResponseOptionsWithError]
   }
+  @scala.inline
+  implicit class ServerStreamFileResponseOptionsWithErrorOps[Self <: ServerStreamFileResponseOptionsWithError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnError(value: /* err */ ErrnoException => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,63 +4,231 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TreeCollectionConfig extends js.Object {
-  var data: js.UndefOr[String | js.Array[_]] = js.undefined
-  var datathrottle: js.UndefOr[Double] = js.undefined
-  var datatype: js.UndefOr[String] = js.undefined
-  var defaultData: js.UndefOr[js.Any] = js.undefined
-  var externalData: js.UndefOr[WebixCallback] = js.undefined
-  var filterMode: js.UndefOr[js.Any] = js.undefined
-  var id: js.UndefOr[String | Double] = js.undefined
-  var map: js.UndefOr[js.Any] = js.undefined
-  var on: js.UndefOr[EventHash] = js.undefined
-  var ready: js.UndefOr[WebixCallback] = js.undefined
-  var removeMissed: js.UndefOr[Boolean] = js.undefined
-  var rules: js.UndefOr[js.Any] = js.undefined
-  var save: js.UndefOr[js.Any] = js.undefined
-  var scheme: js.UndefOr[js.Any] = js.undefined
-  var url: js.UndefOr[js.Any] = js.undefined
-  var view: js.UndefOr[String] = js.undefined
+  var data: js.UndefOr[String | js.Array[_]] = js.native
+  var datathrottle: js.UndefOr[Double] = js.native
+  var datatype: js.UndefOr[String] = js.native
+  var defaultData: js.UndefOr[js.Any] = js.native
+  var externalData: js.UndefOr[WebixCallback] = js.native
+  var filterMode: js.UndefOr[js.Any] = js.native
+  var id: js.UndefOr[String | Double] = js.native
+  var map: js.UndefOr[js.Any] = js.native
+  var on: js.UndefOr[EventHash] = js.native
+  var ready: js.UndefOr[WebixCallback] = js.native
+  var removeMissed: js.UndefOr[Boolean] = js.native
+  var rules: js.UndefOr[js.Any] = js.native
+  var save: js.UndefOr[js.Any] = js.native
+  var scheme: js.UndefOr[js.Any] = js.native
+  var url: js.UndefOr[js.Any] = js.native
+  var view: js.UndefOr[String] = js.native
 }
 
 object TreeCollectionConfig {
   @scala.inline
-  def apply(
-    data: String | js.Array[_] = null,
-    datathrottle: Int | Double = null,
-    datatype: String = null,
-    defaultData: js.Any = null,
-    externalData: /* repeated */ js.Any => js.Any = null,
-    filterMode: js.Any = null,
-    id: String | Double = null,
-    map: js.Any = null,
-    on: EventHash = null,
-    ready: /* repeated */ js.Any => js.Any = null,
-    removeMissed: js.UndefOr[Boolean] = js.undefined,
-    rules: js.Any = null,
-    save: js.Any = null,
-    scheme: js.Any = null,
-    url: js.Any = null,
-    view: String = null
-  ): TreeCollectionConfig = {
+  def apply(): TreeCollectionConfig = {
     val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (datathrottle != null) __obj.updateDynamic("datathrottle")(datathrottle.asInstanceOf[js.Any])
-    if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
-    if (defaultData != null) __obj.updateDynamic("defaultData")(defaultData.asInstanceOf[js.Any])
-    if (externalData != null) __obj.updateDynamic("externalData")(js.Any.fromFunction1(externalData))
-    if (filterMode != null) __obj.updateDynamic("filterMode")(filterMode.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
-    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction1(ready))
-    if (!js.isUndefined(removeMissed)) __obj.updateDynamic("removeMissed")(removeMissed.asInstanceOf[js.Any])
-    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
-    if (save != null) __obj.updateDynamic("save")(save.asInstanceOf[js.Any])
-    if (scheme != null) __obj.updateDynamic("scheme")(scheme.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeCollectionConfig]
   }
+  @scala.inline
+  implicit class TreeCollectionConfigOps[Self <: TreeCollectionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: String | js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatathrottle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datathrottle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatathrottle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datathrottle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatatype(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatatype: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalData(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutExternalData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterMode(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMap(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOn(value: EventHash): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReady(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutReady: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveMissed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMissed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveMissed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMissed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRules(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSave(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheme(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withView(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,5 +6,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ArgumentOutOfRangeErrorCtor extends Instantiable0[ArgumentOutOfRangeError]
+trait ArgumentOutOfRangeErrorCtor
+  extends Instantiable0[js.Error]
 

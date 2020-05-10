@@ -2,7 +2,6 @@ package typingsSlinky.firefoxWebextBrowser.browser.proxy
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,5 +13,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.proxy.onProxyError")
 @js.native
 object onProxyError
-  extends TopLevel[WebExtEvent[js.Function1[/* error */ Error, Unit]]]
+  extends TopLevel[WebExtEvent[js.Function1[/* error */ js.Error, Unit]]]
 

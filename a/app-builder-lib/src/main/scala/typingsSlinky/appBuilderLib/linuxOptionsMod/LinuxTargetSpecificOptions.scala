@@ -3,79 +3,210 @@ package typingsSlinky.appBuilderLib.linuxOptionsMod
 import typingsSlinky.appBuilderLib.appBuilderLibStrings.bzip2
 import typingsSlinky.appBuilderLib.appBuilderLibStrings.gz
 import typingsSlinky.appBuilderLib.appBuilderLibStrings.xz
-import typingsSlinky.appBuilderLib.coreMod.Publish
 import typingsSlinky.appBuilderLib.coreMod.TargetSpecificOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LinuxTargetSpecificOptions
   extends CommonLinuxOptions
      with TargetSpecificOptions {
-  val afterInstall: js.UndefOr[String | Null] = js.undefined
-  val afterRemove: js.UndefOr[String | Null] = js.undefined
+  val afterInstall: js.UndefOr[String | Null] = js.native
+  val afterRemove: js.UndefOr[String | Null] = js.native
   /**
     * The compression type.
     * @default xz
     */
-  val compression: js.UndefOr[gz | bzip2 | xz | Null] = js.undefined
+  val compression: js.UndefOr[gz | bzip2 | xz | Null] = js.native
   /**
     * Package dependencies.
     */
-  val depends: js.UndefOr[js.Array[String] | Null] = js.undefined
+  val depends: js.UndefOr[js.Array[String] | Null] = js.native
   /**
     * *Advanced only* The [fpm](https://github.com/jordansissel/fpm/wiki#usage) options.
     *
     * Example: `["--before-install=build/deb-preinstall.sh", "--after-upgrade=build/deb-postinstall.sh"]`
     */
-  val fpm: js.UndefOr[js.Array[String] | Null] = js.undefined
-  val icon: js.UndefOr[String] = js.undefined
-  val maintainer: js.UndefOr[String | Null] = js.undefined
+  val fpm: js.UndefOr[js.Array[String] | Null] = js.native
+  val icon: js.UndefOr[String] = js.native
+  val maintainer: js.UndefOr[String | Null] = js.native
   /**
     * The package category.
     */
-  val packageCategory: js.UndefOr[String | Null] = js.undefined
-  val vendor: js.UndefOr[String | Null] = js.undefined
+  val packageCategory: js.UndefOr[String | Null] = js.native
+  val vendor: js.UndefOr[String | Null] = js.native
 }
 
 object LinuxTargetSpecificOptions {
   @scala.inline
-  def apply(
-    afterInstall: String = null,
-    afterRemove: String = null,
-    artifactName: String = null,
-    category: String = null,
-    compression: gz | bzip2 | xz = null,
-    depends: js.Array[String] = null,
-    description: String = null,
-    desktop: js.Any = null,
-    fpm: js.Array[String] = null,
-    icon: String = null,
-    maintainer: String = null,
-    mimeTypes: js.Array[String] = null,
-    packageCategory: String = null,
-    publish: Publish = null,
-    synopsis: String = null,
-    vendor: String = null
-  ): LinuxTargetSpecificOptions = {
+  def apply(): LinuxTargetSpecificOptions = {
     val __obj = js.Dynamic.literal()
-    if (afterInstall != null) __obj.updateDynamic("afterInstall")(afterInstall.asInstanceOf[js.Any])
-    if (afterRemove != null) __obj.updateDynamic("afterRemove")(afterRemove.asInstanceOf[js.Any])
-    if (artifactName != null) __obj.updateDynamic("artifactName")(artifactName.asInstanceOf[js.Any])
-    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
-    if (compression != null) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
-    if (depends != null) __obj.updateDynamic("depends")(depends.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (desktop != null) __obj.updateDynamic("desktop")(desktop.asInstanceOf[js.Any])
-    if (fpm != null) __obj.updateDynamic("fpm")(fpm.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (maintainer != null) __obj.updateDynamic("maintainer")(maintainer.asInstanceOf[js.Any])
-    if (mimeTypes != null) __obj.updateDynamic("mimeTypes")(mimeTypes.asInstanceOf[js.Any])
-    if (packageCategory != null) __obj.updateDynamic("packageCategory")(packageCategory.asInstanceOf[js.Any])
-    if (publish != null) __obj.updateDynamic("publish")(publish.asInstanceOf[js.Any])
-    if (synopsis != null) __obj.updateDynamic("synopsis")(synopsis.asInstanceOf[js.Any])
-    if (vendor != null) __obj.updateDynamic("vendor")(vendor.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinuxTargetSpecificOptions]
   }
+  @scala.inline
+  implicit class LinuxTargetSpecificOptionsOps[Self <: LinuxTargetSpecificOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterInstall(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterInstall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterInstall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterInstall")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterInstallNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterInstall")(null)
+        ret
+    }
+    @scala.inline
+    def withAfterRemove(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterRemoveNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRemove")(null)
+        ret
+    }
+    @scala.inline
+    def withCompression(value: gz | bzip2 | xz): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompressionNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(null)
+        ret
+    }
+    @scala.inline
+    def withDepends(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depends")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDepends: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depends")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depends")(null)
+        ret
+    }
+    @scala.inline
+    def withFpm(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFpm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFpmNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fpm")(null)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaintainer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maintainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaintainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maintainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaintainerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maintainer")(null)
+        ret
+    }
+    @scala.inline
+    def withPackageCategory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageCategory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageCategory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackageCategoryNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageCategory")(null)
+        ret
+    }
+    @scala.inline
+    def withVendor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVendor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVendorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(null)
+        ret
+    }
+  }
+  
 }
 

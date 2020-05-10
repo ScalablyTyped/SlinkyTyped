@@ -17,20 +17,52 @@ trait DeleteNetworkInterfacePermissionRequest extends js.Object {
   /**
     * The ID of the network interface permission.
     */
-  var NetworkInterfacePermissionId: String = js.native
+  var NetworkInterfacePermissionId: typingsSlinky.awsSdk.ec2Mod.NetworkInterfacePermissionId = js.native
 }
 
 object DeleteNetworkInterfacePermissionRequest {
   @scala.inline
-  def apply(
-    NetworkInterfacePermissionId: String,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    Force: js.UndefOr[scala.Boolean] = js.undefined
-  ): DeleteNetworkInterfacePermissionRequest = {
+  def apply(NetworkInterfacePermissionId: NetworkInterfacePermissionId): DeleteNetworkInterfacePermissionRequest = {
     val __obj = js.Dynamic.literal(NetworkInterfacePermissionId = NetworkInterfacePermissionId.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (!js.isUndefined(Force)) __obj.updateDynamic("Force")(Force.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteNetworkInterfacePermissionRequest]
   }
+  @scala.inline
+  implicit class DeleteNetworkInterfacePermissionRequestOps[Self <: DeleteNetworkInterfacePermissionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworkInterfacePermissionId(value: NetworkInterfacePermissionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfacePermissionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Force")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Force")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

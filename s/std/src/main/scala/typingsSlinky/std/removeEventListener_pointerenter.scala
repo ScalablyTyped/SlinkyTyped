@@ -20,7 +20,7 @@ object removeEventListener_pointerenter extends js.Object {
   def apply(
     `type`: pointerenter,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

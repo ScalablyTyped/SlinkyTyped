@@ -1,7 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.indexedDbMod
 
 import org.scalajs.dom.raw.IDBFactory
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.indexeddbColonSlashSlash
 import typingsSlinky.tensorflowTfjsCore.typesMod.IOHandler
 import typingsSlinky.tensorflowTfjsCore.typesMod.ModelArtifacts
 import typingsSlinky.tensorflowTfjsCore.typesMod.SaveResult
@@ -40,6 +39,6 @@ class BrowserIndexedDB_ protected () extends IOHandler {
 @JSImport("@tensorflow/tfjs-core/dist/io/indexed_db", "BrowserIndexedDB")
 @js.native
 object BrowserIndexedDB_ extends js.Object {
-  val URL_SCHEME: indexeddbColonSlashSlash = js.native
+  val URL_SCHEME: /* "indexeddb://" */ String = js.native
 }
 

@@ -4,51 +4,119 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SeriesSetting extends js.Object {
   /** Specifies the dataSource for the series. It can be an array of JSON objects or an instance of ej.DataManager.
     * @Default {null}
     */
-  var dataSource: js.UndefOr[js.Any] = js.undefined
+  var dataSource: js.UndefOr[js.Any] = js.native
   /** Enable/disable the animation of series.
     * @Default {false}
     */
-  var enableAnimation: js.UndefOr[Boolean] = js.undefined
+  var enableAnimation: js.UndefOr[Boolean] = js.native
   /** Fill color of the series.
     * @Default {null}
     */
-  var fill: js.UndefOr[String] = js.undefined
+  var fill: js.UndefOr[String] = js.native
   /** Specifies the type of the series to render in chart.
     * @Default {column. see Type}
     */
-  var `type`: js.UndefOr[Type | String] = js.undefined
+  var `type`: js.UndefOr[Type | String] = js.native
   /** Name of the property in the datasource that contains x value for the series.
     * @Default {null}
     */
-  var xName: js.UndefOr[String] = js.undefined
+  var xName: js.UndefOr[String] = js.native
   /** Name of the property in the datasource that contains y value for the series.
     * @Default {null}
     */
-  var yName: js.UndefOr[String] = js.undefined
+  var yName: js.UndefOr[String] = js.native
 }
 
 object SeriesSetting {
   @scala.inline
-  def apply(
-    dataSource: js.Any = null,
-    enableAnimation: js.UndefOr[Boolean] = js.undefined,
-    fill: String = null,
-    `type`: Type | String = null,
-    xName: String = null,
-    yName: String = null
-  ): SeriesSetting = {
+  def apply(): SeriesSetting = {
     val __obj = js.Dynamic.literal()
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableAnimation)) __obj.updateDynamic("enableAnimation")(enableAnimation.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (xName != null) __obj.updateDynamic("xName")(xName.asInstanceOf[js.Any])
-    if (yName != null) __obj.updateDynamic("yName")(yName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesSetting]
   }
+  @scala.inline
+  implicit class SeriesSettingOps[Self <: SeriesSetting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSource(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Type | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

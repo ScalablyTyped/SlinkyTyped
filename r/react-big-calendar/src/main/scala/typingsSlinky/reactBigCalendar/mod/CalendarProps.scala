@@ -3,10 +3,7 @@ package typingsSlinky.reactBigCalendar.mod
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import typingsSlinky.reactBigCalendar.AnonAction
 import typingsSlinky.reactBigCalendar.AnonStart
@@ -17,22 +14,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] extends Props[Calendar[TEvent, TResource]] {
-  var allDayAccessor: js.UndefOr[String | (js.Function1[/* event */ TEvent, Boolean])] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var components: js.UndefOr[Components_[TEvent]] = js.undefined
-  var culture: js.UndefOr[String] = js.undefined
-  var date: js.UndefOr[stringOrDate] = js.undefined
-  var dayLayoutAlgorithm: js.UndefOr[DayLayoutAlgorithm] = js.undefined
-  var dayPropGetter: js.UndefOr[DayPropGetter] = js.undefined
-  var defaultDate: js.UndefOr[js.Date] = js.undefined
-  var defaultView: js.UndefOr[View] = js.undefined
-  var drilldownView: js.UndefOr[View | Null] = js.undefined
-  var elementProps: js.UndefOr[HTMLAttributes[HTMLElement]] = js.undefined
-  var endAccessor: js.UndefOr[String | (js.Function1[/* event */ TEvent, js.Date])] = js.undefined
-  var eventPropGetter: js.UndefOr[EventPropGetter[TEvent]] = js.undefined
-  var events: js.UndefOr[js.Array[TEvent]] = js.undefined
-  var formats: js.UndefOr[Formats] = js.undefined
+  var allDayAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, Boolean])] = js.native
+  var className: js.UndefOr[String] = js.native
+  var components: js.UndefOr[Components_[TEvent]] = js.native
+  var culture: js.UndefOr[String] = js.native
+  var date: js.UndefOr[stringOrDate] = js.native
+  var dayLayoutAlgorithm: js.UndefOr[DayLayoutAlgorithm] = js.native
+  var dayPropGetter: js.UndefOr[DayPropGetter] = js.native
+  var defaultDate: js.UndefOr[js.Date] = js.native
+  var defaultView: js.UndefOr[View] = js.native
+  var drilldownView: js.UndefOr[View | Null] = js.native
+  var elementProps: js.UndefOr[HTMLAttributes[HTMLElement]] = js.native
+  var endAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, js.Date])] = js.native
+  var eventPropGetter: js.UndefOr[EventPropGetter[TEvent]] = js.native
+  var events: js.UndefOr[js.Array[TEvent]] = js.native
+  var formats: js.UndefOr[Formats] = js.native
   var getDrilldownView: js.UndefOr[
     (js.Function3[
       /* targetDate */ js.Date, 
@@ -40,169 +38,781 @@ trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] ext
       /* configuredViewNames */ js.Array[View], 
       Unit
     ]) | Null
-  ] = js.undefined
-  var getNow: js.UndefOr[js.Function0[js.Date]] = js.undefined
-  var length: js.UndefOr[Double] = js.undefined
-  var localizer: DateLocalizer
-  var longPressThreshold: js.UndefOr[Double] = js.undefined
-  var max: js.UndefOr[stringOrDate] = js.undefined
-  var messages: js.UndefOr[Messages] = js.undefined
-  var min: js.UndefOr[stringOrDate] = js.undefined
+  ] = js.native
+  var getNow: js.UndefOr[js.Function0[js.Date]] = js.native
+  var length: js.UndefOr[Double] = js.native
+  var localizer: DateLocalizer = js.native
+  var longPressThreshold: js.UndefOr[Double] = js.native
+  var max: js.UndefOr[stringOrDate] = js.native
+  var messages: js.UndefOr[Messages] = js.native
+  var min: js.UndefOr[stringOrDate] = js.native
   var onDoubleClickEvent: js.UndefOr[
     js.Function2[/* event */ TEvent, /* e */ SyntheticEvent[Event_, HTMLElement], Unit]
-  ] = js.undefined
-  var onDrillDown: js.UndefOr[js.Function2[/* date */ js.Date, /* view */ View, Unit]] = js.undefined
+  ] = js.native
+  var onDrillDown: js.UndefOr[js.Function2[/* date */ js.Date, /* view */ View, Unit]] = js.native
   var onNavigate: js.UndefOr[
     js.Function3[/* newDate */ js.Date, /* view */ View, /* action */ NavigateAction, Unit]
-  ] = js.undefined
-  var onRangeChange: js.UndefOr[js.Function1[/* range */ js.Array[js.Date] | AnonStart, Unit]] = js.undefined
+  ] = js.native
+  var onRangeChange: js.UndefOr[js.Function1[/* range */ js.Array[js.Date] | AnonStart, Unit]] = js.native
   var onSelectEvent: js.UndefOr[
     js.Function2[/* event */ TEvent, /* e */ SyntheticEvent[Event_, HTMLElement], Unit]
-  ] = js.undefined
-  var onSelectSlot: js.UndefOr[js.Function1[/* slotInfo */ AnonAction, Unit]] = js.undefined
-  var onSelecting: js.UndefOr[js.Function1[/* range */ AnonStart, js.UndefOr[Boolean | Null]]] = js.undefined
-  var onShowMore: js.UndefOr[js.Function2[/* events */ js.Array[TEvent], /* date */ js.Date, Unit]] = js.undefined
-  var onView: js.UndefOr[js.Function1[/* view */ View, Unit]] = js.undefined
-  var popup: js.UndefOr[Boolean] = js.undefined
-  var popupOffset: js.UndefOr[Double | AnonX] = js.undefined
-  var resourceAccessor: js.UndefOr[String | (js.Function1[/* event */ TEvent, _])] = js.undefined
-  var resourceIdAccessor: js.UndefOr[String | (js.Function1[/* resource */ TResource, _])] = js.undefined
-  var resourceTitleAccessor: js.UndefOr[String | (js.Function1[/* resource */ TResource, _])] = js.undefined
-  var resources: js.UndefOr[js.Array[TResource]] = js.undefined
-  var rtl: js.UndefOr[Boolean] = js.undefined
-  var scrollToTime: js.UndefOr[js.Date] = js.undefined
-  var selectable: js.UndefOr[Boolean | ignoreEvents] = js.undefined
-  var selected: js.UndefOr[js.Any] = js.undefined
-  var showMultiDayTimes: js.UndefOr[Boolean] = js.undefined
-  var slotGroupPropGetter: js.UndefOr[SlotGroupPropGetter] = js.undefined
-  var slotPropGetter: js.UndefOr[SlotPropGetter] = js.undefined
-  var startAccessor: js.UndefOr[String | (js.Function1[/* event */ TEvent, js.Date])] = js.undefined
-  var step: js.UndefOr[Double] = js.undefined
-  var timeslots: js.UndefOr[Double] = js.undefined
-  var titleAccessor: js.UndefOr[String | (js.Function1[/* event */ TEvent, String])] = js.undefined
-  var toolbar: js.UndefOr[Boolean] = js.undefined
-  var tooltipAccessor: js.UndefOr[String | (js.Function1[/* event */ TEvent, String])] = js.undefined
-  var view: js.UndefOr[View] = js.undefined
-  var views: js.UndefOr[ViewsProps] = js.undefined
+  ] = js.native
+  var onSelectSlot: js.UndefOr[js.Function1[/* slotInfo */ AnonAction, Unit]] = js.native
+  var onSelecting: js.UndefOr[js.Function1[/* range */ AnonStart, js.UndefOr[Boolean | Null]]] = js.native
+  var onShowMore: js.UndefOr[js.Function2[/* events */ js.Array[TEvent], /* date */ js.Date, Unit]] = js.native
+  var onView: js.UndefOr[js.Function1[/* view */ View, Unit]] = js.native
+  var popup: js.UndefOr[Boolean] = js.native
+  var popupOffset: js.UndefOr[Double | AnonX] = js.native
+  var resourceAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, _])] = js.native
+  var resourceIdAccessor: js.UndefOr[(/* keyof TResource */ String) | (js.Function1[/* resource */ TResource, _])] = js.native
+  var resourceTitleAccessor: js.UndefOr[(/* keyof TResource */ String) | (js.Function1[/* resource */ TResource, _])] = js.native
+  var resources: js.UndefOr[js.Array[TResource]] = js.native
+  var rtl: js.UndefOr[Boolean] = js.native
+  var scrollToTime: js.UndefOr[js.Date] = js.native
+  var selectable: js.UndefOr[Boolean | ignoreEvents] = js.native
+  var selected: js.UndefOr[js.Any] = js.native
+  var showMultiDayTimes: js.UndefOr[Boolean] = js.native
+  var slotGroupPropGetter: js.UndefOr[SlotGroupPropGetter] = js.native
+  var slotPropGetter: js.UndefOr[SlotPropGetter] = js.native
+  var startAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, js.Date])] = js.native
+  var step: js.UndefOr[Double] = js.native
+  var timeslots: js.UndefOr[Double] = js.native
+  var titleAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, String])] = js.native
+  var toolbar: js.UndefOr[Boolean] = js.native
+  var tooltipAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, String])] = js.native
+  var view: js.UndefOr[View] = js.native
+  var views: js.UndefOr[ViewsProps] = js.native
 }
 
 object CalendarProps {
   @scala.inline
-  def apply[TEvent /* <: js.Object */, TResource /* <: js.Object */](
-    localizer: DateLocalizer,
-    allDayAccessor: String | (js.Function1[/* event */ TEvent, Boolean]) = null,
-    children: TagMod[Any] = null,
-    className: String = null,
-    components: Components_[TEvent] = null,
-    culture: String = null,
-    date: stringOrDate = null,
-    dayLayoutAlgorithm: DayLayoutAlgorithm = null,
-    dayPropGetter: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement] = null,
-    defaultDate: js.Date = null,
-    defaultView: View = null,
-    drilldownView: View = null,
-    elementProps: HTMLAttributes[HTMLElement] = null,
-    endAccessor: String | (js.Function1[/* event */ TEvent, js.Date]) = null,
-    eventPropGetter: (TEvent, /* start */ stringOrDate, /* end */ stringOrDate, /* isSelected */ Boolean) => HTMLAttributes[HTMLDivElement] = null,
-    events: js.Array[TEvent] = null,
-    formats: Formats = null,
-    getDrilldownView: (/* targetDate */ js.Date, /* currentViewName */ View, /* configuredViewNames */ js.Array[View]) => Unit = null,
-    getNow: () => js.Date = null,
-    key: Key = null,
-    length: Int | Double = null,
-    longPressThreshold: Int | Double = null,
-    max: stringOrDate = null,
-    messages: Messages = null,
-    min: stringOrDate = null,
-    onDoubleClickEvent: (/* event */ TEvent, /* e */ SyntheticEvent[Event_, HTMLElement]) => Unit = null,
-    onDrillDown: (/* date */ js.Date, /* view */ View) => Unit = null,
-    onNavigate: (/* newDate */ js.Date, /* view */ View, /* action */ NavigateAction) => Unit = null,
-    onRangeChange: /* range */ js.Array[js.Date] | AnonStart => Unit = null,
-    onSelectEvent: (/* event */ TEvent, /* e */ SyntheticEvent[Event_, HTMLElement]) => Unit = null,
-    onSelectSlot: /* slotInfo */ AnonAction => Unit = null,
-    onSelecting: /* range */ AnonStart => js.UndefOr[Boolean | Null] = null,
-    onShowMore: (/* events */ js.Array[TEvent], /* date */ js.Date) => Unit = null,
-    onView: /* view */ View => Unit = null,
-    popup: js.UndefOr[Boolean] = js.undefined,
-    popupOffset: Double | AnonX = null,
-    ref: LegacyRef[Calendar[TEvent, TResource]] = null,
-    resourceAccessor: String | (js.Function1[/* event */ TEvent, _]) = null,
-    resourceIdAccessor: String | (js.Function1[/* resource */ TResource, _]) = null,
-    resourceTitleAccessor: String | (js.Function1[/* resource */ TResource, _]) = null,
-    resources: js.Array[TResource] = null,
-    rtl: js.UndefOr[Boolean] = js.undefined,
-    scrollToTime: js.Date = null,
-    selectable: Boolean | ignoreEvents = null,
-    selected: js.Any = null,
-    showMultiDayTimes: js.UndefOr[Boolean] = js.undefined,
-    slotGroupPropGetter: () => HTMLAttributes[HTMLDivElement] = null,
-    slotPropGetter: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement] = null,
-    startAccessor: String | (js.Function1[/* event */ TEvent, js.Date]) = null,
-    step: Int | Double = null,
-    timeslots: Int | Double = null,
-    titleAccessor: String | (js.Function1[/* event */ TEvent, String]) = null,
-    toolbar: js.UndefOr[Boolean] = js.undefined,
-    tooltipAccessor: String | (js.Function1[/* event */ TEvent, String]) = null,
-    view: View = null,
-    views: ViewsProps = null
-  ): CalendarProps[TEvent, TResource] = {
+  def apply[TEvent, TResource](localizer: DateLocalizer): CalendarProps[TEvent, TResource] = {
     val __obj = js.Dynamic.literal(localizer = localizer.asInstanceOf[js.Any])
-    if (allDayAccessor != null) __obj.updateDynamic("allDayAccessor")(allDayAccessor.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
-    if (culture != null) __obj.updateDynamic("culture")(culture.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (dayLayoutAlgorithm != null) __obj.updateDynamic("dayLayoutAlgorithm")(dayLayoutAlgorithm.asInstanceOf[js.Any])
-    if (dayPropGetter != null) __obj.updateDynamic("dayPropGetter")(js.Any.fromFunction2(dayPropGetter))
-    if (defaultDate != null) __obj.updateDynamic("defaultDate")(defaultDate.asInstanceOf[js.Any])
-    if (defaultView != null) __obj.updateDynamic("defaultView")(defaultView.asInstanceOf[js.Any])
-    if (drilldownView != null) __obj.updateDynamic("drilldownView")(drilldownView.asInstanceOf[js.Any])
-    if (elementProps != null) __obj.updateDynamic("elementProps")(elementProps.asInstanceOf[js.Any])
-    if (endAccessor != null) __obj.updateDynamic("endAccessor")(endAccessor.asInstanceOf[js.Any])
-    if (eventPropGetter != null) __obj.updateDynamic("eventPropGetter")(js.Any.fromFunction4(eventPropGetter))
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (formats != null) __obj.updateDynamic("formats")(formats.asInstanceOf[js.Any])
-    if (getDrilldownView != null) __obj.updateDynamic("getDrilldownView")(js.Any.fromFunction3(getDrilldownView))
-    if (getNow != null) __obj.updateDynamic("getNow")(js.Any.fromFunction0(getNow))
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (longPressThreshold != null) __obj.updateDynamic("longPressThreshold")(longPressThreshold.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (onDoubleClickEvent != null) __obj.updateDynamic("onDoubleClickEvent")(js.Any.fromFunction2(onDoubleClickEvent))
-    if (onDrillDown != null) __obj.updateDynamic("onDrillDown")(js.Any.fromFunction2(onDrillDown))
-    if (onNavigate != null) __obj.updateDynamic("onNavigate")(js.Any.fromFunction3(onNavigate))
-    if (onRangeChange != null) __obj.updateDynamic("onRangeChange")(js.Any.fromFunction1(onRangeChange))
-    if (onSelectEvent != null) __obj.updateDynamic("onSelectEvent")(js.Any.fromFunction2(onSelectEvent))
-    if (onSelectSlot != null) __obj.updateDynamic("onSelectSlot")(js.Any.fromFunction1(onSelectSlot))
-    if (onSelecting != null) __obj.updateDynamic("onSelecting")(js.Any.fromFunction1(onSelecting))
-    if (onShowMore != null) __obj.updateDynamic("onShowMore")(js.Any.fromFunction2(onShowMore))
-    if (onView != null) __obj.updateDynamic("onView")(js.Any.fromFunction1(onView))
-    if (!js.isUndefined(popup)) __obj.updateDynamic("popup")(popup.asInstanceOf[js.Any])
-    if (popupOffset != null) __obj.updateDynamic("popupOffset")(popupOffset.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (resourceAccessor != null) __obj.updateDynamic("resourceAccessor")(resourceAccessor.asInstanceOf[js.Any])
-    if (resourceIdAccessor != null) __obj.updateDynamic("resourceIdAccessor")(resourceIdAccessor.asInstanceOf[js.Any])
-    if (resourceTitleAccessor != null) __obj.updateDynamic("resourceTitleAccessor")(resourceTitleAccessor.asInstanceOf[js.Any])
-    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtl)) __obj.updateDynamic("rtl")(rtl.asInstanceOf[js.Any])
-    if (scrollToTime != null) __obj.updateDynamic("scrollToTime")(scrollToTime.asInstanceOf[js.Any])
-    if (selectable != null) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (!js.isUndefined(showMultiDayTimes)) __obj.updateDynamic("showMultiDayTimes")(showMultiDayTimes.asInstanceOf[js.Any])
-    if (slotGroupPropGetter != null) __obj.updateDynamic("slotGroupPropGetter")(js.Any.fromFunction0(slotGroupPropGetter))
-    if (slotPropGetter != null) __obj.updateDynamic("slotPropGetter")(js.Any.fromFunction2(slotPropGetter))
-    if (startAccessor != null) __obj.updateDynamic("startAccessor")(startAccessor.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (timeslots != null) __obj.updateDynamic("timeslots")(timeslots.asInstanceOf[js.Any])
-    if (titleAccessor != null) __obj.updateDynamic("titleAccessor")(titleAccessor.asInstanceOf[js.Any])
-    if (!js.isUndefined(toolbar)) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
-    if (tooltipAccessor != null) __obj.updateDynamic("tooltipAccessor")(tooltipAccessor.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
-    if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalendarProps[TEvent, TResource]]
   }
+  @scala.inline
+  implicit class CalendarPropsOps[Self[tevent, tresource] <: CalendarProps[tevent, tresource], TEvent, TResource] (val x: Self[TEvent, TResource]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TEvent, TResource] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TEvent, TResource]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[TEvent, TResource]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TEvent, TResource]) with Other]
+    @scala.inline
+    def withLocalizer(value: DateLocalizer): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localizer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllDayAccessorFunction1(value: /* event */ TEvent => Boolean): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allDayAccessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAllDayAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, Boolean])): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allDayAccessor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllDayAccessor: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allDayAccessor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponents(value: Components_[TEvent]): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponents: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCulture(value: String): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("culture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCulture: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("culture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateDate(value: js.Date): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDate(value: stringOrDate): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDayLayoutAlgorithm(value: DayLayoutAlgorithm): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayLayoutAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayLayoutAlgorithm: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayLayoutAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDayPropGetter(
+      value: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement]
+    ): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPropGetter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDayPropGetter: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPropGetter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultDate(value: js.Date): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultDate: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultView(value: View): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultView: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrilldownView(value: View): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drilldownView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrilldownView: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drilldownView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrilldownViewNull: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drilldownView")(null)
+        ret
+    }
+    @scala.inline
+    def withElementProps(value: HTMLAttributes[HTMLElement]): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElementProps: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndAccessorFunction1(value: /* event */ TEvent => js.Date): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAccessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEndAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, js.Date])): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAccessor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndAccessor: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAccessor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventPropGetter(
+      value: (TEvent, /* start */ stringOrDate, /* end */ stringOrDate, /* isSelected */ Boolean) => HTMLAttributes[HTMLDivElement]
+    ): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPropGetter")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutEventPropGetter: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPropGetter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: js.Array[TEvent]): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormats(value: Formats): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormats: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetDrilldownView(
+      value: (/* targetDate */ js.Date, /* currentViewName */ View, /* configuredViewNames */ js.Array[View]) => Unit
+    ): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDrilldownView")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetDrilldownView: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDrilldownView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetDrilldownViewNull: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDrilldownView")(null)
+        ret
+    }
+    @scala.inline
+    def withGetNow(value: () => js.Date): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetNow: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLongPressThreshold(value: Double): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longPressThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLongPressThreshold: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longPressThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDate(value: js.Date): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMax(value: stringOrDate): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessages(value: Messages): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessages: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDate(value: js.Date): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMin(value: stringOrDate): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDoubleClickEvent(value: (/* event */ TEvent, /* e */ SyntheticEvent[Event_, HTMLElement]) => Unit): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClickEvent")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDoubleClickEvent: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClickEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDrillDown(value: (/* date */ js.Date, /* view */ View) => Unit): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrillDown")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDrillDown: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrillDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnNavigate(value: (/* newDate */ js.Date, /* view */ View, /* action */ NavigateAction) => Unit): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNavigate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnNavigate: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNavigate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRangeChange(value: /* range */ js.Array[js.Date] | AnonStart => Unit): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRangeChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRangeChange: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRangeChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelectEvent(value: (/* event */ TEvent, /* e */ SyntheticEvent[Event_, HTMLElement]) => Unit): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectEvent")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelectEvent: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelectSlot(value: /* slotInfo */ AnonAction => Unit): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectSlot")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelectSlot: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectSlot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelecting(value: /* range */ AnonStart => js.UndefOr[Boolean | Null]): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelecting")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelecting: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelecting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnShowMore(value: (/* events */ js.Array[TEvent], /* date */ js.Date) => Unit): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowMore")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnShowMore: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShowMore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnView(value: /* view */ View => Unit): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onView")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnView: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopup(value: Boolean): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopup: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopupOffset(value: Double | AnonX): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopupOffset: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceAccessorFunction1(value: /* event */ TEvent => _): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAccessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withResourceAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, _])): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAccessor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceAccessor: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAccessor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceIdAccessorFunction1(value: /* resource */ TResource => _): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceIdAccessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withResourceIdAccessor(value: (/* keyof TResource */ String) | (js.Function1[/* resource */ TResource, _])): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceIdAccessor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceIdAccessor: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceIdAccessor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceTitleAccessorFunction1(value: /* resource */ TResource => _): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTitleAccessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withResourceTitleAccessor(value: (/* keyof TResource */ String) | (js.Function1[/* resource */ TResource, _])): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTitleAccessor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceTitleAccessor: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceTitleAccessor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: js.Array[TResource]): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRtl(value: Boolean): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRtl: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollToTime(value: js.Date): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollToTime: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectable(value: Boolean | ignoreEvents): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectable: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelected(value: js.Any): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelected: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowMultiDayTimes(value: Boolean): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMultiDayTimes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowMultiDayTimes: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMultiDayTimes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlotGroupPropGetter(value: () => HTMLAttributes[HTMLDivElement]): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotGroupPropGetter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSlotGroupPropGetter: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotGroupPropGetter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlotPropGetter(
+      value: (/* date */ js.Date, /* resourceId */ js.UndefOr[Double | String]) => HTMLAttributes[HTMLDivElement]
+    ): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotPropGetter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSlotPropGetter: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotPropGetter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAccessorFunction1(value: /* event */ TEvent => js.Date): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAccessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStartAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, js.Date])): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAccessor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAccessor: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAccessor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: Double): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeslots(value: Double): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeslots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeslots: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeslots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleAccessorFunction1(value: /* event */ TEvent => String): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAccessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTitleAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, String])): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAccessor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleAccessor: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleAccessor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar(value: Boolean): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipAccessorFunction1(value: /* event */ TEvent => String): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipAccessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTooltipAccessor(value: (/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, String])): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipAccessor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipAccessor: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipAccessor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withView(value: View): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViews(value: ViewsProps): Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViews: Self[TEvent, TResource] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

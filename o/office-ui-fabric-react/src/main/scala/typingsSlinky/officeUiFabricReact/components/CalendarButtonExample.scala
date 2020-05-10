@@ -1,55 +1,41 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.calendarButtonExampleMod.ICalendarButtonExampleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CalendarButtonExample
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.calendarButtonExampleMod.CalendarButtonExample
-    ] {
+object CalendarButtonExample {
   @JSImport("office-ui-fabric-react/lib/components/Calendar/examples/Calendar.Button.Example", "CalendarButtonExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    buttonString: String = null,
-    highlightCurrentMonth: js.UndefOr[Boolean] = js.undefined,
-    highlightSelectedMonth: js.UndefOr[Boolean] = js.undefined,
-    isDayPickerVisible: js.UndefOr[Boolean] = js.undefined,
-    isMonthPickerVisible: js.UndefOr[Boolean] = js.undefined,
-    showGoToToday: js.UndefOr[Boolean] = js.undefined,
-    showMonthPickerAsOverlay: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.calendarButtonExampleMod.CalendarButtonExample
-  ] = {
-    val __obj = js.Dynamic.literal()
-    if (buttonString != null) __obj.updateDynamic("buttonString")(buttonString.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightCurrentMonth)) __obj.updateDynamic("highlightCurrentMonth")(highlightCurrentMonth.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightSelectedMonth)) __obj.updateDynamic("highlightSelectedMonth")(highlightSelectedMonth.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDayPickerVisible)) __obj.updateDynamic("isDayPickerVisible")(isDayPickerVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(isMonthPickerVisible)) __obj.updateDynamic("isMonthPickerVisible")(isMonthPickerVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(showGoToToday)) __obj.updateDynamic("showGoToToday")(showGoToToday.asInstanceOf[js.Any])
-    if (!js.isUndefined(showMonthPickerAsOverlay)) __obj.updateDynamic("showMonthPickerAsOverlay")(showMonthPickerAsOverlay.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.officeUiFabricReact.calendarButtonExampleMod.CalendarButtonExample
+        ] {
+    @scala.inline
+    def buttonString(value: String): this.type = set("buttonString", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightCurrentMonth(value: Boolean): this.type = set("highlightCurrentMonth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightSelectedMonth(value: Boolean): this.type = set("highlightSelectedMonth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDayPickerVisible(value: Boolean): this.type = set("isDayPickerVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isMonthPickerVisible(value: Boolean): this.type = set("isMonthPickerVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showGoToToday(value: Boolean): this.type = set("showGoToToday", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showMonthPickerAsOverlay(value: Boolean): this.type = set("showMonthPickerAsOverlay", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.calendarButtonExampleMod.CalendarButtonExample
-  ] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.officeUiFabricReact.calendarButtonExampleMod.CalendarButtonExample](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ICalendarButtonExampleProps
+  
+  def withProps(p: ICalendarButtonExampleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CalendarButtonExample.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

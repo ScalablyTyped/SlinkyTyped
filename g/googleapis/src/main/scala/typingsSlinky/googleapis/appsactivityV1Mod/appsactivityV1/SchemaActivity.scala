@@ -23,11 +23,41 @@ trait SchemaActivity extends js.Object {
 
 object SchemaActivity {
   @scala.inline
-  def apply(combinedEvent: SchemaEvent = null, singleEvents: js.Array[SchemaEvent] = null): SchemaActivity = {
+  def apply(): SchemaActivity = {
     val __obj = js.Dynamic.literal()
-    if (combinedEvent != null) __obj.updateDynamic("combinedEvent")(combinedEvent.asInstanceOf[js.Any])
-    if (singleEvents != null) __obj.updateDynamic("singleEvents")(singleEvents.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaActivity]
   }
+  @scala.inline
+  implicit class SchemaActivityOps[Self <: SchemaActivity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCombinedEvent(value: SchemaEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("combinedEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCombinedEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("combinedEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleEvents(value: js.Array[SchemaEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleEvents")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

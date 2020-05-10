@@ -66,26 +66,113 @@ trait SchemaAndroidInstrumentationTest extends js.Object {
 
 object SchemaAndroidInstrumentationTest {
   @scala.inline
-  def apply(
-    appApk: SchemaFileReference = null,
-    appBundle: SchemaAppBundle = null,
-    appPackageId: String = null,
-    orchestratorOption: String = null,
-    testApk: SchemaFileReference = null,
-    testPackageId: String = null,
-    testRunnerClass: String = null,
-    testTargets: js.Array[String] = null
-  ): SchemaAndroidInstrumentationTest = {
+  def apply(): SchemaAndroidInstrumentationTest = {
     val __obj = js.Dynamic.literal()
-    if (appApk != null) __obj.updateDynamic("appApk")(appApk.asInstanceOf[js.Any])
-    if (appBundle != null) __obj.updateDynamic("appBundle")(appBundle.asInstanceOf[js.Any])
-    if (appPackageId != null) __obj.updateDynamic("appPackageId")(appPackageId.asInstanceOf[js.Any])
-    if (orchestratorOption != null) __obj.updateDynamic("orchestratorOption")(orchestratorOption.asInstanceOf[js.Any])
-    if (testApk != null) __obj.updateDynamic("testApk")(testApk.asInstanceOf[js.Any])
-    if (testPackageId != null) __obj.updateDynamic("testPackageId")(testPackageId.asInstanceOf[js.Any])
-    if (testRunnerClass != null) __obj.updateDynamic("testRunnerClass")(testRunnerClass.asInstanceOf[js.Any])
-    if (testTargets != null) __obj.updateDynamic("testTargets")(testTargets.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAndroidInstrumentationTest]
   }
+  @scala.inline
+  implicit class SchemaAndroidInstrumentationTestOps[Self <: SchemaAndroidInstrumentationTest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppApk(value: SchemaFileReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appApk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppApk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appApk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppBundle(value: SchemaAppBundle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appBundle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppBundle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appBundle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppPackageId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appPackageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppPackageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appPackageId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrchestratorOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orchestratorOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrchestratorOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orchestratorOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestApk(value: SchemaFileReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testApk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestApk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testApk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestPackageId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testPackageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestPackageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testPackageId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestRunnerClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testRunnerClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestRunnerClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testRunnerClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestTargets(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestTargets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testTargets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

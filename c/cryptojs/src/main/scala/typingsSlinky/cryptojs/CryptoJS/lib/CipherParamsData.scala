@@ -7,42 +7,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CipherParamsData extends js.Object {
-  var algorithm: js.UndefOr[Cipher] = js.undefined
-  var blockSize: js.UndefOr[Double] = js.undefined
-  var ciphertext: js.UndefOr[WordArray] = js.undefined
-  var formatter: js.UndefOr[IFormatter] = js.undefined
-  var iv: js.UndefOr[WordArray] = js.undefined
-  var key: js.UndefOr[WordArray] = js.undefined
-  var mode: js.UndefOr[IBlockCipherModeImpl] = js.undefined
-  var padding: js.UndefOr[IPaddingImpl] = js.undefined
-  var salt: js.UndefOr[WordArray] = js.undefined
+  var algorithm: js.UndefOr[Cipher] = js.native
+  var blockSize: js.UndefOr[Double] = js.native
+  var ciphertext: js.UndefOr[WordArray] = js.native
+  var formatter: js.UndefOr[IFormatter] = js.native
+  var iv: js.UndefOr[WordArray] = js.native
+  var key: js.UndefOr[WordArray] = js.native
+  var mode: js.UndefOr[IBlockCipherModeImpl] = js.native
+  var padding: js.UndefOr[IPaddingImpl] = js.native
+  var salt: js.UndefOr[WordArray] = js.native
 }
 
 object CipherParamsData {
   @scala.inline
-  def apply(
-    algorithm: Cipher = null,
-    blockSize: Int | Double = null,
-    ciphertext: WordArray = null,
-    formatter: IFormatter = null,
-    iv: WordArray = null,
-    key: WordArray = null,
-    mode: IBlockCipherModeImpl = null,
-    padding: IPaddingImpl = null,
-    salt: WordArray = null
-  ): CipherParamsData = {
+  def apply(): CipherParamsData = {
     val __obj = js.Dynamic.literal()
-    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
-    if (blockSize != null) __obj.updateDynamic("blockSize")(blockSize.asInstanceOf[js.Any])
-    if (ciphertext != null) __obj.updateDynamic("ciphertext")(ciphertext.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (iv != null) __obj.updateDynamic("iv")(iv.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (salt != null) __obj.updateDynamic("salt")(salt.asInstanceOf[js.Any])
     __obj.asInstanceOf[CipherParamsData]
   }
+  @scala.inline
+  implicit class CipherParamsDataOps[Self <: CipherParamsData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithm(value: Cipher): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCiphertext(value: WordArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ciphertext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCiphertext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ciphertext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatter(value: IFormatter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIv(value: WordArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: WordArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: IBlockCipherModeImpl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: IPaddingImpl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSalt(value: WordArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("salt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSalt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("salt")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

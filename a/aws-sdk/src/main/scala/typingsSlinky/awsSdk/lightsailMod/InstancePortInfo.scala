@@ -38,24 +38,101 @@ trait InstancePortInfo extends js.Object {
 
 object InstancePortInfo {
   @scala.inline
-  def apply(
-    accessDirection: AccessDirection = null,
-    accessFrom: String = null,
-    accessType: PortAccessType = null,
-    commonName: String = null,
-    fromPort: Int | Double = null,
-    protocol: NetworkProtocol = null,
-    toPort: Int | Double = null
-  ): InstancePortInfo = {
+  def apply(): InstancePortInfo = {
     val __obj = js.Dynamic.literal()
-    if (accessDirection != null) __obj.updateDynamic("accessDirection")(accessDirection.asInstanceOf[js.Any])
-    if (accessFrom != null) __obj.updateDynamic("accessFrom")(accessFrom.asInstanceOf[js.Any])
-    if (accessType != null) __obj.updateDynamic("accessType")(accessType.asInstanceOf[js.Any])
-    if (commonName != null) __obj.updateDynamic("commonName")(commonName.asInstanceOf[js.Any])
-    if (fromPort != null) __obj.updateDynamic("fromPort")(fromPort.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (toPort != null) __obj.updateDynamic("toPort")(toPort.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstancePortInfo]
   }
+  @scala.inline
+  implicit class InstancePortInfoOps[Self <: InstancePortInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessDirection(value: AccessDirection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccessType(value: PortAccessType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommonName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromPort(value: Port): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: NetworkProtocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToPort(value: Port): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toPort")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

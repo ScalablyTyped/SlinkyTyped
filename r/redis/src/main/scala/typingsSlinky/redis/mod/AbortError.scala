@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 @JSImport("redis", "AbortError")
 @js.native
 class AbortError () extends Error {
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
+  var args: js.UndefOr[js.Array[_]] = js.native
+  var code: js.UndefOr[String] = js.native
+  var command: String = js.native
 }
 

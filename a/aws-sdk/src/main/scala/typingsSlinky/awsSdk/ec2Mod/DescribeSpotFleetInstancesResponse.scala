@@ -22,16 +22,53 @@ trait DescribeSpotFleetInstancesResponse extends js.Object {
 
 object DescribeSpotFleetInstancesResponse {
   @scala.inline
-  def apply(
-    ActiveInstances: ActiveInstanceSet = null,
-    NextToken: String = null,
-    SpotFleetRequestId: String = null
-  ): DescribeSpotFleetInstancesResponse = {
+  def apply(): DescribeSpotFleetInstancesResponse = {
     val __obj = js.Dynamic.literal()
-    if (ActiveInstances != null) __obj.updateDynamic("ActiveInstances")(ActiveInstances.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (SpotFleetRequestId != null) __obj.updateDynamic("SpotFleetRequestId")(SpotFleetRequestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSpotFleetInstancesResponse]
   }
+  @scala.inline
+  implicit class DescribeSpotFleetInstancesResponseOps[Self <: DescribeSpotFleetInstancesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveInstances(value: ActiveInstanceSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveInstances")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpotFleetRequestId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpotFleetRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotFleetRequestId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

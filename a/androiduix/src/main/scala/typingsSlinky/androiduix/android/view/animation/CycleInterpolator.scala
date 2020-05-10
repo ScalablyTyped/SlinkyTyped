@@ -9,7 +9,5 @@ import scala.scalajs.js.annotation._
 class CycleInterpolator protected () extends Interpolator {
   def this(mCycles: Double) = this()
   var mCycles: js.Any = js.native
-  /* CompleteClass */
-  override def getInterpolation(input: Double): Double = js.native
 }
 

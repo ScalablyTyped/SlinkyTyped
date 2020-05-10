@@ -1,0 +1,16 @@
+package typingsSlinky.awsKcl
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object mod {
+  type Callback = js.Function0[scala.Unit]
+  type CheckpointCallback = js.Function2[
+    /* error */ js.UndefOr[java.lang.String], 
+    /* checkpointedSequenceNumber */ java.lang.String, 
+    scala.Unit
+  ]
+  // tslint:disable-line:no-empty-interface
+  type ShardEndedInput = typingsSlinky.awsKcl.mod.CheckpointInput
+}

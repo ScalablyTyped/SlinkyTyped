@@ -46,27 +46,119 @@ trait CreateGroupVersionRequest extends js.Object {
 
 object CreateGroupVersionRequest {
   @scala.inline
-  def apply(
-    GroupId: string,
-    AmznClientToken: string = null,
-    ConnectorDefinitionVersionArn: string = null,
-    CoreDefinitionVersionArn: string = null,
-    DeviceDefinitionVersionArn: string = null,
-    FunctionDefinitionVersionArn: string = null,
-    LoggerDefinitionVersionArn: string = null,
-    ResourceDefinitionVersionArn: string = null,
-    SubscriptionDefinitionVersionArn: string = null
-  ): CreateGroupVersionRequest = {
+  def apply(GroupId: string): CreateGroupVersionRequest = {
     val __obj = js.Dynamic.literal(GroupId = GroupId.asInstanceOf[js.Any])
-    if (AmznClientToken != null) __obj.updateDynamic("AmznClientToken")(AmznClientToken.asInstanceOf[js.Any])
-    if (ConnectorDefinitionVersionArn != null) __obj.updateDynamic("ConnectorDefinitionVersionArn")(ConnectorDefinitionVersionArn.asInstanceOf[js.Any])
-    if (CoreDefinitionVersionArn != null) __obj.updateDynamic("CoreDefinitionVersionArn")(CoreDefinitionVersionArn.asInstanceOf[js.Any])
-    if (DeviceDefinitionVersionArn != null) __obj.updateDynamic("DeviceDefinitionVersionArn")(DeviceDefinitionVersionArn.asInstanceOf[js.Any])
-    if (FunctionDefinitionVersionArn != null) __obj.updateDynamic("FunctionDefinitionVersionArn")(FunctionDefinitionVersionArn.asInstanceOf[js.Any])
-    if (LoggerDefinitionVersionArn != null) __obj.updateDynamic("LoggerDefinitionVersionArn")(LoggerDefinitionVersionArn.asInstanceOf[js.Any])
-    if (ResourceDefinitionVersionArn != null) __obj.updateDynamic("ResourceDefinitionVersionArn")(ResourceDefinitionVersionArn.asInstanceOf[js.Any])
-    if (SubscriptionDefinitionVersionArn != null) __obj.updateDynamic("SubscriptionDefinitionVersionArn")(SubscriptionDefinitionVersionArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateGroupVersionRequest]
   }
+  @scala.inline
+  implicit class CreateGroupVersionRequestOps[Self <: CreateGroupVersionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAmznClientToken(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmznClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AmznClientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectorDefinitionVersionArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectorDefinitionVersionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectorDefinitionVersionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectorDefinitionVersionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoreDefinitionVersionArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoreDefinitionVersionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoreDefinitionVersionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoreDefinitionVersionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceDefinitionVersionArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceDefinitionVersionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceDefinitionVersionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceDefinitionVersionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFunctionDefinitionVersionArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionDefinitionVersionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunctionDefinitionVersionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionDefinitionVersionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggerDefinitionVersionArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggerDefinitionVersionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoggerDefinitionVersionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggerDefinitionVersionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceDefinitionVersionArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceDefinitionVersionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceDefinitionVersionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceDefinitionVersionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscriptionDefinitionVersionArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionDefinitionVersionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscriptionDefinitionVersionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionDefinitionVersionArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

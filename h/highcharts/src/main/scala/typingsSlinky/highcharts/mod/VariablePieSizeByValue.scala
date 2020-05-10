@@ -12,10 +12,8 @@ trait VariablePieSizeByValue extends js.Object
 
 object VariablePieSizeByValue {
   @scala.inline
-  def area: typingsSlinky.highcharts.highchartsStrings.area = this.cast("area")
+  def area: typingsSlinky.highcharts.highchartsStrings.area = "area".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.area]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def radius: typingsSlinky.highcharts.highchartsStrings.radius = this.cast("radius")
+  def radius: typingsSlinky.highcharts.highchartsStrings.radius = "radius".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.radius]
 }
 

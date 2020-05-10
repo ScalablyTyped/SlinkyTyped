@@ -22,16 +22,53 @@ trait GetMetricDataOutput extends js.Object {
 
 object GetMetricDataOutput {
   @scala.inline
-  def apply(
-    Messages: MetricDataResultMessages = null,
-    MetricDataResults: MetricDataResults = null,
-    NextToken: NextToken = null
-  ): GetMetricDataOutput = {
+  def apply(): GetMetricDataOutput = {
     val __obj = js.Dynamic.literal()
-    if (Messages != null) __obj.updateDynamic("Messages")(Messages.asInstanceOf[js.Any])
-    if (MetricDataResults != null) __obj.updateDynamic("MetricDataResults")(MetricDataResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMetricDataOutput]
   }
+  @scala.inline
+  implicit class GetMetricDataOutputOps[Self <: GetMetricDataOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessages(value: MetricDataResultMessages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Messages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Messages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricDataResults(value: MetricDataResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricDataResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricDataResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricDataResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

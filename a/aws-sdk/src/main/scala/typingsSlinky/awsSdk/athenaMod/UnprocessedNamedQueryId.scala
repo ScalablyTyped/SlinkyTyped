@@ -22,12 +22,53 @@ trait UnprocessedNamedQueryId extends js.Object {
 
 object UnprocessedNamedQueryId {
   @scala.inline
-  def apply(ErrorCode: ErrorCode = null, ErrorMessage: ErrorMessage = null, NamedQueryId: NamedQueryId = null): UnprocessedNamedQueryId = {
+  def apply(): UnprocessedNamedQueryId = {
     val __obj = js.Dynamic.literal()
-    if (ErrorCode != null) __obj.updateDynamic("ErrorCode")(ErrorCode.asInstanceOf[js.Any])
-    if (ErrorMessage != null) __obj.updateDynamic("ErrorMessage")(ErrorMessage.asInstanceOf[js.Any])
-    if (NamedQueryId != null) __obj.updateDynamic("NamedQueryId")(NamedQueryId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnprocessedNamedQueryId]
   }
+  @scala.inline
+  implicit class UnprocessedNamedQueryIdOps[Self <: UnprocessedNamedQueryId] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCode(value: ErrorCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessage(value: ErrorMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamedQueryId(value: NamedQueryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NamedQueryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamedQueryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NamedQueryId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

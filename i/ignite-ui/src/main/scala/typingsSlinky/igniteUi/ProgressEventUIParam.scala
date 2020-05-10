@@ -4,29 +4,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProgressEventUIParam extends js.Object {
   /**
   	 * Get the current time in the video at which the event was fired.
   	 */
-  var currentTime: js.UndefOr[Double] = js.undefined
+  var currentTime: js.UndefOr[Double] = js.native
   /**
   	 * Get the video duration in seconds.
   	 */
-  var duration: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.native
   /**
   	 * Get the url of the playing video.
   	 */
-  var source: js.UndefOr[String] = js.undefined
+  var source: js.UndefOr[String] = js.native
 }
 
 object ProgressEventUIParam {
   @scala.inline
-  def apply(currentTime: Int | Double = null, duration: Int | Double = null, source: String = null): ProgressEventUIParam = {
+  def apply(): ProgressEventUIParam = {
     val __obj = js.Dynamic.literal()
-    if (currentTime != null) __obj.updateDynamic("currentTime")(currentTime.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressEventUIParam]
   }
+  @scala.inline
+  implicit class ProgressEventUIParamOps[Self <: ProgressEventUIParam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,10 +14,29 @@ trait DescribeVpcPeeringConnectionsOutput extends js.Object {
 
 object DescribeVpcPeeringConnectionsOutput {
   @scala.inline
-  def apply(VpcPeeringConnections: VpcPeeringConnectionList = null): DescribeVpcPeeringConnectionsOutput = {
+  def apply(): DescribeVpcPeeringConnectionsOutput = {
     val __obj = js.Dynamic.literal()
-    if (VpcPeeringConnections != null) __obj.updateDynamic("VpcPeeringConnections")(VpcPeeringConnections.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVpcPeeringConnectionsOutput]
   }
+  @scala.inline
+  implicit class DescribeVpcPeeringConnectionsOutputOps[Self <: DescribeVpcPeeringConnectionsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVpcPeeringConnections(value: VpcPeeringConnectionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringConnections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcPeeringConnections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcPeeringConnections")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

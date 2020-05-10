@@ -44,20 +44,77 @@ trait SchemaGooglePrivacyDlpV2DeidentifyContentRequest extends js.Object {
 
 object SchemaGooglePrivacyDlpV2DeidentifyContentRequest {
   @scala.inline
-  def apply(
-    deidentifyConfig: SchemaGooglePrivacyDlpV2DeidentifyConfig = null,
-    deidentifyTemplateName: String = null,
-    inspectConfig: SchemaGooglePrivacyDlpV2InspectConfig = null,
-    inspectTemplateName: String = null,
-    item: SchemaGooglePrivacyDlpV2ContentItem = null
-  ): SchemaGooglePrivacyDlpV2DeidentifyContentRequest = {
+  def apply(): SchemaGooglePrivacyDlpV2DeidentifyContentRequest = {
     val __obj = js.Dynamic.literal()
-    if (deidentifyConfig != null) __obj.updateDynamic("deidentifyConfig")(deidentifyConfig.asInstanceOf[js.Any])
-    if (deidentifyTemplateName != null) __obj.updateDynamic("deidentifyTemplateName")(deidentifyTemplateName.asInstanceOf[js.Any])
-    if (inspectConfig != null) __obj.updateDynamic("inspectConfig")(inspectConfig.asInstanceOf[js.Any])
-    if (inspectTemplateName != null) __obj.updateDynamic("inspectTemplateName")(inspectTemplateName.asInstanceOf[js.Any])
-    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2DeidentifyContentRequest]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2DeidentifyContentRequestOps[Self <: SchemaGooglePrivacyDlpV2DeidentifyContentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeidentifyConfig(value: SchemaGooglePrivacyDlpV2DeidentifyConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deidentifyConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeidentifyConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deidentifyConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeidentifyTemplateName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deidentifyTemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeidentifyTemplateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deidentifyTemplateName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInspectConfig(value: SchemaGooglePrivacyDlpV2InspectConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInspectConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInspectTemplateName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectTemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInspectTemplateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspectTemplateName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItem(value: SchemaGooglePrivacyDlpV2ContentItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,14 +22,41 @@ trait BatchCheckLayerAvailabilityRequest extends js.Object {
 
 object BatchCheckLayerAvailabilityRequest {
   @scala.inline
-  def apply(
-    layerDigests: BatchedOperationLayerDigestList,
-    repositoryName: RepositoryName,
-    registryId: RegistryId = null
-  ): BatchCheckLayerAvailabilityRequest = {
+  def apply(layerDigests: BatchedOperationLayerDigestList, repositoryName: RepositoryName): BatchCheckLayerAvailabilityRequest = {
     val __obj = js.Dynamic.literal(layerDigests = layerDigests.asInstanceOf[js.Any], repositoryName = repositoryName.asInstanceOf[js.Any])
-    if (registryId != null) __obj.updateDynamic("registryId")(registryId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchCheckLayerAvailabilityRequest]
   }
+  @scala.inline
+  implicit class BatchCheckLayerAvailabilityRequestOps[Self <: BatchCheckLayerAvailabilityRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayerDigests(value: BatchedOperationLayerDigestList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerDigests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepositoryName(value: RepositoryName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegistryId(value: RegistryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

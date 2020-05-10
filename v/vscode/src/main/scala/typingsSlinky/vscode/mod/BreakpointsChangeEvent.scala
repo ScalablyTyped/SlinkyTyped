@@ -4,27 +4,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BreakpointsChangeEvent extends js.Object {
   /**
   		 * Added breakpoints.
   		 */
-  val added: js.Array[Breakpoint]
+  val added: js.Array[Breakpoint] = js.native
   /**
   		 * Changed breakpoints.
   		 */
-  val changed: js.Array[Breakpoint]
+  val changed: js.Array[Breakpoint] = js.native
   /**
   		 * Removed breakpoints.
   		 */
-  val removed: js.Array[Breakpoint]
+  val removed: js.Array[Breakpoint] = js.native
 }
 
 object BreakpointsChangeEvent {
   @scala.inline
   def apply(added: js.Array[Breakpoint], changed: js.Array[Breakpoint], removed: js.Array[Breakpoint]): BreakpointsChangeEvent = {
     val __obj = js.Dynamic.literal(added = added.asInstanceOf[js.Any], changed = changed.asInstanceOf[js.Any], removed = removed.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BreakpointsChangeEvent]
   }
+  @scala.inline
+  implicit class BreakpointsChangeEventOps[Self <: BreakpointsChangeEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdded(value: js.Array[Breakpoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("added")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChanged(value: js.Array[Breakpoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoved(value: js.Array[Breakpoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

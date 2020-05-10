@@ -31,3 +31,91 @@ trait RootQuerySelector[T]
   var $where: js.UndefOr[String | js.Function] = js.native
 }
 
+object RootQuerySelector {
+  @scala.inline
+  def apply[T](): RootQuerySelector[T] = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[RootQuerySelector[T]]
+  }
+  @scala.inline
+  implicit class RootQuerySelectorOps[Self[t] <: RootQuerySelector[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def with$and(value: js.Array[FilterQuery[T]]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$and")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$and: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$and")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$comment(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$comment: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$nor(value: js.Array[FilterQuery[T]]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$nor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$nor: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$nor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$or(value: js.Array[FilterQuery[T]]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$or")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$or: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$or")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$text(value: AnonCaseSensitive): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$text: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$where(value: String | js.Function): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$where")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$where: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$where")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

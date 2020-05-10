@@ -14,10 +14,29 @@ trait StartOnDemandReplicationRunResponse extends js.Object {
 
 object StartOnDemandReplicationRunResponse {
   @scala.inline
-  def apply(replicationRunId: ReplicationRunId = null): StartOnDemandReplicationRunResponse = {
+  def apply(): StartOnDemandReplicationRunResponse = {
     val __obj = js.Dynamic.literal()
-    if (replicationRunId != null) __obj.updateDynamic("replicationRunId")(replicationRunId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartOnDemandReplicationRunResponse]
   }
+  @scala.inline
+  implicit class StartOnDemandReplicationRunResponseOps[Self <: StartOnDemandReplicationRunResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReplicationRunId(value: ReplicationRunId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationRunId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationRunId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationRunId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

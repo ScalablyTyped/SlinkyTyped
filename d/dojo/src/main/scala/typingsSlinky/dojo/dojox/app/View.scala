@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   *
   * @param params view parameters, include:app: the appid: view idname: view nametemplate: view template identifier. If templateString is not empty, this parameter is ignored.templateString: view template stringcontroller: view controller module identifierparent: parent viewchildren: children viewsnls: nls definition module identifier
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.app.ViewBase because Inheritance from two classes. Inlined afterActivate, afterDeactivate, beforeActivate, beforeDeactivate, init, load, start
 - typingsSlinky.dojo.dijit.Destroyable because Inheritance from two classes. Inlined destroy, destroy, own
 - typingsSlinky.dojo.dijit.WidgetsInTemplateMixin because Inheritance from two classes. Inlined contextRequire, widgetsInTemplate, startup */ @JSGlobal("dojox.app.View")

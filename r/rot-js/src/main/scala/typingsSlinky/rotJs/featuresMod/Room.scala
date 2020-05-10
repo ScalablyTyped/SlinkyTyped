@@ -19,10 +19,6 @@ class Room protected () extends Feature {
   def addDoor(x: Double, y: Double): this.type = js.native
   def addDoors(isWallCallback: TestPositionCallback): this.type = js.native
   def clearDoors(): this.type = js.native
-  /* CompleteClass */
-  override def create(digCallback: DigCallback): Unit = js.native
-  /* CompleteClass */
-  override def debug(): Unit = js.native
   def getBottom(): Double = js.native
   def getCenter(): js.Array[Double] = js.native
   /**
@@ -32,8 +28,6 @@ class Room protected () extends Feature {
   def getLeft(): Double = js.native
   def getRight(): Double = js.native
   def getTop(): Double = js.native
-  /* CompleteClass */
-  override def isValid(isWallCallback: TestPositionCallback, canBeDugCallback: TestPositionCallback): Boolean = js.native
 }
 
 /* static members */

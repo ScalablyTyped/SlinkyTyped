@@ -15,20 +15,77 @@ trait SchemaTargetingValueDayPartTargetingDayPart extends js.Object {
 
 object SchemaTargetingValueDayPartTargetingDayPart {
   @scala.inline
-  def apply(
-    dayOfWeek: String = null,
-    endHour: Int | Double = null,
-    endMinute: Int | Double = null,
-    startHour: Int | Double = null,
-    startMinute: Int | Double = null
-  ): SchemaTargetingValueDayPartTargetingDayPart = {
+  def apply(): SchemaTargetingValueDayPartTargetingDayPart = {
     val __obj = js.Dynamic.literal()
-    if (dayOfWeek != null) __obj.updateDynamic("dayOfWeek")(dayOfWeek.asInstanceOf[js.Any])
-    if (endHour != null) __obj.updateDynamic("endHour")(endHour.asInstanceOf[js.Any])
-    if (endMinute != null) __obj.updateDynamic("endMinute")(endMinute.asInstanceOf[js.Any])
-    if (startHour != null) __obj.updateDynamic("startHour")(startHour.asInstanceOf[js.Any])
-    if (startMinute != null) __obj.updateDynamic("startMinute")(startMinute.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTargetingValueDayPartTargetingDayPart]
   }
+  @scala.inline
+  implicit class SchemaTargetingValueDayPartTargetingDayPartOps[Self <: SchemaTargetingValueDayPartTargetingDayPart] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDayOfWeek(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndHour(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndMinute(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endMinute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndMinute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endMinute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartHour(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartMinute(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMinute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartMinute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startMinute")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

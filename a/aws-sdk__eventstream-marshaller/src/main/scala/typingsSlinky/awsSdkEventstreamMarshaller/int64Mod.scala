@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 object int64Mod extends js.Object {
   @js.native
   class Int64 protected () extends js.Object {
-    def this(bytes: scala.scalajs.js.typedarray.Uint8Array) = this()
-    val bytes: scala.scalajs.js.typedarray.Uint8Array = js.native
+    def this(bytes: js.typedarray.Uint8Array) = this()
+    val bytes: js.typedarray.Uint8Array = js.native
   }
   
   /* static members */

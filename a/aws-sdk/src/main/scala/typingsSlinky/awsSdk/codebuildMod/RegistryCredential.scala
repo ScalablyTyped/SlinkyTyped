@@ -20,8 +20,27 @@ object RegistryCredential {
   @scala.inline
   def apply(credential: NonEmptyString, credentialProvider: CredentialProviderType): RegistryCredential = {
     val __obj = js.Dynamic.literal(credential = credential.asInstanceOf[js.Any], credentialProvider = credentialProvider.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RegistryCredential]
   }
+  @scala.inline
+  implicit class RegistryCredentialOps[Self <: RegistryCredential] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCredential(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credential")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCredentialProvider(value: CredentialProviderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

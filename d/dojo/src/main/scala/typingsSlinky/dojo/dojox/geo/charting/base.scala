@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait base extends js.Object {
   /**
     * Hides the tooltip displayed around the given shape.
     *
     * @param gfxObject A gfx shape.
     */
-  def hideTooltip(gfxObject: Shape): Unit
+  def hideTooltip(gfxObject: Shape): Unit = js.native
   /**
     * Show a Tooltip displaying the given HTML message around the given gfx shape.
     *
@@ -24,15 +25,34 @@ trait base extends js.Object {
     * @param gfxObject The gfx shape around which the tooltip will be placed.
     * @param positions               Optional
     */
-  def showTooltip(innerHTML: String, gfxObject: Shape, positions: js.Array[String]): Unit
+  def showTooltip(innerHTML: String, gfxObject: Shape, positions: js.Array[String]): Unit = js.native
 }
 
 object base {
   @scala.inline
   def apply(hideTooltip: Shape => Unit, showTooltip: (String, Shape, js.Array[String]) => Unit): base = {
     val __obj = js.Dynamic.literal(hideTooltip = js.Any.fromFunction1(hideTooltip), showTooltip = js.Any.fromFunction3(showTooltip))
-  
     __obj.asInstanceOf[base]
   }
+  @scala.inline
+  implicit class baseOps[Self <: base] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHideTooltip(value: Shape => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTooltip")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShowTooltip(value: (String, Shape, js.Array[String]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTooltip")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

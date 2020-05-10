@@ -1,10 +1,8 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonOldIndex
 import typingsSlinky.baseui.dndListMod.ListOverrides
 import typingsSlinky.baseui.dndListMod.ListProps
@@ -12,31 +10,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object List
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.dndListMod.List] {
+object List {
   @JSImport("baseui/dnd-list", "List")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    items: js.Array[TagMod[Any]] = null,
-    onChange: /* args */ AnonOldIndex => _ = null,
-    overrides: ListOverrides = null,
-    removable: js.UndefOr[Boolean] = js.undefined,
-    removableByMove: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.dndListMod.List] = {
-    val __obj = js.Dynamic.literal()
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (!js.isUndefined(removable)) __obj.updateDynamic("removable")(removable.asInstanceOf[js.Any])
-    if (!js.isUndefined(removableByMove)) __obj.updateDynamic("removableByMove")(removableByMove.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.dndListMod.List] {
+    @scala.inline
+    def items(value: js.Array[TagMod[Any]]): this.type = set("items", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* args */ AnonOldIndex => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: ListOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removable(value: Boolean): this.type = set("removable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removableByMove(value: Boolean): this.type = set("removableByMove", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.dndListMod.List] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.dndListMod.List](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ListProps
+  
+  def withProps(p: ListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: List.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

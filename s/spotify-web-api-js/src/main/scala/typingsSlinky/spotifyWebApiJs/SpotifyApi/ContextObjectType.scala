@@ -13,12 +13,10 @@ trait ContextObjectType extends js.Object
 
 object ContextObjectType {
   @scala.inline
-  def album: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.album = this.cast("album")
+  def album: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.album = "album".asInstanceOf[typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.album]
   @scala.inline
-  def artist: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.artist = this.cast("artist")
+  def artist: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.artist = "artist".asInstanceOf[typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.artist]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def playlist: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.playlist = this.cast("playlist")
+  def playlist: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.playlist = "playlist".asInstanceOf[typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.playlist]
 }
 

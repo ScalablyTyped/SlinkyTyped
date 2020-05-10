@@ -12,7 +12,7 @@ package object handlebars {
   type HandlebarsTemplates = org.scalablytyped.runtime.StringDictionary[typingsSlinky.handlebars.HandlebarsTemplateDelegate[js.Any]]
   type KnownHelpers = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ name in handlebars.BuiltinHelperName | handlebars.CustomHelperName ]: boolean}
-    */ typingsSlinky.handlebars.handlebarsStrings.KnownHelpers with js.Any
+    */ typingsSlinky.handlebars.handlebarsStrings.KnownHelpers with org.scalablytyped.runtime.TopLevel[js.Any]
   // for backward compatibility of this typing
   type RuntimeOptions = typingsSlinky.handlebars.Handlebars.RuntimeOptions
 }

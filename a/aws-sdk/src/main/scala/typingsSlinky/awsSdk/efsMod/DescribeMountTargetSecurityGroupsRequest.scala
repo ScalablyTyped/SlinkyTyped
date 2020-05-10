@@ -16,8 +16,21 @@ object DescribeMountTargetSecurityGroupsRequest {
   @scala.inline
   def apply(MountTargetId: MountTargetId): DescribeMountTargetSecurityGroupsRequest = {
     val __obj = js.Dynamic.literal(MountTargetId = MountTargetId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeMountTargetSecurityGroupsRequest]
   }
+  @scala.inline
+  implicit class DescribeMountTargetSecurityGroupsRequestOps[Self <: DescribeMountTargetSecurityGroupsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMountTargetId(value: MountTargetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MountTargetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.rangy
 
+import org.scalajs.dom.raw.HTMLIFrameElement
 import org.scalajs.dom.raw.Range
 import org.scalajs.dom.raw.Selection
 import typingsSlinky.std.Document_
-import typingsSlinky.std.HTMLIFrameElement
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

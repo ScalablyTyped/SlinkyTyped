@@ -5,36 +5,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MapPanes extends js.Object {
-  var floatPane: js.UndefOr[HTMLElement] = js.undefined
-  var floatShadow: js.UndefOr[HTMLElement] = js.undefined
-  var labelPane: js.UndefOr[HTMLElement] = js.undefined
-  var mapPane: js.UndefOr[HTMLElement] = js.undefined
-  var markerMouseTarget: js.UndefOr[HTMLElement] = js.undefined
-  var markerPane: js.UndefOr[HTMLElement] = js.undefined
-  var markerShadow: js.UndefOr[HTMLElement] = js.undefined
+  var floatPane: js.UndefOr[HTMLElement] = js.native
+  var floatShadow: js.UndefOr[HTMLElement] = js.native
+  var labelPane: js.UndefOr[HTMLElement] = js.native
+  var mapPane: js.UndefOr[HTMLElement] = js.native
+  var markerMouseTarget: js.UndefOr[HTMLElement] = js.native
+  var markerPane: js.UndefOr[HTMLElement] = js.native
+  var markerShadow: js.UndefOr[HTMLElement] = js.native
 }
 
 object MapPanes {
   @scala.inline
-  def apply(
-    floatPane: HTMLElement = null,
-    floatShadow: HTMLElement = null,
-    labelPane: HTMLElement = null,
-    mapPane: HTMLElement = null,
-    markerMouseTarget: HTMLElement = null,
-    markerPane: HTMLElement = null,
-    markerShadow: HTMLElement = null
-  ): MapPanes = {
+  def apply(): MapPanes = {
     val __obj = js.Dynamic.literal()
-    if (floatPane != null) __obj.updateDynamic("floatPane")(floatPane.asInstanceOf[js.Any])
-    if (floatShadow != null) __obj.updateDynamic("floatShadow")(floatShadow.asInstanceOf[js.Any])
-    if (labelPane != null) __obj.updateDynamic("labelPane")(labelPane.asInstanceOf[js.Any])
-    if (mapPane != null) __obj.updateDynamic("mapPane")(mapPane.asInstanceOf[js.Any])
-    if (markerMouseTarget != null) __obj.updateDynamic("markerMouseTarget")(markerMouseTarget.asInstanceOf[js.Any])
-    if (markerPane != null) __obj.updateDynamic("markerPane")(markerPane.asInstanceOf[js.Any])
-    if (markerShadow != null) __obj.updateDynamic("markerShadow")(markerShadow.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapPanes]
   }
+  @scala.inline
+  implicit class MapPanesOps[Self <: MapPanes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFloatPane(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatPane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloatPane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatPane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloatShadow(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatShadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloatShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floatShadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelPane(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelPane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapPane(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapPane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapPane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapPane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerMouseTarget(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerMouseTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerMouseTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerMouseTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerPane(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerPane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerPane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerPane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerShadow(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerShadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerShadow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

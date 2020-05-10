@@ -15,14 +15,12 @@ trait EventVisibility extends js.Object
 
 object EventVisibility {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def confidential: typingsSlinky.gapiCalendar.gapiCalendarStrings.confidential = "confidential".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.confidential]
   @scala.inline
-  def confidential: typingsSlinky.gapiCalendar.gapiCalendarStrings.confidential = this.cast("confidential")
+  def default: typingsSlinky.gapiCalendar.gapiCalendarStrings.default = "default".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.default]
   @scala.inline
-  def default: typingsSlinky.gapiCalendar.gapiCalendarStrings.default = this.cast("default")
+  def `private`: typingsSlinky.gapiCalendar.gapiCalendarStrings.`private` = "private".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.`private`]
   @scala.inline
-  def `private`: typingsSlinky.gapiCalendar.gapiCalendarStrings.`private` = this.cast("private")
-  @scala.inline
-  def public: typingsSlinky.gapiCalendar.gapiCalendarStrings.public = this.cast("public")
+  def public: typingsSlinky.gapiCalendar.gapiCalendarStrings.public = "public".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.public]
 }
 

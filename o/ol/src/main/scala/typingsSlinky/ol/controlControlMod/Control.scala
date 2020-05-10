@@ -12,8 +12,9 @@ trait Control
   var element: HTMLElement = js.native
   var listenerKeys: js.Array[EventsKey] = js.native
   def getMap(): typingsSlinky.ol.pluggableMapMod.default = js.native
+  def render(mapEvent: typingsSlinky.ol.mapEventMod.default): Unit = js.native
   def setMap(map: typingsSlinky.ol.pluggableMapMod.default): Unit = js.native
   def setTarget(target: String): Unit = js.native
-  def setTarget(target: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setTarget(target: HTMLElement): Unit = js.native
 }
 

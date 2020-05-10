@@ -6,90 +6,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgSpreadsheet
   extends /**
-	 * Option for igSpreadsheet
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Invoked when an action is executed on the Spreadsheet.
   	 */
-  var actionExecuted: js.UndefOr[ActionExecutedEvent] = js.undefined
+  var actionExecuted: js.UndefOr[ActionExecutedEvent] = js.native
   /**
   	 * Invoked when an action is about to be executed by the Spreadsheet.
   	 */
-  var actionExecuting: js.UndefOr[ActionExecutingEvent] = js.undefined
+  var actionExecuting: js.UndefOr[ActionExecutingEvent] = js.native
   /**
   	 * Returns or sets the A1 format address of the current active cell within the selected worksheet.
   	 *
   	 */
-  var activeCell: js.UndefOr[String] = js.undefined
+  var activeCell: js.UndefOr[String] = js.native
   /**
   	 * Invoked when the activeCell of the Spreadsheet has changed.
   	 */
-  var activeCellChanged: js.UndefOr[ActiveCellChangedEvent] = js.undefined
+  var activeCellChanged: js.UndefOr[ActiveCellChangedEvent] = js.native
   /**
   	 * Invoked when the activePane of the Spreadsheet has changed.
   	 */
-  var activePaneChanged: js.UndefOr[ActivePaneChangedEvent] = js.undefined
+  var activePaneChanged: js.UndefOr[ActivePaneChangedEvent] = js.native
   /**
   	 * Invoked when the activeTable of the Spreadsheet has changed.
   	 */
-  var activeTableChanged: js.UndefOr[ActiveTableChangedEvent] = js.undefined
+  var activeTableChanged: js.UndefOr[ActiveTableChangedEvent] = js.native
   /**
   	 * Returns or sets the Worksheet from the workbook whose content should be displayed within the control.
   	 *
   	 */
-  var activeWorksheet: js.UndefOr[js.Any] = js.undefined
+  var activeWorksheet: js.UndefOr[js.Any] = js.native
   /**
   	 * Invoked when the activeWorksheet of the Spreadsheet has changed.
   	 */
-  var activeWorksheetChanged: js.UndefOr[ActiveWorksheetChangedEvent] = js.undefined
+  var activeWorksheetChanged: js.UndefOr[ActiveWorksheetChangedEvent] = js.native
   /**
   	 * Returns or sets a boolean indicating whether the spreadsheet allows adding worksheets.
   	 *
   	 */
-  var allowAddWorksheet: js.UndefOr[Boolean] = js.undefined
+  var allowAddWorksheet: js.UndefOr[Boolean] = js.native
   /**
   	 * Returns or sets a boolean indicating whether the spreadsheet allows deleting worksheets.
   	 *
   	 */
-  var allowDeleteWorksheet: js.UndefOr[Boolean] = js.undefined
+  var allowDeleteWorksheet: js.UndefOr[Boolean] = js.native
   /**
   	 * Returns or sets a boolean indicating if the grid lines are displayed in the selected worksheets.
   	 *
   	 */
-  var areGridlinesVisible: js.UndefOr[Boolean] = js.undefined
+  var areGridlinesVisible: js.UndefOr[Boolean] = js.native
   /**
   	 * Returns or sets a boolean indicating if the row and column headers are displayed for the selected worksheets.
   	 *
   	 */
-  var areHeadersVisible: js.UndefOr[Boolean] = js.undefined
+  var areHeadersVisible: js.UndefOr[Boolean] = js.native
   /**
   	 * Returns or sets an object with brushes for areas of the spreadsheet. The property name should be an item in the [SpreadsheetResourceId enumeration](ig.spreadsheet.SpreadsheetResourceId) and the property value a string representing a brush. These brushes override any css styling for the associated object.
   	 *
   	 */
-  var brushes: js.UndefOr[IgSpreadsheetBrushes] = js.undefined
+  var brushes: js.UndefOr[IgSpreadsheetBrushes] = js.native
   /**
   	 * Invoked when a contextmenu is being opened for the Spreadsheet.
   	 */
-  var contextMenuOpening: js.UndefOr[ContextMenuOpeningEvent] = js.undefined
+  var contextMenuOpening: js.UndefOr[ContextMenuOpeningEvent] = js.native
   /**
   	 * Invoked when the Spreadsheet has started in-place editing of the activeCell.
   	 */
-  var editModeEntered: js.UndefOr[EditModeEnteredEvent] = js.undefined
+  var editModeEntered: js.UndefOr[EditModeEnteredEvent] = js.native
   /**
   	 * Invoked when the Spreadsheet is about to start in-place editing of the activeCell.
   	 */
-  var editModeEntering: js.UndefOr[EditModeEnteringEvent] = js.undefined
+  var editModeEntering: js.UndefOr[EditModeEnteringEvent] = js.native
   /**
   	 * Invoked when the Spreadsheet has ended the in-place editing of the activeCell.
   	 */
-  var editModeExited: js.UndefOr[EditModeExitedEvent] = js.undefined
+  var editModeExited: js.UndefOr[EditModeExitedEvent] = js.native
   /**
   	 * Invoked when the Spreadsheet is about to end the in-place editing of the activeCell.
   	 */
-  var editModeExiting: js.UndefOr[EditModeExitingEvent] = js.undefined
+  var editModeExiting: js.UndefOr[EditModeExitingEvent] = js.native
   /**
   	 * Invoked when the Spreadsheet is exiting edit mode and the new value for the activeCell is not valid based on the criteria of that cell's ig.excel.DataValidationRule.
   	 * The EditModeValidationError is raised while exiting edit mode if the new value for the activeCell is not valid based on the criteria of that cell's ig.excel.DataValidationRule.
@@ -97,11 +98,11 @@ trait IgSpreadsheet
   	 * showErrorMessageForInvalidValue is true, a message box will be displayed to the end user to determine what action to take. One can handle this event and specify the action that should
   	 * be taken using the action.Note: The validation rule will not be evaluated if edit mode is being cancelled such as when the user presses Escape to cancel edit.Note: The action will default to AcceptChange if the ShowErrorMessageForInvalidValue of the validationRule is false; otherwise it will default to ShowPrompt.Note: Like Microsoft Excel, only the validation rule of the active cell is considered even if the update is affecting other cells in the selection.
   	 */
-  var editModeValidationError: js.UndefOr[EditModeValidationErrorEvent] = js.undefined
+  var editModeValidationError: js.UndefOr[EditModeValidationErrorEvent] = js.native
   /**
   	 * Invoked when the Spreadsheet is performing an operation on a protected Worksheet and there is a single range that may be unlocked to allow the operation to be performed.
   	 */
-  var editRangePasswordNeeded: js.UndefOr[EditRangePasswordNeededEvent] = js.undefined
+  var editRangePasswordNeeded: js.UndefOr[EditRangePasswordNeededEvent] = js.native
   /**
   	 * Returns or sets an enumeration indicating the direction of the cell adjacent to the activeCell that should be activated when the enter key is pressed.
   	 * This property is only used if the isEnterKeyNavigationEnabled is set to true. Also, the reverse direction is
@@ -112,12 +113,12 @@ trait IgSpreadsheet
   	 * left  The cell to the left should be activated
   	 *
   	 */
-  var enterKeyNavigationDirection: js.UndefOr[String] = js.undefined
+  var enterKeyNavigationDirection: js.UndefOr[String] = js.native
   /**
   	 * Returns or sets the number of decimal places by which a whole number typed in during edit mode should be adjusted when isFixedDecimalEnabled is true
   	 *
   	 */
-  var fixedDecimalPlaceCount: js.UndefOr[Double] = js.undefined
+  var fixedDecimalPlaceCount: js.UndefOr[Double] = js.native
   /**
   	 * The height of the spreadsheet. It can be set as a number in pixels, string (px) or percentage (%).
   	 *
@@ -126,26 +127,26 @@ trait IgSpreadsheet
   	 * "string" The widget height can be set in pixels (px) and percentage (%).
   	 * "number" The widget height can be set as a number
   	 */
-  var height: js.UndefOr[String | Double] = js.undefined
+  var height: js.UndefOr[String | Double] = js.native
   /**
   	 * Invoked when a hyperlink is being followed in the Spreadsheet.
   	 */
-  var hyperlinkExecuting: js.UndefOr[HyperlinkExecutingEvent] = js.undefined
+  var hyperlinkExecuting: js.UndefOr[HyperlinkExecutingEvent] = js.native
   /**
   	 * Returns or sets a boolean indicating whether the adjacent cell indicated by the enterKeyNavigationDirection should be navigated to when the enter key is pressed.
   	 *
   	 */
-  var isEnterKeyNavigationEnabled: js.UndefOr[Boolean] = js.undefined
+  var isEnterKeyNavigationEnabled: js.UndefOr[Boolean] = js.native
   /**
   	 * Returns or sets a boolean indicating whether a fixed decimal place is automatically added when a whole number is entered while in edit mode.
   	 *
   	 */
-  var isFixedDecimalEnabled: js.UndefOr[Boolean] = js.undefined
+  var isFixedDecimalEnabled: js.UndefOr[Boolean] = js.native
   /**
   	 * Returns or sets a boolean indicating if the formula bar is displayed within the Spreadsheet.
   	 *
   	 */
-  var isFormulaBarVisible: js.UndefOr[Boolean] = js.undefined
+  var isFormulaBarVisible: js.UndefOr[Boolean] = js.native
   /**
   	 * Returns or sets a boolean indicating whether the control is in "End mode".
   	 * End mode is a mode that affects certain keyboard navigation such as navigating with the arrow keys. For example when in
@@ -154,7 +155,7 @@ trait IgSpreadsheet
   	 * mode will end automatically such as when one presses an arrow key.
   	 *
   	 */
-  var isInEndMode: js.UndefOr[Boolean] = js.undefined
+  var isInEndMode: js.UndefOr[Boolean] = js.native
   /**
   	 * Returns or sets a boolean indicating whether the scroll lock key is toggled.
   	 * This property is used when certain keys are pressed while the control has focus. For example
@@ -163,41 +164,41 @@ trait IgSpreadsheet
   	 * performing actions that consider whether the scroll lock is enabled.
   	 *
   	 */
-  var isScrollLocked: js.UndefOr[Boolean] = js.undefined
+  var isScrollLocked: js.UndefOr[Boolean] = js.native
   /**
   	 * Returns or sets a boolean indicating whether undo is enabled for the control.
   	 *
   	 */
-  var isUndoEnabled: js.UndefOr[Boolean] = js.undefined
+  var isUndoEnabled: js.UndefOr[Boolean] = js.native
   /**
   	 * Set/Get the locale language setting for the widget.
   	 *
   	 */
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
   /**
   	 * Set/Get the locale setting for the widget.
   	 *
   	 */
-  var locale: js.UndefOr[js.Any] = js.undefined
+  var locale: js.UndefOr[js.Any] = js.native
   /**
   	 * Returns or sets the width of the name box within the formula bar.
   	 *
   	 */
-  var nameBoxWidth: js.UndefOr[Double] = js.undefined
+  var nameBoxWidth: js.UndefOr[Double] = js.native
   /**
   	 * Set/Get the regional setting for the widget.
   	 *
   	 */
-  var regional: js.UndefOr[String | js.Object] = js.undefined
+  var regional: js.UndefOr[String | js.Object] = js.native
   /**
   	 * Type="ig.excel.Worksheet[]" Returns or sets an array of the Worksheets whose tabs are selected.
   	 *
   	 */
-  var selectedWorksheets: js.UndefOr[js.Any] = js.undefined
+  var selectedWorksheets: js.UndefOr[js.Any] = js.native
   /**
   	 * Invoked when the selection for a ig.spreadsheet.SpreadsheetPane of the Spreadsheet is changed.
   	 */
-  var selectionChanged: js.UndefOr[IgSpreadsheetSelectionChangedEvent] = js.undefined
+  var selectionChanged: js.UndefOr[IgSpreadsheetSelectionChangedEvent] = js.native
   /**
   	 * Returns or sets a value indicating how the selection is updated when interacting with the cells via the mouse or keyboard.
   	 * normal  The selection is replaced when dragging the mouse to select a cell or range of cells. Similarly when navigating via the keyboard a new selection is created. One may add a new range by holding the Ctrl key and using the mouse and one may alter the selection range containing the active cell by holding the Shift key down while clicking with the mouse or navigating with the keyboard such as with the arrow keys.
@@ -205,17 +206,17 @@ trait IgSpreadsheet
   	 * addToSelection  New cell ranges are added to the cellRanges without needing to hold down the ctrl key when dragging via the mouse and a range is added with the first arrow key navigation after entering the mode. One can enter the mode by pressing Shift+F8.
   	 *
   	 */
-  var selectionMode: js.UndefOr[String] = js.undefined
+  var selectionMode: js.UndefOr[String] = js.native
   /**
   	 * Invoked when the user will be prompted with a message regarding an operation that is being performed.
   	 */
-  var userPromptDisplaying: js.UndefOr[UserPromptDisplayingEvent] = js.undefined
+  var userPromptDisplaying: js.UndefOr[UserPromptDisplayingEvent] = js.native
   /**
   	 * Returns or sets the position of the screen tip used to display the input message for the data validation rule associated with the active cell.
   	 *
   	 * The provided object should have numeric properties called x and y.
   	 */
-  var validationInputMessagePosition: js.UndefOr[js.Any] = js.undefined
+  var validationInputMessagePosition: js.UndefOr[js.Any] = js.native
   /**
   	 * The width of the spreadsheet. It can be set as a number in pixels, string (px) or percentage (%).
   	 *
@@ -224,12 +225,12 @@ trait IgSpreadsheet
   	 * "string" The widget width can be set in pixels (px) and percentage (%).
   	 * "number" The widget width can be set as a number
   	 */
-  var width: js.UndefOr[String | Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.native
   /**
   	 * Returns or sets the workbook whose information is displayed in the control.
   	 *
   	 */
-  var workbook: js.UndefOr[js.Any] = js.undefined
+  var workbook: js.UndefOr[js.Any] = js.native
   /**
   	 * Invoked when a change has been made to the workbook that might require a save.
   	 * Note: This event is invoked asynchronously with regards to the change(s) that
@@ -237,111 +238,543 @@ trait IgSpreadsheet
   	 * does change state on the Workbook or one of its subobjects. An example of that would be a zoom
   	 * type operation (e.g. changing the magnificationInNormalView).
   	 */
-  var workbookDirtied: js.UndefOr[WorkbookDirtiedEvent] = js.undefined
+  var workbookDirtied: js.UndefOr[WorkbookDirtiedEvent] = js.native
   /**
   	 * Returns or sets the magnification of the selected worksheets.
   	 *
   	 */
-  var zoomLevel: js.UndefOr[Double] = js.undefined
+  var zoomLevel: js.UndefOr[Double] = js.native
 }
 
 object IgSpreadsheet {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for igSpreadsheet
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    actionExecuted: (/* event */ Event_, /* ui */ ActionExecutedEventUIParam) => Unit = null,
-    actionExecuting: (/* event */ Event_, /* ui */ ActionExecutingEventUIParam) => Unit = null,
-    activeCell: String = null,
-    activeCellChanged: (/* event */ Event_, /* ui */ ActiveCellChangedEventUIParam) => Unit = null,
-    activePaneChanged: (/* event */ Event_, /* ui */ ActivePaneChangedEventUIParam) => Unit = null,
-    activeTableChanged: (/* event */ Event_, /* ui */ ActiveTableChangedEventUIParam) => Unit = null,
-    activeWorksheet: js.Any = null,
-    activeWorksheetChanged: (/* event */ Event_, /* ui */ ActiveWorksheetChangedEventUIParam) => Unit = null,
-    allowAddWorksheet: js.UndefOr[Boolean] = js.undefined,
-    allowDeleteWorksheet: js.UndefOr[Boolean] = js.undefined,
-    areGridlinesVisible: js.UndefOr[Boolean] = js.undefined,
-    areHeadersVisible: js.UndefOr[Boolean] = js.undefined,
-    brushes: IgSpreadsheetBrushes = null,
-    contextMenuOpening: (/* event */ Event_, /* ui */ ContextMenuOpeningEventUIParam) => Unit = null,
-    editModeEntered: (/* event */ Event_, /* ui */ EditModeEnteredEventUIParam) => Unit = null,
-    editModeEntering: (/* event */ Event_, /* ui */ EditModeEnteringEventUIParam) => Unit = null,
-    editModeExited: (/* event */ Event_, /* ui */ EditModeExitedEventUIParam) => Unit = null,
-    editModeExiting: (/* event */ Event_, /* ui */ EditModeExitingEventUIParam) => Unit = null,
-    editModeValidationError: (/* event */ Event_, /* ui */ EditModeValidationErrorEventUIParam) => Unit = null,
-    editRangePasswordNeeded: (/* event */ Event_, /* ui */ EditRangePasswordNeededEventUIParam) => Unit = null,
-    enterKeyNavigationDirection: String = null,
-    fixedDecimalPlaceCount: Int | Double = null,
-    height: String | Double = null,
-    hyperlinkExecuting: (/* event */ Event_, /* ui */ HyperlinkExecutingEventUIParam) => Unit = null,
-    isEnterKeyNavigationEnabled: js.UndefOr[Boolean] = js.undefined,
-    isFixedDecimalEnabled: js.UndefOr[Boolean] = js.undefined,
-    isFormulaBarVisible: js.UndefOr[Boolean] = js.undefined,
-    isInEndMode: js.UndefOr[Boolean] = js.undefined,
-    isScrollLocked: js.UndefOr[Boolean] = js.undefined,
-    isUndoEnabled: js.UndefOr[Boolean] = js.undefined,
-    language: String = null,
-    locale: js.Any = null,
-    nameBoxWidth: Int | Double = null,
-    regional: String | js.Object = null,
-    selectedWorksheets: js.Any = null,
-    selectionChanged: (/* event */ Event_, /* ui */ IgSpreadsheetSelectionChangedEventUIParam) => Unit = null,
-    selectionMode: String = null,
-    userPromptDisplaying: (/* event */ Event_, /* ui */ UserPromptDisplayingEventUIParam) => Unit = null,
-    validationInputMessagePosition: js.Any = null,
-    width: String | Double = null,
-    workbook: js.Any = null,
-    workbookDirtied: (/* event */ Event_, /* ui */ WorkbookDirtiedEventUIParam) => Unit = null,
-    zoomLevel: Int | Double = null
-  ): IgSpreadsheet = {
+  def apply(): IgSpreadsheet = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (actionExecuted != null) __obj.updateDynamic("actionExecuted")(js.Any.fromFunction2(actionExecuted))
-    if (actionExecuting != null) __obj.updateDynamic("actionExecuting")(js.Any.fromFunction2(actionExecuting))
-    if (activeCell != null) __obj.updateDynamic("activeCell")(activeCell.asInstanceOf[js.Any])
-    if (activeCellChanged != null) __obj.updateDynamic("activeCellChanged")(js.Any.fromFunction2(activeCellChanged))
-    if (activePaneChanged != null) __obj.updateDynamic("activePaneChanged")(js.Any.fromFunction2(activePaneChanged))
-    if (activeTableChanged != null) __obj.updateDynamic("activeTableChanged")(js.Any.fromFunction2(activeTableChanged))
-    if (activeWorksheet != null) __obj.updateDynamic("activeWorksheet")(activeWorksheet.asInstanceOf[js.Any])
-    if (activeWorksheetChanged != null) __obj.updateDynamic("activeWorksheetChanged")(js.Any.fromFunction2(activeWorksheetChanged))
-    if (!js.isUndefined(allowAddWorksheet)) __obj.updateDynamic("allowAddWorksheet")(allowAddWorksheet.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowDeleteWorksheet)) __obj.updateDynamic("allowDeleteWorksheet")(allowDeleteWorksheet.asInstanceOf[js.Any])
-    if (!js.isUndefined(areGridlinesVisible)) __obj.updateDynamic("areGridlinesVisible")(areGridlinesVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(areHeadersVisible)) __obj.updateDynamic("areHeadersVisible")(areHeadersVisible.asInstanceOf[js.Any])
-    if (brushes != null) __obj.updateDynamic("brushes")(brushes.asInstanceOf[js.Any])
-    if (contextMenuOpening != null) __obj.updateDynamic("contextMenuOpening")(js.Any.fromFunction2(contextMenuOpening))
-    if (editModeEntered != null) __obj.updateDynamic("editModeEntered")(js.Any.fromFunction2(editModeEntered))
-    if (editModeEntering != null) __obj.updateDynamic("editModeEntering")(js.Any.fromFunction2(editModeEntering))
-    if (editModeExited != null) __obj.updateDynamic("editModeExited")(js.Any.fromFunction2(editModeExited))
-    if (editModeExiting != null) __obj.updateDynamic("editModeExiting")(js.Any.fromFunction2(editModeExiting))
-    if (editModeValidationError != null) __obj.updateDynamic("editModeValidationError")(js.Any.fromFunction2(editModeValidationError))
-    if (editRangePasswordNeeded != null) __obj.updateDynamic("editRangePasswordNeeded")(js.Any.fromFunction2(editRangePasswordNeeded))
-    if (enterKeyNavigationDirection != null) __obj.updateDynamic("enterKeyNavigationDirection")(enterKeyNavigationDirection.asInstanceOf[js.Any])
-    if (fixedDecimalPlaceCount != null) __obj.updateDynamic("fixedDecimalPlaceCount")(fixedDecimalPlaceCount.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (hyperlinkExecuting != null) __obj.updateDynamic("hyperlinkExecuting")(js.Any.fromFunction2(hyperlinkExecuting))
-    if (!js.isUndefined(isEnterKeyNavigationEnabled)) __obj.updateDynamic("isEnterKeyNavigationEnabled")(isEnterKeyNavigationEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isFixedDecimalEnabled)) __obj.updateDynamic("isFixedDecimalEnabled")(isFixedDecimalEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isFormulaBarVisible)) __obj.updateDynamic("isFormulaBarVisible")(isFormulaBarVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInEndMode)) __obj.updateDynamic("isInEndMode")(isInEndMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(isScrollLocked)) __obj.updateDynamic("isScrollLocked")(isScrollLocked.asInstanceOf[js.Any])
-    if (!js.isUndefined(isUndoEnabled)) __obj.updateDynamic("isUndoEnabled")(isUndoEnabled.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (nameBoxWidth != null) __obj.updateDynamic("nameBoxWidth")(nameBoxWidth.asInstanceOf[js.Any])
-    if (regional != null) __obj.updateDynamic("regional")(regional.asInstanceOf[js.Any])
-    if (selectedWorksheets != null) __obj.updateDynamic("selectedWorksheets")(selectedWorksheets.asInstanceOf[js.Any])
-    if (selectionChanged != null) __obj.updateDynamic("selectionChanged")(js.Any.fromFunction2(selectionChanged))
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (userPromptDisplaying != null) __obj.updateDynamic("userPromptDisplaying")(js.Any.fromFunction2(userPromptDisplaying))
-    if (validationInputMessagePosition != null) __obj.updateDynamic("validationInputMessagePosition")(validationInputMessagePosition.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (workbook != null) __obj.updateDynamic("workbook")(workbook.asInstanceOf[js.Any])
-    if (workbookDirtied != null) __obj.updateDynamic("workbookDirtied")(js.Any.fromFunction2(workbookDirtied))
-    if (zoomLevel != null) __obj.updateDynamic("zoomLevel")(zoomLevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgSpreadsheet]
   }
+  @scala.inline
+  implicit class IgSpreadsheetOps[Self <: IgSpreadsheet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionExecuted(value: (/* event */ Event_, /* ui */ ActionExecutedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionExecuted")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutActionExecuted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionExecuted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActionExecuting(value: (/* event */ Event_, /* ui */ ActionExecutingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionExecuting")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutActionExecuting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionExecuting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActiveCell(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActiveCellChanged(value: (/* event */ Event_, /* ui */ ActiveCellChangedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeCellChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutActiveCellChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeCellChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivePaneChanged(value: (/* event */ Event_, /* ui */ ActivePaneChangedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activePaneChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutActivePaneChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activePaneChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActiveTableChanged(value: (/* event */ Event_, /* ui */ ActiveTableChangedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTableChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutActiveTableChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeTableChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActiveWorksheet(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeWorksheet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveWorksheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeWorksheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActiveWorksheetChanged(value: (/* event */ Event_, /* ui */ ActiveWorksheetChangedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeWorksheetChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutActiveWorksheetChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeWorksheetChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowAddWorksheet(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAddWorksheet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowAddWorksheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowAddWorksheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowDeleteWorksheet(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDeleteWorksheet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowDeleteWorksheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowDeleteWorksheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAreGridlinesVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("areGridlinesVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAreGridlinesVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("areGridlinesVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAreHeadersVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("areHeadersVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAreHeadersVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("areHeadersVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrushes(value: IgSpreadsheetBrushes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrushes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brushes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextMenuOpening(value: (/* event */ Event_, /* ui */ ContextMenuOpeningEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuOpening")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutContextMenuOpening: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuOpening")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditModeEntered(value: (/* event */ Event_, /* ui */ EditModeEnteredEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModeEntered")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutEditModeEntered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModeEntered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditModeEntering(value: (/* event */ Event_, /* ui */ EditModeEnteringEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModeEntering")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutEditModeEntering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModeEntering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditModeExited(value: (/* event */ Event_, /* ui */ EditModeExitedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModeExited")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutEditModeExited: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModeExited")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditModeExiting(value: (/* event */ Event_, /* ui */ EditModeExitingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModeExiting")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutEditModeExiting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModeExiting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditModeValidationError(value: (/* event */ Event_, /* ui */ EditModeValidationErrorEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModeValidationError")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutEditModeValidationError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editModeValidationError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditRangePasswordNeeded(value: (/* event */ Event_, /* ui */ EditRangePasswordNeededEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editRangePasswordNeeded")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutEditRangePasswordNeeded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editRangePasswordNeeded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnterKeyNavigationDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterKeyNavigationDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnterKeyNavigationDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterKeyNavigationDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedDecimalPlaceCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDecimalPlaceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedDecimalPlaceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDecimalPlaceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHyperlinkExecuting(value: (/* event */ Event_, /* ui */ HyperlinkExecutingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlinkExecuting")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHyperlinkExecuting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlinkExecuting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsEnterKeyNavigationEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnterKeyNavigationEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsEnterKeyNavigationEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnterKeyNavigationEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsFixedDecimalEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFixedDecimalEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsFixedDecimalEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFixedDecimalEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsFormulaBarVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFormulaBarVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsFormulaBarVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFormulaBarVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsInEndMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInEndMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsInEndMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInEndMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsScrollLocked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isScrollLocked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsScrollLocked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isScrollLocked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsUndoEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUndoEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsUndoEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUndoEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameBoxWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameBoxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameBoxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameBoxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegional(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedWorksheets(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedWorksheets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedWorksheets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedWorksheets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionChanged(value: (/* event */ Event_, /* ui */ IgSpreadsheetSelectionChangedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelectionChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserPromptDisplaying(value: (/* event */ Event_, /* ui */ UserPromptDisplayingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPromptDisplaying")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutUserPromptDisplaying: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPromptDisplaying")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationInputMessagePosition(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationInputMessagePosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationInputMessagePosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationInputMessagePosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkbook(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workbook")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkbook: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workbook")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkbookDirtied(value: (/* event */ Event_, /* ui */ WorkbookDirtiedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workbookDirtied")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutWorkbookDirtied: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workbookDirtied")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomLevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

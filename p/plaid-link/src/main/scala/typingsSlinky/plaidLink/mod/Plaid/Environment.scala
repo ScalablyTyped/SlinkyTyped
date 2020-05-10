@@ -13,12 +13,10 @@ trait Environment extends js.Object
 
 object Environment {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def development: typingsSlinky.plaidLink.plaidLinkStrings.development = "development".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.development]
   @scala.inline
-  def development: typingsSlinky.plaidLink.plaidLinkStrings.development = this.cast("development")
+  def production: typingsSlinky.plaidLink.plaidLinkStrings.production = "production".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.production]
   @scala.inline
-  def production: typingsSlinky.plaidLink.plaidLinkStrings.production = this.cast("production")
-  @scala.inline
-  def sandbox: typingsSlinky.plaidLink.plaidLinkStrings.sandbox = this.cast("sandbox")
+  def sandbox: typingsSlinky.plaidLink.plaidLinkStrings.sandbox = "sandbox".asInstanceOf[typingsSlinky.plaidLink.plaidLinkStrings.sandbox]
 }
 

@@ -22,16 +22,53 @@ trait ResponseTimeRootCauseEntity extends js.Object {
 
 object ResponseTimeRootCauseEntity {
   @scala.inline
-  def apply(
-    Coverage: Int | scala.Double = null,
-    Name: String = null,
-    Remote: js.UndefOr[scala.Boolean] = js.undefined
-  ): ResponseTimeRootCauseEntity = {
+  def apply(): ResponseTimeRootCauseEntity = {
     val __obj = js.Dynamic.literal()
-    if (Coverage != null) __obj.updateDynamic("Coverage")(Coverage.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (!js.isUndefined(Remote)) __obj.updateDynamic("Remote")(Remote.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponseTimeRootCauseEntity]
   }
+  @scala.inline
+  implicit class ResponseTimeRootCauseEntityOps[Self <: ResponseTimeRootCauseEntity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoverage(value: NullableDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Coverage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoverage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Coverage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemote(value: NullableBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Remote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Remote")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

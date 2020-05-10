@@ -20,20 +20,18 @@ trait HttpMethod extends js.Object
 
 object HttpMethod {
   @scala.inline
-  def DELETE: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.GET = "GET".asInstanceOf[typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.GET]
   @scala.inline
-  def HEAD: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.HEAD = this.cast("HEAD")
+  def HEAD: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.HEAD = "HEAD".asInstanceOf[typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.HEAD]
   @scala.inline
-  def OPTIONS: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.OPTIONS = this.cast("OPTIONS")
+  def OPTIONS: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.OPTIONS = "OPTIONS".asInstanceOf[typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.OPTIONS]
   @scala.inline
-  def PATCH: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.POST = "POST".asInstanceOf[typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.PUT = this.cast("PUT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PUT: typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.PUT = "PUT".asInstanceOf[typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.PUT]
 }
 

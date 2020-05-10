@@ -35,22 +35,89 @@ trait SmsChannelState extends js.Object {
 
 object SmsChannelState {
   @scala.inline
-  def apply(
-    applicationId: Input[String] = null,
-    enabled: Input[Boolean] = null,
-    promotionalMessagesPerSecond: Input[Double] = null,
-    senderId: Input[String] = null,
-    shortCode: Input[String] = null,
-    transactionalMessagesPerSecond: Input[Double] = null
-  ): SmsChannelState = {
+  def apply(): SmsChannelState = {
     val __obj = js.Dynamic.literal()
-    if (applicationId != null) __obj.updateDynamic("applicationId")(applicationId.asInstanceOf[js.Any])
-    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (promotionalMessagesPerSecond != null) __obj.updateDynamic("promotionalMessagesPerSecond")(promotionalMessagesPerSecond.asInstanceOf[js.Any])
-    if (senderId != null) __obj.updateDynamic("senderId")(senderId.asInstanceOf[js.Any])
-    if (shortCode != null) __obj.updateDynamic("shortCode")(shortCode.asInstanceOf[js.Any])
-    if (transactionalMessagesPerSecond != null) __obj.updateDynamic("transactionalMessagesPerSecond")(transactionalMessagesPerSecond.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmsChannelState]
   }
+  @scala.inline
+  implicit class SmsChannelStateOps[Self <: SmsChannelState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPromotionalMessagesPerSecond(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promotionalMessagesPerSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromotionalMessagesPerSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promotionalMessagesPerSecond")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSenderId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("senderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSenderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("senderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortCode(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransactionalMessagesPerSecond(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionalMessagesPerSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransactionalMessagesPerSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transactionalMessagesPerSecond")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

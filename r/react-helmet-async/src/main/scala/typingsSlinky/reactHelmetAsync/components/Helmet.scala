@@ -1,10 +1,7 @@
 package typingsSlinky.reactHelmetAsync.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactHelmet.mod.BodyProps
 import typingsSlinky.reactHelmet.mod.HelmetProps
 import typingsSlinky.reactHelmet.mod.HelmetTags
@@ -15,48 +12,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Helmet
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactHelmetAsync.mod.Helmet] {
+object Helmet {
   @JSImport("react-helmet-async", "Helmet")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: async, defer, title */
-  def apply(
-    base: js.Any = null,
-    bodyAttributes: BodyProps = null,
-    defaultTitle: String = null,
-    encodeSpecialCharacters: js.UndefOr[Boolean] = js.undefined,
-    htmlAttributes: HtmlProps = null,
-    link: js.Array[LinkProps] = null,
-    meta: js.Array[MetaProps] = null,
-    noscript: js.Array[_] = null,
-    onChangeClientState: (/* newState */ js.Any, /* addedTags */ HelmetTags, /* removedTags */ HelmetTags) => Unit = null,
-    script: js.Array[_] = null,
-    style: js.Array[_] = null,
-    titleAttributes: js.Object = null,
-    titleTemplate: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactHelmetAsync.mod.Helmet] = {
-    val __obj = js.Dynamic.literal()
-    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
-    if (bodyAttributes != null) __obj.updateDynamic("bodyAttributes")(bodyAttributes.asInstanceOf[js.Any])
-    if (defaultTitle != null) __obj.updateDynamic("defaultTitle")(defaultTitle.asInstanceOf[js.Any])
-    if (!js.isUndefined(encodeSpecialCharacters)) __obj.updateDynamic("encodeSpecialCharacters")(encodeSpecialCharacters.asInstanceOf[js.Any])
-    if (htmlAttributes != null) __obj.updateDynamic("htmlAttributes")(htmlAttributes.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (noscript != null) __obj.updateDynamic("noscript")(noscript.asInstanceOf[js.Any])
-    if (onChangeClientState != null) __obj.updateDynamic("onChangeClientState")(js.Any.fromFunction3(onChangeClientState))
-    if (script != null) __obj.updateDynamic("script")(script.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (titleAttributes != null) __obj.updateDynamic("titleAttributes")(titleAttributes.asInstanceOf[js.Any])
-    if (titleTemplate != null) __obj.updateDynamic("titleTemplate")(titleTemplate.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactHelmetAsync.mod.Helmet] {
+    @scala.inline
+    def async(value: Boolean): this.type = set("async", value.asInstanceOf[js.Any])
+    @scala.inline
+    def base(value: js.Any): this.type = set("base", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyAttributes(value: BodyProps): this.type = set("bodyAttributes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultTitle(value: String): this.type = set("defaultTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def encodeSpecialCharacters(value: Boolean): this.type = set("encodeSpecialCharacters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def htmlAttributes(value: HtmlProps): this.type = set("htmlAttributes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def link(value: js.Array[LinkProps]): this.type = set("link", value.asInstanceOf[js.Any])
+    @scala.inline
+    def meta(value: js.Array[MetaProps]): this.type = set("meta", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noscript(value: js.Array[_]): this.type = set("noscript", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChangeClientState(value: (/* newState */ js.Any, /* addedTags */ HelmetTags, /* removedTags */ HelmetTags) => Unit): this.type = set("onChangeClientState", js.Any.fromFunction3(value))
+    @scala.inline
+    def script(value: js.Array[_]): this.type = set("script", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Array[_]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleAttributes(value: js.Object): this.type = set("titleAttributes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleTemplate(value: String): this.type = set("titleTemplate", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactHelmetAsync.mod.Helmet] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactHelmetAsync.mod.Helmet](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HelmetProps
+  
+  def withProps(p: HelmetProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Helmet.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

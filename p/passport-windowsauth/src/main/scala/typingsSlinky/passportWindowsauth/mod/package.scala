@@ -17,7 +17,12 @@ package object mod {
     scala.Unit
   ]
   type VerifyWithReq = js.Function3[
-    /* req */ typingsSlinky.express.mod.Request_[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary], 
+    /* req */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
     /* profile */ typingsSlinky.passport.mod.Profile, 
     /* done */ typingsSlinky.passportWindowsauth.mod.Verified, 
     scala.Unit

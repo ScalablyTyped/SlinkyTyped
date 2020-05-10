@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
+@js.native
 trait RowPropertiesLoadOptions extends CellPropertiesLoadOptions {
   /**
     *
@@ -19,45 +20,72 @@ trait RowPropertiesLoadOptions extends CellPropertiesLoadOptions {
     * [Api set: ExcelApi 1.9]
     */
   @JSName("format")
-  var format_RowPropertiesLoadOptions: js.UndefOr[CellPropertiesFormatLoadO] = js.undefined
+  var format_RowPropertiesLoadOptions: js.UndefOr[CellPropertiesFormatLoadO] = js.native
   /**
     *
     * Specifies whether to load on the `rowHidden` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var rowHidden: js.UndefOr[Boolean] = js.undefined
+  var rowHidden: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether to load on the `rowIndex` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var rowIndex: js.UndefOr[Boolean] = js.undefined
+  var rowIndex: js.UndefOr[Boolean] = js.native
 }
 
 object RowPropertiesLoadOptions {
   @scala.inline
-  def apply(
-    address: js.UndefOr[Boolean] = js.undefined,
-    addressLocal: js.UndefOr[Boolean] = js.undefined,
-    format: CellPropertiesFormatLoadO = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    hyperlink: js.UndefOr[Boolean] = js.undefined,
-    rowHidden: js.UndefOr[Boolean] = js.undefined,
-    rowIndex: js.UndefOr[Boolean] = js.undefined,
-    style: js.UndefOr[Boolean] = js.undefined
-  ): RowPropertiesLoadOptions = {
+  def apply(): RowPropertiesLoadOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(address)) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (!js.isUndefined(addressLocal)) __obj.updateDynamic("addressLocal")(addressLocal.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(hyperlink)) __obj.updateDynamic("hyperlink")(hyperlink.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowHidden)) __obj.updateDynamic("rowHidden")(rowHidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowIndex)) __obj.updateDynamic("rowIndex")(rowIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowPropertiesLoadOptions]
   }
+  @scala.inline
+  implicit class RowPropertiesLoadOptionsOps[Self <: RowPropertiesLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: CellPropertiesFormatLoadO): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowIndex(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

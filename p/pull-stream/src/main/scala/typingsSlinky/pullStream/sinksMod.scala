@@ -1,7 +1,6 @@
 package typingsSlinky.pullStream
 
 import typingsSlinky.pullStream.mod.Sink
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,9 +30,9 @@ object sinksMod extends js.Object {
   @js.native
   object find extends js.Object {
     def apply[T](): Sink[T] = js.native
-    def apply[T](cb: js.Function2[/* err */ Error | Null, /* results */ js.Array[T], _]): Sink[T] = js.native
-    def apply[T](test: String): Sink[T] = js.native
-    def apply[T](test: String, cb: js.Function2[/* err */ js.Error | Null, /* result */ T, _]): Sink[T] = js.native
+    def apply[T](cb: js.Function2[/* err */ js.Error | Null, /* results */ js.Array[T], _]): Sink[T] = js.native
+    def apply[T](test: /* keyof T */ String): Sink[T] = js.native
+    def apply[T](test: /* keyof T */ String, cb: js.Function2[/* err */ js.Error | Null, /* result */ T, _]): Sink[T] = js.native
     def apply[T](test: js.Function1[/* data */ T, Boolean]): Sink[T] = js.native
     def apply[T](
       test: js.Function1[/* data */ T, Boolean],
@@ -45,7 +44,7 @@ object sinksMod extends js.Object {
   object reduce extends js.Object {
     def apply[T, U](
       reducer: js.Function2[/* acc */ U | Null, /* data */ T, U],
-      cb: js.Function2[/* err */ Error | Null, /* result */ U, _]
+      cb: js.Function2[/* err */ js.Error | Null, /* result */ U, _]
     ): Sink[T] = js.native
     def apply[T, U](
       reducer: js.Function2[/* acc */ U, /* data */ T, U],

@@ -45,16 +45,53 @@ trait SchemaQuotaInfo extends js.Object {
 
 object SchemaQuotaInfo {
   @scala.inline
-  def apply(
-    limitExceeded: js.Array[String] = null,
-    quotaConsumed: StringDictionary[Double] = null,
-    quotaMetrics: js.Array[SchemaMetricValueSet] = null
-  ): SchemaQuotaInfo = {
+  def apply(): SchemaQuotaInfo = {
     val __obj = js.Dynamic.literal()
-    if (limitExceeded != null) __obj.updateDynamic("limitExceeded")(limitExceeded.asInstanceOf[js.Any])
-    if (quotaConsumed != null) __obj.updateDynamic("quotaConsumed")(quotaConsumed.asInstanceOf[js.Any])
-    if (quotaMetrics != null) __obj.updateDynamic("quotaMetrics")(quotaMetrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQuotaInfo]
   }
+  @scala.inline
+  implicit class SchemaQuotaInfoOps[Self <: SchemaQuotaInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLimitExceeded(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limitExceeded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimitExceeded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limitExceeded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaConsumed(value: StringDictionary[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaConsumed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaConsumed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaConsumed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaMetrics(value: js.Array[SchemaMetricValueSet]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaMetrics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

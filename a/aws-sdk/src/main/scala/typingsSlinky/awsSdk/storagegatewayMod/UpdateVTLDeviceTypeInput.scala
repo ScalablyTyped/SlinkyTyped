@@ -20,8 +20,27 @@ object UpdateVTLDeviceTypeInput {
   @scala.inline
   def apply(DeviceType: DeviceType, VTLDeviceARN: VTLDeviceARN): UpdateVTLDeviceTypeInput = {
     val __obj = js.Dynamic.literal(DeviceType = DeviceType.asInstanceOf[js.Any], VTLDeviceARN = VTLDeviceARN.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UpdateVTLDeviceTypeInput]
   }
+  @scala.inline
+  implicit class UpdateVTLDeviceTypeInputOps[Self <: UpdateVTLDeviceTypeInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceType(value: DeviceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVTLDeviceARN(value: VTLDeviceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VTLDeviceARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

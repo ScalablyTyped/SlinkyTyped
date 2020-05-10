@@ -6,17 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRsaprvkey extends js.Object {
-  var rsaprvkey: RSAKey
-  var tbsobj: TBSCertList
+  var rsaprvkey: RSAKey = js.native
+  var tbsobj: TBSCertList = js.native
 }
 
 object AnonRsaprvkey {
   @scala.inline
   def apply(rsaprvkey: RSAKey, tbsobj: TBSCertList): AnonRsaprvkey = {
     val __obj = js.Dynamic.literal(rsaprvkey = rsaprvkey.asInstanceOf[js.Any], tbsobj = tbsobj.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonRsaprvkey]
   }
+  @scala.inline
+  implicit class AnonRsaprvkeyOps[Self <: AnonRsaprvkey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRsaprvkey(value: RSAKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rsaprvkey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTbsobj(value: TBSCertList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbsobj")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

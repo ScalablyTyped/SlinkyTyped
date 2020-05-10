@@ -22,7 +22,7 @@ trait LodashFlatMapDeep extends js.Object {
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
       ListOfRecursiveArraysOrValues[TResult] | TResult
     ]
-  ): LodashFlatMapDeep2x1[T, TResult] = js.native
+  ): js.Array[TResult] = js.native
   def apply[T /* <: js.Object */, TResult](
     iteratee: js.Function1[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 

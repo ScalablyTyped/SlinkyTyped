@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConstrainBooleanParameters extends js.Object {
-  var exact: js.UndefOr[Boolean] = js.undefined
-  var ideal: js.UndefOr[Boolean] = js.undefined
+  var exact: js.UndefOr[Boolean] = js.native
+  var ideal: js.UndefOr[Boolean] = js.native
 }
 
 object ConstrainBooleanParameters {
   @scala.inline
-  def apply(exact: js.UndefOr[Boolean] = js.undefined, ideal: js.UndefOr[Boolean] = js.undefined): ConstrainBooleanParameters = {
+  def apply(): ConstrainBooleanParameters = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(exact)) __obj.updateDynamic("exact")(exact.asInstanceOf[js.Any])
-    if (!js.isUndefined(ideal)) __obj.updateDynamic("ideal")(ideal.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConstrainBooleanParameters]
   }
+  @scala.inline
+  implicit class ConstrainBooleanParametersOps[Self <: ConstrainBooleanParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdeal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdeal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

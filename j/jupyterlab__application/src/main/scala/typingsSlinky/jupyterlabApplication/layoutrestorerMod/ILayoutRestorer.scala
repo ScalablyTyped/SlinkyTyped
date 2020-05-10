@@ -12,17 +12,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ILayoutRestorer
   extends IRestorer[IRestorable[IObservableDisposable, js.Any], IObservableDisposable, js.Any] {
   /**
     * A promise resolved when the layout restorer is ready to receive signals.
     */
   @JSName("restored")
-  var restored_ILayoutRestorer: js.Promise[Unit]
+  var restored_ILayoutRestorer: js.Promise[Unit] = js.native
   /**
     * Add a widget to be tracked by the layout restorer.
     */
-  def add(widget: Widget, name: String): Unit
+  def add(widget: Widget, name: String): Unit = js.native
   /**
     * Restore the widgets of a particular widget tracker.
     *
@@ -30,7 +31,7 @@ trait ILayoutRestorer
     *
     * @param options - The restoration options.
     */
-  def restore[T /* <: Widget */](tracker: WidgetTracker[T], options: IOptions[T]): js.Promise[_]
+  def restore[T /* <: Widget */](tracker: WidgetTracker[T], options: IOptions[T]): js.Promise[_] = js.native
 }
 
 @JSImport("@jupyterlab/application/lib/layoutrestorer", "ILayoutRestorer")

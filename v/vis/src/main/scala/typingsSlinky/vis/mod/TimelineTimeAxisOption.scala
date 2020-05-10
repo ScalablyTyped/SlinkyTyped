@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimelineTimeAxisOption extends js.Object {
-  var scale: js.UndefOr[TimelineTimeAxisScaleType] = js.undefined
-  var step: js.UndefOr[Double] = js.undefined
+  var scale: js.UndefOr[TimelineTimeAxisScaleType] = js.native
+  var step: js.UndefOr[Double] = js.native
 }
 
 object TimelineTimeAxisOption {
   @scala.inline
-  def apply(scale: TimelineTimeAxisScaleType = null, step: Int | Double = null): TimelineTimeAxisOption = {
+  def apply(): TimelineTimeAxisOption = {
     val __obj = js.Dynamic.literal()
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimelineTimeAxisOption]
   }
+  @scala.inline
+  implicit class TimelineTimeAxisOptionOps[Self <: TimelineTimeAxisOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScale(value: TimelineTimeAxisScaleType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

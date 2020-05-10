@@ -2,7 +2,6 @@ package typingsSlinky.ono.typesMod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +21,6 @@ trait OnoConstructor
     * Returns an object containing all properties of the given Error object,
     * which can be used with `JSON.stringify()`.
     */
-  def toJSON(error: Error): ErrorPOJO with js.Error = js.native
+  def toJSON(error: js.Error): ErrorPOJO with js.Error = js.native
 }
 

@@ -1,13 +1,10 @@
 package typingsSlinky.blueprintjsTable.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsTable.commonCellMod.IFocusedCellCoordinates
 import typingsSlinky.blueprintjsTable.draggableMod.ICoordinateData
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
@@ -23,102 +20,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Table
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsTable.mod.Table] {
+object Table {
   @JSImport("@blueprintjs/table", "Table")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    bodyContextMenuRenderer: /* context */ IMenuContext => typingsSlinky.react.mod._Global_.JSX.Element = null,
-    columnWidths: js.Array[js.UndefOr[Double | Null]] = null,
-    defaultColumnWidth: Int | Double = null,
-    defaultRowHeight: Int | Double = null,
-    enableColumnInteractionBar: js.UndefOr[Boolean] = js.undefined,
-    enableColumnReordering: js.UndefOr[Boolean] = js.undefined,
-    enableColumnResizing: js.UndefOr[Boolean] = js.undefined,
-    enableFocusedCell: js.UndefOr[Boolean] = js.undefined,
-    enableGhostCells: js.UndefOr[Boolean] = js.undefined,
-    enableMultipleSelection: js.UndefOr[Boolean] = js.undefined,
-    enableRowHeader: js.UndefOr[Boolean] = js.undefined,
-    enableRowReordering: js.UndefOr[Boolean] = js.undefined,
-    enableRowResizing: js.UndefOr[Boolean] = js.undefined,
-    focusedCell: IFocusedCellCoordinates = null,
-    forceRerenderOnSelectionChange: js.UndefOr[Boolean] = js.undefined,
-    getCellClipboardData: (/* row */ Double, /* col */ Double) => _ = null,
-    loadingOptions: js.Array[TableLoadingOption] = null,
-    maxColumnWidth: Int | Double = null,
-    maxRowHeight: Int | Double = null,
-    minColumnWidth: Int | Double = null,
-    minRowHeight: Int | Double = null,
-    numFrozenColumns: Int | Double = null,
-    numFrozenRows: Int | Double = null,
-    numRows: Int | Double = null,
-    onColumnWidthChanged: (/* index */ Double, /* size */ Double) => Unit = null,
-    onColumnsReordered: (/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double) => Unit = null,
-    onCompleteRender: () => Unit = null,
-    onCopy: /* success */ Boolean => Unit = null,
-    onFocusedCell: /* focusedCell */ IFocusedCellCoordinates => Unit = null,
-    onRowHeightChanged: (/* index */ Double, /* size */ Double) => Unit = null,
-    onRowsReordered: (/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double) => Unit = null,
-    onSelection: /* selectedRegions */ js.Array[IRegion] => Unit = null,
-    onVisibleCellsChange: (/* rowIndices */ IRowIndices, /* columnIndices */ IColumnIndices) => Unit = null,
-    renderMode: RenderMode = null,
-    rowHeaderCellRenderer: /* rowIndex */ Double => ReactElement = null,
-    rowHeights: js.Array[js.UndefOr[Double | Null]] = null,
-    selectedRegionTransform: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion = null,
-    selectedRegions: js.Array[IRegion] = null,
-    selectionModes: js.Array[RegionCardinality] = null,
-    styledRegionGroups: js.Array[IStyledRegionGroup] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.mod.Table] = {
-    val __obj = js.Dynamic.literal()
-    if (bodyContextMenuRenderer != null) __obj.updateDynamic("bodyContextMenuRenderer")(js.Any.fromFunction1(bodyContextMenuRenderer))
-    if (columnWidths != null) __obj.updateDynamic("columnWidths")(columnWidths.asInstanceOf[js.Any])
-    if (defaultColumnWidth != null) __obj.updateDynamic("defaultColumnWidth")(defaultColumnWidth.asInstanceOf[js.Any])
-    if (defaultRowHeight != null) __obj.updateDynamic("defaultRowHeight")(defaultRowHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableColumnInteractionBar)) __obj.updateDynamic("enableColumnInteractionBar")(enableColumnInteractionBar.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableColumnReordering)) __obj.updateDynamic("enableColumnReordering")(enableColumnReordering.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableColumnResizing)) __obj.updateDynamic("enableColumnResizing")(enableColumnResizing.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableFocusedCell)) __obj.updateDynamic("enableFocusedCell")(enableFocusedCell.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGhostCells)) __obj.updateDynamic("enableGhostCells")(enableGhostCells.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableMultipleSelection)) __obj.updateDynamic("enableMultipleSelection")(enableMultipleSelection.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRowHeader)) __obj.updateDynamic("enableRowHeader")(enableRowHeader.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRowReordering)) __obj.updateDynamic("enableRowReordering")(enableRowReordering.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRowResizing)) __obj.updateDynamic("enableRowResizing")(enableRowResizing.asInstanceOf[js.Any])
-    if (focusedCell != null) __obj.updateDynamic("focusedCell")(focusedCell.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceRerenderOnSelectionChange)) __obj.updateDynamic("forceRerenderOnSelectionChange")(forceRerenderOnSelectionChange.asInstanceOf[js.Any])
-    if (getCellClipboardData != null) __obj.updateDynamic("getCellClipboardData")(js.Any.fromFunction2(getCellClipboardData))
-    if (loadingOptions != null) __obj.updateDynamic("loadingOptions")(loadingOptions.asInstanceOf[js.Any])
-    if (maxColumnWidth != null) __obj.updateDynamic("maxColumnWidth")(maxColumnWidth.asInstanceOf[js.Any])
-    if (maxRowHeight != null) __obj.updateDynamic("maxRowHeight")(maxRowHeight.asInstanceOf[js.Any])
-    if (minColumnWidth != null) __obj.updateDynamic("minColumnWidth")(minColumnWidth.asInstanceOf[js.Any])
-    if (minRowHeight != null) __obj.updateDynamic("minRowHeight")(minRowHeight.asInstanceOf[js.Any])
-    if (numFrozenColumns != null) __obj.updateDynamic("numFrozenColumns")(numFrozenColumns.asInstanceOf[js.Any])
-    if (numFrozenRows != null) __obj.updateDynamic("numFrozenRows")(numFrozenRows.asInstanceOf[js.Any])
-    if (numRows != null) __obj.updateDynamic("numRows")(numRows.asInstanceOf[js.Any])
-    if (onColumnWidthChanged != null) __obj.updateDynamic("onColumnWidthChanged")(js.Any.fromFunction2(onColumnWidthChanged))
-    if (onColumnsReordered != null) __obj.updateDynamic("onColumnsReordered")(js.Any.fromFunction3(onColumnsReordered))
-    if (onCompleteRender != null) __obj.updateDynamic("onCompleteRender")(js.Any.fromFunction0(onCompleteRender))
-    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
-    if (onFocusedCell != null) __obj.updateDynamic("onFocusedCell")(js.Any.fromFunction1(onFocusedCell))
-    if (onRowHeightChanged != null) __obj.updateDynamic("onRowHeightChanged")(js.Any.fromFunction2(onRowHeightChanged))
-    if (onRowsReordered != null) __obj.updateDynamic("onRowsReordered")(js.Any.fromFunction3(onRowsReordered))
-    if (onSelection != null) __obj.updateDynamic("onSelection")(js.Any.fromFunction1(onSelection))
-    if (onVisibleCellsChange != null) __obj.updateDynamic("onVisibleCellsChange")(js.Any.fromFunction2(onVisibleCellsChange))
-    if (renderMode != null) __obj.updateDynamic("renderMode")(renderMode.asInstanceOf[js.Any])
-    if (rowHeaderCellRenderer != null) __obj.updateDynamic("rowHeaderCellRenderer")(js.Any.fromFunction1(rowHeaderCellRenderer))
-    if (rowHeights != null) __obj.updateDynamic("rowHeights")(rowHeights.asInstanceOf[js.Any])
-    if (selectedRegionTransform != null) __obj.updateDynamic("selectedRegionTransform")(js.Any.fromFunction3(selectedRegionTransform))
-    if (selectedRegions != null) __obj.updateDynamic("selectedRegions")(selectedRegions.asInstanceOf[js.Any])
-    if (selectionModes != null) __obj.updateDynamic("selectionModes")(selectionModes.asInstanceOf[js.Any])
-    if (styledRegionGroups != null) __obj.updateDynamic("styledRegionGroups")(styledRegionGroups.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.mod.Table] {
+    @scala.inline
+    def bodyContextMenuRenderer(value: /* context */ IMenuContext => ReactElement): this.type = set("bodyContextMenuRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnWidths(value: js.Array[js.UndefOr[Double | Null]]): this.type = set("columnWidths", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultColumnWidth(value: Double): this.type = set("defaultColumnWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultRowHeight(value: Double): this.type = set("defaultRowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableColumnInteractionBar(value: Boolean): this.type = set("enableColumnInteractionBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableColumnReordering(value: Boolean): this.type = set("enableColumnReordering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableColumnResizing(value: Boolean): this.type = set("enableColumnResizing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableFocusedCell(value: Boolean): this.type = set("enableFocusedCell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableGhostCells(value: Boolean): this.type = set("enableGhostCells", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableMultipleSelection(value: Boolean): this.type = set("enableMultipleSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableRowHeader(value: Boolean): this.type = set("enableRowHeader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableRowReordering(value: Boolean): this.type = set("enableRowReordering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableRowResizing(value: Boolean): this.type = set("enableRowResizing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusedCell(value: IFocusedCellCoordinates): this.type = set("focusedCell", value.asInstanceOf[js.Any])
+    @scala.inline
+    def forceRerenderOnSelectionChange(value: Boolean): this.type = set("forceRerenderOnSelectionChange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getCellClipboardData(value: (/* row */ Double, /* col */ Double) => _): this.type = set("getCellClipboardData", js.Any.fromFunction2(value))
+    @scala.inline
+    def loadingOptions(value: js.Array[TableLoadingOption]): this.type = set("loadingOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxColumnWidth(value: Double): this.type = set("maxColumnWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxRowHeight(value: Double): this.type = set("maxRowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minColumnWidth(value: Double): this.type = set("minColumnWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minRowHeight(value: Double): this.type = set("minRowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numFrozenColumns(value: Double): this.type = set("numFrozenColumns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numFrozenRows(value: Double): this.type = set("numFrozenRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numRows(value: Double): this.type = set("numRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onColumnWidthChanged(value: (/* index */ Double, /* size */ Double) => Unit): this.type = set("onColumnWidthChanged", js.Any.fromFunction2(value))
+    @scala.inline
+    def onColumnsReordered(value: (/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double) => Unit): this.type = set("onColumnsReordered", js.Any.fromFunction3(value))
+    @scala.inline
+    def onCompleteRender(value: () => Unit): this.type = set("onCompleteRender", js.Any.fromFunction0(value))
+    @scala.inline
+    def onCopy(value: /* success */ Boolean => Unit): this.type = set("onCopy", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocusedCell(value: /* focusedCell */ IFocusedCellCoordinates => Unit): this.type = set("onFocusedCell", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRowHeightChanged(value: (/* index */ Double, /* size */ Double) => Unit): this.type = set("onRowHeightChanged", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRowsReordered(value: (/* oldIndex */ Double, /* newIndex */ Double, /* length */ Double) => Unit): this.type = set("onRowsReordered", js.Any.fromFunction3(value))
+    @scala.inline
+    def onSelection(value: /* selectedRegions */ js.Array[IRegion] => Unit): this.type = set("onSelection", js.Any.fromFunction1(value))
+    @scala.inline
+    def onVisibleCellsChange(value: (/* rowIndices */ IRowIndices, /* columnIndices */ IColumnIndices) => Unit): this.type = set("onVisibleCellsChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def renderMode(value: RenderMode): this.type = set("renderMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowHeaderCellRenderer(value: /* rowIndex */ Double => ReactElement): this.type = set("rowHeaderCellRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowHeights(value: js.Array[js.UndefOr[Double | Null]]): this.type = set("rowHeights", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedRegionTransform(
+      value: (/* region */ IRegion, /* event */ MouseEvent | KeyboardEvent, /* coords */ js.UndefOr[ICoordinateData]) => IRegion
+    ): this.type = set("selectedRegionTransform", js.Any.fromFunction3(value))
+    @scala.inline
+    def selectedRegions(value: js.Array[IRegion]): this.type = set("selectedRegions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectionModes(value: js.Array[RegionCardinality]): this.type = set("selectionModes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styledRegionGroups(value: js.Array[IStyledRegionGroup]): this.type = set("styledRegionGroups", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.mod.Table] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.blueprintjsTable.mod.Table](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ITableProps
+  
+  def withProps(p: ITableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Table.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

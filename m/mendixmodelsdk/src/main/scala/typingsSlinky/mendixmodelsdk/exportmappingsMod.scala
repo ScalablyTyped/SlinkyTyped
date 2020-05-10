@@ -31,7 +31,7 @@ object exportmappingsMod extends js.Object {
     /**
       * See: {@link https://docs.mendix.com/refguide7/export-mappings relevant section in reference guide}
       */
-    /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+    /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
     - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
     - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -52,20 +52,20 @@ object exportmappingsMod extends js.Object {
       @JSName("model")
       var model_FExportMapping: IModel = js.native
       @JSName("containerAsFolderBase")
-      def containerAsFolderBase_MExportMapping(): FolderBase = js.native
-      def isHeader(): Boolean = js.native
+      def containerAsFolderBase_MExportMapping: FolderBase = js.native
+      def isHeader: Boolean = js.native
       def isHeader(newValue: Boolean): js.Any = js.native
       /**
         * In version 6.7.0: introduced
         */
-      def nullValueOption(): NullValueOption = js.native
+      def nullValueOption: NullValueOption = js.native
       def nullValueOption(newValue: NullValueOption): js.Any = js.native
-      def parameterName(): String = js.native
+      def parameterName: String = js.native
       def parameterName(newValue: String): js.Any = js.native
       /**
         * In version 6.1.0: deleted
         */
-      def parameterTypeName(): String = js.native
+      def parameterTypeName: String = js.native
       def parameterTypeName(newValue: String): js.Any = js.native
     }
     

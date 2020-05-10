@@ -25,6 +25,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
+@js.native
 trait ClassProperty
   extends ASTNode
      with ClassPropertyKind
@@ -32,16 +33,16 @@ trait ClassProperty
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var access: js.UndefOr[public | `private` | `protected`] = js.undefined
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var computed: js.UndefOr[Boolean] = js.undefined
-  var key: LiteralKind | IdentifierKind | ExpressionKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var static: js.UndefOr[Boolean] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassProperty
-  var typeAnnotation: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind | Null] = js.undefined
-  var value: ExpressionKind | Null
-  var variance: js.UndefOr[VarianceKind | plus | minus | Null] = js.undefined
+  var access: js.UndefOr[public | `private` | `protected`] = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var computed: js.UndefOr[Boolean] = js.native
+  var key: LiteralKind | IdentifierKind | ExpressionKind = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var static: js.UndefOr[Boolean] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassProperty = js.native
+  var typeAnnotation: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind | Null] = js.native
+  var value: ExpressionKind | Null = js.native
+  var variance: js.UndefOr[VarianceKind | plus | minus | Null] = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ClassProperty")

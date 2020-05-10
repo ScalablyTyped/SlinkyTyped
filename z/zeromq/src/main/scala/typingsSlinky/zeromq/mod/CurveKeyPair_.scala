@@ -4,25 +4,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CurveKeyPair_ extends js.Object {
   /**
     * A Z85 string denoting the public portion of the Curve25519 key.
     *
     */
-  var public: String
+  var public: String = js.native
   /**
     * A Z85 string denoting the private, secret portion of the Curve25519 key.
     *
     */
-  var secret: String
+  var secret: String = js.native
 }
 
 object CurveKeyPair_ {
   @scala.inline
   def apply(public: String, secret: String): CurveKeyPair_ = {
     val __obj = js.Dynamic.literal(public = public.asInstanceOf[js.Any], secret = secret.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CurveKeyPair_]
   }
+  @scala.inline
+  implicit class CurveKeyPair_Ops[Self <: CurveKeyPair_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPublic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("public")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecret(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

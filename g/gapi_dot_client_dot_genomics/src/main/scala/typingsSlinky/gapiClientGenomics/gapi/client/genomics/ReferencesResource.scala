@@ -7,8 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReferencesResource extends js.Object {
-  var bases: BasesResource
+  var bases: BasesResource = js.native
   /**
     * Gets a reference.
     *
@@ -19,7 +20,7 @@ trait ReferencesResource extends js.Object {
     * Implements
     * [GlobalAllianceApi.getReference](https://github.com/ga4gh/schemas/blob/v0.5.1/src/main/resources/avro/referencemethods.avdl#L158).
     */
-  def get(request: AnonQuotaUser): Request_[Reference]
+  def get(request: AnonQuotaUser): Request_[Reference] = js.native
   /**
     * Searches for references which match the given criteria.
     *
@@ -30,7 +31,7 @@ trait ReferencesResource extends js.Object {
     * Implements
     * [GlobalAllianceApi.searchReferences](https://github.com/ga4gh/schemas/blob/v0.5.1/src/main/resources/avro/referencemethods.avdl#L146).
     */
-  def search(request: AnonAccesstoken): Request_[SearchReferencesResponse]
+  def search(request: AnonAccesstoken): Request_[SearchReferencesResponse] = js.native
 }
 
 object ReferencesResource {
@@ -41,8 +42,33 @@ object ReferencesResource {
     search: AnonAccesstoken => Request_[SearchReferencesResponse]
   ): ReferencesResource = {
     val __obj = js.Dynamic.literal(bases = bases.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), search = js.Any.fromFunction1(search))
-  
     __obj.asInstanceOf[ReferencesResource]
   }
+  @scala.inline
+  implicit class ReferencesResourceOps[Self <: ReferencesResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBases(value: BasesResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonQuotaUser => Request_[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSearch(value: AnonAccesstoken => Request_[SearchReferencesResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

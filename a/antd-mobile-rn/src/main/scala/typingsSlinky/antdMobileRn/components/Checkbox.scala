@@ -1,15 +1,16 @@
 package typingsSlinky.antdMobileRn.components
 
+import typingsSlinky.antdMobileRn.checkboxNativeMod.ICheckboxNativeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Checkbox
-  extends SharedApply_ICheckboxNativeProps2010960906[typingsSlinky.antdMobileRn.mod.Checkbox] {
+object Checkbox {
   @JSImport("antd-mobile-rn", "Checkbox")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ICheckboxNativeProps): SharedBuilder_ICheckboxNativeProps323411610[typingsSlinky.antdMobileRn.mod.Checkbox] = new SharedBuilder_ICheckboxNativeProps323411610[typingsSlinky.antdMobileRn.mod.Checkbox](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Checkbox.type): SharedBuilder_ICheckboxNativeProps323411610[typingsSlinky.antdMobileRn.mod.Checkbox] = new SharedBuilder_ICheckboxNativeProps323411610[typingsSlinky.antdMobileRn.mod.Checkbox](js.Array(this.component, js.Dictionary.empty))()
 }
 

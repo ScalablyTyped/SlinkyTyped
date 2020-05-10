@@ -4,22 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICircleOptions extends IRadiusOptions {
-  var center: js.UndefOr[Vector2D | js.Array[Double]] = js.undefined
+  var center: js.UndefOr[Vector2D | js.Array[Double]] = js.native
 }
 
 object ICircleOptions {
   @scala.inline
-  def apply(
-    center: Vector2D | js.Array[Double] = null,
-    radius: Int | Double = null,
-    resolution: Int | Double = null
-  ): ICircleOptions = {
+  def apply(): ICircleOptions = {
     val __obj = js.Dynamic.literal()
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICircleOptions]
   }
+  @scala.inline
+  implicit class ICircleOptionsOps[Self <: ICircleOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCenter(value: Vector2D | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

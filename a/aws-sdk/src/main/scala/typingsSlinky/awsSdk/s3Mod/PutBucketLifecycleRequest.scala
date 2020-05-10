@@ -22,15 +22,47 @@ trait PutBucketLifecycleRequest extends js.Object {
 
 object PutBucketLifecycleRequest {
   @scala.inline
-  def apply(
-    Bucket: BucketName,
-    ContentMD5: ContentMD5 = null,
-    LifecycleConfiguration: LifecycleConfiguration = null
-  ): PutBucketLifecycleRequest = {
+  def apply(Bucket: BucketName): PutBucketLifecycleRequest = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any])
-    if (ContentMD5 != null) __obj.updateDynamic("ContentMD5")(ContentMD5.asInstanceOf[js.Any])
-    if (LifecycleConfiguration != null) __obj.updateDynamic("LifecycleConfiguration")(LifecycleConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutBucketLifecycleRequest]
   }
+  @scala.inline
+  implicit class PutBucketLifecycleRequestOps[Self <: PutBucketLifecycleRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentMD5(value: ContentMD5): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentMD5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentMD5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecycleConfiguration(value: LifecycleConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycleConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

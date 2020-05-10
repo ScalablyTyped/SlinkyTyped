@@ -1,12 +1,12 @@
 package typingsSlinky.grommet.paragraphMod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLParagraphElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.grommetStrings.color
 import typingsSlinky.grommet.utilsMod.Omit
 import typingsSlinky.react.mod.DetailedHTMLProps
-import typingsSlinky.react.mod.FC
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.HTMLParagraphElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @JSImport("grommet/components/Paragraph", "Paragraph")
 @js.native
 object Paragraph extends TopLevel[
-      FC[
+      ReactComponentClass[
         ParagraphProps with (Omit[
           DetailedHTMLProps[HTMLAttributes[HTMLParagraphElement], HTMLParagraphElement], 
           color

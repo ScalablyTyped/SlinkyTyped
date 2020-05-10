@@ -15,16 +15,14 @@ trait OptionsDateFormatValue extends js.Object
 
 object OptionsDateFormatValue {
   @scala.inline
-  def YYYYSlashmmSlashdd: typingsSlinky.highcharts.highchartsStrings.YYYYSlashmmSlashdd = this.cast("YYYY/mm/dd")
+  def YYYYSlashmmSlashdd: typingsSlinky.highcharts.highchartsStrings.YYYYSlashmmSlashdd = "YYYY/mm/dd".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.YYYYSlashmmSlashdd]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ddSlashmmSlashYY: typingsSlinky.highcharts.highchartsStrings.ddSlashmmSlashYY = "dd/mm/YY".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.ddSlashmmSlashYY]
   @scala.inline
-  def ddSlashmmSlashYY: typingsSlinky.highcharts.highchartsStrings.ddSlashmmSlashYY = this.cast("dd/mm/YY")
+  def ddSlashmmSlashYYYY: typingsSlinky.highcharts.highchartsStrings.ddSlashmmSlashYYYY = "dd/mm/YYYY".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.ddSlashmmSlashYYYY]
   @scala.inline
-  def ddSlashmmSlashYYYY: typingsSlinky.highcharts.highchartsStrings.ddSlashmmSlashYYYY = this.cast("dd/mm/YYYY")
+  def mmSlashddSlashYY: typingsSlinky.highcharts.highchartsStrings.mmSlashddSlashYY = "mm/dd/YY".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.mmSlashddSlashYY]
   @scala.inline
-  def mmSlashddSlashYY: typingsSlinky.highcharts.highchartsStrings.mmSlashddSlashYY = this.cast("mm/dd/YY")
-  @scala.inline
-  def mmSlashddSlashYYYY: typingsSlinky.highcharts.highchartsStrings.mmSlashddSlashYYYY = this.cast("mm/dd/YYYY")
+  def mmSlashddSlashYYYY: typingsSlinky.highcharts.highchartsStrings.mmSlashddSlashYYYY = "mm/dd/YYYY".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.mmSlashddSlashYYYY]
 }
 

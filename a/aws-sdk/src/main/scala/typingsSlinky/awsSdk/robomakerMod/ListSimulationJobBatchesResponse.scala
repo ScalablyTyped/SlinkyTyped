@@ -18,11 +18,41 @@ trait ListSimulationJobBatchesResponse extends js.Object {
 
 object ListSimulationJobBatchesResponse {
   @scala.inline
-  def apply(nextToken: PaginationToken = null, simulationJobBatchSummaries: SimulationJobBatchSummaries = null): ListSimulationJobBatchesResponse = {
+  def apply(): ListSimulationJobBatchesResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (simulationJobBatchSummaries != null) __obj.updateDynamic("simulationJobBatchSummaries")(simulationJobBatchSummaries.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSimulationJobBatchesResponse]
   }
+  @scala.inline
+  implicit class ListSimulationJobBatchesResponseOps[Self <: ListSimulationJobBatchesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimulationJobBatchSummaries(value: SimulationJobBatchSummaries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationJobBatchSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimulationJobBatchSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationJobBatchSummaries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

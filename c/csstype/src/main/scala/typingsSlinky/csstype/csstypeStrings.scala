@@ -4944,7 +4944,7 @@ object csstypeStrings {
   @js.native
   sealed trait `non-scaling-stroke` extends VectorEffectProperty
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.csstype.mod._AnimationProperty because Already inherited
   - typingsSlinky.csstype.mod._SingleAnimation because Already inherited */ @js.native
   sealed trait none

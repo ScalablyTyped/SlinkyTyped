@@ -13,12 +13,10 @@ trait ComponentType extends js.Object
 
 object ComponentType {
   @scala.inline
-  def PRIVATE: typingsSlinky.firebaseComponent.firebaseComponentStrings.PRIVATE = this.cast("PRIVATE")
+  def PRIVATE: typingsSlinky.firebaseComponent.firebaseComponentStrings.PRIVATE = "PRIVATE".asInstanceOf[typingsSlinky.firebaseComponent.firebaseComponentStrings.PRIVATE]
   @scala.inline
-  def PUBLIC: typingsSlinky.firebaseComponent.firebaseComponentStrings.PUBLIC = this.cast("PUBLIC")
+  def PUBLIC: typingsSlinky.firebaseComponent.firebaseComponentStrings.PUBLIC = "PUBLIC".asInstanceOf[typingsSlinky.firebaseComponent.firebaseComponentStrings.PUBLIC]
   @scala.inline
-  def VERSION: typingsSlinky.firebaseComponent.firebaseComponentStrings.VERSION = this.cast("VERSION")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VERSION: typingsSlinky.firebaseComponent.firebaseComponentStrings.VERSION = "VERSION".asInstanceOf[typingsSlinky.firebaseComponent.firebaseComponentStrings.VERSION]
 }
 

@@ -12,10 +12,8 @@ trait RTCIceCredentialType extends js.Object
 
 object RTCIceCredentialType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def oauth: typingsSlinky.std.stdStrings.oauth = "oauth".asInstanceOf[typingsSlinky.std.stdStrings.oauth]
   @scala.inline
-  def oauth: typingsSlinky.std.stdStrings.oauth = this.cast("oauth")
-  @scala.inline
-  def password: typingsSlinky.std.stdStrings.password = this.cast("password")
+  def password: typingsSlinky.std.stdStrings.password = "password".asInstanceOf[typingsSlinky.std.stdStrings.password]
 }
 

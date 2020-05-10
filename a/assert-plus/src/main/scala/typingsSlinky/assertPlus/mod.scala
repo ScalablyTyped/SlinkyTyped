@@ -2,8 +2,6 @@ package typingsSlinky.assertPlus
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Stream
-import typingsSlinky.std.Date
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -88,8 +86,8 @@ object mod extends js.Object {
   def optionalArrayOfBuffer(arr: js.Array[Buffer], message: String): Unit = js.native
   def optionalArrayOfDate(): Unit = js.native
   def optionalArrayOfDate(arr: js.UndefOr[scala.Nothing], message: String): Unit = js.native
-  def optionalArrayOfDate(arr: js.Array[Date]): Unit = js.native
-  def optionalArrayOfDate(arr: js.Array[Date], message: String): Unit = js.native
+  def optionalArrayOfDate(arr: js.Array[js.Date]): Unit = js.native
+  def optionalArrayOfDate(arr: js.Array[js.Date], message: String): Unit = js.native
   def optionalArrayOfFinite(): Unit = js.native
   def optionalArrayOfFinite(arr: js.UndefOr[scala.Nothing], message: String): Unit = js.native
   def optionalArrayOfFinite(arr: js.Array[Double]): Unit = js.native
@@ -108,8 +106,8 @@ object mod extends js.Object {
   def optionalArrayOfObject(arr: js.Array[_], message: String): Unit = js.native
   def optionalArrayOfRegexp(): Unit = js.native
   def optionalArrayOfRegexp(arr: js.UndefOr[scala.Nothing], message: String): Unit = js.native
-  def optionalArrayOfRegexp(arr: js.Array[RegExp]): Unit = js.native
-  def optionalArrayOfRegexp(arr: js.Array[RegExp], message: String): Unit = js.native
+  def optionalArrayOfRegexp(arr: js.Array[js.RegExp]): Unit = js.native
+  def optionalArrayOfRegexp(arr: js.Array[js.RegExp], message: String): Unit = js.native
   def optionalArrayOfStream(): Unit = js.native
   def optionalArrayOfStream(arr: js.UndefOr[scala.Nothing], message: String): Unit = js.native
   def optionalArrayOfStream(arr: js.Array[Stream]): Unit = js.native
@@ -132,8 +130,8 @@ object mod extends js.Object {
   def optionalBuffer(buffer: Buffer, message: String): Unit = js.native
   def optionalDate(): Unit = js.native
   def optionalDate(options: js.UndefOr[scala.Nothing], message: String): Unit = js.native
-  def optionalDate(options: Date): Unit = js.native
-  def optionalDate(options: Date, message: String): Unit = js.native
+  def optionalDate(options: js.Date): Unit = js.native
+  def optionalDate(options: js.Date, message: String): Unit = js.native
   def optionalFinite(): Unit = js.native
   def optionalFinite(options: js.UndefOr[scala.Nothing], message: String): Unit = js.native
   def optionalFinite(options: Double): Unit = js.native
@@ -148,8 +146,8 @@ object mod extends js.Object {
   def optionalObject(options: js.Any, message: String): Unit = js.native
   def optionalRegexp(): Unit = js.native
   def optionalRegexp(options: js.UndefOr[scala.Nothing], message: String): Unit = js.native
-  def optionalRegexp(options: RegExp): Unit = js.native
-  def optionalRegexp(options: RegExp, message: String): Unit = js.native
+  def optionalRegexp(options: js.RegExp): Unit = js.native
+  def optionalRegexp(options: js.RegExp, message: String): Unit = js.native
   def optionalStream(): Unit = js.native
   def optionalStream(options: js.UndefOr[scala.Nothing], message: String): Unit = js.native
   def optionalStream(options: Stream): Unit = js.native

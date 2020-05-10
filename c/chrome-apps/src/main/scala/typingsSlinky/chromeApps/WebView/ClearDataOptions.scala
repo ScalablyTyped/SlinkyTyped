@@ -6,6 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Options that determine what data should be cleared by *clearData* */
+@js.native
 trait ClearDataOptions extends js.Object {
   /**
     * Clear data accumulated on or after this date,
@@ -14,15 +15,34 @@ trait ClearDataOptions extends js.Object {
     * If absent, defaults to 0 (which would remove all browsing data).
     * @default 0
     */
-  var since: js.UndefOr[integer] = js.undefined
+  var since: js.UndefOr[integer] = js.native
 }
 
 object ClearDataOptions {
   @scala.inline
-  def apply(since: Int | Double = null): ClearDataOptions = {
+  def apply(): ClearDataOptions = {
     val __obj = js.Dynamic.literal()
-    if (since != null) __obj.updateDynamic("since")(since.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClearDataOptions]
   }
+  @scala.inline
+  implicit class ClearDataOptionsOps[Self <: ClearDataOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSince(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSince: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

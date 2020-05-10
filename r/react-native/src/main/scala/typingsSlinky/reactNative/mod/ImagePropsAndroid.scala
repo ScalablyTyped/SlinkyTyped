@@ -7,18 +7,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ImagePropsAndroid extends js.Object {
   /**
     * Duration of fade in animation in ms. Defaults to 300
     *
     * @platform android
     */
-  var fadeDuration: js.UndefOr[Double] = js.undefined
+  var fadeDuration: js.UndefOr[Double] = js.native
   /**
     * Required if loading images via 'uri' from drawable folder on Android
     * Explanation: https://medium.com/@adamjacobb/react-native-performance-images-adf5843e120
     */
-  var height: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.native
   /**
     * The mechanism that should be used to resize the image when the image's dimensions
     * differ from the image view's dimensions. Defaults to auto.
@@ -32,28 +33,75 @@ trait ImagePropsAndroid extends js.Object {
     * and produces higher quality images. This should be used if the image is smaller than the view.
     * It should also be used if the image is slightly bigger than the view.
     */
-  var resizeMethod: js.UndefOr[auto | resize | scale] = js.undefined
+  var resizeMethod: js.UndefOr[auto | resize | scale] = js.native
   /**
     * Required if loading images via 'uri' from drawable folder on Android.
     * Explanation: https://medium.com/@adamjacobb/react-native-performance-images-adf5843e120
     */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
 }
 
 object ImagePropsAndroid {
   @scala.inline
-  def apply(
-    fadeDuration: Int | Double = null,
-    height: Int | Double = null,
-    resizeMethod: auto | resize | scale = null,
-    width: Int | Double = null
-  ): ImagePropsAndroid = {
+  def apply(): ImagePropsAndroid = {
     val __obj = js.Dynamic.literal()
-    if (fadeDuration != null) __obj.updateDynamic("fadeDuration")(fadeDuration.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (resizeMethod != null) __obj.updateDynamic("resizeMethod")(resizeMethod.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImagePropsAndroid]
   }
+  @scala.inline
+  implicit class ImagePropsAndroidOps[Self <: ImagePropsAndroid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFadeDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fadeDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFadeDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fadeDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizeMethod(value: auto | resize | scale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizeMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizeMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

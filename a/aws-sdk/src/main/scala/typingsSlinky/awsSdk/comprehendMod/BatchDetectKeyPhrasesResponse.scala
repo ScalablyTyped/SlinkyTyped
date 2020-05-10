@@ -20,8 +20,27 @@ object BatchDetectKeyPhrasesResponse {
   @scala.inline
   def apply(ErrorList: BatchItemErrorList, ResultList: ListOfDetectKeyPhrasesResult): BatchDetectKeyPhrasesResponse = {
     val __obj = js.Dynamic.literal(ErrorList = ErrorList.asInstanceOf[js.Any], ResultList = ResultList.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BatchDetectKeyPhrasesResponse]
   }
+  @scala.inline
+  implicit class BatchDetectKeyPhrasesResponseOps[Self <: BatchDetectKeyPhrasesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorList(value: BatchItemErrorList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResultList(value: ListOfDetectKeyPhrasesResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultList")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

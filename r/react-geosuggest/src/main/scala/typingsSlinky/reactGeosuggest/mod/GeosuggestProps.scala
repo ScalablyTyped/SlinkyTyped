@@ -9,129 +9,517 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped {[ P in {[ P in keyof react.react.InputHTMLAttributes<std.HTMLInputElement> ]: P} & {[ P in 'style' ]: never} & {[x: string] : never, [x: number] : never}[keyof react.react.InputHTMLAttributes<std.HTMLInputElement>] ]: react.react.InputHTMLAttributes<std.HTMLInputElement>[P]} */ trait GeosuggestProps extends js.Object {
-  var autoActivateFirstSuggest: js.UndefOr[Boolean] = js.undefined
-  var autoComplete: js.UndefOr[String] = js.undefined
-  var bounds: js.UndefOr[LatLngBounds] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var country: js.UndefOr[String | js.Array[String]] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var fixtures: js.UndefOr[js.Array[Fixture]] = js.undefined
-  var getSuggestLabel: js.UndefOr[js.Function1[/* googleSuggest */ AutocompletePrediction, String]] = js.undefined
-  var googleMaps: js.UndefOr[Typeofmaps] = js.undefined
-  var highlightMatch: js.UndefOr[Boolean] = js.undefined
-  var ignoreEnter: js.UndefOr[Boolean] = js.undefined
-  var ignoreTab: js.UndefOr[Boolean] = js.undefined
-  var initialValue: js.UndefOr[String] = js.undefined
-  var inputClassName: js.UndefOr[String] = js.undefined
-  var label: js.UndefOr[String] = js.undefined
-  var location: js.UndefOr[LatLng] = js.undefined
-  var maxFixtures: js.UndefOr[Double] = js.undefined
-  var minLength: js.UndefOr[Double] = js.undefined
-  var onActivateSuggest: js.UndefOr[js.Function1[/* suggest */ Suggest, Unit]] = js.undefined
-  var onBlur: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.undefined
-  var onFocus: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.undefined
-  var onKeyDown: js.UndefOr[js.Function1[/* event */ js.Any, Unit]] = js.undefined
-  var onKeyPress: js.UndefOr[js.Function1[/* event */ js.Any, Unit]] = js.undefined
-  var onSuggestNoResults: js.UndefOr[js.Function1[/* userInput */ String, Unit]] = js.undefined
-  var onSuggestSelect: js.UndefOr[js.Function1[/* suggest */ Suggest, Unit]] = js.undefined
-  var onUpdateSuggests: js.UndefOr[js.Function2[/* suggests */ js.Any, /* activeSuggest */ js.Any, Unit]] = js.undefined
-  var placeholder: js.UndefOr[String] = js.undefined
-  var queryDelay: js.UndefOr[Double] = js.undefined
-  var radius: js.UndefOr[Double] = js.undefined
-  var renderSuggestItem: js.UndefOr[js.Function1[/* googleSuggest */ AutocompletePrediction, _]] = js.undefined
-  var skipSuggest: js.UndefOr[js.Function1[/* googleSuggest */ AutocompletePrediction, Boolean]] = js.undefined
-  var style: js.UndefOr[Styles] = js.undefined
-  var suggestItemActiveClassName: js.UndefOr[String] = js.undefined
-  var suggestItemClassName: js.UndefOr[String] = js.undefined
-  var suggestsClassName: js.UndefOr[String] = js.undefined
-  var suggestsHiddenClassName: js.UndefOr[String] = js.undefined
-  var types: js.UndefOr[js.Array[QueryType]] = js.undefined
+- Dropped {[ P in {[ P in keyof react.react.InputHTMLAttributes<std.HTMLInputElement> ]: P} & {[ P in 'style' ]: never} & {[x: string] : never, [x: number] : never}[keyof react.react.InputHTMLAttributes<std.HTMLInputElement>] ]: react.react.InputHTMLAttributes<std.HTMLInputElement>[P]} */ @js.native
+trait GeosuggestProps extends js.Object {
+  var autoActivateFirstSuggest: js.UndefOr[Boolean] = js.native
+  var autoComplete: js.UndefOr[String] = js.native
+  var bounds: js.UndefOr[LatLngBounds] = js.native
+  var className: js.UndefOr[String] = js.native
+  var country: js.UndefOr[String | js.Array[String]] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var fixtures: js.UndefOr[js.Array[Fixture]] = js.native
+  var getSuggestLabel: js.UndefOr[js.Function1[/* googleSuggest */ AutocompletePrediction, String]] = js.native
+  var googleMaps: js.UndefOr[Typeofmaps] = js.native
+  var highlightMatch: js.UndefOr[Boolean] = js.native
+  var ignoreEnter: js.UndefOr[Boolean] = js.native
+  var ignoreTab: js.UndefOr[Boolean] = js.native
+  var initialValue: js.UndefOr[String] = js.native
+  var inputClassName: js.UndefOr[String] = js.native
+  var label: js.UndefOr[String] = js.native
+  var location: js.UndefOr[LatLng] = js.native
+  var maxFixtures: js.UndefOr[Double] = js.native
+  var minLength: js.UndefOr[Double] = js.native
+  var onActivateSuggest: js.UndefOr[js.Function1[/* suggest */ Suggest, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.native
+  var onKeyDown: js.UndefOr[js.Function1[/* event */ js.Any, Unit]] = js.native
+  var onKeyPress: js.UndefOr[js.Function1[/* event */ js.Any, Unit]] = js.native
+  var onSuggestNoResults: js.UndefOr[js.Function1[/* userInput */ String, Unit]] = js.native
+  var onSuggestSelect: js.UndefOr[js.Function1[/* suggest */ Suggest, Unit]] = js.native
+  var onUpdateSuggests: js.UndefOr[js.Function2[/* suggests */ js.Any, /* activeSuggest */ js.Any, Unit]] = js.native
+  var placeholder: js.UndefOr[String] = js.native
+  var queryDelay: js.UndefOr[Double] = js.native
+  var radius: js.UndefOr[Double] = js.native
+  var renderSuggestItem: js.UndefOr[js.Function1[/* googleSuggest */ AutocompletePrediction, _]] = js.native
+  var skipSuggest: js.UndefOr[js.Function1[/* googleSuggest */ AutocompletePrediction, Boolean]] = js.native
+  var style: js.UndefOr[Styles] = js.native
+  var suggestItemActiveClassName: js.UndefOr[String] = js.native
+  var suggestItemClassName: js.UndefOr[String] = js.native
+  var suggestsClassName: js.UndefOr[String] = js.native
+  var suggestsHiddenClassName: js.UndefOr[String] = js.native
+  var types: js.UndefOr[js.Array[QueryType]] = js.native
 }
 
 object GeosuggestProps {
   @scala.inline
-  def apply(
-    autoActivateFirstSuggest: js.UndefOr[Boolean] = js.undefined,
-    autoComplete: String = null,
-    bounds: LatLngBounds = null,
-    className: String = null,
-    country: String | js.Array[String] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    fixtures: js.Array[Fixture] = null,
-    getSuggestLabel: /* googleSuggest */ AutocompletePrediction => String = null,
-    googleMaps: Typeofmaps = null,
-    highlightMatch: js.UndefOr[Boolean] = js.undefined,
-    ignoreEnter: js.UndefOr[Boolean] = js.undefined,
-    ignoreTab: js.UndefOr[Boolean] = js.undefined,
-    initialValue: String = null,
-    inputClassName: String = null,
-    label: String = null,
-    location: LatLng = null,
-    maxFixtures: Int | Double = null,
-    minLength: Int | Double = null,
-    onActivateSuggest: /* suggest */ Suggest => Unit = null,
-    onBlur: /* value */ js.Any => Unit = null,
-    onChange: /* value */ js.Any => Unit = null,
-    onFocus: /* value */ js.Any => Unit = null,
-    onKeyDown: /* event */ js.Any => Unit = null,
-    onKeyPress: /* event */ js.Any => Unit = null,
-    onSuggestNoResults: /* userInput */ String => Unit = null,
-    onSuggestSelect: /* suggest */ Suggest => Unit = null,
-    onUpdateSuggests: (/* suggests */ js.Any, /* activeSuggest */ js.Any) => Unit = null,
-    placeholder: String = null,
-    queryDelay: Int | Double = null,
-    radius: Int | Double = null,
-    renderSuggestItem: /* googleSuggest */ AutocompletePrediction => _ = null,
-    skipSuggest: /* googleSuggest */ AutocompletePrediction => Boolean = null,
-    style: Styles = null,
-    suggestItemActiveClassName: String = null,
-    suggestItemClassName: String = null,
-    suggestsClassName: String = null,
-    suggestsHiddenClassName: String = null,
-    types: js.Array[QueryType] = null
-  ): GeosuggestProps = {
+  def apply(): GeosuggestProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoActivateFirstSuggest)) __obj.updateDynamic("autoActivateFirstSuggest")(autoActivateFirstSuggest.asInstanceOf[js.Any])
-    if (autoComplete != null) __obj.updateDynamic("autoComplete")(autoComplete.asInstanceOf[js.Any])
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (fixtures != null) __obj.updateDynamic("fixtures")(fixtures.asInstanceOf[js.Any])
-    if (getSuggestLabel != null) __obj.updateDynamic("getSuggestLabel")(js.Any.fromFunction1(getSuggestLabel))
-    if (googleMaps != null) __obj.updateDynamic("googleMaps")(googleMaps.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightMatch)) __obj.updateDynamic("highlightMatch")(highlightMatch.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreEnter)) __obj.updateDynamic("ignoreEnter")(ignoreEnter.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreTab)) __obj.updateDynamic("ignoreTab")(ignoreTab.asInstanceOf[js.Any])
-    if (initialValue != null) __obj.updateDynamic("initialValue")(initialValue.asInstanceOf[js.Any])
-    if (inputClassName != null) __obj.updateDynamic("inputClassName")(inputClassName.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (maxFixtures != null) __obj.updateDynamic("maxFixtures")(maxFixtures.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
-    if (onActivateSuggest != null) __obj.updateDynamic("onActivateSuggest")(js.Any.fromFunction1(onActivateSuggest))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onSuggestNoResults != null) __obj.updateDynamic("onSuggestNoResults")(js.Any.fromFunction1(onSuggestNoResults))
-    if (onSuggestSelect != null) __obj.updateDynamic("onSuggestSelect")(js.Any.fromFunction1(onSuggestSelect))
-    if (onUpdateSuggests != null) __obj.updateDynamic("onUpdateSuggests")(js.Any.fromFunction2(onUpdateSuggests))
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (queryDelay != null) __obj.updateDynamic("queryDelay")(queryDelay.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (renderSuggestItem != null) __obj.updateDynamic("renderSuggestItem")(js.Any.fromFunction1(renderSuggestItem))
-    if (skipSuggest != null) __obj.updateDynamic("skipSuggest")(js.Any.fromFunction1(skipSuggest))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (suggestItemActiveClassName != null) __obj.updateDynamic("suggestItemActiveClassName")(suggestItemActiveClassName.asInstanceOf[js.Any])
-    if (suggestItemClassName != null) __obj.updateDynamic("suggestItemClassName")(suggestItemClassName.asInstanceOf[js.Any])
-    if (suggestsClassName != null) __obj.updateDynamic("suggestsClassName")(suggestsClassName.asInstanceOf[js.Any])
-    if (suggestsHiddenClassName != null) __obj.updateDynamic("suggestsHiddenClassName")(suggestsHiddenClassName.asInstanceOf[js.Any])
-    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeosuggestProps]
   }
+  @scala.inline
+  implicit class GeosuggestPropsOps[Self <: GeosuggestProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoActivateFirstSuggest(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoActivateFirstSuggest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoActivateFirstSuggest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoActivateFirstSuggest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoComplete(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBounds(value: LatLngBounds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountry(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixtures(value: js.Array[Fixture]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixtures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixtures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixtures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetSuggestLabel(value: /* googleSuggest */ AutocompletePrediction => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSuggestLabel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetSuggestLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSuggestLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoogleMaps(value: Typeofmaps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleMaps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoogleMaps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleMaps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightMatch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreEnter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEnter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreTab(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreTab: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreTab")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: LatLng): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFixtures(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFixtures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxFixtures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFixtures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnActivateSuggest(value: /* suggest */ Suggest => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivateSuggest")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnActivateSuggest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onActivateSuggest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBlur(value: /* value */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* value */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFocus(value: /* value */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyDown(value: /* event */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyPress(value: /* event */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSuggestNoResults(value: /* userInput */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuggestNoResults")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSuggestNoResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuggestNoResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSuggestSelect(value: /* suggest */ Suggest => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuggestSelect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSuggestSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuggestSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUpdateSuggests(value: (/* suggests */ js.Any, /* activeSuggest */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdateSuggests")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUpdateSuggests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdateSuggests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderSuggestItem(value: /* googleSuggest */ AutocompletePrediction => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderSuggestItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderSuggestItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderSuggestItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipSuggest(value: /* googleSuggest */ AutocompletePrediction => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipSuggest")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSkipSuggest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipSuggest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Styles): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestItemActiveClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestItemActiveClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestItemActiveClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestItemActiveClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestItemClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestItemClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestItemClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestItemClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestsClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestsClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestsClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestsClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestsHiddenClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestsHiddenClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestsHiddenClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestsHiddenClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypes(value: js.Array[QueryType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

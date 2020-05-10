@@ -1,57 +1,56 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.multiSliderMod.IMultiSliderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MultiSlider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.mod.MultiSlider] {
+object MultiSlider {
   @JSImport("@blueprintjs/core", "MultiSlider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
-  def apply(
-    defaultTrackIntent: Intent = null,
-    intent: Intent = null,
-    labelPrecision: Int | Double = null,
-    labelRenderer: Boolean | (js.Function1[/* value */ Double, String | ReactElement]) = null,
-    labelStepSize: Int | Double = null,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    onChange: /* values */ js.Array[Double] => Unit = null,
-    onRelease: /* values */ js.Array[Double] => Unit = null,
-    showTrackFill: js.UndefOr[Boolean] = js.undefined,
-    stepSize: Int | Double = null,
-    vertical: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.MultiSlider] = {
-    val __obj = js.Dynamic.literal()
-    if (defaultTrackIntent != null) __obj.updateDynamic("defaultTrackIntent")(defaultTrackIntent.asInstanceOf[js.Any])
-    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
-    if (labelPrecision != null) __obj.updateDynamic("labelPrecision")(labelPrecision.asInstanceOf[js.Any])
-    if (labelRenderer != null) __obj.updateDynamic("labelRenderer")(labelRenderer.asInstanceOf[js.Any])
-    if (labelStepSize != null) __obj.updateDynamic("labelStepSize")(labelStepSize.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onRelease != null) __obj.updateDynamic("onRelease")(js.Any.fromFunction1(onRelease))
-    if (!js.isUndefined(showTrackFill)) __obj.updateDynamic("showTrackFill")(showTrackFill.asInstanceOf[js.Any])
-    if (stepSize != null) __obj.updateDynamic("stepSize")(stepSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.MultiSlider] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultTrackIntent(value: Intent): this.type = set("defaultTrackIntent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelPrecision(value: Double): this.type = set("labelPrecision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelRendererFunction1(value: /* value */ Double => String | ReactElement): this.type = set("labelRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelRenderer(value: Boolean | (js.Function1[/* value */ Double, String | ReactElement])): this.type = set("labelRenderer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelStepSize(value: Double): this.type = set("labelStepSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* values */ js.Array[Double] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRelease(value: /* values */ js.Array[Double] => Unit): this.type = set("onRelease", js.Any.fromFunction1(value))
+    @scala.inline
+    def showTrackFill(value: Boolean): this.type = set("showTrackFill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stepSize(value: Double): this.type = set("stepSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.mod.MultiSlider] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.blueprintjsCore.mod.MultiSlider](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IMultiSliderProps
+  
+  def withProps(p: IMultiSliderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MultiSlider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

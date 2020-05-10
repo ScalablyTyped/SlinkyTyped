@@ -25,36 +25,34 @@ trait UnicodeBidiProperty extends js.Object
 
 object UnicodeBidiProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  def `-moz-isolate`: typingsSlinky.csstype.csstypeStrings.`-moz-isolate` = this.cast("-moz-isolate")
+  def `-moz-isolate`: typingsSlinky.csstype.csstypeStrings.`-moz-isolate` = "-moz-isolate".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-isolate`]
   @scala.inline
-  def `-moz-isolate-override`: typingsSlinky.csstype.csstypeStrings.`-moz-isolate-override` = this.cast("-moz-isolate-override")
+  def `-moz-isolate-override`: typingsSlinky.csstype.csstypeStrings.`-moz-isolate-override` = "-moz-isolate-override".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-isolate-override`]
   @scala.inline
-  def `-moz-plaintext`: typingsSlinky.csstype.csstypeStrings.`-moz-plaintext` = this.cast("-moz-plaintext")
+  def `-moz-plaintext`: typingsSlinky.csstype.csstypeStrings.`-moz-plaintext` = "-moz-plaintext".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-plaintext`]
   @scala.inline
-  def `-webkit-isolate`: typingsSlinky.csstype.csstypeStrings.`-webkit-isolate` = this.cast("-webkit-isolate")
+  def `-webkit-isolate`: typingsSlinky.csstype.csstypeStrings.`-webkit-isolate` = "-webkit-isolate".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-webkit-isolate`]
   @scala.inline
-  def `bidi-override`: typingsSlinky.csstype.csstypeStrings.`bidi-override` = this.cast("bidi-override")
+  def `bidi-override`: typingsSlinky.csstype.csstypeStrings.`bidi-override` = "bidi-override".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`bidi-override`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def embed: typingsSlinky.csstype.csstypeStrings.embed = "embed".asInstanceOf[typingsSlinky.csstype.csstypeStrings.embed]
   @scala.inline
-  def embed: typingsSlinky.csstype.csstypeStrings.embed = this.cast("embed")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def isolate: typingsSlinky.csstype.csstypeStrings.isolate = "isolate".asInstanceOf[typingsSlinky.csstype.csstypeStrings.isolate]
   @scala.inline
-  def isolate: typingsSlinky.csstype.csstypeStrings.isolate = this.cast("isolate")
+  def `isolate-override`: typingsSlinky.csstype.csstypeStrings.`isolate-override` = "isolate-override".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`isolate-override`]
   @scala.inline
-  def `isolate-override`: typingsSlinky.csstype.csstypeStrings.`isolate-override` = this.cast("isolate-override")
+  def normal: typingsSlinky.csstype.csstypeStrings.normal = "normal".asInstanceOf[typingsSlinky.csstype.csstypeStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.csstype.csstypeStrings.normal = this.cast("normal")
+  def plaintext: typingsSlinky.csstype.csstypeStrings.plaintext = "plaintext".asInstanceOf[typingsSlinky.csstype.csstypeStrings.plaintext]
   @scala.inline
-  def plaintext: typingsSlinky.csstype.csstypeStrings.plaintext = this.cast("plaintext")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

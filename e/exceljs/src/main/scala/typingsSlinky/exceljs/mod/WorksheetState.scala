@@ -13,12 +13,10 @@ trait WorksheetState extends js.Object
 
 object WorksheetState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hidden: typingsSlinky.exceljs.exceljsStrings.hidden = "hidden".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.exceljs.exceljsStrings.hidden = this.cast("hidden")
+  def veryHidden: typingsSlinky.exceljs.exceljsStrings.veryHidden = "veryHidden".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.veryHidden]
   @scala.inline
-  def veryHidden: typingsSlinky.exceljs.exceljsStrings.veryHidden = this.cast("veryHidden")
-  @scala.inline
-  def visible: typingsSlinky.exceljs.exceljsStrings.visible = this.cast("visible")
+  def visible: typingsSlinky.exceljs.exceljsStrings.visible = "visible".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.visible]
 }
 

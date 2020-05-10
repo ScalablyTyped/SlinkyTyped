@@ -18,11 +18,41 @@ trait ListTablesOutput extends js.Object {
 
 object ListTablesOutput {
   @scala.inline
-  def apply(LastEvaluatedTableName: TableName = null, TableNames: TableNameList = null): ListTablesOutput = {
+  def apply(): ListTablesOutput = {
     val __obj = js.Dynamic.literal()
-    if (LastEvaluatedTableName != null) __obj.updateDynamic("LastEvaluatedTableName")(LastEvaluatedTableName.asInstanceOf[js.Any])
-    if (TableNames != null) __obj.updateDynamic("TableNames")(TableNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTablesOutput]
   }
+  @scala.inline
+  implicit class ListTablesOutputOps[Self <: ListTablesOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLastEvaluatedTableName(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedTableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastEvaluatedTableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedTableName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableNames(value: TableNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -119,224 +119,222 @@ trait Pseudos extends js.Object
 
 object Pseudos {
   @scala.inline
-  def `Colon-moz-any-link`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-any-link` = this.cast(":-moz-any-link")
+  def `Colon-moz-any-link`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-any-link` = ":-moz-any-link".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-any-link`]
   @scala.inline
-  def `Colon-moz-anyLeftparenthesisRightparenthesis`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-anyLeftparenthesisRightparenthesis` = this.cast(":-moz-any()")
+  def `Colon-moz-anyLeftparenthesisRightparenthesis`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-anyLeftparenthesisRightparenthesis` = ":-moz-any()".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-anyLeftparenthesisRightparenthesis`]
   @scala.inline
-  def `Colon-moz-dir`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-dir` = this.cast(":-moz-dir")
+  def `Colon-moz-dir`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-dir` = ":-moz-dir".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-dir`]
   @scala.inline
-  def `Colon-moz-focusring`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-focusring` = this.cast(":-moz-focusring")
+  def `Colon-moz-focusring`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-focusring` = ":-moz-focusring".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-focusring`]
   @scala.inline
-  def `Colon-moz-full-screen`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-full-screen` = this.cast(":-moz-full-screen")
+  def `Colon-moz-full-screen`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-full-screen` = ":-moz-full-screen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-full-screen`]
   @scala.inline
-  def `Colon-moz-placeholder`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-placeholder` = this.cast(":-moz-placeholder")
+  def `Colon-moz-placeholder`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-placeholder` = ":-moz-placeholder".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-placeholder`]
   @scala.inline
-  def `Colon-moz-read-only`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-read-only` = this.cast(":-moz-read-only")
+  def `Colon-moz-read-only`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-read-only` = ":-moz-read-only".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-read-only`]
   @scala.inline
-  def `Colon-moz-read-write`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-read-write` = this.cast(":-moz-read-write")
+  def `Colon-moz-read-write`: typingsSlinky.csstype.csstypeStrings.`Colon-moz-read-write` = ":-moz-read-write".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-moz-read-write`]
   @scala.inline
-  def `Colon-ms-fullscreen`: typingsSlinky.csstype.csstypeStrings.`Colon-ms-fullscreen` = this.cast(":-ms-fullscreen")
+  def `Colon-ms-fullscreen`: typingsSlinky.csstype.csstypeStrings.`Colon-ms-fullscreen` = ":-ms-fullscreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-ms-fullscreen`]
   @scala.inline
-  def `Colon-ms-input-placeholder`: typingsSlinky.csstype.csstypeStrings.`Colon-ms-input-placeholder` = this.cast(":-ms-input-placeholder")
+  def `Colon-ms-input-placeholder`: typingsSlinky.csstype.csstypeStrings.`Colon-ms-input-placeholder` = ":-ms-input-placeholder".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-ms-input-placeholder`]
   @scala.inline
-  def `Colon-webkit-any-link`: typingsSlinky.csstype.csstypeStrings.`Colon-webkit-any-link` = this.cast(":-webkit-any-link")
+  def `Colon-webkit-any-link`: typingsSlinky.csstype.csstypeStrings.`Colon-webkit-any-link` = ":-webkit-any-link".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-webkit-any-link`]
   @scala.inline
-  def `Colon-webkit-anyLeftparenthesisRightparenthesis`: typingsSlinky.csstype.csstypeStrings.`Colon-webkit-anyLeftparenthesisRightparenthesis` = this.cast(":-webkit-any()")
+  def `Colon-webkit-anyLeftparenthesisRightparenthesis`: typingsSlinky.csstype.csstypeStrings.`Colon-webkit-anyLeftparenthesisRightparenthesis` = ":-webkit-any()".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-webkit-anyLeftparenthesisRightparenthesis`]
   @scala.inline
-  def `Colon-webkit-full-screen`: typingsSlinky.csstype.csstypeStrings.`Colon-webkit-full-screen` = this.cast(":-webkit-full-screen")
+  def `Colon-webkit-full-screen`: typingsSlinky.csstype.csstypeStrings.`Colon-webkit-full-screen` = ":-webkit-full-screen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-webkit-full-screen`]
   @scala.inline
-  def `ColonColon-moz-placeholder`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-placeholder` = this.cast("::-moz-placeholder")
+  def `ColonColon-moz-placeholder`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-placeholder` = "::-moz-placeholder".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-placeholder`]
   @scala.inline
-  def `ColonColon-moz-progress-bar`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-progress-bar` = this.cast("::-moz-progress-bar")
+  def `ColonColon-moz-progress-bar`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-progress-bar` = "::-moz-progress-bar".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-progress-bar`]
   @scala.inline
-  def `ColonColon-moz-range-progress`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-range-progress` = this.cast("::-moz-range-progress")
+  def `ColonColon-moz-range-progress`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-range-progress` = "::-moz-range-progress".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-range-progress`]
   @scala.inline
-  def `ColonColon-moz-range-thumb`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-range-thumb` = this.cast("::-moz-range-thumb")
+  def `ColonColon-moz-range-thumb`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-range-thumb` = "::-moz-range-thumb".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-range-thumb`]
   @scala.inline
-  def `ColonColon-moz-range-track`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-range-track` = this.cast("::-moz-range-track")
+  def `ColonColon-moz-range-track`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-range-track` = "::-moz-range-track".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-range-track`]
   @scala.inline
-  def `ColonColon-moz-selection`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-selection` = this.cast("::-moz-selection")
+  def `ColonColon-moz-selection`: typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-selection` = "::-moz-selection".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-moz-selection`]
   @scala.inline
-  def `ColonColon-ms-backdrop`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-backdrop` = this.cast("::-ms-backdrop")
+  def `ColonColon-ms-backdrop`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-backdrop` = "::-ms-backdrop".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-backdrop`]
   @scala.inline
-  def `ColonColon-ms-browse`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-browse` = this.cast("::-ms-browse")
+  def `ColonColon-ms-browse`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-browse` = "::-ms-browse".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-browse`]
   @scala.inline
-  def `ColonColon-ms-check`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-check` = this.cast("::-ms-check")
+  def `ColonColon-ms-check`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-check` = "::-ms-check".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-check`]
   @scala.inline
-  def `ColonColon-ms-clear`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-clear` = this.cast("::-ms-clear")
+  def `ColonColon-ms-clear`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-clear` = "::-ms-clear".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-clear`]
   @scala.inline
-  def `ColonColon-ms-fill`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-fill` = this.cast("::-ms-fill")
+  def `ColonColon-ms-fill`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-fill` = "::-ms-fill".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-fill`]
   @scala.inline
-  def `ColonColon-ms-fill-lower`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-fill-lower` = this.cast("::-ms-fill-lower")
+  def `ColonColon-ms-fill-lower`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-fill-lower` = "::-ms-fill-lower".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-fill-lower`]
   @scala.inline
-  def `ColonColon-ms-fill-upper`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-fill-upper` = this.cast("::-ms-fill-upper")
+  def `ColonColon-ms-fill-upper`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-fill-upper` = "::-ms-fill-upper".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-fill-upper`]
   @scala.inline
-  def `ColonColon-ms-input-placeholder`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-input-placeholder` = this.cast("::-ms-input-placeholder")
+  def `ColonColon-ms-input-placeholder`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-input-placeholder` = "::-ms-input-placeholder".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-input-placeholder`]
   @scala.inline
-  def `ColonColon-ms-reveal`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-reveal` = this.cast("::-ms-reveal")
+  def `ColonColon-ms-reveal`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-reveal` = "::-ms-reveal".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-reveal`]
   @scala.inline
-  def `ColonColon-ms-thumb`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-thumb` = this.cast("::-ms-thumb")
+  def `ColonColon-ms-thumb`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-thumb` = "::-ms-thumb".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-thumb`]
   @scala.inline
-  def `ColonColon-ms-ticks-after`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-ticks-after` = this.cast("::-ms-ticks-after")
+  def `ColonColon-ms-ticks-after`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-ticks-after` = "::-ms-ticks-after".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-ticks-after`]
   @scala.inline
-  def `ColonColon-ms-ticks-before`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-ticks-before` = this.cast("::-ms-ticks-before")
+  def `ColonColon-ms-ticks-before`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-ticks-before` = "::-ms-ticks-before".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-ticks-before`]
   @scala.inline
-  def `ColonColon-ms-tooltip`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-tooltip` = this.cast("::-ms-tooltip")
+  def `ColonColon-ms-tooltip`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-tooltip` = "::-ms-tooltip".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-tooltip`]
   @scala.inline
-  def `ColonColon-ms-track`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-track` = this.cast("::-ms-track")
+  def `ColonColon-ms-track`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-track` = "::-ms-track".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-track`]
   @scala.inline
-  def `ColonColon-ms-value`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-value` = this.cast("::-ms-value")
+  def `ColonColon-ms-value`: typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-value` = "::-ms-value".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-ms-value`]
   @scala.inline
-  def `ColonColon-webkit-backdrop`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-backdrop` = this.cast("::-webkit-backdrop")
+  def `ColonColon-webkit-backdrop`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-backdrop` = "::-webkit-backdrop".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-backdrop`]
   @scala.inline
-  def `ColonColon-webkit-input-placeholder`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-input-placeholder` = this.cast("::-webkit-input-placeholder")
+  def `ColonColon-webkit-input-placeholder`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-input-placeholder` = "::-webkit-input-placeholder".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-input-placeholder`]
   @scala.inline
-  def `ColonColon-webkit-progress-bar`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-progress-bar` = this.cast("::-webkit-progress-bar")
+  def `ColonColon-webkit-progress-bar`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-progress-bar` = "::-webkit-progress-bar".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-progress-bar`]
   @scala.inline
-  def `ColonColon-webkit-progress-inner-value`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-progress-inner-value` = this.cast("::-webkit-progress-inner-value")
+  def `ColonColon-webkit-progress-inner-value`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-progress-inner-value` = "::-webkit-progress-inner-value".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-progress-inner-value`]
   @scala.inline
-  def `ColonColon-webkit-progress-value`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-progress-value` = this.cast("::-webkit-progress-value")
+  def `ColonColon-webkit-progress-value`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-progress-value` = "::-webkit-progress-value".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-progress-value`]
   @scala.inline
-  def `ColonColon-webkit-slider-runnable-track`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-slider-runnable-track` = this.cast("::-webkit-slider-runnable-track")
+  def `ColonColon-webkit-slider-runnable-track`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-slider-runnable-track` = "::-webkit-slider-runnable-track".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-slider-runnable-track`]
   @scala.inline
-  def `ColonColon-webkit-slider-thumb`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-slider-thumb` = this.cast("::-webkit-slider-thumb")
+  def `ColonColon-webkit-slider-thumb`: typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-slider-thumb` = "::-webkit-slider-thumb".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColon-webkit-slider-thumb`]
   @scala.inline
-  def ColonColonafter: typingsSlinky.csstype.csstypeStrings.ColonColonafter = this.cast("::after")
+  def ColonColonafter: typingsSlinky.csstype.csstypeStrings.ColonColonafter = "::after".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonafter]
   @scala.inline
-  def ColonColonbackdrop: typingsSlinky.csstype.csstypeStrings.ColonColonbackdrop = this.cast("::backdrop")
+  def ColonColonbackdrop: typingsSlinky.csstype.csstypeStrings.ColonColonbackdrop = "::backdrop".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonbackdrop]
   @scala.inline
-  def ColonColonbefore: typingsSlinky.csstype.csstypeStrings.ColonColonbefore = this.cast("::before")
+  def ColonColonbefore: typingsSlinky.csstype.csstypeStrings.ColonColonbefore = "::before".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonbefore]
   @scala.inline
-  def ColonColoncue: typingsSlinky.csstype.csstypeStrings.ColonColoncue = this.cast("::cue")
+  def ColonColoncue: typingsSlinky.csstype.csstypeStrings.ColonColoncue = "::cue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColoncue]
   @scala.inline
-  def `ColonColonfirst-letter`: typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-letter` = this.cast("::first-letter")
+  def `ColonColonfirst-letter`: typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-letter` = "::first-letter".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-letter`]
   @scala.inline
-  def `ColonColonfirst-line`: typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-line` = this.cast("::first-line")
+  def `ColonColonfirst-line`: typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-line` = "::first-line".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColonfirst-line`]
   @scala.inline
-  def `ColonColongrammar-error`: typingsSlinky.csstype.csstypeStrings.`ColonColongrammar-error` = this.cast("::grammar-error")
+  def `ColonColongrammar-error`: typingsSlinky.csstype.csstypeStrings.`ColonColongrammar-error` = "::grammar-error".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColongrammar-error`]
   @scala.inline
-  def ColonColonmarker: typingsSlinky.csstype.csstypeStrings.ColonColonmarker = this.cast("::marker")
+  def ColonColonmarker: typingsSlinky.csstype.csstypeStrings.ColonColonmarker = "::marker".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonmarker]
   @scala.inline
-  def ColonColonpart: typingsSlinky.csstype.csstypeStrings.ColonColonpart = this.cast("::part")
+  def ColonColonpart: typingsSlinky.csstype.csstypeStrings.ColonColonpart = "::part".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonpart]
   @scala.inline
-  def ColonColonplaceholder: typingsSlinky.csstype.csstypeStrings.ColonColonplaceholder = this.cast("::placeholder")
+  def ColonColonplaceholder: typingsSlinky.csstype.csstypeStrings.ColonColonplaceholder = "::placeholder".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonplaceholder]
   @scala.inline
-  def ColonColonselection: typingsSlinky.csstype.csstypeStrings.ColonColonselection = this.cast("::selection")
+  def ColonColonselection: typingsSlinky.csstype.csstypeStrings.ColonColonselection = "::selection".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonselection]
   @scala.inline
-  def ColonColonslotted: typingsSlinky.csstype.csstypeStrings.ColonColonslotted = this.cast("::slotted")
+  def ColonColonslotted: typingsSlinky.csstype.csstypeStrings.ColonColonslotted = "::slotted".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonslotted]
   @scala.inline
-  def `ColonColonspelling-error`: typingsSlinky.csstype.csstypeStrings.`ColonColonspelling-error` = this.cast("::spelling-error")
+  def `ColonColonspelling-error`: typingsSlinky.csstype.csstypeStrings.`ColonColonspelling-error` = "::spelling-error".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColonspelling-error`]
   @scala.inline
-  def Colonactive: typingsSlinky.csstype.csstypeStrings.Colonactive = this.cast(":active")
+  def Colonactive: typingsSlinky.csstype.csstypeStrings.Colonactive = ":active".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonactive]
   @scala.inline
-  def Colonafter: typingsSlinky.csstype.csstypeStrings.Colonafter = this.cast(":after")
+  def Colonafter: typingsSlinky.csstype.csstypeStrings.Colonafter = ":after".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonafter]
   @scala.inline
-  def `Colonany-link`: typingsSlinky.csstype.csstypeStrings.`Colonany-link` = this.cast(":any-link")
+  def `Colonany-link`: typingsSlinky.csstype.csstypeStrings.`Colonany-link` = ":any-link".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonany-link`]
   @scala.inline
-  def Colonbefore: typingsSlinky.csstype.csstypeStrings.Colonbefore = this.cast(":before")
+  def Colonbefore: typingsSlinky.csstype.csstypeStrings.Colonbefore = ":before".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonbefore]
   @scala.inline
-  def Colonblank: typingsSlinky.csstype.csstypeStrings.Colonblank = this.cast(":blank")
+  def Colonblank: typingsSlinky.csstype.csstypeStrings.Colonblank = ":blank".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonblank]
   @scala.inline
-  def Colonchecked: typingsSlinky.csstype.csstypeStrings.Colonchecked = this.cast(":checked")
+  def Colonchecked: typingsSlinky.csstype.csstypeStrings.Colonchecked = ":checked".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonchecked]
   @scala.inline
-  def Colondefault: typingsSlinky.csstype.csstypeStrings.Colondefault = this.cast(":default")
+  def Colondefault: typingsSlinky.csstype.csstypeStrings.Colondefault = ":default".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colondefault]
   @scala.inline
-  def Colondefined: typingsSlinky.csstype.csstypeStrings.Colondefined = this.cast(":defined")
+  def Colondefined: typingsSlinky.csstype.csstypeStrings.Colondefined = ":defined".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colondefined]
   @scala.inline
-  def Colondir: typingsSlinky.csstype.csstypeStrings.Colondir = this.cast(":dir")
+  def Colondir: typingsSlinky.csstype.csstypeStrings.Colondir = ":dir".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colondir]
   @scala.inline
-  def Colondisabled: typingsSlinky.csstype.csstypeStrings.Colondisabled = this.cast(":disabled")
+  def Colondisabled: typingsSlinky.csstype.csstypeStrings.Colondisabled = ":disabled".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colondisabled]
   @scala.inline
-  def Colonempty: typingsSlinky.csstype.csstypeStrings.Colonempty = this.cast(":empty")
+  def Colonempty: typingsSlinky.csstype.csstypeStrings.Colonempty = ":empty".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonempty]
   @scala.inline
-  def Colonenabled: typingsSlinky.csstype.csstypeStrings.Colonenabled = this.cast(":enabled")
+  def Colonenabled: typingsSlinky.csstype.csstypeStrings.Colonenabled = ":enabled".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonenabled]
   @scala.inline
-  def Colonfirst: typingsSlinky.csstype.csstypeStrings.Colonfirst = this.cast(":first")
+  def Colonfirst: typingsSlinky.csstype.csstypeStrings.Colonfirst = ":first".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonfirst]
   @scala.inline
-  def `Colonfirst-child`: typingsSlinky.csstype.csstypeStrings.`Colonfirst-child` = this.cast(":first-child")
+  def `Colonfirst-child`: typingsSlinky.csstype.csstypeStrings.`Colonfirst-child` = ":first-child".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonfirst-child`]
   @scala.inline
-  def `Colonfirst-letter`: typingsSlinky.csstype.csstypeStrings.`Colonfirst-letter` = this.cast(":first-letter")
+  def `Colonfirst-letter`: typingsSlinky.csstype.csstypeStrings.`Colonfirst-letter` = ":first-letter".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonfirst-letter`]
   @scala.inline
-  def `Colonfirst-line`: typingsSlinky.csstype.csstypeStrings.`Colonfirst-line` = this.cast(":first-line")
+  def `Colonfirst-line`: typingsSlinky.csstype.csstypeStrings.`Colonfirst-line` = ":first-line".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonfirst-line`]
   @scala.inline
-  def `Colonfirst-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonfirst-of-type` = this.cast(":first-of-type")
+  def `Colonfirst-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonfirst-of-type` = ":first-of-type".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonfirst-of-type`]
   @scala.inline
-  def Colonfocus: typingsSlinky.csstype.csstypeStrings.Colonfocus = this.cast(":focus")
+  def Colonfocus: typingsSlinky.csstype.csstypeStrings.Colonfocus = ":focus".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonfocus]
   @scala.inline
-  def `Colonfocus-visible`: typingsSlinky.csstype.csstypeStrings.`Colonfocus-visible` = this.cast(":focus-visible")
+  def `Colonfocus-visible`: typingsSlinky.csstype.csstypeStrings.`Colonfocus-visible` = ":focus-visible".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonfocus-visible`]
   @scala.inline
-  def `Colonfocus-within`: typingsSlinky.csstype.csstypeStrings.`Colonfocus-within` = this.cast(":focus-within")
+  def `Colonfocus-within`: typingsSlinky.csstype.csstypeStrings.`Colonfocus-within` = ":focus-within".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonfocus-within`]
   @scala.inline
-  def Colonfullscreen: typingsSlinky.csstype.csstypeStrings.Colonfullscreen = this.cast(":fullscreen")
+  def Colonfullscreen: typingsSlinky.csstype.csstypeStrings.Colonfullscreen = ":fullscreen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonfullscreen]
   @scala.inline
-  def Colonhas: typingsSlinky.csstype.csstypeStrings.Colonhas = this.cast(":has")
+  def Colonhas: typingsSlinky.csstype.csstypeStrings.Colonhas = ":has".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonhas]
   @scala.inline
-  def Colonhost: typingsSlinky.csstype.csstypeStrings.Colonhost = this.cast(":host")
+  def Colonhost: typingsSlinky.csstype.csstypeStrings.Colonhost = ":host".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonhost]
   @scala.inline
-  def `Colonhost-context`: typingsSlinky.csstype.csstypeStrings.`Colonhost-context` = this.cast(":host-context")
+  def `Colonhost-context`: typingsSlinky.csstype.csstypeStrings.`Colonhost-context` = ":host-context".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonhost-context`]
   @scala.inline
-  def Colonhover: typingsSlinky.csstype.csstypeStrings.Colonhover = this.cast(":hover")
+  def Colonhover: typingsSlinky.csstype.csstypeStrings.Colonhover = ":hover".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonhover]
   @scala.inline
-  def `Colonin-range`: typingsSlinky.csstype.csstypeStrings.`Colonin-range` = this.cast(":in-range")
+  def `Colonin-range`: typingsSlinky.csstype.csstypeStrings.`Colonin-range` = ":in-range".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonin-range`]
   @scala.inline
-  def Colonindeterminate: typingsSlinky.csstype.csstypeStrings.Colonindeterminate = this.cast(":indeterminate")
+  def Colonindeterminate: typingsSlinky.csstype.csstypeStrings.Colonindeterminate = ":indeterminate".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonindeterminate]
   @scala.inline
-  def Coloninvalid: typingsSlinky.csstype.csstypeStrings.Coloninvalid = this.cast(":invalid")
+  def Coloninvalid: typingsSlinky.csstype.csstypeStrings.Coloninvalid = ":invalid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Coloninvalid]
   @scala.inline
-  def Colonis: typingsSlinky.csstype.csstypeStrings.Colonis = this.cast(":is")
+  def Colonis: typingsSlinky.csstype.csstypeStrings.Colonis = ":is".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonis]
   @scala.inline
-  def Colonlang: typingsSlinky.csstype.csstypeStrings.Colonlang = this.cast(":lang")
+  def Colonlang: typingsSlinky.csstype.csstypeStrings.Colonlang = ":lang".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonlang]
   @scala.inline
-  def `Colonlast-child`: typingsSlinky.csstype.csstypeStrings.`Colonlast-child` = this.cast(":last-child")
+  def `Colonlast-child`: typingsSlinky.csstype.csstypeStrings.`Colonlast-child` = ":last-child".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonlast-child`]
   @scala.inline
-  def `Colonlast-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonlast-of-type` = this.cast(":last-of-type")
+  def `Colonlast-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonlast-of-type` = ":last-of-type".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonlast-of-type`]
   @scala.inline
-  def Colonleft: typingsSlinky.csstype.csstypeStrings.Colonleft = this.cast(":left")
+  def Colonleft: typingsSlinky.csstype.csstypeStrings.Colonleft = ":left".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonleft]
   @scala.inline
-  def Colonlink: typingsSlinky.csstype.csstypeStrings.Colonlink = this.cast(":link")
+  def Colonlink: typingsSlinky.csstype.csstypeStrings.Colonlink = ":link".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonlink]
   @scala.inline
-  def ColonmatchesLeftparenthesisRightparenthesis: typingsSlinky.csstype.csstypeStrings.ColonmatchesLeftparenthesisRightparenthesis = this.cast(":matches()")
+  def ColonmatchesLeftparenthesisRightparenthesis: typingsSlinky.csstype.csstypeStrings.ColonmatchesLeftparenthesisRightparenthesis = ":matches()".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonmatchesLeftparenthesisRightparenthesis]
   @scala.inline
-  def Colonnot: typingsSlinky.csstype.csstypeStrings.Colonnot = this.cast(":not")
+  def Colonnot: typingsSlinky.csstype.csstypeStrings.Colonnot = ":not".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonnot]
   @scala.inline
-  def `Colonnth-child`: typingsSlinky.csstype.csstypeStrings.`Colonnth-child` = this.cast(":nth-child")
+  def `Colonnth-child`: typingsSlinky.csstype.csstypeStrings.`Colonnth-child` = ":nth-child".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonnth-child`]
   @scala.inline
-  def `Colonnth-last-child`: typingsSlinky.csstype.csstypeStrings.`Colonnth-last-child` = this.cast(":nth-last-child")
+  def `Colonnth-last-child`: typingsSlinky.csstype.csstypeStrings.`Colonnth-last-child` = ":nth-last-child".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonnth-last-child`]
   @scala.inline
-  def `Colonnth-last-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonnth-last-of-type` = this.cast(":nth-last-of-type")
+  def `Colonnth-last-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonnth-last-of-type` = ":nth-last-of-type".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonnth-last-of-type`]
   @scala.inline
-  def `Colonnth-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonnth-of-type` = this.cast(":nth-of-type")
+  def `Colonnth-of-type`: typingsSlinky.csstype.csstypeStrings.`Colonnth-of-type` = ":nth-of-type".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonnth-of-type`]
   @scala.inline
-  def `Colononly-child`: typingsSlinky.csstype.csstypeStrings.`Colononly-child` = this.cast(":only-child")
+  def `Colononly-child`: typingsSlinky.csstype.csstypeStrings.`Colononly-child` = ":only-child".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colononly-child`]
   @scala.inline
-  def `Colononly-of-type`: typingsSlinky.csstype.csstypeStrings.`Colononly-of-type` = this.cast(":only-of-type")
+  def `Colononly-of-type`: typingsSlinky.csstype.csstypeStrings.`Colononly-of-type` = ":only-of-type".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colononly-of-type`]
   @scala.inline
-  def Colonoptional: typingsSlinky.csstype.csstypeStrings.Colonoptional = this.cast(":optional")
+  def Colonoptional: typingsSlinky.csstype.csstypeStrings.Colonoptional = ":optional".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonoptional]
   @scala.inline
-  def `Colonout-of-range`: typingsSlinky.csstype.csstypeStrings.`Colonout-of-range` = this.cast(":out-of-range")
+  def `Colonout-of-range`: typingsSlinky.csstype.csstypeStrings.`Colonout-of-range` = ":out-of-range".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonout-of-range`]
   @scala.inline
-  def `Colonplaceholder-shown`: typingsSlinky.csstype.csstypeStrings.`Colonplaceholder-shown` = this.cast(":placeholder-shown")
+  def `Colonplaceholder-shown`: typingsSlinky.csstype.csstypeStrings.`Colonplaceholder-shown` = ":placeholder-shown".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonplaceholder-shown`]
   @scala.inline
-  def `Colonread-only`: typingsSlinky.csstype.csstypeStrings.`Colonread-only` = this.cast(":read-only")
+  def `Colonread-only`: typingsSlinky.csstype.csstypeStrings.`Colonread-only` = ":read-only".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonread-only`]
   @scala.inline
-  def `Colonread-write`: typingsSlinky.csstype.csstypeStrings.`Colonread-write` = this.cast(":read-write")
+  def `Colonread-write`: typingsSlinky.csstype.csstypeStrings.`Colonread-write` = ":read-write".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colonread-write`]
   @scala.inline
-  def Colonrequired: typingsSlinky.csstype.csstypeStrings.Colonrequired = this.cast(":required")
+  def Colonrequired: typingsSlinky.csstype.csstypeStrings.Colonrequired = ":required".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonrequired]
   @scala.inline
-  def Colonright: typingsSlinky.csstype.csstypeStrings.Colonright = this.cast(":right")
+  def Colonright: typingsSlinky.csstype.csstypeStrings.Colonright = ":right".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonright]
   @scala.inline
-  def Colonroot: typingsSlinky.csstype.csstypeStrings.Colonroot = this.cast(":root")
+  def Colonroot: typingsSlinky.csstype.csstypeStrings.Colonroot = ":root".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonroot]
   @scala.inline
-  def Colonscope: typingsSlinky.csstype.csstypeStrings.Colonscope = this.cast(":scope")
+  def Colonscope: typingsSlinky.csstype.csstypeStrings.Colonscope = ":scope".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonscope]
   @scala.inline
-  def Colontarget: typingsSlinky.csstype.csstypeStrings.Colontarget = this.cast(":target")
+  def Colontarget: typingsSlinky.csstype.csstypeStrings.Colontarget = ":target".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colontarget]
   @scala.inline
-  def Colonvalid: typingsSlinky.csstype.csstypeStrings.Colonvalid = this.cast(":valid")
+  def Colonvalid: typingsSlinky.csstype.csstypeStrings.Colonvalid = ":valid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonvalid]
   @scala.inline
-  def Colonvisited: typingsSlinky.csstype.csstypeStrings.Colonvisited = this.cast(":visited")
+  def Colonvisited: typingsSlinky.csstype.csstypeStrings.Colonvisited = ":visited".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonvisited]
   @scala.inline
-  def Colonwhere: typingsSlinky.csstype.csstypeStrings.Colonwhere = this.cast(":where")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Colonwhere: typingsSlinky.csstype.csstypeStrings.Colonwhere = ":where".asInstanceOf[typingsSlinky.csstype.csstypeStrings.Colonwhere]
 }
 

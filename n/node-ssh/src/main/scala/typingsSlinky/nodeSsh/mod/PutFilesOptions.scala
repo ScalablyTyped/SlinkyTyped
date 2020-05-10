@@ -1,0 +1,66 @@
+package typingsSlinky.nodeSsh.mod
+
+import typingsSlinky.ssh2Streams.mod.TransferOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait PutFilesOptions extends js.Object {
+  var concurrency: js.UndefOr[Double] = js.native
+  var sftp: js.UndefOr[SFTP] = js.native
+  var sftpOptions: js.UndefOr[TransferOptions] = js.native
+}
+
+object PutFilesOptions {
+  @scala.inline
+  def apply(): PutFilesOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[PutFilesOptions]
+  }
+  @scala.inline
+  implicit class PutFilesOptionsOps[Self <: PutFilesOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConcurrency(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConcurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSftp(value: SFTP): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sftp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSftp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sftp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSftpOptions(value: TransferOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sftpOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSftpOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sftpOptions")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

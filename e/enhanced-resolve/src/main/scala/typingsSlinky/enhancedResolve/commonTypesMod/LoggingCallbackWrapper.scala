@@ -1,6 +1,5 @@
 package typingsSlinky.enhancedResolve.commonTypesMod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 trait LoggingCallbackWrapper extends LoggingCallbackTools {
   def apply(): js.Any = js.native
   def apply(args: js.Any*): js.Any = js.native
-  def apply(err: Error, args: js.Any*): js.Any = js.native
+  def apply(err: js.Error, args: js.Any*): js.Any = js.native
 }
 

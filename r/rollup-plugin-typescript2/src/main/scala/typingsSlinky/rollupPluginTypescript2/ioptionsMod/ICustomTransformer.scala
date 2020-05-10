@@ -9,24 +9,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICustomTransformer extends js.Object {
-  var after: js.UndefOr[TransformerFactory[SourceFile]] = js.undefined
-  var afterDeclarations: js.UndefOr[TransformerFactory[Bundle | SourceFile]] = js.undefined
-  var before: js.UndefOr[TransformerFactory[SourceFile]] = js.undefined
+  var after: js.UndefOr[TransformerFactory[SourceFile]] = js.native
+  var afterDeclarations: js.UndefOr[TransformerFactory[Bundle | SourceFile]] = js.native
+  var before: js.UndefOr[TransformerFactory[SourceFile]] = js.native
 }
 
 object ICustomTransformer {
   @scala.inline
-  def apply(
-    after: /* context */ TransformationContext => Transformer[SourceFile] = null,
-    afterDeclarations: /* context */ TransformationContext => Transformer[Bundle | SourceFile] = null,
-    before: /* context */ TransformationContext => Transformer[SourceFile] = null
-  ): ICustomTransformer = {
+  def apply(): ICustomTransformer = {
     val __obj = js.Dynamic.literal()
-    if (after != null) __obj.updateDynamic("after")(js.Any.fromFunction1(after))
-    if (afterDeclarations != null) __obj.updateDynamic("afterDeclarations")(js.Any.fromFunction1(afterDeclarations))
-    if (before != null) __obj.updateDynamic("before")(js.Any.fromFunction1(before))
     __obj.asInstanceOf[ICustomTransformer]
   }
+  @scala.inline
+  implicit class ICustomTransformerOps[Self <: ICustomTransformer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfter(value: /* context */ TransformationContext => Transformer[SourceFile]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterDeclarations(value: /* context */ TransformationContext => Transformer[Bundle | SourceFile]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDeclarations")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterDeclarations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDeclarations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBefore(value: /* context */ TransformationContext => Transformer[SourceFile]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

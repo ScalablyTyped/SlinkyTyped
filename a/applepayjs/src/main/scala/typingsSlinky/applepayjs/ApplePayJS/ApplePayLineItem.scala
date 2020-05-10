@@ -7,27 +7,59 @@ import scala.scalajs.js.annotation._
 /**
   * Defines a line item in a payment request - for example, total, tax, discount, or grand total.
   */
+@js.native
 trait ApplePayLineItem extends js.Object {
   /**
     * The line item's amount.
     */
-  var amount: String
+  var amount: String = js.native
   /**
     * A short, localized description of the line item.
     */
-  var label: String
+  var label: String = js.native
   /**
     * A value that indicates if the line item is final or pending.
     */
-  var `type`: js.UndefOr[ApplePayLineItemType] = js.undefined
+  var `type`: js.UndefOr[ApplePayLineItemType] = js.native
 }
 
 object ApplePayLineItem {
   @scala.inline
-  def apply(amount: String, label: String, `type`: ApplePayLineItemType = null): ApplePayLineItem = {
+  def apply(amount: String, label: String): ApplePayLineItem = {
     val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplePayLineItem]
   }
+  @scala.inline
+  implicit class ApplePayLineItemOps[Self <: ApplePayLineItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: ApplePayLineItemType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

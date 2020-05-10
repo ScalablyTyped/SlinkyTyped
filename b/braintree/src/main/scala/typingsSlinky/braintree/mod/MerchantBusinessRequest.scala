@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MerchantBusinessRequest extends js.Object {
-  var address: js.UndefOr[MerchantAddressDetails] = js.undefined
-  var dbaName: js.UndefOr[String] = js.undefined
-  var legalName: js.UndefOr[String] = js.undefined
-  var taxId: js.UndefOr[String] = js.undefined
+  var address: js.UndefOr[MerchantAddressDetails] = js.native
+  var dbaName: js.UndefOr[String] = js.native
+  var legalName: js.UndefOr[String] = js.native
+  var taxId: js.UndefOr[String] = js.native
 }
 
 object MerchantBusinessRequest {
   @scala.inline
-  def apply(
-    address: MerchantAddressDetails = null,
-    dbaName: String = null,
-    legalName: String = null,
-    taxId: String = null
-  ): MerchantBusinessRequest = {
+  def apply(): MerchantBusinessRequest = {
     val __obj = js.Dynamic.literal()
-    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (dbaName != null) __obj.updateDynamic("dbaName")(dbaName.asInstanceOf[js.Any])
-    if (legalName != null) __obj.updateDynamic("legalName")(legalName.asInstanceOf[js.Any])
-    if (taxId != null) __obj.updateDynamic("taxId")(taxId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MerchantBusinessRequest]
   }
+  @scala.inline
+  implicit class MerchantBusinessRequestOps[Self <: MerchantBusinessRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: MerchantAddressDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDbaName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbaName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDbaName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbaName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegalName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legalName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegalName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legalName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaxId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taxId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaxId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taxId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

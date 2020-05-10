@@ -14,14 +14,12 @@ trait BootstrapMenuPosition extends js.Object
 
 object BootstrapMenuPosition {
   @scala.inline
-  def aboveLeft: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.aboveLeft = this.cast("aboveLeft")
+  def aboveLeft: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.aboveLeft = "aboveLeft".asInstanceOf[typingsSlinky.bootstrapMenu.bootstrapMenuStrings.aboveLeft]
   @scala.inline
-  def aboveRight: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.aboveRight = this.cast("aboveRight")
+  def aboveRight: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.aboveRight = "aboveRight".asInstanceOf[typingsSlinky.bootstrapMenu.bootstrapMenuStrings.aboveRight]
   @scala.inline
-  def belowLeft: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.belowLeft = this.cast("belowLeft")
+  def belowLeft: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.belowLeft = "belowLeft".asInstanceOf[typingsSlinky.bootstrapMenu.bootstrapMenuStrings.belowLeft]
   @scala.inline
-  def belowRight: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.belowRight = this.cast("belowRight")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def belowRight: typingsSlinky.bootstrapMenu.bootstrapMenuStrings.belowRight = "belowRight".asInstanceOf[typingsSlinky.bootstrapMenu.bootstrapMenuStrings.belowRight]
 }
 

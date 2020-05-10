@@ -1,32 +1,31 @@
 package typingsSlinky.reactCssThemr.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactCssThemr.mod.TReactCSSThemrTheme
 import typingsSlinky.reactCssThemr.mod.ThemeProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ThemeProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactCssThemr.mod.ThemeProvider] {
+object ThemeProvider {
   @JSImport("react-css-themr", "ThemeProvider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    theme: TReactCSSThemrTheme,
-    innerRef: js.Function = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactCssThemr.mod.ThemeProvider] = {
-    val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
-    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactCssThemr.mod.ThemeProvider] {
+    @scala.inline
+    def innerRef(value: js.Function): this.type = set("innerRef", value.asInstanceOf[js.Any])
   }
-  type Props = ThemeProviderProps
+  
+  def withProps(p: ThemeProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(theme: TReactCSSThemrTheme): Builder = {
+    val __props = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ThemeProviderProps]))
+  }
 }
 

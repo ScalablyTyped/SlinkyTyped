@@ -1,105 +1,104 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonField
 import typingsSlinky.primereact.columnColumnMod.ColumnProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Column
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.columnMod.Column] {
+object Column {
   @JSImport("primereact/column", "Column")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, colSpan, rowSpan */
-  def apply(
-    body: js.Any = null,
-    bodyClassName: String = null,
-    bodyStyle: js.Object = null,
-    columnKey: String = null,
-    editor: /* props */ js.Any => js.UndefOr[ReactElement] = null,
-    editorValidator: /* props */ js.Any => Boolean = null,
-    editorValidatorEvent: String = null,
-    excludeGlobalFilter: js.UndefOr[Boolean] = js.undefined,
-    expander: js.UndefOr[Boolean] = js.undefined,
-    exportable: js.UndefOr[Boolean] = js.undefined,
-    field: String = null,
-    filter: js.UndefOr[Boolean] = js.undefined,
-    filterElement: js.Object = null,
-    filterFunction: (/* value */ js.Any, /* filter */ js.Any) => Unit = null,
-    filterMatchMode: String = null,
-    filterMaxLength: Int | Double = null,
-    filterPlaceholder: String = null,
-    filterType: String = null,
-    footer: js.Any = null,
-    footerClassName: String = null,
-    footerStyle: js.Object = null,
-    frozen: js.UndefOr[Boolean] = js.undefined,
-    header: js.Any = null,
-    headerClassName: String = null,
-    headerStyle: js.Object = null,
-    loadingBody: js.Any = null,
-    onEditorCancel: /* props */ js.Any => Unit = null,
-    onEditorSubmit: /* props */ js.Any => Unit = null,
-    rowEditor: js.UndefOr[Boolean] = js.undefined,
-    rowReorder: js.UndefOr[Boolean] = js.undefined,
-    rowReorderIcon: String = null,
-    selectionMode: String = null,
-    sortField: String = null,
-    sortFunction: /* e */ AnonField => Unit = null,
-    sortable: js.UndefOr[Boolean] = js.undefined,
-    style: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.columnMod.Column] = {
-    val __obj = js.Dynamic.literal()
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (bodyClassName != null) __obj.updateDynamic("bodyClassName")(bodyClassName.asInstanceOf[js.Any])
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
-    if (columnKey != null) __obj.updateDynamic("columnKey")(columnKey.asInstanceOf[js.Any])
-    if (editor != null) __obj.updateDynamic("editor")(js.Any.fromFunction1(editor))
-    if (editorValidator != null) __obj.updateDynamic("editorValidator")(js.Any.fromFunction1(editorValidator))
-    if (editorValidatorEvent != null) __obj.updateDynamic("editorValidatorEvent")(editorValidatorEvent.asInstanceOf[js.Any])
-    if (!js.isUndefined(excludeGlobalFilter)) __obj.updateDynamic("excludeGlobalFilter")(excludeGlobalFilter.asInstanceOf[js.Any])
-    if (!js.isUndefined(expander)) __obj.updateDynamic("expander")(expander.asInstanceOf[js.Any])
-    if (!js.isUndefined(exportable)) __obj.updateDynamic("exportable")(exportable.asInstanceOf[js.Any])
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
-    if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (filterElement != null) __obj.updateDynamic("filterElement")(filterElement.asInstanceOf[js.Any])
-    if (filterFunction != null) __obj.updateDynamic("filterFunction")(js.Any.fromFunction2(filterFunction))
-    if (filterMatchMode != null) __obj.updateDynamic("filterMatchMode")(filterMatchMode.asInstanceOf[js.Any])
-    if (filterMaxLength != null) __obj.updateDynamic("filterMaxLength")(filterMaxLength.asInstanceOf[js.Any])
-    if (filterPlaceholder != null) __obj.updateDynamic("filterPlaceholder")(filterPlaceholder.asInstanceOf[js.Any])
-    if (filterType != null) __obj.updateDynamic("filterType")(filterType.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (footerClassName != null) __obj.updateDynamic("footerClassName")(footerClassName.asInstanceOf[js.Any])
-    if (footerStyle != null) __obj.updateDynamic("footerStyle")(footerStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(frozen)) __obj.updateDynamic("frozen")(frozen.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (headerClassName != null) __obj.updateDynamic("headerClassName")(headerClassName.asInstanceOf[js.Any])
-    if (headerStyle != null) __obj.updateDynamic("headerStyle")(headerStyle.asInstanceOf[js.Any])
-    if (loadingBody != null) __obj.updateDynamic("loadingBody")(loadingBody.asInstanceOf[js.Any])
-    if (onEditorCancel != null) __obj.updateDynamic("onEditorCancel")(js.Any.fromFunction1(onEditorCancel))
-    if (onEditorSubmit != null) __obj.updateDynamic("onEditorSubmit")(js.Any.fromFunction1(onEditorSubmit))
-    if (!js.isUndefined(rowEditor)) __obj.updateDynamic("rowEditor")(rowEditor.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowReorder)) __obj.updateDynamic("rowReorder")(rowReorder.asInstanceOf[js.Any])
-    if (rowReorderIcon != null) __obj.updateDynamic("rowReorderIcon")(rowReorderIcon.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (sortField != null) __obj.updateDynamic("sortField")(sortField.asInstanceOf[js.Any])
-    if (sortFunction != null) __obj.updateDynamic("sortFunction")(js.Any.fromFunction1(sortFunction))
-    if (!js.isUndefined(sortable)) __obj.updateDynamic("sortable")(sortable.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.columnMod.Column] {
+    @scala.inline
+    def body(value: js.Any): this.type = set("body", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyClassName(value: String): this.type = set("bodyClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyStyle(value: js.Object): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colSpan(value: Double): this.type = set("colSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnKey(value: String): this.type = set("columnKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editor(value: /* props */ js.Any => js.UndefOr[ReactElement]): this.type = set("editor", js.Any.fromFunction1(value))
+    @scala.inline
+    def editorValidator(value: /* props */ js.Any => Boolean): this.type = set("editorValidator", js.Any.fromFunction1(value))
+    @scala.inline
+    def editorValidatorEvent(value: String): this.type = set("editorValidatorEvent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def excludeGlobalFilter(value: Boolean): this.type = set("excludeGlobalFilter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expander(value: Boolean): this.type = set("expander", value.asInstanceOf[js.Any])
+    @scala.inline
+    def exportable(value: Boolean): this.type = set("exportable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def field(value: String): this.type = set("field", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filter(value: Boolean): this.type = set("filter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterElement(value: js.Object): this.type = set("filterElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterFunction(value: (/* value */ js.Any, /* filter */ js.Any) => Unit): this.type = set("filterFunction", js.Any.fromFunction2(value))
+    @scala.inline
+    def filterMatchMode(value: String): this.type = set("filterMatchMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterMaxLength(value: Double): this.type = set("filterMaxLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterPlaceholder(value: String): this.type = set("filterPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterType(value: String): this.type = set("filterType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footer(value: js.Any): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerClassName(value: String): this.type = set("footerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerStyle(value: js.Object): this.type = set("footerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def frozen(value: Boolean): this.type = set("frozen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def header(value: js.Any): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerClassName(value: String): this.type = set("headerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerStyle(value: js.Object): this.type = set("headerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadingBody(value: js.Any): this.type = set("loadingBody", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEditorCancel(value: /* props */ js.Any => Unit): this.type = set("onEditorCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEditorSubmit(value: /* props */ js.Any => Unit): this.type = set("onEditorSubmit", js.Any.fromFunction1(value))
+    @scala.inline
+    def rowEditor(value: Boolean): this.type = set("rowEditor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowReorder(value: Boolean): this.type = set("rowReorder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowReorderIcon(value: String): this.type = set("rowReorderIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowSpan(value: Double): this.type = set("rowSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectionMode(value: String): this.type = set("selectionMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortField(value: String): this.type = set("sortField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortFunction(value: /* e */ AnonField => Unit): this.type = set("sortFunction", js.Any.fromFunction1(value))
+    @scala.inline
+    def sortable(value: Boolean): this.type = set("sortable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.columnMod.Column] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.columnMod.Column](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ColumnProps
+  
+  def withProps(p: ColumnProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Column.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

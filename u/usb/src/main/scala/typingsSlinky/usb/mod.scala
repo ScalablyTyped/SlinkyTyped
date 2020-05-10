@@ -388,10 +388,6 @@ object mod extends js.Object {
   @js.native
   class LibUSBException () extends Error {
     var errno: Double = js.native
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
   }
   
   @js.native

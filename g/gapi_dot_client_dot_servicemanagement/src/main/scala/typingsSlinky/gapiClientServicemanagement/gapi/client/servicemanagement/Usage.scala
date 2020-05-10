@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Usage extends js.Object {
   /**
     * The full resource name of a channel used for sending notifications to the
@@ -15,33 +16,70 @@ trait Usage extends js.Object {
     * of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format
     * documented in https://cloud.google.com/pubsub/docs/overview.
     */
-  var producerNotificationChannel: js.UndefOr[String] = js.undefined
+  var producerNotificationChannel: js.UndefOr[String] = js.native
   /**
     * Requirements that must be satisfied before a consumer project can use the
     * service. Each requirement is of the form <service.name>/<requirement-id>;
     * for example 'serviceusage.googleapis.com/billing-enabled'.
     */
-  var requirements: js.UndefOr[js.Array[String]] = js.undefined
+  var requirements: js.UndefOr[js.Array[String]] = js.native
   /**
     * A list of usage rules that apply to individual API methods.
     *
     * &#42;&#42;NOTE:&#42;&#42; All service configuration rules follow "last one wins" order.
     */
-  var rules: js.UndefOr[js.Array[UsageRule]] = js.undefined
+  var rules: js.UndefOr[js.Array[UsageRule]] = js.native
 }
 
 object Usage {
   @scala.inline
-  def apply(
-    producerNotificationChannel: String = null,
-    requirements: js.Array[String] = null,
-    rules: js.Array[UsageRule] = null
-  ): Usage = {
+  def apply(): Usage = {
     val __obj = js.Dynamic.literal()
-    if (producerNotificationChannel != null) __obj.updateDynamic("producerNotificationChannel")(producerNotificationChannel.asInstanceOf[js.Any])
-    if (requirements != null) __obj.updateDynamic("requirements")(requirements.asInstanceOf[js.Any])
-    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
     __obj.asInstanceOf[Usage]
   }
+  @scala.inline
+  implicit class UsageOps[Self <: Usage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProducerNotificationChannel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("producerNotificationChannel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProducerNotificationChannel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("producerNotificationChannel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequirements(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequirements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRules(value: js.Array[UsageRule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

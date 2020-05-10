@@ -3,7 +3,7 @@ package typingsSlinky.hapiHawk
 import typingsSlinky.hapiBoom.mod.Boom
 import typingsSlinky.hapiBoom.mod.unauthorized.Attributes
 import typingsSlinky.hapiBoom.mod.unauthorized.MissingAuth
-import typingsSlinky.hapiHapi.mod.Server
+import typingsSlinky.hapiHapi.mod.Server_
 import typingsSlinky.hapiHawk.clientMod.AuthenticateOptions
 import typingsSlinky.hapiHawk.clientMod.Authentication
 import typingsSlinky.hapiHawk.clientMod.BewitOptions
@@ -68,7 +68,7 @@ object mod extends js.Object {
     object plugin extends js.Object {
       val pkg: Record[String, js.Any] = js.native
       val requirements: Record[String, String] = js.native
-      def register(server: Server): Unit = js.native
+      def register(server: Server_): Unit = js.native
     }
     
   }

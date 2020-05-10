@@ -15,16 +15,14 @@ trait PostStatus extends js.Object
 
 object PostStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def draft: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.draft = "draft".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.draft]
   @scala.inline
-  def draft: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.draft = this.cast("draft")
+  def future: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.future = "future".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.future]
   @scala.inline
-  def future: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.future = this.cast("future")
+  def pending: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.pending = "pending".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.pending]
   @scala.inline
-  def pending: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.pending = this.cast("pending")
+  def `private`: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.`private` = "private".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.`private`]
   @scala.inline
-  def `private`: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.`private` = this.cast("private")
-  @scala.inline
-  def publish: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.publish = this.cast("publish")
+  def publish: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.publish = "publish".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.publish]
 }
 

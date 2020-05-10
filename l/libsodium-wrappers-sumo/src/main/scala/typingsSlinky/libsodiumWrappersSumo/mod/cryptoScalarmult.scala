@@ -9,19 +9,16 @@ import scala.scalajs.js.annotation._
 @JSImport("libsodium-wrappers-sumo", "crypto_scalarmult")
 @js.native
 object cryptoScalarmult extends js.Object {
+  def apply(privateKey: js.typedarray.Uint8Array, publicKey: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
   def apply(
-    privateKey: scala.scalajs.js.typedarray.Uint8Array,
-    publicKey: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def apply(
-    privateKey: scala.scalajs.js.typedarray.Uint8Array,
-    publicKey: scala.scalajs.js.typedarray.Uint8Array,
+    privateKey: js.typedarray.Uint8Array,
+    publicKey: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    privateKey: scala.scalajs.js.typedarray.Uint8Array,
-    publicKey: scala.scalajs.js.typedarray.Uint8Array,
+    privateKey: js.typedarray.Uint8Array,
+    publicKey: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
 }
 

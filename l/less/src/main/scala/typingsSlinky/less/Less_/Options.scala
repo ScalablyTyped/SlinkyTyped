@@ -18,95 +18,313 @@ import scala.scalajs.js.annotation._
   *
   * @interface Options
   */
+@js.native
 trait Options extends js.Object {
   /** @deprecated If false, No color in compiling. */
-  var color: js.UndefOr[Boolean] = js.undefined
+  var color: js.UndefOr[Boolean] = js.native
   /** @deprecated If true, compress using less built-in compression. */
-  var compress: js.UndefOr[Boolean] = js.undefined
-  var depends: js.UndefOr[Boolean] = js.undefined
+  var compress: js.UndefOr[Boolean] = js.native
+  var depends: js.UndefOr[Boolean] = js.native
   /** Whether output file information and line numbers in compiled CSS code. */
-  var dumpLineNumbers: js.UndefOr[comment | String] = js.undefined
+  var dumpLineNumbers: js.UndefOr[comment | String] = js.native
   /** Filename of the main file to be passed to less.render() */
-  var filename: js.UndefOr[String] = js.undefined
+  var filename: js.UndefOr[String] = js.native
   /** Defines a variable that can be referenced by the file. */
-  var globalVars: js.UndefOr[StringDictionary[String]] = js.undefined
+  var globalVars: js.UndefOr[StringDictionary[String]] = js.native
   /** @deprecated False by default. */
-  var ieCompat: js.UndefOr[Boolean] = js.undefined
+  var ieCompat: js.UndefOr[Boolean] = js.native
   /** If true, allow imports from insecure https hosts. */
-  var insecure: js.UndefOr[Boolean] = js.undefined
+  var insecure: js.UndefOr[Boolean] = js.native
   /** @deprecated If true, enable evaluation of JavaScript inline in `.less` files. */
-  var javascriptEnabled: js.UndefOr[Boolean] = js.undefined
+  var javascriptEnabled: js.UndefOr[Boolean] = js.native
   /** True, if run the less parser and just reports errors without any output. */
-  var lint: js.UndefOr[Boolean] = js.undefined
+  var lint: js.UndefOr[Boolean] = js.native
   /** Math mode options for avoiding symbol conficts on math expressions. */
-  var math: js.UndefOr[always | strict | `parens-division` | parens | `strict-legacy` | Double] = js.undefined
-  var maxLineLen: js.UndefOr[Double] = js.undefined
+  var math: js.UndefOr[always | strict | `parens-division` | parens | `strict-legacy` | Double] = js.native
+  var maxLineLen: js.UndefOr[Double] = js.native
   /** Puts Var declaration at the end of base file. */
-  var modifyVars: js.UndefOr[StringDictionary[String]] = js.undefined
+  var modifyVars: js.UndefOr[StringDictionary[String]] = js.native
   /** The locations for less looking for files in @import rules */
-  var paths: js.UndefOr[js.Array[String]] = js.undefined
+  var paths: js.UndefOr[js.Array[String]] = js.native
   /** Pre-load global Less.js plugins */
-  var plugins: js.UndefOr[js.Array[Plugin]] = js.undefined
+  var plugins: js.UndefOr[js.Array[Plugin]] = js.native
   /** Add a path to every generated import and url in output css files. */
-  var rootpath: js.UndefOr[String] = js.undefined
+  var rootpath: js.UndefOr[String] = js.native
   /** If true, stops any warnings from being shown. */
-  var silent: js.UndefOr[Boolean] = js.undefined
-  var sourceMap: js.UndefOr[SourceMapOption] = js.undefined
-  var strictImports: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.native
+  var sourceMap: js.UndefOr[SourceMapOption] = js.native
+  var strictImports: js.UndefOr[Boolean] = js.native
   /** Without this option, Less attempts to guess at the output unit when it does maths. */
-  var strictUnits: js.UndefOr[Boolean] = js.undefined
+  var strictUnits: js.UndefOr[Boolean] = js.native
   /** Read files synchronously in Node.js */
-  var syncImport: js.UndefOr[Boolean] = js.undefined
+  var syncImport: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    color: js.UndefOr[Boolean] = js.undefined,
-    compress: js.UndefOr[Boolean] = js.undefined,
-    depends: js.UndefOr[Boolean] = js.undefined,
-    dumpLineNumbers: comment | String = null,
-    filename: String = null,
-    globalVars: StringDictionary[String] = null,
-    ieCompat: js.UndefOr[Boolean] = js.undefined,
-    insecure: js.UndefOr[Boolean] = js.undefined,
-    javascriptEnabled: js.UndefOr[Boolean] = js.undefined,
-    lint: js.UndefOr[Boolean] = js.undefined,
-    math: always | strict | `parens-division` | parens | `strict-legacy` | Double = null,
-    maxLineLen: Int | Double = null,
-    modifyVars: StringDictionary[String] = null,
-    paths: js.Array[String] = null,
-    plugins: js.Array[Plugin] = null,
-    rootpath: String = null,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    sourceMap: SourceMapOption = null,
-    strictImports: js.UndefOr[Boolean] = js.undefined,
-    strictUnits: js.UndefOr[Boolean] = js.undefined,
-    syncImport: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(compress)) __obj.updateDynamic("compress")(compress.asInstanceOf[js.Any])
-    if (!js.isUndefined(depends)) __obj.updateDynamic("depends")(depends.asInstanceOf[js.Any])
-    if (dumpLineNumbers != null) __obj.updateDynamic("dumpLineNumbers")(dumpLineNumbers.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (globalVars != null) __obj.updateDynamic("globalVars")(globalVars.asInstanceOf[js.Any])
-    if (!js.isUndefined(ieCompat)) __obj.updateDynamic("ieCompat")(ieCompat.asInstanceOf[js.Any])
-    if (!js.isUndefined(insecure)) __obj.updateDynamic("insecure")(insecure.asInstanceOf[js.Any])
-    if (!js.isUndefined(javascriptEnabled)) __obj.updateDynamic("javascriptEnabled")(javascriptEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(lint)) __obj.updateDynamic("lint")(lint.asInstanceOf[js.Any])
-    if (math != null) __obj.updateDynamic("math")(math.asInstanceOf[js.Any])
-    if (maxLineLen != null) __obj.updateDynamic("maxLineLen")(maxLineLen.asInstanceOf[js.Any])
-    if (modifyVars != null) __obj.updateDynamic("modifyVars")(modifyVars.asInstanceOf[js.Any])
-    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (rootpath != null) __obj.updateDynamic("rootpath")(rootpath.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (sourceMap != null) __obj.updateDynamic("sourceMap")(sourceMap.asInstanceOf[js.Any])
-    if (!js.isUndefined(strictImports)) __obj.updateDynamic("strictImports")(strictImports.asInstanceOf[js.Any])
-    if (!js.isUndefined(strictUnits)) __obj.updateDynamic("strictUnits")(strictUnits.asInstanceOf[js.Any])
-    if (!js.isUndefined(syncImport)) __obj.updateDynamic("syncImport")(syncImport.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompress(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDepends(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depends")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDepends: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depends")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDumpLineNumbers(value: comment | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dumpLineNumbers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDumpLineNumbers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dumpLineNumbers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilename(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilename: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalVars(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalVars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalVars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalVars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIeCompat(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ieCompat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIeCompat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ieCompat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsecure(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insecure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsecure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insecure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJavascriptEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("javascriptEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJavascriptEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("javascriptEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLint(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMath(value: always | strict | `parens-division` | parens | `strict-legacy` | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("math")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("math")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxLineLen(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLineLen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLineLen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLineLen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModifyVars(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyVars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModifyVars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyVars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaths(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Array[Plugin]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootpath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootpath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootpath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootpath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceMap(value: SourceMapOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrictImports(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictImports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrictImports: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictImports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrictUnits(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrictUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictUnits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSyncImport(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncImport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyncImport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncImport")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

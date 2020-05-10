@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object tracingMod {
   /* Rewritten from type alias, can be one of: 
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - typingsSlinky.scheduler.schedulerBooleans.`true`
     - typingsSlinky.scheduler.schedulerBooleans.`false`
   */

@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * ObjectMeta is metadata that all persisted resources must have, which includes all objects
   * users must create.
   */
+@js.native
 trait ObjectMeta extends js.Object {
   /**
     * Annotations is an unstructured key value map stored with a resource that may be set by
@@ -17,13 +18,13 @@ trait ObjectMeta extends js.Object {
     * be preserved when modifying objects. More info:
     * http://kubernetes.io/docs/user-guide/annotations
     */
-  var annotations: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.undefined
+  var annotations: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   /**
     * The name of the cluster which the object belongs to. This is used to distinguish resources
     * with same name and namespace in different clusters. This field is not set anywhere right
     * now and apiserver is going to ignore it if set in create or update request.
     */
-  var clusterName: js.UndefOr[Input[String]] = js.undefined
+  var clusterName: js.UndefOr[Input[String]] = js.native
   /**
     * CreationTimestamp is a timestamp representing the server time when this object was created.
     * It is not guaranteed to be set in happens-before order across separate operations. Clients
@@ -32,13 +33,13 @@ trait ObjectMeta extends js.Object {
     * Populated by the system. Read-only. Null for lists. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     */
-  var creationTimestamp: js.UndefOr[Input[String]] = js.undefined
+  var creationTimestamp: js.UndefOr[Input[String]] = js.native
   /**
     * Number of seconds allowed for this object to gracefully terminate before it will be removed
     * from the system. Only set when deletionTimestamp is also set. May only be shortened.
     * Read-only.
     */
-  var deletionGracePeriodSeconds: js.UndefOr[Input[Double]] = js.undefined
+  var deletionGracePeriodSeconds: js.UndefOr[Input[Double]] = js.native
   /**
     * DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This
     * field is set by the server when a graceful deletion is requested by the user, and is not
@@ -58,7 +59,7 @@ trait ObjectMeta extends js.Object {
     * Populated by the system when a graceful deletion is requested. Read-only. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
     */
-  var deletionTimestamp: js.UndefOr[Input[String]] = js.undefined
+  var deletionTimestamp: js.UndefOr[Input[String]] = js.native
   /**
     * Must be empty before the object is deleted from the registry. Each entry is an identifier
     * for the responsible component that will remove the entry from the list. If the
@@ -72,7 +73,7 @@ trait ObjectMeta extends js.Object {
     * ordering finalizers are free to order amongst themselves and are not vulnerable to ordering
     * changes in the list.
     */
-  var finalizers: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
+  var finalizers: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   /**
     * GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF
     * the Name field has not been provided. If this field is used, the name returned to the
@@ -88,18 +89,18 @@ trait ObjectMeta extends js.Object {
     * Applied only if Name is not specified. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#idempotency
     */
-  var generateName: js.UndefOr[Input[String]] = js.undefined
+  var generateName: js.UndefOr[Input[String]] = js.native
   /**
     * A sequence number representing a specific generation of the desired state. Populated by the
     * system. Read-only.
     */
-  var generation: js.UndefOr[Input[Double]] = js.undefined
+  var generation: js.UndefOr[Input[Double]] = js.native
   /**
     * Map of string keys and values that can be used to organize and categorize (scope and
     * select) objects. May match selectors of replication controllers and services. More info:
     * http://kubernetes.io/docs/user-guide/labels
     */
-  var labels: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.undefined
+  var labels: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   /**
     * ManagedFields maps workflow-id and version to the set of fields that are managed by that
     * workflow. This is mostly for internal housekeeping, and users typically shouldn't need to
@@ -107,7 +108,7 @@ trait ObjectMeta extends js.Object {
     * the name of a specific apply path like "ci-cd". The set of fields is always in the version
     * that the workflow used when modifying the object.
     */
-  var managedFields: js.UndefOr[Input[js.Array[Input[ManagedFieldsEntry]]]] = js.undefined
+  var managedFields: js.UndefOr[Input[js.Array[Input[ManagedFieldsEntry]]]] = js.native
   /**
     * Name must be unique within a namespace. Is required when creating resources, although some
     * resources may allow a client to request the generation of an appropriate name
@@ -115,7 +116,7 @@ trait ObjectMeta extends js.Object {
     * definition. Cannot be updated. More info:
     * http://kubernetes.io/docs/user-guide/identifiers#names
     */
-  var name: js.UndefOr[Input[String]] = js.undefined
+  var name: js.UndefOr[Input[String]] = js.native
   /**
     * Namespace defines the space within each name must be unique. An empty namespace is
     * equivalent to the "default" namespace, but "default" is the canonical representation. Not
@@ -125,14 +126,14 @@ trait ObjectMeta extends js.Object {
     * Must be a DNS_LABEL. Cannot be updated. More info:
     * http://kubernetes.io/docs/user-guide/namespaces
     */
-  var namespace: js.UndefOr[Input[String]] = js.undefined
+  var namespace: js.UndefOr[Input[String]] = js.native
   /**
     * List of objects depended by this object. If ALL objects in the list have been deleted, this
     * object will be garbage collected. If this object is managed by a controller, then an entry
     * in this list will point to this controller, with the controller field set to true. There
     * cannot be more than one managing controller.
     */
-  var ownerReferences: js.UndefOr[Input[js.Array[Input[OwnerReference]]]] = js.undefined
+  var ownerReferences: js.UndefOr[Input[js.Array[Input[OwnerReference]]]] = js.native
   /**
     * An opaque value that represents the internal version of this object that can be used by
     * clients to determine when objects have changed. May be used for optimistic concurrency,
@@ -144,14 +145,14 @@ trait ObjectMeta extends js.Object {
     * info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency
     */
-  var resourceVersion: js.UndefOr[Input[String]] = js.undefined
+  var resourceVersion: js.UndefOr[Input[String]] = js.native
   /**
     * SelfLink is a URL representing this object. Populated by the system. Read-only.
     *
     * DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the field is
     * planned to be removed in 1.21 release.
     */
-  var selfLink: js.UndefOr[Input[String]] = js.undefined
+  var selfLink: js.UndefOr[Input[String]] = js.native
   /**
     * UID is the unique in time and space value for this object. It is typically generated by the
     * server on successful creation of a resource and is not allowed to change on PUT operations.
@@ -159,47 +160,214 @@ trait ObjectMeta extends js.Object {
     * Populated by the system. Read-only. More info:
     * http://kubernetes.io/docs/user-guide/identifiers#uids
     */
-  var uid: js.UndefOr[Input[String]] = js.undefined
+  var uid: js.UndefOr[Input[String]] = js.native
 }
 
 object ObjectMeta {
   @scala.inline
-  def apply(
-    annotations: Input[StringDictionary[Input[String]]] = null,
-    clusterName: Input[String] = null,
-    creationTimestamp: Input[String] = null,
-    deletionGracePeriodSeconds: Input[Double] = null,
-    deletionTimestamp: Input[String] = null,
-    finalizers: Input[js.Array[Input[String]]] = null,
-    generateName: Input[String] = null,
-    generation: Input[Double] = null,
-    labels: Input[StringDictionary[Input[String]]] = null,
-    managedFields: Input[js.Array[Input[ManagedFieldsEntry]]] = null,
-    name: Input[String] = null,
-    namespace: Input[String] = null,
-    ownerReferences: Input[js.Array[Input[OwnerReference]]] = null,
-    resourceVersion: Input[String] = null,
-    selfLink: Input[String] = null,
-    uid: Input[String] = null
-  ): ObjectMeta = {
+  def apply(): ObjectMeta = {
     val __obj = js.Dynamic.literal()
-    if (annotations != null) __obj.updateDynamic("annotations")(annotations.asInstanceOf[js.Any])
-    if (clusterName != null) __obj.updateDynamic("clusterName")(clusterName.asInstanceOf[js.Any])
-    if (creationTimestamp != null) __obj.updateDynamic("creationTimestamp")(creationTimestamp.asInstanceOf[js.Any])
-    if (deletionGracePeriodSeconds != null) __obj.updateDynamic("deletionGracePeriodSeconds")(deletionGracePeriodSeconds.asInstanceOf[js.Any])
-    if (deletionTimestamp != null) __obj.updateDynamic("deletionTimestamp")(deletionTimestamp.asInstanceOf[js.Any])
-    if (finalizers != null) __obj.updateDynamic("finalizers")(finalizers.asInstanceOf[js.Any])
-    if (generateName != null) __obj.updateDynamic("generateName")(generateName.asInstanceOf[js.Any])
-    if (generation != null) __obj.updateDynamic("generation")(generation.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (managedFields != null) __obj.updateDynamic("managedFields")(managedFields.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
-    if (ownerReferences != null) __obj.updateDynamic("ownerReferences")(ownerReferences.asInstanceOf[js.Any])
-    if (resourceVersion != null) __obj.updateDynamic("resourceVersion")(resourceVersion.asInstanceOf[js.Any])
-    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
-    if (uid != null) __obj.updateDynamic("uid")(uid.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectMeta]
   }
+  @scala.inline
+  implicit class ObjectMetaOps[Self <: ObjectMeta] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnnotations(value: Input[StringDictionary[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnnotations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTimestamp(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeletionGracePeriodSeconds(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionGracePeriodSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionGracePeriodSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionGracePeriodSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeletionTimestamp(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletionTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinalizers(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalizers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalizers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenerateName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenerateName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeneration(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: Input[StringDictionary[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagedFields(value: Input[js.Array[Input[ManagedFieldsEntry]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerReferences(value: Input[js.Array[Input[OwnerReference]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerReferences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerReferences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerReferences")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceVersion(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLink(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUid(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

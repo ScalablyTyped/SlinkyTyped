@@ -4,33 +4,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnalyticsSummary extends js.Object {
   /**
     * Aggregated number of times users contacted the `Company`
     * for given date range.
     */
-  var contactsCount: js.UndefOr[Double] = js.undefined
+  var contactsCount: js.UndefOr[Double] = js.native
   /** Aggregated number of profile views for the `Company` for given date range. */
-  var profileViewsCount: js.UndefOr[Double] = js.undefined
+  var profileViewsCount: js.UndefOr[Double] = js.native
   /**
     * Aggregated number of times users saw the `Company`
     * in Google Partners Search results for given date range.
     */
-  var searchViewsCount: js.UndefOr[Double] = js.undefined
+  var searchViewsCount: js.UndefOr[Double] = js.native
 }
 
 object AnalyticsSummary {
   @scala.inline
-  def apply(
-    contactsCount: Int | Double = null,
-    profileViewsCount: Int | Double = null,
-    searchViewsCount: Int | Double = null
-  ): AnalyticsSummary = {
+  def apply(): AnalyticsSummary = {
     val __obj = js.Dynamic.literal()
-    if (contactsCount != null) __obj.updateDynamic("contactsCount")(contactsCount.asInstanceOf[js.Any])
-    if (profileViewsCount != null) __obj.updateDynamic("profileViewsCount")(profileViewsCount.asInstanceOf[js.Any])
-    if (searchViewsCount != null) __obj.updateDynamic("searchViewsCount")(searchViewsCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsSummary]
   }
+  @scala.inline
+  implicit class AnalyticsSummaryOps[Self <: AnalyticsSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContactsCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContactsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactsCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileViewsCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileViewsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileViewsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileViewsCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchViewsCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchViewsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchViewsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchViewsCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

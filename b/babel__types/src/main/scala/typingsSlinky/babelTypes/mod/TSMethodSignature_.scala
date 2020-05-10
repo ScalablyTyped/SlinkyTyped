@@ -5,50 +5,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait TSMethodSignature_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait TSMethodSignature_
   extends TSTypeElement
      with BaseNode {
-  var computed: Boolean | Null
-  var key: Expression
-  var optional: Boolean | Null
-  var parameters: js.Array[Identifier_ | RestElement_]
-  var typeAnnotation: TSTypeAnnotation_ | Null
-  var typeParameters: TSTypeParameterDeclaration_ | Null
+  var computed: Boolean | Null = js.native
+  var key: Expression = js.native
+  var optional: Boolean | Null = js.native
+  var parameters: js.Array[Identifier_ | RestElement_] = js.native
+  var typeAnnotation: TSTypeAnnotation_ | Null = js.native
+  var typeParameters: TSTypeParameterDeclaration_ | Null = js.native
   @JSName("type")
-  var type_TSMethodSignature_ : TSMethodSignature
+  var type_TSMethodSignature_ : TSMethodSignature = js.native
 }
 
 object TSMethodSignature_ {
   @scala.inline
-  def apply(
-    key: Expression,
-    parameters: js.Array[Identifier_ | RestElement_],
-    `type`: TSMethodSignature,
-    computed: js.UndefOr[Boolean] = js.undefined,
-    end: Int | Double = null,
-    innerComments: js.Array[Comment] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    optional: js.UndefOr[Boolean] = js.undefined,
-    start: Int | Double = null,
-    trailingComments: js.Array[Comment] = null,
-    typeAnnotation: TSTypeAnnotation_ = null,
-    typeParameters: TSTypeParameterDeclaration_ = null
-  ): TSMethodSignature_ = {
+  def apply(key: Expression, parameters: js.Array[Identifier_ | RestElement_], `type`: TSMethodSignature): TSMethodSignature_ = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(computed)) __obj.updateDynamic("computed")(computed.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (!js.isUndefined(optional)) __obj.updateDynamic("optional")(optional.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
-    if (typeAnnotation != null) __obj.updateDynamic("typeAnnotation")(typeAnnotation.asInstanceOf[js.Any])
-    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSMethodSignature_]
   }
+  @scala.inline
+  implicit class TSMethodSignature_Ops[Self <: TSMethodSignature_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKey(value: Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParameters(value: js.Array[Identifier_ | RestElement_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: TSMethodSignature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComputed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComputedNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(null)
+        ret
+    }
+    @scala.inline
+    def withOptional(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptionalNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(null)
+        ret
+    }
+    @scala.inline
+    def withTypeAnnotation(value: TSTypeAnnotation_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeAnnotationNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(null)
+        ret
+    }
+    @scala.inline
+    def withTypeParameters(value: TSTypeParameterDeclaration_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeParametersNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
+        ret
+    }
+  }
+  
 }
 

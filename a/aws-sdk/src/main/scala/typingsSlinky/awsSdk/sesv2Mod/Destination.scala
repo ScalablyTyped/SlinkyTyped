@@ -22,16 +22,53 @@ trait Destination extends js.Object {
 
 object Destination {
   @scala.inline
-  def apply(
-    BccAddresses: EmailAddressList = null,
-    CcAddresses: EmailAddressList = null,
-    ToAddresses: EmailAddressList = null
-  ): Destination = {
+  def apply(): Destination = {
     val __obj = js.Dynamic.literal()
-    if (BccAddresses != null) __obj.updateDynamic("BccAddresses")(BccAddresses.asInstanceOf[js.Any])
-    if (CcAddresses != null) __obj.updateDynamic("CcAddresses")(CcAddresses.asInstanceOf[js.Any])
-    if (ToAddresses != null) __obj.updateDynamic("ToAddresses")(ToAddresses.asInstanceOf[js.Any])
     __obj.asInstanceOf[Destination]
   }
+  @scala.inline
+  implicit class DestinationOps[Self <: Destination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBccAddresses(value: EmailAddressList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BccAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBccAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BccAddresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCcAddresses(value: EmailAddressList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CcAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCcAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CcAddresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToAddresses(value: EmailAddressList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ToAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ToAddresses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

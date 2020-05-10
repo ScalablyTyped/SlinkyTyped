@@ -36,19 +36,71 @@ trait DefaultNetworkAclArgs extends js.Object {
 
 object DefaultNetworkAclArgs {
   @scala.inline
-  def apply(
-    defaultNetworkAclId: Input[String],
-    egress: Input[js.Array[Input[DefaultNetworkAclEgress]]] = null,
-    ingress: Input[js.Array[Input[DefaultNetworkAclIngress]]] = null,
-    subnetIds: Input[js.Array[Input[String]]] = null,
-    tags: Input[StringDictionary[_]] = null
-  ): DefaultNetworkAclArgs = {
+  def apply(defaultNetworkAclId: Input[String]): DefaultNetworkAclArgs = {
     val __obj = js.Dynamic.literal(defaultNetworkAclId = defaultNetworkAclId.asInstanceOf[js.Any])
-    if (egress != null) __obj.updateDynamic("egress")(egress.asInstanceOf[js.Any])
-    if (ingress != null) __obj.updateDynamic("ingress")(ingress.asInstanceOf[js.Any])
-    if (subnetIds != null) __obj.updateDynamic("subnetIds")(subnetIds.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultNetworkAclArgs]
   }
+  @scala.inline
+  implicit class DefaultNetworkAclArgsOps[Self <: DefaultNetworkAclArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultNetworkAclId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultNetworkAclId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEgress(value: Input[js.Array[Input[DefaultNetworkAclEgress]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("egress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("egress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIngress(value: Input[js.Array[Input[DefaultNetworkAclIngress]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ingress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIngress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ingress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetIds(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

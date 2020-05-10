@@ -45,76 +45,74 @@ trait ApiMethod extends js.Object
 
 object ApiMethod {
   @scala.inline
-  def addCard: typingsSlinky.jweixin.jweixinStrings.addCard = this.cast("addCard")
+  def addCard: typingsSlinky.jweixin.jweixinStrings.addCard = "addCard".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.addCard]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chooseCard: typingsSlinky.jweixin.jweixinStrings.chooseCard = "chooseCard".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.chooseCard]
   @scala.inline
-  def chooseCard: typingsSlinky.jweixin.jweixinStrings.chooseCard = this.cast("chooseCard")
+  def chooseImage: typingsSlinky.jweixin.jweixinStrings.chooseImage = "chooseImage".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.chooseImage]
   @scala.inline
-  def chooseImage: typingsSlinky.jweixin.jweixinStrings.chooseImage = this.cast("chooseImage")
+  def chooseWXPay: typingsSlinky.jweixin.jweixinStrings.chooseWXPay = "chooseWXPay".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.chooseWXPay]
   @scala.inline
-  def chooseWXPay: typingsSlinky.jweixin.jweixinStrings.chooseWXPay = this.cast("chooseWXPay")
+  def closeWindow: typingsSlinky.jweixin.jweixinStrings.closeWindow = "closeWindow".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.closeWindow]
   @scala.inline
-  def closeWindow: typingsSlinky.jweixin.jweixinStrings.closeWindow = this.cast("closeWindow")
+  def downloadImage: typingsSlinky.jweixin.jweixinStrings.downloadImage = "downloadImage".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.downloadImage]
   @scala.inline
-  def downloadImage: typingsSlinky.jweixin.jweixinStrings.downloadImage = this.cast("downloadImage")
+  def downloadVoice: typingsSlinky.jweixin.jweixinStrings.downloadVoice = "downloadVoice".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.downloadVoice]
   @scala.inline
-  def downloadVoice: typingsSlinky.jweixin.jweixinStrings.downloadVoice = this.cast("downloadVoice")
+  def getLocation: typingsSlinky.jweixin.jweixinStrings.getLocation = "getLocation".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.getLocation]
   @scala.inline
-  def getLocation: typingsSlinky.jweixin.jweixinStrings.getLocation = this.cast("getLocation")
+  def getNetworkType: typingsSlinky.jweixin.jweixinStrings.getNetworkType = "getNetworkType".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.getNetworkType]
   @scala.inline
-  def getNetworkType: typingsSlinky.jweixin.jweixinStrings.getNetworkType = this.cast("getNetworkType")
+  def hideAllNonBaseMenuItem: typingsSlinky.jweixin.jweixinStrings.hideAllNonBaseMenuItem = "hideAllNonBaseMenuItem".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.hideAllNonBaseMenuItem]
   @scala.inline
-  def hideAllNonBaseMenuItem: typingsSlinky.jweixin.jweixinStrings.hideAllNonBaseMenuItem = this.cast("hideAllNonBaseMenuItem")
+  def hideMenuItems: typingsSlinky.jweixin.jweixinStrings.hideMenuItems = "hideMenuItems".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.hideMenuItems]
   @scala.inline
-  def hideMenuItems: typingsSlinky.jweixin.jweixinStrings.hideMenuItems = this.cast("hideMenuItems")
+  def hideOptionMenu: typingsSlinky.jweixin.jweixinStrings.hideOptionMenu = "hideOptionMenu".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.hideOptionMenu]
   @scala.inline
-  def hideOptionMenu: typingsSlinky.jweixin.jweixinStrings.hideOptionMenu = this.cast("hideOptionMenu")
+  def onMenuShareAppMessage: typingsSlinky.jweixin.jweixinStrings.onMenuShareAppMessage = "onMenuShareAppMessage".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.onMenuShareAppMessage]
   @scala.inline
-  def onMenuShareAppMessage: typingsSlinky.jweixin.jweixinStrings.onMenuShareAppMessage = this.cast("onMenuShareAppMessage")
+  def onMenuShareQQ: typingsSlinky.jweixin.jweixinStrings.onMenuShareQQ = "onMenuShareQQ".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.onMenuShareQQ]
   @scala.inline
-  def onMenuShareQQ: typingsSlinky.jweixin.jweixinStrings.onMenuShareQQ = this.cast("onMenuShareQQ")
+  def onMenuShareQZone: typingsSlinky.jweixin.jweixinStrings.onMenuShareQZone = "onMenuShareQZone".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.onMenuShareQZone]
   @scala.inline
-  def onMenuShareQZone: typingsSlinky.jweixin.jweixinStrings.onMenuShareQZone = this.cast("onMenuShareQZone")
+  def onMenuShareTimeline: typingsSlinky.jweixin.jweixinStrings.onMenuShareTimeline = "onMenuShareTimeline".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.onMenuShareTimeline]
   @scala.inline
-  def onMenuShareTimeline: typingsSlinky.jweixin.jweixinStrings.onMenuShareTimeline = this.cast("onMenuShareTimeline")
+  def onMenuShareWeibo: typingsSlinky.jweixin.jweixinStrings.onMenuShareWeibo = "onMenuShareWeibo".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.onMenuShareWeibo]
   @scala.inline
-  def onMenuShareWeibo: typingsSlinky.jweixin.jweixinStrings.onMenuShareWeibo = this.cast("onMenuShareWeibo")
+  def onVoicePlayEnd: typingsSlinky.jweixin.jweixinStrings.onVoicePlayEnd = "onVoicePlayEnd".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.onVoicePlayEnd]
   @scala.inline
-  def onVoicePlayEnd: typingsSlinky.jweixin.jweixinStrings.onVoicePlayEnd = this.cast("onVoicePlayEnd")
+  def onVoiceRecordEnd: typingsSlinky.jweixin.jweixinStrings.onVoiceRecordEnd = "onVoiceRecordEnd".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.onVoiceRecordEnd]
   @scala.inline
-  def onVoiceRecordEnd: typingsSlinky.jweixin.jweixinStrings.onVoiceRecordEnd = this.cast("onVoiceRecordEnd")
+  def openCard: typingsSlinky.jweixin.jweixinStrings.openCard = "openCard".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.openCard]
   @scala.inline
-  def openCard: typingsSlinky.jweixin.jweixinStrings.openCard = this.cast("openCard")
+  def openLocation: typingsSlinky.jweixin.jweixinStrings.openLocation = "openLocation".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.openLocation]
   @scala.inline
-  def openLocation: typingsSlinky.jweixin.jweixinStrings.openLocation = this.cast("openLocation")
+  def openProductSpecificView: typingsSlinky.jweixin.jweixinStrings.openProductSpecificView = "openProductSpecificView".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.openProductSpecificView]
   @scala.inline
-  def openProductSpecificView: typingsSlinky.jweixin.jweixinStrings.openProductSpecificView = this.cast("openProductSpecificView")
+  def pauseVoice: typingsSlinky.jweixin.jweixinStrings.pauseVoice = "pauseVoice".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.pauseVoice]
   @scala.inline
-  def pauseVoice: typingsSlinky.jweixin.jweixinStrings.pauseVoice = this.cast("pauseVoice")
+  def playVoice: typingsSlinky.jweixin.jweixinStrings.playVoice = "playVoice".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.playVoice]
   @scala.inline
-  def playVoice: typingsSlinky.jweixin.jweixinStrings.playVoice = this.cast("playVoice")
+  def previewImage: typingsSlinky.jweixin.jweixinStrings.previewImage = "previewImage".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.previewImage]
   @scala.inline
-  def previewImage: typingsSlinky.jweixin.jweixinStrings.previewImage = this.cast("previewImage")
+  def scanQRCode: typingsSlinky.jweixin.jweixinStrings.scanQRCode = "scanQRCode".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.scanQRCode]
   @scala.inline
-  def scanQRCode: typingsSlinky.jweixin.jweixinStrings.scanQRCode = this.cast("scanQRCode")
+  def showAllNonBaseMenuItem: typingsSlinky.jweixin.jweixinStrings.showAllNonBaseMenuItem = "showAllNonBaseMenuItem".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.showAllNonBaseMenuItem]
   @scala.inline
-  def showAllNonBaseMenuItem: typingsSlinky.jweixin.jweixinStrings.showAllNonBaseMenuItem = this.cast("showAllNonBaseMenuItem")
+  def showMenuItems: typingsSlinky.jweixin.jweixinStrings.showMenuItems = "showMenuItems".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.showMenuItems]
   @scala.inline
-  def showMenuItems: typingsSlinky.jweixin.jweixinStrings.showMenuItems = this.cast("showMenuItems")
+  def showOptionMenu: typingsSlinky.jweixin.jweixinStrings.showOptionMenu = "showOptionMenu".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.showOptionMenu]
   @scala.inline
-  def showOptionMenu: typingsSlinky.jweixin.jweixinStrings.showOptionMenu = this.cast("showOptionMenu")
+  def startRecord: typingsSlinky.jweixin.jweixinStrings.startRecord = "startRecord".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.startRecord]
   @scala.inline
-  def startRecord: typingsSlinky.jweixin.jweixinStrings.startRecord = this.cast("startRecord")
+  def stopRecord: typingsSlinky.jweixin.jweixinStrings.stopRecord = "stopRecord".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.stopRecord]
   @scala.inline
-  def stopRecord: typingsSlinky.jweixin.jweixinStrings.stopRecord = this.cast("stopRecord")
+  def stopVoice: typingsSlinky.jweixin.jweixinStrings.stopVoice = "stopVoice".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.stopVoice]
   @scala.inline
-  def stopVoice: typingsSlinky.jweixin.jweixinStrings.stopVoice = this.cast("stopVoice")
+  def translateVoice: typingsSlinky.jweixin.jweixinStrings.translateVoice = "translateVoice".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.translateVoice]
   @scala.inline
-  def translateVoice: typingsSlinky.jweixin.jweixinStrings.translateVoice = this.cast("translateVoice")
+  def uploadImage: typingsSlinky.jweixin.jweixinStrings.uploadImage = "uploadImage".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.uploadImage]
   @scala.inline
-  def uploadImage: typingsSlinky.jweixin.jweixinStrings.uploadImage = this.cast("uploadImage")
-  @scala.inline
-  def uploadVoice: typingsSlinky.jweixin.jweixinStrings.uploadVoice = this.cast("uploadVoice")
+  def uploadVoice: typingsSlinky.jweixin.jweixinStrings.uploadVoice = "uploadVoice".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.uploadVoice]
 }
 

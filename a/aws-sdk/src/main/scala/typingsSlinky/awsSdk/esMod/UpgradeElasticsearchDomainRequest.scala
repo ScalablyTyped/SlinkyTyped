@@ -19,14 +19,41 @@ trait UpgradeElasticsearchDomainRequest extends js.Object {
 
 object UpgradeElasticsearchDomainRequest {
   @scala.inline
-  def apply(
-    DomainName: DomainName,
-    TargetVersion: ElasticsearchVersionString,
-    PerformCheckOnly: js.UndefOr[scala.Boolean] = js.undefined
-  ): UpgradeElasticsearchDomainRequest = {
+  def apply(DomainName: DomainName, TargetVersion: ElasticsearchVersionString): UpgradeElasticsearchDomainRequest = {
     val __obj = js.Dynamic.literal(DomainName = DomainName.asInstanceOf[js.Any], TargetVersion = TargetVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(PerformCheckOnly)) __obj.updateDynamic("PerformCheckOnly")(PerformCheckOnly.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpgradeElasticsearchDomainRequest]
   }
+  @scala.inline
+  implicit class UpgradeElasticsearchDomainRequestOps[Self <: UpgradeElasticsearchDomainRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainName(value: DomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetVersion(value: ElasticsearchVersionString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPerformCheckOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformCheckOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerformCheckOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformCheckOnly")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

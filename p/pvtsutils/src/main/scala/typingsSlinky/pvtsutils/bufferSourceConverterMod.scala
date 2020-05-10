@@ -15,8 +15,8 @@ object bufferSourceConverterMod extends js.Object {
   @js.native
   object BufferSourceConverter extends js.Object {
     def isBufferSource(data: js.Any): /* is std.BufferSource */ Boolean = js.native
-    def toArrayBuffer(data: BufferSource): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-    def toUint8Array(data: BufferSource): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def toArrayBuffer(data: BufferSource): js.typedarray.ArrayBuffer = js.native
+    def toUint8Array(data: BufferSource): js.typedarray.Uint8Array = js.native
   }
   
 }

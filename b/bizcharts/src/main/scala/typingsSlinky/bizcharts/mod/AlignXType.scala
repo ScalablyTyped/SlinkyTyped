@@ -13,12 +13,10 @@ trait AlignXType extends js.Object
 
 object AlignXType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.bizcharts.bizchartsStrings.left = "left".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.left]
   @scala.inline
-  def left: typingsSlinky.bizcharts.bizchartsStrings.left = this.cast("left")
+  def middle: typingsSlinky.bizcharts.bizchartsStrings.middle = "middle".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.bizcharts.bizchartsStrings.middle = this.cast("middle")
-  @scala.inline
-  def right: typingsSlinky.bizcharts.bizchartsStrings.right = this.cast("right")
+  def right: typingsSlinky.bizcharts.bizchartsStrings.right = "right".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.right]
 }
 

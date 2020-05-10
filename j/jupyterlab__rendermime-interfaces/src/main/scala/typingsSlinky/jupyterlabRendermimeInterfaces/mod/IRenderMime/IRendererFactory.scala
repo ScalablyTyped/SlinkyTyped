@@ -7,15 +7,16 @@ import scala.scalajs.js.annotation._
 /**
   * The interface for a renderer factory.
   */
+@js.native
 trait IRendererFactory extends js.Object {
   /**
     * The default rank of the factory.  If not given, defaults to 100.
     */
-  val defaultRank: js.UndefOr[Double] = js.undefined
+  val defaultRank: js.UndefOr[Double] = js.native
   /**
     * The mime types handled by this factory.
     */
-  val mimeTypes: js.Array[String]
+  val mimeTypes: js.Array[String] = js.native
   /**
     * Whether the factory is a "safe" factory.
     *
@@ -26,26 +27,58 @@ trait IRendererFactory extends js.Object {
     * with a "Run cell to view output" message. A "safe" renderer
     * is an indication that its sanitized output will be useful.
     */
-  val safe: Boolean
+  val safe: Boolean = js.native
   /**
     * Create a renderer which displays the mime data.
     *
     * @param options - The options used to render the data.
     */
-  def createRenderer(options: IRendererOptions): IRenderer
+  def createRenderer(options: IRendererOptions): IRenderer = js.native
 }
 
 object IRendererFactory {
   @scala.inline
-  def apply(
-    createRenderer: IRendererOptions => IRenderer,
-    mimeTypes: js.Array[String],
-    safe: Boolean,
-    defaultRank: Int | Double = null
-  ): IRendererFactory = {
+  def apply(createRenderer: IRendererOptions => IRenderer, mimeTypes: js.Array[String], safe: Boolean): IRendererFactory = {
     val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer), mimeTypes = mimeTypes.asInstanceOf[js.Any], safe = safe.asInstanceOf[js.Any])
-    if (defaultRank != null) __obj.updateDynamic("defaultRank")(defaultRank.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRendererFactory]
   }
+  @scala.inline
+  implicit class IRendererFactoryOps[Self <: IRendererFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateRenderer(value: IRendererOptions => IRenderer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMimeTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSafe(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultRank(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultRank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRank")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

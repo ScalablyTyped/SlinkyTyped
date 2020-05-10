@@ -22,16 +22,53 @@ trait DescribeRecordOutput extends js.Object {
 
 object DescribeRecordOutput {
   @scala.inline
-  def apply(
-    NextPageToken: PageToken = null,
-    RecordDetail: RecordDetail = null,
-    RecordOutputs: RecordOutputs = null
-  ): DescribeRecordOutput = {
+  def apply(): DescribeRecordOutput = {
     val __obj = js.Dynamic.literal()
-    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
-    if (RecordDetail != null) __obj.updateDynamic("RecordDetail")(RecordDetail.asInstanceOf[js.Any])
-    if (RecordOutputs != null) __obj.updateDynamic("RecordOutputs")(RecordOutputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeRecordOutput]
   }
+  @scala.inline
+  implicit class DescribeRecordOutputOps[Self <: DescribeRecordOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordDetail(value: RecordDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordOutputs(value: RecordOutputs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordOutputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordOutputs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

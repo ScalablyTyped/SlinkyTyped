@@ -1,7 +1,7 @@
 package typingsSlinky.ol
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ object xmlMod extends js.Object {
     def read(source: Document_): js.Any = js.native
     def read(source: Element): js.Any = js.native
     def readFromDocument(doc: Document_): js.Any = js.native
-    def readFromNode(node: org.scalajs.dom.raw.Element): js.Any = js.native
+    def readFromNode(node: Element): js.Any = js.native
   }
   
   @js.native

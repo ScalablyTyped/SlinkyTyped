@@ -10,14 +10,6 @@ import typingsSlinky.reactNavigation.mod.SupportedThemes
 import typingsSlinky.reactNavigationDrawer.drawerNavigatorItemsMod.default
 import typingsSlinky.reactNavigationDrawer.drawerViewMod.Props
 import typingsSlinky.reactNavigationDrawer.drawerViewMod.State
-import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.NavigationSlashCLOSE_DRAWER
-import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.NavigationSlashDRAWER_CLOSED
-import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.NavigationSlashDRAWER_OPENED
-import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.NavigationSlashMARK_DRAWER_ACTIVE
-import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.NavigationSlashMARK_DRAWER_IDLE
-import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.NavigationSlashMARK_DRAWER_SETTLING
-import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.NavigationSlashOPEN_DRAWER
-import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.NavigationSlashTOGGLE_DRAWER
 import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerConfig
 import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerOptions
 import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerProp
@@ -74,14 +66,14 @@ object mod extends js.Object {
   ): js.Any = js.native
   @js.native
   object DrawerActions extends js.Object {
-    val CLOSE_DRAWER: NavigationSlashCLOSE_DRAWER = js.native
-    val DRAWER_CLOSED: NavigationSlashDRAWER_CLOSED = js.native
-    val DRAWER_OPENED: NavigationSlashDRAWER_OPENED = js.native
-    val MARK_DRAWER_ACTIVE: NavigationSlashMARK_DRAWER_ACTIVE = js.native
-    val MARK_DRAWER_IDLE: NavigationSlashMARK_DRAWER_IDLE = js.native
-    val MARK_DRAWER_SETTLING: NavigationSlashMARK_DRAWER_SETTLING = js.native
-    val OPEN_DRAWER: NavigationSlashOPEN_DRAWER = js.native
-    val TOGGLE_DRAWER: NavigationSlashTOGGLE_DRAWER = js.native
+    val CLOSE_DRAWER: /* "Navigation/CLOSE_DRAWER" */ String = js.native
+    val DRAWER_CLOSED: /* "Navigation/DRAWER_CLOSED" */ String = js.native
+    val DRAWER_OPENED: /* "Navigation/DRAWER_OPENED" */ String = js.native
+    val MARK_DRAWER_ACTIVE: /* "Navigation/MARK_DRAWER_ACTIVE" */ String = js.native
+    val MARK_DRAWER_IDLE: /* "Navigation/MARK_DRAWER_IDLE" */ String = js.native
+    val MARK_DRAWER_SETTLING: /* "Navigation/MARK_DRAWER_SETTLING" */ String = js.native
+    val OPEN_DRAWER: /* "Navigation/OPEN_DRAWER" */ String = js.native
+    val TOGGLE_DRAWER: /* "Navigation/TOGGLE_DRAWER" */ String = js.native
     def closeDrawer(): js.Any = js.native
     def closeDrawer(payload: js.Any): js.Any = js.native
     def openDrawer(): js.Any = js.native

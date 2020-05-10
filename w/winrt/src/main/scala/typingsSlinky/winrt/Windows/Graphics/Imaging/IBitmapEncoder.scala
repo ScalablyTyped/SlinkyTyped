@@ -26,7 +26,7 @@ trait IBitmapEncoder extends js.Object {
     height: Double,
     dpiX: Double,
     dpiY: Double,
-    pixels: scala.scalajs.js.typedarray.Uint8Array
+    pixels: js.typedarray.Uint8Array
   ): Unit = js.native
 }
 

@@ -12,15 +12,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Anon2 extends js.Object {
-  var `1`: Null
-  var `2`: Datalinkescape
-  var `3`: Space
-  var `4`: `0`
-  var `5`: `@`
-  var `6`: P
-  var `7`: Graveaccent
-  var `8`: p_
+  var `1`: Null = js.native
+  var `2`: Datalinkescape = js.native
+  var `3`: Space = js.native
+  var `4`: `0` = js.native
+  var `5`: `@` = js.native
+  var `6`: P = js.native
+  var `7`: Graveaccent = js.native
+  var `8`: p_ = js.native
 }
 
 object Anon2 {
@@ -37,5 +38,61 @@ object Anon2 {
     __obj.updateDynamic("8")(`8`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Anon2]
   }
+  @scala.inline
+  implicit class Anon2Ops[Self <: Anon2] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with1(value: Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with2(value: Datalinkescape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with3(value: Space): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4(value: `0`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with5(value: `@`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with6(value: P): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with7(value: Graveaccent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("7")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with8(value: p_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("8")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

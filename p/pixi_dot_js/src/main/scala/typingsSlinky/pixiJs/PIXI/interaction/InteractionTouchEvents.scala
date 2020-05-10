@@ -16,18 +16,16 @@ trait InteractionTouchEvents extends js.Object
 
 object InteractionTouchEvents {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def tap: typingsSlinky.pixiJs.pixiJsStrings.tap = "tap".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.tap]
   @scala.inline
-  def tap: typingsSlinky.pixiJs.pixiJsStrings.tap = this.cast("tap")
+  def touchcancel: typingsSlinky.pixiJs.pixiJsStrings.touchcancel = "touchcancel".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.touchcancel]
   @scala.inline
-  def touchcancel: typingsSlinky.pixiJs.pixiJsStrings.touchcancel = this.cast("touchcancel")
+  def touchend: typingsSlinky.pixiJs.pixiJsStrings.touchend = "touchend".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.touchend]
   @scala.inline
-  def touchend: typingsSlinky.pixiJs.pixiJsStrings.touchend = this.cast("touchend")
+  def touchendoutside: typingsSlinky.pixiJs.pixiJsStrings.touchendoutside = "touchendoutside".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.touchendoutside]
   @scala.inline
-  def touchendoutside: typingsSlinky.pixiJs.pixiJsStrings.touchendoutside = this.cast("touchendoutside")
+  def touchmove: typingsSlinky.pixiJs.pixiJsStrings.touchmove = "touchmove".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.touchmove]
   @scala.inline
-  def touchmove: typingsSlinky.pixiJs.pixiJsStrings.touchmove = this.cast("touchmove")
-  @scala.inline
-  def touchstart: typingsSlinky.pixiJs.pixiJsStrings.touchstart = this.cast("touchstart")
+  def touchstart: typingsSlinky.pixiJs.pixiJsStrings.touchstart = "touchstart".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.touchstart]
 }
 

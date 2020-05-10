@@ -1,9 +1,7 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonEventAny
 import typingsSlinky.baseui.AnonNextPage
 import typingsSlinky.baseui.baseuiStrings.change_
@@ -15,35 +13,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StatefulPagination
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object StatefulPagination {
   @JSImport("baseui/pagination", "StatefulPagination")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    numPages: Double,
-    initialState: State = null,
-    labels: Labels = null,
-    onNextClick: /* args */ AnonEventAny => _ = null,
-    onPageChange: /* args */ AnonNextPage => _ = null,
-    onPrevClick: /* args */ AnonEventAny => _ = null,
-    overrides: PaginationOverrides = null,
-    stateReducer: (change_, /* changes */ State, /* currentState */ State) => State = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(numPages = numPages.asInstanceOf[js.Any])
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (onNextClick != null) __obj.updateDynamic("onNextClick")(js.Any.fromFunction1(onNextClick))
-    if (onPageChange != null) __obj.updateDynamic("onPageChange")(js.Any.fromFunction1(onPageChange))
-    if (onPrevClick != null) __obj.updateDynamic("onPrevClick")(js.Any.fromFunction1(onPrevClick))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (stateReducer != null) __obj.updateDynamic("stateReducer")(js.Any.fromFunction3(stateReducer))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def initialState(value: State): this.type = set("initialState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labels(value: Labels): this.type = set("labels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onNextClick(value: /* args */ AnonEventAny => _): this.type = set("onNextClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPageChange(value: /* args */ AnonNextPage => _): this.type = set("onPageChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPrevClick(value: /* args */ AnonEventAny => _): this.type = set("onPrevClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: PaginationOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stateReducer(value: (change_, /* changes */ State, /* currentState */ State) => State): this.type = set("stateReducer", js.Any.fromFunction3(value))
   }
-  type Props = StatefulPaginationProps
+  
+  def withProps(p: StatefulPaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(numPages: Double): Builder = {
+    val __props = js.Dynamic.literal(numPages = numPages.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StatefulPaginationProps]))
+  }
 }
 

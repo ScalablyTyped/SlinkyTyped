@@ -5,33 +5,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DroppableEvents extends js.Object {
-  var activate: js.UndefOr[DroppableEvent] = js.undefined
-  var create: js.UndefOr[DroppableEvent] = js.undefined
-  var deactivate: js.UndefOr[DroppableEvent] = js.undefined
-  var drop: js.UndefOr[DroppableEvent] = js.undefined
-  var out: js.UndefOr[DroppableEvent] = js.undefined
-  var over: js.UndefOr[DroppableEvent] = js.undefined
+  var activate: js.UndefOr[DroppableEvent] = js.native
+  var create: js.UndefOr[DroppableEvent] = js.native
+  var deactivate: js.UndefOr[DroppableEvent] = js.native
+  var drop: js.UndefOr[DroppableEvent] = js.native
+  var out: js.UndefOr[DroppableEvent] = js.native
+  var over: js.UndefOr[DroppableEvent] = js.native
 }
 
 object DroppableEvents {
   @scala.inline
-  def apply(
-    activate: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit = null,
-    create: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit = null,
-    deactivate: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit = null,
-    drop: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit = null,
-    out: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit = null,
-    over: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit = null
-  ): DroppableEvents = {
+  def apply(): DroppableEvents = {
     val __obj = js.Dynamic.literal()
-    if (activate != null) __obj.updateDynamic("activate")(js.Any.fromFunction2(activate))
-    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
-    if (deactivate != null) __obj.updateDynamic("deactivate")(js.Any.fromFunction2(deactivate))
-    if (drop != null) __obj.updateDynamic("drop")(js.Any.fromFunction2(drop))
-    if (out != null) __obj.updateDynamic("out")(js.Any.fromFunction2(out))
-    if (over != null) __obj.updateDynamic("over")(js.Any.fromFunction2(over))
     __obj.asInstanceOf[DroppableEvents]
   }
+  @scala.inline
+  implicit class DroppableEventsOps[Self <: DroppableEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActivate(value: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutActivate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreate(value: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeactivate(value: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deactivate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDeactivate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deactivate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrop(value: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOut(value: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("out")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("out")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOver(value: (/* event */ JQueryEventObject, /* ui */ DroppableEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("over")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("over")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

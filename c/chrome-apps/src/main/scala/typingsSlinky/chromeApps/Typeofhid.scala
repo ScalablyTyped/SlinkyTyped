@@ -88,7 +88,7 @@ trait Typeofhid extends js.Object {
     */
   def receive(
     connectionId: integer,
-    callback: js.Function2[/* reportId */ integer, /* data */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]
+    callback: js.Function2[/* reportId */ integer, /* data */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
   /**
     * Request a feature report from the device.
@@ -99,7 +99,7 @@ trait Typeofhid extends js.Object {
   def receiveFeatureReport(
     connectionId: integer,
     reportId: integer,
-    callback: js.Function1[/* data */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]
+    callback: js.Function1[/* data */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
   /**
     * Send an output report to the device.
@@ -112,7 +112,7 @@ trait Typeofhid extends js.Object {
   def send(
     connectionId: integer,
     reportId: integer,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     callback: js.Function0[Unit]
   ): Unit = js.native
   /**
@@ -126,7 +126,7 @@ trait Typeofhid extends js.Object {
   def sendFeatureReport(
     connectionId: integer,
     reportId: integer,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     callback: js.Function0[Unit]
   ): Unit = js.native
 }

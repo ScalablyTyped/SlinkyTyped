@@ -26,7 +26,7 @@ trait Hmac extends js.Object {
     * @param secretKey The Secret Key
     * @param message The message you want to hash.
     */
-  def arrayBuffer(secretKey: String, message: Message): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def arrayBuffer(secretKey: String, message: Message): js.typedarray.ArrayBuffer = js.native
   /**
     * Create a hash object using a secret key.
     *

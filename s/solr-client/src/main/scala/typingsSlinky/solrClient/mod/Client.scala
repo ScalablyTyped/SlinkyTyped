@@ -1,7 +1,6 @@
 package typingsSlinky.solrClient.mod
 
 import typingsSlinky.node.httpMod.ClientRequest
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,30 +66,30 @@ trait Client extends js.Object {
     options: js.Object,
     callback: js.Function2[/* err */ js.Error, /* data */ js.Object, Unit]
   ): ClientRequest = js.native
-  def deleteByRange(field: String, start: String, stop: Date): ClientRequest = js.native
-  def deleteByRange(field: String, start: String, stop: Date, options: js.Object): ClientRequest = js.native
+  def deleteByRange(field: String, start: String, stop: js.Date): ClientRequest = js.native
+  def deleteByRange(field: String, start: String, stop: js.Date, options: js.Object): ClientRequest = js.native
   def deleteByRange(
     field: String,
     start: String,
-    stop: Date,
+    stop: js.Date,
     options: js.Object,
     callback: js.Function2[/* err */ js.Error, /* data */ js.Object, Unit]
   ): ClientRequest = js.native
-  def deleteByRange(field: String, start: Date, stop: String): ClientRequest = js.native
-  def deleteByRange(field: String, start: Date, stop: String, options: js.Object): ClientRequest = js.native
+  def deleteByRange(field: String, start: js.Date, stop: String): ClientRequest = js.native
+  def deleteByRange(field: String, start: js.Date, stop: String, options: js.Object): ClientRequest = js.native
   def deleteByRange(
     field: String,
-    start: Date,
+    start: js.Date,
     stop: String,
     options: js.Object,
     callback: js.Function2[/* err */ js.Error, /* data */ js.Object, Unit]
   ): ClientRequest = js.native
-  def deleteByRange(field: String, start: Date, stop: Date): ClientRequest = js.native
-  def deleteByRange(field: String, start: Date, stop: Date, options: js.Object): ClientRequest = js.native
+  def deleteByRange(field: String, start: js.Date, stop: js.Date): ClientRequest = js.native
+  def deleteByRange(field: String, start: js.Date, stop: js.Date, options: js.Object): ClientRequest = js.native
   def deleteByRange(
     field: String,
-    start: Date,
-    stop: Date,
+    start: js.Date,
+    stop: js.Date,
     options: js.Object,
     callback: js.Function2[/* err */ js.Error, /* data */ js.Object, Unit]
   ): ClientRequest = js.native

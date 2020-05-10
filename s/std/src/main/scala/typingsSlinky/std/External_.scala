@@ -5,11 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait External_ extends js.Object {
   /** @deprecated */
-  def AddSearchProvider(): Unit
+  def AddSearchProvider(): Unit = js.native
   /** @deprecated */
-  def IsSearchProviderInstalled(): Unit
+  def IsSearchProviderInstalled(): Unit = js.native
 }
 
 @JSGlobal("External")

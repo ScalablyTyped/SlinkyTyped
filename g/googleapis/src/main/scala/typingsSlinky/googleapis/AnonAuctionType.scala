@@ -14,18 +14,65 @@ trait AnonAuctionType extends js.Object {
 
 object AnonAuctionType {
   @scala.inline
-  def apply(
-    auctionType: js.Array[String] = null,
-    contextType: String = null,
-    geoCriteriaId: js.Array[Double] = null,
-    platform: js.Array[String] = null
-  ): AnonAuctionType = {
+  def apply(): AnonAuctionType = {
     val __obj = js.Dynamic.literal()
-    if (auctionType != null) __obj.updateDynamic("auctionType")(auctionType.asInstanceOf[js.Any])
-    if (contextType != null) __obj.updateDynamic("contextType")(contextType.asInstanceOf[js.Any])
-    if (geoCriteriaId != null) __obj.updateDynamic("geoCriteriaId")(geoCriteriaId.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAuctionType]
   }
+  @scala.inline
+  implicit class AnonAuctionTypeOps[Self <: AnonAuctionType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuctionType(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auctionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuctionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auctionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeoCriteriaId(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geoCriteriaId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeoCriteriaId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geoCriteriaId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

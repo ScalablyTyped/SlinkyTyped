@@ -1,8 +1,6 @@
 package typingsSlinky.firebase.mod.storage
 
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Blob
-import typingsSlinky.std.Uint8Array
+import org.scalajs.dom.raw.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -106,8 +104,8 @@ trait Reference extends js.Object {
     *      folder. `nextPageToken` is never returned.
     */
   def listAll(): js.Promise[ListResult] = js.native
-  def put(data: ArrayBuffer): UploadTask = js.native
-  def put(data: ArrayBuffer, metadata: UploadMetadata): UploadTask = js.native
+  def put(data: js.typedarray.ArrayBuffer): UploadTask = js.native
+  def put(data: js.typedarray.ArrayBuffer, metadata: UploadMetadata): UploadTask = js.native
   /**
     * Uploads data to this reference's location.
     * @param data The data to upload.
@@ -118,8 +116,8 @@ trait Reference extends js.Object {
     */
   def put(data: Blob): UploadTask = js.native
   def put(data: Blob, metadata: UploadMetadata): UploadTask = js.native
-  def put(data: Uint8Array): UploadTask = js.native
-  def put(data: Uint8Array, metadata: UploadMetadata): UploadTask = js.native
+  def put(data: js.typedarray.Uint8Array): UploadTask = js.native
+  def put(data: js.typedarray.Uint8Array, metadata: UploadMetadata): UploadTask = js.native
   /**
     * Uploads string data to this reference's location.
     * @param data The string to upload.

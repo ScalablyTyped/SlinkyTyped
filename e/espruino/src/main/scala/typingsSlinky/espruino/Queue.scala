@@ -14,10 +14,10 @@ import scala.scalajs.js.annotation._
 trait Queue
   extends /**
   * 
-  * @param queueName 
+  * @param value 
   * @return  
   */
-Instantiable1[/* queueName */ js.Any, js.Any] {
+Instantiable1[/* value */ js.Any, js.Any] {
   /**
     * <p>logs list of queues</p>
     * 

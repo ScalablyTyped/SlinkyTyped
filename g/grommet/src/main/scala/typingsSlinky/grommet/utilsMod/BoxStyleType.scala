@@ -19,24 +19,22 @@ trait BoxStyleType extends js.Object
 
 object BoxStyleType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dashed: typingsSlinky.grommet.grommetStrings.dashed = "dashed".asInstanceOf[typingsSlinky.grommet.grommetStrings.dashed]
   @scala.inline
-  def dashed: typingsSlinky.grommet.grommetStrings.dashed = this.cast("dashed")
+  def dotted: typingsSlinky.grommet.grommetStrings.dotted = "dotted".asInstanceOf[typingsSlinky.grommet.grommetStrings.dotted]
   @scala.inline
-  def dotted: typingsSlinky.grommet.grommetStrings.dotted = this.cast("dotted")
+  def double: typingsSlinky.grommet.grommetStrings.double = "double".asInstanceOf[typingsSlinky.grommet.grommetStrings.double]
   @scala.inline
-  def double: typingsSlinky.grommet.grommetStrings.double = this.cast("double")
+  def groove: typingsSlinky.grommet.grommetStrings.groove = "groove".asInstanceOf[typingsSlinky.grommet.grommetStrings.groove]
   @scala.inline
-  def groove: typingsSlinky.grommet.grommetStrings.groove = this.cast("groove")
+  def hidden: typingsSlinky.grommet.grommetStrings.hidden = "hidden".asInstanceOf[typingsSlinky.grommet.grommetStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.grommet.grommetStrings.hidden = this.cast("hidden")
+  def inset: typingsSlinky.grommet.grommetStrings.inset = "inset".asInstanceOf[typingsSlinky.grommet.grommetStrings.inset]
   @scala.inline
-  def inset: typingsSlinky.grommet.grommetStrings.inset = this.cast("inset")
+  def outset: typingsSlinky.grommet.grommetStrings.outset = "outset".asInstanceOf[typingsSlinky.grommet.grommetStrings.outset]
   @scala.inline
-  def outset: typingsSlinky.grommet.grommetStrings.outset = this.cast("outset")
+  def ridge: typingsSlinky.grommet.grommetStrings.ridge = "ridge".asInstanceOf[typingsSlinky.grommet.grommetStrings.ridge]
   @scala.inline
-  def ridge: typingsSlinky.grommet.grommetStrings.ridge = this.cast("ridge")
-  @scala.inline
-  def solid: typingsSlinky.grommet.grommetStrings.solid = this.cast("solid")
+  def solid: typingsSlinky.grommet.grommetStrings.solid = "solid".asInstanceOf[typingsSlinky.grommet.grommetStrings.solid]
 }
 

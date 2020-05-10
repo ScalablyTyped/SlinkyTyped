@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 /**
   * Basic representation of the Report class -- just enough to support customValidator
   */
+@js.native
 trait Report extends js.Object {
   /**
     * @param errorCode - a string representing the code for the custom error, e.g. INVALID_VALUE_SET
@@ -22,15 +23,28 @@ trait Report extends js.Object {
     params: js.Array[String],
     subReports: String,
     schemaDescription: String
-  ): Unit
+  ): Unit = js.native
 }
 
 object Report {
   @scala.inline
   def apply(addCustomError: (String, String, js.Array[String], String, String) => Unit): Report = {
     val __obj = js.Dynamic.literal(addCustomError = js.Any.fromFunction5(addCustomError))
-  
     __obj.asInstanceOf[Report]
   }
+  @scala.inline
+  implicit class ReportOps[Self <: Report] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddCustomError(value: (String, String, js.Array[String], String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addCustomError")(js.Any.fromFunction5(value))
+        ret
+    }
+  }
+  
 }
 

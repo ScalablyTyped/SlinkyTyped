@@ -5,20 +5,68 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCndMode extends js.Object {
-  var cnd: js.UndefOr[js.Any] = js.undefined
-  var mode: js.UndefOr[TransactionMode | Null] = js.undefined
-  var tag: js.UndefOr[js.Any] = js.undefined
+  var cnd: js.UndefOr[js.Any] = js.native
+  var mode: js.UndefOr[TransactionMode | Null] = js.native
+  var tag: js.UndefOr[js.Any] = js.native
 }
 
 object AnonCndMode {
   @scala.inline
-  def apply(cnd: js.Any = null, mode: TransactionMode = null, tag: js.Any = null): AnonCndMode = {
+  def apply(): AnonCndMode = {
     val __obj = js.Dynamic.literal()
-    if (cnd != null) __obj.updateDynamic("cnd")(cnd.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCndMode]
   }
+  @scala.inline
+  implicit class AnonCndModeOps[Self <: AnonCndMode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCnd(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: TransactionMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(null)
+        ret
+    }
+    @scala.inline
+    def withTag(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

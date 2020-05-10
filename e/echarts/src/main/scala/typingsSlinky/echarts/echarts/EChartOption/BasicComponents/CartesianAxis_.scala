@@ -3,6 +3,8 @@ package typingsSlinky.echarts.echarts.EChartOption.BasicComponents
 import typingsSlinky.echarts.AnonMax
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.DataObject
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Label
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.MinorSplitLine
+import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.MinorTick
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Pointer
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.SplitArea
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.SplitLine
@@ -16,31 +18,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CartesianAxis_ extends js.Object {
   /**
     * Settings related to axis label.
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.axisLabel
     */
-  var axisLabel: js.UndefOr[Label] = js.undefined
+  var axisLabel: js.UndefOr[Label] = js.native
   /**
     * Settings related to axis line.
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.axisLine
     */
-  var axisLine: js.UndefOr[Line] = js.undefined
+  var axisLine: js.UndefOr[Line] = js.native
   /**
     * axisPointer settings on the axis.
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.axisPointer
     */
-  var axisPointer: js.UndefOr[Pointer] = js.undefined
+  var axisPointer: js.UndefOr[Pointer] = js.native
   /**
     * Settings related to axis tick.
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.axisTick
     */
-  var axisTick: js.UndefOr[Tick] = js.undefined
+  var axisTick: js.UndefOr[Tick] = js.native
   /**
     * The boundary gap on both sides of a coordinate axis.
     * The setting and behavior of category axes and non-category axes are
@@ -59,7 +62,7 @@ trait CartesianAxis_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.boundaryGap
     */
-  var boundaryGap: js.UndefOr[Boolean | (js.Array[String | Double])] = js.undefined
+  var boundaryGap: js.UndefOr[Boolean | (js.Array[String | Double])] = js.native
   /**
     * Category data, available in type: `'category'` axis.
     * If `type` is not specified, but `axis.data` is specified,
@@ -89,19 +92,19 @@ trait CartesianAxis_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.data
     */
-  var data: js.UndefOr[js.Array[String | Double | DataObject]] = js.undefined
+  var data: js.UndefOr[js.Array[String | Double | DataObject]] = js.native
   /**
     * The index of grid which this axis belongs to.
     * Defaults to be in the first grid.
     *
     * @default 0
     */
-  var gridIndex: js.UndefOr[Double] = js.undefined
+  var gridIndex: js.UndefOr[Double] = js.native
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option or API.
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * Compulsively set segmentation interval for axis.
     * As splitNumber is a recommendation value,
@@ -116,13 +119,13 @@ trait CartesianAxis_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.interval
     */
-  var interval: js.UndefOr[Double] = js.undefined
+  var interval: js.UndefOr[Double] = js.native
   /**
     * Whether axis is inversed. New option from ECharts 3.
     *
     * @default false
     */
-  var inverse: js.UndefOr[Boolean] = js.undefined
+  var inverse: js.UndefOr[Boolean] = js.native
   /**
     * Base of logarithm, which is valid only for numeric axes with type:
     * `'log'`.
@@ -130,7 +133,7 @@ trait CartesianAxis_ extends js.Object {
     * @default 10
     * @see https://echarts.apache.org/en/option.html#yAxis.logBase
     */
-  var logBase: js.UndefOr[Double] = js.undefined
+  var logBase: js.UndefOr[Double] = js.native
   /**
     * The maximum value of axis.
     * It can be set to a special value `'dataMax'` so that
@@ -146,7 +149,7 @@ trait CartesianAxis_ extends js.Object {
     * @default null
     * @see https://echarts.apache.org/option.html#yAxis.max
     */
-  var max: js.UndefOr[Double | String | (js.Function1[/* value */ AnonMax, Double])] = js.undefined
+  var max: js.UndefOr[Double | String | (js.Function1[/* value */ AnonMax, Double])] = js.native
   /**
     * The minimun value of axis.
     * It can be set to a special value `'dataMin'` so that
@@ -162,7 +165,7 @@ trait CartesianAxis_ extends js.Object {
     * @default null
     * @see https://echarts.apache.org/option.html#yAxis.min
     */
-  var min: js.UndefOr[Double | String | (js.Function1[/* value */ AnonMax, Double])] = js.undefined
+  var min: js.UndefOr[Double | String | (js.Function1[/* value */ AnonMax, Double])] = js.native
   /**
     * Maximum gap between split lines.
     * For example, in time axis (type is `'time'`),
@@ -175,35 +178,47 @@ trait CartesianAxis_ extends js.Object {
     * It is available only for axis of type `'value'` or `'time'`.
     * @see https://echarts.apache.org/en/option.html#yAxis.minInterval
     */
-  var minInterval: js.UndefOr[js.Any] = js.undefined
+  var minInterval: js.UndefOr[js.Any] = js.native
+  /**
+    * Minor SplitLine of axis in grid area.
+    *
+    * @see https://echarts.apache.org/en/option.html#yAxis.minorSplitLine
+    */
+  var minorSplitLine: js.UndefOr[MinorSplitLine] = js.native
+  /**
+    * Settings related to axis minor tick.
+    *
+    * @see https://echarts.apache.org/en/option.html#yAxis.minorTick
+    */
+  var minorTick: js.UndefOr[MinorTick] = js.native
   /**
     * Name of axis.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Gap between axis name and axis line.
     *
     * @default 15
     */
-  var nameGap: js.UndefOr[Double] = js.undefined
+  var nameGap: js.UndefOr[Double] = js.native
   /**
     * Location of axis name.
     *
     * @default 'start'
     */
-  var nameLocation: js.UndefOr[start | middle | center | end] = js.undefined
+  var nameLocation: js.UndefOr[start | middle | center | end] = js.native
   /**
     * Rotation of axis name.
     *
     * @default null
     */
-  var nameRotate: js.UndefOr[Double] = js.undefined
+  var nameRotate: js.UndefOr[Double] = js.native
   /**
     * Text style of axis name.
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.nameTextStyle
     */
-  var nameTextStyle: js.UndefOr[TextStyleWithRich] = js.undefined
+  var nameTextStyle: js.UndefOr[TextStyleWithRich] = js.native
   /**
     * Offset of this axis relative to default position.
     * Useful when multiple axis of this type has same position value.
@@ -211,7 +226,7 @@ trait CartesianAxis_ extends js.Object {
     * @default 0
     * @see https://echarts.apache.org/en/option.html#yAxis.offset
     */
-  var offset: js.UndefOr[Double] = js.undefined
+  var offset: js.UndefOr[Double] = js.native
   /**
     * It is available only in numerical axis, i.e., type: `'value'`.
     * It specifies whether not to contain zero position
@@ -224,31 +239,31 @@ trait CartesianAxis_ extends js.Object {
     * @default false
     * @see https://echarts.apache.org/en/option.html#yAxis.scale
     */
-  var scale: js.UndefOr[Boolean] = js.undefined
+  var scale: js.UndefOr[Boolean] = js.native
   /**
     * If show this axis.
     *
     * @default 'true'
     */
-  var show: js.UndefOr[Boolean] = js.undefined
+  var show: js.UndefOr[Boolean] = js.native
   /**
     * True for axis that cannot be interacted with.
     *
     * @default false
     */
-  var silent: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.native
   /**
     * Split area of axis in grid area, not shown by default.
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.splitArea
     */
-  var splitArea: js.UndefOr[SplitArea] = js.undefined
+  var splitArea: js.UndefOr[SplitArea] = js.native
   /**
     * SplitLine of axis in grid area.
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.splitLine
     */
-  var splitLine: js.UndefOr[SplitLine] = js.undefined
+  var splitLine: js.UndefOr[SplitLine] = js.native
   /**
     * Number of segments that the axis is split into.
     * Note that this number serves only as a recommendation,
@@ -258,7 +273,7 @@ trait CartesianAxis_ extends js.Object {
     * @default 5
     * @see https://echarts.apache.org/en/option.html#yAxis.splitNumber
     */
-  var splitNumber: js.UndefOr[Double] = js.undefined
+  var splitNumber: js.UndefOr[Double] = js.native
   /**
     * Whether the labels of axis triggers and reacts to mouse events.
     * Parameters of event includes:
@@ -278,7 +293,7 @@ trait CartesianAxis_ extends js.Object {
     *
     * @default false
     */
-  var triggerEvent: js.UndefOr[Boolean] = js.undefined
+  var triggerEvent: js.UndefOr[Boolean] = js.native
   /**
     * z value of all graghical elements in this axis,
     * which controls order of drawing graphical components.
@@ -288,7 +303,7 @@ trait CartesianAxis_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#yAxis.z
     */
-  var z: js.UndefOr[Double] = js.undefined
+  var z: js.UndefOr[Double] = js.native
   /**
     * `zlevel` value of all graghical elements in this axis.
     * `zlevel` is used to make layers with Canvas.
@@ -304,73 +319,406 @@ trait CartesianAxis_ extends js.Object {
     * @default 0
     * @see https://echarts.apache.org/en/option.html#yAxis.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.undefined
+  var zlevel: js.UndefOr[Double] = js.native
 }
 
 object CartesianAxis_ {
   @scala.inline
-  def apply(
-    axisLabel: Label = null,
-    axisLine: Line = null,
-    axisPointer: Pointer = null,
-    axisTick: Tick = null,
-    boundaryGap: Boolean | (js.Array[String | Double]) = null,
-    data: js.Array[String | Double | DataObject] = null,
-    gridIndex: Int | Double = null,
-    id: String = null,
-    interval: Int | Double = null,
-    inverse: js.UndefOr[Boolean] = js.undefined,
-    logBase: Int | Double = null,
-    max: Double | String | (js.Function1[/* value */ AnonMax, Double]) = null,
-    min: Double | String | (js.Function1[/* value */ AnonMax, Double]) = null,
-    minInterval: js.Any = null,
-    name: String = null,
-    nameGap: Int | Double = null,
-    nameLocation: start | middle | center | end = null,
-    nameRotate: Int | Double = null,
-    nameTextStyle: TextStyleWithRich = null,
-    offset: Int | Double = null,
-    scale: js.UndefOr[Boolean] = js.undefined,
-    show: js.UndefOr[Boolean] = js.undefined,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    splitArea: SplitArea = null,
-    splitLine: SplitLine = null,
-    splitNumber: Int | Double = null,
-    triggerEvent: js.UndefOr[Boolean] = js.undefined,
-    z: Int | Double = null,
-    zlevel: Int | Double = null
-  ): CartesianAxis_ = {
+  def apply(): CartesianAxis_ = {
     val __obj = js.Dynamic.literal()
-    if (axisLabel != null) __obj.updateDynamic("axisLabel")(axisLabel.asInstanceOf[js.Any])
-    if (axisLine != null) __obj.updateDynamic("axisLine")(axisLine.asInstanceOf[js.Any])
-    if (axisPointer != null) __obj.updateDynamic("axisPointer")(axisPointer.asInstanceOf[js.Any])
-    if (axisTick != null) __obj.updateDynamic("axisTick")(axisTick.asInstanceOf[js.Any])
-    if (boundaryGap != null) __obj.updateDynamic("boundaryGap")(boundaryGap.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (gridIndex != null) __obj.updateDynamic("gridIndex")(gridIndex.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverse)) __obj.updateDynamic("inverse")(inverse.asInstanceOf[js.Any])
-    if (logBase != null) __obj.updateDynamic("logBase")(logBase.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minInterval != null) __obj.updateDynamic("minInterval")(minInterval.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (nameGap != null) __obj.updateDynamic("nameGap")(nameGap.asInstanceOf[js.Any])
-    if (nameLocation != null) __obj.updateDynamic("nameLocation")(nameLocation.asInstanceOf[js.Any])
-    if (nameRotate != null) __obj.updateDynamic("nameRotate")(nameRotate.asInstanceOf[js.Any])
-    if (nameTextStyle != null) __obj.updateDynamic("nameTextStyle")(nameTextStyle.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (splitArea != null) __obj.updateDynamic("splitArea")(splitArea.asInstanceOf[js.Any])
-    if (splitLine != null) __obj.updateDynamic("splitLine")(splitLine.asInstanceOf[js.Any])
-    if (splitNumber != null) __obj.updateDynamic("splitNumber")(splitNumber.asInstanceOf[js.Any])
-    if (!js.isUndefined(triggerEvent)) __obj.updateDynamic("triggerEvent")(triggerEvent.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
-    if (zlevel != null) __obj.updateDynamic("zlevel")(zlevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[CartesianAxis_]
   }
+  @scala.inline
+  implicit class CartesianAxis_Ops[Self <: CartesianAxis_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAxisLabel(value: Label): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisLine(value: Line): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisPointer(value: Pointer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisPointer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisPointer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisPointer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisTick(value: Tick): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisTick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisTick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoundaryGap(value: Boolean | (js.Array[String | Double])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundaryGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundaryGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundaryGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[String | Double | DataObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogBase(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logBase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logBase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFunction1(value: /* value */ AnonMax => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double | String | (js.Function1[/* value */ AnonMax, Double])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinFunction1(value: /* value */ AnonMax => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double | String | (js.Function1[/* value */ AnonMax, Double])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinInterval(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorSplitLine(value: MinorSplitLine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorSplitLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorSplitLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorSplitLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTick(value: MinorTick): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameLocation(value: start | middle | center | end): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameRotate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameRotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameRotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameTextStyle(value: TextStyleWithRich): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameTextStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameTextStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScale(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitArea(value: SplitArea): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplitArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitLine(value: SplitLine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplitLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplitNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerEvent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZlevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZlevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

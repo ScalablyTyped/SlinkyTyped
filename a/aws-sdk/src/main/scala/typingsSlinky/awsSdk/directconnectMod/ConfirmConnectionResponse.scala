@@ -14,10 +14,29 @@ trait ConfirmConnectionResponse extends js.Object {
 
 object ConfirmConnectionResponse {
   @scala.inline
-  def apply(connectionState: ConnectionState = null): ConfirmConnectionResponse = {
+  def apply(): ConfirmConnectionResponse = {
     val __obj = js.Dynamic.literal()
-    if (connectionState != null) __obj.updateDynamic("connectionState")(connectionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfirmConnectionResponse]
   }
+  @scala.inline
+  implicit class ConfirmConnectionResponseOps[Self <: ConfirmConnectionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionState(value: ConnectionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,10 +13,8 @@ trait ImageType extends js.Object
 
 object ImageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def jpeg: typingsSlinky.chromeApps.chromeAppsStrings.jpeg = "jpeg".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.jpeg]
   @scala.inline
-  def jpeg: typingsSlinky.chromeApps.chromeAppsStrings.jpeg = this.cast("jpeg")
-  @scala.inline
-  def png: typingsSlinky.chromeApps.chromeAppsStrings.png = this.cast("png")
+  def png: typingsSlinky.chromeApps.chromeAppsStrings.png = "png".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.png]
 }
 

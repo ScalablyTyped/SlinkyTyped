@@ -42,25 +42,107 @@ trait AgentPreview extends js.Object {
 
 object AgentPreview {
   @scala.inline
-  def apply(
-    agentId: AgentId,
-    agentHealth: AgentHealth = null,
-    agentVersion: AgentVersion = null,
-    autoScalingGroup: AutoScalingGroup = null,
-    hostname: Hostname = null,
-    ipv4Address: Ipv4Address = null,
-    kernelVersion: KernelVersion = null,
-    operatingSystem: OperatingSystem = null
-  ): AgentPreview = {
+  def apply(agentId: AgentId): AgentPreview = {
     val __obj = js.Dynamic.literal(agentId = agentId.asInstanceOf[js.Any])
-    if (agentHealth != null) __obj.updateDynamic("agentHealth")(agentHealth.asInstanceOf[js.Any])
-    if (agentVersion != null) __obj.updateDynamic("agentVersion")(agentVersion.asInstanceOf[js.Any])
-    if (autoScalingGroup != null) __obj.updateDynamic("autoScalingGroup")(autoScalingGroup.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (ipv4Address != null) __obj.updateDynamic("ipv4Address")(ipv4Address.asInstanceOf[js.Any])
-    if (kernelVersion != null) __obj.updateDynamic("kernelVersion")(kernelVersion.asInstanceOf[js.Any])
-    if (operatingSystem != null) __obj.updateDynamic("operatingSystem")(operatingSystem.asInstanceOf[js.Any])
     __obj.asInstanceOf[AgentPreview]
   }
+  @scala.inline
+  implicit class AgentPreviewOps[Self <: AgentPreview] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgentId(value: AgentId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAgentHealth(value: AgentHealth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHealth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgentHealth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentHealth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAgentVersion(value: AgentVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoScalingGroup(value: AutoScalingGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoScalingGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostname(value: Hostname): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv4Address(value: Ipv4Address): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv4Address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv4Address: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv4Address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKernelVersion(value: KernelVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKernelVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystem(value: OperatingSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatingSystem")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

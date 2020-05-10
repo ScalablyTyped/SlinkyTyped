@@ -14,10 +14,29 @@ trait ReshardingStatus extends js.Object {
 
 object ReshardingStatus {
   @scala.inline
-  def apply(SlotMigration: SlotMigration = null): ReshardingStatus = {
+  def apply(): ReshardingStatus = {
     val __obj = js.Dynamic.literal()
-    if (SlotMigration != null) __obj.updateDynamic("SlotMigration")(SlotMigration.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReshardingStatus]
   }
+  @scala.inline
+  implicit class ReshardingStatusOps[Self <: ReshardingStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSlotMigration(value: SlotMigration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SlotMigration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlotMigration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SlotMigration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

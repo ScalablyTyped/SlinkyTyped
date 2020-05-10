@@ -60,6 +60,10 @@ package object elasticacheMod {
   type Double = scala.Double
   type EC2SecurityGroupList = js.Array[typingsSlinky.awsSdk.elasticacheMod.EC2SecurityGroup]
   type EventList = js.Array[typingsSlinky.awsSdk.elasticacheMod.Event]
+  type GlobalNodeGroupIdList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
+  type GlobalNodeGroupList = js.Array[typingsSlinky.awsSdk.elasticacheMod.GlobalNodeGroup]
+  type GlobalReplicationGroupList = js.Array[typingsSlinky.awsSdk.elasticacheMod.GlobalReplicationGroup]
+  type GlobalReplicationGroupMemberList = js.Array[typingsSlinky.awsSdk.elasticacheMod.GlobalReplicationGroupMember]
   type Integer = scala.Double
   type IntegerOptional = scala.Double
   type KeyList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
@@ -99,6 +103,7 @@ package object elasticacheMod {
   type PreferredAvailabilityZoneList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
   type ProcessedUpdateActionList = js.Array[typingsSlinky.awsSdk.elasticacheMod.ProcessedUpdateAction]
   type RecurringChargeList = js.Array[typingsSlinky.awsSdk.elasticacheMod.RecurringCharge]
+  type RegionalConfigurationList = js.Array[typingsSlinky.awsSdk.elasticacheMod.RegionalConfiguration]
   type RemoveReplicasList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
   type ReplicaConfigurationList = js.Array[typingsSlinky.awsSdk.elasticacheMod.ConfigureShard]
   type ReplicationGroupIdList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]

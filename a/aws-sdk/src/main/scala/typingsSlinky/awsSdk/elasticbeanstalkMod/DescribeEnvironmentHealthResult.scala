@@ -42,26 +42,113 @@ trait DescribeEnvironmentHealthResult extends js.Object {
 
 object DescribeEnvironmentHealthResult {
   @scala.inline
-  def apply(
-    ApplicationMetrics: ApplicationMetrics = null,
-    Causes: Causes = null,
-    Color: String = null,
-    EnvironmentName: EnvironmentName = null,
-    HealthStatus: String = null,
-    InstancesHealth: InstanceHealthSummary = null,
-    RefreshedAt: js.Date = null,
-    Status: EnvironmentHealth = null
-  ): DescribeEnvironmentHealthResult = {
+  def apply(): DescribeEnvironmentHealthResult = {
     val __obj = js.Dynamic.literal()
-    if (ApplicationMetrics != null) __obj.updateDynamic("ApplicationMetrics")(ApplicationMetrics.asInstanceOf[js.Any])
-    if (Causes != null) __obj.updateDynamic("Causes")(Causes.asInstanceOf[js.Any])
-    if (Color != null) __obj.updateDynamic("Color")(Color.asInstanceOf[js.Any])
-    if (EnvironmentName != null) __obj.updateDynamic("EnvironmentName")(EnvironmentName.asInstanceOf[js.Any])
-    if (HealthStatus != null) __obj.updateDynamic("HealthStatus")(HealthStatus.asInstanceOf[js.Any])
-    if (InstancesHealth != null) __obj.updateDynamic("InstancesHealth")(InstancesHealth.asInstanceOf[js.Any])
-    if (RefreshedAt != null) __obj.updateDynamic("RefreshedAt")(RefreshedAt.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEnvironmentHealthResult]
   }
+  @scala.inline
+  implicit class DescribeEnvironmentHealthResultOps[Self <: DescribeEnvironmentHealthResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationMetrics(value: ApplicationMetrics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationMetrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCauses(value: Causes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Causes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCauses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Causes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentName(value: EnvironmentName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstancesHealth(value: InstanceHealthSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancesHealth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstancesHealth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancesHealth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefreshedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefreshedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: EnvironmentHealth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

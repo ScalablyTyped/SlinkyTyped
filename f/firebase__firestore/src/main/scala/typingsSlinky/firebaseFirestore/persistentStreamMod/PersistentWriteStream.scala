@@ -1,11 +1,11 @@
 package typingsSlinky.firebaseFirestore.persistentStreamMod
 
 import typingsSlinky.firebaseFirestore.asyncQueueMod.AsyncQueue
+import typingsSlinky.firebaseFirestore.byteStringMod.ByteString
 import typingsSlinky.firebaseFirestore.connectionMod.Connection
 import typingsSlinky.firebaseFirestore.credentialsMod.CredentialsProvider
 import typingsSlinky.firebaseFirestore.mutationMod.Mutation
 import typingsSlinky.firebaseFirestore.serializerMod.JsonProtoSerializer
-import typingsSlinky.firebaseFirestore.typesMod.ProtoByteString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +34,13 @@ class PersistentWriteStream protected ()
     * PersistentWriteStream manages propagating this value from responses to the
     * next request.
     */
-  var lastStreamToken: ProtoByteString = js.native
+  var lastStreamToken: ByteString = js.native
   var serializer: js.Any = js.native
   /**
     * Tracks whether or not a handshake has been successfully exchanged and
     * the stream is ready to accept mutations.
     */
-  def handshakeComplete(): Boolean = js.native
+  def handshakeComplete: Boolean = js.native
   /**
     * Sends an initial streamToken to the server, performing the handshake
     * required to make the StreamingWrite RPC work. Subsequent

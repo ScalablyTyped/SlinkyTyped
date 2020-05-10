@@ -26,17 +26,59 @@ trait DescribeSharedDirectoriesRequest extends js.Object {
 
 object DescribeSharedDirectoriesRequest {
   @scala.inline
-  def apply(
-    OwnerDirectoryId: DirectoryId,
-    Limit: Int | Double = null,
-    NextToken: NextToken = null,
-    SharedDirectoryIds: DirectoryIds = null
-  ): DescribeSharedDirectoriesRequest = {
+  def apply(OwnerDirectoryId: DirectoryId): DescribeSharedDirectoriesRequest = {
     val __obj = js.Dynamic.literal(OwnerDirectoryId = OwnerDirectoryId.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (SharedDirectoryIds != null) __obj.updateDynamic("SharedDirectoryIds")(SharedDirectoryIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSharedDirectoriesRequest]
   }
+  @scala.inline
+  implicit class DescribeSharedDirectoriesRequestOps[Self <: DescribeSharedDirectoriesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOwnerDirectoryId(value: DirectoryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerDirectoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Limit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharedDirectoryIds(value: DirectoryIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedDirectoryIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharedDirectoryIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SharedDirectoryIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,6 +10,7 @@ import typingsSlinky.mongoose.mod.CollationOptions
 import typingsSlinky.mongoose.mod.Document
 import typingsSlinky.mongoose.mod.DocumentQuery
 import typingsSlinky.mongoose.mod.Error
+import typingsSlinky.mongoose.mod.FilterQuery
 import typingsSlinky.mongoose.mod.NativeError
 import typingsSlinky.mongoose.mod.Query
 import typingsSlinky.mongoose.mod.QueryCursor
@@ -17,11 +18,11 @@ import typingsSlinky.mongoose.mod.QueryFindOneAndRemoveOptions
 import typingsSlinky.mongoose.mod.QueryFindOneAndUpdateOptions
 import typingsSlinky.mongoose.mod.QueryPopulateOptions
 import typingsSlinky.mongoose.mod.QueryUpdateOptions
+import typingsSlinky.mongoose.mod.UpdateQuery
 import typingsSlinky.mongoose.rawResulttrueQueryFindOne
-import typingsSlinky.mongoose.rawResulttrueQueryFindOneContext
+import typingsSlinky.mongoose.rawResulttrueQueryFindOneArrayFilters
 import typingsSlinky.mongoose.rawResulttrueupserttruene
 import typingsSlinky.mongoose.upserttruenewtrueQueryFin
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -97,8 +98,8 @@ trait Querynumber extends js.Object {
     */
   def count(): Query[Double] with js.Object = js.native
   def count(callback: js.Function2[/* err */ js.Any, /* count */ Double, Unit]): Query[Double] with js.Object = js.native
-  def count(criteria: js.Any): Query[Double] with js.Object = js.native
-  def count(criteria: js.Any, callback: js.Function2[/* err */ js.Any, /* count */ Double, Unit]): Query[Double] with js.Object = js.native
+  def count(criteria: FilterQuery[_]): Query[Double] with js.Object = js.native
+  def count(criteria: FilterQuery[_], callback: js.Function2[/* err */ js.Any, /* count */ Double, Unit]): Query[Double] with js.Object = js.native
   /**
     * Specifies this query as a `countDocuments()` query. Behaves like `count()`,
     * except it always does a full collection scan when passed an empty filter `{}`.
@@ -120,8 +121,8 @@ trait Querynumber extends js.Object {
     */
   def countDocuments(): Query[Double] with js.Object = js.native
   def countDocuments(callback: js.Function2[/* err */ js.Any, /* count */ Double, Unit]): Query[Double] with js.Object = js.native
-  def countDocuments(criteria: js.Any): Query[Double] with js.Object = js.native
-  def countDocuments(criteria: js.Any, callback: js.Function2[/* err */ js.Any, /* count */ Double, Unit]): Query[Double] with js.Object = js.native
+  def countDocuments(criteria: FilterQuery[_]): Query[Double] with js.Object = js.native
+  def countDocuments(criteria: FilterQuery[_], callback: js.Function2[/* err */ js.Any, /* count */ Double, Unit]): Query[Double] with js.Object = js.native
   /**
     * Returns a wrapper around a mongodb driver cursor. A Query<T>Cursor exposes a
     * Streams3-compatible interface, as well as a .next() function.
@@ -129,22 +130,22 @@ trait Querynumber extends js.Object {
   def cursor(): QueryCursor[_] = js.native
   def cursor(options: js.Any): QueryCursor[_] = js.native
   /** Declares or executes a distict() operation. Passing a callback executes the query. */
-  def distinct(): Query[js.Array[_]] with js.Object = js.native
-  def distinct(callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): Query[js.Array[_]] with js.Object = js.native
-  def distinct(field: String): Query[js.Array[_]] with js.Object = js.native
-  def distinct(field: String, callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): Query[js.Array[_]] with js.Object = js.native
-  def distinct(field: String, criteria: js.Any): Query[js.Array[_]] with js.Object = js.native
+  def distinct(): QueryArrayany = js.native
+  def distinct(callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): QueryArrayany = js.native
+  def distinct(field: String): QueryArrayany = js.native
+  def distinct(field: String, callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): QueryArrayany = js.native
+  def distinct(field: String, criteria: js.Any): QueryArrayany = js.native
   def distinct(
     field: String,
     criteria: js.Any,
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
-  ): Query[js.Array[_]] with js.Object = js.native
-  def distinct(field: String, criteria: Query[_]): Query[js.Array[_]] with js.Object = js.native
+  ): QueryArrayany = js.native
+  def distinct(field: String, criteria: Query[_]): QueryArrayany = js.native
   def distinct(
     field: String,
     criteria: Query[_],
     callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]
-  ): Query[js.Array[_]] with js.Object = js.native
+  ): QueryArrayany = js.native
   def elemMatch(criteria: js.Any): this.type = js.native
   /** Specifies an $elemMatch condition */
   def elemMatch(criteria: js.Function1[/* elem */ Query[_], Unit]): this.type = js.native
@@ -195,10 +196,10 @@ trait Querynumber extends js.Object {
     * query is executed, the result will be an array of documents.
     * @param criteria mongodb selector
     */
-  def find(): (DocumentQuery[js.Array[_], _, js.Object]) with js.Object = js.native
-  def find(callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): (DocumentQuery[js.Array[_], _, js.Object]) with js.Object = js.native
-  def find(criteria: js.Any): (DocumentQuery[js.Array[_], _, js.Object]) with js.Object = js.native
-  def find(criteria: js.Any, callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): (DocumentQuery[js.Array[_], _, js.Object]) with js.Object = js.native
+  def find(): DocumentQueryArrayanyany = js.native
+  def find(callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): DocumentQueryArrayanyany = js.native
+  def find(criteria: FilterQuery[_]): DocumentQueryArrayanyany = js.native
+  def find(criteria: FilterQuery[_], callback: js.Function2[/* err */ js.Any, /* res */ js.Array[_], Unit]): DocumentQueryArrayanyany = js.native
   /**
     * Declares the query a findOne operation. When executed, the first found document is
     * passed to the callback. Passing a callback executes the query. The result of the query
@@ -206,10 +207,10 @@ trait Querynumber extends js.Object {
     * @param criteria mongodb selector
     * @param projection optional fields to return
     */
-  def findOne(): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOne(callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOne(criteria: js.Any): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOne(criteria: js.Any, callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
+  def findOne(): DocumentQueryanynullany = js.native
+  def findOne(callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]): DocumentQueryanynullany = js.native
+  def findOne(criteria: FilterQuery[_]): DocumentQueryanynullany = js.native
+  def findOne(criteria: FilterQuery[_], callback: js.Function2[/* err */ js.Any, /* res */ js.Any | Null, Unit]): DocumentQueryanynullany = js.native
   /**
     * Issues a mongodb findAndModify remove command.
     * Finds a matching document, removes it, passing the found document (if any) to the
@@ -218,22 +219,22 @@ trait Querynumber extends js.Object {
     * If mongoose option 'useFindAndModify': set to false it uses native findOneAndUpdate() rather than deprecated findAndModify().
     * https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
     */
-  def findOneAndRemove(): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOneAndRemove(callback: js.Function3[/* error */ js.Any, /* doc */ js.Any | Null, /* result */ js.Any, Unit]): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOneAndRemove(conditions: js.Any): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
+  def findOneAndRemove(): DocumentQueryanynullany = js.native
+  def findOneAndRemove(callback: js.Function3[/* error */ js.Any, /* doc */ js.Any | Null, /* result */ js.Any, Unit]): DocumentQueryanynullany = js.native
+  def findOneAndRemove(conditions: FilterQuery[_]): DocumentQueryanynullany = js.native
   def findOneAndRemove(
-    conditions: js.Any,
+    conditions: FilterQuery[_],
     callback: js.Function3[/* error */ js.Any, /* doc */ js.Any | Null, /* result */ js.Any, Unit]
-  ): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOneAndRemove(conditions: js.Any, options: QueryFindOneAndRemoveOptions): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
+  ): DocumentQueryanynullany = js.native
+  def findOneAndRemove(conditions: FilterQuery[_], options: QueryFindOneAndRemoveOptions): DocumentQueryanynullany = js.native
   def findOneAndRemove(
-    conditions: js.Any,
+    conditions: FilterQuery[_],
     options: QueryFindOneAndRemoveOptions,
     callback: js.Function3[/* error */ js.Any, /* doc */ js.Any | Null, /* result */ js.Any, Unit]
-  ): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOneAndRemove(conditions: js.Any, options: rawResulttrueQueryFindOne): (Query[FindAndModifyWriteOpResultObject[_ | Null]]) with js.Object = js.native
+  ): DocumentQueryanynullany = js.native
+  def findOneAndRemove(conditions: FilterQuery[_], options: rawResulttrueQueryFindOne): QueryFindAndModifyWriteOp = js.native
   def findOneAndRemove(
-    conditions: js.Any,
+    conditions: FilterQuery[_],
     options: rawResulttrueQueryFindOne,
     callback: js.Function3[
       /* error */ js.Any, 
@@ -241,7 +242,7 @@ trait Querynumber extends js.Object {
       /* result */ js.Any, 
       Unit
     ]
-  ): (Query[FindAndModifyWriteOpResultObject[_ | Null]]) with js.Object = js.native
+  ): QueryFindAndModifyWriteOp = js.native
   /**
     * Issues a mongodb findAndModify update command.
     * Finds a matching document, updates it according to the update arg, passing any options, and returns
@@ -250,37 +251,37 @@ trait Querynumber extends js.Object {
     * If mongoose option 'useFindAndModify': set to false it uses native findOneAndUpdate() rather than deprecated findAndModify().
     * https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set
     */
-  def findOneAndUpdate(): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOneAndUpdate(callback: js.Function2[/* err */ js.Any, /* doc */ js.Any | Null, Unit]): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOneAndUpdate(query: js.Any, update: js.Any): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
+  def findOneAndUpdate(): DocumentQueryanynullany = js.native
+  def findOneAndUpdate(callback: js.Function2[/* err */ js.Any, /* doc */ js.Any | Null, Unit]): DocumentQueryanynullany = js.native
+  def findOneAndUpdate(query: FilterQuery[_], update: UpdateQuery[_]): DocumentQueryanynullany = js.native
   def findOneAndUpdate(
-    query: js.Any,
-    update: js.Any,
+    query: FilterQuery[_],
+    update: UpdateQuery[_],
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
-  ): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOneAndUpdate(query: js.Any, update: js.Any, options: QueryFindOneAndUpdateOptions): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
+  ): DocumentQueryanynullany = js.native
+  def findOneAndUpdate(query: FilterQuery[_], update: UpdateQuery[_], options: QueryFindOneAndUpdateOptions): DocumentQueryanynullany = js.native
   def findOneAndUpdate(
-    query: js.Any,
-    update: js.Any,
+    query: FilterQuery[_],
+    update: UpdateQuery[_],
     options: QueryFindOneAndUpdateOptions,
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
-  ): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
-  def findOneAndUpdate(query: js.Any, update: js.Any, options: rawResulttrueQueryFindOneContext): (Query[FindAndModifyWriteOpResultObject[_ | Null]]) with js.Object = js.native
+  ): DocumentQueryanynullany = js.native
+  def findOneAndUpdate(query: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOp = js.native
   def findOneAndUpdate(
-    query: js.Any,
-    update: js.Any,
-    options: rawResulttrueQueryFindOneContext,
+    query: FilterQuery[_],
+    update: UpdateQuery[_],
+    options: rawResulttrueQueryFindOneArrayFilters,
     callback: js.Function3[
       /* err */ js.Any, 
       /* doc */ FindAndModifyWriteOpResultObject[_ | Null], 
       /* res */ js.Any, 
       Unit
     ]
-  ): (Query[FindAndModifyWriteOpResultObject[_ | Null]]) with js.Object = js.native
-  def findOneAndUpdate(query: js.Any, update: js.Any, options: rawResulttrueupserttruene): Query[FindAndModifyWriteOpResultObject[_]] with js.Object = js.native
+  ): QueryFindAndModifyWriteOp = js.native
+  def findOneAndUpdate(query: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueupserttruene): QueryFindAndModifyWriteOpAll = js.native
   def findOneAndUpdate(
-    query: js.Any,
-    update: js.Any,
+    query: FilterQuery[_],
+    update: UpdateQuery[_],
     options: rawResulttrueupserttruene,
     callback: js.Function3[
       /* err */ js.Any, 
@@ -288,19 +289,19 @@ trait Querynumber extends js.Object {
       /* res */ js.Any, 
       Unit
     ]
-  ): Query[FindAndModifyWriteOpResultObject[_]] with js.Object = js.native
-  def findOneAndUpdate(query: js.Any, update: js.Any, options: upserttruenewtrueQueryFin): (DocumentQuery[_, _, js.Object]) with js.Object = js.native
+  ): QueryFindAndModifyWriteOpAll = js.native
+  def findOneAndUpdate(query: FilterQuery[_], update: UpdateQuery[_], options: upserttruenewtrueQueryFin): DocumentQueryanyany = js.native
   def findOneAndUpdate(
-    query: js.Any,
-    update: js.Any,
+    query: FilterQuery[_],
+    update: UpdateQuery[_],
     options: upserttruenewtrueQueryFin,
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any, /* res */ js.Any, Unit]
-  ): (DocumentQuery[_, _, js.Object]) with js.Object = js.native
-  def findOneAndUpdate(update: js.Any): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
+  ): DocumentQueryanyany = js.native
+  def findOneAndUpdate(update: UpdateQuery[_]): DocumentQueryanynullany = js.native
   def findOneAndUpdate(
-    update: js.Any,
+    update: UpdateQuery[_],
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
-  ): (DocumentQuery[_ | Null, _, js.Object]) with js.Object = js.native
+  ): DocumentQueryanynullany = js.native
   /**
     * Specifies a $geometry condition. geometry() must come after either intersects() or within().
     * @param object Must contain a type property which is a String and a coordinates property which
@@ -506,31 +507,19 @@ trait Querynumber extends js.Object {
     * Specifies a $regex query condition.
     * When called with one argument, the most recent path passed to where() is used.
     */
-  def regex(`val`: RegExp): this.type = js.native
+  def regex(`val`: js.RegExp): this.type = js.native
   /**
     * Declare and/or execute this query as a remove() operation.
     * The operation is only executed when a callback is passed. To force execution without a callback,
     * you must first call remove() and then execute it by using the exec() method.
     * @param criteria mongodb selector
     */
-  def remove(): (Query[
-    /* import warning: importer.ImportType#apply Failed type conversion: mongodb.mongodb.WriteOpResult['result'] */ js.Any
-  ]) with js.Object = js.native
-  def remove(callback: js.Function1[/* err */ js.Any, Unit]): (Query[
-    /* import warning: importer.ImportType#apply Failed type conversion: mongodb.mongodb.WriteOpResult['result'] */ js.Any
-  ]) with js.Object = js.native
-  def remove(criteria: js.Any): (Query[
-    /* import warning: importer.ImportType#apply Failed type conversion: mongodb.mongodb.WriteOpResult['result'] */ js.Any
-  ]) with js.Object = js.native
-  def remove(criteria: js.Any, callback: js.Function1[/* err */ js.Any, Unit]): (Query[
-    /* import warning: importer.ImportType#apply Failed type conversion: mongodb.mongodb.WriteOpResult['result'] */ js.Any
-  ]) with js.Object = js.native
-  def remove(criteria: Query[_]): (Query[
-    /* import warning: importer.ImportType#apply Failed type conversion: mongodb.mongodb.WriteOpResult['result'] */ js.Any
-  ]) with js.Object = js.native
-  def remove(criteria: Query[_], callback: js.Function1[/* err */ js.Any, Unit]): (Query[
-    /* import warning: importer.ImportType#apply Failed type conversion: mongodb.mongodb.WriteOpResult['result'] */ js.Any
-  ]) with js.Object = js.native
+  def remove(): QueryWriteOpResultresult = js.native
+  def remove(callback: js.Function1[/* err */ js.Any, Unit]): QueryWriteOpResultresult = js.native
+  def remove(criteria: FilterQuery[_]): QueryWriteOpResultresult = js.native
+  def remove(criteria: FilterQuery[_], callback: js.Function1[/* err */ js.Any, Unit]): QueryWriteOpResultresult = js.native
+  def remove(criteria: Query[_]): QueryWriteOpResultresult = js.native
+  def remove(criteria: Query[_], callback: js.Function1[/* err */ js.Any, Unit]): QueryWriteOpResultresult = js.native
   /** Specifies which document fields to include or exclude (also known as the query "projection") */
   def select(arg: String): this.type = js.native
   def select(arg: js.Any): this.type = js.native
@@ -626,21 +615,21 @@ trait Querynumber extends js.Object {
     */
   def update(): Query[Double] with js.Object = js.native
   def update(callback: js.Function2[/* err */ js.Any, /* affectedRows */ Double, Unit]): Query[Double] with js.Object = js.native
-  def update(criteria: js.Any, doc: js.Any): Query[Double] with js.Object = js.native
+  def update(criteria: FilterQuery[_], doc: UpdateQuery[_]): Query[Double] with js.Object = js.native
   def update(
-    criteria: js.Any,
-    doc: js.Any,
+    criteria: FilterQuery[_],
+    doc: UpdateQuery[_],
     callback: js.Function2[/* err */ js.Any, /* affectedRows */ Double, Unit]
   ): Query[Double] with js.Object = js.native
-  def update(criteria: js.Any, doc: js.Any, options: QueryUpdateOptions): Query[Double] with js.Object = js.native
+  def update(criteria: FilterQuery[_], doc: UpdateQuery[_], options: QueryUpdateOptions): Query[Double] with js.Object = js.native
   def update(
-    criteria: js.Any,
-    doc: js.Any,
+    criteria: FilterQuery[_],
+    doc: UpdateQuery[_],
     options: QueryUpdateOptions,
     callback: js.Function2[/* err */ js.Any, /* affectedRows */ Double, Unit]
   ): Query[Double] with js.Object = js.native
-  def update(doc: js.Any): Query[Double] with js.Object = js.native
-  def update(doc: js.Any, callback: js.Function2[/* err */ js.Any, /* affectedRows */ Double, Unit]): Query[Double] with js.Object = js.native
+  def update(doc: UpdateQuery[_]): Query[Double] with js.Object = js.native
+  def update(doc: UpdateQuery[_], callback: js.Function2[/* err */ js.Any, /* affectedRows */ Double, Unit]): Query[Double] with js.Object = js.native
   /** Specifies a path for use with chaining. */
   def where(): this.type = js.native
   def where(path: String): this.type = js.native

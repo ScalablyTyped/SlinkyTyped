@@ -11,7 +11,7 @@ trait VpcConfig extends js.Object {
     */
   var SecurityGroupIds: VpcSecurityGroupIds = js.native
   /**
-    * The ID of the subnets in the VPC to which you want to connect your training job or model.   Amazon EC2 P3 accelerated computing instances are not available in the c/d/e availability zones of region us-east-1. If you want to create endpoints with P3 instances in VPC mode in region us-east-1, create subnets in a/b/f availability zones instead. 
+    * The ID of the subnets in the VPC to which you want to connect your training job or model. For information about the availability of specific instance types, see Supported Instance Types and Availability Zones.
     */
   var Subnets: typingsSlinky.awsSdk.sagemakerMod.Subnets = js.native
 }
@@ -20,8 +20,27 @@ object VpcConfig {
   @scala.inline
   def apply(SecurityGroupIds: VpcSecurityGroupIds, Subnets: Subnets): VpcConfig = {
     val __obj = js.Dynamic.literal(SecurityGroupIds = SecurityGroupIds.asInstanceOf[js.Any], Subnets = Subnets.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[VpcConfig]
   }
+  @scala.inline
+  implicit class VpcConfigOps[Self <: VpcConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSecurityGroupIds(value: VpcSecurityGroupIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubnets(value: Subnets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subnets")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

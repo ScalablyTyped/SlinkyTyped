@@ -26,16 +26,53 @@ trait SchemaPivotHeaderEntry extends js.Object {
 
 object SchemaPivotHeaderEntry {
   @scala.inline
-  def apply(
-    dimensionNames: js.Array[String] = null,
-    dimensionValues: js.Array[String] = null,
-    metric: SchemaMetricHeaderEntry = null
-  ): SchemaPivotHeaderEntry = {
+  def apply(): SchemaPivotHeaderEntry = {
     val __obj = js.Dynamic.literal()
-    if (dimensionNames != null) __obj.updateDynamic("dimensionNames")(dimensionNames.asInstanceOf[js.Any])
-    if (dimensionValues != null) __obj.updateDynamic("dimensionValues")(dimensionValues.asInstanceOf[js.Any])
-    if (metric != null) __obj.updateDynamic("metric")(metric.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPivotHeaderEntry]
   }
+  @scala.inline
+  implicit class SchemaPivotHeaderEntryOps[Self <: SchemaPivotHeaderEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDimensionNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensionNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensionValues(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensionValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetric(value: SchemaMetricHeaderEntry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetric: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metric")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

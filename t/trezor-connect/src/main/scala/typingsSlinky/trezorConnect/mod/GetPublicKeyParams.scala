@@ -1,35 +1,59 @@
 package typingsSlinky.trezorConnect.mod
 
-import typingsSlinky.trezorConnect.AnonInstance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetPublicKeyParams extends CommonParams {
-  var coin: js.UndefOr[String] = js.undefined
-  var crossChain: js.UndefOr[Boolean] = js.undefined
-  var path: String
+  var coin: js.UndefOr[String] = js.native
+  var crossChain: js.UndefOr[Boolean] = js.native
+  var path: String = js.native
 }
 
 object GetPublicKeyParams {
   @scala.inline
-  def apply(
-    path: String,
-    allowSeedlessDevice: js.UndefOr[Boolean] = js.undefined,
-    coin: String = null,
-    crossChain: js.UndefOr[Boolean] = js.undefined,
-    device: AnonInstance = null,
-    keepSession: js.UndefOr[Boolean] = js.undefined,
-    useEmptyPassphrase: js.UndefOr[Boolean] = js.undefined
-  ): GetPublicKeyParams = {
+  def apply(path: String): GetPublicKeyParams = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowSeedlessDevice)) __obj.updateDynamic("allowSeedlessDevice")(allowSeedlessDevice.asInstanceOf[js.Any])
-    if (coin != null) __obj.updateDynamic("coin")(coin.asInstanceOf[js.Any])
-    if (!js.isUndefined(crossChain)) __obj.updateDynamic("crossChain")(crossChain.asInstanceOf[js.Any])
-    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepSession)) __obj.updateDynamic("keepSession")(keepSession.asInstanceOf[js.Any])
-    if (!js.isUndefined(useEmptyPassphrase)) __obj.updateDynamic("useEmptyPassphrase")(useEmptyPassphrase.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPublicKeyParams]
   }
+  @scala.inline
+  implicit class GetPublicKeyParamsOps[Self <: GetPublicKeyParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCoin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossChain(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossChain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossChain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossChain")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

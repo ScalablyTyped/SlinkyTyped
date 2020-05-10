@@ -18,11 +18,41 @@ trait DetectFacesResponse extends js.Object {
 
 object DetectFacesResponse {
   @scala.inline
-  def apply(FaceDetails: FaceDetailList = null, OrientationCorrection: OrientationCorrection = null): DetectFacesResponse = {
+  def apply(): DetectFacesResponse = {
     val __obj = js.Dynamic.literal()
-    if (FaceDetails != null) __obj.updateDynamic("FaceDetails")(FaceDetails.asInstanceOf[js.Any])
-    if (OrientationCorrection != null) __obj.updateDynamic("OrientationCorrection")(OrientationCorrection.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectFacesResponse]
   }
+  @scala.inline
+  implicit class DetectFacesResponseOps[Self <: DetectFacesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFaceDetails(value: FaceDetailList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFaceDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientationCorrection(value: OrientationCorrection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrientationCorrection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientationCorrection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrientationCorrection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

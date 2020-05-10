@@ -18,11 +18,41 @@ trait DescribeAnomalyDetectorsOutput extends js.Object {
 
 object DescribeAnomalyDetectorsOutput {
   @scala.inline
-  def apply(AnomalyDetectors: AnomalyDetectors = null, NextToken: NextToken = null): DescribeAnomalyDetectorsOutput = {
+  def apply(): DescribeAnomalyDetectorsOutput = {
     val __obj = js.Dynamic.literal()
-    if (AnomalyDetectors != null) __obj.updateDynamic("AnomalyDetectors")(AnomalyDetectors.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAnomalyDetectorsOutput]
   }
+  @scala.inline
+  implicit class DescribeAnomalyDetectorsOutputOps[Self <: DescribeAnomalyDetectorsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnomalyDetectors(value: AnomalyDetectors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AnomalyDetectors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnomalyDetectors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AnomalyDetectors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

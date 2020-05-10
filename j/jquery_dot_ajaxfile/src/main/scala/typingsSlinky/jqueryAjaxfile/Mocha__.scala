@@ -1,7 +1,6 @@
 package typingsSlinky.jqueryAjaxfile
 
 import typingsSlinky.jqueryAjaxfile.Mocha_.IRunner
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ class Mocha__ () extends js.Object {
   def globals(value: String): Mocha_ = js.native
   def globals(values: js.Array[String]): Mocha_ = js.native
   def grep(value: String): Mocha_ = js.native
-  def grep(value: RegExp): Mocha_ = js.native
+  def grep(value: js.RegExp): Mocha_ = js.native
   /** Enables growl support. */
   def growl(): Mocha_ = js.native
   def ignoreLeaks(value: Boolean): Mocha_ = js.native

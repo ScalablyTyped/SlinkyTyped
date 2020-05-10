@@ -30,3 +30,55 @@ trait ApplicationLoadOptions extends js.Object {
   var showToolbars: js.UndefOr[Boolean] = js.native
 }
 
+object ApplicationLoadOptions {
+  @scala.inline
+  def apply(): ApplicationLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ApplicationLoadOptions]
+  }
+  @scala.inline
+  implicit class ApplicationLoadOptionsOps[Self <: ApplicationLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowBorders(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showBorders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowBorders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showBorders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowToolbars(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolbars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowToolbars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolbars")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

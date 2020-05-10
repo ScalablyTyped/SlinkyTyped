@@ -22,16 +22,53 @@ trait SearchProductsOutput extends js.Object {
 
 object SearchProductsOutput {
   @scala.inline
-  def apply(
-    NextPageToken: PageToken = null,
-    ProductViewAggregations: ProductViewAggregations = null,
-    ProductViewSummaries: ProductViewSummaries = null
-  ): SearchProductsOutput = {
+  def apply(): SearchProductsOutput = {
     val __obj = js.Dynamic.literal()
-    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
-    if (ProductViewAggregations != null) __obj.updateDynamic("ProductViewAggregations")(ProductViewAggregations.asInstanceOf[js.Any])
-    if (ProductViewSummaries != null) __obj.updateDynamic("ProductViewSummaries")(ProductViewSummaries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchProductsOutput]
   }
+  @scala.inline
+  implicit class SearchProductsOutputOps[Self <: SearchProductsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductViewAggregations(value: ProductViewAggregations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewAggregations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductViewAggregations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewAggregations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductViewSummaries(value: ProductViewSummaries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductViewSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductViewSummaries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

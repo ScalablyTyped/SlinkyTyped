@@ -1,0 +1,17 @@
+package typingsSlinky.babylonjs
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("babylonjs/Shaders/pbr.vertex", JSImport.Namespace)
+@js.native
+object pbrVertexMod extends js.Object {
+  @js.native
+  object pbrVertexShader extends js.Object {
+    var name: String = js.native
+    var shader: String = js.native
+  }
+  
+}
+

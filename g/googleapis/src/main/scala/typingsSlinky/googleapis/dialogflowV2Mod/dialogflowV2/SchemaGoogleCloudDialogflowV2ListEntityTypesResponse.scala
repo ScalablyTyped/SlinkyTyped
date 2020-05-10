@@ -23,14 +23,41 @@ trait SchemaGoogleCloudDialogflowV2ListEntityTypesResponse extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2ListEntityTypesResponse {
   @scala.inline
-  def apply(
-    entityTypes: js.Array[SchemaGoogleCloudDialogflowV2EntityType] = null,
-    nextPageToken: String = null
-  ): SchemaGoogleCloudDialogflowV2ListEntityTypesResponse = {
+  def apply(): SchemaGoogleCloudDialogflowV2ListEntityTypesResponse = {
     val __obj = js.Dynamic.literal()
-    if (entityTypes != null) __obj.updateDynamic("entityTypes")(entityTypes.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2ListEntityTypesResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2ListEntityTypesResponseOps[Self <: SchemaGoogleCloudDialogflowV2ListEntityTypesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntityTypes(value: js.Array[SchemaGoogleCloudDialogflowV2EntityType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

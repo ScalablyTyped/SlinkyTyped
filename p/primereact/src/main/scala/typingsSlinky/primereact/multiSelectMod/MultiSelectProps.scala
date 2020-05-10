@@ -9,87 +9,335 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MultiSelectProps extends js.Object {
-  var appendTo: js.UndefOr[HTMLElement] = js.undefined
-  var ariaLabelledBy: js.UndefOr[String] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var dataKey: js.UndefOr[String] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var filter: js.UndefOr[Boolean] = js.undefined
-  var fixedPlaceholder: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var itemTemplate: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.undefined
-  var maxSelectedLabels: js.UndefOr[Double] = js.undefined
-  var onBlur: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.undefined
-  var onFocus: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.undefined
-  var optionLabel: js.UndefOr[String] = js.undefined
-  var options: js.UndefOr[js.Array[_]] = js.undefined
-  var placeholder: js.UndefOr[String] = js.undefined
-  var scrollHeight: js.UndefOr[String] = js.undefined
-  var selectedItemTemplate: js.UndefOr[js.Function1[/* value */ js.Any, js.UndefOr[ReactElement]]] = js.undefined
-  var selectedItemsLabel: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[js.Object] = js.undefined
-  var tabIndex: js.UndefOr[Boolean] = js.undefined
-  var tooltip: js.UndefOr[js.Any] = js.undefined
-  var tooltipOptions: js.UndefOr[TooltipOptions] = js.undefined
-  var value: js.UndefOr[js.Any] = js.undefined
+  var appendTo: js.UndefOr[HTMLElement] = js.native
+  var ariaLabelledBy: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.native
+  var dataKey: js.UndefOr[String] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var filter: js.UndefOr[Boolean] = js.native
+  var fixedPlaceholder: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[String] = js.native
+  var itemTemplate: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.native
+  var maxSelectedLabels: js.UndefOr[Double] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var optionLabel: js.UndefOr[String] = js.native
+  var options: js.UndefOr[js.Array[_]] = js.native
+  var placeholder: js.UndefOr[String] = js.native
+  var scrollHeight: js.UndefOr[String] = js.native
+  var selectedItemTemplate: js.UndefOr[js.Function1[/* value */ js.Any, js.UndefOr[ReactElement]]] = js.native
+  var selectedItemsLabel: js.UndefOr[String] = js.native
+  var style: js.UndefOr[js.Object] = js.native
+  var tabIndex: js.UndefOr[Boolean] = js.native
+  var tooltip: js.UndefOr[js.Any] = js.native
+  var tooltipOptions: js.UndefOr[TooltipOptions] = js.native
+  var value: js.UndefOr[js.Any] = js.native
 }
 
 object MultiSelectProps {
   @scala.inline
-  def apply(
-    appendTo: HTMLElement = null,
-    ariaLabelledBy: String = null,
-    className: String = null,
-    dataKey: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    filter: js.UndefOr[Boolean] = js.undefined,
-    fixedPlaceholder: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    itemTemplate: /* item */ js.Any => js.UndefOr[ReactElement] = null,
-    maxSelectedLabels: Int | Double = null,
-    onBlur: /* event */ Event_ => Unit = null,
-    onChange: /* e */ AnonValue => Unit = null,
-    onFocus: /* event */ Event_ => Unit = null,
-    optionLabel: String = null,
-    options: js.Array[_] = null,
-    placeholder: String = null,
-    scrollHeight: String = null,
-    selectedItemTemplate: /* value */ js.Any => js.UndefOr[ReactElement] = null,
-    selectedItemsLabel: String = null,
-    style: js.Object = null,
-    tabIndex: js.UndefOr[Boolean] = js.undefined,
-    tooltip: js.Any = null,
-    tooltipOptions: TooltipOptions = null,
-    value: js.Any = null
-  ): MultiSelectProps = {
+  def apply(): MultiSelectProps = {
     val __obj = js.Dynamic.literal()
-    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
-    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (dataKey != null) __obj.updateDynamic("dataKey")(dataKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedPlaceholder)) __obj.updateDynamic("fixedPlaceholder")(fixedPlaceholder.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(js.Any.fromFunction1(itemTemplate))
-    if (maxSelectedLabels != null) __obj.updateDynamic("maxSelectedLabels")(maxSelectedLabels.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (optionLabel != null) __obj.updateDynamic("optionLabel")(optionLabel.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (scrollHeight != null) __obj.updateDynamic("scrollHeight")(scrollHeight.asInstanceOf[js.Any])
-    if (selectedItemTemplate != null) __obj.updateDynamic("selectedItemTemplate")(js.Any.fromFunction1(selectedItemTemplate))
-    if (selectedItemsLabel != null) __obj.updateDynamic("selectedItemsLabel")(selectedItemsLabel.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(tabIndex)) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiSelectProps]
   }
+  @scala.inline
+  implicit class MultiSelectPropsOps[Self <: MultiSelectProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppendTo(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppendTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAriaLabelledBy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabelledBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAriaLabelledBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaLabelledBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedPlaceholder(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedPlaceholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedPlaceholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemTemplate(value: /* item */ js.Any => js.UndefOr[ReactElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutItemTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSelectedLabels(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSelectedLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSelectedLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSelectedLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBlur(value: /* event */ Event_ => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* e */ AnonValue => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFocus(value: /* event */ Event_ => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedItemTemplate(value: /* value */ js.Any => js.UndefOr[ReactElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemTemplate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelectedItemTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedItemsLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemsLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedItemsLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItemsLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabIndex(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipOptions(value: TooltipOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

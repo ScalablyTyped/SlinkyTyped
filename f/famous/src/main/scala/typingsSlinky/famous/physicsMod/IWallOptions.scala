@@ -1,43 +1,39 @@
 package typingsSlinky.famous.physicsMod
 
-import typingsSlinky.famous.mathMod.Quaternion
-import typingsSlinky.famous.mathMod.Vec3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IWallOptions extends IParticleOptions {
-  var direction: js.UndefOr[Double] = js.undefined
+  var direction: js.UndefOr[Double] = js.native
 }
 
 object IWallOptions {
   @scala.inline
-  def apply(
-    collisionGroup: Int | Double = null,
-    collisionMask: Int | Double = null,
-    direction: Int | Double = null,
-    friction: Int | Double = null,
-    mass: Int | Double = null,
-    orientation: Quaternion = null,
-    position: Vec3 = null,
-    restitution: Int | Double = null,
-    restrictions: Int | Double = null,
-    size: js.Array[Double] = null,
-    velocity: Int | Double = null
-  ): IWallOptions = {
+  def apply(): IWallOptions = {
     val __obj = js.Dynamic.literal()
-    if (collisionGroup != null) __obj.updateDynamic("collisionGroup")(collisionGroup.asInstanceOf[js.Any])
-    if (collisionMask != null) __obj.updateDynamic("collisionMask")(collisionMask.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (friction != null) __obj.updateDynamic("friction")(friction.asInstanceOf[js.Any])
-    if (mass != null) __obj.updateDynamic("mass")(mass.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (restitution != null) __obj.updateDynamic("restitution")(restitution.asInstanceOf[js.Any])
-    if (restrictions != null) __obj.updateDynamic("restrictions")(restrictions.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (velocity != null) __obj.updateDynamic("velocity")(velocity.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWallOptions]
   }
+  @scala.inline
+  implicit class IWallOptionsOps[Self <: IWallOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirection(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

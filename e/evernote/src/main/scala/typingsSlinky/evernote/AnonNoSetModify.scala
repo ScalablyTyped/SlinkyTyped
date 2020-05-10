@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonNoSetModify extends js.Object {
-  var noSetFullAccess: js.UndefOr[Boolean] = js.undefined
-  var noSetModify: js.UndefOr[Boolean] = js.undefined
-  var noSetReadOnly: js.UndefOr[Boolean] = js.undefined
-  var noSetReadPlusActivity: js.UndefOr[Boolean] = js.undefined
+  var noSetFullAccess: js.UndefOr[Boolean] = js.native
+  var noSetModify: js.UndefOr[Boolean] = js.native
+  var noSetReadOnly: js.UndefOr[Boolean] = js.native
+  var noSetReadPlusActivity: js.UndefOr[Boolean] = js.native
 }
 
 object AnonNoSetModify {
   @scala.inline
-  def apply(
-    noSetFullAccess: js.UndefOr[Boolean] = js.undefined,
-    noSetModify: js.UndefOr[Boolean] = js.undefined,
-    noSetReadOnly: js.UndefOr[Boolean] = js.undefined,
-    noSetReadPlusActivity: js.UndefOr[Boolean] = js.undefined
-  ): AnonNoSetModify = {
+  def apply(): AnonNoSetModify = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(noSetFullAccess)) __obj.updateDynamic("noSetFullAccess")(noSetFullAccess.asInstanceOf[js.Any])
-    if (!js.isUndefined(noSetModify)) __obj.updateDynamic("noSetModify")(noSetModify.asInstanceOf[js.Any])
-    if (!js.isUndefined(noSetReadOnly)) __obj.updateDynamic("noSetReadOnly")(noSetReadOnly.asInstanceOf[js.Any])
-    if (!js.isUndefined(noSetReadPlusActivity)) __obj.updateDynamic("noSetReadPlusActivity")(noSetReadPlusActivity.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonNoSetModify]
   }
+  @scala.inline
+  implicit class AnonNoSetModifyOps[Self <: AnonNoSetModify] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNoSetFullAccess(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSetFullAccess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoSetFullAccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSetFullAccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoSetModify(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSetModify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoSetModify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSetModify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoSetReadOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSetReadOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoSetReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSetReadOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoSetReadPlusActivity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSetReadPlusActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoSetReadPlusActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noSetReadPlusActivity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

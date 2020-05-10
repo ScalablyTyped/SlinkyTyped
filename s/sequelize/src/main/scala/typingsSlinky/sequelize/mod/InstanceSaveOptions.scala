@@ -7,44 +7,58 @@ import scala.scalajs.js.annotation._
 /**
   * Options used for Instance.save method
   */
+@js.native
 trait InstanceSaveOptions
   extends FieldsOptions
      with LoggingOptions
      with ReturningOptions
      with SearchPathOptions {
-  var hooks: js.UndefOr[Boolean] = js.undefined
+  var hooks: js.UndefOr[Boolean] = js.native
   /**
     * If true, the updatedAt timestamp will not be updated.
     *
     * Defaults to false
     */
-  var silent: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.native
 }
 
 object InstanceSaveOptions {
   @scala.inline
-  def apply(
-    benchmark: js.UndefOr[Boolean] = js.undefined,
-    fields: js.Array[String] = null,
-    hooks: js.UndefOr[Boolean] = js.undefined,
-    logging: Boolean | js.Function = null,
-    returning: js.UndefOr[Boolean] = js.undefined,
-    searchPath: String = null,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    transaction: Transaction = null,
-    validate: js.UndefOr[Boolean] = js.undefined
-  ): InstanceSaveOptions = {
+  def apply(): InstanceSaveOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(benchmark)) __obj.updateDynamic("benchmark")(benchmark.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (!js.isUndefined(hooks)) __obj.updateDynamic("hooks")(hooks.asInstanceOf[js.Any])
-    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
-    if (!js.isUndefined(returning)) __obj.updateDynamic("returning")(returning.asInstanceOf[js.Any])
-    if (searchPath != null) __obj.updateDynamic("searchPath")(searchPath.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
-    if (!js.isUndefined(validate)) __obj.updateDynamic("validate")(validate.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceSaveOptions]
   }
+  @scala.inline
+  implicit class InstanceSaveOptionsOps[Self <: InstanceSaveOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHooks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHooks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

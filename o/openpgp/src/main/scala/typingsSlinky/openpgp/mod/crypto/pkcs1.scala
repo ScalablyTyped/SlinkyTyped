@@ -48,7 +48,7 @@ object pkcs1 extends js.Object {
       * @param emLen intended length in octets of the encoded message
       * @returns encoded message
       */
-    def encode(algo: Integer, hashed: scala.scalajs.js.typedarray.Uint8Array, emLen: Integer): String = js.native
+    def encode(algo: Integer, hashed: js.typedarray.Uint8Array, emLen: Integer): String = js.native
   }
   
 }

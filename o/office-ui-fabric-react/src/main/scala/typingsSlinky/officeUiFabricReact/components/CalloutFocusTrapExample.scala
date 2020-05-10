@@ -1,20 +1,23 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CalloutFocusTrapExample
-  extends ExternalComponentNoPropsWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.calloutFocusTrapExampleMod.CalloutFocusTrapExample
-    ] {
+object CalloutFocusTrapExample {
   @JSImport("office-ui-fabric-react/lib/components/Callout/examples/Callout.FocusTrap.Example", "CalloutFocusTrapExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.calloutFocusTrapExampleMod.CalloutFocusTrapExample
+  ] = new SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.calloutFocusTrapExampleMod.CalloutFocusTrapExample
+  ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: CalloutFocusTrapExample.type): SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.calloutFocusTrapExampleMod.CalloutFocusTrapExample
+  ] = new SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.calloutFocusTrapExampleMod.CalloutFocusTrapExample
+  ](js.Array(this.component, js.Dictionary.empty))()
 }
 

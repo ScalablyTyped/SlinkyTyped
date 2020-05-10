@@ -6,9 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AgGridEvent extends AgEvent {
-  var api: GridApi
-  var columnApi: ColumnApi
+  var api: GridApi = js.native
+  var columnApi: ColumnApi = js.native
 }
 
 object AgGridEvent {
@@ -18,5 +19,25 @@ object AgGridEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AgGridEvent]
   }
+  @scala.inline
+  implicit class AgGridEventOps[Self <: AgGridEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApi(value: GridApi): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColumnApi(value: ColumnApi): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnApi")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

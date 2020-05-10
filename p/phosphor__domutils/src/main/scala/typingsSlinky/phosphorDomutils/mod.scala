@@ -1,10 +1,10 @@
 package typingsSlinky.phosphorDomutils
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.KeyboardEvent
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.phosphorDomutils.elementMod.ElementExt.IBoxSizing
 import typingsSlinky.phosphorDomutils.elementMod.ElementExt.ISizeLimits
-import typingsSlinky.std.KeyboardEvent
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

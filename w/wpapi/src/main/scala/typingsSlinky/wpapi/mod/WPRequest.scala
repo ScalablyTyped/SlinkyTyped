@@ -1,7 +1,7 @@
 package typingsSlinky.wpapi.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.File
+import org.scalajs.dom.raw.File
 import typingsSlinky.wpapi.wpapiStrings.asc
 import typingsSlinky.wpapi.wpapiStrings.desc
 import scala.scalajs.js

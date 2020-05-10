@@ -17,20 +17,18 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  def abort: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.abort = this.cast("abort")
+  def abort: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.abort = "abort".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.abort]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.error = "error".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.error]
   @scala.inline
-  def error: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.error = this.cast("error")
+  def load: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.load = "load".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.load]
   @scala.inline
-  def load: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.load = this.cast("load")
+  def loadend: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loadend = "loadend".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loadend]
   @scala.inline
-  def loadend: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loadend = this.cast("loadend")
+  def loadstart: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loadstart = "loadstart".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loadstart]
   @scala.inline
-  def loadstart: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loadstart = this.cast("loadstart")
+  def progress: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.progress = "progress".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.progress]
   @scala.inline
-  def progress: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.progress = this.cast("progress")
-  @scala.inline
-  def timeout: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.timeout = this.cast("timeout")
+  def timeout: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.timeout = "timeout".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.timeout]
 }
 

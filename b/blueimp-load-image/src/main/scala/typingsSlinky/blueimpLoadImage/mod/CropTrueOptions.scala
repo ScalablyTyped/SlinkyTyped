@@ -5,18 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait CropTrueOptions extends js.Object {
-  var aspectRatio: js.UndefOr[AspectRatio] = js.undefined
-  var crop: js.UndefOr[`true`] = js.undefined
+@js.native
+trait CropTrueOptions extends CropOptions {
+  var aspectRatio: js.UndefOr[AspectRatio] = js.native
+  var crop: js.UndefOr[`true`] = js.native
 }
 
 object CropTrueOptions {
   @scala.inline
-  def apply(aspectRatio: Int | Double = null, crop: `true` = null): CropTrueOptions = {
+  def apply(): CropTrueOptions = {
     val __obj = js.Dynamic.literal()
-    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
-    if (crop != null) __obj.updateDynamic("crop")(crop.asInstanceOf[js.Any])
     __obj.asInstanceOf[CropTrueOptions]
   }
+  @scala.inline
+  implicit class CropTrueOptionsOps[Self <: CropTrueOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAspectRatio(value: AspectRatio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAspectRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrop(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crop")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

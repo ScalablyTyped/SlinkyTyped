@@ -16,8 +16,21 @@ object IndexDocument {
   @scala.inline
   def apply(Suffix: Suffix): IndexDocument = {
     val __obj = js.Dynamic.literal(Suffix = Suffix.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IndexDocument]
   }
+  @scala.inline
+  implicit class IndexDocumentOps[Self <: IndexDocument] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSuffix(value: Suffix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Suffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

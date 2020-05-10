@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.angularCommon.mod.LocationStrategy
 import typingsSlinky.angularCore.mod.OnChanges
 import typingsSlinky.angularCore.mod.OnDestroy
-import typingsSlinky.angularCore.mod.SimpleChanges
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,21 +34,6 @@ class RouterLinkWithHref protected ()
   var updateTargetUrlAndHref: js.Any = js.native
   val urlTree: UrlTree = js.native
   def ngOnChanges(changes: js.Object): js.Any = js.native
-  /**
-    * A callback method that is invoked immediately after the
-    * default change detector has checked data-bound properties
-    * if at least one has changed, and before the view and content
-    * children are checked.
-    * @param changes The changed properties.
-    */
-  /* CompleteClass */
-  override def ngOnChanges(changes: SimpleChanges): Unit = js.native
-  /**
-    * A callback method that performs custom clean-up, invoked immediately
-    * after a directive, pipe, or service instance is destroyed.
-    */
-  /* CompleteClass */
-  override def ngOnDestroy(): Unit = js.native
   def onClick(button: Double, ctrlKey: Boolean, metaKey: Boolean, shiftKey: Boolean): Boolean = js.native
 }
 

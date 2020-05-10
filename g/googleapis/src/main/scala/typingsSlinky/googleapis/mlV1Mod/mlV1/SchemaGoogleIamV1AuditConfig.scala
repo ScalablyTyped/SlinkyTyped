@@ -43,11 +43,41 @@ trait SchemaGoogleIamV1AuditConfig extends js.Object {
 
 object SchemaGoogleIamV1AuditConfig {
   @scala.inline
-  def apply(auditLogConfigs: js.Array[SchemaGoogleIamV1AuditLogConfig] = null, service: String = null): SchemaGoogleIamV1AuditConfig = {
+  def apply(): SchemaGoogleIamV1AuditConfig = {
     val __obj = js.Dynamic.literal()
-    if (auditLogConfigs != null) __obj.updateDynamic("auditLogConfigs")(auditLogConfigs.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleIamV1AuditConfig]
   }
+  @scala.inline
+  implicit class SchemaGoogleIamV1AuditConfigOps[Self <: SchemaGoogleIamV1AuditConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuditLogConfigs(value: js.Array[SchemaGoogleIamV1AuditLogConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auditLogConfigs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuditLogConfigs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auditLogConfigs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

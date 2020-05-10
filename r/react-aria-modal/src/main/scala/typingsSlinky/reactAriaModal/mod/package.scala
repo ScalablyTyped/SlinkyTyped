@@ -11,5 +11,5 @@ package object mod {
       typingsSlinky.reactAriaModal.PickAriaModalPropstitleTe
     ])
   ]
-  type RequiredAriaTypes[T, U] = (typingsSlinky.reactAriaModal.reactAriaModalStrings.RequiredAriaTypes with T with js.Any) | (typingsSlinky.reactAriaModal.reactAriaModalStrings.RequiredAriaTypes with js.Any with U)
+  type RequiredAriaTypes[T, U] = (typingsSlinky.reactAriaModal.reactAriaModalStrings.RequiredAriaTypes with org.scalablytyped.runtime.TopLevel[T] with org.scalablytyped.runtime.TopLevel[js.Any]) | (typingsSlinky.reactAriaModal.reactAriaModalStrings.RequiredAriaTypes with org.scalablytyped.runtime.TopLevel[js.Any] with org.scalablytyped.runtime.TopLevel[U])
 }

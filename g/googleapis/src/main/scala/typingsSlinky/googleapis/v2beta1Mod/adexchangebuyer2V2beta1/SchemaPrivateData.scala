@@ -19,10 +19,29 @@ trait SchemaPrivateData extends js.Object {
 
 object SchemaPrivateData {
   @scala.inline
-  def apply(referenceId: String = null): SchemaPrivateData = {
+  def apply(): SchemaPrivateData = {
     val __obj = js.Dynamic.literal()
-    if (referenceId != null) __obj.updateDynamic("referenceId")(referenceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPrivateData]
   }
+  @scala.inline
+  implicit class SchemaPrivateDataOps[Self <: SchemaPrivateData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReferenceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferenceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

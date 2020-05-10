@@ -13,12 +13,10 @@ trait PatchType extends js.Object
 
 object PatchType {
   @scala.inline
-  def Add: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.Add = this.cast("Add")
+  def Add: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.Add = "Add".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.Add]
   @scala.inline
-  def Remove: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.Remove = this.cast("Remove")
+  def Remove: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.Remove = "Remove".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.Remove]
   @scala.inline
-  def Replace: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.Replace = this.cast("Replace")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Replace: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.Replace = "Replace".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.Replace]
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.fabric.fabricImplMod
 
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +14,14 @@ trait FilterBackend_ extends js.Object {
     sourceElement: HTMLCanvasElement,
     sourceWidth: Double,
     sourceHeight: Double,
-    targetCanvas: org.scalajs.dom.raw.HTMLCanvasElement
+    targetCanvas: HTMLCanvasElement
   ): js.Any = js.native
   def applyFilters(
     filters: js.Array[IBaseFilter],
     sourceElement: HTMLCanvasElement,
     sourceWidth: Double,
     sourceHeight: Double,
-    targetCanvas: org.scalajs.dom.raw.HTMLCanvasElement,
+    targetCanvas: HTMLCanvasElement,
     cacheKey: String
   ): js.Any = js.native
   def applyFilters(
@@ -29,14 +29,14 @@ trait FilterBackend_ extends js.Object {
     sourceElement: HTMLImageElement,
     sourceWidth: Double,
     sourceHeight: Double,
-    targetCanvas: org.scalajs.dom.raw.HTMLCanvasElement
+    targetCanvas: HTMLCanvasElement
   ): js.Any = js.native
   def applyFilters(
     filters: js.Array[IBaseFilter],
     sourceElement: HTMLImageElement,
     sourceWidth: Double,
     sourceHeight: Double,
-    targetCanvas: org.scalajs.dom.raw.HTMLCanvasElement,
+    targetCanvas: HTMLCanvasElement,
     cacheKey: String
   ): js.Any = js.native
   def clearWebGLCaches(): Unit = js.native

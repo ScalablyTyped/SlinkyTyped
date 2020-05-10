@@ -18,11 +18,41 @@ trait AddLayerVersionPermissionResponse extends js.Object {
 
 object AddLayerVersionPermissionResponse {
   @scala.inline
-  def apply(RevisionId: String = null, Statement: String = null): AddLayerVersionPermissionResponse = {
+  def apply(): AddLayerVersionPermissionResponse = {
     val __obj = js.Dynamic.literal()
-    if (RevisionId != null) __obj.updateDynamic("RevisionId")(RevisionId.asInstanceOf[js.Any])
-    if (Statement != null) __obj.updateDynamic("Statement")(Statement.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddLayerVersionPermissionResponse]
   }
+  @scala.inline
+  implicit class AddLayerVersionPermissionResponseOps[Self <: AddLayerVersionPermissionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRevisionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statement")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

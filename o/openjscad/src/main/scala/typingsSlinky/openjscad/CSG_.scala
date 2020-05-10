@@ -24,8 +24,6 @@ class CSG_ ()
   var polygons: js.Array[Polygon] = js.native
   var properties: Properties = js.native
   def canonicalized(): CSG = js.native
-  /* CompleteClass */
-  override def center(cAxes: js.Array[String]): CxG = js.native
   def connectTo(myConnector: Connector, otherConnector: Connector, mirror: Boolean, normalrotation: Double): CSG = js.native
   def contract(radius: Double, resolution: Double): CSG = js.native
   def cutByPlane(plane: Plane): CSG = js.native

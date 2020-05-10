@@ -23,11 +23,41 @@ trait SchemaBatchGetAmpUrlsRequest extends js.Object {
 
 object SchemaBatchGetAmpUrlsRequest {
   @scala.inline
-  def apply(lookupStrategy: String = null, urls: js.Array[String] = null): SchemaBatchGetAmpUrlsRequest = {
+  def apply(): SchemaBatchGetAmpUrlsRequest = {
     val __obj = js.Dynamic.literal()
-    if (lookupStrategy != null) __obj.updateDynamic("lookupStrategy")(lookupStrategy.asInstanceOf[js.Any])
-    if (urls != null) __obj.updateDynamic("urls")(urls.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchGetAmpUrlsRequest]
   }
+  @scala.inline
+  implicit class SchemaBatchGetAmpUrlsRequestOps[Self <: SchemaBatchGetAmpUrlsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLookupStrategy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLookupStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookupStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrls(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

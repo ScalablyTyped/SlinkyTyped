@@ -1,11 +1,8 @@
 package typingsSlinky.reactMotionUiPack.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMotion.mod.PlainStyle
 import typingsSlinky.reactMotion.mod.Style
 import typingsSlinky.reactMotionUiPack.mod.Transition.TransitionProps
@@ -14,35 +11,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactMotionUiPack
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactMotionUiPack {
   @JSImport("react-motion-ui-pack", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    appear: Style = null,
-    component: String | Boolean | ReactElement = null,
-    enter: Style = null,
-    leave: Style = null,
-    onEnter: /* style */ PlainStyle => Unit = null,
-    onLeave: /* style */ Style => Unit = null,
-    runOnMount: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
-    if (appear != null) __obj.updateDynamic("appear")(appear.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (enter != null) __obj.updateDynamic("enter")(enter.asInstanceOf[js.Any])
-    if (leave != null) __obj.updateDynamic("leave")(leave.asInstanceOf[js.Any])
-    if (onEnter != null) __obj.updateDynamic("onEnter")(js.Any.fromFunction1(onEnter))
-    if (onLeave != null) __obj.updateDynamic("onLeave")(js.Any.fromFunction1(onLeave))
-    if (!js.isUndefined(runOnMount)) __obj.updateDynamic("runOnMount")(runOnMount.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def appear(value: Style): this.type = set("appear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentReactElement(value: ReactElement): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def component(value: String | Boolean | ReactElement): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enter(value: Style): this.type = set("enter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def leave(value: Style): this.type = set("leave", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEnter(value: /* style */ PlainStyle => Unit): this.type = set("onEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLeave(value: /* style */ Style => Unit): this.type = set("onLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def runOnMount(value: Boolean): this.type = set("runOnMount", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactMotionUiPack.mod.default.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TransitionProps
+  
+  def withProps(p: TransitionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactMotionUiPack.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

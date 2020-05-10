@@ -5,18 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRowIndex extends js.Object {
-  var index: Double
-  var rowIndex: Double
-  var subId: `oj-gantt-taskbar`
+  var index: Double = js.native
+  var rowIndex: Double = js.native
+  var subId: `oj-gantt-taskbar` = js.native
 }
 
 object AnonRowIndex {
   @scala.inline
   def apply(index: Double, rowIndex: Double, subId: `oj-gantt-taskbar`): AnonRowIndex = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], rowIndex = rowIndex.asInstanceOf[js.Any], subId = subId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonRowIndex]
   }
+  @scala.inline
+  implicit class AnonRowIndexOps[Self <: AnonRowIndex] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRowIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubId(value: `oj-gantt-taskbar`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -16,18 +16,16 @@ trait MessageType extends js.Object
 
 object MessageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def close: typingsSlinky.twilsock.twilsockStrings.close = "close".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.close]
   @scala.inline
-  def close: typingsSlinky.twilsock.twilsockStrings.close = this.cast("close")
+  def init: typingsSlinky.twilsock.twilsockStrings.init = "init".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.init]
   @scala.inline
-  def init: typingsSlinky.twilsock.twilsockStrings.init = this.cast("init")
+  def message: typingsSlinky.twilsock.twilsockStrings.message = "message".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.message]
   @scala.inline
-  def message: typingsSlinky.twilsock.twilsockStrings.message = this.cast("message")
+  def notification: typingsSlinky.twilsock.twilsockStrings.notification = "notification".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.notification]
   @scala.inline
-  def notification: typingsSlinky.twilsock.twilsockStrings.notification = this.cast("notification")
+  def ping: typingsSlinky.twilsock.twilsockStrings.ping = "ping".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.ping]
   @scala.inline
-  def ping: typingsSlinky.twilsock.twilsockStrings.ping = this.cast("ping")
-  @scala.inline
-  def reply: typingsSlinky.twilsock.twilsockStrings.reply = this.cast("reply")
+  def reply: typingsSlinky.twilsock.twilsockStrings.reply = "reply".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.reply]
 }
 

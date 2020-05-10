@@ -1,7 +1,6 @@
 package typingsSlinky.wu
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -68,11 +67,8 @@ object mod extends js.Object {
     def tee(n: Double): js.Array[WuIterable[T]] = js.native
     def toArray(): js.Array[T] = js.native
     def unique(): WuIterable[T] = js.native
-    // TODO: this makes no sense, where did the second entry come from?
-    // tslint:disable-next-line no-unnecessary-generics
-    def zip[U](iter2: js.Iterable[T]): WuIterable[js.Tuple2[T, U]] = js.native
-    // tslint:disable-next-line no-unnecessary-generics
-    def zipLongest[U](iter2: js.Iterable[T]): WuIterable[js.Tuple2[T, U]] = js.native
+    def zip[U](iter2: js.Iterable[U]): WuIterable[js.Tuple2[T, U]] = js.native
+    def zipLongest[U](iter2: js.Iterable[U]): WuIterable[js.Tuple2[T, U]] = js.native
   }
   
   // invoke<T, U>(name:string, ...t:T[], iter: Iterable<(t:T)=>U>): WuIterable<U>;
@@ -105,7 +101,7 @@ object mod extends js.Object {
   def find[T](fn: Filter_[T], iter: js.Iterable[T]): js.UndefOr[T] = js.native
   @JSName("find")
   def find_TS_T[T, S /* <: T */](fn: TypeGuardFilter[T, S], iter: js.Iterable[T]): js.UndefOr[S] = js.native
-  def flatten(iter: Iterable[_]): WuIterable[_] = js.native
+  def flatten(iter: js.Iterable[_]): WuIterable[_] = js.native
   def flatten(shallow: Boolean, iter: js.Iterable[_]): WuIterable[_] = js.native
   def forEach[T](fn: Consumer[T], iter: js.Iterable[T]): Unit = js.native
   def has[T](t: T, iter: js.Iterable[T]): Boolean = js.native
@@ -114,29 +110,29 @@ object mod extends js.Object {
   // pluck<T>(attribute:string, iter: Iterable<{[attribute]: T}>): WuIterable<T>;
   def pluck(attribute: String, iter: js.Iterable[_]): WuIterable[_] = js.native
   def reduce[T](fn: js.Function2[/* a */ T, /* b */ T, T], initial: T, iter: js.Iterable[T]): T = js.native
-  def reduce[T](fn: js.Function2[/* a */ T, /* b */ T, T], iter: Iterable[T]): T = js.native
+  def reduce[T](fn: js.Function2[/* a */ T, /* b */ T, T], iter: js.Iterable[T]): T = js.native
   @JSName("reduce")
   def reduce_TU_U[T, U](fn: js.Function2[/* a */ U, /* b */ T, U], initial: U, iter: js.Iterable[T]): U = js.native
   @JSName("reduce")
-  def reduce_TU_U[T, U](fn: js.Function2[/* a */ U, /* b */ T, U], iter: Iterable[T]): U = js.native
+  def reduce_TU_U[T, U](fn: js.Function2[/* a */ U, /* b */ T, U], iter: js.Iterable[T]): U = js.native
   def reductions[T](fn: js.Function2[/* a */ T, /* b */ T, T], initial: T, iter: js.Iterable[T]): WuIterable[T] = js.native
-  def reductions[T](fn: js.Function2[/* a */ T, /* b */ T, T], iter: Iterable[T]): WuIterable[T] = js.native
+  def reductions[T](fn: js.Function2[/* a */ T, /* b */ T, T], iter: js.Iterable[T]): WuIterable[T] = js.native
   @JSName("reductions")
   def reductions_TU[T, U](fn: js.Function2[/* a */ U, /* b */ T, U], initial: U, iter: js.Iterable[T]): WuIterable[U] = js.native
   @JSName("reductions")
-  def reductions_TU[T, U](fn: js.Function2[/* a */ U, /* b */ T, U], iter: Iterable[T]): WuIterable[U] = js.native
+  def reductions_TU[T, U](fn: js.Function2[/* a */ U, /* b */ T, U], iter: js.Iterable[T]): WuIterable[U] = js.native
   def reject[T](fn: Filter_[T], iter: js.Iterable[T]): WuIterable[T] = js.native
   def repeat[T](obj: T): WuIterable[T] = js.native
   def repeat[T](obj: T, times: Double): WuIterable[T] = js.native
-  def slice[T](iter: Iterable[T]): WuIterable[T] = js.native
-  def slice[T](start: Double, iter: Iterable[T]): WuIterable[T] = js.native
+  def slice[T](iter: js.Iterable[T]): WuIterable[T] = js.native
+  def slice[T](start: Double, iter: js.Iterable[T]): WuIterable[T] = js.native
   def slice[T](start: Double, stop: Double, iter: js.Iterable[T]): WuIterable[T] = js.native
   def some[T](fn: Filter_[T], iter: js.Iterable[T]): Boolean = js.native
   def spreadMap[T](fn: js.Function1[/* repeated */ js.Any, T], iter: js.Iterable[js.Array[_]]): WuIterable[T] = js.native
   def take[T](n: Double, iter: js.Iterable[T]): WuIterable[T] = js.native
   def takeWhile[T](fn: Filter_[T], iter: js.Iterable[T]): WuIterable[T] = js.native
   def tap[T](fn: Consumer[T], iter: js.Iterable[T]): WuIterable[T] = js.native
-  def tee[T](iter: Iterable[T]): js.Array[WuIterable[T]] = js.native
+  def tee[T](iter: js.Iterable[T]): js.Array[WuIterable[T]] = js.native
   def tee[T](n: Double, iter: js.Iterable[T]): js.Array[WuIterable[T]] = js.native
   def toArray[T](iter: js.Iterable[T]): js.Array[T] = js.native
   def unique[T](iter: js.Iterable[T]): WuIterable[T] = js.native

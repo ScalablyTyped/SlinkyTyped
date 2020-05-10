@@ -22,16 +22,12 @@ object nodeMod extends js.Object {
   @js.native
   object node extends js.Object {
     @JSName("decodeBmp")
-    var decodeBmp_Original: js.Function2[
-        /* contents */ scala.scalajs.js.typedarray.Uint8Array, 
-        /* channels */ js.UndefOr[Double], 
-        Tensor3D
-      ] = js.native
+    var decodeBmp_Original: js.Function2[/* contents */ js.typedarray.Uint8Array, /* channels */ js.UndefOr[Double], Tensor3D] = js.native
     @JSName("decodeGif")
-    var decodeGif_Original: js.Function1[/* contents */ scala.scalajs.js.typedarray.Uint8Array, Tensor4D] = js.native
+    var decodeGif_Original: js.Function1[/* contents */ js.typedarray.Uint8Array, Tensor4D] = js.native
     @JSName("decodeImage")
     var decodeImage_Original: js.Function4[
-        /* content */ scala.scalajs.js.typedarray.Uint8Array, 
+        /* content */ js.typedarray.Uint8Array, 
         /* channels */ js.UndefOr[Double], 
         /* dtype */ js.UndefOr[String], 
         /* expandAnimations */ js.UndefOr[Boolean], 
@@ -39,7 +35,7 @@ object nodeMod extends js.Object {
       ] = js.native
     @JSName("decodeJpeg")
     var decodeJpeg_Original: js.Function7[
-        /* contents */ scala.scalajs.js.typedarray.Uint8Array, 
+        /* contents */ js.typedarray.Uint8Array, 
         /* channels */ js.UndefOr[Double], 
         /* ratio */ js.UndefOr[Double], 
         /* fancyUpscaling */ js.UndefOr[Boolean], 
@@ -50,7 +46,7 @@ object nodeMod extends js.Object {
       ] = js.native
     @JSName("decodePng")
     var decodePng_Original: js.Function3[
-        /* contents */ scala.scalajs.js.typedarray.Uint8Array, 
+        /* contents */ js.typedarray.Uint8Array, 
         /* channels */ js.UndefOr[Double], 
         /* dtype */ js.UndefOr[String], 
         Tensor3D
@@ -67,13 +63,13 @@ object nodeMod extends js.Object {
         /* xDensity */ js.UndefOr[Double], 
         /* yDensity */ js.UndefOr[Double], 
         /* xmpMetadata */ js.UndefOr[String], 
-        js.Promise[scala.scalajs.js.typedarray.Uint8Array]
+        js.Promise[js.typedarray.Uint8Array]
       ] = js.native
     @JSName("encodePng")
     var encodePng_Original: js.Function2[
         /* image */ Tensor3D, 
         /* compression */ js.UndefOr[Double], 
-        js.Promise[scala.scalajs.js.typedarray.Uint8Array]
+        js.Promise[js.typedarray.Uint8Array]
       ] = js.native
     @JSName("getMetaGraphsFromSavedModel")
     var getMetaGraphsFromSavedModel_Original: js.Function1[/* path */ String, js.Promise[js.Array[MetaGraph]]] = js.native
@@ -100,20 +96,15 @@ object nodeMod extends js.Object {
         /* args */ js.UndefOr[TensorBoardCallbackArgs], 
         TensorBoardCallback
       ] = js.native
-    def decodeBmp(contents: scala.scalajs.js.typedarray.Uint8Array): Tensor3D = js.native
-    def decodeBmp(contents: scala.scalajs.js.typedarray.Uint8Array, channels: Double): Tensor3D = js.native
-    def decodeGif(contents: scala.scalajs.js.typedarray.Uint8Array): Tensor4D = js.native
-    def decodeImage(content: scala.scalajs.js.typedarray.Uint8Array): Tensor3D | Tensor4D = js.native
-    def decodeImage(content: scala.scalajs.js.typedarray.Uint8Array, channels: Double): Tensor3D | Tensor4D = js.native
-    def decodeImage(content: scala.scalajs.js.typedarray.Uint8Array, channels: Double, dtype: String): Tensor3D | Tensor4D = js.native
-    def decodeImage(
-      content: scala.scalajs.js.typedarray.Uint8Array,
-      channels: Double,
-      dtype: String,
-      expandAnimations: Boolean
-    ): Tensor3D | Tensor4D = js.native
+    def decodeBmp(contents: js.typedarray.Uint8Array): Tensor3D = js.native
+    def decodeBmp(contents: js.typedarray.Uint8Array, channels: Double): Tensor3D = js.native
+    def decodeGif(contents: js.typedarray.Uint8Array): Tensor4D = js.native
+    def decodeImage(content: js.typedarray.Uint8Array): Tensor3D | Tensor4D = js.native
+    def decodeImage(content: js.typedarray.Uint8Array, channels: Double): Tensor3D | Tensor4D = js.native
+    def decodeImage(content: js.typedarray.Uint8Array, channels: Double, dtype: String): Tensor3D | Tensor4D = js.native
+    def decodeImage(content: js.typedarray.Uint8Array, channels: Double, dtype: String, expandAnimations: Boolean): Tensor3D | Tensor4D = js.native
     def decodeJpeg(
-      contents: scala.scalajs.js.typedarray.Uint8Array,
+      contents: js.typedarray.Uint8Array,
       channels: js.UndefOr[Double],
       ratio: js.UndefOr[Double],
       fancyUpscaling: js.UndefOr[Boolean],
@@ -121,9 +112,9 @@ object nodeMod extends js.Object {
       acceptableFraction: js.UndefOr[Double],
       dctMethod: js.UndefOr[String]
     ): Tensor3D = js.native
-    def decodePng(contents: scala.scalajs.js.typedarray.Uint8Array): Tensor3D = js.native
-    def decodePng(contents: scala.scalajs.js.typedarray.Uint8Array, channels: Double): Tensor3D = js.native
-    def decodePng(contents: scala.scalajs.js.typedarray.Uint8Array, channels: Double, dtype: String): Tensor3D = js.native
+    def decodePng(contents: js.typedarray.Uint8Array): Tensor3D = js.native
+    def decodePng(contents: js.typedarray.Uint8Array, channels: Double): Tensor3D = js.native
+    def decodePng(contents: js.typedarray.Uint8Array, channels: Double, dtype: String): Tensor3D = js.native
     def encodeJpeg(
       image: Tensor3D,
       format: js.UndefOr[grayscale | rgb],
@@ -135,7 +126,7 @@ object nodeMod extends js.Object {
       xDensity: js.UndefOr[Double],
       yDensity: js.UndefOr[Double],
       xmpMetadata: js.UndefOr[String]
-    ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+    ): js.Promise[js.typedarray.Uint8Array] = js.native
     @JSName("encodeJpeg")
     def encodeJpeg_cm(
       image: Tensor3D,
@@ -148,7 +139,7 @@ object nodeMod extends js.Object {
       xDensity: js.UndefOr[Double],
       yDensity: js.UndefOr[Double],
       xmpMetadata: js.UndefOr[String]
-    ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+    ): js.Promise[js.typedarray.Uint8Array] = js.native
     @JSName("encodeJpeg")
     def encodeJpeg_in(
       image: Tensor3D,
@@ -161,9 +152,9 @@ object nodeMod extends js.Object {
       xDensity: js.UndefOr[Double],
       yDensity: js.UndefOr[Double],
       xmpMetadata: js.UndefOr[String]
-    ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
-    def encodePng(image: Tensor3D): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
-    def encodePng(image: Tensor3D, compression: Double): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+    ): js.Promise[js.typedarray.Uint8Array] = js.native
+    def encodePng(image: Tensor3D): js.Promise[js.typedarray.Uint8Array] = js.native
+    def encodePng(image: Tensor3D, compression: Double): js.Promise[js.typedarray.Uint8Array] = js.native
     def getMetaGraphsFromSavedModel(path: String): js.Promise[js.Array[MetaGraph]] = js.native
     def getNumOfSavedModels(): Double = js.native
     def loadSavedModel(path: String): js.Promise[TFSavedModel] = js.native

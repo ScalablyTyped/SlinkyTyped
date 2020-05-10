@@ -45,7 +45,6 @@ import typingsSlinky.ddTrace.mod.plugins.mongodbCore
 import typingsSlinky.ddTrace.mod.plugins.promiseJs
 import typingsSlinky.opentracing.tracerMod.SpanOptions
 import typingsSlinky.opentracing.tracerMod.Tracer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -91,7 +90,7 @@ trait Tracer_ extends Tracer {
     name: String,
     fn: js.Function2[
       /* span */ js.UndefOr[Span], 
-      /* fn */ js.UndefOr[js.Function1[/* error */ js.UndefOr[Error], _]], 
+      /* fn */ js.UndefOr[js.Function1[/* error */ js.UndefOr[js.Error], _]], 
       T
     ]
   ): T = js.native

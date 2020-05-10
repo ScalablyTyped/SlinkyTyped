@@ -18,10 +18,29 @@ trait SchemaSitesListResponse extends js.Object {
 
 object SchemaSitesListResponse {
   @scala.inline
-  def apply(siteEntry: js.Array[SchemaWmxSite] = null): SchemaSitesListResponse = {
+  def apply(): SchemaSitesListResponse = {
     val __obj = js.Dynamic.literal()
-    if (siteEntry != null) __obj.updateDynamic("siteEntry")(siteEntry.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSitesListResponse]
   }
+  @scala.inline
+  implicit class SchemaSitesListResponseOps[Self <: SchemaSitesListResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSiteEntry(value: js.Array[SchemaWmxSite]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteEntry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSiteEntry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteEntry")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("flatbuffers.ByteBuffer")
 @js.native
 class ByteBuffer protected () extends js.Object {
-  def this(bytes: scala.scalajs.js.typedarray.Uint8Array) = this()
+  def this(bytes: js.typedarray.Uint8Array) = this()
   def __has_identifier(ident: String): Boolean = js.native
   /**
     * Retrieve the relative offset stored at "offset"
@@ -30,8 +30,8 @@ class ByteBuffer protected () extends js.Object {
     *
     * @param optionalEncoding Defaults to UTF16_STRING
     */
-  def __string(offset: Double): String | scala.scalajs.js.typedarray.Uint8Array = js.native
-  def __string(offset: Double, optionalEncoding: Encoding): String | scala.scalajs.js.typedarray.Uint8Array = js.native
+  def __string(offset: Double): String | js.typedarray.Uint8Array = js.native
+  def __string(offset: Double, optionalEncoding: Encoding): String | js.typedarray.Uint8Array = js.native
   /**
     * Initialize any Table-derived type to point to the union at the given offset.
     */
@@ -44,7 +44,7 @@ class ByteBuffer protected () extends js.Object {
     * Get the length of a vector whose offset is stored at "offset" in this object.
     */
   def __vector_len(offset: Double): Double = js.native
-  def bytes(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def bytes(): js.typedarray.Uint8Array = js.native
   def capacity(): Double = js.native
   def clear(): Unit = js.native
   /**

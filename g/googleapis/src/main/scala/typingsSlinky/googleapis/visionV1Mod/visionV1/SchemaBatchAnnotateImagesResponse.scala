@@ -17,10 +17,29 @@ trait SchemaBatchAnnotateImagesResponse extends js.Object {
 
 object SchemaBatchAnnotateImagesResponse {
   @scala.inline
-  def apply(responses: js.Array[SchemaAnnotateImageResponse] = null): SchemaBatchAnnotateImagesResponse = {
+  def apply(): SchemaBatchAnnotateImagesResponse = {
     val __obj = js.Dynamic.literal()
-    if (responses != null) __obj.updateDynamic("responses")(responses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchAnnotateImagesResponse]
   }
+  @scala.inline
+  implicit class SchemaBatchAnnotateImagesResponseOps[Self <: SchemaBatchAnnotateImagesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponses(value: js.Array[SchemaAnnotateImageResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,58 +1,66 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.stickyMod.default
 import typingsSlinky.semanticUiReact.stickyStickyMod.StickyProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Sticky
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Sticky {
   @JSImport("semantic-ui-react/dist/commonjs/modules/Sticky", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    as: js.Any = null,
-    bottomOffset: Int | Double = null,
-    context: js.Object | typingsSlinky.react.mod.Ref[HTMLElement] = null,
-    offset: Int | Double = null,
-    onBottom: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit = null,
-    onStick: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit = null,
-    onTop: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit = null,
-    onUnstick: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit = null,
-    pushing: js.UndefOr[Boolean] = js.undefined,
-    scrollContext: js.Object | typingsSlinky.react.mod.Ref[HTMLElement] = null,
-    styleElement: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (bottomOffset != null) __obj.updateDynamic("bottomOffset")(bottomOffset.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onBottom != null) __obj.updateDynamic("onBottom")(js.Any.fromFunction2(onBottom))
-    if (onStick != null) __obj.updateDynamic("onStick")(js.Any.fromFunction2(onStick))
-    if (onTop != null) __obj.updateDynamic("onTop")(js.Any.fromFunction2(onTop))
-    if (onUnstick != null) __obj.updateDynamic("onUnstick")(js.Any.fromFunction2(onUnstick))
-    if (!js.isUndefined(pushing)) __obj.updateDynamic("pushing")(pushing.asInstanceOf[js.Any])
-    if (scrollContext != null) __obj.updateDynamic("scrollContext")(scrollContext.asInstanceOf[js.Any])
-    if (styleElement != null) __obj.updateDynamic("styleElement")(styleElement.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bottomOffset(value: Double): this.type = set("bottomOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contextRefObject(value: ReactRef[HTMLElement]): this.type = set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contextFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("context", js.Any.fromFunction1(value))
+    @scala.inline
+    def context(value: js.Object | typingsSlinky.react.mod.Ref[HTMLElement]): this.type = set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contextNull: this.type = set("context", null)
+    @scala.inline
+    def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBottom(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit): this.type = set("onBottom", js.Any.fromFunction2(value))
+    @scala.inline
+    def onStick(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit): this.type = set("onStick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onTop(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit): this.type = set("onTop", js.Any.fromFunction2(value))
+    @scala.inline
+    def onUnstick(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ StickyProps) => Unit): this.type = set("onUnstick", js.Any.fromFunction2(value))
+    @scala.inline
+    def pushing(value: Boolean): this.type = set("pushing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollContextRefObject(value: ReactRef[HTMLElement]): this.type = set("scrollContext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollContextFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("scrollContext", js.Any.fromFunction1(value))
+    @scala.inline
+    def scrollContext(value: js.Object | typingsSlinky.react.mod.Ref[HTMLElement]): this.type = set("scrollContext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollContextNull: this.type = set("scrollContext", null)
+    @scala.inline
+    def styleElement(value: js.Object): this.type = set("styleElement", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.semanticUiReact.stickyMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StickyProps
+  
+  def withProps(p: StickyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Sticky.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

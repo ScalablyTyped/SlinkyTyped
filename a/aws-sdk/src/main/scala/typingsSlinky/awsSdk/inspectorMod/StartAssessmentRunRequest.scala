@@ -18,10 +18,35 @@ trait StartAssessmentRunRequest extends js.Object {
 
 object StartAssessmentRunRequest {
   @scala.inline
-  def apply(assessmentTemplateArn: Arn, assessmentRunName: AssessmentRunName = null): StartAssessmentRunRequest = {
+  def apply(assessmentTemplateArn: Arn): StartAssessmentRunRequest = {
     val __obj = js.Dynamic.literal(assessmentTemplateArn = assessmentTemplateArn.asInstanceOf[js.Any])
-    if (assessmentRunName != null) __obj.updateDynamic("assessmentRunName")(assessmentRunName.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartAssessmentRunRequest]
   }
+  @scala.inline
+  implicit class StartAssessmentRunRequestOps[Self <: StartAssessmentRunRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssessmentTemplateArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentTemplateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssessmentRunName(value: AssessmentRunName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentRunName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssessmentRunName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentRunName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

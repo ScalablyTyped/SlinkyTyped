@@ -45,6 +45,7 @@ package object mod {
   ]
   type ItemSorter[T] = js.Function2[/* a */ T, /* b */ T, scala.Double]
   type LabelFormatter = js.Function1[/* label */ java.lang.String | scala.Double, slinky.core.TagMod[scala.Any]]
+  type LabelListProps = typingsSlinky.recharts.AnonAngle with (typingsSlinky.recharts.AnonDataKey | typingsSlinky.recharts.AnonValueAccessor)
   type LegendValueFormatter = js.Function3[
     /* value */ js.UndefOr[
       /* import warning: importer.ImportType#apply Failed type conversion: recharts.recharts.LegendPayload['value'] */ js.Any

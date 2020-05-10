@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnItemClickListener extends js.Object {
   def onItemClick(
     parent: typingsSlinky.androiduix.android.widget.AdapterView[_],
     view: View,
     position: Double,
     id: Double
-  ): Unit
+  ): Unit = js.native
 }
 
 object OnItemClickListener {
@@ -20,8 +21,21 @@ object OnItemClickListener {
     onItemClick: (typingsSlinky.androiduix.android.widget.AdapterView[_], View, Double, Double) => Unit
   ): OnItemClickListener = {
     val __obj = js.Dynamic.literal(onItemClick = js.Any.fromFunction4(onItemClick))
-  
     __obj.asInstanceOf[OnItemClickListener]
   }
+  @scala.inline
+  implicit class OnItemClickListenerOps[Self <: OnItemClickListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnItemClick(value: (typingsSlinky.androiduix.android.widget.AdapterView[_], View, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

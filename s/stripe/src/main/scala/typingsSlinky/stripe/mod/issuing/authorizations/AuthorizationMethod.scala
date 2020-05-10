@@ -15,16 +15,14 @@ trait AuthorizationMethod extends js.Object
 
 object AuthorizationMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chip: typingsSlinky.stripe.stripeStrings.chip = "chip".asInstanceOf[typingsSlinky.stripe.stripeStrings.chip]
   @scala.inline
-  def chip: typingsSlinky.stripe.stripeStrings.chip = this.cast("chip")
+  def contactless: typingsSlinky.stripe.stripeStrings.contactless = "contactless".asInstanceOf[typingsSlinky.stripe.stripeStrings.contactless]
   @scala.inline
-  def contactless: typingsSlinky.stripe.stripeStrings.contactless = this.cast("contactless")
+  def keyed_in: typingsSlinky.stripe.stripeStrings.keyed_in = "keyed_in".asInstanceOf[typingsSlinky.stripe.stripeStrings.keyed_in]
   @scala.inline
-  def keyed_in: typingsSlinky.stripe.stripeStrings.keyed_in = this.cast("keyed_in")
+  def online: typingsSlinky.stripe.stripeStrings.online = "online".asInstanceOf[typingsSlinky.stripe.stripeStrings.online]
   @scala.inline
-  def online: typingsSlinky.stripe.stripeStrings.online = this.cast("online")
-  @scala.inline
-  def swipe: typingsSlinky.stripe.stripeStrings.swipe = this.cast("swipe")
+  def swipe: typingsSlinky.stripe.stripeStrings.swipe = "swipe".asInstanceOf[typingsSlinky.stripe.stripeStrings.swipe]
 }
 

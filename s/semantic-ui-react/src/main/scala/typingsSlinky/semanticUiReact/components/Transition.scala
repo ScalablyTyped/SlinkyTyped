@@ -1,10 +1,7 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticTRANSITIONS
 import typingsSlinky.semanticUiReact.transitionMod.default
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionEventData
@@ -14,45 +11,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Transition
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Transition {
   @JSImport("semantic-ui-react/dist/commonjs/modules/Transition", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    animation: SemanticTRANSITIONS | String = null,
-    directional: js.UndefOr[Boolean] = js.undefined,
-    duration: Double | String | TransitionPropDuration = null,
-    mountOnShow: js.UndefOr[Boolean] = js.undefined,
-    onComplete: (/* nothing */ Null, /* data */ TransitionEventData) => Unit = null,
-    onHide: (/* nothing */ Null, /* data */ TransitionEventData) => Unit = null,
-    onShow: (/* nothing */ Null, /* data */ TransitionEventData) => Unit = null,
-    onStart: (/* nothing */ Null, /* data */ TransitionEventData) => Unit = null,
-    reactKey: String = null,
-    transitionOnMount: js.UndefOr[Boolean] = js.undefined,
-    unmountOnHide: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (!js.isUndefined(directional)) __obj.updateDynamic("directional")(directional.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (!js.isUndefined(mountOnShow)) __obj.updateDynamic("mountOnShow")(mountOnShow.asInstanceOf[js.Any])
-    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction2(onComplete))
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction2(onHide))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction2(onShow))
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction2(onStart))
-    if (reactKey != null) __obj.updateDynamic("reactKey")(reactKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(transitionOnMount)) __obj.updateDynamic("transitionOnMount")(transitionOnMount.asInstanceOf[js.Any])
-    if (!js.isUndefined(unmountOnHide)) __obj.updateDynamic("unmountOnHide")(unmountOnHide.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def animation(value: SemanticTRANSITIONS | String): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def directional(value: Boolean): this.type = set("directional", value.asInstanceOf[js.Any])
+    @scala.inline
+    def duration(value: Double | String | TransitionPropDuration): this.type = set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mountOnShow(value: Boolean): this.type = set("mountOnShow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onComplete(value: (/* nothing */ Null, /* data */ TransitionEventData) => Unit): this.type = set("onComplete", js.Any.fromFunction2(value))
+    @scala.inline
+    def onHide(value: (/* nothing */ Null, /* data */ TransitionEventData) => Unit): this.type = set("onHide", js.Any.fromFunction2(value))
+    @scala.inline
+    def onShow(value: (/* nothing */ Null, /* data */ TransitionEventData) => Unit): this.type = set("onShow", js.Any.fromFunction2(value))
+    @scala.inline
+    def onStart(value: (/* nothing */ Null, /* data */ TransitionEventData) => Unit): this.type = set("onStart", js.Any.fromFunction2(value))
+    @scala.inline
+    def reactKey(value: String): this.type = set("reactKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionOnMount(value: Boolean): this.type = set("transitionOnMount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unmountOnHide(value: Boolean): this.type = set("unmountOnHide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.semanticUiReact.transitionMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TransitionProps
+  
+  def withProps(p: TransitionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Transition.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

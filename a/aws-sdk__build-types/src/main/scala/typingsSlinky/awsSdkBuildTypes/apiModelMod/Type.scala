@@ -24,34 +24,32 @@ trait Type extends js.Object
 
 object Type {
   @scala.inline
-  def blob: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.blob = this.cast("blob")
+  def blob: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.blob = "blob".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.blob]
   @scala.inline
-  def boolean: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.boolean = "boolean".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.boolean]
   @scala.inline
-  def byte: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.byte = this.cast("byte")
+  def byte: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.byte = "byte".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.byte]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def character: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.character = "character".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.character]
   @scala.inline
-  def character: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.character = this.cast("character")
+  def double: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.double = "double".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.double]
   @scala.inline
-  def double: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.double = this.cast("double")
+  def float: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.float = "float".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.float]
   @scala.inline
-  def float: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.float = this.cast("float")
+  def integer: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.integer = "integer".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.integer = this.cast("integer")
+  def list: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.list = "list".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.list]
   @scala.inline
-  def list: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.list = this.cast("list")
+  def long: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.long = "long".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.long]
   @scala.inline
-  def long: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.long = this.cast("long")
+  def map: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.map = "map".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.map]
   @scala.inline
-  def map: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.map = this.cast("map")
+  def short: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.short = "short".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.short]
   @scala.inline
-  def short: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.short = this.cast("short")
+  def string: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.string = "string".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.string]
   @scala.inline
-  def string: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.string = this.cast("string")
+  def structure: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.structure = "structure".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.structure]
   @scala.inline
-  def structure: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.structure = this.cast("structure")
-  @scala.inline
-  def timestamp: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.timestamp = this.cast("timestamp")
+  def timestamp: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.timestamp = "timestamp".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.timestamp]
 }
 

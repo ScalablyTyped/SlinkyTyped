@@ -1,5 +1,7 @@
 package typingsSlinky.reconnectingwebsocket.mod
 
+import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.reconnectingwebsocket.FnCall
 import typingsSlinky.reconnectingwebsocket.FnCallData
 import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.close
@@ -9,10 +11,7 @@ import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.message
 import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.open
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.ArrayBufferLike
-import typingsSlinky.std.ArrayBufferView
 import typingsSlinky.std.BinaryType
-import typingsSlinky.std.Blob
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventTarget
 import typingsSlinky.std.NonNullable
 import scala.scalajs.js
@@ -298,7 +297,7 @@ trait ReconnectingWebSocket extends EventTarget {
   /** Transmits data to the server over the WebSocket connection. */
   def send(data: ArrayBufferLike): Unit = js.native
   /** Transmits data to the server over the WebSocket connection. */
-  def send(data: ArrayBufferView): Unit = js.native
+  def send(data: js.typedarray.ArrayBufferView): Unit = js.native
   /** Transmits data to the server over the WebSocket connection. */
   def send(data: Blob): Unit = js.native
 }

@@ -13,5 +13,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.downloads.onErased")
 @js.native
 object onErased
-  extends TopLevel[WebExtEvent[js.Function1[/* downloadId */ Double, Unit]]]
+  extends TopLevel[WebExtEvent[js.Function1[/* windowId */ Double, Unit]]]
 

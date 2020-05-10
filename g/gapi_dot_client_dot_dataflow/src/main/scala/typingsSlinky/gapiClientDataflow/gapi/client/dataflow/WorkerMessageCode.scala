@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkerMessageCode extends js.Object {
   /**
     * The code is a string intended for consumption by a machine that identifies
@@ -18,7 +19,7 @@ trait WorkerMessageCode extends js.Object {
     * This is a string and not an enum to make it easy to add new codes without
     * waiting for an API change.
     */
-  var code: js.UndefOr[String] = js.undefined
+  var code: js.UndefOr[String] = js.native
   /**
     * Parameters contains specific information about the code.
     *
@@ -41,16 +42,46 @@ trait WorkerMessageCode extends js.Object {
     * hostname and other worker identifiers should almost always be passed
     * as labels since they will be included on most messages.
     */
-  var parameters: js.UndefOr[Record[String, _]] = js.undefined
+  var parameters: js.UndefOr[Record[String, _]] = js.native
 }
 
 object WorkerMessageCode {
   @scala.inline
-  def apply(code: String = null, parameters: Record[String, _] = null): WorkerMessageCode = {
+  def apply(): WorkerMessageCode = {
     val __obj = js.Dynamic.literal()
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkerMessageCode]
   }
+  @scala.inline
+  implicit class WorkerMessageCodeOps[Self <: WorkerMessageCode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: Record[String, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

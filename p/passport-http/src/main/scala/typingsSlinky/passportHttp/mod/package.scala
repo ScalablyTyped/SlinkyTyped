@@ -12,7 +12,12 @@ package object mod {
     js.Any
   ]
   type BasicVerifyFunctionWithRequest = js.Function4[
-    /* req */ typingsSlinky.express.mod.Request_[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary], 
+    /* req */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
     /* username */ java.lang.String, 
     /* password */ java.lang.String, 
     /* done */ js.Function2[/* error */ js.Any, /* user */ js.UndefOr[js.Any], scala.Unit], 

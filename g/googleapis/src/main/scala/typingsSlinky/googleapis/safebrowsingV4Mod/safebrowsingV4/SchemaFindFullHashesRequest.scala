@@ -31,18 +31,65 @@ trait SchemaFindFullHashesRequest extends js.Object {
 
 object SchemaFindFullHashesRequest {
   @scala.inline
-  def apply(
-    apiClient: SchemaClientInfo = null,
-    client: SchemaClientInfo = null,
-    clientStates: js.Array[String] = null,
-    threatInfo: SchemaThreatInfo = null
-  ): SchemaFindFullHashesRequest = {
+  def apply(): SchemaFindFullHashesRequest = {
     val __obj = js.Dynamic.literal()
-    if (apiClient != null) __obj.updateDynamic("apiClient")(apiClient.asInstanceOf[js.Any])
-    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
-    if (clientStates != null) __obj.updateDynamic("clientStates")(clientStates.asInstanceOf[js.Any])
-    if (threatInfo != null) __obj.updateDynamic("threatInfo")(threatInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFindFullHashesRequest]
   }
+  @scala.inline
+  implicit class SchemaFindFullHashesRequestOps[Self <: SchemaFindFullHashesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiClient(value: SchemaClientInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiClient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiClient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiClient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClient(value: SchemaClientInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientStates(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientStates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientStates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientStates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreatInfo(value: SchemaThreatInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreatInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,6 +15,10 @@ trait ClipboardEvent extends Event_ {
 @JSGlobal("ClipboardEvent")
 @js.native
 object ClipboardEvent
-  extends Instantiable1[/* type */ java.lang.String, ClipboardEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ ClipboardEventInit, ClipboardEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.ClipboardEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ org.scalajs.dom.raw.ClipboardEventInit, 
+      org.scalajs.dom.raw.ClipboardEvent
+    ]
 

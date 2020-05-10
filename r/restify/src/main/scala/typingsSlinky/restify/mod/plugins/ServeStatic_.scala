@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ServeStatic_ extends js.Object {
-  var appendRequestPath: js.UndefOr[Boolean] = js.undefined
-  var charSet: js.UndefOr[String] = js.undefined
-  var default: js.UndefOr[js.Any] = js.undefined
-  var directory: js.UndefOr[String] = js.undefined
-  var etag: js.UndefOr[String] = js.undefined
-  var file: js.UndefOr[String] = js.undefined
-  var gzip: js.UndefOr[Boolean] = js.undefined
-  var `match`: js.UndefOr[js.Any] = js.undefined
-  var maxAge: js.UndefOr[Double] = js.undefined
+  var appendRequestPath: js.UndefOr[Boolean] = js.native
+  var charSet: js.UndefOr[String] = js.native
+  var default: js.UndefOr[js.Any] = js.native
+  var directory: js.UndefOr[String] = js.native
+  var etag: js.UndefOr[String] = js.native
+  var file: js.UndefOr[String] = js.native
+  var gzip: js.UndefOr[Boolean] = js.native
+  var `match`: js.UndefOr[js.Any] = js.native
+  var maxAge: js.UndefOr[Double] = js.native
 }
 
 object ServeStatic_ {
   @scala.inline
-  def apply(
-    appendRequestPath: js.UndefOr[Boolean] = js.undefined,
-    charSet: String = null,
-    default: js.Any = null,
-    directory: String = null,
-    etag: String = null,
-    file: String = null,
-    gzip: js.UndefOr[Boolean] = js.undefined,
-    `match`: js.Any = null,
-    maxAge: Int | Double = null
-  ): ServeStatic_ = {
+  def apply(): ServeStatic_ = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(appendRequestPath)) __obj.updateDynamic("appendRequestPath")(appendRequestPath.asInstanceOf[js.Any])
-    if (charSet != null) __obj.updateDynamic("charSet")(charSet.asInstanceOf[js.Any])
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (directory != null) __obj.updateDynamic("directory")(directory.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
-    if (!js.isUndefined(gzip)) __obj.updateDynamic("gzip")(gzip.asInstanceOf[js.Any])
-    if (`match` != null) __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
-    if (maxAge != null) __obj.updateDynamic("maxAge")(maxAge.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServeStatic_]
   }
+  @scala.inline
+  implicit class ServeStatic_Ops[Self <: ServeStatic_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppendRequestPath(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendRequestPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppendRequestPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendRequestPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCharSet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCharSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefault(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGzip(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGzip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gzip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatch(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAge(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAge")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

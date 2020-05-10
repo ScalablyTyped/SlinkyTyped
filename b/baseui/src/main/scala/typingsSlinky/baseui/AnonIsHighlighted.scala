@@ -14,3 +14,37 @@ trait AnonIsHighlighted extends js.Object {
   var $selected: Boolean = js.native
 }
 
+object AnonIsHighlighted {
+  @scala.inline
+  def apply($disabled: Boolean, $isHighlighted: Boolean, $selected: Boolean): AnonIsHighlighted = {
+    val __obj = js.Dynamic.literal($disabled = $disabled.asInstanceOf[js.Any], $isHighlighted = $isHighlighted.asInstanceOf[js.Any], $selected = $selected.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AnonIsHighlighted]
+  }
+  @scala.inline
+  implicit class AnonIsHighlightedOps[Self <: AnonIsHighlighted] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$disabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$isHighlighted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$isHighlighted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$selected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$selected")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

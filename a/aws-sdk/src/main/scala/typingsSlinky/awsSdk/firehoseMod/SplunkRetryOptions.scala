@@ -14,10 +14,29 @@ trait SplunkRetryOptions extends js.Object {
 
 object SplunkRetryOptions {
   @scala.inline
-  def apply(DurationInSeconds: Int | Double = null): SplunkRetryOptions = {
+  def apply(): SplunkRetryOptions = {
     val __obj = js.Dynamic.literal()
-    if (DurationInSeconds != null) __obj.updateDynamic("DurationInSeconds")(DurationInSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SplunkRetryOptions]
   }
+  @scala.inline
+  implicit class SplunkRetryOptionsOps[Self <: SplunkRetryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDurationInSeconds(value: SplunkRetryDurationInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DurationInSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

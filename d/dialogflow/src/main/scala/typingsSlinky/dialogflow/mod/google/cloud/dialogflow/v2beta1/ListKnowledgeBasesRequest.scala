@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,8 +54,8 @@ object ListKnowledgeBasesRequest extends js.Object {
     */
   def decode(reader: Reader): ListKnowledgeBasesRequest = js.native
   def decode(reader: Reader, length: Double): ListKnowledgeBasesRequest = js.native
-  def decode(reader: Uint8Array): ListKnowledgeBasesRequest = js.native
-  def decode(reader: Uint8Array, length: Double): ListKnowledgeBasesRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array): ListKnowledgeBasesRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ListKnowledgeBasesRequest = js.native
   /**
     * Decodes a ListKnowledgeBasesRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -65,7 +64,7 @@ object ListKnowledgeBasesRequest extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): ListKnowledgeBasesRequest = js.native
-  def decodeDelimited(reader: Uint8Array): ListKnowledgeBasesRequest = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ListKnowledgeBasesRequest = js.native
   /**
     * Encodes the specified ListKnowledgeBasesRequest message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.ListKnowledgeBasesRequest.verify|verify} messages.
     * @param message ListKnowledgeBasesRequest message or plain object to encode

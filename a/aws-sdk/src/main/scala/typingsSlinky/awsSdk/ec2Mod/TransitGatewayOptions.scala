@@ -46,28 +46,125 @@ trait TransitGatewayOptions extends js.Object {
 
 object TransitGatewayOptions {
   @scala.inline
-  def apply(
-    AmazonSideAsn: Int | scala.Double = null,
-    AssociationDefaultRouteTableId: String = null,
-    AutoAcceptSharedAttachments: AutoAcceptSharedAttachmentsValue = null,
-    DefaultRouteTableAssociation: DefaultRouteTableAssociationValue = null,
-    DefaultRouteTablePropagation: DefaultRouteTablePropagationValue = null,
-    DnsSupport: DnsSupportValue = null,
-    MulticastSupport: MulticastSupportValue = null,
-    PropagationDefaultRouteTableId: String = null,
-    VpnEcmpSupport: VpnEcmpSupportValue = null
-  ): TransitGatewayOptions = {
+  def apply(): TransitGatewayOptions = {
     val __obj = js.Dynamic.literal()
-    if (AmazonSideAsn != null) __obj.updateDynamic("AmazonSideAsn")(AmazonSideAsn.asInstanceOf[js.Any])
-    if (AssociationDefaultRouteTableId != null) __obj.updateDynamic("AssociationDefaultRouteTableId")(AssociationDefaultRouteTableId.asInstanceOf[js.Any])
-    if (AutoAcceptSharedAttachments != null) __obj.updateDynamic("AutoAcceptSharedAttachments")(AutoAcceptSharedAttachments.asInstanceOf[js.Any])
-    if (DefaultRouteTableAssociation != null) __obj.updateDynamic("DefaultRouteTableAssociation")(DefaultRouteTableAssociation.asInstanceOf[js.Any])
-    if (DefaultRouteTablePropagation != null) __obj.updateDynamic("DefaultRouteTablePropagation")(DefaultRouteTablePropagation.asInstanceOf[js.Any])
-    if (DnsSupport != null) __obj.updateDynamic("DnsSupport")(DnsSupport.asInstanceOf[js.Any])
-    if (MulticastSupport != null) __obj.updateDynamic("MulticastSupport")(MulticastSupport.asInstanceOf[js.Any])
-    if (PropagationDefaultRouteTableId != null) __obj.updateDynamic("PropagationDefaultRouteTableId")(PropagationDefaultRouteTableId.asInstanceOf[js.Any])
-    if (VpnEcmpSupport != null) __obj.updateDynamic("VpnEcmpSupport")(VpnEcmpSupport.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitGatewayOptions]
   }
+  @scala.inline
+  implicit class TransitGatewayOptionsOps[Self <: TransitGatewayOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmazonSideAsn(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AmazonSideAsn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmazonSideAsn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AmazonSideAsn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssociationDefaultRouteTableId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationDefaultRouteTableId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociationDefaultRouteTableId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociationDefaultRouteTableId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoAcceptSharedAttachments(value: AutoAcceptSharedAttachmentsValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoAcceptSharedAttachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoAcceptSharedAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoAcceptSharedAttachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultRouteTableAssociation(value: DefaultRouteTableAssociationValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRouteTableAssociation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultRouteTableAssociation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRouteTableAssociation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultRouteTablePropagation(value: DefaultRouteTablePropagationValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRouteTablePropagation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultRouteTablePropagation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRouteTablePropagation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnsSupport(value: DnsSupportValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMulticastSupport(value: MulticastSupportValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MulticastSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMulticastSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MulticastSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPropagationDefaultRouteTableId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PropagationDefaultRouteTableId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPropagationDefaultRouteTableId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PropagationDefaultRouteTableId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnEcmpSupport(value: VpnEcmpSupportValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnEcmpSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnEcmpSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnEcmpSupport")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

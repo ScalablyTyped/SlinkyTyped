@@ -5,80 +5,163 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgGridUpdatingLocale
   extends /**
-	 * Option for IgGridUpdatingLocale
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Specifies the label for the button starting edit mode for row adding. If not set, $.ig.GridUpdating.locale.addRowLabel is used.
   	 *
   	 */
-  var addRowLabel: js.UndefOr[String] = js.undefined
+  var addRowLabel: js.UndefOr[String] = js.native
   /**
   	 * Specifies the title for the button starting edit mode for row adding. If not set, $.ig.GridUpdating.locale.addRowTooltip is used.
   	 *
   	 */
-  var addRowTooltip: js.UndefOr[String] = js.undefined
+  var addRowTooltip: js.UndefOr[String] = js.native
   /**
   	 * Specifies the label for the Cancel editing button (only applicable when the [showDoneCancelButtons](ui.iggridupdating#options:showDoneCancelButtons) option is enabled). If not set, $.ig.GridUpdating.locale.cancelLabel is used.
   	 *
   	 */
-  var cancelLabel: js.UndefOr[String] = js.undefined
+  var cancelLabel: js.UndefOr[String] = js.native
   /**
   	 * Specifies the title for the Cancel editing button (only applicable when the [showDoneCancelButtons](ui.iggridupdating#options:showDoneCancelButtons) option is enabled). If not set, $.ig.GridUpdating.locale.cancelTooltip is used.
   	 *
   	 */
-  var cancelTooltip: js.UndefOr[String] = js.undefined
+  var cancelTooltip: js.UndefOr[String] = js.native
   /**
   	 * Specifies the label for the delete button. If not set, $.ig.GridUpdating.locale.deleteRowLabel is used.
   	 *
   	 */
-  var deleteRowLabel: js.UndefOr[String] = js.undefined
+  var deleteRowLabel: js.UndefOr[String] = js.native
   /**
   	 * Specifies the title for the delete button. If not set, $.ig.GridUpdating.locale.deleteRowTooltip is used.
   	 *
   	 */
-  var deleteRowTooltip: js.UndefOr[String] = js.undefined
+  var deleteRowTooltip: js.UndefOr[String] = js.native
   /**
   	 * Specifies the label for the Done editing button (only applicable when the [showDoneCancelButtons](ui.iggridupdating#options:showDoneCancelButtons) option is enabled). If not set, $.ig.GridUpdating.locale.doneLabel is used.
   	 *
   	 */
-  var doneLabel: js.UndefOr[String] = js.undefined
+  var doneLabel: js.UndefOr[String] = js.native
   /**
   	 * Specifies the title for the Done editing button (only applicable when the [showDoneCancelButtons](ui.iggridupdating#options:showDoneCancelButtons) option is enabled). If not set, $.ig.GridUpdating.locale.doneTooltip is used.
   	 *
   	 */
-  var doneTooltip: js.UndefOr[String] = js.undefined
+  var doneTooltip: js.UndefOr[String] = js.native
 }
 
 object IgGridUpdatingLocale {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for IgGridUpdatingLocale
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    addRowLabel: String = null,
-    addRowTooltip: String = null,
-    cancelLabel: String = null,
-    cancelTooltip: String = null,
-    deleteRowLabel: String = null,
-    deleteRowTooltip: String = null,
-    doneLabel: String = null,
-    doneTooltip: String = null
-  ): IgGridUpdatingLocale = {
+  def apply(): IgGridUpdatingLocale = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (addRowLabel != null) __obj.updateDynamic("addRowLabel")(addRowLabel.asInstanceOf[js.Any])
-    if (addRowTooltip != null) __obj.updateDynamic("addRowTooltip")(addRowTooltip.asInstanceOf[js.Any])
-    if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
-    if (cancelTooltip != null) __obj.updateDynamic("cancelTooltip")(cancelTooltip.asInstanceOf[js.Any])
-    if (deleteRowLabel != null) __obj.updateDynamic("deleteRowLabel")(deleteRowLabel.asInstanceOf[js.Any])
-    if (deleteRowTooltip != null) __obj.updateDynamic("deleteRowTooltip")(deleteRowTooltip.asInstanceOf[js.Any])
-    if (doneLabel != null) __obj.updateDynamic("doneLabel")(doneLabel.asInstanceOf[js.Any])
-    if (doneTooltip != null) __obj.updateDynamic("doneTooltip")(doneTooltip.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgGridUpdatingLocale]
   }
+  @scala.inline
+  implicit class IgGridUpdatingLocaleOps[Self <: IgGridUpdatingLocale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddRowLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRowLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddRowLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRowLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddRowTooltip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRowTooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddRowTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRowTooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelTooltip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelTooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelTooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteRowLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRowLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteRowLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRowLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteRowTooltip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRowTooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteRowTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRowTooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoneLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doneLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoneLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doneLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoneTooltip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doneTooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoneTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doneTooltip")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

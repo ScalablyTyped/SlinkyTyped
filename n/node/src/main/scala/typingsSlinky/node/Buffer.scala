@@ -3,7 +3,6 @@ package typingsSlinky.node
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.cryptoMod._KeyLike
 import typingsSlinky.node.fsMod._PathLike
-import typingsSlinky.std.ArrayBuffer
 import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +28,7 @@ class Buffer protected ()
     * @param arrayBuffer The ArrayBuffer with which to share memory.
     * @deprecated since v10.0.0 - Use `Buffer.from(arrayBuffer[, byteOffset[, length]])` instead.
     */
-  def this(arrayBuffer: scala.scalajs.js.typedarray.ArrayBuffer) = this()
+  def this(arrayBuffer: js.typedarray.ArrayBuffer) = this()
   /**
     * Allocates a new buffer containing the given {array} of octets.
     *
@@ -43,7 +42,7 @@ class Buffer protected ()
     * @param array The octets to store.
     * @deprecated since v10.0.0 - Use `Buffer.from(array)` instead.
     */
-  def this(array: scala.scalajs.js.typedarray.Uint8Array) = this()
+  def this(array: js.typedarray.Uint8Array) = this()
   /**
     * Copies the passed {buffer} data onto a new {Buffer} instance.
     *
@@ -67,41 +66,36 @@ class Buffer protected ()
     */
   def this(str: java.lang.String) = this()
   def this(str: java.lang.String, encoding: BufferEncoding) = this()
-  def compare(otherBuffer: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
-  def compare(otherBuffer: scala.scalajs.js.typedarray.Uint8Array, targetStart: Double): Double = js.native
-  def compare(otherBuffer: scala.scalajs.js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double): Double = js.native
+  def compare(otherBuffer: js.typedarray.Uint8Array): Double = js.native
+  def compare(otherBuffer: js.typedarray.Uint8Array, targetStart: Double): Double = js.native
+  def compare(otherBuffer: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double): Double = js.native
+  def compare(otherBuffer: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double, sourceStart: Double): Double = js.native
   def compare(
-    otherBuffer: scala.scalajs.js.typedarray.Uint8Array,
-    targetStart: Double,
-    targetEnd: Double,
-    sourceStart: Double
-  ): Double = js.native
-  def compare(
-    otherBuffer: scala.scalajs.js.typedarray.Uint8Array,
+    otherBuffer: js.typedarray.Uint8Array,
     targetStart: Double,
     targetEnd: Double,
     sourceStart: Double,
     sourceEnd: Double
   ): Double = js.native
-  def copy(targetBuffer: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
-  def copy(targetBuffer: scala.scalajs.js.typedarray.Uint8Array, targetStart: Double): Double = js.native
-  def copy(targetBuffer: scala.scalajs.js.typedarray.Uint8Array, targetStart: Double, sourceStart: Double): Double = js.native
+  def copy(targetBuffer: js.typedarray.Uint8Array): Double = js.native
+  def copy(targetBuffer: js.typedarray.Uint8Array, targetStart: Double): Double = js.native
+  def copy(targetBuffer: js.typedarray.Uint8Array, targetStart: Double, sourceStart: Double): Double = js.native
   def copy(
-    targetBuffer: scala.scalajs.js.typedarray.Uint8Array,
+    targetBuffer: js.typedarray.Uint8Array,
     targetStart: Double,
     sourceStart: Double,
     sourceEnd: Double
   ): Double = js.native
-  def equals(otherBuffer: scala.scalajs.js.typedarray.Uint8Array): Boolean = js.native
+  def equals(otherBuffer: js.typedarray.Uint8Array): Boolean = js.native
   def fill(value: java.lang.String): this.type = js.native
   def fill(value: java.lang.String, offset: Double): this.type = js.native
   def fill(value: java.lang.String, offset: Double, end: Double): this.type = js.native
   def fill(value: java.lang.String, offset: Double, end: Double, encoding: BufferEncoding): this.type = js.native
   def fill(value: Double, offset: Double, end: Double, encoding: BufferEncoding): this.type = js.native
-  def fill(value: Uint8Array): this.type = js.native
-  def fill(value: Uint8Array, offset: Double): this.type = js.native
-  def fill(value: Uint8Array, offset: Double, end: Double): this.type = js.native
-  def fill(value: Uint8Array, offset: Double, end: Double, encoding: BufferEncoding): this.type = js.native
+  def fill(value: js.typedarray.Uint8Array): this.type = js.native
+  def fill(value: js.typedarray.Uint8Array, offset: Double): this.type = js.native
+  def fill(value: js.typedarray.Uint8Array, offset: Double, end: Double): this.type = js.native
+  def fill(value: js.typedarray.Uint8Array, offset: Double, end: Double, encoding: BufferEncoding): this.type = js.native
   def includes(value: java.lang.String): Boolean = js.native
   def includes(value: java.lang.String, byteOffset: Double): Boolean = js.native
   def includes(value: java.lang.String, byteOffset: Double, encoding: BufferEncoding): Boolean = js.native
@@ -113,31 +107,45 @@ class Buffer protected ()
   def indexOf(value: java.lang.String, byteOffset: Double): Double = js.native
   def indexOf(value: java.lang.String, byteOffset: Double, encoding: BufferEncoding): Double = js.native
   def indexOf(value: Double, byteOffset: Double, encoding: BufferEncoding): Double = js.native
-  def indexOf(value: Uint8Array): Double = js.native
-  def indexOf(value: Uint8Array, byteOffset: Double): Double = js.native
-  def indexOf(value: Uint8Array, byteOffset: Double, encoding: BufferEncoding): Double = js.native
+  def indexOf(value: js.typedarray.Uint8Array): Double = js.native
+  def indexOf(value: js.typedarray.Uint8Array, byteOffset: Double): Double = js.native
+  def indexOf(value: js.typedarray.Uint8Array, byteOffset: Double, encoding: BufferEncoding): Double = js.native
   def lastIndexOf(value: java.lang.String): Double = js.native
   def lastIndexOf(value: java.lang.String, byteOffset: Double): Double = js.native
   def lastIndexOf(value: java.lang.String, byteOffset: Double, encoding: BufferEncoding): Double = js.native
   def lastIndexOf(value: Double, byteOffset: Double, encoding: BufferEncoding): Double = js.native
-  def lastIndexOf(value: Uint8Array): Double = js.native
-  def lastIndexOf(value: Uint8Array, byteOffset: Double): Double = js.native
-  def lastIndexOf(value: Uint8Array, byteOffset: Double, encoding: BufferEncoding): Double = js.native
+  def lastIndexOf(value: js.typedarray.Uint8Array): Double = js.native
+  def lastIndexOf(value: js.typedarray.Uint8Array, byteOffset: Double): Double = js.native
+  def lastIndexOf(value: js.typedarray.Uint8Array, byteOffset: Double, encoding: BufferEncoding): Double = js.native
+  def readDoubleBE(): Double = js.native
   def readDoubleBE(offset: Double): Double = js.native
+  def readDoubleLE(): Double = js.native
   def readDoubleLE(offset: Double): Double = js.native
+  def readFloatBE(): Double = js.native
   def readFloatBE(offset: Double): Double = js.native
+  def readFloatLE(): Double = js.native
   def readFloatLE(offset: Double): Double = js.native
+  def readInt16BE(): Double = js.native
   def readInt16BE(offset: Double): Double = js.native
+  def readInt16LE(): Double = js.native
   def readInt16LE(offset: Double): Double = js.native
+  def readInt32BE(): Double = js.native
   def readInt32BE(offset: Double): Double = js.native
+  def readInt32LE(): Double = js.native
   def readInt32LE(offset: Double): Double = js.native
+  def readInt8(): Double = js.native
   def readInt8(offset: Double): Double = js.native
   def readIntBE(offset: Double, byteLength: Double): Double = js.native
   def readIntLE(offset: Double, byteLength: Double): Double = js.native
+  def readUInt16BE(): Double = js.native
   def readUInt16BE(offset: Double): Double = js.native
+  def readUInt16LE(): Double = js.native
   def readUInt16LE(offset: Double): Double = js.native
+  def readUInt32BE(): Double = js.native
   def readUInt32BE(offset: Double): Double = js.native
+  def readUInt32LE(): Double = js.native
   def readUInt32LE(offset: Double): Double = js.native
+  def readUInt8(): Double = js.native
   def readUInt8(offset: Double): Double = js.native
   def readUIntBE(offset: Double, byteLength: Double): Double = js.native
   def readUIntLE(offset: Double, byteLength: Double): Double = js.native
@@ -154,21 +162,35 @@ class Buffer protected ()
   def write(string: java.lang.String, offset: Double, encoding: BufferEncoding): Double = js.native
   def write(string: java.lang.String, offset: Double, length: Double): Double = js.native
   def write(string: java.lang.String, offset: Double, length: Double, encoding: BufferEncoding): Double = js.native
+  def writeDoubleBE(value: Double): Double = js.native
   def writeDoubleBE(value: Double, offset: Double): Double = js.native
+  def writeDoubleLE(value: Double): Double = js.native
   def writeDoubleLE(value: Double, offset: Double): Double = js.native
+  def writeFloatBE(value: Double): Double = js.native
   def writeFloatBE(value: Double, offset: Double): Double = js.native
+  def writeFloatLE(value: Double): Double = js.native
   def writeFloatLE(value: Double, offset: Double): Double = js.native
+  def writeInt16BE(value: Double): Double = js.native
   def writeInt16BE(value: Double, offset: Double): Double = js.native
+  def writeInt16LE(value: Double): Double = js.native
   def writeInt16LE(value: Double, offset: Double): Double = js.native
+  def writeInt32BE(value: Double): Double = js.native
   def writeInt32BE(value: Double, offset: Double): Double = js.native
+  def writeInt32LE(value: Double): Double = js.native
   def writeInt32LE(value: Double, offset: Double): Double = js.native
+  def writeInt8(value: Double): Double = js.native
   def writeInt8(value: Double, offset: Double): Double = js.native
   def writeIntBE(value: Double, offset: Double, byteLength: Double): Double = js.native
   def writeIntLE(value: Double, offset: Double, byteLength: Double): Double = js.native
+  def writeUInt16BE(value: Double): Double = js.native
   def writeUInt16BE(value: Double, offset: Double): Double = js.native
+  def writeUInt16LE(value: Double): Double = js.native
   def writeUInt16LE(value: Double, offset: Double): Double = js.native
+  def writeUInt32BE(value: Double): Double = js.native
   def writeUInt32BE(value: Double, offset: Double): Double = js.native
+  def writeUInt32LE(value: Double): Double = js.native
   def writeUInt32LE(value: Double, offset: Double): Double = js.native
+  def writeUInt8(value: Double): Double = js.native
   def writeUInt8(value: Double, offset: Double): Double = js.native
   def writeUIntBE(value: Double, offset: Double, byteLength: Double): Double = js.native
   def writeUIntLE(value: Double, offset: Double, byteLength: Double): Double = js.native
@@ -224,12 +246,12 @@ object Buffer extends js.Object {
   def byteLength(string: ArrayBufferView, encoding: BufferEncoding): Double = js.native
   def byteLength(string: SharedArrayBuffer): Double = js.native
   def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
-  def byteLength(string: ArrayBuffer): Double = js.native
-  def byteLength(string: ArrayBuffer, encoding: BufferEncoding): Double = js.native
+  def byteLength(string: js.typedarray.ArrayBuffer): Double = js.native
+  def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = js.native
   /**
     * The same as buf1.compare(buf2).
     */
-  def compare(buf1: scala.scalajs.js.typedarray.Uint8Array, buf2: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
+  def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = js.native
   /**
     * Returns a buffer which is the result of concatenating all the buffers in the list together.
     *
@@ -241,8 +263,8 @@ object Buffer extends js.Object {
     * @param totalLength Total length of the buffers when concatenated.
     *   If totalLength is not provided, it is read from the buffers in the list. However, this adds an additional loop to the function, so it is faster to provide the length explicitly.
     */
-  def concat(list: js.Array[scala.scalajs.js.typedarray.Uint8Array]): Buffer = js.native
-  def concat(list: js.Array[scala.scalajs.js.typedarray.Uint8Array], totalLength: Double): Buffer = js.native
+  def concat(list: js.Array[js.typedarray.Uint8Array]): Buffer = js.native
+  def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
@@ -254,15 +276,15 @@ object Buffer extends js.Object {
     *
     * @param arrayBuffer The .buffer property of any TypedArray or a new ArrayBuffer()
     */
-  def from(arrayBuffer: ArrayBuffer): Buffer = js.native
-  def from(arrayBuffer: ArrayBuffer, byteOffset: Double): Buffer = js.native
-  def from(arrayBuffer: ArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
+  def from(arrayBuffer: js.typedarray.ArrayBuffer): Buffer = js.native
+  def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): Buffer = js.native
+  def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
   /**
     * Creates a new Buffer using the passed {data}
     * @param data data to create a new Buffer
     */
   def from(data: js.Array[Double]): Buffer = js.native
-  def from(data: Uint8Array): Buffer = js.native
+  def from(data: js.typedarray.Uint8Array): Buffer = js.native
   def from(obj: AnonToPrimitive): Buffer = js.native
   def from(obj: AnonToPrimitive, byteOffset: Double): Buffer = js.native
   def from(obj: AnonToPrimitive, byteOffset: Double, length: Double): Buffer = js.native

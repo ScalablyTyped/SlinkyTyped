@@ -1,7 +1,7 @@
 package typingsSlinky.datatablesNet.DataTables
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.datatablesNet.JQuery
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -75,10 +75,10 @@ trait RowMethods
   /**
     * Obtain the tr node for the selected row
     */
-  def node(): org.scalajs.dom.raw.Node = js.native
+  def node(): Node = js.native
   /**
     * Delete the selected row from the DataTable.
     */
-  def remove(): org.scalajs.dom.raw.Node = js.native
+  def remove(): Node = js.native
 }
 

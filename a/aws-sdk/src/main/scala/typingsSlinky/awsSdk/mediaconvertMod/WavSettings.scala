@@ -26,18 +26,65 @@ trait WavSettings extends js.Object {
 
 object WavSettings {
   @scala.inline
-  def apply(
-    BitDepth: Int | Double = null,
-    Channels: Int | Double = null,
-    Format: WavFormat = null,
-    SampleRate: Int | Double = null
-  ): WavSettings = {
+  def apply(): WavSettings = {
     val __obj = js.Dynamic.literal()
-    if (BitDepth != null) __obj.updateDynamic("BitDepth")(BitDepth.asInstanceOf[js.Any])
-    if (Channels != null) __obj.updateDynamic("Channels")(Channels.asInstanceOf[js.Any])
-    if (Format != null) __obj.updateDynamic("Format")(Format.asInstanceOf[js.Any])
-    if (SampleRate != null) __obj.updateDynamic("SampleRate")(SampleRate.asInstanceOf[js.Any])
     __obj.asInstanceOf[WavSettings]
   }
+  @scala.inline
+  implicit class WavSettingsOps[Self <: WavSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBitDepth(value: integerMin16Max24): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BitDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BitDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannels(value: integerMin1Max64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Channels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Channels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: WavFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: integerMin8000Max192000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

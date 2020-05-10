@@ -13,12 +13,10 @@ trait EngineType extends js.Object
 
 object EngineType {
   @scala.inline
-  def aurora: typingsSlinky.pulumiAws.pulumiAwsStrings.aurora = this.cast("aurora")
+  def aurora: typingsSlinky.pulumiAws.pulumiAwsStrings.aurora = "aurora".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.aurora]
   @scala.inline
-  def `aurora-mysql`: typingsSlinky.pulumiAws.pulumiAwsStrings.`aurora-mysql` = this.cast("aurora-mysql")
+  def `aurora-mysql`: typingsSlinky.pulumiAws.pulumiAwsStrings.`aurora-mysql` = "aurora-mysql".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`aurora-mysql`]
   @scala.inline
-  def `aurora-postgresql`: typingsSlinky.pulumiAws.pulumiAwsStrings.`aurora-postgresql` = this.cast("aurora-postgresql")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `aurora-postgresql`: typingsSlinky.pulumiAws.pulumiAwsStrings.`aurora-postgresql` = "aurora-postgresql".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`aurora-postgresql`]
 }
 

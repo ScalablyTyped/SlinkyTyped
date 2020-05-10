@@ -23,32 +23,30 @@ trait GoogleActionsOrdersV3ActionType extends js.Object
 
 object GoogleActionsOrdersV3ActionType {
   @scala.inline
-  def CALL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CALL = this.cast("CALL")
+  def CALL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CALL = "CALL".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CALL]
   @scala.inline
-  def CANCEL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCEL = this.cast("CANCEL")
+  def CANCEL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCEL = "CANCEL".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCEL]
   @scala.inline
-  def CUSTOMER_SERVICE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CUSTOMER_SERVICE = this.cast("CUSTOMER_SERVICE")
+  def CUSTOMER_SERVICE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CUSTOMER_SERVICE = "CUSTOMER_SERVICE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CUSTOMER_SERVICE]
   @scala.inline
-  def DIRECTION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DIRECTION = this.cast("DIRECTION")
+  def DIRECTION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DIRECTION = "DIRECTION".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DIRECTION]
   @scala.inline
-  def EMAIL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EMAIL = this.cast("EMAIL")
+  def EMAIL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EMAIL = "EMAIL".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EMAIL]
   @scala.inline
-  def EXCHANGE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EXCHANGE = this.cast("EXCHANGE")
+  def EXCHANGE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EXCHANGE = "EXCHANGE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EXCHANGE]
   @scala.inline
-  def FIX_ISSUE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FIX_ISSUE = this.cast("FIX_ISSUE")
+  def FIX_ISSUE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FIX_ISSUE = "FIX_ISSUE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FIX_ISSUE]
   @scala.inline
-  def MODIFY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.MODIFY = this.cast("MODIFY")
+  def MODIFY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.MODIFY = "MODIFY".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.MODIFY]
   @scala.inline
-  def REORDER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REORDER = this.cast("REORDER")
+  def REORDER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REORDER = "REORDER".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REORDER]
   @scala.inline
-  def RETURN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RETURN = this.cast("RETURN")
+  def RETURN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RETURN = "RETURN".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RETURN]
   @scala.inline
-  def REVIEW: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REVIEW = this.cast("REVIEW")
+  def REVIEW: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REVIEW = "REVIEW".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REVIEW]
   @scala.inline
-  def TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED = this.cast("TYPE_UNSPECIFIED")
+  def TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED = "TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED]
   @scala.inline
-  def VIEW_DETAILS: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VIEW_DETAILS = this.cast("VIEW_DETAILS")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VIEW_DETAILS: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VIEW_DETAILS = "VIEW_DETAILS".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VIEW_DETAILS]
 }
 

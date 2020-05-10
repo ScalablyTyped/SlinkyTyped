@@ -28,7 +28,7 @@ object Datepicker extends js.Object {
   /**
     * Init Datepicker
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Datepicker = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialDatepickerOptions): typingsSlinky.materializeCss.M.Datepicker = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Datepicker = js.native
+  def init(els: Element, options: PartialDatepickerOptions): typingsSlinky.materializeCss.M.Datepicker = js.native
 }
 

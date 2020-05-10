@@ -5,7 +5,6 @@ import typingsSlinky.officeUiFabricReact.ReadonlyIColorPickerProps
 import typingsSlinky.officeUiFabricReact.ReadonlyIColorPickerState
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPicker
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerProps
-import typingsSlinky.officeUiFabricReact.interfacesMod.IColor
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,9 +36,6 @@ class ColorPickerBase protected ()
     * @param newColor - Updated color
     */
   var _updateColor: js.Any = js.native
-  /** The currently selected color. */
-  /* CompleteClass */
-  override var color: IColor = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MColorPickerBase(prevProps: ReadonlyIColorPickerProps, prevState: ReadonlyIColorPickerState): Unit = js.native
 }

@@ -4,28 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FixOptions extends LintOptions {
-  var fix: js.UndefOr[Boolean] = js.undefined
+  var fix: js.UndefOr[Boolean] = js.native
 }
 
 object FixOptions {
   @scala.inline
-  def apply(
-    allowInlineConfig: js.UndefOr[Boolean] = js.undefined,
-    filename: String = null,
-    fix: js.UndefOr[Boolean] = js.undefined,
-    postprocess: /* problemLists */ js.Array[js.Array[LintMessage]] => js.Array[LintMessage] = null,
-    preprocess: /* code */ String => js.Array[String] = null,
-    reportUnusedDisableDirectives: js.UndefOr[Boolean] = js.undefined
-  ): FixOptions = {
+  def apply(): FixOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowInlineConfig)) __obj.updateDynamic("allowInlineConfig")(allowInlineConfig.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (!js.isUndefined(fix)) __obj.updateDynamic("fix")(fix.asInstanceOf[js.Any])
-    if (postprocess != null) __obj.updateDynamic("postprocess")(js.Any.fromFunction1(postprocess))
-    if (preprocess != null) __obj.updateDynamic("preprocess")(js.Any.fromFunction1(preprocess))
-    if (!js.isUndefined(reportUnusedDisableDirectives)) __obj.updateDynamic("reportUnusedDisableDirectives")(reportUnusedDisableDirectives.asInstanceOf[js.Any])
     __obj.asInstanceOf[FixOptions]
   }
+  @scala.inline
+  implicit class FixOptionsOps[Self <: FixOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFix(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

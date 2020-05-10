@@ -133,7 +133,7 @@ trait WebSocket extends EventTarget {
   def removeEventListener_close(
     `type`: typingsSlinky.std.stdStrings.close,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.CloseEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -147,7 +147,7 @@ trait WebSocket extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
@@ -164,7 +164,7 @@ trait WebSocket extends EventTarget {
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_open(
@@ -181,25 +181,25 @@ trait WebSocket extends EventTarget {
   def removeEventListener_open(
     `type`: typingsSlinky.std.stdStrings.open,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   /**
     * Transmits data using the WebSocket connection. data can be a string, a Blob, an ArrayBuffer, or an ArrayBufferView.
     */
   def send(data: java.lang.String): Unit = js.native
   def send(data: ArrayBufferLike): Unit = js.native
-  def send(data: ArrayBufferView): Unit = js.native
-  def send(data: Blob): Unit = js.native
+  def send(data: js.typedarray.ArrayBufferView): Unit = js.native
+  def send(data: org.scalajs.dom.raw.Blob): Unit = js.native
 }
 
 @JSGlobal("WebSocket")
 @js.native
 object WebSocket
-  extends Instantiable1[/* url */ java.lang.String, WebSocket]
+  extends Instantiable1[/* url */ java.lang.String, org.scalajs.dom.raw.WebSocket]
      with Instantiable2[
       /* url */ java.lang.String, 
       (/* protocols */ js.Array[java.lang.String]) | (/* protocols */ java.lang.String), 
-      WebSocket
+      org.scalajs.dom.raw.WebSocket
     ] {
   val CLOSED: Double = js.native
   val CLOSING: Double = js.native

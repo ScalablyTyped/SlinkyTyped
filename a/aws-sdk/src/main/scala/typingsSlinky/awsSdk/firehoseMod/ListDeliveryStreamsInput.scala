@@ -22,16 +22,53 @@ trait ListDeliveryStreamsInput extends js.Object {
 
 object ListDeliveryStreamsInput {
   @scala.inline
-  def apply(
-    DeliveryStreamType: DeliveryStreamType = null,
-    ExclusiveStartDeliveryStreamName: DeliveryStreamName = null,
-    Limit: Int | Double = null
-  ): ListDeliveryStreamsInput = {
+  def apply(): ListDeliveryStreamsInput = {
     val __obj = js.Dynamic.literal()
-    if (DeliveryStreamType != null) __obj.updateDynamic("DeliveryStreamType")(DeliveryStreamType.asInstanceOf[js.Any])
-    if (ExclusiveStartDeliveryStreamName != null) __obj.updateDynamic("ExclusiveStartDeliveryStreamName")(ExclusiveStartDeliveryStreamName.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDeliveryStreamsInput]
   }
+  @scala.inline
+  implicit class ListDeliveryStreamsInputOps[Self <: ListDeliveryStreamsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeliveryStreamType(value: DeliveryStreamType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliveryStreamType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryStreamType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclusiveStartDeliveryStreamName(value: DeliveryStreamName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusiveStartDeliveryStreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusiveStartDeliveryStreamName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusiveStartDeliveryStreamName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: ListDeliveryStreamsInputLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

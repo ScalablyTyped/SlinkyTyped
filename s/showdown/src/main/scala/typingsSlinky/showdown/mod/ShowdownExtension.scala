@@ -1,6 +1,5 @@
 package typingsSlinky.showdown.mod
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,9 +32,10 @@ import scala.scalajs.js.annotation._
   * };
   * ```
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.showdown.mod.Extension_ because Already inherited
-- typingsSlinky.showdown.mod.FilterExtension because var conflicts: listeners, `type`. Inlined filter */ trait ShowdownExtension extends RegexReplaceExtension {
+- typingsSlinky.showdown.mod.FilterExtension because var conflicts: listeners, `type`. Inlined filter */ @js.native
+trait ShowdownExtension extends RegexReplaceExtension {
   var filter: js.UndefOr[
     js.Function3[
       /* text */ String, 
@@ -43,25 +43,37 @@ import scala.scalajs.js.annotation._
       /* options */ js.UndefOr[ConverterOptions], 
       String
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object ShowdownExtension {
   @scala.inline
-  def apply(
-    `type`: String,
-    filter: (/* text */ String, /* converter */ Converter, /* options */ js.UndefOr[ConverterOptions]) => String = null,
-    listeners: StringDictionary[EventListener] = null,
-    regex: String | js.RegExp = null,
-    replace: js.Any = null
-  ): ShowdownExtension = {
+  def apply(`type`: String): ShowdownExtension = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction3(filter))
-    if (listeners != null) __obj.updateDynamic("listeners")(listeners.asInstanceOf[js.Any])
-    if (regex != null) __obj.updateDynamic("regex")(regex.asInstanceOf[js.Any])
-    if (replace != null) __obj.updateDynamic("replace")(replace.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShowdownExtension]
   }
+  @scala.inline
+  implicit class ShowdownExtensionOps[Self <: ShowdownExtension] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilter(
+      value: (/* text */ String, /* converter */ Converter, /* options */ js.UndefOr[ConverterOptions]) => String
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

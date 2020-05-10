@@ -1,9 +1,7 @@
 package typingsSlinky.storybookAddonKnobs.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookAddonKnobs.PickAPIonoffemitgetQueryP
 import typingsSlinky.storybookAddonKnobs.panelMod.KnobPanelProps
 import typingsSlinky.storybookAddonKnobs.panelMod.default
@@ -11,24 +9,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Panel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Panel {
   @JSImport("@storybook/addon-knobs/dist/components/Panel", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    active: Boolean,
-    api: PickAPIonoffemitgetQueryP,
-    onReset: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], api = api.asInstanceOf[js.Any])
-    if (onReset != null) __obj.updateDynamic("onReset")(onReset.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def onReset(value: js.Object): this.type = set("onReset", value.asInstanceOf[js.Any])
   }
-  type Props = KnobPanelProps
+  
+  def withProps(p: KnobPanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(active: Boolean, api: PickAPIonoffemitgetQueryP): Builder = {
+    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any], api = api.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[KnobPanelProps]))
+  }
 }
 

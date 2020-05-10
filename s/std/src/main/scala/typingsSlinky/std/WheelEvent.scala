@@ -21,8 +21,12 @@ trait WheelEvent extends MouseEvent {
 @JSGlobal("WheelEvent")
 @js.native
 object WheelEvent
-  extends Instantiable1[/* type */ java.lang.String, WheelEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ WheelEventInit, WheelEvent] {
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.WheelEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ WheelEventInit, 
+      org.scalajs.dom.raw.WheelEvent
+    ] {
   val DOM_DELTA_LINE: Double = js.native
   val DOM_DELTA_PAGE: Double = js.native
   val DOM_DELTA_PIXEL: Double = js.native

@@ -53,7 +53,7 @@ trait DomElement extends js.Object {
     */
   def getElementById(id: String): HTMLElement = js.native
   def getElementById(id: String, element: js.Any): js.Any = js.native
-  def getElementById(id: String, element: typingsSlinky.std.HTMLElement): HTMLElement = js.native
+  def getElementById(id: String, element: HTMLElement): HTMLElement = js.native
   /**
     * Gets the absolute position of a DOM element relative to the upper-left corner of the owner frame or window. This member is static and can be invoked without creating an instance of the class.             *
     * @param element
@@ -102,7 +102,7 @@ trait DomElement extends js.Object {
     * @param className
     *          The name of the CSS class to remove.
     */
-  def removeCssClass(element: typingsSlinky.std.HTMLElement, className: String): Unit = js.native
+  def removeCssClass(element: HTMLElement, className: String): Unit = js.native
   /**
     * Returns the element that has either the specified ID in the specified container, or is the specified element itself.
     * The resolveElement method is used to verify that an ID or an object can be resolved as an element.             *
@@ -115,8 +115,8 @@ trait DomElement extends js.Object {
     */
   def resolveElement(elementOrElementId: String): HTMLElement = js.native
   def resolveElement(elementOrElementId: String, containerElement: HTMLElement): HTMLElement = js.native
-  def resolveElement(elementOrElementId: typingsSlinky.std.HTMLElement): HTMLElement = js.native
-  def resolveElement(elementOrElementId: typingsSlinky.std.HTMLElement, containerElement: HTMLElement): HTMLElement = js.native
+  def resolveElement(elementOrElementId: HTMLElement): HTMLElement = js.native
+  def resolveElement(elementOrElementId: HTMLElement, containerElement: HTMLElement): HTMLElement = js.native
   /**
     * Sets the position of a DOM element. This member is static and can be invoked without creating an instance of the class.
     * The left and top style attributes (upper-left corner) of an element specify the relative position of an element.

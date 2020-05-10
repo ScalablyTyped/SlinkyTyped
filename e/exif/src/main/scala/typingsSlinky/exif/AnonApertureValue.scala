@@ -5,120 +5,478 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonApertureValue extends js.Object {
-  var ApertureValue: js.UndefOr[Double] = js.undefined
-  var BrightnessValue: js.UndefOr[Double] = js.undefined
-  var ColorSpace: js.UndefOr[Double] = js.undefined
-  var ComponentsConfiguration: js.UndefOr[Buffer] = js.undefined
-  var CompressedBitsPerPixel: js.UndefOr[Double] = js.undefined
-  var CreateDate: js.UndefOr[String] = js.undefined
-  var DateTimeOriginal: js.UndefOr[String] = js.undefined
-  var ExifImageHeight: js.UndefOr[Double] = js.undefined
-  var ExifImageWidth: js.UndefOr[Double] = js.undefined
-  var ExifVersion: js.UndefOr[Buffer] = js.undefined
-  var ExposureCompensation: js.UndefOr[Double] = js.undefined
-  var ExposureMode: js.UndefOr[Double] = js.undefined
-  var ExposureProgram: js.UndefOr[Double] = js.undefined
-  var ExposureTime: js.UndefOr[Double] = js.undefined
-  var FNumber: js.UndefOr[Double] = js.undefined
-  var FileSource: js.UndefOr[Buffer] = js.undefined
-  var Flash: js.UndefOr[Double] = js.undefined
-  var FlashpixVersion: js.UndefOr[Buffer] = js.undefined
-  var FocalLength: js.UndefOr[Double] = js.undefined
-  var FocalLengthIn35mmFormat: js.UndefOr[Double] = js.undefined
-  var FocalPlaneResolutionUnit: js.UndefOr[Double] = js.undefined
-  var FocalPlaneXResolution: js.UndefOr[Double] = js.undefined
-  var FocalPlaneYResolution: js.UndefOr[Double] = js.undefined
-  var ISO: js.UndefOr[Double] = js.undefined
-  var ImageUniqueID: js.UndefOr[String] = js.undefined
-  var InteropOffset: js.UndefOr[Double] = js.undefined
-  var MakerNote: js.UndefOr[Buffer] = js.undefined
-  var MaxApertureValue: js.UndefOr[Double] = js.undefined
-  var MeteringMode: js.UndefOr[Double] = js.undefined
-  var SceneCaptureType: js.UndefOr[Double] = js.undefined
-  var SceneType: js.UndefOr[Buffer] = js.undefined
-  var SensingMethod: js.UndefOr[Double] = js.undefined
-  var ShutterSpeedValue: js.UndefOr[Double] = js.undefined
-  var UserComment: js.UndefOr[Buffer] = js.undefined
-  var WhiteBalance: js.UndefOr[Double] = js.undefined
+  var ApertureValue: js.UndefOr[Double] = js.native
+  var BrightnessValue: js.UndefOr[Double] = js.native
+  var ColorSpace: js.UndefOr[Double] = js.native
+  var ComponentsConfiguration: js.UndefOr[Buffer] = js.native
+  var CompressedBitsPerPixel: js.UndefOr[Double] = js.native
+  var CreateDate: js.UndefOr[String] = js.native
+  var DateTimeOriginal: js.UndefOr[String] = js.native
+  var ExifImageHeight: js.UndefOr[Double] = js.native
+  var ExifImageWidth: js.UndefOr[Double] = js.native
+  var ExifVersion: js.UndefOr[Buffer] = js.native
+  var ExposureCompensation: js.UndefOr[Double] = js.native
+  var ExposureMode: js.UndefOr[Double] = js.native
+  var ExposureProgram: js.UndefOr[Double] = js.native
+  var ExposureTime: js.UndefOr[Double] = js.native
+  var FNumber: js.UndefOr[Double] = js.native
+  var FileSource: js.UndefOr[Buffer] = js.native
+  var Flash: js.UndefOr[Double] = js.native
+  var FlashpixVersion: js.UndefOr[Buffer] = js.native
+  var FocalLength: js.UndefOr[Double] = js.native
+  var FocalLengthIn35mmFormat: js.UndefOr[Double] = js.native
+  var FocalPlaneResolutionUnit: js.UndefOr[Double] = js.native
+  var FocalPlaneXResolution: js.UndefOr[Double] = js.native
+  var FocalPlaneYResolution: js.UndefOr[Double] = js.native
+  var ISO: js.UndefOr[Double] = js.native
+  var ImageUniqueID: js.UndefOr[String] = js.native
+  var InteropOffset: js.UndefOr[Double] = js.native
+  var MakerNote: js.UndefOr[Buffer] = js.native
+  var MaxApertureValue: js.UndefOr[Double] = js.native
+  var MeteringMode: js.UndefOr[Double] = js.native
+  var SceneCaptureType: js.UndefOr[Double] = js.native
+  var SceneType: js.UndefOr[Buffer] = js.native
+  var SensingMethod: js.UndefOr[Double] = js.native
+  var ShutterSpeedValue: js.UndefOr[Double] = js.native
+  var UserComment: js.UndefOr[Buffer] = js.native
+  var WhiteBalance: js.UndefOr[Double] = js.native
 }
 
 object AnonApertureValue {
   @scala.inline
-  def apply(
-    ApertureValue: Int | Double = null,
-    BrightnessValue: Int | Double = null,
-    ColorSpace: Int | Double = null,
-    ComponentsConfiguration: Buffer = null,
-    CompressedBitsPerPixel: Int | Double = null,
-    CreateDate: String = null,
-    DateTimeOriginal: String = null,
-    ExifImageHeight: Int | Double = null,
-    ExifImageWidth: Int | Double = null,
-    ExifVersion: Buffer = null,
-    ExposureCompensation: Int | Double = null,
-    ExposureMode: Int | Double = null,
-    ExposureProgram: Int | Double = null,
-    ExposureTime: Int | Double = null,
-    FNumber: Int | Double = null,
-    FileSource: Buffer = null,
-    Flash: Int | Double = null,
-    FlashpixVersion: Buffer = null,
-    FocalLength: Int | Double = null,
-    FocalLengthIn35mmFormat: Int | Double = null,
-    FocalPlaneResolutionUnit: Int | Double = null,
-    FocalPlaneXResolution: Int | Double = null,
-    FocalPlaneYResolution: Int | Double = null,
-    ISO: Int | Double = null,
-    ImageUniqueID: String = null,
-    InteropOffset: Int | Double = null,
-    MakerNote: Buffer = null,
-    MaxApertureValue: Int | Double = null,
-    MeteringMode: Int | Double = null,
-    SceneCaptureType: Int | Double = null,
-    SceneType: Buffer = null,
-    SensingMethod: Int | Double = null,
-    ShutterSpeedValue: Int | Double = null,
-    UserComment: Buffer = null,
-    WhiteBalance: Int | Double = null
-  ): AnonApertureValue = {
+  def apply(): AnonApertureValue = {
     val __obj = js.Dynamic.literal()
-    if (ApertureValue != null) __obj.updateDynamic("ApertureValue")(ApertureValue.asInstanceOf[js.Any])
-    if (BrightnessValue != null) __obj.updateDynamic("BrightnessValue")(BrightnessValue.asInstanceOf[js.Any])
-    if (ColorSpace != null) __obj.updateDynamic("ColorSpace")(ColorSpace.asInstanceOf[js.Any])
-    if (ComponentsConfiguration != null) __obj.updateDynamic("ComponentsConfiguration")(ComponentsConfiguration.asInstanceOf[js.Any])
-    if (CompressedBitsPerPixel != null) __obj.updateDynamic("CompressedBitsPerPixel")(CompressedBitsPerPixel.asInstanceOf[js.Any])
-    if (CreateDate != null) __obj.updateDynamic("CreateDate")(CreateDate.asInstanceOf[js.Any])
-    if (DateTimeOriginal != null) __obj.updateDynamic("DateTimeOriginal")(DateTimeOriginal.asInstanceOf[js.Any])
-    if (ExifImageHeight != null) __obj.updateDynamic("ExifImageHeight")(ExifImageHeight.asInstanceOf[js.Any])
-    if (ExifImageWidth != null) __obj.updateDynamic("ExifImageWidth")(ExifImageWidth.asInstanceOf[js.Any])
-    if (ExifVersion != null) __obj.updateDynamic("ExifVersion")(ExifVersion.asInstanceOf[js.Any])
-    if (ExposureCompensation != null) __obj.updateDynamic("ExposureCompensation")(ExposureCompensation.asInstanceOf[js.Any])
-    if (ExposureMode != null) __obj.updateDynamic("ExposureMode")(ExposureMode.asInstanceOf[js.Any])
-    if (ExposureProgram != null) __obj.updateDynamic("ExposureProgram")(ExposureProgram.asInstanceOf[js.Any])
-    if (ExposureTime != null) __obj.updateDynamic("ExposureTime")(ExposureTime.asInstanceOf[js.Any])
-    if (FNumber != null) __obj.updateDynamic("FNumber")(FNumber.asInstanceOf[js.Any])
-    if (FileSource != null) __obj.updateDynamic("FileSource")(FileSource.asInstanceOf[js.Any])
-    if (Flash != null) __obj.updateDynamic("Flash")(Flash.asInstanceOf[js.Any])
-    if (FlashpixVersion != null) __obj.updateDynamic("FlashpixVersion")(FlashpixVersion.asInstanceOf[js.Any])
-    if (FocalLength != null) __obj.updateDynamic("FocalLength")(FocalLength.asInstanceOf[js.Any])
-    if (FocalLengthIn35mmFormat != null) __obj.updateDynamic("FocalLengthIn35mmFormat")(FocalLengthIn35mmFormat.asInstanceOf[js.Any])
-    if (FocalPlaneResolutionUnit != null) __obj.updateDynamic("FocalPlaneResolutionUnit")(FocalPlaneResolutionUnit.asInstanceOf[js.Any])
-    if (FocalPlaneXResolution != null) __obj.updateDynamic("FocalPlaneXResolution")(FocalPlaneXResolution.asInstanceOf[js.Any])
-    if (FocalPlaneYResolution != null) __obj.updateDynamic("FocalPlaneYResolution")(FocalPlaneYResolution.asInstanceOf[js.Any])
-    if (ISO != null) __obj.updateDynamic("ISO")(ISO.asInstanceOf[js.Any])
-    if (ImageUniqueID != null) __obj.updateDynamic("ImageUniqueID")(ImageUniqueID.asInstanceOf[js.Any])
-    if (InteropOffset != null) __obj.updateDynamic("InteropOffset")(InteropOffset.asInstanceOf[js.Any])
-    if (MakerNote != null) __obj.updateDynamic("MakerNote")(MakerNote.asInstanceOf[js.Any])
-    if (MaxApertureValue != null) __obj.updateDynamic("MaxApertureValue")(MaxApertureValue.asInstanceOf[js.Any])
-    if (MeteringMode != null) __obj.updateDynamic("MeteringMode")(MeteringMode.asInstanceOf[js.Any])
-    if (SceneCaptureType != null) __obj.updateDynamic("SceneCaptureType")(SceneCaptureType.asInstanceOf[js.Any])
-    if (SceneType != null) __obj.updateDynamic("SceneType")(SceneType.asInstanceOf[js.Any])
-    if (SensingMethod != null) __obj.updateDynamic("SensingMethod")(SensingMethod.asInstanceOf[js.Any])
-    if (ShutterSpeedValue != null) __obj.updateDynamic("ShutterSpeedValue")(ShutterSpeedValue.asInstanceOf[js.Any])
-    if (UserComment != null) __obj.updateDynamic("UserComment")(UserComment.asInstanceOf[js.Any])
-    if (WhiteBalance != null) __obj.updateDynamic("WhiteBalance")(WhiteBalance.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonApertureValue]
   }
+  @scala.inline
+  implicit class AnonApertureValueOps[Self <: AnonApertureValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApertureValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApertureValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApertureValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApertureValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrightnessValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BrightnessValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrightnessValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BrightnessValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorSpace(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColorSpace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentsConfiguration(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentsConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponentsConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComponentsConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompressedBitsPerPixel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompressedBitsPerPixel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompressedBitsPerPixel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompressedBitsPerPixel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateTimeOriginal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateTimeOriginal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateTimeOriginal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateTimeOriginal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExifImageHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExifImageHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExifImageHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExifImageHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExifImageWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExifImageWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExifImageWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExifImageWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExifVersion(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExifVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExifVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExifVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExposureCompensation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExposureCompensation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposureCompensation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExposureCompensation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExposureMode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExposureMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposureMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExposureMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExposureProgram(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExposureProgram")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposureProgram: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExposureProgram")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExposureTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExposureTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExposureTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExposureTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileSource(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlash(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Flash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Flash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlashpixVersion(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlashpixVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlashpixVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlashpixVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocalLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FocalLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocalLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FocalLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocalLengthIn35mmFormat(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FocalLengthIn35mmFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocalLengthIn35mmFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FocalLengthIn35mmFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocalPlaneResolutionUnit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FocalPlaneResolutionUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocalPlaneResolutionUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FocalPlaneResolutionUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocalPlaneXResolution(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FocalPlaneXResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocalPlaneXResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FocalPlaneXResolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocalPlaneYResolution(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FocalPlaneYResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocalPlaneYResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FocalPlaneYResolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withISO(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ISO")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutISO: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ISO")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageUniqueID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageUniqueID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageUniqueID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageUniqueID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInteropOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InteropOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInteropOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InteropOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMakerNote(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MakerNote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMakerNote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MakerNote")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxApertureValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxApertureValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxApertureValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxApertureValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeteringMode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MeteringMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeteringMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MeteringMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSceneCaptureType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SceneCaptureType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSceneCaptureType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SceneCaptureType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSceneType(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SceneType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSceneType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SceneType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSensingMethod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SensingMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSensingMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SensingMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShutterSpeedValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShutterSpeedValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShutterSpeedValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShutterSpeedValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserComment(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserComment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserComment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhiteBalance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WhiteBalance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhiteBalance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WhiteBalance")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

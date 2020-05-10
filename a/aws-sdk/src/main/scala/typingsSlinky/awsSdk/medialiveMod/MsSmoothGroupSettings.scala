@@ -93,47 +93,239 @@ trait MsSmoothGroupSettings extends js.Object {
 
 object MsSmoothGroupSettings {
   @scala.inline
-  def apply(
-    Destination: OutputLocationRef,
-    AcquisitionPointId: string = null,
-    AudioOnlyTimecodeControl: SmoothGroupAudioOnlyTimecodeControl = null,
-    CertificateMode: SmoothGroupCertificateMode = null,
-    ConnectionRetryInterval: Int | Double = null,
-    EventId: string = null,
-    EventIdMode: SmoothGroupEventIdMode = null,
-    EventStopBehavior: SmoothGroupEventStopBehavior = null,
-    FilecacheDuration: Int | Double = null,
-    FragmentLength: Int | Double = null,
-    InputLossAction: InputLossActionForMsSmoothOut = null,
-    NumRetries: Int | Double = null,
-    RestartDelay: Int | Double = null,
-    SegmentationMode: SmoothGroupSegmentationMode = null,
-    SendDelayMs: Int | Double = null,
-    SparseTrackType: SmoothGroupSparseTrackType = null,
-    StreamManifestBehavior: SmoothGroupStreamManifestBehavior = null,
-    TimestampOffset: string = null,
-    TimestampOffsetMode: SmoothGroupTimestampOffsetMode = null
-  ): MsSmoothGroupSettings = {
+  def apply(Destination: OutputLocationRef): MsSmoothGroupSettings = {
     val __obj = js.Dynamic.literal(Destination = Destination.asInstanceOf[js.Any])
-    if (AcquisitionPointId != null) __obj.updateDynamic("AcquisitionPointId")(AcquisitionPointId.asInstanceOf[js.Any])
-    if (AudioOnlyTimecodeControl != null) __obj.updateDynamic("AudioOnlyTimecodeControl")(AudioOnlyTimecodeControl.asInstanceOf[js.Any])
-    if (CertificateMode != null) __obj.updateDynamic("CertificateMode")(CertificateMode.asInstanceOf[js.Any])
-    if (ConnectionRetryInterval != null) __obj.updateDynamic("ConnectionRetryInterval")(ConnectionRetryInterval.asInstanceOf[js.Any])
-    if (EventId != null) __obj.updateDynamic("EventId")(EventId.asInstanceOf[js.Any])
-    if (EventIdMode != null) __obj.updateDynamic("EventIdMode")(EventIdMode.asInstanceOf[js.Any])
-    if (EventStopBehavior != null) __obj.updateDynamic("EventStopBehavior")(EventStopBehavior.asInstanceOf[js.Any])
-    if (FilecacheDuration != null) __obj.updateDynamic("FilecacheDuration")(FilecacheDuration.asInstanceOf[js.Any])
-    if (FragmentLength != null) __obj.updateDynamic("FragmentLength")(FragmentLength.asInstanceOf[js.Any])
-    if (InputLossAction != null) __obj.updateDynamic("InputLossAction")(InputLossAction.asInstanceOf[js.Any])
-    if (NumRetries != null) __obj.updateDynamic("NumRetries")(NumRetries.asInstanceOf[js.Any])
-    if (RestartDelay != null) __obj.updateDynamic("RestartDelay")(RestartDelay.asInstanceOf[js.Any])
-    if (SegmentationMode != null) __obj.updateDynamic("SegmentationMode")(SegmentationMode.asInstanceOf[js.Any])
-    if (SendDelayMs != null) __obj.updateDynamic("SendDelayMs")(SendDelayMs.asInstanceOf[js.Any])
-    if (SparseTrackType != null) __obj.updateDynamic("SparseTrackType")(SparseTrackType.asInstanceOf[js.Any])
-    if (StreamManifestBehavior != null) __obj.updateDynamic("StreamManifestBehavior")(StreamManifestBehavior.asInstanceOf[js.Any])
-    if (TimestampOffset != null) __obj.updateDynamic("TimestampOffset")(TimestampOffset.asInstanceOf[js.Any])
-    if (TimestampOffsetMode != null) __obj.updateDynamic("TimestampOffsetMode")(TimestampOffsetMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[MsSmoothGroupSettings]
   }
+  @scala.inline
+  implicit class MsSmoothGroupSettingsOps[Self <: MsSmoothGroupSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestination(value: OutputLocationRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcquisitionPointId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcquisitionPointId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcquisitionPointId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcquisitionPointId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudioOnlyTimecodeControl(value: SmoothGroupAudioOnlyTimecodeControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioOnlyTimecodeControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioOnlyTimecodeControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioOnlyTimecodeControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificateMode(value: SmoothGroupCertificateMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionRetryInterval(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionRetryInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionRetryInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionRetryInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventIdMode(value: SmoothGroupEventIdMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventIdMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventIdMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventIdMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventStopBehavior(value: SmoothGroupEventStopBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventStopBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventStopBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventStopBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilecacheDuration(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilecacheDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilecacheDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilecacheDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFragmentLength(value: integerMin1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragmentLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputLossAction(value: InputLossActionForMsSmoothOut): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputLossAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputLossAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumRetries(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumRetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumRetries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestartDelay(value: integerMin0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestartDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestartDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestartDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentationMode(value: SmoothGroupSegmentationMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentationMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentationMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentationMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSendDelayMs(value: integerMin0Max10000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SendDelayMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendDelayMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SendDelayMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSparseTrackType(value: SmoothGroupSparseTrackType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SparseTrackType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSparseTrackType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SparseTrackType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamManifestBehavior(value: SmoothGroupStreamManifestBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamManifestBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamManifestBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamManifestBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestampOffset(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestampOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestampOffsetMode(value: SmoothGroupTimestampOffsetMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampOffsetMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestampOffsetMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampOffsetMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

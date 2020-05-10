@@ -34,20 +34,77 @@ trait SchemaWorkerStatus extends js.Object {
 
 object SchemaWorkerStatus {
   @scala.inline
-  def apply(
-    attachedDisks: StringDictionary[SchemaDiskStatus] = null,
-    bootDisk: SchemaDiskStatus = null,
-    freeRamBytes: String = null,
-    totalRamBytes: String = null,
-    uptimeSeconds: String = null
-  ): SchemaWorkerStatus = {
+  def apply(): SchemaWorkerStatus = {
     val __obj = js.Dynamic.literal()
-    if (attachedDisks != null) __obj.updateDynamic("attachedDisks")(attachedDisks.asInstanceOf[js.Any])
-    if (bootDisk != null) __obj.updateDynamic("bootDisk")(bootDisk.asInstanceOf[js.Any])
-    if (freeRamBytes != null) __obj.updateDynamic("freeRamBytes")(freeRamBytes.asInstanceOf[js.Any])
-    if (totalRamBytes != null) __obj.updateDynamic("totalRamBytes")(totalRamBytes.asInstanceOf[js.Any])
-    if (uptimeSeconds != null) __obj.updateDynamic("uptimeSeconds")(uptimeSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWorkerStatus]
   }
+  @scala.inline
+  implicit class SchemaWorkerStatusOps[Self <: SchemaWorkerStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachedDisks(value: StringDictionary[SchemaDiskStatus]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachedDisks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachedDisks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachedDisks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBootDisk(value: SchemaDiskStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDisk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootDisk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDisk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFreeRamBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freeRamBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFreeRamBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("freeRamBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalRamBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRamBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalRamBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRamBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUptimeSeconds(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uptimeSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUptimeSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uptimeSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

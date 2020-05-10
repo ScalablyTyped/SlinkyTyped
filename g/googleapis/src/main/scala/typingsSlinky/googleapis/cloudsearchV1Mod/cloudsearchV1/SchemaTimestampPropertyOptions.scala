@@ -17,10 +17,29 @@ trait SchemaTimestampPropertyOptions extends js.Object {
 
 object SchemaTimestampPropertyOptions {
   @scala.inline
-  def apply(operatorOptions: SchemaTimestampOperatorOptions = null): SchemaTimestampPropertyOptions = {
+  def apply(): SchemaTimestampPropertyOptions = {
     val __obj = js.Dynamic.literal()
-    if (operatorOptions != null) __obj.updateDynamic("operatorOptions")(operatorOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTimestampPropertyOptions]
   }
+  @scala.inline
+  implicit class SchemaTimestampPropertyOptionsOps[Self <: SchemaTimestampPropertyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOperatorOptions(value: SchemaTimestampOperatorOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatorOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

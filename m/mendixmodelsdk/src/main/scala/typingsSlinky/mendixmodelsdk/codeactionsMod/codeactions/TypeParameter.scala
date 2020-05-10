@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 7.21.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -37,19 +37,11 @@ class TypeParameter protected ()
   var model_FTypeParameter: IModel = js.native
   @JSName("name")
   val name_FTypeParameter: String = js.native
-  /**
-    * Returns the qualified name of this element, or
-    * null if this element is not a part of the model,
-    * or if it or one of its namespace containers does not have a
-    * valid name.
-    */
-  /* CompleteClass */
-  override val qualifiedName: String | Null = js.native
-  def containerAsCodeAction(): CodeAction = js.native
-  def name(): String = js.native
+  def containerAsCodeAction: CodeAction = js.native
+  def name: String = js.native
   def name(newValue: String): js.Any = js.native
   @JSName("qualifiedName")
-  def qualifiedName_MTypeParameter(): String | Null = js.native
+  def qualifiedName_MTypeParameter: String | Null = js.native
 }
 
 /* static members */

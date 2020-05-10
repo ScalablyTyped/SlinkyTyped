@@ -10,63 +10,231 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEmail extends js.Object {
-  var email: js.UndefOr[String] = js.undefined
-  var globalId: js.UndefOr[String] = js.undefined
-  var id: js.UndefOr[Double] = js.undefined
-  var notebookGuid: js.UndefOr[Guid] = js.undefined
-  var notebookModifiable: js.UndefOr[Boolean] = js.undefined
-  var privilege: js.UndefOr[SharedNotebookPrivilegeLevel] = js.undefined
-  var recipientIdentityId: js.UndefOr[IdentityID] = js.undefined
-  var recipientSettings: js.UndefOr[SharedNotebookRecipientSettings] = js.undefined
-  var recipientUserId: js.UndefOr[UserID] = js.undefined
-  var recipientUsername: js.UndefOr[String] = js.undefined
-  var serviceAssigned: js.UndefOr[Timestamp] = js.undefined
-  var serviceCreated: js.UndefOr[Timestamp] = js.undefined
-  var serviceUpdated: js.UndefOr[Timestamp] = js.undefined
-  var sharerUserId: js.UndefOr[UserID] = js.undefined
-  var userId: js.UndefOr[UserID] = js.undefined
-  var username: js.UndefOr[String] = js.undefined
+  var email: js.UndefOr[String] = js.native
+  var globalId: js.UndefOr[String] = js.native
+  var id: js.UndefOr[Double] = js.native
+  var notebookGuid: js.UndefOr[Guid] = js.native
+  var notebookModifiable: js.UndefOr[Boolean] = js.native
+  var privilege: js.UndefOr[SharedNotebookPrivilegeLevel] = js.native
+  var recipientIdentityId: js.UndefOr[IdentityID] = js.native
+  var recipientSettings: js.UndefOr[SharedNotebookRecipientSettings] = js.native
+  var recipientUserId: js.UndefOr[UserID] = js.native
+  var recipientUsername: js.UndefOr[String] = js.native
+  var serviceAssigned: js.UndefOr[Timestamp] = js.native
+  var serviceCreated: js.UndefOr[Timestamp] = js.native
+  var serviceUpdated: js.UndefOr[Timestamp] = js.native
+  var sharerUserId: js.UndefOr[UserID] = js.native
+  var userId: js.UndefOr[UserID] = js.native
+  var username: js.UndefOr[String] = js.native
 }
 
 object AnonEmail {
   @scala.inline
-  def apply(
-    email: String = null,
-    globalId: String = null,
-    id: Int | Double = null,
-    notebookGuid: Guid = null,
-    notebookModifiable: js.UndefOr[Boolean] = js.undefined,
-    privilege: SharedNotebookPrivilegeLevel = null,
-    recipientIdentityId: Int | Double = null,
-    recipientSettings: SharedNotebookRecipientSettings = null,
-    recipientUserId: Int | Double = null,
-    recipientUsername: String = null,
-    serviceAssigned: Int | Double = null,
-    serviceCreated: Int | Double = null,
-    serviceUpdated: Int | Double = null,
-    sharerUserId: Int | Double = null,
-    userId: Int | Double = null,
-    username: String = null
-  ): AnonEmail = {
+  def apply(): AnonEmail = {
     val __obj = js.Dynamic.literal()
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (globalId != null) __obj.updateDynamic("globalId")(globalId.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (notebookGuid != null) __obj.updateDynamic("notebookGuid")(notebookGuid.asInstanceOf[js.Any])
-    if (!js.isUndefined(notebookModifiable)) __obj.updateDynamic("notebookModifiable")(notebookModifiable.asInstanceOf[js.Any])
-    if (privilege != null) __obj.updateDynamic("privilege")(privilege.asInstanceOf[js.Any])
-    if (recipientIdentityId != null) __obj.updateDynamic("recipientIdentityId")(recipientIdentityId.asInstanceOf[js.Any])
-    if (recipientSettings != null) __obj.updateDynamic("recipientSettings")(recipientSettings.asInstanceOf[js.Any])
-    if (recipientUserId != null) __obj.updateDynamic("recipientUserId")(recipientUserId.asInstanceOf[js.Any])
-    if (recipientUsername != null) __obj.updateDynamic("recipientUsername")(recipientUsername.asInstanceOf[js.Any])
-    if (serviceAssigned != null) __obj.updateDynamic("serviceAssigned")(serviceAssigned.asInstanceOf[js.Any])
-    if (serviceCreated != null) __obj.updateDynamic("serviceCreated")(serviceCreated.asInstanceOf[js.Any])
-    if (serviceUpdated != null) __obj.updateDynamic("serviceUpdated")(serviceUpdated.asInstanceOf[js.Any])
-    if (sharerUserId != null) __obj.updateDynamic("sharerUserId")(sharerUserId.asInstanceOf[js.Any])
-    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonEmail]
   }
+  @scala.inline
+  implicit class AnonEmailOps[Self <: AnonEmail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotebookGuid(value: Guid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebookGuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotebookGuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebookGuid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotebookModifiable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebookModifiable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotebookModifiable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebookModifiable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivilege(value: SharedNotebookPrivilegeLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilege")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivilege: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilege")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientIdentityId(value: IdentityID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientIdentityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientIdentityId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientIdentityId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientSettings(value: SharedNotebookRecipientSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientUserId(value: UserID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientUserId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientUserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientUserId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientUsername")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientUsername")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceAssigned(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAssigned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceAssigned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceAssigned")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceCreated(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCreated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCreated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceUpdated(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharerUserId(value: UserID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharerUserId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharerUserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharerUserId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserId(value: UserID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

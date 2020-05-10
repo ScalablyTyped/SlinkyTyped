@@ -14,12 +14,10 @@ trait RequestUpdateCheckStatus extends js.Object
 
 object RequestUpdateCheckStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def no_update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.no_update = "no_update".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.no_update]
   @scala.inline
-  def no_update: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.no_update = this.cast("no_update")
+  def throttled: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.throttled = "throttled".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.throttled]
   @scala.inline
-  def throttled: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.throttled = this.cast("throttled")
-  @scala.inline
-  def update_available: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.update_available = this.cast("update_available")
+  def update_available: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.update_available = "update_available".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.update_available]
 }
 

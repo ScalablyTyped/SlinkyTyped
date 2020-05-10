@@ -13,12 +13,10 @@ trait GridDirection extends js.Object
 
 object GridDirection {
   @scala.inline
-  def BOTH: typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.BOTH = this.cast("BOTH")
+  def BOTH: typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.BOTH = "BOTH".asInstanceOf[typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.BOTH]
   @scala.inline
-  def HORIZONTAL: typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.HORIZONTAL = this.cast("HORIZONTAL")
+  def HORIZONTAL: typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.HORIZONTAL = "HORIZONTAL".asInstanceOf[typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.HORIZONTAL]
   @scala.inline
-  def VERTICAL: typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.VERTICAL = this.cast("VERTICAL")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VERTICAL: typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.VERTICAL = "VERTICAL".asInstanceOf[typingsSlinky.reactNativeSvgCharts.reactNativeSvgChartsStrings.VERTICAL]
 }
 

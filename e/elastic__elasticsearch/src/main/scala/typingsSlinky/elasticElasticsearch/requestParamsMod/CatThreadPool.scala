@@ -10,56 +10,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CatThreadPool extends Generic {
-  var format: js.UndefOr[String] = js.undefined
-  var h: js.UndefOr[String | js.Array[String]] = js.undefined
-  var help: js.UndefOr[Boolean] = js.undefined
-  var local: js.UndefOr[Boolean] = js.undefined
-  var master_timeout: js.UndefOr[String] = js.undefined
-  var s: js.UndefOr[String | js.Array[String]] = js.undefined
-  var size: js.UndefOr[_empty | k | m | g | t | p] = js.undefined
-  var thread_pool_patterns: js.UndefOr[String | js.Array[String]] = js.undefined
-  var v: js.UndefOr[Boolean] = js.undefined
+  var format: js.UndefOr[String] = js.native
+  var h: js.UndefOr[String | js.Array[String]] = js.native
+  var help: js.UndefOr[Boolean] = js.native
+  var local: js.UndefOr[Boolean] = js.native
+  var master_timeout: js.UndefOr[String] = js.native
+  var s: js.UndefOr[String | js.Array[String]] = js.native
+  var size: js.UndefOr[_empty | k | m | g | t | p] = js.native
+  var thread_pool_patterns: js.UndefOr[String | js.Array[String]] = js.native
+  var v: js.UndefOr[Boolean] = js.native
 }
 
 object CatThreadPool {
   @scala.inline
-  def apply(
-    error_trace: js.UndefOr[Boolean] = js.undefined,
-    filter_path: String | js.Array[String] = null,
-    format: String = null,
-    h: String | js.Array[String] = null,
-    help: js.UndefOr[Boolean] = js.undefined,
-    human: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    local: js.UndefOr[Boolean] = js.undefined,
-    master_timeout: String = null,
-    method: String = null,
-    pretty: js.UndefOr[Boolean] = js.undefined,
-    s: String | js.Array[String] = null,
-    size: _empty | k | m | g | t | p = null,
-    source: String = null,
-    thread_pool_patterns: String | js.Array[String] = null,
-    v: js.UndefOr[Boolean] = js.undefined
-  ): CatThreadPool = {
+  def apply(): CatThreadPool = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.asInstanceOf[js.Any])
-    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (h != null) __obj.updateDynamic("h")(h.asInstanceOf[js.Any])
-    if (!js.isUndefined(help)) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
-    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (!js.isUndefined(local)) __obj.updateDynamic("local")(local.asInstanceOf[js.Any])
-    if (master_timeout != null) __obj.updateDynamic("master_timeout")(master_timeout.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
-    if (s != null) __obj.updateDynamic("s")(s.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (thread_pool_patterns != null) __obj.updateDynamic("thread_pool_patterns")(thread_pool_patterns.asInstanceOf[js.Any])
-    if (!js.isUndefined(v)) __obj.updateDynamic("v")(v.asInstanceOf[js.Any])
     __obj.asInstanceOf[CatThreadPool]
   }
+  @scala.inline
+  implicit class CatThreadPoolOps[Self <: CatThreadPool] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHelp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHelp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("local")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaster_timeout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("master_timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaster_timeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("master_timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: _empty | k | m | g | t | p): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThread_pool_patterns(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thread_pool_patterns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThread_pool_patterns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thread_pool_patterns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withV(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("v")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutV: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("v")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

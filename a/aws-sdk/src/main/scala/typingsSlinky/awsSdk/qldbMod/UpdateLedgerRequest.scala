@@ -18,10 +18,35 @@ trait UpdateLedgerRequest extends js.Object {
 
 object UpdateLedgerRequest {
   @scala.inline
-  def apply(Name: LedgerName, DeletionProtection: js.UndefOr[Boolean] = js.undefined): UpdateLedgerRequest = {
+  def apply(Name: LedgerName): UpdateLedgerRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (!js.isUndefined(DeletionProtection)) __obj.updateDynamic("DeletionProtection")(DeletionProtection.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateLedgerRequest]
   }
+  @scala.inline
+  implicit class UpdateLedgerRequestOps[Self <: UpdateLedgerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: LedgerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeletionProtection(value: DeletionProtection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionProtection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionProtection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionProtection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

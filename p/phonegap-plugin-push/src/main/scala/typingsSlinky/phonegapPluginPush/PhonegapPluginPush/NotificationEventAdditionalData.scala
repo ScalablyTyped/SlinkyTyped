@@ -13,39 +13,95 @@ import scala.scalajs.js.annotation._
 	 * Ideally the developer would overload (merged declaration) this or create a new interface that would extend this one
 	 * so that he could specify any custom code without having to use array notation (map['prop']) for all of them.
 	 */
+@js.native
 trait NotificationEventAdditionalData
   extends /* name */ StringDictionary[js.Any] {
   /**
   		 * Will be true if the application is started by clicking on the push notification, false if the app is already started. (Android/iOS only)
   		 */
-  var coldstart: js.UndefOr[Boolean] = js.undefined
-  var collapse_key: js.UndefOr[String] = js.undefined
+  var coldstart: js.UndefOr[Boolean] = js.native
+  var collapse_key: js.UndefOr[String] = js.native
   /**
   		 * Whether the notification was received while the app was in the foreground
   		 */
-  var foreground: js.UndefOr[Boolean] = js.undefined
-  var from: js.UndefOr[String] = js.undefined
-  var notId: js.UndefOr[String] = js.undefined
+  var foreground: js.UndefOr[Boolean] = js.native
+  var from: js.UndefOr[String] = js.native
+  var notId: js.UndefOr[String] = js.native
 }
 
 object NotificationEventAdditionalData {
   @scala.inline
-  def apply(
-    StringDictionary: /* name */ StringDictionary[js.Any] = null,
-    coldstart: js.UndefOr[Boolean] = js.undefined,
-    collapse_key: String = null,
-    foreground: js.UndefOr[Boolean] = js.undefined,
-    from: String = null,
-    notId: String = null
-  ): NotificationEventAdditionalData = {
+  def apply(): NotificationEventAdditionalData = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(coldstart)) __obj.updateDynamic("coldstart")(coldstart.asInstanceOf[js.Any])
-    if (collapse_key != null) __obj.updateDynamic("collapse_key")(collapse_key.asInstanceOf[js.Any])
-    if (!js.isUndefined(foreground)) __obj.updateDynamic("foreground")(foreground.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (notId != null) __obj.updateDynamic("notId")(notId.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationEventAdditionalData]
   }
+  @scala.inline
+  implicit class NotificationEventAdditionalDataOps[Self <: NotificationEventAdditionalData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColdstart(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coldstart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColdstart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coldstart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapse_key(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse_key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapse_key: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse_key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForeground(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForeground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreground")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.dc.mod
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.d3Selection.mod.BaseType
 import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.d3Transition.mod.Transition_
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

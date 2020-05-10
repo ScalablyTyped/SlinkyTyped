@@ -14,14 +14,12 @@ trait StructureState extends js.Object
 
 object StructureState {
   @scala.inline
-  def attached: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.attached = this.cast("attached")
+  def attached: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.attached = "attached".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.attached]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deleted: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.deleted = "deleted".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.deleted]
   @scala.inline
-  def deleted: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.deleted = this.cast("deleted")
+  def detached: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.detached = "detached".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.detached]
   @scala.inline
-  def detached: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.detached = this.cast("detached")
-  @scala.inline
-  def `new`: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.`new` = this.cast("new")
+  def `new`: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.`new` = "new".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.`new`]
 }
 

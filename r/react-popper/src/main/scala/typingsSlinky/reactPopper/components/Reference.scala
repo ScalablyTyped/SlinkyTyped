@@ -1,30 +1,34 @@
 package typingsSlinky.reactPopper.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactPopper.mod.ReferenceProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Reference
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactPopper.mod.Reference] {
+object Reference {
   @JSImport("react-popper", "Reference")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(innerRef: Ref[_] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactPopper.mod.Reference] = {
-    val __obj = js.Dynamic.literal()
-    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactPopper.mod.Reference] {
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def innerRef(value: Ref[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactPopper.mod.Reference] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactPopper.mod.Reference](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ReferenceProps
+  
+  def withProps(p: ReferenceProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Reference.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

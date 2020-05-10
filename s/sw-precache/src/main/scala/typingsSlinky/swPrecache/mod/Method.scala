@@ -15,16 +15,14 @@ trait Method extends js.Object
 
 object Method {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def delete: typingsSlinky.swPrecache.swPrecacheStrings.delete = "delete".asInstanceOf[typingsSlinky.swPrecache.swPrecacheStrings.delete]
   @scala.inline
-  def delete: typingsSlinky.swPrecache.swPrecacheStrings.delete = this.cast("delete")
+  def get: typingsSlinky.swPrecache.swPrecacheStrings.get = "get".asInstanceOf[typingsSlinky.swPrecache.swPrecacheStrings.get]
   @scala.inline
-  def get: typingsSlinky.swPrecache.swPrecacheStrings.get = this.cast("get")
+  def head: typingsSlinky.swPrecache.swPrecacheStrings.head = "head".asInstanceOf[typingsSlinky.swPrecache.swPrecacheStrings.head]
   @scala.inline
-  def head: typingsSlinky.swPrecache.swPrecacheStrings.head = this.cast("head")
+  def post: typingsSlinky.swPrecache.swPrecacheStrings.post = "post".asInstanceOf[typingsSlinky.swPrecache.swPrecacheStrings.post]
   @scala.inline
-  def post: typingsSlinky.swPrecache.swPrecacheStrings.post = this.cast("post")
-  @scala.inline
-  def put: typingsSlinky.swPrecache.swPrecacheStrings.put = this.cast("put")
+  def put: typingsSlinky.swPrecache.swPrecacheStrings.put = "put".asInstanceOf[typingsSlinky.swPrecache.swPrecacheStrings.put]
 }
 

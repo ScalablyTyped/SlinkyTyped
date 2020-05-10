@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("tcomb", "Date")
 @js.native
 object Date
-  extends TopLevel[Irreducible_[typingsSlinky.std.Date]]
+  extends TopLevel[Irreducible_[js.Date]]
 

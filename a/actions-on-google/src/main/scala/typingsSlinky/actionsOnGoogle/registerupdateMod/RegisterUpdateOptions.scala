@@ -6,23 +6,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RegisterUpdateOptions extends js.Object {
   /**
     * The necessary arguments to fulfill the intent triggered on update.
     * These can be retrieved using {@link Arguments#get|conv.arguments.get}.
     * @public
     */
-  var arguments: js.Array[GoogleActionsV2Argument]
+  var arguments: js.Array[GoogleActionsV2Argument] = js.native
   /**
     * The high-level frequency of the recurring update.
     * @public
     */
-  var frequency: GoogleActionsV2TriggerContextTimeContextFrequency
+  var frequency: GoogleActionsV2TriggerContextTimeContextFrequency = js.native
   /**
     * The Dialogflow/Actions SDK intent name to be triggered when the update is received.
     * @public
     */
-  var intent: String
+  var intent: String = js.native
 }
 
 object RegisterUpdateOptions {
@@ -33,8 +34,33 @@ object RegisterUpdateOptions {
     intent: String
   ): RegisterUpdateOptions = {
     val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], frequency = frequency.asInstanceOf[js.Any], intent = intent.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RegisterUpdateOptions]
   }
+  @scala.inline
+  implicit class RegisterUpdateOptionsOps[Self <: RegisterUpdateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArguments(value: js.Array[GoogleActionsV2Argument]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrequency(value: GoogleActionsV2TriggerContextTimeContextFrequency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIntent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

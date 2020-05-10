@@ -70,8 +70,8 @@ trait DOMMatrixReadOnly extends js.Object {
   def skewX(sx: Double): DOMMatrix = js.native
   def skewY(): DOMMatrix = js.native
   def skewY(sy: Double): DOMMatrix = js.native
-  def toFloat32Array(): scala.scalajs.js.typedarray.Float32Array = js.native
-  def toFloat64Array(): scala.scalajs.js.typedarray.Float64Array = js.native
+  def toFloat32Array(): js.typedarray.Float32Array = js.native
+  def toFloat64Array(): js.typedarray.Float64Array = js.native
   def toJSON(): js.Any = js.native
   def transformPoint(): DOMPoint = js.native
   def transformPoint(point: DOMPointInit): DOMPoint = js.native
@@ -86,8 +86,8 @@ trait DOMMatrixReadOnly extends js.Object {
 object DOMMatrixReadOnly
   extends Instantiable0[DOMMatrixReadOnly]
      with Instantiable1[(/* init */ js.Array[Double]) | (/* init */ java.lang.String), DOMMatrixReadOnly] {
-  def fromFloat32Array(array32: scala.scalajs.js.typedarray.Float32Array): DOMMatrixReadOnly = js.native
-  def fromFloat64Array(array64: scala.scalajs.js.typedarray.Float64Array): DOMMatrixReadOnly = js.native
+  def fromFloat32Array(array32: js.typedarray.Float32Array): DOMMatrixReadOnly = js.native
+  def fromFloat64Array(array64: js.typedarray.Float64Array): DOMMatrixReadOnly = js.native
   def fromMatrix(): DOMMatrixReadOnly = js.native
   def fromMatrix(other: DOMMatrixInit): DOMMatrixReadOnly = js.native
 }

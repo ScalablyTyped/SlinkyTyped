@@ -22,16 +22,53 @@ trait DescribeWorkspaceDirectoriesRequest extends js.Object {
 
 object DescribeWorkspaceDirectoriesRequest {
   @scala.inline
-  def apply(
-    DirectoryIds: DirectoryIdList = null,
-    Limit: Int | Double = null,
-    NextToken: PaginationToken = null
-  ): DescribeWorkspaceDirectoriesRequest = {
+  def apply(): DescribeWorkspaceDirectoriesRequest = {
     val __obj = js.Dynamic.literal()
-    if (DirectoryIds != null) __obj.updateDynamic("DirectoryIds")(DirectoryIds.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeWorkspaceDirectoriesRequest]
   }
+  @scala.inline
+  implicit class DescribeWorkspaceDirectoriesRequestOps[Self <: DescribeWorkspaceDirectoriesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryIds(value: DirectoryIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoryIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Limit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

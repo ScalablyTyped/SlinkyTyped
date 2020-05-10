@@ -1,6 +1,5 @@
 package typingsSlinky.yeomanAssert.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +16,9 @@ object noFileContent extends js.Object {
     * assert.noFileContent('models/user.js', /App\.User = DS\.Model\.extend/);
     * assert.noFileContent('models/user.js', 'App.User = DS.Model.extend');
     */
-  def apply(file: String, reg: RegExp): Unit = js.native
+  def apply(file: String, reg: js.RegExp): Unit = js.native
   def apply(file: js.Array[String], reg: String): Unit = js.native
-  def apply(file: js.Array[String], reg: RegExp): Unit = js.native
+  def apply(file: js.Array[String], reg: js.RegExp): Unit = js.native
   /**
     * Assert that each file in an array of file-regex pairs does not match its corresponding regex
     * @param pairs an array of arrays, where each subarray is a [String, RegExp] pair
@@ -29,6 +28,6 @@ object noFileContent extends js.Object {
     * ]
     * assert.noFileContent(arg);
     */
-  def apply(pairs: js.Array[js.Tuple2[String, RegExp]]): Unit = js.native
+  def apply(pairs: js.Array[js.Tuple2[String, js.RegExp]]): Unit = js.native
 }
 

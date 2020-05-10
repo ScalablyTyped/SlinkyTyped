@@ -16,18 +16,16 @@ trait Form extends js.Object
 
 object Form {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def few: typingsSlinky.pluralsCldr.pluralsCldrStrings.few = "few".asInstanceOf[typingsSlinky.pluralsCldr.pluralsCldrStrings.few]
   @scala.inline
-  def few: typingsSlinky.pluralsCldr.pluralsCldrStrings.few = this.cast("few")
+  def many: typingsSlinky.pluralsCldr.pluralsCldrStrings.many = "many".asInstanceOf[typingsSlinky.pluralsCldr.pluralsCldrStrings.many]
   @scala.inline
-  def many: typingsSlinky.pluralsCldr.pluralsCldrStrings.many = this.cast("many")
+  def one: typingsSlinky.pluralsCldr.pluralsCldrStrings.one = "one".asInstanceOf[typingsSlinky.pluralsCldr.pluralsCldrStrings.one]
   @scala.inline
-  def one: typingsSlinky.pluralsCldr.pluralsCldrStrings.one = this.cast("one")
+  def other: typingsSlinky.pluralsCldr.pluralsCldrStrings.other = "other".asInstanceOf[typingsSlinky.pluralsCldr.pluralsCldrStrings.other]
   @scala.inline
-  def other: typingsSlinky.pluralsCldr.pluralsCldrStrings.other = this.cast("other")
+  def two: typingsSlinky.pluralsCldr.pluralsCldrStrings.two = "two".asInstanceOf[typingsSlinky.pluralsCldr.pluralsCldrStrings.two]
   @scala.inline
-  def two: typingsSlinky.pluralsCldr.pluralsCldrStrings.two = this.cast("two")
-  @scala.inline
-  def zero: typingsSlinky.pluralsCldr.pluralsCldrStrings.zero = this.cast("zero")
+  def zero: typingsSlinky.pluralsCldr.pluralsCldrStrings.zero = "zero".asInstanceOf[typingsSlinky.pluralsCldr.pluralsCldrStrings.zero]
 }
 

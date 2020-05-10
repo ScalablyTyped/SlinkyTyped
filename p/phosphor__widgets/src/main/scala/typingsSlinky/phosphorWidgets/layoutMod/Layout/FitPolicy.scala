@@ -21,10 +21,8 @@ trait FitPolicy extends js.Object
 
 object FitPolicy {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `set-min-size`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`set-min-size` = "set-min-size".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`set-min-size`]
   @scala.inline
-  def `set-min-size`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`set-min-size` = this.cast("set-min-size")
-  @scala.inline
-  def `set-no-constraint`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`set-no-constraint` = this.cast("set-no-constraint")
+  def `set-no-constraint`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`set-no-constraint` = "set-no-constraint".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`set-no-constraint`]
 }
 

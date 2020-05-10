@@ -2,16 +2,17 @@ package typingsSlinky.officeUiFabricReact.commandBarBaseMod
 
 import typingsSlinky.officeUiFabricReact.commandBarTypesMod.ICommandBar
 import typingsSlinky.officeUiFabricReact.commandBarTypesMod.ICommandBarProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react/lib/components/CommandBar/CommandBar.base", "CommandBarBase")
 @js.native
-class CommandBarBase ()
-  extends BaseComponent[ICommandBarProps, js.Object]
+class CommandBarBase protected ()
+  extends Component[ICommandBarProps, js.Object, js.Any]
      with ICommandBar {
+  def this(props: ICommandBarProps) = this()
   var _classNames: js.Any = js.native
   var _commandButton: js.Any = js.native
   var _computeCacheKey: js.Any = js.native
@@ -23,16 +24,6 @@ class CommandBarBase ()
   var _onRenderOverflowButton: js.Any = js.native
   var _overflowSet: js.Any = js.native
   var _resizeGroup: js.Any = js.native
-  /**
-    * Sets focus to the active command in the list.
-    */
-  /* CompleteClass */
-  override def focus(): Unit = js.native
-  /**
-    * Remeasures the available space.
-    */
-  /* CompleteClass */
-  override def remeasure(): Unit = js.native
 }
 
 /* static members */

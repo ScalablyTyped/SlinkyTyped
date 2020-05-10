@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -56,25 +56,25 @@ abstract class CodeAction protected () extends Document {
   /**
     * In version 7.21.0: introduced
     */
-  def actionParameters(): IList[CodeActionParameter] = js.native
+  def actionParameters: IList[CodeActionParameter] = js.native
   /**
     * In version 7.21.0: introduced
     */
-  def actionReturnType(): Type = js.native
+  def actionReturnType: Type = js.native
   def actionReturnType(newValue: Type): js.Any = js.native
   /**
     * In version 7.21.0: introduced
     */
-  def actionTypeParameters(): IList[TypeParameter] = js.native
+  def actionTypeParameters: IList[TypeParameter] = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MCodeAction(): FolderBase = js.native
+  def containerAsFolderBase_MCodeAction: FolderBase = js.native
   def modelerActionInfo(): js.Any = js.native
   def modelerActionInfo(newValue: MicroflowActionInfo): js.Any = js.native
   /**
     * In version 7.21.0: introduced
     */
   @JSName("modelerActionInfo")
-  def modelerActionInfo_Union(): MicroflowActionInfo | Null = js.native
+  def modelerActionInfo_Union: MicroflowActionInfo | Null = js.native
 }
 
 /* static members */

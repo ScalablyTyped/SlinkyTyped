@@ -10,7 +10,7 @@ trait HashStatic extends js.Object {
   var hmac_Original: HmacStatic = js.native
   def apply(messageToHash: String): String = js.native
   def array(messageToHash: String): js.Array[Double] = js.native
-  def arrayBuffer(messageToHash: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def arrayBuffer(messageToHash: String): js.typedarray.ArrayBuffer = js.native
   def create(): Hash = js.native
   def digest(messageToHash: String): js.Array[Double] = js.native
   def hex(messageToHash: String): String = js.native

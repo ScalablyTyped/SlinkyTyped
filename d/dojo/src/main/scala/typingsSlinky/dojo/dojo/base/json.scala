@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * This module defines the dojo JSON API.
   *
   */
+@js.native
 trait json extends js.Object
 

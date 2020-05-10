@@ -1,10 +1,7 @@
 package typingsSlinky.mjmlReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.csstype.mod.BackgroundColorProperty
 import typingsSlinky.csstype.mod.BackgroundRepeatProperty
 import typingsSlinky.csstype.mod.BackgroundSizeProperty
@@ -21,61 +18,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlSection
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.mod.MjmlSection] {
+object MjmlSection {
   @JSImport("mjml-react", "MjmlSection")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    backgroundColor: BackgroundColorProperty = null,
-    backgroundRepeat: BackgroundRepeatProperty = null,
-    backgroundSize: BackgroundSizeProperty[String | Double] = null,
-    backgroundUrl: String = null,
-    border: String = null,
-    borderBottom: String = null,
-    borderLeft: String = null,
-    borderRadius: String | Double = null,
-    borderRight: String = null,
-    borderTop: String = null,
-    cssClass: String = null,
-    direction: ltr | rtl = null,
-    fullWidth: js.UndefOr[Boolean] = js.undefined,
-    padding: String | Double = null,
-    paddingBottom: String | Double = null,
-    paddingLeft: String | Double = null,
-    paddingRight: String | Double = null,
-    paddingTop: String | Double = null,
-    textAlign: TextAlignProperty = null,
-    verticalAlign: VerticalAlignProperty[String | Double] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlSection] = {
-    val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (backgroundRepeat != null) __obj.updateDynamic("backgroundRepeat")(backgroundRepeat.asInstanceOf[js.Any])
-    if (backgroundSize != null) __obj.updateDynamic("backgroundSize")(backgroundSize.asInstanceOf[js.Any])
-    if (backgroundUrl != null) __obj.updateDynamic("backgroundUrl")(backgroundUrl.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (borderBottom != null) __obj.updateDynamic("borderBottom")(borderBottom.asInstanceOf[js.Any])
-    if (borderLeft != null) __obj.updateDynamic("borderLeft")(borderLeft.asInstanceOf[js.Any])
-    if (borderRadius != null) __obj.updateDynamic("borderRadius")(borderRadius.asInstanceOf[js.Any])
-    if (borderRight != null) __obj.updateDynamic("borderRight")(borderRight.asInstanceOf[js.Any])
-    if (borderTop != null) __obj.updateDynamic("borderTop")(borderTop.asInstanceOf[js.Any])
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullWidth)) __obj.updateDynamic("fullWidth")(fullWidth.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (paddingBottom != null) __obj.updateDynamic("paddingBottom")(paddingBottom.asInstanceOf[js.Any])
-    if (paddingLeft != null) __obj.updateDynamic("paddingLeft")(paddingLeft.asInstanceOf[js.Any])
-    if (paddingRight != null) __obj.updateDynamic("paddingRight")(paddingRight.asInstanceOf[js.Any])
-    if (paddingTop != null) __obj.updateDynamic("paddingTop")(paddingTop.asInstanceOf[js.Any])
-    if (textAlign != null) __obj.updateDynamic("textAlign")(textAlign.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlSection] {
+    @scala.inline
+    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundRepeat(value: BackgroundRepeatProperty): this.type = set("backgroundRepeat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundSize(value: BackgroundSizeProperty[String | Double]): this.type = set("backgroundSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundUrl(value: String): this.type = set("backgroundUrl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def border(value: String): this.type = set("border", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderBottom(value: String): this.type = set("borderBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderLeft(value: String): this.type = set("borderLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderRadius(value: String | Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderRight(value: String): this.type = set("borderRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderTop(value: String): this.type = set("borderTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: String | Double): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingBottom(value: String | Double): this.type = set("paddingBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingLeft(value: String | Double): this.type = set("paddingLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingRight(value: String | Double): this.type = set("paddingRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingTop(value: String | Double): this.type = set("paddingTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textAlign(value: TextAlignProperty): this.type = set("textAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalAlign(value: VerticalAlignProperty[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlSection] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.mjmlReact.mod.MjmlSection](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MjmlSectionProps with RequiredChildrenProps with BorderProps with PaddingProps with ClassNameProps
+  
+  def withProps(
+    p: MjmlSectionProps with RequiredChildrenProps with BorderProps with PaddingProps with ClassNameProps
+  ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MjmlSection.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

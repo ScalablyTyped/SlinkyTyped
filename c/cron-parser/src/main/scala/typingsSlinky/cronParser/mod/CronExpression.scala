@@ -1,6 +1,5 @@
 package typingsSlinky.cronParser.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,6 +25,6 @@ trait CronExpression extends js.Object {
   def reset(): Unit = js.native
   def reset(resetDate: String): Unit = js.native
   def reset(resetDate: Double): Unit = js.native
-  def reset(resetDate: Date): Unit = js.native
+  def reset(resetDate: js.Date): Unit = js.native
 }
 

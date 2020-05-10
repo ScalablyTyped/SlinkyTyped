@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object onbeforeunload
   extends TopLevel[
-      (js.ThisFunction1[/* this */ Window_, /* ev */ BeforeUnloadEvent, js.Any]) | Null
+      (js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, js.Any]) | Null
     ]
 

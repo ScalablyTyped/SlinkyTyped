@@ -20,3 +20,55 @@ trait LogConfig extends js.Object {
   def consoleProps(): ObjectLike = js.native
 }
 
+object LogConfig {
+  @scala.inline
+  def apply(
+    $el: JQuery_[HTMLElement],
+    consoleProps: () => ObjectLike,
+    displayName: String,
+    message: js.Array[_],
+    name: String
+  ): LogConfig = {
+    val __obj = js.Dynamic.literal($el = $el.asInstanceOf[js.Any], consoleProps = js.Any.fromFunction0(consoleProps), displayName = displayName.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LogConfig]
+  }
+  @scala.inline
+  implicit class LogConfigOps[Self <: LogConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$el(value: JQuery_[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$el")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConsoleProps(value: () => ObjectLike): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consoleProps")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

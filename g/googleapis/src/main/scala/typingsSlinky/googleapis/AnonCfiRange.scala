@@ -16,20 +16,77 @@ trait AnonCfiRange extends js.Object {
 
 object AnonCfiRange {
   @scala.inline
-  def apply(
-    cfiRange: SchemaBooksAnnotationsRange = null,
-    contentVersion: String = null,
-    gbImageRange: SchemaBooksAnnotationsRange = null,
-    gbTextRange: SchemaBooksAnnotationsRange = null,
-    imageCfiRange: SchemaBooksAnnotationsRange = null
-  ): AnonCfiRange = {
+  def apply(): AnonCfiRange = {
     val __obj = js.Dynamic.literal()
-    if (cfiRange != null) __obj.updateDynamic("cfiRange")(cfiRange.asInstanceOf[js.Any])
-    if (contentVersion != null) __obj.updateDynamic("contentVersion")(contentVersion.asInstanceOf[js.Any])
-    if (gbImageRange != null) __obj.updateDynamic("gbImageRange")(gbImageRange.asInstanceOf[js.Any])
-    if (gbTextRange != null) __obj.updateDynamic("gbTextRange")(gbTextRange.asInstanceOf[js.Any])
-    if (imageCfiRange != null) __obj.updateDynamic("imageCfiRange")(imageCfiRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCfiRange]
   }
+  @scala.inline
+  implicit class AnonCfiRangeOps[Self <: AnonCfiRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCfiRange(value: SchemaBooksAnnotationsRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cfiRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCfiRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cfiRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGbImageRange(value: SchemaBooksAnnotationsRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gbImageRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGbImageRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gbImageRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGbTextRange(value: SchemaBooksAnnotationsRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gbTextRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGbTextRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gbTextRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageCfiRange(value: SchemaBooksAnnotationsRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageCfiRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageCfiRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageCfiRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

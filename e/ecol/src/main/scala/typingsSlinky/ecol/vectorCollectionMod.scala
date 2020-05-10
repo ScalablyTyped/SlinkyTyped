@@ -3,8 +3,6 @@ package typingsSlinky.ecol
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
 import typingsSlinky.tstl.arrayContainerMod.ArrayContainer
 import typingsSlinky.tstl.arrayIteratorMod.ArrayIterator
@@ -21,7 +19,7 @@ import scala.scalajs.js.annotation._
 @JSImport("ecol/lib/linear/VectorCollection", JSImport.Namespace)
 @js.native
 object vectorCollectionMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.isizeMod.ISize because Already inherited
   - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
   - typingsSlinky.tstl.ipushMod.IPush because Already inherited
@@ -46,8 +44,6 @@ object vectorCollectionMod extends js.Object {
       * @hidden
       */
     var dispatcher_ : js.Any = js.native
-    /* CompleteClass */
-    override def addEventListener(`type`: Type, listener: Listener[T, Vector[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
     /**
       * Range Assigner.
       *
@@ -58,35 +54,11 @@ object vectorCollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[T, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, Vector[T], Iterator[T], ReverseIterator[T], T] = js.native
-    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
-    /* CompleteClass */
-    override def dispatchEvent(event: CollectionEvent[T, Vector[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
-    /**
-      * Test whether container is empty.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def empty(): Boolean = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, Vector[T], Iterator[T], ReverseIterator[T], T] = js.native
     /**
       * Erase elements in range.
       *
@@ -116,32 +88,6 @@ object vectorCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def front(`val`: T): Unit = js.native
-    /* CompleteClass */
-    override def hasEventListener(`type`: Type): Boolean = js.native
-    /**
-      * Insert items at the end.
-      *
-      * @param items Items to insert.
-      * @return Number of elements in the container after insertion.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def push(items: T*): Double = js.native
-    /**
-      * Insert an element at the end.
-      *
-      * @param val Value to insert.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def push_back(`val`: T): Unit = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseIterator[T] = js.native
     /**
       * @inheritdoc
       */
@@ -154,21 +100,6 @@ object vectorCollectionMod extends js.Object {
       * @inheritdoc
       */
     def refresh(it: Iterator[T]): Unit = js.native
-    /* CompleteClass */
-    override def removeEventListener(`type`: Type, listener: Listener[T, Vector[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def rend(): ReverseIterator[T] = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def size(): Double = js.native
     /**
       * Swap elements.
       *

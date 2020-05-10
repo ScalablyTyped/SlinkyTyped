@@ -21,28 +21,26 @@ trait GridListTileBarClassKey extends js.Object
 
 object GridListTileBarClassKey {
   @scala.inline
-  def actionIcon: typingsSlinky.materialUiCore.materialUiCoreStrings.actionIcon = this.cast("actionIcon")
+  def actionIcon: typingsSlinky.materialUiCore.materialUiCoreStrings.actionIcon = "actionIcon".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.actionIcon]
   @scala.inline
-  def actionIconActionPosLeft: typingsSlinky.materialUiCore.materialUiCoreStrings.actionIconActionPosLeft = this.cast("actionIconActionPosLeft")
+  def actionIconActionPosLeft: typingsSlinky.materialUiCore.materialUiCoreStrings.actionIconActionPosLeft = "actionIconActionPosLeft".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.actionIconActionPosLeft]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def rootSubtitle: typingsSlinky.materialUiCore.materialUiCoreStrings.rootSubtitle = "rootSubtitle".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.rootSubtitle]
   @scala.inline
-  def rootSubtitle: typingsSlinky.materialUiCore.materialUiCoreStrings.rootSubtitle = this.cast("rootSubtitle")
+  def subtitle: typingsSlinky.materialUiCore.materialUiCoreStrings.subtitle = "subtitle".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.subtitle]
   @scala.inline
-  def subtitle: typingsSlinky.materialUiCore.materialUiCoreStrings.subtitle = this.cast("subtitle")
+  def title: typingsSlinky.materialUiCore.materialUiCoreStrings.title = "title".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.title]
   @scala.inline
-  def title: typingsSlinky.materialUiCore.materialUiCoreStrings.title = this.cast("title")
+  def titlePositionBottom: typingsSlinky.materialUiCore.materialUiCoreStrings.titlePositionBottom = "titlePositionBottom".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.titlePositionBottom]
   @scala.inline
-  def titlePositionBottom: typingsSlinky.materialUiCore.materialUiCoreStrings.titlePositionBottom = this.cast("titlePositionBottom")
+  def titlePositionTop: typingsSlinky.materialUiCore.materialUiCoreStrings.titlePositionTop = "titlePositionTop".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.titlePositionTop]
   @scala.inline
-  def titlePositionTop: typingsSlinky.materialUiCore.materialUiCoreStrings.titlePositionTop = this.cast("titlePositionTop")
+  def titleWrap: typingsSlinky.materialUiCore.materialUiCoreStrings.titleWrap = "titleWrap".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.titleWrap]
   @scala.inline
-  def titleWrap: typingsSlinky.materialUiCore.materialUiCoreStrings.titleWrap = this.cast("titleWrap")
+  def titleWrapActionPosLeft: typingsSlinky.materialUiCore.materialUiCoreStrings.titleWrapActionPosLeft = "titleWrapActionPosLeft".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.titleWrapActionPosLeft]
   @scala.inline
-  def titleWrapActionPosLeft: typingsSlinky.materialUiCore.materialUiCoreStrings.titleWrapActionPosLeft = this.cast("titleWrapActionPosLeft")
-  @scala.inline
-  def titleWrapActionPosRight: typingsSlinky.materialUiCore.materialUiCoreStrings.titleWrapActionPosRight = this.cast("titleWrapActionPosRight")
+  def titleWrapActionPosRight: typingsSlinky.materialUiCore.materialUiCoreStrings.titleWrapActionPosRight = "titleWrapActionPosRight".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.titleWrapActionPosRight]
 }
 

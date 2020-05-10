@@ -51,28 +51,125 @@ trait SchemaPermission extends js.Object {
 
 object SchemaPermission {
   @scala.inline
-  def apply(
-    constraints: js.Array[SchemaPermissionConstraint] = null,
-    hosts: js.Array[String] = null,
-    methods: js.Array[String] = null,
-    notHosts: js.Array[String] = null,
-    notMethods: js.Array[String] = null,
-    notPaths: js.Array[String] = null,
-    notPorts: js.Array[String] = null,
-    paths: js.Array[String] = null,
-    ports: js.Array[String] = null
-  ): SchemaPermission = {
+  def apply(): SchemaPermission = {
     val __obj = js.Dynamic.literal()
-    if (constraints != null) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
-    if (hosts != null) __obj.updateDynamic("hosts")(hosts.asInstanceOf[js.Any])
-    if (methods != null) __obj.updateDynamic("methods")(methods.asInstanceOf[js.Any])
-    if (notHosts != null) __obj.updateDynamic("notHosts")(notHosts.asInstanceOf[js.Any])
-    if (notMethods != null) __obj.updateDynamic("notMethods")(notMethods.asInstanceOf[js.Any])
-    if (notPaths != null) __obj.updateDynamic("notPaths")(notPaths.asInstanceOf[js.Any])
-    if (notPorts != null) __obj.updateDynamic("notPorts")(notPorts.asInstanceOf[js.Any])
-    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
-    if (ports != null) __obj.updateDynamic("ports")(ports.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPermission]
   }
+  @scala.inline
+  implicit class SchemaPermissionOps[Self <: SchemaPermission] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstraints(value: js.Array[SchemaPermissionConstraint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstraints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHosts(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hosts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHosts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hosts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethods(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotHosts(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notHosts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotHosts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notHosts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotMethods(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notMethods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotMethods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notMethods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotPaths(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notPaths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotPorts(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notPorts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotPorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notPorts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaths(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPorts(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

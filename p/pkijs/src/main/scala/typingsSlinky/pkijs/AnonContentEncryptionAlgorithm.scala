@@ -6,12 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonContentEncryptionAlgorithm extends js.Object {
-  var contentEncryptionAlgorithm: Algorithm
-  var contentToEncrypt: BufferSource
-  var hmacHashAlgorithm: String
-  var iterationCount: Double
-  var password: String
+  var contentEncryptionAlgorithm: Algorithm = js.native
+  var contentToEncrypt: BufferSource = js.native
+  var hmacHashAlgorithm: String = js.native
+  var iterationCount: Double = js.native
+  var password: String = js.native
 }
 
 object AnonContentEncryptionAlgorithm {
@@ -24,8 +25,57 @@ object AnonContentEncryptionAlgorithm {
     password: String
   ): AnonContentEncryptionAlgorithm = {
     val __obj = js.Dynamic.literal(contentEncryptionAlgorithm = contentEncryptionAlgorithm.asInstanceOf[js.Any], contentToEncrypt = contentToEncrypt.asInstanceOf[js.Any], hmacHashAlgorithm = hmacHashAlgorithm.asInstanceOf[js.Any], iterationCount = iterationCount.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonContentEncryptionAlgorithm]
   }
+  @scala.inline
+  implicit class AnonContentEncryptionAlgorithmOps[Self <: AnonContentEncryptionAlgorithm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentEncryptionAlgorithm(value: Algorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentEncryptionAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentToEncryptArrayBufferView(value: js.typedarray.ArrayBufferView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentToEncrypt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentToEncryptArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentToEncrypt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentToEncrypt(value: BufferSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentToEncrypt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHmacHashAlgorithm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hmacHashAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIterationCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

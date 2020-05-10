@@ -4,78 +4,176 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotSunburstLevelsOptions extends js.Object {
   /**
     * (Highcharts) Can set a `borderColor` on all points which lies on the same
     * level.
     */
-  var borderColor: js.UndefOr[ColorString] = js.undefined
+  var borderColor: js.UndefOr[ColorString] = js.native
   /**
     * (Highcharts) Can set a `borderDashStyle` on all points which lies on the
     * same level.
     */
-  var borderDashStyle: js.UndefOr[DashStyleValue] = js.undefined
+  var borderDashStyle: js.UndefOr[DashStyleValue] = js.native
   /**
     * (Highcharts) Can set a `borderWidth` on all points which lies on the same
     * level.
     */
-  var borderWidth: js.UndefOr[Double] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) Can set a `color` on all points which lies on the same
     * level.
     */
-  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts) Can set a `colorVariation` on all points which lies on the
     * same level.
     */
-  var colorVariation: js.UndefOr[PlotSunburstLevelsColorVariationOptions] = js.undefined
+  var colorVariation: js.UndefOr[PlotSunburstLevelsColorVariationOptions] = js.native
   /**
     * (Highcharts) Can set `dataLabels` on all points which lies on the same
     * level.
     */
-  var dataLabels: js.UndefOr[SeriesSunburstDataLabelsOptionsObject] = js.undefined
+  var dataLabels: js.UndefOr[SeriesSunburstDataLabelsOptionsObject] = js.native
   /**
     * (Highcharts) Can set a `levelSize` on all points which lies on the same
     * level.
     */
-  var levelSize: js.UndefOr[js.Object] = js.undefined
+  var levelSize: js.UndefOr[js.Object] = js.native
   /**
     * (Highcharts) Can set a `rotation` on all points which lies on the same
     * level.
     */
-  var rotation: js.UndefOr[Double] = js.undefined
+  var rotation: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) Can set a `rotationMode` on all points which lies on the
     * same level.
     */
-  var rotationMode: js.UndefOr[String] = js.undefined
+  var rotationMode: js.UndefOr[String] = js.native
 }
 
 object PlotSunburstLevelsOptions {
   @scala.inline
-  def apply(
-    borderColor: ColorString = null,
-    borderDashStyle: DashStyleValue = null,
-    borderWidth: Int | Double = null,
-    color: ColorString | GradientColorObject | PatternObject = null,
-    colorVariation: PlotSunburstLevelsColorVariationOptions = null,
-    dataLabels: SeriesSunburstDataLabelsOptionsObject = null,
-    levelSize: js.Object = null,
-    rotation: Int | Double = null,
-    rotationMode: String = null
-  ): PlotSunburstLevelsOptions = {
+  def apply(): PlotSunburstLevelsOptions = {
     val __obj = js.Dynamic.literal()
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderDashStyle != null) __obj.updateDynamic("borderDashStyle")(borderDashStyle.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colorVariation != null) __obj.updateDynamic("colorVariation")(colorVariation.asInstanceOf[js.Any])
-    if (dataLabels != null) __obj.updateDynamic("dataLabels")(dataLabels.asInstanceOf[js.Any])
-    if (levelSize != null) __obj.updateDynamic("levelSize")(levelSize.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (rotationMode != null) __obj.updateDynamic("rotationMode")(rotationMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotSunburstLevelsOptions]
   }
+  @scala.inline
+  implicit class PlotSunburstLevelsOptionsOps[Self <: PlotSunburstLevelsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBorderColor(value: ColorString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderDashStyle(value: DashStyleValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDashStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderDashStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderDashStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorVariation(value: PlotSunburstLevelsColorVariationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorVariation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorVariation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorVariation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataLabels(value: SeriesSunburstDataLabelsOptionsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevelSize(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevelSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotationMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotationMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

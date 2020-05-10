@@ -26,16 +26,53 @@ trait ForwardedValues extends js.Object {
 
 object ForwardedValues {
   @scala.inline
-  def apply(
-    Cookies: CookiePreference,
-    QueryString: Boolean,
-    Headers: Headers = null,
-    QueryStringCacheKeys: QueryStringCacheKeys = null
-  ): ForwardedValues = {
+  def apply(Cookies: CookiePreference, QueryString: Boolean): ForwardedValues = {
     val __obj = js.Dynamic.literal(Cookies = Cookies.asInstanceOf[js.Any], QueryString = QueryString.asInstanceOf[js.Any])
-    if (Headers != null) __obj.updateDynamic("Headers")(Headers.asInstanceOf[js.Any])
-    if (QueryStringCacheKeys != null) __obj.updateDynamic("QueryStringCacheKeys")(QueryStringCacheKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForwardedValues]
   }
+  @scala.inline
+  implicit class ForwardedValuesOps[Self <: ForwardedValues] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCookies(value: CookiePreference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cookies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQueryString(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: Headers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryStringCacheKeys(value: QueryStringCacheKeys): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryStringCacheKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryStringCacheKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryStringCacheKeys")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

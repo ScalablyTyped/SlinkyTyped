@@ -1,10 +1,7 @@
 package typingsSlinky.reactBootstrapDaterangepicker.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.daterangepicker.daterangepickerStrings.center
 import typingsSlinky.daterangepicker.daterangepickerStrings.down
 import typingsSlinky.daterangepicker.daterangepickerStrings.left
@@ -15,112 +12,112 @@ import typingsSlinky.daterangepicker.mod.Locale
 import typingsSlinky.moment.mod.Duration_
 import typingsSlinky.moment.mod.MomentInput
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactBootstrapDaterangepicker.ReactBootstrapDaterangepicker.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DateRangePicker
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.reactBootstrapDaterangepicker.ReactBootstrapDaterangepicker.DateRangePicker
-    ] {
+object DateRangePicker {
   @JSGlobal("ReactBootstrapDaterangepicker.DateRangePicker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    alwaysShowCalendars: js.UndefOr[Boolean] = js.undefined,
-    applyButtonClasses: String = null,
-    autoApply: js.UndefOr[Boolean] = js.undefined,
-    autoUpdateInput: js.UndefOr[Boolean] = js.undefined,
-    buttonClasses: js.Array[String] = null,
-    cancelButtonClasses: String = null,
-    containerClass: String = null,
-    containerStyles: CSSProperties = null,
-    drops: down | up = null,
-    endDate: DateOrString = null,
-    isCustomDate: /* date */ DateOrString => js.UndefOr[String | js.Array[String]] = null,
-    isInvalidDate: (/* startDate */ DateOrString, /* endDate */ js.UndefOr[DateOrString]) => Boolean = null,
-    linkedCalendars: js.UndefOr[Boolean] = js.undefined,
-    locale: Locale = null,
-    maxDate: DateOrString = null,
-    maxSpan: MomentInput | Duration_ = null,
-    maxYear: Int | Double = null,
-    minDate: DateOrString = null,
-    minYear: Int | Double = null,
-    onApply: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any = null,
-    onCancel: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any = null,
-    onEvent: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any = null,
-    onHide: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any = null,
-    onHideCalendar: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any = null,
-    onShow: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any = null,
-    onShowCalendar: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any = null,
-    opens: left | right | center = null,
-    parentEl: String = null,
-    showCustomRangeLabel: js.UndefOr[Boolean] = js.undefined,
-    showDropdowns: js.UndefOr[Boolean] = js.undefined,
-    showISOWeekNumbers: js.UndefOr[Boolean] = js.undefined,
-    showWeekNumbers: js.UndefOr[Boolean] = js.undefined,
-    singleDatePicker: js.UndefOr[Boolean] = js.undefined,
-    startDate: DateOrString = null,
-    timePicker: js.UndefOr[Boolean] = js.undefined,
-    timePicker24Hour: js.UndefOr[Boolean] = js.undefined,
-    timePickerIncrement: Int | Double = null,
-    timePickerSeconds: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.reactBootstrapDaterangepicker.ReactBootstrapDaterangepicker.DateRangePicker
-  ] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysShowCalendars)) __obj.updateDynamic("alwaysShowCalendars")(alwaysShowCalendars.asInstanceOf[js.Any])
-    if (applyButtonClasses != null) __obj.updateDynamic("applyButtonClasses")(applyButtonClasses.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoApply)) __obj.updateDynamic("autoApply")(autoApply.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoUpdateInput)) __obj.updateDynamic("autoUpdateInput")(autoUpdateInput.asInstanceOf[js.Any])
-    if (buttonClasses != null) __obj.updateDynamic("buttonClasses")(buttonClasses.asInstanceOf[js.Any])
-    if (cancelButtonClasses != null) __obj.updateDynamic("cancelButtonClasses")(cancelButtonClasses.asInstanceOf[js.Any])
-    if (containerClass != null) __obj.updateDynamic("containerClass")(containerClass.asInstanceOf[js.Any])
-    if (containerStyles != null) __obj.updateDynamic("containerStyles")(containerStyles.asInstanceOf[js.Any])
-    if (drops != null) __obj.updateDynamic("drops")(drops.asInstanceOf[js.Any])
-    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
-    if (isCustomDate != null) __obj.updateDynamic("isCustomDate")(js.Any.fromFunction1(isCustomDate))
-    if (isInvalidDate != null) __obj.updateDynamic("isInvalidDate")(js.Any.fromFunction2(isInvalidDate))
-    if (!js.isUndefined(linkedCalendars)) __obj.updateDynamic("linkedCalendars")(linkedCalendars.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (maxSpan != null) __obj.updateDynamic("maxSpan")(maxSpan.asInstanceOf[js.Any])
-    if (maxYear != null) __obj.updateDynamic("maxYear")(maxYear.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (minYear != null) __obj.updateDynamic("minYear")(minYear.asInstanceOf[js.Any])
-    if (onApply != null) __obj.updateDynamic("onApply")(js.Any.fromFunction2(onApply))
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction2(onCancel))
-    if (onEvent != null) __obj.updateDynamic("onEvent")(js.Any.fromFunction2(onEvent))
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction2(onHide))
-    if (onHideCalendar != null) __obj.updateDynamic("onHideCalendar")(js.Any.fromFunction2(onHideCalendar))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction2(onShow))
-    if (onShowCalendar != null) __obj.updateDynamic("onShowCalendar")(js.Any.fromFunction2(onShowCalendar))
-    if (opens != null) __obj.updateDynamic("opens")(opens.asInstanceOf[js.Any])
-    if (parentEl != null) __obj.updateDynamic("parentEl")(parentEl.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCustomRangeLabel)) __obj.updateDynamic("showCustomRangeLabel")(showCustomRangeLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(showDropdowns)) __obj.updateDynamic("showDropdowns")(showDropdowns.asInstanceOf[js.Any])
-    if (!js.isUndefined(showISOWeekNumbers)) __obj.updateDynamic("showISOWeekNumbers")(showISOWeekNumbers.asInstanceOf[js.Any])
-    if (!js.isUndefined(showWeekNumbers)) __obj.updateDynamic("showWeekNumbers")(showWeekNumbers.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleDatePicker)) __obj.updateDynamic("singleDatePicker")(singleDatePicker.asInstanceOf[js.Any])
-    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
-    if (!js.isUndefined(timePicker)) __obj.updateDynamic("timePicker")(timePicker.asInstanceOf[js.Any])
-    if (!js.isUndefined(timePicker24Hour)) __obj.updateDynamic("timePicker24Hour")(timePicker24Hour.asInstanceOf[js.Any])
-    if (timePickerIncrement != null) __obj.updateDynamic("timePickerIncrement")(timePickerIncrement.asInstanceOf[js.Any])
-    if (!js.isUndefined(timePickerSeconds)) __obj.updateDynamic("timePickerSeconds")(timePickerSeconds.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.reactBootstrapDaterangepicker.ReactBootstrapDaterangepicker.DateRangePicker
+        ] {
+    @scala.inline
+    def alwaysShowCalendars(value: Boolean): this.type = set("alwaysShowCalendars", value.asInstanceOf[js.Any])
+    @scala.inline
+    def applyButtonClasses(value: String): this.type = set("applyButtonClasses", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoApply(value: Boolean): this.type = set("autoApply", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoUpdateInput(value: Boolean): this.type = set("autoUpdateInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonClasses(value: js.Array[String]): this.type = set("buttonClasses", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelButtonClasses(value: String): this.type = set("cancelButtonClasses", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerClass(value: String): this.type = set("containerClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyles(value: CSSProperties): this.type = set("containerStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def drops(value: down | up): this.type = set("drops", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endDateDate(value: js.Date): this.type = set("endDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endDate(value: DateOrString): this.type = set("endDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isCustomDate(value: /* date */ DateOrString => js.UndefOr[String | js.Array[String]]): this.type = set("isCustomDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def isInvalidDate(value: (/* startDate */ DateOrString, /* endDate */ js.UndefOr[DateOrString]) => Boolean): this.type = set("isInvalidDate", js.Any.fromFunction2(value))
+    @scala.inline
+    def linkedCalendars(value: Boolean): this.type = set("linkedCalendars", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: Locale): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: DateOrString): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxSpanDate(value: js.Date): this.type = set("maxSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxSpan(value: MomentInput | Duration_): this.type = set("maxSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxYear(value: Double): this.type = set("maxYear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: DateOrString): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minYear(value: Double): this.type = set("minYear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onApply(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onApply", js.Any.fromFunction2(value))
+    @scala.inline
+    def onCancel(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onCancel", js.Any.fromFunction2(value))
+    @scala.inline
+    def onEvent(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onEvent", js.Any.fromFunction2(value))
+    @scala.inline
+    def onHide(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onHide", js.Any.fromFunction2(value))
+    @scala.inline
+    def onHideCalendar(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onHideCalendar", js.Any.fromFunction2(value))
+    @scala.inline
+    def onShow(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onShow", js.Any.fromFunction2(value))
+    @scala.inline
+    def onShowCalendar(value: (/* event */ js.UndefOr[js.Any], /* picker */ js.UndefOr[js.Any]) => js.Any): this.type = set("onShowCalendar", js.Any.fromFunction2(value))
+    @scala.inline
+    def opens(value: left | right | center): this.type = set("opens", value.asInstanceOf[js.Any])
+    @scala.inline
+    def parentEl(value: String): this.type = set("parentEl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showCustomRangeLabel(value: Boolean): this.type = set("showCustomRangeLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showDropdowns(value: Boolean): this.type = set("showDropdowns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showISOWeekNumbers(value: Boolean): this.type = set("showISOWeekNumbers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showWeekNumbers(value: Boolean): this.type = set("showWeekNumbers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def singleDatePicker(value: Boolean): this.type = set("singleDatePicker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startDateDate(value: js.Date): this.type = set("startDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startDate(value: DateOrString): this.type = set("startDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePicker(value: Boolean): this.type = set("timePicker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePicker24Hour(value: Boolean): this.type = set("timePicker24Hour", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePickerIncrement(value: Double): this.type = set("timePickerIncrement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePickerSeconds(value: Boolean): this.type = set("timePickerSeconds", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[
-    tag.type, 
-    typingsSlinky.reactBootstrapDaterangepicker.ReactBootstrapDaterangepicker.DateRangePicker
-  ] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactBootstrapDaterangepicker.ReactBootstrapDaterangepicker.DateRangePicker](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.reactBootstrapDaterangepicker.ReactBootstrapDaterangepicker.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DateRangePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

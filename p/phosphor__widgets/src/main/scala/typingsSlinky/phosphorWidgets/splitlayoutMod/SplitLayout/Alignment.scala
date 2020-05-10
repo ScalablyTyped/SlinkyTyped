@@ -17,14 +17,12 @@ trait Alignment extends js.Object
 
 object Alignment {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.center = "center".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.center]
   @scala.inline
-  def center: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.center = this.cast("center")
+  def end: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.end = "end".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.end]
   @scala.inline
-  def end: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.end = this.cast("end")
+  def justify: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.justify = "justify".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.justify]
   @scala.inline
-  def justify: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.justify = this.cast("justify")
-  @scala.inline
-  def start: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.start = this.cast("start")
+  def start: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.start = "start".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.start]
 }
 

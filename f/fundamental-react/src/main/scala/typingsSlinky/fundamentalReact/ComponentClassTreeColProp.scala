@@ -2,10 +2,9 @@ package typingsSlinky.fundamentalReact
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import slinky.core.ReactComponentClass
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.TreeViewDotCol
 import typingsSlinky.fundamentalReact.treeViewMod.TreeColProps
-import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.GetDerivedStateFromError
 import typingsSlinky.react.mod.GetDerivedStateFromProps
@@ -17,12 +16,8 @@ import scala.scalajs.js.annotation._
 /* Inlined react.react.ComponentClass<fundamental-react.fundamental-react/lib/TreeView/TreeView.TreeColProps, react.react.ComponentState> & {  displayName  :'TreeView.Col'} */
 @js.native
 trait ComponentClassTreeColProp
-  extends Instantiable1[/* props */ TreeColProps, Component[TreeColProps, ComponentState, js.Any]]
-     with Instantiable2[
-      /* props */ TreeColProps, 
-      /* context */ js.Any, 
-      Component[TreeColProps, ComponentState, js.Any]
-    ] {
+  extends Instantiable1[/* props */ TreeColProps, ReactComponentClass[TreeColProps]]
+     with Instantiable2[/* props */ TreeColProps, /* context */ js.Any, ReactComponentClass[TreeColProps]] {
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native
   var contextType: js.UndefOr[Context[_]] = js.native
   var contextTypes: js.UndefOr[ValidationMap[_]] = js.native

@@ -23,9 +23,6 @@ object appBuilderLibStrings {
   sealed trait `7z` extends MacOsTargetName
   
   @js.native
-  sealed trait Bintray extends js.Object
-  
-  @js.native
   sealed trait Copy extends js.Object
   
   @js.native
@@ -41,9 +38,6 @@ object appBuilderLibStrings {
   sealed trait `Developer ID Installer` extends CertType
   
   @js.native
-  sealed trait Dotblockmap extends js.Object
-  
-  @js.native
   sealed trait Editor extends js.Object
   
   @js.native
@@ -56,19 +50,7 @@ object appBuilderLibStrings {
   sealed trait None extends js.Object
   
   @js.native
-  sealed trait `Please specify author ApostropheemailApostrophe in the application packageDotjsonLinefeedLinefeedSee httpsColonSlashSlashdocsDotnpmjsDotcomSlashfilesSlashpackageDotjsonNumbersignpeople-fields-author-contributorsLinefeedLinefeedIt is required to set Linux Dotdeb package maintainerDot Or you can set maintainer in the custom linux optionsDotLinefeedLeftparenthesissee httpsColonSlashSlashwwwDotelectronDotbuildSlashconfigurationSlashlinuxRightparenthesisDotLinefeed` extends js.Object
-  
-  @js.native
-  sealed trait S3 extends js.Object
-  
-  @js.native
   sealed trait Shell extends js.Object
-  
-  @js.native
-  sealed trait Slashopt extends js.Object
-  
-  @js.native
-  sealed trait Spaces extends js.Object
   
   @js.native
   sealed trait UDBZ extends js.Object
@@ -122,9 +104,6 @@ object appBuilderLibStrings {
   sealed trait classic extends js.Object
   
   @js.native
-  sealed trait `comDotproton-nativeDot` extends js.Object
-  
-  @js.native
   sealed trait darwin extends ElectronPlatformName
   
   @js.native
@@ -173,9 +152,6 @@ object appBuilderLibStrings {
   sealed trait ico extends IconFormat
   
   @js.native
-  sealed trait imlCommahprofCommaorigCommapycCommapyoCommarbcCommaswpCommacsprojCommaslnCommasuoCommaxprojCommaccCommadDotts extends js.Object
-  
-  @js.native
   sealed trait left extends BackgroundAlignment
   
   @js.native
@@ -208,9 +184,6 @@ object appBuilderLibStrings {
   sealed trait proportional extends BackgroundScaling
   
   @js.native
-  sealed trait proton extends js.Object
-  
-  @js.native
   sealed trait requireAdministrator extends RequestedExecutionLevel
   
   @js.native
@@ -227,9 +200,6 @@ object appBuilderLibStrings {
   
   @js.native
   sealed trait sha256 extends js.Object
-  
-  @js.native
-  sealed trait snapStore extends js.Object
   
   @js.native
   sealed trait stable extends js.Object
@@ -295,13 +265,11 @@ object appBuilderLibStrings {
   sealed trait zip extends MacOsTargetName
   
   @scala.inline
-  def `3rd Party Mac Developer Application`: `3rd Party Mac Developer Application` = "3rd Party Mac Developer Application".asInstanceOf[`3rd Party Mac Developer Application`]
+  def `3rd Party Mac Developer Application`: `3rd Party Mac Developer Application` = ("3rd Party Mac Developer Application").asInstanceOf[`3rd Party Mac Developer Application`]
   @scala.inline
-  def `3rd Party Mac Developer Installer`: `3rd Party Mac Developer Installer` = "3rd Party Mac Developer Installer".asInstanceOf[`3rd Party Mac Developer Installer`]
+  def `3rd Party Mac Developer Installer`: `3rd Party Mac Developer Installer` = ("3rd Party Mac Developer Installer").asInstanceOf[`3rd Party Mac Developer Installer`]
   @scala.inline
   def `7z`: `7z` = "7z".asInstanceOf[`7z`]
-  @scala.inline
-  def Bintray: Bintray = "Bintray".asInstanceOf[Bintray]
   @scala.inline
   def Copy: Copy = "Copy".asInstanceOf[Copy]
   @scala.inline
@@ -309,29 +277,19 @@ object appBuilderLibStrings {
   @scala.inline
   def Deflate: Deflate = "Deflate".asInstanceOf[Deflate]
   @scala.inline
-  def `Developer ID Application`: `Developer ID Application` = "Developer ID Application".asInstanceOf[`Developer ID Application`]
+  def `Developer ID Application`: `Developer ID Application` = ("Developer ID Application").asInstanceOf[`Developer ID Application`]
   @scala.inline
-  def `Developer ID Installer`: `Developer ID Installer` = "Developer ID Installer".asInstanceOf[`Developer ID Installer`]
-  @scala.inline
-  def Dotblockmap: Dotblockmap = ".blockmap".asInstanceOf[Dotblockmap]
+  def `Developer ID Installer`: `Developer ID Installer` = ("Developer ID Installer").asInstanceOf[`Developer ID Installer`]
   @scala.inline
   def Editor: Editor = "Editor".asInstanceOf[Editor]
   @scala.inline
   def LZMA: LZMA = "LZMA".asInstanceOf[LZMA]
   @scala.inline
-  def `Mac Developer`: `Mac Developer` = "Mac Developer".asInstanceOf[`Mac Developer`]
+  def `Mac Developer`: `Mac Developer` = ("Mac Developer").asInstanceOf[`Mac Developer`]
   @scala.inline
   def None: None = "None".asInstanceOf[None]
   @scala.inline
-  def `Please specify author ApostropheemailApostrophe in the application packageDotjsonLinefeedLinefeedSee httpsColonSlashSlashdocsDotnpmjsDotcomSlashfilesSlashpackageDotjsonNumbersignpeople-fields-author-contributorsLinefeedLinefeedIt is required to set Linux Dotdeb package maintainerDot Or you can set maintainer in the custom linux optionsDotLinefeedLeftparenthesissee httpsColonSlashSlashwwwDotelectronDotbuildSlashconfigurationSlashlinuxRightparenthesisDotLinefeed`: `Please specify author ApostropheemailApostrophe in the application packageDotjsonLinefeedLinefeedSee httpsColonSlashSlashdocsDotnpmjsDotcomSlashfilesSlashpackageDotjsonNumbersignpeople-fields-author-contributorsLinefeedLinefeedIt is required to set Linux Dotdeb package maintainerDot Or you can set maintainer in the custom linux optionsDotLinefeedLeftparenthesissee httpsColonSlashSlashwwwDotelectronDotbuildSlashconfigurationSlashlinuxRightparenthesisDotLinefeed` = "Please specify author 'email' in the application package.json\n\nSee https://docs.npmjs.com/files/package.json#people-fields-author-contributors\n\nIt is required to set Linux .deb package maintainer. Or you can set maintainer in the custom linux options.\n(see https://www.electron.build/configuration/linux).\n".asInstanceOf[`Please specify author ApostropheemailApostrophe in the application packageDotjsonLinefeedLinefeedSee httpsColonSlashSlashdocsDotnpmjsDotcomSlashfilesSlashpackageDotjsonNumbersignpeople-fields-author-contributorsLinefeedLinefeedIt is required to set Linux Dotdeb package maintainerDot Or you can set maintainer in the custom linux optionsDotLinefeedLeftparenthesissee httpsColonSlashSlashwwwDotelectronDotbuildSlashconfigurationSlashlinuxRightparenthesisDotLinefeed`]
-  @scala.inline
-  def S3: S3 = "S3".asInstanceOf[S3]
-  @scala.inline
   def Shell: Shell = "Shell".asInstanceOf[Shell]
-  @scala.inline
-  def Slashopt: Slashopt = "/opt".asInstanceOf[Slashopt]
-  @scala.inline
-  def Spaces: Spaces = "Spaces".asInstanceOf[Spaces]
   @scala.inline
   def UDBZ: UDBZ = "UDBZ".asInstanceOf[UDBZ]
   @scala.inline
@@ -367,8 +325,6 @@ object appBuilderLibStrings {
   @scala.inline
   def classic: classic = "classic".asInstanceOf[classic]
   @scala.inline
-  def `comDotproton-nativeDot`: `comDotproton-nativeDot` = "com.proton-native.".asInstanceOf[`comDotproton-nativeDot`]
-  @scala.inline
   def darwin: darwin = "darwin".asInstanceOf[darwin]
   @scala.inline
   def default_ : default_ = "default".asInstanceOf[default_]
@@ -401,8 +357,6 @@ object appBuilderLibStrings {
   @scala.inline
   def ico: ico = "ico".asInstanceOf[ico]
   @scala.inline
-  def imlCommahprofCommaorigCommapycCommapyoCommarbcCommaswpCommacsprojCommaslnCommasuoCommaxprojCommaccCommadDotts: imlCommahprofCommaorigCommapycCommapyoCommarbcCommaswpCommacsprojCommaslnCommasuoCommaxprojCommaccCommadDotts = "iml,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,suo,xproj,cc,d.ts".asInstanceOf[imlCommahprofCommaorigCommapycCommapyoCommarbcCommaswpCommacsprojCommaslnCommasuoCommaxprojCommaccCommadDotts]
-  @scala.inline
   def left: left = "left".asInstanceOf[left]
   @scala.inline
   def link: link = "link".asInstanceOf[link]
@@ -423,8 +377,6 @@ object appBuilderLibStrings {
   @scala.inline
   def proportional: proportional = "proportional".asInstanceOf[proportional]
   @scala.inline
-  def proton: proton = "proton".asInstanceOf[proton]
-  @scala.inline
   def requireAdministrator: requireAdministrator = "requireAdministrator".asInstanceOf[requireAdministrator]
   @scala.inline
   def right: right = "right".asInstanceOf[right]
@@ -436,8 +388,6 @@ object appBuilderLibStrings {
   def sha1: sha1 = "sha1".asInstanceOf[sha1]
   @scala.inline
   def sha256: sha256 = "sha256".asInstanceOf[sha256]
-  @scala.inline
-  def snapStore: snapStore = "snapStore".asInstanceOf[snapStore]
   @scala.inline
   def stable: stable = "stable".asInstanceOf[stable]
   @scala.inline

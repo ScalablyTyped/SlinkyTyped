@@ -30,17 +30,59 @@ trait ExecuteSqlRequest extends js.Object {
 
 object ExecuteSqlRequest {
   @scala.inline
-  def apply(
-    awsSecretStoreArn: Arn,
-    dbClusterOrInstanceArn: Arn,
-    sqlStatements: SqlStatement,
-    database: DbName = null,
-    schema: DbName = null
-  ): ExecuteSqlRequest = {
+  def apply(awsSecretStoreArn: Arn, dbClusterOrInstanceArn: Arn, sqlStatements: SqlStatement): ExecuteSqlRequest = {
     val __obj = js.Dynamic.literal(awsSecretStoreArn = awsSecretStoreArn.asInstanceOf[js.Any], dbClusterOrInstanceArn = dbClusterOrInstanceArn.asInstanceOf[js.Any], sqlStatements = sqlStatements.asInstanceOf[js.Any])
-    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecuteSqlRequest]
   }
+  @scala.inline
+  implicit class ExecuteSqlRequestOps[Self <: ExecuteSqlRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwsSecretStoreArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsSecretStoreArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbClusterOrInstanceArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbClusterOrInstanceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSqlStatements(value: SqlStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sqlStatements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDatabase(value: DbName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: DbName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

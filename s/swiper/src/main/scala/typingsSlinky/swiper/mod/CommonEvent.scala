@@ -32,65 +32,72 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.swiper.swiperStrings.setTranslate
   - typingsSlinky.swiper.swiperStrings.setTransition
   - typingsSlinky.swiper.swiperStrings.resize
+  - typingsSlinky.swiper.swiperStrings.observerUpdate
+  - typingsSlinky.swiper.swiperStrings.beforeLoopFix
+  - typingsSlinky.swiper.swiperStrings.loopFix
 */
 trait CommonEvent extends js.Object
 
 object CommonEvent {
   @scala.inline
-  def beforeDestroy: typingsSlinky.swiper.swiperStrings.beforeDestroy = this.cast("beforeDestroy")
+  def beforeDestroy: typingsSlinky.swiper.swiperStrings.beforeDestroy = "beforeDestroy".asInstanceOf[typingsSlinky.swiper.swiperStrings.beforeDestroy]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def beforeLoopFix: typingsSlinky.swiper.swiperStrings.beforeLoopFix = "beforeLoopFix".asInstanceOf[typingsSlinky.swiper.swiperStrings.beforeLoopFix]
   @scala.inline
-  def click: typingsSlinky.swiper.swiperStrings.click = this.cast("click")
+  def click: typingsSlinky.swiper.swiperStrings.click = "click".asInstanceOf[typingsSlinky.swiper.swiperStrings.click]
   @scala.inline
-  def doubleTap: typingsSlinky.swiper.swiperStrings.doubleTap = this.cast("doubleTap")
+  def doubleTap: typingsSlinky.swiper.swiperStrings.doubleTap = "doubleTap".asInstanceOf[typingsSlinky.swiper.swiperStrings.doubleTap]
   @scala.inline
-  def fromEdge: typingsSlinky.swiper.swiperStrings.fromEdge = this.cast("fromEdge")
+  def fromEdge: typingsSlinky.swiper.swiperStrings.fromEdge = "fromEdge".asInstanceOf[typingsSlinky.swiper.swiperStrings.fromEdge]
   @scala.inline
-  def imagesReady: typingsSlinky.swiper.swiperStrings.imagesReady = this.cast("imagesReady")
+  def imagesReady: typingsSlinky.swiper.swiperStrings.imagesReady = "imagesReady".asInstanceOf[typingsSlinky.swiper.swiperStrings.imagesReady]
   @scala.inline
-  def init: typingsSlinky.swiper.swiperStrings.init = this.cast("init")
+  def init: typingsSlinky.swiper.swiperStrings.init = "init".asInstanceOf[typingsSlinky.swiper.swiperStrings.init]
   @scala.inline
-  def progress: typingsSlinky.swiper.swiperStrings.progress = this.cast("progress")
+  def loopFix: typingsSlinky.swiper.swiperStrings.loopFix = "loopFix".asInstanceOf[typingsSlinky.swiper.swiperStrings.loopFix]
   @scala.inline
-  def reachBeginning: typingsSlinky.swiper.swiperStrings.reachBeginning = this.cast("reachBeginning")
+  def observerUpdate: typingsSlinky.swiper.swiperStrings.observerUpdate = "observerUpdate".asInstanceOf[typingsSlinky.swiper.swiperStrings.observerUpdate]
   @scala.inline
-  def reachEnd: typingsSlinky.swiper.swiperStrings.reachEnd = this.cast("reachEnd")
+  def progress: typingsSlinky.swiper.swiperStrings.progress = "progress".asInstanceOf[typingsSlinky.swiper.swiperStrings.progress]
   @scala.inline
-  def resize: typingsSlinky.swiper.swiperStrings.resize = this.cast("resize")
+  def reachBeginning: typingsSlinky.swiper.swiperStrings.reachBeginning = "reachBeginning".asInstanceOf[typingsSlinky.swiper.swiperStrings.reachBeginning]
   @scala.inline
-  def setTransition: typingsSlinky.swiper.swiperStrings.setTransition = this.cast("setTransition")
+  def reachEnd: typingsSlinky.swiper.swiperStrings.reachEnd = "reachEnd".asInstanceOf[typingsSlinky.swiper.swiperStrings.reachEnd]
   @scala.inline
-  def setTranslate: typingsSlinky.swiper.swiperStrings.setTranslate = this.cast("setTranslate")
+  def resize: typingsSlinky.swiper.swiperStrings.resize = "resize".asInstanceOf[typingsSlinky.swiper.swiperStrings.resize]
   @scala.inline
-  def slideChange: typingsSlinky.swiper.swiperStrings.slideChange = this.cast("slideChange")
+  def setTransition: typingsSlinky.swiper.swiperStrings.setTransition = "setTransition".asInstanceOf[typingsSlinky.swiper.swiperStrings.setTransition]
   @scala.inline
-  def slideChangeTransitionEnd: typingsSlinky.swiper.swiperStrings.slideChangeTransitionEnd = this.cast("slideChangeTransitionEnd")
+  def setTranslate: typingsSlinky.swiper.swiperStrings.setTranslate = "setTranslate".asInstanceOf[typingsSlinky.swiper.swiperStrings.setTranslate]
   @scala.inline
-  def slideChangeTransitionStart: typingsSlinky.swiper.swiperStrings.slideChangeTransitionStart = this.cast("slideChangeTransitionStart")
+  def slideChange: typingsSlinky.swiper.swiperStrings.slideChange = "slideChange".asInstanceOf[typingsSlinky.swiper.swiperStrings.slideChange]
   @scala.inline
-  def slideNextTransitionEnd: typingsSlinky.swiper.swiperStrings.slideNextTransitionEnd = this.cast("slideNextTransitionEnd")
+  def slideChangeTransitionEnd: typingsSlinky.swiper.swiperStrings.slideChangeTransitionEnd = "slideChangeTransitionEnd".asInstanceOf[typingsSlinky.swiper.swiperStrings.slideChangeTransitionEnd]
   @scala.inline
-  def slideNextTransitionStart: typingsSlinky.swiper.swiperStrings.slideNextTransitionStart = this.cast("slideNextTransitionStart")
+  def slideChangeTransitionStart: typingsSlinky.swiper.swiperStrings.slideChangeTransitionStart = "slideChangeTransitionStart".asInstanceOf[typingsSlinky.swiper.swiperStrings.slideChangeTransitionStart]
   @scala.inline
-  def slidePrevTransitionEnd: typingsSlinky.swiper.swiperStrings.slidePrevTransitionEnd = this.cast("slidePrevTransitionEnd")
+  def slideNextTransitionEnd: typingsSlinky.swiper.swiperStrings.slideNextTransitionEnd = "slideNextTransitionEnd".asInstanceOf[typingsSlinky.swiper.swiperStrings.slideNextTransitionEnd]
   @scala.inline
-  def slidePrevTransitionStart: typingsSlinky.swiper.swiperStrings.slidePrevTransitionStart = this.cast("slidePrevTransitionStart")
+  def slideNextTransitionStart: typingsSlinky.swiper.swiperStrings.slideNextTransitionStart = "slideNextTransitionStart".asInstanceOf[typingsSlinky.swiper.swiperStrings.slideNextTransitionStart]
   @scala.inline
-  def sliderMove: typingsSlinky.swiper.swiperStrings.sliderMove = this.cast("sliderMove")
+  def slidePrevTransitionEnd: typingsSlinky.swiper.swiperStrings.slidePrevTransitionEnd = "slidePrevTransitionEnd".asInstanceOf[typingsSlinky.swiper.swiperStrings.slidePrevTransitionEnd]
   @scala.inline
-  def tap: typingsSlinky.swiper.swiperStrings.tap = this.cast("tap")
+  def slidePrevTransitionStart: typingsSlinky.swiper.swiperStrings.slidePrevTransitionStart = "slidePrevTransitionStart".asInstanceOf[typingsSlinky.swiper.swiperStrings.slidePrevTransitionStart]
   @scala.inline
-  def touchEnd: typingsSlinky.swiper.swiperStrings.touchEnd = this.cast("touchEnd")
+  def sliderMove: typingsSlinky.swiper.swiperStrings.sliderMove = "sliderMove".asInstanceOf[typingsSlinky.swiper.swiperStrings.sliderMove]
   @scala.inline
-  def touchMove: typingsSlinky.swiper.swiperStrings.touchMove = this.cast("touchMove")
+  def tap: typingsSlinky.swiper.swiperStrings.tap = "tap".asInstanceOf[typingsSlinky.swiper.swiperStrings.tap]
   @scala.inline
-  def touchMoveOpposite: typingsSlinky.swiper.swiperStrings.touchMoveOpposite = this.cast("touchMoveOpposite")
+  def touchEnd: typingsSlinky.swiper.swiperStrings.touchEnd = "touchEnd".asInstanceOf[typingsSlinky.swiper.swiperStrings.touchEnd]
   @scala.inline
-  def touchStart: typingsSlinky.swiper.swiperStrings.touchStart = this.cast("touchStart")
+  def touchMove: typingsSlinky.swiper.swiperStrings.touchMove = "touchMove".asInstanceOf[typingsSlinky.swiper.swiperStrings.touchMove]
   @scala.inline
-  def transitionEnd: typingsSlinky.swiper.swiperStrings.transitionEnd = this.cast("transitionEnd")
+  def touchMoveOpposite: typingsSlinky.swiper.swiperStrings.touchMoveOpposite = "touchMoveOpposite".asInstanceOf[typingsSlinky.swiper.swiperStrings.touchMoveOpposite]
   @scala.inline
-  def transitionStart: typingsSlinky.swiper.swiperStrings.transitionStart = this.cast("transitionStart")
+  def touchStart: typingsSlinky.swiper.swiperStrings.touchStart = "touchStart".asInstanceOf[typingsSlinky.swiper.swiperStrings.touchStart]
+  @scala.inline
+  def transitionEnd: typingsSlinky.swiper.swiperStrings.transitionEnd = "transitionEnd".asInstanceOf[typingsSlinky.swiper.swiperStrings.transitionEnd]
+  @scala.inline
+  def transitionStart: typingsSlinky.swiper.swiperStrings.transitionStart = "transitionStart".asInstanceOf[typingsSlinky.swiper.swiperStrings.transitionStart]
 }
 

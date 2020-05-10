@@ -14,10 +14,29 @@ trait DescribeRegionsResult extends js.Object {
 
 object DescribeRegionsResult {
   @scala.inline
-  def apply(Regions: RegionList = null): DescribeRegionsResult = {
+  def apply(): DescribeRegionsResult = {
     val __obj = js.Dynamic.literal()
-    if (Regions != null) __obj.updateDynamic("Regions")(Regions.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeRegionsResult]
   }
+  @scala.inline
+  implicit class DescribeRegionsResultOps[Self <: DescribeRegionsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegions(value: RegionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Regions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Regions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

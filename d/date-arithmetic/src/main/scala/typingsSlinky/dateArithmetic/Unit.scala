@@ -19,24 +19,22 @@ trait Unit extends js.Object
 
 object Unit {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def century: typingsSlinky.dateArithmetic.dateArithmeticStrings.century = "century".asInstanceOf[typingsSlinky.dateArithmetic.dateArithmeticStrings.century]
   @scala.inline
-  def century: typingsSlinky.dateArithmetic.dateArithmeticStrings.century = this.cast("century")
+  def day: typingsSlinky.dateArithmetic.dateArithmeticStrings.day = "day".asInstanceOf[typingsSlinky.dateArithmetic.dateArithmeticStrings.day]
   @scala.inline
-  def day: typingsSlinky.dateArithmetic.dateArithmeticStrings.day = this.cast("day")
+  def decade: typingsSlinky.dateArithmetic.dateArithmeticStrings.decade = "decade".asInstanceOf[typingsSlinky.dateArithmetic.dateArithmeticStrings.decade]
   @scala.inline
-  def decade: typingsSlinky.dateArithmetic.dateArithmeticStrings.decade = this.cast("decade")
+  def hours: typingsSlinky.dateArithmetic.dateArithmeticStrings.hours = "hours".asInstanceOf[typingsSlinky.dateArithmetic.dateArithmeticStrings.hours]
   @scala.inline
-  def hours: typingsSlinky.dateArithmetic.dateArithmeticStrings.hours = this.cast("hours")
+  def minutes: typingsSlinky.dateArithmetic.dateArithmeticStrings.minutes = "minutes".asInstanceOf[typingsSlinky.dateArithmetic.dateArithmeticStrings.minutes]
   @scala.inline
-  def minutes: typingsSlinky.dateArithmetic.dateArithmeticStrings.minutes = this.cast("minutes")
+  def month: typingsSlinky.dateArithmetic.dateArithmeticStrings.month = "month".asInstanceOf[typingsSlinky.dateArithmetic.dateArithmeticStrings.month]
   @scala.inline
-  def month: typingsSlinky.dateArithmetic.dateArithmeticStrings.month = this.cast("month")
+  def second: typingsSlinky.dateArithmetic.dateArithmeticStrings.second = "second".asInstanceOf[typingsSlinky.dateArithmetic.dateArithmeticStrings.second]
   @scala.inline
-  def second: typingsSlinky.dateArithmetic.dateArithmeticStrings.second = this.cast("second")
+  def week: typingsSlinky.dateArithmetic.dateArithmeticStrings.week = "week".asInstanceOf[typingsSlinky.dateArithmetic.dateArithmeticStrings.week]
   @scala.inline
-  def week: typingsSlinky.dateArithmetic.dateArithmeticStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.dateArithmetic.dateArithmeticStrings.year = this.cast("year")
+  def year: typingsSlinky.dateArithmetic.dateArithmeticStrings.year = "year".asInstanceOf[typingsSlinky.dateArithmetic.dateArithmeticStrings.year]
 }
 

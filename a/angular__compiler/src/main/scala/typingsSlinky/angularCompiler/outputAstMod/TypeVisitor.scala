@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeVisitor extends js.Object {
-  def visitArrayType(`type`: ArrayType, context: js.Any): js.Any
-  def visitBuiltinType(`type`: BuiltinType, context: js.Any): js.Any
-  def visitExpressionType(`type`: ExpressionType_, context: js.Any): js.Any
-  def visitMapType(`type`: MapType, context: js.Any): js.Any
+  def visitArrayType(`type`: ArrayType, context: js.Any): js.Any = js.native
+  def visitBuiltinType(`type`: BuiltinType, context: js.Any): js.Any = js.native
+  def visitExpressionType(`type`: ExpressionType_, context: js.Any): js.Any = js.native
+  def visitMapType(`type`: MapType, context: js.Any): js.Any = js.native
 }
 
 object TypeVisitor {
@@ -20,8 +21,39 @@ object TypeVisitor {
     visitMapType: (MapType, js.Any) => js.Any
   ): TypeVisitor = {
     val __obj = js.Dynamic.literal(visitArrayType = js.Any.fromFunction2(visitArrayType), visitBuiltinType = js.Any.fromFunction2(visitBuiltinType), visitExpressionType = js.Any.fromFunction2(visitExpressionType), visitMapType = js.Any.fromFunction2(visitMapType))
-  
     __obj.asInstanceOf[TypeVisitor]
   }
+  @scala.inline
+  implicit class TypeVisitorOps[Self <: TypeVisitor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVisitArrayType(value: (ArrayType, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visitArrayType")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withVisitBuiltinType(value: (BuiltinType, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visitBuiltinType")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withVisitExpressionType(value: (ExpressionType_, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visitExpressionType")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withVisitMapType(value: (MapType, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visitMapType")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

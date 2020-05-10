@@ -6,71 +6,169 @@ import scala.scalajs.js.annotation._
 
 // endregion
 // region Domain itself
+@js.native
 trait CommandDefinition extends js.Object {
   /**
     * optional, only makes sense if aggregates with names are defined in the 'domainPath' structure
     */
-  var aggregate: js.UndefOr[String] = js.undefined
+  var aggregate: js.UndefOr[String] = js.native
   /**
     * optional, default is 'aggregate.id'
     * if an aggregate id is not defined in the command, the command handler will create a new aggregate instance
     */
-  var aggregateId: js.UndefOr[String] = js.undefined
+  var aggregateId: js.UndefOr[String] = js.native
   /**
     * optional, only makes sense if contexts are defined in the 'domainPath' structure
     */
-  var context: js.UndefOr[String] = js.undefined
+  var context: js.UndefOr[String] = js.native
   /**
     * optional, default is 'id'
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * optional, if defined theses values will be copied to the event (can be used to transport information like userId, etc..)
     */
-  var meta: js.UndefOr[String] = js.undefined
+  var meta: js.UndefOr[String] = js.native
   /**
     * optional, default is 'name'
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * optional, but recommended
     */
-  var payload: js.UndefOr[String] = js.undefined
+  var payload: js.UndefOr[String] = js.native
   /**
     * optional, if defined the command handler will check if the command can be handled
     * if you want the command to be handled in a secure/transactional way pass a revision value that matches the current aggregate revision
     */
-  var revision: js.UndefOr[String] = js.undefined
+  var revision: js.UndefOr[String] = js.native
   /**
     * optional, if defined the command handler will search for a handle that matches command name and version number
     */
-  var version: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.native
 }
 
 object CommandDefinition {
   @scala.inline
-  def apply(
-    aggregate: String = null,
-    aggregateId: String = null,
-    context: String = null,
-    id: String = null,
-    meta: String = null,
-    name: String = null,
-    payload: String = null,
-    revision: String = null,
-    version: String = null
-  ): CommandDefinition = {
+  def apply(): CommandDefinition = {
     val __obj = js.Dynamic.literal()
-    if (aggregate != null) __obj.updateDynamic("aggregate")(aggregate.asInstanceOf[js.Any])
-    if (aggregateId != null) __obj.updateDynamic("aggregateId")(aggregateId.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
-    if (revision != null) __obj.updateDynamic("revision")(revision.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommandDefinition]
   }
+  @scala.inline
+  implicit class CommandDefinitionOps[Self <: CommandDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAggregateId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeta(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayload(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevision(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

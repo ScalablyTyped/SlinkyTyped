@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import typingsSlinky.arcgisJsApi.HashMap
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.multiply
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.replace
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.tint
@@ -9,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FillSymbol3DLayerMaterial extends AnonymousAccessor {
   /**
     * The color of the fill. This can be autocast with an array of rgb(a) values, named string, hex string or an hsl(a) string, an object with `r`, `g`, `b`, and `a` properties, or a [Color](https://developers.arcgis.com/javascript/latest/api-reference/esri-Color.html) object.
@@ -17,7 +17,7 @@ trait FillSymbol3DLayerMaterial extends AnonymousAccessor {
     *
     * @default white
     */
-  var color: js.UndefOr[Color_] = js.undefined
+  var color: js.UndefOr[Color_] = js.native
   /**
     * Specifies how the material `color` is applied to the geometry color/texture information. This property applies only to [MeshSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-MeshSymbol3D.html) symbols.
     *
@@ -32,7 +32,7 @@ trait FillSymbol3DLayerMaterial extends AnonymousAccessor {
     *
     * @default multiply
     */
-  var colorMixMode: js.UndefOr[tint | replace | multiply] = js.undefined
+  var colorMixMode: js.UndefOr[tint | replace | multiply] = js.native
 }
 
 object FillSymbol3DLayerMaterial {
@@ -40,20 +40,42 @@ object FillSymbol3DLayerMaterial {
   def apply(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    color: Color_ = null,
-    colorMixMode: tint | replace | multiply = null,
-    get: /* propertyName */ String => _ = null,
-    set: (js.Function2[/* propertyName */ String, /* value */ js.Any, FillSymbol3DLayerMaterial]) with (js.Function1[/* props */ HashMap[_], FillSymbol3DLayerMaterial]) = null,
-    watch: (/* path */ String | js.Array[String], /* callback */ WatchCallback, /* sync */ js.UndefOr[Boolean]) => WatchHandle = null
+    propertyIsEnumerable: PropertyKey => Boolean
   ): FillSymbol3DLayerMaterial = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colorMixMode != null) __obj.updateDynamic("colorMixMode")(colorMixMode.asInstanceOf[js.Any])
-    if (get != null) __obj.updateDynamic("get")(js.Any.fromFunction1(get))
-    if (set != null) __obj.updateDynamic("set")(set.asInstanceOf[js.Any])
-    if (watch != null) __obj.updateDynamic("watch")(js.Any.fromFunction3(watch))
     __obj.asInstanceOf[FillSymbol3DLayerMaterial]
   }
+  @scala.inline
+  implicit class FillSymbol3DLayerMaterialOps[Self <: FillSymbol3DLayerMaterial] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: Color_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorMixMode(value: tint | replace | multiply): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMixMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorMixMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorMixMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

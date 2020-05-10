@@ -13,19 +13,20 @@ import scala.scalajs.js.annotation._
 /**
   * An arguments object for the `changed` signal.
   */
+@js.native
 trait IChangedArgs extends js.Object {
   /**
     * Whether the item was added or removed.
     */
-  val change: added | removed
+  val change: added | removed = js.native
   /**
     * The name of the item or the widget factory being extended.
     */
-  val name: String
+  val name: String = js.native
   /**
     * The type of the changed item.
     */
-  val `type`: widgetFactory | modelFactory | widgetExtension | fileType
+  val `type`: widgetFactory | modelFactory | widgetExtension | fileType = js.native
 }
 
 object IChangedArgs {
@@ -39,5 +40,31 @@ object IChangedArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IChangedArgs]
   }
+  @scala.inline
+  implicit class IChangedArgsOps[Self <: IChangedArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChange(value: added | removed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: widgetFactory | modelFactory | widgetExtension | fileType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

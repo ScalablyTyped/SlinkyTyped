@@ -34,22 +34,89 @@ trait CreateDynamicThingGroupResponse extends js.Object {
 
 object CreateDynamicThingGroupResponse {
   @scala.inline
-  def apply(
-    indexName: IndexName = null,
-    queryString: QueryString = null,
-    queryVersion: QueryVersion = null,
-    thingGroupArn: ThingGroupArn = null,
-    thingGroupId: ThingGroupId = null,
-    thingGroupName: ThingGroupName = null
-  ): CreateDynamicThingGroupResponse = {
+  def apply(): CreateDynamicThingGroupResponse = {
     val __obj = js.Dynamic.literal()
-    if (indexName != null) __obj.updateDynamic("indexName")(indexName.asInstanceOf[js.Any])
-    if (queryString != null) __obj.updateDynamic("queryString")(queryString.asInstanceOf[js.Any])
-    if (queryVersion != null) __obj.updateDynamic("queryVersion")(queryVersion.asInstanceOf[js.Any])
-    if (thingGroupArn != null) __obj.updateDynamic("thingGroupArn")(thingGroupArn.asInstanceOf[js.Any])
-    if (thingGroupId != null) __obj.updateDynamic("thingGroupId")(thingGroupId.asInstanceOf[js.Any])
-    if (thingGroupName != null) __obj.updateDynamic("thingGroupName")(thingGroupName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDynamicThingGroupResponse]
   }
+  @scala.inline
+  implicit class CreateDynamicThingGroupResponseOps[Self <: CreateDynamicThingGroupResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndexName(value: IndexName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryString(value: QueryString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryVersion(value: QueryVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingGroupArn(value: ThingGroupArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingGroupId(value: ThingGroupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingGroupName(value: ThingGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

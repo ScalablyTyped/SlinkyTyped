@@ -15,16 +15,14 @@ trait FillMode extends js.Object
 
 object FillMode {
   @scala.inline
-  def auto: typingsSlinky.std.stdStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.std.stdStrings.auto = "auto".asInstanceOf[typingsSlinky.std.stdStrings.auto]
   @scala.inline
-  def backwards: typingsSlinky.std.stdStrings.backwards = this.cast("backwards")
+  def backwards: typingsSlinky.std.stdStrings.backwards = "backwards".asInstanceOf[typingsSlinky.std.stdStrings.backwards]
   @scala.inline
-  def both: typingsSlinky.std.stdStrings.both = this.cast("both")
+  def both: typingsSlinky.std.stdStrings.both = "both".asInstanceOf[typingsSlinky.std.stdStrings.both]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def forwards: typingsSlinky.std.stdStrings.forwards = "forwards".asInstanceOf[typingsSlinky.std.stdStrings.forwards]
   @scala.inline
-  def forwards: typingsSlinky.std.stdStrings.forwards = this.cast("forwards")
-  @scala.inline
-  def none: typingsSlinky.std.stdStrings.none = this.cast("none")
+  def none: typingsSlinky.std.stdStrings.none = "none".asInstanceOf[typingsSlinky.std.stdStrings.none]
 }
 

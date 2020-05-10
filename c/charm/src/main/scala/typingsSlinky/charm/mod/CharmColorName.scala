@@ -18,22 +18,20 @@ trait CharmColorName extends js.Object
 
 object CharmColorName {
   @scala.inline
-  def black: typingsSlinky.charm.charmStrings.black = this.cast("black")
+  def black: typingsSlinky.charm.charmStrings.black = "black".asInstanceOf[typingsSlinky.charm.charmStrings.black]
   @scala.inline
-  def blue: typingsSlinky.charm.charmStrings.blue = this.cast("blue")
+  def blue: typingsSlinky.charm.charmStrings.blue = "blue".asInstanceOf[typingsSlinky.charm.charmStrings.blue]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cyan: typingsSlinky.charm.charmStrings.cyan = "cyan".asInstanceOf[typingsSlinky.charm.charmStrings.cyan]
   @scala.inline
-  def cyan: typingsSlinky.charm.charmStrings.cyan = this.cast("cyan")
+  def green: typingsSlinky.charm.charmStrings.green = "green".asInstanceOf[typingsSlinky.charm.charmStrings.green]
   @scala.inline
-  def green: typingsSlinky.charm.charmStrings.green = this.cast("green")
+  def magenta: typingsSlinky.charm.charmStrings.magenta = "magenta".asInstanceOf[typingsSlinky.charm.charmStrings.magenta]
   @scala.inline
-  def magenta: typingsSlinky.charm.charmStrings.magenta = this.cast("magenta")
+  def red: typingsSlinky.charm.charmStrings.red = "red".asInstanceOf[typingsSlinky.charm.charmStrings.red]
   @scala.inline
-  def red: typingsSlinky.charm.charmStrings.red = this.cast("red")
+  def white: typingsSlinky.charm.charmStrings.white = "white".asInstanceOf[typingsSlinky.charm.charmStrings.white]
   @scala.inline
-  def white: typingsSlinky.charm.charmStrings.white = this.cast("white")
-  @scala.inline
-  def yellow: typingsSlinky.charm.charmStrings.yellow = this.cast("yellow")
+  def yellow: typingsSlinky.charm.charmStrings.yellow = "yellow".asInstanceOf[typingsSlinky.charm.charmStrings.yellow]
 }
 

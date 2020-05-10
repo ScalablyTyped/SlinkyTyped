@@ -5,19 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a name-value pair in a URL query string. */
+@js.native
 trait IWwwFormUrlDecoderEntry extends js.Object {
   /** Represents the name of a parameter in a URL query string. */
-  var name: String
+  var name: String = js.native
   /** Represents a named value in a URL query string. */
-  var value: String
+  var value: String = js.native
 }
 
 object IWwwFormUrlDecoderEntry {
   @scala.inline
   def apply(name: String, value: String): IWwwFormUrlDecoderEntry = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IWwwFormUrlDecoderEntry]
   }
+  @scala.inline
+  implicit class IWwwFormUrlDecoderEntryOps[Self <: IWwwFormUrlDecoderEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

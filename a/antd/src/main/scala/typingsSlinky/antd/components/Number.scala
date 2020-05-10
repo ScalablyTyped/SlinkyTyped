@@ -1,41 +1,44 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.numberMod.NumberProps
+import typingsSlinky.antd.statisticUtilsMod.FormatConfig
 import typingsSlinky.antd.statisticUtilsMod.Formatter
 import typingsSlinky.antd.statisticUtilsMod.valueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Number
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Number {
   @JSImport("antd/lib/statistic/Number", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    value: valueType,
-    decimalSeparator: String = null,
-    formatter: Formatter = null,
-    groupSeparator: String = null,
-    precision: Int | Double = null,
-    prefixCls: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (decimalSeparator != null) __obj.updateDynamic("decimalSeparator")(decimalSeparator.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (groupSeparator != null) __obj.updateDynamic("groupSeparator")(groupSeparator.asInstanceOf[js.Any])
-    if (precision != null) __obj.updateDynamic("precision")(precision.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def decimalSeparator(value: String): this.type = set("decimalSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatterFunction2(value: (/* value */ valueType, /* config */ js.UndefOr[FormatConfig]) => TagMod[Any]): this.type = set("formatter", js.Any.fromFunction2(value))
+    @scala.inline
+    def formatter(value: Formatter): this.type = set("formatter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupSeparator(value: String): this.type = set("groupSeparator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def precision(value: Double): this.type = set("precision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
   }
-  type Props = NumberProps
+  
+  def withProps(p: NumberProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(value: valueType): Builder = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[NumberProps]))
+  }
 }
 

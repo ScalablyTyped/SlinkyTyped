@@ -18,11 +18,41 @@ trait ClustersMessage extends js.Object {
 
 object ClustersMessage {
   @scala.inline
-  def apply(Clusters: ClusterList = null, Marker: String = null): ClustersMessage = {
+  def apply(): ClustersMessage = {
     val __obj = js.Dynamic.literal()
-    if (Clusters != null) __obj.updateDynamic("Clusters")(Clusters.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClustersMessage]
   }
+  @scala.inline
+  implicit class ClustersMessageOps[Self <: ClustersMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusters(value: ClusterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Clusters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Clusters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

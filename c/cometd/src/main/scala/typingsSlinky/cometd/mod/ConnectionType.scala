@@ -14,14 +14,12 @@ trait ConnectionType extends js.Object
 
 object ConnectionType {
   @scala.inline
-  def `callback-polling`: typingsSlinky.cometd.cometdStrings.`callback-polling` = this.cast("callback-polling")
+  def `callback-polling`: typingsSlinky.cometd.cometdStrings.`callback-polling` = "callback-polling".asInstanceOf[typingsSlinky.cometd.cometdStrings.`callback-polling`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def flash: typingsSlinky.cometd.cometdStrings.flash = "flash".asInstanceOf[typingsSlinky.cometd.cometdStrings.flash]
   @scala.inline
-  def flash: typingsSlinky.cometd.cometdStrings.flash = this.cast("flash")
+  def iframe: typingsSlinky.cometd.cometdStrings.iframe = "iframe".asInstanceOf[typingsSlinky.cometd.cometdStrings.iframe]
   @scala.inline
-  def iframe: typingsSlinky.cometd.cometdStrings.iframe = this.cast("iframe")
-  @scala.inline
-  def `long-polling`: typingsSlinky.cometd.cometdStrings.`long-polling` = this.cast("long-polling")
+  def `long-polling`: typingsSlinky.cometd.cometdStrings.`long-polling` = "long-polling".asInstanceOf[typingsSlinky.cometd.cometdStrings.`long-polling`]
 }
 

@@ -1,11 +1,8 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.gridMod.GridProps
 import typingsSlinky.antdMobile.gridMod.default
 import typingsSlinky.antdMobile.gridPropsTypeMod.DataItem
@@ -14,46 +11,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Grid
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Grid {
   @JSImport("antd-mobile/lib/grid", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    activeClassName: String = null,
-    activeStyle: Boolean | CSSProperties = null,
-    carouselMaxRow: Int | Double = null,
-    columnNum: Int | Double = null,
-    data: js.Array[js.UndefOr[DataItem]] = null,
-    hasLine: js.UndefOr[Boolean] = js.undefined,
-    isCarousel: js.UndefOr[Boolean] = js.undefined,
-    itemStyle: CSSProperties = null,
-    onClick: (/* dataItem */ js.UndefOr[DataItem], /* itemIndex */ Double) => Unit = null,
-    prefixCls: String = null,
-    renderItem: (/* dataItem */ js.UndefOr[DataItem], /* itemIndex */ Double) => ReactElement = null,
-    square: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (activeClassName != null) __obj.updateDynamic("activeClassName")(activeClassName.asInstanceOf[js.Any])
-    if (activeStyle != null) __obj.updateDynamic("activeStyle")(activeStyle.asInstanceOf[js.Any])
-    if (carouselMaxRow != null) __obj.updateDynamic("carouselMaxRow")(carouselMaxRow.asInstanceOf[js.Any])
-    if (columnNum != null) __obj.updateDynamic("columnNum")(columnNum.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasLine)) __obj.updateDynamic("hasLine")(hasLine.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCarousel)) __obj.updateDynamic("isCarousel")(isCarousel.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (renderItem != null) __obj.updateDynamic("renderItem")(js.Any.fromFunction2(renderItem))
-    if (!js.isUndefined(square)) __obj.updateDynamic("square")(square.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def activeClassName(value: String): this.type = set("activeClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeStyle(value: Boolean | CSSProperties): this.type = set("activeStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def carouselMaxRow(value: Double): this.type = set("carouselMaxRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnNum(value: Double): this.type = set("columnNum", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[js.UndefOr[DataItem]]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasLine(value: Boolean): this.type = set("hasLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isCarousel(value: Boolean): this.type = set("isCarousel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemStyle(value: CSSProperties): this.type = set("itemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* dataItem */ js.UndefOr[DataItem], /* itemIndex */ Double) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderItem(value: (/* dataItem */ js.UndefOr[DataItem], /* itemIndex */ Double) => ReactElement): this.type = set("renderItem", js.Any.fromFunction2(value))
+    @scala.inline
+    def square(value: Boolean): this.type = set("square", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antdMobile.gridMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = GridProps
+  
+  def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Grid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

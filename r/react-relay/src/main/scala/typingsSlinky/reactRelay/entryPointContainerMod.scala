@@ -13,6 +13,14 @@ import scala.scalajs.js.annotation._
 object entryPointContainerMod extends js.Object {
   def EntryPointContainer[TPreloadedQueries /* <: js.Object */, TPreloadedNestedEntryPoints /* <: js.Object */, TRuntimeProps /* <: js.Object */, TExtraProps, TEntryPointComponent /* <: ReactComponentClass[
     EntryPointProps[TPreloadedQueries, TPreloadedNestedEntryPoints, TRuntimeProps, TExtraProps]
-  ] */](hasEntryPointReferenceProps: AnonEntryPointReference[TEntryPointComponent, TRuntimeProps]): ClassicElement[ReactElement] = js.native
+  ] */](
+    hasEntryPointReferenceProps: AnonEntryPointReference[
+      TEntryPointComponent, 
+      TRuntimeProps, 
+      TPreloadedQueries, 
+      TPreloadedNestedEntryPoints, 
+      TExtraProps
+    ]
+  ): ClassicElement[ReactElement] = js.native
 }
 

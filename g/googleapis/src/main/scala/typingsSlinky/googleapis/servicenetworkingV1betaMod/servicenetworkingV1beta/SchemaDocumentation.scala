@@ -78,20 +78,77 @@ trait SchemaDocumentation extends js.Object {
 
 object SchemaDocumentation {
   @scala.inline
-  def apply(
-    documentationRootUrl: String = null,
-    overview: String = null,
-    pages: js.Array[SchemaPage] = null,
-    rules: js.Array[SchemaDocumentationRule] = null,
-    summary: String = null
-  ): SchemaDocumentation = {
+  def apply(): SchemaDocumentation = {
     val __obj = js.Dynamic.literal()
-    if (documentationRootUrl != null) __obj.updateDynamic("documentationRootUrl")(documentationRootUrl.asInstanceOf[js.Any])
-    if (overview != null) __obj.updateDynamic("overview")(overview.asInstanceOf[js.Any])
-    if (pages != null) __obj.updateDynamic("pages")(pages.asInstanceOf[js.Any])
-    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
-    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDocumentation]
   }
+  @scala.inline
+  implicit class SchemaDocumentationOps[Self <: SchemaDocumentation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentationRootUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentationRootUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentationRootUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentationRootUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverview(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverview: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPages(value: js.Array[SchemaPage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRules(value: js.Array[SchemaDocumentationRule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

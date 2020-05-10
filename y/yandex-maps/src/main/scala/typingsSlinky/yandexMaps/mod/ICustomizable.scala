@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ICustomizable extends IEventEmitter {
-  var options: IOptionManager
+  var options: IOptionManager = js.native
 }
 
 object ICustomizable {
   @scala.inline
   def apply(events: IEventManager, options: IOptionManager): ICustomizable = {
     val __obj = js.Dynamic.literal(events = events.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ICustomizable]
   }
+  @scala.inline
+  implicit class ICustomizableOps[Self <: ICustomizable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOptions(value: IOptionManager): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

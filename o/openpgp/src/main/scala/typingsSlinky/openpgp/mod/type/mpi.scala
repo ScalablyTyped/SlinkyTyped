@@ -25,7 +25,7 @@ object mpi extends js.Object {
       * @param endian Endianness of the data; 'be' for big-endian or 'le' for little-endian
       * @returns Length of data read
       */
-    def read(input: scala.scalajs.js.typedarray.Uint8Array, endian: String): Integer = js.native
+    def read(input: js.typedarray.Uint8Array, endian: String): Integer = js.native
     /**
       * Converts the mpi object to a bytes as specified in
       * {@link https://tools.ietf.org/html/rfc4880#section-3.2|RFC4880 3.2}
@@ -33,7 +33,7 @@ object mpi extends js.Object {
       * @param length Length of the data part of the MPI
       * @returns mpi Byte representation
       */
-    def write(endian: String, length: Integer): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def write(endian: String, length: Integer): js.typedarray.Uint8Array = js.native
   }
   
 }

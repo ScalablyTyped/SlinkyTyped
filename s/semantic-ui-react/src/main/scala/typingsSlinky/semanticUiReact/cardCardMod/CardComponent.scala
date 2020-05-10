@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.cardCardMod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.semanticUiReact.cardContentMod.CardContentProps
 import typingsSlinky.semanticUiReact.cardDescriptionMod.CardDescriptionProps
 import typingsSlinky.semanticUiReact.cardGroupMod.CardGroupProps
@@ -13,7 +12,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CardComponent extends ComponentClass[CardProps, ComponentState] {
+trait CardComponent
+  extends ComponentClass[CardProps, js.Object] {
   var Content: ReactComponentClass[CardContentProps] = js.native
   var Description: ReactComponentClass[CardDescriptionProps] = js.native
   var Group: ReactComponentClass[CardGroupProps] = js.native

@@ -25,36 +25,34 @@ trait RiskEventType extends js.Object
 
 object RiskEventType {
   @scala.inline
-  def adminConfirmedUserCompromised: typingsSlinky.microsoftGraph.microsoftGraphStrings.adminConfirmedUserCompromised = this.cast("adminConfirmedUserCompromised")
+  def adminConfirmedUserCompromised: typingsSlinky.microsoftGraph.microsoftGraphStrings.adminConfirmedUserCompromised = "adminConfirmedUserCompromised".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.adminConfirmedUserCompromised]
   @scala.inline
-  def anonymizedIPAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.anonymizedIPAddress = this.cast("anonymizedIPAddress")
+  def anonymizedIPAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.anonymizedIPAddress = "anonymizedIPAddress".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.anonymizedIPAddress]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def generic: typingsSlinky.microsoftGraph.microsoftGraphStrings.generic = "generic".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.generic]
   @scala.inline
-  def generic: typingsSlinky.microsoftGraph.microsoftGraphStrings.generic = this.cast("generic")
+  def investigationsThreatIntelligence: typingsSlinky.microsoftGraph.microsoftGraphStrings.investigationsThreatIntelligence = "investigationsThreatIntelligence".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.investigationsThreatIntelligence]
   @scala.inline
-  def investigationsThreatIntelligence: typingsSlinky.microsoftGraph.microsoftGraphStrings.investigationsThreatIntelligence = this.cast("investigationsThreatIntelligence")
+  def investigationsThreatIntelligenceSigninLinked: typingsSlinky.microsoftGraph.microsoftGraphStrings.investigationsThreatIntelligenceSigninLinked = "investigationsThreatIntelligenceSigninLinked".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.investigationsThreatIntelligenceSigninLinked]
   @scala.inline
-  def investigationsThreatIntelligenceSigninLinked: typingsSlinky.microsoftGraph.microsoftGraphStrings.investigationsThreatIntelligenceSigninLinked = this.cast("investigationsThreatIntelligenceSigninLinked")
+  def leakedCredentials: typingsSlinky.microsoftGraph.microsoftGraphStrings.leakedCredentials = "leakedCredentials".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.leakedCredentials]
   @scala.inline
-  def leakedCredentials: typingsSlinky.microsoftGraph.microsoftGraphStrings.leakedCredentials = this.cast("leakedCredentials")
+  def maliciousIPAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.maliciousIPAddress = "maliciousIPAddress".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.maliciousIPAddress]
   @scala.inline
-  def maliciousIPAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.maliciousIPAddress = this.cast("maliciousIPAddress")
+  def maliciousIPAddressValidCredentialsBlockedIP: typingsSlinky.microsoftGraph.microsoftGraphStrings.maliciousIPAddressValidCredentialsBlockedIP = "maliciousIPAddressValidCredentialsBlockedIP".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.maliciousIPAddressValidCredentialsBlockedIP]
   @scala.inline
-  def maliciousIPAddressValidCredentialsBlockedIP: typingsSlinky.microsoftGraph.microsoftGraphStrings.maliciousIPAddressValidCredentialsBlockedIP = this.cast("maliciousIPAddressValidCredentialsBlockedIP")
+  def malwareInfectedIPAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.malwareInfectedIPAddress = "malwareInfectedIPAddress".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.malwareInfectedIPAddress]
   @scala.inline
-  def malwareInfectedIPAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.malwareInfectedIPAddress = this.cast("malwareInfectedIPAddress")
+  def mcasImpossibleTravel: typingsSlinky.microsoftGraph.microsoftGraphStrings.mcasImpossibleTravel = "mcasImpossibleTravel".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.mcasImpossibleTravel]
   @scala.inline
-  def mcasImpossibleTravel: typingsSlinky.microsoftGraph.microsoftGraphStrings.mcasImpossibleTravel = this.cast("mcasImpossibleTravel")
+  def mcasSuspiciousInboxManipulationRules: typingsSlinky.microsoftGraph.microsoftGraphStrings.mcasSuspiciousInboxManipulationRules = "mcasSuspiciousInboxManipulationRules".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.mcasSuspiciousInboxManipulationRules]
   @scala.inline
-  def mcasSuspiciousInboxManipulationRules: typingsSlinky.microsoftGraph.microsoftGraphStrings.mcasSuspiciousInboxManipulationRules = this.cast("mcasSuspiciousInboxManipulationRules")
+  def suspiciousIPAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.suspiciousIPAddress = "suspiciousIPAddress".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.suspiciousIPAddress]
   @scala.inline
-  def suspiciousIPAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.suspiciousIPAddress = this.cast("suspiciousIPAddress")
+  def unfamiliarFeatures: typingsSlinky.microsoftGraph.microsoftGraphStrings.unfamiliarFeatures = "unfamiliarFeatures".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unfamiliarFeatures]
   @scala.inline
-  def unfamiliarFeatures: typingsSlinky.microsoftGraph.microsoftGraphStrings.unfamiliarFeatures = this.cast("unfamiliarFeatures")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
   @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
-  @scala.inline
-  def unlikelyTravel: typingsSlinky.microsoftGraph.microsoftGraphStrings.unlikelyTravel = this.cast("unlikelyTravel")
+  def unlikelyTravel: typingsSlinky.microsoftGraph.microsoftGraphStrings.unlikelyTravel = "unlikelyTravel".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unlikelyTravel]
 }
 

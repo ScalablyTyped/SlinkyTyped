@@ -50,28 +50,125 @@ trait CreateCommitInput extends js.Object {
 
 object CreateCommitInput {
   @scala.inline
-  def apply(
-    branchName: BranchName,
-    repositoryName: RepositoryName,
-    authorName: Name = null,
-    commitMessage: Message = null,
-    deleteFiles: DeleteFileEntries = null,
-    email: Email = null,
-    keepEmptyFolders: js.UndefOr[Boolean] = js.undefined,
-    parentCommitId: CommitId = null,
-    putFiles: PutFileEntries = null,
-    setFileModes: SetFileModeEntries = null
-  ): CreateCommitInput = {
+  def apply(branchName: BranchName, repositoryName: RepositoryName): CreateCommitInput = {
     val __obj = js.Dynamic.literal(branchName = branchName.asInstanceOf[js.Any], repositoryName = repositoryName.asInstanceOf[js.Any])
-    if (authorName != null) __obj.updateDynamic("authorName")(authorName.asInstanceOf[js.Any])
-    if (commitMessage != null) __obj.updateDynamic("commitMessage")(commitMessage.asInstanceOf[js.Any])
-    if (deleteFiles != null) __obj.updateDynamic("deleteFiles")(deleteFiles.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepEmptyFolders)) __obj.updateDynamic("keepEmptyFolders")(keepEmptyFolders.asInstanceOf[js.Any])
-    if (parentCommitId != null) __obj.updateDynamic("parentCommitId")(parentCommitId.asInstanceOf[js.Any])
-    if (putFiles != null) __obj.updateDynamic("putFiles")(putFiles.asInstanceOf[js.Any])
-    if (setFileModes != null) __obj.updateDynamic("setFileModes")(setFileModes.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCommitInput]
   }
+  @scala.inline
+  implicit class CreateCommitInputOps[Self <: CreateCommitInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBranchName(value: BranchName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branchName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepositoryName(value: RepositoryName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthorName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommitMessage(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommitMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteFiles(value: DeleteFileEntries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteFiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: Email): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepEmptyFolders(value: KeepEmptyFolders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepEmptyFolders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepEmptyFolders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepEmptyFolders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentCommitId(value: CommitId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentCommitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentCommitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentCommitId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPutFiles(value: PutFileEntries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("putFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPutFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("putFiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetFileModes(value: SetFileModeEntries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFileModes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetFileModes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFileModes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

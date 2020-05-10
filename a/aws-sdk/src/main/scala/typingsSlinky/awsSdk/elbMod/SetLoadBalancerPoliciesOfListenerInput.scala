@@ -24,8 +24,33 @@ object SetLoadBalancerPoliciesOfListenerInput {
   @scala.inline
   def apply(LoadBalancerName: AccessPointName, LoadBalancerPort: AccessPointPort, PolicyNames: PolicyNames): SetLoadBalancerPoliciesOfListenerInput = {
     val __obj = js.Dynamic.literal(LoadBalancerName = LoadBalancerName.asInstanceOf[js.Any], LoadBalancerPort = LoadBalancerPort.asInstanceOf[js.Any], PolicyNames = PolicyNames.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SetLoadBalancerPoliciesOfListenerInput]
   }
+  @scala.inline
+  implicit class SetLoadBalancerPoliciesOfListenerInputOps[Self <: SetLoadBalancerPoliciesOfListenerInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadBalancerName(value: AccessPointName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadBalancerPort(value: AccessPointPort): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolicyNames(value: PolicyNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

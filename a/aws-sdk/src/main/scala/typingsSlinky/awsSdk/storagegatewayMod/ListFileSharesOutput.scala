@@ -22,12 +22,53 @@ trait ListFileSharesOutput extends js.Object {
 
 object ListFileSharesOutput {
   @scala.inline
-  def apply(FileShareInfoList: FileShareInfoList = null, Marker: Marker = null, NextMarker: Marker = null): ListFileSharesOutput = {
+  def apply(): ListFileSharesOutput = {
     val __obj = js.Dynamic.literal()
-    if (FileShareInfoList != null) __obj.updateDynamic("FileShareInfoList")(FileShareInfoList.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListFileSharesOutput]
   }
+  @scala.inline
+  implicit class ListFileSharesOutputOps[Self <: ListFileSharesOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileShareInfoList(value: FileShareInfoList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareInfoList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileShareInfoList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileShareInfoList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextMarker(value: Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -34,30 +34,28 @@ trait ErrorCode extends js.Object
 
 object ErrorCode {
   @scala.inline
-  def FB_NOT_DEFAULT: `FB not default` = this.cast("FB not default")
+  def FB_NOT_DEFAULT: `FB not default` = ("FB not default").asInstanceOf[`FB not default`]
   @scala.inline
-  def INVALID_ATTRIBUTE_NAME: `invalid attribute name` = this.cast("invalid attribute name")
+  def INVALID_ATTRIBUTE_NAME: `invalid attribute name` = ("invalid attribute name").asInstanceOf[`invalid attribute name`]
   @scala.inline
-  def INVALID_ATTRIBUTE_VALUE: `invalid attribute value` = this.cast("invalid attribute value")
+  def INVALID_ATTRIBUTE_VALUE: `invalid attribute value` = ("invalid attribute value").asInstanceOf[`invalid attribute value`]
   @scala.inline
-  def INVALID_CC_LOG: `invalid cc log` = this.cast("invalid cc log")
+  def INVALID_CC_LOG: `invalid cc log` = ("invalid cc log").asInstanceOf[`invalid cc log`]
   @scala.inline
-  def INVALID_CUSTOM_METRIC_NAME: `invalide custom metric name` = this.cast("invalide custom metric name")
+  def INVALID_CUSTOM_METRIC_NAME: `invalide custom metric name` = ("invalide custom metric name").asInstanceOf[`invalide custom metric name`]
   @scala.inline
-  def NO_API_KEY: `no api key` = this.cast("no api key")
+  def NO_API_KEY: `no api key` = ("no api key").asInstanceOf[`no api key`]
   @scala.inline
-  def NO_APP_ID: `no app id` = this.cast("no app id")
+  def NO_APP_ID: `no app id` = ("no app id").asInstanceOf[`no app id`]
   @scala.inline
-  def NO_PROJECT_ID: `no project id` = this.cast("no project id")
+  def NO_PROJECT_ID: `no project id` = ("no project id").asInstanceOf[`no project id`]
   @scala.inline
-  def NO_WINDOW: `no window` = this.cast("no window")
+  def NO_WINDOW: `no window` = ("no window").asInstanceOf[`no window`]
   @scala.inline
-  def RC_NOT_OK: `RC response not ok` = this.cast("RC response not ok")
+  def RC_NOT_OK: `RC response not ok` = ("RC response not ok").asInstanceOf[`RC response not ok`]
   @scala.inline
-  def TRACE_STARTED_BEFORE: `trace started` = this.cast("trace started")
+  def TRACE_STARTED_BEFORE: `trace started` = ("trace started").asInstanceOf[`trace started`]
   @scala.inline
-  def TRACE_STOPPED_BEFORE: `trace stopped` = this.cast("trace stopped")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRACE_STOPPED_BEFORE: `trace stopped` = ("trace stopped").asInstanceOf[`trace stopped`]
 }
 

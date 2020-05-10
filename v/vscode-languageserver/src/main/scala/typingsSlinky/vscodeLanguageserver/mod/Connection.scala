@@ -62,7 +62,7 @@ trait Connection[PConsole, PTracer, PTelemetry, PClient, PWindow, PWorkspace] ex
   /**
     * A proxy to send trace events to the client.
     */
-  var tracer: typingsSlinky.vscodeJsonrpc.mod.Tracer with PTracer = js.native
+  var tracer: Tracer with PTracer = js.native
   /**
     * A proxy for VSCode's window. See [RemoteWindow](#RemoteWindow)
     */

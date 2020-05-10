@@ -1,15 +1,17 @@
 package typingsSlinky.reactBurgerMenu.components
 
+import typingsSlinky.reactBurgerMenu.mod.Props
 import typingsSlinky.reactBurgerMenu.mod.elastic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Elastic extends SharedApply_Props1553393975[elastic] {
+object Elastic {
   @JSImport("react-burger-menu", "elastic")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: Props): SharedBuilder_Props_1590065578[elastic] = new SharedBuilder_Props_1590065578[elastic](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Elastic.type): SharedBuilder_Props_1590065578[elastic] = new SharedBuilder_Props_1590065578[elastic](js.Array(this.component, js.Dictionary.empty))()
 }
 

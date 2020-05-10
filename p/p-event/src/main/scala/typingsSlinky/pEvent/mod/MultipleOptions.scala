@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MultipleOptions[EmittedType /* <: js.Array[_] */] extends Options[EmittedType] {
   /**
   		The number of times the event needs to be emitted before the promise resolves.
   		*/
-  val count: Double
+  val count: Double = js.native
   /**
   		Whether to resolve the promise immediately. Emitting one of the `rejectionEvents` won't throw an error.
   		__Note__: The returned array will be mutated when an event is emitted.
@@ -36,26 +37,40 @@ trait MultipleOptions[EmittedType /* <: js.Array[_] */] extends Options[EmittedT
   		//=> ['Jack', 'Mark']
   		```
   		*/
-  val resolveImmediately: js.UndefOr[Boolean] = js.undefined
+  val resolveImmediately: js.UndefOr[Boolean] = js.native
 }
 
 object MultipleOptions {
   @scala.inline
-  def apply[EmittedType /* <: js.Array[_] */](
-    count: Double,
-    filter: EmittedType => Boolean = null,
-    multiArgs: js.UndefOr[Boolean] = js.undefined,
-    rejectionEvents: js.Array[String | js.Symbol] = null,
-    resolveImmediately: js.UndefOr[Boolean] = js.undefined,
-    timeout: Int | Double = null
-  ): MultipleOptions[EmittedType] = {
+  def apply[EmittedType](count: Double): MultipleOptions[EmittedType] = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
-    if (!js.isUndefined(multiArgs)) __obj.updateDynamic("multiArgs")(multiArgs.asInstanceOf[js.Any])
-    if (rejectionEvents != null) __obj.updateDynamic("rejectionEvents")(rejectionEvents.asInstanceOf[js.Any])
-    if (!js.isUndefined(resolveImmediately)) __obj.updateDynamic("resolveImmediately")(resolveImmediately.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultipleOptions[EmittedType]]
   }
+  @scala.inline
+  implicit class MultipleOptionsOps[Self[emittedtype] <: MultipleOptions[emittedtype], EmittedType] (val x: Self[EmittedType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[EmittedType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[EmittedType]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[EmittedType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[EmittedType] with Other]
+    @scala.inline
+    def withCount(value: Double): Self[EmittedType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResolveImmediately(value: Boolean): Self[EmittedType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveImmediately")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolveImmediately: Self[EmittedType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveImmediately")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

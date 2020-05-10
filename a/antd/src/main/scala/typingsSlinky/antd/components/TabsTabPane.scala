@@ -1,14 +1,16 @@
 package typingsSlinky.antd.components
 
+import typingsSlinky.antd.tabsMod.TabPaneProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabsTabPane extends SharedApply_TabPaneProps_628754951 {
+object TabsTabPane {
   @JSImport("antd", "Tabs.TabPane")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TabPaneProps): SharedBuilder_TabPaneProps_266265111 = new SharedBuilder_TabPaneProps_266265111(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TabsTabPane.type): SharedBuilder_TabPaneProps_266265111 = new SharedBuilder_TabPaneProps_266265111(js.Array(this.component, js.Dictionary.empty))()
 }
 

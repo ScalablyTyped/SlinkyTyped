@@ -30,18 +30,65 @@ trait CreateAccessPointRequest extends js.Object {
 
 object CreateAccessPointRequest {
   @scala.inline
-  def apply(
-    ClientToken: ClientToken,
-    FileSystemId: FileSystemId,
-    PosixUser: PosixUser = null,
-    RootDirectory: RootDirectory = null,
-    Tags: Tags = null
-  ): CreateAccessPointRequest = {
+  def apply(ClientToken: ClientToken, FileSystemId: FileSystemId): CreateAccessPointRequest = {
     val __obj = js.Dynamic.literal(ClientToken = ClientToken.asInstanceOf[js.Any], FileSystemId = FileSystemId.asInstanceOf[js.Any])
-    if (PosixUser != null) __obj.updateDynamic("PosixUser")(PosixUser.asInstanceOf[js.Any])
-    if (RootDirectory != null) __obj.updateDynamic("RootDirectory")(RootDirectory.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAccessPointRequest]
   }
+  @scala.inline
+  implicit class CreateAccessPointRequestOps[Self <: CreateAccessPointRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientToken(value: ClientToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileSystemId(value: FileSystemId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPosixUser(value: PosixUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PosixUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosixUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PosixUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootDirectory(value: RootDirectory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RootDirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

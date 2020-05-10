@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TextTrackList
   extends EventTarget
-     with /* index */ NumberDictionary[TextTrack] {
-  @JSName(scala.scalajs.js.Symbol.iterator)
+     with /* index */ NumberDictionary[org.scalajs.dom.raw.TextTrack] {
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.TextTrack]] = js.native
   val length: Double = js.native
   var onaddtrack: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _]) | Null = js.native
@@ -83,7 +83,7 @@ trait TextTrackList
   def removeEventListener_addtrack(
     `type`: addtrack,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -97,7 +97,7 @@ trait TextTrackList
   def removeEventListener_change(
     `type`: change,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_removetrack(
@@ -114,11 +114,12 @@ trait TextTrackList
   def removeEventListener_removetrack(
     `type`: removetrack,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("TextTrackList")
 @js.native
-object TextTrackList extends Instantiable0[TextTrackList]
+object TextTrackList
+  extends Instantiable0[org.scalajs.dom.raw.TextTrackList]
 

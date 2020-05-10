@@ -23,11 +23,41 @@ trait SchemaListDicomStoresResponse extends js.Object {
 
 object SchemaListDicomStoresResponse {
   @scala.inline
-  def apply(dicomStores: js.Array[SchemaDicomStore] = null, nextPageToken: String = null): SchemaListDicomStoresResponse = {
+  def apply(): SchemaListDicomStoresResponse = {
     val __obj = js.Dynamic.literal()
-    if (dicomStores != null) __obj.updateDynamic("dicomStores")(dicomStores.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListDicomStoresResponse]
   }
+  @scala.inline
+  implicit class SchemaListDicomStoresResponseOps[Self <: SchemaListDicomStoresResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDicomStores(value: js.Array[SchemaDicomStore]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dicomStores")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDicomStores: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dicomStores")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

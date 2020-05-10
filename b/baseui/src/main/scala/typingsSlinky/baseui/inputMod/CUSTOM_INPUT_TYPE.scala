@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CUSTOM_INPUT_TYPE extends js.Object {
-  var textarea: typingsSlinky.baseui.baseuiStrings.textarea
+  var textarea: typingsSlinky.baseui.baseuiStrings.textarea = js.native
 }
 
 @JSImport("baseui/input", "CUSTOM_INPUT_TYPE")

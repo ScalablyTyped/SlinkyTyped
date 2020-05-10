@@ -28,6 +28,6 @@ class SortedMap[K, V] protected () extends js.Object {
   def minKey(): K | Null = js.native
   def remove(key: K): SortedMap[K, V] = js.native
   def reverseTraversal[T](action: js.Function2[/* k */ K, /* v */ V, T]): T = js.native
-  def size(): Double = js.native
+  def size: Double = js.native
 }
 

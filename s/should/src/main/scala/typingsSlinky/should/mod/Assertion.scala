@@ -1,7 +1,5 @@
 package typingsSlinky.should.mod
 
-import typingsSlinky.std.Error
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -116,32 +114,32 @@ trait Assertion extends js.Object {
   def `match`(obj: js.Object): this.type = js.native
   def `match`(obj: js.Object, description: String): this.type = js.native
   // match
-  def `match`(obj: RegExp): this.type = js.native
-  def `match`(obj: RegExp, description: String): this.type = js.native
+  def `match`(obj: js.RegExp): this.type = js.native
+  def `match`(obj: js.RegExp, description: String): this.type = js.native
   def matchAny(obj: js.Function2[/* value */ js.Any, /* key */ js.Any, Boolean | Unit]): this.type = js.native
   def matchAny(obj: js.Function2[/* value */ js.Any, /* key */ js.Any, Boolean | Unit], description: String): this.type = js.native
   def matchAny(obj: js.Object): this.type = js.native
   def matchAny(obj: js.Object, description: String): this.type = js.native
-  def matchAny(obj: RegExp): this.type = js.native
-  def matchAny(obj: RegExp, description: String): this.type = js.native
+  def matchAny(obj: js.RegExp): this.type = js.native
+  def matchAny(obj: js.RegExp, description: String): this.type = js.native
   def matchEach(obj: js.Function2[/* value */ js.Any, /* key */ js.Any, Boolean | Unit]): this.type = js.native
   def matchEach(obj: js.Function2[/* value */ js.Any, /* key */ js.Any, Boolean | Unit], description: String): this.type = js.native
   def matchEach(obj: js.Object): this.type = js.native
   def matchEach(obj: js.Object, description: String): this.type = js.native
-  def matchEach(obj: RegExp): this.type = js.native
-  def matchEach(obj: RegExp, description: String): this.type = js.native
+  def matchEach(obj: js.RegExp): this.type = js.native
+  def matchEach(obj: js.RegExp, description: String): this.type = js.native
   def matchEvery(obj: js.Function2[/* value */ js.Any, /* key */ js.Any, Boolean | Unit]): this.type = js.native
   def matchEvery(obj: js.Function2[/* value */ js.Any, /* key */ js.Any, Boolean | Unit], description: String): this.type = js.native
   def matchEvery(obj: js.Object): this.type = js.native
   def matchEvery(obj: js.Object, description: String): this.type = js.native
-  def matchEvery(obj: RegExp): this.type = js.native
-  def matchEvery(obj: RegExp, description: String): this.type = js.native
+  def matchEvery(obj: js.RegExp): this.type = js.native
+  def matchEvery(obj: js.RegExp, description: String): this.type = js.native
   def matchSome(obj: js.Function2[/* value */ js.Any, /* key */ js.Any, Boolean | Unit]): this.type = js.native
   def matchSome(obj: js.Function2[/* value */ js.Any, /* key */ js.Any, Boolean | Unit], description: String): this.type = js.native
   def matchSome(obj: js.Object): this.type = js.native
   def matchSome(obj: js.Object, description: String): this.type = js.native
-  def matchSome(obj: RegExp): this.type = js.native
-  def matchSome(obj: RegExp, description: String): this.type = js.native
+  def matchSome(obj: js.RegExp): this.type = js.native
+  def matchSome(obj: js.RegExp, description: String): this.type = js.native
   def `null`(): this.type = js.native
   def ok(): this.type = js.native
   def oneOf(obj: js.Array[_]): this.type = js.native
@@ -160,10 +158,10 @@ trait Assertion extends js.Object {
   def rejected(): js.Promise[_] = js.native
   def rejectedWith(msg: String): js.Promise[_] = js.native
   def rejectedWith(msg: String, properties: js.Object): js.Promise[_] = js.native
-  def rejectedWith(msg: Error): js.Promise[_] = js.native
-  def rejectedWith(msg: Error, properties: js.Object): js.Promise[_] = js.native
-  def rejectedWith(msg: RegExp): js.Promise[_] = js.native
-  def rejectedWith(msg: RegExp, properties: js.Object): js.Promise[_] = js.native
+  def rejectedWith(msg: js.Error): js.Promise[_] = js.native
+  def rejectedWith(msg: js.Error, properties: js.Object): js.Promise[_] = js.native
+  def rejectedWith(msg: js.RegExp): js.Promise[_] = js.native
+  def rejectedWith(msg: js.RegExp, properties: js.Object): js.Promise[_] = js.native
   def rejectedWith(properties: js.Object): js.Promise[_] = js.native
   def resolved(): js.Promise[_] = js.native
   def resolvedWith(obj: js.Any): js.Promise[_] = js.native
@@ -177,8 +175,8 @@ trait Assertion extends js.Object {
   def `throw`(msg: String, properties: js.Object): this.type = js.native
   def `throw`(msg: js.Function): this.type = js.native
   def `throw`(msg: js.Function, properties: js.Object): this.type = js.native
-  def `throw`(msg: RegExp): this.type = js.native
-  def `throw`(msg: RegExp, properties: js.Object): this.type = js.native
+  def `throw`(msg: js.RegExp): this.type = js.native
+  def `throw`(msg: js.RegExp, properties: js.Object): this.type = js.native
   def `throw`(properties: js.Object): this.type = js.native
   //TODO how to express generators???
   def throwError(): this.type = js.native
@@ -186,8 +184,8 @@ trait Assertion extends js.Object {
   def throwError(msg: String, properties: js.Object): this.type = js.native
   def throwError(msg: js.Function): this.type = js.native
   def throwError(msg: js.Function, properties: js.Object): this.type = js.native
-  def throwError(msg: RegExp): this.type = js.native
-  def throwError(msg: RegExp, properties: js.Object): this.type = js.native
+  def throwError(msg: js.RegExp): this.type = js.native
+  def throwError(msg: js.RegExp, properties: js.Object): this.type = js.native
   def throwError(properties: js.Object): this.type = js.native
   // bool
   def `true`(): this.type = js.native

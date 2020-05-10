@@ -22,16 +22,53 @@ trait DailyVolume extends js.Object {
 
 object DailyVolume {
   @scala.inline
-  def apply(
-    DomainIspPlacements: DomainIspPlacements = null,
-    StartDate: js.Date = null,
-    VolumeStatistics: VolumeStatistics = null
-  ): DailyVolume = {
+  def apply(): DailyVolume = {
     val __obj = js.Dynamic.literal()
-    if (DomainIspPlacements != null) __obj.updateDynamic("DomainIspPlacements")(DomainIspPlacements.asInstanceOf[js.Any])
-    if (StartDate != null) __obj.updateDynamic("StartDate")(StartDate.asInstanceOf[js.Any])
-    if (VolumeStatistics != null) __obj.updateDynamic("VolumeStatistics")(VolumeStatistics.asInstanceOf[js.Any])
     __obj.asInstanceOf[DailyVolume]
   }
+  @scala.inline
+  implicit class DailyVolumeOps[Self <: DailyVolume] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainIspPlacements(value: DomainIspPlacements): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainIspPlacements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainIspPlacements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainIspPlacements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeStatistics(value: VolumeStatistics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeStatistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeStatistics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeStatistics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

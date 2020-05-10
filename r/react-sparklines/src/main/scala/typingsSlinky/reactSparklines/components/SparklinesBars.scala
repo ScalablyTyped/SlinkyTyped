@@ -1,11 +1,9 @@
 package typingsSlinky.reactSparklines.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactSVGElement
 import typingsSlinky.reactSparklines.mod.Point
 import typingsSlinky.reactSparklines.mod.SparklinesBarsProps
@@ -13,32 +11,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SparklinesBars
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactSparklines.mod.SparklinesBars] {
+object SparklinesBars {
   @JSImport("react-sparklines", "SparklinesBars")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    barWidth: Int | Double = null,
-    height: Int | Double = null,
-    margin: Int | Double = null,
-    onMouseMove: (/* p */ Point, /* event */ SyntheticMouseEvent[ReactSVGElement]) => Unit = null,
-    points: js.Array[Point] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactSparklines.mod.SparklinesBars] = {
-    val __obj = js.Dynamic.literal()
-    if (barWidth != null) __obj.updateDynamic("barWidth")(barWidth.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction2(onMouseMove))
-    if (points != null) __obj.updateDynamic("points")(points.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactSparklines.mod.SparklinesBars] {
+    @scala.inline
+    def barWidth(value: Double): this.type = set("barWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Double): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMouseMove(value: (/* p */ Point, /* event */ SyntheticMouseEvent[ReactSVGElement]) => Unit): this.type = set("onMouseMove", js.Any.fromFunction2(value))
+    @scala.inline
+    def points(value: js.Array[Point]): this.type = set("points", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactSparklines.mod.SparklinesBars] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSparklines.mod.SparklinesBars](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SparklinesBarsProps
+  
+  def withProps(p: SparklinesBarsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SparklinesBars.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

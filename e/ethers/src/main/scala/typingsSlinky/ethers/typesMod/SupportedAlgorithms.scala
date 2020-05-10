@@ -12,10 +12,8 @@ trait SupportedAlgorithms extends js.Object
 
 object SupportedAlgorithms {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def sha256: typingsSlinky.ethers.ethersStrings.sha256 = "sha256".asInstanceOf[typingsSlinky.ethers.ethersStrings.sha256]
   @scala.inline
-  def sha256: typingsSlinky.ethers.ethersStrings.sha256 = this.cast("sha256")
-  @scala.inline
-  def sha512: typingsSlinky.ethers.ethersStrings.sha512 = this.cast("sha512")
+  def sha512: typingsSlinky.ethers.ethersStrings.sha512 = "sha512".asInstanceOf[typingsSlinky.ethers.ethersStrings.sha512]
 }
 

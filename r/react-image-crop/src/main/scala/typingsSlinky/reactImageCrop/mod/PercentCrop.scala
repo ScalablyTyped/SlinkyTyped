@@ -5,29 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PercentCrop extends Crop {
   @JSName("unit")
-  var unit_PercentCrop: js.UndefOr[Percentsign] = js.undefined
+  var unit_PercentCrop: js.UndefOr[Percentsign] = js.native
 }
 
 object PercentCrop {
   @scala.inline
-  def apply(
-    aspect: Int | Double = null,
-    height: Int | Double = null,
-    unit: Percentsign = null,
-    width: Int | Double = null,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): PercentCrop = {
+  def apply(): PercentCrop = {
     val __obj = js.Dynamic.literal()
-    if (aspect != null) __obj.updateDynamic("aspect")(aspect.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[PercentCrop]
   }
+  @scala.inline
+  implicit class PercentCropOps[Self <: PercentCrop] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUnit(value: Percentsign): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

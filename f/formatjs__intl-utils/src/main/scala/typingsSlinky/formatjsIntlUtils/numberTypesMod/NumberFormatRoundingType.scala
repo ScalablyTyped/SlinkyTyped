@@ -13,12 +13,10 @@ trait NumberFormatRoundingType extends js.Object
 
 object NumberFormatRoundingType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def compactRounding: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.compactRounding = "compactRounding".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.compactRounding]
   @scala.inline
-  def compactRounding: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.compactRounding = this.cast("compactRounding")
+  def fractionDigits: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.fractionDigits = "fractionDigits".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.fractionDigits]
   @scala.inline
-  def fractionDigits: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.fractionDigits = this.cast("fractionDigits")
-  @scala.inline
-  def significantDigits: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.significantDigits = this.cast("significantDigits")
+  def significantDigits: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.significantDigits = "significantDigits".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.significantDigits]
 }
 

@@ -4,25 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BeaconAttachment extends js.Object {
   /**
     * Resource name of this attachment. Attachment names have the format:
     * <code>beacons/<var>beacon_id</var>/attachments/<var>attachment_id</var></code>.
     * Leave this empty on creation.
     */
-  var attachmentName: js.UndefOr[String] = js.undefined
+  var attachmentName: js.UndefOr[String] = js.native
   /**
     * The UTC time when this attachment was created, in milliseconds since the
     * UNIX epoch.
     */
-  var creationTimeMs: js.UndefOr[String] = js.undefined
+  var creationTimeMs: js.UndefOr[String] = js.native
   /**
     * An opaque data container for client-provided data. Must be
     * [base64](http://tools.ietf.org/html/rfc4648#section-4) encoded in HTTP
     * requests, and will be so encoded (with padding) in responses.
     * Required.
     */
-  var data: js.UndefOr[String] = js.undefined
+  var data: js.UndefOr[String] = js.native
   /**
     * The distance away from the beacon at which this attachment should be
     * delivered to a mobile app.
@@ -42,7 +43,7 @@ trait BeaconAttachment extends js.Object {
     *
     * Negative values are invalid and return an error.
     */
-  var maxDistanceMeters: js.UndefOr[Double] = js.undefined
+  var maxDistanceMeters: js.UndefOr[Double] = js.native
   /**
     * Specifies what kind of attachment this is. Tells a client how to
     * interpret the `data` field. Format is <var>namespace/type</var>. Namespace
@@ -50,25 +51,82 @@ trait BeaconAttachment extends js.Object {
     * `data`, for use by the client when parsing the `data` field.
     * Required.
     */
-  var namespacedType: js.UndefOr[String] = js.undefined
+  var namespacedType: js.UndefOr[String] = js.native
 }
 
 object BeaconAttachment {
   @scala.inline
-  def apply(
-    attachmentName: String = null,
-    creationTimeMs: String = null,
-    data: String = null,
-    maxDistanceMeters: Int | Double = null,
-    namespacedType: String = null
-  ): BeaconAttachment = {
+  def apply(): BeaconAttachment = {
     val __obj = js.Dynamic.literal()
-    if (attachmentName != null) __obj.updateDynamic("attachmentName")(attachmentName.asInstanceOf[js.Any])
-    if (creationTimeMs != null) __obj.updateDynamic("creationTimeMs")(creationTimeMs.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (maxDistanceMeters != null) __obj.updateDynamic("maxDistanceMeters")(maxDistanceMeters.asInstanceOf[js.Any])
-    if (namespacedType != null) __obj.updateDynamic("namespacedType")(namespacedType.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeaconAttachment]
   }
+  @scala.inline
+  implicit class BeaconAttachmentOps[Self <: BeaconAttachment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachmentName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTimeMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimeMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTimeMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimeMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDistanceMeters(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDistanceMeters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDistanceMeters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDistanceMeters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespacedType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespacedType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespacedType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespacedType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

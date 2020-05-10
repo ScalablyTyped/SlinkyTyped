@@ -1,9 +1,9 @@
 package typingsSlinky.tingleJs.mod
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

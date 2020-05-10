@@ -13,12 +13,10 @@ trait InputGroupTypes extends js.Object
 
 object InputGroupTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def number: typingsSlinky.fundamentalReact.fundamentalReactStrings.number = "number".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.number]
   @scala.inline
-  def number: typingsSlinky.fundamentalReact.fundamentalReactStrings.number = this.cast("number")
+  def search: typingsSlinky.fundamentalReact.fundamentalReactStrings.search = "search".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.search]
   @scala.inline
-  def search: typingsSlinky.fundamentalReact.fundamentalReactStrings.search = this.cast("search")
-  @scala.inline
-  def text: typingsSlinky.fundamentalReact.fundamentalReactStrings.text = this.cast("text")
+  def text: typingsSlinky.fundamentalReact.fundamentalReactStrings.text = "text".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.text]
 }
 

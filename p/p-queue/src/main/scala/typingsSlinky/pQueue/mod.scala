@@ -5,6 +5,7 @@ import typingsSlinky.pQueue.optionsMod.Options
 import typingsSlinky.pQueue.optionsMod.QueueAddOptions
 import typingsSlinky.pQueue.pQueueStrings.active
 import typingsSlinky.pQueue.queueMod.Queue
+import typingsSlinky.pQueue.queueMod.RunFunction
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  trait PQueue[QueueType /* <: Queue[EnqueueOptionsType] */, EnqueueOptionsType /* <: QueueAddOptions */] extends ^[active] {
+  trait PQueue[QueueType /* <: Queue[RunFunction, EnqueueOptionsType] */, EnqueueOptionsType /* <: QueueAddOptions */] extends ^[active] {
     val _carryoverConcurrencyCount: js.Any = js.native
     var _concurrency: js.Any = js.native
     var _initializeIntervalIfNeeded: js.Any = js.native
@@ -43,8 +44,8 @@ object mod extends js.Object {
     var _timeout: js.UndefOr[js.Any] = js.native
     var _timeoutId: js.UndefOr[js.Any] = js.native
     var _tryToStartAnother: js.Any = js.native
-    /* private */ def _doesConcurrentAllowAnother(): js.Any = js.native
-    /* private */ def _doesIntervalAllowAnother(): js.Any = js.native
+    /* private */ def _doesConcurrentAllowAnother: js.Any = js.native
+    /* private */ def _doesIntervalAllowAnother: js.Any = js.native
     /**
       Adds a sync or async task to the queue. Always returns a promise.
       */
@@ -60,12 +61,12 @@ object mod extends js.Object {
       Clear the queue.
       */
     def clear(): Unit = js.native
-    def concurrency(): Double = js.native
+    def concurrency: Double = js.native
     def concurrency(newConcurrency: Double): js.Any = js.native
     /**
       Whether the queue is currently paused.
       */
-    def isPaused(): Boolean = js.native
+    def isPaused: Boolean = js.native
     /**
       Can be called multiple times. Useful if you for example add additional items at a later time.
       @returns A promise that settles when the queue becomes empty.
@@ -83,11 +84,16 @@ object mod extends js.Object {
     /**
       Number of pending promises.
       */
-    def pending(): Double = js.native
+    def pending: Double = js.native
     /**
       Size of the queue.
       */
-    def size(): Double = js.native
+    def size: Double = js.native
+    /**
+      Size of the queue, filtered by the given options.
+      For example, this can be used to find the number of items remaining in the queue with a specific priority level.
+      */
+    def sizeBy(options: Partial[EnqueueOptionsType]): Double = js.native
     /**
       Start (or resume) executing enqueued tasks within concurrency limit. No need to call this if queue is not paused (via `options.autoStart = false` or by `.pause()` method.)
       */
@@ -98,11 +104,11 @@ object mod extends js.Object {
       */
     def timeout(milliseconds: Double): js.Any = js.native
     @JSName("timeout")
-    def timeout_Union(): js.UndefOr[Double] = js.native
+    def timeout_Union: js.UndefOr[Double] = js.native
   }
   
   @js.native
-  class default[QueueType /* <: Queue[EnqueueOptionsType] */, EnqueueOptionsType /* <: QueueAddOptions */] () extends PQueue[QueueType, EnqueueOptionsType] {
+  class default[QueueType /* <: Queue[RunFunction, EnqueueOptionsType] */, EnqueueOptionsType /* <: QueueAddOptions */] () extends PQueue[QueueType, EnqueueOptionsType] {
     def this(options: Options[QueueType, EnqueueOptionsType]) = this()
   }
   

@@ -30,20 +30,77 @@ trait Termination extends js.Object {
 
 object Termination {
   @scala.inline
-  def apply(
-    CallingRegions: CallingRegionList = null,
-    CidrAllowedList: StringList = null,
-    CpsLimit: Int | Double = null,
-    DefaultPhoneNumber: E164PhoneNumber = null,
-    Disabled: js.UndefOr[scala.Boolean] = js.undefined
-  ): Termination = {
+  def apply(): Termination = {
     val __obj = js.Dynamic.literal()
-    if (CallingRegions != null) __obj.updateDynamic("CallingRegions")(CallingRegions.asInstanceOf[js.Any])
-    if (CidrAllowedList != null) __obj.updateDynamic("CidrAllowedList")(CidrAllowedList.asInstanceOf[js.Any])
-    if (CpsLimit != null) __obj.updateDynamic("CpsLimit")(CpsLimit.asInstanceOf[js.Any])
-    if (DefaultPhoneNumber != null) __obj.updateDynamic("DefaultPhoneNumber")(DefaultPhoneNumber.asInstanceOf[js.Any])
-    if (!js.isUndefined(Disabled)) __obj.updateDynamic("Disabled")(Disabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[Termination]
   }
+  @scala.inline
+  implicit class TerminationOps[Self <: Termination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallingRegions(value: CallingRegionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallingRegions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallingRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallingRegions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCidrAllowedList(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrAllowedList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidrAllowedList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrAllowedList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCpsLimit(value: CpsLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CpsLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCpsLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CpsLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultPhoneNumber(value: E164PhoneNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultPhoneNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultPhoneNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultPhoneNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Disabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

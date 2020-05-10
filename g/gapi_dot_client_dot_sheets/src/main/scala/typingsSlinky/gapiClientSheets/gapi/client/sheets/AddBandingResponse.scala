@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AddBandingResponse extends js.Object {
   /** The banded range that was added. */
-  var bandedRange: js.UndefOr[BandedRange] = js.undefined
+  var bandedRange: js.UndefOr[BandedRange] = js.native
 }
 
 object AddBandingResponse {
   @scala.inline
-  def apply(bandedRange: BandedRange = null): AddBandingResponse = {
+  def apply(): AddBandingResponse = {
     val __obj = js.Dynamic.literal()
-    if (bandedRange != null) __obj.updateDynamic("bandedRange")(bandedRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddBandingResponse]
   }
+  @scala.inline
+  implicit class AddBandingResponseOps[Self <: AddBandingResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBandedRange(value: BandedRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bandedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBandedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bandedRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.reactToggled.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactToggled.mod.ReactToggledProps
 import typingsSlinky.reactToggled.mod.TogglerStateAndHelpers
 import typingsSlinky.reactToggled.mod.default
@@ -12,27 +9,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactToggled
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactToggled {
   @JSImport("react-toggled", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    defaultOn: js.UndefOr[Boolean] = js.undefined,
-    on: js.UndefOr[Boolean] = js.undefined,
-    onToggle: (/* on */ Boolean, /* object */ TogglerStateAndHelpers) => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(defaultOn)) __obj.updateDynamic("defaultOn")(defaultOn.asInstanceOf[js.Any])
-    if (!js.isUndefined(on)) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
-    if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction2(onToggle))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def defaultOn(value: Boolean): this.type = set("defaultOn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def on(value: Boolean): this.type = set("on", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onToggle(value: (/* on */ Boolean, /* object */ TogglerStateAndHelpers) => Unit): this.type = set("onToggle", js.Any.fromFunction2(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactToggled.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ReactToggledProps
+  
+  def withProps(p: ReactToggledProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactToggled.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

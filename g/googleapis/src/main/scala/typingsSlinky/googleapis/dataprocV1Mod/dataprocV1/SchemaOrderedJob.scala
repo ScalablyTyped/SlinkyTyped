@@ -65,30 +65,137 @@ trait SchemaOrderedJob extends js.Object {
 
 object SchemaOrderedJob {
   @scala.inline
-  def apply(
-    hadoopJob: SchemaHadoopJob = null,
-    hiveJob: SchemaHiveJob = null,
-    labels: StringDictionary[String] = null,
-    pigJob: SchemaPigJob = null,
-    prerequisiteStepIds: js.Array[String] = null,
-    pysparkJob: SchemaPySparkJob = null,
-    scheduling: SchemaJobScheduling = null,
-    sparkJob: SchemaSparkJob = null,
-    sparkSqlJob: SchemaSparkSqlJob = null,
-    stepId: String = null
-  ): SchemaOrderedJob = {
+  def apply(): SchemaOrderedJob = {
     val __obj = js.Dynamic.literal()
-    if (hadoopJob != null) __obj.updateDynamic("hadoopJob")(hadoopJob.asInstanceOf[js.Any])
-    if (hiveJob != null) __obj.updateDynamic("hiveJob")(hiveJob.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (pigJob != null) __obj.updateDynamic("pigJob")(pigJob.asInstanceOf[js.Any])
-    if (prerequisiteStepIds != null) __obj.updateDynamic("prerequisiteStepIds")(prerequisiteStepIds.asInstanceOf[js.Any])
-    if (pysparkJob != null) __obj.updateDynamic("pysparkJob")(pysparkJob.asInstanceOf[js.Any])
-    if (scheduling != null) __obj.updateDynamic("scheduling")(scheduling.asInstanceOf[js.Any])
-    if (sparkJob != null) __obj.updateDynamic("sparkJob")(sparkJob.asInstanceOf[js.Any])
-    if (sparkSqlJob != null) __obj.updateDynamic("sparkSqlJob")(sparkSqlJob.asInstanceOf[js.Any])
-    if (stepId != null) __obj.updateDynamic("stepId")(stepId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrderedJob]
   }
+  @scala.inline
+  implicit class SchemaOrderedJobOps[Self <: SchemaOrderedJob] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHadoopJob(value: SchemaHadoopJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hadoopJob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHadoopJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hadoopJob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHiveJob(value: SchemaHiveJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiveJob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHiveJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiveJob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPigJob(value: SchemaPigJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pigJob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPigJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pigJob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrerequisiteStepIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prerequisiteStepIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrerequisiteStepIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prerequisiteStepIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPysparkJob(value: SchemaPySparkJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pysparkJob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPysparkJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pysparkJob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduling(value: SchemaJobScheduling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSparkJob(value: SchemaSparkJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sparkJob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSparkJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sparkJob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSparkSqlJob(value: SchemaSparkSqlJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sparkSqlJob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSparkSqlJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sparkSqlJob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

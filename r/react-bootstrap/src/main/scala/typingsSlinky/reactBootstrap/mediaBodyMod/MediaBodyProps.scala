@@ -2,24 +2,52 @@ package typingsSlinky.reactBootstrap.mediaBodyMod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MediaBodyProps extends ClassAttributes[MediaBody] {
-  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.native
 }
 
 object MediaBodyProps {
   @scala.inline
-  def apply(componentClass: ReactComponentClass[_] = null, key: Key = null, ref: LegacyRef[MediaBody] = null): MediaBodyProps = {
+  def apply(): MediaBodyProps = {
     val __obj = js.Dynamic.literal()
-    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaBodyProps]
   }
+  @scala.inline
+  implicit class MediaBodyPropsOps[Self <: MediaBodyProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponentClassFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponentClassComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponentClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

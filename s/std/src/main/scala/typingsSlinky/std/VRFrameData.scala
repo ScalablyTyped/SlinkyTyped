@@ -6,13 +6,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This WebVR API interface represents all the information needed to render a single frame of a VR scene; constructed by VRDisplay.getFrameData(). */
+@js.native
 trait VRFrameData extends js.Object {
-  val leftProjectionMatrix: scala.scalajs.js.typedarray.Float32Array
-  val leftViewMatrix: scala.scalajs.js.typedarray.Float32Array
-  val pose: VRPose
-  val rightProjectionMatrix: scala.scalajs.js.typedarray.Float32Array
-  val rightViewMatrix: scala.scalajs.js.typedarray.Float32Array
-  val timestamp: Double
+  val leftProjectionMatrix: js.typedarray.Float32Array = js.native
+  val leftViewMatrix: js.typedarray.Float32Array = js.native
+  val pose: VRPose = js.native
+  val rightProjectionMatrix: js.typedarray.Float32Array = js.native
+  val rightViewMatrix: js.typedarray.Float32Array = js.native
+  val timestamp: Double = js.native
 }
 
 @JSGlobal("VRFrameData")

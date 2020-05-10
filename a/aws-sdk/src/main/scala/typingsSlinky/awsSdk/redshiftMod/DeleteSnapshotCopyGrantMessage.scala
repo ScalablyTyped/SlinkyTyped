@@ -16,8 +16,21 @@ object DeleteSnapshotCopyGrantMessage {
   @scala.inline
   def apply(SnapshotCopyGrantName: String): DeleteSnapshotCopyGrantMessage = {
     val __obj = js.Dynamic.literal(SnapshotCopyGrantName = SnapshotCopyGrantName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteSnapshotCopyGrantMessage]
   }
+  @scala.inline
+  implicit class DeleteSnapshotCopyGrantMessageOps[Self <: DeleteSnapshotCopyGrantMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSnapshotCopyGrantName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotCopyGrantName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

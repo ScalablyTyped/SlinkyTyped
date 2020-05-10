@@ -1,9 +1,9 @@
 package typingsSlinky.rxjs
 
+import org.scalajs.dom.experimental.Request
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.rxjs.internalObservableMod.Observable
-import typingsSlinky.std.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

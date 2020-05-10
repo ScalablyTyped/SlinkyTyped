@@ -102,7 +102,7 @@ trait OpHandler extends js.Object {
   def buffer_bool[R /* <: Rank */](
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
     dtype: bool,
-    values: scala.scalajs.js.typedarray.Uint8Array
+    values: js.typedarray.Uint8Array
   ): TensorBuffer[R, bool] = js.native
   @JSName("buffer")
   def buffer_complex64[R /* <: Rank */](
@@ -113,7 +113,7 @@ trait OpHandler extends js.Object {
   def buffer_complex64[R /* <: Rank */](
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
     dtype: complex64,
-    values: scala.scalajs.js.typedarray.Float32Array
+    values: js.typedarray.Float32Array
   ): TensorBuffer[R, complex64] = js.native
   @JSName("buffer")
   def buffer_float32[R /* <: Rank */](
@@ -124,7 +124,7 @@ trait OpHandler extends js.Object {
   def buffer_float32[R /* <: Rank */](
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
     dtype: float32,
-    values: scala.scalajs.js.typedarray.Float32Array
+    values: js.typedarray.Float32Array
   ): TensorBuffer[R, float32] = js.native
   @JSName("buffer")
   def buffer_int32[R /* <: Rank */](
@@ -135,7 +135,7 @@ trait OpHandler extends js.Object {
   def buffer_int32[R /* <: Rank */](
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
     dtype: int32,
-    values: scala.scalajs.js.typedarray.Int32Array
+    values: js.typedarray.Int32Array
   ): TensorBuffer[R, int32] = js.native
   @JSName("buffer")
   def buffer_string[R /* <: Rank */](
@@ -410,8 +410,6 @@ trait OpHandler extends js.Object {
   def split[T /* <: Tensor[Rank] */](x: T, numOrSizeSplits: Double, axis: Double): js.Array[T] = js.native
   def sqrt[T /* <: Tensor[Rank] */](x: T): T = js.native
   def square[T /* <: Tensor[Rank] */](x: T): T = js.native
-  def squaredDifference[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: TensorLike): T = js.native
-  def squaredDifference[T /* <: Tensor[Rank] */](a: Tensor[Rank], b: Tensor[Rank]): T = js.native
   def squaredDifferenceStrict[T /* <: Tensor[Rank] */](a: T, b: T): T = js.native
   def squaredDifferenceStrict[T /* <: Tensor[Rank] */](a: T, b: TensorLike): T = js.native
   def squeeze[T /* <: Tensor[Rank] */](x: Tensor[Rank]): T = js.native

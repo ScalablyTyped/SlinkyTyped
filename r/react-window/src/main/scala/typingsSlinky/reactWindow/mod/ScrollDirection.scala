@@ -12,10 +12,8 @@ trait ScrollDirection extends js.Object
 
 object ScrollDirection {
   @scala.inline
-  def backward: typingsSlinky.reactWindow.reactWindowStrings.backward = this.cast("backward")
+  def backward: typingsSlinky.reactWindow.reactWindowStrings.backward = "backward".asInstanceOf[typingsSlinky.reactWindow.reactWindowStrings.backward]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def forward: typingsSlinky.reactWindow.reactWindowStrings.forward = this.cast("forward")
+  def forward: typingsSlinky.reactWindow.reactWindowStrings.forward = "forward".asInstanceOf[typingsSlinky.reactWindow.reactWindowStrings.forward]
 }
 

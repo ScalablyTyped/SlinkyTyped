@@ -2,10 +2,9 @@ package typingsSlinky.fundamentalReact
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import slinky.core.ReactComponentClass
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.SideNavDotList
 import typingsSlinky.fundamentalReact.sideNavMod.SideNavListProps
-import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.GetDerivedStateFromError
 import typingsSlinky.react.mod.GetDerivedStateFromProps
@@ -17,11 +16,11 @@ import scala.scalajs.js.annotation._
 /* Inlined react.react.ComponentClass<fundamental-react.fundamental-react/lib/SideNavigation/SideNav.SideNavListProps, react.react.ComponentState> & {  displayName  :'SideNav.List'} */
 @js.native
 trait ComponentClassSideNavList
-  extends Instantiable1[/* props */ SideNavListProps, Component[SideNavListProps, ComponentState, js.Any]]
+  extends Instantiable1[/* props */ SideNavListProps, ReactComponentClass[SideNavListProps]]
      with Instantiable2[
       /* props */ SideNavListProps, 
       /* context */ js.Any, 
-      Component[SideNavListProps, ComponentState, js.Any]
+      ReactComponentClass[SideNavListProps]
     ] {
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native
   var contextType: js.UndefOr[Context[_]] = js.native

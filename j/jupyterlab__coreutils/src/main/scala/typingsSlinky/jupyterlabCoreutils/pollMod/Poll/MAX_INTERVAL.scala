@@ -1,7 +1,6 @@
 package typingsSlinky.jupyterlabCoreutils.pollMod.Poll
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsNumbers.`2147483647`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,5 +13,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("@jupyterlab/coreutils/lib/poll", "Poll.MAX_INTERVAL")
 @js.native
-object MAX_INTERVAL extends TopLevel[`2147483647`]
+object MAX_INTERVAL extends TopLevel[/* 0 */ Double]
 

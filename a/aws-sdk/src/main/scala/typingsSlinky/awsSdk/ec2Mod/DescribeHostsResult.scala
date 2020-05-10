@@ -18,11 +18,41 @@ trait DescribeHostsResult extends js.Object {
 
 object DescribeHostsResult {
   @scala.inline
-  def apply(Hosts: HostList = null, NextToken: String = null): DescribeHostsResult = {
+  def apply(): DescribeHostsResult = {
     val __obj = js.Dynamic.literal()
-    if (Hosts != null) __obj.updateDynamic("Hosts")(Hosts.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeHostsResult]
   }
+  @scala.inline
+  implicit class DescribeHostsResultOps[Self <: DescribeHostsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHosts(value: HostList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hosts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHosts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hosts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

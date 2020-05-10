@@ -47,13 +47,13 @@ package object mod {
   type RouteOptionsSecure = scala.Boolean | typingsSlinky.hapiHapi.mod.RouteOptionsSecureObject
   type ServerAuthConfig = typingsSlinky.hapiHapi.mod.RouteOptionsAccess
   type ServerAuthScheme = js.Function2[
-    /* server */ typingsSlinky.hapiHapi.mod.Server, 
+    /* server */ typingsSlinky.hapiHapi.mod.Server_, 
     /* options */ js.UndefOr[typingsSlinky.hapiHapi.mod.ServerAuthSchemeOptions], 
     typingsSlinky.hapiHapi.mod.ServerAuthSchemeObject
   ]
   type ServerAuthSchemeOptions = js.Object
   type ServerEventsApplication = java.lang.String | typingsSlinky.hapiHapi.mod.ServerEventsApplicationObject | typingsSlinky.hapiPodium.mod.Podium
-  type ServerExtPointFunction = js.Function1[/* server */ typingsSlinky.hapiHapi.mod.Server, scala.Unit]
+  type ServerExtPointFunction = js.Function1[/* server */ typingsSlinky.hapiHapi.mod.Server_, scala.Unit]
   type ServerMethod = js.Function1[/* repeated */ js.Any, js.Any]
   type ServerMethods = typingsSlinky.hapiHapi.mod.Util.Dictionary[typingsSlinky.hapiHapi.mod.ServerMethod]
   type StartEventHandler = js.Function0[scala.Unit]

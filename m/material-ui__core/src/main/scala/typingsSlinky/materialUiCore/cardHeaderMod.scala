@@ -1,10 +1,9 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.cardHeaderCardHeaderMod.CardHeaderProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object cardHeaderMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[CardHeaderProps, ComponentState, js.Any] {
+    extends Component[CardHeaderProps, js.Object, js.Any] {
     def this(props: CardHeaderProps) = this()
     def this(props: CardHeaderProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[CardHeaderProps]]
+  object default extends TopLevel[ReactComponentClass[CardHeaderProps]]
   
 }
 

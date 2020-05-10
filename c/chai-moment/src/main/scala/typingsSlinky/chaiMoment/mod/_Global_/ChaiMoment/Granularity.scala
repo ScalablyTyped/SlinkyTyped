@@ -17,20 +17,18 @@ trait Granularity extends js.Object
 
 object Granularity {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.chaiMoment.chaiMomentStrings.day = "day".asInstanceOf[typingsSlinky.chaiMoment.chaiMomentStrings.day]
   @scala.inline
-  def day: typingsSlinky.chaiMoment.chaiMomentStrings.day = this.cast("day")
+  def hour: typingsSlinky.chaiMoment.chaiMomentStrings.hour = "hour".asInstanceOf[typingsSlinky.chaiMoment.chaiMomentStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.chaiMoment.chaiMomentStrings.hour = this.cast("hour")
+  def minute: typingsSlinky.chaiMoment.chaiMomentStrings.minute = "minute".asInstanceOf[typingsSlinky.chaiMoment.chaiMomentStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.chaiMoment.chaiMomentStrings.minute = this.cast("minute")
+  def month: typingsSlinky.chaiMoment.chaiMomentStrings.month = "month".asInstanceOf[typingsSlinky.chaiMoment.chaiMomentStrings.month]
   @scala.inline
-  def month: typingsSlinky.chaiMoment.chaiMomentStrings.month = this.cast("month")
+  def second: typingsSlinky.chaiMoment.chaiMomentStrings.second = "second".asInstanceOf[typingsSlinky.chaiMoment.chaiMomentStrings.second]
   @scala.inline
-  def second: typingsSlinky.chaiMoment.chaiMomentStrings.second = this.cast("second")
+  def week: typingsSlinky.chaiMoment.chaiMomentStrings.week = "week".asInstanceOf[typingsSlinky.chaiMoment.chaiMomentStrings.week]
   @scala.inline
-  def week: typingsSlinky.chaiMoment.chaiMomentStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.chaiMoment.chaiMomentStrings.year = this.cast("year")
+  def year: typingsSlinky.chaiMoment.chaiMomentStrings.year = "year".asInstanceOf[typingsSlinky.chaiMoment.chaiMomentStrings.year]
 }
 

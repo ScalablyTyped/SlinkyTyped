@@ -18,11 +18,41 @@ trait UiTemplateInfo extends js.Object {
 
 object UiTemplateInfo {
   @scala.inline
-  def apply(ContentSha256: TemplateContentSha256 = null, Url: TemplateUrl = null): UiTemplateInfo = {
+  def apply(): UiTemplateInfo = {
     val __obj = js.Dynamic.literal()
-    if (ContentSha256 != null) __obj.updateDynamic("ContentSha256")(ContentSha256.asInstanceOf[js.Any])
-    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[UiTemplateInfo]
   }
+  @scala.inline
+  implicit class UiTemplateInfoOps[Self <: UiTemplateInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentSha256(value: TemplateContentSha256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentSha256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentSha256: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentSha256")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: TemplateUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

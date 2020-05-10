@@ -1,6 +1,6 @@
 package typingsSlinky.p5.mod
 
-import typingsSlinky.std.AudioNode
+import org.scalajs.dom.raw.AudioNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

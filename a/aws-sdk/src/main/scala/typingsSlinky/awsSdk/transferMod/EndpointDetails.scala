@@ -26,18 +26,65 @@ trait EndpointDetails extends js.Object {
 
 object EndpointDetails {
   @scala.inline
-  def apply(
-    AddressAllocationIds: AddressAllocationIds = null,
-    SubnetIds: SubnetIds = null,
-    VpcEndpointId: VpcEndpointId = null,
-    VpcId: VpcId = null
-  ): EndpointDetails = {
+  def apply(): EndpointDetails = {
     val __obj = js.Dynamic.literal()
-    if (AddressAllocationIds != null) __obj.updateDynamic("AddressAllocationIds")(AddressAllocationIds.asInstanceOf[js.Any])
-    if (SubnetIds != null) __obj.updateDynamic("SubnetIds")(SubnetIds.asInstanceOf[js.Any])
-    if (VpcEndpointId != null) __obj.updateDynamic("VpcEndpointId")(VpcEndpointId.asInstanceOf[js.Any])
-    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointDetails]
   }
+  @scala.inline
+  implicit class EndpointDetailsOps[Self <: EndpointDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddressAllocationIds(value: AddressAllocationIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressAllocationIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressAllocationIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressAllocationIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetIds(value: SubnetIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcEndpointId(value: VpcEndpointId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcEndpointId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcEndpointId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: VpcId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

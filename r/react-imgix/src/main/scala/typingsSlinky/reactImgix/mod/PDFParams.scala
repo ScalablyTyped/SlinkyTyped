@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PDFParams extends js.Object {
-  var page: js.UndefOr[ImgixParamType] = js.undefined
+  var page: js.UndefOr[ImgixParamType] = js.native
 }
 
 object PDFParams {
   @scala.inline
-  def apply(page: ImgixParamType = null): PDFParams = {
+  def apply(): PDFParams = {
     val __obj = js.Dynamic.literal()
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
     __obj.asInstanceOf[PDFParams]
   }
+  @scala.inline
+  implicit class PDFParamsOps[Self <: PDFParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPage(value: ImgixParamType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

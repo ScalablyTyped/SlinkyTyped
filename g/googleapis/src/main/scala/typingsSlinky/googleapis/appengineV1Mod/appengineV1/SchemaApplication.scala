@@ -78,36 +78,173 @@ trait SchemaApplication extends js.Object {
 
 object SchemaApplication {
   @scala.inline
-  def apply(
-    authDomain: String = null,
-    codeBucket: String = null,
-    defaultBucket: String = null,
-    defaultCookieExpiration: String = null,
-    defaultHostname: String = null,
-    dispatchRules: js.Array[SchemaUrlDispatchRule] = null,
-    featureSettings: SchemaFeatureSettings = null,
-    gcrDomain: String = null,
-    iap: SchemaIdentityAwareProxy = null,
-    id: String = null,
-    locationId: String = null,
-    name: String = null,
-    servingStatus: String = null
-  ): SchemaApplication = {
+  def apply(): SchemaApplication = {
     val __obj = js.Dynamic.literal()
-    if (authDomain != null) __obj.updateDynamic("authDomain")(authDomain.asInstanceOf[js.Any])
-    if (codeBucket != null) __obj.updateDynamic("codeBucket")(codeBucket.asInstanceOf[js.Any])
-    if (defaultBucket != null) __obj.updateDynamic("defaultBucket")(defaultBucket.asInstanceOf[js.Any])
-    if (defaultCookieExpiration != null) __obj.updateDynamic("defaultCookieExpiration")(defaultCookieExpiration.asInstanceOf[js.Any])
-    if (defaultHostname != null) __obj.updateDynamic("defaultHostname")(defaultHostname.asInstanceOf[js.Any])
-    if (dispatchRules != null) __obj.updateDynamic("dispatchRules")(dispatchRules.asInstanceOf[js.Any])
-    if (featureSettings != null) __obj.updateDynamic("featureSettings")(featureSettings.asInstanceOf[js.Any])
-    if (gcrDomain != null) __obj.updateDynamic("gcrDomain")(gcrDomain.asInstanceOf[js.Any])
-    if (iap != null) __obj.updateDynamic("iap")(iap.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (locationId != null) __obj.updateDynamic("locationId")(locationId.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (servingStatus != null) __obj.updateDynamic("servingStatus")(servingStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApplication]
   }
+  @scala.inline
+  implicit class SchemaApplicationOps[Self <: SchemaApplication] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeBucket(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeBucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeBucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultBucket(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultBucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultBucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultCookieExpiration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCookieExpiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultCookieExpiration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultCookieExpiration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultHostname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDispatchRules(value: js.Array[SchemaUrlDispatchRule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDispatchRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFeatureSettings(value: SchemaFeatureSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeatureSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGcrDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcrDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGcrDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcrDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIap(value: SchemaIdentityAwareProxy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServingStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servingStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServingStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servingStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

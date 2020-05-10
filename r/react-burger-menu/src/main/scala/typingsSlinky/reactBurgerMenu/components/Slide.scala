@@ -1,15 +1,17 @@
 package typingsSlinky.reactBurgerMenu.components
 
+import typingsSlinky.reactBurgerMenu.mod.Props
 import typingsSlinky.reactBurgerMenu.mod.slide
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Slide extends SharedApply_Props1553393975[slide] {
+object Slide {
   @JSImport("react-burger-menu", "slide")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: Props): SharedBuilder_Props_1590065578[slide] = new SharedBuilder_Props_1590065578[slide](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Slide.type): SharedBuilder_Props_1590065578[slide] = new SharedBuilder_Props_1590065578[slide](js.Array(this.component, js.Dictionary.empty))()
 }
 

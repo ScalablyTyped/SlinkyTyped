@@ -1,5 +1,7 @@
 package typingsSlinky.next.utilsMod
 
+import slinky.core.ReactComponentClass
+import typingsSlinky.next.AppInitialPropsnamestring
 import typingsSlinky.next.ErrorstatusCodenumber
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
@@ -9,36 +11,37 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined next.next/dist/next-server/lib/utils.NextPageContext & {  renderPage  :next.next/dist/next-server/lib/utils.RenderPage} */
+@js.native
 trait DocumentContext extends js.Object {
   /**
     * `Component` the tree of the App to use if needing to render separately
     */
-  var AppTree: AppTreeType
+  var AppTree: AppTreeType = js.native
   /**
     * `String` of the actual path including query.
     */
-  var asPath: js.UndefOr[String] = js.undefined
+  var asPath: js.UndefOr[String] = js.native
   /**
     * Error object if encountered during rendering
     */
-  var err: js.UndefOr[ErrorstatusCodenumber | Null] = js.undefined
+  var err: js.UndefOr[ErrorstatusCodenumber | Null] = js.native
   /**
     * Path section of `URL`.
     */
-  var pathname: String
+  var pathname: String = js.native
   /**
     * Query string section of `URL` parsed as an object.
     */
-  var query: ParsedUrlQuery
-  var renderPage: RenderPage
+  var query: ParsedUrlQuery = js.native
+  var renderPage: RenderPage = js.native
   /**
     * `HTTP` request object.
     */
-  var req: js.UndefOr[IncomingMessage] = js.undefined
+  var req: js.UndefOr[IncomingMessage] = js.native
   /**
     * `HTTP` response object.
     */
-  var res: js.UndefOr[ServerResponse] = js.undefined
+  var res: js.UndefOr[ServerResponse] = js.native
 }
 
 object DocumentContext {
@@ -47,18 +50,110 @@ object DocumentContext {
     AppTree: AppTreeType,
     pathname: String,
     query: ParsedUrlQuery,
-    renderPage: /* options */ js.UndefOr[ComponentsEnhancer] => RenderPageResult | js.Promise[RenderPageResult],
-    asPath: String = null,
-    err: ErrorstatusCodenumber = null,
-    req: IncomingMessage = null,
-    res: ServerResponse = null
+    renderPage: /* options */ js.UndefOr[ComponentsEnhancer] => RenderPageResult | js.Promise[RenderPageResult]
   ): DocumentContext = {
     val __obj = js.Dynamic.literal(AppTree = AppTree.asInstanceOf[js.Any], pathname = pathname.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any], renderPage = js.Any.fromFunction1(renderPage))
-    if (asPath != null) __obj.updateDynamic("asPath")(asPath.asInstanceOf[js.Any])
-    if (err != null) __obj.updateDynamic("err")(err.asInstanceOf[js.Any])
-    if (req != null) __obj.updateDynamic("req")(req.asInstanceOf[js.Any])
-    if (res != null) __obj.updateDynamic("res")(res.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentContext]
   }
+  @scala.inline
+  implicit class DocumentContextOps[Self <: DocumentContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppTreeFunctionComponent(value: ReactComponentClass[AppInitialPropsnamestring]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppTree")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppTreeComponentClass(value: ReactComponentClass[AppInitialPropsnamestring]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppTree")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppTree(value: AppTreeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppTree")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPathname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQuery(value: ParsedUrlQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRenderPage(
+      value: /* options */ js.UndefOr[ComponentsEnhancer] => RenderPageResult | js.Promise[RenderPageResult]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderPage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAsPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErr(value: ErrorstatusCodenumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("err")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("err")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("err")(null)
+        ret
+    }
+    @scala.inline
+    def withReq(value: IncomingMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("req")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReq: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("req")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRes(value: ServerResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("res")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("res")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

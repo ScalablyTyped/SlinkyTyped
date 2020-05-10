@@ -2,7 +2,6 @@ package typingsSlinky.gracefulFs
 
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.PathLike
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,11 +30,11 @@ trait Typeoflutimes extends js.Object {
     mtime: Double,
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
   ): Unit = js.native
-  def apply(path: PathLike, atime: String, mtime: Date): Unit = js.native
+  def apply(path: PathLike, atime: String, mtime: js.Date): Unit = js.native
   def apply(
     path: PathLike,
     atime: String,
-    mtime: Date,
+    mtime: js.Date,
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
   ): Unit = js.native
   def apply(path: PathLike, atime: Double, mtime: String): Unit = js.native
@@ -52,32 +51,32 @@ trait Typeoflutimes extends js.Object {
     mtime: Double,
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
   ): Unit = js.native
-  def apply(path: PathLike, atime: Double, mtime: Date): Unit = js.native
+  def apply(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
   def apply(
     path: PathLike,
     atime: Double,
-    mtime: Date,
+    mtime: js.Date,
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
   ): Unit = js.native
-  def apply(path: PathLike, atime: Date, mtime: String): Unit = js.native
+  def apply(path: PathLike, atime: js.Date, mtime: String): Unit = js.native
   def apply(
     path: PathLike,
-    atime: Date,
+    atime: js.Date,
     mtime: String,
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
   ): Unit = js.native
-  def apply(path: PathLike, atime: Date, mtime: Double): Unit = js.native
+  def apply(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
   def apply(
     path: PathLike,
-    atime: Date,
+    atime: js.Date,
     mtime: Double,
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
   ): Unit = js.native
-  def apply(path: PathLike, atime: Date, mtime: Date): Unit = js.native
+  def apply(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
   def apply(
     path: PathLike,
-    atime: Date,
-    mtime: Date,
+    atime: js.Date,
+    mtime: js.Date,
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
   ): Unit = js.native
   /**
@@ -90,12 +89,12 @@ trait Typeoflutimes extends js.Object {
     */
   def __promisify__(path: PathLike, atime: String, mtime: String): js.Promise[Unit] = js.native
   def __promisify__(path: PathLike, atime: String, mtime: Double): js.Promise[Unit] = js.native
-  def __promisify__(path: PathLike, atime: String, mtime: Date): js.Promise[Unit] = js.native
+  def __promisify__(path: PathLike, atime: String, mtime: js.Date): js.Promise[Unit] = js.native
   def __promisify__(path: PathLike, atime: Double, mtime: String): js.Promise[Unit] = js.native
   def __promisify__(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = js.native
-  def __promisify__(path: PathLike, atime: Double, mtime: Date): js.Promise[Unit] = js.native
-  def __promisify__(path: PathLike, atime: Date, mtime: String): js.Promise[Unit] = js.native
-  def __promisify__(path: PathLike, atime: Date, mtime: Double): js.Promise[Unit] = js.native
-  def __promisify__(path: PathLike, atime: Date, mtime: Date): js.Promise[Unit] = js.native
+  def __promisify__(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+  def __promisify__(path: PathLike, atime: js.Date, mtime: String): js.Promise[Unit] = js.native
+  def __promisify__(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
+  def __promisify__(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
 }
 

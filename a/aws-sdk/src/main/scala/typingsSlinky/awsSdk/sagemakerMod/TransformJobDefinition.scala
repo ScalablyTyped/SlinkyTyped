@@ -41,18 +41,84 @@ object TransformJobDefinition {
   def apply(
     TransformInput: TransformInput,
     TransformOutput: TransformOutput,
-    TransformResources: TransformResources,
-    BatchStrategy: BatchStrategy = null,
-    Environment: TransformEnvironmentMap = null,
-    MaxConcurrentTransforms: Int | Double = null,
-    MaxPayloadInMB: Int | Double = null
+    TransformResources: TransformResources
   ): TransformJobDefinition = {
     val __obj = js.Dynamic.literal(TransformInput = TransformInput.asInstanceOf[js.Any], TransformOutput = TransformOutput.asInstanceOf[js.Any], TransformResources = TransformResources.asInstanceOf[js.Any])
-    if (BatchStrategy != null) __obj.updateDynamic("BatchStrategy")(BatchStrategy.asInstanceOf[js.Any])
-    if (Environment != null) __obj.updateDynamic("Environment")(Environment.asInstanceOf[js.Any])
-    if (MaxConcurrentTransforms != null) __obj.updateDynamic("MaxConcurrentTransforms")(MaxConcurrentTransforms.asInstanceOf[js.Any])
-    if (MaxPayloadInMB != null) __obj.updateDynamic("MaxPayloadInMB")(MaxPayloadInMB.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformJobDefinition]
   }
+  @scala.inline
+  implicit class TransformJobDefinitionOps[Self <: TransformJobDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransformInput(value: TransformInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransformInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransformOutput(value: TransformOutput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransformOutput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransformResources(value: TransformResources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransformResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBatchStrategy(value: BatchStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironment(value: TransformEnvironmentMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Environment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConcurrentTransforms(value: MaxConcurrentTransforms): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentTransforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConcurrentTransforms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentTransforms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxPayloadInMB(value: MaxPayloadInMB): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxPayloadInMB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPayloadInMB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxPayloadInMB")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,16 +15,14 @@ trait MetadataType extends js.Object
 
 object MetadataType {
   @scala.inline
-  def array: typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.array = this.cast("array")
+  def array: typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.array = "array".asInstanceOf[typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.array]
   @scala.inline
-  def boolean: typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.boolean = "boolean".asInstanceOf[typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def number: typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.number = "number".asInstanceOf[typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.number]
   @scala.inline
-  def number: typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.number = this.cast("number")
+  def `object`: typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.`object` = "object".asInstanceOf[typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.`object` = this.cast("object")
-  @scala.inline
-  def string: typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.string = this.cast("string")
+  def string: typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.string = "string".asInstanceOf[typingsSlinky.onfleetNodeOnfleet.onfleetNodeOnfleetStrings.string]
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.halogen.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("halogen", "DotLoader")
 @js.native
 class DotLoaderCls protected ()
-  extends Component[SizeLoaderProps, ComponentState, js.Any] {
+  extends Component[SizeLoaderProps, js.Object, js.Any] {
   def this(props: SizeLoaderProps) = this()
   def this(props: SizeLoaderProps, context: js.Any) = this()
 }

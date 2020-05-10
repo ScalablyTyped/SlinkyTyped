@@ -5,30 +5,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CircularProgressbarStyles extends js.Object {
-  var background: js.UndefOr[CSSProperties] = js.undefined
-  var path: js.UndefOr[CSSProperties] = js.undefined
-  var root: js.UndefOr[CSSProperties] = js.undefined
-  var text: js.UndefOr[CSSProperties] = js.undefined
-  var trail: js.UndefOr[CSSProperties] = js.undefined
+  var background: js.UndefOr[CSSProperties] = js.native
+  var path: js.UndefOr[CSSProperties] = js.native
+  var root: js.UndefOr[CSSProperties] = js.native
+  var text: js.UndefOr[CSSProperties] = js.native
+  var trail: js.UndefOr[CSSProperties] = js.native
 }
 
 object CircularProgressbarStyles {
   @scala.inline
-  def apply(
-    background: CSSProperties = null,
-    path: CSSProperties = null,
-    root: CSSProperties = null,
-    text: CSSProperties = null,
-    trail: CSSProperties = null
-  ): CircularProgressbarStyles = {
+  def apply(): CircularProgressbarStyles = {
     val __obj = js.Dynamic.literal()
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (trail != null) __obj.updateDynamic("trail")(trail.asInstanceOf[js.Any])
     __obj.asInstanceOf[CircularProgressbarStyles]
   }
+  @scala.inline
+  implicit class CircularProgressbarStylesOps[Self <: CircularProgressbarStyles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackground(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrail(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trail")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

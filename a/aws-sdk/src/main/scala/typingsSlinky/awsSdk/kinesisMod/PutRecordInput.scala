@@ -30,17 +30,65 @@ trait PutRecordInput extends js.Object {
 
 object PutRecordInput {
   @scala.inline
-  def apply(
-    Data: Data,
-    PartitionKey: PartitionKey,
-    StreamName: StreamName,
-    ExplicitHashKey: HashKey = null,
-    SequenceNumberForOrdering: SequenceNumber = null
-  ): PutRecordInput = {
+  def apply(Data: Data, PartitionKey: PartitionKey, StreamName: StreamName): PutRecordInput = {
     val __obj = js.Dynamic.literal(Data = Data.asInstanceOf[js.Any], PartitionKey = PartitionKey.asInstanceOf[js.Any], StreamName = StreamName.asInstanceOf[js.Any])
-    if (ExplicitHashKey != null) __obj.updateDynamic("ExplicitHashKey")(ExplicitHashKey.asInstanceOf[js.Any])
-    if (SequenceNumberForOrdering != null) __obj.updateDynamic("SequenceNumberForOrdering")(SequenceNumberForOrdering.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutRecordInput]
   }
+  @scala.inline
+  implicit class PutRecordInputOps[Self <: PutRecordInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: Data): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPartitionKey(value: PartitionKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStreamName(value: StreamName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExplicitHashKey(value: HashKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExplicitHashKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExplicitHashKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExplicitHashKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSequenceNumberForOrdering(value: SequenceNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceNumberForOrdering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSequenceNumberForOrdering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceNumberForOrdering")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

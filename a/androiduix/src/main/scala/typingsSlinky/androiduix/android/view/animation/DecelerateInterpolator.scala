@@ -9,7 +9,5 @@ import scala.scalajs.js.annotation._
 class DecelerateInterpolator () extends Interpolator {
   def this(factor: Double) = this()
   var mFactor: js.Any = js.native
-  /* CompleteClass */
-  override def getInterpolation(input: Double): Double = js.native
 }
 

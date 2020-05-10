@@ -19,11 +19,41 @@ trait MsSmoothOutputSettings extends js.Object {
 
 object MsSmoothOutputSettings {
   @scala.inline
-  def apply(H265PackagingType: MsSmoothH265PackagingType = null, NameModifier: string = null): MsSmoothOutputSettings = {
+  def apply(): MsSmoothOutputSettings = {
     val __obj = js.Dynamic.literal()
-    if (H265PackagingType != null) __obj.updateDynamic("H265PackagingType")(H265PackagingType.asInstanceOf[js.Any])
-    if (NameModifier != null) __obj.updateDynamic("NameModifier")(NameModifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[MsSmoothOutputSettings]
   }
+  @scala.inline
+  implicit class MsSmoothOutputSettingsOps[Self <: MsSmoothOutputSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withH265PackagingType(value: MsSmoothH265PackagingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("H265PackagingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH265PackagingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("H265PackagingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameModifier(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NameModifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameModifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NameModifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -42,25 +42,107 @@ trait ModifyDBProxyRequest extends js.Object {
 
 object ModifyDBProxyRequest {
   @scala.inline
-  def apply(
-    DBProxyName: String,
-    Auth: UserAuthConfigList = null,
-    DebugLogging: js.UndefOr[scala.Boolean] = js.undefined,
-    IdleClientTimeout: Int | scala.Double = null,
-    NewDBProxyName: String = null,
-    RequireTLS: js.UndefOr[scala.Boolean] = js.undefined,
-    RoleArn: String = null,
-    SecurityGroups: StringList = null
-  ): ModifyDBProxyRequest = {
+  def apply(DBProxyName: String): ModifyDBProxyRequest = {
     val __obj = js.Dynamic.literal(DBProxyName = DBProxyName.asInstanceOf[js.Any])
-    if (Auth != null) __obj.updateDynamic("Auth")(Auth.asInstanceOf[js.Any])
-    if (!js.isUndefined(DebugLogging)) __obj.updateDynamic("DebugLogging")(DebugLogging.asInstanceOf[js.Any])
-    if (IdleClientTimeout != null) __obj.updateDynamic("IdleClientTimeout")(IdleClientTimeout.asInstanceOf[js.Any])
-    if (NewDBProxyName != null) __obj.updateDynamic("NewDBProxyName")(NewDBProxyName.asInstanceOf[js.Any])
-    if (!js.isUndefined(RequireTLS)) __obj.updateDynamic("RequireTLS")(RequireTLS.asInstanceOf[js.Any])
-    if (RoleArn != null) __obj.updateDynamic("RoleArn")(RoleArn.asInstanceOf[js.Any])
-    if (SecurityGroups != null) __obj.updateDynamic("SecurityGroups")(SecurityGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyDBProxyRequest]
   }
+  @scala.inline
+  implicit class ModifyDBProxyRequestOps[Self <: ModifyDBProxyRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBProxyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBProxyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuth(value: UserAuthConfigList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugLogging(value: BooleanOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DebugLogging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugLogging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DebugLogging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdleClientTimeout(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdleClientTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdleClientTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdleClientTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewDBProxyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewDBProxyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewDBProxyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewDBProxyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireTLS(value: BooleanOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequireTLS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireTLS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequireTLS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroups(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

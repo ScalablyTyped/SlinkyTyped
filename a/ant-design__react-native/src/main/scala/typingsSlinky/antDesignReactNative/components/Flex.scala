@@ -1,10 +1,7 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.`column-reverse`
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.`row-reverse`
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.`wrap-reverse`
@@ -18,7 +15,6 @@ import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.nowrap
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.row
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.start
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.stretch
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.wrap
 import typingsSlinky.antDesignReactNative.flexFlexMod.FlexProps
 import typingsSlinky.antDesignReactNative.flexMod.default
 import typingsSlinky.reactNative.mod.StyleProp
@@ -27,40 +23,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Flex
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Flex {
   @JSImport("@ant-design/react-native/lib/flex", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    align: start | center | end | baseline | stretch = null,
-    direction: row | `row-reverse` | column | `column-reverse` = null,
-    justify: start | end | center | between | around = null,
-    onLongPress: () => Unit = null,
-    onPress: () => Unit = null,
-    onPressIn: () => Unit = null,
-    onPressOut: () => Unit = null,
-    style: StyleProp[ViewStyle] = null,
-    wrap: nowrap | wrap | `wrap-reverse` = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (justify != null) __obj.updateDynamic("justify")(justify.asInstanceOf[js.Any])
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction0(onLongPress))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
-    if (onPressIn != null) __obj.updateDynamic("onPressIn")(js.Any.fromFunction0(onPressIn))
-    if (onPressOut != null) __obj.updateDynamic("onPressOut")(js.Any.fromFunction0(onPressOut))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (wrap != null) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def align(value: start | center | end | baseline | stretch): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: row | `row-reverse` | column | `column-reverse`): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def justify(value: start | end | center | between | around): this.type = set("justify", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLongPress(value: () => Unit): this.type = set("onLongPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPressIn(value: () => Unit): this.type = set("onPressIn", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPressOut(value: () => Unit): this.type = set("onPressOut", js.Any.fromFunction0(value))
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def wrap(
+      value: nowrap | typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.wrap | `wrap-reverse`
+    ): this.type = set("wrap", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antDesignReactNative.flexMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FlexProps
+  
+  def withProps(p: FlexProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Flex.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

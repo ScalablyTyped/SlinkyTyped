@@ -28,24 +28,44 @@ import scala.scalajs.js.annotation._
   *   });
   *```
   */
+@js.native
 trait FirebaseArrayIndexError extends js.Object {
   /**
     * The error object.
     */
-  var error: FirebaseError
+  var error: FirebaseError = js.native
   /**
     * The index of the errored item within the original array passed as part of the
     * called API method.
     */
-  var index: Double
+  var index: Double = js.native
 }
 
 object FirebaseArrayIndexError {
   @scala.inline
   def apply(error: FirebaseError, index: Double): FirebaseArrayIndexError = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[FirebaseArrayIndexError]
   }
+  @scala.inline
+  implicit class FirebaseArrayIndexErrorOps[Self <: FirebaseArrayIndexError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: FirebaseError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

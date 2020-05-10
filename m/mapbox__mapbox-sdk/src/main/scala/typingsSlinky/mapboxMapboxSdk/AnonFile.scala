@@ -5,24 +5,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFile extends js.Object {
-  var file: Blob | scala.scalajs.js.typedarray.ArrayBuffer | String
-  var iconId: String
-  var ownerId: js.UndefOr[String] = js.undefined
-  var styleId: String
+  var file: Blob | js.typedarray.ArrayBuffer | String = js.native
+  var iconId: String = js.native
+  var ownerId: js.UndefOr[String] = js.native
+  var styleId: String = js.native
 }
 
 object AnonFile {
   @scala.inline
-  def apply(
-    file: Blob | scala.scalajs.js.typedarray.ArrayBuffer | String,
-    iconId: String,
-    styleId: String,
-    ownerId: String = null
-  ): AnonFile = {
+  def apply(file: Blob | js.typedarray.ArrayBuffer | String, iconId: String, styleId: String): AnonFile = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any], iconId = iconId.asInstanceOf[js.Any], styleId = styleId.asInstanceOf[js.Any])
-    if (ownerId != null) __obj.updateDynamic("ownerId")(ownerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFile]
   }
+  @scala.inline
+  implicit class AnonFileOps[Self <: AnonFile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileBlob(value: Blob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFile(value: Blob | js.typedarray.ArrayBuffer | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIconId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyleId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOwnerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

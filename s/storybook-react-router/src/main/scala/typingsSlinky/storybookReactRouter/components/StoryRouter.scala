@@ -1,9 +1,7 @@
 package typingsSlinky.storybookReactRouter.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactRouter.mod.MemoryRouterProps
 import typingsSlinky.storybookAddons.typesMod.StoryApi
 import typingsSlinky.storybookReactRouter.AnonLinks
@@ -11,23 +9,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StoryRouter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.storybookReactRouter.mod.StoryRouter] {
+object StoryRouter {
   @JSImport("storybook-react-router", "StoryRouter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    links: js.Object,
-    routerProps: MemoryRouterProps,
-    story: StoryApi[_],
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.storybookReactRouter.mod.StoryRouter] = {
-    val __obj = js.Dynamic.literal(links = links.asInstanceOf[js.Any], routerProps = routerProps.asInstanceOf[js.Any], story = story.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: AnonLinks): Default[tag.type, typingsSlinky.storybookReactRouter.mod.StoryRouter] = new Default[tag.type, typingsSlinky.storybookReactRouter.mod.StoryRouter](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(links: js.Object, routerProps: MemoryRouterProps, story: StoryApi[_]): Default[tag.type, typingsSlinky.storybookReactRouter.mod.StoryRouter] = {
+    val __props = js.Dynamic.literal(links = links.asInstanceOf[js.Any], routerProps = routerProps.asInstanceOf[js.Any], story = story.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.storybookReactRouter.mod.StoryRouter](js.Array(this.component, __props.asInstanceOf[AnonLinks]))
   }
-  type Props = AnonLinks
 }
 

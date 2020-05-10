@@ -1,7 +1,6 @@
 package typingsSlinky.luxon.mod
 
 import typingsSlinky.luxon.AnonSeparator
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,27 +62,27 @@ object Interval extends js.Object {
   def after(start: DateTime, duration: Double): Interval = js.native
   def after(start: DateTime, duration: Duration): Interval = js.native
   def after(start: DateTime, duration: DurationObject): Interval = js.native
-  def after(start: Date, duration: Double): Interval = js.native
-  def after(start: Date, duration: Duration): Interval = js.native
-  def after(start: Date, duration: DurationObject): Interval = js.native
+  def after(start: js.Date, duration: Double): Interval = js.native
+  def after(start: js.Date, duration: Duration): Interval = js.native
+  def after(start: js.Date, duration: DurationObject): Interval = js.native
   def before(end: DateObject, duration: Double): Interval = js.native
   def before(end: DateObject, duration: Duration): Interval = js.native
   def before(end: DateObject, duration: DurationObject): Interval = js.native
   def before(end: DateTime, duration: Double): Interval = js.native
   def before(end: DateTime, duration: Duration): Interval = js.native
   def before(end: DateTime, duration: DurationObject): Interval = js.native
-  def before(end: Date, duration: Double): Interval = js.native
-  def before(end: Date, duration: Duration): Interval = js.native
-  def before(end: Date, duration: DurationObject): Interval = js.native
+  def before(end: js.Date, duration: Double): Interval = js.native
+  def before(end: js.Date, duration: Duration): Interval = js.native
+  def before(end: js.Date, duration: DurationObject): Interval = js.native
   def fromDateTimes(start: DateObject, end: DateObject): Interval = js.native
   def fromDateTimes(start: DateObject, end: DateTime): Interval = js.native
-  def fromDateTimes(start: DateObject, end: Date): Interval = js.native
+  def fromDateTimes(start: DateObject, end: js.Date): Interval = js.native
   def fromDateTimes(start: DateTime, end: DateObject): Interval = js.native
   def fromDateTimes(start: DateTime, end: DateTime): Interval = js.native
-  def fromDateTimes(start: DateTime, end: Date): Interval = js.native
-  def fromDateTimes(start: Date, end: DateObject): Interval = js.native
-  def fromDateTimes(start: Date, end: DateTime): Interval = js.native
-  def fromDateTimes(start: Date, end: Date): Interval = js.native
+  def fromDateTimes(start: DateTime, end: js.Date): Interval = js.native
+  def fromDateTimes(start: js.Date, end: DateObject): Interval = js.native
+  def fromDateTimes(start: js.Date, end: DateTime): Interval = js.native
+  def fromDateTimes(start: js.Date, end: js.Date): Interval = js.native
   def fromISO(string: String): Interval = js.native
   def fromISO(string: String, options: DateTimeOptions): Interval = js.native
   def invalid(): Interval = js.native

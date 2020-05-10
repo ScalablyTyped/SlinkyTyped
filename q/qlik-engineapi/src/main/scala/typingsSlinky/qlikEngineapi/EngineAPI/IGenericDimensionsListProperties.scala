@@ -7,18 +7,38 @@ import scala.scalajs.js.annotation._
 /**
   * GenericDimensionsListProperties width extend GenericProperties
   */
+@js.native
 trait IGenericDimensionsListProperties extends IGenericProperties {
-  var qDimensionListDef: IDimensionListDef
+  var qDimensionListDef: IDimensionListDef = js.native
   @JSName("qInfo")
-  var qInfo_IGenericDimensionsListProperties: IGenericDimensionListNxInfo
+  var qInfo_IGenericDimensionsListProperties: IGenericDimensionListNxInfo = js.native
 }
 
 object IGenericDimensionsListProperties {
   @scala.inline
   def apply(qDimensionListDef: IDimensionListDef, qInfo: IGenericDimensionListNxInfo): IGenericDimensionsListProperties = {
     val __obj = js.Dynamic.literal(qDimensionListDef = qDimensionListDef.asInstanceOf[js.Any], qInfo = qInfo.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IGenericDimensionsListProperties]
   }
+  @scala.inline
+  implicit class IGenericDimensionsListPropertiesOps[Self <: IGenericDimensionsListProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQDimensionListDef(value: IDimensionListDef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qDimensionListDef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQInfo(value: IGenericDimensionListNxInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

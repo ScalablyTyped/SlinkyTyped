@@ -4,99 +4,387 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait confirmOptions extends js.Object {
-  var autoClose: js.UndefOr[String] = js.undefined
-  var backgroundDismiss: js.UndefOr[js.Any] = js.undefined
-  var backgroundDismissAnimation: js.UndefOr[String] = js.undefined
-  var bootstrapClasses: js.UndefOr[js.Any] = js.undefined
-  var boxWidth: js.UndefOr[String] = js.undefined
-  var buttons: js.UndefOr[js.Any] = js.undefined
-  var closeIcon: js.UndefOr[js.Any] = js.undefined
-  var closeIconClass: js.UndefOr[String] = js.undefined
-  var columnClass: js.UndefOr[String] = js.undefined
-  var containerFluid: js.UndefOr[Boolean] = js.undefined
-  var content: js.UndefOr[js.Any] = js.undefined
-  var contentLoaded: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var dragWindowBorder: js.UndefOr[Boolean] = js.undefined
-  var dragWindowGap: js.UndefOr[Double] = js.undefined
-  var draggable: js.UndefOr[Boolean] = js.undefined
-  var escapeKey: js.UndefOr[String | Boolean] = js.undefined
-  var icon: js.UndefOr[String] = js.undefined
-  var lazyOpen: js.UndefOr[Boolean] = js.undefined
-  var onAction: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onClose: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onContentReady: js.UndefOr[js.Any] = js.undefined
-  var onDestroy: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onOpenBefore: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var title: js.UndefOr[String | Boolean] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var typeAnimated: js.UndefOr[Boolean] = js.undefined
-  var useBootstrap: js.UndefOr[Boolean] = js.undefined
+  var autoClose: js.UndefOr[String] = js.native
+  var backgroundDismiss: js.UndefOr[js.Any] = js.native
+  var backgroundDismissAnimation: js.UndefOr[String] = js.native
+  var bootstrapClasses: js.UndefOr[js.Any] = js.native
+  var boxWidth: js.UndefOr[String] = js.native
+  var buttons: js.UndefOr[js.Any] = js.native
+  var closeIcon: js.UndefOr[js.Any] = js.native
+  var closeIconClass: js.UndefOr[String] = js.native
+  var columnClass: js.UndefOr[String] = js.native
+  var containerFluid: js.UndefOr[Boolean] = js.native
+  var content: js.UndefOr[js.Any] = js.native
+  var contentLoaded: js.UndefOr[js.Function0[Unit]] = js.native
+  var dragWindowBorder: js.UndefOr[Boolean] = js.native
+  var dragWindowGap: js.UndefOr[Double] = js.native
+  var draggable: js.UndefOr[Boolean] = js.native
+  var escapeKey: js.UndefOr[String | Boolean] = js.native
+  var icon: js.UndefOr[String] = js.native
+  var lazyOpen: js.UndefOr[Boolean] = js.native
+  var onAction: js.UndefOr[js.Function0[Unit]] = js.native
+  var onClose: js.UndefOr[js.Function0[Unit]] = js.native
+  var onContentReady: js.UndefOr[js.Any] = js.native
+  var onDestroy: js.UndefOr[js.Function0[Unit]] = js.native
+  var onOpen: js.UndefOr[js.Function0[Unit]] = js.native
+  var onOpenBefore: js.UndefOr[js.Function0[Unit]] = js.native
+  var title: js.UndefOr[String | Boolean] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var typeAnimated: js.UndefOr[Boolean] = js.native
+  var useBootstrap: js.UndefOr[Boolean] = js.native
 }
 
 object confirmOptions {
   @scala.inline
-  def apply(
-    autoClose: String = null,
-    backgroundDismiss: js.Any = null,
-    backgroundDismissAnimation: String = null,
-    bootstrapClasses: js.Any = null,
-    boxWidth: String = null,
-    buttons: js.Any = null,
-    closeIcon: js.Any = null,
-    closeIconClass: String = null,
-    columnClass: String = null,
-    containerFluid: js.UndefOr[Boolean] = js.undefined,
-    content: js.Any = null,
-    contentLoaded: () => Unit = null,
-    dragWindowBorder: js.UndefOr[Boolean] = js.undefined,
-    dragWindowGap: Int | Double = null,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    escapeKey: String | Boolean = null,
-    icon: String = null,
-    lazyOpen: js.UndefOr[Boolean] = js.undefined,
-    onAction: () => Unit = null,
-    onClose: () => Unit = null,
-    onContentReady: js.Any = null,
-    onDestroy: () => Unit = null,
-    onOpen: () => Unit = null,
-    onOpenBefore: () => Unit = null,
-    title: String | Boolean = null,
-    `type`: String = null,
-    typeAnimated: js.UndefOr[Boolean] = js.undefined,
-    useBootstrap: js.UndefOr[Boolean] = js.undefined
-  ): confirmOptions = {
+  def apply(): confirmOptions = {
     val __obj = js.Dynamic.literal()
-    if (autoClose != null) __obj.updateDynamic("autoClose")(autoClose.asInstanceOf[js.Any])
-    if (backgroundDismiss != null) __obj.updateDynamic("backgroundDismiss")(backgroundDismiss.asInstanceOf[js.Any])
-    if (backgroundDismissAnimation != null) __obj.updateDynamic("backgroundDismissAnimation")(backgroundDismissAnimation.asInstanceOf[js.Any])
-    if (bootstrapClasses != null) __obj.updateDynamic("bootstrapClasses")(bootstrapClasses.asInstanceOf[js.Any])
-    if (boxWidth != null) __obj.updateDynamic("boxWidth")(boxWidth.asInstanceOf[js.Any])
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (closeIcon != null) __obj.updateDynamic("closeIcon")(closeIcon.asInstanceOf[js.Any])
-    if (closeIconClass != null) __obj.updateDynamic("closeIconClass")(closeIconClass.asInstanceOf[js.Any])
-    if (columnClass != null) __obj.updateDynamic("columnClass")(columnClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(containerFluid)) __obj.updateDynamic("containerFluid")(containerFluid.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (contentLoaded != null) __obj.updateDynamic("contentLoaded")(js.Any.fromFunction0(contentLoaded))
-    if (!js.isUndefined(dragWindowBorder)) __obj.updateDynamic("dragWindowBorder")(dragWindowBorder.asInstanceOf[js.Any])
-    if (dragWindowGap != null) __obj.updateDynamic("dragWindowGap")(dragWindowGap.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
-    if (escapeKey != null) __obj.updateDynamic("escapeKey")(escapeKey.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(lazyOpen)) __obj.updateDynamic("lazyOpen")(lazyOpen.asInstanceOf[js.Any])
-    if (onAction != null) __obj.updateDynamic("onAction")(js.Any.fromFunction0(onAction))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (onContentReady != null) __obj.updateDynamic("onContentReady")(onContentReady.asInstanceOf[js.Any])
-    if (onDestroy != null) __obj.updateDynamic("onDestroy")(js.Any.fromFunction0(onDestroy))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction0(onOpen))
-    if (onOpenBefore != null) __obj.updateDynamic("onOpenBefore")(js.Any.fromFunction0(onOpenBefore))
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(typeAnimated)) __obj.updateDynamic("typeAnimated")(typeAnimated.asInstanceOf[js.Any])
-    if (!js.isUndefined(useBootstrap)) __obj.updateDynamic("useBootstrap")(useBootstrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[confirmOptions]
   }
+  @scala.inline
+  implicit class confirmOptionsOps[Self <: confirmOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoClose(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundDismiss(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundDismiss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundDismissAnimation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundDismissAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundDismissAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundDismissAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBootstrapClasses(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapClasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootstrapClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapClasses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoxWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtons(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseIcon(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseIconClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIconClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseIconClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIconClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerFluid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerFluid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerFluid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerFluid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentLoaded(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLoaded")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutContentLoaded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLoaded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragWindowBorder(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragWindowBorder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragWindowBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragWindowBorder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragWindowGap(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragWindowGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragWindowGap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragWindowGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDraggable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDraggable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEscapeKey(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEscapeKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("escapeKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLazyOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLazyOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazyOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAction(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAction")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnContentReady(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContentReady")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnContentReady: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContentReady")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDestroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDestroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpenBefore(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenBefore")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnOpenBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeAnimated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnimated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeAnimated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnimated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseBootstrap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useBootstrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseBootstrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useBootstrap")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

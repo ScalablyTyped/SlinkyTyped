@@ -13,12 +13,10 @@ trait EventName extends js.Object
 
 object EventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dpDoterror: typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.dpDoterror = "dp.error".asInstanceOf[typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.dpDoterror]
   @scala.inline
-  def dpDoterror: typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.dpDoterror = this.cast("dp.error")
+  def dpDothide: typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.dpDothide = "dp.hide".asInstanceOf[typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.dpDothide]
   @scala.inline
-  def dpDothide: typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.dpDothide = this.cast("dp.hide")
-  @scala.inline
-  def dpDotshow: typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.dpDotshow = this.cast("dp.show")
+  def dpDotshow: typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.dpDotshow = "dp.show".asInstanceOf[typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.dpDotshow]
 }
 

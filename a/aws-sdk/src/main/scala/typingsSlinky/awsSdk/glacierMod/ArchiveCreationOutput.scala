@@ -22,12 +22,53 @@ trait ArchiveCreationOutput extends js.Object {
 
 object ArchiveCreationOutput {
   @scala.inline
-  def apply(archiveId: String = null, checksum: String = null, location: String = null): ArchiveCreationOutput = {
+  def apply(): ArchiveCreationOutput = {
     val __obj = js.Dynamic.literal()
-    if (archiveId != null) __obj.updateDynamic("archiveId")(archiveId.asInstanceOf[js.Any])
-    if (checksum != null) __obj.updateDynamic("checksum")(checksum.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArchiveCreationOutput]
   }
+  @scala.inline
+  implicit class ArchiveCreationOutputOps[Self <: ArchiveCreationOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArchiveId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchiveId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChecksum(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecksum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

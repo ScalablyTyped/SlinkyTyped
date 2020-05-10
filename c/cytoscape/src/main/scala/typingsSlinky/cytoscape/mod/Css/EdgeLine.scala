@@ -12,6 +12,7 @@ import typingsSlinky.cytoscape.cytoscapeStrings.solid
 import typingsSlinky.cytoscape.cytoscapeStrings.square
 import typingsSlinky.cytoscape.cytoscapeStrings.straight
 import typingsSlinky.cytoscape.cytoscapeStrings.taxi
+import typingsSlinky.cytoscape.mod.EdgeSingular
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,6 +22,7 @@ import scala.scalajs.js.annotation._
   *
   * http://js.cytoscape.org/#style/edge-line
   */
+@js.native
 trait EdgeLine extends js.Object {
   /**
     * The curving method used to separate two or more edges between two nodes;
@@ -35,65 +37,210 @@ trait EdgeLine extends js.Object {
     */
   var `curve-style`: js.UndefOr[
     PropertyValueEdge[haystack | straight | bezier | `unbundled-bezier` | segments | taxi]
-  ] = js.undefined
+  ] = js.native
   /**
     * The cap of the edge's line.
     */
-  var `line-cap`: js.UndefOr[PropertyValueEdge[butt | round | square]] = js.undefined
+  var `line-cap`: js.UndefOr[PropertyValueEdge[butt | round | square]] = js.native
   /**
     * The colour of the edge’s line.
     */
-  var `line-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.undefined
+  var `line-color`: js.UndefOr[PropertyValueEdge[Colour]] = js.native
   /**
     * The dashed line offset.
     */
-  var `line-dash-offset`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
+  var `line-dash-offset`: js.UndefOr[PropertyValueEdge[Double]] = js.native
   /**
     * The dashed line pattern which specifies alternating lengths of lines and gaps.
     */
-  var `line-dash-pattern`: js.UndefOr[js.Array[PropertyValueEdge[Double]]] = js.undefined
+  var `line-dash-pattern`: js.UndefOr[js.Array[PropertyValueEdge[Double]]] = js.native
   /**
     * The filling style of the edge's line.
     */
-  var `line-fill`: js.UndefOr[PropertyValueEdge[solid | `linear-gradient` | `radial-gradient`]] = js.undefined
+  var `line-fill`: js.UndefOr[PropertyValueEdge[solid | `linear-gradient` | `radial-gradient`]] = js.native
   /**
     * The style of the edge’s line.
     */
-  var `line-style`: js.UndefOr[PropertyValueEdge[LineStyle]] = js.undefined
+  var `line-style`: js.UndefOr[PropertyValueEdge[LineStyle]] = js.native
   /**
     * The distance the edge ends from its target.
     */
-  var `target-distance-from-node`: js.UndefOr[PropertyValueEdge[Double]] = js.undefined
+  var `target-distance-from-node`: js.UndefOr[PropertyValueEdge[Double]] = js.native
   /**
     * The width of an edge’s line.
     */
-  var width: js.UndefOr[PropertyValueEdge[Double | String]] = js.undefined
+  var width: js.UndefOr[PropertyValueEdge[Double | String]] = js.native
 }
 
 object EdgeLine {
   @scala.inline
-  def apply(
-    `curve-style`: PropertyValueEdge[haystack | straight | bezier | `unbundled-bezier` | segments | taxi] = null,
-    `line-cap`: PropertyValueEdge[butt | round | square] = null,
-    `line-color`: PropertyValueEdge[Colour] = null,
-    `line-dash-offset`: PropertyValueEdge[Double] = null,
-    `line-dash-pattern`: js.Array[PropertyValueEdge[Double]] = null,
-    `line-fill`: PropertyValueEdge[solid | `linear-gradient` | `radial-gradient`] = null,
-    `line-style`: PropertyValueEdge[LineStyle] = null,
-    `target-distance-from-node`: PropertyValueEdge[Double] = null,
-    width: PropertyValueEdge[Double | String] = null
-  ): EdgeLine = {
+  def apply(): EdgeLine = {
     val __obj = js.Dynamic.literal()
-    if (`curve-style` != null) __obj.updateDynamic("curve-style")(`curve-style`.asInstanceOf[js.Any])
-    if (`line-cap` != null) __obj.updateDynamic("line-cap")(`line-cap`.asInstanceOf[js.Any])
-    if (`line-color` != null) __obj.updateDynamic("line-color")(`line-color`.asInstanceOf[js.Any])
-    if (`line-dash-offset` != null) __obj.updateDynamic("line-dash-offset")(`line-dash-offset`.asInstanceOf[js.Any])
-    if (`line-dash-pattern` != null) __obj.updateDynamic("line-dash-pattern")(`line-dash-pattern`.asInstanceOf[js.Any])
-    if (`line-fill` != null) __obj.updateDynamic("line-fill")(`line-fill`.asInstanceOf[js.Any])
-    if (`line-style` != null) __obj.updateDynamic("line-style")(`line-style`.asInstanceOf[js.Any])
-    if (`target-distance-from-node` != null) __obj.updateDynamic("target-distance-from-node")(`target-distance-from-node`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[EdgeLine]
   }
+  @scala.inline
+  implicit class EdgeLineOps[Self <: EdgeLine] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withCurve-styleFunction1`(value: EdgeSingular => haystack | straight | bezier | `unbundled-bezier` | segments | taxi): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve-style")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withCurve-style`(value: PropertyValueEdge[haystack | straight | bezier | `unbundled-bezier` | segments | taxi]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutCurve-style`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve-style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-capFunction1`(value: EdgeSingular => butt | round | square): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-cap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withLine-cap`(value: PropertyValueEdge[butt | round | square]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-cap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-cap`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-cap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-colorFunction1`(value: EdgeSingular => Colour): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-color")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withLine-color`(value: PropertyValueEdge[Colour]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-color`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-dash-offsetFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-dash-offset")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withLine-dash-offset`(value: PropertyValueEdge[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-dash-offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-dash-offset`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-dash-offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-dash-pattern`(value: js.Array[PropertyValueEdge[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-dash-pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-dash-pattern`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-dash-pattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-fillFunction1`(value: EdgeSingular => solid | `linear-gradient` | `radial-gradient`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-fill")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withLine-fill`(value: PropertyValueEdge[solid | `linear-gradient` | `radial-gradient`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-fill`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withLine-styleFunction1`(value: EdgeSingular => LineStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-style")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withLine-style`(value: PropertyValueEdge[LineStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutLine-style`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line-style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withTarget-distance-from-nodeFunction1`(value: EdgeSingular => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-distance-from-node")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def `withTarget-distance-from-node`(value: PropertyValueEdge[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-distance-from-node")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutTarget-distance-from-node`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-distance-from-node")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidthFunction1(value: EdgeSingular => Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWidth(value: PropertyValueEdge[Double | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

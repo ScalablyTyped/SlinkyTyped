@@ -17,20 +17,18 @@ trait StyleProperty extends js.Object
 
 object StyleProperty {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def category: typingsSlinky.theo.theoStrings.category = "category".asInstanceOf[typingsSlinky.theo.theoStrings.category]
   @scala.inline
-  def category: typingsSlinky.theo.theoStrings.category = this.cast("category")
+  def comment: typingsSlinky.theo.theoStrings.comment = "comment".asInstanceOf[typingsSlinky.theo.theoStrings.comment]
   @scala.inline
-  def comment: typingsSlinky.theo.theoStrings.comment = this.cast("comment")
+  def meta: typingsSlinky.theo.theoStrings.meta = "meta".asInstanceOf[typingsSlinky.theo.theoStrings.meta]
   @scala.inline
-  def meta: typingsSlinky.theo.theoStrings.meta = this.cast("meta")
+  def name: typingsSlinky.theo.theoStrings.name = "name".asInstanceOf[typingsSlinky.theo.theoStrings.name]
   @scala.inline
-  def name: typingsSlinky.theo.theoStrings.name = this.cast("name")
+  def originalValue: typingsSlinky.theo.theoStrings.originalValue = "originalValue".asInstanceOf[typingsSlinky.theo.theoStrings.originalValue]
   @scala.inline
-  def originalValue: typingsSlinky.theo.theoStrings.originalValue = this.cast("originalValue")
+  def `type`: typingsSlinky.theo.theoStrings.`type` = "type".asInstanceOf[typingsSlinky.theo.theoStrings.`type`]
   @scala.inline
-  def `type`: typingsSlinky.theo.theoStrings.`type` = this.cast("type")
-  @scala.inline
-  def value: typingsSlinky.theo.theoStrings.value = this.cast("value")
+  def value: typingsSlinky.theo.theoStrings.value = "value".asInstanceOf[typingsSlinky.theo.theoStrings.value]
 }
 

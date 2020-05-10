@@ -19,24 +19,22 @@ trait LogLevels extends js.Object
 
 object LogLevels {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.npmlog.npmlogStrings.error = "error".asInstanceOf[typingsSlinky.npmlog.npmlogStrings.error]
   @scala.inline
-  def error: typingsSlinky.npmlog.npmlogStrings.error = this.cast("error")
+  def http: typingsSlinky.npmlog.npmlogStrings.http = "http".asInstanceOf[typingsSlinky.npmlog.npmlogStrings.http]
   @scala.inline
-  def http: typingsSlinky.npmlog.npmlogStrings.http = this.cast("http")
+  def info: typingsSlinky.npmlog.npmlogStrings.info = "info".asInstanceOf[typingsSlinky.npmlog.npmlogStrings.info]
   @scala.inline
-  def info: typingsSlinky.npmlog.npmlogStrings.info = this.cast("info")
+  def notice: typingsSlinky.npmlog.npmlogStrings.notice = "notice".asInstanceOf[typingsSlinky.npmlog.npmlogStrings.notice]
   @scala.inline
-  def notice: typingsSlinky.npmlog.npmlogStrings.notice = this.cast("notice")
+  def silent: typingsSlinky.npmlog.npmlogStrings.silent = "silent".asInstanceOf[typingsSlinky.npmlog.npmlogStrings.silent]
   @scala.inline
-  def silent: typingsSlinky.npmlog.npmlogStrings.silent = this.cast("silent")
+  def silly: typingsSlinky.npmlog.npmlogStrings.silly = "silly".asInstanceOf[typingsSlinky.npmlog.npmlogStrings.silly]
   @scala.inline
-  def silly: typingsSlinky.npmlog.npmlogStrings.silly = this.cast("silly")
+  def timing: typingsSlinky.npmlog.npmlogStrings.timing = "timing".asInstanceOf[typingsSlinky.npmlog.npmlogStrings.timing]
   @scala.inline
-  def timing: typingsSlinky.npmlog.npmlogStrings.timing = this.cast("timing")
+  def verbose: typingsSlinky.npmlog.npmlogStrings.verbose = "verbose".asInstanceOf[typingsSlinky.npmlog.npmlogStrings.verbose]
   @scala.inline
-  def verbose: typingsSlinky.npmlog.npmlogStrings.verbose = this.cast("verbose")
-  @scala.inline
-  def warn: typingsSlinky.npmlog.npmlogStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.npmlog.npmlogStrings.warn = "warn".asInstanceOf[typingsSlinky.npmlog.npmlogStrings.warn]
 }
 

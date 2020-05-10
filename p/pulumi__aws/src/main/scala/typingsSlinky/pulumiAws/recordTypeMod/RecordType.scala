@@ -22,30 +22,28 @@ trait RecordType extends js.Object
 
 object RecordType {
   @scala.inline
-  def A: typingsSlinky.pulumiAws.pulumiAwsStrings.A = this.cast("A")
+  def A: typingsSlinky.pulumiAws.pulumiAwsStrings.A = "A".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.A]
   @scala.inline
-  def AAAA: typingsSlinky.pulumiAws.pulumiAwsStrings.AAAA = this.cast("AAAA")
+  def AAAA: typingsSlinky.pulumiAws.pulumiAwsStrings.AAAA = "AAAA".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.AAAA]
   @scala.inline
-  def CAA: typingsSlinky.pulumiAws.pulumiAwsStrings.CAA = this.cast("CAA")
+  def CAA: typingsSlinky.pulumiAws.pulumiAwsStrings.CAA = "CAA".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.CAA]
   @scala.inline
-  def CNAME: typingsSlinky.pulumiAws.pulumiAwsStrings.CNAME = this.cast("CNAME")
+  def CNAME: typingsSlinky.pulumiAws.pulumiAwsStrings.CNAME = "CNAME".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.CNAME]
   @scala.inline
-  def MX: typingsSlinky.pulumiAws.pulumiAwsStrings.MX = this.cast("MX")
+  def MX: typingsSlinky.pulumiAws.pulumiAwsStrings.MX = "MX".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.MX]
   @scala.inline
-  def NAPTR: typingsSlinky.pulumiAws.pulumiAwsStrings.NAPTR = this.cast("NAPTR")
+  def NAPTR: typingsSlinky.pulumiAws.pulumiAwsStrings.NAPTR = "NAPTR".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.NAPTR]
   @scala.inline
-  def NS: typingsSlinky.pulumiAws.pulumiAwsStrings.NS = this.cast("NS")
+  def NS: typingsSlinky.pulumiAws.pulumiAwsStrings.NS = "NS".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.NS]
   @scala.inline
-  def PTR: typingsSlinky.pulumiAws.pulumiAwsStrings.PTR = this.cast("PTR")
+  def PTR: typingsSlinky.pulumiAws.pulumiAwsStrings.PTR = "PTR".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.PTR]
   @scala.inline
-  def SOA: typingsSlinky.pulumiAws.pulumiAwsStrings.SOA = this.cast("SOA")
+  def SOA: typingsSlinky.pulumiAws.pulumiAwsStrings.SOA = "SOA".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.SOA]
   @scala.inline
-  def SPF: typingsSlinky.pulumiAws.pulumiAwsStrings.SPF = this.cast("SPF")
+  def SPF: typingsSlinky.pulumiAws.pulumiAwsStrings.SPF = "SPF".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.SPF]
   @scala.inline
-  def SRV: typingsSlinky.pulumiAws.pulumiAwsStrings.SRV = this.cast("SRV")
+  def SRV: typingsSlinky.pulumiAws.pulumiAwsStrings.SRV = "SRV".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.SRV]
   @scala.inline
-  def TXT: typingsSlinky.pulumiAws.pulumiAwsStrings.TXT = this.cast("TXT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TXT: typingsSlinky.pulumiAws.pulumiAwsStrings.TXT = "TXT".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.TXT]
 }
 

@@ -20,26 +20,24 @@ trait PointStyle extends js.Object
 
 object PointStyle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def circle: typingsSlinky.chartJs.chartJsStrings.circle = "circle".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.circle]
   @scala.inline
-  def circle: typingsSlinky.chartJs.chartJsStrings.circle = this.cast("circle")
+  def cross: typingsSlinky.chartJs.chartJsStrings.cross = "cross".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.cross]
   @scala.inline
-  def cross: typingsSlinky.chartJs.chartJsStrings.cross = this.cast("cross")
+  def crossRot: typingsSlinky.chartJs.chartJsStrings.crossRot = "crossRot".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.crossRot]
   @scala.inline
-  def crossRot: typingsSlinky.chartJs.chartJsStrings.crossRot = this.cast("crossRot")
+  def dash: typingsSlinky.chartJs.chartJsStrings.dash = "dash".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.dash]
   @scala.inline
-  def dash: typingsSlinky.chartJs.chartJsStrings.dash = this.cast("dash")
+  def line: typingsSlinky.chartJs.chartJsStrings.line = "line".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.line]
   @scala.inline
-  def line: typingsSlinky.chartJs.chartJsStrings.line = this.cast("line")
+  def rect: typingsSlinky.chartJs.chartJsStrings.rect = "rect".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.rect]
   @scala.inline
-  def rect: typingsSlinky.chartJs.chartJsStrings.rect = this.cast("rect")
+  def rectRot: typingsSlinky.chartJs.chartJsStrings.rectRot = "rectRot".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.rectRot]
   @scala.inline
-  def rectRot: typingsSlinky.chartJs.chartJsStrings.rectRot = this.cast("rectRot")
+  def rectRounded: typingsSlinky.chartJs.chartJsStrings.rectRounded = "rectRounded".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.rectRounded]
   @scala.inline
-  def rectRounded: typingsSlinky.chartJs.chartJsStrings.rectRounded = this.cast("rectRounded")
+  def star: typingsSlinky.chartJs.chartJsStrings.star = "star".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.star]
   @scala.inline
-  def star: typingsSlinky.chartJs.chartJsStrings.star = this.cast("star")
-  @scala.inline
-  def triangle: typingsSlinky.chartJs.chartJsStrings.triangle = this.cast("triangle")
+  def triangle: typingsSlinky.chartJs.chartJsStrings.triangle = "triangle".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.triangle]
 }
 

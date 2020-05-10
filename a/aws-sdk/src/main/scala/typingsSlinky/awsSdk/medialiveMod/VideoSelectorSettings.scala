@@ -12,11 +12,41 @@ trait VideoSelectorSettings extends js.Object {
 
 object VideoSelectorSettings {
   @scala.inline
-  def apply(VideoSelectorPid: VideoSelectorPid = null, VideoSelectorProgramId: VideoSelectorProgramId = null): VideoSelectorSettings = {
+  def apply(): VideoSelectorSettings = {
     val __obj = js.Dynamic.literal()
-    if (VideoSelectorPid != null) __obj.updateDynamic("VideoSelectorPid")(VideoSelectorPid.asInstanceOf[js.Any])
-    if (VideoSelectorProgramId != null) __obj.updateDynamic("VideoSelectorProgramId")(VideoSelectorProgramId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoSelectorSettings]
   }
+  @scala.inline
+  implicit class VideoSelectorSettingsOps[Self <: VideoSelectorSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVideoSelectorPid(value: VideoSelectorPid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoSelectorPid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoSelectorPid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoSelectorPid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoSelectorProgramId(value: VideoSelectorProgramId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoSelectorProgramId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoSelectorProgramId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoSelectorProgramId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

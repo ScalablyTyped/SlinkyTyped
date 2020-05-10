@@ -36,16 +36,53 @@ trait SchemaGooglePrivacyDlpV2KMapEstimationConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2KMapEstimationConfig {
   @scala.inline
-  def apply(
-    auxiliaryTables: js.Array[SchemaGooglePrivacyDlpV2AuxiliaryTable] = null,
-    quasiIds: js.Array[SchemaGooglePrivacyDlpV2TaggedField] = null,
-    regionCode: String = null
-  ): SchemaGooglePrivacyDlpV2KMapEstimationConfig = {
+  def apply(): SchemaGooglePrivacyDlpV2KMapEstimationConfig = {
     val __obj = js.Dynamic.literal()
-    if (auxiliaryTables != null) __obj.updateDynamic("auxiliaryTables")(auxiliaryTables.asInstanceOf[js.Any])
-    if (quasiIds != null) __obj.updateDynamic("quasiIds")(quasiIds.asInstanceOf[js.Any])
-    if (regionCode != null) __obj.updateDynamic("regionCode")(regionCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2KMapEstimationConfig]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2KMapEstimationConfigOps[Self <: SchemaGooglePrivacyDlpV2KMapEstimationConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuxiliaryTables(value: js.Array[SchemaGooglePrivacyDlpV2AuxiliaryTable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auxiliaryTables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuxiliaryTables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auxiliaryTables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuasiIds(value: js.Array[SchemaGooglePrivacyDlpV2TaggedField]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuasiIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quasiIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegionCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

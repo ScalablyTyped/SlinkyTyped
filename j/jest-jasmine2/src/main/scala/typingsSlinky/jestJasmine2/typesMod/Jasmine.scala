@@ -13,11 +13,16 @@ import typingsSlinky.jestJasmine2.AnonNow
 import typingsSlinky.jestJasmine2.AnonTimer
 import typingsSlinky.jestJasmine2.TypeofSpec
 import typingsSlinky.jestJasmine2.createSpyMod.Fn
+import typingsSlinky.jestJasmine2.jestJasmine2Strings.jasmineDone
+import typingsSlinky.jestJasmine2.jestJasmine2Strings.jasmineStarted
+import typingsSlinky.jestJasmine2.jestJasmine2Strings.specDone
+import typingsSlinky.jestJasmine2.jestJasmine2Strings.specStarted
+import typingsSlinky.jestJasmine2.jestJasmine2Strings.suiteDone
+import typingsSlinky.jestJasmine2.jestJasmine2Strings.suiteStarted
 import typingsSlinky.jestJasmine2.jsApiReporterMod.default
 import typingsSlinky.jestJasmine2.suiteMod.Attributes
 import typingsSlinky.jestTypes.configMod.Path
 import typingsSlinky.std.Record
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +35,9 @@ trait Jasmine extends /* id */ StringDictionary[AsymmetricMatcher] {
   var Env: ReturnType[js.Function1[/* j$ */ this.type, AnonInstantiable]] = js.native
   var JsApiReporter: Instantiable1[/* options */ AnonTimer, default] = js.native
   var ReportDispatcher: Instantiable1[
-    /* methods */ js.Array[String], 
+    /* methods */ js.Array[
+      /* keyof jest-jasmine2.jest-jasmine2/build/types.Reporter */ jasmineDone | jasmineStarted | specDone | specStarted | suiteDone | suiteStarted
+    ], 
     typingsSlinky.jestJasmine2.reportDispatcherMod.default
   ] = js.native
   var Spec: TypeofSpec = js.native
@@ -64,6 +71,6 @@ trait Jasmine extends /* id */ StringDictionary[AsymmetricMatcher] {
   def setState(arg0: js.Any): Unit = js.native
   def stringContaining(expected: String): AsymmetricMatcher = js.native
   def stringMatching(expected: String): AsymmetricMatcher = js.native
-  def stringMatching(expected: RegExp): AsymmetricMatcher = js.native
+  def stringMatching(expected: js.RegExp): AsymmetricMatcher = js.native
 }
 

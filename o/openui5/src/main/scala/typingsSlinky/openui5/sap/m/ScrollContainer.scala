@@ -1,8 +1,8 @@
 package typingsSlinky.openui5.sap.m
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.openui5.sap.ui.core.Control
 import typingsSlinky.openui5.sap.ui.core.Element
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

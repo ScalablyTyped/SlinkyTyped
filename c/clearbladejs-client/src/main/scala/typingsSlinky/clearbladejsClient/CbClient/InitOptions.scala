@@ -4,58 +4,206 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InitOptions extends js.Object {
-  var URI: js.UndefOr[String] = js.undefined
-  var callTimeout: js.UndefOr[Double] = js.undefined
-  var callback: js.UndefOr[CbCallback] = js.undefined
-  var defaultQoS: js.UndefOr[MessagingQOS] = js.undefined
-  var email: js.UndefOr[String] = js.undefined
-  var logging: js.UndefOr[Boolean] = js.undefined
-  var masterSecret: js.UndefOr[String] = js.undefined
-  var messagingAuthPort: js.UndefOr[Double] = js.undefined
-  var messagingPort: js.UndefOr[Double] = js.undefined
-  var messagingURI: js.UndefOr[String] = js.undefined
-  var password: js.UndefOr[String] = js.undefined
-  var registerUser: js.UndefOr[Boolean] = js.undefined
-  var systemKey: String
-  var systemSecret: String
-  var useUser: js.UndefOr[APIUser] = js.undefined
+  var URI: js.UndefOr[String] = js.native
+  var callTimeout: js.UndefOr[Double] = js.native
+  var callback: js.UndefOr[CbCallback] = js.native
+  var defaultQoS: js.UndefOr[MessagingQOS] = js.native
+  var email: js.UndefOr[String] = js.native
+  var logging: js.UndefOr[Boolean] = js.native
+  var masterSecret: js.UndefOr[String] = js.native
+  var messagingAuthPort: js.UndefOr[Double] = js.native
+  var messagingPort: js.UndefOr[Double] = js.native
+  var messagingURI: js.UndefOr[String] = js.native
+  var password: js.UndefOr[String] = js.native
+  var registerUser: js.UndefOr[Boolean] = js.native
+  var systemKey: String = js.native
+  var systemSecret: String = js.native
+  var useUser: js.UndefOr[APIUser] = js.native
 }
 
 object InitOptions {
   @scala.inline
-  def apply(
-    systemKey: String,
-    systemSecret: String,
-    URI: String = null,
-    callTimeout: Int | Double = null,
-    callback: (/* error */ Boolean, /* response */ Resp) => Unit = null,
-    defaultQoS: MessagingQOS = null,
-    email: String = null,
-    logging: js.UndefOr[Boolean] = js.undefined,
-    masterSecret: String = null,
-    messagingAuthPort: Int | Double = null,
-    messagingPort: Int | Double = null,
-    messagingURI: String = null,
-    password: String = null,
-    registerUser: js.UndefOr[Boolean] = js.undefined,
-    useUser: APIUser = null
-  ): InitOptions = {
+  def apply(systemKey: String, systemSecret: String): InitOptions = {
     val __obj = js.Dynamic.literal(systemKey = systemKey.asInstanceOf[js.Any], systemSecret = systemSecret.asInstanceOf[js.Any])
-    if (URI != null) __obj.updateDynamic("URI")(URI.asInstanceOf[js.Any])
-    if (callTimeout != null) __obj.updateDynamic("callTimeout")(callTimeout.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction2(callback))
-    if (defaultQoS != null) __obj.updateDynamic("defaultQoS")(defaultQoS.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (!js.isUndefined(logging)) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
-    if (masterSecret != null) __obj.updateDynamic("masterSecret")(masterSecret.asInstanceOf[js.Any])
-    if (messagingAuthPort != null) __obj.updateDynamic("messagingAuthPort")(messagingAuthPort.asInstanceOf[js.Any])
-    if (messagingPort != null) __obj.updateDynamic("messagingPort")(messagingPort.asInstanceOf[js.Any])
-    if (messagingURI != null) __obj.updateDynamic("messagingURI")(messagingURI.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (!js.isUndefined(registerUser)) __obj.updateDynamic("registerUser")(registerUser.asInstanceOf[js.Any])
-    if (useUser != null) __obj.updateDynamic("useUser")(useUser.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitOptions]
   }
+  @scala.inline
+  implicit class InitOptionsOps[Self <: InitOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSystemKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSystemSecret(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemSecret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withURI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("URI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("URI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallback(value: (/* error */ Boolean, /* response */ Resp) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultQoS(value: MessagingQOS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultQoS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultQoS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultQoS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterSecret(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterSecret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterSecret: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterSecret")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessagingAuthPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messagingAuthPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessagingAuthPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messagingAuthPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessagingPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messagingPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessagingPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messagingPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessagingURI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messagingURI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessagingURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messagingURI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegisterUser(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registerUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegisterUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registerUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseUser(value: APIUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useUser")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

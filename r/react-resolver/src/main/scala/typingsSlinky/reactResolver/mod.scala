@@ -27,16 +27,16 @@ object mod extends js.Object {
   def resolve[OwnProps, ResolvableProps, MoreProps](
     resolversMap: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof ResolvableProps ]: react-resolver.react-resolver.ResolveFn<OwnProps & MoreProps, ResolvableProps[K]>}
-    */ typingsSlinky.reactResolver.reactResolverStrings.resolve with ResolvableProps
+    */ typingsSlinky.reactResolver.reactResolverStrings.resolve with TopLevel[ResolvableProps]
   ): js.Function1[
     /* component */ ReactComponentClass[
-      OwnProps with typingsSlinky.reactResolver.reactResolverStrings.resolve with ResolvableProps
+      OwnProps with typingsSlinky.reactResolver.reactResolverStrings.resolve with TopLevel[ResolvableProps]
     ], 
     ReactComponentClass[OwnProps with MoreProps]
   ] = js.native
   def resolve[OwnProps, K /* <: String */, V, MoreProps](prop: K, resolveFn: ResolveFn[OwnProps with MoreProps, V]): js.Function1[
     /* component */ ReactComponentClass[
-      OwnProps with typingsSlinky.reactResolver.reactResolverStrings.resolve with js.Any
+      OwnProps with typingsSlinky.reactResolver.reactResolverStrings.resolve with TopLevel[js.Any]
     ], 
     ReactComponentClass[OwnProps with MoreProps]
   ] = js.native

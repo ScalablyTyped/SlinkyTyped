@@ -10,24 +10,26 @@ import scala.scalajs.js.annotation._
   * be placed anywhere in the room, any spawns will be able to use them regardless
   * of distance.
   */
+@js.native
 trait StructureExtension
   extends OwnedStructure[STRUCTURE_EXTENSION]
      with AnyOwnedStructure
-     with AnyStoreStructure {
+     with AnyStoreStructure
+     with ConcreteStructure[js.Any] {
   /**
     * The amount of energy containing in the extension.
     * @deprecated An alias for .store[RESOURCE_ENERGY].
     */
-  var energy: Double
+  var energy: Double = js.native
   /**
     * The total amount of energy the extension can contain.
     * @deprecated An alias for .store.getCapacity(RESOURCE_ENERGY).
     */
-  var energyCapacity: Double
+  var energyCapacity: Double = js.native
   /**
     * A Store object that contains cargo of this structure.
     */
-  var store: StoreRESOURCEENERGYfalse
+  var store: StoreRESOURCEENERGYfalse = js.native
 }
 
 @JSGlobal("StructureExtension")

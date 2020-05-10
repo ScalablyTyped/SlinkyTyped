@@ -13,7 +13,7 @@ trait InputNumber
   var inputNumberRef: js.Any = js.native
   def blur(): Unit = js.native
   def focus(): Unit = js.native
-  def renderInputNumber(hasGetPrefixCls: ConfigConsumerProps): ReactElement = js.native
+  def renderInputNumber(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
   def saveInputNumber(inputNumberRef: js.Any): Unit = js.native
 }
 

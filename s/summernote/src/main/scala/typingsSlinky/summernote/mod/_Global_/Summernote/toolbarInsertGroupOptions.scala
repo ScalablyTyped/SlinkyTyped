@@ -15,16 +15,14 @@ trait toolbarInsertGroupOptions extends js.Object
 
 object toolbarInsertGroupOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hr: typingsSlinky.summernote.summernoteStrings.hr = "hr".asInstanceOf[typingsSlinky.summernote.summernoteStrings.hr]
   @scala.inline
-  def hr: typingsSlinky.summernote.summernoteStrings.hr = this.cast("hr")
+  def link: typingsSlinky.summernote.summernoteStrings.link = "link".asInstanceOf[typingsSlinky.summernote.summernoteStrings.link]
   @scala.inline
-  def link: typingsSlinky.summernote.summernoteStrings.link = this.cast("link")
+  def picture: typingsSlinky.summernote.summernoteStrings.picture = "picture".asInstanceOf[typingsSlinky.summernote.summernoteStrings.picture]
   @scala.inline
-  def picture: typingsSlinky.summernote.summernoteStrings.picture = this.cast("picture")
+  def table: typingsSlinky.summernote.summernoteStrings.table = "table".asInstanceOf[typingsSlinky.summernote.summernoteStrings.table]
   @scala.inline
-  def table: typingsSlinky.summernote.summernoteStrings.table = this.cast("table")
-  @scala.inline
-  def video: typingsSlinky.summernote.summernoteStrings.video = this.cast("video")
+  def video: typingsSlinky.summernote.summernoteStrings.video = "video".asInstanceOf[typingsSlinky.summernote.summernoteStrings.video]
 }
 

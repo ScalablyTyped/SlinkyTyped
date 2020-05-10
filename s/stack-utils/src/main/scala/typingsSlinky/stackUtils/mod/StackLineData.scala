@@ -4,40 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StackLineData extends StackData {
-  var evalColumn: js.UndefOr[Double] = js.undefined
-  var evalFile: js.UndefOr[String] = js.undefined
-  var evalLine: js.UndefOr[Double] = js.undefined
+  var evalColumn: js.UndefOr[Double] = js.native
+  var evalFile: js.UndefOr[String] = js.native
+  var evalLine: js.UndefOr[Double] = js.native
 }
 
 object StackLineData {
   @scala.inline
-  def apply(
-    column: Int | Double = null,
-    constructor: js.UndefOr[Boolean] = js.undefined,
-    evalColumn: Int | Double = null,
-    evalFile: String = null,
-    evalLine: Int | Double = null,
-    evalOrigin: String = null,
-    file: String = null,
-    function: String = null,
-    line: Int | Double = null,
-    method: String = null,
-    native: js.UndefOr[Boolean] = js.undefined
-  ): StackLineData = {
+  def apply(): StackLineData = {
     val __obj = js.Dynamic.literal()
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (!js.isUndefined(constructor)) __obj.updateDynamic("constructor")(constructor.asInstanceOf[js.Any])
-    if (evalColumn != null) __obj.updateDynamic("evalColumn")(evalColumn.asInstanceOf[js.Any])
-    if (evalFile != null) __obj.updateDynamic("evalFile")(evalFile.asInstanceOf[js.Any])
-    if (evalLine != null) __obj.updateDynamic("evalLine")(evalLine.asInstanceOf[js.Any])
-    if (evalOrigin != null) __obj.updateDynamic("evalOrigin")(evalOrigin.asInstanceOf[js.Any])
-    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
-    if (function != null) __obj.updateDynamic("function")(function.asInstanceOf[js.Any])
-    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(native)) __obj.updateDynamic("native")(native.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackLineData]
   }
+  @scala.inline
+  implicit class StackLineDataOps[Self <: StackLineData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvalColumn(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evalColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvalColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evalColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvalFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evalFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvalFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evalFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvalLine(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evalLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvalLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evalLine")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,48 +1,78 @@
 package typingsSlinky.reactNativeGestureHandler.mod
 
-import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactNativeGestureHandler.AnonBottom
-import typingsSlinky.reactNativeGestureHandler.AnonBottomHeight
-import typingsSlinky.reactNativeGestureHandler.AnonHeight
-import typingsSlinky.reactNativeGestureHandler.AnonLeft
-import typingsSlinky.reactNativeGestureHandler.AnonRight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FlingGestureHandlerProperties extends GestureHandlerProperties {
-  var direction: js.UndefOr[Double] = js.undefined
-  var numberOfPointers: js.UndefOr[Double] = js.undefined
-  var onGestureEvent: js.UndefOr[js.Function1[/* event */ FlingGestureHandlerGestureEvent, Unit]] = js.undefined
-  var onHandlerStateChange: js.UndefOr[js.Function1[/* event */ FlingGestureHandlerStateChangeEvent, Unit]] = js.undefined
+  var direction: js.UndefOr[Double] = js.native
+  var numberOfPointers: js.UndefOr[Double] = js.native
+  var onGestureEvent: js.UndefOr[js.Function1[/* event */ FlingGestureHandlerGestureEvent, Unit]] = js.native
+  var onHandlerStateChange: js.UndefOr[js.Function1[/* event */ FlingGestureHandlerStateChangeEvent, Unit]] = js.native
 }
 
 object FlingGestureHandlerProperties {
   @scala.inline
-  def apply(
-    direction: Int | Double = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    hitSlop: Double | AnonBottom | AnonLeft | AnonRight | AnonHeight | AnonBottomHeight = null,
-    id: String = null,
-    numberOfPointers: Int | Double = null,
-    onGestureEvent: /* event */ FlingGestureHandlerGestureEvent => Unit = null,
-    onHandlerStateChange: /* event */ FlingGestureHandlerStateChangeEvent => Unit = null,
-    shouldCancelWhenOutside: js.UndefOr[Boolean] = js.undefined,
-    simultaneousHandlers: Ref[_] | js.Array[Ref[_]] = null,
-    waitFor: Ref[_] | js.Array[Ref[_]] = null
-  ): FlingGestureHandlerProperties = {
+  def apply(): FlingGestureHandlerProperties = {
     val __obj = js.Dynamic.literal()
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (hitSlop != null) __obj.updateDynamic("hitSlop")(hitSlop.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (numberOfPointers != null) __obj.updateDynamic("numberOfPointers")(numberOfPointers.asInstanceOf[js.Any])
-    if (onGestureEvent != null) __obj.updateDynamic("onGestureEvent")(js.Any.fromFunction1(onGestureEvent))
-    if (onHandlerStateChange != null) __obj.updateDynamic("onHandlerStateChange")(js.Any.fromFunction1(onHandlerStateChange))
-    if (!js.isUndefined(shouldCancelWhenOutside)) __obj.updateDynamic("shouldCancelWhenOutside")(shouldCancelWhenOutside.asInstanceOf[js.Any])
-    if (simultaneousHandlers != null) __obj.updateDynamic("simultaneousHandlers")(simultaneousHandlers.asInstanceOf[js.Any])
-    if (waitFor != null) __obj.updateDynamic("waitFor")(waitFor.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlingGestureHandlerProperties]
   }
+  @scala.inline
+  implicit class FlingGestureHandlerPropertiesOps[Self <: FlingGestureHandlerProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirection(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfPointers(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfPointers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfPointers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfPointers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnGestureEvent(value: /* event */ FlingGestureHandlerGestureEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureEvent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnGestureEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onGestureEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHandlerStateChange(value: /* event */ FlingGestureHandlerStateChangeEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHandlerStateChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHandlerStateChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHandlerStateChange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

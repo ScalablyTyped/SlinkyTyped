@@ -4,87 +4,335 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlaylistTrack extends js.Object {
-  var album: js.UndefOr[String] = js.undefined
-  var albumArtRef: js.UndefOr[js.Array[ArtRef]] = js.undefined
-  var albumArtist: js.UndefOr[String] = js.undefined
-  var albumAvailableForPurchase: js.UndefOr[Boolean] = js.undefined
-  var albumId: js.UndefOr[String] = js.undefined
-  var artist: js.UndefOr[String] = js.undefined
-  var artistArtRef: js.UndefOr[js.Array[ArtRef]] = js.undefined
-  var artistId: js.UndefOr[js.Array[String]] = js.undefined
-  var composer: js.UndefOr[String] = js.undefined
-  var contentType: js.UndefOr[String] = js.undefined
-  var discNumber: js.UndefOr[Double] = js.undefined
-  var durationMillis: js.UndefOr[String] = js.undefined
-  var estimatedSize: js.UndefOr[String] = js.undefined
-  var genre: js.UndefOr[String] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var nid: js.UndefOr[String] = js.undefined
-  var playCount: js.UndefOr[Double] = js.undefined
-  var storeId: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var trackAvailableForPurchase: js.UndefOr[Boolean] = js.undefined
-  var trackAvailableForSubscription: js.UndefOr[Boolean] = js.undefined
-  var trackNumber: js.UndefOr[Double] = js.undefined
-  var trackType: js.UndefOr[String] = js.undefined
-  var year: js.UndefOr[Double] = js.undefined
+  var album: js.UndefOr[String] = js.native
+  var albumArtRef: js.UndefOr[js.Array[ArtRef]] = js.native
+  var albumArtist: js.UndefOr[String] = js.native
+  var albumAvailableForPurchase: js.UndefOr[Boolean] = js.native
+  var albumId: js.UndefOr[String] = js.native
+  var artist: js.UndefOr[String] = js.native
+  var artistArtRef: js.UndefOr[js.Array[ArtRef]] = js.native
+  var artistId: js.UndefOr[js.Array[String]] = js.native
+  var composer: js.UndefOr[String] = js.native
+  var contentType: js.UndefOr[String] = js.native
+  var discNumber: js.UndefOr[Double] = js.native
+  var durationMillis: js.UndefOr[String] = js.native
+  var estimatedSize: js.UndefOr[String] = js.native
+  var genre: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var nid: js.UndefOr[String] = js.native
+  var playCount: js.UndefOr[Double] = js.native
+  var storeId: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
+  var trackAvailableForPurchase: js.UndefOr[Boolean] = js.native
+  var trackAvailableForSubscription: js.UndefOr[Boolean] = js.native
+  var trackNumber: js.UndefOr[Double] = js.native
+  var trackType: js.UndefOr[String] = js.native
+  var year: js.UndefOr[Double] = js.native
 }
 
 object PlaylistTrack {
   @scala.inline
-  def apply(
-    album: String = null,
-    albumArtRef: js.Array[ArtRef] = null,
-    albumArtist: String = null,
-    albumAvailableForPurchase: js.UndefOr[Boolean] = js.undefined,
-    albumId: String = null,
-    artist: String = null,
-    artistArtRef: js.Array[ArtRef] = null,
-    artistId: js.Array[String] = null,
-    composer: String = null,
-    contentType: String = null,
-    discNumber: Int | Double = null,
-    durationMillis: String = null,
-    estimatedSize: String = null,
-    genre: String = null,
-    kind: String = null,
-    nid: String = null,
-    playCount: Int | Double = null,
-    storeId: String = null,
-    title: String = null,
-    trackAvailableForPurchase: js.UndefOr[Boolean] = js.undefined,
-    trackAvailableForSubscription: js.UndefOr[Boolean] = js.undefined,
-    trackNumber: Int | Double = null,
-    trackType: String = null,
-    year: Int | Double = null
-  ): PlaylistTrack = {
+  def apply(): PlaylistTrack = {
     val __obj = js.Dynamic.literal()
-    if (album != null) __obj.updateDynamic("album")(album.asInstanceOf[js.Any])
-    if (albumArtRef != null) __obj.updateDynamic("albumArtRef")(albumArtRef.asInstanceOf[js.Any])
-    if (albumArtist != null) __obj.updateDynamic("albumArtist")(albumArtist.asInstanceOf[js.Any])
-    if (!js.isUndefined(albumAvailableForPurchase)) __obj.updateDynamic("albumAvailableForPurchase")(albumAvailableForPurchase.asInstanceOf[js.Any])
-    if (albumId != null) __obj.updateDynamic("albumId")(albumId.asInstanceOf[js.Any])
-    if (artist != null) __obj.updateDynamic("artist")(artist.asInstanceOf[js.Any])
-    if (artistArtRef != null) __obj.updateDynamic("artistArtRef")(artistArtRef.asInstanceOf[js.Any])
-    if (artistId != null) __obj.updateDynamic("artistId")(artistId.asInstanceOf[js.Any])
-    if (composer != null) __obj.updateDynamic("composer")(composer.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (discNumber != null) __obj.updateDynamic("discNumber")(discNumber.asInstanceOf[js.Any])
-    if (durationMillis != null) __obj.updateDynamic("durationMillis")(durationMillis.asInstanceOf[js.Any])
-    if (estimatedSize != null) __obj.updateDynamic("estimatedSize")(estimatedSize.asInstanceOf[js.Any])
-    if (genre != null) __obj.updateDynamic("genre")(genre.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (nid != null) __obj.updateDynamic("nid")(nid.asInstanceOf[js.Any])
-    if (playCount != null) __obj.updateDynamic("playCount")(playCount.asInstanceOf[js.Any])
-    if (storeId != null) __obj.updateDynamic("storeId")(storeId.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (!js.isUndefined(trackAvailableForPurchase)) __obj.updateDynamic("trackAvailableForPurchase")(trackAvailableForPurchase.asInstanceOf[js.Any])
-    if (!js.isUndefined(trackAvailableForSubscription)) __obj.updateDynamic("trackAvailableForSubscription")(trackAvailableForSubscription.asInstanceOf[js.Any])
-    if (trackNumber != null) __obj.updateDynamic("trackNumber")(trackNumber.asInstanceOf[js.Any])
-    if (trackType != null) __obj.updateDynamic("trackType")(trackType.asInstanceOf[js.Any])
-    if (year != null) __obj.updateDynamic("year")(year.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaylistTrack]
   }
+  @scala.inline
+  implicit class PlaylistTrackOps[Self <: PlaylistTrack] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlbum(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlbum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlbumArtRef(value: js.Array[ArtRef]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("albumArtRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlbumArtRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("albumArtRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlbumArtist(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("albumArtist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlbumArtist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("albumArtist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlbumAvailableForPurchase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("albumAvailableForPurchase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlbumAvailableForPurchase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("albumAvailableForPurchase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlbumId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("albumId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlbumId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("albumId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArtist(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArtist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArtistArtRef(value: js.Array[ArtRef]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artistArtRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArtistArtRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artistArtRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArtistId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artistId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArtistId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artistId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComposer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("composer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComposer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("composer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiscNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiscNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("discNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDurationMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDurationMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("durationMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenre(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("genre")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenre: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("genre")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("playCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackAvailableForPurchase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackAvailableForPurchase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackAvailableForPurchase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackAvailableForPurchase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackAvailableForSubscription(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackAvailableForSubscription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackAvailableForSubscription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackAvailableForSubscription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYear(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

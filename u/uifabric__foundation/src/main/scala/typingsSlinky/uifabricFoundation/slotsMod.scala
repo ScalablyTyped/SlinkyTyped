@@ -3,8 +3,6 @@ package typingsSlinky.uifabricFoundation
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import typingsSlinky.react.mod.Attributes
-import typingsSlinky.react.mod.FunctionComponent
-import typingsSlinky.react.mod.ReactNode
 import typingsSlinky.std.Required
 import typingsSlinky.std.ReturnType
 import typingsSlinky.uifabricFoundation.libIcomponentMod.IFactoryOptions
@@ -26,13 +24,13 @@ object slotsMod extends js.Object {
   def createFactory[TProps /* <: ValidProps */, TShorthandProp /* <: ValidShorthand */](DefaultComponent: ReactComponentClass[TProps], options: IFactoryOptions[TProps]): ISlotFactory[TProps, TShorthandProp] = js.native
   def getSlots[TComponentProps /* <: ISlottableProps[TComponentSlots] */, TComponentSlots](userProps: TComponentProps, slots: ISlotDefinition[Required[TComponentSlots]]): ISlots[Required[TComponentSlots]] = js.native
   def withSlots[P](`type`: String): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: String, children: ReactNode*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: String, children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
   def withSlots[P](`type`: String, props: Attributes with P, children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: FunctionComponent[P]): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: FunctionComponent[P], children: ReactNode*): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: FunctionComponent[P], props: Attributes with P, children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: ReactComponentClass[P]): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: ReactComponentClass[P], children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: ReactComponentClass[P], props: Attributes with P, children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
   def withSlots[P](`type`: ISlot[P]): ReturnType[ReactComponentClass[P]] = js.native
-  def withSlots[P](`type`: ISlot[P], children: ReactNode*): ReturnType[ReactComponentClass[P]] = js.native
+  def withSlots[P](`type`: ISlot[P], children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
   def withSlots[P](`type`: ISlot[P], props: Attributes with P, children: TagMod[Any]*): ReturnType[ReactComponentClass[P]] = js.native
 }
 

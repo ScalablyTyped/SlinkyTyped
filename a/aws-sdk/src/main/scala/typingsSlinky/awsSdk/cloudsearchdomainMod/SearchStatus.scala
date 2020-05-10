@@ -18,11 +18,41 @@ trait SearchStatus extends js.Object {
 
 object SearchStatus {
   @scala.inline
-  def apply(rid: String = null, timems: Int | scala.Double = null): SearchStatus = {
+  def apply(): SearchStatus = {
     val __obj = js.Dynamic.literal()
-    if (rid != null) __obj.updateDynamic("rid")(rid.asInstanceOf[js.Any])
-    if (timems != null) __obj.updateDynamic("timems")(timems.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchStatus]
   }
+  @scala.inline
+  implicit class SearchStatusOps[Self <: SearchStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimems(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timems")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

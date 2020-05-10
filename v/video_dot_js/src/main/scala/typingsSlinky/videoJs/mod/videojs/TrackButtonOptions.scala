@@ -4,23 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TrackButtonOptions extends MenuButtonOptions {
-  var track: js.Array[Track]
+  var track: js.Array[Track] = js.native
 }
 
 object TrackButtonOptions {
   @scala.inline
-  def apply(
-    track: js.Array[Track],
-    children: js.Array[Child] = null,
-    iniChildren: js.UndefOr[Boolean] = js.undefined,
-    title: String = null
-  ): TrackButtonOptions = {
+  def apply(track: js.Array[Track]): TrackButtonOptions = {
     val __obj = js.Dynamic.literal(track = track.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(iniChildren)) __obj.updateDynamic("iniChildren")(iniChildren.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrackButtonOptions]
   }
+  @scala.inline
+  implicit class TrackButtonOptionsOps[Self <: TrackButtonOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrack(value: js.Array[Track]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

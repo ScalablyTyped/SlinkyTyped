@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlaylistSnippet extends js.Object {
-  var channelId: js.UndefOr[String] = js.undefined
-  var channelTitle: js.UndefOr[String] = js.undefined
-  var defaultLanguage: js.UndefOr[String] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var localized: js.UndefOr[PlaylistLocalization] = js.undefined
-  var publishedAt: js.UndefOr[String] = js.undefined
-  var tags: js.UndefOr[js.Array[String]] = js.undefined
-  var thumbnails: js.UndefOr[ThumbnailDetails] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  var channelId: js.UndefOr[String] = js.native
+  var channelTitle: js.UndefOr[String] = js.native
+  var defaultLanguage: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.native
+  var localized: js.UndefOr[PlaylistLocalization] = js.native
+  var publishedAt: js.UndefOr[String] = js.native
+  var tags: js.UndefOr[js.Array[String]] = js.native
+  var thumbnails: js.UndefOr[ThumbnailDetails] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object PlaylistSnippet {
   @scala.inline
-  def apply(
-    channelId: String = null,
-    channelTitle: String = null,
-    defaultLanguage: String = null,
-    description: String = null,
-    localized: PlaylistLocalization = null,
-    publishedAt: String = null,
-    tags: js.Array[String] = null,
-    thumbnails: ThumbnailDetails = null,
-    title: String = null
-  ): PlaylistSnippet = {
+  def apply(): PlaylistSnippet = {
     val __obj = js.Dynamic.literal()
-    if (channelId != null) __obj.updateDynamic("channelId")(channelId.asInstanceOf[js.Any])
-    if (channelTitle != null) __obj.updateDynamic("channelTitle")(channelTitle.asInstanceOf[js.Any])
-    if (defaultLanguage != null) __obj.updateDynamic("defaultLanguage")(defaultLanguage.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (localized != null) __obj.updateDynamic("localized")(localized.asInstanceOf[js.Any])
-    if (publishedAt != null) __obj.updateDynamic("publishedAt")(publishedAt.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (thumbnails != null) __obj.updateDynamic("thumbnails")(thumbnails.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaylistSnippet]
   }
+  @scala.inline
+  implicit class PlaylistSnippetOps[Self <: PlaylistSnippet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannelId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannelTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalized(value: PlaylistLocalization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localized")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublishedAt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublishedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbnails(value: ThumbnailDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbnails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,44 +7,97 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OrgsCreateInvitationParams extends js.Object {
   /**
     * **Required unless you provide `invitee_id`**. Email address of the person you are inviting, which can be an existing GitHub user.
     */
-  var email: js.UndefOr[String] = js.undefined
+  var email: js.UndefOr[String] = js.native
   /**
     * **Required unless you provide `email`**. GitHub user ID for the person you are inviting.
     */
-  var invitee_id: js.UndefOr[Double] = js.undefined
-  var org: String
+  var invitee_id: js.UndefOr[Double] = js.native
+  var org: String = js.native
   /**
     * Specify role for new member. Can be one of:
     * \* `admin` - Organization owners with full administrative rights to the organization and complete access to all repositories and teams.
     * \* `direct_member` - Non-owner organization members with ability to see other members and join teams by invitation.
     * \* `billing_manager` - Non-owner organization members with ability to manage the billing settings of your organization.
     */
-  var role: js.UndefOr[admin | direct_member | billing_manager] = js.undefined
+  var role: js.UndefOr[admin | direct_member | billing_manager] = js.native
   /**
     * Specify IDs for the teams you want to invite new members to.
     */
-  var team_ids: js.UndefOr[js.Array[Double]] = js.undefined
+  var team_ids: js.UndefOr[js.Array[Double]] = js.native
 }
 
 object OrgsCreateInvitationParams {
   @scala.inline
-  def apply(
-    org: String,
-    email: String = null,
-    invitee_id: Int | Double = null,
-    role: admin | direct_member | billing_manager = null,
-    team_ids: js.Array[Double] = null
-  ): OrgsCreateInvitationParams = {
+  def apply(org: String): OrgsCreateInvitationParams = {
     val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (invitee_id != null) __obj.updateDynamic("invitee_id")(invitee_id.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (team_ids != null) __obj.updateDynamic("team_ids")(team_ids.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgsCreateInvitationParams]
   }
+  @scala.inline
+  implicit class OrgsCreateInvitationParamsOps[Self <: OrgsCreateInvitationParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitee_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitee_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitee_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitee_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(value: admin | direct_member | billing_manager): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeam_ids(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("team_ids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeam_ids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("team_ids")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

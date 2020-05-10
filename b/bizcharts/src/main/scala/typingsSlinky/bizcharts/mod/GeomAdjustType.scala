@@ -14,14 +14,12 @@ trait GeomAdjustType extends js.Object
 
 object GeomAdjustType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dodge: typingsSlinky.bizcharts.bizchartsStrings.dodge = "dodge".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.dodge]
   @scala.inline
-  def dodge: typingsSlinky.bizcharts.bizchartsStrings.dodge = this.cast("dodge")
+  def jitter: typingsSlinky.bizcharts.bizchartsStrings.jitter = "jitter".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.jitter]
   @scala.inline
-  def jitter: typingsSlinky.bizcharts.bizchartsStrings.jitter = this.cast("jitter")
+  def stack: typingsSlinky.bizcharts.bizchartsStrings.stack = "stack".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.stack]
   @scala.inline
-  def stack: typingsSlinky.bizcharts.bizchartsStrings.stack = this.cast("stack")
-  @scala.inline
-  def symmetric: typingsSlinky.bizcharts.bizchartsStrings.symmetric = this.cast("symmetric")
+  def symmetric: typingsSlinky.bizcharts.bizchartsStrings.symmetric = "symmetric".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.symmetric]
 }
 

@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBufferForPlaybackAfterRebufferMs extends js.Object {
-  var bufferForPlaybackAfterRebufferMs: js.UndefOr[Double] = js.undefined
-  var bufferForPlaybackMs: js.UndefOr[Double] = js.undefined
-  var maxBufferMs: js.UndefOr[Double] = js.undefined
-  var minBufferMs: js.UndefOr[Double] = js.undefined
+  var bufferForPlaybackAfterRebufferMs: js.UndefOr[Double] = js.native
+  var bufferForPlaybackMs: js.UndefOr[Double] = js.native
+  var maxBufferMs: js.UndefOr[Double] = js.native
+  var minBufferMs: js.UndefOr[Double] = js.native
 }
 
 object AnonBufferForPlaybackAfterRebufferMs {
   @scala.inline
-  def apply(
-    bufferForPlaybackAfterRebufferMs: Int | Double = null,
-    bufferForPlaybackMs: Int | Double = null,
-    maxBufferMs: Int | Double = null,
-    minBufferMs: Int | Double = null
-  ): AnonBufferForPlaybackAfterRebufferMs = {
+  def apply(): AnonBufferForPlaybackAfterRebufferMs = {
     val __obj = js.Dynamic.literal()
-    if (bufferForPlaybackAfterRebufferMs != null) __obj.updateDynamic("bufferForPlaybackAfterRebufferMs")(bufferForPlaybackAfterRebufferMs.asInstanceOf[js.Any])
-    if (bufferForPlaybackMs != null) __obj.updateDynamic("bufferForPlaybackMs")(bufferForPlaybackMs.asInstanceOf[js.Any])
-    if (maxBufferMs != null) __obj.updateDynamic("maxBufferMs")(maxBufferMs.asInstanceOf[js.Any])
-    if (minBufferMs != null) __obj.updateDynamic("minBufferMs")(minBufferMs.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBufferForPlaybackAfterRebufferMs]
   }
+  @scala.inline
+  implicit class AnonBufferForPlaybackAfterRebufferMsOps[Self <: AnonBufferForPlaybackAfterRebufferMs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBufferForPlaybackAfterRebufferMs(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferForPlaybackAfterRebufferMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBufferForPlaybackAfterRebufferMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferForPlaybackAfterRebufferMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBufferForPlaybackMs(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferForPlaybackMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBufferForPlaybackMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferForPlaybackMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBufferMs(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBufferMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBufferMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinBufferMs(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minBufferMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinBufferMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minBufferMs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

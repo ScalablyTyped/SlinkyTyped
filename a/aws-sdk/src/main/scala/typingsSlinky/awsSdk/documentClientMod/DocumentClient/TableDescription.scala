@@ -94,52 +94,269 @@ trait TableDescription extends js.Object {
 
 object TableDescription {
   @scala.inline
-  def apply(
-    ArchivalSummary: ArchivalSummary = null,
-    AttributeDefinitions: AttributeDefinitions = null,
-    BillingModeSummary: BillingModeSummary = null,
-    CreationDateTime: js.Date = null,
-    GlobalSecondaryIndexes: GlobalSecondaryIndexDescriptionList = null,
-    GlobalTableVersion: String = null,
-    ItemCount: Int | scala.Double = null,
-    KeySchema: KeySchema = null,
-    LatestStreamArn: StreamArn = null,
-    LatestStreamLabel: String = null,
-    LocalSecondaryIndexes: LocalSecondaryIndexDescriptionList = null,
-    ProvisionedThroughput: ProvisionedThroughputDescription = null,
-    Replicas: ReplicaDescriptionList = null,
-    RestoreSummary: RestoreSummary = null,
-    SSEDescription: SSEDescription = null,
-    StreamSpecification: StreamSpecification = null,
-    TableArn: String = null,
-    TableId: TableId = null,
-    TableName: TableName = null,
-    TableSizeBytes: Int | scala.Double = null,
-    TableStatus: TableStatus = null
-  ): TableDescription = {
+  def apply(): TableDescription = {
     val __obj = js.Dynamic.literal()
-    if (ArchivalSummary != null) __obj.updateDynamic("ArchivalSummary")(ArchivalSummary.asInstanceOf[js.Any])
-    if (AttributeDefinitions != null) __obj.updateDynamic("AttributeDefinitions")(AttributeDefinitions.asInstanceOf[js.Any])
-    if (BillingModeSummary != null) __obj.updateDynamic("BillingModeSummary")(BillingModeSummary.asInstanceOf[js.Any])
-    if (CreationDateTime != null) __obj.updateDynamic("CreationDateTime")(CreationDateTime.asInstanceOf[js.Any])
-    if (GlobalSecondaryIndexes != null) __obj.updateDynamic("GlobalSecondaryIndexes")(GlobalSecondaryIndexes.asInstanceOf[js.Any])
-    if (GlobalTableVersion != null) __obj.updateDynamic("GlobalTableVersion")(GlobalTableVersion.asInstanceOf[js.Any])
-    if (ItemCount != null) __obj.updateDynamic("ItemCount")(ItemCount.asInstanceOf[js.Any])
-    if (KeySchema != null) __obj.updateDynamic("KeySchema")(KeySchema.asInstanceOf[js.Any])
-    if (LatestStreamArn != null) __obj.updateDynamic("LatestStreamArn")(LatestStreamArn.asInstanceOf[js.Any])
-    if (LatestStreamLabel != null) __obj.updateDynamic("LatestStreamLabel")(LatestStreamLabel.asInstanceOf[js.Any])
-    if (LocalSecondaryIndexes != null) __obj.updateDynamic("LocalSecondaryIndexes")(LocalSecondaryIndexes.asInstanceOf[js.Any])
-    if (ProvisionedThroughput != null) __obj.updateDynamic("ProvisionedThroughput")(ProvisionedThroughput.asInstanceOf[js.Any])
-    if (Replicas != null) __obj.updateDynamic("Replicas")(Replicas.asInstanceOf[js.Any])
-    if (RestoreSummary != null) __obj.updateDynamic("RestoreSummary")(RestoreSummary.asInstanceOf[js.Any])
-    if (SSEDescription != null) __obj.updateDynamic("SSEDescription")(SSEDescription.asInstanceOf[js.Any])
-    if (StreamSpecification != null) __obj.updateDynamic("StreamSpecification")(StreamSpecification.asInstanceOf[js.Any])
-    if (TableArn != null) __obj.updateDynamic("TableArn")(TableArn.asInstanceOf[js.Any])
-    if (TableId != null) __obj.updateDynamic("TableId")(TableId.asInstanceOf[js.Any])
-    if (TableName != null) __obj.updateDynamic("TableName")(TableName.asInstanceOf[js.Any])
-    if (TableSizeBytes != null) __obj.updateDynamic("TableSizeBytes")(TableSizeBytes.asInstanceOf[js.Any])
-    if (TableStatus != null) __obj.updateDynamic("TableStatus")(TableStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableDescription]
   }
+  @scala.inline
+  implicit class TableDescriptionOps[Self <: TableDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArchivalSummary(value: ArchivalSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArchivalSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchivalSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArchivalSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeDefinitions(value: AttributeDefinitions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeDefinitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeDefinitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeDefinitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBillingModeSummary(value: BillingModeSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingModeSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingModeSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingModeSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalSecondaryIndexes(value: GlobalSecondaryIndexDescriptionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalSecondaryIndexes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalTableVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalTableVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalTableVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemCount(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeySchema(value: KeySchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySchema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeySchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySchema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestStreamArn(value: StreamArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestStreamArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestStreamArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestStreamArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestStreamLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestStreamLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestStreamLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LatestStreamLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalSecondaryIndexes(value: LocalSecondaryIndexDescriptionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalSecondaryIndexes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughput(value: ProvisionedThroughputDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedThroughput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicas(value: ReplicaDescriptionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Replicas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Replicas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestoreSummary(value: RestoreSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestoreSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSEDescription(value: SSEDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSEDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSEDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamSpecification(value: StreamSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableId(value: TableId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableName(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableSizeBytes(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableSizeBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableStatus(value: TableStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

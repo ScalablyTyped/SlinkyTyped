@@ -4,60 +4,218 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait McfData extends js.Object {
-  var columnHeaders: js.UndefOr[js.Array[McfDataColumnHeaders]] = js.undefined
-  var containsSampledData: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var itemsPerPage: js.UndefOr[Double] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var nextLink: js.UndefOr[String] = js.undefined
-  var previousLink: js.UndefOr[String] = js.undefined
-  var profileInfo: js.UndefOr[McfDataProfileInfo] = js.undefined
-  var query: js.UndefOr[McfDataQuery] = js.undefined
-  var rows: js.UndefOr[js.Array[js.Array[McfDataRows]]] = js.undefined
-  var sampleSize: js.UndefOr[String] = js.undefined
-  var sampleSpace: js.UndefOr[String] = js.undefined
-  var selfLink: js.UndefOr[String] = js.undefined
-  var totalResults: js.UndefOr[Double] = js.undefined
-  var totalsForAllResults: js.UndefOr[js.Object] = js.undefined
+  var columnHeaders: js.UndefOr[js.Array[McfDataColumnHeaders]] = js.native
+  var containsSampledData: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[String] = js.native
+  var itemsPerPage: js.UndefOr[Double] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var nextLink: js.UndefOr[String] = js.native
+  var previousLink: js.UndefOr[String] = js.native
+  var profileInfo: js.UndefOr[McfDataProfileInfo] = js.native
+  var query: js.UndefOr[McfDataQuery] = js.native
+  var rows: js.UndefOr[js.Array[js.Array[McfDataRows]]] = js.native
+  var sampleSize: js.UndefOr[String] = js.native
+  var sampleSpace: js.UndefOr[String] = js.native
+  var selfLink: js.UndefOr[String] = js.native
+  var totalResults: js.UndefOr[Double] = js.native
+  var totalsForAllResults: js.UndefOr[js.Object] = js.native
 }
 
 object McfData {
   @scala.inline
-  def apply(
-    columnHeaders: js.Array[McfDataColumnHeaders] = null,
-    containsSampledData: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    itemsPerPage: Int | Double = null,
-    kind: String = null,
-    nextLink: String = null,
-    previousLink: String = null,
-    profileInfo: McfDataProfileInfo = null,
-    query: McfDataQuery = null,
-    rows: js.Array[js.Array[McfDataRows]] = null,
-    sampleSize: String = null,
-    sampleSpace: String = null,
-    selfLink: String = null,
-    totalResults: Int | Double = null,
-    totalsForAllResults: js.Object = null
-  ): McfData = {
+  def apply(): McfData = {
     val __obj = js.Dynamic.literal()
-    if (columnHeaders != null) __obj.updateDynamic("columnHeaders")(columnHeaders.asInstanceOf[js.Any])
-    if (!js.isUndefined(containsSampledData)) __obj.updateDynamic("containsSampledData")(containsSampledData.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (itemsPerPage != null) __obj.updateDynamic("itemsPerPage")(itemsPerPage.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (nextLink != null) __obj.updateDynamic("nextLink")(nextLink.asInstanceOf[js.Any])
-    if (previousLink != null) __obj.updateDynamic("previousLink")(previousLink.asInstanceOf[js.Any])
-    if (profileInfo != null) __obj.updateDynamic("profileInfo")(profileInfo.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (sampleSize != null) __obj.updateDynamic("sampleSize")(sampleSize.asInstanceOf[js.Any])
-    if (sampleSpace != null) __obj.updateDynamic("sampleSpace")(sampleSpace.asInstanceOf[js.Any])
-    if (selfLink != null) __obj.updateDynamic("selfLink")(selfLink.asInstanceOf[js.Any])
-    if (totalResults != null) __obj.updateDynamic("totalResults")(totalResults.asInstanceOf[js.Any])
-    if (totalsForAllResults != null) __obj.updateDynamic("totalsForAllResults")(totalsForAllResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[McfData]
   }
+  @scala.inline
+  implicit class McfDataOps[Self <: McfData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnHeaders(value: js.Array[McfDataColumnHeaders]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainsSampledData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsSampledData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainsSampledData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsSampledData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemsPerPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsPerPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemsPerPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsPerPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileInfo(value: McfDataProfileInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: McfDataQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[js.Array[McfDataRows]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleSpace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleSpace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalResults(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalsForAllResults(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalsForAllResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalsForAllResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalsForAllResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

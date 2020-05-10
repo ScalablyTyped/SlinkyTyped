@@ -5,11 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DiffRemove extends ViewportComponentFullInfo {
   // 删除的位置
-  var index: Double
+  var index: Double = js.native
   // 父级元素 mapKey
-  var parentMapUniqueKey: String
+  var parentMapUniqueKey: String = js.native
 }
 
 object DiffRemove {
@@ -22,8 +23,27 @@ object DiffRemove {
     parentMapUniqueKey: String
   ): DiffRemove = {
     val __obj = js.Dynamic.literal(childs = childs.asInstanceOf[js.Any], componentInfo = componentInfo.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], mapUniqueKey = mapUniqueKey.asInstanceOf[js.Any], parentMapUniqueKey = parentMapUniqueKey.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DiffRemove]
   }
+  @scala.inline
+  implicit class DiffRemoveOps[Self <: DiffRemove] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParentMapUniqueKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentMapUniqueKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

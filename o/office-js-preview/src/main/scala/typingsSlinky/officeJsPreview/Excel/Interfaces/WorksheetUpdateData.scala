@@ -9,6 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the Worksheet object, for use in `worksheet.set({ ... })`. */
+@js.native
 trait WorksheetUpdateData extends js.Object {
   /**
     *
@@ -17,28 +18,28 @@ trait WorksheetUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var enableCalculation: js.UndefOr[Boolean] = js.undefined
+  var enableCalculation: js.UndefOr[Boolean] = js.native
   /**
     *
     * The display name of the worksheet.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     *
     * Gets the PageLayout object of the worksheet.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var pageLayout: js.UndefOr[PageLayoutUpdateData] = js.undefined
+  var pageLayout: js.UndefOr[PageLayoutUpdateData] = js.native
   /**
     *
     * The zero-based position of the worksheet within the workbook.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var position: js.UndefOr[Double] = js.undefined
+  var position: js.UndefOr[Double] = js.native
   /**
     *
     * Gets or sets the worksheet's gridlines flag.
@@ -46,7 +47,7 @@ trait WorksheetUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var showGridlines: js.UndefOr[Boolean] = js.undefined
+  var showGridlines: js.UndefOr[Boolean] = js.native
   /**
     *
     * Gets or sets the worksheet's headings flag.
@@ -54,7 +55,7 @@ trait WorksheetUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.8]
     */
-  var showHeadings: js.UndefOr[Boolean] = js.undefined
+  var showHeadings: js.UndefOr[Boolean] = js.native
   /**
     *
     * Returns or sets the standard (default) width of all the columns in the worksheet.
@@ -62,7 +63,7 @@ trait WorksheetUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.7]
     */
-  var standardWidth: js.UndefOr[Double] = js.undefined
+  var standardWidth: js.UndefOr[Double] = js.native
   /**
     *
     * Gets or sets the worksheet tab color.
@@ -71,40 +72,137 @@ trait WorksheetUpdateData extends js.Object {
     *
     * [Api set: ExcelApi 1.7]
     */
-  var tabColor: js.UndefOr[String] = js.undefined
+  var tabColor: js.UndefOr[String] = js.native
   /**
     *
     * The Visibility of the worksheet.
     *
     * [Api set: ExcelApi 1.1 for reading visibility; 1.2 for setting it.]
     */
-  var visibility: js.UndefOr[SheetVisibility | Visible | Hidden | VeryHidden] = js.undefined
+  var visibility: js.UndefOr[SheetVisibility | Visible | Hidden | VeryHidden] = js.native
 }
 
 object WorksheetUpdateData {
   @scala.inline
-  def apply(
-    enableCalculation: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    pageLayout: PageLayoutUpdateData = null,
-    position: Int | Double = null,
-    showGridlines: js.UndefOr[Boolean] = js.undefined,
-    showHeadings: js.UndefOr[Boolean] = js.undefined,
-    standardWidth: Int | Double = null,
-    tabColor: String = null,
-    visibility: SheetVisibility | Visible | Hidden | VeryHidden = null
-  ): WorksheetUpdateData = {
+  def apply(): WorksheetUpdateData = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enableCalculation)) __obj.updateDynamic("enableCalculation")(enableCalculation.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (pageLayout != null) __obj.updateDynamic("pageLayout")(pageLayout.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(showGridlines)) __obj.updateDynamic("showGridlines")(showGridlines.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHeadings)) __obj.updateDynamic("showHeadings")(showHeadings.asInstanceOf[js.Any])
-    if (standardWidth != null) __obj.updateDynamic("standardWidth")(standardWidth.asInstanceOf[js.Any])
-    if (tabColor != null) __obj.updateDynamic("tabColor")(tabColor.asInstanceOf[js.Any])
-    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorksheetUpdateData]
   }
+  @scala.inline
+  implicit class WorksheetUpdateDataOps[Self <: WorksheetUpdateData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnableCalculation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCalculation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableCalculation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCalculation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageLayout(value: PageLayoutUpdateData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowGridlines(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridlines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowGridlines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showGridlines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowHeadings(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeadings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowHeadings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeadings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStandardWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standardWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandardWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standardWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibility(value: SheetVisibility | Visible | Hidden | VeryHidden): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

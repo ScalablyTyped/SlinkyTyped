@@ -4,36 +4,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnnotationsEventsOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Event callback when annotation
     * is added to the chart.
     */
-  var add: js.UndefOr[EventCallbackFunction[Annotation]] = js.undefined
+  var add: js.UndefOr[EventCallbackFunction[Annotation]] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Event callback when annotation
     * is updated (e.g. drag and droppped or resized by control points).
     */
-  var afterUpdate: js.UndefOr[EventCallbackFunction[Annotation]] = js.undefined
+  var afterUpdate: js.UndefOr[EventCallbackFunction[Annotation]] = js.native
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Event callback when annotation
     * is removed from the chart.
     */
-  var remove: js.UndefOr[EventCallbackFunction[Annotation]] = js.undefined
+  var remove: js.UndefOr[EventCallbackFunction[Annotation]] = js.native
 }
 
 object AnnotationsEventsOptions {
   @scala.inline
-  def apply(
-    add: EventCallbackFunction[Annotation] = null,
-    afterUpdate: EventCallbackFunction[Annotation] = null,
-    remove: EventCallbackFunction[Annotation] = null
-  ): AnnotationsEventsOptions = {
+  def apply(): AnnotationsEventsOptions = {
     val __obj = js.Dynamic.literal()
-    if (add != null) __obj.updateDynamic("add")(add.asInstanceOf[js.Any])
-    if (afterUpdate != null) __obj.updateDynamic("afterUpdate")(afterUpdate.asInstanceOf[js.Any])
-    if (remove != null) __obj.updateDynamic("remove")(remove.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationsEventsOptions]
   }
+  @scala.inline
+  implicit class AnnotationsEventsOptionsOps[Self <: AnnotationsEventsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: EventCallbackFunction[Annotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterUpdate(value: EventCallbackFunction[Annotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemove(value: EventCallbackFunction[Annotation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

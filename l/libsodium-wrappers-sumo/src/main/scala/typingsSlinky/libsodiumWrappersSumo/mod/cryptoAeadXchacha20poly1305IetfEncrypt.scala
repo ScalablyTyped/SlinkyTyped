@@ -2,7 +2,6 @@ package typingsSlinky.libsodiumWrappersSumo.mod
 
 import typingsSlinky.libsodiumWrappers.mod.StringOutputFormat
 import typingsSlinky.libsodiumWrappers.mod.Uint8ArrayOutputFormat
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,415 +13,415 @@ object cryptoAeadXchacha20poly1305IetfEncrypt extends js.Object {
     message: String,
     additional_data: String,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
     additional_data: String,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
-    outputFormat: StringOutputFormat
-  ): String = js.native
-  def apply(
-    message: String,
-    additional_data: String,
-    secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
-    outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def apply(
-    message: String,
-    additional_data: String,
-    secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def apply(
-    message: String,
-    additional_data: String,
-    secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
     message: String,
     additional_data: String,
-    secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    secret_nonce: String,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
     additional_data: String,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    secret_nonce: Null,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
     additional_data: String,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    secret_nonce: Null,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
     message: String,
     additional_data: String,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    secret_nonce: Null,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
+  def apply(
+    message: String,
+    additional_data: String,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
+  def apply(
+    message: String,
+    additional_data: String,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
+    outputFormat: StringOutputFormat
+  ): String = js.native
+  def apply(
+    message: String,
+    additional_data: String,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
+    outputFormat: Uint8ArrayOutputFormat
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
     additional_data: Null,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
     additional_data: Null,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
     message: String,
     additional_data: Null,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
     additional_data: Null,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
     additional_data: Null,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
     message: String,
     additional_data: Null,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
     additional_data: Null,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
     additional_data: Null,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
     message: String,
     additional_data: Null,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
-    additional_data: Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
-    additional_data: Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
     message: String,
-    additional_data: Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
-    additional_data: Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
-    additional_data: Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
     message: String,
-    additional_data: Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
-    additional_data: Uint8Array,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    additional_data: js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     message: String,
-    additional_data: Uint8Array,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
     message: String,
-    additional_data: Uint8Array,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: String,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: String,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: String,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: String,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: String,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: String,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: String,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: String,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: String,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: Null,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: Null,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: Null,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: Null,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: Null,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: Null,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: Null,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: Null,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    message: Uint8Array,
+    message: js.typedarray.Uint8Array,
     additional_data: Null,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
-    additional_data: Uint8Array,
+    message: js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
-    additional_data: Uint8Array,
+    message: js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    message: Uint8Array,
-    additional_data: Uint8Array,
+    message: js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: String,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
-    additional_data: Uint8Array,
+    message: js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
-    additional_data: Uint8Array,
+    message: js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    message: Uint8Array,
-    additional_data: Uint8Array,
+    message: js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
     secret_nonce: Null,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
-    additional_data: Uint8Array,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    message: js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    message: Uint8Array,
-    additional_data: Uint8Array,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    message: js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    message: Uint8Array,
-    additional_data: Uint8Array,
-    secret_nonce: Uint8Array,
-    public_nonce: scala.scalajs.js.typedarray.Uint8Array,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    message: js.typedarray.Uint8Array,
+    additional_data: js.typedarray.Uint8Array,
+    secret_nonce: js.typedarray.Uint8Array,
+    public_nonce: js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
 }
 

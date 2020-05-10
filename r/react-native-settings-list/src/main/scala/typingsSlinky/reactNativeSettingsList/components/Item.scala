@@ -1,10 +1,9 @@
 package typingsSlinky.reactNativeSettingsList.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
@@ -17,78 +16,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Item
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeSettingsList.mod.default.Item] {
+object Item {
   @JSImport("react-native-settings-list", "default.Item")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: title */
-  def apply(
-    arrowIcon: TagMod[Any] = null,
-    arrowStyle: StyleProp[ImageStyle] = null,
-    authPropsPW: js.Object = null,
-    authPropsUser: js.Object = null,
-    backgroundColor: String = null,
-    borderHide: Top | Bottom | Both = null,
-    editableTextStyle: StyleProp[TextStyle] = null,
-    hasNavArrow: js.UndefOr[Boolean] = js.undefined,
-    hasSwitch: js.UndefOr[Boolean] = js.undefined,
-    icon: TagMod[Any] = null,
-    isAuth: js.UndefOr[Boolean] = js.undefined,
-    itemBoxStyle: StyleProp[ViewStyle] = null,
-    itemRef: () => Unit = null,
-    itemWidth: Int | Double = null,
-    onLongPress: () => Unit = null,
-    onPress: () => Unit = null,
-    rightSideContent: TagMod[Any] = null,
-    rightSideStyle: StyleProp[ViewStyle] = null,
-    switchOnValueChange: () => Unit = null,
-    switchProps: js.Object = null,
-    switchState: js.UndefOr[Boolean] = js.undefined,
-    titleBoxStyle: StyleProp[ViewStyle] = null,
-    titleInfo: String = null,
-    titleInfoPosition: String = null,
-    titleInfoStyle: StyleProp[TextStyle] = null,
-    titleStyle: StyleProp[TextStyle] = null,
-    underlayColor: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeSettingsList.mod.default.Item] = {
-    val __obj = js.Dynamic.literal()
-    if (arrowIcon != null) __obj.updateDynamic("arrowIcon")(arrowIcon.asInstanceOf[js.Any])
-    if (arrowStyle != null) __obj.updateDynamic("arrowStyle")(arrowStyle.asInstanceOf[js.Any])
-    if (authPropsPW != null) __obj.updateDynamic("authPropsPW")(authPropsPW.asInstanceOf[js.Any])
-    if (authPropsUser != null) __obj.updateDynamic("authPropsUser")(authPropsUser.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (borderHide != null) __obj.updateDynamic("borderHide")(borderHide.asInstanceOf[js.Any])
-    if (editableTextStyle != null) __obj.updateDynamic("editableTextStyle")(editableTextStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasNavArrow)) __obj.updateDynamic("hasNavArrow")(hasNavArrow.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasSwitch)) __obj.updateDynamic("hasSwitch")(hasSwitch.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(isAuth)) __obj.updateDynamic("isAuth")(isAuth.asInstanceOf[js.Any])
-    if (itemBoxStyle != null) __obj.updateDynamic("itemBoxStyle")(itemBoxStyle.asInstanceOf[js.Any])
-    if (itemRef != null) __obj.updateDynamic("itemRef")(js.Any.fromFunction0(itemRef))
-    if (itemWidth != null) __obj.updateDynamic("itemWidth")(itemWidth.asInstanceOf[js.Any])
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction0(onLongPress))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
-    if (rightSideContent != null) __obj.updateDynamic("rightSideContent")(rightSideContent.asInstanceOf[js.Any])
-    if (rightSideStyle != null) __obj.updateDynamic("rightSideStyle")(rightSideStyle.asInstanceOf[js.Any])
-    if (switchOnValueChange != null) __obj.updateDynamic("switchOnValueChange")(js.Any.fromFunction0(switchOnValueChange))
-    if (switchProps != null) __obj.updateDynamic("switchProps")(switchProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(switchState)) __obj.updateDynamic("switchState")(switchState.asInstanceOf[js.Any])
-    if (titleBoxStyle != null) __obj.updateDynamic("titleBoxStyle")(titleBoxStyle.asInstanceOf[js.Any])
-    if (titleInfo != null) __obj.updateDynamic("titleInfo")(titleInfo.asInstanceOf[js.Any])
-    if (titleInfoPosition != null) __obj.updateDynamic("titleInfoPosition")(titleInfoPosition.asInstanceOf[js.Any])
-    if (titleInfoStyle != null) __obj.updateDynamic("titleInfoStyle")(titleInfoStyle.asInstanceOf[js.Any])
-    if (titleStyle != null) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
-    if (underlayColor != null) __obj.updateDynamic("underlayColor")(underlayColor.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSettingsList.mod.default.Item] {
+    @scala.inline
+    def arrowIconReactElement(value: ReactElement): this.type = set("arrowIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowIcon(value: TagMod[Any]): this.type = set("arrowIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowStyle(value: StyleProp[ImageStyle]): this.type = set("arrowStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowStyleNull: this.type = set("arrowStyle", null)
+    @scala.inline
+    def authPropsPW(value: js.Object): this.type = set("authPropsPW", value.asInstanceOf[js.Any])
+    @scala.inline
+    def authPropsUser(value: js.Object): this.type = set("authPropsUser", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderHide(value: Top | Bottom | Both): this.type = set("borderHide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editableTextStyle(value: StyleProp[TextStyle]): this.type = set("editableTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editableTextStyleNull: this.type = set("editableTextStyle", null)
+    @scala.inline
+    def hasNavArrow(value: Boolean): this.type = set("hasNavArrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasSwitch(value: Boolean): this.type = set("hasSwitch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isAuth(value: Boolean): this.type = set("isAuth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemBoxStyle(value: StyleProp[ViewStyle]): this.type = set("itemBoxStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemBoxStyleNull: this.type = set("itemBoxStyle", null)
+    @scala.inline
+    def itemRef(value: () => Unit): this.type = set("itemRef", js.Any.fromFunction0(value))
+    @scala.inline
+    def itemWidth(value: Double): this.type = set("itemWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLongPress(value: () => Unit): this.type = set("onLongPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def rightSideContentReactElement(value: ReactElement): this.type = set("rightSideContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightSideContent(value: TagMod[Any]): this.type = set("rightSideContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightSideStyle(value: StyleProp[ViewStyle]): this.type = set("rightSideStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightSideStyleNull: this.type = set("rightSideStyle", null)
+    @scala.inline
+    def switchOnValueChange(value: () => Unit): this.type = set("switchOnValueChange", js.Any.fromFunction0(value))
+    @scala.inline
+    def switchProps(value: js.Object): this.type = set("switchProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def switchState(value: Boolean): this.type = set("switchState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleBoxStyle(value: StyleProp[ViewStyle]): this.type = set("titleBoxStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleBoxStyleNull: this.type = set("titleBoxStyle", null)
+    @scala.inline
+    def titleInfo(value: String): this.type = set("titleInfo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleInfoPosition(value: String): this.type = set("titleInfoPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleInfoStyle(value: StyleProp[TextStyle]): this.type = set("titleInfoStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleInfoStyleNull: this.type = set("titleInfoStyle", null)
+    @scala.inline
+    def titleStyle(value: StyleProp[TextStyle]): this.type = set("titleStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleStyleNull: this.type = set("titleStyle", null)
+    @scala.inline
+    def underlayColor(value: String): this.type = set("underlayColor", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeSettingsList.mod.default.Item] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeSettingsList.mod.default.Item](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ItemProps
+  
+  def withProps(p: ItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Item.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

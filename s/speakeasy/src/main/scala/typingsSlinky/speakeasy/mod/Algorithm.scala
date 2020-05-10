@@ -13,12 +13,10 @@ trait Algorithm extends js.Object
 
 object Algorithm {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def sha1: typingsSlinky.speakeasy.speakeasyStrings.sha1 = "sha1".asInstanceOf[typingsSlinky.speakeasy.speakeasyStrings.sha1]
   @scala.inline
-  def sha1: typingsSlinky.speakeasy.speakeasyStrings.sha1 = this.cast("sha1")
+  def sha256: typingsSlinky.speakeasy.speakeasyStrings.sha256 = "sha256".asInstanceOf[typingsSlinky.speakeasy.speakeasyStrings.sha256]
   @scala.inline
-  def sha256: typingsSlinky.speakeasy.speakeasyStrings.sha256 = this.cast("sha256")
-  @scala.inline
-  def sha512: typingsSlinky.speakeasy.speakeasyStrings.sha512 = this.cast("sha512")
+  def sha512: typingsSlinky.speakeasy.speakeasyStrings.sha512 = "sha512".asInstanceOf[typingsSlinky.speakeasy.speakeasyStrings.sha512]
 }
 

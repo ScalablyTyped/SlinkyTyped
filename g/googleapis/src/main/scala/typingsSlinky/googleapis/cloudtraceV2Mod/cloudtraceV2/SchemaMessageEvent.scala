@@ -32,18 +32,65 @@ trait SchemaMessageEvent extends js.Object {
 
 object SchemaMessageEvent {
   @scala.inline
-  def apply(
-    compressedSizeBytes: String = null,
-    id: String = null,
-    `type`: String = null,
-    uncompressedSizeBytes: String = null
-  ): SchemaMessageEvent = {
+  def apply(): SchemaMessageEvent = {
     val __obj = js.Dynamic.literal()
-    if (compressedSizeBytes != null) __obj.updateDynamic("compressedSizeBytes")(compressedSizeBytes.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (uncompressedSizeBytes != null) __obj.updateDynamic("uncompressedSizeBytes")(uncompressedSizeBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMessageEvent]
   }
+  @scala.inline
+  implicit class SchemaMessageEventOps[Self <: SchemaMessageEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompressedSizeBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressedSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompressedSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressedSizeBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUncompressedSizeBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncompressedSizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUncompressedSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncompressedSizeBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

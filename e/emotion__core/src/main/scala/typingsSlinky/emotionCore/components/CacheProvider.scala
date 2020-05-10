@@ -1,27 +1,23 @@
 package typingsSlinky.emotionCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.emotionUtils.mod.EmotionCache
 import typingsSlinky.react.mod.ProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CacheProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object CacheProvider {
   @JSImport("@emotion/core", "CacheProvider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(value: EmotionCache, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: ProviderProps[EmotionCache]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(value: EmotionCache): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ProviderProps[EmotionCache]]))
   }
-  type Props = ProviderProps[EmotionCache]
 }
 

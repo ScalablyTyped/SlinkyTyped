@@ -46,28 +46,125 @@ trait DirectMessageConfiguration extends js.Object {
 
 object DirectMessageConfiguration {
   @scala.inline
-  def apply(
-    ADMMessage: ADMMessage = null,
-    APNSMessage: APNSMessage = null,
-    BaiduMessage: BaiduMessage = null,
-    DefaultMessage: DefaultMessage = null,
-    DefaultPushNotificationMessage: DefaultPushNotificationMessage = null,
-    EmailMessage: EmailMessage = null,
-    GCMMessage: GCMMessage = null,
-    SMSMessage: SMSMessage = null,
-    VoiceMessage: VoiceMessage = null
-  ): DirectMessageConfiguration = {
+  def apply(): DirectMessageConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (ADMMessage != null) __obj.updateDynamic("ADMMessage")(ADMMessage.asInstanceOf[js.Any])
-    if (APNSMessage != null) __obj.updateDynamic("APNSMessage")(APNSMessage.asInstanceOf[js.Any])
-    if (BaiduMessage != null) __obj.updateDynamic("BaiduMessage")(BaiduMessage.asInstanceOf[js.Any])
-    if (DefaultMessage != null) __obj.updateDynamic("DefaultMessage")(DefaultMessage.asInstanceOf[js.Any])
-    if (DefaultPushNotificationMessage != null) __obj.updateDynamic("DefaultPushNotificationMessage")(DefaultPushNotificationMessage.asInstanceOf[js.Any])
-    if (EmailMessage != null) __obj.updateDynamic("EmailMessage")(EmailMessage.asInstanceOf[js.Any])
-    if (GCMMessage != null) __obj.updateDynamic("GCMMessage")(GCMMessage.asInstanceOf[js.Any])
-    if (SMSMessage != null) __obj.updateDynamic("SMSMessage")(SMSMessage.asInstanceOf[js.Any])
-    if (VoiceMessage != null) __obj.updateDynamic("VoiceMessage")(VoiceMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectMessageConfiguration]
   }
+  @scala.inline
+  implicit class DirectMessageConfigurationOps[Self <: DirectMessageConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withADMMessage(value: ADMMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADMMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutADMMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ADMMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAPNSMessage(value: APNSMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("APNSMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAPNSMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("APNSMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaiduMessage(value: BaiduMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BaiduMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaiduMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BaiduMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultMessage(value: DefaultMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultPushNotificationMessage(value: DefaultPushNotificationMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultPushNotificationMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultPushNotificationMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultPushNotificationMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmailMessage(value: EmailMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmailMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGCMMessage(value: GCMMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GCMMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGCMMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GCMMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSMSMessage(value: SMSMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SMSMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSMSMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SMSMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoiceMessage(value: VoiceMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoiceMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceMessage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

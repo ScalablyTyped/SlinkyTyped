@@ -11,6 +11,10 @@ package object screeps {
   type BOTTOM_RIGHT = typingsSlinky.screeps.screepsNumbers.`4`
   // Body Part Constants
   type BodyPartConstant = typingsSlinky.screeps.MOVE | typingsSlinky.screeps.WORK | typingsSlinky.screeps.CARRY | typingsSlinky.screeps.ATTACK | typingsSlinky.screeps.RANGED_ATTACK | typingsSlinky.screeps.TOUGH | typingsSlinky.screeps.HEAL | typingsSlinky.screeps.CLAIM
+  /**
+    * Describes one part of a creep’s body.
+    */
+  type BodyPartDefinition[T /* <: typingsSlinky.screeps.BodyPartConstant */] = typingsSlinky.screeps.AnonBoost[T]
   // Structure Constants
   type BuildableStructureConstant = typingsSlinky.screeps.STRUCTURE_EXTENSION | typingsSlinky.screeps.STRUCTURE_RAMPART | typingsSlinky.screeps.STRUCTURE_ROAD | typingsSlinky.screeps.STRUCTURE_SPAWN | typingsSlinky.screeps.STRUCTURE_LINK | typingsSlinky.screeps.STRUCTURE_WALL | typingsSlinky.screeps.STRUCTURE_STORAGE | typingsSlinky.screeps.STRUCTURE_TOWER | typingsSlinky.screeps.STRUCTURE_OBSERVER | typingsSlinky.screeps.STRUCTURE_POWER_SPAWN | typingsSlinky.screeps.STRUCTURE_EXTRACTOR | typingsSlinky.screeps.STRUCTURE_LAB | typingsSlinky.screeps.STRUCTURE_TERMINAL | typingsSlinky.screeps.STRUCTURE_CONTAINER | typingsSlinky.screeps.STRUCTURE_NUKER | typingsSlinky.screeps.STRUCTURE_FACTORY
   type CARRY = typingsSlinky.screeps.screepsStrings.carry
@@ -176,8 +180,9 @@ package object screeps {
   type PWR_REGEN_MINERAL = typingsSlinky.screeps.screepsNumbers.`14`
   type PWR_REGEN_SOURCE = typingsSlinky.screeps.screepsNumbers.`13`
   type PWR_SHIELD = typingsSlinky.screeps.screepsNumbers.`12`
+  /* Inlined screeps.POWER_CLASS['OPERATOR'] */
   type PowerClassConstant = typingsSlinky.screeps.screepsStrings.operator
-  type PowerConstant = typingsSlinky.screeps.PWR_GENERATE_OPS | typingsSlinky.screeps.PWR_OPERATE_SPAWN | typingsSlinky.screeps.PWR_OPERATE_TOWER | typingsSlinky.screeps.PWR_OPERATE_STORAGE | typingsSlinky.screeps.PWR_OPERATE_LAB | typingsSlinky.screeps.PWR_OPERATE_EXTENSION | typingsSlinky.screeps.PWR_OPERATE_OBSERVER | typingsSlinky.screeps.PWR_OPERATE_TERMINAL | typingsSlinky.screeps.PWR_DISRUPT_SPAWN | typingsSlinky.screeps.PWR_DISRUPT_TOWER | typingsSlinky.screeps.PWR_DISRUPT_SOURCE | typingsSlinky.screeps.PWR_SHIELD | typingsSlinky.screeps.PWR_REGEN_SOURCE | typingsSlinky.screeps.PWR_REGEN_MINERAL | typingsSlinky.screeps.PWR_DISRUPT_TERMINAL | typingsSlinky.screeps.PWR_OPERATE_POWER | typingsSlinky.screeps.PWR_FORTIFY | typingsSlinky.screeps.PWR_OPERATE_CONTROLLER
+  type PowerConstant = typingsSlinky.screeps.PWR_GENERATE_OPS | typingsSlinky.screeps.PWR_OPERATE_SPAWN | typingsSlinky.screeps.PWR_OPERATE_TOWER | typingsSlinky.screeps.PWR_OPERATE_STORAGE | typingsSlinky.screeps.PWR_OPERATE_LAB | typingsSlinky.screeps.PWR_OPERATE_EXTENSION | typingsSlinky.screeps.PWR_OPERATE_OBSERVER | typingsSlinky.screeps.PWR_OPERATE_TERMINAL | typingsSlinky.screeps.PWR_DISRUPT_SPAWN | typingsSlinky.screeps.PWR_DISRUPT_TOWER | typingsSlinky.screeps.PWR_DISRUPT_SOURCE | typingsSlinky.screeps.PWR_SHIELD | typingsSlinky.screeps.PWR_REGEN_SOURCE | typingsSlinky.screeps.PWR_REGEN_MINERAL | typingsSlinky.screeps.PWR_DISRUPT_TERMINAL | typingsSlinky.screeps.PWR_OPERATE_POWER | typingsSlinky.screeps.PWR_FORTIFY | typingsSlinky.screeps.PWR_OPERATE_CONTROLLER | typingsSlinky.screeps.PWR_OPERATE_FACTORY
   /**
     * Available powers, an object with power ID as a key, and the following properties
     */
@@ -294,7 +299,7 @@ package object screeps {
   type SUBSCRIPTION_TOKEN = typingsSlinky.screeps.screepsStrings.token
   // Return Codes
   type ScreepsReturnCode = typingsSlinky.screeps.OK | typingsSlinky.screeps.ERR_NOT_OWNER | typingsSlinky.screeps.ERR_NO_PATH | typingsSlinky.screeps.ERR_BUSY | typingsSlinky.screeps.ERR_NAME_EXISTS | typingsSlinky.screeps.ERR_NOT_FOUND | typingsSlinky.screeps.ERR_NOT_ENOUGH_RESOURCES | typingsSlinky.screeps.ERR_NOT_ENOUGH_ENERGY | typingsSlinky.screeps.ERR_INVALID_TARGET | typingsSlinky.screeps.ERR_FULL | typingsSlinky.screeps.ERR_NOT_IN_RANGE | typingsSlinky.screeps.ERR_INVALID_ARGS | typingsSlinky.screeps.ERR_TIRED | typingsSlinky.screeps.ERR_NO_BODYPART | typingsSlinky.screeps.ERR_NOT_ENOUGH_EXTENSIONS | typingsSlinky.screeps.ERR_RCL_NOT_ENOUGH | typingsSlinky.screeps.ERR_GCL_NOT_ENOUGH
-  type Store[POSSIBLE_RESOURCES /* <: typingsSlinky.screeps.ResourceConstant */, UNLIMITED_STORE /* <: scala.Boolean */] = (typingsSlinky.screeps.StoreBase[POSSIBLE_RESOURCES, UNLIMITED_STORE]) with typingsSlinky.screeps.screepsStrings.Store with js.Any
+  type Store[POSSIBLE_RESOURCES /* <: typingsSlinky.screeps.ResourceConstant */, UNLIMITED_STORE /* <: scala.Boolean */] = (typingsSlinky.screeps.StoreBase[POSSIBLE_RESOURCES, UNLIMITED_STORE]) with typingsSlinky.screeps.screepsStrings.Store with org.scalablytyped.runtime.TopLevel[js.Any]
   type StructureConstant = typingsSlinky.screeps.BuildableStructureConstant | typingsSlinky.screeps.STRUCTURE_KEEPER_LAIR | typingsSlinky.screeps.STRUCTURE_CONTROLLER | typingsSlinky.screeps.STRUCTURE_POWER_BANK | typingsSlinky.screeps.STRUCTURE_PORTAL | typingsSlinky.screeps.STRUCTURE_INVADER_CORE
   type TERRAIN_MASK_LAVA = typingsSlinky.screeps.screepsNumbers.`4`
   type TERRAIN_MASK_SWAMP = typingsSlinky.screeps.screepsNumbers.`2`

@@ -1,8 +1,6 @@
 package typingsSlinky.androiduix.uk.co.senab.photoview
 
 import typingsSlinky.androiduix.android.graphics.Matrix
-import typingsSlinky.androiduix.android.view.MotionEvent
-import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.View.OnTouchListener
 import typingsSlinky.androiduix.android.view.ViewTreeObserver.OnGlobalLayoutListener
 import typingsSlinky.androiduix.android.widget.ImageView
@@ -58,16 +56,6 @@ class PhotoViewAttacher_ protected ()
   /* private */ def getImageViewHeight(imageView: js.Any): js.Any = js.native
   /* private */ def getImageViewWidth(imageView: js.Any): js.Any = js.native
   /* private */ def getValue(matrix: js.Any, whichValue: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def onDrag(dx: Double, dy: Double): Unit = js.native
-  /* CompleteClass */
-  override def onFling(startX: Double, startY: Double, velocityX: Double, velocityY: Double): Unit = js.native
-  /* CompleteClass */
-  override def onGlobalLayout(): js.Any = js.native
-  /* CompleteClass */
-  override def onScale(scaleFactor: Double, focusX: Double, focusY: Double): Unit = js.native
-  /* CompleteClass */
-  override def onTouch(v: View, event: MotionEvent): Unit = js.native
   /* private */ def resetMatrix(): js.Any = js.native
   /* private */ def setImageViewMatrix(matrix: js.Any): js.Any = js.native
   def setScale(scale: Double, focalX: Double, focalY: Double): Unit = js.native

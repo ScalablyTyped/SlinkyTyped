@@ -1,40 +1,40 @@
 package typingsSlinky.passportTwitter.mod
 
 import typingsSlinky.passportTwitter.passportTwitterBooleans.`false`
-import typingsSlinky.passportTwitter.passportTwitterBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IStrategyOption extends IStrategyOptionBase {
-  var passReqToCallback: js.UndefOr[`false`] = js.undefined
+  var passReqToCallback: js.UndefOr[`false`] = js.native
 }
 
 object IStrategyOption {
   @scala.inline
-  def apply(
-    callbackURL: String,
-    consumerKey: String,
-    consumerSecret: String,
-    accessTokenURL: String = null,
-    includeEmail: `true` = null,
-    passReqToCallback: `false` = null,
-    reguestTokenURL: String = null,
-    sessionKey: String = null,
-    skipExtendedUserProfile: js.UndefOr[Boolean] = js.undefined,
-    userAuthorizationURL: String = null,
-    userProfileURL: String = null
-  ): IStrategyOption = {
+  def apply(callbackURL: String, consumerKey: String, consumerSecret: String): IStrategyOption = {
     val __obj = js.Dynamic.literal(callbackURL = callbackURL.asInstanceOf[js.Any], consumerKey = consumerKey.asInstanceOf[js.Any], consumerSecret = consumerSecret.asInstanceOf[js.Any])
-    if (accessTokenURL != null) __obj.updateDynamic("accessTokenURL")(accessTokenURL.asInstanceOf[js.Any])
-    if (includeEmail != null) __obj.updateDynamic("includeEmail")(includeEmail.asInstanceOf[js.Any])
-    if (passReqToCallback != null) __obj.updateDynamic("passReqToCallback")(passReqToCallback.asInstanceOf[js.Any])
-    if (reguestTokenURL != null) __obj.updateDynamic("reguestTokenURL")(reguestTokenURL.asInstanceOf[js.Any])
-    if (sessionKey != null) __obj.updateDynamic("sessionKey")(sessionKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipExtendedUserProfile)) __obj.updateDynamic("skipExtendedUserProfile")(skipExtendedUserProfile.asInstanceOf[js.Any])
-    if (userAuthorizationURL != null) __obj.updateDynamic("userAuthorizationURL")(userAuthorizationURL.asInstanceOf[js.Any])
-    if (userProfileURL != null) __obj.updateDynamic("userProfileURL")(userProfileURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStrategyOption]
   }
+  @scala.inline
+  implicit class IStrategyOptionOps[Self <: IStrategyOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPassReqToCallback(value: `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassReqToCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

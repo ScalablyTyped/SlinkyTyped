@@ -13,12 +13,10 @@ trait DocumentMode extends js.Object
 
 object DocumentMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `limited-quirks`: typingsSlinky.parse5.parse5Strings.`limited-quirks` = "limited-quirks".asInstanceOf[typingsSlinky.parse5.parse5Strings.`limited-quirks`]
   @scala.inline
-  def `limited-quirks`: typingsSlinky.parse5.parse5Strings.`limited-quirks` = this.cast("limited-quirks")
+  def `no-quirks`: typingsSlinky.parse5.parse5Strings.`no-quirks` = "no-quirks".asInstanceOf[typingsSlinky.parse5.parse5Strings.`no-quirks`]
   @scala.inline
-  def `no-quirks`: typingsSlinky.parse5.parse5Strings.`no-quirks` = this.cast("no-quirks")
-  @scala.inline
-  def quirks: typingsSlinky.parse5.parse5Strings.quirks = this.cast("quirks")
+  def quirks: typingsSlinky.parse5.parse5Strings.quirks = "quirks".asInstanceOf[typingsSlinky.parse5.parse5Strings.quirks]
 }
 

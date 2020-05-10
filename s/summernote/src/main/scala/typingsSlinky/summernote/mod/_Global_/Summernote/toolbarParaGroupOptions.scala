@@ -15,16 +15,14 @@ trait toolbarParaGroupOptions extends js.Object
 
 object toolbarParaGroupOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def height: typingsSlinky.summernote.summernoteStrings.height = "height".asInstanceOf[typingsSlinky.summernote.summernoteStrings.height]
   @scala.inline
-  def height: typingsSlinky.summernote.summernoteStrings.height = this.cast("height")
+  def ol: typingsSlinky.summernote.summernoteStrings.ol = "ol".asInstanceOf[typingsSlinky.summernote.summernoteStrings.ol]
   @scala.inline
-  def ol: typingsSlinky.summernote.summernoteStrings.ol = this.cast("ol")
+  def paragraph: typingsSlinky.summernote.summernoteStrings.paragraph = "paragraph".asInstanceOf[typingsSlinky.summernote.summernoteStrings.paragraph]
   @scala.inline
-  def paragraph: typingsSlinky.summernote.summernoteStrings.paragraph = this.cast("paragraph")
+  def style: typingsSlinky.summernote.summernoteStrings.style = "style".asInstanceOf[typingsSlinky.summernote.summernoteStrings.style]
   @scala.inline
-  def style: typingsSlinky.summernote.summernoteStrings.style = this.cast("style")
-  @scala.inline
-  def ul: typingsSlinky.summernote.summernoteStrings.ul = this.cast("ul")
+  def ul: typingsSlinky.summernote.summernoteStrings.ul = "ul".asInstanceOf[typingsSlinky.summernote.summernoteStrings.ul]
 }
 

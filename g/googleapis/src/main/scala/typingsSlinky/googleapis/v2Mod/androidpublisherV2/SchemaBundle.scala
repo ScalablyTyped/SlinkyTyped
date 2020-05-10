@@ -25,12 +25,53 @@ trait SchemaBundle extends js.Object {
 
 object SchemaBundle {
   @scala.inline
-  def apply(sha1: String = null, sha256: String = null, versionCode: Int | Double = null): SchemaBundle = {
+  def apply(): SchemaBundle = {
     val __obj = js.Dynamic.literal()
-    if (sha1 != null) __obj.updateDynamic("sha1")(sha1.asInstanceOf[js.Any])
-    if (sha256 != null) __obj.updateDynamic("sha256")(sha256.asInstanceOf[js.Any])
-    if (versionCode != null) __obj.updateDynamic("versionCode")(versionCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBundle]
   }
+  @scala.inline
+  implicit class SchemaBundleOps[Self <: SchemaBundle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSha1(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSha1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSha256(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSha256: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sha256")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

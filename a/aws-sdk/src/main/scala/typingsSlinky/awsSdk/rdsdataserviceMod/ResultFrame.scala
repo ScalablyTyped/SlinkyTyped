@@ -18,11 +18,41 @@ trait ResultFrame extends js.Object {
 
 object ResultFrame {
   @scala.inline
-  def apply(records: Records = null, resultSetMetadata: ResultSetMetadata = null): ResultFrame = {
+  def apply(): ResultFrame = {
     val __obj = js.Dynamic.literal()
-    if (records != null) __obj.updateDynamic("records")(records.asInstanceOf[js.Any])
-    if (resultSetMetadata != null) __obj.updateDynamic("resultSetMetadata")(resultSetMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultFrame]
   }
+  @scala.inline
+  implicit class ResultFrameOps[Self <: ResultFrame] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecords(value: Records): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("records")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("records")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResultSetMetadata(value: ResultSetMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resultSetMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultSetMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resultSetMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

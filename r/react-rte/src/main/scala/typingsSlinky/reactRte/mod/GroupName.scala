@@ -16,18 +16,16 @@ trait GroupName extends js.Object
 
 object GroupName {
   @scala.inline
-  def BLOCK_TYPE_BUTTONS: typingsSlinky.reactRte.reactRteStrings.BLOCK_TYPE_BUTTONS = this.cast("BLOCK_TYPE_BUTTONS")
+  def BLOCK_TYPE_BUTTONS: typingsSlinky.reactRte.reactRteStrings.BLOCK_TYPE_BUTTONS = "BLOCK_TYPE_BUTTONS".asInstanceOf[typingsSlinky.reactRte.reactRteStrings.BLOCK_TYPE_BUTTONS]
   @scala.inline
-  def BLOCK_TYPE_DROPDOWN: typingsSlinky.reactRte.reactRteStrings.BLOCK_TYPE_DROPDOWN = this.cast("BLOCK_TYPE_DROPDOWN")
+  def BLOCK_TYPE_DROPDOWN: typingsSlinky.reactRte.reactRteStrings.BLOCK_TYPE_DROPDOWN = "BLOCK_TYPE_DROPDOWN".asInstanceOf[typingsSlinky.reactRte.reactRteStrings.BLOCK_TYPE_DROPDOWN]
   @scala.inline
-  def HISTORY_BUTTONS: typingsSlinky.reactRte.reactRteStrings.HISTORY_BUTTONS = this.cast("HISTORY_BUTTONS")
+  def HISTORY_BUTTONS: typingsSlinky.reactRte.reactRteStrings.HISTORY_BUTTONS = "HISTORY_BUTTONS".asInstanceOf[typingsSlinky.reactRte.reactRteStrings.HISTORY_BUTTONS]
   @scala.inline
-  def IMAGE_BUTTON: typingsSlinky.reactRte.reactRteStrings.IMAGE_BUTTON = this.cast("IMAGE_BUTTON")
+  def IMAGE_BUTTON: typingsSlinky.reactRte.reactRteStrings.IMAGE_BUTTON = "IMAGE_BUTTON".asInstanceOf[typingsSlinky.reactRte.reactRteStrings.IMAGE_BUTTON]
   @scala.inline
-  def INLINE_STYLE_BUTTONS: typingsSlinky.reactRte.reactRteStrings.INLINE_STYLE_BUTTONS = this.cast("INLINE_STYLE_BUTTONS")
+  def INLINE_STYLE_BUTTONS: typingsSlinky.reactRte.reactRteStrings.INLINE_STYLE_BUTTONS = "INLINE_STYLE_BUTTONS".asInstanceOf[typingsSlinky.reactRte.reactRteStrings.INLINE_STYLE_BUTTONS]
   @scala.inline
-  def LINK_BUTTONS: typingsSlinky.reactRte.reactRteStrings.LINK_BUTTONS = this.cast("LINK_BUTTONS")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def LINK_BUTTONS: typingsSlinky.reactRte.reactRteStrings.LINK_BUTTONS = "LINK_BUTTONS".asInstanceOf[typingsSlinky.reactRte.reactRteStrings.LINK_BUTTONS]
 }
 

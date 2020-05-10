@@ -4,25 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConstrainDoubleRange extends DoubleRange {
-  var exact: js.UndefOr[Double] = js.undefined
-  var ideal: js.UndefOr[Double] = js.undefined
+  var exact: js.UndefOr[Double] = js.native
+  var ideal: js.UndefOr[Double] = js.native
 }
 
 object ConstrainDoubleRange {
   @scala.inline
-  def apply(
-    exact: Int | Double = null,
-    ideal: Int | Double = null,
-    max: Int | Double = null,
-    min: Int | Double = null
-  ): ConstrainDoubleRange = {
+  def apply(): ConstrainDoubleRange = {
     val __obj = js.Dynamic.literal()
-    if (exact != null) __obj.updateDynamic("exact")(exact.asInstanceOf[js.Any])
-    if (ideal != null) __obj.updateDynamic("ideal")(ideal.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConstrainDoubleRange]
   }
+  @scala.inline
+  implicit class ConstrainDoubleRangeOps[Self <: ConstrainDoubleRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExact(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdeal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdeal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,60 +5,206 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SVGAttributes
   extends /* key */ StringDictionary[js.Any] {
-  var d: js.UndefOr[String | SVGPathArray] = js.undefined
-  var fill: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
-  var inverted: js.UndefOr[Boolean] = js.undefined
-  var matrix: js.UndefOr[js.Array[Double]] = js.undefined
-  var rotation: js.UndefOr[Double] = js.undefined
-  var rotationOriginX: js.UndefOr[Double] = js.undefined
-  var rotationOriginY: js.UndefOr[Double] = js.undefined
-  var scaleX: js.UndefOr[Double] = js.undefined
-  var scaleY: js.UndefOr[Double] = js.undefined
-  var stroke: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
-  var style: js.UndefOr[String | CSSObject] = js.undefined
-  var translateX: js.UndefOr[Double] = js.undefined
-  var translateY: js.UndefOr[Double] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var d: js.UndefOr[String | SVGPathArray] = js.native
+  var fill: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
+  var inverted: js.UndefOr[Boolean] = js.native
+  var matrix: js.UndefOr[js.Array[Double]] = js.native
+  var rotation: js.UndefOr[Double] = js.native
+  var rotationOriginX: js.UndefOr[Double] = js.native
+  var rotationOriginY: js.UndefOr[Double] = js.native
+  var scaleX: js.UndefOr[Double] = js.native
+  var scaleY: js.UndefOr[Double] = js.native
+  var stroke: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
+  var style: js.UndefOr[String | CSSObject] = js.native
+  var translateX: js.UndefOr[Double] = js.native
+  var translateY: js.UndefOr[Double] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object SVGAttributes {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    d: String | SVGPathArray = null,
-    fill: ColorString | GradientColorObject | PatternObject = null,
-    inverted: js.UndefOr[Boolean] = js.undefined,
-    matrix: js.Array[Double] = null,
-    rotation: Int | Double = null,
-    rotationOriginX: Int | Double = null,
-    rotationOriginY: Int | Double = null,
-    scaleX: Int | Double = null,
-    scaleY: Int | Double = null,
-    stroke: ColorString | GradientColorObject | PatternObject = null,
-    style: String | CSSObject = null,
-    translateX: Int | Double = null,
-    translateY: Int | Double = null,
-    zIndex: Int | Double = null
-  ): SVGAttributes = {
+  def apply(): SVGAttributes = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (d != null) __obj.updateDynamic("d")(d.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
-    if (matrix != null) __obj.updateDynamic("matrix")(matrix.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (rotationOriginX != null) __obj.updateDynamic("rotationOriginX")(rotationOriginX.asInstanceOf[js.Any])
-    if (rotationOriginY != null) __obj.updateDynamic("rotationOriginY")(rotationOriginY.asInstanceOf[js.Any])
-    if (scaleX != null) __obj.updateDynamic("scaleX")(scaleX.asInstanceOf[js.Any])
-    if (scaleY != null) __obj.updateDynamic("scaleY")(scaleY.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (translateX != null) __obj.updateDynamic("translateX")(translateX.asInstanceOf[js.Any])
-    if (translateY != null) __obj.updateDynamic("translateY")(translateY.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGAttributes]
   }
+  @scala.inline
+  implicit class SVGAttributesOps[Self <: SVGAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withD(value: String | SVGPathArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutD: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInverted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInverted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatrix(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatrix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotationOriginX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationOriginX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotationOriginX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationOriginX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotationOriginY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationOriginY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotationOriginY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotationOriginY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStroke(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStroke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: String | CSSObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslateX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslateX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslateY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslateY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

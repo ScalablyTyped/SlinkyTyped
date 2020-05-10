@@ -13,12 +13,10 @@ trait SortIndicatorType extends js.Object
 
 object SortIndicatorType {
   @scala.inline
-  def A: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.A = this.cast("A")
+  def A: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.A = "A".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.A]
   @scala.inline
-  def D: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.D = this.cast("D")
+  def D: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.D = "D".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.D]
   @scala.inline
-  def N: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.N = this.cast("N")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def N: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.N = "N".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.N]
 }
 

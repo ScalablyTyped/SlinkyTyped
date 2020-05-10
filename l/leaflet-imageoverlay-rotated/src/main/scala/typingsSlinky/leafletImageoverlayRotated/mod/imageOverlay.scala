@@ -1,10 +1,10 @@
 package typingsSlinky.leafletImageoverlayRotated.mod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.leaflet.mod.ImageOverlayOptions
 import typingsSlinky.leaflet.mod.LatLngExpression
 import typingsSlinky.leafletImageoverlayRotated.mod.ImageOverlay_.Rotated
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

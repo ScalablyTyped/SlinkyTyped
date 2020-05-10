@@ -28,42 +28,40 @@ trait ImageType extends js.Object
 
 object ImageType {
   @scala.inline
-  def bmp: typingsSlinky.imageType.imageTypeStrings.bmp = this.cast("bmp")
+  def bmp: typingsSlinky.imageType.imageTypeStrings.bmp = "bmp".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.bmp]
   @scala.inline
-  def bpg: typingsSlinky.imageType.imageTypeStrings.bpg = this.cast("bpg")
+  def bpg: typingsSlinky.imageType.imageTypeStrings.bpg = "bpg".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.bpg]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cr2: typingsSlinky.imageType.imageTypeStrings.cr2 = "cr2".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.cr2]
   @scala.inline
-  def cr2: typingsSlinky.imageType.imageTypeStrings.cr2 = this.cast("cr2")
+  def cur: typingsSlinky.imageType.imageTypeStrings.cur = "cur".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.cur]
   @scala.inline
-  def cur: typingsSlinky.imageType.imageTypeStrings.cur = this.cast("cur")
+  def dcm: typingsSlinky.imageType.imageTypeStrings.dcm = "dcm".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.dcm]
   @scala.inline
-  def dcm: typingsSlinky.imageType.imageTypeStrings.dcm = this.cast("dcm")
+  def flif: typingsSlinky.imageType.imageTypeStrings.flif = "flif".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.flif]
   @scala.inline
-  def flif: typingsSlinky.imageType.imageTypeStrings.flif = this.cast("flif")
+  def gif: typingsSlinky.imageType.imageTypeStrings.gif = "gif".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.gif]
   @scala.inline
-  def gif: typingsSlinky.imageType.imageTypeStrings.gif = this.cast("gif")
+  def heic: typingsSlinky.imageType.imageTypeStrings.heic = "heic".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.heic]
   @scala.inline
-  def heic: typingsSlinky.imageType.imageTypeStrings.heic = this.cast("heic")
+  def ico: typingsSlinky.imageType.imageTypeStrings.ico = "ico".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.ico]
   @scala.inline
-  def ico: typingsSlinky.imageType.imageTypeStrings.ico = this.cast("ico")
+  def jp2: typingsSlinky.imageType.imageTypeStrings.jp2 = "jp2".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.jp2]
   @scala.inline
-  def jp2: typingsSlinky.imageType.imageTypeStrings.jp2 = this.cast("jp2")
+  def jpg: typingsSlinky.imageType.imageTypeStrings.jpg = "jpg".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.jpg]
   @scala.inline
-  def jpg: typingsSlinky.imageType.imageTypeStrings.jpg = this.cast("jpg")
+  def jpm: typingsSlinky.imageType.imageTypeStrings.jpm = "jpm".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.jpm]
   @scala.inline
-  def jpm: typingsSlinky.imageType.imageTypeStrings.jpm = this.cast("jpm")
+  def jpx: typingsSlinky.imageType.imageTypeStrings.jpx = "jpx".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.jpx]
   @scala.inline
-  def jpx: typingsSlinky.imageType.imageTypeStrings.jpx = this.cast("jpx")
+  def jxr: typingsSlinky.imageType.imageTypeStrings.jxr = "jxr".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.jxr]
   @scala.inline
-  def jxr: typingsSlinky.imageType.imageTypeStrings.jxr = this.cast("jxr")
+  def png: typingsSlinky.imageType.imageTypeStrings.png = "png".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.png]
   @scala.inline
-  def png: typingsSlinky.imageType.imageTypeStrings.png = this.cast("png")
+  def psd: typingsSlinky.imageType.imageTypeStrings.psd = "psd".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.psd]
   @scala.inline
-  def psd: typingsSlinky.imageType.imageTypeStrings.psd = this.cast("psd")
+  def tif: typingsSlinky.imageType.imageTypeStrings.tif = "tif".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.tif]
   @scala.inline
-  def tif: typingsSlinky.imageType.imageTypeStrings.tif = this.cast("tif")
-  @scala.inline
-  def webp: typingsSlinky.imageType.imageTypeStrings.webp = this.cast("webp")
+  def webp: typingsSlinky.imageType.imageTypeStrings.webp = "webp".asInstanceOf[typingsSlinky.imageType.imageTypeStrings.webp]
 }
 

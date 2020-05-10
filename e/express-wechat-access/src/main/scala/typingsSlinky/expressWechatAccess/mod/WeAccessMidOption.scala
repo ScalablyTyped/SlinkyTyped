@@ -4,28 +4,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WeAccessMidOption extends js.Object {
-  var accessTokenUrl: js.UndefOr[String] = js.undefined
-  var appId: String
-  var appSecret: String
-  var https: js.UndefOr[Boolean] = js.undefined
-  var ticketUrl: js.UndefOr[String] = js.undefined
+  var accessTokenUrl: js.UndefOr[String] = js.native
+  var appId: String = js.native
+  var appSecret: String = js.native
+  var https: js.UndefOr[Boolean] = js.native
+  var ticketUrl: js.UndefOr[String] = js.native
 }
 
 object WeAccessMidOption {
   @scala.inline
-  def apply(
-    appId: String,
-    appSecret: String,
-    accessTokenUrl: String = null,
-    https: js.UndefOr[Boolean] = js.undefined,
-    ticketUrl: String = null
-  ): WeAccessMidOption = {
+  def apply(appId: String, appSecret: String): WeAccessMidOption = {
     val __obj = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], appSecret = appSecret.asInstanceOf[js.Any])
-    if (accessTokenUrl != null) __obj.updateDynamic("accessTokenUrl")(accessTokenUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(https)) __obj.updateDynamic("https")(https.asInstanceOf[js.Any])
-    if (ticketUrl != null) __obj.updateDynamic("ticketUrl")(ticketUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[WeAccessMidOption]
   }
+  @scala.inline
+  implicit class WeAccessMidOptionOps[Self <: WeAccessMidOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppSecret(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appSecret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessTokenUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessTokenUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessTokenUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessTokenUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttps(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTicketUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticketUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicketUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticketUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

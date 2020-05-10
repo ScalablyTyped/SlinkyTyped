@@ -28,11 +28,41 @@ trait SchemaRunPipelineRequest extends js.Object {
 
 object SchemaRunPipelineRequest {
   @scala.inline
-  def apply(labels: StringDictionary[String] = null, pipeline: SchemaPipeline = null): SchemaRunPipelineRequest = {
+  def apply(): SchemaRunPipelineRequest = {
     val __obj = js.Dynamic.literal()
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (pipeline != null) __obj.updateDynamic("pipeline")(pipeline.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRunPipelineRequest]
   }
+  @scala.inline
+  implicit class SchemaRunPipelineRequestOps[Self <: SchemaRunPipelineRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPipeline(value: SchemaPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipeline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPipeline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipeline")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

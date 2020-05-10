@@ -13,12 +13,10 @@ trait ToolbarButtonPosition extends js.Object
 
 object ToolbarButtonPosition {
   @scala.inline
-  def LIST: typingsSlinky.inboxsdk.inboxsdkStrings.LIST = this.cast("LIST")
+  def LIST: typingsSlinky.inboxsdk.inboxsdkStrings.LIST = "LIST".asInstanceOf[typingsSlinky.inboxsdk.inboxsdkStrings.LIST]
   @scala.inline
-  def ROW: typingsSlinky.inboxsdk.inboxsdkStrings.ROW = this.cast("ROW")
+  def ROW: typingsSlinky.inboxsdk.inboxsdkStrings.ROW = "ROW".asInstanceOf[typingsSlinky.inboxsdk.inboxsdkStrings.ROW]
   @scala.inline
-  def THREAD: typingsSlinky.inboxsdk.inboxsdkStrings.THREAD = this.cast("THREAD")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def THREAD: typingsSlinky.inboxsdk.inboxsdkStrings.THREAD = "THREAD".asInstanceOf[typingsSlinky.inboxsdk.inboxsdkStrings.THREAD]
 }
 

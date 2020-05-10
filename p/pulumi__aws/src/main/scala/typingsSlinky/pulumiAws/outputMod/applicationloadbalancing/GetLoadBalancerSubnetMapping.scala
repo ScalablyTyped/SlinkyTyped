@@ -12,10 +12,35 @@ trait GetLoadBalancerSubnetMapping extends js.Object {
 
 object GetLoadBalancerSubnetMapping {
   @scala.inline
-  def apply(subnetId: String, allocationId: String = null): GetLoadBalancerSubnetMapping = {
+  def apply(subnetId: String): GetLoadBalancerSubnetMapping = {
     val __obj = js.Dynamic.literal(subnetId = subnetId.asInstanceOf[js.Any])
-    if (allocationId != null) __obj.updateDynamic("allocationId")(allocationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLoadBalancerSubnetMapping]
   }
+  @scala.inline
+  implicit class GetLoadBalancerSubnetMappingOps[Self <: GetLoadBalancerSubnetMapping] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubnetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllocationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allocationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allocationId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

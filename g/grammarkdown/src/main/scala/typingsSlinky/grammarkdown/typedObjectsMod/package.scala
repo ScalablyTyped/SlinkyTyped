@@ -12,5 +12,5 @@ package object typedObjectsMod {
   ] */] = typingsSlinky.std.ReturnType[T]
   type TypedObject[T /* <: typingsSlinky.grammarkdown.typedObjectsMod.StructureHint */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: grammarkdown.grammarkdown/dist/typedObjects.TypeOfTypeObject<T[K]>}
-    */ typingsSlinky.grammarkdown.grammarkdownStrings.TypedObject with T
+    */ typingsSlinky.grammarkdown.grammarkdownStrings.TypedObject with org.scalablytyped.runtime.TopLevel[T]
 }

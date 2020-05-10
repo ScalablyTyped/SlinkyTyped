@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.form.manager
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.dijit.Widget
 import typingsSlinky.dojo.dijit.form.FormWidget
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

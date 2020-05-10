@@ -18,14 +18,41 @@ trait FleetLaunchTemplateConfig extends js.Object {
 
 object FleetLaunchTemplateConfig {
   @scala.inline
-  def apply(
-    LaunchTemplateSpecification: FleetLaunchTemplateSpecification = null,
-    Overrides: FleetLaunchTemplateOverridesList = null
-  ): FleetLaunchTemplateConfig = {
+  def apply(): FleetLaunchTemplateConfig = {
     val __obj = js.Dynamic.literal()
-    if (LaunchTemplateSpecification != null) __obj.updateDynamic("LaunchTemplateSpecification")(LaunchTemplateSpecification.asInstanceOf[js.Any])
-    if (Overrides != null) __obj.updateDynamic("Overrides")(Overrides.asInstanceOf[js.Any])
     __obj.asInstanceOf[FleetLaunchTemplateConfig]
   }
+  @scala.inline
+  implicit class FleetLaunchTemplateConfigOps[Self <: FleetLaunchTemplateConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLaunchTemplateSpecification(value: FleetLaunchTemplateSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchTemplateSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTemplateSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrides(value: FleetLaunchTemplateOverridesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Overrides")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 	 * ILabel provides methods for manipulating label content, such as set address or text
 	 * on the label.
 	 */
+@js.native
 trait ILabel extends js.Object {
   /**
   		 * Gets the Intelligent Mail barcode position for an Address object.
@@ -18,11 +19,11 @@ trait ILabel extends js.Object {
   		 *
   		 * @returns A string with one of the values defined by the dymo.label.framework.AddressBarcodePosition enumeration.
   		 */
-  def getAddressBarcodePosition(addressIndex: Double): AddressBarcodePosition
+  def getAddressBarcodePosition(addressIndex: Double): AddressBarcodePosition = js.native
   /**
   		 * Gets the number of Address objects on the label.
   		 */
-  def getAddressObjectCount(): Double
+  def getAddressObjectCount(): Double = js.native
   /**
   		 * Gets the text content of an Address object.
   		 *
@@ -30,17 +31,17 @@ trait ILabel extends js.Object {
   		 *
   		 * @returns The plain text from the Address object.
   		 */
-  def getAddressText(addressIndex: Double): String
+  def getAddressText(addressIndex: Double): String = js.native
   /**
   		 * Returns the current label as an XML string. The returned XML string can be passed
   		 * to functions that accept label XML as a parameter, or can be used to direct content
   		 * manipulations not currently supported by the Framework.
   		 */
-  def getLabelXml(): String
+  def getLabelXml(): String = js.native
   /**
   		 * Gets an array of object reference names on the label. Returns an array of strings.
   		 */
-  def getObjectNames(): js.Array[String]
+  def getObjectNames(): js.Array[String] = js.native
   /**
   		 * Gets the 'text' content of an object. The content depends on the object type.
     * * Address and Text objects - Returns the object text without formatting.
@@ -51,7 +52,7 @@ trait ILabel extends js.Object {
   		 *
   		 * @param objectName The name of the object.
   		 */
-  def getObjectText(objectName: String): String
+  def getObjectText(objectName: String): String = js.native
   /**
   		 * Prints the label.
   		 *
@@ -62,7 +63,7 @@ trait ILabel extends js.Object {
   		 *   data, such as multiple addresses. Use the dymo.label.framework.LabelSetBuilder class to create a LabelSet
   		 *   or construct XML manually according to [LabelSet.xsd]{@link http://labelwriter.com/software/dls/sdk/LabelSet.xsd}.
   		 */
-  def print(printerName: String, printParamsXml: String, labelSetXml: String): Unit
+  def print(printerName: String, printParamsXml: String, labelSetXml: String): Unit = js.native
   /**
   		 * Prints a label and runs status checking in a loop
   		 *
@@ -89,7 +90,7 @@ trait ILabel extends js.Object {
     labelSetXml: String,
     statusCallback: js.Function2[/* printJob */ PrintJob, /* printJobStatusInfo */ PrintJobStatusInfo, Boolean],
     pollInterval: Double
-  ): PrintJob
+  ): PrintJob = js.native
   /**
   		 * Creates a label raster image that can be used for label previewing.
     *
@@ -103,7 +104,7 @@ trait ILabel extends js.Object {
   		 *   be used. The default is LW400 for LabelWriter printers and LW400 DUO Tape for
   		 *   tape printers.
   		 */
-  def render(renderParamsXml: String, printerName: String): String
+  def render(renderParamsXml: String, printerName: String): String = js.native
   /**
   		 * Sets the Intelligent Mail barcode position for an Address object.
   		 *
@@ -112,7 +113,7 @@ trait ILabel extends js.Object {
   		 *
   		 * @returns self
   		 */
-  def setAddressBarcodePosition(addressIndex: Double, barcodePosition: AddressBarcodePosition): ILabel
+  def setAddressBarcodePosition(addressIndex: Double, barcodePosition: AddressBarcodePosition): ILabel = js.native
   /**
   		 * Sets the text content of an Address object.
   		 *
@@ -121,7 +122,7 @@ trait ILabel extends js.Object {
   		  *
   		  * @returns self
   		 */
-  def setAddressText(addressIndex: Double, text: String): ILabel
+  def setAddressText(addressIndex: Double, text: String): ILabel = js.native
   /**
   		 * Sets the text content for an object. The content and/or text formatting are set differently
   		 * depending on the object type.
@@ -137,7 +138,7 @@ trait ILabel extends js.Object {
   	     * @param objectName The name of the object.
     	 * @param text The plain text string for new object content.
   		 */
-  def setObjectText(objectName: String, text: String): ILabel
+  def setObjectText(objectName: String, text: String): ILabel = js.native
 }
 
 object ILabel {
@@ -157,8 +158,89 @@ object ILabel {
     setObjectText: (String, String) => ILabel
   ): ILabel = {
     val __obj = js.Dynamic.literal(getAddressBarcodePosition = js.Any.fromFunction1(getAddressBarcodePosition), getAddressObjectCount = js.Any.fromFunction0(getAddressObjectCount), getAddressText = js.Any.fromFunction1(getAddressText), getLabelXml = js.Any.fromFunction0(getLabelXml), getObjectNames = js.Any.fromFunction0(getObjectNames), getObjectText = js.Any.fromFunction1(getObjectText), print = js.Any.fromFunction3(print), printAndPollStatus = js.Any.fromFunction5(printAndPollStatus), render = js.Any.fromFunction2(render), setAddressBarcodePosition = js.Any.fromFunction2(setAddressBarcodePosition), setAddressText = js.Any.fromFunction2(setAddressText), setObjectText = js.Any.fromFunction2(setObjectText))
-  
     __obj.asInstanceOf[ILabel]
   }
+  @scala.inline
+  implicit class ILabelOps[Self <: ILabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAddressBarcodePosition(value: Double => AddressBarcodePosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAddressBarcodePosition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAddressObjectCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAddressObjectCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAddressText(value: Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAddressText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetLabelXml(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLabelXml")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetObjectNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getObjectNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetObjectText(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getObjectText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPrint(value: (String, String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withPrintAndPollStatus(
+      value: (String, String, String, js.Function2[/* printJob */ PrintJob, /* printJobStatusInfo */ PrintJobStatusInfo, Boolean], Double) => PrintJob
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printAndPollStatus")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withRender(value: (String, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetAddressBarcodePosition(value: (Double, AddressBarcodePosition) => ILabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAddressBarcodePosition")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetAddressText(value: (Double, String) => ILabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAddressText")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetObjectText(value: (String, String) => ILabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setObjectText")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

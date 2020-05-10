@@ -26,18 +26,65 @@ trait DataRepositoryTaskStatus extends js.Object {
 
 object DataRepositoryTaskStatus {
   @scala.inline
-  def apply(
-    FailedCount: Int | Double = null,
-    LastUpdatedTime: js.Date = null,
-    SucceededCount: Int | Double = null,
-    TotalCount: Int | Double = null
-  ): DataRepositoryTaskStatus = {
+  def apply(): DataRepositoryTaskStatus = {
     val __obj = js.Dynamic.literal()
-    if (FailedCount != null) __obj.updateDynamic("FailedCount")(FailedCount.asInstanceOf[js.Any])
-    if (LastUpdatedTime != null) __obj.updateDynamic("LastUpdatedTime")(LastUpdatedTime.asInstanceOf[js.Any])
-    if (SucceededCount != null) __obj.updateDynamic("SucceededCount")(SucceededCount.asInstanceOf[js.Any])
-    if (TotalCount != null) __obj.updateDynamic("TotalCount")(TotalCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataRepositoryTaskStatus]
   }
+  @scala.inline
+  implicit class DataRepositoryTaskStatusOps[Self <: DataRepositoryTaskStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailedCount(value: FailedCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSucceededCount(value: SucceededCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SucceededCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSucceededCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SucceededCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalCount(value: TotalCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

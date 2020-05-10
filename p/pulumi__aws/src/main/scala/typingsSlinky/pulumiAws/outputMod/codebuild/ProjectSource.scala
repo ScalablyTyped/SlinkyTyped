@@ -42,26 +42,108 @@ trait ProjectSource extends js.Object {
 
 object ProjectSource {
   @scala.inline
-  def apply(
-    `type`: String,
-    auths: js.Array[ProjectSourceAuth] = null,
-    buildspec: String = null,
-    gitCloneDepth: Int | Double = null,
-    gitSubmodulesConfig: ProjectSourceGitSubmodulesConfig = null,
-    insecureSsl: js.UndefOr[Boolean] = js.undefined,
-    location: String = null,
-    reportBuildStatus: js.UndefOr[Boolean] = js.undefined
-  ): ProjectSource = {
+  def apply(`type`: String): ProjectSource = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (auths != null) __obj.updateDynamic("auths")(auths.asInstanceOf[js.Any])
-    if (buildspec != null) __obj.updateDynamic("buildspec")(buildspec.asInstanceOf[js.Any])
-    if (gitCloneDepth != null) __obj.updateDynamic("gitCloneDepth")(gitCloneDepth.asInstanceOf[js.Any])
-    if (gitSubmodulesConfig != null) __obj.updateDynamic("gitSubmodulesConfig")(gitSubmodulesConfig.asInstanceOf[js.Any])
-    if (!js.isUndefined(insecureSsl)) __obj.updateDynamic("insecureSsl")(insecureSsl.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (!js.isUndefined(reportBuildStatus)) __obj.updateDynamic("reportBuildStatus")(reportBuildStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectSource]
   }
+  @scala.inline
+  implicit class ProjectSourceOps[Self <: ProjectSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuths(value: js.Array[ProjectSourceAuth]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuildspec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildspec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildspec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildspec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGitCloneDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitCloneDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGitCloneDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitCloneDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGitSubmodulesConfig(value: ProjectSourceGitSubmodulesConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitSubmodulesConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGitSubmodulesConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitSubmodulesConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsecureSsl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insecureSsl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsecureSsl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insecureSsl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportBuildStatus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportBuildStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportBuildStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportBuildStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

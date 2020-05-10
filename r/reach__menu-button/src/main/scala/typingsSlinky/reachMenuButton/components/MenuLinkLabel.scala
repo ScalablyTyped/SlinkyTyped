@@ -1,21 +1,20 @@
 package typingsSlinky.reachMenuButton.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reachMenuButton.mod.MenuLinkProps
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.label
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Couldn't find props for TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reachMenuButton), Name(mod), Name(MenuLinkProps))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reachMenuButton), Name(reachMenuButtonStrings), Name(label))),IArray(),Comments(0))),NoComments) because: Could't extract props from TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),Comments(1)) because couldn't resolve ClassTree. */
-object MenuLinkLabel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reachMenuButton.mod.MenuLinkProps[typingsSlinky.reachMenuButton.reachMenuButtonStrings.label] because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
+object MenuLinkLabel {
   @JSImport("@reach/menu-button", "MenuLink")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = MenuLinkProps[label]
+  def apply(p: MenuLinkProps[label]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MenuLinkLabel.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

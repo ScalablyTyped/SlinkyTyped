@@ -9,10 +9,10 @@ import scala.scalajs.js.annotation._
 object createCMSECDSASignature extends js.Object {
   /**
     * Create CMS ECDSA signature from WebCrypto ECDSA signature
-    * 
+    *
     * @param {ArrayBuffer} signatureBuffer WebCrypto result of "sign" function
     * @returns {ArrayBuffer}
     */
-  def apply(signatureBuffer: scala.scalajs.js.typedarray.ArrayBuffer): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def apply(signatureBuffer: js.typedarray.ArrayBuffer): js.typedarray.ArrayBuffer = js.native
 }
 

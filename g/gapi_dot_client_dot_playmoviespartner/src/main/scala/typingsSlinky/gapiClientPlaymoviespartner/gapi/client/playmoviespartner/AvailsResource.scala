@@ -7,24 +7,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AvailsResource extends js.Object {
   /** Get an Avail given its avail group id and avail id. */
-  def get(request: AnonAccesstoken): Request_[Avail]
+  def get(request: AnonAccesstoken): Request_[Avail] = js.native
   /**
     * List Avails owned or managed by the partner.
     *
     * See _Authentication and Authorization rules_ and
     * _List methods rules_ for more information about this method.
     */
-  def list(request: AnonAccountId): Request_[ListAvailsResponse]
+  def list(request: AnonAccountId): Request_[ListAvailsResponse] = js.native
 }
 
 object AvailsResource {
   @scala.inline
   def apply(get: AnonAccesstoken => Request_[Avail], list: AnonAccountId => Request_[ListAvailsResponse]): AvailsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
-  
     __obj.asInstanceOf[AvailsResource]
   }
+  @scala.inline
+  implicit class AvailsResourceOps[Self <: AvailsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGet(value: AnonAccesstoken => Request_[Avail]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonAccountId => Request_[ListAvailsResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

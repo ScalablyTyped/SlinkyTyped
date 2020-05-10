@@ -72,8 +72,8 @@ class DOMUtils protected () extends js.Object {
   def parseStyle(cssText: String): js.Object = js.native
   def remove[T](node: String): Element | js.Array[T] = js.native
   def remove[T](node: String, keepChildren: Boolean): Element | js.Array[T] = js.native
-  def remove[T](node: typingsSlinky.std.Element): Element | js.Array[T] = js.native
-  def remove[T](node: typingsSlinky.std.Element, keepChildren: Boolean): Element | js.Array[T] = js.native
+  def remove[T](node: Element): Element | js.Array[T] = js.native
+  def remove[T](node: Element, keepChildren: Boolean): Element | js.Array[T] = js.native
   def removeAllAttribs(e: Element): Unit = js.native
   def removeClass[T](elm: String, cls: String): String | js.Array[T] = js.native
   def rename(elm: Element, name: String): Element = js.native

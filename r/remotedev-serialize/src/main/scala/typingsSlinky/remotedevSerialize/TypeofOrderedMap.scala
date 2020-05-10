@@ -2,7 +2,6 @@ package typingsSlinky.remotedevSerialize
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.immutable.Immutable.OrderedMap
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait TypeofOrderedMap extends js.Object {
   def apply(): OrderedMap[_, _] = js.native
   def apply[V](obj: StringDictionary[V]): OrderedMap[String, V] = js.native
-  def apply[K, V](collection: Iterable[js.Tuple2[K, V]]): OrderedMap[K, V] = js.native
+  def apply[K, V](collection: js.Iterable[js.Tuple2[K, V]]): OrderedMap[K, V] = js.native
   /**
     * True if the provided value is an OrderedMap.
     */

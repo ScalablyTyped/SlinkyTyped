@@ -14,10 +14,29 @@ trait DeleteBatchPredictionOutput extends js.Object {
 
 object DeleteBatchPredictionOutput {
   @scala.inline
-  def apply(BatchPredictionId: EntityId = null): DeleteBatchPredictionOutput = {
+  def apply(): DeleteBatchPredictionOutput = {
     val __obj = js.Dynamic.literal()
-    if (BatchPredictionId != null) __obj.updateDynamic("BatchPredictionId")(BatchPredictionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteBatchPredictionOutput]
   }
+  @scala.inline
+  implicit class DeleteBatchPredictionOutputOps[Self <: DeleteBatchPredictionOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchPredictionId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchPredictionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchPredictionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchPredictionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

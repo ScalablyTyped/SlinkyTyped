@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreativeGroupAssignment extends js.Object {
-  var creativeGroupId: js.UndefOr[String] = js.undefined
-  var creativeGroupNumber: js.UndefOr[String] = js.undefined
+  var creativeGroupId: js.UndefOr[String] = js.native
+  var creativeGroupNumber: js.UndefOr[String] = js.native
 }
 
 object CreativeGroupAssignment {
   @scala.inline
-  def apply(creativeGroupId: String = null, creativeGroupNumber: String = null): CreativeGroupAssignment = {
+  def apply(): CreativeGroupAssignment = {
     val __obj = js.Dynamic.literal()
-    if (creativeGroupId != null) __obj.updateDynamic("creativeGroupId")(creativeGroupId.asInstanceOf[js.Any])
-    if (creativeGroupNumber != null) __obj.updateDynamic("creativeGroupNumber")(creativeGroupNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreativeGroupAssignment]
   }
+  @scala.inline
+  implicit class CreativeGroupAssignmentOps[Self <: CreativeGroupAssignment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreativeGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeGroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreativeGroupNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeGroupNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeGroupNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creativeGroupNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

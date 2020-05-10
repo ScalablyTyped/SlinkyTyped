@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SubscriptionPurchasesDeferRequest extends js.Object {
   /** The information about the new desired expiry time for the subscription. */
-  var deferralInfo: js.UndefOr[SubscriptionDeferralInfo] = js.undefined
+  var deferralInfo: js.UndefOr[SubscriptionDeferralInfo] = js.native
 }
 
 object SubscriptionPurchasesDeferRequest {
   @scala.inline
-  def apply(deferralInfo: SubscriptionDeferralInfo = null): SubscriptionPurchasesDeferRequest = {
+  def apply(): SubscriptionPurchasesDeferRequest = {
     val __obj = js.Dynamic.literal()
-    if (deferralInfo != null) __obj.updateDynamic("deferralInfo")(deferralInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscriptionPurchasesDeferRequest]
   }
+  @scala.inline
+  implicit class SubscriptionPurchasesDeferRequestOps[Self <: SubscriptionPurchasesDeferRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeferralInfo(value: SubscriptionDeferralInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deferralInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeferralInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deferralInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

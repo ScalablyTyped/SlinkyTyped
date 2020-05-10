@@ -22,16 +22,53 @@ trait GetAutoScalingGroupRecommendationsResponse extends js.Object {
 
 object GetAutoScalingGroupRecommendationsResponse {
   @scala.inline
-  def apply(
-    autoScalingGroupRecommendations: AutoScalingGroupRecommendations = null,
-    errors: GetRecommendationErrors = null,
-    nextToken: NextToken = null
-  ): GetAutoScalingGroupRecommendationsResponse = {
+  def apply(): GetAutoScalingGroupRecommendationsResponse = {
     val __obj = js.Dynamic.literal()
-    if (autoScalingGroupRecommendations != null) __obj.updateDynamic("autoScalingGroupRecommendations")(autoScalingGroupRecommendations.asInstanceOf[js.Any])
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAutoScalingGroupRecommendationsResponse]
   }
+  @scala.inline
+  implicit class GetAutoScalingGroupRecommendationsResponseOps[Self <: GetAutoScalingGroupRecommendationsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoScalingGroupRecommendations(value: AutoScalingGroupRecommendations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroupRecommendations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoScalingGroupRecommendations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroupRecommendations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrors(value: GetRecommendationErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

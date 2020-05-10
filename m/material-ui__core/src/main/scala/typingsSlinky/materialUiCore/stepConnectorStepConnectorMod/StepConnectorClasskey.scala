@@ -20,26 +20,24 @@ trait StepConnectorClasskey extends js.Object
 
 object StepConnectorClasskey {
   @scala.inline
-  def active: typingsSlinky.materialUiCore.materialUiCoreStrings.active = this.cast("active")
+  def active: typingsSlinky.materialUiCore.materialUiCoreStrings.active = "active".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.active]
   @scala.inline
-  def alternativeLabel: typingsSlinky.materialUiCore.materialUiCoreStrings.alternativeLabel = this.cast("alternativeLabel")
+  def alternativeLabel: typingsSlinky.materialUiCore.materialUiCoreStrings.alternativeLabel = "alternativeLabel".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.alternativeLabel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def completed: typingsSlinky.materialUiCore.materialUiCoreStrings.completed = "completed".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.completed]
   @scala.inline
-  def completed: typingsSlinky.materialUiCore.materialUiCoreStrings.completed = this.cast("completed")
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def horizontal: typingsSlinky.materialUiCore.materialUiCoreStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.materialUiCore.materialUiCoreStrings.horizontal = this.cast("horizontal")
+  def line: typingsSlinky.materialUiCore.materialUiCoreStrings.line = "line".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.line]
   @scala.inline
-  def line: typingsSlinky.materialUiCore.materialUiCoreStrings.line = this.cast("line")
+  def lineHorizontal: typingsSlinky.materialUiCore.materialUiCoreStrings.lineHorizontal = "lineHorizontal".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.lineHorizontal]
   @scala.inline
-  def lineHorizontal: typingsSlinky.materialUiCore.materialUiCoreStrings.lineHorizontal = this.cast("lineHorizontal")
+  def lineVertical: typingsSlinky.materialUiCore.materialUiCoreStrings.lineVertical = "lineVertical".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.lineVertical]
   @scala.inline
-  def lineVertical: typingsSlinky.materialUiCore.materialUiCoreStrings.lineVertical = this.cast("lineVertical")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
-  @scala.inline
-  def vertical: typingsSlinky.materialUiCore.materialUiCoreStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.materialUiCore.materialUiCoreStrings.vertical = "vertical".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.vertical]
 }
 

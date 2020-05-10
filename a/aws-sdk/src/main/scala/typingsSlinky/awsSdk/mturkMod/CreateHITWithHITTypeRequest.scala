@@ -50,28 +50,125 @@ trait CreateHITWithHITTypeRequest extends js.Object {
 
 object CreateHITWithHITTypeRequest {
   @scala.inline
-  def apply(
-    HITTypeId: EntityId,
-    LifetimeInSeconds: Long,
-    AssignmentReviewPolicy: ReviewPolicy = null,
-    HITLayoutId: EntityId = null,
-    HITLayoutParameters: HITLayoutParameterList = null,
-    HITReviewPolicy: ReviewPolicy = null,
-    MaxAssignments: Int | Double = null,
-    Question: String = null,
-    RequesterAnnotation: String = null,
-    UniqueRequestToken: IdempotencyToken = null
-  ): CreateHITWithHITTypeRequest = {
+  def apply(HITTypeId: EntityId, LifetimeInSeconds: Long): CreateHITWithHITTypeRequest = {
     val __obj = js.Dynamic.literal(HITTypeId = HITTypeId.asInstanceOf[js.Any], LifetimeInSeconds = LifetimeInSeconds.asInstanceOf[js.Any])
-    if (AssignmentReviewPolicy != null) __obj.updateDynamic("AssignmentReviewPolicy")(AssignmentReviewPolicy.asInstanceOf[js.Any])
-    if (HITLayoutId != null) __obj.updateDynamic("HITLayoutId")(HITLayoutId.asInstanceOf[js.Any])
-    if (HITLayoutParameters != null) __obj.updateDynamic("HITLayoutParameters")(HITLayoutParameters.asInstanceOf[js.Any])
-    if (HITReviewPolicy != null) __obj.updateDynamic("HITReviewPolicy")(HITReviewPolicy.asInstanceOf[js.Any])
-    if (MaxAssignments != null) __obj.updateDynamic("MaxAssignments")(MaxAssignments.asInstanceOf[js.Any])
-    if (Question != null) __obj.updateDynamic("Question")(Question.asInstanceOf[js.Any])
-    if (RequesterAnnotation != null) __obj.updateDynamic("RequesterAnnotation")(RequesterAnnotation.asInstanceOf[js.Any])
-    if (UniqueRequestToken != null) __obj.updateDynamic("UniqueRequestToken")(UniqueRequestToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateHITWithHITTypeRequest]
   }
+  @scala.inline
+  implicit class CreateHITWithHITTypeRequestOps[Self <: CreateHITWithHITTypeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHITTypeId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITTypeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLifetimeInSeconds(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LifetimeInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssignmentReviewPolicy(value: ReviewPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentReviewPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignmentReviewPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentReviewPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHITLayoutId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITLayoutId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHITLayoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITLayoutId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHITLayoutParameters(value: HITLayoutParameterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITLayoutParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHITLayoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITLayoutParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHITReviewPolicy(value: ReviewPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITReviewPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHITReviewPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HITReviewPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAssignments(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAssignments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAssignments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAssignments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuestion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Question")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Question")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequesterAnnotation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterAnnotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniqueRequestToken(value: IdempotencyToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniqueRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueRequestToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

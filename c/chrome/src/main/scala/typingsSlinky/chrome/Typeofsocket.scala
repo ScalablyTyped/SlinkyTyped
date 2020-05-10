@@ -48,10 +48,10 @@ trait Typeofsocket extends js.Object {
     bufferSize: Double,
     callback: js.Function1[/* recvFromInfo */ RecvFromInfo, Unit]
   ): Unit = js.native
-  def sendTo(socketId: Double, data: scala.scalajs.js.typedarray.ArrayBuffer, address: String, port: Double): Unit = js.native
+  def sendTo(socketId: Double, data: js.typedarray.ArrayBuffer, address: String, port: Double): Unit = js.native
   def sendTo(
     socketId: Double,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     address: String,
     port: Double,
     callback: js.Function1[/* writeInfo */ WriteInfo, Unit]
@@ -66,10 +66,10 @@ trait Typeofsocket extends js.Object {
   ): Unit = js.native
   def setNoDelay(socketId: Double, noDelay: Boolean): Unit = js.native
   def setNoDelay(socketId: Double, noDelay: Boolean, callback: js.Function1[/* result */ Boolean, Unit]): Unit = js.native
-  def write(socketId: Double, data: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
+  def write(socketId: Double, data: js.typedarray.ArrayBuffer): Unit = js.native
   def write(
     socketId: Double,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     callback: js.Function1[/* writeInfo */ WriteInfo, Unit]
   ): Unit = js.native
 }

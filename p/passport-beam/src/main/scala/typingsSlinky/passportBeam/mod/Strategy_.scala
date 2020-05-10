@@ -2,6 +2,7 @@ package typingsSlinky.passportBeam.mod
 
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.passportBeam.mod.Strategy.IStrategyOption
 import typingsSlinky.passportBeam.mod.Strategy.Profile
 import scala.scalajs.js
@@ -24,6 +25,6 @@ class Strategy_ protected ()
   ) = this()
   @JSName("name")
   var name_Strategy_ : String = js.native
-  def authenticate(req: Request_[ParamsDictionary], options: js.Object): Unit = js.native
+  def authenticate(req: Request_[ParamsDictionary, _, _, Query], options: js.Object): Unit = js.native
 }
 

@@ -12,10 +12,8 @@ trait ChannelSortingOrder extends js.Object
 
 object ChannelSortingOrder {
   @scala.inline
-  def ascending: typingsSlinky.twilioChat.twilioChatStrings.ascending = this.cast("ascending")
+  def ascending: typingsSlinky.twilioChat.twilioChatStrings.ascending = "ascending".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.ascending]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def descending: typingsSlinky.twilioChat.twilioChatStrings.descending = this.cast("descending")
+  def descending: typingsSlinky.twilioChat.twilioChatStrings.descending = "descending".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.descending]
 }
 

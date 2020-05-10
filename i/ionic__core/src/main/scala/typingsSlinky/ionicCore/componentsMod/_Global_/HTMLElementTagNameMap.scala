@@ -4,106 +4,107 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HTMLElementTagNameMap extends js.Object {
-  var `ion-action-sheet`: HTMLIonActionSheetElement
-  var `ion-action-sheet-controller`: HTMLIonActionSheetControllerElement
-  var `ion-alert`: HTMLIonAlertElement
-  var `ion-alert-controller`: HTMLIonAlertControllerElement
-  var `ion-anchor`: HTMLIonAnchorElement
-  var `ion-app`: HTMLIonAppElement
-  var `ion-avatar`: HTMLIonAvatarElement
-  var `ion-back-button`: HTMLIonBackButtonElement
-  var `ion-backdrop`: HTMLIonBackdropElement
-  var `ion-badge`: HTMLIonBadgeElement
-  var `ion-button`: HTMLIonButtonElement
-  var `ion-buttons`: HTMLIonButtonsElement
-  var `ion-card`: HTMLIonCardElement
-  var `ion-card-content`: HTMLIonCardContentElement
-  var `ion-card-header`: HTMLIonCardHeaderElement
-  var `ion-card-subtitle`: HTMLIonCardSubtitleElement
-  var `ion-card-title`: HTMLIonCardTitleElement
-  var `ion-checkbox`: HTMLIonCheckboxElement
-  var `ion-chip`: HTMLIonChipElement
-  var `ion-col`: HTMLIonColElement
-  var `ion-content`: HTMLIonContentElement
-  var `ion-datetime`: HTMLIonDatetimeElement
-  var `ion-fab`: HTMLIonFabElement
-  var `ion-fab-button`: HTMLIonFabButtonElement
-  var `ion-fab-list`: HTMLIonFabListElement
-  var `ion-footer`: HTMLIonFooterElement
-  var `ion-grid`: HTMLIonGridElement
-  var `ion-header`: HTMLIonHeaderElement
-  var `ion-img`: HTMLIonImgElement
-  var `ion-infinite-scroll`: HTMLIonInfiniteScrollElement
-  var `ion-infinite-scroll-content`: HTMLIonInfiniteScrollContentElement
-  var `ion-input`: HTMLIonInputElement
-  var `ion-item`: HTMLIonItemElement
-  var `ion-item-divider`: HTMLIonItemDividerElement
-  var `ion-item-group`: HTMLIonItemGroupElement
-  var `ion-item-option`: HTMLIonItemOptionElement
-  var `ion-item-options`: HTMLIonItemOptionsElement
-  var `ion-item-sliding`: HTMLIonItemSlidingElement
-  var `ion-label`: HTMLIonLabelElement
-  var `ion-list`: HTMLIonListElement
-  var `ion-list-header`: HTMLIonListHeaderElement
-  var `ion-loading`: HTMLIonLoadingElement
-  var `ion-loading-controller`: HTMLIonLoadingControllerElement
-  var `ion-menu`: HTMLIonMenuElement
-  var `ion-menu-button`: HTMLIonMenuButtonElement
-  var `ion-menu-controller`: HTMLIonMenuControllerElement
-  var `ion-menu-toggle`: HTMLIonMenuToggleElement
-  var `ion-modal`: HTMLIonModalElement
-  var `ion-modal-controller`: HTMLIonModalControllerElement
-  var `ion-nav`: HTMLIonNavElement
-  var `ion-nav-link`: HTMLIonNavLinkElement
-  var `ion-nav-pop`: HTMLIonNavPopElement
-  var `ion-nav-push`: HTMLIonNavPushElement
-  var `ion-nav-set-root`: HTMLIonNavSetRootElement
-  var `ion-note`: HTMLIonNoteElement
-  var `ion-picker`: HTMLIonPickerElement
-  var `ion-picker-column`: HTMLIonPickerColumnElement
-  var `ion-picker-controller`: HTMLIonPickerControllerElement
-  var `ion-popover`: HTMLIonPopoverElement
-  var `ion-popover-controller`: HTMLIonPopoverControllerElement
-  var `ion-progress-bar`: HTMLIonProgressBarElement
-  var `ion-radio`: HTMLIonRadioElement
-  var `ion-radio-group`: HTMLIonRadioGroupElement
-  var `ion-range`: HTMLIonRangeElement
-  var `ion-refresher`: HTMLIonRefresherElement
-  var `ion-refresher-content`: HTMLIonRefresherContentElement
-  var `ion-reorder`: HTMLIonReorderElement
-  var `ion-reorder-group`: HTMLIonReorderGroupElement
-  var `ion-ripple-effect`: HTMLIonRippleEffectElement
-  var `ion-route`: HTMLIonRouteElement
-  var `ion-route-redirect`: HTMLIonRouteRedirectElement
-  var `ion-router`: HTMLIonRouterElement
-  var `ion-router-link`: HTMLIonRouterLinkElement
-  var `ion-router-outlet`: HTMLIonRouterOutletElement
-  var `ion-row`: HTMLIonRowElement
-  var `ion-searchbar`: HTMLIonSearchbarElement
-  var `ion-segment`: HTMLIonSegmentElement
-  var `ion-segment-button`: HTMLIonSegmentButtonElement
-  var `ion-select`: HTMLIonSelectElement
-  var `ion-select-option`: HTMLIonSelectOptionElement
-  var `ion-select-popover`: HTMLIonSelectPopoverElement
-  var `ion-skeleton-text`: HTMLIonSkeletonTextElement
-  var `ion-slide`: HTMLIonSlideElement
-  var `ion-slides`: HTMLIonSlidesElement
-  var `ion-spinner`: HTMLIonSpinnerElement
-  var `ion-split-pane`: HTMLIonSplitPaneElement
-  var `ion-tab`: HTMLIonTabElement
-  var `ion-tab-bar`: HTMLIonTabBarElement
-  var `ion-tab-button`: HTMLIonTabButtonElement
-  var `ion-tabs`: HTMLIonTabsElement
-  var `ion-text`: HTMLIonTextElement
-  var `ion-textarea`: HTMLIonTextareaElement
-  var `ion-thumbnail`: HTMLIonThumbnailElement
-  var `ion-title`: HTMLIonTitleElement
-  var `ion-toast`: HTMLIonToastElement
-  var `ion-toast-controller`: HTMLIonToastControllerElement
-  var `ion-toggle`: HTMLIonToggleElement
-  var `ion-toolbar`: HTMLIonToolbarElement
-  var `ion-virtual-scroll`: HTMLIonVirtualScrollElement
+  var `ion-action-sheet`: HTMLIonActionSheetElement = js.native
+  var `ion-action-sheet-controller`: HTMLIonActionSheetControllerElement = js.native
+  var `ion-alert`: HTMLIonAlertElement = js.native
+  var `ion-alert-controller`: HTMLIonAlertControllerElement = js.native
+  var `ion-anchor`: HTMLIonAnchorElement = js.native
+  var `ion-app`: HTMLIonAppElement = js.native
+  var `ion-avatar`: HTMLIonAvatarElement = js.native
+  var `ion-back-button`: HTMLIonBackButtonElement = js.native
+  var `ion-backdrop`: HTMLIonBackdropElement = js.native
+  var `ion-badge`: HTMLIonBadgeElement = js.native
+  var `ion-button`: HTMLIonButtonElement = js.native
+  var `ion-buttons`: HTMLIonButtonsElement = js.native
+  var `ion-card`: HTMLIonCardElement = js.native
+  var `ion-card-content`: HTMLIonCardContentElement = js.native
+  var `ion-card-header`: HTMLIonCardHeaderElement = js.native
+  var `ion-card-subtitle`: HTMLIonCardSubtitleElement = js.native
+  var `ion-card-title`: HTMLIonCardTitleElement = js.native
+  var `ion-checkbox`: HTMLIonCheckboxElement = js.native
+  var `ion-chip`: HTMLIonChipElement = js.native
+  var `ion-col`: HTMLIonColElement = js.native
+  var `ion-content`: HTMLIonContentElement = js.native
+  var `ion-datetime`: HTMLIonDatetimeElement = js.native
+  var `ion-fab`: HTMLIonFabElement = js.native
+  var `ion-fab-button`: HTMLIonFabButtonElement = js.native
+  var `ion-fab-list`: HTMLIonFabListElement = js.native
+  var `ion-footer`: HTMLIonFooterElement = js.native
+  var `ion-grid`: HTMLIonGridElement = js.native
+  var `ion-header`: HTMLIonHeaderElement = js.native
+  var `ion-img`: HTMLIonImgElement = js.native
+  var `ion-infinite-scroll`: HTMLIonInfiniteScrollElement = js.native
+  var `ion-infinite-scroll-content`: HTMLIonInfiniteScrollContentElement = js.native
+  var `ion-input`: HTMLIonInputElement = js.native
+  var `ion-item`: HTMLIonItemElement = js.native
+  var `ion-item-divider`: HTMLIonItemDividerElement = js.native
+  var `ion-item-group`: HTMLIonItemGroupElement = js.native
+  var `ion-item-option`: HTMLIonItemOptionElement = js.native
+  var `ion-item-options`: HTMLIonItemOptionsElement = js.native
+  var `ion-item-sliding`: HTMLIonItemSlidingElement = js.native
+  var `ion-label`: HTMLIonLabelElement = js.native
+  var `ion-list`: HTMLIonListElement = js.native
+  var `ion-list-header`: HTMLIonListHeaderElement = js.native
+  var `ion-loading`: HTMLIonLoadingElement = js.native
+  var `ion-loading-controller`: HTMLIonLoadingControllerElement = js.native
+  var `ion-menu`: HTMLIonMenuElement = js.native
+  var `ion-menu-button`: HTMLIonMenuButtonElement = js.native
+  var `ion-menu-controller`: HTMLIonMenuControllerElement = js.native
+  var `ion-menu-toggle`: HTMLIonMenuToggleElement = js.native
+  var `ion-modal`: HTMLIonModalElement = js.native
+  var `ion-modal-controller`: HTMLIonModalControllerElement = js.native
+  var `ion-nav`: HTMLIonNavElement = js.native
+  var `ion-nav-link`: HTMLIonNavLinkElement = js.native
+  var `ion-nav-pop`: HTMLIonNavPopElement = js.native
+  var `ion-nav-push`: HTMLIonNavPushElement = js.native
+  var `ion-nav-set-root`: HTMLIonNavSetRootElement = js.native
+  var `ion-note`: HTMLIonNoteElement = js.native
+  var `ion-picker`: HTMLIonPickerElement = js.native
+  var `ion-picker-column`: HTMLIonPickerColumnElement = js.native
+  var `ion-picker-controller`: HTMLIonPickerControllerElement = js.native
+  var `ion-popover`: HTMLIonPopoverElement = js.native
+  var `ion-popover-controller`: HTMLIonPopoverControllerElement = js.native
+  var `ion-progress-bar`: HTMLIonProgressBarElement = js.native
+  var `ion-radio`: HTMLIonRadioElement = js.native
+  var `ion-radio-group`: HTMLIonRadioGroupElement = js.native
+  var `ion-range`: HTMLIonRangeElement = js.native
+  var `ion-refresher`: HTMLIonRefresherElement = js.native
+  var `ion-refresher-content`: HTMLIonRefresherContentElement = js.native
+  var `ion-reorder`: HTMLIonReorderElement = js.native
+  var `ion-reorder-group`: HTMLIonReorderGroupElement = js.native
+  var `ion-ripple-effect`: HTMLIonRippleEffectElement = js.native
+  var `ion-route`: HTMLIonRouteElement = js.native
+  var `ion-route-redirect`: HTMLIonRouteRedirectElement = js.native
+  var `ion-router`: HTMLIonRouterElement = js.native
+  var `ion-router-link`: HTMLIonRouterLinkElement = js.native
+  var `ion-router-outlet`: HTMLIonRouterOutletElement = js.native
+  var `ion-row`: HTMLIonRowElement = js.native
+  var `ion-searchbar`: HTMLIonSearchbarElement = js.native
+  var `ion-segment`: HTMLIonSegmentElement = js.native
+  var `ion-segment-button`: HTMLIonSegmentButtonElement = js.native
+  var `ion-select`: HTMLIonSelectElement = js.native
+  var `ion-select-option`: HTMLIonSelectOptionElement = js.native
+  var `ion-select-popover`: HTMLIonSelectPopoverElement = js.native
+  var `ion-skeleton-text`: HTMLIonSkeletonTextElement = js.native
+  var `ion-slide`: HTMLIonSlideElement = js.native
+  var `ion-slides`: HTMLIonSlidesElement = js.native
+  var `ion-spinner`: HTMLIonSpinnerElement = js.native
+  var `ion-split-pane`: HTMLIonSplitPaneElement = js.native
+  var `ion-tab`: HTMLIonTabElement = js.native
+  var `ion-tab-bar`: HTMLIonTabBarElement = js.native
+  var `ion-tab-button`: HTMLIonTabButtonElement = js.native
+  var `ion-tabs`: HTMLIonTabsElement = js.native
+  var `ion-text`: HTMLIonTextElement = js.native
+  var `ion-textarea`: HTMLIonTextareaElement = js.native
+  var `ion-thumbnail`: HTMLIonThumbnailElement = js.native
+  var `ion-title`: HTMLIonTitleElement = js.native
+  var `ion-toast`: HTMLIonToastElement = js.native
+  var `ion-toast-controller`: HTMLIonToastControllerElement = js.native
+  var `ion-toggle`: HTMLIonToggleElement = js.native
+  var `ion-toolbar`: HTMLIonToolbarElement = js.native
+  var `ion-virtual-scroll`: HTMLIonVirtualScrollElement = js.native
 }
 
 object HTMLElementTagNameMap {
@@ -311,5 +312,607 @@ object HTMLElementTagNameMap {
     __obj.updateDynamic("ion-virtual-scroll")(`ion-virtual-scroll`.asInstanceOf[js.Any])
     __obj.asInstanceOf[HTMLElementTagNameMap]
   }
+  @scala.inline
+  implicit class HTMLElementTagNameMapOps[Self <: HTMLElementTagNameMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withIon-action-sheet`(value: HTMLIonActionSheetElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-action-sheet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-action-sheet-controller`(value: HTMLIonActionSheetControllerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-action-sheet-controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-alert`(value: HTMLIonAlertElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-alert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-alert-controller`(value: HTMLIonAlertControllerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-alert-controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-anchor`(value: HTMLIonAnchorElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-app`(value: HTMLIonAppElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-app")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-avatar`(value: HTMLIonAvatarElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-avatar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-back-button`(value: HTMLIonBackButtonElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-back-button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-backdrop`(value: HTMLIonBackdropElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-backdrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-badge`(value: HTMLIonBadgeElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-badge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-button`(value: HTMLIonButtonElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-buttons`(value: HTMLIonButtonsElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-card`(value: HTMLIonCardElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-card")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-card-content`(value: HTMLIonCardContentElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-card-content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-card-header`(value: HTMLIonCardHeaderElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-card-header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-card-subtitle`(value: HTMLIonCardSubtitleElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-card-subtitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-card-title`(value: HTMLIonCardTitleElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-card-title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-checkbox`(value: HTMLIonCheckboxElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-checkbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-chip`(value: HTMLIonChipElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-chip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-col`(value: HTMLIonColElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-col")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-content`(value: HTMLIonContentElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-datetime`(value: HTMLIonDatetimeElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-datetime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-fab`(value: HTMLIonFabElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-fab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-fab-button`(value: HTMLIonFabButtonElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-fab-button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-fab-list`(value: HTMLIonFabListElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-fab-list")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-footer`(value: HTMLIonFooterElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-grid`(value: HTMLIonGridElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-grid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-header`(value: HTMLIonHeaderElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-img`(value: HTMLIonImgElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-img")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-infinite-scroll`(value: HTMLIonInfiniteScrollElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-infinite-scroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-infinite-scroll-content`(value: HTMLIonInfiniteScrollContentElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-infinite-scroll-content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-input`(value: HTMLIonInputElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-item`(value: HTMLIonItemElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-item-divider`(value: HTMLIonItemDividerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-item-divider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-item-group`(value: HTMLIonItemGroupElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-item-group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-item-option`(value: HTMLIonItemOptionElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-item-option")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-item-options`(value: HTMLIonItemOptionsElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-item-options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-item-sliding`(value: HTMLIonItemSlidingElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-item-sliding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-label`(value: HTMLIonLabelElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-list`(value: HTMLIonListElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-list")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-list-header`(value: HTMLIonListHeaderElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-list-header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-loading`(value: HTMLIonLoadingElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-loading-controller`(value: HTMLIonLoadingControllerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-loading-controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-menu`(value: HTMLIonMenuElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-menu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-menu-button`(value: HTMLIonMenuButtonElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-menu-button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-menu-controller`(value: HTMLIonMenuControllerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-menu-controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-menu-toggle`(value: HTMLIonMenuToggleElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-menu-toggle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-modal`(value: HTMLIonModalElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-modal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-modal-controller`(value: HTMLIonModalControllerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-modal-controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-nav`(value: HTMLIonNavElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-nav")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-nav-link`(value: HTMLIonNavLinkElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-nav-link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-nav-pop`(value: HTMLIonNavPopElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-nav-pop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-nav-push`(value: HTMLIonNavPushElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-nav-push")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-nav-set-root`(value: HTMLIonNavSetRootElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-nav-set-root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-note`(value: HTMLIonNoteElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-note")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-picker`(value: HTMLIonPickerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-picker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-picker-column`(value: HTMLIonPickerColumnElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-picker-column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-picker-controller`(value: HTMLIonPickerControllerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-picker-controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-popover`(value: HTMLIonPopoverElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-popover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-popover-controller`(value: HTMLIonPopoverControllerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-popover-controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-progress-bar`(value: HTMLIonProgressBarElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-progress-bar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-radio`(value: HTMLIonRadioElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-radio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-radio-group`(value: HTMLIonRadioGroupElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-radio-group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-range`(value: HTMLIonRangeElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-refresher`(value: HTMLIonRefresherElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-refresher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-refresher-content`(value: HTMLIonRefresherContentElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-refresher-content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-reorder`(value: HTMLIonReorderElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-reorder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-reorder-group`(value: HTMLIonReorderGroupElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-reorder-group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-ripple-effect`(value: HTMLIonRippleEffectElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-ripple-effect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-route`(value: HTMLIonRouteElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-route")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-route-redirect`(value: HTMLIonRouteRedirectElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-route-redirect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-router`(value: HTMLIonRouterElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-router")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-router-link`(value: HTMLIonRouterLinkElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-router-link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-router-outlet`(value: HTMLIonRouterOutletElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-router-outlet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-row`(value: HTMLIonRowElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-row")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-searchbar`(value: HTMLIonSearchbarElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-searchbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-segment`(value: HTMLIonSegmentElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-segment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-segment-button`(value: HTMLIonSegmentButtonElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-segment-button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-select`(value: HTMLIonSelectElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-select-option`(value: HTMLIonSelectOptionElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-select-option")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-select-popover`(value: HTMLIonSelectPopoverElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-select-popover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-skeleton-text`(value: HTMLIonSkeletonTextElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-skeleton-text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-slide`(value: HTMLIonSlideElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-slide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-slides`(value: HTMLIonSlidesElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-slides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-spinner`(value: HTMLIonSpinnerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-spinner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-split-pane`(value: HTMLIonSplitPaneElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-split-pane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-tab`(value: HTMLIonTabElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-tab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-tab-bar`(value: HTMLIonTabBarElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-tab-bar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-tab-button`(value: HTMLIonTabButtonElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-tab-button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-tabs`(value: HTMLIonTabsElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-tabs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-text`(value: HTMLIonTextElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-textarea`(value: HTMLIonTextareaElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-textarea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-thumbnail`(value: HTMLIonThumbnailElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-thumbnail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-title`(value: HTMLIonTitleElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-toast`(value: HTMLIonToastElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-toast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-toast-controller`(value: HTMLIonToastControllerElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-toast-controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-toggle`(value: HTMLIonToggleElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-toggle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-toolbar`(value: HTMLIonToolbarElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-toolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withIon-virtual-scroll`(value: HTMLIonVirtualScrollElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ion-virtual-scroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

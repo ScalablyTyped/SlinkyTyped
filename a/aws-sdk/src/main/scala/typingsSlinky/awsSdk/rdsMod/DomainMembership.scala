@@ -19,20 +19,72 @@ trait DomainMembership extends js.Object {
     */
   var IAMRoleName: js.UndefOr[String] = js.native
   /**
-    * The status of the DB instance's Active Directory Domain membership, such as joined, pending-join, failed etc).
+    * The status of the Active Directory Domain membership for the DB instance or cluster. Values include joined, pending-join, failed, and so on.
     */
   var Status: js.UndefOr[String] = js.native
 }
 
 object DomainMembership {
   @scala.inline
-  def apply(Domain: String = null, FQDN: String = null, IAMRoleName: String = null, Status: String = null): DomainMembership = {
+  def apply(): DomainMembership = {
     val __obj = js.Dynamic.literal()
-    if (Domain != null) __obj.updateDynamic("Domain")(Domain.asInstanceOf[js.Any])
-    if (FQDN != null) __obj.updateDynamic("FQDN")(FQDN.asInstanceOf[js.Any])
-    if (IAMRoleName != null) __obj.updateDynamic("IAMRoleName")(IAMRoleName.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainMembership]
   }
+  @scala.inline
+  implicit class DomainMembershipOps[Self <: DomainMembership] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFQDN(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FQDN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFQDN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FQDN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIAMRoleName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IAMRoleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIAMRoleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IAMRoleName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

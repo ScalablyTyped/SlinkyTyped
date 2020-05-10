@@ -6,28 +6,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OAuth2ImplicitSecurity
   extends BaseOAuthSecurity
      with Security {
-  var authorizationUrl: String
+  var authorizationUrl: String = js.native
   @JSName("flow")
-  var flow_OAuth2ImplicitSecurity: `implicit`
+  var flow_OAuth2ImplicitSecurity: `implicit` = js.native
 }
 
 object OAuth2ImplicitSecurity {
   @scala.inline
-  def apply(
-    authorizationUrl: String,
-    flow: `implicit`,
-    `type`: oauth2,
-    description: String = null,
-    scopes: OAuthScope = null
-  ): OAuth2ImplicitSecurity = {
+  def apply(authorizationUrl: String, flow: `implicit`, `type`: oauth2): OAuth2ImplicitSecurity = {
     val __obj = js.Dynamic.literal(authorizationUrl = authorizationUrl.asInstanceOf[js.Any], flow = flow.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
     __obj.asInstanceOf[OAuth2ImplicitSecurity]
   }
+  @scala.inline
+  implicit class OAuth2ImplicitSecurityOps[Self <: OAuth2ImplicitSecurity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizationUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlow(value: `implicit`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flow")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

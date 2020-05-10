@@ -31,7 +31,7 @@ package object ec2Mod {
   */
   type Affinity = typingsSlinky.awsSdk.ec2Mod._Affinity | java.lang.String
   type AllocationId = java.lang.String
-  type AllocationIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type AllocationIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.AllocationId]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.available__
     - typingsSlinky.awsSdk.awsSdkStrings.`under-assessment`
@@ -74,7 +74,7 @@ package object ec2Mod {
   type AssignedPrivateIpAddressList = js.Array[typingsSlinky.awsSdk.ec2Mod.AssignedPrivateIpAddress]
   type AssociatedNetworkType = typingsSlinky.awsSdk.awsSdkStrings.vpc_ | java.lang.String
   type AssociatedTargetNetworkSet = js.Array[typingsSlinky.awsSdk.ec2Mod.AssociatedTargetNetwork]
-  type AssociationIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type AssociationIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.IamInstanceProfileAssociationId]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.associating__
     - typingsSlinky.awsSdk.awsSdkStrings.associated__
@@ -142,7 +142,7 @@ package object ec2Mod {
   type BlockDeviceMappingRequestList = js.Array[typingsSlinky.awsSdk.ec2Mod.BlockDeviceMapping]
   type Boolean = scala.Boolean
   type BundleId = java.lang.String
-  type BundleIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type BundleIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.BundleId]
   type BundleTaskList = js.Array[typingsSlinky.awsSdk.ec2Mod.BundleTask]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.pending__
@@ -159,7 +159,7 @@ package object ec2Mod {
   type ByoipCidrSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ByoipCidr]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.advertised
-    - typingsSlinky.awsSdk.awsSdkStrings.deprovisioned
+    - typingsSlinky.awsSdk.awsSdkStrings.deprovisioned_
     - typingsSlinky.awsSdk.awsSdkStrings.`failed-deprovision`
     - typingsSlinky.awsSdk.awsSdkStrings.`failed-provision`
     - typingsSlinky.awsSdk.awsSdkStrings.`pending-deprovision`
@@ -190,7 +190,7 @@ package object ec2Mod {
   type CancelSpotInstanceRequestState = typingsSlinky.awsSdk.ec2Mod._CancelSpotInstanceRequestState | java.lang.String
   type CancelledSpotInstanceRequestList = js.Array[typingsSlinky.awsSdk.ec2Mod.CancelledSpotInstanceRequest]
   type CapacityReservationId = java.lang.String
-  type CapacityReservationIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type CapacityReservationIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.CapacityReservationId]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.LinuxSlashUNIX
     - typingsSlinky.awsSdk.awsSdkStrings.`Red Hat Enterprise Linux`
@@ -239,6 +239,7 @@ package object ec2Mod {
   */
   type ClientCertificateRevocationListStatusCode = typingsSlinky.awsSdk.ec2Mod._ClientCertificateRevocationListStatusCode | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.ec2Mod.ClientApiVersions
+  type ClientVpnAssociationId = java.lang.String
   type ClientVpnAuthenticationList = js.Array[typingsSlinky.awsSdk.ec2Mod.ClientVpnAuthentication]
   type ClientVpnAuthenticationRequestList = js.Array[typingsSlinky.awsSdk.ec2Mod.ClientVpnAuthenticationRequest]
   /* Rewritten from type alias, can be one of: 
@@ -265,6 +266,7 @@ package object ec2Mod {
   */
   type ClientVpnConnectionStatusCode = typingsSlinky.awsSdk.ec2Mod._ClientVpnConnectionStatusCode | java.lang.String
   type ClientVpnEndpointId = java.lang.String
+  type ClientVpnEndpointIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.ClientVpnEndpointId]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`pending-associate`
     - typingsSlinky.awsSdk.awsSdkStrings.available__
@@ -282,9 +284,10 @@ package object ec2Mod {
     - java.lang.String
   */
   type ClientVpnRouteStatusCode = typingsSlinky.awsSdk.ec2Mod._ClientVpnRouteStatusCode | java.lang.String
-  type ClientVpnSecurityGroupIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ClientVpnSecurityGroupIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupId]
   type CoipAddressUsageSet = js.Array[typingsSlinky.awsSdk.ec2Mod.CoipAddressUsage]
-  type CoipPoolIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type CoipPoolId = java.lang.String
+  type CoipPoolIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.CoipPoolId]
   type CoipPoolMaxResults = scala.Double
   type CoipPoolSet = js.Array[typingsSlinky.awsSdk.ec2Mod.CoipPool]
   type ConnectionNotificationId = java.lang.String
@@ -297,7 +300,7 @@ package object ec2Mod {
   type ConnectionNotificationState = typingsSlinky.awsSdk.ec2Mod._ConnectionNotificationState | java.lang.String
   type ConnectionNotificationType = typingsSlinky.awsSdk.awsSdkStrings.Topic | java.lang.String
   type ContainerFormat = typingsSlinky.awsSdk.awsSdkStrings.ova | java.lang.String
-  type ConversionIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ConversionIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.ConversionTaskId]
   type ConversionTaskId = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.active__
@@ -316,7 +319,7 @@ package object ec2Mod {
   type CurrencyCodeValues = typingsSlinky.awsSdk.awsSdkStrings.USD | java.lang.String
   type CurrentGenerationFlag = scala.Boolean
   type CustomerGatewayId = java.lang.String
-  type CustomerGatewayIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type CustomerGatewayIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.CustomerGatewayId]
   type CustomerGatewayList = js.Array[typingsSlinky.awsSdk.ec2Mod.CustomerGateway]
   type DITMaxResults = scala.Double
   type DITOMaxResults = scala.Double
@@ -367,7 +370,7 @@ package object ec2Mod {
     - java.lang.String
   */
   type DeleteQueuedReservedInstancesErrorCode = typingsSlinky.awsSdk.ec2Mod._DeleteQueuedReservedInstancesErrorCode | java.lang.String
-  type DeleteQueuedReservedInstancesIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type DeleteQueuedReservedInstancesIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservationId]
   type DescribeByoipCidrsMaxResults = scala.Double
   type DescribeCapacityReservationsMaxResults = scala.Double
   type DescribeClassicLinkInstancesMaxResults = scala.Double
@@ -418,7 +421,7 @@ package object ec2Mod {
   type DhcpConfigurationList = js.Array[typingsSlinky.awsSdk.ec2Mod.DhcpConfiguration]
   type DhcpConfigurationValueList = js.Array[typingsSlinky.awsSdk.ec2Mod.AttributeValue]
   type DhcpOptionsId = java.lang.String
-  type DhcpOptionsIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type DhcpOptionsIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.DhcpOptionsId]
   type DhcpOptionsList = js.Array[typingsSlinky.awsSdk.ec2Mod.DhcpOptions]
   type DisableFastSnapshotRestoreErrorSet = js.Array[typingsSlinky.awsSdk.ec2Mod.DisableFastSnapshotRestoreErrorItem]
   type DisableFastSnapshotRestoreStateErrorSet = js.Array[typingsSlinky.awsSdk.ec2Mod.DisableFastSnapshotRestoreStateErrorItem]
@@ -442,7 +445,7 @@ package object ec2Mod {
   type DiskType = typingsSlinky.awsSdk.ec2Mod._DiskType | java.lang.String
   type DnsEntrySet = js.Array[typingsSlinky.awsSdk.ec2Mod.DnsEntry]
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.pendingVerification
+    - typingsSlinky.awsSdk.awsSdkStrings.pendingVerification_
     - typingsSlinky.awsSdk.awsSdkStrings.verified_
     - typingsSlinky.awsSdk.awsSdkStrings.failed__
     - java.lang.String
@@ -478,7 +481,8 @@ package object ec2Mod {
   type EgressOnlyInternetGatewayIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.EgressOnlyInternetGatewayId]
   type EgressOnlyInternetGatewayList = js.Array[typingsSlinky.awsSdk.ec2Mod.EgressOnlyInternetGateway]
   type ElasticGpuAssociationList = js.Array[typingsSlinky.awsSdk.ec2Mod.ElasticGpuAssociation]
-  type ElasticGpuIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ElasticGpuId = java.lang.String
+  type ElasticGpuIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ElasticGpuId]
   type ElasticGpuSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ElasticGpus]
   type ElasticGpuSpecificationList = js.Array[typingsSlinky.awsSdk.ec2Mod.ElasticGpuSpecification]
   type ElasticGpuSpecificationResponseList = js.Array[typingsSlinky.awsSdk.ec2Mod.ElasticGpuSpecificationResponse]
@@ -542,10 +546,11 @@ package object ec2Mod {
     - java.lang.String
   */
   type ExportEnvironment = typingsSlinky.awsSdk.ec2Mod._ExportEnvironment | java.lang.String
-  type ExportImageTaskIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ExportImageTaskId = java.lang.String
+  type ExportImageTaskIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.ExportImageTaskId]
   type ExportImageTaskList = js.Array[typingsSlinky.awsSdk.ec2Mod.ExportImageTask]
   type ExportTaskId = java.lang.String
-  type ExportTaskIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ExportTaskIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.ExportTaskId]
   type ExportTaskList = js.Array[typingsSlinky.awsSdk.ec2Mod.ExportTask]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.active__
@@ -555,6 +560,7 @@ package object ec2Mod {
     - java.lang.String
   */
   type ExportTaskState = typingsSlinky.awsSdk.ec2Mod._ExportTaskState | java.lang.String
+  type ExportVmTaskId = java.lang.String
   type FailedQueuedPurchaseDeletionSet = js.Array[typingsSlinky.awsSdk.ec2Mod.FailedQueuedPurchaseDeletion]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.enabling__
@@ -588,8 +594,8 @@ package object ec2Mod {
     - java.lang.String
   */
   type FleetExcessCapacityTerminationPolicy = typingsSlinky.awsSdk.ec2Mod._FleetExcessCapacityTerminationPolicy | java.lang.String
-  type FleetIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.FleetIdentifier]
-  type FleetIdentifier = java.lang.String
+  type FleetId = java.lang.String
+  type FleetIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.FleetId]
   type FleetLaunchTemplateConfigList = js.Array[typingsSlinky.awsSdk.ec2Mod.FleetLaunchTemplateConfig]
   type FleetLaunchTemplateConfigListRequest = js.Array[typingsSlinky.awsSdk.ec2Mod.FleetLaunchTemplateConfigRequest]
   type FleetLaunchTemplateOverridesList = js.Array[typingsSlinky.awsSdk.ec2Mod.FleetLaunchTemplateOverrides]
@@ -613,13 +619,16 @@ package object ec2Mod {
   */
   type FleetStateCode = typingsSlinky.awsSdk.ec2Mod._FleetStateCode | java.lang.String
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.request_
+    - typingsSlinky.awsSdk.awsSdkStrings.request__
     - typingsSlinky.awsSdk.awsSdkStrings.maintain
     - typingsSlinky.awsSdk.awsSdkStrings.instant
     - java.lang.String
   */
   type FleetType = typingsSlinky.awsSdk.ec2Mod._FleetType | java.lang.String
   type Float = scala.Double
+  type FlowLogIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcFlowLogId]
+  type FlowLogResourceId = java.lang.String
+  type FlowLogResourceIds = js.Array[typingsSlinky.awsSdk.ec2Mod.FlowLogResourceId]
   type FlowLogSet = js.Array[typingsSlinky.awsSdk.ec2Mod.FlowLog]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.VPC
@@ -642,7 +651,7 @@ package object ec2Mod {
   */
   type FpgaImageAttributeName = typingsSlinky.awsSdk.ec2Mod._FpgaImageAttributeName | java.lang.String
   type FpgaImageId = java.lang.String
-  type FpgaImageIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type FpgaImageIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.FpgaImageId]
   type FpgaImageList = js.Array[typingsSlinky.awsSdk.ec2Mod.FpgaImage]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.pending__
@@ -663,8 +672,8 @@ package object ec2Mod {
   type GroupIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
   type GroupIdentifierList = js.Array[typingsSlinky.awsSdk.ec2Mod.GroupIdentifier]
   type GroupIdentifierSet = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupIdentifier]
-  type GroupIds = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
-  type GroupNameStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type GroupIds = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupId]
+  type GroupNameStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupName]
   type HibernationFlag = scala.Boolean
   type HistoryRecordSet = js.Array[typingsSlinky.awsSdk.ec2Mod.HistoryRecordEntry]
   type HistoryRecords = js.Array[typingsSlinky.awsSdk.ec2Mod.HistoryRecord]
@@ -677,7 +686,8 @@ package object ec2Mod {
     - java.lang.String
   */
   type HostRecovery = typingsSlinky.awsSdk.ec2Mod._HostRecovery | java.lang.String
-  type HostReservationIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type HostReservationId = java.lang.String
+  type HostReservationIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.HostReservationId]
   type HostReservationSet = js.Array[typingsSlinky.awsSdk.ec2Mod.HostReservation]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.dedicated_
@@ -699,6 +709,7 @@ package object ec2Mod {
   type HypervisorType = typingsSlinky.awsSdk.ec2Mod._HypervisorType | java.lang.String
   type IKEVersionsList = js.Array[typingsSlinky.awsSdk.ec2Mod.IKEVersionsListValue]
   type IKEVersionsRequestList = js.Array[typingsSlinky.awsSdk.ec2Mod.IKEVersionsRequestListValue]
+  type IamInstanceProfileAssociationId = java.lang.String
   type IamInstanceProfileAssociationSet = js.Array[typingsSlinky.awsSdk.ec2Mod.IamInstanceProfileAssociation]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.associating__
@@ -722,7 +733,7 @@ package object ec2Mod {
   type ImageAttributeName = typingsSlinky.awsSdk.ec2Mod._ImageAttributeName | java.lang.String
   type ImageDiskContainerList = js.Array[typingsSlinky.awsSdk.ec2Mod.ImageDiskContainer]
   type ImageId = java.lang.String
-  type ImageIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ImageIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.ImageId]
   type ImageList = js.Array[typingsSlinky.awsSdk.ec2Mod.Image]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.pending__
@@ -744,11 +755,14 @@ package object ec2Mod {
   type ImageTypeValues = typingsSlinky.awsSdk.ec2Mod._ImageTypeValues | java.lang.String
   type ImportImageLicenseSpecificationListRequest = js.Array[typingsSlinky.awsSdk.ec2Mod.ImportImageLicenseConfigurationRequest]
   type ImportImageLicenseSpecificationListResponse = js.Array[typingsSlinky.awsSdk.ec2Mod.ImportImageLicenseConfigurationResponse]
+  type ImportImageTaskId = java.lang.String
   type ImportImageTaskList = js.Array[typingsSlinky.awsSdk.ec2Mod.ImportImageTask]
   type ImportInstanceVolumeDetailSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ImportInstanceVolumeDetailItem]
+  type ImportSnapshotTaskId = java.lang.String
+  type ImportSnapshotTaskIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.ImportSnapshotTaskId]
   type ImportSnapshotTaskList = js.Array[typingsSlinky.awsSdk.ec2Mod.ImportSnapshotTask]
   type ImportTaskId = java.lang.String
-  type ImportTaskIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ImportTaskIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.ImportImageTaskId]
   type InferenceDeviceCount = scala.Double
   type InferenceDeviceInfoList = js.Array[typingsSlinky.awsSdk.ec2Mod.InferenceDeviceInfo]
   type InferenceDeviceManufacturerName = java.lang.String
@@ -785,7 +799,7 @@ package object ec2Mod {
   type InstanceHealthStatus = typingsSlinky.awsSdk.ec2Mod._InstanceHealthStatus | java.lang.String
   type InstanceId = java.lang.String
   type InstanceIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
-  type InstanceIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type InstanceIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.InstanceId]
   type InstanceIdsSet = js.Array[typingsSlinky.awsSdk.ec2Mod.InstanceId]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.hibernate
@@ -1140,15 +1154,19 @@ package object ec2Mod {
   type InterfacePermissionType = typingsSlinky.awsSdk.ec2Mod._InterfacePermissionType | java.lang.String
   type InternetGatewayAttachmentList = js.Array[typingsSlinky.awsSdk.ec2Mod.InternetGatewayAttachment]
   type InternetGatewayId = java.lang.String
+  type InternetGatewayIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.InternetGatewayId]
   type InternetGatewayList = js.Array[typingsSlinky.awsSdk.ec2Mod.InternetGateway]
   type IpPermissionList = js.Array[typingsSlinky.awsSdk.ec2Mod.IpPermission]
   type IpRangeList = js.Array[typingsSlinky.awsSdk.ec2Mod.IpRange]
   type IpRanges = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type Ipv4PoolEc2Id = java.lang.String
   type Ipv6Address = java.lang.String
   type Ipv6AddressList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
   type Ipv6CidrAssociationSet = js.Array[typingsSlinky.awsSdk.ec2Mod.Ipv6CidrAssociation]
   type Ipv6CidrBlockSet = js.Array[typingsSlinky.awsSdk.ec2Mod.Ipv6CidrBlock]
   type Ipv6Flag = scala.Boolean
+  type Ipv6PoolEc2Id = java.lang.String
+  type Ipv6PoolIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.Ipv6PoolEc2Id]
   type Ipv6PoolMaxResults = scala.Double
   type Ipv6PoolSet = js.Array[typingsSlinky.awsSdk.ec2Mod.Ipv6Pool]
   type Ipv6RangeList = js.Array[typingsSlinky.awsSdk.ec2Mod.Ipv6Range]
@@ -1159,8 +1177,9 @@ package object ec2Mod {
   */
   type Ipv6SupportValue = typingsSlinky.awsSdk.ec2Mod._Ipv6SupportValue | java.lang.String
   type KernelId = java.lang.String
-  type KeyNameStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
-  type KeyPairIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type KeyNameStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.KeyPairName]
+  type KeyPairId = java.lang.String
+  type KeyPairIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.KeyPairId]
   type KeyPairList = js.Array[typingsSlinky.awsSdk.ec2Mod.KeyPairInfo]
   type KeyPairName = java.lang.String
   type KmsKeyId = java.lang.String
@@ -1189,6 +1208,7 @@ package object ec2Mod {
   */
   type LaunchTemplateHttpTokensState = typingsSlinky.awsSdk.ec2Mod._LaunchTemplateHttpTokensState | java.lang.String
   type LaunchTemplateId = java.lang.String
+  type LaunchTemplateIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.LaunchTemplateId]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.disabled__
     - typingsSlinky.awsSdk.awsSdkStrings.enabled__
@@ -1234,7 +1254,8 @@ package object ec2Mod {
   type ListingStatus = typingsSlinky.awsSdk.ec2Mod._ListingStatus | java.lang.String
   type LoadPermissionList = js.Array[typingsSlinky.awsSdk.ec2Mod.LoadPermission]
   type LoadPermissionListRequest = js.Array[typingsSlinky.awsSdk.ec2Mod.LoadPermissionRequest]
-  type LocalGatewayIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type LocalGatewayId = java.lang.String
+  type LocalGatewayIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGatewayId]
   type LocalGatewayMaxResults = scala.Double
   type LocalGatewayRouteList = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGatewayRoute]
   /* Rewritten from type alias, can be one of: 
@@ -1246,13 +1267,17 @@ package object ec2Mod {
     - java.lang.String
   */
   type LocalGatewayRouteState = typingsSlinky.awsSdk.ec2Mod._LocalGatewayRouteState | java.lang.String
-  type LocalGatewayRouteTableIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type LocalGatewayRouteTableIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGatewayRoutetableId]
   type LocalGatewayRouteTableSet = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGatewayRouteTable]
-  type LocalGatewayRouteTableVirtualInterfaceGroupAssociationIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type LocalGatewayRouteTableVirtualInterfaceGroupAssociationId = java.lang.String
+  type LocalGatewayRouteTableVirtualInterfaceGroupAssociationIdSet = js.Array[
+    typingsSlinky.awsSdk.ec2Mod.LocalGatewayRouteTableVirtualInterfaceGroupAssociationId
+  ]
   type LocalGatewayRouteTableVirtualInterfaceGroupAssociationSet = js.Array[
     typingsSlinky.awsSdk.ec2Mod.LocalGatewayRouteTableVirtualInterfaceGroupAssociation
   ]
-  type LocalGatewayRouteTableVpcAssociationIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type LocalGatewayRouteTableVpcAssociationId = java.lang.String
+  type LocalGatewayRouteTableVpcAssociationIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGatewayRouteTableVpcAssociationId]
   type LocalGatewayRouteTableVpcAssociationSet = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGatewayRouteTableVpcAssociation]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.static__
@@ -1260,10 +1285,13 @@ package object ec2Mod {
     - java.lang.String
   */
   type LocalGatewayRouteType = typingsSlinky.awsSdk.ec2Mod._LocalGatewayRouteType | java.lang.String
+  type LocalGatewayRoutetableId = java.lang.String
   type LocalGatewaySet = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGateway]
-  type LocalGatewayVirtualInterfaceGroupIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type LocalGatewayVirtualInterfaceGroupId = java.lang.String
+  type LocalGatewayVirtualInterfaceGroupIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGatewayVirtualInterfaceGroupId]
   type LocalGatewayVirtualInterfaceGroupSet = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGatewayVirtualInterfaceGroup]
-  type LocalGatewayVirtualInterfaceIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type LocalGatewayVirtualInterfaceId = java.lang.String
+  type LocalGatewayVirtualInterfaceIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGatewayVirtualInterfaceId]
   type LocalGatewayVirtualInterfaceSet = js.Array[typingsSlinky.awsSdk.ec2Mod.LocalGatewayVirtualInterface]
   type Location = java.lang.String
   /* Rewritten from type alias, can be one of: 
@@ -1294,6 +1322,12 @@ package object ec2Mod {
   type MemorySize = scala.Double
   type MillisecondDateTime = js.Date
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`opted-in`
+    - typingsSlinky.awsSdk.awsSdkStrings.`not-opted-in`
+    - java.lang.String
+  */
+  type ModifyAvailabilityZoneOptInStatus = typingsSlinky.awsSdk.ec2Mod._ModifyAvailabilityZoneOptInStatus | java.lang.String
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.disabled__
     - typingsSlinky.awsSdk.awsSdkStrings.disabling_
     - typingsSlinky.awsSdk.awsSdkStrings.enabled__
@@ -1316,6 +1350,7 @@ package object ec2Mod {
   type MulticastSupportValue = typingsSlinky.awsSdk.ec2Mod._MulticastSupportValue | java.lang.String
   type NatGatewayAddressList = js.Array[typingsSlinky.awsSdk.ec2Mod.NatGatewayAddress]
   type NatGatewayId = java.lang.String
+  type NatGatewayIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.NatGatewayId]
   type NatGatewayList = js.Array[typingsSlinky.awsSdk.ec2Mod.NatGateway]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.pending__
@@ -1330,6 +1365,7 @@ package object ec2Mod {
   type NetworkAclAssociationList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkAclAssociation]
   type NetworkAclEntryList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkAclEntry]
   type NetworkAclId = java.lang.String
+  type NetworkAclIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkAclId]
   type NetworkAclList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkAcl]
   type NetworkInterfaceAttachmentId = java.lang.String
   /* Rewritten from type alias, can be one of: 
@@ -1342,10 +1378,11 @@ package object ec2Mod {
   type NetworkInterfaceAttribute = typingsSlinky.awsSdk.ec2Mod._NetworkInterfaceAttribute | java.lang.String
   type NetworkInterfaceCreationType = typingsSlinky.awsSdk.awsSdkStrings.efa | java.lang.String
   type NetworkInterfaceId = java.lang.String
-  type NetworkInterfaceIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type NetworkInterfaceIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkInterfaceId]
   type NetworkInterfaceIpv6AddressesList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkInterfaceIpv6Address]
   type NetworkInterfaceList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkInterface]
-  type NetworkInterfacePermissionIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type NetworkInterfacePermissionId = java.lang.String
+  type NetworkInterfacePermissionIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkInterfacePermissionId]
   type NetworkInterfacePermissionList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkInterfacePermission]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.pending__
@@ -1427,7 +1464,8 @@ package object ec2Mod {
   type Phase2EncryptionAlgorithmsRequestList = js.Array[typingsSlinky.awsSdk.ec2Mod.Phase2EncryptionAlgorithmsRequestListValue]
   type Phase2IntegrityAlgorithmsList = js.Array[typingsSlinky.awsSdk.ec2Mod.Phase2IntegrityAlgorithmsListValue]
   type Phase2IntegrityAlgorithmsRequestList = js.Array[typingsSlinky.awsSdk.ec2Mod.Phase2IntegrityAlgorithmsRequestListValue]
-  type PlacementGroupIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type PlacementGroupId = java.lang.String
+  type PlacementGroupIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.PlacementGroupId]
   type PlacementGroupList = js.Array[typingsSlinky.awsSdk.ec2Mod.PlacementGroup]
   type PlacementGroupName = java.lang.String
   /* Rewritten from type alias, can be one of: 
@@ -1446,7 +1484,7 @@ package object ec2Mod {
   */
   type PlacementGroupStrategy = typingsSlinky.awsSdk.ec2Mod._PlacementGroupStrategy | java.lang.String
   type PlacementGroupStrategyList = js.Array[typingsSlinky.awsSdk.ec2Mod.PlacementGroupStrategy]
-  type PlacementGroupStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type PlacementGroupStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.PlacementGroupName]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.cluster_
     - typingsSlinky.awsSdk.awsSdkStrings.spread
@@ -1459,6 +1497,8 @@ package object ec2Mod {
   type PoolMaxResults = scala.Double
   type PrefixListIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.PrefixListId]
   type PrefixListIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type PrefixListResourceId = java.lang.String
+  type PrefixListResourceIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.PrefixListResourceId]
   type PrefixListSet = js.Array[typingsSlinky.awsSdk.ec2Mod.PrefixList]
   type PriceScheduleList = js.Array[typingsSlinky.awsSdk.ec2Mod.PriceSchedule]
   type PriceScheduleSpecificationList = js.Array[typingsSlinky.awsSdk.ec2Mod.PriceScheduleSpecification]
@@ -1489,6 +1529,7 @@ package object ec2Mod {
   type ProductDescriptionList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
   type PropagatingVgwList = js.Array[typingsSlinky.awsSdk.ec2Mod.PropagatingVgw]
   type PublicIpStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type PublicIpv4PoolIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.Ipv4PoolEc2Id]
   type PublicIpv4PoolRangeSet = js.Array[typingsSlinky.awsSdk.ec2Mod.PublicIpv4PoolRange]
   type PublicIpv4PoolSet = js.Array[typingsSlinky.awsSdk.ec2Mod.PublicIpv4Pool]
   type PurchaseRequestSet = js.Array[typingsSlinky.awsSdk.ec2Mod.PurchaseRequest]
@@ -1527,9 +1568,12 @@ package object ec2Mod {
     - java.lang.String
   */
   type ReportStatusType = typingsSlinky.awsSdk.ec2Mod._ReportStatusType | java.lang.String
-  type RequestHostIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type RequestHostIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.DedicatedHostId]
   type RequestHostIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.DedicatedHostId]
   type RequestInstanceTypeList = js.Array[typingsSlinky.awsSdk.ec2Mod.InstanceType]
+  type RequestSpotLaunchSpecificationSecurityGroupIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupId]
+  type RequestSpotLaunchSpecificationSecurityGroupList = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupName]
+  type ReservationId = java.lang.String
   type ReservationList = js.Array[typingsSlinky.awsSdk.ec2Mod.Reservation]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`payment-pending`
@@ -1539,7 +1583,7 @@ package object ec2Mod {
     - java.lang.String
   */
   type ReservationState = typingsSlinky.awsSdk.ec2Mod._ReservationState | java.lang.String
-  type ReservedInstanceIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ReservedInstanceIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservationId]
   type ReservedInstanceReservationValueSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservedInstanceReservationValue]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`payment-pending`
@@ -1552,19 +1596,21 @@ package object ec2Mod {
   */
   type ReservedInstanceState = typingsSlinky.awsSdk.ec2Mod._ReservedInstanceState | java.lang.String
   type ReservedInstancesConfigurationList = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservedInstancesConfiguration]
-  type ReservedInstancesIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ReservedInstancesIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservationId]
   type ReservedInstancesList = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservedInstances]
   type ReservedInstancesListingId = java.lang.String
   type ReservedInstancesListingList = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservedInstancesListing]
-  type ReservedInstancesModificationIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ReservedInstancesModificationId = java.lang.String
+  type ReservedInstancesModificationIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservedInstancesModificationId]
   type ReservedInstancesModificationList = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservedInstancesModification]
   type ReservedInstancesModificationResultList = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservedInstancesModificationResult]
-  type ReservedInstancesOfferingIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ReservedInstancesOfferingId = java.lang.String
+  type ReservedInstancesOfferingIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservedInstancesOfferingId]
   type ReservedInstancesOfferingList = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservedInstancesOffering]
   type ReservedIntancesIds = js.Array[typingsSlinky.awsSdk.ec2Mod.ReservedInstancesId]
   type ResetFpgaImageAttributeName = typingsSlinky.awsSdk.awsSdkStrings.loadPermission | java.lang.String
   type ResetImageAttributeName = typingsSlinky.awsSdk.awsSdkStrings.launchPermission | java.lang.String
-  type ResourceIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ResourceIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.TaggableResourceId]
   type ResourceList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`client-vpn-endpoint`
@@ -1603,6 +1649,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.`vpc-peering-connection`
     - typingsSlinky.awsSdk.awsSdkStrings.`vpn-connection`
     - typingsSlinky.awsSdk.awsSdkStrings.`vpn-gateway`
+    - typingsSlinky.awsSdk.awsSdkStrings.`vpc-flow-log`
     - java.lang.String
   */
   type ResourceType = typingsSlinky.awsSdk.ec2Mod._ResourceType | java.lang.String
@@ -1616,6 +1663,7 @@ package object ec2Mod {
   */
   type RootDeviceType = typingsSlinky.awsSdk.ec2Mod._RootDeviceType | java.lang.String
   type RootDeviceTypeList = js.Array[typingsSlinky.awsSdk.ec2Mod.RootDeviceType]
+  type RouteGatewayId = java.lang.String
   type RouteList = js.Array[typingsSlinky.awsSdk.ec2Mod.Route]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CreateRouteTable
@@ -1641,8 +1689,8 @@ package object ec2Mod {
     - java.lang.String
   */
   type RouteTableAssociationStateCode = typingsSlinky.awsSdk.ec2Mod._RouteTableAssociationStateCode | java.lang.String
-  type RouteTableGatewayId = java.lang.String
   type RouteTableId = java.lang.String
+  type RouteTableIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.RouteTableId]
   type RouteTableList = js.Array[typingsSlinky.awsSdk.ec2Mod.RouteTable]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.allow__
@@ -1652,20 +1700,21 @@ package object ec2Mod {
   type RuleAction = typingsSlinky.awsSdk.ec2Mod._RuleAction | java.lang.String
   type ScheduledInstanceAvailabilitySet = js.Array[typingsSlinky.awsSdk.ec2Mod.ScheduledInstanceAvailability]
   type ScheduledInstanceId = java.lang.String
-  type ScheduledInstanceIdRequestSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ScheduledInstanceIdRequestSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ScheduledInstanceId]
   type ScheduledInstanceSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ScheduledInstance]
   type ScheduledInstancesBlockDeviceMappingSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ScheduledInstancesBlockDeviceMapping]
   type ScheduledInstancesIpv6AddressList = js.Array[typingsSlinky.awsSdk.ec2Mod.ScheduledInstancesIpv6Address]
   type ScheduledInstancesNetworkInterfaceSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ScheduledInstancesNetworkInterface]
-  type ScheduledInstancesSecurityGroupIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
-  type SecurityGroupIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type ScheduledInstancesSecurityGroupIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupId]
+  type SecurityGroupId = java.lang.String
+  type SecurityGroupIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupId]
   type SecurityGroupList = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroup]
+  type SecurityGroupName = java.lang.String
   type SecurityGroupReferences = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupReference]
-  type SecurityGroupStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type SecurityGroupStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupName]
   type SensitiveUserData = java.lang.String
   type ServiceConfigurationSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ServiceConfiguration]
   type ServiceDetailSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ServiceDetail]
-  type ServiceId = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Pending_
     - typingsSlinky.awsSdk.awsSdkStrings.Available_
@@ -1696,7 +1745,7 @@ package object ec2Mod {
   type SnapshotAttributeName = typingsSlinky.awsSdk.ec2Mod._SnapshotAttributeName | java.lang.String
   type SnapshotDetailList = js.Array[typingsSlinky.awsSdk.ec2Mod.SnapshotDetail]
   type SnapshotId = java.lang.String
-  type SnapshotIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type SnapshotIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.SnapshotId]
   type SnapshotList = js.Array[typingsSlinky.awsSdk.ec2Mod.Snapshot]
   type SnapshotSet = js.Array[typingsSlinky.awsSdk.ec2Mod.SnapshotInfo]
   /* Rewritten from type alias, can be one of: 
@@ -1715,6 +1764,7 @@ package object ec2Mod {
   type SpotAllocationStrategy = typingsSlinky.awsSdk.ec2Mod._SpotAllocationStrategy | java.lang.String
   type SpotFleetRequestConfigSet = js.Array[typingsSlinky.awsSdk.ec2Mod.SpotFleetRequestConfig]
   type SpotFleetRequestId = java.lang.String
+  type SpotFleetRequestIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.SpotFleetRequestId]
   type SpotFleetTagSpecificationList = js.Array[typingsSlinky.awsSdk.ec2Mod.SpotFleetTagSpecification]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.hibernate
@@ -1723,7 +1773,8 @@ package object ec2Mod {
     - java.lang.String
   */
   type SpotInstanceInterruptionBehavior = typingsSlinky.awsSdk.ec2Mod._SpotInstanceInterruptionBehavior | java.lang.String
-  type SpotInstanceRequestIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type SpotInstanceRequestId = java.lang.String
+  type SpotInstanceRequestIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.SpotInstanceRequestId]
   type SpotInstanceRequestList = js.Array[typingsSlinky.awsSdk.ec2Mod.SpotInstanceRequest]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.open__
@@ -1785,7 +1836,7 @@ package object ec2Mod {
   */
   type SubnetCidrBlockStateCode = typingsSlinky.awsSdk.ec2Mod._SubnetCidrBlockStateCode | java.lang.String
   type SubnetId = java.lang.String
-  type SubnetIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type SubnetIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.SubnetId]
   type SubnetIpv6CidrBlockAssociationSet = js.Array[typingsSlinky.awsSdk.ec2Mod.SubnetIpv6CidrBlockAssociation]
   type SubnetList = js.Array[typingsSlinky.awsSdk.ec2Mod.Subnet]
   /* Rewritten from type alias, can be one of: 
@@ -1808,6 +1859,7 @@ package object ec2Mod {
   type TagDescriptionList = js.Array[typingsSlinky.awsSdk.ec2Mod.TagDescription]
   type TagList = js.Array[typingsSlinky.awsSdk.ec2Mod.Tag]
   type TagSpecificationList = js.Array[typingsSlinky.awsSdk.ec2Mod.TagSpecification]
+  type TaggableResourceId = java.lang.String
   type TargetConfigurationRequestSet = js.Array[typingsSlinky.awsSdk.ec2Mod.TargetConfigurationRequest]
   type TargetGroups = js.Array[typingsSlinky.awsSdk.ec2Mod.TargetGroup]
   type TargetNetworkSet = js.Array[typingsSlinky.awsSdk.ec2Mod.TargetNetwork]
@@ -1835,6 +1887,7 @@ package object ec2Mod {
   */
   type TrafficDirection = typingsSlinky.awsSdk.ec2Mod._TrafficDirection | java.lang.String
   type TrafficMirrorFilterId = java.lang.String
+  type TrafficMirrorFilterIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.TrafficMirrorFilterId]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`destination-port-range`
     - typingsSlinky.awsSdk.awsSdkStrings.`source-port-range`
@@ -1864,8 +1917,10 @@ package object ec2Mod {
   type TrafficMirrorSessionField = typingsSlinky.awsSdk.ec2Mod._TrafficMirrorSessionField | java.lang.String
   type TrafficMirrorSessionFieldList = js.Array[typingsSlinky.awsSdk.ec2Mod.TrafficMirrorSessionField]
   type TrafficMirrorSessionId = java.lang.String
+  type TrafficMirrorSessionIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.TrafficMirrorSessionId]
   type TrafficMirrorSessionSet = js.Array[typingsSlinky.awsSdk.ec2Mod.TrafficMirrorSession]
   type TrafficMirrorTargetId = java.lang.String
+  type TrafficMirrorTargetIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.TrafficMirrorTargetId]
   type TrafficMirrorTargetSet = js.Array[typingsSlinky.awsSdk.ec2Mod.TrafficMirrorTarget]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`network-interface`
@@ -1881,6 +1936,7 @@ package object ec2Mod {
     - java.lang.String
   */
   type TrafficType = typingsSlinky.awsSdk.ec2Mod._TrafficType | java.lang.String
+  type TransitAssociationGatewayId = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.associating__
     - typingsSlinky.awsSdk.awsSdkStrings.associated__
@@ -1889,7 +1945,8 @@ package object ec2Mod {
     - java.lang.String
   */
   type TransitGatewayAssociationState = typingsSlinky.awsSdk.ec2Mod._TransitGatewayAssociationState | java.lang.String
-  type TransitGatewayAttachmentIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type TransitGatewayAttachmentId = java.lang.String
+  type TransitGatewayAttachmentIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayAttachmentId]
   type TransitGatewayAttachmentList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayAttachment]
   type TransitGatewayAttachmentPropagationList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayAttachmentPropagation]
   /* Rewritten from type alias, can be one of: 
@@ -1917,7 +1974,7 @@ package object ec2Mod {
   */
   type TransitGatewayAttachmentState = typingsSlinky.awsSdk.ec2Mod._TransitGatewayAttachmentState | java.lang.String
   type TransitGatewayId = java.lang.String
-  type TransitGatewayIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type TransitGatewayIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayId]
   type TransitGatewayList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGateway]
   type TransitGatewayMaxResults = scala.Double
   /* Rewritten from type alias, can be one of: 
@@ -1929,7 +1986,8 @@ package object ec2Mod {
   */
   type TransitGatewayMulitcastDomainAssociationState = typingsSlinky.awsSdk.ec2Mod._TransitGatewayMulitcastDomainAssociationState | java.lang.String
   type TransitGatewayMulticastDomainAssociationList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayMulticastDomainAssociation]
-  type TransitGatewayMulticastDomainIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type TransitGatewayMulticastDomainId = java.lang.String
+  type TransitGatewayMulticastDomainIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayMulticastDomainId]
   type TransitGatewayMulticastDomainList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayMulticastDomain]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.pending__
@@ -1940,6 +1998,7 @@ package object ec2Mod {
   */
   type TransitGatewayMulticastDomainState = typingsSlinky.awsSdk.ec2Mod._TransitGatewayMulticastDomainState | java.lang.String
   type TransitGatewayMulticastGroupList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayMulticastGroup]
+  type TransitGatewayNetworkInterfaceIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkInterfaceId]
   type TransitGatewayPeeringAttachmentList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayPeeringAttachment]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.enabling__
@@ -1961,7 +2020,8 @@ package object ec2Mod {
   */
   type TransitGatewayRouteState = typingsSlinky.awsSdk.ec2Mod._TransitGatewayRouteState | java.lang.String
   type TransitGatewayRouteTableAssociationList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayRouteTableAssociation]
-  type TransitGatewayRouteTableIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type TransitGatewayRouteTableId = java.lang.String
+  type TransitGatewayRouteTableIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayRouteTableId]
   type TransitGatewayRouteTableList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayRouteTable]
   type TransitGatewayRouteTablePropagationList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayRouteTablePropagation]
   /* Rewritten from type alias, can be one of: 
@@ -1987,6 +2047,7 @@ package object ec2Mod {
     - java.lang.String
   */
   type TransitGatewayState = typingsSlinky.awsSdk.ec2Mod._TransitGatewayState | java.lang.String
+  type TransitGatewaySubnetIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.SubnetId]
   type TransitGatewayVpcAttachmentList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayVpcAttachment]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.tcp_
@@ -2119,22 +2180,30 @@ package object ec2Mod {
     - java.lang.String
   */
   type VpcCidrBlockStateCode = typingsSlinky.awsSdk.ec2Mod._VpcCidrBlockStateCode | java.lang.String
-  type VpcClassicLinkIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type VpcClassicLinkIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcId]
   type VpcClassicLinkList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcClassicLink]
   type VpcEndpointConnectionSet = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcEndpointConnection]
   type VpcEndpointId = java.lang.String
+  type VpcEndpointIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcEndpointId]
+  type VpcEndpointRouteTableIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.RouteTableId]
+  type VpcEndpointSecurityGroupIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupId]
+  type VpcEndpointServiceId = java.lang.String
+  type VpcEndpointServiceIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcEndpointServiceId]
   type VpcEndpointSet = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcEndpoint]
+  type VpcEndpointSubnetIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.SubnetId]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Interface
     - typingsSlinky.awsSdk.awsSdkStrings.Gateway
     - java.lang.String
   */
   type VpcEndpointType = typingsSlinky.awsSdk.ec2Mod._VpcEndpointType | java.lang.String
+  type VpcFlowLogId = java.lang.String
   type VpcId = java.lang.String
-  type VpcIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type VpcIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcId]
   type VpcIpv6CidrBlockAssociationSet = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcIpv6CidrBlockAssociation]
   type VpcList = js.Array[typingsSlinky.awsSdk.ec2Mod.Vpc]
   type VpcPeeringConnectionId = java.lang.String
+  type VpcPeeringConnectionIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcPeeringConnectionId]
   type VpcPeeringConnectionList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpcPeeringConnection]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`initiating-request`
@@ -2157,7 +2226,7 @@ package object ec2Mod {
   type VpcState = typingsSlinky.awsSdk.ec2Mod._VpcState | java.lang.String
   type VpcTenancy = typingsSlinky.awsSdk.awsSdkStrings.default_ | java.lang.String
   type VpnConnectionId = java.lang.String
-  type VpnConnectionIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type VpnConnectionIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpnConnectionId]
   type VpnConnectionList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpnConnection]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.enable_
@@ -2166,7 +2235,7 @@ package object ec2Mod {
   */
   type VpnEcmpSupportValue = typingsSlinky.awsSdk.ec2Mod._VpnEcmpSupportValue | java.lang.String
   type VpnGatewayId = java.lang.String
-  type VpnGatewayIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
+  type VpnGatewayIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpnGatewayId]
   type VpnGatewayList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpnGateway]
   type VpnProtocol = typingsSlinky.awsSdk.awsSdkStrings.openvpn | java.lang.String
   /* Rewritten from type alias, can be one of: 
@@ -2182,7 +2251,7 @@ package object ec2Mod {
   type VpnTunnelOptionsSpecificationsList = js.Array[typingsSlinky.awsSdk.ec2Mod.VpnTunnelOptionsSpecification]
   type ZoneIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
   type ZoneNameStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.String]
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.ec2Mod.Blob | java.lang.String
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.ec2Mod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2013-06-15`
     - typingsSlinky.awsSdk.awsSdkStrings.`2013-10-15`

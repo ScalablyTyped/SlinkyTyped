@@ -1,6 +1,5 @@
 package typingsSlinky.nodeSchedule.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +12,12 @@ object scheduleJob extends js.Object {
   def apply(name: String, rule: RecurrenceRule, callback: JobCallback): Job = js.native
   def apply(name: String, rule: RecurrenceSpecDateRange, callback: JobCallback): Job = js.native
   def apply(name: String, rule: RecurrenceSpecObjLit, callback: JobCallback): Job = js.native
-  def apply(name: String, rule: Date, callback: JobCallback): Job = js.native
+  def apply(name: String, rule: js.Date, callback: JobCallback): Job = js.native
   def apply(rule: String, callback: JobCallback): Job = js.native
   def apply(rule: Double, callback: JobCallback): Job = js.native
   def apply(rule: RecurrenceRule, callback: JobCallback): Job = js.native
   def apply(rule: RecurrenceSpecDateRange, callback: JobCallback): Job = js.native
   def apply(rule: RecurrenceSpecObjLit, callback: JobCallback): Job = js.native
-  def apply(rule: Date, callback: JobCallback): Job = js.native
+  def apply(rule: js.Date, callback: JobCallback): Job = js.native
 }
 

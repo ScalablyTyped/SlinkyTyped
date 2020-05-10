@@ -2,7 +2,6 @@ package typingsSlinky.dc.mod
 
 import typingsSlinky.d3Selection.mod.BaseType
 import typingsSlinky.d3Selection.mod.Selection_
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +14,12 @@ trait Utils extends js.Object {
   def add(l: Double, r: Double): js.Date | Double = js.native
   def add(l: Double, r: Double, t: String): js.Date | Double = js.native
   def add(l: Double, r: Double, t: js.Function): js.Date | Double = js.native
-  def add(l: Date, r: String): js.Date | Double = js.native
-  def add(l: Date, r: String, t: String): js.Date | Double = js.native
-  def add(l: Date, r: String, t: js.Function): js.Date | Double = js.native
-  def add(l: Date, r: Double): js.Date | Double = js.native
-  def add(l: Date, r: Double, t: String): js.Date | Double = js.native
-  def add(l: Date, r: Double, t: js.Function): js.Date | Double = js.native
+  def add(l: js.Date, r: String): js.Date | Double = js.native
+  def add(l: js.Date, r: String, t: String): js.Date | Double = js.native
+  def add(l: js.Date, r: String, t: js.Function): js.Date | Double = js.native
+  def add(l: js.Date, r: Double): js.Date | Double = js.native
+  def add(l: js.Date, r: Double, t: String): js.Date | Double = js.native
+  def add(l: js.Date, r: Double, t: js.Function): js.Date | Double = js.native
   def appendOrSelect(
     parent: Selection_[
       _, 
@@ -55,12 +54,12 @@ trait Utils extends js.Object {
   def subtract(l: Double, r: Double): js.Date | Double = js.native
   def subtract(l: Double, r: Double, t: String): js.Date | Double = js.native
   def subtract(l: Double, r: Double, t: js.Function): js.Date | Double = js.native
-  def subtract(l: Date, r: String): js.Date | Double = js.native
-  def subtract(l: Date, r: String, t: String): js.Date | Double = js.native
-  def subtract(l: Date, r: String, t: js.Function): js.Date | Double = js.native
-  def subtract(l: Date, r: Double): js.Date | Double = js.native
-  def subtract(l: Date, r: Double, t: String): js.Date | Double = js.native
-  def subtract(l: Date, r: Double, t: js.Function): js.Date | Double = js.native
+  def subtract(l: js.Date, r: String): js.Date | Double = js.native
+  def subtract(l: js.Date, r: String, t: String): js.Date | Double = js.native
+  def subtract(l: js.Date, r: String, t: js.Function): js.Date | Double = js.native
+  def subtract(l: js.Date, r: Double): js.Date | Double = js.native
+  def subtract(l: js.Date, r: Double, t: String): js.Date | Double = js.native
+  def subtract(l: js.Date, r: Double, t: js.Function): js.Date | Double = js.native
   def uniqueId(): Double = js.native
 }
 

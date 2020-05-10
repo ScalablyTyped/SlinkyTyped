@@ -1,0 +1,44 @@
+package typingsSlinky.awsSdkClientS3Browser.typesJsoninputMod
+
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.DOCUMENT
+import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.LINES
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait JSONInput extends js.Object {
+  /**
+    * <p>The type of JSON. Valid values: Document, Lines.</p>
+    */
+  var Type: js.UndefOr[DOCUMENT | LINES | String] = js.native
+}
+
+object JSONInput {
+  @scala.inline
+  def apply(): JSONInput = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[JSONInput]
+  }
+  @scala.inline
+  implicit class JSONInputOps[Self <: JSONInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: DOCUMENT | LINES | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

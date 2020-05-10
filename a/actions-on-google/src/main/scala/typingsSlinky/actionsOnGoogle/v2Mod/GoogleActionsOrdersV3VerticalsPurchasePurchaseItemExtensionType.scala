@@ -14,14 +14,12 @@ trait GoogleActionsOrdersV3VerticalsPurchasePurchaseItemExtensionType extends js
 
 object GoogleActionsOrdersV3VerticalsPurchasePurchaseItemExtensionType {
   @scala.inline
-  def FOOD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FOOD = this.cast("FOOD")
+  def FOOD: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FOOD = "FOOD".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FOOD]
   @scala.inline
-  def GROCERY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GROCERY = this.cast("GROCERY")
+  def GROCERY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GROCERY = "GROCERY".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.GROCERY]
   @scala.inline
-  def PURCHASE_TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_TYPE_UNSPECIFIED = this.cast("PURCHASE_TYPE_UNSPECIFIED")
+  def PURCHASE_TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_TYPE_UNSPECIFIED = "PURCHASE_TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PURCHASE_TYPE_UNSPECIFIED]
   @scala.inline
-  def RETAIL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RETAIL = this.cast("RETAIL")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def RETAIL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RETAIL = "RETAIL".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RETAIL]
 }
 

@@ -13,12 +13,10 @@ trait GoogleActionsTransactionsV3SkuIdSkuType extends js.Object
 
 object GoogleActionsTransactionsV3SkuIdSkuType {
   @scala.inline
-  def SKU_TYPE_IN_APP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKU_TYPE_IN_APP = this.cast("SKU_TYPE_IN_APP")
+  def SKU_TYPE_IN_APP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKU_TYPE_IN_APP = "SKU_TYPE_IN_APP".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKU_TYPE_IN_APP]
   @scala.inline
-  def SKU_TYPE_SUBSCRIPTION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKU_TYPE_SUBSCRIPTION = this.cast("SKU_TYPE_SUBSCRIPTION")
+  def SKU_TYPE_SUBSCRIPTION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKU_TYPE_SUBSCRIPTION = "SKU_TYPE_SUBSCRIPTION".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKU_TYPE_SUBSCRIPTION]
   @scala.inline
-  def SKU_TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKU_TYPE_UNSPECIFIED = this.cast("SKU_TYPE_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SKU_TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKU_TYPE_UNSPECIFIED = "SKU_TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SKU_TYPE_UNSPECIFIED]
 }
 

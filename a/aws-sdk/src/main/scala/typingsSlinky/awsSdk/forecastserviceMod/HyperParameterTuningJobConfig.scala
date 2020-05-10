@@ -14,10 +14,29 @@ trait HyperParameterTuningJobConfig extends js.Object {
 
 object HyperParameterTuningJobConfig {
   @scala.inline
-  def apply(ParameterRanges: ParameterRanges = null): HyperParameterTuningJobConfig = {
+  def apply(): HyperParameterTuningJobConfig = {
     val __obj = js.Dynamic.literal()
-    if (ParameterRanges != null) __obj.updateDynamic("ParameterRanges")(ParameterRanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[HyperParameterTuningJobConfig]
   }
+  @scala.inline
+  implicit class HyperParameterTuningJobConfigOps[Self <: HyperParameterTuningJobConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParameterRanges(value: ParameterRanges): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterRanges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LCDGeneralOption extends js.Object {
-  var cols: js.UndefOr[Double] = js.undefined
-  var rows: js.UndefOr[Double] = js.undefined
+  var cols: js.UndefOr[Double] = js.native
+  var rows: js.UndefOr[Double] = js.native
 }
 
 object LCDGeneralOption {
   @scala.inline
-  def apply(cols: Int | Double = null, rows: Int | Double = null): LCDGeneralOption = {
+  def apply(): LCDGeneralOption = {
     val __obj = js.Dynamic.literal()
-    if (cols != null) __obj.updateDynamic("cols")(cols.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[LCDGeneralOption]
   }
+  @scala.inline
+  implicit class LCDGeneralOptionOps[Self <: LCDGeneralOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCols(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCols: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

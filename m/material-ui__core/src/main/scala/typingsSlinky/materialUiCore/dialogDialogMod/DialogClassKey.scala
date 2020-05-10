@@ -24,34 +24,32 @@ trait DialogClassKey extends js.Object
 
 object DialogClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def container: typingsSlinky.materialUiCore.materialUiCoreStrings.container = "container".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.container]
   @scala.inline
-  def container: typingsSlinky.materialUiCore.materialUiCoreStrings.container = this.cast("container")
+  def paper: typingsSlinky.materialUiCore.materialUiCoreStrings.paper = "paper".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paper]
   @scala.inline
-  def paper: typingsSlinky.materialUiCore.materialUiCoreStrings.paper = this.cast("paper")
+  def paperFullScreen: typingsSlinky.materialUiCore.materialUiCoreStrings.paperFullScreen = "paperFullScreen".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperFullScreen]
   @scala.inline
-  def paperFullScreen: typingsSlinky.materialUiCore.materialUiCoreStrings.paperFullScreen = this.cast("paperFullScreen")
+  def paperFullWidth: typingsSlinky.materialUiCore.materialUiCoreStrings.paperFullWidth = "paperFullWidth".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperFullWidth]
   @scala.inline
-  def paperFullWidth: typingsSlinky.materialUiCore.materialUiCoreStrings.paperFullWidth = this.cast("paperFullWidth")
+  def paperScrollBody: typingsSlinky.materialUiCore.materialUiCoreStrings.paperScrollBody = "paperScrollBody".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperScrollBody]
   @scala.inline
-  def paperScrollBody: typingsSlinky.materialUiCore.materialUiCoreStrings.paperScrollBody = this.cast("paperScrollBody")
+  def paperScrollPaper: typingsSlinky.materialUiCore.materialUiCoreStrings.paperScrollPaper = "paperScrollPaper".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperScrollPaper]
   @scala.inline
-  def paperScrollPaper: typingsSlinky.materialUiCore.materialUiCoreStrings.paperScrollPaper = this.cast("paperScrollPaper")
+  def paperWidthLg: typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthLg = "paperWidthLg".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthLg]
   @scala.inline
-  def paperWidthLg: typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthLg = this.cast("paperWidthLg")
+  def paperWidthMd: typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthMd = "paperWidthMd".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthMd]
   @scala.inline
-  def paperWidthMd: typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthMd = this.cast("paperWidthMd")
+  def paperWidthSm: typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthSm = "paperWidthSm".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthSm]
   @scala.inline
-  def paperWidthSm: typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthSm = this.cast("paperWidthSm")
+  def paperWidthXl: typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthXl = "paperWidthXl".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthXl]
   @scala.inline
-  def paperWidthXl: typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthXl = this.cast("paperWidthXl")
+  def paperWidthXs: typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthXs = "paperWidthXs".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthXs]
   @scala.inline
-  def paperWidthXs: typingsSlinky.materialUiCore.materialUiCoreStrings.paperWidthXs = this.cast("paperWidthXs")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def scrollBody: typingsSlinky.materialUiCore.materialUiCoreStrings.scrollBody = "scrollBody".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.scrollBody]
   @scala.inline
-  def scrollBody: typingsSlinky.materialUiCore.materialUiCoreStrings.scrollBody = this.cast("scrollBody")
-  @scala.inline
-  def scrollPaper: typingsSlinky.materialUiCore.materialUiCoreStrings.scrollPaper = this.cast("scrollPaper")
+  def scrollPaper: typingsSlinky.materialUiCore.materialUiCoreStrings.scrollPaper = "scrollPaper".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.scrollPaper]
 }
 

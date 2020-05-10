@@ -22,7 +22,7 @@ object ServiceWorkerMessageEvent
   extends Instantiable1[/* type */ java.lang.String, ServiceWorkerMessageEvent]
      with Instantiable2[
       /* type */ java.lang.String, 
-      /* eventInitDict */ ServiceWorkerMessageEventInit, 
+      /* eventInitDict */ org.scalajs.dom.experimental.serviceworkers.ServiceWorkerMessageEventInit, 
       ServiceWorkerMessageEvent
     ]
 

@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SegmentDrawActionProperties extends DrawActionProperties {
   /**
     * The drawing mode. It is only relevant when the action is first created. Its value cannot be changed during the action lifecycle.  **Possible Values:**
@@ -20,16 +21,34 @@ trait SegmentDrawActionProperties extends DrawActionProperties {
     *
     * @default freehand
     */
-  var mode: js.UndefOr[freehand | click] = js.undefined
+  var mode: js.UndefOr[freehand | click] = js.native
 }
 
 object SegmentDrawActionProperties {
   @scala.inline
-  def apply(mode: freehand | click = null, view: MapViewProperties = null): SegmentDrawActionProperties = {
+  def apply(): SegmentDrawActionProperties = {
     val __obj = js.Dynamic.literal()
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[SegmentDrawActionProperties]
   }
+  @scala.inline
+  implicit class SegmentDrawActionPropertiesOps[Self <: SegmentDrawActionProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMode(value: freehand | click): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

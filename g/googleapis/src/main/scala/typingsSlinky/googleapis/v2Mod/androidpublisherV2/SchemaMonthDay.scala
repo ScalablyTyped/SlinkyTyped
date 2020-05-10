@@ -19,11 +19,41 @@ trait SchemaMonthDay extends js.Object {
 
 object SchemaMonthDay {
   @scala.inline
-  def apply(day: Int | Double = null, month: Int | Double = null): SchemaMonthDay = {
+  def apply(): SchemaMonthDay = {
     val __obj = js.Dynamic.literal()
-    if (day != null) __obj.updateDynamic("day")(day.asInstanceOf[js.Any])
-    if (month != null) __obj.updateDynamic("month")(month.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMonthDay]
   }
+  @scala.inline
+  implicit class SchemaMonthDayOps[Self <: SchemaMonthDay] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

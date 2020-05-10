@@ -18,11 +18,41 @@ trait UpdateComputeEnvironmentResponse extends js.Object {
 
 object UpdateComputeEnvironmentResponse {
   @scala.inline
-  def apply(computeEnvironmentArn: String = null, computeEnvironmentName: String = null): UpdateComputeEnvironmentResponse = {
+  def apply(): UpdateComputeEnvironmentResponse = {
     val __obj = js.Dynamic.literal()
-    if (computeEnvironmentArn != null) __obj.updateDynamic("computeEnvironmentArn")(computeEnvironmentArn.asInstanceOf[js.Any])
-    if (computeEnvironmentName != null) __obj.updateDynamic("computeEnvironmentName")(computeEnvironmentName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateComputeEnvironmentResponse]
   }
+  @scala.inline
+  implicit class UpdateComputeEnvironmentResponseOps[Self <: UpdateComputeEnvironmentResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComputeEnvironmentArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeEnvironmentArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComputeEnvironmentName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeEnvironmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

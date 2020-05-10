@@ -1,11 +1,8 @@
 package typingsSlinky.fixedDataTable2.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.fixedDataTable2.fixedDataTable2Strings.center
 import typingsSlinky.fixedDataTable2.fixedDataTable2Strings.left
 import typingsSlinky.fixedDataTable2.fixedDataTable2Strings.right
@@ -15,27 +12,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ColumnGroup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.fixedDataTable2.mod.ColumnGroup] {
+object ColumnGroup {
   @JSImport("fixed-data-table-2", "ColumnGroup")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    align: left | center | right = null,
-    fixed: js.UndefOr[Boolean] = js.undefined,
-    header: String | ReactElement | (js.Function1[/* props */ ColumnGroupHeaderProps, String | ReactElement]) = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.fixedDataTable2.mod.ColumnGroup] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixed)) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.fixedDataTable2.mod.ColumnGroup] {
+    @scala.inline
+    def align(value: left | center | right): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixed(value: Boolean): this.type = set("fixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerFunction1(value: /* props */ ColumnGroupHeaderProps => String | ReactElement): this.type = set("header", js.Any.fromFunction1(value))
+    @scala.inline
+    def header(
+      value: String | ReactElement | (js.Function1[/* props */ ColumnGroupHeaderProps, String | ReactElement])
+    ): this.type = set("header", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.fixedDataTable2.mod.ColumnGroup] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.fixedDataTable2.mod.ColumnGroup](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ColumnGroupProps
+  
+  def withProps(p: ColumnGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ColumnGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

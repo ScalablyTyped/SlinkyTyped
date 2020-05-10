@@ -16,18 +16,16 @@ trait GoogleActionsV2OrdersOrderLocationType extends js.Object
 
 object GoogleActionsV2OrdersOrderLocationType {
   @scala.inline
-  def BUSINESS: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.BUSINESS = this.cast("BUSINESS")
+  def BUSINESS: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.BUSINESS = "BUSINESS".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.BUSINESS]
   @scala.inline
-  def DELIVERY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY = this.cast("DELIVERY")
+  def DELIVERY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY = "DELIVERY".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY]
   @scala.inline
-  def DESTINATION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DESTINATION = this.cast("DESTINATION")
+  def DESTINATION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DESTINATION = "DESTINATION".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DESTINATION]
   @scala.inline
-  def ORIGIN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORIGIN = this.cast("ORIGIN")
+  def ORIGIN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORIGIN = "ORIGIN".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORIGIN]
   @scala.inline
-  def PICK_UP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PICK_UP = this.cast("PICK_UP")
+  def PICK_UP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PICK_UP = "PICK_UP".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PICK_UP]
   @scala.inline
-  def UNKNOWN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN = this.cast("UNKNOWN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNKNOWN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN = "UNKNOWN".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNKNOWN]
 }
 

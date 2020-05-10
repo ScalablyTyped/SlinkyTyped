@@ -17,10 +17,29 @@ trait SchemaSecurityConfig extends js.Object {
 
 object SchemaSecurityConfig {
   @scala.inline
-  def apply(kerberosConfig: SchemaKerberosConfig = null): SchemaSecurityConfig = {
+  def apply(): SchemaSecurityConfig = {
     val __obj = js.Dynamic.literal()
-    if (kerberosConfig != null) __obj.updateDynamic("kerberosConfig")(kerberosConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecurityConfig]
   }
+  @scala.inline
+  implicit class SchemaSecurityConfigOps[Self <: SchemaSecurityConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKerberosConfig(value: SchemaKerberosConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kerberosConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKerberosConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kerberosConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

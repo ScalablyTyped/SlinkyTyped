@@ -11,10 +11,6 @@ object functionsMod extends js.Object {
   @js.native
   class UnreachableCaseError protected () extends Error {
     def this(value: scala.Nothing) = this()
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
   }
   
   def literal(): Null = js.native

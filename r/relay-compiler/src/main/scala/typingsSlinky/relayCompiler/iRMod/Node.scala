@@ -1,6 +1,5 @@
 package typingsSlinky.relayCompiler.iRMod
 
-import typingsSlinky.relayCompiler.AnonFragmentTypeCondition
 import typingsSlinky.relayCompiler.relayCompilerStrings.mutation
 import typingsSlinky.relayCompiler.relayCompilerStrings.query
 import typingsSlinky.relayCompiler.relayCompilerStrings.subscription
@@ -36,12 +35,10 @@ object Node {
     loc: Location,
     name: String,
     selections: js.Array[Selection],
-    `type`: CompositeTypeID,
-    metadata: Metadata = null
+    `type`: CompositeTypeID
   ): Node = {
     val __obj = js.Dynamic.literal(argumentDefinitions = argumentDefinitions.asInstanceOf[js.Any], directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
   @scala.inline
@@ -50,11 +47,9 @@ object Node {
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.InlineFragment,
     loc: Location,
     selections: js.Array[Selection],
-    typeCondition: CompositeTypeID,
-    metadata: Metadata = null
+    typeCondition: CompositeTypeID
   ): Node = {
     val __obj = js.Dynamic.literal(directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any], typeCondition = typeCondition.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
   @scala.inline
@@ -62,11 +57,9 @@ object Node {
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.InlineDataFragmentSpread,
     loc: Location,
     name: String,
-    selections: js.Array[Selection],
-    metadata: Metadata = null
+    selections: js.Array[Selection]
   ): Node = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
   @scala.inline
@@ -76,23 +69,19 @@ object Node {
     name: String,
     parentSources: Set[String],
     selections: js.Array[Selection],
-    `type`: TypeID,
-    metadata: Metadata = null
+    `type`: TypeID
   ): Node = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parentSources = parentSources.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
   @scala.inline
   def ClientExtension(
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.ClientExtension,
     loc: Location,
-    selections: js.Array[Selection],
-    metadata: Metadata = null
+    selections: js.Array[Selection]
   ): Node = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
   @scala.inline
@@ -106,7 +95,6 @@ object Node {
     selections: js.Array[Selection]
   ): Node = {
     val __obj = js.Dynamic.literal(documentName = documentName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], module = module.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Node]
   }
   @scala.inline
@@ -114,13 +102,9 @@ object Node {
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.Defer,
     label: String,
     loc: Location,
-    selections: js.Array[Selection],
-    `if`: ArgumentValue = null,
-    metadata: AnonFragmentTypeCondition = null
+    selections: js.Array[Selection]
   ): Node = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    if (`if` != null) __obj.updateDynamic("if")(`if`.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
   @scala.inline
@@ -132,12 +116,10 @@ object Node {
     name: String,
     operation: query | mutation | subscription,
     selections: Selection,
-    `type`: CompositeTypeID,
-    metadata: Metadata = null
+    `type`: CompositeTypeID
   ): Node = {
     val __obj = js.Dynamic.literal(argumentDefinitions = argumentDefinitions.asInstanceOf[js.Any], directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
   @scala.inline
@@ -146,15 +128,9 @@ object Node {
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.Stream,
     label: String,
     loc: Location,
-    selections: js.Array[Selection],
-    `if`: ArgumentValue = null,
-    metadata: Metadata = null,
-    useCustomizedBatch: ArgumentValue = null
+    selections: js.Array[Selection]
   ): Node = {
     val __obj = js.Dynamic.literal(initialCount = initialCount.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    if (`if` != null) __obj.updateDynamic("if")(`if`.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (useCustomizedBatch != null) __obj.updateDynamic("useCustomizedBatch")(useCustomizedBatch.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
   @scala.inline
@@ -167,14 +143,10 @@ object Node {
     loc: Location,
     name: String,
     selections: js.Array[Selection],
-    `type`: LinkedFieldTypeID,
-    handles: js.Array[Handle] = null,
-    metadata: Metadata = null
+    `type`: LinkedFieldTypeID
   ): Node = {
     val __obj = js.Dynamic.literal(alias = alias.asInstanceOf[js.Any], args = args.asInstanceOf[js.Any], connection = connection.asInstanceOf[js.Any], directives = directives.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (handles != null) __obj.updateDynamic("handles")(handles.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
   @scala.inline
@@ -183,11 +155,9 @@ object Node {
     kind: typingsSlinky.relayCompiler.relayCompilerStrings.Condition,
     loc: Location,
     passingValue: Boolean,
-    selections: js.Array[Selection],
-    metadata: Metadata = null
+    selections: js.Array[Selection]
   ): Node = {
     val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], passingValue = passingValue.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
 }

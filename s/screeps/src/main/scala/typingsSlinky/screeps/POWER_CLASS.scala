@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait POWER_CLASS extends js.Object {
-  var OPERATOR: operator
+  var OPERATOR: operator = js.native
 }
 
 @JSGlobal("POWER_CLASS")

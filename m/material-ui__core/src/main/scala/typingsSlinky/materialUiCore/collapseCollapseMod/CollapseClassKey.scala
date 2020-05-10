@@ -14,14 +14,12 @@ trait CollapseClassKey extends js.Object
 
 object CollapseClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def container: typingsSlinky.materialUiCore.materialUiCoreStrings.container = "container".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.container]
   @scala.inline
-  def container: typingsSlinky.materialUiCore.materialUiCoreStrings.container = this.cast("container")
+  def entered: typingsSlinky.materialUiCore.materialUiCoreStrings.entered = "entered".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.entered]
   @scala.inline
-  def entered: typingsSlinky.materialUiCore.materialUiCoreStrings.entered = this.cast("entered")
+  def wrapper: typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper = "wrapper".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper]
   @scala.inline
-  def wrapper: typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper = this.cast("wrapper")
-  @scala.inline
-  def wrapperInner: typingsSlinky.materialUiCore.materialUiCoreStrings.wrapperInner = this.cast("wrapperInner")
+  def wrapperInner: typingsSlinky.materialUiCore.materialUiCoreStrings.wrapperInner = "wrapperInner".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.wrapperInner]
 }
 

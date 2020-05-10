@@ -38,24 +38,101 @@ trait Activity extends js.Object {
 
 object Activity {
   @scala.inline
-  def apply(
-    ConditionalSplit: ConditionalSplitActivity = null,
-    Description: string = null,
-    EMAIL: EmailMessageActivity = null,
-    Holdout: HoldoutActivity = null,
-    MultiCondition: MultiConditionalSplitActivity = null,
-    RandomSplit: RandomSplitActivity = null,
-    Wait: WaitActivity = null
-  ): Activity = {
+  def apply(): Activity = {
     val __obj = js.Dynamic.literal()
-    if (ConditionalSplit != null) __obj.updateDynamic("ConditionalSplit")(ConditionalSplit.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (EMAIL != null) __obj.updateDynamic("EMAIL")(EMAIL.asInstanceOf[js.Any])
-    if (Holdout != null) __obj.updateDynamic("Holdout")(Holdout.asInstanceOf[js.Any])
-    if (MultiCondition != null) __obj.updateDynamic("MultiCondition")(MultiCondition.asInstanceOf[js.Any])
-    if (RandomSplit != null) __obj.updateDynamic("RandomSplit")(RandomSplit.asInstanceOf[js.Any])
-    if (Wait != null) __obj.updateDynamic("Wait")(Wait.asInstanceOf[js.Any])
     __obj.asInstanceOf[Activity]
   }
+  @scala.inline
+  implicit class ActivityOps[Self <: Activity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConditionalSplit(value: ConditionalSplitActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionalSplit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditionalSplit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionalSplit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEMAIL(value: EmailMessageActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EMAIL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEMAIL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EMAIL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoldout(value: HoldoutActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Holdout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoldout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Holdout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiCondition(value: MultiConditionalSplitActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiCondition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRandomSplit(value: RandomSplitActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RandomSplit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRandomSplit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RandomSplit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWait(value: WaitActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Wait")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWait: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Wait")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,7 +6,6 @@ import typingsSlinky.baseui.AnonDate
 import typingsSlinky.baseui.AnonDateDate
 import typingsSlinky.baseui.AnonEventEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +19,8 @@ class Calendar ()
   def changeYear(hasDate: AnonDateDate): Unit = js.native
   def focusCalendar(): Unit = js.native
   def getDateInView(): js.Date = js.native
-  def getSingleDate(value: js.Array[Date]): js.Date | Null = js.native
-  def getSingleDate(value: Date): js.Date | Null = js.native
+  def getSingleDate(value: js.Array[js.Date]): js.Date | Null = js.native
+  def getSingleDate(value: js.Date): js.Date | Null = js.native
   def handleArrowKey(key: String): Unit = js.native
   def handleDateChange(data: AnonDate): Unit = js.native
   def handleMonthChange(date: js.Date): Unit = js.native

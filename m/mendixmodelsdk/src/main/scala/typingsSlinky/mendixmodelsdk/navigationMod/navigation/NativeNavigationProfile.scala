@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 7.22.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable because Already inherited
@@ -39,18 +39,18 @@ class NativeNavigationProfile protected () extends NavigationProfileBase {
     *
     * In version 8.0.0: introduced
     */
-  def bottomBarItems(): IList[BottomBarItem] = js.native
+  def bottomBarItems: IList[BottomBarItem] = js.native
   @JSName("containerAsNavigationDocument")
-  def containerAsNavigationDocument_MNativeNavigationProfile(): NavigationDocument = js.native
+  def containerAsNavigationDocument_MNativeNavigationProfile: NavigationDocument = js.native
   def homePage(): js.Any = js.native
   def homePage(newValue: IPage): js.Any = js.native
-  def homePageQualifiedName(): String | Null = js.native
+  def homePageQualifiedName: String | Null = js.native
   @JSName("homePage")
-  def homePage_Union(): IPage | Null = js.native
+  def homePage_Union: IPage | Null = js.native
   /**
     * In version 8.0.0: introduced
     */
-  def roleBasedNativeHomePages(): IList[RoleBasedNativeHomePage] = js.native
+  def roleBasedNativeHomePages: IList[RoleBasedNativeHomePage] = js.native
 }
 
 /* static members */

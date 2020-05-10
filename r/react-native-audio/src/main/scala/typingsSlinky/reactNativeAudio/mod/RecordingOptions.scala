@@ -7,45 +7,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RecordingOptions extends js.Object {
-  var AudioEncoding: js.UndefOr[AudioEncodingType] = js.undefined
-  var AudioEncodingBitRate: js.UndefOr[Double] = js.undefined
-  var AudioQuality: js.UndefOr[Low | Medium | High] = js.undefined
-  var AudioSource: js.UndefOr[Double] = js.undefined
-  var Channels: js.UndefOr[Double] = js.undefined
-  var IncludeBase64: js.UndefOr[Boolean] = js.undefined
-  var MeasurementMode: js.UndefOr[Boolean] = js.undefined
-  var MeteringEnabled: js.UndefOr[Boolean] = js.undefined
-  var OutputFormat: js.UndefOr[String] = js.undefined
-  var SampleRate: js.UndefOr[Double] = js.undefined
+  var AudioEncoding: js.UndefOr[AudioEncodingType] = js.native
+  var AudioEncodingBitRate: js.UndefOr[Double] = js.native
+  var AudioQuality: js.UndefOr[Low | Medium | High] = js.native
+  var AudioSource: js.UndefOr[Double] = js.native
+  var Channels: js.UndefOr[Double] = js.native
+  var IncludeBase64: js.UndefOr[Boolean] = js.native
+  var MeasurementMode: js.UndefOr[Boolean] = js.native
+  var MeteringEnabled: js.UndefOr[Boolean] = js.native
+  var OutputFormat: js.UndefOr[String] = js.native
+  var SampleRate: js.UndefOr[Double] = js.native
 }
 
 object RecordingOptions {
   @scala.inline
-  def apply(
-    AudioEncoding: AudioEncodingType = null,
-    AudioEncodingBitRate: Int | Double = null,
-    AudioQuality: Low | Medium | High = null,
-    AudioSource: Int | Double = null,
-    Channels: Int | Double = null,
-    IncludeBase64: js.UndefOr[Boolean] = js.undefined,
-    MeasurementMode: js.UndefOr[Boolean] = js.undefined,
-    MeteringEnabled: js.UndefOr[Boolean] = js.undefined,
-    OutputFormat: String = null,
-    SampleRate: Int | Double = null
-  ): RecordingOptions = {
+  def apply(): RecordingOptions = {
     val __obj = js.Dynamic.literal()
-    if (AudioEncoding != null) __obj.updateDynamic("AudioEncoding")(AudioEncoding.asInstanceOf[js.Any])
-    if (AudioEncodingBitRate != null) __obj.updateDynamic("AudioEncodingBitRate")(AudioEncodingBitRate.asInstanceOf[js.Any])
-    if (AudioQuality != null) __obj.updateDynamic("AudioQuality")(AudioQuality.asInstanceOf[js.Any])
-    if (AudioSource != null) __obj.updateDynamic("AudioSource")(AudioSource.asInstanceOf[js.Any])
-    if (Channels != null) __obj.updateDynamic("Channels")(Channels.asInstanceOf[js.Any])
-    if (!js.isUndefined(IncludeBase64)) __obj.updateDynamic("IncludeBase64")(IncludeBase64.asInstanceOf[js.Any])
-    if (!js.isUndefined(MeasurementMode)) __obj.updateDynamic("MeasurementMode")(MeasurementMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(MeteringEnabled)) __obj.updateDynamic("MeteringEnabled")(MeteringEnabled.asInstanceOf[js.Any])
-    if (OutputFormat != null) __obj.updateDynamic("OutputFormat")(OutputFormat.asInstanceOf[js.Any])
-    if (SampleRate != null) __obj.updateDynamic("SampleRate")(SampleRate.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordingOptions]
   }
+  @scala.inline
+  implicit class RecordingOptionsOps[Self <: RecordingOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudioEncoding(value: AudioEncodingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioEncoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioEncoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudioEncodingBitRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioEncodingBitRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioEncodingBitRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioEncodingBitRate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudioQuality(value: Low | Medium | High): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioQuality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioQuality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioQuality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudioSource(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannels(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Channels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Channels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeBase64(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeBase64")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeBase64: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeBase64")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeasurementMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MeasurementMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeasurementMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MeasurementMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeteringEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MeteringEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeteringEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MeteringEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

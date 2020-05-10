@@ -7,125 +7,242 @@ import scala.scalajs.js.annotation._
 /**
   * An person that is related to a patient, but who is not a direct target of care
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait RelatedPerson extends DomainResource {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
+trait RelatedPerson extends DomainResource {
   /**
     * Contains extended information for property 'active'.
     */
-  var _active: js.UndefOr[Element] = js.undefined
+  var _active: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'birthDate'.
     */
-  var _birthDate: js.UndefOr[Element] = js.undefined
+  var _birthDate: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'gender'.
     */
-  var _gender: js.UndefOr[Element] = js.undefined
+  var _gender: js.UndefOr[Element] = js.native
   /**
     * Whether this related person's record is in active use
     */
-  var active: js.UndefOr[Boolean] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
   /**
     * Address where the related person can be contacted or visited
     */
-  var address: js.UndefOr[js.Array[Address]] = js.undefined
+  var address: js.UndefOr[js.Array[Address]] = js.native
   /**
     * The date on which the related person was born
     */
-  var birthDate: js.UndefOr[date] = js.undefined
+  var birthDate: js.UndefOr[date] = js.native
   /**
     * male | female | other | unknown
     */
-  var gender: js.UndefOr[code] = js.undefined
+  var gender: js.UndefOr[code] = js.native
   /**
     * A human identifier for this person
     */
-  var identifier: js.UndefOr[js.Array[Identifier]] = js.undefined
+  var identifier: js.UndefOr[js.Array[Identifier]] = js.native
   /**
     * A name associated with the person
     */
-  var name: js.UndefOr[js.Array[HumanName]] = js.undefined
+  var name: js.UndefOr[js.Array[HumanName]] = js.native
   /**
     * The patient this person is related to
     */
-  var patient: Reference
+  var patient: Reference = js.native
   /**
     * Period of time that this relationship is considered valid
     */
-  var period: js.UndefOr[Period] = js.undefined
+  var period: js.UndefOr[Period] = js.native
   /**
     * Image of the person
     */
-  var photo: js.UndefOr[js.Array[Attachment]] = js.undefined
+  var photo: js.UndefOr[js.Array[Attachment]] = js.native
   /**
     * The nature of the relationship
     */
-  var relationship: js.UndefOr[CodeableConcept] = js.undefined
+  var relationship: js.UndefOr[CodeableConcept] = js.native
   /**
     * A contact detail for the person
     */
-  var telecom: js.UndefOr[js.Array[ContactPoint]] = js.undefined
+  var telecom: js.UndefOr[js.Array[ContactPoint]] = js.native
 }
 
 object RelatedPerson {
   @scala.inline
-  def apply(
-    patient: Reference,
-    _active: Element = null,
-    _birthDate: Element = null,
-    _gender: Element = null,
-    _id: Element = null,
-    _implicitRules: Element = null,
-    _language: Element = null,
-    _resourceType: Element = null,
-    active: js.UndefOr[Boolean] = js.undefined,
-    address: js.Array[Address] = null,
-    birthDate: date = null,
-    contained: js.Array[Resource] = null,
-    extension: js.Array[Extension] = null,
-    gender: code = null,
-    id: id = null,
-    identifier: js.Array[Identifier] = null,
-    implicitRules: uri = null,
-    language: code = null,
-    meta: Meta = null,
-    modifierExtension: js.Array[Extension] = null,
-    name: js.Array[HumanName] = null,
-    period: Period = null,
-    photo: js.Array[Attachment] = null,
-    relationship: CodeableConcept = null,
-    resourceType: code = null,
-    telecom: js.Array[ContactPoint] = null,
-    text: Narrative = null
-  ): RelatedPerson = {
+  def apply(patient: Reference): RelatedPerson = {
     val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any])
-    if (_active != null) __obj.updateDynamic("_active")(_active.asInstanceOf[js.Any])
-    if (_birthDate != null) __obj.updateDynamic("_birthDate")(_birthDate.asInstanceOf[js.Any])
-    if (_gender != null) __obj.updateDynamic("_gender")(_gender.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
-    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
-    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (birthDate != null) __obj.updateDynamic("birthDate")(birthDate.asInstanceOf[js.Any])
-    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (gender != null) __obj.updateDynamic("gender")(gender.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
-    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (period != null) __obj.updateDynamic("period")(period.asInstanceOf[js.Any])
-    if (photo != null) __obj.updateDynamic("photo")(photo.asInstanceOf[js.Any])
-    if (relationship != null) __obj.updateDynamic("relationship")(relationship.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
-    if (telecom != null) __obj.updateDynamic("telecom")(telecom.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[RelatedPerson]
   }
+  @scala.inline
+  implicit class RelatedPersonOps[Self <: RelatedPerson] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPatient(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_active(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_active: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_birthDate(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_birthDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_birthDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_birthDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_gender(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_gender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_gender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_gender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddress(value: js.Array[Address]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBirthDate(value: date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("birthDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBirthDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("birthDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGender(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: js.Array[Identifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: js.Array[HumanName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhoto(value: js.Array[Attachment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhoto: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelationship(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationship")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelationship: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationship")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTelecom(value: js.Array[ContactPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telecom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTelecom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telecom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.horizontal
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.vertical
 import typingsSlinky.antDesignReactNative.stepsMod.StepsProps
@@ -15,31 +12,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Steps
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Steps {
   @JSImport("@ant-design/react-native/lib/steps", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    current: Int | Double = null,
-    direction: vertical | horizontal = null,
-    finishIcon: String = null,
-    size: String = null,
-    styles: Partial[StepsStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (current != null) __obj.updateDynamic("current")(current.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (finishIcon != null) __obj.updateDynamic("finishIcon")(finishIcon.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def current(value: Double): this.type = set("current", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: vertical | horizontal): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def finishIcon(value: String): this.type = set("finishIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: String): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styles(value: Partial[StepsStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antDesignReactNative.stepsMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StepsProps
+  
+  def withProps(p: StepsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Steps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

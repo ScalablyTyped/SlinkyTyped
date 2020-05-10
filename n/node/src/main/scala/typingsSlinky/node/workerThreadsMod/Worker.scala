@@ -7,6 +7,7 @@ import typingsSlinky.node.nodeStrings.message
 import typingsSlinky.node.nodeStrings.online
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
+import typingsSlinky.node.urlMod.URL_
 import typingsSlinky.node.vmMod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,8 +16,15 @@ import scala.scalajs.js.annotation._
 @JSImport("worker_threads", "Worker")
 @js.native
 class Worker protected () extends EventEmitter {
+  /**
+    * @param filename  The path to the Worker’s main script or module.
+    *                  Must be either an absolute path or a relative path (i.e. relative to the current working directory) starting with ./ or ../,
+    *                  or a WHATWG URL object using file: protocol. If options.eval is true, this is a string containing JavaScript code rather than a path.
+    */
   def this(filename: String) = this()
+  def this(filename: URL_) = this()
   def this(filename: String, options: WorkerOptions) = this()
+  def this(filename: URL_, options: WorkerOptions) = this()
   val resourceLimits: js.UndefOr[ResourceLimits] = js.native
   val stderr: Readable = js.native
   val stdin: Writable | Null = js.native
@@ -38,6 +46,15 @@ class Worker protected () extends EventEmitter {
   def emit_message(event: message, value: js.Any): Boolean = js.native
   @JSName("emit")
   def emit_online(event: online): Boolean = js.native
+  /**
+    * Returns a readable stream for a V8 snapshot of the current state of the Worker.
+    * See [`v8.getHeapSnapshot()`][] for more details.
+    *
+    * If the Worker thread is no longer running, which may occur before the
+    * [`'exit'` event][] is emitted, the returned `Promise` will be rejected
+    * immediately with an [`ERR_WORKER_NOT_RUNNING`][] error
+    */
+  def getHeapSnapshot(): js.Promise[Readable] = js.native
   /**
     * Transfer a `MessagePort` to a different `vm` Context. The original `port`
     * object will be rendered unusable, and the returned `MessagePort` instance will
@@ -78,7 +95,7 @@ class Worker protected () extends EventEmitter {
   @JSName("once")
   def once_online(event: online, listener: js.Function0[Unit]): this.type = js.native
   def postMessage(value: js.Any): Unit = js.native
-  def postMessage(value: js.Any, transferList: js.Array[scala.scalajs.js.typedarray.ArrayBuffer | MessagePort]): Unit = js.native
+  def postMessage(value: js.Any, transferList: js.Array[js.typedarray.ArrayBuffer | MessagePort]): Unit = js.native
   @JSName("prependListener")
   def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")

@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FeatureReductionClusterProperties extends js.Object {
   /**
     * Defines the radius in points (or pixels if specified) of each area in which multiple points will be grouped and visualized as a single cluster.
@@ -13,7 +14,7 @@ trait FeatureReductionClusterProperties extends js.Object {
     *
     * @default 60
     */
-  var clusterRadius: js.UndefOr[Double | String] = js.undefined
+  var clusterRadius: js.UndefOr[Double | String] = js.native
   /**
     * The [PopupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) to apply to clustered graphics. When set, a popupTemplate independent of the [layer.popupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#popupTemplate) is used. This popup can display summary information for the cluster, including the count of all features in the cluster and the average or predominant values of fields mapped by the renderer.  The table below describes the aggregate fields used internally by the cluster renderer, which you can reference in the cluster popup.  Aggregate fields:
     *
@@ -103,27 +104,64 @@ trait FeatureReductionClusterProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#popupTemplate)
     */
-  var popupTemplate: js.UndefOr[PopupTemplateProperties] = js.undefined
+  var popupTemplate: js.UndefOr[PopupTemplateProperties] = js.native
   /**
     * The feature reduction type.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#type)
     */
-  var `type`: js.UndefOr[cluster] = js.undefined
+  var `type`: js.UndefOr[cluster] = js.native
 }
 
 object FeatureReductionClusterProperties {
   @scala.inline
-  def apply(
-    clusterRadius: Double | String = null,
-    popupTemplate: PopupTemplateProperties = null,
-    `type`: cluster = null
-  ): FeatureReductionClusterProperties = {
+  def apply(): FeatureReductionClusterProperties = {
     val __obj = js.Dynamic.literal()
-    if (clusterRadius != null) __obj.updateDynamic("clusterRadius")(clusterRadius.asInstanceOf[js.Any])
-    if (popupTemplate != null) __obj.updateDynamic("popupTemplate")(popupTemplate.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FeatureReductionClusterProperties]
   }
+  @scala.inline
+  implicit class FeatureReductionClusterPropertiesOps[Self <: FeatureReductionClusterProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterRadius(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopupTemplate(value: PopupTemplateProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopupTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popupTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: cluster): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

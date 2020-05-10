@@ -1,6 +1,5 @@
 package typingsSlinky.pWaterfall
 
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +9,8 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   // TODO: Remove this for the next major release
   var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof pWaterfall */ js.Any = js.native
-  def apply(tasks: Iterable[Task[_, _]]): js.Promise[_] = js.native
-  def apply(tasks: Iterable[Task[_, _]], initialValue: js.Any): js.Promise[_] = js.native
+  def apply(tasks: js.Iterable[Task[_, _]]): js.Promise[_] = js.native
+  def apply(tasks: js.Iterable[Task[_, _]], initialValue: js.Any): js.Promise[_] = js.native
   /**
   	Run promise-returning & async functions in series, each passing its result to the next.
   	@param tasks - Functions are expected to return a value. If a `Promise` is returned, it's awaited before continuing with the next task.

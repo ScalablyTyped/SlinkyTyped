@@ -1,9 +1,7 @@
 package typingsSlinky.reactLottie.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactLottie.mod.EventListener
 import typingsSlinky.reactLottie.mod.LottieProps
 import typingsSlinky.reactLottie.mod.Options
@@ -14,40 +12,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactLottie
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactLottie {
   @JSImport("react-lottie", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: height, title, width */
-  def apply(
-    options: Options,
-    ariaLabel: String | animation = null,
-    ariaRole: String | button = null,
-    direction: Int | Double = null,
-    eventListeners: js.Array[EventListener] = null,
-    isClickToPauseDisabled: js.UndefOr[Boolean] = js.undefined,
-    isPaused: js.UndefOr[Boolean] = js.undefined,
-    isStopped: js.UndefOr[Boolean] = js.undefined,
-    segments: js.Array[Double] = null,
-    speed: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
-    if (ariaRole != null) __obj.updateDynamic("ariaRole")(ariaRole.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (eventListeners != null) __obj.updateDynamic("eventListeners")(eventListeners.asInstanceOf[js.Any])
-    if (!js.isUndefined(isClickToPauseDisabled)) __obj.updateDynamic("isClickToPauseDisabled")(isClickToPauseDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isPaused)) __obj.updateDynamic("isPaused")(isPaused.asInstanceOf[js.Any])
-    if (!js.isUndefined(isStopped)) __obj.updateDynamic("isStopped")(isStopped.asInstanceOf[js.Any])
-    if (segments != null) __obj.updateDynamic("segments")(segments.asInstanceOf[js.Any])
-    if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def ariaLabel(value: String | animation): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaRole(value: String | button): this.type = set("ariaRole", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: Double): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def eventListeners(value: js.Array[EventListener]): this.type = set("eventListeners", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isClickToPauseDisabled(value: Boolean): this.type = set("isClickToPauseDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isPaused(value: Boolean): this.type = set("isPaused", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isStopped(value: Boolean): this.type = set("isStopped", value.asInstanceOf[js.Any])
+    @scala.inline
+    def segments(value: js.Array[Double]): this.type = set("segments", value.asInstanceOf[js.Any])
+    @scala.inline
+    def speed(value: Double): this.type = set("speed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  type Props = LottieProps
+  
+  def withProps(p: LottieProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(options: Options): Builder = {
+    val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LottieProps]))
+  }
 }
 

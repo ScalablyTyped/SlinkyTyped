@@ -88,11 +88,12 @@ trait HTMLLinkElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("HTMLLinkElement")
 @js.native
-object HTMLLinkElement extends Instantiable0[HTMLLinkElement]
+object HTMLLinkElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLLinkElement]
 

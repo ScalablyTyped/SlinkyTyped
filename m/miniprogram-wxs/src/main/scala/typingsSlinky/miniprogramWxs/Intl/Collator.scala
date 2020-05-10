@@ -8,9 +8,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Collator extends js.Object {
-  def compare(x: String, y: String): Double
-  def resolvedOptions(): ResolvedCollatorOptions
+  def compare(x: String, y: String): Double = js.native
+  def resolvedOptions(): ResolvedCollatorOptions = js.native
 }
 
 @JSGlobal("Intl.Collator")

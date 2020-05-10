@@ -5,24 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonClampToGroundEllipsoid extends js.Object {
-  var clampToGround: js.UndefOr[Boolean] = js.undefined
-  var ellipsoid: js.UndefOr[Ellipsoid] = js.undefined
-  var sourceUri: js.UndefOr[String] = js.undefined
+  var clampToGround: js.UndefOr[Boolean] = js.native
+  var ellipsoid: js.UndefOr[Ellipsoid] = js.native
+  var sourceUri: js.UndefOr[String] = js.native
 }
 
 object AnonClampToGroundEllipsoid {
   @scala.inline
-  def apply(
-    clampToGround: js.UndefOr[Boolean] = js.undefined,
-    ellipsoid: Ellipsoid = null,
-    sourceUri: String = null
-  ): AnonClampToGroundEllipsoid = {
+  def apply(): AnonClampToGroundEllipsoid = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(clampToGround)) __obj.updateDynamic("clampToGround")(clampToGround.asInstanceOf[js.Any])
-    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
-    if (sourceUri != null) __obj.updateDynamic("sourceUri")(sourceUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonClampToGroundEllipsoid]
   }
+  @scala.inline
+  implicit class AnonClampToGroundEllipsoidOps[Self <: AnonClampToGroundEllipsoid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClampToGround(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clampToGround")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClampToGround: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clampToGround")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEllipsoid(value: Ellipsoid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEllipsoid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

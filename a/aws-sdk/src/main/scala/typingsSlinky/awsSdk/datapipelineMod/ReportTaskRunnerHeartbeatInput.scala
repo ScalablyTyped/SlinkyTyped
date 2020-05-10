@@ -22,11 +22,47 @@ trait ReportTaskRunnerHeartbeatInput extends js.Object {
 
 object ReportTaskRunnerHeartbeatInput {
   @scala.inline
-  def apply(taskrunnerId: id, hostname: id = null, workerGroup: String = null): ReportTaskRunnerHeartbeatInput = {
+  def apply(taskrunnerId: id): ReportTaskRunnerHeartbeatInput = {
     val __obj = js.Dynamic.literal(taskrunnerId = taskrunnerId.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (workerGroup != null) __obj.updateDynamic("workerGroup")(workerGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReportTaskRunnerHeartbeatInput]
   }
+  @scala.inline
+  implicit class ReportTaskRunnerHeartbeatInputOps[Self <: ReportTaskRunnerHeartbeatInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTaskrunnerId(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskrunnerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostname(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerGroup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,39 +5,151 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BreadcrumbsProps extends js.Object {
-  var container: js.UndefOr[String | Element | js.Object] = js.undefined
-  var containerProps: js.UndefOr[js.Object] = js.undefined
-  var duplicateProps: js.UndefOr[js.Object] = js.undefined
-  var finalItem: js.UndefOr[String | Element | js.Object] = js.undefined
-  var finalProps: js.UndefOr[js.Object] = js.undefined
-  var item: js.UndefOr[String | Element | js.Object] = js.undefined
-  var renameProps: js.UndefOr[js.Object] = js.undefined
-  var separator: js.UndefOr[String | Element | js.Object] = js.undefined
+  var container: js.UndefOr[String | Element | js.Object] = js.native
+  var containerProps: js.UndefOr[js.Object] = js.native
+  var duplicateProps: js.UndefOr[js.Object] = js.native
+  var finalItem: js.UndefOr[String | Element | js.Object] = js.native
+  var finalProps: js.UndefOr[js.Object] = js.native
+  var item: js.UndefOr[String | Element | js.Object] = js.native
+  var renameProps: js.UndefOr[js.Object] = js.native
+  var separator: js.UndefOr[String | Element | js.Object] = js.native
 }
 
 object BreadcrumbsProps {
   @scala.inline
-  def apply(
-    container: String | Element | js.Object = null,
-    containerProps: js.Object = null,
-    duplicateProps: js.Object = null,
-    finalItem: String | Element | js.Object = null,
-    finalProps: js.Object = null,
-    item: String | Element | js.Object = null,
-    renameProps: js.Object = null,
-    separator: String | Element | js.Object = null
-  ): BreadcrumbsProps = {
+  def apply(): BreadcrumbsProps = {
     val __obj = js.Dynamic.literal()
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (containerProps != null) __obj.updateDynamic("containerProps")(containerProps.asInstanceOf[js.Any])
-    if (duplicateProps != null) __obj.updateDynamic("duplicateProps")(duplicateProps.asInstanceOf[js.Any])
-    if (finalItem != null) __obj.updateDynamic("finalItem")(finalItem.asInstanceOf[js.Any])
-    if (finalProps != null) __obj.updateDynamic("finalProps")(finalProps.asInstanceOf[js.Any])
-    if (item != null) __obj.updateDynamic("item")(item.asInstanceOf[js.Any])
-    if (renameProps != null) __obj.updateDynamic("renameProps")(renameProps.asInstanceOf[js.Any])
-    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
     __obj.asInstanceOf[BreadcrumbsProps]
   }
+  @scala.inline
+  implicit class BreadcrumbsPropsOps[Self <: BreadcrumbsProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainerElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContainer(value: String | Element | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerProps(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuplicateProps(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuplicateProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinalItemElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFinalItem(value: String | Element | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinalProps(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItem(value: String | Element | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenameProps(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renameProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenameProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renameProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeparatorElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSeparator(value: String | Element | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

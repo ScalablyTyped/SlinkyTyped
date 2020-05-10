@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object onreadystatechange
   extends TopLevel[
-      (js.ThisFunction1[/* this */ Window_, /* ev */ ProgressEvent[Window_], js.Any]) | Null
+      (js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]) | Null
     ]
 

@@ -22,16 +22,53 @@ trait ComplianceSummary extends js.Object {
 
 object ComplianceSummary {
   @scala.inline
-  def apply(
-    ComplianceSummaryTimestamp: js.Date = null,
-    CompliantResourceCount: ComplianceContributorCount = null,
-    NonCompliantResourceCount: ComplianceContributorCount = null
-  ): ComplianceSummary = {
+  def apply(): ComplianceSummary = {
     val __obj = js.Dynamic.literal()
-    if (ComplianceSummaryTimestamp != null) __obj.updateDynamic("ComplianceSummaryTimestamp")(ComplianceSummaryTimestamp.asInstanceOf[js.Any])
-    if (CompliantResourceCount != null) __obj.updateDynamic("CompliantResourceCount")(CompliantResourceCount.asInstanceOf[js.Any])
-    if (NonCompliantResourceCount != null) __obj.updateDynamic("NonCompliantResourceCount")(NonCompliantResourceCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComplianceSummary]
   }
+  @scala.inline
+  implicit class ComplianceSummaryOps[Self <: ComplianceSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplianceSummaryTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceSummaryTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComplianceSummaryTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceSummaryTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompliantResourceCount(value: ComplianceContributorCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompliantResourceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompliantResourceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompliantResourceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonCompliantResourceCount(value: ComplianceContributorCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NonCompliantResourceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonCompliantResourceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NonCompliantResourceCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -37,18 +37,65 @@ trait SchemaGoogleCloudVisionV1p2beta1Word extends js.Object {
 
 object SchemaGoogleCloudVisionV1p2beta1Word {
   @scala.inline
-  def apply(
-    boundingBox: SchemaGoogleCloudVisionV1p2beta1BoundingPoly = null,
-    confidence: Int | Double = null,
-    property: SchemaGoogleCloudVisionV1p2beta1TextAnnotationTextProperty = null,
-    symbols: js.Array[SchemaGoogleCloudVisionV1p2beta1Symbol] = null
-  ): SchemaGoogleCloudVisionV1p2beta1Word = {
+  def apply(): SchemaGoogleCloudVisionV1p2beta1Word = {
     val __obj = js.Dynamic.literal()
-    if (boundingBox != null) __obj.updateDynamic("boundingBox")(boundingBox.asInstanceOf[js.Any])
-    if (confidence != null) __obj.updateDynamic("confidence")(confidence.asInstanceOf[js.Any])
-    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
-    if (symbols != null) __obj.updateDynamic("symbols")(symbols.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p2beta1Word]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p2beta1WordOps[Self <: SchemaGoogleCloudVisionV1p2beta1Word] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBoundingBox(value: SchemaGoogleCloudVisionV1p2beta1BoundingPoly): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingBox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundingBox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingBox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfidence(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperty(value: SchemaGoogleCloudVisionV1p2beta1TextAnnotationTextProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbols(value: js.Array[SchemaGoogleCloudVisionV1p2beta1Symbol]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbols: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbols")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

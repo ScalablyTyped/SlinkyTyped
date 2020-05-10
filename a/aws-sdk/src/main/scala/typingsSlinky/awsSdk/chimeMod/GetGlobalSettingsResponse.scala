@@ -18,11 +18,41 @@ trait GetGlobalSettingsResponse extends js.Object {
 
 object GetGlobalSettingsResponse {
   @scala.inline
-  def apply(BusinessCalling: BusinessCallingSettings = null, VoiceConnector: VoiceConnectorSettings = null): GetGlobalSettingsResponse = {
+  def apply(): GetGlobalSettingsResponse = {
     val __obj = js.Dynamic.literal()
-    if (BusinessCalling != null) __obj.updateDynamic("BusinessCalling")(BusinessCalling.asInstanceOf[js.Any])
-    if (VoiceConnector != null) __obj.updateDynamic("VoiceConnector")(VoiceConnector.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetGlobalSettingsResponse]
   }
+  @scala.inline
+  implicit class GetGlobalSettingsResponseOps[Self <: GetGlobalSettingsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBusinessCalling(value: BusinessCallingSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BusinessCalling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBusinessCalling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BusinessCalling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoiceConnector(value: VoiceConnectorSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceConnector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoiceConnector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceConnector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

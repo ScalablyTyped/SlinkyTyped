@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object webSocket
   extends TopLevel[
-      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof _webSocket */ js.Any
+      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof _operators */ js.Any
     ]
 

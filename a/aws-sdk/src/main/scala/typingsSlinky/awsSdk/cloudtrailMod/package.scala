@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object cloudtrailMod {
   type Boolean = scala.Boolean
-  type ByteBuffer = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.cloudtrailMod.Blob | java.lang.String
+  type ByteBuffer = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.cloudtrailMod.Blob | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.cloudtrailMod.ClientApiVersions
   type DataResourceValues = js.Array[typingsSlinky.awsSdk.cloudtrailMod.String]
   type DataResources = js.Array[typingsSlinky.awsSdk.cloudtrailMod.DataResource]

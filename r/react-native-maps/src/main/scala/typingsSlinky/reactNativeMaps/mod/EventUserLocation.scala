@@ -7,10 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EventUserLocation
   extends BaseSyntheticEvent[js.Object, NodeHandle, NodeHandle] {
   @JSName("nativeEvent")
-  var nativeEvent_EventUserLocation: AnonCoordinateAnonAccuracy
+  var nativeEvent_EventUserLocation: AnonCoordinateAnonAccuracy = js.native
 }
 
 object EventUserLocation {
@@ -36,5 +37,19 @@ object EventUserLocation {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventUserLocation]
   }
+  @scala.inline
+  implicit class EventUserLocationOps[Self <: EventUserLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNativeEvent(value: AnonCoordinateAnonAccuracy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

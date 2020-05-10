@@ -27,11 +27,41 @@ trait SchemaGoogleCloudDialogflowV2beta1VoiceSelectionParams extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2beta1VoiceSelectionParams {
   @scala.inline
-  def apply(name: String = null, ssmlGender: String = null): SchemaGoogleCloudDialogflowV2beta1VoiceSelectionParams = {
+  def apply(): SchemaGoogleCloudDialogflowV2beta1VoiceSelectionParams = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (ssmlGender != null) __obj.updateDynamic("ssmlGender")(ssmlGender.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1VoiceSelectionParams]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2beta1VoiceSelectionParamsOps[Self <: SchemaGoogleCloudDialogflowV2beta1VoiceSelectionParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSsmlGender(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssmlGender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSsmlGender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssmlGender")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

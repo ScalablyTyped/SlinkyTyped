@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HeroWinRate extends Hero {
-  var win_rate: String
+  var win_rate: String = js.native
 }
 
 object HeroWinRate {
   @scala.inline
   def apply(hero: String, img: String, win_rate: String): HeroWinRate = {
     val __obj = js.Dynamic.literal(hero = hero.asInstanceOf[js.Any], img = img.asInstanceOf[js.Any], win_rate = win_rate.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[HeroWinRate]
   }
+  @scala.inline
+  implicit class HeroWinRateOps[Self <: HeroWinRate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWin_rate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("win_rate")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

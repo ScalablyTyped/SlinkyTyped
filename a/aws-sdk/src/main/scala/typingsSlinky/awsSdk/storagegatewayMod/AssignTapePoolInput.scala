@@ -20,8 +20,27 @@ object AssignTapePoolInput {
   @scala.inline
   def apply(PoolId: PoolId, TapeARN: TapeARN): AssignTapePoolInput = {
     val __obj = js.Dynamic.literal(PoolId = PoolId.asInstanceOf[js.Any], TapeARN = TapeARN.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AssignTapePoolInput]
   }
+  @scala.inline
+  implicit class AssignTapePoolInputOps[Self <: AssignTapePoolInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPoolId(value: PoolId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTapeARN(value: TapeARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TapeARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

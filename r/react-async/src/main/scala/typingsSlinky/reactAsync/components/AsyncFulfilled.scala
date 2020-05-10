@@ -1,14 +1,16 @@
 package typingsSlinky.reactAsync.components
 
+import typingsSlinky.reactAsync.AnonPersist
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AsyncFulfilled extends SharedApply_AnonPersist2053037958 {
+object AsyncFulfilled {
   @JSImport("react-async", "Async.Fulfilled")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps[T](p: AnonPersist[T]): SharedBuilder_AnonPersist_214611622[T] = new SharedBuilder_AnonPersist_214611622[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T](companion: AsyncFulfilled.type): SharedBuilder_AnonPersist_214611622[T] = new SharedBuilder_AnonPersist_214611622[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

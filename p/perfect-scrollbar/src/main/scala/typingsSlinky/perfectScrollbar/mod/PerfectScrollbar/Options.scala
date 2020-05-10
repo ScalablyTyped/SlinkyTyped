@@ -4,51 +4,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var handlers: js.UndefOr[js.Array[String]] = js.undefined
-  var maxScrollbarLength: js.UndefOr[Double] = js.undefined
-  var minScrollbarLength: js.UndefOr[Double] = js.undefined
-  var scrollXMarginOffset: js.UndefOr[Double] = js.undefined
-  var scrollYMarginOffset: js.UndefOr[Double] = js.undefined
-  var scrollingThreshold: js.UndefOr[Double] = js.undefined
-  var suppressScrollX: js.UndefOr[Boolean] = js.undefined
-  var suppressScrollY: js.UndefOr[Boolean] = js.undefined
-  var swipeEasing: js.UndefOr[Boolean] = js.undefined
-  var useBothWheelAxes: js.UndefOr[Boolean] = js.undefined
-  var wheelPropagation: js.UndefOr[Boolean] = js.undefined
-  var wheelSpeed: js.UndefOr[Double] = js.undefined
+  var handlers: js.UndefOr[js.Array[String]] = js.native
+  var maxScrollbarLength: js.UndefOr[Double] = js.native
+  var minScrollbarLength: js.UndefOr[Double] = js.native
+  var scrollXMarginOffset: js.UndefOr[Double] = js.native
+  var scrollYMarginOffset: js.UndefOr[Double] = js.native
+  var scrollingThreshold: js.UndefOr[Double] = js.native
+  var suppressScrollX: js.UndefOr[Boolean] = js.native
+  var suppressScrollY: js.UndefOr[Boolean] = js.native
+  var swipeEasing: js.UndefOr[Boolean] = js.native
+  var useBothWheelAxes: js.UndefOr[Boolean] = js.native
+  var wheelPropagation: js.UndefOr[Boolean] = js.native
+  var wheelSpeed: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    handlers: js.Array[String] = null,
-    maxScrollbarLength: Int | Double = null,
-    minScrollbarLength: Int | Double = null,
-    scrollXMarginOffset: Int | Double = null,
-    scrollYMarginOffset: Int | Double = null,
-    scrollingThreshold: Int | Double = null,
-    suppressScrollX: js.UndefOr[Boolean] = js.undefined,
-    suppressScrollY: js.UndefOr[Boolean] = js.undefined,
-    swipeEasing: js.UndefOr[Boolean] = js.undefined,
-    useBothWheelAxes: js.UndefOr[Boolean] = js.undefined,
-    wheelPropagation: js.UndefOr[Boolean] = js.undefined,
-    wheelSpeed: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (handlers != null) __obj.updateDynamic("handlers")(handlers.asInstanceOf[js.Any])
-    if (maxScrollbarLength != null) __obj.updateDynamic("maxScrollbarLength")(maxScrollbarLength.asInstanceOf[js.Any])
-    if (minScrollbarLength != null) __obj.updateDynamic("minScrollbarLength")(minScrollbarLength.asInstanceOf[js.Any])
-    if (scrollXMarginOffset != null) __obj.updateDynamic("scrollXMarginOffset")(scrollXMarginOffset.asInstanceOf[js.Any])
-    if (scrollYMarginOffset != null) __obj.updateDynamic("scrollYMarginOffset")(scrollYMarginOffset.asInstanceOf[js.Any])
-    if (scrollingThreshold != null) __obj.updateDynamic("scrollingThreshold")(scrollingThreshold.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressScrollX)) __obj.updateDynamic("suppressScrollX")(suppressScrollX.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressScrollY)) __obj.updateDynamic("suppressScrollY")(suppressScrollY.asInstanceOf[js.Any])
-    if (!js.isUndefined(swipeEasing)) __obj.updateDynamic("swipeEasing")(swipeEasing.asInstanceOf[js.Any])
-    if (!js.isUndefined(useBothWheelAxes)) __obj.updateDynamic("useBothWheelAxes")(useBothWheelAxes.asInstanceOf[js.Any])
-    if (!js.isUndefined(wheelPropagation)) __obj.updateDynamic("wheelPropagation")(wheelPropagation.asInstanceOf[js.Any])
-    if (wheelSpeed != null) __obj.updateDynamic("wheelSpeed")(wheelSpeed.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHandlers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandlers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxScrollbarLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScrollbarLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxScrollbarLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScrollbarLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinScrollbarLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minScrollbarLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinScrollbarLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minScrollbarLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollXMarginOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollXMarginOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollXMarginOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollXMarginOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollYMarginOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollYMarginOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollYMarginOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollYMarginOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollingThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollingThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuppressScrollX(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressScrollX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppressScrollX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressScrollX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuppressScrollY(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressScrollY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppressScrollY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressScrollY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSwipeEasing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSwipeEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swipeEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseBothWheelAxes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useBothWheelAxes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseBothWheelAxes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useBothWheelAxes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWheelPropagation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelPropagation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWheelPropagation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelPropagation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWheelSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWheelSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelSpeed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

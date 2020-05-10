@@ -3,8 +3,6 @@ package typingsSlinky.reactDom.mod
 import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.CElement
-import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.react.mod.DOMElement
 import typingsSlinky.react.mod.ReactElement
@@ -31,10 +29,7 @@ object unstableRenderSubtreeIntoContainer extends js.Object {
     parentComponent: ReactComponentClass[_],
     element: ReactElement,
     container: Element,
-    callback: js.Function1[
-      /* component */ js.UndefOr[(Component[P, ComponentState, _]) | typingsSlinky.std.Element], 
-      _
-    ]
+    callback: js.Function1[/* component */ js.UndefOr[ReactComponentClass[P] | Element], _]
   ): ReactComponentClass[P] | Element | Unit = js.native
   def apply[P, T /* <: ReactComponentClass[P] */](parentComponent: ReactComponentClass[_], element: CElement[P, T], container: Element): T = js.native
   def apply[P, T /* <: ReactComponentClass[P] */](

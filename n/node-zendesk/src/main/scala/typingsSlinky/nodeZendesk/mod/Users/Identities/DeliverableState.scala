@@ -12,10 +12,8 @@ trait DeliverableState extends js.Object
 
 object DeliverableState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deliverable: typingsSlinky.nodeZendesk.nodeZendeskStrings.deliverable = "deliverable".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.deliverable]
   @scala.inline
-  def deliverable: typingsSlinky.nodeZendesk.nodeZendeskStrings.deliverable = this.cast("deliverable")
-  @scala.inline
-  def undeliverable: typingsSlinky.nodeZendesk.nodeZendeskStrings.undeliverable = this.cast("undeliverable")
+  def undeliverable: typingsSlinky.nodeZendesk.nodeZendeskStrings.undeliverable = "undeliverable".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.undeliverable]
 }
 

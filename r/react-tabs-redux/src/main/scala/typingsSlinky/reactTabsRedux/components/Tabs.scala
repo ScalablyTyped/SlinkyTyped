@@ -1,45 +1,40 @@
 package typingsSlinky.reactTabsRedux.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTabsRedux.tabsMod.TabsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tabs
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactTabsRedux.mod.Tabs] {
+object Tabs {
   @JSImport("react-tabs-redux", "Tabs")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
-  def apply(
-    activeLinkStyle: js.Object = null,
-    disableInlineStyles: js.UndefOr[Boolean] = js.undefined,
-    handleSelect: (/* tab */ String, /* name */ String) => Unit = null,
-    onChange: (/* selectedTab */ String, /* name */ String) => Unit = null,
-    renderActiveTabContentOnly: js.UndefOr[Boolean] = js.undefined,
-    selectedTab: String = null,
-    visibleTabStyle: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactTabsRedux.mod.Tabs] = {
-    val __obj = js.Dynamic.literal()
-    if (activeLinkStyle != null) __obj.updateDynamic("activeLinkStyle")(activeLinkStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableInlineStyles)) __obj.updateDynamic("disableInlineStyles")(disableInlineStyles.asInstanceOf[js.Any])
-    if (handleSelect != null) __obj.updateDynamic("handleSelect")(js.Any.fromFunction2(handleSelect))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (!js.isUndefined(renderActiveTabContentOnly)) __obj.updateDynamic("renderActiveTabContentOnly")(renderActiveTabContentOnly.asInstanceOf[js.Any])
-    if (selectedTab != null) __obj.updateDynamic("selectedTab")(selectedTab.asInstanceOf[js.Any])
-    if (visibleTabStyle != null) __obj.updateDynamic("visibleTabStyle")(visibleTabStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactTabsRedux.mod.Tabs] {
+    @scala.inline
+    def activeLinkStyle(value: js.Object): this.type = set("activeLinkStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableInlineStyles(value: Boolean): this.type = set("disableInlineStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleSelect(value: (/* tab */ String, /* name */ String) => Unit): this.type = set("handleSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: (/* selectedTab */ String, /* name */ String) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def renderActiveTabContentOnly(value: Boolean): this.type = set("renderActiveTabContentOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedTab(value: String): this.type = set("selectedTab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visibleTabStyle(value: js.Object): this.type = set("visibleTabStyle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactTabsRedux.mod.Tabs] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactTabsRedux.mod.Tabs](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TabsProps
+  
+  def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tabs.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

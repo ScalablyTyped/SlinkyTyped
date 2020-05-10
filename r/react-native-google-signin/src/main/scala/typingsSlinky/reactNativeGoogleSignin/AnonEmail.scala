@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEmail extends js.Object {
-  var email: String | Null
-  var familyName: String | Null
-  var givenName: String | Null
-  var id: String | Null
-  var name: String | Null
-  var photo: String | Null
+  var email: String | Null = js.native
+  var familyName: String | Null = js.native
+  var givenName: String | Null = js.native
+  var id: String | Null = js.native
+  var name: String | Null = js.native
+  var photo: String | Null = js.native
 }
 
 object AnonEmail {
   @scala.inline
-  def apply(
-    email: String = null,
-    familyName: String = null,
-    givenName: String = null,
-    id: String = null,
-    name: String = null,
-    photo: String = null
-  ): AnonEmail = {
+  def apply(): AnonEmail = {
     val __obj = js.Dynamic.literal()
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (familyName != null) __obj.updateDynamic("familyName")(familyName.asInstanceOf[js.Any])
-    if (givenName != null) __obj.updateDynamic("givenName")(givenName.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (photo != null) __obj.updateDynamic("photo")(photo.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonEmail]
   }
+  @scala.inline
+  implicit class AnonEmailOps[Self <: AnonEmail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmailNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(null)
+        ret
+    }
+    @scala.inline
+    def withFamilyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFamilyNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("familyName")(null)
+        ret
+    }
+    @scala.inline
+    def withGivenName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGivenNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(null)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(null)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(null)
+        ret
+    }
+    @scala.inline
+    def withPhoto(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPhotoNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photo")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -5,19 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A pair of `nature` and `party` objects. The `nature` object identifies the effect of the element on the identified `party`, and the `party` object identifies the affected party. */
+@js.native
 trait Label extends js.Object {
   /** The identified `nature` of the element. */
-  var nature: String
+  var nature: String = js.native
   /** The identified `party` of the element. */
-  var party: String
+  var party: String = js.native
 }
 
 object Label {
   @scala.inline
   def apply(nature: String, party: String): Label = {
     val __obj = js.Dynamic.literal(nature = nature.asInstanceOf[js.Any], party = party.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Label]
   }
+  @scala.inline
+  implicit class LabelOps[Self <: Label] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNature(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("party")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

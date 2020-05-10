@@ -8,7 +8,7 @@ package object qldbMod {
   type Arn = java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.qldbMod.ClientApiVersions
   type DeletionProtection = scala.Boolean
-  type Digest = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.qldbMod.Blob | java.lang.String
+  type Digest = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.qldbMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED

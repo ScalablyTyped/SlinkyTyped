@@ -15,16 +15,14 @@ trait ContainerType extends js.Object
 
 object ContainerType {
   @scala.inline
-  def brush: typingsSlinky.victory.victoryStrings.brush = this.cast("brush")
+  def brush: typingsSlinky.victory.victoryStrings.brush = "brush".asInstanceOf[typingsSlinky.victory.victoryStrings.brush]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cursor: typingsSlinky.victory.victoryStrings.cursor = "cursor".asInstanceOf[typingsSlinky.victory.victoryStrings.cursor]
   @scala.inline
-  def cursor: typingsSlinky.victory.victoryStrings.cursor = this.cast("cursor")
+  def selection: typingsSlinky.victory.victoryStrings.selection = "selection".asInstanceOf[typingsSlinky.victory.victoryStrings.selection]
   @scala.inline
-  def selection: typingsSlinky.victory.victoryStrings.selection = this.cast("selection")
+  def voronoi: typingsSlinky.victory.victoryStrings.voronoi = "voronoi".asInstanceOf[typingsSlinky.victory.victoryStrings.voronoi]
   @scala.inline
-  def voronoi: typingsSlinky.victory.victoryStrings.voronoi = this.cast("voronoi")
-  @scala.inline
-  def zoom: typingsSlinky.victory.victoryStrings.zoom = this.cast("zoom")
+  def zoom: typingsSlinky.victory.victoryStrings.zoom = "zoom".asInstanceOf[typingsSlinky.victory.victoryStrings.zoom]
 }
 

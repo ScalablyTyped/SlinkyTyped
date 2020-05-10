@@ -21,23 +21,23 @@ class Menu protected () extends Widget {
   def append(item: js.Any, referenceItem: JQuery): Menu = js.native
   def close(element: String): Menu = js.native
   def close(element: JQuery): Menu = js.native
-  def close(element: typingsSlinky.std.Element): Menu = js.native
+  def close(element: Element): Menu = js.native
   def enable(element: String, enable: Boolean): Menu = js.native
   def enable(element: JQuery, enable: Boolean): Menu = js.native
-  def enable(element: typingsSlinky.std.Element, enable: Boolean): Menu = js.native
+  def enable(element: Element, enable: Boolean): Menu = js.native
   def findByUid(uid: String): JQuery = js.native
   def insertAfter(item: js.Any, referenceItem: String): Menu = js.native
   def insertAfter(item: js.Any, referenceItem: JQuery): Menu = js.native
-  def insertAfter(item: js.Any, referenceItem: typingsSlinky.std.Element): Menu = js.native
+  def insertAfter(item: js.Any, referenceItem: Element): Menu = js.native
   def insertBefore(item: js.Any, referenceItem: String): Menu = js.native
   def insertBefore(item: js.Any, referenceItem: JQuery): Menu = js.native
-  def insertBefore(item: js.Any, referenceItem: typingsSlinky.std.Element): Menu = js.native
+  def insertBefore(item: js.Any, referenceItem: Element): Menu = js.native
   def open(element: String): Menu = js.native
   def open(element: JQuery): Menu = js.native
-  def open(element: typingsSlinky.std.Element): Menu = js.native
+  def open(element: Element): Menu = js.native
   def remove(element: String): Menu = js.native
   def remove(element: JQuery): Menu = js.native
-  def remove(element: typingsSlinky.std.Element): Menu = js.native
+  def remove(element: Element): Menu = js.native
 }
 
 /* static members */

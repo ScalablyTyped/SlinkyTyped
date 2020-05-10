@@ -1,15 +1,17 @@
 package typingsSlinky.reactToolbox.components
 
 import typingsSlinky.reactToolbox.libRadioMod.default
+import typingsSlinky.reactToolbox.radioRadioButtonMod.RadioButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Radio extends SharedApply_RadioButtonProps1565439186[default] {
+object Radio {
   @JSImport("react-toolbox/lib/radio", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: RadioButtonProps): SharedBuilder_RadioButtonProps1715597622[default] = new SharedBuilder_RadioButtonProps1715597622[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Radio.type): SharedBuilder_RadioButtonProps1715597622[default] = new SharedBuilder_RadioButtonProps1715597622[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

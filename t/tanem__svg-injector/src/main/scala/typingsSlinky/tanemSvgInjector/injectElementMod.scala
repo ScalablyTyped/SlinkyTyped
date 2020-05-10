@@ -1,7 +1,7 @@
 package typingsSlinky.tanemSvgInjector
 
-import typingsSlinky.std.Element
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.tanemSvgInjector.typesMod.BeforeEach
 import typingsSlinky.tanemSvgInjector.typesMod.Errback
 import typingsSlinky.tanemSvgInjector.typesMod.EvalScripts

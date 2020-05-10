@@ -2,9 +2,9 @@ package typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Node
+import org.scalajs.dom.raw.NodeList
 import typingsSlinky.ionicCore.AnonClearExistingCallbacks
-import typingsSlinky.std.Node
-import typingsSlinky.std.NodeList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

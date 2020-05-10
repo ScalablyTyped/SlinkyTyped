@@ -16,16 +16,14 @@ trait NotificationType extends js.Object
 
 object NotificationType {
   @scala.inline
-  def agenda: typingsSlinky.gapiCalendar.gapiCalendarStrings.agenda = this.cast("agenda")
+  def agenda: typingsSlinky.gapiCalendar.gapiCalendarStrings.agenda = "agenda".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.agenda]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def eventCancellation: typingsSlinky.gapiCalendar.gapiCalendarStrings.eventCancellation = "eventCancellation".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.eventCancellation]
   @scala.inline
-  def eventCancellation: typingsSlinky.gapiCalendar.gapiCalendarStrings.eventCancellation = this.cast("eventCancellation")
+  def eventChange: typingsSlinky.gapiCalendar.gapiCalendarStrings.eventChange = "eventChange".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.eventChange]
   @scala.inline
-  def eventChange: typingsSlinky.gapiCalendar.gapiCalendarStrings.eventChange = this.cast("eventChange")
+  def eventCreation: typingsSlinky.gapiCalendar.gapiCalendarStrings.eventCreation = "eventCreation".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.eventCreation]
   @scala.inline
-  def eventCreation: typingsSlinky.gapiCalendar.gapiCalendarStrings.eventCreation = this.cast("eventCreation")
-  @scala.inline
-  def eventResponse: typingsSlinky.gapiCalendar.gapiCalendarStrings.eventResponse = this.cast("eventResponse")
+  def eventResponse: typingsSlinky.gapiCalendar.gapiCalendarStrings.eventResponse = "eventResponse".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.eventResponse]
 }
 

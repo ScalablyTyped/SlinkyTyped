@@ -1,20 +1,24 @@
 package typingsSlinky.reactOnsenui.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactOnsenui.HTMLAttributesidclassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Couldn't find props for TypeRef(QualifiedName(IArray(Name(<intersection>))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactOnsenui), Name(HTMLAttributesidclassName))),IArray(),NoComments), TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments)),NoComments) because: Could't extract props from TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object Component
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOnsenui.mod.Component[js.Any, js.Any]] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reactOnsenui.HTMLAttributesidclassName with P because: IArray(Could't extract props from P because couldn't resolve ClassTree.) */
+object Component {
   @JSImport("react-onsenui", "Component")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = HTMLAttributesidclassName with js.Any
+  @scala.inline
+  class Builder[P, S] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Component[js.Any, js.Any]]
+  
+  def apply[P, S](p: HTMLAttributesidclassName with P): Builder[P, S] = new Builder[P, S](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[P, S](companion: Component.type): Builder[P, S] = new Builder[P, S](js.Array(this.component, js.Dictionary.empty))()
 }
 

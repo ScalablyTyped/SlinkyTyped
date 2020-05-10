@@ -11,11 +11,5 @@ class SingletonRegistration[TBase, TImpl /* <: Impl[TBase] */, TArgs /* <: Args[
   def this(keyOrRegisterInChild: PrimitiveOrDependencyCtor[TBase, TImpl, TArgs]) = this()
   def this(keyOrRegisterInChild: Boolean, registerInChild: Boolean) = this()
   def this(keyOrRegisterInChild: PrimitiveOrDependencyCtor[TBase, TImpl, TArgs], registerInChild: Boolean) = this()
-  /* CompleteClass */
-  override def registerResolver(
-    container: Container,
-    key: PrimitiveOrDependencyCtor[TBase, TImpl, TArgs],
-    fn: DependencyCtorOrFunctor[TBase, TImpl, TArgs]
-  ): Resolver_ = js.native
 }
 

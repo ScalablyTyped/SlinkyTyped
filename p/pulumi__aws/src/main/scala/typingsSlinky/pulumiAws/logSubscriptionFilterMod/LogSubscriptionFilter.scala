@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.logSubscriptionFilterMod
 
-import typingsSlinky.pulumiAws.logGroupMod.LogGroup
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -37,7 +36,7 @@ class LogSubscriptionFilter protected () extends CustomResource {
   /**
     * The name of the log group to associate the subscription filter with
     */
-  val logGroup: Output_[LogGroup] = js.native
+  val logGroup: Output_[String] = js.native
   /**
     * A name for the subscription filter
     */

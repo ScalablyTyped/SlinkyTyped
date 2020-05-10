@@ -23,11 +23,12 @@ trait AudioParam extends js.Object {
   def setTargetAtTime(target: Double, startTime: Double, timeConstant: Double): org.scalajs.dom.raw.AudioParam = js.native
   def setValueAtTime(value: Double, startTime: Double): org.scalajs.dom.raw.AudioParam = js.native
   def setValueCurveAtTime(values: js.Array[Double], startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
-  def setValueCurveAtTime(values: Float32Array, startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
-  def setValueCurveAtTime(values: Iterable[Double], startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
+  def setValueCurveAtTime(values: js.typedarray.Float32Array, startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
+  def setValueCurveAtTime(values: js.Iterable[Double], startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
 }
 
 @JSGlobal("AudioParam")
 @js.native
-object AudioParam extends Instantiable0[AudioParam]
+object AudioParam
+  extends Instantiable0[org.scalajs.dom.raw.AudioParam]
 

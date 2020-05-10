@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @JSImport("typed-github-api/dist/user", JSImport.Namespace)
 @js.native
 object distUserMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.typedGithubApi.ownerRefMod.OwnerRef because Already inherited
   - typingsSlinky.typedGithubApi.interfacesUserMod.UserSummary because Already inherited
   - typingsSlinky.typedGithubApi.interfacesUserMod.User because Already inherited
@@ -29,7 +29,7 @@ object distUserMod extends js.Object {
     var twoFactorAuthentication: Boolean = js.native
   }
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.typedGithubApi.ownerRefMod.OwnerRef because Already inherited
   - typingsSlinky.typedGithubApi.interfacesUserMod.UserSummary because Already inherited
   - typingsSlinky.typedGithubApi.interfacesUserMod.User because var conflicts: avatarUri, id, login. Inlined name, company, blog, location, email, publicRepos, publicGists, followers, following, createdAt, updatedAt */ @js.native
@@ -50,7 +50,7 @@ object distUserMod extends js.Object {
     var updatedAt: Moment = js.native
   }
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.typedGithubApi.ownerRefMod.OwnerRef because Already inherited
   - typingsSlinky.typedGithubApi.interfacesUserMod.UserSummary because var conflicts: login. Inlined id, avatarUri */ @js.native
   class UserSummaryClass protected () extends OwnerRefClass {

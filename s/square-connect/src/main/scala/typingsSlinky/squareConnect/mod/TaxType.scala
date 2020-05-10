@@ -13,12 +13,10 @@ trait TaxType extends js.Object
 
 object TaxType {
   @scala.inline
-  def ADDITIVE: typingsSlinky.squareConnect.squareConnectStrings.ADDITIVE = this.cast("ADDITIVE")
+  def ADDITIVE: typingsSlinky.squareConnect.squareConnectStrings.ADDITIVE = "ADDITIVE".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.ADDITIVE]
   @scala.inline
-  def INCLUSIVE: typingsSlinky.squareConnect.squareConnectStrings.INCLUSIVE = this.cast("INCLUSIVE")
+  def INCLUSIVE: typingsSlinky.squareConnect.squareConnectStrings.INCLUSIVE = "INCLUSIVE".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.INCLUSIVE]
   @scala.inline
-  def UNKNOWN_TAX: typingsSlinky.squareConnect.squareConnectStrings.UNKNOWN_TAX = this.cast("UNKNOWN_TAX")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNKNOWN_TAX: typingsSlinky.squareConnect.squareConnectStrings.UNKNOWN_TAX = "UNKNOWN_TAX".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.UNKNOWN_TAX]
 }
 

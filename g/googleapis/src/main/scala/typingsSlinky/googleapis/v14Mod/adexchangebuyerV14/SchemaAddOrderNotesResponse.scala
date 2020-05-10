@@ -11,10 +11,29 @@ trait SchemaAddOrderNotesResponse extends js.Object {
 
 object SchemaAddOrderNotesResponse {
   @scala.inline
-  def apply(notes: js.Array[SchemaMarketplaceNote] = null): SchemaAddOrderNotesResponse = {
+  def apply(): SchemaAddOrderNotesResponse = {
     val __obj = js.Dynamic.literal()
-    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAddOrderNotesResponse]
   }
+  @scala.inline
+  implicit class SchemaAddOrderNotesResponseOps[Self <: SchemaAddOrderNotesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNotes(value: js.Array[SchemaMarketplaceNote]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

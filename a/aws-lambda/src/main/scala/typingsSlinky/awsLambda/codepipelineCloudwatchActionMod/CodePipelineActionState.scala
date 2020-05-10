@@ -14,14 +14,12 @@ trait CodePipelineActionState extends js.Object
 
 object CodePipelineActionState {
   @scala.inline
-  def CANCELED: typingsSlinky.awsLambda.awsLambdaStrings.CANCELED = this.cast("CANCELED")
+  def CANCELED: typingsSlinky.awsLambda.awsLambdaStrings.CANCELED = "CANCELED".asInstanceOf[typingsSlinky.awsLambda.awsLambdaStrings.CANCELED]
   @scala.inline
-  def FAILED: typingsSlinky.awsLambda.awsLambdaStrings.FAILED = this.cast("FAILED")
+  def FAILED: typingsSlinky.awsLambda.awsLambdaStrings.FAILED = "FAILED".asInstanceOf[typingsSlinky.awsLambda.awsLambdaStrings.FAILED]
   @scala.inline
-  def STARTED: typingsSlinky.awsLambda.awsLambdaStrings.STARTED = this.cast("STARTED")
+  def STARTED: typingsSlinky.awsLambda.awsLambdaStrings.STARTED = "STARTED".asInstanceOf[typingsSlinky.awsLambda.awsLambdaStrings.STARTED]
   @scala.inline
-  def SUCCEEDED: typingsSlinky.awsLambda.awsLambdaStrings.SUCCEEDED = this.cast("SUCCEEDED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SUCCEEDED: typingsSlinky.awsLambda.awsLambdaStrings.SUCCEEDED = "SUCCEEDED".asInstanceOf[typingsSlinky.awsLambda.awsLambdaStrings.SUCCEEDED]
 }
 

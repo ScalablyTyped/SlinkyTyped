@@ -18,11 +18,41 @@ trait SchemaModifyThreadRequest extends js.Object {
 
 object SchemaModifyThreadRequest {
   @scala.inline
-  def apply(addLabelIds: js.Array[String] = null, removeLabelIds: js.Array[String] = null): SchemaModifyThreadRequest = {
+  def apply(): SchemaModifyThreadRequest = {
     val __obj = js.Dynamic.literal()
-    if (addLabelIds != null) __obj.updateDynamic("addLabelIds")(addLabelIds.asInstanceOf[js.Any])
-    if (removeLabelIds != null) __obj.updateDynamic("removeLabelIds")(removeLabelIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaModifyThreadRequest]
   }
+  @scala.inline
+  implicit class SchemaModifyThreadRequestOps[Self <: SchemaModifyThreadRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddLabelIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addLabelIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddLabelIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addLabelIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveLabelIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLabelIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveLabelIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLabelIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

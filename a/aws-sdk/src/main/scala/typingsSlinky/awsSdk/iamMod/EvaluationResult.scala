@@ -46,26 +46,113 @@ trait EvaluationResult extends js.Object {
 
 object EvaluationResult {
   @scala.inline
-  def apply(
-    EvalActionName: ActionNameType,
-    EvalDecision: PolicyEvaluationDecisionType,
-    EvalDecisionDetails: EvalDecisionDetailsType = null,
-    EvalResourceName: ResourceNameType = null,
-    MatchedStatements: StatementListType = null,
-    MissingContextValues: ContextKeyNamesResultListType = null,
-    OrganizationsDecisionDetail: OrganizationsDecisionDetail = null,
-    PermissionsBoundaryDecisionDetail: PermissionsBoundaryDecisionDetail = null,
-    ResourceSpecificResults: ResourceSpecificResultListType = null
-  ): EvaluationResult = {
+  def apply(EvalActionName: ActionNameType, EvalDecision: PolicyEvaluationDecisionType): EvaluationResult = {
     val __obj = js.Dynamic.literal(EvalActionName = EvalActionName.asInstanceOf[js.Any], EvalDecision = EvalDecision.asInstanceOf[js.Any])
-    if (EvalDecisionDetails != null) __obj.updateDynamic("EvalDecisionDetails")(EvalDecisionDetails.asInstanceOf[js.Any])
-    if (EvalResourceName != null) __obj.updateDynamic("EvalResourceName")(EvalResourceName.asInstanceOf[js.Any])
-    if (MatchedStatements != null) __obj.updateDynamic("MatchedStatements")(MatchedStatements.asInstanceOf[js.Any])
-    if (MissingContextValues != null) __obj.updateDynamic("MissingContextValues")(MissingContextValues.asInstanceOf[js.Any])
-    if (OrganizationsDecisionDetail != null) __obj.updateDynamic("OrganizationsDecisionDetail")(OrganizationsDecisionDetail.asInstanceOf[js.Any])
-    if (PermissionsBoundaryDecisionDetail != null) __obj.updateDynamic("PermissionsBoundaryDecisionDetail")(PermissionsBoundaryDecisionDetail.asInstanceOf[js.Any])
-    if (ResourceSpecificResults != null) __obj.updateDynamic("ResourceSpecificResults")(ResourceSpecificResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[EvaluationResult]
   }
+  @scala.inline
+  implicit class EvaluationResultOps[Self <: EvaluationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvalActionName(value: ActionNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvalActionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvalDecision(value: PolicyEvaluationDecisionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvalDecision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvalDecisionDetails(value: EvalDecisionDetailsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvalDecisionDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvalDecisionDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvalDecisionDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvalResourceName(value: ResourceNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvalResourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvalResourceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvalResourceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchedStatements(value: StatementListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchedStatements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchedStatements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchedStatements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMissingContextValues(value: ContextKeyNamesResultListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingContextValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMissingContextValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingContextValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationsDecisionDetail(value: OrganizationsDecisionDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationsDecisionDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationsDecisionDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationsDecisionDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissionsBoundaryDecisionDetail(value: PermissionsBoundaryDecisionDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryDecisionDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissionsBoundaryDecisionDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PermissionsBoundaryDecisionDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceSpecificResults(value: ResourceSpecificResultListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceSpecificResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceSpecificResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceSpecificResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

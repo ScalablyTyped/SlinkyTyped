@@ -14,14 +14,12 @@ trait PositionType extends js.Object
 
 object PositionType {
   @scala.inline
-  def bottom: typingsSlinky.bizcharts.bizchartsStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.bizcharts.bizchartsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.bizcharts.bizchartsStrings.left = "left".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.left]
   @scala.inline
-  def left: typingsSlinky.bizcharts.bizchartsStrings.left = this.cast("left")
+  def right: typingsSlinky.bizcharts.bizchartsStrings.right = "right".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.right]
   @scala.inline
-  def right: typingsSlinky.bizcharts.bizchartsStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.bizcharts.bizchartsStrings.top = this.cast("top")
+  def top: typingsSlinky.bizcharts.bizchartsStrings.top = "top".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.top]
 }
 

@@ -32,22 +32,89 @@ trait CreateSystemInstanceRequest extends js.Object {
 
 object CreateSystemInstanceRequest {
   @scala.inline
-  def apply(
-    definition: DefinitionDocument,
-    target: DeploymentTarget,
-    flowActionsRoleArn: RoleArn = null,
-    greengrassGroupName: GroupName = null,
-    metricsConfiguration: MetricsConfiguration = null,
-    s3BucketName: S3BucketName = null,
-    tags: TagList = null
-  ): CreateSystemInstanceRequest = {
+  def apply(definition: DefinitionDocument, target: DeploymentTarget): CreateSystemInstanceRequest = {
     val __obj = js.Dynamic.literal(definition = definition.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
-    if (flowActionsRoleArn != null) __obj.updateDynamic("flowActionsRoleArn")(flowActionsRoleArn.asInstanceOf[js.Any])
-    if (greengrassGroupName != null) __obj.updateDynamic("greengrassGroupName")(greengrassGroupName.asInstanceOf[js.Any])
-    if (metricsConfiguration != null) __obj.updateDynamic("metricsConfiguration")(metricsConfiguration.asInstanceOf[js.Any])
-    if (s3BucketName != null) __obj.updateDynamic("s3BucketName")(s3BucketName.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSystemInstanceRequest]
   }
+  @scala.inline
+  implicit class CreateSystemInstanceRequestOps[Self <: CreateSystemInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefinition(value: DefinitionDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: DeploymentTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlowActionsRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flowActionsRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlowActionsRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flowActionsRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGreengrassGroupName(value: GroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("greengrassGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGreengrassGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("greengrassGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricsConfiguration(value: MetricsConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricsConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricsConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricsConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3BucketName(value: S3BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3BucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

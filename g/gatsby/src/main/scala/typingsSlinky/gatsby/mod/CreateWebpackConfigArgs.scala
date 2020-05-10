@@ -6,12 +6,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateWebpackConfigArgs extends ParentSpanPluginArgs {
-  var getConfig: js.Function
-  var loaders: WebpackLoaders
-  var plugins: WebpackPlugins
-  var rules: WebpackRules
-  var stage: GatsbyStages
+  var getConfig: js.Function = js.native
+  var loaders: WebpackLoaders = js.native
+  var plugins: WebpackPlugins = js.native
+  var rules: WebpackRules = js.native
+  var stage: GatsbyStages = js.native
 }
 
 object CreateWebpackConfigArgs {
@@ -20,7 +21,7 @@ object CreateWebpackConfigArgs {
     actions: Actions,
     boundActionCreators: Actions,
     cache: AnonDel,
-    createContentDigest: /* input */ js.Any => String,
+    createContentDigest: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof createContentDigest */ js.Any,
     createNodeId: js.Function,
     emitter: EventEmitter,
     getConfig: js.Function,
@@ -41,9 +42,46 @@ object CreateWebpackConfigArgs {
     store: Store,
     tracing: Tracing
   ): CreateWebpackConfigArgs = {
-    val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], boundActionCreators = boundActionCreators.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], createContentDigest = js.Any.fromFunction1(createContentDigest), createNodeId = createNodeId.asInstanceOf[js.Any], emitter = emitter.asInstanceOf[js.Any], getConfig = getConfig.asInstanceOf[js.Any], getNode = getNode.asInstanceOf[js.Any], getNodeAndSavePathDependency = getNodeAndSavePathDependency.asInstanceOf[js.Any], getNodes = getNodes.asInstanceOf[js.Any], getNodesByType = getNodesByType.asInstanceOf[js.Any], hasNodeChanged = hasNodeChanged.asInstanceOf[js.Any], loadNodeContent = loadNodeContent.asInstanceOf[js.Any], loaders = loaders.asInstanceOf[js.Any], parentSpan = parentSpan.asInstanceOf[js.Any], pathPrefix = pathPrefix.asInstanceOf[js.Any], plugins = plugins.asInstanceOf[js.Any], reporter = reporter.asInstanceOf[js.Any], rules = rules.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], stage = stage.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], tracing = tracing.asInstanceOf[js.Any])
-  
+    val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], boundActionCreators = boundActionCreators.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], createContentDigest = createContentDigest.asInstanceOf[js.Any], createNodeId = createNodeId.asInstanceOf[js.Any], emitter = emitter.asInstanceOf[js.Any], getConfig = getConfig.asInstanceOf[js.Any], getNode = getNode.asInstanceOf[js.Any], getNodeAndSavePathDependency = getNodeAndSavePathDependency.asInstanceOf[js.Any], getNodes = getNodes.asInstanceOf[js.Any], getNodesByType = getNodesByType.asInstanceOf[js.Any], hasNodeChanged = hasNodeChanged.asInstanceOf[js.Any], loadNodeContent = loadNodeContent.asInstanceOf[js.Any], loaders = loaders.asInstanceOf[js.Any], parentSpan = parentSpan.asInstanceOf[js.Any], pathPrefix = pathPrefix.asInstanceOf[js.Any], plugins = plugins.asInstanceOf[js.Any], reporter = reporter.asInstanceOf[js.Any], rules = rules.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], stage = stage.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], tracing = tracing.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateWebpackConfigArgs]
   }
+  @scala.inline
+  implicit class CreateWebpackConfigArgsOps[Self <: CreateWebpackConfigArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetConfig(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoaders(value: WebpackLoaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: WebpackPlugins): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRules(value: WebpackRules): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStage(value: GatsbyStages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Location extends js.Object {
-  var append: js.UndefOr[Boolean] = js.undefined
-  var hash: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var params: js.UndefOr[Dictionary[String]] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var query: js.UndefOr[Dictionary[js.UndefOr[String | (js.Array[String | Null]) | Null]]] = js.undefined
-  var replace: js.UndefOr[Boolean] = js.undefined
+  var append: js.UndefOr[Boolean] = js.native
+  var hash: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var params: js.UndefOr[Dictionary[String]] = js.native
+  var path: js.UndefOr[String] = js.native
+  var query: js.UndefOr[Dictionary[js.UndefOr[String | (js.Array[String | Null]) | Null]]] = js.native
+  var replace: js.UndefOr[Boolean] = js.native
 }
 
 object Location {
   @scala.inline
-  def apply(
-    append: js.UndefOr[Boolean] = js.undefined,
-    hash: String = null,
-    name: String = null,
-    params: Dictionary[String] = null,
-    path: String = null,
-    query: Dictionary[js.UndefOr[String | (js.Array[String | Null]) | Null]] = null,
-    replace: js.UndefOr[Boolean] = js.undefined
-  ): Location = {
+  def apply(): Location = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(append)) __obj.updateDynamic("append")(append.asInstanceOf[js.Any])
-    if (hash != null) __obj.updateDynamic("hash")(hash.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (!js.isUndefined(replace)) __obj.updateDynamic("replace")(replace.asInstanceOf[js.Any])
     __obj.asInstanceOf[Location]
   }
+  @scala.inline
+  implicit class LocationOps[Self <: Location] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppend(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("append")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHash(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: Dictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: Dictionary[js.UndefOr[String | (js.Array[String | Null]) | Null]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

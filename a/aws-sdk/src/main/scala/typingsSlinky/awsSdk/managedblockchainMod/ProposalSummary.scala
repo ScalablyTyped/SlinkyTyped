@@ -38,24 +38,101 @@ trait ProposalSummary extends js.Object {
 
 object ProposalSummary {
   @scala.inline
-  def apply(
-    CreationDate: js.Date = null,
-    Description: DescriptionString = null,
-    ExpirationDate: js.Date = null,
-    ProposalId: ResourceIdString = null,
-    ProposedByMemberId: ResourceIdString = null,
-    ProposedByMemberName: NetworkMemberNameString = null,
-    Status: ProposalStatus = null
-  ): ProposalSummary = {
+  def apply(): ProposalSummary = {
     val __obj = js.Dynamic.literal()
-    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (ExpirationDate != null) __obj.updateDynamic("ExpirationDate")(ExpirationDate.asInstanceOf[js.Any])
-    if (ProposalId != null) __obj.updateDynamic("ProposalId")(ProposalId.asInstanceOf[js.Any])
-    if (ProposedByMemberId != null) __obj.updateDynamic("ProposedByMemberId")(ProposedByMemberId.asInstanceOf[js.Any])
-    if (ProposedByMemberName != null) __obj.updateDynamic("ProposedByMemberName")(ProposedByMemberName.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProposalSummary]
   }
+  @scala.inline
+  implicit class ProposalSummaryOps[Self <: ProposalSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: DescriptionString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProposalId(value: ResourceIdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProposalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposalId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProposedByMemberId(value: ResourceIdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposedByMemberId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProposedByMemberId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposedByMemberId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProposedByMemberName(value: NetworkMemberNameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposedByMemberName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProposedByMemberName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposedByMemberName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ProposalStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

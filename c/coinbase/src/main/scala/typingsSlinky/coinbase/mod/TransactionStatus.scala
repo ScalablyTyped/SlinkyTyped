@@ -17,20 +17,18 @@ trait TransactionStatus extends js.Object
 
 object TransactionStatus {
   @scala.inline
-  def canceled: typingsSlinky.coinbase.coinbaseStrings.canceled = this.cast("canceled")
+  def canceled: typingsSlinky.coinbase.coinbaseStrings.canceled = "canceled".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.canceled]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def completed: typingsSlinky.coinbase.coinbaseStrings.completed = "completed".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.completed]
   @scala.inline
-  def completed: typingsSlinky.coinbase.coinbaseStrings.completed = this.cast("completed")
+  def expired: typingsSlinky.coinbase.coinbaseStrings.expired = "expired".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.expired]
   @scala.inline
-  def expired: typingsSlinky.coinbase.coinbaseStrings.expired = this.cast("expired")
+  def failed: typingsSlinky.coinbase.coinbaseStrings.failed = "failed".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.coinbase.coinbaseStrings.failed = this.cast("failed")
+  def pending: typingsSlinky.coinbase.coinbaseStrings.pending = "pending".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.pending]
   @scala.inline
-  def pending: typingsSlinky.coinbase.coinbaseStrings.pending = this.cast("pending")
+  def waiting_for_clearing: typingsSlinky.coinbase.coinbaseStrings.waiting_for_clearing = "waiting_for_clearing".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.waiting_for_clearing]
   @scala.inline
-  def waiting_for_clearing: typingsSlinky.coinbase.coinbaseStrings.waiting_for_clearing = this.cast("waiting_for_clearing")
-  @scala.inline
-  def waiting_for_signature: typingsSlinky.coinbase.coinbaseStrings.waiting_for_signature = this.cast("waiting_for_signature")
+  def waiting_for_signature: typingsSlinky.coinbase.coinbaseStrings.waiting_for_signature = "waiting_for_signature".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.waiting_for_signature]
 }
 

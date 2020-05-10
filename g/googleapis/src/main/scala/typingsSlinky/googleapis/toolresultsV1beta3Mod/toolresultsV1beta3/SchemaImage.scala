@@ -30,18 +30,65 @@ trait SchemaImage extends js.Object {
 
 object SchemaImage {
   @scala.inline
-  def apply(
-    error: SchemaStatus = null,
-    sourceImage: SchemaToolOutputReference = null,
-    stepId: String = null,
-    thumbnail: SchemaThumbnail = null
-  ): SchemaImage = {
+  def apply(): SchemaImage = {
     val __obj = js.Dynamic.literal()
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (sourceImage != null) __obj.updateDynamic("sourceImage")(sourceImage.asInstanceOf[js.Any])
-    if (stepId != null) __obj.updateDynamic("stepId")(stepId.asInstanceOf[js.Any])
-    if (thumbnail != null) __obj.updateDynamic("thumbnail")(thumbnail.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaImage]
   }
+  @scala.inline
+  implicit class SchemaImageOps[Self <: SchemaImage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: SchemaStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceImage(value: SchemaToolOutputReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbnail(value: SchemaThumbnail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbnail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

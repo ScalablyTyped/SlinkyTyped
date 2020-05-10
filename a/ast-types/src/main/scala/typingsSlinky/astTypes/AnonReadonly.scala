@@ -10,32 +10,113 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonReadonly extends js.Object {
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var optional: js.UndefOr[Boolean | Plussign | `-_`] = js.undefined
-  var readonly: js.UndefOr[Boolean | Plussign | `-_`] = js.undefined
-  var typeAnnotation: js.UndefOr[TSTypeKind | Null] = js.undefined
-  var typeParameter: TSTypeParameterKind
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  var optional: js.UndefOr[Boolean | Plussign | `-_`] = js.native
+  var readonly: js.UndefOr[Boolean | Plussign | `-_`] = js.native
+  var typeAnnotation: js.UndefOr[TSTypeKind | Null] = js.native
+  var typeParameter: TSTypeParameterKind = js.native
 }
 
 object AnonReadonly {
   @scala.inline
-  def apply(
-    typeParameter: TSTypeParameterKind,
-    comments: js.Array[CommentKind] = null,
-    loc: SourceLocationKind = null,
-    optional: Boolean | Plussign | `-_` = null,
-    readonly: Boolean | Plussign | `-_` = null,
-    typeAnnotation: TSTypeKind = null
-  ): AnonReadonly = {
+  def apply(typeParameter: TSTypeParameterKind): AnonReadonly = {
     val __obj = js.Dynamic.literal(typeParameter = typeParameter.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (optional != null) __obj.updateDynamic("optional")(optional.asInstanceOf[js.Any])
-    if (readonly != null) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
-    if (typeAnnotation != null) __obj.updateDynamic("typeAnnotation")(typeAnnotation.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonReadonly]
   }
+  @scala.inline
+  implicit class AnonReadonlyOps[Self <: AnonReadonly] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTypeParameter(value: TSTypeParameterKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[CommentKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommentsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: SourceLocationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
+        ret
+    }
+    @scala.inline
+    def withOptional(value: Boolean | Plussign | `-_`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadonly(value: Boolean | Plussign | `-_`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadonly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readonly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeAnnotation(value: TSTypeKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeAnnotationNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeAnnotation")(null)
+        ret
+    }
+  }
+  
 }
 

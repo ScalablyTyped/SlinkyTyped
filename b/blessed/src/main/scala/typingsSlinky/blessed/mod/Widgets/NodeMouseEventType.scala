@@ -19,24 +19,22 @@ trait NodeMouseEventType extends js.Object
 
 object NodeMouseEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def mouse: typingsSlinky.blessed.blessedStrings.mouse = "mouse".asInstanceOf[typingsSlinky.blessed.blessedStrings.mouse]
   @scala.inline
-  def mouse: typingsSlinky.blessed.blessedStrings.mouse = this.cast("mouse")
+  def mousedown: typingsSlinky.blessed.blessedStrings.mousedown = "mousedown".asInstanceOf[typingsSlinky.blessed.blessedStrings.mousedown]
   @scala.inline
-  def mousedown: typingsSlinky.blessed.blessedStrings.mousedown = this.cast("mousedown")
+  def mousemove: typingsSlinky.blessed.blessedStrings.mousemove = "mousemove".asInstanceOf[typingsSlinky.blessed.blessedStrings.mousemove]
   @scala.inline
-  def mousemove: typingsSlinky.blessed.blessedStrings.mousemove = this.cast("mousemove")
+  def mouseout: typingsSlinky.blessed.blessedStrings.mouseout = "mouseout".asInstanceOf[typingsSlinky.blessed.blessedStrings.mouseout]
   @scala.inline
-  def mouseout: typingsSlinky.blessed.blessedStrings.mouseout = this.cast("mouseout")
+  def mouseover: typingsSlinky.blessed.blessedStrings.mouseover = "mouseover".asInstanceOf[typingsSlinky.blessed.blessedStrings.mouseover]
   @scala.inline
-  def mouseover: typingsSlinky.blessed.blessedStrings.mouseover = this.cast("mouseover")
+  def mouseup: typingsSlinky.blessed.blessedStrings.mouseup = "mouseup".asInstanceOf[typingsSlinky.blessed.blessedStrings.mouseup]
   @scala.inline
-  def mouseup: typingsSlinky.blessed.blessedStrings.mouseup = this.cast("mouseup")
+  def mousewheel: typingsSlinky.blessed.blessedStrings.mousewheel = "mousewheel".asInstanceOf[typingsSlinky.blessed.blessedStrings.mousewheel]
   @scala.inline
-  def mousewheel: typingsSlinky.blessed.blessedStrings.mousewheel = this.cast("mousewheel")
+  def wheeldown: typingsSlinky.blessed.blessedStrings.wheeldown = "wheeldown".asInstanceOf[typingsSlinky.blessed.blessedStrings.wheeldown]
   @scala.inline
-  def wheeldown: typingsSlinky.blessed.blessedStrings.wheeldown = this.cast("wheeldown")
-  @scala.inline
-  def wheelup: typingsSlinky.blessed.blessedStrings.wheelup = this.cast("wheelup")
+  def wheelup: typingsSlinky.blessed.blessedStrings.wheelup = "wheelup".asInstanceOf[typingsSlinky.blessed.blessedStrings.wheelup]
 }
 

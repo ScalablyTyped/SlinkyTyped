@@ -1,6 +1,5 @@
 package typingsSlinky.playmusic.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -87,7 +86,7 @@ trait PlayMusic extends js.Object {
     *
     * @param callback function(error, response) - success callback
     */
-  def getLibrary(callback: js.Function2[/* error */ Error, /* response */ LibraryResponse, Unit]): Unit = js.native
+  def getLibrary(callback: js.Function2[/* error */ js.Error, /* response */ LibraryResponse, Unit]): Unit = js.native
   /**
     * Returns list of all tracks.
     *
@@ -103,7 +102,7 @@ trait PlayMusic extends js.Object {
     *
     * @param callback function(error, response) - success callback
     */
-  def getPlayListEntries(callback: js.Function2[/* error */ Error, /* response */ PlaylistResponse, Unit]): Unit = js.native
+  def getPlayListEntries(callback: js.Function2[/* error */ js.Error, /* response */ PlaylistResponse, Unit]): Unit = js.native
   /**
     * Returns tracks on all playlists.
     *

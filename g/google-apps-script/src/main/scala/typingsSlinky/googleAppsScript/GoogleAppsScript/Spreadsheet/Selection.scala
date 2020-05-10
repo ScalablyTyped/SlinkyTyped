@@ -26,12 +26,13 @@ import scala.scalajs.js.annotation._
   *     }
   *     Logger.log('Active Sheet: ' + selection.getActiveSheet().getName());
   */
+@js.native
 trait Selection extends js.Object {
-  def getActiveRange(): Range | Null
-  def getActiveRangeList(): RangeList | Null
-  def getActiveSheet(): Sheet
-  def getCurrentCell(): Range | Null
-  def getNextDataRange(direction: Direction): Range | Null
+  def getActiveRange(): Range | Null = js.native
+  def getActiveRangeList(): RangeList | Null = js.native
+  def getActiveSheet(): Sheet = js.native
+  def getCurrentCell(): Range | Null = js.native
+  def getNextDataRange(direction: Direction): Range | Null = js.native
 }
 
 object Selection {
@@ -44,8 +45,45 @@ object Selection {
     getNextDataRange: Direction => Range | Null
   ): Selection = {
     val __obj = js.Dynamic.literal(getActiveRange = js.Any.fromFunction0(getActiveRange), getActiveRangeList = js.Any.fromFunction0(getActiveRangeList), getActiveSheet = js.Any.fromFunction0(getActiveSheet), getCurrentCell = js.Any.fromFunction0(getCurrentCell), getNextDataRange = js.Any.fromFunction1(getNextDataRange))
-  
     __obj.asInstanceOf[Selection]
   }
+  @scala.inline
+  implicit class SelectionOps[Self <: Selection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetActiveRange(value: () => Range | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveRange")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetActiveRangeList(value: () => RangeList | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveRangeList")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetActiveSheet(value: () => Sheet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveSheet")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCurrentCell(value: () => Range | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentCell")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNextDataRange(value: Direction => Range | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNextDataRange")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

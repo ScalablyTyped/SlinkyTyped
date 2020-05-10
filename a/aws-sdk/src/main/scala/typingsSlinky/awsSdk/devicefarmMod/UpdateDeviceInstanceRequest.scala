@@ -22,11 +22,47 @@ trait UpdateDeviceInstanceRequest extends js.Object {
 
 object UpdateDeviceInstanceRequest {
   @scala.inline
-  def apply(arn: AmazonResourceName, labels: InstanceLabels = null, profileArn: AmazonResourceName = null): UpdateDeviceInstanceRequest = {
+  def apply(arn: AmazonResourceName): UpdateDeviceInstanceRequest = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (profileArn != null) __obj.updateDynamic("profileArn")(profileArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDeviceInstanceRequest]
   }
+  @scala.inline
+  implicit class UpdateDeviceInstanceRequestOps[Self <: UpdateDeviceInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabels(value: InstanceLabels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfileArn(value: AmazonResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfileArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,20 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GitTreeDiffResponse extends js.Object {
   /**
     * The HTTP client methods find the continuation token header in the response and populate this field.
     */
-  var continuationToken: js.Array[String]
-  var treeDiff: GitTreeDiff
+  var continuationToken: js.Array[String] = js.native
+  var treeDiff: GitTreeDiff = js.native
 }
 
 object GitTreeDiffResponse {
   @scala.inline
   def apply(continuationToken: js.Array[String], treeDiff: GitTreeDiff): GitTreeDiffResponse = {
     val __obj = js.Dynamic.literal(continuationToken = continuationToken.asInstanceOf[js.Any], treeDiff = treeDiff.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GitTreeDiffResponse]
   }
+  @scala.inline
+  implicit class GitTreeDiffResponseOps[Self <: GitTreeDiffResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContinuationToken(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTreeDiff(value: GitTreeDiff): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treeDiff")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

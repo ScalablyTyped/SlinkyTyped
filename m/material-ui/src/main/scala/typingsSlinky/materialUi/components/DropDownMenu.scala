@@ -1,12 +1,11 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Menus.DropDownMenuProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
@@ -17,58 +16,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DropDownMenu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object DropDownMenu {
   @JSImport("material-ui/DropDownMenu", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, multiple, style */
-  def apply(
-    anchorOrigin: origin = null,
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animation: ReactComponentClass[PopoverAnimationProps] = null,
-    iconButton: TagMod[Any] = null,
-    iconStyle: CSSProperties = null,
-    labelStyle: CSSProperties = null,
-    listStyle: CSSProperties = null,
-    maxHeight: Int | Double = null,
-    menuItemStyle: CSSProperties = null,
-    menuStyle: CSSProperties = null,
-    onChange: (/* e */ SyntheticEvent[Event_, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit = null,
-    onClose: /* e */ SyntheticEvent[Event_, js.Object] => Unit = null,
-    openImmediately: js.UndefOr[Boolean] = js.undefined,
-    selectedMenuItemStyle: CSSProperties = null,
-    selectionRenderer: (/* value */ js.Any, /* menuItem */ js.Any) => Unit = null,
-    targetOrigin: origin = null,
-    underlineStyle: CSSProperties = null,
-    value: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (anchorOrigin != null) __obj.updateDynamic("anchorOrigin")(anchorOrigin.asInstanceOf[js.Any])
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (iconButton != null) __obj.updateDynamic("iconButton")(iconButton.asInstanceOf[js.Any])
-    if (iconStyle != null) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
-    if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
-    if (listStyle != null) __obj.updateDynamic("listStyle")(listStyle.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (menuItemStyle != null) __obj.updateDynamic("menuItemStyle")(menuItemStyle.asInstanceOf[js.Any])
-    if (menuStyle != null) __obj.updateDynamic("menuStyle")(menuStyle.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
-    if (!js.isUndefined(openImmediately)) __obj.updateDynamic("openImmediately")(openImmediately.asInstanceOf[js.Any])
-    if (selectedMenuItemStyle != null) __obj.updateDynamic("selectedMenuItemStyle")(selectedMenuItemStyle.asInstanceOf[js.Any])
-    if (selectionRenderer != null) __obj.updateDynamic("selectionRenderer")(js.Any.fromFunction2(selectionRenderer))
-    if (targetOrigin != null) __obj.updateDynamic("targetOrigin")(targetOrigin.asInstanceOf[js.Any])
-    if (underlineStyle != null) __obj.updateDynamic("underlineStyle")(underlineStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def anchorOrigin(value: origin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animation(value: ReactComponentClass[PopoverAnimationProps]): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconButtonReactElement(value: ReactElement): this.type = set("iconButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconButton(value: TagMod[Any]): this.type = set("iconButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconStyle(value: CSSProperties): this.type = set("iconStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelStyle(value: CSSProperties): this.type = set("labelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listStyle(value: CSSProperties): this.type = set("listStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxHeight(value: Double): this.type = set("maxHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuItemStyle(value: CSSProperties): this.type = set("menuItemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuStyle(value: CSSProperties): this.type = set("menuStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(
+      value: (/* e */ SyntheticEvent[Event_, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def onClose(value: /* e */ SyntheticEvent[Event_, js.Object] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def openImmediately(value: Boolean): this.type = set("openImmediately", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedMenuItemStyle(value: CSSProperties): this.type = set("selectedMenuItemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectionRenderer(value: (/* value */ js.Any, /* menuItem */ js.Any) => Unit): this.type = set("selectionRenderer", js.Any.fromFunction2(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetOrigin(value: origin): this.type = set("targetOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineStyle(value: CSSProperties): this.type = set("underlineStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.dropDownMenuMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DropDownMenuProps
+  
+  def withProps(p: DropDownMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DropDownMenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -2,11 +2,6 @@ package typingsSlinky.antdMobile.whiteSpaceMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antdMobile.antdMobileStrings.lg
-import typingsSlinky.antdMobile.antdMobileStrings.md
-import typingsSlinky.antdMobile.antdMobileStrings.sm
-import typingsSlinky.antdMobile.antdMobileStrings.xl
-import typingsSlinky.antdMobile.antdMobileStrings.xs
 import typingsSlinky.antdMobile.whiteSpacePropsTypeMod.WhiteSpacePropsType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
@@ -14,29 +9,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WhiteSpaceProps extends WhiteSpacePropsType {
-  var className: js.UndefOr[String] = js.undefined
-  var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
 }
 
 object WhiteSpaceProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    onClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    prefixCls: String = null,
-    size: xs | sm | md | lg | xl = null,
-    style: CSSProperties = null
-  ): WhiteSpaceProps = {
+  def apply(): WhiteSpaceProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[WhiteSpaceProps]
   }
+  @scala.inline
+  implicit class WhiteSpacePropsOps[Self <: WhiteSpaceProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

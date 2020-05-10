@@ -10,19 +10,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IBidirectionalContainer[IteratorT /* <: IReversableIterator[ValueType[IteratorT], IteratorT, ReverseIteratorT] */, ReverseIteratorT /* <: IReverseIterator[ValueType[IteratorT], IteratorT, ReverseIteratorT] */] extends IForwardContainer[IteratorT] {
   /**
     * Reverse iterator to the first element in reverse.
     *
     * @return Reverse iterator to the first.
     */
-  def rbegin(): ReverseIteratorT
+  def rbegin(): ReverseIteratorT = js.native
   /**
     * Reverse iterator to the reverse end.
     *
     * @return Reverse iterator to the end.
     */
-  def rend(): ReverseIteratorT
+  def rend(): ReverseIteratorT = js.native
 }
 
 @JSImport("tstl/ranges/container/IBidirectionalContainer", "IBidirectionalContainer")

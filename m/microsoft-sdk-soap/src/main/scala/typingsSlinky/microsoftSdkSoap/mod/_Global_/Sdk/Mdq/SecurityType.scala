@@ -15,16 +15,14 @@ trait SecurityType extends js.Object
 
 object SecurityType {
   @scala.inline
-  def Append: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Append = this.cast("Append")
+  def Append: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Append = "Append".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Append]
   @scala.inline
-  def Inheritance: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Inheritance = this.cast("Inheritance")
+  def Inheritance: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Inheritance = "Inheritance".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Inheritance]
   @scala.inline
-  def None: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.None = this.cast("None")
+  def None: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.None = "None".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.None]
   @scala.inline
-  def ParentChild: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.ParentChild = this.cast("ParentChild")
+  def ParentChild: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.ParentChild = "ParentChild".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.ParentChild]
   @scala.inline
-  def Pointer: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Pointer = this.cast("Pointer")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Pointer: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Pointer = "Pointer".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Pointer]
 }
 

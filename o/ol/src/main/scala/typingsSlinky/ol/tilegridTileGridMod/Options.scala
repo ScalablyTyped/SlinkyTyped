@@ -7,38 +7,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var extent: js.UndefOr[Extent] = js.undefined
-  var minZoom: js.UndefOr[Double] = js.undefined
-  var origin: js.UndefOr[Coordinate] = js.undefined
-  var origins: js.UndefOr[js.Array[Coordinate]] = js.undefined
-  var resolutions: js.Array[Double]
-  var sizes: js.UndefOr[js.Array[Size]] = js.undefined
-  var tileSize: js.UndefOr[Double | Size] = js.undefined
-  var tileSizes: js.UndefOr[js.Array[Size]] = js.undefined
+  var extent: js.UndefOr[Extent] = js.native
+  var minZoom: js.UndefOr[Double] = js.native
+  var origin: js.UndefOr[Coordinate] = js.native
+  var origins: js.UndefOr[js.Array[Coordinate]] = js.native
+  var resolutions: js.Array[Double] = js.native
+  var sizes: js.UndefOr[js.Array[Size]] = js.native
+  var tileSize: js.UndefOr[Double | Size] = js.native
+  var tileSizes: js.UndefOr[js.Array[Size]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    resolutions: js.Array[Double],
-    extent: Extent = null,
-    minZoom: Int | Double = null,
-    origin: Coordinate = null,
-    origins: js.Array[Coordinate] = null,
-    sizes: js.Array[Size] = null,
-    tileSize: Double | Size = null,
-    tileSizes: js.Array[Size] = null
-  ): Options = {
+  def apply(resolutions: js.Array[Double]): Options = {
     val __obj = js.Dynamic.literal(resolutions = resolutions.asInstanceOf[js.Any])
-    if (extent != null) __obj.updateDynamic("extent")(extent.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (origins != null) __obj.updateDynamic("origins")(origins.asInstanceOf[js.Any])
-    if (sizes != null) __obj.updateDynamic("sizes")(sizes.asInstanceOf[js.Any])
-    if (tileSize != null) __obj.updateDynamic("tileSize")(tileSize.asInstanceOf[js.Any])
-    if (tileSizes != null) __obj.updateDynamic("tileSizes")(tileSizes.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResolutions(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtent(value: Extent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigins(value: js.Array[Coordinate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizes(value: js.Array[Size]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileSize(value: Double | Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileSizes(value: js.Array[Size]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileSizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSizes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,7 +9,7 @@ package object wafregionalMod {
   type ActivatedRules = js.Array[typingsSlinky.awsSdk.wafregionalMod.ActivatedRule]
   type ByteMatchSetSummaries = js.Array[typingsSlinky.awsSdk.wafregionalMod.ByteMatchSetSummary]
   type ByteMatchSetUpdates = js.Array[typingsSlinky.awsSdk.wafregionalMod.ByteMatchSetUpdate]
-  type ByteMatchTargetString = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.wafregionalMod.Blob | java.lang.String
+  type ByteMatchTargetString = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.wafregionalMod.Blob | java.lang.String
   type ByteMatchTuples = js.Array[typingsSlinky.awsSdk.wafregionalMod.ByteMatchTuple]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.INSERT

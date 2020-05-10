@@ -14,10 +14,29 @@ trait AccountRecoverySettingType extends js.Object {
 
 object AccountRecoverySettingType {
   @scala.inline
-  def apply(RecoveryMechanisms: RecoveryMechanismsType = null): AccountRecoverySettingType = {
+  def apply(): AccountRecoverySettingType = {
     val __obj = js.Dynamic.literal()
-    if (RecoveryMechanisms != null) __obj.updateDynamic("RecoveryMechanisms")(RecoveryMechanisms.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountRecoverySettingType]
   }
+  @scala.inline
+  implicit class AccountRecoverySettingTypeOps[Self <: AccountRecoverySettingType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecoveryMechanisms(value: RecoveryMechanismsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryMechanisms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecoveryMechanisms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryMechanisms")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

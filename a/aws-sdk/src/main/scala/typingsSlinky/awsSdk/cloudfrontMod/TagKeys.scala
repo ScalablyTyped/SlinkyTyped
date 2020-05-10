@@ -14,10 +14,29 @@ trait TagKeys extends js.Object {
 
 object TagKeys {
   @scala.inline
-  def apply(Items: TagKeyList = null): TagKeys = {
+  def apply(): TagKeys = {
     val __obj = js.Dynamic.literal()
-    if (Items != null) __obj.updateDynamic("Items")(Items.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagKeys]
   }
+  @scala.inline
+  implicit class TagKeysOps[Self <: TagKeys] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: TagKeyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Items")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

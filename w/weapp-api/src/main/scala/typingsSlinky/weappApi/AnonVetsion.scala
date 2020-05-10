@@ -4,19 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonVetsion extends js.Object {
   //  插件appId
-  var appId: String
+  var appId: String = js.native
   //  插件版本号
-  var vetsion: String
+  var vetsion: String = js.native
 }
 
 object AnonVetsion {
   @scala.inline
   def apply(appId: String, vetsion: String): AnonVetsion = {
     val __obj = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], vetsion = vetsion.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonVetsion]
   }
+  @scala.inline
+  implicit class AnonVetsionOps[Self <: AnonVetsion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVetsion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vetsion")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

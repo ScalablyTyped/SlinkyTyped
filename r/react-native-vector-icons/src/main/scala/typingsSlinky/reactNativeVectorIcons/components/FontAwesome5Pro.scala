@@ -1,21 +1,20 @@
 package typingsSlinky.reactNativeVectorIcons.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactNativeVectorIcons.fontAwesome5Mod.FontAwesome5IconProps
 import typingsSlinky.reactNativeVectorIcons.fontAwesome5ProMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Couldn't find props for TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactNativeVectorIcons), Name(fontAwesome5Mod), Name(FontAwesome5IconProps))),IArray(),NoComments) because: Could't extract props from TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),Comments(1)) because couldn't resolve ClassTree. */
-object FontAwesome5Pro
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reactNativeVectorIcons.fontAwesome5Mod.FontAwesome5IconProps because: IArray(Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: {[ K in Keys ]: -? std.Partial<std.Pick<T, K>> & std.Partial<std.Record<std.Exclude<Keys, K>, undefined>>}[Keys] * / js.Any because couldn't resolve ClassTree.) */
+object FontAwesome5Pro {
   @JSImport("react-native-vector-icons/FontAwesome5Pro", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = FontAwesome5IconProps
+  def apply(p: FontAwesome5IconProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FontAwesome5Pro.type): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, js.Dictionary.empty))()
 }
 

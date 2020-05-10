@@ -1,7 +1,6 @@
 package typingsSlinky.hapiJoi.mod
 
 import typingsSlinky.hapiJoi.AnonAlternatives
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,8 +53,8 @@ trait Root extends js.Object {
   def assert(value: js.Any, schema: SchemaLike): Unit = js.native
   def assert(value: js.Any, schema: SchemaLike, message: String): Unit = js.native
   def assert(value: js.Any, schema: SchemaLike, message: String, options: ValidationOptions): Unit = js.native
-  def assert(value: js.Any, schema: SchemaLike, message: Error): Unit = js.native
-  def assert(value: js.Any, schema: SchemaLike, message: Error, options: ValidationOptions): Unit = js.native
+  def assert(value: js.Any, schema: SchemaLike, message: js.Error): Unit = js.native
+  def assert(value: js.Any, schema: SchemaLike, message: js.Error, options: ValidationOptions): Unit = js.native
   def assert(value: js.Any, schema: SchemaLike, options: ValidationOptions): Unit = js.native
   /**
     * Validates a value against a schema, returns valid object, and throws if validation fails.
@@ -67,8 +66,8 @@ trait Root extends js.Object {
   def attempt(value: js.Any, schema: SchemaLike): js.Any = js.native
   def attempt(value: js.Any, schema: SchemaLike, message: String): js.Any = js.native
   def attempt(value: js.Any, schema: SchemaLike, message: String, options: ValidationOptions): js.Any = js.native
-  def attempt(value: js.Any, schema: SchemaLike, message: Error): js.Any = js.native
-  def attempt(value: js.Any, schema: SchemaLike, message: Error, options: ValidationOptions): js.Any = js.native
+  def attempt(value: js.Any, schema: SchemaLike, message: js.Error): js.Any = js.native
+  def attempt(value: js.Any, schema: SchemaLike, message: js.Error, options: ValidationOptions): js.Any = js.native
   def attempt(value: js.Any, schema: SchemaLike, options: ValidationOptions): js.Any = js.native
   /**
     * Generates a schema object that matches a Buffer data type (as well as the strings which will be converted to Buffers).

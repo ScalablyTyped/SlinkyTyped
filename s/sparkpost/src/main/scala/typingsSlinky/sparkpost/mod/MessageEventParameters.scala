@@ -4,79 +4,247 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MessageEventParameters extends js.Object {
   /** delimited list of bounce classification codes to search. (See Bounce Classification Codes.) */
-  var bounce_classes: js.UndefOr[(js.Array[String | Double]) | String | Double] = js.undefined
+  var bounce_classes: js.UndefOr[(js.Array[String | Double]) | String | Double] = js.native
   /** delimited list of campaign ID’s to search (i.e. the campaign id used during creation of a transmission). */
-  var campaign_ids: js.UndefOr[js.Array[String] | String] = js.undefined
+  var campaign_ids: js.UndefOr[js.Array[String] | String] = js.native
   /** Specifies the delimiter for query parameter lists */
-  var delimiter: js.UndefOr[String] = js.undefined
+  var delimiter: js.UndefOr[String] = js.native
   /** delimited list of event types to search. Defaults to all event types. */
-  var events: js.UndefOr[js.Array[String] | String] = js.undefined
+  var events: js.UndefOr[js.Array[String] | String] = js.native
   /** delimited list of friendly from emails to search. */
-  var friendly_froms: js.UndefOr[js.Array[String] | String] = js.undefined
+  var friendly_froms: js.UndefOr[js.Array[String] | String] = js.native
   /** Datetime in format of YYYY-MM-DDTHH:MM. */
-  var from: js.UndefOr[String] = js.undefined
+  var from: js.UndefOr[String] = js.native
   /** delimited list of message ID’s to search. */
-  var message_ids: js.UndefOr[js.Array[String] | String] = js.undefined
+  var message_ids: js.UndefOr[js.Array[String] | String] = js.native
   /** The results page number to return. Used with per_page for paging through results. */
-  var page: js.UndefOr[Double] = js.undefined
+  var page: js.UndefOr[Double] = js.native
   /** Number of results to return per page. Must be between 1 and 10,000 (inclusive). */
-  var per_page: js.UndefOr[Double] = js.undefined
+  var per_page: js.UndefOr[Double] = js.native
   /** Bounce/failure/rejection reason that will be matched using a wildcard (e.g., %reason%). */
-  var reason: js.UndefOr[js.Array[String] | String] = js.undefined
+  var reason: js.UndefOr[js.Array[String] | String] = js.native
   /** delimited list of recipients to search. */
-  var recipients: js.UndefOr[js.Array[String] | String] = js.undefined
+  var recipients: js.UndefOr[js.Array[String] | String] = js.native
   /** delimited list of subaccount ID’s to search. */
-  var subaccounts: js.UndefOr[js.Array[Double] | Double] = js.undefined
+  var subaccounts: js.UndefOr[js.Array[Double] | Double] = js.native
   /** delimited list of template ID’s to search. */
-  var template_ids: js.UndefOr[js.Array[String] | String] = js.undefined
+  var template_ids: js.UndefOr[js.Array[String] | String] = js.native
   /** Standard timezone identification string. */
-  var timezone: js.UndefOr[String] = js.undefined
+  var timezone: js.UndefOr[String] = js.native
   /** Datetime in format of YYYY-MM-DDTHH:MM. */
-  var to: js.UndefOr[String] = js.undefined
+  var to: js.UndefOr[String] = js.native
   /** delimited list of transmission ID’s to search (i.e. id generated during creation of a transmission). */
-  var transmission_ids: js.UndefOr[js.Array[String] | String] = js.undefined
+  var transmission_ids: js.UndefOr[js.Array[String] | String] = js.native
 }
 
 object MessageEventParameters {
   @scala.inline
-  def apply(
-    bounce_classes: (js.Array[String | Double]) | String | Double = null,
-    campaign_ids: js.Array[String] | String = null,
-    delimiter: String = null,
-    events: js.Array[String] | String = null,
-    friendly_froms: js.Array[String] | String = null,
-    from: String = null,
-    message_ids: js.Array[String] | String = null,
-    page: Int | Double = null,
-    per_page: Int | Double = null,
-    reason: js.Array[String] | String = null,
-    recipients: js.Array[String] | String = null,
-    subaccounts: js.Array[Double] | Double = null,
-    template_ids: js.Array[String] | String = null,
-    timezone: String = null,
-    to: String = null,
-    transmission_ids: js.Array[String] | String = null
-  ): MessageEventParameters = {
+  def apply(): MessageEventParameters = {
     val __obj = js.Dynamic.literal()
-    if (bounce_classes != null) __obj.updateDynamic("bounce_classes")(bounce_classes.asInstanceOf[js.Any])
-    if (campaign_ids != null) __obj.updateDynamic("campaign_ids")(campaign_ids.asInstanceOf[js.Any])
-    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (friendly_froms != null) __obj.updateDynamic("friendly_froms")(friendly_froms.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (message_ids != null) __obj.updateDynamic("message_ids")(message_ids.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (per_page != null) __obj.updateDynamic("per_page")(per_page.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
-    if (recipients != null) __obj.updateDynamic("recipients")(recipients.asInstanceOf[js.Any])
-    if (subaccounts != null) __obj.updateDynamic("subaccounts")(subaccounts.asInstanceOf[js.Any])
-    if (template_ids != null) __obj.updateDynamic("template_ids")(template_ids.asInstanceOf[js.Any])
-    if (timezone != null) __obj.updateDynamic("timezone")(timezone.asInstanceOf[js.Any])
-    if (to != null) __obj.updateDynamic("to")(to.asInstanceOf[js.Any])
-    if (transmission_ids != null) __obj.updateDynamic("transmission_ids")(transmission_ids.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageEventParameters]
   }
+  @scala.inline
+  implicit class MessageEventParametersOps[Self <: MessageEventParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBounce_classes(value: (js.Array[String | Double]) | String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounce_classes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounce_classes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounce_classes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCampaign_ids(value: js.Array[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("campaign_ids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCampaign_ids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("campaign_ids")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelimiter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: js.Array[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFriendly_froms(value: js.Array[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("friendly_froms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFriendly_froms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("friendly_froms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage_ids(value: js.Array[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message_ids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage_ids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message_ids")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPer_page(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPer_page: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: js.Array[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipients(value: js.Array[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipients: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipients")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubaccounts(value: js.Array[Double] | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubaccounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subaccounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate_ids(value: js.Array[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template_ids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate_ids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template_ids")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimezone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimezone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransmission_ids(value: js.Array[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transmission_ids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransmission_ids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transmission_ids")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,33 +4,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkHours extends js.Object {
   /** Sets the end time to depict the end of working or business hour in a day.
     * @Default {18}
     */
-  var end: js.UndefOr[Double] = js.undefined
+  var end: js.UndefOr[Double] = js.native
   /** When set to true, highlights the work hours of the Schedule.
     * @Default {true}
     */
-  var highlight: js.UndefOr[Boolean] = js.undefined
+  var highlight: js.UndefOr[Boolean] = js.native
   /** Sets the start time to depict the start of working or business hour in a day.
     * @Default {9}
     */
-  var start: js.UndefOr[Double] = js.undefined
+  var start: js.UndefOr[Double] = js.native
 }
 
 object WorkHours {
   @scala.inline
-  def apply(
-    end: Int | Double = null,
-    highlight: js.UndefOr[Boolean] = js.undefined,
-    start: Int | Double = null
-  ): WorkHours = {
+  def apply(): WorkHours = {
     val __obj = js.Dynamic.literal()
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlight)) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkHours]
   }
+  @scala.inline
+  implicit class WorkHoursOps[Self <: WorkHours] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

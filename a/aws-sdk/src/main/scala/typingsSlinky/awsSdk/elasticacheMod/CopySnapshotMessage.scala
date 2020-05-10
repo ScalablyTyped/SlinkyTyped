@@ -26,16 +26,53 @@ trait CopySnapshotMessage extends js.Object {
 
 object CopySnapshotMessage {
   @scala.inline
-  def apply(
-    SourceSnapshotName: String,
-    TargetSnapshotName: String,
-    KmsKeyId: String = null,
-    TargetBucket: String = null
-  ): CopySnapshotMessage = {
+  def apply(SourceSnapshotName: String, TargetSnapshotName: String): CopySnapshotMessage = {
     val __obj = js.Dynamic.literal(SourceSnapshotName = SourceSnapshotName.asInstanceOf[js.Any], TargetSnapshotName = TargetSnapshotName.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
-    if (TargetBucket != null) __obj.updateDynamic("TargetBucket")(TargetBucket.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopySnapshotMessage]
   }
+  @scala.inline
+  implicit class CopySnapshotMessageOps[Self <: CopySnapshotMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSourceSnapshotName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSnapshotName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetSnapshotName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetSnapshotName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetBucket(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetBucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetBucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetBucket")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

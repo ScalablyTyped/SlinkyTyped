@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PersistenceSettings extends js.Object {
   /**
     * Whether to synchronize the in-memory state of multiple tabs. Setting this
@@ -14,7 +15,7 @@ trait PersistenceSettings extends js.Object {
     * @deprecated This setting is deprecated. To enabled synchronization between
     * multiple tabs, please use `synchronizeTabs: true` instead.
     */
-  var experimentalTabSynchronization: js.UndefOr[Boolean] = js.undefined
+  var experimentalTabSynchronization: js.UndefOr[Boolean] = js.native
   /**
     * Whether to synchronize the in-memory state of multiple tabs. Setting this
     * to 'true' in all open tabs enables shared access to local persistence,
@@ -25,19 +26,46 @@ trait PersistenceSettings extends js.Object {
     * active tabs. If omitted or set to 'false', `enablePersistence()` will fail
     * in all but the first tab.
     */
-  var synchronizeTabs: js.UndefOr[Boolean] = js.undefined
+  var synchronizeTabs: js.UndefOr[Boolean] = js.native
 }
 
 object PersistenceSettings {
   @scala.inline
-  def apply(
-    experimentalTabSynchronization: js.UndefOr[Boolean] = js.undefined,
-    synchronizeTabs: js.UndefOr[Boolean] = js.undefined
-  ): PersistenceSettings = {
+  def apply(): PersistenceSettings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(experimentalTabSynchronization)) __obj.updateDynamic("experimentalTabSynchronization")(experimentalTabSynchronization.asInstanceOf[js.Any])
-    if (!js.isUndefined(synchronizeTabs)) __obj.updateDynamic("synchronizeTabs")(synchronizeTabs.asInstanceOf[js.Any])
     __obj.asInstanceOf[PersistenceSettings]
   }
+  @scala.inline
+  implicit class PersistenceSettingsOps[Self <: PersistenceSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExperimentalTabSynchronization(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalTabSynchronization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExperimentalTabSynchronization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalTabSynchronization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynchronizeTabs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronizeTabs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynchronizeTabs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronizeTabs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

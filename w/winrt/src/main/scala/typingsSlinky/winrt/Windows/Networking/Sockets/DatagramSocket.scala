@@ -12,8 +12,6 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Windows.Networking.Sockets.DatagramSocket")
 @js.native
 class DatagramSocket () extends IDatagramSocket {
-  /* CompleteClass */
-  override def close(): Unit = js.native
   def dispose(): Unit = js.native
 }
 

@@ -40,8 +40,51 @@ object TrustedAdvisorCheckResult {
     timestamp: String
   ): TrustedAdvisorCheckResult = {
     val __obj = js.Dynamic.literal(categorySpecificSummary = categorySpecificSummary.asInstanceOf[js.Any], checkId = checkId.asInstanceOf[js.Any], flaggedResources = flaggedResources.asInstanceOf[js.Any], resourcesSummary = resourcesSummary.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TrustedAdvisorCheckResult]
   }
+  @scala.inline
+  implicit class TrustedAdvisorCheckResultOps[Self <: TrustedAdvisorCheckResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategorySpecificSummary(value: TrustedAdvisorCategorySpecificSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categorySpecificSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCheckId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlaggedResources(value: TrustedAdvisorResourceDetailList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flaggedResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourcesSummary(value: TrustedAdvisorResourcesSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourcesSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

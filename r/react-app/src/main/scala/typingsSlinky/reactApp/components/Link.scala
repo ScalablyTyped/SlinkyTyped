@@ -1,28 +1,32 @@
 package typingsSlinky.reactApp.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactApp.mod.LinkProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Link
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactApp.mod.Link] {
+object Link {
   @JSImport("react-app", "Link")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(to: String, onClick: () => Unit = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactApp.mod.Link] = {
-    val __obj = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactApp.mod.Link] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: () => Unit): this.type = set("onClick", js.Any.fromFunction0(value))
   }
-  type Props = LinkProps
+  
+  def withProps(p: LinkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(to: String): Builder = {
+    val __props = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LinkProps]))
+  }
 }
 

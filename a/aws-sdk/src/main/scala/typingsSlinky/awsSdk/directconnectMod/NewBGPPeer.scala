@@ -30,20 +30,77 @@ trait NewBGPPeer extends js.Object {
 
 object NewBGPPeer {
   @scala.inline
-  def apply(
-    addressFamily: AddressFamily = null,
-    amazonAddress: AmazonAddress = null,
-    asn: Int | Double = null,
-    authKey: BGPAuthKey = null,
-    customerAddress: CustomerAddress = null
-  ): NewBGPPeer = {
+  def apply(): NewBGPPeer = {
     val __obj = js.Dynamic.literal()
-    if (addressFamily != null) __obj.updateDynamic("addressFamily")(addressFamily.asInstanceOf[js.Any])
-    if (amazonAddress != null) __obj.updateDynamic("amazonAddress")(amazonAddress.asInstanceOf[js.Any])
-    if (asn != null) __obj.updateDynamic("asn")(asn.asInstanceOf[js.Any])
-    if (authKey != null) __obj.updateDynamic("authKey")(authKey.asInstanceOf[js.Any])
-    if (customerAddress != null) __obj.updateDynamic("customerAddress")(customerAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[NewBGPPeer]
   }
+  @scala.inline
+  implicit class NewBGPPeerOps[Self <: NewBGPPeer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddressFamily(value: AddressFamily): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmazonAddress(value: AmazonAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmazonAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amazonAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAsn(value: ASN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthKey(value: BGPAuthKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomerAddress(value: CustomerAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerAddress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

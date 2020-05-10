@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
   * An HTML content handler that has script execution capability.
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.mobile.ExecScriptMixin because Inheritance from two classes. Inlined execScript */ @JSGlobal("dojox.mobile.dh.HtmlScriptContentHandler")
 @js.native
 class HtmlScriptContentHandler () extends HtmlContentHandler {

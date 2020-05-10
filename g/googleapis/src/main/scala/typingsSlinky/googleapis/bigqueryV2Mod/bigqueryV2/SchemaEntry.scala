@@ -22,11 +22,41 @@ trait SchemaEntry extends js.Object {
 
 object SchemaEntry {
   @scala.inline
-  def apply(itemCount: String = null, predictedLabel: String = null): SchemaEntry = {
+  def apply(): SchemaEntry = {
     val __obj = js.Dynamic.literal()
-    if (itemCount != null) __obj.updateDynamic("itemCount")(itemCount.asInstanceOf[js.Any])
-    if (predictedLabel != null) __obj.updateDynamic("predictedLabel")(predictedLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaEntry]
   }
+  @scala.inline
+  implicit class SchemaEntryOps[Self <: SchemaEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItemCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredictedLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predictedLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredictedLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predictedLabel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

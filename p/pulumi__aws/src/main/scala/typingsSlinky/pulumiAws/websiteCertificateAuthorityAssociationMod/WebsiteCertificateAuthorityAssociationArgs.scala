@@ -23,10 +23,41 @@ trait WebsiteCertificateAuthorityAssociationArgs extends js.Object {
 
 object WebsiteCertificateAuthorityAssociationArgs {
   @scala.inline
-  def apply(certificate: Input[String], fleetArn: Input[String], displayName: Input[String] = null): WebsiteCertificateAuthorityAssociationArgs = {
+  def apply(certificate: Input[String], fleetArn: Input[String]): WebsiteCertificateAuthorityAssociationArgs = {
     val __obj = js.Dynamic.literal(certificate = certificate.asInstanceOf[js.Any], fleetArn = fleetArn.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebsiteCertificateAuthorityAssociationArgs]
   }
+  @scala.inline
+  implicit class WebsiteCertificateAuthorityAssociationArgsOps[Self <: WebsiteCertificateAuthorityAssociationArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificate(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFleetArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fleetArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

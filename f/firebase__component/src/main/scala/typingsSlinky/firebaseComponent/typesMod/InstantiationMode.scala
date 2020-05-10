@@ -12,10 +12,8 @@ trait InstantiationMode extends js.Object
 
 object InstantiationMode {
   @scala.inline
-  def EAGER: typingsSlinky.firebaseComponent.firebaseComponentStrings.EAGER = this.cast("EAGER")
+  def EAGER: typingsSlinky.firebaseComponent.firebaseComponentStrings.EAGER = "EAGER".asInstanceOf[typingsSlinky.firebaseComponent.firebaseComponentStrings.EAGER]
   @scala.inline
-  def LAZY: typingsSlinky.firebaseComponent.firebaseComponentStrings.LAZY = this.cast("LAZY")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def LAZY: typingsSlinky.firebaseComponent.firebaseComponentStrings.LAZY = "LAZY".asInstanceOf[typingsSlinky.firebaseComponent.firebaseComponentStrings.LAZY]
 }
 

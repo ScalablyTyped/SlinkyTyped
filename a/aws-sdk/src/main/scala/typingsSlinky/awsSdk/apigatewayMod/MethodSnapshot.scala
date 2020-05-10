@@ -18,11 +18,41 @@ trait MethodSnapshot extends js.Object {
 
 object MethodSnapshot {
   @scala.inline
-  def apply(apiKeyRequired: js.UndefOr[scala.Boolean] = js.undefined, authorizationType: String = null): MethodSnapshot = {
+  def apply(): MethodSnapshot = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(apiKeyRequired)) __obj.updateDynamic("apiKeyRequired")(apiKeyRequired.asInstanceOf[js.Any])
-    if (authorizationType != null) __obj.updateDynamic("authorizationType")(authorizationType.asInstanceOf[js.Any])
     __obj.asInstanceOf[MethodSnapshot]
   }
+  @scala.inline
+  implicit class MethodSnapshotOps[Self <: MethodSnapshot] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiKeyRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKeyRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiKeyRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKeyRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizationType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

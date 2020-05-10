@@ -22,12 +22,53 @@ trait LabelCountersForWorkteam extends js.Object {
 
 object LabelCountersForWorkteam {
   @scala.inline
-  def apply(HumanLabeled: Int | Double = null, PendingHuman: Int | Double = null, Total: Int | Double = null): LabelCountersForWorkteam = {
+  def apply(): LabelCountersForWorkteam = {
     val __obj = js.Dynamic.literal()
-    if (HumanLabeled != null) __obj.updateDynamic("HumanLabeled")(HumanLabeled.asInstanceOf[js.Any])
-    if (PendingHuman != null) __obj.updateDynamic("PendingHuman")(PendingHuman.asInstanceOf[js.Any])
-    if (Total != null) __obj.updateDynamic("Total")(Total.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelCountersForWorkteam]
   }
+  @scala.inline
+  implicit class LabelCountersForWorkteamOps[Self <: LabelCountersForWorkteam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHumanLabeled(value: LabelCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLabeled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHumanLabeled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HumanLabeled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPendingHuman(value: LabelCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingHuman")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPendingHuman: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PendingHuman")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: LabelCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

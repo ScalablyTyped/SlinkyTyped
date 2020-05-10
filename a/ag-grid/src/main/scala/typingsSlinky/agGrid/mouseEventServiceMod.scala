@@ -1,10 +1,10 @@
 package typingsSlinky.agGrid
 
+import org.scalajs.dom.raw.KeyboardEvent
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.agGrid.cellCompMod.CellComp
 import typingsSlinky.agGrid.gridCellMod.GridCell
 import typingsSlinky.std.Event_
-import typingsSlinky.std.KeyboardEvent
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

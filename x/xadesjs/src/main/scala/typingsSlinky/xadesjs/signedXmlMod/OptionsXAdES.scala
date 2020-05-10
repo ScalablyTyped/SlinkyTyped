@@ -1,53 +1,101 @@
 package typingsSlinky.xadesjs.signedXmlMod
 
-import org.scalajs.dom.crypto.CryptoKey
 import typingsSlinky.xmldsigjs.signedXmlMod.OptionsSign
-import typingsSlinky.xmldsigjs.signedXmlMod.OptionsSignReference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OptionsXAdES extends OptionsSign {
-  var policy: js.UndefOr[OptionsPolicyId | Boolean] = js.undefined
-  var productionPlace: js.UndefOr[OptionsProductionPlace] = js.undefined
-  var signerRole: js.UndefOr[OptionsSignerRole] = js.undefined
+  var policy: js.UndefOr[OptionsPolicyId | Boolean] = js.native
+  var productionPlace: js.UndefOr[OptionsProductionPlace] = js.native
+  var signerRole: js.UndefOr[OptionsSignerRole] = js.native
   /**
     * Sets a certificate of signer for signature. Optional
     *
     * @type {string} base64 string of X509 certificate
     * @memberOf OptionsXAdES
     */
-  var signingCertificate: js.UndefOr[String] = js.undefined
+  var signingCertificate: js.UndefOr[String] = js.native
   /**
     * Sets signing time options
     */
-  var signingTime: js.UndefOr[OptionsSigningTime] = js.undefined
+  var signingTime: js.UndefOr[OptionsSigningTime] = js.native
 }
 
 object OptionsXAdES {
   @scala.inline
-  def apply(
-    id: String = null,
-    keyValue: CryptoKey = null,
-    policy: OptionsPolicyId | Boolean = null,
-    productionPlace: OptionsProductionPlace = null,
-    references: js.Array[OptionsSignReference] = null,
-    signerRole: OptionsSignerRole = null,
-    signingCertificate: String = null,
-    signingTime: OptionsSigningTime = null,
-    x509: js.Array[String] = null
-  ): OptionsXAdES = {
+  def apply(): OptionsXAdES = {
     val __obj = js.Dynamic.literal()
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (keyValue != null) __obj.updateDynamic("keyValue")(keyValue.asInstanceOf[js.Any])
-    if (policy != null) __obj.updateDynamic("policy")(policy.asInstanceOf[js.Any])
-    if (productionPlace != null) __obj.updateDynamic("productionPlace")(productionPlace.asInstanceOf[js.Any])
-    if (references != null) __obj.updateDynamic("references")(references.asInstanceOf[js.Any])
-    if (signerRole != null) __obj.updateDynamic("signerRole")(signerRole.asInstanceOf[js.Any])
-    if (signingCertificate != null) __obj.updateDynamic("signingCertificate")(signingCertificate.asInstanceOf[js.Any])
-    if (signingTime != null) __obj.updateDynamic("signingTime")(signingTime.asInstanceOf[js.Any])
-    if (x509 != null) __obj.updateDynamic("x509")(x509.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsXAdES]
   }
+  @scala.inline
+  implicit class OptionsXAdESOps[Self <: OptionsXAdES] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicy(value: OptionsPolicyId | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductionPlace(value: OptionsProductionPlace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productionPlace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductionPlace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productionPlace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignerRole(value: OptionsSignerRole): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signerRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignerRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signerRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSigningCertificate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signingCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigningCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signingCertificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSigningTime(value: OptionsSigningTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signingTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigningTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signingTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

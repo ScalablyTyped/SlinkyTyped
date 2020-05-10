@@ -30,20 +30,77 @@ trait PlacementStatistics extends js.Object {
 
 object PlacementStatistics {
   @scala.inline
-  def apply(
-    DkimPercentage: Int | Double = null,
-    InboxPercentage: Int | Double = null,
-    MissingPercentage: Int | Double = null,
-    SpamPercentage: Int | Double = null,
-    SpfPercentage: Int | Double = null
-  ): PlacementStatistics = {
+  def apply(): PlacementStatistics = {
     val __obj = js.Dynamic.literal()
-    if (DkimPercentage != null) __obj.updateDynamic("DkimPercentage")(DkimPercentage.asInstanceOf[js.Any])
-    if (InboxPercentage != null) __obj.updateDynamic("InboxPercentage")(InboxPercentage.asInstanceOf[js.Any])
-    if (MissingPercentage != null) __obj.updateDynamic("MissingPercentage")(MissingPercentage.asInstanceOf[js.Any])
-    if (SpamPercentage != null) __obj.updateDynamic("SpamPercentage")(SpamPercentage.asInstanceOf[js.Any])
-    if (SpfPercentage != null) __obj.updateDynamic("SpfPercentage")(SpfPercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlacementStatistics]
   }
+  @scala.inline
+  implicit class PlacementStatisticsOps[Self <: PlacementStatistics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDkimPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DkimPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDkimPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DkimPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInboxPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInboxPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMissingPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMissingPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MissingPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpamPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpamPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpamPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpamPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpfPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpfPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpfPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpfPercentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

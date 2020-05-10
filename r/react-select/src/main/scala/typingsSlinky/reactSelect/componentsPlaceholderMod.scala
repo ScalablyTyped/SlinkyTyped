@@ -2,11 +2,10 @@ package typingsSlinky.reactSelect
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
@@ -22,7 +21,7 @@ import scala.scalajs.js.annotation._
 object componentsPlaceholderMod extends js.Object {
   @js.native
   class Placeholder protected ()
-    extends Component[PlaceholderProps[js.Any], ComponentState, js.Any] {
+    extends Component[PlaceholderProps[js.Any], js.Object, js.Any] {
     def this(props: PlaceholderProps[_]) = this()
     def this(props: PlaceholderProps[_], context: js.Any) = this()
   }
@@ -59,7 +58,7 @@ object componentsPlaceholderMod extends js.Object {
   
   @js.native
   class default protected ()
-    extends Component[PlaceholderProps[js.Any], ComponentState, js.Any] {
+    extends Component[PlaceholderProps[js.Any], js.Object, js.Any] {
     def this(props: PlaceholderProps[_]) = this()
     def this(props: PlaceholderProps[_], context: js.Any) = this()
   }
@@ -67,11 +66,11 @@ object componentsPlaceholderMod extends js.Object {
   def placeholderCSS(): CSSProperties = js.native
   @js.native
   object Placeholder
-    extends TopLevel[ComponentType[PlaceholderProps[js.Any]]]
+    extends TopLevel[ReactComponentClass[PlaceholderProps[js.Any]]]
   
   @js.native
   object default
-    extends TopLevel[ComponentType[PlaceholderProps[js.Any]]]
+    extends TopLevel[ReactComponentClass[PlaceholderProps[js.Any]]]
   
 }
 

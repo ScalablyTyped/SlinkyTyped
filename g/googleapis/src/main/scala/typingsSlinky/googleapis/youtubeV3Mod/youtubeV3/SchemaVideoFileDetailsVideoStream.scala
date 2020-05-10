@@ -49,26 +49,113 @@ trait SchemaVideoFileDetailsVideoStream extends js.Object {
 
 object SchemaVideoFileDetailsVideoStream {
   @scala.inline
-  def apply(
-    aspectRatio: Int | Double = null,
-    bitrateBps: String = null,
-    codec: String = null,
-    frameRateFps: Int | Double = null,
-    heightPixels: Int | Double = null,
-    rotation: String = null,
-    vendor: String = null,
-    widthPixels: Int | Double = null
-  ): SchemaVideoFileDetailsVideoStream = {
+  def apply(): SchemaVideoFileDetailsVideoStream = {
     val __obj = js.Dynamic.literal()
-    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
-    if (bitrateBps != null) __obj.updateDynamic("bitrateBps")(bitrateBps.asInstanceOf[js.Any])
-    if (codec != null) __obj.updateDynamic("codec")(codec.asInstanceOf[js.Any])
-    if (frameRateFps != null) __obj.updateDynamic("frameRateFps")(frameRateFps.asInstanceOf[js.Any])
-    if (heightPixels != null) __obj.updateDynamic("heightPixels")(heightPixels.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (vendor != null) __obj.updateDynamic("vendor")(vendor.asInstanceOf[js.Any])
-    if (widthPixels != null) __obj.updateDynamic("widthPixels")(widthPixels.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVideoFileDetailsVideoStream]
   }
+  @scala.inline
+  implicit class SchemaVideoFileDetailsVideoStreamOps[Self <: SchemaVideoFileDetailsVideoStream] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAspectRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAspectRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBitrateBps(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrateBps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitrateBps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrateBps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrameRateFps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRateFps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameRateFps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRateFps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeightPixels(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightPixels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeightPixels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightPixels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVendor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVendor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidthPixels(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthPixels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidthPixels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthPixels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

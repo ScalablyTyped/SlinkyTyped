@@ -1,15 +1,22 @@
 package typingsSlinky.reactNativeMaps.components
 
+import typingsSlinky.reactNativeMaps.mod.AnimatedRegion
+import typingsSlinky.reactNativeMaps.mod.LatLng
+import typingsSlinky.reactNativeMaps.mod.MarkerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MarkerAnimated
-  extends SharedApply_MarkerProps1253354942[typingsSlinky.reactNativeMaps.mod.MarkerAnimated] {
+object MarkerAnimated {
   @JSImport("react-native-maps", "MarkerAnimated")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: MarkerProps): SharedBuilder_MarkerProps278311419[typingsSlinky.reactNativeMaps.mod.MarkerAnimated] = new SharedBuilder_MarkerProps278311419[typingsSlinky.reactNativeMaps.mod.MarkerAnimated](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(coordinate: LatLng | AnimatedRegion): SharedBuilder_MarkerProps278311419[typingsSlinky.reactNativeMaps.mod.MarkerAnimated] = {
+    val __props = js.Dynamic.literal(coordinate = coordinate.asInstanceOf[js.Any])
+    new SharedBuilder_MarkerProps278311419[typingsSlinky.reactNativeMaps.mod.MarkerAnimated](js.Array(this.component, __props.asInstanceOf[MarkerProps]))
+  }
 }
 

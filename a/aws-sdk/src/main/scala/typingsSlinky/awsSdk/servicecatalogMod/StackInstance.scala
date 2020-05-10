@@ -22,12 +22,53 @@ trait StackInstance extends js.Object {
 
 object StackInstance {
   @scala.inline
-  def apply(Account: AccountId = null, Region: Region = null, StackInstanceStatus: StackInstanceStatus = null): StackInstance = {
+  def apply(): StackInstance = {
     val __obj = js.Dynamic.literal()
-    if (Account != null) __obj.updateDynamic("Account")(Account.asInstanceOf[js.Any])
-    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
-    if (StackInstanceStatus != null) __obj.updateDynamic("StackInstanceStatus")(StackInstanceStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackInstance]
   }
+  @scala.inline
+  implicit class StackInstanceOps[Self <: StackInstance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccount(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Account")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Account")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: Region): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackInstanceStatus(value: StackInstanceStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackInstanceStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackInstanceStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackInstanceStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

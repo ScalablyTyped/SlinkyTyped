@@ -14,14 +14,12 @@ trait iOSActivityType extends js.Object
 
 object iOSActivityType {
   @scala.inline
-  def AutomotiveNavigation: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.AutomotiveNavigation = this.cast("AutomotiveNavigation")
+  def AutomotiveNavigation: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.AutomotiveNavigation = "AutomotiveNavigation".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.AutomotiveNavigation]
   @scala.inline
-  def Fitness: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.Fitness = this.cast("Fitness")
+  def Fitness: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.Fitness = "Fitness".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.Fitness]
   @scala.inline
-  def Other: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.Other = this.cast("Other")
+  def Other: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.Other = "Other".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.Other]
   @scala.inline
-  def OtherNavigation: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.OtherNavigation = this.cast("OtherNavigation")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OtherNavigation: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.OtherNavigation = "OtherNavigation".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.OtherNavigation]
 }
 

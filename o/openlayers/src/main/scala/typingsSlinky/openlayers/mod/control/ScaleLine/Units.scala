@@ -19,16 +19,14 @@ trait Units extends js.Object
 
 object Units {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def degrees: typingsSlinky.openlayers.openlayersStrings.degrees = "degrees".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.degrees]
   @scala.inline
-  def degrees: typingsSlinky.openlayers.openlayersStrings.degrees = this.cast("degrees")
+  def imperial: typingsSlinky.openlayers.openlayersStrings.imperial = "imperial".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.imperial]
   @scala.inline
-  def imperial: typingsSlinky.openlayers.openlayersStrings.imperial = this.cast("imperial")
+  def metric: typingsSlinky.openlayers.openlayersStrings.metric = "metric".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.metric]
   @scala.inline
-  def metric: typingsSlinky.openlayers.openlayersStrings.metric = this.cast("metric")
+  def nautical: typingsSlinky.openlayers.openlayersStrings.nautical = "nautical".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.nautical]
   @scala.inline
-  def nautical: typingsSlinky.openlayers.openlayersStrings.nautical = this.cast("nautical")
-  @scala.inline
-  def us: typingsSlinky.openlayers.openlayersStrings.us = this.cast("us")
+  def us: typingsSlinky.openlayers.openlayersStrings.us = "us".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.us]
 }
 

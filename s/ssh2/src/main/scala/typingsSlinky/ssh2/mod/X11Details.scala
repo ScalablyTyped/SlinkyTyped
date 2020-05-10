@@ -4,19 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait X11Details extends js.Object {
   /** The originating IP of the connection. */
-  var srcIP: String
+  var srcIP: String = js.native
   /** The originating port of the connection. */
-  var srcPort: Double
+  var srcPort: Double = js.native
 }
 
 object X11Details {
   @scala.inline
   def apply(srcIP: String, srcPort: Double): X11Details = {
     val __obj = js.Dynamic.literal(srcIP = srcIP.asInstanceOf[js.Any], srcPort = srcPort.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[X11Details]
   }
+  @scala.inline
+  implicit class X11DetailsOps[Self <: X11Details] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSrcIP(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("srcIP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSrcPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("srcPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

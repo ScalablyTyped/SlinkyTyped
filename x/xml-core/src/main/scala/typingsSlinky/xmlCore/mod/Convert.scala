@@ -14,9 +14,9 @@ class Convert () extends js.Object
 @js.native
 object Convert extends js.Object {
   /* protected */ def Base64Padding(base64: String): String = js.native
-  def FromBase64(base64Text: String): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def FromBase64Url(base64url: String): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def FromBinary(text: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def FromBase64(base64Text: String): js.typedarray.Uint8Array = js.native
+  def FromBase64Url(base64url: String): js.typedarray.Uint8Array = js.native
+  def FromBinary(text: String): js.typedarray.Uint8Array = js.native
   /**
     * Converts Date to string
     *
@@ -36,13 +36,13 @@ object Convert extends js.Object {
     *
     * @memberOf Convert
     */
-  def FromHex(hexString: String): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def FromString(str: String): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def FromString(str: String, enc: XmlBufferEncoding): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def FromUtf8String(text: String): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def ToBase64(buf: scala.scalajs.js.typedarray.Uint8Array): String = js.native
-  def ToBase64Url(data: scala.scalajs.js.typedarray.Uint8Array): String = js.native
-  def ToBinary(buffer: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def FromHex(hexString: String): js.typedarray.Uint8Array = js.native
+  def FromString(str: String): js.typedarray.Uint8Array = js.native
+  def FromString(str: String, enc: XmlBufferEncoding): js.typedarray.Uint8Array = js.native
+  def FromUtf8String(text: String): js.typedarray.Uint8Array = js.native
+  def ToBase64(buf: js.typedarray.Uint8Array): String = js.native
+  def ToBase64Url(data: js.typedarray.Uint8Array): String = js.native
+  def ToBinary(buffer: js.typedarray.Uint8Array): String = js.native
   /**
     * Converts string to Date
     *
@@ -58,9 +58,9 @@ object Convert extends js.Object {
     * @param  {BufferSource} buffer Incoming buffer
     * @returns string
     */
-  def ToHex(buffer: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def ToHex(buffer: js.typedarray.Uint8Array): String = js.native
   def ToString(buffer: BufferSource): String = js.native
   def ToString(buffer: BufferSource, enc: XmlBufferEncoding): String = js.native
-  def ToUtf8String(buffer: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def ToUtf8String(buffer: js.typedarray.Uint8Array): String = js.native
 }
 

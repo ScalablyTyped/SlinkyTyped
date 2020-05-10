@@ -5,18 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Camera extends js.Object {
-  var center: PartialPoint
-  var eye: PartialPoint
-  var up: PartialPoint
+  var center: PartialPoint = js.native
+  var eye: PartialPoint = js.native
+  var up: PartialPoint = js.native
 }
 
 object Camera {
   @scala.inline
   def apply(center: PartialPoint, eye: PartialPoint, up: PartialPoint): Camera = {
     val __obj = js.Dynamic.literal(center = center.asInstanceOf[js.Any], eye = eye.asInstanceOf[js.Any], up = up.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Camera]
   }
+  @scala.inline
+  implicit class CameraOps[Self <: Camera] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCenter(value: PartialPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEye(value: PartialPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eye")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUp(value: PartialPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

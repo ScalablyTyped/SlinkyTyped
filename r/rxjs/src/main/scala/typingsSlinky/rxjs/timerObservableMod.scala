@@ -1,6 +1,5 @@
 package typingsSlinky.rxjs
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,19 +32,19 @@ object timerObservableMod extends js.Object {
       period: Double,
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
-    def create(initialDelay: Date): js.Any = js.native
+    def create(initialDelay: js.Date): js.Any = js.native
     def create(
-      initialDelay: Date,
+      initialDelay: js.Date,
       period: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
     def create(
-      initialDelay: Date,
+      initialDelay: js.Date,
       period: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any,
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
-    def create(initialDelay: Date, period: Double): js.Any = js.native
+    def create(initialDelay: js.Date, period: Double): js.Any = js.native
     def create(
-      initialDelay: Date,
+      initialDelay: js.Date,
       period: Double,
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native

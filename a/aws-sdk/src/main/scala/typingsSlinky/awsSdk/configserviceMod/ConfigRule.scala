@@ -9,15 +9,15 @@ trait ConfigRule extends js.Object {
   /**
     * The Amazon Resource Name (ARN) of the AWS Config rule.
     */
-  var ConfigRuleArn: js.UndefOr[String] = js.native
+  var ConfigRuleArn: js.UndefOr[StringWithCharLimit256] = js.native
   /**
     * The ID of the AWS Config rule.
     */
-  var ConfigRuleId: js.UndefOr[String] = js.native
+  var ConfigRuleId: js.UndefOr[StringWithCharLimit64] = js.native
   /**
     * The name that you assign to the AWS Config rule. The name is required if you are adding a new rule.
     */
-  var ConfigRuleName: js.UndefOr[StringWithCharLimit64] = js.native
+  var ConfigRuleName: js.UndefOr[typingsSlinky.awsSdk.configserviceMod.ConfigRuleName] = js.native
   /**
     * Indicates whether the AWS Config rule is active or is currently being deleted by AWS Config. It can also indicate the evaluation status for the AWS Config rule. AWS Config sets the state of the rule to EVALUATING temporarily after you use the StartConfigRulesEvaluation request to evaluate your resources against the AWS Config rule. AWS Config sets the state of the rule to DELETING_RESULTS temporarily after you use the DeleteEvaluationResults request to delete the current evaluation results for the AWS Config rule. AWS Config temporarily sets the state of a rule to DELETING after you use the DeleteConfigRule request to delete the rule. After AWS Config deletes the rule, the rule and all of its evaluations are erased and are no longer available.
     */
@@ -50,29 +50,131 @@ trait ConfigRule extends js.Object {
 
 object ConfigRule {
   @scala.inline
-  def apply(
-    Source: Source,
-    ConfigRuleArn: String = null,
-    ConfigRuleId: String = null,
-    ConfigRuleName: StringWithCharLimit64 = null,
-    ConfigRuleState: ConfigRuleState = null,
-    CreatedBy: StringWithCharLimit256 = null,
-    Description: EmptiableStringWithCharLimit256 = null,
-    InputParameters: StringWithCharLimit1024 = null,
-    MaximumExecutionFrequency: MaximumExecutionFrequency = null,
-    Scope: Scope = null
-  ): ConfigRule = {
+  def apply(Source: Source): ConfigRule = {
     val __obj = js.Dynamic.literal(Source = Source.asInstanceOf[js.Any])
-    if (ConfigRuleArn != null) __obj.updateDynamic("ConfigRuleArn")(ConfigRuleArn.asInstanceOf[js.Any])
-    if (ConfigRuleId != null) __obj.updateDynamic("ConfigRuleId")(ConfigRuleId.asInstanceOf[js.Any])
-    if (ConfigRuleName != null) __obj.updateDynamic("ConfigRuleName")(ConfigRuleName.asInstanceOf[js.Any])
-    if (ConfigRuleState != null) __obj.updateDynamic("ConfigRuleState")(ConfigRuleState.asInstanceOf[js.Any])
-    if (CreatedBy != null) __obj.updateDynamic("CreatedBy")(CreatedBy.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (InputParameters != null) __obj.updateDynamic("InputParameters")(InputParameters.asInstanceOf[js.Any])
-    if (MaximumExecutionFrequency != null) __obj.updateDynamic("MaximumExecutionFrequency")(MaximumExecutionFrequency.asInstanceOf[js.Any])
-    if (Scope != null) __obj.updateDynamic("Scope")(Scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigRule]
   }
+  @scala.inline
+  implicit class ConfigRuleOps[Self <: ConfigRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSource(value: Source): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfigRuleArn(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigRuleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigRuleId(value: StringWithCharLimit64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigRuleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigRuleName(value: ConfigRuleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigRuleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigRuleState(value: ConfigRuleState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigRuleState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigRuleState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedBy(value: StringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: EmptiableStringWithCharLimit256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputParameters(value: StringWithCharLimit1024): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumExecutionFrequency(value: MaximumExecutionFrequency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumExecutionFrequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumExecutionFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumExecutionFrequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: Scope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

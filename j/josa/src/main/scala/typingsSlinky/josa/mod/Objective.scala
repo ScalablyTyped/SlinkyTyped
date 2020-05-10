@@ -12,10 +12,8 @@ trait Objective extends js.Object
 
 object Objective {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def 를: typingsSlinky.josa.josaStrings.를 = "\uB97C".asInstanceOf[typingsSlinky.josa.josaStrings.를]
   @scala.inline
-  def 를: typingsSlinky.josa.josaStrings.를 = this.cast("\uB97C")
-  @scala.inline
-  def 을: typingsSlinky.josa.josaStrings.을 = this.cast("\uC744")
+  def 을: typingsSlinky.josa.josaStrings.을 = "\uC744".asInstanceOf[typingsSlinky.josa.josaStrings.을]
 }
 

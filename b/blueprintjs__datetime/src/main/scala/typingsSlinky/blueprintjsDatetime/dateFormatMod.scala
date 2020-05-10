@@ -2,7 +2,6 @@ package typingsSlinky.blueprintjsDatetime
 
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`false`
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerBaseProps
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,8 +49,8 @@ object dateFormatMod extends js.Object {
   
   def getFormattedDateString(date: Null, props: IDateFormatProps with IDatePickerBaseProps): String = js.native
   def getFormattedDateString(date: Null, props: IDateFormatProps with IDatePickerBaseProps, ignoreRange: Boolean): String = js.native
-  def getFormattedDateString(date: Date, props: IDateFormatProps with IDatePickerBaseProps): String = js.native
-  def getFormattedDateString(date: Date, props: IDateFormatProps with IDatePickerBaseProps, ignoreRange: Boolean): String = js.native
+  def getFormattedDateString(date: js.Date, props: IDateFormatProps with IDatePickerBaseProps): String = js.native
+  def getFormattedDateString(date: js.Date, props: IDateFormatProps with IDatePickerBaseProps, ignoreRange: Boolean): String = js.native
   @JSName("getFormattedDateString")
   def getFormattedDateString_false(date: `false`, props: IDateFormatProps with IDatePickerBaseProps): String = js.native
   @JSName("getFormattedDateString")

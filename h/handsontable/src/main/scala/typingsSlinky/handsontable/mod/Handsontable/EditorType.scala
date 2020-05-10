@@ -22,24 +22,22 @@ trait EditorType extends js.Object
 
 object EditorType {
   @scala.inline
-  def autocomplete: typingsSlinky.handsontable.handsontableStrings.autocomplete = this.cast("autocomplete")
+  def autocomplete: typingsSlinky.handsontable.handsontableStrings.autocomplete = "autocomplete".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.autocomplete]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def checkbox: typingsSlinky.handsontable.handsontableStrings.checkbox = "checkbox".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.checkbox]
   @scala.inline
-  def checkbox: typingsSlinky.handsontable.handsontableStrings.checkbox = this.cast("checkbox")
+  def date: typingsSlinky.handsontable.handsontableStrings.date = "date".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.date]
   @scala.inline
-  def date: typingsSlinky.handsontable.handsontableStrings.date = this.cast("date")
+  def dropdown: typingsSlinky.handsontable.handsontableStrings.dropdown = "dropdown".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.dropdown]
   @scala.inline
-  def dropdown: typingsSlinky.handsontable.handsontableStrings.dropdown = this.cast("dropdown")
+  def handsontable: typingsSlinky.handsontable.handsontableStrings.handsontable = "handsontable".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.handsontable]
   @scala.inline
-  def handsontable: typingsSlinky.handsontable.handsontableStrings.handsontable = this.cast("handsontable")
+  def mobile: typingsSlinky.handsontable.handsontableStrings.mobile = "mobile".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.mobile]
   @scala.inline
-  def mobile: typingsSlinky.handsontable.handsontableStrings.mobile = this.cast("mobile")
+  def password: typingsSlinky.handsontable.handsontableStrings.password = "password".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.password]
   @scala.inline
-  def password: typingsSlinky.handsontable.handsontableStrings.password = this.cast("password")
+  def select: typingsSlinky.handsontable.handsontableStrings.select = "select".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.select]
   @scala.inline
-  def select: typingsSlinky.handsontable.handsontableStrings.select = this.cast("select")
-  @scala.inline
-  def text: typingsSlinky.handsontable.handsontableStrings.text = this.cast("text")
+  def text: typingsSlinky.handsontable.handsontableStrings.text = "text".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.text]
 }
 

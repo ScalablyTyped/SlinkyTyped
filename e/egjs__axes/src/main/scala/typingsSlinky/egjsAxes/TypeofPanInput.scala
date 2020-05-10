@@ -2,10 +2,10 @@ package typingsSlinky.egjsAxes
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.egjsAxes.constMod.DIRECTION
 import typingsSlinky.egjsAxes.panInputMod.PanInput
 import typingsSlinky.egjsAxes.panInputMod.PanInputOption
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

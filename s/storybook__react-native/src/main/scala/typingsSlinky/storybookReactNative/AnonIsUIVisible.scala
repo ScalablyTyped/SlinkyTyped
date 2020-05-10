@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIsUIVisible extends js.Object {
-  var isUIVisible: Boolean
+  var isUIVisible: Boolean = js.native
 }
 
 object AnonIsUIVisible {
   @scala.inline
   def apply(isUIVisible: Boolean): AnonIsUIVisible = {
     val __obj = js.Dynamic.literal(isUIVisible = isUIVisible.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonIsUIVisible]
   }
+  @scala.inline
+  implicit class AnonIsUIVisibleOps[Self <: AnonIsUIVisible] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsUIVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUIVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

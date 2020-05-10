@@ -18,11 +18,41 @@ trait ListLogSubscriptionsResult extends js.Object {
 
 object ListLogSubscriptionsResult {
   @scala.inline
-  def apply(LogSubscriptions: LogSubscriptions = null, NextToken: NextToken = null): ListLogSubscriptionsResult = {
+  def apply(): ListLogSubscriptionsResult = {
     val __obj = js.Dynamic.literal()
-    if (LogSubscriptions != null) __obj.updateDynamic("LogSubscriptions")(LogSubscriptions.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListLogSubscriptionsResult]
   }
+  @scala.inline
+  implicit class ListLogSubscriptionsResultOps[Self <: ListLogSubscriptionsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogSubscriptions(value: LogSubscriptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogSubscriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogSubscriptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogSubscriptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait GeometryType extends js.Object
 
 object GeometryType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def linestring: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.linestring = "linestring".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.linestring]
   @scala.inline
-  def linestring: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.linestring = this.cast("linestring")
+  def point: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.point = "point".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.point]
   @scala.inline
-  def point: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.point = this.cast("point")
-  @scala.inline
-  def polygon: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polygon = this.cast("polygon")
+  def polygon: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polygon = "polygon".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.polygon]
 }
 

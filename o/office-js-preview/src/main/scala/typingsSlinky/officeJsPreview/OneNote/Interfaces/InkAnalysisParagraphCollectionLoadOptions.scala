@@ -37,3 +37,67 @@ trait InkAnalysisParagraphCollectionLoadOptions extends js.Object {
   var lines: js.UndefOr[InkAnalysisLineCollectionLoadOptions] = js.native
 }
 
+object InkAnalysisParagraphCollectionLoadOptions {
+  @scala.inline
+  def apply(): InkAnalysisParagraphCollectionLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[InkAnalysisParagraphCollectionLoadOptions]
+  }
+  @scala.inline
+  implicit class InkAnalysisParagraphCollectionLoadOptionsOps[Self <: InkAnalysisParagraphCollectionLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInkAnalysis(value: InkAnalysisLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inkAnalysis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInkAnalysis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inkAnalysis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLines(value: InkAnalysisLineCollectionLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

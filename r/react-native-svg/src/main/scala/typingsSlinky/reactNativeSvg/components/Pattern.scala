@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeSvg.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeSvg.mod.ColumnMajorTransformMatrix
 import typingsSlinky.reactNativeSvg.mod.NumberProp
 import typingsSlinky.reactNativeSvg.mod.PatternProps
@@ -13,40 +10,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Pattern
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeSvg.mod.Pattern] {
+object Pattern {
   @JSImport("react-native-svg", "Pattern")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id */
-  def apply(
-    height: NumberProp = null,
-    patternContentUnits: Units = null,
-    patternTransform: ColumnMajorTransformMatrix | String = null,
-    patternUnits: Units = null,
-    preserveAspectRatio: String = null,
-    viewBox: String = null,
-    width: NumberProp = null,
-    x: NumberProp = null,
-    y: NumberProp = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.Pattern] = {
-    val __obj = js.Dynamic.literal()
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (patternContentUnits != null) __obj.updateDynamic("patternContentUnits")(patternContentUnits.asInstanceOf[js.Any])
-    if (patternTransform != null) __obj.updateDynamic("patternTransform")(patternTransform.asInstanceOf[js.Any])
-    if (patternUnits != null) __obj.updateDynamic("patternUnits")(patternUnits.asInstanceOf[js.Any])
-    if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
-    if (viewBox != null) __obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.Pattern] {
+    @scala.inline
+    def height(value: NumberProp): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def patternContentUnits(value: Units): this.type = set("patternContentUnits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def patternTransform(value: ColumnMajorTransformMatrix | String): this.type = set("patternTransform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def patternUnits(value: Units): this.type = set("patternUnits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preserveAspectRatio(value: String): this.type = set("preserveAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewBox(value: String): this.type = set("viewBox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: NumberProp): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def x(value: NumberProp): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y(value: NumberProp): this.type = set("y", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.Pattern] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeSvg.mod.Pattern](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PatternProps
+  
+  def withProps(p: PatternProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Pattern.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

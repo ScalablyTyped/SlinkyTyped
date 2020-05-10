@@ -1,35 +1,40 @@
 package typingsSlinky.handsontable.mod.Handsontable
 
-import typingsSlinky.handsontable.mod.Handsontable.comments.CommentObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CellSettings extends CellMeta {
-  var col: Double
-  var row: Double
+  var col: Double = js.native
+  var row: Double = js.native
 }
 
 object CellSettings {
   @scala.inline
-  def apply(
-    col: Double,
-    row: Double,
-    comment: CommentObject = null,
-    data: String | Double | ColumnDataGetterSetterFunction = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    isSearchResult: js.UndefOr[Boolean] = js.undefined,
-    skipRowOnPaste: js.UndefOr[Boolean] = js.undefined,
-    valid: js.UndefOr[Boolean] = js.undefined
-  ): CellSettings = {
+  def apply(col: Double, row: Double): CellSettings = {
     val __obj = js.Dynamic.literal(col = col.asInstanceOf[js.Any], row = row.asInstanceOf[js.Any])
-    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSearchResult)) __obj.updateDynamic("isSearchResult")(isSearchResult.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipRowOnPaste)) __obj.updateDynamic("skipRowOnPaste")(skipRowOnPaste.asInstanceOf[js.Any])
-    if (!js.isUndefined(valid)) __obj.updateDynamic("valid")(valid.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellSettings]
   }
+  @scala.inline
+  implicit class CellSettingsOps[Self <: CellSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCol(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -3,6 +3,7 @@ package typingsSlinky.graphqlPlaygroundMiddlewareExpress
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.graphqlPlaygroundHtml.renderPlaygroundPageMod.MiddlewareOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,8 +14,8 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   val default: Register = js.native
   type ExpressPlaygroundMiddleware = js.Function3[
-    /* req */ Request_[ParamsDictionary], 
-    /* res */ Response_, 
+    /* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], 
+    /* res */ Response_[js.Any], 
     /* next */ js.Function0[Unit], 
     Unit
   ]

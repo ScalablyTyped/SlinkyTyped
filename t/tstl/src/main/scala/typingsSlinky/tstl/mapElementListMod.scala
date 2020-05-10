@@ -45,7 +45,7 @@ object mapElementListMod extends js.Object {
       *
       * @author Jeongho Nam - https://github.com/samchon
       */
-    /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+    /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.tstl.mapContainerMod.MapContainer.Iterator because var conflicts: value. Inlined first, second */ @js.native
     class Iterator[Key, T, Unique /* <: Boolean */, Source /* <: MapContainer[
         Key, 
@@ -75,11 +75,11 @@ object mapElementListMod extends js.Object {
       /**
         * @inheritDoc
         */
-      def first(): Key = js.native
+      def first: Key = js.native
       /**
         * @inheritDoc
         */
-      def second(): T = js.native
+      def second: T = js.native
       /**
         * @inheritDoc
         */
@@ -96,7 +96,7 @@ object mapElementListMod extends js.Object {
       *
       * @author Jeongho Nam - https://github.com/samchon
       */
-    /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+    /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.tstl.mapContainerMod.MapContainer.ReverseIterator because var conflicts: value. Inlined first, second */ @js.native
     class ReverseIterator[Key, T, Unique /* <: Boolean */, Source /* <: MapContainer[
         Key, 
@@ -118,13 +118,13 @@ object mapElementListMod extends js.Object {
         *
         * @return The first element.
         */
-      def first(): Key = js.native
+      def first: Key = js.native
       /**
         * Get the second, stored element.
         *
         * @return The second element.
         */
-      def second(): T = js.native
+      def second: T = js.native
       /**
         * Set the second, stored element.
         *

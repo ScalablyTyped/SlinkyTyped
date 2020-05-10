@@ -1,15 +1,20 @@
 package typingsSlinky.expoVectorIcons.components
 
+import typingsSlinky.reactNativeVectorIcons.iconMod.IconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Zocial
-  extends SharedApply_IconProps_2082878668[typingsSlinky.expoVectorIcons.mod.Zocial] {
+object Zocial {
   @JSImport("@expo/vector-icons", "Zocial")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IconProps): SharedBuilder_IconProps1765893822[typingsSlinky.expoVectorIcons.mod.Zocial] = new SharedBuilder_IconProps1765893822[typingsSlinky.expoVectorIcons.mod.Zocial](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String): SharedBuilder_IconProps1765893822[typingsSlinky.expoVectorIcons.mod.Zocial] = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new SharedBuilder_IconProps1765893822[typingsSlinky.expoVectorIcons.mod.Zocial](js.Array(this.component, __props.asInstanceOf[IconProps]))
+  }
 }
 

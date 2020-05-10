@@ -2,7 +2,6 @@ package typingsSlinky.remotedevSerialize
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.immutable.Immutable.Collection
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,7 @@ trait TypeofCollection extends js.Object {
   val Keyed: TypeofKeyed = js.native
   val Set: TypeofSet = js.native
   def apply[I /* <: Collection[_, _] */](collection: I): I = js.native
-  def apply[T](collection: Iterable[T]): typingsSlinky.immutable.Immutable.Collection.Indexed[T] = js.native
+  def apply[T](collection: js.Iterable[T]): typingsSlinky.immutable.Immutable.Collection.Indexed[T] = js.native
   def apply[V](obj: StringDictionary[V]): typingsSlinky.immutable.Immutable.Collection.Keyed[String, V] = js.native
   /**
     * @deprecated use `const { isAssociative } = require('immutable')`

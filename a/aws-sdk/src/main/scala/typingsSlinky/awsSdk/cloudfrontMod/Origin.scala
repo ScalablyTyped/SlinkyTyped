@@ -34,20 +34,77 @@ trait Origin extends js.Object {
 
 object Origin {
   @scala.inline
-  def apply(
-    DomainName: String,
-    Id: String,
-    CustomHeaders: CustomHeaders = null,
-    CustomOriginConfig: CustomOriginConfig = null,
-    OriginPath: String = null,
-    S3OriginConfig: S3OriginConfig = null
-  ): Origin = {
+  def apply(DomainName: String, Id: String): Origin = {
     val __obj = js.Dynamic.literal(DomainName = DomainName.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any])
-    if (CustomHeaders != null) __obj.updateDynamic("CustomHeaders")(CustomHeaders.asInstanceOf[js.Any])
-    if (CustomOriginConfig != null) __obj.updateDynamic("CustomOriginConfig")(CustomOriginConfig.asInstanceOf[js.Any])
-    if (OriginPath != null) __obj.updateDynamic("OriginPath")(OriginPath.asInstanceOf[js.Any])
-    if (S3OriginConfig != null) __obj.updateDynamic("S3OriginConfig")(S3OriginConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[Origin]
   }
+  @scala.inline
+  implicit class OriginOps[Self <: Origin] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustomHeaders(value: CustomHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomOriginConfig(value: CustomOriginConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomOriginConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomOriginConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomOriginConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3OriginConfig(value: S3OriginConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3OriginConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3OriginConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3OriginConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

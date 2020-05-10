@@ -22,11 +22,41 @@ trait SchemaBigQueryModelTraining extends js.Object {
 
 object SchemaBigQueryModelTraining {
   @scala.inline
-  def apply(currentIteration: Int | Double = null, expectedTotalIterations: String = null): SchemaBigQueryModelTraining = {
+  def apply(): SchemaBigQueryModelTraining = {
     val __obj = js.Dynamic.literal()
-    if (currentIteration != null) __obj.updateDynamic("currentIteration")(currentIteration.asInstanceOf[js.Any])
-    if (expectedTotalIterations != null) __obj.updateDynamic("expectedTotalIterations")(expectedTotalIterations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBigQueryModelTraining]
   }
+  @scala.inline
+  implicit class SchemaBigQueryModelTrainingOps[Self <: SchemaBigQueryModelTraining] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentIteration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentIteration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentIteration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentIteration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpectedTotalIterations(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedTotalIterations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpectedTotalIterations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expectedTotalIterations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

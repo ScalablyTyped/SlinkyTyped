@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 /**
   * CustomResourceConversion describes how to convert different versions of a CR.
   */
+@js.native
 trait CustomResourceConversion extends js.Object {
   /**
     * strategy specifies how custom resources are converted between versions. Allowed values are:
@@ -17,20 +18,45 @@ trait CustomResourceConversion extends js.Object {
     *   is needed for this option. This requires spec.preserveUnknownFields to be false, and
     * spec.conversion.webhook to be set.
     */
-  var strategy: Input[String]
+  var strategy: Input[String] = js.native
   /**
     * webhook describes how to call the conversion webhook. Required when `strategy` is set to
     * `Webhook`.
     */
-  var webhook: js.UndefOr[Input[WebhookConversion]] = js.undefined
+  var webhook: js.UndefOr[Input[WebhookConversion]] = js.native
 }
 
 object CustomResourceConversion {
   @scala.inline
-  def apply(strategy: Input[String], webhook: Input[WebhookConversion] = null): CustomResourceConversion = {
+  def apply(strategy: Input[String]): CustomResourceConversion = {
     val __obj = js.Dynamic.literal(strategy = strategy.asInstanceOf[js.Any])
-    if (webhook != null) __obj.updateDynamic("webhook")(webhook.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomResourceConversion]
   }
+  @scala.inline
+  implicit class CustomResourceConversionOps[Self <: CustomResourceConversion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStrategy(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebhook(value: Input[WebhookConversion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webhook")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebhook: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webhook")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

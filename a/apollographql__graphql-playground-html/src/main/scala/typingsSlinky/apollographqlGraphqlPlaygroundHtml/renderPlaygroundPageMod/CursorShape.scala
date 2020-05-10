@@ -13,12 +13,10 @@ trait CursorShape extends js.Object
 
 object CursorShape {
   @scala.inline
-  def block: typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.block = this.cast("block")
+  def block: typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.block = "block".asInstanceOf[typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.block]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def line: typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.line = "line".asInstanceOf[typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.line]
   @scala.inline
-  def line: typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.line = this.cast("line")
-  @scala.inline
-  def underline: typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.underline = this.cast("underline")
+  def underline: typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.underline = "underline".asInstanceOf[typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.underline]
 }
 

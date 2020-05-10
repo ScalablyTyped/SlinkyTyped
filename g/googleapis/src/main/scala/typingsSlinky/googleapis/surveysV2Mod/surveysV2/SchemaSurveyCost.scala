@@ -47,18 +47,65 @@ trait SchemaSurveyCost extends js.Object {
 
 object SchemaSurveyCost {
   @scala.inline
-  def apply(
-    costPerResponseNanos: String = null,
-    currencyCode: String = null,
-    maxCostPerResponseNanos: String = null,
-    nanos: String = null
-  ): SchemaSurveyCost = {
+  def apply(): SchemaSurveyCost = {
     val __obj = js.Dynamic.literal()
-    if (costPerResponseNanos != null) __obj.updateDynamic("costPerResponseNanos")(costPerResponseNanos.asInstanceOf[js.Any])
-    if (currencyCode != null) __obj.updateDynamic("currencyCode")(currencyCode.asInstanceOf[js.Any])
-    if (maxCostPerResponseNanos != null) __obj.updateDynamic("maxCostPerResponseNanos")(maxCostPerResponseNanos.asInstanceOf[js.Any])
-    if (nanos != null) __obj.updateDynamic("nanos")(nanos.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSurveyCost]
   }
+  @scala.inline
+  implicit class SchemaSurveyCostOps[Self <: SchemaSurveyCost] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCostPerResponseNanos(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("costPerResponseNanos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCostPerResponseNanos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("costPerResponseNanos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencyCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxCostPerResponseNanos(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCostPerResponseNanos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxCostPerResponseNanos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCostPerResponseNanos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNanos(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nanos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNanos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nanos")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

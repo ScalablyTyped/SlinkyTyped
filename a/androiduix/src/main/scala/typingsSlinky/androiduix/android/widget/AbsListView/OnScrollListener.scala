@@ -4,14 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnScrollListener extends js.Object {
   def onScroll(
     view: typingsSlinky.androiduix.android.widget.AbsListView,
     firstVisibleItem: Double,
     visibleItemCount: Double,
     totalItemCount: Double
-  ): Unit
-  def onScrollStateChanged(view: typingsSlinky.androiduix.android.widget.AbsListView, scrollState: Double): Unit
+  ): Unit = js.native
+  def onScrollStateChanged(view: typingsSlinky.androiduix.android.widget.AbsListView, scrollState: Double): Unit = js.native
 }
 
 @JSGlobal("android.widget.AbsListView.OnScrollListener")

@@ -1,9 +1,8 @@
 package typingsSlinky.reactOnsenui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameOnDeviceBackButton
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.ascend
@@ -16,38 +15,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Toast
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOnsenui.mod.Toast] {
+object Toast {
   @JSImport("react-onsenui", "Toast")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, style */
-  def apply(
-    isOpen: Boolean,
-    animation: default | ascend | lift | fall | fade | none = null,
-    animationOptions: AnimationOptions = null,
-    modifier: String = null,
-    onDeviceBackButton: () => Unit = null,
-    onPostHide: () => Unit = null,
-    onPostShow: () => Unit = null,
-    onPreHide: () => Unit = null,
-    onPreShow: () => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Toast] = {
-    val __obj = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationOptions != null) __obj.updateDynamic("animationOptions")(animationOptions.asInstanceOf[js.Any])
-    if (modifier != null) __obj.updateDynamic("modifier")(modifier.asInstanceOf[js.Any])
-    if (onDeviceBackButton != null) __obj.updateDynamic("onDeviceBackButton")(js.Any.fromFunction0(onDeviceBackButton))
-    if (onPostHide != null) __obj.updateDynamic("onPostHide")(js.Any.fromFunction0(onPostHide))
-    if (onPostShow != null) __obj.updateDynamic("onPostShow")(js.Any.fromFunction0(onPostShow))
-    if (onPreHide != null) __obj.updateDynamic("onPreHide")(js.Any.fromFunction0(onPreHide))
-    if (onPreShow != null) __obj.updateDynamic("onPreShow")(js.Any.fromFunction0(onPreShow))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Toast] {
+    @scala.inline
+    def animation(value: default | ascend | lift | fall | fade | none): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationOptions(value: AnimationOptions): this.type = set("animationOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modifier(value: String): this.type = set("modifier", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDeviceBackButton(value: () => Unit): this.type = set("onDeviceBackButton", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPostHide(value: () => Unit): this.type = set("onPostHide", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPostShow(value: () => Unit): this.type = set("onPostShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPreHide(value: () => Unit): this.type = set("onPreHide", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPreShow(value: () => Unit): this.type = set("onPreShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = HTMLAttributesidclassNameOnDeviceBackButton
+  
+  def withProps(p: HTMLAttributesidclassNameOnDeviceBackButton): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLAttributesidclassNameOnDeviceBackButton]))
+  }
 }
 

@@ -4,35 +4,93 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Enum extends js.Object {
   /** Enum value definitions. */
-  var enumvalue: js.UndefOr[js.Array[EnumValue]] = js.undefined
+  var enumvalue: js.UndefOr[js.Array[EnumValue]] = js.native
   /** Enum type name. */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** Protocol buffer options. */
-  var options: js.UndefOr[js.Array[Option]] = js.undefined
+  var options: js.UndefOr[js.Array[Option]] = js.native
   /** The source context. */
-  var sourceContext: js.UndefOr[SourceContext] = js.undefined
+  var sourceContext: js.UndefOr[SourceContext] = js.native
   /** The source syntax. */
-  var syntax: js.UndefOr[String] = js.undefined
+  var syntax: js.UndefOr[String] = js.native
 }
 
 object Enum {
   @scala.inline
-  def apply(
-    enumvalue: js.Array[EnumValue] = null,
-    name: String = null,
-    options: js.Array[Option] = null,
-    sourceContext: SourceContext = null,
-    syntax: String = null
-  ): Enum = {
+  def apply(): Enum = {
     val __obj = js.Dynamic.literal()
-    if (enumvalue != null) __obj.updateDynamic("enumvalue")(enumvalue.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (sourceContext != null) __obj.updateDynamic("sourceContext")(sourceContext.asInstanceOf[js.Any])
-    if (syntax != null) __obj.updateDynamic("syntax")(syntax.asInstanceOf[js.Any])
     __obj.asInstanceOf[Enum]
   }
+  @scala.inline
+  implicit class EnumOps[Self <: Enum] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnumvalue(value: js.Array[EnumValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumvalue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnumvalue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumvalue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: js.Array[Option]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceContext(value: SourceContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSyntax(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syntax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyntax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syntax")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

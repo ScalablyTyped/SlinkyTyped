@@ -13,12 +13,10 @@ trait Type extends js.Object
 
 object Type {
   @scala.inline
-  def atom: typingsSlinky.feedparser.feedparserStrings.atom = this.cast("atom")
+  def atom: typingsSlinky.feedparser.feedparserStrings.atom = "atom".asInstanceOf[typingsSlinky.feedparser.feedparserStrings.atom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def rdf: typingsSlinky.feedparser.feedparserStrings.rdf = "rdf".asInstanceOf[typingsSlinky.feedparser.feedparserStrings.rdf]
   @scala.inline
-  def rdf: typingsSlinky.feedparser.feedparserStrings.rdf = this.cast("rdf")
-  @scala.inline
-  def rss: typingsSlinky.feedparser.feedparserStrings.rss = this.cast("rss")
+  def rss: typingsSlinky.feedparser.feedparserStrings.rss = "rss".asInstanceOf[typingsSlinky.feedparser.feedparserStrings.rss]
 }
 

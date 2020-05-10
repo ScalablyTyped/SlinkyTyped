@@ -33,42 +33,18 @@ class IScroll protected () extends js.Object {
   def scrollTo(x: Double, y: Double, time: Double, relative: Boolean): Unit = js.native
   def scrollToElement(element: String): Unit = js.native
   def scrollToElement(element: String, time: Double): Unit = js.native
-  def scrollToElement(element: typingsSlinky.std.HTMLElement): Unit = js.native
-  def scrollToElement(element: typingsSlinky.std.HTMLElement, time: Double): Unit = js.native
-  def scrollToElement(element: typingsSlinky.std.HTMLElement, time: Double, offsetX: Boolean): Unit = js.native
-  def scrollToElement(element: typingsSlinky.std.HTMLElement, time: Double, offsetX: Boolean, offsetY: Boolean): Unit = js.native
-  def scrollToElement(
-    element: typingsSlinky.std.HTMLElement,
-    time: Double,
-    offsetX: Boolean,
-    offsetY: Boolean,
-    easing: js.Function
-  ): Unit = js.native
-  def scrollToElement(element: typingsSlinky.std.HTMLElement, time: Double, offsetX: Boolean, offsetY: Double): Unit = js.native
-  def scrollToElement(
-    element: typingsSlinky.std.HTMLElement,
-    time: Double,
-    offsetX: Boolean,
-    offsetY: Double,
-    easing: js.Function
-  ): Unit = js.native
-  def scrollToElement(element: typingsSlinky.std.HTMLElement, time: Double, offsetX: Double): Unit = js.native
-  def scrollToElement(element: typingsSlinky.std.HTMLElement, time: Double, offsetX: Double, offsetY: Boolean): Unit = js.native
-  def scrollToElement(
-    element: typingsSlinky.std.HTMLElement,
-    time: Double,
-    offsetX: Double,
-    offsetY: Boolean,
-    easing: js.Function
-  ): Unit = js.native
-  def scrollToElement(element: typingsSlinky.std.HTMLElement, time: Double, offsetX: Double, offsetY: Double): Unit = js.native
-  def scrollToElement(
-    element: typingsSlinky.std.HTMLElement,
-    time: Double,
-    offsetX: Double,
-    offsetY: Double,
-    easing: js.Function
-  ): Unit = js.native
+  def scrollToElement(element: HTMLElement): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double, offsetX: Boolean): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double, offsetX: Boolean, offsetY: Boolean): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double, offsetX: Boolean, offsetY: Boolean, easing: js.Function): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double, offsetX: Boolean, offsetY: Double): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double, offsetX: Boolean, offsetY: Double, easing: js.Function): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double, offsetX: Double): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double, offsetX: Double, offsetY: Boolean): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double, offsetX: Double, offsetY: Boolean, easing: js.Function): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double, offsetX: Double, offsetY: Double): Unit = js.native
+  def scrollToElement(element: HTMLElement, time: Double, offsetX: Double, offsetY: Double, easing: js.Function): Unit = js.native
   def stop(): Unit = js.native
   def zoom(scale: Double): Unit = js.native
   def zoom(scale: Double, x: Double): Unit = js.native

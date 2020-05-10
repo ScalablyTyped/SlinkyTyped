@@ -12,10 +12,8 @@ trait Mode extends js.Object
 
 object Mode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ios: typingsSlinky.ionicCore.ionicCoreStrings.ios = "ios".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.ios]
   @scala.inline
-  def ios: typingsSlinky.ionicCore.ionicCoreStrings.ios = this.cast("ios")
-  @scala.inline
-  def md: typingsSlinky.ionicCore.ionicCoreStrings.md = this.cast("md")
+  def md: typingsSlinky.ionicCore.ionicCoreStrings.md = "md".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.md]
 }
 

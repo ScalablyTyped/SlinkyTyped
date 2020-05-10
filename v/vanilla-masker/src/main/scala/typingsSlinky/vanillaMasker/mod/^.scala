@@ -1,7 +1,8 @@
 package typingsSlinky.vanillaMasker.mod
 
-import typingsSlinky.std.Element
-import typingsSlinky.std.NodeListOf
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Node
+import org.scalajs.dom.raw.NodeListOf
 import typingsSlinky.vanillaMasker.AnonMaskAlphaNum
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object ^ extends js.Object {
   def apply(el: Element): AnonMaskAlphaNum = js.native
-  def apply(el: NodeListOf[Element]): AnonMaskAlphaNum = js.native
+  def apply(el: NodeListOf[Element with Node]): AnonMaskAlphaNum = js.native
   def toAlphaNumeric(value: String): String = js.native
   def toAlphaNumeric(value: Double): String = js.native
   def toMoney(value: String): String = js.native

@@ -30,20 +30,77 @@ trait ActionState extends js.Object {
 
 object ActionState {
   @scala.inline
-  def apply(
-    actionName: ActionName = null,
-    currentRevision: ActionRevision = null,
-    entityUrl: Url = null,
-    latestExecution: ActionExecution = null,
-    revisionUrl: Url = null
-  ): ActionState = {
+  def apply(): ActionState = {
     val __obj = js.Dynamic.literal()
-    if (actionName != null) __obj.updateDynamic("actionName")(actionName.asInstanceOf[js.Any])
-    if (currentRevision != null) __obj.updateDynamic("currentRevision")(currentRevision.asInstanceOf[js.Any])
-    if (entityUrl != null) __obj.updateDynamic("entityUrl")(entityUrl.asInstanceOf[js.Any])
-    if (latestExecution != null) __obj.updateDynamic("latestExecution")(latestExecution.asInstanceOf[js.Any])
-    if (revisionUrl != null) __obj.updateDynamic("revisionUrl")(revisionUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionState]
   }
+  @scala.inline
+  implicit class ActionStateOps[Self <: ActionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionName(value: ActionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentRevision(value: ActionRevision): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRevision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentRevision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRevision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityUrl(value: Url): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestExecution(value: ActionExecution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestExecution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestExecution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestExecution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionUrl(value: Url): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

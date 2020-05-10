@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var allowRegexp: js.UndefOr[Boolean] = js.undefined
-  var context: js.UndefOr[Context] = js.undefined
-  var data: js.UndefOr[Context] = js.undefined
-  var force: js.UndefOr[Boolean] = js.undefined
-  var globals: js.UndefOr[Boolean] = js.undefined
-  var locals: js.UndefOr[Locals] = js.undefined
-  var parent: js.UndefOr[Context] = js.undefined
-  var rootContext: js.UndefOr[Context] = js.undefined
-  var source: js.UndefOr[Context] = js.undefined
+  var allowRegexp: js.UndefOr[Boolean] = js.native
+  var context: js.UndefOr[Context] = js.native
+  var data: js.UndefOr[Context] = js.native
+  var force: js.UndefOr[Boolean] = js.native
+  var globals: js.UndefOr[Boolean] = js.native
+  var locals: js.UndefOr[Locals] = js.native
+  var parent: js.UndefOr[Context] = js.native
+  var rootContext: js.UndefOr[Context] = js.native
+  var source: js.UndefOr[Context] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    allowRegexp: js.UndefOr[Boolean] = js.undefined,
-    context: Context = null,
-    data: Context = null,
-    force: js.UndefOr[Boolean] = js.undefined,
-    globals: js.UndefOr[Boolean] = js.undefined,
-    locals: Locals = null,
-    parent: Context = null,
-    rootContext: Context = null,
-    source: Context = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowRegexp)) __obj.updateDynamic("allowRegexp")(allowRegexp.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.asInstanceOf[js.Any])
-    if (!js.isUndefined(globals)) __obj.updateDynamic("globals")(globals.asInstanceOf[js.Any])
-    if (locals != null) __obj.updateDynamic("locals")(locals.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (rootContext != null) __obj.updateDynamic("rootContext")(rootContext.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowRegexp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRegexp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowRegexp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowRegexp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: Context): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: Context): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocals(value: Locals): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: Context): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootContext(value: Context): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: Context): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,7 +17,7 @@ trait ReactChildren extends js.Object {
   def map[T, C](children: C, fn: js.Function2[/* child */ C, /* index */ Double, T]): (js.Array[Exclude[T, js.UndefOr[Boolean | Null]]]) | C = js.native
   def map[T, C](children: js.Array[C], fn: js.Function2[/* child */ C, /* index */ Double, T]): (js.Array[Exclude[T, js.UndefOr[Boolean | Null]]]) | C = js.native
   def only[C](children: C): C = js.native
-  def toArray(children: js.Array[ReactNode]): js.Array[Exclude[TagMod[Any], js.UndefOr[Boolean | Null]]] = js.native
-  def toArray(children: ReactNode): js.Array[Exclude[TagMod[Any], js.UndefOr[Boolean | Null]]] = js.native
+  def toArray(children: js.Array[TagMod[Any]]): js.Array[Exclude[TagMod[Any], js.UndefOr[Boolean | Null]]] = js.native
+  def toArray(children: TagMod[Any]): js.Array[Exclude[TagMod[Any], js.UndefOr[Boolean | Null]]] = js.native
 }
 

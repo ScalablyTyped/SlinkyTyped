@@ -18,22 +18,20 @@ trait CannedAcl extends js.Object
 
 object CannedAcl {
   @scala.inline
-  def `authenticated-read`: typingsSlinky.pulumiAws.pulumiAwsStrings.`authenticated-read` = this.cast("authenticated-read")
+  def `authenticated-read`: typingsSlinky.pulumiAws.pulumiAwsStrings.`authenticated-read` = "authenticated-read".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`authenticated-read`]
   @scala.inline
-  def `aws-exec-read`: typingsSlinky.pulumiAws.pulumiAwsStrings.`aws-exec-read` = this.cast("aws-exec-read")
+  def `aws-exec-read`: typingsSlinky.pulumiAws.pulumiAwsStrings.`aws-exec-read` = "aws-exec-read".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`aws-exec-read`]
   @scala.inline
-  def `bucket-owner-full-control`: typingsSlinky.pulumiAws.pulumiAwsStrings.`bucket-owner-full-control` = this.cast("bucket-owner-full-control")
+  def `bucket-owner-full-control`: typingsSlinky.pulumiAws.pulumiAwsStrings.`bucket-owner-full-control` = "bucket-owner-full-control".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`bucket-owner-full-control`]
   @scala.inline
-  def `bucket-owner-read`: typingsSlinky.pulumiAws.pulumiAwsStrings.`bucket-owner-read` = this.cast("bucket-owner-read")
+  def `bucket-owner-read`: typingsSlinky.pulumiAws.pulumiAwsStrings.`bucket-owner-read` = "bucket-owner-read".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`bucket-owner-read`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `log-delivery-write`: typingsSlinky.pulumiAws.pulumiAwsStrings.`log-delivery-write` = "log-delivery-write".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`log-delivery-write`]
   @scala.inline
-  def `log-delivery-write`: typingsSlinky.pulumiAws.pulumiAwsStrings.`log-delivery-write` = this.cast("log-delivery-write")
+  def `private`: typingsSlinky.pulumiAws.pulumiAwsStrings.`private` = "private".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`private`]
   @scala.inline
-  def `private`: typingsSlinky.pulumiAws.pulumiAwsStrings.`private` = this.cast("private")
+  def `public-read`: typingsSlinky.pulumiAws.pulumiAwsStrings.`public-read` = "public-read".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`public-read`]
   @scala.inline
-  def `public-read`: typingsSlinky.pulumiAws.pulumiAwsStrings.`public-read` = this.cast("public-read")
-  @scala.inline
-  def `public-read-write`: typingsSlinky.pulumiAws.pulumiAwsStrings.`public-read-write` = this.cast("public-read-write")
+  def `public-read-write`: typingsSlinky.pulumiAws.pulumiAwsStrings.`public-read-write` = "public-read-write".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.`public-read-write`]
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.looksSame.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +10,8 @@ import scala.scalajs.js.annotation._
 object createDiff extends js.Object {
   def apply(
     options: CreateDiffAsBufferOptions,
-    callback: js.Function2[/* error */ Error | Null, /* buffer */ Buffer, _]
+    callback: js.Function2[/* error */ js.Error | Null, /* buffer */ Buffer, _]
   ): Unit = js.native
-  def apply(options: CreateDiffOptions, callback: js.Function1[/* error */ Error | Null, _]): Unit = js.native
+  def apply(options: CreateDiffOptions, callback: js.Function1[/* error */ js.Error | Null, _]): Unit = js.native
 }
 

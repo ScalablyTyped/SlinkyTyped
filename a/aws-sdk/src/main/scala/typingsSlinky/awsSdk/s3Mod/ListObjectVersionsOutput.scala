@@ -62,36 +62,173 @@ trait ListObjectVersionsOutput extends js.Object {
 
 object ListObjectVersionsOutput {
   @scala.inline
-  def apply(
-    CommonPrefixes: CommonPrefixList = null,
-    DeleteMarkers: DeleteMarkers = null,
-    Delimiter: Delimiter = null,
-    EncodingType: EncodingType = null,
-    IsTruncated: js.UndefOr[Boolean] = js.undefined,
-    KeyMarker: KeyMarker = null,
-    MaxKeys: Int | Double = null,
-    Name: BucketName = null,
-    NextKeyMarker: NextKeyMarker = null,
-    NextVersionIdMarker: NextVersionIdMarker = null,
-    Prefix: Prefix = null,
-    VersionIdMarker: VersionIdMarker = null,
-    Versions: ObjectVersionList = null
-  ): ListObjectVersionsOutput = {
+  def apply(): ListObjectVersionsOutput = {
     val __obj = js.Dynamic.literal()
-    if (CommonPrefixes != null) __obj.updateDynamic("CommonPrefixes")(CommonPrefixes.asInstanceOf[js.Any])
-    if (DeleteMarkers != null) __obj.updateDynamic("DeleteMarkers")(DeleteMarkers.asInstanceOf[js.Any])
-    if (Delimiter != null) __obj.updateDynamic("Delimiter")(Delimiter.asInstanceOf[js.Any])
-    if (EncodingType != null) __obj.updateDynamic("EncodingType")(EncodingType.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsTruncated)) __obj.updateDynamic("IsTruncated")(IsTruncated.asInstanceOf[js.Any])
-    if (KeyMarker != null) __obj.updateDynamic("KeyMarker")(KeyMarker.asInstanceOf[js.Any])
-    if (MaxKeys != null) __obj.updateDynamic("MaxKeys")(MaxKeys.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (NextKeyMarker != null) __obj.updateDynamic("NextKeyMarker")(NextKeyMarker.asInstanceOf[js.Any])
-    if (NextVersionIdMarker != null) __obj.updateDynamic("NextVersionIdMarker")(NextVersionIdMarker.asInstanceOf[js.Any])
-    if (Prefix != null) __obj.updateDynamic("Prefix")(Prefix.asInstanceOf[js.Any])
-    if (VersionIdMarker != null) __obj.updateDynamic("VersionIdMarker")(VersionIdMarker.asInstanceOf[js.Any])
-    if (Versions != null) __obj.updateDynamic("Versions")(Versions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListObjectVersionsOutput]
   }
+  @scala.inline
+  implicit class ListObjectVersionsOutputOps[Self <: ListObjectVersionsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommonPrefixes(value: CommonPrefixList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommonPrefixes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonPrefixes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommonPrefixes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteMarkers(value: DeleteMarkers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteMarkers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteMarkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteMarkers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelimiter(value: Delimiter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Delimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Delimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncodingType(value: EncodingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncodingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncodingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTruncated(value: IsTruncated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTruncated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyMarker(value: KeyMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxKeys(value: MaxKeys): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextKeyMarker(value: NextKeyMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextKeyMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextKeyMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextKeyMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextVersionIdMarker(value: NextVersionIdMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextVersionIdMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextVersionIdMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextVersionIdMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: Prefix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionIdMarker(value: VersionIdMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionIdMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionIdMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionIdMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersions(value: ObjectVersionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Versions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Versions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

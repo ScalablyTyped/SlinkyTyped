@@ -1,9 +1,8 @@
 package typingsSlinky.materialUiCore.formLabelFormLabelMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +10,12 @@ import scala.scalajs.js.annotation._
 @JSImport("@material-ui/core/FormLabel/FormLabel", JSImport.Default)
 @js.native
 class default protected ()
-  extends Component[FormLabelProps, ComponentState, js.Any] {
+  extends Component[FormLabelProps, js.Object, js.Any] {
   def this(props: FormLabelProps) = this()
   def this(props: FormLabelProps, context: js.Any) = this()
 }
 
 @JSImport("@material-ui/core/FormLabel/FormLabel", JSImport.Default)
 @js.native
-object default extends TopLevel[ComponentType[FormLabelProps]]
+object default extends TopLevel[ReactComponentClass[FormLabelProps]]
 

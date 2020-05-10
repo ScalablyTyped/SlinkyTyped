@@ -1,6 +1,14 @@
 package typingsSlinky.chromeApps.WebView
 
-import typingsSlinky.chromeApps.chromeAppsStrings.all_
+import typingsSlinky.chromeApps.chromeAppsStrings.all__
+import typingsSlinky.chromeApps.chromeAppsStrings.audio_
+import typingsSlinky.chromeApps.chromeAppsStrings.editable_
+import typingsSlinky.chromeApps.chromeAppsStrings.frame_
+import typingsSlinky.chromeApps.chromeAppsStrings.image_
+import typingsSlinky.chromeApps.chromeAppsStrings.link_
+import typingsSlinky.chromeApps.chromeAppsStrings.page_
+import typingsSlinky.chromeApps.chromeAppsStrings.selection_
+import typingsSlinky.chromeApps.chromeAppsStrings.video_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,38 +18,36 @@ import scala.scalajs.js.annotation._
   * Specifying 'all' is equivalent to the combination of all other contexts.
   **/
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.chromeApps.chromeAppsStrings.all_
-  - typingsSlinky.chromeApps.chromeAppsStrings.page
-  - typingsSlinky.chromeApps.chromeAppsStrings.frame
-  - typingsSlinky.chromeApps.chromeAppsStrings.selection
-  - typingsSlinky.chromeApps.chromeAppsStrings.link
-  - typingsSlinky.chromeApps.chromeAppsStrings.editable
-  - typingsSlinky.chromeApps.chromeAppsStrings.image
-  - typingsSlinky.chromeApps.chromeAppsStrings.video
-  - typingsSlinky.chromeApps.chromeAppsStrings.audio
+  - typingsSlinky.chromeApps.chromeAppsStrings.all__
+  - typingsSlinky.chromeApps.chromeAppsStrings.page_
+  - typingsSlinky.chromeApps.chromeAppsStrings.frame_
+  - typingsSlinky.chromeApps.chromeAppsStrings.selection_
+  - typingsSlinky.chromeApps.chromeAppsStrings.link_
+  - typingsSlinky.chromeApps.chromeAppsStrings.editable_
+  - typingsSlinky.chromeApps.chromeAppsStrings.image_
+  - typingsSlinky.chromeApps.chromeAppsStrings.video_
+  - typingsSlinky.chromeApps.chromeAppsStrings.audio_
 */
 trait ContextType extends js.Object
 
 object ContextType {
   @scala.inline
-  def all: all_ = this.cast("all")
+  def all: all__ = "all".asInstanceOf[all__]
   @scala.inline
-  def audio: typingsSlinky.chromeApps.chromeAppsStrings.audio = this.cast("audio")
+  def audio: audio_ = "audio".asInstanceOf[audio_]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def editable: editable_ = "editable".asInstanceOf[editable_]
   @scala.inline
-  def editable: typingsSlinky.chromeApps.chromeAppsStrings.editable = this.cast("editable")
+  def frame: frame_ = "frame".asInstanceOf[frame_]
   @scala.inline
-  def frame: typingsSlinky.chromeApps.chromeAppsStrings.frame = this.cast("frame")
+  def image: image_ = "image".asInstanceOf[image_]
   @scala.inline
-  def image: typingsSlinky.chromeApps.chromeAppsStrings.image = this.cast("image")
+  def link: link_ = "link".asInstanceOf[link_]
   @scala.inline
-  def link: typingsSlinky.chromeApps.chromeAppsStrings.link = this.cast("link")
+  def page: page_ = "page".asInstanceOf[page_]
   @scala.inline
-  def page: typingsSlinky.chromeApps.chromeAppsStrings.page = this.cast("page")
+  def selection: selection_ = "selection".asInstanceOf[selection_]
   @scala.inline
-  def selection: typingsSlinky.chromeApps.chromeAppsStrings.selection = this.cast("selection")
-  @scala.inline
-  def video: typingsSlinky.chromeApps.chromeAppsStrings.video = this.cast("video")
+  def video: video_ = "video".asInstanceOf[video_]
 }
 

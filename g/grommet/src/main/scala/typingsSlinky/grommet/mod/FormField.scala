@@ -1,15 +1,14 @@
 package typingsSlinky.grommet.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLInputElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.formFieldMod.FormFieldProps
 import typingsSlinky.grommet.grommetStrings.placeholder
 import typingsSlinky.grommet.utilsMod.Omit
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.InputHTMLAttributes
-import typingsSlinky.std.HTMLInputElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,22 +21,16 @@ class FormField protected ()
         DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
         placeholder
       ]), 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
   def this(props: FormFieldProps with (Omit[
-        DetailedHTMLProps[
-          InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement], 
-          org.scalajs.dom.raw.HTMLInputElement
-        ], 
+        DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
         placeholder
       ])) = this()
   def this(
     props: FormFieldProps with (Omit[
-        DetailedHTMLProps[
-          InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement], 
-          org.scalajs.dom.raw.HTMLInputElement
-        ], 
+        DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
         placeholder
       ]),
     context: js.Any
@@ -47,12 +40,11 @@ class FormField protected ()
 @JSImport("grommet", "FormField")
 @js.native
 object FormField extends TopLevel[
-      ComponentClass[
+      ReactComponentClass[
         FormFieldProps with (Omit[
           DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
           placeholder
-        ]), 
-        ComponentState
+        ])
       ]
     ]
 

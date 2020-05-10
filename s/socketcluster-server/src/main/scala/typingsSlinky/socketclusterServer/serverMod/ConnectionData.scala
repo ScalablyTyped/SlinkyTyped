@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConnectionData extends ConnectData {
-  var socket: typingsSlinky.socketclusterServer.serversocketMod.^
+  var socket: typingsSlinky.socketclusterServer.serversocketMod.^ = js.native
 }
 
 object ConnectionData {
@@ -15,12 +16,24 @@ object ConnectionData {
     id: String,
     isAuthenticated: Boolean,
     pingTimeout: Double,
-    socket: typingsSlinky.socketclusterServer.serversocketMod.^,
-    authError: js.Error = null
+    socket: typingsSlinky.socketclusterServer.serversocketMod.^
   ): ConnectionData = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], isAuthenticated = isAuthenticated.asInstanceOf[js.Any], pingTimeout = pingTimeout.asInstanceOf[js.Any], socket = socket.asInstanceOf[js.Any])
-    if (authError != null) __obj.updateDynamic("authError")(authError.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionData]
   }
+  @scala.inline
+  implicit class ConnectionDataOps[Self <: ConnectionData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSocket(value: typingsSlinky.socketclusterServer.serversocketMod.^): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socket")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

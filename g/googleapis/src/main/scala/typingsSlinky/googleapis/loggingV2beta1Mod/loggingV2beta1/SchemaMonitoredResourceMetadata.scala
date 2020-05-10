@@ -33,11 +33,41 @@ trait SchemaMonitoredResourceMetadata extends js.Object {
 
 object SchemaMonitoredResourceMetadata {
   @scala.inline
-  def apply(systemLabels: StringDictionary[js.Any] = null, userLabels: StringDictionary[String] = null): SchemaMonitoredResourceMetadata = {
+  def apply(): SchemaMonitoredResourceMetadata = {
     val __obj = js.Dynamic.literal()
-    if (systemLabels != null) __obj.updateDynamic("systemLabels")(systemLabels.asInstanceOf[js.Any])
-    if (userLabels != null) __obj.updateDynamic("userLabels")(userLabels.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMonitoredResourceMetadata]
   }
+  @scala.inline
+  implicit class SchemaMonitoredResourceMetadataOps[Self <: SchemaMonitoredResourceMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSystemLabels(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSystemLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userLabels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

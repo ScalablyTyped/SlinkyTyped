@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHint extends js.Object {
-  var hint: js.UndefOr[String] = js.undefined
-  var messageDetail: js.UndefOr[String] = js.undefined
-  var messageSummary: js.UndefOr[String] = js.undefined
+  var hint: js.UndefOr[String] = js.native
+  var messageDetail: js.UndefOr[String] = js.native
+  var messageSummary: js.UndefOr[String] = js.native
 }
 
 object AnonHint {
   @scala.inline
-  def apply(hint: String = null, messageDetail: String = null, messageSummary: String = null): AnonHint = {
+  def apply(): AnonHint = {
     val __obj = js.Dynamic.literal()
-    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
-    if (messageDetail != null) __obj.updateDynamic("messageDetail")(messageDetail.asInstanceOf[js.Any])
-    if (messageSummary != null) __obj.updateDynamic("messageSummary")(messageSummary.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHint]
   }
+  @scala.inline
+  implicit class AnonHintOps[Self <: AnonHint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageDetail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageSummary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageSummary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

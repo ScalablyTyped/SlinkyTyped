@@ -12,10 +12,8 @@ trait DensityMethod extends js.Object
 
 object DensityMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cdf: typingsSlinky.vegaTypings.vegaTypingsStrings.cdf = "cdf".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.cdf]
   @scala.inline
-  def cdf: typingsSlinky.vegaTypings.vegaTypingsStrings.cdf = this.cast("cdf")
-  @scala.inline
-  def pdf: typingsSlinky.vegaTypings.vegaTypingsStrings.pdf = this.cast("pdf")
+  def pdf: typingsSlinky.vegaTypings.vegaTypingsStrings.pdf = "pdf".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.pdf]
 }
 

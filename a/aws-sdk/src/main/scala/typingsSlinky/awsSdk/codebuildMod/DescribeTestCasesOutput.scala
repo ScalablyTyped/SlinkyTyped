@@ -18,11 +18,41 @@ trait DescribeTestCasesOutput extends js.Object {
 
 object DescribeTestCasesOutput {
   @scala.inline
-  def apply(nextToken: String = null, testCases: TestCases = null): DescribeTestCasesOutput = {
+  def apply(): DescribeTestCasesOutput = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (testCases != null) __obj.updateDynamic("testCases")(testCases.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTestCasesOutput]
   }
+  @scala.inline
+  implicit class DescribeTestCasesOutputOps[Self <: DescribeTestCasesOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestCases(value: TestCases): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testCases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestCases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testCases")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

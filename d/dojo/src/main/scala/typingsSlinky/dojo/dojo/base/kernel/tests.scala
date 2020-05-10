@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * D.O.H. Test files for Dojo unit testing.
   *
   */
+@js.native
 trait tests extends js.Object
 

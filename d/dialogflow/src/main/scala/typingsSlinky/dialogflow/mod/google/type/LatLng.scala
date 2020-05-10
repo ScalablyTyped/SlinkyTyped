@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,8 +51,8 @@ object LatLng extends js.Object {
     */
   def decode(reader: Reader): LatLng = js.native
   def decode(reader: Reader, length: Double): LatLng = js.native
-  def decode(reader: Uint8Array): LatLng = js.native
-  def decode(reader: Uint8Array, length: Double): LatLng = js.native
+  def decode(reader: js.typedarray.Uint8Array): LatLng = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): LatLng = js.native
   /**
     * Decodes a LatLng message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -62,7 +61,7 @@ object LatLng extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): LatLng = js.native
-  def decodeDelimited(reader: Uint8Array): LatLng = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): LatLng = js.native
   /**
     * Encodes the specified LatLng message. Does not implicitly {@link google.type.LatLng.verify|verify} messages.
     * @param message LatLng message or plain object to encode

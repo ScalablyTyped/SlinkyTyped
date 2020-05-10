@@ -13,13 +13,9 @@ class PageManager ()
      with ICommandHandler
      with IRootBuildClient {
   def add_ribbonInited(value: js.Function0[Unit]): js.Any = js.native
-  /* CompleteClass */
-  override def canHandleCommand(commandId: String): Boolean = js.native
   def get_commandDispatcher(): CommandDispatcher = js.native
   def get_focusManager(): FocusManager = js.native
   def get_undoManager(): UndoManager = js.native
-  /* CompleteClass */
-  override def handleCommand(commandId: String, properties: js.Any, sequenceNumber: Double): Boolean = js.native
 }
 
 /* static members */

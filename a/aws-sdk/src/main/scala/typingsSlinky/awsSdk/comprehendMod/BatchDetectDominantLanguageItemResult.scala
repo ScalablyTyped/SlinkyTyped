@@ -18,11 +18,41 @@ trait BatchDetectDominantLanguageItemResult extends js.Object {
 
 object BatchDetectDominantLanguageItemResult {
   @scala.inline
-  def apply(Index: Int | scala.Double = null, Languages: ListOfDominantLanguages = null): BatchDetectDominantLanguageItemResult = {
+  def apply(): BatchDetectDominantLanguageItemResult = {
     val __obj = js.Dynamic.literal()
-    if (Index != null) __obj.updateDynamic("Index")(Index.asInstanceOf[js.Any])
-    if (Languages != null) __obj.updateDynamic("Languages")(Languages.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDetectDominantLanguageItemResult]
   }
+  @scala.inline
+  implicit class BatchDetectDominantLanguageItemResultOps[Self <: BatchDetectDominantLanguageItemResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndex(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguages(value: ListOfDominantLanguages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Languages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Languages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

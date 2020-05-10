@@ -10,7 +10,6 @@ import typingsSlinky.mathjs.mathjsStrings.natural
 import typingsSlinky.mathjs.mathjsStrings.sparse
 import typingsSlinky.mathjs.mathjsStrings.unbiased
 import typingsSlinky.mathjs.mathjsStrings.uncorrected
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -513,7 +512,7 @@ trait MathJsChain extends js.Object {
       Matrix | MathArray
     ]
   ): MathJsChain = js.native
-  def filter(test: RegExp): MathJsChain = js.native
+  def filter(test: js.RegExp): MathJsChain = js.native
   /**
     * Round a value towards zero. For matrices, the function is evaluated
     * element wise.

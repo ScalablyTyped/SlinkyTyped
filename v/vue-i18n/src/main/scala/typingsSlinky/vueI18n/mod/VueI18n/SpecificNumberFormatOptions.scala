@@ -6,46 +6,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpecificNumberFormatOptions
   extends typingsSlinky.std.Intl.NumberFormatOptions
      with _NumberFormatOptions {
   @JSName("currencyDisplay")
-  var currencyDisplay_SpecificNumberFormatOptions: js.UndefOr[CurrencyDisplay] = js.undefined
-  var formatMatcher: js.UndefOr[FormatMatcher] = js.undefined
+  var currencyDisplay_SpecificNumberFormatOptions: js.UndefOr[CurrencyDisplay] = js.native
+  var formatMatcher: js.UndefOr[FormatMatcher] = js.native
   @JSName("localeMatcher")
-  var localeMatcher_SpecificNumberFormatOptions: js.UndefOr[LocaleMatcher] = js.undefined
+  var localeMatcher_SpecificNumberFormatOptions: js.UndefOr[LocaleMatcher] = js.native
   @JSName("style")
-  var style_SpecificNumberFormatOptions: js.UndefOr[decimal | percent] = js.undefined
+  var style_SpecificNumberFormatOptions: js.UndefOr[decimal | percent] = js.native
 }
 
 object SpecificNumberFormatOptions {
   @scala.inline
-  def apply(
-    currency: String = null,
-    currencyDisplay: CurrencyDisplay = null,
-    formatMatcher: FormatMatcher = null,
-    localeMatcher: LocaleMatcher = null,
-    maximumFractionDigits: Int | Double = null,
-    maximumSignificantDigits: Int | Double = null,
-    minimumFractionDigits: Int | Double = null,
-    minimumIntegerDigits: Int | Double = null,
-    minimumSignificantDigits: Int | Double = null,
-    style: decimal | percent = null,
-    useGrouping: js.UndefOr[Boolean] = js.undefined
-  ): SpecificNumberFormatOptions = {
+  def apply(): SpecificNumberFormatOptions = {
     val __obj = js.Dynamic.literal()
-    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
-    if (currencyDisplay != null) __obj.updateDynamic("currencyDisplay")(currencyDisplay.asInstanceOf[js.Any])
-    if (formatMatcher != null) __obj.updateDynamic("formatMatcher")(formatMatcher.asInstanceOf[js.Any])
-    if (localeMatcher != null) __obj.updateDynamic("localeMatcher")(localeMatcher.asInstanceOf[js.Any])
-    if (maximumFractionDigits != null) __obj.updateDynamic("maximumFractionDigits")(maximumFractionDigits.asInstanceOf[js.Any])
-    if (maximumSignificantDigits != null) __obj.updateDynamic("maximumSignificantDigits")(maximumSignificantDigits.asInstanceOf[js.Any])
-    if (minimumFractionDigits != null) __obj.updateDynamic("minimumFractionDigits")(minimumFractionDigits.asInstanceOf[js.Any])
-    if (minimumIntegerDigits != null) __obj.updateDynamic("minimumIntegerDigits")(minimumIntegerDigits.asInstanceOf[js.Any])
-    if (minimumSignificantDigits != null) __obj.updateDynamic("minimumSignificantDigits")(minimumSignificantDigits.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(useGrouping)) __obj.updateDynamic("useGrouping")(useGrouping.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpecificNumberFormatOptions]
   }
+  @scala.inline
+  implicit class SpecificNumberFormatOptionsOps[Self <: SpecificNumberFormatOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrencyDisplay(value: CurrencyDisplay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatMatcher(value: FormatMatcher): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMatcher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatMatcher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMatcher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocaleMatcher(value: LocaleMatcher): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localeMatcher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocaleMatcher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localeMatcher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: decimal | percent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

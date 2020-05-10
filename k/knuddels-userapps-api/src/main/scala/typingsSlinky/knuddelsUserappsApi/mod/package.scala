@@ -12,7 +12,7 @@ package object mod {
     - typingsSlinky.std.Date
     - typingsSlinky.knuddelsUserappsApi.mod._Global_.Json
     - typingsSlinky.knuddelsUserappsApi.mod._Global_.JsonArray
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
   */
   type JsonData = js.UndefOr[
     typingsSlinky.knuddelsUserappsApi.mod._JsonData | java.lang.String | scala.Double | scala.Boolean | js.Date
@@ -31,7 +31,7 @@ package object mod {
     - typingsSlinky.knuddelsUserappsApi.mod._Global_.KnuddelsJson
     - typingsSlinky.knuddelsUserappsApi.mod._Global_.KnuddelsJsonArray
     - typingsSlinky.knuddelsUserappsApi.mod.KnuddelsSerializable
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
   */
   type KnuddelsJsonData = js.UndefOr[
     typingsSlinky.knuddelsUserappsApi.mod._KnuddelsJsonData | java.lang.String | scala.Double | scala.Boolean | js.Date
@@ -42,7 +42,7 @@ package object mod {
     - scala.Boolean
     - typingsSlinky.knuddelsUserappsApi.mod._Global_.User
     - typingsSlinky.knuddelsUserappsApi.mod._Global_.BotUser
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
   */
   type KnuddelsSerializable = js.UndefOr[
     typingsSlinky.knuddelsUserappsApi.mod._KnuddelsSerializable | java.lang.String | scala.Double | scala.Boolean

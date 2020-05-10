@@ -18,22 +18,20 @@ trait LocateStrategy extends js.Object
 
 object LocateStrategy {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `class name`: typingsSlinky.nightwatch.nightwatchStrings.`class name` = ("class name").asInstanceOf[typingsSlinky.nightwatch.nightwatchStrings.`class name`]
   @scala.inline
-  def `class name`: typingsSlinky.nightwatch.nightwatchStrings.`class name` = this.cast("class name")
+  def `css selector`: typingsSlinky.nightwatch.nightwatchStrings.`css selector` = ("css selector").asInstanceOf[typingsSlinky.nightwatch.nightwatchStrings.`css selector`]
   @scala.inline
-  def `css selector`: typingsSlinky.nightwatch.nightwatchStrings.`css selector` = this.cast("css selector")
+  def id: typingsSlinky.nightwatch.nightwatchStrings.id = "id".asInstanceOf[typingsSlinky.nightwatch.nightwatchStrings.id]
   @scala.inline
-  def id: typingsSlinky.nightwatch.nightwatchStrings.id = this.cast("id")
+  def `link text`: typingsSlinky.nightwatch.nightwatchStrings.`link text` = ("link text").asInstanceOf[typingsSlinky.nightwatch.nightwatchStrings.`link text`]
   @scala.inline
-  def `link text`: typingsSlinky.nightwatch.nightwatchStrings.`link text` = this.cast("link text")
+  def name: typingsSlinky.nightwatch.nightwatchStrings.name = "name".asInstanceOf[typingsSlinky.nightwatch.nightwatchStrings.name]
   @scala.inline
-  def name: typingsSlinky.nightwatch.nightwatchStrings.name = this.cast("name")
+  def `partial link text`: typingsSlinky.nightwatch.nightwatchStrings.`partial link text` = ("partial link text").asInstanceOf[typingsSlinky.nightwatch.nightwatchStrings.`partial link text`]
   @scala.inline
-  def `partial link text`: typingsSlinky.nightwatch.nightwatchStrings.`partial link text` = this.cast("partial link text")
+  def `tag name`: typingsSlinky.nightwatch.nightwatchStrings.`tag name` = ("tag name").asInstanceOf[typingsSlinky.nightwatch.nightwatchStrings.`tag name`]
   @scala.inline
-  def `tag name`: typingsSlinky.nightwatch.nightwatchStrings.`tag name` = this.cast("tag name")
-  @scala.inline
-  def xpath: typingsSlinky.nightwatch.nightwatchStrings.xpath = this.cast("xpath")
+  def xpath: typingsSlinky.nightwatch.nightwatchStrings.xpath = "xpath".asInstanceOf[typingsSlinky.nightwatch.nightwatchStrings.xpath]
 }
 

@@ -6,39 +6,127 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<smooth-scrollbar.smooth-scrollbar/interfaces.ScrollbarOptions> */
+@js.native
 trait PartialScrollbarOptions extends js.Object {
-  var alwaysShowTracks: js.UndefOr[Boolean] = js.undefined
-  var continuousScrolling: js.UndefOr[Boolean] = js.undefined
-  var damping: js.UndefOr[Double] = js.undefined
-  var delegateTo: js.UndefOr[EventTarget] = js.undefined
-  var plugins: js.UndefOr[js.Any] = js.undefined
-  var renderByPixels: js.UndefOr[Boolean] = js.undefined
-  var thumbMinSize: js.UndefOr[Double] = js.undefined
-  var wheelEventTarget: js.UndefOr[EventTarget] = js.undefined
+  var alwaysShowTracks: js.UndefOr[Boolean] = js.native
+  var continuousScrolling: js.UndefOr[Boolean] = js.native
+  var damping: js.UndefOr[Double] = js.native
+  var delegateTo: js.UndefOr[EventTarget] = js.native
+  var plugins: js.UndefOr[js.Any] = js.native
+  var renderByPixels: js.UndefOr[Boolean] = js.native
+  var thumbMinSize: js.UndefOr[Double] = js.native
+  var wheelEventTarget: js.UndefOr[EventTarget] = js.native
 }
 
 object PartialScrollbarOptions {
   @scala.inline
-  def apply(
-    alwaysShowTracks: js.UndefOr[Boolean] = js.undefined,
-    continuousScrolling: js.UndefOr[Boolean] = js.undefined,
-    damping: Int | Double = null,
-    delegateTo: EventTarget = null,
-    plugins: js.Any = null,
-    renderByPixels: js.UndefOr[Boolean] = js.undefined,
-    thumbMinSize: Int | Double = null,
-    wheelEventTarget: EventTarget = null
-  ): PartialScrollbarOptions = {
+  def apply(): PartialScrollbarOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysShowTracks)) __obj.updateDynamic("alwaysShowTracks")(alwaysShowTracks.asInstanceOf[js.Any])
-    if (!js.isUndefined(continuousScrolling)) __obj.updateDynamic("continuousScrolling")(continuousScrolling.asInstanceOf[js.Any])
-    if (damping != null) __obj.updateDynamic("damping")(damping.asInstanceOf[js.Any])
-    if (delegateTo != null) __obj.updateDynamic("delegateTo")(delegateTo.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderByPixels)) __obj.updateDynamic("renderByPixels")(renderByPixels.asInstanceOf[js.Any])
-    if (thumbMinSize != null) __obj.updateDynamic("thumbMinSize")(thumbMinSize.asInstanceOf[js.Any])
-    if (wheelEventTarget != null) __obj.updateDynamic("wheelEventTarget")(wheelEventTarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialScrollbarOptions]
   }
+  @scala.inline
+  implicit class PartialScrollbarOptionsOps[Self <: PartialScrollbarOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlwaysShowTracks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysShowTracks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlwaysShowTracks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysShowTracks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinuousScrolling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuousScrolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinuousScrolling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuousScrolling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDamping(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("damping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDamping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("damping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelegateTo(value: EventTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegateTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelegateTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegateTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderByPixels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderByPixels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderByPixels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderByPixels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbMinSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbMinSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbMinSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbMinSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWheelEventTarget(value: EventTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelEventTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWheelEventTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelEventTarget")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

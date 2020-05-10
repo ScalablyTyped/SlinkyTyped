@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
+@js.native
 trait WorksheetFormatChangedEventArgs extends js.Object {
   /**
     *
@@ -20,42 +21,42 @@ trait WorksheetFormatChangedEventArgs extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var address: String
+  var address: String = js.native
   /**
     *
     * Gets the source of the event. See Excel.EventSource for details.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var source: EventSource | Local | Remote
+  var source: EventSource | Local | Remote = js.native
   /**
     *
     * Gets the type of the event. See Excel.EventType for details.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var `type`: WorksheetFormatChanged
+  var `type`: WorksheetFormatChanged = js.native
   /**
     *
     * Gets the id of the worksheet in which the data changed.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var worksheetId: String
+  var worksheetId: String = js.native
   /**
     *
     * Gets the range that represents the changed area of a specific worksheet.
     *
     * [Api set: ExcelApi 1.9]
     */
-  def getRange(ctx: RequestContext): Range
+  def getRange(ctx: RequestContext): Range = js.native
   /**
     *
     * Gets the range that represents the changed area of a specific worksheet. It might return null object.
     *
     * [Api set: ExcelApi 1.9]
     */
-  def getRangeOrNullObject(ctx: RequestContext): Range
+  def getRangeOrNullObject(ctx: RequestContext): Range = js.native
 }
 
 object WorksheetFormatChangedEventArgs {
@@ -72,5 +73,49 @@ object WorksheetFormatChangedEventArgs {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorksheetFormatChangedEventArgs]
   }
+  @scala.inline
+  implicit class WorksheetFormatChangedEventArgsOps[Self <: WorksheetFormatChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetRange(value: RequestContext => Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetRangeOrNullObject(value: RequestContext => Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRangeOrNullObject")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSource(value: EventSource | Local | Remote): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: WorksheetFormatChanged): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorksheetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worksheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

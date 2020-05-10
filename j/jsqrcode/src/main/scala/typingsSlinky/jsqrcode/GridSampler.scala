@@ -7,10 +7,10 @@ import scala.scalajs.js.annotation._
 @JSGlobal("GridSampler")
 @js.native
 object GridSampler extends js.Object {
-  def checkAndNudgePoints(image: scala.scalajs.js.typedarray.Uint8Array, points: js.Array[Double]): Unit = js.native
-  def sampleGrid3(image: scala.scalajs.js.typedarray.Uint8Array, dimension: Double, transform: PerspectiveTransform): BitMatrix = js.native
+  def checkAndNudgePoints(image: js.typedarray.Uint8Array, points: js.Array[Double]): Unit = js.native
+  def sampleGrid3(image: js.typedarray.Uint8Array, dimension: Double, transform: PerspectiveTransform): BitMatrix = js.native
   def sampleGridx(
-    image: scala.scalajs.js.typedarray.Uint8Array,
+    image: js.typedarray.Uint8Array,
     dimension: Double,
     p1ToX: Double,
     p1ToY: Double,

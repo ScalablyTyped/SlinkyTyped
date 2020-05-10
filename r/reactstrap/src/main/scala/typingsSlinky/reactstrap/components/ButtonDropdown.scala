@@ -1,16 +1,17 @@
 package typingsSlinky.reactstrap.components
 
 import typingsSlinky.reactstrap.buttonDropdownMod.default
+import typingsSlinky.reactstrap.dropdownMod.DropdownProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ButtonDropdown
-  extends SharedApply_DropdownProps68769190[default[js.Any]] {
+object ButtonDropdown {
   @JSImport("reactstrap/lib/ButtonDropdown", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps[T](p: DropdownProps): SharedBuilder_DropdownProps_1611943600[default[js.Any], T] = new SharedBuilder_DropdownProps_1611943600[default[js.Any], T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T](companion: ButtonDropdown.type): SharedBuilder_DropdownProps_1611943600[default[js.Any], T] = new SharedBuilder_DropdownProps_1611943600[default[js.Any], T](js.Array(this.component, js.Dictionary.empty))()
 }
 

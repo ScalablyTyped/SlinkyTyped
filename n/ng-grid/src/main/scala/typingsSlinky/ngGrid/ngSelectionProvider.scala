@@ -3,7 +3,6 @@ package typingsSlinky.ngGrid
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.ngGrid.ngGrid.IGridInstance
 import typingsSlinky.ngGrid.ngGrid.IGridScope
-import typingsSlinky.ngGrid.ngGrid.IRow
 import typingsSlinky.ngGrid.ngGrid.ISelectionProvider
 import typingsSlinky.ngGrid.ngGrid.ISelectionProviderStatic
 import scala.scalajs.js
@@ -18,28 +17,6 @@ class ngSelectionProvider protected () extends ISelectionProvider {
     $scope: IGridScope,
     $parse: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify angular.IParseService */ js.Any
   ) = this()
-  /* CompleteClass */
-  override var ignoreSelectedItemChanges: Boolean = js.native
-  /* CompleteClass */
-  override var lastClickedRow: js.Any = js.native
-  /* CompleteClass */
-  override var multi: Boolean = js.native
-  /* CompleteClass */
-  override var pKeyParser: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify angular.ICompiledExpression */ js.Any = js.native
-  /* CompleteClass */
-  override var selectedIndex: Double = js.native
-  /* CompleteClass */
-  override var selectedItems: js.Array[_] = js.native
-  /* CompleteClass */
-  override def ChangeSelection(rowItem: js.Any, event: js.Any): Unit = js.native
-  /* CompleteClass */
-  override def getSelection(entity: js.Any): Double = js.native
-  /* CompleteClass */
-  override def getSelectionIndex(entity: js.Any): Double = js.native
-  /* CompleteClass */
-  override def setSelection(rowItem: IRow, isSelected: Boolean): Unit = js.native
-  /* CompleteClass */
-  override def toggleSelectAll(checkAll: Boolean, bypass: Boolean, selectFiltered: Boolean): Unit = js.native
 }
 
 @JSGlobal("ngSelectionProvider")

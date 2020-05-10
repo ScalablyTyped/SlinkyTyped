@@ -19,24 +19,22 @@ trait AnnotOptionsFlag extends js.Object
 
 object AnnotOptionsFlag {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hidden: typingsSlinky.hummusRecipe.hummusRecipeStrings.hidden = "hidden".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.hummusRecipe.hummusRecipeStrings.hidden = this.cast("hidden")
+  def invisible: typingsSlinky.hummusRecipe.hummusRecipeStrings.invisible = "invisible".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.invisible]
   @scala.inline
-  def invisible: typingsSlinky.hummusRecipe.hummusRecipeStrings.invisible = this.cast("invisible")
+  def locked: typingsSlinky.hummusRecipe.hummusRecipeStrings.locked = "locked".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.locked]
   @scala.inline
-  def locked: typingsSlinky.hummusRecipe.hummusRecipeStrings.locked = this.cast("locked")
+  def norotate: typingsSlinky.hummusRecipe.hummusRecipeStrings.norotate = "norotate".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.norotate]
   @scala.inline
-  def norotate: typingsSlinky.hummusRecipe.hummusRecipeStrings.norotate = this.cast("norotate")
+  def noview: typingsSlinky.hummusRecipe.hummusRecipeStrings.noview = "noview".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.noview]
   @scala.inline
-  def noview: typingsSlinky.hummusRecipe.hummusRecipeStrings.noview = this.cast("noview")
+  def nozoom: typingsSlinky.hummusRecipe.hummusRecipeStrings.nozoom = "nozoom".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.nozoom]
   @scala.inline
-  def nozoom: typingsSlinky.hummusRecipe.hummusRecipeStrings.nozoom = this.cast("nozoom")
+  def print: typingsSlinky.hummusRecipe.hummusRecipeStrings.print = "print".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.print]
   @scala.inline
-  def print: typingsSlinky.hummusRecipe.hummusRecipeStrings.print = this.cast("print")
+  def readonly: typingsSlinky.hummusRecipe.hummusRecipeStrings.readonly = "readonly".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.readonly]
   @scala.inline
-  def readonly: typingsSlinky.hummusRecipe.hummusRecipeStrings.readonly = this.cast("readonly")
-  @scala.inline
-  def togglenoview: typingsSlinky.hummusRecipe.hummusRecipeStrings.togglenoview = this.cast("togglenoview")
+  def togglenoview: typingsSlinky.hummusRecipe.hummusRecipeStrings.togglenoview = "togglenoview".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.togglenoview]
 }
 

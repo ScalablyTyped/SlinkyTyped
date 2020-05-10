@@ -50,27 +50,119 @@ trait CreateQualificationTypeRequest extends js.Object {
 
 object CreateQualificationTypeRequest {
   @scala.inline
-  def apply(
-    Description: String,
-    Name: String,
-    QualificationTypeStatus: QualificationTypeStatus,
-    AnswerKey: String = null,
-    AutoGranted: js.UndefOr[scala.Boolean] = js.undefined,
-    AutoGrantedValue: Int | Double = null,
-    Keywords: String = null,
-    RetryDelayInSeconds: Int | Double = null,
-    Test: String = null,
-    TestDurationInSeconds: Int | Double = null
-  ): CreateQualificationTypeRequest = {
+  def apply(Description: String, Name: String, QualificationTypeStatus: QualificationTypeStatus): CreateQualificationTypeRequest = {
     val __obj = js.Dynamic.literal(Description = Description.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], QualificationTypeStatus = QualificationTypeStatus.asInstanceOf[js.Any])
-    if (AnswerKey != null) __obj.updateDynamic("AnswerKey")(AnswerKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(AutoGranted)) __obj.updateDynamic("AutoGranted")(AutoGranted.asInstanceOf[js.Any])
-    if (AutoGrantedValue != null) __obj.updateDynamic("AutoGrantedValue")(AutoGrantedValue.asInstanceOf[js.Any])
-    if (Keywords != null) __obj.updateDynamic("Keywords")(Keywords.asInstanceOf[js.Any])
-    if (RetryDelayInSeconds != null) __obj.updateDynamic("RetryDelayInSeconds")(RetryDelayInSeconds.asInstanceOf[js.Any])
-    if (Test != null) __obj.updateDynamic("Test")(Test.asInstanceOf[js.Any])
-    if (TestDurationInSeconds != null) __obj.updateDynamic("TestDurationInSeconds")(TestDurationInSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateQualificationTypeRequest]
   }
+  @scala.inline
+  implicit class CreateQualificationTypeRequestOps[Self <: CreateQualificationTypeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQualificationTypeStatus(value: QualificationTypeStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationTypeStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnswerKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AnswerKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnswerKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AnswerKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoGranted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoGranted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoGranted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoGranted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoGrantedValue(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoGrantedValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoGrantedValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoGrantedValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeywords(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Keywords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeywords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Keywords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryDelayInSeconds(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryDelayInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryDelayInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetryDelayInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Test")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Test")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestDurationInSeconds(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestDurationInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestDurationInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestDurationInSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

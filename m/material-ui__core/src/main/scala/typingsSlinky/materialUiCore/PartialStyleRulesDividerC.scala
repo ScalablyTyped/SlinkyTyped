@@ -17,20 +17,77 @@ trait PartialStyleRulesDividerC extends js.Object {
 
 object PartialStyleRulesDividerC {
   @scala.inline
-  def apply(
-    absolute: CSSProperties = null,
-    inset: CSSProperties = null,
-    light: CSSProperties = null,
-    middle: CSSProperties = null,
-    root: CSSProperties = null
-  ): PartialStyleRulesDividerC = {
+  def apply(): PartialStyleRulesDividerC = {
     val __obj = js.Dynamic.literal()
-    if (absolute != null) __obj.updateDynamic("absolute")(absolute.asInstanceOf[js.Any])
-    if (inset != null) __obj.updateDynamic("inset")(inset.asInstanceOf[js.Any])
-    if (light != null) __obj.updateDynamic("light")(light.asInstanceOf[js.Any])
-    if (middle != null) __obj.updateDynamic("middle")(middle.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesDividerC]
   }
+  @scala.inline
+  implicit class PartialStyleRulesDividerCOps[Self <: PartialStyleRulesDividerC] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbsolute(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absolute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbsolute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absolute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInset(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLight(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("light")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("light")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMiddle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMiddle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

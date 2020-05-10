@@ -21,11 +21,41 @@ trait SchemaGoogleCloudVisionV1p4beta1TextAnnotationDetectedBreak extends js.Obj
 
 object SchemaGoogleCloudVisionV1p4beta1TextAnnotationDetectedBreak {
   @scala.inline
-  def apply(isPrefix: js.UndefOr[Boolean] = js.undefined, `type`: String = null): SchemaGoogleCloudVisionV1p4beta1TextAnnotationDetectedBreak = {
+  def apply(): SchemaGoogleCloudVisionV1p4beta1TextAnnotationDetectedBreak = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(isPrefix)) __obj.updateDynamic("isPrefix")(isPrefix.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p4beta1TextAnnotationDetectedBreak]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p4beta1TextAnnotationDetectedBreakOps[Self <: SchemaGoogleCloudVisionV1p4beta1TextAnnotationDetectedBreak] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsPrefix(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

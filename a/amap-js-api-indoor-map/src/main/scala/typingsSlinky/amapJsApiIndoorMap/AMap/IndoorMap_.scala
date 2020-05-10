@@ -5,7 +5,6 @@ import typingsSlinky.amapJsApiIndoorMap.AMap.IndoorMap.Building
 import typingsSlinky.amapJsApiIndoorMap.AMap.IndoorMap.Options
 import typingsSlinky.amapJsApiIndoorMap.AMap.IndoorMap.SearchResult
 import typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapBooleans.`false`
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,20 +55,20 @@ class IndoorMap_ () extends Layer {
   def showIndoorMap(indoorId: String): Unit = js.native
   def showIndoorMap(
     indoorId: String,
-    callback: js.Function2[/* error */ Null | Error, /* result */ SearchResult, Unit]
+    callback: js.Function2[/* error */ Null | js.Error, /* result */ SearchResult, Unit]
   ): Unit = js.native
   def showIndoorMap(indoorId: String, floor: Double): Unit = js.native
   def showIndoorMap(
     indoorId: String,
     floor: Double,
-    callback: js.Function2[/* error */ Null | Error, /* result */ SearchResult, Unit]
+    callback: js.Function2[/* error */ Null | js.Error, /* result */ SearchResult, Unit]
   ): Unit = js.native
   def showIndoorMap(indoorId: String, floor: Double, shopId: String): Unit = js.native
   def showIndoorMap(
     indoorId: String,
     floor: Double,
     shopId: String,
-    callback: js.Function2[/* error */ Null | Error, /* result */ SearchResult, Unit]
+    callback: js.Function2[/* error */ Null | js.Error, /* result */ SearchResult, Unit]
   ): Unit = js.native
   def showIndoorMap(indoorId: String, floor: Double, shopId: String, noMove: Boolean): Unit = js.native
   def showIndoorMap(

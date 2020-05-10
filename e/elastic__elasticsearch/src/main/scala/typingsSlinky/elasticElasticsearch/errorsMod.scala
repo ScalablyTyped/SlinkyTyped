@@ -26,12 +26,7 @@ object errorsMod extends js.Object {
   }
   
   @js.native
-  class ElasticsearchClientError () extends Error {
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
-  }
+  class ElasticsearchClientError () extends Error
   
   @js.native
   class NoLivingConnectionsError protected () extends ElasticsearchClientError {

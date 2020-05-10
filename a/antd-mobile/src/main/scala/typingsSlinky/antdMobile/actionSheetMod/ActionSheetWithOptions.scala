@@ -1,40 +1,46 @@
 package typingsSlinky.antdMobile.actionSheetMod
 
-import slinky.core.TagMod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ActionSheetWithOptions extends ActionSheetOptions {
-  var badges: js.UndefOr[js.Array[BadgesOption]] = js.undefined
-  var options: js.Array[String]
+  var badges: js.UndefOr[js.Array[BadgesOption]] = js.native
+  var options: js.Array[String] = js.native
 }
 
 object ActionSheetWithOptions {
   @scala.inline
-  def apply(
-    options: js.Array[String],
-    badges: js.Array[BadgesOption] = null,
-    cancelButtonIndex: Int | Double = null,
-    className: String = null,
-    destructiveButtonIndex: Int | Double = null,
-    maskClosable: js.UndefOr[Boolean] = js.undefined,
-    maskTransitionName: String = null,
-    message: TagMod[Any] = null,
-    title: TagMod[Any] = null,
-    transitionName: String = null
-  ): ActionSheetWithOptions = {
+  def apply(options: js.Array[String]): ActionSheetWithOptions = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    if (badges != null) __obj.updateDynamic("badges")(badges.asInstanceOf[js.Any])
-    if (cancelButtonIndex != null) __obj.updateDynamic("cancelButtonIndex")(cancelButtonIndex.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (destructiveButtonIndex != null) __obj.updateDynamic("destructiveButtonIndex")(destructiveButtonIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(maskClosable)) __obj.updateDynamic("maskClosable")(maskClosable.asInstanceOf[js.Any])
-    if (maskTransitionName != null) __obj.updateDynamic("maskTransitionName")(maskTransitionName.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionSheetWithOptions]
   }
+  @scala.inline
+  implicit class ActionSheetWithOptionsOps[Self <: ActionSheetWithOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOptions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBadges(value: js.Array[BadgesOption]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBadges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

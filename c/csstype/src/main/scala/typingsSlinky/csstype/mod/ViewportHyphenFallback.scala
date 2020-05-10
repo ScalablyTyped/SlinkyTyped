@@ -4,92 +4,330 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ViewportHyphenFallback[TLength] extends js.Object {
-  var `-ms-height`: js.UndefOr[ViewportHeightProperty[TLength] | js.Array[ViewportHeightProperty[TLength]]] = js.undefined
+  var `-ms-height`: js.UndefOr[ViewportHeightProperty[TLength] | js.Array[ViewportHeightProperty[TLength]]] = js.native
   var `-ms-max-height`: js.UndefOr[
     ViewportMaxHeightProperty[TLength] | js.Array[ViewportMaxHeightProperty[TLength]]
-  ] = js.undefined
-  var `-ms-max-width`: js.UndefOr[ViewportMaxWidthProperty[TLength] | js.Array[ViewportMaxWidthProperty[TLength]]] = js.undefined
-  var `-ms-max-zoom`: js.UndefOr[ViewportMaxZoomProperty | js.Array[ViewportMaxZoomProperty]] = js.undefined
+  ] = js.native
+  var `-ms-max-width`: js.UndefOr[ViewportMaxWidthProperty[TLength] | js.Array[ViewportMaxWidthProperty[TLength]]] = js.native
+  var `-ms-max-zoom`: js.UndefOr[ViewportMaxZoomProperty | js.Array[ViewportMaxZoomProperty]] = js.native
   var `-ms-min-height`: js.UndefOr[
     ViewportMinHeightProperty[TLength] | js.Array[ViewportMinHeightProperty[TLength]]
-  ] = js.undefined
-  var `-ms-min-width`: js.UndefOr[ViewportMinWidthProperty[TLength] | js.Array[ViewportMinWidthProperty[TLength]]] = js.undefined
-  var `-ms-min-zoom`: js.UndefOr[ViewportMinZoomProperty | js.Array[ViewportMinZoomProperty]] = js.undefined
-  var `-ms-orientation`: js.UndefOr[ViewportOrientationProperty | js.Array[ViewportOrientationProperty]] = js.undefined
-  var `-ms-user-zoom`: js.UndefOr[ViewportUserZoomProperty | js.Array[ViewportUserZoomProperty]] = js.undefined
-  var `-ms-width`: js.UndefOr[ViewportWidthProperty[TLength] | js.Array[ViewportWidthProperty[TLength]]] = js.undefined
-  var `-ms-zoom`: js.UndefOr[ViewportZoomProperty | js.Array[ViewportZoomProperty]] = js.undefined
-  var `-o-orientation`: js.UndefOr[ViewportOrientationProperty | js.Array[ViewportOrientationProperty]] = js.undefined
-  var height: js.UndefOr[ViewportHeightProperty[TLength] | js.Array[ViewportHeightProperty[TLength]]] = js.undefined
+  ] = js.native
+  var `-ms-min-width`: js.UndefOr[ViewportMinWidthProperty[TLength] | js.Array[ViewportMinWidthProperty[TLength]]] = js.native
+  var `-ms-min-zoom`: js.UndefOr[ViewportMinZoomProperty | js.Array[ViewportMinZoomProperty]] = js.native
+  var `-ms-orientation`: js.UndefOr[ViewportOrientationProperty | js.Array[ViewportOrientationProperty]] = js.native
+  var `-ms-user-zoom`: js.UndefOr[ViewportUserZoomProperty | js.Array[ViewportUserZoomProperty]] = js.native
+  var `-ms-width`: js.UndefOr[ViewportWidthProperty[TLength] | js.Array[ViewportWidthProperty[TLength]]] = js.native
+  var `-ms-zoom`: js.UndefOr[ViewportZoomProperty | js.Array[ViewportZoomProperty]] = js.native
+  var `-o-orientation`: js.UndefOr[ViewportOrientationProperty | js.Array[ViewportOrientationProperty]] = js.native
+  var height: js.UndefOr[ViewportHeightProperty[TLength] | js.Array[ViewportHeightProperty[TLength]]] = js.native
   var `max-height`: js.UndefOr[
     ViewportMaxHeightProperty[TLength] | js.Array[ViewportMaxHeightProperty[TLength]]
-  ] = js.undefined
-  var `max-width`: js.UndefOr[ViewportMaxWidthProperty[TLength] | js.Array[ViewportMaxWidthProperty[TLength]]] = js.undefined
-  var `max-zoom`: js.UndefOr[ViewportMaxZoomProperty | js.Array[ViewportMaxZoomProperty]] = js.undefined
+  ] = js.native
+  var `max-width`: js.UndefOr[ViewportMaxWidthProperty[TLength] | js.Array[ViewportMaxWidthProperty[TLength]]] = js.native
+  var `max-zoom`: js.UndefOr[ViewportMaxZoomProperty | js.Array[ViewportMaxZoomProperty]] = js.native
   var `min-height`: js.UndefOr[
     ViewportMinHeightProperty[TLength] | js.Array[ViewportMinHeightProperty[TLength]]
-  ] = js.undefined
-  var `min-width`: js.UndefOr[ViewportMinWidthProperty[TLength] | js.Array[ViewportMinWidthProperty[TLength]]] = js.undefined
-  var `min-zoom`: js.UndefOr[ViewportMinZoomProperty | js.Array[ViewportMinZoomProperty]] = js.undefined
-  var orientation: js.UndefOr[ViewportOrientationProperty | js.Array[ViewportOrientationProperty]] = js.undefined
-  var `user-zoom`: js.UndefOr[ViewportUserZoomProperty | js.Array[ViewportUserZoomProperty]] = js.undefined
-  var width: js.UndefOr[ViewportWidthProperty[TLength] | js.Array[ViewportWidthProperty[TLength]]] = js.undefined
-  var zoom: js.UndefOr[ViewportZoomProperty | js.Array[ViewportZoomProperty]] = js.undefined
+  ] = js.native
+  var `min-width`: js.UndefOr[ViewportMinWidthProperty[TLength] | js.Array[ViewportMinWidthProperty[TLength]]] = js.native
+  var `min-zoom`: js.UndefOr[ViewportMinZoomProperty | js.Array[ViewportMinZoomProperty]] = js.native
+  var orientation: js.UndefOr[ViewportOrientationProperty | js.Array[ViewportOrientationProperty]] = js.native
+  var `user-zoom`: js.UndefOr[ViewportUserZoomProperty | js.Array[ViewportUserZoomProperty]] = js.native
+  var width: js.UndefOr[ViewportWidthProperty[TLength] | js.Array[ViewportWidthProperty[TLength]]] = js.native
+  var zoom: js.UndefOr[ViewportZoomProperty | js.Array[ViewportZoomProperty]] = js.native
 }
 
 object ViewportHyphenFallback {
   @scala.inline
-  def apply[TLength](
-    `-ms-height`: ViewportHeightProperty[TLength] | js.Array[ViewportHeightProperty[TLength]] = null,
-    `-ms-max-height`: ViewportMaxHeightProperty[TLength] | js.Array[ViewportMaxHeightProperty[TLength]] = null,
-    `-ms-max-width`: ViewportMaxWidthProperty[TLength] | js.Array[ViewportMaxWidthProperty[TLength]] = null,
-    `-ms-max-zoom`: ViewportMaxZoomProperty | js.Array[ViewportMaxZoomProperty] = null,
-    `-ms-min-height`: ViewportMinHeightProperty[TLength] | js.Array[ViewportMinHeightProperty[TLength]] = null,
-    `-ms-min-width`: ViewportMinWidthProperty[TLength] | js.Array[ViewportMinWidthProperty[TLength]] = null,
-    `-ms-min-zoom`: ViewportMinZoomProperty | js.Array[ViewportMinZoomProperty] = null,
-    `-ms-orientation`: ViewportOrientationProperty | js.Array[ViewportOrientationProperty] = null,
-    `-ms-user-zoom`: ViewportUserZoomProperty | js.Array[ViewportUserZoomProperty] = null,
-    `-ms-width`: ViewportWidthProperty[TLength] | js.Array[ViewportWidthProperty[TLength]] = null,
-    `-ms-zoom`: ViewportZoomProperty | js.Array[ViewportZoomProperty] = null,
-    `-o-orientation`: ViewportOrientationProperty | js.Array[ViewportOrientationProperty] = null,
-    height: ViewportHeightProperty[TLength] | js.Array[ViewportHeightProperty[TLength]] = null,
-    `max-height`: ViewportMaxHeightProperty[TLength] | js.Array[ViewportMaxHeightProperty[TLength]] = null,
-    `max-width`: ViewportMaxWidthProperty[TLength] | js.Array[ViewportMaxWidthProperty[TLength]] = null,
-    `max-zoom`: ViewportMaxZoomProperty | js.Array[ViewportMaxZoomProperty] = null,
-    `min-height`: ViewportMinHeightProperty[TLength] | js.Array[ViewportMinHeightProperty[TLength]] = null,
-    `min-width`: ViewportMinWidthProperty[TLength] | js.Array[ViewportMinWidthProperty[TLength]] = null,
-    `min-zoom`: ViewportMinZoomProperty | js.Array[ViewportMinZoomProperty] = null,
-    orientation: ViewportOrientationProperty | js.Array[ViewportOrientationProperty] = null,
-    `user-zoom`: ViewportUserZoomProperty | js.Array[ViewportUserZoomProperty] = null,
-    width: ViewportWidthProperty[TLength] | js.Array[ViewportWidthProperty[TLength]] = null,
-    zoom: ViewportZoomProperty | js.Array[ViewportZoomProperty] = null
-  ): ViewportHyphenFallback[TLength] = {
+  def apply[TLength](): ViewportHyphenFallback[TLength] = {
     val __obj = js.Dynamic.literal()
-    if (`-ms-height` != null) __obj.updateDynamic("-ms-height")(`-ms-height`.asInstanceOf[js.Any])
-    if (`-ms-max-height` != null) __obj.updateDynamic("-ms-max-height")(`-ms-max-height`.asInstanceOf[js.Any])
-    if (`-ms-max-width` != null) __obj.updateDynamic("-ms-max-width")(`-ms-max-width`.asInstanceOf[js.Any])
-    if (`-ms-max-zoom` != null) __obj.updateDynamic("-ms-max-zoom")(`-ms-max-zoom`.asInstanceOf[js.Any])
-    if (`-ms-min-height` != null) __obj.updateDynamic("-ms-min-height")(`-ms-min-height`.asInstanceOf[js.Any])
-    if (`-ms-min-width` != null) __obj.updateDynamic("-ms-min-width")(`-ms-min-width`.asInstanceOf[js.Any])
-    if (`-ms-min-zoom` != null) __obj.updateDynamic("-ms-min-zoom")(`-ms-min-zoom`.asInstanceOf[js.Any])
-    if (`-ms-orientation` != null) __obj.updateDynamic("-ms-orientation")(`-ms-orientation`.asInstanceOf[js.Any])
-    if (`-ms-user-zoom` != null) __obj.updateDynamic("-ms-user-zoom")(`-ms-user-zoom`.asInstanceOf[js.Any])
-    if (`-ms-width` != null) __obj.updateDynamic("-ms-width")(`-ms-width`.asInstanceOf[js.Any])
-    if (`-ms-zoom` != null) __obj.updateDynamic("-ms-zoom")(`-ms-zoom`.asInstanceOf[js.Any])
-    if (`-o-orientation` != null) __obj.updateDynamic("-o-orientation")(`-o-orientation`.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (`max-height` != null) __obj.updateDynamic("max-height")(`max-height`.asInstanceOf[js.Any])
-    if (`max-width` != null) __obj.updateDynamic("max-width")(`max-width`.asInstanceOf[js.Any])
-    if (`max-zoom` != null) __obj.updateDynamic("max-zoom")(`max-zoom`.asInstanceOf[js.Any])
-    if (`min-height` != null) __obj.updateDynamic("min-height")(`min-height`.asInstanceOf[js.Any])
-    if (`min-width` != null) __obj.updateDynamic("min-width")(`min-width`.asInstanceOf[js.Any])
-    if (`min-zoom` != null) __obj.updateDynamic("min-zoom")(`min-zoom`.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (`user-zoom` != null) __obj.updateDynamic("user-zoom")(`user-zoom`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewportHyphenFallback[TLength]]
   }
+  @scala.inline
+  implicit class ViewportHyphenFallbackOps[Self[tlength] <: ViewportHyphenFallback[tlength], TLength] (val x: Self[TLength]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TLength] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TLength]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TLength] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TLength] with Other]
+    @scala.inline
+    def `with-ms-height`(value: ViewportHeightProperty[TLength] | js.Array[ViewportHeightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-height`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-ms-max-height`(value: ViewportMaxHeightProperty[TLength] | js.Array[ViewportMaxHeightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-max-height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-max-height`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-max-height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-ms-max-width`(value: ViewportMaxWidthProperty[TLength] | js.Array[ViewportMaxWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-max-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-max-width`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-max-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-ms-max-zoom`(value: ViewportMaxZoomProperty | js.Array[ViewportMaxZoomProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-max-zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-max-zoom`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-max-zoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-ms-min-height`(value: ViewportMinHeightProperty[TLength] | js.Array[ViewportMinHeightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-min-height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-min-height`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-min-height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-ms-min-width`(value: ViewportMinWidthProperty[TLength] | js.Array[ViewportMinWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-min-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-min-width`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-min-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-ms-min-zoom`(value: ViewportMinZoomProperty | js.Array[ViewportMinZoomProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-min-zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-min-zoom`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-min-zoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-ms-orientation`(value: ViewportOrientationProperty | js.Array[ViewportOrientationProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-orientation`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-ms-user-zoom`(value: ViewportUserZoomProperty | js.Array[ViewportUserZoomProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-user-zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-user-zoom`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-user-zoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-ms-width`(value: ViewportWidthProperty[TLength] | js.Array[ViewportWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-width`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-ms-zoom`(value: ViewportZoomProperty | js.Array[ViewportZoomProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-ms-zoom`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-ms-zoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with-o-orientation`(value: ViewportOrientationProperty | js.Array[ViewportOrientationProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without-o-orientation`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("-o-orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: ViewportHeightProperty[TLength] | js.Array[ViewportHeightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMax-height`(value: ViewportMaxHeightProperty[TLength] | js.Array[ViewportMaxHeightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max-height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMax-height`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max-height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMax-width`(value: ViewportMaxWidthProperty[TLength] | js.Array[ViewportMaxWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMax-width`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMax-zoom`(value: ViewportMaxZoomProperty | js.Array[ViewportMaxZoomProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max-zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMax-zoom`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max-zoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMin-height`(value: ViewportMinHeightProperty[TLength] | js.Array[ViewportMinHeightProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min-height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMin-height`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min-height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMin-width`(value: ViewportMinWidthProperty[TLength] | js.Array[ViewportMinWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMin-width`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMin-zoom`(value: ViewportMinZoomProperty | js.Array[ViewportMinZoomProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min-zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMin-zoom`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min-zoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: ViewportOrientationProperty | js.Array[ViewportOrientationProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientation: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withUser-zoom`(value: ViewportUserZoomProperty | js.Array[ViewportUserZoomProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user-zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutUser-zoom`: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user-zoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: ViewportWidthProperty[TLength] | js.Array[ViewportWidthProperty[TLength]]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: ViewportZoomProperty | js.Array[ViewportZoomProperty]): Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self[TLength] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

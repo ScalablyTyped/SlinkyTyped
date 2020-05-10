@@ -25,36 +25,34 @@ trait Tag extends js.Object
 
 object Tag {
   @scala.inline
-  def alien: typingsSlinky.winkTokenizer.winkTokenizerStrings.alien = this.cast("alien")
+  def alien: typingsSlinky.winkTokenizer.winkTokenizerStrings.alien = "alien".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.alien]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def currency: typingsSlinky.winkTokenizer.winkTokenizerStrings.currency = "currency".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.currency]
   @scala.inline
-  def currency: typingsSlinky.winkTokenizer.winkTokenizerStrings.currency = this.cast("currency")
+  def email: typingsSlinky.winkTokenizer.winkTokenizerStrings.email = "email".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.email]
   @scala.inline
-  def email: typingsSlinky.winkTokenizer.winkTokenizerStrings.email = this.cast("email")
+  def emoji: typingsSlinky.winkTokenizer.winkTokenizerStrings.emoji = "emoji".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.emoji]
   @scala.inline
-  def emoji: typingsSlinky.winkTokenizer.winkTokenizerStrings.emoji = this.cast("emoji")
+  def emoticon: typingsSlinky.winkTokenizer.winkTokenizerStrings.emoticon = "emoticon".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.emoticon]
   @scala.inline
-  def emoticon: typingsSlinky.winkTokenizer.winkTokenizerStrings.emoticon = this.cast("emoticon")
+  def hashtag: typingsSlinky.winkTokenizer.winkTokenizerStrings.hashtag = "hashtag".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.hashtag]
   @scala.inline
-  def hashtag: typingsSlinky.winkTokenizer.winkTokenizerStrings.hashtag = this.cast("hashtag")
+  def mention: typingsSlinky.winkTokenizer.winkTokenizerStrings.mention = "mention".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.mention]
   @scala.inline
-  def mention: typingsSlinky.winkTokenizer.winkTokenizerStrings.mention = this.cast("mention")
+  def number: typingsSlinky.winkTokenizer.winkTokenizerStrings.number = "number".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.number]
   @scala.inline
-  def number: typingsSlinky.winkTokenizer.winkTokenizerStrings.number = this.cast("number")
+  def ordinal: typingsSlinky.winkTokenizer.winkTokenizerStrings.ordinal = "ordinal".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.ordinal]
   @scala.inline
-  def ordinal: typingsSlinky.winkTokenizer.winkTokenizerStrings.ordinal = this.cast("ordinal")
+  def punctuation: typingsSlinky.winkTokenizer.winkTokenizerStrings.punctuation = "punctuation".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.punctuation]
   @scala.inline
-  def punctuation: typingsSlinky.winkTokenizer.winkTokenizerStrings.punctuation = this.cast("punctuation")
+  def quoted_phrase: typingsSlinky.winkTokenizer.winkTokenizerStrings.quoted_phrase = "quoted_phrase".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.quoted_phrase]
   @scala.inline
-  def quoted_phrase: typingsSlinky.winkTokenizer.winkTokenizerStrings.quoted_phrase = this.cast("quoted_phrase")
+  def symbol: typingsSlinky.winkTokenizer.winkTokenizerStrings.symbol = "symbol".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.symbol]
   @scala.inline
-  def symbol: typingsSlinky.winkTokenizer.winkTokenizerStrings.symbol = this.cast("symbol")
+  def time: typingsSlinky.winkTokenizer.winkTokenizerStrings.time = "time".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.time]
   @scala.inline
-  def time: typingsSlinky.winkTokenizer.winkTokenizerStrings.time = this.cast("time")
+  def url: typingsSlinky.winkTokenizer.winkTokenizerStrings.url = "url".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.url]
   @scala.inline
-  def url: typingsSlinky.winkTokenizer.winkTokenizerStrings.url = this.cast("url")
-  @scala.inline
-  def word: typingsSlinky.winkTokenizer.winkTokenizerStrings.word = this.cast("word")
+  def word: typingsSlinky.winkTokenizer.winkTokenizerStrings.word = "word".asInstanceOf[typingsSlinky.winkTokenizer.winkTokenizerStrings.word]
 }
 

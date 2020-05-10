@@ -1,6 +1,5 @@
 package typingsSlinky.devexpressWeb
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,7 +62,7 @@ class SubDocument () extends js.Object {
     */
   def findBookmarks(arg: Double): js.Array[Bookmark] = js.native
   def findBookmarks(arg: Interval): js.Array[Bookmark] = js.native
-  def findBookmarks(arg: RegExp): js.Array[Bookmark] = js.native
+  def findBookmarks(arg: js.RegExp): js.Array[Bookmark] = js.native
   /**
     * Returns an array of fields that match the search conditions. An array of the Field objects.
     * @param arg A position or interval indicating where to search fields.

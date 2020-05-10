@@ -12,10 +12,8 @@ trait Cyclical extends js.Object
 
 object Cyclical {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def rainbow: typingsSlinky.vegaTypings.vegaTypingsStrings.rainbow = "rainbow".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.rainbow]
   @scala.inline
-  def rainbow: typingsSlinky.vegaTypings.vegaTypingsStrings.rainbow = this.cast("rainbow")
-  @scala.inline
-  def sinebow: typingsSlinky.vegaTypings.vegaTypingsStrings.sinebow = this.cast("sinebow")
+  def sinebow: typingsSlinky.vegaTypings.vegaTypingsStrings.sinebow = "sinebow".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.sinebow]
 }
 

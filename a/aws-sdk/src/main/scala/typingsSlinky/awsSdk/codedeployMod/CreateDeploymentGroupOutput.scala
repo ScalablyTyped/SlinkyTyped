@@ -14,10 +14,29 @@ trait CreateDeploymentGroupOutput extends js.Object {
 
 object CreateDeploymentGroupOutput {
   @scala.inline
-  def apply(deploymentGroupId: DeploymentGroupId = null): CreateDeploymentGroupOutput = {
+  def apply(): CreateDeploymentGroupOutput = {
     val __obj = js.Dynamic.literal()
-    if (deploymentGroupId != null) __obj.updateDynamic("deploymentGroupId")(deploymentGroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDeploymentGroupOutput]
   }
+  @scala.inline
+  implicit class CreateDeploymentGroupOutputOps[Self <: CreateDeploymentGroupOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentGroupId(value: DeploymentGroupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentGroupId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

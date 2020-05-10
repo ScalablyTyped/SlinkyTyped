@@ -6,15 +6,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A commonly used set of constants used for reflecting gradientUnits, patternContentUnits and other similar attributes. */
+@js.native
 trait SVGUnitTypes extends js.Object {
-  val SVG_UNIT_TYPE_OBJECTBOUNDINGBOX: Double
-  val SVG_UNIT_TYPE_UNKNOWN: Double
-  val SVG_UNIT_TYPE_USERSPACEONUSE: Double
+  val SVG_UNIT_TYPE_OBJECTBOUNDINGBOX: Double = js.native
+  val SVG_UNIT_TYPE_UNKNOWN: Double = js.native
+  val SVG_UNIT_TYPE_USERSPACEONUSE: Double = js.native
 }
 
 @JSGlobal("SVGUnitTypes")
 @js.native
-object SVGUnitTypes extends Instantiable0[SVGUnitTypes] {
+object SVGUnitTypes
+  extends Instantiable0[org.scalajs.dom.raw.SVGUnitTypes] {
   val SVG_UNIT_TYPE_OBJECTBOUNDINGBOX: Double = js.native
   val SVG_UNIT_TYPE_UNKNOWN: Double = js.native
   val SVG_UNIT_TYPE_USERSPACEONUSE: Double = js.native

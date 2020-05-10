@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDiffNavigatorOptions extends js.Object {
-  val alwaysRevealFirst: js.UndefOr[Boolean] = js.undefined
-  val followsCaret: js.UndefOr[Boolean] = js.undefined
-  val ignoreCharChanges: js.UndefOr[Boolean] = js.undefined
+  val alwaysRevealFirst: js.UndefOr[Boolean] = js.native
+  val followsCaret: js.UndefOr[Boolean] = js.native
+  val ignoreCharChanges: js.UndefOr[Boolean] = js.native
 }
 
 object IDiffNavigatorOptions {
   @scala.inline
-  def apply(
-    alwaysRevealFirst: js.UndefOr[Boolean] = js.undefined,
-    followsCaret: js.UndefOr[Boolean] = js.undefined,
-    ignoreCharChanges: js.UndefOr[Boolean] = js.undefined
-  ): IDiffNavigatorOptions = {
+  def apply(): IDiffNavigatorOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysRevealFirst)) __obj.updateDynamic("alwaysRevealFirst")(alwaysRevealFirst.asInstanceOf[js.Any])
-    if (!js.isUndefined(followsCaret)) __obj.updateDynamic("followsCaret")(followsCaret.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreCharChanges)) __obj.updateDynamic("ignoreCharChanges")(ignoreCharChanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDiffNavigatorOptions]
   }
+  @scala.inline
+  implicit class IDiffNavigatorOptionsOps[Self <: IDiffNavigatorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlwaysRevealFirst(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysRevealFirst")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlwaysRevealFirst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysRevealFirst")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowsCaret(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followsCaret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowsCaret: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followsCaret")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreCharChanges(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCharChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreCharChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCharChanges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

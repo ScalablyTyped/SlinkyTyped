@@ -1,5 +1,7 @@
 package typingsSlinky.jqueryui
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.jquery.JQueryEventObject
 import typingsSlinky.jqueryui.JQueryUI.AccordionOptions
 import typingsSlinky.jqueryui.JQueryUI.AutocompleteOptions
@@ -86,9 +88,6 @@ import typingsSlinky.jqueryui.jqueryuiStrings.toArray
 import typingsSlinky.jqueryui.jqueryuiStrings.value
 import typingsSlinky.jqueryui.jqueryuiStrings.values
 import typingsSlinky.jqueryui.jqueryuiStrings.widget
-import typingsSlinky.std.Date
-import typingsSlinky.std.Element
-import typingsSlinky.std.MouseEvent
 import typingsSlinky.std.ThisType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -273,7 +272,7 @@ trait JQuery extends js.Object {
     * @param methodName 'option'
     * @param optionName 'beforeShow'
     */
-  def datepicker(methodName: option, optionName: beforeShow): js.Function2[/* input */ org.scalajs.dom.raw.Element, /* inst */ js.Any, DatepickerOptions] = js.native
+  def datepicker(methodName: option, optionName: beforeShow): js.Function2[/* input */ Element, /* inst */ js.Any, DatepickerOptions] = js.native
   /**
     * Get the beforeShow option, after initialization
     *
@@ -295,7 +294,7 @@ trait JQuery extends js.Object {
   def datepicker(
     methodName: option,
     optionName: beforeShowDay,
-    beforeShowDayValue: js.Function1[/* date */ Date, js.Array[_]]
+    beforeShowDayValue: js.Function1[/* date */ js.Date, js.Array[_]]
   ): JQuery = js.native
   /**
     * Set the beforeShow option, after initialization
@@ -371,7 +370,7 @@ trait JQuery extends js.Object {
   def datepicker(
     methodName: option,
     optionName: calculateWeek,
-    calculateWeekValue: js.Function1[/* date */ Date, String]
+    calculateWeekValue: js.Function1[/* date */ js.Date, String]
   ): JQuery = js.native
   /**
     * Get the changeMonth option, after initialization
@@ -538,7 +537,7 @@ trait JQuery extends js.Object {
     * @param optionName 'defaultDate'
     * @param defaultDateValue A date object containing the default date.
     */
-  def datepicker(methodName: option, optionName: defaultDate, defaultDateValue: Date): JQuery = js.native
+  def datepicker(methodName: option, optionName: defaultDate, defaultDateValue: js.Date): JQuery = js.native
   /**
     * Get the duration option, after initialization
     *
@@ -643,15 +642,15 @@ trait JQuery extends js.Object {
     * @param pos The position of the top/left of the dialog as [x, y] or a MouseEvent that contains the coordinates. If not specified the dialog is centered on the screen.
     */
   @JSName("datepicker")
-  def datepicker_dialog(methodName: dialog, date: Date): JQuery = js.native
+  def datepicker_dialog(methodName: dialog, date: js.Date): JQuery = js.native
   @JSName("datepicker")
-  def datepicker_dialog(methodName: dialog, date: Date, onSelect: js.Function0[Unit]): JQuery = js.native
+  def datepicker_dialog(methodName: dialog, date: js.Date, onSelect: js.Function0[Unit]): JQuery = js.native
   @JSName("datepicker")
-  def datepicker_dialog(methodName: dialog, date: Date, onSelect: js.Function0[Unit], settings: DatepickerOptions): JQuery = js.native
+  def datepicker_dialog(methodName: dialog, date: js.Date, onSelect: js.Function0[Unit], settings: DatepickerOptions): JQuery = js.native
   @JSName("datepicker")
   def datepicker_dialog(
     methodName: dialog,
-    date: Date,
+    date: js.Date,
     onSelect: js.Function0[Unit],
     settings: DatepickerOptions,
     pos: js.Array[Double]
@@ -659,7 +658,7 @@ trait JQuery extends js.Object {
   @JSName("datepicker")
   def datepicker_dialog(
     methodName: dialog,
-    date: Date,
+    date: js.Date,
     onSelect: js.Function0[Unit],
     settings: DatepickerOptions,
     pos: MouseEvent
@@ -717,7 +716,7 @@ trait JQuery extends js.Object {
     * @param date The new date.
     */
   @JSName("datepicker")
-  def datepicker_setDate(methodName: setDate, date: Date): JQuery = js.native
+  def datepicker_setDate(methodName: setDate, date: js.Date): JQuery = js.native
   /**
     * Open the date picker. If the datepicker is attached to an input, the input must be visible for the datepicker to be shown.
     *

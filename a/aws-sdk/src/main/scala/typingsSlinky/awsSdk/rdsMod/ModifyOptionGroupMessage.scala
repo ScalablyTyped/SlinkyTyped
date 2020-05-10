@@ -26,17 +26,59 @@ trait ModifyOptionGroupMessage extends js.Object {
 
 object ModifyOptionGroupMessage {
   @scala.inline
-  def apply(
-    OptionGroupName: String,
-    ApplyImmediately: js.UndefOr[scala.Boolean] = js.undefined,
-    OptionsToInclude: OptionConfigurationList = null,
-    OptionsToRemove: OptionNamesList = null
-  ): ModifyOptionGroupMessage = {
+  def apply(OptionGroupName: String): ModifyOptionGroupMessage = {
     val __obj = js.Dynamic.literal(OptionGroupName = OptionGroupName.asInstanceOf[js.Any])
-    if (!js.isUndefined(ApplyImmediately)) __obj.updateDynamic("ApplyImmediately")(ApplyImmediately.asInstanceOf[js.Any])
-    if (OptionsToInclude != null) __obj.updateDynamic("OptionsToInclude")(OptionsToInclude.asInstanceOf[js.Any])
-    if (OptionsToRemove != null) __obj.updateDynamic("OptionsToRemove")(OptionsToRemove.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyOptionGroupMessage]
   }
+  @scala.inline
+  implicit class ModifyOptionGroupMessageOps[Self <: ModifyOptionGroupMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOptionGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApplyImmediately(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyImmediately")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplyImmediately: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplyImmediately")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionsToInclude(value: OptionConfigurationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionsToInclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionsToInclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionsToInclude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionsToRemove(value: OptionNamesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionsToRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionsToRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionsToRemove")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

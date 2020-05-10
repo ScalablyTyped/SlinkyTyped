@@ -19,24 +19,22 @@ trait TimeUnit extends js.Object
 
 object TimeUnit {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.chartJs.chartJsStrings.day = "day".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.day]
   @scala.inline
-  def day: typingsSlinky.chartJs.chartJsStrings.day = this.cast("day")
+  def hour: typingsSlinky.chartJs.chartJsStrings.hour = "hour".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.chartJs.chartJsStrings.hour = this.cast("hour")
+  def millisecond: typingsSlinky.chartJs.chartJsStrings.millisecond = "millisecond".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.millisecond]
   @scala.inline
-  def millisecond: typingsSlinky.chartJs.chartJsStrings.millisecond = this.cast("millisecond")
+  def minute: typingsSlinky.chartJs.chartJsStrings.minute = "minute".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.chartJs.chartJsStrings.minute = this.cast("minute")
+  def month: typingsSlinky.chartJs.chartJsStrings.month = "month".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.month]
   @scala.inline
-  def month: typingsSlinky.chartJs.chartJsStrings.month = this.cast("month")
+  def quarter: typingsSlinky.chartJs.chartJsStrings.quarter = "quarter".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.quarter]
   @scala.inline
-  def quarter: typingsSlinky.chartJs.chartJsStrings.quarter = this.cast("quarter")
+  def second: typingsSlinky.chartJs.chartJsStrings.second = "second".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.second]
   @scala.inline
-  def second: typingsSlinky.chartJs.chartJsStrings.second = this.cast("second")
+  def week: typingsSlinky.chartJs.chartJsStrings.week = "week".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.week]
   @scala.inline
-  def week: typingsSlinky.chartJs.chartJsStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.chartJs.chartJsStrings.year = this.cast("year")
+  def year: typingsSlinky.chartJs.chartJsStrings.year = "year".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.year]
 }
 

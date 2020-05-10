@@ -5,60 +5,218 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<exceljs.exceljs.WorksheetProtection> */
+@js.native
 trait PartialWorksheetProtectio extends js.Object {
-  var autoFilter: js.UndefOr[Boolean] = js.undefined
-  var deleteColumns: js.UndefOr[Boolean] = js.undefined
-  var deleteRows: js.UndefOr[Boolean] = js.undefined
-  var formatCells: js.UndefOr[Boolean] = js.undefined
-  var formatColumns: js.UndefOr[Boolean] = js.undefined
-  var formatRows: js.UndefOr[Boolean] = js.undefined
-  var insertColumns: js.UndefOr[Boolean] = js.undefined
-  var insertHyperlinks: js.UndefOr[Boolean] = js.undefined
-  var insertRows: js.UndefOr[Boolean] = js.undefined
-  var objects: js.UndefOr[Boolean] = js.undefined
-  var pivotTables: js.UndefOr[Boolean] = js.undefined
-  var scenarios: js.UndefOr[Boolean] = js.undefined
-  var selectLockedCells: js.UndefOr[Boolean] = js.undefined
-  var selectUnlockedCells: js.UndefOr[Boolean] = js.undefined
-  var sort: js.UndefOr[Boolean] = js.undefined
+  var autoFilter: js.UndefOr[Boolean] = js.native
+  var deleteColumns: js.UndefOr[Boolean] = js.native
+  var deleteRows: js.UndefOr[Boolean] = js.native
+  var formatCells: js.UndefOr[Boolean] = js.native
+  var formatColumns: js.UndefOr[Boolean] = js.native
+  var formatRows: js.UndefOr[Boolean] = js.native
+  var insertColumns: js.UndefOr[Boolean] = js.native
+  var insertHyperlinks: js.UndefOr[Boolean] = js.native
+  var insertRows: js.UndefOr[Boolean] = js.native
+  var objects: js.UndefOr[Boolean] = js.native
+  var pivotTables: js.UndefOr[Boolean] = js.native
+  var scenarios: js.UndefOr[Boolean] = js.native
+  var selectLockedCells: js.UndefOr[Boolean] = js.native
+  var selectUnlockedCells: js.UndefOr[Boolean] = js.native
+  var sort: js.UndefOr[Boolean] = js.native
 }
 
 object PartialWorksheetProtectio {
   @scala.inline
-  def apply(
-    autoFilter: js.UndefOr[Boolean] = js.undefined,
-    deleteColumns: js.UndefOr[Boolean] = js.undefined,
-    deleteRows: js.UndefOr[Boolean] = js.undefined,
-    formatCells: js.UndefOr[Boolean] = js.undefined,
-    formatColumns: js.UndefOr[Boolean] = js.undefined,
-    formatRows: js.UndefOr[Boolean] = js.undefined,
-    insertColumns: js.UndefOr[Boolean] = js.undefined,
-    insertHyperlinks: js.UndefOr[Boolean] = js.undefined,
-    insertRows: js.UndefOr[Boolean] = js.undefined,
-    objects: js.UndefOr[Boolean] = js.undefined,
-    pivotTables: js.UndefOr[Boolean] = js.undefined,
-    scenarios: js.UndefOr[Boolean] = js.undefined,
-    selectLockedCells: js.UndefOr[Boolean] = js.undefined,
-    selectUnlockedCells: js.UndefOr[Boolean] = js.undefined,
-    sort: js.UndefOr[Boolean] = js.undefined
-  ): PartialWorksheetProtectio = {
+  def apply(): PartialWorksheetProtectio = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoFilter)) __obj.updateDynamic("autoFilter")(autoFilter.asInstanceOf[js.Any])
-    if (!js.isUndefined(deleteColumns)) __obj.updateDynamic("deleteColumns")(deleteColumns.asInstanceOf[js.Any])
-    if (!js.isUndefined(deleteRows)) __obj.updateDynamic("deleteRows")(deleteRows.asInstanceOf[js.Any])
-    if (!js.isUndefined(formatCells)) __obj.updateDynamic("formatCells")(formatCells.asInstanceOf[js.Any])
-    if (!js.isUndefined(formatColumns)) __obj.updateDynamic("formatColumns")(formatColumns.asInstanceOf[js.Any])
-    if (!js.isUndefined(formatRows)) __obj.updateDynamic("formatRows")(formatRows.asInstanceOf[js.Any])
-    if (!js.isUndefined(insertColumns)) __obj.updateDynamic("insertColumns")(insertColumns.asInstanceOf[js.Any])
-    if (!js.isUndefined(insertHyperlinks)) __obj.updateDynamic("insertHyperlinks")(insertHyperlinks.asInstanceOf[js.Any])
-    if (!js.isUndefined(insertRows)) __obj.updateDynamic("insertRows")(insertRows.asInstanceOf[js.Any])
-    if (!js.isUndefined(objects)) __obj.updateDynamic("objects")(objects.asInstanceOf[js.Any])
-    if (!js.isUndefined(pivotTables)) __obj.updateDynamic("pivotTables")(pivotTables.asInstanceOf[js.Any])
-    if (!js.isUndefined(scenarios)) __obj.updateDynamic("scenarios")(scenarios.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectLockedCells)) __obj.updateDynamic("selectLockedCells")(selectLockedCells.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectUnlockedCells)) __obj.updateDynamic("selectUnlockedCells")(selectUnlockedCells.asInstanceOf[js.Any])
-    if (!js.isUndefined(sort)) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialWorksheetProtectio]
   }
+  @scala.inline
+  implicit class PartialWorksheetProtectioOps[Self <: PartialWorksheetProtectio] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoFilter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteRows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatCells(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatCells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatCells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatRows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertHyperlinks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertHyperlinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertHyperlinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertHyperlinks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertRows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjects(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPivotTables(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPivotTables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotTables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScenarios(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scenarios")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScenarios: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scenarios")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectLockedCells(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectLockedCells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectLockedCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectLockedCells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectUnlockedCells(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectUnlockedCells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectUnlockedCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectUnlockedCells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

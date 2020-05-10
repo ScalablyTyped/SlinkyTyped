@@ -30,20 +30,77 @@ trait ResourceDataContainer extends js.Object {
 
 object ResourceDataContainer {
   @scala.inline
-  def apply(
-    LocalDeviceResourceData: LocalDeviceResourceData = null,
-    LocalVolumeResourceData: LocalVolumeResourceData = null,
-    S3MachineLearningModelResourceData: S3MachineLearningModelResourceData = null,
-    SageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceData = null,
-    SecretsManagerSecretResourceData: SecretsManagerSecretResourceData = null
-  ): ResourceDataContainer = {
+  def apply(): ResourceDataContainer = {
     val __obj = js.Dynamic.literal()
-    if (LocalDeviceResourceData != null) __obj.updateDynamic("LocalDeviceResourceData")(LocalDeviceResourceData.asInstanceOf[js.Any])
-    if (LocalVolumeResourceData != null) __obj.updateDynamic("LocalVolumeResourceData")(LocalVolumeResourceData.asInstanceOf[js.Any])
-    if (S3MachineLearningModelResourceData != null) __obj.updateDynamic("S3MachineLearningModelResourceData")(S3MachineLearningModelResourceData.asInstanceOf[js.Any])
-    if (SageMakerMachineLearningModelResourceData != null) __obj.updateDynamic("SageMakerMachineLearningModelResourceData")(SageMakerMachineLearningModelResourceData.asInstanceOf[js.Any])
-    if (SecretsManagerSecretResourceData != null) __obj.updateDynamic("SecretsManagerSecretResourceData")(SecretsManagerSecretResourceData.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceDataContainer]
   }
+  @scala.inline
+  implicit class ResourceDataContainerOps[Self <: ResourceDataContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocalDeviceResourceData(value: LocalDeviceResourceData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalDeviceResourceData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalDeviceResourceData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalDeviceResourceData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalVolumeResourceData(value: LocalVolumeResourceData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalVolumeResourceData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalVolumeResourceData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalVolumeResourceData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3MachineLearningModelResourceData(value: S3MachineLearningModelResourceData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3MachineLearningModelResourceData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3MachineLearningModelResourceData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3MachineLearningModelResourceData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSageMakerMachineLearningModelResourceData(value: SageMakerMachineLearningModelResourceData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SageMakerMachineLearningModelResourceData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSageMakerMachineLearningModelResourceData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SageMakerMachineLearningModelResourceData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecretsManagerSecretResourceData(value: SecretsManagerSecretResourceData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretsManagerSecretResourceData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretsManagerSecretResourceData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretsManagerSecretResourceData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

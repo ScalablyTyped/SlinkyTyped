@@ -2,7 +2,6 @@ package typingsSlinky.libsodiumWrappersSumo.mod
 
 import typingsSlinky.libsodiumWrappers.mod.StringOutputFormat
 import typingsSlinky.libsodiumWrappers.mod.Uint8ArrayOutputFormat
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,43 +11,43 @@ import scala.scalajs.js.annotation._
 object cryptoStreamChacha20IetfXorIc extends js.Object {
   def apply(
     input_message: String,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
+    nonce: js.typedarray.Uint8Array,
     nonce_increment: Double,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
     input_message: String,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
+    nonce: js.typedarray.Uint8Array,
     nonce_increment: Double,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
     input_message: String,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
+    nonce: js.typedarray.Uint8Array,
     nonce_increment: Double,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    input_message: Uint8Array,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
+    input_message: js.typedarray.Uint8Array,
+    nonce: js.typedarray.Uint8Array,
     nonce_increment: Double,
-    key: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+    key: js.typedarray.Uint8Array
+  ): js.typedarray.Uint8Array = js.native
   def apply(
-    input_message: Uint8Array,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
+    input_message: js.typedarray.Uint8Array,
+    nonce: js.typedarray.Uint8Array,
     nonce_increment: Double,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: StringOutputFormat
   ): String = js.native
   def apply(
-    input_message: Uint8Array,
-    nonce: scala.scalajs.js.typedarray.Uint8Array,
+    input_message: js.typedarray.Uint8Array,
+    nonce: js.typedarray.Uint8Array,
     nonce_increment: Double,
-    key: scala.scalajs.js.typedarray.Uint8Array,
+    key: js.typedarray.Uint8Array,
     outputFormat: Uint8ArrayOutputFormat
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
 }
 

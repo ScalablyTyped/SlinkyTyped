@@ -54,32 +54,149 @@ trait Network extends js.Object {
 
 object Network {
   @scala.inline
-  def apply(
-    DestinationDomain: NonEmptyString = null,
-    DestinationIpV4: NonEmptyString = null,
-    DestinationIpV6: NonEmptyString = null,
-    DestinationPort: Int | scala.Double = null,
-    Direction: NetworkDirection = null,
-    Protocol: NonEmptyString = null,
-    SourceDomain: NonEmptyString = null,
-    SourceIpV4: NonEmptyString = null,
-    SourceIpV6: NonEmptyString = null,
-    SourceMac: NonEmptyString = null,
-    SourcePort: Int | scala.Double = null
-  ): Network = {
+  def apply(): Network = {
     val __obj = js.Dynamic.literal()
-    if (DestinationDomain != null) __obj.updateDynamic("DestinationDomain")(DestinationDomain.asInstanceOf[js.Any])
-    if (DestinationIpV4 != null) __obj.updateDynamic("DestinationIpV4")(DestinationIpV4.asInstanceOf[js.Any])
-    if (DestinationIpV6 != null) __obj.updateDynamic("DestinationIpV6")(DestinationIpV6.asInstanceOf[js.Any])
-    if (DestinationPort != null) __obj.updateDynamic("DestinationPort")(DestinationPort.asInstanceOf[js.Any])
-    if (Direction != null) __obj.updateDynamic("Direction")(Direction.asInstanceOf[js.Any])
-    if (Protocol != null) __obj.updateDynamic("Protocol")(Protocol.asInstanceOf[js.Any])
-    if (SourceDomain != null) __obj.updateDynamic("SourceDomain")(SourceDomain.asInstanceOf[js.Any])
-    if (SourceIpV4 != null) __obj.updateDynamic("SourceIpV4")(SourceIpV4.asInstanceOf[js.Any])
-    if (SourceIpV6 != null) __obj.updateDynamic("SourceIpV6")(SourceIpV6.asInstanceOf[js.Any])
-    if (SourceMac != null) __obj.updateDynamic("SourceMac")(SourceMac.asInstanceOf[js.Any])
-    if (SourcePort != null) __obj.updateDynamic("SourcePort")(SourcePort.asInstanceOf[js.Any])
     __obj.asInstanceOf[Network]
   }
+  @scala.inline
+  implicit class NetworkOps[Self <: Network] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationDomain(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationIpV4(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationIpV4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationIpV4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationIpV4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationIpV6(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationIpV6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationIpV6: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationIpV6")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationPort(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: NetworkDirection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceDomain(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceIpV4(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIpV4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceIpV4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIpV4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceIpV6(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIpV6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceIpV6: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIpV6")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceMac(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceMac")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceMac: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceMac")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourcePort(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourcePort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourcePort")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

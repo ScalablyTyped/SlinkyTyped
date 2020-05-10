@@ -4,27 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContributedFeatureState extends js.Object {
   /**
     * The full contribution id of the feature
     */
-  var featureId: String
+  var featureId: String = js.native
   /**
     * True if the effective state was set by an override rule (indicating that the state cannot be managed by the end user)
     */
-  var overridden: Boolean
+  var overridden: Boolean = js.native
   /**
     * Reason that the state was set (by a plugin/rule).
     */
-  var reason: String
+  var reason: String = js.native
   /**
     * The scope at which this state applies
     */
-  var scope: ContributedFeatureSettingScope
+  var scope: ContributedFeatureSettingScope = js.native
   /**
     * The current state of this feature
     */
-  var state: ContributedFeatureEnabledValue
+  var state: ContributedFeatureEnabledValue = js.native
 }
 
 object ContributedFeatureState {
@@ -37,8 +38,45 @@ object ContributedFeatureState {
     state: ContributedFeatureEnabledValue
   ): ContributedFeatureState = {
     val __obj = js.Dynamic.literal(featureId = featureId.asInstanceOf[js.Any], overridden = overridden.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ContributedFeatureState]
   }
+  @scala.inline
+  implicit class ContributedFeatureStateOps[Self <: ContributedFeatureState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFeatureId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOverridden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overridden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScope(value: ContributedFeatureSettingScope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: ContributedFeatureEnabledValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

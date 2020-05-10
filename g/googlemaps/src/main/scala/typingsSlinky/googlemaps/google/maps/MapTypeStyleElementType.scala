@@ -19,24 +19,22 @@ trait MapTypeStyleElementType extends js.Object
 
 object MapTypeStyleElementType {
   @scala.inline
-  def all: typingsSlinky.googlemaps.googlemapsStrings.all = this.cast("all")
+  def all: typingsSlinky.googlemaps.googlemapsStrings.all = "all".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def geometry: typingsSlinky.googlemaps.googlemapsStrings.geometry = "geometry".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.geometry]
   @scala.inline
-  def geometry: typingsSlinky.googlemaps.googlemapsStrings.geometry = this.cast("geometry")
+  def geometryDotfill: typingsSlinky.googlemaps.googlemapsStrings.geometryDotfill = "geometry.fill".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.geometryDotfill]
   @scala.inline
-  def geometryDotfill: typingsSlinky.googlemaps.googlemapsStrings.geometryDotfill = this.cast("geometry.fill")
+  def geometryDotstroke: typingsSlinky.googlemaps.googlemapsStrings.geometryDotstroke = "geometry.stroke".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.geometryDotstroke]
   @scala.inline
-  def geometryDotstroke: typingsSlinky.googlemaps.googlemapsStrings.geometryDotstroke = this.cast("geometry.stroke")
+  def labels: typingsSlinky.googlemaps.googlemapsStrings.labels = "labels".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.labels]
   @scala.inline
-  def labels: typingsSlinky.googlemaps.googlemapsStrings.labels = this.cast("labels")
+  def labelsDoticon: typingsSlinky.googlemaps.googlemapsStrings.labelsDoticon = "labels.icon".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.labelsDoticon]
   @scala.inline
-  def labelsDoticon: typingsSlinky.googlemaps.googlemapsStrings.labelsDoticon = this.cast("labels.icon")
+  def labelsDottext: typingsSlinky.googlemaps.googlemapsStrings.labelsDottext = "labels.text".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.labelsDottext]
   @scala.inline
-  def labelsDottext: typingsSlinky.googlemaps.googlemapsStrings.labelsDottext = this.cast("labels.text")
+  def labelsDottextDotfill: typingsSlinky.googlemaps.googlemapsStrings.labelsDottextDotfill = "labels.text.fill".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.labelsDottextDotfill]
   @scala.inline
-  def labelsDottextDotfill: typingsSlinky.googlemaps.googlemapsStrings.labelsDottextDotfill = this.cast("labels.text.fill")
-  @scala.inline
-  def labelsDottextDotstroke: typingsSlinky.googlemaps.googlemapsStrings.labelsDottextDotstroke = this.cast("labels.text.stroke")
+  def labelsDottextDotstroke: typingsSlinky.googlemaps.googlemapsStrings.labelsDottextDotstroke = "labels.text.stroke".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.labelsDottextDotstroke]
 }
 

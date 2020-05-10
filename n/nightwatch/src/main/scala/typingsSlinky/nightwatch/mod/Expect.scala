@@ -1,6 +1,5 @@
 package typingsSlinky.nightwatch.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -75,6 +74,6 @@ trait Expect
   def equal(value: String): this.type = js.native
   def equals(value: String): this.type = js.native
   def `match`(value: String): this.type = js.native
-  def `match`(value: RegExp): this.type = js.native
+  def `match`(value: js.RegExp): this.type = js.native
 }
 

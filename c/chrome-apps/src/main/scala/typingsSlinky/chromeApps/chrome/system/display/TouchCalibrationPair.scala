@@ -7,19 +7,39 @@ import scala.scalajs.js.annotation._
 /**
   * @since Chrome 57
   */
+@js.native
 trait TouchCalibrationPair extends js.Object {
   /** The coordinates of the display point. */
-  var displayPoint: Point
+  var displayPoint: Point = js.native
   /** The coordinates of the touch point corresponding to the display point. */
-  var touchPoint: Point
+  var touchPoint: Point = js.native
 }
 
 object TouchCalibrationPair {
   @scala.inline
   def apply(displayPoint: Point, touchPoint: Point): TouchCalibrationPair = {
     val __obj = js.Dynamic.literal(displayPoint = displayPoint.asInstanceOf[js.Any], touchPoint = touchPoint.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TouchCalibrationPair]
   }
+  @scala.inline
+  implicit class TouchCalibrationPairOps[Self <: TouchCalibrationPair] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayPoint(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTouchPoint(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

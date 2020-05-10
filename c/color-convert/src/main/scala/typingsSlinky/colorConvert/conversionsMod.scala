@@ -16,6 +16,158 @@ import scala.scalajs.js.annotation._
 @JSImport("color-convert/conversions", JSImport.Namespace)
 @js.native
 object conversionsMod extends js.Object {
+  /* keyof color-convert.TypeofcssKeywords */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.colorConvert.colorConvertStrings.black
+    - typingsSlinky.colorConvert.colorConvertStrings.magenta
+    - typingsSlinky.colorConvert.colorConvertStrings.skyblue
+    - typingsSlinky.colorConvert.colorConvertStrings.darkseagreen
+    - typingsSlinky.colorConvert.colorConvertStrings.midnightblue
+    - typingsSlinky.colorConvert.colorConvertStrings.rosybrown
+    - typingsSlinky.colorConvert.colorConvertStrings.honeydew
+    - typingsSlinky.colorConvert.colorConvertStrings.cadetblue
+    - typingsSlinky.colorConvert.colorConvertStrings.darkgrey
+    - typingsSlinky.colorConvert.colorConvertStrings.lavenderblush
+    - typingsSlinky.colorConvert.colorConvertStrings.lightblue
+    - typingsSlinky.colorConvert.colorConvertStrings.moccasin
+    - typingsSlinky.colorConvert.colorConvertStrings.salmon
+    - typingsSlinky.colorConvert.colorConvertStrings.indianred
+    - typingsSlinky.colorConvert.colorConvertStrings.red
+    - typingsSlinky.colorConvert.colorConvertStrings.purple
+    - typingsSlinky.colorConvert.colorConvertStrings.chocolate
+    - typingsSlinky.colorConvert.colorConvertStrings.darkslategray
+    - typingsSlinky.colorConvert.colorConvertStrings.lightcyan
+    - typingsSlinky.colorConvert.colorConvertStrings.limegreen
+    - typingsSlinky.colorConvert.colorConvertStrings.lightslategray
+    - typingsSlinky.colorConvert.colorConvertStrings.sandybrown
+    - typingsSlinky.colorConvert.colorConvertStrings.mediumblue
+    - typingsSlinky.colorConvert.colorConvertStrings.darkorange
+    - typingsSlinky.colorConvert.colorConvertStrings.darkgray
+    - typingsSlinky.colorConvert.colorConvertStrings.darkslategrey
+    - typingsSlinky.colorConvert.colorConvertStrings.lightgrey
+    - typingsSlinky.colorConvert.colorConvertStrings.ivory
+    - typingsSlinky.colorConvert.colorConvertStrings.green
+    - typingsSlinky.colorConvert.colorConvertStrings.lavender
+    - typingsSlinky.colorConvert.colorConvertStrings.lightpink
+    - typingsSlinky.colorConvert.colorConvertStrings.darkmagenta
+    - typingsSlinky.colorConvert.colorConvertStrings.mediumspringgreen
+    - typingsSlinky.colorConvert.colorConvertStrings.darkorchid
+    - typingsSlinky.colorConvert.colorConvertStrings.aqua
+    - typingsSlinky.colorConvert.colorConvertStrings.lightyellow
+    - typingsSlinky.colorConvert.colorConvertStrings.hotpink
+    - typingsSlinky.colorConvert.colorConvertStrings.khaki
+    - typingsSlinky.colorConvert.colorConvertStrings.beige
+    - typingsSlinky.colorConvert.colorConvertStrings.darkred
+    - typingsSlinky.colorConvert.colorConvertStrings.darkslateblue
+    - typingsSlinky.colorConvert.colorConvertStrings.sienna
+    - typingsSlinky.colorConvert.colorConvertStrings.lightsalmon
+    - typingsSlinky.colorConvert.colorConvertStrings.mediumseagreen
+    - typingsSlinky.colorConvert.colorConvertStrings.blue
+    - typingsSlinky.colorConvert.colorConvertStrings.lightsteelblue
+    - typingsSlinky.colorConvert.colorConvertStrings.lightgoldenrodyellow
+    - typingsSlinky.colorConvert.colorConvertStrings.mediumpurple
+    - typingsSlinky.colorConvert.colorConvertStrings.maroon
+    - typingsSlinky.colorConvert.colorConvertStrings.slategrey
+    - typingsSlinky.colorConvert.colorConvertStrings.darkgoldenrod
+    - typingsSlinky.colorConvert.colorConvertStrings.violet
+    - typingsSlinky.colorConvert.colorConvertStrings.darkolivegreen
+    - typingsSlinky.colorConvert.colorConvertStrings.springgreen
+    - typingsSlinky.colorConvert.colorConvertStrings.oldlace
+    - typingsSlinky.colorConvert.colorConvertStrings.forestgreen
+    - typingsSlinky.colorConvert.colorConvertStrings.goldenrod
+    - typingsSlinky.colorConvert.colorConvertStrings.coral
+    - typingsSlinky.colorConvert.colorConvertStrings.aquamarine
+    - typingsSlinky.colorConvert.colorConvertStrings.mintcream
+    - typingsSlinky.colorConvert.colorConvertStrings.snow
+    - typingsSlinky.colorConvert.colorConvertStrings.lightseagreen
+    - typingsSlinky.colorConvert.colorConvertStrings.seashell
+    - typingsSlinky.colorConvert.colorConvertStrings.palevioletred
+    - typingsSlinky.colorConvert.colorConvertStrings.darkcyan
+    - typingsSlinky.colorConvert.colorConvertStrings.aliceblue
+    - typingsSlinky.colorConvert.colorConvertStrings.linen
+    - typingsSlinky.colorConvert.colorConvertStrings.wheat
+    - typingsSlinky.colorConvert.colorConvertStrings.mediumturquoise
+    - typingsSlinky.colorConvert.colorConvertStrings.crimson
+    - typingsSlinky.colorConvert.colorConvertStrings.dodgerblue
+    - typingsSlinky.colorConvert.colorConvertStrings.yellowgreen
+    - typingsSlinky.colorConvert.colorConvertStrings.firebrick
+    - typingsSlinky.colorConvert.colorConvertStrings.burlywood
+    - typingsSlinky.colorConvert.colorConvertStrings.darkviolet
+    - typingsSlinky.colorConvert.colorConvertStrings.gray
+    - typingsSlinky.colorConvert.colorConvertStrings.mediumorchid
+    - typingsSlinky.colorConvert.colorConvertStrings.navy
+    - typingsSlinky.colorConvert.colorConvertStrings.azure
+    - typingsSlinky.colorConvert.colorConvertStrings.mediumslateblue
+    - typingsSlinky.colorConvert.colorConvertStrings.fuchsia
+    - typingsSlinky.colorConvert.colorConvertStrings.papayawhip
+    - typingsSlinky.colorConvert.colorConvertStrings.lemonchiffon
+    - typingsSlinky.colorConvert.colorConvertStrings.orangered
+    - typingsSlinky.colorConvert.colorConvertStrings.lightskyblue
+    - typingsSlinky.colorConvert.colorConvertStrings.mistyrose
+    - typingsSlinky.colorConvert.colorConvertStrings.lightgreen
+    - typingsSlinky.colorConvert.colorConvertStrings.royalblue
+    - typingsSlinky.colorConvert.colorConvertStrings.antiquewhite
+    - typingsSlinky.colorConvert.colorConvertStrings.grey
+    - typingsSlinky.colorConvert.colorConvertStrings.tan
+    - typingsSlinky.colorConvert.colorConvertStrings.brown
+    - typingsSlinky.colorConvert.colorConvertStrings.chartreuse
+    - typingsSlinky.colorConvert.colorConvertStrings.gainsboro
+    - typingsSlinky.colorConvert.colorConvertStrings.pink
+    - typingsSlinky.colorConvert.colorConvertStrings.lightcoral
+    - typingsSlinky.colorConvert.colorConvertStrings.lightgray
+    - typingsSlinky.colorConvert.colorConvertStrings.darkgreen
+    - typingsSlinky.colorConvert.colorConvertStrings.lawngreen
+    - typingsSlinky.colorConvert.colorConvertStrings.blueviolet
+    - typingsSlinky.colorConvert.colorConvertStrings.steelblue
+    - typingsSlinky.colorConvert.colorConvertStrings.slategray
+    - typingsSlinky.colorConvert.colorConvertStrings.ghostwhite
+    - typingsSlinky.colorConvert.colorConvertStrings.greenyellow
+    - typingsSlinky.colorConvert.colorConvertStrings.palegoldenrod
+    - typingsSlinky.colorConvert.colorConvertStrings.darkturquoise
+    - typingsSlinky.colorConvert.colorConvertStrings.deeppink
+    - typingsSlinky.colorConvert.colorConvertStrings.whitesmoke
+    - typingsSlinky.colorConvert.colorConvertStrings.thistle
+    - typingsSlinky.colorConvert.colorConvertStrings.paleturquoise
+    - typingsSlinky.colorConvert.colorConvertStrings.white
+    - typingsSlinky.colorConvert.colorConvertStrings.plum
+    - typingsSlinky.colorConvert.colorConvertStrings.blanchedalmond
+    - typingsSlinky.colorConvert.colorConvertStrings.orange
+    - typingsSlinky.colorConvert.colorConvertStrings.deepskyblue
+    - typingsSlinky.colorConvert.colorConvertStrings.darkkhaki
+    - typingsSlinky.colorConvert.colorConvertStrings.mediumvioletred
+    - typingsSlinky.colorConvert.colorConvertStrings.silver
+    - typingsSlinky.colorConvert.colorConvertStrings.peru
+    - typingsSlinky.colorConvert.colorConvertStrings.slateblue
+    - typingsSlinky.colorConvert.colorConvertStrings.cornflowerblue
+    - typingsSlinky.colorConvert.colorConvertStrings.floralwhite
+    - typingsSlinky.colorConvert.colorConvertStrings.darksalmon
+    - typingsSlinky.colorConvert.colorConvertStrings.mediumaquamarine
+    - typingsSlinky.colorConvert.colorConvertStrings.turquoise
+    - typingsSlinky.colorConvert.colorConvertStrings.seagreen
+    - typingsSlinky.colorConvert.colorConvertStrings.palegreen
+    - typingsSlinky.colorConvert.colorConvertStrings.saddlebrown
+    - typingsSlinky.colorConvert.colorConvertStrings.cyan
+    - typingsSlinky.colorConvert.colorConvertStrings.peachpuff
+    - typingsSlinky.colorConvert.colorConvertStrings.darkblue
+    - typingsSlinky.colorConvert.colorConvertStrings.olivedrab
+    - typingsSlinky.colorConvert.colorConvertStrings.powderblue
+    - typingsSlinky.colorConvert.colorConvertStrings.orchid
+    - typingsSlinky.colorConvert.colorConvertStrings.bisque
+    - typingsSlinky.colorConvert.colorConvertStrings.dimgray
+    - typingsSlinky.colorConvert.colorConvertStrings.navajowhite
+    - typingsSlinky.colorConvert.colorConvertStrings.teal
+    - typingsSlinky.colorConvert.colorConvertStrings.rebeccapurple
+    - typingsSlinky.colorConvert.colorConvertStrings.indigo
+    - typingsSlinky.colorConvert.colorConvertStrings.lime
+    - typingsSlinky.colorConvert.colorConvertStrings.gold
+    - typingsSlinky.colorConvert.colorConvertStrings.dimgrey
+    - typingsSlinky.colorConvert.colorConvertStrings.cornsilk
+    - typingsSlinky.colorConvert.colorConvertStrings.tomato
+    - typingsSlinky.colorConvert.colorConvertStrings.olive
+    - typingsSlinky.colorConvert.colorConvertStrings.lightslategrey
+    - typingsSlinky.colorConvert.colorConvertStrings.yellow
+  */
+  trait KEYWORD_ extends js.Object
+  
   @js.native
   object ansi16 extends js.Object {
     val channels: `1` = js.native
@@ -160,7 +312,6 @@ object conversionsMod extends js.Object {
   type HSL_ = js.Tuple3[Double, Double, Double]
   type HSV_ = js.Tuple3[Double, Double, Double]
   type HWB_ = js.Tuple3[Double, Double, Double]
-  type KEYWORD_ = String
   type LAB_ = js.Tuple3[Double, Double, Double]
   type LCH_ = js.Tuple3[Double, Double, Double]
   type RGB_ = js.Tuple3[Double, Double, Double]

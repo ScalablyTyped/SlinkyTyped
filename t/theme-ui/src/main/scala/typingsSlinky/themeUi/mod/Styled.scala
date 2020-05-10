@@ -19,7 +19,6 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.AnchorHTMLAttributes
 import typingsSlinky.react.mod.BlockquoteHTMLAttributes
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.GetDerivedStateFromError
 import typingsSlinky.react.mod.GetDerivedStateFromProps
@@ -45,7 +44,7 @@ import scala.scalajs.js.annotation._
 class Styled protected ()
   extends Component[
       (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs, 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
   def this(props: (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs) = this()
@@ -60,19 +59,15 @@ class Styled protected ()
 object Styled
   extends Instantiable1[
       /* props */ (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs, 
-      Component[
-        (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs, 
-        ComponentState, 
-        js.Any
+      ReactComponentClass[
+        (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs
       ]
     ]
      with Instantiable2[
       /* props */ (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs, 
       /* context */ js.Any, 
-      Component[
-        (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs, 
-        ComponentState, 
-        js.Any
+      ReactComponentClass[
+        (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs
       ]
     ] {
   var a: ReactComponentClass[

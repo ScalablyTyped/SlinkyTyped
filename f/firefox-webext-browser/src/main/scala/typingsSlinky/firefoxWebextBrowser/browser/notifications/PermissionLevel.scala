@@ -12,10 +12,8 @@ trait PermissionLevel extends js.Object
 
 object PermissionLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def denied: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.denied = "denied".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.denied]
   @scala.inline
-  def denied: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.denied = this.cast("denied")
-  @scala.inline
-  def granted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.granted = this.cast("granted")
+  def granted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.granted = "granted".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.granted]
 }
 

@@ -4,20 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.amapJsApiTransfer.AMap.Transfer.RailwayDetails because Already inherited */ trait RailwayDetailsExt extends RailwayDetailsBase {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.amapJsApiTransfer.AMap.Transfer.RailwayDetails because Already inherited */ @js.native
+trait RailwayDetailsExt extends RailwayDetailsBase {
   /**
     * 聚合的备选方案
     */
-  var alters: js.Array[Alter]
+  var alters: js.Array[Alter] = js.native
   /**
     * 途经站点数量
     */
-  var via_num: Double
+  var via_num: Double = js.native
   /**
     * 途经站点信息
     */
-  var via_stops: js.Array[ViaStop]
+  var via_stops: js.Array[ViaStop] = js.native
 }
 
 object RailwayDetailsExt {
@@ -40,5 +41,31 @@ object RailwayDetailsExt {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RailwayDetailsExt]
   }
+  @scala.inline
+  implicit class RailwayDetailsExtOps[Self <: RailwayDetailsExt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlters(value: js.Array[Alter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVia_num(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("via_num")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVia_stops(value: js.Array[ViaStop]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("via_stops")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

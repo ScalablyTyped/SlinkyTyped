@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCurvenessEmphasis extends js.Object {
   /**
     * Line color.
@@ -25,7 +26,7 @@ trait AnonCurvenessEmphasis extends js.Object {
     * "#000"
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1.lineStyle.color
     */
-  var color: js.UndefOr[Color] = js.undefined
+  var color: js.UndefOr[Color] = js.native
   /**
     * Edge curvature, which supports value from 0 to
     * 1.
@@ -34,11 +35,11 @@ trait AnonCurvenessEmphasis extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1.lineStyle.curveness
     */
-  var curveness: js.UndefOr[Double] = js.undefined
+  var curveness: js.UndefOr[Double] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1.lineStyle.emphasis
     */
-  var emphasis: js.UndefOr[AnonShadowColor] = js.undefined
+  var emphasis: js.UndefOr[AnonShadowColor] = js.native
   /**
     * Opacity of the component.
     * Supports value from 0 to 1, and the component
@@ -47,7 +48,7 @@ trait AnonCurvenessEmphasis extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1.lineStyle.opacity
     */
-  var opacity: js.UndefOr[Double] = js.undefined
+  var opacity: js.UndefOr[Double] = js.native
   /**
     * Size of shadow blur.
     * This attribute should be used along with `shadowColor`,`shadowOffsetX`,
@@ -60,14 +61,14 @@ trait AnonCurvenessEmphasis extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1.lineStyle.shadowBlur
     */
-  var shadowBlur: js.UndefOr[Double] = js.undefined
+  var shadowBlur: js.UndefOr[Double] = js.native
   /**
     * Shadow color. Support same format as `color`.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1.lineStyle.shadowColor
     */
-  var shadowColor: js.UndefOr[String] = js.undefined
+  var shadowColor: js.UndefOr[String] = js.native
   /**
     * Offset distance on the horizontal direction of
     * shadow.
@@ -75,7 +76,7 @@ trait AnonCurvenessEmphasis extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1.lineStyle.shadowOffsetX
     */
-  var shadowOffsetX: js.UndefOr[Double] = js.undefined
+  var shadowOffsetX: js.UndefOr[Double] = js.native
   /**
     * Offset distance on the vertical direction of
     * shadow.
@@ -83,7 +84,7 @@ trait AnonCurvenessEmphasis extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1.lineStyle.shadowOffsetY
     */
-  var shadowOffsetY: js.UndefOr[Double] = js.undefined
+  var shadowOffsetY: js.UndefOr[Double] = js.native
   /**
     * line type.
     *
@@ -98,42 +99,149 @@ trait AnonCurvenessEmphasis extends js.Object {
     * "solid"
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1.lineStyle.type
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * line width.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine.data.1.lineStyle.width
     */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
 }
 
 object AnonCurvenessEmphasis {
   @scala.inline
-  def apply(
-    color: Color = null,
-    curveness: Int | Double = null,
-    emphasis: AnonShadowColor = null,
-    opacity: Int | Double = null,
-    shadowBlur: Int | Double = null,
-    shadowColor: String = null,
-    shadowOffsetX: Int | Double = null,
-    shadowOffsetY: Int | Double = null,
-    `type`: String = null,
-    width: Int | Double = null
-  ): AnonCurvenessEmphasis = {
+  def apply(): AnonCurvenessEmphasis = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (curveness != null) __obj.updateDynamic("curveness")(curveness.asInstanceOf[js.Any])
-    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (shadowBlur != null) __obj.updateDynamic("shadowBlur")(shadowBlur.asInstanceOf[js.Any])
-    if (shadowColor != null) __obj.updateDynamic("shadowColor")(shadowColor.asInstanceOf[js.Any])
-    if (shadowOffsetX != null) __obj.updateDynamic("shadowOffsetX")(shadowOffsetX.asInstanceOf[js.Any])
-    if (shadowOffsetY != null) __obj.updateDynamic("shadowOffsetY")(shadowOffsetY.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCurvenessEmphasis]
   }
+  @scala.inline
+  implicit class AnonCurvenessEmphasisOps[Self <: AnonCurvenessEmphasis] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurveness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curveness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurveness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curveness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmphasis(value: AnonShadowColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowBlur(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowBlur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowOffsetX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowOffsetX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowOffsetY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowOffsetY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

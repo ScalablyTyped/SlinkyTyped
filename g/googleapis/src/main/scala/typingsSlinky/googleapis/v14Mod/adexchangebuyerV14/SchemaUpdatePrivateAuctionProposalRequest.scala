@@ -26,18 +26,65 @@ trait SchemaUpdatePrivateAuctionProposalRequest extends js.Object {
 
 object SchemaUpdatePrivateAuctionProposalRequest {
   @scala.inline
-  def apply(
-    externalDealId: String = null,
-    note: SchemaMarketplaceNote = null,
-    proposalRevisionNumber: String = null,
-    updateAction: String = null
-  ): SchemaUpdatePrivateAuctionProposalRequest = {
+  def apply(): SchemaUpdatePrivateAuctionProposalRequest = {
     val __obj = js.Dynamic.literal()
-    if (externalDealId != null) __obj.updateDynamic("externalDealId")(externalDealId.asInstanceOf[js.Any])
-    if (note != null) __obj.updateDynamic("note")(note.asInstanceOf[js.Any])
-    if (proposalRevisionNumber != null) __obj.updateDynamic("proposalRevisionNumber")(proposalRevisionNumber.asInstanceOf[js.Any])
-    if (updateAction != null) __obj.updateDynamic("updateAction")(updateAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdatePrivateAuctionProposalRequest]
   }
+  @scala.inline
+  implicit class SchemaUpdatePrivateAuctionProposalRequestOps[Self <: SchemaUpdatePrivateAuctionProposalRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExternalDealId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalDealId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalDealId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalDealId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNote(value: SchemaMarketplaceNote): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProposalRevisionNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalRevisionNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProposalRevisionNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalRevisionNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateAction")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

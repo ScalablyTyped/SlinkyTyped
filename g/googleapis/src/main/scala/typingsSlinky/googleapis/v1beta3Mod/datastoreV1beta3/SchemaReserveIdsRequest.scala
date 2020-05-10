@@ -22,11 +22,41 @@ trait SchemaReserveIdsRequest extends js.Object {
 
 object SchemaReserveIdsRequest {
   @scala.inline
-  def apply(databaseId: String = null, keys: js.Array[SchemaKey] = null): SchemaReserveIdsRequest = {
+  def apply(): SchemaReserveIdsRequest = {
     val __obj = js.Dynamic.literal()
-    if (databaseId != null) __obj.updateDynamic("databaseId")(databaseId.asInstanceOf[js.Any])
-    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReserveIdsRequest]
   }
+  @scala.inline
+  implicit class SchemaReserveIdsRequestOps[Self <: SchemaReserveIdsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatabaseId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabaseId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("databaseId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeys(value: js.Array[SchemaKey]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -33,18 +33,65 @@ trait SchemaNewDeviceEvent extends js.Object {
 
 object SchemaNewDeviceEvent {
   @scala.inline
-  def apply(
-    deviceId: String = null,
-    dpcPackageName: String = null,
-    managementType: String = null,
-    userId: String = null
-  ): SchemaNewDeviceEvent = {
+  def apply(): SchemaNewDeviceEvent = {
     val __obj = js.Dynamic.literal()
-    if (deviceId != null) __obj.updateDynamic("deviceId")(deviceId.asInstanceOf[js.Any])
-    if (dpcPackageName != null) __obj.updateDynamic("dpcPackageName")(dpcPackageName.asInstanceOf[js.Any])
-    if (managementType != null) __obj.updateDynamic("managementType")(managementType.asInstanceOf[js.Any])
-    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNewDeviceEvent]
   }
+  @scala.inline
+  implicit class SchemaNewDeviceEventOps[Self <: SchemaNewDeviceEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDpcPackageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dpcPackageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDpcPackageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dpcPackageName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagementType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managementType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagementType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managementType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

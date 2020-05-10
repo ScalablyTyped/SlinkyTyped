@@ -22,14 +22,45 @@ trait FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigura
 
 object FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer {
   @scala.inline
-  def apply(
-    orcSerDe: FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe = null,
-    parquetSerDe: FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe = null
-  ): FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer = {
+  def apply(): FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer = {
     val __obj = js.Dynamic.literal()
-    if (orcSerDe != null) __obj.updateDynamic("orcSerDe")(orcSerDe.asInstanceOf[js.Any])
-    if (parquetSerDe != null) __obj.updateDynamic("parquetSerDe")(parquetSerDe.asInstanceOf[js.Any])
     __obj.asInstanceOf[FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer]
   }
+  @scala.inline
+  implicit class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOps[Self <: FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrcSerDe(
+      value: FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orcSerDe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrcSerDe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orcSerDe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParquetSerDe(
+      value: FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDe
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parquetSerDe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParquetSerDe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parquetSerDe")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,8 @@
 package typingsSlinky.reactNavigation.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,33 +12,33 @@ import scala.scalajs.js.annotation._
 object Themed extends js.Object {
   @js.native
   class StatusBar protected ()
-    extends Component[ThemedStatusBarProps, ComponentState, js.Any] {
+    extends Component[ThemedStatusBarProps, js.Object, js.Any] {
     def this(props: ThemedStatusBarProps) = this()
     def this(props: ThemedStatusBarProps, context: js.Any) = this()
   }
   
   @js.native
   class Text protected ()
-    extends Component[ThemedTextProps, ComponentState, js.Any] {
+    extends Component[ThemedTextProps, js.Object, js.Any] {
     def this(props: ThemedTextProps) = this()
     def this(props: ThemedTextProps, context: js.Any) = this()
   }
   
   @js.native
   class TextInput protected ()
-    extends Component[ThemedTextInputProps, ComponentState, js.Any] {
+    extends Component[ThemedTextInputProps, js.Object, js.Any] {
     def this(props: ThemedTextInputProps) = this()
     def this(props: ThemedTextInputProps, context: js.Any) = this()
   }
   
   @js.native
-  object StatusBar extends TopLevel[ComponentType[ThemedStatusBarProps]]
+  object StatusBar extends TopLevel[ReactComponentClass[ThemedStatusBarProps]]
   
   @js.native
-  object Text extends TopLevel[ComponentType[ThemedTextProps]]
+  object Text extends TopLevel[ReactComponentClass[ThemedTextProps]]
   
   @js.native
-  object TextInput extends TopLevel[ComponentType[ThemedTextInputProps]]
+  object TextInput extends TopLevel[ReactComponentClass[ThemedTextInputProps]]
   
 }
 

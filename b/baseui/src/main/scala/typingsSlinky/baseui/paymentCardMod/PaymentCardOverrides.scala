@@ -5,80 +5,244 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined baseui.baseui/input.InputOverrides & {  IconWrapper ? :/ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> * / any} */
+@js.native
 trait PaymentCardOverrides extends js.Object {
   var After: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var Before: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var ClearIcon: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var ClearIconContainer: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var EndEnhancer: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var IconWrapper: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var Input: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var InputContainer: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var MaskToggleButton: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var MaskToggleHideIcon: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var MaskToggleShowIcon: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var Root: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var StartEnhancer: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
-  ] = js.undefined
+  ] = js.native
 }
 
 object PaymentCardOverrides {
   @scala.inline
-  def apply(
-    After: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any = null,
-    Before: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any = null,
-    ClearIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any = null,
-    ClearIconContainer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any = null,
-    EndEnhancer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any = null,
-    IconWrapper: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any = null,
-    Input: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any = null,
-    InputContainer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any = null,
-    MaskToggleButton: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any = null,
-    MaskToggleHideIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any = null,
-    MaskToggleShowIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any = null,
-    Root: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any = null,
-    StartEnhancer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any = null
-  ): PaymentCardOverrides = {
+  def apply(): PaymentCardOverrides = {
     val __obj = js.Dynamic.literal()
-    if (After != null) __obj.updateDynamic("After")(After.asInstanceOf[js.Any])
-    if (Before != null) __obj.updateDynamic("Before")(Before.asInstanceOf[js.Any])
-    if (ClearIcon != null) __obj.updateDynamic("ClearIcon")(ClearIcon.asInstanceOf[js.Any])
-    if (ClearIconContainer != null) __obj.updateDynamic("ClearIconContainer")(ClearIconContainer.asInstanceOf[js.Any])
-    if (EndEnhancer != null) __obj.updateDynamic("EndEnhancer")(EndEnhancer.asInstanceOf[js.Any])
-    if (IconWrapper != null) __obj.updateDynamic("IconWrapper")(IconWrapper.asInstanceOf[js.Any])
-    if (Input != null) __obj.updateDynamic("Input")(Input.asInstanceOf[js.Any])
-    if (InputContainer != null) __obj.updateDynamic("InputContainer")(InputContainer.asInstanceOf[js.Any])
-    if (MaskToggleButton != null) __obj.updateDynamic("MaskToggleButton")(MaskToggleButton.asInstanceOf[js.Any])
-    if (MaskToggleHideIcon != null) __obj.updateDynamic("MaskToggleHideIcon")(MaskToggleHideIcon.asInstanceOf[js.Any])
-    if (MaskToggleShowIcon != null) __obj.updateDynamic("MaskToggleShowIcon")(MaskToggleShowIcon.asInstanceOf[js.Any])
-    if (Root != null) __obj.updateDynamic("Root")(Root.asInstanceOf[js.Any])
-    if (StartEnhancer != null) __obj.updateDynamic("StartEnhancer")(StartEnhancer.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentCardOverrides]
   }
+  @scala.inline
+  implicit class PaymentCardOverridesOps[Self <: PaymentCardOverrides] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfter(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("After")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("After")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBefore(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Before")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Before")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClearIcon(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClearIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClearIconContainer(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearIconContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClearIconContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearIconContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndEnhancer(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndEnhancer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndEnhancer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndEnhancer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconWrapper(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IconWrapper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconWrapper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IconWrapper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputContainer(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskToggleButton(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaskToggleButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskToggleButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaskToggleButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskToggleHideIcon(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaskToggleHideIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskToggleHideIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaskToggleHideIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskToggleShowIcon(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaskToggleShowIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskToggleShowIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaskToggleShowIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartEnhancer(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartEnhancer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartEnhancer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartEnhancer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

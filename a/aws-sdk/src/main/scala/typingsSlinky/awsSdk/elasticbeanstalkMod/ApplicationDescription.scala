@@ -42,26 +42,113 @@ trait ApplicationDescription extends js.Object {
 
 object ApplicationDescription {
   @scala.inline
-  def apply(
-    ApplicationArn: ApplicationArn = null,
-    ApplicationName: ApplicationName = null,
-    ConfigurationTemplates: ConfigurationTemplateNamesList = null,
-    DateCreated: js.Date = null,
-    DateUpdated: js.Date = null,
-    Description: Description = null,
-    ResourceLifecycleConfig: ApplicationResourceLifecycleConfig = null,
-    Versions: VersionLabelsList = null
-  ): ApplicationDescription = {
+  def apply(): ApplicationDescription = {
     val __obj = js.Dynamic.literal()
-    if (ApplicationArn != null) __obj.updateDynamic("ApplicationArn")(ApplicationArn.asInstanceOf[js.Any])
-    if (ApplicationName != null) __obj.updateDynamic("ApplicationName")(ApplicationName.asInstanceOf[js.Any])
-    if (ConfigurationTemplates != null) __obj.updateDynamic("ConfigurationTemplates")(ConfigurationTemplates.asInstanceOf[js.Any])
-    if (DateCreated != null) __obj.updateDynamic("DateCreated")(DateCreated.asInstanceOf[js.Any])
-    if (DateUpdated != null) __obj.updateDynamic("DateUpdated")(DateUpdated.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (ResourceLifecycleConfig != null) __obj.updateDynamic("ResourceLifecycleConfig")(ResourceLifecycleConfig.asInstanceOf[js.Any])
-    if (Versions != null) __obj.updateDynamic("Versions")(Versions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationDescription]
   }
+  @scala.inline
+  implicit class ApplicationDescriptionOps[Self <: ApplicationDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationArn(value: ApplicationArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplicationName(value: ApplicationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigurationTemplates(value: ConfigurationTemplateNamesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationTemplates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationTemplates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationTemplates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateCreated(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateCreated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateCreated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateUpdated(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceLifecycleConfig(value: ApplicationResourceLifecycleConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLifecycleConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceLifecycleConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLifecycleConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersions(value: VersionLabelsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Versions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Versions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

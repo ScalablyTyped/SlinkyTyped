@@ -6,7 +6,10 @@ import typingsSlinky.openpgp.mod.enums.compression
 import typingsSlinky.openpgp.mod.packet.List
 import typingsSlinky.openpgp.mod.packet.Literal
 import typingsSlinky.openpgp.mod.signature.Signature
-import typingsSlinky.std.Uint8Array
+import typingsSlinky.openpgp.openpgpStrings.binary
+import typingsSlinky.openpgp.openpgpStrings.mime
+import typingsSlinky.openpgp.openpgpStrings.text
+import typingsSlinky.openpgp.openpgpStrings.utf8
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +34,7 @@ object message extends js.Object {
       * @param detachedSignature The detached ASCII-armored or Uint8Array PGP signature
       */
     def appendSignature(detachedSignature: String): Unit = js.native
-    def appendSignature(detachedSignature: Uint8Array): Unit = js.native
+    def appendSignature(detachedSignature: js.typedarray.Uint8Array): Unit = js.native
     /**
       * Returns ASCII armored text of message
       * @returns ASCII armor
@@ -99,7 +102,7 @@ object message extends js.Object {
       * Get literal data that is the body of the message
       * @returns literal body of the message as Uint8Array
       */
-    def getLiteralData(): scala.scalajs.js.typedarray.Uint8Array | Null = js.native
+    def getLiteralData(): js.typedarray.Uint8Array | Null = js.native
     /**
       * Returns the key IDs of the keys that signed the message
       * @returns array of keyid objects
@@ -214,7 +217,7 @@ object message extends js.Object {
     * @returns new message with encrypted content
     */
   def encryptSessionKey(
-    sessionKey: scala.scalajs.js.typedarray.Uint8Array,
+    sessionKey: js.typedarray.Uint8Array,
     symAlgo: String,
     aeadAlgo: String,
     publicKeys: js.Array[_],
@@ -223,48 +226,76 @@ object message extends js.Object {
     date: js.Date,
     userIds: js.Array[_]
   ): js.Promise[Message] = js.native
-  def fromBinary(bytes: ReadableStream[Uint8Array]): Message = js.native
-  def fromBinary(bytes: ReadableStream[Uint8Array], filename: String): Message = js.native
-  def fromBinary(bytes: ReadableStream[Uint8Array], filename: String, date: js.Date): Message = js.native
-  def fromBinary(bytes: ReadableStream[Uint8Array], filename: String, date: js.Date, `type`: js.Any): Message = js.native
+  def fromBinary(bytes: ReadableStream[js.typedarray.Uint8Array]): Message = js.native
+  def fromBinary(bytes: ReadableStream[js.typedarray.Uint8Array], filename: String): Message = js.native
+  def fromBinary(bytes: ReadableStream[js.typedarray.Uint8Array], filename: String, date: js.Date): Message = js.native
   /**
     * creates new message object from binary data
     * @param bytes
     * @param filename (optional)
     * @param date (optional)
-    * @param {utf8 | binary | text | mime} type (optional) data packet type
+    * @param type (optional) data packet type
     * @returns new message object
     */
-  def fromBinary(bytes: Uint8Array): Message = js.native
-  def fromBinary(bytes: Uint8Array, filename: String): Message = js.native
-  def fromBinary(bytes: Uint8Array, filename: String, date: js.Date): Message = js.native
-  def fromBinary(bytes: Uint8Array, filename: String, date: js.Date, `type`: js.Any): Message = js.native
+  def fromBinary(bytes: js.typedarray.Uint8Array): Message = js.native
+  def fromBinary(bytes: js.typedarray.Uint8Array, filename: String): Message = js.native
+  def fromBinary(bytes: js.typedarray.Uint8Array, filename: String, date: js.Date): Message = js.native
+  @JSName("fromBinary")
+  def fromBinary_binary(bytes: ReadableStream[js.typedarray.Uint8Array], filename: String, date: js.Date, `type`: binary): Message = js.native
+  @JSName("fromBinary")
+  def fromBinary_binary(bytes: js.typedarray.Uint8Array, filename: String, date: js.Date, `type`: binary): Message = js.native
+  @JSName("fromBinary")
+  def fromBinary_mime(bytes: ReadableStream[js.typedarray.Uint8Array], filename: String, date: js.Date, `type`: mime): Message = js.native
+  @JSName("fromBinary")
+  def fromBinary_mime(bytes: js.typedarray.Uint8Array, filename: String, date: js.Date, `type`: mime): Message = js.native
+  @JSName("fromBinary")
+  def fromBinary_text(bytes: ReadableStream[js.typedarray.Uint8Array], filename: String, date: js.Date, `type`: text): Message = js.native
+  @JSName("fromBinary")
+  def fromBinary_text(bytes: js.typedarray.Uint8Array, filename: String, date: js.Date, `type`: text): Message = js.native
+  @JSName("fromBinary")
+  def fromBinary_utf8(bytes: ReadableStream[js.typedarray.Uint8Array], filename: String, date: js.Date, `type`: utf8): Message = js.native
+  @JSName("fromBinary")
+  def fromBinary_utf8(bytes: js.typedarray.Uint8Array, filename: String, date: js.Date, `type`: utf8): Message = js.native
   /**
     * creates new message object from text
     * @param text
     * @param filename (optional)
     * @param date (optional)
-    * @param {utf8 | binary | text | mime} type (optional) data packet type
+    * @param type (optional) data packet type
     * @returns new message object
     */
   def fromText(text: String): Message = js.native
   def fromText(text: String, filename: String): Message = js.native
   def fromText(text: String, filename: String, date: js.Date): Message = js.native
-  def fromText(text: String, filename: String, date: js.Date, `type`: js.Any): Message = js.native
   def fromText(text: ReadableStream[String]): Message = js.native
   def fromText(text: ReadableStream[String], filename: String): Message = js.native
   def fromText(text: ReadableStream[String], filename: String, date: js.Date): Message = js.native
-  def fromText(text: ReadableStream[String], filename: String, date: js.Date, `type`: js.Any): Message = js.native
-  def read(input: ReadableStream[Uint8Array]): js.Promise[Message] = js.native
-  def read(input: ReadableStream[Uint8Array], fromStream: Boolean): js.Promise[Message] = js.native
+  @JSName("fromText")
+  def fromText_binary(text: String, filename: String, date: js.Date, `type`: binary): Message = js.native
+  @JSName("fromText")
+  def fromText_binary(text: ReadableStream[String], filename: String, date: js.Date, `type`: binary): Message = js.native
+  @JSName("fromText")
+  def fromText_mime(text: String, filename: String, date: js.Date, `type`: mime): Message = js.native
+  @JSName("fromText")
+  def fromText_mime(text: ReadableStream[String], filename: String, date: js.Date, `type`: mime): Message = js.native
+  @JSName("fromText")
+  def fromText_text(text: String, filename: String, date: js.Date, `type`: text): Message = js.native
+  @JSName("fromText")
+  def fromText_text(text: ReadableStream[String], filename: String, date: js.Date, `type`: text): Message = js.native
+  @JSName("fromText")
+  def fromText_utf8(text: String, filename: String, date: js.Date, `type`: utf8): Message = js.native
+  @JSName("fromText")
+  def fromText_utf8(text: ReadableStream[String], filename: String, date: js.Date, `type`: utf8): Message = js.native
+  def read(input: ReadableStream[js.typedarray.Uint8Array]): js.Promise[Message] = js.native
+  def read(input: ReadableStream[js.typedarray.Uint8Array], fromStream: Boolean): js.Promise[Message] = js.native
   /**
     * reads an OpenPGP message as byte array and returns a message object
     * @param input binary message
     * @param fromStream whether the message was created from a Stream
     * @returns new message object
     */
-  def read(input: Uint8Array): js.Promise[Message] = js.native
-  def read(input: Uint8Array, fromStream: Boolean): js.Promise[Message] = js.native
+  def read(input: js.typedarray.Uint8Array): js.Promise[Message] = js.native
+  def read(input: js.typedarray.Uint8Array, fromStream: Boolean): js.Promise[Message] = js.native
   /**
     * reads an OpenPGP armored message and returns a message object
     * @param armoredText text to be parsed

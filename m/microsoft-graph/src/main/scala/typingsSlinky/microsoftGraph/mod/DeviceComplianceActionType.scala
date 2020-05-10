@@ -17,20 +17,18 @@ trait DeviceComplianceActionType extends js.Object
 
 object DeviceComplianceActionType {
   @scala.inline
-  def block: typingsSlinky.microsoftGraph.microsoftGraphStrings.block = this.cast("block")
+  def block: typingsSlinky.microsoftGraph.microsoftGraphStrings.block = "block".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.block]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def noAction: typingsSlinky.microsoftGraph.microsoftGraphStrings.noAction = "noAction".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.noAction]
   @scala.inline
-  def noAction: typingsSlinky.microsoftGraph.microsoftGraphStrings.noAction = this.cast("noAction")
+  def notification: typingsSlinky.microsoftGraph.microsoftGraphStrings.notification = "notification".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notification]
   @scala.inline
-  def notification: typingsSlinky.microsoftGraph.microsoftGraphStrings.notification = this.cast("notification")
+  def pushNotification: typingsSlinky.microsoftGraph.microsoftGraphStrings.pushNotification = "pushNotification".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.pushNotification]
   @scala.inline
-  def pushNotification: typingsSlinky.microsoftGraph.microsoftGraphStrings.pushNotification = this.cast("pushNotification")
+  def removeResourceAccessProfiles: typingsSlinky.microsoftGraph.microsoftGraphStrings.removeResourceAccessProfiles = "removeResourceAccessProfiles".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.removeResourceAccessProfiles]
   @scala.inline
-  def removeResourceAccessProfiles: typingsSlinky.microsoftGraph.microsoftGraphStrings.removeResourceAccessProfiles = this.cast("removeResourceAccessProfiles")
+  def retire: typingsSlinky.microsoftGraph.microsoftGraphStrings.retire = "retire".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.retire]
   @scala.inline
-  def retire: typingsSlinky.microsoftGraph.microsoftGraphStrings.retire = this.cast("retire")
-  @scala.inline
-  def wipe: typingsSlinky.microsoftGraph.microsoftGraphStrings.wipe = this.cast("wipe")
+  def wipe: typingsSlinky.microsoftGraph.microsoftGraphStrings.wipe = "wipe".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.wipe]
 }
 

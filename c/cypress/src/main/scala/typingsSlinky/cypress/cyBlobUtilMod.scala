@@ -11,13 +11,13 @@ import scala.scalajs.js.annotation._
 object cyBlobUtilMod extends js.Object {
   @js.native
   trait BlobUtilStatic extends js.Object {
-    def arrayBufferToBlob(arrayBuff: scala.scalajs.js.typedarray.ArrayBuffer): js.Promise[Blob] = js.native
-    def arrayBufferToBlob(arrayBuff: scala.scalajs.js.typedarray.ArrayBuffer, `type`: String): js.Promise[Blob] = js.native
+    def arrayBufferToBlob(arrayBuff: js.typedarray.ArrayBuffer): js.Promise[Blob] = js.native
+    def arrayBufferToBlob(arrayBuff: js.typedarray.ArrayBuffer, `type`: String): js.Promise[Blob] = js.native
     def base64StringToBlob(base64: String): js.Promise[Blob] = js.native
     def base64StringToBlob(base64: String, `type`: String): js.Promise[Blob] = js.native
     def binaryStringToBlob(binary: String): js.Promise[Blob] = js.native
     def binaryStringToBlob(binary: String, `type`: String): js.Promise[Blob] = js.native
-    def blobToArrayBuffer(blob: Blob): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def blobToArrayBuffer(blob: Blob): js.Promise[js.typedarray.ArrayBuffer] = js.native
     def blobToBase64String(blob: Blob): js.Promise[String] = js.native
     def blobToBinaryString(blob: Blob): js.Promise[String] = js.native
     def blobToDataURL(blob: Blob): js.Promise[String] = js.native

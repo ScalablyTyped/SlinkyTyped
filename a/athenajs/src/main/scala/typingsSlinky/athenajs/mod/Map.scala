@@ -26,7 +26,7 @@ class Map protected () extends js.Object {
   def getTileIndexFromPixel(x: Double, y: Double): pixelPos = js.native
   def moveTo(x: Double, y: Double): Unit = js.native
   def respawn(): Unit = js.native
-  def setData(map: scala.scalajs.js.typedarray.Uint8Array, behaviors: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+  def setData(map: js.typedarray.Uint8Array, behaviors: js.typedarray.Uint8Array): Unit = js.native
   def setEasing(easing: String): Unit = js.native
   def shift(startLine: Double, height: Double): Unit = js.native
   def updateTile(col: Double, row: Double): Unit = js.native

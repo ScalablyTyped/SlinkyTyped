@@ -2,115 +2,360 @@ package typingsSlinky.reactToolbox.libMod.ReactToolbox
 
 import typingsSlinky.react.mod.Attributes
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Props extends Attributes {
   /**
     * Set a class for the root component.
     */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /**
     * Callback called when the component is clicked.
     */
-  var onClick: js.UndefOr[js.Function] = js.undefined
-  var onContextMenu: js.UndefOr[js.Function] = js.undefined
-  var onDoubleClick: js.UndefOr[js.Function] = js.undefined
-  var onDrag: js.UndefOr[js.Function] = js.undefined
-  var onDragEnd: js.UndefOr[js.Function] = js.undefined
-  var onDragEnter: js.UndefOr[js.Function] = js.undefined
-  var onDragExit: js.UndefOr[js.Function] = js.undefined
-  var onDragLeave: js.UndefOr[js.Function] = js.undefined
-  var onDragOver: js.UndefOr[js.Function] = js.undefined
-  var onDragStart: js.UndefOr[js.Function] = js.undefined
-  var onDrop: js.UndefOr[js.Function] = js.undefined
+  var onClick: js.UndefOr[js.Function] = js.native
+  var onContextMenu: js.UndefOr[js.Function] = js.native
+  var onDoubleClick: js.UndefOr[js.Function] = js.native
+  var onDrag: js.UndefOr[js.Function] = js.native
+  var onDragEnd: js.UndefOr[js.Function] = js.native
+  var onDragEnter: js.UndefOr[js.Function] = js.native
+  var onDragExit: js.UndefOr[js.Function] = js.native
+  var onDragLeave: js.UndefOr[js.Function] = js.native
+  var onDragOver: js.UndefOr[js.Function] = js.native
+  var onDragStart: js.UndefOr[js.Function] = js.native
+  var onDrop: js.UndefOr[js.Function] = js.native
   /**
     * Callback called when the mouse press the Component.
     */
-  var onMouseDown: js.UndefOr[js.Function] = js.undefined
+  var onMouseDown: js.UndefOr[js.Function] = js.native
   /**
     * Callback called when the mouse enters the Component.
     */
-  var onMouseEnter: js.UndefOr[js.Function] = js.undefined
+  var onMouseEnter: js.UndefOr[js.Function] = js.native
   /**
     * Callback called when the mouse leaves the Component.
     */
-  var onMouseLeave: js.UndefOr[js.Function] = js.undefined
-  var onMouseMove: js.UndefOr[js.Function] = js.undefined
-  var onMouseOut: js.UndefOr[js.Function] = js.undefined
-  var onMouseOver: js.UndefOr[js.Function] = js.undefined
+  var onMouseLeave: js.UndefOr[js.Function] = js.native
+  var onMouseMove: js.UndefOr[js.Function] = js.native
+  var onMouseOut: js.UndefOr[js.Function] = js.native
+  var onMouseOver: js.UndefOr[js.Function] = js.native
   /**
     * Fires after the mouse is released from the Component.
     */
-  var onMouseUp: js.UndefOr[js.Function] = js.undefined
-  var onTouchCancel: js.UndefOr[js.Function] = js.undefined
-  var onTouchEnd: js.UndefOr[js.Function] = js.undefined
-  var onTouchMove: js.UndefOr[js.Function] = js.undefined
-  var onTouchStart: js.UndefOr[js.Function] = js.undefined
+  var onMouseUp: js.UndefOr[js.Function] = js.native
+  var onTouchCancel: js.UndefOr[js.Function] = js.native
+  var onTouchEnd: js.UndefOr[js.Function] = js.native
+  var onTouchMove: js.UndefOr[js.Function] = js.native
+  var onTouchStart: js.UndefOr[js.Function] = js.native
   /**
     * Set inline style for the root component.
     */
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.native
 }
 
 object Props {
   @scala.inline
-  def apply(
-    className: String = null,
-    key: Key = null,
-    onClick: js.Function = null,
-    onContextMenu: js.Function = null,
-    onDoubleClick: js.Function = null,
-    onDrag: js.Function = null,
-    onDragEnd: js.Function = null,
-    onDragEnter: js.Function = null,
-    onDragExit: js.Function = null,
-    onDragLeave: js.Function = null,
-    onDragOver: js.Function = null,
-    onDragStart: js.Function = null,
-    onDrop: js.Function = null,
-    onMouseDown: js.Function = null,
-    onMouseEnter: js.Function = null,
-    onMouseLeave: js.Function = null,
-    onMouseMove: js.Function = null,
-    onMouseOut: js.Function = null,
-    onMouseOver: js.Function = null,
-    onMouseUp: js.Function = null,
-    onTouchCancel: js.Function = null,
-    onTouchEnd: js.Function = null,
-    onTouchMove: js.Function = null,
-    onTouchStart: js.Function = null,
-    style: CSSProperties = null
-  ): Props = {
+  def apply(): Props = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
-    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(onContextMenu.asInstanceOf[js.Any])
-    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(onDoubleClick.asInstanceOf[js.Any])
-    if (onDrag != null) __obj.updateDynamic("onDrag")(onDrag.asInstanceOf[js.Any])
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(onDragEnd.asInstanceOf[js.Any])
-    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(onDragEnter.asInstanceOf[js.Any])
-    if (onDragExit != null) __obj.updateDynamic("onDragExit")(onDragExit.asInstanceOf[js.Any])
-    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(onDragLeave.asInstanceOf[js.Any])
-    if (onDragOver != null) __obj.updateDynamic("onDragOver")(onDragOver.asInstanceOf[js.Any])
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(onDragStart.asInstanceOf[js.Any])
-    if (onDrop != null) __obj.updateDynamic("onDrop")(onDrop.asInstanceOf[js.Any])
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(onMouseDown.asInstanceOf[js.Any])
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(onMouseEnter.asInstanceOf[js.Any])
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(onMouseLeave.asInstanceOf[js.Any])
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(onMouseMove.asInstanceOf[js.Any])
-    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(onMouseOut.asInstanceOf[js.Any])
-    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(onMouseOver.asInstanceOf[js.Any])
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(onMouseUp.asInstanceOf[js.Any])
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(onTouchCancel.asInstanceOf[js.Any])
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(onTouchEnd.asInstanceOf[js.Any])
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(onTouchMove.asInstanceOf[js.Any])
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(onTouchStart.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
+  @scala.inline
+  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnContextMenu(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnContextMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDoubleClick(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDoubleClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDrag(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragEnd(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDragEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragEnter(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDragEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragExit(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragExit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDragExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragExit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragLeave(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragLeave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDragLeave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragOver(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDragOver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDragStart(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDragStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDrop(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseDown(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseEnter(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseLeave(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseLeave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseMove(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseOut(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseOver(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseOver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseOver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseUp(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTouchCancel(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchCancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnTouchCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchCancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTouchEnd(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnTouchEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTouchMove(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchMove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnTouchMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTouchStart(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnTouchStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

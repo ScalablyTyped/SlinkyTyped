@@ -1,30 +1,23 @@
 package typingsSlinky.reactBeforeunload.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactBeforeunload.AnonChildren
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Beforeunload
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Beforeunload {
   @JSImport("react-beforeunload", "Beforeunload")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    onBeforeunload: /* arg */ Event_ => js.UndefOr[String | Unit],
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(onBeforeunload = js.Any.fromFunction1(onBeforeunload))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: AnonChildren): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onBeforeunload: /* arg */ Event_ => js.UndefOr[String | Unit]): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(onBeforeunload = js.Any.fromFunction1(onBeforeunload))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[AnonChildren]))
   }
-  type Props = AnonChildren
 }
 

@@ -14,14 +14,12 @@ trait Middlewares extends js.Object
 
 object Middlewares {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def handshake: typingsSlinky.socketclusterServer.socketclusterServerStrings.handshake = "handshake".asInstanceOf[typingsSlinky.socketclusterServer.socketclusterServerStrings.handshake]
   @scala.inline
-  def handshake: typingsSlinky.socketclusterServer.socketclusterServerStrings.handshake = this.cast("handshake")
+  def inbound: typingsSlinky.socketclusterServer.socketclusterServerStrings.inbound = "inbound".asInstanceOf[typingsSlinky.socketclusterServer.socketclusterServerStrings.inbound]
   @scala.inline
-  def inbound: typingsSlinky.socketclusterServer.socketclusterServerStrings.inbound = this.cast("inbound")
+  def inboundRaw: typingsSlinky.socketclusterServer.socketclusterServerStrings.inboundRaw = "inboundRaw".asInstanceOf[typingsSlinky.socketclusterServer.socketclusterServerStrings.inboundRaw]
   @scala.inline
-  def inboundRaw: typingsSlinky.socketclusterServer.socketclusterServerStrings.inboundRaw = this.cast("inboundRaw")
-  @scala.inline
-  def outbound: typingsSlinky.socketclusterServer.socketclusterServerStrings.outbound = this.cast("outbound")
+  def outbound: typingsSlinky.socketclusterServer.socketclusterServerStrings.outbound = "outbound".asInstanceOf[typingsSlinky.socketclusterServer.socketclusterServerStrings.outbound]
 }
 

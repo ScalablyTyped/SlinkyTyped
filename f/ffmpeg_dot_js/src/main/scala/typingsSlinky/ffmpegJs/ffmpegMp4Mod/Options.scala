@@ -4,38 +4,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var MEMFS: js.UndefOr[js.Array[Video]] = js.undefined
-  var TOTAL_MEMORY: js.UndefOr[Double] = js.undefined
-  var arguments: js.Array[String]
-  var mounts: js.UndefOr[js.Array[Mount]] = js.undefined
-  var onExit: js.UndefOr[js.Function1[/* code */ js.Any, Unit]] = js.undefined
-  var print: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.undefined
-  var printErr: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.undefined
-  var stdin: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.undefined
+  var MEMFS: js.UndefOr[js.Array[Video]] = js.native
+  var TOTAL_MEMORY: js.UndefOr[Double] = js.native
+  var arguments: js.Array[String] = js.native
+  var mounts: js.UndefOr[js.Array[Mount]] = js.native
+  var onExit: js.UndefOr[js.Function1[/* code */ js.Any, Unit]] = js.native
+  var print: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.native
+  var printErr: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.native
+  var stdin: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    arguments: js.Array[String],
-    MEMFS: js.Array[Video] = null,
-    TOTAL_MEMORY: Int | Double = null,
-    mounts: js.Array[Mount] = null,
-    onExit: /* code */ js.Any => Unit = null,
-    print: /* data */ js.Any => Unit = null,
-    printErr: /* data */ js.Any => Unit = null,
-    stdin: /* data */ js.Any => Unit = null
-  ): Options = {
+  def apply(arguments: js.Array[String]): Options = {
     val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any])
-    if (MEMFS != null) __obj.updateDynamic("MEMFS")(MEMFS.asInstanceOf[js.Any])
-    if (TOTAL_MEMORY != null) __obj.updateDynamic("TOTAL_MEMORY")(TOTAL_MEMORY.asInstanceOf[js.Any])
-    if (mounts != null) __obj.updateDynamic("mounts")(mounts.asInstanceOf[js.Any])
-    if (onExit != null) __obj.updateDynamic("onExit")(js.Any.fromFunction1(onExit))
-    if (print != null) __obj.updateDynamic("print")(js.Any.fromFunction1(print))
-    if (printErr != null) __obj.updateDynamic("printErr")(js.Any.fromFunction1(printErr))
-    if (stdin != null) __obj.updateDynamic("stdin")(js.Any.fromFunction1(stdin))
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArguments(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMEMFS(value: js.Array[Video]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MEMFS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMEMFS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MEMFS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTOTAL_MEMORY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TOTAL_MEMORY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTOTAL_MEMORY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TOTAL_MEMORY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMounts(value: js.Array[Mount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnExit(value: /* code */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrint(value: /* data */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPrint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrintErr(value: /* data */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printErr")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPrintErr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printErr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStdin(value: /* data */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stdin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutStdin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stdin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.pahoMqtt.mod._Global_.Paho.MQTT
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -167,9 +166,9 @@ class Client protected () extends js.Object {
   def send(topic: String, payload: String): Unit = js.native
   def send(topic: String, payload: String, qos: Qos): Unit = js.native
   def send(topic: String, payload: String, qos: Qos, retained: Boolean): Unit = js.native
-  def send(topic: String, payload: ArrayBuffer): Unit = js.native
-  def send(topic: String, payload: ArrayBuffer, qos: Qos): Unit = js.native
-  def send(topic: String, payload: ArrayBuffer, qos: Qos, retained: Boolean): Unit = js.native
+  def send(topic: String, payload: js.typedarray.ArrayBuffer): Unit = js.native
+  def send(topic: String, payload: js.typedarray.ArrayBuffer, qos: Qos): Unit = js.native
+  def send(topic: String, payload: js.typedarray.ArrayBuffer, qos: Qos, retained: Boolean): Unit = js.native
   /**
     * Start tracing.
     */

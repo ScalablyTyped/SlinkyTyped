@@ -1,10 +1,8 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.rmcTabs.defaultTabBarMod.PropsType
 import typingsSlinky.rmcTabs.modelsMod.Models.TabData
@@ -16,47 +14,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DefaultTabBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.antdMobile.tabsMod.DefaultTabBar] {
+object DefaultTabBar {
   @JSImport("antd-mobile/lib/tabs", "DefaultTabBar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.antdMobile.tabsMod.DefaultTabBar] {
+    @scala.inline
+    def onTabClick(value: (/* tab */ TabData, /* index */ Double) => Unit): this.type = set("onTabClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def page(value: Double): this.type = set("page", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderTab(value: /* tab */ TabData => TagMod[Any]): this.type = set("renderTab", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderUnderline(value: /* style */ CSSProperties | js.Any => TagMod[Any]): this.type = set("renderUnderline", js.Any.fromFunction1(value))
+    @scala.inline
+    def tabBarActiveTextColor(value: String): this.type = set("tabBarActiveTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarBackgroundColor(value: String): this.type = set("tabBarBackgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarInactiveTextColor(value: String): this.type = set("tabBarInactiveTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarPosition(value: top | bottom | left | right): this.type = set("tabBarPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarTextStyle(value: CSSProperties | js.Any): this.type = set("tabBarTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarUnderlineStyle(value: CSSProperties | js.Any): this.type = set("tabBarUnderlineStyle", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     activeTab: Double,
     animated: Boolean,
     goToTab: Double => Unit,
     instanceId: Double,
-    tabs: js.Array[TabData],
-    onTabClick: (/* tab */ TabData, /* index */ Double) => Unit = null,
-    page: Int | Double = null,
-    prefixCls: String = null,
-    renderTab: /* tab */ TabData => TagMod[Any] = null,
-    renderUnderline: /* style */ CSSProperties | js.Any => TagMod[Any] = null,
-    tabBarActiveTextColor: String = null,
-    tabBarBackgroundColor: String = null,
-    tabBarInactiveTextColor: String = null,
-    tabBarPosition: top | bottom | left | right = null,
-    tabBarTextStyle: CSSProperties | js.Any = null,
-    tabBarUnderlineStyle: CSSProperties | js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.antdMobile.tabsMod.DefaultTabBar] = {
-    val __obj = js.Dynamic.literal(activeTab = activeTab.asInstanceOf[js.Any], animated = animated.asInstanceOf[js.Any], goToTab = js.Any.fromFunction1(goToTab), instanceId = instanceId.asInstanceOf[js.Any], tabs = tabs.asInstanceOf[js.Any])
-    if (onTabClick != null) __obj.updateDynamic("onTabClick")(js.Any.fromFunction2(onTabClick))
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (renderTab != null) __obj.updateDynamic("renderTab")(js.Any.fromFunction1(renderTab))
-    if (renderUnderline != null) __obj.updateDynamic("renderUnderline")(js.Any.fromFunction1(renderUnderline))
-    if (tabBarActiveTextColor != null) __obj.updateDynamic("tabBarActiveTextColor")(tabBarActiveTextColor.asInstanceOf[js.Any])
-    if (tabBarBackgroundColor != null) __obj.updateDynamic("tabBarBackgroundColor")(tabBarBackgroundColor.asInstanceOf[js.Any])
-    if (tabBarInactiveTextColor != null) __obj.updateDynamic("tabBarInactiveTextColor")(tabBarInactiveTextColor.asInstanceOf[js.Any])
-    if (tabBarPosition != null) __obj.updateDynamic("tabBarPosition")(tabBarPosition.asInstanceOf[js.Any])
-    if (tabBarTextStyle != null) __obj.updateDynamic("tabBarTextStyle")(tabBarTextStyle.asInstanceOf[js.Any])
-    if (tabBarUnderlineStyle != null) __obj.updateDynamic("tabBarUnderlineStyle")(tabBarUnderlineStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    tabs: js.Array[TabData]
+  ): Builder = {
+    val __props = js.Dynamic.literal(activeTab = activeTab.asInstanceOf[js.Any], animated = animated.asInstanceOf[js.Any], goToTab = js.Any.fromFunction1(goToTab), instanceId = instanceId.asInstanceOf[js.Any], tabs = tabs.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
   }
-  type Props = PropsType
 }
 

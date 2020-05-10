@@ -18,69 +18,257 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PostingStoryOptions extends js.Object {
-  var caption: js.UndefOr[String] = js.undefined
-  var chat: js.UndefOr[StoryChat] = js.undefined
-  var countdown: js.UndefOr[StoryCountdown] = js.undefined
-  var hashtags: js.UndefOr[js.Array[StoryHashtag]] = js.undefined
-  var link: js.UndefOr[String] = js.undefined
-  var location: js.UndefOr[PostingStoryLocationSticker] = js.undefined
-  var media: js.UndefOr[StoryAttachedMedia] = js.undefined
-  var mentions: js.UndefOr[js.Array[StoryMention]] = js.undefined
-  var poll: js.UndefOr[StoryPoll] = js.undefined
-  var question: js.UndefOr[StoryQuestion] = js.undefined
-  var quiz: js.UndefOr[StoryQuiz] = js.undefined
-  var recipientUsers: js.UndefOr[js.Array[String]] = js.undefined
-  var replyType: js.UndefOr[story | String] = js.undefined
-  var slider: js.UndefOr[StorySlider] = js.undefined
-  var stickerConfig: js.UndefOr[(js.Any with AnonStorystickerids) | StickerBuilder] = js.undefined
-  var threadIds: js.UndefOr[js.Array[String]] = js.undefined
-  var toBesties: js.UndefOr[Boolean] = js.undefined
-  var viewMode: js.UndefOr[replayable | once | String] = js.undefined
+  var caption: js.UndefOr[String] = js.native
+  var chat: js.UndefOr[StoryChat] = js.native
+  var countdown: js.UndefOr[StoryCountdown] = js.native
+  var hashtags: js.UndefOr[js.Array[StoryHashtag]] = js.native
+  var link: js.UndefOr[String] = js.native
+  var location: js.UndefOr[PostingStoryLocationSticker] = js.native
+  var media: js.UndefOr[StoryAttachedMedia] = js.native
+  var mentions: js.UndefOr[js.Array[StoryMention]] = js.native
+  var poll: js.UndefOr[StoryPoll] = js.native
+  var question: js.UndefOr[StoryQuestion] = js.native
+  var quiz: js.UndefOr[StoryQuiz] = js.native
+  var recipientUsers: js.UndefOr[js.Array[String]] = js.native
+  var replyType: js.UndefOr[story | String] = js.native
+  var slider: js.UndefOr[StorySlider] = js.native
+  var stickerConfig: js.UndefOr[(js.Any with AnonStorystickerids) | StickerBuilder] = js.native
+  var threadIds: js.UndefOr[js.Array[String]] = js.native
+  var toBesties: js.UndefOr[Boolean] = js.native
+  var viewMode: js.UndefOr[replayable | once | String] = js.native
 }
 
 object PostingStoryOptions {
   @scala.inline
-  def apply(
-    caption: String = null,
-    chat: StoryChat = null,
-    countdown: StoryCountdown = null,
-    hashtags: js.Array[StoryHashtag] = null,
-    link: String = null,
-    location: PostingStoryLocationSticker = null,
-    media: StoryAttachedMedia = null,
-    mentions: js.Array[StoryMention] = null,
-    poll: StoryPoll = null,
-    question: StoryQuestion = null,
-    quiz: StoryQuiz = null,
-    recipientUsers: js.Array[String] = null,
-    replyType: story | String = null,
-    slider: StorySlider = null,
-    stickerConfig: (js.Any with AnonStorystickerids) | StickerBuilder = null,
-    threadIds: js.Array[String] = null,
-    toBesties: js.UndefOr[Boolean] = js.undefined,
-    viewMode: replayable | once | String = null
-  ): PostingStoryOptions = {
+  def apply(): PostingStoryOptions = {
     val __obj = js.Dynamic.literal()
-    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
-    if (chat != null) __obj.updateDynamic("chat")(chat.asInstanceOf[js.Any])
-    if (countdown != null) __obj.updateDynamic("countdown")(countdown.asInstanceOf[js.Any])
-    if (hashtags != null) __obj.updateDynamic("hashtags")(hashtags.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
-    if (mentions != null) __obj.updateDynamic("mentions")(mentions.asInstanceOf[js.Any])
-    if (poll != null) __obj.updateDynamic("poll")(poll.asInstanceOf[js.Any])
-    if (question != null) __obj.updateDynamic("question")(question.asInstanceOf[js.Any])
-    if (quiz != null) __obj.updateDynamic("quiz")(quiz.asInstanceOf[js.Any])
-    if (recipientUsers != null) __obj.updateDynamic("recipientUsers")(recipientUsers.asInstanceOf[js.Any])
-    if (replyType != null) __obj.updateDynamic("replyType")(replyType.asInstanceOf[js.Any])
-    if (slider != null) __obj.updateDynamic("slider")(slider.asInstanceOf[js.Any])
-    if (stickerConfig != null) __obj.updateDynamic("stickerConfig")(stickerConfig.asInstanceOf[js.Any])
-    if (threadIds != null) __obj.updateDynamic("threadIds")(threadIds.asInstanceOf[js.Any])
-    if (!js.isUndefined(toBesties)) __obj.updateDynamic("toBesties")(toBesties.asInstanceOf[js.Any])
-    if (viewMode != null) __obj.updateDynamic("viewMode")(viewMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[PostingStoryOptions]
   }
+  @scala.inline
+  implicit class PostingStoryOptionsOps[Self <: PostingStoryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChat(value: StoryChat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountdown(value: StoryCountdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countdown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountdown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countdown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHashtags(value: js.Array[StoryHashtag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashtags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHashtags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashtags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: PostingStoryLocationSticker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedia(value: StoryAttachedMedia): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedia: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMentions(value: js.Array[StoryMention]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mentions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMentions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mentions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoll(value: StoryPoll): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuestion(value: StoryQuestion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("question")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("question")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuiz(value: StoryQuiz): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quiz")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuiz: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quiz")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientUsers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplyType(value: story | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplyType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replyType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlider(value: StorySlider): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStickerConfig(value: (js.Any with AnonStorystickerids) | StickerBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stickerConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStickerConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stickerConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreadIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threadIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreadIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threadIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToBesties(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toBesties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToBesties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toBesties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewMode(value: replayable | once | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

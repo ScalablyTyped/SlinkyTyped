@@ -47,22 +47,89 @@ trait SchemaDevicePolicy extends js.Object {
 
 object SchemaDevicePolicy {
   @scala.inline
-  def apply(
-    allowedDeviceManagementLevels: js.Array[String] = null,
-    allowedEncryptionStatuses: js.Array[String] = null,
-    osConstraints: js.Array[SchemaOsConstraint] = null,
-    requireAdminApproval: js.UndefOr[Boolean] = js.undefined,
-    requireCorpOwned: js.UndefOr[Boolean] = js.undefined,
-    requireScreenlock: js.UndefOr[Boolean] = js.undefined
-  ): SchemaDevicePolicy = {
+  def apply(): SchemaDevicePolicy = {
     val __obj = js.Dynamic.literal()
-    if (allowedDeviceManagementLevels != null) __obj.updateDynamic("allowedDeviceManagementLevels")(allowedDeviceManagementLevels.asInstanceOf[js.Any])
-    if (allowedEncryptionStatuses != null) __obj.updateDynamic("allowedEncryptionStatuses")(allowedEncryptionStatuses.asInstanceOf[js.Any])
-    if (osConstraints != null) __obj.updateDynamic("osConstraints")(osConstraints.asInstanceOf[js.Any])
-    if (!js.isUndefined(requireAdminApproval)) __obj.updateDynamic("requireAdminApproval")(requireAdminApproval.asInstanceOf[js.Any])
-    if (!js.isUndefined(requireCorpOwned)) __obj.updateDynamic("requireCorpOwned")(requireCorpOwned.asInstanceOf[js.Any])
-    if (!js.isUndefined(requireScreenlock)) __obj.updateDynamic("requireScreenlock")(requireScreenlock.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDevicePolicy]
   }
+  @scala.inline
+  implicit class SchemaDevicePolicyOps[Self <: SchemaDevicePolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowedDeviceManagementLevels(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedDeviceManagementLevels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedDeviceManagementLevels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedDeviceManagementLevels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedEncryptionStatuses(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedEncryptionStatuses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedEncryptionStatuses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedEncryptionStatuses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOsConstraints(value: js.Array[SchemaOsConstraint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("osConstraints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOsConstraints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("osConstraints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireAdminApproval(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireAdminApproval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireAdminApproval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireAdminApproval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireCorpOwned(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireCorpOwned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireCorpOwned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireCorpOwned")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequireScreenlock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireScreenlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequireScreenlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireScreenlock")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -11,5 +11,6 @@ trait SVGDescElement extends SVGElement
 
 @JSGlobal("SVGDescElement")
 @js.native
-object SVGDescElement extends Instantiable0[SVGDescElement]
+object SVGDescElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGDescElement]
 

@@ -14,14 +14,12 @@ trait TicketType extends js.Object
 
 object TicketType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def incident: typingsSlinky.nodeZendesk.nodeZendeskStrings.incident = "incident".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.incident]
   @scala.inline
-  def incident: typingsSlinky.nodeZendesk.nodeZendeskStrings.incident = this.cast("incident")
+  def problem: typingsSlinky.nodeZendesk.nodeZendeskStrings.problem = "problem".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.problem]
   @scala.inline
-  def problem: typingsSlinky.nodeZendesk.nodeZendeskStrings.problem = this.cast("problem")
+  def question: typingsSlinky.nodeZendesk.nodeZendeskStrings.question = "question".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.question]
   @scala.inline
-  def question: typingsSlinky.nodeZendesk.nodeZendeskStrings.question = this.cast("question")
-  @scala.inline
-  def task: typingsSlinky.nodeZendesk.nodeZendeskStrings.task = this.cast("task")
+  def task: typingsSlinky.nodeZendesk.nodeZendeskStrings.task = "task".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.task]
 }
 

@@ -15,16 +15,14 @@ trait AudioSourceType extends js.Object
 
 object AudioSourceType {
   @scala.inline
-  def auto: typingsSlinky.wegameApi.wegameApiStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.wegameApi.wegameApiStrings.auto = "auto".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.auto]
   @scala.inline
-  def buildInMic: typingsSlinky.wegameApi.wegameApiStrings.buildInMic = this.cast("buildInMic")
+  def buildInMic: typingsSlinky.wegameApi.wegameApiStrings.buildInMic = "buildInMic".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.buildInMic]
   @scala.inline
-  def camcorder: typingsSlinky.wegameApi.wegameApiStrings.camcorder = this.cast("camcorder")
+  def camcorder: typingsSlinky.wegameApi.wegameApiStrings.camcorder = "camcorder".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.camcorder]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def headsetMic: typingsSlinky.wegameApi.wegameApiStrings.headsetMic = "headsetMic".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.headsetMic]
   @scala.inline
-  def headsetMic: typingsSlinky.wegameApi.wegameApiStrings.headsetMic = this.cast("headsetMic")
-  @scala.inline
-  def mic: typingsSlinky.wegameApi.wegameApiStrings.mic = this.cast("mic")
+  def mic: typingsSlinky.wegameApi.wegameApiStrings.mic = "mic".asInstanceOf[typingsSlinky.wegameApi.wegameApiStrings.mic]
 }
 

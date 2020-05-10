@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation._
 
 package object splitPropsMod {
   type Dictionary[T] = org.scalablytyped.runtime.StringDictionary[T]
-  type Omit[T /* <: typingsSlinky.uiBox.splitPropsMod.Dictionary[_] */, K /* <: java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
+  type Omit[T /* <: typingsSlinky.uiBox.splitPropsMod.Dictionary[_] */, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
 }

@@ -8,33 +8,101 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent mangopay2-nodejs-sdk.mangopay2-nodejs-sdk/types.DeepPartial<mangopay2-nodejs-sdk.mangopay2-nodejs-sdk.RequestOptions> */
+@js.native
 trait MethodOptions extends js.Object {
-  var data: js.UndefOr[WithToJson[js.Object] | String] = js.undefined
-  var headers: js.UndefOr[DeepPartialPartialHeaders] = js.undefined
-  var parameters: js.UndefOr[FilterOptions with PaginationOptions] = js.undefined
-  var path: js.UndefOr[DeepPartialclientIdstring] = js.undefined
-  var requestConfig: js.UndefOr[DeepPartialtimeoutnumber] = js.undefined
-  var responseConfig: js.UndefOr[DeepPartialtimeoutnumber] = js.undefined
+  var data: js.UndefOr[WithToJson[js.Object] | String] = js.native
+  var headers: js.UndefOr[DeepPartialPartialHeaders] = js.native
+  var parameters: js.UndefOr[FilterOptions with PaginationOptions] = js.native
+  var path: js.UndefOr[DeepPartialclientIdstring] = js.native
+  var requestConfig: js.UndefOr[DeepPartialtimeoutnumber] = js.native
+  var responseConfig: js.UndefOr[DeepPartialtimeoutnumber] = js.native
 }
 
 object MethodOptions {
   @scala.inline
-  def apply(
-    data: WithToJson[js.Object] | String = null,
-    headers: DeepPartialPartialHeaders = null,
-    parameters: FilterOptions with PaginationOptions = null,
-    path: DeepPartialclientIdstring = null,
-    requestConfig: DeepPartialtimeoutnumber = null,
-    responseConfig: DeepPartialtimeoutnumber = null
-  ): MethodOptions = {
+  def apply(): MethodOptions = {
     val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (requestConfig != null) __obj.updateDynamic("requestConfig")(requestConfig.asInstanceOf[js.Any])
-    if (responseConfig != null) __obj.updateDynamic("responseConfig")(responseConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[MethodOptions]
   }
+  @scala.inline
+  implicit class MethodOptionsOps[Self <: MethodOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: WithToJson[js.Object] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: DeepPartialPartialHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: FilterOptions with PaginationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: DeepPartialclientIdstring): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestConfig(value: DeepPartialtimeoutnumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseConfig(value: DeepPartialtimeoutnumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

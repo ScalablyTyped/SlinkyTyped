@@ -4,87 +4,335 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Tag extends js.Object {
-  var accountId: js.UndefOr[String] = js.undefined
-  var blockingRuleId: js.UndefOr[js.Array[String]] = js.undefined
-  var blockingTriggerId: js.UndefOr[js.Array[String]] = js.undefined
-  var containerId: js.UndefOr[String] = js.undefined
-  var fingerprint: js.UndefOr[String] = js.undefined
-  var firingRuleId: js.UndefOr[js.Array[String]] = js.undefined
-  var firingTriggerId: js.UndefOr[js.Array[String]] = js.undefined
-  var liveOnly: js.UndefOr[Boolean] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var notes: js.UndefOr[String] = js.undefined
-  var parameter: js.UndefOr[js.Array[Parameter]] = js.undefined
-  var parentFolderId: js.UndefOr[String] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var paused: js.UndefOr[Boolean] = js.undefined
-  var priority: js.UndefOr[Parameter] = js.undefined
-  var scheduleEndMs: js.UndefOr[String] = js.undefined
-  var scheduleStartMs: js.UndefOr[String] = js.undefined
-  var setupTag: js.UndefOr[js.Array[SetupTag]] = js.undefined
-  var tagFiringOption: js.UndefOr[String] = js.undefined
-  var tagId: js.UndefOr[String] = js.undefined
-  var tagManagerUrl: js.UndefOr[String] = js.undefined
-  var teardownTag: js.UndefOr[js.Array[TeardownTag]] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var workspaceId: js.UndefOr[String] = js.undefined
+  var accountId: js.UndefOr[String] = js.native
+  var blockingRuleId: js.UndefOr[js.Array[String]] = js.native
+  var blockingTriggerId: js.UndefOr[js.Array[String]] = js.native
+  var containerId: js.UndefOr[String] = js.native
+  var fingerprint: js.UndefOr[String] = js.native
+  var firingRuleId: js.UndefOr[js.Array[String]] = js.native
+  var firingTriggerId: js.UndefOr[js.Array[String]] = js.native
+  var liveOnly: js.UndefOr[Boolean] = js.native
+  var name: js.UndefOr[String] = js.native
+  var notes: js.UndefOr[String] = js.native
+  var parameter: js.UndefOr[js.Array[Parameter]] = js.native
+  var parentFolderId: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.native
+  var paused: js.UndefOr[Boolean] = js.native
+  var priority: js.UndefOr[Parameter] = js.native
+  var scheduleEndMs: js.UndefOr[String] = js.native
+  var scheduleStartMs: js.UndefOr[String] = js.native
+  var setupTag: js.UndefOr[js.Array[SetupTag]] = js.native
+  var tagFiringOption: js.UndefOr[String] = js.native
+  var tagId: js.UndefOr[String] = js.native
+  var tagManagerUrl: js.UndefOr[String] = js.native
+  var teardownTag: js.UndefOr[js.Array[TeardownTag]] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var workspaceId: js.UndefOr[String] = js.native
 }
 
 object Tag {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    blockingRuleId: js.Array[String] = null,
-    blockingTriggerId: js.Array[String] = null,
-    containerId: String = null,
-    fingerprint: String = null,
-    firingRuleId: js.Array[String] = null,
-    firingTriggerId: js.Array[String] = null,
-    liveOnly: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    notes: String = null,
-    parameter: js.Array[Parameter] = null,
-    parentFolderId: String = null,
-    path: String = null,
-    paused: js.UndefOr[Boolean] = js.undefined,
-    priority: Parameter = null,
-    scheduleEndMs: String = null,
-    scheduleStartMs: String = null,
-    setupTag: js.Array[SetupTag] = null,
-    tagFiringOption: String = null,
-    tagId: String = null,
-    tagManagerUrl: String = null,
-    teardownTag: js.Array[TeardownTag] = null,
-    `type`: String = null,
-    workspaceId: String = null
-  ): Tag = {
+  def apply(): Tag = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (blockingRuleId != null) __obj.updateDynamic("blockingRuleId")(blockingRuleId.asInstanceOf[js.Any])
-    if (blockingTriggerId != null) __obj.updateDynamic("blockingTriggerId")(blockingTriggerId.asInstanceOf[js.Any])
-    if (containerId != null) __obj.updateDynamic("containerId")(containerId.asInstanceOf[js.Any])
-    if (fingerprint != null) __obj.updateDynamic("fingerprint")(fingerprint.asInstanceOf[js.Any])
-    if (firingRuleId != null) __obj.updateDynamic("firingRuleId")(firingRuleId.asInstanceOf[js.Any])
-    if (firingTriggerId != null) __obj.updateDynamic("firingTriggerId")(firingTriggerId.asInstanceOf[js.Any])
-    if (!js.isUndefined(liveOnly)) __obj.updateDynamic("liveOnly")(liveOnly.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (notes != null) __obj.updateDynamic("notes")(notes.asInstanceOf[js.Any])
-    if (parameter != null) __obj.updateDynamic("parameter")(parameter.asInstanceOf[js.Any])
-    if (parentFolderId != null) __obj.updateDynamic("parentFolderId")(parentFolderId.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (!js.isUndefined(paused)) __obj.updateDynamic("paused")(paused.asInstanceOf[js.Any])
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
-    if (scheduleEndMs != null) __obj.updateDynamic("scheduleEndMs")(scheduleEndMs.asInstanceOf[js.Any])
-    if (scheduleStartMs != null) __obj.updateDynamic("scheduleStartMs")(scheduleStartMs.asInstanceOf[js.Any])
-    if (setupTag != null) __obj.updateDynamic("setupTag")(setupTag.asInstanceOf[js.Any])
-    if (tagFiringOption != null) __obj.updateDynamic("tagFiringOption")(tagFiringOption.asInstanceOf[js.Any])
-    if (tagId != null) __obj.updateDynamic("tagId")(tagId.asInstanceOf[js.Any])
-    if (tagManagerUrl != null) __obj.updateDynamic("tagManagerUrl")(tagManagerUrl.asInstanceOf[js.Any])
-    if (teardownTag != null) __obj.updateDynamic("teardownTag")(teardownTag.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (workspaceId != null) __obj.updateDynamic("workspaceId")(workspaceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tag]
   }
+  @scala.inline
+  implicit class TagOps[Self <: Tag] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockingRuleId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockingRuleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockingRuleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockingRuleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockingTriggerId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockingTriggerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockingTriggerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockingTriggerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFingerprint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFingerprint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiringRuleId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firingRuleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiringRuleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firingRuleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiringTriggerId(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firingTriggerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiringTriggerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firingTriggerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLiveOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLiveOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("liveOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameter(value: js.Array[Parameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentFolderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFolderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentFolderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentFolderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: Parameter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleEndMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleEndMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleEndMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleEndMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleStartMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleStartMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleStartMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleStartMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetupTag(value: js.Array[SetupTag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetupTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setupTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagFiringOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFiringOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagFiringOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFiringOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagManagerUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagManagerUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagManagerUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagManagerUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeardownTag(value: js.Array[TeardownTag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teardownTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeardownTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teardownTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkspaceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkspaceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

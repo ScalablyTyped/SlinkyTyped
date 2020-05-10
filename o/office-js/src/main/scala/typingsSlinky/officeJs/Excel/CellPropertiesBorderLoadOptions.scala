@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
+@js.native
 trait CellPropertiesBorderLoadOptions extends js.Object {
   /**
     *
@@ -17,44 +18,91 @@ trait CellPropertiesBorderLoadOptions extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var color: js.UndefOr[Boolean] = js.undefined
+  var color: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether to load on the `style` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var style: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether to load on the `tintAndShade` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var tintAndShade: js.UndefOr[Boolean] = js.undefined
+  var tintAndShade: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether to load on the `weight` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var weight: js.UndefOr[Boolean] = js.undefined
+  var weight: js.UndefOr[Boolean] = js.native
 }
 
 object CellPropertiesBorderLoadOptions {
   @scala.inline
-  def apply(
-    color: js.UndefOr[Boolean] = js.undefined,
-    style: js.UndefOr[Boolean] = js.undefined,
-    tintAndShade: js.UndefOr[Boolean] = js.undefined,
-    weight: js.UndefOr[Boolean] = js.undefined
-  ): CellPropertiesBorderLoadOptions = {
+  def apply(): CellPropertiesBorderLoadOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(tintAndShade)) __obj.updateDynamic("tintAndShade")(tintAndShade.asInstanceOf[js.Any])
-    if (!js.isUndefined(weight)) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellPropertiesBorderLoadOptions]
   }
+  @scala.inline
+  implicit class CellPropertiesBorderLoadOptionsOps[Self <: CellPropertiesBorderLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTintAndShade(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tintAndShade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTintAndShade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tintAndShade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,21 +8,22 @@ import scala.scalajs.js.annotation._
 /**
   * CustomResourceDefinitionSpec describes how a user wants their resource to appear
   */
+@js.native
 trait CustomResourceDefinitionSpec extends js.Object {
   /**
     * conversion defines conversion settings for the CRD.
     */
-  var conversion: js.UndefOr[Input[CustomResourceConversion]] = js.undefined
+  var conversion: js.UndefOr[Input[CustomResourceConversion]] = js.native
   /**
     * group is the API group of the defined custom resource. The custom resources are served
     * under `/apis/<group>/...`. Must match the name of the CustomResourceDefinition (in the form
     * `<names.plural>.<group>`).
     */
-  var group: Input[String]
+  var group: Input[String] = js.native
   /**
     * names specify the resource and kind names for the custom resource.
     */
-  var names: Input[CustomResourceDefinitionNames]
+  var names: Input[CustomResourceDefinitionNames] = js.native
   /**
     * preserveUnknownFields indicates that object fields which are not specified in the OpenAPI
     * schema should be preserved when persisting to storage. apiVersion, kind, metadata and known
@@ -31,12 +32,12 @@ trait CustomResourceDefinitionSpec extends js.Object {
     * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#pruning-versus-preserving-unknown-fields
     * for details.
     */
-  var preserveUnknownFields: js.UndefOr[Input[Boolean]] = js.undefined
+  var preserveUnknownFields: js.UndefOr[Input[Boolean]] = js.native
   /**
     * scope indicates whether the defined custom resource is cluster- or namespace-scoped.
     * Allowed values are `Cluster` and `Namespaced`.
     */
-  var scope: Input[String]
+  var scope: Input[String] = js.native
   /**
     * versions is the list of all API versions of the defined custom resource. Version names are
     * used to compute the order in which served versions are listed in API discovery. If the
@@ -48,7 +49,7 @@ trait CustomResourceDefinitionSpec extends js.Object {
     * minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3,
     * v3beta1, v12alpha1, v11alpha2, foo1, foo10.
     */
-  var versions: Input[js.Array[Input[CustomResourceDefinitionVersion]]]
+  var versions: Input[js.Array[Input[CustomResourceDefinitionVersion]]] = js.native
 }
 
 object CustomResourceDefinitionSpec {
@@ -57,14 +58,66 @@ object CustomResourceDefinitionSpec {
     group: Input[String],
     names: Input[CustomResourceDefinitionNames],
     scope: Input[String],
-    versions: Input[js.Array[Input[CustomResourceDefinitionVersion]]],
-    conversion: Input[CustomResourceConversion] = null,
-    preserveUnknownFields: Input[Boolean] = null
+    versions: Input[js.Array[Input[CustomResourceDefinitionVersion]]]
   ): CustomResourceDefinitionSpec = {
     val __obj = js.Dynamic.literal(group = group.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any], versions = versions.asInstanceOf[js.Any])
-    if (conversion != null) __obj.updateDynamic("conversion")(conversion.asInstanceOf[js.Any])
-    if (preserveUnknownFields != null) __obj.updateDynamic("preserveUnknownFields")(preserveUnknownFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomResourceDefinitionSpec]
   }
+  @scala.inline
+  implicit class CustomResourceDefinitionSpecOps[Self <: CustomResourceDefinitionSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroup(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNames(value: Input[CustomResourceDefinitionNames]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScope(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersions(value: Input[js.Array[Input[CustomResourceDefinitionVersion]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConversion(value: Input[CustomResourceConversion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conversion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConversion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conversion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveUnknownFields(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveUnknownFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveUnknownFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveUnknownFields")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

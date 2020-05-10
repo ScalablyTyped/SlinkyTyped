@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Lifecycle[Attrs, State]
   extends /** WORKAROUND: TypeScript 2.4 does not allow extending an interface with all-optional properties. */
 /* _ */ NumberDictionary[js.Any] {
   /** The onbeforeremove hook is called before a DOM element is detached from the document. If a Promise is returned, Mithril only detaches the DOM element after the promise completes. */
   var onbeforeremove: js.UndefOr[
     js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], js.Promise[_] | Unit]
-  ] = js.undefined
+  ] = js.native
   /** The onbeforeupdate hook is called before a vnode is diffed in a update. */
   var onbeforeupdate: js.UndefOr[
     js.ThisFunction2[
@@ -20,43 +21,111 @@ trait Lifecycle[Attrs, State]
       /* old */ VnodeDOM[Attrs, State], 
       Boolean | Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** The oncreate hook is called after a DOM element is created and attached to the document. */
-  var oncreate: js.UndefOr[js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _]] = js.undefined
+  var oncreate: js.UndefOr[js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _]] = js.native
   /** The oninit hook is called before a vnode is touched by the virtual DOM engine. */
-  var oninit: js.UndefOr[js.ThisFunction1[/* this */ State, /* vnode */ Vnode[Attrs, State], _]] = js.undefined
+  var oninit: js.UndefOr[js.ThisFunction1[/* this */ State, /* vnode */ Vnode[Attrs, State], _]] = js.native
   /** The onremove hook is called before a DOM element is removed from the document. */
-  var onremove: js.UndefOr[js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _]] = js.undefined
+  var onremove: js.UndefOr[js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _]] = js.native
   /** The onupdate hook is called after a DOM element is updated, while attached to the document. */
-  var onupdate: js.UndefOr[js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _]] = js.undefined
+  var onupdate: js.UndefOr[js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _]] = js.native
 }
 
 object Lifecycle {
   @scala.inline
-  def apply[Attrs, State](
-    NumberDictionary: /** WORKAROUND: TypeScript 2.4 does not allow extending an interface with all-optional properties. */
-  /* _ */ NumberDictionary[js.Any] = null,
-    onbeforeremove: js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], js.Promise[_] | Unit] = null,
-    onbeforeupdate: js.ThisFunction2[
-      /* this */ State, 
-      /* vnode */ Vnode[Attrs, State], 
-      /* old */ VnodeDOM[Attrs, State], 
-      Boolean | Unit
-    ] = null,
-    oncreate: js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _] = null,
-    oninit: js.ThisFunction1[/* this */ State, /* vnode */ Vnode[Attrs, State], _] = null,
-    onremove: js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _] = null,
-    onupdate: js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _] = null
-  ): Lifecycle[Attrs, State] = {
+  def apply[Attrs, State](): Lifecycle[Attrs, State] = {
     val __obj = js.Dynamic.literal()
-    if (NumberDictionary != null) js.Dynamic.global.Object.assign(__obj, NumberDictionary)
-    if (onbeforeremove != null) __obj.updateDynamic("onbeforeremove")(onbeforeremove.asInstanceOf[js.Any])
-    if (onbeforeupdate != null) __obj.updateDynamic("onbeforeupdate")(onbeforeupdate.asInstanceOf[js.Any])
-    if (oncreate != null) __obj.updateDynamic("oncreate")(oncreate.asInstanceOf[js.Any])
-    if (oninit != null) __obj.updateDynamic("oninit")(oninit.asInstanceOf[js.Any])
-    if (onremove != null) __obj.updateDynamic("onremove")(onremove.asInstanceOf[js.Any])
-    if (onupdate != null) __obj.updateDynamic("onupdate")(onupdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[Lifecycle[Attrs, State]]
   }
+  @scala.inline
+  implicit class LifecycleOps[Self[attrs, state] <: Lifecycle[attrs, state], Attrs, State] (val x: Self[Attrs, State]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Attrs, State] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Attrs, State]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[Attrs, State]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Attrs, State]) with Other]
+    @scala.inline
+    def withOnbeforeremove(
+      value: js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], js.Promise[_] | Unit]
+    ): Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onbeforeremove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnbeforeremove: Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onbeforeremove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnbeforeupdate(
+      value: js.ThisFunction2[
+          /* this */ State, 
+          /* vnode */ Vnode[Attrs, State], 
+          /* old */ VnodeDOM[Attrs, State], 
+          Boolean | Unit
+        ]
+    ): Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onbeforeupdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnbeforeupdate: Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onbeforeupdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOncreate(value: js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _]): Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncreate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOncreate: Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncreate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOninit(value: js.ThisFunction1[/* this */ State, /* vnode */ Vnode[Attrs, State], _]): Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oninit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOninit: Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oninit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnremove(value: js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _]): Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onremove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnremove: Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onremove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnupdate(value: js.ThisFunction1[/* this */ State, /* vnode */ VnodeDOM[Attrs, State], _]): Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onupdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnupdate: Self[Attrs, State] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onupdate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

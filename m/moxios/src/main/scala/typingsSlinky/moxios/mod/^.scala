@@ -1,7 +1,6 @@
 package typingsSlinky.moxios.mod
 
 import typingsSlinky.axios.mod.AxiosInstance
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +27,7 @@ object ^ extends js.Object {
     * @param response The response to use when a match is made
     */
   def stubFailure(method: String, urlOrRegExp: String, response: Item): js.Promise[Unit] = js.native
-  def stubFailure(method: String, urlOrRegExp: RegExp, response: Item): js.Promise[Unit] = js.native
+  def stubFailure(method: String, urlOrRegExp: js.RegExp, response: Item): js.Promise[Unit] = js.native
   /**
     * Stub a response to be used one or more times to respond to a request matching a
     * method and a URL or RegExp.
@@ -38,7 +37,7 @@ object ^ extends js.Object {
     * @param response The response to use when a match is made
     */
   def stubOnce(method: String, urlOrRegExp: String, response: Item): js.Promise[Unit] = js.native
-  def stubOnce(method: String, urlOrRegExp: RegExp, response: Item): js.Promise[Unit] = js.native
+  def stubOnce(method: String, urlOrRegExp: js.RegExp, response: Item): js.Promise[Unit] = js.native
   /**
     * Stub a response to be used to respond to a request matching a URL or RegExp
     *
@@ -46,14 +45,14 @@ object ^ extends js.Object {
     * @param response The response to use when a match is made
     */
   def stubRequest(urlOrRegExp: String, response: Item): Unit = js.native
-  def stubRequest(urlOrRegExp: RegExp, response: Item): Unit = js.native
+  def stubRequest(urlOrRegExp: js.RegExp, response: Item): Unit = js.native
   /**
     * Stub a timeout to be used to respond to a request matching a URL or RegExp
     *
     * @param urlOrRegExp A URL or RegExp to test against
     */
   def stubTimeout(urlOrRegExp: String): String = js.native
-  def stubTimeout(urlOrRegExp: RegExp): String = js.native
+  def stubTimeout(urlOrRegExp: js.RegExp): String = js.native
   /**
     * Uninstall the mock adapter and reset state
     */

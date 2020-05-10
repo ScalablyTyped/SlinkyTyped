@@ -3,6 +3,8 @@ package typingsSlinky.rcMenu.subMenuMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticKeyboardEvent
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcMenu.AnonItem
 import typingsSlinky.rcMenu.AnonMode
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
@@ -12,10 +14,8 @@ import typingsSlinky.rcMenu.interfaceMod.SelectEventHandler
 import typingsSlinky.rcMenu.menuItemMod.MenuItem
 import typingsSlinky.rcMenu.subPopupMenuMod.SubPopupMenuProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.KeyboardEvent
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,8 +71,8 @@ class SubMenu protected ()
   def onDestroy(key: String): Unit = js.native
   def onPopupVisibleChange(visible: Boolean): Unit = js.native
   def onSubMenuClick(info: MenuInfo): Unit = js.native
-  def onTitleClick(e: KeyboardEvent[typingsSlinky.std.HTMLElement]): Unit = js.native
-  def onTitleClick(e: typingsSlinky.react.mod.MouseEvent[typingsSlinky.std.HTMLElement, MouseEvent]): Unit = js.native
+  def onTitleClick(e: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
+  def onTitleClick(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   def renderChildren(children: TagMod[Any]): ReactElement = js.native
   def saveMenuInstance(c: MenuItem): Unit = js.native
   def saveSubMenuTitle(subMenuTitle: HTMLElement): Unit = js.native

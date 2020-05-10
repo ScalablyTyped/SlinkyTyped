@@ -12,10 +12,8 @@ trait OperationType extends js.Object
 
 object OperationType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def conjunction: typingsSlinky.handsontable.handsontableStrings.conjunction = "conjunction".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.conjunction]
   @scala.inline
-  def conjunction: typingsSlinky.handsontable.handsontableStrings.conjunction = this.cast("conjunction")
-  @scala.inline
-  def disjunction: typingsSlinky.handsontable.handsontableStrings.disjunction = this.cast("disjunction")
+  def disjunction: typingsSlinky.handsontable.handsontableStrings.disjunction = "disjunction".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.disjunction]
 }
 

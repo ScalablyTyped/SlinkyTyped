@@ -25,9 +25,9 @@ trait IDBIndex extends js.Object {
     * If successful, request's result will be the count.
     */
   def count(): org.scalajs.dom.raw.IDBRequest = js.native
-  def count(key: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def count(key: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   def count(key: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
-  def get(key: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def get(key: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   /**
     * Retrieves the value of the first record matching the given key or key range in query.
     * 
@@ -41,8 +41,8 @@ trait IDBIndex extends js.Object {
     */
   def getAll(): org.scalajs.dom.raw.IDBRequest = js.native
   def getAll(query: Null, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
+  def getAll(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def getAll(query: org.scalajs.dom.raw.IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
   def getAll(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   def getAll(query: IDBValidKey, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
   /**
@@ -52,11 +52,11 @@ trait IDBIndex extends js.Object {
     */
   def getAllKeys(): org.scalajs.dom.raw.IDBRequest = js.native
   def getAllKeys(query: Null, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
+  def getAllKeys(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def getAllKeys(query: org.scalajs.dom.raw.IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
   def getAllKeys(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   def getAllKeys(query: IDBValidKey, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getKey(key: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def getKey(key: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   /**
     * Retrieves the key of the first record matching the given key or key range in query.
     * 
@@ -70,8 +70,8 @@ trait IDBIndex extends js.Object {
     */
   def openCursor(): org.scalajs.dom.raw.IDBRequest = js.native
   def openCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
+  def openCursor(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def openCursor(query: org.scalajs.dom.raw.IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   def openCursor(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   def openCursor(query: IDBValidKey, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   /**
@@ -81,13 +81,14 @@ trait IDBIndex extends js.Object {
     */
   def openKeyCursor(): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
+  def openKeyCursor(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def openKeyCursor(query: org.scalajs.dom.raw.IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: IDBValidKey, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
 }
 
 @JSGlobal("IDBIndex")
 @js.native
-object IDBIndex extends Instantiable0[IDBIndex]
+object IDBIndex
+  extends Instantiable0[org.scalajs.dom.raw.IDBIndex]
 

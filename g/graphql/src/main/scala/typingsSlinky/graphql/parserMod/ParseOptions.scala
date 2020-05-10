@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParseOptions extends js.Object {
   /**
     * If enabled, the parser will parse empty fields sets in the Schema
@@ -13,7 +14,7 @@ trait ParseOptions extends js.Object {
     * This option is provided to ease adoption of the final SDL specification
     * and will be removed in v16.
     */
-  var allowLegacySDLEmptyFields: js.UndefOr[Boolean] = js.undefined
+  var allowLegacySDLEmptyFields: js.UndefOr[Boolean] = js.native
   /**
     * If enabled, the parser will parse implemented interfaces with no `&`
     * character between each interface. Otherwise, the parser will follow the
@@ -22,7 +23,7 @@ trait ParseOptions extends js.Object {
     * This option is provided to ease adoption of the final SDL specification
     * and will be removed in v16.
     */
-  var allowLegacySDLImplementsInterfaces: js.UndefOr[Boolean] = js.undefined
+  var allowLegacySDLImplementsInterfaces: js.UndefOr[Boolean] = js.native
   /**
     * EXPERIMENTAL:
     *
@@ -39,29 +40,76 @@ trait ParseOptions extends js.Object {
     * Note: this feature is experimental and may change or be removed in the
     * future.
     */
-  var experimentalFragmentVariables: js.UndefOr[Boolean] = js.undefined
+  var experimentalFragmentVariables: js.UndefOr[Boolean] = js.native
   /**
     * By default, the parser creates AST nodes that know the location
     * in the source that they correspond to. This configuration flag
     * disables that behavior for performance or testing.
     */
-  var noLocation: js.UndefOr[Boolean] = js.undefined
+  var noLocation: js.UndefOr[Boolean] = js.native
 }
 
 object ParseOptions {
   @scala.inline
-  def apply(
-    allowLegacySDLEmptyFields: js.UndefOr[Boolean] = js.undefined,
-    allowLegacySDLImplementsInterfaces: js.UndefOr[Boolean] = js.undefined,
-    experimentalFragmentVariables: js.UndefOr[Boolean] = js.undefined,
-    noLocation: js.UndefOr[Boolean] = js.undefined
-  ): ParseOptions = {
+  def apply(): ParseOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowLegacySDLEmptyFields)) __obj.updateDynamic("allowLegacySDLEmptyFields")(allowLegacySDLEmptyFields.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowLegacySDLImplementsInterfaces)) __obj.updateDynamic("allowLegacySDLImplementsInterfaces")(allowLegacySDLImplementsInterfaces.asInstanceOf[js.Any])
-    if (!js.isUndefined(experimentalFragmentVariables)) __obj.updateDynamic("experimentalFragmentVariables")(experimentalFragmentVariables.asInstanceOf[js.Any])
-    if (!js.isUndefined(noLocation)) __obj.updateDynamic("noLocation")(noLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseOptions]
   }
+  @scala.inline
+  implicit class ParseOptionsOps[Self <: ParseOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowLegacySDLEmptyFields(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLegacySDLEmptyFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowLegacySDLEmptyFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLegacySDLEmptyFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowLegacySDLImplementsInterfaces(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLegacySDLImplementsInterfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowLegacySDLImplementsInterfaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowLegacySDLImplementsInterfaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExperimentalFragmentVariables(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalFragmentVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExperimentalFragmentVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimentalFragmentVariables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoLocation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noLocation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

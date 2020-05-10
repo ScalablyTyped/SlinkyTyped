@@ -1,27 +1,23 @@
 package typingsSlinky.reactCloseOnEscape.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactCloseOnEscape.mod.CloseOnEscapeProps
 import typingsSlinky.reactCloseOnEscape.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactCloseOnEscape
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactCloseOnEscape {
   @JSImport("react-close-on-escape", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(onEscape: () => Unit, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(onEscape = js.Any.fromFunction0(onEscape))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: CloseOnEscapeProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onEscape: () => Unit): Default[tag.type, default] = {
+    val __props = js.Dynamic.literal(onEscape = js.Any.fromFunction0(onEscape))
+    new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[CloseOnEscapeProps]))
   }
-  type Props = CloseOnEscapeProps
 }
 

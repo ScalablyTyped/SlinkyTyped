@@ -14,7 +14,6 @@ import typingsSlinky.formik.typesMod.FormikTouched
 import typingsSlinky.formik.typesMod.FormikValues
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.FocusEvent
 import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -46,7 +45,7 @@ object formikMod extends js.Object {
     def getFormikComputedProps(): AnonDirty[Values] = js.native
     def getFormikContext(): AnonErrors[Values] = js.native
     def handleBlur(eventOrPath: String): Unit | (js.Function1[/* e */ js.UndefOr[SyntheticFocusEvent[_]], Unit]) = js.native
-    def handleBlur(eventOrPath: FocusEvent[_]): Unit | (js.Function1[/* e */ js.UndefOr[SyntheticFocusEvent[_]], Unit]) = js.native
+    def handleBlur(eventOrPath: SyntheticFocusEvent[_]): Unit | (js.Function1[/* e */ js.UndefOr[SyntheticFocusEvent[_]], Unit]) = js.native
     def handleChange(eventOrPath: String): Unit | (js.Function1[/* eventOrValue */ js.Any, Unit]) = js.native
     def handleChange(eventOrPath: ChangeEvent[_]): Unit | (js.Function1[/* eventOrValue */ js.Any, Unit]) = js.native
     def handleReset(): Unit = js.native

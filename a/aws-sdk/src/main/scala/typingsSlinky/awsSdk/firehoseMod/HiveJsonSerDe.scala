@@ -14,10 +14,29 @@ trait HiveJsonSerDe extends js.Object {
 
 object HiveJsonSerDe {
   @scala.inline
-  def apply(TimestampFormats: ListOfNonEmptyStrings = null): HiveJsonSerDe = {
+  def apply(): HiveJsonSerDe = {
     val __obj = js.Dynamic.literal()
-    if (TimestampFormats != null) __obj.updateDynamic("TimestampFormats")(TimestampFormats.asInstanceOf[js.Any])
     __obj.asInstanceOf[HiveJsonSerDe]
   }
+  @scala.inline
+  implicit class HiveJsonSerDeOps[Self <: HiveJsonSerDe] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimestampFormats(value: ListOfNonEmptyStrings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampFormats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestampFormats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampFormats")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

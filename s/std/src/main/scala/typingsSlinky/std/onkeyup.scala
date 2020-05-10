@@ -12,5 +12,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("onkeyup")
 @js.native
 object onkeyup
-  extends TopLevel[(js.ThisFunction1[/* this */ Window_, /* ev */ KeyboardEvent, js.Any]) | Null]
+  extends TopLevel[
+      (js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.KeyboardEvent, js.Any]) | Null
+    ]
 

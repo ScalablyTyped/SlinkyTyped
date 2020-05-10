@@ -1,7 +1,7 @@
 package typingsSlinky.d3.mod
 
+import org.scalajs.dom.raw.TouchList
 import typingsSlinky.d3Selection.mod.ContainerElement
-import typingsSlinky.std.TouchList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

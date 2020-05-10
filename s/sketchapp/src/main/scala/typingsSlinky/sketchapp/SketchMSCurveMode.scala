@@ -15,16 +15,14 @@ trait SketchMSCurveMode extends js.Object
 
 object SketchMSCurveMode {
   @scala.inline
-  def `0`: typingsSlinky.sketchapp.sketchappNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.sketchapp.sketchappNumbers.`0` = 0.asInstanceOf[typingsSlinky.sketchapp.sketchappNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.sketchapp.sketchappNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.sketchapp.sketchappNumbers.`1` = 1.asInstanceOf[typingsSlinky.sketchapp.sketchappNumbers.`1`]
   @scala.inline
-  def `2`: typingsSlinky.sketchapp.sketchappNumbers.`2` = this.cast(2)
+  def `2`: typingsSlinky.sketchapp.sketchappNumbers.`2` = 2.asInstanceOf[typingsSlinky.sketchapp.sketchappNumbers.`2`]
   @scala.inline
-  def `3`: typingsSlinky.sketchapp.sketchappNumbers.`3` = this.cast(3)
+  def `3`: typingsSlinky.sketchapp.sketchappNumbers.`3` = 3.asInstanceOf[typingsSlinky.sketchapp.sketchappNumbers.`3`]
   @scala.inline
-  def `4`: typingsSlinky.sketchapp.sketchappNumbers.`4` = this.cast(4)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `4`: typingsSlinky.sketchapp.sketchappNumbers.`4` = 4.asInstanceOf[typingsSlinky.sketchapp.sketchappNumbers.`4`]
 }
 

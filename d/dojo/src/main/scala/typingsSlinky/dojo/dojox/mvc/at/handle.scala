@@ -11,45 +11,46 @@ import scala.scalajs.js.annotation._
   * A handle of data binding target (a dojo/Stateful property), which is used for start synchronization with data binding source (another dojo/Stateful property).
   *
   */
+@js.native
 trait handle extends js.Object {
   /**
     * The data binding bindDirection, choose from: dojox/mvc/sync.from, dojox/mvc/sync.to or dojox/mvc/sync.both.
     *
     */
-  var bindDirection: Double
+  var bindDirection: Double = js.native
   /**
     * Class/object containing the converter functions used when the data goes between data binding target (e.g. data model or controller) to data binding origin (e.g. widget).
     *
     */
-  var converter: js.Object
+  var converter: js.Object = js.native
   /**
     * The data binding literal or dojo/Stateful to be synchronized.
     *
     */
-  var target: js.Object
+  var target: js.Object = js.native
   /**
     * The property name in target to be synchronized.
     *
     */
-  var targetProp: String
+  var targetProp: String = js.native
   /**
     * Sets data binding bindDirection.
     *
     * @param bindDirection The data binding bindDirection, choose from: dojox/mvc/sync.from, dojox/mvc/sync.to or dojox/mvc/sync.both.
     */
-  def direction(bindDirection: Double): Unit
+  def direction(bindDirection: Double): Unit = js.native
   /**
     * Sets a function to check if a value has really been changed when source/target dojo/Stateful changes.
     *
     * @param equals The function to check for the change.Should take two arguments, and should return true when those two are considered equal.
     */
-  def equals(equals: js.Function): Unit
+  def equals(equals: js.Function): Unit = js.native
   /**
     * Attach a data converter.
     *
     * @param converter Class/object containing the converter functions used when the data goes between data binding target (e.g. data model or controller) to data binding origin (e.g. widget).
     */
-  def transform(converter: js.Object): Unit
+  def transform(converter: js.Object): Unit = js.native
 }
 
 /**

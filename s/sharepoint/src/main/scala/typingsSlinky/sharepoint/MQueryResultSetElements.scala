@@ -1,7 +1,7 @@
 package typingsSlinky.sharepoint
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

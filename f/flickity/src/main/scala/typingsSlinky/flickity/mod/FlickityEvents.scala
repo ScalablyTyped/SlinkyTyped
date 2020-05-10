@@ -24,34 +24,32 @@ trait FlickityEvents extends js.Object
 
 object FlickityEvents {
   @scala.inline
-  def bgLazyLoad: typingsSlinky.flickity.flickityStrings.bgLazyLoad = this.cast("bgLazyLoad")
+  def bgLazyLoad: typingsSlinky.flickity.flickityStrings.bgLazyLoad = "bgLazyLoad".asInstanceOf[typingsSlinky.flickity.flickityStrings.bgLazyLoad]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cellSelect: typingsSlinky.flickity.flickityStrings.cellSelect = "cellSelect".asInstanceOf[typingsSlinky.flickity.flickityStrings.cellSelect]
   @scala.inline
-  def cellSelect: typingsSlinky.flickity.flickityStrings.cellSelect = this.cast("cellSelect")
+  def dragEnd: typingsSlinky.flickity.flickityStrings.dragEnd = "dragEnd".asInstanceOf[typingsSlinky.flickity.flickityStrings.dragEnd]
   @scala.inline
-  def dragEnd: typingsSlinky.flickity.flickityStrings.dragEnd = this.cast("dragEnd")
+  def dragMove: typingsSlinky.flickity.flickityStrings.dragMove = "dragMove".asInstanceOf[typingsSlinky.flickity.flickityStrings.dragMove]
   @scala.inline
-  def dragMove: typingsSlinky.flickity.flickityStrings.dragMove = this.cast("dragMove")
+  def dragStart: typingsSlinky.flickity.flickityStrings.dragStart = "dragStart".asInstanceOf[typingsSlinky.flickity.flickityStrings.dragStart]
   @scala.inline
-  def dragStart: typingsSlinky.flickity.flickityStrings.dragStart = this.cast("dragStart")
+  def fullscreenChange: typingsSlinky.flickity.flickityStrings.fullscreenChange = "fullscreenChange".asInstanceOf[typingsSlinky.flickity.flickityStrings.fullscreenChange]
   @scala.inline
-  def fullscreenChange: typingsSlinky.flickity.flickityStrings.fullscreenChange = this.cast("fullscreenChange")
+  def lazyLoad: typingsSlinky.flickity.flickityStrings.lazyLoad = "lazyLoad".asInstanceOf[typingsSlinky.flickity.flickityStrings.lazyLoad]
   @scala.inline
-  def lazyLoad: typingsSlinky.flickity.flickityStrings.lazyLoad = this.cast("lazyLoad")
+  def pointerDown: typingsSlinky.flickity.flickityStrings.pointerDown = "pointerDown".asInstanceOf[typingsSlinky.flickity.flickityStrings.pointerDown]
   @scala.inline
-  def pointerDown: typingsSlinky.flickity.flickityStrings.pointerDown = this.cast("pointerDown")
+  def pointerMove: typingsSlinky.flickity.flickityStrings.pointerMove = "pointerMove".asInstanceOf[typingsSlinky.flickity.flickityStrings.pointerMove]
   @scala.inline
-  def pointerMove: typingsSlinky.flickity.flickityStrings.pointerMove = this.cast("pointerMove")
+  def pointerUp: typingsSlinky.flickity.flickityStrings.pointerUp = "pointerUp".asInstanceOf[typingsSlinky.flickity.flickityStrings.pointerUp]
   @scala.inline
-  def pointerUp: typingsSlinky.flickity.flickityStrings.pointerUp = this.cast("pointerUp")
+  def scroll: typingsSlinky.flickity.flickityStrings.scroll = "scroll".asInstanceOf[typingsSlinky.flickity.flickityStrings.scroll]
   @scala.inline
-  def scroll: typingsSlinky.flickity.flickityStrings.scroll = this.cast("scroll")
+  def select: typingsSlinky.flickity.flickityStrings.select = "select".asInstanceOf[typingsSlinky.flickity.flickityStrings.select]
   @scala.inline
-  def select: typingsSlinky.flickity.flickityStrings.select = this.cast("select")
+  def settle: typingsSlinky.flickity.flickityStrings.settle = "settle".asInstanceOf[typingsSlinky.flickity.flickityStrings.settle]
   @scala.inline
-  def settle: typingsSlinky.flickity.flickityStrings.settle = this.cast("settle")
-  @scala.inline
-  def staticClick: typingsSlinky.flickity.flickityStrings.staticClick = this.cast("staticClick")
+  def staticClick: typingsSlinky.flickity.flickityStrings.staticClick = "staticClick".asInstanceOf[typingsSlinky.flickity.flickityStrings.staticClick]
 }
 

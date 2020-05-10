@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-scheduling.html)
   */
+@js.native
 trait scheduling extends js.Object {
   /**
     * Registers a frame task. An animation frame is composed of different phases to let various actors execute code before, after, or during the rendering of [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
@@ -19,7 +20,7 @@ trait scheduling extends js.Object {
     * @param phases The callbacks for each phase of the frame.
     *
     */
-  def addFrameTask(phases: PhaseCallbacks): FrameTaskHandle
+  def addFrameTask(phases: PhaseCallbacks): FrameTaskHandle = js.native
   /**
     * Schedules the execution of a `callback` function at the next web browser tick. Unlike [addFrameTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-scheduling.html#addFrameTask), a scheduled `callback` will only run once. Scheduling a task for the next execution tick can be useful when you want to throttle/accumulate functionality over a single javascript execution context.
     *
@@ -28,7 +29,7 @@ trait scheduling extends js.Object {
     * @param callback The function to call at the next tick.
     *
     */
-  def schedule(callback: js.Function): js.Any
+  def schedule(callback: js.Function): js.Any = js.native
 }
 
 @JSGlobal("__esri.scheduling")

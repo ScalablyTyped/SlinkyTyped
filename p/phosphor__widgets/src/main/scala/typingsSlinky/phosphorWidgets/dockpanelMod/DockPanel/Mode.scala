@@ -15,10 +15,8 @@ trait Mode extends js.Object
 
 object Mode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `multiple-document`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`multiple-document` = "multiple-document".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`multiple-document`]
   @scala.inline
-  def `multiple-document`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`multiple-document` = this.cast("multiple-document")
-  @scala.inline
-  def `single-document`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`single-document` = this.cast("single-document")
+  def `single-document`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`single-document` = "single-document".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`single-document`]
 }
 

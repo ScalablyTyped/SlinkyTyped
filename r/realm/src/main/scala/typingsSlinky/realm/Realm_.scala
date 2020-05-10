@@ -15,8 +15,6 @@ import typingsSlinky.realm.Realm.Results
 import typingsSlinky.realm.Realm.Sync.Session
 import typingsSlinky.realm.Realm.UpdateMode
 import typingsSlinky.realm.realmStrings.change
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.ArrayBufferView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -189,7 +187,7 @@ class Realm_ () extends js.Object {
     * @returns void
     */
   def writeCopyTo(path: String): Unit = js.native
-  def writeCopyTo(path: String, encryptionKey: ArrayBuffer): Unit = js.native
-  def writeCopyTo(path: String, encryptionKey: ArrayBufferView): Unit = js.native
+  def writeCopyTo(path: String, encryptionKey: js.typedarray.ArrayBuffer): Unit = js.native
+  def writeCopyTo(path: String, encryptionKey: js.typedarray.ArrayBufferView): Unit = js.native
 }
 

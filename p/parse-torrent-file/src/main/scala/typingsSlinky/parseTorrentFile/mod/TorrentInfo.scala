@@ -5,34 +5,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TorrentInfo extends js.Object {
-  var files: js.UndefOr[js.Array[File]] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
+  var files: js.UndefOr[js.Array[File]] = js.native
+  var name: js.UndefOr[String] = js.native
   @JSName("name.utf-8")
-  var `nameDotutf-8`: js.UndefOr[String] = js.undefined
-  var `piece length`: js.UndefOr[Double] = js.undefined
-  var pieces: js.UndefOr[Double] = js.undefined
-  var `private`: js.UndefOr[Boolean] = js.undefined
+  var `nameDotutf-8`: js.UndefOr[String] = js.native
+  var `piece length`: js.UndefOr[Double] = js.native
+  var pieces: js.UndefOr[Double] = js.native
+  var `private`: js.UndefOr[Boolean] = js.native
 }
 
 object TorrentInfo {
   @scala.inline
-  def apply(
-    files: js.Array[File] = null,
-    name: String = null,
-    `nameDotutf-8`: String = null,
-    `piece length`: Int | Double = null,
-    pieces: Int | Double = null,
-    `private`: js.UndefOr[Boolean] = js.undefined
-  ): TorrentInfo = {
+  def apply(): TorrentInfo = {
     val __obj = js.Dynamic.literal()
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (`nameDotutf-8` != null) __obj.updateDynamic("name.utf-8")(`nameDotutf-8`.asInstanceOf[js.Any])
-    if (`piece length` != null) __obj.updateDynamic("piece length")(`piece length`.asInstanceOf[js.Any])
-    if (pieces != null) __obj.updateDynamic("pieces")(pieces.asInstanceOf[js.Any])
-    if (!js.isUndefined(`private`)) __obj.updateDynamic("private")(`private`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TorrentInfo]
   }
+  @scala.inline
+  implicit class TorrentInfoOps[Self <: TorrentInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFiles(value: js.Array[File]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withNameDotutf-8`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name.utf-8")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutNameDotutf-8`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name.utf-8")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withPiece length`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("piece length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutPiece length`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("piece length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPieces(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pieces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPieces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pieces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

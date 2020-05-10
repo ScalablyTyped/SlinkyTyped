@@ -1,13 +1,12 @@
 package typingsSlinky.muiDatatables.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.Component
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("mui-datatables", "TableHeadRow")
 @js.native
-object TableHeadRow
-  extends TopLevel[Component[MUIDataTableHeadRow, js.Object, js.Any]]
+object TableHeadRow extends TopLevel[ReactComponentClass[MUIDataTableHeadRow]]
 

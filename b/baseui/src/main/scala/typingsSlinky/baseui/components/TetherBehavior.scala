@@ -1,11 +1,9 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.bottom
 import typingsSlinky.baseui.baseuiStrings.bottomLeft
@@ -27,33 +25,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TetherBehavior
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.layerMod.TetherBehavior] {
+object TetherBehavior {
   @JSImport("baseui/layer", "TetherBehavior")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    anchorRef: Ref[HTMLElement] = null,
-    arrowRef: Ref[HTMLElement] = null,
-    onPopperUpdate: (/* offsets */ NormalizedOffsets, /* popper */ PopperDataObject) => _ = null,
-    placement: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top = null,
-    popperOptions: js.Any = null,
-    popperRef: Ref[HTMLElement] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.layerMod.TetherBehavior] = {
-    val __obj = js.Dynamic.literal()
-    if (anchorRef != null) __obj.updateDynamic("anchorRef")(anchorRef.asInstanceOf[js.Any])
-    if (arrowRef != null) __obj.updateDynamic("arrowRef")(arrowRef.asInstanceOf[js.Any])
-    if (onPopperUpdate != null) __obj.updateDynamic("onPopperUpdate")(js.Any.fromFunction2(onPopperUpdate))
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (popperOptions != null) __obj.updateDynamic("popperOptions")(popperOptions.asInstanceOf[js.Any])
-    if (popperRef != null) __obj.updateDynamic("popperRef")(popperRef.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.layerMod.TetherBehavior] {
+    @scala.inline
+    def anchorRefRefObject(value: ReactRef[HTMLElement]): this.type = set("anchorRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def anchorRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("anchorRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def anchorRef(value: Ref[HTMLElement]): this.type = set("anchorRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def anchorRefNull: this.type = set("anchorRef", null)
+    @scala.inline
+    def arrowRefRefObject(value: ReactRef[HTMLElement]): this.type = set("arrowRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("arrowRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def arrowRef(value: Ref[HTMLElement]): this.type = set("arrowRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowRefNull: this.type = set("arrowRef", null)
+    @scala.inline
+    def onPopperUpdate(value: (/* offsets */ NormalizedOffsets, /* popper */ PopperDataObject) => _): this.type = set("onPopperUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def placement(
+      value: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
+    ): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popperOptions(value: js.Any): this.type = set("popperOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popperRefRefObject(value: ReactRef[HTMLElement]): this.type = set("popperRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popperRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("popperRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def popperRef(value: Ref[HTMLElement]): this.type = set("popperRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popperRefNull: this.type = set("popperRef", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.layerMod.TetherBehavior] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.layerMod.TetherBehavior](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TetherProps
+  
+  def withProps(p: TetherProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TetherBehavior.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

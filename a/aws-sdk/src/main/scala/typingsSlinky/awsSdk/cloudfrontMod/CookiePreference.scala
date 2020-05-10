@@ -18,10 +18,35 @@ trait CookiePreference extends js.Object {
 
 object CookiePreference {
   @scala.inline
-  def apply(Forward: ItemSelection, WhitelistedNames: CookieNames = null): CookiePreference = {
+  def apply(Forward: ItemSelection): CookiePreference = {
     val __obj = js.Dynamic.literal(Forward = Forward.asInstanceOf[js.Any])
-    if (WhitelistedNames != null) __obj.updateDynamic("WhitelistedNames")(WhitelistedNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[CookiePreference]
   }
+  @scala.inline
+  implicit class CookiePreferenceOps[Self <: CookiePreference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForward(value: ItemSelection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Forward")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWhitelistedNames(value: CookieNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitelistedNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhitelistedNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitelistedNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

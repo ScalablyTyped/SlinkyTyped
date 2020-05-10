@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Server extends RouteOptions {
-  var enable: Boolean
-  def whitelist(xhr: js.Any): Boolean
+  var enable: Boolean = js.native
+  def whitelist(xhr: js.Any): Boolean = js.native
 }
 
 object Server {
@@ -22,12 +23,30 @@ object Server {
     response: js.Any,
     status: Double,
     url: String | js.RegExp,
-    whitelist: js.Any => Boolean,
-    headers: js.Object = null
+    whitelist: js.Any => Boolean
   ): Server = {
     val __obj = js.Dynamic.literal(delay = delay.asInstanceOf[js.Any], enable = enable.asInstanceOf[js.Any], force404 = force404.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], onAbort = js.Any.fromFunction1(onAbort), onRequest = js.Any.fromFunction1(onRequest), onResponse = js.Any.fromFunction1(onResponse), response = response.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], whitelist = js.Any.fromFunction1(whitelist))
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
     __obj.asInstanceOf[Server]
   }
+  @scala.inline
+  implicit class ServerOps[Self <: Server] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWhitelist(value: js.Any => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelist")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

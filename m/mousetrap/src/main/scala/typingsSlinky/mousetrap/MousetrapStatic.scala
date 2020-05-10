@@ -3,7 +3,7 @@ package typingsSlinky.mousetrap
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.std.Element
+import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait MousetrapStatic
   extends Instantiable0[MousetrapInstance]
      with Instantiable1[/* el */ Element, MousetrapInstance] {
-  def apply(el: org.scalajs.dom.raw.Element): MousetrapInstance = js.native
+  def apply(el: Element): MousetrapInstance = js.native
   def addKeycodes(keycodes: NumberDictionary[String]): Unit = js.native
   def bind(keys: String, callback: js.Function2[/* e */ ExtendedKeyboardEvent, /* combo */ String, _]): MousetrapInstance = js.native
   def bind(
@@ -46,7 +46,7 @@ trait MousetrapStatic
     action: String
   ): Unit = js.native
   def reset(): MousetrapInstance = js.native
-  def stopCallback(e: ExtendedKeyboardEvent, element: org.scalajs.dom.raw.Element, combo: String): Boolean = js.native
+  def stopCallback(e: ExtendedKeyboardEvent, element: Element, combo: String): Boolean = js.native
   def trigger(keys: String): MousetrapInstance = js.native
   def trigger(keys: String, action: String): MousetrapInstance = js.native
   def unbind(keys: String): MousetrapInstance = js.native

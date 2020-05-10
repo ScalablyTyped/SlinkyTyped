@@ -1,14 +1,16 @@
 package typingsSlinky.reactContentLoader.components
 
+import typingsSlinky.reactContentLoader.mod.IContentLoaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BulletList extends SharedApply_IContentLoaderProps_734572896 {
+object BulletList {
   @JSImport("react-content-loader", "BulletList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IContentLoaderProps): SharedBuilder_IContentLoaderProps1813843303 = new SharedBuilder_IContentLoaderProps1813843303(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BulletList.type): SharedBuilder_IContentLoaderProps1813843303 = new SharedBuilder_IContentLoaderProps1813843303(js.Array(this.component, js.Dictionary.empty))()
 }
 

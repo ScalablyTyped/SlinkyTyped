@@ -7,22 +7,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IFileInformationFactoryFactory extends js.Object {
-  def createWithMode(queryResult: IStorageQueryResultBase, mode: ThumbnailMode): FileInformationFactory
-  def createWithModeAndSize(queryResult: IStorageQueryResultBase, mode: ThumbnailMode, requestedThumbnailSize: Double): FileInformationFactory
+  def createWithMode(queryResult: IStorageQueryResultBase, mode: ThumbnailMode): FileInformationFactory = js.native
+  def createWithModeAndSize(queryResult: IStorageQueryResultBase, mode: ThumbnailMode, requestedThumbnailSize: Double): FileInformationFactory = js.native
   def createWithModeAndSizeAndOptions(
     queryResult: IStorageQueryResultBase,
     mode: ThumbnailMode,
     requestedThumbnailSize: Double,
     thumbnailOptions: ThumbnailOptions
-  ): FileInformationFactory
+  ): FileInformationFactory = js.native
   def createWithModeAndSizeAndOptionsAndFlags(
     queryResult: IStorageQueryResultBase,
     mode: ThumbnailMode,
     requestedThumbnailSize: Double,
     thumbnailOptions: ThumbnailOptions,
     delayLoad: Boolean
-  ): FileInformationFactory
+  ): FileInformationFactory = js.native
 }
 
 object IFileInformationFactoryFactory {
@@ -34,8 +35,43 @@ object IFileInformationFactoryFactory {
     createWithModeAndSizeAndOptionsAndFlags: (IStorageQueryResultBase, ThumbnailMode, Double, ThumbnailOptions, Boolean) => FileInformationFactory
   ): IFileInformationFactoryFactory = {
     val __obj = js.Dynamic.literal(createWithMode = js.Any.fromFunction2(createWithMode), createWithModeAndSize = js.Any.fromFunction3(createWithModeAndSize), createWithModeAndSizeAndOptions = js.Any.fromFunction4(createWithModeAndSizeAndOptions), createWithModeAndSizeAndOptionsAndFlags = js.Any.fromFunction5(createWithModeAndSizeAndOptionsAndFlags))
-  
     __obj.asInstanceOf[IFileInformationFactoryFactory]
   }
+  @scala.inline
+  implicit class IFileInformationFactoryFactoryOps[Self <: IFileInformationFactoryFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateWithMode(value: (IStorageQueryResultBase, ThumbnailMode) => FileInformationFactory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithMode")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCreateWithModeAndSize(value: (IStorageQueryResultBase, ThumbnailMode, Double) => FileInformationFactory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithModeAndSize")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withCreateWithModeAndSizeAndOptions(
+      value: (IStorageQueryResultBase, ThumbnailMode, Double, ThumbnailOptions) => FileInformationFactory
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithModeAndSizeAndOptions")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withCreateWithModeAndSizeAndOptionsAndFlags(
+      value: (IStorageQueryResultBase, ThumbnailMode, Double, ThumbnailOptions, Boolean) => FileInformationFactory
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createWithModeAndSizeAndOptionsAndFlags")(js.Any.fromFunction5(value))
+        ret
+    }
+  }
+  
 }
 

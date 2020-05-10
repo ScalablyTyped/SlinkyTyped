@@ -1,51 +1,125 @@
 package typingsSlinky.reactstrap.paginationLinkMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.HTMLAnchorElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.reactstrap.mod.CSSModule
-import typingsSlinky.std.HTMLAnchorElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PaginationLinkProps
   extends AllHTMLAttributes[HTMLAnchorElement]
      with ClassAttributes[HTMLAnchorElement]
      with /* key */ StringDictionary[js.Any] {
-  var cssModule: js.UndefOr[CSSModule] = js.undefined
-  var first: js.UndefOr[Boolean] = js.undefined
-  var last: js.UndefOr[Boolean] = js.undefined
-  var next: js.UndefOr[Boolean] = js.undefined
-  var previous: js.UndefOr[Boolean] = js.undefined
-  var tag: js.UndefOr[String | ReactComponentClass[_]] = js.undefined
+  var cssModule: js.UndefOr[CSSModule] = js.native
+  var first: js.UndefOr[Boolean] = js.native
+  var last: js.UndefOr[Boolean] = js.native
+  var next: js.UndefOr[Boolean] = js.native
+  var previous: js.UndefOr[Boolean] = js.native
+  var tag: js.UndefOr[String | ReactComponentClass[_]] = js.native
 }
 
 object PaginationLinkProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[org.scalajs.dom.raw.HTMLAnchorElement] = null,
-    ClassAttributes: ClassAttributes[org.scalajs.dom.raw.HTMLAnchorElement] = null,
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    cssModule: CSSModule = null,
-    first: js.UndefOr[Boolean] = js.undefined,
-    last: js.UndefOr[Boolean] = js.undefined,
-    next: js.UndefOr[Boolean] = js.undefined,
-    previous: js.UndefOr[Boolean] = js.undefined,
-    tag: String | ReactComponentClass[_] = null
-  ): PaginationLinkProps = {
+  def apply(): PaginationLinkProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (cssModule != null) __obj.updateDynamic("cssModule")(cssModule.asInstanceOf[js.Any])
-    if (!js.isUndefined(first)) __obj.updateDynamic("first")(first.asInstanceOf[js.Any])
-    if (!js.isUndefined(last)) __obj.updateDynamic("last")(last.asInstanceOf[js.Any])
-    if (!js.isUndefined(next)) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
-    if (!js.isUndefined(previous)) __obj.updateDynamic("previous")(previous.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaginationLinkProps]
   }
+  @scala.inline
+  implicit class PaginationLinkPropsOps[Self <: PaginationLinkProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCssModule(value: CSSModule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssModule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCssModule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssModule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirst(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLast(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNext(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevious(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevious: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTagComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTag(value: String | ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

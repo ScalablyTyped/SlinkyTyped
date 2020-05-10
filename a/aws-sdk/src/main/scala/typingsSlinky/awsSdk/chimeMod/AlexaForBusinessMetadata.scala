@@ -18,14 +18,41 @@ trait AlexaForBusinessMetadata extends js.Object {
 
 object AlexaForBusinessMetadata {
   @scala.inline
-  def apply(
-    AlexaForBusinessRoomArn: SensitiveString = null,
-    IsAlexaForBusinessEnabled: js.UndefOr[scala.Boolean] = js.undefined
-  ): AlexaForBusinessMetadata = {
+  def apply(): AlexaForBusinessMetadata = {
     val __obj = js.Dynamic.literal()
-    if (AlexaForBusinessRoomArn != null) __obj.updateDynamic("AlexaForBusinessRoomArn")(AlexaForBusinessRoomArn.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsAlexaForBusinessEnabled)) __obj.updateDynamic("IsAlexaForBusinessEnabled")(IsAlexaForBusinessEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlexaForBusinessMetadata]
   }
+  @scala.inline
+  implicit class AlexaForBusinessMetadataOps[Self <: AlexaForBusinessMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlexaForBusinessRoomArn(value: SensitiveString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlexaForBusinessRoomArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlexaForBusinessRoomArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlexaForBusinessRoomArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsAlexaForBusinessEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsAlexaForBusinessEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsAlexaForBusinessEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsAlexaForBusinessEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

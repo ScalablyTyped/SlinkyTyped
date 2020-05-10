@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofInlineEditBox extends js.Object {
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/InlineEditBox._InlineEditor.html
@@ -24,7 +25,7 @@ trait TypeofInlineEditBox extends js.Object {
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
     InlineEditor
-  ]
+  ] = js.native
 }
 
 object TypeofInlineEditBox {
@@ -37,8 +38,27 @@ object TypeofInlineEditBox {
     ]
   ): TypeofInlineEditBox = {
     val __obj = js.Dynamic.literal(_InlineEditor = _InlineEditor.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypeofInlineEditBox]
   }
+  @scala.inline
+  implicit class TypeofInlineEditBoxOps[Self <: TypeofInlineEditBox] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_InlineEditor(
+      value: Instantiable2[
+          js.UndefOr[/* params */ js.Object], 
+          js.UndefOr[/* srcNodeRef */ HTMLElement], 
+          InlineEditor
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_InlineEditor")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

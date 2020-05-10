@@ -1,0 +1,17 @@
+package typingsSlinky.babylonjs.materialsIndexMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("babylonjs/Materials/index", "ReflectBlock")
+@js.native
+class ReflectBlock protected ()
+  extends typingsSlinky.babylonjs.nodeIndexMod.ReflectBlock {
+  /**
+    * Creates a new ReflectBlock
+    * @param name defines the block name
+    */
+  def this(name: String) = this()
+}
+

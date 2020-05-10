@@ -28,30 +28,28 @@ trait LongDateFormatKey extends js.Object
 
 object LongDateFormatKey {
   @scala.inline
-  def L: typingsSlinky.moment.momentStrings.L = this.cast("L")
+  def L: typingsSlinky.moment.momentStrings.L = "L".asInstanceOf[typingsSlinky.moment.momentStrings.L]
   @scala.inline
-  def LL: typingsSlinky.moment.momentStrings.LL = this.cast("LL")
+  def LL: typingsSlinky.moment.momentStrings.LL = "LL".asInstanceOf[typingsSlinky.moment.momentStrings.LL]
   @scala.inline
-  def LLL: typingsSlinky.moment.momentStrings.LLL = this.cast("LLL")
+  def LLL: typingsSlinky.moment.momentStrings.LLL = "LLL".asInstanceOf[typingsSlinky.moment.momentStrings.LLL]
   @scala.inline
-  def LLLL: typingsSlinky.moment.momentStrings.LLLL = this.cast("LLLL")
+  def LLLL: typingsSlinky.moment.momentStrings.LLLL = "LLLL".asInstanceOf[typingsSlinky.moment.momentStrings.LLLL]
   @scala.inline
-  def LT: typingsSlinky.moment.momentStrings.LT = this.cast("LT")
+  def LT: typingsSlinky.moment.momentStrings.LT = "LT".asInstanceOf[typingsSlinky.moment.momentStrings.LT]
   @scala.inline
-  def LTS: typingsSlinky.moment.momentStrings.LTS = this.cast("LTS")
+  def LTS: typingsSlinky.moment.momentStrings.LTS = "LTS".asInstanceOf[typingsSlinky.moment.momentStrings.LTS]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def l: l_ = "l".asInstanceOf[l_]
   @scala.inline
-  def l: l_ = this.cast("l")
+  def ll: ll_ = "ll".asInstanceOf[ll_]
   @scala.inline
-  def ll: ll_ = this.cast("ll")
+  def lll: lll_ = "lll".asInstanceOf[lll_]
   @scala.inline
-  def lll: lll_ = this.cast("lll")
+  def llll: llll_ = "llll".asInstanceOf[llll_]
   @scala.inline
-  def llll: llll_ = this.cast("llll")
+  def lt: lt_ = "lt".asInstanceOf[lt_]
   @scala.inline
-  def lt: lt_ = this.cast("lt")
-  @scala.inline
-  def lts: lts_ = this.cast("lts")
+  def lts: lts_ = "lts".asInstanceOf[lts_]
 }
 

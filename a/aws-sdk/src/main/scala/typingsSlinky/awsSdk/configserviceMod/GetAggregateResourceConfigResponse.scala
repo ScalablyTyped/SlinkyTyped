@@ -14,10 +14,29 @@ trait GetAggregateResourceConfigResponse extends js.Object {
 
 object GetAggregateResourceConfigResponse {
   @scala.inline
-  def apply(ConfigurationItem: ConfigurationItem = null): GetAggregateResourceConfigResponse = {
+  def apply(): GetAggregateResourceConfigResponse = {
     val __obj = js.Dynamic.literal()
-    if (ConfigurationItem != null) __obj.updateDynamic("ConfigurationItem")(ConfigurationItem.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAggregateResourceConfigResponse]
   }
+  @scala.inline
+  implicit class GetAggregateResourceConfigResponseOps[Self <: GetAggregateResourceConfigResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigurationItem(value: ConfigurationItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationItem")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

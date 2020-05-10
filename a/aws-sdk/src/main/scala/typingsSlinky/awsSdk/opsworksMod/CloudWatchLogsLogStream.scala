@@ -54,32 +54,149 @@ trait CloudWatchLogsLogStream extends js.Object {
 
 object CloudWatchLogsLogStream {
   @scala.inline
-  def apply(
-    BatchCount: Int | scala.Double = null,
-    BatchSize: Int | scala.Double = null,
-    BufferDuration: Int | scala.Double = null,
-    DatetimeFormat: String = null,
-    Encoding: CloudWatchLogsEncoding = null,
-    File: String = null,
-    FileFingerprintLines: String = null,
-    InitialPosition: CloudWatchLogsInitialPosition = null,
-    LogGroupName: String = null,
-    MultiLineStartPattern: String = null,
-    TimeZone: CloudWatchLogsTimeZone = null
-  ): CloudWatchLogsLogStream = {
+  def apply(): CloudWatchLogsLogStream = {
     val __obj = js.Dynamic.literal()
-    if (BatchCount != null) __obj.updateDynamic("BatchCount")(BatchCount.asInstanceOf[js.Any])
-    if (BatchSize != null) __obj.updateDynamic("BatchSize")(BatchSize.asInstanceOf[js.Any])
-    if (BufferDuration != null) __obj.updateDynamic("BufferDuration")(BufferDuration.asInstanceOf[js.Any])
-    if (DatetimeFormat != null) __obj.updateDynamic("DatetimeFormat")(DatetimeFormat.asInstanceOf[js.Any])
-    if (Encoding != null) __obj.updateDynamic("Encoding")(Encoding.asInstanceOf[js.Any])
-    if (File != null) __obj.updateDynamic("File")(File.asInstanceOf[js.Any])
-    if (FileFingerprintLines != null) __obj.updateDynamic("FileFingerprintLines")(FileFingerprintLines.asInstanceOf[js.Any])
-    if (InitialPosition != null) __obj.updateDynamic("InitialPosition")(InitialPosition.asInstanceOf[js.Any])
-    if (LogGroupName != null) __obj.updateDynamic("LogGroupName")(LogGroupName.asInstanceOf[js.Any])
-    if (MultiLineStartPattern != null) __obj.updateDynamic("MultiLineStartPattern")(MultiLineStartPattern.asInstanceOf[js.Any])
-    if (TimeZone != null) __obj.updateDynamic("TimeZone")(TimeZone.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudWatchLogsLogStream]
   }
+  @scala.inline
+  implicit class CloudWatchLogsLogStreamOps[Self <: CloudWatchLogsLogStream] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBatchSize(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBufferDuration(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BufferDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBufferDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BufferDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatetimeFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatetimeFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatetimeFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatetimeFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: CloudWatchLogsEncoding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("File")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("File")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileFingerprintLines(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileFingerprintLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileFingerprintLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileFingerprintLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialPosition(value: CloudWatchLogsInitialPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiLineStartPattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiLineStartPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiLineStartPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultiLineStartPattern")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeZone(value: CloudWatchLogsTimeZone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeZone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

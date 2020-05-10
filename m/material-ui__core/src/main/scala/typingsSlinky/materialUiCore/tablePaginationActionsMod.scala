@@ -1,14 +1,12 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLButtonElement
+import org.scalajs.dom.raw.HTMLDivElement
+import slinky.core.ReactComponentClass
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.MouseEvent
-import typingsSlinky.react.mod.NativeMouseEvent
-import typingsSlinky.std.HTMLButtonElement
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,18 +22,18 @@ object tablePaginationActionsMod extends js.Object {
     var page: Double = js.native
     var rowsPerPage: Double = js.native
     def onChangePage(event: Null, page: Double): Unit = js.native
-    def onChangePage(event: MouseEvent[HTMLButtonElement, NativeMouseEvent], page: Double): Unit = js.native
+    def onChangePage(event: SyntheticMouseEvent[HTMLButtonElement], page: Double): Unit = js.native
   }
   
   @js.native
   class default protected ()
-    extends Component[TablePaginationActionsProps, ComponentState, js.Any] {
+    extends Component[TablePaginationActionsProps, js.Object, js.Any] {
     def this(props: TablePaginationActionsProps) = this()
     def this(props: TablePaginationActionsProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[TablePaginationActionsProps]]
+  object default extends TopLevel[ReactComponentClass[TablePaginationActionsProps]]
   
 }
 

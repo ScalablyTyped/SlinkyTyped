@@ -15,16 +15,14 @@ trait SEVERITY_TYPE extends js.Object
 
 object SEVERITY_TYPE {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def confirmation: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.confirmation = "confirmation".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.confirmation]
   @scala.inline
-  def confirmation: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.confirmation = this.cast("confirmation")
+  def error: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.error = "error".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.error]
   @scala.inline
-  def error: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.error = this.cast("error")
+  def fatal: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.fatal = "fatal".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.fatal]
   @scala.inline
-  def fatal: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.fatal = this.cast("fatal")
+  def info: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.info = "info".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.info]
   @scala.inline
-  def info: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.info = this.cast("info")
-  @scala.inline
-  def warning: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.warning = "warning".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.warning]
 }
 

@@ -120,5 +120,6 @@ trait HTMLTextAreaElement extends HTMLElement {
 
 @JSGlobal("HTMLTextAreaElement")
 @js.native
-object HTMLTextAreaElement extends Instantiable0[HTMLTextAreaElement]
+object HTMLTextAreaElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLTextAreaElement]
 

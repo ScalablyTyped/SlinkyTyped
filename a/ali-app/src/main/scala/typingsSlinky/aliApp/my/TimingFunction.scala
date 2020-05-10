@@ -19,20 +19,18 @@ trait TimingFunction extends js.Object
 
 object TimingFunction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ease: typingsSlinky.aliApp.aliAppStrings.ease = "ease".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.ease]
   @scala.inline
-  def ease: typingsSlinky.aliApp.aliAppStrings.ease = this.cast("ease")
+  def `ease-in`: typingsSlinky.aliApp.aliAppStrings.`ease-in` = "ease-in".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.`ease-in`]
   @scala.inline
-  def `ease-in`: typingsSlinky.aliApp.aliAppStrings.`ease-in` = this.cast("ease-in")
+  def `ease-in-out`: typingsSlinky.aliApp.aliAppStrings.`ease-in-out` = "ease-in-out".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.`ease-in-out`]
   @scala.inline
-  def `ease-in-out`: typingsSlinky.aliApp.aliAppStrings.`ease-in-out` = this.cast("ease-in-out")
+  def `ease-out`: typingsSlinky.aliApp.aliAppStrings.`ease-out` = "ease-out".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.`ease-out`]
   @scala.inline
-  def `ease-out`: typingsSlinky.aliApp.aliAppStrings.`ease-out` = this.cast("ease-out")
+  def linear: typingsSlinky.aliApp.aliAppStrings.linear = "linear".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.linear]
   @scala.inline
-  def linear: typingsSlinky.aliApp.aliAppStrings.linear = this.cast("linear")
+  def `step-end`: typingsSlinky.aliApp.aliAppStrings.`step-end` = "step-end".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.`step-end`]
   @scala.inline
-  def `step-end`: typingsSlinky.aliApp.aliAppStrings.`step-end` = this.cast("step-end")
-  @scala.inline
-  def `step-start`: typingsSlinky.aliApp.aliAppStrings.`step-start` = this.cast("step-start")
+  def `step-start`: typingsSlinky.aliApp.aliAppStrings.`step-start` = "step-start".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.`step-start`]
 }
 

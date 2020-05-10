@@ -13,7 +13,7 @@ trait CreateFleetResult extends js.Object {
   /**
     * The ID of the EC2 Fleet.
     */
-  var FleetId: js.UndefOr[FleetIdentifier] = js.native
+  var FleetId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.FleetId] = js.native
   /**
     * Information about the instances that were launched by the fleet. Valid only when Type is set to instant.
     */
@@ -22,16 +22,53 @@ trait CreateFleetResult extends js.Object {
 
 object CreateFleetResult {
   @scala.inline
-  def apply(
-    Errors: CreateFleetErrorsSet = null,
-    FleetId: FleetIdentifier = null,
-    Instances: CreateFleetInstancesSet = null
-  ): CreateFleetResult = {
+  def apply(): CreateFleetResult = {
     val __obj = js.Dynamic.literal()
-    if (Errors != null) __obj.updateDynamic("Errors")(Errors.asInstanceOf[js.Any])
-    if (FleetId != null) __obj.updateDynamic("FleetId")(FleetId.asInstanceOf[js.Any])
-    if (Instances != null) __obj.updateDynamic("Instances")(Instances.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFleetResult]
   }
+  @scala.inline
+  implicit class CreateFleetResultOps[Self <: CreateFleetResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrors(value: CreateFleetErrorsSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Errors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFleetId(value: FleetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFleetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FleetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstances(value: CreateFleetInstancesSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Instances")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

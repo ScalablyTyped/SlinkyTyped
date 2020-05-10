@@ -1,6 +1,5 @@
 package typingsSlinky.grunt.grunt.util
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,8 +38,8 @@ trait UtilModule extends js.Object {
   ] = js.native
   def error(error: js.Any): js.Error = js.native
   def error(error: js.Any, origError: js.Error): js.Error = js.native
-  def error(error: Error): js.Error = js.native
-  def error(error: Error, origError: js.Error): js.Error = js.native
+  def error(error: js.Error): js.Error = js.native
+  def error(error: js.Error, origError: js.Error): js.Error = js.native
   /**
     * Return a new Error instance (that can be thrown) with the appropriate message.
     * If an Error object is specified instead of message that object will be returned.

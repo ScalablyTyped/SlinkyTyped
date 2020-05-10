@@ -19,12 +19,53 @@ trait GetConnectionResponse extends js.Object {
 
 object GetConnectionResponse {
   @scala.inline
-  def apply(ConnectedAt: js.Date = null, Identity: Identity = null, LastActiveAt: js.Date = null): GetConnectionResponse = {
+  def apply(): GetConnectionResponse = {
     val __obj = js.Dynamic.literal()
-    if (ConnectedAt != null) __obj.updateDynamic("ConnectedAt")(ConnectedAt.asInstanceOf[js.Any])
-    if (Identity != null) __obj.updateDynamic("Identity")(Identity.asInstanceOf[js.Any])
-    if (LastActiveAt != null) __obj.updateDynamic("LastActiveAt")(LastActiveAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConnectionResponse]
   }
+  @scala.inline
+  implicit class GetConnectionResponseOps[Self <: GetConnectionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentity(value: Identity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Identity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Identity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastActiveAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastActiveAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastActiveAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastActiveAt")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

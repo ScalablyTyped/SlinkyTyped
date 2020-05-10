@@ -1,6 +1,5 @@
 package typingsSlinky.amcharts
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -120,7 +119,7 @@ object chartCursorMod extends js.Object {
       * You can force cursor to appear at specified cateogry or date.
       */
     def showCursorAt(category: String): Unit = js.native
-    def showCursorAt(category: Date): Unit = js.native
+    def showCursorAt(category: js.Date): Unit = js.native
   }
   
   @js.native

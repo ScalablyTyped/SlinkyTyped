@@ -1,6 +1,6 @@
 package typingsSlinky.reactSplitPane.mod
 
-import typingsSlinky.reactSplitPane.PartialState
+import typingsSlinky.reactSplitPane.PartialSplitPaneState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ class default () extends SplitPane
 @JSImport("react-split-pane", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: Props = js.native
-  def getSizeUpdate(props: Props, state: State): PartialState = js.native
+  var defaultProps: SplitPaneProps = js.native
+  def getSizeUpdate(props: SplitPaneProps, state: SplitPaneState): PartialSplitPaneState = js.native
 }
 

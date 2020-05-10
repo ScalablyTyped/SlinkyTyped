@@ -9,8 +9,5 @@ import scala.scalajs.js.annotation._
 class EndpointSelector protected ()
   extends typingsSlinky.devextreme.mod.DevExpress.EndpointSelector {
   def this(options: js.Any) = this()
-  /** Gets an endpoint with a specific key. */
-  /* CompleteClass */
-  override def urlFor(key: String): String = js.native
 }
 

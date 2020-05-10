@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.surveyKnockout.mod.IMatrixDropdownData because var conflicts: columns, value. Inlined onRowChanged, onRowChanging, getRowIndex, validateCell, createQuestion, getSharedQuestionByName, onTotalValueChanged, getSurvey */ @JSImport("survey-knockout", "QuestionMatrixDropdownModelBase")
 @js.native
 class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseModel[MatrixDropdownRowModelBase, MatrixDropdownColumn] {
@@ -98,6 +98,7 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
   /* protected */ def isObject(value: js.Any): Boolean = js.native
   /* protected */ def onBeforeValueChanged(`val`: js.Any): Unit = js.native
   /* protected */ def onCellValueChanged(row: MatrixDropdownRowModelBase, columnName: String, rowValue: js.Any): Unit = js.native
+  def onColumnCellTypeChanged(column: MatrixDropdownColumn): Unit = js.native
   def onColumnPropertiesChanged(column: MatrixDropdownColumn): Unit = js.native
   /* protected */ def onEndRowAdding(): Unit = js.native
   /* protected */ def onEndRowRemoving(index: Double): Unit = js.native

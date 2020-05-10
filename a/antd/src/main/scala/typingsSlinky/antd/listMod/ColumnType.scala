@@ -18,22 +18,20 @@ trait ColumnType extends js.Object
 
 object ColumnType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def column: typingsSlinky.antd.antdStrings.column = "column".asInstanceOf[typingsSlinky.antd.antdStrings.column]
   @scala.inline
-  def column: typingsSlinky.antd.antdStrings.column = this.cast("column")
+  def gutter: typingsSlinky.antd.antdStrings.gutter = "gutter".asInstanceOf[typingsSlinky.antd.antdStrings.gutter]
   @scala.inline
-  def gutter: typingsSlinky.antd.antdStrings.gutter = this.cast("gutter")
+  def lg: typingsSlinky.antd.antdStrings.lg = "lg".asInstanceOf[typingsSlinky.antd.antdStrings.lg]
   @scala.inline
-  def lg: typingsSlinky.antd.antdStrings.lg = this.cast("lg")
+  def md: typingsSlinky.antd.antdStrings.md = "md".asInstanceOf[typingsSlinky.antd.antdStrings.md]
   @scala.inline
-  def md: typingsSlinky.antd.antdStrings.md = this.cast("md")
+  def sm: typingsSlinky.antd.antdStrings.sm = "sm".asInstanceOf[typingsSlinky.antd.antdStrings.sm]
   @scala.inline
-  def sm: typingsSlinky.antd.antdStrings.sm = this.cast("sm")
+  def xl: typingsSlinky.antd.antdStrings.xl = "xl".asInstanceOf[typingsSlinky.antd.antdStrings.xl]
   @scala.inline
-  def xl: typingsSlinky.antd.antdStrings.xl = this.cast("xl")
+  def xs: typingsSlinky.antd.antdStrings.xs = "xs".asInstanceOf[typingsSlinky.antd.antdStrings.xs]
   @scala.inline
-  def xs: typingsSlinky.antd.antdStrings.xs = this.cast("xs")
-  @scala.inline
-  def xxl: typingsSlinky.antd.antdStrings.xxl = this.cast("xxl")
+  def xxl: typingsSlinky.antd.antdStrings.xxl = "xxl".asInstanceOf[typingsSlinky.antd.antdStrings.xxl]
 }
 

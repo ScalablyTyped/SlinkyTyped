@@ -21,7 +21,7 @@ trait AuthorizeSecurityGroupEgressRequest extends js.Object {
   /**
     * The ID of the security group.
     */
-  var GroupId: String = js.native
+  var GroupId: SecurityGroupId = js.native
   /**
     * The sets of IP permissions. You can't specify a destination security group and a CIDR IP address range in the same set of permissions.
     */
@@ -46,27 +46,119 @@ trait AuthorizeSecurityGroupEgressRequest extends js.Object {
 
 object AuthorizeSecurityGroupEgressRequest {
   @scala.inline
-  def apply(
-    GroupId: String,
-    CidrIp: String = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    FromPort: Int | scala.Double = null,
-    IpPermissions: IpPermissionList = null,
-    IpProtocol: String = null,
-    SourceSecurityGroupName: String = null,
-    SourceSecurityGroupOwnerId: String = null,
-    ToPort: Int | scala.Double = null
-  ): AuthorizeSecurityGroupEgressRequest = {
+  def apply(GroupId: SecurityGroupId): AuthorizeSecurityGroupEgressRequest = {
     val __obj = js.Dynamic.literal(GroupId = GroupId.asInstanceOf[js.Any])
-    if (CidrIp != null) __obj.updateDynamic("CidrIp")(CidrIp.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (FromPort != null) __obj.updateDynamic("FromPort")(FromPort.asInstanceOf[js.Any])
-    if (IpPermissions != null) __obj.updateDynamic("IpPermissions")(IpPermissions.asInstanceOf[js.Any])
-    if (IpProtocol != null) __obj.updateDynamic("IpProtocol")(IpProtocol.asInstanceOf[js.Any])
-    if (SourceSecurityGroupName != null) __obj.updateDynamic("SourceSecurityGroupName")(SourceSecurityGroupName.asInstanceOf[js.Any])
-    if (SourceSecurityGroupOwnerId != null) __obj.updateDynamic("SourceSecurityGroupOwnerId")(SourceSecurityGroupOwnerId.asInstanceOf[js.Any])
-    if (ToPort != null) __obj.updateDynamic("ToPort")(ToPort.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthorizeSecurityGroupEgressRequest]
   }
+  @scala.inline
+  implicit class AuthorizeSecurityGroupEgressRequestOps[Self <: AuthorizeSecurityGroupEgressRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupId(value: SecurityGroupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCidrIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidrIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromPort(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpPermissions(value: IpPermissionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpPermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpProtocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceSecurityGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSecurityGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceSecurityGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSecurityGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceSecurityGroupOwnerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSecurityGroupOwnerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceSecurityGroupOwnerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceSecurityGroupOwnerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToPort(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ToPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ToPort")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,8 +16,21 @@ object DescribeEndpointGroupRequest {
   @scala.inline
   def apply(EndpointGroupArn: GenericString): DescribeEndpointGroupRequest = {
     val __obj = js.Dynamic.literal(EndpointGroupArn = EndpointGroupArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeEndpointGroupRequest]
   }
+  @scala.inline
+  implicit class DescribeEndpointGroupRequestOps[Self <: DescribeEndpointGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndpointGroupArn(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

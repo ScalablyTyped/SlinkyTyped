@@ -5,16 +5,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridRowProps extends js.Object {
-  val gridRow: js.UndefOr[ResponsiveValue[GridRowProperty]] = js.undefined
+  val gridRow: js.UndefOr[ResponsiveValue[GridRowProperty]] = js.native
 }
 
 object GridRowProps {
   @scala.inline
-  def apply(gridRow: ResponsiveValue[GridRowProperty] = null): GridRowProps = {
+  def apply(): GridRowProps = {
     val __obj = js.Dynamic.literal()
-    if (gridRow != null) __obj.updateDynamic("gridRow")(gridRow.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridRowProps]
   }
+  @scala.inline
+  implicit class GridRowPropsOps[Self <: GridRowProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGridRow(value: ResponsiveValue[GridRowProperty]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

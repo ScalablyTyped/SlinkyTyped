@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation._
   * For back-compat, remove for 2.0
   * 
   */
+@js.native
 trait Slider extends js.Object
 

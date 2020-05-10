@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   * container blocks until the action is complete, unless the container process fails, in which
   * case the handler is aborted.
   */
+@js.native
 trait Lifecycle extends js.Object {
   /**
     * PostStart is called immediately after a container is created. If the handler fails, the
@@ -18,7 +19,7 @@ trait Lifecycle extends js.Object {
     * the container blocks until the hook completes. More info:
     * https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
     */
-  var postStart: js.UndefOr[Input[Handler]] = js.undefined
+  var postStart: js.UndefOr[Input[Handler]] = js.native
   /**
     * PreStop is called immediately before a container is terminated due to an API request or
     * management event such as liveness/startup probe failure, preemption, resource contention,
@@ -30,16 +31,46 @@ trait Lifecycle extends js.Object {
     * period is reached. More info:
     * https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks
     */
-  var preStop: js.UndefOr[Input[Handler]] = js.undefined
+  var preStop: js.UndefOr[Input[Handler]] = js.native
 }
 
 object Lifecycle {
   @scala.inline
-  def apply(postStart: Input[Handler] = null, preStop: Input[Handler] = null): Lifecycle = {
+  def apply(): Lifecycle = {
     val __obj = js.Dynamic.literal()
-    if (postStart != null) __obj.updateDynamic("postStart")(postStart.asInstanceOf[js.Any])
-    if (preStop != null) __obj.updateDynamic("preStop")(preStop.asInstanceOf[js.Any])
     __obj.asInstanceOf[Lifecycle]
   }
+  @scala.inline
+  implicit class LifecycleOps[Self <: Lifecycle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPostStart(value: Input[Handler]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreStop(value: Input[Handler]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preStop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preStop")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

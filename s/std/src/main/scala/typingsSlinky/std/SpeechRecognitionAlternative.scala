@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpeechRecognitionAlternative extends js.Object {
-  val confidence: Double
-  val transcript: java.lang.String
+  val confidence: Double = js.native
+  val transcript: java.lang.String = js.native
 }
 
 @JSGlobal("SpeechRecognitionAlternative")

@@ -32,7 +32,7 @@ trait CshakeHash extends js.Object {
     * @param functionName The function name string.
     * @param customization The customization string.
     */
-  def arrayBuffer(message: Message, outputBits: Double, functionName: Message, customization: Message): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def arrayBuffer(message: Message, outputBits: Double, functionName: Message, customization: Message): js.typedarray.ArrayBuffer = js.native
   /**
     * Create a hash object.
     *

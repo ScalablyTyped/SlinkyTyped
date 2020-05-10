@@ -11,7 +11,5 @@ import scala.scalajs.js.annotation._
 class PointConstraint protected () extends Constraint {
   def this(objecta: Object3D, objectb: Object3D) = this()
   def this(objecta: Object3D, objectb: Object3D, position: Vector3) = this()
-  /* CompleteClass */
-  override def getDefinition(): js.Any = js.native
 }
 

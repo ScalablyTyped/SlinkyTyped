@@ -14,26 +14,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DisplayNamesResolvedOptions extends js.Object {
-  var fallback: NonNullable[js.UndefOr[code | none]]
-  var locale: String
-  var style: NonNullable[js.UndefOr[narrow | short | long]]
-  var `type`: NonNullable[js.UndefOr[language | region | script | currency]]
+  var fallback: NonNullable[js.UndefOr[code | none]] = js.native
+  var locale: String = js.native
+  var style: NonNullable[js.UndefOr[narrow | short | long]] = js.native
+  var `type`: NonNullable[js.UndefOr[language | region | script | currency]] = js.native
 }
 
 object DisplayNamesResolvedOptions {
   @scala.inline
-  def apply(
-    locale: String,
-    fallback: NonNullable[js.UndefOr[code | none]] = null,
-    style: NonNullable[js.UndefOr[narrow | short | long]] = null,
-    `type`: NonNullable[js.UndefOr[language | region | script | currency]] = null
-  ): DisplayNamesResolvedOptions = {
+  def apply(locale: String): DisplayNamesResolvedOptions = {
     val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any])
-    if (fallback != null) __obj.updateDynamic("fallback")(fallback.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisplayNamesResolvedOptions]
   }
+  @scala.inline
+  implicit class DisplayNamesResolvedOptionsOps[Self <: DisplayNamesResolvedOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFallback(value: NonNullable[js.UndefOr[code | none]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: NonNullable[js.UndefOr[narrow | short | long]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: NonNullable[js.UndefOr[language | region | script | currency]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

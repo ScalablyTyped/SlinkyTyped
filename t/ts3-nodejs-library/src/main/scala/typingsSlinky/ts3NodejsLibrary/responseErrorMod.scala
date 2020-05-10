@@ -15,14 +15,6 @@ object responseErrorMod extends js.Object {
     extends Error
        with QueryErrorMessage {
     def this(error: QueryErrorMessage, source: Command) = this()
-    /* CompleteClass */
-    override var id: Double = js.native
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var msg: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
     val source: Command = js.native
     /**
       * returns a json encodeable object for this error

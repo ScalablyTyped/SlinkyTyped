@@ -22,14 +22,41 @@ trait LogConfig extends js.Object {
 
 object LogConfig {
   @scala.inline
-  def apply(
-    cloudWatchLogsRoleArn: String,
-    fieldLogLevel: FieldLogLevel,
-    excludeVerboseContent: js.UndefOr[scala.Boolean] = js.undefined
-  ): LogConfig = {
+  def apply(cloudWatchLogsRoleArn: String, fieldLogLevel: FieldLogLevel): LogConfig = {
     val __obj = js.Dynamic.literal(cloudWatchLogsRoleArn = cloudWatchLogsRoleArn.asInstanceOf[js.Any], fieldLogLevel = fieldLogLevel.asInstanceOf[js.Any])
-    if (!js.isUndefined(excludeVerboseContent)) __obj.updateDynamic("excludeVerboseContent")(excludeVerboseContent.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogConfig]
   }
+  @scala.inline
+  implicit class LogConfigOps[Self <: LogConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudWatchLogsRoleArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudWatchLogsRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFieldLogLevel(value: FieldLogLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldLogLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcludeVerboseContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeVerboseContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludeVerboseContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeVerboseContent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,18 +16,16 @@ trait PredefinedAcl extends js.Object
 
 object PredefinedAcl {
   @scala.inline
-  def authenticatedRead: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.authenticatedRead = this.cast("authenticatedRead")
+  def authenticatedRead: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.authenticatedRead = "authenticatedRead".asInstanceOf[typingsSlinky.googleCloudStorage.googleCloudStorageStrings.authenticatedRead]
   @scala.inline
-  def bucketOwnerFullControl: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.bucketOwnerFullControl = this.cast("bucketOwnerFullControl")
+  def bucketOwnerFullControl: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.bucketOwnerFullControl = "bucketOwnerFullControl".asInstanceOf[typingsSlinky.googleCloudStorage.googleCloudStorageStrings.bucketOwnerFullControl]
   @scala.inline
-  def bucketOwnerRead: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.bucketOwnerRead = this.cast("bucketOwnerRead")
+  def bucketOwnerRead: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.bucketOwnerRead = "bucketOwnerRead".asInstanceOf[typingsSlinky.googleCloudStorage.googleCloudStorageStrings.bucketOwnerRead]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `private`: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.`private` = "private".asInstanceOf[typingsSlinky.googleCloudStorage.googleCloudStorageStrings.`private`]
   @scala.inline
-  def `private`: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.`private` = this.cast("private")
+  def projectPrivate: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.projectPrivate = "projectPrivate".asInstanceOf[typingsSlinky.googleCloudStorage.googleCloudStorageStrings.projectPrivate]
   @scala.inline
-  def projectPrivate: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.projectPrivate = this.cast("projectPrivate")
-  @scala.inline
-  def publicRead: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.publicRead = this.cast("publicRead")
+  def publicRead: typingsSlinky.googleCloudStorage.googleCloudStorageStrings.publicRead = "publicRead".asInstanceOf[typingsSlinky.googleCloudStorage.googleCloudStorageStrings.publicRead]
 }
 

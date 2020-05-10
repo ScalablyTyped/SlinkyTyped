@@ -4,57 +4,135 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Model extends js.Object {
   /** Contains the current page number in categorical axis.
     * @Default {1}
     */
-  var categoricalCurrentPage: js.UndefOr[Double] = js.undefined
+  var categoricalCurrentPage: js.UndefOr[Double] = js.native
   /** Contains the total page count in categorical axis.
     * @Default {1}
     */
-  var categoricalPageCount: js.UndefOr[Double] = js.undefined
+  var categoricalPageCount: js.UndefOr[Double] = js.native
   /** Allows the user to set the localized language for the widget.
     * @Default {en-US}
     */
-  var locale: js.UndefOr[String] = js.undefined
+  var locale: js.UndefOr[String] = js.native
   /** Sets the pager mode (Only Categorical Pager/Only Series Pager/Both) for the PivotPager.
     * @Default {ej.PivotPager.Mode.Both}
     */
-  var mode: js.UndefOr[Mode | String] = js.undefined
+  var mode: js.UndefOr[Mode | String] = js.native
   /** Contains the current page number in series axis.
     * @Default {1}
     */
-  var seriesCurrentPage: js.UndefOr[Double] = js.undefined
+  var seriesCurrentPage: js.UndefOr[Double] = js.native
   /** Contains the total page count in series axis.
     * @Default {1}
     */
-  var seriesPageCount: js.UndefOr[Double] = js.undefined
+  var seriesPageCount: js.UndefOr[Double] = js.native
   /** Contains the ID of the target element for which paging needs to be done.
     * @Default {â€œâ€}
     */
-  var targetControlID: js.UndefOr[String] = js.undefined
+  var targetControlID: js.UndefOr[String] = js.native
 }
 
 object Model {
   @scala.inline
-  def apply(
-    categoricalCurrentPage: Int | Double = null,
-    categoricalPageCount: Int | Double = null,
-    locale: String = null,
-    mode: Mode | String = null,
-    seriesCurrentPage: Int | Double = null,
-    seriesPageCount: Int | Double = null,
-    targetControlID: String = null
-  ): Model = {
+  def apply(): Model = {
     val __obj = js.Dynamic.literal()
-    if (categoricalCurrentPage != null) __obj.updateDynamic("categoricalCurrentPage")(categoricalCurrentPage.asInstanceOf[js.Any])
-    if (categoricalPageCount != null) __obj.updateDynamic("categoricalPageCount")(categoricalPageCount.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (seriesCurrentPage != null) __obj.updateDynamic("seriesCurrentPage")(seriesCurrentPage.asInstanceOf[js.Any])
-    if (seriesPageCount != null) __obj.updateDynamic("seriesPageCount")(seriesPageCount.asInstanceOf[js.Any])
-    if (targetControlID != null) __obj.updateDynamic("targetControlID")(targetControlID.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
+  @scala.inline
+  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategoricalCurrentPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoricalCurrentPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategoricalCurrentPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoricalCurrentPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategoricalPageCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoricalPageCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategoricalPageCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoricalPageCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: Mode | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesCurrentPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesCurrentPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesCurrentPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesCurrentPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesPageCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesPageCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesPageCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesPageCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetControlID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetControlID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetControlID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetControlID")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

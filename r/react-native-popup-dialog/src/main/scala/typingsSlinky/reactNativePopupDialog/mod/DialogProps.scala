@@ -6,72 +6,282 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DialogProps extends js.Object {
-  var animationDuration: js.UndefOr[Double] = js.undefined
-  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var dialogAnimation: js.UndefOr[FadeAnimation | ScaleAnimation | SlideAnimation] = js.undefined
-  var dialogStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var dialogTitle: js.UndefOr[js.Any] = js.undefined
-  var footer: js.UndefOr[js.Any] = js.undefined
-  var hasOverlay: js.UndefOr[Boolean] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var onDismiss: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onHardwareBackPress: js.UndefOr[js.Function0[Boolean]] = js.undefined
-  var onShow: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onTouchOutside: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var overlayBackgroundColor: js.UndefOr[String] = js.undefined
-  var overlayOpacity: js.UndefOr[Double] = js.undefined
-  var overlayPointerEvents: js.UndefOr[OverlayPointerEventTypes] = js.undefined
-  var rounded: js.UndefOr[Boolean] = js.undefined
-  var useNativeDriver: js.UndefOr[Boolean] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var animationDuration: js.UndefOr[Double] = js.native
+  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var dialogAnimation: js.UndefOr[FadeAnimation | ScaleAnimation | SlideAnimation] = js.native
+  var dialogStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var dialogTitle: js.UndefOr[js.Any] = js.native
+  var footer: js.UndefOr[js.Any] = js.native
+  var hasOverlay: js.UndefOr[Boolean] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var onDismiss: js.UndefOr[js.Function0[Unit]] = js.native
+  var onHardwareBackPress: js.UndefOr[js.Function0[Boolean]] = js.native
+  var onShow: js.UndefOr[js.Function0[Unit]] = js.native
+  var onTouchOutside: js.UndefOr[js.Function0[Unit]] = js.native
+  var overlayBackgroundColor: js.UndefOr[String] = js.native
+  var overlayOpacity: js.UndefOr[Double] = js.native
+  var overlayPointerEvents: js.UndefOr[OverlayPointerEventTypes] = js.native
+  var rounded: js.UndefOr[Boolean] = js.native
+  var useNativeDriver: js.UndefOr[Boolean] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object DialogProps {
   @scala.inline
-  def apply(
-    animationDuration: Int | Double = null,
-    containerStyle: StyleProp[ViewStyle] = null,
-    dialogAnimation: FadeAnimation | ScaleAnimation | SlideAnimation = null,
-    dialogStyle: StyleProp[ViewStyle] = null,
-    dialogTitle: js.Any = null,
-    footer: js.Any = null,
-    hasOverlay: js.UndefOr[Boolean] = js.undefined,
-    height: Int | Double = null,
-    onDismiss: () => Unit = null,
-    onHardwareBackPress: () => Boolean = null,
-    onShow: () => Unit = null,
-    onTouchOutside: () => Unit = null,
-    overlayBackgroundColor: String = null,
-    overlayOpacity: Int | Double = null,
-    overlayPointerEvents: OverlayPointerEventTypes = null,
-    rounded: js.UndefOr[Boolean] = js.undefined,
-    useNativeDriver: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): DialogProps = {
+  def apply(): DialogProps = {
     val __obj = js.Dynamic.literal()
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (dialogAnimation != null) __obj.updateDynamic("dialogAnimation")(dialogAnimation.asInstanceOf[js.Any])
-    if (dialogStyle != null) __obj.updateDynamic("dialogStyle")(dialogStyle.asInstanceOf[js.Any])
-    if (dialogTitle != null) __obj.updateDynamic("dialogTitle")(dialogTitle.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasOverlay)) __obj.updateDynamic("hasOverlay")(hasOverlay.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
-    if (onHardwareBackPress != null) __obj.updateDynamic("onHardwareBackPress")(js.Any.fromFunction0(onHardwareBackPress))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
-    if (onTouchOutside != null) __obj.updateDynamic("onTouchOutside")(js.Any.fromFunction0(onTouchOutside))
-    if (overlayBackgroundColor != null) __obj.updateDynamic("overlayBackgroundColor")(overlayBackgroundColor.asInstanceOf[js.Any])
-    if (overlayOpacity != null) __obj.updateDynamic("overlayOpacity")(overlayOpacity.asInstanceOf[js.Any])
-    if (overlayPointerEvents != null) __obj.updateDynamic("overlayPointerEvents")(overlayPointerEvents.asInstanceOf[js.Any])
-    if (!js.isUndefined(rounded)) __obj.updateDynamic("rounded")(rounded.asInstanceOf[js.Any])
-    if (!js.isUndefined(useNativeDriver)) __obj.updateDynamic("useNativeDriver")(useNativeDriver.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[DialogProps]
   }
+  @scala.inline
+  implicit class DialogPropsOps[Self <: DialogProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimationDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withDialogAnimation(value: FadeAnimation | ScaleAnimation | SlideAnimation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialogAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialogStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialogStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialogStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withDialogTitle(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialogTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooter(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasOverlay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasOverlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasOverlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasOverlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDismiss(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHardwareBackPress(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHardwareBackPress")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHardwareBackPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHardwareBackPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnShow(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTouchOutside(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchOutside")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTouchOutside: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchOutside")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayBackgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayBackgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayPointerEvents(value: OverlayPointerEventTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayPointerEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayPointerEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayPointerEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRounded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRounded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseNativeDriver(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeDriver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseNativeDriver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNativeDriver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

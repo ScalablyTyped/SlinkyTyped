@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WebSocketTransport extends js.Object {
-  var closed: Boolean
-  def close(): Unit
-  def send(message: js.Any): js.Promise[Unit]
+  var closed: Boolean = js.native
+  def close(): Unit = js.native
+  def send(message: js.Any): js.Promise[Unit] = js.native
 }
 
 object WebSocketTransport {
   @scala.inline
   def apply(close: () => Unit, closed: Boolean, send: js.Any => js.Promise[Unit]): WebSocketTransport = {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), closed = closed.asInstanceOf[js.Any], send = js.Any.fromFunction1(send))
-  
     __obj.asInstanceOf[WebSocketTransport]
   }
+  @scala.inline
+  implicit class WebSocketTransportOps[Self <: WebSocketTransport] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withClosed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSend(value: js.Any => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

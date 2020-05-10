@@ -18,10 +18,35 @@ trait DeleteCertificateRequest extends js.Object {
 
 object DeleteCertificateRequest {
   @scala.inline
-  def apply(certificateId: CertificateId, forceDelete: js.UndefOr[scala.Boolean] = js.undefined): DeleteCertificateRequest = {
+  def apply(certificateId: CertificateId): DeleteCertificateRequest = {
     val __obj = js.Dynamic.literal(certificateId = certificateId.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceDelete)) __obj.updateDynamic("forceDelete")(forceDelete.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteCertificateRequest]
   }
+  @scala.inline
+  implicit class DeleteCertificateRequestOps[Self <: DeleteCertificateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateId(value: CertificateId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForceDelete(value: ForceDelete): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDelete")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPlan extends js.Object {
-  var plan: js.UndefOr[String] = js.undefined
-  var preparable: js.UndefOr[AnonArgs] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
+  var plan: js.UndefOr[String] = js.native
+  var preparable: js.UndefOr[AnonArgs] = js.native
+  var text: js.UndefOr[String] = js.native
 }
 
 object AnonPlan {
   @scala.inline
-  def apply(plan: String = null, preparable: AnonArgs = null, text: String = null): AnonPlan = {
+  def apply(): AnonPlan = {
     val __obj = js.Dynamic.literal()
-    if (plan != null) __obj.updateDynamic("plan")(plan.asInstanceOf[js.Any])
-    if (preparable != null) __obj.updateDynamic("preparable")(preparable.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPlan]
   }
+  @scala.inline
+  implicit class AnonPlanOps[Self <: AnonPlan] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlan(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreparable(value: AnonArgs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preparable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreparable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preparable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

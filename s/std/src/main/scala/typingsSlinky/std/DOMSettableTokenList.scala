@@ -10,5 +10,6 @@ trait DOMSettableTokenList extends DOMTokenList
 
 @JSGlobal("DOMSettableTokenList")
 @js.native
-object DOMSettableTokenList extends Instantiable0[DOMSettableTokenList]
+object DOMSettableTokenList
+  extends Instantiable0[org.scalajs.dom.raw.DOMSettableTokenList]
 

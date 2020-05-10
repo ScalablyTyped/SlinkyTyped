@@ -18,22 +18,20 @@ trait ResizeHandle extends js.Object
 
 object ResizeHandle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def e: typingsSlinky.reactResizable.reactResizableStrings.e = "e".asInstanceOf[typingsSlinky.reactResizable.reactResizableStrings.e]
   @scala.inline
-  def e: typingsSlinky.reactResizable.reactResizableStrings.e = this.cast("e")
+  def n: typingsSlinky.reactResizable.reactResizableStrings.n = "n".asInstanceOf[typingsSlinky.reactResizable.reactResizableStrings.n]
   @scala.inline
-  def n: typingsSlinky.reactResizable.reactResizableStrings.n = this.cast("n")
+  def ne: typingsSlinky.reactResizable.reactResizableStrings.ne = "ne".asInstanceOf[typingsSlinky.reactResizable.reactResizableStrings.ne]
   @scala.inline
-  def ne: typingsSlinky.reactResizable.reactResizableStrings.ne = this.cast("ne")
+  def nw: typingsSlinky.reactResizable.reactResizableStrings.nw = "nw".asInstanceOf[typingsSlinky.reactResizable.reactResizableStrings.nw]
   @scala.inline
-  def nw: typingsSlinky.reactResizable.reactResizableStrings.nw = this.cast("nw")
+  def s: typingsSlinky.reactResizable.reactResizableStrings.s = "s".asInstanceOf[typingsSlinky.reactResizable.reactResizableStrings.s]
   @scala.inline
-  def s: typingsSlinky.reactResizable.reactResizableStrings.s = this.cast("s")
+  def se: typingsSlinky.reactResizable.reactResizableStrings.se = "se".asInstanceOf[typingsSlinky.reactResizable.reactResizableStrings.se]
   @scala.inline
-  def se: typingsSlinky.reactResizable.reactResizableStrings.se = this.cast("se")
+  def sw: typingsSlinky.reactResizable.reactResizableStrings.sw = "sw".asInstanceOf[typingsSlinky.reactResizable.reactResizableStrings.sw]
   @scala.inline
-  def sw: typingsSlinky.reactResizable.reactResizableStrings.sw = this.cast("sw")
-  @scala.inline
-  def w: typingsSlinky.reactResizable.reactResizableStrings.w = this.cast("w")
+  def w: typingsSlinky.reactResizable.reactResizableStrings.w = "w".asInstanceOf[typingsSlinky.reactResizable.reactResizableStrings.w]
 }
 

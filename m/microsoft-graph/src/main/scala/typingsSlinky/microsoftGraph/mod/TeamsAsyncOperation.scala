@@ -4,41 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TeamsAsyncOperation extends Entity {
-  var attemptsCount: js.UndefOr[Double] = js.undefined
-  var createdDateTime: js.UndefOr[String] = js.undefined
-  var error: js.UndefOr[OperationError] = js.undefined
-  var lastActionDateTime: js.UndefOr[String] = js.undefined
-  var operationType: js.UndefOr[TeamsAsyncOperationType] = js.undefined
-  var status: js.UndefOr[TeamsAsyncOperationStatus] = js.undefined
-  var targetResourceId: js.UndefOr[String] = js.undefined
-  var targetResourceLocation: js.UndefOr[String] = js.undefined
+  var attemptsCount: js.UndefOr[Double] = js.native
+  var createdDateTime: js.UndefOr[String] = js.native
+  var error: js.UndefOr[OperationError] = js.native
+  var lastActionDateTime: js.UndefOr[String] = js.native
+  var operationType: js.UndefOr[TeamsAsyncOperationType] = js.native
+  var status: js.UndefOr[TeamsAsyncOperationStatus] = js.native
+  var targetResourceId: js.UndefOr[String] = js.native
+  var targetResourceLocation: js.UndefOr[String] = js.native
 }
 
 object TeamsAsyncOperation {
   @scala.inline
-  def apply(
-    attemptsCount: Int | Double = null,
-    createdDateTime: String = null,
-    error: OperationError = null,
-    id: String = null,
-    lastActionDateTime: String = null,
-    operationType: TeamsAsyncOperationType = null,
-    status: TeamsAsyncOperationStatus = null,
-    targetResourceId: String = null,
-    targetResourceLocation: String = null
-  ): TeamsAsyncOperation = {
+  def apply(): TeamsAsyncOperation = {
     val __obj = js.Dynamic.literal()
-    if (attemptsCount != null) __obj.updateDynamic("attemptsCount")(attemptsCount.asInstanceOf[js.Any])
-    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (lastActionDateTime != null) __obj.updateDynamic("lastActionDateTime")(lastActionDateTime.asInstanceOf[js.Any])
-    if (operationType != null) __obj.updateDynamic("operationType")(operationType.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (targetResourceId != null) __obj.updateDynamic("targetResourceId")(targetResourceId.asInstanceOf[js.Any])
-    if (targetResourceLocation != null) __obj.updateDynamic("targetResourceLocation")(targetResourceLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsAsyncOperation]
   }
+  @scala.inline
+  implicit class TeamsAsyncOperationOps[Self <: TeamsAsyncOperation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttemptsCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttemptsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attemptsCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedDateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: OperationError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastActionDateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastActionDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastActionDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastActionDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationType(value: TeamsAsyncOperationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: TeamsAsyncOperationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetResourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetResourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetResourceLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetResourceLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetResourceLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetResourceLocation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

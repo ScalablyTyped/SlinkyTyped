@@ -154,7 +154,7 @@ package object kinesisanalyticsv2Mod {
   type VpcConfigurationUpdates = js.Array[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.VpcConfigurationUpdate]
   type VpcConfigurations = js.Array[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.VpcConfiguration]
   type VpcId = java.lang.String
-  type ZipFileContent = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.kinesisanalyticsv2Mod.Blob | java.lang.String
+  type ZipFileContent = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kinesisanalyticsv2Mod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2018-05-23`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

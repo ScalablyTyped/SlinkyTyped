@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonMulti extends js.Object {
-  var multi: js.UndefOr[Boolean] = js.undefined
-  var upsert: js.UndefOr[Boolean] = js.undefined
+  var multi: js.UndefOr[Boolean] = js.native
+  var upsert: js.UndefOr[Boolean] = js.native
 }
 
 object AnonMulti {
   @scala.inline
-  def apply(multi: js.UndefOr[Boolean] = js.undefined, upsert: js.UndefOr[Boolean] = js.undefined): AnonMulti = {
+  def apply(): AnonMulti = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.asInstanceOf[js.Any])
-    if (!js.isUndefined(upsert)) __obj.updateDynamic("upsert")(upsert.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonMulti]
   }
+  @scala.inline
+  implicit class AnonMultiOps[Self <: AnonMulti] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMulti(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMulti: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpsert(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upsert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpsert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upsert")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,16 +13,16 @@ import typingsSlinky.node.streamMod.ReadableOptions
 import typingsSlinky.node.streamMod.TransformCallback
 import typingsSlinky.node.streamMod.TransformOptions
 import typingsSlinky.node.streamMod.WritableOptions
-import typingsSlinky.std.Error
-import typingsSlinky.std.Uint8Array
 import typingsSlinky.unzipper.unzipperStrings.close
 import typingsSlinky.unzipper.unzipperStrings.data
 import typingsSlinky.unzipper.unzipperStrings.drain
 import typingsSlinky.unzipper.unzipperStrings.end
 import typingsSlinky.unzipper.unzipperStrings.error
 import typingsSlinky.unzipper.unzipperStrings.finish
+import typingsSlinky.unzipper.unzipperStrings.pause
 import typingsSlinky.unzipper.unzipperStrings.pipe
 import typingsSlinky.unzipper.unzipperStrings.readable
+import typingsSlinky.unzipper.unzipperStrings.resume
 import typingsSlinky.unzipper.unzipperStrings.unpipe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -51,7 +51,7 @@ trait TransformpromisePromisevo extends js.Object {
   val writableLength: Double = js.native
   val writableObjectMode: Boolean = js.native
   def _destroy(error: Null, callback: js.Function1[js.UndefOr[js.Error | Null], Unit]): Unit = js.native
-  def _destroy(error: Error, callback: js.Function1[js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  def _destroy(error: js.Error, callback: js.Function1[js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _final(callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _flush(callback: TransformCallback): Unit = js.native
   def _read(size: Double): Unit = js.native
@@ -86,9 +86,13 @@ trait TransformpromisePromisevo extends js.Object {
   @JSName("addListener")
   def addListener_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
+  def addListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("addListener")
   def addListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("addListener")
+  def addListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   def cork(): Unit = js.native
@@ -109,9 +113,13 @@ trait TransformpromisePromisevo extends js.Object {
   @JSName("emit")
   def emit_finish(event: finish): Boolean = js.native
   @JSName("emit")
+  def emit_pause(event: pause): Boolean = js.native
+  @JSName("emit")
   def emit_pipe(event: pipe, src: Readable): Boolean = js.native
   @JSName("emit")
   def emit_readable(event: readable): Boolean = js.native
+  @JSName("emit")
+  def emit_resume(event: resume): Boolean = js.native
   @JSName("emit")
   def emit_unpipe(event: unpipe, src: Readable): Boolean = js.native
   def end(): Unit = js.native
@@ -122,8 +130,8 @@ trait TransformpromisePromisevo extends js.Object {
   def end(chunk: js.Any, encoding: String, cb: js.Function0[Unit]): Unit = js.native
   def end(data: String): Unit = js.native
   def end(data: String, cb: js.Function0[Unit]): Unit = js.native
-  def end(data: Uint8Array): Unit = js.native
-  def end(data: Uint8Array, cb: js.Function0[Unit]): Unit = js.native
+  def end(data: js.typedarray.Uint8Array): Unit = js.native
+  def end(data: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
   def end(str: String, encoding: String): Unit = js.native
   def end(str: String, encoding: String, cb: js.Function0[Unit]): Unit = js.native
   def eventNames(): js.Array[String | js.Symbol] = js.native
@@ -150,9 +158,13 @@ trait TransformpromisePromisevo extends js.Object {
   @JSName("on")
   def on_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
+  def on_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("on")
   def on_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("on")
   def on_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("on")
+  def on_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
   def on_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
@@ -170,9 +182,13 @@ trait TransformpromisePromisevo extends js.Object {
   @JSName("once")
   def once_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
+  def once_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("once")
   def once_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("once")
   def once_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("once")
+  def once_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
   def once_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   def pause(): this.type = js.native
@@ -193,9 +209,13 @@ trait TransformpromisePromisevo extends js.Object {
   @JSName("prependListener")
   def prependListener_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
+  def prependListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependListener")
   def prependListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependListener")
+  def prependListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
@@ -213,9 +233,13 @@ trait TransformpromisePromisevo extends js.Object {
   @JSName("prependOnceListener")
   def prependOnceListener_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
+  def prependOnceListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependOnceListener")
   def prependOnceListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependOnceListener")
+  def prependOnceListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   def promise(): js.Promise[Unit] = js.native
@@ -247,9 +271,13 @@ trait TransformpromisePromisevo extends js.Object {
   @JSName("removeListener")
   def removeListener_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
   @JSName("removeListener")
+  def removeListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("removeListener")
   def removeListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("removeListener")
+  def removeListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   def resume(): this.type = js.native
@@ -263,18 +291,18 @@ trait TransformpromisePromisevo extends js.Object {
   def unshift(chunk: String, encoding: BufferEncoding): Unit = js.native
   def unshift(chunk: js.Any): Unit = js.native
   def unshift(chunk: js.Any, encoding: BufferEncoding): Unit = js.native
-  def unshift(chunk: Uint8Array): Unit = js.native
-  def unshift(chunk: Uint8Array, encoding: BufferEncoding): Unit = js.native
+  def unshift(chunk: js.typedarray.Uint8Array): Unit = js.native
+  def unshift(chunk: js.typedarray.Uint8Array, encoding: BufferEncoding): Unit = js.native
   def wrap(oldStream: ReadableStream): this.type = js.native
   def write(buffer: String): Boolean = js.native
-  def write(buffer: String, cb: js.Function1[/* err */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
-  def write(buffer: Uint8Array): Boolean = js.native
-  def write(buffer: Uint8Array, cb: js.Function1[/* err */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
+  def write(buffer: String, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
+  def write(buffer: js.typedarray.Uint8Array): Boolean = js.native
+  def write(buffer: js.typedarray.Uint8Array, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   def write(chunk: js.Any): Boolean = js.native
-  def write(chunk: js.Any, cb: js.Function1[/* error */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   def write(chunk: js.Any, encoding: String): Boolean = js.native
-  def write(chunk: js.Any, encoding: String, cb: js.Function1[/* error */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, encoding: String, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   def write(str: String, encoding: String): Boolean = js.native
-  def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
+  def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
 }
 

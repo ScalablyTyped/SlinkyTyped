@@ -1,6 +1,5 @@
 package typingsSlinky.webmidi.WebMidi
 
-import typingsSlinky.std.Uint8Array
 import typingsSlinky.webmidi.webmidiStrings.output
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +25,7 @@ trait MIDIOutput extends MIDIPort {
     */
   def send(data: js.Array[Double]): Unit = js.native
   def send(data: js.Array[Double], timestamp: Double): Unit = js.native
-  def send(data: Uint8Array): Unit = js.native
-  def send(data: Uint8Array, timestamp: Double): Unit = js.native
+  def send(data: js.typedarray.Uint8Array): Unit = js.native
+  def send(data: js.typedarray.Uint8Array, timestamp: Double): Unit = js.native
 }
 

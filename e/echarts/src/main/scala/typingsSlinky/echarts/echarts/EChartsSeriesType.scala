@@ -32,50 +32,48 @@ trait EChartsSeriesType extends js.Object
 
 object EChartsSeriesType {
   @scala.inline
-  def bar: typingsSlinky.echarts.echartsStrings.bar = this.cast("bar")
+  def bar: typingsSlinky.echarts.echartsStrings.bar = "bar".asInstanceOf[typingsSlinky.echarts.echartsStrings.bar]
   @scala.inline
-  def boxplot: typingsSlinky.echarts.echartsStrings.boxplot = this.cast("boxplot")
+  def boxplot: typingsSlinky.echarts.echartsStrings.boxplot = "boxplot".asInstanceOf[typingsSlinky.echarts.echartsStrings.boxplot]
   @scala.inline
-  def candlestick: typingsSlinky.echarts.echartsStrings.candlestick = this.cast("candlestick")
+  def candlestick: typingsSlinky.echarts.echartsStrings.candlestick = "candlestick".asInstanceOf[typingsSlinky.echarts.echartsStrings.candlestick]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def custom: typingsSlinky.echarts.echartsStrings.custom = "custom".asInstanceOf[typingsSlinky.echarts.echartsStrings.custom]
   @scala.inline
-  def custom: typingsSlinky.echarts.echartsStrings.custom = this.cast("custom")
+  def effectScatter: typingsSlinky.echarts.echartsStrings.effectScatter = "effectScatter".asInstanceOf[typingsSlinky.echarts.echartsStrings.effectScatter]
   @scala.inline
-  def effectScatter: typingsSlinky.echarts.echartsStrings.effectScatter = this.cast("effectScatter")
+  def funnel: typingsSlinky.echarts.echartsStrings.funnel = "funnel".asInstanceOf[typingsSlinky.echarts.echartsStrings.funnel]
   @scala.inline
-  def funnel: typingsSlinky.echarts.echartsStrings.funnel = this.cast("funnel")
+  def gauge: typingsSlinky.echarts.echartsStrings.gauge = "gauge".asInstanceOf[typingsSlinky.echarts.echartsStrings.gauge]
   @scala.inline
-  def gauge: typingsSlinky.echarts.echartsStrings.gauge = this.cast("gauge")
+  def graph: typingsSlinky.echarts.echartsStrings.graph = "graph".asInstanceOf[typingsSlinky.echarts.echartsStrings.graph]
   @scala.inline
-  def graph: typingsSlinky.echarts.echartsStrings.graph = this.cast("graph")
+  def heatmap: typingsSlinky.echarts.echartsStrings.heatmap = "heatmap".asInstanceOf[typingsSlinky.echarts.echartsStrings.heatmap]
   @scala.inline
-  def heatmap: typingsSlinky.echarts.echartsStrings.heatmap = this.cast("heatmap")
+  def line: typingsSlinky.echarts.echartsStrings.line = "line".asInstanceOf[typingsSlinky.echarts.echartsStrings.line]
   @scala.inline
-  def line: typingsSlinky.echarts.echartsStrings.line = this.cast("line")
+  def lines: typingsSlinky.echarts.echartsStrings.lines = "lines".asInstanceOf[typingsSlinky.echarts.echartsStrings.lines]
   @scala.inline
-  def lines: typingsSlinky.echarts.echartsStrings.lines = this.cast("lines")
+  def map: typingsSlinky.echarts.echartsStrings.map = "map".asInstanceOf[typingsSlinky.echarts.echartsStrings.map]
   @scala.inline
-  def map: typingsSlinky.echarts.echartsStrings.map = this.cast("map")
+  def parallel: typingsSlinky.echarts.echartsStrings.parallel = "parallel".asInstanceOf[typingsSlinky.echarts.echartsStrings.parallel]
   @scala.inline
-  def parallel: typingsSlinky.echarts.echartsStrings.parallel = this.cast("parallel")
+  def pictorialBar: typingsSlinky.echarts.echartsStrings.pictorialBar = "pictorialBar".asInstanceOf[typingsSlinky.echarts.echartsStrings.pictorialBar]
   @scala.inline
-  def pictorialBar: typingsSlinky.echarts.echartsStrings.pictorialBar = this.cast("pictorialBar")
+  def pie: typingsSlinky.echarts.echartsStrings.pie = "pie".asInstanceOf[typingsSlinky.echarts.echartsStrings.pie]
   @scala.inline
-  def pie: typingsSlinky.echarts.echartsStrings.pie = this.cast("pie")
+  def radar: typingsSlinky.echarts.echartsStrings.radar = "radar".asInstanceOf[typingsSlinky.echarts.echartsStrings.radar]
   @scala.inline
-  def radar: typingsSlinky.echarts.echartsStrings.radar = this.cast("radar")
+  def sankey: typingsSlinky.echarts.echartsStrings.sankey = "sankey".asInstanceOf[typingsSlinky.echarts.echartsStrings.sankey]
   @scala.inline
-  def sankey: typingsSlinky.echarts.echartsStrings.sankey = this.cast("sankey")
+  def scatter: typingsSlinky.echarts.echartsStrings.scatter = "scatter".asInstanceOf[typingsSlinky.echarts.echartsStrings.scatter]
   @scala.inline
-  def scatter: typingsSlinky.echarts.echartsStrings.scatter = this.cast("scatter")
+  def sunburst: typingsSlinky.echarts.echartsStrings.sunburst = "sunburst".asInstanceOf[typingsSlinky.echarts.echartsStrings.sunburst]
   @scala.inline
-  def sunburst: typingsSlinky.echarts.echartsStrings.sunburst = this.cast("sunburst")
+  def themeRiver: typingsSlinky.echarts.echartsStrings.themeRiver = "themeRiver".asInstanceOf[typingsSlinky.echarts.echartsStrings.themeRiver]
   @scala.inline
-  def themeRiver: typingsSlinky.echarts.echartsStrings.themeRiver = this.cast("themeRiver")
+  def tree: typingsSlinky.echarts.echartsStrings.tree = "tree".asInstanceOf[typingsSlinky.echarts.echartsStrings.tree]
   @scala.inline
-  def tree: typingsSlinky.echarts.echartsStrings.tree = this.cast("tree")
-  @scala.inline
-  def treemap: typingsSlinky.echarts.echartsStrings.treemap = this.cast("treemap")
+  def treemap: typingsSlinky.echarts.echartsStrings.treemap = "treemap".asInstanceOf[typingsSlinky.echarts.echartsStrings.treemap]
 }
 

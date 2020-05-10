@@ -1,0 +1,99 @@
+package typingsSlinky.ipp.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.ipp.ippStrings.`chamber-humidity`
+  - typingsSlinky.ipp.ippStrings.`chamber-temperature`
+  - typingsSlinky.ipp.ippStrings.`confirmation-sheet-print`
+  - typingsSlinky.ipp.ippStrings.copies
+  - typingsSlinky.ipp.ippStrings.`cover-back`
+  - typingsSlinky.ipp.ippStrings.`cover-front`
+  - typingsSlinky.ipp.ippStrings.`cover-sheet-info`
+  - typingsSlinky.ipp.ippStrings.`destination-uris`
+  - typingsSlinky.ipp.ippStrings.finishings
+  - typingsSlinky.ipp.ippStrings.`finishings-col`
+  - typingsSlinky.ipp.ippStrings.`font-name-requested`
+  - typingsSlinky.ipp.ippStrings.`font-size-requested`
+  - typingsSlinky.ipp.ippStrings.`force-front-side`
+  - typingsSlinky.ipp.ippStrings.`imposition-template`
+  - typingsSlinky.ipp.ippStrings.`insert-sheet`
+  - typingsSlinky.ipp.ippStrings.`job-account-id`
+  - typingsSlinky.ipp.ippStrings.`job-account-type`
+  - typingsSlinky.ipp.ippStrings.`job-accounting-sheets`
+  - typingsSlinky.ipp.ippStrings.`job-accounting-user-id`
+  - typingsSlinky.ipp.ippStrings.`job-cancel-after`
+  - typingsSlinky.ipp.ippStrings.`job-copies`
+  - typingsSlinky.ipp.ippStrings.`job-cover-back`
+  - typingsSlinky.ipp.ippStrings.`job-cover-front`
+  - typingsSlinky.ipp.ippStrings.`job-delay-output-until`
+  - typingsSlinky.ipp.ippStrings.`job-delay-output-until-time`
+  - typingsSlinky.ipp.ippStrings.`job-error-action`
+  - typingsSlinky.ipp.ippStrings.`job-error-sheet`
+  - typingsSlinky.ipp.ippStrings.`job-finishings`
+  - typingsSlinky.ipp.ippStrings.`job-finishings-col`
+  - typingsSlinky.ipp.ippStrings.`job-hold-until`
+  - typingsSlinky.ipp.ippStrings.`job-hold-until-time`
+  - typingsSlinky.ipp.ippStrings.`job-message-to-operator`
+  - typingsSlinky.ipp.ippStrings.`job-pages-per-set`
+  - typingsSlinky.ipp.ippStrings.`job-phone-number`
+  - typingsSlinky.ipp.ippStrings.`job-priority`
+  - typingsSlinky.ipp.ippStrings.`job-recipient-name`
+  - typingsSlinky.ipp.ippStrings.`job-retain-until`
+  - typingsSlinky.ipp.ippStrings.`job-retain-until-interval`
+  - typingsSlinky.ipp.ippStrings.`job-retain-until-time`
+  - typingsSlinky.ipp.ippStrings.`job-save-disposition`
+  - typingsSlinky.ipp.ippStrings.`job-sheet-message`
+  - typingsSlinky.ipp.ippStrings.`job-sheets`
+  - typingsSlinky.ipp.ippStrings.`job-sheets-col`
+  - typingsSlinky.ipp.ippStrings.`materials-col`
+  - typingsSlinky.ipp.ippStrings.media
+  - typingsSlinky.ipp.ippStrings.`media-col`
+  - typingsSlinky.ipp.ippStrings.`media-input-tray-check`
+  - typingsSlinky.ipp.ippStrings.`multiple-document-handling`
+  - typingsSlinky.ipp.ippStrings.`multiple-object-handling`
+  - typingsSlinky.ipp.ippStrings.`number-of-retries`
+  - typingsSlinky.ipp.ippStrings.`number-up`
+  - typingsSlinky.ipp.ippStrings.`orientation-requested`
+  - typingsSlinky.ipp.ippStrings.`output-bin`
+  - typingsSlinky.ipp.ippStrings.`output-device`
+  - typingsSlinky.ipp.ippStrings.overrides
+  - typingsSlinky.ipp.ippStrings.`page-delivery`
+  - typingsSlinky.ipp.ippStrings.`page-order-received`
+  - typingsSlinky.ipp.ippStrings.`page-ranges`
+  - typingsSlinky.ipp.ippStrings.`pages-per-subset`
+  - typingsSlinky.ipp.ippStrings.`pclm-source-resolution`
+  - typingsSlinky.ipp.ippStrings.`pdl-init-file`
+  - typingsSlinky.ipp.ippStrings.`platform-temperature`
+  - typingsSlinky.ipp.ippStrings.`presentation-direction-number-up`
+  - typingsSlinky.ipp.ippStrings.`print-accuracy`
+  - typingsSlinky.ipp.ippStrings.`print-base`
+  - typingsSlinky.ipp.ippStrings.`print-color-mode`
+  - typingsSlinky.ipp.ippStrings.`print-content-optimize`
+  - typingsSlinky.ipp.ippStrings.`print-objects`
+  - typingsSlinky.ipp.ippStrings.`print-quality`
+  - typingsSlinky.ipp.ippStrings.`print-rendering-intent`
+  - typingsSlinky.ipp.ippStrings.`print-scaling`
+  - typingsSlinky.ipp.ippStrings.`print-supports`
+  - typingsSlinky.ipp.ippStrings.`printer-resolution`
+  - typingsSlinky.ipp.ippStrings.`proof-print`
+  - typingsSlinky.ipp.ippStrings.`retry-interval`
+  - typingsSlinky.ipp.ippStrings.`retry-time-out`
+  - typingsSlinky.ipp.ippStrings.`separator-sheets`
+  - typingsSlinky.ipp.ippStrings.sides
+  - typingsSlinky.ipp.ippStrings.`x-image-position`
+  - typingsSlinky.ipp.ippStrings.`x-image-shift`
+  - typingsSlinky.ipp.ippStrings.`x-side1-image-shift`
+  - typingsSlinky.ipp.ippStrings.`x-side2-image-shift`
+  - typingsSlinky.ipp.ippStrings.`y-image-position`
+  - typingsSlinky.ipp.ippStrings.`y-image-shift`
+  - typingsSlinky.ipp.ippStrings.`y-side1-image-shift`
+  - typingsSlinky.ipp.ippStrings.`y-side2-image-shift`
+  - typingsSlinky.ipp.ippStrings.`document-copies`
+  - typingsSlinky.ipp.ippStrings.`document-numbers`
+  - typingsSlinky.ipp.ippStrings.pages
+*/
+trait Overrides extends js.Object
+

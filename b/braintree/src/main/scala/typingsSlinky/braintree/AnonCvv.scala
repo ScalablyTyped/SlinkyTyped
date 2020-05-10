@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCvv extends js.Object {
-  var cardholderName: js.UndefOr[String] = js.undefined
-  var cvv: js.UndefOr[String] = js.undefined
-  var expirationDate: js.UndefOr[String] = js.undefined
-  var expirationMonth: js.UndefOr[String] = js.undefined
-  var expirationYear: js.UndefOr[String] = js.undefined
-  var number: js.UndefOr[String] = js.undefined
-  var token: js.UndefOr[String] = js.undefined
+  var cardholderName: js.UndefOr[String] = js.native
+  var cvv: js.UndefOr[String] = js.native
+  var expirationDate: js.UndefOr[String] = js.native
+  var expirationMonth: js.UndefOr[String] = js.native
+  var expirationYear: js.UndefOr[String] = js.native
+  var number: js.UndefOr[String] = js.native
+  var token: js.UndefOr[String] = js.native
 }
 
 object AnonCvv {
   @scala.inline
-  def apply(
-    cardholderName: String = null,
-    cvv: String = null,
-    expirationDate: String = null,
-    expirationMonth: String = null,
-    expirationYear: String = null,
-    number: String = null,
-    token: String = null
-  ): AnonCvv = {
+  def apply(): AnonCvv = {
     val __obj = js.Dynamic.literal()
-    if (cardholderName != null) __obj.updateDynamic("cardholderName")(cardholderName.asInstanceOf[js.Any])
-    if (cvv != null) __obj.updateDynamic("cvv")(cvv.asInstanceOf[js.Any])
-    if (expirationDate != null) __obj.updateDynamic("expirationDate")(expirationDate.asInstanceOf[js.Any])
-    if (expirationMonth != null) __obj.updateDynamic("expirationMonth")(expirationMonth.asInstanceOf[js.Any])
-    if (expirationYear != null) __obj.updateDynamic("expirationYear")(expirationYear.asInstanceOf[js.Any])
-    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
-    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCvv]
   }
+  @scala.inline
+  implicit class AnonCvvOps[Self <: AnonCvv] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCardholderName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cardholderName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCardholderName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cardholderName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCvv(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cvv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCvv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cvv")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationMonth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationYear(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationYear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationYear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationYear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

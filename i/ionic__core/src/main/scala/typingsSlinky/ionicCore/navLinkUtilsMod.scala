@@ -45,11 +45,11 @@ object navLinkUtilsMod extends js.Object {
     component: ViewController,
     componentProps: ComponentProps[Null]
   ): js.Promise[Boolean] = js.native
-  def navLink(el: HTMLElement, routerDirection: RouterDirection, component: typingsSlinky.std.HTMLElement): js.Promise[Boolean] = js.native
+  def navLink(el: HTMLElement, routerDirection: RouterDirection, component: HTMLElement): js.Promise[Boolean] = js.native
   def navLink(
     el: HTMLElement,
     routerDirection: RouterDirection,
-    component: typingsSlinky.std.HTMLElement,
+    component: HTMLElement,
     componentProps: ComponentProps[Null]
   ): js.Promise[Boolean] = js.native
 }

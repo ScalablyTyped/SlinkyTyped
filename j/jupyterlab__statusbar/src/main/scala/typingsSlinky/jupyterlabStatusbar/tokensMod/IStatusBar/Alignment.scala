@@ -13,12 +13,10 @@ trait Alignment extends js.Object
 
 object Alignment {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.left = "left".asInstanceOf[typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.left]
   @scala.inline
-  def left: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.left = this.cast("left")
+  def middle: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.middle = "middle".asInstanceOf[typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.middle = this.cast("middle")
-  @scala.inline
-  def right: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.right = this.cast("right")
+  def right: typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.right = "right".asInstanceOf[typingsSlinky.jupyterlabStatusbar.jupyterlabStatusbarStrings.right]
 }
 

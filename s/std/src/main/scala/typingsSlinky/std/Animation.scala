@@ -76,7 +76,7 @@ trait Animation extends EventTarget {
   def removeEventListener_cancel(
     `type`: cancel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationPlaybackEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_finish(
@@ -93,7 +93,7 @@ trait Animation extends EventTarget {
   def removeEventListener_finish(
     `type`: finish,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ AnimationPlaybackEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def reverse(): Unit = js.native
   def updatePlaybackRate(playbackRate: Double): Unit = js.native

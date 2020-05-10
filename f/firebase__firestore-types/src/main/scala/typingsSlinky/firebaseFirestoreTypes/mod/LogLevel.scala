@@ -13,12 +13,10 @@ trait LogLevel extends js.Object
 
 object LogLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.debug = "debug".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.debug = this.cast("debug")
+  def error: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.error = "error".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.error]
   @scala.inline
-  def error: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.error = this.cast("error")
-  @scala.inline
-  def silent: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.silent = this.cast("silent")
+  def silent: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.silent = "silent".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.silent]
 }
 

@@ -4,23 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AddEventListenerOptions extends EventListenerOptions {
-  var once: js.UndefOr[Boolean] = js.undefined
-  var passive: js.UndefOr[Boolean] = js.undefined
+  var once: js.UndefOr[Boolean] = js.native
+  var passive: js.UndefOr[Boolean] = js.native
 }
 
 object AddEventListenerOptions {
   @scala.inline
-  def apply(
-    capture: js.UndefOr[Boolean] = js.undefined,
-    once: js.UndefOr[Boolean] = js.undefined,
-    passive: js.UndefOr[Boolean] = js.undefined
-  ): AddEventListenerOptions = {
+  def apply(): AddEventListenerOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(capture)) __obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
-    if (!js.isUndefined(once)) __obj.updateDynamic("once")(once.asInstanceOf[js.Any])
-    if (!js.isUndefined(passive)) __obj.updateDynamic("passive")(passive.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddEventListenerOptions]
   }
+  @scala.inline
+  implicit class AddEventListenerOptionsOps[Self <: AddEventListenerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

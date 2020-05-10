@@ -34,22 +34,89 @@ trait ConfigurationEvent extends js.Object {
 
 object ConfigurationEvent {
   @scala.inline
-  def apply(
-    EventDetail: ConfigurationEventDetail = null,
-    EventResourceName: ConfigurationEventResourceName = null,
-    EventResourceType: ConfigurationEventResourceType = null,
-    EventStatus: ConfigurationEventStatus = null,
-    EventTime: js.Date = null,
-    MonitoredResourceARN: ConfigurationEventMonitoredResourceARN = null
-  ): ConfigurationEvent = {
+  def apply(): ConfigurationEvent = {
     val __obj = js.Dynamic.literal()
-    if (EventDetail != null) __obj.updateDynamic("EventDetail")(EventDetail.asInstanceOf[js.Any])
-    if (EventResourceName != null) __obj.updateDynamic("EventResourceName")(EventResourceName.asInstanceOf[js.Any])
-    if (EventResourceType != null) __obj.updateDynamic("EventResourceType")(EventResourceType.asInstanceOf[js.Any])
-    if (EventStatus != null) __obj.updateDynamic("EventStatus")(EventStatus.asInstanceOf[js.Any])
-    if (EventTime != null) __obj.updateDynamic("EventTime")(EventTime.asInstanceOf[js.Any])
-    if (MonitoredResourceARN != null) __obj.updateDynamic("MonitoredResourceARN")(MonitoredResourceARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigurationEvent]
   }
+  @scala.inline
+  implicit class ConfigurationEventOps[Self <: ConfigurationEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventDetail(value: ConfigurationEventDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventResourceName(value: ConfigurationEventResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventResourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventResourceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventResourceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventResourceType(value: ConfigurationEventResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventResourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventResourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventResourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventStatus(value: ConfigurationEventStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonitoredResourceARN(value: ConfigurationEventMonitoredResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoredResourceARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonitoredResourceARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MonitoredResourceARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

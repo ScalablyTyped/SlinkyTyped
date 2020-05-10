@@ -12,10 +12,8 @@ trait AlertTransition extends js.Object
 
 object AlertTransition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fade: typingsSlinky.reactAlert.reactAlertStrings.fade = "fade".asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.fade]
   @scala.inline
-  def fade: typingsSlinky.reactAlert.reactAlertStrings.fade = this.cast("fade")
-  @scala.inline
-  def scale: typingsSlinky.reactAlert.reactAlertStrings.scale = this.cast("scale")
+  def scale: typingsSlinky.reactAlert.reactAlertStrings.scale = "scale".asInstanceOf[typingsSlinky.reactAlert.reactAlertStrings.scale]
 }
 

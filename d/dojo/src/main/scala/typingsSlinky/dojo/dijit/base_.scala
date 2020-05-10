@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * Includes all the modules in dijit/_base
   * 
   */
+@js.native
 trait base_ extends js.Object
 

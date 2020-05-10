@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
+@js.native
 trait CellProperties extends SettableCellProperties {
   /**
     *
@@ -17,41 +18,72 @@ trait CellProperties extends SettableCellProperties {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var address: js.UndefOr[String] = js.undefined
+  var address: js.UndefOr[String] = js.native
   /**
     *
     * Represents the `addressLocal` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var addressLocal: js.UndefOr[String] = js.undefined
+  var addressLocal: js.UndefOr[String] = js.native
   /**
     *
     * Represents the `hidden` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var hidden: js.UndefOr[Boolean] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.native
 }
 
 object CellProperties {
   @scala.inline
-  def apply(
-    address: String = null,
-    addressLocal: String = null,
-    format: CellPropertiesFormat = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    hyperlink: RangeHyperlink = null,
-    style: String = null
-  ): CellProperties = {
+  def apply(): CellProperties = {
     val __obj = js.Dynamic.literal()
-    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (addressLocal != null) __obj.updateDynamic("addressLocal")(addressLocal.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (hyperlink != null) __obj.updateDynamic("hyperlink")(hyperlink.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellProperties]
   }
+  @scala.inline
+  implicit class CellPropertiesOps[Self <: CellProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddressLocal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLocal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressLocal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLocal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

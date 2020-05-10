@@ -14,14 +14,12 @@ trait PluginStatus extends js.Object
 
 object PluginStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.mapboxGl.mapboxGlStrings.error = "error".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.error]
   @scala.inline
-  def error: typingsSlinky.mapboxGl.mapboxGlStrings.error = this.cast("error")
+  def loaded: typingsSlinky.mapboxGl.mapboxGlStrings.loaded = "loaded".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.loaded]
   @scala.inline
-  def loaded: typingsSlinky.mapboxGl.mapboxGlStrings.loaded = this.cast("loaded")
+  def loading: typingsSlinky.mapboxGl.mapboxGlStrings.loading = "loading".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.loading]
   @scala.inline
-  def loading: typingsSlinky.mapboxGl.mapboxGlStrings.loading = this.cast("loading")
-  @scala.inline
-  def unavailable: typingsSlinky.mapboxGl.mapboxGlStrings.unavailable = this.cast("unavailable")
+  def unavailable: typingsSlinky.mapboxGl.mapboxGlStrings.unavailable = "unavailable".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.unavailable]
 }
 

@@ -6,12 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("External")
 @js.native
-class ExternalCls () extends External_ {
-  /** @deprecated */
-  /* CompleteClass */
-  override def AddSearchProvider(): Unit = js.native
-  /** @deprecated */
-  /* CompleteClass */
-  override def IsSearchProviderInstalled(): Unit = js.native
-}
+class ExternalCls () extends External_
 

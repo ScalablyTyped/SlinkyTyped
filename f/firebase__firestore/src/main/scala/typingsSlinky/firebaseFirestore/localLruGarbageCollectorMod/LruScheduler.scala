@@ -17,7 +17,7 @@ class LruScheduler protected () extends js.Object {
   val localStore: js.Any = js.native
   var scheduleGC: js.Any = js.native
   def start(): Unit = js.native
-  def started(): Boolean = js.native
+  def started: Boolean = js.native
   def stop(): Unit = js.native
 }
 

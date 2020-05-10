@@ -30,20 +30,77 @@ trait Http extends js.Object {
 
 object Http {
   @scala.inline
-  def apply(
-    ClientIp: String = null,
-    HttpMethod: String = null,
-    HttpStatus: Int | scala.Double = null,
-    HttpURL: String = null,
-    UserAgent: String = null
-  ): Http = {
+  def apply(): Http = {
     val __obj = js.Dynamic.literal()
-    if (ClientIp != null) __obj.updateDynamic("ClientIp")(ClientIp.asInstanceOf[js.Any])
-    if (HttpMethod != null) __obj.updateDynamic("HttpMethod")(HttpMethod.asInstanceOf[js.Any])
-    if (HttpStatus != null) __obj.updateDynamic("HttpStatus")(HttpStatus.asInstanceOf[js.Any])
-    if (HttpURL != null) __obj.updateDynamic("HttpURL")(HttpURL.asInstanceOf[js.Any])
-    if (UserAgent != null) __obj.updateDynamic("UserAgent")(UserAgent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Http]
   }
+  @scala.inline
+  implicit class HttpOps[Self <: Http] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpStatus(value: NullableInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserAgent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserAgent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

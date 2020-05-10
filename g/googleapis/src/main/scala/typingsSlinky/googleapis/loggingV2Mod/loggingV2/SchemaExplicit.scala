@@ -22,10 +22,29 @@ trait SchemaExplicit extends js.Object {
 
 object SchemaExplicit {
   @scala.inline
-  def apply(bounds: js.Array[Double] = null): SchemaExplicit = {
+  def apply(): SchemaExplicit = {
     val __obj = js.Dynamic.literal()
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExplicit]
   }
+  @scala.inline
+  implicit class SchemaExplicitOps[Self <: SchemaExplicit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBounds(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

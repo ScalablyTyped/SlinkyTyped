@@ -7,36 +7,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SerializerOptions extends js.Object {
-  var compact: js.UndefOr[Boolean] = js.undefined
-  var context: js.UndefOr[Context] = js.undefined
-  var encoding: js.UndefOr[string | `object`] = js.undefined
-  var flatten: js.UndefOr[Boolean] = js.undefined
-  var frame: js.UndefOr[Boolean] = js.undefined
-  var skipContext: js.UndefOr[Boolean] = js.undefined
-  var skipGraphProperty: js.UndefOr[Boolean] = js.undefined
+  var compact: js.UndefOr[Boolean] = js.native
+  var context: js.UndefOr[Context] = js.native
+  var encoding: js.UndefOr[string | `object`] = js.native
+  var flatten: js.UndefOr[Boolean] = js.native
+  var frame: js.UndefOr[Boolean] = js.native
+  var skipContext: js.UndefOr[Boolean] = js.native
+  var skipGraphProperty: js.UndefOr[Boolean] = js.native
 }
 
 object SerializerOptions {
   @scala.inline
-  def apply(
-    compact: js.UndefOr[Boolean] = js.undefined,
-    context: Context = null,
-    encoding: string | `object` = null,
-    flatten: js.UndefOr[Boolean] = js.undefined,
-    frame: js.UndefOr[Boolean] = js.undefined,
-    skipContext: js.UndefOr[Boolean] = js.undefined,
-    skipGraphProperty: js.UndefOr[Boolean] = js.undefined
-  ): SerializerOptions = {
+  def apply(): SerializerOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (!js.isUndefined(flatten)) __obj.updateDynamic("flatten")(flatten.asInstanceOf[js.Any])
-    if (!js.isUndefined(frame)) __obj.updateDynamic("frame")(frame.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipContext)) __obj.updateDynamic("skipContext")(skipContext.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipGraphProperty)) __obj.updateDynamic("skipGraphProperty")(skipGraphProperty.asInstanceOf[js.Any])
     __obj.asInstanceOf[SerializerOptions]
   }
+  @scala.inline
+  implicit class SerializerOptionsOps[Self <: SerializerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: Context): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: string | `object`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlatten(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatten")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlatten: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatten")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrame(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrame: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frame")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipContext(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipGraphProperty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipGraphProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipGraphProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipGraphProperty")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

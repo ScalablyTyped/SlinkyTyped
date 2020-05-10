@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * This module contains the config
   *
   */
+@js.native
 trait config extends js.Object {
   /**
     * does a deep copy of the source into the target to merge the config from the source into the target
@@ -19,7 +20,7 @@ trait config extends js.Object {
     * @param target an object representing the config which will be updated by merging in the source.
     * @param source an object representing the config to be merged into the target.
     */
-  def configMerge(target: js.Object, source: js.Object): js.Any
+  def configMerge(target: js.Object, source: js.Object): js.Any = js.native
   /**
     * scan the source config for has checks and call configMerge to merge has sections, and remove the has sections from the source.
     * configProcessHas will scan the source config for has checks.
@@ -30,15 +31,34 @@ trait config extends js.Object {
     *
     * @param source an object representing the config to be processed.
     */
-  def configProcessHas(source: js.Object): js.Any
+  def configProcessHas(source: js.Object): js.Any = js.native
 }
 
 object config {
   @scala.inline
   def apply(configMerge: (js.Object, js.Object) => js.Any, configProcessHas: js.Object => js.Any): config = {
     val __obj = js.Dynamic.literal(configMerge = js.Any.fromFunction2(configMerge), configProcessHas = js.Any.fromFunction1(configProcessHas))
-  
     __obj.asInstanceOf[config]
   }
+  @scala.inline
+  implicit class configOps[Self <: config] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigMerge(value: (js.Object, js.Object) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configMerge")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withConfigProcessHas(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configProcessHas")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

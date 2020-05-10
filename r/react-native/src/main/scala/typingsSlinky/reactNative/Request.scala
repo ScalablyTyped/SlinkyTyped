@@ -7,15 +7,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Request
   extends Object
      with Body {
-  val credentials: RequestCredentials
-  val headers: Headers
-  val method: String
-  val mode: RequestMode
-  val referrer: String
-  val url: String
+  val credentials: RequestCredentials = js.native
+  val headers: Headers = js.native
+  val method: String = js.native
+  val mode: RequestMode = js.native
+  val referrer: String = js.native
+  val url: String = js.native
 }
 
 @JSGlobal("Request")

@@ -16,8 +16,21 @@ object EventsRequest {
   @scala.inline
   def apply(BatchItem: MapOfEventsBatch): EventsRequest = {
     val __obj = js.Dynamic.literal(BatchItem = BatchItem.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[EventsRequest]
   }
+  @scala.inline
+  implicit class EventsRequestOps[Self <: EventsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchItem(value: MapOfEventsBatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BatchItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

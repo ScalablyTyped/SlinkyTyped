@@ -5,12 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Ident extends Node {
-  var isEmpty: scala.Boolean
-  var mixin: scala.Boolean
-  var name: java.lang.String
-  var string: java.lang.String
-  var `val`: Node
+  var isEmpty: scala.Boolean = js.native
+  var mixin: scala.Boolean = js.native
+  var name: java.lang.String = js.native
+  var string: java.lang.String = js.native
+  var `val`: Node = js.native
 }
 
 object Ident {
@@ -39,5 +40,43 @@ object Ident {
     __obj.updateDynamic("val")(`val`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ident]
   }
+  @scala.inline
+  implicit class IdentOps[Self <: Ident] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsEmpty(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmpty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMixin(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mixin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withString(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVal(value: Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("val")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

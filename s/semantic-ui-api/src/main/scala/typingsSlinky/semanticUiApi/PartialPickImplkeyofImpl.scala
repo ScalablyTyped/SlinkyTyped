@@ -31,175 +31,643 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Pick<semantic-ui-api.SemanticUI.ApiSettings._Impl, keyof semantic-ui-api.SemanticUI.ApiSettings._Impl>> */
+@js.native
 trait PartialPickImplkeyofImpl extends js.Object {
-  var action: js.UndefOr[String | `false`] = js.undefined
-  var api: js.UndefOr[StringDictionary[String]] = js.undefined
-  var beforeSend: js.UndefOr[js.Function1[/* settings */ ApiSettings, _]] = js.undefined
-  var beforeXHR: js.UndefOr[js.Function1[/* xhrObject */ jqXHR[_], _]] = js.undefined
-  var cache: js.UndefOr[local | Boolean] = js.undefined
-  var className: js.UndefOr[ClassNameSettings] = js.undefined
-  var data: js.UndefOr[js.Any] = js.undefined
-  var dataType: js.UndefOr[xml | json | jsonp | script | html | text] = js.undefined
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var defaultData: js.UndefOr[Boolean] = js.undefined
-  var encodeParameters: js.UndefOr[Boolean] = js.undefined
-  var error: js.UndefOr[ErrorSettings] = js.undefined
-  var errorDuration: js.UndefOr[`true` | Double] = js.undefined
-  var hideError: js.UndefOr[auto | Boolean] = js.undefined
-  var interruptRequests: js.UndefOr[Boolean] = js.undefined
-  var loadingDuration: js.UndefOr[Double] = js.undefined
-  var metadata: js.UndefOr[MetadataSettings] = js.undefined
-  var method: js.UndefOr[post | get | put | delete | head | options | patch] = js.undefined
-  var mockResponse: js.UndefOr[js.Any | `false`] = js.undefined
+  var action: js.UndefOr[String | `false`] = js.native
+  var api: js.UndefOr[StringDictionary[String]] = js.native
+  var beforeSend: js.UndefOr[js.Function1[/* settings */ ApiSettings, _]] = js.native
+  var beforeXHR: js.UndefOr[js.Function1[/* xhrObject */ jqXHR[_], _]] = js.native
+  var cache: js.UndefOr[local | Boolean] = js.native
+  var className: js.UndefOr[ClassNameSettings] = js.native
+  var data: js.UndefOr[js.Any] = js.native
+  var dataType: js.UndefOr[xml | json | jsonp | script | html | text] = js.native
+  var debug: js.UndefOr[Boolean] = js.native
+  var defaultData: js.UndefOr[Boolean] = js.native
+  var encodeParameters: js.UndefOr[Boolean] = js.native
+  var error: js.UndefOr[ErrorSettings] = js.native
+  var errorDuration: js.UndefOr[`true` | Double] = js.native
+  var hideError: js.UndefOr[auto | Boolean] = js.native
+  var interruptRequests: js.UndefOr[Boolean] = js.native
+  var loadingDuration: js.UndefOr[Double] = js.native
+  var metadata: js.UndefOr[MetadataSettings] = js.native
+  var method: js.UndefOr[post | get | put | delete | head | options | patch] = js.native
+  var mockResponse: js.UndefOr[js.Any | `false`] = js.native
   var mockResponseAsync: js.UndefOr[
     (js.Function2[
       /* settings */ ApiSettings, 
       /* callback */ js.Function1[/* response */ js.Any, Unit], 
       Unit
     ]) | `false`
-  ] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var namespace: js.UndefOr[String] = js.undefined
-  var on: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var name: js.UndefOr[String] = js.native
+  var namespace: js.UndefOr[String] = js.native
+  var on: js.UndefOr[String] = js.native
   var onAbort: js.UndefOr[
     js.Function3[/* errorMessage */ String, /* element */ JQuery, /* xhr */ jqXHR[_], Unit]
-  ] = js.undefined
+  ] = js.native
   var onComplete: js.UndefOr[
     js.Function3[/* response */ js.Any, /* element */ JQuery, /* xhr */ jqXHR[_], Unit]
-  ] = js.undefined
+  ] = js.native
   var onError: js.UndefOr[
     js.Function3[/* errorMessage */ String, /* element */ JQuery, /* xhr */ jqXHR[_], Unit]
-  ] = js.undefined
-  var onFailure: js.UndefOr[js.Function2[/* response */ js.Any, /* element */ JQuery, Unit]] = js.undefined
-  var onRequest: js.UndefOr[js.Function2[/* promise */ Deferred[_, _, _], /* xhr */ jqXHR[_], Unit]] = js.undefined
-  var onResponse: js.UndefOr[js.Function1[/* response */ js.Any, Unit]] = js.undefined
+  ] = js.native
+  var onFailure: js.UndefOr[js.Function2[/* response */ js.Any, /* element */ JQuery, Unit]] = js.native
+  var onRequest: js.UndefOr[js.Function2[/* promise */ Deferred[_, _, _], /* xhr */ jqXHR[_], Unit]] = js.native
+  var onResponse: js.UndefOr[js.Function1[/* response */ js.Any, Unit]] = js.native
   var onSuccess: js.UndefOr[
     js.Function3[/* response */ js.Any, /* element */ JQuery, /* xhr */ jqXHR[_], Unit]
-  ] = js.undefined
-  var performance: js.UndefOr[Boolean] = js.undefined
-  var regExp: js.UndefOr[RegExpSettings] = js.undefined
-  var response: js.UndefOr[js.Any | `false`] = js.undefined
+  ] = js.native
+  var performance: js.UndefOr[Boolean] = js.native
+  var regExp: js.UndefOr[RegExpSettings] = js.native
+  var response: js.UndefOr[js.Any | `false`] = js.native
   var responseAsync: js.UndefOr[
     (js.Function2[
       /* settings */ ApiSettings, 
       /* callback */ js.Function1[/* response */ js.Any, Unit], 
       Unit
     ]) | `false`
-  ] = js.undefined
-  var selector: js.UndefOr[SelectorSettings] = js.undefined
-  var serializeForm: js.UndefOr[Boolean] = js.undefined
-  var silent: js.UndefOr[Boolean] = js.undefined
-  var stateContext: js.UndefOr[String | JQuery] = js.undefined
-  var successTest: js.UndefOr[js.Function1[/* response */ js.Any, Boolean]] = js.undefined
-  var throttle: js.UndefOr[Double] = js.undefined
-  var throttleFirstRequest: js.UndefOr[Boolean] = js.undefined
-  var url: js.UndefOr[String | `false`] = js.undefined
-  var urlData: js.UndefOr[js.Any | `false`] = js.undefined
-  var verbose: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var selector: js.UndefOr[SelectorSettings] = js.native
+  var serializeForm: js.UndefOr[Boolean] = js.native
+  var silent: js.UndefOr[Boolean] = js.native
+  var stateContext: js.UndefOr[String | JQuery] = js.native
+  var successTest: js.UndefOr[js.Function1[/* response */ js.Any, Boolean]] = js.native
+  var throttle: js.UndefOr[Double] = js.native
+  var throttleFirstRequest: js.UndefOr[Boolean] = js.native
+  var url: js.UndefOr[String | `false`] = js.native
+  var urlData: js.UndefOr[js.Any | `false`] = js.native
+  var verbose: js.UndefOr[Boolean] = js.native
 }
 
 object PartialPickImplkeyofImpl {
   @scala.inline
-  def apply(
-    action: String | `false` = null,
-    api: StringDictionary[String] = null,
-    beforeSend: /* settings */ ApiSettings => _ = null,
-    beforeXHR: /* xhrObject */ jqXHR[_] => _ = null,
-    cache: local | Boolean = null,
-    className: ClassNameSettings = null,
-    data: js.Any = null,
-    dataType: xml | json | jsonp | script | html | text = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    defaultData: js.UndefOr[Boolean] = js.undefined,
-    encodeParameters: js.UndefOr[Boolean] = js.undefined,
-    error: ErrorSettings = null,
-    errorDuration: `true` | Double = null,
-    hideError: auto | Boolean = null,
-    interruptRequests: js.UndefOr[Boolean] = js.undefined,
-    loadingDuration: Int | Double = null,
-    metadata: MetadataSettings = null,
-    method: post | get | put | delete | head | options | patch = null,
-    mockResponse: js.Any | `false` = null,
-    mockResponseAsync: (js.Function2[
-      /* settings */ ApiSettings, 
-      /* callback */ js.Function1[/* response */ js.Any, Unit], 
-      Unit
-    ]) | `false` = null,
-    name: String = null,
-    namespace: String = null,
-    on: String = null,
-    onAbort: (/* errorMessage */ String, /* element */ JQuery, /* xhr */ jqXHR[_]) => Unit = null,
-    onComplete: (/* response */ js.Any, /* element */ JQuery, /* xhr */ jqXHR[_]) => Unit = null,
-    onError: (/* errorMessage */ String, /* element */ JQuery, /* xhr */ jqXHR[_]) => Unit = null,
-    onFailure: (/* response */ js.Any, /* element */ JQuery) => Unit = null,
-    onRequest: (/* promise */ Deferred[_, _, _], /* xhr */ jqXHR[_]) => Unit = null,
-    onResponse: /* response */ js.Any => Unit = null,
-    onSuccess: (/* response */ js.Any, /* element */ JQuery, /* xhr */ jqXHR[_]) => Unit = null,
-    performance: js.UndefOr[Boolean] = js.undefined,
-    regExp: RegExpSettings = null,
-    response: js.Any | `false` = null,
-    responseAsync: (js.Function2[
-      /* settings */ ApiSettings, 
-      /* callback */ js.Function1[/* response */ js.Any, Unit], 
-      Unit
-    ]) | `false` = null,
-    selector: SelectorSettings = null,
-    serializeForm: js.UndefOr[Boolean] = js.undefined,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    stateContext: String | JQuery = null,
-    successTest: /* response */ js.Any => Boolean = null,
-    throttle: Int | Double = null,
-    throttleFirstRequest: js.UndefOr[Boolean] = js.undefined,
-    url: String | `false` = null,
-    urlData: js.Any | `false` = null,
-    verbose: js.UndefOr[Boolean] = js.undefined
-  ): PartialPickImplkeyofImpl = {
+  def apply(): PartialPickImplkeyofImpl = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (api != null) __obj.updateDynamic("api")(api.asInstanceOf[js.Any])
-    if (beforeSend != null) __obj.updateDynamic("beforeSend")(js.Any.fromFunction1(beforeSend))
-    if (beforeXHR != null) __obj.updateDynamic("beforeXHR")(js.Any.fromFunction1(beforeXHR))
-    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataType != null) __obj.updateDynamic("dataType")(dataType.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultData)) __obj.updateDynamic("defaultData")(defaultData.asInstanceOf[js.Any])
-    if (!js.isUndefined(encodeParameters)) __obj.updateDynamic("encodeParameters")(encodeParameters.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (errorDuration != null) __obj.updateDynamic("errorDuration")(errorDuration.asInstanceOf[js.Any])
-    if (hideError != null) __obj.updateDynamic("hideError")(hideError.asInstanceOf[js.Any])
-    if (!js.isUndefined(interruptRequests)) __obj.updateDynamic("interruptRequests")(interruptRequests.asInstanceOf[js.Any])
-    if (loadingDuration != null) __obj.updateDynamic("loadingDuration")(loadingDuration.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (mockResponse != null) __obj.updateDynamic("mockResponse")(mockResponse.asInstanceOf[js.Any])
-    if (mockResponseAsync != null) __obj.updateDynamic("mockResponseAsync")(mockResponseAsync.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
-    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
-    if (onAbort != null) __obj.updateDynamic("onAbort")(js.Any.fromFunction3(onAbort))
-    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction3(onComplete))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction3(onError))
-    if (onFailure != null) __obj.updateDynamic("onFailure")(js.Any.fromFunction2(onFailure))
-    if (onRequest != null) __obj.updateDynamic("onRequest")(js.Any.fromFunction2(onRequest))
-    if (onResponse != null) __obj.updateDynamic("onResponse")(js.Any.fromFunction1(onResponse))
-    if (onSuccess != null) __obj.updateDynamic("onSuccess")(js.Any.fromFunction3(onSuccess))
-    if (!js.isUndefined(performance)) __obj.updateDynamic("performance")(performance.asInstanceOf[js.Any])
-    if (regExp != null) __obj.updateDynamic("regExp")(regExp.asInstanceOf[js.Any])
-    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
-    if (responseAsync != null) __obj.updateDynamic("responseAsync")(responseAsync.asInstanceOf[js.Any])
-    if (selector != null) __obj.updateDynamic("selector")(selector.asInstanceOf[js.Any])
-    if (!js.isUndefined(serializeForm)) __obj.updateDynamic("serializeForm")(serializeForm.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (stateContext != null) __obj.updateDynamic("stateContext")(stateContext.asInstanceOf[js.Any])
-    if (successTest != null) __obj.updateDynamic("successTest")(js.Any.fromFunction1(successTest))
-    if (throttle != null) __obj.updateDynamic("throttle")(throttle.asInstanceOf[js.Any])
-    if (!js.isUndefined(throttleFirstRequest)) __obj.updateDynamic("throttleFirstRequest")(throttleFirstRequest.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (urlData != null) __obj.updateDynamic("urlData")(urlData.asInstanceOf[js.Any])
-    if (!js.isUndefined(verbose)) __obj.updateDynamic("verbose")(verbose.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPickImplkeyofImpl]
   }
+  @scala.inline
+  implicit class PartialPickImplkeyofImplOps[Self <: PartialPickImplkeyofImpl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApi(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("api")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeSend(value: /* settings */ ApiSettings => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSend")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeSend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeXHR(value: /* xhrObject */ jqXHR[_] => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeXHR")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeXHR: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeXHR")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCache(value: local | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: ClassNameSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataType(value: xml | json | jsonp | script | html | text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncodeParameters(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncodeParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodeParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: ErrorSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorDuration(value: `true` | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideError(value: auto | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterruptRequests(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interruptRequests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterruptRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interruptRequests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadingDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadingDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: MetadataSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: post | get | put | delete | head | options | patch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMockResponse(value: js.Any | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mockResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMockResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mockResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMockResponseAsyncFunction2(
+      value: (/* settings */ ApiSettings, /* callback */ js.Function1[/* response */ js.Any, Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mockResponseAsync")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withMockResponseAsync(
+      value: (js.Function2[
+          /* settings */ ApiSettings, 
+          /* callback */ js.Function1[/* response */ js.Any, Unit], 
+          Unit
+        ]) | `false`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mockResponseAsync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMockResponseAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mockResponseAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAbort(value: (/* errorMessage */ String, /* element */ JQuery, /* xhr */ jqXHR[_]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAbort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnComplete(value: (/* response */ js.Any, /* element */ JQuery, /* xhr */ jqXHR[_]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnError(value: (/* errorMessage */ String, /* element */ JQuery, /* xhr */ jqXHR[_]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFailure(value: (/* response */ js.Any, /* element */ JQuery) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFailure")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFailure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFailure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRequest(value: (/* promise */ Deferred[_, _, _], /* xhr */ jqXHR[_]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRequest")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRequest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnResponse(value: /* response */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSuccess(value: (/* response */ js.Any, /* element */ JQuery, /* xhr */ jqXHR[_]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuccess")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSuccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerformance(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerformance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("performance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegExp(value: RegExpSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regExp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegExp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regExp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponse(value: js.Any | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseAsyncFunction2(
+      value: (/* settings */ ApiSettings, /* callback */ js.Function1[/* response */ js.Any, Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseAsync")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withResponseAsync(
+      value: (js.Function2[
+          /* settings */ ApiSettings, 
+          /* callback */ js.Function1[/* response */ js.Any, Unit], 
+          Unit
+        ]) | `false`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseAsync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelector(value: SelectorSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerializeForm(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeForm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerializeForm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serializeForm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateContext(value: String | JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessTest(value: /* response */ js.Any => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successTest")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccessTest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successTest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThrottle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThrottle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThrottleFirstRequest(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttleFirstRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThrottleFirstRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttleFirstRequest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrlData(value: js.Any | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrlData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerbose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerbose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verbose")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,30 +8,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var cacheDirectory: js.UndefOr[String] = js.undefined
-  var cachePrune: js.UndefOr[AnonMaxAge] = js.undefined
-  var configHash: js.UndefOr[String | (js.Function1[/* webpackConfig */ js.UndefOr[Configuration], String])] = js.undefined
-  var environmentHash: js.UndefOr[AnonDirectories] = js.undefined
-  var info: js.UndefOr[AnonLevel] = js.undefined
+  var cacheDirectory: js.UndefOr[String] = js.native
+  var cachePrune: js.UndefOr[AnonMaxAge] = js.native
+  var configHash: js.UndefOr[String | (js.Function1[/* webpackConfig */ js.UndefOr[Configuration], String])] = js.native
+  var environmentHash: js.UndefOr[AnonDirectories] = js.native
+  var info: js.UndefOr[AnonLevel] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    cacheDirectory: String = null,
-    cachePrune: AnonMaxAge = null,
-    configHash: String | (js.Function1[/* webpackConfig */ js.UndefOr[Configuration], String]) = null,
-    environmentHash: AnonDirectories = null,
-    info: AnonLevel = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (cacheDirectory != null) __obj.updateDynamic("cacheDirectory")(cacheDirectory.asInstanceOf[js.Any])
-    if (cachePrune != null) __obj.updateDynamic("cachePrune")(cachePrune.asInstanceOf[js.Any])
-    if (configHash != null) __obj.updateDynamic("configHash")(configHash.asInstanceOf[js.Any])
-    if (environmentHash != null) __obj.updateDynamic("environmentHash")(environmentHash.asInstanceOf[js.Any])
-    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCacheDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheDirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCachePrune(value: AnonMaxAge): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cachePrune")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCachePrune: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cachePrune")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigHashFunction1(value: /* webpackConfig */ js.UndefOr[Configuration] => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configHash")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withConfigHash(value: String | (js.Function1[/* webpackConfig */ js.UndefOr[Configuration], String])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configHash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentHash(value: AnonDirectories): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentHash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfo(value: AnonLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

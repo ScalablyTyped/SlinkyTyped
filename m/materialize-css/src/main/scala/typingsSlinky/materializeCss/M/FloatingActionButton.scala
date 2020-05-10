@@ -11,14 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class FloatingActionButton ()
   extends Component[FloatingActionButtonOptions]
-     with Openable {
-  /* CompleteClass */
-  override var isOpen: Boolean = js.native
-  /* CompleteClass */
-  override def close(): Unit = js.native
-  /* CompleteClass */
-  override def open(): Unit = js.native
-}
+     with Openable
 
 /* static members */
 @JSGlobal("M.FloatingActionButton")
@@ -36,7 +29,7 @@ object FloatingActionButton extends js.Object {
   /**
     * Init FloatingActionButton
     */
-  def init(els: typingsSlinky.std.Element): FloatingActionButton = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialFloatingActionButt): FloatingActionButton = js.native
+  def init(els: Element): FloatingActionButton = js.native
+  def init(els: Element, options: PartialFloatingActionButt): FloatingActionButton = js.native
 }
 

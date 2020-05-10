@@ -34,7 +34,7 @@ object s2k extends js.Object {
       * @returns Produced key with a length corresponding to
       *          hashAlgorithm hash length
       */
-    def produce_key(passphrase: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def produce_key(passphrase: String): js.typedarray.Uint8Array = js.native
     /**
       * Parsing function for a string-to-key specifier ( {@link https://tools.ietf.org/html/rfc4880#section-3.7|RFC 4880 3.7}).
       * @param input Payload of string-to-key specifier
@@ -45,7 +45,7 @@ object s2k extends js.Object {
       * Serializes s2k information
       * @returns binary representation of s2k
       */
-    def write(): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def write(): js.typedarray.Uint8Array = js.native
   }
   
 }

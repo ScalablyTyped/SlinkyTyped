@@ -1,11 +1,8 @@
 package typingsSlinky.reactWidgets.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactWidgets.AnonAction
 import typingsSlinky.reactWidgets.AnonLastSearchTerm
 import typingsSlinky.reactWidgets.AnonOriginalEvent
@@ -21,84 +18,116 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Multiselect
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object Multiselect {
   @JSImport("react-widgets", "Multiselect")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, id, open, placeholder */
-  def apply(
-    allowCreate: Boolean | onFilter = null,
-    busy: js.UndefOr[Boolean] = js.undefined,
-    caseSensitive: js.UndefOr[Boolean] = js.undefined,
-    containerClassName: String = null,
-    data: js.Array[_] = null,
-    defaultValue: js.Array[_] = null,
-    disabled: Boolean | js.Array[_] = null,
-    dropUp: js.UndefOr[Boolean] = js.undefined,
-    duration: Int | Double = null,
-    filter: `false` | startsWith | endsWith | contains | (js.Function2[/* dataItem */ js.Any, /* searchTerm */ String, Boolean]) = null,
-    groupBy: String | (js.Function1[/* dataItem */ js.Any, _]) = null,
-    groupComponent: ReactComponentClass[_] = null,
-    inputProps: js.Object = null,
-    isRtl: js.UndefOr[Boolean] = js.undefined,
-    itemComponent: ReactComponentClass[_] = null,
-    listComponent: ReactComponentClass[_] | String = null,
-    listProps: js.Object = null,
-    messages: MultiselectMessages = null,
-    minLength: Int | Double = null,
-    onChange: (/* dataItems */ js.Array[_], /* metadata */ AnonAction) => Unit = null,
-    onCreate: /* searchTerm */ String => Unit = null,
-    onSearch: (/* searchTerm */ String, /* metadata */ AnonLastSearchTerm) => Unit = null,
-    onSelect: (/* value */ js.Any, /* metadata */ AnonOriginalEvent) => Unit = null,
-    onToggle: /* isOpen */ Boolean => Unit = null,
-    popupTransition: ReactComponentClass[_] | String = null,
-    readOnly: Boolean | js.Array[_] = null,
-    searchTerm: String = null,
-    tagComponent: ReactComponentClass[_] | String = null,
-    textField: String | (js.Function1[/* dataItem */ js.Any, String]) = null,
-    value: js.Array[_] = null,
-    valueField: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
-    if (allowCreate != null) __obj.updateDynamic("allowCreate")(allowCreate.asInstanceOf[js.Any])
-    if (!js.isUndefined(busy)) __obj.updateDynamic("busy")(busy.asInstanceOf[js.Any])
-    if (!js.isUndefined(caseSensitive)) __obj.updateDynamic("caseSensitive")(caseSensitive.asInstanceOf[js.Any])
-    if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropUp)) __obj.updateDynamic("dropUp")(dropUp.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (groupBy != null) __obj.updateDynamic("groupBy")(groupBy.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(isRtl)) __obj.updateDynamic("isRtl")(isRtl.asInstanceOf[js.Any])
-    if (itemComponent != null) __obj.updateDynamic("itemComponent")(itemComponent.asInstanceOf[js.Any])
-    if (listComponent != null) __obj.updateDynamic("listComponent")(listComponent.asInstanceOf[js.Any])
-    if (listProps != null) __obj.updateDynamic("listProps")(listProps.asInstanceOf[js.Any])
-    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onCreate != null) __obj.updateDynamic("onCreate")(js.Any.fromFunction1(onCreate))
-    if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction2(onSearch))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
-    if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction1(onToggle))
-    if (popupTransition != null) __obj.updateDynamic("popupTransition")(popupTransition.asInstanceOf[js.Any])
-    if (readOnly != null) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (searchTerm != null) __obj.updateDynamic("searchTerm")(searchTerm.asInstanceOf[js.Any])
-    if (tagComponent != null) __obj.updateDynamic("tagComponent")(tagComponent.asInstanceOf[js.Any])
-    if (textField != null) __obj.updateDynamic("textField")(textField.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueField != null) __obj.updateDynamic("valueField")(valueField.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def allowCreate(value: Boolean | onFilter): this.type = set("allowCreate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def busy(value: Boolean): this.type = set("busy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def caseSensitive(value: Boolean): this.type = set("caseSensitive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerClassName(value: String): this.type = set("containerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: js.Array[_]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean | js.Array[_]): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropUp(value: Boolean): this.type = set("dropUp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def duration(value: Double): this.type = set("duration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterFunction2(value: (/* dataItem */ js.Any, /* searchTerm */ String) => Boolean): this.type = set("filter", js.Any.fromFunction2(value))
+    @scala.inline
+    def filter(
+      value: `false` | startsWith | endsWith | contains | (js.Function2[/* dataItem */ js.Any, /* searchTerm */ String, Boolean])
+    ): this.type = set("filter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupByFunction1(value: /* dataItem */ js.Any => _): this.type = set("groupBy", js.Any.fromFunction1(value))
+    @scala.inline
+    def groupBy(value: String | (js.Function1[/* dataItem */ js.Any, _])): this.type = set("groupBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponentComponentClass(value: ReactComponentClass[_]): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponent(value: ReactComponentClass[_]): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputProps(value: js.Object): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isRtl(value: Boolean): this.type = set("isRtl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemComponentComponentClass(value: ReactComponentClass[_]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemComponent(value: ReactComponentClass[_]): this.type = set("itemComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("listComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listComponentComponentClass(value: ReactComponentClass[_]): this.type = set("listComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listComponent(value: ReactComponentClass[_] | String): this.type = set("listComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listProps(value: js.Object): this.type = set("listProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def messages(value: MultiselectMessages): this.type = set("messages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minLength(value: Double): this.type = set("minLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: (/* dataItems */ js.Array[_], /* metadata */ AnonAction) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onCreate(value: /* searchTerm */ String => Unit): this.type = set("onCreate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSearch(value: (/* searchTerm */ String, /* metadata */ AnonLastSearchTerm) => Unit): this.type = set("onSearch", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSelect(value: (/* value */ js.Any, /* metadata */ AnonOriginalEvent) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def onToggle(value: /* isOpen */ Boolean => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popupTransitionFunctionComponent(value: ReactComponentClass[_]): this.type = set("popupTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popupTransitionComponentClass(value: ReactComponentClass[_]): this.type = set("popupTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popupTransition(value: ReactComponentClass[_] | String): this.type = set("popupTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readOnly(value: Boolean | js.Array[_]): this.type = set("readOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def searchTerm(value: String): this.type = set("searchTerm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("tagComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagComponentComponentClass(value: ReactComponentClass[_]): this.type = set("tagComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagComponent(value: ReactComponentClass[_] | String): this.type = set("tagComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textFieldFunction1(value: /* dataItem */ js.Any => String): this.type = set("textField", js.Any.fromFunction1(value))
+    @scala.inline
+    def textField(value: String | (js.Function1[/* dataItem */ js.Any, String])): this.type = set("textField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueField(value: String): this.type = set("valueField", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactWidgets.mod.Multiselect.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MultiselectProps
+  
+  def withProps(p: MultiselectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Multiselect.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

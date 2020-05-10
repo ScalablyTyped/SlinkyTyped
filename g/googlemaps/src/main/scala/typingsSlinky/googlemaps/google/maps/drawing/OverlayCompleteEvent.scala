@@ -10,11 +10,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The properties of an overlaycomplete event on a DrawingManager.. */
+@js.native
 trait OverlayCompleteEvent extends js.Object {
   /** The completed overlay. */
-  var overlay: Marker | Polygon | Polyline | Rectangle | Circle
+  var overlay: Marker | Polygon | Polyline | Rectangle | Circle = js.native
   /** The completed overlay's type. */
-  var `type`: OverlayType
+  var `type`: OverlayType = js.native
 }
 
 object OverlayCompleteEvent {
@@ -24,5 +25,25 @@ object OverlayCompleteEvent {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OverlayCompleteEvent]
   }
+  @scala.inline
+  implicit class OverlayCompleteEventOps[Self <: OverlayCompleteEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOverlay(value: Marker | Polygon | Polyline | Rectangle | Circle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: OverlayType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -11,10 +11,29 @@ trait AnonDefaultKmsKeyName extends js.Object {
 
 object AnonDefaultKmsKeyName {
   @scala.inline
-  def apply(defaultKmsKeyName: String = null): AnonDefaultKmsKeyName = {
+  def apply(): AnonDefaultKmsKeyName = {
     val __obj = js.Dynamic.literal()
-    if (defaultKmsKeyName != null) __obj.updateDynamic("defaultKmsKeyName")(defaultKmsKeyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDefaultKmsKeyName]
   }
+  @scala.inline
+  implicit class AnonDefaultKmsKeyNameOps[Self <: AnonDefaultKmsKeyName] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultKmsKeyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultKmsKeyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultKmsKeyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultKmsKeyName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

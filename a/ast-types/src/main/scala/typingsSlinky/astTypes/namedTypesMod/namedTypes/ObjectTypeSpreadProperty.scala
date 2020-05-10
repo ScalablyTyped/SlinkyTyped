@@ -12,14 +12,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Node, 'type'> */
+@js.native
 trait ObjectTypeSpreadProperty
   extends ASTNode
      with NodeKind
      with PrintableKind {
-  var argument: FlowTypeKind
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ObjectTypeSpreadProperty
+  var argument: FlowTypeKind = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ObjectTypeSpreadProperty = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ObjectTypeSpreadProperty")

@@ -1,7 +1,6 @@
 package typingsSlinky.cronConverter.mod
 
 import typingsSlinky.moment.mod.Moment
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +23,7 @@ trait Cron extends js.Object {
     */
   def schedule(): Seeker = js.native
   def schedule(now: Moment): Seeker = js.native
-  def schedule(now: Date): Seeker = js.native
+  def schedule(now: js.Date): Seeker = js.native
   /**
     * Returns the cron schedule as a 2-dimensional array of integers.
     */

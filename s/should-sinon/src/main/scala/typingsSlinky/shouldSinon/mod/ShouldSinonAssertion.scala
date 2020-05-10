@@ -1,7 +1,6 @@
 package typingsSlinky.shouldSinon.mod
 
 import typingsSlinky.should.mod.Assertion
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +28,7 @@ trait ShouldSinonAssertion extends Assertion {
     * provided, the assertion passes if the spy ever threw any exception.
     */
   def alwaysThrew(ex: String): Unit = js.native
-  def alwaysThrew(ex: Error): Unit = js.native
+  def alwaysThrew(ex: js.Error): Unit = js.native
   /**
     * Assert stub was called at exact number of times
     */
@@ -84,6 +83,6 @@ trait ShouldSinonAssertion extends Assertion {
     * provided, the assertion passes if the spy ever threw any exception.
     */
   def threw(ex: String): Unit = js.native
-  def threw(ex: Error): Unit = js.native
+  def threw(ex: js.Error): Unit = js.native
 }
 

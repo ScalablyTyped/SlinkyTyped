@@ -22,14 +22,41 @@ trait PurchaseReservedElasticsearchInstanceOfferingRequest extends js.Object {
 
 object PurchaseReservedElasticsearchInstanceOfferingRequest {
   @scala.inline
-  def apply(
-    ReservationName: ReservationToken,
-    ReservedElasticsearchInstanceOfferingId: GUID,
-    InstanceCount: Int | scala.Double = null
-  ): PurchaseReservedElasticsearchInstanceOfferingRequest = {
+  def apply(ReservationName: ReservationToken, ReservedElasticsearchInstanceOfferingId: GUID): PurchaseReservedElasticsearchInstanceOfferingRequest = {
     val __obj = js.Dynamic.literal(ReservationName = ReservationName.asInstanceOf[js.Any], ReservedElasticsearchInstanceOfferingId = ReservedElasticsearchInstanceOfferingId.asInstanceOf[js.Any])
-    if (InstanceCount != null) __obj.updateDynamic("InstanceCount")(InstanceCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[PurchaseReservedElasticsearchInstanceOfferingRequest]
   }
+  @scala.inline
+  implicit class PurchaseReservedElasticsearchInstanceOfferingRequestOps[Self <: PurchaseReservedElasticsearchInstanceOfferingRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReservationName(value: ReservationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReservedElasticsearchInstanceOfferingId(value: GUID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReservedElasticsearchInstanceOfferingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceCount(value: InstanceCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

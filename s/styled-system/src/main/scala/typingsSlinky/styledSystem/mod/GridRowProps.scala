@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridRowProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Object {
   /**
     * The grid-row CSS property is a shorthand property for grid-row-start and grid-row-end specifying a grid item’s
@@ -13,15 +14,40 @@ trait GridRowProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Obj
     *
     * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row)
     */
-  var gridRow: js.UndefOr[ResponsiveValue[GridRowProperty, ThemeType]] = js.undefined
+  var gridRow: js.UndefOr[ResponsiveValue[GridRowProperty, ThemeType]] = js.native
 }
 
 object GridRowProps {
   @scala.inline
-  def apply[ThemeType /* <: Theme[TLengthStyledSystem] */](gridRow: ResponsiveValue[GridRowProperty, ThemeType] = null): GridRowProps[ThemeType] = {
+  def apply[ThemeType](): GridRowProps[ThemeType] = {
     val __obj = js.Dynamic.literal()
-    if (gridRow != null) __obj.updateDynamic("gridRow")(gridRow.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridRowProps[ThemeType]]
   }
+  @scala.inline
+  implicit class GridRowPropsOps[Self[themetype] <: GridRowProps[themetype], ThemeType] (val x: Self[ThemeType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[ThemeType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[ThemeType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ThemeType] with Other]
+    @scala.inline
+    def withGridRow(value: ResponsiveValue[GridRowProperty, ThemeType]): Self[ThemeType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridRow: Self[ThemeType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridRowNull: Self[ThemeType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridRow")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -23,11 +23,41 @@ trait SchemaGoogleExampleLibraryagentV1ListShelvesResponse extends js.Object {
 
 object SchemaGoogleExampleLibraryagentV1ListShelvesResponse {
   @scala.inline
-  def apply(nextPageToken: String = null, shelves: js.Array[SchemaGoogleExampleLibraryagentV1Shelf] = null): SchemaGoogleExampleLibraryagentV1ListShelvesResponse = {
+  def apply(): SchemaGoogleExampleLibraryagentV1ListShelvesResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (shelves != null) __obj.updateDynamic("shelves")(shelves.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleExampleLibraryagentV1ListShelvesResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleExampleLibraryagentV1ListShelvesResponseOps[Self <: SchemaGoogleExampleLibraryagentV1ListShelvesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShelves(value: js.Array[SchemaGoogleExampleLibraryagentV1Shelf]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shelves")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShelves: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shelves")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,11 +22,47 @@ trait ModifyRuleInput extends js.Object {
 
 object ModifyRuleInput {
   @scala.inline
-  def apply(RuleArn: RuleArn, Actions: Actions = null, Conditions: RuleConditionList = null): ModifyRuleInput = {
+  def apply(RuleArn: RuleArn): ModifyRuleInput = {
     val __obj = js.Dynamic.literal(RuleArn = RuleArn.asInstanceOf[js.Any])
-    if (Actions != null) __obj.updateDynamic("Actions")(Actions.asInstanceOf[js.Any])
-    if (Conditions != null) __obj.updateDynamic("Conditions")(Conditions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyRuleInput]
   }
+  @scala.inline
+  implicit class ModifyRuleInputOps[Self <: ModifyRuleInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRuleArn(value: RuleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActions(value: Actions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Actions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditions(value: RuleConditionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Conditions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

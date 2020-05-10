@@ -1,5 +1,6 @@
 package typingsSlinky.megajs.mod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
@@ -15,7 +16,7 @@ class Storage protected () extends js.Object {
   def this(options: StorageOptions, callback: js.Any) = this()
   var files: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ id in string ]: megajs.megajs.MutableFile}
-    */ typingsSlinky.megajs.megajsStrings.Storage with js.Any = js.native
+    */ typingsSlinky.megajs.megajsStrings.Storage with TopLevel[js.Any] = js.native
   var inbox: MutableFile = js.native
   var key: Buffer = js.native
   var mounts: js.Array[File] = js.native

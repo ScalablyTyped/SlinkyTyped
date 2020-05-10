@@ -9,27 +9,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonStyle extends _BorderType {
-  var color: js.UndefOr[ColorType] = js.undefined
-  var side: js.UndefOr[BoxSideType] = js.undefined
-  var size: js.UndefOr[BoxSizeType] = js.undefined
-  var style: js.UndefOr[BoxStyleType] = js.undefined
+  var color: js.UndefOr[ColorType] = js.native
+  var side: js.UndefOr[BoxSideType] = js.native
+  var size: js.UndefOr[BoxSizeType] = js.native
+  var style: js.UndefOr[BoxStyleType] = js.native
 }
 
 object AnonStyle {
   @scala.inline
-  def apply(
-    color: ColorType = null,
-    side: BoxSideType = null,
-    size: BoxSizeType = null,
-    style: BoxStyleType = null
-  ): AnonStyle = {
+  def apply(): AnonStyle = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (side != null) __obj.updateDynamic("side")(side.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonStyle]
   }
+  @scala.inline
+  implicit class AnonStyleOps[Self <: AnonStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: ColorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSide(value: BoxSideType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("side")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: BoxSizeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: BoxStyleType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

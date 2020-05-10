@@ -7,7 +7,6 @@ import typingsSlinky.marked.markedStrings.code
 import typingsSlinky.marked.markedStrings.heading
 import typingsSlinky.marked.markedStrings.hr
 import typingsSlinky.marked.markedStrings.html
-import typingsSlinky.marked.markedStrings.indented
 import typingsSlinky.marked.markedStrings.left
 import typingsSlinky.marked.markedStrings.list_end
 import typingsSlinky.marked.markedStrings.list_item_end
@@ -50,10 +49,9 @@ object Token {
     __obj.asInstanceOf[Token]
   }
   @scala.inline
-  def Paragraph(text: String, `type`: paragraph, pre: js.UndefOr[Boolean] = js.undefined): Token = {
+  def Paragraph(text: String, `type`: paragraph): Token = {
     val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(pre)) __obj.updateDynamic("pre")(pre.asInstanceOf[js.Any])
     __obj.asInstanceOf[Token]
   }
   @scala.inline
@@ -80,11 +78,9 @@ object Token {
     __obj.asInstanceOf[Token]
   }
   @scala.inline
-  def Code(text: String, `type`: code, codeBlockStyle: indented = null, lang: String = null): Token = {
+  def Code(text: String, `type`: code): Token = {
     val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (codeBlockStyle != null) __obj.updateDynamic("codeBlockStyle")(codeBlockStyle.asInstanceOf[js.Any])
-    if (lang != null) __obj.updateDynamic("lang")(lang.asInstanceOf[js.Any])
     __obj.asInstanceOf[Token]
   }
   @scala.inline

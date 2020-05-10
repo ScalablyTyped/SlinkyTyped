@@ -1,5 +1,7 @@
 package typingsSlinky.p5.globalMod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.p5.mod.ANGLE_MODE
 import typingsSlinky.p5.mod.ARC_MODE
 import typingsSlinky.p5.mod.BEGIN_KIND
@@ -52,8 +54,6 @@ import typingsSlinky.p5.mod.WRAP_X
 import typingsSlinky.p5.mod.WRAP_Y
 import typingsSlinky.p5.mod.^
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

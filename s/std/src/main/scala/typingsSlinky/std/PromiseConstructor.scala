@@ -1,6 +1,7 @@
 package typingsSlinky.std
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +22,7 @@ Instantiable1[
       ], 
       js.Promise[js.Object]
     ] {
-  @JSName(scala.scalajs.js.Symbol.species)
+  @JSName(js.Symbol.species)
   val species: PromiseConstructor = js.native
   /**
     * Creates a Promise that is resolved with an array of results when all of the provided Promises
@@ -36,7 +37,7 @@ Instantiable1[
     * @param values An array of Promises.
     * @returns A new Promise.
     */
-  def all[TAll](values: Iterable[TAll | js.Thenable[TAll]]): js.Promise[js.Array[TAll]] = js.native
+  def all[TAll](values: js.Iterable[TAll | js.Thenable[TAll]]): js.Promise[js.Array[TAll]] = js.native
   /**
     * Creates a Promise that is resolved with an array of results when all of the provided Promises
     * resolve, or rejected when any Promise is rejected.
@@ -174,7 +175,7 @@ Instantiable1[
   def allSettled[T /* <: js.Array[_] */](values: T): js.Promise[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {-readonly [ P in keyof T ]: std.PromiseSettledResult<T[P] extends std.PromiseLike<infer U>? any : T[P]>}
-    */ typingsSlinky.std.stdStrings.PromiseConstructor with js.Any
+    */ typingsSlinky.std.stdStrings.PromiseConstructor with TopLevel[js.Any]
   ] = js.native
   /**
     * Creates a Promise that is resolved with an array of results when all
@@ -182,7 +183,7 @@ Instantiable1[
     * @param values An array of Promises.
     * @returns A new Promise.
     */
-  def allSettled[T](values: Iterable[T]): js.Promise[js.Array[PromiseSettledResult[T]]] = js.native
+  def allSettled[T](values: js.Iterable[T]): js.Promise[js.Array[PromiseSettledResult[T]]] = js.native
   /**
     * Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
     * or rejected.
@@ -202,7 +203,7 @@ Instantiable1[
     * @param values An iterable of Promises.
     * @returns A new Promise.
     */
-  def race[T](values: Iterable[T | js.Thenable[T]]): js.Promise[T] = js.native
+  def race[T](values: js.Iterable[T | js.Thenable[T]]): js.Promise[T] = js.native
   /**
     * Creates a new rejected promise for the provided reason.
     * @param reason The reason the promise was rejected.

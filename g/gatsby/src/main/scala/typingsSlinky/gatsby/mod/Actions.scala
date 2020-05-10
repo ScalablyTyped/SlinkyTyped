@@ -2,13 +2,13 @@ package typingsSlinky.gatsby.mod
 
 import typingsSlinky.gatsby.AnonArgs
 import typingsSlinky.gatsby.AnonChild
-import typingsSlinky.gatsby.AnonComponent
 import typingsSlinky.gatsby.AnonDictkey
 import typingsSlinky.gatsby.AnonFieldName
 import typingsSlinky.gatsby.AnonId
 import typingsSlinky.gatsby.AnonNameOptions
 import typingsSlinky.gatsby.AnonNode
 import typingsSlinky.gatsby.AnonNodeIdString
+import typingsSlinky.gatsby.AnonPath
 import typingsSlinky.gatsby.AnonSchema
 import typingsSlinky.graphql.definitionMod.GraphQLOutputType
 import typingsSlinky.std.Record
@@ -77,7 +77,7 @@ trait Actions extends js.Object {
   def deleteNodes(nodes: js.Array[String]): Unit = js.native
   def deleteNodes(nodes: js.Array[String], plugin: ActionPlugin): Unit = js.native
   /** @see https://www.gatsbyjs.org/docs/actions/#deletePage */
-  def deletePage(args: AnonComponent): Unit = js.native
+  def deletePage(args: AnonPath): Unit = js.native
   /** @see https://www.gatsbyjs.org/docs/actions/#endJob */
   def endJob(job: AnonId): Unit = js.native
   def endJob(job: AnonId, plugin: ActionPlugin): Unit = js.native

@@ -15,16 +15,14 @@ trait LogLevel extends js.Object
 
 object LogLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.builderUtil.builderUtilStrings.debug = "debug".asInstanceOf[typingsSlinky.builderUtil.builderUtilStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.builderUtil.builderUtilStrings.debug = this.cast("debug")
+  def error: typingsSlinky.builderUtil.builderUtilStrings.error = "error".asInstanceOf[typingsSlinky.builderUtil.builderUtilStrings.error]
   @scala.inline
-  def error: typingsSlinky.builderUtil.builderUtilStrings.error = this.cast("error")
+  def info: typingsSlinky.builderUtil.builderUtilStrings.info = "info".asInstanceOf[typingsSlinky.builderUtil.builderUtilStrings.info]
   @scala.inline
-  def info: typingsSlinky.builderUtil.builderUtilStrings.info = this.cast("info")
+  def notice: typingsSlinky.builderUtil.builderUtilStrings.notice = "notice".asInstanceOf[typingsSlinky.builderUtil.builderUtilStrings.notice]
   @scala.inline
-  def notice: typingsSlinky.builderUtil.builderUtilStrings.notice = this.cast("notice")
-  @scala.inline
-  def warn: typingsSlinky.builderUtil.builderUtilStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.builderUtil.builderUtilStrings.warn = "warn".asInstanceOf[typingsSlinky.builderUtil.builderUtilStrings.warn]
 }
 

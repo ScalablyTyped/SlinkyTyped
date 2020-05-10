@@ -82,7 +82,7 @@ class View protected () extends js.Object {
     * The set of remote documents that the server has told us belongs to the target associated with
     * this view.
     */
-  def syncedDocuments(): DocumentKeySet_ = js.native
+  def syncedDocuments: DocumentKeySet_ = js.native
   /**
     * Update the in-memory state of the current view with the state read from
     * persistence.

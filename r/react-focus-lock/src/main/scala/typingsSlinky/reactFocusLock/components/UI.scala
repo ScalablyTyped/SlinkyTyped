@@ -1,14 +1,13 @@
 package typingsSlinky.reactFocusLock.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
+import typingsSlinky.reactFocusLock.AnonChildren
 import typingsSlinky.reactFocusLock.ReactFocusLockPropsReactN
 import typingsSlinky.reactFocusLock.reactFocusLockStrings.tail
 import typingsSlinky.std.FocusOptions
@@ -17,44 +16,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object UI
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Ref[js.Any] with js.Object] {
+object UI {
   @JSImport("react-focus-lock/UI/UI", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, className, disabled */
-  def apply(
-    sideCar: ReactComponentClass[_],
-    allowTextSelection: js.UndefOr[Boolean] = js.undefined,
-    as: String | ReactElement = null,
-    group: String = null,
-    lockProps: Record[String, _] = null,
-    noFocusGuards: Boolean | tail = null,
-    onActivation: /* node */ HTMLElement => Unit = null,
-    onDeactivation: /* node */ HTMLElement => Unit = null,
-    persistentFocus: js.UndefOr[Boolean] = js.undefined,
-    returnFocus: Boolean | FocusOptions = null,
-    shards: js.Array[ReactRef[_] | HTMLElement] = null,
-    whiteList: /* activeElement */ HTMLElement => Boolean = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = {
-    val __obj = js.Dynamic.literal(sideCar = sideCar.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowTextSelection)) __obj.updateDynamic("allowTextSelection")(allowTextSelection.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (lockProps != null) __obj.updateDynamic("lockProps")(lockProps.asInstanceOf[js.Any])
-    if (noFocusGuards != null) __obj.updateDynamic("noFocusGuards")(noFocusGuards.asInstanceOf[js.Any])
-    if (onActivation != null) __obj.updateDynamic("onActivation")(js.Any.fromFunction1(onActivation))
-    if (onDeactivation != null) __obj.updateDynamic("onDeactivation")(js.Any.fromFunction1(onDeactivation))
-    if (!js.isUndefined(persistentFocus)) __obj.updateDynamic("persistentFocus")(persistentFocus.asInstanceOf[js.Any])
-    if (returnFocus != null) __obj.updateDynamic("returnFocus")(returnFocus.asInstanceOf[js.Any])
-    if (shards != null) __obj.updateDynamic("shards")(shards.asInstanceOf[js.Any])
-    if (whiteList != null) __obj.updateDynamic("whiteList")(js.Any.fromFunction1(whiteList))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+    @scala.inline
+    def allowTextSelection(value: Boolean): this.type = set("allowTextSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def asFunctionComponent(value: ReactComponentClass[(Record[String, _]) with AnonChildren]): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def asComponentClass(value: ReactComponentClass[(Record[String, _]) with AnonChildren]): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def as(value: String | ReactElement): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def group(value: String): this.type = set("group", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lockProps(value: Record[String, _]): this.type = set("lockProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noFocusGuards(value: Boolean | tail): this.type = set("noFocusGuards", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onActivation(value: /* node */ HTMLElement => Unit): this.type = set("onActivation", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDeactivation(value: /* node */ HTMLElement => Unit): this.type = set("onDeactivation", js.Any.fromFunction1(value))
+    @scala.inline
+    def persistentFocus(value: Boolean): this.type = set("persistentFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def returnFocus(value: Boolean | FocusOptions): this.type = set("returnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shards(value: js.Array[ReactRef[_] | HTMLElement]): this.type = set("shards", value.asInstanceOf[js.Any])
+    @scala.inline
+    def whiteList(value: /* activeElement */ HTMLElement => Boolean): this.type = set("whiteList", js.Any.fromFunction1(value))
   }
-  type Props = ReactFocusLockPropsReactN
+  
+  def withProps(p: ReactFocusLockPropsReactN): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(sideCar: ReactComponentClass[_]): Builder = {
+    val __props = js.Dynamic.literal(sideCar = sideCar.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactFocusLockPropsReactN]))
+  }
 }
 

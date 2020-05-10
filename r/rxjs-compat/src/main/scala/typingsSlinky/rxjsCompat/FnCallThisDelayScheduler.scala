@@ -1,6 +1,5 @@
 package typingsSlinky.rxjsCompat
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,9 +11,9 @@ trait FnCallThisDelayScheduler extends js.Object {
     delay: Double,
     scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
   ): js.Any = js.native
-  def apply[T](delay: Date): js.Any = js.native
+  def apply[T](delay: js.Date): js.Any = js.native
   def apply[T](
-    delay: Date,
+    delay: js.Date,
     scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
   ): js.Any = js.native
 }

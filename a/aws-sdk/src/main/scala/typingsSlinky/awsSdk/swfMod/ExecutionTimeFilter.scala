@@ -18,10 +18,35 @@ trait ExecutionTimeFilter extends js.Object {
 
 object ExecutionTimeFilter {
   @scala.inline
-  def apply(oldestDate: js.Date, latestDate: js.Date = null): ExecutionTimeFilter = {
+  def apply(oldestDate: js.Date): ExecutionTimeFilter = {
     val __obj = js.Dynamic.literal(oldestDate = oldestDate.asInstanceOf[js.Any])
-    if (latestDate != null) __obj.updateDynamic("latestDate")(latestDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutionTimeFilter]
   }
+  @scala.inline
+  implicit class ExecutionTimeFilterOps[Self <: ExecutionTimeFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOldestDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldestDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLatestDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

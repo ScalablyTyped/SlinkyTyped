@@ -12,15 +12,13 @@ trait JSDocTag extends js.Object
 
 object JSDocTag {
   @scala.inline
-  def AnonTagName(tagName: JSDocTagName | String, text: String = null): JSDocTag = {
+  def AnonTagName(tagName: JSDocTagName | String): JSDocTag = {
     val __obj = js.Dynamic.literal(tagName = tagName.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSDocTag]
   }
   @scala.inline
-  def AnonText(text: String, tagName: js.UndefOr[scala.Nothing] = js.undefined): JSDocTag = {
+  def AnonText(text: String): JSDocTag = {
     val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    if (!js.isUndefined(tagName)) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSDocTag]
   }
 }

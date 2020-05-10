@@ -18,11 +18,41 @@ trait ListAllowedNodeTypeModificationsMessage extends js.Object {
 
 object ListAllowedNodeTypeModificationsMessage {
   @scala.inline
-  def apply(CacheClusterId: String = null, ReplicationGroupId: String = null): ListAllowedNodeTypeModificationsMessage = {
+  def apply(): ListAllowedNodeTypeModificationsMessage = {
     val __obj = js.Dynamic.literal()
-    if (CacheClusterId != null) __obj.updateDynamic("CacheClusterId")(CacheClusterId.asInstanceOf[js.Any])
-    if (ReplicationGroupId != null) __obj.updateDynamic("ReplicationGroupId")(ReplicationGroupId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAllowedNodeTypeModificationsMessage]
   }
+  @scala.inline
+  implicit class ListAllowedNodeTypeModificationsMessageOps[Self <: ListAllowedNodeTypeModificationsMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCacheClusterId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheClusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheClusterId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheClusterId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationGroupId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

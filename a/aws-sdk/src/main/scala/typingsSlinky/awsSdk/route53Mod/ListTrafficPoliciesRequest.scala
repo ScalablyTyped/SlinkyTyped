@@ -18,11 +18,41 @@ trait ListTrafficPoliciesRequest extends js.Object {
 
 object ListTrafficPoliciesRequest {
   @scala.inline
-  def apply(MaxItems: PageMaxItems = null, TrafficPolicyIdMarker: TrafficPolicyId = null): ListTrafficPoliciesRequest = {
+  def apply(): ListTrafficPoliciesRequest = {
     val __obj = js.Dynamic.literal()
-    if (MaxItems != null) __obj.updateDynamic("MaxItems")(MaxItems.asInstanceOf[js.Any])
-    if (TrafficPolicyIdMarker != null) __obj.updateDynamic("TrafficPolicyIdMarker")(TrafficPolicyIdMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTrafficPoliciesRequest]
   }
+  @scala.inline
+  implicit class ListTrafficPoliciesRequestOps[Self <: ListTrafficPoliciesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxItems(value: PageMaxItems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrafficPolicyIdMarker(value: TrafficPolicyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyIdMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrafficPolicyIdMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficPolicyIdMarker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

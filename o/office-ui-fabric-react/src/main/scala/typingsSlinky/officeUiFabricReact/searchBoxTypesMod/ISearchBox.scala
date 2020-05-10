@@ -4,23 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISearchBox extends js.Object {
   /**
     * Sets focus inside the search input box.
     */
-  def focus(): Unit
+  def focus(): Unit = js.native
   /**
     * Returns whether or not the SearchBox has focus
     */
-  def hasFocus(): Boolean
+  def hasFocus(): Boolean = js.native
 }
 
 object ISearchBox {
   @scala.inline
   def apply(focus: () => Unit, hasFocus: () => Boolean): ISearchBox = {
     val __obj = js.Dynamic.literal(focus = js.Any.fromFunction0(focus), hasFocus = js.Any.fromFunction0(hasFocus))
-  
     __obj.asInstanceOf[ISearchBox]
   }
+  @scala.inline
+  implicit class ISearchBoxOps[Self <: ISearchBox] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFocus(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHasFocus(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasFocus")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

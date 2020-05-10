@@ -1,14 +1,16 @@
 package typingsSlinky.storybookComponents.components
 
+import typingsSlinky.storybookComponents.fieldMod.FieldProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormField extends SharedApply_FieldProps1607549675 {
+object FormField {
   @JSImport("@storybook/components", "Form.Field")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: FieldProps): SharedBuilder_FieldProps1274675511 = new SharedBuilder_FieldProps1274675511(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FormField.type): SharedBuilder_FieldProps1274675511 = new SharedBuilder_FieldProps1274675511(js.Array(this.component, js.Dictionary.empty))()
 }
 

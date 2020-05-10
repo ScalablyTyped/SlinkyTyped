@@ -13,7 +13,6 @@ import typingsSlinky.popperJs.mod.Modifiers
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactDatepicker.reactDatepickerStrings.scroll
 import typingsSlinky.reactDatepicker.reactDatepickerStrings.select
-import typingsSlinky.std.Date
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -156,8 +155,8 @@ object mod extends js.Object {
     var yearDropdownItemNumber: js.UndefOr[Double] = js.native
     def onChange(): Unit = js.native
     def onChange(date: Null, event: SyntheticEvent[Event_, _]): Unit = js.native
-    def onChange(date: Date): Unit = js.native
-    def onChange(date: Date, event: SyntheticEvent[Event_, _]): Unit = js.native
+    def onChange(date: js.Date): Unit = js.native
+    def onChange(date: js.Date, event: SyntheticEvent[Event_, _]): Unit = js.native
   }
   
   @js.native

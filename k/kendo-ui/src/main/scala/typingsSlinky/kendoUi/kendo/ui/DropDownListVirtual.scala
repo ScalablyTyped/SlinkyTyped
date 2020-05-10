@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DropDownListVirtual extends js.Object {
-  var itemHeight: js.UndefOr[Double] = js.undefined
-  var mapValueTo: js.UndefOr[String] = js.undefined
-  var valueMapper: js.UndefOr[js.Function] = js.undefined
+  var itemHeight: js.UndefOr[Double] = js.native
+  var mapValueTo: js.UndefOr[String] = js.native
+  var valueMapper: js.UndefOr[js.Function] = js.native
 }
 
 object DropDownListVirtual {
   @scala.inline
-  def apply(itemHeight: Int | Double = null, mapValueTo: String = null, valueMapper: js.Function = null): DropDownListVirtual = {
+  def apply(): DropDownListVirtual = {
     val __obj = js.Dynamic.literal()
-    if (itemHeight != null) __obj.updateDynamic("itemHeight")(itemHeight.asInstanceOf[js.Any])
-    if (mapValueTo != null) __obj.updateDynamic("mapValueTo")(mapValueTo.asInstanceOf[js.Any])
-    if (valueMapper != null) __obj.updateDynamic("valueMapper")(valueMapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropDownListVirtual]
   }
+  @scala.inline
+  implicit class DropDownListVirtualOps[Self <: DropDownListVirtual] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItemHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapValueTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapValueTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapValueTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapValueTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueMapper(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMapper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueMapper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueMapper")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

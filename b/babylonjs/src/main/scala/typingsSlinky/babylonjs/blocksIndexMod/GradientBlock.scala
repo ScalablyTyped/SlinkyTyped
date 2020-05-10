@@ -1,0 +1,17 @@
+package typingsSlinky.babylonjs.blocksIndexMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("babylonjs/Materials/Node/Blocks/index", "GradientBlock")
+@js.native
+class GradientBlock protected ()
+  extends typingsSlinky.babylonjs.gradientBlockMod.GradientBlock {
+  /**
+    * Creates a new GradientBlock
+    * @param name defines the block name
+    */
+  def this(name: String) = this()
+}
+

@@ -16,16 +16,14 @@ trait WindowsArchitecture extends js.Object
 
 object WindowsArchitecture {
   @scala.inline
-  def arm: typingsSlinky.microsoftGraph.microsoftGraphStrings.arm = this.cast("arm")
+  def arm: typingsSlinky.microsoftGraph.microsoftGraphStrings.arm = "arm".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.arm]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def neutral: typingsSlinky.microsoftGraph.microsoftGraphStrings.neutral = "neutral".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.neutral]
   @scala.inline
-  def neutral: typingsSlinky.microsoftGraph.microsoftGraphStrings.neutral = this.cast("neutral")
+  def none: none_ = "none".asInstanceOf[none_]
   @scala.inline
-  def none: none_ = this.cast("none")
+  def x64: typingsSlinky.microsoftGraph.microsoftGraphStrings.x64 = "x64".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.x64]
   @scala.inline
-  def x64: typingsSlinky.microsoftGraph.microsoftGraphStrings.x64 = this.cast("x64")
-  @scala.inline
-  def x86: typingsSlinky.microsoftGraph.microsoftGraphStrings.x86 = this.cast("x86")
+  def x86: typingsSlinky.microsoftGraph.microsoftGraphStrings.x86 = "x86".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.x86]
 }
 

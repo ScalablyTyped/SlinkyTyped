@@ -5,45 +5,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait DeclareOpaqueType_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait DeclareOpaqueType_
   extends Declaration
      with BaseNode
      with Flow
      with FlowDeclaration
      with Statement {
-  var id: Identifier_
-  var supertype: FlowType | Null
-  var typeParameters: TypeParameterDeclaration_ | Null
+  var id: Identifier_ = js.native
+  var supertype: FlowType | Null = js.native
+  var typeParameters: TypeParameterDeclaration_ | Null = js.native
   @JSName("type")
-  var type_DeclareOpaqueType_ : DeclareOpaqueType
+  var type_DeclareOpaqueType_ : DeclareOpaqueType = js.native
 }
 
 object DeclareOpaqueType_ {
   @scala.inline
-  def apply(
-    id: Identifier_,
-    `type`: DeclareOpaqueType,
-    end: Int | Double = null,
-    innerComments: js.Array[Comment] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    start: Int | Double = null,
-    supertype: FlowType = null,
-    trailingComments: js.Array[Comment] = null,
-    typeParameters: TypeParameterDeclaration_ = null
-  ): DeclareOpaqueType_ = {
+  def apply(id: Identifier_, `type`: DeclareOpaqueType): DeclareOpaqueType_ = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (supertype != null) __obj.updateDynamic("supertype")(supertype.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
-    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeclareOpaqueType_]
   }
+  @scala.inline
+  implicit class DeclareOpaqueType_Ops[Self <: DeclareOpaqueType_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: Identifier_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: DeclareOpaqueType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupertype(value: FlowType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supertype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupertypeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supertype")(null)
+        ret
+    }
+    @scala.inline
+    def withTypeParameters(value: TypeParameterDeclaration_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeParametersNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(null)
+        ret
+    }
+  }
+  
 }
 

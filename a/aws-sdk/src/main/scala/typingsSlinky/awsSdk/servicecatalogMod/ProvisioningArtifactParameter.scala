@@ -34,22 +34,89 @@ trait ProvisioningArtifactParameter extends js.Object {
 
 object ProvisioningArtifactParameter {
   @scala.inline
-  def apply(
-    DefaultValue: DefaultValue = null,
-    Description: Description = null,
-    IsNoEcho: js.UndefOr[Boolean] = js.undefined,
-    ParameterConstraints: ParameterConstraints = null,
-    ParameterKey: ParameterKey = null,
-    ParameterType: ParameterType = null
-  ): ProvisioningArtifactParameter = {
+  def apply(): ProvisioningArtifactParameter = {
     val __obj = js.Dynamic.literal()
-    if (DefaultValue != null) __obj.updateDynamic("DefaultValue")(DefaultValue.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsNoEcho)) __obj.updateDynamic("IsNoEcho")(IsNoEcho.asInstanceOf[js.Any])
-    if (ParameterConstraints != null) __obj.updateDynamic("ParameterConstraints")(ParameterConstraints.asInstanceOf[js.Any])
-    if (ParameterKey != null) __obj.updateDynamic("ParameterKey")(ParameterKey.asInstanceOf[js.Any])
-    if (ParameterType != null) __obj.updateDynamic("ParameterType")(ParameterType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisioningArtifactParameter]
   }
+  @scala.inline
+  implicit class ProvisioningArtifactParameterOps[Self <: ProvisioningArtifactParameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultValue(value: DefaultValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsNoEcho(value: NoEcho): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsNoEcho")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsNoEcho: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsNoEcho")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterConstraints(value: ParameterConstraints): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterConstraints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterConstraints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterConstraints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterKey(value: ParameterKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterType(value: ParameterType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

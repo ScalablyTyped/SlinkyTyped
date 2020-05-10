@@ -1,6 +1,5 @@
 package typingsSlinky.awsLambda.handlerMod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +25,7 @@ trait Context extends js.Object {
   def done(error: js.Error, result: js.Any): Unit = js.native
   def fail(error: String): Unit = js.native
   /** @deprecated Use handler callback with first argument or reject a promise result */
-  def fail(error: Error): Unit = js.native
+  def fail(error: js.Error): Unit = js.native
   def getRemainingTimeInMillis(): Double = js.native
   /** @deprecated Use handler callback with second argument or resolve a promise result */
   def succeed(messageOrObject: js.Any): Unit = js.native

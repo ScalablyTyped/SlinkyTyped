@@ -25,14 +25,41 @@ trait SchemaGoogleDevtoolsRemoteexecutionV1testTree extends js.Object {
 
 object SchemaGoogleDevtoolsRemoteexecutionV1testTree {
   @scala.inline
-  def apply(
-    children: js.Array[SchemaGoogleDevtoolsRemoteexecutionV1testDirectory] = null,
-    root: SchemaGoogleDevtoolsRemoteexecutionV1testDirectory = null
-  ): SchemaGoogleDevtoolsRemoteexecutionV1testTree = {
+  def apply(): SchemaGoogleDevtoolsRemoteexecutionV1testTree = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteexecutionV1testTree]
   }
+  @scala.inline
+  implicit class SchemaGoogleDevtoolsRemoteexecutionV1testTreeOps[Self <: SchemaGoogleDevtoolsRemoteexecutionV1testTree] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: js.Array[SchemaGoogleDevtoolsRemoteexecutionV1testDirectory]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: SchemaGoogleDevtoolsRemoteexecutionV1testDirectory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

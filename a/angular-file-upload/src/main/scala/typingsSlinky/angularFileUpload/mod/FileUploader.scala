@@ -2,9 +2,9 @@ package typingsSlinky.angularFileUpload.mod
 
 import org.scalajs.dom.experimental.Headers
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.std.File
-import typingsSlinky.std.FileList
-import typingsSlinky.std.HTMLInputElement
+import org.scalajs.dom.raw.File
+import org.scalajs.dom.raw.FileList
+import org.scalajs.dom.raw.HTMLInputElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

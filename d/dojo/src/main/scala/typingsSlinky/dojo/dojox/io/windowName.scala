@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait windowName extends js.Object {
   /**
     * Provides secure cross-domain request capability.
@@ -49,15 +50,28 @@ trait windowName extends js.Object {
     * @param method The method to use to send the request, GET or POST
     * @param args See dojo.xhrargs.authElement: DOMNode?By providing an authElement, this indicates that windowName should use theauthorized window.name protocol, relying onthe loaded XD resource to return to the provided return URL on completionof authorization/authentication. The provided authElement will be used to placethe iframe in, so the user can interact with the server resource for authenticationand/or authorization to access the resource.args.onAuthLoad: Function?When using authorized access to resources, this function will be called when theauthorization page has been loaded. (When authorization is actually completed,the deferred callback function is called with the result). The primary use for thisis to make the authElement visible to the user once the resource has loaded(this can be preferable to showing the iframe while the resource is loadingsince it may not require authorization, it may simply return the resource).
     */
-  def send(method: String, args: js.Object): js.Any
+  def send(method: String, args: js.Object): js.Any = js.native
 }
 
 object windowName {
   @scala.inline
   def apply(send: (String, js.Object) => js.Any): windowName = {
     val __obj = js.Dynamic.literal(send = js.Any.fromFunction2(send))
-  
     __obj.asInstanceOf[windowName]
   }
+  @scala.inline
+  implicit class windowNameOps[Self <: windowName] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSend(value: (String, js.Object) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

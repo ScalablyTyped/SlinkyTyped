@@ -4,18 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UserOrOrg extends UserOrOrgSummary {
-  var blog: String
-  var company: String
-  var created_at: js.Date
-  var email: String
-  var followers: Double
-  var following: Double
-  var location: String
-  var name: String
-  var public_gists: Double
-  var public_repos: Double
-  var updated_at: js.Date
+  var blog: String = js.native
+  var company: String = js.native
+  var created_at: js.Date = js.native
+  var email: String = js.native
+  var followers: Double = js.native
+  var following: Double = js.native
+  var location: String = js.native
+  var name: String = js.native
+  var public_gists: Double = js.native
+  var public_repos: Double = js.native
+  var updated_at: js.Date = js.native
 }
 
 object UserOrOrg {
@@ -44,5 +45,79 @@ object UserOrOrg {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserOrOrg]
   }
+  @scala.inline
+  implicit class UserOrOrgOps[Self <: UserOrOrg] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlog(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompany(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("company")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreated_at(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFollowers(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFollowing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("following")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublic_gists(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("public_gists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublic_repos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("public_repos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdated_at(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

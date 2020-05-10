@@ -1,33 +1,31 @@
 package typingsSlinky.reactNativeMaterialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeMaterialUi.AnonDefaultActionsContainer
 import typingsSlinky.reactNativeMaterialUi.mod.DialogDefaultActionsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DialogDefaultActions
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeMaterialUi.mod.DialogDefaultActions] {
+object DialogDefaultActions {
   @JSImport("react-native-material-ui", "DialogDefaultActions")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    actions: js.Array[String],
-    onActionPress: String => Unit,
-    style: AnonDefaultActionsContainer = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.DialogDefaultActions] = {
-    val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], onActionPress = js.Any.fromFunction1(onActionPress))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.DialogDefaultActions] {
+    @scala.inline
+    def style(value: AnonDefaultActionsContainer): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = DialogDefaultActionsProps
+  
+  def withProps(p: DialogDefaultActionsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(actions: js.Array[String], onActionPress: String => Unit): Builder = {
+    val __props = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], onActionPress = js.Any.fromFunction1(onActionPress))
+    new Builder(js.Array(this.component, __props.asInstanceOf[DialogDefaultActionsProps]))
+  }
 }
 

@@ -22,16 +22,53 @@ trait DescribeOrganizationConfigRulesRequest extends js.Object {
 
 object DescribeOrganizationConfigRulesRequest {
   @scala.inline
-  def apply(
-    Limit: Int | Double = null,
-    NextToken: String = null,
-    OrganizationConfigRuleNames: OrganizationConfigRuleNames = null
-  ): DescribeOrganizationConfigRulesRequest = {
+  def apply(): DescribeOrganizationConfigRulesRequest = {
     val __obj = js.Dynamic.literal()
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (OrganizationConfigRuleNames != null) __obj.updateDynamic("OrganizationConfigRuleNames")(OrganizationConfigRuleNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeOrganizationConfigRulesRequest]
   }
+  @scala.inline
+  implicit class DescribeOrganizationConfigRulesRequestOps[Self <: DescribeOrganizationConfigRulesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLimit(value: CosmosPageLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationConfigRuleNames(value: OrganizationConfigRuleNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfigRuleNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationConfigRuleNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationConfigRuleNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,7 +16,7 @@ object int64TensorsMod extends js.Object {
     val shape: Shape = js.native
     val value: Double = js.native
     /** Get the Int32Array that represents the int64 value. */
-    val valueArray: scala.scalajs.js.typedarray.Int32Array = js.native
+    val valueArray: js.typedarray.Int32Array = js.native
     var valueArray_ : js.Any = js.native
   }
   

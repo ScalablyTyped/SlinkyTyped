@@ -18,9 +18,9 @@ object mod extends js.Object {
        with Instantiable2[/* message */ String, /* obj */ js.Any, T]
   
   def apply(): Error[Error[js.Error]] = js.native
-  def apply[T /* <: Error[Error[js.Error]] */](Target: Error[Error[Err]]): T = js.native
-  def apply[T /* <: Error[Error[js.Error]] */](Target: Error[Error[Err]], name: String): T = js.native
-  def apply[T /* <: Error[Error[js.Error]] */](Target: Error[Error[Err]], name: String, properties: js.Any): T = js.native
+  def apply[T /* <: Error[Error[js.Error]] */](Target: Error[Error[js.Error]]): T = js.native
+  def apply[T /* <: Error[Error[js.Error]] */](Target: Error[Error[js.Error]], name: String): T = js.native
+  def apply[T /* <: Error[Error[js.Error]] */](Target: Error[Error[js.Error]], name: String, properties: js.Any): T = js.native
   def apply[T /* <: Error[Error[js.Error]] */](name: String): T = js.native
   def apply[T /* <: Error[Error[js.Error]] */](name: String, properties: js.Any): T = js.native
   type Err = js.Error

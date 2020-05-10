@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InjectedOnClickOutProps extends js.Object {
-  def disableOnClickOutside(): Unit
-  def enableOnClickOutside(): Unit
+  def disableOnClickOutside(): Unit = js.native
+  def enableOnClickOutside(): Unit = js.native
 }
 
 object InjectedOnClickOutProps {
   @scala.inline
   def apply(disableOnClickOutside: () => Unit, enableOnClickOutside: () => Unit): InjectedOnClickOutProps = {
     val __obj = js.Dynamic.literal(disableOnClickOutside = js.Any.fromFunction0(disableOnClickOutside), enableOnClickOutside = js.Any.fromFunction0(enableOnClickOutside))
-  
     __obj.asInstanceOf[InjectedOnClickOutProps]
   }
+  @scala.inline
+  implicit class InjectedOnClickOutPropsOps[Self <: InjectedOnClickOutProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisableOnClickOutside(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOnClickOutside")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEnableOnClickOutside(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableOnClickOutside")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

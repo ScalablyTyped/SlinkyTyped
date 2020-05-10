@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("sip.js/lib/Constants", "C.CANCEL")
 @js.native
 object CANCEL
-  extends TopLevel[typingsSlinky.sipJs.sipJsStrings.CANCEL]
+  extends TopLevel[/* "0.15.10" */ String]
 

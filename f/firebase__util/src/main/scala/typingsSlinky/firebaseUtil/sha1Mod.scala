@@ -1,6 +1,5 @@
 package typingsSlinky.firebaseUtil
 
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,8 +50,8 @@ object sha1Mod extends js.Object {
       */
     def compress_(buf: js.Array[Double]): Unit = js.native
     def compress_(buf: js.Array[Double], offset: Double): Unit = js.native
-    def compress_(buf: Uint8Array): Unit = js.native
-    def compress_(buf: Uint8Array, offset: Double): Unit = js.native
+    def compress_(buf: js.typedarray.Uint8Array): Unit = js.native
+    def compress_(buf: js.typedarray.Uint8Array, offset: Double): Unit = js.native
     /** @override */
     def digest(): js.Array[Double] = js.native
     def reset(): Unit = js.native
@@ -61,8 +60,8 @@ object sha1Mod extends js.Object {
     def update(bytes: String, length: Double): Unit = js.native
     def update(bytes: js.Array[Double]): Unit = js.native
     def update(bytes: js.Array[Double], length: Double): Unit = js.native
-    def update(bytes: Uint8Array): Unit = js.native
-    def update(bytes: Uint8Array, length: Double): Unit = js.native
+    def update(bytes: js.typedarray.Uint8Array): Unit = js.native
+    def update(bytes: js.typedarray.Uint8Array, length: Double): Unit = js.native
   }
   
 }

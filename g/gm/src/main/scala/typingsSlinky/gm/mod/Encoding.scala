@@ -22,30 +22,28 @@ trait Encoding extends js.Object
 
 object Encoding {
   @scala.inline
-  def AdobeCustom: typingsSlinky.gm.gmStrings.AdobeCustom = this.cast("AdobeCustom")
+  def AdobeCustom: typingsSlinky.gm.gmStrings.AdobeCustom = "AdobeCustom".asInstanceOf[typingsSlinky.gm.gmStrings.AdobeCustom]
   @scala.inline
-  def AdobeExpert: typingsSlinky.gm.gmStrings.AdobeExpert = this.cast("AdobeExpert")
+  def AdobeExpert: typingsSlinky.gm.gmStrings.AdobeExpert = "AdobeExpert".asInstanceOf[typingsSlinky.gm.gmStrings.AdobeExpert]
   @scala.inline
-  def AdobeStandard: typingsSlinky.gm.gmStrings.AdobeStandard = this.cast("AdobeStandard")
+  def AdobeStandard: typingsSlinky.gm.gmStrings.AdobeStandard = "AdobeStandard".asInstanceOf[typingsSlinky.gm.gmStrings.AdobeStandard]
   @scala.inline
-  def AppleRoman: typingsSlinky.gm.gmStrings.AppleRoman = this.cast("AppleRoman")
+  def AppleRoman: typingsSlinky.gm.gmStrings.AppleRoman = "AppleRoman".asInstanceOf[typingsSlinky.gm.gmStrings.AppleRoman]
   @scala.inline
-  def BIG5: typingsSlinky.gm.gmStrings.BIG5 = this.cast("BIG5")
+  def BIG5: typingsSlinky.gm.gmStrings.BIG5 = "BIG5".asInstanceOf[typingsSlinky.gm.gmStrings.BIG5]
   @scala.inline
-  def GB2312: typingsSlinky.gm.gmStrings.GB2312 = this.cast("GB2312")
+  def GB2312: typingsSlinky.gm.gmStrings.GB2312 = "GB2312".asInstanceOf[typingsSlinky.gm.gmStrings.GB2312]
   @scala.inline
-  def `Latin 2`: typingsSlinky.gm.gmStrings.`Latin 2` = this.cast("Latin 2")
+  def `Latin 2`: typingsSlinky.gm.gmStrings.`Latin 2` = ("Latin 2").asInstanceOf[typingsSlinky.gm.gmStrings.`Latin 2`]
   @scala.inline
-  def None: typingsSlinky.gm.gmStrings.None = this.cast("None")
+  def None: typingsSlinky.gm.gmStrings.None = "None".asInstanceOf[typingsSlinky.gm.gmStrings.None]
   @scala.inline
-  def SJIScode: typingsSlinky.gm.gmStrings.SJIScode = this.cast("SJIScode")
+  def SJIScode: typingsSlinky.gm.gmStrings.SJIScode = "SJIScode".asInstanceOf[typingsSlinky.gm.gmStrings.SJIScode]
   @scala.inline
-  def Symbol: typingsSlinky.gm.gmStrings.Symbol = this.cast("Symbol")
+  def Symbol: typingsSlinky.gm.gmStrings.Symbol = "Symbol".asInstanceOf[typingsSlinky.gm.gmStrings.Symbol]
   @scala.inline
-  def Unicode: typingsSlinky.gm.gmStrings.Unicode = this.cast("Unicode")
+  def Unicode: typingsSlinky.gm.gmStrings.Unicode = "Unicode".asInstanceOf[typingsSlinky.gm.gmStrings.Unicode]
   @scala.inline
-  def Wansung: typingsSlinky.gm.gmStrings.Wansung = this.cast("Wansung")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Wansung: typingsSlinky.gm.gmStrings.Wansung = "Wansung".asInstanceOf[typingsSlinky.gm.gmStrings.Wansung]
 }
 

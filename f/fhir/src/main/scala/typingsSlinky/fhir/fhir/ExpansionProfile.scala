@@ -7,275 +7,642 @@ import scala.scalajs.js.annotation._
 /**
   * Defines behaviour and contraints on the ValueSet Expansion operation
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait ExpansionProfile extends DomainResource {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
+trait ExpansionProfile extends DomainResource {
   /**
     * Contains extended information for property 'activeOnly'.
     */
-  var _activeOnly: js.UndefOr[Element] = js.undefined
+  var _activeOnly: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'date'.
     */
-  var _date: js.UndefOr[Element] = js.undefined
+  var _date: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.undefined
+  var _description: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'displayLanguage'.
     */
-  var _displayLanguage: js.UndefOr[Element] = js.undefined
+  var _displayLanguage: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'excludeNested'.
     */
-  var _excludeNested: js.UndefOr[Element] = js.undefined
+  var _excludeNested: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'excludeNotForUI'.
     */
-  var _excludeNotForUI: js.UndefOr[Element] = js.undefined
+  var _excludeNotForUI: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'excludePostCoordinated'.
     */
-  var _excludePostCoordinated: js.UndefOr[Element] = js.undefined
+  var _excludePostCoordinated: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'experimental'.
     */
-  var _experimental: js.UndefOr[Element] = js.undefined
+  var _experimental: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'includeDefinition'.
     */
-  var _includeDefinition: js.UndefOr[Element] = js.undefined
+  var _includeDefinition: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'includeDesignations'.
     */
-  var _includeDesignations: js.UndefOr[Element] = js.undefined
+  var _includeDesignations: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'limitedExpansion'.
     */
-  var _limitedExpansion: js.UndefOr[Element] = js.undefined
+  var _limitedExpansion: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.undefined
+  var _name: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'publisher'.
     */
-  var _publisher: js.UndefOr[Element] = js.undefined
+  var _publisher: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.undefined
+  var _status: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'url'.
     */
-  var _url: js.UndefOr[Element] = js.undefined
+  var _url: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'version'.
     */
-  var _version: js.UndefOr[Element] = js.undefined
+  var _version: js.UndefOr[Element] = js.native
   /**
     * Include or exclude inactive concepts in the expansion
     */
-  var activeOnly: js.UndefOr[Boolean] = js.undefined
+  var activeOnly: js.UndefOr[Boolean] = js.native
   /**
     * Contact details for the publisher
     */
-  var contact: js.UndefOr[js.Array[ContactDetail]] = js.undefined
+  var contact: js.UndefOr[js.Array[ContactDetail]] = js.native
   /**
     * Date this was last changed
     */
-  var date: js.UndefOr[dateTime] = js.undefined
+  var date: js.UndefOr[dateTime] = js.native
   /**
     * Natural language description of the expansion profile
     */
-  var description: js.UndefOr[markdown] = js.undefined
+  var description: js.UndefOr[markdown] = js.native
   /**
     * When the expansion profile imposes designation contraints
     */
-  var designation: js.UndefOr[ExpansionProfileDesignation] = js.undefined
+  var designation: js.UndefOr[ExpansionProfileDesignation] = js.native
   /**
     * Specify the language for the display element of codes in the value set expansion
     */
-  var displayLanguage: js.UndefOr[code] = js.undefined
+  var displayLanguage: js.UndefOr[code] = js.native
   /**
     * Nested codes in the expansion or not
     */
-  var excludeNested: js.UndefOr[Boolean] = js.undefined
+  var excludeNested: js.UndefOr[Boolean] = js.native
   /**
     * Include or exclude codes which cannot be rendered in user interfaces in the value set expansion
     */
-  var excludeNotForUI: js.UndefOr[Boolean] = js.undefined
+  var excludeNotForUI: js.UndefOr[Boolean] = js.native
   /**
     * Include or exclude codes which are post coordinated expressions in the value set expansion
     */
-  var excludePostCoordinated: js.UndefOr[Boolean] = js.undefined
+  var excludePostCoordinated: js.UndefOr[Boolean] = js.native
   /**
     * Systems/Versions to be exclude
     */
-  var excludedSystem: js.UndefOr[ExpansionProfileExcludedSystem] = js.undefined
+  var excludedSystem: js.UndefOr[ExpansionProfileExcludedSystem] = js.native
   /**
     * For testing purposes, not real usage
     */
-  var experimental: js.UndefOr[Boolean] = js.undefined
+  var experimental: js.UndefOr[Boolean] = js.native
   /**
     * Fix use of a code system to a particular version
     */
-  var fixedVersion: js.UndefOr[js.Array[ExpansionProfileFixedVersion]] = js.undefined
+  var fixedVersion: js.UndefOr[js.Array[ExpansionProfileFixedVersion]] = js.native
   /**
     * Additional identifier for the expansion profile
     */
-  var identifier: js.UndefOr[Identifier] = js.undefined
+  var identifier: js.UndefOr[Identifier] = js.native
   /**
     * Include or exclude the value set definition in the expansion
     */
-  var includeDefinition: js.UndefOr[Boolean] = js.undefined
+  var includeDefinition: js.UndefOr[Boolean] = js.native
   /**
     * Whether the expansion should include concept designations
     */
-  var includeDesignations: js.UndefOr[Boolean] = js.undefined
+  var includeDesignations: js.UndefOr[Boolean] = js.native
   /**
     * Intended jurisdiction for expansion profile (if applicable)
     */
-  var jurisdiction: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
+  var jurisdiction: js.UndefOr[js.Array[CodeableConcept]] = js.native
   /**
     * Controls behaviour of the value set expand operation when value sets are too large to be completely expanded
     */
-  var limitedExpansion: js.UndefOr[Boolean] = js.undefined
+  var limitedExpansion: js.UndefOr[Boolean] = js.native
   /**
     * Name for this expansion profile (computer friendly)
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Name of the publisher (organization or individual)
     */
-  var publisher: js.UndefOr[String] = js.undefined
+  var publisher: js.UndefOr[String] = js.native
   /**
     * draft | active | retired | unknown
     */
-  var status: code
+  var status: code = js.native
   /**
     * Logical URI to reference this expansion profile (globally unique)
     */
-  var url: js.UndefOr[uri] = js.undefined
+  var url: js.UndefOr[uri] = js.native
   /**
     * Context the content is intended to support
     */
-  var useContext: js.UndefOr[js.Array[UsageContext]] = js.undefined
+  var useContext: js.UndefOr[js.Array[UsageContext]] = js.native
   /**
     * Business version of the expansion profile
     */
-  var version: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.native
 }
 
 object ExpansionProfile {
   @scala.inline
-  def apply(
-    status: code,
-    _activeOnly: Element = null,
-    _date: Element = null,
-    _description: Element = null,
-    _displayLanguage: Element = null,
-    _excludeNested: Element = null,
-    _excludeNotForUI: Element = null,
-    _excludePostCoordinated: Element = null,
-    _experimental: Element = null,
-    _id: Element = null,
-    _implicitRules: Element = null,
-    _includeDefinition: Element = null,
-    _includeDesignations: Element = null,
-    _language: Element = null,
-    _limitedExpansion: Element = null,
-    _name: Element = null,
-    _publisher: Element = null,
-    _resourceType: Element = null,
-    _status: Element = null,
-    _url: Element = null,
-    _version: Element = null,
-    activeOnly: js.UndefOr[Boolean] = js.undefined,
-    contact: js.Array[ContactDetail] = null,
-    contained: js.Array[Resource] = null,
-    date: dateTime = null,
-    description: markdown = null,
-    designation: ExpansionProfileDesignation = null,
-    displayLanguage: code = null,
-    excludeNested: js.UndefOr[Boolean] = js.undefined,
-    excludeNotForUI: js.UndefOr[Boolean] = js.undefined,
-    excludePostCoordinated: js.UndefOr[Boolean] = js.undefined,
-    excludedSystem: ExpansionProfileExcludedSystem = null,
-    experimental: js.UndefOr[Boolean] = js.undefined,
-    extension: js.Array[Extension] = null,
-    fixedVersion: js.Array[ExpansionProfileFixedVersion] = null,
-    id: id = null,
-    identifier: Identifier = null,
-    implicitRules: uri = null,
-    includeDefinition: js.UndefOr[Boolean] = js.undefined,
-    includeDesignations: js.UndefOr[Boolean] = js.undefined,
-    jurisdiction: js.Array[CodeableConcept] = null,
-    language: code = null,
-    limitedExpansion: js.UndefOr[Boolean] = js.undefined,
-    meta: Meta = null,
-    modifierExtension: js.Array[Extension] = null,
-    name: String = null,
-    publisher: String = null,
-    resourceType: code = null,
-    text: Narrative = null,
-    url: uri = null,
-    useContext: js.Array[UsageContext] = null,
-    version: String = null
-  ): ExpansionProfile = {
+  def apply(status: code): ExpansionProfile = {
     val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    if (_activeOnly != null) __obj.updateDynamic("_activeOnly")(_activeOnly.asInstanceOf[js.Any])
-    if (_date != null) __obj.updateDynamic("_date")(_date.asInstanceOf[js.Any])
-    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
-    if (_displayLanguage != null) __obj.updateDynamic("_displayLanguage")(_displayLanguage.asInstanceOf[js.Any])
-    if (_excludeNested != null) __obj.updateDynamic("_excludeNested")(_excludeNested.asInstanceOf[js.Any])
-    if (_excludeNotForUI != null) __obj.updateDynamic("_excludeNotForUI")(_excludeNotForUI.asInstanceOf[js.Any])
-    if (_excludePostCoordinated != null) __obj.updateDynamic("_excludePostCoordinated")(_excludePostCoordinated.asInstanceOf[js.Any])
-    if (_experimental != null) __obj.updateDynamic("_experimental")(_experimental.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
-    if (_includeDefinition != null) __obj.updateDynamic("_includeDefinition")(_includeDefinition.asInstanceOf[js.Any])
-    if (_includeDesignations != null) __obj.updateDynamic("_includeDesignations")(_includeDesignations.asInstanceOf[js.Any])
-    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
-    if (_limitedExpansion != null) __obj.updateDynamic("_limitedExpansion")(_limitedExpansion.asInstanceOf[js.Any])
-    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
-    if (_publisher != null) __obj.updateDynamic("_publisher")(_publisher.asInstanceOf[js.Any])
-    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
-    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
-    if (_url != null) __obj.updateDynamic("_url")(_url.asInstanceOf[js.Any])
-    if (_version != null) __obj.updateDynamic("_version")(_version.asInstanceOf[js.Any])
-    if (!js.isUndefined(activeOnly)) __obj.updateDynamic("activeOnly")(activeOnly.asInstanceOf[js.Any])
-    if (contact != null) __obj.updateDynamic("contact")(contact.asInstanceOf[js.Any])
-    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (designation != null) __obj.updateDynamic("designation")(designation.asInstanceOf[js.Any])
-    if (displayLanguage != null) __obj.updateDynamic("displayLanguage")(displayLanguage.asInstanceOf[js.Any])
-    if (!js.isUndefined(excludeNested)) __obj.updateDynamic("excludeNested")(excludeNested.asInstanceOf[js.Any])
-    if (!js.isUndefined(excludeNotForUI)) __obj.updateDynamic("excludeNotForUI")(excludeNotForUI.asInstanceOf[js.Any])
-    if (!js.isUndefined(excludePostCoordinated)) __obj.updateDynamic("excludePostCoordinated")(excludePostCoordinated.asInstanceOf[js.Any])
-    if (excludedSystem != null) __obj.updateDynamic("excludedSystem")(excludedSystem.asInstanceOf[js.Any])
-    if (!js.isUndefined(experimental)) __obj.updateDynamic("experimental")(experimental.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fixedVersion != null) __obj.updateDynamic("fixedVersion")(fixedVersion.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
-    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeDefinition)) __obj.updateDynamic("includeDefinition")(includeDefinition.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeDesignations)) __obj.updateDynamic("includeDesignations")(includeDesignations.asInstanceOf[js.Any])
-    if (jurisdiction != null) __obj.updateDynamic("jurisdiction")(jurisdiction.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (!js.isUndefined(limitedExpansion)) __obj.updateDynamic("limitedExpansion")(limitedExpansion.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (publisher != null) __obj.updateDynamic("publisher")(publisher.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (useContext != null) __obj.updateDynamic("useContext")(useContext.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpansionProfile]
   }
+  @scala.inline
+  implicit class ExpansionProfileOps[Self <: ExpansionProfile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatus(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_activeOnly(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_activeOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_activeOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_activeOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_date(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_date: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_description(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_description: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_displayLanguage(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_displayLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_displayLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_displayLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_excludeNested(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_excludeNested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_excludeNested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_excludeNested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_excludeNotForUI(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_excludeNotForUI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_excludeNotForUI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_excludeNotForUI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_excludePostCoordinated(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_excludePostCoordinated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_excludePostCoordinated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_excludePostCoordinated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_experimental(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_experimental")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_experimental: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_experimental")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_includeDefinition(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_includeDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_includeDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_includeDefinition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_includeDesignations(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_includeDesignations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_includeDesignations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_includeDesignations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_limitedExpansion(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_limitedExpansion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_limitedExpansion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_limitedExpansion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_name(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_publisher(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_publisher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_publisher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_publisher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_status(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_status: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_url(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_version(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_version: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActiveOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContact(value: js.Array[ContactDetail]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDate(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesignation(value: ExpansionProfileDesignation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("designation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesignation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("designation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayLanguage(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludeNested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeNested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludeNested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeNested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludeNotForUI(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeNotForUI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludeNotForUI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeNotForUI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludePostCoordinated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePostCoordinated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludePostCoordinated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePostCoordinated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludedSystem(value: ExpansionProfileExcludedSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludedSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludedSystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExperimental(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExperimental: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedVersion(value: js.Array[ExpansionProfileFixedVersion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: Identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeDefinition(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDefinition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeDesignations(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDesignations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeDesignations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDesignations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJurisdiction(value: js.Array[CodeableConcept]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jurisdiction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJurisdiction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jurisdiction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimitedExpansion(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limitedExpansion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimitedExpansion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limitedExpansion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublisher(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublisher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseContext(value: js.Array[UsageContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

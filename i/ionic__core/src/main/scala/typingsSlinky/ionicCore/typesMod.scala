@@ -19,11 +19,6 @@ import typingsSlinky.ionicCore.ionicCoreStrings.cordova
 import typingsSlinky.ionicCore.ionicCoreStrings.desktop
 import typingsSlinky.ionicCore.ionicCoreStrings.electron
 import typingsSlinky.ionicCore.ionicCoreStrings.hybrid
-import typingsSlinky.ionicCore.ionicCoreStrings.ionViewDidEnter
-import typingsSlinky.ionicCore.ionicCoreStrings.ionViewDidLeave
-import typingsSlinky.ionicCore.ionicCoreStrings.ionViewWillEnter
-import typingsSlinky.ionicCore.ionicCoreStrings.ionViewWillLeave
-import typingsSlinky.ionicCore.ionicCoreStrings.ionViewWillUnload
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.ipad
 import typingsSlinky.ionicCore.ionicCoreStrings.iphone
@@ -50,11 +45,11 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/core/dist/types", JSImport.Namespace)
 @js.native
 object typesMod extends js.Object {
-  val LIFECYCLE_DID_ENTER: ionViewDidEnter = js.native
-  val LIFECYCLE_DID_LEAVE: ionViewDidLeave = js.native
-  val LIFECYCLE_WILL_ENTER: ionViewWillEnter = js.native
-  val LIFECYCLE_WILL_LEAVE: ionViewWillLeave = js.native
-  val LIFECYCLE_WILL_UNLOAD: ionViewWillUnload = js.native
+  val LIFECYCLE_DID_ENTER: /* "ionViewDidEnter" */ String = js.native
+  val LIFECYCLE_DID_LEAVE: /* "ionViewDidLeave" */ String = js.native
+  val LIFECYCLE_WILL_ENTER: /* "ionViewWillEnter" */ String = js.native
+  val LIFECYCLE_WILL_LEAVE: /* "ionViewWillLeave" */ String = js.native
+  val LIFECYCLE_WILL_UNLOAD: /* "ionViewWillUnload" */ String = js.native
   val isPlatform: IsPlatformSignature = js.native
   def createAnimation(): Animation = js.native
   def createGesture(config: GestureConfig): Gesture = js.native

@@ -1,19 +1,16 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.AnonChecked
 import typingsSlinky.antd.directoryTreeMod.DirectoryTreeProps
 import typingsSlinky.antd.directoryTreeMod.ExpandAction
 import typingsSlinky.antd.directoryTreeMod.default
 import typingsSlinky.antd.treeTreeMod.AntTreeNodeProps
 import typingsSlinky.antd.treeTreeMod.AntdTreeNodeAttribute
-import typingsSlinky.antd.treeTreeMod.TreeNodeNormal
 import typingsSlinky.rcTree.mod.CheckData
 import typingsSlinky.rcTree.mod.ExpandData
 import typingsSlinky.rcTree.mod.InternalTreeNodeProps
@@ -27,98 +24,107 @@ import typingsSlinky.rcTree.mod.OnMouseEnterData
 import typingsSlinky.rcTree.mod.OnMouseLeaveData
 import typingsSlinky.rcTree.mod.OnRightClickData
 import typingsSlinky.rcTree.mod.SelectData
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DirectoryTree
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object DirectoryTree {
   @JSImport("antd/lib/tree/DirectoryTree", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, draggable, multiple, style */
-  def apply(
-    autoExpandParent: js.UndefOr[Boolean] = js.undefined,
-    blockNode: js.UndefOr[Boolean] = js.undefined,
-    checkStrictly: js.UndefOr[Boolean] = js.undefined,
-    checkable: js.UndefOr[Boolean] = js.undefined,
-    checkedKeys: js.Array[String] | AnonChecked = null,
-    defaultCheckedKeys: js.Array[String] = null,
-    defaultExpandAll: js.UndefOr[Boolean] = js.undefined,
-    defaultExpandParent: js.UndefOr[Boolean] = js.undefined,
-    defaultExpandedKeys: js.Array[String] = null,
-    defaultSelectedKeys: js.Array[String] = null,
-    expandAction: ExpandAction = null,
-    expandedKeys: js.Array[String] = null,
-    filterAntTreeNode: ReactComponentClass[AntTreeNodeProps] => Boolean = null,
-    filterTreeNode: ReactComponentClass[InternalTreeNodeProps] => Boolean = null,
-    icon: (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, TagMod[Any]]) | TagMod[Any] = null,
-    loadData: ReactComponentClass[InternalTreeNodeProps] => js.Promise[_] = null,
-    loadedKeys: js.Array[String] = null,
-    onCheck: (/* checkedKeys */ js.Array[String], /* e */ CheckData) => Unit = null,
-    onDragEnd: /* props */ OnDragEndData => Unit = null,
-    onDragEnter: /* props */ OnDragEnterData => Unit = null,
-    onDragLeave: /* props */ OnDragLeaveData => Unit = null,
-    onDragOver: /* props */ OnDragOverData => Unit = null,
-    onDragStart: /* props */ OnDragStartData => Unit = null,
-    onDrop: /* props */ OnDropData => Unit = null,
-    onExpand: (/* expandedKeys */ js.Array[String], /* e */ ExpandData) => Unit = null,
-    onMouseEnter: /* props */ OnMouseEnterData => Unit = null,
-    onMouseLeave: /* props */ OnMouseLeaveData => Unit = null,
-    onRightClick: /* props */ OnRightClickData => Unit = null,
-    onSelect: (/* selectedKeys */ js.Array[String], /* e */ SelectData) => Unit = null,
-    prefixCls: String = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    selectedKeys: js.Array[String] = null,
-    showIcon: js.UndefOr[Boolean] = js.undefined,
-    showLine: js.UndefOr[Boolean] = js.undefined,
-    switcherIcon: ReactElement = null,
-    treeData: js.Array[TreeNodeNormal] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoExpandParent)) __obj.updateDynamic("autoExpandParent")(autoExpandParent.asInstanceOf[js.Any])
-    if (!js.isUndefined(blockNode)) __obj.updateDynamic("blockNode")(blockNode.asInstanceOf[js.Any])
-    if (!js.isUndefined(checkStrictly)) __obj.updateDynamic("checkStrictly")(checkStrictly.asInstanceOf[js.Any])
-    if (!js.isUndefined(checkable)) __obj.updateDynamic("checkable")(checkable.asInstanceOf[js.Any])
-    if (checkedKeys != null) __obj.updateDynamic("checkedKeys")(checkedKeys.asInstanceOf[js.Any])
-    if (defaultCheckedKeys != null) __obj.updateDynamic("defaultCheckedKeys")(defaultCheckedKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultExpandAll)) __obj.updateDynamic("defaultExpandAll")(defaultExpandAll.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultExpandParent)) __obj.updateDynamic("defaultExpandParent")(defaultExpandParent.asInstanceOf[js.Any])
-    if (defaultExpandedKeys != null) __obj.updateDynamic("defaultExpandedKeys")(defaultExpandedKeys.asInstanceOf[js.Any])
-    if (defaultSelectedKeys != null) __obj.updateDynamic("defaultSelectedKeys")(defaultSelectedKeys.asInstanceOf[js.Any])
-    if (expandAction != null) __obj.updateDynamic("expandAction")(expandAction.asInstanceOf[js.Any])
-    if (expandedKeys != null) __obj.updateDynamic("expandedKeys")(expandedKeys.asInstanceOf[js.Any])
-    if (filterAntTreeNode != null) __obj.updateDynamic("filterAntTreeNode")(js.Any.fromFunction1(filterAntTreeNode))
-    if (filterTreeNode != null) __obj.updateDynamic("filterTreeNode")(js.Any.fromFunction1(filterTreeNode))
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (loadData != null) __obj.updateDynamic("loadData")(js.Any.fromFunction1(loadData))
-    if (loadedKeys != null) __obj.updateDynamic("loadedKeys")(loadedKeys.asInstanceOf[js.Any])
-    if (onCheck != null) __obj.updateDynamic("onCheck")(js.Any.fromFunction2(onCheck))
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
-    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
-    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
-    if (onDragOver != null) __obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
-    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
-    if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction2(onExpand))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onRightClick != null) __obj.updateDynamic("onRightClick")(js.Any.fromFunction1(onRightClick))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(showIcon)) __obj.updateDynamic("showIcon")(showIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLine)) __obj.updateDynamic("showLine")(showLine.asInstanceOf[js.Any])
-    if (switcherIcon != null) __obj.updateDynamic("switcherIcon")(switcherIcon.asInstanceOf[js.Any])
-    if (treeData != null) __obj.updateDynamic("treeData")(treeData.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def autoExpandParent(value: Boolean): this.type = set("autoExpandParent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def blockNode(value: Boolean): this.type = set("blockNode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkStrictly(value: Boolean): this.type = set("checkStrictly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkable(value: Boolean): this.type = set("checkable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def checkedKeys(value: js.Array[String] | AnonChecked): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultCheckedKeys(value: js.Array[String]): this.type = set("defaultCheckedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultExpandAll(value: Boolean): this.type = set("defaultExpandAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultExpandParent(value: Boolean): this.type = set("defaultExpandParent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultExpandedKeys(value: js.Array[String]): this.type = set("defaultExpandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSelectedKeys(value: js.Array[String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandAction(value: ExpandAction): this.type = set("expandAction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandedKeys(value: js.Array[String]): this.type = set("expandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterAntTreeNode(value: ReactComponentClass[AntTreeNodeProps] => Boolean): this.type = set("filterAntTreeNode", js.Any.fromFunction1(value))
+    @scala.inline
+    def filterTreeNode(value: ReactComponentClass[InternalTreeNodeProps] => Boolean): this.type = set("filterTreeNode", js.Any.fromFunction1(value))
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconFunction1(value: /* nodeProps */ AntdTreeNodeAttribute => TagMod[Any]): this.type = set("icon", js.Any.fromFunction1(value))
+    @scala.inline
+    def icon(value: (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, TagMod[Any]]) | TagMod[Any]): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadData(value: ReactComponentClass[InternalTreeNodeProps] => js.Promise[_]): this.type = set("loadData", js.Any.fromFunction1(value))
+    @scala.inline
+    def loadedKeys(value: js.Array[String]): this.type = set("loadedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCheck(value: (/* checkedKeys */ js.Array[String], /* e */ CheckData) => Unit): this.type = set("onCheck", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDragEnd(value: /* props */ OnDragEndData => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragEnter(value: /* props */ OnDragEnterData => Unit): this.type = set("onDragEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragLeave(value: /* props */ OnDragLeaveData => Unit): this.type = set("onDragLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragOver(value: /* props */ OnDragOverData => Unit): this.type = set("onDragOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragStart(value: /* props */ OnDragStartData => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDrop(value: /* props */ OnDropData => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
+    @scala.inline
+    def onExpand(value: (/* expandedKeys */ js.Array[String], /* e */ ExpandData) => Unit): this.type = set("onExpand", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseEnter(value: /* props */ OnMouseEnterData => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: /* props */ OnMouseLeaveData => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRightClick(value: /* props */ OnRightClickData => Unit): this.type = set("onRightClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: (/* selectedKeys */ js.Array[String], /* e */ SelectData) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showIcon(value: Boolean): this.type = set("showIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showLine(value: Boolean): this.type = set("showLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def switcherIcon(value: ReactElement): this.type = set("switcherIcon", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.directoryTreeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DirectoryTreeProps
+  
+  def withProps(p: DirectoryTreeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DirectoryTree.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

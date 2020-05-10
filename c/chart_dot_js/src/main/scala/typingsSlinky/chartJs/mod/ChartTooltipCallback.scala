@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChartTooltipCallback extends js.Object {
   var afterBody: js.UndefOr[
     js.Function2[
@@ -11,103 +12,240 @@ trait ChartTooltipCallback extends js.Object {
       /* data */ ChartData, 
       String | js.Array[String]
     ]
-  ] = js.undefined
+  ] = js.native
   var afterFooter: js.UndefOr[
     js.Function2[
       /* item */ js.Array[ChartTooltipItem], 
       /* data */ ChartData, 
       String | js.Array[String]
     ]
-  ] = js.undefined
+  ] = js.native
   var afterLabel: js.UndefOr[
     js.Function2[/* tooltipItem */ ChartTooltipItem, /* data */ ChartData, String | js.Array[String]]
-  ] = js.undefined
+  ] = js.native
   var afterTitle: js.UndefOr[
     js.Function2[
       /* item */ js.Array[ChartTooltipItem], 
       /* data */ ChartData, 
       String | js.Array[String]
     ]
-  ] = js.undefined
+  ] = js.native
   var beforeBody: js.UndefOr[
     js.Function2[
       /* item */ js.Array[ChartTooltipItem], 
       /* data */ ChartData, 
       String | js.Array[String]
     ]
-  ] = js.undefined
+  ] = js.native
   var beforeFooter: js.UndefOr[
     js.Function2[
       /* item */ js.Array[ChartTooltipItem], 
       /* data */ ChartData, 
       String | js.Array[String]
     ]
-  ] = js.undefined
+  ] = js.native
   var beforeLabel: js.UndefOr[
     js.Function2[/* tooltipItem */ ChartTooltipItem, /* data */ ChartData, String | js.Array[String]]
-  ] = js.undefined
+  ] = js.native
   var beforeTitle: js.UndefOr[
     js.Function2[
       /* item */ js.Array[ChartTooltipItem], 
       /* data */ ChartData, 
       String | js.Array[String]
     ]
-  ] = js.undefined
+  ] = js.native
   var footer: js.UndefOr[
     js.Function2[
       /* item */ js.Array[ChartTooltipItem], 
       /* data */ ChartData, 
       String | js.Array[String]
     ]
-  ] = js.undefined
+  ] = js.native
   var label: js.UndefOr[
     js.Function2[/* tooltipItem */ ChartTooltipItem, /* data */ ChartData, String | js.Array[String]]
-  ] = js.undefined
+  ] = js.native
   var labelColor: js.UndefOr[
     js.Function2[/* tooltipItem */ ChartTooltipItem, /* chart */ Chart, ChartTooltipLabelColor]
-  ] = js.undefined
-  var labelTextColor: js.UndefOr[js.Function2[/* tooltipItem */ ChartTooltipItem, /* chart */ Chart, String]] = js.undefined
+  ] = js.native
+  var labelTextColor: js.UndefOr[js.Function2[/* tooltipItem */ ChartTooltipItem, /* chart */ Chart, String]] = js.native
   var title: js.UndefOr[
     js.Function2[
       /* item */ js.Array[ChartTooltipItem], 
       /* data */ ChartData, 
       String | js.Array[String]
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object ChartTooltipCallback {
   @scala.inline
-  def apply(
-    afterBody: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String] = null,
-    afterFooter: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String] = null,
-    afterLabel: (/* tooltipItem */ ChartTooltipItem, /* data */ ChartData) => String | js.Array[String] = null,
-    afterTitle: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String] = null,
-    beforeBody: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String] = null,
-    beforeFooter: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String] = null,
-    beforeLabel: (/* tooltipItem */ ChartTooltipItem, /* data */ ChartData) => String | js.Array[String] = null,
-    beforeTitle: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String] = null,
-    footer: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String] = null,
-    label: (/* tooltipItem */ ChartTooltipItem, /* data */ ChartData) => String | js.Array[String] = null,
-    labelColor: (/* tooltipItem */ ChartTooltipItem, /* chart */ Chart) => ChartTooltipLabelColor = null,
-    labelTextColor: (/* tooltipItem */ ChartTooltipItem, /* chart */ Chart) => String = null,
-    title: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String] = null
-  ): ChartTooltipCallback = {
+  def apply(): ChartTooltipCallback = {
     val __obj = js.Dynamic.literal()
-    if (afterBody != null) __obj.updateDynamic("afterBody")(js.Any.fromFunction2(afterBody))
-    if (afterFooter != null) __obj.updateDynamic("afterFooter")(js.Any.fromFunction2(afterFooter))
-    if (afterLabel != null) __obj.updateDynamic("afterLabel")(js.Any.fromFunction2(afterLabel))
-    if (afterTitle != null) __obj.updateDynamic("afterTitle")(js.Any.fromFunction2(afterTitle))
-    if (beforeBody != null) __obj.updateDynamic("beforeBody")(js.Any.fromFunction2(beforeBody))
-    if (beforeFooter != null) __obj.updateDynamic("beforeFooter")(js.Any.fromFunction2(beforeFooter))
-    if (beforeLabel != null) __obj.updateDynamic("beforeLabel")(js.Any.fromFunction2(beforeLabel))
-    if (beforeTitle != null) __obj.updateDynamic("beforeTitle")(js.Any.fromFunction2(beforeTitle))
-    if (footer != null) __obj.updateDynamic("footer")(js.Any.fromFunction2(footer))
-    if (label != null) __obj.updateDynamic("label")(js.Any.fromFunction2(label))
-    if (labelColor != null) __obj.updateDynamic("labelColor")(js.Any.fromFunction2(labelColor))
-    if (labelTextColor != null) __obj.updateDynamic("labelTextColor")(js.Any.fromFunction2(labelTextColor))
-    if (title != null) __obj.updateDynamic("title")(js.Any.fromFunction2(title))
     __obj.asInstanceOf[ChartTooltipCallback]
   }
+  @scala.inline
+  implicit class ChartTooltipCallbackOps[Self <: ChartTooltipCallback] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterBody(value: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterBody")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterFooter(value: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterFooter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterFooter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterLabel(value: (/* tooltipItem */ ChartTooltipItem, /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterLabel")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterTitle(value: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTitle")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeBody(value: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeBody")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeFooter(value: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeFooter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeFooter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeLabel(value: (/* tooltipItem */ ChartTooltipItem, /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeLabel")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeTitle(value: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeTitle")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooter(value: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: (/* tooltipItem */ ChartTooltipItem, /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelColor(value: (/* tooltipItem */ ChartTooltipItem, /* chart */ Chart) => ChartTooltipLabelColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelColor")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutLabelColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelTextColor(value: (/* tooltipItem */ ChartTooltipItem, /* chart */ Chart) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextColor")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutLabelTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: (/* item */ js.Array[ChartTooltipItem], /* data */ ChartData) => String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

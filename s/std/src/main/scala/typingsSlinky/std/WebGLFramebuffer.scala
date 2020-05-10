@@ -7,5 +7,6 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("WebGLFramebuffer")
 @js.native
-object WebGLFramebuffer extends Instantiable0[WebGLFramebuffer]
+object WebGLFramebuffer
+  extends Instantiable0[org.scalajs.dom.raw.WebGLFramebuffer]
 

@@ -22,7 +22,7 @@ object default extends js.Object {
   def attach(): js.Array[bulmaCalendar] = js.native
   def attach(selector: String): js.Array[bulmaCalendar] = js.native
   def attach(selector: String, options: BulmaCalendarOptions): js.Array[bulmaCalendar] = js.native
-  def attach(selector: typingsSlinky.std.HTMLElement): js.Array[bulmaCalendar] = js.native
-  def attach(selector: typingsSlinky.std.HTMLElement, options: BulmaCalendarOptions): js.Array[bulmaCalendar] = js.native
+  def attach(selector: HTMLElement): js.Array[bulmaCalendar] = js.native
+  def attach(selector: HTMLElement, options: BulmaCalendarOptions): js.Array[bulmaCalendar] = js.native
 }
 

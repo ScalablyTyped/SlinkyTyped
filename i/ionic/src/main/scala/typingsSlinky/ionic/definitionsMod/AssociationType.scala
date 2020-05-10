@@ -13,12 +13,10 @@ trait AssociationType extends js.Object
 
 object AssociationType {
   @scala.inline
-  def bitbucket_cloud: typingsSlinky.ionic.ionicStrings.bitbucket_cloud = this.cast("bitbucket_cloud")
+  def bitbucket_cloud: typingsSlinky.ionic.ionicStrings.bitbucket_cloud = "bitbucket_cloud".asInstanceOf[typingsSlinky.ionic.ionicStrings.bitbucket_cloud]
   @scala.inline
-  def bitbucket_server: typingsSlinky.ionic.ionicStrings.bitbucket_server = this.cast("bitbucket_server")
+  def bitbucket_server: typingsSlinky.ionic.ionicStrings.bitbucket_server = "bitbucket_server".asInstanceOf[typingsSlinky.ionic.ionicStrings.bitbucket_server]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def github: typingsSlinky.ionic.ionicStrings.github = this.cast("github")
+  def github: typingsSlinky.ionic.ionicStrings.github = "github".asInstanceOf[typingsSlinky.ionic.ionicStrings.github]
 }
 

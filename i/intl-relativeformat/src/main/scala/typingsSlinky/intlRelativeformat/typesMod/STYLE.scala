@@ -13,10 +13,8 @@ trait STYLE extends js.Object
 
 object STYLE {
   @scala.inline
-  def bestFit: `best fit` = this.cast("best fit")
+  def bestFit: `best fit` = ("best fit").asInstanceOf[`best fit`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def numeric: typingsSlinky.intlRelativeformat.intlRelativeformatStrings.numeric = this.cast("numeric")
+  def numeric: typingsSlinky.intlRelativeformat.intlRelativeformatStrings.numeric = "numeric".asInstanceOf[typingsSlinky.intlRelativeformat.intlRelativeformatStrings.numeric]
 }
 

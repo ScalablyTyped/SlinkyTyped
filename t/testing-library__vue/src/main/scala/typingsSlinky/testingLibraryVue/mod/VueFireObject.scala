@@ -1,13 +1,13 @@
 package typingsSlinky.testingLibraryVue.mod
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLInputElement
+import org.scalajs.dom.raw.HTMLOptionElement
+import org.scalajs.dom.raw.HTMLSelectElement
+import org.scalajs.dom.raw.HTMLTextAreaElement
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.HTMLInputElement
-import typingsSlinky.std.HTMLOptionElement
-import typingsSlinky.std.HTMLSelectElement
-import typingsSlinky.std.HTMLTextAreaElement
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

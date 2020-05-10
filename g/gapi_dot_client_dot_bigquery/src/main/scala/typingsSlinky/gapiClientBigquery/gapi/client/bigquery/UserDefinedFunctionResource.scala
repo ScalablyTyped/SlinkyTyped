@@ -4,23 +4,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UserDefinedFunctionResource extends js.Object {
   /**
     * [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI
     * for a file containing the same code.
     */
-  var inlineCode: js.UndefOr[String] = js.undefined
+  var inlineCode: js.UndefOr[String] = js.native
   /** [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path). */
-  var resourceUri: js.UndefOr[String] = js.undefined
+  var resourceUri: js.UndefOr[String] = js.native
 }
 
 object UserDefinedFunctionResource {
   @scala.inline
-  def apply(inlineCode: String = null, resourceUri: String = null): UserDefinedFunctionResource = {
+  def apply(): UserDefinedFunctionResource = {
     val __obj = js.Dynamic.literal()
-    if (inlineCode != null) __obj.updateDynamic("inlineCode")(inlineCode.asInstanceOf[js.Any])
-    if (resourceUri != null) __obj.updateDynamic("resourceUri")(resourceUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserDefinedFunctionResource]
   }
+  @scala.inline
+  implicit class UserDefinedFunctionResourceOps[Self <: UserDefinedFunctionResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInlineCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

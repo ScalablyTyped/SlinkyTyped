@@ -9,6 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBuyQuantity extends js.Object {
   /**
     * 购买数量。mode=game 时必填。购买数量。详见 buyQuantity 限制说明。
@@ -42,18 +43,18 @@ trait AnonBuyQuantity extends js.Object {
     *       328
     *       648
     */
-  var buyQuantity: js.UndefOr[Double] = js.undefined
-  var complete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var buyQuantity: js.UndefOr[Double] = js.native
+  var complete: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * 币种
     */
-  var currencyType: CNY
+  var currencyType: CNY = js.native
   /**
     * 环境配置，默认值0
     *   0 - 米大师正式环境
     *   1 - 米大师沙箱环境
     */
-  var env: js.UndefOr[`0` | `1`] = js.undefined
+  var env: js.UndefOr[`0` | `1`] = js.native
   /**
     * @param res.errCode 有如下值：
     *      -1	系统失败
@@ -74,50 +75,142 @@ trait AnonBuyQuantity extends js.Object {
     *       1000	参数错误
     *       1003	米大师 Portal 错误
     */
-  var fail: js.UndefOr[js.Function1[/* res */ AnonErrCode, Unit]] = js.undefined
+  var fail: js.UndefOr[js.Function1[/* res */ AnonErrCode, Unit]] = js.native
   /**
     * 支付的类型，不同的支付类型有各自额外要传的附加参数。
     *   game - 购买游戏币
     */
-  var mode: game
+  var mode: game = js.native
   /**
     * 在米大师侧申请的应用 id
     */
-  var offerId: String
+  var offerId: String = js.native
   /**
     * 申请接入时的平台，platform 与应用id有关。
     */
-  var platform: js.UndefOr[android] = js.undefined
-  var success: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var platform: js.UndefOr[android] = js.native
+  var success: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * 分区 ID
     */
-  var zoneId: js.UndefOr[String] = js.undefined
+  var zoneId: js.UndefOr[String] = js.native
 }
 
 object AnonBuyQuantity {
   @scala.inline
-  def apply(
-    currencyType: CNY,
-    mode: game,
-    offerId: String,
-    buyQuantity: Int | Double = null,
-    complete: () => Unit = null,
-    env: `0` | `1` = null,
-    fail: /* res */ AnonErrCode => Unit = null,
-    platform: android = null,
-    success: () => Unit = null,
-    zoneId: String = null
-  ): AnonBuyQuantity = {
+  def apply(currencyType: CNY, mode: game, offerId: String): AnonBuyQuantity = {
     val __obj = js.Dynamic.literal(currencyType = currencyType.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], offerId = offerId.asInstanceOf[js.Any])
-    if (buyQuantity != null) __obj.updateDynamic("buyQuantity")(buyQuantity.asInstanceOf[js.Any])
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
-    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction1(fail))
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction0(success))
-    if (zoneId != null) __obj.updateDynamic("zoneId")(zoneId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBuyQuantity]
   }
+  @scala.inline
+  implicit class AnonBuyQuantityOps[Self <: AnonBuyQuantity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrencyType(value: CNY): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMode(value: game): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOfferId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBuyQuantity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuyQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyQuantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnv(value: `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFail(value: /* res */ AnonErrCode => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: android): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoneId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoneId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

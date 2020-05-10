@@ -6,71 +6,149 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined filesize.filesize.Filesize.SiJedecBits & filesize.filesize.Filesize.SiJedecBytes & {[name: string] : string} */
+@js.native
 trait SiJedec extends /* name */ StringDictionary[String] {
-  var B: js.UndefOr[String] = js.undefined
-  var EB: js.UndefOr[String] = js.undefined
-  var Eb: js.UndefOr[String] = js.undefined
-  var GB: js.UndefOr[String] = js.undefined
-  var Gb: js.UndefOr[String] = js.undefined
-  var KB: js.UndefOr[String] = js.undefined
-  var Kb: js.UndefOr[String] = js.undefined
-  var MB: js.UndefOr[String] = js.undefined
-  var Mb: js.UndefOr[String] = js.undefined
-  var PB: js.UndefOr[String] = js.undefined
-  var Pb: js.UndefOr[String] = js.undefined
-  var TB: js.UndefOr[String] = js.undefined
-  var Tb: js.UndefOr[String] = js.undefined
-  var YB: js.UndefOr[String] = js.undefined
-  var Yb: js.UndefOr[String] = js.undefined
-  var ZB: js.UndefOr[String] = js.undefined
-  var Zb: js.UndefOr[String] = js.undefined
-  var b: js.UndefOr[String] = js.undefined
+  var B: js.UndefOr[String] = js.native
+  var EB: js.UndefOr[String] = js.native
+  var Eb: js.UndefOr[String] = js.native
+  var GB: js.UndefOr[String] = js.native
+  var Gb: js.UndefOr[String] = js.native
+  var KB: js.UndefOr[String] = js.native
+  var Kb: js.UndefOr[String] = js.native
+  var MB: js.UndefOr[String] = js.native
+  var Mb: js.UndefOr[String] = js.native
+  var PB: js.UndefOr[String] = js.native
+  var Pb: js.UndefOr[String] = js.native
+  var TB: js.UndefOr[String] = js.native
+  var Tb: js.UndefOr[String] = js.native
+  var YB: js.UndefOr[String] = js.native
+  var Yb: js.UndefOr[String] = js.native
+  var ZB: js.UndefOr[String] = js.native
+  var Zb: js.UndefOr[String] = js.native
+  var b: js.UndefOr[String] = js.native
 }
 
 object SiJedec {
   @scala.inline
-  def apply(
-    B: String = null,
-    EB: String = null,
-    Eb: String = null,
-    GB: String = null,
-    Gb: String = null,
-    KB: String = null,
-    Kb: String = null,
-    MB: String = null,
-    Mb: String = null,
-    PB: String = null,
-    Pb: String = null,
-    StringDictionary: /* name */ StringDictionary[String] = null,
-    TB: String = null,
-    Tb: String = null,
-    YB: String = null,
-    Yb: String = null,
-    ZB: String = null,
-    Zb: String = null,
-    b: String = null
-  ): SiJedec = {
+  def apply(): SiJedec = {
     val __obj = js.Dynamic.literal()
-    if (B != null) __obj.updateDynamic("B")(B.asInstanceOf[js.Any])
-    if (EB != null) __obj.updateDynamic("EB")(EB.asInstanceOf[js.Any])
-    if (Eb != null) __obj.updateDynamic("Eb")(Eb.asInstanceOf[js.Any])
-    if (GB != null) __obj.updateDynamic("GB")(GB.asInstanceOf[js.Any])
-    if (Gb != null) __obj.updateDynamic("Gb")(Gb.asInstanceOf[js.Any])
-    if (KB != null) __obj.updateDynamic("KB")(KB.asInstanceOf[js.Any])
-    if (Kb != null) __obj.updateDynamic("Kb")(Kb.asInstanceOf[js.Any])
-    if (MB != null) __obj.updateDynamic("MB")(MB.asInstanceOf[js.Any])
-    if (Mb != null) __obj.updateDynamic("Mb")(Mb.asInstanceOf[js.Any])
-    if (PB != null) __obj.updateDynamic("PB")(PB.asInstanceOf[js.Any])
-    if (Pb != null) __obj.updateDynamic("Pb")(Pb.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (TB != null) __obj.updateDynamic("TB")(TB.asInstanceOf[js.Any])
-    if (Tb != null) __obj.updateDynamic("Tb")(Tb.asInstanceOf[js.Any])
-    if (YB != null) __obj.updateDynamic("YB")(YB.asInstanceOf[js.Any])
-    if (Yb != null) __obj.updateDynamic("Yb")(Yb.asInstanceOf[js.Any])
-    if (ZB != null) __obj.updateDynamic("ZB")(ZB.asInstanceOf[js.Any])
-    if (Zb != null) __obj.updateDynamic("Zb")(Zb.asInstanceOf[js.Any])
-    if (b != null) __obj.updateDynamic("b")(b.asInstanceOf[js.Any])
     __obj.asInstanceOf[SiJedec]
   }
+  @scala.inline
+  implicit class SiJedecOps[Self <: SiJedec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withB(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("B")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("B")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEB(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EB")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGB(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GB")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKB(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KB")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMB(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MB")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPB(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PB")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTB(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TB")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYB(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("YB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("YB")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZB(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZB")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

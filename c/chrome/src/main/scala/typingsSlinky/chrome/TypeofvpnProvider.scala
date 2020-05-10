@@ -22,8 +22,8 @@ trait TypeofvpnProvider extends js.Object {
   def destroyConfig(id: String, callback: js.Function): Unit = js.native
   def notifyConnectionStateChanged(state: String): Unit = js.native
   def notifyConnectionStateChanged(state: String, callback: js.Function): Unit = js.native
-  def sendPacket(data: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
-  def sendPacket(data: scala.scalajs.js.typedarray.ArrayBuffer, callback: js.Function): Unit = js.native
+  def sendPacket(data: js.typedarray.ArrayBuffer): Unit = js.native
+  def sendPacket(data: js.typedarray.ArrayBuffer, callback: js.Function): Unit = js.native
   def setParameters(parameters: VpnSessionParameters, callback: js.Function): Unit = js.native
 }
 

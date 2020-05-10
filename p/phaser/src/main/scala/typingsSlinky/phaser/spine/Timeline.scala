@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Timeline extends js.Object {
   @JSName("apply")
   def apply(
@@ -14,8 +15,8 @@ trait Timeline extends js.Object {
     alpha: Double,
     blend: MixBlend,
     direction: MixDirection
-  ): Unit
-  def getPropertyId(): Double
+  ): Unit = js.native
+  def getPropertyId(): Double = js.native
 }
 
 object Timeline {
@@ -25,8 +26,27 @@ object Timeline {
     getPropertyId: () => Double
   ): Timeline = {
     val __obj = js.Dynamic.literal(apply = js.Any.fromFunction7(apply), getPropertyId = js.Any.fromFunction0(getPropertyId))
-  
     __obj.asInstanceOf[Timeline]
   }
+  @scala.inline
+  implicit class TimelineOps[Self <: Timeline] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApply(value: (Skeleton, Double, Double, js.Array[Event], Double, MixBlend, MixDirection) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.Any.fromFunction7(value))
+        ret
+    }
+    @scala.inline
+    def withGetPropertyId(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertyId")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -2,34 +2,42 @@ package typingsSlinky.actionsOnGoogle.dialogflowConvMod
 
 import typingsSlinky.actionsOnGoogle.apiV2Mod.GoogleCloudDialogflowV2WebhookRequest
 import typingsSlinky.actionsOnGoogle.conversationConversationMod.ConversationBaseOptions
-import typingsSlinky.actionsOnGoogle.conversationConversationMod.ConversationOptionsInit
-import typingsSlinky.actionsOnGoogle.frameworkFrameworkMod.Headers
 import typingsSlinky.actionsOnGoogle.v1Mod.DialogflowV1WebhookRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DialogflowConversationOptions[TConvData, TUserStorage] extends ConversationBaseOptions[TConvData, TUserStorage] {
   /** @public */
-  var body: js.UndefOr[GoogleCloudDialogflowV2WebhookRequest | DialogflowV1WebhookRequest] = js.undefined
+  var body: js.UndefOr[GoogleCloudDialogflowV2WebhookRequest | DialogflowV1WebhookRequest] = js.native
 }
 
 object DialogflowConversationOptions {
   @scala.inline
-  def apply[TConvData, TUserStorage](
-    body: GoogleCloudDialogflowV2WebhookRequest | DialogflowV1WebhookRequest = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    headers: Headers = null,
-    init: ConversationOptionsInit[TConvData, TUserStorage] = null,
-    ordersv3: js.UndefOr[Boolean] = js.undefined
-  ): DialogflowConversationOptions[TConvData, TUserStorage] = {
+  def apply[TConvData, TUserStorage](): DialogflowConversationOptions[TConvData, TUserStorage] = {
     val __obj = js.Dynamic.literal()
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (init != null) __obj.updateDynamic("init")(init.asInstanceOf[js.Any])
-    if (!js.isUndefined(ordersv3)) __obj.updateDynamic("ordersv3")(ordersv3.asInstanceOf[js.Any])
     __obj.asInstanceOf[DialogflowConversationOptions[TConvData, TUserStorage]]
   }
+  @scala.inline
+  implicit class DialogflowConversationOptionsOps[Self[tconvdata, tuserstorage] <: DialogflowConversationOptions[tconvdata, tuserstorage], TConvData, TUserStorage] (val x: Self[TConvData, TUserStorage]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TConvData, TUserStorage] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TConvData, TUserStorage]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[TConvData, TUserStorage]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TConvData, TUserStorage]) with Other]
+    @scala.inline
+    def withBody(value: GoogleCloudDialogflowV2WebhookRequest | DialogflowV1WebhookRequest): Self[TConvData, TUserStorage] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self[TConvData, TUserStorage] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

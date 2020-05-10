@@ -21,11 +21,41 @@ trait SchemaNetworkEndpointGroupsScopedList extends js.Object {
 
 object SchemaNetworkEndpointGroupsScopedList {
   @scala.inline
-  def apply(networkEndpointGroups: js.Array[SchemaNetworkEndpointGroup] = null, warning: AnonCode = null): SchemaNetworkEndpointGroupsScopedList = {
+  def apply(): SchemaNetworkEndpointGroupsScopedList = {
     val __obj = js.Dynamic.literal()
-    if (networkEndpointGroups != null) __obj.updateDynamic("networkEndpointGroups")(networkEndpointGroups.asInstanceOf[js.Any])
-    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNetworkEndpointGroupsScopedList]
   }
+  @scala.inline
+  implicit class SchemaNetworkEndpointGroupsScopedListOps[Self <: SchemaNetworkEndpointGroupsScopedList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworkEndpointGroups(value: js.Array[SchemaNetworkEndpointGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkEndpointGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkEndpointGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkEndpointGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: AnonCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

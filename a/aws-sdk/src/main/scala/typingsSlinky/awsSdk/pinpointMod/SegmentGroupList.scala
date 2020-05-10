@@ -18,11 +18,41 @@ trait SegmentGroupList extends js.Object {
 
 object SegmentGroupList {
   @scala.inline
-  def apply(Groups: ListOfSegmentGroup = null, Include: Include = null): SegmentGroupList = {
+  def apply(): SegmentGroupList = {
     val __obj = js.Dynamic.literal()
-    if (Groups != null) __obj.updateDynamic("Groups")(Groups.asInstanceOf[js.Any])
-    if (Include != null) __obj.updateDynamic("Include")(Include.asInstanceOf[js.Any])
     __obj.asInstanceOf[SegmentGroupList]
   }
+  @scala.inline
+  implicit class SegmentGroupListOps[Self <: SegmentGroupList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroups(value: ListOfSegmentGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Groups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInclude(value: Include): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Include")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

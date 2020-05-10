@@ -13,12 +13,10 @@ trait IncludeParam extends js.Object
 
 object IncludeParam {
   @scala.inline
-  def authors: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.authors = this.cast("authors")
+  def authors: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.authors = "authors".asInstanceOf[typingsSlinky.tryghostContentApi.tryghostContentApiStrings.authors]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def countDotposts: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.countDotposts = "count.posts".asInstanceOf[typingsSlinky.tryghostContentApi.tryghostContentApiStrings.countDotposts]
   @scala.inline
-  def countDotposts: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.countDotposts = this.cast("count.posts")
-  @scala.inline
-  def tags: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.tags = this.cast("tags")
+  def tags: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.tags = "tags".asInstanceOf[typingsSlinky.tryghostContentApi.tryghostContentApiStrings.tags]
 }
 

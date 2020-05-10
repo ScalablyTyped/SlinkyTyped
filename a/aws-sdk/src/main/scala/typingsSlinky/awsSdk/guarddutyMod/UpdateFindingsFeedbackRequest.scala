@@ -26,10 +26,47 @@ trait UpdateFindingsFeedbackRequest extends js.Object {
 
 object UpdateFindingsFeedbackRequest {
   @scala.inline
-  def apply(DetectorId: DetectorId, Feedback: Feedback, FindingIds: FindingIds, Comments: String = null): UpdateFindingsFeedbackRequest = {
+  def apply(DetectorId: DetectorId, Feedback: Feedback, FindingIds: FindingIds): UpdateFindingsFeedbackRequest = {
     val __obj = js.Dynamic.literal(DetectorId = DetectorId.asInstanceOf[js.Any], Feedback = Feedback.asInstanceOf[js.Any], FindingIds = FindingIds.asInstanceOf[js.Any])
-    if (Comments != null) __obj.updateDynamic("Comments")(Comments.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFindingsFeedbackRequest]
   }
+  @scala.inline
+  implicit class UpdateFindingsFeedbackRequestOps[Self <: UpdateFindingsFeedbackRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetectorId(value: DetectorId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DetectorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeedback(value: Feedback): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Feedback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFindingIds(value: FindingIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FindingIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comments")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -30,7 +30,7 @@ class IndexBuffer protected () extends js.Object {
     format: Double,
     numIndices: Double,
     usage: Double,
-    initialData: scala.scalajs.js.typedarray.ArrayBuffer
+    initialData: js.typedarray.ArrayBuffer
   ) = this()
   /**
     * @function
@@ -58,7 +58,7 @@ class IndexBuffer protected () extends js.Object {
     * @description Gives access to the block of memory that stores the buffer's indices.
     * @returns {ArrayBuffer} A contiguous block of memory where index data can be written to.
     */
-  def lock(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def lock(): js.typedarray.ArrayBuffer = js.native
   /**
     * @function
     * @name pc.IndexBuffer#unlock

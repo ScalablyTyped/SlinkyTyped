@@ -15,5 +15,6 @@ import scala.scalajs.js.annotation._
   * which would interpret the argument as the size to make the widget.
   * 
   */
+@js.native
 trait Viewport extends js.Object
 

@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "tensorflow__tfjs"
-version := "1.5.2-530a15"
+version := "1.7.0-1b6a52"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f",
-  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-converter" % "1.5.2-3a3289",
-  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-core" % "1.5.2-e23b5b",
-  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-data" % "1.5.2-eb7aea",
-  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-layers" % "1.5.2-f0dd94")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
+  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-converter" % "1.7.0-271e24",
+  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-core" % "1.7.0-f30867",
+  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-data" % "1.7.0-0291e6",
+  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-layers" % "1.7.0-87d08d")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

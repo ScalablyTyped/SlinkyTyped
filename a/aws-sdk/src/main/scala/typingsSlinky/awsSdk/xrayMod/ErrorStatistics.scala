@@ -22,16 +22,53 @@ trait ErrorStatistics extends js.Object {
 
 object ErrorStatistics {
   @scala.inline
-  def apply(
-    OtherCount: Int | scala.Double = null,
-    ThrottleCount: Int | scala.Double = null,
-    TotalCount: Int | scala.Double = null
-  ): ErrorStatistics = {
+  def apply(): ErrorStatistics = {
     val __obj = js.Dynamic.literal()
-    if (OtherCount != null) __obj.updateDynamic("OtherCount")(OtherCount.asInstanceOf[js.Any])
-    if (ThrottleCount != null) __obj.updateDynamic("ThrottleCount")(ThrottleCount.asInstanceOf[js.Any])
-    if (TotalCount != null) __obj.updateDynamic("TotalCount")(TotalCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorStatistics]
   }
+  @scala.inline
+  implicit class ErrorStatisticsOps[Self <: ErrorStatistics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOtherCount(value: NullableLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OtherCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOtherCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OtherCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThrottleCount(value: NullableLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThrottleCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThrottleCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThrottleCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalCount(value: NullableLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -33,18 +33,65 @@ trait SchemaIosDevice extends js.Object {
 
 object SchemaIosDevice {
   @scala.inline
-  def apply(
-    iosModelId: String = null,
-    iosVersionId: String = null,
-    locale: String = null,
-    orientation: String = null
-  ): SchemaIosDevice = {
+  def apply(): SchemaIosDevice = {
     val __obj = js.Dynamic.literal()
-    if (iosModelId != null) __obj.updateDynamic("iosModelId")(iosModelId.asInstanceOf[js.Any])
-    if (iosVersionId != null) __obj.updateDynamic("iosVersionId")(iosVersionId.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIosDevice]
   }
+  @scala.inline
+  implicit class SchemaIosDeviceOps[Self <: SchemaIosDevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIosModelId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosModelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIosModelId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosModelId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIosVersionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIosVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosVersionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

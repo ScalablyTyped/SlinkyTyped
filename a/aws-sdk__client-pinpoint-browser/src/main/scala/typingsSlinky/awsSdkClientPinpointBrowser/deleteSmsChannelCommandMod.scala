@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkClientPinpointBrowser
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientPinpointBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientPinpointBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientPinpointBrowser.pinpointConfigurationMod.PinpointResolvedConfiguration
@@ -8,7 +9,6 @@ import typingsSlinky.awsSdkClientPinpointBrowser.typesDeleteSmsChannelOutputMod.
 import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +26,9 @@ object deleteSmsChannelCommandMod extends js.Object {
           Blob
         ] {
     def this(input: DeleteSmsChannelInput) = this()
-    /* CompleteClass */
-    override val input: DeleteSmsChannelInput = js.native
-    val middlewareStack: MiddlewareStack[DeleteSmsChannelInput, DeleteSmsChannelOutput, org.scalajs.dom.raw.Blob] = js.native
+    val middlewareStack: MiddlewareStack[DeleteSmsChannelInput, DeleteSmsChannelOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
-      configuration: PinpointResolvedConfiguration
-    ): Handler[DeleteSmsChannelInput, DeleteSmsChannelOutput] = js.native
-    /* CompleteClass */
-    override def resolveMiddleware(
-      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: PinpointResolvedConfiguration
     ): Handler[DeleteSmsChannelInput, DeleteSmsChannelOutput] = js.native
   }

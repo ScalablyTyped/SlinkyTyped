@@ -5,21 +5,47 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Information about what might have caused a failure, such as an image that is too large. Not returned when there is no error. */
+@js.native
 trait ErrorInfo extends js.Object {
   /** HTTP status code. */
-  var code: Double
+  var code: Double = js.native
   /** Human-readable error description. For example, `File size limit exceeded`. */
-  var description: String
+  var description: String = js.native
   /** Codified error string. For example, `limit_exceeded`. */
-  var error_id: String
+  var error_id: String = js.native
 }
 
 object ErrorInfo {
   @scala.inline
   def apply(code: Double, description: String, error_id: String): ErrorInfo = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], error_id = error_id.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ErrorInfo]
   }
+  @scala.inline
+  implicit class ErrorInfoOps[Self <: ErrorInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withError_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

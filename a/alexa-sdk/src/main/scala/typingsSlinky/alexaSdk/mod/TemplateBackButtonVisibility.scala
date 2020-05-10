@@ -12,10 +12,8 @@ trait TemplateBackButtonVisibility extends js.Object
 
 object TemplateBackButtonVisibility {
   @scala.inline
-  def HIDDEN: typingsSlinky.alexaSdk.alexaSdkStrings.HIDDEN = this.cast("HIDDEN")
+  def HIDDEN: typingsSlinky.alexaSdk.alexaSdkStrings.HIDDEN = "HIDDEN".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.HIDDEN]
   @scala.inline
-  def VISIBLE: typingsSlinky.alexaSdk.alexaSdkStrings.VISIBLE = this.cast("VISIBLE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VISIBLE: typingsSlinky.alexaSdk.alexaSdkStrings.VISIBLE = "VISIBLE".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.VISIBLE]
 }
 

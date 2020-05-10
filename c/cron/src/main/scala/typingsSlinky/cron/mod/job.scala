@@ -1,7 +1,6 @@
 package typingsSlinky.cron.mod
 
 import typingsSlinky.moment.mod.Moment
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +31,7 @@ object job extends js.Object {
     unrefTimeout: js.UndefOr[Boolean]
   ): CronJob = js.native
   def apply(
-    cronTime: Date,
+    cronTime: js.Date,
     onTick: js.Function0[Unit],
     onComplete: js.UndefOr[CronCommand | Null],
     start: js.UndefOr[Boolean],

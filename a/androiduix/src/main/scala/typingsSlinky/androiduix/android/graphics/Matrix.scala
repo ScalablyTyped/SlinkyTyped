@@ -2,7 +2,7 @@ package typingsSlinky.androiduix.android.graphics
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.androiduix.android.graphics.Matrix.ScaleToFit
-import typingsSlinky.androiduix.java.lang.StringBuilder
+import typingsSlinky.androiduix.java_.lang.StringBuilder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

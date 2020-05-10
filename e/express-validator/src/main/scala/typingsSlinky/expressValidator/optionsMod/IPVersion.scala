@@ -12,10 +12,8 @@ trait IPVersion extends js.Object
 
 object IPVersion {
   @scala.inline
-  def `4`: typingsSlinky.expressValidator.expressValidatorNumbers.`4` = this.cast(4)
+  def `4`: typingsSlinky.expressValidator.expressValidatorNumbers.`4` = 4.asInstanceOf[typingsSlinky.expressValidator.expressValidatorNumbers.`4`]
   @scala.inline
-  def `6`: typingsSlinky.expressValidator.expressValidatorNumbers.`6` = this.cast(6)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `6`: typingsSlinky.expressValidator.expressValidatorNumbers.`6` = 6.asInstanceOf[typingsSlinky.expressValidator.expressValidatorNumbers.`6`]
 }
 

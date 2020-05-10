@@ -2,15 +2,6 @@ package typingsSlinky.ionic
 
 import typingsSlinky.ionic.ailmentsBaseMod.AilmentDeps
 import typingsSlinky.ionic.definitionsMod.IAilment
-import typingsSlinky.ionic.ionicBooleans.`true`
-import typingsSlinky.ionic.ionicStrings.`cordova-platforms-committed`
-import typingsSlinky.ionic.ionicStrings.`default-cordova-bundle-id-used`
-import typingsSlinky.ionic.ionicStrings.`git-config-invalid`
-import typingsSlinky.ionic.ionicStrings.`git-not-used`
-import typingsSlinky.ionic.ionicStrings.`ionic-installed-locally`
-import typingsSlinky.ionic.ionicStrings.`ionic-native-old-version-installed`
-import typingsSlinky.ionic.ionicStrings.`npm-installed-locally`
-import typingsSlinky.ionic.ionicStrings.`unsaved-cordova-platforms`
 import typingsSlinky.ionic.ionicStrings.`viewport-fit-not-set`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,65 +22,43 @@ object ailmentsMod extends js.Object {
   
   @js.native
   class CordovaPlatformsCommitted ()
-    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment {
-    @JSName("id")
-    val id_CordovaPlatformsCommitted: `cordova-platforms-committed` = js.native
-  }
+    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment
   
   @js.native
   class DefaultCordovaBundleIdUsed ()
-    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment {
-    @JSName("id")
-    val id_DefaultCordovaBundleIdUsed: `default-cordova-bundle-id-used` = js.native
-  }
+    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment
   
   @js.native
   class GitConfigInvalid ()
-    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment {
-    @JSName("id")
-    val id_GitConfigInvalid: `git-config-invalid` = js.native
-  }
+    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment
   
   @js.native
   class GitNotUsed ()
-    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment {
-    @JSName("id")
-    val id_GitNotUsed: `git-not-used` = js.native
-  }
+    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.ionic.definitionsMod.IAilment because Already inherited
   - typingsSlinky.ionic.definitionsMod.TreatableAilment because var conflicts: `implicit`, projects. Inlined treatable */ @js.native
   class IonicCLIInstalledLocally ()
     extends typingsSlinky.ionic.ailmentsBaseMod.Ailment {
-    @JSName("id")
-    val id_IonicCLIInstalledLocally: `ionic-installed-locally` = js.native
-    val treatable: Boolean | `true` = js.native
+    val treatable: /* true */ Boolean = js.native
   }
   
   @js.native
   class IonicNativeOldVersionInstalled ()
-    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment {
-    @JSName("id")
-    val id_IonicNativeOldVersionInstalled: `ionic-native-old-version-installed` = js.native
-  }
+    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.ionic.definitionsMod.IAilment because Already inherited
   - typingsSlinky.ionic.definitionsMod.TreatableAilment because var conflicts: `implicit`, projects. Inlined treatable */ @js.native
   class NpmInstalledLocally ()
     extends typingsSlinky.ionic.ailmentsBaseMod.Ailment {
-    @JSName("id")
-    val id_NpmInstalledLocally: `npm-installed-locally` = js.native
-    val treatable: Boolean | `true` = js.native
+    val treatable: /* true */ Boolean = js.native
   }
   
   @js.native
   class UnsavedCordovaPlatforms ()
-    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment {
-    @JSName("id")
-    val id_UnsavedCordovaPlatforms: `unsaved-cordova-platforms` = js.native
-  }
+    extends typingsSlinky.ionic.ailmentsBaseMod.Ailment
   
   @js.native
   class ViewportFitNotSet ()

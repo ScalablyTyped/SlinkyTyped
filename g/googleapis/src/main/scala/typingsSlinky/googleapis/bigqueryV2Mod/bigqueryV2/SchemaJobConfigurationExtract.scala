@@ -47,24 +47,101 @@ trait SchemaJobConfigurationExtract extends js.Object {
 
 object SchemaJobConfigurationExtract {
   @scala.inline
-  def apply(
-    compression: String = null,
-    destinationFormat: String = null,
-    destinationUri: String = null,
-    destinationUris: js.Array[String] = null,
-    fieldDelimiter: String = null,
-    printHeader: js.UndefOr[Boolean] = js.undefined,
-    sourceTable: SchemaTableReference = null
-  ): SchemaJobConfigurationExtract = {
+  def apply(): SchemaJobConfigurationExtract = {
     val __obj = js.Dynamic.literal()
-    if (compression != null) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
-    if (destinationFormat != null) __obj.updateDynamic("destinationFormat")(destinationFormat.asInstanceOf[js.Any])
-    if (destinationUri != null) __obj.updateDynamic("destinationUri")(destinationUri.asInstanceOf[js.Any])
-    if (destinationUris != null) __obj.updateDynamic("destinationUris")(destinationUris.asInstanceOf[js.Any])
-    if (fieldDelimiter != null) __obj.updateDynamic("fieldDelimiter")(fieldDelimiter.asInstanceOf[js.Any])
-    if (!js.isUndefined(printHeader)) __obj.updateDynamic("printHeader")(printHeader.asInstanceOf[js.Any])
-    if (sourceTable != null) __obj.updateDynamic("sourceTable")(sourceTable.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaJobConfigurationExtract]
   }
+  @scala.inline
+  implicit class SchemaJobConfigurationExtractOps[Self <: SchemaJobConfigurationExtract] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompression(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationUris(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationUris")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationUris: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationUris")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFieldDelimiter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldDelimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldDelimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrintHeader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrintHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceTable(value: SchemaTableReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceTable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

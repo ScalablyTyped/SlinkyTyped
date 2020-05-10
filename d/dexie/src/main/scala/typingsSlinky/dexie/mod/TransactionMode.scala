@@ -16,18 +16,16 @@ trait TransactionMode extends js.Object
 
 object TransactionMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def r: typingsSlinky.dexie.dexieStrings.r = "r".asInstanceOf[typingsSlinky.dexie.dexieStrings.r]
   @scala.inline
-  def r: typingsSlinky.dexie.dexieStrings.r = this.cast("r")
+  def rExclamationmark: typingsSlinky.dexie.dexieStrings.rExclamationmark = "r!".asInstanceOf[typingsSlinky.dexie.dexieStrings.rExclamationmark]
   @scala.inline
-  def rExclamationmark: typingsSlinky.dexie.dexieStrings.rExclamationmark = this.cast("r!")
+  def rQuestionmark: typingsSlinky.dexie.dexieStrings.rQuestionmark = "r?".asInstanceOf[typingsSlinky.dexie.dexieStrings.rQuestionmark]
   @scala.inline
-  def rQuestionmark: typingsSlinky.dexie.dexieStrings.rQuestionmark = this.cast("r?")
+  def rw: typingsSlinky.dexie.dexieStrings.rw = "rw".asInstanceOf[typingsSlinky.dexie.dexieStrings.rw]
   @scala.inline
-  def rw: typingsSlinky.dexie.dexieStrings.rw = this.cast("rw")
+  def rwExclamationmark: typingsSlinky.dexie.dexieStrings.rwExclamationmark = "rw!".asInstanceOf[typingsSlinky.dexie.dexieStrings.rwExclamationmark]
   @scala.inline
-  def rwExclamationmark: typingsSlinky.dexie.dexieStrings.rwExclamationmark = this.cast("rw!")
-  @scala.inline
-  def rwQuestionmark: typingsSlinky.dexie.dexieStrings.rwQuestionmark = this.cast("rw?")
+  def rwQuestionmark: typingsSlinky.dexie.dexieStrings.rwQuestionmark = "rw?".asInstanceOf[typingsSlinky.dexie.dexieStrings.rwQuestionmark]
 }
 

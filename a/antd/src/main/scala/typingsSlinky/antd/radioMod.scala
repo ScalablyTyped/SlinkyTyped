@@ -1,10 +1,12 @@
 package typingsSlinky.antd
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.antd.radioButtonMod.RadioButtonProps
 import typingsSlinky.antd.radioInterfaceMod.RadioGroupContextProps
 import typingsSlinky.antd.radioInterfaceMod.RadioGroupProps
+import typingsSlinky.antd.radioInterfaceMod.RadioGroupState
 import typingsSlinky.react.mod.Context
+import typingsSlinky.react.mod.ForwardRefExoticComponent
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,18 +24,18 @@ object radioMod extends js.Object {
   class default ()
     extends typingsSlinky.antd.radioRadioMod.default
   
-  def Button(props: RadioButtonProps): ReactElement = js.native
+  val Button: ForwardRefExoticComponent[RadioButtonProps with RefAttributes[_]] = js.native
   /* static members */
   @js.native
   object Group extends js.Object {
     var defaultProps: AnonButtonStyle = js.native
-    def getDerivedStateFromProps(nextProps: RadioGroupProps): AnonValueAny | Null = js.native
+    def getDerivedStateFromProps(nextProps: RadioGroupProps, prevState: RadioGroupState): PartialRadioGroupState = js.native
   }
   
   /* static members */
   @js.native
   object default extends js.Object {
-    var Button: js.Function1[/* props */ RadioButtonProps, ReactElement] = js.native
+    var Button: ForwardRefExoticComponent[RadioButtonProps with RefAttributes[_]] = js.native
     var Group: TypeofRadioGroup = js.native
     var contextType: Context[RadioGroupContextProps | Null] = js.native
     var defaultProps: AnonType = js.native

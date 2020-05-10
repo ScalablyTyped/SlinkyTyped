@@ -19,7 +19,5 @@ class BatchRecorder protected () extends Recorder {
     */
   def this(args: AnonLogger) = this()
   def flush(): Unit = js.native
-  /* CompleteClass */
-  override def record(rec: Record): Unit = js.native
 }
 

@@ -13,12 +13,10 @@ trait GroupingType extends js.Object
 
 object GroupingType {
   @scala.inline
-  def C: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.C = this.cast("C")
+  def C: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.C = "C".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.C]
   @scala.inline
-  def H: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.H = this.cast("H")
+  def H: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.H = "H".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.H]
   @scala.inline
-  def N: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.N = this.cast("N")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def N: typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.N = "N".asInstanceOf[typingsSlinky.qlikVisualizationextensions.qlikVisualizationextensionsStrings.N]
 }
 

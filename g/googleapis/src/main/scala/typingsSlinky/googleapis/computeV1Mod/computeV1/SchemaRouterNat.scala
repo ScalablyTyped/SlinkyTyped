@@ -71,30 +71,137 @@ trait SchemaRouterNat extends js.Object {
 
 object SchemaRouterNat {
   @scala.inline
-  def apply(
-    icmpIdleTimeoutSec: Int | Double = null,
-    minPortsPerVm: Int | Double = null,
-    name: String = null,
-    natIpAllocateOption: String = null,
-    natIps: js.Array[String] = null,
-    sourceSubnetworkIpRangesToNat: String = null,
-    subnetworks: js.Array[SchemaRouterNatSubnetworkToNat] = null,
-    tcpEstablishedIdleTimeoutSec: Int | Double = null,
-    tcpTransitoryIdleTimeoutSec: Int | Double = null,
-    udpIdleTimeoutSec: Int | Double = null
-  ): SchemaRouterNat = {
+  def apply(): SchemaRouterNat = {
     val __obj = js.Dynamic.literal()
-    if (icmpIdleTimeoutSec != null) __obj.updateDynamic("icmpIdleTimeoutSec")(icmpIdleTimeoutSec.asInstanceOf[js.Any])
-    if (minPortsPerVm != null) __obj.updateDynamic("minPortsPerVm")(minPortsPerVm.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (natIpAllocateOption != null) __obj.updateDynamic("natIpAllocateOption")(natIpAllocateOption.asInstanceOf[js.Any])
-    if (natIps != null) __obj.updateDynamic("natIps")(natIps.asInstanceOf[js.Any])
-    if (sourceSubnetworkIpRangesToNat != null) __obj.updateDynamic("sourceSubnetworkIpRangesToNat")(sourceSubnetworkIpRangesToNat.asInstanceOf[js.Any])
-    if (subnetworks != null) __obj.updateDynamic("subnetworks")(subnetworks.asInstanceOf[js.Any])
-    if (tcpEstablishedIdleTimeoutSec != null) __obj.updateDynamic("tcpEstablishedIdleTimeoutSec")(tcpEstablishedIdleTimeoutSec.asInstanceOf[js.Any])
-    if (tcpTransitoryIdleTimeoutSec != null) __obj.updateDynamic("tcpTransitoryIdleTimeoutSec")(tcpTransitoryIdleTimeoutSec.asInstanceOf[js.Any])
-    if (udpIdleTimeoutSec != null) __obj.updateDynamic("udpIdleTimeoutSec")(udpIdleTimeoutSec.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRouterNat]
   }
+  @scala.inline
+  implicit class SchemaRouterNatOps[Self <: SchemaRouterNat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIcmpIdleTimeoutSec(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icmpIdleTimeoutSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcmpIdleTimeoutSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icmpIdleTimeoutSec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinPortsPerVm(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPortsPerVm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinPortsPerVm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPortsPerVm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNatIpAllocateOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("natIpAllocateOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNatIpAllocateOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("natIpAllocateOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNatIps(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("natIps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNatIps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("natIps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceSubnetworkIpRangesToNat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSubnetworkIpRangesToNat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceSubnetworkIpRangesToNat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceSubnetworkIpRangesToNat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetworks(value: js.Array[SchemaRouterNatSubnetworkToNat]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetworks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTcpEstablishedIdleTimeoutSec(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpEstablishedIdleTimeoutSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTcpEstablishedIdleTimeoutSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpEstablishedIdleTimeoutSec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTcpTransitoryIdleTimeoutSec(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpTransitoryIdleTimeoutSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTcpTransitoryIdleTimeoutSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpTransitoryIdleTimeoutSec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUdpIdleTimeoutSec(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("udpIdleTimeoutSec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUdpIdleTimeoutSec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("udpIdleTimeoutSec")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

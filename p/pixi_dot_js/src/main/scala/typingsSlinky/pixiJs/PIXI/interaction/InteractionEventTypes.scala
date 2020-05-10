@@ -37,60 +37,58 @@ trait InteractionEventTypes extends js.Object
 
 object InteractionEventTypes {
   @scala.inline
-  def added: typingsSlinky.pixiJs.pixiJsStrings.added = this.cast("added")
+  def added: typingsSlinky.pixiJs.pixiJsStrings.added = "added".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.added]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def click: typingsSlinky.pixiJs.pixiJsStrings.click = "click".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.click]
   @scala.inline
-  def click: typingsSlinky.pixiJs.pixiJsStrings.click = this.cast("click")
+  def mousedown: typingsSlinky.pixiJs.pixiJsStrings.mousedown = "mousedown".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.mousedown]
   @scala.inline
-  def mousedown: typingsSlinky.pixiJs.pixiJsStrings.mousedown = this.cast("mousedown")
+  def mousemove: typingsSlinky.pixiJs.pixiJsStrings.mousemove = "mousemove".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.mousemove]
   @scala.inline
-  def mousemove: typingsSlinky.pixiJs.pixiJsStrings.mousemove = this.cast("mousemove")
+  def mouseout: typingsSlinky.pixiJs.pixiJsStrings.mouseout = "mouseout".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.mouseout]
   @scala.inline
-  def mouseout: typingsSlinky.pixiJs.pixiJsStrings.mouseout = this.cast("mouseout")
+  def mouseover: typingsSlinky.pixiJs.pixiJsStrings.mouseover = "mouseover".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.mouseover]
   @scala.inline
-  def mouseover: typingsSlinky.pixiJs.pixiJsStrings.mouseover = this.cast("mouseover")
+  def mouseup: typingsSlinky.pixiJs.pixiJsStrings.mouseup = "mouseup".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.mouseup]
   @scala.inline
-  def mouseup: typingsSlinky.pixiJs.pixiJsStrings.mouseup = this.cast("mouseup")
+  def mouseupoutside: typingsSlinky.pixiJs.pixiJsStrings.mouseupoutside = "mouseupoutside".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.mouseupoutside]
   @scala.inline
-  def mouseupoutside: typingsSlinky.pixiJs.pixiJsStrings.mouseupoutside = this.cast("mouseupoutside")
+  def pointercancel: typingsSlinky.pixiJs.pixiJsStrings.pointercancel = "pointercancel".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointercancel]
   @scala.inline
-  def pointercancel: typingsSlinky.pixiJs.pixiJsStrings.pointercancel = this.cast("pointercancel")
+  def pointerdown: typingsSlinky.pixiJs.pixiJsStrings.pointerdown = "pointerdown".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointerdown]
   @scala.inline
-  def pointerdown: typingsSlinky.pixiJs.pixiJsStrings.pointerdown = this.cast("pointerdown")
+  def pointermove: typingsSlinky.pixiJs.pixiJsStrings.pointermove = "pointermove".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointermove]
   @scala.inline
-  def pointermove: typingsSlinky.pixiJs.pixiJsStrings.pointermove = this.cast("pointermove")
+  def pointerout: typingsSlinky.pixiJs.pixiJsStrings.pointerout = "pointerout".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointerout]
   @scala.inline
-  def pointerout: typingsSlinky.pixiJs.pixiJsStrings.pointerout = this.cast("pointerout")
+  def pointerover: typingsSlinky.pixiJs.pixiJsStrings.pointerover = "pointerover".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointerover]
   @scala.inline
-  def pointerover: typingsSlinky.pixiJs.pixiJsStrings.pointerover = this.cast("pointerover")
+  def pointertap: typingsSlinky.pixiJs.pixiJsStrings.pointertap = "pointertap".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointertap]
   @scala.inline
-  def pointertap: typingsSlinky.pixiJs.pixiJsStrings.pointertap = this.cast("pointertap")
+  def pointerup: typingsSlinky.pixiJs.pixiJsStrings.pointerup = "pointerup".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointerup]
   @scala.inline
-  def pointerup: typingsSlinky.pixiJs.pixiJsStrings.pointerup = this.cast("pointerup")
+  def pointerupoutside: typingsSlinky.pixiJs.pixiJsStrings.pointerupoutside = "pointerupoutside".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointerupoutside]
   @scala.inline
-  def pointerupoutside: typingsSlinky.pixiJs.pixiJsStrings.pointerupoutside = this.cast("pointerupoutside")
+  def removed: typingsSlinky.pixiJs.pixiJsStrings.removed = "removed".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.removed]
   @scala.inline
-  def removed: typingsSlinky.pixiJs.pixiJsStrings.removed = this.cast("removed")
+  def rightclick: typingsSlinky.pixiJs.pixiJsStrings.rightclick = "rightclick".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.rightclick]
   @scala.inline
-  def rightclick: typingsSlinky.pixiJs.pixiJsStrings.rightclick = this.cast("rightclick")
+  def rightdown: typingsSlinky.pixiJs.pixiJsStrings.rightdown = "rightdown".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.rightdown]
   @scala.inline
-  def rightdown: typingsSlinky.pixiJs.pixiJsStrings.rightdown = this.cast("rightdown")
+  def rightup: typingsSlinky.pixiJs.pixiJsStrings.rightup = "rightup".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.rightup]
   @scala.inline
-  def rightup: typingsSlinky.pixiJs.pixiJsStrings.rightup = this.cast("rightup")
+  def rightupoutside: typingsSlinky.pixiJs.pixiJsStrings.rightupoutside = "rightupoutside".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.rightupoutside]
   @scala.inline
-  def rightupoutside: typingsSlinky.pixiJs.pixiJsStrings.rightupoutside = this.cast("rightupoutside")
+  def tap: typingsSlinky.pixiJs.pixiJsStrings.tap = "tap".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.tap]
   @scala.inline
-  def tap: typingsSlinky.pixiJs.pixiJsStrings.tap = this.cast("tap")
+  def touchcancel: typingsSlinky.pixiJs.pixiJsStrings.touchcancel = "touchcancel".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.touchcancel]
   @scala.inline
-  def touchcancel: typingsSlinky.pixiJs.pixiJsStrings.touchcancel = this.cast("touchcancel")
+  def touchend: typingsSlinky.pixiJs.pixiJsStrings.touchend = "touchend".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.touchend]
   @scala.inline
-  def touchend: typingsSlinky.pixiJs.pixiJsStrings.touchend = this.cast("touchend")
+  def touchendoutside: typingsSlinky.pixiJs.pixiJsStrings.touchendoutside = "touchendoutside".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.touchendoutside]
   @scala.inline
-  def touchendoutside: typingsSlinky.pixiJs.pixiJsStrings.touchendoutside = this.cast("touchendoutside")
+  def touchmove: typingsSlinky.pixiJs.pixiJsStrings.touchmove = "touchmove".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.touchmove]
   @scala.inline
-  def touchmove: typingsSlinky.pixiJs.pixiJsStrings.touchmove = this.cast("touchmove")
-  @scala.inline
-  def touchstart: typingsSlinky.pixiJs.pixiJsStrings.touchstart = this.cast("touchstart")
+  def touchstart: typingsSlinky.pixiJs.pixiJsStrings.touchstart = "touchstart".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.touchstart]
 }
 

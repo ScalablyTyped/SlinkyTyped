@@ -17,20 +17,18 @@ trait MediaKeyStatus extends js.Object
 
 object MediaKeyStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def expired: typingsSlinky.std.stdStrings.expired = "expired".asInstanceOf[typingsSlinky.std.stdStrings.expired]
   @scala.inline
-  def expired: typingsSlinky.std.stdStrings.expired = this.cast("expired")
+  def `internal-error`: typingsSlinky.std.stdStrings.`internal-error` = "internal-error".asInstanceOf[typingsSlinky.std.stdStrings.`internal-error`]
   @scala.inline
-  def `internal-error`: typingsSlinky.std.stdStrings.`internal-error` = this.cast("internal-error")
+  def `output-downscaled`: typingsSlinky.std.stdStrings.`output-downscaled` = "output-downscaled".asInstanceOf[typingsSlinky.std.stdStrings.`output-downscaled`]
   @scala.inline
-  def `output-downscaled`: typingsSlinky.std.stdStrings.`output-downscaled` = this.cast("output-downscaled")
+  def `output-restricted`: typingsSlinky.std.stdStrings.`output-restricted` = "output-restricted".asInstanceOf[typingsSlinky.std.stdStrings.`output-restricted`]
   @scala.inline
-  def `output-restricted`: typingsSlinky.std.stdStrings.`output-restricted` = this.cast("output-restricted")
+  def released: typingsSlinky.std.stdStrings.released = "released".asInstanceOf[typingsSlinky.std.stdStrings.released]
   @scala.inline
-  def released: typingsSlinky.std.stdStrings.released = this.cast("released")
+  def `status-pending`: typingsSlinky.std.stdStrings.`status-pending` = "status-pending".asInstanceOf[typingsSlinky.std.stdStrings.`status-pending`]
   @scala.inline
-  def `status-pending`: typingsSlinky.std.stdStrings.`status-pending` = this.cast("status-pending")
-  @scala.inline
-  def usable: typingsSlinky.std.stdStrings.usable = this.cast("usable")
+  def usable: typingsSlinky.std.stdStrings.usable = "usable".asInstanceOf[typingsSlinky.std.stdStrings.usable]
 }
 

@@ -21,6 +21,7 @@ import typingsSlinky.ts3NodejsLibrary.eventsMod.Debug
 import typingsSlinky.ts3NodejsLibrary.eventsMod.ServerEdit
 import typingsSlinky.ts3NodejsLibrary.eventsMod.TextMessage
 import typingsSlinky.ts3NodejsLibrary.eventsMod.TokenUsed
+import typingsSlinky.ts3NodejsLibrary.propertyTypesMod.ApiKeyAdd
 import typingsSlinky.ts3NodejsLibrary.propertyTypesMod.BanAdd
 import typingsSlinky.ts3NodejsLibrary.propertyTypesMod.BanClient
 import typingsSlinky.ts3NodejsLibrary.propertyTypesMod.ChannelEdit
@@ -34,6 +35,7 @@ import typingsSlinky.ts3NodejsLibrary.propertyTypesMod.TransferUpload
 import typingsSlinky.ts3NodejsLibrary.queryResponseMod.QueryResponse
 import typingsSlinky.ts3NodejsLibrary.queryResponseMod.QueryResponseTypes
 import typingsSlinky.ts3NodejsLibrary.responseErrorMod.ResponseError
+import typingsSlinky.ts3NodejsLibrary.responseTypesMod.ApiKeyList
 import typingsSlinky.ts3NodejsLibrary.responseTypesMod.BanList
 import typingsSlinky.ts3NodejsLibrary.responseTypesMod.BindingList
 import typingsSlinky.ts3NodejsLibrary.responseTypesMod.ChannelClientPermListId
@@ -180,6 +182,11 @@ class TeamSpeak protected () extends EventEmitter {
   var handleCache: js.Any = js.native
   /** handles initial commands after successfully connecting to a TeamSpeak Server */
   var handleReady: js.Any = js.native
+  /**
+    * wether the query client should get handled or not
+    * @param type the client type
+    */
+  var ignoreQueryClient: js.Any = js.native
   var priorizeNextCommand: js.Any = js.native
   var query: js.Any = js.native
   var servergroups: js.Any = js.native
@@ -201,6 +208,19 @@ class TeamSpeak protected () extends EventEmitter {
     * @param context context data to update
     */
   var updateContextResolve: js.Any = js.native
+  def apiKeyAdd(props: ApiKeyAdd): js.Promise[typingsSlinky.ts3NodejsLibrary.responseTypesMod.ApiKeyAdd] = js.native
+  /**
+    * Deletes an apikey. Any apikey owned by the current user, can always be deleted
+    * Deleting apikeys from other requires b_virtualserver_apikey_manage
+    * @param id the key id to delete
+    */
+  def apiKeyDel(id: Double): js.Promise[js.Array[QueryResponseTypes]] = js.native
+  /**
+    * Lists all apikeys owned by the user, or of all users using cldbid=*.
+    * Usage of cldbid=... requires b_virtualserver_apikey_manage.
+    */
+  def apiKeyList(): js.Promise[ApiKeyList] = js.native
+  def apiKeyList(props: typingsSlinky.ts3NodejsLibrary.propertyTypesMod.ApiKeyList): js.Promise[ApiKeyList] = js.native
   /**
     * Adds a new ban rule on the selected virtual server.
     * All parameters are optional but at least one of the following must be set: ip, name, uid or mytsid.
@@ -711,6 +731,9 @@ class TeamSpeak protected () extends EventEmitter {
     * On success, the server generates a new ftkey which is required to start uploading the file through TeamSpeak 3's file transfer interface.
     */
   def ftInitUpload(transfer: TransferUpload): js.Promise[FTInitUpload] = js.native
+  /**
+    * Lists currently active file transfers
+    */
   def ftList(): js.Promise[js.Array[FTList]] = js.native
   /**
     * Renames a file in a channels file repository.

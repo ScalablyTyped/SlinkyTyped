@@ -1,7 +1,7 @@
 package typingsSlinky.d3.mod
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

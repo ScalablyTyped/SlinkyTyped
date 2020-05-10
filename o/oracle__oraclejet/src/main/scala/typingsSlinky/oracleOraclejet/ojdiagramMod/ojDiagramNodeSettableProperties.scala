@@ -13,42 +13,146 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojDiagramNodeSettableProperties extends JetSettableProperties {
-  var categories: js.UndefOr[js.Array[String]] = js.undefined
-  var descendantsConnectivity: js.UndefOr[connected | disjoint | unknown] = js.undefined
-  var icon: js.UndefOr[AnonOpacity] = js.undefined
-  var label: js.UndefOr[String] = js.undefined
-  var labelStyle: js.UndefOr[js.Object | Null] = js.undefined
-  var overview: js.UndefOr[AnonIconAnonShape] = js.undefined
-  var selectable: js.UndefOr[auto | off] = js.undefined
-  var shortDesc: js.UndefOr[String] = js.undefined
-  var showDisclosure: js.UndefOr[on | off] = js.undefined
+  var categories: js.UndefOr[js.Array[String]] = js.native
+  var descendantsConnectivity: js.UndefOr[connected | disjoint | unknown] = js.native
+  var icon: js.UndefOr[AnonOpacity] = js.native
+  var label: js.UndefOr[String] = js.native
+  var labelStyle: js.UndefOr[js.Object | Null] = js.native
+  var overview: js.UndefOr[AnonIconAnonShape] = js.native
+  var selectable: js.UndefOr[auto | off] = js.native
+  var shortDesc: js.UndefOr[String] = js.native
+  var showDisclosure: js.UndefOr[on | off] = js.native
 }
 
 object ojDiagramNodeSettableProperties {
   @scala.inline
-  def apply(
-    categories: js.Array[String] = null,
-    descendantsConnectivity: connected | disjoint | unknown = null,
-    icon: AnonOpacity = null,
-    label: String = null,
-    labelStyle: js.Object = null,
-    overview: AnonIconAnonShape = null,
-    selectable: auto | off = null,
-    shortDesc: String = null,
-    showDisclosure: on | off = null
-  ): ojDiagramNodeSettableProperties = {
+  def apply(): ojDiagramNodeSettableProperties = {
     val __obj = js.Dynamic.literal()
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (descendantsConnectivity != null) __obj.updateDynamic("descendantsConnectivity")(descendantsConnectivity.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
-    if (overview != null) __obj.updateDynamic("overview")(overview.asInstanceOf[js.Any])
-    if (selectable != null) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (shortDesc != null) __obj.updateDynamic("shortDesc")(shortDesc.asInstanceOf[js.Any])
-    if (showDisclosure != null) __obj.updateDynamic("showDisclosure")(showDisclosure.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojDiagramNodeSettableProperties]
   }
+  @scala.inline
+  implicit class ojDiagramNodeSettablePropertiesOps[Self <: ojDiagramNodeSettableProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategories(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescendantsConnectivity(value: connected | disjoint | unknown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descendantsConnectivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescendantsConnectivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descendantsConnectivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: AnonOpacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withOverview(value: AnonIconAnonShape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverview: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectable(value: auto | off): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortDesc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDesc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortDesc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDesc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowDisclosure(value: on | off): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showDisclosure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowDisclosure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showDisclosure")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

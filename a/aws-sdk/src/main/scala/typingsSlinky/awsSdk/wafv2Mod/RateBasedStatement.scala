@@ -22,14 +22,41 @@ trait RateBasedStatement extends js.Object {
 
 object RateBasedStatement {
   @scala.inline
-  def apply(
-    AggregateKeyType: RateBasedStatementAggregateKeyType,
-    Limit: RateLimit,
-    ScopeDownStatement: Statement = null
-  ): RateBasedStatement = {
+  def apply(AggregateKeyType: RateBasedStatementAggregateKeyType, Limit: RateLimit): RateBasedStatement = {
     val __obj = js.Dynamic.literal(AggregateKeyType = AggregateKeyType.asInstanceOf[js.Any], Limit = Limit.asInstanceOf[js.Any])
-    if (ScopeDownStatement != null) __obj.updateDynamic("ScopeDownStatement")(ScopeDownStatement.asInstanceOf[js.Any])
     __obj.asInstanceOf[RateBasedStatement]
   }
+  @scala.inline
+  implicit class RateBasedStatementOps[Self <: RateBasedStatement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregateKeyType(value: RateBasedStatementAggregateKeyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregateKeyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLimit(value: RateLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScopeDownStatement(value: Statement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScopeDownStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScopeDownStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScopeDownStatement")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

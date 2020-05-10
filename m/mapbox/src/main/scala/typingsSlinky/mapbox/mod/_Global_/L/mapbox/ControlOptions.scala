@@ -1,6 +1,5 @@
 package typingsSlinky.mapbox.mod._Global_.L.mapbox
 
-import typingsSlinky.leaflet.mod.ControlPosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,18 +7,37 @@ import scala.scalajs.js.annotation._
 //////////////////////////////////////////////////////////////////////
 //////////////////////////////// CONTROLS ////////////////////////////
 //////////////////////////////////////////////////////////////////////
+@js.native
 trait ControlOptions
   extends typingsSlinky.leaflet.mod.ControlOptions {
-  var sanitizer: js.UndefOr[js.Function1[/* template */ String, String]] = js.undefined
+  var sanitizer: js.UndefOr[js.Function1[/* template */ String, String]] = js.native
 }
 
 object ControlOptions {
   @scala.inline
-  def apply(position: ControlPosition = null, sanitizer: /* template */ String => String = null): ControlOptions = {
+  def apply(): ControlOptions = {
     val __obj = js.Dynamic.literal()
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (sanitizer != null) __obj.updateDynamic("sanitizer")(js.Any.fromFunction1(sanitizer))
     __obj.asInstanceOf[ControlOptions]
   }
+  @scala.inline
+  implicit class ControlOptionsOps[Self <: ControlOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSanitizer(value: /* template */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitizer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSanitizer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitizer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

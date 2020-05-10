@@ -4,39 +4,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpreadsheetDefaultCellStyle extends js.Object {
-  var Italic: js.UndefOr[Boolean] = js.undefined
-  var background: js.UndefOr[String] = js.undefined
-  var bold: js.UndefOr[Boolean] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var fontFamily: js.UndefOr[String] = js.undefined
-  var fontSize: js.UndefOr[String] = js.undefined
-  var underline: js.UndefOr[Boolean] = js.undefined
-  var wrap: js.UndefOr[Boolean] = js.undefined
+  var Italic: js.UndefOr[Boolean] = js.native
+  var background: js.UndefOr[String] = js.native
+  var bold: js.UndefOr[Boolean] = js.native
+  var color: js.UndefOr[String] = js.native
+  var fontFamily: js.UndefOr[String] = js.native
+  var fontSize: js.UndefOr[String] = js.native
+  var underline: js.UndefOr[Boolean] = js.native
+  var wrap: js.UndefOr[Boolean] = js.native
 }
 
 object SpreadsheetDefaultCellStyle {
   @scala.inline
-  def apply(
-    Italic: js.UndefOr[Boolean] = js.undefined,
-    background: String = null,
-    bold: js.UndefOr[Boolean] = js.undefined,
-    color: String = null,
-    fontFamily: String = null,
-    fontSize: String = null,
-    underline: js.UndefOr[Boolean] = js.undefined,
-    wrap: js.UndefOr[Boolean] = js.undefined
-  ): SpreadsheetDefaultCellStyle = {
+  def apply(): SpreadsheetDefaultCellStyle = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Italic)) __obj.updateDynamic("Italic")(Italic.asInstanceOf[js.Any])
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(underline)) __obj.updateDynamic("underline")(underline.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpreadsheetDefaultCellStyle]
   }
+  @scala.inline
+  implicit class SpreadsheetDefaultCellStyleOps[Self <: SpreadsheetDefaultCellStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItalic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Italic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItalic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Italic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBold(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnderline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnderline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.d3Transition.mod
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.d3Selection.mod.BaseType
 import typingsSlinky.d3Selection.mod.EnterElement
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,8 +18,8 @@ object active extends js.Object {
   def apply[Datum, PElement /* <: BaseType */, PDatum](node: EnterElement, name: String): (Transition_[EnterElement, Datum, PElement, PDatum]) | Null = js.native
   def apply[Datum, PElement /* <: BaseType */, PDatum](node: Document_): (Transition_[Document_, Datum, PElement, PDatum]) | Null = js.native
   def apply[Datum, PElement /* <: BaseType */, PDatum](node: Document_, name: String): (Transition_[Document_, Datum, PElement, PDatum]) | Null = js.native
-  def apply[Datum, PElement /* <: BaseType */, PDatum](node: Element): (Transition_[org.scalajs.dom.raw.Element, Datum, PElement, PDatum]) | Null = js.native
-  def apply[Datum, PElement /* <: BaseType */, PDatum](node: Element, name: String): (Transition_[org.scalajs.dom.raw.Element, Datum, PElement, PDatum]) | Null = js.native
+  def apply[Datum, PElement /* <: BaseType */, PDatum](node: Element): (Transition_[Element, Datum, PElement, PDatum]) | Null = js.native
+  def apply[Datum, PElement /* <: BaseType */, PDatum](node: Element, name: String): (Transition_[Element, Datum, PElement, PDatum]) | Null = js.native
   def apply[Datum, PElement /* <: BaseType */, PDatum](node: Window_): (Transition_[Window_, Datum, PElement, PDatum]) | Null = js.native
   def apply[Datum, PElement /* <: BaseType */, PDatum](node: Window_, name: String): (Transition_[Window_, Datum, PElement, PDatum]) | Null = js.native
 }

@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateSheetsChartRequest extends js.Object {
   /** The ID of the specific chart in the Google Sheets spreadsheet. */
-  var chartId: js.UndefOr[Double] = js.undefined
+  var chartId: js.UndefOr[Double] = js.native
   /**
     * The element properties for the chart.
     *
@@ -15,12 +16,12 @@ trait CreateSheetsChartRequest extends js.Object {
     * to maintain aspect ratio. The provided transform is applied after this
     * operation.
     */
-  var elementProperties: js.UndefOr[PageElementProperties] = js.undefined
+  var elementProperties: js.UndefOr[PageElementProperties] = js.native
   /**
     * The mode with which the chart is linked to the source spreadsheet. When
     * not specified, the chart will be an image that is not linked.
     */
-  var linkingMode: js.UndefOr[String] = js.undefined
+  var linkingMode: js.UndefOr[String] = js.native
   /**
     * A user-supplied object ID.
     *
@@ -30,27 +31,84 @@ trait CreateSheetsChartRequest extends js.Object {
     * The length of the ID should not be less than 5 or greater than 50.
     * If empty, a unique identifier will be generated.
     */
-  var objectId: js.UndefOr[String] = js.undefined
+  var objectId: js.UndefOr[String] = js.native
   /** The ID of the Google Sheets spreadsheet that contains the chart. */
-  var spreadsheetId: js.UndefOr[String] = js.undefined
+  var spreadsheetId: js.UndefOr[String] = js.native
 }
 
 object CreateSheetsChartRequest {
   @scala.inline
-  def apply(
-    chartId: Int | Double = null,
-    elementProperties: PageElementProperties = null,
-    linkingMode: String = null,
-    objectId: String = null,
-    spreadsheetId: String = null
-  ): CreateSheetsChartRequest = {
+  def apply(): CreateSheetsChartRequest = {
     val __obj = js.Dynamic.literal()
-    if (chartId != null) __obj.updateDynamic("chartId")(chartId.asInstanceOf[js.Any])
-    if (elementProperties != null) __obj.updateDynamic("elementProperties")(elementProperties.asInstanceOf[js.Any])
-    if (linkingMode != null) __obj.updateDynamic("linkingMode")(linkingMode.asInstanceOf[js.Any])
-    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
-    if (spreadsheetId != null) __obj.updateDynamic("spreadsheetId")(spreadsheetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSheetsChartRequest]
   }
+  @scala.inline
+  implicit class CreateSheetsChartRequestOps[Self <: CreateSheetsChartRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChartId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChartId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chartId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElementProperties(value: PageElementProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElementProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkingMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpreadsheetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpreadsheetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

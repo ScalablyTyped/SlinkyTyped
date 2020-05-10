@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore
 
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.TransitionEvent
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -8,23 +8,43 @@ import scala.scalajs.js.annotation._
 /**
   * IngressBackend describes all endpoints for a given service and port.
   */
+@js.native
 trait IngressBackend extends js.Object {
   /**
     * Specifies the name of the referenced service.
     */
-  var serviceName: Input[String]
+  var serviceName: Input[String] = js.native
   /**
     * Specifies the port of the referenced service.
     */
-  var servicePort: Input[Double | String]
+  var servicePort: Input[Double | String] = js.native
 }
 
 object IngressBackend {
   @scala.inline
   def apply(serviceName: Input[String], servicePort: Input[Double | String]): IngressBackend = {
     val __obj = js.Dynamic.literal(serviceName = serviceName.asInstanceOf[js.Any], servicePort = servicePort.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IngressBackend]
   }
+  @scala.inline
+  implicit class IngressBackendOps[Self <: IngressBackend] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServicePort(value: Input[Double | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servicePort")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

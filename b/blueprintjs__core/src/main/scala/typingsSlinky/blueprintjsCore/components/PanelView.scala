@@ -1,35 +1,36 @@
 package typingsSlinky.blueprintjsCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.panelPropsMod.IPanel
 import typingsSlinky.blueprintjsCore.panelViewMod.IPanelViewProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PanelView
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsCore.panelViewMod.PanelView] {
+object PanelView {
   @JSImport("@blueprintjs/core/lib/esm/components/panel-stack/panelView", "PanelView")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsCore.panelViewMod.PanelView] {
+    @scala.inline
+    def previousPanel(value: IPanel[js.Object]): this.type = set("previousPanel", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: IPanelViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     onClose: IPanel[js.Object] => Unit,
     onOpen: IPanel[js.Object] => Unit,
     panel: IPanel[js.Object],
-    showHeader: Boolean,
-    previousPanel: IPanel[js.Object] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsCore.panelViewMod.PanelView] = {
-    val __obj = js.Dynamic.literal(onClose = js.Any.fromFunction1(onClose), onOpen = js.Any.fromFunction1(onOpen), panel = panel.asInstanceOf[js.Any], showHeader = showHeader.asInstanceOf[js.Any])
-    if (previousPanel != null) __obj.updateDynamic("previousPanel")(previousPanel.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    showHeader: Boolean
+  ): Builder = {
+    val __props = js.Dynamic.literal(onClose = js.Any.fromFunction1(onClose), onOpen = js.Any.fromFunction1(onOpen), panel = panel.asInstanceOf[js.Any], showHeader = showHeader.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IPanelViewProps]))
   }
-  type Props = IPanelViewProps
 }
 

@@ -26,18 +26,65 @@ trait WorkspacesIpGroup extends js.Object {
 
 object WorkspacesIpGroup {
   @scala.inline
-  def apply(
-    groupDesc: IpGroupDesc = null,
-    groupId: IpGroupId = null,
-    groupName: IpGroupName = null,
-    userRules: IpRuleList = null
-  ): WorkspacesIpGroup = {
+  def apply(): WorkspacesIpGroup = {
     val __obj = js.Dynamic.literal()
-    if (groupDesc != null) __obj.updateDynamic("groupDesc")(groupDesc.asInstanceOf[js.Any])
-    if (groupId != null) __obj.updateDynamic("groupId")(groupId.asInstanceOf[js.Any])
-    if (groupName != null) __obj.updateDynamic("groupName")(groupName.asInstanceOf[js.Any])
-    if (userRules != null) __obj.updateDynamic("userRules")(userRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkspacesIpGroup]
   }
+  @scala.inline
+  implicit class WorkspacesIpGroupOps[Self <: WorkspacesIpGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupDesc(value: IpGroupDesc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupDesc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupDesc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupDesc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupId(value: IpGroupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupName(value: IpGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserRules(value: IpRuleList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userRules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

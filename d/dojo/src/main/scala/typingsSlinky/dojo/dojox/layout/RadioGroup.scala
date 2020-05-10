@@ -12,5 +12,6 @@ import scala.scalajs.js.annotation._
   * attached to :hover of the Buttons created.
   *
   */
+@js.native
 trait RadioGroup extends js.Object
 

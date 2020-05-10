@@ -1,10 +1,9 @@
 package typingsSlinky.grommet.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.meterMod.MeterProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +11,12 @@ import scala.scalajs.js.annotation._
 @JSImport("grommet", "Meter")
 @js.native
 class Meter protected ()
-  extends Component[MeterProps, ComponentState, js.Any] {
+  extends Component[MeterProps, js.Object, js.Any] {
   def this(props: MeterProps) = this()
   def this(props: MeterProps, context: js.Any) = this()
 }
 
 @JSImport("grommet", "Meter")
 @js.native
-object Meter extends TopLevel[ComponentClass[MeterProps, ComponentState]]
+object Meter extends TopLevel[ReactComponentClass[MeterProps]]
 

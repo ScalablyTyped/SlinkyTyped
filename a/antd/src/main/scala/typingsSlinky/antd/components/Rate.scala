@@ -1,52 +1,56 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.rateMod.RateProps
 import typingsSlinky.antd.rateMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Rate
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Rate {
   @JSImport("antd/lib/rate", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, style */
-  def apply(
-    allowClear: js.UndefOr[Boolean] = js.undefined,
-    allowHalf: js.UndefOr[Boolean] = js.undefined,
-    character: TagMod[Any] = null,
-    count: Int | Double = null,
-    defaultValue: Int | Double = null,
-    onChange: /* value */ Double => Unit = null,
-    onHoverChange: /* value */ Double => Unit = null,
-    prefixCls: String = null,
-    tooltips: js.Array[String] = null,
-    value: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowHalf)) __obj.updateDynamic("allowHalf")(allowHalf.asInstanceOf[js.Any])
-    if (character != null) __obj.updateDynamic("character")(character.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onHoverChange != null) __obj.updateDynamic("onHoverChange")(js.Any.fromFunction1(onHoverChange))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (tooltips != null) __obj.updateDynamic("tooltips")(tooltips.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def allowHalf(value: Boolean): this.type = set("allowHalf", value.asInstanceOf[js.Any])
+    @scala.inline
+    def characterReactElement(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
+    @scala.inline
+    def character(value: TagMod[Any]): this.type = set("character", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def count(value: Double): this.type = set("count", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* value */ Double => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onHoverChange(value: /* value */ Double => Unit): this.type = set("onHoverChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltips(value: js.Array[String]): this.type = set("tooltips", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.rateMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = RateProps
+  
+  def withProps(p: RateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Rate.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FactoryEnum extends js.Object {
-  def func[T](`type`: T, args: js.Any): T
+  def func[T](`type`: T, args: js.Any): T = js.native
 }
 
 object FactoryEnum {
   @scala.inline
   def apply(func: (js.Any, js.Any) => js.Any): FactoryEnum = {
     val __obj = js.Dynamic.literal(func = js.Any.fromFunction2(func))
-  
     __obj.asInstanceOf[FactoryEnum]
   }
+  @scala.inline
+  implicit class FactoryEnumOps[Self <: FactoryEnum] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFunc(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("func")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

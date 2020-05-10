@@ -14,14 +14,12 @@ trait Types extends js.Object
 
 object Types {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def end: typingsSlinky.tileReduce.tileReduceStrings.end = "end".asInstanceOf[typingsSlinky.tileReduce.tileReduceStrings.end]
   @scala.inline
-  def end: typingsSlinky.tileReduce.tileReduceStrings.end = this.cast("end")
+  def map: typingsSlinky.tileReduce.tileReduceStrings.map = "map".asInstanceOf[typingsSlinky.tileReduce.tileReduceStrings.map]
   @scala.inline
-  def map: typingsSlinky.tileReduce.tileReduceStrings.map = this.cast("map")
+  def reduce: typingsSlinky.tileReduce.tileReduceStrings.reduce = "reduce".asInstanceOf[typingsSlinky.tileReduce.tileReduceStrings.reduce]
   @scala.inline
-  def reduce: typingsSlinky.tileReduce.tileReduceStrings.reduce = this.cast("reduce")
-  @scala.inline
-  def start: typingsSlinky.tileReduce.tileReduceStrings.start = this.cast("start")
+  def start: typingsSlinky.tileReduce.tileReduceStrings.start = "start".asInstanceOf[typingsSlinky.tileReduce.tileReduceStrings.start]
 }
 

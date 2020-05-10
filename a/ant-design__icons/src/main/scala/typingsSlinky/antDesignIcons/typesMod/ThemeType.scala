@@ -13,12 +13,10 @@ trait ThemeType extends js.Object
 
 object ThemeType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fill: typingsSlinky.antDesignIcons.antDesignIconsStrings.fill = "fill".asInstanceOf[typingsSlinky.antDesignIcons.antDesignIconsStrings.fill]
   @scala.inline
-  def fill: typingsSlinky.antDesignIcons.antDesignIconsStrings.fill = this.cast("fill")
+  def outline: typingsSlinky.antDesignIcons.antDesignIconsStrings.outline = "outline".asInstanceOf[typingsSlinky.antDesignIcons.antDesignIconsStrings.outline]
   @scala.inline
-  def outline: typingsSlinky.antDesignIcons.antDesignIconsStrings.outline = this.cast("outline")
-  @scala.inline
-  def twotone: typingsSlinky.antDesignIcons.antDesignIconsStrings.twotone = this.cast("twotone")
+  def twotone: typingsSlinky.antDesignIcons.antDesignIconsStrings.twotone = "twotone".asInstanceOf[typingsSlinky.antDesignIcons.antDesignIconsStrings.twotone]
 }
 

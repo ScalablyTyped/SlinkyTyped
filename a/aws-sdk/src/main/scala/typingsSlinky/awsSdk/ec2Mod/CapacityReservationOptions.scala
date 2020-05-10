@@ -14,10 +14,29 @@ trait CapacityReservationOptions extends js.Object {
 
 object CapacityReservationOptions {
   @scala.inline
-  def apply(UsageStrategy: FleetCapacityReservationUsageStrategy = null): CapacityReservationOptions = {
+  def apply(): CapacityReservationOptions = {
     val __obj = js.Dynamic.literal()
-    if (UsageStrategy != null) __obj.updateDynamic("UsageStrategy")(UsageStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[CapacityReservationOptions]
   }
+  @scala.inline
+  implicit class CapacityReservationOptionsOps[Self <: CapacityReservationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUsageStrategy(value: FleetCapacityReservationUsageStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsageStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsageStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsageStrategy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

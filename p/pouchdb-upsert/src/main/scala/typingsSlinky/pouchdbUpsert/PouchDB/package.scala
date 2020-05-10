@@ -10,7 +10,7 @@ package object PouchDB {
     - typingsSlinky.pouchdbUpsert.pouchdbUpsertNumbers.`0`
     - typingsSlinky.pouchdbUpsert.pouchdbUpsertBooleans.`false`
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
   */
   type CancelUpsert = js.UndefOr[typingsSlinky.pouchdbUpsert.PouchDB._CancelUpsert | scala.Null]
   // `Partial<Core.Document<Content>>` seems more useful than

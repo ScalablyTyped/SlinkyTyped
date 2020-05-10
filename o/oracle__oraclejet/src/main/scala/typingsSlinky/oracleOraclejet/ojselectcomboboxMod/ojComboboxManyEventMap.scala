@@ -20,6 +20,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojComboboxManyEventMap[K, D]
   extends ojComboboxEventMap[
       js.Array[js.Any] | Null, 
@@ -27,25 +28,25 @@ trait ojComboboxManyEventMap[K, D]
       js.Array[js.Any] | Null, 
       String
     ] {
-  var asyncValidatorsChanged: CustomEvent
-  var converterChanged: CustomEvent
-  var minLengthChanged: CustomEvent
+  var asyncValidatorsChanged: CustomEvent = js.native
+  var converterChanged: CustomEvent = js.native
+  var minLengthChanged: CustomEvent = js.native
   @JSName("ojAnimateEnd")
-  var ojAnimateEnd_ojComboboxManyEventMap: CustomEvent
+  var ojAnimateEnd_ojComboboxManyEventMap: CustomEvent = js.native
   @JSName("ojAnimateStart")
-  var ojAnimateStart_ojComboboxManyEventMap: CustomEvent
-  var optionRendererChanged: CustomEvent
-  var optionsChanged: CustomEvent
-  var optionsKeysChanged: CustomEvent
-  var pickerAttributesChanged: CustomEvent
-  var placeholderChanged: CustomEvent
-  var rawValueChanged: CustomEvent
-  var readOnlyChanged: CustomEvent
-  var requiredChanged: CustomEvent
-  var validatorsChanged: CustomEvent
+  var ojAnimateStart_ojComboboxManyEventMap: CustomEvent = js.native
+  var optionRendererChanged: CustomEvent = js.native
+  var optionsChanged: CustomEvent = js.native
+  var optionsKeysChanged: CustomEvent = js.native
+  var pickerAttributesChanged: CustomEvent = js.native
+  var placeholderChanged: CustomEvent = js.native
+  var rawValueChanged: CustomEvent = js.native
+  var readOnlyChanged: CustomEvent = js.native
+  var requiredChanged: CustomEvent = js.native
+  var validatorsChanged: CustomEvent = js.native
   @JSName("valueChanged")
-  var valueChanged_ojComboboxManyEventMap: CustomEvent
-  var valueOptionsChanged: CustomEvent
+  var valueChanged_ojComboboxManyEventMap: CustomEvent = js.native
+  var valueOptionsChanged: CustomEvent = js.native
 }
 
 object ojComboboxManyEventMap {
@@ -170,8 +171,111 @@ object ojComboboxManyEventMap {
     wheel: WheelEvent
   ): ojComboboxManyEventMap[K, D] = {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any], animationcancel = animationcancel.asInstanceOf[js.Any], animationend = animationend.asInstanceOf[js.Any], animationiteration = animationiteration.asInstanceOf[js.Any], animationstart = animationstart.asInstanceOf[js.Any], asyncValidatorsChanged = asyncValidatorsChanged.asInstanceOf[js.Any], auxclick = auxclick.asInstanceOf[js.Any], blur = blur.asInstanceOf[js.Any], cancel = cancel.asInstanceOf[js.Any], canplay = canplay.asInstanceOf[js.Any], canplaythrough = canplaythrough.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], converterChanged = converterChanged.asInstanceOf[js.Any], copy = copy.asInstanceOf[js.Any], cuechange = cuechange.asInstanceOf[js.Any], cut = cut.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], describedByChanged = describedByChanged.asInstanceOf[js.Any], disabledChanged = disabledChanged.asInstanceOf[js.Any], displayOptionsChanged = displayOptionsChanged.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragenter = dragenter.asInstanceOf[js.Any], dragexit = dragexit.asInstanceOf[js.Any], dragleave = dragleave.asInstanceOf[js.Any], dragover = dragover.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], drop = drop.asInstanceOf[js.Any], durationchange = durationchange.asInstanceOf[js.Any], emptied = emptied.asInstanceOf[js.Any], ended = ended.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], focusin = focusin.asInstanceOf[js.Any], focusout = focusout.asInstanceOf[js.Any], fullscreenchange = fullscreenchange.asInstanceOf[js.Any], fullscreenerror = fullscreenerror.asInstanceOf[js.Any], gotpointercapture = gotpointercapture.asInstanceOf[js.Any], helpChanged = helpChanged.asInstanceOf[js.Any], helpHintsChanged = helpHintsChanged.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], invalid = invalid.asInstanceOf[js.Any], keydown = keydown.asInstanceOf[js.Any], keypress = keypress.asInstanceOf[js.Any], keyup = keyup.asInstanceOf[js.Any], labelHintChanged = labelHintChanged.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], loadeddata = loadeddata.asInstanceOf[js.Any], loadedmetadata = loadedmetadata.asInstanceOf[js.Any], loadstart = loadstart.asInstanceOf[js.Any], lostpointercapture = lostpointercapture.asInstanceOf[js.Any], messagesCustomChanged = messagesCustomChanged.asInstanceOf[js.Any], minLengthChanged = minLengthChanged.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mouseenter = mouseenter.asInstanceOf[js.Any], mouseleave = mouseleave.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], ojAnimateEnd = ojAnimateEnd.asInstanceOf[js.Any], ojAnimateStart = ojAnimateStart.asInstanceOf[js.Any], optionRendererChanged = optionRendererChanged.asInstanceOf[js.Any], optionsChanged = optionsChanged.asInstanceOf[js.Any], optionsKeysChanged = optionsKeysChanged.asInstanceOf[js.Any], paste = paste.asInstanceOf[js.Any], pause = pause.asInstanceOf[js.Any], pickerAttributesChanged = pickerAttributesChanged.asInstanceOf[js.Any], placeholderChanged = placeholderChanged.asInstanceOf[js.Any], play = play.asInstanceOf[js.Any], playing = playing.asInstanceOf[js.Any], pointercancel = pointercancel.asInstanceOf[js.Any], pointerdown = pointerdown.asInstanceOf[js.Any], pointerenter = pointerenter.asInstanceOf[js.Any], pointerleave = pointerleave.asInstanceOf[js.Any], pointermove = pointermove.asInstanceOf[js.Any], pointerout = pointerout.asInstanceOf[js.Any], pointerover = pointerover.asInstanceOf[js.Any], pointerup = pointerup.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], ratechange = ratechange.asInstanceOf[js.Any], rawValueChanged = rawValueChanged.asInstanceOf[js.Any], readOnlyChanged = readOnlyChanged.asInstanceOf[js.Any], requiredChanged = requiredChanged.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], resize = resize.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any], securitypolicyviolation = securitypolicyviolation.asInstanceOf[js.Any], seeked = seeked.asInstanceOf[js.Any], seeking = seeking.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], selectionchange = selectionchange.asInstanceOf[js.Any], selectstart = selectstart.asInstanceOf[js.Any], stalled = stalled.asInstanceOf[js.Any], submit = submit.asInstanceOf[js.Any], suspend = suspend.asInstanceOf[js.Any], timeupdate = timeupdate.asInstanceOf[js.Any], toggle = toggle.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], transitioncancel = transitioncancel.asInstanceOf[js.Any], transitionend = transitionend.asInstanceOf[js.Any], transitionrun = transitionrun.asInstanceOf[js.Any], transitionstart = transitionstart.asInstanceOf[js.Any], translationsChanged = translationsChanged.asInstanceOf[js.Any], validChanged = validChanged.asInstanceOf[js.Any], validatorsChanged = validatorsChanged.asInstanceOf[js.Any], valueChanged = valueChanged.asInstanceOf[js.Any], valueOptionsChanged = valueOptionsChanged.asInstanceOf[js.Any], volumechange = volumechange.asInstanceOf[js.Any], waiting = waiting.asInstanceOf[js.Any], wheel = wheel.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ojComboboxManyEventMap[K, D]]
   }
+  @scala.inline
+  implicit class ojComboboxManyEventMapOps[Self[k, d] <: ojComboboxManyEventMap[k, d], K, D] (val x: Self[K, D]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[K, D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, D]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
+    @scala.inline
+    def withAsyncValidatorsChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asyncValidatorsChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConverterChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("converterChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinLengthChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLengthChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjAnimateEnd(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojAnimateEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOjAnimateStart(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ojAnimateStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptionRendererChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionRendererChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptionsChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionsChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptionsKeysChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optionsKeysChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPickerAttributesChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributesChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlaceholderChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholderChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRawValueChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawValueChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadOnlyChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnlyChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequiredChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValidatorsChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validatorsChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueOptionsChanged(value: CustomEvent): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueOptionsChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

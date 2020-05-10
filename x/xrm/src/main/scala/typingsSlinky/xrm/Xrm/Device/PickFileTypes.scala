@@ -17,12 +17,10 @@ trait PickFileTypes extends js.Object
 
 object PickFileTypes {
   @scala.inline
-  def audio: typingsSlinky.xrm.xrmStrings.audio = this.cast("audio")
+  def audio: typingsSlinky.xrm.xrmStrings.audio = "audio".asInstanceOf[typingsSlinky.xrm.xrmStrings.audio]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def image: typingsSlinky.xrm.xrmStrings.image = "image".asInstanceOf[typingsSlinky.xrm.xrmStrings.image]
   @scala.inline
-  def image: typingsSlinky.xrm.xrmStrings.image = this.cast("image")
-  @scala.inline
-  def video: typingsSlinky.xrm.xrmStrings.video = this.cast("video")
+  def video: typingsSlinky.xrm.xrmStrings.video = "video".asInstanceOf[typingsSlinky.xrm.xrmStrings.video]
 }
 

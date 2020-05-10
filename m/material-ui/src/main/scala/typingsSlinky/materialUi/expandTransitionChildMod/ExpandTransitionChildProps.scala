@@ -1,41 +1,80 @@
 package typingsSlinky.materialUi.expandTransitionChildMod
 
-import slinky.core.TagMod
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExpandTransitionChildProps extends Props[ExpandTransitionChild] {
-  var enterDelay: js.UndefOr[Double] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var transitionDelay: js.UndefOr[Double] = js.undefined
-  var transitionDuration: js.UndefOr[Double] = js.undefined
+  var enterDelay: js.UndefOr[Double] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var transitionDelay: js.UndefOr[Double] = js.native
+  var transitionDuration: js.UndefOr[Double] = js.native
 }
 
 object ExpandTransitionChildProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any] = null,
-    enterDelay: Int | Double = null,
-    key: Key = null,
-    ref: LegacyRef[ExpandTransitionChild] = null,
-    style: CSSProperties = null,
-    transitionDelay: Int | Double = null,
-    transitionDuration: Int | Double = null
-  ): ExpandTransitionChildProps = {
+  def apply(): ExpandTransitionChildProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (enterDelay != null) __obj.updateDynamic("enterDelay")(enterDelay.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (transitionDelay != null) __obj.updateDynamic("transitionDelay")(transitionDelay.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpandTransitionChildProps]
   }
+  @scala.inline
+  implicit class ExpandTransitionChildPropsOps[Self <: ExpandTransitionChildProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnterDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnterDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

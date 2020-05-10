@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlayerAchievement extends js.Object {
   /**
     * The state of the achievement.
@@ -12,44 +13,121 @@ trait PlayerAchievement extends js.Object {
     * - "REVEALED" - Achievement is revealed.
     * - "UNLOCKED" - Achievement is unlocked.
     */
-  var achievementState: js.UndefOr[String] = js.undefined
+  var achievementState: js.UndefOr[String] = js.native
   /** The current steps for an incremental achievement. */
-  var currentSteps: js.UndefOr[Double] = js.undefined
+  var currentSteps: js.UndefOr[Double] = js.native
   /**
     * Experience points earned for the achievement. This field is absent for achievements that have not yet been unlocked and 0 for achievements that have
     * been unlocked by testers but that are unpublished.
     */
-  var experiencePoints: js.UndefOr[String] = js.undefined
+  var experiencePoints: js.UndefOr[String] = js.native
   /** The current steps for an incremental achievement as a string. */
-  var formattedCurrentStepsString: js.UndefOr[String] = js.undefined
+  var formattedCurrentStepsString: js.UndefOr[String] = js.native
   /** The ID of the achievement. */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /** Uniquely identifies the type of this resource. Value is always the fixed string games#playerAchievement. */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /** The timestamp of the last modification to this achievement's state. */
-  var lastUpdatedTimestamp: js.UndefOr[String] = js.undefined
+  var lastUpdatedTimestamp: js.UndefOr[String] = js.native
 }
 
 object PlayerAchievement {
   @scala.inline
-  def apply(
-    achievementState: String = null,
-    currentSteps: Int | Double = null,
-    experiencePoints: String = null,
-    formattedCurrentStepsString: String = null,
-    id: String = null,
-    kind: String = null,
-    lastUpdatedTimestamp: String = null
-  ): PlayerAchievement = {
+  def apply(): PlayerAchievement = {
     val __obj = js.Dynamic.literal()
-    if (achievementState != null) __obj.updateDynamic("achievementState")(achievementState.asInstanceOf[js.Any])
-    if (currentSteps != null) __obj.updateDynamic("currentSteps")(currentSteps.asInstanceOf[js.Any])
-    if (experiencePoints != null) __obj.updateDynamic("experiencePoints")(experiencePoints.asInstanceOf[js.Any])
-    if (formattedCurrentStepsString != null) __obj.updateDynamic("formattedCurrentStepsString")(formattedCurrentStepsString.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (lastUpdatedTimestamp != null) __obj.updateDynamic("lastUpdatedTimestamp")(lastUpdatedTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlayerAchievement]
   }
+  @scala.inline
+  implicit class PlayerAchievementOps[Self <: PlayerAchievement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAchievementState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("achievementState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAchievementState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("achievementState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentSteps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSteps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentSteps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentSteps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExperiencePoints(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experiencePoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExperiencePoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experiencePoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormattedCurrentStepsString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedCurrentStepsString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormattedCurrentStepsString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedCurrentStepsString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedTimestamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTimestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

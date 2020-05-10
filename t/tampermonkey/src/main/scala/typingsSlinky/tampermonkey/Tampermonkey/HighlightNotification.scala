@@ -5,34 +5,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HighlightNotification
   extends Notification
      with NotificationDetails {
   @JSName("highlight")
-  var highlight_HighlightNotification: `true`
+  var highlight_HighlightNotification: `true` = js.native
   @JSName("text")
-  var text_HighlightNotification: js.UndefOr[scala.Nothing] = js.undefined
+  var text_HighlightNotification: js.UndefOr[scala.Nothing] = js.native
 }
 
 object HighlightNotification {
   @scala.inline
-  def apply(
-    highlight: `true`,
-    image: String = null,
-    onclick: NotificationOnClick = null,
-    ondone: NotificationOnDone = null,
-    text: js.UndefOr[scala.Nothing] = js.undefined,
-    timeout: Int | Double = null,
-    title: String = null
-  ): HighlightNotification = {
+  def apply(highlight: `true`): HighlightNotification = {
     val __obj = js.Dynamic.literal(highlight = highlight.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (onclick != null) __obj.updateDynamic("onclick")(onclick.asInstanceOf[js.Any])
-    if (ondone != null) __obj.updateDynamic("ondone")(ondone.asInstanceOf[js.Any])
-    if (!js.isUndefined(text)) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[HighlightNotification]
   }
+  @scala.inline
+  implicit class HighlightNotificationOps[Self <: HighlightNotification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHighlight(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

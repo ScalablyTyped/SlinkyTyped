@@ -13,12 +13,10 @@ trait CardActionAreaClassKey extends js.Object
 
 object CardActionAreaClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def focusHighlight: typingsSlinky.materialUiCore.materialUiCoreStrings.focusHighlight = "focusHighlight".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.focusHighlight]
   @scala.inline
-  def focusHighlight: typingsSlinky.materialUiCore.materialUiCoreStrings.focusHighlight = this.cast("focusHighlight")
+  def focusVisible: typingsSlinky.materialUiCore.materialUiCoreStrings.focusVisible = "focusVisible".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.focusVisible]
   @scala.inline
-  def focusVisible: typingsSlinky.materialUiCore.materialUiCoreStrings.focusVisible = this.cast("focusVisible")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.halogen.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.halogen.mod.MarginLoaderProps
 import typingsSlinky.halogen.mod.PacmanLoaderCls
 import typingsSlinky.halogen.mod.VerticalAlign
@@ -12,30 +9,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PacmanLoader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, PacmanLoaderCls] {
+object PacmanLoader {
   @JSImport("halogen", "PacmanLoader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, size */
-  def apply(
-    color: String = null,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    margin: Int | Double = null,
-    verticalAlign: VerticalAlign = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, PacmanLoaderCls] = {
-    val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, PacmanLoaderCls] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Double): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalAlign(value: VerticalAlign): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, PacmanLoaderCls] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.halogen.mod.PacmanLoaderCls](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MarginLoaderProps[Double]
+  
+  def withProps(p: MarginLoaderProps[Double]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PacmanLoader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

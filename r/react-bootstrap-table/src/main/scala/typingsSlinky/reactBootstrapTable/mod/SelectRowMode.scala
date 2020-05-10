@@ -13,12 +13,10 @@ trait SelectRowMode extends js.Object
 
 object SelectRowMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def checkbox: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.checkbox = "checkbox".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.checkbox]
   @scala.inline
-  def checkbox: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.checkbox = this.cast("checkbox")
+  def none: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.none = "none".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.none]
   @scala.inline
-  def none: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.none = this.cast("none")
-  @scala.inline
-  def radio: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.radio = this.cast("radio")
+  def radio: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.radio = "radio".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.radio]
 }
 

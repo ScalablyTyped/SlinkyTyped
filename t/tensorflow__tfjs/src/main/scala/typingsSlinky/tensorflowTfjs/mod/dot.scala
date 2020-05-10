@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 object dot
   extends TopLevel[
       js.Function2[
-        /* t1 */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | TensorLike, 
-        /* t2 */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | TensorLike, 
+        /* x */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | TensorLike, 
+        /* indices */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | TensorLike, 
         Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
       ]
     ]

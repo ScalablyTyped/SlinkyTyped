@@ -1,7 +1,6 @@
 package typingsSlinky.openpgp.mod.packet
 
 import typingsSlinky.openpgp.mod.ReadableStream
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,13 +17,12 @@ import scala.scalajs.js.annotation._
 class Compressed () extends js.Object {
   /**
     * Compression algorithm
-    * @type {compression}
     */
   var algorithm: js.Any = js.native
   /**
     * Compressed packet data
     */
-  var compressed: scala.scalajs.js.typedarray.Uint8Array | ReadableStream[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  var compressed: js.typedarray.Uint8Array | ReadableStream[js.typedarray.Uint8Array] = js.native
   /**
     * List of packets
     */
@@ -42,16 +40,16 @@ class Compressed () extends js.Object {
     * read by read_packet
     */
   def decompress(): Unit = js.native
-  def read(bytes: ReadableStream[Uint8Array]): Unit = js.native
+  def read(bytes: ReadableStream[js.typedarray.Uint8Array]): Unit = js.native
   /**
     * Parsing function for the packet.
     * @param bytes Payload of a tag 8 packet
     */
-  def read(bytes: Uint8Array): Unit = js.native
+  def read(bytes: js.typedarray.Uint8Array): Unit = js.native
   /**
     * Return the compressed packet.
     * @returns binary compressed packet
     */
-  def write(): scala.scalajs.js.typedarray.Uint8Array | ReadableStream[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def write(): js.typedarray.Uint8Array | ReadableStream[js.typedarray.Uint8Array] = js.native
 }
 

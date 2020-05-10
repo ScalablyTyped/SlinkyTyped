@@ -1,26 +1,22 @@
 package typingsSlinky.keystonejsApolloHelpers.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.keystonejsApolloHelpers.mod.KeystoneQueryTypeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Query
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Query] {
+object Query {
   @JSImport("@keystonejs/apollo-helpers", "Query")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(query: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Query] = {
-    val __obj = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: KeystoneQueryTypeProps): Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Query] = new Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Query](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(query: String): Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Query] = {
+    val __props = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.keystonejsApolloHelpers.mod.Query](js.Array(this.component, __props.asInstanceOf[KeystoneQueryTypeProps]))
   }
-  type Props = KeystoneQueryTypeProps
 }
 

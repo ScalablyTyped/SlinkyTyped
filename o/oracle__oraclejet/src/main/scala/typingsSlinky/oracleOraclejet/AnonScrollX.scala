@@ -5,18 +5,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonScrollX
-  extends /* propName */ StringDictionary[js.Any] {
-  var scrollX: Double
-  var scrollY: Double
+  extends /* key */ StringDictionary[js.Any] {
+  var scrollX: Double = js.native
+  var scrollY: Double = js.native
 }
 
 object AnonScrollX {
   @scala.inline
-  def apply(scrollX: Double, scrollY: Double, StringDictionary: /* propName */ StringDictionary[js.Any] = null): AnonScrollX = {
+  def apply(scrollX: Double, scrollY: Double): AnonScrollX = {
     val __obj = js.Dynamic.literal(scrollX = scrollX.asInstanceOf[js.Any], scrollY = scrollY.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[AnonScrollX]
   }
+  @scala.inline
+  implicit class AnonScrollXOps[Self <: AnonScrollX] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScrollX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScrollY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollY")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

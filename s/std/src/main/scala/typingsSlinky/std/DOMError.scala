@@ -6,8 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An error object that contains an error name. */
+@js.native
 trait DOMError extends js.Object {
-  val name: java.lang.String
+  val name: java.lang.String = js.native
 }
 
 @JSGlobal("DOMError")

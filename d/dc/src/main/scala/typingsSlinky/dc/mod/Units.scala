@@ -1,6 +1,5 @@
 package typingsSlinky.dc.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,26 +14,26 @@ trait Units extends js.Object {
   def integers(start: Double, end: Double): Double | (js.Array[Double | js.Date | String]) = js.native
   def integers(start: Double, end: Double, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
   def integers(start: Double, end: Double, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
-  def integers(start: Double, end: Date): Double | (js.Array[Double | js.Date | String]) = js.native
-  def integers(start: Double, end: Date, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
-  def integers(start: Double, end: Date, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
-  def integers(start: Date, end: Double): Double | (js.Array[Double | js.Date | String]) = js.native
-  def integers(start: Date, end: Double, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
-  def integers(start: Date, end: Double, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
-  def integers(start: Date, end: Date): Double | (js.Array[Double | js.Date | String]) = js.native
-  def integers(start: Date, end: Date, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
-  def integers(start: Date, end: Date, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
+  def integers(start: Double, end: js.Date): Double | (js.Array[Double | js.Date | String]) = js.native
+  def integers(start: Double, end: js.Date, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
+  def integers(start: Double, end: js.Date, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
+  def integers(start: js.Date, end: Double): Double | (js.Array[Double | js.Date | String]) = js.native
+  def integers(start: js.Date, end: Double, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
+  def integers(start: js.Date, end: Double, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
+  def integers(start: js.Date, end: js.Date): Double | (js.Array[Double | js.Date | String]) = js.native
+  def integers(start: js.Date, end: js.Date, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
+  def integers(start: js.Date, end: js.Date, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
   def ordinal(start: Double, end: Double): Double | (js.Array[Double | js.Date | String]) = js.native
   def ordinal(start: Double, end: Double, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
   def ordinal(start: Double, end: Double, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
-  def ordinal(start: Double, end: Date): Double | (js.Array[Double | js.Date | String]) = js.native
-  def ordinal(start: Double, end: Date, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
-  def ordinal(start: Double, end: Date, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
-  def ordinal(start: Date, end: Double): Double | (js.Array[Double | js.Date | String]) = js.native
-  def ordinal(start: Date, end: Double, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
-  def ordinal(start: Date, end: Double, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
-  def ordinal(start: Date, end: Date): Double | (js.Array[Double | js.Date | String]) = js.native
-  def ordinal(start: Date, end: Date, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
-  def ordinal(start: Date, end: Date, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
+  def ordinal(start: Double, end: js.Date): Double | (js.Array[Double | js.Date | String]) = js.native
+  def ordinal(start: Double, end: js.Date, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
+  def ordinal(start: Double, end: js.Date, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
+  def ordinal(start: js.Date, end: Double): Double | (js.Array[Double | js.Date | String]) = js.native
+  def ordinal(start: js.Date, end: Double, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
+  def ordinal(start: js.Date, end: Double, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
+  def ordinal(start: js.Date, end: js.Date): Double | (js.Array[Double | js.Date | String]) = js.native
+  def ordinal(start: js.Date, end: js.Date, domain: js.Array[String]): Double | (js.Array[Double | js.Date | String]) = js.native
+  def ordinal(start: js.Date, end: js.Date, domain: Double): Double | (js.Array[Double | js.Date | String]) = js.native
 }
 

@@ -1,52 +1,39 @@
 package typingsSlinky.mapboxGl.mod
 
-import typingsSlinky.geojson.mod.Feature
-import typingsSlinky.geojson.mod.FeatureCollection
-import typingsSlinky.geojson.mod.GeoJsonProperties
-import typingsSlinky.geojson.mod.Geometry
 import typingsSlinky.mapboxGl.mapboxGlStrings.geojson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GeoJSONSourceRaw
   extends Source
      with GeoJSONSourceOptions
      with AnySourceData {
   @JSName("type")
-  var type_GeoJSONSourceRaw: geojson
+  var type_GeoJSONSourceRaw: geojson = js.native
 }
 
 object GeoJSONSourceRaw {
   @scala.inline
-  def apply(
-    `type`: geojson,
-    attribution: String = null,
-    buffer: Int | Double = null,
-    cluster: Double | Boolean = null,
-    clusterMaxZoom: Int | Double = null,
-    clusterRadius: Int | Double = null,
-    data: (Feature[Geometry, GeoJsonProperties]) | (FeatureCollection[Geometry, GeoJsonProperties]) | String = null,
-    generateId: js.UndefOr[Boolean] = js.undefined,
-    lineMetrics: js.UndefOr[Boolean] = js.undefined,
-    maxzoom: Int | Double = null,
-    promoteId: PromoteIdSpecification = null,
-    tolerance: Int | Double = null
-  ): GeoJSONSourceRaw = {
+  def apply(`type`: geojson): GeoJSONSourceRaw = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
-    if (buffer != null) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (cluster != null) __obj.updateDynamic("cluster")(cluster.asInstanceOf[js.Any])
-    if (clusterMaxZoom != null) __obj.updateDynamic("clusterMaxZoom")(clusterMaxZoom.asInstanceOf[js.Any])
-    if (clusterRadius != null) __obj.updateDynamic("clusterRadius")(clusterRadius.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(generateId)) __obj.updateDynamic("generateId")(generateId.asInstanceOf[js.Any])
-    if (!js.isUndefined(lineMetrics)) __obj.updateDynamic("lineMetrics")(lineMetrics.asInstanceOf[js.Any])
-    if (maxzoom != null) __obj.updateDynamic("maxzoom")(maxzoom.asInstanceOf[js.Any])
-    if (promoteId != null) __obj.updateDynamic("promoteId")(promoteId.asInstanceOf[js.Any])
-    if (tolerance != null) __obj.updateDynamic("tolerance")(tolerance.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeoJSONSourceRaw]
   }
+  @scala.inline
+  implicit class GeoJSONSourceRawOps[Self <: GeoJSONSourceRaw] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: geojson): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

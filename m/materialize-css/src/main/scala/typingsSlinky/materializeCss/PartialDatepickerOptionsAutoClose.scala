@@ -7,81 +7,309 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<materialize-css.M.DatepickerOptions> */
+@js.native
 trait PartialDatepickerOptionsAutoClose extends js.Object {
-  var autoClose: js.UndefOr[Boolean] = js.undefined
-  var container: js.UndefOr[Element] = js.undefined
-  var defaultDate: js.UndefOr[js.Date] = js.undefined
-  var disableDayFn: js.UndefOr[js.Function1[/* day */ js.Date, Boolean]] = js.undefined
-  var disableWeekends: js.UndefOr[Boolean] = js.undefined
-  var events: js.UndefOr[js.Array[String]] = js.undefined
-  var firstDay: js.UndefOr[Double] = js.undefined
-  var format: js.UndefOr[String] = js.undefined
-  var i18n: js.UndefOr[PartialInternationalizati] = js.undefined
-  var isRTL: js.UndefOr[Boolean] = js.undefined
-  var maxDate: js.UndefOr[js.Date] = js.undefined
-  var minDate: js.UndefOr[js.Date] = js.undefined
-  var onClose: js.UndefOr[js.ThisFunction0[/* this */ Datepicker, Unit]] = js.undefined
-  var onDraw: js.UndefOr[js.ThisFunction0[/* this */ Datepicker, Unit]] = js.undefined
-  var onOpen: js.UndefOr[js.ThisFunction0[/* this */ Datepicker, Unit]] = js.undefined
-  var onSelect: js.UndefOr[js.ThisFunction1[/* this */ Datepicker, /* selectedDate */ js.Date, Unit]] = js.undefined
-  var parse: js.UndefOr[js.Function2[/* value */ String, /* format */ String, js.Date]] = js.undefined
-  var setDefaultDate: js.UndefOr[Boolean] = js.undefined
-  var showClearBtn: js.UndefOr[Boolean] = js.undefined
-  var showDaysInNextAndPreviousMonths: js.UndefOr[Boolean] = js.undefined
-  var showMonthAfterYear: js.UndefOr[Boolean] = js.undefined
-  var yearRange: js.UndefOr[Double | js.Array[Double]] = js.undefined
+  var autoClose: js.UndefOr[Boolean] = js.native
+  var container: js.UndefOr[Element] = js.native
+  var defaultDate: js.UndefOr[js.Date] = js.native
+  var disableDayFn: js.UndefOr[js.Function1[/* day */ js.Date, Boolean]] = js.native
+  var disableWeekends: js.UndefOr[Boolean] = js.native
+  var events: js.UndefOr[js.Array[String]] = js.native
+  var firstDay: js.UndefOr[Double] = js.native
+  var format: js.UndefOr[String] = js.native
+  var i18n: js.UndefOr[PartialInternationalizati] = js.native
+  var isRTL: js.UndefOr[Boolean] = js.native
+  var maxDate: js.UndefOr[js.Date] = js.native
+  var minDate: js.UndefOr[js.Date] = js.native
+  var onClose: js.UndefOr[js.ThisFunction0[/* this */ Datepicker, Unit]] = js.native
+  var onDraw: js.UndefOr[js.ThisFunction0[/* this */ Datepicker, Unit]] = js.native
+  var onOpen: js.UndefOr[js.ThisFunction0[/* this */ Datepicker, Unit]] = js.native
+  var onSelect: js.UndefOr[js.ThisFunction1[/* this */ Datepicker, /* selectedDate */ js.Date, Unit]] = js.native
+  var parse: js.UndefOr[js.Function2[/* value */ String, /* format */ String, js.Date]] = js.native
+  var setDefaultDate: js.UndefOr[Boolean] = js.native
+  var showClearBtn: js.UndefOr[Boolean] = js.native
+  var showDaysInNextAndPreviousMonths: js.UndefOr[Boolean] = js.native
+  var showMonthAfterYear: js.UndefOr[Boolean] = js.native
+  var yearRange: js.UndefOr[Double | js.Array[Double]] = js.native
 }
 
 object PartialDatepickerOptionsAutoClose {
   @scala.inline
-  def apply(
-    autoClose: js.UndefOr[Boolean] = js.undefined,
-    container: Element = null,
-    defaultDate: js.Date = null,
-    disableDayFn: /* day */ js.Date => Boolean = null,
-    disableWeekends: js.UndefOr[Boolean] = js.undefined,
-    events: js.Array[String] = null,
-    firstDay: Int | Double = null,
-    format: String = null,
-    i18n: PartialInternationalizati = null,
-    isRTL: js.UndefOr[Boolean] = js.undefined,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    onClose: js.ThisFunction0[/* this */ Datepicker, Unit] = null,
-    onDraw: js.ThisFunction0[/* this */ Datepicker, Unit] = null,
-    onOpen: js.ThisFunction0[/* this */ Datepicker, Unit] = null,
-    onSelect: js.ThisFunction1[/* this */ Datepicker, /* selectedDate */ js.Date, Unit] = null,
-    parse: (/* value */ String, /* format */ String) => js.Date = null,
-    setDefaultDate: js.UndefOr[Boolean] = js.undefined,
-    showClearBtn: js.UndefOr[Boolean] = js.undefined,
-    showDaysInNextAndPreviousMonths: js.UndefOr[Boolean] = js.undefined,
-    showMonthAfterYear: js.UndefOr[Boolean] = js.undefined,
-    yearRange: Double | js.Array[Double] = null
-  ): PartialDatepickerOptionsAutoClose = {
+  def apply(): PartialDatepickerOptionsAutoClose = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoClose)) __obj.updateDynamic("autoClose")(autoClose.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (defaultDate != null) __obj.updateDynamic("defaultDate")(defaultDate.asInstanceOf[js.Any])
-    if (disableDayFn != null) __obj.updateDynamic("disableDayFn")(js.Any.fromFunction1(disableDayFn))
-    if (!js.isUndefined(disableWeekends)) __obj.updateDynamic("disableWeekends")(disableWeekends.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (firstDay != null) __obj.updateDynamic("firstDay")(firstDay.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (i18n != null) __obj.updateDynamic("i18n")(i18n.asInstanceOf[js.Any])
-    if (!js.isUndefined(isRTL)) __obj.updateDynamic("isRTL")(isRTL.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(onClose.asInstanceOf[js.Any])
-    if (onDraw != null) __obj.updateDynamic("onDraw")(onDraw.asInstanceOf[js.Any])
-    if (onOpen != null) __obj.updateDynamic("onOpen")(onOpen.asInstanceOf[js.Any])
-    if (onSelect != null) __obj.updateDynamic("onSelect")(onSelect.asInstanceOf[js.Any])
-    if (parse != null) __obj.updateDynamic("parse")(js.Any.fromFunction2(parse))
-    if (!js.isUndefined(setDefaultDate)) __obj.updateDynamic("setDefaultDate")(setDefaultDate.asInstanceOf[js.Any])
-    if (!js.isUndefined(showClearBtn)) __obj.updateDynamic("showClearBtn")(showClearBtn.asInstanceOf[js.Any])
-    if (!js.isUndefined(showDaysInNextAndPreviousMonths)) __obj.updateDynamic("showDaysInNextAndPreviousMonths")(showDaysInNextAndPreviousMonths.asInstanceOf[js.Any])
-    if (!js.isUndefined(showMonthAfterYear)) __obj.updateDynamic("showMonthAfterYear")(showMonthAfterYear.asInstanceOf[js.Any])
-    if (yearRange != null) __obj.updateDynamic("yearRange")(yearRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialDatepickerOptionsAutoClose]
   }
+  @scala.inline
+  implicit class PartialDatepickerOptionsAutoCloseOps[Self <: PartialDatepickerOptionsAutoClose] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoClose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableDayFn(value: /* day */ js.Date => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDayFn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDisableDayFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDayFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableWeekends(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWeekends")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableWeekends: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableWeekends")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstDay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstDay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withI18n(value: PartialInternationalizati): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutI18n: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRTL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsRTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClose(value: js.ThisFunction0[/* this */ Datepicker, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDraw(value: js.ThisFunction0[/* this */ Datepicker, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDraw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnDraw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDraw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpen(value: js.ThisFunction0[/* this */ Datepicker, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelect(value: js.ThisFunction1[/* this */ Datepicker, /* selectedDate */ js.Date, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParse(value: (/* value */ String, /* format */ String) => js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutParse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetDefaultDate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaultDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetDefaultDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDefaultDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowClearBtn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showClearBtn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowClearBtn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showClearBtn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowDaysInNextAndPreviousMonths(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showDaysInNextAndPreviousMonths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowDaysInNextAndPreviousMonths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showDaysInNextAndPreviousMonths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowMonthAfterYear(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMonthAfterYear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowMonthAfterYear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMonthAfterYear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYearRange(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yearRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYearRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yearRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

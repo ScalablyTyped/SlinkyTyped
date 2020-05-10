@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCapSegments extends js.Object {
-  var capSegments: js.UndefOr[Double] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var heightSegments: js.UndefOr[Double] = js.undefined
-  var radius: js.UndefOr[Double] = js.undefined
+  var capSegments: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var heightSegments: js.UndefOr[Double] = js.native
+  var radius: js.UndefOr[Double] = js.native
 }
 
 object AnonCapSegments {
   @scala.inline
-  def apply(
-    capSegments: Int | Double = null,
-    height: Int | Double = null,
-    heightSegments: Int | Double = null,
-    radius: Int | Double = null
-  ): AnonCapSegments = {
+  def apply(): AnonCapSegments = {
     val __obj = js.Dynamic.literal()
-    if (capSegments != null) __obj.updateDynamic("capSegments")(capSegments.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (heightSegments != null) __obj.updateDynamic("heightSegments")(heightSegments.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCapSegments]
   }
+  @scala.inline
+  implicit class AnonCapSegmentsOps[Self <: AnonCapSegments] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCapSegments(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capSegments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapSegments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capSegments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeightSegments(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightSegments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeightSegments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightSegments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

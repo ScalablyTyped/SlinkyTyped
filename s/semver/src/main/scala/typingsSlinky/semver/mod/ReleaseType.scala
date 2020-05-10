@@ -17,20 +17,18 @@ trait ReleaseType extends js.Object
 
 object ReleaseType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def major: typingsSlinky.semver.semverStrings.major = "major".asInstanceOf[typingsSlinky.semver.semverStrings.major]
   @scala.inline
-  def major: typingsSlinky.semver.semverStrings.major = this.cast("major")
+  def minor: typingsSlinky.semver.semverStrings.minor = "minor".asInstanceOf[typingsSlinky.semver.semverStrings.minor]
   @scala.inline
-  def minor: typingsSlinky.semver.semverStrings.minor = this.cast("minor")
+  def patch: typingsSlinky.semver.semverStrings.patch = "patch".asInstanceOf[typingsSlinky.semver.semverStrings.patch]
   @scala.inline
-  def patch: typingsSlinky.semver.semverStrings.patch = this.cast("patch")
+  def premajor: typingsSlinky.semver.semverStrings.premajor = "premajor".asInstanceOf[typingsSlinky.semver.semverStrings.premajor]
   @scala.inline
-  def premajor: typingsSlinky.semver.semverStrings.premajor = this.cast("premajor")
+  def preminor: typingsSlinky.semver.semverStrings.preminor = "preminor".asInstanceOf[typingsSlinky.semver.semverStrings.preminor]
   @scala.inline
-  def preminor: typingsSlinky.semver.semverStrings.preminor = this.cast("preminor")
+  def prepatch: typingsSlinky.semver.semverStrings.prepatch = "prepatch".asInstanceOf[typingsSlinky.semver.semverStrings.prepatch]
   @scala.inline
-  def prepatch: typingsSlinky.semver.semverStrings.prepatch = this.cast("prepatch")
-  @scala.inline
-  def prerelease: typingsSlinky.semver.semverStrings.prerelease = this.cast("prerelease")
+  def prerelease: typingsSlinky.semver.semverStrings.prerelease = "prerelease".asInstanceOf[typingsSlinky.semver.semverStrings.prerelease]
 }
 

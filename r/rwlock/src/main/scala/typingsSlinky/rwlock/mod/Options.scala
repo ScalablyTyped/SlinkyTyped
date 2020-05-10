@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var scope: js.UndefOr[js.Any] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
-  var timeoutCallback: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var scope: js.UndefOr[js.Any] = js.native
+  var timeout: js.UndefOr[Double] = js.native
+  var timeoutCallback: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(scope: js.Any = null, timeout: Int | Double = null, timeoutCallback: () => Unit = null): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (timeoutCallback != null) __obj.updateDynamic("timeoutCallback")(js.Any.fromFunction0(timeoutCallback))
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScope(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutCallback(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutCallback")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutCallback")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

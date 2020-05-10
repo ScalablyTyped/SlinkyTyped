@@ -14,5 +14,6 @@ import scala.scalajs.js.annotation._
   * NOTE: When using the dojoxEllipsis class within tables, the table needs to have the table-layout: fixed style
   *
   */
+@js.native
 trait ellipsis extends js.Object
 

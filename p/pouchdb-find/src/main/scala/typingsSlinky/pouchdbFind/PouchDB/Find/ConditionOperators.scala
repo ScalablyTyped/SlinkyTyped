@@ -63,3 +63,199 @@ trait ConditionOperators extends js.Object {
   var $type: js.UndefOr[`null` | boolean | number | string | array | `object`] = js.native
 }
 
+object ConditionOperators {
+  @scala.inline
+  def apply(): ConditionOperators = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ConditionOperators]
+  }
+  @scala.inline
+  implicit class ConditionOperatorsOps[Self <: ConditionOperators] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$elemMatch(value: ConditionOperators): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$elemMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$elemMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$elemMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$eq(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$eq")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$eq: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$eq")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$exists(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$exists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$exists: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$exists")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$gt(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$gt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$gt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$gt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$gte(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$gte")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$gte: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$gte")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$in(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$in")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$in: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$in")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$lt(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$lt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$lt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$lt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$lte(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$lte")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$lte: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$lte")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$mod(value: js.Tuple2[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$mod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$mod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$mod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$ne(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$ne")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$ne: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$ne")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$nin(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$nin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$nin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$nin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$regex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$regex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$regex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$regex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$size(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$size: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$type(value: `null` | boolean | number | string | array | `object`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$type: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$type")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

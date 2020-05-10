@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IUiGridPinningConstants extends js.Object {
-  var container: AnonNONE
+  var container: AnonNONE = js.native
 }
 
 object IUiGridPinningConstants {
   @scala.inline
   def apply(container: AnonNONE): IUiGridPinningConstants = {
     val __obj = js.Dynamic.literal(container = container.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IUiGridPinningConstants]
   }
+  @scala.inline
+  implicit class IUiGridPinningConstantsOps[Self <: IUiGridPinningConstants] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainer(value: AnonNONE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

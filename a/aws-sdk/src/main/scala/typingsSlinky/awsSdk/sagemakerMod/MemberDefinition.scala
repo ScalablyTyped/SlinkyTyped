@@ -14,10 +14,29 @@ trait MemberDefinition extends js.Object {
 
 object MemberDefinition {
   @scala.inline
-  def apply(CognitoMemberDefinition: CognitoMemberDefinition = null): MemberDefinition = {
+  def apply(): MemberDefinition = {
     val __obj = js.Dynamic.literal()
-    if (CognitoMemberDefinition != null) __obj.updateDynamic("CognitoMemberDefinition")(CognitoMemberDefinition.asInstanceOf[js.Any])
     __obj.asInstanceOf[MemberDefinition]
   }
+  @scala.inline
+  implicit class MemberDefinitionOps[Self <: MemberDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCognitoMemberDefinition(value: CognitoMemberDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CognitoMemberDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCognitoMemberDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CognitoMemberDefinition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

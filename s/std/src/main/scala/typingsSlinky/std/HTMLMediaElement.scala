@@ -248,7 +248,7 @@ trait HTMLMediaElement extends HTMLElement {
   def removeEventListener_encrypted(
     `type`: encrypted,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MediaEncryptedEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_msneedkey(
@@ -265,7 +265,7 @@ trait HTMLMediaElement extends HTMLElement {
   def removeEventListener_msneedkey(
     `type`: msneedkey,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ MSMediaKeyNeededEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_waitingforkey(`type`: waitingforkey, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -279,7 +279,7 @@ trait HTMLMediaElement extends HTMLElement {
   def removeEventListener_waitingforkey(
     `type`: waitingforkey,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def setMediaKeys(): js.Promise[Unit] = js.native
   def setMediaKeys(mediaKeys: MediaKeys): js.Promise[Unit] = js.native
@@ -287,7 +287,8 @@ trait HTMLMediaElement extends HTMLElement {
 
 @JSGlobal("HTMLMediaElement")
 @js.native
-object HTMLMediaElement extends Instantiable0[HTMLMediaElement] {
+object HTMLMediaElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLMediaElement] {
   val HAVE_CURRENT_DATA: Double = js.native
   val HAVE_ENOUGH_DATA: Double = js.native
   val HAVE_FUTURE_DATA: Double = js.native

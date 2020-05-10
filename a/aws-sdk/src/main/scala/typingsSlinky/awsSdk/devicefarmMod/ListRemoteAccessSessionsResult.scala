@@ -18,11 +18,41 @@ trait ListRemoteAccessSessionsResult extends js.Object {
 
 object ListRemoteAccessSessionsResult {
   @scala.inline
-  def apply(nextToken: PaginationToken = null, remoteAccessSessions: RemoteAccessSessions = null): ListRemoteAccessSessionsResult = {
+  def apply(): ListRemoteAccessSessionsResult = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (remoteAccessSessions != null) __obj.updateDynamic("remoteAccessSessions")(remoteAccessSessions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListRemoteAccessSessionsResult]
   }
+  @scala.inline
+  implicit class ListRemoteAccessSessionsResultOps[Self <: ListRemoteAccessSessionsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoteAccessSessions(value: RemoteAccessSessions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteAccessSessions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoteAccessSessions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteAccessSessions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

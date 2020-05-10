@@ -13,12 +13,10 @@ trait X86OperandType extends js.Object
 
 object X86OperandType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def imm: typingsSlinky.fridaGum.fridaGumStrings.imm = "imm".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.imm]
   @scala.inline
-  def imm: typingsSlinky.fridaGum.fridaGumStrings.imm = this.cast("imm")
+  def mem: typingsSlinky.fridaGum.fridaGumStrings.mem = "mem".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.mem]
   @scala.inline
-  def mem: typingsSlinky.fridaGum.fridaGumStrings.mem = this.cast("mem")
-  @scala.inline
-  def reg: typingsSlinky.fridaGum.fridaGumStrings.reg = this.cast("reg")
+  def reg: typingsSlinky.fridaGum.fridaGumStrings.reg = "reg".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.reg]
 }
 

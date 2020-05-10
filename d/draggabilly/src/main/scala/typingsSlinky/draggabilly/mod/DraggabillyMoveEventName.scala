@@ -12,10 +12,8 @@ trait DraggabillyMoveEventName extends js.Object
 
 object DraggabillyMoveEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dragMove: typingsSlinky.draggabilly.draggabillyStrings.dragMove = "dragMove".asInstanceOf[typingsSlinky.draggabilly.draggabillyStrings.dragMove]
   @scala.inline
-  def dragMove: typingsSlinky.draggabilly.draggabillyStrings.dragMove = this.cast("dragMove")
-  @scala.inline
-  def pointerMove: typingsSlinky.draggabilly.draggabillyStrings.pointerMove = this.cast("pointerMove")
+  def pointerMove: typingsSlinky.draggabilly.draggabillyStrings.pointerMove = "pointerMove".asInstanceOf[typingsSlinky.draggabilly.draggabillyStrings.pointerMove]
 }
 

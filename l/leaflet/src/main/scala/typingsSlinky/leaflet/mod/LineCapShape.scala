@@ -14,14 +14,12 @@ trait LineCapShape extends js.Object
 
 object LineCapShape {
   @scala.inline
-  def butt: typingsSlinky.leaflet.leafletStrings.butt = this.cast("butt")
+  def butt: typingsSlinky.leaflet.leafletStrings.butt = "butt".asInstanceOf[typingsSlinky.leaflet.leafletStrings.butt]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inherit: typingsSlinky.leaflet.leafletStrings.inherit = "inherit".asInstanceOf[typingsSlinky.leaflet.leafletStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.leaflet.leafletStrings.inherit = this.cast("inherit")
+  def round: typingsSlinky.leaflet.leafletStrings.round = "round".asInstanceOf[typingsSlinky.leaflet.leafletStrings.round]
   @scala.inline
-  def round: typingsSlinky.leaflet.leafletStrings.round = this.cast("round")
-  @scala.inline
-  def square: typingsSlinky.leaflet.leafletStrings.square = this.cast("square")
+  def square: typingsSlinky.leaflet.leafletStrings.square = "square".asInstanceOf[typingsSlinky.leaflet.leafletStrings.square]
 }
 

@@ -18,11 +18,41 @@ trait ListDevicePoolsResult extends js.Object {
 
 object ListDevicePoolsResult {
   @scala.inline
-  def apply(devicePools: DevicePools = null, nextToken: PaginationToken = null): ListDevicePoolsResult = {
+  def apply(): ListDevicePoolsResult = {
     val __obj = js.Dynamic.literal()
-    if (devicePools != null) __obj.updateDynamic("devicePools")(devicePools.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDevicePoolsResult]
   }
+  @scala.inline
+  implicit class ListDevicePoolsResultOps[Self <: ListDevicePoolsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevicePools(value: DevicePools): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePools")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevicePools: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePools")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

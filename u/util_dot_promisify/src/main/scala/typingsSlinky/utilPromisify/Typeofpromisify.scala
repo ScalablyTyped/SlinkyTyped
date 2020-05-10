@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Typeofpromisify extends js.Object {
   /**
   		 * @deprecated
@@ -13,17 +14,36 @@ trait Typeofpromisify extends js.Object {
   		 */
   val customPromisifyArgs: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: typeof polyfill.customPromisifyArgs */ js.Any
-  ] = js.undefined
+  ] = js.native
 }
 
 object Typeofpromisify {
   @scala.inline
-  def apply(
-    customPromisifyArgs: /* import warning: importer.ImportType#apply Failed type conversion: typeof polyfill.customPromisifyArgs */ js.Any = null
-  ): Typeofpromisify = {
+  def apply(): Typeofpromisify = {
     val __obj = js.Dynamic.literal()
-    if (customPromisifyArgs != null) __obj.updateDynamic("customPromisifyArgs")(customPromisifyArgs.asInstanceOf[js.Any])
     __obj.asInstanceOf[Typeofpromisify]
   }
+  @scala.inline
+  implicit class TypeofpromisifyOps[Self <: Typeofpromisify] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomPromisifyArgs(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: typeof polyfill.customPromisifyArgs */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customPromisifyArgs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomPromisifyArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customPromisifyArgs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

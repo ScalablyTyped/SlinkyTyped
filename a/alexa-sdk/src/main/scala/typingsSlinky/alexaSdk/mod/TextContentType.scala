@@ -12,10 +12,8 @@ trait TextContentType extends js.Object
 
 object TextContentType {
   @scala.inline
-  def PlainText: typingsSlinky.alexaSdk.alexaSdkStrings.PlainText = this.cast("PlainText")
+  def PlainText: typingsSlinky.alexaSdk.alexaSdkStrings.PlainText = "PlainText".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.PlainText]
   @scala.inline
-  def RichText: typingsSlinky.alexaSdk.alexaSdkStrings.RichText = this.cast("RichText")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def RichText: typingsSlinky.alexaSdk.alexaSdkStrings.RichText = "RichText".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.RichText]
 }
 

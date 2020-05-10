@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IReference[T] extends IPropertyValue {
-  var value: T
+  var value: T = js.native
 }
 
 object IReference {
@@ -18,14 +19,14 @@ object IReference {
     getDateTime: () => js.Date,
     getDateTimeArray: () => js.Array[js.Date],
     getDouble: () => Double,
-    getDoubleArray: () => scala.scalajs.js.typedarray.Float64Array,
+    getDoubleArray: () => js.typedarray.Float64Array,
     getGuid: () => String,
     getGuidArray: () => js.Array[String],
     getInspectableArray: () => js.Array[_],
     getInt16: () => Double,
-    getInt16Array: () => scala.scalajs.js.typedarray.Int16Array,
+    getInt16Array: () => js.typedarray.Int16Array,
     getInt32: () => Double,
-    getInt32Array: () => scala.scalajs.js.typedarray.Int32Array,
+    getInt32Array: () => js.typedarray.Int32Array,
     getInt64: () => Double,
     getInt64Array: () => js.Array[Double],
     getPoint: () => Point,
@@ -33,7 +34,7 @@ object IReference {
     getRect: () => Rect,
     getRectArray: () => js.Array[Rect],
     getSingle: () => Double,
-    getSingleArray: () => scala.scalajs.js.typedarray.Float32Array,
+    getSingleArray: () => js.typedarray.Float32Array,
     getSize: () => Size,
     getSizeArray: () => js.Array[Size],
     getString: () => String,
@@ -41,13 +42,13 @@ object IReference {
     getTimeSpan: () => Double,
     getTimeSpanArray: () => js.Array[Double],
     getUInt16: () => Double,
-    getUInt16Array: () => scala.scalajs.js.typedarray.Uint16Array,
+    getUInt16Array: () => js.typedarray.Uint16Array,
     getUInt32: () => Double,
-    getUInt32Array: () => scala.scalajs.js.typedarray.Uint32Array,
+    getUInt32Array: () => js.typedarray.Uint32Array,
     getUInt64: () => Double,
     getUInt64Array: () => js.Array[Double],
     getUInt8: () => Double,
-    getUInt8Array: () => scala.scalajs.js.typedarray.Uint8Array,
+    getUInt8Array: () => js.typedarray.Uint8Array,
     isNumericScalar: Boolean,
     `type`: PropertyType,
     value: T
@@ -56,5 +57,19 @@ object IReference {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IReference[T]]
   }
+  @scala.inline
+  implicit class IReferenceOps[Self[t] <: IReference[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withValue(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

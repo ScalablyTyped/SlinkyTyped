@@ -20,17 +20,59 @@ trait UpdateFileSystemRequest extends js.Object {
 
 object UpdateFileSystemRequest {
   @scala.inline
-  def apply(
-    FileSystemId: FileSystemId,
-    ClientRequestToken: ClientRequestToken = null,
-    LustreConfiguration: UpdateFileSystemLustreConfiguration = null,
-    WindowsConfiguration: UpdateFileSystemWindowsConfiguration = null
-  ): UpdateFileSystemRequest = {
+  def apply(FileSystemId: FileSystemId): UpdateFileSystemRequest = {
     val __obj = js.Dynamic.literal(FileSystemId = FileSystemId.asInstanceOf[js.Any])
-    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
-    if (LustreConfiguration != null) __obj.updateDynamic("LustreConfiguration")(LustreConfiguration.asInstanceOf[js.Any])
-    if (WindowsConfiguration != null) __obj.updateDynamic("WindowsConfiguration")(WindowsConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFileSystemRequest]
   }
+  @scala.inline
+  implicit class UpdateFileSystemRequestOps[Self <: UpdateFileSystemRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileSystemId(value: FileSystemId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLustreConfiguration(value: UpdateFileSystemLustreConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LustreConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLustreConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LustreConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWindowsConfiguration(value: UpdateFileSystemWindowsConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowsConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindowsConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowsConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

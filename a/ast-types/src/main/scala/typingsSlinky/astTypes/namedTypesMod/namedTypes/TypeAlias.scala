@@ -17,6 +17,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
+@js.native
 trait TypeAlias
   extends ASTNode
      with DeclarationKind
@@ -24,12 +25,12 @@ trait TypeAlias
      with PrintableKind
      with StatementKind
      with TypeAliasKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var id: IdentifierKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var right: FlowTypeKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TypeAlias
-  var typeParameters: TypeParameterDeclarationKind | Null
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var id: IdentifierKind = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var right: FlowTypeKind = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TypeAlias = js.native
+  var typeParameters: TypeParameterDeclarationKind | Null = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TypeAlias")

@@ -5,17 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GeoTransformPrototype extends js.Object {
   /**
     * Indicates the end of a line or ring. Within a polygon, indicates the end of a ring.
     * Unlike GeoJSON, the redundant closing coordinate of a ring is not indicated via point, and instead is implied via lineEnd within a polygon.
     */
-  var lineEnd: js.UndefOr[js.ThisFunction0[/* this */ this.type with AnonStream, Unit]] = js.undefined
+  var lineEnd: js.UndefOr[js.ThisFunction0[/* this */ this.type with AnonStream, Unit]] = js.native
   /**
     * Indicates the start of a line or ring. Within a polygon, indicates the start of a ring. The first ring of a polygon is the exterior ring, and is typically clockwise.
     * Any subsequent rings indicate holes in the polygon, and are typically counterclockwise.
     */
-  var lineStart: js.UndefOr[js.ThisFunction0[/* this */ this.type with AnonStream, Unit]] = js.undefined
+  var lineStart: js.UndefOr[js.ThisFunction0[/* this */ this.type with AnonStream, Unit]] = js.native
   /**
     * Indicates a point with the specified coordinates x and y (and optionally z). The coordinate system is unspecified and implementation-dependent;
     * for example, projection streams require spherical coordinates in degrees as input. Outside the context of a polygon or line,
@@ -33,45 +34,114 @@ trait GeoTransformPrototype extends js.Object {
       /* z */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Indicates the end of a polygon.
     */
-  var polygonEnd: js.UndefOr[js.ThisFunction0[/* this */ this.type with AnonStream, Unit]] = js.undefined
+  var polygonEnd: js.UndefOr[js.ThisFunction0[/* this */ this.type with AnonStream, Unit]] = js.native
   /**
     * Indicates the start of a polygon. The first line of a polygon indicates the exterior ring, and any subsequent lines indicate interior holes.
     */
-  var polygonStart: js.UndefOr[js.ThisFunction0[/* this */ this.type with AnonStream, Unit]] = js.undefined
+  var polygonStart: js.UndefOr[js.ThisFunction0[/* this */ this.type with AnonStream, Unit]] = js.native
   /**
     * Indicates the sphere (the globe; the unit sphere centered at ⟨0,0,0⟩).
     */
-  var sphere: js.UndefOr[js.ThisFunction0[/* this */ this.type with AnonStream, Unit]] = js.undefined
+  var sphere: js.UndefOr[js.ThisFunction0[/* this */ this.type with AnonStream, Unit]] = js.native
 }
 
 object GeoTransformPrototype {
   @scala.inline
-  def apply(
-    lineEnd: js.ThisFunction0[/* this */ GeoTransformPrototype with AnonStream, Unit] = null,
-    lineStart: js.ThisFunction0[/* this */ GeoTransformPrototype with AnonStream, Unit] = null,
-    point: js.ThisFunction3[
-      /* this */ GeoTransformPrototype with AnonStream, 
-      /* x */ Double, 
-      /* y */ Double, 
-      /* z */ js.UndefOr[Double], 
-      Unit
-    ] = null,
-    polygonEnd: js.ThisFunction0[/* this */ GeoTransformPrototype with AnonStream, Unit] = null,
-    polygonStart: js.ThisFunction0[/* this */ GeoTransformPrototype with AnonStream, Unit] = null,
-    sphere: js.ThisFunction0[/* this */ GeoTransformPrototype with AnonStream, Unit] = null
-  ): GeoTransformPrototype = {
+  def apply(): GeoTransformPrototype = {
     val __obj = js.Dynamic.literal()
-    if (lineEnd != null) __obj.updateDynamic("lineEnd")(lineEnd.asInstanceOf[js.Any])
-    if (lineStart != null) __obj.updateDynamic("lineStart")(lineStart.asInstanceOf[js.Any])
-    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
-    if (polygonEnd != null) __obj.updateDynamic("polygonEnd")(polygonEnd.asInstanceOf[js.Any])
-    if (polygonStart != null) __obj.updateDynamic("polygonStart")(polygonStart.asInstanceOf[js.Any])
-    if (sphere != null) __obj.updateDynamic("sphere")(sphere.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeoTransformPrototype]
   }
+  @scala.inline
+  implicit class GeoTransformPrototypeOps[Self <: GeoTransformPrototype] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLineEnd(value: js.ThisFunction0[/* this */ GeoTransformPrototype with AnonStream, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineStart(value: js.ThisFunction0[/* this */ GeoTransformPrototype with AnonStream, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoint(
+      value: js.ThisFunction3[
+          /* this */ GeoTransformPrototype with AnonStream, 
+          /* x */ Double, 
+          /* y */ Double, 
+          /* z */ js.UndefOr[Double], 
+          Unit
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolygonEnd(value: js.ThisFunction0[/* this */ GeoTransformPrototype with AnonStream, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolygonEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolygonStart(value: js.ThisFunction0[/* this */ GeoTransformPrototype with AnonStream, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolygonStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSphere(value: js.ThisFunction0[/* this */ GeoTransformPrototype with AnonStream, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sphere")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSphere: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sphere")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -55,7 +55,7 @@ object webGLStateMod extends js.Object {
       width: Double,
       height: Double,
       border: Double,
-      data: scala.scalajs.js.typedarray.ArrayBufferView
+      data: js.typedarray.ArrayBufferView
     ): Unit = js.native
     def disable(id: Double): Unit = js.native
     def disableUnusedAttributes(): Unit = js.native
@@ -110,7 +110,7 @@ object webGLStateMod extends js.Object {
       border: Double,
       format: Double,
       `type`: Double,
-      pixels: scala.scalajs.js.typedarray.ArrayBufferView
+      pixels: js.typedarray.ArrayBufferView
     ): Unit = js.native
     def texImage3D(
       target: Double,

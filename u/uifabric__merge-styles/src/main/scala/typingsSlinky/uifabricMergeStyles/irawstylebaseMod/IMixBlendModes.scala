@@ -29,44 +29,42 @@ trait IMixBlendModes extends js.Object
 
 object IMixBlendModes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def color: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.color = "color".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.color]
   @scala.inline
-  def color: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.color = this.cast("color")
+  def `color-burn`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`color-burn` = "color-burn".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`color-burn`]
   @scala.inline
-  def `color-burn`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`color-burn` = this.cast("color-burn")
+  def `color-dodge`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`color-dodge` = "color-dodge".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`color-dodge`]
   @scala.inline
-  def `color-dodge`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`color-dodge` = this.cast("color-dodge")
+  def darken: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.darken = "darken".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.darken]
   @scala.inline
-  def darken: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.darken = this.cast("darken")
+  def difference: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.difference = "difference".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.difference]
   @scala.inline
-  def difference: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.difference = this.cast("difference")
+  def exclusion: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.exclusion = "exclusion".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.exclusion]
   @scala.inline
-  def exclusion: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.exclusion = this.cast("exclusion")
+  def `hard-light`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`hard-light` = "hard-light".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`hard-light`]
   @scala.inline
-  def `hard-light`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`hard-light` = this.cast("hard-light")
+  def hue: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.hue = "hue".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.hue]
   @scala.inline
-  def hue: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.hue = this.cast("hue")
+  def inherit: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.inherit = "inherit".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.initial = "initial".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.initial = this.cast("initial")
+  def lighten: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.lighten = "lighten".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.lighten]
   @scala.inline
-  def lighten: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.lighten = this.cast("lighten")
+  def luminosity: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.luminosity = "luminosity".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.luminosity]
   @scala.inline
-  def luminosity: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.luminosity = this.cast("luminosity")
+  def multiply: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.multiply = "multiply".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.multiply]
   @scala.inline
-  def multiply: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.multiply = this.cast("multiply")
+  def normal: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.normal = "normal".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.normal = this.cast("normal")
+  def overlay: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.overlay = "overlay".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.overlay]
   @scala.inline
-  def overlay: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.overlay = this.cast("overlay")
+  def saturation: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.saturation = "saturation".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.saturation]
   @scala.inline
-  def saturation: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.saturation = this.cast("saturation")
+  def screen: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.screen = "screen".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.screen]
   @scala.inline
-  def screen: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.screen = this.cast("screen")
+  def `soft-light`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`soft-light` = "soft-light".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`soft-light`]
   @scala.inline
-  def `soft-light`: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.`soft-light` = this.cast("soft-light")
-  @scala.inline
-  def unset: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.unset = "unset".asInstanceOf[typingsSlinky.uifabricMergeStyles.uifabricMergeStylesStrings.unset]
 }
 

@@ -33,8 +33,39 @@ object VoteOnProposalInput {
     VoterMemberId: ResourceIdString
   ): VoteOnProposalInput = {
     val __obj = js.Dynamic.literal(NetworkId = NetworkId.asInstanceOf[js.Any], ProposalId = ProposalId.asInstanceOf[js.Any], Vote = Vote.asInstanceOf[js.Any], VoterMemberId = VoterMemberId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[VoteOnProposalInput]
   }
+  @scala.inline
+  implicit class VoteOnProposalInputOps[Self <: VoteOnProposalInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworkId(value: ResourceIdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProposalId(value: ResourceIdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVote(value: VoteValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Vote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVoterMemberId(value: ResourceIdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoterMemberId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.webix.webix
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.webix.webix.ui.baseview
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CSSTransitionClassNames extends js.Object {
-  var appear: js.UndefOr[String] = js.undefined
-  var appearActive: js.UndefOr[String] = js.undefined
-  var appearDone: js.UndefOr[String] = js.undefined
-  var enter: js.UndefOr[String] = js.undefined
-  var enterActive: js.UndefOr[String] = js.undefined
-  var enterDone: js.UndefOr[String] = js.undefined
-  var exit: js.UndefOr[String] = js.undefined
-  var exitActive: js.UndefOr[String] = js.undefined
-  var exitDone: js.UndefOr[String] = js.undefined
+  var appear: js.UndefOr[String] = js.native
+  var appearActive: js.UndefOr[String] = js.native
+  var appearDone: js.UndefOr[String] = js.native
+  var enter: js.UndefOr[String] = js.native
+  var enterActive: js.UndefOr[String] = js.native
+  var enterDone: js.UndefOr[String] = js.native
+  var exit: js.UndefOr[String] = js.native
+  var exitActive: js.UndefOr[String] = js.native
+  var exitDone: js.UndefOr[String] = js.native
 }
 
 object CSSTransitionClassNames {
   @scala.inline
-  def apply(
-    appear: String = null,
-    appearActive: String = null,
-    appearDone: String = null,
-    enter: String = null,
-    enterActive: String = null,
-    enterDone: String = null,
-    exit: String = null,
-    exitActive: String = null,
-    exitDone: String = null
-  ): CSSTransitionClassNames = {
+  def apply(): CSSTransitionClassNames = {
     val __obj = js.Dynamic.literal()
-    if (appear != null) __obj.updateDynamic("appear")(appear.asInstanceOf[js.Any])
-    if (appearActive != null) __obj.updateDynamic("appearActive")(appearActive.asInstanceOf[js.Any])
-    if (appearDone != null) __obj.updateDynamic("appearDone")(appearDone.asInstanceOf[js.Any])
-    if (enter != null) __obj.updateDynamic("enter")(enter.asInstanceOf[js.Any])
-    if (enterActive != null) __obj.updateDynamic("enterActive")(enterActive.asInstanceOf[js.Any])
-    if (enterDone != null) __obj.updateDynamic("enterDone")(enterDone.asInstanceOf[js.Any])
-    if (exit != null) __obj.updateDynamic("exit")(exit.asInstanceOf[js.Any])
-    if (exitActive != null) __obj.updateDynamic("exitActive")(exitActive.asInstanceOf[js.Any])
-    if (exitDone != null) __obj.updateDynamic("exitDone")(exitDone.asInstanceOf[js.Any])
     __obj.asInstanceOf[CSSTransitionClassNames]
   }
+  @scala.inline
+  implicit class CSSTransitionClassNamesOps[Self <: CSSTransitionClassNames] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppear(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppearActive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appearActive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppearActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appearActive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppearDone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appearDone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppearDone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appearDone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnterActive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterActive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnterActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterActive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnterDone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterDone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnterDone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterDone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExitActive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitActive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitActive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExitDone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitDone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitDone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitDone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -23,11 +23,41 @@ trait SchemaSearchAnalyticsQueryResponse extends js.Object {
 
 object SchemaSearchAnalyticsQueryResponse {
   @scala.inline
-  def apply(responseAggregationType: String = null, rows: js.Array[SchemaApiDataRow] = null): SchemaSearchAnalyticsQueryResponse = {
+  def apply(): SchemaSearchAnalyticsQueryResponse = {
     val __obj = js.Dynamic.literal()
-    if (responseAggregationType != null) __obj.updateDynamic("responseAggregationType")(responseAggregationType.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSearchAnalyticsQueryResponse]
   }
+  @scala.inline
+  implicit class SchemaSearchAnalyticsQueryResponseOps[Self <: SchemaSearchAnalyticsQueryResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponseAggregationType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseAggregationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseAggregationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseAggregationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[SchemaApiDataRow]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

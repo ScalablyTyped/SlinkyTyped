@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRangeMinPoint extends js.Object {
-  var rangeMaxPoint: js.UndefOr[String] = js.undefined
-  var rangeMinPoint: js.UndefOr[String] = js.undefined
+  var rangeMaxPoint: js.UndefOr[String] = js.native
+  var rangeMinPoint: js.UndefOr[String] = js.native
 }
 
 object AnonRangeMinPoint {
   @scala.inline
-  def apply(rangeMaxPoint: String = null, rangeMinPoint: String = null): AnonRangeMinPoint = {
+  def apply(): AnonRangeMinPoint = {
     val __obj = js.Dynamic.literal()
-    if (rangeMaxPoint != null) __obj.updateDynamic("rangeMaxPoint")(rangeMaxPoint.asInstanceOf[js.Any])
-    if (rangeMinPoint != null) __obj.updateDynamic("rangeMinPoint")(rangeMinPoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonRangeMinPoint]
   }
+  @scala.inline
+  implicit class AnonRangeMinPointOps[Self <: AnonRangeMinPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRangeMaxPoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeMaxPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeMaxPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeMaxPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeMinPoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeMinPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeMinPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeMinPoint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

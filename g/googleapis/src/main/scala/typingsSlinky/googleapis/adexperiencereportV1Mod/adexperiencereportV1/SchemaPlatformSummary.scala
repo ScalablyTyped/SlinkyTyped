@@ -41,24 +41,101 @@ trait SchemaPlatformSummary extends js.Object {
 
 object SchemaPlatformSummary {
   @scala.inline
-  def apply(
-    betterAdsStatus: String = null,
-    enforcementTime: String = null,
-    filterStatus: String = null,
-    lastChangeTime: String = null,
-    region: js.Array[String] = null,
-    reportUrl: String = null,
-    underReview: js.UndefOr[Boolean] = js.undefined
-  ): SchemaPlatformSummary = {
+  def apply(): SchemaPlatformSummary = {
     val __obj = js.Dynamic.literal()
-    if (betterAdsStatus != null) __obj.updateDynamic("betterAdsStatus")(betterAdsStatus.asInstanceOf[js.Any])
-    if (enforcementTime != null) __obj.updateDynamic("enforcementTime")(enforcementTime.asInstanceOf[js.Any])
-    if (filterStatus != null) __obj.updateDynamic("filterStatus")(filterStatus.asInstanceOf[js.Any])
-    if (lastChangeTime != null) __obj.updateDynamic("lastChangeTime")(lastChangeTime.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (reportUrl != null) __obj.updateDynamic("reportUrl")(reportUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(underReview)) __obj.updateDynamic("underReview")(underReview.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPlatformSummary]
   }
+  @scala.inline
+  implicit class SchemaPlatformSummaryOps[Self <: SchemaPlatformSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBetterAdsStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("betterAdsStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBetterAdsStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("betterAdsStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnforcementTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcementTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnforcementTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforcementTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastChangeTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChangeTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastChangeTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChangeTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnderReview(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underReview")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnderReview: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underReview")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

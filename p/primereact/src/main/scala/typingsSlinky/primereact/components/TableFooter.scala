@@ -1,17 +1,18 @@
 package typingsSlinky.primereact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.primereact.tableFooterMod.TableFooterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableFooter
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.primereact.tableFooterMod.TableFooter] {
+object TableFooter {
   @JSImport("primereact/components/datatable/TableFooter", "TableFooter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TableFooterProps): Default[tag.type, typingsSlinky.primereact.tableFooterMod.TableFooter] = new Default[tag.type, typingsSlinky.primereact.tableFooterMod.TableFooter](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableFooter.type): Default[tag.type, typingsSlinky.primereact.tableFooterMod.TableFooter] = new Default[tag.type, typingsSlinky.primereact.tableFooterMod.TableFooter](js.Array(this.component, js.Dictionary.empty))()
 }
 

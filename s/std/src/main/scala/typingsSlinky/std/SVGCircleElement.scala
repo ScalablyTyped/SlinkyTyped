@@ -15,5 +15,6 @@ trait SVGCircleElement extends SVGGeometryElement {
 
 @JSGlobal("SVGCircleElement")
 @js.native
-object SVGCircleElement extends Instantiable0[SVGCircleElement]
+object SVGCircleElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGCircleElement]
 

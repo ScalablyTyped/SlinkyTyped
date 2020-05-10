@@ -14,16 +14,17 @@ import scala.scalajs.js.annotation._
   * event categories. Calling `tracing.disable()` will remove the categories
   * from the set of enabled trace event categories.
   */
+@js.native
 trait Tracing extends js.Object {
   /**
     * A comma-separated list of the trace event categories covered by this
     * `Tracing` object.
     */
-  val categories: String
+  val categories: String = js.native
   /**
     * `true` only if the `Tracing` object has been enabled.
     */
-  val enabled: Boolean
+  val enabled: Boolean = js.native
   /**
     * Disables this `Tracing` object.
     *
@@ -31,20 +32,51 @@ trait Tracing extends js.Object {
     * objects and _not_ specified by the `--trace-event-categories` flag
     * will be disabled.
     */
-  def disable(): Unit
+  def disable(): Unit = js.native
   /**
     * Enables this `Tracing` object for the set of categories covered by
     * the `Tracing` object.
     */
-  def enable(): Unit
+  def enable(): Unit = js.native
 }
 
 object Tracing {
   @scala.inline
   def apply(categories: String, disable: () => Unit, enable: () => Unit, enabled: Boolean): Tracing = {
     val __obj = js.Dynamic.literal(categories = categories.asInstanceOf[js.Any], disable = js.Any.fromFunction0(disable), enable = js.Any.fromFunction0(enable), enabled = enabled.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Tracing]
   }
+  @scala.inline
+  implicit class TracingOps[Self <: Tracing] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategories(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisable(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEnable(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

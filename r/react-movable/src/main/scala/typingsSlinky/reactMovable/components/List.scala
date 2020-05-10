@@ -1,10 +1,8 @@
 package typingsSlinky.reactMovable.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMovable.AnonChildren
 import typingsSlinky.reactMovable.AnonElements
 import typingsSlinky.reactMovable.AnonIndex
@@ -16,13 +14,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object List
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+object List {
   @JSImport("react-movable/lib/List", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder[Value] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]] {
+    @scala.inline
+    def beforeDrag(value: /* params */ AnonElements => Unit): this.type = set("beforeDrag", js.Any.fromFunction1(value))
+  }
+  
+  def withProps[Value](p: IProps[Value]): Builder[Value] = new Builder[Value](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply[Value](
     lockVertically: Boolean,
     onChange: AnonNewIndex => Unit,
@@ -31,15 +37,10 @@ object List
     renderList: AnonChildren => TagMod[Any],
     transitionDuration: Double,
     values: js.Array[Value],
-    voiceover: IVoiceover,
-    beforeDrag: /* params */ AnonElements => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any]] = {
-    val __obj = js.Dynamic.literal(lockVertically = lockVertically.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), removableByMove = removableByMove.asInstanceOf[js.Any], renderItem = js.Any.fromFunction1(renderItem), renderList = js.Any.fromFunction1(renderList), transitionDuration = transitionDuration.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any], voiceover = voiceover.asInstanceOf[js.Any])
-    if (beforeDrag != null) __obj.updateDynamic("beforeDrag")(js.Any.fromFunction1(beforeDrag))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactMovable.listMod.default[js.Any]]]
+    voiceover: IVoiceover
+  ): Builder[Value] = {
+    val __props = js.Dynamic.literal(lockVertically = lockVertically.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), removableByMove = removableByMove.asInstanceOf[js.Any], renderItem = js.Any.fromFunction1(renderItem), renderList = js.Any.fromFunction1(renderList), transitionDuration = transitionDuration.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any], voiceover = voiceover.asInstanceOf[js.Any])
+    new Builder[Value](js.Array(this.component, __props.asInstanceOf[IProps[Value]]))
   }
-  type Props = IProps[js.Any]
 }
 

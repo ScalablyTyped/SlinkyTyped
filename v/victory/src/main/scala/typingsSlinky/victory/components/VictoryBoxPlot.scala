@@ -1,15 +1,13 @@
 package typingsSlinky.victory.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.victory.Anon1
 import typingsSlinky.victory.AnonXBoolean
 import typingsSlinky.victory.AnonY
 import typingsSlinky.victory.mod.AnimatePropTypeInterface
+import typingsSlinky.victory.mod.CallbackArgs
 import typingsSlinky.victory.mod.CategoryPropType
 import typingsSlinky.victory.mod.D3Scale
 import typingsSlinky.victory.mod.DataGetterPropType
@@ -30,108 +28,124 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object VictoryBoxPlot
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryBoxPlot] {
+object VictoryBoxPlot {
   @JSImport("victory", "VictoryBoxPlot")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
-  def apply(
-    animate: Boolean | AnimatePropTypeInterface = null,
-    boxWidth: Int | Double = null,
-    categories: CategoryPropType = null,
-    containerComponent: ReactElement = null,
-    data: js.Array[_] = null,
-    dataComponent: ReactElement = null,
-    domain: DomainPropType = null,
-    domainPadding: DomainPaddingPropType = null,
-    eventKey: StringOrNumberOrCallback = null,
-    events: js.Array[EventPropTypeInterface[String, StringOrNumberOrCallback]] = null,
-    groupComponent: ReactElement = null,
-    height: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    labelOrientation: top | bottom | left | right = null,
-    labels: js.UndefOr[Boolean] = js.undefined,
-    max: StringOrNumberOrCallback | js.Array[String] = null,
-    maxComponent: ReactElement = null,
-    maxDomain: Double | AnonY = null,
-    maxLabelComponent: ReactElement = null,
-    median: StringOrNumberOrCallback | js.Array[String] = null,
-    medianComponent: ReactElement = null,
-    medianLabelComponent: ReactElement = null,
-    min: StringOrNumberOrCallback | js.Array[String] = null,
-    minComponent: ReactElement = null,
-    minDomain: Double | AnonY = null,
-    minLabelComponent: ReactElement = null,
-    padding: PaddingProps = null,
-    q1: StringOrNumberOrCallback | js.Array[String] = null,
-    q1Component: ReactElement = null,
-    q1LabelComponent: ReactElement = null,
-    q3: StringOrNumberOrCallback | js.Array[String] = null,
-    q3Component: ReactElement = null,
-    q3LabelComponent: ReactElement = null,
-    scale: ScalePropType | D3Scale | Anon1 = null,
-    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
-    standalone: js.UndefOr[Boolean] = js.undefined,
-    style: VictoryBoxPlotStyleInterface = null,
-    theme: VictoryThemeDefinition = null,
-    whiskerWidth: Int | Double = null,
-    width: Int | Double = null,
-    x: DataGetterPropType = null,
-    y: DataGetterPropType = null,
-    y0: DataGetterPropType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryBoxPlot] = {
-    val __obj = js.Dynamic.literal()
-    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (boxWidth != null) __obj.updateDynamic("boxWidth")(boxWidth.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataComponent != null) __obj.updateDynamic("dataComponent")(dataComponent.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (domainPadding != null) __obj.updateDynamic("domainPadding")(domainPadding.asInstanceOf[js.Any])
-    if (eventKey != null) __obj.updateDynamic("eventKey")(eventKey.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (labelOrientation != null) __obj.updateDynamic("labelOrientation")(labelOrientation.asInstanceOf[js.Any])
-    if (!js.isUndefined(labels)) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxComponent != null) __obj.updateDynamic("maxComponent")(maxComponent.asInstanceOf[js.Any])
-    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
-    if (maxLabelComponent != null) __obj.updateDynamic("maxLabelComponent")(maxLabelComponent.asInstanceOf[js.Any])
-    if (median != null) __obj.updateDynamic("median")(median.asInstanceOf[js.Any])
-    if (medianComponent != null) __obj.updateDynamic("medianComponent")(medianComponent.asInstanceOf[js.Any])
-    if (medianLabelComponent != null) __obj.updateDynamic("medianLabelComponent")(medianLabelComponent.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minComponent != null) __obj.updateDynamic("minComponent")(minComponent.asInstanceOf[js.Any])
-    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
-    if (minLabelComponent != null) __obj.updateDynamic("minLabelComponent")(minLabelComponent.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (q1 != null) __obj.updateDynamic("q1")(q1.asInstanceOf[js.Any])
-    if (q1Component != null) __obj.updateDynamic("q1Component")(q1Component.asInstanceOf[js.Any])
-    if (q1LabelComponent != null) __obj.updateDynamic("q1LabelComponent")(q1LabelComponent.asInstanceOf[js.Any])
-    if (q3 != null) __obj.updateDynamic("q3")(q3.asInstanceOf[js.Any])
-    if (q3Component != null) __obj.updateDynamic("q3Component")(q3Component.asInstanceOf[js.Any])
-    if (q3LabelComponent != null) __obj.updateDynamic("q3LabelComponent")(q3LabelComponent.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
-    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (whiskerWidth != null) __obj.updateDynamic("whiskerWidth")(whiskerWidth.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (y0 != null) __obj.updateDynamic("y0")(y0.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryBoxPlot] {
+    @scala.inline
+    def animate(value: Boolean | AnimatePropTypeInterface): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def boxWidth(value: Double): this.type = set("boxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def categories(value: CategoryPropType): this.type = set("categories", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerComponent(value: ReactElement): this.type = set("containerComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataComponent(value: ReactElement): this.type = set("dataComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def domain(value: DomainPropType): this.type = set("domain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def domainPadding(value: DomainPaddingPropType): this.type = set("domainPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def eventKeyFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("eventKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def eventKey(value: StringOrNumberOrCallback): this.type = set("eventKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def events(value: js.Array[EventPropTypeInterface[String, StringOrNumberOrCallback]]): this.type = set("events", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponent(value: ReactElement): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelOrientation(value: top | bottom | left | right): this.type = set("labelOrientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labels(value: Boolean): this.type = set("labels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("max", js.Any.fromFunction1(value))
+    @scala.inline
+    def max(value: StringOrNumberOrCallback | js.Array[String]): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxComponent(value: ReactElement): this.type = set("maxComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDomain(value: Double | AnonY): this.type = set("maxDomain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxLabelComponent(value: ReactElement): this.type = set("maxLabelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def medianFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("median", js.Any.fromFunction1(value))
+    @scala.inline
+    def median(value: StringOrNumberOrCallback | js.Array[String]): this.type = set("median", value.asInstanceOf[js.Any])
+    @scala.inline
+    def medianComponent(value: ReactElement): this.type = set("medianComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def medianLabelComponent(value: ReactElement): this.type = set("medianLabelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minFunction1(value: /* args */ CallbackArgs => String | Double): this.type = set("min", js.Any.fromFunction1(value))
+    @scala.inline
+    def min(value: StringOrNumberOrCallback | js.Array[String]): this.type = set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minComponent(value: ReactElement): this.type = set("minComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDomain(value: Double | AnonY): this.type = set("minDomain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minLabelComponent(value: ReactElement): this.type = set("minLabelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: PaddingProps): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def q1Function1(value: /* args */ CallbackArgs => String | Double): this.type = set("q1", js.Any.fromFunction1(value))
+    @scala.inline
+    def q1(value: StringOrNumberOrCallback | js.Array[String]): this.type = set("q1", value.asInstanceOf[js.Any])
+    @scala.inline
+    def q1Component(value: ReactElement): this.type = set("q1Component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def q1LabelComponent(value: ReactElement): this.type = set("q1LabelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def q3Function1(value: /* args */ CallbackArgs => String | Double): this.type = set("q3", js.Any.fromFunction1(value))
+    @scala.inline
+    def q3(value: StringOrNumberOrCallback | js.Array[String]): this.type = set("q3", value.asInstanceOf[js.Any])
+    @scala.inline
+    def q3Component(value: ReactElement): this.type = set("q3Component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def q3LabelComponent(value: ReactElement): this.type = set("q3LabelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: ScalePropType | D3Scale | Anon1): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def singleQuadrantDomainPadding(value: Boolean | AnonXBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def standalone(value: Boolean): this.type = set("standalone", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: VictoryBoxPlotStyleInterface): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: VictoryThemeDefinition): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def whiskerWidth(value: Double): this.type = set("whiskerWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xFunction1(value: /* data */ js.Any => Double | String | js.Array[String]): this.type = set("x", js.Any.fromFunction1(value))
+    @scala.inline
+    def x(value: DataGetterPropType): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yFunction1(value: /* data */ js.Any => Double | String | js.Array[String]): this.type = set("y", js.Any.fromFunction1(value))
+    @scala.inline
+    def y(value: DataGetterPropType): this.type = set("y", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y0Function1(value: /* data */ js.Any => Double | String | js.Array[String]): this.type = set("y0", js.Any.fromFunction1(value))
+    @scala.inline
+    def y0(value: DataGetterPropType): this.type = set("y0", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryBoxPlot] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryBoxPlot](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = VictoryBoxPlotProps
+  
+  def withProps(p: VictoryBoxPlotProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: VictoryBoxPlot.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -4,9 +4,6 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.pixiJs.AnonDevice
 import typingsSlinky.pixiJs.AnonPhone
 import typingsSlinky.pixiJs.PIXI.utils.DecomposedDataUri
-import typingsSlinky.std.Float32Array
-import typingsSlinky.std.Uint16Array
-import typingsSlinky.std.Uint32Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -128,9 +125,9 @@ object utils extends js.Object {
     * @param {Uint16Array|Uint32Array} [outBuffer] - Buffer for output, length has to be `6 * size`
     * @return {Uint16Array|Uint32Array} - Resulting index buffer
     */
-  def createIndicesForQuads(size: Double): scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Uint32Array = js.native
-  def createIndicesForQuads(size: Double, outBuffer: Uint16Array): scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Uint32Array = js.native
-  def createIndicesForQuads(size: Double, outBuffer: Uint32Array): scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Uint32Array = js.native
+  def createIndicesForQuads(size: Double): js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
+  def createIndicesForQuads(size: Double, outBuffer: js.typedarray.Uint16Array): js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
+  def createIndicesForQuads(size: Double, outBuffer: js.typedarray.Uint32Array): js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
   /**
     * Split a data URI into components. Returns undefined if
     * parameter `dataUri` is not a valid data URI.
@@ -248,14 +245,9 @@ object utils extends js.Object {
     * @return {number}
     */
   def nextPow2(v: Double): Double = js.native
-  def premultiplyRgba(rgb: js.Array[Double], alpha: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-  def premultiplyRgba(rgb: js.Array[Double], alpha: Double, out: scala.scalajs.js.typedarray.Float32Array): scala.scalajs.js.typedarray.Float32Array = js.native
-  def premultiplyRgba(
-    rgb: js.Array[Double],
-    alpha: Double,
-    out: scala.scalajs.js.typedarray.Float32Array,
-    premultiply: Boolean
-  ): scala.scalajs.js.typedarray.Float32Array = js.native
+  def premultiplyRgba(rgb: js.Array[Double], alpha: Double): js.typedarray.Float32Array = js.native
+  def premultiplyRgba(rgb: js.Array[Double], alpha: Double, out: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
+  def premultiplyRgba(rgb: js.Array[Double], alpha: Double, out: js.typedarray.Float32Array, premultiply: Boolean): js.typedarray.Float32Array = js.native
   /**
     * combines rgb and alpha to out array
     *
@@ -267,14 +259,14 @@ object utils extends js.Object {
     * @param {boolean} [premultiply=true] do premultiply it
     * @returns {Float32Array} vec4 rgba
     */
-  def premultiplyRgba(rgb: Float32Array, alpha: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-  def premultiplyRgba(rgb: Float32Array, alpha: Double, out: scala.scalajs.js.typedarray.Float32Array): scala.scalajs.js.typedarray.Float32Array = js.native
+  def premultiplyRgba(rgb: js.typedarray.Float32Array, alpha: Double): js.typedarray.Float32Array = js.native
+  def premultiplyRgba(rgb: js.typedarray.Float32Array, alpha: Double, out: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
   def premultiplyRgba(
-    rgb: Float32Array,
+    rgb: js.typedarray.Float32Array,
     alpha: Double,
-    out: scala.scalajs.js.typedarray.Float32Array,
+    out: js.typedarray.Float32Array,
     premultiply: Boolean
-  ): scala.scalajs.js.typedarray.Float32Array = js.native
+  ): js.typedarray.Float32Array = js.native
   /**
     * premultiplies tint
     *
@@ -296,9 +288,9 @@ object utils extends js.Object {
     * @param {boolean} [premultiply=true] do premultiply it
     * @returns {Float32Array} vec4 rgba
     */
-  def premultiplyTintToRgba(tint: Double, alpha: Double): scala.scalajs.js.typedarray.Float32Array = js.native
-  def premultiplyTintToRgba(tint: Double, alpha: Double, out: scala.scalajs.js.typedarray.Float32Array): scala.scalajs.js.typedarray.Float32Array = js.native
-  def premultiplyTintToRgba(tint: Double, alpha: Double, out: scala.scalajs.js.typedarray.Float32Array, premultiply: Boolean): scala.scalajs.js.typedarray.Float32Array = js.native
+  def premultiplyTintToRgba(tint: Double, alpha: Double): js.typedarray.Float32Array = js.native
+  def premultiplyTintToRgba(tint: Double, alpha: Double, out: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
+  def premultiplyTintToRgba(tint: Double, alpha: Double, out: js.typedarray.Float32Array, premultiply: Boolean): js.typedarray.Float32Array = js.native
   /**
     * Remove items from a javascript array without generating garbage
     *

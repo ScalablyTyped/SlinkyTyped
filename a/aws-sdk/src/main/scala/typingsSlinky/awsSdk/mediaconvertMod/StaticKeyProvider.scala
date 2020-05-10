@@ -26,18 +26,65 @@ trait StaticKeyProvider extends js.Object {
 
 object StaticKeyProvider {
   @scala.inline
-  def apply(
-    KeyFormat: stringPatternIdentityAZaZ26AZaZ09163 = null,
-    KeyFormatVersions: stringPatternDD = null,
-    StaticKeyValue: stringPatternAZaZ0932 = null,
-    Url: string = null
-  ): StaticKeyProvider = {
+  def apply(): StaticKeyProvider = {
     val __obj = js.Dynamic.literal()
-    if (KeyFormat != null) __obj.updateDynamic("KeyFormat")(KeyFormat.asInstanceOf[js.Any])
-    if (KeyFormatVersions != null) __obj.updateDynamic("KeyFormatVersions")(KeyFormatVersions.asInstanceOf[js.Any])
-    if (StaticKeyValue != null) __obj.updateDynamic("StaticKeyValue")(StaticKeyValue.asInstanceOf[js.Any])
-    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaticKeyProvider]
   }
+  @scala.inline
+  implicit class StaticKeyProviderOps[Self <: StaticKeyProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyFormat(value: stringPatternIdentityAZaZ26AZaZ09163): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyFormatVersions(value: stringPatternDD): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFormatVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyFormatVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyFormatVersions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStaticKeyValue(value: stringPatternAZaZ0932): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticKeyValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStaticKeyValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StaticKeyValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,28 +1,27 @@
 package typingsSlinky.ionicCliFrameworkPrompts.mod
 
 import typingsSlinky.inquirer.mod.Answers
-import typingsSlinky.inquirer.mod.AsyncDynamicQuestionProperty
-import typingsSlinky.inquirer.mod.KeyUnion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PromptQuestionBase
   extends typingsSlinky.inquirer.mod.Question[Answers] {
   /**
     * Default value to use if nothing is entered.
     */
   @JSName("default")
-  var default_PromptQuestionBase: js.UndefOr[PromptValue] = js.undefined
+  var default_PromptQuestionBase: js.UndefOr[PromptValue] = js.native
   /**
     * The fallback value to use in non-TTY mode.
     */
-  var fallback: js.UndefOr[PromptValue] = js.undefined
+  var fallback: js.UndefOr[PromptValue] = js.native
   /**
     * The question to print.
     */
   @JSName("message")
-  var message_PromptQuestionBase: String
+  var message_PromptQuestionBase: String = js.native
   /**
     * The prompt type for this question.
     *    - 'confirm': Y/n
@@ -32,34 +31,59 @@ trait PromptQuestionBase
     *    - 'list': Single-value selection.
     */
   @JSName("type")
-  var type_PromptQuestionBase: PromptType
+  var type_PromptQuestionBase: PromptType = js.native
 }
 
 object PromptQuestionBase {
   @scala.inline
-  def apply(
-    message: String,
-    `type`: PromptType,
-    default: PromptValue = null,
-    fallback: PromptValue = null,
-    filter: /* input */ js.Any => _ = null,
-    name: KeyUnion[Answers] = null,
-    prefix: String = null,
-    suffix: String = null,
-    validate: (/* input */ js.Any, /* answers */ js.UndefOr[Answers]) => Boolean | String | (js.Promise[Boolean | String]) = null,
-    when: AsyncDynamicQuestionProperty[Boolean, Answers] = null
-  ): PromptQuestionBase = {
+  def apply(message: String, `type`: PromptType): PromptQuestionBase = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (fallback != null) __obj.updateDynamic("fallback")(fallback.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
-    if (validate != null) __obj.updateDynamic("validate")(js.Any.fromFunction2(validate))
-    if (when != null) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
     __obj.asInstanceOf[PromptQuestionBase]
   }
+  @scala.inline
+  implicit class PromptQuestionBaseOps[Self <: PromptQuestionBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: PromptType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefault(value: PromptValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFallback(value: PromptValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

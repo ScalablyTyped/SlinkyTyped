@@ -21,11 +21,41 @@ trait SchemaSignBlobResponse extends js.Object {
 
 object SchemaSignBlobResponse {
   @scala.inline
-  def apply(keyId: String = null, signature: String = null): SchemaSignBlobResponse = {
+  def apply(): SchemaSignBlobResponse = {
     val __obj = js.Dynamic.literal()
-    if (keyId != null) __obj.updateDynamic("keyId")(keyId.asInstanceOf[js.Any])
-    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSignBlobResponse]
   }
+  @scala.inline
+  implicit class SchemaSignBlobResponseOps[Self <: SchemaSignBlobResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignature(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

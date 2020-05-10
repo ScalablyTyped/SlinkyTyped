@@ -14,5 +14,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.normandyAddonStudy.onUnenroll")
 @js.native
 object onUnenroll
-  extends TopLevel[WebExtEvent[js.Function1[/* reason */ String, Unit]]]
+  extends TopLevel[WebExtEvent[js.Function1[/* command */ String, Unit]]]
 

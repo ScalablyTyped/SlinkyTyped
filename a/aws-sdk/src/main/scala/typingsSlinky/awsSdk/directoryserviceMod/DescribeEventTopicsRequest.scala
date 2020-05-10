@@ -18,11 +18,41 @@ trait DescribeEventTopicsRequest extends js.Object {
 
 object DescribeEventTopicsRequest {
   @scala.inline
-  def apply(DirectoryId: DirectoryId = null, TopicNames: TopicNames = null): DescribeEventTopicsRequest = {
+  def apply(): DescribeEventTopicsRequest = {
     val __obj = js.Dynamic.literal()
-    if (DirectoryId != null) __obj.updateDynamic("DirectoryId")(DirectoryId.asInstanceOf[js.Any])
-    if (TopicNames != null) __obj.updateDynamic("TopicNames")(TopicNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEventTopicsRequest]
   }
+  @scala.inline
+  implicit class DescribeEventTopicsRequestOps[Self <: DescribeEventTopicsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryId(value: DirectoryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopicNames(value: TopicNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopicNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -2,21 +2,18 @@ package typingsSlinky.yandexMaps.mod.control
 
 import typingsSlinky.yandexMaps.mod.IChild
 import typingsSlinky.yandexMaps.mod.IControlParent
-import typingsSlinky.yandexMaps.mod.IEventManager
 import typingsSlinky.yandexMaps.mod.IOptionManager
 import typingsSlinky.yandexMaps.mod.Map_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.yandexMaps.mod.IEventEmitter because Already inherited
 - typingsSlinky.yandexMaps.mod.ICustomizable because var conflicts: events. Inlined options */ @JSImport("yandex-maps", "control.SearchControl")
 @js.native
 class SearchControl () extends IChild[IControlParent] {
   def this(parameters: ISearchControlParameters) = this()
-  /* CompleteClass */
-  override var events: IEventManager = js.native
   var options: IOptionManager = js.native
   var state: typingsSlinky.yandexMaps.mod.data.Manager = js.native
   def clear(): Unit = js.native

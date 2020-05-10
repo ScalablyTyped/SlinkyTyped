@@ -1,6 +1,5 @@
 package typingsSlinky.webcl.WEBCL
 
-import typingsSlinky.std.ArrayBufferView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,7 @@ trait WebCLKernel extends js.Object {
   def release(): Unit = js.native
   def setArg(index: Double, buffer: WebCLBuffer): Unit = js.native
   def setArg(index: Double, image: WebCLImage): Unit = js.native
-  def setArg(index: Double, value: ArrayBufferView): Unit = js.native
+  def setArg(index: Double, value: js.typedarray.ArrayBufferView): Unit = js.native
   def setArg(index: Double, value: WebCLSampler): Unit = js.native
 }
 

@@ -1,10 +1,9 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.snackbarContentSnackbarContentMod.SnackbarContentProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object snackbarContentMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[SnackbarContentProps, ComponentState, js.Any] {
+    extends Component[SnackbarContentProps, js.Object, js.Any] {
     def this(props: SnackbarContentProps) = this()
     def this(props: SnackbarContentProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[SnackbarContentProps]]
+  object default extends TopLevel[ReactComponentClass[SnackbarContentProps]]
   
 }
 

@@ -11,29 +11,57 @@ import scala.scalajs.js.annotation._
   * matchExpressions are ANDed. An empty label selector matches all objects. A null label
   * selector matches no objects.
   */
+@js.native
 trait LabelSelector extends js.Object {
   /**
     * matchExpressions is a list of label selector requirements. The requirements are ANDed.
     */
-  var matchExpressions: js.UndefOr[Input[js.Array[Input[LabelSelectorRequirement]]]] = js.undefined
+  var matchExpressions: js.UndefOr[Input[js.Array[Input[LabelSelectorRequirement]]]] = js.native
   /**
     * matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is
     * equivalent to an element of matchExpressions, whose key field is "key", the operator is
     * "In", and the values array contains only "value". The requirements are ANDed.
     */
-  var matchLabels: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.undefined
+  var matchLabels: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
 }
 
 object LabelSelector {
   @scala.inline
-  def apply(
-    matchExpressions: Input[js.Array[Input[LabelSelectorRequirement]]] = null,
-    matchLabels: Input[StringDictionary[Input[String]]] = null
-  ): LabelSelector = {
+  def apply(): LabelSelector = {
     val __obj = js.Dynamic.literal()
-    if (matchExpressions != null) __obj.updateDynamic("matchExpressions")(matchExpressions.asInstanceOf[js.Any])
-    if (matchLabels != null) __obj.updateDynamic("matchLabels")(matchLabels.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelSelector]
   }
+  @scala.inline
+  implicit class LabelSelectorOps[Self <: LabelSelector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMatchExpressions(value: Input[js.Array[Input[LabelSelectorRequirement]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchExpressions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchExpressions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchExpressions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchLabels(value: Input[StringDictionary[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchLabels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

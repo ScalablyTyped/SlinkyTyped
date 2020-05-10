@@ -14,10 +14,29 @@ trait GetSoftwareUpdatesResult extends js.Object {
 
 object GetSoftwareUpdatesResult {
   @scala.inline
-  def apply(UpdatesURI: String = null): GetSoftwareUpdatesResult = {
+  def apply(): GetSoftwareUpdatesResult = {
     val __obj = js.Dynamic.literal()
-    if (UpdatesURI != null) __obj.updateDynamic("UpdatesURI")(UpdatesURI.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetSoftwareUpdatesResult]
   }
+  @scala.inline
+  implicit class GetSoftwareUpdatesResultOps[Self <: GetSoftwareUpdatesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUpdatesURI(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatesURI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdatesURI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatesURI")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

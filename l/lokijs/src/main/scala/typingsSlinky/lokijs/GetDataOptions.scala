@@ -9,22 +9,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetDataOptions extends js.Object {
-  var forceCloneMethod: `parse-stringify` | `jquery-extend-deep` | shallow | `shallow-assign` | `shallow-recurse-objects` | Null
-  var forceClones: Boolean
-  var removeMeta: Boolean
+  var forceCloneMethod: `parse-stringify` | `jquery-extend-deep` | shallow | `shallow-assign` | `shallow-recurse-objects` | Null = js.native
+  var forceClones: Boolean = js.native
+  var removeMeta: Boolean = js.native
 }
 
 object GetDataOptions {
   @scala.inline
-  def apply(
-    forceClones: Boolean,
-    removeMeta: Boolean,
-    forceCloneMethod: `parse-stringify` | `jquery-extend-deep` | shallow | `shallow-assign` | `shallow-recurse-objects` = null
-  ): GetDataOptions = {
+  def apply(forceClones: Boolean, removeMeta: Boolean): GetDataOptions = {
     val __obj = js.Dynamic.literal(forceClones = forceClones.asInstanceOf[js.Any], removeMeta = removeMeta.asInstanceOf[js.Any])
-    if (forceCloneMethod != null) __obj.updateDynamic("forceCloneMethod")(forceCloneMethod.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDataOptions]
   }
+  @scala.inline
+  implicit class GetDataOptionsOps[Self <: GetDataOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForceClones(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceClones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveMeta(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMeta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForceCloneMethod(
+      value: `parse-stringify` | `jquery-extend-deep` | shallow | `shallow-assign` | `shallow-recurse-objects`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceCloneMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForceCloneMethodNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceCloneMethod")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,9 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenuItem
 import typingsSlinky.officeUiFabricReact.selectedItemWithContextMenuMod.ISelectedItemWithContextMenuProps
 import typingsSlinky.officeUiFabricReact.selectedPeopleListMod.IExtendedPersonaProps
@@ -13,33 +12,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SelectedItemWithContextMenu
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.selectedItemWithContextMenuMod.SelectedItemWithContextMenu
-    ] {
+object SelectedItemWithContextMenu {
   @JSImport("office-ui-fabric-react/lib/components/SelectedItemsList/SelectedPeopleList/Items/SelectedItemWithContextMenu", "SelectedItemWithContextMenu")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    item: IExtendedPersonaProps,
-    menuItems: js.Array[IContextualMenuItem],
-    renderedItem: ReactElement,
-    beginEditing: /* item */ IExtendedPersonaProps => Unit = null,
-    componentRef: IRefObject[js.Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.officeUiFabricReact.selectedItemWithContextMenuMod.SelectedItemWithContextMenu
-  ] = {
-    val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], menuItems = menuItems.asInstanceOf[js.Any], renderedItem = renderedItem.asInstanceOf[js.Any])
-    if (beginEditing != null) __obj.updateDynamic("beginEditing")(js.Any.fromFunction1(beginEditing))
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.officeUiFabricReact.selectedItemWithContextMenuMod.SelectedItemWithContextMenu
+        ] {
+    @scala.inline
+    def beginEditing(value: /* item */ IExtendedPersonaProps => Unit): this.type = set("beginEditing", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ js.Any | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[js.Any]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[js.Any]): this.type = set("componentRef", value.asInstanceOf[js.Any])
   }
-  type Props = ISelectedItemWithContextMenuProps
+  
+  def withProps(p: ISelectedItemWithContextMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(item: IExtendedPersonaProps, menuItems: js.Array[IContextualMenuItem], renderedItem: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(item = item.asInstanceOf[js.Any], menuItems = menuItems.asInstanceOf[js.Any], renderedItem = renderedItem.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ISelectedItemWithContextMenuProps]))
+  }
 }
 

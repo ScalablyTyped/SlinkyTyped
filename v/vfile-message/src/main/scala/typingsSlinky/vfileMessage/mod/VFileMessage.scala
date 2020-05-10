@@ -75,12 +75,12 @@ trait VFileMessage
   def apply(reason: String, position: Point, origin: String): VFileMessage = js.native
   def apply(reason: String, position: Position): VFileMessage = js.native
   def apply(reason: String, position: Position, origin: String): VFileMessage = js.native
-  def apply(reason: Error): VFileMessage = js.native
-  def apply(reason: Error, position: Node): VFileMessage = js.native
-  def apply(reason: Error, position: Node, origin: String): VFileMessage = js.native
-  def apply(reason: Error, position: Point): VFileMessage = js.native
-  def apply(reason: Error, position: Point, origin: String): VFileMessage = js.native
-  def apply(reason: Error, position: Position): VFileMessage = js.native
-  def apply(reason: Error, position: Position, origin: String): VFileMessage = js.native
+  def apply(reason: js.Error): VFileMessage = js.native
+  def apply(reason: js.Error, position: Node): VFileMessage = js.native
+  def apply(reason: js.Error, position: Node, origin: String): VFileMessage = js.native
+  def apply(reason: js.Error, position: Point): VFileMessage = js.native
+  def apply(reason: js.Error, position: Point, origin: String): VFileMessage = js.native
+  def apply(reason: js.Error, position: Position): VFileMessage = js.native
+  def apply(reason: js.Error, position: Position, origin: String): VFileMessage = js.native
 }
 

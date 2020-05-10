@@ -30,19 +30,77 @@ trait PutSecretValueRequest extends js.Object {
 
 object PutSecretValueRequest {
   @scala.inline
-  def apply(
-    SecretId: SecretIdType,
-    ClientRequestToken: ClientRequestTokenType = null,
-    SecretBinary: SecretBinaryType = null,
-    SecretString: SecretStringType = null,
-    VersionStages: SecretVersionStagesType = null
-  ): PutSecretValueRequest = {
+  def apply(SecretId: SecretIdType): PutSecretValueRequest = {
     val __obj = js.Dynamic.literal(SecretId = SecretId.asInstanceOf[js.Any])
-    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
-    if (SecretBinary != null) __obj.updateDynamic("SecretBinary")(SecretBinary.asInstanceOf[js.Any])
-    if (SecretString != null) __obj.updateDynamic("SecretString")(SecretString.asInstanceOf[js.Any])
-    if (VersionStages != null) __obj.updateDynamic("VersionStages")(VersionStages.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutSecretValueRequest]
   }
+  @scala.inline
+  implicit class PutSecretValueRequestOps[Self <: PutSecretValueRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSecretId(value: SecretIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestTokenType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecretBinaryUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretBinary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecretBinary(value: SecretBinaryType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretBinary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretBinary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretBinary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecretString(value: SecretStringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionStages(value: SecretVersionStagesType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionStages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionStages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionStages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

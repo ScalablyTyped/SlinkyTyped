@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.jupyterlabInspector.tokensMod.IInspector.IInspectable because var conflicts: isDisposed. Inlined cleared, disposed, inspected, standby */ @JSImport("@jupyterlab/inspector/lib/handler", "InspectionHandler")
 @js.native
 class InspectionHandler_ protected () extends IDisposable {
@@ -48,14 +48,6 @@ class InspectionHandler_ protected () extends IDisposable {
     */
   val inspected: ISignal[_ | InspectionHandler, IInspectorUpdate] = js.native
   /**
-    * Test whether the object has been disposed.
-    *
-    * #### Notes
-    * This property is always safe to access.
-    */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
-  /**
     * Indicates whether the handler makes API inspection requests or stands by.
     *
     * #### Notes
@@ -63,19 +55,6 @@ class InspectionHandler_ protected () extends IDisposable {
     * inspector is visible.
     */
   var standby: Boolean = js.native
-  /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   /**
     * Handle a text changed signal from an editor.
     *

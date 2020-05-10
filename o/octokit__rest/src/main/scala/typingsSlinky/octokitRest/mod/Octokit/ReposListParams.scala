@@ -15,6 +15,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReposListParams extends js.Object {
   /**
     * Comma-separated list of values. Can include:
@@ -22,55 +23,132 @@ trait ReposListParams extends js.Object {
     * \* `collaborator`: Repositories that the user has been added to as a collaborator.
     * \* `organization_member`: Repositories that the user has access to through being a member of an organization. This includes every repository on every team that the user is on.
     */
-  var affiliation: js.UndefOr[String] = js.undefined
+  var affiliation: js.UndefOr[String] = js.native
   /**
     * Can be one of `asc` or `desc`. Default: `asc` when using `full_name`, otherwise `desc`
     */
-  var direction: js.UndefOr[asc | desc] = js.undefined
+  var direction: js.UndefOr[asc | desc] = js.native
   /**
     * Page number of the results to fetch.
     */
-  var page: js.UndefOr[Double] = js.undefined
+  var page: js.UndefOr[Double] = js.native
   /**
     * Results per page (max 100)
     */
-  var per_page: js.UndefOr[Double] = js.undefined
+  var per_page: js.UndefOr[Double] = js.native
   /**
     * Can be one of `created`, `updated`, `pushed`, `full_name`.
     */
-  var sort: js.UndefOr[created | updated | pushed | full_name] = js.undefined
+  var sort: js.UndefOr[created | updated | pushed | full_name] = js.native
   /**
     * Can be one of `all`, `owner`, `public`, `private`, `member`. Default: `all`
     *
     * Will cause a `422` error if used in the same request as **visibility** or **affiliation**. Will cause a `422` error if used in the same request as **visibility** or **affiliation**.
     */
-  var `type`: js.UndefOr[all | owner | public | `private` | member] = js.undefined
+  var `type`: js.UndefOr[all | owner | public | `private` | member] = js.native
   /**
     * Can be one of `all`, `public`, or `private`.
     */
-  var visibility: js.UndefOr[all | public | `private`] = js.undefined
+  var visibility: js.UndefOr[all | public | `private`] = js.native
 }
 
 object ReposListParams {
   @scala.inline
-  def apply(
-    affiliation: String = null,
-    direction: asc | desc = null,
-    page: Int | Double = null,
-    per_page: Int | Double = null,
-    sort: created | updated | pushed | full_name = null,
-    `type`: all | owner | public | `private` | member = null,
-    visibility: all | public | `private` = null
-  ): ReposListParams = {
+  def apply(): ReposListParams = {
     val __obj = js.Dynamic.literal()
-    if (affiliation != null) __obj.updateDynamic("affiliation")(affiliation.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (per_page != null) __obj.updateDynamic("per_page")(per_page.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposListParams]
   }
+  @scala.inline
+  implicit class ReposListParamsOps[Self <: ReposListParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAffiliation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("affiliation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAffiliation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("affiliation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: asc | desc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPer_page(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPer_page: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: created | updated | pushed | full_name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: all | owner | public | `private` | member): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibility(value: all | public | `private`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

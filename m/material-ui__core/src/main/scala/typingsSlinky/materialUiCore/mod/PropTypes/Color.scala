@@ -14,14 +14,12 @@ trait Color extends js.Object
 
 object Color {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.materialUiCore.materialUiCoreStrings.default = "default".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.default]
   @scala.inline
-  def default: typingsSlinky.materialUiCore.materialUiCoreStrings.default = this.cast("default")
+  def inherit: typingsSlinky.materialUiCore.materialUiCoreStrings.inherit = "inherit".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.materialUiCore.materialUiCoreStrings.inherit = this.cast("inherit")
+  def primary: typingsSlinky.materialUiCore.materialUiCoreStrings.primary = "primary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.primary]
   @scala.inline
-  def primary: typingsSlinky.materialUiCore.materialUiCoreStrings.primary = this.cast("primary")
-  @scala.inline
-  def secondary: typingsSlinky.materialUiCore.materialUiCoreStrings.secondary = this.cast("secondary")
+  def secondary: typingsSlinky.materialUiCore.materialUiCoreStrings.secondary = "secondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.secondary]
 }
 

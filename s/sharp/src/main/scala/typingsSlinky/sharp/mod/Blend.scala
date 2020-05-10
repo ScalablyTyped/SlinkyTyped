@@ -35,56 +35,54 @@ trait Blend extends js.Object
 
 object Blend {
   @scala.inline
-  def add: typingsSlinky.sharp.sharpStrings.add = this.cast("add")
+  def add: typingsSlinky.sharp.sharpStrings.add = "add".asInstanceOf[typingsSlinky.sharp.sharpStrings.add]
   @scala.inline
-  def atop: typingsSlinky.sharp.sharpStrings.atop = this.cast("atop")
+  def atop: typingsSlinky.sharp.sharpStrings.atop = "atop".asInstanceOf[typingsSlinky.sharp.sharpStrings.atop]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clear: typingsSlinky.sharp.sharpStrings.clear = "clear".asInstanceOf[typingsSlinky.sharp.sharpStrings.clear]
   @scala.inline
-  def clear: typingsSlinky.sharp.sharpStrings.clear = this.cast("clear")
+  def `colour-burn`: typingsSlinky.sharp.sharpStrings.`colour-burn` = "colour-burn".asInstanceOf[typingsSlinky.sharp.sharpStrings.`colour-burn`]
   @scala.inline
-  def `colour-burn`: typingsSlinky.sharp.sharpStrings.`colour-burn` = this.cast("colour-burn")
+  def `colour-dodge`: typingsSlinky.sharp.sharpStrings.`colour-dodge` = "colour-dodge".asInstanceOf[typingsSlinky.sharp.sharpStrings.`colour-dodge`]
   @scala.inline
-  def `colour-dodge`: typingsSlinky.sharp.sharpStrings.`colour-dodge` = this.cast("colour-dodge")
+  def darken: typingsSlinky.sharp.sharpStrings.darken = "darken".asInstanceOf[typingsSlinky.sharp.sharpStrings.darken]
   @scala.inline
-  def darken: typingsSlinky.sharp.sharpStrings.darken = this.cast("darken")
+  def dest: typingsSlinky.sharp.sharpStrings.dest = "dest".asInstanceOf[typingsSlinky.sharp.sharpStrings.dest]
   @scala.inline
-  def dest: typingsSlinky.sharp.sharpStrings.dest = this.cast("dest")
+  def `dest-atop`: typingsSlinky.sharp.sharpStrings.`dest-atop` = "dest-atop".asInstanceOf[typingsSlinky.sharp.sharpStrings.`dest-atop`]
   @scala.inline
-  def `dest-atop`: typingsSlinky.sharp.sharpStrings.`dest-atop` = this.cast("dest-atop")
+  def `dest-in`: typingsSlinky.sharp.sharpStrings.`dest-in` = "dest-in".asInstanceOf[typingsSlinky.sharp.sharpStrings.`dest-in`]
   @scala.inline
-  def `dest-in`: typingsSlinky.sharp.sharpStrings.`dest-in` = this.cast("dest-in")
+  def `dest-out`: typingsSlinky.sharp.sharpStrings.`dest-out` = "dest-out".asInstanceOf[typingsSlinky.sharp.sharpStrings.`dest-out`]
   @scala.inline
-  def `dest-out`: typingsSlinky.sharp.sharpStrings.`dest-out` = this.cast("dest-out")
+  def `dest-over`: typingsSlinky.sharp.sharpStrings.`dest-over` = "dest-over".asInstanceOf[typingsSlinky.sharp.sharpStrings.`dest-over`]
   @scala.inline
-  def `dest-over`: typingsSlinky.sharp.sharpStrings.`dest-over` = this.cast("dest-over")
+  def difference: typingsSlinky.sharp.sharpStrings.difference = "difference".asInstanceOf[typingsSlinky.sharp.sharpStrings.difference]
   @scala.inline
-  def difference: typingsSlinky.sharp.sharpStrings.difference = this.cast("difference")
+  def exclusion: typingsSlinky.sharp.sharpStrings.exclusion = "exclusion".asInstanceOf[typingsSlinky.sharp.sharpStrings.exclusion]
   @scala.inline
-  def exclusion: typingsSlinky.sharp.sharpStrings.exclusion = this.cast("exclusion")
+  def `hard-light`: typingsSlinky.sharp.sharpStrings.`hard-light` = "hard-light".asInstanceOf[typingsSlinky.sharp.sharpStrings.`hard-light`]
   @scala.inline
-  def `hard-light`: typingsSlinky.sharp.sharpStrings.`hard-light` = this.cast("hard-light")
+  def in: typingsSlinky.sharp.sharpStrings.in = "in".asInstanceOf[typingsSlinky.sharp.sharpStrings.in]
   @scala.inline
-  def in: typingsSlinky.sharp.sharpStrings.in = this.cast("in")
+  def lighten: typingsSlinky.sharp.sharpStrings.lighten = "lighten".asInstanceOf[typingsSlinky.sharp.sharpStrings.lighten]
   @scala.inline
-  def lighten: typingsSlinky.sharp.sharpStrings.lighten = this.cast("lighten")
+  def multiply: typingsSlinky.sharp.sharpStrings.multiply = "multiply".asInstanceOf[typingsSlinky.sharp.sharpStrings.multiply]
   @scala.inline
-  def multiply: typingsSlinky.sharp.sharpStrings.multiply = this.cast("multiply")
+  def out: typingsSlinky.sharp.sharpStrings.out = "out".asInstanceOf[typingsSlinky.sharp.sharpStrings.out]
   @scala.inline
-  def out: typingsSlinky.sharp.sharpStrings.out = this.cast("out")
+  def over: typingsSlinky.sharp.sharpStrings.over = "over".asInstanceOf[typingsSlinky.sharp.sharpStrings.over]
   @scala.inline
-  def over: typingsSlinky.sharp.sharpStrings.over = this.cast("over")
+  def overlay: typingsSlinky.sharp.sharpStrings.overlay = "overlay".asInstanceOf[typingsSlinky.sharp.sharpStrings.overlay]
   @scala.inline
-  def overlay: typingsSlinky.sharp.sharpStrings.overlay = this.cast("overlay")
+  def saturate: typingsSlinky.sharp.sharpStrings.saturate = "saturate".asInstanceOf[typingsSlinky.sharp.sharpStrings.saturate]
   @scala.inline
-  def saturate: typingsSlinky.sharp.sharpStrings.saturate = this.cast("saturate")
+  def screen: typingsSlinky.sharp.sharpStrings.screen = "screen".asInstanceOf[typingsSlinky.sharp.sharpStrings.screen]
   @scala.inline
-  def screen: typingsSlinky.sharp.sharpStrings.screen = this.cast("screen")
+  def `soft-light`: typingsSlinky.sharp.sharpStrings.`soft-light` = "soft-light".asInstanceOf[typingsSlinky.sharp.sharpStrings.`soft-light`]
   @scala.inline
-  def `soft-light`: typingsSlinky.sharp.sharpStrings.`soft-light` = this.cast("soft-light")
+  def source: typingsSlinky.sharp.sharpStrings.source = "source".asInstanceOf[typingsSlinky.sharp.sharpStrings.source]
   @scala.inline
-  def source: typingsSlinky.sharp.sharpStrings.source = this.cast("source")
-  @scala.inline
-  def xor: typingsSlinky.sharp.sharpStrings.xor = this.cast("xor")
+  def xor: typingsSlinky.sharp.sharpStrings.xor = "xor".asInstanceOf[typingsSlinky.sharp.sharpStrings.xor]
 }
 

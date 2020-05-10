@@ -14,14 +14,12 @@ trait SmartHomeV1Intents extends js.Object
 
 object SmartHomeV1Intents {
   @scala.inline
-  def actionDotdevicesDotDISCONNECT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotDISCONNECT = this.cast("action.devices.DISCONNECT")
+  def actionDotdevicesDotDISCONNECT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotDISCONNECT = "action.devices.DISCONNECT".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotDISCONNECT]
   @scala.inline
-  def actionDotdevicesDotEXECUTE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotEXECUTE = this.cast("action.devices.EXECUTE")
+  def actionDotdevicesDotEXECUTE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotEXECUTE = "action.devices.EXECUTE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotEXECUTE]
   @scala.inline
-  def actionDotdevicesDotQUERY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotQUERY = this.cast("action.devices.QUERY")
+  def actionDotdevicesDotQUERY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotQUERY = "action.devices.QUERY".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotQUERY]
   @scala.inline
-  def actionDotdevicesDotSYNC: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotSYNC = this.cast("action.devices.SYNC")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def actionDotdevicesDotSYNC: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotSYNC = "action.devices.SYNC".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.actionDotdevicesDotSYNC]
 }
 

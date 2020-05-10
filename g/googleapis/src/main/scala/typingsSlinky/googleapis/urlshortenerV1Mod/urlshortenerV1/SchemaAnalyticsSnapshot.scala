@@ -39,22 +39,89 @@ trait SchemaAnalyticsSnapshot extends js.Object {
 
 object SchemaAnalyticsSnapshot {
   @scala.inline
-  def apply(
-    browsers: js.Array[SchemaStringCount] = null,
-    countries: js.Array[SchemaStringCount] = null,
-    longUrlClicks: String = null,
-    platforms: js.Array[SchemaStringCount] = null,
-    referrers: js.Array[SchemaStringCount] = null,
-    shortUrlClicks: String = null
-  ): SchemaAnalyticsSnapshot = {
+  def apply(): SchemaAnalyticsSnapshot = {
     val __obj = js.Dynamic.literal()
-    if (browsers != null) __obj.updateDynamic("browsers")(browsers.asInstanceOf[js.Any])
-    if (countries != null) __obj.updateDynamic("countries")(countries.asInstanceOf[js.Any])
-    if (longUrlClicks != null) __obj.updateDynamic("longUrlClicks")(longUrlClicks.asInstanceOf[js.Any])
-    if (platforms != null) __obj.updateDynamic("platforms")(platforms.asInstanceOf[js.Any])
-    if (referrers != null) __obj.updateDynamic("referrers")(referrers.asInstanceOf[js.Any])
-    if (shortUrlClicks != null) __obj.updateDynamic("shortUrlClicks")(shortUrlClicks.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnalyticsSnapshot]
   }
+  @scala.inline
+  implicit class SchemaAnalyticsSnapshotOps[Self <: SchemaAnalyticsSnapshot] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrowsers(value: js.Array[SchemaStringCount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountries(value: js.Array[SchemaStringCount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLongUrlClicks(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longUrlClicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLongUrlClicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longUrlClicks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatforms(value: js.Array[SchemaStringCount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatforms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferrers(value: js.Array[SchemaStringCount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referrers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferrers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referrers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortUrlClicks(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortUrlClicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortUrlClicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortUrlClicks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,19 +9,33 @@ import scala.scalajs.js.annotation._
   *
   * Note: In addition, this structure can contain dynamic properties.
   */
+@js.native
 trait IStaticContentUrlDef extends js.Object {
   /**
     * Relative path of the thumbnail.
     */
-  var qUrl: String
+  var qUrl: String = js.native
 }
 
 object IStaticContentUrlDef {
   @scala.inline
   def apply(qUrl: String): IStaticContentUrlDef = {
     val __obj = js.Dynamic.literal(qUrl = qUrl.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IStaticContentUrlDef]
   }
+  @scala.inline
+  implicit class IStaticContentUrlDefOps[Self <: IStaticContentUrlDef] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

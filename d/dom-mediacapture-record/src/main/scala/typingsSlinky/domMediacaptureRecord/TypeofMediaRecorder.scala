@@ -2,7 +2,7 @@ package typingsSlinky.domMediacaptureRecord
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.MediaStream
+import org.scalajs.dom.experimental.mediastream.MediaStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

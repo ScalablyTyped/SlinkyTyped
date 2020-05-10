@@ -2,13 +2,13 @@ package typingsSlinky.chartJs
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.CanvasRenderingContext2D
+import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.chartJs.mod.Chart
 import typingsSlinky.chartJs.mod.ChartConfiguration
 import typingsSlinky.chartJs.mod.ChartTooltipsStaticConfiguration
 import typingsSlinky.chartJs.mod.PluginServiceStatic
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.CanvasRenderingContext2D
-import typingsSlinky.std.HTMLCanvasElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

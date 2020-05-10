@@ -34,22 +34,89 @@ trait ApiCache extends js.Object {
 
 object ApiCache {
   @scala.inline
-  def apply(
-    apiCachingBehavior: ApiCachingBehavior = null,
-    atRestEncryptionEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    status: ApiCacheStatus = null,
-    transitEncryptionEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    ttl: Int | Double = null,
-    `type`: ApiCacheType = null
-  ): ApiCache = {
+  def apply(): ApiCache = {
     val __obj = js.Dynamic.literal()
-    if (apiCachingBehavior != null) __obj.updateDynamic("apiCachingBehavior")(apiCachingBehavior.asInstanceOf[js.Any])
-    if (!js.isUndefined(atRestEncryptionEnabled)) __obj.updateDynamic("atRestEncryptionEnabled")(atRestEncryptionEnabled.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (!js.isUndefined(transitEncryptionEnabled)) __obj.updateDynamic("transitEncryptionEnabled")(transitEncryptionEnabled.asInstanceOf[js.Any])
-    if (ttl != null) __obj.updateDynamic("ttl")(ttl.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApiCache]
   }
+  @scala.inline
+  implicit class ApiCacheOps[Self <: ApiCache] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiCachingBehavior(value: ApiCachingBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCachingBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiCachingBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCachingBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAtRestEncryptionEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atRestEncryptionEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAtRestEncryptionEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atRestEncryptionEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ApiCacheStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitEncryptionEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitEncryptionEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitEncryptionEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitEncryptionEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTtl(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTtl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: ApiCacheType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

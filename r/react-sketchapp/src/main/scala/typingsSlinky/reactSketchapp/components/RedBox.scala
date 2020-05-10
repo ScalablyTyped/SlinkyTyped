@@ -1,26 +1,22 @@
 package typingsSlinky.reactSketchapp.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactSketchapp.mod.RedBoxProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RedBox
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactSketchapp.mod.RedBox] {
+object RedBox {
   @JSImport("react-sketchapp", "RedBox")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(error: js.Error, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactSketchapp.mod.RedBox] = {
-    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: RedBoxProps): Default[tag.type, typingsSlinky.reactSketchapp.mod.RedBox] = new Default[tag.type, typingsSlinky.reactSketchapp.mod.RedBox](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(error: js.Error): Default[tag.type, typingsSlinky.reactSketchapp.mod.RedBox] = {
+    val __props = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.reactSketchapp.mod.RedBox](js.Array(this.component, __props.asInstanceOf[RedBoxProps]))
   }
-  type Props = RedBoxProps
 }
 

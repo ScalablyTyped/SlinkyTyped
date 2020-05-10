@@ -1,11 +1,8 @@
 package typingsSlinky.nivoAnnotations.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.nivoAnnotations.mod.AnnotationProps
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoAnnotations.mod.NoteCoordinate
 import typingsSlinky.nivoAnnotations.nivoAnnotationsStrings.circle
 import typingsSlinky.nivoAnnotations.nivoAnnotationsStrings.dot
@@ -14,97 +11,131 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Annotation
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoAnnotations.mod.Annotation] {
-  @JSImport("@nivo/annotations", "Annotation")
-  @js.native
-  object componentImport extends js.Object
+object Annotation {
+  object CircleAnnotationProps {
+    @JSImport("@nivo/annotations", "Annotation")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, typingsSlinky.nivoAnnotations.mod.Annotation] {
+      @scala.inline
+      def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+      @scala.inline
+      def motionDamping(value: Double): this.type = set("motionDamping", value.asInstanceOf[js.Any])
+      @scala.inline
+      def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
+      @scala.inline
+      def note(value: TagMod[Any]): this.type = set("note", value.asInstanceOf[js.Any])
+      @scala.inline
+      def noteTextOffset(value: Double): this.type = set("noteTextOffset", value.asInstanceOf[js.Any])
+      @scala.inline
+      def noteWidth(value: Double): this.type = set("noteWidth", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: typingsSlinky.nivoAnnotations.mod.CircleAnnotationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(
+      containerHeight: Double,
+      containerWidth: Double,
+      noteX: NoteCoordinate,
+      noteY: NoteCoordinate,
+      size: Double,
+      `type`: circle,
+      x: Double,
+      y: Double
+    ): Builder = {
+        val __props = js.Dynamic.literal(containerHeight = containerHeight.asInstanceOf[js.Any], containerWidth = containerWidth.asInstanceOf[js.Any], noteX = noteX.asInstanceOf[js.Any], noteY = noteY.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+        __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+        new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.nivoAnnotations.mod.CircleAnnotationProps]))
+    }
+  }
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: size */
-  def CircleAnnotationProps(
-    containerHeight: Double,
-    containerWidth: Double,
-    note: TagMod[Any],
-    noteX: NoteCoordinate,
-    noteY: NoteCoordinate,
-    size: Double,
-    x: Double,
-    y: Double,
-    `type`: circle,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    motionDamping: Int | Double = null,
-    motionStiffness: Int | Double = null,
-    noteTextOffset: Int | Double = null,
-    noteWidth: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoAnnotations.mod.Annotation] = {
-    val __obj = js.Dynamic.literal(containerHeight = containerHeight.asInstanceOf[js.Any], containerWidth = containerWidth.asInstanceOf[js.Any], note = note.asInstanceOf[js.Any], noteX = noteX.asInstanceOf[js.Any], noteY = noteY.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (motionDamping != null) __obj.updateDynamic("motionDamping")(motionDamping.asInstanceOf[js.Any])
-    if (motionStiffness != null) __obj.updateDynamic("motionStiffness")(motionStiffness.asInstanceOf[js.Any])
-    if (noteTextOffset != null) __obj.updateDynamic("noteTextOffset")(noteTextOffset.asInstanceOf[js.Any])
-    if (noteWidth != null) __obj.updateDynamic("noteWidth")(noteWidth.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  object DotAnnotationProps {
+    @JSImport("@nivo/annotations", "Annotation")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, typingsSlinky.nivoAnnotations.mod.Annotation] {
+      @scala.inline
+      def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+      @scala.inline
+      def motionDamping(value: Double): this.type = set("motionDamping", value.asInstanceOf[js.Any])
+      @scala.inline
+      def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
+      @scala.inline
+      def note(value: TagMod[Any]): this.type = set("note", value.asInstanceOf[js.Any])
+      @scala.inline
+      def noteTextOffset(value: Double): this.type = set("noteTextOffset", value.asInstanceOf[js.Any])
+      @scala.inline
+      def noteWidth(value: Double): this.type = set("noteWidth", value.asInstanceOf[js.Any])
+      @scala.inline
+      def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: typingsSlinky.nivoAnnotations.mod.DotAnnotationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(
+      containerHeight: Double,
+      containerWidth: Double,
+      noteX: NoteCoordinate,
+      noteY: NoteCoordinate,
+      `type`: dot,
+      x: Double,
+      y: Double
+    ): Builder = {
+        val __props = js.Dynamic.literal(containerHeight = containerHeight.asInstanceOf[js.Any], containerWidth = containerWidth.asInstanceOf[js.Any], noteX = noteX.asInstanceOf[js.Any], noteY = noteY.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+        __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+        new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.nivoAnnotations.mod.DotAnnotationProps]))
+    }
   }
-  /* The following DOM/SVG props were specified: size */
-  def DotAnnotationProps(
-    containerHeight: Double,
-    containerWidth: Double,
-    note: TagMod[Any],
-    noteX: NoteCoordinate,
-    noteY: NoteCoordinate,
-    x: Double,
-    y: Double,
-    `type`: dot,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    motionDamping: Int | Double = null,
-    motionStiffness: Int | Double = null,
-    noteTextOffset: Int | Double = null,
-    noteWidth: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoAnnotations.mod.Annotation] = {
-    val __obj = js.Dynamic.literal(containerHeight = containerHeight.asInstanceOf[js.Any], containerWidth = containerWidth.asInstanceOf[js.Any], note = note.asInstanceOf[js.Any], noteX = noteX.asInstanceOf[js.Any], noteY = noteY.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (motionDamping != null) __obj.updateDynamic("motionDamping")(motionDamping.asInstanceOf[js.Any])
-    if (motionStiffness != null) __obj.updateDynamic("motionStiffness")(motionStiffness.asInstanceOf[js.Any])
-    if (noteTextOffset != null) __obj.updateDynamic("noteTextOffset")(noteTextOffset.asInstanceOf[js.Any])
-    if (noteWidth != null) __obj.updateDynamic("noteWidth")(noteWidth.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  
+  object RectAnnotationProps {
+    @JSImport("@nivo/annotations", "Annotation")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, typingsSlinky.nivoAnnotations.mod.Annotation] {
+      @scala.inline
+      def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+      @scala.inline
+      def motionDamping(value: Double): this.type = set("motionDamping", value.asInstanceOf[js.Any])
+      @scala.inline
+      def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
+      @scala.inline
+      def note(value: TagMod[Any]): this.type = set("note", value.asInstanceOf[js.Any])
+      @scala.inline
+      def noteTextOffset(value: Double): this.type = set("noteTextOffset", value.asInstanceOf[js.Any])
+      @scala.inline
+      def noteWidth(value: Double): this.type = set("noteWidth", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: typingsSlinky.nivoAnnotations.mod.RectAnnotationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(
+      containerHeight: Double,
+      containerWidth: Double,
+      height: Double,
+      noteX: NoteCoordinate,
+      noteY: NoteCoordinate,
+      `type`: rect,
+      width: Double,
+      x: Double,
+      y: Double
+    ): Builder = {
+        val __props = js.Dynamic.literal(containerHeight = containerHeight.asInstanceOf[js.Any], containerWidth = containerWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], noteX = noteX.asInstanceOf[js.Any], noteY = noteY.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+        __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+        new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.nivoAnnotations.mod.RectAnnotationProps]))
+    }
   }
-  /* The following DOM/SVG props were specified: size */
-  def RectAnnotationProps(
-    containerHeight: Double,
-    containerWidth: Double,
-    height: Double,
-    note: TagMod[Any],
-    noteX: NoteCoordinate,
-    noteY: NoteCoordinate,
-    width: Double,
-    x: Double,
-    y: Double,
-    `type`: rect,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    motionDamping: Int | Double = null,
-    motionStiffness: Int | Double = null,
-    noteTextOffset: Int | Double = null,
-    noteWidth: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoAnnotations.mod.Annotation] = {
-    val __obj = js.Dynamic.literal(containerHeight = containerHeight.asInstanceOf[js.Any], containerWidth = containerWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], note = note.asInstanceOf[js.Any], noteX = noteX.asInstanceOf[js.Any], noteY = noteY.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (motionDamping != null) __obj.updateDynamic("motionDamping")(motionDamping.asInstanceOf[js.Any])
-    if (motionStiffness != null) __obj.updateDynamic("motionStiffness")(motionStiffness.asInstanceOf[js.Any])
-    if (noteTextOffset != null) __obj.updateDynamic("noteTextOffset")(noteTextOffset.asInstanceOf[js.Any])
-    if (noteWidth != null) __obj.updateDynamic("noteWidth")(noteWidth.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
-  }
-  type Props = AnnotationProps
+  
 }
 

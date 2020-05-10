@@ -14,10 +14,29 @@ trait DetachClassicLinkVpcResult extends js.Object {
 
 object DetachClassicLinkVpcResult {
   @scala.inline
-  def apply(Return: js.UndefOr[scala.Boolean] = js.undefined): DetachClassicLinkVpcResult = {
+  def apply(): DetachClassicLinkVpcResult = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Return)) __obj.updateDynamic("Return")(Return.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetachClassicLinkVpcResult]
   }
+  @scala.inline
+  implicit class DetachClassicLinkVpcResultOps[Self <: DetachClassicLinkVpcResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReturn(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Return")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Return")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

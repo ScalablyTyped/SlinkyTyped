@@ -22,16 +22,53 @@ trait Timing extends js.Object {
 
 object Timing {
   @scala.inline
-  def apply(
-    FinishTimeMillis: Int | Double = null,
-    StartTimeMillis: Int | Double = null,
-    SubmitTimeMillis: Int | Double = null
-  ): Timing = {
+  def apply(): Timing = {
     val __obj = js.Dynamic.literal()
-    if (FinishTimeMillis != null) __obj.updateDynamic("FinishTimeMillis")(FinishTimeMillis.asInstanceOf[js.Any])
-    if (StartTimeMillis != null) __obj.updateDynamic("StartTimeMillis")(StartTimeMillis.asInstanceOf[js.Any])
-    if (SubmitTimeMillis != null) __obj.updateDynamic("SubmitTimeMillis")(SubmitTimeMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[Timing]
   }
+  @scala.inline
+  implicit class TimingOps[Self <: Timing] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFinishTimeMillis(value: NullableLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinishTimeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinishTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinishTimeMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTimeMillis(value: NullableLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTimeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTimeMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmitTimeMillis(value: NullableLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmitTimeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmitTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubmitTimeMillis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

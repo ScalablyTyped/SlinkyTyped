@@ -20,8 +20,27 @@ object XssMatchTuple {
   @scala.inline
   def apply(FieldToMatch: FieldToMatch, TextTransformation: TextTransformation): XssMatchTuple = {
     val __obj = js.Dynamic.literal(FieldToMatch = FieldToMatch.asInstanceOf[js.Any], TextTransformation = TextTransformation.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[XssMatchTuple]
   }
+  @scala.inline
+  implicit class XssMatchTupleOps[Self <: XssMatchTuple] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFieldToMatch(value: FieldToMatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldToMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextTransformation(value: TextTransformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextTransformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

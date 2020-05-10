@@ -24,34 +24,32 @@ trait ViewportPreset extends js.Object
 
 object ViewportPreset {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `ipad-2`: typingsSlinky.cypress.cypressStrings.`ipad-2` = "ipad-2".asInstanceOf[typingsSlinky.cypress.cypressStrings.`ipad-2`]
   @scala.inline
-  def `ipad-2`: typingsSlinky.cypress.cypressStrings.`ipad-2` = this.cast("ipad-2")
+  def `ipad-mini`: typingsSlinky.cypress.cypressStrings.`ipad-mini` = "ipad-mini".asInstanceOf[typingsSlinky.cypress.cypressStrings.`ipad-mini`]
   @scala.inline
-  def `ipad-mini`: typingsSlinky.cypress.cypressStrings.`ipad-mini` = this.cast("ipad-mini")
+  def `iphone-3`: typingsSlinky.cypress.cypressStrings.`iphone-3` = "iphone-3".asInstanceOf[typingsSlinky.cypress.cypressStrings.`iphone-3`]
   @scala.inline
-  def `iphone-3`: typingsSlinky.cypress.cypressStrings.`iphone-3` = this.cast("iphone-3")
+  def `iphone-4`: typingsSlinky.cypress.cypressStrings.`iphone-4` = "iphone-4".asInstanceOf[typingsSlinky.cypress.cypressStrings.`iphone-4`]
   @scala.inline
-  def `iphone-4`: typingsSlinky.cypress.cypressStrings.`iphone-4` = this.cast("iphone-4")
+  def `iphone-5`: typingsSlinky.cypress.cypressStrings.`iphone-5` = "iphone-5".asInstanceOf[typingsSlinky.cypress.cypressStrings.`iphone-5`]
   @scala.inline
-  def `iphone-5`: typingsSlinky.cypress.cypressStrings.`iphone-5` = this.cast("iphone-5")
+  def `iphone-6`: typingsSlinky.cypress.cypressStrings.`iphone-6` = "iphone-6".asInstanceOf[typingsSlinky.cypress.cypressStrings.`iphone-6`]
   @scala.inline
-  def `iphone-6`: typingsSlinky.cypress.cypressStrings.`iphone-6` = this.cast("iphone-6")
+  def `iphone-6Plussign`: typingsSlinky.cypress.cypressStrings.`iphone-6Plussign` = "iphone-6+".asInstanceOf[typingsSlinky.cypress.cypressStrings.`iphone-6Plussign`]
   @scala.inline
-  def `iphone-6Plussign`: typingsSlinky.cypress.cypressStrings.`iphone-6Plussign` = this.cast("iphone-6+")
+  def `iphone-x`: typingsSlinky.cypress.cypressStrings.`iphone-x` = "iphone-x".asInstanceOf[typingsSlinky.cypress.cypressStrings.`iphone-x`]
   @scala.inline
-  def `iphone-x`: typingsSlinky.cypress.cypressStrings.`iphone-x` = this.cast("iphone-x")
+  def `iphone-xr`: typingsSlinky.cypress.cypressStrings.`iphone-xr` = "iphone-xr".asInstanceOf[typingsSlinky.cypress.cypressStrings.`iphone-xr`]
   @scala.inline
-  def `iphone-xr`: typingsSlinky.cypress.cypressStrings.`iphone-xr` = this.cast("iphone-xr")
+  def `macbook-11`: typingsSlinky.cypress.cypressStrings.`macbook-11` = "macbook-11".asInstanceOf[typingsSlinky.cypress.cypressStrings.`macbook-11`]
   @scala.inline
-  def `macbook-11`: typingsSlinky.cypress.cypressStrings.`macbook-11` = this.cast("macbook-11")
+  def `macbook-13`: typingsSlinky.cypress.cypressStrings.`macbook-13` = "macbook-13".asInstanceOf[typingsSlinky.cypress.cypressStrings.`macbook-13`]
   @scala.inline
-  def `macbook-13`: typingsSlinky.cypress.cypressStrings.`macbook-13` = this.cast("macbook-13")
+  def `macbook-15`: typingsSlinky.cypress.cypressStrings.`macbook-15` = "macbook-15".asInstanceOf[typingsSlinky.cypress.cypressStrings.`macbook-15`]
   @scala.inline
-  def `macbook-15`: typingsSlinky.cypress.cypressStrings.`macbook-15` = this.cast("macbook-15")
+  def `samsung-note9`: typingsSlinky.cypress.cypressStrings.`samsung-note9` = "samsung-note9".asInstanceOf[typingsSlinky.cypress.cypressStrings.`samsung-note9`]
   @scala.inline
-  def `samsung-note9`: typingsSlinky.cypress.cypressStrings.`samsung-note9` = this.cast("samsung-note9")
-  @scala.inline
-  def `samsung-s10`: typingsSlinky.cypress.cypressStrings.`samsung-s10` = this.cast("samsung-s10")
+  def `samsung-s10`: typingsSlinky.cypress.cypressStrings.`samsung-s10` = "samsung-s10".asInstanceOf[typingsSlinky.cypress.cypressStrings.`samsung-s10`]
 }
 

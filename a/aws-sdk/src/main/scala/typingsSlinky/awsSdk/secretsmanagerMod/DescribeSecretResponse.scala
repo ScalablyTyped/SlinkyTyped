@@ -38,6 +38,9 @@ trait DescribeSecretResponse extends js.Object {
     * The user-provided friendly name of the secret.
     */
   var Name: js.UndefOr[SecretNameType] = js.native
+  /**
+    * Returns the name of the service that created this secret.
+    */
   var OwningService: js.UndefOr[OwningServiceType] = js.native
   /**
     * Specifies whether automatic rotation is enabled for this secret. To enable rotation, use RotateSecret with AutomaticallyRotateAfterDays set to a value greater than 0. To disable rotation, use CancelRotateSecret.
@@ -63,38 +66,185 @@ trait DescribeSecretResponse extends js.Object {
 
 object DescribeSecretResponse {
   @scala.inline
-  def apply(
-    ARN: SecretARNType = null,
-    DeletedDate: js.Date = null,
-    Description: DescriptionType = null,
-    KmsKeyId: KmsKeyIdType = null,
-    LastAccessedDate: js.Date = null,
-    LastChangedDate: js.Date = null,
-    LastRotatedDate: js.Date = null,
-    Name: SecretNameType = null,
-    OwningService: OwningServiceType = null,
-    RotationEnabled: js.UndefOr[Boolean] = js.undefined,
-    RotationLambdaARN: RotationLambdaARNType = null,
-    RotationRules: RotationRulesType = null,
-    Tags: TagListType = null,
-    VersionIdsToStages: SecretVersionsToStagesMapType = null
-  ): DescribeSecretResponse = {
+  def apply(): DescribeSecretResponse = {
     val __obj = js.Dynamic.literal()
-    if (ARN != null) __obj.updateDynamic("ARN")(ARN.asInstanceOf[js.Any])
-    if (DeletedDate != null) __obj.updateDynamic("DeletedDate")(DeletedDate.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
-    if (LastAccessedDate != null) __obj.updateDynamic("LastAccessedDate")(LastAccessedDate.asInstanceOf[js.Any])
-    if (LastChangedDate != null) __obj.updateDynamic("LastChangedDate")(LastChangedDate.asInstanceOf[js.Any])
-    if (LastRotatedDate != null) __obj.updateDynamic("LastRotatedDate")(LastRotatedDate.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (OwningService != null) __obj.updateDynamic("OwningService")(OwningService.asInstanceOf[js.Any])
-    if (!js.isUndefined(RotationEnabled)) __obj.updateDynamic("RotationEnabled")(RotationEnabled.asInstanceOf[js.Any])
-    if (RotationLambdaARN != null) __obj.updateDynamic("RotationLambdaARN")(RotationLambdaARN.asInstanceOf[js.Any])
-    if (RotationRules != null) __obj.updateDynamic("RotationRules")(RotationRules.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (VersionIdsToStages != null) __obj.updateDynamic("VersionIdsToStages")(VersionIdsToStages.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeSecretResponse]
   }
+  @scala.inline
+  implicit class DescribeSecretResponseOps[Self <: DescribeSecretResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withARN(value: SecretARNType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeletedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: DescriptionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: KmsKeyIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastAccessedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAccessedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastAccessedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastAccessedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastChangedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastChangedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastChangedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastChangedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastRotatedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastRotatedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastRotatedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastRotatedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: SecretNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwningService(value: OwningServiceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwningService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwningService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwningService")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotationEnabled(value: RotationEnabledType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RotationEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotationEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RotationEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotationLambdaARN(value: RotationLambdaARNType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RotationLambdaARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotationLambdaARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RotationLambdaARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotationRules(value: RotationRulesType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RotationRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotationRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RotationRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionIdsToStages(value: SecretVersionsToStagesMapType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionIdsToStages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionIdsToStages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionIdsToStages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

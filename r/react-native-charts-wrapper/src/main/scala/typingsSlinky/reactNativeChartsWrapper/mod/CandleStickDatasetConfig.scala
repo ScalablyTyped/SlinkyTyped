@@ -4,73 +4,143 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CandleStickDatasetConfig
   extends CommonDatasetConfig
      with BarLineScatterCandleBubbleConfig
      with LineScatterCandleRadarConfig {
-  var barSpace: js.UndefOr[Double] = js.undefined
-  var decreasingColor: js.UndefOr[Color] = js.undefined
-  var decreasingPaintStyle: js.UndefOr[CandleStickPaintStyle] = js.undefined
-  var increasingColor: js.UndefOr[Color] = js.undefined
-  var increasingPaintStyle: js.UndefOr[CandleStickPaintStyle] = js.undefined
-  var neutralColor: js.UndefOr[Color] = js.undefined
-  var shadowColor: js.UndefOr[Color] = js.undefined
-  var shadowColorSameAsCandle: js.UndefOr[Boolean] = js.undefined
-  var shadowWidth: js.UndefOr[Double] = js.undefined
+  var barSpace: js.UndefOr[Double] = js.native
+  var decreasingColor: js.UndefOr[Color] = js.native
+  var decreasingPaintStyle: js.UndefOr[CandleStickPaintStyle] = js.native
+  var increasingColor: js.UndefOr[Color] = js.native
+  var increasingPaintStyle: js.UndefOr[CandleStickPaintStyle] = js.native
+  var neutralColor: js.UndefOr[Color] = js.native
+  var shadowColor: js.UndefOr[Color] = js.native
+  var shadowColorSameAsCandle: js.UndefOr[Boolean] = js.native
+  var shadowWidth: js.UndefOr[Double] = js.native
 }
 
 object CandleStickDatasetConfig {
   @scala.inline
-  def apply(
-    axisDependency: AxisDependency = null,
-    barSpace: Int | Double = null,
-    color: Int | Double = null,
-    colors: js.Array[Color] = null,
-    decreasingColor: Int | Double = null,
-    decreasingPaintStyle: CandleStickPaintStyle = null,
-    drawHighlightIndicators: js.UndefOr[Boolean] = js.undefined,
-    drawHorizontalHighlightIndicator: js.UndefOr[Boolean] = js.undefined,
-    drawValues: js.UndefOr[Boolean] = js.undefined,
-    drawVerticalHighlightIndicator: js.UndefOr[Boolean] = js.undefined,
-    highlightColor: Int | Double = null,
-    highlightEnabled: js.UndefOr[Boolean] = js.undefined,
-    highlightLineWidth: Int | Double = null,
-    increasingColor: Int | Double = null,
-    increasingPaintStyle: CandleStickPaintStyle = null,
-    neutralColor: Int | Double = null,
-    shadowColor: Int | Double = null,
-    shadowColorSameAsCandle: js.UndefOr[Boolean] = js.undefined,
-    shadowWidth: Int | Double = null,
-    valueFormatter: ValueFormatter = null,
-    valueTextColor: Int | Double = null,
-    valueTextSize: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): CandleStickDatasetConfig = {
+  def apply(): CandleStickDatasetConfig = {
     val __obj = js.Dynamic.literal()
-    if (axisDependency != null) __obj.updateDynamic("axisDependency")(axisDependency.asInstanceOf[js.Any])
-    if (barSpace != null) __obj.updateDynamic("barSpace")(barSpace.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (decreasingColor != null) __obj.updateDynamic("decreasingColor")(decreasingColor.asInstanceOf[js.Any])
-    if (decreasingPaintStyle != null) __obj.updateDynamic("decreasingPaintStyle")(decreasingPaintStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(drawHighlightIndicators)) __obj.updateDynamic("drawHighlightIndicators")(drawHighlightIndicators.asInstanceOf[js.Any])
-    if (!js.isUndefined(drawHorizontalHighlightIndicator)) __obj.updateDynamic("drawHorizontalHighlightIndicator")(drawHorizontalHighlightIndicator.asInstanceOf[js.Any])
-    if (!js.isUndefined(drawValues)) __obj.updateDynamic("drawValues")(drawValues.asInstanceOf[js.Any])
-    if (!js.isUndefined(drawVerticalHighlightIndicator)) __obj.updateDynamic("drawVerticalHighlightIndicator")(drawVerticalHighlightIndicator.asInstanceOf[js.Any])
-    if (highlightColor != null) __obj.updateDynamic("highlightColor")(highlightColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightEnabled)) __obj.updateDynamic("highlightEnabled")(highlightEnabled.asInstanceOf[js.Any])
-    if (highlightLineWidth != null) __obj.updateDynamic("highlightLineWidth")(highlightLineWidth.asInstanceOf[js.Any])
-    if (increasingColor != null) __obj.updateDynamic("increasingColor")(increasingColor.asInstanceOf[js.Any])
-    if (increasingPaintStyle != null) __obj.updateDynamic("increasingPaintStyle")(increasingPaintStyle.asInstanceOf[js.Any])
-    if (neutralColor != null) __obj.updateDynamic("neutralColor")(neutralColor.asInstanceOf[js.Any])
-    if (shadowColor != null) __obj.updateDynamic("shadowColor")(shadowColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(shadowColorSameAsCandle)) __obj.updateDynamic("shadowColorSameAsCandle")(shadowColorSameAsCandle.asInstanceOf[js.Any])
-    if (shadowWidth != null) __obj.updateDynamic("shadowWidth")(shadowWidth.asInstanceOf[js.Any])
-    if (valueFormatter != null) __obj.updateDynamic("valueFormatter")(valueFormatter.asInstanceOf[js.Any])
-    if (valueTextColor != null) __obj.updateDynamic("valueTextColor")(valueTextColor.asInstanceOf[js.Any])
-    if (valueTextSize != null) __obj.updateDynamic("valueTextSize")(valueTextSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[CandleStickDatasetConfig]
   }
+  @scala.inline
+  implicit class CandleStickDatasetConfigOps[Self <: CandleStickDatasetConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBarSpace(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barSpace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecreasingColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decreasingColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecreasingColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decreasingColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecreasingPaintStyle(value: CandleStickPaintStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decreasingPaintStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecreasingPaintStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decreasingPaintStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncreasingColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("increasingColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncreasingColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("increasingColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncreasingPaintStyle(value: CandleStickPaintStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("increasingPaintStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncreasingPaintStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("increasingPaintStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeutralColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neutralColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeutralColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neutralColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowColorSameAsCandle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColorSameAsCandle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowColorSameAsCandle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColorSameAsCandle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowWidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

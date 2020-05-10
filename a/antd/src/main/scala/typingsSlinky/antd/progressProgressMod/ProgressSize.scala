@@ -12,10 +12,8 @@ trait ProgressSize extends js.Object
 
 object ProgressSize {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.antd.antdStrings.default = "default".asInstanceOf[typingsSlinky.antd.antdStrings.default]
   @scala.inline
-  def default: typingsSlinky.antd.antdStrings.default = this.cast("default")
-  @scala.inline
-  def small: typingsSlinky.antd.antdStrings.small = this.cast("small")
+  def small: typingsSlinky.antd.antdStrings.small = "small".asInstanceOf[typingsSlinky.antd.antdStrings.small]
 }
 

@@ -42,25 +42,107 @@ trait UpdateJobTemplateRequest extends js.Object {
 
 object UpdateJobTemplateRequest {
   @scala.inline
-  def apply(
-    Name: string,
-    AccelerationSettings: AccelerationSettings = null,
-    Category: string = null,
-    Description: string = null,
-    Priority: Int | Double = null,
-    Queue: string = null,
-    Settings: JobTemplateSettings = null,
-    StatusUpdateInterval: StatusUpdateInterval = null
-  ): UpdateJobTemplateRequest = {
+  def apply(Name: string): UpdateJobTemplateRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (AccelerationSettings != null) __obj.updateDynamic("AccelerationSettings")(AccelerationSettings.asInstanceOf[js.Any])
-    if (Category != null) __obj.updateDynamic("Category")(Category.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (Priority != null) __obj.updateDynamic("Priority")(Priority.asInstanceOf[js.Any])
-    if (Queue != null) __obj.updateDynamic("Queue")(Queue.asInstanceOf[js.Any])
-    if (Settings != null) __obj.updateDynamic("Settings")(Settings.asInstanceOf[js.Any])
-    if (StatusUpdateInterval != null) __obj.updateDynamic("StatusUpdateInterval")(StatusUpdateInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateJobTemplateRequest]
   }
+  @scala.inline
+  implicit class UpdateJobTemplateRequestOps[Self <: UpdateJobTemplateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccelerationSettings(value: AccelerationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccelerationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccelerationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccelerationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategory(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Category")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: integerMinNegative50Max50): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueue(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSettings(value: JobTemplateSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusUpdateInterval(value: StatusUpdateInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusUpdateInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusUpdateInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusUpdateInterval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

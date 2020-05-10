@@ -16,10 +16,8 @@ trait DraftRemovalDirection extends js.Object
 
 object DraftRemovalDirection {
   @scala.inline
-  def backward: typingsSlinky.draftJs.draftJsStrings.backward = this.cast("backward")
+  def backward: typingsSlinky.draftJs.draftJsStrings.backward = "backward".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.backward]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def forward: typingsSlinky.draftJs.draftJsStrings.forward = this.cast("forward")
+  def forward: typingsSlinky.draftJs.draftJsStrings.forward = "forward".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.forward]
 }
 

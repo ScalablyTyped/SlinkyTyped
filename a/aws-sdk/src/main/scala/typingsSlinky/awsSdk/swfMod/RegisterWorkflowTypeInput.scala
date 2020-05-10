@@ -50,27 +50,119 @@ trait RegisterWorkflowTypeInput extends js.Object {
 
 object RegisterWorkflowTypeInput {
   @scala.inline
-  def apply(
-    domain: DomainName,
-    name: Name,
-    version: Version,
-    defaultChildPolicy: ChildPolicy = null,
-    defaultExecutionStartToCloseTimeout: DurationInSecondsOptional = null,
-    defaultLambdaRole: Arn = null,
-    defaultTaskList: TaskList = null,
-    defaultTaskPriority: TaskPriority = null,
-    defaultTaskStartToCloseTimeout: DurationInSecondsOptional = null,
-    description: Description = null
-  ): RegisterWorkflowTypeInput = {
+  def apply(domain: DomainName, name: Name, version: Version): RegisterWorkflowTypeInput = {
     val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
-    if (defaultChildPolicy != null) __obj.updateDynamic("defaultChildPolicy")(defaultChildPolicy.asInstanceOf[js.Any])
-    if (defaultExecutionStartToCloseTimeout != null) __obj.updateDynamic("defaultExecutionStartToCloseTimeout")(defaultExecutionStartToCloseTimeout.asInstanceOf[js.Any])
-    if (defaultLambdaRole != null) __obj.updateDynamic("defaultLambdaRole")(defaultLambdaRole.asInstanceOf[js.Any])
-    if (defaultTaskList != null) __obj.updateDynamic("defaultTaskList")(defaultTaskList.asInstanceOf[js.Any])
-    if (defaultTaskPriority != null) __obj.updateDynamic("defaultTaskPriority")(defaultTaskPriority.asInstanceOf[js.Any])
-    if (defaultTaskStartToCloseTimeout != null) __obj.updateDynamic("defaultTaskStartToCloseTimeout")(defaultTaskStartToCloseTimeout.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterWorkflowTypeInput]
   }
+  @scala.inline
+  implicit class RegisterWorkflowTypeInputOps[Self <: RegisterWorkflowTypeInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomain(value: DomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultChildPolicy(value: ChildPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChildPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultChildPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultChildPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultExecutionStartToCloseTimeout(value: DurationInSecondsOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultExecutionStartToCloseTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultExecutionStartToCloseTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultExecutionStartToCloseTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultLambdaRole(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLambdaRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultLambdaRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLambdaRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTaskList(value: TaskList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTaskList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTaskPriority(value: TaskPriority): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskPriority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTaskPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskPriority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultTaskStartToCloseTimeout(value: DurationInSecondsOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskStartToCloseTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTaskStartToCloseTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTaskStartToCloseTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

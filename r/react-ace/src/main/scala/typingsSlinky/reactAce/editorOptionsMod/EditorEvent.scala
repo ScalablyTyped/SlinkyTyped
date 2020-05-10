@@ -21,28 +21,26 @@ trait EditorEvent extends js.Object
 
 object EditorEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def handleOptions: typingsSlinky.reactAce.reactAceStrings.handleOptions = "handleOptions".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.handleOptions]
   @scala.inline
-  def handleOptions: typingsSlinky.reactAce.reactAceStrings.handleOptions = this.cast("handleOptions")
+  def onBlur: typingsSlinky.reactAce.reactAceStrings.onBlur = "onBlur".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.onBlur]
   @scala.inline
-  def onBlur: typingsSlinky.reactAce.reactAceStrings.onBlur = this.cast("onBlur")
+  def onChange: typingsSlinky.reactAce.reactAceStrings.onChange = "onChange".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.onChange]
   @scala.inline
-  def onChange: typingsSlinky.reactAce.reactAceStrings.onChange = this.cast("onChange")
+  def onCopy: typingsSlinky.reactAce.reactAceStrings.onCopy = "onCopy".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.onCopy]
   @scala.inline
-  def onCopy: typingsSlinky.reactAce.reactAceStrings.onCopy = this.cast("onCopy")
+  def onCursorChange: typingsSlinky.reactAce.reactAceStrings.onCursorChange = "onCursorChange".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.onCursorChange]
   @scala.inline
-  def onCursorChange: typingsSlinky.reactAce.reactAceStrings.onCursorChange = this.cast("onCursorChange")
+  def onFocus: typingsSlinky.reactAce.reactAceStrings.onFocus = "onFocus".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.onFocus]
   @scala.inline
-  def onFocus: typingsSlinky.reactAce.reactAceStrings.onFocus = this.cast("onFocus")
+  def onInput: typingsSlinky.reactAce.reactAceStrings.onInput = "onInput".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.onInput]
   @scala.inline
-  def onInput: typingsSlinky.reactAce.reactAceStrings.onInput = this.cast("onInput")
+  def onPaste: typingsSlinky.reactAce.reactAceStrings.onPaste = "onPaste".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.onPaste]
   @scala.inline
-  def onPaste: typingsSlinky.reactAce.reactAceStrings.onPaste = this.cast("onPaste")
+  def onScroll: typingsSlinky.reactAce.reactAceStrings.onScroll = "onScroll".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.onScroll]
   @scala.inline
-  def onScroll: typingsSlinky.reactAce.reactAceStrings.onScroll = this.cast("onScroll")
+  def onSelectionChange: typingsSlinky.reactAce.reactAceStrings.onSelectionChange = "onSelectionChange".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.onSelectionChange]
   @scala.inline
-  def onSelectionChange: typingsSlinky.reactAce.reactAceStrings.onSelectionChange = this.cast("onSelectionChange")
-  @scala.inline
-  def updateRef: typingsSlinky.reactAce.reactAceStrings.updateRef = this.cast("updateRef")
+  def updateRef: typingsSlinky.reactAce.reactAceStrings.updateRef = "updateRef".asInstanceOf[typingsSlinky.reactAce.reactAceStrings.updateRef]
 }
 

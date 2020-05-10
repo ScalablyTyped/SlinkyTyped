@@ -158,20 +158,12 @@ class Request[D, E] protected () extends js.Object {
   @JSName("onAsync")
   def onAsync_httpData(
     event: httpData,
-    listener: js.Function2[
-      /* chunk */ Buffer | scala.scalajs.js.typedarray.Uint8Array, 
-      /* response */ Response[D, E], 
-      Unit
-    ]
+    listener: js.Function2[/* chunk */ Buffer | js.typedarray.Uint8Array, /* response */ Response[D, E], Unit]
   ): Request[D, E] = js.native
   @JSName("onAsync")
   def onAsync_httpData(
     event: httpData,
-    listener: js.Function2[
-      /* chunk */ Buffer | scala.scalajs.js.typedarray.Uint8Array, 
-      /* response */ Response[D, E], 
-      Unit
-    ],
+    listener: js.Function2[/* chunk */ Buffer | js.typedarray.Uint8Array, /* response */ Response[D, E], Unit],
     prepend: Boolean
   ): Request[D, E] = js.native
   /**
@@ -390,20 +382,12 @@ class Request[D, E] protected () extends js.Object {
   @JSName("on")
   def on_httpData(
     event: httpData,
-    listener: js.Function2[
-      /* chunk */ Buffer | scala.scalajs.js.typedarray.Uint8Array, 
-      /* response */ Response[D, E], 
-      Unit
-    ]
+    listener: js.Function2[/* chunk */ Buffer | js.typedarray.Uint8Array, /* response */ Response[D, E], Unit]
   ): Request[D, E] = js.native
   @JSName("on")
   def on_httpData(
     event: httpData,
-    listener: js.Function2[
-      /* chunk */ Buffer | scala.scalajs.js.typedarray.Uint8Array, 
-      /* response */ Response[D, E], 
-      Unit
-    ],
+    listener: js.Function2[/* chunk */ Buffer | js.typedarray.Uint8Array, /* response */ Response[D, E], Unit],
     prepend: Boolean
   ): Request[D, E] = js.native
   /**

@@ -2,61 +2,42 @@ package typingsSlinky.formData.mod
 
 import typingsSlinky.formData.formDataStrings.httpColon
 import typingsSlinky.formData.formDataStrings.httpsColon
-import typingsSlinky.node.httpMod.Agent
 import typingsSlinky.node.httpMod.ClientRequestArgs
-import typingsSlinky.node.httpMod.OutgoingHttpHeaders
-import typingsSlinky.node.netMod.Socket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SubmitOptions extends ClientRequestArgs {
   @JSName("protocol")
-  var protocol_SubmitOptions: js.UndefOr[httpsColon | httpColon] = js.undefined
+  var protocol_SubmitOptions: js.UndefOr[httpsColon | httpColon] = js.native
 }
 
 object SubmitOptions {
   @scala.inline
-  def apply(
-    _defaultAgent: Agent = null,
-    agent: Agent | Boolean = null,
-    auth: String = null,
-    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket = null,
-    defaultPort: Double | String = null,
-    family: Int | Double = null,
-    headers: OutgoingHttpHeaders = null,
-    host: String = null,
-    hostname: String = null,
-    localAddress: String = null,
-    maxHeaderSize: Int | Double = null,
-    method: String = null,
-    path: String = null,
-    port: Double | String = null,
-    protocol: httpsColon | httpColon = null,
-    setHost: js.UndefOr[Boolean] = js.undefined,
-    socketPath: String = null,
-    timeout: Int | Double = null
-  ): SubmitOptions = {
+  def apply(): SubmitOptions = {
     val __obj = js.Dynamic.literal()
-    if (_defaultAgent != null) __obj.updateDynamic("_defaultAgent")(_defaultAgent.asInstanceOf[js.Any])
-    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (createConnection != null) __obj.updateDynamic("createConnection")(js.Any.fromFunction2(createConnection))
-    if (defaultPort != null) __obj.updateDynamic("defaultPort")(defaultPort.asInstanceOf[js.Any])
-    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
-    if (maxHeaderSize != null) __obj.updateDynamic("maxHeaderSize")(maxHeaderSize.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (!js.isUndefined(setHost)) __obj.updateDynamic("setHost")(setHost.asInstanceOf[js.Any])
-    if (socketPath != null) __obj.updateDynamic("socketPath")(socketPath.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubmitOptions]
   }
+  @scala.inline
+  implicit class SubmitOptionsOps[Self <: SubmitOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProtocol(value: httpsColon | httpColon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

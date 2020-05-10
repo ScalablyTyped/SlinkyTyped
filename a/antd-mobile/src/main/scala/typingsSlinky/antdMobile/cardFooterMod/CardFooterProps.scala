@@ -1,30 +1,53 @@
 package typingsSlinky.antdMobile.cardFooterMod
 
-import slinky.core.TagMod
 import typingsSlinky.antdMobile.cardPropsTypeMod.CardFooterPropsType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CardFooterProps extends CardFooterPropsType {
-  var className: js.UndefOr[String] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
 }
 
 object CardFooterProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    content: TagMod[Any] = null,
-    extra: TagMod[Any] = null,
-    prefixCls: String = null
-  ): CardFooterProps = {
+  def apply(): CardFooterProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardFooterProps]
   }
+  @scala.inline
+  implicit class CardFooterPropsOps[Self <: CardFooterProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

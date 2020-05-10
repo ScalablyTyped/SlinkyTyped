@@ -1,5 +1,6 @@
 package typingsSlinky.esprimaWalk
 
+import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeListOf
@@ -8,7 +9,6 @@ import typingsSlinky.estree.mod.Program
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.ChildNode
 import typingsSlinky.std.Document_
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import typingsSlinky.std.Event_
 import typingsSlinky.std.GetRootNodeOptions

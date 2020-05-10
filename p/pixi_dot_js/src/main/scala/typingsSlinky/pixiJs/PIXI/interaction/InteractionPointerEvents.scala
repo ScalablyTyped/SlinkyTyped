@@ -18,22 +18,20 @@ trait InteractionPointerEvents extends js.Object
 
 object InteractionPointerEvents {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def pointercancel: typingsSlinky.pixiJs.pixiJsStrings.pointercancel = "pointercancel".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointercancel]
   @scala.inline
-  def pointercancel: typingsSlinky.pixiJs.pixiJsStrings.pointercancel = this.cast("pointercancel")
+  def pointerdown: typingsSlinky.pixiJs.pixiJsStrings.pointerdown = "pointerdown".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointerdown]
   @scala.inline
-  def pointerdown: typingsSlinky.pixiJs.pixiJsStrings.pointerdown = this.cast("pointerdown")
+  def pointermove: typingsSlinky.pixiJs.pixiJsStrings.pointermove = "pointermove".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointermove]
   @scala.inline
-  def pointermove: typingsSlinky.pixiJs.pixiJsStrings.pointermove = this.cast("pointermove")
+  def pointerout: typingsSlinky.pixiJs.pixiJsStrings.pointerout = "pointerout".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointerout]
   @scala.inline
-  def pointerout: typingsSlinky.pixiJs.pixiJsStrings.pointerout = this.cast("pointerout")
+  def pointerover: typingsSlinky.pixiJs.pixiJsStrings.pointerover = "pointerover".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointerover]
   @scala.inline
-  def pointerover: typingsSlinky.pixiJs.pixiJsStrings.pointerover = this.cast("pointerover")
+  def pointertap: typingsSlinky.pixiJs.pixiJsStrings.pointertap = "pointertap".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointertap]
   @scala.inline
-  def pointertap: typingsSlinky.pixiJs.pixiJsStrings.pointertap = this.cast("pointertap")
+  def pointerup: typingsSlinky.pixiJs.pixiJsStrings.pointerup = "pointerup".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointerup]
   @scala.inline
-  def pointerup: typingsSlinky.pixiJs.pixiJsStrings.pointerup = this.cast("pointerup")
-  @scala.inline
-  def pointerupoutside: typingsSlinky.pixiJs.pixiJsStrings.pointerupoutside = this.cast("pointerupoutside")
+  def pointerupoutside: typingsSlinky.pixiJs.pixiJsStrings.pointerupoutside = "pointerupoutside".asInstanceOf[typingsSlinky.pixiJs.pixiJsStrings.pointerupoutside]
 }
 

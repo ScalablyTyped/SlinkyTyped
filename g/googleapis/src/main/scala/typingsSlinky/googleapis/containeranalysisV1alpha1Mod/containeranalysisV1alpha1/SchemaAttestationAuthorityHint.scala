@@ -24,10 +24,29 @@ trait SchemaAttestationAuthorityHint extends js.Object {
 
 object SchemaAttestationAuthorityHint {
   @scala.inline
-  def apply(humanReadableName: String = null): SchemaAttestationAuthorityHint = {
+  def apply(): SchemaAttestationAuthorityHint = {
     val __obj = js.Dynamic.literal()
-    if (humanReadableName != null) __obj.updateDynamic("humanReadableName")(humanReadableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAttestationAuthorityHint]
   }
+  @scala.inline
+  implicit class SchemaAttestationAuthorityHintOps[Self <: SchemaAttestationAuthorityHint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHumanReadableName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("humanReadableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHumanReadableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("humanReadableName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

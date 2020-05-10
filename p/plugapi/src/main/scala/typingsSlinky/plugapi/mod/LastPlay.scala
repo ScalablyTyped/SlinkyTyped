@@ -5,18 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LastPlay extends js.Object {
-  var dj: DJ
-  var media: Media
-  var score: Score
+  var dj: DJ = js.native
+  var media: Media = js.native
+  var score: Score = js.native
 }
 
 object LastPlay {
   @scala.inline
   def apply(dj: DJ, media: Media, score: Score): LastPlay = {
     val __obj = js.Dynamic.literal(dj = dj.asInstanceOf[js.Any], media = media.asInstanceOf[js.Any], score = score.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[LastPlay]
   }
+  @scala.inline
+  implicit class LastPlayOps[Self <: LastPlay] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDj(value: DJ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dj")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMedia(value: Media): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScore(value: Score): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

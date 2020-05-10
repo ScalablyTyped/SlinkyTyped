@@ -12,11 +12,41 @@ trait AnonIssueDisplayNumber extends js.Object {
 
 object AnonIssueDisplayNumber {
   @scala.inline
-  def apply(issueDisplayNumber: String = null, issueOrderNumber: Int | Double = null): AnonIssueDisplayNumber = {
+  def apply(): AnonIssueDisplayNumber = {
     val __obj = js.Dynamic.literal()
-    if (issueDisplayNumber != null) __obj.updateDynamic("issueDisplayNumber")(issueDisplayNumber.asInstanceOf[js.Any])
-    if (issueOrderNumber != null) __obj.updateDynamic("issueOrderNumber")(issueOrderNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonIssueDisplayNumber]
   }
+  @scala.inline
+  implicit class AnonIssueDisplayNumberOps[Self <: AnonIssueDisplayNumber] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIssueDisplayNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issueDisplayNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssueDisplayNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issueDisplayNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIssueOrderNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issueOrderNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssueOrderNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issueOrderNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

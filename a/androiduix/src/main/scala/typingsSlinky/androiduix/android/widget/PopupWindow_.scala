@@ -2,12 +2,10 @@ package typingsSlinky.androiduix.android.widget
 
 import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable
-import typingsSlinky.androiduix.android.view.KeyEvent
 import typingsSlinky.androiduix.android.view.MotionEvent
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.View.OnTouchListener
 import typingsSlinky.androiduix.android.view.Window.Callback
-import typingsSlinky.androiduix.android.view.WindowManager.LayoutParams
 import typingsSlinky.androiduix.android.view.animation.Animation
 import typingsSlinky.androiduix.android.widget.PopupWindow.OnDismissListener
 import typingsSlinky.std.Map
@@ -90,12 +88,6 @@ class PopupWindow_ protected () extends Callback {
   /* private */ def computeWindowExitAnimation(): js.Any = js.native
   /* private */ def createPopupLayout(): js.Any = js.native
   def dismiss(): Unit = js.native
-  /* CompleteClass */
-  override def dispatchGenericMotionEvent(event: MotionEvent): Boolean = js.native
-  /* CompleteClass */
-  override def dispatchKeyEvent(event: KeyEvent): Boolean = js.native
-  /* CompleteClass */
-  override def dispatchTouchEvent(event: MotionEvent): Boolean = js.native
   /* private */ def findDropDownPosition(anchor: js.Any, p: js.Any, xoff: js.Any, yoff: js.Any, gravity: js.Any): js.Any = js.native
   def getBackground(): Drawable = js.native
   def getContentView(): View = js.native
@@ -115,18 +107,8 @@ class PopupWindow_ protected () extends Callback {
   def isShowing(): Boolean = js.native
   def isSplitTouchEnabled(): Boolean = js.native
   def isTouchable(): Boolean = js.native
-  /* CompleteClass */
-  override def onAttachedToWindow(): Unit = js.native
-  /* CompleteClass */
-  override def onContentChanged(): Unit = js.native
-  /* CompleteClass */
-  override def onDetachedFromWindow(): Unit = js.native
   def onGenericMotionEvent(event: MotionEvent): Boolean = js.native
   def onTouchEvent(event: MotionEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onWindowAttributesChanged(attrs: LayoutParams): Unit = js.native
-  /* CompleteClass */
-  override def onWindowFocusChanged(hasFocus: Boolean): Unit = js.native
   /* private */ def preparePopup(p: js.Any): js.Any = js.native
   /* private */ def registerForScrollChanged(anchor: js.Any, xoff: js.Any, yoff: js.Any, gravity: js.Any): js.Any = js.native
   /* private */ def setAllowScrollingAnchorParent(enabled: js.Any): js.Any = js.native

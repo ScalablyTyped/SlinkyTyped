@@ -14,14 +14,12 @@ trait ManagedAppClipboardSharingLevel extends js.Object
 
 object ManagedAppClipboardSharingLevel {
   @scala.inline
-  def allApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.allApps = this.cast("allApps")
+  def allApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.allApps = "allApps".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allApps]
   @scala.inline
-  def blocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked = this.cast("blocked")
+  def blocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked = "blocked".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def managedApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.managedApps = "managedApps".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.managedApps]
   @scala.inline
-  def managedApps: typingsSlinky.microsoftGraph.microsoftGraphStrings.managedApps = this.cast("managedApps")
-  @scala.inline
-  def managedAppsWithPasteIn: typingsSlinky.microsoftGraph.microsoftGraphStrings.managedAppsWithPasteIn = this.cast("managedAppsWithPasteIn")
+  def managedAppsWithPasteIn: typingsSlinky.microsoftGraph.microsoftGraphStrings.managedAppsWithPasteIn = "managedAppsWithPasteIn".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.managedAppsWithPasteIn]
 }
 

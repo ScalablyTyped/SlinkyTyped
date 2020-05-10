@@ -19,24 +19,22 @@ trait GatewayRejectionReason extends js.Object
 
 object GatewayRejectionReason {
   @scala.inline
-  def application_incomplete: typingsSlinky.braintree.braintreeStrings.application_incomplete = this.cast("application_incomplete")
+  def application_incomplete: typingsSlinky.braintree.braintreeStrings.application_incomplete = "application_incomplete".asInstanceOf[typingsSlinky.braintree.braintreeStrings.application_incomplete]
   @scala.inline
-  def avs: typingsSlinky.braintree.braintreeStrings.avs = this.cast("avs")
+  def avs: typingsSlinky.braintree.braintreeStrings.avs = "avs".asInstanceOf[typingsSlinky.braintree.braintreeStrings.avs]
   @scala.inline
-  def avs_and_cvv: typingsSlinky.braintree.braintreeStrings.avs_and_cvv = this.cast("avs_and_cvv")
+  def avs_and_cvv: typingsSlinky.braintree.braintreeStrings.avs_and_cvv = "avs_and_cvv".asInstanceOf[typingsSlinky.braintree.braintreeStrings.avs_and_cvv]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cvv: typingsSlinky.braintree.braintreeStrings.cvv = "cvv".asInstanceOf[typingsSlinky.braintree.braintreeStrings.cvv]
   @scala.inline
-  def cvv: typingsSlinky.braintree.braintreeStrings.cvv = this.cast("cvv")
+  def duplicate: typingsSlinky.braintree.braintreeStrings.duplicate = "duplicate".asInstanceOf[typingsSlinky.braintree.braintreeStrings.duplicate]
   @scala.inline
-  def duplicate: typingsSlinky.braintree.braintreeStrings.duplicate = this.cast("duplicate")
+  def fraud: typingsSlinky.braintree.braintreeStrings.fraud = "fraud".asInstanceOf[typingsSlinky.braintree.braintreeStrings.fraud]
   @scala.inline
-  def fraud: typingsSlinky.braintree.braintreeStrings.fraud = this.cast("fraud")
+  def risk_threshold: typingsSlinky.braintree.braintreeStrings.risk_threshold = "risk_threshold".asInstanceOf[typingsSlinky.braintree.braintreeStrings.risk_threshold]
   @scala.inline
-  def risk_threshold: typingsSlinky.braintree.braintreeStrings.risk_threshold = this.cast("risk_threshold")
+  def three_d_secure: typingsSlinky.braintree.braintreeStrings.three_d_secure = "three_d_secure".asInstanceOf[typingsSlinky.braintree.braintreeStrings.three_d_secure]
   @scala.inline
-  def three_d_secure: typingsSlinky.braintree.braintreeStrings.three_d_secure = this.cast("three_d_secure")
-  @scala.inline
-  def token_issuance: typingsSlinky.braintree.braintreeStrings.token_issuance = this.cast("token_issuance")
+  def token_issuance: typingsSlinky.braintree.braintreeStrings.token_issuance = "token_issuance".asInstanceOf[typingsSlinky.braintree.braintreeStrings.token_issuance]
 }
 

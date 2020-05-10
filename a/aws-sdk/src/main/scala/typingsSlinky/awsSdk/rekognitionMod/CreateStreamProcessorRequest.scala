@@ -38,8 +38,45 @@ object CreateStreamProcessorRequest {
     Settings: StreamProcessorSettings
   ): CreateStreamProcessorRequest = {
     val __obj = js.Dynamic.literal(Input = Input.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Output = Output.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any], Settings = Settings.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateStreamProcessorRequest]
   }
+  @scala.inline
+  implicit class CreateStreamProcessorRequestOps[Self <: CreateStreamProcessorRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInput(value: StreamProcessorInput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: StreamProcessorName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutput(value: StreamProcessorOutput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSettings(value: StreamProcessorSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

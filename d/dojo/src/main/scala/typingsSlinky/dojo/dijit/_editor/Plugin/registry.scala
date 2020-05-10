@@ -9,250 +9,251 @@ import scala.scalajs.js.annotation._
   *
   * 
   */
+@js.native
 trait registry extends js.Object {
   /**
     * 
     * @param args             
     */
-  def LocalImage(args: js.Any): js.Any
+  def LocalImage(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def bold(args: js.Any): js.Any
+  def bold(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def colorTableCell(args: js.Any): Unit
+  def colorTableCell(args: js.Any): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def copy(args: js.Any): js.Any
+  def copy(args: js.Any): js.Any = js.native
   /**
     * 
     */
-  def createLink(): Unit
-  /**
-    * 
-    * @param args             
-    */
-  def cut(args: js.Any): js.Any
+  def createLink(): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def delete(args: js.Any): js.Any
+  def cut(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def deleteTableColumn(args: js.Any): js.Any
+  def delete(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def deleteTableRow(args: js.Any): js.Any
-  /**
-    * 
-    */
-  def foreColor(): Unit
+  def deleteTableColumn(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def fullScreen(args: js.Any): Unit
+  def deleteTableRow(args: js.Any): js.Any = js.native
+  /**
+    * 
+    */
+  def foreColor(): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def fullscreen(args: js.Any): Unit
-  /**
-    * 
-    */
-  def hiliteColor(): Unit
+  def fullScreen(args: js.Any): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def indent(args: js.Any): js.Any
+  def fullscreen(args: js.Any): Unit = js.native
+  /**
+    * 
+    */
+  def hiliteColor(): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def insertHorizontalRule(args: js.Any): js.Any
-  /**
-    * 
-    */
-  def insertImage(): Unit
+  def indent(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def insertOrderedList(args: js.Any): js.Any
+  def insertHorizontalRule(args: js.Any): js.Any = js.native
+  /**
+    * 
+    */
+  def insertImage(): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def insertTable(args: js.Any): Unit
+  def insertOrderedList(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def insertTableColumnAfter(args: js.Any): js.Any
+  def insertTable(args: js.Any): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def insertTableColumnBefore(args: js.Any): js.Any
+  def insertTableColumnAfter(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def insertTableRowAfter(args: js.Any): js.Any
+  def insertTableColumnBefore(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def insertTableRowBefore(args: js.Any): js.Any
+  def insertTableRowAfter(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def insertUnorderedList(args: js.Any): js.Any
+  def insertTableRowBefore(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def italic(args: js.Any): js.Any
+  def insertUnorderedList(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def justifyCenter(args: js.Any): js.Any
+  def italic(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def justifyFull(args: js.Any): js.Any
+  def justifyCenter(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def justifyLeft(args: js.Any): js.Any
+  def justifyFull(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def justifyRight(args: js.Any): js.Any
+  def justifyLeft(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def localImage(args: js.Any): js.Any
+  def justifyRight(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def localimage(args: js.Any): js.Any
+  def localImage(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def modifyTable(args: js.Any): Unit
+  def localimage(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def newPage(args: js.Any): Unit
+  def modifyTable(args: js.Any): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def newpage(args: js.Any): Unit
+  def newPage(args: js.Any): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def outdent(args: js.Any): js.Any
+  def newpage(args: js.Any): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def paste(args: js.Any): js.Any
-  /**
-    * 
-    */
-  def print(): Unit
+  def outdent(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def redo(args: js.Any): js.Any
+  def paste(args: js.Any): js.Any = js.native
+  /**
+    * 
+    */
+  def print(): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def removeFormat(args: js.Any): js.Any
+  def redo(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def selectAll(args: js.Any): js.Any
+  def removeFormat(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def strikethrough(args: js.Any): js.Any
+  def selectAll(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def subscript(args: js.Any): js.Any
+  def strikethrough(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def superscript(args: js.Any): js.Any
-  /**
-    * 
-    */
-  def tabIndent(): Unit
+  def subscript(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def tableContextMenu(args: js.Any): Unit
+  def superscript(args: js.Any): js.Any = js.native
   /**
     * 
     */
-  def toggleDir(): Unit
-  /**
-    * 
-    * @param args             
-    */
-  def underline(args: js.Any): js.Any
+  def tabIndent(): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def undo(args: js.Any): js.Any
+  def tableContextMenu(args: js.Any): Unit = js.native
+  /**
+    * 
+    */
+  def toggleDir(): Unit = js.native
   /**
     * 
     * @param args             
     */
-  def unlink(args: js.Any): js.Any
+  def underline(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def viewSource(args: js.Any): Unit
+  def undo(args: js.Any): js.Any = js.native
   /**
     * 
     * @param args             
     */
-  def viewsource(args: js.Any): Unit
+  def unlink(args: js.Any): js.Any = js.native
+  /**
+    * 
+    * @param args             
+    */
+  def viewSource(args: js.Any): Unit = js.native
+  /**
+    * 
+    * @param args             
+    */
+  def viewsource(args: js.Any): Unit = js.native
 }
 
 object registry {
@@ -310,8 +311,285 @@ object registry {
     viewsource: js.Any => Unit
   ): registry = {
     val __obj = js.Dynamic.literal(LocalImage = js.Any.fromFunction1(LocalImage), bold = js.Any.fromFunction1(bold), colorTableCell = js.Any.fromFunction1(colorTableCell), copy = js.Any.fromFunction1(copy), createLink = js.Any.fromFunction0(createLink), cut = js.Any.fromFunction1(cut), delete = js.Any.fromFunction1(delete), deleteTableColumn = js.Any.fromFunction1(deleteTableColumn), deleteTableRow = js.Any.fromFunction1(deleteTableRow), foreColor = js.Any.fromFunction0(foreColor), fullScreen = js.Any.fromFunction1(fullScreen), fullscreen = js.Any.fromFunction1(fullscreen), hiliteColor = js.Any.fromFunction0(hiliteColor), indent = js.Any.fromFunction1(indent), insertHorizontalRule = js.Any.fromFunction1(insertHorizontalRule), insertImage = js.Any.fromFunction0(insertImage), insertOrderedList = js.Any.fromFunction1(insertOrderedList), insertTable = js.Any.fromFunction1(insertTable), insertTableColumnAfter = js.Any.fromFunction1(insertTableColumnAfter), insertTableColumnBefore = js.Any.fromFunction1(insertTableColumnBefore), insertTableRowAfter = js.Any.fromFunction1(insertTableRowAfter), insertTableRowBefore = js.Any.fromFunction1(insertTableRowBefore), insertUnorderedList = js.Any.fromFunction1(insertUnorderedList), italic = js.Any.fromFunction1(italic), justifyCenter = js.Any.fromFunction1(justifyCenter), justifyFull = js.Any.fromFunction1(justifyFull), justifyLeft = js.Any.fromFunction1(justifyLeft), justifyRight = js.Any.fromFunction1(justifyRight), localImage = js.Any.fromFunction1(localImage), localimage = js.Any.fromFunction1(localimage), modifyTable = js.Any.fromFunction1(modifyTable), newPage = js.Any.fromFunction1(newPage), newpage = js.Any.fromFunction1(newpage), outdent = js.Any.fromFunction1(outdent), paste = js.Any.fromFunction1(paste), print = js.Any.fromFunction0(print), redo = js.Any.fromFunction1(redo), removeFormat = js.Any.fromFunction1(removeFormat), selectAll = js.Any.fromFunction1(selectAll), strikethrough = js.Any.fromFunction1(strikethrough), subscript = js.Any.fromFunction1(subscript), superscript = js.Any.fromFunction1(superscript), tabIndent = js.Any.fromFunction0(tabIndent), tableContextMenu = js.Any.fromFunction1(tableContextMenu), toggleDir = js.Any.fromFunction0(toggleDir), underline = js.Any.fromFunction1(underline), undo = js.Any.fromFunction1(undo), unlink = js.Any.fromFunction1(unlink), viewSource = js.Any.fromFunction1(viewSource), viewsource = js.Any.fromFunction1(viewsource))
-  
     __obj.asInstanceOf[registry]
   }
+  @scala.inline
+  implicit class registryOps[Self <: registry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocalImage(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalImage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBold(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withColorTableCell(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorTableCell")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCopy(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateLink(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLink")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCut(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDeleteTableColumn(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTableColumn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDeleteTableRow(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteTableRow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withForeColor(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreColor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFullScreen(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullScreen")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHiliteColor(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiliteColor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIndent(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsertHorizontalRule(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertHorizontalRule")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsertImage(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertImage")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInsertOrderedList(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertOrderedList")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsertTable(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsertTableColumnAfter(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTableColumnAfter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsertTableColumnBefore(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTableColumnBefore")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsertTableRowAfter(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTableRowAfter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsertTableRowBefore(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertTableRowBefore")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsertUnorderedList(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertUnorderedList")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withItalic(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withJustifyCenter(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyCenter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withJustifyFull(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyFull")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withJustifyLeft(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyLeft")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withJustifyRight(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justifyRight")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withModifyTable(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifyTable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNewPage(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOutdent(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outdent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPaste(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPrint(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("print")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRedo(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveFormat(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSelectAll(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAll")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStrikethrough(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strikethrough")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSubscript(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscript")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSuperscript(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("superscript")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTabIndent(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTableContextMenu(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableContextMenu")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withToggleDir(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleDir")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUnderline(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUndo(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("undo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUnlink(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unlink")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withViewSource(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewSource")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

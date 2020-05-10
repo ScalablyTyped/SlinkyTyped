@@ -7,24 +7,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonInvitationRestrictions extends js.Object {
-  var invitationRestrictions: js.UndefOr[NoteShareRelationshipRestrictions] = js.undefined
-  var invitations: js.UndefOr[js.Array[NoteInvitationShareRelationship]] = js.undefined
-  var memberships: js.UndefOr[js.Array[NoteMemberShareRelationship]] = js.undefined
+  var invitationRestrictions: js.UndefOr[NoteShareRelationshipRestrictions] = js.native
+  var invitations: js.UndefOr[js.Array[NoteInvitationShareRelationship]] = js.native
+  var memberships: js.UndefOr[js.Array[NoteMemberShareRelationship]] = js.native
 }
 
 object AnonInvitationRestrictions {
   @scala.inline
-  def apply(
-    invitationRestrictions: NoteShareRelationshipRestrictions = null,
-    invitations: js.Array[NoteInvitationShareRelationship] = null,
-    memberships: js.Array[NoteMemberShareRelationship] = null
-  ): AnonInvitationRestrictions = {
+  def apply(): AnonInvitationRestrictions = {
     val __obj = js.Dynamic.literal()
-    if (invitationRestrictions != null) __obj.updateDynamic("invitationRestrictions")(invitationRestrictions.asInstanceOf[js.Any])
-    if (invitations != null) __obj.updateDynamic("invitations")(invitations.asInstanceOf[js.Any])
-    if (memberships != null) __obj.updateDynamic("memberships")(memberships.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonInvitationRestrictions]
   }
+  @scala.inline
+  implicit class AnonInvitationRestrictionsOps[Self <: AnonInvitationRestrictions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInvitationRestrictions(value: NoteShareRelationshipRestrictions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationRestrictions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitationRestrictions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitationRestrictions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitations(value: js.Array[NoteInvitationShareRelationship]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemberships(value: js.Array[NoteMemberShareRelationship]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memberships")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemberships: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memberships")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

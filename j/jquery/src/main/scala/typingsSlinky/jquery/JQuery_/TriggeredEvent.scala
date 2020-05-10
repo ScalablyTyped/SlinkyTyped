@@ -1,8 +1,5 @@
 package typingsSlinky.jquery.JQuery_
 
-import org.scalajs.dom.raw.Element
-import org.scalajs.dom.raw.TouchList
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +8,7 @@ import scala.scalajs.js.annotation._
 /**
   * Base type for jQuery events that have been triggered (including events triggered on plain objects).
   */
+@js.native
 trait TriggeredEvent[TDelegateTarget, TData, TCurrentTarget, TTarget] extends Event {
   /**
     * The current DOM element within the event bubbling phase.
@@ -23,7 +21,7 @@ trait TriggeredEvent[TDelegateTarget, TData, TCurrentTarget, TTarget] extends Ev
   });
   ```
     */
-  var currentTarget: TCurrentTarget
+  var currentTarget: TCurrentTarget = js.native
   /**
     * An optional object of data passed to an event method when the current executing handler is bound.
     * @see \`{@link https://api.jquery.com/event.data/ }\`
@@ -66,7 +64,7 @@ trait TriggeredEvent[TDelegateTarget, TData, TCurrentTarget, TTarget] extends Ev
   </html>
   ```
     */
-  var data: TData
+  var data: TData = js.native
   /**
     * The element where the currently-called jQuery event handler was attached.
     * @see \`{@link https://api.jquery.com/event.delegateTarget/ }\`
@@ -78,7 +76,7 @@ trait TriggeredEvent[TDelegateTarget, TData, TCurrentTarget, TTarget] extends Ev
   });
   ```
     */
-  var delegateTarget: TDelegateTarget
+  var delegateTarget: TDelegateTarget = js.native
   /**
     * The namespace specified when the event was triggered.
     * @see \`{@link https://api.jquery.com/event.namespace/ }\`
@@ -110,8 +108,8 @@ trait TriggeredEvent[TDelegateTarget, TData, TCurrentTarget, TTarget] extends Ev
   </html>
   ```
     */
-  var namespace: js.UndefOr[String] = js.undefined
-  var originalEvent: js.UndefOr[typingsSlinky.jquery.Event] = js.undefined
+  var namespace: js.UndefOr[String] = js.native
+  var originalEvent: js.UndefOr[typingsSlinky.jquery.Event] = js.native
   /**
     * The last value returned by an event handler that was triggered by this event, unless the value was undefined.
     * @see \`{@link https://api.jquery.com/event.result/ }\`
@@ -143,7 +141,7 @@ trait TriggeredEvent[TDelegateTarget, TData, TCurrentTarget, TTarget] extends Ev
   </html>
   ```
     */
-  var result: js.UndefOr[js.Any] = js.undefined
+  var result: js.UndefOr[js.Any] = js.native
   /**
     * The DOM element that initiated the event.
     * @see \`{@link https://api.jquery.com/event.target/ }\`
@@ -222,7 +220,7 @@ trait TriggeredEvent[TDelegateTarget, TData, TCurrentTarget, TTarget] extends Ev
   </html>
   ```
     */
-  var target: TTarget
+  var target: TTarget = js.native
 }
 
 object TriggeredEvent {
@@ -239,77 +237,79 @@ object TriggeredEvent {
     stopPropagation: () => Unit,
     target: TTarget,
     timeStamp: Double,
-    `type`: String,
-    altKey: js.UndefOr[Boolean] = js.undefined,
-    bubbles: js.UndefOr[Boolean] = js.undefined,
-    button: Int | Double = null,
-    buttons: Int | Double = null,
-    cancelable: js.UndefOr[Boolean] = js.undefined,
-    changedTouches: TouchList = null,
-    char: String = null,
-    charCode: Int | Double = null,
-    clientX: Int | Double = null,
-    clientY: Int | Double = null,
-    ctrlKey: js.UndefOr[Boolean] = js.undefined,
-    detail: Int | Double = null,
-    eventPhase: Int | Double = null,
-    key: String = null,
-    keyCode: Int | Double = null,
-    metaKey: js.UndefOr[Boolean] = js.undefined,
-    namespace: String = null,
-    offsetX: Int | Double = null,
-    offsetY: Int | Double = null,
-    originalEvent: typingsSlinky.jquery.Event = null,
-    pageX: Int | Double = null,
-    pageY: Int | Double = null,
-    pointerId: Int | Double = null,
-    pointerType: String = null,
-    result: js.Any = null,
-    screenX: Int | Double = null,
-    screenY: Int | Double = null,
-    shiftKey: js.UndefOr[Boolean] = js.undefined,
-    targetTouches: TouchList = null,
-    toElement: Element = null,
-    touches: TouchList = null,
-    view: Window_ = null,
-    which: Int | Double = null
+    `type`: String
   ): TriggeredEvent[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
     val __obj = js.Dynamic.literal(currentTarget = currentTarget.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], delegateTarget = delegateTarget.asInstanceOf[js.Any], isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), isImmediatePropagationStopped = js.Any.fromFunction0(isImmediatePropagationStopped), isPropagationStopped = js.Any.fromFunction0(isPropagationStopped), preventDefault = js.Any.fromFunction0(preventDefault), stopImmediatePropagation = js.Any.fromFunction0(stopImmediatePropagation), stopPropagation = js.Any.fromFunction0(stopPropagation), target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(altKey)) __obj.updateDynamic("altKey")(altKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.asInstanceOf[js.Any])
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
-    if (changedTouches != null) __obj.updateDynamic("changedTouches")(changedTouches.asInstanceOf[js.Any])
-    if (char != null) __obj.updateDynamic("char")(char.asInstanceOf[js.Any])
-    if (charCode != null) __obj.updateDynamic("charCode")(charCode.asInstanceOf[js.Any])
-    if (clientX != null) __obj.updateDynamic("clientX")(clientX.asInstanceOf[js.Any])
-    if (clientY != null) __obj.updateDynamic("clientY")(clientY.asInstanceOf[js.Any])
-    if (!js.isUndefined(ctrlKey)) __obj.updateDynamic("ctrlKey")(ctrlKey.asInstanceOf[js.Any])
-    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
-    if (eventPhase != null) __obj.updateDynamic("eventPhase")(eventPhase.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (keyCode != null) __obj.updateDynamic("keyCode")(keyCode.asInstanceOf[js.Any])
-    if (!js.isUndefined(metaKey)) __obj.updateDynamic("metaKey")(metaKey.asInstanceOf[js.Any])
-    if (namespace != null) __obj.updateDynamic("namespace")(namespace.asInstanceOf[js.Any])
-    if (offsetX != null) __obj.updateDynamic("offsetX")(offsetX.asInstanceOf[js.Any])
-    if (offsetY != null) __obj.updateDynamic("offsetY")(offsetY.asInstanceOf[js.Any])
-    if (originalEvent != null) __obj.updateDynamic("originalEvent")(originalEvent.asInstanceOf[js.Any])
-    if (pageX != null) __obj.updateDynamic("pageX")(pageX.asInstanceOf[js.Any])
-    if (pageY != null) __obj.updateDynamic("pageY")(pageY.asInstanceOf[js.Any])
-    if (pointerId != null) __obj.updateDynamic("pointerId")(pointerId.asInstanceOf[js.Any])
-    if (pointerType != null) __obj.updateDynamic("pointerType")(pointerType.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
-    if (screenX != null) __obj.updateDynamic("screenX")(screenX.asInstanceOf[js.Any])
-    if (screenY != null) __obj.updateDynamic("screenY")(screenY.asInstanceOf[js.Any])
-    if (!js.isUndefined(shiftKey)) __obj.updateDynamic("shiftKey")(shiftKey.asInstanceOf[js.Any])
-    if (targetTouches != null) __obj.updateDynamic("targetTouches")(targetTouches.asInstanceOf[js.Any])
-    if (toElement != null) __obj.updateDynamic("toElement")(toElement.asInstanceOf[js.Any])
-    if (touches != null) __obj.updateDynamic("touches")(touches.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
-    if (which != null) __obj.updateDynamic("which")(which.asInstanceOf[js.Any])
     __obj.asInstanceOf[TriggeredEvent[TDelegateTarget, TData, TCurrentTarget, TTarget]]
   }
+  @scala.inline
+  implicit class TriggeredEventOps[Self[tdelegatetarget, tdata, tcurrenttarget, ttarget] <: TriggeredEvent[tdelegatetarget, tdata, tcurrenttarget, ttarget], TDelegateTarget, TData, TCurrentTarget, TTarget] (val x: Self[TDelegateTarget, TData, TCurrentTarget, TTarget]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TDelegateTarget, TData, TCurrentTarget, TTarget]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[TDelegateTarget, TData, TCurrentTarget, TTarget]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TDelegateTarget, TData, TCurrentTarget, TTarget]) with Other]
+    @scala.inline
+    def withCurrentTarget(value: TCurrentTarget): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: TData): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelegateTarget(value: TDelegateTarget): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegateTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: TTarget): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: String): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespace: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalEvent(value: typingsSlinky.jquery.Event): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalEvent: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResult(value: js.Any): Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResult: Self[TDelegateTarget, TData, TCurrentTarget, TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

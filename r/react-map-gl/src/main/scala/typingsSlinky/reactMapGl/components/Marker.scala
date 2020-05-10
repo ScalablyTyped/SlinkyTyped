@@ -1,50 +1,51 @@
 package typingsSlinky.reactMapGl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMapGl.mod.DragEvent
 import typingsSlinky.reactMapGl.mod.MarkerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Marker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMapGl.mod.Marker] {
+object Marker {
   @JSImport("react-map-gl", "Marker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, draggable */
-  def apply(
-    latitude: Double,
-    longitude: Double,
-    captureClick: js.UndefOr[Boolean] = js.undefined,
-    captureDoubleClick: js.UndefOr[Boolean] = js.undefined,
-    captureDrag: js.UndefOr[Boolean] = js.undefined,
-    captureScroll: js.UndefOr[Boolean] = js.undefined,
-    offsetLeft: Int | Double = null,
-    offsetTop: Int | Double = null,
-    onDrag: /* event */ DragEvent => Unit = null,
-    onDragEnd: /* event */ DragEvent => Unit = null,
-    onDragStart: /* event */ DragEvent => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.Marker] = {
-    val __obj = js.Dynamic.literal(latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureClick)) __obj.updateDynamic("captureClick")(captureClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDoubleClick)) __obj.updateDynamic("captureDoubleClick")(captureDoubleClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDrag)) __obj.updateDynamic("captureDrag")(captureDrag.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureScroll)) __obj.updateDynamic("captureScroll")(captureScroll.asInstanceOf[js.Any])
-    if (offsetLeft != null) __obj.updateDynamic("offsetLeft")(offsetLeft.asInstanceOf[js.Any])
-    if (offsetTop != null) __obj.updateDynamic("offsetTop")(offsetTop.asInstanceOf[js.Any])
-    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction1(onDrag))
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.Marker] {
+    @scala.inline
+    def captureClick(value: Boolean): this.type = set("captureClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDoubleClick(value: Boolean): this.type = set("captureDoubleClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDrag(value: Boolean): this.type = set("captureDrag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureScroll(value: Boolean): this.type = set("captureScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetLeft(value: Double): this.type = set("offsetLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetTop(value: Double): this.type = set("offsetTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDrag(value: /* event */ DragEvent => Unit): this.type = set("onDrag", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragEnd(value: /* event */ DragEvent => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragStart(value: /* event */ DragEvent => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
   }
-  type Props = MarkerProps
+  
+  def withProps(p: MarkerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(latitude: Double, longitude: Double): Builder = {
+    val __props = js.Dynamic.literal(latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MarkerProps]))
+  }
 }
 

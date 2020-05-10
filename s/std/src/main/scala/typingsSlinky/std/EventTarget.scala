@@ -37,7 +37,7 @@ trait EventTarget extends js.Object {
   def dispatchEvent(event: Event_): scala.Boolean = js.native
   def removeEventListener(`type`: java.lang.String): Unit = js.native
   def removeEventListener(`type`: java.lang.String, callback: Null, options: scala.Boolean): Unit = js.native
-  def removeEventListener(`type`: java.lang.String, callback: Null, options: EventListenerOptions): Unit = js.native
+  def removeEventListener(`type`: java.lang.String, callback: Null, options: org.scalajs.dom.raw.EventListenerOptions): Unit = js.native
   /**
     * Removes the event listener in target's event listener list with the same type, callback, and options.
     */
@@ -46,11 +46,12 @@ trait EventTarget extends js.Object {
   def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("EventTarget")
 @js.native
-object EventTarget extends Instantiable0[EventTarget]
+object EventTarget
+  extends Instantiable0[org.scalajs.dom.raw.EventTarget]
 

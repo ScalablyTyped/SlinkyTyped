@@ -10,8 +10,6 @@ class AnticipateOvershootInterpolator () extends Interpolator {
   def this(tension: Double) = this()
   def this(tension: Double, extraTension: Double) = this()
   var mTension: js.Any = js.native
-  /* CompleteClass */
-  override def getInterpolation(input: Double): Double = js.native
 }
 
 /* static members */

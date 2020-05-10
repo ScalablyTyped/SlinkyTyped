@@ -1,12 +1,12 @@
 package typingsSlinky.heremaps.H.ui
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Node
 import typingsSlinky.heremaps.H.geo.IPoint
 import typingsSlinky.heremaps.H.geo.Point
 import typingsSlinky.heremaps.H.ui.InfoBubble.Options
 import typingsSlinky.heremaps.H.ui.InfoBubble.State
 import typingsSlinky.heremaps.H.ui.base.Element
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

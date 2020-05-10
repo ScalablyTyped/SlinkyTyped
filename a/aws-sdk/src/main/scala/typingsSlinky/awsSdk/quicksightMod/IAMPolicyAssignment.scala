@@ -34,22 +34,89 @@ trait IAMPolicyAssignment extends js.Object {
 
 object IAMPolicyAssignment {
   @scala.inline
-  def apply(
-    AssignmentId: String = null,
-    AssignmentName: IAMPolicyAssignmentName = null,
-    AssignmentStatus: AssignmentStatus = null,
-    AwsAccountId: AwsAccountId = null,
-    Identities: IdentityMap = null,
-    PolicyArn: Arn = null
-  ): IAMPolicyAssignment = {
+  def apply(): IAMPolicyAssignment = {
     val __obj = js.Dynamic.literal()
-    if (AssignmentId != null) __obj.updateDynamic("AssignmentId")(AssignmentId.asInstanceOf[js.Any])
-    if (AssignmentName != null) __obj.updateDynamic("AssignmentName")(AssignmentName.asInstanceOf[js.Any])
-    if (AssignmentStatus != null) __obj.updateDynamic("AssignmentStatus")(AssignmentStatus.asInstanceOf[js.Any])
-    if (AwsAccountId != null) __obj.updateDynamic("AwsAccountId")(AwsAccountId.asInstanceOf[js.Any])
-    if (Identities != null) __obj.updateDynamic("Identities")(Identities.asInstanceOf[js.Any])
-    if (PolicyArn != null) __obj.updateDynamic("PolicyArn")(PolicyArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAMPolicyAssignment]
   }
+  @scala.inline
+  implicit class IAMPolicyAssignmentOps[Self <: IAMPolicyAssignment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignmentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssignmentName(value: IAMPolicyAssignmentName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssignmentStatus(value: AssignmentStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignmentStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsAccountId(value: AwsAccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentities(value: IdentityMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Identities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Identities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

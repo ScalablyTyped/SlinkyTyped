@@ -13,12 +13,10 @@ trait DistanceModelType extends js.Object
 
 object DistanceModelType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def exponential: typingsSlinky.std.stdStrings.exponential = "exponential".asInstanceOf[typingsSlinky.std.stdStrings.exponential]
   @scala.inline
-  def exponential: typingsSlinky.std.stdStrings.exponential = this.cast("exponential")
+  def inverse: typingsSlinky.std.stdStrings.inverse = "inverse".asInstanceOf[typingsSlinky.std.stdStrings.inverse]
   @scala.inline
-  def inverse: typingsSlinky.std.stdStrings.inverse = this.cast("inverse")
-  @scala.inline
-  def linear: typingsSlinky.std.stdStrings.linear = this.cast("linear")
+  def linear: typingsSlinky.std.stdStrings.linear = "linear".asInstanceOf[typingsSlinky.std.stdStrings.linear]
 }
 

@@ -19,14 +19,10 @@ trait NormalizedOptions extends RequestInit {
   @JSName("method")
   var method_NormalizedOptions: js.UndefOr[String] = js.native
   @JSName("onDownloadProgress")
-  var onDownloadProgress_Original: js.Function2[
-    /* progress */ DownloadProgress, 
-    /* chunk */ scala.scalajs.js.typedarray.Uint8Array, 
-    Unit
-  ] = js.native
+  var onDownloadProgress_Original: js.Function2[/* progress */ DownloadProgress, /* chunk */ js.typedarray.Uint8Array, Unit] = js.native
   var prefixUrl: js.UndefOr[URL | String] = js.native
   // Extended from custom `KyOptions`, but ensured to be set (not optional).
   var retry: js.UndefOr[RetryOptions | Double] = js.native
-  def onDownloadProgress(progress: DownloadProgress, chunk: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
+  def onDownloadProgress(progress: DownloadProgress, chunk: js.typedarray.Uint8Array): Unit = js.native
 }
 

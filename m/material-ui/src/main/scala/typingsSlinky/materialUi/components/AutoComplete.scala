@@ -1,15 +1,14 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.AnonText
 import typingsSlinky.materialUi.MaterialUI.AutoCompleteProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
@@ -22,120 +21,152 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AutoComplete
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object AutoComplete {
   @JSImport("material-ui/AutoComplete", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoComplete, autoFocus, className, disabled, id, name, open, placeholder, required, rows, style, title, type */
-  def apply(
-    dataSource: js.Array[js.Any],
-    anchorOrigin: origin = null,
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animation: ReactComponentClass[PopoverAnimationProps] = null,
-    dataSourceConfig: AnonText = null,
-    defaultValue: String | Double = null,
-    disableFocusRipple: js.UndefOr[Boolean] = js.undefined,
-    errorStyle: CSSProperties = null,
-    errorText: TagMod[Any] = null,
-    filter: (/* searchText */ String, /* key */ String, js.Any) => Boolean = null,
-    floatingLabelFixed: js.UndefOr[Boolean] = js.undefined,
-    floatingLabelFocusStyle: CSSProperties = null,
-    floatingLabelShrinkStyle: CSSProperties = null,
-    floatingLabelStyle: CSSProperties = null,
-    floatingLabelText: TagMod[Any] = null,
-    fullWidth: js.UndefOr[Boolean] = js.undefined,
-    hintStyle: CSSProperties = null,
-    hintText: TagMod[Any] = null,
-    inputStyle: CSSProperties = null,
-    listStyle: CSSProperties = null,
-    max: Int | Double = null,
-    maxSearchResults: Int | Double = null,
-    maxlength: String = null,
-    menuCloseDelay: Int | Double = null,
-    menuProps: js.Any = null,
-    menuStyle: CSSProperties = null,
-    min: Int | Double = null,
-    minlength: String = null,
-    multiLine: js.UndefOr[Boolean] = js.undefined,
-    onBlur: SyntheticFocusEvent[js.Object] => Unit = null,
-    onChange: (SyntheticEvent[EventTarget with js.Object, Event_], /* newValue */ String) => Unit = null,
-    onFocus: SyntheticFocusEvent[js.Object] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onKeyPress: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onNewRequest: (js.Any, /* index */ Double) => Unit = null,
-    onUpdateInput: (/* searchText */ String, /* dataSource */ js.Array[js.Any]) => Unit = null,
-    openOnFocus: js.UndefOr[Boolean] = js.undefined,
-    popoverProps: PopoverProps = null,
-    rowsMax: Int | Double = null,
-    searchText: String = null,
-    step: Int | Double = null,
-    targetOrigin: origin = null,
-    textFieldStyle: CSSProperties = null,
-    textareaStyle: CSSProperties = null,
-    underlineDisabledStyle: CSSProperties = null,
-    underlineFocusStyle: CSSProperties = null,
-    underlineShow: js.UndefOr[Boolean] = js.undefined,
-    underlineStyle: CSSProperties = null,
-    value: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any])
-    if (anchorOrigin != null) __obj.updateDynamic("anchorOrigin")(anchorOrigin.asInstanceOf[js.Any])
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (dataSourceConfig != null) __obj.updateDynamic("dataSourceConfig")(dataSourceConfig.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableFocusRipple)) __obj.updateDynamic("disableFocusRipple")(disableFocusRipple.asInstanceOf[js.Any])
-    if (errorStyle != null) __obj.updateDynamic("errorStyle")(errorStyle.asInstanceOf[js.Any])
-    if (errorText != null) __obj.updateDynamic("errorText")(errorText.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction3(filter))
-    if (!js.isUndefined(floatingLabelFixed)) __obj.updateDynamic("floatingLabelFixed")(floatingLabelFixed.asInstanceOf[js.Any])
-    if (floatingLabelFocusStyle != null) __obj.updateDynamic("floatingLabelFocusStyle")(floatingLabelFocusStyle.asInstanceOf[js.Any])
-    if (floatingLabelShrinkStyle != null) __obj.updateDynamic("floatingLabelShrinkStyle")(floatingLabelShrinkStyle.asInstanceOf[js.Any])
-    if (floatingLabelStyle != null) __obj.updateDynamic("floatingLabelStyle")(floatingLabelStyle.asInstanceOf[js.Any])
-    if (floatingLabelText != null) __obj.updateDynamic("floatingLabelText")(floatingLabelText.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullWidth)) __obj.updateDynamic("fullWidth")(fullWidth.asInstanceOf[js.Any])
-    if (hintStyle != null) __obj.updateDynamic("hintStyle")(hintStyle.asInstanceOf[js.Any])
-    if (hintText != null) __obj.updateDynamic("hintText")(hintText.asInstanceOf[js.Any])
-    if (inputStyle != null) __obj.updateDynamic("inputStyle")(inputStyle.asInstanceOf[js.Any])
-    if (listStyle != null) __obj.updateDynamic("listStyle")(listStyle.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxSearchResults != null) __obj.updateDynamic("maxSearchResults")(maxSearchResults.asInstanceOf[js.Any])
-    if (maxlength != null) __obj.updateDynamic("maxlength")(maxlength.asInstanceOf[js.Any])
-    if (menuCloseDelay != null) __obj.updateDynamic("menuCloseDelay")(menuCloseDelay.asInstanceOf[js.Any])
-    if (menuProps != null) __obj.updateDynamic("menuProps")(menuProps.asInstanceOf[js.Any])
-    if (menuStyle != null) __obj.updateDynamic("menuStyle")(menuStyle.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minlength != null) __obj.updateDynamic("minlength")(minlength.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiLine)) __obj.updateDynamic("multiLine")(multiLine.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (onNewRequest != null) __obj.updateDynamic("onNewRequest")(js.Any.fromFunction2(onNewRequest))
-    if (onUpdateInput != null) __obj.updateDynamic("onUpdateInput")(js.Any.fromFunction2(onUpdateInput))
-    if (!js.isUndefined(openOnFocus)) __obj.updateDynamic("openOnFocus")(openOnFocus.asInstanceOf[js.Any])
-    if (popoverProps != null) __obj.updateDynamic("popoverProps")(popoverProps.asInstanceOf[js.Any])
-    if (rowsMax != null) __obj.updateDynamic("rowsMax")(rowsMax.asInstanceOf[js.Any])
-    if (searchText != null) __obj.updateDynamic("searchText")(searchText.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (targetOrigin != null) __obj.updateDynamic("targetOrigin")(targetOrigin.asInstanceOf[js.Any])
-    if (textFieldStyle != null) __obj.updateDynamic("textFieldStyle")(textFieldStyle.asInstanceOf[js.Any])
-    if (textareaStyle != null) __obj.updateDynamic("textareaStyle")(textareaStyle.asInstanceOf[js.Any])
-    if (underlineDisabledStyle != null) __obj.updateDynamic("underlineDisabledStyle")(underlineDisabledStyle.asInstanceOf[js.Any])
-    if (underlineFocusStyle != null) __obj.updateDynamic("underlineFocusStyle")(underlineFocusStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(underlineShow)) __obj.updateDynamic("underlineShow")(underlineShow.asInstanceOf[js.Any])
-    if (underlineStyle != null) __obj.updateDynamic("underlineStyle")(underlineStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def anchorOrigin(value: origin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animation(value: ReactComponentClass[PopoverAnimationProps]): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataSourceConfig(value: AnonText): this.type = set("dataSourceConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String | Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableFocusRipple(value: Boolean): this.type = set("disableFocusRipple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorStyle(value: CSSProperties): this.type = set("errorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorText(value: TagMod[Any]): this.type = set("errorText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filter(value: (/* searchText */ String, /* key */ String, js.Any) => Boolean): this.type = set("filter", js.Any.fromFunction3(value))
+    @scala.inline
+    def floatingLabelFixed(value: Boolean): this.type = set("floatingLabelFixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelFocusStyle(value: CSSProperties): this.type = set("floatingLabelFocusStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelShrinkStyle(value: CSSProperties): this.type = set("floatingLabelShrinkStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelStyle(value: CSSProperties): this.type = set("floatingLabelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelText(value: TagMod[Any]): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hintStyle(value: CSSProperties): this.type = set("hintStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hintText(value: TagMod[Any]): this.type = set("hintText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputStyle(value: CSSProperties): this.type = set("inputStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listStyle(value: CSSProperties): this.type = set("listStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxSearchResults(value: Double): this.type = set("maxSearchResults", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxlength(value: String): this.type = set("maxlength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuCloseDelay(value: Double): this.type = set("menuCloseDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuProps(value: js.Any): this.type = set("menuProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuStyle(value: CSSProperties): this.type = set("menuStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minlength(value: String): this.type = set("minlength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiLine(value: Boolean): this.type = set("multiLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: (SyntheticEvent[EventTarget with js.Object, Event_], /* newValue */ String) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onFocus(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyPress(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyUp(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onNewRequest(value: (js.Any, /* index */ Double) => Unit): this.type = set("onNewRequest", js.Any.fromFunction2(value))
+    @scala.inline
+    def onUpdateInput(value: (/* searchText */ String, /* dataSource */ js.Array[js.Any]) => Unit): this.type = set("onUpdateInput", js.Any.fromFunction2(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def openOnFocus(value: Boolean): this.type = set("openOnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popoverProps(value: PopoverProps): this.type = set("popoverProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowsMax(value: Double): this.type = set("rowsMax", value.asInstanceOf[js.Any])
+    @scala.inline
+    def searchText(value: String): this.type = set("searchText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetOrigin(value: origin): this.type = set("targetOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textFieldStyle(value: CSSProperties): this.type = set("textFieldStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textareaStyle(value: CSSProperties): this.type = set("textareaStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineDisabledStyle(value: CSSProperties): this.type = set("underlineDisabledStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineFocusStyle(value: CSSProperties): this.type = set("underlineFocusStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineShow(value: Boolean): this.type = set("underlineShow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineStyle(value: CSSProperties): this.type = set("underlineStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String | Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = AutoCompleteProps[js.Any]
+  
+  def withProps(p: AutoCompleteProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(dataSource: js.Array[js.Any]): Builder = {
+    val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AutoCompleteProps[js.Any]]))
+  }
 }
 

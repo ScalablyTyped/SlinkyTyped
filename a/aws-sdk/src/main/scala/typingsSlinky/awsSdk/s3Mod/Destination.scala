@@ -38,23 +38,95 @@ trait Destination extends js.Object {
 
 object Destination {
   @scala.inline
-  def apply(
-    Bucket: BucketName,
-    AccessControlTranslation: AccessControlTranslation = null,
-    Account: AccountId = null,
-    EncryptionConfiguration: EncryptionConfiguration = null,
-    Metrics: Metrics = null,
-    ReplicationTime: ReplicationTime = null,
-    StorageClass: StorageClass = null
-  ): Destination = {
+  def apply(Bucket: BucketName): Destination = {
     val __obj = js.Dynamic.literal(Bucket = Bucket.asInstanceOf[js.Any])
-    if (AccessControlTranslation != null) __obj.updateDynamic("AccessControlTranslation")(AccessControlTranslation.asInstanceOf[js.Any])
-    if (Account != null) __obj.updateDynamic("Account")(Account.asInstanceOf[js.Any])
-    if (EncryptionConfiguration != null) __obj.updateDynamic("EncryptionConfiguration")(EncryptionConfiguration.asInstanceOf[js.Any])
-    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
-    if (ReplicationTime != null) __obj.updateDynamic("ReplicationTime")(ReplicationTime.asInstanceOf[js.Any])
-    if (StorageClass != null) __obj.updateDynamic("StorageClass")(StorageClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[Destination]
   }
+  @scala.inline
+  implicit class DestinationOps[Self <: Destination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessControlTranslation(value: AccessControlTranslation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlTranslation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessControlTranslation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlTranslation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccount(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Account")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Account")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionConfiguration(value: EncryptionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetrics(value: Metrics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTime(value: ReplicationTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageClass(value: StorageClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

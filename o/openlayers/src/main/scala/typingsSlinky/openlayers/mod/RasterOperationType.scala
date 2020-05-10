@@ -12,10 +12,8 @@ trait RasterOperationType extends js.Object
 
 object RasterOperationType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def image: typingsSlinky.openlayers.openlayersStrings.image = "image".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.image]
   @scala.inline
-  def image: typingsSlinky.openlayers.openlayersStrings.image = this.cast("image")
-  @scala.inline
-  def pixel: typingsSlinky.openlayers.openlayersStrings.pixel = this.cast("pixel")
+  def pixel: typingsSlinky.openlayers.openlayersStrings.pixel = "pixel".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.pixel]
 }
 

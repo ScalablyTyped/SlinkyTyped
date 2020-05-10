@@ -4,78 +4,296 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WechatProfileDetails extends js.Object {
-  var email: js.UndefOr[String] = js.undefined
-  var firstName: js.UndefOr[String] = js.undefined
-  var homeAddressCity: js.UndefOr[String] = js.undefined
-  var homeAddressCountry: js.UndefOr[String] = js.undefined
-  var homeAddressPostalCode: js.UndefOr[String] = js.undefined
-  var homeAddressState: js.UndefOr[String] = js.undefined
-  var homeAddressStreet: js.UndefOr[String] = js.undefined
-  var homeFaxNumber: js.UndefOr[String] = js.undefined
-  var homePhoneNumber: js.UndefOr[String] = js.undefined
-  var lastName: js.UndefOr[String] = js.undefined
-  var middleName: js.UndefOr[String] = js.undefined
-  var mobilePhoneNumber: js.UndefOr[String] = js.undefined
-  var nickName: js.UndefOr[String] = js.undefined
-  var photoFilePath: js.UndefOr[String] = js.undefined
-  var remark: js.UndefOr[String] = js.undefined
-  var url: js.UndefOr[String] = js.undefined
-  var workAddressCity: js.UndefOr[String] = js.undefined
-  var workAddressCountry: js.UndefOr[String] = js.undefined
-  var workAddressPostalCode: js.UndefOr[String] = js.undefined
-  var workAddressState: js.UndefOr[String] = js.undefined
-  var workAddressStreet: js.UndefOr[String] = js.undefined
+  var email: js.UndefOr[String] = js.native
+  var firstName: js.UndefOr[String] = js.native
+  var homeAddressCity: js.UndefOr[String] = js.native
+  var homeAddressCountry: js.UndefOr[String] = js.native
+  var homeAddressPostalCode: js.UndefOr[String] = js.native
+  var homeAddressState: js.UndefOr[String] = js.native
+  var homeAddressStreet: js.UndefOr[String] = js.native
+  var homeFaxNumber: js.UndefOr[String] = js.native
+  var homePhoneNumber: js.UndefOr[String] = js.native
+  var lastName: js.UndefOr[String] = js.native
+  var middleName: js.UndefOr[String] = js.native
+  var mobilePhoneNumber: js.UndefOr[String] = js.native
+  var nickName: js.UndefOr[String] = js.native
+  var photoFilePath: js.UndefOr[String] = js.native
+  var remark: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.native
+  var workAddressCity: js.UndefOr[String] = js.native
+  var workAddressCountry: js.UndefOr[String] = js.native
+  var workAddressPostalCode: js.UndefOr[String] = js.native
+  var workAddressState: js.UndefOr[String] = js.native
+  var workAddressStreet: js.UndefOr[String] = js.native
 }
 
 object WechatProfileDetails {
   @scala.inline
-  def apply(
-    email: String = null,
-    firstName: String = null,
-    homeAddressCity: String = null,
-    homeAddressCountry: String = null,
-    homeAddressPostalCode: String = null,
-    homeAddressState: String = null,
-    homeAddressStreet: String = null,
-    homeFaxNumber: String = null,
-    homePhoneNumber: String = null,
-    lastName: String = null,
-    middleName: String = null,
-    mobilePhoneNumber: String = null,
-    nickName: String = null,
-    photoFilePath: String = null,
-    remark: String = null,
-    url: String = null,
-    workAddressCity: String = null,
-    workAddressCountry: String = null,
-    workAddressPostalCode: String = null,
-    workAddressState: String = null,
-    workAddressStreet: String = null
-  ): WechatProfileDetails = {
+  def apply(): WechatProfileDetails = {
     val __obj = js.Dynamic.literal()
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (firstName != null) __obj.updateDynamic("firstName")(firstName.asInstanceOf[js.Any])
-    if (homeAddressCity != null) __obj.updateDynamic("homeAddressCity")(homeAddressCity.asInstanceOf[js.Any])
-    if (homeAddressCountry != null) __obj.updateDynamic("homeAddressCountry")(homeAddressCountry.asInstanceOf[js.Any])
-    if (homeAddressPostalCode != null) __obj.updateDynamic("homeAddressPostalCode")(homeAddressPostalCode.asInstanceOf[js.Any])
-    if (homeAddressState != null) __obj.updateDynamic("homeAddressState")(homeAddressState.asInstanceOf[js.Any])
-    if (homeAddressStreet != null) __obj.updateDynamic("homeAddressStreet")(homeAddressStreet.asInstanceOf[js.Any])
-    if (homeFaxNumber != null) __obj.updateDynamic("homeFaxNumber")(homeFaxNumber.asInstanceOf[js.Any])
-    if (homePhoneNumber != null) __obj.updateDynamic("homePhoneNumber")(homePhoneNumber.asInstanceOf[js.Any])
-    if (lastName != null) __obj.updateDynamic("lastName")(lastName.asInstanceOf[js.Any])
-    if (middleName != null) __obj.updateDynamic("middleName")(middleName.asInstanceOf[js.Any])
-    if (mobilePhoneNumber != null) __obj.updateDynamic("mobilePhoneNumber")(mobilePhoneNumber.asInstanceOf[js.Any])
-    if (nickName != null) __obj.updateDynamic("nickName")(nickName.asInstanceOf[js.Any])
-    if (photoFilePath != null) __obj.updateDynamic("photoFilePath")(photoFilePath.asInstanceOf[js.Any])
-    if (remark != null) __obj.updateDynamic("remark")(remark.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (workAddressCity != null) __obj.updateDynamic("workAddressCity")(workAddressCity.asInstanceOf[js.Any])
-    if (workAddressCountry != null) __obj.updateDynamic("workAddressCountry")(workAddressCountry.asInstanceOf[js.Any])
-    if (workAddressPostalCode != null) __obj.updateDynamic("workAddressPostalCode")(workAddressPostalCode.asInstanceOf[js.Any])
-    if (workAddressState != null) __obj.updateDynamic("workAddressState")(workAddressState.asInstanceOf[js.Any])
-    if (workAddressStreet != null) __obj.updateDynamic("workAddressStreet")(workAddressStreet.asInstanceOf[js.Any])
     __obj.asInstanceOf[WechatProfileDetails]
   }
+  @scala.inline
+  implicit class WechatProfileDetailsOps[Self <: WechatProfileDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeAddressCity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeAddressCity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeAddressCity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeAddressCity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeAddressCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeAddressCountry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeAddressCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeAddressCountry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeAddressPostalCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeAddressPostalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeAddressPostalCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeAddressPostalCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeAddressState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeAddressState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeAddressState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeAddressState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeAddressStreet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeAddressStreet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeAddressStreet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeAddressStreet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomeFaxNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeFaxNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomeFaxNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeFaxNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomePhoneNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homePhoneNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomePhoneNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homePhoneNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMiddleName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMiddleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middleName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMobilePhoneNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobilePhoneNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMobilePhoneNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mobilePhoneNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNickName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nickName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNickName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nickName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhotoFilePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photoFilePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhotoFilePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photoFilePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemark(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemark: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remark")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkAddressCity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workAddressCity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkAddressCity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workAddressCity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkAddressCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workAddressCountry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkAddressCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workAddressCountry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkAddressPostalCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workAddressPostalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkAddressPostalCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workAddressPostalCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkAddressState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workAddressState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkAddressState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workAddressState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkAddressStreet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workAddressStreet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkAddressStreet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workAddressStreet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

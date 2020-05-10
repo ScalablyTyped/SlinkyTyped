@@ -15,7 +15,7 @@ class Message protected () extends js.Object {
     */
   def this(payload: String) = this()
   def this(payload: TypedArray) = this()
-  def this(payload: scala.scalajs.js.typedarray.ArrayBuffer) = this()
+  def this(payload: js.typedarray.ArrayBuffer) = this()
   /**
     * The name of the destination to which the message is to be sent
     * (for messages about to be sent) or the name of the destination from which the message has been received.
@@ -31,7 +31,7 @@ class Message protected () extends js.Object {
     * The payload.
     * @return if payload is a string. Return the original otherwise.
     */
-  val payloadBytes: scala.scalajs.js.typedarray.ArrayBuffer | TypedArray = js.native
+  val payloadBytes: js.typedarray.ArrayBuffer | TypedArray = js.native
   /**
     *  The payload as a string if the payload consists of valid UTF-8 characters.
     *  @throw {Error} if the payload is not valid UTF-8

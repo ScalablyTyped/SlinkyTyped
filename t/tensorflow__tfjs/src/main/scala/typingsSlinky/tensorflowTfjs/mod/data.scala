@@ -3,8 +3,6 @@ package typingsSlinky.tensorflowTfjs.mod
 import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.std.IteratorResult
 import typingsSlinky.std.RequestInfo
-import typingsSlinky.tensorflowTfjs.tensorflowTfjsNumbers.`10000`
-import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.`1Dot5Dot2`
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.TensorContainer
 import typingsSlinky.tensorflowTfjsData.datasetMod.DatasetContainer
 import typingsSlinky.tensorflowTfjsData.datasourceMod.DataSource
@@ -108,7 +106,7 @@ object data extends js.Object {
   }
   
   @JSName("version_data")
-  val versionData: `1Dot5Dot2` = js.native
+  val versionData: /* "1.7.0" */ String = js.native
   def array[T /* <: TensorContainer */](items: js.Array[T]): typingsSlinky.tensorflowTfjsData.datasetMod.Dataset[T] = js.native
   def csv(source: RequestInfo): typingsSlinky.tensorflowTfjsData.csvDatasetMod.CSVDataset = js.native
   def csv(source: RequestInfo, csvConfig: CSVConfig): typingsSlinky.tensorflowTfjsData.csvDatasetMod.CSVDataset = js.native
@@ -123,7 +121,7 @@ object data extends js.Object {
   /* static members */
   @js.native
   object Dataset extends js.Object {
-    val MAX_BUFFER_SIZE: `10000` = js.native
+    val MAX_BUFFER_SIZE: /* 10000 */ Double = js.native
   }
   
 }

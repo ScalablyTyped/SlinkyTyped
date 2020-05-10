@@ -135,44 +135,221 @@ trait SchemaReportRequest extends js.Object {
 
 object SchemaReportRequest {
   @scala.inline
-  def apply(
-    cohortGroup: SchemaCohortGroup = null,
-    dateRanges: js.Array[SchemaDateRange] = null,
-    dimensionFilterClauses: js.Array[SchemaDimensionFilterClause] = null,
-    dimensions: js.Array[SchemaDimension] = null,
-    filtersExpression: String = null,
-    hideTotals: js.UndefOr[Boolean] = js.undefined,
-    hideValueRanges: js.UndefOr[Boolean] = js.undefined,
-    includeEmptyRows: js.UndefOr[Boolean] = js.undefined,
-    metricFilterClauses: js.Array[SchemaMetricFilterClause] = null,
-    metrics: js.Array[SchemaMetric] = null,
-    orderBys: js.Array[SchemaOrderBy] = null,
-    pageSize: Int | Double = null,
-    pageToken: String = null,
-    pivots: js.Array[SchemaPivot] = null,
-    samplingLevel: String = null,
-    segments: js.Array[SchemaSegment] = null,
-    viewId: String = null
-  ): SchemaReportRequest = {
+  def apply(): SchemaReportRequest = {
     val __obj = js.Dynamic.literal()
-    if (cohortGroup != null) __obj.updateDynamic("cohortGroup")(cohortGroup.asInstanceOf[js.Any])
-    if (dateRanges != null) __obj.updateDynamic("dateRanges")(dateRanges.asInstanceOf[js.Any])
-    if (dimensionFilterClauses != null) __obj.updateDynamic("dimensionFilterClauses")(dimensionFilterClauses.asInstanceOf[js.Any])
-    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
-    if (filtersExpression != null) __obj.updateDynamic("filtersExpression")(filtersExpression.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideTotals)) __obj.updateDynamic("hideTotals")(hideTotals.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideValueRanges)) __obj.updateDynamic("hideValueRanges")(hideValueRanges.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeEmptyRows)) __obj.updateDynamic("includeEmptyRows")(includeEmptyRows.asInstanceOf[js.Any])
-    if (metricFilterClauses != null) __obj.updateDynamic("metricFilterClauses")(metricFilterClauses.asInstanceOf[js.Any])
-    if (metrics != null) __obj.updateDynamic("metrics")(metrics.asInstanceOf[js.Any])
-    if (orderBys != null) __obj.updateDynamic("orderBys")(orderBys.asInstanceOf[js.Any])
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
-    if (pivots != null) __obj.updateDynamic("pivots")(pivots.asInstanceOf[js.Any])
-    if (samplingLevel != null) __obj.updateDynamic("samplingLevel")(samplingLevel.asInstanceOf[js.Any])
-    if (segments != null) __obj.updateDynamic("segments")(segments.asInstanceOf[js.Any])
-    if (viewId != null) __obj.updateDynamic("viewId")(viewId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReportRequest]
   }
+  @scala.inline
+  implicit class SchemaReportRequestOps[Self <: SchemaReportRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCohortGroup(value: SchemaCohortGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cohortGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCohortGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cohortGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateRanges(value: js.Array[SchemaDateRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensionFilterClauses(value: js.Array[SchemaDimensionFilterClause]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilterClauses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensionFilterClauses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionFilterClauses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensions(value: js.Array[SchemaDimension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiltersExpression(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filtersExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiltersExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filtersExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideTotals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTotals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideTotals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTotals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideValueRanges(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideValueRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideValueRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideValueRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeEmptyRows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeEmptyRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeEmptyRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeEmptyRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricFilterClauses(value: js.Array[SchemaMetricFilterClause]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricFilterClauses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricFilterClauses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricFilterClauses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetrics(value: js.Array[SchemaMetric]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderBys(value: js.Array[SchemaOrderBy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderBys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderBys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPivots(value: js.Array[SchemaPivot]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPivots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSamplingLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSamplingLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegments(value: js.Array[SchemaSegment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

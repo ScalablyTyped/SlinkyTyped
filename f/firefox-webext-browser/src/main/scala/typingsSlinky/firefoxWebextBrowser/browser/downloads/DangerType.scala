@@ -32,22 +32,20 @@ trait DangerType extends js.Object
 
 object DangerType {
   @scala.inline
-  def accepted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.accepted = this.cast("accepted")
+  def accepted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.accepted = "accepted".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.accepted]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def content: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.content = "content".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.content]
   @scala.inline
-  def content: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.content = this.cast("content")
+  def file: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.file = "file".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.file]
   @scala.inline
-  def file: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.file = this.cast("file")
+  def host: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.host = "host".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.host]
   @scala.inline
-  def host: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.host = this.cast("host")
+  def safe: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.safe = "safe".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.safe]
   @scala.inline
-  def safe: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.safe = this.cast("safe")
+  def uncommon: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.uncommon = "uncommon".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.uncommon]
   @scala.inline
-  def uncommon: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.uncommon = this.cast("uncommon")
+  def unwanted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unwanted = "unwanted".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unwanted]
   @scala.inline
-  def unwanted: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unwanted = this.cast("unwanted")
-  @scala.inline
-  def url: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url = this.cast("url")
+  def url: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url = "url".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url]
 }
 

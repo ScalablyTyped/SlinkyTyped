@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClientFileReadOptions extends js.Object {
-  var arrayBuffer: js.UndefOr[Boolean] = js.undefined
-  var binary: js.UndefOr[Boolean] = js.undefined
-  var blob: js.UndefOr[Boolean] = js.undefined
-  var buffer: js.UndefOr[Boolean] = js.undefined
-  var httpCache: js.UndefOr[Boolean] = js.undefined
-  var length: js.UndefOr[Double] = js.undefined
-  var rev: js.UndefOr[String] = js.undefined
-  var start: js.UndefOr[Double] = js.undefined
-  var versionTag: js.UndefOr[String] = js.undefined
+  var arrayBuffer: js.UndefOr[Boolean] = js.native
+  var binary: js.UndefOr[Boolean] = js.native
+  var blob: js.UndefOr[Boolean] = js.native
+  var buffer: js.UndefOr[Boolean] = js.native
+  var httpCache: js.UndefOr[Boolean] = js.native
+  var length: js.UndefOr[Double] = js.native
+  var rev: js.UndefOr[String] = js.native
+  var start: js.UndefOr[Double] = js.native
+  var versionTag: js.UndefOr[String] = js.native
 }
 
 object ClientFileReadOptions {
   @scala.inline
-  def apply(
-    arrayBuffer: js.UndefOr[Boolean] = js.undefined,
-    binary: js.UndefOr[Boolean] = js.undefined,
-    blob: js.UndefOr[Boolean] = js.undefined,
-    buffer: js.UndefOr[Boolean] = js.undefined,
-    httpCache: js.UndefOr[Boolean] = js.undefined,
-    length: Int | Double = null,
-    rev: String = null,
-    start: Int | Double = null,
-    versionTag: String = null
-  ): ClientFileReadOptions = {
+  def apply(): ClientFileReadOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(arrayBuffer)) __obj.updateDynamic("arrayBuffer")(arrayBuffer.asInstanceOf[js.Any])
-    if (!js.isUndefined(binary)) __obj.updateDynamic("binary")(binary.asInstanceOf[js.Any])
-    if (!js.isUndefined(blob)) __obj.updateDynamic("blob")(blob.asInstanceOf[js.Any])
-    if (!js.isUndefined(buffer)) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (!js.isUndefined(httpCache)) __obj.updateDynamic("httpCache")(httpCache.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (rev != null) __obj.updateDynamic("rev")(rev.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (versionTag != null) __obj.updateDynamic("versionTag")(versionTag.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientFileReadOptions]
   }
+  @scala.inline
+  implicit class ClientFileReadOptionsOps[Self <: ClientFileReadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayBuffer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayBuffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBinary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBinary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlob(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuffer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpCache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRev(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rev")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRev: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rev")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionTag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProjectParamsAndroid extends js.Object {
-  var assetsPath: js.UndefOr[String] = js.undefined
-  var buildGradlePath: js.UndefOr[String] = js.undefined
-  var mainFilePath: js.UndefOr[String] = js.undefined
-  var manifestPath: js.UndefOr[String] = js.undefined
-  var packageFolder: js.UndefOr[String] = js.undefined
-  var packageName: js.UndefOr[String] = js.undefined
-  var settingsGradlePath: js.UndefOr[String] = js.undefined
-  var sourceDir: js.UndefOr[String] = js.undefined
-  var stringsPath: js.UndefOr[String] = js.undefined
+  var assetsPath: js.UndefOr[String] = js.native
+  var buildGradlePath: js.UndefOr[String] = js.native
+  var mainFilePath: js.UndefOr[String] = js.native
+  var manifestPath: js.UndefOr[String] = js.native
+  var packageFolder: js.UndefOr[String] = js.native
+  var packageName: js.UndefOr[String] = js.native
+  var settingsGradlePath: js.UndefOr[String] = js.native
+  var sourceDir: js.UndefOr[String] = js.native
+  var stringsPath: js.UndefOr[String] = js.native
 }
 
 object ProjectParamsAndroid {
   @scala.inline
-  def apply(
-    assetsPath: String = null,
-    buildGradlePath: String = null,
-    mainFilePath: String = null,
-    manifestPath: String = null,
-    packageFolder: String = null,
-    packageName: String = null,
-    settingsGradlePath: String = null,
-    sourceDir: String = null,
-    stringsPath: String = null
-  ): ProjectParamsAndroid = {
+  def apply(): ProjectParamsAndroid = {
     val __obj = js.Dynamic.literal()
-    if (assetsPath != null) __obj.updateDynamic("assetsPath")(assetsPath.asInstanceOf[js.Any])
-    if (buildGradlePath != null) __obj.updateDynamic("buildGradlePath")(buildGradlePath.asInstanceOf[js.Any])
-    if (mainFilePath != null) __obj.updateDynamic("mainFilePath")(mainFilePath.asInstanceOf[js.Any])
-    if (manifestPath != null) __obj.updateDynamic("manifestPath")(manifestPath.asInstanceOf[js.Any])
-    if (packageFolder != null) __obj.updateDynamic("packageFolder")(packageFolder.asInstanceOf[js.Any])
-    if (packageName != null) __obj.updateDynamic("packageName")(packageName.asInstanceOf[js.Any])
-    if (settingsGradlePath != null) __obj.updateDynamic("settingsGradlePath")(settingsGradlePath.asInstanceOf[js.Any])
-    if (sourceDir != null) __obj.updateDynamic("sourceDir")(sourceDir.asInstanceOf[js.Any])
-    if (stringsPath != null) __obj.updateDynamic("stringsPath")(stringsPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectParamsAndroid]
   }
+  @scala.inline
+  implicit class ProjectParamsAndroidOps[Self <: ProjectParamsAndroid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssetsPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetsPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssetsPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetsPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuildGradlePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildGradlePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildGradlePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildGradlePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMainFilePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainFilePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMainFilePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainFilePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManifestPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManifestPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifestPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackageFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageFolder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSettingsGradlePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsGradlePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSettingsGradlePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsGradlePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringsPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringsPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringsPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringsPath")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

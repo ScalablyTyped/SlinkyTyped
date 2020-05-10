@@ -1,41 +1,35 @@
 package typingsSlinky.glReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.glReact.mod.SurfaceProps
 import typingsSlinky.glReact.mod.Visitor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Surface
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.glReact.mod.Surface[js.Any]] {
+object Surface {
   @JSImport("gl-react", "Surface")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T](
-    onLoad: () => Unit = null,
-    onLoadError: /* e */ js.Error => Unit = null,
-    preload: js.Array[_] = null,
-    style: js.Any = null,
-    visitor: Visitor = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.glReact.mod.Surface[js.Any]] = {
-    val __obj = js.Dynamic.literal()
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction0(onLoad))
-    if (onLoadError != null) __obj.updateDynamic("onLoadError")(js.Any.fromFunction1(onLoadError))
-    if (preload != null) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (visitor != null) __obj.updateDynamic("visitor")(visitor.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.glReact.mod.Surface[js.Any]]]
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.glReact.mod.Surface[js.Any]] {
+    @scala.inline
+    def onLoad(value: () => Unit): this.type = set("onLoad", js.Any.fromFunction0(value))
+    @scala.inline
+    def onLoadError(value: /* e */ js.Error => Unit): this.type = set("onLoadError", js.Any.fromFunction1(value))
+    @scala.inline
+    def preload(value: js.Array[_]): this.type = set("preload", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visitor(value: Visitor): this.type = set("visitor", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.glReact.mod.Surface[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.glReact.mod.Surface[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SurfaceProps
+  
+  def withProps[T](p: SurfaceProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T](companion: Surface.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

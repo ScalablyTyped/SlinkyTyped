@@ -25,16 +25,53 @@ trait SchemaTarget extends js.Object {
 
 object SchemaTarget {
   @scala.inline
-  def apply(
-    driveItem: SchemaDriveItem = null,
-    fileComment: SchemaFileComment = null,
-    teamDrive: SchemaTeamDrive = null
-  ): SchemaTarget = {
+  def apply(): SchemaTarget = {
     val __obj = js.Dynamic.literal()
-    if (driveItem != null) __obj.updateDynamic("driveItem")(driveItem.asInstanceOf[js.Any])
-    if (fileComment != null) __obj.updateDynamic("fileComment")(fileComment.asInstanceOf[js.Any])
-    if (teamDrive != null) __obj.updateDynamic("teamDrive")(teamDrive.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTarget]
   }
+  @scala.inline
+  implicit class SchemaTargetOps[Self <: SchemaTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDriveItem(value: SchemaDriveItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriveItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileComment(value: SchemaFileComment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileComment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileComment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeamDrive(value: SchemaTeamDrive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDrive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeamDrive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDrive")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,10 +18,35 @@ trait RejectCertificateTransferRequest extends js.Object {
 
 object RejectCertificateTransferRequest {
   @scala.inline
-  def apply(certificateId: CertificateId, rejectReason: Message = null): RejectCertificateTransferRequest = {
+  def apply(certificateId: CertificateId): RejectCertificateTransferRequest = {
     val __obj = js.Dynamic.literal(certificateId = certificateId.asInstanceOf[js.Any])
-    if (rejectReason != null) __obj.updateDynamic("rejectReason")(rejectReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[RejectCertificateTransferRequest]
   }
+  @scala.inline
+  implicit class RejectCertificateTransferRequestOps[Self <: RejectCertificateTransferRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateId(value: CertificateId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRejectReason(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRejectReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectReason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

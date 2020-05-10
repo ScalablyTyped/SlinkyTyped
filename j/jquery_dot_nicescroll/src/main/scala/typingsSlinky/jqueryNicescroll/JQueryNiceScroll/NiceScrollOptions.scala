@@ -20,177 +20,725 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NiceScrollOptions extends js.Object {
-  var autohidemode: js.UndefOr[leave | scroll | cursor | hidden | Boolean] = js.undefined
-  var background: js.UndefOr[String] = js.undefined
-  var bouncescroll: js.UndefOr[Boolean] = js.undefined
-  var boxzoom: js.UndefOr[Boolean] = js.undefined
-  var cursorborder: js.UndefOr[String] = js.undefined
-  var cursorborderradius: js.UndefOr[String] = js.undefined
-  var cursorcolor: js.UndefOr[String] = js.undefined
-  var cursordragontouch: js.UndefOr[Boolean] = js.undefined
-  var cursordragspeed: js.UndefOr[Double] = js.undefined
-  var cursorfixedheight: js.UndefOr[Double] = js.undefined
-  var cursorminheight: js.UndefOr[Double] = js.undefined
-  var cursoropacitymax: js.UndefOr[Double] = js.undefined
-  var cursoropacitymin: js.UndefOr[Double] = js.undefined
-  var cursorwidth: js.UndefOr[String] = js.undefined
-  var dblclickzoom: js.UndefOr[Boolean] = js.undefined
-  var directionlockdeadzone: js.UndefOr[Double] = js.undefined
-  var disablemutationobserver: js.UndefOr[Boolean] = js.undefined
-  var disableoutline: js.UndefOr[Boolean] = js.undefined
-  var emulatetouch: js.UndefOr[Boolean] = js.undefined
-  var enablekeyboard: js.UndefOr[Boolean] = js.undefined
-  var enablemouselockapi: js.UndefOr[Boolean] = js.undefined
-  var enablemousewheel: js.UndefOr[Boolean] = js.undefined
-  var enableobserver: js.UndefOr[Boolean] = js.undefined
-  var enablescrollonselection: js.UndefOr[Boolean] = js.undefined
-  var enabletranslate3d: js.UndefOr[Boolean] = js.undefined
-  var gesturezoom: js.UndefOr[Boolean] = js.undefined
-  var grabcursorenabled: js.UndefOr[Boolean] = js.undefined
-  var hidecursordelay: js.UndefOr[Double] = js.undefined
-  var horizrailenabled: js.UndefOr[Boolean] = js.undefined
-  var hwacceleration: js.UndefOr[Boolean] = js.undefined
-  var iframeautoresize: js.UndefOr[Boolean] = js.undefined
-  var mousescrollstep: js.UndefOr[Double] = js.undefined
-  var nativeparentscrolling: js.UndefOr[Boolean] = js.undefined
-  var oneaxismousemode: js.UndefOr[auto | Boolean] = js.undefined
-  var overflowx: js.UndefOr[auto | hidden | inherit | initial | overlay | scroll | unset | visible] = js.undefined
-  var overflowy: js.UndefOr[auto | hidden | inherit | initial | overlay | scroll | unset | visible] = js.undefined
-  var preservenativescrolling: js.UndefOr[Boolean] = js.undefined
-  var preventmultitouchscrolling: js.UndefOr[Boolean] = js.undefined
-  var railalign: js.UndefOr[right | left | top | bottom] = js.undefined
-  var railhoffset: js.UndefOr[Boolean | AnonLeft] = js.undefined
-  var railoffset: js.UndefOr[Boolean | AnonLeft] = js.undefined
-  var railpadding: js.UndefOr[AnonBottom] = js.undefined
-  var railvalign: js.UndefOr[right | left | top | bottom] = js.undefined
-  var rtlmode: js.UndefOr[auto | Boolean] = js.undefined
-  var scriptpath: js.UndefOr[String] = js.undefined
-  var scrollCLass: js.UndefOr[String] = js.undefined
-  var scrollbarid: js.UndefOr[String] = js.undefined
-  var scrollspeed: js.UndefOr[Double] = js.undefined
-  var sensitiverail: js.UndefOr[Boolean] = js.undefined
-  var smoothscroll: js.UndefOr[Boolean] = js.undefined
-  var spacebarenabled: js.UndefOr[Boolean] = js.undefined
-  var touchbehavior: js.UndefOr[Boolean] = js.undefined
-  var usetransition: js.UndefOr[Boolean] = js.undefined
-  var zindex: js.UndefOr[auto | Double] = js.undefined
+  var autohidemode: js.UndefOr[leave | scroll | cursor | hidden | Boolean] = js.native
+  var background: js.UndefOr[String] = js.native
+  var bouncescroll: js.UndefOr[Boolean] = js.native
+  var boxzoom: js.UndefOr[Boolean] = js.native
+  var cursorborder: js.UndefOr[String] = js.native
+  var cursorborderradius: js.UndefOr[String] = js.native
+  var cursorcolor: js.UndefOr[String] = js.native
+  var cursordragontouch: js.UndefOr[Boolean] = js.native
+  var cursordragspeed: js.UndefOr[Double] = js.native
+  var cursorfixedheight: js.UndefOr[Double] = js.native
+  var cursorminheight: js.UndefOr[Double] = js.native
+  var cursoropacitymax: js.UndefOr[Double] = js.native
+  var cursoropacitymin: js.UndefOr[Double] = js.native
+  var cursorwidth: js.UndefOr[String] = js.native
+  var dblclickzoom: js.UndefOr[Boolean] = js.native
+  var directionlockdeadzone: js.UndefOr[Double] = js.native
+  var disablemutationobserver: js.UndefOr[Boolean] = js.native
+  var disableoutline: js.UndefOr[Boolean] = js.native
+  var emulatetouch: js.UndefOr[Boolean] = js.native
+  var enablekeyboard: js.UndefOr[Boolean] = js.native
+  var enablemouselockapi: js.UndefOr[Boolean] = js.native
+  var enablemousewheel: js.UndefOr[Boolean] = js.native
+  var enableobserver: js.UndefOr[Boolean] = js.native
+  var enablescrollonselection: js.UndefOr[Boolean] = js.native
+  var enabletranslate3d: js.UndefOr[Boolean] = js.native
+  var gesturezoom: js.UndefOr[Boolean] = js.native
+  var grabcursorenabled: js.UndefOr[Boolean] = js.native
+  var hidecursordelay: js.UndefOr[Double] = js.native
+  var horizrailenabled: js.UndefOr[Boolean] = js.native
+  var hwacceleration: js.UndefOr[Boolean] = js.native
+  var iframeautoresize: js.UndefOr[Boolean] = js.native
+  var mousescrollstep: js.UndefOr[Double] = js.native
+  var nativeparentscrolling: js.UndefOr[Boolean] = js.native
+  var oneaxismousemode: js.UndefOr[auto | Boolean] = js.native
+  var overflowx: js.UndefOr[auto | hidden | inherit | initial | overlay | scroll | unset | visible] = js.native
+  var overflowy: js.UndefOr[auto | hidden | inherit | initial | overlay | scroll | unset | visible] = js.native
+  var preservenativescrolling: js.UndefOr[Boolean] = js.native
+  var preventmultitouchscrolling: js.UndefOr[Boolean] = js.native
+  var railalign: js.UndefOr[right | left | top | bottom] = js.native
+  var railhoffset: js.UndefOr[Boolean | AnonLeft] = js.native
+  var railoffset: js.UndefOr[Boolean | AnonLeft] = js.native
+  var railpadding: js.UndefOr[AnonBottom] = js.native
+  var railvalign: js.UndefOr[right | left | top | bottom] = js.native
+  var rtlmode: js.UndefOr[auto | Boolean] = js.native
+  var scriptpath: js.UndefOr[String] = js.native
+  var scrollCLass: js.UndefOr[String] = js.native
+  var scrollbarid: js.UndefOr[String] = js.native
+  var scrollspeed: js.UndefOr[Double] = js.native
+  var sensitiverail: js.UndefOr[Boolean] = js.native
+  var smoothscroll: js.UndefOr[Boolean] = js.native
+  var spacebarenabled: js.UndefOr[Boolean] = js.native
+  var touchbehavior: js.UndefOr[Boolean] = js.native
+  var usetransition: js.UndefOr[Boolean] = js.native
+  var zindex: js.UndefOr[auto | Double] = js.native
 }
 
 object NiceScrollOptions {
   @scala.inline
-  def apply(
-    autohidemode: leave | scroll | cursor | hidden | Boolean = null,
-    background: String = null,
-    bouncescroll: js.UndefOr[Boolean] = js.undefined,
-    boxzoom: js.UndefOr[Boolean] = js.undefined,
-    cursorborder: String = null,
-    cursorborderradius: String = null,
-    cursorcolor: String = null,
-    cursordragontouch: js.UndefOr[Boolean] = js.undefined,
-    cursordragspeed: Int | Double = null,
-    cursorfixedheight: Int | Double = null,
-    cursorminheight: Int | Double = null,
-    cursoropacitymax: Int | Double = null,
-    cursoropacitymin: Int | Double = null,
-    cursorwidth: String = null,
-    dblclickzoom: js.UndefOr[Boolean] = js.undefined,
-    directionlockdeadzone: Int | Double = null,
-    disablemutationobserver: js.UndefOr[Boolean] = js.undefined,
-    disableoutline: js.UndefOr[Boolean] = js.undefined,
-    emulatetouch: js.UndefOr[Boolean] = js.undefined,
-    enablekeyboard: js.UndefOr[Boolean] = js.undefined,
-    enablemouselockapi: js.UndefOr[Boolean] = js.undefined,
-    enablemousewheel: js.UndefOr[Boolean] = js.undefined,
-    enableobserver: js.UndefOr[Boolean] = js.undefined,
-    enablescrollonselection: js.UndefOr[Boolean] = js.undefined,
-    enabletranslate3d: js.UndefOr[Boolean] = js.undefined,
-    gesturezoom: js.UndefOr[Boolean] = js.undefined,
-    grabcursorenabled: js.UndefOr[Boolean] = js.undefined,
-    hidecursordelay: Int | Double = null,
-    horizrailenabled: js.UndefOr[Boolean] = js.undefined,
-    hwacceleration: js.UndefOr[Boolean] = js.undefined,
-    iframeautoresize: js.UndefOr[Boolean] = js.undefined,
-    mousescrollstep: Int | Double = null,
-    nativeparentscrolling: js.UndefOr[Boolean] = js.undefined,
-    oneaxismousemode: auto | Boolean = null,
-    overflowx: auto | hidden | inherit | initial | overlay | scroll | unset | visible = null,
-    overflowy: auto | hidden | inherit | initial | overlay | scroll | unset | visible = null,
-    preservenativescrolling: js.UndefOr[Boolean] = js.undefined,
-    preventmultitouchscrolling: js.UndefOr[Boolean] = js.undefined,
-    railalign: right | left | top | bottom = null,
-    railhoffset: Boolean | AnonLeft = null,
-    railoffset: Boolean | AnonLeft = null,
-    railpadding: AnonBottom = null,
-    railvalign: right | left | top | bottom = null,
-    rtlmode: auto | Boolean = null,
-    scriptpath: String = null,
-    scrollCLass: String = null,
-    scrollbarid: String = null,
-    scrollspeed: Int | Double = null,
-    sensitiverail: js.UndefOr[Boolean] = js.undefined,
-    smoothscroll: js.UndefOr[Boolean] = js.undefined,
-    spacebarenabled: js.UndefOr[Boolean] = js.undefined,
-    touchbehavior: js.UndefOr[Boolean] = js.undefined,
-    usetransition: js.UndefOr[Boolean] = js.undefined,
-    zindex: auto | Double = null
-  ): NiceScrollOptions = {
+  def apply(): NiceScrollOptions = {
     val __obj = js.Dynamic.literal()
-    if (autohidemode != null) __obj.updateDynamic("autohidemode")(autohidemode.asInstanceOf[js.Any])
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (!js.isUndefined(bouncescroll)) __obj.updateDynamic("bouncescroll")(bouncescroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(boxzoom)) __obj.updateDynamic("boxzoom")(boxzoom.asInstanceOf[js.Any])
-    if (cursorborder != null) __obj.updateDynamic("cursorborder")(cursorborder.asInstanceOf[js.Any])
-    if (cursorborderradius != null) __obj.updateDynamic("cursorborderradius")(cursorborderradius.asInstanceOf[js.Any])
-    if (cursorcolor != null) __obj.updateDynamic("cursorcolor")(cursorcolor.asInstanceOf[js.Any])
-    if (!js.isUndefined(cursordragontouch)) __obj.updateDynamic("cursordragontouch")(cursordragontouch.asInstanceOf[js.Any])
-    if (cursordragspeed != null) __obj.updateDynamic("cursordragspeed")(cursordragspeed.asInstanceOf[js.Any])
-    if (cursorfixedheight != null) __obj.updateDynamic("cursorfixedheight")(cursorfixedheight.asInstanceOf[js.Any])
-    if (cursorminheight != null) __obj.updateDynamic("cursorminheight")(cursorminheight.asInstanceOf[js.Any])
-    if (cursoropacitymax != null) __obj.updateDynamic("cursoropacitymax")(cursoropacitymax.asInstanceOf[js.Any])
-    if (cursoropacitymin != null) __obj.updateDynamic("cursoropacitymin")(cursoropacitymin.asInstanceOf[js.Any])
-    if (cursorwidth != null) __obj.updateDynamic("cursorwidth")(cursorwidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(dblclickzoom)) __obj.updateDynamic("dblclickzoom")(dblclickzoom.asInstanceOf[js.Any])
-    if (directionlockdeadzone != null) __obj.updateDynamic("directionlockdeadzone")(directionlockdeadzone.asInstanceOf[js.Any])
-    if (!js.isUndefined(disablemutationobserver)) __obj.updateDynamic("disablemutationobserver")(disablemutationobserver.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableoutline)) __obj.updateDynamic("disableoutline")(disableoutline.asInstanceOf[js.Any])
-    if (!js.isUndefined(emulatetouch)) __obj.updateDynamic("emulatetouch")(emulatetouch.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablekeyboard)) __obj.updateDynamic("enablekeyboard")(enablekeyboard.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablemouselockapi)) __obj.updateDynamic("enablemouselockapi")(enablemouselockapi.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablemousewheel)) __obj.updateDynamic("enablemousewheel")(enablemousewheel.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableobserver)) __obj.updateDynamic("enableobserver")(enableobserver.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablescrollonselection)) __obj.updateDynamic("enablescrollonselection")(enablescrollonselection.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabletranslate3d)) __obj.updateDynamic("enabletranslate3d")(enabletranslate3d.asInstanceOf[js.Any])
-    if (!js.isUndefined(gesturezoom)) __obj.updateDynamic("gesturezoom")(gesturezoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(grabcursorenabled)) __obj.updateDynamic("grabcursorenabled")(grabcursorenabled.asInstanceOf[js.Any])
-    if (hidecursordelay != null) __obj.updateDynamic("hidecursordelay")(hidecursordelay.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizrailenabled)) __obj.updateDynamic("horizrailenabled")(horizrailenabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(hwacceleration)) __obj.updateDynamic("hwacceleration")(hwacceleration.asInstanceOf[js.Any])
-    if (!js.isUndefined(iframeautoresize)) __obj.updateDynamic("iframeautoresize")(iframeautoresize.asInstanceOf[js.Any])
-    if (mousescrollstep != null) __obj.updateDynamic("mousescrollstep")(mousescrollstep.asInstanceOf[js.Any])
-    if (!js.isUndefined(nativeparentscrolling)) __obj.updateDynamic("nativeparentscrolling")(nativeparentscrolling.asInstanceOf[js.Any])
-    if (oneaxismousemode != null) __obj.updateDynamic("oneaxismousemode")(oneaxismousemode.asInstanceOf[js.Any])
-    if (overflowx != null) __obj.updateDynamic("overflowx")(overflowx.asInstanceOf[js.Any])
-    if (overflowy != null) __obj.updateDynamic("overflowy")(overflowy.asInstanceOf[js.Any])
-    if (!js.isUndefined(preservenativescrolling)) __obj.updateDynamic("preservenativescrolling")(preservenativescrolling.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventmultitouchscrolling)) __obj.updateDynamic("preventmultitouchscrolling")(preventmultitouchscrolling.asInstanceOf[js.Any])
-    if (railalign != null) __obj.updateDynamic("railalign")(railalign.asInstanceOf[js.Any])
-    if (railhoffset != null) __obj.updateDynamic("railhoffset")(railhoffset.asInstanceOf[js.Any])
-    if (railoffset != null) __obj.updateDynamic("railoffset")(railoffset.asInstanceOf[js.Any])
-    if (railpadding != null) __obj.updateDynamic("railpadding")(railpadding.asInstanceOf[js.Any])
-    if (railvalign != null) __obj.updateDynamic("railvalign")(railvalign.asInstanceOf[js.Any])
-    if (rtlmode != null) __obj.updateDynamic("rtlmode")(rtlmode.asInstanceOf[js.Any])
-    if (scriptpath != null) __obj.updateDynamic("scriptpath")(scriptpath.asInstanceOf[js.Any])
-    if (scrollCLass != null) __obj.updateDynamic("scrollCLass")(scrollCLass.asInstanceOf[js.Any])
-    if (scrollbarid != null) __obj.updateDynamic("scrollbarid")(scrollbarid.asInstanceOf[js.Any])
-    if (scrollspeed != null) __obj.updateDynamic("scrollspeed")(scrollspeed.asInstanceOf[js.Any])
-    if (!js.isUndefined(sensitiverail)) __obj.updateDynamic("sensitiverail")(sensitiverail.asInstanceOf[js.Any])
-    if (!js.isUndefined(smoothscroll)) __obj.updateDynamic("smoothscroll")(smoothscroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(spacebarenabled)) __obj.updateDynamic("spacebarenabled")(spacebarenabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(touchbehavior)) __obj.updateDynamic("touchbehavior")(touchbehavior.asInstanceOf[js.Any])
-    if (!js.isUndefined(usetransition)) __obj.updateDynamic("usetransition")(usetransition.asInstanceOf[js.Any])
-    if (zindex != null) __obj.updateDynamic("zindex")(zindex.asInstanceOf[js.Any])
     __obj.asInstanceOf[NiceScrollOptions]
   }
+  @scala.inline
+  implicit class NiceScrollOptionsOps[Self <: NiceScrollOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutohidemode(value: leave | scroll | cursor | hidden | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autohidemode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutohidemode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autohidemode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBouncescroll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bouncescroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBouncescroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bouncescroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoxzoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxzoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoxzoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxzoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursorborder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorborder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursorborder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorborder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursorborderradius(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorborderradius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursorborderradius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorborderradius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursorcolor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorcolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursorcolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorcolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursordragontouch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursordragontouch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursordragontouch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursordragontouch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursordragspeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursordragspeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursordragspeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursordragspeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursorfixedheight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorfixedheight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursorfixedheight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorfixedheight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursorminheight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorminheight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursorminheight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorminheight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursoropacitymax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursoropacitymax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursoropacitymax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursoropacitymax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursoropacitymin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursoropacitymin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursoropacitymin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursoropacitymin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursorwidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorwidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursorwidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursorwidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDblclickzoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dblclickzoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDblclickzoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dblclickzoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectionlockdeadzone(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directionlockdeadzone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectionlockdeadzone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directionlockdeadzone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisablemutationobserver(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disablemutationobserver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisablemutationobserver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disablemutationobserver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableoutline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableoutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableoutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableoutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmulatetouch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emulatetouch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmulatetouch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emulatetouch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnablekeyboard(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablekeyboard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablekeyboard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablekeyboard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnablemouselockapi(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablemouselockapi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablemouselockapi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablemouselockapi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnablemousewheel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablemousewheel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablemousewheel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablemousewheel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableobserver(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableobserver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableobserver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableobserver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnablescrollonselection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablescrollonselection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablescrollonselection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablescrollonselection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabletranslate3d(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabletranslate3d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabletranslate3d: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabletranslate3d")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGesturezoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gesturezoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGesturezoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gesturezoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrabcursorenabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grabcursorenabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrabcursorenabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grabcursorenabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidecursordelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidecursordelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidecursordelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidecursordelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizrailenabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizrailenabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizrailenabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizrailenabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHwacceleration(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hwacceleration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHwacceleration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hwacceleration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIframeautoresize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframeautoresize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIframeautoresize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframeautoresize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMousescrollstep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mousescrollstep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMousescrollstep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mousescrollstep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNativeparentscrolling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeparentscrolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNativeparentscrolling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeparentscrolling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOneaxismousemode(value: auto | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oneaxismousemode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOneaxismousemode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oneaxismousemode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowx(value: auto | hidden | inherit | initial | overlay | scroll | unset | visible): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflowy(value: auto | hidden | inherit | initial | overlay | scroll | unset | visible): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflowy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflowy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreservenativescrolling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preservenativescrolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreservenativescrolling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preservenativescrolling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreventmultitouchscrolling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventmultitouchscrolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreventmultitouchscrolling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventmultitouchscrolling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRailalign(value: right | left | top | bottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railalign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRailalign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railalign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRailhoffset(value: Boolean | AnonLeft): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railhoffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRailhoffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railhoffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRailoffset(value: Boolean | AnonLeft): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railoffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRailoffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railoffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRailpadding(value: AnonBottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railpadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRailpadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railpadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRailvalign(value: right | left | top | bottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railvalign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRailvalign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railvalign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRtlmode(value: auto | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtlmode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRtlmode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtlmode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScriptpath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptpath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScriptpath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scriptpath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollCLass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollCLass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollCLass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollCLass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollbarid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbarid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollbarid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbarid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollspeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollspeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollspeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollspeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSensitiverail(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitiverail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSensitiverail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sensitiverail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmoothscroll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smoothscroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmoothscroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smoothscroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpacebarenabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacebarenabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpacebarenabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacebarenabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTouchbehavior(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchbehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTouchbehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchbehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsetransition(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usetransition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsetransition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usetransition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZindex(value: auto | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zindex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZindex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zindex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

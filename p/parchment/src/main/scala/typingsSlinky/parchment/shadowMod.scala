@@ -3,7 +3,6 @@ package typingsSlinky.parchment
 import org.scalajs.dom.raw.Node
 import typingsSlinky.parchment.blotMod.Blot
 import typingsSlinky.parchment.blotMod.Parent
-import typingsSlinky.parchment.linkedNodeMod.LinkedNode
 import typingsSlinky.parchment.registryMod.Scope
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,12 +23,6 @@ object shadowMod extends js.Object {
   @js.native
   class default protected () extends ShadowBlot {
     def this(domNode: Node) = this()
-    /* CompleteClass */
-    override var next: LinkedNode | Null = js.native
-    /* CompleteClass */
-    override var prev: LinkedNode | Null = js.native
-    /* CompleteClass */
-    override def length(): Double = js.native
   }
   
   /* static members */

@@ -6,12 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Devices.Enumeration.EnclosureLocation")
 @js.native
-class EnclosureLocation () extends IEnclosureLocation {
-  /* CompleteClass */
-  override var inDock: Boolean = js.native
-  /* CompleteClass */
-  override var inLid: Boolean = js.native
-  /* CompleteClass */
-  override var panel: Panel = js.native
-}
+class EnclosureLocation () extends IEnclosureLocation
 

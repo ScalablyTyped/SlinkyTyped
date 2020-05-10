@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FileTransferError extends js.Object {
-  var code: Double
-  var http_status: Double
-  var source: String
-  var target: String
+  var code: Double = js.native
+  var http_status: Double = js.native
+  var source: String = js.native
+  var target: String = js.native
 }
 
 @JSGlobal("FileTransferError")

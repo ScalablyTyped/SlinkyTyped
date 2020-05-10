@@ -9,7 +9,6 @@ import typingsSlinky.serialport.serialportStrings.hex
 import typingsSlinky.serialport.serialportStrings.ucs2
 import typingsSlinky.serialport.serialportStrings.utf16le
 import typingsSlinky.serialport.serialportStrings.utf8
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,17 +46,17 @@ trait SerialPort extends Duplex {
   def write(data: String): Boolean = js.native
   def write(
     data: String,
-    callback: js.Function2[/* error */ js.UndefOr[Error | Null], /* bytesWritten */ Double, Unit]
+    callback: js.Function2[/* error */ js.UndefOr[js.Error | Null], /* bytesWritten */ Double, Unit]
   ): Boolean = js.native
   def write(data: js.Array[Double]): Boolean = js.native
   def write(
     data: js.Array[Double],
-    callback: js.Function2[/* error */ js.UndefOr[Error | Null], /* bytesWritten */ Double, Unit]
+    callback: js.Function2[/* error */ js.UndefOr[js.Error | Null], /* bytesWritten */ Double, Unit]
   ): Boolean = js.native
   def write(data: Buffer): Boolean = js.native
   def write(
     data: Buffer,
-    callback: js.Function2[/* error */ js.UndefOr[Error | Null], /* bytesWritten */ Double, Unit]
+    callback: js.Function2[/* error */ js.UndefOr[js.Error | Null], /* bytesWritten */ Double, Unit]
   ): Boolean = js.native
 }
 

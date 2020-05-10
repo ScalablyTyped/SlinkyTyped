@@ -16,18 +16,16 @@ trait RTCSignalingState extends js.Object
 
 object RTCSignalingState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def closed: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.closed = "closed".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.closed = this.cast("closed")
+  def `have-local-offer`: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-local-offer` = "have-local-offer".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-local-offer`]
   @scala.inline
-  def `have-local-offer`: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-local-offer` = this.cast("have-local-offer")
+  def `have-local-pranswer`: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-local-pranswer` = "have-local-pranswer".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-local-pranswer`]
   @scala.inline
-  def `have-local-pranswer`: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-local-pranswer` = this.cast("have-local-pranswer")
+  def `have-remote-offer`: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-remote-offer` = "have-remote-offer".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-remote-offer`]
   @scala.inline
-  def `have-remote-offer`: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-remote-offer` = this.cast("have-remote-offer")
+  def `have-remote-pranswer`: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-remote-pranswer` = "have-remote-pranswer".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-remote-pranswer`]
   @scala.inline
-  def `have-remote-pranswer`: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.`have-remote-pranswer` = this.cast("have-remote-pranswer")
-  @scala.inline
-  def stable: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.stable = this.cast("stable")
+  def stable: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.stable = "stable".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.stable]
 }
 

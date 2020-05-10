@@ -34,22 +34,89 @@ trait SchemaInvoiceSummary extends js.Object {
 
 object SchemaInvoiceSummary {
   @scala.inline
-  def apply(
-    additionalChargeSummaries: js.Array[SchemaInvoiceSummaryAdditionalChargeSummary] = null,
-    customerBalance: SchemaAmount = null,
-    googleBalance: SchemaAmount = null,
-    merchantBalance: SchemaAmount = null,
-    productTotal: SchemaAmount = null,
-    promotionSummaries: js.Array[SchemaPromotion] = null
-  ): SchemaInvoiceSummary = {
+  def apply(): SchemaInvoiceSummary = {
     val __obj = js.Dynamic.literal()
-    if (additionalChargeSummaries != null) __obj.updateDynamic("additionalChargeSummaries")(additionalChargeSummaries.asInstanceOf[js.Any])
-    if (customerBalance != null) __obj.updateDynamic("customerBalance")(customerBalance.asInstanceOf[js.Any])
-    if (googleBalance != null) __obj.updateDynamic("googleBalance")(googleBalance.asInstanceOf[js.Any])
-    if (merchantBalance != null) __obj.updateDynamic("merchantBalance")(merchantBalance.asInstanceOf[js.Any])
-    if (productTotal != null) __obj.updateDynamic("productTotal")(productTotal.asInstanceOf[js.Any])
-    if (promotionSummaries != null) __obj.updateDynamic("promotionSummaries")(promotionSummaries.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInvoiceSummary]
   }
+  @scala.inline
+  implicit class SchemaInvoiceSummaryOps[Self <: SchemaInvoiceSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalChargeSummaries(value: js.Array[SchemaInvoiceSummaryAdditionalChargeSummary]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalChargeSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalChargeSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalChargeSummaries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomerBalance(value: SchemaAmount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerBalance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerBalance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerBalance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoogleBalance(value: SchemaAmount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleBalance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoogleBalance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googleBalance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMerchantBalance(value: SchemaAmount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantBalance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMerchantBalance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantBalance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductTotal(value: SchemaAmount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productTotal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productTotal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPromotionSummaries(value: js.Array[SchemaPromotion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promotionSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromotionSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promotionSummaries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

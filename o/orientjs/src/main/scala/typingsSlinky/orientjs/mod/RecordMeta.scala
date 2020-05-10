@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RecordMeta extends js.Object {
-  var `@rid`: ORID
-  var `@version`: Version
+  var `@rid`: ORID = js.native
+  var `@version`: Version = js.native
 }
 
 object RecordMeta {
@@ -17,5 +18,25 @@ object RecordMeta {
     __obj.updateDynamic("@version")(`@version`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecordMeta]
   }
+  @scala.inline
+  implicit class RecordMetaOps[Self <: RecordMeta] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `with@rid`(value: ORID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("@rid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `with@version`(value: Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("@version")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

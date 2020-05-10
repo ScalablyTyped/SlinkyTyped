@@ -85,7 +85,7 @@ trait ServiceWorkerContainer extends EventTarget {
   def removeEventListener_controllerchange(
     `type`: controllerchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
@@ -102,7 +102,7 @@ trait ServiceWorkerContainer extends EventTarget {
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_messageerror(
@@ -119,12 +119,13 @@ trait ServiceWorkerContainer extends EventTarget {
   def removeEventListener_messageerror(
     `type`: messageerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def startMessages(): Unit = js.native
 }
 
 @JSGlobal("ServiceWorkerContainer")
 @js.native
-object ServiceWorkerContainer extends Instantiable0[ServiceWorkerContainer]
+object ServiceWorkerContainer
+  extends Instantiable0[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerContainer]
 

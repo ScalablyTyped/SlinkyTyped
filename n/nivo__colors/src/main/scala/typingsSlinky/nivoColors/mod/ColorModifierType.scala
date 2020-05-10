@@ -13,12 +13,10 @@ trait ColorModifierType extends js.Object
 
 object ColorModifierType {
   @scala.inline
-  def brighter: typingsSlinky.nivoColors.nivoColorsStrings.brighter = this.cast("brighter")
+  def brighter: typingsSlinky.nivoColors.nivoColorsStrings.brighter = "brighter".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.brighter]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def darker: typingsSlinky.nivoColors.nivoColorsStrings.darker = "darker".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.darker]
   @scala.inline
-  def darker: typingsSlinky.nivoColors.nivoColorsStrings.darker = this.cast("darker")
-  @scala.inline
-  def opacity: typingsSlinky.nivoColors.nivoColorsStrings.opacity = this.cast("opacity")
+  def opacity: typingsSlinky.nivoColors.nivoColorsStrings.opacity = "opacity".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.opacity]
 }
 

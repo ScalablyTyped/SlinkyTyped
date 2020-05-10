@@ -1,6 +1,6 @@
 package typingsSlinky.payment.mod
 
-import typingsSlinky.std.HTMLInputElement
+import org.scalajs.dom.raw.HTMLInputElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -7,8 +7,6 @@ import typingsSlinky.realm.Realm.Object
 import typingsSlinky.realm.Realm.ObjectSchema
 import typingsSlinky.realm.Realm.Sync.ProgressNotificationCallback
 import typingsSlinky.realm.Realm.Sync.User
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.ArrayBufferView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,7 +80,7 @@ object ^ extends js.Object {
     * @returns number
     */
   def schemaVersion(path: String): Double = js.native
-  def schemaVersion(path: String, encryptionKey: ArrayBuffer): Double = js.native
-  def schemaVersion(path: String, encryptionKey: ArrayBufferView): Double = js.native
+  def schemaVersion(path: String, encryptionKey: js.typedarray.ArrayBuffer): Double = js.native
+  def schemaVersion(path: String, encryptionKey: js.typedarray.ArrayBufferView): Double = js.native
 }
 

@@ -1,209 +1,331 @@
 package typingsSlinky.senchaTouch.Ext.data
 
-import typingsSlinky.senchaTouch.Ext.Array
-import typingsSlinky.senchaTouch.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IHasManyAssociation
   extends typingsSlinky.senchaTouch.Ext.data.association.IAssociation {
   /** [Config Option] (Boolean) */
-  var autoLoad: js.UndefOr[Boolean] = js.undefined
+  var autoLoad: js.UndefOr[Boolean] = js.native
   /** [Config Option] (Boolean) */
-  var autoSync: js.UndefOr[Boolean] = js.undefined
+  var autoSync: js.UndefOr[Boolean] = js.native
   /** [Config Option] (String) */
-  var filterProperty: js.UndefOr[String] = js.undefined
+  var filterProperty: js.UndefOr[String] = js.native
   /** [Config Option] (String) */
-  var foreignKey: js.UndefOr[String] = js.undefined
+  var foreignKey: js.UndefOr[String] = js.native
   /** [Method] Returns the value of autoLoad
   		* @returns Boolean
   		*/
-  var getAutoLoad: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var getAutoLoad: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns the value of autoSync
   		* @returns Boolean
   		*/
-  var getAutoSync: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var getAutoSync: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns the value of filterProperty
   		* @returns String
   		*/
-  var getFilterProperty: js.UndefOr[js.Function0[String]] = js.undefined
+  var getFilterProperty: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of foreignKey
   		* @returns String
   		*/
-  var getForeignKey: js.UndefOr[js.Function0[String]] = js.undefined
+  var getForeignKey: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of store
   		* @returns Object
   		*/
-  var getStore: js.UndefOr[js.Function0[_]] = js.undefined
+  var getStore: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of storeName
   		* @returns String
   		*/
-  var getStoreName: js.UndefOr[js.Function0[String]] = js.undefined
+  var getStoreName: js.UndefOr[js.Function0[String]] = js.native
   /** [Config Option] (String) */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** [Method] Sets the value of autoLoad
   		* @param autoLoad Boolean The new value.
   		*/
-  var setAutoLoad: js.UndefOr[js.Function1[/* autoLoad */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var setAutoLoad: js.UndefOr[js.Function1[/* autoLoad */ js.UndefOr[Boolean], Unit]] = js.native
   /** [Method] Sets the value of autoSync
   		* @param autoSync Boolean The new value.
   		*/
-  var setAutoSync: js.UndefOr[js.Function1[/* autoSync */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var setAutoSync: js.UndefOr[js.Function1[/* autoSync */ js.UndefOr[Boolean], Unit]] = js.native
   /** [Method] Sets the value of filterProperty
   		* @param filterProperty String The new value.
   		*/
-  var setFilterProperty: js.UndefOr[js.Function1[/* filterProperty */ js.UndefOr[String], Unit]] = js.undefined
+  var setFilterProperty: js.UndefOr[js.Function1[/* filterProperty */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of foreignKey
   		* @param foreignKey String The new value.
   		*/
-  var setForeignKey: js.UndefOr[js.Function1[/* foreignKey */ js.UndefOr[String], Unit]] = js.undefined
+  var setForeignKey: js.UndefOr[js.Function1[/* foreignKey */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of store
   		* @param store Object The new value.
   		*/
-  var setStore: js.UndefOr[js.Function1[/* store */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setStore: js.UndefOr[js.Function1[/* store */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of storeName
   		* @param storeName String The new value.
   		*/
-  var setStoreName: js.UndefOr[js.Function1[/* storeName */ js.UndefOr[String], Unit]] = js.undefined
+  var setStoreName: js.UndefOr[js.Function1[/* storeName */ js.UndefOr[String], Unit]] = js.native
   /** [Config Option] (Object) */
-  var store: js.UndefOr[js.Any] = js.undefined
+  var store: js.UndefOr[js.Any] = js.native
   /** [Config Option] (Object) */
-  var storeConfig: js.UndefOr[js.Any] = js.undefined
+  var storeConfig: js.UndefOr[js.Any] = js.native
   /** [Config Option] (String) */
-  var storeName: js.UndefOr[String] = js.undefined
+  var storeName: js.UndefOr[String] = js.native
 }
 
 object IHasManyAssociation {
   @scala.inline
-  def apply(
-    alias: Array = null,
-    alternateClassName: js.Any = null,
-    associatedModel: String = null,
-    associatedName: String = null,
-    associationKey: String = null,
-    autoLoad: js.UndefOr[Boolean] = js.undefined,
-    autoSync: js.UndefOr[Boolean] = js.undefined,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    config: js.Any = null,
-    destroy: () => Unit = null,
-    extend: String = null,
-    filterProperty: String = null,
-    foreignKey: String = null,
-    getAssociatedModel: () => String = null,
-    getAssociatedName: () => String = null,
-    getAssociationKey: () => String = null,
-    getAutoLoad: () => Boolean = null,
-    getAutoSync: () => Boolean = null,
-    getFilterProperty: () => String = null,
-    getForeignKey: () => String = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    getName: () => _ = null,
-    getOwnerModel: () => _ = null,
-    getOwnerName: () => String = null,
-    getPrimaryKey: () => String = null,
-    getReader: () => typingsSlinky.senchaTouch.Ext.data.reader.IReader = null,
-    getStore: () => _ = null,
-    getStoreName: () => String = null,
-    getType: () => String = null,
-    inheritableStatics: js.Any = null,
-    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
-    mixins: js.Any = null,
-    name: String = null,
-    ownerModel: js.Any = null,
-    platformConfig: js.Any = null,
-    primaryKey: String = null,
-    reader: typingsSlinky.senchaTouch.Ext.data.reader.IReader = null,
-    self: IClass = null,
-    setAssociatedModel: /* associatedModel */ js.UndefOr[String] => Unit = null,
-    setAssociatedName: /* associatedName */ js.UndefOr[String] => Unit = null,
-    setAssociationKey: /* associationKey */ js.UndefOr[String] => Unit = null,
-    setAutoLoad: /* autoLoad */ js.UndefOr[Boolean] => Unit = null,
-    setAutoSync: /* autoSync */ js.UndefOr[Boolean] => Unit = null,
-    setFilterProperty: /* filterProperty */ js.UndefOr[String] => Unit = null,
-    setForeignKey: /* foreignKey */ js.UndefOr[String] => Unit = null,
-    setName: /* name */ js.UndefOr[js.Any] => Unit = null,
-    setOwnerModel: /* ownerModel */ js.UndefOr[js.Any] => Unit = null,
-    setOwnerName: /* ownerName */ js.UndefOr[String] => Unit = null,
-    setPrimaryKey: /* primaryKey */ js.UndefOr[String] => Unit = null,
-    setReader: /* reader */ js.UndefOr[typingsSlinky.senchaTouch.Ext.data.reader.IReader] => Unit = null,
-    setStore: /* store */ js.UndefOr[js.Any] => Unit = null,
-    setStoreName: /* storeName */ js.UndefOr[String] => Unit = null,
-    setType: /* type */ js.UndefOr[String] => Unit = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    statics: js.Any = null,
-    store: js.Any = null,
-    storeConfig: js.Any = null,
-    storeName: String = null,
-    `type`: String = null,
-    uses: Array = null
-  ): IHasManyAssociation = {
+  def apply(): IHasManyAssociation = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (associatedModel != null) __obj.updateDynamic("associatedModel")(associatedModel.asInstanceOf[js.Any])
-    if (associatedName != null) __obj.updateDynamic("associatedName")(associatedName.asInstanceOf[js.Any])
-    if (associationKey != null) __obj.updateDynamic("associationKey")(associationKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoLoad)) __obj.updateDynamic("autoLoad")(autoLoad.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoSync)) __obj.updateDynamic("autoSync")(autoSync.asInstanceOf[js.Any])
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (filterProperty != null) __obj.updateDynamic("filterProperty")(filterProperty.asInstanceOf[js.Any])
-    if (foreignKey != null) __obj.updateDynamic("foreignKey")(foreignKey.asInstanceOf[js.Any])
-    if (getAssociatedModel != null) __obj.updateDynamic("getAssociatedModel")(js.Any.fromFunction0(getAssociatedModel))
-    if (getAssociatedName != null) __obj.updateDynamic("getAssociatedName")(js.Any.fromFunction0(getAssociatedName))
-    if (getAssociationKey != null) __obj.updateDynamic("getAssociationKey")(js.Any.fromFunction0(getAssociationKey))
-    if (getAutoLoad != null) __obj.updateDynamic("getAutoLoad")(js.Any.fromFunction0(getAutoLoad))
-    if (getAutoSync != null) __obj.updateDynamic("getAutoSync")(js.Any.fromFunction0(getAutoSync))
-    if (getFilterProperty != null) __obj.updateDynamic("getFilterProperty")(js.Any.fromFunction0(getFilterProperty))
-    if (getForeignKey != null) __obj.updateDynamic("getForeignKey")(js.Any.fromFunction0(getForeignKey))
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (getName != null) __obj.updateDynamic("getName")(js.Any.fromFunction0(getName))
-    if (getOwnerModel != null) __obj.updateDynamic("getOwnerModel")(js.Any.fromFunction0(getOwnerModel))
-    if (getOwnerName != null) __obj.updateDynamic("getOwnerName")(js.Any.fromFunction0(getOwnerName))
-    if (getPrimaryKey != null) __obj.updateDynamic("getPrimaryKey")(js.Any.fromFunction0(getPrimaryKey))
-    if (getReader != null) __obj.updateDynamic("getReader")(js.Any.fromFunction0(getReader))
-    if (getStore != null) __obj.updateDynamic("getStore")(js.Any.fromFunction0(getStore))
-    if (getStoreName != null) __obj.updateDynamic("getStoreName")(js.Any.fromFunction0(getStoreName))
-    if (getType != null) __obj.updateDynamic("getType")(js.Any.fromFunction0(getType))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (ownerModel != null) __obj.updateDynamic("ownerModel")(ownerModel.asInstanceOf[js.Any])
-    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
-    if (primaryKey != null) __obj.updateDynamic("primaryKey")(primaryKey.asInstanceOf[js.Any])
-    if (reader != null) __obj.updateDynamic("reader")(reader.asInstanceOf[js.Any])
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (setAssociatedModel != null) __obj.updateDynamic("setAssociatedModel")(js.Any.fromFunction1(setAssociatedModel))
-    if (setAssociatedName != null) __obj.updateDynamic("setAssociatedName")(js.Any.fromFunction1(setAssociatedName))
-    if (setAssociationKey != null) __obj.updateDynamic("setAssociationKey")(js.Any.fromFunction1(setAssociationKey))
-    if (setAutoLoad != null) __obj.updateDynamic("setAutoLoad")(js.Any.fromFunction1(setAutoLoad))
-    if (setAutoSync != null) __obj.updateDynamic("setAutoSync")(js.Any.fromFunction1(setAutoSync))
-    if (setFilterProperty != null) __obj.updateDynamic("setFilterProperty")(js.Any.fromFunction1(setFilterProperty))
-    if (setForeignKey != null) __obj.updateDynamic("setForeignKey")(js.Any.fromFunction1(setForeignKey))
-    if (setName != null) __obj.updateDynamic("setName")(js.Any.fromFunction1(setName))
-    if (setOwnerModel != null) __obj.updateDynamic("setOwnerModel")(js.Any.fromFunction1(setOwnerModel))
-    if (setOwnerName != null) __obj.updateDynamic("setOwnerName")(js.Any.fromFunction1(setOwnerName))
-    if (setPrimaryKey != null) __obj.updateDynamic("setPrimaryKey")(js.Any.fromFunction1(setPrimaryKey))
-    if (setReader != null) __obj.updateDynamic("setReader")(js.Any.fromFunction1(setReader))
-    if (setStore != null) __obj.updateDynamic("setStore")(js.Any.fromFunction1(setStore))
-    if (setStoreName != null) __obj.updateDynamic("setStoreName")(js.Any.fromFunction1(setStoreName))
-    if (setType != null) __obj.updateDynamic("setType")(js.Any.fromFunction1(setType))
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
-    if (storeConfig != null) __obj.updateDynamic("storeConfig")(storeConfig.asInstanceOf[js.Any])
-    if (storeName != null) __obj.updateDynamic("storeName")(storeName.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHasManyAssociation]
   }
+  @scala.inline
+  implicit class IHasManyAssociationOps[Self <: IHasManyAssociation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoLoad(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoSync(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterProperty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForeignKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForeignKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAutoLoad(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoLoad")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAutoLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAutoSync(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoSync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAutoSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoSync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetFilterProperty(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterProperty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetFilterProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetForeignKey(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getForeignKey")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetForeignKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getForeignKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetStore(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStore")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetStoreName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStoreName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetStoreName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStoreName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAutoLoad(value: /* autoLoad */ js.UndefOr[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoLoad")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAutoLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoLoad")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAutoSync(value: /* autoSync */ js.UndefOr[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoSync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAutoSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoSync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetFilterProperty(value: /* filterProperty */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilterProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetFilterProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilterProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetForeignKey(value: /* foreignKey */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setForeignKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetForeignKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setForeignKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetStore(value: /* store */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStore")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetStoreName(value: /* storeName */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStoreName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetStoreName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStoreName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStore(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreConfig(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

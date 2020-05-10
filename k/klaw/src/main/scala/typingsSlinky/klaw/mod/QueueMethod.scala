@@ -12,10 +12,8 @@ trait QueueMethod extends js.Object
 
 object QueueMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def pop: typingsSlinky.klaw.klawStrings.pop = "pop".asInstanceOf[typingsSlinky.klaw.klawStrings.pop]
   @scala.inline
-  def pop: typingsSlinky.klaw.klawStrings.pop = this.cast("pop")
-  @scala.inline
-  def shift: typingsSlinky.klaw.klawStrings.shift = this.cast("shift")
+  def shift: typingsSlinky.klaw.klawStrings.shift = "shift".asInstanceOf[typingsSlinky.klaw.klawStrings.shift]
 }
 

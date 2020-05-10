@@ -15,16 +15,14 @@ trait LogLevel extends js.Object
 
 object LogLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.xterm.xtermStrings.debug = "debug".asInstanceOf[typingsSlinky.xterm.xtermStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.xterm.xtermStrings.debug = this.cast("debug")
+  def error: typingsSlinky.xterm.xtermStrings.error = "error".asInstanceOf[typingsSlinky.xterm.xtermStrings.error]
   @scala.inline
-  def error: typingsSlinky.xterm.xtermStrings.error = this.cast("error")
+  def info: typingsSlinky.xterm.xtermStrings.info = "info".asInstanceOf[typingsSlinky.xterm.xtermStrings.info]
   @scala.inline
-  def info: typingsSlinky.xterm.xtermStrings.info = this.cast("info")
+  def off: typingsSlinky.xterm.xtermStrings.off = "off".asInstanceOf[typingsSlinky.xterm.xtermStrings.off]
   @scala.inline
-  def off: typingsSlinky.xterm.xtermStrings.off = this.cast("off")
-  @scala.inline
-  def warn: typingsSlinky.xterm.xtermStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.xterm.xtermStrings.warn = "warn".asInstanceOf[typingsSlinky.xterm.xtermStrings.warn]
 }
 

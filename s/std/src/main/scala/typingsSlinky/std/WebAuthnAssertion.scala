@@ -5,11 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WebAuthnAssertion extends js.Object {
-  val authenticatorData: scala.scalajs.js.typedarray.ArrayBuffer
-  val clientData: scala.scalajs.js.typedarray.ArrayBuffer
-  val credential: ScopedCredential
-  val signature: scala.scalajs.js.typedarray.ArrayBuffer
+  val authenticatorData: js.typedarray.ArrayBuffer = js.native
+  val clientData: js.typedarray.ArrayBuffer = js.native
+  val credential: ScopedCredential = js.native
+  val signature: js.typedarray.ArrayBuffer = js.native
 }
 
 @JSGlobal("WebAuthnAssertion")

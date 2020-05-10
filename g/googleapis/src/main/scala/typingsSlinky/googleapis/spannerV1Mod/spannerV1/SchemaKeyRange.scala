@@ -74,18 +74,65 @@ trait SchemaKeyRange extends js.Object {
 
 object SchemaKeyRange {
   @scala.inline
-  def apply(
-    endClosed: js.Array[_] = null,
-    endOpen: js.Array[_] = null,
-    startClosed: js.Array[_] = null,
-    startOpen: js.Array[_] = null
-  ): SchemaKeyRange = {
+  def apply(): SchemaKeyRange = {
     val __obj = js.Dynamic.literal()
-    if (endClosed != null) __obj.updateDynamic("endClosed")(endClosed.asInstanceOf[js.Any])
-    if (endOpen != null) __obj.updateDynamic("endOpen")(endOpen.asInstanceOf[js.Any])
-    if (startClosed != null) __obj.updateDynamic("startClosed")(startClosed.asInstanceOf[js.Any])
-    if (startOpen != null) __obj.updateDynamic("startOpen")(startOpen.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaKeyRange]
   }
+  @scala.inline
+  implicit class SchemaKeyRangeOps[Self <: SchemaKeyRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndClosed(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endClosed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndClosed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endClosed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndOpen(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartClosed(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startClosed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartClosed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startClosed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartOpen(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startOpen")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

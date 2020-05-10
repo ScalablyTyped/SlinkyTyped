@@ -30,184 +30,725 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Manifest
   extends /* key */ StringDictionary[js.Any] {
   // Optional
-  var author: js.UndefOr[js.Any] = js.undefined
-  var automation: js.UndefOr[js.Any] = js.undefined
-  var background: js.UndefOr[AnonPage] = js.undefined
-  var background_page: js.UndefOr[String] = js.undefined
+  var author: js.UndefOr[js.Any] = js.native
+  var automation: js.UndefOr[js.Any] = js.native
+  var background: js.UndefOr[AnonPage] = js.native
+  var background_page: js.UndefOr[String] = js.native
   // Pick one (or none)
-  var browser_action: js.UndefOr[typingsSlinky.chrome.chrome.runtime.ManifestAction] = js.undefined
-  var chrome_settings_overrides: js.UndefOr[AnonHomepage] = js.undefined
-  var chrome_ui_overrides: js.UndefOr[AnonBookmarksui] = js.undefined
-  var chrome_url_overrides: js.UndefOr[AnonBookmarks] = js.undefined
-  var commands: js.UndefOr[StringDictionary[AnonDescription]] = js.undefined
-  var content_capabilities: js.UndefOr[AnonMatches] = js.undefined
-  var content_scripts: js.UndefOr[js.Array[AnonAllframes]] = js.undefined
-  var content_security_policy: js.UndefOr[String] = js.undefined
-  var converted_from_user_script: js.UndefOr[Boolean] = js.undefined
-  var copresence: js.UndefOr[js.Any] = js.undefined
-  var current_locale: js.UndefOr[String] = js.undefined
+  var browser_action: js.UndefOr[typingsSlinky.chrome.chrome.runtime.ManifestAction] = js.native
+  var chrome_settings_overrides: js.UndefOr[AnonHomepage] = js.native
+  var chrome_ui_overrides: js.UndefOr[AnonBookmarksui] = js.native
+  var chrome_url_overrides: js.UndefOr[AnonBookmarks] = js.native
+  var commands: js.UndefOr[StringDictionary[AnonDescription]] = js.native
+  var content_capabilities: js.UndefOr[AnonMatches] = js.native
+  var content_scripts: js.UndefOr[js.Array[AnonAllframes]] = js.native
+  var content_security_policy: js.UndefOr[String] = js.native
+  var converted_from_user_script: js.UndefOr[Boolean] = js.native
+  var copresence: js.UndefOr[js.Any] = js.native
+  var current_locale: js.UndefOr[String] = js.native
   // Recommended
-  var default_locale: js.UndefOr[String] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var devtools_page: js.UndefOr[String] = js.undefined
-  var event_rules: js.UndefOr[js.Array[AnonActions]] = js.undefined
-  var export: js.UndefOr[AnonWhitelist] = js.undefined
-  var externally_connectable: js.UndefOr[AnonAcceptstlschannelid] = js.undefined
-  var file_browser_handlers: js.UndefOr[js.Array[AnonDefaulttitle]] = js.undefined
-  var file_system_provider_capabilities: js.UndefOr[AnonConfigurable] = js.undefined
-  var homepage_url: js.UndefOr[String] = js.undefined
-  var icons: js.UndefOr[typingsSlinky.chrome.chrome.runtime.ManifestIcons] = js.undefined
-  var `import`: js.UndefOr[js.Array[AnonId]] = js.undefined
-  var incognito: js.UndefOr[String] = js.undefined
-  var input_components: js.UndefOr[js.Array[AnonLanguage]] = js.undefined
-  var key: js.UndefOr[String] = js.undefined
+  var default_locale: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.native
+  var devtools_page: js.UndefOr[String] = js.native
+  var event_rules: js.UndefOr[js.Array[AnonActions]] = js.native
+  var export: js.UndefOr[AnonWhitelist] = js.native
+  var externally_connectable: js.UndefOr[AnonAcceptstlschannelid] = js.native
+  var file_browser_handlers: js.UndefOr[js.Array[AnonDefaulttitle]] = js.native
+  var file_system_provider_capabilities: js.UndefOr[AnonConfigurable] = js.native
+  var homepage_url: js.UndefOr[String] = js.native
+  var icons: js.UndefOr[typingsSlinky.chrome.chrome.runtime.ManifestIcons] = js.native
+  var `import`: js.UndefOr[js.Array[AnonId]] = js.native
+  var incognito: js.UndefOr[String] = js.native
+  var input_components: js.UndefOr[js.Array[AnonLanguage]] = js.native
+  var key: js.UndefOr[String] = js.native
   // Required
-  var manifest_version: Double
-  var minimum_chrome_version: js.UndefOr[String] = js.undefined
-  var nacl_modules: js.UndefOr[js.Array[AnonMimetype]] = js.undefined
-  var name: String
-  var oauth2: js.UndefOr[AnonClientid] = js.undefined
-  var offline_enabled: js.UndefOr[Boolean] = js.undefined
-  var omnibox: js.UndefOr[AnonKeyword] = js.undefined
-  var optional_permissions: js.UndefOr[js.Array[String]] = js.undefined
-  var options_page: js.UndefOr[String] = js.undefined
-  var options_ui: js.UndefOr[AnonChromestyle] = js.undefined
-  var page_action: js.UndefOr[typingsSlinky.chrome.chrome.runtime.ManifestAction] = js.undefined
-  var permissions: js.UndefOr[js.Array[String]] = js.undefined
-  var platforms: js.UndefOr[js.Array[AnonNaclarch]] = js.undefined
-  var plugins: js.UndefOr[js.Array[AnonPath]] = js.undefined
-  var requirements: js.UndefOr[Anon3D] = js.undefined
-  var sandbox: js.UndefOr[AnonContentsecuritypolicy] = js.undefined
-  var short_name: js.UndefOr[String] = js.undefined
-  var signature: js.UndefOr[js.Any] = js.undefined
-  var spellcheck: js.UndefOr[AnonDictionaryformat] = js.undefined
-  var storage: js.UndefOr[AnonManagedschema] = js.undefined
-  var system_indicator: js.UndefOr[js.Any] = js.undefined
-  var tts_engine: js.UndefOr[AnonVoices] = js.undefined
-  var update_url: js.UndefOr[String] = js.undefined
-  var version: String
-  var version_name: js.UndefOr[String] = js.undefined
-  var web_accessible_resources: js.UndefOr[js.Array[String]] = js.undefined
+  var manifest_version: Double = js.native
+  var minimum_chrome_version: js.UndefOr[String] = js.native
+  var nacl_modules: js.UndefOr[js.Array[AnonMimetype]] = js.native
+  var name: String = js.native
+  var oauth2: js.UndefOr[AnonClientid] = js.native
+  var offline_enabled: js.UndefOr[Boolean] = js.native
+  var omnibox: js.UndefOr[AnonKeyword] = js.native
+  var optional_permissions: js.UndefOr[js.Array[String]] = js.native
+  var options_page: js.UndefOr[String] = js.native
+  var options_ui: js.UndefOr[AnonChromestyle] = js.native
+  var page_action: js.UndefOr[typingsSlinky.chrome.chrome.runtime.ManifestAction] = js.native
+  var permissions: js.UndefOr[js.Array[String]] = js.native
+  var platforms: js.UndefOr[js.Array[AnonNaclarch]] = js.native
+  var plugins: js.UndefOr[js.Array[AnonPath]] = js.native
+  var requirements: js.UndefOr[Anon3D] = js.native
+  var sandbox: js.UndefOr[AnonContentsecuritypolicy] = js.native
+  var short_name: js.UndefOr[String] = js.native
+  var signature: js.UndefOr[js.Any] = js.native
+  var spellcheck: js.UndefOr[AnonDictionaryformat] = js.native
+  var storage: js.UndefOr[AnonManagedschema] = js.native
+  var system_indicator: js.UndefOr[js.Any] = js.native
+  var tts_engine: js.UndefOr[AnonVoices] = js.native
+  var update_url: js.UndefOr[String] = js.native
+  var version: String = js.native
+  var version_name: js.UndefOr[String] = js.native
+  var web_accessible_resources: js.UndefOr[js.Array[String]] = js.native
 }
 
 object Manifest {
   @scala.inline
-  def apply(
-    manifest_version: Double,
-    name: String,
-    version: String,
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    author: js.Any = null,
-    automation: js.Any = null,
-    background: AnonPage = null,
-    background_page: String = null,
-    browser_action: typingsSlinky.chrome.chrome.runtime.ManifestAction = null,
-    chrome_settings_overrides: AnonHomepage = null,
-    chrome_ui_overrides: AnonBookmarksui = null,
-    chrome_url_overrides: AnonBookmarks = null,
-    commands: StringDictionary[AnonDescription] = null,
-    content_capabilities: AnonMatches = null,
-    content_scripts: js.Array[AnonAllframes] = null,
-    content_security_policy: String = null,
-    converted_from_user_script: js.UndefOr[Boolean] = js.undefined,
-    copresence: js.Any = null,
-    current_locale: String = null,
-    default_locale: String = null,
-    description: String = null,
-    devtools_page: String = null,
-    event_rules: js.Array[AnonActions] = null,
-    export: AnonWhitelist = null,
-    externally_connectable: AnonAcceptstlschannelid = null,
-    file_browser_handlers: js.Array[AnonDefaulttitle] = null,
-    file_system_provider_capabilities: AnonConfigurable = null,
-    homepage_url: String = null,
-    icons: typingsSlinky.chrome.chrome.runtime.ManifestIcons = null,
-    `import`: js.Array[AnonId] = null,
-    incognito: String = null,
-    input_components: js.Array[AnonLanguage] = null,
-    key: String = null,
-    minimum_chrome_version: String = null,
-    nacl_modules: js.Array[AnonMimetype] = null,
-    oauth2: AnonClientid = null,
-    offline_enabled: js.UndefOr[Boolean] = js.undefined,
-    omnibox: AnonKeyword = null,
-    optional_permissions: js.Array[String] = null,
-    options_page: String = null,
-    options_ui: AnonChromestyle = null,
-    page_action: typingsSlinky.chrome.chrome.runtime.ManifestAction = null,
-    permissions: js.Array[String] = null,
-    platforms: js.Array[AnonNaclarch] = null,
-    plugins: js.Array[AnonPath] = null,
-    requirements: Anon3D = null,
-    sandbox: AnonContentsecuritypolicy = null,
-    short_name: String = null,
-    signature: js.Any = null,
-    spellcheck: AnonDictionaryformat = null,
-    storage: AnonManagedschema = null,
-    system_indicator: js.Any = null,
-    tts_engine: AnonVoices = null,
-    update_url: String = null,
-    version_name: String = null,
-    web_accessible_resources: js.Array[String] = null
-  ): Manifest = {
+  def apply(manifest_version: Double, name: String, version: String): Manifest = {
     val __obj = js.Dynamic.literal(manifest_version = manifest_version.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (author != null) __obj.updateDynamic("author")(author.asInstanceOf[js.Any])
-    if (automation != null) __obj.updateDynamic("automation")(automation.asInstanceOf[js.Any])
-    if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
-    if (background_page != null) __obj.updateDynamic("background_page")(background_page.asInstanceOf[js.Any])
-    if (browser_action != null) __obj.updateDynamic("browser_action")(browser_action.asInstanceOf[js.Any])
-    if (chrome_settings_overrides != null) __obj.updateDynamic("chrome_settings_overrides")(chrome_settings_overrides.asInstanceOf[js.Any])
-    if (chrome_ui_overrides != null) __obj.updateDynamic("chrome_ui_overrides")(chrome_ui_overrides.asInstanceOf[js.Any])
-    if (chrome_url_overrides != null) __obj.updateDynamic("chrome_url_overrides")(chrome_url_overrides.asInstanceOf[js.Any])
-    if (commands != null) __obj.updateDynamic("commands")(commands.asInstanceOf[js.Any])
-    if (content_capabilities != null) __obj.updateDynamic("content_capabilities")(content_capabilities.asInstanceOf[js.Any])
-    if (content_scripts != null) __obj.updateDynamic("content_scripts")(content_scripts.asInstanceOf[js.Any])
-    if (content_security_policy != null) __obj.updateDynamic("content_security_policy")(content_security_policy.asInstanceOf[js.Any])
-    if (!js.isUndefined(converted_from_user_script)) __obj.updateDynamic("converted_from_user_script")(converted_from_user_script.asInstanceOf[js.Any])
-    if (copresence != null) __obj.updateDynamic("copresence")(copresence.asInstanceOf[js.Any])
-    if (current_locale != null) __obj.updateDynamic("current_locale")(current_locale.asInstanceOf[js.Any])
-    if (default_locale != null) __obj.updateDynamic("default_locale")(default_locale.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (devtools_page != null) __obj.updateDynamic("devtools_page")(devtools_page.asInstanceOf[js.Any])
-    if (event_rules != null) __obj.updateDynamic("event_rules")(event_rules.asInstanceOf[js.Any])
-    if (export != null) __obj.updateDynamic("export")(export.asInstanceOf[js.Any])
-    if (externally_connectable != null) __obj.updateDynamic("externally_connectable")(externally_connectable.asInstanceOf[js.Any])
-    if (file_browser_handlers != null) __obj.updateDynamic("file_browser_handlers")(file_browser_handlers.asInstanceOf[js.Any])
-    if (file_system_provider_capabilities != null) __obj.updateDynamic("file_system_provider_capabilities")(file_system_provider_capabilities.asInstanceOf[js.Any])
-    if (homepage_url != null) __obj.updateDynamic("homepage_url")(homepage_url.asInstanceOf[js.Any])
-    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
-    if (`import` != null) __obj.updateDynamic("import")(`import`.asInstanceOf[js.Any])
-    if (incognito != null) __obj.updateDynamic("incognito")(incognito.asInstanceOf[js.Any])
-    if (input_components != null) __obj.updateDynamic("input_components")(input_components.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (minimum_chrome_version != null) __obj.updateDynamic("minimum_chrome_version")(minimum_chrome_version.asInstanceOf[js.Any])
-    if (nacl_modules != null) __obj.updateDynamic("nacl_modules")(nacl_modules.asInstanceOf[js.Any])
-    if (oauth2 != null) __obj.updateDynamic("oauth2")(oauth2.asInstanceOf[js.Any])
-    if (!js.isUndefined(offline_enabled)) __obj.updateDynamic("offline_enabled")(offline_enabled.asInstanceOf[js.Any])
-    if (omnibox != null) __obj.updateDynamic("omnibox")(omnibox.asInstanceOf[js.Any])
-    if (optional_permissions != null) __obj.updateDynamic("optional_permissions")(optional_permissions.asInstanceOf[js.Any])
-    if (options_page != null) __obj.updateDynamic("options_page")(options_page.asInstanceOf[js.Any])
-    if (options_ui != null) __obj.updateDynamic("options_ui")(options_ui.asInstanceOf[js.Any])
-    if (page_action != null) __obj.updateDynamic("page_action")(page_action.asInstanceOf[js.Any])
-    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
-    if (platforms != null) __obj.updateDynamic("platforms")(platforms.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (requirements != null) __obj.updateDynamic("requirements")(requirements.asInstanceOf[js.Any])
-    if (sandbox != null) __obj.updateDynamic("sandbox")(sandbox.asInstanceOf[js.Any])
-    if (short_name != null) __obj.updateDynamic("short_name")(short_name.asInstanceOf[js.Any])
-    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
-    if (spellcheck != null) __obj.updateDynamic("spellcheck")(spellcheck.asInstanceOf[js.Any])
-    if (storage != null) __obj.updateDynamic("storage")(storage.asInstanceOf[js.Any])
-    if (system_indicator != null) __obj.updateDynamic("system_indicator")(system_indicator.asInstanceOf[js.Any])
-    if (tts_engine != null) __obj.updateDynamic("tts_engine")(tts_engine.asInstanceOf[js.Any])
-    if (update_url != null) __obj.updateDynamic("update_url")(update_url.asInstanceOf[js.Any])
-    if (version_name != null) __obj.updateDynamic("version_name")(version_name.asInstanceOf[js.Any])
-    if (web_accessible_resources != null) __obj.updateDynamic("web_accessible_resources")(web_accessible_resources.asInstanceOf[js.Any])
     __obj.asInstanceOf[Manifest]
   }
+  @scala.inline
+  implicit class ManifestOps[Self <: Manifest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withManifest_version(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manifest_version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthor(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutomation(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("automation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutomation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("automation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackground(value: AnonPage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackground_page(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background_page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackground_page: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background_page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowser_action(value: typingsSlinky.chrome.chrome.runtime.ManifestAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browser_action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowser_action: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browser_action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChrome_settings_overrides(value: AnonHomepage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_settings_overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChrome_settings_overrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_settings_overrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChrome_ui_overrides(value: AnonBookmarksui): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_ui_overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChrome_ui_overrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_ui_overrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChrome_url_overrides(value: AnonBookmarks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_url_overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChrome_url_overrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_url_overrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommands(value: StringDictionary[AnonDescription]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommands: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent_capabilities(value: AnonMatches): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content_capabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent_capabilities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content_capabilities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent_scripts(value: js.Array[AnonAllframes]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content_scripts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent_scripts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content_scripts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent_security_policy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content_security_policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent_security_policy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content_security_policy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConverted_from_user_script(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("converted_from_user_script")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConverted_from_user_script: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("converted_from_user_script")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopresence(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copresence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopresence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copresence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrent_locale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("current_locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrent_locale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("current_locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefault_locale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault_locale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevtools_page(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devtools_page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevtools_page: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devtools_page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent_rules(value: js.Array[AnonActions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event_rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent_rules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event_rules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExport(value: AnonWhitelist): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("export")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("export")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternally_connectable(value: AnonAcceptstlschannelid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externally_connectable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternally_connectable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externally_connectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFile_browser_handlers(value: js.Array[AnonDefaulttitle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file_browser_handlers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFile_browser_handlers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file_browser_handlers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFile_system_provider_capabilities(value: AnonConfigurable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file_system_provider_capabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFile_system_provider_capabilities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file_system_provider_capabilities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHomepage_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homepage_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHomepage_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homepage_url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcons(value: typingsSlinky.chrome.chrome.runtime.ManifestIcons): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImport(value: js.Array[AnonId]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("import")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("import")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncognito(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incognito")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncognito: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incognito")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput_components(value: js.Array[AnonLanguage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input_components")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput_components: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input_components")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimum_chrome_version(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum_chrome_version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimum_chrome_version: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum_chrome_version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNacl_modules(value: js.Array[AnonMimetype]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nacl_modules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNacl_modules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nacl_modules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauth2(value: AnonClientid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauth2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffline_enabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offline_enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffline_enabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offline_enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOmnibox(value: AnonKeyword): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("omnibox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOmnibox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("omnibox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptional_permissions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional_permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptional_permissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional_permissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions_page(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options_page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions_page: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options_page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions_ui(value: AnonChromestyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options_ui")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions_ui: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options_ui")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage_action(value: typingsSlinky.chrome.chrome.runtime.ManifestAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page_action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage_action: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page_action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatforms(value: js.Array[AnonNaclarch]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatforms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Array[AnonPath]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequirements(value: Anon3D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequirements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSandbox(value: AnonContentsecuritypolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSandbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShort_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("short_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShort_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("short_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignature(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpellcheck(value: AnonDictionaryformat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spellcheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpellcheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spellcheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorage(value: AnonManagedschema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSystem_indicator(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("system_indicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSystem_indicator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("system_indicator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTts_engine(value: AnonVoices): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tts_engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTts_engine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tts_engine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdate_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdate_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update_url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeb_accessible_resources(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("web_accessible_resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeb_accessible_resources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("web_accessible_resources")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

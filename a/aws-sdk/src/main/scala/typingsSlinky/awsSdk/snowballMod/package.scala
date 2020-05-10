@@ -24,6 +24,7 @@ package object snowballMod {
   type CompatibleImageList = js.Array[typingsSlinky.awsSdk.snowballMod.CompatibleImage]
   type Ec2AmiResourceList = js.Array[typingsSlinky.awsSdk.snowballMod.Ec2AmiResource]
   type EventTriggerDefinitionList = js.Array[typingsSlinky.awsSdk.snowballMod.EventTriggerDefinition]
+  type GSTIN = java.lang.String
   type Integer = scala.Double
   type JobId = java.lang.String
   type JobListEntryList = js.Array[typingsSlinky.awsSdk.snowballMod.JobListEntry]

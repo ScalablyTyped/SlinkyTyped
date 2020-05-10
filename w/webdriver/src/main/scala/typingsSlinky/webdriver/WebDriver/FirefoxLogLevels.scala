@@ -19,20 +19,18 @@ trait FirefoxLogLevels extends js.Object
 
 object FirefoxLogLevels {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def config: config_ = "config".asInstanceOf[config_]
   @scala.inline
-  def config: config_ = this.cast("config")
+  def debug: typingsSlinky.webdriver.webdriverStrings.debug = "debug".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.webdriver.webdriverStrings.debug = this.cast("debug")
+  def error: typingsSlinky.webdriver.webdriverStrings.error = "error".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.error]
   @scala.inline
-  def error: typingsSlinky.webdriver.webdriverStrings.error = this.cast("error")
+  def fatal: typingsSlinky.webdriver.webdriverStrings.fatal = "fatal".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.fatal]
   @scala.inline
-  def fatal: typingsSlinky.webdriver.webdriverStrings.fatal = this.cast("fatal")
+  def info: info_ = "info".asInstanceOf[info_]
   @scala.inline
-  def info: info_ = this.cast("info")
+  def trace: typingsSlinky.webdriver.webdriverStrings.trace = "trace".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.trace]
   @scala.inline
-  def trace: typingsSlinky.webdriver.webdriverStrings.trace = this.cast("trace")
-  @scala.inline
-  def warn: typingsSlinky.webdriver.webdriverStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.webdriver.webdriverStrings.warn = "warn".asInstanceOf[typingsSlinky.webdriver.webdriverStrings.warn]
 }
 

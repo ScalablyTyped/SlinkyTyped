@@ -3,25 +3,24 @@ package typingsSlinky.awsSdkClientKinesisBrowser.typesStreamDescriptionSummaryMo
 import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ACTIVE
 import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.CREATING
 import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.DELETING
-import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.KMS
-import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.NONE
 import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.UPDATING
 import typingsSlinky.awsSdkClientKinesisBrowser.typesEnhancedMetricsMod.UnmarshalledEnhancedMetrics
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledStreamDescriptionSummary extends StreamDescriptionSummary {
   /**
     * <p>Represents the current enhanced monitoring settings of the stream.</p>
     */
   @JSName("EnhancedMonitoring")
-  var EnhancedMonitoring_UnmarshalledStreamDescriptionSummary: js.Array[UnmarshalledEnhancedMetrics]
+  var EnhancedMonitoring_UnmarshalledStreamDescriptionSummary: js.Array[UnmarshalledEnhancedMetrics] = js.native
   /**
     * <p>The approximate time that the stream was created.</p>
     */
   @JSName("StreamCreationTimestamp")
-  var StreamCreationTimestamp_UnmarshalledStreamDescriptionSummary: js.Date
+  var StreamCreationTimestamp_UnmarshalledStreamDescriptionSummary: js.Date = js.native
 }
 
 object UnmarshalledStreamDescriptionSummary {
@@ -33,16 +32,30 @@ object UnmarshalledStreamDescriptionSummary {
     StreamARN: String,
     StreamCreationTimestamp: js.Date,
     StreamName: String,
-    StreamStatus: CREATING | DELETING | ACTIVE | UPDATING | String,
-    ConsumerCount: Int | Double = null,
-    EncryptionType: NONE | KMS | String = null,
-    KeyId: String = null
+    StreamStatus: CREATING | DELETING | ACTIVE | UPDATING | String
   ): UnmarshalledStreamDescriptionSummary = {
     val __obj = js.Dynamic.literal(EnhancedMonitoring = EnhancedMonitoring.asInstanceOf[js.Any], OpenShardCount = OpenShardCount.asInstanceOf[js.Any], RetentionPeriodHours = RetentionPeriodHours.asInstanceOf[js.Any], StreamARN = StreamARN.asInstanceOf[js.Any], StreamCreationTimestamp = StreamCreationTimestamp.asInstanceOf[js.Any], StreamName = StreamName.asInstanceOf[js.Any], StreamStatus = StreamStatus.asInstanceOf[js.Any])
-    if (ConsumerCount != null) __obj.updateDynamic("ConsumerCount")(ConsumerCount.asInstanceOf[js.Any])
-    if (EncryptionType != null) __obj.updateDynamic("EncryptionType")(EncryptionType.asInstanceOf[js.Any])
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledStreamDescriptionSummary]
   }
+  @scala.inline
+  implicit class UnmarshalledStreamDescriptionSummaryOps[Self <: UnmarshalledStreamDescriptionSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnhancedMonitoring(value: js.Array[UnmarshalledEnhancedMetrics]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnhancedMonitoring")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStreamCreationTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamCreationTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

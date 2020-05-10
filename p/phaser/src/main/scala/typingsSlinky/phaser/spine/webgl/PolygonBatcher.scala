@@ -28,8 +28,6 @@ class PolygonBatcher protected () extends Disposable {
   var srcBlend: js.Any = js.native
   var verticesLength: js.Any = js.native
   def begin(shader: Shader): Unit = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def draw(texture: GLTexture, vertices: ArrayLike[Double], indices: js.Array[Double]): Unit = js.native
   def end(): Unit = js.native
   def getDrawCalls(): Double = js.native

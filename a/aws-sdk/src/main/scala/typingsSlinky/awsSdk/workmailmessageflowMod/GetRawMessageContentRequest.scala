@@ -16,8 +16,21 @@ object GetRawMessageContentRequest {
   @scala.inline
   def apply(messageId: messageIdType): GetRawMessageContentRequest = {
     val __obj = js.Dynamic.literal(messageId = messageId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetRawMessageContentRequest]
   }
+  @scala.inline
+  implicit class GetRawMessageContentRequestOps[Self <: GetRawMessageContentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessageId(value: messageIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

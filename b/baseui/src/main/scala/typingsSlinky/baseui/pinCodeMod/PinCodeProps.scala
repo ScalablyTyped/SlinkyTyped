@@ -2,6 +2,8 @@ package typingsSlinky.baseui.pinCodeMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.baseui.AnonValues
@@ -10,6 +12,7 @@ import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.left
+import typingsSlinky.baseui.baseuiStrings.mini
 import typingsSlinky.baseui.baseuiStrings.none
 import typingsSlinky.baseui.baseuiStrings.right
 import typingsSlinky.baseui.inputMod.InputOverrides
@@ -22,109 +25,482 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined baseui.baseui/pin-code.Omit<baseui.baseui/input.InputProps, 'onChange' | 'value'> & {  overrides ? :baseui.baseui/pin-code.PinCodeOverrides,   values  :std.Array<string>,   manageFocus ? :boolean, onChange (args : {  values  :std.Array<string>,   event  :react.react.FormEvent<std.HTMLInputElement>}): void} */
+@js.native
 trait PinCodeProps extends js.Object {
-  var adjoined: js.UndefOr[none | left | right | both] = js.undefined
-  var `aria-describedby`: js.UndefOr[String] = js.undefined
-  var `aria-label`: js.UndefOr[String] = js.undefined
-  var `aria-labelledby`: js.UndefOr[String] = js.undefined
-  var autoComplete: js.UndefOr[String] = js.undefined
-  var autoFocus: js.UndefOr[Boolean] = js.undefined
-  var clearable: js.UndefOr[Boolean] = js.undefined
-  var `data-baseweb`: js.UndefOr[String] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var endEnhancer: js.UndefOr[(js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]] = js.undefined
-  var error: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var inputRef: js.UndefOr[Ref[HTMLInputElement]] = js.undefined
-  var manageFocus: js.UndefOr[Boolean] = js.undefined
-  var max: js.UndefOr[Double] = js.undefined
-  var min: js.UndefOr[Double] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
-  var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
-  var onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLInputElement]] = js.undefined
-  var onKeyPress: js.UndefOr[KeyboardEventHandler[HTMLInputElement]] = js.undefined
-  var onKeyUp: js.UndefOr[KeyboardEventHandler[HTMLInputElement]] = js.undefined
-  var overrides: js.UndefOr[InputOverrides with PinCodeOverrides] = js.undefined
-  var placeholder: js.UndefOr[String] = js.undefined
-  var positive: js.UndefOr[Boolean] = js.undefined
-  var required: js.UndefOr[Boolean] = js.undefined
-  var rows: js.UndefOr[Double] = js.undefined
-  var size: js.UndefOr[default_ | compact | large_] = js.undefined
-  var startEnhancer: js.UndefOr[(js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var values: js.Array[String]
-  def onChange(args: AnonValues): Unit
+  var adjoined: js.UndefOr[none | left | right | both] = js.native
+  var `aria-describedby`: js.UndefOr[String] = js.native
+  var `aria-label`: js.UndefOr[String] = js.native
+  var `aria-labelledby`: js.UndefOr[String] = js.native
+  var autoComplete: js.UndefOr[String] = js.native
+  var autoFocus: js.UndefOr[Boolean] = js.native
+  var clearable: js.UndefOr[Boolean] = js.native
+  var `data-baseweb`: js.UndefOr[String] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var endEnhancer: js.UndefOr[(js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]] = js.native
+  var error: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[String] = js.native
+  var inputMode: js.UndefOr[String] = js.native
+  var inputRef: js.UndefOr[Ref[HTMLInputElement]] = js.native
+  var manageFocus: js.UndefOr[Boolean] = js.native
+  var max: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
+  var name: js.UndefOr[String] = js.native
+  var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.native
+  var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.native
+  var onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLInputElement]] = js.native
+  var onKeyPress: js.UndefOr[KeyboardEventHandler[HTMLInputElement]] = js.native
+  var onKeyUp: js.UndefOr[KeyboardEventHandler[HTMLInputElement]] = js.native
+  var overrides: js.UndefOr[InputOverrides with PinCodeOverrides] = js.native
+  var placeholder: js.UndefOr[String] = js.native
+  var positive: js.UndefOr[Boolean] = js.native
+  var required: js.UndefOr[Boolean] = js.native
+  var rows: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[mini | default_ | compact | large_] = js.native
+  var startEnhancer: js.UndefOr[(js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var values: js.Array[String] = js.native
+  def onChange(args: AnonValues): Unit = js.native
 }
 
 object PinCodeProps {
   @scala.inline
-  def apply(
-    onChange: AnonValues => Unit,
-    values: js.Array[String],
-    adjoined: none | left | right | both = null,
-    `aria-describedby`: String = null,
-    `aria-label`: String = null,
-    `aria-labelledby`: String = null,
-    autoComplete: String = null,
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    clearable: js.UndefOr[Boolean] = js.undefined,
-    `data-baseweb`: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    endEnhancer: (js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any] = null,
-    error: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    inputRef: Ref[HTMLInputElement] = null,
-    manageFocus: js.UndefOr[Boolean] = js.undefined,
-    max: Int | Double = null,
-    min: Int | Double = null,
-    name: String = null,
-    onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onFocus: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
-    onKeyPress: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
-    overrides: InputOverrides with PinCodeOverrides = null,
-    placeholder: String = null,
-    positive: js.UndefOr[Boolean] = js.undefined,
-    required: js.UndefOr[Boolean] = js.undefined,
-    rows: Int | Double = null,
-    size: default_ | compact | large_ = null,
-    startEnhancer: (js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any] = null,
-    `type`: String = null
-  ): PinCodeProps = {
+  def apply(onChange: AnonValues => Unit, values: js.Array[String]): PinCodeProps = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), values = values.asInstanceOf[js.Any])
-    if (adjoined != null) __obj.updateDynamic("adjoined")(adjoined.asInstanceOf[js.Any])
-    if (`aria-describedby` != null) __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
-    if (autoComplete != null) __obj.updateDynamic("autoComplete")(autoComplete.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
-    if (!js.isUndefined(clearable)) __obj.updateDynamic("clearable")(clearable.asInstanceOf[js.Any])
-    if (`data-baseweb` != null) __obj.updateDynamic("data-baseweb")(`data-baseweb`.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (endEnhancer != null) __obj.updateDynamic("endEnhancer")(endEnhancer.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inputRef != null) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(manageFocus)) __obj.updateDynamic("manageFocus")(manageFocus.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
-    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (startEnhancer != null) __obj.updateDynamic("startEnhancer")(startEnhancer.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PinCodeProps]
   }
+  @scala.inline
+  implicit class PinCodePropsOps[Self <: PinCodeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnChange(value: AnonValues => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withValues(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdjoined(value: none | left | right | both): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjoined")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdjoined: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjoined")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-describedby`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-describedby")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-describedby`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-describedby")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-label`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-label`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-labelledby`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-labelledby`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-labelledby")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoComplete(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClearable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClearable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withData-baseweb`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data-baseweb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutData-baseweb`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data-baseweb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndEnhancerReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endEnhancer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndEnhancerFunction1(value: /* args */ SharedProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endEnhancer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEndEnhancer(value: (js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endEnhancer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndEnhancer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endEnhancer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputRefRefObject(value: ReactRef[HTMLInputElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInputRef(value: Ref[HTMLInputElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputRefNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(null)
+        ret
+    }
+    @scala.inline
+    def withManageFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manageFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManageFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manageFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFocus(value: SyntheticFocusEvent[HTMLInputElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyDown(value: SyntheticKeyboardEvent[HTMLInputElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyPress(value: SyntheticKeyboardEvent[HTMLInputElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnKeyUp(value: SyntheticKeyboardEvent[HTMLInputElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnKeyUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrides(value: InputOverrides with PinCodeOverrides): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: mini | default_ | compact | large_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartEnhancerReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startEnhancer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartEnhancerFunction1(value: /* args */ SharedProps => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startEnhancer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStartEnhancer(value: (js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startEnhancer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartEnhancer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startEnhancer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

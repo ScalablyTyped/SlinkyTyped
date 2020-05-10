@@ -19,16 +19,53 @@ trait SageMakerMachineLearningModelResourceData extends js.Object {
 
 object SageMakerMachineLearningModelResourceData {
   @scala.inline
-  def apply(
-    DestinationPath: string = null,
-    OwnerSetting: ResourceDownloadOwnerSetting = null,
-    SageMakerJobArn: string = null
-  ): SageMakerMachineLearningModelResourceData = {
+  def apply(): SageMakerMachineLearningModelResourceData = {
     val __obj = js.Dynamic.literal()
-    if (DestinationPath != null) __obj.updateDynamic("DestinationPath")(DestinationPath.asInstanceOf[js.Any])
-    if (OwnerSetting != null) __obj.updateDynamic("OwnerSetting")(OwnerSetting.asInstanceOf[js.Any])
-    if (SageMakerJobArn != null) __obj.updateDynamic("SageMakerJobArn")(SageMakerJobArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[SageMakerMachineLearningModelResourceData]
   }
+  @scala.inline
+  implicit class SageMakerMachineLearningModelResourceDataOps[Self <: SageMakerMachineLearningModelResourceData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationPath(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerSetting(value: ResourceDownloadOwnerSetting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerSetting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerSetting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerSetting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSageMakerJobArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SageMakerJobArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSageMakerJobArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SageMakerJobArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

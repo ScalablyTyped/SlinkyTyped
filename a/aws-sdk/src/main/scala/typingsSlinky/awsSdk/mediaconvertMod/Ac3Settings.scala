@@ -42,26 +42,113 @@ trait Ac3Settings extends js.Object {
 
 object Ac3Settings {
   @scala.inline
-  def apply(
-    Bitrate: Int | Double = null,
-    BitstreamMode: Ac3BitstreamMode = null,
-    CodingMode: Ac3CodingMode = null,
-    Dialnorm: Int | Double = null,
-    DynamicRangeCompressionProfile: Ac3DynamicRangeCompressionProfile = null,
-    LfeFilter: Ac3LfeFilter = null,
-    MetadataControl: Ac3MetadataControl = null,
-    SampleRate: Int | Double = null
-  ): Ac3Settings = {
+  def apply(): Ac3Settings = {
     val __obj = js.Dynamic.literal()
-    if (Bitrate != null) __obj.updateDynamic("Bitrate")(Bitrate.asInstanceOf[js.Any])
-    if (BitstreamMode != null) __obj.updateDynamic("BitstreamMode")(BitstreamMode.asInstanceOf[js.Any])
-    if (CodingMode != null) __obj.updateDynamic("CodingMode")(CodingMode.asInstanceOf[js.Any])
-    if (Dialnorm != null) __obj.updateDynamic("Dialnorm")(Dialnorm.asInstanceOf[js.Any])
-    if (DynamicRangeCompressionProfile != null) __obj.updateDynamic("DynamicRangeCompressionProfile")(DynamicRangeCompressionProfile.asInstanceOf[js.Any])
-    if (LfeFilter != null) __obj.updateDynamic("LfeFilter")(LfeFilter.asInstanceOf[js.Any])
-    if (MetadataControl != null) __obj.updateDynamic("MetadataControl")(MetadataControl.asInstanceOf[js.Any])
-    if (SampleRate != null) __obj.updateDynamic("SampleRate")(SampleRate.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ac3Settings]
   }
+  @scala.inline
+  implicit class Ac3SettingsOps[Self <: Ac3Settings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBitrate(value: integerMin64000Max640000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBitstreamMode(value: Ac3BitstreamMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BitstreamMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitstreamMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BitstreamMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodingMode(value: Ac3CodingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialnorm(value: integerMin1Max31): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dialnorm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialnorm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dialnorm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicRangeCompressionProfile(value: Ac3DynamicRangeCompressionProfile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicRangeCompressionProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicRangeCompressionProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicRangeCompressionProfile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLfeFilter(value: Ac3LfeFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LfeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLfeFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LfeFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadataControl(value: Ac3MetadataControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetadataControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadataControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetadataControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: integerMin48000Max48000): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleRate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

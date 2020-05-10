@@ -18,13 +18,35 @@ trait FleetLaunchTemplateConfig extends js.Object {
 
 object FleetLaunchTemplateConfig {
   @scala.inline
-  def apply(
-    launchTemplateSpecification: FleetLaunchTemplateConfigLaunchTemplateSpecification,
-    overrides: js.Array[FleetLaunchTemplateConfigOverride] = null
-  ): FleetLaunchTemplateConfig = {
+  def apply(launchTemplateSpecification: FleetLaunchTemplateConfigLaunchTemplateSpecification): FleetLaunchTemplateConfig = {
     val __obj = js.Dynamic.literal(launchTemplateSpecification = launchTemplateSpecification.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     __obj.asInstanceOf[FleetLaunchTemplateConfig]
   }
+  @scala.inline
+  implicit class FleetLaunchTemplateConfigOps[Self <: FleetLaunchTemplateConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLaunchTemplateSpecification(value: FleetLaunchTemplateConfigLaunchTemplateSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchTemplateSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOverrides(value: js.Array[FleetLaunchTemplateConfigOverride]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

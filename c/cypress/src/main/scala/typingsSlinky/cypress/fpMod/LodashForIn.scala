@@ -21,6 +21,6 @@ trait LodashForIn extends js.Object {
     `object`: T
   ): js.UndefOr[T | Null] = js.native
   def apply[T](iteratee: __): LodashForIn2x2[T] = js.native
-  def apply[T](iteratee: __, `object`: T): LodashForIn2x2[T] = js.native
+  def apply[T](iteratee: __, `object`: T): LodashForIn1x2[T] = js.native
 }
 

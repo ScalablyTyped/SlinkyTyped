@@ -42,25 +42,107 @@ trait AssetAttributes extends js.Object {
 
 object AssetAttributes {
   @scala.inline
-  def apply(
-    schemaVersion: NumericVersion,
-    agentId: AgentId = null,
-    amiId: AmiId = null,
-    autoScalingGroup: AutoScalingGroup = null,
-    hostname: Hostname = null,
-    ipv4Addresses: Ipv4AddressList = null,
-    networkInterfaces: NetworkInterfaces = null,
-    tags: Tags = null
-  ): AssetAttributes = {
+  def apply(schemaVersion: NumericVersion): AssetAttributes = {
     val __obj = js.Dynamic.literal(schemaVersion = schemaVersion.asInstanceOf[js.Any])
-    if (agentId != null) __obj.updateDynamic("agentId")(agentId.asInstanceOf[js.Any])
-    if (amiId != null) __obj.updateDynamic("amiId")(amiId.asInstanceOf[js.Any])
-    if (autoScalingGroup != null) __obj.updateDynamic("autoScalingGroup")(autoScalingGroup.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (ipv4Addresses != null) __obj.updateDynamic("ipv4Addresses")(ipv4Addresses.asInstanceOf[js.Any])
-    if (networkInterfaces != null) __obj.updateDynamic("networkInterfaces")(networkInterfaces.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssetAttributes]
   }
+  @scala.inline
+  implicit class AssetAttributesOps[Self <: AssetAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSchemaVersion(value: NumericVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAgentId(value: AgentId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmiId(value: AmiId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmiId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amiId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoScalingGroup(value: AutoScalingGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoScalingGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostname(value: Hostname): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv4Addresses(value: Ipv4AddressList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv4Addresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv4Addresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipv4Addresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaces(value: NetworkInterfaces): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInterfaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkInterfaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

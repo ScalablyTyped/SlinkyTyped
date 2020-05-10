@@ -480,9 +480,6 @@ object expressValidatorStrings {
   sealed trait exists extends js.Object
   
   @js.native
-  sealed trait `express-validatorNumbersigncontexts` extends js.Object
-  
-  @js.native
   sealed trait `fa-IR`
     extends AlphaLocale
        with AlphanumericLocale
@@ -1205,8 +1202,6 @@ object expressValidatorStrings {
   def `et-EE`: `et-EE` = "et-EE".asInstanceOf[`et-EE`]
   @scala.inline
   def exists: exists = "exists".asInstanceOf[exists]
-  @scala.inline
-  def `express-validatorNumbersigncontexts`: `express-validatorNumbersigncontexts` = "express-validator#contexts".asInstanceOf[`express-validatorNumbersigncontexts`]
   @scala.inline
   def `fa-IR`: `fa-IR` = "fa-IR".asInstanceOf[`fa-IR`]
   @scala.inline

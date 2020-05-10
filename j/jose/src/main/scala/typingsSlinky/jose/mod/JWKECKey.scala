@@ -5,43 +5,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JWKECKey
   extends KeyParameters
      with JSONWebKey
      with _ProduceKeyInput {
-  var crv: ECCurve
-  var d: js.UndefOr[String] = js.undefined
-  var kty: EC
-  var x: String
-  var y: String
+  var crv: ECCurve = js.native
+  var d: js.UndefOr[String] = js.native
+  var kty: EC = js.native
+  var x: String = js.native
+  var y: String = js.native
 }
 
 object JWKECKey {
   @scala.inline
-  def apply(
-    crv: ECCurve,
-    kty: EC,
-    x: String,
-    y: String,
-    alg: String = null,
-    d: String = null,
-    key_ops: js.Array[keyOperation] = null,
-    kid: String = null,
-    use: use = null,
-    x5c: js.Array[String] = null,
-    x5t: String = null,
-    x5tNumbersignS256: String = null
-  ): JWKECKey = {
+  def apply(crv: ECCurve, kty: EC, x: String, y: String): JWKECKey = {
     val __obj = js.Dynamic.literal(crv = crv.asInstanceOf[js.Any], kty = kty.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    if (alg != null) __obj.updateDynamic("alg")(alg.asInstanceOf[js.Any])
-    if (d != null) __obj.updateDynamic("d")(d.asInstanceOf[js.Any])
-    if (key_ops != null) __obj.updateDynamic("key_ops")(key_ops.asInstanceOf[js.Any])
-    if (kid != null) __obj.updateDynamic("kid")(kid.asInstanceOf[js.Any])
-    if (use != null) __obj.updateDynamic("use")(use.asInstanceOf[js.Any])
-    if (x5c != null) __obj.updateDynamic("x5c")(x5c.asInstanceOf[js.Any])
-    if (x5t != null) __obj.updateDynamic("x5t")(x5t.asInstanceOf[js.Any])
-    if (x5tNumbersignS256 != null) __obj.updateDynamic("x5t#S256")(x5tNumbersignS256.asInstanceOf[js.Any])
     __obj.asInstanceOf[JWKECKey]
   }
+  @scala.inline
+  implicit class JWKECKeyOps[Self <: JWKECKey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCrv(value: ECCurve): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKty(value: EC): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withD(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutD: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

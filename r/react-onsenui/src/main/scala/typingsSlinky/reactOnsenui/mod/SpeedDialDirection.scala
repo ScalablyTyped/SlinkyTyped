@@ -14,14 +14,12 @@ trait SpeedDialDirection extends js.Object
 
 object SpeedDialDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def down: typingsSlinky.reactOnsenui.reactOnsenuiStrings.down = "down".asInstanceOf[typingsSlinky.reactOnsenui.reactOnsenuiStrings.down]
   @scala.inline
-  def down: typingsSlinky.reactOnsenui.reactOnsenuiStrings.down = this.cast("down")
+  def left: typingsSlinky.reactOnsenui.reactOnsenuiStrings.left = "left".asInstanceOf[typingsSlinky.reactOnsenui.reactOnsenuiStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactOnsenui.reactOnsenuiStrings.left = this.cast("left")
+  def right: typingsSlinky.reactOnsenui.reactOnsenuiStrings.right = "right".asInstanceOf[typingsSlinky.reactOnsenui.reactOnsenuiStrings.right]
   @scala.inline
-  def right: typingsSlinky.reactOnsenui.reactOnsenuiStrings.right = this.cast("right")
-  @scala.inline
-  def up: typingsSlinky.reactOnsenui.reactOnsenuiStrings.up = this.cast("up")
+  def up: typingsSlinky.reactOnsenui.reactOnsenuiStrings.up = "up".asInstanceOf[typingsSlinky.reactOnsenui.reactOnsenuiStrings.up]
 }
 

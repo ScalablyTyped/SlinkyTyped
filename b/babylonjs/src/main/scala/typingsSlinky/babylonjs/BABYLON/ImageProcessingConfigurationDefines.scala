@@ -1,0 +1,12 @@
+package typingsSlinky.babylonjs.BABYLON
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("BABYLON.ImageProcessingConfigurationDefines")
+@js.native
+class ImageProcessingConfigurationDefines ()
+  extends MaterialDefines
+     with IImageProcessingConfigurationDefines
+

@@ -16,18 +16,16 @@ trait LimitType extends js.Object
 
 object LimitType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disk: typingsSlinky.gm.gmStrings.disk = "disk".asInstanceOf[typingsSlinky.gm.gmStrings.disk]
   @scala.inline
-  def disk: typingsSlinky.gm.gmStrings.disk = this.cast("disk")
+  def file: typingsSlinky.gm.gmStrings.file = "file".asInstanceOf[typingsSlinky.gm.gmStrings.file]
   @scala.inline
-  def file: typingsSlinky.gm.gmStrings.file = this.cast("file")
+  def map: typingsSlinky.gm.gmStrings.map = "map".asInstanceOf[typingsSlinky.gm.gmStrings.map]
   @scala.inline
-  def map: typingsSlinky.gm.gmStrings.map = this.cast("map")
+  def memory: typingsSlinky.gm.gmStrings.memory = "memory".asInstanceOf[typingsSlinky.gm.gmStrings.memory]
   @scala.inline
-  def memory: typingsSlinky.gm.gmStrings.memory = this.cast("memory")
+  def pixels: typingsSlinky.gm.gmStrings.pixels = "pixels".asInstanceOf[typingsSlinky.gm.gmStrings.pixels]
   @scala.inline
-  def pixels: typingsSlinky.gm.gmStrings.pixels = this.cast("pixels")
-  @scala.inline
-  def threads: typingsSlinky.gm.gmStrings.threads = this.cast("threads")
+  def threads: typingsSlinky.gm.gmStrings.threads = "threads".asInstanceOf[typingsSlinky.gm.gmStrings.threads]
 }
 

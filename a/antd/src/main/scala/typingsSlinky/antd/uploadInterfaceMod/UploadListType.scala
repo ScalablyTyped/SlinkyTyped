@@ -13,12 +13,10 @@ trait UploadListType extends js.Object
 
 object UploadListType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def picture: typingsSlinky.antd.antdStrings.picture = "picture".asInstanceOf[typingsSlinky.antd.antdStrings.picture]
   @scala.inline
-  def picture: typingsSlinky.antd.antdStrings.picture = this.cast("picture")
+  def `picture-card`: typingsSlinky.antd.antdStrings.`picture-card` = "picture-card".asInstanceOf[typingsSlinky.antd.antdStrings.`picture-card`]
   @scala.inline
-  def `picture-card`: typingsSlinky.antd.antdStrings.`picture-card` = this.cast("picture-card")
-  @scala.inline
-  def text: typingsSlinky.antd.antdStrings.text = this.cast("text")
+  def text: typingsSlinky.antd.antdStrings.text = "text".asInstanceOf[typingsSlinky.antd.antdStrings.text]
 }
 

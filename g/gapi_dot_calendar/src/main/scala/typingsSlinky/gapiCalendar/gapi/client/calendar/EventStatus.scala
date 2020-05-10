@@ -14,12 +14,10 @@ trait EventStatus extends js.Object
 
 object EventStatus {
   @scala.inline
-  def cancelled: typingsSlinky.gapiCalendar.gapiCalendarStrings.cancelled = this.cast("cancelled")
+  def cancelled: typingsSlinky.gapiCalendar.gapiCalendarStrings.cancelled = "cancelled".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.cancelled]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def confirmed: typingsSlinky.gapiCalendar.gapiCalendarStrings.confirmed = "confirmed".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.confirmed]
   @scala.inline
-  def confirmed: typingsSlinky.gapiCalendar.gapiCalendarStrings.confirmed = this.cast("confirmed")
-  @scala.inline
-  def tentative: typingsSlinky.gapiCalendar.gapiCalendarStrings.tentative = this.cast("tentative")
+  def tentative: typingsSlinky.gapiCalendar.gapiCalendarStrings.tentative = "tentative".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.tentative]
 }
 

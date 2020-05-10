@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 7.21.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -33,7 +33,7 @@ class ImportMappingJavaActionParameterType protected ()
   @JSName("model")
   var model_FImportMappingJavaActionParameterType: IModel = js.native
   @JSName("containerAsCodeActionParameter")
-  def containerAsCodeActionParameter_MImportMappingJavaActionParameterType(): CodeActionParameter = js.native
+  def containerAsCodeActionParameter_MImportMappingJavaActionParameterType: CodeActionParameter = js.native
 }
 
 /* static members */

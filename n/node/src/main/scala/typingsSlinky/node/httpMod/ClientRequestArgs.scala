@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClientRequestArgs extends js.Object {
-  var _defaultAgent: js.UndefOr[Agent] = js.undefined
-  var agent: js.UndefOr[Agent | Boolean] = js.undefined
-  var auth: js.UndefOr[String | Null] = js.undefined
+  var _defaultAgent: js.UndefOr[Agent] = js.native
+  var agent: js.UndefOr[Agent | Boolean] = js.native
+  var auth: js.UndefOr[String | Null] = js.native
   // https://github.com/nodejs/node/blob/master/lib/_http_client.js#L278
   var createConnection: js.UndefOr[
     js.Function2[
@@ -16,68 +17,293 @@ trait ClientRequestArgs extends js.Object {
       /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit], 
       Socket
     ]
-  ] = js.undefined
-  var defaultPort: js.UndefOr[Double | String] = js.undefined
-  var family: js.UndefOr[Double] = js.undefined
-  var headers: js.UndefOr[OutgoingHttpHeaders] = js.undefined
-  var host: js.UndefOr[String | Null] = js.undefined
-  var hostname: js.UndefOr[String | Null] = js.undefined
-  var localAddress: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var defaultPort: js.UndefOr[Double | String] = js.native
+  var family: js.UndefOr[Double] = js.native
+  var headers: js.UndefOr[OutgoingHttpHeaders] = js.native
+  var host: js.UndefOr[String | Null] = js.native
+  var hostname: js.UndefOr[String | Null] = js.native
+  var localAddress: js.UndefOr[String] = js.native
   /**
     * @default 8192
     */
-  var maxHeaderSize: js.UndefOr[Double] = js.undefined
-  var method: js.UndefOr[String] = js.undefined
-  var path: js.UndefOr[String | Null] = js.undefined
-  var port: js.UndefOr[Double | String | Null] = js.undefined
-  var protocol: js.UndefOr[String | Null] = js.undefined
-  var setHost: js.UndefOr[Boolean] = js.undefined
-  var socketPath: js.UndefOr[String] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
+  var maxHeaderSize: js.UndefOr[Double] = js.native
+  var method: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String | Null] = js.native
+  var port: js.UndefOr[Double | String | Null] = js.native
+  var protocol: js.UndefOr[String | Null] = js.native
+  var setHost: js.UndefOr[Boolean] = js.native
+  var socketPath: js.UndefOr[String] = js.native
+  var timeout: js.UndefOr[Double] = js.native
 }
 
 object ClientRequestArgs {
   @scala.inline
-  def apply(
-    _defaultAgent: Agent = null,
-    agent: Agent | Boolean = null,
-    auth: String = null,
-    createConnection: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket = null,
-    defaultPort: Double | String = null,
-    family: Int | Double = null,
-    headers: OutgoingHttpHeaders = null,
-    host: String = null,
-    hostname: String = null,
-    localAddress: String = null,
-    maxHeaderSize: Int | Double = null,
-    method: String = null,
-    path: String = null,
-    port: Double | String = null,
-    protocol: String = null,
-    setHost: js.UndefOr[Boolean] = js.undefined,
-    socketPath: String = null,
-    timeout: Int | Double = null
-  ): ClientRequestArgs = {
+  def apply(): ClientRequestArgs = {
     val __obj = js.Dynamic.literal()
-    if (_defaultAgent != null) __obj.updateDynamic("_defaultAgent")(_defaultAgent.asInstanceOf[js.Any])
-    if (agent != null) __obj.updateDynamic("agent")(agent.asInstanceOf[js.Any])
-    if (auth != null) __obj.updateDynamic("auth")(auth.asInstanceOf[js.Any])
-    if (createConnection != null) __obj.updateDynamic("createConnection")(js.Any.fromFunction2(createConnection))
-    if (defaultPort != null) __obj.updateDynamic("defaultPort")(defaultPort.asInstanceOf[js.Any])
-    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (localAddress != null) __obj.updateDynamic("localAddress")(localAddress.asInstanceOf[js.Any])
-    if (maxHeaderSize != null) __obj.updateDynamic("maxHeaderSize")(maxHeaderSize.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (!js.isUndefined(setHost)) __obj.updateDynamic("setHost")(setHost.asInstanceOf[js.Any])
-    if (socketPath != null) __obj.updateDynamic("socketPath")(socketPath.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientRequestArgs]
   }
+  @scala.inline
+  implicit class ClientRequestArgsOps[Self <: ClientRequestArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_defaultAgent(value: Agent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultAgent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAgent(value: Agent | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(null)
+        ret
+    }
+    @scala.inline
+    def withCreateConnection(
+      value: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createConnection")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreateConnection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createConnection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultPort(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFamily(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: OutgoingHttpHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(null)
+        ret
+    }
+    @scala.inline
+    def withHostname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostnameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(null)
+        ret
+    }
+    @scala.inline
+    def withLocalAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxHeaderSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeaderSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxHeaderSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeaderSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(null)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(null)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocolNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(null)
+        ret
+    }
+    @scala.inline
+    def withSetHost(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSocketPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSocketPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

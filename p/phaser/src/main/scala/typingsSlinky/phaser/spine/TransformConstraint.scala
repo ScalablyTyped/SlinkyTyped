@@ -23,9 +23,5 @@ class TransformConstraint protected () extends Updatable {
   def applyAbsoluteWorld(): Unit = js.native
   def applyRelativeLocal(): Unit = js.native
   def applyRelativeWorld(): Unit = js.native
-  /* CompleteClass */
-  override def isActive(): Boolean = js.native
-  /* CompleteClass */
-  override def update(): Unit = js.native
 }
 

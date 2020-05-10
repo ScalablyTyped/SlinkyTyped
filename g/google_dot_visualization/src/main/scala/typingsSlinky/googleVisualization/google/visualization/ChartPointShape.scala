@@ -16,18 +16,16 @@ trait ChartPointShape extends js.Object
 
 object ChartPointShape {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def circle: typingsSlinky.googleVisualization.googleVisualizationStrings.circle = "circle".asInstanceOf[typingsSlinky.googleVisualization.googleVisualizationStrings.circle]
   @scala.inline
-  def circle: typingsSlinky.googleVisualization.googleVisualizationStrings.circle = this.cast("circle")
+  def diamond: typingsSlinky.googleVisualization.googleVisualizationStrings.diamond = "diamond".asInstanceOf[typingsSlinky.googleVisualization.googleVisualizationStrings.diamond]
   @scala.inline
-  def diamond: typingsSlinky.googleVisualization.googleVisualizationStrings.diamond = this.cast("diamond")
+  def polygon: typingsSlinky.googleVisualization.googleVisualizationStrings.polygon = "polygon".asInstanceOf[typingsSlinky.googleVisualization.googleVisualizationStrings.polygon]
   @scala.inline
-  def polygon: typingsSlinky.googleVisualization.googleVisualizationStrings.polygon = this.cast("polygon")
+  def square: typingsSlinky.googleVisualization.googleVisualizationStrings.square = "square".asInstanceOf[typingsSlinky.googleVisualization.googleVisualizationStrings.square]
   @scala.inline
-  def square: typingsSlinky.googleVisualization.googleVisualizationStrings.square = this.cast("square")
+  def star: typingsSlinky.googleVisualization.googleVisualizationStrings.star = "star".asInstanceOf[typingsSlinky.googleVisualization.googleVisualizationStrings.star]
   @scala.inline
-  def star: typingsSlinky.googleVisualization.googleVisualizationStrings.star = this.cast("star")
-  @scala.inline
-  def triangle: typingsSlinky.googleVisualization.googleVisualizationStrings.triangle = this.cast("triangle")
+  def triangle: typingsSlinky.googleVisualization.googleVisualizationStrings.triangle = "triangle".asInstanceOf[typingsSlinky.googleVisualization.googleVisualizationStrings.triangle]
 }
 

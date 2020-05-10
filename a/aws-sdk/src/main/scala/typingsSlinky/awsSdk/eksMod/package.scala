@@ -27,6 +27,7 @@ package object eksMod {
     - java.lang.String
   */
   type ClusterStatus = typingsSlinky.awsSdk.eksMod._ClusterStatus | java.lang.String
+  type EncryptionConfigList = js.Array[typingsSlinky.awsSdk.eksMod.EncryptionConfig]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SubnetNotFound
     - typingsSlinky.awsSdk.awsSdkStrings.SecurityGroupNotFound

@@ -8,17 +8,18 @@ import scala.scalajs.js.annotation._
 /**
   * CSINodeDriver holds information about the specification of one CSI driver installed on a node
   */
+@js.native
 trait CSINodeDriver extends js.Object {
   /**
     * allocatable represents the volume resources of a node that are available for scheduling.
     * This field is beta.
     */
-  var allocatable: js.UndefOr[Input[VolumeNodeResources]] = js.undefined
+  var allocatable: js.UndefOr[Input[VolumeNodeResources]] = js.native
   /**
     * This is the name of the CSI driver that this object refers to. This MUST be the same name
     * returned by the CSI GetPluginName() call for that driver.
     */
-  var name: Input[String]
+  var name: Input[String] = js.native
   /**
     * nodeID of the node from the driver point of view. This field enables Kubernetes to
     * communicate with storage systems that do not share the same nomenclature for nodes. For
@@ -28,7 +29,7 @@ trait CSINodeDriver extends js.Object {
     * the ID that the storage system will understand, e.g. "nodeA" instead of "node1". This field
     * is required.
     */
-  var nodeID: Input[String]
+  var nodeID: Input[String] = js.native
   /**
     * topologyKeys is the list of keys supported by the driver. When a driver is initialized on a
     * cluster, it provides a set of topology keys that it understands (e.g. "company.com/zone",
@@ -39,21 +40,58 @@ trait CSINodeDriver extends js.Object {
     * It is possible for different nodes to use different topology keys. This can be empty if
     * driver does not support topology.
     */
-  var topologyKeys: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
+  var topologyKeys: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
 }
 
 object CSINodeDriver {
   @scala.inline
-  def apply(
-    name: Input[String],
-    nodeID: Input[String],
-    allocatable: Input[VolumeNodeResources] = null,
-    topologyKeys: Input[js.Array[Input[String]]] = null
-  ): CSINodeDriver = {
+  def apply(name: Input[String], nodeID: Input[String]): CSINodeDriver = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], nodeID = nodeID.asInstanceOf[js.Any])
-    if (allocatable != null) __obj.updateDynamic("allocatable")(allocatable.asInstanceOf[js.Any])
-    if (topologyKeys != null) __obj.updateDynamic("topologyKeys")(topologyKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[CSINodeDriver]
   }
+  @scala.inline
+  implicit class CSINodeDriverOps[Self <: CSINodeDriver] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeID(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllocatable(value: Input[VolumeNodeResources]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allocatable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocatable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allocatable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopologyKeys(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topologyKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopologyKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topologyKeys")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

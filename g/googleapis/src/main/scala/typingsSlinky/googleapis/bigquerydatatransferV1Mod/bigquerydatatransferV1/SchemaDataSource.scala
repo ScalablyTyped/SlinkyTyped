@@ -97,46 +97,233 @@ trait SchemaDataSource extends js.Object {
 
 object SchemaDataSource {
   @scala.inline
-  def apply(
-    authorizationType: String = null,
-    clientId: String = null,
-    dataRefreshType: String = null,
-    dataSourceId: String = null,
-    defaultDataRefreshWindowDays: Int | Double = null,
-    defaultSchedule: String = null,
-    description: String = null,
-    displayName: String = null,
-    helpUrl: String = null,
-    manualRunsDisabled: js.UndefOr[Boolean] = js.undefined,
-    minimumScheduleInterval: String = null,
-    name: String = null,
-    parameters: js.Array[SchemaDataSourceParameter] = null,
-    scopes: js.Array[String] = null,
-    supportsCustomSchedule: js.UndefOr[Boolean] = js.undefined,
-    supportsMultipleTransfers: js.UndefOr[Boolean] = js.undefined,
-    transferType: String = null,
-    updateDeadlineSeconds: Int | Double = null
-  ): SchemaDataSource = {
+  def apply(): SchemaDataSource = {
     val __obj = js.Dynamic.literal()
-    if (authorizationType != null) __obj.updateDynamic("authorizationType")(authorizationType.asInstanceOf[js.Any])
-    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
-    if (dataRefreshType != null) __obj.updateDynamic("dataRefreshType")(dataRefreshType.asInstanceOf[js.Any])
-    if (dataSourceId != null) __obj.updateDynamic("dataSourceId")(dataSourceId.asInstanceOf[js.Any])
-    if (defaultDataRefreshWindowDays != null) __obj.updateDynamic("defaultDataRefreshWindowDays")(defaultDataRefreshWindowDays.asInstanceOf[js.Any])
-    if (defaultSchedule != null) __obj.updateDynamic("defaultSchedule")(defaultSchedule.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (helpUrl != null) __obj.updateDynamic("helpUrl")(helpUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(manualRunsDisabled)) __obj.updateDynamic("manualRunsDisabled")(manualRunsDisabled.asInstanceOf[js.Any])
-    if (minimumScheduleInterval != null) __obj.updateDynamic("minimumScheduleInterval")(minimumScheduleInterval.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
-    if (scopes != null) __obj.updateDynamic("scopes")(scopes.asInstanceOf[js.Any])
-    if (!js.isUndefined(supportsCustomSchedule)) __obj.updateDynamic("supportsCustomSchedule")(supportsCustomSchedule.asInstanceOf[js.Any])
-    if (!js.isUndefined(supportsMultipleTransfers)) __obj.updateDynamic("supportsMultipleTransfers")(supportsMultipleTransfers.asInstanceOf[js.Any])
-    if (transferType != null) __obj.updateDynamic("transferType")(transferType.asInstanceOf[js.Any])
-    if (updateDeadlineSeconds != null) __obj.updateDynamic("updateDeadlineSeconds")(updateDeadlineSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDataSource]
   }
+  @scala.inline
+  implicit class SchemaDataSourceOps[Self <: SchemaDataSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizationType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataRefreshType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRefreshType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataRefreshType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRefreshType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultDataRefreshWindowDays(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDataRefreshWindowDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultDataRefreshWindowDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDataRefreshWindowDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSchedule(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSchedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSchedule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHelpUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("helpUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHelpUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("helpUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManualRunsDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manualRunsDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManualRunsDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manualRunsDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumScheduleInterval(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumScheduleInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumScheduleInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumScheduleInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: js.Array[SchemaDataSourceParameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScopes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScopes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportsCustomSchedule(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCustomSchedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportsCustomSchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsCustomSchedule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportsMultipleTransfers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsMultipleTransfers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportsMultipleTransfers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsMultipleTransfers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateDeadlineSeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDeadlineSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateDeadlineSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDeadlineSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

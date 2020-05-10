@@ -1,9 +1,8 @@
 package typingsSlinky.reactJsonView.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactJsonView.mod.CollapsedFieldProps
 import typingsSlinky.reactJsonView.mod.InteractionProps
 import typingsSlinky.reactJsonView.mod.OnCopyProps
@@ -21,58 +20,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactJsonView
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactJsonView {
   @JSImport("react-json-view", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    src: js.Object,
-    collapseStringsAfterLength: Double | `false` = null,
-    collapsed: Boolean | Double = null,
-    defaultValue: TypeDefaultValue | js.Array[TypeDefaultValue] = null,
-    displayDataTypes: js.UndefOr[Boolean] = js.undefined,
-    displayObjectSize: js.UndefOr[Boolean] = js.undefined,
-    enableClipboard: Boolean | (js.Function1[/* copy */ OnCopyProps, Unit]) = null,
-    groupArraysAfterLength: Int | Double = null,
-    iconStyle: circle | triangle | square = null,
-    indentWidth: Int | Double = null,
-    name: String | `false` = null,
-    onAdd: (js.Function1[/* add */ InteractionProps, `false` | _]) | `false` = null,
-    onDelete: (js.Function1[/* del */ InteractionProps, `false` | _]) | `false` = null,
-    onEdit: (js.Function1[/* edit */ InteractionProps, `false` | _]) | `false` = null,
-    onSelect: (js.Function1[/* select */ OnSelectProps, Unit]) | `false` = null,
-    shouldCollapse: `false` | (js.Function1[/* field */ CollapsedFieldProps, Boolean]) = null,
-    sortKeys: js.UndefOr[Boolean] = js.undefined,
-    theme: ThemeKeys | ThemeObject = null,
-    validationMessage: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    if (collapseStringsAfterLength != null) __obj.updateDynamic("collapseStringsAfterLength")(collapseStringsAfterLength.asInstanceOf[js.Any])
-    if (collapsed != null) __obj.updateDynamic("collapsed")(collapsed.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(displayDataTypes)) __obj.updateDynamic("displayDataTypes")(displayDataTypes.asInstanceOf[js.Any])
-    if (!js.isUndefined(displayObjectSize)) __obj.updateDynamic("displayObjectSize")(displayObjectSize.asInstanceOf[js.Any])
-    if (enableClipboard != null) __obj.updateDynamic("enableClipboard")(enableClipboard.asInstanceOf[js.Any])
-    if (groupArraysAfterLength != null) __obj.updateDynamic("groupArraysAfterLength")(groupArraysAfterLength.asInstanceOf[js.Any])
-    if (iconStyle != null) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
-    if (indentWidth != null) __obj.updateDynamic("indentWidth")(indentWidth.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onAdd != null) __obj.updateDynamic("onAdd")(onAdd.asInstanceOf[js.Any])
-    if (onDelete != null) __obj.updateDynamic("onDelete")(onDelete.asInstanceOf[js.Any])
-    if (onEdit != null) __obj.updateDynamic("onEdit")(onEdit.asInstanceOf[js.Any])
-    if (onSelect != null) __obj.updateDynamic("onSelect")(onSelect.asInstanceOf[js.Any])
-    if (shouldCollapse != null) __obj.updateDynamic("shouldCollapse")(shouldCollapse.asInstanceOf[js.Any])
-    if (!js.isUndefined(sortKeys)) __obj.updateDynamic("sortKeys")(sortKeys.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (validationMessage != null) __obj.updateDynamic("validationMessage")(validationMessage.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def collapseStringsAfterLength(value: Double | `false`): this.type = set("collapseStringsAfterLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapsed(value: Boolean | Double): this.type = set("collapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: TypeDefaultValue | js.Array[TypeDefaultValue]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueNull: this.type = set("defaultValue", null)
+    @scala.inline
+    def displayDataTypes(value: Boolean): this.type = set("displayDataTypes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def displayObjectSize(value: Boolean): this.type = set("displayObjectSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableClipboardFunction1(value: /* copy */ OnCopyProps => Unit): this.type = set("enableClipboard", js.Any.fromFunction1(value))
+    @scala.inline
+    def enableClipboard(value: Boolean | (js.Function1[/* copy */ OnCopyProps, Unit])): this.type = set("enableClipboard", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupArraysAfterLength(value: Double): this.type = set("groupArraysAfterLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconStyle(value: circle | triangle | square): this.type = set("iconStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indentWidth(value: Double): this.type = set("indentWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String | `false`): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nameNull: this.type = set("name", null)
+    @scala.inline
+    def onAddFunction1(value: /* add */ InteractionProps => `false` | _): this.type = set("onAdd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAdd(value: (js.Function1[/* add */ InteractionProps, `false` | _]) | `false`): this.type = set("onAdd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDeleteFunction1(value: /* del */ InteractionProps => `false` | _): this.type = set("onDelete", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDelete(value: (js.Function1[/* del */ InteractionProps, `false` | _]) | `false`): this.type = set("onDelete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEditFunction1(value: /* edit */ InteractionProps => `false` | _): this.type = set("onEdit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEdit(value: (js.Function1[/* edit */ InteractionProps, `false` | _]) | `false`): this.type = set("onEdit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSelectFunction1(value: /* select */ OnSelectProps => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: (js.Function1[/* select */ OnSelectProps, Unit]) | `false`): this.type = set("onSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldCollapseFunction1(value: /* field */ CollapsedFieldProps => Boolean): this.type = set("shouldCollapse", js.Any.fromFunction1(value))
+    @scala.inline
+    def shouldCollapse(value: `false` | (js.Function1[/* field */ CollapsedFieldProps, Boolean])): this.type = set("shouldCollapse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortKeys(value: Boolean): this.type = set("sortKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ThemeKeys | ThemeObject): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validationMessage(value: String): this.type = set("validationMessage", value.asInstanceOf[js.Any])
   }
-  type Props = ReactJsonViewProps
+  
+  def withProps(p: ReactJsonViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(src: js.Object): Builder = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactJsonViewProps]))
+  }
 }
 

@@ -1,42 +1,36 @@
 package typingsSlinky.reactOverlays.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactOverlays.dropdownMenuMod.DropdownMenuProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DropdownMenu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOverlays.mod.DropdownMenu] {
+object DropdownMenu {
   @JSImport("react-overlays", "DropdownMenu")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    alignEnd: js.UndefOr[Boolean] = js.undefined,
-    flip: js.UndefOr[Boolean] = js.undefined,
-    popperConfig: js.Object = null,
-    rootCloseEvent: String = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    usePopper: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.DropdownMenu] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alignEnd)) __obj.updateDynamic("alignEnd")(alignEnd.asInstanceOf[js.Any])
-    if (!js.isUndefined(flip)) __obj.updateDynamic("flip")(flip.asInstanceOf[js.Any])
-    if (popperConfig != null) __obj.updateDynamic("popperConfig")(popperConfig.asInstanceOf[js.Any])
-    if (rootCloseEvent != null) __obj.updateDynamic("rootCloseEvent")(rootCloseEvent.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(usePopper)) __obj.updateDynamic("usePopper")(usePopper.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.DropdownMenu] {
+    @scala.inline
+    def alignEnd(value: Boolean): this.type = set("alignEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flip(value: Boolean): this.type = set("flip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popperConfig(value: js.Object): this.type = set("popperConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rootCloseEvent(value: String): this.type = set("rootCloseEvent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def show(value: Boolean): this.type = set("show", value.asInstanceOf[js.Any])
+    @scala.inline
+    def usePopper(value: Boolean): this.type = set("usePopper", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.DropdownMenu] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactOverlays.mod.DropdownMenu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DropdownMenuProps
+  
+  def withProps(p: DropdownMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DropdownMenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

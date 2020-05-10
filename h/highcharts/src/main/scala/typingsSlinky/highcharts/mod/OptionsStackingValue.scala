@@ -14,14 +14,12 @@ trait OptionsStackingValue extends js.Object
 
 object OptionsStackingValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def normal: typingsSlinky.highcharts.highchartsStrings.normal = "normal".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.highcharts.highchartsStrings.normal = this.cast("normal")
+  def overlap: typingsSlinky.highcharts.highchartsStrings.overlap = "overlap".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.overlap]
   @scala.inline
-  def overlap: typingsSlinky.highcharts.highchartsStrings.overlap = this.cast("overlap")
+  def percent: typingsSlinky.highcharts.highchartsStrings.percent = "percent".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.percent]
   @scala.inline
-  def percent: typingsSlinky.highcharts.highchartsStrings.percent = this.cast("percent")
-  @scala.inline
-  def stream: typingsSlinky.highcharts.highchartsStrings.stream = this.cast("stream")
+  def stream: typingsSlinky.highcharts.highchartsStrings.stream = "stream".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.stream]
 }
 

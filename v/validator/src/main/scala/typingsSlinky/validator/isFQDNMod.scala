@@ -1,6 +1,5 @@
 package typingsSlinky.validator
 
-import typingsSlinky.validator.mod.validator.IsFQDNOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,7 @@ object isFQDNMod extends js.Object {
     * @param [options] - Options
     */
   def default(str: String): Boolean = js.native
-  def default(str: String, options: IsFQDNOptions): Boolean = js.native
+  def default(str: String, options: typingsSlinky.validator.mod.validator.IsFQDNOptions): Boolean = js.native
+  type IsFQDNOptions = typingsSlinky.validator.mod.validator.IsFQDNOptions
 }
 

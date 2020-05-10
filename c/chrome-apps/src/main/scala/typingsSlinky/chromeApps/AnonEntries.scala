@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEntries extends js.Object {
-  var entries: js.Array[FileEntry]
+  var entries: js.Array[FileEntry] = js.native
 }
 
 object AnonEntries {
   @scala.inline
   def apply(entries: js.Array[FileEntry]): AnonEntries = {
     val __obj = js.Dynamic.literal(entries = entries.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonEntries]
   }
+  @scala.inline
+  implicit class AnonEntriesOps[Self <: AnonEntries] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntries(value: js.Array[FileEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

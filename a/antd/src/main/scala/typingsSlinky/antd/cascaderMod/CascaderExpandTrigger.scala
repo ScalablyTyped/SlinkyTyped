@@ -12,10 +12,8 @@ trait CascaderExpandTrigger extends js.Object
 
 object CascaderExpandTrigger {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def click: typingsSlinky.antd.antdStrings.click = "click".asInstanceOf[typingsSlinky.antd.antdStrings.click]
   @scala.inline
-  def click: typingsSlinky.antd.antdStrings.click = this.cast("click")
-  @scala.inline
-  def hover: typingsSlinky.antd.antdStrings.hover = this.cast("hover")
+  def hover: typingsSlinky.antd.antdStrings.hover = "hover".asInstanceOf[typingsSlinky.antd.antdStrings.hover]
 }
 

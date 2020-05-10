@@ -4,26 +4,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISliderState extends js.Object {
-  var labelPrecision: js.UndefOr[Double] = js.undefined
+  var labelPrecision: js.UndefOr[Double] = js.native
   /** the client size, in pixels, of one tick */
-  var tickSize: js.UndefOr[Double] = js.undefined
+  var tickSize: js.UndefOr[Double] = js.native
   /** the size of one tick as a ratio of the component's client size */
-  var tickSizeRatio: js.UndefOr[Double] = js.undefined
+  var tickSizeRatio: js.UndefOr[Double] = js.native
 }
 
 object ISliderState {
   @scala.inline
-  def apply(
-    labelPrecision: Int | Double = null,
-    tickSize: Int | Double = null,
-    tickSizeRatio: Int | Double = null
-  ): ISliderState = {
+  def apply(): ISliderState = {
     val __obj = js.Dynamic.literal()
-    if (labelPrecision != null) __obj.updateDynamic("labelPrecision")(labelPrecision.asInstanceOf[js.Any])
-    if (tickSize != null) __obj.updateDynamic("tickSize")(tickSize.asInstanceOf[js.Any])
-    if (tickSizeRatio != null) __obj.updateDynamic("tickSizeRatio")(tickSizeRatio.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISliderState]
   }
+  @scala.inline
+  implicit class ISliderStateOps[Self <: ISliderState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabelPrecision(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPrecision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelPrecision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPrecision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickSizeRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickSizeRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickSizeRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickSizeRatio")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings._underscore
 import typingsSlinky.officeUiFabricReact.textFieldTypesMod.ITextFieldProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +21,7 @@ object textFieldMod extends js.Object {
     def this(props: ITextFieldProps) = this()
   }
   
-  val DEFAULT_MASK_CHAR: _underscore = js.native
+  val DEFAULT_MASK_CHAR: /* "_" */ String = js.native
   val TextField: ReactComponentClass[ITextFieldProps] = js.native
   /* static members */
   @js.native

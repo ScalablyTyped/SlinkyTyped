@@ -2,7 +2,6 @@ package typingsSlinky.jestHasteMap
 
 import typingsSlinky.jestTypes.configMod.Glob
 import typingsSlinky.jestTypes.configMod.Path
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +24,7 @@ object hasteFSMod extends js.Object {
     def getSha1(file: Path): String | Null = js.native
     def getSize(file: Path): Double | Null = js.native
     def matchFiles(pattern: String): js.Array[Path] = js.native
-    def matchFiles(pattern: RegExp): js.Array[Path] = js.native
+    def matchFiles(pattern: js.RegExp): js.Array[Path] = js.native
     def matchFilesWithGlob(globs: js.Array[Glob]): Set[Path] = js.native
     def matchFilesWithGlob(globs: js.Array[Glob], root: Path): Set[Path] = js.native
   }

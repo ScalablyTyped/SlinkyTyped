@@ -13,12 +13,10 @@ trait Renderers extends js.Object
 
 object Renderers {
   @scala.inline
-  def canvas: typingsSlinky.vegaTypings.vegaTypingsStrings.canvas = this.cast("canvas")
+  def canvas: typingsSlinky.vegaTypings.vegaTypingsStrings.canvas = "canvas".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.canvas]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.vegaTypings.vegaTypingsStrings.none = "none".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.none]
   @scala.inline
-  def none: typingsSlinky.vegaTypings.vegaTypingsStrings.none = this.cast("none")
-  @scala.inline
-  def svg: typingsSlinky.vegaTypings.vegaTypingsStrings.svg = this.cast("svg")
+  def svg: typingsSlinky.vegaTypings.vegaTypingsStrings.svg = "svg".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.svg]
 }
 

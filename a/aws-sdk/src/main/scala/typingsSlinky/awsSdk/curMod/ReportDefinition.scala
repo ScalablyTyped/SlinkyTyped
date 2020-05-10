@@ -41,16 +41,102 @@ object ReportDefinition {
     S3Bucket: S3Bucket,
     S3Prefix: S3Prefix,
     S3Region: AWSRegion,
-    TimeUnit: TimeUnit,
-    AdditionalArtifacts: AdditionalArtifactList = null,
-    RefreshClosedReports: js.UndefOr[Boolean] = js.undefined,
-    ReportVersioning: ReportVersioning = null
+    TimeUnit: TimeUnit
   ): ReportDefinition = {
     val __obj = js.Dynamic.literal(AdditionalSchemaElements = AdditionalSchemaElements.asInstanceOf[js.Any], Compression = Compression.asInstanceOf[js.Any], Format = Format.asInstanceOf[js.Any], ReportName = ReportName.asInstanceOf[js.Any], S3Bucket = S3Bucket.asInstanceOf[js.Any], S3Prefix = S3Prefix.asInstanceOf[js.Any], S3Region = S3Region.asInstanceOf[js.Any], TimeUnit = TimeUnit.asInstanceOf[js.Any])
-    if (AdditionalArtifacts != null) __obj.updateDynamic("AdditionalArtifacts")(AdditionalArtifacts.asInstanceOf[js.Any])
-    if (!js.isUndefined(RefreshClosedReports)) __obj.updateDynamic("RefreshClosedReports")(RefreshClosedReports.asInstanceOf[js.Any])
-    if (ReportVersioning != null) __obj.updateDynamic("ReportVersioning")(ReportVersioning.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReportDefinition]
   }
+  @scala.inline
+  implicit class ReportDefinitionOps[Self <: ReportDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalSchemaElements(value: SchemaElementList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalSchemaElements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompression(value: CompressionFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Compression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: ReportFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReportName(value: ReportName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3Bucket(value: S3Bucket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3Prefix(value: S3Prefix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3Region(value: AWSRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeUnit(value: TimeUnit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdditionalArtifacts(value: AdditionalArtifactList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalArtifacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalArtifacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdditionalArtifacts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefreshClosedReports(value: RefreshClosedReports): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshClosedReports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefreshClosedReports: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RefreshClosedReports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportVersioning(value: ReportVersioning): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportVersioning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportVersioning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportVersioning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

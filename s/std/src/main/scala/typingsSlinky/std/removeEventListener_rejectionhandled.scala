@@ -20,7 +20,7 @@ object removeEventListener_rejectionhandled extends js.Object {
   def apply(
     `type`: rejectionhandled,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ PromiseRejectionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

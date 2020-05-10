@@ -18,22 +18,20 @@ trait Arm64Extender extends js.Object
 
 object Arm64Extender {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def sxtb: typingsSlinky.fridaGum.fridaGumStrings.sxtb = "sxtb".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.sxtb]
   @scala.inline
-  def sxtb: typingsSlinky.fridaGum.fridaGumStrings.sxtb = this.cast("sxtb")
+  def sxth: typingsSlinky.fridaGum.fridaGumStrings.sxth = "sxth".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.sxth]
   @scala.inline
-  def sxth: typingsSlinky.fridaGum.fridaGumStrings.sxth = this.cast("sxth")
+  def sxtw: typingsSlinky.fridaGum.fridaGumStrings.sxtw = "sxtw".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.sxtw]
   @scala.inline
-  def sxtw: typingsSlinky.fridaGum.fridaGumStrings.sxtw = this.cast("sxtw")
+  def sxtx: typingsSlinky.fridaGum.fridaGumStrings.sxtx = "sxtx".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.sxtx]
   @scala.inline
-  def sxtx: typingsSlinky.fridaGum.fridaGumStrings.sxtx = this.cast("sxtx")
+  def uxtb: typingsSlinky.fridaGum.fridaGumStrings.uxtb = "uxtb".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.uxtb]
   @scala.inline
-  def uxtb: typingsSlinky.fridaGum.fridaGumStrings.uxtb = this.cast("uxtb")
+  def uxth: typingsSlinky.fridaGum.fridaGumStrings.uxth = "uxth".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.uxth]
   @scala.inline
-  def uxth: typingsSlinky.fridaGum.fridaGumStrings.uxth = this.cast("uxth")
+  def uxtw: typingsSlinky.fridaGum.fridaGumStrings.uxtw = "uxtw".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.uxtw]
   @scala.inline
-  def uxtw: typingsSlinky.fridaGum.fridaGumStrings.uxtw = this.cast("uxtw")
-  @scala.inline
-  def uxtx: typingsSlinky.fridaGum.fridaGumStrings.uxtx = this.cast("uxtx")
+  def uxtx: typingsSlinky.fridaGum.fridaGumStrings.uxtx = "uxtx".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.uxtx]
 }
 

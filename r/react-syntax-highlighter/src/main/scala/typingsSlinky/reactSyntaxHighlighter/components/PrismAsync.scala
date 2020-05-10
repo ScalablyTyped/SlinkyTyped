@@ -1,15 +1,17 @@
 package typingsSlinky.reactSyntaxHighlighter.components
 
 import typingsSlinky.reactSyntaxHighlighter.esmPrismAsyncMod.default
+import typingsSlinky.reactSyntaxHighlighter.mod.SyntaxHighlighterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PrismAsync extends SharedApply_SyntaxHighlighterProps_249388294[default] {
+object PrismAsync {
   @JSImport("react-syntax-highlighter/dist/esm/prism-async", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SyntaxHighlighterProps): SharedBuilder_SyntaxHighlighterProps_1113076166[default] = new SharedBuilder_SyntaxHighlighterProps_1113076166[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PrismAsync.type): SharedBuilder_SyntaxHighlighterProps_1113076166[default] = new SharedBuilder_SyntaxHighlighterProps_1113076166[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

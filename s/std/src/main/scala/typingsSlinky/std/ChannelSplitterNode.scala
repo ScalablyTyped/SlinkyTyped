@@ -9,10 +9,10 @@ import scala.scalajs.js.annotation._
 @JSGlobal("ChannelSplitterNode")
 @js.native
 object ChannelSplitterNode
-  extends Instantiable1[/* context */ BaseAudioContext, ChannelSplitterNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.ChannelSplitterNode]
      with Instantiable2[
       /* context */ BaseAudioContext, 
       /* options */ ChannelSplitterOptions, 
-      ChannelSplitterNode
+      org.scalajs.dom.raw.ChannelSplitterNode
     ]
 

@@ -18,11 +18,41 @@ trait DASHFragmentSelector extends js.Object {
 
 object DASHFragmentSelector {
   @scala.inline
-  def apply(FragmentSelectorType: DASHFragmentSelectorType = null, TimestampRange: DASHTimestampRange = null): DASHFragmentSelector = {
+  def apply(): DASHFragmentSelector = {
     val __obj = js.Dynamic.literal()
-    if (FragmentSelectorType != null) __obj.updateDynamic("FragmentSelectorType")(FragmentSelectorType.asInstanceOf[js.Any])
-    if (TimestampRange != null) __obj.updateDynamic("TimestampRange")(TimestampRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[DASHFragmentSelector]
   }
+  @scala.inline
+  implicit class DASHFragmentSelectorOps[Self <: DASHFragmentSelector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFragmentSelectorType(value: DASHFragmentSelectorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSelectorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragmentSelectorType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FragmentSelectorType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestampRange(value: DASHTimestampRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestampRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimestampRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

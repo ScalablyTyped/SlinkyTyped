@@ -6,6 +6,8 @@ import typingsSlinky.officeJsPreview.Excel.Interfaces.CommentReplyLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CommentReplyUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Mention
+import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Plain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,6 +42,14 @@ class CommentReply () extends ClientObject {
     * [Api set: ExcelApi 1.10]
     */
   var content: String = js.native
+  /**
+    *
+    * Gets the content type of the comment.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  val contentType: ContentType | Plain | Mention = js.native
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_CommentReply: RequestContext = js.native
@@ -80,21 +90,18 @@ class CommentReply () extends ClientObject {
     */
   val richContent: String = js.native
   /**
-    *
     * Deletes the comment reply.
     *
     * [Api set: ExcelApi 1.10]
     */
   def delete(): Unit = js.native
   /**
-    *
     * Gets the cell where this comment reply is located.
     *
     * [Api set: ExcelApi 1.10]
     */
   def getLocation(): Range = js.native
   /**
-    *
     * Gets the parent comment of this reply.
     *
     * [Api set: ExcelApi 1.10]
@@ -131,7 +138,6 @@ class CommentReply () extends ClientObject {
     */
   def toJSON(): CommentReplyData = js.native
   /**
-    *
     * Updates the comment content with a specially formatted string and a list of mentions.
     *
     * [Api set: ExcelApiOnline 1.1]

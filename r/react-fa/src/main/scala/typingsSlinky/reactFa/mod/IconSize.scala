@@ -15,16 +15,14 @@ trait IconSize extends js.Object
 
 object IconSize {
   @scala.inline
-  def `2x`: typingsSlinky.reactFa.reactFaStrings.`2x` = this.cast("2x")
+  def `2x`: typingsSlinky.reactFa.reactFaStrings.`2x` = "2x".asInstanceOf[typingsSlinky.reactFa.reactFaStrings.`2x`]
   @scala.inline
-  def `3x`: typingsSlinky.reactFa.reactFaStrings.`3x` = this.cast("3x")
+  def `3x`: typingsSlinky.reactFa.reactFaStrings.`3x` = "3x".asInstanceOf[typingsSlinky.reactFa.reactFaStrings.`3x`]
   @scala.inline
-  def `4x`: typingsSlinky.reactFa.reactFaStrings.`4x` = this.cast("4x")
+  def `4x`: typingsSlinky.reactFa.reactFaStrings.`4x` = "4x".asInstanceOf[typingsSlinky.reactFa.reactFaStrings.`4x`]
   @scala.inline
-  def `5x`: typingsSlinky.reactFa.reactFaStrings.`5x` = this.cast("5x")
+  def `5x`: typingsSlinky.reactFa.reactFaStrings.`5x` = "5x".asInstanceOf[typingsSlinky.reactFa.reactFaStrings.`5x`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def lg: typingsSlinky.reactFa.reactFaStrings.lg = this.cast("lg")
+  def lg: typingsSlinky.reactFa.reactFaStrings.lg = "lg".asInstanceOf[typingsSlinky.reactFa.reactFaStrings.lg]
 }
 

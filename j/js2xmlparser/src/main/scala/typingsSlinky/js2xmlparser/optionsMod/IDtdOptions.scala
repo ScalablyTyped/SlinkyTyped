@@ -4,44 +4,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDtdOptions extends js.Object {
   /**
-    * If `include` is `true`, an XML DTD is included in the resulting XML. If
-    * left undefined, the default value is `true`.
+    * Whether to include a DTD in the generated XML. By default, no DTD is
+    * included.
     */
-  var include: js.UndefOr[Boolean] = js.undefined
+  var include: js.UndefOr[Boolean] = js.native
   /**
     * The name of the DTD. This value cannot be left undefined if `include`
-    * is `true`.
+    * is true.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
-    * The public identifier of the DTD, excluding quotation marks. If `pubId`
-    * is defined, `sysId` must be defined as well. If left undefined, no
-    * public identifier is included.
+    * The public identifier of the DTD, excluding quotation marks. If a public
+    * identifier is provided, a system identifier must be provided as well.
+    * By default, no public identifier is included.
     */
-  var pubId: js.UndefOr[String] = js.undefined
+  var pubId: js.UndefOr[String] = js.native
   /**
-    * The system identifier of the DTD, excluding quotation marks. If left
-    * undefined, no system identifier is included.
+    * The system identifier of the DTD, excluding quotation marks. By default,
+    * no system identifier is included.
     */
-  var sysId: js.UndefOr[String] = js.undefined
+  var sysId: js.UndefOr[String] = js.native
 }
 
 object IDtdOptions {
   @scala.inline
-  def apply(
-    include: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    pubId: String = null,
-    sysId: String = null
-  ): IDtdOptions = {
+  def apply(): IDtdOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(include)) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (pubId != null) __obj.updateDynamic("pubId")(pubId.asInstanceOf[js.Any])
-    if (sysId != null) __obj.updateDynamic("sysId")(sysId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDtdOptions]
   }
+  @scala.inline
+  implicit class IDtdOptionsOps[Self <: IDtdOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInclude(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPubId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pubId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPubId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pubId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSysId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sysId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSysId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sysId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

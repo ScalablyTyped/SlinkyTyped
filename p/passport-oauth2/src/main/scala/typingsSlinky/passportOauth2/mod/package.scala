@@ -29,14 +29,24 @@ package object mod {
     scala.Unit
   ])
   type VerifyFunctionWithRequest = (js.Function5[
-    /* req */ typingsSlinky.express.mod.Request_[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary], 
+    /* req */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
     /* accessToken */ java.lang.String, 
     /* refreshToken */ java.lang.String, 
     /* profile */ js.Any, 
     /* verified */ typingsSlinky.passportOauth2.mod.VerifyCallback, 
     scala.Unit
   ]) | (js.Function6[
-    /* req */ typingsSlinky.express.mod.Request_[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary], 
+    /* req */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
     /* accessToken */ java.lang.String, 
     /* refreshToken */ java.lang.String, 
     /* results */ js.Any, 

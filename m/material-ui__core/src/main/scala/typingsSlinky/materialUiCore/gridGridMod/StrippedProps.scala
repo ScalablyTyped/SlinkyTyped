@@ -27,40 +27,38 @@ trait StrippedProps extends js.Object
 
 object StrippedProps {
   @scala.inline
-  def alignContent: typingsSlinky.materialUiCore.materialUiCoreStrings.alignContent = this.cast("alignContent")
+  def alignContent: typingsSlinky.materialUiCore.materialUiCoreStrings.alignContent = "alignContent".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.alignContent]
   @scala.inline
-  def alignItems: typingsSlinky.materialUiCore.materialUiCoreStrings.alignItems = this.cast("alignItems")
+  def alignItems: typingsSlinky.materialUiCore.materialUiCoreStrings.alignItems = "alignItems".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.alignItems]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def className: typingsSlinky.materialUiCore.materialUiCoreStrings.className = "className".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.className]
   @scala.inline
-  def className: typingsSlinky.materialUiCore.materialUiCoreStrings.className = this.cast("className")
+  def classes: typingsSlinky.materialUiCore.materialUiCoreStrings.classes = "classes".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.classes]
   @scala.inline
-  def classes: typingsSlinky.materialUiCore.materialUiCoreStrings.classes = this.cast("classes")
+  def component: typingsSlinky.materialUiCore.materialUiCoreStrings.component = "component".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.component]
   @scala.inline
-  def component: typingsSlinky.materialUiCore.materialUiCoreStrings.component = this.cast("component")
+  def container: typingsSlinky.materialUiCore.materialUiCoreStrings.container = "container".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.container]
   @scala.inline
-  def container: typingsSlinky.materialUiCore.materialUiCoreStrings.container = this.cast("container")
+  def direction: typingsSlinky.materialUiCore.materialUiCoreStrings.direction = "direction".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.direction]
   @scala.inline
-  def direction: typingsSlinky.materialUiCore.materialUiCoreStrings.direction = this.cast("direction")
+  def hidden: typingsSlinky.materialUiCore.materialUiCoreStrings.hidden = "hidden".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.materialUiCore.materialUiCoreStrings.hidden = this.cast("hidden")
+  def item: typingsSlinky.materialUiCore.materialUiCoreStrings.item = "item".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.item]
   @scala.inline
-  def item: typingsSlinky.materialUiCore.materialUiCoreStrings.item = this.cast("item")
+  def justify: typingsSlinky.materialUiCore.materialUiCoreStrings.justify = "justify".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.justify]
   @scala.inline
-  def justify: typingsSlinky.materialUiCore.materialUiCoreStrings.justify = this.cast("justify")
+  def lg: typingsSlinky.materialUiCore.materialUiCoreStrings.lg = "lg".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.lg]
   @scala.inline
-  def lg: typingsSlinky.materialUiCore.materialUiCoreStrings.lg = this.cast("lg")
+  def md: typingsSlinky.materialUiCore.materialUiCoreStrings.md = "md".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.md]
   @scala.inline
-  def md: typingsSlinky.materialUiCore.materialUiCoreStrings.md = this.cast("md")
+  def sm: typingsSlinky.materialUiCore.materialUiCoreStrings.sm = "sm".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.sm]
   @scala.inline
-  def sm: typingsSlinky.materialUiCore.materialUiCoreStrings.sm = this.cast("sm")
+  def spacing: typingsSlinky.materialUiCore.materialUiCoreStrings.spacing = "spacing".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.spacing]
   @scala.inline
-  def spacing: typingsSlinky.materialUiCore.materialUiCoreStrings.spacing = this.cast("spacing")
+  def wrap: typingsSlinky.materialUiCore.materialUiCoreStrings.wrap = "wrap".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.wrap]
   @scala.inline
-  def wrap: typingsSlinky.materialUiCore.materialUiCoreStrings.wrap = this.cast("wrap")
+  def xl: typingsSlinky.materialUiCore.materialUiCoreStrings.xl = "xl".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.xl]
   @scala.inline
-  def xl: typingsSlinky.materialUiCore.materialUiCoreStrings.xl = this.cast("xl")
-  @scala.inline
-  def xs: typingsSlinky.materialUiCore.materialUiCoreStrings.xs = this.cast("xs")
+  def xs: typingsSlinky.materialUiCore.materialUiCoreStrings.xs = "xs".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.xs]
 }
 

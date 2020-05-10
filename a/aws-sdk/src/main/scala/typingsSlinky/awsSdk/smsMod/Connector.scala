@@ -50,30 +50,137 @@ trait Connector extends js.Object {
 
 object Connector {
   @scala.inline
-  def apply(
-    associatedOn: js.Date = null,
-    capabilityList: ConnectorCapabilityList = null,
-    connectorId: ConnectorId = null,
-    ipAddress: IpAddress = null,
-    macAddress: MacAddress = null,
-    status: ConnectorStatus = null,
-    version: ConnectorVersion = null,
-    vmManagerId: VmManagerId = null,
-    vmManagerName: VmManagerName = null,
-    vmManagerType: VmManagerType = null
-  ): Connector = {
+  def apply(): Connector = {
     val __obj = js.Dynamic.literal()
-    if (associatedOn != null) __obj.updateDynamic("associatedOn")(associatedOn.asInstanceOf[js.Any])
-    if (capabilityList != null) __obj.updateDynamic("capabilityList")(capabilityList.asInstanceOf[js.Any])
-    if (connectorId != null) __obj.updateDynamic("connectorId")(connectorId.asInstanceOf[js.Any])
-    if (ipAddress != null) __obj.updateDynamic("ipAddress")(ipAddress.asInstanceOf[js.Any])
-    if (macAddress != null) __obj.updateDynamic("macAddress")(macAddress.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (vmManagerId != null) __obj.updateDynamic("vmManagerId")(vmManagerId.asInstanceOf[js.Any])
-    if (vmManagerName != null) __obj.updateDynamic("vmManagerName")(vmManagerName.asInstanceOf[js.Any])
-    if (vmManagerType != null) __obj.updateDynamic("vmManagerType")(vmManagerType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Connector]
   }
+  @scala.inline
+  implicit class ConnectorOps[Self <: Connector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociatedOn(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociatedOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("associatedOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCapabilityList(value: ConnectorCapabilityList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilityList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapabilityList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilityList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectorId(value: ConnectorId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectorId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpAddress(value: IpAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMacAddress(value: MacAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("macAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMacAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("macAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ConnectorStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: ConnectorVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmManagerId(value: VmManagerId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmManagerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmManagerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmManagerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmManagerName(value: VmManagerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmManagerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmManagerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmManagerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmManagerType(value: VmManagerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmManagerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmManagerType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmManagerType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

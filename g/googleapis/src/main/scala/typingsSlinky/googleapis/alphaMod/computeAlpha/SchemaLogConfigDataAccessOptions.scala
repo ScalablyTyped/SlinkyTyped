@@ -22,10 +22,29 @@ trait SchemaLogConfigDataAccessOptions extends js.Object {
 
 object SchemaLogConfigDataAccessOptions {
   @scala.inline
-  def apply(logMode: String = null): SchemaLogConfigDataAccessOptions = {
+  def apply(): SchemaLogConfigDataAccessOptions = {
     val __obj = js.Dynamic.literal()
-    if (logMode != null) __obj.updateDynamic("logMode")(logMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLogConfigDataAccessOptions]
   }
+  @scala.inline
+  implicit class SchemaLogConfigDataAccessOptionsOps[Self <: SchemaLogConfigDataAccessOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLogMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

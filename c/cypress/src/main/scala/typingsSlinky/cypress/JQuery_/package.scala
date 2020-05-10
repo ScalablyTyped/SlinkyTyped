@@ -59,7 +59,7 @@ package object JQuery_ {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.cypress.cypressBooleans.`false`
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - typingsSlinky.cypress.cypressNumbers.`0`
     - typingsSlinky.cypress.cypressStrings._empty
     - typingsSlinky.std.HTMLAllCollection
@@ -180,7 +180,7 @@ package object JQuery_ {
     /* finalValue */ scala.Double, 
     typingsSlinky.cypress.JQuery_.Tween[TElement]
   ]
-  type TypeEventHandler[TDelegateTarget, TData, TCurrentTarget, TTarget, TType /* <: java.lang.String */] = typingsSlinky.cypress.JQuery_.EventHandlerBase[
+  type TypeEventHandler[TDelegateTarget, TData, TCurrentTarget, TTarget, TType /* <: /* keyof cypress.JQuery.TypeToTriggeredEventMap<TDelegateTarget, TData, TCurrentTarget, TTarget> */ typingsSlinky.cypress.cypressStrings.change | typingsSlinky.cypress.cypressStrings.resize | typingsSlinky.cypress.cypressStrings.scroll | typingsSlinky.cypress.cypressStrings.select | typingsSlinky.cypress.cypressStrings.submit | typingsSlinky.cypress.cypressStrings.click | typingsSlinky.cypress.cypressStrings.contextmenu | typingsSlinky.cypress.cypressStrings.dblclick | typingsSlinky.cypress.cypressStrings.mousedown | typingsSlinky.cypress.cypressStrings.mouseenter | typingsSlinky.cypress.cypressStrings.mouseleave | typingsSlinky.cypress.cypressStrings.mousemove | typingsSlinky.cypress.cypressStrings.mouseout | typingsSlinky.cypress.cypressStrings.mouseover | typingsSlinky.cypress.cypressStrings.mouseup | typingsSlinky.cypress.cypressStrings.drag | typingsSlinky.cypress.cypressStrings.dragend | typingsSlinky.cypress.cypressStrings.dragenter | typingsSlinky.cypress.cypressStrings.dragexit | typingsSlinky.cypress.cypressStrings.dragleave | typingsSlinky.cypress.cypressStrings.dragover | typingsSlinky.cypress.cypressStrings.dragstart | typingsSlinky.cypress.cypressStrings.drop | typingsSlinky.cypress.cypressStrings.keydown | typingsSlinky.cypress.cypressStrings.keypress | typingsSlinky.cypress.cypressStrings.keyup | typingsSlinky.cypress.cypressStrings.touchcancel | typingsSlinky.cypress.cypressStrings.touchend | typingsSlinky.cypress.cypressStrings.touchmove | typingsSlinky.cypress.cypressStrings.touchstart | typingsSlinky.cypress.cypressStrings.blur | typingsSlinky.cypress.cypressStrings.focus | typingsSlinky.cypress.cypressStrings.focusin | typingsSlinky.cypress.cypressStrings.focusout */] = typingsSlinky.cypress.JQuery_.EventHandlerBase[
     TCurrentTarget, 
     /* import warning: importer.ImportType#apply Failed type conversion: cypress.JQuery.TypeToTriggeredEventMap<TDelegateTarget, TData, TCurrentTarget, TTarget>[TType] */ js.Any
   ]

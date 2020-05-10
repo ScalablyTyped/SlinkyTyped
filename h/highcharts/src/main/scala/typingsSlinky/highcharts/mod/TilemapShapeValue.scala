@@ -14,14 +14,12 @@ trait TilemapShapeValue extends js.Object
 
 object TilemapShapeValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def circle: typingsSlinky.highcharts.highchartsStrings.circle = "circle".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.circle]
   @scala.inline
-  def circle: typingsSlinky.highcharts.highchartsStrings.circle = this.cast("circle")
+  def diamond: typingsSlinky.highcharts.highchartsStrings.diamond = "diamond".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.diamond]
   @scala.inline
-  def diamond: typingsSlinky.highcharts.highchartsStrings.diamond = this.cast("diamond")
+  def hexagon: typingsSlinky.highcharts.highchartsStrings.hexagon = "hexagon".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.hexagon]
   @scala.inline
-  def hexagon: typingsSlinky.highcharts.highchartsStrings.hexagon = this.cast("hexagon")
-  @scala.inline
-  def square: typingsSlinky.highcharts.highchartsStrings.square = this.cast("square")
+  def square: typingsSlinky.highcharts.highchartsStrings.square = "square".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.square]
 }
 

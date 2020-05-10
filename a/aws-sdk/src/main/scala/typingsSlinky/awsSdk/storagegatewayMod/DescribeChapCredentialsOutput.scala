@@ -14,10 +14,29 @@ trait DescribeChapCredentialsOutput extends js.Object {
 
 object DescribeChapCredentialsOutput {
   @scala.inline
-  def apply(ChapCredentials: ChapCredentials = null): DescribeChapCredentialsOutput = {
+  def apply(): DescribeChapCredentialsOutput = {
     val __obj = js.Dynamic.literal()
-    if (ChapCredentials != null) __obj.updateDynamic("ChapCredentials")(ChapCredentials.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeChapCredentialsOutput]
   }
+  @scala.inline
+  implicit class DescribeChapCredentialsOutputOps[Self <: DescribeChapCredentialsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChapCredentials(value: ChapCredentials): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChapCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChapCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChapCredentials")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

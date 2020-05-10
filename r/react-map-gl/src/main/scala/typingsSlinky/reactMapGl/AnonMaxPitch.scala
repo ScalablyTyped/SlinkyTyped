@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonMaxPitch extends js.Object {
-  var maxPitch: js.UndefOr[Double] = js.undefined
-  var maxZoom: js.UndefOr[Double] = js.undefined
-  var minPitch: js.UndefOr[Double] = js.undefined
-  var minZoom: js.UndefOr[Double] = js.undefined
+  var maxPitch: js.UndefOr[Double] = js.native
+  var maxZoom: js.UndefOr[Double] = js.native
+  var minPitch: js.UndefOr[Double] = js.native
+  var minZoom: js.UndefOr[Double] = js.native
 }
 
 object AnonMaxPitch {
   @scala.inline
-  def apply(
-    maxPitch: Int | Double = null,
-    maxZoom: Int | Double = null,
-    minPitch: Int | Double = null,
-    minZoom: Int | Double = null
-  ): AnonMaxPitch = {
+  def apply(): AnonMaxPitch = {
     val __obj = js.Dynamic.literal()
-    if (maxPitch != null) __obj.updateDynamic("maxPitch")(maxPitch.asInstanceOf[js.Any])
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minPitch != null) __obj.updateDynamic("minPitch")(minPitch.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonMaxPitch]
   }
+  @scala.inline
+  implicit class AnonMaxPitchOps[Self <: AnonMaxPitch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxPitch(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxPitch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPitch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinPitch(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinPitch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPitch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

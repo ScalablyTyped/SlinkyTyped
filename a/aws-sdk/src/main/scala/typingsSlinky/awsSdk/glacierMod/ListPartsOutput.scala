@@ -38,24 +38,101 @@ trait ListPartsOutput extends js.Object {
 
 object ListPartsOutput {
   @scala.inline
-  def apply(
-    ArchiveDescription: String = null,
-    CreationDate: String = null,
-    Marker: String = null,
-    MultipartUploadId: String = null,
-    PartSizeInBytes: Int | Double = null,
-    Parts: PartList = null,
-    VaultARN: String = null
-  ): ListPartsOutput = {
+  def apply(): ListPartsOutput = {
     val __obj = js.Dynamic.literal()
-    if (ArchiveDescription != null) __obj.updateDynamic("ArchiveDescription")(ArchiveDescription.asInstanceOf[js.Any])
-    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (MultipartUploadId != null) __obj.updateDynamic("MultipartUploadId")(MultipartUploadId.asInstanceOf[js.Any])
-    if (PartSizeInBytes != null) __obj.updateDynamic("PartSizeInBytes")(PartSizeInBytes.asInstanceOf[js.Any])
-    if (Parts != null) __obj.updateDynamic("Parts")(Parts.asInstanceOf[js.Any])
-    if (VaultARN != null) __obj.updateDynamic("VaultARN")(VaultARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPartsOutput]
   }
+  @scala.inline
+  implicit class ListPartsOutputOps[Self <: ListPartsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArchiveDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArchiveDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchiveDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArchiveDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultipartUploadId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultipartUploadId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultipartUploadId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MultipartUploadId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartSizeInBytes(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartSizeInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartSizeInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartSizeInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParts(value: PartList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVaultARN(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VaultARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVaultARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VaultARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,30 +5,88 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.Pick<semantic-ui-search.SemanticUI.Search.ClassNameSettings._Impl, keyof semantic-ui-search.SemanticUI.Search.ClassNameSettings._Impl>> */
+@js.native
 trait PartialPickImplkeyofImplActive extends js.Object {
-  var active: js.UndefOr[String] = js.undefined
-  var empty: js.UndefOr[String] = js.undefined
-  var focus: js.UndefOr[String] = js.undefined
-  var loading: js.UndefOr[String] = js.undefined
-  var pressed: js.UndefOr[String] = js.undefined
+  var active: js.UndefOr[String] = js.native
+  var empty: js.UndefOr[String] = js.native
+  var focus: js.UndefOr[String] = js.native
+  var loading: js.UndefOr[String] = js.native
+  var pressed: js.UndefOr[String] = js.native
 }
 
 object PartialPickImplkeyofImplActive {
   @scala.inline
-  def apply(
-    active: String = null,
-    empty: String = null,
-    focus: String = null,
-    loading: String = null,
-    pressed: String = null
-  ): PartialPickImplkeyofImplActive = {
+  def apply(): PartialPickImplkeyofImplActive = {
     val __obj = js.Dynamic.literal()
-    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
-    if (focus != null) __obj.updateDynamic("focus")(focus.asInstanceOf[js.Any])
-    if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (pressed != null) __obj.updateDynamic("pressed")(pressed.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialPickImplkeyofImplActive]
   }
+  @scala.inline
+  implicit class PartialPickImplkeyofImplActiveOps[Self <: PartialPickImplkeyofImplActive] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmpty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmpty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoading(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPressed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPressed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pressed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -46,28 +46,125 @@ trait Option extends js.Object {
 
 object Option {
   @scala.inline
-  def apply(
-    DBSecurityGroupMemberships: DBSecurityGroupMembershipList = null,
-    OptionDescription: String = null,
-    OptionName: String = null,
-    OptionSettings: OptionSettingConfigurationList = null,
-    OptionVersion: String = null,
-    Permanent: js.UndefOr[scala.Boolean] = js.undefined,
-    Persistent: js.UndefOr[scala.Boolean] = js.undefined,
-    Port: Int | scala.Double = null,
-    VpcSecurityGroupMemberships: VpcSecurityGroupMembershipList = null
-  ): Option = {
+  def apply(): Option = {
     val __obj = js.Dynamic.literal()
-    if (DBSecurityGroupMemberships != null) __obj.updateDynamic("DBSecurityGroupMemberships")(DBSecurityGroupMemberships.asInstanceOf[js.Any])
-    if (OptionDescription != null) __obj.updateDynamic("OptionDescription")(OptionDescription.asInstanceOf[js.Any])
-    if (OptionName != null) __obj.updateDynamic("OptionName")(OptionName.asInstanceOf[js.Any])
-    if (OptionSettings != null) __obj.updateDynamic("OptionSettings")(OptionSettings.asInstanceOf[js.Any])
-    if (OptionVersion != null) __obj.updateDynamic("OptionVersion")(OptionVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(Permanent)) __obj.updateDynamic("Permanent")(Permanent.asInstanceOf[js.Any])
-    if (!js.isUndefined(Persistent)) __obj.updateDynamic("Persistent")(Persistent.asInstanceOf[js.Any])
-    if (Port != null) __obj.updateDynamic("Port")(Port.asInstanceOf[js.Any])
-    if (VpcSecurityGroupMemberships != null) __obj.updateDynamic("VpcSecurityGroupMemberships")(VpcSecurityGroupMemberships.asInstanceOf[js.Any])
     __obj.asInstanceOf[Option]
   }
+  @scala.inline
+  implicit class OptionOps[Self <: Option] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBSecurityGroupMemberships(value: DBSecurityGroupMembershipList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSecurityGroupMemberships")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBSecurityGroupMemberships: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBSecurityGroupMemberships")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionSettings(value: OptionSettingConfigurationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermanent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Permanent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermanent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Permanent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersistent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Persistent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersistent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Persistent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcSecurityGroupMemberships(value: VpcSecurityGroupMembershipList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroupMemberships")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcSecurityGroupMemberships: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSecurityGroupMemberships")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

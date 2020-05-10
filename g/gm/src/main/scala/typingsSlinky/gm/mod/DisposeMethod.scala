@@ -14,14 +14,12 @@ trait DisposeMethod extends js.Object
 
 object DisposeMethod {
   @scala.inline
-  def Background: typingsSlinky.gm.gmStrings.Background = this.cast("Background")
+  def Background: typingsSlinky.gm.gmStrings.Background = "Background".asInstanceOf[typingsSlinky.gm.gmStrings.Background]
   @scala.inline
-  def None: typingsSlinky.gm.gmStrings.None = this.cast("None")
+  def None: typingsSlinky.gm.gmStrings.None = "None".asInstanceOf[typingsSlinky.gm.gmStrings.None]
   @scala.inline
-  def Previous: typingsSlinky.gm.gmStrings.Previous = this.cast("Previous")
+  def Previous: typingsSlinky.gm.gmStrings.Previous = "Previous".asInstanceOf[typingsSlinky.gm.gmStrings.Previous]
   @scala.inline
-  def Undefined: typingsSlinky.gm.gmStrings.Undefined = this.cast("Undefined")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Undefined: typingsSlinky.gm.gmStrings.Undefined = "Undefined".asInstanceOf[typingsSlinky.gm.gmStrings.Undefined]
 }
 

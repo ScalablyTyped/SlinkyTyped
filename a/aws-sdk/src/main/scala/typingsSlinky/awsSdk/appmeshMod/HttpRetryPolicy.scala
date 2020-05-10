@@ -47,16 +47,53 @@ trait HttpRetryPolicy extends js.Object {
 
 object HttpRetryPolicy {
   @scala.inline
-  def apply(
-    maxRetries: MaxRetries,
-    perRetryTimeout: Duration,
-    httpRetryEvents: HttpRetryPolicyEvents = null,
-    tcpRetryEvents: TcpRetryPolicyEvents = null
-  ): HttpRetryPolicy = {
+  def apply(maxRetries: MaxRetries, perRetryTimeout: Duration): HttpRetryPolicy = {
     val __obj = js.Dynamic.literal(maxRetries = maxRetries.asInstanceOf[js.Any], perRetryTimeout = perRetryTimeout.asInstanceOf[js.Any])
-    if (httpRetryEvents != null) __obj.updateDynamic("httpRetryEvents")(httpRetryEvents.asInstanceOf[js.Any])
-    if (tcpRetryEvents != null) __obj.updateDynamic("tcpRetryEvents")(tcpRetryEvents.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpRetryPolicy]
   }
+  @scala.inline
+  implicit class HttpRetryPolicyOps[Self <: HttpRetryPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxRetries(value: MaxRetries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPerRetryTimeout(value: Duration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perRetryTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHttpRetryEvents(value: HttpRetryPolicyEvents): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRetryEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpRetryEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRetryEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTcpRetryEvents(value: TcpRetryPolicyEvents): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpRetryEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTcpRetryEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tcpRetryEvents")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

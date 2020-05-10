@@ -1,5 +1,6 @@
 package typingsSlinky.phaser.Phaser.GameObjects
 
+import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Camera
 import typingsSlinky.phaser.Phaser.GameObjects.Components.AlphaSingle
 import typingsSlinky.phaser.Phaser.GameObjects.Components.BlendMode
@@ -17,7 +18,6 @@ import typingsSlinky.phaser.Phaser.Types.GameObjects.Graphics.Options
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Graphics.RoundedRectRadius
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Graphics.Styles
 import typingsSlinky.phaser.integer
-import typingsSlinky.std.HTMLCanvasElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -106,19 +106,6 @@ class Graphics protected ()
     */
   var defaultStrokeWidth: Double = js.native
   /**
-    * The depth of this Game Object within the Scene.
-    * 
-    * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-    * of Game Objects, without actually moving their position in the display list.
-    * 
-    * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-    * value will always render in front of one with a lower value.
-    * 
-    * Setting the depth will queue a depth sort event within the Scene.
-    */
-  /* CompleteClass */
-  override var depth: Double = js.native
-  /**
     * The horizontal display origin of the Graphics.
     */
   var displayOriginX: Double = js.native
@@ -126,13 +113,6 @@ class Graphics protected ()
     * The vertical display origin of the Graphics.
     */
   var displayOriginY: Double = js.native
-  /**
-    * The visible state of the Game Object.
-    * 
-    * An invisible Game Object will skip rendering, but will still process update logic.
-    */
-  /* CompleteClass */
-  override var visible: Boolean = js.native
   /**
     * Draw an arc.
     * 
@@ -447,20 +427,6 @@ class Graphics protected ()
     */
   def setDefaultStyles(options: Styles): Graphics = js.native
   /**
-    * The depth of this Game Object within the Scene.
-    * 
-    * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-    * of Game Objects, without actually moving their position in the display list.
-    * 
-    * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-    * value will always render in front of one with a lower value.
-    * 
-    * Setting the depth will queue a depth sort event within the Scene.
-    * @param value The depth of this Game Object.
-    */
-  /* CompleteClass */
-  override def setDepth(value: integer): this.type = js.native
-  /**
     * Sets the texture frame this Graphics Object will use when drawing all shapes defined after calling this.
     * 
     * Textures are referenced by their string-based keys, as stored in the Texture Manager.
@@ -483,14 +449,6 @@ class Graphics protected ()
   def setTexture(key: String, frame: String, mode: Double): this.type = js.native
   def setTexture(key: String, frame: integer): this.type = js.native
   def setTexture(key: String, frame: integer, mode: Double): this.type = js.native
-  /**
-    * Sets the visibility of this Game Object.
-    * 
-    * An invisible Game Object will skip rendering, but will still process update logic.
-    * @param value The visible state of the Game Object.
-    */
-  /* CompleteClass */
-  override def setVisible(value: Boolean): this.type = js.native
   /**
     * Creates a pie-chart slice shape centered at `x`, `y` with the given radius.
     * You must define the start and end angle of the slice.

@@ -36,3 +36,55 @@ trait NumberFormatInfoLoadOptions extends js.Object {
   var numberGroupSeparator: js.UndefOr[Boolean] = js.native
 }
 
+object NumberFormatInfoLoadOptions {
+  @scala.inline
+  def apply(): NumberFormatInfoLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[NumberFormatInfoLoadOptions]
+  }
+  @scala.inline
+  implicit class NumberFormatInfoLoadOptionsOps[Self <: NumberFormatInfoLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberDecimalSeparator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberDecimalSeparator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberDecimalSeparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberDecimalSeparator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberGroupSeparator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberGroupSeparator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberGroupSeparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberGroupSeparator")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

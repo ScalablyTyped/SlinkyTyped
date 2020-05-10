@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofCalendarLite extends js.Object {
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/CalendarLite._MonthWidget.html
@@ -28,7 +29,7 @@ trait TypeofCalendarLite extends js.Object {
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
     MonthWidget
-  ]
+  ] = js.native
 }
 
 object TypeofCalendarLite {
@@ -41,8 +42,27 @@ object TypeofCalendarLite {
     ]
   ): TypeofCalendarLite = {
     val __obj = js.Dynamic.literal(_MonthWidget = _MonthWidget.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypeofCalendarLite]
   }
+  @scala.inline
+  implicit class TypeofCalendarLiteOps[Self <: TypeofCalendarLite] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_MonthWidget(
+      value: Instantiable2[
+          js.UndefOr[/* params */ js.Object], 
+          js.UndefOr[/* srcNodeRef */ HTMLElement], 
+          MonthWidget
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_MonthWidget")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

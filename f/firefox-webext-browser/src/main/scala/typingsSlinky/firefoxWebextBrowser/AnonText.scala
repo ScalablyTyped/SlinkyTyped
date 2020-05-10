@@ -4,30 +4,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonText extends js.Object {
   /**
     * When setting a value, it will be specific to the specified tab, and will automatically reset when the tab
     * navigates. When getting, specifies the tab to get the value from; if there is no tab-specific value, the
     * window one will be inherited.
     */
-  var tabId: js.UndefOr[Double] = js.undefined
+  var tabId: js.UndefOr[Double] = js.native
   /** Any number of characters can be passed, but only about four can fit in the space. */
-  var text: String | Null
+  var text: String | Null = js.native
   /**
     * When setting a value, it will be specific to the specified window. When getting, specifies the window to get
     * the value from; if there is no window-specific value, the global one will be inherited.
     */
-  var windowId: js.UndefOr[Double] = js.undefined
+  var windowId: js.UndefOr[Double] = js.native
 }
 
 object AnonText {
   @scala.inline
-  def apply(tabId: Int | Double = null, text: String = null, windowId: Int | Double = null): AnonText = {
+  def apply(): AnonText = {
     val __obj = js.Dynamic.literal()
-    if (tabId != null) __obj.updateDynamic("tabId")(tabId.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (windowId != null) __obj.updateDynamic("windowId")(windowId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonText]
   }
+  @scala.inline
+  implicit class AnonTextOps[Self <: AnonText] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTabId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(null)
+        ret
+    }
+    @scala.inline
+    def withWindowId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindowId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windowId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

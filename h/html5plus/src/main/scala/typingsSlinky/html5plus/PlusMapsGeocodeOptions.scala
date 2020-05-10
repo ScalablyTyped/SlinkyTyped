@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
   */
+@js.native
 trait PlusMapsGeocodeOptions extends js.Object {
   /**
     * 源地址所属的城市
@@ -20,7 +21,7 @@ trait PlusMapsGeocodeOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  var city: js.UndefOr[String] = js.undefined
+  var city: js.UndefOr[String] = js.native
   /**
     * 源数据的坐标系类型
     * 仅在反向地理编码转换时生效。
@@ -33,16 +34,46 @@ trait PlusMapsGeocodeOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  var coordType: js.UndefOr[wgs84 | gcj02 | bd09 | bd09ll] = js.undefined
+  var coordType: js.UndefOr[wgs84 | gcj02 | bd09 | bd09ll] = js.native
 }
 
 object PlusMapsGeocodeOptions {
   @scala.inline
-  def apply(city: String = null, coordType: wgs84 | gcj02 | bd09 | bd09ll = null): PlusMapsGeocodeOptions = {
+  def apply(): PlusMapsGeocodeOptions = {
     val __obj = js.Dynamic.literal()
-    if (city != null) __obj.updateDynamic("city")(city.asInstanceOf[js.Any])
-    if (coordType != null) __obj.updateDynamic("coordType")(coordType.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusMapsGeocodeOptions]
   }
+  @scala.inline
+  implicit class PlusMapsGeocodeOptionsOps[Self <: PlusMapsGeocodeOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoordType(value: wgs84 | gcj02 | bd09 | bd09ll): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coordType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoordType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coordType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

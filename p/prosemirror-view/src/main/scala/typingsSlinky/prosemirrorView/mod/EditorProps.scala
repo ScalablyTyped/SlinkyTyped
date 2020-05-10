@@ -1,6 +1,7 @@
 package typingsSlinky.prosemirrorView.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Selection
@@ -16,6 +17,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
   /**
     * Control the DOM attributes of the editable element. May be either
@@ -32,20 +34,20 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EditorState<S> */ /* p */ js.Any, 
       js.UndefOr[StringDictionary[String] | Null | Unit]
     ]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * The [parser](#model.DOMParser) to use when reading content from
     * the clipboard. When not given, the value of the
     * [`domParser`](#view.EditorProps.domParser) prop is used.
     */
-  var clipboardParser: js.UndefOr[DOMParser[S] | Null] = js.undefined
+  var clipboardParser: js.UndefOr[DOMParser[S] | Null] = js.native
   /**
     * The DOM serializer to use when putting content onto the
     * clipboard. If not given, the result of
     * [`DOMSerializer.fromSchema`](#model.DOMSerializer^fromSchema)
     * will be used.
     */
-  var clipboardSerializer: js.UndefOr[DOMSerializer[S] | Null] = js.undefined
+  var clipboardSerializer: js.UndefOr[DOMSerializer[S] | Null] = js.native
   /**
     * A function to parse text from the clipboard into a document
     * slice. Called after
@@ -56,14 +58,14 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
     */
   var clipboardTextParser: js.UndefOr[
     (js.Function2[/* text */ String, /* $context */ ResolvedPos[S], Slice[S]]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * A function that will be called to get the text for the current
     * selection when copying text to the clipboard. By default, the
     * editor will use [`textBetween`](#model.Node.textBetween) on the
     * selected range.
     */
-  var clipboardTextSerializer: js.UndefOr[(js.Function1[/* p */ Slice[S], String]) | Null] = js.undefined
+  var clipboardTextSerializer: js.UndefOr[(js.Function1[/* p */ Slice[S], String]) | Null] = js.native
   /**
     * Can be used to override the way a selection is created when
     * reading a DOM selection between the given anchor and head.
@@ -75,7 +77,7 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
       /* head */ ResolvedPos[S], 
       js.UndefOr[Selection | Null]
     ]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * A set of [document decorations](#view.Decoration) to show in the
     * view.
@@ -85,14 +87,14 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EditorState<S> */ /* state */ js.Any, 
       js.UndefOr[DecorationSet[S] | Null]
     ]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * The [parser](#model.DOMParser) to use when reading editor changes
     * from the DOM. Defaults to calling
     * [`DOMParser.fromSchema`](#model.DOMParser^fromSchema) on the
     * editor's schema.
     */
-  var domParser: js.UndefOr[DOMParser[S] | Null] = js.undefined
+  var domParser: js.UndefOr[DOMParser[S] | Null] = js.native
   /**
     * When this returns false, the content of the view is not directly
     * editable.
@@ -102,14 +104,14 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EditorState<S> */ /* state */ js.Any, 
       Boolean
     ]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Called when the editor is clicked, after `handleClickOn` handlers
     * have been called.
     */
   var handleClick: js.UndefOr[
     (js.Function3[/* view */ EditorView[S], /* pos */ Double, /* event */ MouseEvent, Boolean]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Called for each node around a click, from the inside out. The
     * `direct` flag will be true for the inner node.
@@ -124,7 +126,7 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
       /* direct */ Boolean, 
       Boolean
     ]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Can be an object mapping DOM event type names to functions that
     * handle them. Such functions will be called before any handling
@@ -136,13 +138,13 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
     */
   var handleDOMEvents: js.UndefOr[
     (StringDictionary[js.Function2[/* view */ EditorView[S], /* event */ Event_, Boolean]]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Called when the editor is double-clicked, after `handleDoubleClickOn`.
     */
   var handleDoubleClick: js.UndefOr[
     (js.Function3[/* view */ EditorView[S], /* pos */ Double, /* event */ MouseEvent, Boolean]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Called for each node around a double click.
     */
@@ -156,7 +158,7 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
       /* direct */ Boolean, 
       Boolean
     ]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Called when something is dropped on the editor. `moved` will be
     * true if this drop moves from the current selection (which should
@@ -170,34 +172,34 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
       /* moved */ Boolean, 
       Boolean
     ]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Called when the editor receives a `keydown` event.
     */
   var handleKeyDown: js.UndefOr[
     (js.Function2[/* view */ EditorView[S], /* event */ KeyboardEvent, Boolean]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Handler for `keypress` events.
     */
   var handleKeyPress: js.UndefOr[
     (js.Function2[/* view */ EditorView[S], /* event */ KeyboardEvent, Boolean]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Can be used to override the behavior of pasting. `slice` is the
     * pasted content parsed by the editor, but you can directly access
     * the event to get at the raw content.
     */
   var handlePaste: js.UndefOr[
-    (js.Function3[/* view */ EditorView[S], /* event */ Event_, /* slice */ Slice[S], Boolean]) | Null
-  ] = js.undefined
+    (js.Function3[/* view */ EditorView[S], /* event */ ClipboardEvent, /* slice */ Slice[S], Boolean]) | Null
+  ] = js.native
   /**
     * Called when the view, after updating its state, tries to scroll
     * the selection into view. A handler function may return false to
     * indicate that it did not handle the scrolling and further
     * handlers or the default behavior should be tried.
     */
-  var handleScrollToSelection: js.UndefOr[(js.Function1[/* view */ EditorView[S], Boolean]) | Null] = js.undefined
+  var handleScrollToSelection: js.UndefOr[(js.Function1[/* view */ EditorView[S], Boolean]) | Null] = js.native
   /**
     * Whenever the user directly input text, this handler is called
     * before the input is applied. If it returns `true`, the default
@@ -205,13 +207,13 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
     */
   var handleTextInput: js.UndefOr[
     (js.Function4[/* view */ EditorView[S], /* from */ Double, /* to */ Double, /* text */ String, Boolean]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Called when the editor is triple-clicked, after `handleTripleClickOn`.
     */
   var handleTripleClick: js.UndefOr[
     (js.Function3[/* view */ EditorView[S], /* pos */ Double, /* event */ MouseEvent, Boolean]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Called for each node around a triple click.
     */
@@ -225,7 +227,7 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
       /* direct */ Boolean, 
       Boolean
     ]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Allows you to pass custom rendering and behavior logic for nodes
     * and marks. Should map node and mark names to constructor
@@ -252,107 +254,590 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
         NodeView[S]
       ]
     ]) | Null
-  ] = js.undefined
+  ] = js.native
   /**
     * Determines the extra space (in pixels) that is left above or
     * below the cursor when it is scrolled into view. Defaults to 5.
     */
-  var scrollMargin: js.UndefOr[Double | AnonRight | Null] = js.undefined
+  var scrollMargin: js.UndefOr[Double | AnonRight | Null] = js.native
   /**
     * Determines the distance (in pixels) between the cursor and the
     * end of the visible viewport at which point, when scrolling the
     * cursor into view, scrolling takes place. Defaults to 0.
     */
-  var scrollThreshold: js.UndefOr[Double | AnonRight | Null] = js.undefined
+  var scrollThreshold: js.UndefOr[Double | AnonRight | Null] = js.native
   /**
     * Can be used to transform pasted content before it is applied to
     * the document.
     */
-  var transformPasted: js.UndefOr[(js.Function1[/* p */ Slice[S], Slice[S]]) | Null] = js.undefined
+  var transformPasted: js.UndefOr[(js.Function1[/* p */ Slice[S], Slice[S]]) | Null] = js.native
   /**
     * Can be used to transform pasted HTML text, _before_ it is parsed,
     * for example to clean it up.
     */
-  var transformPastedHTML: js.UndefOr[(js.Function1[/* html */ String, String]) | Null] = js.undefined
+  var transformPastedHTML: js.UndefOr[(js.Function1[/* html */ String, String]) | Null] = js.native
   /**
     * Transform pasted plain text.
     */
-  var transformPastedText: js.UndefOr[(js.Function1[/* text */ String, String]) | Null] = js.undefined
+  var transformPastedText: js.UndefOr[(js.Function1[/* text */ String, String]) | Null] = js.native
 }
 
 object EditorProps {
   @scala.inline
-  def apply[S /* <: Schema[_, _] */](
-    attributes: StringDictionary[String] | (js.Function1[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EditorState<S> */ /* p */ js.Any, 
-      js.UndefOr[StringDictionary[String] | Null | Unit]
-    ]) = null,
-    clipboardParser: DOMParser[S] = null,
-    clipboardSerializer: DOMSerializer[S] = null,
-    clipboardTextParser: (/* text */ String, /* $context */ ResolvedPos[S]) => Slice[S] = null,
-    clipboardTextSerializer: /* p */ Slice[S] => String = null,
-    createSelectionBetween: (/* view */ EditorView[S], /* anchor */ ResolvedPos[S], /* head */ ResolvedPos[S]) => js.UndefOr[Selection | Null] = null,
-    decorations: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EditorState<S> */ /* state */ js.Any => js.UndefOr[DecorationSet[S] | Null] = null,
-    domParser: DOMParser[S] = null,
-    editable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EditorState<S> */ /* state */ js.Any => Boolean = null,
-    handleClick: (/* view */ EditorView[S], /* pos */ Double, /* event */ MouseEvent) => Boolean = null,
-    handleClickOn: (/* view */ EditorView[S], /* pos */ Double, /* node */ Node[S], /* nodePos */ Double, /* event */ MouseEvent, /* direct */ Boolean) => Boolean = null,
-    handleDOMEvents: StringDictionary[js.Function2[/* view */ EditorView[S], /* event */ Event_, Boolean]] = null,
-    handleDoubleClick: (/* view */ EditorView[S], /* pos */ Double, /* event */ MouseEvent) => Boolean = null,
-    handleDoubleClickOn: (/* view */ EditorView[S], /* pos */ Double, /* node */ Node[S], /* nodePos */ Double, /* event */ MouseEvent, /* direct */ Boolean) => Boolean = null,
-    handleDrop: (/* view */ EditorView[S], /* event */ Event_, /* slice */ Slice[S], /* moved */ Boolean) => Boolean = null,
-    handleKeyDown: (/* view */ EditorView[S], /* event */ KeyboardEvent) => Boolean = null,
-    handleKeyPress: (/* view */ EditorView[S], /* event */ KeyboardEvent) => Boolean = null,
-    handlePaste: (/* view */ EditorView[S], /* event */ Event_, /* slice */ Slice[S]) => Boolean = null,
-    handleScrollToSelection: /* view */ EditorView[S] => Boolean = null,
-    handleTextInput: (/* view */ EditorView[S], /* from */ Double, /* to */ Double, /* text */ String) => Boolean = null,
-    handleTripleClick: (/* view */ EditorView[S], /* pos */ Double, /* event */ MouseEvent) => Boolean = null,
-    handleTripleClickOn: (/* view */ EditorView[S], /* pos */ Double, /* node */ Node[S], /* nodePos */ Double, /* event */ MouseEvent, /* direct */ Boolean) => Boolean = null,
-    nodeViews: StringDictionary[
-      js.Function4[
-        /* node */ Node[S], 
-        /* view */ EditorView[S], 
-        /* getPos */ js.Function0[Double] | Boolean, 
-        /* decorations */ js.Array[Decoration[StringDictionary[_]]], 
-        NodeView[S]
-      ]
-    ] = null,
-    scrollMargin: Double | AnonRight = null,
-    scrollThreshold: Double | AnonRight = null,
-    transformPasted: /* p */ Slice[S] => Slice[S] = null,
-    transformPastedHTML: /* html */ String => String = null,
-    transformPastedText: /* text */ String => String = null
-  ): EditorProps[S] = {
+  def apply[S](): EditorProps[S] = {
     val __obj = js.Dynamic.literal()
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (clipboardParser != null) __obj.updateDynamic("clipboardParser")(clipboardParser.asInstanceOf[js.Any])
-    if (clipboardSerializer != null) __obj.updateDynamic("clipboardSerializer")(clipboardSerializer.asInstanceOf[js.Any])
-    if (clipboardTextParser != null) __obj.updateDynamic("clipboardTextParser")(js.Any.fromFunction2(clipboardTextParser))
-    if (clipboardTextSerializer != null) __obj.updateDynamic("clipboardTextSerializer")(js.Any.fromFunction1(clipboardTextSerializer))
-    if (createSelectionBetween != null) __obj.updateDynamic("createSelectionBetween")(js.Any.fromFunction3(createSelectionBetween))
-    if (decorations != null) __obj.updateDynamic("decorations")(js.Any.fromFunction1(decorations))
-    if (domParser != null) __obj.updateDynamic("domParser")(domParser.asInstanceOf[js.Any])
-    if (editable != null) __obj.updateDynamic("editable")(js.Any.fromFunction1(editable))
-    if (handleClick != null) __obj.updateDynamic("handleClick")(js.Any.fromFunction3(handleClick))
-    if (handleClickOn != null) __obj.updateDynamic("handleClickOn")(js.Any.fromFunction6(handleClickOn))
-    if (handleDOMEvents != null) __obj.updateDynamic("handleDOMEvents")(handleDOMEvents.asInstanceOf[js.Any])
-    if (handleDoubleClick != null) __obj.updateDynamic("handleDoubleClick")(js.Any.fromFunction3(handleDoubleClick))
-    if (handleDoubleClickOn != null) __obj.updateDynamic("handleDoubleClickOn")(js.Any.fromFunction6(handleDoubleClickOn))
-    if (handleDrop != null) __obj.updateDynamic("handleDrop")(js.Any.fromFunction4(handleDrop))
-    if (handleKeyDown != null) __obj.updateDynamic("handleKeyDown")(js.Any.fromFunction2(handleKeyDown))
-    if (handleKeyPress != null) __obj.updateDynamic("handleKeyPress")(js.Any.fromFunction2(handleKeyPress))
-    if (handlePaste != null) __obj.updateDynamic("handlePaste")(js.Any.fromFunction3(handlePaste))
-    if (handleScrollToSelection != null) __obj.updateDynamic("handleScrollToSelection")(js.Any.fromFunction1(handleScrollToSelection))
-    if (handleTextInput != null) __obj.updateDynamic("handleTextInput")(js.Any.fromFunction4(handleTextInput))
-    if (handleTripleClick != null) __obj.updateDynamic("handleTripleClick")(js.Any.fromFunction3(handleTripleClick))
-    if (handleTripleClickOn != null) __obj.updateDynamic("handleTripleClickOn")(js.Any.fromFunction6(handleTripleClickOn))
-    if (nodeViews != null) __obj.updateDynamic("nodeViews")(nodeViews.asInstanceOf[js.Any])
-    if (scrollMargin != null) __obj.updateDynamic("scrollMargin")(scrollMargin.asInstanceOf[js.Any])
-    if (scrollThreshold != null) __obj.updateDynamic("scrollThreshold")(scrollThreshold.asInstanceOf[js.Any])
-    if (transformPasted != null) __obj.updateDynamic("transformPasted")(js.Any.fromFunction1(transformPasted))
-    if (transformPastedHTML != null) __obj.updateDynamic("transformPastedHTML")(js.Any.fromFunction1(transformPastedHTML))
-    if (transformPastedText != null) __obj.updateDynamic("transformPastedText")(js.Any.fromFunction1(transformPastedText))
     __obj.asInstanceOf[EditorProps[S]]
   }
+  @scala.inline
+  implicit class EditorPropsOps[Self[s] <: EditorProps[s], S] (val x: Self[S]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[S] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[S]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[S] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[S] with Other]
+    @scala.inline
+    def withAttributesFunction1(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EditorState<S> */ /* p */ js.Any => js.UndefOr[StringDictionary[String] | Null | Unit]
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAttributes(
+      value: StringDictionary[String] | (js.Function1[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EditorState<S> */ /* p */ js.Any, 
+          js.UndefOr[StringDictionary[String] | Null | Unit]
+        ])
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributesNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(null)
+        ret
+    }
+    @scala.inline
+    def withClipboardParser(value: DOMParser[S]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardParser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipboardParser: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardParser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipboardParserNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardParser")(null)
+        ret
+    }
+    @scala.inline
+    def withClipboardSerializer(value: DOMSerializer[S]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardSerializer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipboardSerializer: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardSerializer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipboardSerializerNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardSerializer")(null)
+        ret
+    }
+    @scala.inline
+    def withClipboardTextParser(value: (/* text */ String, /* $context */ ResolvedPos[S]) => Slice[S]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardTextParser")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutClipboardTextParser: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardTextParser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipboardTextParserNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardTextParser")(null)
+        ret
+    }
+    @scala.inline
+    def withClipboardTextSerializer(value: /* p */ Slice[S] => String): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardTextSerializer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutClipboardTextSerializer: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardTextSerializer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipboardTextSerializerNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardTextSerializer")(null)
+        ret
+    }
+    @scala.inline
+    def withCreateSelectionBetween(
+      value: (/* view */ EditorView[S], /* anchor */ ResolvedPos[S], /* head */ ResolvedPos[S]) => js.UndefOr[Selection | Null]
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSelectionBetween")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreateSelectionBetween: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSelectionBetween")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateSelectionBetweenNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSelectionBetween")(null)
+        ret
+    }
+    @scala.inline
+    def withDecorations(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EditorState<S> */ /* state */ js.Any => js.UndefOr[DecorationSet[S] | Null]
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorations")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDecorations: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecorationsNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorations")(null)
+        ret
+    }
+    @scala.inline
+    def withDomParser(value: DOMParser[S]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domParser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomParser: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domParser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomParserNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domParser")(null)
+        ret
+    }
+    @scala.inline
+    def withEditable(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EditorState<S> */ /* state */ js.Any => Boolean
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutEditable: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditableNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleClick(value: (/* view */ EditorView[S], /* pos */ Double, /* event */ MouseEvent) => Boolean): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleClick")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleClick: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleClickNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleClick")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleClickOn(
+      value: (/* view */ EditorView[S], /* pos */ Double, /* node */ Node[S], /* nodePos */ Double, /* event */ MouseEvent, /* direct */ Boolean) => Boolean
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleClickOn")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleClickOn: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleClickOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleClickOnNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleClickOn")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleDOMEvents(value: StringDictionary[js.Function2[/* view */ EditorView[S], /* event */ Event_, Boolean]]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDOMEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandleDOMEvents: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDOMEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleDOMEventsNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDOMEvents")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleDoubleClick(value: (/* view */ EditorView[S], /* pos */ Double, /* event */ MouseEvent) => Boolean): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDoubleClick")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleDoubleClick: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDoubleClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleDoubleClickNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDoubleClick")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleDoubleClickOn(
+      value: (/* view */ EditorView[S], /* pos */ Double, /* node */ Node[S], /* nodePos */ Double, /* event */ MouseEvent, /* direct */ Boolean) => Boolean
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDoubleClickOn")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleDoubleClickOn: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDoubleClickOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleDoubleClickOnNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDoubleClickOn")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleDrop(
+      value: (/* view */ EditorView[S], /* event */ Event_, /* slice */ Slice[S], /* moved */ Boolean) => Boolean
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDrop")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleDrop: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleDropNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleDrop")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleKeyDown(value: (/* view */ EditorView[S], /* event */ KeyboardEvent) => Boolean): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleKeyDown")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleKeyDown: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleKeyDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleKeyDownNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleKeyDown")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleKeyPress(value: (/* view */ EditorView[S], /* event */ KeyboardEvent) => Boolean): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleKeyPress")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleKeyPress: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleKeyPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleKeyPressNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleKeyPress")(null)
+        ret
+    }
+    @scala.inline
+    def withHandlePaste(value: (/* view */ EditorView[S], /* event */ ClipboardEvent, /* slice */ Slice[S]) => Boolean): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlePaste")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandlePaste: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlePaste")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandlePasteNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlePaste")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleScrollToSelection(value: /* view */ EditorView[S] => Boolean): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleScrollToSelection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleScrollToSelection: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleScrollToSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleScrollToSelectionNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleScrollToSelection")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleTextInput(
+      value: (/* view */ EditorView[S], /* from */ Double, /* to */ Double, /* text */ String) => Boolean
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleTextInput")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleTextInput: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleTextInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleTextInputNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleTextInput")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleTripleClick(value: (/* view */ EditorView[S], /* pos */ Double, /* event */ MouseEvent) => Boolean): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleTripleClick")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleTripleClick: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleTripleClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleTripleClickNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleTripleClick")(null)
+        ret
+    }
+    @scala.inline
+    def withHandleTripleClickOn(
+      value: (/* view */ EditorView[S], /* pos */ Double, /* node */ Node[S], /* nodePos */ Double, /* event */ MouseEvent, /* direct */ Boolean) => Boolean
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleTripleClickOn")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandleTripleClickOn: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleTripleClickOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleTripleClickOnNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleTripleClickOn")(null)
+        ret
+    }
+    @scala.inline
+    def withNodeViews(
+      value: StringDictionary[
+          js.Function4[
+            /* node */ Node[S], 
+            /* view */ EditorView[S], 
+            /* getPos */ js.Function0[Double] | Boolean, 
+            /* decorations */ js.Array[Decoration[StringDictionary[_]]], 
+            NodeView[S]
+          ]
+        ]
+    ): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeViews")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeViews: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeViews")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeViewsNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeViews")(null)
+        ret
+    }
+    @scala.inline
+    def withScrollMargin(value: Double | AnonRight): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollMargin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollMargin: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollMargin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollMarginNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollMargin")(null)
+        ret
+    }
+    @scala.inline
+    def withScrollThreshold(value: Double | AnonRight): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollThreshold: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollThresholdNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollThreshold")(null)
+        ret
+    }
+    @scala.inline
+    def withTransformPasted(value: /* p */ Slice[S] => Slice[S]): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPasted")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTransformPasted: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPasted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformPastedNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPasted")(null)
+        ret
+    }
+    @scala.inline
+    def withTransformPastedHTML(value: /* html */ String => String): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPastedHTML")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTransformPastedHTML: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPastedHTML")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformPastedHTMLNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPastedHTML")(null)
+        ret
+    }
+    @scala.inline
+    def withTransformPastedText(value: /* text */ String => String): Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPastedText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTransformPastedText: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPastedText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformPastedTextNull: Self[S] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformPastedText")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -18,10 +18,35 @@ trait SnapshotSortingEntity extends js.Object {
 
 object SnapshotSortingEntity {
   @scala.inline
-  def apply(Attribute: SnapshotAttributeToSortBy, SortOrder: SortByOrder = null): SnapshotSortingEntity = {
+  def apply(Attribute: SnapshotAttributeToSortBy): SnapshotSortingEntity = {
     val __obj = js.Dynamic.literal(Attribute = Attribute.asInstanceOf[js.Any])
-    if (SortOrder != null) __obj.updateDynamic("SortOrder")(SortOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnapshotSortingEntity]
   }
+  @scala.inline
+  implicit class SnapshotSortingEntityOps[Self <: SnapshotSortingEntity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttribute(value: SnapshotAttributeToSortBy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSortOrder(value: SortByOrder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortOrder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

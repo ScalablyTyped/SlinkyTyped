@@ -5,19 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIsInitial extends js.Object {
-  var isInitial: Boolean
-  var newViewModel: js.Object
-  var node: Node
-  var oldViewModel: js.Object
+  var isInitial: Boolean = js.native
+  var newViewModel: js.Object = js.native
+  var node: Node = js.native
+  var oldViewModel: js.Object = js.native
 }
 
 object AnonIsInitial {
   @scala.inline
   def apply(isInitial: Boolean, newViewModel: js.Object, node: Node, oldViewModel: js.Object): AnonIsInitial = {
     val __obj = js.Dynamic.literal(isInitial = isInitial.asInstanceOf[js.Any], newViewModel = newViewModel.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], oldViewModel = oldViewModel.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonIsInitial]
   }
+  @scala.inline
+  implicit class AnonIsInitialOps[Self <: AnonIsInitial] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsInitial(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInitial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewViewModel(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newViewModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNode(value: Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOldViewModel(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldViewModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

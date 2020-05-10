@@ -35,20 +35,77 @@ trait SchemaCropPropertiesSuggestionState extends js.Object {
 
 object SchemaCropPropertiesSuggestionState {
   @scala.inline
-  def apply(
-    angleSuggested: js.UndefOr[Boolean] = js.undefined,
-    offsetBottomSuggested: js.UndefOr[Boolean] = js.undefined,
-    offsetLeftSuggested: js.UndefOr[Boolean] = js.undefined,
-    offsetRightSuggested: js.UndefOr[Boolean] = js.undefined,
-    offsetTopSuggested: js.UndefOr[Boolean] = js.undefined
-  ): SchemaCropPropertiesSuggestionState = {
+  def apply(): SchemaCropPropertiesSuggestionState = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(angleSuggested)) __obj.updateDynamic("angleSuggested")(angleSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(offsetBottomSuggested)) __obj.updateDynamic("offsetBottomSuggested")(offsetBottomSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(offsetLeftSuggested)) __obj.updateDynamic("offsetLeftSuggested")(offsetLeftSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(offsetRightSuggested)) __obj.updateDynamic("offsetRightSuggested")(offsetRightSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(offsetTopSuggested)) __obj.updateDynamic("offsetTopSuggested")(offsetTopSuggested.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCropPropertiesSuggestionState]
   }
+  @scala.inline
+  implicit class SchemaCropPropertiesSuggestionStateOps[Self <: SchemaCropPropertiesSuggestionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAngleSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angleSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAngleSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angleSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetBottomSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBottomSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetBottomSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetBottomSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetLeftSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetLeftSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetLeftSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetLeftSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetRightSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetRightSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetRightSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetRightSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsetTopSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetTopSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsetTopSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetTopSuggested")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

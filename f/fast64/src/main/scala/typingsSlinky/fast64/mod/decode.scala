@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object decode extends js.Object {
   def apply(base64: String): String = js.native
-  def apply(base64: String, options: Options): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def apply(base64: String, options: Options): js.typedarray.Uint8Array = js.native
 }
 

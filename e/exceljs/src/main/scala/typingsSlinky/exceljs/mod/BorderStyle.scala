@@ -22,30 +22,28 @@ trait BorderStyle extends js.Object
 
 object BorderStyle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dashDot: typingsSlinky.exceljs.exceljsStrings.dashDot = "dashDot".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.dashDot]
   @scala.inline
-  def dashDot: typingsSlinky.exceljs.exceljsStrings.dashDot = this.cast("dashDot")
+  def dashDotDot: typingsSlinky.exceljs.exceljsStrings.dashDotDot = "dashDotDot".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.dashDotDot]
   @scala.inline
-  def dashDotDot: typingsSlinky.exceljs.exceljsStrings.dashDotDot = this.cast("dashDotDot")
+  def dotted: typingsSlinky.exceljs.exceljsStrings.dotted = "dotted".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.dotted]
   @scala.inline
-  def dotted: typingsSlinky.exceljs.exceljsStrings.dotted = this.cast("dotted")
+  def double: typingsSlinky.exceljs.exceljsStrings.double = "double".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.double]
   @scala.inline
-  def double: typingsSlinky.exceljs.exceljsStrings.double = this.cast("double")
+  def hair: typingsSlinky.exceljs.exceljsStrings.hair = "hair".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.hair]
   @scala.inline
-  def hair: typingsSlinky.exceljs.exceljsStrings.hair = this.cast("hair")
+  def medium: typingsSlinky.exceljs.exceljsStrings.medium = "medium".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.medium]
   @scala.inline
-  def medium: typingsSlinky.exceljs.exceljsStrings.medium = this.cast("medium")
+  def mediumDashDot: typingsSlinky.exceljs.exceljsStrings.mediumDashDot = "mediumDashDot".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.mediumDashDot]
   @scala.inline
-  def mediumDashDot: typingsSlinky.exceljs.exceljsStrings.mediumDashDot = this.cast("mediumDashDot")
+  def mediumDashDotDot: typingsSlinky.exceljs.exceljsStrings.mediumDashDotDot = "mediumDashDotDot".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.mediumDashDotDot]
   @scala.inline
-  def mediumDashDotDot: typingsSlinky.exceljs.exceljsStrings.mediumDashDotDot = this.cast("mediumDashDotDot")
+  def mediumDashed: typingsSlinky.exceljs.exceljsStrings.mediumDashed = "mediumDashed".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.mediumDashed]
   @scala.inline
-  def mediumDashed: typingsSlinky.exceljs.exceljsStrings.mediumDashed = this.cast("mediumDashed")
+  def slantDashDot: typingsSlinky.exceljs.exceljsStrings.slantDashDot = "slantDashDot".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.slantDashDot]
   @scala.inline
-  def slantDashDot: typingsSlinky.exceljs.exceljsStrings.slantDashDot = this.cast("slantDashDot")
+  def thick: typingsSlinky.exceljs.exceljsStrings.thick = "thick".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.thick]
   @scala.inline
-  def thick: typingsSlinky.exceljs.exceljsStrings.thick = this.cast("thick")
-  @scala.inline
-  def thin: typingsSlinky.exceljs.exceljsStrings.thin = this.cast("thin")
+  def thin: typingsSlinky.exceljs.exceljsStrings.thin = "thin".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.thin]
 }
 

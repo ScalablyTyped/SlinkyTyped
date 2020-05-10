@@ -15,14 +15,12 @@ trait ZlibAlgorithm extends js.Object
 
 object ZlibAlgorithm {
   @scala.inline
-  def brotliCompress: typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.brotliCompress = this.cast("brotliCompress")
+  def brotliCompress: typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.brotliCompress = "brotliCompress".asInstanceOf[typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.brotliCompress]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deflate: typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.deflate = "deflate".asInstanceOf[typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.deflate]
   @scala.inline
-  def deflate: typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.deflate = this.cast("deflate")
+  def deflateRaw: typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.deflateRaw = "deflateRaw".asInstanceOf[typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.deflateRaw]
   @scala.inline
-  def deflateRaw: typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.deflateRaw = this.cast("deflateRaw")
-  @scala.inline
-  def gzip: typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.gzip = this.cast("gzip")
+  def gzip: typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.gzip = "gzip".asInstanceOf[typingsSlinky.compressionWebpackPlugin.compressionWebpackPluginStrings.gzip]
 }
 

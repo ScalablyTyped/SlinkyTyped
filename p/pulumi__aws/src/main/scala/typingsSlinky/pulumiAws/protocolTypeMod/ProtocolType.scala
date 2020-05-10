@@ -15,14 +15,12 @@ trait ProtocolType extends js.Object
 
 object ProtocolType {
   @scala.inline
-  def all: all_ = this.cast("all")
+  def all: all_ = "all".asInstanceOf[all_]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def icmp: typingsSlinky.pulumiAws.pulumiAwsStrings.icmp = "icmp".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.icmp]
   @scala.inline
-  def icmp: typingsSlinky.pulumiAws.pulumiAwsStrings.icmp = this.cast("icmp")
+  def tcp: typingsSlinky.pulumiAws.pulumiAwsStrings.tcp = "tcp".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.tcp]
   @scala.inline
-  def tcp: typingsSlinky.pulumiAws.pulumiAwsStrings.tcp = this.cast("tcp")
-  @scala.inline
-  def udp: typingsSlinky.pulumiAws.pulumiAwsStrings.udp = this.cast("udp")
+  def udp: typingsSlinky.pulumiAws.pulumiAwsStrings.udp = "udp".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.udp]
 }
 

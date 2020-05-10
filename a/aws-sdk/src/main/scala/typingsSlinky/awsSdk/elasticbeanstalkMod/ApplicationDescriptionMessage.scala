@@ -14,10 +14,29 @@ trait ApplicationDescriptionMessage extends js.Object {
 
 object ApplicationDescriptionMessage {
   @scala.inline
-  def apply(Application: ApplicationDescription = null): ApplicationDescriptionMessage = {
+  def apply(): ApplicationDescriptionMessage = {
     val __obj = js.Dynamic.literal()
-    if (Application != null) __obj.updateDynamic("Application")(Application.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationDescriptionMessage]
   }
+  @scala.inline
+  implicit class ApplicationDescriptionMessageOps[Self <: ApplicationDescriptionMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: ApplicationDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

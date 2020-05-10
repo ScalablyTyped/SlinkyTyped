@@ -12,10 +12,8 @@ trait Side extends js.Object
 
 object Side {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def end: typingsSlinky.ionicCore.ionicCoreStrings.end = "end".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.end]
   @scala.inline
-  def end: typingsSlinky.ionicCore.ionicCoreStrings.end = this.cast("end")
-  @scala.inline
-  def start: typingsSlinky.ionicCore.ionicCoreStrings.start = this.cast("start")
+  def start: typingsSlinky.ionicCore.ionicCoreStrings.start = "start".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.start]
 }
 

@@ -13,11 +13,41 @@ trait EC2MetadataCredentialsOptions extends js.Object {
 
 object EC2MetadataCredentialsOptions {
   @scala.inline
-  def apply(httpOptions: AnonTimeout = null, maxRetries: Int | Double = null): EC2MetadataCredentialsOptions = {
+  def apply(): EC2MetadataCredentialsOptions = {
     val __obj = js.Dynamic.literal()
-    if (httpOptions != null) __obj.updateDynamic("httpOptions")(httpOptions.asInstanceOf[js.Any])
-    if (maxRetries != null) __obj.updateDynamic("maxRetries")(maxRetries.asInstanceOf[js.Any])
     __obj.asInstanceOf[EC2MetadataCredentialsOptions]
   }
+  @scala.inline
+  implicit class EC2MetadataCredentialsOptionsOps[Self <: EC2MetadataCredentialsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHttpOptions(value: AnonTimeout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRetries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRetries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,12 @@ object platformMod extends js.Object {
   @js.native
   trait Platform extends js.Object {
     /** Decode the provided bytes into a string using the provided encoding. */
-    def decode(bytes: scala.scalajs.js.typedarray.Uint8Array, encoding: String): String = js.native
+    def decode(bytes: js.typedarray.Uint8Array, encoding: String): String = js.native
     /**
       * Encode the provided string into an array of bytes using the provided
       * encoding.
       */
-    def encode(text: String, encoding: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def encode(text: String, encoding: String): js.typedarray.Uint8Array = js.native
     /**
       * Makes an HTTP request.
       * @param path The URL path to make a request to

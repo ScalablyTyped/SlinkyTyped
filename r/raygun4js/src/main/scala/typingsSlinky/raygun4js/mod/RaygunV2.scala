@@ -1,5 +1,6 @@
 package typingsSlinky.raygun4js.mod
 
+import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.raygun4js.AnonLevel
 import typingsSlinky.raygun4js.AnonType
 import typingsSlinky.raygun4js.raygun4jsStrings.apiKey
@@ -37,8 +38,6 @@ import typingsSlinky.raygun4js.raygun4jsStrings.trackEvent
 import typingsSlinky.raygun4js.raygun4jsStrings.whitelistCrossOriginDomains
 import typingsSlinky.raygun4js.raygun4jsStrings.withCustomData
 import typingsSlinky.raygun4js.raygun4jsStrings.withTags
-import typingsSlinky.std.RegExp
-import typingsSlinky.std.XMLHttpRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,7 +51,7 @@ trait RaygunV2 extends js.Object {
   def apply(key: attach, value: Boolean): Unit = js.native
   def apply(key: enableCrashReporting, value: Boolean): Unit = js.native
   def apply(key: enablePulse, value: Boolean): Unit = js.native
-  def apply(key: filterSensitiveData, values: js.Array[String | RegExp]): Unit = js.native
+  def apply(key: filterSensitiveData, values: js.Array[String | js.RegExp]): Unit = js.native
   def apply(key: getRaygunInstance): RaygunStatic = js.native
   def apply(
     key: groupingKey,

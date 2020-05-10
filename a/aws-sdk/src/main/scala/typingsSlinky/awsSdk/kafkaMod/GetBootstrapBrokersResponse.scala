@@ -22,11 +22,41 @@ trait GetBootstrapBrokersResponse extends js.Object {
 
 object GetBootstrapBrokersResponse {
   @scala.inline
-  def apply(BootstrapBrokerString: string = null, BootstrapBrokerStringTls: string = null): GetBootstrapBrokersResponse = {
+  def apply(): GetBootstrapBrokersResponse = {
     val __obj = js.Dynamic.literal()
-    if (BootstrapBrokerString != null) __obj.updateDynamic("BootstrapBrokerString")(BootstrapBrokerString.asInstanceOf[js.Any])
-    if (BootstrapBrokerStringTls != null) __obj.updateDynamic("BootstrapBrokerStringTls")(BootstrapBrokerStringTls.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBootstrapBrokersResponse]
   }
+  @scala.inline
+  implicit class GetBootstrapBrokersResponseOps[Self <: GetBootstrapBrokersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBootstrapBrokerString(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapBrokerString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootstrapBrokerString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapBrokerString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBootstrapBrokerStringTls(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapBrokerStringTls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootstrapBrokerStringTls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BootstrapBrokerStringTls")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

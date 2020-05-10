@@ -148,7 +148,7 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_boundary(
     `type`: boundary,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_end(`type`: end, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _]): Unit = js.native
@@ -162,7 +162,7 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_end(
     `type`: end,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
@@ -179,7 +179,7 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisErrorEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_mark(`type`: mark, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _]): Unit = js.native
@@ -193,7 +193,7 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_mark(
     `type`: mark,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _]): Unit = js.native
@@ -207,7 +207,7 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_pause(
     `type`: pause,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_resume(`type`: resume, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _]): Unit = js.native
@@ -221,7 +221,7 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_resume(
     `type`: resume,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_start(`type`: start, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _]): Unit = js.native
@@ -235,7 +235,7 @@ trait SpeechSynthesisUtterance extends EventTarget {
   def removeEventListener_start(
     `type`: start,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechSynthesisEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

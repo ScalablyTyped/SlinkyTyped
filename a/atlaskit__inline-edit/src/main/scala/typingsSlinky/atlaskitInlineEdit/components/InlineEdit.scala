@@ -1,56 +1,54 @@
 package typingsSlinky.atlaskitInlineEdit.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.atlaskitInlineEdit.mod.StatefulProps
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.atlaskitInlineEdit.mod.BaseProps
 import typingsSlinky.atlaskitInlineEdit.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InlineEdit
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object InlineEdit {
   @JSImport("@atlaskit/inline-edit", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: label */
-  def apply(
-    onCancel: () => Unit,
-    onConfirm: () => Unit,
-    readView: ReactElement,
-    areActionButtonsHidden: js.UndefOr[Boolean] = js.undefined,
-    disableEditViewFieldBase: js.UndefOr[Boolean] = js.undefined,
-    editView: ReactElement = null,
-    invalidMessage: ReactElement = null,
-    isConfirmOnBlurDisabled: js.UndefOr[Boolean] = js.undefined,
-    isFitContainerWidthReadView: js.UndefOr[Boolean] = js.undefined,
-    isInvalid: js.UndefOr[Boolean] = js.undefined,
-    isLabelHidden: js.UndefOr[Boolean] = js.undefined,
-    isWaiting: js.UndefOr[Boolean] = js.undefined,
-    labelHtmlFor: String = null,
-    shouldConfirmOnEnter: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onConfirm = js.Any.fromFunction0(onConfirm), readView = readView.asInstanceOf[js.Any])
-    if (!js.isUndefined(areActionButtonsHidden)) __obj.updateDynamic("areActionButtonsHidden")(areActionButtonsHidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableEditViewFieldBase)) __obj.updateDynamic("disableEditViewFieldBase")(disableEditViewFieldBase.asInstanceOf[js.Any])
-    if (editView != null) __obj.updateDynamic("editView")(editView.asInstanceOf[js.Any])
-    if (invalidMessage != null) __obj.updateDynamic("invalidMessage")(invalidMessage.asInstanceOf[js.Any])
-    if (!js.isUndefined(isConfirmOnBlurDisabled)) __obj.updateDynamic("isConfirmOnBlurDisabled")(isConfirmOnBlurDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isFitContainerWidthReadView)) __obj.updateDynamic("isFitContainerWidthReadView")(isFitContainerWidthReadView.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInvalid)) __obj.updateDynamic("isInvalid")(isInvalid.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLabelHidden)) __obj.updateDynamic("isLabelHidden")(isLabelHidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(isWaiting)) __obj.updateDynamic("isWaiting")(isWaiting.asInstanceOf[js.Any])
-    if (labelHtmlFor != null) __obj.updateDynamic("labelHtmlFor")(labelHtmlFor.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldConfirmOnEnter)) __obj.updateDynamic("shouldConfirmOnEnter")(shouldConfirmOnEnter.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def areActionButtonsHidden(value: Boolean): this.type = set("areActionButtonsHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableEditViewFieldBase(value: Boolean): this.type = set("disableEditViewFieldBase", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editView(value: ReactElement): this.type = set("editView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def invalidMessage(value: ReactElement): this.type = set("invalidMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isConfirmOnBlurDisabled(value: Boolean): this.type = set("isConfirmOnBlurDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isFitContainerWidthReadView(value: Boolean): this.type = set("isFitContainerWidthReadView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isInvalid(value: Boolean): this.type = set("isInvalid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isLabelHidden(value: Boolean): this.type = set("isLabelHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isWaiting(value: Boolean): this.type = set("isWaiting", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelHtmlFor(value: String): this.type = set("labelHtmlFor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldConfirmOnEnter(value: Boolean): this.type = set("shouldConfirmOnEnter", value.asInstanceOf[js.Any])
   }
-  type Props = StatefulProps
+  
+  def withProps(p: BaseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onCancel: () => Unit, onConfirm: () => Unit, readView: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onConfirm = js.Any.fromFunction0(onConfirm), readView = readView.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BaseProps]))
+  }
 }
 

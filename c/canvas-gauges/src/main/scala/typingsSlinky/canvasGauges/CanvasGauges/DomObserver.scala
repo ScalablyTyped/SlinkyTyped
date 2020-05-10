@@ -1,8 +1,8 @@
 package typingsSlinky.canvasGauges.CanvasGauges
 
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MutationRecord
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.Node
+import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

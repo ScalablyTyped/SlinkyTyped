@@ -18,16 +18,14 @@ trait ContentPosition
 
 object ContentPosition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.csstype.csstypeStrings.center = "center".asInstanceOf[typingsSlinky.csstype.csstypeStrings.center]
   @scala.inline
-  def center: typingsSlinky.csstype.csstypeStrings.center = this.cast("center")
+  def end: typingsSlinky.csstype.csstypeStrings.end = "end".asInstanceOf[typingsSlinky.csstype.csstypeStrings.end]
   @scala.inline
-  def end: typingsSlinky.csstype.csstypeStrings.end = this.cast("end")
+  def `flex-end`: typingsSlinky.csstype.csstypeStrings.`flex-end` = "flex-end".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`flex-end`]
   @scala.inline
-  def `flex-end`: typingsSlinky.csstype.csstypeStrings.`flex-end` = this.cast("flex-end")
+  def `flex-start`: typingsSlinky.csstype.csstypeStrings.`flex-start` = "flex-start".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`flex-start`]
   @scala.inline
-  def `flex-start`: typingsSlinky.csstype.csstypeStrings.`flex-start` = this.cast("flex-start")
-  @scala.inline
-  def start: typingsSlinky.csstype.csstypeStrings.start = this.cast("start")
+  def start: typingsSlinky.csstype.csstypeStrings.start = "start".asInstanceOf[typingsSlinky.csstype.csstypeStrings.start]
 }
 

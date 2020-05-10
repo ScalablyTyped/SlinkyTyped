@@ -21,11 +21,41 @@ trait SchemaMemoryInfo extends js.Object {
 
 object SchemaMemoryInfo {
   @scala.inline
-  def apply(totalInternalStorage: String = null, totalRam: String = null): SchemaMemoryInfo = {
+  def apply(): SchemaMemoryInfo = {
     val __obj = js.Dynamic.literal()
-    if (totalInternalStorage != null) __obj.updateDynamic("totalInternalStorage")(totalInternalStorage.asInstanceOf[js.Any])
-    if (totalRam != null) __obj.updateDynamic("totalRam")(totalRam.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMemoryInfo]
   }
+  @scala.inline
+  implicit class SchemaMemoryInfoOps[Self <: SchemaMemoryInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTotalInternalStorage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalInternalStorage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalInternalStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalInternalStorage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalRam(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRam")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalRam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalRam")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

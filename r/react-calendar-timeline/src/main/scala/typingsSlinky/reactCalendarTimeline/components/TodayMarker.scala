@@ -1,27 +1,30 @@
 package typingsSlinky.reactCalendarTimeline.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactCalendarTimeline.mod.TodayMarkerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TodayMarker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactCalendarTimeline.mod.TodayMarker] {
+object TodayMarker {
   @JSImport("react-calendar-timeline", "TodayMarker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(date: js.Date | Double, interval: Int | Double = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.TodayMarker] = {
-    val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.TodayMarker] {
+    @scala.inline
+    def interval(value: Double): this.type = set("interval", value.asInstanceOf[js.Any])
   }
-  type Props = TodayMarkerProps
+  
+  def withProps(p: TodayMarkerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(date: js.Date | Double): Builder = {
+    val __props = js.Dynamic.literal(date = date.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TodayMarkerProps]))
+  }
 }
 

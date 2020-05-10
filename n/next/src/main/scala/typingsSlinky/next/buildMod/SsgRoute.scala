@@ -1,0 +1,54 @@
+package typingsSlinky.next.buildMod
+
+import typingsSlinky.next.nextBooleans.`false`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait SsgRoute extends js.Object {
+  var dataRoute: String = js.native
+  var initialRevalidateSeconds: Double | `false` = js.native
+  var srcRoute: String | Null = js.native
+}
+
+object SsgRoute {
+  @scala.inline
+  def apply(dataRoute: String, initialRevalidateSeconds: Double | `false`): SsgRoute = {
+    val __obj = js.Dynamic.literal(dataRoute = dataRoute.asInstanceOf[js.Any], initialRevalidateSeconds = initialRevalidateSeconds.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SsgRoute]
+  }
+  @scala.inline
+  implicit class SsgRouteOps[Self <: SsgRoute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataRoute(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRoute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitialRevalidateSeconds(value: Double | `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialRevalidateSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSrcRoute(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("srcRoute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSrcRouteNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("srcRoute")(null)
+        ret
+    }
+  }
+  
+}
+

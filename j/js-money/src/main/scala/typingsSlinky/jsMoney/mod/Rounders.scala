@@ -13,12 +13,10 @@ trait Rounders extends js.Object
 
 object Rounders {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ceil: typingsSlinky.jsMoney.jsMoneyStrings.ceil = "ceil".asInstanceOf[typingsSlinky.jsMoney.jsMoneyStrings.ceil]
   @scala.inline
-  def ceil: typingsSlinky.jsMoney.jsMoneyStrings.ceil = this.cast("ceil")
+  def floor: typingsSlinky.jsMoney.jsMoneyStrings.floor = "floor".asInstanceOf[typingsSlinky.jsMoney.jsMoneyStrings.floor]
   @scala.inline
-  def floor: typingsSlinky.jsMoney.jsMoneyStrings.floor = this.cast("floor")
-  @scala.inline
-  def round: typingsSlinky.jsMoney.jsMoneyStrings.round = this.cast("round")
+  def round: typingsSlinky.jsMoney.jsMoneyStrings.round = "round".asInstanceOf[typingsSlinky.jsMoney.jsMoneyStrings.round]
 }
 

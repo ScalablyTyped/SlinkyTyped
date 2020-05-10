@@ -3,7 +3,7 @@ package typingsSlinky.officeUiFabricReact
 import slinky.core.facade.ReactElement
 import typingsSlinky.officeUiFabricReact.facepileTypesMod.IFacepileProps
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings._empty
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 object facepileBaseMod extends js.Object {
   @js.native
   class FacepileBase protected ()
-    extends BaseComponent[IFacepileProps, js.Object] {
+    extends Component[IFacepileProps, js.Object, js.Any] {
     def this(props: IFacepileProps) = this()
     var _ariaDescriptionId: js.Any = js.native
     var _classNames: js.Any = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.checksum.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,7 @@ object file extends js.Object {
     * @param filename	The file name
     * @param callback	Callback which is called with the result or an error
     */
-  def apply(filename: String, callback: js.Function2[/* error */ Error, /* hash */ String, Unit]): Unit = js.native
+  def apply(filename: String, callback: js.Function2[/* error */ js.Error, /* hash */ String, Unit]): Unit = js.native
   /**
     * Generate the checksum for a file on disk
     * @param filename	The file name

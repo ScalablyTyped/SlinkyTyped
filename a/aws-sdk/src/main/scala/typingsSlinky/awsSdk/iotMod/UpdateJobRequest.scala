@@ -34,21 +34,83 @@ trait UpdateJobRequest extends js.Object {
 
 object UpdateJobRequest {
   @scala.inline
-  def apply(
-    jobId: JobId,
-    abortConfig: AbortConfig = null,
-    description: JobDescription = null,
-    jobExecutionsRolloutConfig: JobExecutionsRolloutConfig = null,
-    presignedUrlConfig: PresignedUrlConfig = null,
-    timeoutConfig: TimeoutConfig = null
-  ): UpdateJobRequest = {
+  def apply(jobId: JobId): UpdateJobRequest = {
     val __obj = js.Dynamic.literal(jobId = jobId.asInstanceOf[js.Any])
-    if (abortConfig != null) __obj.updateDynamic("abortConfig")(abortConfig.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (jobExecutionsRolloutConfig != null) __obj.updateDynamic("jobExecutionsRolloutConfig")(jobExecutionsRolloutConfig.asInstanceOf[js.Any])
-    if (presignedUrlConfig != null) __obj.updateDynamic("presignedUrlConfig")(presignedUrlConfig.asInstanceOf[js.Any])
-    if (timeoutConfig != null) __obj.updateDynamic("timeoutConfig")(timeoutConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateJobRequest]
   }
+  @scala.inline
+  implicit class UpdateJobRequestOps[Self <: UpdateJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobId(value: JobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbortConfig(value: AbortConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abortConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbortConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abortConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: JobDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobExecutionsRolloutConfig(value: JobExecutionsRolloutConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobExecutionsRolloutConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobExecutionsRolloutConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobExecutionsRolloutConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPresignedUrlConfig(value: PresignedUrlConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presignedUrlConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPresignedUrlConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presignedUrlConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutConfig(value: TimeoutConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

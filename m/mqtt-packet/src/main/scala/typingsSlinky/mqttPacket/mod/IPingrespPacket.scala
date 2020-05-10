@@ -5,20 +5,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPingrespPacket
   extends IPacket
      with Packet {
   @JSName("cmd")
-  var cmd_IPingrespPacket: pingresp
+  var cmd_IPingrespPacket: pingresp = js.native
 }
 
 object IPingrespPacket {
   @scala.inline
-  def apply(cmd: pingresp, length: Int | Double = null, messageId: Int | Double = null): IPingrespPacket = {
+  def apply(cmd: pingresp): IPingrespPacket = {
     val __obj = js.Dynamic.literal(cmd = cmd.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (messageId != null) __obj.updateDynamic("messageId")(messageId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPingrespPacket]
   }
+  @scala.inline
+  implicit class IPingrespPacketOps[Self <: IPingrespPacket] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCmd(value: pingresp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

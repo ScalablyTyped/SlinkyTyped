@@ -62,9 +62,9 @@ trait CognitoIdentityResolvedConfiguration extends CognitoIdentityConfiguration 
   @JSName("utf8Encoder")
   var utf8Encoder_Original: Encoder = js.native
   @JSName("base64Decoder")
-  def base64Decoder_MCognitoIdentityResolvedConfiguration(input: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def base64Decoder_MCognitoIdentityResolvedConfiguration(input: String): js.typedarray.Uint8Array = js.native
   @JSName("base64Encoder")
-  def base64Encoder_MCognitoIdentityResolvedConfiguration(input: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def base64Encoder_MCognitoIdentityResolvedConfiguration(input: js.typedarray.Uint8Array): String = js.native
   def bodyLengthChecker(body: js.Any): js.UndefOr[Double] = js.native
   @JSName("credentials")
   def credentials_MCognitoIdentityResolvedConfiguration(): js.Promise[Credentials] = js.native
@@ -76,12 +76,12 @@ trait CognitoIdentityResolvedConfiguration extends CognitoIdentityConfiguration 
   def region_MCognitoIdentityResolvedConfiguration(): js.Promise[String] = js.native
   def serializer(): js.Promise[RequestSerializer[Blob]] = js.native
   @JSName("streamCollector")
-  def streamCollector_MCognitoIdentityResolvedConfiguration(stream: Blob): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def streamCollector_MCognitoIdentityResolvedConfiguration(stream: Blob): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("urlParser")
   def urlParser_MCognitoIdentityResolvedConfiguration(url: String): HttpEndpoint = js.native
   @JSName("utf8Decoder")
-  def utf8Decoder_MCognitoIdentityResolvedConfiguration(input: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def utf8Decoder_MCognitoIdentityResolvedConfiguration(input: String): js.typedarray.Uint8Array = js.native
   @JSName("utf8Encoder")
-  def utf8Encoder_MCognitoIdentityResolvedConfiguration(input: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def utf8Encoder_MCognitoIdentityResolvedConfiguration(input: js.typedarray.Uint8Array): String = js.native
 }
 

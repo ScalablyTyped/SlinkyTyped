@@ -21,28 +21,26 @@ trait CrosshairType extends js.Object
 
 object CrosshairType {
   @scala.inline
-  def bottom: typingsSlinky.nivoTooltip.nivoTooltipStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.nivoTooltip.nivoTooltipStrings.bottom = "bottom".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.bottom]
   @scala.inline
-  def `bottom-left`: typingsSlinky.nivoTooltip.nivoTooltipStrings.`bottom-left` = this.cast("bottom-left")
+  def `bottom-left`: typingsSlinky.nivoTooltip.nivoTooltipStrings.`bottom-left` = "bottom-left".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.`bottom-left`]
   @scala.inline
-  def `bottom-right`: typingsSlinky.nivoTooltip.nivoTooltipStrings.`bottom-right` = this.cast("bottom-right")
+  def `bottom-right`: typingsSlinky.nivoTooltip.nivoTooltipStrings.`bottom-right` = "bottom-right".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.`bottom-right`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cross: typingsSlinky.nivoTooltip.nivoTooltipStrings.cross = "cross".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.cross]
   @scala.inline
-  def cross: typingsSlinky.nivoTooltip.nivoTooltipStrings.cross = this.cast("cross")
+  def left: typingsSlinky.nivoTooltip.nivoTooltipStrings.left = "left".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.left]
   @scala.inline
-  def left: typingsSlinky.nivoTooltip.nivoTooltipStrings.left = this.cast("left")
+  def right: typingsSlinky.nivoTooltip.nivoTooltipStrings.right = "right".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.right]
   @scala.inline
-  def right: typingsSlinky.nivoTooltip.nivoTooltipStrings.right = this.cast("right")
+  def top: typingsSlinky.nivoTooltip.nivoTooltipStrings.top = "top".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.top]
   @scala.inline
-  def top: typingsSlinky.nivoTooltip.nivoTooltipStrings.top = this.cast("top")
+  def `top-left`: typingsSlinky.nivoTooltip.nivoTooltipStrings.`top-left` = "top-left".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.`top-left`]
   @scala.inline
-  def `top-left`: typingsSlinky.nivoTooltip.nivoTooltipStrings.`top-left` = this.cast("top-left")
+  def `top-right`: typingsSlinky.nivoTooltip.nivoTooltipStrings.`top-right` = "top-right".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.`top-right`]
   @scala.inline
-  def `top-right`: typingsSlinky.nivoTooltip.nivoTooltipStrings.`top-right` = this.cast("top-right")
+  def x: typingsSlinky.nivoTooltip.nivoTooltipStrings.x = "x".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.x]
   @scala.inline
-  def x: typingsSlinky.nivoTooltip.nivoTooltipStrings.x = this.cast("x")
-  @scala.inline
-  def y: typingsSlinky.nivoTooltip.nivoTooltipStrings.y = this.cast("y")
+  def y: typingsSlinky.nivoTooltip.nivoTooltipStrings.y = "y".asInstanceOf[typingsSlinky.nivoTooltip.nivoTooltipStrings.y]
 }
 

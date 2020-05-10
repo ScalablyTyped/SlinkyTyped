@@ -1,11 +1,9 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.Anon2
-import typingsSlinky.gestalt.Anon3
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.gestalt.Anon4
+import typingsSlinky.gestalt.Anon5
 import typingsSlinky.gestalt.AnonDuration
 import typingsSlinky.gestalt.AnonFullscreen
 import typingsSlinky.gestalt.AnonLoaded
@@ -20,65 +18,70 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Video
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Video] {
+object Video {
   @JSImport("gestalt", "Video")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: controls, loop, poster */
-  def apply(
-    aspectRatio: Double,
-    captions: String,
-    src: String | js.Array[AnonSrc],
-    volume: Double,
-    accessibilityMaximizeLabel: String = null,
-    accessibilityMinimizeLabel: String = null,
-    accessibilityMuteLabel: String = null,
-    accessibilityPauseLabel: String = null,
-    accessibilityPlayLabel: String = null,
-    accessibilityUnmuteLabel: String = null,
-    onDurationChange: /* args */ AnonDuration => Unit = null,
-    onEnded: /* args */ Anon2 => Unit = null,
-    onFullscreenChange: /* args */ AnonFullscreen => Unit = null,
-    onLoadedChange: /* args */ AnonLoaded => Unit = null,
-    onPause: /* args */ Anon3 => Unit = null,
-    onPlay: /* args */ Anon3 => Unit = null,
-    onReady: /* args */ Anon2 => Unit = null,
-    onSeek: /* args */ Anon2 => Unit = null,
-    onTimeChange: /* args */ AnonTime => Unit = null,
-    onVolumeChange: /* args */ AnonVolume => Unit = null,
-    playbackRate: Int | Double = null,
-    playing: js.UndefOr[Boolean] = js.undefined,
-    playsInline: js.UndefOr[Boolean] = js.undefined,
-    preload: auto | metadata | none = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Video] = {
-    val __obj = js.Dynamic.literal(aspectRatio = aspectRatio.asInstanceOf[js.Any], captions = captions.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], volume = volume.asInstanceOf[js.Any])
-    if (accessibilityMaximizeLabel != null) __obj.updateDynamic("accessibilityMaximizeLabel")(accessibilityMaximizeLabel.asInstanceOf[js.Any])
-    if (accessibilityMinimizeLabel != null) __obj.updateDynamic("accessibilityMinimizeLabel")(accessibilityMinimizeLabel.asInstanceOf[js.Any])
-    if (accessibilityMuteLabel != null) __obj.updateDynamic("accessibilityMuteLabel")(accessibilityMuteLabel.asInstanceOf[js.Any])
-    if (accessibilityPauseLabel != null) __obj.updateDynamic("accessibilityPauseLabel")(accessibilityPauseLabel.asInstanceOf[js.Any])
-    if (accessibilityPlayLabel != null) __obj.updateDynamic("accessibilityPlayLabel")(accessibilityPlayLabel.asInstanceOf[js.Any])
-    if (accessibilityUnmuteLabel != null) __obj.updateDynamic("accessibilityUnmuteLabel")(accessibilityUnmuteLabel.asInstanceOf[js.Any])
-    if (onDurationChange != null) __obj.updateDynamic("onDurationChange")(js.Any.fromFunction1(onDurationChange))
-    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction1(onEnded))
-    if (onFullscreenChange != null) __obj.updateDynamic("onFullscreenChange")(js.Any.fromFunction1(onFullscreenChange))
-    if (onLoadedChange != null) __obj.updateDynamic("onLoadedChange")(js.Any.fromFunction1(onLoadedChange))
-    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
-    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
-    if (onReady != null) __obj.updateDynamic("onReady")(js.Any.fromFunction1(onReady))
-    if (onSeek != null) __obj.updateDynamic("onSeek")(js.Any.fromFunction1(onSeek))
-    if (onTimeChange != null) __obj.updateDynamic("onTimeChange")(js.Any.fromFunction1(onTimeChange))
-    if (onVolumeChange != null) __obj.updateDynamic("onVolumeChange")(js.Any.fromFunction1(onVolumeChange))
-    if (playbackRate != null) __obj.updateDynamic("playbackRate")(playbackRate.asInstanceOf[js.Any])
-    if (!js.isUndefined(playing)) __obj.updateDynamic("playing")(playing.asInstanceOf[js.Any])
-    if (!js.isUndefined(playsInline)) __obj.updateDynamic("playsInline")(playsInline.asInstanceOf[js.Any])
-    if (preload != null) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Video] {
+    @scala.inline
+    def accessibilityMaximizeLabel(value: String): this.type = set("accessibilityMaximizeLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityMinimizeLabel(value: String): this.type = set("accessibilityMinimizeLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityMuteLabel(value: String): this.type = set("accessibilityMuteLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityPauseLabel(value: String): this.type = set("accessibilityPauseLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityPlayLabel(value: String): this.type = set("accessibilityPlayLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityUnmuteLabel(value: String): this.type = set("accessibilityUnmuteLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def controls(value: Boolean): this.type = set("controls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDurationChange(value: /* args */ AnonDuration => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEnded(value: /* args */ Anon4 => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFullscreenChange(value: /* args */ AnonFullscreen => Unit): this.type = set("onFullscreenChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadedChange(value: /* args */ AnonLoaded => Unit): this.type = set("onLoadedChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPause(value: /* args */ Anon5 => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPlay(value: /* args */ Anon5 => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    @scala.inline
+    def onReady(value: /* args */ Anon4 => Unit): this.type = set("onReady", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSeek(value: /* args */ Anon4 => Unit): this.type = set("onSeek", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTimeChange(value: /* args */ AnonTime => Unit): this.type = set("onTimeChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onVolumeChange(value: /* args */ AnonVolume => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def playbackRate(value: Double): this.type = set("playbackRate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def playing(value: Boolean): this.type = set("playing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def playsInline(value: Boolean): this.type = set("playsInline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def poster(value: String): this.type = set("poster", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preload(value: auto | metadata | none): this.type = set("preload", value.asInstanceOf[js.Any])
+    @scala.inline
+    def volume(value: Double): this.type = set("volume", value.asInstanceOf[js.Any])
   }
-  type Props = VideoProps
+  
+  def withProps(p: VideoProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(aspectRatio: Double, captions: String, src: String | js.Array[AnonSrc]): Builder = {
+    val __props = js.Dynamic.literal(aspectRatio = aspectRatio.asInstanceOf[js.Any], captions = captions.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[VideoProps]))
+  }
 }
 

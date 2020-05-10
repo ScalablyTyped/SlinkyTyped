@@ -3,6 +3,7 @@ package typingsSlinky.ol.selectMod
 import typingsSlinky.ol.eventsMod.EventsKey
 import typingsSlinky.ol.olFeatureMod.FeatureLike
 import typingsSlinky.ol.olStrings.select
+import typingsSlinky.ol.styleStyleMod.StyleFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,7 @@ trait Select
   def getFeatures(): typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]] = js.native
   def getHitTolerance(): Double = js.native
   def getLayer(feature: FeatureLike): typingsSlinky.ol.vectorMod.default = js.native
+  def getStyle(): typingsSlinky.ol.styleStyleMod.default | js.Array[typingsSlinky.ol.styleStyleMod.default] | StyleFunction = js.native
   @JSName("on")
   def on_select(`type`: select, listener: js.Function1[/* evt */ SelectEvent, Unit]): EventsKey = js.native
   @JSName("once")

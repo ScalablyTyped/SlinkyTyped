@@ -14,10 +14,35 @@ trait AnonPlacement extends js.Object {
 
 object AnonPlacement {
   @scala.inline
-  def apply(placement: PopperPlacementType, TransitionProps: TransitionProps = null): AnonPlacement = {
+  def apply(placement: PopperPlacementType): AnonPlacement = {
     val __obj = js.Dynamic.literal(placement = placement.asInstanceOf[js.Any])
-    if (TransitionProps != null) __obj.updateDynamic("TransitionProps")(TransitionProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPlacement]
   }
+  @scala.inline
+  implicit class AnonPlacementOps[Self <: AnonPlacement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlacement(value: PopperPlacementType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransitionProps(value: TransitionProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitionProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitionProps")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

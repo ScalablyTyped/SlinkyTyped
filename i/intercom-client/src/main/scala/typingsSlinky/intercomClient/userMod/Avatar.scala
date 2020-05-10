@@ -5,18 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Avatar extends js.Object {
-  var image_url: String | Null
-  var `type`: avatar
+  var image_url: String | Null = js.native
+  var `type`: avatar = js.native
 }
 
 object Avatar {
   @scala.inline
-  def apply(`type`: avatar, image_url: String = null): Avatar = {
+  def apply(`type`: avatar): Avatar = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (image_url != null) __obj.updateDynamic("image_url")(image_url.asInstanceOf[js.Any])
     __obj.asInstanceOf[Avatar]
   }
+  @scala.inline
+  implicit class AvatarOps[Self <: Avatar] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: avatar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage_urlNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image_url")(null)
+        ret
+    }
+  }
+  
 }
 

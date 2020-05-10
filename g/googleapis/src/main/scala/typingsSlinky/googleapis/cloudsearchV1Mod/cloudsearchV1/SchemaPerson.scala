@@ -36,20 +36,77 @@ trait SchemaPerson extends js.Object {
 
 object SchemaPerson {
   @scala.inline
-  def apply(
-    emailAddresses: js.Array[SchemaEmailAddress] = null,
-    name: String = null,
-    obfuscatedId: String = null,
-    personNames: js.Array[SchemaName] = null,
-    photos: js.Array[SchemaPhoto] = null
-  ): SchemaPerson = {
+  def apply(): SchemaPerson = {
     val __obj = js.Dynamic.literal()
-    if (emailAddresses != null) __obj.updateDynamic("emailAddresses")(emailAddresses.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (obfuscatedId != null) __obj.updateDynamic("obfuscatedId")(obfuscatedId.asInstanceOf[js.Any])
-    if (personNames != null) __obj.updateDynamic("personNames")(personNames.asInstanceOf[js.Any])
-    if (photos != null) __obj.updateDynamic("photos")(photos.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPerson]
   }
+  @scala.inline
+  implicit class SchemaPersonOps[Self <: SchemaPerson] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmailAddresses(value: js.Array[SchemaEmailAddress]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmailAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emailAddresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObfuscatedId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("obfuscatedId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObfuscatedId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("obfuscatedId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersonNames(value: js.Array[SchemaName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("personNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersonNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("personNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhotos(value: js.Array[SchemaPhoto]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhotos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photos")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

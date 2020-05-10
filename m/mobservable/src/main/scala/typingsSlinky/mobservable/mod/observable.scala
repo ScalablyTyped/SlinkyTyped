@@ -2,8 +2,6 @@ package typingsSlinky.mobservable.mod
 
 import typingsSlinky.mobservable.interfacesMod.IObservableArray
 import typingsSlinky.mobservable.interfacesMod.IObservableValue
-import typingsSlinky.std.Date
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,8 +16,8 @@ object observable extends js.Object {
   def apply(value: Boolean): IObservableValue[Boolean] = js.native
   def apply(value: Double): IObservableValue[Double] = js.native
   def apply(value: Unit): IObservableValue[Unit] = js.native
-  def apply(value: Date): IObservableValue[js.Date] = js.native
-  def apply(value: RegExp): IObservableValue[js.RegExp] = js.native
+  def apply(value: js.Date): IObservableValue[js.Date] = js.native
+  def apply(value: js.RegExp): IObservableValue[js.RegExp] = js.native
   def apply[T /* <: js.Object */](value: T): T = js.native
   def apply[T](value: js.Array[T]): IObservableArray[T] = js.native
   def apply[T, S /* <: js.Object */](value: js.Function0[T]): IObservableValue[T] = js.native

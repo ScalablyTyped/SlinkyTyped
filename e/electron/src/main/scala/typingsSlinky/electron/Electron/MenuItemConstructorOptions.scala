@@ -50,41 +50,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MenuItemConstructorOptions extends js.Object {
-  var accelerator: js.UndefOr[Accelerator] = js.undefined
+  var accelerator: js.UndefOr[Accelerator] = js.native
   /**
     * default is true, and when false will prevent the accelerator from triggering the
     * item if the item is not visible`.
     */
-  var acceleratorWorksWhenHidden: js.UndefOr[Boolean] = js.undefined
+  var acceleratorWorksWhenHidden: js.UndefOr[Boolean] = js.native
   /**
     * Inserts this item after the item with the specified label. If the referenced
     * item doesn't exist the item will be inserted at the end of the menu.
     */
-  var after: js.UndefOr[js.Array[String]] = js.undefined
+  var after: js.UndefOr[js.Array[String]] = js.native
   /**
     * Provides a means for a single context menu to declare the placement of their
     * containing group after the containing group of the item with the specified
     * label.
     */
-  var afterGroupContaining: js.UndefOr[js.Array[String]] = js.undefined
+  var afterGroupContaining: js.UndefOr[js.Array[String]] = js.native
   /**
     * Inserts this item before the item with the specified label. If the referenced
     * item doesn't exist the item will be inserted at the end of the menu. Also
     * implies that the menu item in question should be placed in the same “group” as
     * the item.
     */
-  var before: js.UndefOr[js.Array[String]] = js.undefined
+  var before: js.UndefOr[js.Array[String]] = js.native
   /**
     * Provides a means for a single context menu to declare the placement of their
     * containing group before the containing group of the item with the specified
     * label.
     */
-  var beforeGroupContaining: js.UndefOr[js.Array[String]] = js.undefined
+  var beforeGroupContaining: js.UndefOr[js.Array[String]] = js.native
   /**
     * Should only be specified for checkbox or radio type menu items.
     */
-  var checked: js.UndefOr[Boolean] = js.undefined
+  var checked: js.UndefOr[Boolean] = js.native
   /**
     * Will be called with click(menuItem, browserWindow, event) when the menu item is
     * clicked.
@@ -96,23 +97,23 @@ trait MenuItemConstructorOptions extends js.Object {
       /* event */ KeyboardEvent, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * If false, the menu item will be greyed out and unclickable.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[NativeImage_ | String] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
+  var icon: js.UndefOr[NativeImage_ | String] = js.native
   /**
     * Unique within a single menu. If defined then it can be used as a reference to
     * this item by the position attribute.
     */
-  var id: js.UndefOr[String] = js.undefined
-  var label: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
+  var label: js.UndefOr[String] = js.native
   /**
     * If false, the accelerator won't be registered with the system, but it will still
     * be displayed. Defaults to true.
     */
-  var registerAccelerator: js.UndefOr[Boolean] = js.undefined
+  var registerAccelerator: js.UndefOr[Boolean] = js.native
   /**
     * Can be undo, redo, cut, copy, paste, pasteAndMatchStyle, delete, selectAll,
     * reload, forceReload, toggleDevTools, resetZoom, zoomIn, zoomOut,
@@ -125,66 +126,257 @@ trait MenuItemConstructorOptions extends js.Object {
     */
   var role: js.UndefOr[
     undo | redo | cut | copy | paste | pasteAndMatchStyle | delete | selectAll | reload | forceReload | toggleDevTools | resetZoom | zoomIn | zoomOut | togglefullscreen | window | minimize | close | help | about | services | hide | hideOthers | unhide | quit | startSpeaking | stopSpeaking | zoom | front | appMenu | fileMenu | editMenu | viewMenu | recentDocuments | toggleTabBar | selectNextTab | selectPreviousTab | mergeAllWindows | clearRecentDocuments | moveTabToNewWindow | windowMenu
-  ] = js.undefined
-  var sublabel: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var sublabel: js.UndefOr[String] = js.native
   /**
     * Should be specified for submenu type menu items. If submenu is specified, the
     * type: 'submenu' can be omitted. If the value is not a then it will be
     * automatically converted to one using Menu.buildFromTemplate.
     */
-  var submenu: js.UndefOr[js.Array[MenuItemConstructorOptions] | Menu] = js.undefined
+  var submenu: js.UndefOr[js.Array[MenuItemConstructorOptions] | Menu] = js.native
   /**
     * Can be normal, separator, submenu, checkbox or radio.
     */
-  var `type`: js.UndefOr[normal | separator | submenu | checkbox | radio] = js.undefined
+  var `type`: js.UndefOr[normal | separator | submenu | checkbox | radio] = js.native
   /**
     * If false, the menu item will be entirely hidden.
     */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object MenuItemConstructorOptions {
   @scala.inline
-  def apply(
-    accelerator: Accelerator = null,
-    acceleratorWorksWhenHidden: js.UndefOr[Boolean] = js.undefined,
-    after: js.Array[String] = null,
-    afterGroupContaining: js.Array[String] = null,
-    before: js.Array[String] = null,
-    beforeGroupContaining: js.Array[String] = null,
-    checked: js.UndefOr[Boolean] = js.undefined,
-    click: (/* menuItem */ MenuItem, /* browserWindow */ BrowserWindow, /* event */ KeyboardEvent) => Unit = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    icon: NativeImage_ | String = null,
-    id: String = null,
-    label: String = null,
-    registerAccelerator: js.UndefOr[Boolean] = js.undefined,
-    role: undo | redo | cut | copy | paste | pasteAndMatchStyle | delete | selectAll | reload | forceReload | toggleDevTools | resetZoom | zoomIn | zoomOut | togglefullscreen | window | minimize | close | help | about | services | hide | hideOthers | unhide | quit | startSpeaking | stopSpeaking | zoom | front | appMenu | fileMenu | editMenu | viewMenu | recentDocuments | toggleTabBar | selectNextTab | selectPreviousTab | mergeAllWindows | clearRecentDocuments | moveTabToNewWindow | windowMenu = null,
-    sublabel: String = null,
-    submenu: js.Array[MenuItemConstructorOptions] | Menu = null,
-    `type`: normal | separator | submenu | checkbox | radio = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): MenuItemConstructorOptions = {
+  def apply(): MenuItemConstructorOptions = {
     val __obj = js.Dynamic.literal()
-    if (accelerator != null) __obj.updateDynamic("accelerator")(accelerator.asInstanceOf[js.Any])
-    if (!js.isUndefined(acceleratorWorksWhenHidden)) __obj.updateDynamic("acceleratorWorksWhenHidden")(acceleratorWorksWhenHidden.asInstanceOf[js.Any])
-    if (after != null) __obj.updateDynamic("after")(after.asInstanceOf[js.Any])
-    if (afterGroupContaining != null) __obj.updateDynamic("afterGroupContaining")(afterGroupContaining.asInstanceOf[js.Any])
-    if (before != null) __obj.updateDynamic("before")(before.asInstanceOf[js.Any])
-    if (beforeGroupContaining != null) __obj.updateDynamic("beforeGroupContaining")(beforeGroupContaining.asInstanceOf[js.Any])
-    if (!js.isUndefined(checked)) __obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
-    if (click != null) __obj.updateDynamic("click")(js.Any.fromFunction3(click))
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(registerAccelerator)) __obj.updateDynamic("registerAccelerator")(registerAccelerator.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (sublabel != null) __obj.updateDynamic("sublabel")(sublabel.asInstanceOf[js.Any])
-    if (submenu != null) __obj.updateDynamic("submenu")(submenu.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuItemConstructorOptions]
   }
+  @scala.inline
+  implicit class MenuItemConstructorOptionsOps[Self <: MenuItemConstructorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccelerator(value: Accelerator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccelerator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accelerator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAcceleratorWorksWhenHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceleratorWorksWhenHidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceleratorWorksWhenHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceleratorWorksWhenHidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfter(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterGroupContaining(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterGroupContaining")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAfterGroupContaining: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterGroupContaining")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBefore(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeGroupContaining(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeGroupContaining")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeforeGroupContaining: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeGroupContaining")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChecked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClick(
+      value: (/* menuItem */ MenuItem, /* browserWindow */ BrowserWindow, /* event */ KeyboardEvent) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: NativeImage_ | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegisterAccelerator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registerAccelerator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegisterAccelerator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registerAccelerator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRole(
+      value: undo | redo | cut | copy | paste | pasteAndMatchStyle | delete | selectAll | reload | forceReload | toggleDevTools | resetZoom | zoomIn | zoomOut | togglefullscreen | window | minimize | close | help | about | services | hide | hideOthers | unhide | quit | startSpeaking | stopSpeaking | zoom | front | appMenu | fileMenu | editMenu | viewMenu | recentDocuments | toggleTabBar | selectNextTab | selectPreviousTab | mergeAllWindows | clearRecentDocuments | moveTabToNewWindow | windowMenu
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSublabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sublabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSublabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sublabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmenu(value: js.Array[MenuItemConstructorOptions] | Menu): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: normal | separator | submenu | checkbox | radio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

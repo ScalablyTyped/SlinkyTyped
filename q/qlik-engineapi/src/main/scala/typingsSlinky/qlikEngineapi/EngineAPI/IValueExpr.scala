@@ -7,16 +7,30 @@ import scala.scalajs.js.annotation._
 /**
   * ValueExpression... Where <expression> is a string.
   */
+@js.native
 trait IValueExpr extends js.Object {
-  var qv: String
+  var qv: String = js.native
 }
 
 object IValueExpr {
   @scala.inline
   def apply(qv: String): IValueExpr = {
     val __obj = js.Dynamic.literal(qv = qv.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IValueExpr]
   }
+  @scala.inline
+  implicit class IValueExprOps[Self <: IValueExpr] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQv(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qv")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

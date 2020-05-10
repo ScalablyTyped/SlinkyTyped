@@ -23,11 +23,41 @@ trait SchemaBatchGetValuesResponse extends js.Object {
 
 object SchemaBatchGetValuesResponse {
   @scala.inline
-  def apply(spreadsheetId: String = null, valueRanges: js.Array[SchemaValueRange] = null): SchemaBatchGetValuesResponse = {
+  def apply(): SchemaBatchGetValuesResponse = {
     val __obj = js.Dynamic.literal()
-    if (spreadsheetId != null) __obj.updateDynamic("spreadsheetId")(spreadsheetId.asInstanceOf[js.Any])
-    if (valueRanges != null) __obj.updateDynamic("valueRanges")(valueRanges.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchGetValuesResponse]
   }
+  @scala.inline
+  implicit class SchemaBatchGetValuesResponseOps[Self <: SchemaBatchGetValuesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSpreadsheetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpreadsheetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spreadsheetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueRanges(value: js.Array[SchemaValueRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueRanges")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

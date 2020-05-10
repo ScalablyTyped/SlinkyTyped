@@ -2,8 +2,8 @@ package typingsSlinky.xmlCrypto.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Node
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Node
 import typingsSlinky.xmlCrypto.AnonAttrs
 import typingsSlinky.xmlCrypto.AnonCanonicalizationAlgorithm
 import scala.scalajs.js

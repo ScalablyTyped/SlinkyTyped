@@ -1,9 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.sharepoint.AnonBDelayInit
-import typingsSlinky.sharepoint.AnonBLimitToList
-import typingsSlinky.sharepoint.AnonDataValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,52 +15,19 @@ class PropertyType () extends js.Object
 object PropertyType extends js.Object {
   @js.native
   class CheckBoxBoolean () extends IPropertyType {
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ AnonDataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
     def DataToLocalized(dataValue: js.Any): java.lang.String = js.native
     def GetBool(dataValue: js.Any): Boolean = js.native
   }
   
   @js.native
   class DropDownBoolean () extends IPropertyType {
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ AnonDataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
     def DataToLocalized(dataValue: js.Any): java.lang.String = js.native
     def GetBool(dataValue: js.Any): Boolean = js.native
   }
   
   @js.native
   class HyperLink () extends IPropertyType {
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
     var bHyperlink: Boolean = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ AnonDataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
     def DataToLocalized(dataValue: js.Any): java.lang.String = js.native
     def GetAddress(dataValue: js.Any): java.lang.String = js.native
     /** Returns string like this: '"http:// site.com, Site title"' */
@@ -73,76 +37,13 @@ object PropertyType extends js.Object {
   @js.native
   class LookupTable protected () extends ILookupPropertyType {
     def this(items: js.Array[_], id: java.lang.String, bLimitToList: Boolean) = this()
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ AnonDataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
-    /* CompleteClass */
-    override def DataToLocalized(dataValue: js.Any): java.lang.String = js.native
-    /* CompleteClass */
-    override def GetImageSource(record: IRecord, dataValue: js.Any): java.lang.String = js.native
-    /* CompleteClass */
-    override def GetIsLimitedToList(): Boolean = js.native
-    /* CompleteClass */
-    override def GetItems(fnCallback: js.Any): Unit = js.native
-    /* CompleteClass */
-    override def GetSerializableLookupPropType(): AnonBLimitToList = js.native
-    /* CompleteClass */
-    override def GetStyleId(dataValue: js.Any): java.lang.String = js.native
-    /* CompleteClass */
-    override def LocalizedToData(localized: java.lang.String): js.Any = js.native
   }
   
   @js.native
-  class MultiValuePropType () extends IMultiValuePropertyType {
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override var bMultiValue: Boolean = js.native
-    /* CompleteClass */
-    override var separator: java.lang.String = js.native
-    /* CompleteClass */
-    override var singleValuePropType: java.lang.String = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ AnonDataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
-    /* CompleteClass */
-    override def GetSerializableMultiValuePropType(): AnonBDelayInit = js.native
-    /* CompleteClass */
-    override def InitSingleValuePropType(): Unit = js.native
-    /* CompleteClass */
-    override def LocStrArrayToLocStr(locStrArray: js.Array[java.lang.String]): java.lang.String = js.native
-    /* CompleteClass */
-    override def LocStrToLocStrArray(locStr: java.lang.String): js.Array[java.lang.String] = js.native
-  }
+  class MultiValuePropType () extends IMultiValuePropertyType
   
   @js.native
-  class String () extends IPropertyType {
-    /* CompleteClass */
-    override var ID: java.lang.String = js.native
-    /* CompleteClass */
-    override def BeginValidateNormalizeConvert(
-      recordKey: Double,
-      fieldKey: java.lang.String,
-      newValue: js.Any,
-      bIsLocalized: Boolean,
-      fnCallback: js.Function1[/* args */ AnonDataValue, Unit],
-      fnError: js.Any
-    ): Unit = js.native
-  }
+  class String () extends IPropertyType
   
   @js.native
   class Utils () extends js.Object

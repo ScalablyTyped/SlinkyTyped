@@ -14,10 +14,29 @@ trait CreateComputerResult extends js.Object {
 
 object CreateComputerResult {
   @scala.inline
-  def apply(Computer: Computer = null): CreateComputerResult = {
+  def apply(): CreateComputerResult = {
     val __obj = js.Dynamic.literal()
-    if (Computer != null) __obj.updateDynamic("Computer")(Computer.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateComputerResult]
   }
+  @scala.inline
+  implicit class CreateComputerResultOps[Self <: CreateComputerResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComputer(value: Computer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Computer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Computer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

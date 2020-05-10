@@ -7,33 +7,75 @@ import scala.scalajs.js.annotation._
 /**
   * Simple object passed to <Titanium.UI.create2DMatrix> to initialize a matrix.
   */
+@js.native
 trait MatrixCreationDict extends js.Object {
   /**
   	 * Point to rotate around, specified as a dictionary object with `x` and `y`
   	 * properties, where { x: 0.5, y: 0.5 } represents the center of whatever is being
   	 * rotated.
   	 */
-  var anchorPoint: js.UndefOr[js.Any] = js.undefined
+  var anchorPoint: js.UndefOr[Point] = js.native
   /**
   	 * Rotation angle, in degrees. See the [rotate](Titanium.UI.2DMatrix.rotate) method
   	 * for a discussion of rotation.
   	 */
-  var rotate: js.UndefOr[Double] = js.undefined
+  var rotate: js.UndefOr[Double] = js.native
   /**
   	 * Scale the matrix by the specified scaling factor. The same scaling factor is used
   	 * for both horizontal and vertical scaling.
   	 */
-  var scale: js.UndefOr[Double] = js.undefined
+  var scale: js.UndefOr[Double] = js.native
 }
 
 object MatrixCreationDict {
   @scala.inline
-  def apply(anchorPoint: js.Any = null, rotate: Int | Double = null, scale: Int | Double = null): MatrixCreationDict = {
+  def apply(): MatrixCreationDict = {
     val __obj = js.Dynamic.literal()
-    if (anchorPoint != null) __obj.updateDynamic("anchorPoint")(anchorPoint.asInstanceOf[js.Any])
-    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
     __obj.asInstanceOf[MatrixCreationDict]
   }
+  @scala.inline
+  implicit class MatrixCreationDictOps[Self <: MatrixCreationDict] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnchorPoint(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchorPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

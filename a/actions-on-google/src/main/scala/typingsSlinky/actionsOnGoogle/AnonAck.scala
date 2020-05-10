@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAck extends js.Object {
-  var ack: js.UndefOr[Boolean] = js.undefined
-  var pin: js.UndefOr[String] = js.undefined
+  var ack: js.UndefOr[Boolean] = js.native
+  var pin: js.UndefOr[String] = js.native
 }
 
 object AnonAck {
   @scala.inline
-  def apply(ack: js.UndefOr[Boolean] = js.undefined, pin: String = null): AnonAck = {
+  def apply(): AnonAck = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ack)) __obj.updateDynamic("ack")(ack.asInstanceOf[js.Any])
-    if (pin != null) __obj.updateDynamic("pin")(pin.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAck]
   }
+  @scala.inline
+  implicit class AnonAckOps[Self <: AnonAck] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAck(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

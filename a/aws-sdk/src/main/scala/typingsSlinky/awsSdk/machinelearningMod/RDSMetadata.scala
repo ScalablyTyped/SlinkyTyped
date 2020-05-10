@@ -31,22 +31,89 @@ trait RDSMetadata extends js.Object {
 
 object RDSMetadata {
   @scala.inline
-  def apply(
-    DataPipelineId: EDPPipelineId = null,
-    Database: RDSDatabase = null,
-    DatabaseUserName: RDSDatabaseUsername = null,
-    ResourceRole: EDPResourceRole = null,
-    SelectSqlQuery: RDSSelectSqlQuery = null,
-    ServiceRole: EDPServiceRole = null
-  ): RDSMetadata = {
+  def apply(): RDSMetadata = {
     val __obj = js.Dynamic.literal()
-    if (DataPipelineId != null) __obj.updateDynamic("DataPipelineId")(DataPipelineId.asInstanceOf[js.Any])
-    if (Database != null) __obj.updateDynamic("Database")(Database.asInstanceOf[js.Any])
-    if (DatabaseUserName != null) __obj.updateDynamic("DatabaseUserName")(DatabaseUserName.asInstanceOf[js.Any])
-    if (ResourceRole != null) __obj.updateDynamic("ResourceRole")(ResourceRole.asInstanceOf[js.Any])
-    if (SelectSqlQuery != null) __obj.updateDynamic("SelectSqlQuery")(SelectSqlQuery.asInstanceOf[js.Any])
-    if (ServiceRole != null) __obj.updateDynamic("ServiceRole")(ServiceRole.asInstanceOf[js.Any])
     __obj.asInstanceOf[RDSMetadata]
   }
+  @scala.inline
+  implicit class RDSMetadataOps[Self <: RDSMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataPipelineId(value: EDPPipelineId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataPipelineId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataPipelineId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataPipelineId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabase(value: RDSDatabase): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Database")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabaseUserName(value: RDSDatabaseUsername): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseUserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabaseUserName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseUserName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceRole(value: EDPResourceRole): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectSqlQuery(value: RDSSelectSqlQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectSqlQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectSqlQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectSqlQuery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceRole(value: EDPServiceRole): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceRole")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

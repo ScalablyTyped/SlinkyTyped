@@ -9,75 +9,283 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EngineReportingOptions[TContext] extends js.Object {
-  var apiKey: js.UndefOr[String] = js.undefined
-  var calculateSignature: js.UndefOr[js.Function2[/* ast */ DocumentNode, /* operationName */ String, String]] = js.undefined
-  var debugPrintReports: js.UndefOr[Boolean] = js.undefined
-  var endpointUrl: js.UndefOr[String] = js.undefined
-  var generateClientInfo: js.UndefOr[GenerateClientInfo[TContext]] = js.undefined
-  var handleSignals: js.UndefOr[Boolean] = js.undefined
-  var maskErrorDetails: js.UndefOr[Boolean] = js.undefined
-  var maxAttempts: js.UndefOr[Double] = js.undefined
-  var maxUncompressedReportSize: js.UndefOr[Double] = js.undefined
-  var minimumRetryDelayMs: js.UndefOr[Double] = js.undefined
-  var privateHeaders: js.UndefOr[js.Array[String] | Boolean] = js.undefined
-  var privateVariables: js.UndefOr[js.Array[String] | Boolean] = js.undefined
-  var reportErrorFunction: js.UndefOr[js.Function1[/* err */ js.Error, Unit]] = js.undefined
-  var reportIntervalMs: js.UndefOr[Double] = js.undefined
-  var requestAgent: js.UndefOr[RequestAgent | `false`] = js.undefined
-  var rewriteError: js.UndefOr[js.Function1[/* err */ GraphQLError, GraphQLError | Null]] = js.undefined
-  var schemaTag: js.UndefOr[String] = js.undefined
-  var sendHeaders: js.UndefOr[SendValuesBaseOptions] = js.undefined
-  var sendReportsImmediately: js.UndefOr[Boolean] = js.undefined
-  var sendVariableValues: js.UndefOr[VariableValueOptions] = js.undefined
+  var apiKey: js.UndefOr[String] = js.native
+  var calculateSignature: js.UndefOr[js.Function2[/* ast */ DocumentNode, /* operationName */ String, String]] = js.native
+  var debugPrintReports: js.UndefOr[Boolean] = js.native
+  var endpointUrl: js.UndefOr[String] = js.native
+  var generateClientInfo: js.UndefOr[GenerateClientInfo[TContext]] = js.native
+  var handleSignals: js.UndefOr[Boolean] = js.native
+  var maskErrorDetails: js.UndefOr[Boolean] = js.native
+  var maxAttempts: js.UndefOr[Double] = js.native
+  var maxUncompressedReportSize: js.UndefOr[Double] = js.native
+  var minimumRetryDelayMs: js.UndefOr[Double] = js.native
+  var privateHeaders: js.UndefOr[js.Array[String] | Boolean] = js.native
+  var privateVariables: js.UndefOr[js.Array[String] | Boolean] = js.native
+  var reportErrorFunction: js.UndefOr[js.Function1[/* err */ js.Error, Unit]] = js.native
+  var reportIntervalMs: js.UndefOr[Double] = js.native
+  var requestAgent: js.UndefOr[RequestAgent | `false`] = js.native
+  var rewriteError: js.UndefOr[js.Function1[/* err */ GraphQLError, GraphQLError | Null]] = js.native
+  var schemaTag: js.UndefOr[String] = js.native
+  var sendHeaders: js.UndefOr[SendValuesBaseOptions] = js.native
+  var sendReportsImmediately: js.UndefOr[Boolean] = js.native
+  var sendVariableValues: js.UndefOr[VariableValueOptions] = js.native
 }
 
 object EngineReportingOptions {
   @scala.inline
-  def apply[TContext](
-    apiKey: String = null,
-    calculateSignature: (/* ast */ DocumentNode, /* operationName */ String) => String = null,
-    debugPrintReports: js.UndefOr[Boolean] = js.undefined,
-    endpointUrl: String = null,
-    generateClientInfo: /* requestContext */ GraphQLRequestContext[TContext] => ClientInfo = null,
-    handleSignals: js.UndefOr[Boolean] = js.undefined,
-    maskErrorDetails: js.UndefOr[Boolean] = js.undefined,
-    maxAttempts: Int | Double = null,
-    maxUncompressedReportSize: Int | Double = null,
-    minimumRetryDelayMs: Int | Double = null,
-    privateHeaders: js.Array[String] | Boolean = null,
-    privateVariables: js.Array[String] | Boolean = null,
-    reportErrorFunction: /* err */ js.Error => Unit = null,
-    reportIntervalMs: Int | Double = null,
-    requestAgent: RequestAgent | `false` = null,
-    rewriteError: /* err */ GraphQLError => GraphQLError | Null = null,
-    schemaTag: String = null,
-    sendHeaders: SendValuesBaseOptions = null,
-    sendReportsImmediately: js.UndefOr[Boolean] = js.undefined,
-    sendVariableValues: VariableValueOptions = null
-  ): EngineReportingOptions[TContext] = {
+  def apply[TContext](): EngineReportingOptions[TContext] = {
     val __obj = js.Dynamic.literal()
-    if (apiKey != null) __obj.updateDynamic("apiKey")(apiKey.asInstanceOf[js.Any])
-    if (calculateSignature != null) __obj.updateDynamic("calculateSignature")(js.Any.fromFunction2(calculateSignature))
-    if (!js.isUndefined(debugPrintReports)) __obj.updateDynamic("debugPrintReports")(debugPrintReports.asInstanceOf[js.Any])
-    if (endpointUrl != null) __obj.updateDynamic("endpointUrl")(endpointUrl.asInstanceOf[js.Any])
-    if (generateClientInfo != null) __obj.updateDynamic("generateClientInfo")(js.Any.fromFunction1(generateClientInfo))
-    if (!js.isUndefined(handleSignals)) __obj.updateDynamic("handleSignals")(handleSignals.asInstanceOf[js.Any])
-    if (!js.isUndefined(maskErrorDetails)) __obj.updateDynamic("maskErrorDetails")(maskErrorDetails.asInstanceOf[js.Any])
-    if (maxAttempts != null) __obj.updateDynamic("maxAttempts")(maxAttempts.asInstanceOf[js.Any])
-    if (maxUncompressedReportSize != null) __obj.updateDynamic("maxUncompressedReportSize")(maxUncompressedReportSize.asInstanceOf[js.Any])
-    if (minimumRetryDelayMs != null) __obj.updateDynamic("minimumRetryDelayMs")(minimumRetryDelayMs.asInstanceOf[js.Any])
-    if (privateHeaders != null) __obj.updateDynamic("privateHeaders")(privateHeaders.asInstanceOf[js.Any])
-    if (privateVariables != null) __obj.updateDynamic("privateVariables")(privateVariables.asInstanceOf[js.Any])
-    if (reportErrorFunction != null) __obj.updateDynamic("reportErrorFunction")(js.Any.fromFunction1(reportErrorFunction))
-    if (reportIntervalMs != null) __obj.updateDynamic("reportIntervalMs")(reportIntervalMs.asInstanceOf[js.Any])
-    if (requestAgent != null) __obj.updateDynamic("requestAgent")(requestAgent.asInstanceOf[js.Any])
-    if (rewriteError != null) __obj.updateDynamic("rewriteError")(js.Any.fromFunction1(rewriteError))
-    if (schemaTag != null) __obj.updateDynamic("schemaTag")(schemaTag.asInstanceOf[js.Any])
-    if (sendHeaders != null) __obj.updateDynamic("sendHeaders")(sendHeaders.asInstanceOf[js.Any])
-    if (!js.isUndefined(sendReportsImmediately)) __obj.updateDynamic("sendReportsImmediately")(sendReportsImmediately.asInstanceOf[js.Any])
-    if (sendVariableValues != null) __obj.updateDynamic("sendVariableValues")(sendVariableValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[EngineReportingOptions[TContext]]
   }
+  @scala.inline
+  implicit class EngineReportingOptionsOps[Self[tcontext] <: EngineReportingOptions[tcontext], TContext] (val x: Self[TContext]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TContext] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TContext]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TContext] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TContext] with Other]
+    @scala.inline
+    def withApiKey(value: String): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiKey: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCalculateSignature(value: (/* ast */ DocumentNode, /* operationName */ String) => String): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculateSignature")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCalculateSignature: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculateSignature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugPrintReports(value: Boolean): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugPrintReports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugPrintReports: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugPrintReports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpointUrl(value: String): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointUrl: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenerateClientInfo(value: /* requestContext */ GraphQLRequestContext[TContext] => ClientInfo): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateClientInfo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGenerateClientInfo: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateClientInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleSignals(value: Boolean): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSignals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandleSignals: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleSignals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaskErrorDetails(value: Boolean): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskErrorDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaskErrorDetails: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maskErrorDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAttempts(value: Double): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttempts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAttempts: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttempts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxUncompressedReportSize(value: Double): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUncompressedReportSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxUncompressedReportSize: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUncompressedReportSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumRetryDelayMs(value: Double): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumRetryDelayMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumRetryDelayMs: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumRetryDelayMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateHeaders(value: js.Array[String] | Boolean): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateHeaders: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateVariables(value: js.Array[String] | Boolean): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateVariables: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateVariables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportErrorFunction(value: /* err */ js.Error => Unit): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportErrorFunction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutReportErrorFunction: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportErrorFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportIntervalMs(value: Double): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportIntervalMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportIntervalMs: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportIntervalMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestAgent(value: RequestAgent | `false`): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestAgent: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestAgent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRewriteError(value: /* err */ GraphQLError => GraphQLError | Null): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rewriteError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRewriteError: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rewriteError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaTag(value: String): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaTag: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSendHeaders(value: SendValuesBaseOptions): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendHeaders: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSendReportsImmediately(value: Boolean): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendReportsImmediately")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendReportsImmediately: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendReportsImmediately")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSendVariableValues(value: VariableValueOptions): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendVariableValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendVariableValues: Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendVariableValues")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

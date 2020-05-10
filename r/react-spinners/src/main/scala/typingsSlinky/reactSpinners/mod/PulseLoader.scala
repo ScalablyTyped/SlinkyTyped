@@ -1,9 +1,8 @@
 package typingsSlinky.reactSpinners.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.reactSpinners.interfacesMod.LoaderSizeMarginProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,12 +11,12 @@ import scala.scalajs.js.annotation._
 @JSImport("react-spinners", "PulseLoader")
 @js.native
 class PulseLoader protected ()
-  extends Component[LoaderSizeMarginProps, ComponentState, js.Any] {
+  extends Component[LoaderSizeMarginProps, js.Object, js.Any] {
   def this(props: LoaderSizeMarginProps) = this()
   def this(props: LoaderSizeMarginProps, context: js.Any) = this()
 }
 
 @JSImport("react-spinners", "PulseLoader")
 @js.native
-object PulseLoader extends TopLevel[ComponentClass[LoaderSizeMarginProps, ComponentState]]
+object PulseLoader extends TopLevel[ReactComponentClass[LoaderSizeMarginProps]]
 

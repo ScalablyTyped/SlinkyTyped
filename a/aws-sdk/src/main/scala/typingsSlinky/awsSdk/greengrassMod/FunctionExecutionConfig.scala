@@ -12,11 +12,41 @@ trait FunctionExecutionConfig extends js.Object {
 
 object FunctionExecutionConfig {
   @scala.inline
-  def apply(IsolationMode: FunctionIsolationMode = null, RunAs: FunctionRunAsConfig = null): FunctionExecutionConfig = {
+  def apply(): FunctionExecutionConfig = {
     val __obj = js.Dynamic.literal()
-    if (IsolationMode != null) __obj.updateDynamic("IsolationMode")(IsolationMode.asInstanceOf[js.Any])
-    if (RunAs != null) __obj.updateDynamic("RunAs")(RunAs.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionExecutionConfig]
   }
+  @scala.inline
+  implicit class FunctionExecutionConfigOps[Self <: FunctionExecutionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsolationMode(value: FunctionIsolationMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsolationMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsolationMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsolationMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunAs(value: FunctionRunAsConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RunAs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RunAs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

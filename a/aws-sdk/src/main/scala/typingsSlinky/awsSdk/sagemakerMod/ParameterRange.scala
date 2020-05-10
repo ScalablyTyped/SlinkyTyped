@@ -22,16 +22,53 @@ trait ParameterRange extends js.Object {
 
 object ParameterRange {
   @scala.inline
-  def apply(
-    CategoricalParameterRangeSpecification: CategoricalParameterRangeSpecification = null,
-    ContinuousParameterRangeSpecification: ContinuousParameterRangeSpecification = null,
-    IntegerParameterRangeSpecification: IntegerParameterRangeSpecification = null
-  ): ParameterRange = {
+  def apply(): ParameterRange = {
     val __obj = js.Dynamic.literal()
-    if (CategoricalParameterRangeSpecification != null) __obj.updateDynamic("CategoricalParameterRangeSpecification")(CategoricalParameterRangeSpecification.asInstanceOf[js.Any])
-    if (ContinuousParameterRangeSpecification != null) __obj.updateDynamic("ContinuousParameterRangeSpecification")(ContinuousParameterRangeSpecification.asInstanceOf[js.Any])
-    if (IntegerParameterRangeSpecification != null) __obj.updateDynamic("IntegerParameterRangeSpecification")(IntegerParameterRangeSpecification.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParameterRange]
   }
+  @scala.inline
+  implicit class ParameterRangeOps[Self <: ParameterRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategoricalParameterRangeSpecification(value: CategoricalParameterRangeSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CategoricalParameterRangeSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategoricalParameterRangeSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CategoricalParameterRangeSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinuousParameterRangeSpecification(value: ContinuousParameterRangeSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinuousParameterRangeSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinuousParameterRangeSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinuousParameterRangeSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegerParameterRangeSpecification(value: IntegerParameterRangeSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerParameterRangeSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegerParameterRangeSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerParameterRangeSpecification")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

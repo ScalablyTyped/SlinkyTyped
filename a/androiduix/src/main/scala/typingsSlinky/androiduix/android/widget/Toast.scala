@@ -6,7 +6,7 @@ import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.Window
 import typingsSlinky.androiduix.android.view.WindowManager
 import typingsSlinky.androiduix.android.widget.Toast.TN
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

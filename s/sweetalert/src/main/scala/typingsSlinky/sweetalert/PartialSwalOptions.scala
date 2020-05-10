@@ -7,45 +7,153 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<sweetalert.sweetalert/typings/modules/options.SwalOptions> */
+@js.native
 trait PartialSwalOptions extends js.Object {
-  var buttons: js.UndefOr[ButtonList | (js.Array[String | Boolean])] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var closeOnClickOutside: js.UndefOr[Boolean] = js.undefined
-  var closeOnEsc: js.UndefOr[Boolean] = js.undefined
-  var content: js.UndefOr[ContentOptions] = js.undefined
-  var dangerMode: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[String] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
-  var timer: js.UndefOr[Double] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  var buttons: js.UndefOr[ButtonList | (js.Array[String | Boolean])] = js.native
+  var className: js.UndefOr[String] = js.native
+  var closeOnClickOutside: js.UndefOr[Boolean] = js.native
+  var closeOnEsc: js.UndefOr[Boolean] = js.native
+  var content: js.UndefOr[ContentOptions] = js.native
+  var dangerMode: js.UndefOr[Boolean] = js.native
+  var icon: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.native
+  var timer: js.UndefOr[Double] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object PartialSwalOptions {
   @scala.inline
-  def apply(
-    buttons: ButtonList | (js.Array[String | Boolean]) = null,
-    className: String = null,
-    closeOnClickOutside: js.UndefOr[Boolean] = js.undefined,
-    closeOnEsc: js.UndefOr[Boolean] = js.undefined,
-    content: ContentOptions = null,
-    dangerMode: js.UndefOr[Boolean] = js.undefined,
-    icon: String = null,
-    text: String = null,
-    timer: Int | Double = null,
-    title: String = null
-  ): PartialSwalOptions = {
+  def apply(): PartialSwalOptions = {
     val __obj = js.Dynamic.literal()
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnClickOutside)) __obj.updateDynamic("closeOnClickOutside")(closeOnClickOutside.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnEsc)) __obj.updateDynamic("closeOnEsc")(closeOnEsc.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(dangerMode)) __obj.updateDynamic("dangerMode")(dangerMode.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (timer != null) __obj.updateDynamic("timer")(timer.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialSwalOptions]
   }
+  @scala.inline
+  implicit class PartialSwalOptionsOps[Self <: PartialSwalOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButtons(value: ButtonList | (js.Array[String | Boolean])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseOnClickOutside(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnClickOutside")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseOnClickOutside: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnClickOutside")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseOnEsc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEsc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseOnEsc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEsc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContent(value: ContentOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDangerMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dangerMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDangerMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dangerMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

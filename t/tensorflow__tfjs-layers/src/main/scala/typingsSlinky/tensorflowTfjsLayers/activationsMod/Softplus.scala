@@ -1,6 +1,5 @@
 package typingsSlinky.tensorflowTfjsLayers.activationsMod
 
-import typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.softplus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,6 @@ class Softplus () extends Activation
 @js.native
 object Softplus extends js.Object {
   /** @nocollapse */
-  val className: softplus = js.native
+  val className: /* "softplus" */ String = js.native
 }
 

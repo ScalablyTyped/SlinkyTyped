@@ -1,38 +1,31 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonValue
 import typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ListBoxHeader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeader] {
+object ListBoxHeader {
   @JSImport("primereact/components/listbox/ListBoxHeader", "ListBoxHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    filter: String = null,
-    onFilter: /* e */ AnonValue => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeader] = {
-    val __obj = js.Dynamic.literal()
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (onFilter != null) __obj.updateDynamic("onFilter")(js.Any.fromFunction1(onFilter))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeader] {
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filter(value: String): this.type = set("filter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onFilter(value: /* e */ AnonValue => Unit): this.type = set("onFilter", js.Any.fromFunction1(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeader] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeader](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ListBoxHeaderProps
+  
+  def withProps(p: ListBoxHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ListBoxHeader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

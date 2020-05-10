@@ -4,19 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBrowser extends js.Object {
-  var Browser: String
-  var `Browser-Height`: Double
-  var `Browser-Name`: String
-  var `Browser-Version`: String
-  var `Browser-Width`: Double
-  var `Color-Depth`: Double
-  var `Document-Mode`: Double
-  var Platform: String
-  var `Screen-Height`: Double
-  var `Screen-Width`: Double
-  var `User-Language`: String
-  var UtcOffset: Double
+  var Browser: String = js.native
+  var `Browser-Height`: Double = js.native
+  var `Browser-Name`: String = js.native
+  var `Browser-Version`: String = js.native
+  var `Browser-Width`: Double = js.native
+  var `Color-Depth`: Double = js.native
+  var `Document-Mode`: Double = js.native
+  var Platform: String = js.native
+  var `Screen-Height`: Double = js.native
+  var `Screen-Width`: Double = js.native
+  var `User-Language`: String = js.native
+  var UtcOffset: Double = js.native
 }
 
 object AnonBrowser {
@@ -47,5 +48,85 @@ object AnonBrowser {
     __obj.updateDynamic("User-Language")(`User-Language`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBrowser]
   }
+  @scala.inline
+  implicit class AnonBrowserOps[Self <: AnonBrowser] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrowser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Browser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withBrowser-Height`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Browser-Height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withBrowser-Name`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Browser-Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withBrowser-Version`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Browser-Version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withBrowser-Width`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Browser-Width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withColor-Depth`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Color-Depth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withDocument-Mode`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Document-Mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withScreen-Height`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Screen-Height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withScreen-Width`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Screen-Width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withUser-Language`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("User-Language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUtcOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UtcOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

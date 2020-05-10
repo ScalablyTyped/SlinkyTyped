@@ -1,21 +1,6 @@
 package typingsSlinky.wordpressKeycodes
 
 import typingsSlinky.std.Event_
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`121`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`13`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`27`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`32`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`37`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`38`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`39`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`40`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`46`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`8`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesNumbers.`9`
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesStrings.alt
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesStrings.ctrl
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesStrings.meta
-import typingsSlinky.wordpressKeycodes.wordpressKeycodesStrings.shift
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,21 +8,21 @@ import scala.scalajs.js.annotation._
 @JSImport("@wordpress/keycodes", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  val ALT: alt = js.native
-  val BACKSPACE: `8` = js.native
-  val COMMAND: meta = js.native
-  val CTRL: ctrl = js.native
-  val DELETE: `46` = js.native
-  val DOWN: `40` = js.native
-  val ENTER: `13` = js.native
-  val ESCAPE: `27` = js.native
-  val F10: `121` = js.native
-  val LEFT: `37` = js.native
-  val RIGHT: `39` = js.native
-  val SHIFT: shift = js.native
-  val SPACE: `32` = js.native
-  val TAB: `9` = js.native
-  val UP: `38` = js.native
+  val ALT: /* "alt" */ String = js.native
+  val BACKSPACE: /* 8 */ Double = js.native
+  val COMMAND: /* "meta" */ String = js.native
+  val CTRL: /* "ctrl" */ String = js.native
+  val DELETE: /* 46 */ Double = js.native
+  val DOWN: /* 40 */ Double = js.native
+  val ENTER: /* 13 */ Double = js.native
+  val ESCAPE: /* 27 */ Double = js.native
+  val F10: /* 121 */ Double = js.native
+  val LEFT: /* 37 */ Double = js.native
+  val RIGHT: /* 39 */ Double = js.native
+  val SHIFT: /* "shift" */ String = js.native
+  val SPACE: /* 32 */ Double = js.native
+  val TAB: /* 9 */ Double = js.native
+  val UP: /* 38 */ Double = js.native
   @js.native
   object displayShortcut extends js.Object {
     def access(character: String): String = js.native

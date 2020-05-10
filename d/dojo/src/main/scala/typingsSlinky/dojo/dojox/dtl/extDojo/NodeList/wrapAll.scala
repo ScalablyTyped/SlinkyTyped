@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.dtl.extDojo.NodeList
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

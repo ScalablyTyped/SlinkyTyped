@@ -17,20 +17,18 @@ trait SideType extends _BorderType
 
 object SideType {
   @scala.inline
-  def all: typingsSlinky.grommet.grommetStrings.all = this.cast("all")
+  def all: typingsSlinky.grommet.grommetStrings.all = "all".asInstanceOf[typingsSlinky.grommet.grommetStrings.all]
   @scala.inline
-  def bottom: typingsSlinky.grommet.grommetStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.grommet.grommetStrings.bottom = "bottom".asInstanceOf[typingsSlinky.grommet.grommetStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.grommet.grommetStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.grommet.grommetStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.grommet.grommetStrings.horizontal = this.cast("horizontal")
+  def left: typingsSlinky.grommet.grommetStrings.left = "left".asInstanceOf[typingsSlinky.grommet.grommetStrings.left]
   @scala.inline
-  def left: typingsSlinky.grommet.grommetStrings.left = this.cast("left")
+  def right: typingsSlinky.grommet.grommetStrings.right = "right".asInstanceOf[typingsSlinky.grommet.grommetStrings.right]
   @scala.inline
-  def right: typingsSlinky.grommet.grommetStrings.right = this.cast("right")
+  def top: typingsSlinky.grommet.grommetStrings.top = "top".asInstanceOf[typingsSlinky.grommet.grommetStrings.top]
   @scala.inline
-  def top: typingsSlinky.grommet.grommetStrings.top = this.cast("top")
-  @scala.inline
-  def vertical: typingsSlinky.grommet.grommetStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.grommet.grommetStrings.vertical = "vertical".asInstanceOf[typingsSlinky.grommet.grommetStrings.vertical]
 }
 

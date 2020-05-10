@@ -40,15 +40,6 @@ object util extends js.Object {
   class Long protected ()
     extends typingsSlinky.protobufjs.mod.Long {
     def this(params: js.Any*) = this()
-    /** High bits */
-    /* CompleteClass */
-    override var high: Double = js.native
-    /** Low bits */
-    /* CompleteClass */
-    override var low: Double = js.native
-    /** Whether unsigned or not */
-    /* CompleteClass */
-    override var unsigned: Boolean = js.native
   }
   
   /** Helper class for working with the low and high bits of a 64 bit value. */
@@ -154,14 +145,14 @@ object util extends js.Object {
     * @param [options] Fetch options
     * @returns Promise
     */
-  def fetch(path: String): js.Promise[String | scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def fetch(path: String): js.Promise[String | js.typedarray.Uint8Array] = js.native
   /**
     * Fetches the contents of a file.
     * @param path File path or url
     * @param callback Callback function
     */
   def fetch(path: String, callback: FetchCallback): Unit = js.native
-  def fetch(path: String, options: IFetchOptions): js.Promise[String | scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def fetch(path: String, options: IFetchOptions): js.Promise[String | js.typedarray.Uint8Array] = js.native
   /**
     * Requires a module only if available.
     * @param moduleName Module to require
@@ -243,9 +234,9 @@ object util extends js.Object {
     * @param [sizeOrArray=0] Buffer size or number array
     * @returns Buffer
     */
-  def newBuffer(): scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8Array = js.native
-  def newBuffer(sizeOrArray: js.Array[Double]): scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8Array = js.native
-  def newBuffer(sizeOrArray: Double): scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8Array = js.native
+  def newBuffer(): js.typedarray.Uint8Array = js.native
+  def newBuffer(sizeOrArray: js.Array[Double]): js.typedarray.Uint8Array = js.native
+  def newBuffer(sizeOrArray: Double): js.typedarray.Uint8Array = js.native
   /**
     * Creates a custom error constructor.
     * @param name Error name
@@ -299,12 +290,13 @@ object util extends js.Object {
   def ucFirst(str: String): String = js.native
   /** Array implementation used in the browser. `Uint8Array` if supported, otherwise `Array`. */
   @js.native
-  object Array extends TopLevel[Constructor[Uint8Array]]
+  object Array
+    extends TopLevel[Constructor[js.typedarray.Uint8Array]]
   
   /** Node's Buffer class if available. */
   @js.native
   object Buffer
-    extends TopLevel[Constructor[typingsSlinky.protobufjs.mod.Buffer]]
+    extends TopLevel[Constructor[js.typedarray.Uint8Array]]
   
   /** Long.js's Long class if available. */
   @js.native
@@ -351,7 +343,7 @@ object util extends js.Object {
       * @returns Number of bytes written
       * @throws {Error} If encoding is invalid
       */
-    def decode(string: String, buffer: scala.scalajs.js.typedarray.Uint8Array, offset: Double): Double = js.native
+    def decode(string: String, buffer: js.typedarray.Uint8Array, offset: Double): Double = js.native
     /**
       * Encodes a buffer to a base64 encoded string.
       * @param buffer Source buffer
@@ -359,7 +351,7 @@ object util extends js.Object {
       * @param end Source end
       * @returns Base64 encoded string
       */
-    def encode(buffer: scala.scalajs.js.typedarray.Uint8Array, start: Double, end: Double): String = js.native
+    def encode(buffer: js.typedarray.Uint8Array, start: Double, end: Double): String = js.native
     /**
       * Calculates the byte length of a base64 encoded string.
       * @param string Base64 encoded string
@@ -404,56 +396,56 @@ object util extends js.Object {
       * @param pos Source buffer offset
       * @returns Value read
       */
-    def readDoubleBE(buf: scala.scalajs.js.typedarray.Uint8Array, pos: Double): Double = js.native
+    def readDoubleBE(buf: js.typedarray.Uint8Array, pos: Double): Double = js.native
     /**
       * Reads a 64 bit double from a buffer using little endian byte order.
       * @param buf Source buffer
       * @param pos Source buffer offset
       * @returns Value read
       */
-    def readDoubleLE(buf: scala.scalajs.js.typedarray.Uint8Array, pos: Double): Double = js.native
+    def readDoubleLE(buf: js.typedarray.Uint8Array, pos: Double): Double = js.native
     /**
       * Reads a 32 bit float from a buffer using big endian byte order.
       * @param buf Source buffer
       * @param pos Source buffer offset
       * @returns Value read
       */
-    def readFloatBE(buf: scala.scalajs.js.typedarray.Uint8Array, pos: Double): Double = js.native
+    def readFloatBE(buf: js.typedarray.Uint8Array, pos: Double): Double = js.native
     /**
       * Reads a 32 bit float from a buffer using little endian byte order.
       * @param buf Source buffer
       * @param pos Source buffer offset
       * @returns Value read
       */
-    def readFloatLE(buf: scala.scalajs.js.typedarray.Uint8Array, pos: Double): Double = js.native
+    def readFloatLE(buf: js.typedarray.Uint8Array, pos: Double): Double = js.native
     /**
       * Writes a 64 bit double to a buffer using big endian byte order.
       * @param val Value to write
       * @param buf Target buffer
       * @param pos Target buffer offset
       */
-    def writeDoubleBE(`val`: Double, buf: scala.scalajs.js.typedarray.Uint8Array, pos: Double): Unit = js.native
+    def writeDoubleBE(`val`: Double, buf: js.typedarray.Uint8Array, pos: Double): Unit = js.native
     /**
       * Writes a 64 bit double to a buffer using little endian byte order.
       * @param val Value to write
       * @param buf Target buffer
       * @param pos Target buffer offset
       */
-    def writeDoubleLE(`val`: Double, buf: scala.scalajs.js.typedarray.Uint8Array, pos: Double): Unit = js.native
+    def writeDoubleLE(`val`: Double, buf: js.typedarray.Uint8Array, pos: Double): Unit = js.native
     /**
       * Writes a 32 bit float to a buffer using big endian byte order.
       * @param val Value to write
       * @param buf Target buffer
       * @param pos Target buffer offset
       */
-    def writeFloatBE(`val`: Double, buf: scala.scalajs.js.typedarray.Uint8Array, pos: Double): Unit = js.native
+    def writeFloatBE(`val`: Double, buf: js.typedarray.Uint8Array, pos: Double): Unit = js.native
     /**
       * Writes a 32 bit float to a buffer using little endian byte order.
       * @param val Value to write
       * @param buf Target buffer
       * @param pos Target buffer offset
       */
-    def writeFloatLE(`val`: Double, buf: scala.scalajs.js.typedarray.Uint8Array, pos: Double): Unit = js.native
+    def writeFloatLE(`val`: Double, buf: js.typedarray.Uint8Array, pos: Double): Unit = js.native
   }
   
   /** Node's fs module if available. */
@@ -503,7 +495,7 @@ object util extends js.Object {
       * @param end Source end
       * @returns String read
       */
-    def read(buffer: scala.scalajs.js.typedarray.Uint8Array, start: Double, end: Double): String = js.native
+    def read(buffer: js.typedarray.Uint8Array, start: Double, end: Double): String = js.native
     /**
       * Writes a string as UTF8 bytes.
       * @param string Source string
@@ -511,7 +503,7 @@ object util extends js.Object {
       * @param offset Destination offset
       * @returns Bytes written
       */
-    def write(string: String, buffer: scala.scalajs.js.typedarray.Uint8Array, offset: Double): Double = js.native
+    def write(string: String, buffer: js.typedarray.Uint8Array, offset: Double): Double = js.native
   }
   
 }

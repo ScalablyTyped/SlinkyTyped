@@ -27,14 +27,6 @@ class Scanner protected () extends ISlidingWindowSource {
     isVariableWidthKeyword: js.Any
   ): js.Any = js.native
   /* private */ def currentCharCode(): js.Any = js.native
-  /* CompleteClass */
-  override def fetchMoreItems(
-    argument: js.Any,
-    sourceIndex: Double,
-    window: js.Array[_],
-    destinationIndex: Double,
-    spaceAvailable: Double
-  ): Double = js.native
   /* private */ def getErrorMessageText(text: js.Any): js.Any = js.native
   /* private */ def isDotPrefixedNumericLiteral(): js.Any = js.native
   /* private */ def isHexNumericLiteral(): js.Any = js.native

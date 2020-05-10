@@ -25,7 +25,8 @@ trait SVGComponentTransferFunctionElement extends SVGElement {
 
 @JSGlobal("SVGComponentTransferFunctionElement")
 @js.native
-object SVGComponentTransferFunctionElement extends Instantiable0[SVGComponentTransferFunctionElement] {
+object SVGComponentTransferFunctionElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGComponentTransferFunctionElement] {
   val SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE: Double = js.native
   val SVG_FECOMPONENTTRANSFER_TYPE_GAMMA: Double = js.native
   val SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY: Double = js.native

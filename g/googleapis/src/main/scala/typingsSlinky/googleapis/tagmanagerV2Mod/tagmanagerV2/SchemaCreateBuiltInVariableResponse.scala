@@ -14,10 +14,29 @@ trait SchemaCreateBuiltInVariableResponse extends js.Object {
 
 object SchemaCreateBuiltInVariableResponse {
   @scala.inline
-  def apply(builtInVariable: js.Array[SchemaBuiltInVariable] = null): SchemaCreateBuiltInVariableResponse = {
+  def apply(): SchemaCreateBuiltInVariableResponse = {
     val __obj = js.Dynamic.literal()
-    if (builtInVariable != null) __obj.updateDynamic("builtInVariable")(builtInVariable.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateBuiltInVariableResponse]
   }
+  @scala.inline
+  implicit class SchemaCreateBuiltInVariableResponseOps[Self <: SchemaCreateBuiltInVariableResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuiltInVariable(value: js.Array[SchemaBuiltInVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("builtInVariable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuiltInVariable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("builtInVariable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

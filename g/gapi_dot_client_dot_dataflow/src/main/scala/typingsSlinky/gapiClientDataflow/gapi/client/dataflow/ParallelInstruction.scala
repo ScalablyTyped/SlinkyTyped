@@ -4,54 +4,152 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParallelInstruction extends js.Object {
   /** Additional information for Flatten instructions. */
-  var flatten: js.UndefOr[FlattenInstruction] = js.undefined
+  var flatten: js.UndefOr[FlattenInstruction] = js.native
   /** User-provided name of this operation. */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** System-defined name for the operation in the original workflow graph. */
-  var originalName: js.UndefOr[String] = js.undefined
+  var originalName: js.UndefOr[String] = js.native
   /** Describes the outputs of the instruction. */
-  var outputs: js.UndefOr[js.Array[InstructionOutput]] = js.undefined
+  var outputs: js.UndefOr[js.Array[InstructionOutput]] = js.native
   /** Additional information for ParDo instructions. */
-  var parDo: js.UndefOr[ParDoInstruction] = js.undefined
+  var parDo: js.UndefOr[ParDoInstruction] = js.native
   /** Additional information for PartialGroupByKey instructions. */
-  var partialGroupByKey: js.UndefOr[PartialGroupByKeyInstruction] = js.undefined
+  var partialGroupByKey: js.UndefOr[PartialGroupByKeyInstruction] = js.native
   /** Additional information for Read instructions. */
-  var read: js.UndefOr[ReadInstruction] = js.undefined
+  var read: js.UndefOr[ReadInstruction] = js.native
   /**
     * System-defined name of this operation.
     * Unique across the workflow.
     */
-  var systemName: js.UndefOr[String] = js.undefined
+  var systemName: js.UndefOr[String] = js.native
   /** Additional information for Write instructions. */
-  var write: js.UndefOr[WriteInstruction] = js.undefined
+  var write: js.UndefOr[WriteInstruction] = js.native
 }
 
 object ParallelInstruction {
   @scala.inline
-  def apply(
-    flatten: FlattenInstruction = null,
-    name: String = null,
-    originalName: String = null,
-    outputs: js.Array[InstructionOutput] = null,
-    parDo: ParDoInstruction = null,
-    partialGroupByKey: PartialGroupByKeyInstruction = null,
-    read: ReadInstruction = null,
-    systemName: String = null,
-    write: WriteInstruction = null
-  ): ParallelInstruction = {
+  def apply(): ParallelInstruction = {
     val __obj = js.Dynamic.literal()
-    if (flatten != null) __obj.updateDynamic("flatten")(flatten.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (originalName != null) __obj.updateDynamic("originalName")(originalName.asInstanceOf[js.Any])
-    if (outputs != null) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
-    if (parDo != null) __obj.updateDynamic("parDo")(parDo.asInstanceOf[js.Any])
-    if (partialGroupByKey != null) __obj.updateDynamic("partialGroupByKey")(partialGroupByKey.asInstanceOf[js.Any])
-    if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
-    if (systemName != null) __obj.updateDynamic("systemName")(systemName.asInstanceOf[js.Any])
-    if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParallelInstruction]
   }
+  @scala.inline
+  implicit class ParallelInstructionOps[Self <: ParallelInstruction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFlatten(value: FlattenInstruction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatten")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlatten: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatten")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputs(value: js.Array[InstructionOutput]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParDo(value: ParDoInstruction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parDo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParDo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parDo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartialGroupByKey(value: PartialGroupByKeyInstruction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partialGroupByKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartialGroupByKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partialGroupByKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRead(value: ReadInstruction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSystemName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSystemName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrite(value: WriteInstruction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

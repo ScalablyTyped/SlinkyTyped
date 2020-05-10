@@ -14,10 +14,29 @@ trait QueryFilter extends js.Object {
 
 object QueryFilter {
   @scala.inline
-  def apply(deltaTime: DeltaTime = null): QueryFilter = {
+  def apply(): QueryFilter = {
     val __obj = js.Dynamic.literal()
-    if (deltaTime != null) __obj.updateDynamic("deltaTime")(deltaTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryFilter]
   }
+  @scala.inline
+  implicit class QueryFilterOps[Self <: QueryFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeltaTime(value: DeltaTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeltaTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deltaTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

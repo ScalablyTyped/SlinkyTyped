@@ -9,28 +9,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SinksResource extends js.Object {
   /**
     * Creates a sink that exports specified log entries to a destination. The export of newly-ingested log entries begins immediately, unless the sink's
     * writer_identity is not permitted to write to the destination. A sink can export log entries only from the resource owning the sink.
     */
-  def create(request: AnonKey): Request_[LogSink]
+  def create(request: AnonKey): Request_[LogSink] = js.native
   /** Deletes a sink. If the sink has a unique writer_identity, then that service account is also deleted. */
-  def delete(request: AnonOauthtoken): Request_[js.Object]
+  def delete(request: AnonOauthtoken): Request_[js.Object] = js.native
   /** Gets a sink. */
-  def get(request: AnonOauthtoken): Request_[LogSink]
+  def get(request: AnonOauthtoken): Request_[LogSink] = js.native
   /** Lists sinks. */
-  def list(request: AnonBearertoken): Request_[ListSinksResponse]
+  def list(request: AnonBearertoken): Request_[ListSinksResponse] = js.native
   /**
     * Updates a sink. This method replaces the following fields in the existing sink with values from the new sink: destination, and filter. The updated sink
     * might also have a new writer_identity; see the unique_writer_identity field.
     */
-  def patch(request: AnonPp): Request_[LogSink]
+  def patch(request: AnonPp): Request_[LogSink] = js.native
   /**
     * Updates a sink. This method replaces the following fields in the existing sink with values from the new sink: destination, and filter. The updated sink
     * might also have a new writer_identity; see the unique_writer_identity field.
     */
-  def update(request: AnonPp): Request_[LogSink]
+  def update(request: AnonPp): Request_[LogSink] = js.native
 }
 
 object SinksResource {
@@ -44,8 +45,51 @@ object SinksResource {
     update: AnonPp => Request_[LogSink]
   ): SinksResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
-  
     __obj.asInstanceOf[SinksResource]
   }
+  @scala.inline
+  implicit class SinksResourceOps[Self <: SinksResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: AnonKey => Request_[LogSink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonOauthtoken => Request_[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonOauthtoken => Request_[LogSink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonBearertoken => Request_[ListSinksResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPatch(value: AnonPp => Request_[LogSink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: AnonPp => Request_[LogSink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -19,24 +19,22 @@ trait WebkitMaskRepeatYProperty extends js.Object
 
 object WebkitMaskRepeatYProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def `no-repeat`: typingsSlinky.csstype.csstypeStrings.`no-repeat` = "no-repeat".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`no-repeat`]
   @scala.inline
-  def `no-repeat`: typingsSlinky.csstype.csstypeStrings.`no-repeat` = this.cast("no-repeat")
+  def repeat: typingsSlinky.csstype.csstypeStrings.repeat = "repeat".asInstanceOf[typingsSlinky.csstype.csstypeStrings.repeat]
   @scala.inline
-  def repeat: typingsSlinky.csstype.csstypeStrings.repeat = this.cast("repeat")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def round: typingsSlinky.csstype.csstypeStrings.round = "round".asInstanceOf[typingsSlinky.csstype.csstypeStrings.round]
   @scala.inline
-  def round: typingsSlinky.csstype.csstypeStrings.round = this.cast("round")
+  def space: typingsSlinky.csstype.csstypeStrings.space = "space".asInstanceOf[typingsSlinky.csstype.csstypeStrings.space]
   @scala.inline
-  def space: typingsSlinky.csstype.csstypeStrings.space = this.cast("space")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

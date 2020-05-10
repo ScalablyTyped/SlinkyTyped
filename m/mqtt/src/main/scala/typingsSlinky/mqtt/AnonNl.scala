@@ -5,26 +5,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonNl extends js.Object {
-  var nl: js.UndefOr[Boolean] = js.undefined
-  var qos: QoS
-  var rap: js.UndefOr[Boolean] = js.undefined
-  var rh: js.UndefOr[Double] = js.undefined
+  var nl: js.UndefOr[Boolean] = js.native
+  var qos: QoS = js.native
+  var rap: js.UndefOr[Boolean] = js.native
+  var rh: js.UndefOr[Double] = js.native
 }
 
 object AnonNl {
   @scala.inline
-  def apply(
-    qos: QoS,
-    nl: js.UndefOr[Boolean] = js.undefined,
-    rap: js.UndefOr[Boolean] = js.undefined,
-    rh: Int | Double = null
-  ): AnonNl = {
+  def apply(qos: QoS): AnonNl = {
     val __obj = js.Dynamic.literal(qos = qos.asInstanceOf[js.Any])
-    if (!js.isUndefined(nl)) __obj.updateDynamic("nl")(nl.asInstanceOf[js.Any])
-    if (!js.isUndefined(rap)) __obj.updateDynamic("rap")(rap.asInstanceOf[js.Any])
-    if (rh != null) __obj.updateDynamic("rh")(rh.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonNl]
   }
+  @scala.inline
+  implicit class AnonNlOps[Self <: AnonNl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQos(value: QoS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRh(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rh")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

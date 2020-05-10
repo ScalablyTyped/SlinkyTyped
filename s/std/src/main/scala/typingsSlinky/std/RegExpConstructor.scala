@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RegExpConstructor
-  extends Instantiable1[(/* pattern */ RegExp) | (/* pattern */ java.lang.String), RegExp]
+  extends Instantiable1[(/* pattern */ js.RegExp) | (/* pattern */ java.lang.String), js.RegExp]
      with Instantiable2[
-      (/* pattern */ RegExp) | (/* pattern */ java.lang.String), 
+      (/* pattern */ js.RegExp) | (/* pattern */ java.lang.String), 
       /* flags */ java.lang.String, 
-      RegExp
+      js.RegExp
     ] {
   // Non-standard extensions
   @JSName("$1")
@@ -34,11 +34,11 @@ trait RegExpConstructor
   @JSName("$9")
   var $9: java.lang.String = js.native
   var lastMatch: java.lang.String = js.native
-  @JSName(scala.scalajs.js.Symbol.species)
+  @JSName(js.Symbol.species)
   val species: RegExpConstructor = js.native
   def apply(pattern: java.lang.String): js.RegExp = js.native
   def apply(pattern: java.lang.String, flags: java.lang.String): js.RegExp = js.native
-  def apply(pattern: RegExp): js.RegExp = js.native
-  def apply(pattern: RegExp, flags: java.lang.String): js.RegExp = js.native
+  def apply(pattern: js.RegExp): js.RegExp = js.native
+  def apply(pattern: js.RegExp, flags: java.lang.String): js.RegExp = js.native
 }
 

@@ -1,14 +1,13 @@
 package typingsSlinky.reactNativeTabView.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeTabView.AnonColor
+import typingsSlinky.reactNativeTabView.tabBarMod.Props
 import typingsSlinky.reactNativeTabView.tabBarMod.default
 import typingsSlinky.reactNativeTabView.typesMod.Event
 import typingsSlinky.reactNativeTabView.typesMod.Layout
@@ -19,14 +18,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+object TabBar {
   @JSImport("react-native-tab-view/lib/typescript/src/TabBar", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T /* <: Route */](
+  @scala.inline
+  class Builder[T <: Route] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]] {
+    @scala.inline
+    def activeColor(value: String): this.type = set("activeColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bounces(value: Boolean): this.type = set("bounces", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentContainerStyle(value: StyleProp[ViewStyle]): this.type = set("contentContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentContainerStyleNull: this.type = set("contentContainerStyle", null)
+    @scala.inline
+    def inactiveColor(value: String): this.type = set("inactiveColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorContainerStyle(value: StyleProp[ViewStyle]): this.type = set("indicatorContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorContainerStyleNull: this.type = set("indicatorContainerStyle", null)
+    @scala.inline
+    def indicatorStyle(value: StyleProp[ViewStyle]): this.type = set("indicatorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorStyleNull: this.type = set("indicatorStyle", null)
+    @scala.inline
+    def labelStyle(value: StyleProp[TextStyle]): this.type = set("labelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelStyleNull: this.type = set("labelStyle", null)
+    @scala.inline
+    def onTabLongPress(value: /* scene */ Scene[T] => Unit): this.type = set("onTabLongPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTabPress(value: /* scene */ Scene[T] with Event => Unit): this.type = set("onTabPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def pressColor(value: String): this.type = set("pressColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pressOpacity(value: Double): this.type = set("pressOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderBadge(value: /* scene */ Scene[T] => TagMod[Any]): this.type = set("renderBadge", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderIcon(value: /* scene */ Scene[T] with AnonColor => TagMod[Any]): this.type = set("renderIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderLabel(value: /* scene */ Scene[T] with AnonColor => TagMod[Any]): this.type = set("renderLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def scrollEnabled(value: Boolean): this.type = set("scrollEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def tabStyle(value: StyleProp[ViewStyle]): this.type = set("tabStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabStyleNull: this.type = set("tabStyle", null)
+  }
+  
+  def withProps[T <: Route](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T <: Route](
     getAccessibilityLabel: Scene[T] => js.UndefOr[String],
     getAccessible: Scene[T] => js.UndefOr[Boolean],
     getLabelText: Scene[T] => js.UndefOr[String],
@@ -35,49 +86,10 @@ object TabBar
     layout: Layout,
     navigationState: NavigationState[T],
     position: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Animated.Node<number> */ js.Any,
-    renderIndicator: typingsSlinky.reactNativeTabView.tabBarIndicatorMod.Props[T] => TagMod[Any],
-    activeColor: String = null,
-    bounces: js.UndefOr[Boolean] = js.undefined,
-    contentContainerStyle: StyleProp[ViewStyle] = null,
-    inactiveColor: String = null,
-    indicatorContainerStyle: StyleProp[ViewStyle] = null,
-    indicatorStyle: StyleProp[ViewStyle] = null,
-    labelStyle: StyleProp[TextStyle] = null,
-    onTabLongPress: /* scene */ Scene[T] => Unit = null,
-    onTabPress: /* scene */ Scene[T] with Event => Unit = null,
-    pressColor: String = null,
-    pressOpacity: Int | Double = null,
-    renderBadge: /* scene */ Scene[T] => TagMod[Any] = null,
-    renderIcon: /* scene */ Scene[T] with AnonColor => TagMod[Any] = null,
-    renderLabel: /* scene */ Scene[T] with AnonColor => TagMod[Any] = null,
-    scrollEnabled: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[ViewStyle] = null,
-    tabStyle: StyleProp[ViewStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any]] = {
-    val __obj = js.Dynamic.literal(getAccessibilityLabel = js.Any.fromFunction1(getAccessibilityLabel), getAccessible = js.Any.fromFunction1(getAccessible), getLabelText = js.Any.fromFunction1(getLabelText), getTestID = js.Any.fromFunction1(getTestID), jumpTo = js.Any.fromFunction1(jumpTo), layout = layout.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], renderIndicator = js.Any.fromFunction1(renderIndicator))
-    if (activeColor != null) __obj.updateDynamic("activeColor")(activeColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(bounces)) __obj.updateDynamic("bounces")(bounces.asInstanceOf[js.Any])
-    if (contentContainerStyle != null) __obj.updateDynamic("contentContainerStyle")(contentContainerStyle.asInstanceOf[js.Any])
-    if (inactiveColor != null) __obj.updateDynamic("inactiveColor")(inactiveColor.asInstanceOf[js.Any])
-    if (indicatorContainerStyle != null) __obj.updateDynamic("indicatorContainerStyle")(indicatorContainerStyle.asInstanceOf[js.Any])
-    if (indicatorStyle != null) __obj.updateDynamic("indicatorStyle")(indicatorStyle.asInstanceOf[js.Any])
-    if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
-    if (onTabLongPress != null) __obj.updateDynamic("onTabLongPress")(js.Any.fromFunction1(onTabLongPress))
-    if (onTabPress != null) __obj.updateDynamic("onTabPress")(js.Any.fromFunction1(onTabPress))
-    if (pressColor != null) __obj.updateDynamic("pressColor")(pressColor.asInstanceOf[js.Any])
-    if (pressOpacity != null) __obj.updateDynamic("pressOpacity")(pressOpacity.asInstanceOf[js.Any])
-    if (renderBadge != null) __obj.updateDynamic("renderBadge")(js.Any.fromFunction1(renderBadge))
-    if (renderIcon != null) __obj.updateDynamic("renderIcon")(js.Any.fromFunction1(renderIcon))
-    if (renderLabel != null) __obj.updateDynamic("renderLabel")(js.Any.fromFunction1(renderLabel))
-    if (!js.isUndefined(scrollEnabled)) __obj.updateDynamic("scrollEnabled")(scrollEnabled.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tabStyle != null) __obj.updateDynamic("tabStyle")(tabStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeTabView.tabBarMod.default[js.Any]]]
+    renderIndicator: typingsSlinky.reactNativeTabView.tabBarIndicatorMod.Props[T] => TagMod[Any]
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(getAccessibilityLabel = js.Any.fromFunction1(getAccessibilityLabel), getAccessible = js.Any.fromFunction1(getAccessible), getLabelText = js.Any.fromFunction1(getLabelText), getTestID = js.Any.fromFunction1(getTestID), jumpTo = js.Any.fromFunction1(jumpTo), layout = layout.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], renderIndicator = js.Any.fromFunction1(renderIndicator))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T]]))
   }
-  type Props = typingsSlinky.reactNativeTabView.tabBarMod.Props[js.Any]
 }
 

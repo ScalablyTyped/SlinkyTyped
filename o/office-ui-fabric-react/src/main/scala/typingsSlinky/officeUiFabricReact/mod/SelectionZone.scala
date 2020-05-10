@@ -7,14 +7,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.react.mod.DeprecatedLifecycle because Already inherited
 - typingsSlinky.react.mod.NewLifecycle because Already inherited
 - typingsSlinky.react.mod.ComponentLifecycle because Already inherited
 - typingsSlinky.react.mod.Component because Already inherited
-- typingsSlinky.uifabricUtilities.baseComponentMod.BaseComponent because Already inherited
-- typingsSlinky.uifabricUtilities.mod.BaseComponent because Already inherited
-- typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent because Already inherited
 - typingsSlinky.officeUiFabricReact.selectionZoneMod.SelectionZone because Already inherited
 - typingsSlinky.officeUiFabricReact.selectionMod.SelectionZone because Already inherited
 - typingsSlinky.officeUiFabricReact.libMarqueeSelectionMod.SelectionZone because Inheritance from two classes. Inlined 

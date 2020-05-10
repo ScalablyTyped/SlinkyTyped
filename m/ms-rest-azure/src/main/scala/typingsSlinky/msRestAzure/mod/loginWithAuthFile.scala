@@ -1,6 +1,5 @@
 package typingsSlinky.msRestAzure.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ object loginWithAuthFile extends js.Object {
   def apply(): js.Promise[ApplicationTokenCredentials] = js.native
   def apply(
     callback: js.Function3[
-      /* err */ Error, 
+      /* err */ js.Error, 
       /* credentials */ ApplicationTokenCredentials, 
       /* subscriptions */ js.Array[LinkedSubscription], 
       Unit

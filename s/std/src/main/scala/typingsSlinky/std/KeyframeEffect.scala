@@ -23,14 +23,17 @@ trait KeyframeEffect extends AnimationEffect {
 @js.native
 object KeyframeEffect
   extends Instantiable0[KeyframeEffect]
-     with Instantiable1[(/* target */ Element) | (/* source */ KeyframeEffect), KeyframeEffect]
+     with Instantiable1[
+      (/* target */ org.scalajs.dom.raw.Element) | (/* source */ KeyframeEffect), 
+      KeyframeEffect
+    ]
      with Instantiable2[
-      (/* target */ Element) | (/* target */ Null), 
+      (/* target */ org.scalajs.dom.raw.Element) | (/* target */ Null), 
       (/* keyframes */ js.Array[Keyframe]) | (/* keyframes */ PropertyIndexedKeyframes), 
       KeyframeEffect
     ]
      with Instantiable3[
-      (/* target */ Element) | (/* target */ Null), 
+      (/* target */ org.scalajs.dom.raw.Element) | (/* target */ Null), 
       (/* keyframes */ js.Array[Keyframe]) | (/* keyframes */ Null) | (/* keyframes */ PropertyIndexedKeyframes), 
       (/* options */ Double) | (/* options */ KeyframeEffectOptions), 
       KeyframeEffect

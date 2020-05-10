@@ -8,54 +8,117 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RemovePassword extends js.Object {
   // Docs: http://electronjs.org/docs/api/structures/remove-password
   /**
     * When provided, the authentication info related to the origin will only be
     * removed otherwise the entire cache will be cleared.
     */
-  var origin: js.UndefOr[String] = js.undefined
+  var origin: js.UndefOr[String] = js.native
   /**
     * Credentials of the authentication. Must be provided if removing by origin.
     */
-  var password: js.UndefOr[String] = js.undefined
+  var password: js.UndefOr[String] = js.native
   /**
     * Realm of the authentication. Must be provided if removing by origin.
     */
-  var realm: js.UndefOr[String] = js.undefined
+  var realm: js.UndefOr[String] = js.native
   /**
     * Scheme of the authentication. Can be basic, digest, ntlm, negotiate. Must be
     * provided if removing by origin.
     */
-  var scheme: js.UndefOr[basic | digest | ntlm | negotiate] = js.undefined
+  var scheme: js.UndefOr[basic | digest | ntlm | negotiate] = js.native
   /**
     * password.
     */
-  var `type`: String
+  var `type`: String = js.native
   /**
     * Credentials of the authentication. Must be provided if removing by origin.
     */
-  var username: js.UndefOr[String] = js.undefined
+  var username: js.UndefOr[String] = js.native
 }
 
 object RemovePassword {
   @scala.inline
-  def apply(
-    `type`: String,
-    origin: String = null,
-    password: String = null,
-    realm: String = null,
-    scheme: basic | digest | ntlm | negotiate = null,
-    username: String = null
-  ): RemovePassword = {
+  def apply(`type`: String): RemovePassword = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (realm != null) __obj.updateDynamic("realm")(realm.asInstanceOf[js.Any])
-    if (scheme != null) __obj.updateDynamic("scheme")(scheme.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemovePassword]
   }
+  @scala.inline
+  implicit class RemovePasswordOps[Self <: RemovePassword] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRealm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRealm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheme(value: basic | digest | ntlm | negotiate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

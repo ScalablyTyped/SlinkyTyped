@@ -13,6 +13,6 @@ object writeDescriptorValue extends js.Object {
     * @param value The value that should be sent to the remote descriptor as part of the write request.
     * @param callback Called when the write request has completed.
     */
-  def apply(descriptorId: String, value: scala.scalajs.js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
+  def apply(descriptorId: String, value: js.typedarray.ArrayBuffer, callback: js.Function0[Unit]): Unit = js.native
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.storybookComponents.svgMod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.SVGSVGElement
 import typingsSlinky.emotionStyledBase.mod.StyledComponent
 import typingsSlinky.react.mod.SVGProps
-import typingsSlinky.std.SVGSVGElement
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`

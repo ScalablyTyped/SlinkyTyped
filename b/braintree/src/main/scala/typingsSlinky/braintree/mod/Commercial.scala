@@ -13,12 +13,10 @@ trait Commercial extends js.Object
 
 object Commercial {
   @scala.inline
-  def No: typingsSlinky.braintree.braintreeStrings.No = this.cast("No")
+  def No: typingsSlinky.braintree.braintreeStrings.No = "No".asInstanceOf[typingsSlinky.braintree.braintreeStrings.No]
   @scala.inline
-  def Unknown: typingsSlinky.braintree.braintreeStrings.Unknown = this.cast("Unknown")
+  def Unknown: typingsSlinky.braintree.braintreeStrings.Unknown = "Unknown".asInstanceOf[typingsSlinky.braintree.braintreeStrings.Unknown]
   @scala.inline
-  def Yes: typingsSlinky.braintree.braintreeStrings.Yes = this.cast("Yes")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Yes: typingsSlinky.braintree.braintreeStrings.Yes = "Yes".asInstanceOf[typingsSlinky.braintree.braintreeStrings.Yes]
 }
 

@@ -4,46 +4,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SharedPCAccountManagerPolicy extends js.Object {
   /**
     * Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold,
     * diskSpaceThresholdOrInactiveThreshold.
     */
-  var accountDeletionPolicy: js.UndefOr[SharedPCAccountDeletionPolicyType] = js.undefined
+  var accountDeletionPolicy: js.UndefOr[SharedPCAccountDeletionPolicyType] = js.native
   /**
     * Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only
     * applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to
     * 100
     */
-  var cacheAccountsAboveDiskFreePercentage: js.UndefOr[Double] = js.undefined
+  var cacheAccountsAboveDiskFreePercentage: js.UndefOr[Double] = js.native
   /**
     * Specifies when the accounts will start being deleted when they have not been logged on during the specified period,
     * given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or
     * DiskSpaceThresholdOrInactiveThreshold.
     */
-  var inactiveThresholdDays: js.UndefOr[Double] = js.undefined
+  var inactiveThresholdDays: js.UndefOr[Double] = js.native
   /**
     * Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts
     * that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is
     * DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
     */
-  var removeAccountsBelowDiskFreePercentage: js.UndefOr[Double] = js.undefined
+  var removeAccountsBelowDiskFreePercentage: js.UndefOr[Double] = js.native
 }
 
 object SharedPCAccountManagerPolicy {
   @scala.inline
-  def apply(
-    accountDeletionPolicy: SharedPCAccountDeletionPolicyType = null,
-    cacheAccountsAboveDiskFreePercentage: Int | Double = null,
-    inactiveThresholdDays: Int | Double = null,
-    removeAccountsBelowDiskFreePercentage: Int | Double = null
-  ): SharedPCAccountManagerPolicy = {
+  def apply(): SharedPCAccountManagerPolicy = {
     val __obj = js.Dynamic.literal()
-    if (accountDeletionPolicy != null) __obj.updateDynamic("accountDeletionPolicy")(accountDeletionPolicy.asInstanceOf[js.Any])
-    if (cacheAccountsAboveDiskFreePercentage != null) __obj.updateDynamic("cacheAccountsAboveDiskFreePercentage")(cacheAccountsAboveDiskFreePercentage.asInstanceOf[js.Any])
-    if (inactiveThresholdDays != null) __obj.updateDynamic("inactiveThresholdDays")(inactiveThresholdDays.asInstanceOf[js.Any])
-    if (removeAccountsBelowDiskFreePercentage != null) __obj.updateDynamic("removeAccountsBelowDiskFreePercentage")(removeAccountsBelowDiskFreePercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharedPCAccountManagerPolicy]
   }
+  @scala.inline
+  implicit class SharedPCAccountManagerPolicyOps[Self <: SharedPCAccountManagerPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountDeletionPolicy(value: SharedPCAccountDeletionPolicyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountDeletionPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountDeletionPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountDeletionPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheAccountsAboveDiskFreePercentage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheAccountsAboveDiskFreePercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheAccountsAboveDiskFreePercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheAccountsAboveDiskFreePercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInactiveThresholdDays(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inactiveThresholdDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInactiveThresholdDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inactiveThresholdDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveAccountsBelowDiskFreePercentage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAccountsBelowDiskFreePercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveAccountsBelowDiskFreePercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAccountsBelowDiskFreePercentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

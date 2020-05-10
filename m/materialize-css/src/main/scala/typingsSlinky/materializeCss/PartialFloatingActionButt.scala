@@ -9,24 +9,62 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<materialize-css.M.FloatingActionButtonOptions> */
+@js.native
 trait PartialFloatingActionButt extends js.Object {
-  var direction: js.UndefOr[top | right | buttom | left] = js.undefined
-  var hoverEnabled: js.UndefOr[Boolean] = js.undefined
-  var toolbarEnabled: js.UndefOr[Boolean] = js.undefined
+  var direction: js.UndefOr[top | right | buttom | left] = js.native
+  var hoverEnabled: js.UndefOr[Boolean] = js.native
+  var toolbarEnabled: js.UndefOr[Boolean] = js.native
 }
 
 object PartialFloatingActionButt {
   @scala.inline
-  def apply(
-    direction: top | right | buttom | left = null,
-    hoverEnabled: js.UndefOr[Boolean] = js.undefined,
-    toolbarEnabled: js.UndefOr[Boolean] = js.undefined
-  ): PartialFloatingActionButt = {
+  def apply(): PartialFloatingActionButt = {
     val __obj = js.Dynamic.literal()
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverEnabled)) __obj.updateDynamic("hoverEnabled")(hoverEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(toolbarEnabled)) __obj.updateDynamic("toolbarEnabled")(toolbarEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialFloatingActionButt]
   }
+  @scala.inline
+  implicit class PartialFloatingActionButtOps[Self <: PartialFloatingActionButt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirection(value: top | right | buttom | left): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbarEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbarEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

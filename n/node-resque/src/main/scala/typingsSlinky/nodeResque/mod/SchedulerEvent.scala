@@ -18,22 +18,20 @@ trait SchedulerEvent extends js.Object
 
 object SchedulerEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cleanStuckWorker: typingsSlinky.nodeResque.nodeResqueStrings.cleanStuckWorker = "cleanStuckWorker".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.cleanStuckWorker]
   @scala.inline
-  def cleanStuckWorker: typingsSlinky.nodeResque.nodeResqueStrings.cleanStuckWorker = this.cast("cleanStuckWorker")
+  def end: typingsSlinky.nodeResque.nodeResqueStrings.end = "end".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.end]
   @scala.inline
-  def end: typingsSlinky.nodeResque.nodeResqueStrings.end = this.cast("end")
+  def error: typingsSlinky.nodeResque.nodeResqueStrings.error = "error".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.error]
   @scala.inline
-  def error: typingsSlinky.nodeResque.nodeResqueStrings.error = this.cast("error")
+  def master: typingsSlinky.nodeResque.nodeResqueStrings.master = "master".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.master]
   @scala.inline
-  def master: typingsSlinky.nodeResque.nodeResqueStrings.master = this.cast("master")
+  def poll: typingsSlinky.nodeResque.nodeResqueStrings.poll = "poll".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.poll]
   @scala.inline
-  def poll: typingsSlinky.nodeResque.nodeResqueStrings.poll = this.cast("poll")
+  def start: typingsSlinky.nodeResque.nodeResqueStrings.start = "start".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.start]
   @scala.inline
-  def start: typingsSlinky.nodeResque.nodeResqueStrings.start = this.cast("start")
+  def transferredJob: typingsSlinky.nodeResque.nodeResqueStrings.transferredJob = "transferredJob".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.transferredJob]
   @scala.inline
-  def transferredJob: typingsSlinky.nodeResque.nodeResqueStrings.transferredJob = this.cast("transferredJob")
-  @scala.inline
-  def workingTimestamp: typingsSlinky.nodeResque.nodeResqueStrings.workingTimestamp = this.cast("workingTimestamp")
+  def workingTimestamp: typingsSlinky.nodeResque.nodeResqueStrings.workingTimestamp = "workingTimestamp".asInstanceOf[typingsSlinky.nodeResque.nodeResqueStrings.workingTimestamp]
 }
 

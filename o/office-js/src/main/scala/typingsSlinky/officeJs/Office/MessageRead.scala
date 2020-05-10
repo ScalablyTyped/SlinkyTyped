@@ -51,8 +51,6 @@ trait MessageRead extends Item {
   /**
     * Gets an object that provides methods for managing the item's categories.
     *
-    * **Important**: In Outlook on the web, you can't use the API to manage categories on a message in Read mode.
-    *
     * [Api set: Mailbox 1.8]
     *
     * @remarks
@@ -434,13 +432,9 @@ trait MessageRead extends Item {
     *
     * @param formData - A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB
     *                   OR a {@link Office.ReplyFormData | ReplyFormData} object that contains body or attachment data and a callback function.
-    * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter, 
-    *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def displayReplyAllForm(formData: String): Unit = js.native
-  def displayReplyAllForm(formData: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def displayReplyAllForm(formData: ReplyFormData): Unit = js.native
-  def displayReplyAllForm(formData: ReplyFormData, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   /**
     * Displays a reply form that includes only the sender of the selected message or the organizer of the selected appointment.
     *
@@ -462,13 +456,9 @@ trait MessageRead extends Item {
     *
     * @param formData - A string that contains text and HTML and that represents the body of the reply form. The string is limited to 32 KB
     *                   OR a {@link Office.ReplyFormData | ReplyFormData} object that contains body or attachment data and a callback function.
-    * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter,
-    *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def displayReplyForm(formData: String): Unit = js.native
-  def displayReplyForm(formData: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def displayReplyForm(formData: ReplyFormData): Unit = js.native
-  def displayReplyForm(formData: ReplyFormData, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   /**
     * Gets all the internet headers for the message as a string.
     * 

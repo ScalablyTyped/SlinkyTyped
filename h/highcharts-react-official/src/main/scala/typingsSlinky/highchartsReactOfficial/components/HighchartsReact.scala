@@ -1,49 +1,42 @@
 package typingsSlinky.highchartsReactOfficial.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.highcharts.mod.Chart_
 import typingsSlinky.highcharts.mod.Options
 import typingsSlinky.highchartsReactOfficial.TypeofHighcharts
+import typingsSlinky.highchartsReactOfficial.highchartsReactMod.HighchartsReact.Props
 import typingsSlinky.highchartsReactOfficial.highchartsReactMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HighchartsReact
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object HighchartsReact {
   @JSImport("highcharts-react-official/dist/highcharts-react", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    allowChartUpdate: js.UndefOr[Boolean] = js.undefined,
-    callback: /* chart */ Chart_ => Unit = null,
-    constructorType: String = null,
-    highcharts: TypeofHighcharts = null,
-    immutable: js.UndefOr[Boolean] = js.undefined,
-    options: Options = null,
-    updateArgs: js.Array[Boolean] | (js.Tuple2[Boolean, Boolean]) | (js.Tuple3[Boolean, Boolean, Boolean]) = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowChartUpdate)) __obj.updateDynamic("allowChartUpdate")(allowChartUpdate.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction1(callback))
-    if (constructorType != null) __obj.updateDynamic("constructorType")(constructorType.asInstanceOf[js.Any])
-    if (highcharts != null) __obj.updateDynamic("highcharts")(highcharts.asInstanceOf[js.Any])
-    if (!js.isUndefined(immutable)) __obj.updateDynamic("immutable")(immutable.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (updateArgs != null) __obj.updateDynamic("updateArgs")(updateArgs.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def allowChartUpdate(value: Boolean): this.type = set("allowChartUpdate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def callback(value: /* chart */ Chart_ => Unit): this.type = set("callback", js.Any.fromFunction1(value))
+    @scala.inline
+    def constructorType(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 78 */ js.Any): this.type = set("constructorType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highcharts(value: TypeofHighcharts): this.type = set("highcharts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def immutable(value: Boolean): this.type = set("immutable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def options(value: Options): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def updateArgs(value: js.Array[Boolean] | (js.Tuple2[Boolean, Boolean]) | (js.Tuple3[Boolean, Boolean, Boolean])): this.type = set("updateArgs", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.highchartsReactOfficial.highchartsReactMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.highchartsReactOfficial.highchartsReactMod.HighchartsReact.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: HighchartsReact.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

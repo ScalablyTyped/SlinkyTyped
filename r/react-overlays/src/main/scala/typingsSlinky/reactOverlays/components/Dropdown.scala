@@ -1,11 +1,8 @@
 package typingsSlinky.reactOverlays.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactOverlays.dropdownMod.Directions
 import typingsSlinky.reactOverlays.dropdownMod.DropdownProps
 import typingsSlinky.std.Event_
@@ -13,31 +10,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Dropdown
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOverlays.mod.Dropdown] {
+object Dropdown {
   @JSImport("react-overlays", "Dropdown")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    alignEnd: js.UndefOr[Boolean] = js.undefined,
-    drop: Directions = null,
-    itemSelector: String = null,
-    onToggle: (/* isOpen */ Boolean, /* event */ SyntheticEvent[Event_, _]) => Unit = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.Dropdown] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alignEnd)) __obj.updateDynamic("alignEnd")(alignEnd.asInstanceOf[js.Any])
-    if (drop != null) __obj.updateDynamic("drop")(drop.asInstanceOf[js.Any])
-    if (itemSelector != null) __obj.updateDynamic("itemSelector")(itemSelector.asInstanceOf[js.Any])
-    if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction2(onToggle))
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.Dropdown] {
+    @scala.inline
+    def alignEnd(value: Boolean): this.type = set("alignEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def drop(value: Directions): this.type = set("drop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemSelector(value: String): this.type = set("itemSelector", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onToggle(value: (/* isOpen */ Boolean, /* event */ SyntheticEvent[Event_, _]) => Unit): this.type = set("onToggle", js.Any.fromFunction2(value))
+    @scala.inline
+    def show(value: Boolean): this.type = set("show", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.Dropdown] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactOverlays.mod.Dropdown](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DropdownProps
+  
+  def withProps(p: DropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Dropdown.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

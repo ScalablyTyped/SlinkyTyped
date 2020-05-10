@@ -4,30 +4,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /**
     * Capture location info in AST
     * Default is false
     */
-  var captureLocation: js.UndefOr[Boolean] = js.undefined
+  var captureLocation: js.UndefOr[Boolean] = js.native
   /**
     * Whether to convert `#` in plural rule options
     * to `{var, number}`
     * Default is true
     */
-  var normalizeHashtagInPlural: js.UndefOr[Boolean] = js.undefined
+  var normalizeHashtagInPlural: js.UndefOr[Boolean] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    captureLocation: js.UndefOr[Boolean] = js.undefined,
-    normalizeHashtagInPlural: js.UndefOr[Boolean] = js.undefined
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(captureLocation)) __obj.updateDynamic("captureLocation")(captureLocation.asInstanceOf[js.Any])
-    if (!js.isUndefined(normalizeHashtagInPlural)) __obj.updateDynamic("normalizeHashtagInPlural")(normalizeHashtagInPlural.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaptureLocation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captureLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptureLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captureLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNormalizeHashtagInPlural(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeHashtagInPlural")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNormalizeHashtagInPlural: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeHashtagInPlural")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

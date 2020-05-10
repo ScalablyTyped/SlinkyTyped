@@ -26,17 +26,59 @@ trait ListAttachedUserPoliciesRequest extends js.Object {
 
 object ListAttachedUserPoliciesRequest {
   @scala.inline
-  def apply(
-    UserName: userNameType,
-    Marker: markerType = null,
-    MaxItems: Int | Double = null,
-    PathPrefix: policyPathType = null
-  ): ListAttachedUserPoliciesRequest = {
+  def apply(UserName: userNameType): ListAttachedUserPoliciesRequest = {
     val __obj = js.Dynamic.literal(UserName = UserName.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (MaxItems != null) __obj.updateDynamic("MaxItems")(MaxItems.asInstanceOf[js.Any])
-    if (PathPrefix != null) __obj.updateDynamic("PathPrefix")(PathPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAttachedUserPoliciesRequest]
   }
+  @scala.inline
+  implicit class ListAttachedUserPoliciesRequestOps[Self <: ListAttachedUserPoliciesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserName(value: userNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarker(value: markerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxItems(value: maxItemsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPathPrefix(value: policyPathType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PathPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPathPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PathPrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,10 +14,29 @@ trait DescribeStorediSCSIVolumesOutput extends js.Object {
 
 object DescribeStorediSCSIVolumesOutput {
   @scala.inline
-  def apply(StorediSCSIVolumes: StorediSCSIVolumes = null): DescribeStorediSCSIVolumesOutput = {
+  def apply(): DescribeStorediSCSIVolumesOutput = {
     val __obj = js.Dynamic.literal()
-    if (StorediSCSIVolumes != null) __obj.updateDynamic("StorediSCSIVolumes")(StorediSCSIVolumes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeStorediSCSIVolumesOutput]
   }
+  @scala.inline
+  implicit class DescribeStorediSCSIVolumesOutputOps[Self <: DescribeStorediSCSIVolumesOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStorediSCSIVolumes(value: StorediSCSIVolumes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorediSCSIVolumes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorediSCSIVolumes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorediSCSIVolumes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

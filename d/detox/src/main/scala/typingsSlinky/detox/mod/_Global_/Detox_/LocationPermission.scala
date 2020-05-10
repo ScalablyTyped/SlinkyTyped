@@ -14,14 +14,12 @@ trait LocationPermission extends js.Object
 
 object LocationPermission {
   @scala.inline
-  def always: typingsSlinky.detox.detoxStrings.always = this.cast("always")
+  def always: typingsSlinky.detox.detoxStrings.always = "always".asInstanceOf[typingsSlinky.detox.detoxStrings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inuse: typingsSlinky.detox.detoxStrings.inuse = "inuse".asInstanceOf[typingsSlinky.detox.detoxStrings.inuse]
   @scala.inline
-  def inuse: typingsSlinky.detox.detoxStrings.inuse = this.cast("inuse")
+  def never: typingsSlinky.detox.detoxStrings.never = "never".asInstanceOf[typingsSlinky.detox.detoxStrings.never]
   @scala.inline
-  def never: typingsSlinky.detox.detoxStrings.never = this.cast("never")
-  @scala.inline
-  def unset: typingsSlinky.detox.detoxStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.detox.detoxStrings.unset = "unset".asInstanceOf[typingsSlinky.detox.detoxStrings.unset]
 }
 

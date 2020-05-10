@@ -144,7 +144,7 @@ object udp extends js.Object {
     */
   def send(
     socketId: integer,
-    data: scala.scalajs.js.typedarray.ArrayBuffer,
+    data: js.typedarray.ArrayBuffer,
     address: String,
     port: integer,
     callback: js.Function1[/* sendInfo */ SendInfo, Unit]

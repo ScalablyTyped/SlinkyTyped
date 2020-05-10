@@ -2,7 +2,6 @@ package typingsSlinky.jestMessageUtil.mod
 
 import typingsSlinky.jestMessageUtil.PickProjectConfigrootDirt
 import typingsSlinky.jestTestResult.typesMod.SerializableError
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -68,17 +67,17 @@ object formatExecError extends js.Object {
     testPath: String,
     reuseMessage: Boolean
   ): String = js.native
-  def apply(error: Error, config: PickProjectConfigrootDirt, options: StackTraceOptions): String = js.native
+  def apply(error: js.Error, config: PickProjectConfigrootDirt, options: StackTraceOptions): String = js.native
   def apply(
-    error: Error,
+    error: js.Error,
     config: PickProjectConfigrootDirt,
     options: StackTraceOptions,
     testPath: js.UndefOr[scala.Nothing],
     reuseMessage: Boolean
   ): String = js.native
-  def apply(error: Error, config: PickProjectConfigrootDirt, options: StackTraceOptions, testPath: String): String = js.native
+  def apply(error: js.Error, config: PickProjectConfigrootDirt, options: StackTraceOptions, testPath: String): String = js.native
   def apply(
-    error: Error,
+    error: js.Error,
     config: PickProjectConfigrootDirt,
     options: StackTraceOptions,
     testPath: String,

@@ -10,47 +10,155 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@tinajs/tina.@tinajs/tina.ComponentDefinitions> */
+@js.native
 trait PartialComponentDefinitio extends js.Object {
-  var attached: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var compute: js.UndefOr[js.Function1[/* data */ StringDictionary[js.Any], StringDictionary[_]]] = js.undefined
-  var created: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var data: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var detached: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var attached: js.UndefOr[js.Function0[Unit]] = js.native
+  var compute: js.UndefOr[js.Function1[/* data */ StringDictionary[js.Any], StringDictionary[_]]] = js.native
+  var created: js.UndefOr[js.Function0[Unit]] = js.native
+  var data: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var detached: js.UndefOr[js.Function0[Unit]] = js.native
   var methods: js.UndefOr[
     StringDictionary[js.ThisFunction1[/* this */ Component, /* repeated */ js.Any, _]]
-  ] = js.undefined
-  var mixins: js.UndefOr[js.Array[Partial[ComponentDefinitions]]] = js.undefined
-  var moved: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var properties: js.UndefOr[ComponentProperties] = js.undefined
-  var ready: js.UndefOr[js.Function0[Unit]] = js.undefined
+  ] = js.native
+  var mixins: js.UndefOr[js.Array[Partial[ComponentDefinitions]]] = js.native
+  var moved: js.UndefOr[js.Function0[Unit]] = js.native
+  var properties: js.UndefOr[ComponentProperties] = js.native
+  var ready: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object PartialComponentDefinitio {
   @scala.inline
-  def apply(
-    attached: () => Unit = null,
-    compute: /* data */ StringDictionary[js.Any] => StringDictionary[_] = null,
-    created: () => Unit = null,
-    data: StringDictionary[js.Any] = null,
-    detached: () => Unit = null,
-    methods: StringDictionary[js.ThisFunction1[/* this */ Component, /* repeated */ js.Any, _]] = null,
-    mixins: js.Array[Partial[ComponentDefinitions]] = null,
-    moved: () => Unit = null,
-    properties: ComponentProperties = null,
-    ready: () => Unit = null
-  ): PartialComponentDefinitio = {
+  def apply(): PartialComponentDefinitio = {
     val __obj = js.Dynamic.literal()
-    if (attached != null) __obj.updateDynamic("attached")(js.Any.fromFunction0(attached))
-    if (compute != null) __obj.updateDynamic("compute")(js.Any.fromFunction1(compute))
-    if (created != null) __obj.updateDynamic("created")(js.Any.fromFunction0(created))
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (detached != null) __obj.updateDynamic("detached")(js.Any.fromFunction0(detached))
-    if (methods != null) __obj.updateDynamic("methods")(methods.asInstanceOf[js.Any])
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (moved != null) __obj.updateDynamic("moved")(js.Any.fromFunction0(moved))
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
-    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction0(ready))
     __obj.asInstanceOf[PartialComponentDefinitio]
   }
+  @scala.inline
+  implicit class PartialComponentDefinitioOps[Self <: PartialComponentDefinitio] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttached(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attached")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutAttached: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attached")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompute(value: /* data */ StringDictionary[js.Any] => StringDictionary[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCompute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreated(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetached(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detached")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutDetached: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detached")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethods(value: StringDictionary[js.ThisFunction1[/* this */ Component, /* repeated */ js.Any, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("methods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMixins(value: js.Array[Partial[ComponentDefinitions]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mixins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMixins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mixins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoved(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moved")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutMoved: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moved")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: ComponentProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReady(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutReady: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

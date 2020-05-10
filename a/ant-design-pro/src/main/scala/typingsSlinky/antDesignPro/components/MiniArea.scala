@@ -1,9 +1,7 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.AnonY
 import typingsSlinky.antDesignPro.miniAreaMod.IAxis
 import typingsSlinky.antDesignPro.miniAreaMod.IMiniAreaProps
@@ -12,34 +10,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MiniArea
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object MiniArea {
   @JSImport("ant-design-pro/lib/Charts/MiniArea", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    data: js.Array[AnonY],
-    height: Double,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    borderColor: String = null,
-    color: String = null,
-    line: js.UndefOr[Boolean] = js.undefined,
-    xAxis: IAxis = null,
-    yAxis: IAxis = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(line)) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
-    if (xAxis != null) __obj.updateDynamic("xAxis")(xAxis.asInstanceOf[js.Any])
-    if (yAxis != null) __obj.updateDynamic("yAxis")(yAxis.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderColor(value: String): this.type = set("borderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def line(value: Boolean): this.type = set("line", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xAxis(value: IAxis): this.type = set("xAxis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yAxis(value: IAxis): this.type = set("yAxis", value.asInstanceOf[js.Any])
   }
-  type Props = IMiniAreaProps
+  
+  def withProps(p: IMiniAreaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[AnonY], height: Double): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IMiniAreaProps]))
+  }
 }
 

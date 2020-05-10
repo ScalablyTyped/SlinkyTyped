@@ -13,12 +13,53 @@ trait AnonPercentile extends js.Object {
 
 object AnonPercentile {
   @scala.inline
-  def apply(category: String = null, distributions: js.Array[AnonMax] = null, percentile: Int | Double = null): AnonPercentile = {
+  def apply(): AnonPercentile = {
     val __obj = js.Dynamic.literal()
-    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
-    if (distributions != null) __obj.updateDynamic("distributions")(distributions.asInstanceOf[js.Any])
-    if (percentile != null) __obj.updateDynamic("percentile")(percentile.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPercentile]
   }
+  @scala.inline
+  implicit class AnonPercentileOps[Self <: AnonPercentile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistributions(value: js.Array[AnonMax]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distributions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistributions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distributions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPercentile(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPercentile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentile")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

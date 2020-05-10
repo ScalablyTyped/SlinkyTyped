@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnScrollListener extends js.Object {
-  def onScrollStateChange(view: typingsSlinky.androiduix.android.widget.NumberPicker, scrollState: Double): Unit
+  def onScrollStateChange(view: typingsSlinky.androiduix.android.widget.NumberPicker, scrollState: Double): Unit = js.native
 }
 
 @JSGlobal("android.widget.NumberPicker.OnScrollListener")

@@ -1,10 +1,10 @@
 package typingsSlinky.blueprintjsCore.componentsMod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLHeadingElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.blueprintjsCore.htmlMod.IElementRefProps
-import typingsSlinky.react.mod.FunctionComponent
 import typingsSlinky.react.mod.HTMLProps
-import typingsSlinky.std.HTMLHeadingElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +12,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@blueprintjs/core/lib/esm/components", "H2")
 @js.native
 object H2 extends TopLevel[
-      FunctionComponent[HTMLProps[HTMLHeadingElement] with IElementRefProps[HTMLHeadingElement]]
+      ReactComponentClass[HTMLProps[HTMLHeadingElement] with IElementRefProps[HTMLHeadingElement]]
     ]
 

@@ -14,14 +14,12 @@ trait WindowsInformationProtectionEnforcementLevel extends js.Object
 
 object WindowsInformationProtectionEnforcementLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def encryptAndAuditOnly: typingsSlinky.microsoftGraph.microsoftGraphStrings.encryptAndAuditOnly = "encryptAndAuditOnly".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.encryptAndAuditOnly]
   @scala.inline
-  def encryptAndAuditOnly: typingsSlinky.microsoftGraph.microsoftGraphStrings.encryptAndAuditOnly = this.cast("encryptAndAuditOnly")
+  def encryptAuditAndBlock: typingsSlinky.microsoftGraph.microsoftGraphStrings.encryptAuditAndBlock = "encryptAuditAndBlock".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.encryptAuditAndBlock]
   @scala.inline
-  def encryptAuditAndBlock: typingsSlinky.microsoftGraph.microsoftGraphStrings.encryptAuditAndBlock = this.cast("encryptAuditAndBlock")
+  def encryptAuditAndPrompt: typingsSlinky.microsoftGraph.microsoftGraphStrings.encryptAuditAndPrompt = "encryptAuditAndPrompt".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.encryptAuditAndPrompt]
   @scala.inline
-  def encryptAuditAndPrompt: typingsSlinky.microsoftGraph.microsoftGraphStrings.encryptAuditAndPrompt = this.cast("encryptAuditAndPrompt")
-  @scala.inline
-  def noProtection: typingsSlinky.microsoftGraph.microsoftGraphStrings.noProtection = this.cast("noProtection")
+  def noProtection: typingsSlinky.microsoftGraph.microsoftGraphStrings.noProtection = "noProtection".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.noProtection]
 }
 

@@ -4,33 +4,79 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RoleAssignment extends Entity {
   // Description of the Role Assignment.
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   // The display or friendly name of the role Assignment.
-  var displayName: js.UndefOr[String] = js.undefined
+  var displayName: js.UndefOr[String] = js.native
   // List of ids of role scope member security groups. These are IDs from Azure Active Directory.
-  var resourceScopes: js.UndefOr[js.Array[String]] = js.undefined
+  var resourceScopes: js.UndefOr[js.Array[String]] = js.native
   // Role definition this assignment is part of.
-  var roleDefinition: js.UndefOr[RoleDefinition] = js.undefined
+  var roleDefinition: js.UndefOr[RoleDefinition] = js.native
 }
 
 object RoleAssignment {
   @scala.inline
-  def apply(
-    description: String = null,
-    displayName: String = null,
-    id: String = null,
-    resourceScopes: js.Array[String] = null,
-    roleDefinition: RoleDefinition = null
-  ): RoleAssignment = {
+  def apply(): RoleAssignment = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (resourceScopes != null) __obj.updateDynamic("resourceScopes")(resourceScopes.asInstanceOf[js.Any])
-    if (roleDefinition != null) __obj.updateDynamic("roleDefinition")(roleDefinition.asInstanceOf[js.Any])
     __obj.asInstanceOf[RoleAssignment]
   }
+  @scala.inline
+  implicit class RoleAssignmentOps[Self <: RoleAssignment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceScopes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceScopes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceScopes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceScopes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleDefinition(value: RoleDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleDefinition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

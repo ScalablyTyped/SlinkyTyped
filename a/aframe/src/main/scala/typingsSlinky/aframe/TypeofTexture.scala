@@ -1,7 +1,7 @@
 package typingsSlinky.aframe
 
 import org.scalablytyped.runtime.Instantiable10
-import typingsSlinky.std.HTMLImageElement
+import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.three.constantsMod.Mapping
 import typingsSlinky.three.constantsMod.PixelFormat
 import typingsSlinky.three.constantsMod.TextureDataType

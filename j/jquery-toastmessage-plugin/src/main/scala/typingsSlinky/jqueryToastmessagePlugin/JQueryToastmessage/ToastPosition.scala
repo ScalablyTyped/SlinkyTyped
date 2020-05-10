@@ -16,18 +16,16 @@ trait ToastPosition extends js.Object
 
 object ToastPosition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `middle-center`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`middle-center` = "middle-center".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`middle-center`]
   @scala.inline
-  def `middle-center`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`middle-center` = this.cast("middle-center")
+  def `middle-left`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`middle-left` = "middle-left".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`middle-left`]
   @scala.inline
-  def `middle-left`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`middle-left` = this.cast("middle-left")
+  def `middle-right`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`middle-right` = "middle-right".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`middle-right`]
   @scala.inline
-  def `middle-right`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`middle-right` = this.cast("middle-right")
+  def `top-center`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`top-center` = "top-center".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`top-center`]
   @scala.inline
-  def `top-center`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`top-center` = this.cast("top-center")
+  def `top-left`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`top-left` = "top-left".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`top-left`]
   @scala.inline
-  def `top-left`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`top-left` = this.cast("top-left")
-  @scala.inline
-  def `top-right`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`top-right` = this.cast("top-right")
+  def `top-right`: typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`top-right` = "top-right".asInstanceOf[typingsSlinky.jqueryToastmessagePlugin.jqueryToastmessagePluginStrings.`top-right`]
 }
 

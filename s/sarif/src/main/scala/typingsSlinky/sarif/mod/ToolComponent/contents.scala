@@ -12,10 +12,8 @@ trait contents extends js.Object
 
 object contents {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def localizedData: typingsSlinky.sarif.sarifStrings.localizedData = "localizedData".asInstanceOf[typingsSlinky.sarif.sarifStrings.localizedData]
   @scala.inline
-  def localizedData: typingsSlinky.sarif.sarifStrings.localizedData = this.cast("localizedData")
-  @scala.inline
-  def nonLocalizedData: typingsSlinky.sarif.sarifStrings.nonLocalizedData = this.cast("nonLocalizedData")
+  def nonLocalizedData: typingsSlinky.sarif.sarifStrings.nonLocalizedData = "nonLocalizedData".asInstanceOf[typingsSlinky.sarif.sarifStrings.nonLocalizedData]
 }
 

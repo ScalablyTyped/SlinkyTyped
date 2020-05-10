@@ -1,6 +1,5 @@
 package typingsSlinky.winrt.Windows.Storage.Streams
 
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,7 @@ trait IDataReader extends js.Object {
   def readBuffer(length: Double): IBuffer = js.native
   def readByte(): Double = js.native
   def readBytes(value: js.Array[Double]): Unit = js.native
-  def readBytes(value: Uint8Array): Unit = js.native
+  def readBytes(value: js.typedarray.Uint8Array): Unit = js.native
   def readDateTime(): js.Date = js.native
   def readDouble(): Double = js.native
   def readGuid(): String = js.native

@@ -6,10 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.UI.ApplicationSettings.SettingsPane")
 @js.native
-class SettingsPane () extends ISettingsPane {
-  /* CompleteClass */
-  override var oncommandsrequested: js.Any = js.native
-}
+class SettingsPane () extends ISettingsPane
 
 /* static members */
 @JSGlobal("Windows.UI.ApplicationSettings.SettingsPane")

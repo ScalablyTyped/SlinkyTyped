@@ -1,8 +1,8 @@
 package typingsSlinky.tanemSvgInjector
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.SVGSVGElement
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.SVGSVGElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

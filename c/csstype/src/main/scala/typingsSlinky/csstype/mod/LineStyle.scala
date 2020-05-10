@@ -38,26 +38,24 @@ trait LineStyle
 
 object LineStyle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dashed: typingsSlinky.csstype.csstypeStrings.dashed = "dashed".asInstanceOf[typingsSlinky.csstype.csstypeStrings.dashed]
   @scala.inline
-  def dashed: typingsSlinky.csstype.csstypeStrings.dashed = this.cast("dashed")
+  def dotted: typingsSlinky.csstype.csstypeStrings.dotted = "dotted".asInstanceOf[typingsSlinky.csstype.csstypeStrings.dotted]
   @scala.inline
-  def dotted: typingsSlinky.csstype.csstypeStrings.dotted = this.cast("dotted")
+  def double: typingsSlinky.csstype.csstypeStrings.double = "double".asInstanceOf[typingsSlinky.csstype.csstypeStrings.double]
   @scala.inline
-  def double: typingsSlinky.csstype.csstypeStrings.double = this.cast("double")
+  def groove: typingsSlinky.csstype.csstypeStrings.groove = "groove".asInstanceOf[typingsSlinky.csstype.csstypeStrings.groove]
   @scala.inline
-  def groove: typingsSlinky.csstype.csstypeStrings.groove = this.cast("groove")
+  def hidden: typingsSlinky.csstype.csstypeStrings.hidden = "hidden".asInstanceOf[typingsSlinky.csstype.csstypeStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.csstype.csstypeStrings.hidden = this.cast("hidden")
+  def inset: typingsSlinky.csstype.csstypeStrings.inset = "inset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inset]
   @scala.inline
-  def inset: typingsSlinky.csstype.csstypeStrings.inset = this.cast("inset")
+  def none: typingsSlinky.csstype.csstypeStrings.none = "none".asInstanceOf[typingsSlinky.csstype.csstypeStrings.none]
   @scala.inline
-  def none: typingsSlinky.csstype.csstypeStrings.none = this.cast("none")
+  def outset: typingsSlinky.csstype.csstypeStrings.outset = "outset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.outset]
   @scala.inline
-  def outset: typingsSlinky.csstype.csstypeStrings.outset = this.cast("outset")
+  def ridge: typingsSlinky.csstype.csstypeStrings.ridge = "ridge".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ridge]
   @scala.inline
-  def ridge: typingsSlinky.csstype.csstypeStrings.ridge = this.cast("ridge")
-  @scala.inline
-  def solid: typingsSlinky.csstype.csstypeStrings.solid = this.cast("solid")
+  def solid: typingsSlinky.csstype.csstypeStrings.solid = "solid".asInstanceOf[typingsSlinky.csstype.csstypeStrings.solid]
 }
 

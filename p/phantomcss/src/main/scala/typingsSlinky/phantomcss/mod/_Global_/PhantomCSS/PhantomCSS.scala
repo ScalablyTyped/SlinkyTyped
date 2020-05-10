@@ -1,7 +1,6 @@
 package typingsSlinky.phantomcss.mod._Global_.PhantomCSS
 
 import typingsSlinky.phantomjs.ClipRect
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ trait PhantomCSS extends js.Object {
   def compareExplicit(list: js.Array[String]): Unit = js.native
   def compareFiles(baseFile: String, diffFiles: String): PhantomCSSTest = js.native
   def compareMatched(`match`: String, exclude: String): Unit = js.native
-  def compareMatched(`match`: RegExp, exclude: RegExp): Unit = js.native
+  def compareMatched(`match`: js.RegExp, exclude: js.RegExp): Unit = js.native
   /**
     * Compare image diffs generated in this test run only
     */

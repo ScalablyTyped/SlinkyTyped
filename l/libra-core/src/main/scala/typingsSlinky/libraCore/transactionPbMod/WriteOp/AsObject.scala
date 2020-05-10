@@ -5,23 +5,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AsObject extends js.Object {
-  var accessPath: js.UndefOr[typingsSlinky.libraCore.accessPathPbMod.AccessPath.AsObject] = js.undefined
-  var `type`: WriteOpType
-  var value: scala.scalajs.js.typedarray.Uint8Array | String
+  var accessPath: js.UndefOr[typingsSlinky.libraCore.accessPathPbMod.AccessPath.AsObject] = js.native
+  var `type`: WriteOpType = js.native
+  var value: js.typedarray.Uint8Array | String = js.native
 }
 
 object AsObject {
   @scala.inline
-  def apply(
-    `type`: WriteOpType,
-    value: scala.scalajs.js.typedarray.Uint8Array | String,
-    accessPath: typingsSlinky.libraCore.accessPathPbMod.AccessPath.AsObject = null
-  ): AsObject = {
+  def apply(`type`: WriteOpType, value: js.typedarray.Uint8Array | String): AsObject = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (accessPath != null) __obj.updateDynamic("accessPath")(accessPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[AsObject]
   }
+  @scala.inline
+  implicit class AsObjectOps[Self <: AsObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: WriteOpType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.typedarray.Uint8Array | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessPath(value: typingsSlinky.libraCore.accessPathPbMod.AccessPath.AsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessPath")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -48,14 +48,78 @@ object StartTextTranslationJobRequest {
     InputDataConfig: InputDataConfig,
     OutputDataConfig: OutputDataConfig,
     SourceLanguageCode: LanguageCodeString,
-    TargetLanguageCodes: TargetLanguageCodeStringList,
-    JobName: JobName = null,
-    TerminologyNames: ResourceNameList = null
+    TargetLanguageCodes: TargetLanguageCodeStringList
   ): StartTextTranslationJobRequest = {
     val __obj = js.Dynamic.literal(ClientToken = ClientToken.asInstanceOf[js.Any], DataAccessRoleArn = DataAccessRoleArn.asInstanceOf[js.Any], InputDataConfig = InputDataConfig.asInstanceOf[js.Any], OutputDataConfig = OutputDataConfig.asInstanceOf[js.Any], SourceLanguageCode = SourceLanguageCode.asInstanceOf[js.Any], TargetLanguageCodes = TargetLanguageCodes.asInstanceOf[js.Any])
-    if (JobName != null) __obj.updateDynamic("JobName")(JobName.asInstanceOf[js.Any])
-    if (TerminologyNames != null) __obj.updateDynamic("TerminologyNames")(TerminologyNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartTextTranslationJobRequest]
   }
+  @scala.inline
+  implicit class StartTextTranslationJobRequestOps[Self <: StartTextTranslationJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientToken(value: ClientTokenString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataAccessRoleArn(value: IamRoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataAccessRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputDataConfig(value: InputDataConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDataConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputDataConfig(value: OutputDataConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputDataConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceLanguageCode(value: LanguageCodeString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceLanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetLanguageCodes(value: TargetLanguageCodeStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetLanguageCodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJobName(value: JobName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminologyNames(value: ResourceNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminologyNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminologyNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminologyNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

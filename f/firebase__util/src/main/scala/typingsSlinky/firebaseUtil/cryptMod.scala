@@ -2,7 +2,6 @@ package typingsSlinky.firebaseUtil
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,8 +23,8 @@ object cryptMod extends js.Object {
     def decodeStringToByteArray(input: String, webSafe: Boolean): js.Array[Double] = js.native
     def encodeByteArray(input: js.Array[Double]): String = js.native
     def encodeByteArray(input: js.Array[Double], webSafe: Boolean): String = js.native
-    def encodeByteArray(input: Uint8Array): String = js.native
-    def encodeByteArray(input: Uint8Array, webSafe: Boolean): String = js.native
+    def encodeByteArray(input: js.typedarray.Uint8Array): String = js.native
+    def encodeByteArray(input: js.typedarray.Uint8Array, webSafe: Boolean): String = js.native
     def encodeString(input: String): String = js.native
     def encodeString(input: String, webSafe: Boolean): String = js.native
     def init_(): Unit = js.native

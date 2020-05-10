@@ -14,14 +14,12 @@ trait ConnectionState extends js.Object
 
 object ConnectionState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def closed: typingsSlinky.phoenix.phoenixStrings.closed = "closed".asInstanceOf[typingsSlinky.phoenix.phoenixStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.phoenix.phoenixStrings.closed = this.cast("closed")
+  def closing: typingsSlinky.phoenix.phoenixStrings.closing = "closing".asInstanceOf[typingsSlinky.phoenix.phoenixStrings.closing]
   @scala.inline
-  def closing: typingsSlinky.phoenix.phoenixStrings.closing = this.cast("closing")
+  def connecting: typingsSlinky.phoenix.phoenixStrings.connecting = "connecting".asInstanceOf[typingsSlinky.phoenix.phoenixStrings.connecting]
   @scala.inline
-  def connecting: typingsSlinky.phoenix.phoenixStrings.connecting = this.cast("connecting")
-  @scala.inline
-  def open: typingsSlinky.phoenix.phoenixStrings.open = this.cast("open")
+  def open: typingsSlinky.phoenix.phoenixStrings.open = "open".asInstanceOf[typingsSlinky.phoenix.phoenixStrings.open]
 }
 

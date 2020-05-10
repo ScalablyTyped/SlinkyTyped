@@ -18,11 +18,41 @@ trait AssociateResourceSharePermissionResponse extends js.Object {
 
 object AssociateResourceSharePermissionResponse {
   @scala.inline
-  def apply(clientToken: String = null, returnValue: js.UndefOr[scala.Boolean] = js.undefined): AssociateResourceSharePermissionResponse = {
+  def apply(): AssociateResourceSharePermissionResponse = {
     val __obj = js.Dynamic.literal()
-    if (clientToken != null) __obj.updateDynamic("clientToken")(clientToken.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnValue)) __obj.updateDynamic("returnValue")(returnValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateResourceSharePermissionResponse]
   }
+  @scala.inline
+  implicit class AssociateResourceSharePermissionResponseOps[Self <: AssociateResourceSharePermissionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

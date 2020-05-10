@@ -1,5 +1,13 @@
 package typingsSlinky.squareConnect.mod
 
+import typingsSlinky.squareConnect.squareConnectStrings.CATEGORY
+import typingsSlinky.squareConnect.squareConnectStrings.DISCOUNT
+import typingsSlinky.squareConnect.squareConnectStrings.IMAGE
+import typingsSlinky.squareConnect.squareConnectStrings.ITEM
+import typingsSlinky.squareConnect.squareConnectStrings.ITEM_VARIATION
+import typingsSlinky.squareConnect.squareConnectStrings.MODIFIER
+import typingsSlinky.squareConnect.squareConnectStrings.MODIFIER_LIST
+import typingsSlinky.squareConnect.squareConnectStrings.TAX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,15 +16,15 @@ import scala.scalajs.js.annotation._
 @js.native
 class ListCatalogRequest () extends js.Object {
   /**
-    * The pagination cursor returned in the previous response. Leave unset for an initial request.
-    * See [Pagination](/basics/api101/pagination) for more information.
+    * TThe pagination cursor returned in the previous response. Leave unset for an initial request.
+    * See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
     */
   var cursor: js.UndefOr[String] = js.native
   /**
     * An optional case-insensitive, comma-separated list of object types to retrieve, for example `ITEM,ITEM_VARIATION,CATEGORY,IMAGE`.
-    * The legal values are taken from the [CatalogObjectType](#type-catalogobjecttype) enumeration, namely:
-    * `ITEM`, `ITEM_VARIATION`, `CATEGORY`, `DISCOUNT`, `TAX`, `MODIFIER`, `MODIFIER_LIST`, or `IMAGE`.
     */
-  var types: js.UndefOr[String] = js.native
+  var types: js.UndefOr[
+    ITEM | ITEM_VARIATION | CATEGORY | DISCOUNT | TAX | MODIFIER | MODIFIER_LIST | IMAGE
+  ] = js.native
 }
 

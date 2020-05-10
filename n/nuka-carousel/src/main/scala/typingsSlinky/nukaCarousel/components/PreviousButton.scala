@@ -1,23 +1,21 @@
 package typingsSlinky.nukaCarousel.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.nukaCarousel.mod.CarouselCellAlignProp
+import typingsSlinky.nukaCarousel.mod.CarouselSlideRenderControlProps
 import typingsSlinky.nukaCarousel.mod.CarouselSlidesToScrollProp
-import typingsSlinky.nukaCarousel.mod.PreviousButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PreviousButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nukaCarousel.mod.PreviousButton] {
+object PreviousButton {
   @JSImport("nuka-carousel", "PreviousButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: CarouselSlideRenderControlProps): Default[tag.type, typingsSlinky.nukaCarousel.mod.PreviousButton] = new Default[tag.type, typingsSlinky.nukaCarousel.mod.PreviousButton](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     cellAlign: CarouselCellAlignProp,
     cellSpacing: Double,
@@ -30,13 +28,10 @@ object PreviousButton
     slideWidth: Double,
     slidesToScroll: CarouselSlidesToScrollProp,
     slidesToShow: Double,
-    wrapAround: Boolean,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nukaCarousel.mod.PreviousButton] = {
-    val __obj = js.Dynamic.literal(cellAlign = cellAlign.asInstanceOf[js.Any], cellSpacing = cellSpacing.asInstanceOf[js.Any], currentSlide = currentSlide.asInstanceOf[js.Any], frameWidth = frameWidth.asInstanceOf[js.Any], goToSlide = js.Any.fromFunction1(goToSlide), nextSlide = js.Any.fromFunction0(nextSlide), previousSlide = js.Any.fromFunction0(previousSlide), slideCount = slideCount.asInstanceOf[js.Any], slideWidth = slideWidth.asInstanceOf[js.Any], slidesToScroll = slidesToScroll.asInstanceOf[js.Any], slidesToShow = slidesToShow.asInstanceOf[js.Any], wrapAround = wrapAround.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    wrapAround: Boolean
+  ): Default[tag.type, typingsSlinky.nukaCarousel.mod.PreviousButton] = {
+    val __props = js.Dynamic.literal(cellAlign = cellAlign.asInstanceOf[js.Any], cellSpacing = cellSpacing.asInstanceOf[js.Any], currentSlide = currentSlide.asInstanceOf[js.Any], frameWidth = frameWidth.asInstanceOf[js.Any], goToSlide = js.Any.fromFunction1(goToSlide), nextSlide = js.Any.fromFunction0(nextSlide), previousSlide = js.Any.fromFunction0(previousSlide), slideCount = slideCount.asInstanceOf[js.Any], slideWidth = slideWidth.asInstanceOf[js.Any], slidesToScroll = slidesToScroll.asInstanceOf[js.Any], slidesToShow = slidesToShow.asInstanceOf[js.Any], wrapAround = wrapAround.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.nukaCarousel.mod.PreviousButton](js.Array(this.component, __props.asInstanceOf[CarouselSlideRenderControlProps]))
   }
-  type Props = PreviousButtonProps
 }
 

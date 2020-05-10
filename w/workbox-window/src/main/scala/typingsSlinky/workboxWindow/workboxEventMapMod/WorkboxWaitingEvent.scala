@@ -7,25 +7,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkboxWaitingEvent extends WorkboxUpdatableEvent {
-  val wasWaitingBeforeRegister: js.UndefOr[Boolean] = js.undefined
+  val wasWaitingBeforeRegister: js.UndefOr[Boolean] = js.native
 }
 
 object WorkboxWaitingEvent {
   @scala.inline
-  def apply(
-    originalEvent: Event_,
-    sw: ServiceWorker,
-    target: Workbox,
-    `type`: String,
-    isUpdate: js.UndefOr[Boolean] = js.undefined,
-    wasWaitingBeforeRegister: js.UndefOr[Boolean] = js.undefined
-  ): WorkboxWaitingEvent = {
+  def apply(originalEvent: Event_, sw: ServiceWorker, target: Workbox, `type`: String): WorkboxWaitingEvent = {
     val __obj = js.Dynamic.literal(originalEvent = originalEvent.asInstanceOf[js.Any], sw = sw.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(isUpdate)) __obj.updateDynamic("isUpdate")(isUpdate.asInstanceOf[js.Any])
-    if (!js.isUndefined(wasWaitingBeforeRegister)) __obj.updateDynamic("wasWaitingBeforeRegister")(wasWaitingBeforeRegister.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkboxWaitingEvent]
   }
+  @scala.inline
+  implicit class WorkboxWaitingEventOps[Self <: WorkboxWaitingEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWasWaitingBeforeRegister(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wasWaitingBeforeRegister")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWasWaitingBeforeRegister: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wasWaitingBeforeRegister")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

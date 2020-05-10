@@ -1,5 +1,6 @@
 package typingsSlinky.typesafeActions
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.ReturnType
 import typingsSlinky.typesafeActions.typeHelpersMod.Action
@@ -27,13 +28,16 @@ object createReducerMod extends js.Object {
           /* import warning: importer.ImportType#apply Failed type conversion: TPrevNotHandledAction['type'] */ js.Any
         ]) with (ReturnType[js.Function1[/* repeated */ _, TPrevNotHandledAction]])
       ], 
-      TState
+      TState, 
+      TPrevNotHandledAction, 
+      /* import warning: importer.ImportType#apply Failed type conversion: TPrevNotHandledAction['type'] */ js.Any, 
+      js.Function1[/* repeated */ _, TPrevNotHandledAction]
     ])) | ((Reducer[TState, TRootAction]) with (AnonHandlers[TRootAction, TState]))
   ]
   type GetAction[TAction /* <: Action[TypeConstant] */, TType /* <: /* import warning: importer.ImportType#apply Failed type conversion: TAction['type'] */ js.Any */] = TAction
   type InitialHandler[TState, TRootAction /* <: Action[TypeConstant] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in TRootAction['type'] ]:? (state : TState, action : typesafe-actions.typesafe-actions/dist/create-reducer.GetAction<TRootAction, P>): TState}
-    */ typingsSlinky.typesafeActions.typesafeActionsStrings.InitialHandler with js.Any
+    */ typingsSlinky.typesafeActions.typesafeActionsStrings.InitialHandler with TopLevel[js.Any]
   type RootAction = js.Any
 }
 

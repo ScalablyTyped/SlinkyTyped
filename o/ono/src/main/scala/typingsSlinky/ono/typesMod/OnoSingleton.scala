@@ -1,12 +1,12 @@
 package typingsSlinky.ono.typesMod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait OnoSingleton extends Ono[Error] {
+trait OnoSingleton
+  extends Ono[js.Error] {
   @JSName("error")
   var error_Original: Ono[js.Error] = js.native
   @JSName("eval")
@@ -28,7 +28,7 @@ trait OnoSingleton extends Ono[Error] {
     *
     * @param error - The original error
     */
-  def error(error: Error): js.Error with OnoError[js.Error] = js.native
+  def error(error: js.Error): js.Error with OnoError[js.Error] = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error.
     *
@@ -36,7 +36,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def error(error: Error, message: String, params: js.Any*): js.Error with OnoError[js.Error] = js.native
+  def error(error: js.Error, message: String, params: js.Any*): js.Error with OnoError[js.Error] = js.native
   /**
     * Creates an error with a formatted message.
     *
@@ -53,7 +53,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param error - The original error
     * @param props - An object whose properties will be added to the returned error
     */
-  def error[P /* <: js.Object */](error: Error, props: P): js.Error with P with (OnoError[js.Error with P]) = js.native
+  def error[P /* <: js.Object */](error: js.Error, props: P): js.Error with P with (OnoError[js.Error with P]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error,
     * as well as additional properties.
@@ -63,7 +63,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def error[P /* <: js.Object */](error: Error, props: P, message: String, params: js.Any*): js.Error with P with (OnoError[js.Error with P]) = js.native
+  def error[P /* <: js.Object */](error: js.Error, props: P, message: String, params: js.Any*): js.Error with P with (OnoError[js.Error with P]) = js.native
   /**
     * Creates an error with additional properties.
     *
@@ -85,7 +85,7 @@ trait OnoSingleton extends Ono[Error] {
     *
     * @param error - The original error
     */
-  def eval(error: Error): js.EvalError with js.Error with (OnoError[js.EvalError with js.Error]) = js.native
+  def eval(error: js.Error): js.EvalError with js.Error with (OnoError[js.EvalError with js.Error]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error.
     *
@@ -93,7 +93,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def eval(error: Error, message: String, params: js.Any*): js.EvalError with js.Error with (OnoError[js.EvalError with js.Error]) = js.native
+  def eval(error: js.Error, message: String, params: js.Any*): js.EvalError with js.Error with (OnoError[js.EvalError with js.Error]) = js.native
   /**
     * Creates an error with a formatted message.
     *
@@ -110,7 +110,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param error - The original error
     * @param props - An object whose properties will be added to the returned error
     */
-  def eval[P /* <: js.Object */](error: Error, props: P): js.EvalError with js.Error with P with (OnoError[js.EvalError with js.Error with P]) = js.native
+  def eval[P /* <: js.Object */](error: js.Error, props: P): js.EvalError with js.Error with P with (OnoError[js.EvalError with js.Error with P]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error,
     * as well as additional properties.
@@ -120,7 +120,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def eval[P /* <: js.Object */](error: Error, props: P, message: String, params: js.Any*): js.EvalError with js.Error with P with (OnoError[js.EvalError with js.Error with P]) = js.native
+  def eval[P /* <: js.Object */](error: js.Error, props: P, message: String, params: js.Any*): js.EvalError with js.Error with P with (OnoError[js.EvalError with js.Error with P]) = js.native
   /**
     * Creates an error with additional properties.
     *
@@ -142,7 +142,7 @@ trait OnoSingleton extends Ono[Error] {
     *
     * @param error - The original error
     */
-  def range(error: Error): js.RangeError with js.Error with (OnoError[js.RangeError with js.Error]) = js.native
+  def range(error: js.Error): js.RangeError with js.Error with (OnoError[js.RangeError with js.Error]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error.
     *
@@ -150,7 +150,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def range(error: Error, message: String, params: js.Any*): js.RangeError with js.Error with (OnoError[js.RangeError with js.Error]) = js.native
+  def range(error: js.Error, message: String, params: js.Any*): js.RangeError with js.Error with (OnoError[js.RangeError with js.Error]) = js.native
   /**
     * Creates an error with a formatted message.
     *
@@ -167,7 +167,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param error - The original error
     * @param props - An object whose properties will be added to the returned error
     */
-  def range[P /* <: js.Object */](error: Error, props: P): js.RangeError with js.Error with P with (OnoError[js.RangeError with js.Error with P]) = js.native
+  def range[P /* <: js.Object */](error: js.Error, props: P): js.RangeError with js.Error with P with (OnoError[js.RangeError with js.Error with P]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error,
     * as well as additional properties.
@@ -177,7 +177,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def range[P /* <: js.Object */](error: Error, props: P, message: String, params: js.Any*): js.RangeError with js.Error with P with (OnoError[js.RangeError with js.Error with P]) = js.native
+  def range[P /* <: js.Object */](error: js.Error, props: P, message: String, params: js.Any*): js.RangeError with js.Error with P with (OnoError[js.RangeError with js.Error with P]) = js.native
   /**
     * Creates an error with additional properties.
     *
@@ -199,7 +199,7 @@ trait OnoSingleton extends Ono[Error] {
     *
     * @param error - The original error
     */
-  def reference(error: Error): js.ReferenceError with js.Error with (OnoError[js.ReferenceError with js.Error]) = js.native
+  def reference(error: js.Error): js.ReferenceError with js.Error with (OnoError[js.ReferenceError with js.Error]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error.
     *
@@ -207,7 +207,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def reference(error: Error, message: String, params: js.Any*): js.ReferenceError with js.Error with (OnoError[js.ReferenceError with js.Error]) = js.native
+  def reference(error: js.Error, message: String, params: js.Any*): js.ReferenceError with js.Error with (OnoError[js.ReferenceError with js.Error]) = js.native
   /**
     * Creates an error with a formatted message.
     *
@@ -224,7 +224,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param error - The original error
     * @param props - An object whose properties will be added to the returned error
     */
-  def reference[P /* <: js.Object */](error: Error, props: P): js.ReferenceError with js.Error with P with (OnoError[js.ReferenceError with js.Error with P]) = js.native
+  def reference[P /* <: js.Object */](error: js.Error, props: P): js.ReferenceError with js.Error with P with (OnoError[js.ReferenceError with js.Error with P]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error,
     * as well as additional properties.
@@ -234,7 +234,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def reference[P /* <: js.Object */](error: Error, props: P, message: String, params: js.Any*): js.ReferenceError with js.Error with P with (OnoError[js.ReferenceError with js.Error with P]) = js.native
+  def reference[P /* <: js.Object */](error: js.Error, props: P, message: String, params: js.Any*): js.ReferenceError with js.Error with P with (OnoError[js.ReferenceError with js.Error with P]) = js.native
   /**
     * Creates an error with additional properties.
     *
@@ -256,7 +256,7 @@ trait OnoSingleton extends Ono[Error] {
     *
     * @param error - The original error
     */
-  def syntax(error: Error): js.SyntaxError with js.Error with (OnoError[js.SyntaxError with js.Error]) = js.native
+  def syntax(error: js.Error): js.SyntaxError with js.Error with (OnoError[js.SyntaxError with js.Error]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error.
     *
@@ -264,7 +264,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def syntax(error: Error, message: String, params: js.Any*): js.SyntaxError with js.Error with (OnoError[js.SyntaxError with js.Error]) = js.native
+  def syntax(error: js.Error, message: String, params: js.Any*): js.SyntaxError with js.Error with (OnoError[js.SyntaxError with js.Error]) = js.native
   /**
     * Creates an error with a formatted message.
     *
@@ -281,7 +281,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param error - The original error
     * @param props - An object whose properties will be added to the returned error
     */
-  def syntax[P /* <: js.Object */](error: Error, props: P): js.SyntaxError with js.Error with P with (OnoError[js.SyntaxError with js.Error with P]) = js.native
+  def syntax[P /* <: js.Object */](error: js.Error, props: P): js.SyntaxError with js.Error with P with (OnoError[js.SyntaxError with js.Error with P]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error,
     * as well as additional properties.
@@ -291,7 +291,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def syntax[P /* <: js.Object */](error: Error, props: P, message: String, params: js.Any*): js.SyntaxError with js.Error with P with (OnoError[js.SyntaxError with js.Error with P]) = js.native
+  def syntax[P /* <: js.Object */](error: js.Error, props: P, message: String, params: js.Any*): js.SyntaxError with js.Error with P with (OnoError[js.SyntaxError with js.Error with P]) = js.native
   /**
     * Creates an error with additional properties.
     *
@@ -313,7 +313,7 @@ trait OnoSingleton extends Ono[Error] {
     *
     * @param error - The original error
     */
-  def `type`(error: Error): js.TypeError with js.Error with (OnoError[js.TypeError with js.Error]) = js.native
+  def `type`(error: js.Error): js.TypeError with js.Error with (OnoError[js.TypeError with js.Error]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error.
     *
@@ -321,7 +321,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def `type`(error: Error, message: String, params: js.Any*): js.TypeError with js.Error with (OnoError[js.TypeError with js.Error]) = js.native
+  def `type`(error: js.Error, message: String, params: js.Any*): js.TypeError with js.Error with (OnoError[js.TypeError with js.Error]) = js.native
   /**
     * Creates an error with a formatted message.
     *
@@ -338,7 +338,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param error - The original error
     * @param props - An object whose properties will be added to the returned error
     */
-  def `type`[P /* <: js.Object */](error: Error, props: P): js.TypeError with js.Error with P with (OnoError[js.TypeError with js.Error with P]) = js.native
+  def `type`[P /* <: js.Object */](error: js.Error, props: P): js.TypeError with js.Error with P with (OnoError[js.TypeError with js.Error with P]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error,
     * as well as additional properties.
@@ -348,7 +348,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def `type`[P /* <: js.Object */](error: Error, props: P, message: String, params: js.Any*): js.TypeError with js.Error with P with (OnoError[js.TypeError with js.Error with P]) = js.native
+  def `type`[P /* <: js.Object */](error: js.Error, props: P, message: String, params: js.Any*): js.TypeError with js.Error with P with (OnoError[js.TypeError with js.Error with P]) = js.native
   /**
     * Creates an error with additional properties.
     *
@@ -370,7 +370,7 @@ trait OnoSingleton extends Ono[Error] {
     *
     * @param error - The original error
     */
-  def uri(error: Error): js.URIError with js.Error with (OnoError[js.URIError with js.Error]) = js.native
+  def uri(error: js.Error): js.URIError with js.Error with (OnoError[js.URIError with js.Error]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error.
     *
@@ -378,7 +378,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def uri(error: Error, message: String, params: js.Any*): js.URIError with js.Error with (OnoError[js.URIError with js.Error]) = js.native
+  def uri(error: js.Error, message: String, params: js.Any*): js.URIError with js.Error with (OnoError[js.URIError with js.Error]) = js.native
   /**
     * Creates an error with a formatted message.
     *
@@ -395,7 +395,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param error - The original error
     * @param props - An object whose properties will be added to the returned error
     */
-  def uri[P /* <: js.Object */](error: Error, props: P): js.URIError with js.Error with P with (OnoError[js.URIError with js.Error with P]) = js.native
+  def uri[P /* <: js.Object */](error: js.Error, props: P): js.URIError with js.Error with P with (OnoError[js.URIError with js.Error with P]) = js.native
   /**
     * Creates a new error with a formatted message and the stack trace and properties of another error,
     * as well as additional properties.
@@ -405,7 +405,7 @@ trait OnoSingleton extends Ono[Error] {
     * @param message - The new error message, possibly including argument placeholders
     * @param params - Optional arguments to replace the corresponding placeholders in the message
     */
-  def uri[P /* <: js.Object */](error: Error, props: P, message: String, params: js.Any*): js.URIError with js.Error with P with (OnoError[js.URIError with js.Error with P]) = js.native
+  def uri[P /* <: js.Object */](error: js.Error, props: P, message: String, params: js.Any*): js.URIError with js.Error with P with (OnoError[js.URIError with js.Error with P]) = js.native
   /**
     * Creates an error with additional properties.
     *

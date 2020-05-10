@@ -18,6 +18,10 @@ trait PopStateEvent extends Event_ {
 @JSGlobal("PopStateEvent")
 @js.native
 object PopStateEvent
-  extends Instantiable1[/* type */ java.lang.String, PopStateEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ PopStateEventInit, PopStateEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.PopStateEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ PopStateEventInit, 
+      org.scalajs.dom.raw.PopStateEvent
+    ]
 

@@ -12,10 +12,8 @@ trait SubscriptionBilling extends js.Object
 
 object SubscriptionBilling {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def charge_automatically: typingsSlinky.stripe.stripeStrings.charge_automatically = "charge_automatically".asInstanceOf[typingsSlinky.stripe.stripeStrings.charge_automatically]
   @scala.inline
-  def charge_automatically: typingsSlinky.stripe.stripeStrings.charge_automatically = this.cast("charge_automatically")
-  @scala.inline
-  def send_invoice: typingsSlinky.stripe.stripeStrings.send_invoice = this.cast("send_invoice")
+  def send_invoice: typingsSlinky.stripe.stripeStrings.send_invoice = "send_invoice".asInstanceOf[typingsSlinky.stripe.stripeStrings.send_invoice]
 }
 

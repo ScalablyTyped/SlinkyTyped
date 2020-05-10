@@ -1,68 +1,249 @@
 package typingsSlinky.sanitizeHtml.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.htmlparser2.mod.Options
+import typingsSlinky.htmlparser2.mod.ParserOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IOptions extends js.Object {
-  var allowIframeRelativeUrls: js.UndefOr[Boolean] = js.undefined
-  var allowProtocolRelative: js.UndefOr[Boolean] = js.undefined
-  var allowedAttributes: js.UndefOr[StringDictionary[js.Array[AllowedAttribute]] | Boolean] = js.undefined
-  var allowedClasses: js.UndefOr[StringDictionary[js.Array[String]] | Boolean] = js.undefined
-  var allowedIframeHostnames: js.UndefOr[js.Array[String]] = js.undefined
-  var allowedSchemes: js.UndefOr[js.Array[String] | Boolean] = js.undefined
-  var allowedSchemesAppliedToAttributes: js.UndefOr[js.Array[String]] = js.undefined
-  var allowedSchemesByTag: js.UndefOr[StringDictionary[js.Array[String]] | Boolean] = js.undefined
-  var allowedStyles: js.UndefOr[StringDictionary[StringDictionary[js.Array[js.RegExp]]]] = js.undefined
-  var allowedTags: js.UndefOr[js.Array[String] | Boolean] = js.undefined
-  var exclusiveFilter: js.UndefOr[js.Function1[/* frame */ IFrame, Boolean]] = js.undefined
-  var nonTextTags: js.UndefOr[js.Array[String]] = js.undefined
-  var parser: js.UndefOr[Options] = js.undefined
-  var selfClosing: js.UndefOr[js.Array[String]] = js.undefined
-  var textFilter: js.UndefOr[js.Function1[/* text */ String, String]] = js.undefined
-  var transformTags: js.UndefOr[StringDictionary[String | Transformer]] = js.undefined
+  var allowIframeRelativeUrls: js.UndefOr[Boolean] = js.native
+  var allowProtocolRelative: js.UndefOr[Boolean] = js.native
+  var allowedAttributes: js.UndefOr[StringDictionary[js.Array[AllowedAttribute]] | Boolean] = js.native
+  var allowedClasses: js.UndefOr[StringDictionary[js.Array[String]] | Boolean] = js.native
+  var allowedIframeHostnames: js.UndefOr[js.Array[String]] = js.native
+  var allowedSchemes: js.UndefOr[js.Array[String] | Boolean] = js.native
+  var allowedSchemesAppliedToAttributes: js.UndefOr[js.Array[String]] = js.native
+  var allowedSchemesByTag: js.UndefOr[StringDictionary[js.Array[String]] | Boolean] = js.native
+  var allowedStyles: js.UndefOr[StringDictionary[StringDictionary[js.Array[js.RegExp]]]] = js.native
+  var allowedTags: js.UndefOr[js.Array[String] | Boolean] = js.native
+  var disallowedTagsMode: js.UndefOr[DisallowedTagsModes] = js.native
+  var exclusiveFilter: js.UndefOr[js.Function1[/* frame */ IFrame, Boolean]] = js.native
+  var nonTextTags: js.UndefOr[js.Array[String]] = js.native
+  var parser: js.UndefOr[ParserOptions] = js.native
+  var selfClosing: js.UndefOr[js.Array[String]] = js.native
+  var textFilter: js.UndefOr[js.Function1[/* text */ String, String]] = js.native
+  var transformTags: js.UndefOr[StringDictionary[String | Transformer]] = js.native
 }
 
 object IOptions {
   @scala.inline
-  def apply(
-    allowIframeRelativeUrls: js.UndefOr[Boolean] = js.undefined,
-    allowProtocolRelative: js.UndefOr[Boolean] = js.undefined,
-    allowedAttributes: StringDictionary[js.Array[AllowedAttribute]] | Boolean = null,
-    allowedClasses: StringDictionary[js.Array[String]] | Boolean = null,
-    allowedIframeHostnames: js.Array[String] = null,
-    allowedSchemes: js.Array[String] | Boolean = null,
-    allowedSchemesAppliedToAttributes: js.Array[String] = null,
-    allowedSchemesByTag: StringDictionary[js.Array[String]] | Boolean = null,
-    allowedStyles: StringDictionary[StringDictionary[js.Array[js.RegExp]]] = null,
-    allowedTags: js.Array[String] | Boolean = null,
-    exclusiveFilter: /* frame */ IFrame => Boolean = null,
-    nonTextTags: js.Array[String] = null,
-    parser: Options = null,
-    selfClosing: js.Array[String] = null,
-    textFilter: /* text */ String => String = null,
-    transformTags: StringDictionary[String | Transformer] = null
-  ): IOptions = {
+  def apply(): IOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowIframeRelativeUrls)) __obj.updateDynamic("allowIframeRelativeUrls")(allowIframeRelativeUrls.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowProtocolRelative)) __obj.updateDynamic("allowProtocolRelative")(allowProtocolRelative.asInstanceOf[js.Any])
-    if (allowedAttributes != null) __obj.updateDynamic("allowedAttributes")(allowedAttributes.asInstanceOf[js.Any])
-    if (allowedClasses != null) __obj.updateDynamic("allowedClasses")(allowedClasses.asInstanceOf[js.Any])
-    if (allowedIframeHostnames != null) __obj.updateDynamic("allowedIframeHostnames")(allowedIframeHostnames.asInstanceOf[js.Any])
-    if (allowedSchemes != null) __obj.updateDynamic("allowedSchemes")(allowedSchemes.asInstanceOf[js.Any])
-    if (allowedSchemesAppliedToAttributes != null) __obj.updateDynamic("allowedSchemesAppliedToAttributes")(allowedSchemesAppliedToAttributes.asInstanceOf[js.Any])
-    if (allowedSchemesByTag != null) __obj.updateDynamic("allowedSchemesByTag")(allowedSchemesByTag.asInstanceOf[js.Any])
-    if (allowedStyles != null) __obj.updateDynamic("allowedStyles")(allowedStyles.asInstanceOf[js.Any])
-    if (allowedTags != null) __obj.updateDynamic("allowedTags")(allowedTags.asInstanceOf[js.Any])
-    if (exclusiveFilter != null) __obj.updateDynamic("exclusiveFilter")(js.Any.fromFunction1(exclusiveFilter))
-    if (nonTextTags != null) __obj.updateDynamic("nonTextTags")(nonTextTags.asInstanceOf[js.Any])
-    if (parser != null) __obj.updateDynamic("parser")(parser.asInstanceOf[js.Any])
-    if (selfClosing != null) __obj.updateDynamic("selfClosing")(selfClosing.asInstanceOf[js.Any])
-    if (textFilter != null) __obj.updateDynamic("textFilter")(js.Any.fromFunction1(textFilter))
-    if (transformTags != null) __obj.updateDynamic("transformTags")(transformTags.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
+  @scala.inline
+  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowIframeRelativeUrls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowIframeRelativeUrls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowIframeRelativeUrls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowIframeRelativeUrls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowProtocolRelative(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowProtocolRelative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowProtocolRelative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowProtocolRelative")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedAttributes(value: StringDictionary[js.Array[AllowedAttribute]] | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedClasses(value: StringDictionary[js.Array[String]] | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedClasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedClasses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedIframeHostnames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedIframeHostnames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedIframeHostnames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedIframeHostnames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedSchemes(value: js.Array[String] | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedSchemes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedSchemes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedSchemes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedSchemesAppliedToAttributes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedSchemesAppliedToAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedSchemesAppliedToAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedSchemesAppliedToAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedSchemesByTag(value: StringDictionary[js.Array[String]] | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedSchemesByTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedSchemesByTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedSchemesByTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedStyles(value: StringDictionary[StringDictionary[js.Array[js.RegExp]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedTags(value: js.Array[String] | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisallowedTagsMode(value: DisallowedTagsModes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disallowedTagsMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisallowedTagsMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disallowedTagsMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclusiveFilter(value: /* frame */ IFrame => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusiveFilter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutExclusiveFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusiveFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonTextTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonTextTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonTextTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonTextTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParser(value: ParserOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfClosing(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfClosing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfClosing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfClosing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextFilter(value: /* text */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textFilter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTextFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformTags(value: StringDictionary[String | Transformer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransformTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformTags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.knockoutPaging
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.Element
+import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

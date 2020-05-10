@@ -21,10 +21,29 @@ trait SchemaAutoscalingConfig extends js.Object {
 
 object SchemaAutoscalingConfig {
   @scala.inline
-  def apply(policyUri: String = null): SchemaAutoscalingConfig = {
+  def apply(): SchemaAutoscalingConfig = {
     val __obj = js.Dynamic.literal()
-    if (policyUri != null) __obj.updateDynamic("policyUri")(policyUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutoscalingConfig]
   }
+  @scala.inline
+  implicit class SchemaAutoscalingConfigOps[Self <: SchemaAutoscalingConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicyUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

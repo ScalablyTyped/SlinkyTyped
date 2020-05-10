@@ -7,83 +7,212 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ITriggerField
   extends typingsSlinky.extjs.Ext.form.field.IText {
   /** [Config Option] (Boolean) */
-  var editable: js.UndefOr[Boolean] = js.undefined
-  /** [Method] Generates the arguments for the field decorations rendering template
-  		* @returns Object The template arguments
-  		*/
-  @JSName("getLabelableRenderData")
-  var getLabelableRenderData_ITriggerField: js.UndefOr[js.Function0[_]] = js.undefined
+  var editable: js.UndefOr[Boolean] = js.native
   /** [Method] Get the total width of the trigger button area
   		* @returns Number The total trigger width
   		*/
-  var getTriggerWidth: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getTriggerWidth: js.UndefOr[js.Function0[Double]] = js.native
   /** [Config Option] (Boolean) */
-  var hideTrigger: js.UndefOr[Boolean] = js.undefined
+  var hideTrigger: js.UndefOr[Boolean] = js.native
   /** [Property] (Ext.Element) */
-  var inputCell: js.UndefOr[IElement] = js.undefined
+  var inputCell: js.UndefOr[IElement] = js.native
   /** [Method] The function that should handle the trigger s click event
   		* @param e Ext.EventObject
   		*/
-  var onTriggerClick: js.UndefOr[js.Function1[/* e */ js.UndefOr[IEventObject], Unit]] = js.undefined
+  var onTriggerClick: js.UndefOr[js.Function1[/* e */ js.UndefOr[IEventObject], Unit]] = js.native
   /** [Config Option] (Boolean) */
-  var repeatTriggerClick: js.UndefOr[Boolean] = js.undefined
+  var repeatTriggerClick: js.UndefOr[Boolean] = js.native
   /** [Method] Sets the editable state of this field
   		* @param editable Boolean True to allow the user to directly edit the field text. If false is passed, the user will only be able to modify the field using the trigger. Will also add a click event to the text field which will call the trigger.
   		*/
-  var setEditable: js.UndefOr[js.Function1[/* editable */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var setEditable: js.UndefOr[js.Function1[/* editable */ js.UndefOr[Boolean], Unit]] = js.native
   /** [Config Option] (String) */
-  var triggerBaseCls: js.UndefOr[String] = js.undefined
+  var triggerBaseCls: js.UndefOr[String] = js.native
   /** [Config Option] (String) */
-  var triggerCls: js.UndefOr[String] = js.undefined
+  var triggerCls: js.UndefOr[String] = js.native
   /** [Property] (Ext.CompositeElement) */
-  var triggerEl: js.UndefOr[ICompositeElement] = js.undefined
+  var triggerEl: js.UndefOr[ICompositeElement] = js.native
   /** [Config Option] (String) */
-  var triggerNoEditCls: js.UndefOr[String] = js.undefined
+  var triggerNoEditCls: js.UndefOr[String] = js.native
   /** [Property] (Ext.Element) */
-  var triggerWrap: js.UndefOr[IElement] = js.undefined
+  var triggerWrap: js.UndefOr[IElement] = js.native
   /** [Config Option] (String) */
-  var triggerWrapCls: js.UndefOr[String] = js.undefined
+  var triggerWrapCls: js.UndefOr[String] = js.native
 }
 
 object ITriggerField {
   @scala.inline
-  def apply(
-    IText: typingsSlinky.extjs.Ext.form.field.IText = null,
-    editable: js.UndefOr[Boolean] = js.undefined,
-    getLabelableRenderData: () => _ = null,
-    getTriggerWidth: () => Double = null,
-    hideTrigger: js.UndefOr[Boolean] = js.undefined,
-    inputCell: IElement = null,
-    onTriggerClick: /* e */ js.UndefOr[IEventObject] => Unit = null,
-    repeatTriggerClick: js.UndefOr[Boolean] = js.undefined,
-    setEditable: /* editable */ js.UndefOr[Boolean] => Unit = null,
-    triggerBaseCls: String = null,
-    triggerCls: String = null,
-    triggerEl: ICompositeElement = null,
-    triggerNoEditCls: String = null,
-    triggerWrap: IElement = null,
-    triggerWrapCls: String = null
-  ): ITriggerField = {
+  def apply(): ITriggerField = {
     val __obj = js.Dynamic.literal()
-    if (IText != null) js.Dynamic.global.Object.assign(__obj, IText)
-    if (!js.isUndefined(editable)) __obj.updateDynamic("editable")(editable.asInstanceOf[js.Any])
-    if (getLabelableRenderData != null) __obj.updateDynamic("getLabelableRenderData")(js.Any.fromFunction0(getLabelableRenderData))
-    if (getTriggerWidth != null) __obj.updateDynamic("getTriggerWidth")(js.Any.fromFunction0(getTriggerWidth))
-    if (!js.isUndefined(hideTrigger)) __obj.updateDynamic("hideTrigger")(hideTrigger.asInstanceOf[js.Any])
-    if (inputCell != null) __obj.updateDynamic("inputCell")(inputCell.asInstanceOf[js.Any])
-    if (onTriggerClick != null) __obj.updateDynamic("onTriggerClick")(js.Any.fromFunction1(onTriggerClick))
-    if (!js.isUndefined(repeatTriggerClick)) __obj.updateDynamic("repeatTriggerClick")(repeatTriggerClick.asInstanceOf[js.Any])
-    if (setEditable != null) __obj.updateDynamic("setEditable")(js.Any.fromFunction1(setEditable))
-    if (triggerBaseCls != null) __obj.updateDynamic("triggerBaseCls")(triggerBaseCls.asInstanceOf[js.Any])
-    if (triggerCls != null) __obj.updateDynamic("triggerCls")(triggerCls.asInstanceOf[js.Any])
-    if (triggerEl != null) __obj.updateDynamic("triggerEl")(triggerEl.asInstanceOf[js.Any])
-    if (triggerNoEditCls != null) __obj.updateDynamic("triggerNoEditCls")(triggerNoEditCls.asInstanceOf[js.Any])
-    if (triggerWrap != null) __obj.updateDynamic("triggerWrap")(triggerWrap.asInstanceOf[js.Any])
-    if (triggerWrapCls != null) __obj.updateDynamic("triggerWrapCls")(triggerWrapCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITriggerField]
   }
+  @scala.inline
+  implicit class ITriggerFieldOps[Self <: ITriggerField] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEditable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetTriggerWidth(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTriggerWidth")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetTriggerWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTriggerWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideTrigger(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTrigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideTrigger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideTrigger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputCell(value: IElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTriggerClick(value: /* e */ js.UndefOr[IEventObject] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTriggerClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTriggerClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTriggerClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepeatTriggerClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatTriggerClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepeatTriggerClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatTriggerClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetEditable(value: /* editable */ js.UndefOr[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setEditable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetEditable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setEditable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerBaseCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerBaseCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerBaseCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerBaseCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerEl(value: ICompositeElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerEl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerEl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerEl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerNoEditCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerNoEditCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerNoEditCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerNoEditCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerWrap(value: IElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerWrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerWrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerWrapCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerWrapCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerWrapCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerWrapCls")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

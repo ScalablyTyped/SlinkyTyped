@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html)
   */
+@js.native
 trait relationship extends js.Object {
   /**
     * Generates a relationship renderer (bivariate choropleth) based on a set of competing numeric fields.  Each feature's category is determined based on the result of an Arcade expression generated internally by this method. You are required provide a `layer`, `view`, `field1` name, and `field2` name to generate this renderer. Optionally, you can set the `focus` to change the rotation of the legend and the `numClasses` parameter to change the grid size of the legend.  Other options are provided for convenience for more involved custom visualization authoring applications.
@@ -62,9 +63,11 @@ trait relationship extends js.Object {
     *   tint | Applies the symbol `color` to the desaturated geometry/texture color.
     *   replace | Removes the geometry/texture color and applies the symbol `color`.
     *   multiply | Multiplies geometry/texture color value with the symbol `color` value. The result is a darker color. Multiplying with white keeps the geometry color the same.
+    * @param params.edgesType Indicates whether to add edges to the output renderer. This setting only applies to mesh SceneLayers.
+    * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def createRenderer(params: relationshipCreateRendererParams): js.Promise[relationshipRendererResult]
+  def createRenderer(params: relationshipCreateRendererParams): js.Promise[relationshipRendererResult] = js.native
   /**
     * Updates a relationship renderer (bivariate choropleth) generated from [createRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer) based on the given input parameters.
     *
@@ -95,7 +98,7 @@ trait relationship extends js.Object {
     * @param params.renderer The relationship renderer (generated from [createRenderer()](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-relationship.html#createRenderer)) to update with the other parameters provided in this method.
     *
     */
-  def updateRenderer(params: relationshipUpdateRendererParams): js.Promise[UniqueValueRenderer]
+  def updateRenderer(params: relationshipUpdateRendererParams): js.Promise[UniqueValueRenderer] = js.native
 }
 
 @JSGlobal("__esri.relationship")

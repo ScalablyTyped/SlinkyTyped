@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -29,7 +29,7 @@ abstract class IntegerAttributeTypeBase protected () extends NumericAttributeTyp
   @JSName("model")
   var model_FIntegerAttributeTypeBase: IModel = js.native
   @JSName("containerAsAttribute")
-  def containerAsAttribute_MIntegerAttributeTypeBase(): Attribute = js.native
+  def containerAsAttribute_MIntegerAttributeTypeBase: Attribute = js.native
 }
 
 /* static members */

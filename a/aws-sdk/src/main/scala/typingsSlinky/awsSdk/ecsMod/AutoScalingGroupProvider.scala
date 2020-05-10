@@ -22,15 +22,47 @@ trait AutoScalingGroupProvider extends js.Object {
 
 object AutoScalingGroupProvider {
   @scala.inline
-  def apply(
-    autoScalingGroupArn: String,
-    managedScaling: ManagedScaling = null,
-    managedTerminationProtection: ManagedTerminationProtection = null
-  ): AutoScalingGroupProvider = {
+  def apply(autoScalingGroupArn: String): AutoScalingGroupProvider = {
     val __obj = js.Dynamic.literal(autoScalingGroupArn = autoScalingGroupArn.asInstanceOf[js.Any])
-    if (managedScaling != null) __obj.updateDynamic("managedScaling")(managedScaling.asInstanceOf[js.Any])
-    if (managedTerminationProtection != null) __obj.updateDynamic("managedTerminationProtection")(managedTerminationProtection.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoScalingGroupProvider]
   }
+  @scala.inline
+  implicit class AutoScalingGroupProviderOps[Self <: AutoScalingGroupProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoScalingGroupArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoScalingGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManagedScaling(value: ManagedScaling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedScaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedScaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedScaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagedTerminationProtection(value: ManagedTerminationProtection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedTerminationProtection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedTerminationProtection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managedTerminationProtection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

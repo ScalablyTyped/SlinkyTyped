@@ -23,11 +23,41 @@ trait SchemaSetDataValidationRequest extends js.Object {
 
 object SchemaSetDataValidationRequest {
   @scala.inline
-  def apply(range: SchemaGridRange = null, rule: SchemaDataValidationRule = null): SchemaSetDataValidationRequest = {
+  def apply(): SchemaSetDataValidationRequest = {
     val __obj = js.Dynamic.literal()
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (rule != null) __obj.updateDynamic("rule")(rule.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSetDataValidationRequest]
   }
+  @scala.inline
+  implicit class SchemaSetDataValidationRequestOps[Self <: SchemaSetDataValidationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRange(value: SchemaGridRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRule(value: SchemaDataValidationRule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

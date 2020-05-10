@@ -1,21 +1,20 @@
 package typingsSlinky.localforage
 
 import org.scalajs.dom.raw.Blob
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LocalForageSerializer extends js.Object {
-  def bufferToString(buffer: scala.scalajs.js.typedarray.ArrayBuffer): String = js.native
-  def deserialize[T](value: String): T | scala.scalajs.js.typedarray.ArrayBuffer | Blob = js.native
+  def bufferToString(buffer: js.typedarray.ArrayBuffer): String = js.native
+  def deserialize[T](value: String): T | js.typedarray.ArrayBuffer | Blob = js.native
   def serialize[T](value: T, callback: js.Function2[/* value */ String, /* error */ js.Any, Unit]): Unit = js.native
-  def serialize[T](value: ArrayBuffer, callback: js.Function2[/* value */ String, /* error */ js.Any, Unit]): Unit = js.native
   def serialize[T](
-    value: typingsSlinky.std.Blob,
+    value: js.typedarray.ArrayBuffer,
     callback: js.Function2[/* value */ String, /* error */ js.Any, Unit]
   ): Unit = js.native
-  def stringToBuffer(serializedString: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def serialize[T](value: Blob, callback: js.Function2[/* value */ String, /* error */ js.Any, Unit]): Unit = js.native
+  def stringToBuffer(serializedString: String): js.typedarray.ArrayBuffer = js.native
 }
 

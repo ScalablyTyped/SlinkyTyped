@@ -14,10 +14,29 @@ trait CreateNetworkInterfacePermissionResult extends js.Object {
 
 object CreateNetworkInterfacePermissionResult {
   @scala.inline
-  def apply(InterfacePermission: NetworkInterfacePermission = null): CreateNetworkInterfacePermissionResult = {
+  def apply(): CreateNetworkInterfacePermissionResult = {
     val __obj = js.Dynamic.literal()
-    if (InterfacePermission != null) __obj.updateDynamic("InterfacePermission")(InterfacePermission.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateNetworkInterfacePermissionResult]
   }
+  @scala.inline
+  implicit class CreateNetworkInterfacePermissionResultOps[Self <: CreateNetworkInterfacePermissionResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInterfacePermission(value: NetworkInterfacePermission): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InterfacePermission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterfacePermission: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InterfacePermission")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

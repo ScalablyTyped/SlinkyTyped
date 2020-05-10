@@ -38,23 +38,95 @@ trait VideoDescription extends js.Object {
 
 object VideoDescription {
   @scala.inline
-  def apply(
-    Name: string,
-    CodecSettings: VideoCodecSettings = null,
-    Height: Int | Double = null,
-    RespondToAfd: VideoDescriptionRespondToAfd = null,
-    ScalingBehavior: VideoDescriptionScalingBehavior = null,
-    Sharpness: Int | Double = null,
-    Width: Int | Double = null
-  ): VideoDescription = {
+  def apply(Name: string): VideoDescription = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (CodecSettings != null) __obj.updateDynamic("CodecSettings")(CodecSettings.asInstanceOf[js.Any])
-    if (Height != null) __obj.updateDynamic("Height")(Height.asInstanceOf[js.Any])
-    if (RespondToAfd != null) __obj.updateDynamic("RespondToAfd")(RespondToAfd.asInstanceOf[js.Any])
-    if (ScalingBehavior != null) __obj.updateDynamic("ScalingBehavior")(ScalingBehavior.asInstanceOf[js.Any])
-    if (Sharpness != null) __obj.updateDynamic("Sharpness")(Sharpness.asInstanceOf[js.Any])
-    if (Width != null) __obj.updateDynamic("Width")(Width.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoDescription]
   }
+  @scala.inline
+  implicit class VideoDescriptionOps[Self <: VideoDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCodecSettings(value: VideoCodecSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodecSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodecSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRespondToAfd(value: VideoDescriptionRespondToAfd): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RespondToAfd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRespondToAfd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RespondToAfd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScalingBehavior(value: VideoDescriptionScalingBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScalingBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSharpness(value: integerMin0Max100): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sharpness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSharpness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sharpness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,5 +6,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ObjectUnsubscribedErrorCtor extends Instantiable0[ObjectUnsubscribedError]
+trait ObjectUnsubscribedErrorCtor
+  extends Instantiable0[js.Error]
 

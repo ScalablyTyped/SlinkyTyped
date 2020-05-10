@@ -66,18 +66,114 @@ object HumanTaskConfig {
     TaskTimeLimitInSeconds: TaskTimeLimitInSeconds,
     TaskTitle: TaskTitle,
     UiConfig: UiConfig,
-    WorkteamArn: WorkteamArn,
-    MaxConcurrentTaskCount: Int | Double = null,
-    PublicWorkforceTaskPrice: PublicWorkforceTaskPrice = null,
-    TaskAvailabilityLifetimeInSeconds: Int | Double = null,
-    TaskKeywords: TaskKeywords = null
+    WorkteamArn: WorkteamArn
   ): HumanTaskConfig = {
     val __obj = js.Dynamic.literal(AnnotationConsolidationConfig = AnnotationConsolidationConfig.asInstanceOf[js.Any], NumberOfHumanWorkersPerDataObject = NumberOfHumanWorkersPerDataObject.asInstanceOf[js.Any], PreHumanTaskLambdaArn = PreHumanTaskLambdaArn.asInstanceOf[js.Any], TaskDescription = TaskDescription.asInstanceOf[js.Any], TaskTimeLimitInSeconds = TaskTimeLimitInSeconds.asInstanceOf[js.Any], TaskTitle = TaskTitle.asInstanceOf[js.Any], UiConfig = UiConfig.asInstanceOf[js.Any], WorkteamArn = WorkteamArn.asInstanceOf[js.Any])
-    if (MaxConcurrentTaskCount != null) __obj.updateDynamic("MaxConcurrentTaskCount")(MaxConcurrentTaskCount.asInstanceOf[js.Any])
-    if (PublicWorkforceTaskPrice != null) __obj.updateDynamic("PublicWorkforceTaskPrice")(PublicWorkforceTaskPrice.asInstanceOf[js.Any])
-    if (TaskAvailabilityLifetimeInSeconds != null) __obj.updateDynamic("TaskAvailabilityLifetimeInSeconds")(TaskAvailabilityLifetimeInSeconds.asInstanceOf[js.Any])
-    if (TaskKeywords != null) __obj.updateDynamic("TaskKeywords")(TaskKeywords.asInstanceOf[js.Any])
     __obj.asInstanceOf[HumanTaskConfig]
   }
+  @scala.inline
+  implicit class HumanTaskConfigOps[Self <: HumanTaskConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnnotationConsolidationConfig(value: AnnotationConsolidationConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AnnotationConsolidationConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumberOfHumanWorkersPerDataObject(value: NumberOfHumanWorkersPerDataObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfHumanWorkersPerDataObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreHumanTaskLambdaArn(value: LambdaFunctionArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreHumanTaskLambdaArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskDescription(value: TaskDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskTimeLimitInSeconds(value: TaskTimeLimitInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskTimeLimitInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskTitle(value: TaskTitle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUiConfig(value: UiConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UiConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorkteamArn(value: WorkteamArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkteamArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxConcurrentTaskCount(value: MaxConcurrentTaskCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentTaskCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConcurrentTaskCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentTaskCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicWorkforceTaskPrice(value: PublicWorkforceTaskPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicWorkforceTaskPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicWorkforceTaskPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicWorkforceTaskPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskAvailabilityLifetimeInSeconds(value: TaskAvailabilityLifetimeInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskAvailabilityLifetimeInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskAvailabilityLifetimeInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskAvailabilityLifetimeInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskKeywords(value: TaskKeywords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskKeywords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskKeywords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskKeywords")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -77,7 +77,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the full `HTTPResponse`, with the response body as an `ArrayBuffer`.
     */
-  def delete(url: String, options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def delete(url: String, options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `DELETE` request that interprets the body as an `ArrayBuffer`
     *  and returns the full event stream.
@@ -88,7 +88,7 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of all `HTTPEvents` for the request,
     * with response body as an `ArrayBuffer`.
     */
-  def delete(url: String, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def delete(url: String, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `DELETE` request that interprets the body as a JSON object
     * and returns the full event stream.
@@ -120,7 +120,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return  An `Observable` of the response body as an `ArrayBuffer`.
     */
-  def delete(url: String, options: AnonParamsReportProgressResponseType): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def delete(url: String, options: AnonParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   /**
     * Constructs a `DELETE` request that interprets the body as a `Blob`
     *  and returns the full event stream.
@@ -240,7 +240,7 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of the `HTTPResponse` for the request,
     * with the response body as an `ArrayBuffer`.
     */
-  def get(url: String, options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def get(url: String, options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `GET` request that interprets the body as an `ArrayBuffer` and returns
     *  the full event stream.
@@ -251,7 +251,7 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of all `HttpEvents` for the request, with the response
     * body as an `ArrayBuffer`.
     */
-  def get(url: String, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def get(url: String, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `GET` request that interprets the body as a JSON object
     * and returns the full event stream.
@@ -282,7 +282,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the response, with the response body as an `ArrayBuffer`.
     */
-  def get(url: String, options: AnonParamsReportProgressResponseType): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def get(url: String, options: AnonParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   /**
     * Constructs a `GET` request that interprets the body as a `Blob` and
     * returns the full event stream.
@@ -401,7 +401,7 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of the `HTTPResponse` for the request,
     * with the response body as an `ArrayBuffer`.
     */
-  def head(url: String, options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def head(url: String, options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `HEAD` request that interprets the body as an  `ArrayBuffer`
     *  and returns the full event stream.
@@ -412,7 +412,7 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of tall `HttpEvents` for the request,
     * with the response body as an `ArrayBuffer`.
     */
-  def head(url: String, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def head(url: String, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `HEAD` request that interprets the body as a JSON object
     * and returns the full HTTP event stream.
@@ -444,7 +444,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the response, with the response body as an `ArrayBuffer`.
     */
-  def head(url: String, options: AnonParamsReportProgressResponseType): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def head(url: String, options: AnonParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   /**
     * Constructs a `HEAD` request that interprets the body as a `Blob` and
     * returns the full event stream.
@@ -591,7 +591,7 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of the `HttpResponse` for the request,
     * with the response body as an `ArrayBuffer`.
     */
-  def options(url: String, options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def options(url: String, options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs an `OPTIONS` request that interprets the body as an `ArrayBuffer`
     *  and returns the full event stream.
@@ -602,7 +602,7 @@ class HttpClient protected () extends js.Object {
     * @return  An `Observable` of all `HttpEvents` for the request,
     * with the response body as an `ArrayBuffer`.
     */
-  def options(url: String, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def options(url: String, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs an `OPTIONS` request that interprets the body as a JSON object
     * and returns the full event stream.
@@ -634,7 +634,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the response, with the response body as an `ArrayBuffer`.
     */
-  def options(url: String, options: AnonParamsReportProgressResponseType): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def options(url: String, options: AnonParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   /**
     * Constructs an `OPTIONS` request that interprets the body as a `Blob` and
     * returns the full event stream.
@@ -766,7 +766,7 @@ class HttpClient protected () extends js.Object {
     url: String,
     body: js.Any,
     options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials
-  ): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  ): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `PATCH` request that interprets the body as an `ArrayBuffer` and
     *  returns the the full event stream.
@@ -778,7 +778,7 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of all the `HTTPevents` for the request,
     * with the response body as an `ArrayBuffer`.
     */
-  def patch(url: String, body: js.Any, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def patch(url: String, body: js.Any, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `PATCH` request that interprets the body as a JSON object
     * and returns the full event stream.
@@ -813,7 +813,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the response, with the response body as an `ArrayBuffer`.
     */
-  def patch(url: String, body: js.Any, options: AnonParamsReportProgressResponseType): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def patch(url: String, body: js.Any, options: AnonParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   /**
     * Constructs a `PATCH` request that interprets the body as a `Blob`
     *  and returns the full event stream.
@@ -868,11 +868,11 @@ class HttpClient protected () extends js.Object {
     url: String,
     body: Null,
     options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials
-  ): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
-  def patch(url: String, body: Null, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  ): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
+  def patch(url: String, body: Null, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   def patch(url: String, body: Null, options: AnonObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
   def patch(url: String, body: Null, options: AnonParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
-  def patch(url: String, body: Null, options: AnonParamsReportProgressResponseType): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def patch(url: String, body: Null, options: AnonParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   def patch(url: String, body: Null, options: AnonParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
   def patch(url: String, body: Null, options: AnonReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
   def patch(url: String, body: Null, options: AnonReportProgressBooleanResponseType): Observable_[js.Object] = js.native
@@ -975,7 +975,7 @@ class HttpClient protected () extends js.Object {
     url: String,
     body: js.Any,
     options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials
-  ): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  ): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `POST` request that interprets the body as an `ArrayBuffer` and
     * returns the full event stream.
@@ -987,7 +987,7 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of all `HttpEvents` for the request,
     * with the response body as an `ArrayBuffer`.
     */
-  def post(url: String, body: js.Any, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def post(url: String, body: js.Any, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a POST request that interprets the body as a JSON object and returns the full event stream.
     *
@@ -1021,7 +1021,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the response, with the response body as an `ArrayBuffer`.
     */
-  def post(url: String, body: js.Any, options: AnonParamsReportProgressResponseType): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def post(url: String, body: js.Any, options: AnonParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   /**
     * Constructs a `POST` request that interprets the body as a `Blob`
     * and returns the response in an observable of the full event stream.
@@ -1075,11 +1075,11 @@ class HttpClient protected () extends js.Object {
     url: String,
     body: Null,
     options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials
-  ): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
-  def post(url: String, body: Null, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  ): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
+  def post(url: String, body: Null, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   def post(url: String, body: Null, options: AnonObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
   def post(url: String, body: Null, options: AnonParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
-  def post(url: String, body: Null, options: AnonParamsReportProgressResponseType): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def post(url: String, body: Null, options: AnonParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   def post(url: String, body: Null, options: AnonParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
   def post(url: String, body: Null, options: AnonReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
   def post(url: String, body: Null, options: AnonReportProgressBooleanResponseType): Observable_[js.Object] = js.native
@@ -1180,7 +1180,7 @@ class HttpClient protected () extends js.Object {
     url: String,
     body: js.Any,
     options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials
-  ): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  ): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `PUT` request that interprets the body as an `ArrayBuffer` and
     * returns the full event stream.
@@ -1192,7 +1192,7 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of all `HttpEvents` for the request,
     * with the response body as an `ArrayBuffer`.
     */
-  def put(url: String, body: js.Any, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def put(url: String, body: js.Any, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a `PUT` request that interprets the body as a JSON object and returns the full event stream.
     *
@@ -1225,7 +1225,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the response, with the response body as an `ArrayBuffer`.
     */
-  def put(url: String, body: js.Any, options: AnonParamsReportProgressResponseType): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def put(url: String, body: js.Any, options: AnonParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   /**
     * Constructs a `PUT` request that interprets the body as a `Blob` and returns the full event stream.
     *
@@ -1278,11 +1278,11 @@ class HttpClient protected () extends js.Object {
     url: String,
     body: Null,
     options: AnonHeadersObserveParamsReportProgressResponseTypeWithCredentials
-  ): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
-  def put(url: String, body: Null, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  ): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
+  def put(url: String, body: Null, options: AnonObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   def put(url: String, body: Null, options: AnonObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
   def put(url: String, body: Null, options: AnonParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
-  def put(url: String, body: Null, options: AnonParamsReportProgressResponseType): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def put(url: String, body: Null, options: AnonParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   def put(url: String, body: Null, options: AnonParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
   def put(url: String, body: Null, options: AnonReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
   def put(url: String, body: Null, options: AnonReportProgressBooleanResponseType): Observable_[js.Object] = js.native
@@ -1399,7 +1399,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the response, with the response body as an `ArrayBuffer`.
     */
-  def request(method: String, url: String, options: AnonObserve): Observable_[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def request(method: String, url: String, options: AnonObserve): Observable_[js.typedarray.ArrayBuffer] = js.native
   /**
     * Constructs a request which interprets the body as a JSON object and returns the full event stream.
     *
@@ -1422,7 +1422,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the `HTTPResponse`, with the response body as an `ArrayBuffer`.
     */
-  def request(method: String, url: String, options: AnonParamsReportProgress): Observable_[HttpResponse[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def request(method: String, url: String, options: AnonParamsReportProgress): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Constructs a request that interprets the body as a blob and returns
     * the response as a blob.
@@ -1476,7 +1476,7 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of the response, with the response body as an array of `HTTPEvents` for the
     * request.
     */
-  def request(method: String, url: String, options: AnonWithCredentials): Observable_[HttpEvent[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def request(method: String, url: String, options: AnonWithCredentials): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   /**
     * Sends an `HTTPRequest` and returns a stream of `HTTPEvents`.
     *

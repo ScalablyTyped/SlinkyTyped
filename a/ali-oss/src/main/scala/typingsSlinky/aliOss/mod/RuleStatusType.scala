@@ -12,10 +12,8 @@ trait RuleStatusType extends js.Object
 
 object RuleStatusType {
   @scala.inline
-  def Disabled: typingsSlinky.aliOss.aliOssStrings.Disabled = this.cast("Disabled")
+  def Disabled: typingsSlinky.aliOss.aliOssStrings.Disabled = "Disabled".asInstanceOf[typingsSlinky.aliOss.aliOssStrings.Disabled]
   @scala.inline
-  def Enabled: typingsSlinky.aliOss.aliOssStrings.Enabled = this.cast("Enabled")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Enabled: typingsSlinky.aliOss.aliOssStrings.Enabled = "Enabled".asInstanceOf[typingsSlinky.aliOss.aliOssStrings.Enabled]
 }
 

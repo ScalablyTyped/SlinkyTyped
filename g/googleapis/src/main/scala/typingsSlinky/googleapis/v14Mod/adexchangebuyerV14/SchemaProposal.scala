@@ -120,56 +120,293 @@ trait SchemaProposal extends js.Object {
 
 object SchemaProposal {
   @scala.inline
-  def apply(
-    billedBuyer: SchemaBuyer = null,
-    buyer: SchemaBuyer = null,
-    buyerContacts: js.Array[SchemaContactInformation] = null,
-    buyerPrivateData: SchemaPrivateData = null,
-    dbmAdvertiserIds: js.Array[String] = null,
-    hasBuyerSignedOff: js.UndefOr[Boolean] = js.undefined,
-    hasSellerSignedOff: js.UndefOr[Boolean] = js.undefined,
-    inventorySource: String = null,
-    isRenegotiating: js.UndefOr[Boolean] = js.undefined,
-    isSetupComplete: js.UndefOr[Boolean] = js.undefined,
-    kind: String = null,
-    labels: js.Array[SchemaMarketplaceLabel] = null,
-    lastUpdaterOrCommentorRole: String = null,
-    name: String = null,
-    negotiationId: String = null,
-    originatorRole: String = null,
-    privateAuctionId: String = null,
-    proposalId: String = null,
-    proposalState: String = null,
-    revisionNumber: String = null,
-    revisionTimeMs: String = null,
-    seller: SchemaSeller = null,
-    sellerContacts: js.Array[SchemaContactInformation] = null
-  ): SchemaProposal = {
+  def apply(): SchemaProposal = {
     val __obj = js.Dynamic.literal()
-    if (billedBuyer != null) __obj.updateDynamic("billedBuyer")(billedBuyer.asInstanceOf[js.Any])
-    if (buyer != null) __obj.updateDynamic("buyer")(buyer.asInstanceOf[js.Any])
-    if (buyerContacts != null) __obj.updateDynamic("buyerContacts")(buyerContacts.asInstanceOf[js.Any])
-    if (buyerPrivateData != null) __obj.updateDynamic("buyerPrivateData")(buyerPrivateData.asInstanceOf[js.Any])
-    if (dbmAdvertiserIds != null) __obj.updateDynamic("dbmAdvertiserIds")(dbmAdvertiserIds.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasBuyerSignedOff)) __obj.updateDynamic("hasBuyerSignedOff")(hasBuyerSignedOff.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasSellerSignedOff)) __obj.updateDynamic("hasSellerSignedOff")(hasSellerSignedOff.asInstanceOf[js.Any])
-    if (inventorySource != null) __obj.updateDynamic("inventorySource")(inventorySource.asInstanceOf[js.Any])
-    if (!js.isUndefined(isRenegotiating)) __obj.updateDynamic("isRenegotiating")(isRenegotiating.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSetupComplete)) __obj.updateDynamic("isSetupComplete")(isSetupComplete.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (lastUpdaterOrCommentorRole != null) __obj.updateDynamic("lastUpdaterOrCommentorRole")(lastUpdaterOrCommentorRole.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (negotiationId != null) __obj.updateDynamic("negotiationId")(negotiationId.asInstanceOf[js.Any])
-    if (originatorRole != null) __obj.updateDynamic("originatorRole")(originatorRole.asInstanceOf[js.Any])
-    if (privateAuctionId != null) __obj.updateDynamic("privateAuctionId")(privateAuctionId.asInstanceOf[js.Any])
-    if (proposalId != null) __obj.updateDynamic("proposalId")(proposalId.asInstanceOf[js.Any])
-    if (proposalState != null) __obj.updateDynamic("proposalState")(proposalState.asInstanceOf[js.Any])
-    if (revisionNumber != null) __obj.updateDynamic("revisionNumber")(revisionNumber.asInstanceOf[js.Any])
-    if (revisionTimeMs != null) __obj.updateDynamic("revisionTimeMs")(revisionTimeMs.asInstanceOf[js.Any])
-    if (seller != null) __obj.updateDynamic("seller")(seller.asInstanceOf[js.Any])
-    if (sellerContacts != null) __obj.updateDynamic("sellerContacts")(sellerContacts.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProposal]
   }
+  @scala.inline
+  implicit class SchemaProposalOps[Self <: SchemaProposal] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBilledBuyer(value: SchemaBuyer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billedBuyer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBilledBuyer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billedBuyer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuyer(value: SchemaBuyer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuyer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuyerContacts(value: js.Array[SchemaContactInformation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyerContacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuyerContacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyerContacts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuyerPrivateData(value: SchemaPrivateData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyerPrivateData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuyerPrivateData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buyerPrivateData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDbmAdvertiserIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbmAdvertiserIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDbmAdvertiserIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbmAdvertiserIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasBuyerSignedOff(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasBuyerSignedOff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasBuyerSignedOff: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasBuyerSignedOff")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasSellerSignedOff(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasSellerSignedOff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasSellerSignedOff: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasSellerSignedOff")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInventorySource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inventorySource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInventorySource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inventorySource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRenegotiating(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRenegotiating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsRenegotiating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRenegotiating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsSetupComplete(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSetupComplete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsSetupComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSetupComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: js.Array[SchemaMarketplaceLabel]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdaterOrCommentorRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdaterOrCommentorRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdaterOrCommentorRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdaterOrCommentorRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegotiationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negotiationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegotiationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negotiationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginatorRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originatorRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginatorRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originatorRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateAuctionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateAuctionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateAuctionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateAuctionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProposalId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProposalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProposalState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProposalState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposalState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionTimeMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionTimeMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionTimeMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionTimeMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeller(value: SchemaSeller): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeller: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seller")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSellerContacts(value: js.Array[SchemaContactInformation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sellerContacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSellerContacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sellerContacts")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

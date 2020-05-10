@@ -36,12 +36,53 @@ trait SchemaDpc extends js.Object {
 
 object SchemaDpc {
   @scala.inline
-  def apply(dpcName: String = null, name: String = null, packageName: String = null): SchemaDpc = {
+  def apply(): SchemaDpc = {
     val __obj = js.Dynamic.literal()
-    if (dpcName != null) __obj.updateDynamic("dpcName")(dpcName.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (packageName != null) __obj.updateDynamic("packageName")(packageName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDpc]
   }
+  @scala.inline
+  implicit class SchemaDpcOps[Self <: SchemaDpc] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDpcName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dpcName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDpcName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dpcName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.dhtmlxscheduler
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Date
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -105,8 +104,8 @@ trait SchedulerStatic extends js.Object {
   	 * @param time_points an array <b>[start_minute,end_minute,..,start_minute_N,end_minute_N]</b>, <br> where each pair sets a certain limit range. The array can have any number of <br> such pairs
   	 * @param items defines specific items of  view(s) to block
   	*/
-  def blockTime(date: Date, time_points: js.Array[_]): Unit = js.native
-  def blockTime(date: Date, time_points: js.Array[_], items: js.Any): Unit = js.native
+  def blockTime(date: js.Date, time_points: js.Array[_]): Unit = js.native
+  def blockTime(date: js.Date, time_points: js.Array[_], items: js.Any): Unit = js.native
   /**
   	 * calls an inner event
   	 * @param name the event's name, case-insensitive
@@ -376,9 +375,9 @@ trait SchedulerStatic extends js.Object {
   def init(container: String): Unit = js.native
   def init(container: String, date: js.Date): Unit = js.native
   def init(container: String, date: js.Date, view: String): Unit = js.native
-  def init(container: typingsSlinky.std.HTMLElement): Unit = js.native
-  def init(container: typingsSlinky.std.HTMLElement, date: js.Date): Unit = js.native
-  def init(container: typingsSlinky.std.HTMLElement, date: js.Date, view: String): Unit = js.native
+  def init(container: HTMLElement): Unit = js.native
+  def init(container: HTMLElement, date: js.Date): Unit = js.native
+  def init(container: HTMLElement, date: js.Date, view: String): Unit = js.native
   /**
   	 * inverts the specified time zones
   	 * @param zones an array **[start_minute,end_minute,..,start_minute_N,end_minute_N]** <br >where each pair sets a certain limit range (in minutes). The array can have any <br> number of such pairs
@@ -612,7 +611,7 @@ trait SchedulerStatic extends js.Object {
   	 * removes marking/blocking set by the markTimespan() method
   	 * @param divs a timespan to remove marking/blocking from (or an array of timespans)
   	*/
-  def unmarkTimespan(divs: typingsSlinky.std.HTMLElement): Unit = js.native
+  def unmarkTimespan(divs: HTMLElement): Unit = js.native
   /**
   	 * unselects the specified event
   	 * @param id the event's id (if not specified, the currently selected event will be unselected)

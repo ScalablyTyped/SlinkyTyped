@@ -14,10 +14,29 @@ trait CopyFpgaImageResult extends js.Object {
 
 object CopyFpgaImageResult {
   @scala.inline
-  def apply(FpgaImageId: String = null): CopyFpgaImageResult = {
+  def apply(): CopyFpgaImageResult = {
     val __obj = js.Dynamic.literal()
-    if (FpgaImageId != null) __obj.updateDynamic("FpgaImageId")(FpgaImageId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyFpgaImageResult]
   }
+  @scala.inline
+  implicit class CopyFpgaImageResultOps[Self <: CopyFpgaImageResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFpgaImageId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFpgaImageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaImageId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

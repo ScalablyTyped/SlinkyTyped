@@ -14,10 +14,29 @@ trait S3SetObjectTaggingOperation extends js.Object {
 
 object S3SetObjectTaggingOperation {
   @scala.inline
-  def apply(TagSet: S3TagSet = null): S3SetObjectTaggingOperation = {
+  def apply(): S3SetObjectTaggingOperation = {
     val __obj = js.Dynamic.literal()
-    if (TagSet != null) __obj.updateDynamic("TagSet")(TagSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3SetObjectTaggingOperation]
   }
+  @scala.inline
+  implicit class S3SetObjectTaggingOperationOps[Self <: S3SetObjectTaggingOperation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTagSet(value: S3TagSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

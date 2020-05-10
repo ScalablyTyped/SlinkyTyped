@@ -13,12 +13,10 @@ trait FontStyle extends js.Object
 
 object FontStyle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def italic: typingsSlinky.canvasGauges.canvasGaugesStrings.italic = "italic".asInstanceOf[typingsSlinky.canvasGauges.canvasGaugesStrings.italic]
   @scala.inline
-  def italic: typingsSlinky.canvasGauges.canvasGaugesStrings.italic = this.cast("italic")
+  def normal: typingsSlinky.canvasGauges.canvasGaugesStrings.normal = "normal".asInstanceOf[typingsSlinky.canvasGauges.canvasGaugesStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.canvasGauges.canvasGaugesStrings.normal = this.cast("normal")
-  @scala.inline
-  def oblique: typingsSlinky.canvasGauges.canvasGaugesStrings.oblique = this.cast("oblique")
+  def oblique: typingsSlinky.canvasGauges.canvasGaugesStrings.oblique = "oblique".asInstanceOf[typingsSlinky.canvasGauges.canvasGaugesStrings.oblique]
 }
 

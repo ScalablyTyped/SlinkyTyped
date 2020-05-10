@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable4
+import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.bson.mod.ObjectId
 import typingsSlinky.mongodb.mod.MongoCallback
@@ -31,9 +32,9 @@ object mongo extends js.Object {
     extends typingsSlinky.mongodb.mod.AggregationCursor[T]
   
   @js.native
-  class ChangeStream protected ()
-    extends typingsSlinky.mongodb.mod.ChangeStream {
-    def this(changeDomain: typingsSlinky.mongodb.mod.Db, pipeline: js.Array[js.Object]) = this()
+  class ChangeStream[TSchema /* <: StringDictionary[js.Any] */] protected ()
+    extends typingsSlinky.mongodb.mod.ChangeStream[TSchema] {
+    def this(parent: MongoClient, pipeline: js.Array[js.Object]) = this()
   }
   
   @js.native
@@ -172,9 +173,9 @@ object mongo extends js.Object {
   object ChangeStream
     extends TopLevel[
           Instantiable2[
-            /* changeDomain */ typingsSlinky.mongodb.mod.Db, 
+            /* parent */ MongoClient, 
             /* pipeline */ js.Array[js.Object], 
-            typingsSlinky.mongodb.mod.ChangeStream
+            typingsSlinky.mongodb.mod.ChangeStream[StringDictionary[js.Any]]
           ]
         ]
   

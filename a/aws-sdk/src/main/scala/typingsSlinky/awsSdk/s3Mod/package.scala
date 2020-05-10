@@ -19,7 +19,7 @@ package object s3Mod {
   type AnalyticsConfigurationList = js.Array[typingsSlinky.awsSdk.s3Mod.AnalyticsConfiguration]
   type AnalyticsId = java.lang.String
   type AnalyticsS3ExportFileFormat = typingsSlinky.awsSdk.awsSdkStrings.CSV | java.lang.String
-  type Body = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.s3Mod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  type Body = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.s3Mod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Enabled_
     - typingsSlinky.awsSdk.awsSdkStrings.Suspended_
@@ -99,7 +99,7 @@ package object s3Mod {
   type CopySourceIfUnmodifiedSince = js.Date
   type CopySourceRange = java.lang.String
   type CopySourceSSECustomerAlgorithm = java.lang.String
-  type CopySourceSSECustomerKey = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.s3Mod.Blob | java.lang.String
+  type CopySourceSSECustomerKey = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.s3Mod.Blob | java.lang.String
   type CopySourceSSECustomerKeyMD5 = java.lang.String
   type CopySourceVersionId = java.lang.String
   type CreationDate = js.Date
@@ -434,7 +434,7 @@ package object s3Mod {
   type RoutingRules = js.Array[typingsSlinky.awsSdk.s3Mod.RoutingRule]
   type Rules = js.Array[typingsSlinky.awsSdk.s3Mod.Rule]
   type SSECustomerAlgorithm = java.lang.String
-  type SSECustomerKey = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.s3Mod.Blob | java.lang.String
+  type SSECustomerKey = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.s3Mod.Blob | java.lang.String
   type SSECustomerKeyMD5 = java.lang.String
   type SSEKMSEncryptionContext = java.lang.String
   type SSEKMSKeyId = java.lang.String

@@ -3,10 +3,6 @@ package typingsSlinky.tensorflowTfjsNode
 import typingsSlinky.tensorflowTfjsCore.typesMod.IOHandler
 import typingsSlinky.tensorflowTfjsCore.typesMod.ModelArtifacts
 import typingsSlinky.tensorflowTfjsCore.typesMod.SaveResult
-import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.fileColonSlashSlash
-import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.modelDotjson
-import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.tensorflowjsDotpb
-import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.weightsDotbin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,9 +32,9 @@ object fileSystemMod extends js.Object {
       */
     def this(path: String) = this()
     def this(path: js.Array[String]) = this()
-    val MODEL_BINARY_FILENAME: tensorflowjsDotpb = js.native
-    val MODEL_JSON_FILENAME: modelDotjson = js.native
-    val WEIGHTS_BINARY_FILENAME: weightsDotbin = js.native
+    val MODEL_BINARY_FILENAME: /* "tensorflowjs.pb" */ String = js.native
+    val MODEL_JSON_FILENAME: /* "model.json" */ String = js.native
+    val WEIGHTS_BINARY_FILENAME: /* "weights.bin" */ String = js.native
     var loadWeights: js.Any = js.native
     val path: String | js.Array[String] = js.native
     /**
@@ -61,7 +57,7 @@ object fileSystemMod extends js.Object {
   /* static members */
   @js.native
   object NodeFileSystem extends js.Object {
-    val URL_SCHEME: fileColonSlashSlash = js.native
+    val URL_SCHEME: /* "file://" */ String = js.native
   }
   
 }

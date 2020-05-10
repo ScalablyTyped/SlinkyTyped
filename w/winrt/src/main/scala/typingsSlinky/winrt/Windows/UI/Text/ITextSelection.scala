@@ -7,16 +7,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ITextSelection extends ITextRange {
-  var options: SelectionOptions
-  var `type`: SelectionType
-  def endKey(unit: TextRangeUnit, extend: Boolean): Double
-  def homeKey(unit: TextRangeUnit, extend: Boolean): Double
-  def moveDown(unit: TextRangeUnit, count: Double, extend: Boolean): Double
-  def moveLeft(unit: TextRangeUnit, count: Double, extend: Boolean): Double
-  def moveRight(unit: TextRangeUnit, count: Double, extend: Boolean): Double
-  def moveUp(unit: TextRangeUnit, count: Double, extend: Boolean): Double
-  def typeText(value: String): Unit
+  var options: SelectionOptions = js.native
+  var `type`: SelectionType = js.native
+  def endKey(unit: TextRangeUnit, extend: Boolean): Double = js.native
+  def homeKey(unit: TextRangeUnit, extend: Boolean): Double = js.native
+  def moveDown(unit: TextRangeUnit, count: Double, extend: Boolean): Double = js.native
+  def moveLeft(unit: TextRangeUnit, count: Double, extend: Boolean): Double = js.native
+  def moveRight(unit: TextRangeUnit, count: Double, extend: Boolean): Double = js.native
+  def moveUp(unit: TextRangeUnit, count: Double, extend: Boolean): Double = js.native
+  def typeText(value: String): Unit = js.native
 }
 
 object ITextSelection {
@@ -79,5 +80,67 @@ object ITextSelection {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITextSelection]
   }
+  @scala.inline
+  implicit class ITextSelectionOps[Self <: ITextSelection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndKey(value: (TextRangeUnit, Boolean) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endKey")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withHomeKey(value: (TextRangeUnit, Boolean) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeKey")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withMoveDown(value: (TextRangeUnit, Double, Boolean) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveDown")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMoveLeft(value: (TextRangeUnit, Double, Boolean) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveLeft")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMoveRight(value: (TextRangeUnit, Double, Boolean) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveRight")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMoveUp(value: (TextRangeUnit, Double, Boolean) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveUp")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withOptions(value: SelectionOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: SelectionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypeText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeText")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

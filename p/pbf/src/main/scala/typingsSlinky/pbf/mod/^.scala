@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 @JSImport("pbf", JSImport.Namespace)
 @js.native
 class ^ () extends Pbf {
-  def this(buffer: scala.scalajs.js.typedarray.ArrayBuffer) = this()
-  def this(buffer: scala.scalajs.js.typedarray.Uint8Array) = this()
+  def this(buffer: js.typedarray.ArrayBuffer) = this()
+  def this(buffer: js.typedarray.Uint8Array) = this()
 }
 
 @JSImport("pbf", JSImport.Namespace)

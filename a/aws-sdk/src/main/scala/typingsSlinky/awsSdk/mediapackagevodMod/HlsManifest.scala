@@ -44,22 +44,89 @@ trait HlsManifest extends js.Object {
 
 object HlsManifest {
   @scala.inline
-  def apply(
-    AdMarkers: AdMarkers = null,
-    IncludeIframeOnlyStream: js.UndefOr[Boolean] = js.undefined,
-    ManifestName: string = null,
-    ProgramDateTimeIntervalSeconds: Int | Double = null,
-    RepeatExtXKey: js.UndefOr[Boolean] = js.undefined,
-    StreamSelection: StreamSelection = null
-  ): HlsManifest = {
+  def apply(): HlsManifest = {
     val __obj = js.Dynamic.literal()
-    if (AdMarkers != null) __obj.updateDynamic("AdMarkers")(AdMarkers.asInstanceOf[js.Any])
-    if (!js.isUndefined(IncludeIframeOnlyStream)) __obj.updateDynamic("IncludeIframeOnlyStream")(IncludeIframeOnlyStream.asInstanceOf[js.Any])
-    if (ManifestName != null) __obj.updateDynamic("ManifestName")(ManifestName.asInstanceOf[js.Any])
-    if (ProgramDateTimeIntervalSeconds != null) __obj.updateDynamic("ProgramDateTimeIntervalSeconds")(ProgramDateTimeIntervalSeconds.asInstanceOf[js.Any])
-    if (!js.isUndefined(RepeatExtXKey)) __obj.updateDynamic("RepeatExtXKey")(RepeatExtXKey.asInstanceOf[js.Any])
-    if (StreamSelection != null) __obj.updateDynamic("StreamSelection")(StreamSelection.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsManifest]
   }
+  @scala.inline
+  implicit class HlsManifestOps[Self <: HlsManifest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdMarkers(value: AdMarkers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdMarkers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdMarkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdMarkers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeIframeOnlyStream(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeIframeOnlyStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeIframeOnlyStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeIframeOnlyStream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManifestName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManifestName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgramDateTimeIntervalSeconds(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramDateTimeIntervalSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgramDateTimeIntervalSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramDateTimeIntervalSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepeatExtXKey(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatExtXKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepeatExtXKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RepeatExtXKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamSelection(value: StreamSelection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamSelection")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

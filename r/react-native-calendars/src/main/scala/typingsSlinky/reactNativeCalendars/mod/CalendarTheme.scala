@@ -4,118 +4,436 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CalendarTheme extends js.Object {
-  var arrowColor: js.UndefOr[String] = js.undefined
-  var backgroundColor: js.UndefOr[String] = js.undefined
-  var calendarBackground: js.UndefOr[String] = js.undefined
-  var dayTextColor: js.UndefOr[String] = js.undefined
-  var dotColor: js.UndefOr[String] = js.undefined
-  var indicatorColor: js.UndefOr[String] = js.undefined
-  var monthTextColor: js.UndefOr[String] = js.undefined
-  var selectedDayBackgroundColor: js.UndefOr[String] = js.undefined
-  var selectedDayTextColor: js.UndefOr[String] = js.undefined
-  var selectedDotColor: js.UndefOr[String] = js.undefined
+  var arrowColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.native
+  var calendarBackground: js.UndefOr[String] = js.native
+  var dayTextColor: js.UndefOr[String] = js.native
+  var dotColor: js.UndefOr[String] = js.native
+  var indicatorColor: js.UndefOr[String] = js.native
+  var monthTextColor: js.UndefOr[String] = js.native
+  var selectedDayBackgroundColor: js.UndefOr[String] = js.native
+  var selectedDayTextColor: js.UndefOr[String] = js.native
+  var selectedDotColor: js.UndefOr[String] = js.native
   @JSName("stylesheet.agenda.list")
-  var stylesheetDotagendaDotlist: js.UndefOr[CalendarThemeIdStyle] = js.undefined
+  var stylesheetDotagendaDotlist: js.UndefOr[CalendarThemeIdStyle] = js.native
   @JSName("stylesheet.agenda.main")
-  var stylesheetDotagendaDotmain: js.UndefOr[CalendarThemeIdStyle] = js.undefined
+  var stylesheetDotagendaDotmain: js.UndefOr[CalendarThemeIdStyle] = js.native
   @JSName("stylesheet.calendar-list.main")
-  var `stylesheetDotcalendar-listDotmain`: js.UndefOr[CalendarThemeIdStyle] = js.undefined
+  var `stylesheetDotcalendar-listDotmain`: js.UndefOr[CalendarThemeIdStyle] = js.native
   // Theme ID's to style for
   @JSName("stylesheet.calendar.header")
-  var stylesheetDotcalendarDotheader: js.UndefOr[CalendarThemeIdStyle] = js.undefined
+  var stylesheetDotcalendarDotheader: js.UndefOr[CalendarThemeIdStyle] = js.native
   @JSName("stylesheet.calendar.main")
-  var stylesheetDotcalendarDotmain: js.UndefOr[CalendarThemeIdStyle] = js.undefined
+  var stylesheetDotcalendarDotmain: js.UndefOr[CalendarThemeIdStyle] = js.native
   @JSName("stylesheet.day.basic")
-  var stylesheetDotdayDotbasic: js.UndefOr[CalendarThemeIdStyle] = js.undefined
+  var stylesheetDotdayDotbasic: js.UndefOr[CalendarThemeIdStyle] = js.native
   @JSName("stylesheet.day.multiDot")
-  var stylesheetDotdayDotmultiDot: js.UndefOr[CalendarThemeIdStyle] = js.undefined
+  var stylesheetDotdayDotmultiDot: js.UndefOr[CalendarThemeIdStyle] = js.native
   @JSName("stylesheet.day.period")
-  var stylesheetDotdayDotperiod: js.UndefOr[CalendarThemeIdStyle] = js.undefined
+  var stylesheetDotdayDotperiod: js.UndefOr[CalendarThemeIdStyle] = js.native
   @JSName("stylesheet.day.single")
-  var stylesheetDotdayDotsingle: js.UndefOr[CalendarThemeIdStyle] = js.undefined
-  var textDayFontFamily: js.UndefOr[String] = js.undefined
-  var textDayFontSize: js.UndefOr[Double] = js.undefined
-  var textDayFontWeight: js.UndefOr[String] = js.undefined
-  var textDayHeaderFontFamily: js.UndefOr[String] = js.undefined
-  var textDayHeaderFontSize: js.UndefOr[Double] = js.undefined
-  var textDayHeaderFontWeight: js.UndefOr[String] = js.undefined
-  var textDisabledColor: js.UndefOr[String] = js.undefined
-  var textMonthFontFamily: js.UndefOr[String] = js.undefined
-  var textMonthFontSize: js.UndefOr[Double] = js.undefined
-  var textMonthFontWeight: js.UndefOr[String] = js.undefined
-  var textSectionTitleColor: js.UndefOr[String] = js.undefined
-  var todayTextColor: js.UndefOr[String] = js.undefined
+  var stylesheetDotdayDotsingle: js.UndefOr[CalendarThemeIdStyle] = js.native
+  var textDayFontFamily: js.UndefOr[String] = js.native
+  var textDayFontSize: js.UndefOr[Double] = js.native
+  var textDayFontWeight: js.UndefOr[String] = js.native
+  var textDayHeaderFontFamily: js.UndefOr[String] = js.native
+  var textDayHeaderFontSize: js.UndefOr[Double] = js.native
+  var textDayHeaderFontWeight: js.UndefOr[String] = js.native
+  var textDisabledColor: js.UndefOr[String] = js.native
+  var textMonthFontFamily: js.UndefOr[String] = js.native
+  var textMonthFontSize: js.UndefOr[Double] = js.native
+  var textMonthFontWeight: js.UndefOr[String] = js.native
+  var textSectionTitleColor: js.UndefOr[String] = js.native
+  var todayTextColor: js.UndefOr[String] = js.native
 }
 
 object CalendarTheme {
   @scala.inline
-  def apply(
-    arrowColor: String = null,
-    backgroundColor: String = null,
-    calendarBackground: String = null,
-    dayTextColor: String = null,
-    dotColor: String = null,
-    indicatorColor: String = null,
-    monthTextColor: String = null,
-    selectedDayBackgroundColor: String = null,
-    selectedDayTextColor: String = null,
-    selectedDotColor: String = null,
-    stylesheetDotagendaDotlist: CalendarThemeIdStyle = null,
-    stylesheetDotagendaDotmain: CalendarThemeIdStyle = null,
-    `stylesheetDotcalendar-listDotmain`: CalendarThemeIdStyle = null,
-    stylesheetDotcalendarDotheader: CalendarThemeIdStyle = null,
-    stylesheetDotcalendarDotmain: CalendarThemeIdStyle = null,
-    stylesheetDotdayDotbasic: CalendarThemeIdStyle = null,
-    stylesheetDotdayDotmultiDot: CalendarThemeIdStyle = null,
-    stylesheetDotdayDotperiod: CalendarThemeIdStyle = null,
-    stylesheetDotdayDotsingle: CalendarThemeIdStyle = null,
-    textDayFontFamily: String = null,
-    textDayFontSize: Int | Double = null,
-    textDayFontWeight: String = null,
-    textDayHeaderFontFamily: String = null,
-    textDayHeaderFontSize: Int | Double = null,
-    textDayHeaderFontWeight: String = null,
-    textDisabledColor: String = null,
-    textMonthFontFamily: String = null,
-    textMonthFontSize: Int | Double = null,
-    textMonthFontWeight: String = null,
-    textSectionTitleColor: String = null,
-    todayTextColor: String = null
-  ): CalendarTheme = {
+  def apply(): CalendarTheme = {
     val __obj = js.Dynamic.literal()
-    if (arrowColor != null) __obj.updateDynamic("arrowColor")(arrowColor.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (calendarBackground != null) __obj.updateDynamic("calendarBackground")(calendarBackground.asInstanceOf[js.Any])
-    if (dayTextColor != null) __obj.updateDynamic("dayTextColor")(dayTextColor.asInstanceOf[js.Any])
-    if (dotColor != null) __obj.updateDynamic("dotColor")(dotColor.asInstanceOf[js.Any])
-    if (indicatorColor != null) __obj.updateDynamic("indicatorColor")(indicatorColor.asInstanceOf[js.Any])
-    if (monthTextColor != null) __obj.updateDynamic("monthTextColor")(monthTextColor.asInstanceOf[js.Any])
-    if (selectedDayBackgroundColor != null) __obj.updateDynamic("selectedDayBackgroundColor")(selectedDayBackgroundColor.asInstanceOf[js.Any])
-    if (selectedDayTextColor != null) __obj.updateDynamic("selectedDayTextColor")(selectedDayTextColor.asInstanceOf[js.Any])
-    if (selectedDotColor != null) __obj.updateDynamic("selectedDotColor")(selectedDotColor.asInstanceOf[js.Any])
-    if (stylesheetDotagendaDotlist != null) __obj.updateDynamic("stylesheet.agenda.list")(stylesheetDotagendaDotlist.asInstanceOf[js.Any])
-    if (stylesheetDotagendaDotmain != null) __obj.updateDynamic("stylesheet.agenda.main")(stylesheetDotagendaDotmain.asInstanceOf[js.Any])
-    if (`stylesheetDotcalendar-listDotmain` != null) __obj.updateDynamic("stylesheet.calendar-list.main")(`stylesheetDotcalendar-listDotmain`.asInstanceOf[js.Any])
-    if (stylesheetDotcalendarDotheader != null) __obj.updateDynamic("stylesheet.calendar.header")(stylesheetDotcalendarDotheader.asInstanceOf[js.Any])
-    if (stylesheetDotcalendarDotmain != null) __obj.updateDynamic("stylesheet.calendar.main")(stylesheetDotcalendarDotmain.asInstanceOf[js.Any])
-    if (stylesheetDotdayDotbasic != null) __obj.updateDynamic("stylesheet.day.basic")(stylesheetDotdayDotbasic.asInstanceOf[js.Any])
-    if (stylesheetDotdayDotmultiDot != null) __obj.updateDynamic("stylesheet.day.multiDot")(stylesheetDotdayDotmultiDot.asInstanceOf[js.Any])
-    if (stylesheetDotdayDotperiod != null) __obj.updateDynamic("stylesheet.day.period")(stylesheetDotdayDotperiod.asInstanceOf[js.Any])
-    if (stylesheetDotdayDotsingle != null) __obj.updateDynamic("stylesheet.day.single")(stylesheetDotdayDotsingle.asInstanceOf[js.Any])
-    if (textDayFontFamily != null) __obj.updateDynamic("textDayFontFamily")(textDayFontFamily.asInstanceOf[js.Any])
-    if (textDayFontSize != null) __obj.updateDynamic("textDayFontSize")(textDayFontSize.asInstanceOf[js.Any])
-    if (textDayFontWeight != null) __obj.updateDynamic("textDayFontWeight")(textDayFontWeight.asInstanceOf[js.Any])
-    if (textDayHeaderFontFamily != null) __obj.updateDynamic("textDayHeaderFontFamily")(textDayHeaderFontFamily.asInstanceOf[js.Any])
-    if (textDayHeaderFontSize != null) __obj.updateDynamic("textDayHeaderFontSize")(textDayHeaderFontSize.asInstanceOf[js.Any])
-    if (textDayHeaderFontWeight != null) __obj.updateDynamic("textDayHeaderFontWeight")(textDayHeaderFontWeight.asInstanceOf[js.Any])
-    if (textDisabledColor != null) __obj.updateDynamic("textDisabledColor")(textDisabledColor.asInstanceOf[js.Any])
-    if (textMonthFontFamily != null) __obj.updateDynamic("textMonthFontFamily")(textMonthFontFamily.asInstanceOf[js.Any])
-    if (textMonthFontSize != null) __obj.updateDynamic("textMonthFontSize")(textMonthFontSize.asInstanceOf[js.Any])
-    if (textMonthFontWeight != null) __obj.updateDynamic("textMonthFontWeight")(textMonthFontWeight.asInstanceOf[js.Any])
-    if (textSectionTitleColor != null) __obj.updateDynamic("textSectionTitleColor")(textSectionTitleColor.asInstanceOf[js.Any])
-    if (todayTextColor != null) __obj.updateDynamic("todayTextColor")(todayTextColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalendarTheme]
   }
+  @scala.inline
+  implicit class CalendarThemeOps[Self <: CalendarTheme] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrowColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrowColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCalendarBackground(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarBackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalendarBackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarBackground")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDayTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayTextColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayTextColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndicatorColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndicatorColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonthTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthTextColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonthTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthTextColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedDayBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedDayBackgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedDayBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedDayBackgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedDayTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedDayTextColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedDayTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedDayTextColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedDotColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedDotColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedDotColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedDotColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesheetDotagendaDotlist(value: CalendarThemeIdStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.agenda.list")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesheetDotagendaDotlist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.agenda.list")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesheetDotagendaDotmain(value: CalendarThemeIdStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.agenda.main")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesheetDotagendaDotmain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.agenda.main")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withStylesheetDotcalendar-listDotmain`(value: CalendarThemeIdStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.calendar-list.main")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutStylesheetDotcalendar-listDotmain`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.calendar-list.main")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesheetDotcalendarDotheader(value: CalendarThemeIdStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.calendar.header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesheetDotcalendarDotheader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.calendar.header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesheetDotcalendarDotmain(value: CalendarThemeIdStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.calendar.main")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesheetDotcalendarDotmain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.calendar.main")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesheetDotdayDotbasic(value: CalendarThemeIdStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.day.basic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesheetDotdayDotbasic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.day.basic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesheetDotdayDotmultiDot(value: CalendarThemeIdStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.day.multiDot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesheetDotdayDotmultiDot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.day.multiDot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesheetDotdayDotperiod(value: CalendarThemeIdStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.day.period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesheetDotdayDotperiod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.day.period")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStylesheetDotdayDotsingle(value: CalendarThemeIdStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.day.single")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStylesheetDotdayDotsingle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylesheet.day.single")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDayFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayFontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextDayFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayFontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDayFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayFontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextDayFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayFontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDayFontWeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayFontWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextDayFontWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayFontWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDayHeaderFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayHeaderFontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextDayHeaderFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayHeaderFontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDayHeaderFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayHeaderFontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextDayHeaderFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayHeaderFontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDayHeaderFontWeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayHeaderFontWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextDayHeaderFontWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDayHeaderFontWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDisabledColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDisabledColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextDisabledColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDisabledColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextMonthFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textMonthFontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextMonthFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textMonthFontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextMonthFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textMonthFontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextMonthFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textMonthFontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextMonthFontWeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textMonthFontWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextMonthFontWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textMonthFontWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextSectionTitleColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textSectionTitleColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextSectionTitleColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textSectionTitleColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTodayTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("todayTextColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTodayTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("todayTextColor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

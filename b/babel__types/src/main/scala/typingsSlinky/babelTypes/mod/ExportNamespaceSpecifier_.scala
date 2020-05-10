@@ -5,36 +5,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ trait ExportNamespaceSpecifier_
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+trait ExportNamespaceSpecifier_
   extends ModuleSpecifier
      with BaseNode {
-  var exported: Identifier_
+  var exported: Identifier_ = js.native
   @JSName("type")
-  var type_ExportNamespaceSpecifier_ : ExportNamespaceSpecifier
+  var type_ExportNamespaceSpecifier_ : ExportNamespaceSpecifier = js.native
 }
 
 object ExportNamespaceSpecifier_ {
   @scala.inline
-  def apply(
-    exported: Identifier_,
-    `type`: ExportNamespaceSpecifier,
-    end: Int | Double = null,
-    innerComments: js.Array[Comment] = null,
-    leadingComments: js.Array[Comment] = null,
-    loc: SourceLocation = null,
-    start: Int | Double = null,
-    trailingComments: js.Array[Comment] = null
-  ): ExportNamespaceSpecifier_ = {
+  def apply(exported: Identifier_, `type`: ExportNamespaceSpecifier): ExportNamespaceSpecifier_ = {
     val __obj = js.Dynamic.literal(exported = exported.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (innerComments != null) __obj.updateDynamic("innerComments")(innerComments.asInstanceOf[js.Any])
-    if (leadingComments != null) __obj.updateDynamic("leadingComments")(leadingComments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (trailingComments != null) __obj.updateDynamic("trailingComments")(trailingComments.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportNamespaceSpecifier_]
   }
+  @scala.inline
+  implicit class ExportNamespaceSpecifier_Ops[Self <: ExportNamespaceSpecifier_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExported(value: Identifier_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: ExportNamespaceSpecifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

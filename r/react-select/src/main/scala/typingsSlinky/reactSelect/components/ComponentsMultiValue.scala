@@ -1,11 +1,10 @@
 package typingsSlinky.reactSelect.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSelect.AnonOnClick
 import typingsSlinky.reactSelect.componentsMultiValueMod.MultiValueProps
+import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
 import typingsSlinky.reactSelect.typesMod.OptionsType
@@ -14,14 +13,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ComponentsMultiValue
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ComponentsMultiValue {
   @JSImport("react-select", "components.MultiValue")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: MultiValueProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     clearValue: () => Unit,
     components: js.Any,
@@ -38,14 +44,11 @@ object ComponentsMultiValue
     options: OptionsType[js.Any],
     removeProps: AnonOnClick,
     selectOption: js.Any => Unit,
-    selectProps: typingsSlinky.reactSelect.selectMod.Props[js.Any],
-    setValue: (ValueType[js.Any], ActionTypes) => Unit,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), components = components.asInstanceOf[js.Any], cropWithEllipsis = cropWithEllipsis.asInstanceOf[js.Any], cx = js.Any.fromFunction3(cx), data = data.asInstanceOf[js.Any], getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isDisabled = isDisabled.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], removeProps = removeProps.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    selectProps: Props[js.Any],
+    setValue: (ValueType[js.Any], ActionTypes) => Unit
+  ): Builder = {
+    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), components = components.asInstanceOf[js.Any], cropWithEllipsis = cropWithEllipsis.asInstanceOf[js.Any], cx = js.Any.fromFunction3(cx), data = data.asInstanceOf[js.Any], getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isDisabled = isDisabled.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], removeProps = removeProps.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
+    new Builder(js.Array(this.component, __props.asInstanceOf[MultiValueProps[js.Any]]))
   }
-  type Props = MultiValueProps[js.Any]
 }
 

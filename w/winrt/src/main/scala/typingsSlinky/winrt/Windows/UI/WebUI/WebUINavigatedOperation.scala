@@ -6,8 +6,5 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.UI.WebUI.WebUINavigatedOperation")
 @js.native
-class WebUINavigatedOperation () extends IWebUINavigatedOperation {
-  /* CompleteClass */
-  override def getDeferral(): WebUINavigatedDeferral = js.native
-}
+class WebUINavigatedOperation () extends IWebUINavigatedOperation
 

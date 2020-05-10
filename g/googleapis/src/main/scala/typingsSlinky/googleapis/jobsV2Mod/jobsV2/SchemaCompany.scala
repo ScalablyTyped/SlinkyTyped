@@ -126,46 +126,233 @@ trait SchemaCompany extends js.Object {
 
 object SchemaCompany {
   @scala.inline
-  def apply(
-    careerPageLink: String = null,
-    companyInfoSources: js.Array[SchemaCompanyInfoSource] = null,
-    companySize: String = null,
-    disableLocationOptimization: js.UndefOr[Boolean] = js.undefined,
-    displayName: String = null,
-    distributorBillingCompanyId: String = null,
-    distributorCompanyId: String = null,
-    eeoText: String = null,
-    hiringAgency: js.UndefOr[Boolean] = js.undefined,
-    hqLocation: String = null,
-    imageUrl: String = null,
-    keywordSearchableCustomAttributes: js.Array[String] = null,
-    keywordSearchableCustomFields: js.Array[Double] = null,
-    name: String = null,
-    structuredCompanyHqLocation: SchemaJobLocation = null,
-    suspended: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
-    website: String = null
-  ): SchemaCompany = {
+  def apply(): SchemaCompany = {
     val __obj = js.Dynamic.literal()
-    if (careerPageLink != null) __obj.updateDynamic("careerPageLink")(careerPageLink.asInstanceOf[js.Any])
-    if (companyInfoSources != null) __obj.updateDynamic("companyInfoSources")(companyInfoSources.asInstanceOf[js.Any])
-    if (companySize != null) __obj.updateDynamic("companySize")(companySize.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableLocationOptimization)) __obj.updateDynamic("disableLocationOptimization")(disableLocationOptimization.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (distributorBillingCompanyId != null) __obj.updateDynamic("distributorBillingCompanyId")(distributorBillingCompanyId.asInstanceOf[js.Any])
-    if (distributorCompanyId != null) __obj.updateDynamic("distributorCompanyId")(distributorCompanyId.asInstanceOf[js.Any])
-    if (eeoText != null) __obj.updateDynamic("eeoText")(eeoText.asInstanceOf[js.Any])
-    if (!js.isUndefined(hiringAgency)) __obj.updateDynamic("hiringAgency")(hiringAgency.asInstanceOf[js.Any])
-    if (hqLocation != null) __obj.updateDynamic("hqLocation")(hqLocation.asInstanceOf[js.Any])
-    if (imageUrl != null) __obj.updateDynamic("imageUrl")(imageUrl.asInstanceOf[js.Any])
-    if (keywordSearchableCustomAttributes != null) __obj.updateDynamic("keywordSearchableCustomAttributes")(keywordSearchableCustomAttributes.asInstanceOf[js.Any])
-    if (keywordSearchableCustomFields != null) __obj.updateDynamic("keywordSearchableCustomFields")(keywordSearchableCustomFields.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (structuredCompanyHqLocation != null) __obj.updateDynamic("structuredCompanyHqLocation")(structuredCompanyHqLocation.asInstanceOf[js.Any])
-    if (!js.isUndefined(suspended)) __obj.updateDynamic("suspended")(suspended.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (website != null) __obj.updateDynamic("website")(website.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCompany]
   }
+  @scala.inline
+  implicit class SchemaCompanyOps[Self <: SchemaCompany] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCareerPageLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("careerPageLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCareerPageLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("careerPageLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompanyInfoSources(value: js.Array[SchemaCompanyInfoSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("companyInfoSources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompanyInfoSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("companyInfoSources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompanySize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("companySize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompanySize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("companySize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableLocationOptimization(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableLocationOptimization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableLocationOptimization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableLocationOptimization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistributorBillingCompanyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distributorBillingCompanyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistributorBillingCompanyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distributorBillingCompanyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistributorCompanyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distributorCompanyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistributorCompanyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distributorCompanyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEeoText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eeoText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEeoText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eeoText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHiringAgency(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiringAgency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHiringAgency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiringAgency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHqLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hqLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHqLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hqLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeywordSearchableCustomAttributes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keywordSearchableCustomAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeywordSearchableCustomAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keywordSearchableCustomAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeywordSearchableCustomFields(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keywordSearchableCustomFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeywordSearchableCustomFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keywordSearchableCustomFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStructuredCompanyHqLocation(value: SchemaJobLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structuredCompanyHqLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStructuredCompanyHqLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structuredCompanyHqLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuspended(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suspended")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuspended: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suspended")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebsite(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebsite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("website")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,14 +6,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** CSSPageRule is an interface representing a single CSS @page rule. It implements the CSSRule interface with a type value of 6 (CSSRule.PAGE_RULE). */
+@js.native
 trait CSSPageRule extends CSSRule {
-  val pseudoClass: java.lang.String
-  val selector: java.lang.String
-  var selectorText: java.lang.String
-  val style: org.scalajs.dom.raw.CSSStyleDeclaration
+  val pseudoClass: java.lang.String = js.native
+  val selector: java.lang.String = js.native
+  var selectorText: java.lang.String = js.native
+  val style: org.scalajs.dom.raw.CSSStyleDeclaration = js.native
 }
 
 @JSGlobal("CSSPageRule")
 @js.native
-object CSSPageRule extends Instantiable0[CSSPageRule]
+object CSSPageRule
+  extends Instantiable0[org.scalajs.dom.raw.CSSPageRule]
 

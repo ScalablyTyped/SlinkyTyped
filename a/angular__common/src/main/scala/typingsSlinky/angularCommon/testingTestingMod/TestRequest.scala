@@ -1,12 +1,11 @@
 package typingsSlinky.angularCommon.testingTestingMod
 
+import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.ErrorEvent
 import typingsSlinky.angularCommon.AnonStatusText
 import typingsSlinky.angularCommon.httpHttpMod.HttpEvent
 import typingsSlinky.angularCommon.httpMod.HttpRequest
 import typingsSlinky.rxjs.typesMod.Observer
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,8 +48,8 @@ class TestRequest protected () extends js.Object {
     *
     * Both successful and unsuccessful responses can be delivered via `flush()`.
     */
-  def flush(body: ArrayBuffer): Unit = js.native
-  def flush(body: ArrayBuffer, opts: AnonStatusText): Unit = js.native
+  def flush(body: js.typedarray.ArrayBuffer): Unit = js.native
+  def flush(body: js.typedarray.ArrayBuffer, opts: AnonStatusText): Unit = js.native
   def flush(body: Blob): Unit = js.native
   def flush(body: Blob, opts: AnonStatusText): Unit = js.native
 }

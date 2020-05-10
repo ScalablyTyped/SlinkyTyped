@@ -18,11 +18,41 @@ trait GetImagePipelineResponse extends js.Object {
 
 object GetImagePipelineResponse {
   @scala.inline
-  def apply(imagePipeline: ImagePipeline = null, requestId: NonEmptyString = null): GetImagePipelineResponse = {
+  def apply(): GetImagePipelineResponse = {
     val __obj = js.Dynamic.literal()
-    if (imagePipeline != null) __obj.updateDynamic("imagePipeline")(imagePipeline.asInstanceOf[js.Any])
-    if (requestId != null) __obj.updateDynamic("requestId")(requestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetImagePipelineResponse]
   }
+  @scala.inline
+  implicit class GetImagePipelineResponseOps[Self <: GetImagePipelineResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImagePipeline(value: ImagePipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePipeline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImagePipeline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePipeline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

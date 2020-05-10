@@ -22,11 +22,41 @@ trait SchemaWmxSite extends js.Object {
 
 object SchemaWmxSite {
   @scala.inline
-  def apply(permissionLevel: String = null, siteUrl: String = null): SchemaWmxSite = {
+  def apply(): SchemaWmxSite = {
     val __obj = js.Dynamic.literal()
-    if (permissionLevel != null) __obj.updateDynamic("permissionLevel")(permissionLevel.asInstanceOf[js.Any])
-    if (siteUrl != null) __obj.updateDynamic("siteUrl")(siteUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWmxSite]
   }
+  @scala.inline
+  implicit class SchemaWmxSiteOps[Self <: SchemaWmxSite] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPermissionLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissionLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSiteUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSiteUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

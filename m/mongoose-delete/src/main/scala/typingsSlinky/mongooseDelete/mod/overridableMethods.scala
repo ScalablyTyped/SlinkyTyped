@@ -16,18 +16,16 @@ trait overridableMethods extends js.Object
 
 object overridableMethods {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def count: typingsSlinky.mongooseDelete.mongooseDeleteStrings.count = "count".asInstanceOf[typingsSlinky.mongooseDelete.mongooseDeleteStrings.count]
   @scala.inline
-  def count: typingsSlinky.mongooseDelete.mongooseDeleteStrings.count = this.cast("count")
+  def countDocuments: typingsSlinky.mongooseDelete.mongooseDeleteStrings.countDocuments = "countDocuments".asInstanceOf[typingsSlinky.mongooseDelete.mongooseDeleteStrings.countDocuments]
   @scala.inline
-  def countDocuments: typingsSlinky.mongooseDelete.mongooseDeleteStrings.countDocuments = this.cast("countDocuments")
+  def find: typingsSlinky.mongooseDelete.mongooseDeleteStrings.find = "find".asInstanceOf[typingsSlinky.mongooseDelete.mongooseDeleteStrings.find]
   @scala.inline
-  def find: typingsSlinky.mongooseDelete.mongooseDeleteStrings.find = this.cast("find")
+  def findOne: typingsSlinky.mongooseDelete.mongooseDeleteStrings.findOne = "findOne".asInstanceOf[typingsSlinky.mongooseDelete.mongooseDeleteStrings.findOne]
   @scala.inline
-  def findOne: typingsSlinky.mongooseDelete.mongooseDeleteStrings.findOne = this.cast("findOne")
+  def findOneAndUpdate: typingsSlinky.mongooseDelete.mongooseDeleteStrings.findOneAndUpdate = "findOneAndUpdate".asInstanceOf[typingsSlinky.mongooseDelete.mongooseDeleteStrings.findOneAndUpdate]
   @scala.inline
-  def findOneAndUpdate: typingsSlinky.mongooseDelete.mongooseDeleteStrings.findOneAndUpdate = this.cast("findOneAndUpdate")
-  @scala.inline
-  def update: typingsSlinky.mongooseDelete.mongooseDeleteStrings.update = this.cast("update")
+  def update: typingsSlinky.mongooseDelete.mongooseDeleteStrings.update = "update".asInstanceOf[typingsSlinky.mongooseDelete.mongooseDeleteStrings.update]
 }
 

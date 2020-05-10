@@ -47,7 +47,14 @@ package object utilsMod {
   type DeepFreeze_ = js.Function1[/* obj */ js.Object, typingsSlinky.grommet.utilsMod.DeepReadonly[js.Object]]
   type DeepReadonly[T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {readonly [ K in keyof T ]: T[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias grommet.grommet/utils.DeepReadonly<T[K]> * / object : T[K]}
-    */ typingsSlinky.grommet.grommetStrings.DeepReadonly with js.Any
+    */ typingsSlinky.grommet.grommetStrings.DeepReadonly with org.scalablytyped.runtime.TopLevel[js.Any]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.grommet.grommetStrings.none
+    - typingsSlinky.grommet.utilsMod.EdgeSizeType
+    - typingsSlinky.grommet.AnonStart
+    - java.lang.String
+  */
+  type EdgeType = typingsSlinky.grommet.utilsMod._EdgeType | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.grommet.grommetStrings.none
     - typingsSlinky.grommet.grommetStrings.xsmall
@@ -66,12 +73,7 @@ package object utilsMod {
   type FillType = typingsSlinky.grommet.utilsMod._FillType | scala.Boolean
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.grommet.grommetStrings.none
-    - typingsSlinky.grommet.grommetStrings.xxsmall
-    - typingsSlinky.grommet.grommetStrings.xsmall
-    - typingsSlinky.grommet.grommetStrings.small
-    - typingsSlinky.grommet.grommetStrings.medium
-    - typingsSlinky.grommet.grommetStrings.large
-    - typingsSlinky.grommet.grommetStrings.xlarge
+    - typingsSlinky.grommet.utilsMod.EdgeSizeType
     - java.lang.String
   */
   type GapType = typingsSlinky.grommet.utilsMod._GapType | java.lang.String
@@ -81,23 +83,12 @@ package object utilsMod {
     /* event */ slinky.web.SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLElement], 
     scala.Unit
   ]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.grommet.grommetStrings.none
-    - typingsSlinky.grommet.grommetStrings.xxsmall
-    - typingsSlinky.grommet.grommetStrings.xsmall
-    - typingsSlinky.grommet.grommetStrings.small
-    - typingsSlinky.grommet.grommetStrings.medium
-    - typingsSlinky.grommet.grommetStrings.large
-    - typingsSlinky.grommet.grommetStrings.xlarge
-    - typingsSlinky.grommet.AnonBottom
-    - java.lang.String
-  */
-  type MarginType = typingsSlinky.grommet.utilsMod._MarginType | java.lang.String
+  type MarginType = typingsSlinky.grommet.utilsMod.EdgeType
   type NonUndefined[T] = T
   type NonUndefinedProps[T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? grommet.grommet/utils.NonUndefined<T[K]>}
-    */ typingsSlinky.grommet.grommetStrings.NonUndefinedProps with T
-  type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
+    */ typingsSlinky.grommet.grommetStrings.NonUndefinedProps with org.scalablytyped.runtime.TopLevel[T]
+  type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.grommet.grommetStrings.weak
     - typingsSlinky.grommet.grommetStrings.medium
@@ -108,18 +99,7 @@ package object utilsMod {
     - scala.Double
   */
   type OpacityType = typingsSlinky.grommet.utilsMod._OpacityType | java.lang.String | scala.Double
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.grommet.grommetStrings.none
-    - typingsSlinky.grommet.grommetStrings.xxsmall
-    - typingsSlinky.grommet.grommetStrings.xsmall
-    - typingsSlinky.grommet.grommetStrings.small
-    - typingsSlinky.grommet.grommetStrings.medium
-    - typingsSlinky.grommet.grommetStrings.large
-    - typingsSlinky.grommet.grommetStrings.xlarge
-    - typingsSlinky.grommet.AnonBottom
-    - java.lang.String
-  */
-  type PadType = typingsSlinky.grommet.utilsMod._PadType | java.lang.String
+  type PadType = typingsSlinky.grommet.utilsMod.EdgeType
   type PlaceHolderType = java.lang.String | slinky.core.facade.ReactElement | slinky.core.TagMod[scala.Any]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.grommet.grommetStrings.a
@@ -209,6 +189,7 @@ package object utilsMod {
     - typingsSlinky.grommet.grommetStrings.ruby
     - typingsSlinky.grommet.grommetStrings.s
     - typingsSlinky.grommet.grommetStrings.samp
+    - typingsSlinky.grommet.grommetStrings.slot
     - typingsSlinky.grommet.grommetStrings.script
     - typingsSlinky.grommet.grommetStrings.section
     - typingsSlinky.grommet.grommetStrings.select
@@ -299,4 +280,16 @@ package object utilsMod {
     - typingsSlinky.react.mod.ComponentType[js.Any]
   */
   type PolymorphicType = typingsSlinky.grommet.utilsMod._PolymorphicType | slinky.core.ReactComponentClass[js.Any]
+  /* Rewritten from type alias, can be one of: 
+    - scala.Boolean
+    - typingsSlinky.grommet.grommetStrings.xsmall
+    - typingsSlinky.grommet.grommetStrings.small
+    - typingsSlinky.grommet.grommetStrings.medium
+    - typingsSlinky.grommet.grommetStrings.large
+    - typingsSlinky.grommet.grommetStrings.xlarge
+    - typingsSlinky.grommet.grommetStrings.full
+    - java.lang.String
+    - typingsSlinky.grommet.AnonCorner
+  */
+  type RoundType = typingsSlinky.grommet.utilsMod._RoundType | scala.Boolean | java.lang.String
 }

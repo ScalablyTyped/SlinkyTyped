@@ -1,7 +1,7 @@
 package typingsSlinky.typesettable
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.typesettable.abstractMeasurerMod.IDimensions
 import typingsSlinky.typesettable.contextsMod.IPenFactoryContext
 import typingsSlinky.typesettable.contextsMod.IRulerFactoryContext
@@ -23,9 +23,9 @@ object htmlMod extends js.Object {
       * @param className - added to new text blocks
       * @param addTitle - enable title attribute to be added to new text blocks.
       */
-    def this(element: org.scalajs.dom.raw.HTMLElement) = this()
-    def this(element: org.scalajs.dom.raw.HTMLElement, className: String) = this()
-    def this(element: org.scalajs.dom.raw.HTMLElement, className: String, addTitle: Boolean) = this()
+    def this(element: HTMLElement) = this()
+    def this(element: HTMLElement, className: String) = this()
+    def this(element: HTMLElement, className: String, addTitle: Boolean) = this()
     var addTitle: js.Any = js.native
     var className: js.Any = js.native
     var element: js.Any = js.native
@@ -50,15 +50,15 @@ object htmlMod extends js.Object {
       *
       * Returns the new element.
       */
-    def append(element: Element, tagName: String, classNames: String*): org.scalajs.dom.raw.HTMLElement = js.native
+    def append(element: Element, tagName: String, classNames: String*): HTMLElement = js.native
     /**
       * Creates and returns a new HTMLElement with the attached classnames.
       */
-    def create(tagName: String, classNames: String*): org.scalajs.dom.raw.HTMLElement = js.native
+    def create(tagName: String, classNames: String*): HTMLElement = js.native
     /**
       * Returns the width/height of HTMLElement's bounding box
       */
-    def getDimensions(element: org.scalajs.dom.raw.HTMLElement): IDimensions = js.native
+    def getDimensions(element: HTMLElement): IDimensions = js.native
   }
   
 }

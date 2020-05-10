@@ -16,18 +16,16 @@ trait HashAlgorithm extends js.Object
 
 object HashAlgorithm {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def md5: typingsSlinky.arangodb.arangodbStrings.md5 = "md5".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.md5]
   @scala.inline
-  def md5: typingsSlinky.arangodb.arangodbStrings.md5 = this.cast("md5")
+  def sha1: typingsSlinky.arangodb.arangodbStrings.sha1 = "sha1".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.sha1]
   @scala.inline
-  def sha1: typingsSlinky.arangodb.arangodbStrings.sha1 = this.cast("sha1")
+  def sha224: typingsSlinky.arangodb.arangodbStrings.sha224 = "sha224".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.sha224]
   @scala.inline
-  def sha224: typingsSlinky.arangodb.arangodbStrings.sha224 = this.cast("sha224")
+  def sha256: typingsSlinky.arangodb.arangodbStrings.sha256 = "sha256".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.sha256]
   @scala.inline
-  def sha256: typingsSlinky.arangodb.arangodbStrings.sha256 = this.cast("sha256")
+  def sha384: typingsSlinky.arangodb.arangodbStrings.sha384 = "sha384".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.sha384]
   @scala.inline
-  def sha384: typingsSlinky.arangodb.arangodbStrings.sha384 = this.cast("sha384")
-  @scala.inline
-  def sha512: typingsSlinky.arangodb.arangodbStrings.sha512 = this.cast("sha512")
+  def sha512: typingsSlinky.arangodb.arangodbStrings.sha512 = "sha512".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.sha512]
 }
 

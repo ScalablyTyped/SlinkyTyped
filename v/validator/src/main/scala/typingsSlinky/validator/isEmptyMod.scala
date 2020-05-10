@@ -1,6 +1,5 @@
 package typingsSlinky.validator
 
-import typingsSlinky.validator.mod.validator.IsEmptyOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,7 @@ object isEmptyMod extends js.Object {
     * @param [options] - Options
     */
   def default(str: String): Boolean = js.native
-  def default(str: String, options: IsEmptyOptions): Boolean = js.native
+  def default(str: String, options: typingsSlinky.validator.mod.validator.IsEmptyOptions): Boolean = js.native
+  type IsEmptyOptions = typingsSlinky.validator.mod.validator.IsEmptyOptions
 }
 

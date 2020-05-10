@@ -5,7 +5,6 @@ import typingsSlinky.rxjs.operatorMod.Operator
 import typingsSlinky.rxjs.subscriberMod.Subscriber
 import typingsSlinky.rxjs.typesMod.ObservableInput
 import typingsSlinky.rxjs.typesMod.ObservedValueOf
-import typingsSlinky.rxjs.typesMod.TeardownLogic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,8 +15,6 @@ object zipMod extends js.Object {
   @js.native
   class ZipOperator[T, R] () extends Operator[T, R] {
     def this(resultSelector: js.Function1[/* repeated */ js.Any, R]) = this()
-    /* CompleteClass */
-    override def call(subscriber: Subscriber[R], source: js.Any): TeardownLogic = js.native
     def resultSelector(values: js.Any*): R = js.native
   }
   

@@ -14,10 +14,29 @@ trait UpdateApiCacheResponse extends js.Object {
 
 object UpdateApiCacheResponse {
   @scala.inline
-  def apply(apiCache: ApiCache = null): UpdateApiCacheResponse = {
+  def apply(): UpdateApiCacheResponse = {
     val __obj = js.Dynamic.literal()
-    if (apiCache != null) __obj.updateDynamic("apiCache")(apiCache.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateApiCacheResponse]
   }
+  @scala.inline
+  implicit class UpdateApiCacheResponseOps[Self <: UpdateApiCacheResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiCache(value: ApiCache): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiCache")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

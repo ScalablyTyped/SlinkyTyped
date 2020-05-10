@@ -38,20 +38,77 @@ trait SchemaMethodMap extends js.Object {
 
 object SchemaMethodMap {
   @scala.inline
-  def apply(
-    create: String = null,
-    delete: String = null,
-    get: String = null,
-    setIamPolicy: String = null,
-    update: String = null
-  ): SchemaMethodMap = {
+  def apply(): SchemaMethodMap = {
     val __obj = js.Dynamic.literal()
-    if (create != null) __obj.updateDynamic("create")(create.asInstanceOf[js.Any])
-    if (delete != null) __obj.updateDynamic("delete")(delete.asInstanceOf[js.Any])
-    if (get != null) __obj.updateDynamic("get")(get.asInstanceOf[js.Any])
-    if (setIamPolicy != null) __obj.updateDynamic("setIamPolicy")(setIamPolicy.asInstanceOf[js.Any])
-    if (update != null) __obj.updateDynamic("update")(update.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMethodMap]
   }
+  @scala.inline
+  implicit class SchemaMethodMapOps[Self <: SchemaMethodMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelete(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetIamPolicy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetIamPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

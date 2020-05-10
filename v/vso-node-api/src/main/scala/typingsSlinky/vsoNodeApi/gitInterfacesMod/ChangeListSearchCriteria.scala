@@ -4,59 +4,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChangeListSearchCriteria extends js.Object {
   /**
     * If provided, a version descriptor to compare against base
     */
-  var compareVersion: String
+  var compareVersion: String = js.native
   /**
     * If true, don't include delete history entries
     */
-  var excludeDeletes: Boolean
+  var excludeDeletes: Boolean = js.native
   /**
     * Whether or not to follow renames for the given item being queried
     */
-  var followRenames: Boolean
+  var followRenames: Boolean = js.native
   /**
     * If provided, only include history entries created after this date (string)
     */
-  var fromDate: String
+  var fromDate: String = js.native
   /**
     * If provided, a version descriptor for the earliest change list to include
     */
-  var fromVersion: String
+  var fromVersion: String = js.native
   /**
     * Path of item to search under. If the itemPaths memebr is used then it will take precedence over this.
     */
-  var itemPath: String
+  var itemPath: String = js.native
   /**
     * List of item paths to search under. If this member is used then itemPath will be ignored.
     */
-  var itemPaths: js.Array[String]
+  var itemPaths: js.Array[String] = js.native
   /**
     * Version of the items to search
     */
-  var itemVersion: String
+  var itemVersion: String = js.native
   /**
     * Number of results to skip (used when clicking more...)
     */
-  var skip: Double
+  var skip: Double = js.native
   /**
     * If provided, only include history entries created before this date (string)
     */
-  var toDate: String
+  var toDate: String = js.native
   /**
     * If provided, a version descriptor for the latest change list to include
     */
-  var toVersion: String
+  var toVersion: String = js.native
   /**
     * If provided, the maximum number of history entries to return
     */
-  var top: Double
+  var top: Double = js.native
   /**
     * Alias or display name of user who made the changes
     */
-  var user: String
+  var user: String = js.native
 }
 
 object ChangeListSearchCriteria {
@@ -77,8 +78,93 @@ object ChangeListSearchCriteria {
     user: String
   ): ChangeListSearchCriteria = {
     val __obj = js.Dynamic.literal(compareVersion = compareVersion.asInstanceOf[js.Any], excludeDeletes = excludeDeletes.asInstanceOf[js.Any], followRenames = followRenames.asInstanceOf[js.Any], fromDate = fromDate.asInstanceOf[js.Any], fromVersion = fromVersion.asInstanceOf[js.Any], itemPath = itemPath.asInstanceOf[js.Any], itemPaths = itemPaths.asInstanceOf[js.Any], itemVersion = itemVersion.asInstanceOf[js.Any], skip = skip.asInstanceOf[js.Any], toDate = toDate.asInstanceOf[js.Any], toVersion = toVersion.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ChangeListSearchCriteria]
   }
+  @scala.inline
+  implicit class ChangeListSearchCriteriaOps[Self <: ChangeListSearchCriteria] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompareVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcludeDeletes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeDeletes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFollowRenames(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followRenames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFromDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFromVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemPaths(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSkip(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

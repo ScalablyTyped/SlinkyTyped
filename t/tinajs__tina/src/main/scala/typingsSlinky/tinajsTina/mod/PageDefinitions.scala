@@ -1,6 +1,6 @@
 package typingsSlinky.tinajsTina.mod
 
-import typingsSlinky.tinajsTina.PartialPageDefinitionsBeforeLoad
+import typingsSlinky.tinajsTina.PartialPageDefinitions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,6 @@ trait PageDefinitions
      with PageEvents
      with PageHooks {
   @JSName("mixins")
-  var mixins_PageDefinitions: js.Array[PartialPageDefinitionsBeforeLoad] = js.native
+  var mixins_PageDefinitions: js.Array[PartialPageDefinitions] = js.native
 }
 

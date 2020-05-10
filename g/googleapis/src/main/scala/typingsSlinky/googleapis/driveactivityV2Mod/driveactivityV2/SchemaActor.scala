@@ -33,20 +33,77 @@ trait SchemaActor extends js.Object {
 
 object SchemaActor {
   @scala.inline
-  def apply(
-    administrator: SchemaAdministrator = null,
-    anonymous: SchemaAnonymousUser = null,
-    impersonation: SchemaImpersonation = null,
-    system: SchemaSystemEvent = null,
-    user: SchemaUser = null
-  ): SchemaActor = {
+  def apply(): SchemaActor = {
     val __obj = js.Dynamic.literal()
-    if (administrator != null) __obj.updateDynamic("administrator")(administrator.asInstanceOf[js.Any])
-    if (anonymous != null) __obj.updateDynamic("anonymous")(anonymous.asInstanceOf[js.Any])
-    if (impersonation != null) __obj.updateDynamic("impersonation")(impersonation.asInstanceOf[js.Any])
-    if (system != null) __obj.updateDynamic("system")(system.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaActor]
   }
+  @scala.inline
+  implicit class SchemaActorOps[Self <: SchemaActor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdministrator(value: SchemaAdministrator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("administrator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdministrator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("administrator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnonymous(value: SchemaAnonymousUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anonymous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnonymous: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anonymous")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImpersonation(value: SchemaImpersonation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("impersonation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImpersonation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("impersonation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSystem(value: SchemaSystemEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("system")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("system")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: SchemaUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

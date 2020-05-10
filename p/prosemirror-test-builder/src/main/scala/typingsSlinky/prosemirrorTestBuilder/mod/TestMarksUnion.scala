@@ -15,16 +15,14 @@ trait TestMarksUnion extends js.Object
 
 object TestMarksUnion {
   @scala.inline
-  def a: typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.a = this.cast("a")
+  def a: typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.a = "a".asInstanceOf[typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.a]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def code: typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.code = "code".asInstanceOf[typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.code]
   @scala.inline
-  def code: typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.code = this.cast("code")
+  def em: typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.em = "em".asInstanceOf[typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.em]
   @scala.inline
-  def em: typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.em = this.cast("em")
+  def link: typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.link = "link".asInstanceOf[typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.link]
   @scala.inline
-  def link: typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.link = this.cast("link")
-  @scala.inline
-  def strong: typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.strong = this.cast("strong")
+  def strong: typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.strong = "strong".asInstanceOf[typingsSlinky.prosemirrorTestBuilder.prosemirrorTestBuilderStrings.strong]
 }
 

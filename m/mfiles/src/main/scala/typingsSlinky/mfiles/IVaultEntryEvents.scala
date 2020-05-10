@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IVaultEntryEvents extends IEvents {
   var OnAddObjectFile: js.UndefOr[
     js.Function2[
@@ -12,26 +13,26 @@ trait IVaultEntryEvents extends IEvents {
       /* sourceObjectFile */ ISourceObjectFile, 
       Null | Boolean | AnonFinally
     ]
-  ] = js.undefined
-  var OnAddObjectToFavorites: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnError]] = js.undefined
-  var OnAddObjectsToFavorites: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonOnError]] = js.undefined
-  var OnChangeVaultLanguage: js.UndefOr[js.Function1[/* languageID */ Double, Null | Boolean | AnonOnError]] = js.undefined
+  ] = js.native
+  var OnAddObjectToFavorites: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnError]] = js.native
+  var OnAddObjectsToFavorites: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonOnError]] = js.native
+  var OnChangeVaultLanguage: js.UndefOr[js.Function1[/* languageID */ Double, Null | Boolean | AnonOnError]] = js.native
   var OnCheckInObject: js.UndefOr[
     js.Function2[
       /* objVer */ IObjVer, 
       /* propertyValues */ IPropertyValues, 
       Null | Boolean | AnonOnSuccess
     ]
-  ] = js.undefined
+  ] = js.native
   var OnCheckInObjects: js.UndefOr[
     js.Function2[
       /* objVers */ IObjVers, 
       /* propertyValues */ IPropertyValues, 
       Null | Boolean | AnonFinallyOnError
     ]
-  ] = js.undefined
-  var OnCheckOutObject: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnSuccess]] = js.undefined
-  var OnCheckOutObjects: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonFinallyOnError]] = js.undefined
+  ] = js.native
+  var OnCheckOutObject: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnSuccess]] = js.native
+  var OnCheckOutObjects: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonFinallyOnError]] = js.native
   var OnCreateObject: js.UndefOr[
     js.Function6[
       /* objectType */ Double, 
@@ -42,13 +43,13 @@ trait IVaultEntryEvents extends IEvents {
       /* singleFileRequested */ Boolean, 
       Null | Boolean | AnonOnSuccess
     ]
-  ] = js.undefined
-  var OnDestroyObject: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnError]] = js.undefined
-  var OnDestroyObjectVersion: js.UndefOr[js.Function1[/* objVer */ IObjVer, Null | Boolean | AnonOnError]] = js.undefined
-  var OnDestroyObjectVersions: js.UndefOr[js.Function1[/* objVers */ IObjVers, Null | Boolean | AnonOnError]] = js.undefined
-  var OnDestroyObjects: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonOnError]] = js.undefined
-  var OnLogOut: js.UndefOr[js.Function0[Null | Boolean | AnonOnError]] = js.undefined
-  var OnLoggedIn: js.UndefOr[js.Function0[Unit]] = js.undefined
+  ] = js.native
+  var OnDestroyObject: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnError]] = js.native
+  var OnDestroyObjectVersion: js.UndefOr[js.Function1[/* objVer */ IObjVer, Null | Boolean | AnonOnError]] = js.native
+  var OnDestroyObjectVersions: js.UndefOr[js.Function1[/* objVers */ IObjVers, Null | Boolean | AnonOnError]] = js.native
+  var OnDestroyObjects: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonOnError]] = js.native
+  var OnLogOut: js.UndefOr[js.Function0[Null | Boolean | AnonOnError]] = js.native
+  var OnLoggedIn: js.UndefOr[js.Function0[Unit]] = js.native
   var OnModifyObjectVersionLabels: js.UndefOr[
     js.Function5[
       /* objVer */ IObjVer, 
@@ -58,29 +59,29 @@ trait IVaultEntryEvents extends IEvents {
       /* singleLabelRequired */ Boolean, 
       Null | Boolean | AnonOnError
     ]
-  ] = js.undefined
-  var OnNotification: js.UndefOr[js.Function3[/* id */ String, /* data1 */ js.Any, /* data2 */ js.Any, _]] = js.undefined
-  var OnObjectAddedToFavorites: js.UndefOr[js.Function1[/* objID */ IObjID, Unit]] = js.undefined
-  var OnObjectCheckedIn: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.undefined
-  var OnObjectCheckedOut: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.undefined
-  var OnObjectCheckoutUndone: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.undefined
-  var OnObjectCheckoutsUndone: js.UndefOr[js.Function1[/* objectVersions */ IObjectVersions, Unit]] = js.undefined
-  var OnObjectCreated: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.undefined
-  var OnObjectDestroyed: js.UndefOr[js.Function1[/* objID */ IObjID, Unit]] = js.undefined
+  ] = js.native
+  var OnNotification: js.UndefOr[js.Function3[/* id */ String, /* data1 */ js.Any, /* data2 */ js.Any, _]] = js.native
+  var OnObjectAddedToFavorites: js.UndefOr[js.Function1[/* objID */ IObjID, Unit]] = js.native
+  var OnObjectCheckedIn: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.native
+  var OnObjectCheckedOut: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.native
+  var OnObjectCheckoutUndone: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.native
+  var OnObjectCheckoutsUndone: js.UndefOr[js.Function1[/* objectVersions */ IObjectVersions, Unit]] = js.native
+  var OnObjectCreated: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.native
+  var OnObjectDestroyed: js.UndefOr[js.Function1[/* objID */ IObjID, Unit]] = js.native
   var OnObjectFileAdded: js.UndefOr[
     js.Function2[/* objectVersion */ IObjectVersion, /* objectFile */ IObjectFile, Unit]
-  ] = js.undefined
-  var OnObjectFileRemoved: js.UndefOr[js.Function2[/* objectVersion */ IObjectVersion, /* fileVer */ IFileVer, Unit]] = js.undefined
+  ] = js.native
+  var OnObjectFileRemoved: js.UndefOr[js.Function2[/* objectVersion */ IObjectVersion, /* fileVer */ IFileVer, Unit]] = js.native
   var OnObjectFileRenamed: js.UndefOr[
     js.Function2[/* objectVersion */ IObjectVersion, /* objectFile */ IObjectFile, Unit]
-  ] = js.undefined
-  var OnObjectLevelPropertySet: js.UndefOr[js.Function2[/* objID */ IObjID, /* propertyValue */ IPropertyValue, Unit]] = js.undefined
-  var OnObjectOfflineAvailabilityRemoved: js.UndefOr[js.Function1[/* objID */ IObjID, Unit]] = js.undefined
-  var OnObjectOfflineAvailabilitySet: js.UndefOr[js.Function1[/* objID */ IObjID, Unit]] = js.undefined
-  var OnObjectRemoved: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.undefined
-  var OnObjectRemovedFromFavorites: js.UndefOr[js.Function1[/* objID */ IObjID, Unit]] = js.undefined
-  var OnObjectUndeleted: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.undefined
-  var OnObjectVersionDestroyed: js.UndefOr[js.Function1[/* objVer */ IObjVer, Unit]] = js.undefined
+  ] = js.native
+  var OnObjectLevelPropertySet: js.UndefOr[js.Function2[/* objID */ IObjID, /* propertyValue */ IPropertyValue, Unit]] = js.native
+  var OnObjectOfflineAvailabilityRemoved: js.UndefOr[js.Function1[/* objID */ IObjID, Unit]] = js.native
+  var OnObjectOfflineAvailabilitySet: js.UndefOr[js.Function1[/* objID */ IObjID, Unit]] = js.native
+  var OnObjectRemoved: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.native
+  var OnObjectRemovedFromFavorites: js.UndefOr[js.Function1[/* objID */ IObjID, Unit]] = js.native
+  var OnObjectUndeleted: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.native
+  var OnObjectVersionDestroyed: js.UndefOr[js.Function1[/* objVer */ IObjVer, Unit]] = js.native
   var OnObjectVersionLabelsModified: js.UndefOr[
     js.Function4[
       /* objVer */ IObjVer, 
@@ -89,26 +90,26 @@ trait IVaultEntryEvents extends IEvents {
       /* labelIDs */ IIDs, 
       Unit
     ]
-  ] = js.undefined
-  var OnObjectVersionPermissionsSet: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.undefined
-  var OnObjectVersionRolledBack: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.undefined
-  var OnObjectVersionsDestroyed: js.UndefOr[js.Function1[/* objVers */ IObjVers, Unit]] = js.undefined
-  var OnObjectsAddedToFavorites: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Unit]] = js.undefined
-  var OnObjectsCheckedIn: js.UndefOr[js.Function1[/* objectVersions */ IObjectVersions, Unit]] = js.undefined
-  var OnObjectsCheckedOut: js.UndefOr[js.Function1[/* objectVersions */ IObjectVersions, Unit]] = js.undefined
-  var OnObjectsDestroyed: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Unit]] = js.undefined
-  var OnObjectsRemoved: js.UndefOr[js.Function1[/* objectVersions */ IObjectVersions, Unit]] = js.undefined
-  var OnObjectsRemovedFromFavorites: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Unit]] = js.undefined
-  var OnPropertiesOfObjectVersionSet: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.undefined
-  var OnPropertiesOfObjectVersionsSet: js.UndefOr[js.Function1[/* objectVersions */ IObjectVersions, Unit]] = js.undefined
-  var OnRemoveObject: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnSuccess]] = js.undefined
+  ] = js.native
+  var OnObjectVersionPermissionsSet: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.native
+  var OnObjectVersionRolledBack: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.native
+  var OnObjectVersionsDestroyed: js.UndefOr[js.Function1[/* objVers */ IObjVers, Unit]] = js.native
+  var OnObjectsAddedToFavorites: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Unit]] = js.native
+  var OnObjectsCheckedIn: js.UndefOr[js.Function1[/* objectVersions */ IObjectVersions, Unit]] = js.native
+  var OnObjectsCheckedOut: js.UndefOr[js.Function1[/* objectVersions */ IObjectVersions, Unit]] = js.native
+  var OnObjectsDestroyed: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Unit]] = js.native
+  var OnObjectsRemoved: js.UndefOr[js.Function1[/* objectVersions */ IObjectVersions, Unit]] = js.native
+  var OnObjectsRemovedFromFavorites: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Unit]] = js.native
+  var OnPropertiesOfObjectVersionSet: js.UndefOr[js.Function1[/* objectVersion */ IObjectVersion, Unit]] = js.native
+  var OnPropertiesOfObjectVersionsSet: js.UndefOr[js.Function1[/* objectVersions */ IObjectVersions, Unit]] = js.native
+  var OnRemoveObject: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnSuccess]] = js.native
   var OnRemoveObjectFile: js.UndefOr[
     js.Function2[/* objVer */ IObjVer, /* fileVer */ IFileVer, Null | Boolean | AnonOnSuccess]
-  ] = js.undefined
-  var OnRemoveObjectFromFavorites: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnError]] = js.undefined
-  var OnRemoveObjectOfflineAvailability: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnError]] = js.undefined
-  var OnRemoveObjects: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonFinallyOnError]] = js.undefined
-  var OnRemoveObjectsFromFavorites: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonOnError]] = js.undefined
+  ] = js.native
+  var OnRemoveObjectFromFavorites: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnError]] = js.native
+  var OnRemoveObjectOfflineAvailability: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnError]] = js.native
+  var OnRemoveObjects: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonFinallyOnError]] = js.native
+  var OnRemoveObjectsFromFavorites: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonOnError]] = js.native
   var OnRenameObjectFile: js.UndefOr[
     js.Function4[
       /* objVer */ IObjVer, 
@@ -117,12 +118,12 @@ trait IVaultEntryEvents extends IEvents {
       /* newExtension */ Null | ITypedValue, 
       Null | Boolean | AnonFinally
     ]
-  ] = js.undefined
-  var OnRollBackObjectVersion: js.UndefOr[js.Function1[/* objVer */ IObjVer, Null | Boolean | AnonOnSuccess]] = js.undefined
+  ] = js.native
+  var OnRollBackObjectVersion: js.UndefOr[js.Function1[/* objVer */ IObjVer, Null | Boolean | AnonOnSuccess]] = js.native
   var OnSetObjectLevelProperty: js.UndefOr[
     js.Function2[/* objID */ IObjID, /* propertyValue */ IPropertyValue, Null | Boolean | AnonOnError]
-  ] = js.undefined
-  var OnSetObjectOfflineAvailability: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnError]] = js.undefined
+  ] = js.native
+  var OnSetObjectOfflineAvailability: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnError]] = js.native
   var OnSetObjectVersionPermissions: js.UndefOr[
     js.Function3[
       /* objVer */ IObjVer, 
@@ -130,7 +131,7 @@ trait IVaultEntryEvents extends IEvents {
       /* accessControlList */ IAccessControlList, 
       Null | Boolean | AnonOnSuccess
     ]
-  ] = js.undefined
+  ] = js.native
   var OnSetPropertiesOfObjectVersion: js.UndefOr[
     js.Function3[
       /* setPropertiesParams */ ISetPropertiesParams, 
@@ -138,7 +139,7 @@ trait IVaultEntryEvents extends IEvents {
       /* singlePropertyRemove */ Boolean, 
       Null | Boolean | AnonOnSuccess
     ]
-  ] = js.undefined
+  ] = js.native
   var OnSetPropertiesOfObjectVersions: js.UndefOr[
     js.Function3[
       /* setPropertiesParamsOfMultipleObjects */ ISetPropertiesParamsOfMultipleObjects, 
@@ -146,168 +147,893 @@ trait IVaultEntryEvents extends IEvents {
       /* singlePropertyRemove */ Boolean, 
       Null | Boolean | AnonFinallyOnError
     ]
-  ] = js.undefined
-  var OnStarted: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var OnStop: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var OnSwitchToOfflineMode: js.UndefOr[js.Function0[Null | Boolean | AnonOnError]] = js.undefined
-  var OnSwitchToOnlineMode: js.UndefOr[js.Function0[Null | Boolean | AnonOnError]] = js.undefined
-  var OnSwitchedToOfflineMode: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var OnSwitchedToOnlineMode: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var OnUndeleteObject: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnSuccess]] = js.undefined
-  var OnUndeleteObjects: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonFinallyOnError]] = js.undefined
-  var OnUndoObjectCheckout: js.UndefOr[js.Function1[/* objVer */ IObjVer, Null | Boolean | AnonOnSuccess]] = js.undefined
-  var OnUndoObjectCheckouts: js.UndefOr[js.Function1[/* objVers */ IObjVers, Null | Boolean | AnonFinallyOnError]] = js.undefined
-  var OnVaultLanguageChanged: js.UndefOr[js.Function1[/* languageID */ Double, Unit]] = js.undefined
+  ] = js.native
+  var OnStarted: js.UndefOr[js.Function0[Unit]] = js.native
+  var OnStop: js.UndefOr[js.Function0[Unit]] = js.native
+  var OnSwitchToOfflineMode: js.UndefOr[js.Function0[Null | Boolean | AnonOnError]] = js.native
+  var OnSwitchToOnlineMode: js.UndefOr[js.Function0[Null | Boolean | AnonOnError]] = js.native
+  var OnSwitchedToOfflineMode: js.UndefOr[js.Function0[Unit]] = js.native
+  var OnSwitchedToOnlineMode: js.UndefOr[js.Function0[Unit]] = js.native
+  var OnUndeleteObject: js.UndefOr[js.Function1[/* objID */ IObjID, Null | Boolean | AnonOnSuccess]] = js.native
+  var OnUndeleteObjects: js.UndefOr[js.Function1[/* objIDs */ IObjIDs, Null | Boolean | AnonFinallyOnError]] = js.native
+  var OnUndoObjectCheckout: js.UndefOr[js.Function1[/* objVer */ IObjVer, Null | Boolean | AnonOnSuccess]] = js.native
+  var OnUndoObjectCheckouts: js.UndefOr[js.Function1[/* objVers */ IObjVers, Null | Boolean | AnonFinallyOnError]] = js.native
+  var OnVaultLanguageChanged: js.UndefOr[js.Function1[/* languageID */ Double, Unit]] = js.native
 }
 
 object IVaultEntryEvents {
   @scala.inline
-  def apply(
-    Register: (Event, js.Function) => Double,
-    Unregister: Double => Unit,
-    OnAddObjectFile: (/* objVer */ IObjVer, /* sourceObjectFile */ ISourceObjectFile) => Null | Boolean | AnonFinally = null,
-    OnAddObjectToFavorites: /* objID */ IObjID => Null | Boolean | AnonOnError = null,
-    OnAddObjectsToFavorites: /* objIDs */ IObjIDs => Null | Boolean | AnonOnError = null,
-    OnChangeVaultLanguage: /* languageID */ Double => Null | Boolean | AnonOnError = null,
-    OnCheckInObject: (/* objVer */ IObjVer, /* propertyValues */ IPropertyValues) => Null | Boolean | AnonOnSuccess = null,
-    OnCheckInObjects: (/* objVers */ IObjVers, /* propertyValues */ IPropertyValues) => Null | Boolean | AnonFinallyOnError = null,
-    OnCheckOutObject: /* objID */ IObjID => Null | Boolean | AnonOnSuccess = null,
-    OnCheckOutObjects: /* objIDs */ IObjIDs => Null | Boolean | AnonFinallyOnError = null,
-    OnCreateObject: (/* objectType */ Double, /* propertyValues */ IPropertyValues, /* sourceObjectFiles */ ISourceObjectFiles, /* accessControlList */ IAccessControlList, /* checkInRequested */ Boolean, /* singleFileRequested */ Boolean) => Null | Boolean | AnonOnSuccess = null,
-    OnDestroyObject: /* objID */ IObjID => Null | Boolean | AnonOnError = null,
-    OnDestroyObjectVersion: /* objVer */ IObjVer => Null | Boolean | AnonOnError = null,
-    OnDestroyObjectVersions: /* objVers */ IObjVers => Null | Boolean | AnonOnError = null,
-    OnDestroyObjects: /* objIDs */ IObjIDs => Null | Boolean | AnonOnError = null,
-    OnLogOut: () => Null | Boolean | AnonOnError = null,
-    OnLoggedIn: () => Unit = null,
-    OnModifyObjectVersionLabels: (/* objVer */ IObjVer, /* clearFromOtherVersions */ Boolean, /* append */ Boolean, /* labelIDs */ IIDs, /* singleLabelRequired */ Boolean) => Null | Boolean | AnonOnError = null,
-    OnNotification: (/* id */ String, /* data1 */ js.Any, /* data2 */ js.Any) => _ = null,
-    OnObjectAddedToFavorites: /* objID */ IObjID => Unit = null,
-    OnObjectCheckedIn: /* objectVersion */ IObjectVersion => Unit = null,
-    OnObjectCheckedOut: /* objectVersion */ IObjectVersion => Unit = null,
-    OnObjectCheckoutUndone: /* objectVersion */ IObjectVersion => Unit = null,
-    OnObjectCheckoutsUndone: /* objectVersions */ IObjectVersions => Unit = null,
-    OnObjectCreated: /* objectVersion */ IObjectVersion => Unit = null,
-    OnObjectDestroyed: /* objID */ IObjID => Unit = null,
-    OnObjectFileAdded: (/* objectVersion */ IObjectVersion, /* objectFile */ IObjectFile) => Unit = null,
-    OnObjectFileRemoved: (/* objectVersion */ IObjectVersion, /* fileVer */ IFileVer) => Unit = null,
-    OnObjectFileRenamed: (/* objectVersion */ IObjectVersion, /* objectFile */ IObjectFile) => Unit = null,
-    OnObjectLevelPropertySet: (/* objID */ IObjID, /* propertyValue */ IPropertyValue) => Unit = null,
-    OnObjectOfflineAvailabilityRemoved: /* objID */ IObjID => Unit = null,
-    OnObjectOfflineAvailabilitySet: /* objID */ IObjID => Unit = null,
-    OnObjectRemoved: /* objectVersion */ IObjectVersion => Unit = null,
-    OnObjectRemovedFromFavorites: /* objID */ IObjID => Unit = null,
-    OnObjectUndeleted: /* objectVersion */ IObjectVersion => Unit = null,
-    OnObjectVersionDestroyed: /* objVer */ IObjVer => Unit = null,
-    OnObjectVersionLabelsModified: (/* objVer */ IObjVer, /* clearFromOtherVersions */ Boolean, /* append */ Boolean, /* labelIDs */ IIDs) => Unit = null,
-    OnObjectVersionPermissionsSet: /* objectVersion */ IObjectVersion => Unit = null,
-    OnObjectVersionRolledBack: /* objectVersion */ IObjectVersion => Unit = null,
-    OnObjectVersionsDestroyed: /* objVers */ IObjVers => Unit = null,
-    OnObjectsAddedToFavorites: /* objIDs */ IObjIDs => Unit = null,
-    OnObjectsCheckedIn: /* objectVersions */ IObjectVersions => Unit = null,
-    OnObjectsCheckedOut: /* objectVersions */ IObjectVersions => Unit = null,
-    OnObjectsDestroyed: /* objIDs */ IObjIDs => Unit = null,
-    OnObjectsRemoved: /* objectVersions */ IObjectVersions => Unit = null,
-    OnObjectsRemovedFromFavorites: /* objIDs */ IObjIDs => Unit = null,
-    OnPropertiesOfObjectVersionSet: /* objectVersion */ IObjectVersion => Unit = null,
-    OnPropertiesOfObjectVersionsSet: /* objectVersions */ IObjectVersions => Unit = null,
-    OnRemoveObject: /* objID */ IObjID => Null | Boolean | AnonOnSuccess = null,
-    OnRemoveObjectFile: (/* objVer */ IObjVer, /* fileVer */ IFileVer) => Null | Boolean | AnonOnSuccess = null,
-    OnRemoveObjectFromFavorites: /* objID */ IObjID => Null | Boolean | AnonOnError = null,
-    OnRemoveObjectOfflineAvailability: /* objID */ IObjID => Null | Boolean | AnonOnError = null,
-    OnRemoveObjects: /* objIDs */ IObjIDs => Null | Boolean | AnonFinallyOnError = null,
-    OnRemoveObjectsFromFavorites: /* objIDs */ IObjIDs => Null | Boolean | AnonOnError = null,
-    OnRenameObjectFile: (/* objVer */ IObjVer, /* fileVer */ IFileVer, /* newName */ Null | ITypedValue, /* newExtension */ Null | ITypedValue) => Null | Boolean | AnonFinally = null,
-    OnRollBackObjectVersion: /* objVer */ IObjVer => Null | Boolean | AnonOnSuccess = null,
-    OnSetObjectLevelProperty: (/* objID */ IObjID, /* propertyValue */ IPropertyValue) => Null | Boolean | AnonOnError = null,
-    OnSetObjectOfflineAvailability: /* objID */ IObjID => Null | Boolean | AnonOnError = null,
-    OnSetObjectVersionPermissions: (/* objVer */ IObjVer, /* changeAllVersions */ Boolean, /* accessControlList */ IAccessControlList) => Null | Boolean | AnonOnSuccess = null,
-    OnSetPropertiesOfObjectVersion: (/* setPropertiesParams */ ISetPropertiesParams, /* singlePropertyUpdate */ Boolean, /* singlePropertyRemove */ Boolean) => Null | Boolean | AnonOnSuccess = null,
-    OnSetPropertiesOfObjectVersions: (/* setPropertiesParamsOfMultipleObjects */ ISetPropertiesParamsOfMultipleObjects, /* singlePropertyUpdate */ Boolean, /* singlePropertyRemove */ Boolean) => Null | Boolean | AnonFinallyOnError = null,
-    OnStarted: () => Unit = null,
-    OnStop: () => Unit = null,
-    OnSwitchToOfflineMode: () => Null | Boolean | AnonOnError = null,
-    OnSwitchToOnlineMode: () => Null | Boolean | AnonOnError = null,
-    OnSwitchedToOfflineMode: () => Unit = null,
-    OnSwitchedToOnlineMode: () => Unit = null,
-    OnUndeleteObject: /* objID */ IObjID => Null | Boolean | AnonOnSuccess = null,
-    OnUndeleteObjects: /* objIDs */ IObjIDs => Null | Boolean | AnonFinallyOnError = null,
-    OnUndoObjectCheckout: /* objVer */ IObjVer => Null | Boolean | AnonOnSuccess = null,
-    OnUndoObjectCheckouts: /* objVers */ IObjVers => Null | Boolean | AnonFinallyOnError = null,
-    OnVaultLanguageChanged: /* languageID */ Double => Unit = null
-  ): IVaultEntryEvents = {
+  def apply(Register: (Event, js.Function) => Double, Unregister: Double => Unit): IVaultEntryEvents = {
     val __obj = js.Dynamic.literal(Register = js.Any.fromFunction2(Register), Unregister = js.Any.fromFunction1(Unregister))
-    if (OnAddObjectFile != null) __obj.updateDynamic("OnAddObjectFile")(js.Any.fromFunction2(OnAddObjectFile))
-    if (OnAddObjectToFavorites != null) __obj.updateDynamic("OnAddObjectToFavorites")(js.Any.fromFunction1(OnAddObjectToFavorites))
-    if (OnAddObjectsToFavorites != null) __obj.updateDynamic("OnAddObjectsToFavorites")(js.Any.fromFunction1(OnAddObjectsToFavorites))
-    if (OnChangeVaultLanguage != null) __obj.updateDynamic("OnChangeVaultLanguage")(js.Any.fromFunction1(OnChangeVaultLanguage))
-    if (OnCheckInObject != null) __obj.updateDynamic("OnCheckInObject")(js.Any.fromFunction2(OnCheckInObject))
-    if (OnCheckInObjects != null) __obj.updateDynamic("OnCheckInObjects")(js.Any.fromFunction2(OnCheckInObjects))
-    if (OnCheckOutObject != null) __obj.updateDynamic("OnCheckOutObject")(js.Any.fromFunction1(OnCheckOutObject))
-    if (OnCheckOutObjects != null) __obj.updateDynamic("OnCheckOutObjects")(js.Any.fromFunction1(OnCheckOutObjects))
-    if (OnCreateObject != null) __obj.updateDynamic("OnCreateObject")(js.Any.fromFunction6(OnCreateObject))
-    if (OnDestroyObject != null) __obj.updateDynamic("OnDestroyObject")(js.Any.fromFunction1(OnDestroyObject))
-    if (OnDestroyObjectVersion != null) __obj.updateDynamic("OnDestroyObjectVersion")(js.Any.fromFunction1(OnDestroyObjectVersion))
-    if (OnDestroyObjectVersions != null) __obj.updateDynamic("OnDestroyObjectVersions")(js.Any.fromFunction1(OnDestroyObjectVersions))
-    if (OnDestroyObjects != null) __obj.updateDynamic("OnDestroyObjects")(js.Any.fromFunction1(OnDestroyObjects))
-    if (OnLogOut != null) __obj.updateDynamic("OnLogOut")(js.Any.fromFunction0(OnLogOut))
-    if (OnLoggedIn != null) __obj.updateDynamic("OnLoggedIn")(js.Any.fromFunction0(OnLoggedIn))
-    if (OnModifyObjectVersionLabels != null) __obj.updateDynamic("OnModifyObjectVersionLabels")(js.Any.fromFunction5(OnModifyObjectVersionLabels))
-    if (OnNotification != null) __obj.updateDynamic("OnNotification")(js.Any.fromFunction3(OnNotification))
-    if (OnObjectAddedToFavorites != null) __obj.updateDynamic("OnObjectAddedToFavorites")(js.Any.fromFunction1(OnObjectAddedToFavorites))
-    if (OnObjectCheckedIn != null) __obj.updateDynamic("OnObjectCheckedIn")(js.Any.fromFunction1(OnObjectCheckedIn))
-    if (OnObjectCheckedOut != null) __obj.updateDynamic("OnObjectCheckedOut")(js.Any.fromFunction1(OnObjectCheckedOut))
-    if (OnObjectCheckoutUndone != null) __obj.updateDynamic("OnObjectCheckoutUndone")(js.Any.fromFunction1(OnObjectCheckoutUndone))
-    if (OnObjectCheckoutsUndone != null) __obj.updateDynamic("OnObjectCheckoutsUndone")(js.Any.fromFunction1(OnObjectCheckoutsUndone))
-    if (OnObjectCreated != null) __obj.updateDynamic("OnObjectCreated")(js.Any.fromFunction1(OnObjectCreated))
-    if (OnObjectDestroyed != null) __obj.updateDynamic("OnObjectDestroyed")(js.Any.fromFunction1(OnObjectDestroyed))
-    if (OnObjectFileAdded != null) __obj.updateDynamic("OnObjectFileAdded")(js.Any.fromFunction2(OnObjectFileAdded))
-    if (OnObjectFileRemoved != null) __obj.updateDynamic("OnObjectFileRemoved")(js.Any.fromFunction2(OnObjectFileRemoved))
-    if (OnObjectFileRenamed != null) __obj.updateDynamic("OnObjectFileRenamed")(js.Any.fromFunction2(OnObjectFileRenamed))
-    if (OnObjectLevelPropertySet != null) __obj.updateDynamic("OnObjectLevelPropertySet")(js.Any.fromFunction2(OnObjectLevelPropertySet))
-    if (OnObjectOfflineAvailabilityRemoved != null) __obj.updateDynamic("OnObjectOfflineAvailabilityRemoved")(js.Any.fromFunction1(OnObjectOfflineAvailabilityRemoved))
-    if (OnObjectOfflineAvailabilitySet != null) __obj.updateDynamic("OnObjectOfflineAvailabilitySet")(js.Any.fromFunction1(OnObjectOfflineAvailabilitySet))
-    if (OnObjectRemoved != null) __obj.updateDynamic("OnObjectRemoved")(js.Any.fromFunction1(OnObjectRemoved))
-    if (OnObjectRemovedFromFavorites != null) __obj.updateDynamic("OnObjectRemovedFromFavorites")(js.Any.fromFunction1(OnObjectRemovedFromFavorites))
-    if (OnObjectUndeleted != null) __obj.updateDynamic("OnObjectUndeleted")(js.Any.fromFunction1(OnObjectUndeleted))
-    if (OnObjectVersionDestroyed != null) __obj.updateDynamic("OnObjectVersionDestroyed")(js.Any.fromFunction1(OnObjectVersionDestroyed))
-    if (OnObjectVersionLabelsModified != null) __obj.updateDynamic("OnObjectVersionLabelsModified")(js.Any.fromFunction4(OnObjectVersionLabelsModified))
-    if (OnObjectVersionPermissionsSet != null) __obj.updateDynamic("OnObjectVersionPermissionsSet")(js.Any.fromFunction1(OnObjectVersionPermissionsSet))
-    if (OnObjectVersionRolledBack != null) __obj.updateDynamic("OnObjectVersionRolledBack")(js.Any.fromFunction1(OnObjectVersionRolledBack))
-    if (OnObjectVersionsDestroyed != null) __obj.updateDynamic("OnObjectVersionsDestroyed")(js.Any.fromFunction1(OnObjectVersionsDestroyed))
-    if (OnObjectsAddedToFavorites != null) __obj.updateDynamic("OnObjectsAddedToFavorites")(js.Any.fromFunction1(OnObjectsAddedToFavorites))
-    if (OnObjectsCheckedIn != null) __obj.updateDynamic("OnObjectsCheckedIn")(js.Any.fromFunction1(OnObjectsCheckedIn))
-    if (OnObjectsCheckedOut != null) __obj.updateDynamic("OnObjectsCheckedOut")(js.Any.fromFunction1(OnObjectsCheckedOut))
-    if (OnObjectsDestroyed != null) __obj.updateDynamic("OnObjectsDestroyed")(js.Any.fromFunction1(OnObjectsDestroyed))
-    if (OnObjectsRemoved != null) __obj.updateDynamic("OnObjectsRemoved")(js.Any.fromFunction1(OnObjectsRemoved))
-    if (OnObjectsRemovedFromFavorites != null) __obj.updateDynamic("OnObjectsRemovedFromFavorites")(js.Any.fromFunction1(OnObjectsRemovedFromFavorites))
-    if (OnPropertiesOfObjectVersionSet != null) __obj.updateDynamic("OnPropertiesOfObjectVersionSet")(js.Any.fromFunction1(OnPropertiesOfObjectVersionSet))
-    if (OnPropertiesOfObjectVersionsSet != null) __obj.updateDynamic("OnPropertiesOfObjectVersionsSet")(js.Any.fromFunction1(OnPropertiesOfObjectVersionsSet))
-    if (OnRemoveObject != null) __obj.updateDynamic("OnRemoveObject")(js.Any.fromFunction1(OnRemoveObject))
-    if (OnRemoveObjectFile != null) __obj.updateDynamic("OnRemoveObjectFile")(js.Any.fromFunction2(OnRemoveObjectFile))
-    if (OnRemoveObjectFromFavorites != null) __obj.updateDynamic("OnRemoveObjectFromFavorites")(js.Any.fromFunction1(OnRemoveObjectFromFavorites))
-    if (OnRemoveObjectOfflineAvailability != null) __obj.updateDynamic("OnRemoveObjectOfflineAvailability")(js.Any.fromFunction1(OnRemoveObjectOfflineAvailability))
-    if (OnRemoveObjects != null) __obj.updateDynamic("OnRemoveObjects")(js.Any.fromFunction1(OnRemoveObjects))
-    if (OnRemoveObjectsFromFavorites != null) __obj.updateDynamic("OnRemoveObjectsFromFavorites")(js.Any.fromFunction1(OnRemoveObjectsFromFavorites))
-    if (OnRenameObjectFile != null) __obj.updateDynamic("OnRenameObjectFile")(js.Any.fromFunction4(OnRenameObjectFile))
-    if (OnRollBackObjectVersion != null) __obj.updateDynamic("OnRollBackObjectVersion")(js.Any.fromFunction1(OnRollBackObjectVersion))
-    if (OnSetObjectLevelProperty != null) __obj.updateDynamic("OnSetObjectLevelProperty")(js.Any.fromFunction2(OnSetObjectLevelProperty))
-    if (OnSetObjectOfflineAvailability != null) __obj.updateDynamic("OnSetObjectOfflineAvailability")(js.Any.fromFunction1(OnSetObjectOfflineAvailability))
-    if (OnSetObjectVersionPermissions != null) __obj.updateDynamic("OnSetObjectVersionPermissions")(js.Any.fromFunction3(OnSetObjectVersionPermissions))
-    if (OnSetPropertiesOfObjectVersion != null) __obj.updateDynamic("OnSetPropertiesOfObjectVersion")(js.Any.fromFunction3(OnSetPropertiesOfObjectVersion))
-    if (OnSetPropertiesOfObjectVersions != null) __obj.updateDynamic("OnSetPropertiesOfObjectVersions")(js.Any.fromFunction3(OnSetPropertiesOfObjectVersions))
-    if (OnStarted != null) __obj.updateDynamic("OnStarted")(js.Any.fromFunction0(OnStarted))
-    if (OnStop != null) __obj.updateDynamic("OnStop")(js.Any.fromFunction0(OnStop))
-    if (OnSwitchToOfflineMode != null) __obj.updateDynamic("OnSwitchToOfflineMode")(js.Any.fromFunction0(OnSwitchToOfflineMode))
-    if (OnSwitchToOnlineMode != null) __obj.updateDynamic("OnSwitchToOnlineMode")(js.Any.fromFunction0(OnSwitchToOnlineMode))
-    if (OnSwitchedToOfflineMode != null) __obj.updateDynamic("OnSwitchedToOfflineMode")(js.Any.fromFunction0(OnSwitchedToOfflineMode))
-    if (OnSwitchedToOnlineMode != null) __obj.updateDynamic("OnSwitchedToOnlineMode")(js.Any.fromFunction0(OnSwitchedToOnlineMode))
-    if (OnUndeleteObject != null) __obj.updateDynamic("OnUndeleteObject")(js.Any.fromFunction1(OnUndeleteObject))
-    if (OnUndeleteObjects != null) __obj.updateDynamic("OnUndeleteObjects")(js.Any.fromFunction1(OnUndeleteObjects))
-    if (OnUndoObjectCheckout != null) __obj.updateDynamic("OnUndoObjectCheckout")(js.Any.fromFunction1(OnUndoObjectCheckout))
-    if (OnUndoObjectCheckouts != null) __obj.updateDynamic("OnUndoObjectCheckouts")(js.Any.fromFunction1(OnUndoObjectCheckouts))
-    if (OnVaultLanguageChanged != null) __obj.updateDynamic("OnVaultLanguageChanged")(js.Any.fromFunction1(OnVaultLanguageChanged))
     __obj.asInstanceOf[IVaultEntryEvents]
   }
+  @scala.inline
+  implicit class IVaultEntryEventsOps[Self <: IVaultEntryEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnAddObjectFile(
+      value: (/* objVer */ IObjVer, /* sourceObjectFile */ ISourceObjectFile) => Null | Boolean | AnonFinally
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnAddObjectFile")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAddObjectFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnAddObjectFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAddObjectToFavorites(value: /* objID */ IObjID => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnAddObjectToFavorites")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAddObjectToFavorites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnAddObjectToFavorites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAddObjectsToFavorites(value: /* objIDs */ IObjIDs => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnAddObjectsToFavorites")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAddObjectsToFavorites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnAddObjectsToFavorites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChangeVaultLanguage(value: /* languageID */ Double => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnChangeVaultLanguage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChangeVaultLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnChangeVaultLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCheckInObject(
+      value: (/* objVer */ IObjVer, /* propertyValues */ IPropertyValues) => Null | Boolean | AnonOnSuccess
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCheckInObject")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCheckInObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCheckInObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCheckInObjects(
+      value: (/* objVers */ IObjVers, /* propertyValues */ IPropertyValues) => Null | Boolean | AnonFinallyOnError
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCheckInObjects")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCheckInObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCheckInObjects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCheckOutObject(value: /* objID */ IObjID => Null | Boolean | AnonOnSuccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCheckOutObject")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCheckOutObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCheckOutObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCheckOutObjects(value: /* objIDs */ IObjIDs => Null | Boolean | AnonFinallyOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCheckOutObjects")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCheckOutObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCheckOutObjects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCreateObject(
+      value: (/* objectType */ Double, /* propertyValues */ IPropertyValues, /* sourceObjectFiles */ ISourceObjectFiles, /* accessControlList */ IAccessControlList, /* checkInRequested */ Boolean, /* singleFileRequested */ Boolean) => Null | Boolean | AnonOnSuccess
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCreateObject")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCreateObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnCreateObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDestroyObject(value: /* objID */ IObjID => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDestroyObject")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDestroyObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDestroyObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDestroyObjectVersion(value: /* objVer */ IObjVer => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDestroyObjectVersion")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDestroyObjectVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDestroyObjectVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDestroyObjectVersions(value: /* objVers */ IObjVers => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDestroyObjectVersions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDestroyObjectVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDestroyObjectVersions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDestroyObjects(value: /* objIDs */ IObjIDs => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDestroyObjects")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDestroyObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnDestroyObjects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLogOut(value: () => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnLogOut")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLogOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnLogOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLoggedIn(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnLoggedIn")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLoggedIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnLoggedIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnModifyObjectVersionLabels(
+      value: (/* objVer */ IObjVer, /* clearFromOtherVersions */ Boolean, /* append */ Boolean, /* labelIDs */ IIDs, /* singleLabelRequired */ Boolean) => Null | Boolean | AnonOnError
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnModifyObjectVersionLabels")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnModifyObjectVersionLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnModifyObjectVersionLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnNotification(value: (/* id */ String, /* data1 */ js.Any, /* data2 */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnNotification")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnNotification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectAddedToFavorites(value: /* objID */ IObjID => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectAddedToFavorites")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectAddedToFavorites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectAddedToFavorites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectCheckedIn(value: /* objectVersion */ IObjectVersion => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectCheckedIn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectCheckedIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectCheckedIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectCheckedOut(value: /* objectVersion */ IObjectVersion => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectCheckedOut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectCheckedOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectCheckedOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectCheckoutUndone(value: /* objectVersion */ IObjectVersion => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectCheckoutUndone")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectCheckoutUndone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectCheckoutUndone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectCheckoutsUndone(value: /* objectVersions */ IObjectVersions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectCheckoutsUndone")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectCheckoutsUndone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectCheckoutsUndone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectCreated(value: /* objectVersion */ IObjectVersion => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectCreated")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectCreated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectDestroyed(value: /* objID */ IObjID => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectDestroyed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectDestroyed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectDestroyed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectFileAdded(value: (/* objectVersion */ IObjectVersion, /* objectFile */ IObjectFile) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectFileAdded")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectFileAdded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectFileAdded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectFileRemoved(value: (/* objectVersion */ IObjectVersion, /* fileVer */ IFileVer) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectFileRemoved")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectFileRemoved: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectFileRemoved")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectFileRenamed(value: (/* objectVersion */ IObjectVersion, /* objectFile */ IObjectFile) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectFileRenamed")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectFileRenamed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectFileRenamed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectLevelPropertySet(value: (/* objID */ IObjID, /* propertyValue */ IPropertyValue) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectLevelPropertySet")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectLevelPropertySet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectLevelPropertySet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectOfflineAvailabilityRemoved(value: /* objID */ IObjID => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectOfflineAvailabilityRemoved")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectOfflineAvailabilityRemoved: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectOfflineAvailabilityRemoved")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectOfflineAvailabilitySet(value: /* objID */ IObjID => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectOfflineAvailabilitySet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectOfflineAvailabilitySet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectOfflineAvailabilitySet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectRemoved(value: /* objectVersion */ IObjectVersion => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectRemoved")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectRemoved: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectRemoved")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectRemovedFromFavorites(value: /* objID */ IObjID => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectRemovedFromFavorites")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectRemovedFromFavorites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectRemovedFromFavorites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectUndeleted(value: /* objectVersion */ IObjectVersion => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectUndeleted")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectUndeleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectUndeleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectVersionDestroyed(value: /* objVer */ IObjVer => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectVersionDestroyed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectVersionDestroyed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectVersionDestroyed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectVersionLabelsModified(
+      value: (/* objVer */ IObjVer, /* clearFromOtherVersions */ Boolean, /* append */ Boolean, /* labelIDs */ IIDs) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectVersionLabelsModified")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectVersionLabelsModified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectVersionLabelsModified")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectVersionPermissionsSet(value: /* objectVersion */ IObjectVersion => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectVersionPermissionsSet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectVersionPermissionsSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectVersionPermissionsSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectVersionRolledBack(value: /* objectVersion */ IObjectVersion => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectVersionRolledBack")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectVersionRolledBack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectVersionRolledBack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectVersionsDestroyed(value: /* objVers */ IObjVers => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectVersionsDestroyed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectVersionsDestroyed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectVersionsDestroyed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectsAddedToFavorites(value: /* objIDs */ IObjIDs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsAddedToFavorites")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectsAddedToFavorites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsAddedToFavorites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectsCheckedIn(value: /* objectVersions */ IObjectVersions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsCheckedIn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectsCheckedIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsCheckedIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectsCheckedOut(value: /* objectVersions */ IObjectVersions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsCheckedOut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectsCheckedOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsCheckedOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectsDestroyed(value: /* objIDs */ IObjIDs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsDestroyed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectsDestroyed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsDestroyed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectsRemoved(value: /* objectVersions */ IObjectVersions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsRemoved")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectsRemoved: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsRemoved")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnObjectsRemovedFromFavorites(value: /* objIDs */ IObjIDs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsRemovedFromFavorites")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnObjectsRemovedFromFavorites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnObjectsRemovedFromFavorites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPropertiesOfObjectVersionSet(value: /* objectVersion */ IObjectVersion => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnPropertiesOfObjectVersionSet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPropertiesOfObjectVersionSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnPropertiesOfObjectVersionSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPropertiesOfObjectVersionsSet(value: /* objectVersions */ IObjectVersions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnPropertiesOfObjectVersionsSet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPropertiesOfObjectVersionsSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnPropertiesOfObjectVersionsSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRemoveObject(value: /* objID */ IObjID => Null | Boolean | AnonOnSuccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObject")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRemoveObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRemoveObjectFile(value: (/* objVer */ IObjVer, /* fileVer */ IFileVer) => Null | Boolean | AnonOnSuccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObjectFile")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRemoveObjectFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObjectFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRemoveObjectFromFavorites(value: /* objID */ IObjID => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObjectFromFavorites")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRemoveObjectFromFavorites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObjectFromFavorites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRemoveObjectOfflineAvailability(value: /* objID */ IObjID => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObjectOfflineAvailability")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRemoveObjectOfflineAvailability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObjectOfflineAvailability")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRemoveObjects(value: /* objIDs */ IObjIDs => Null | Boolean | AnonFinallyOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObjects")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRemoveObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObjects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRemoveObjectsFromFavorites(value: /* objIDs */ IObjIDs => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObjectsFromFavorites")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRemoveObjectsFromFavorites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRemoveObjectsFromFavorites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRenameObjectFile(
+      value: (/* objVer */ IObjVer, /* fileVer */ IFileVer, /* newName */ Null | ITypedValue, /* newExtension */ Null | ITypedValue) => Null | Boolean | AnonFinally
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRenameObjectFile")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRenameObjectFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRenameObjectFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRollBackObjectVersion(value: /* objVer */ IObjVer => Null | Boolean | AnonOnSuccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRollBackObjectVersion")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRollBackObjectVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnRollBackObjectVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSetObjectLevelProperty(value: (/* objID */ IObjID, /* propertyValue */ IPropertyValue) => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSetObjectLevelProperty")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSetObjectLevelProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSetObjectLevelProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSetObjectOfflineAvailability(value: /* objID */ IObjID => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSetObjectOfflineAvailability")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSetObjectOfflineAvailability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSetObjectOfflineAvailability")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSetObjectVersionPermissions(
+      value: (/* objVer */ IObjVer, /* changeAllVersions */ Boolean, /* accessControlList */ IAccessControlList) => Null | Boolean | AnonOnSuccess
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSetObjectVersionPermissions")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSetObjectVersionPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSetObjectVersionPermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSetPropertiesOfObjectVersion(
+      value: (/* setPropertiesParams */ ISetPropertiesParams, /* singlePropertyUpdate */ Boolean, /* singlePropertyRemove */ Boolean) => Null | Boolean | AnonOnSuccess
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSetPropertiesOfObjectVersion")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSetPropertiesOfObjectVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSetPropertiesOfObjectVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSetPropertiesOfObjectVersions(
+      value: (/* setPropertiesParamsOfMultipleObjects */ ISetPropertiesParamsOfMultipleObjects, /* singlePropertyUpdate */ Boolean, /* singlePropertyRemove */ Boolean) => Null | Boolean | AnonFinallyOnError
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSetPropertiesOfObjectVersions")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSetPropertiesOfObjectVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSetPropertiesOfObjectVersions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnStarted(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnStarted")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnStarted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnStarted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnStop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnStop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSwitchToOfflineMode(value: () => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSwitchToOfflineMode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSwitchToOfflineMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSwitchToOfflineMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSwitchToOnlineMode(value: () => Null | Boolean | AnonOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSwitchToOnlineMode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSwitchToOnlineMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSwitchToOnlineMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSwitchedToOfflineMode(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSwitchedToOfflineMode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSwitchedToOfflineMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSwitchedToOfflineMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSwitchedToOnlineMode(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSwitchedToOnlineMode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSwitchedToOnlineMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnSwitchedToOnlineMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUndeleteObject(value: /* objID */ IObjID => Null | Boolean | AnonOnSuccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnUndeleteObject")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUndeleteObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnUndeleteObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUndeleteObjects(value: /* objIDs */ IObjIDs => Null | Boolean | AnonFinallyOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnUndeleteObjects")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUndeleteObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnUndeleteObjects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUndoObjectCheckout(value: /* objVer */ IObjVer => Null | Boolean | AnonOnSuccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnUndoObjectCheckout")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUndoObjectCheckout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnUndoObjectCheckout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUndoObjectCheckouts(value: /* objVers */ IObjVers => Null | Boolean | AnonFinallyOnError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnUndoObjectCheckouts")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUndoObjectCheckouts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnUndoObjectCheckouts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnVaultLanguageChanged(value: /* languageID */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnVaultLanguageChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnVaultLanguageChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OnVaultLanguageChanged")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

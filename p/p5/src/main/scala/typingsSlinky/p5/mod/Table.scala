@@ -1,6 +1,5 @@
 package typingsSlinky.p5.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -157,8 +156,8 @@ trait Table extends js.Object {
     */
   def matchRow(regexp: String, column: String): TableRow = js.native
   def matchRow(regexp: String, column: Double): TableRow = js.native
-  def matchRow(regexp: RegExp, column: String): TableRow = js.native
-  def matchRow(regexp: RegExp, column: Double): TableRow = js.native
+  def matchRow(regexp: js.RegExp, column: String): TableRow = js.native
+  def matchRow(regexp: js.RegExp, column: Double): TableRow = js.native
   /**
     *   Finds the rows in the Table that match the regular
     *   expression provided, and returns references to

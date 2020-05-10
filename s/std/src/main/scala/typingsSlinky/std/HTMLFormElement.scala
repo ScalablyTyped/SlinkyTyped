@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait HTMLFormElement
   extends HTMLElement
-     with /* index */ NumberDictionary[Element]
+     with /* index */ NumberDictionary[org.scalajs.dom.raw.Element]
      with /* name */ StringDictionary[js.Any] {
   /**
     * Sets or retrieves a list of character encodings for input data that must be accepted by the server processing the form.
@@ -37,7 +37,7 @@ trait HTMLFormElement
     * Sets or retrieves the encoding type for the form.
     */
   var enctype: java.lang.String = js.native
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.Element]] = js.native
   /**
     * Sets or retrieves the number of objects in a collection.
@@ -97,7 +97,7 @@ trait HTMLFormElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def reportValidity(): scala.Boolean = js.native
   /**
@@ -112,5 +112,6 @@ trait HTMLFormElement
 
 @JSGlobal("HTMLFormElement")
 @js.native
-object HTMLFormElement extends Instantiable0[HTMLFormElement]
+object HTMLFormElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLFormElement]
 

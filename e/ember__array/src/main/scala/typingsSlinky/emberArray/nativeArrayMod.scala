@@ -28,7 +28,7 @@ object nativeArrayMod extends js.Object {
     * false, this will be applied automatically. Otherwise you can apply the mixin
     * at anytime by calling `Ember.NativeArray.apply(Array.prototype)`.
     */
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.std.Array because var conflicts: length. Inlined iterator, unscopables, concat, copyWithin, copyWithin, entries, fill, fill, fill, filter_S_T, filter_S_T, findIndex, findIndex, flat, flat, flatMap, flatMap, flat_0, flat_1, flat_2, flat_3, flat_4, flat_5, flat_6, flat_7, join, join, keys, pop, push, reduceRight, reduceRight, reduceRight_U_U, reduce_U_U, reverse, shift, some, some, sort, sort, splice, splice, splice, unshift, values */ @js.native
   trait NativeArray[T]
     extends MutableArray[T]
@@ -36,7 +36,7 @@ object nativeArrayMod extends js.Object {
        with Copyable
        with /* n */ NumberDictionary[T] {
     /** Iterator */
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[IterableIterator[T]] = js.native
     /**
       * __Required.__ You must implement this method to apply this mixin.
@@ -47,7 +47,7 @@ object nativeArrayMod extends js.Object {
       * Returns an object whose properties have the value 'true'
       * when they will be absent when used in a 'with' statement.
       */
-    @JSName(scala.scalajs.js.Symbol.unscopables)
+    @JSName(js.Symbol.unscopables)
     var unscopables: js.Function0[AnonCopyWithin] = js.native
     /**
       * Combines two or more arrays.

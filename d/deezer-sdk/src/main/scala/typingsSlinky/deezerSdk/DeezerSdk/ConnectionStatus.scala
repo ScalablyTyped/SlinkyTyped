@@ -17,14 +17,12 @@ trait ConnectionStatus extends js.Object
 
 object ConnectionStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connected: typingsSlinky.deezerSdk.deezerSdkStrings.connected = "connected".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.connected]
   @scala.inline
-  def connected: typingsSlinky.deezerSdk.deezerSdkStrings.connected = this.cast("connected")
+  def notConnected: typingsSlinky.deezerSdk.deezerSdkStrings.notConnected = "notConnected".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.notConnected]
   @scala.inline
-  def notConnected: typingsSlinky.deezerSdk.deezerSdkStrings.notConnected = this.cast("notConnected")
+  def not_authorized: typingsSlinky.deezerSdk.deezerSdkStrings.not_authorized = "not_authorized".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.not_authorized]
   @scala.inline
-  def not_authorized: typingsSlinky.deezerSdk.deezerSdkStrings.not_authorized = this.cast("not_authorized")
-  @scala.inline
-  def unknown: typingsSlinky.deezerSdk.deezerSdkStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.deezerSdk.deezerSdkStrings.unknown = "unknown".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.unknown]
 }
 

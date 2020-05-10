@@ -7,9 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ProgressKnockoutBindingHandler
   extends KnockoutBindingHandler[js.Any, js.Any, js.Any] {
-  var defaults: KnockstrapProgressDefaults
+  var defaults: KnockstrapProgressDefaults = js.native
   @JSName("init")
   var init_ProgressKnockoutBindingHandler: js.UndefOr[
     js.Function5[
@@ -20,26 +21,42 @@ trait ProgressKnockoutBindingHandler
       /* bindingContext */ KnockoutBindingContext, 
       KnockoutControlsDescendantBindings
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object ProgressKnockoutBindingHandler {
   @scala.inline
-  def apply(
-    defaults: KnockstrapProgressDefaults,
-    after: js.Array[String] = null,
-    init: (/* element */ js.Any, /* valueAccessor */ js.Function0[_], /* allBindingsAccessor */ KnockoutAllBindingsAccessor, /* viewModel */ js.Any, /* bindingContext */ KnockoutBindingContext) => KnockoutControlsDescendantBindings = null,
-    options: js.Any = null,
-    preprocess: (/* value */ String, /* name */ String, /* addBindingCallback */ js.UndefOr[js.Function2[/* name */ String, /* value */ String, Unit]]) => String = null,
-    update: (js.Any, /* valueAccessor */ js.Function0[js.Any], /* allBindingsAccessor */ KnockoutAllBindingsAccessor, js.Any, /* bindingContext */ KnockoutBindingContext) => Unit = null
-  ): ProgressKnockoutBindingHandler = {
+  def apply(defaults: KnockstrapProgressDefaults): ProgressKnockoutBindingHandler = {
     val __obj = js.Dynamic.literal(defaults = defaults.asInstanceOf[js.Any])
-    if (after != null) __obj.updateDynamic("after")(after.asInstanceOf[js.Any])
-    if (init != null) __obj.updateDynamic("init")(js.Any.fromFunction5(init))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (preprocess != null) __obj.updateDynamic("preprocess")(js.Any.fromFunction3(preprocess))
-    if (update != null) __obj.updateDynamic("update")(js.Any.fromFunction5(update))
     __obj.asInstanceOf[ProgressKnockoutBindingHandler]
   }
+  @scala.inline
+  implicit class ProgressKnockoutBindingHandlerOps[Self <: ProgressKnockoutBindingHandler] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaults(value: KnockstrapProgressDefaults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInit(
+      value: (/* element */ js.Any, /* valueAccessor */ js.Function0[_], /* allBindingsAccessor */ KnockoutAllBindingsAccessor, /* viewModel */ js.Any, /* bindingContext */ KnockoutBindingContext) => KnockoutControlsDescendantBindings
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

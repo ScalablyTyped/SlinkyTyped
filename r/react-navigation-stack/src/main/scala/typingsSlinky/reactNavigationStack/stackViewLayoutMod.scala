@@ -1,9 +1,8 @@
 package typingsSlinky.reactNavigationStack
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.card
@@ -57,13 +56,13 @@ object stackViewLayoutMod extends js.Object {
   
   @js.native
   class default protected ()
-    extends Component[PickPropsmodeheaderModehe, ComponentState, js.Any] {
+    extends Component[PickPropsmodeheaderModehe, js.Object, js.Any] {
     def this(props: PickPropsmodeheaderModehe) = this()
     def this(props: PickPropsmodeheaderModehe, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[PickPropsmodeheaderModehe]]
+  object default extends TopLevel[ReactComponentClass[PickPropsmodeheaderModehe]]
   
 }
 

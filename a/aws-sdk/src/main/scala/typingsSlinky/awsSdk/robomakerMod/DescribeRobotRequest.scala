@@ -16,8 +16,21 @@ object DescribeRobotRequest {
   @scala.inline
   def apply(robot: Arn): DescribeRobotRequest = {
     val __obj = js.Dynamic.literal(robot = robot.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeRobotRequest]
   }
+  @scala.inline
+  implicit class DescribeRobotRequestOps[Self <: DescribeRobotRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRobot(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robot")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

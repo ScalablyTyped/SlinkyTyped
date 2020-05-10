@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GraphemeSplitter extends js.Object {
   /** count the number of grapheme clusters in a string */
-  def countGraphemes(s: String): Double
+  def countGraphemes(s: String): Double = js.native
   /** iterate the string to an iterable iterator of grapheme clusters */
-  def iterateGraphemes(s: String): IterableIterator[String]
+  def iterateGraphemes(s: String): IterableIterator[String] = js.native
   /** split the string to an array of grapheme clusters */
-  def splitGraphemes(s: String): js.Array[String]
+  def splitGraphemes(s: String): js.Array[String] = js.native
 }
 
 object GraphemeSplitter {
@@ -22,8 +23,33 @@ object GraphemeSplitter {
     splitGraphemes: String => js.Array[String]
   ): GraphemeSplitter = {
     val __obj = js.Dynamic.literal(countGraphemes = js.Any.fromFunction1(countGraphemes), iterateGraphemes = js.Any.fromFunction1(iterateGraphemes), splitGraphemes = js.Any.fromFunction1(splitGraphemes))
-  
     __obj.asInstanceOf[GraphemeSplitter]
   }
+  @scala.inline
+  implicit class GraphemeSplitterOps[Self <: GraphemeSplitter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountGraphemes(value: String => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countGraphemes")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIterateGraphemes(value: String => IterableIterator[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterateGraphemes")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSplitGraphemes(value: String => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitGraphemes")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

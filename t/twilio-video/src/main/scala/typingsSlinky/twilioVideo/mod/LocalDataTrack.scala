@@ -1,8 +1,6 @@
 package typingsSlinky.twilioVideo.mod
 
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.ArrayBufferView
-import typingsSlinky.std.Blob
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.twilioVideo.mod.Track.ID
 import typingsSlinky.twilioVideo.twilioVideoStrings.data
 import scala.scalajs.js
@@ -24,8 +22,8 @@ class LocalDataTrack ()
   var ordered: Boolean = js.native
   var reliable: Boolean = js.native
   def send(data: String): Unit = js.native
-  def send(data: ArrayBuffer): Unit = js.native
-  def send(data: ArrayBufferView): Unit = js.native
+  def send(data: js.typedarray.ArrayBuffer): Unit = js.native
+  def send(data: js.typedarray.ArrayBufferView): Unit = js.native
   def send(data: Blob): Unit = js.native
 }
 

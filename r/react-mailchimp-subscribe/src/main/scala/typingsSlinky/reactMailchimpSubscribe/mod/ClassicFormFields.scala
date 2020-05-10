@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClassicFormFields extends NameFormFields {
-  var `BIRTHDAY[day]`: Double
-  var `BIRTHDAY[month]`: Double
+  var `BIRTHDAY[day]`: Double = js.native
+  var `BIRTHDAY[month]`: Double = js.native
 }
 
 object ClassicFormFields {
@@ -17,5 +18,25 @@ object ClassicFormFields {
     __obj.updateDynamic("BIRTHDAY[month]")(`BIRTHDAY[month]`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassicFormFields]
   }
+  @scala.inline
+  implicit class ClassicFormFieldsOps[Self <: ClassicFormFields] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withBIRTHDAY[day]`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BIRTHDAY[day]")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withBIRTHDAY[month]`(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BIRTHDAY[month]")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

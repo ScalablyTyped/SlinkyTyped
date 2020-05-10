@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Vocabulary
   extends typingsSlinky.yadda.englishMod.Vocabulary {
-  var giveth: String
-  var thence: String
-  var whence: String
+  var giveth: String = js.native
+  var thence: String = js.native
+  var whence: String = js.native
 }
 
 object Vocabulary {
@@ -32,5 +33,31 @@ object Vocabulary {
     __obj.updateDynamic("then")(`then`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Vocabulary]
   }
+  @scala.inline
+  implicit class VocabularyOps[Self <: Vocabulary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGiveth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("giveth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThence(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWhence(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whence")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

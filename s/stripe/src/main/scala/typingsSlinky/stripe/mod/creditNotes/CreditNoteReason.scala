@@ -17,14 +17,12 @@ trait CreditNoteReason extends js.Object
 
 object CreditNoteReason {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def duplicate: typingsSlinky.stripe.stripeStrings.duplicate = "duplicate".asInstanceOf[typingsSlinky.stripe.stripeStrings.duplicate]
   @scala.inline
-  def duplicate: typingsSlinky.stripe.stripeStrings.duplicate = this.cast("duplicate")
+  def fraudulent: typingsSlinky.stripe.stripeStrings.fraudulent = "fraudulent".asInstanceOf[typingsSlinky.stripe.stripeStrings.fraudulent]
   @scala.inline
-  def fraudulent: typingsSlinky.stripe.stripeStrings.fraudulent = this.cast("fraudulent")
+  def order_change: typingsSlinky.stripe.stripeStrings.order_change = "order_change".asInstanceOf[typingsSlinky.stripe.stripeStrings.order_change]
   @scala.inline
-  def order_change: typingsSlinky.stripe.stripeStrings.order_change = this.cast("order_change")
-  @scala.inline
-  def product_unsatisfactory: typingsSlinky.stripe.stripeStrings.product_unsatisfactory = this.cast("product_unsatisfactory")
+  def product_unsatisfactory: typingsSlinky.stripe.stripeStrings.product_unsatisfactory = "product_unsatisfactory".asInstanceOf[typingsSlinky.stripe.stripeStrings.product_unsatisfactory]
 }
 

@@ -12,10 +12,8 @@ trait ExpandBy extends js.Object
 
 object ExpandBy {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def column: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.column = "column".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.column]
   @scala.inline
-  def column: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.column = this.cast("column")
-  @scala.inline
-  def row: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.row = this.cast("row")
+  def row: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.row = "row".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.row]
 }
 

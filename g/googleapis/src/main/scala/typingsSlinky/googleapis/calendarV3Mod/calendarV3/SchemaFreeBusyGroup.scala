@@ -18,11 +18,41 @@ trait SchemaFreeBusyGroup extends js.Object {
 
 object SchemaFreeBusyGroup {
   @scala.inline
-  def apply(calendars: js.Array[String] = null, errors: js.Array[SchemaError] = null): SchemaFreeBusyGroup = {
+  def apply(): SchemaFreeBusyGroup = {
     val __obj = js.Dynamic.literal()
-    if (calendars != null) __obj.updateDynamic("calendars")(calendars.asInstanceOf[js.Any])
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFreeBusyGroup]
   }
+  @scala.inline
+  implicit class SchemaFreeBusyGroupOps[Self <: SchemaFreeBusyGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCalendars(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalendars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrors(value: js.Array[SchemaError]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

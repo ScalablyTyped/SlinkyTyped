@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * implementation, as well as any other components that need to understand how the pod will be
   * run. The RuntimeClassSpec is immutable.
   */
+@js.native
 trait RuntimeClassSpec extends js.Object {
   /**
     * Overhead represents the resource overhead associated with running a pod for a given
@@ -18,7 +19,7 @@ trait RuntimeClassSpec extends js.Object {
     * alpha-level as of Kubernetes v1.15, and is only honored by servers that enable the
     * PodOverhead feature.
     */
-  val overhead: Overhead
+  val overhead: Overhead = js.native
   /**
     * RuntimeHandler specifies the underlying runtime and configuration that the CRI
     * implementation will use to handle pods of this class. The possible values are specific to
@@ -28,21 +29,46 @@ trait RuntimeClassSpec extends js.Object {
     * to run the containers in a pod. The RuntimeHandler must conform to the DNS Label (RFC 1123)
     * requirements and is immutable.
     */
-  val runtimeHandler: String
+  val runtimeHandler: String = js.native
   /**
     * Scheduling holds the scheduling constraints to ensure that pods running with this
     * RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this
     * RuntimeClass is assumed to be supported by all nodes.
     */
-  val scheduling: Scheduling
+  val scheduling: Scheduling = js.native
 }
 
 object RuntimeClassSpec {
   @scala.inline
   def apply(overhead: Overhead, runtimeHandler: String, scheduling: Scheduling): RuntimeClassSpec = {
     val __obj = js.Dynamic.literal(overhead = overhead.asInstanceOf[js.Any], runtimeHandler = runtimeHandler.asInstanceOf[js.Any], scheduling = scheduling.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RuntimeClassSpec]
   }
+  @scala.inline
+  implicit class RuntimeClassSpecOps[Self <: RuntimeClassSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOverhead(value: Overhead): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overhead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuntimeHandler(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeHandler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScheduling(value: Scheduling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduling")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

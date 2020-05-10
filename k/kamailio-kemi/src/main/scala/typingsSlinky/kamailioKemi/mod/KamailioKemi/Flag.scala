@@ -43,70 +43,68 @@ trait Flag extends js.Object
 
 object Flag {
   @scala.inline
-  def `0`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`0` = 0.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`1` = 1.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`1`]
   @scala.inline
-  def `10`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`10` = this.cast(10)
+  def `10`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`10` = 10.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`10`]
   @scala.inline
-  def `11`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`11` = this.cast(11)
+  def `11`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`11` = 11.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`11`]
   @scala.inline
-  def `12`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`12` = this.cast(12)
+  def `12`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`12` = 12.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`12`]
   @scala.inline
-  def `13`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`13` = this.cast(13)
+  def `13`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`13` = 13.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`13`]
   @scala.inline
-  def `14`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`14` = this.cast(14)
+  def `14`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`14` = 14.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`14`]
   @scala.inline
-  def `15`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`15` = this.cast(15)
+  def `15`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`15` = 15.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`15`]
   @scala.inline
-  def `16`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`16` = this.cast(16)
+  def `16`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`16` = 16.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`16`]
   @scala.inline
-  def `17`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`17` = this.cast(17)
+  def `17`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`17` = 17.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`17`]
   @scala.inline
-  def `18`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`18` = this.cast(18)
+  def `18`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`18` = 18.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`18`]
   @scala.inline
-  def `19`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`19` = this.cast(19)
+  def `19`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`19` = 19.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`19`]
   @scala.inline
-  def `2`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`2` = this.cast(2)
+  def `2`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`2` = 2.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`2`]
   @scala.inline
-  def `20`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`20` = this.cast(20)
+  def `20`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`20` = 20.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`20`]
   @scala.inline
-  def `21`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`21` = this.cast(21)
+  def `21`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`21` = 21.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`21`]
   @scala.inline
-  def `22`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`22` = this.cast(22)
+  def `22`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`22` = 22.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`22`]
   @scala.inline
-  def `23`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`23` = this.cast(23)
+  def `23`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`23` = 23.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`23`]
   @scala.inline
-  def `24`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`24` = this.cast(24)
+  def `24`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`24` = 24.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`24`]
   @scala.inline
-  def `25`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`25` = this.cast(25)
+  def `25`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`25` = 25.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`25`]
   @scala.inline
-  def `26`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`26` = this.cast(26)
+  def `26`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`26` = 26.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`26`]
   @scala.inline
-  def `27`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`27` = this.cast(27)
+  def `27`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`27` = 27.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`27`]
   @scala.inline
-  def `28`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`28` = this.cast(28)
+  def `28`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`28` = 28.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`28`]
   @scala.inline
-  def `29`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`29` = this.cast(29)
+  def `29`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`29` = 29.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`29`]
   @scala.inline
-  def `3`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`3` = this.cast(3)
+  def `3`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`3` = 3.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`3`]
   @scala.inline
-  def `30`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`30` = this.cast(30)
+  def `30`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`30` = 30.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`30`]
   @scala.inline
-  def `31`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`31` = this.cast(31)
+  def `31`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`31` = 31.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`31`]
   @scala.inline
-  def `4`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`4` = this.cast(4)
+  def `4`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`4` = 4.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`4`]
   @scala.inline
-  def `5`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`5` = this.cast(5)
+  def `5`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`5` = 5.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`5`]
   @scala.inline
-  def `6`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`6` = this.cast(6)
+  def `6`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`6` = 6.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`6`]
   @scala.inline
-  def `7`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`7` = this.cast(7)
+  def `7`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`7` = 7.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`7`]
   @scala.inline
-  def `8`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`8` = this.cast(8)
+  def `8`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`8` = 8.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`8`]
   @scala.inline
-  def `9`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`9` = this.cast(9)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `9`: typingsSlinky.kamailioKemi.kamailioKemiNumbers.`9` = 9.asInstanceOf[typingsSlinky.kamailioKemi.kamailioKemiNumbers.`9`]
 }
 

@@ -27,40 +27,38 @@ trait AccessibilityTrait extends js.Object
 
 object AccessibilityTrait {
   @scala.inline
-  def adjustable: typingsSlinky.reactNative.reactNativeStrings.adjustable = this.cast("adjustable")
+  def adjustable: typingsSlinky.reactNative.reactNativeStrings.adjustable = "adjustable".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.adjustable]
   @scala.inline
-  def allowsDirectInteraction: typingsSlinky.reactNative.reactNativeStrings.allowsDirectInteraction = this.cast("allowsDirectInteraction")
+  def allowsDirectInteraction: typingsSlinky.reactNative.reactNativeStrings.allowsDirectInteraction = "allowsDirectInteraction".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.allowsDirectInteraction]
   @scala.inline
-  def button: typingsSlinky.reactNative.reactNativeStrings.button = this.cast("button")
+  def button: typingsSlinky.reactNative.reactNativeStrings.button = "button".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.button]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.reactNative.reactNativeStrings.disabled = "disabled".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.reactNative.reactNativeStrings.disabled = this.cast("disabled")
+  def frequentUpdates: typingsSlinky.reactNative.reactNativeStrings.frequentUpdates = "frequentUpdates".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.frequentUpdates]
   @scala.inline
-  def frequentUpdates: typingsSlinky.reactNative.reactNativeStrings.frequentUpdates = this.cast("frequentUpdates")
+  def header: typingsSlinky.reactNative.reactNativeStrings.header = "header".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.header]
   @scala.inline
-  def header: typingsSlinky.reactNative.reactNativeStrings.header = this.cast("header")
+  def image: typingsSlinky.reactNative.reactNativeStrings.image = "image".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.image]
   @scala.inline
-  def image: typingsSlinky.reactNative.reactNativeStrings.image = this.cast("image")
+  def key: typingsSlinky.reactNative.reactNativeStrings.key = "key".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.key]
   @scala.inline
-  def key: typingsSlinky.reactNative.reactNativeStrings.key = this.cast("key")
+  def link: typingsSlinky.reactNative.reactNativeStrings.link = "link".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.link]
   @scala.inline
-  def link: typingsSlinky.reactNative.reactNativeStrings.link = this.cast("link")
+  def none: typingsSlinky.reactNative.reactNativeStrings.none = "none".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.none]
   @scala.inline
-  def none: typingsSlinky.reactNative.reactNativeStrings.none = this.cast("none")
+  def pageTurn: typingsSlinky.reactNative.reactNativeStrings.pageTurn = "pageTurn".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.pageTurn]
   @scala.inline
-  def pageTurn: typingsSlinky.reactNative.reactNativeStrings.pageTurn = this.cast("pageTurn")
+  def plays: typingsSlinky.reactNative.reactNativeStrings.plays = "plays".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.plays]
   @scala.inline
-  def plays: typingsSlinky.reactNative.reactNativeStrings.plays = this.cast("plays")
+  def search: typingsSlinky.reactNative.reactNativeStrings.search = "search".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.search]
   @scala.inline
-  def search: typingsSlinky.reactNative.reactNativeStrings.search = this.cast("search")
+  def selected: typingsSlinky.reactNative.reactNativeStrings.selected = "selected".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.selected]
   @scala.inline
-  def selected: typingsSlinky.reactNative.reactNativeStrings.selected = this.cast("selected")
+  def startsMedia: typingsSlinky.reactNative.reactNativeStrings.startsMedia = "startsMedia".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.startsMedia]
   @scala.inline
-  def startsMedia: typingsSlinky.reactNative.reactNativeStrings.startsMedia = this.cast("startsMedia")
+  def summary: typingsSlinky.reactNative.reactNativeStrings.summary = "summary".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.summary]
   @scala.inline
-  def summary: typingsSlinky.reactNative.reactNativeStrings.summary = this.cast("summary")
-  @scala.inline
-  def text: typingsSlinky.reactNative.reactNativeStrings.text = this.cast("text")
+  def text: typingsSlinky.reactNative.reactNativeStrings.text = "text".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.text]
 }
 

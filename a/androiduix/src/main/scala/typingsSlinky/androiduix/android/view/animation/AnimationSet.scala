@@ -1,6 +1,6 @@
 package typingsSlinky.androiduix.android.view.animation
 
-import typingsSlinky.androiduix.java.util.List
+import typingsSlinky.androiduix.java_.util.List
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

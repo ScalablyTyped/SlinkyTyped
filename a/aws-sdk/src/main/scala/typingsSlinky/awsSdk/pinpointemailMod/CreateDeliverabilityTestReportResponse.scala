@@ -20,8 +20,27 @@ object CreateDeliverabilityTestReportResponse {
   @scala.inline
   def apply(DeliverabilityTestStatus: DeliverabilityTestStatus, ReportId: ReportId): CreateDeliverabilityTestReportResponse = {
     val __obj = js.Dynamic.literal(DeliverabilityTestStatus = DeliverabilityTestStatus.asInstanceOf[js.Any], ReportId = ReportId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateDeliverabilityTestReportResponse]
   }
+  @scala.inline
+  implicit class CreateDeliverabilityTestReportResponseOps[Self <: CreateDeliverabilityTestReportResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeliverabilityTestStatus(value: DeliverabilityTestStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverabilityTestStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReportId(value: ReportId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

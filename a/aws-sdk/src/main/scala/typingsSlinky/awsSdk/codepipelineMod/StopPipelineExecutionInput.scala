@@ -26,16 +26,53 @@ trait StopPipelineExecutionInput extends js.Object {
 
 object StopPipelineExecutionInput {
   @scala.inline
-  def apply(
-    pipelineExecutionId: PipelineExecutionId,
-    pipelineName: PipelineName,
-    abandon: js.UndefOr[scala.Boolean] = js.undefined,
-    reason: StopPipelineExecutionReason = null
-  ): StopPipelineExecutionInput = {
+  def apply(pipelineExecutionId: PipelineExecutionId, pipelineName: PipelineName): StopPipelineExecutionInput = {
     val __obj = js.Dynamic.literal(pipelineExecutionId = pipelineExecutionId.asInstanceOf[js.Any], pipelineName = pipelineName.asInstanceOf[js.Any])
-    if (!js.isUndefined(abandon)) __obj.updateDynamic("abandon")(abandon.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[StopPipelineExecutionInput]
   }
+  @scala.inline
+  implicit class StopPipelineExecutionInputOps[Self <: StopPipelineExecutionInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPipelineExecutionId(value: PipelineExecutionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineExecutionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPipelineName(value: PipelineName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbandon(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abandon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbandon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abandon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: StopPipelineExecutionReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.graphqlTools.extractFieldMod
 
 import typingsSlinky.graphqlTools.AnonFrom
-import typingsSlinky.graphqlTools.interfacesMod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends ExtractField {
   def this(hasFromTo: AnonFrom) = this()
-  /* CompleteClass */
-  override var from: js.Any = js.native
-  /* CompleteClass */
-  override var to: js.Any = js.native
-  /* CompleteClass */
-  @JSName("transformRequest")
-  override def transformRequest_MExtractField(originalRequest: Request): Request = js.native
 }
 

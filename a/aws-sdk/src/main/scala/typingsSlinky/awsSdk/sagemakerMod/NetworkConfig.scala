@@ -15,11 +15,41 @@ trait NetworkConfig extends js.Object {
 
 object NetworkConfig {
   @scala.inline
-  def apply(EnableNetworkIsolation: js.UndefOr[scala.Boolean] = js.undefined, VpcConfig: VpcConfig = null): NetworkConfig = {
+  def apply(): NetworkConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(EnableNetworkIsolation)) __obj.updateDynamic("EnableNetworkIsolation")(EnableNetworkIsolation.asInstanceOf[js.Any])
-    if (VpcConfig != null) __obj.updateDynamic("VpcConfig")(VpcConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkConfig]
   }
+  @scala.inline
+  implicit class NetworkConfigOps[Self <: NetworkConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnableNetworkIsolation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableNetworkIsolation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableNetworkIsolation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableNetworkIsolation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcConfig(value: VpcConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -179,7 +179,7 @@ trait CSSStyleDeclaration
   var imageRendering: java.lang.String = js.native
   var imeMode: java.lang.String | Null = js.native
   var inlineSize: java.lang.String = js.native
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[java.lang.String]] = js.native
   var justifyContent: java.lang.String = js.native
   var justifyItems: java.lang.String = js.native
@@ -550,5 +550,6 @@ trait CSSStyleDeclaration
 
 @JSGlobal("CSSStyleDeclaration")
 @js.native
-object CSSStyleDeclaration extends Instantiable0[CSSStyleDeclaration]
+object CSSStyleDeclaration
+  extends Instantiable0[org.scalajs.dom.raw.CSSStyleDeclaration]
 

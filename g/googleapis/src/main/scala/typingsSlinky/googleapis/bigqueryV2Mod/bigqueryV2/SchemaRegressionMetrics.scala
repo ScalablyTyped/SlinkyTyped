@@ -33,20 +33,77 @@ trait SchemaRegressionMetrics extends js.Object {
 
 object SchemaRegressionMetrics {
   @scala.inline
-  def apply(
-    meanAbsoluteError: Int | Double = null,
-    meanSquaredError: Int | Double = null,
-    meanSquaredLogError: Int | Double = null,
-    medianAbsoluteError: Int | Double = null,
-    rSquared: Int | Double = null
-  ): SchemaRegressionMetrics = {
+  def apply(): SchemaRegressionMetrics = {
     val __obj = js.Dynamic.literal()
-    if (meanAbsoluteError != null) __obj.updateDynamic("meanAbsoluteError")(meanAbsoluteError.asInstanceOf[js.Any])
-    if (meanSquaredError != null) __obj.updateDynamic("meanSquaredError")(meanSquaredError.asInstanceOf[js.Any])
-    if (meanSquaredLogError != null) __obj.updateDynamic("meanSquaredLogError")(meanSquaredLogError.asInstanceOf[js.Any])
-    if (medianAbsoluteError != null) __obj.updateDynamic("medianAbsoluteError")(medianAbsoluteError.asInstanceOf[js.Any])
-    if (rSquared != null) __obj.updateDynamic("rSquared")(rSquared.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegressionMetrics]
   }
+  @scala.inline
+  implicit class SchemaRegressionMetricsOps[Self <: SchemaRegressionMetrics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMeanAbsoluteError(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meanAbsoluteError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeanAbsoluteError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meanAbsoluteError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeanSquaredError(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meanSquaredError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeanSquaredError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meanSquaredError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeanSquaredLogError(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meanSquaredLogError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeanSquaredLogError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meanSquaredLogError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedianAbsoluteError(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medianAbsoluteError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedianAbsoluteError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medianAbsoluteError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRSquared(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rSquared")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRSquared: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rSquared")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

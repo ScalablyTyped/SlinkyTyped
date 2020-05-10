@@ -13,12 +13,10 @@ trait MerchantAccountStatus extends js.Object
 
 object MerchantAccountStatus {
   @scala.inline
-  def Active: typingsSlinky.braintree.braintreeStrings.Active = this.cast("Active")
+  def Active: typingsSlinky.braintree.braintreeStrings.Active = "Active".asInstanceOf[typingsSlinky.braintree.braintreeStrings.Active]
   @scala.inline
-  def Pending: typingsSlinky.braintree.braintreeStrings.Pending = this.cast("Pending")
+  def Pending: typingsSlinky.braintree.braintreeStrings.Pending = "Pending".asInstanceOf[typingsSlinky.braintree.braintreeStrings.Pending]
   @scala.inline
-  def Suspended: typingsSlinky.braintree.braintreeStrings.Suspended = this.cast("Suspended")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Suspended: typingsSlinky.braintree.braintreeStrings.Suspended = "Suspended".asInstanceOf[typingsSlinky.braintree.braintreeStrings.Suspended]
 }
 

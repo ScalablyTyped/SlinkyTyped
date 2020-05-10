@@ -1,11 +1,8 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonHtmlValue
 import typingsSlinky.primereact.AnonOldRange
 import typingsSlinky.primereact.editorMod.EditorProps
@@ -13,40 +10,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Editor
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactEditorMod.Editor] {
+object Editor {
   @JSImport("primereact/editor", "Editor")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, placeholder */
-  def apply(
-    formats: js.Array[_] = null,
-    headerTemplate: ReactElement = null,
-    modules: js.Any = null,
-    onSelectionChange: /* e */ AnonOldRange => Unit = null,
-    onTextChange: /* e */ AnonHtmlValue => Unit = null,
-    readonly: js.UndefOr[Boolean] = js.undefined,
-    style: js.Object = null,
-    theme: String = null,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactEditorMod.Editor] = {
-    val __obj = js.Dynamic.literal()
-    if (formats != null) __obj.updateDynamic("formats")(formats.asInstanceOf[js.Any])
-    if (headerTemplate != null) __obj.updateDynamic("headerTemplate")(headerTemplate.asInstanceOf[js.Any])
-    if (modules != null) __obj.updateDynamic("modules")(modules.asInstanceOf[js.Any])
-    if (onSelectionChange != null) __obj.updateDynamic("onSelectionChange")(js.Any.fromFunction1(onSelectionChange))
-    if (onTextChange != null) __obj.updateDynamic("onTextChange")(js.Any.fromFunction1(onTextChange))
-    if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactEditorMod.Editor] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formats(value: js.Array[_]): this.type = set("formats", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerTemplate(value: ReactElement): this.type = set("headerTemplate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modules(value: js.Any): this.type = set("modules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSelectionChange(value: /* e */ AnonOldRange => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTextChange(value: /* e */ AnonHtmlValue => Unit): this.type = set("onTextChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readonly(value: Boolean): this.type = set("readonly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: String): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactEditorMod.Editor] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.primereactEditorMod.Editor](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = EditorProps
+  
+  def withProps(p: EditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Editor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

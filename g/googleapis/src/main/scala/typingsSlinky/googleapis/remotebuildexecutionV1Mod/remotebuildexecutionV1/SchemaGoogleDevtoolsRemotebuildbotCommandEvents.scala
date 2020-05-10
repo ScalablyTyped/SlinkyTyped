@@ -31,18 +31,65 @@ trait SchemaGoogleDevtoolsRemotebuildbotCommandEvents extends js.Object {
 
 object SchemaGoogleDevtoolsRemotebuildbotCommandEvents {
   @scala.inline
-  def apply(
-    dockerCacheHit: js.UndefOr[Boolean] = js.undefined,
-    inputCacheMiss: Int | Double = null,
-    numErrors: String = null,
-    numWarnings: String = null
-  ): SchemaGoogleDevtoolsRemotebuildbotCommandEvents = {
+  def apply(): SchemaGoogleDevtoolsRemotebuildbotCommandEvents = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(dockerCacheHit)) __obj.updateDynamic("dockerCacheHit")(dockerCacheHit.asInstanceOf[js.Any])
-    if (inputCacheMiss != null) __obj.updateDynamic("inputCacheMiss")(inputCacheMiss.asInstanceOf[js.Any])
-    if (numErrors != null) __obj.updateDynamic("numErrors")(numErrors.asInstanceOf[js.Any])
-    if (numWarnings != null) __obj.updateDynamic("numWarnings")(numWarnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemotebuildbotCommandEvents]
   }
+  @scala.inline
+  implicit class SchemaGoogleDevtoolsRemotebuildbotCommandEventsOps[Self <: SchemaGoogleDevtoolsRemotebuildbotCommandEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDockerCacheHit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dockerCacheHit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDockerCacheHit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dockerCacheHit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputCacheMiss(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputCacheMiss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputCacheMiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputCacheMiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumErrors(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumWarnings(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numWarnings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumWarnings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numWarnings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

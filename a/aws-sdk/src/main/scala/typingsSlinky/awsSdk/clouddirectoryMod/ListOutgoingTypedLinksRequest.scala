@@ -38,22 +38,89 @@ trait ListOutgoingTypedLinksRequest extends js.Object {
 
 object ListOutgoingTypedLinksRequest {
   @scala.inline
-  def apply(
-    DirectoryArn: Arn,
-    ObjectReference: ObjectReference,
-    ConsistencyLevel: ConsistencyLevel = null,
-    FilterAttributeRanges: TypedLinkAttributeRangeList = null,
-    FilterTypedLink: TypedLinkSchemaAndFacetName = null,
-    MaxResults: Int | Double = null,
-    NextToken: NextToken = null
-  ): ListOutgoingTypedLinksRequest = {
+  def apply(DirectoryArn: Arn, ObjectReference: ObjectReference): ListOutgoingTypedLinksRequest = {
     val __obj = js.Dynamic.literal(DirectoryArn = DirectoryArn.asInstanceOf[js.Any], ObjectReference = ObjectReference.asInstanceOf[js.Any])
-    if (ConsistencyLevel != null) __obj.updateDynamic("ConsistencyLevel")(ConsistencyLevel.asInstanceOf[js.Any])
-    if (FilterAttributeRanges != null) __obj.updateDynamic("FilterAttributeRanges")(FilterAttributeRanges.asInstanceOf[js.Any])
-    if (FilterTypedLink != null) __obj.updateDynamic("FilterTypedLink")(FilterTypedLink.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListOutgoingTypedLinksRequest]
   }
+  @scala.inline
+  implicit class ListOutgoingTypedLinksRequestOps[Self <: ListOutgoingTypedLinksRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectReference(value: ObjectReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConsistencyLevel(value: ConsistencyLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsistencyLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsistencyLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsistencyLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterAttributeRanges(value: TypedLinkAttributeRangeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterAttributeRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterAttributeRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterAttributeRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterTypedLink(value: TypedLinkSchemaAndFacetName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterTypedLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterTypedLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterTypedLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: NumberResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

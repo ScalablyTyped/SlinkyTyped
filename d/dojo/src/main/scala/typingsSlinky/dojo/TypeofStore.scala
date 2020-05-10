@@ -10,6 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofStore extends js.Object {
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dojo/store/api/Store.PutDirectives.html
@@ -18,14 +19,14 @@ trait TypeofStore extends js.Object {
     * creation of stored objects.
     *
     */
-  var PutDirectives: Instantiable0[typingsSlinky.dojo.dojo.store.api.Store.PutDirectives]
+  var PutDirectives: Instantiable0[typingsSlinky.dojo.dojo.store.api.Store.PutDirectives] = js.native
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dojo/store/api/Store.QueryOptions.html
     *
     * Optional object with additional parameters for query results.
     *
     */
-  var QueryOptions: Instantiable0[typingsSlinky.dojo.dojo.store.api.Store.QueryOptions]
+  var QueryOptions: Instantiable0[typingsSlinky.dojo.dojo.store.api.Store.QueryOptions] = js.native
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dojo/store/api/Store.QueryResults.html
     *
@@ -33,14 +34,14 @@ trait TypeofStore extends js.Object {
     * of a query. Queries may be executed asynchronously.
     *
     */
-  var QueryResults: Instantiable0[typingsSlinky.dojo.dojo.store.api.Store.QueryResults]
+  var QueryResults: Instantiable0[typingsSlinky.dojo.dojo.store.api.Store.QueryResults] = js.native
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dojo/store/api/Store.SortInformation.html
     *
     * An object describing what attribute to sort on, and the direction of the sort.
     *
     */
-  var SortInformation: Instantiable0[typingsSlinky.dojo.dojo.store.api.Store.SortInformation]
+  var SortInformation: Instantiable0[typingsSlinky.dojo.dojo.store.api.Store.SortInformation] = js.native
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dojo/store/api/Store.Transaction.html
     *
@@ -48,7 +49,7 @@ trait TypeofStore extends js.Object {
     * transaction.
     *
     */
-  var Transaction: Instantiable0[typingsSlinky.dojo.dojo.store.api.Store.Transaction]
+  var Transaction: Instantiable0[typingsSlinky.dojo.dojo.store.api.Store.Transaction] = js.native
 }
 
 object TypeofStore {
@@ -61,8 +62,45 @@ object TypeofStore {
     Transaction: Instantiable0[Transaction]
   ): TypeofStore = {
     val __obj = js.Dynamic.literal(PutDirectives = PutDirectives.asInstanceOf[js.Any], QueryOptions = QueryOptions.asInstanceOf[js.Any], QueryResults = QueryResults.asInstanceOf[js.Any], SortInformation = SortInformation.asInstanceOf[js.Any], Transaction = Transaction.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypeofStore]
   }
+  @scala.inline
+  implicit class TypeofStoreOps[Self <: TypeofStore] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPutDirectives(value: Instantiable0[PutDirectives]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PutDirectives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQueryOptions(value: Instantiable0[QueryOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQueryResults(value: Instantiable0[QueryResults]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSortInformation(value: Instantiable0[SortInformation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransaction(value: Instantiable0[Transaction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Transaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

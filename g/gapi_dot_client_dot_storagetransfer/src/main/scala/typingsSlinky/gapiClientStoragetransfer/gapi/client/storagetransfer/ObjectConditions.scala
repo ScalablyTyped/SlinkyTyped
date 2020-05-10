@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ObjectConditions extends js.Object {
   /**
     * `excludePrefixes` must follow the requirements described for
@@ -11,7 +12,7 @@ trait ObjectConditions extends js.Object {
     *
     * The max size of `excludePrefixes` is 1000.
     */
-  var excludePrefixes: js.UndefOr[js.Array[String]] = js.undefined
+  var excludePrefixes: js.UndefOr[js.Array[String]] = js.native
   /**
     * If `includePrefixes` is specified, objects that satisfy the object
     * conditions must have names that start with one of the `includePrefixes`
@@ -47,12 +48,12 @@ trait ObjectConditions extends js.Object {
     *
     * The max size of `includePrefixes` is 1000.
     */
-  var includePrefixes: js.UndefOr[js.Array[String]] = js.undefined
+  var includePrefixes: js.UndefOr[js.Array[String]] = js.native
   /**
     * `maxTimeElapsedSinceLastModification` is the complement to
     * `minTimeElapsedSinceLastModification`.
     */
-  var maxTimeElapsedSinceLastModification: js.UndefOr[String] = js.undefined
+  var maxTimeElapsedSinceLastModification: js.UndefOr[String] = js.native
   /**
     * If unspecified, `minTimeElapsedSinceLastModification` takes a zero value
     * and `maxTimeElapsedSinceLastModification` takes the maximum possible
@@ -62,23 +63,70 @@ trait ObjectConditions extends js.Object {
     * `NOW` - `minTimeElapsedSinceLastModification`, or not have a
     * `lastModificationTime`.
     */
-  var minTimeElapsedSinceLastModification: js.UndefOr[String] = js.undefined
+  var minTimeElapsedSinceLastModification: js.UndefOr[String] = js.native
 }
 
 object ObjectConditions {
   @scala.inline
-  def apply(
-    excludePrefixes: js.Array[String] = null,
-    includePrefixes: js.Array[String] = null,
-    maxTimeElapsedSinceLastModification: String = null,
-    minTimeElapsedSinceLastModification: String = null
-  ): ObjectConditions = {
+  def apply(): ObjectConditions = {
     val __obj = js.Dynamic.literal()
-    if (excludePrefixes != null) __obj.updateDynamic("excludePrefixes")(excludePrefixes.asInstanceOf[js.Any])
-    if (includePrefixes != null) __obj.updateDynamic("includePrefixes")(includePrefixes.asInstanceOf[js.Any])
-    if (maxTimeElapsedSinceLastModification != null) __obj.updateDynamic("maxTimeElapsedSinceLastModification")(maxTimeElapsedSinceLastModification.asInstanceOf[js.Any])
-    if (minTimeElapsedSinceLastModification != null) __obj.updateDynamic("minTimeElapsedSinceLastModification")(minTimeElapsedSinceLastModification.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectConditions]
   }
+  @scala.inline
+  implicit class ObjectConditionsOps[Self <: ObjectConditions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExcludePrefixes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePrefixes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludePrefixes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludePrefixes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludePrefixes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includePrefixes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludePrefixes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includePrefixes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTimeElapsedSinceLastModification(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeElapsedSinceLastModification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTimeElapsedSinceLastModification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTimeElapsedSinceLastModification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinTimeElapsedSinceLastModification(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTimeElapsedSinceLastModification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinTimeElapsedSinceLastModification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minTimeElapsedSinceLastModification")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

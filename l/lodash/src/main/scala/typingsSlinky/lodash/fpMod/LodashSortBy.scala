@@ -10,15 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LodashSortBy extends js.Object {
-  def apply[T /* <: js.Object */](
-    iteratees: Many[
-      ValueIteratee[
-        /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
-      ]
-    ]
-  ): js.Array[
-    /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
-  ] = js.native
+  def apply[T](iteratees: Many[ValueIteratee[T]]): js.Array[T] = js.native
   def apply[T /* <: js.Object */](
     iteratees: Many[
       ValueIteratee[

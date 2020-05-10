@@ -12,10 +12,8 @@ trait KeyGeneratorType extends js.Object
 
 object KeyGeneratorType {
   @scala.inline
-  def autoincrement: typingsSlinky.arangodb.arangodbStrings.autoincrement = this.cast("autoincrement")
+  def autoincrement: typingsSlinky.arangodb.arangodbStrings.autoincrement = "autoincrement".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.autoincrement]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def traditional: typingsSlinky.arangodb.arangodbStrings.traditional = this.cast("traditional")
+  def traditional: typingsSlinky.arangodb.arangodbStrings.traditional = "traditional".asInstanceOf[typingsSlinky.arangodb.arangodbStrings.traditional]
 }
 

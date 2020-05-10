@@ -35,20 +35,77 @@ trait ClassifierArgs extends js.Object {
 
 object ClassifierArgs {
   @scala.inline
-  def apply(
-    csvClassifier: Input[ClassifierCsvClassifier] = null,
-    grokClassifier: Input[ClassifierGrokClassifier] = null,
-    jsonClassifier: Input[ClassifierJsonClassifier] = null,
-    name: Input[String] = null,
-    xmlClassifier: Input[ClassifierXmlClassifier] = null
-  ): ClassifierArgs = {
+  def apply(): ClassifierArgs = {
     val __obj = js.Dynamic.literal()
-    if (csvClassifier != null) __obj.updateDynamic("csvClassifier")(csvClassifier.asInstanceOf[js.Any])
-    if (grokClassifier != null) __obj.updateDynamic("grokClassifier")(grokClassifier.asInstanceOf[js.Any])
-    if (jsonClassifier != null) __obj.updateDynamic("jsonClassifier")(jsonClassifier.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (xmlClassifier != null) __obj.updateDynamic("xmlClassifier")(xmlClassifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassifierArgs]
   }
+  @scala.inline
+  implicit class ClassifierArgsOps[Self <: ClassifierArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCsvClassifier(value: Input[ClassifierCsvClassifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csvClassifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCsvClassifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csvClassifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrokClassifier(value: Input[ClassifierGrokClassifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grokClassifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrokClassifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grokClassifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJsonClassifier(value: Input[ClassifierJsonClassifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonClassifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJsonClassifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonClassifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXmlClassifier(value: Input[ClassifierXmlClassifier]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlClassifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXmlClassifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlClassifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

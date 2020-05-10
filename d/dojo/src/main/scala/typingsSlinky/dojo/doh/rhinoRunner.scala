@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation._
   * Augments return value from doh/runner.
   *
   */
+@js.native
 trait rhinoRunner extends js.Object
 

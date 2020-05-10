@@ -12,10 +12,8 @@ trait RateItMode extends js.Object
 
 object RateItMode {
   @scala.inline
-  def bg: typingsSlinky.jqueryRateit.jqueryRateitStrings.bg = this.cast("bg")
+  def bg: typingsSlinky.jqueryRateit.jqueryRateitStrings.bg = "bg".asInstanceOf[typingsSlinky.jqueryRateit.jqueryRateitStrings.bg]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def font: typingsSlinky.jqueryRateit.jqueryRateitStrings.font = this.cast("font")
+  def font: typingsSlinky.jqueryRateit.jqueryRateitStrings.font = "font".asInstanceOf[typingsSlinky.jqueryRateit.jqueryRateitStrings.font]
 }
 

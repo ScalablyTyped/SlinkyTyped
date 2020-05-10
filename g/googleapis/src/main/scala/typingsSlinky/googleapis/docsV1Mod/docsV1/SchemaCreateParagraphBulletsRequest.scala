@@ -28,11 +28,41 @@ trait SchemaCreateParagraphBulletsRequest extends js.Object {
 
 object SchemaCreateParagraphBulletsRequest {
   @scala.inline
-  def apply(bulletPreset: String = null, range: SchemaRange = null): SchemaCreateParagraphBulletsRequest = {
+  def apply(): SchemaCreateParagraphBulletsRequest = {
     val __obj = js.Dynamic.literal()
-    if (bulletPreset != null) __obj.updateDynamic("bulletPreset")(bulletPreset.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreateParagraphBulletsRequest]
   }
+  @scala.inline
+  implicit class SchemaCreateParagraphBulletsRequestOps[Self <: SchemaCreateParagraphBulletsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBulletPreset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletPreset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBulletPreset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletPreset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: SchemaRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

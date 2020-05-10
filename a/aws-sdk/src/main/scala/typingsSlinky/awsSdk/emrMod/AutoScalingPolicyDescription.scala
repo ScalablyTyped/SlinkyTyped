@@ -22,16 +22,53 @@ trait AutoScalingPolicyDescription extends js.Object {
 
 object AutoScalingPolicyDescription {
   @scala.inline
-  def apply(
-    Constraints: ScalingConstraints = null,
-    Rules: ScalingRuleList = null,
-    Status: AutoScalingPolicyStatus = null
-  ): AutoScalingPolicyDescription = {
+  def apply(): AutoScalingPolicyDescription = {
     val __obj = js.Dynamic.literal()
-    if (Constraints != null) __obj.updateDynamic("Constraints")(Constraints.asInstanceOf[js.Any])
-    if (Rules != null) __obj.updateDynamic("Rules")(Rules.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoScalingPolicyDescription]
   }
+  @scala.inline
+  implicit class AutoScalingPolicyDescriptionOps[Self <: AutoScalingPolicyDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstraints(value: ScalingConstraints): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Constraints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstraints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Constraints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRules(value: ScalingRuleList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: AutoScalingPolicyStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

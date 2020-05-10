@@ -22,15 +22,47 @@ trait ModifyVpcAttributeRequest extends js.Object {
 
 object ModifyVpcAttributeRequest {
   @scala.inline
-  def apply(
-    VpcId: VpcId,
-    EnableDnsHostnames: AttributeBooleanValue = null,
-    EnableDnsSupport: AttributeBooleanValue = null
-  ): ModifyVpcAttributeRequest = {
+  def apply(VpcId: VpcId): ModifyVpcAttributeRequest = {
     val __obj = js.Dynamic.literal(VpcId = VpcId.asInstanceOf[js.Any])
-    if (EnableDnsHostnames != null) __obj.updateDynamic("EnableDnsHostnames")(EnableDnsHostnames.asInstanceOf[js.Any])
-    if (EnableDnsSupport != null) __obj.updateDynamic("EnableDnsSupport")(EnableDnsSupport.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyVpcAttributeRequest]
   }
+  @scala.inline
+  implicit class ModifyVpcAttributeRequestOps[Self <: ModifyVpcAttributeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVpcId(value: VpcId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnableDnsHostnames(value: AttributeBooleanValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableDnsHostnames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableDnsHostnames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableDnsHostnames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableDnsSupport(value: AttributeBooleanValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableDnsSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableDnsSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnableDnsSupport")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

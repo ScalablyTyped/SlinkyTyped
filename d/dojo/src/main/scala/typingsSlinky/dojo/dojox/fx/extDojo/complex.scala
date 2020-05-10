@@ -19,5 +19,6 @@ import scala.scalajs.js.annotation._
   * there.
   *
   */
+@js.native
 trait complex extends js.Object
 

@@ -4,47 +4,105 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotZigzagMarkerStatesSelectOptions extends js.Object {
   /**
     * (Highstock) Enable or disable visible feedback for selection.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /**
     * (Highstock) The fill color of the point marker.
     */
-  var fillColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var fillColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highstock) The color of the point marker's outline. When `undefined`,
     * the series' or point's color is used.
     */
-  var lineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var lineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highstock) The width of the point marker's outline.
     */
-  var lineWidth: js.UndefOr[Double] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.native
   /**
     * (Highstock) The radius of the point marker. In hover state, it defaults
     * to the normal state's radius + 2.
     */
-  var radius: js.UndefOr[Double] = js.undefined
+  var radius: js.UndefOr[Double] = js.native
 }
 
 object PlotZigzagMarkerStatesSelectOptions {
   @scala.inline
-  def apply(
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    fillColor: ColorString | GradientColorObject | PatternObject = null,
-    lineColor: ColorString | GradientColorObject | PatternObject = null,
-    lineWidth: Int | Double = null,
-    radius: Int | Double = null
-  ): PlotZigzagMarkerStatesSelectOptions = {
+  def apply(): PlotZigzagMarkerStatesSelectOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (lineColor != null) __obj.updateDynamic("lineColor")(lineColor.asInstanceOf[js.Any])
-    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotZigzagMarkerStatesSelectOptions]
   }
+  @scala.inline
+  implicit class PlotZigzagMarkerStatesSelectOptionsOps[Self <: PlotZigzagMarkerStatesSelectOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

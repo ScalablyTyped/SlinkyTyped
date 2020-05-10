@@ -4,7 +4,6 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.rcTable.columnGroupMod.ColumnGroupProps
 import typingsSlinky.rcTable.columnMod.ColumnProps
 import typingsSlinky.rcTable.interfaceMod.DefaultRecordType
-import typingsSlinky.rcTable.rcTableStrings.RC_TABLE_INTERNAL_COL_DEFINE
 import typingsSlinky.rcTable.tableMod.TableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("rc-table/lib", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  val INTERNAL_COL_DEFINE: RC_TABLE_INTERNAL_COL_DEFINE = js.native
+  val INTERNAL_COL_DEFINE: /* "RC_TABLE_INTERNAL_COL_DEFINE" */ String = js.native
   /**
     * This is a syntactic sugar for `columns` prop.
     * So HOC will not work on this.

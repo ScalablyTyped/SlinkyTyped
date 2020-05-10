@@ -13,12 +13,10 @@ trait MatrixTrans extends js.Object
 
 object MatrixTrans {
   @scala.inline
-  def `111`: typingsSlinky.nblas.nblasNumbers.`111` = this.cast(111)
+  def `111`: typingsSlinky.nblas.nblasNumbers.`111` = 111.asInstanceOf[typingsSlinky.nblas.nblasNumbers.`111`]
   @scala.inline
-  def `112`: typingsSlinky.nblas.nblasNumbers.`112` = this.cast(112)
+  def `112`: typingsSlinky.nblas.nblasNumbers.`112` = 112.asInstanceOf[typingsSlinky.nblas.nblasNumbers.`112`]
   @scala.inline
-  def `113`: typingsSlinky.nblas.nblasNumbers.`113` = this.cast(113)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `113`: typingsSlinky.nblas.nblasNumbers.`113` = 113.asInstanceOf[typingsSlinky.nblas.nblasNumbers.`113`]
 }
 

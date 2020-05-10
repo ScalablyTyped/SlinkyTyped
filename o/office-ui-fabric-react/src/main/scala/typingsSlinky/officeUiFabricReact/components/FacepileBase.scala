@@ -1,10 +1,9 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.facepileTypesMod.IFacepile
 import typingsSlinky.officeUiFabricReact.facepileTypesMod.IFacepilePersona
@@ -14,6 +13,7 @@ import typingsSlinky.officeUiFabricReact.facepileTypesMod.IFacepileStyles
 import typingsSlinky.officeUiFabricReact.facepileTypesMod.OverflowButtonType
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaSharedProps
 import typingsSlinky.officeUiFabricReact.personaTypesMod.PersonaSize
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -21,54 +21,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FacepileBase
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.mod.FacepileBase] {
+object FacepileBase {
   @JSImport("office-ui-fabric-react", "FacepileBase")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    personas: js.Array[IFacepilePersona],
-    addButtonProps: IButtonProps = null,
-    ariaDescription: String = null,
-    ariaLabel: String = null,
-    chevronButtonProps: IButtonProps = null,
-    componentRef: IRefObject[IFacepile] = null,
-    getPersonaProps: /* persona */ IFacepilePersona => IPersonaSharedProps = null,
-    maxDisplayablePersonas: Int | Double = null,
-    onRenderPersona: (/* props */ js.UndefOr[IFacepilePersona], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IFacepilePersona], ReactElement | Null]]) => ReactElement | Null = null,
-    onRenderPersonaCoin: (/* props */ js.UndefOr[IFacepilePersona], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IFacepilePersona], ReactElement | Null]]) => ReactElement | Null = null,
-    overflowButtonProps: IButtonProps = null,
-    overflowButtonType: OverflowButtonType = null,
-    overflowPersonas: js.Array[IFacepilePersona] = null,
-    personaSize: PersonaSize = null,
-    showAddButton: js.UndefOr[Boolean] = js.undefined,
-    styles: IStyleFunctionOrObject[IFacepileStyleProps, IFacepileStyles] = null,
-    theme: ITheme = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.FacepileBase] = {
-    val __obj = js.Dynamic.literal(personas = personas.asInstanceOf[js.Any])
-    if (addButtonProps != null) __obj.updateDynamic("addButtonProps")(addButtonProps.asInstanceOf[js.Any])
-    if (ariaDescription != null) __obj.updateDynamic("ariaDescription")(ariaDescription.asInstanceOf[js.Any])
-    if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
-    if (chevronButtonProps != null) __obj.updateDynamic("chevronButtonProps")(chevronButtonProps.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (getPersonaProps != null) __obj.updateDynamic("getPersonaProps")(js.Any.fromFunction1(getPersonaProps))
-    if (maxDisplayablePersonas != null) __obj.updateDynamic("maxDisplayablePersonas")(maxDisplayablePersonas.asInstanceOf[js.Any])
-    if (onRenderPersona != null) __obj.updateDynamic("onRenderPersona")(js.Any.fromFunction2(onRenderPersona))
-    if (onRenderPersonaCoin != null) __obj.updateDynamic("onRenderPersonaCoin")(js.Any.fromFunction2(onRenderPersonaCoin))
-    if (overflowButtonProps != null) __obj.updateDynamic("overflowButtonProps")(overflowButtonProps.asInstanceOf[js.Any])
-    if (overflowButtonType != null) __obj.updateDynamic("overflowButtonType")(overflowButtonType.asInstanceOf[js.Any])
-    if (overflowPersonas != null) __obj.updateDynamic("overflowPersonas")(overflowPersonas.asInstanceOf[js.Any])
-    if (personaSize != null) __obj.updateDynamic("personaSize")(personaSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(showAddButton)) __obj.updateDynamic("showAddButton")(showAddButton.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.FacepileBase] {
+    @scala.inline
+    def addButtonProps(value: IButtonProps): this.type = set("addButtonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaDescription(value: String): this.type = set("ariaDescription", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def chevronButtonProps(value: IButtonProps): this.type = set("chevronButtonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IFacepile | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IFacepile]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IFacepile]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getPersonaProps(value: /* persona */ IFacepilePersona => IPersonaSharedProps): this.type = set("getPersonaProps", js.Any.fromFunction1(value))
+    @scala.inline
+    def maxDisplayablePersonas(value: Double): this.type = set("maxDisplayablePersonas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onRenderPersona(
+      value: (/* props */ js.UndefOr[IFacepilePersona], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IFacepilePersona], ReactElement | Null]]) => ReactElement | Null
+    ): this.type = set("onRenderPersona", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRenderPersonaCoin(
+      value: (/* props */ js.UndefOr[IFacepilePersona], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IFacepilePersona], ReactElement | Null]]) => ReactElement | Null
+    ): this.type = set("onRenderPersonaCoin", js.Any.fromFunction2(value))
+    @scala.inline
+    def overflowButtonProps(value: IButtonProps): this.type = set("overflowButtonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowButtonType(value: OverflowButtonType): this.type = set("overflowButtonType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowPersonas(value: js.Array[IFacepilePersona]): this.type = set("overflowPersonas", value.asInstanceOf[js.Any])
+    @scala.inline
+    def personaSize(value: PersonaSize): this.type = set("personaSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showAddButton(value: Boolean): this.type = set("showAddButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IFacepileStyleProps => Partial[IFacepileStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IFacepileStyleProps, IFacepileStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  type Props = IFacepileProps
+  
+  def withProps(p: IFacepileProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(personas: js.Array[IFacepilePersona]): Builder = {
+    val __props = js.Dynamic.literal(personas = personas.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IFacepileProps]))
+  }
 }
 

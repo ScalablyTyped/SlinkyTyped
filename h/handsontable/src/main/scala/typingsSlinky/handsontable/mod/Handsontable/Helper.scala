@@ -1,9 +1,9 @@
 package typingsSlinky.handsontable.mod.Handsontable
 
+import org.scalajs.dom.raw.HTMLTableElement
 import typingsSlinky.handsontable.AnonA
 import typingsSlinky.handsontable.mod._Handsontable.Core
 import typingsSlinky.std.Document_
-import typingsSlinky.std.HTMLTableElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

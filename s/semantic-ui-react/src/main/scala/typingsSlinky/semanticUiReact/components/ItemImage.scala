@@ -1,17 +1,18 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.semanticUiReact.dimmerDimmerMod.DimmerProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticSIZES
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
-import typingsSlinky.semanticUiReact.itemImageMod.ItemImageProps
+import typingsSlinky.semanticUiReact.imageImageMod.ImageProps
 import typingsSlinky.semanticUiReact.labelLabelMod.LabelProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
@@ -19,56 +20,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ItemImage
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ItemImage {
   @JSImport("semantic-ui-react/dist/commonjs/views/Item/ItemImage", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, hidden, href */
-  def apply(
-    as: js.Any = null,
-    avatar: js.UndefOr[Boolean] = js.undefined,
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    centered: js.UndefOr[Boolean] = js.undefined,
-    circular: js.UndefOr[Boolean] = js.undefined,
-    content: SemanticShorthandContent = null,
-    dimmer: SemanticShorthandItem[DimmerProps] = null,
-    floated: SemanticFLOATS = null,
-    fluid: js.UndefOr[Boolean] = js.undefined,
-    `inline`: js.UndefOr[Boolean] = js.undefined,
-    label: SemanticShorthandItem[LabelProps] = null,
-    rounded: js.UndefOr[Boolean] = js.undefined,
-    size: SemanticSIZES = null,
-    spaced: Boolean | left | right = null,
-    ui: js.UndefOr[Boolean] = js.undefined,
-    verticalAlign: SemanticVERTICALALIGNMENTS = null,
-    wrapped: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (!js.isUndefined(avatar)) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
-    if (!js.isUndefined(centered)) __obj.updateDynamic("centered")(centered.asInstanceOf[js.Any])
-    if (!js.isUndefined(circular)) __obj.updateDynamic("circular")(circular.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (dimmer != null) __obj.updateDynamic("dimmer")(dimmer.asInstanceOf[js.Any])
-    if (floated != null) __obj.updateDynamic("floated")(floated.asInstanceOf[js.Any])
-    if (!js.isUndefined(fluid)) __obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
-    if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(rounded)) __obj.updateDynamic("rounded")(rounded.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (spaced != null) __obj.updateDynamic("spaced")(spaced.asInstanceOf[js.Any])
-    if (!js.isUndefined(ui)) __obj.updateDynamic("ui")(ui.asInstanceOf[js.Any])
-    if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapped)) __obj.updateDynamic("wrapped")(wrapped.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def avatar(value: Boolean): this.type = set("avatar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def centered(value: Boolean): this.type = set("centered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def circular(value: Boolean): this.type = set("circular", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dimmerReactElement(value: ReactElement): this.type = set("dimmer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dimmerFunction3(
+      value: (/* component */ ReactComponentClass[DimmerProps], DimmerProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("dimmer", js.Any.fromFunction3(value))
+    @scala.inline
+    def dimmer(value: SemanticShorthandItem[DimmerProps]): this.type = set("dimmer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floated(value: SemanticFLOATS): this.type = set("floated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fluid(value: Boolean): this.type = set("fluid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFunction3(
+      value: (/* component */ ReactComponentClass[LabelProps], LabelProps, /* children */ js.UndefOr[TagMod[Any] | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("label", js.Any.fromFunction3(value))
+    @scala.inline
+    def label(value: SemanticShorthandItem[LabelProps]): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rounded(value: Boolean): this.type = set("rounded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: SemanticSIZES): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def spaced(value: Boolean | left | right): this.type = set("spaced", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ui(value: Boolean): this.type = set("ui", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalAlign(value: SemanticVERTICALALIGNMENTS): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapped(value: Boolean): this.type = set("wrapped", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ItemImageProps
+  
+  def withProps(p: ImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ItemImage.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

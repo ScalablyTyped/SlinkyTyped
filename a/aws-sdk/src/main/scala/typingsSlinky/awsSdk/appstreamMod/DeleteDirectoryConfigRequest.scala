@@ -16,8 +16,21 @@ object DeleteDirectoryConfigRequest {
   @scala.inline
   def apply(DirectoryName: DirectoryName): DeleteDirectoryConfigRequest = {
     val __obj = js.Dynamic.literal(DirectoryName = DirectoryName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteDirectoryConfigRequest]
   }
+  @scala.inline
+  implicit class DeleteDirectoryConfigRequestOps[Self <: DeleteDirectoryConfigRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryName(value: DirectoryName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

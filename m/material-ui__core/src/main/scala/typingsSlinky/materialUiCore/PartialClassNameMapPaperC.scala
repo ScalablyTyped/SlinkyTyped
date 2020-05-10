@@ -38,64 +38,341 @@ trait PartialClassNameMapPaperC extends js.Object {
 
 object PartialClassNameMapPaperC {
   @scala.inline
-  def apply(
-    elevation0: String = null,
-    elevation1: String = null,
-    elevation10: String = null,
-    elevation11: String = null,
-    elevation12: String = null,
-    elevation13: String = null,
-    elevation14: String = null,
-    elevation15: String = null,
-    elevation16: String = null,
-    elevation17: String = null,
-    elevation18: String = null,
-    elevation19: String = null,
-    elevation2: String = null,
-    elevation20: String = null,
-    elevation21: String = null,
-    elevation22: String = null,
-    elevation23: String = null,
-    elevation24: String = null,
-    elevation3: String = null,
-    elevation4: String = null,
-    elevation5: String = null,
-    elevation6: String = null,
-    elevation7: String = null,
-    elevation8: String = null,
-    elevation9: String = null,
-    root: String = null,
-    rounded: String = null
-  ): PartialClassNameMapPaperC = {
+  def apply(): PartialClassNameMapPaperC = {
     val __obj = js.Dynamic.literal()
-    if (elevation0 != null) __obj.updateDynamic("elevation0")(elevation0.asInstanceOf[js.Any])
-    if (elevation1 != null) __obj.updateDynamic("elevation1")(elevation1.asInstanceOf[js.Any])
-    if (elevation10 != null) __obj.updateDynamic("elevation10")(elevation10.asInstanceOf[js.Any])
-    if (elevation11 != null) __obj.updateDynamic("elevation11")(elevation11.asInstanceOf[js.Any])
-    if (elevation12 != null) __obj.updateDynamic("elevation12")(elevation12.asInstanceOf[js.Any])
-    if (elevation13 != null) __obj.updateDynamic("elevation13")(elevation13.asInstanceOf[js.Any])
-    if (elevation14 != null) __obj.updateDynamic("elevation14")(elevation14.asInstanceOf[js.Any])
-    if (elevation15 != null) __obj.updateDynamic("elevation15")(elevation15.asInstanceOf[js.Any])
-    if (elevation16 != null) __obj.updateDynamic("elevation16")(elevation16.asInstanceOf[js.Any])
-    if (elevation17 != null) __obj.updateDynamic("elevation17")(elevation17.asInstanceOf[js.Any])
-    if (elevation18 != null) __obj.updateDynamic("elevation18")(elevation18.asInstanceOf[js.Any])
-    if (elevation19 != null) __obj.updateDynamic("elevation19")(elevation19.asInstanceOf[js.Any])
-    if (elevation2 != null) __obj.updateDynamic("elevation2")(elevation2.asInstanceOf[js.Any])
-    if (elevation20 != null) __obj.updateDynamic("elevation20")(elevation20.asInstanceOf[js.Any])
-    if (elevation21 != null) __obj.updateDynamic("elevation21")(elevation21.asInstanceOf[js.Any])
-    if (elevation22 != null) __obj.updateDynamic("elevation22")(elevation22.asInstanceOf[js.Any])
-    if (elevation23 != null) __obj.updateDynamic("elevation23")(elevation23.asInstanceOf[js.Any])
-    if (elevation24 != null) __obj.updateDynamic("elevation24")(elevation24.asInstanceOf[js.Any])
-    if (elevation3 != null) __obj.updateDynamic("elevation3")(elevation3.asInstanceOf[js.Any])
-    if (elevation4 != null) __obj.updateDynamic("elevation4")(elevation4.asInstanceOf[js.Any])
-    if (elevation5 != null) __obj.updateDynamic("elevation5")(elevation5.asInstanceOf[js.Any])
-    if (elevation6 != null) __obj.updateDynamic("elevation6")(elevation6.asInstanceOf[js.Any])
-    if (elevation7 != null) __obj.updateDynamic("elevation7")(elevation7.asInstanceOf[js.Any])
-    if (elevation8 != null) __obj.updateDynamic("elevation8")(elevation8.asInstanceOf[js.Any])
-    if (elevation9 != null) __obj.updateDynamic("elevation9")(elevation9.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (rounded != null) __obj.updateDynamic("rounded")(rounded.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapPaperC]
   }
+  @scala.inline
+  implicit class PartialClassNameMapPaperCOps[Self <: PartialClassNameMapPaperC] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElevation0(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation0: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation0")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation1(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation10(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation10")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation10: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation10")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation11(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation11")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation11: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation11")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation12(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation12")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation12: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation12")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation13(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation13")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation13: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation13")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation14(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation14")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation14: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation14")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation15(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation15")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation15: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation15")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation16(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation16")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation16: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation16")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation17(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation17")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation17: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation17")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation18(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation18")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation18: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation18")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation19(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation19")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation19: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation19")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation2(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation20(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation20")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation20: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation20")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation21(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation21")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation21: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation21")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation22(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation22")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation22: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation22")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation23(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation23")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation23: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation23")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation24(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation24")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation24: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation24")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation3(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation4(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation5(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation6(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation6: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation6")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation7(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation7")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation7: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation7")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation8(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation8")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation8: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation8")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation9(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation9")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation9: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation9")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRounded(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRounded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

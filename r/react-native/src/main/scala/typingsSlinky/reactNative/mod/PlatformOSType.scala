@@ -15,16 +15,14 @@ trait PlatformOSType extends js.Object
 
 object PlatformOSType {
   @scala.inline
-  def android: typingsSlinky.reactNative.reactNativeStrings.android = this.cast("android")
+  def android: typingsSlinky.reactNative.reactNativeStrings.android = "android".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.android]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ios: typingsSlinky.reactNative.reactNativeStrings.ios = "ios".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.ios]
   @scala.inline
-  def ios: typingsSlinky.reactNative.reactNativeStrings.ios = this.cast("ios")
+  def macos: typingsSlinky.reactNative.reactNativeStrings.macos = "macos".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.macos]
   @scala.inline
-  def macos: typingsSlinky.reactNative.reactNativeStrings.macos = this.cast("macos")
+  def web: typingsSlinky.reactNative.reactNativeStrings.web = "web".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.web]
   @scala.inline
-  def web: typingsSlinky.reactNative.reactNativeStrings.web = this.cast("web")
-  @scala.inline
-  def windows: typingsSlinky.reactNative.reactNativeStrings.windows = this.cast("windows")
+  def windows: typingsSlinky.reactNative.reactNativeStrings.windows = "windows".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.windows]
 }
 

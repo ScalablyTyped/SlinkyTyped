@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FontOptions extends js.Object {
-  var color: js.UndefOr[String] = js.undefined
-  var face: js.UndefOr[String] = js.undefined
-  var mod: js.UndefOr[String] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var vadjust: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
+  var face: js.UndefOr[String] = js.native
+  var mod: js.UndefOr[String] = js.native
+  var size: js.UndefOr[Double] = js.native
+  var vadjust: js.UndefOr[String] = js.native
 }
 
 object FontOptions {
   @scala.inline
-  def apply(
-    color: String = null,
-    face: String = null,
-    mod: String = null,
-    size: Int | Double = null,
-    vadjust: String = null
-  ): FontOptions = {
+  def apply(): FontOptions = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (face != null) __obj.updateDynamic("face")(face.asInstanceOf[js.Any])
-    if (mod != null) __obj.updateDynamic("mod")(mod.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (vadjust != null) __obj.updateDynamic("vadjust")(vadjust.asInstanceOf[js.Any])
     __obj.asInstanceOf[FontOptions]
   }
+  @scala.inline
+  implicit class FontOptionsOps[Self <: FontOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("face")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("face")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVadjust(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vadjust")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVadjust: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vadjust")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,23 +15,24 @@ import scala.scalajs.js.annotation._
   *
   * This data has nothing to do with `Memory` contents, it's a separate data container.
   */
+@js.native
 trait InterShardMemory extends js.Object {
   /**
     * Returns the string contents of the current shard's data.
     */
-  def getLocal(): String
+  def getLocal(): String = js.native
   /**
     * Returns the string contents of another shard's data, null if shard exists but data is not set.
     *
     * @param shard Shard name.
     * @throws Error if shard name is invalid
     */
-  def getRemote(shard: String): String | Null
+  def getRemote(shard: String): String | Null = js.native
   /**
     * Replace the current shard's data with the new value
     * @param value New data value in string format.
     */
-  def setLocal(value: String): Unit
+  def setLocal(value: String): Unit = js.native
 }
 
 @JSGlobal("InterShardMemory")

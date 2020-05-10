@@ -4,14 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.solidityParserAntlr.mod.ASTNode because Already inherited */ trait Mapping
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.solidityParserAntlr.mod.ASTNode because Already inherited */ @js.native
+trait Mapping
   extends TypeName
      with BaseASTNode {
-  var keyType: ElementaryTypeName
+  var keyType: ElementaryTypeName = js.native
   @JSName("type")
-  var type_Mapping: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.Mapping
-  var valueType: TypeName
+  var type_Mapping: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.Mapping = js.native
+  var valueType: TypeName = js.native
 }
 
 object Mapping {
@@ -19,15 +20,37 @@ object Mapping {
   def apply(
     keyType: ElementaryTypeName,
     `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.Mapping,
-    valueType: TypeName,
-    loc: Location = null,
-    range: js.Tuple2[Double, Double] = null
+    valueType: TypeName
   ): Mapping = {
     val __obj = js.Dynamic.literal(keyType = keyType.asInstanceOf[js.Any], valueType = valueType.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mapping]
   }
+  @scala.inline
+  implicit class MappingOps[Self <: Mapping] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyType(value: ElementaryTypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.Mapping): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueType(value: TypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

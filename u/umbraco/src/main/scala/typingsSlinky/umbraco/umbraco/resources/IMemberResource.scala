@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * @name umbraco.resources.memberResource
   * @description Loads in data for members
   **/
+@js.native
 trait IMemberResource extends js.Object {
   /**
     * @ngdoc method
@@ -31,7 +32,7 @@ trait IMemberResource extends js.Object {
     * @returns {Promise} resourcePromise object.
     *
     */
-  def deleteByKey(key: String): IPromise[IResourcePromise]
+  def deleteByKey(key: String): IPromise[IResourcePromise] = js.native
   /**
     * @ngdoc method
     * @name umbraco.resources.memberResource#getByKey
@@ -53,9 +54,9 @@ trait IMemberResource extends js.Object {
     * @returns {Promise} resourcePromise object containing the member item.
     *
     */
-  def getByKey(key: String): IPromise[IResourcePromise]
-  def getListNode(listName: String): js.Any
-  def getPagedResults(memberTypeAlias: String, options: js.Any): js.Any
+  def getByKey(key: String): IPromise[IResourcePromise] = js.native
+  def getListNode(listName: String): js.Any = js.native
+  def getPagedResults(memberTypeAlias: String, options: js.Any): js.Any = js.native
   /**
     * @ngdoc method
     * @name umbraco.resources.memberResource#getScaffold
@@ -86,7 +87,7 @@ trait IMemberResource extends js.Object {
     * @returns {Promise} resourcePromise object containing the member scaffold.
     *
     */
-  def getScaffold(alias: String): IPromise[IResourcePromise]
+  def getScaffold(alias: String): IPromise[IResourcePromise] = js.native
   /**
     * @ngdoc method
     * @name umbraco.resources.memberResource#save
@@ -115,7 +116,7 @@ trait IMemberResource extends js.Object {
     * @returns {Promise} resourcePromise object containing the saved media item.
     *
     */
-  def save(member: js.Object, isNew: Boolean, files: js.Array[_]): IPromise[IResourcePromise]
+  def save(member: js.Object, isNew: Boolean, files: js.Array[_]): IPromise[IResourcePromise] = js.native
 }
 
 object IMemberResource {
@@ -129,8 +130,51 @@ object IMemberResource {
     save: (js.Object, Boolean, js.Array[_]) => IPromise[IResourcePromise]
   ): IMemberResource = {
     val __obj = js.Dynamic.literal(deleteByKey = js.Any.fromFunction1(deleteByKey), getByKey = js.Any.fromFunction1(getByKey), getListNode = js.Any.fromFunction1(getListNode), getPagedResults = js.Any.fromFunction2(getPagedResults), getScaffold = js.Any.fromFunction1(getScaffold), save = js.Any.fromFunction3(save))
-  
     __obj.asInstanceOf[IMemberResource]
   }
+  @scala.inline
+  implicit class IMemberResourceOps[Self <: IMemberResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeleteByKey(value: String => IPromise[IResourcePromise]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteByKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetByKey(value: String => IPromise[IResourcePromise]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getByKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetListNode(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getListNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetPagedResults(value: (String, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPagedResults")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaffold(value: String => IPromise[IResourcePromise]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaffold")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSave(value: (js.Object, Boolean, js.Array[_]) => IPromise[IResourcePromise]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

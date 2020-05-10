@@ -19,18 +19,16 @@ trait Primitive extends js.Object
 
 object Primitive {
   @scala.inline
-  def array: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.array = this.cast("array")
+  def array: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.array = "array".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.array]
   @scala.inline
-  def boolean: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.boolean = "boolean".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `null`: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.`null` = "null".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.`null`]
   @scala.inline
-  def `null`: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.`null` = this.cast("null")
+  def number: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.number = "number".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.number]
   @scala.inline
-  def number: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.number = this.cast("number")
+  def `object`: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.`object` = "object".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.`object` = this.cast("object")
-  @scala.inline
-  def string: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.string = this.cast("string")
+  def string: typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.string = "string".asInstanceOf[typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.string]
 }
 

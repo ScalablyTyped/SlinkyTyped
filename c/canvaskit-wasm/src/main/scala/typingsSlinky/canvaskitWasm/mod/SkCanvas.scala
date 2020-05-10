@@ -37,9 +37,9 @@ trait SkCanvas extends SkObject[SkCanvas] {
   def getSaveCount(): Double = js.native
   def getTotalMatrix(): SkMatrix = js.native
   def makeSurface(info: SkImageInfo): SkSurface = js.native
-  def readPixels(x: Double, y: Double, w: Double, h: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def readPixels(x: Double, y: Double, w: Double, h: Double, alphaType: SkAlphaType): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def readPixels(x: Double, y: Double, w: Double, h: Double, alphaType: SkAlphaType, colorType: SkColorType): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def readPixels(x: Double, y: Double, w: Double, h: Double): js.typedarray.Uint8Array = js.native
+  def readPixels(x: Double, y: Double, w: Double, h: Double, alphaType: SkAlphaType): js.typedarray.Uint8Array = js.native
+  def readPixels(x: Double, y: Double, w: Double, h: Double, alphaType: SkAlphaType, colorType: SkColorType): js.typedarray.Uint8Array = js.native
   def readPixels(
     x: Double,
     y: Double,
@@ -48,7 +48,7 @@ trait SkCanvas extends SkObject[SkCanvas] {
     alphaType: SkAlphaType,
     colorType: SkColorType,
     dstRowBytes: Double
-  ): scala.scalajs.js.typedarray.Uint8Array = js.native
+  ): js.typedarray.Uint8Array = js.native
   def restore(): Unit = js.native
   def restoreToCount(count: Double): Unit = js.native
   def rotate(degree: Double, px: Double, py: Double): Unit = js.native
@@ -58,14 +58,14 @@ trait SkCanvas extends SkObject[SkCanvas] {
   def skew(sx: Double, sy: Double): Unit = js.native
   def translate(x: Double, y: Double): Unit = js.native
   def writePixels(
-    pixels: scala.scalajs.js.typedarray.Uint8Array,
+    pixels: js.typedarray.Uint8Array,
     srcWidth: Double,
     srcHeight: Double,
     destX: Double,
     destY: Double
   ): Unit = js.native
   def writePixels(
-    pixels: scala.scalajs.js.typedarray.Uint8Array,
+    pixels: js.typedarray.Uint8Array,
     srcWidth: Double,
     srcHeight: Double,
     destX: Double,
@@ -73,7 +73,7 @@ trait SkCanvas extends SkObject[SkCanvas] {
     alphaType: SkAlphaType
   ): Unit = js.native
   def writePixels(
-    pixels: scala.scalajs.js.typedarray.Uint8Array,
+    pixels: js.typedarray.Uint8Array,
     srcWidth: Double,
     srcHeight: Double,
     destX: Double,

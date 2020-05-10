@@ -10,27 +10,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonWordWrap extends js.Object {
-  var font: js.UndefOr[Font] = js.undefined
-  var textOverflow: js.UndefOr[ellipsis | hide | none] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
-  var wordWrap: js.UndefOr[normal | breakWord | none] = js.undefined
+  var font: js.UndefOr[Font] = js.native
+  var textOverflow: js.UndefOr[ellipsis | hide | none] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
+  var wordWrap: js.UndefOr[normal | breakWord | none] = js.native
 }
 
 object AnonWordWrap {
   @scala.inline
-  def apply(
-    font: Font = null,
-    textOverflow: ellipsis | hide | none = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    wordWrap: normal | breakWord | none = null
-  ): AnonWordWrap = {
+  def apply(): AnonWordWrap = {
     val __obj = js.Dynamic.literal()
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (textOverflow != null) __obj.updateDynamic("textOverflow")(textOverflow.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (wordWrap != null) __obj.updateDynamic("wordWrap")(wordWrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonWordWrap]
   }
+  @scala.inline
+  implicit class AnonWordWrapOps[Self <: AnonWordWrap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFont(value: Font): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextOverflow(value: ellipsis | hide | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textOverflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textOverflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWordWrap(value: normal | breakWord | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWordWrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wordWrap")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,31 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFastReady extends js.Object {
   /**
     * don't wait all plugins ready, default is true.
     */
-  var fastReady: Boolean
+  var fastReady: Boolean = js.native
   /**
     * dirs don't need watch, including subdirectories, use relative path
     */
-  var ignoreDirs: js.Array[String]
+  var ignoreDirs: js.Array[String] = js.native
   /**
     * whether override default watchDirs, default is false.
     */
-  var overrideDefault: Boolean
+  var overrideDefault: Boolean = js.native
   /**
     * whether reload on debug, default is true.
     */
-  var reloadOnDebug: Boolean
+  var reloadOnDebug: Boolean = js.native
   /**
     * whether to reload, use https://github.com/sindresorhus/multimatch
     */
-  var reloadPattern: js.Array[String] | String
+  var reloadPattern: js.Array[String] | String = js.native
   /**
     * dirs needed watch, when files under these change, application will reload, use relative path
     */
-  var watchDirs: js.Array[String]
+  var watchDirs: js.Array[String] = js.native
 }
 
 object AnonFastReady {
@@ -42,8 +43,51 @@ object AnonFastReady {
     watchDirs: js.Array[String]
   ): AnonFastReady = {
     val __obj = js.Dynamic.literal(fastReady = fastReady.asInstanceOf[js.Any], ignoreDirs = ignoreDirs.asInstanceOf[js.Any], overrideDefault = overrideDefault.asInstanceOf[js.Any], reloadOnDebug = reloadOnDebug.asInstanceOf[js.Any], reloadPattern = reloadPattern.asInstanceOf[js.Any], watchDirs = watchDirs.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonFastReady]
   }
+  @scala.inline
+  implicit class AnonFastReadyOps[Self <: AnonFastReady] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFastReady(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fastReady")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIgnoreDirs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreDirs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOverrideDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReloadOnDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reloadOnDebug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReloadPattern(value: js.Array[String] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reloadPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWatchDirs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watchDirs")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

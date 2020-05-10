@@ -30,18 +30,65 @@ trait SetTaskStatusInput extends js.Object {
 
 object SetTaskStatusInput {
   @scala.inline
-  def apply(
-    taskId: taskId,
-    taskStatus: TaskStatus,
-    errorId: String = null,
-    errorMessage: errorMessage = null,
-    errorStackTrace: String = null
-  ): SetTaskStatusInput = {
+  def apply(taskId: taskId, taskStatus: TaskStatus): SetTaskStatusInput = {
     val __obj = js.Dynamic.literal(taskId = taskId.asInstanceOf[js.Any], taskStatus = taskStatus.asInstanceOf[js.Any])
-    if (errorId != null) __obj.updateDynamic("errorId")(errorId.asInstanceOf[js.Any])
-    if (errorMessage != null) __obj.updateDynamic("errorMessage")(errorMessage.asInstanceOf[js.Any])
-    if (errorStackTrace != null) __obj.updateDynamic("errorStackTrace")(errorStackTrace.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetTaskStatusInput]
   }
+  @scala.inline
+  implicit class SetTaskStatusInputOps[Self <: SetTaskStatusInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTaskId(value: taskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskStatus(value: TaskStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrorId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorMessage(value: errorMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorStackTrace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorStackTrace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorStackTrace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorStackTrace")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

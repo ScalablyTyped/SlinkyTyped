@@ -30,20 +30,77 @@ trait VpcPeeringAuthorization extends js.Object {
 
 object VpcPeeringAuthorization {
   @scala.inline
-  def apply(
-    CreationTime: js.Date = null,
-    ExpirationTime: js.Date = null,
-    GameLiftAwsAccountId: NonZeroAndMaxString = null,
-    PeerVpcAwsAccountId: NonZeroAndMaxString = null,
-    PeerVpcId: NonZeroAndMaxString = null
-  ): VpcPeeringAuthorization = {
+  def apply(): VpcPeeringAuthorization = {
     val __obj = js.Dynamic.literal()
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (ExpirationTime != null) __obj.updateDynamic("ExpirationTime")(ExpirationTime.asInstanceOf[js.Any])
-    if (GameLiftAwsAccountId != null) __obj.updateDynamic("GameLiftAwsAccountId")(GameLiftAwsAccountId.asInstanceOf[js.Any])
-    if (PeerVpcAwsAccountId != null) __obj.updateDynamic("PeerVpcAwsAccountId")(PeerVpcAwsAccountId.asInstanceOf[js.Any])
-    if (PeerVpcId != null) __obj.updateDynamic("PeerVpcId")(PeerVpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[VpcPeeringAuthorization]
   }
+  @scala.inline
+  implicit class VpcPeeringAuthorizationOps[Self <: VpcPeeringAuthorization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGameLiftAwsAccountId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameLiftAwsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGameLiftAwsAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameLiftAwsAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerVpcAwsAccountId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcAwsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerVpcAwsAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcAwsAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeerVpcId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeerVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PeerVpcId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

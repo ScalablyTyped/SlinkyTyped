@@ -33,101 +33,391 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBorderWidth extends js.Object {
-  var borderColor: js.UndefOr[String] = js.undefined
-  var borderWidth: js.UndefOr[Double] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var colorGroupingField: js.UndefOr[String] = js.undefined
-  var colorGroups: js.UndefOr[js.Array[Double]] = js.undefined
-  var customize: js.UndefOr[js.Function1[/* elements */ js.Array[MapLayerElement], _]] = js.undefined
-  var dataField: js.UndefOr[String] = js.undefined
-  var dataSource: js.UndefOr[js.Any | DataSource | DataSourceOptions | String] = js.undefined
-  var elementType: js.UndefOr[bubble | dot | image | pie] = js.undefined
-  var hoverEnabled: js.UndefOr[Boolean] = js.undefined
-  var hoveredBorderColor: js.UndefOr[String] = js.undefined
-  var hoveredBorderWidth: js.UndefOr[Double] = js.undefined
-  var hoveredColor: js.UndefOr[String] = js.undefined
-  var label: js.UndefOr[AnonDataFieldEnabled] = js.undefined
-  var maxSize: js.UndefOr[Double] = js.undefined
-  var minSize: js.UndefOr[Double] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
+  var borderColor: js.UndefOr[String] = js.native
+  var borderWidth: js.UndefOr[Double] = js.native
+  var color: js.UndefOr[String] = js.native
+  var colorGroupingField: js.UndefOr[String] = js.native
+  var colorGroups: js.UndefOr[js.Array[Double]] = js.native
+  var customize: js.UndefOr[js.Function1[/* elements */ js.Array[MapLayerElement], _]] = js.native
+  var dataField: js.UndefOr[String] = js.native
+  var dataSource: js.UndefOr[js.Any | DataSource | DataSourceOptions | String] = js.native
+  var elementType: js.UndefOr[bubble | dot | image | pie] = js.native
+  var hoverEnabled: js.UndefOr[Boolean] = js.native
+  var hoveredBorderColor: js.UndefOr[String] = js.native
+  var hoveredBorderWidth: js.UndefOr[Double] = js.native
+  var hoveredColor: js.UndefOr[String] = js.native
+  var label: js.UndefOr[AnonDataFieldEnabled] = js.native
+  var maxSize: js.UndefOr[Double] = js.native
+  var minSize: js.UndefOr[Double] = js.native
+  var name: js.UndefOr[String] = js.native
+  var opacity: js.UndefOr[Double] = js.native
   var palette: js.UndefOr[
     js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
-  ] = js.undefined
-  var paletteSize: js.UndefOr[Double] = js.undefined
-  var selectedBorderColor: js.UndefOr[String] = js.undefined
-  var selectedBorderWidth: js.UndefOr[Double] = js.undefined
-  var selectedColor: js.UndefOr[String] = js.undefined
-  var selectionMode: js.UndefOr[multiple | none | single_] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var sizeGroupingField: js.UndefOr[String] = js.undefined
-  var sizeGroups: js.UndefOr[js.Array[Double]] = js.undefined
-  var `type`: js.UndefOr[area | line | marker] = js.undefined
+  ] = js.native
+  var paletteSize: js.UndefOr[Double] = js.native
+  var selectedBorderColor: js.UndefOr[String] = js.native
+  var selectedBorderWidth: js.UndefOr[Double] = js.native
+  var selectedColor: js.UndefOr[String] = js.native
+  var selectionMode: js.UndefOr[multiple | none | single_] = js.native
+  var size: js.UndefOr[Double] = js.native
+  var sizeGroupingField: js.UndefOr[String] = js.native
+  var sizeGroups: js.UndefOr[js.Array[Double]] = js.native
+  var `type`: js.UndefOr[area | line | marker] = js.native
 }
 
 object AnonBorderWidth {
   @scala.inline
-  def apply(
-    borderColor: String = null,
-    borderWidth: Int | Double = null,
-    color: String = null,
-    colorGroupingField: String = null,
-    colorGroups: js.Array[Double] = null,
-    customize: /* elements */ js.Array[MapLayerElement] => _ = null,
-    dataField: String = null,
-    dataSource: js.Any | DataSource | DataSourceOptions | String = null,
-    elementType: bubble | dot | image | pie = null,
-    hoverEnabled: js.UndefOr[Boolean] = js.undefined,
-    hoveredBorderColor: String = null,
-    hoveredBorderWidth: Int | Double = null,
-    hoveredColor: String = null,
-    label: AnonDataFieldEnabled = null,
-    maxSize: Int | Double = null,
-    minSize: Int | Double = null,
-    name: String = null,
-    opacity: Int | Double = null,
-    palette: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office = null,
-    paletteSize: Int | Double = null,
-    selectedBorderColor: String = null,
-    selectedBorderWidth: Int | Double = null,
-    selectedColor: String = null,
-    selectionMode: multiple | none | single_ = null,
-    size: Int | Double = null,
-    sizeGroupingField: String = null,
-    sizeGroups: js.Array[Double] = null,
-    `type`: area | line | marker = null
-  ): AnonBorderWidth = {
+  def apply(): AnonBorderWidth = {
     val __obj = js.Dynamic.literal()
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colorGroupingField != null) __obj.updateDynamic("colorGroupingField")(colorGroupingField.asInstanceOf[js.Any])
-    if (colorGroups != null) __obj.updateDynamic("colorGroups")(colorGroups.asInstanceOf[js.Any])
-    if (customize != null) __obj.updateDynamic("customize")(js.Any.fromFunction1(customize))
-    if (dataField != null) __obj.updateDynamic("dataField")(dataField.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (elementType != null) __obj.updateDynamic("elementType")(elementType.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverEnabled)) __obj.updateDynamic("hoverEnabled")(hoverEnabled.asInstanceOf[js.Any])
-    if (hoveredBorderColor != null) __obj.updateDynamic("hoveredBorderColor")(hoveredBorderColor.asInstanceOf[js.Any])
-    if (hoveredBorderWidth != null) __obj.updateDynamic("hoveredBorderWidth")(hoveredBorderWidth.asInstanceOf[js.Any])
-    if (hoveredColor != null) __obj.updateDynamic("hoveredColor")(hoveredColor.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (palette != null) __obj.updateDynamic("palette")(palette.asInstanceOf[js.Any])
-    if (paletteSize != null) __obj.updateDynamic("paletteSize")(paletteSize.asInstanceOf[js.Any])
-    if (selectedBorderColor != null) __obj.updateDynamic("selectedBorderColor")(selectedBorderColor.asInstanceOf[js.Any])
-    if (selectedBorderWidth != null) __obj.updateDynamic("selectedBorderWidth")(selectedBorderWidth.asInstanceOf[js.Any])
-    if (selectedColor != null) __obj.updateDynamic("selectedColor")(selectedColor.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (sizeGroupingField != null) __obj.updateDynamic("sizeGroupingField")(sizeGroupingField.asInstanceOf[js.Any])
-    if (sizeGroups != null) __obj.updateDynamic("sizeGroups")(sizeGroups.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBorderWidth]
   }
+  @scala.inline
+  implicit class AnonBorderWidthOps[Self <: AnonBorderWidth] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorGroupingField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorGroupingField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorGroupingField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorGroupingField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorGroups(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomize(value: /* elements */ js.Array[MapLayerElement] => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: js.Any | DataSource | DataSourceOptions | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElementType(value: bubble | dot | image | pie): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElementType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoveredBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoveredBorderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoveredBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoveredBorderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoveredBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoveredBorderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoveredBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoveredBorderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoveredColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoveredColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoveredColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoveredColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonDataFieldEnabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPalette(
+      value: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPalette: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaletteSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paletteSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaletteSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paletteSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedBorderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedBorderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedBorderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedBorderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionMode(value: multiple | none | single_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeGroupingField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeGroupingField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeGroupingField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeGroupingField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeGroups(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: area | line | marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

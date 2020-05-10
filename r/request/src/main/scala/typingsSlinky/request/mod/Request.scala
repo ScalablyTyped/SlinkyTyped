@@ -19,7 +19,6 @@ import typingsSlinky.request.requestStrings.pipe
 import typingsSlinky.request.requestStrings.request
 import typingsSlinky.request.requestStrings.response
 import typingsSlinky.request.requestStrings.socket
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -124,9 +123,9 @@ trait Request
   def resume(): Unit = js.native
   def toJSON(): RequestAsJSON = js.native
   def write(buffer: String): Boolean = js.native
-  def write(buffer: String, cb: js.Function1[/* err */ js.UndefOr[Error], Unit]): Boolean = js.native
+  def write(buffer: String, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
   def write(buffer: Buffer): Boolean = js.native
-  def write(buffer: Buffer, cb: js.Function1[/* err */ js.UndefOr[Error], Unit]): Boolean = js.native
+  def write(buffer: Buffer, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
   def write(str: String, encoding: String): Boolean = js.native
   def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
 }

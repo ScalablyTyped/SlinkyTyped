@@ -1,10 +1,7 @@
 package typingsSlinky.cathoQuantum.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.AnonComponentsSpacing
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
@@ -13,29 +10,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabbedView
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.cathoQuantum.tabbedViewMod.TabbedView] {
+object TabbedView {
   @JSImport("@catho/quantum/TabbedView", "TabbedView")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    activeTab: String = null,
-    fluid: js.UndefOr[Boolean] = js.undefined,
-    skin: neutral | primary = null,
-    theme: AnonComponentsSpacing = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.cathoQuantum.tabbedViewMod.TabbedView] = {
-    val __obj = js.Dynamic.literal()
-    if (activeTab != null) __obj.updateDynamic("activeTab")(activeTab.asInstanceOf[js.Any])
-    if (!js.isUndefined(fluid)) __obj.updateDynamic("fluid")(fluid.asInstanceOf[js.Any])
-    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.cathoQuantum.tabbedViewMod.TabbedView] {
+    @scala.inline
+    def activeTab(value: String): this.type = set("activeTab", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fluid(value: Boolean): this.type = set("fluid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skin(value: neutral | primary): this.type = set("skin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: AnonComponentsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.cathoQuantum.tabbedViewMod.TabbedView] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.cathoQuantum.tabbedViewMod.TabbedView](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TabbedViewProps
+  
+  def withProps(p: TabbedViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TabbedView.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

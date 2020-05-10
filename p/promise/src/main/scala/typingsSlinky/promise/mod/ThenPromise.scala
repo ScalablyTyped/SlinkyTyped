@@ -1,6 +1,5 @@
 package typingsSlinky.promise.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +28,7 @@ trait ThenPromise[T] extends js.Object {
   def done(onfulfilled: js.Function1[/* value */ T, _], onrejected: js.Function1[/* reason */ js.Any, _]): Unit = js.native
   def done(onfulfilled: Null, onrejected: js.Function1[/* reason */ js.Any, _]): Unit = js.native
   def nodeify(): ThenPromise[T] = js.native
-  def nodeify(callback: js.Function2[/* err */ Error, /* value */ T, Unit]): Unit = js.native
+  def nodeify(callback: js.Function2[/* err */ js.Error, /* value */ T, Unit]): Unit = js.native
   /**
     * Calls a node.js style callback.  If none is provided, the promise is returned.
     */

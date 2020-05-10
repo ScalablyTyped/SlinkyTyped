@@ -19,110 +19,111 @@ backgroundAudioManager.coverImgUrl = 'http://y.gtimg.cn/music/photo_new/T002R300
 // 设置了 src 之后会自动播放
 backgroundAudioManager.src = 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46'
 ``` */
+@js.native
 trait BackgroundAudioManager extends js.Object {
   /** 音频已缓冲的时间，仅保证当前播放时间点到此时间点内容已缓冲。（只读） */
-  var buffered: Double
+  var buffered: Double = js.native
   /** 封面图 URL，用于做原生音频播放器背景图。原生音频播放器中的分享功能，分享出去的卡片配图及背景也将使用该图。 */
-  var coverImgUrl: String
+  var coverImgUrl: String = js.native
   /** 当前音频的播放位置（单位：s），只有在有合法 src 时返回。（只读） */
-  var currentTime: Double
+  var currentTime: Double = js.native
   /** 当前音频的长度（单位：s），只有在有合法 src 时返回。（只读） */
-  var duration: Double
+  var duration: Double = js.native
   /** 专辑名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。 */
-  var epname: String
+  var epname: String = js.native
   /** 当前是否暂停或停止。（只读） */
-  var paused: Boolean
+  var paused: Boolean = js.native
   /** 音频协议。默认值为 'http'，设置 'hls' 可以支持播放 HLS 协议的直播音频。
     *
     * 最低基础库： `1.9.94` */
-  var protocol: String
+  var protocol: String = js.native
   /** 歌手名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。 */
-  var singer: String
+  var singer: String = js.native
   /** 音频的数据源（{% version('2.2.3') %} 开始支持云文件ID）。默认为空字符串，**当设置了新的 src 时，会自动开始播放**，目前支持的格式有 m4a, aac, mp3, wav。 */
-  var src: String
+  var src: String = js.native
   /** 音频开始播放的位置（单位：s）。 */
-  var startTime: Double
+  var startTime: Double = js.native
   /** 音频标题，用于原生音频播放器音频标题（必填）。原生音频播放器中的分享功能，分享出去的卡片标题，也将使用该值。 */
-  var title: String
+  var title: String = js.native
   /** 页面链接，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。 */
-  var webUrl: String
+  var webUrl: String = js.native
   /** [BackgroundAudioManager.onCanplay(function callback)](BackgroundAudioManager.onCanplay.md)
     *
     * 监听背景音频进入可播放状态事件。但不保证后面可以流畅播放 */
   def onCanplay(/** 背景音频进入可播放状态事件的回调函数 */
-  callback: BackgroundAudioManagerOnCanplayCallback): Unit
+  callback: BackgroundAudioManagerOnCanplayCallback): Unit = js.native
   /** [BackgroundAudioManager.onEnded(function callback)](BackgroundAudioManager.onEnded.md)
     *
     * 监听背景音频自然播放结束事件 */
   def onEnded(/** 背景音频自然播放结束事件的回调函数 */
-  callback: BackgroundAudioManagerOnEndedCallback): Unit
+  callback: BackgroundAudioManagerOnEndedCallback): Unit = js.native
   /** [BackgroundAudioManager.onError(function callback)](BackgroundAudioManager.onError.md)
     *
     * 监听背景音频播放错误事件 */
   def onError(/** 背景音频播放错误事件的回调函数 */
-  callback: BackgroundAudioManagerOnErrorCallback): Unit
+  callback: BackgroundAudioManagerOnErrorCallback): Unit = js.native
   /** [BackgroundAudioManager.onNext(function callback)](BackgroundAudioManager.onNext.md)
     *
     * 监听用户在系统音乐播放面板点击下一曲事件（仅iOS） */
   def onNext(/** 用户在系统音乐播放面板点击下一曲事件的回调函数 */
-  callback: OnNextCallback): Unit
+  callback: OnNextCallback): Unit = js.native
   /** [BackgroundAudioManager.onPause(function callback)](BackgroundAudioManager.onPause.md)
     *
     * 监听背景音频暂停事件 */
   def onPause(/** 背景音频暂停事件的回调函数 */
-  callback: BackgroundAudioManagerOnPauseCallback): Unit
+  callback: BackgroundAudioManagerOnPauseCallback): Unit = js.native
   /** [BackgroundAudioManager.onPlay(function callback)](BackgroundAudioManager.onPlay.md)
     *
     * 监听背景音频播放事件 */
   def onPlay(/** 背景音频播放事件的回调函数 */
-  callback: BackgroundAudioManagerOnPlayCallback): Unit
+  callback: BackgroundAudioManagerOnPlayCallback): Unit = js.native
   /** [BackgroundAudioManager.onPrev(function callback)](BackgroundAudioManager.onPrev.md)
     *
     * 监听用户在系统音乐播放面板点击上一曲事件（仅iOS） */
   def onPrev(/** 用户在系统音乐播放面板点击上一曲事件的回调函数 */
-  callback: OnPrevCallback): Unit
+  callback: OnPrevCallback): Unit = js.native
   /** [BackgroundAudioManager.onSeeked(function callback)](BackgroundAudioManager.onSeeked.md)
     *
     * 监听背景音频完成跳转操作事件 */
   def onSeeked(/** 背景音频完成跳转操作事件的回调函数 */
-  callback: BackgroundAudioManagerOnSeekedCallback): Unit
+  callback: BackgroundAudioManagerOnSeekedCallback): Unit = js.native
   /** [BackgroundAudioManager.onSeeking(function callback)](BackgroundAudioManager.onSeeking.md)
     *
     * 监听背景音频开始跳转操作事件 */
   def onSeeking(/** 背景音频开始跳转操作事件的回调函数 */
-  callback: BackgroundAudioManagerOnSeekingCallback): Unit
+  callback: BackgroundAudioManagerOnSeekingCallback): Unit = js.native
   /** [BackgroundAudioManager.onStop(function callback)](BackgroundAudioManager.onStop.md)
     *
     * 监听背景音频停止事件 */
   def onStop(/** 背景音频停止事件的回调函数 */
-  callback: BackgroundAudioManagerOnStopCallback): Unit
+  callback: BackgroundAudioManagerOnStopCallback): Unit = js.native
   /** [BackgroundAudioManager.onTimeUpdate(function callback)](BackgroundAudioManager.onTimeUpdate.md)
     *
     * 监听背景音频播放进度更新事件 */
   def onTimeUpdate(/** 背景音频播放进度更新事件的回调函数 */
-  callback: BackgroundAudioManagerOnTimeUpdateCallback): Unit
+  callback: BackgroundAudioManagerOnTimeUpdateCallback): Unit = js.native
   /** [BackgroundAudioManager.onWaiting(function callback)](BackgroundAudioManager.onWaiting.md)
     *
     * 监听音频加载中事件。当音频因为数据不足，需要停下来加载时会触发 */
   def onWaiting(/** 音频加载中事件的回调函数 */
-  callback: BackgroundAudioManagerOnWaitingCallback): Unit
+  callback: BackgroundAudioManagerOnWaitingCallback): Unit = js.native
   /** [BackgroundAudioManager.pause()](BackgroundAudioManager.pause.md)
     *
     * 暂停音乐 */
-  def pause(): Unit
+  def pause(): Unit = js.native
   /** [BackgroundAudioManager.play()](BackgroundAudioManager.play.md)
     *
     * 播放音乐 */
-  def play(): Unit
+  def play(): Unit = js.native
   /** [BackgroundAudioManager.seek(number currentTime)](BackgroundAudioManager.seek.md)
     *
     * 跳转到指定位置 */
   def seek(/** 跳转的位置，单位 s。精确到小数点后 3 位，即支持 ms 级别精确度 */
-  currentTime: Double): Unit
+  currentTime: Double): Unit = js.native
   /** [BackgroundAudioManager.stop()](BackgroundAudioManager.stop.md)
     *
     * 停止音乐 */
-  def stop(): Unit
+  def stop(): Unit = js.native
 }
 
 object BackgroundAudioManager {
@@ -158,8 +159,183 @@ object BackgroundAudioManager {
     webUrl: String
   ): BackgroundAudioManager = {
     val __obj = js.Dynamic.literal(buffered = buffered.asInstanceOf[js.Any], coverImgUrl = coverImgUrl.asInstanceOf[js.Any], currentTime = currentTime.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], epname = epname.asInstanceOf[js.Any], onCanplay = js.Any.fromFunction1(onCanplay), onEnded = js.Any.fromFunction1(onEnded), onError = js.Any.fromFunction1(onError), onNext = js.Any.fromFunction1(onNext), onPause = js.Any.fromFunction1(onPause), onPlay = js.Any.fromFunction1(onPlay), onPrev = js.Any.fromFunction1(onPrev), onSeeked = js.Any.fromFunction1(onSeeked), onSeeking = js.Any.fromFunction1(onSeeking), onStop = js.Any.fromFunction1(onStop), onTimeUpdate = js.Any.fromFunction1(onTimeUpdate), onWaiting = js.Any.fromFunction1(onWaiting), pause = js.Any.fromFunction0(pause), paused = paused.asInstanceOf[js.Any], play = js.Any.fromFunction0(play), protocol = protocol.asInstanceOf[js.Any], seek = js.Any.fromFunction1(seek), singer = singer.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any], stop = js.Any.fromFunction0(stop), title = title.asInstanceOf[js.Any], webUrl = webUrl.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BackgroundAudioManager]
   }
+  @scala.inline
+  implicit class BackgroundAudioManagerOps[Self <: BackgroundAudioManager] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuffered(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCoverImgUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coverImgUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEpname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("epname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnCanplay(value: BackgroundAudioManagerOnCanplayCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanplay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnEnded(value: BackgroundAudioManagerOnEndedCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnError(value: BackgroundAudioManagerOnErrorCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnNext(value: OnNextCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNext")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnPause(value: BackgroundAudioManagerOnPauseCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnPlay(value: BackgroundAudioManagerOnPlayCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnPrev(value: OnPrevCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrev")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnSeeked(value: BackgroundAudioManagerOnSeekedCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnSeeking(value: BackgroundAudioManagerOnSeekingCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnStop(value: BackgroundAudioManagerOnStopCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStop")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnTimeUpdate(value: BackgroundAudioManagerOnTimeUpdateCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnWaiting(value: BackgroundAudioManagerOnWaitingCallback => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPause(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPaused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlay(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSeek(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSinger(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

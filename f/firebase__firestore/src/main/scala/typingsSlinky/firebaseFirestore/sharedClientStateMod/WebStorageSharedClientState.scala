@@ -75,7 +75,7 @@ class WebStorageSharedClientState protected () extends SharedClientState {
   var started: js.Any = js.native
   val storage: js.Any = js.native
   val storageListener: js.Any = js.native
-  /* private */ def localClientState(): js.Any = js.native
+  /* private */ def localClientState: js.Any = js.native
 }
 
 /* static members */

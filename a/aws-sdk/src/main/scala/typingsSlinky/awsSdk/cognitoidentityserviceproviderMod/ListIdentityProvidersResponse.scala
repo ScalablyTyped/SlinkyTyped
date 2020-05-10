@@ -18,10 +18,35 @@ trait ListIdentityProvidersResponse extends js.Object {
 
 object ListIdentityProvidersResponse {
   @scala.inline
-  def apply(Providers: ProvidersListType, NextToken: PaginationKeyType = null): ListIdentityProvidersResponse = {
+  def apply(Providers: ProvidersListType): ListIdentityProvidersResponse = {
     val __obj = js.Dynamic.literal(Providers = Providers.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListIdentityProvidersResponse]
   }
+  @scala.inline
+  implicit class ListIdentityProvidersResponseOps[Self <: ListIdentityProvidersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProviders(value: ProvidersListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Providers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationKeyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -62,30 +62,137 @@ trait SchemaCounterStructuredName extends js.Object {
 
 object SchemaCounterStructuredName {
   @scala.inline
-  def apply(
-    componentStepName: String = null,
-    executionStepName: String = null,
-    inputIndex: Int | Double = null,
-    name: String = null,
-    origin: String = null,
-    originNamespace: String = null,
-    originalRequestingStepName: String = null,
-    originalStepName: String = null,
-    portion: String = null,
-    workerId: String = null
-  ): SchemaCounterStructuredName = {
+  def apply(): SchemaCounterStructuredName = {
     val __obj = js.Dynamic.literal()
-    if (componentStepName != null) __obj.updateDynamic("componentStepName")(componentStepName.asInstanceOf[js.Any])
-    if (executionStepName != null) __obj.updateDynamic("executionStepName")(executionStepName.asInstanceOf[js.Any])
-    if (inputIndex != null) __obj.updateDynamic("inputIndex")(inputIndex.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (originNamespace != null) __obj.updateDynamic("originNamespace")(originNamespace.asInstanceOf[js.Any])
-    if (originalRequestingStepName != null) __obj.updateDynamic("originalRequestingStepName")(originalRequestingStepName.asInstanceOf[js.Any])
-    if (originalStepName != null) __obj.updateDynamic("originalStepName")(originalStepName.asInstanceOf[js.Any])
-    if (portion != null) __obj.updateDynamic("portion")(portion.asInstanceOf[js.Any])
-    if (workerId != null) __obj.updateDynamic("workerId")(workerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCounterStructuredName]
   }
+  @scala.inline
+  implicit class SchemaCounterStructuredNameOps[Self <: SchemaCounterStructuredName] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponentStepName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentStepName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponentStepName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentStepName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionStepName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStepName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionStepName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStepName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginNamespace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originNamespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originNamespace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalRequestingStepName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalRequestingStepName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalRequestingStepName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalRequestingStepName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalStepName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalStepName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalStepName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalStepName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

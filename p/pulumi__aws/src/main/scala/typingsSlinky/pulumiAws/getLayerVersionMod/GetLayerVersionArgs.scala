@@ -22,11 +22,47 @@ trait GetLayerVersionArgs extends js.Object {
 
 object GetLayerVersionArgs {
   @scala.inline
-  def apply(layerName: String, compatibleRuntime: String = null, version: Int | Double = null): GetLayerVersionArgs = {
+  def apply(layerName: String): GetLayerVersionArgs = {
     val __obj = js.Dynamic.literal(layerName = layerName.asInstanceOf[js.Any])
-    if (compatibleRuntime != null) __obj.updateDynamic("compatibleRuntime")(compatibleRuntime.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLayerVersionArgs]
   }
+  @scala.inline
+  implicit class GetLayerVersionArgsOps[Self <: GetLayerVersionArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayerName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompatibleRuntime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibleRuntime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompatibleRuntime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compatibleRuntime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

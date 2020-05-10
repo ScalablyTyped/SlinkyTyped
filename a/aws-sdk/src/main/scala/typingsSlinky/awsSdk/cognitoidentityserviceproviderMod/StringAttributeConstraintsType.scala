@@ -18,11 +18,41 @@ trait StringAttributeConstraintsType extends js.Object {
 
 object StringAttributeConstraintsType {
   @scala.inline
-  def apply(MaxLength: StringType = null, MinLength: StringType = null): StringAttributeConstraintsType = {
+  def apply(): StringAttributeConstraintsType = {
     val __obj = js.Dynamic.literal()
-    if (MaxLength != null) __obj.updateDynamic("MaxLength")(MaxLength.asInstanceOf[js.Any])
-    if (MinLength != null) __obj.updateDynamic("MinLength")(MinLength.asInstanceOf[js.Any])
     __obj.asInstanceOf[StringAttributeConstraintsType]
   }
+  @scala.inline
+  implicit class StringAttributeConstraintsTypeOps[Self <: StringAttributeConstraintsType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxLength(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinLength(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinLength")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

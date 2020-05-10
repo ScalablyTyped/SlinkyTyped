@@ -13,12 +13,10 @@ trait OrderDirection extends js.Object
 
 object OrderDirection {
   @scala.inline
-  def ASCENDING: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.ASCENDING = this.cast("ASCENDING")
+  def ASCENDING: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.ASCENDING = "ASCENDING".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.ASCENDING]
   @scala.inline
-  def DESCENDING: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.DESCENDING = this.cast("DESCENDING")
+  def DESCENDING: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.DESCENDING = "DESCENDING".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.DESCENDING]
   @scala.inline
-  def DIRECTION_UNSPECIFIED: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.DIRECTION_UNSPECIFIED = this.cast("DIRECTION_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def DIRECTION_UNSPECIFIED: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.DIRECTION_UNSPECIFIED = "DIRECTION_UNSPECIFIED".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.DIRECTION_UNSPECIFIED]
 }
 

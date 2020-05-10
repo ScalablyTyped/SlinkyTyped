@@ -18,11 +18,41 @@ trait ListStreamsOutput extends js.Object {
 
 object ListStreamsOutput {
   @scala.inline
-  def apply(LastEvaluatedStreamArn: StreamArn = null, Streams: StreamList = null): ListStreamsOutput = {
+  def apply(): ListStreamsOutput = {
     val __obj = js.Dynamic.literal()
-    if (LastEvaluatedStreamArn != null) __obj.updateDynamic("LastEvaluatedStreamArn")(LastEvaluatedStreamArn.asInstanceOf[js.Any])
-    if (Streams != null) __obj.updateDynamic("Streams")(Streams.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListStreamsOutput]
   }
+  @scala.inline
+  implicit class ListStreamsOutputOps[Self <: ListStreamsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLastEvaluatedStreamArn(value: StreamArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedStreamArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastEvaluatedStreamArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastEvaluatedStreamArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreams(value: StreamList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Streams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Streams")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

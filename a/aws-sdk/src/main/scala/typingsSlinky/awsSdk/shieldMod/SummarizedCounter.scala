@@ -34,22 +34,89 @@ trait SummarizedCounter extends js.Object {
 
 object SummarizedCounter {
   @scala.inline
-  def apply(
-    Average: Int | scala.Double = null,
-    Max: Int | scala.Double = null,
-    N: Int | scala.Double = null,
-    Name: String = null,
-    Sum: Int | scala.Double = null,
-    Unit: String = null
-  ): SummarizedCounter = {
+  def apply(): SummarizedCounter = {
     val __obj = js.Dynamic.literal()
-    if (Average != null) __obj.updateDynamic("Average")(Average.asInstanceOf[js.Any])
-    if (Max != null) __obj.updateDynamic("Max")(Max.asInstanceOf[js.Any])
-    if (N != null) __obj.updateDynamic("N")(N.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Sum != null) __obj.updateDynamic("Sum")(Sum.asInstanceOf[js.Any])
-    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[SummarizedCounter]
   }
+  @scala.inline
+  implicit class SummarizedCounterOps[Self <: SummarizedCounter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAverage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Average")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAverage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Average")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withN(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("N")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("N")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSum(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

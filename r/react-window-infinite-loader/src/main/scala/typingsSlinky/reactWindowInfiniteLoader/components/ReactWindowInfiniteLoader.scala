@@ -1,36 +1,37 @@
 package typingsSlinky.reactWindowInfiniteLoader.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactWindowInfiniteLoader.mod.InfiniteLoaderProps
 import typingsSlinky.reactWindowInfiniteLoader.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactWindowInfiniteLoader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactWindowInfiniteLoader {
   @JSImport("react-window-infinite-loader", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def minimumBatchSize(value: Double): this.type = set("minimumBatchSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def threshold(value: Double): this.type = set("threshold", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: InfiniteLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     isItemLoaded: Double => Boolean,
     itemCount: Double,
-    loadMoreItems: (Double, Double) => js.Promise[_] | Null,
-    minimumBatchSize: Int | Double = null,
-    threshold: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(isItemLoaded = js.Any.fromFunction1(isItemLoaded), itemCount = itemCount.asInstanceOf[js.Any], loadMoreItems = js.Any.fromFunction2(loadMoreItems))
-    if (minimumBatchSize != null) __obj.updateDynamic("minimumBatchSize")(minimumBatchSize.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    loadMoreItems: (Double, Double) => js.Promise[_] | Null
+  ): Builder = {
+    val __props = js.Dynamic.literal(isItemLoaded = js.Any.fromFunction1(isItemLoaded), itemCount = itemCount.asInstanceOf[js.Any], loadMoreItems = js.Any.fromFunction2(loadMoreItems))
+    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteLoaderProps]))
   }
-  type Props = InfiniteLoaderProps
 }
 

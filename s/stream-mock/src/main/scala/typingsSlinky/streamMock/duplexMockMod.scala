@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @JSImport("stream-mock/lib/duplex/DuplexMock", JSImport.Namespace)
 @js.native
 object duplexMockMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.node.NodeJS.EventEmitter because Already inherited
   - typingsSlinky.node.eventsMod.EventEmitter because Already inherited
   - typingsSlinky.node.NodeJS.EventEmitter because Already inherited

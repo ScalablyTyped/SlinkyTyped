@@ -4,49 +4,107 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NavigatorXAxisGridOptions extends js.Object {
   /**
     * (Gantt) Set border color for the label grid lines.
     */
-  var borderColor: js.UndefOr[ColorString] = js.undefined
+  var borderColor: js.UndefOr[ColorString] = js.native
   /**
     * (Gantt) Set border width of the label grid lines.
     */
-  var borderWidth: js.UndefOr[Double] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.native
   /**
     * (Gantt) Set cell height for grid axis labels. By default this is
     * calculated from font size.
     */
-  var cellHeight: js.UndefOr[Double] = js.undefined
+  var cellHeight: js.UndefOr[Double] = js.native
   /**
     * (Gantt) Set specific options for each column (or row for horizontal axes)
     * in the grid. Each extra column/row is its own axis, and the axis options
     * can be set here.
     */
-  var columns: js.UndefOr[js.Array[XAxisOptions]] = js.undefined
+  var columns: js.UndefOr[js.Array[XAxisOptions]] = js.native
   /**
     * (Gantt) Enable grid on the axis labels. Defaults to true for Gantt
     * charts.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
 }
 
 object NavigatorXAxisGridOptions {
   @scala.inline
-  def apply(
-    borderColor: ColorString = null,
-    borderWidth: Int | Double = null,
-    cellHeight: Int | Double = null,
-    columns: js.Array[XAxisOptions] = null,
-    enabled: js.UndefOr[Boolean] = js.undefined
-  ): NavigatorXAxisGridOptions = {
+  def apply(): NavigatorXAxisGridOptions = {
     val __obj = js.Dynamic.literal()
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (cellHeight != null) __obj.updateDynamic("cellHeight")(cellHeight.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigatorXAxisGridOptions]
   }
+  @scala.inline
+  implicit class NavigatorXAxisGridOptionsOps[Self <: NavigatorXAxisGridOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBorderColor(value: ColorString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: js.Array[XAxisOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

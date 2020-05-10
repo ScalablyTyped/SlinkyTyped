@@ -12,10 +12,8 @@ trait Format extends js.Object
 
 object Format {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def tar: typingsSlinky.archiver.archiverStrings.tar = "tar".asInstanceOf[typingsSlinky.archiver.archiverStrings.tar]
   @scala.inline
-  def tar: typingsSlinky.archiver.archiverStrings.tar = this.cast("tar")
-  @scala.inline
-  def zip: typingsSlinky.archiver.archiverStrings.zip = this.cast("zip")
+  def zip: typingsSlinky.archiver.archiverStrings.zip = "zip".asInstanceOf[typingsSlinky.archiver.archiverStrings.zip]
 }
 

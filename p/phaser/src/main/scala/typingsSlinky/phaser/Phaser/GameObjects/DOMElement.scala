@@ -11,7 +11,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import typingsSlinky.phaser.Phaser.Math.Vector4
 import typingsSlinky.phaser.Phaser.Scene
-import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -107,19 +106,6 @@ class DOMElement protected ()
     */
   var cache: BaseCache = js.native
   /**
-    * The depth of this Game Object within the Scene.
-    * 
-    * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-    * of Game Objects, without actually moving their position in the display list.
-    * 
-    * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-    * value will always render in front of one with a lower value.
-    * 
-    * Setting the depth will queue a depth sort event within the Scene.
-    */
-  /* CompleteClass */
-  override var depth: Double = js.native
-  /**
     * The computed display height of this Game Object, based on the `getBoundingClientRect` DOM call.
     * 
     * The property `height` holds the un-scaled height of this DOM Element.
@@ -198,13 +184,6 @@ class DOMElement protected ()
     * picked-up by any of its children.
     */
   var transformOnly: Boolean = js.native
-  /**
-    * The visible state of the Game Object.
-    * 
-    * An invisible Game Object will skip rendering, but will still process update logic.
-    */
-  /* CompleteClass */
-  override var visible: Boolean = js.native
   /**
     * The native (un-scaled) width of this Game Object.
     * 
@@ -366,20 +345,6 @@ class DOMElement protected ()
     */
   def setClassName(className: String): this.type = js.native
   /**
-    * The depth of this Game Object within the Scene.
-    * 
-    * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-    * of Game Objects, without actually moving their position in the display list.
-    * 
-    * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-    * value will always render in front of one with a lower value.
-    * 
-    * Setting the depth will queue a depth sort event within the Scene.
-    * @param value The depth of this Game Object.
-    */
-  /* CompleteClass */
-  override def setDepth(value: integer): this.type = js.native
-  /**
     * Binds a new DOM Element to this Game Object. If this Game Object already has an Element it is removed from the DOM
     * entirely first. Any event listeners you may have previously created will need to be re-created on the new element.
     * 
@@ -429,11 +394,11 @@ class DOMElement protected ()
   def setElement(element: String, style: String, innerText: String): this.type = js.native
   def setElement(element: String, style: js.Any): this.type = js.native
   def setElement(element: String, style: js.Any, innerText: String): this.type = js.native
-  def setElement(element: typingsSlinky.std.Element): this.type = js.native
-  def setElement(element: typingsSlinky.std.Element, style: String): this.type = js.native
-  def setElement(element: typingsSlinky.std.Element, style: String, innerText: String): this.type = js.native
-  def setElement(element: typingsSlinky.std.Element, style: js.Any): this.type = js.native
-  def setElement(element: typingsSlinky.std.Element, style: js.Any, innerText: String): this.type = js.native
+  def setElement(element: Element): this.type = js.native
+  def setElement(element: Element, style: String): this.type = js.native
+  def setElement(element: Element, style: String, innerText: String): this.type = js.native
+  def setElement(element: Element, style: js.Any): this.type = js.native
+  def setElement(element: Element, style: js.Any, innerText: String): this.type = js.native
   /**
     * Sets the `innerHTML` property of the DOM Element node and updates the internal sizes.
     * @param html A DOMString of html to be set as the `innerHTML` property of the element.
@@ -468,14 +433,6 @@ class DOMElement protected ()
     * @param text A DOMString representing the rendered text content of the element.
     */
   def setText(text: String): this.type = js.native
-  /**
-    * Sets the visibility of this Game Object.
-    * 
-    * An invisible Game Object will skip rendering, but will still process update logic.
-    * @param value The visible state of the Game Object.
-    */
-  /* CompleteClass */
-  override def setVisible(value: Boolean): this.type = js.native
   /**
     * Internal method that calls `getBoundingClientRect` on the `node` and then sets the bounds width
     * and height into the `displayWidth` and `displayHeight` properties, and the `clientWidth` and `clientHeight`

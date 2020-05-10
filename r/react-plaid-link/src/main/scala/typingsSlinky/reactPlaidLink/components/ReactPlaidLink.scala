@@ -1,9 +1,8 @@
 package typingsSlinky.reactPlaidLink.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactPlaidLink.AnonAccounts
 import typingsSlinky.reactPlaidLink.AnonDisplaymessage
 import typingsSlinky.reactPlaidLink.AnonEmailAddress
@@ -39,14 +38,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactPlaidLink
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactPlaidLink {
   @JSImport("react-plaid-link", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def apiVersion(value: String): this.type = set("apiVersion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def institution(value: String): this.type = set("institution", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEvent(
+      value: (/* eventName */ ERROR | EXIT | HANDOFF | OPEN | OPEN_MY_PLAID | SEARCH_INSTITUTION | SELECT_INSTITUTION | SUBMIT_CREDENTIALS | SUBMIT_MFA | TRANSITION_VIEW, /* metadata */ AnonErrorcode) => Unit
+    ): this.type = set("onEvent", js.Any.fromFunction2(value))
+    @scala.inline
+    def onExit(value: (/* error */ AnonDisplaymessage | Null, /* metadata */ AnonInstitution) => Unit): this.type = set("onExit", js.Any.fromFunction2(value))
+    @scala.inline
+    def onLoad(value: () => Unit): this.type = set("onLoad", js.Any.fromFunction0(value))
+    @scala.inline
+    def selectAccount(value: Boolean): this.type = set("selectAccount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def token(value: String): this.type = set("token", value.asInstanceOf[js.Any])
+    @scala.inline
+    def user(value: AnonEmailAddress): this.type = set("user", value.asInstanceOf[js.Any])
+    @scala.inline
+    def webhook(value: String): this.type = set("webhook", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: PlaidLinkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     clientName: String,
     env: tartan | sandbox | development | production,
@@ -54,31 +82,10 @@ object ReactPlaidLink
     product: js.Array[
       connect | info | auth | identity | income | transactions | assets | liabilities | investments | payment_initiation
     ],
-    publicKey: String,
-    apiVersion: String = null,
-    institution: String = null,
-    onEvent: (/* eventName */ ERROR | EXIT | HANDOFF | OPEN | OPEN_MY_PLAID | SEARCH_INSTITUTION | SELECT_INSTITUTION | SUBMIT_CREDENTIALS | SUBMIT_MFA | TRANSITION_VIEW, /* metadata */ AnonErrorcode) => Unit = null,
-    onExit: (/* error */ AnonDisplaymessage | Null, /* metadata */ AnonInstitution) => Unit = null,
-    onLoad: () => Unit = null,
-    selectAccount: js.UndefOr[Boolean] = js.undefined,
-    token: String = null,
-    user: AnonEmailAddress = null,
-    webhook: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(clientName = clientName.asInstanceOf[js.Any], env = env.asInstanceOf[js.Any], onSuccess = js.Any.fromFunction2(onSuccess), product = product.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any])
-    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
-    if (institution != null) __obj.updateDynamic("institution")(institution.asInstanceOf[js.Any])
-    if (onEvent != null) __obj.updateDynamic("onEvent")(js.Any.fromFunction2(onEvent))
-    if (onExit != null) __obj.updateDynamic("onExit")(js.Any.fromFunction2(onExit))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction0(onLoad))
-    if (!js.isUndefined(selectAccount)) __obj.updateDynamic("selectAccount")(selectAccount.asInstanceOf[js.Any])
-    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
-    if (webhook != null) __obj.updateDynamic("webhook")(webhook.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    publicKey: String
+  ): Builder = {
+    val __props = js.Dynamic.literal(clientName = clientName.asInstanceOf[js.Any], env = env.asInstanceOf[js.Any], onSuccess = js.Any.fromFunction2(onSuccess), product = product.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PlaidLinkProps]))
   }
-  type Props = PlaidLinkProps
 }
 

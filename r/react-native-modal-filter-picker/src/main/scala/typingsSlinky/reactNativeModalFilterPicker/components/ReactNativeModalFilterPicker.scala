@@ -1,10 +1,8 @@
 package typingsSlinky.reactNativeModalFilterPicker.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.FlatListProps
 import typingsSlinky.reactNative.mod.KeyboardAvoidingView
 import typingsSlinky.reactNative.mod.ListViewProps
@@ -23,74 +21,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeModalFilterPicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+object ReactNativeModalFilterPicker {
   @JSImport("react-native-modal-filter-picker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, title */
-  def apply[T /* <: ModalFilterPickerOption */](
-    onCancel: () => Unit,
-    onSelect: String => Unit,
-    options: js.Array[T],
-    androidUnderlineColor: String = null,
-    cancelButtonStyle: StyleProp[ViewStyle] = null,
-    cancelButtonText: String = null,
-    cancelButtonTextStyle: StyleProp[TextStyle] = null,
-    cancelContainerStyle: StyleProp[ViewStyle] = null,
-    filterTextInputContainerStyle: StyleProp[ViewStyle] = null,
-    filterTextInputStyle: StyleProp[TextStyle] = null,
-    keyboardShouldPersistTaps: never | always | handle = null,
-    listContainerStyle: StyleProp[ViewStyle] = null,
-    listViewProps: Partial[ListViewProps | FlatListProps[T]] = null,
-    modal: ModalProps = null,
-    noResultsText: String = null,
-    optionTextStyle: StyleProp[TextStyle] = null,
-    overlayStyle: StyleProp[KeyboardAvoidingView | ViewStyle] = null,
-    placeholderText: String = null,
-    placeholderTextColor: String = null,
-    renderCancelButton: () => ReactElement = null,
-    renderList: () => ReactElement = null,
-    renderOption: (T, /* isSelected */ Boolean) => ReactElement = null,
-    selectedOption: String = null,
-    selectedOptionTextStyle: StyleProp[TextStyle] = null,
-    showFilter: js.UndefOr[Boolean] = js.undefined,
-    titleTextStyle: StyleProp[TextStyle] = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any]] = {
-    val __obj = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onSelect = js.Any.fromFunction1(onSelect), options = options.asInstanceOf[js.Any])
-    if (androidUnderlineColor != null) __obj.updateDynamic("androidUnderlineColor")(androidUnderlineColor.asInstanceOf[js.Any])
-    if (cancelButtonStyle != null) __obj.updateDynamic("cancelButtonStyle")(cancelButtonStyle.asInstanceOf[js.Any])
-    if (cancelButtonText != null) __obj.updateDynamic("cancelButtonText")(cancelButtonText.asInstanceOf[js.Any])
-    if (cancelButtonTextStyle != null) __obj.updateDynamic("cancelButtonTextStyle")(cancelButtonTextStyle.asInstanceOf[js.Any])
-    if (cancelContainerStyle != null) __obj.updateDynamic("cancelContainerStyle")(cancelContainerStyle.asInstanceOf[js.Any])
-    if (filterTextInputContainerStyle != null) __obj.updateDynamic("filterTextInputContainerStyle")(filterTextInputContainerStyle.asInstanceOf[js.Any])
-    if (filterTextInputStyle != null) __obj.updateDynamic("filterTextInputStyle")(filterTextInputStyle.asInstanceOf[js.Any])
-    if (keyboardShouldPersistTaps != null) __obj.updateDynamic("keyboardShouldPersistTaps")(keyboardShouldPersistTaps.asInstanceOf[js.Any])
-    if (listContainerStyle != null) __obj.updateDynamic("listContainerStyle")(listContainerStyle.asInstanceOf[js.Any])
-    if (listViewProps != null) __obj.updateDynamic("listViewProps")(listViewProps.asInstanceOf[js.Any])
-    if (modal != null) __obj.updateDynamic("modal")(modal.asInstanceOf[js.Any])
-    if (noResultsText != null) __obj.updateDynamic("noResultsText")(noResultsText.asInstanceOf[js.Any])
-    if (optionTextStyle != null) __obj.updateDynamic("optionTextStyle")(optionTextStyle.asInstanceOf[js.Any])
-    if (overlayStyle != null) __obj.updateDynamic("overlayStyle")(overlayStyle.asInstanceOf[js.Any])
-    if (placeholderText != null) __obj.updateDynamic("placeholderText")(placeholderText.asInstanceOf[js.Any])
-    if (placeholderTextColor != null) __obj.updateDynamic("placeholderTextColor")(placeholderTextColor.asInstanceOf[js.Any])
-    if (renderCancelButton != null) __obj.updateDynamic("renderCancelButton")(js.Any.fromFunction0(renderCancelButton))
-    if (renderList != null) __obj.updateDynamic("renderList")(js.Any.fromFunction0(renderList))
-    if (renderOption != null) __obj.updateDynamic("renderOption")(js.Any.fromFunction2(renderOption))
-    if (selectedOption != null) __obj.updateDynamic("selectedOption")(selectedOption.asInstanceOf[js.Any])
-    if (selectedOptionTextStyle != null) __obj.updateDynamic("selectedOptionTextStyle")(selectedOptionTextStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(showFilter)) __obj.updateDynamic("showFilter")(showFilter.asInstanceOf[js.Any])
-    if (titleTextStyle != null) __obj.updateDynamic("titleTextStyle")(titleTextStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeModalFilterPicker.mod.default[js.Any]]]
+  @scala.inline
+  class Builder[T <: ModalFilterPickerOption] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]] {
+    @scala.inline
+    def androidUnderlineColor(value: String): this.type = set("androidUnderlineColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelButtonStyle(value: StyleProp[ViewStyle]): this.type = set("cancelButtonStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelButtonStyleNull: this.type = set("cancelButtonStyle", null)
+    @scala.inline
+    def cancelButtonText(value: String): this.type = set("cancelButtonText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelButtonTextStyle(value: StyleProp[TextStyle]): this.type = set("cancelButtonTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelButtonTextStyleNull: this.type = set("cancelButtonTextStyle", null)
+    @scala.inline
+    def cancelContainerStyle(value: StyleProp[ViewStyle]): this.type = set("cancelContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelContainerStyleNull: this.type = set("cancelContainerStyle", null)
+    @scala.inline
+    def filterTextInputContainerStyle(value: StyleProp[ViewStyle]): this.type = set("filterTextInputContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterTextInputContainerStyleNull: this.type = set("filterTextInputContainerStyle", null)
+    @scala.inline
+    def filterTextInputStyle(value: StyleProp[TextStyle]): this.type = set("filterTextInputStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterTextInputStyleNull: this.type = set("filterTextInputStyle", null)
+    @scala.inline
+    def keyboardShouldPersistTaps(value: never | always | handle): this.type = set("keyboardShouldPersistTaps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listContainerStyle(value: StyleProp[ViewStyle]): this.type = set("listContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listContainerStyleNull: this.type = set("listContainerStyle", null)
+    @scala.inline
+    def listViewProps(value: Partial[ListViewProps | FlatListProps[T]]): this.type = set("listViewProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modal(value: ModalProps): this.type = set("modal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noResultsText(value: String): this.type = set("noResultsText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def optionTextStyle(value: StyleProp[TextStyle]): this.type = set("optionTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def optionTextStyleNull: this.type = set("optionTextStyle", null)
+    @scala.inline
+    def overlayStyle(value: StyleProp[KeyboardAvoidingView | ViewStyle]): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlayStyleNull: this.type = set("overlayStyle", null)
+    @scala.inline
+    def placeholderText(value: String): this.type = set("placeholderText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholderTextColor(value: String): this.type = set("placeholderTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderCancelButton(value: () => ReactElement): this.type = set("renderCancelButton", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderList(value: () => ReactElement): this.type = set("renderList", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderOption(value: (T, /* isSelected */ Boolean) => ReactElement): this.type = set("renderOption", js.Any.fromFunction2(value))
+    @scala.inline
+    def selectedOption(value: String): this.type = set("selectedOption", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedOptionTextStyle(value: StyleProp[TextStyle]): this.type = set("selectedOptionTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedOptionTextStyleNull: this.type = set("selectedOptionTextStyle", null)
+    @scala.inline
+    def showFilter(value: Boolean): this.type = set("showFilter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleTextStyle(value: StyleProp[TextStyle]): this.type = set("titleTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleTextStyleNull: this.type = set("titleTextStyle", null)
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  type Props = ModalFilterPickerProps[js.Any]
+  
+  def withProps[T <: ModalFilterPickerOption](p: ModalFilterPickerProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T <: ModalFilterPickerOption](onCancel: () => Unit, onSelect: String => Unit, options: js.Array[T]): Builder[T] = {
+    val __props = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onSelect = js.Any.fromFunction1(onSelect), options = options.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[ModalFilterPickerProps[T]]))
+  }
 }
 

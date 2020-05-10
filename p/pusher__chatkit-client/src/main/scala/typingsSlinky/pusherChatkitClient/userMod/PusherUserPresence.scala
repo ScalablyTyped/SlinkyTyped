@@ -13,12 +13,10 @@ trait PusherUserPresence extends js.Object
 
 object PusherUserPresence {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def offline: typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.offline = "offline".asInstanceOf[typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.offline]
   @scala.inline
-  def offline: typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.offline = this.cast("offline")
+  def online: typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.online = "online".asInstanceOf[typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.online]
   @scala.inline
-  def online: typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.online = this.cast("online")
-  @scala.inline
-  def unknown: typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.unknown = "unknown".asInstanceOf[typingsSlinky.pusherChatkitClient.pusherChatkitClientStrings.unknown]
 }
 

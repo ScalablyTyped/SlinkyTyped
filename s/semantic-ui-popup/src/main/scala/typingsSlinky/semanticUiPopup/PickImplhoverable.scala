@@ -5,16 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Pick<semantic-ui-popup.SemanticUI.PopupSettings._Impl, 'hoverable'> */
+@js.native
 trait PickImplhoverable extends js.Object {
-  var hoverable: Boolean
+  var hoverable: Boolean = js.native
 }
 
 object PickImplhoverable {
   @scala.inline
   def apply(hoverable: Boolean): PickImplhoverable = {
     val __obj = js.Dynamic.literal(hoverable = hoverable.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PickImplhoverable]
   }
+  @scala.inline
+  implicit class PickImplhoverableOps[Self <: PickImplhoverable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHoverable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverable")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait YAxisDateTimeLabelFormatsMillisecondOptions extends js.Object {
-  var main: js.UndefOr[String] = js.undefined
-  var range: js.UndefOr[Boolean] = js.undefined
+  var main: js.UndefOr[String] = js.native
+  var range: js.UndefOr[Boolean] = js.native
 }
 
 object YAxisDateTimeLabelFormatsMillisecondOptions {
   @scala.inline
-  def apply(main: String = null, range: js.UndefOr[Boolean] = js.undefined): YAxisDateTimeLabelFormatsMillisecondOptions = {
+  def apply(): YAxisDateTimeLabelFormatsMillisecondOptions = {
     val __obj = js.Dynamic.literal()
-    if (main != null) __obj.updateDynamic("main")(main.asInstanceOf[js.Any])
-    if (!js.isUndefined(range)) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
     __obj.asInstanceOf[YAxisDateTimeLabelFormatsMillisecondOptions]
   }
+  @scala.inline
+  implicit class YAxisDateTimeLabelFormatsMillisecondOptionsOps[Self <: YAxisDateTimeLabelFormatsMillisecondOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,10 +1,8 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.carouselMod.CarouselProps
 import typingsSlinky.antDesignReactNative.gridMod.GridProps
 import typingsSlinky.antDesignReactNative.gridMod.default
@@ -17,38 +15,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Grid
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Grid {
   @JSImport("@ant-design/react-native/lib/grid", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    carouselMaxRow: Double,
-    columnNum: Double,
-    carouselProps: CarouselProps = null,
-    data: js.Array[js.UndefOr[DataItem]] = null,
-    hasLine: js.UndefOr[Boolean] = js.undefined,
-    isCarousel: js.UndefOr[Boolean] = js.undefined,
-    itemStyle: StyleProp[ViewStyle] = null,
-    onPress: (/* dataItem */ js.UndefOr[DataItem], /* itemIndex */ Double) => Unit = null,
-    renderItem: (/* dataItem */ js.UndefOr[DataItem], /* itemIndex */ Double) => ReactElement = null,
-    styles: Partial[GridStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(carouselMaxRow = carouselMaxRow.asInstanceOf[js.Any], columnNum = columnNum.asInstanceOf[js.Any])
-    if (carouselProps != null) __obj.updateDynamic("carouselProps")(carouselProps.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasLine)) __obj.updateDynamic("hasLine")(hasLine.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCarousel)) __obj.updateDynamic("isCarousel")(isCarousel.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction2(onPress))
-    if (renderItem != null) __obj.updateDynamic("renderItem")(js.Any.fromFunction2(renderItem))
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def carouselProps(value: CarouselProps): this.type = set("carouselProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[js.UndefOr[DataItem]]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasLine(value: Boolean): this.type = set("hasLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isCarousel(value: Boolean): this.type = set("isCarousel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemStyle(value: StyleProp[ViewStyle]): this.type = set("itemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemStyleNull: this.type = set("itemStyle", null)
+    @scala.inline
+    def onPress(value: (/* dataItem */ js.UndefOr[DataItem], /* itemIndex */ Double) => Unit): this.type = set("onPress", js.Any.fromFunction2(value))
+    @scala.inline
+    def renderItem(value: (/* dataItem */ js.UndefOr[DataItem], /* itemIndex */ Double) => ReactElement): this.type = set("renderItem", js.Any.fromFunction2(value))
+    @scala.inline
+    def styles(value: Partial[GridStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
   }
-  type Props = GridProps
+  
+  def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(carouselMaxRow: Double, columnNum: Double): Builder = {
+    val __props = js.Dynamic.literal(carouselMaxRow = carouselMaxRow.asInstanceOf[js.Any], columnNum = columnNum.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[GridProps]))
+  }
 }
 

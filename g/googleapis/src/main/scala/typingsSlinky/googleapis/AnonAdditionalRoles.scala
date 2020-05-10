@@ -12,11 +12,41 @@ trait AnonAdditionalRoles extends js.Object {
 
 object AnonAdditionalRoles {
   @scala.inline
-  def apply(additionalRoles: js.Array[String] = null, primaryRole: String = null): AnonAdditionalRoles = {
+  def apply(): AnonAdditionalRoles = {
     val __obj = js.Dynamic.literal()
-    if (additionalRoles != null) __obj.updateDynamic("additionalRoles")(additionalRoles.asInstanceOf[js.Any])
-    if (primaryRole != null) __obj.updateDynamic("primaryRole")(primaryRole.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAdditionalRoles]
   }
+  @scala.inline
+  implicit class AnonAdditionalRolesOps[Self <: AnonAdditionalRoles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalRoles(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalRoles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalRoles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalRoles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryRole(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryRole")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

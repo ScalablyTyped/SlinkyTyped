@@ -298,7 +298,7 @@ class Project protected () extends js.Object {
     * @return the newly created Paper.js item containing the converted
     *     SVG content
     */
-  def importSVG(svg: typingsSlinky.std.SVGElement): Item = js.native
+  def importSVG(svg: SVGElement): Item = js.native
   /** 
     * Imports the provided external SVG file, converts it into Paper.js items
     * and adds them to the active layer of this project.
@@ -314,8 +314,8 @@ class Project protected () extends js.Object {
     * @return the newly created Paper.js item containing the converted
     *     SVG content
     */
-  def importSVG(svg: typingsSlinky.std.SVGElement, onLoad: js.Function): Item = js.native
-  def importSVG(svg: typingsSlinky.std.SVGElement, options: js.Object): Item = js.native
+  def importSVG(svg: SVGElement, onLoad: js.Function): Item = js.native
+  def importSVG(svg: SVGElement, options: js.Object): Item = js.native
   /** 
     * Inserts the specified layer at the specified index in this project's
     * {@link #layers} list.

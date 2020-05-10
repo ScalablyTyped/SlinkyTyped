@@ -14,10 +14,29 @@ trait DisassociateDeviceFromRoomRequest extends js.Object {
 
 object DisassociateDeviceFromRoomRequest {
   @scala.inline
-  def apply(DeviceArn: Arn = null): DisassociateDeviceFromRoomRequest = {
+  def apply(): DisassociateDeviceFromRoomRequest = {
     val __obj = js.Dynamic.literal()
-    if (DeviceArn != null) __obj.updateDynamic("DeviceArn")(DeviceArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisassociateDeviceFromRoomRequest]
   }
+  @scala.inline
+  implicit class DisassociateDeviceFromRoomRequestOps[Self <: DisassociateDeviceFromRoomRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

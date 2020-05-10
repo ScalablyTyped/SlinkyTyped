@@ -1,12 +1,12 @@
 package typingsSlinky.fineUploader.coreMod
 
+import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.File
+import org.scalajs.dom.raw.FileList
+import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Blob
-import typingsSlinky.std.File
-import typingsSlinky.std.FileList
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLFormElement
-import typingsSlinky.std.HTMLInputElement
+import org.scalajs.dom.raw.HTMLFormElement
+import org.scalajs.dom.raw.HTMLInputElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -222,7 +222,7 @@ class FineUploaderBasic () extends js.Object {
     * @param number id : The file id
     * @returns File | Blob : A `File` or `Blob` object
     */
-  def getFile(id: Double): org.scalajs.dom.raw.File | org.scalajs.dom.raw.Blob = js.native
+  def getFile(id: Double): File | Blob = js.native
   /**
     * Returns the number of items that are either currently uploading or waiting for an available connection (`qq.status.QUEUED`).
     *
@@ -445,7 +445,7 @@ class FineUploaderBasic () extends js.Object {
     */
   def setDeleteFileEndpoint(path: String): Unit = js.native
   def setDeleteFileEndpoint(path: String, identifier: Double): Unit = js.native
-  def setDeleteFileEndpoint(path: String, identifier: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setDeleteFileEndpoint(path: String, identifier: HTMLElement): Unit = js.native
   /**
     * Set the parameters for a delete request. Pass in a file id to make the parameters specific to that file
     *
@@ -462,7 +462,7 @@ class FineUploaderBasic () extends js.Object {
     */
   def setEndpoint(path: String): Unit = js.native
   def setEndpoint(path: String, identifier: Double): Unit = js.native
-  def setEndpoint(path: String, identifier: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setEndpoint(path: String, identifier: HTMLElement): Unit = js.native
   def setForm(formElementOrId: String): Unit = js.native
   /**
     * Bind a `<form>` to Fine Uploader dynamically

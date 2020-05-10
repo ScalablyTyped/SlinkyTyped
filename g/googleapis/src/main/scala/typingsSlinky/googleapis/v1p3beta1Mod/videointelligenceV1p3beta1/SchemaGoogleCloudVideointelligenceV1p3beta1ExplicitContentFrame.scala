@@ -22,11 +22,41 @@ trait SchemaGoogleCloudVideointelligenceV1p3beta1ExplicitContentFrame extends js
 
 object SchemaGoogleCloudVideointelligenceV1p3beta1ExplicitContentFrame {
   @scala.inline
-  def apply(pornographyLikelihood: String = null, timeOffset: String = null): SchemaGoogleCloudVideointelligenceV1p3beta1ExplicitContentFrame = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1p3beta1ExplicitContentFrame = {
     val __obj = js.Dynamic.literal()
-    if (pornographyLikelihood != null) __obj.updateDynamic("pornographyLikelihood")(pornographyLikelihood.asInstanceOf[js.Any])
-    if (timeOffset != null) __obj.updateDynamic("timeOffset")(timeOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p3beta1ExplicitContentFrame]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1p3beta1ExplicitContentFrameOps[Self <: SchemaGoogleCloudVideointelligenceV1p3beta1ExplicitContentFrame] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPornographyLikelihood(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pornographyLikelihood")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPornographyLikelihood: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pornographyLikelihood")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeOffset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOffset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

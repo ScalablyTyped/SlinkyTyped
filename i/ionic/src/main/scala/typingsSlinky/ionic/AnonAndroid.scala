@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAndroid extends js.Object {
-  var android: js.UndefOr[js.Object] = js.undefined
-  var ios: js.UndefOr[js.Object] = js.undefined
+  var android: js.UndefOr[js.Object] = js.native
+  var ios: js.UndefOr[js.Object] = js.native
 }
 
 object AnonAndroid {
   @scala.inline
-  def apply(android: js.Object = null, ios: js.Object = null): AnonAndroid = {
+  def apply(): AnonAndroid = {
     val __obj = js.Dynamic.literal()
-    if (android != null) __obj.updateDynamic("android")(android.asInstanceOf[js.Any])
-    if (ios != null) __obj.updateDynamic("ios")(ios.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAndroid]
   }
+  @scala.inline
+  implicit class AnonAndroidOps[Self <: AnonAndroid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndroid(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIos(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

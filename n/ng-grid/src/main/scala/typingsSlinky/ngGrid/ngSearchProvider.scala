@@ -17,12 +17,6 @@ class ngSearchProvider protected () extends ISearchProvider {
     grid: IGridInstance,
     $filter: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify angular.IFilterService */ js.Any
   ) = this()
-  /* CompleteClass */
-  override var extFilter: Boolean = js.native
-  /* CompleteClass */
-  override var fieldMap: js.Any = js.native
-  /* CompleteClass */
-  override def evalFilter(): Unit = js.native
 }
 
 @JSGlobal("ngSearchProvider")

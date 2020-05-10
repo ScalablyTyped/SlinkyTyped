@@ -1,10 +1,8 @@
 package typingsSlinky.reactRouterNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.history.mod.LocationDescriptor
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.reactRouterNative.mod.LinkProps
@@ -12,27 +10,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Link
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactRouterNative.mod.Link] {
+object Link {
   @JSImport("react-router-native", "Link")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    to: LocationDescriptor[LocationState],
-    component: ReactComponentClass[_] = null,
-    replace: js.UndefOr[Boolean] = js.undefined,
-    style: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactRouterNative.mod.Link] = {
-    val __obj = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (!js.isUndefined(replace)) __obj.updateDynamic("replace")(replace.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactRouterNative.mod.Link] {
+    @scala.inline
+    def componentFunctionComponent(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentComponentClass(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def component(value: ReactComponentClass[_]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def replace(value: Boolean): this.type = set("replace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = LinkProps
+  
+  def withProps(p: LinkProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(to: LocationDescriptor[LocationState]): Builder = {
+    val __props = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LinkProps]))
+  }
 }
 

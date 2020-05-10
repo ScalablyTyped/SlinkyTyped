@@ -29,16 +29,53 @@ trait SchemaDiagnostics extends js.Object {
 
 object SchemaDiagnostics {
   @scala.inline
-  def apply(
-    alerts: js.Array[String] = null,
-    beaconName: String = null,
-    estimatedLowBatteryDate: SchemaDate = null
-  ): SchemaDiagnostics = {
+  def apply(): SchemaDiagnostics = {
     val __obj = js.Dynamic.literal()
-    if (alerts != null) __obj.updateDynamic("alerts")(alerts.asInstanceOf[js.Any])
-    if (beaconName != null) __obj.updateDynamic("beaconName")(beaconName.asInstanceOf[js.Any])
-    if (estimatedLowBatteryDate != null) __obj.updateDynamic("estimatedLowBatteryDate")(estimatedLowBatteryDate.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDiagnostics]
   }
+  @scala.inline
+  implicit class SchemaDiagnosticsOps[Self <: SchemaDiagnostics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlerts(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alerts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlerts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alerts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeaconName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeaconName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedLowBatteryDate(value: SchemaDate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedLowBatteryDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedLowBatteryDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedLowBatteryDate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

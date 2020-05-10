@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SaveResult extends js.Object {
-  var fullName: String
-  var success: Boolean
+  var fullName: String = js.native
+  var success: Boolean = js.native
 }
 
 object SaveResult {
   @scala.inline
   def apply(fullName: String, success: Boolean): SaveResult = {
     val __obj = js.Dynamic.literal(fullName = fullName.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SaveResult]
   }
+  @scala.inline
+  implicit class SaveResultOps[Self <: SaveResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFullName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

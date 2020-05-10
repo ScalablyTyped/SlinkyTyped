@@ -1,9 +1,7 @@
 package typingsSlinky.rmcCalendar.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.Locale
 import typingsSlinky.rmcCalendar.timePickerMod.PropsType
 import typingsSlinky.rmcCalendar.timePickerMod.default
@@ -11,38 +9,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object TimePicker {
   @JSImport("rmc-calendar/lib/TimePicker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: title */
-  def apply(
-    locale: Locale,
-    clientHeight: Int | Double = null,
-    defaultValue: js.Date = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    onValueChange: /* time */ js.Date => Unit = null,
-    pickerPrefixCls: String = null,
-    prefixCls: String = null,
-    value: js.Date = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any])
-    if (clientHeight != null) __obj.updateDynamic("clientHeight")(clientHeight.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (onValueChange != null) __obj.updateDynamic("onValueChange")(js.Any.fromFunction1(onValueChange))
-    if (pickerPrefixCls != null) __obj.updateDynamic("pickerPrefixCls")(pickerPrefixCls.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def clientHeight(value: Double): this.type = set("clientHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: js.Date): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onValueChange(value: /* time */ js.Date => Unit): this.type = set("onValueChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def pickerPrefixCls(value: String): this.type = set("pickerPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = PropsType
+  
+  def withProps(p: PropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(locale: Locale): Builder = {
+    val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PropsType]))
+  }
 }
 

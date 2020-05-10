@@ -56,7 +56,7 @@ object Materialbox extends js.Object {
   /**
     * Init Materialbox
     */
-  def init(els: typingsSlinky.std.Element): Materialbox = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialMaterialboxOptions): Materialbox = js.native
+  def init(els: Element): Materialbox = js.native
+  def init(els: Element, options: PartialMaterialboxOptions): Materialbox = js.native
 }
 

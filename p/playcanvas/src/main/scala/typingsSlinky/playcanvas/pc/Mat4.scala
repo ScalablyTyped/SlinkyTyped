@@ -17,7 +17,7 @@ class Mat4 () extends js.Object {
   /**
     * Matrix elements in the form of a flat array.
     */
-  var data: scala.scalajs.js.typedarray.Float32Array = js.native
+  var data: js.typedarray.Float32Array = js.native
   /**
     * @function
     * @name pc.Mat4#add

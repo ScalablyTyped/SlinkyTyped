@@ -12,7 +12,7 @@ trait BLECentralPluginPromises extends BLECentralPluginCommon {
   def isConnected(device_id: String): js.Promise[Unit] = js.native
   /* Returns a rejected promise if bluetooth is not connected */
   def isEnabled(): js.Promise[Unit] = js.native
-  def read(device_id: String, service_uuid: String, characteristic_uuid: String): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def read(device_id: String, service_uuid: String, characteristic_uuid: String): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def readRSSI(device_id: String): js.Promise[Double] = js.native
   def showBluetoothSettings(): js.Promise[Unit] = js.native
   def stopNotification(device_id: String, service_uuid: String, characteristic_uuid: String): js.Promise[Unit] = js.native
@@ -22,13 +22,13 @@ trait BLECentralPluginPromises extends BLECentralPluginCommon {
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    value: scala.scalajs.js.typedarray.ArrayBuffer
+    value: js.typedarray.ArrayBuffer
   ): js.Promise[Unit] = js.native
   def writeWithoutResponse(
     device_id: String,
     service_uuid: String,
     characteristic_uuid: String,
-    value: scala.scalajs.js.typedarray.ArrayBuffer
+    value: js.typedarray.ArrayBuffer
   ): js.Promise[Unit] = js.native
 }
 

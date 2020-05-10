@@ -45,11 +45,12 @@ trait SVGFEComponentTransferElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFEComponentTransferElement")
 @js.native
-object SVGFEComponentTransferElement extends Instantiable0[SVGFEComponentTransferElement]
+object SVGFEComponentTransferElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEComponentTransferElement]
 

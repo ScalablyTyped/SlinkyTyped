@@ -25,6 +25,7 @@ trait StudentSubmissionsResource extends js.Object {
     * &#42; `NOT_FOUND` if the requested course, course work, or student submission
     * does not exist.
     */
+  def get(): Request_[StudentSubmission] = js.native
   def get(request: AnonCourseWorkId): Request_[StudentSubmission] = js.native
   /**
     * Returns a list of student submissions that the requester is permitted to
@@ -42,6 +43,7 @@ trait StudentSubmissionsResource extends js.Object {
     * &#42; `INVALID_ARGUMENT` if the request is malformed.
     * &#42; `NOT_FOUND` if the requested course does not exist.
     */
+  def list(): Request_[ListStudentSubmissionsResponse] = js.native
   def list(request: AnonLate): Request_[ListStudentSubmissionsResponse] = js.native
   def modifyAttachments(request: AnonCourseWorkId, body: ModifyAttachmentsRequest): Request_[StudentSubmission] = js.native
   /**

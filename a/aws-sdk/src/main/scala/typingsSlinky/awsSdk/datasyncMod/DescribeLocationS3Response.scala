@@ -27,20 +27,77 @@ trait DescribeLocationS3Response extends js.Object {
 
 object DescribeLocationS3Response {
   @scala.inline
-  def apply(
-    CreationTime: js.Date = null,
-    LocationArn: LocationArn = null,
-    LocationUri: LocationUri = null,
-    S3Config: S3Config = null,
-    S3StorageClass: S3StorageClass = null
-  ): DescribeLocationS3Response = {
+  def apply(): DescribeLocationS3Response = {
     val __obj = js.Dynamic.literal()
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (LocationArn != null) __obj.updateDynamic("LocationArn")(LocationArn.asInstanceOf[js.Any])
-    if (LocationUri != null) __obj.updateDynamic("LocationUri")(LocationUri.asInstanceOf[js.Any])
-    if (S3Config != null) __obj.updateDynamic("S3Config")(S3Config.asInstanceOf[js.Any])
-    if (S3StorageClass != null) __obj.updateDynamic("S3StorageClass")(S3StorageClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLocationS3Response]
   }
+  @scala.inline
+  implicit class DescribeLocationS3ResponseOps[Self <: DescribeLocationS3Response] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationArn(value: LocationArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationUri(value: LocationUri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocationUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Config(value: S3Config): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Config: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Config")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3StorageClass(value: S3StorageClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3StorageClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3StorageClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3StorageClass")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

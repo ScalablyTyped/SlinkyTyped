@@ -25,36 +25,34 @@ trait ArmConditionCode extends js.Object
 
 object ArmConditionCode {
   @scala.inline
-  def al: typingsSlinky.fridaGum.fridaGumStrings.al = this.cast("al")
+  def al: typingsSlinky.fridaGum.fridaGumStrings.al = "al".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.al]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def eq: typingsSlinky.fridaGum.fridaGumStrings.eq = "eq".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.eq]
   @scala.inline
-  def eq: typingsSlinky.fridaGum.fridaGumStrings.eq = this.cast("eq")
+  def ge: typingsSlinky.fridaGum.fridaGumStrings.ge = "ge".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.ge]
   @scala.inline
-  def ge: typingsSlinky.fridaGum.fridaGumStrings.ge = this.cast("ge")
+  def gt: typingsSlinky.fridaGum.fridaGumStrings.gt = "gt".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.gt]
   @scala.inline
-  def gt: typingsSlinky.fridaGum.fridaGumStrings.gt = this.cast("gt")
+  def hi: typingsSlinky.fridaGum.fridaGumStrings.hi = "hi".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.hi]
   @scala.inline
-  def hi: typingsSlinky.fridaGum.fridaGumStrings.hi = this.cast("hi")
+  def hs: typingsSlinky.fridaGum.fridaGumStrings.hs = "hs".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.hs]
   @scala.inline
-  def hs: typingsSlinky.fridaGum.fridaGumStrings.hs = this.cast("hs")
+  def le: typingsSlinky.fridaGum.fridaGumStrings.le = "le".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.le]
   @scala.inline
-  def le: typingsSlinky.fridaGum.fridaGumStrings.le = this.cast("le")
+  def lo: typingsSlinky.fridaGum.fridaGumStrings.lo = "lo".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.lo]
   @scala.inline
-  def lo: typingsSlinky.fridaGum.fridaGumStrings.lo = this.cast("lo")
+  def ls: typingsSlinky.fridaGum.fridaGumStrings.ls = "ls".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.ls]
   @scala.inline
-  def ls: typingsSlinky.fridaGum.fridaGumStrings.ls = this.cast("ls")
+  def lt: typingsSlinky.fridaGum.fridaGumStrings.lt = "lt".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.lt]
   @scala.inline
-  def lt: typingsSlinky.fridaGum.fridaGumStrings.lt = this.cast("lt")
+  def mi: typingsSlinky.fridaGum.fridaGumStrings.mi = "mi".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.mi]
   @scala.inline
-  def mi: typingsSlinky.fridaGum.fridaGumStrings.mi = this.cast("mi")
+  def ne: typingsSlinky.fridaGum.fridaGumStrings.ne = "ne".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.ne]
   @scala.inline
-  def ne: typingsSlinky.fridaGum.fridaGumStrings.ne = this.cast("ne")
+  def pl: typingsSlinky.fridaGum.fridaGumStrings.pl = "pl".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.pl]
   @scala.inline
-  def pl: typingsSlinky.fridaGum.fridaGumStrings.pl = this.cast("pl")
+  def vc: typingsSlinky.fridaGum.fridaGumStrings.vc = "vc".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.vc]
   @scala.inline
-  def vc: typingsSlinky.fridaGum.fridaGumStrings.vc = this.cast("vc")
-  @scala.inline
-  def vs: typingsSlinky.fridaGum.fridaGumStrings.vs = this.cast("vs")
+  def vs: typingsSlinky.fridaGum.fridaGumStrings.vs = "vs".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.vs]
 }
 

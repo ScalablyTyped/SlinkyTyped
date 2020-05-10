@@ -5,49 +5,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait XamlBuildDefinition extends DefinitionReference {
-  var _links: js.Any
+  var _links: js.Any = js.native
   /**
     * Batch size of the definition
     */
-  var batchSize: Double
-  var buildArgs: String
+  var batchSize: Double = js.native
+  var buildArgs: String = js.native
   /**
     * The continuous integration quiet period
     */
-  var continuousIntegrationQuietPeriod: Double
+  var continuousIntegrationQuietPeriod: Double = js.native
   /**
     * The build controller
     */
-  var controller: BuildController
+  var controller: BuildController = js.native
   /**
     * The date this definition was created
     */
-  var createdOn: js.Date
+  var createdOn: js.Date = js.native
   /**
     * Default drop location for builds from this definition
     */
-  var defaultDropLocation: String
+  var defaultDropLocation: String = js.native
   /**
     * Description of the definition
     */
-  var description: String
+  var description: String = js.native
   /**
     * The last build on this definition
     */
-  var lastBuild: XamlBuildReference
+  var lastBuild: XamlBuildReference = js.native
   /**
     * The repository
     */
-  var repository: BuildRepository
+  var repository: BuildRepository = js.native
   /**
     * The reasons supported by the template
     */
-  var supportedReasons: BuildReason
+  var supportedReasons: BuildReason = js.native
   /**
     * How builds are triggered from this definition
     */
-  var triggerType: DefinitionTriggerType
+  var triggerType: DefinitionTriggerType = js.native
 }
 
 object XamlBuildDefinition {
@@ -80,5 +81,85 @@ object XamlBuildDefinition {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[XamlBuildDefinition]
   }
+  @scala.inline
+  implicit class XamlBuildDefinitionOps[Self <: XamlBuildDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_links(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_links")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBatchSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBuildArgs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildArgs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContinuousIntegrationQuietPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuousIntegrationQuietPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withController(value: BuildController): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreatedOn(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultDropLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDropLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastBuild(value: XamlBuildReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastBuild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepository(value: BuildRepository): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportedReasons(value: BuildReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedReasons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTriggerType(value: DefinitionTriggerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

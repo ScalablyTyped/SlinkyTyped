@@ -16,37 +16,144 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined graphql.graphql/type/definition.GraphQLObjectTypeConfig<any, any, {[key: string] : any}> & {  interfaces  :std.Array<graphql.graphql/type/definition.GraphQLInterfaceType>,   fields  :graphql.graphql/type/definition.GraphQLFieldConfigMap<any, any, {[key: string] : any}>,   extensionASTNodes  :std.ReadonlyArray<graphql.graphql/language/ast.ObjectTypeExtensionNode>} */
+@js.native
 trait GraphQLObjectTypeConfigan extends js.Object {
-  var astNode: js.UndefOr[Maybe[ObjectTypeDefinitionNode]] = js.undefined
-  var description: js.UndefOr[Maybe[String]] = js.undefined
-  var extensionASTNodes: js.UndefOr[Maybe[js.Array[ObjectTypeExtensionNode]] with js.Array[ObjectTypeExtensionNode]] = js.undefined
-  var extensions: js.UndefOr[Maybe[Record[String, _]]] = js.undefined
-  var fields: (Thunk[GraphQLFieldConfigMap[_, _, StringDictionary[_]]]) with (GraphQLFieldConfigMap[_, _, StringDictionary[_]])
-  var interfaces: js.UndefOr[Thunk[Maybe[js.Array[GraphQLInterfaceType]]] with js.Array[GraphQLInterfaceType]] = js.undefined
-  var isTypeOf: js.UndefOr[Maybe[GraphQLIsTypeOfFn[_, _]]] = js.undefined
-  var name: String
+  var astNode: js.UndefOr[Maybe[ObjectTypeDefinitionNode]] = js.native
+  var description: js.UndefOr[Maybe[String]] = js.native
+  var extensionASTNodes: js.UndefOr[Maybe[js.Array[ObjectTypeExtensionNode]] with js.Array[ObjectTypeExtensionNode]] = js.native
+  var extensions: js.UndefOr[Maybe[Record[String, _]]] = js.native
+  var fields: (Thunk[GraphQLFieldConfigMap[_, _, StringDictionary[_]]]) with (GraphQLFieldConfigMap[_, _, StringDictionary[_]]) = js.native
+  var interfaces: js.UndefOr[Thunk[Maybe[js.Array[GraphQLInterfaceType]]] with js.Array[GraphQLInterfaceType]] = js.native
+  var isTypeOf: js.UndefOr[Maybe[GraphQLIsTypeOfFn[_, _]]] = js.native
+  var name: String = js.native
 }
 
 object GraphQLObjectTypeConfigan {
   @scala.inline
   def apply(
     fields: (Thunk[GraphQLFieldConfigMap[_, _, StringDictionary[_]]]) with (GraphQLFieldConfigMap[_, _, StringDictionary[_]]),
-    name: String,
-    astNode: Maybe[ObjectTypeDefinitionNode] = null,
-    description: Maybe[String] = null,
-    extensionASTNodes: Maybe[js.Array[ObjectTypeExtensionNode]] with js.Array[ObjectTypeExtensionNode] = null,
-    extensions: Maybe[Record[String, _]] = null,
-    interfaces: Thunk[Maybe[js.Array[GraphQLInterfaceType]]] with js.Array[GraphQLInterfaceType] = null,
-    isTypeOf: (_, _, /* info */ GraphQLResolveInfo) => PromiseOrValue[Boolean] = null
+    name: String
   ): GraphQLObjectTypeConfigan = {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (astNode != null) __obj.updateDynamic("astNode")(astNode.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (extensionASTNodes != null) __obj.updateDynamic("extensionASTNodes")(extensionASTNodes.asInstanceOf[js.Any])
-    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
-    if (interfaces != null) __obj.updateDynamic("interfaces")(interfaces.asInstanceOf[js.Any])
-    if (isTypeOf != null) __obj.updateDynamic("isTypeOf")(js.Any.fromFunction3(isTypeOf))
     __obj.asInstanceOf[GraphQLObjectTypeConfigan]
   }
+  @scala.inline
+  implicit class GraphQLObjectTypeConfiganOps[Self <: GraphQLObjectTypeConfigan] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFields(
+      value: (Thunk[GraphQLFieldConfigMap[_, _, StringDictionary[_]]]) with (GraphQLFieldConfigMap[_, _, StringDictionary[_]])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAstNode(value: Maybe[ObjectTypeDefinitionNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAstNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAstNodeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("astNode")(null)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Maybe[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescriptionNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(null)
+        ret
+    }
+    @scala.inline
+    def withExtensionASTNodes(value: Maybe[js.Array[ObjectTypeExtensionNode]] with js.Array[ObjectTypeExtensionNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionASTNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensionASTNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensionASTNodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensions(value: Maybe[Record[String, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensionsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(null)
+        ret
+    }
+    @scala.inline
+    def withInterfaces(value: Thunk[Maybe[js.Array[GraphQLInterfaceType]]] with js.Array[GraphQLInterfaceType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterfaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTypeOf(value: (_, _, /* info */ GraphQLResolveInfo) => PromiseOrValue[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTypeOf")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsTypeOf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTypeOf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTypeOfNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTypeOf")(null)
+        ret
+    }
+  }
+  
 }
 

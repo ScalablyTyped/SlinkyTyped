@@ -13,12 +13,10 @@ trait GoogleActionsV2UiElementsTableCardColumnPropertiesHorizontalAlignment exte
 
 object GoogleActionsV2UiElementsTableCardColumnPropertiesHorizontalAlignment {
   @scala.inline
-  def CENTER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CENTER = this.cast("CENTER")
+  def CENTER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CENTER = "CENTER".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CENTER]
   @scala.inline
-  def LEADING: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LEADING = this.cast("LEADING")
+  def LEADING: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LEADING = "LEADING".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.LEADING]
   @scala.inline
-  def TRAILING: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TRAILING = this.cast("TRAILING")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRAILING: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TRAILING = "TRAILING".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TRAILING]
 }
 

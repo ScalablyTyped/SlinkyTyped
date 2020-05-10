@@ -42,26 +42,113 @@ trait SavingsPlanRate extends js.Object {
 
 object SavingsPlanRate {
   @scala.inline
-  def apply(
-    currency: CurrencyCode = null,
-    operation: SavingsPlanRateOperation = null,
-    productType: SavingsPlanProductType = null,
-    properties: SavingsPlanRatePropertyList = null,
-    rate: Amount = null,
-    serviceCode: SavingsPlanRateServiceCode = null,
-    unit: SavingsPlanRateUnit = null,
-    usageType: SavingsPlanRateUsageType = null
-  ): SavingsPlanRate = {
+  def apply(): SavingsPlanRate = {
     val __obj = js.Dynamic.literal()
-    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
-    if (operation != null) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
-    if (productType != null) __obj.updateDynamic("productType")(productType.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
-    if (rate != null) __obj.updateDynamic("rate")(rate.asInstanceOf[js.Any])
-    if (serviceCode != null) __obj.updateDynamic("serviceCode")(serviceCode.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (usageType != null) __obj.updateDynamic("usageType")(usageType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SavingsPlanRate]
   }
+  @scala.inline
+  implicit class SavingsPlanRateOps[Self <: SavingsPlanRate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrency(value: CurrencyCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperation(value: SavingsPlanRateOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductType(value: SavingsPlanProductType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: SavingsPlanRatePropertyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRate(value: Amount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceCode(value: SavingsPlanRateServiceCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: SavingsPlanRateUnit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsageType(value: SavingsPlanRateUsageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usageType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsageType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usageType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

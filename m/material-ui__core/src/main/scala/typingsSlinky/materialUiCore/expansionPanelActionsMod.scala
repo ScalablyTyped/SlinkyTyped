@@ -1,10 +1,9 @@
 package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.expansionPanelActionsExpansionPanelActionsMod.ExpansionPanelActionsProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
-import typingsSlinky.react.mod.ComponentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ import scala.scalajs.js.annotation._
 object expansionPanelActionsMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[ExpansionPanelActionsProps, ComponentState, js.Any] {
+    extends Component[ExpansionPanelActionsProps, js.Object, js.Any] {
     def this(props: ExpansionPanelActionsProps) = this()
     def this(props: ExpansionPanelActionsProps, context: js.Any) = this()
   }
   
   @js.native
-  object default extends TopLevel[ComponentType[ExpansionPanelActionsProps]]
+  object default extends TopLevel[ReactComponentClass[ExpansionPanelActionsProps]]
   
 }
 

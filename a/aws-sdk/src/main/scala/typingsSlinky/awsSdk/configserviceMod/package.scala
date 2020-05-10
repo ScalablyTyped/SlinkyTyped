@@ -274,7 +274,7 @@ package object configserviceMod {
     - java.lang.String
   */
   type RecorderStatus = typingsSlinky.awsSdk.configserviceMod._RecorderStatus | java.lang.String
-  type ReevaluateConfigRuleNames = js.Array[typingsSlinky.awsSdk.configserviceMod.StringWithCharLimit64]
+  type ReevaluateConfigRuleNames = js.Array[typingsSlinky.awsSdk.configserviceMod.ConfigRuleName]
   type RelatedEvent = java.lang.String
   type RelatedEventList = js.Array[typingsSlinky.awsSdk.configserviceMod.RelatedEvent]
   type RelationshipList = js.Array[typingsSlinky.awsSdk.configserviceMod.Relationship]
@@ -340,6 +340,7 @@ package object configserviceMod {
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonEC2ColonColonVPCEndpointService
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonEC2ColonColonFlowLog
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonEC2ColonColonVPCPeeringConnection
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonElasticsearchColonColonDomain
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonIAMColonColonGroup
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonIAMColonColonPolicy
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonIAMColonColonRole
@@ -347,13 +348,10 @@ package object configserviceMod {
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonElasticLoadBalancingV2ColonColonLoadBalancer
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonACMColonColonCertificate
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonRDSColonColonDBInstance
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonRDSColonColonDBParameterGroup
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonRDSColonColonDBOptionGroup
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonRDSColonColonDBSubnetGroup
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonRDSColonColonDBSecurityGroup
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonRDSColonColonDBSnapshot
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonRDSColonColonDBCluster
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonRDSColonColonDBClusterParameterGroup
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonRDSColonColonDBClusterSnapshot
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonRDSColonColonEventSubscription
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonS3ColonColonBucket
@@ -384,30 +382,32 @@ package object configserviceMod {
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonWAFRegionalColonColonWebACL
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonCloudFrontColonColonDistribution
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonCloudFrontColonColonStreamingDistribution
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonLambdaColonColonAlias
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonLambdaColonColonFunction
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonElasticBeanstalkColonColonApplication
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonElasticBeanstalkColonColonApplicationVersion
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonElasticBeanstalkColonColonEnvironment
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonMobileHubColonColonProject
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonWAFv2ColonColonWebACL
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonWAFv2ColonColonRuleGroup
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonWAFv2ColonColonIPSet
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonWAFv2ColonColonRegexPatternSet
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonWAFv2ColonColonManagedRuleSet
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonXRayColonColonEncryptionConfig
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonSSMColonColonAssociationCompliance
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonSSMColonColonPatchCompliance
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonShieldColonColonProtection
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonShieldRegionalColonColonProtection
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonConfigColonColonResourceCompliance
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonLicenseManagerColonColonLicenseConfiguration
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonApiGatewayColonColonDomainName
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonApiGatewayColonColonMethod
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonApiGatewayColonColonStage
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonApiGatewayColonColonRestApi
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonApiGatewayV2ColonColonDomainName
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonApiGatewayV2ColonColonStage
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonApiGatewayV2ColonColonApi
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonCodePipelineColonColonPipeline
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonServiceCatalogColonColonCloudFormationProvisionedProduct
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonServiceCatalogColonColonCloudFormationProduct
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonServiceCatalogColonColonPortfolio
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonSQSColonColonQueue
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonKMSColonColonKey
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonQLDBColonColonLedger
     - java.lang.String
   */
   type ResourceType = typingsSlinky.awsSdk.configserviceMod._ResourceType | java.lang.String

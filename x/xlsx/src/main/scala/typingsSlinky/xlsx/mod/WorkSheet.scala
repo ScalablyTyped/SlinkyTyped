@@ -4,46 +4,98 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkSheet extends Sheet {
   /** AutoFilter info */
   @JSName("!autofilter")
-  var Exclamationmarkautofilter: js.UndefOr[AutoFilterInfo] = js.undefined
+  var Exclamationmarkautofilter: js.UndefOr[AutoFilterInfo] = js.native
   /** Column Info */
   @JSName("!cols")
-  var Exclamationmarkcols: js.UndefOr[js.Array[ColInfo]] = js.undefined
+  var Exclamationmarkcols: js.UndefOr[js.Array[ColInfo]] = js.native
   /** Merge Ranges */
   @JSName("!merges")
-  var Exclamationmarkmerges: js.UndefOr[js.Array[Range]] = js.undefined
+  var Exclamationmarkmerges: js.UndefOr[js.Array[Range]] = js.native
   /** Worksheet Protection info */
   @JSName("!protect")
-  var Exclamationmarkprotect: js.UndefOr[ProtectInfo] = js.undefined
+  var Exclamationmarkprotect: js.UndefOr[ProtectInfo] = js.native
   /** Row Info */
   @JSName("!rows")
-  var Exclamationmarkrows: js.UndefOr[js.Array[RowInfo]] = js.undefined
+  var Exclamationmarkrows: js.UndefOr[js.Array[RowInfo]] = js.native
 }
 
 object WorkSheet {
   @scala.inline
-  def apply(
-    Exclamationmarkautofilter: AutoFilterInfo = null,
-    Exclamationmarkcols: js.Array[ColInfo] = null,
-    Exclamationmarkmargins: MarginInfo = null,
-    Exclamationmarkmerges: js.Array[Range] = null,
-    Exclamationmarkprotect: ProtectInfo = null,
-    Exclamationmarkref: String = null,
-    Exclamationmarkrows: js.Array[RowInfo] = null,
-    Exclamationmarktype: SheetType = null
-  ): WorkSheet = {
+  def apply(): WorkSheet = {
     val __obj = js.Dynamic.literal()
-    if (Exclamationmarkautofilter != null) __obj.updateDynamic("!autofilter")(Exclamationmarkautofilter.asInstanceOf[js.Any])
-    if (Exclamationmarkcols != null) __obj.updateDynamic("!cols")(Exclamationmarkcols.asInstanceOf[js.Any])
-    if (Exclamationmarkmargins != null) __obj.updateDynamic("!margins")(Exclamationmarkmargins.asInstanceOf[js.Any])
-    if (Exclamationmarkmerges != null) __obj.updateDynamic("!merges")(Exclamationmarkmerges.asInstanceOf[js.Any])
-    if (Exclamationmarkprotect != null) __obj.updateDynamic("!protect")(Exclamationmarkprotect.asInstanceOf[js.Any])
-    if (Exclamationmarkref != null) __obj.updateDynamic("!ref")(Exclamationmarkref.asInstanceOf[js.Any])
-    if (Exclamationmarkrows != null) __obj.updateDynamic("!rows")(Exclamationmarkrows.asInstanceOf[js.Any])
-    if (Exclamationmarktype != null) __obj.updateDynamic("!type")(Exclamationmarktype.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkSheet]
   }
+  @scala.inline
+  implicit class WorkSheetOps[Self <: WorkSheet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExclamationmarkautofilter(value: AutoFilterInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("!autofilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclamationmarkautofilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("!autofilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclamationmarkcols(value: js.Array[ColInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("!cols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclamationmarkcols: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("!cols")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclamationmarkmerges(value: js.Array[Range]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("!merges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclamationmarkmerges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("!merges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclamationmarkprotect(value: ProtectInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("!protect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclamationmarkprotect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("!protect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclamationmarkrows(value: js.Array[RowInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("!rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclamationmarkrows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("!rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

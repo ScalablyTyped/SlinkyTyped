@@ -11,10 +11,29 @@ trait DeleteTaskSetResponse extends js.Object {
 
 object DeleteTaskSetResponse {
   @scala.inline
-  def apply(taskSet: TaskSet = null): DeleteTaskSetResponse = {
+  def apply(): DeleteTaskSetResponse = {
     val __obj = js.Dynamic.literal()
-    if (taskSet != null) __obj.updateDynamic("taskSet")(taskSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteTaskSetResponse]
   }
+  @scala.inline
+  implicit class DeleteTaskSetResponseOps[Self <: DeleteTaskSetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTaskSet(value: TaskSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskSet")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

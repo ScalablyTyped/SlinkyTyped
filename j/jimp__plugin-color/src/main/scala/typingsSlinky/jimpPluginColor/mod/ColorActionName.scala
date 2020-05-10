@@ -18,22 +18,20 @@ trait ColorActionName extends js.Object
 
 object ColorActionName {
   @scala.inline
-  def blue: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.blue = this.cast("blue")
+  def blue: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.blue = "blue".asInstanceOf[typingsSlinky.jimpPluginColor.jimpPluginColorStrings.blue]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def green: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.green = "green".asInstanceOf[typingsSlinky.jimpPluginColor.jimpPluginColorStrings.green]
   @scala.inline
-  def green: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.green = this.cast("green")
+  def hue: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.hue = "hue".asInstanceOf[typingsSlinky.jimpPluginColor.jimpPluginColorStrings.hue]
   @scala.inline
-  def hue: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.hue = this.cast("hue")
+  def mix: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.mix = "mix".asInstanceOf[typingsSlinky.jimpPluginColor.jimpPluginColorStrings.mix]
   @scala.inline
-  def mix: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.mix = this.cast("mix")
+  def red: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.red = "red".asInstanceOf[typingsSlinky.jimpPluginColor.jimpPluginColorStrings.red]
   @scala.inline
-  def red: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.red = this.cast("red")
+  def shade: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.shade = "shade".asInstanceOf[typingsSlinky.jimpPluginColor.jimpPluginColorStrings.shade]
   @scala.inline
-  def shade: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.shade = this.cast("shade")
+  def tint: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.tint = "tint".asInstanceOf[typingsSlinky.jimpPluginColor.jimpPluginColorStrings.tint]
   @scala.inline
-  def tint: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.tint = this.cast("tint")
-  @scala.inline
-  def xor: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.xor = this.cast("xor")
+  def xor: typingsSlinky.jimpPluginColor.jimpPluginColorStrings.xor = "xor".asInstanceOf[typingsSlinky.jimpPluginColor.jimpPluginColorStrings.xor]
 }
 

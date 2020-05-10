@@ -4,29 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait KeyValueChanges[K, V] extends js.Object {
   /**
     * Iterate over all added items.
     */
-  def forEachAddedItem(fn: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit]): Unit
+  def forEachAddedItem(fn: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit]): Unit = js.native
   /**
     * Iterate over all keys for which values have changed.
     */
-  def forEachChangedItem(fn: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit]): Unit
+  def forEachChangedItem(fn: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit]): Unit = js.native
   /**
     * Iterate over all changes. `KeyValueChangeRecord` will contain information about changes
     * to each item.
     */
-  def forEachItem(fn: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit]): Unit
+  def forEachItem(fn: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit]): Unit = js.native
   /**
     * Iterate over changes in the order of original Map showing where the original items
     * have moved.
     */
-  def forEachPreviousItem(fn: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit]): Unit
+  def forEachPreviousItem(fn: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit]): Unit = js.native
   /**
     * Iterate over all removed items.
     */
-  def forEachRemovedItem(fn: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit]): Unit
+  def forEachRemovedItem(fn: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit]): Unit = js.native
 }
 
 object KeyValueChanges {
@@ -39,8 +40,45 @@ object KeyValueChanges {
     forEachRemovedItem: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit] => Unit
   ): KeyValueChanges[K, V] = {
     val __obj = js.Dynamic.literal(forEachAddedItem = js.Any.fromFunction1(forEachAddedItem), forEachChangedItem = js.Any.fromFunction1(forEachChangedItem), forEachItem = js.Any.fromFunction1(forEachItem), forEachPreviousItem = js.Any.fromFunction1(forEachPreviousItem), forEachRemovedItem = js.Any.fromFunction1(forEachRemovedItem))
-  
     __obj.asInstanceOf[KeyValueChanges[K, V]]
   }
+  @scala.inline
+  implicit class KeyValueChangesOps[Self[k, v] <: KeyValueChanges[k, v], K, V] (val x: Self[K, V]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[K, V] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, V]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[K, V]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, V]) with Other]
+    @scala.inline
+    def withForEachAddedItem(value: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit] => Unit): Self[K, V] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forEachAddedItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withForEachChangedItem(value: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit] => Unit): Self[K, V] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forEachChangedItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withForEachItem(value: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit] => Unit): Self[K, V] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forEachItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withForEachPreviousItem(value: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit] => Unit): Self[K, V] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forEachPreviousItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withForEachRemovedItem(value: js.Function1[/* r */ KeyValueChangeRecord[K, V], Unit] => Unit): Self[K, V] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forEachRemovedItem")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

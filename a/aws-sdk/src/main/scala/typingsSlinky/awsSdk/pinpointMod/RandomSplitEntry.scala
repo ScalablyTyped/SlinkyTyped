@@ -18,11 +18,41 @@ trait RandomSplitEntry extends js.Object {
 
 object RandomSplitEntry {
   @scala.inline
-  def apply(NextActivity: string = null, Percentage: Int | Double = null): RandomSplitEntry = {
+  def apply(): RandomSplitEntry = {
     val __obj = js.Dynamic.literal()
-    if (NextActivity != null) __obj.updateDynamic("NextActivity")(NextActivity.asInstanceOf[js.Any])
-    if (Percentage != null) __obj.updateDynamic("Percentage")(Percentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[RandomSplitEntry]
   }
+  @scala.inline
+  implicit class RandomSplitEntryOps[Self <: RandomSplitEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextActivity(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextActivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPercentage(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Percentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Percentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

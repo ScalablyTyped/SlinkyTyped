@@ -1,7 +1,7 @@
 package typingsSlinky.xstyledSystem.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.ReactNode
+import slinky.core.TagMod
 import typingsSlinky.xstyledSystem.TypeofReact
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,9 +16,9 @@ object createSystemComponent extends js.Object {
   ReactComponentClass[T] = js.native
   def apply[T](react: TypeofReact, defaultComponent: String, system: StyleFunc): // tslint:disable-next-line no-unnecessary-generics
   ReactComponentClass[T] = js.native
-  def apply[T](react: TypeofReact, defaultComponent: ReactNode): // tslint:disable-next-line no-unnecessary-generics
+  def apply[T](react: TypeofReact, defaultComponent: TagMod[Any]): // tslint:disable-next-line no-unnecessary-generics
   ReactComponentClass[T] = js.native
-  def apply[T](react: TypeofReact, defaultComponent: ReactNode, system: StyleFunc): // tslint:disable-next-line no-unnecessary-generics
+  def apply[T](react: TypeofReact, defaultComponent: TagMod[Any], system: StyleFunc): // tslint:disable-next-line no-unnecessary-generics
   ReactComponentClass[T] = js.native
 }
 

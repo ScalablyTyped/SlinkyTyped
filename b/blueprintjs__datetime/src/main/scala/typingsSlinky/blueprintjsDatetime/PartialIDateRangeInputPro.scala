@@ -14,112 +14,430 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@blueprintjs/datetime.@blueprintjs/datetime/lib/esm/dateRangeInput.IDateRangeInputProps> */
+@js.native
 trait PartialIDateRangeInputPro extends js.Object {
-  var allowSingleDayRange: js.UndefOr[Boolean] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var closeOnSelection: js.UndefOr[Boolean] = js.undefined
-  var contiguousCalendarMonths: js.UndefOr[Boolean] = js.undefined
-  var dayPickerProps: js.UndefOr[DayPickerProps] = js.undefined
-  var defaultValue: js.UndefOr[DateRange] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var endInputProps: js.UndefOr[HTMLInputProps with IInputGroupProps] = js.undefined
-  var formatDate: js.UndefOr[js.Function2[/* date */ js.Date, /* locale */ js.UndefOr[String], String]] = js.undefined
-  var initialMonth: js.UndefOr[js.Date] = js.undefined
-  var invalidDateMessage: js.UndefOr[String] = js.undefined
-  var locale: js.UndefOr[String] = js.undefined
+  var allowSingleDayRange: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.native
+  var closeOnSelection: js.UndefOr[Boolean] = js.native
+  var contiguousCalendarMonths: js.UndefOr[Boolean] = js.native
+  var dayPickerProps: js.UndefOr[DayPickerProps] = js.native
+  var defaultValue: js.UndefOr[DateRange] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var endInputProps: js.UndefOr[HTMLInputProps with IInputGroupProps] = js.native
+  var formatDate: js.UndefOr[js.Function2[/* date */ js.Date, /* locale */ js.UndefOr[String], String]] = js.native
+  var initialMonth: js.UndefOr[js.Date] = js.native
+  var invalidDateMessage: js.UndefOr[String] = js.native
+  var locale: js.UndefOr[String] = js.native
   var localeUtils: js.UndefOr[
     /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any
-  ] = js.undefined
-  var maxDate: js.UndefOr[js.Date] = js.undefined
-  var minDate: js.UndefOr[js.Date] = js.undefined
-  var modifiers: js.UndefOr[IDatePickerModifiers] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* selectedRange */ DateRange, Unit]] = js.undefined
-  var onError: js.UndefOr[js.Function1[/* errorRange */ DateRange, Unit]] = js.undefined
-  var outOfRangeMessage: js.UndefOr[String] = js.undefined
-  var overlappingDatesMessage: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var maxDate: js.UndefOr[js.Date] = js.native
+  var minDate: js.UndefOr[js.Date] = js.native
+  var modifiers: js.UndefOr[IDatePickerModifiers] = js.native
+  var onChange: js.UndefOr[js.Function1[/* selectedRange */ DateRange, Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* errorRange */ DateRange, Unit]] = js.native
+  var outOfRangeMessage: js.UndefOr[String] = js.native
+  var overlappingDatesMessage: js.UndefOr[String] = js.native
   var parseDate: js.UndefOr[
     js.Function2[/* str */ String, /* locale */ js.UndefOr[String], js.Date | `false` | Null]
-  ] = js.undefined
-  var placeholder: js.UndefOr[String] = js.undefined
-  var popoverProps: js.UndefOr[PartialIPopoverProps] = js.undefined
-  var reverseMonthAndYearMenus: js.UndefOr[Boolean] = js.undefined
-  var selectAllOnFocus: js.UndefOr[Boolean] = js.undefined
-  var shortcuts: js.UndefOr[Boolean | js.Array[IDateRangeShortcut]] = js.undefined
-  var singleMonthOnly: js.UndefOr[Boolean] = js.undefined
-  var startInputProps: js.UndefOr[HTMLInputProps with IInputGroupProps] = js.undefined
-  var timePickerProps: js.UndefOr[ITimePickerProps] = js.undefined
-  var timePrecision: js.UndefOr[TimePrecision] = js.undefined
-  var value: js.UndefOr[DateRange] = js.undefined
+  ] = js.native
+  var placeholder: js.UndefOr[String] = js.native
+  var popoverProps: js.UndefOr[PartialIPopoverProps] = js.native
+  var reverseMonthAndYearMenus: js.UndefOr[Boolean] = js.native
+  var selectAllOnFocus: js.UndefOr[Boolean] = js.native
+  var shortcuts: js.UndefOr[Boolean | js.Array[IDateRangeShortcut]] = js.native
+  var singleMonthOnly: js.UndefOr[Boolean] = js.native
+  var startInputProps: js.UndefOr[HTMLInputProps with IInputGroupProps] = js.native
+  var timePickerProps: js.UndefOr[ITimePickerProps] = js.native
+  var timePrecision: js.UndefOr[TimePrecision] = js.native
+  var value: js.UndefOr[DateRange] = js.native
 }
 
 object PartialIDateRangeInputPro {
   @scala.inline
-  def apply(
-    allowSingleDayRange: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    closeOnSelection: js.UndefOr[Boolean] = js.undefined,
-    contiguousCalendarMonths: js.UndefOr[Boolean] = js.undefined,
-    dayPickerProps: DayPickerProps = null,
-    defaultValue: DateRange = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    endInputProps: HTMLInputProps with IInputGroupProps = null,
-    formatDate: (/* date */ js.Date, /* locale */ js.UndefOr[String]) => String = null,
-    initialMonth: js.Date = null,
-    invalidDateMessage: String = null,
-    locale: String = null,
-    localeUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    modifiers: IDatePickerModifiers = null,
-    onChange: /* selectedRange */ DateRange => Unit = null,
-    onError: /* errorRange */ DateRange => Unit = null,
-    outOfRangeMessage: String = null,
-    overlappingDatesMessage: String = null,
-    parseDate: (/* str */ String, /* locale */ js.UndefOr[String]) => js.Date | `false` | Null = null,
-    placeholder: String = null,
-    popoverProps: PartialIPopoverProps = null,
-    reverseMonthAndYearMenus: js.UndefOr[Boolean] = js.undefined,
-    selectAllOnFocus: js.UndefOr[Boolean] = js.undefined,
-    shortcuts: Boolean | js.Array[IDateRangeShortcut] = null,
-    singleMonthOnly: js.UndefOr[Boolean] = js.undefined,
-    startInputProps: HTMLInputProps with IInputGroupProps = null,
-    timePickerProps: ITimePickerProps = null,
-    timePrecision: TimePrecision = null,
-    value: DateRange = null
-  ): PartialIDateRangeInputPro = {
+  def apply(): PartialIDateRangeInputPro = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowSingleDayRange)) __obj.updateDynamic("allowSingleDayRange")(allowSingleDayRange.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnSelection)) __obj.updateDynamic("closeOnSelection")(closeOnSelection.asInstanceOf[js.Any])
-    if (!js.isUndefined(contiguousCalendarMonths)) __obj.updateDynamic("contiguousCalendarMonths")(contiguousCalendarMonths.asInstanceOf[js.Any])
-    if (dayPickerProps != null) __obj.updateDynamic("dayPickerProps")(dayPickerProps.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (endInputProps != null) __obj.updateDynamic("endInputProps")(endInputProps.asInstanceOf[js.Any])
-    if (formatDate != null) __obj.updateDynamic("formatDate")(js.Any.fromFunction2(formatDate))
-    if (initialMonth != null) __obj.updateDynamic("initialMonth")(initialMonth.asInstanceOf[js.Any])
-    if (invalidDateMessage != null) __obj.updateDynamic("invalidDateMessage")(invalidDateMessage.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (localeUtils != null) __obj.updateDynamic("localeUtils")(localeUtils.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (outOfRangeMessage != null) __obj.updateDynamic("outOfRangeMessage")(outOfRangeMessage.asInstanceOf[js.Any])
-    if (overlappingDatesMessage != null) __obj.updateDynamic("overlappingDatesMessage")(overlappingDatesMessage.asInstanceOf[js.Any])
-    if (parseDate != null) __obj.updateDynamic("parseDate")(js.Any.fromFunction2(parseDate))
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (popoverProps != null) __obj.updateDynamic("popoverProps")(popoverProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverseMonthAndYearMenus)) __obj.updateDynamic("reverseMonthAndYearMenus")(reverseMonthAndYearMenus.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectAllOnFocus)) __obj.updateDynamic("selectAllOnFocus")(selectAllOnFocus.asInstanceOf[js.Any])
-    if (shortcuts != null) __obj.updateDynamic("shortcuts")(shortcuts.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleMonthOnly)) __obj.updateDynamic("singleMonthOnly")(singleMonthOnly.asInstanceOf[js.Any])
-    if (startInputProps != null) __obj.updateDynamic("startInputProps")(startInputProps.asInstanceOf[js.Any])
-    if (timePickerProps != null) __obj.updateDynamic("timePickerProps")(timePickerProps.asInstanceOf[js.Any])
-    if (timePrecision != null) __obj.updateDynamic("timePrecision")(timePrecision.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialIDateRangeInputPro]
   }
+  @scala.inline
+  implicit class PartialIDateRangeInputProOps[Self <: PartialIDateRangeInputPro] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowSingleDayRange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSingleDayRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowSingleDayRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSingleDayRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseOnSelection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseOnSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContiguousCalendarMonths(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contiguousCalendarMonths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContiguousCalendarMonths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contiguousCalendarMonths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDayPickerProps(value: DayPickerProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPickerProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayPickerProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayPickerProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: DateRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndInputProps(value: HTMLInputProps with IInputGroupProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endInputProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndInputProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endInputProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatDate(value: (/* date */ js.Date, /* locale */ js.UndefOr[String]) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatDate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFormatDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialMonth(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvalidDateMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidDateMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvalidDateMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidDateMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocaleUtils(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localeUtils")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocaleUtils: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localeUtils")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModifiers(value: IDatePickerModifiers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModifiers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* selectedRange */ DateRange => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnError(value: /* errorRange */ DateRange => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutOfRangeMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outOfRangeMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutOfRangeMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outOfRangeMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlappingDatesMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlappingDatesMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlappingDatesMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlappingDatesMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParseDate(value: (/* str */ String, /* locale */ js.UndefOr[String]) => js.Date | `false` | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseDate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutParseDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopoverProps(value: PartialIPopoverProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopoverProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverseMonthAndYearMenus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseMonthAndYearMenus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverseMonthAndYearMenus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseMonthAndYearMenus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectAllOnFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllOnFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectAllOnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllOnFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortcuts(value: Boolean | js.Array[IDateRangeShortcut]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcuts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortcuts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortcuts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleMonthOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleMonthOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleMonthOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleMonthOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartInputProps(value: HTMLInputProps with IInputGroupProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startInputProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartInputProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startInputProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimePickerProps(value: ITimePickerProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePickerProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimePickerProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePickerProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimePrecision(value: TimePrecision): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePrecision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimePrecision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePrecision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: DateRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

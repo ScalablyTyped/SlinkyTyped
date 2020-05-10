@@ -1,13 +1,13 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
-import typingsSlinky.react.mod.FunctionComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "Icon")
 @js.native
-object Icon extends TopLevel[FunctionComponent[IIconProps]]
+object Icon extends TopLevel[ReactComponentClass[IIconProps]]
 

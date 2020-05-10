@@ -1,12 +1,12 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLButtonElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.baseuiStrings.button
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -25,54 +25,63 @@ import typingsSlinky.baseui.buttonMod.ButtonOverrides
 import typingsSlinky.baseui.buttonMod.ButtonProps
 import typingsSlinky.styletronReact.mod.StyleProp
 import typingsSlinky.styletronReact.mod.StyletronBase
+import typingsSlinky.styletronStandard.mod.StyleObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Button
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.buttonMod.Button] {
+object Button {
   @JSImport("baseui/button", "Button")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    $as: StyletronBase = null,
-    $style: StyleProp[ButtonProps] = null,
-    endEnhancer: TagMod[Any] = null,
-    href: String = null,
-    isLoading: js.UndefOr[Boolean] = js.undefined,
-    isSelected: js.UndefOr[Boolean] = js.undefined,
-    kind: primary | secondary | tertiary | minimal = null,
-    onClick: /* event */ SyntheticMouseEvent[HTMLButtonElement] => _ = null,
-    overrides: ButtonOverrides = null,
-    shape: default_ | pill | round | square = null,
-    size: compact | default_ | large_ | mini = null,
-    startEnhancer: TagMod[Any] = null,
-    target: String = null,
-    `type`: submit | reset | button = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.buttonMod.Button] = {
-    val __obj = js.Dynamic.literal()
-    if ($as != null) __obj.updateDynamic("$as")($as.asInstanceOf[js.Any])
-    if ($style != null) __obj.updateDynamic("$style")($style.asInstanceOf[js.Any])
-    if (endEnhancer != null) __obj.updateDynamic("endEnhancer")(endEnhancer.asInstanceOf[js.Any])
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLoading)) __obj.updateDynamic("isLoading")(isLoading.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (startEnhancer != null) __obj.updateDynamic("startEnhancer")(startEnhancer.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.buttonMod.Button] {
+    @scala.inline
+    def $asFunctionComponent(value: ReactComponentClass[js.Any]): this.type = set("$as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def $asComponentClass(value: ReactComponentClass[js.Any]): this.type = set("$as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def $as(value: StyletronBase): this.type = set("$as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def $styleFunction1(value: ButtonProps => StyleObject): this.type = set("$style", js.Any.fromFunction1(value))
+    @scala.inline
+    def $style(value: StyleProp[ButtonProps]): this.type = set("$style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endEnhancer(value: TagMod[Any]): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isLoading(value: Boolean): this.type = set("isLoading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isSelected(value: Boolean): this.type = set("isSelected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def kind(value: primary | secondary | tertiary | minimal): this.type = set("kind", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* event */ SyntheticMouseEvent[HTMLButtonElement] => _): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: ButtonOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shape(value: default_ | pill | round | square): this.type = set("shape", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: compact | default_ | large_ | mini): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startEnhancerReactElement(value: ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startEnhancer(value: TagMod[Any]): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: submit | reset | button): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.buttonMod.Button] = new slinky.core.BuildingComponent[slinky.web.html.button.tag.type, typingsSlinky.baseui.buttonMod.Button](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ButtonProps
+  
+  def withProps(p: ButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Button.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

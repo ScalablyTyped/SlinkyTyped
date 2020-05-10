@@ -14,10 +14,29 @@ trait StartTimecode extends js.Object {
 
 object StartTimecode {
   @scala.inline
-  def apply(Timecode: string = null): StartTimecode = {
+  def apply(): StartTimecode = {
     val __obj = js.Dynamic.literal()
-    if (Timecode != null) __obj.updateDynamic("Timecode")(Timecode.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartTimecode]
   }
+  @scala.inline
+  implicit class StartTimecodeOps[Self <: StartTimecode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimecode(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timecode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimecode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timecode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

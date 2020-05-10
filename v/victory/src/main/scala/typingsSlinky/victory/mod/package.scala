@@ -51,7 +51,7 @@ package object mod {
   /**
     * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
     */
-  type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
+  type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   type PaddingProps = scala.Double | typingsSlinky.victory.mod.BlockProps
   type SliceNumberOrCallback[T, P] = scala.Double | (js.Function1[/* props */ typingsSlinky.victory.mod.Omit[T, P], scala.Double])
   type StringOrNumberOrCallback = java.lang.String | scala.Double | typingsSlinky.victory.mod.VictoryStringOrNumberCallback

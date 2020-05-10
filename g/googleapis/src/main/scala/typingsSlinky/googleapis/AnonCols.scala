@@ -12,11 +12,41 @@ trait AnonCols extends js.Object {
 
 object AnonCols {
   @scala.inline
-  def apply(cols: js.Array[AnonId] = null, rows: js.Array[AnonC] = null): AnonCols = {
+  def apply(): AnonCols = {
     val __obj = js.Dynamic.literal()
-    if (cols != null) __obj.updateDynamic("cols")(cols.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCols]
   }
+  @scala.inline
+  implicit class AnonColsOps[Self <: AnonCols] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCols(value: js.Array[AnonId]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCols: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[AnonC]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -8,17 +8,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFieldOrder extends Compare {
-  var field: js.Array[String | ExprRef | SignalRef]
-  var order: js.UndefOr[js.Array[SortOrder]] = js.undefined
+  var field: js.Array[String | ExprRef | SignalRef] = js.native
+  var order: js.UndefOr[js.Array[SortOrder]] = js.native
 }
 
 object AnonFieldOrder {
   @scala.inline
-  def apply(field: js.Array[String | ExprRef | SignalRef], order: js.Array[SortOrder] = null): AnonFieldOrder = {
+  def apply(field: js.Array[String | ExprRef | SignalRef]): AnonFieldOrder = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFieldOrder]
   }
+  @scala.inline
+  implicit class AnonFieldOrderOps[Self <: AnonFieldOrder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withField(value: js.Array[String | ExprRef | SignalRef]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrder(value: js.Array[SortOrder]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

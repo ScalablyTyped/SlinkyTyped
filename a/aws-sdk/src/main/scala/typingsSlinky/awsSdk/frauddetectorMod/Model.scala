@@ -42,26 +42,113 @@ trait Model extends js.Object {
 
 object Model {
   @scala.inline
-  def apply(
-    createdTime: time = null,
-    description: description = null,
-    labelSchema: LabelSchema = null,
-    lastUpdatedTime: time = null,
-    modelId: identifier = null,
-    modelType: ModelTypeEnum = null,
-    modelVariables: ModelVariablesList = null,
-    trainingDataSource: TrainingDataSource = null
-  ): Model = {
+  def apply(): Model = {
     val __obj = js.Dynamic.literal()
-    if (createdTime != null) __obj.updateDynamic("createdTime")(createdTime.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (labelSchema != null) __obj.updateDynamic("labelSchema")(labelSchema.asInstanceOf[js.Any])
-    if (lastUpdatedTime != null) __obj.updateDynamic("lastUpdatedTime")(lastUpdatedTime.asInstanceOf[js.Any])
-    if (modelId != null) __obj.updateDynamic("modelId")(modelId.asInstanceOf[js.Any])
-    if (modelType != null) __obj.updateDynamic("modelType")(modelType.asInstanceOf[js.Any])
-    if (modelVariables != null) __obj.updateDynamic("modelVariables")(modelVariables.asInstanceOf[js.Any])
-    if (trainingDataSource != null) __obj.updateDynamic("trainingDataSource")(trainingDataSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
+  @scala.inline
+  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatedTime(value: time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelSchema(value: LabelSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSchema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelSchema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedTime(value: time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelId(value: identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelType(value: ModelTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelVariables(value: ModelVariablesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelVariables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingDataSource(value: TrainingDataSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingDataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingDataSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

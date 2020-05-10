@@ -118,7 +118,7 @@ trait IDBDatabase extends EventTarget {
   def removeEventListener_abort(
     `type`: abort,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
@@ -135,7 +135,7 @@ trait IDBDatabase extends EventTarget {
   def removeEventListener_close(
     `type`: typingsSlinky.std.stdStrings.close,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -149,7 +149,7 @@ trait IDBDatabase extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_versionchange(
@@ -166,7 +166,7 @@ trait IDBDatabase extends EventTarget {
   def removeEventListener_versionchange(
     `type`: versionchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.IDBVersionChangeEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   /**
     * Returns a new transaction with the given mode ("readonly" or "readwrite") and scope which can be a single object store name or an array of names.
@@ -179,5 +179,6 @@ trait IDBDatabase extends EventTarget {
 
 @JSGlobal("IDBDatabase")
 @js.native
-object IDBDatabase extends Instantiable0[IDBDatabase]
+object IDBDatabase
+  extends Instantiable0[org.scalajs.dom.raw.IDBDatabase]
 

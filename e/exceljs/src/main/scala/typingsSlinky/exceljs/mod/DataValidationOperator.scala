@@ -18,22 +18,20 @@ trait DataValidationOperator extends js.Object
 
 object DataValidationOperator {
   @scala.inline
-  def between: typingsSlinky.exceljs.exceljsStrings.between = this.cast("between")
+  def between: typingsSlinky.exceljs.exceljsStrings.between = "between".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.between]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def equal: typingsSlinky.exceljs.exceljsStrings.equal = "equal".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.equal]
   @scala.inline
-  def equal: typingsSlinky.exceljs.exceljsStrings.equal = this.cast("equal")
+  def greaterThan: typingsSlinky.exceljs.exceljsStrings.greaterThan = "greaterThan".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.greaterThan]
   @scala.inline
-  def greaterThan: typingsSlinky.exceljs.exceljsStrings.greaterThan = this.cast("greaterThan")
+  def greaterThanOrEqual: typingsSlinky.exceljs.exceljsStrings.greaterThanOrEqual = "greaterThanOrEqual".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.greaterThanOrEqual]
   @scala.inline
-  def greaterThanOrEqual: typingsSlinky.exceljs.exceljsStrings.greaterThanOrEqual = this.cast("greaterThanOrEqual")
+  def lessThan: typingsSlinky.exceljs.exceljsStrings.lessThan = "lessThan".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.lessThan]
   @scala.inline
-  def lessThan: typingsSlinky.exceljs.exceljsStrings.lessThan = this.cast("lessThan")
+  def lessThanOrEqual: typingsSlinky.exceljs.exceljsStrings.lessThanOrEqual = "lessThanOrEqual".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.lessThanOrEqual]
   @scala.inline
-  def lessThanOrEqual: typingsSlinky.exceljs.exceljsStrings.lessThanOrEqual = this.cast("lessThanOrEqual")
+  def notBetween: typingsSlinky.exceljs.exceljsStrings.notBetween = "notBetween".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.notBetween]
   @scala.inline
-  def notBetween: typingsSlinky.exceljs.exceljsStrings.notBetween = this.cast("notBetween")
-  @scala.inline
-  def notEqual: typingsSlinky.exceljs.exceljsStrings.notEqual = this.cast("notEqual")
+  def notEqual: typingsSlinky.exceljs.exceljsStrings.notEqual = "notEqual".asInstanceOf[typingsSlinky.exceljs.exceljsStrings.notEqual]
 }
 

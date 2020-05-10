@@ -7,7 +7,6 @@ import typingsSlinky.sqlite.sqliteStrings.error
 import typingsSlinky.sqlite.sqliteStrings.open
 import typingsSlinky.sqlite.sqliteStrings.profile
 import typingsSlinky.sqlite.sqliteStrings.trace
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,10 +33,10 @@ object mod extends js.Object {
     @JSName("configure")
     def configure_busyTimeout(option: busyTimeout, value: Double): Unit = js.native
     def each(sql: String): js.Promise[Double] = js.native
-    def each(sql: String, callback: js.Function2[/* err */ Error, /* row */ js.Any, Unit]): js.Promise[Double] = js.native
+    def each(sql: String, callback: js.Function2[/* err */ js.Error, /* row */ js.Any, Unit]): js.Promise[Double] = js.native
     def each(sql: String, params: js.Any*): js.Promise[Double] = js.native
     def each(sql: SQLStatement): js.Promise[Double] = js.native
-    def each(sql: SQLStatement, callback: js.Function2[/* err */ Error, /* row */ js.Any, Unit]): js.Promise[Double] = js.native
+    def each(sql: SQLStatement, callback: js.Function2[/* err */ js.Error, /* row */ js.Any, Unit]): js.Promise[Double] = js.native
     def each(sql: SQLStatement, params: js.Any*): js.Promise[Double] = js.native
     def exec(sql: String): js.Promise[Database] = js.native
     def get(sql: String): js.Promise[_] = js.native
@@ -88,7 +87,7 @@ object mod extends js.Object {
     def bind(): js.Promise[Statement] = js.native
     def bind(params: js.Any*): js.Promise[Statement] = js.native
     def each(): js.Promise[Double] = js.native
-    def each(callback: js.Function2[/* err */ Error, /* row */ js.Any, Unit]): js.Promise[Double] = js.native
+    def each(callback: js.Function2[/* err */ js.Error, /* row */ js.Any, Unit]): js.Promise[Double] = js.native
     def each(params: js.Any*): js.Promise[Double] = js.native
     def get(): js.Promise[_] = js.native
     def get(params: js.Any*): js.Promise[_] = js.native

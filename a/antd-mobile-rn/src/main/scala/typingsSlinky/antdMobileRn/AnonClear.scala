@@ -6,22 +6,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonClear extends js.Object {
-  var clear: Boolean
-  var editable: Boolean
-  var error: Boolean
-  var extra: String
-  var labelNumber: Double
-  var labelPosition: String
-  var last: Boolean
-  var styles: StringDictionary[RegisteredStyle[_]]
-  var textAlign: String
-  var `type`: String
-  def onBlur(): Unit
-  def onChange(): Unit
-  def onErrorClick(): Unit
-  def onExtraClick(): Unit
-  def onFocus(): Unit
+  var clear: Boolean = js.native
+  var editable: Boolean = js.native
+  var error: Boolean = js.native
+  var extra: String = js.native
+  var labelNumber: Double = js.native
+  var labelPosition: String = js.native
+  var last: Boolean = js.native
+  var styles: StringDictionary[RegisteredStyle[_]] = js.native
+  var textAlign: String = js.native
+  var `type`: String = js.native
+  def onBlur(): Unit = js.native
+  def onChange(): Unit = js.native
+  def onErrorClick(): Unit = js.native
+  def onExtraClick(): Unit = js.native
+  def onFocus(): Unit = js.native
 }
 
 object AnonClear {
@@ -47,5 +48,103 @@ object AnonClear {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonClear]
   }
+  @scala.inline
+  implicit class AnonClearOps[Self <: AnonClear] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClear(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEditable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtra(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabelNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabelPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLast(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnBlur(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnErrorClick(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onErrorClick")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnExtraClick(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExtraClick")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnFocus(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStyles(value: StringDictionary[RegisteredStyle[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextAlign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -50,11 +50,12 @@ trait SVGFESpecularLightingElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFESpecularLightingElement")
 @js.native
-object SVGFESpecularLightingElement extends Instantiable0[SVGFESpecularLightingElement]
+object SVGFESpecularLightingElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFESpecularLightingElement]
 

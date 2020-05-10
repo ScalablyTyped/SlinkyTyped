@@ -17,10 +17,29 @@ trait SchemaHangoutsChatOptions extends js.Object {
 
 object SchemaHangoutsChatOptions {
   @scala.inline
-  def apply(includeRooms: js.UndefOr[Boolean] = js.undefined): SchemaHangoutsChatOptions = {
+  def apply(): SchemaHangoutsChatOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(includeRooms)) __obj.updateDynamic("includeRooms")(includeRooms.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHangoutsChatOptions]
   }
+  @scala.inline
+  implicit class SchemaHangoutsChatOptionsOps[Self <: SchemaHangoutsChatOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIncludeRooms(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeRooms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeRooms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeRooms")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

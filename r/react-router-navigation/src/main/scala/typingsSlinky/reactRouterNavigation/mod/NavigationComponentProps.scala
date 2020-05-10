@@ -1,58 +1,40 @@
 package typingsSlinky.reactRouterNavigation.mod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.TextStyle
-import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NavigationComponentProps extends NavigationProps {
-  var children: js.UndefOr[js.Array[ReactElement]] = js.undefined
+  var children: js.UndefOr[js.Array[ReactElement]] = js.native
 }
 
 object NavigationComponentProps {
   @scala.inline
-  def apply(
-    backButtonTintColor: String = null,
-    backButtonTitle: String = null,
-    cardStyle: StyleProp[ViewStyle] = null,
-    children: js.Array[ReactElement] = null,
-    configureTransition: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NavigationTransitionProps */ /* transitionProps */ js.Any, /* prevTransitionProps */ js.UndefOr[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NavigationTransitionProps */ js.Any
-    ]) => /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NavigationTransitionSpec */ _ = null,
-    hideBackButton: js.UndefOr[Boolean] = js.undefined,
-    hideNavBar: js.UndefOr[Boolean] = js.undefined,
-    navBarStyle: StyleProp[ViewStyle] = null,
-    onTransitionEnd: /* repeated */ js.Any => Unit = null,
-    onTransitionStart: /* repeated */ js.Any => Unit = null,
-    renderLeftButton: /* props */ CardSubViewProps => TagMod[Any] = null,
-    renderNavBar: /* props */ CardSubViewProps => TagMod[Any] = null,
-    renderRightButton: /* props */ CardSubViewProps => TagMod[Any] = null,
-    renderTitle: /* props */ CardSubViewProps => TagMod[Any] = null,
-    title: String = null,
-    titleStyle: StyleProp[TextStyle] = null
-  ): NavigationComponentProps = {
+  def apply(): NavigationComponentProps = {
     val __obj = js.Dynamic.literal()
-    if (backButtonTintColor != null) __obj.updateDynamic("backButtonTintColor")(backButtonTintColor.asInstanceOf[js.Any])
-    if (backButtonTitle != null) __obj.updateDynamic("backButtonTitle")(backButtonTitle.asInstanceOf[js.Any])
-    if (cardStyle != null) __obj.updateDynamic("cardStyle")(cardStyle.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (configureTransition != null) __obj.updateDynamic("configureTransition")(js.Any.fromFunction2(configureTransition))
-    if (!js.isUndefined(hideBackButton)) __obj.updateDynamic("hideBackButton")(hideBackButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideNavBar)) __obj.updateDynamic("hideNavBar")(hideNavBar.asInstanceOf[js.Any])
-    if (navBarStyle != null) __obj.updateDynamic("navBarStyle")(navBarStyle.asInstanceOf[js.Any])
-    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction1(onTransitionEnd))
-    if (onTransitionStart != null) __obj.updateDynamic("onTransitionStart")(js.Any.fromFunction1(onTransitionStart))
-    if (renderLeftButton != null) __obj.updateDynamic("renderLeftButton")(js.Any.fromFunction1(renderLeftButton))
-    if (renderNavBar != null) __obj.updateDynamic("renderNavBar")(js.Any.fromFunction1(renderNavBar))
-    if (renderRightButton != null) __obj.updateDynamic("renderRightButton")(js.Any.fromFunction1(renderRightButton))
-    if (renderTitle != null) __obj.updateDynamic("renderTitle")(js.Any.fromFunction1(renderTitle))
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleStyle != null) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationComponentProps]
   }
+  @scala.inline
+  implicit class NavigationComponentPropsOps[Self <: NavigationComponentProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: js.Array[ReactElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

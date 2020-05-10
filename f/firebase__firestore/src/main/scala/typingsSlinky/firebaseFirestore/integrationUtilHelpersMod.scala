@@ -1,7 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.`test-db2`
 import typingsSlinky.firebaseFirestoreTypes.mod.CollectionReference
 import typingsSlinky.firebaseFirestoreTypes.mod.DocumentData
 import typingsSlinky.firebaseFirestoreTypes.mod.DocumentReference
@@ -27,13 +26,12 @@ object integrationUtilHelpersMod extends js.Object {
     def skip(message: String, testSuite: js.Function1[/* persistence */ Boolean, Unit]): Unit = js.native
   }
   
-  val ALT_PROJECT_ID: `test-db2` = js.native
+  val ALT_PROJECT_ID: /* "test-db2" */ String = js.native
   val DEFAULT_PROJECT_ID: js.Any = js.native
   val DEFAULT_SETTINGS: Settings = js.native
   val USE_EMULATOR: Boolean = js.native
   val apiDescribe: ApiDescribe_ = js.native
   def isPersistenceAvailable(): Boolean = js.native
-  def isRunningAgainstEmulator(): Boolean = js.native
   def toChangesArray(docSet: QuerySnapshot[DocumentData]): js.Array[DocumentData] = js.native
   def toChangesArray(docSet: QuerySnapshot[DocumentData], options: SnapshotListenOptions): js.Array[DocumentData] = js.native
   def toDataArray(docSet: QuerySnapshot[DocumentData]): js.Array[DocumentData] = js.native

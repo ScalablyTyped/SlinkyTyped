@@ -30,20 +30,77 @@ trait RevisionLocation extends js.Object {
 
 object RevisionLocation {
   @scala.inline
-  def apply(
-    appSpecContent: AppSpecContent = null,
-    gitHubLocation: GitHubLocation = null,
-    revisionType: RevisionLocationType = null,
-    s3Location: S3Location = null,
-    string: RawString = null
-  ): RevisionLocation = {
+  def apply(): RevisionLocation = {
     val __obj = js.Dynamic.literal()
-    if (appSpecContent != null) __obj.updateDynamic("appSpecContent")(appSpecContent.asInstanceOf[js.Any])
-    if (gitHubLocation != null) __obj.updateDynamic("gitHubLocation")(gitHubLocation.asInstanceOf[js.Any])
-    if (revisionType != null) __obj.updateDynamic("revisionType")(revisionType.asInstanceOf[js.Any])
-    if (s3Location != null) __obj.updateDynamic("s3Location")(s3Location.asInstanceOf[js.Any])
-    if (string != null) __obj.updateDynamic("string")(string.asInstanceOf[js.Any])
     __obj.asInstanceOf[RevisionLocation]
   }
+  @scala.inline
+  implicit class RevisionLocationOps[Self <: RevisionLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppSpecContent(value: AppSpecContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appSpecContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppSpecContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appSpecContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGitHubLocation(value: GitHubLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitHubLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGitHubLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitHubLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionType(value: RevisionLocationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Location(value: S3Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Location: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3Location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withString(value: RawString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

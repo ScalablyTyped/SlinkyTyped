@@ -13,15 +13,40 @@ trait DeleteLocalGatewayRouteTableVpcAssociationRequest extends js.Object {
   /**
     * The ID of the association.
     */
-  var LocalGatewayRouteTableVpcAssociationId: String = js.native
+  var LocalGatewayRouteTableVpcAssociationId: typingsSlinky.awsSdk.ec2Mod.LocalGatewayRouteTableVpcAssociationId = js.native
 }
 
 object DeleteLocalGatewayRouteTableVpcAssociationRequest {
   @scala.inline
-  def apply(LocalGatewayRouteTableVpcAssociationId: String, DryRun: js.UndefOr[scala.Boolean] = js.undefined): DeleteLocalGatewayRouteTableVpcAssociationRequest = {
+  def apply(LocalGatewayRouteTableVpcAssociationId: LocalGatewayRouteTableVpcAssociationId): DeleteLocalGatewayRouteTableVpcAssociationRequest = {
     val __obj = js.Dynamic.literal(LocalGatewayRouteTableVpcAssociationId = LocalGatewayRouteTableVpcAssociationId.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteLocalGatewayRouteTableVpcAssociationRequest]
   }
+  @scala.inline
+  implicit class DeleteLocalGatewayRouteTableVpcAssociationRequestOps[Self <: DeleteLocalGatewayRouteTableVpcAssociationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocalGatewayRouteTableVpcAssociationId(value: LocalGatewayRouteTableVpcAssociationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalGatewayRouteTableVpcAssociationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,20 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HttpAgent extends js.Object {
-  var baseUrl: js.UndefOr[String] = js.undefined
-  var http: js.UndefOr[Agent] = js.undefined
-  var https: js.UndefOr[typingsSlinky.node.httpsMod.Agent] = js.undefined
+  var baseUrl: js.UndefOr[String] = js.native
+  var http: js.UndefOr[Agent] = js.native
+  var https: js.UndefOr[typingsSlinky.node.httpsMod.Agent] = js.native
 }
 
 object HttpAgent {
   @scala.inline
-  def apply(baseUrl: String = null, http: Agent = null, https: typingsSlinky.node.httpsMod.Agent = null): HttpAgent = {
+  def apply(): HttpAgent = {
     val __obj = js.Dynamic.literal()
-    if (baseUrl != null) __obj.updateDynamic("baseUrl")(baseUrl.asInstanceOf[js.Any])
-    if (http != null) __obj.updateDynamic("http")(http.asInstanceOf[js.Any])
-    if (https != null) __obj.updateDynamic("https")(https.asInstanceOf[js.Any])
     __obj.asInstanceOf[HttpAgent]
   }
+  @scala.inline
+  implicit class HttpAgentOps[Self <: HttpAgent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttp(value: Agent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("http")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttps(value: typingsSlinky.node.httpsMod.Agent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.reactVirtualized
 
-import typingsSlinky.reactVirtualized.reactVirtualizedNumbers.`150`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ object windowScrollerMod extends js.Object {
   class WindowScroller ()
     extends typingsSlinky.reactVirtualized.esWindowScrollerMod.WindowScroller
   
-  val IS_SCROLLING_TIMEOUT: `150` = js.native
+  val IS_SCROLLING_TIMEOUT: /* 150 */ Double = js.native
   /* static members */
   @js.native
   object WindowScroller extends js.Object {

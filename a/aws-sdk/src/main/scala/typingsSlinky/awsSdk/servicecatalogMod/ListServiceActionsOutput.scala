@@ -18,11 +18,41 @@ trait ListServiceActionsOutput extends js.Object {
 
 object ListServiceActionsOutput {
   @scala.inline
-  def apply(NextPageToken: PageToken = null, ServiceActionSummaries: ServiceActionSummaries = null): ListServiceActionsOutput = {
+  def apply(): ListServiceActionsOutput = {
     val __obj = js.Dynamic.literal()
-    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
-    if (ServiceActionSummaries != null) __obj.updateDynamic("ServiceActionSummaries")(ServiceActionSummaries.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListServiceActionsOutput]
   }
+  @scala.inline
+  implicit class ListServiceActionsOutputOps[Self <: ListServiceActionsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceActionSummaries(value: ServiceActionSummaries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceActionSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceActionSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceActionSummaries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

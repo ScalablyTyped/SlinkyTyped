@@ -24,11 +24,41 @@ trait DomainDkimState extends js.Object {
 
 object DomainDkimState {
   @scala.inline
-  def apply(dkimTokens: Input[js.Array[Input[String]]] = null, domain: Input[String] = null): DomainDkimState = {
+  def apply(): DomainDkimState = {
     val __obj = js.Dynamic.literal()
-    if (dkimTokens != null) __obj.updateDynamic("dkimTokens")(dkimTokens.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainDkimState]
   }
+  @scala.inline
+  implicit class DomainDkimStateOps[Self <: DomainDkimState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDkimTokens(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dkimTokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDkimTokens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dkimTokens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomain(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

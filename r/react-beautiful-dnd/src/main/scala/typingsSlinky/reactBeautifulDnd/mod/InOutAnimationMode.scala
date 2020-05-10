@@ -13,12 +13,10 @@ trait InOutAnimationMode extends js.Object
 
 object InOutAnimationMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def close: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.close = "close".asInstanceOf[typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.close]
   @scala.inline
-  def close: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.close = this.cast("close")
+  def none: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.none = "none".asInstanceOf[typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.none]
   @scala.inline
-  def none: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.none = this.cast("none")
-  @scala.inline
-  def open: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.open = this.cast("open")
+  def open: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.open = "open".asInstanceOf[typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.open]
 }
 

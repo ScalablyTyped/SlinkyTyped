@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection because Already inherited
 - typingsSlinky.uifabricUtilities.selectionSelectionMod.Selection because Already inherited
 - typingsSlinky.uifabricUtilities.selectionMod.Selection because Already inherited

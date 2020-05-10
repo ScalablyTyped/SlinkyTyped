@@ -2,7 +2,7 @@ package typingsSlinky.isotopeLayout.mod
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

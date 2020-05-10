@@ -18,11 +18,41 @@ trait LambdaResource extends js.Object {
 
 object LambdaResource {
   @scala.inline
-  def apply(EventTriggers: EventTriggerDefinitionList = null, LambdaArn: ResourceARN = null): LambdaResource = {
+  def apply(): LambdaResource = {
     val __obj = js.Dynamic.literal()
-    if (EventTriggers != null) __obj.updateDynamic("EventTriggers")(EventTriggers.asInstanceOf[js.Any])
-    if (LambdaArn != null) __obj.updateDynamic("LambdaArn")(LambdaArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[LambdaResource]
   }
+  @scala.inline
+  implicit class LambdaResourceOps[Self <: LambdaResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventTriggers(value: EventTriggerDefinitionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTriggers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventTriggers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTriggers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaArn(value: ResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LambdaArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,5 +7,6 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("indexedDB")
 @js.native
-object indexedDB extends TopLevel[IDBFactory]
+object indexedDB
+  extends TopLevel[org.scalajs.dom.raw.IDBFactory]
 

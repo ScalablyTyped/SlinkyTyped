@@ -1,0 +1,44 @@
+package typingsSlinky.awsSdkClientS3Browser.typesSourceSelectionCriteriaMod
+
+import typingsSlinky.awsSdkClientS3Browser.typesSseKmsEncryptedObjectsMod.UnmarshalledSseKmsEncryptedObjects
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait UnmarshalledSourceSelectionCriteria extends SourceSelectionCriteria {
+  /**
+    * <p> Container for filter information of selection of KMS Encrypted S3 objects. The element is required if you include <code>SourceSelectionCriteria</code> in the replication configuration. </p>
+    */
+  @JSName("SseKmsEncryptedObjects")
+  var SseKmsEncryptedObjects_UnmarshalledSourceSelectionCriteria: js.UndefOr[UnmarshalledSseKmsEncryptedObjects] = js.native
+}
+
+object UnmarshalledSourceSelectionCriteria {
+  @scala.inline
+  def apply(): UnmarshalledSourceSelectionCriteria = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[UnmarshalledSourceSelectionCriteria]
+  }
+  @scala.inline
+  implicit class UnmarshalledSourceSelectionCriteriaOps[Self <: UnmarshalledSourceSelectionCriteria] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSseKmsEncryptedObjects(value: UnmarshalledSseKmsEncryptedObjects): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SseKmsEncryptedObjects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSseKmsEncryptedObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SseKmsEncryptedObjects")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

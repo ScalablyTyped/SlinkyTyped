@@ -6,75 +6,183 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GroupConfig extends js.Object {
   /**
     * Sets {@link Phaser.GameObjects.Group#active}.
     */
-  var active: js.UndefOr[Boolean] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Group#classType}.
     */
-  var classType: js.UndefOr[js.Function] = js.undefined
+  var classType: js.UndefOr[js.Function] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Group#createCallback}.
     */
-  var createCallback: js.UndefOr[GroupCallback] = js.undefined
+  var createCallback: js.UndefOr[GroupCallback] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Group#createMultipleCallback}.
     */
-  var createMultipleCallback: js.UndefOr[GroupMultipleCreateCallback] = js.undefined
+  var createMultipleCallback: js.UndefOr[GroupMultipleCreateCallback] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Group#defaultFrame}.
     */
-  var defaultFrame: js.UndefOr[String | integer] = js.undefined
+  var defaultFrame: js.UndefOr[String | integer] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Group#defaultKey}.
     */
-  var defaultKey: js.UndefOr[String] = js.undefined
+  var defaultKey: js.UndefOr[String] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Group#maxSize}.
     */
-  var maxSize: js.UndefOr[Double] = js.undefined
+  var maxSize: js.UndefOr[Double] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Group#name}.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Group#removeCallback}.
     */
-  var removeCallback: js.UndefOr[GroupCallback] = js.undefined
+  var removeCallback: js.UndefOr[GroupCallback] = js.native
   /**
     * Sets {@link Phaser.GameObjects.Group#runChildUpdate}.
     */
-  var runChildUpdate: js.UndefOr[Boolean] = js.undefined
+  var runChildUpdate: js.UndefOr[Boolean] = js.native
 }
 
 object GroupConfig {
   @scala.inline
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    classType: js.Function = null,
-    createCallback: /* item */ GameObject => Unit = null,
-    createMultipleCallback: /* items */ js.Array[GameObject] => Unit = null,
-    defaultFrame: String | integer = null,
-    defaultKey: String = null,
-    maxSize: Int | Double = null,
-    name: String = null,
-    removeCallback: /* item */ GameObject => Unit = null,
-    runChildUpdate: js.UndefOr[Boolean] = js.undefined
-  ): GroupConfig = {
+  def apply(): GroupConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (classType != null) __obj.updateDynamic("classType")(classType.asInstanceOf[js.Any])
-    if (createCallback != null) __obj.updateDynamic("createCallback")(js.Any.fromFunction1(createCallback))
-    if (createMultipleCallback != null) __obj.updateDynamic("createMultipleCallback")(js.Any.fromFunction1(createMultipleCallback))
-    if (defaultFrame != null) __obj.updateDynamic("defaultFrame")(defaultFrame.asInstanceOf[js.Any])
-    if (defaultKey != null) __obj.updateDynamic("defaultKey")(defaultKey.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (removeCallback != null) __obj.updateDynamic("removeCallback")(js.Any.fromFunction1(removeCallback))
-    if (!js.isUndefined(runChildUpdate)) __obj.updateDynamic("runChildUpdate")(runChildUpdate.asInstanceOf[js.Any])
     __obj.asInstanceOf[GroupConfig]
   }
+  @scala.inline
+  implicit class GroupConfigOps[Self <: GroupConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassType(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateCallback(value: /* item */ GameObject => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createCallback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreateCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateMultipleCallback(value: /* items */ js.Array[GameObject] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createMultipleCallback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreateMultipleCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createMultipleCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultFrame(value: String | integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFrame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultFrame: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFrame")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveCallback(value: /* item */ GameObject => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCallback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunChildUpdate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runChildUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunChildUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runChildUpdate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

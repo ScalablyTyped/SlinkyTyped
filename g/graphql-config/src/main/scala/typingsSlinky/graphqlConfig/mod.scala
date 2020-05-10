@@ -4,8 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.mod.GraphQLSchema
 import typingsSlinky.graphqlConfig.endpointsExtensionMod.GraphQLConfigEnpointConfig
 import typingsSlinky.graphqlConfig.endpointsExtensionMod.GraphQLConfigEnpointsMapData
-import typingsSlinky.graphqlConfig.graphqlConfigStrings.Dotgraphqlconfig
-import typingsSlinky.graphqlConfig.graphqlConfigStrings.DotgraphqlconfigDotyaml
 import typingsSlinky.graphqlConfig.typesMod.GraphQLConfigData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,8 +43,8 @@ object mod extends js.Object {
     def this(config: GraphQLConfigData, configPath: String, projectName: String) = this()
   }
   
-  val GRAPHQL_CONFIG_NAME: Dotgraphqlconfig = js.native
-  val GRAPHQL_CONFIG_YAML_NAME: DotgraphqlconfigDotyaml = js.native
+  val GRAPHQL_CONFIG_NAME: /* ".graphqlconfig" */ String = js.native
+  val GRAPHQL_CONFIG_YAML_NAME: /* ".graphqlconfig.yaml" */ String = js.native
   def findGraphQLConfigFile(filePath: String): String = js.native
   def getGraphQLConfig(): typingsSlinky.graphqlConfig.graphQLConfigMod.GraphQLConfig = js.native
   def getGraphQLConfig(rootDir: String): typingsSlinky.graphqlConfig.graphQLConfigMod.GraphQLConfig = js.native

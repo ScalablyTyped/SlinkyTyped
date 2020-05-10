@@ -18,11 +18,41 @@ trait LaunchPermissionModifications extends js.Object {
 
 object LaunchPermissionModifications {
   @scala.inline
-  def apply(Add: LaunchPermissionList = null, Remove: LaunchPermissionList = null): LaunchPermissionModifications = {
+  def apply(): LaunchPermissionModifications = {
     val __obj = js.Dynamic.literal()
-    if (Add != null) __obj.updateDynamic("Add")(Add.asInstanceOf[js.Any])
-    if (Remove != null) __obj.updateDynamic("Remove")(Remove.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchPermissionModifications]
   }
+  @scala.inline
+  implicit class LaunchPermissionModificationsOps[Self <: LaunchPermissionModifications] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: LaunchPermissionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Add")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Add")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemove(value: LaunchPermissionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Remove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Remove")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

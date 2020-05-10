@@ -50,7 +50,7 @@ package object cloudsearchdomainMod {
   type Suggester = java.lang.String
   type Suggestions = js.Array[typingsSlinky.awsSdk.cloudsearchdomainMod.SuggestionMatch]
   type SuggestionsSize = scala.Double
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.cloudsearchdomainMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.cloudsearchdomainMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2013-01-01`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

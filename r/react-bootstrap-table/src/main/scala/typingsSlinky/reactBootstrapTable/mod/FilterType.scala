@@ -17,20 +17,18 @@ trait FilterType extends js.Object
 
 object FilterType {
   @scala.inline
-  def ArrayFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.ArrayFilter = this.cast("ArrayFilter")
+  def ArrayFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.ArrayFilter = "ArrayFilter".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.ArrayFilter]
   @scala.inline
-  def CustomFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.CustomFilter = this.cast("CustomFilter")
+  def CustomFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.CustomFilter = "CustomFilter".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.CustomFilter]
   @scala.inline
-  def DateFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.DateFilter = this.cast("DateFilter")
+  def DateFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.DateFilter = "DateFilter".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.DateFilter]
   @scala.inline
-  def NumberFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.NumberFilter = this.cast("NumberFilter")
+  def NumberFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.NumberFilter = "NumberFilter".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.NumberFilter]
   @scala.inline
-  def RegexFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.RegexFilter = this.cast("RegexFilter")
+  def RegexFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.RegexFilter = "RegexFilter".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.RegexFilter]
   @scala.inline
-  def SelectFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.SelectFilter = this.cast("SelectFilter")
+  def SelectFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.SelectFilter = "SelectFilter".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.SelectFilter]
   @scala.inline
-  def TextFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.TextFilter = this.cast("TextFilter")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TextFilter: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.TextFilter = "TextFilter".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.TextFilter]
 }
 

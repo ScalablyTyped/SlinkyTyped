@@ -1,6 +1,5 @@
 package typingsSlinky.validator
 
-import typingsSlinky.validator.mod.validator.IsFloatOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,8 @@ object isFloatMod extends js.Object {
     * @param [options] - Options
     */
   def default(str: String): Boolean = js.native
-  def default(str: String, options: IsFloatOptions): Boolean = js.native
+  def default(str: String, options: typingsSlinky.validator.mod.validator.IsFloatOptions): Boolean = js.native
+  type FloatLocale = typingsSlinky.validator.mod.validator.FloatLocale
+  type IsFloatOptions = typingsSlinky.validator.mod.validator.IsFloatOptions
 }
 

@@ -6,18 +6,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotAreasplineOptions extends js.Object {
   /**
     * (Highcharts, Highstock) Accessibility options for a series. Requires the
     * accessibility module.
     */
-  var accessibility: js.UndefOr[js.Object | PlotAreasplineAccessibilityOptions] = js.undefined
+  var accessibility: js.UndefOr[js.Object | PlotAreasplineAccessibilityOptions] = js.native
   /**
     * (Highmaps) Whether all areas of the map defined in `mapData` should be
     * rendered. If `true`, areas which don't correspond to a data point, are
     * rendered as `null` points. If `false`, those areas are skipped.
     */
-  var allAreas: js.UndefOr[Boolean] = js.undefined
+  var allAreas: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) Allow this series' points to be selected by
     * clicking on the graphic (columns, point markers, pie slices, map areas
@@ -28,7 +29,7 @@ trait PlotAreasplineOptions extends js.Object {
     *
     * And alternative way of selecting points is through dragging.
     */
-  var allowPointSelect: js.UndefOr[Boolean] = js.undefined
+  var allowPointSelect: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) Enable or disable the initial animation when a
     * series is displayed. The animation can also be set as a configuration
@@ -45,7 +46,7 @@ trait PlotAreasplineOptions extends js.Object {
     * Due to poor performance, animation is disabled in old IE browsers for
     * several chart types.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject | PlotAreasplineAnimationOptions] = js.undefined
+  var animation: js.UndefOr[Boolean | AnimationOptionsObject | PlotAreasplineAnimationOptions] = js.native
   /**
     * (Highcharts, Highstock) For some series, there is a limit that shuts down
     * initial animation by default when the total number of points in the chart
@@ -53,11 +54,11 @@ trait PlotAreasplineOptions extends js.Object {
     * animation does not run if there is more than 250 points totally. To
     * disable this cap, set `animationLimit` to `Infinity`.
     */
-  var animationLimit: js.UndefOr[Double] = js.undefined
+  var animationLimit: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) Sets the color blending in the boost module.
     */
-  var boostBlending: js.UndefOr[OptionsBoostBlendingValue] = js.undefined
+  var boostBlending: js.UndefOr[OptionsBoostBlendingValue] = js.native
   /**
     * (Highcharts, Highstock) Set the point threshold for when a series should
     * enter boost mode.
@@ -73,34 +74,34 @@ trait PlotAreasplineOptions extends js.Object {
     * rendered although outside the visible plot area, and the `boostThreshold`
     * won't take effect.
     */
-  var boostThreshold: js.UndefOr[Double] = js.undefined
+  var boostThreshold: js.UndefOr[Double] = js.native
   /**
     * (Highmaps) The border color of the map areas.
     *
     * In styled mode, the border stroke is given in the `.highcharts-point`
     * class.
     */
-  var borderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var borderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highmaps) The border width of each map area.
     *
     * In styled mode, the border stroke width is given in the
     * `.highcharts-point` class.
     */
-  var borderWidth: js.UndefOr[Double] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) An additional class name to apply to the series'
     * graphical elements. This option does not replace default class names of
     * the graphical element.
     */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock) Disable this option to allow series rendering in
     * the whole plotting area.
     *
     * **Note:** Clipping should be always enabled when chart.zoomType is set
     */
-  var clip: js.UndefOr[Boolean] = js.undefined
+  var clip: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) The main color of the series. In line type series
     * it applies to the line and the point markers unless otherwise specified.
@@ -113,7 +114,7 @@ trait PlotAreasplineOptions extends js.Object {
     * `.highcharts-series-{n}` class, or individual classes given by the
     * `className` option.
     */
-  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Highstock, Highmaps) When using dual or multiple color axes,
     * this number defines which colorAxis the particular series is connected
@@ -124,20 +125,20 @@ trait PlotAreasplineOptions extends js.Object {
     * Since v7.2.0 the option can also be an axis id or an axis index instead
     * of a boolean flag.
     */
-  var colorAxis: js.UndefOr[Boolean | Double | String] = js.undefined
+  var colorAxis: js.UndefOr[Boolean | Double | String] = js.native
   /**
     * (Highcharts, Highstock) Styled mode only. A specific color index to use
     * for the series, so its graphic representations are given the class name
     * `highcharts-color-{n}`.
     */
-  var colorIndex: js.UndefOr[Double] = js.undefined
+  var colorIndex: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Highmaps) Determines what data value should be
     * used to calculate point color if `colorAxis` is used. Requires to set
     * `min` and `max` if some custom point property is used or if approximation
     * for data grouping is set to `'sum'`.
     */
-  var colorKey: js.UndefOr[String] = js.undefined
+  var colorKey: js.UndefOr[String] = js.native
   /**
     * (Highstock) Compare the values of the series against the first non-null,
     * non- zero value in the visible range. The y axis will show percentage or
@@ -146,12 +147,12 @@ trait PlotAreasplineOptions extends js.Object {
     * the development of the series against each other. Adds a `change` field
     * to every point object.
     */
-  var compare: js.UndefOr[String] = js.undefined
+  var compare: js.UndefOr[String] = js.native
   /**
     * (Highstock) When compare is `percent`, this option dictates whether to
     * use 0 or 100 as the base of comparison.
     */
-  var compareBase: js.UndefOr[`0` | `100`] = js.undefined
+  var compareBase: js.UndefOr[`0` | `100`] = js.native
   /**
     * (Highstock) Defines if comparison should start from the first point
     * within the visible range or should start from the first point (see online
@@ -160,23 +161,23 @@ trait PlotAreasplineOptions extends js.Object {
     * (`compareStart=true`) or should have been already calculated according to
     * the previous point (`compareStart=false`).
     */
-  var compareStart: js.UndefOr[Boolean] = js.undefined
+  var compareStart: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts) Polar charts only. Whether to connect the ends of a line
     * series plot across the extremes.
     */
-  var connectEnds: js.UndefOr[Boolean] = js.undefined
+  var connectEnds: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) Whether to connect a graph line across null
     * points, or render a gap between the two points on either side of the
     * null.
     */
-  var connectNulls: js.UndefOr[Boolean] = js.undefined
+  var connectNulls: js.UndefOr[Boolean] = js.native
   /**
     * (Gantt) Override Pathfinder connector options for a series. Requires
     * Highcharts Gantt to be loaded.
     */
-  var connectors: js.UndefOr[PlotAreasplineConnectorsOptions] = js.undefined
+  var connectors: js.UndefOr[PlotAreasplineConnectorsOptions] = js.native
   /**
     * (Highcharts, Highstock) When the series contains less points than the
     * crop threshold, all points are drawn, even if the points fall outside the
@@ -187,7 +188,7 @@ trait PlotAreasplineOptions extends js.Object {
     * fall within the plot area. The advantage of cropping away invisible
     * points is to increase performance on large series.
     */
-  var cropThreshold: js.UndefOr[Double] = js.undefined
+  var cropThreshold: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) You can set the cursor to "pointer" if you have
     * click events attached to the series, to signal to the user that the
@@ -196,7 +197,7 @@ trait PlotAreasplineOptions extends js.Object {
     * In styled mode, the series cursor can be set with the same classes as
     * listed under series.color.
     */
-  var cursor: js.UndefOr[String | CursorValue] = js.undefined
+  var cursor: js.UndefOr[String | CursorValue] = js.native
   /**
     * (Highcharts, Highstock) A name for the dash style to use for the graph,
     * or for some series types the outline of each shape.
@@ -204,7 +205,7 @@ trait PlotAreasplineOptions extends js.Object {
     * In styled mode, the stroke dash-array can be set with the same classes as
     * listed under series.color.
     */
-  var dashStyle: js.UndefOr[DashStyleValue] = js.undefined
+  var dashStyle: js.UndefOr[DashStyleValue] = js.native
   /**
     * (Highstock) Data grouping is the concept of sampling the data values into
     * larger blocks in order to ease readability and increase performance of
@@ -219,7 +220,7 @@ trait PlotAreasplineOptions extends js.Object {
     * of the first point instance are copied over to the group point. This can
     * be altered through a custom `approximation` callback function.
     */
-  var dataGrouping: js.UndefOr[PlotAreasplineDataGroupingOptions] = js.undefined
+  var dataGrouping: js.UndefOr[PlotAreasplineDataGroupingOptions] = js.native
   /**
     * (Highcharts, Highstock) Options for the series data labels, appearing
     * next to each data point.
@@ -231,31 +232,31 @@ trait PlotAreasplineOptions extends js.Object {
     * `.highcharts-data-label-box` and `.highcharts-data-label` class names
     * (see example).
     */
-  var dataLabels: js.UndefOr[DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject]] = js.undefined
+  var dataLabels: js.UndefOr[DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject]] = js.native
   /**
     * (Highcharts, Highstock) A description of the series to add to the screen
     * reader information about the series.
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock) The draggable-points module allows points to be
     * moved around or modified in the chart. In addition to the options
     * mentioned under the `dragDrop` API structure, the module fires three
     * events, point.dragStart, point.drag and point.drop.
     */
-  var dragDrop: js.UndefOr[PlotAreasplineDragDropOptions] = js.undefined
+  var dragDrop: js.UndefOr[PlotAreasplineDragDropOptions] = js.native
   /**
     * (Highcharts, Highstock) Enable or disable the mouse tracking for a
     * specific series. This includes point tooltips and click events on graphs
     * and points. For large datasets it improves performance.
     */
-  var enableMouseTracking: js.UndefOr[Boolean] = js.undefined
+  var enableMouseTracking: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) General event handlers for the series items.
     * These event hooks can also be attached to the series at run time using
     * the `Highcharts.addEvent` function.
     */
-  var events: js.UndefOr[PlotAreasplineEventsOptions] = js.undefined
+  var events: js.UndefOr[PlotAreasplineEventsOptions] = js.native
   /**
     * (Highcharts, Highstock) Fill color or gradient for the area. When `null`,
     * the series' `color` is used with the series' `fillOpacity`.
@@ -263,7 +264,7 @@ trait PlotAreasplineOptions extends js.Object {
     * In styled mode, the fill color can be set with the `.highcharts-area`
     * class name.
     */
-  var fillColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var fillColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Highstock) Fill opacity for the area. When you set an
     * explicit `fillColor`, the `fillOpacity` is not applied. Instead, you
@@ -274,7 +275,7 @@ trait PlotAreasplineOptions extends js.Object {
     * In styled mode, the fill opacity can be set with the `.highcharts-area`
     * class name.
     */
-  var fillOpacity: js.UndefOr[Double] = js.undefined
+  var fillOpacity: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) Determines whether the series should look for the
     * nearest point in both dimensions or just the x-dimension when hovering
@@ -285,7 +286,7 @@ trait PlotAreasplineOptions extends js.Object {
     * Applies only to series types using nearest neighbor search (not direct
     * hover) for tooltip.
     */
-  var findNearestPointBy: js.UndefOr[OptionsFindNearestPointByValue] = js.undefined
+  var findNearestPointBy: js.UndefOr[OptionsFindNearestPointByValue] = js.native
   /**
     * (Highstock) Defines when to display a gap in the graph, together with the
     * gapUnit option.
@@ -301,7 +302,7 @@ trait PlotAreasplineOptions extends js.Object {
     * series. In a stock chart, intraday data is available for daytime hours,
     * while gaps will appear in nights and weekends.
     */
-  var gapSize: js.UndefOr[Double] = js.undefined
+  var gapSize: js.UndefOr[Double] = js.native
   /**
     * (Highstock) Together with gapSize, this option defines where to draw gaps
     * in the graph.
@@ -314,14 +315,14 @@ trait PlotAreasplineOptions extends js.Object {
     * which on a datetime axis is milliseconds. This also applies to the
     * navigator series that inherits gap options from the base series.
     */
-  var gapUnit: js.UndefOr[OptionsGapUnitValue] = js.undefined
+  var gapUnit: js.UndefOr[OptionsGapUnitValue] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Whether to use the Y extremes of the total
     * chart width or only the zoomed area when zooming in on parts of the X
     * axis. By default, the Y axis adjusts to the min and max of the visible
     * data. Cartesian series only.
     */
-  var getExtremesFromAll: js.UndefOr[Boolean] = js.undefined
+  var getExtremesFromAll: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) When set to `false` will prevent the series data
     * from being included in any form of data export.
@@ -329,7 +330,7 @@ trait PlotAreasplineOptions extends js.Object {
     * Since version 6.0.0 until 7.1.0 the option was existing undocumented as
     * `includeInCSVExport`.
     */
-  var includeInDataExport: js.UndefOr[Boolean] = js.undefined
+  var includeInDataExport: js.UndefOr[Boolean] = js.native
   /**
     * (Highmaps) What property to join the `mapData` to the value data. For
     * example, if joinBy is "code", the mapData items with a specific code is
@@ -346,13 +347,13 @@ trait PlotAreasplineOptions extends js.Object {
     * points and have a backend that can preprocess the data into a parallel
     * array of the mapData.
     */
-  var joinBy: js.UndefOr[String | js.Array[String]] = js.undefined
+  var joinBy: js.UndefOr[String | js.Array[String]] = js.native
   /**
     * (Highcharts, Highstock) An array specifying which option maps to which
     * key in the data point array. This makes it convenient to work with
     * unstructured data arrays from different sources.
     */
-  var keys: js.UndefOr[js.Array[String]] = js.undefined
+  var keys: js.UndefOr[js.Array[String]] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Series labels are placed as close to the
     * series as possible in a natural way, seeking to avoid other series. The
@@ -362,15 +363,15 @@ trait PlotAreasplineOptions extends js.Object {
     * The series labels currently work with series types having a `graph` or an
     * `area`.
     */
-  var label: js.UndefOr[PlotAreasplineLabelOptions] = js.undefined
+  var label: js.UndefOr[PlotAreasplineLabelOptions] = js.native
   /**
     * (Highstock) The line marks the last price from all points.
     */
-  var lastPrice: js.UndefOr[PlotAreasplineLastPriceOptions] = js.undefined
+  var lastPrice: js.UndefOr[PlotAreasplineLastPriceOptions] = js.native
   /**
     * (Highstock) The line marks the last price from visible range of points.
     */
-  var lastVisiblePrice: js.UndefOr[PlotAreasplineLastVisiblePriceOptions] = js.undefined
+  var lastVisiblePrice: js.UndefOr[PlotAreasplineLastVisiblePriceOptions] = js.native
   /**
     * (Highcharts, Highstock) A separate color for the graph line. By default
     * the line takes the `color` of the series, but the lineColor setting
@@ -380,24 +381,24 @@ trait PlotAreasplineOptions extends js.Object {
     * In styled mode, the line stroke can be set with the `.highcharts-graph`
     * class name.
     */
-  var lineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var lineColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Highstock) Pixel width of the graph line.
     */
-  var lineWidth: js.UndefOr[Double] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) The SVG value used for the `stroke-linecap` and
     * `stroke-linejoin` of a line graph. Round means that lines are rounded in
     * the ends and bends.
     */
-  var linecap: js.UndefOr[SeriesLinecapValue] = js.undefined
+  var linecap: js.UndefOr[SeriesLinecapValue] = js.native
   /**
     * (Highcharts, Highstock, Gantt) The id of another series to link to.
     * Additionally, the value can be ":previous" to link to the previous
     * series. When two series are linked, only the first one appears in the
     * legend. Toggling the visibility of this also toggles the linked series.
     */
-  var linkedTo: js.UndefOr[String] = js.undefined
+  var linkedTo: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock) Options for the point markers of line-like
     * series. Properties like `fillColor`, `lineColor` and `lineWidth` define
@@ -408,7 +409,7 @@ trait PlotAreasplineOptions extends js.Object {
     * In styled mode, the markers can be styled with the `.highcharts-point`,
     * `.highcharts-point-hover` and `.highcharts-point-select` class names.
     */
-  var marker: js.UndefOr[PlotAreasplineMarkerOptions] = js.undefined
+  var marker: js.UndefOr[PlotAreasplineMarkerOptions] = js.native
   /**
     * (Highstock) Options for the corresponding navigator series if
     * `showInNavigator` is `true` for this series. Available options are the
@@ -417,33 +418,33 @@ trait PlotAreasplineOptions extends js.Object {
     * These options are merged with options in navigator.series, and will take
     * precedence if the same option is defined both places.
     */
-  var navigatorOptions: js.UndefOr[PlotSeriesOptions] = js.undefined
+  var navigatorOptions: js.UndefOr[PlotSeriesOptions] = js.native
   /**
     * (Highcharts, Highstock) The color for the parts of the graph or points
     * that are below the threshold.
     */
-  var negativeColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var negativeColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts) A separate color for the negative part of the area.
     *
     * In styled mode, a negative color is set with the `.highcharts-negative`
     * class name.
     */
-  var negativeFillColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var negativeFillColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Highstock) Opacity of a series parts: line, fill (e.g. area)
     * and dataLabels.
     */
-  var opacity: js.UndefOr[Double] = js.undefined
+  var opacity: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) Properties for each single point.
     */
-  var point: js.UndefOr[PlotAreasplinePointOptions] = js.undefined
+  var point: js.UndefOr[PlotAreasplinePointOptions] = js.native
   /**
     * (Highcharts, Highstock) Same as accessibility.pointDescriptionFormatter,
     * but for an individual series. Overrides the chart wide configuration.
     */
-  var pointDescriptionFormatter: js.UndefOr[js.Function] = js.undefined
+  var pointDescriptionFormatter: js.UndefOr[js.Function] = js.native
   /**
     * (Highcharts, Highstock, Gantt) If no x values are given for the points in
     * a series, `pointInterval` defines the interval of the x values. For
@@ -457,7 +458,7 @@ trait PlotAreasplineOptions extends js.Object {
     * Please note that this options applies to the _series data_, not the
     * interval of the axis ticks, which is independent.
     */
-  var pointInterval: js.UndefOr[Double] = js.undefined
+  var pointInterval: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) On datetime series, this allows for
     * setting the pointInterval to irregular time units, `day`, `month` and
@@ -469,7 +470,7 @@ trait PlotAreasplineOptions extends js.Object {
     * Please note that this options applies to the _series data_, not the
     * interval of the axis ticks, which is independent.
     */
-  var pointIntervalUnit: js.UndefOr[OptionsPointIntervalUnitValue] = js.undefined
+  var pointIntervalUnit: js.UndefOr[OptionsPointIntervalUnitValue] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Possible values: `"on"`, `"between"`,
     * `number`.
@@ -495,7 +496,7 @@ trait PlotAreasplineOptions extends js.Object {
     *
     * Defaults to `undefined` in cartesian charts, `"between"` in polar charts.
     */
-  var pointPlacement: js.UndefOr[Double | String] = js.undefined
+  var pointPlacement: js.UndefOr[Double | String] = js.native
   /**
     * (Highstock) The width of each point on the x axis. For example in a
     * column chart with one value each day, the pointRange would be 1 day (= 24
@@ -504,49 +505,49 @@ trait PlotAreasplineOptions extends js.Object {
     * * 1000 milliseconds). This is normally computed automatically, but this
     * option can be used to override the automatic value.
     */
-  var pointRange: js.UndefOr[Double] = js.undefined
+  var pointRange: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) If no x values are given for the points in
     * a series, pointStart defines on what value to start. For example, if a
     * series contains one yearly value starting from 1945, set pointStart to
     * 1945.
     */
-  var pointStart: js.UndefOr[Double] = js.undefined
+  var pointStart: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) Whether to select the series initially. If
     * `showCheckbox` is true, the checkbox next to the series name in the
     * legend will be checked for a selected series.
     */
-  var selected: js.UndefOr[Boolean] = js.undefined
+  var selected: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) Whether to apply a drop shadow to the graph line.
     * Since 2.3 the shadow can be an object configuration containing `color`,
     * `offsetX`, `offsetY`, `opacity` and `width`.
     */
-  var shadow: js.UndefOr[Boolean | ShadowOptionsObject] = js.undefined
+  var shadow: js.UndefOr[Boolean | ShadowOptionsObject] = js.native
   /**
     * (Highcharts, Highstock) If true, a checkbox is displayed next to the
     * legend item to allow selecting the series. The state of the checkbox is
     * determined by the `selected` option.
     */
-  var showCheckbox: js.UndefOr[Boolean] = js.undefined
+  var showCheckbox: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) Whether to display this particular series or
     * series type in the legend. Standalone series are shown in legend by
     * default, and linked series are not. Since v7.2.0 it is possible to show
     * series that use colorAxis by setting this option to `true`.
     */
-  var showInLegend: js.UndefOr[Boolean] = js.undefined
+  var showInLegend: js.UndefOr[Boolean] = js.native
   /**
     * (Highstock) Whether or not to show the series in the navigator. Takes
     * precedence over navigator.baseSeries if defined.
     */
-  var showInNavigator: js.UndefOr[Boolean] = js.undefined
+  var showInNavigator: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) If set to `true`, the accessibility module will
     * skip past the points in this series for keyboard navigation.
     */
-  var skipKeyboardNavigation: js.UndefOr[Boolean] = js.undefined
+  var skipKeyboardNavigation: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) When this is true, the series will not cause the
     * Y axis to cross the zero plane (or threshold option) unless the data
@@ -556,7 +557,7 @@ trait PlotAreasplineOptions extends js.Object {
     * make the Y axis show negative values according to the `minPadding`
     * option. If `softThreshold` is `true`, the Y axis starts at 0.
     */
-  var softThreshold: js.UndefOr[Boolean] = js.undefined
+  var softThreshold: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) Whether to stack the values of each series on top
     * of each other. Possible values are `undefined` to disable, `"normal"` to
@@ -565,8 +566,8 @@ trait PlotAreasplineOptions extends js.Object {
     * streamgraph series type, where the stacking option is set to `"stream"`.
     * The second one is `"overlap"`, which only applies to waterfall series.
     */
-  var stacking: js.UndefOr[OptionsStackingValue] = js.undefined
-  var states: js.UndefOr[PlotAreasplineStatesOptions] = js.undefined
+  var stacking: js.UndefOr[OptionsStackingValue] = js.native
+  var states: js.UndefOr[PlotAreasplineStatesOptions] = js.native
   /**
     * (Highcharts, Highstock) Sticky tracking of mouse events. When true, the
     * `mouseOut` event on a series isn't triggered until the mouse moves over
@@ -580,7 +581,7 @@ trait PlotAreasplineOptions extends js.Object {
     * **Note:** The boost module will force this option because of technical
     * limitations.
     */
-  var stickyTracking: js.UndefOr[Boolean] = js.undefined
+  var stickyTracking: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) The Y axis value to serve as the base for the
     * area, for distinguishing between values above and below a threshold. The
@@ -594,18 +595,18 @@ trait PlotAreasplineOptions extends js.Object {
     * * If `Infinity` or `-Infinity`, the area between the graph and the
     * corresponing Y axis extreme is filled (since v6.1.0).
     */
-  var threshold: js.UndefOr[Double] = js.undefined
+  var threshold: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) A configuration object for the tooltip rendering
     * of each single series. Properties are inherited from tooltip, but only
     * the following properties can be defined on a series level.
     */
-  var tooltip: js.UndefOr[PlotAreasplineTooltipOptions] = js.undefined
+  var tooltip: js.UndefOr[PlotAreasplineTooltipOptions] = js.native
   /**
     * (Highcharts, Highstock) Whether the whole area or just the line should
     * respond to mouseover tooltips and other mouse or touch events.
     */
-  var trackByArea: js.UndefOr[Boolean] = js.undefined
+  var trackByArea: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock, Gantt) When a series contains a data array that
     * is longer than this, only one dimensional arrays of numbers, or two
@@ -617,19 +618,19 @@ trait PlotAreasplineOptions extends js.Object {
     * Note: In boost mode turbo threshold is forced. Only array of numbers or
     * two dimensional arrays are allowed.
     */
-  var turboThreshold: js.UndefOr[Double] = js.undefined
+  var turboThreshold: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) Set the initial visibility of the series.
     */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
   /**
     * (Highmaps) Define the z index of the series.
     */
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var zIndex: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) Defines the Axis on which the zones are applied.
     */
-  var zoneAxis: js.UndefOr[String] = js.undefined
+  var zoneAxis: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock) An array defining zones within a series. Zones
     * can be applied to the X axis, Y axis or Z axis for bubbles, according to
@@ -640,167 +641,934 @@ trait PlotAreasplineOptions extends js.Object {
     * `.highcharts-zone-{n}` class, or custom classed from the `className`
     * option (view live demo).
     */
-  var zones: js.UndefOr[js.Array[PlotAreasplineZonesOptions]] = js.undefined
+  var zones: js.UndefOr[js.Array[PlotAreasplineZonesOptions]] = js.native
 }
 
 object PlotAreasplineOptions {
   @scala.inline
-  def apply(
-    accessibility: js.Object | PlotAreasplineAccessibilityOptions = null,
-    allAreas: js.UndefOr[Boolean] = js.undefined,
-    allowPointSelect: js.UndefOr[Boolean] = js.undefined,
-    animation: Boolean | AnimationOptionsObject | PlotAreasplineAnimationOptions = null,
-    animationLimit: Int | Double = null,
-    boostBlending: OptionsBoostBlendingValue = null,
-    boostThreshold: Int | Double = null,
-    borderColor: ColorString | GradientColorObject | PatternObject = null,
-    borderWidth: Int | Double = null,
-    className: String = null,
-    clip: js.UndefOr[Boolean] = js.undefined,
-    color: ColorString | GradientColorObject | PatternObject = null,
-    colorAxis: Boolean | Double | String = null,
-    colorIndex: Int | Double = null,
-    colorKey: String = null,
-    compare: String = null,
-    compareBase: `0` | `100` = null,
-    compareStart: js.UndefOr[Boolean] = js.undefined,
-    connectEnds: js.UndefOr[Boolean] = js.undefined,
-    connectNulls: js.UndefOr[Boolean] = js.undefined,
-    connectors: PlotAreasplineConnectorsOptions = null,
-    cropThreshold: Int | Double = null,
-    cursor: String | CursorValue = null,
-    dashStyle: DashStyleValue = null,
-    dataGrouping: PlotAreasplineDataGroupingOptions = null,
-    dataLabels: DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject] = null,
-    description: String = null,
-    dragDrop: PlotAreasplineDragDropOptions = null,
-    enableMouseTracking: js.UndefOr[Boolean] = js.undefined,
-    events: PlotAreasplineEventsOptions = null,
-    fillColor: ColorString | GradientColorObject | PatternObject = null,
-    fillOpacity: Int | Double = null,
-    findNearestPointBy: OptionsFindNearestPointByValue = null,
-    gapSize: Int | Double = null,
-    gapUnit: OptionsGapUnitValue = null,
-    getExtremesFromAll: js.UndefOr[Boolean] = js.undefined,
-    includeInDataExport: js.UndefOr[Boolean] = js.undefined,
-    joinBy: String | js.Array[String] = null,
-    keys: js.Array[String] = null,
-    label: PlotAreasplineLabelOptions = null,
-    lastPrice: PlotAreasplineLastPriceOptions = null,
-    lastVisiblePrice: PlotAreasplineLastVisiblePriceOptions = null,
-    lineColor: ColorString | GradientColorObject | PatternObject = null,
-    lineWidth: Int | Double = null,
-    linecap: SeriesLinecapValue = null,
-    linkedTo: String = null,
-    marker: PlotAreasplineMarkerOptions = null,
-    navigatorOptions: PlotSeriesOptions = null,
-    negativeColor: ColorString | GradientColorObject | PatternObject = null,
-    negativeFillColor: ColorString | GradientColorObject | PatternObject = null,
-    opacity: Int | Double = null,
-    point: PlotAreasplinePointOptions = null,
-    pointDescriptionFormatter: js.Function = null,
-    pointInterval: Int | Double = null,
-    pointIntervalUnit: OptionsPointIntervalUnitValue = null,
-    pointPlacement: Double | String = null,
-    pointRange: Int | Double = null,
-    pointStart: Int | Double = null,
-    selected: js.UndefOr[Boolean] = js.undefined,
-    shadow: Boolean | ShadowOptionsObject = null,
-    showCheckbox: js.UndefOr[Boolean] = js.undefined,
-    showInLegend: js.UndefOr[Boolean] = js.undefined,
-    showInNavigator: js.UndefOr[Boolean] = js.undefined,
-    skipKeyboardNavigation: js.UndefOr[Boolean] = js.undefined,
-    softThreshold: js.UndefOr[Boolean] = js.undefined,
-    stacking: OptionsStackingValue = null,
-    states: PlotAreasplineStatesOptions = null,
-    stickyTracking: js.UndefOr[Boolean] = js.undefined,
-    threshold: Int | Double = null,
-    tooltip: PlotAreasplineTooltipOptions = null,
-    trackByArea: js.UndefOr[Boolean] = js.undefined,
-    turboThreshold: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zIndex: Int | Double = null,
-    zoneAxis: String = null,
-    zones: js.Array[PlotAreasplineZonesOptions] = null
-  ): PlotAreasplineOptions = {
+  def apply(): PlotAreasplineOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
-    if (!js.isUndefined(allAreas)) __obj.updateDynamic("allAreas")(allAreas.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowPointSelect)) __obj.updateDynamic("allowPointSelect")(allowPointSelect.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationLimit != null) __obj.updateDynamic("animationLimit")(animationLimit.asInstanceOf[js.Any])
-    if (boostBlending != null) __obj.updateDynamic("boostBlending")(boostBlending.asInstanceOf[js.Any])
-    if (boostThreshold != null) __obj.updateDynamic("boostThreshold")(boostThreshold.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(clip)) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colorAxis != null) __obj.updateDynamic("colorAxis")(colorAxis.asInstanceOf[js.Any])
-    if (colorIndex != null) __obj.updateDynamic("colorIndex")(colorIndex.asInstanceOf[js.Any])
-    if (colorKey != null) __obj.updateDynamic("colorKey")(colorKey.asInstanceOf[js.Any])
-    if (compare != null) __obj.updateDynamic("compare")(compare.asInstanceOf[js.Any])
-    if (compareBase != null) __obj.updateDynamic("compareBase")(compareBase.asInstanceOf[js.Any])
-    if (!js.isUndefined(compareStart)) __obj.updateDynamic("compareStart")(compareStart.asInstanceOf[js.Any])
-    if (!js.isUndefined(connectEnds)) __obj.updateDynamic("connectEnds")(connectEnds.asInstanceOf[js.Any])
-    if (!js.isUndefined(connectNulls)) __obj.updateDynamic("connectNulls")(connectNulls.asInstanceOf[js.Any])
-    if (connectors != null) __obj.updateDynamic("connectors")(connectors.asInstanceOf[js.Any])
-    if (cropThreshold != null) __obj.updateDynamic("cropThreshold")(cropThreshold.asInstanceOf[js.Any])
-    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
-    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
-    if (dataGrouping != null) __obj.updateDynamic("dataGrouping")(dataGrouping.asInstanceOf[js.Any])
-    if (dataLabels != null) __obj.updateDynamic("dataLabels")(dataLabels.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (dragDrop != null) __obj.updateDynamic("dragDrop")(dragDrop.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableMouseTracking)) __obj.updateDynamic("enableMouseTracking")(enableMouseTracking.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (findNearestPointBy != null) __obj.updateDynamic("findNearestPointBy")(findNearestPointBy.asInstanceOf[js.Any])
-    if (gapSize != null) __obj.updateDynamic("gapSize")(gapSize.asInstanceOf[js.Any])
-    if (gapUnit != null) __obj.updateDynamic("gapUnit")(gapUnit.asInstanceOf[js.Any])
-    if (!js.isUndefined(getExtremesFromAll)) __obj.updateDynamic("getExtremesFromAll")(getExtremesFromAll.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeInDataExport)) __obj.updateDynamic("includeInDataExport")(includeInDataExport.asInstanceOf[js.Any])
-    if (joinBy != null) __obj.updateDynamic("joinBy")(joinBy.asInstanceOf[js.Any])
-    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (lastPrice != null) __obj.updateDynamic("lastPrice")(lastPrice.asInstanceOf[js.Any])
-    if (lastVisiblePrice != null) __obj.updateDynamic("lastVisiblePrice")(lastVisiblePrice.asInstanceOf[js.Any])
-    if (lineColor != null) __obj.updateDynamic("lineColor")(lineColor.asInstanceOf[js.Any])
-    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
-    if (linecap != null) __obj.updateDynamic("linecap")(linecap.asInstanceOf[js.Any])
-    if (linkedTo != null) __obj.updateDynamic("linkedTo")(linkedTo.asInstanceOf[js.Any])
-    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
-    if (navigatorOptions != null) __obj.updateDynamic("navigatorOptions")(navigatorOptions.asInstanceOf[js.Any])
-    if (negativeColor != null) __obj.updateDynamic("negativeColor")(negativeColor.asInstanceOf[js.Any])
-    if (negativeFillColor != null) __obj.updateDynamic("negativeFillColor")(negativeFillColor.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
-    if (pointDescriptionFormatter != null) __obj.updateDynamic("pointDescriptionFormatter")(pointDescriptionFormatter.asInstanceOf[js.Any])
-    if (pointInterval != null) __obj.updateDynamic("pointInterval")(pointInterval.asInstanceOf[js.Any])
-    if (pointIntervalUnit != null) __obj.updateDynamic("pointIntervalUnit")(pointIntervalUnit.asInstanceOf[js.Any])
-    if (pointPlacement != null) __obj.updateDynamic("pointPlacement")(pointPlacement.asInstanceOf[js.Any])
-    if (pointRange != null) __obj.updateDynamic("pointRange")(pointRange.asInstanceOf[js.Any])
-    if (pointStart != null) __obj.updateDynamic("pointStart")(pointStart.asInstanceOf[js.Any])
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
-    if (!js.isUndefined(showCheckbox)) __obj.updateDynamic("showCheckbox")(showCheckbox.asInstanceOf[js.Any])
-    if (!js.isUndefined(showInLegend)) __obj.updateDynamic("showInLegend")(showInLegend.asInstanceOf[js.Any])
-    if (!js.isUndefined(showInNavigator)) __obj.updateDynamic("showInNavigator")(showInNavigator.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipKeyboardNavigation)) __obj.updateDynamic("skipKeyboardNavigation")(skipKeyboardNavigation.asInstanceOf[js.Any])
-    if (!js.isUndefined(softThreshold)) __obj.updateDynamic("softThreshold")(softThreshold.asInstanceOf[js.Any])
-    if (stacking != null) __obj.updateDynamic("stacking")(stacking.asInstanceOf[js.Any])
-    if (states != null) __obj.updateDynamic("states")(states.asInstanceOf[js.Any])
-    if (!js.isUndefined(stickyTracking)) __obj.updateDynamic("stickyTracking")(stickyTracking.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (!js.isUndefined(trackByArea)) __obj.updateDynamic("trackByArea")(trackByArea.asInstanceOf[js.Any])
-    if (turboThreshold != null) __obj.updateDynamic("turboThreshold")(turboThreshold.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
-    if (zoneAxis != null) __obj.updateDynamic("zoneAxis")(zoneAxis.asInstanceOf[js.Any])
-    if (zones != null) __obj.updateDynamic("zones")(zones.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotAreasplineOptions]
   }
+  @scala.inline
+  implicit class PlotAreasplineOptionsOps[Self <: PlotAreasplineOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessibility(value: js.Object | PlotAreasplineAccessibilityOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllAreas(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allAreas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllAreas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allAreas")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowPointSelect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPointSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowPointSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPointSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimation(value: Boolean | AnimationOptionsObject | PlotAreasplineAnimationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoostBlending(value: OptionsBoostBlendingValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boostBlending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoostBlending: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boostBlending")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoostThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boostThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoostThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boostThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClip(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorAxis(value: Boolean | Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompare(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompare: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompareBase(value: `0` | `100`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareBase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompareBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareBase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompareStart(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompareStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectEnds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectEnds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectEnds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectEnds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectNulls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectNulls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectNulls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectNulls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectors(value: PlotAreasplineConnectorsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCropThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cropThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCropThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cropThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCursor(value: String | CursorValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCursor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDashStyle(value: DashStyleValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataGrouping(value: PlotAreasplineDataGroupingOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataGrouping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataGrouping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataGrouping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataLabels(value: DataLabelsOptionsObject | js.Array[DataLabelsOptionsObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragDrop(value: PlotAreasplineDragDropOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableMouseTracking(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMouseTracking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableMouseTracking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMouseTracking")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: PlotAreasplineEventsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFindNearestPointBy(value: OptionsFindNearestPointByValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findNearestPointBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFindNearestPointBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findNearestPointBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGapSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gapSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGapSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gapSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGapUnit(value: OptionsGapUnitValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gapUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGapUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gapUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetExtremesFromAll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtremesFromAll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetExtremesFromAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtremesFromAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeInDataExport(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInDataExport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeInDataExport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInDataExport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJoinBy(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("joinBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJoinBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("joinBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeys(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: PlotAreasplineLabelOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastPrice(value: PlotAreasplineLastPriceOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastVisiblePrice(value: PlotAreasplineLastVisiblePriceOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastVisiblePrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastVisiblePrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastVisiblePrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinecap(value: SeriesLinecapValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linecap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinecap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linecap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkedTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkedTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: PlotAreasplineMarkerOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavigatorOptions(value: PlotSeriesOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigatorOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavigatorOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigatorOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegativeColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegativeColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegativeFillColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeFillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegativeFillColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativeFillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPoint(value: PlotAreasplinePointOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointDescriptionFormatter(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointDescriptionFormatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointDescriptionFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointDescriptionFormatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointIntervalUnit(value: OptionsPointIntervalUnitValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointIntervalUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointIntervalUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointIntervalUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointPlacement(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointPlacement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointPlacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointRange(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadow(value: Boolean | ShadowOptionsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowCheckbox(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowCheckbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCheckbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowInLegend(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInLegend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowInLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInLegend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowInNavigator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInNavigator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowInNavigator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInNavigator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipKeyboardNavigation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipKeyboardNavigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipKeyboardNavigation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipKeyboardNavigation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSoftThreshold(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSoftThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStacking(value: OptionsStackingValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stacking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStacking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stacking")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStates(value: PlotAreasplineStatesOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStickyTracking(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stickyTracking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStickyTracking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stickyTracking")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: PlotAreasplineTooltipOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackByArea(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackByArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackByArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackByArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTurboThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("turboThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTurboThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("turboThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoneAxis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoneAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZones(value: js.Array[PlotAreasplineZonesOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zones")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

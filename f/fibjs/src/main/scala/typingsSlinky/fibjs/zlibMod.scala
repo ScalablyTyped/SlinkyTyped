@@ -1,9 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.fibjs.fibjsNumbers.`-1`
-import typingsSlinky.fibjs.fibjsNumbers.`0`
-import typingsSlinky.fibjs.fibjsNumbers.`1`
-import typingsSlinky.fibjs.fibjsNumbers.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +12,10 @@ import scala.scalajs.js.annotation._
 @JSImport("zlib", JSImport.Namespace)
 @js.native
 object zlibMod extends js.Object {
-  val BEST_COMPRESSION: `9` = js.native
-  val BEST_SPEED: `1` = js.native
-  val DEFAULT_COMPRESSION: `-1` = js.native
-  val NO_COMPRESSION: `0` = js.native
+  val BEST_COMPRESSION: /* 9 */ Double = js.native
+  val BEST_SPEED: /* 1 */ Double = js.native
+  val DEFAULT_COMPRESSION: /* -1 */ Double = js.native
+  val NO_COMPRESSION: /* 0 */ Double = js.native
   def createDeflate(to: ClassStream): ClassStream = js.native
   def createDeflateRaw(to: ClassStream): ClassStream = js.native
   def createGunzip(to: ClassStream): ClassStream = js.native

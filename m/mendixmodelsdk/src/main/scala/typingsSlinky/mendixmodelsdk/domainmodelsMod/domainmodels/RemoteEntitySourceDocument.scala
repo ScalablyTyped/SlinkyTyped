@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
   *
   * In version 8.2.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -36,7 +36,7 @@ abstract class RemoteEntitySourceDocument protected () extends Document {
   @JSName("model")
   var model_FRemoteEntitySourceDocument: IModel = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MRemoteEntitySourceDocument(): FolderBase = js.native
+  def containerAsFolderBase_MRemoteEntitySourceDocument: FolderBase = js.native
 }
 
 /* static members */

@@ -4,46 +4,160 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DataGroup extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var content: String
-  var id: IdType
-  var nestedGroups: js.UndefOr[js.Array[IdType]] = js.undefined
-  var options: js.UndefOr[DataGroupOptions] = js.undefined
-  var showNested: js.UndefOr[Boolean] = js.undefined
-  var style: js.UndefOr[String] = js.undefined
-  var subgroupOrder: js.UndefOr[String | js.Function0[Unit]] = js.undefined
-  var subgroupStack: js.UndefOr[SubGroupStackOptions | Boolean] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var content: String = js.native
+  var id: IdType = js.native
+  var nestedGroups: js.UndefOr[js.Array[IdType]] = js.native
+  var options: js.UndefOr[DataGroupOptions] = js.native
+  var showNested: js.UndefOr[Boolean] = js.native
+  var style: js.UndefOr[String] = js.native
+  var subgroupOrder: js.UndefOr[String | js.Function0[Unit]] = js.native
+  var subgroupStack: js.UndefOr[SubGroupStackOptions | Boolean] = js.native
+  var title: js.UndefOr[String] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object DataGroup {
   @scala.inline
-  def apply(
-    content: String,
-    id: IdType,
-    className: String = null,
-    nestedGroups: js.Array[IdType] = null,
-    options: DataGroupOptions = null,
-    showNested: js.UndefOr[Boolean] = js.undefined,
-    style: String = null,
-    subgroupOrder: String | js.Function0[Unit] = null,
-    subgroupStack: SubGroupStackOptions | Boolean = null,
-    title: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): DataGroup = {
+  def apply(content: String, id: IdType): DataGroup = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (nestedGroups != null) __obj.updateDynamic("nestedGroups")(nestedGroups.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (!js.isUndefined(showNested)) __obj.updateDynamic("showNested")(showNested.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (subgroupOrder != null) __obj.updateDynamic("subgroupOrder")(subgroupOrder.asInstanceOf[js.Any])
-    if (subgroupStack != null) __obj.updateDynamic("subgroupStack")(subgroupStack.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataGroup]
   }
+  @scala.inline
+  implicit class DataGroupOps[Self <: DataGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: IdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNestedGroups(value: js.Array[IdType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNestedGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: DataGroupOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowNested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showNested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowNested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showNested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubgroupOrderFunction0(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subgroupOrder")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSubgroupOrder(value: String | js.Function0[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subgroupOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubgroupOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subgroupOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubgroupStack(value: SubGroupStackOptions | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subgroupStack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubgroupStack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subgroupStack")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

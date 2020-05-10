@@ -1,6 +1,6 @@
 package typingsSlinky.stripejs.elementMod
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.stripejs.AnonPreventDefault
 import typingsSlinky.stripejs.stripejsStrings.blur
 import typingsSlinky.stripejs.stripejsStrings.change

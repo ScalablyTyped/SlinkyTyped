@@ -28,42 +28,40 @@ trait ColumnEventType extends js.Object
 
 object ColumnEventType {
   @scala.inline
-  def alignedGridChanged: typingsSlinky.agGrid.agGridStrings.alignedGridChanged = this.cast("alignedGridChanged")
+  def alignedGridChanged: typingsSlinky.agGrid.agGridStrings.alignedGridChanged = "alignedGridChanged".asInstanceOf[typingsSlinky.agGrid.agGridStrings.alignedGridChanged]
   @scala.inline
-  def api: typingsSlinky.agGrid.agGridStrings.api = this.cast("api")
+  def api: typingsSlinky.agGrid.agGridStrings.api = "api".asInstanceOf[typingsSlinky.agGrid.agGridStrings.api]
   @scala.inline
-  def autosizeColumns: typingsSlinky.agGrid.agGridStrings.autosizeColumns = this.cast("autosizeColumns")
+  def autosizeColumns: typingsSlinky.agGrid.agGridStrings.autosizeColumns = "autosizeColumns".asInstanceOf[typingsSlinky.agGrid.agGridStrings.autosizeColumns]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def columnMenu: typingsSlinky.agGrid.agGridStrings.columnMenu = "columnMenu".asInstanceOf[typingsSlinky.agGrid.agGridStrings.columnMenu]
   @scala.inline
-  def columnMenu: typingsSlinky.agGrid.agGridStrings.columnMenu = this.cast("columnMenu")
+  def contextMenu: typingsSlinky.agGrid.agGridStrings.contextMenu = "contextMenu".asInstanceOf[typingsSlinky.agGrid.agGridStrings.contextMenu]
   @scala.inline
-  def contextMenu: typingsSlinky.agGrid.agGridStrings.contextMenu = this.cast("contextMenu")
+  def filterChanged: typingsSlinky.agGrid.agGridStrings.filterChanged = "filterChanged".asInstanceOf[typingsSlinky.agGrid.agGridStrings.filterChanged]
   @scala.inline
-  def filterChanged: typingsSlinky.agGrid.agGridStrings.filterChanged = this.cast("filterChanged")
+  def filterDestroyed: typingsSlinky.agGrid.agGridStrings.filterDestroyed = "filterDestroyed".asInstanceOf[typingsSlinky.agGrid.agGridStrings.filterDestroyed]
   @scala.inline
-  def filterDestroyed: typingsSlinky.agGrid.agGridStrings.filterDestroyed = this.cast("filterDestroyed")
+  def gridInitializing: typingsSlinky.agGrid.agGridStrings.gridInitializing = "gridInitializing".asInstanceOf[typingsSlinky.agGrid.agGridStrings.gridInitializing]
   @scala.inline
-  def gridInitializing: typingsSlinky.agGrid.agGridStrings.gridInitializing = this.cast("gridInitializing")
+  def gridOptionsChanged: typingsSlinky.agGrid.agGridStrings.gridOptionsChanged = "gridOptionsChanged".asInstanceOf[typingsSlinky.agGrid.agGridStrings.gridOptionsChanged]
   @scala.inline
-  def gridOptionsChanged: typingsSlinky.agGrid.agGridStrings.gridOptionsChanged = this.cast("gridOptionsChanged")
+  def rowModelUpdated: typingsSlinky.agGrid.agGridStrings.rowModelUpdated = "rowModelUpdated".asInstanceOf[typingsSlinky.agGrid.agGridStrings.rowModelUpdated]
   @scala.inline
-  def rowModelUpdated: typingsSlinky.agGrid.agGridStrings.rowModelUpdated = this.cast("rowModelUpdated")
+  def sizeColumnsToFit: typingsSlinky.agGrid.agGridStrings.sizeColumnsToFit = "sizeColumnsToFit".asInstanceOf[typingsSlinky.agGrid.agGridStrings.sizeColumnsToFit]
   @scala.inline
-  def sizeColumnsToFit: typingsSlinky.agGrid.agGridStrings.sizeColumnsToFit = this.cast("sizeColumnsToFit")
+  def toolPanelDragAndDrop: typingsSlinky.agGrid.agGridStrings.toolPanelDragAndDrop = "toolPanelDragAndDrop".asInstanceOf[typingsSlinky.agGrid.agGridStrings.toolPanelDragAndDrop]
   @scala.inline
-  def toolPanelDragAndDrop: typingsSlinky.agGrid.agGridStrings.toolPanelDragAndDrop = this.cast("toolPanelDragAndDrop")
+  def toolPanelUi: typingsSlinky.agGrid.agGridStrings.toolPanelUi = "toolPanelUi".asInstanceOf[typingsSlinky.agGrid.agGridStrings.toolPanelUi]
   @scala.inline
-  def toolPanelUi: typingsSlinky.agGrid.agGridStrings.toolPanelUi = this.cast("toolPanelUi")
+  def uiColumnDragged: typingsSlinky.agGrid.agGridStrings.uiColumnDragged = "uiColumnDragged".asInstanceOf[typingsSlinky.agGrid.agGridStrings.uiColumnDragged]
   @scala.inline
-  def uiColumnDragged: typingsSlinky.agGrid.agGridStrings.uiColumnDragged = this.cast("uiColumnDragged")
+  def uiColumnExpanded: typingsSlinky.agGrid.agGridStrings.uiColumnExpanded = "uiColumnExpanded".asInstanceOf[typingsSlinky.agGrid.agGridStrings.uiColumnExpanded]
   @scala.inline
-  def uiColumnExpanded: typingsSlinky.agGrid.agGridStrings.uiColumnExpanded = this.cast("uiColumnExpanded")
+  def uiColumnMoved: typingsSlinky.agGrid.agGridStrings.uiColumnMoved = "uiColumnMoved".asInstanceOf[typingsSlinky.agGrid.agGridStrings.uiColumnMoved]
   @scala.inline
-  def uiColumnMoved: typingsSlinky.agGrid.agGridStrings.uiColumnMoved = this.cast("uiColumnMoved")
+  def uiColumnResized: typingsSlinky.agGrid.agGridStrings.uiColumnResized = "uiColumnResized".asInstanceOf[typingsSlinky.agGrid.agGridStrings.uiColumnResized]
   @scala.inline
-  def uiColumnResized: typingsSlinky.agGrid.agGridStrings.uiColumnResized = this.cast("uiColumnResized")
-  @scala.inline
-  def uiColumnSorted: typingsSlinky.agGrid.agGridStrings.uiColumnSorted = this.cast("uiColumnSorted")
+  def uiColumnSorted: typingsSlinky.agGrid.agGridStrings.uiColumnSorted = "uiColumnSorted".asInstanceOf[typingsSlinky.agGrid.agGridStrings.uiColumnSorted]
 }
 

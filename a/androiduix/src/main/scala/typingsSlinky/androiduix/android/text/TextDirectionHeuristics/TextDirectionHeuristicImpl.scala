@@ -12,7 +12,5 @@ abstract class TextDirectionHeuristicImpl protected () extends TextDirectionHeur
   var mAlgorithm: js.Any = js.native
   /* protected */ def defaultIsRtl(): Boolean = js.native
   /* private */ def doCheck(cs: js.Any, start: js.Any, count: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def isRtl(cs: String, start: Double, count: Double): Boolean = js.native
 }
 

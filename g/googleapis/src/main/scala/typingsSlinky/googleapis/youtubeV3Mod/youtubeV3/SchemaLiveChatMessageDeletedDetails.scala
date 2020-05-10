@@ -11,10 +11,29 @@ trait SchemaLiveChatMessageDeletedDetails extends js.Object {
 
 object SchemaLiveChatMessageDeletedDetails {
   @scala.inline
-  def apply(deletedMessageId: String = null): SchemaLiveChatMessageDeletedDetails = {
+  def apply(): SchemaLiveChatMessageDeletedDetails = {
     val __obj = js.Dynamic.literal()
-    if (deletedMessageId != null) __obj.updateDynamic("deletedMessageId")(deletedMessageId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLiveChatMessageDeletedDetails]
   }
+  @scala.inline
+  implicit class SchemaLiveChatMessageDeletedDetailsOps[Self <: SchemaLiveChatMessageDeletedDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeletedMessageId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedMessageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletedMessageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedMessageId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

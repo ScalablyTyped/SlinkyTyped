@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   * In version 7.21.0: deleted
   * In version 6.6.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -41,16 +41,16 @@ class ConcreteEntityType protected () extends EntityType {
   @JSName("model")
   var model_FConcreteEntityType: IModel = js.native
   @JSName("containerAsBasicParameterType")
-  def containerAsBasicParameterType_MConcreteEntityType(): BasicParameterType = js.native
+  def containerAsBasicParameterType_MConcreteEntityType: BasicParameterType = js.native
   @JSName("containerAsJavaActionParameter")
-  def containerAsJavaActionParameter_MConcreteEntityType(): JavaActionParameter = js.native
+  def containerAsJavaActionParameter_MConcreteEntityType: JavaActionParameter = js.native
   @JSName("containerAsJavaAction")
-  def containerAsJavaAction_MConcreteEntityType(): JavaAction = js.native
+  def containerAsJavaAction_MConcreteEntityType: JavaAction = js.native
   @JSName("containerAsListType")
-  def containerAsListType_MConcreteEntityType(): ListType = js.native
-  def entity(): IEntity = js.native
+  def containerAsListType_MConcreteEntityType: ListType = js.native
+  def entity: IEntity = js.native
   def entity(newValue: IEntity): js.Any = js.native
-  def entityQualifiedName(): String = js.native
+  def entityQualifiedName: String = js.native
 }
 
 /* static members */

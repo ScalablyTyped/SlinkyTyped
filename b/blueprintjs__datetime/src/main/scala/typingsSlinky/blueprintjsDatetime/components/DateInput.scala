@@ -1,10 +1,8 @@
 package typingsSlinky.blueprintjsDatetime.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
 import typingsSlinky.blueprintjsDatetime.PartialIPopoverProps
@@ -19,75 +17,85 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DateInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsDatetime.mod.DateInput] {
+object DateInput {
   @JSImport("@blueprintjs/datetime", "DateInput")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, placeholder */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.mod.DateInput] {
+    @scala.inline
+    def canClearSelection(value: Boolean): this.type = set("canClearSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clearButtonText(value: String): this.type = set("clearButtonText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeOnSelection(value: Boolean): this.type = set("closeOnSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dayPickerProps(value: DayPickerProps): this.type = set("dayPickerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: js.Date): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: Boolean): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialMonth(value: js.Date): this.type = set("initialMonth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputProps(value: HTMLInputProps with IInputGroupProps): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def invalidDateMessage(value: String): this.type = set("invalidDateMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def localeUtils(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any): this.type = set("localeUtils", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modifiers(value: IDatePickerModifiers): this.type = set("modifiers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: (/* selectedDate */ js.Date, /* isUserChange */ Boolean) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onError(value: /* errorDate */ js.Date => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def outOfRangeMessage(value: String): this.type = set("outOfRangeMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popoverProps(value: PartialIPopoverProps with js.Object): this.type = set("popoverProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reverseMonthAndYearMenus(value: Boolean): this.type = set("reverseMonthAndYearMenus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightElement(value: ReactElement): this.type = set("rightElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shortcuts(value: Boolean | js.Array[IDatePickerShortcut]): this.type = set("shortcuts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showActionsBar(value: Boolean): this.type = set("showActionsBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePickerProps(value: ITimePickerProps): this.type = set("timePickerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timePrecision(value: TimePrecision): this.type = set("timePrecision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def todayButtonText(value: String): this.type = set("todayButtonText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueNull: this.type = set("value", null)
+  }
+  
+  def withProps(p: IDateInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     formatDate: (js.Date, js.UndefOr[String]) => String,
-    parseDate: (String, js.UndefOr[String]) => js.Date | Null | `false`,
-    canClearSelection: js.UndefOr[Boolean] = js.undefined,
-    clearButtonText: String = null,
-    closeOnSelection: js.UndefOr[Boolean] = js.undefined,
-    dayPickerProps: DayPickerProps = null,
-    defaultValue: js.Date = null,
-    fill: js.UndefOr[Boolean] = js.undefined,
-    initialMonth: js.Date = null,
-    inputProps: HTMLInputProps with IInputGroupProps = null,
-    invalidDateMessage: String = null,
-    locale: String = null,
-    localeUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    modifiers: IDatePickerModifiers = null,
-    onChange: (/* selectedDate */ js.Date, /* isUserChange */ Boolean) => Unit = null,
-    onError: /* errorDate */ js.Date => Unit = null,
-    outOfRangeMessage: String = null,
-    popoverProps: PartialIPopoverProps with js.Object = null,
-    reverseMonthAndYearMenus: js.UndefOr[Boolean] = js.undefined,
-    rightElement: ReactElement = null,
-    shortcuts: Boolean | js.Array[IDatePickerShortcut] = null,
-    showActionsBar: js.UndefOr[Boolean] = js.undefined,
-    timePickerProps: ITimePickerProps = null,
-    timePrecision: TimePrecision = null,
-    todayButtonText: String = null,
-    value: js.Date = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.mod.DateInput] = {
-    val __obj = js.Dynamic.literal(formatDate = js.Any.fromFunction2(formatDate), parseDate = js.Any.fromFunction2(parseDate))
-    if (!js.isUndefined(canClearSelection)) __obj.updateDynamic("canClearSelection")(canClearSelection.asInstanceOf[js.Any])
-    if (clearButtonText != null) __obj.updateDynamic("clearButtonText")(clearButtonText.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnSelection)) __obj.updateDynamic("closeOnSelection")(closeOnSelection.asInstanceOf[js.Any])
-    if (dayPickerProps != null) __obj.updateDynamic("dayPickerProps")(dayPickerProps.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(fill)) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (initialMonth != null) __obj.updateDynamic("initialMonth")(initialMonth.asInstanceOf[js.Any])
-    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
-    if (invalidDateMessage != null) __obj.updateDynamic("invalidDateMessage")(invalidDateMessage.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (localeUtils != null) __obj.updateDynamic("localeUtils")(localeUtils.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (outOfRangeMessage != null) __obj.updateDynamic("outOfRangeMessage")(outOfRangeMessage.asInstanceOf[js.Any])
-    if (popoverProps != null) __obj.updateDynamic("popoverProps")(popoverProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverseMonthAndYearMenus)) __obj.updateDynamic("reverseMonthAndYearMenus")(reverseMonthAndYearMenus.asInstanceOf[js.Any])
-    if (rightElement != null) __obj.updateDynamic("rightElement")(rightElement.asInstanceOf[js.Any])
-    if (shortcuts != null) __obj.updateDynamic("shortcuts")(shortcuts.asInstanceOf[js.Any])
-    if (!js.isUndefined(showActionsBar)) __obj.updateDynamic("showActionsBar")(showActionsBar.asInstanceOf[js.Any])
-    if (timePickerProps != null) __obj.updateDynamic("timePickerProps")(timePickerProps.asInstanceOf[js.Any])
-    if (timePrecision != null) __obj.updateDynamic("timePrecision")(timePrecision.asInstanceOf[js.Any])
-    if (todayButtonText != null) __obj.updateDynamic("todayButtonText")(todayButtonText.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    parseDate: (String, js.UndefOr[String]) => js.Date | Null | `false`
+  ): Builder = {
+    val __props = js.Dynamic.literal(formatDate = js.Any.fromFunction2(formatDate), parseDate = js.Any.fromFunction2(parseDate))
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDateInputProps]))
   }
-  type Props = IDateInputProps
 }
 

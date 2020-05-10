@@ -1,10 +1,9 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.AnonDatePickerLocale
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.date
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.datetime
@@ -21,131 +20,139 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DatePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object DatePicker {
   @JSImport("@ant-design/react-native/lib/date-picker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    date: js.Any = null,
-    defaultDate: js.Date = null,
-    dismissText: TagMod[Any] = null,
-    extra: String = null,
-    format: String | (js.Function1[/* value */ js.Date, String]) = null,
-    formatDay: (/* day */ Double, /* date */ js.UndefOr[js.Any]) => _ = null,
-    formatMonth: (/* month */ Double, /* date */ js.UndefOr[js.Any]) => _ = null,
-    itemStyle: StyleProp[ViewStyle] = null,
-    locale: AnonDatePickerLocale = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    minuteStep: Int | Double = null,
-    mode: datetime | date | year | month | time = null,
-    okText: TagMod[Any] = null,
-    onChange: /* value */ js.Date => Unit = null,
-    onDateChange: /* date */ js.Any => Unit = null,
-    onDismiss: () => Unit = null,
-    onScrollChange: (/* date */ js.Any, /* vals */ js.Any, /* index */ Double) => Unit = null,
-    onValueChange: (/* vals */ js.Any, /* index */ Double) => Unit = null,
-    rootNativeProps: js.Object = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: Partial[PickerStyle] = null,
-    title: TagMod[Any] = null,
-    triggerTypes: String = null,
-    use12Hours: js.UndefOr[Boolean] = js.undefined,
-    value: js.Date = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (defaultDate != null) __obj.updateDynamic("defaultDate")(defaultDate.asInstanceOf[js.Any])
-    if (dismissText != null) __obj.updateDynamic("dismissText")(dismissText.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (formatDay != null) __obj.updateDynamic("formatDay")(js.Any.fromFunction2(formatDay))
-    if (formatMonth != null) __obj.updateDynamic("formatMonth")(js.Any.fromFunction2(formatMonth))
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (minuteStep != null) __obj.updateDynamic("minuteStep")(minuteStep.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (okText != null) __obj.updateDynamic("okText")(okText.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onDateChange != null) __obj.updateDynamic("onDateChange")(js.Any.fromFunction1(onDateChange))
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
-    if (onScrollChange != null) __obj.updateDynamic("onScrollChange")(js.Any.fromFunction3(onScrollChange))
-    if (onValueChange != null) __obj.updateDynamic("onValueChange")(js.Any.fromFunction2(onValueChange))
-    if (rootNativeProps != null) __obj.updateDynamic("rootNativeProps")(rootNativeProps.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (triggerTypes != null) __obj.updateDynamic("triggerTypes")(triggerTypes.asInstanceOf[js.Any])
-    if (!js.isUndefined(use12Hours)) __obj.updateDynamic("use12Hours")(use12Hours.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def date(value: js.Any): this.type = set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultDate(value: js.Date): this.type = set("defaultDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dismissTextReactElement(value: ReactElement): this.type = set("dismissText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dismissText(value: TagMod[Any]): this.type = set("dismissText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extra(value: String): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatFunction1(value: /* value */ js.Date => String): this.type = set("format", js.Any.fromFunction1(value))
+    @scala.inline
+    def format(value: String | (js.Function1[/* value */ js.Date, String])): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatDay(value: (/* day */ Double, /* date */ js.UndefOr[js.Any]) => _): this.type = set("formatDay", js.Any.fromFunction2(value))
+    @scala.inline
+    def formatMonth(value: (/* month */ Double, /* date */ js.UndefOr[js.Any]) => _): this.type = set("formatMonth", js.Any.fromFunction2(value))
+    @scala.inline
+    def itemStyle(value: StyleProp[ViewStyle]): this.type = set("itemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemStyleNull: this.type = set("itemStyle", null)
+    @scala.inline
+    def locale(value: AnonDatePickerLocale): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minuteStep(value: Double): this.type = set("minuteStep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: datetime | date | year | month | time): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okTextReactElement(value: ReactElement): this.type = set("okText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okText(value: TagMod[Any]): this.type = set("okText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* value */ js.Date => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDateChange(value: /* date */ js.Any => Unit): this.type = set("onDateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDismiss(value: () => Unit): this.type = set("onDismiss", js.Any.fromFunction0(value))
+    @scala.inline
+    def onScrollChange(value: (/* date */ js.Any, /* vals */ js.Any, /* index */ Double) => Unit): this.type = set("onScrollChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def onValueChange(value: (/* vals */ js.Any, /* index */ Double) => Unit): this.type = set("onValueChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def rootNativeProps(value: js.Object): this.type = set("rootNativeProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def styles(value: Partial[PickerStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def triggerTypes(value: String): this.type = set("triggerTypes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def use12Hours(value: Boolean): this.type = set("use12Hours", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.antDesignReactNative.datePickerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DatePickerProps
+  
+  def withProps(p: DatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DatePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 
-object Datepicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.antDesignReactNative.datePickerDatepickerMod.default] {
+object Datepicker {
   @JSImport("@ant-design/react-native/lib/date-picker/datepicker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    date: js.Any = null,
-    defaultDate: js.Any = null,
-    formatDay: (/* day */ Double, /* date */ js.UndefOr[js.Any]) => _ = null,
-    formatMonth: (/* month */ Double, /* date */ js.UndefOr[js.Any]) => _ = null,
-    itemStyle: StyleProp[ViewStyle] = null,
-    locale: js.Any = null,
-    maxDate: js.Any = null,
-    minDate: js.Any = null,
-    minuteStep: Int | Double = null,
-    mode: String = null,
-    onDateChange: /* date */ js.Any => Unit = null,
-    onScrollChange: (/* date */ js.Any, /* vals */ js.Any, /* index */ Double) => Unit = null,
-    onValueChange: (/* vals */ js.Any, /* index */ Double) => Unit = null,
-    rootNativeProps: js.Object = null,
-    style: StyleProp[ViewStyle] = null,
-    use12Hours: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.antDesignReactNative.datePickerDatepickerMod.default] = {
-    val __obj = js.Dynamic.literal()
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (defaultDate != null) __obj.updateDynamic("defaultDate")(defaultDate.asInstanceOf[js.Any])
-    if (formatDay != null) __obj.updateDynamic("formatDay")(js.Any.fromFunction2(formatDay))
-    if (formatMonth != null) __obj.updateDynamic("formatMonth")(js.Any.fromFunction2(formatMonth))
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (minuteStep != null) __obj.updateDynamic("minuteStep")(minuteStep.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (onDateChange != null) __obj.updateDynamic("onDateChange")(js.Any.fromFunction1(onDateChange))
-    if (onScrollChange != null) __obj.updateDynamic("onScrollChange")(js.Any.fromFunction3(onScrollChange))
-    if (onValueChange != null) __obj.updateDynamic("onValueChange")(js.Any.fromFunction2(onValueChange))
-    if (rootNativeProps != null) __obj.updateDynamic("rootNativeProps")(rootNativeProps.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(use12Hours)) __obj.updateDynamic("use12Hours")(use12Hours.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.antDesignReactNative.datePickerDatepickerMod.default] {
+    @scala.inline
+    def date(value: js.Any): this.type = set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultDate(value: js.Any): this.type = set("defaultDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatDay(value: (/* day */ Double, /* date */ js.UndefOr[js.Any]) => _): this.type = set("formatDay", js.Any.fromFunction2(value))
+    @scala.inline
+    def formatMonth(value: (/* month */ Double, /* date */ js.UndefOr[js.Any]) => _): this.type = set("formatMonth", js.Any.fromFunction2(value))
+    @scala.inline
+    def itemStyle(value: StyleProp[ViewStyle]): this.type = set("itemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemStyleNull: this.type = set("itemStyle", null)
+    @scala.inline
+    def locale(value: js.Any): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Any): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Any): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minuteStep(value: Double): this.type = set("minuteStep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: String): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDateChange(value: /* date */ js.Any => Unit): this.type = set("onDateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onScrollChange(value: (/* date */ js.Any, /* vals */ js.Any, /* index */ Double) => Unit): this.type = set("onScrollChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def onValueChange(value: (/* vals */ js.Any, /* index */ Double) => Unit): this.type = set("onValueChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def rootNativeProps(value: js.Object): this.type = set("rootNativeProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def use12Hours(value: Boolean): this.type = set("use12Hours", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.antDesignReactNative.datePickerDatepickerMod.default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.antDesignReactNative.datePickerDatepickerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.antDesignReactNative.datePickerPropsMod.DatePickerProps
+  
+  def withProps(p: typingsSlinky.antDesignReactNative.datePickerPropsMod.DatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Datepicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

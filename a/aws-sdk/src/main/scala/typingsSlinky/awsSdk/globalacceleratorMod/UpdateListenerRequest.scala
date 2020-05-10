@@ -26,17 +26,59 @@ trait UpdateListenerRequest extends js.Object {
 
 object UpdateListenerRequest {
   @scala.inline
-  def apply(
-    ListenerArn: GenericString,
-    ClientAffinity: ClientAffinity = null,
-    PortRanges: PortRanges = null,
-    Protocol: Protocol = null
-  ): UpdateListenerRequest = {
+  def apply(ListenerArn: GenericString): UpdateListenerRequest = {
     val __obj = js.Dynamic.literal(ListenerArn = ListenerArn.asInstanceOf[js.Any])
-    if (ClientAffinity != null) __obj.updateDynamic("ClientAffinity")(ClientAffinity.asInstanceOf[js.Any])
-    if (PortRanges != null) __obj.updateDynamic("PortRanges")(PortRanges.asInstanceOf[js.Any])
-    if (Protocol != null) __obj.updateDynamic("Protocol")(Protocol.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateListenerRequest]
   }
+  @scala.inline
+  implicit class UpdateListenerRequestOps[Self <: UpdateListenerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withListenerArn(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ListenerArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientAffinity(value: ClientAffinity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientAffinity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientAffinity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientAffinity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortRanges(value: PortRanges): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: Protocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Protocol")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

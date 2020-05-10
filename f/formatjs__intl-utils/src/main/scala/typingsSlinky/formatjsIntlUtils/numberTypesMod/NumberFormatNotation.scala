@@ -14,14 +14,12 @@ trait NumberFormatNotation extends js.Object
 
 object NumberFormatNotation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def compact: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.compact = "compact".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.compact]
   @scala.inline
-  def compact: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.compact = this.cast("compact")
+  def engineering: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.engineering = "engineering".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.engineering]
   @scala.inline
-  def engineering: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.engineering = this.cast("engineering")
+  def scientific: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.scientific = "scientific".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.scientific]
   @scala.inline
-  def scientific: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.scientific = this.cast("scientific")
-  @scala.inline
-  def standard: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.standard = this.cast("standard")
+  def standard: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.standard = "standard".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.standard]
 }
 

@@ -1,11 +1,8 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.splitButtonMod.SplitButtonProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import typingsSlinky.std.Event_
@@ -13,44 +10,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SplitButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactSplitbuttonMod.SplitButton] {
+object SplitButton {
   @JSImport("primereact/splitbutton", "SplitButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, label */
-  def apply(
-    appendTo: HTMLElement = null,
-    icon: String = null,
-    menuClassName: String = null,
-    menuStyle: js.Object = null,
-    model: js.Array[_] = null,
-    onClick: /* event */ Event_ => Unit = null,
-    style: js.Object = null,
-    tabIndex: String = null,
-    tooltip: js.Any = null,
-    tooltipOptions: TooltipOptions = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactSplitbuttonMod.SplitButton] = {
-    val __obj = js.Dynamic.literal()
-    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (menuClassName != null) __obj.updateDynamic("menuClassName")(menuClassName.asInstanceOf[js.Any])
-    if (menuStyle != null) __obj.updateDynamic("menuStyle")(menuStyle.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactSplitbuttonMod.SplitButton] {
+    @scala.inline
+    def appendTo(value: HTMLElement): this.type = set("appendTo", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: String): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuClassName(value: String): this.type = set("menuClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuStyle(value: js.Object): this.type = set("menuStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def model(value: js.Array[_]): this.type = set("model", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* event */ Event_ => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: String): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: js.Any): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipOptions(value: TooltipOptions): this.type = set("tooltipOptions", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactSplitbuttonMod.SplitButton] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactSplitbuttonMod.SplitButton](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SplitButtonProps
+  
+  def withProps(p: SplitButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SplitButton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

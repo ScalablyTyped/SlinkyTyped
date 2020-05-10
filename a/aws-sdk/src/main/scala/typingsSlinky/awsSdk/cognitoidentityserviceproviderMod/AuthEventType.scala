@@ -42,26 +42,113 @@ trait AuthEventType extends js.Object {
 
 object AuthEventType {
   @scala.inline
-  def apply(
-    ChallengeResponses: ChallengeResponseListType = null,
-    CreationDate: js.Date = null,
-    EventContextData: EventContextDataType = null,
-    EventFeedback: EventFeedbackType = null,
-    EventId: StringType = null,
-    EventResponse: EventResponseType = null,
-    EventRisk: EventRiskType = null,
-    EventType: EventType = null
-  ): AuthEventType = {
+  def apply(): AuthEventType = {
     val __obj = js.Dynamic.literal()
-    if (ChallengeResponses != null) __obj.updateDynamic("ChallengeResponses")(ChallengeResponses.asInstanceOf[js.Any])
-    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
-    if (EventContextData != null) __obj.updateDynamic("EventContextData")(EventContextData.asInstanceOf[js.Any])
-    if (EventFeedback != null) __obj.updateDynamic("EventFeedback")(EventFeedback.asInstanceOf[js.Any])
-    if (EventId != null) __obj.updateDynamic("EventId")(EventId.asInstanceOf[js.Any])
-    if (EventResponse != null) __obj.updateDynamic("EventResponse")(EventResponse.asInstanceOf[js.Any])
-    if (EventRisk != null) __obj.updateDynamic("EventRisk")(EventRisk.asInstanceOf[js.Any])
-    if (EventType != null) __obj.updateDynamic("EventType")(EventType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthEventType]
   }
+  @scala.inline
+  implicit class AuthEventTypeOps[Self <: AuthEventType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChallengeResponses(value: ChallengeResponseListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeResponses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChallengeResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChallengeResponses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventContextData(value: EventContextDataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventContextData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventContextData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventContextData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventFeedback(value: EventFeedbackType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventFeedback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventFeedback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventFeedback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventId(value: StringType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventResponse(value: EventResponseType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventRisk(value: EventRiskType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventRisk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventRisk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventRisk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventType(value: EventType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

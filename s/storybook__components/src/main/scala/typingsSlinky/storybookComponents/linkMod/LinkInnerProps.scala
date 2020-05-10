@@ -12,11 +12,41 @@ trait LinkInnerProps extends js.Object {
 
 object LinkInnerProps {
   @scala.inline
-  def apply(containsIcon: js.UndefOr[Boolean] = js.undefined, withArrow: js.UndefOr[Boolean] = js.undefined): LinkInnerProps = {
+  def apply(): LinkInnerProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(containsIcon)) __obj.updateDynamic("containsIcon")(containsIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(withArrow)) __obj.updateDynamic("withArrow")(withArrow.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinkInnerProps]
   }
+  @scala.inline
+  implicit class LinkInnerPropsOps[Self <: LinkInnerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainsIcon(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainsIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithArrow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withArrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithArrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withArrow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

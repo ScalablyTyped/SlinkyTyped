@@ -49,16 +49,53 @@ trait SchemaDateOperatorOptions extends js.Object {
 
 object SchemaDateOperatorOptions {
   @scala.inline
-  def apply(
-    greaterThanOperatorName: String = null,
-    lessThanOperatorName: String = null,
-    operatorName: String = null
-  ): SchemaDateOperatorOptions = {
+  def apply(): SchemaDateOperatorOptions = {
     val __obj = js.Dynamic.literal()
-    if (greaterThanOperatorName != null) __obj.updateDynamic("greaterThanOperatorName")(greaterThanOperatorName.asInstanceOf[js.Any])
-    if (lessThanOperatorName != null) __obj.updateDynamic("lessThanOperatorName")(lessThanOperatorName.asInstanceOf[js.Any])
-    if (operatorName != null) __obj.updateDynamic("operatorName")(operatorName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDateOperatorOptions]
   }
+  @scala.inline
+  implicit class SchemaDateOperatorOptionsOps[Self <: SchemaDateOperatorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGreaterThanOperatorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("greaterThanOperatorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGreaterThanOperatorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("greaterThanOperatorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLessThanOperatorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lessThanOperatorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLessThanOperatorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lessThanOperatorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -20,6 +20,7 @@ import scala.scalajs.js.annotation._
   * is simple and effective.
   *
   */
+@js.native
 trait oo extends js.Object {
   /**
     * Creates a constructor Function from a
@@ -41,7 +42,7 @@ trait oo extends js.Object {
     * using extend() (See below).
     *
     */
-  def declare(): js.Any
+  def declare(): js.Any = js.native
   /**
     * Extends constructors to inherit from other
     * constructors .
@@ -56,15 +57,34 @@ trait oo extends js.Object {
     * constructor will fire first.
     *
     */
-  def extend(): js.Function
+  def extend(): js.Function = js.native
 }
 
 object oo {
   @scala.inline
   def apply(declare: () => js.Any, extend: () => js.Function): oo = {
     val __obj = js.Dynamic.literal(declare = js.Any.fromFunction0(declare), extend = js.Any.fromFunction0(extend))
-  
     __obj.asInstanceOf[oo]
   }
+  @scala.inline
+  implicit class ooOps[Self <: oo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeclare(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declare")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withExtend(value: () => js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

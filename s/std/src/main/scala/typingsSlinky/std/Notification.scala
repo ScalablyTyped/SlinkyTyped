@@ -103,7 +103,7 @@ trait Notification extends EventTarget {
   def removeEventListener_click(
     `type`: click,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
@@ -120,7 +120,7 @@ trait Notification extends EventTarget {
   def removeEventListener_close(
     `type`: typingsSlinky.std.stdStrings.close,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -134,7 +134,7 @@ trait Notification extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_show(`type`: show, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -148,15 +148,19 @@ trait Notification extends EventTarget {
   def removeEventListener_show(
     `type`: show,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("Notification")
 @js.native
 object Notification
-  extends Instantiable1[/* title */ java.lang.String, Notification]
-     with Instantiable2[/* title */ java.lang.String, /* options */ NotificationOptions, Notification] {
+  extends Instantiable1[/* title */ java.lang.String, org.scalajs.dom.experimental.Notification]
+     with Instantiable2[
+      /* title */ java.lang.String, 
+      /* options */ org.scalajs.dom.experimental.NotificationOptions, 
+      org.scalajs.dom.experimental.Notification
+    ] {
   val maxActions: Double = js.native
   val permission: NotificationPermission = js.native
   def requestPermission(): js.Promise[NotificationPermission] = js.native

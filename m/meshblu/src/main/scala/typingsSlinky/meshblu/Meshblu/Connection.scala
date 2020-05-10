@@ -4,34 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Connection extends js.Object {
-  def authenticate(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection
-  def bufferedSocketEmit(): Unit
-  def claimdevice(data: Device, fn: js.Function1[/* result */ Device, Unit]): Connection
-  def close(fn: js.Function1[/* result */ js.Any, Unit]): Connection
-  def connect(): Unit
+  def authenticate(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
+  def bufferedSocketEmit(): Unit = js.native
+  def claimdevice(data: Device, fn: js.Function1[/* result */ Device, Unit]): Connection = js.native
+  def close(fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
+  def connect(): Unit = js.native
   /**
   		 * Send a meshblu data message.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 * @returns This Connection.
   		 */
-  def data(data: DataInput, fn: js.Function1[/* result */ js.Any, Unit]): Connection
+  def data(data: DataInput, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
   /**
   		 * Find a Meshblu device.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 * @returns This Connection.
   		 */
-  def device(data: Device, fn: js.Function1[/* result */ DeviceResponse, Unit]): Connection
+  def device(data: Device, fn: js.Function1[/* result */ DeviceResponse, Unit]): Connection = js.native
   /**
   		 * Find Meshblu devices.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 * @returns This Connection.
   		 */
-  def devices(data: Color, fn: js.Function1[/* result */ js.Array[DeviceResponse], Unit]): Connection
-  def directText(data: js.Any): Connection
+  def devices(data: Color, fn: js.Function1[/* result */ js.Array[DeviceResponse], Unit]): Connection = js.native
+  def directText(data: js.Any): Connection = js.native
   /**
   		 * @param uuid
   		 * @param message {string|number|object|array|Buffer} - data for encrypting.
@@ -45,15 +46,15 @@ trait Connection extends js.Object {
     message: js.Any,
     options: ConnectionOptions,
     fn: js.Function1[/* result */ js.Any, Unit]
-  ): Connection
-  def events(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection
+  ): Connection = js.native
+  def events(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
   /**
   		 * Generate a new session token for a device.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 */
-  def generateAndStoreToken(data: Device, fn: js.Function1[/* result */ ConnectionOptions, Unit]): Unit
-  def generateKeyPair(): KeyPair
+  def generateAndStoreToken(data: Device, fn: js.Function1[/* result */ ConnectionOptions, Unit]): Unit = js.native
+  def generateKeyPair(): KeyPair = js.native
   /**
   		 *
   		 * @param uuid
@@ -61,20 +62,20 @@ trait Connection extends js.Object {
   		 * 	which will be null if there was no problem, and one parameter, publicKey,
   		 * 	of type NodeRSA.
   		 */
-  def getPublicKey(uuid: String, fn: js.Function2[/* err */ js.Error, /* publicKey */ js.Any, Unit]): Unit
+  def getPublicKey(uuid: String, fn: js.Function2[/* err */ js.Error, /* publicKey */ js.Any, Unit]): Unit = js.native
   /**
   		 * Get a meshblu data for a device.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 * @returns This Connection.
   		 */
-  def getdata(data: GetDataInput, fn: js.Function1[/* result */ js.Any, Unit]): Connection
+  def getdata(data: GetDataInput, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
   /**
   		 * Authenticate with Meshblu.
   		 * @returns This Connection.
   		 */
-  def identify(): Connection
-  def localdevices(fn: js.Function1[/* result */ js.Any, Unit]): Connection
+  def identify(): Connection = js.native
+  def localdevices(fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
   /**
   		 * Send a meshblu message.
   		 * @param payload An array of devices UUIDs.
@@ -82,80 +83,80 @@ trait Connection extends js.Object {
   		 * 	which is an object containing a property "error".
   		 * @returns This Connection.
   		 */
-  def message(payload: MessagePayload, fn: js.Function1[/* result */ js.Any, Unit]): Connection
-  def mydevices(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection
-  def parseUrl(serverUrl: String, port: String): String
-  def reconnect(): Unit
+  def message(payload: MessagePayload, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
+  def mydevices(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
+  def parseUrl(serverUrl: String, port: String): String = js.native
+  def reconnect(): Unit = js.native
   /**
   		 * Register a new device record.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 * @returns This Connection.
   		 */
-  def register(data: RegisterData, fn: js.Function1[/* result */ RegisterResponse, Unit]): Connection
-  def resetToken(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Unit
+  def register(data: RegisterData, fn: js.Function1[/* result */ RegisterResponse, Unit]): Connection = js.native
+  def resetToken(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Unit = js.native
   /**
   		 * Remove a session token from a device.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 */
-  def revokeToken(data: ConnectionOptions, fn: js.Function1[/* result */ Device, Unit]): Unit
+  def revokeToken(data: ConnectionOptions, fn: js.Function1[/* result */ Device, Unit]): Unit = js.native
   /*
   		 * Lack of documentation about these api functions.
   		 */
-  def send(text: String): Connection
-  def setPrivateKey(privateKey: String): Unit
-  def setup(): Connection
+  def send(text: String): Connection = js.native
+  def setPrivateKey(privateKey: String): Unit = js.native
+  def setup(): Connection = js.native
   /**
   		 * @param data {string|number|object|array|Buffer} - data for signing.
   		 */
-  def sign(data: js.Any): String
-  def status(data: js.Any): Connection
+  def sign(data: js.Any): String = js.native
+  def status(data: js.Any): Connection = js.native
   /**
   		 * Returns device messages as they are sent and received.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 * @returns This Connection.
   		 */
-  def subscribe(data: SubscribeData, fn: js.Function1[/* result */ js.Any, Unit]): Connection
-  def subscribeText(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection
-  def textBroadcast(data: js.Any): Connection
-  def unclaimeddevices(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection
+  def subscribe(data: SubscribeData, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
+  def subscribeText(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
+  def textBroadcast(data: js.Any): Connection = js.native
+  def unclaimeddevices(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
   /**
   		 * Removes a device record.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 * @returns This Connection.
   		 */
-  def unregister(data: Device, fn: js.Function1[/* result */ Device, Unit]): Connection
+  def unregister(data: Device, fn: js.Function1[/* result */ Device, Unit]): Connection = js.native
   /**
   		 * Cancels device subscription.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 * @returns This Connection.
   		 */
-  def unsubscribe(data: UnsubscribeData, fn: js.Function1[/* result */ js.Any, Unit]): Connection
-  def unsubscribeText(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection
+  def unsubscribe(data: UnsubscribeData, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
+  def unsubscribeText(data: js.Any, fn: js.Function1[/* result */ js.Any, Unit]): Connection = js.native
   /**
   		 * Update a device record.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 * @returns This Connection.
   		 */
-  def update(data: UpdateData, fn: js.Function1[/* result */ UpdateSuccess, Unit]): Connection
+  def update(data: UpdateData, fn: js.Function1[/* result */ UpdateSuccess, Unit]): Connection = js.native
   /**
   		 * @param message {string|number|object|array|Buffer} - signed data.
   		 * @param signature
   		 * @returns {*}
   		 */
-  def verify(message: js.Any, signature: js.Any): js.Any
+  def verify(message: js.Any, signature: js.Any): js.Any = js.native
   /**
   		 * Get my device info.
   		 * @param data
   		 * @param fn The callback to be called. It should take one parameter, result.
   		 * @returns This Connection.
   		 */
-  def whoami(data: js.Any, fn: js.Function1[/* result */ DeviceResponse, Unit]): Connection
+  def whoami(data: js.Any, fn: js.Function1[/* result */ DeviceResponse, Unit]): Connection = js.native
 }
 
 object Connection {
@@ -202,8 +203,249 @@ object Connection {
     whoami: (js.Any, js.Function1[/* result */ DeviceResponse, Unit]) => Connection
   ): Connection = {
     val __obj = js.Dynamic.literal(authenticate = js.Any.fromFunction2(authenticate), bufferedSocketEmit = js.Any.fromFunction0(bufferedSocketEmit), claimdevice = js.Any.fromFunction2(claimdevice), close = js.Any.fromFunction1(close), connect = js.Any.fromFunction0(connect), data = js.Any.fromFunction2(data), device = js.Any.fromFunction2(device), devices = js.Any.fromFunction2(devices), directText = js.Any.fromFunction1(directText), encryptMessage = js.Any.fromFunction4(encryptMessage), events = js.Any.fromFunction2(events), generateAndStoreToken = js.Any.fromFunction2(generateAndStoreToken), generateKeyPair = js.Any.fromFunction0(generateKeyPair), getPublicKey = js.Any.fromFunction2(getPublicKey), getdata = js.Any.fromFunction2(getdata), identify = js.Any.fromFunction0(identify), localdevices = js.Any.fromFunction1(localdevices), message = js.Any.fromFunction2(message), mydevices = js.Any.fromFunction2(mydevices), parseUrl = js.Any.fromFunction2(parseUrl), reconnect = js.Any.fromFunction0(reconnect), register = js.Any.fromFunction2(register), resetToken = js.Any.fromFunction2(resetToken), revokeToken = js.Any.fromFunction2(revokeToken), send = js.Any.fromFunction1(send), setPrivateKey = js.Any.fromFunction1(setPrivateKey), setup = js.Any.fromFunction0(setup), sign = js.Any.fromFunction1(sign), status = js.Any.fromFunction1(status), subscribe = js.Any.fromFunction2(subscribe), subscribeText = js.Any.fromFunction2(subscribeText), textBroadcast = js.Any.fromFunction1(textBroadcast), unclaimeddevices = js.Any.fromFunction2(unclaimeddevices), unregister = js.Any.fromFunction2(unregister), unsubscribe = js.Any.fromFunction2(unsubscribe), unsubscribeText = js.Any.fromFunction2(unsubscribeText), update = js.Any.fromFunction2(update), verify = js.Any.fromFunction2(verify), whoami = js.Any.fromFunction2(whoami))
-  
     __obj.asInstanceOf[Connection]
   }
+  @scala.inline
+  implicit class ConnectionOps[Self <: Connection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticate(value: (js.Any, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withBufferedSocketEmit(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferedSocketEmit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withClaimdevice(value: (Device, js.Function1[/* result */ Device, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claimdevice")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withClose(value: js.Function1[/* result */ js.Any, Unit] => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withConnect(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withData(value: (DataInput, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDevice(value: (Device, js.Function1[/* result */ DeviceResponse, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDevices(value: (Color, js.Function1[/* result */ js.Array[DeviceResponse], Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devices")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDirectText(value: js.Any => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEncryptMessage(value: (String, js.Any, ConnectionOptions, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptMessage")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withEvents(value: (js.Any, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGenerateAndStoreToken(value: (Device, js.Function1[/* result */ ConnectionOptions, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateAndStoreToken")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGenerateKeyPair(value: () => KeyPair): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateKeyPair")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPublicKey(value: (String, js.Function2[/* err */ js.Error, /* publicKey */ js.Any, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPublicKey")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetdata(value: (GetDataInput, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getdata")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withIdentify(value: () => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identify")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLocaldevices(value: js.Function1[/* result */ js.Any, Unit] => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localdevices")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMessage(value: (MessagePayload, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withMydevices(value: (js.Any, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mydevices")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withParseUrl(value: (String, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseUrl")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withReconnect(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRegister(value: (RegisterData, js.Function1[/* result */ RegisterResponse, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withResetToken(value: (js.Any, js.Function1[/* result */ js.Any, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetToken")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRevokeToken(value: (ConnectionOptions, js.Function1[/* result */ Device, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revokeToken")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSend(value: String => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetPrivateKey(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrivateKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetup(value: () => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSign(value: js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sign")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStatus(value: js.Any => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSubscribe(value: (SubscribeData, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscribe")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSubscribeText(value: (js.Any, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscribeText")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withTextBroadcast(value: js.Any => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textBroadcast")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUnclaimeddevices(value: (js.Any, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unclaimeddevices")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUnregister(value: (Device, js.Function1[/* result */ Device, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unregister")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUnsubscribe(value: (UnsubscribeData, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribe")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUnsubscribeText(value: (js.Any, js.Function1[/* result */ js.Any, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unsubscribeText")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: (UpdateData, js.Function1[/* result */ UpdateSuccess, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withVerify(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verify")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withWhoami(value: (js.Any, js.Function1[/* result */ DeviceResponse, Unit]) => Connection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoami")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

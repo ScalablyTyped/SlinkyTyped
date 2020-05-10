@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Readers extends js.Object {
   /**
     * Function that interprets the cell into data
@@ -20,7 +21,7 @@ trait Readers extends js.Object {
     *    return $(cell).html();
     * };
     */
-  var _attributeReader: js.UndefOr[js.Function2[/* cell */ Element, /* record */ js.Any, _]] = js.undefined
+  var _attributeReader: js.UndefOr[js.Function2[/* cell */ Element, /* record */ js.Any, _]] = js.native
   /**
     * Function that interprets the row into data
     *
@@ -36,19 +37,46 @@ trait Readers extends js.Object {
     *     //...
     * };
     */
-  var _rowReader: js.UndefOr[js.Function3[/* index */ Double, /* thisRef */ js.Any, /* record */ js.Any, _]] = js.undefined
+  var _rowReader: js.UndefOr[js.Function3[/* index */ Double, /* thisRef */ js.Any, /* record */ js.Any, _]] = js.native
 }
 
 object Readers {
   @scala.inline
-  def apply(
-    _attributeReader: (/* cell */ Element, /* record */ js.Any) => _ = null,
-    _rowReader: (/* index */ Double, /* thisRef */ js.Any, /* record */ js.Any) => _ = null
-  ): Readers = {
+  def apply(): Readers = {
     val __obj = js.Dynamic.literal()
-    if (_attributeReader != null) __obj.updateDynamic("_attributeReader")(js.Any.fromFunction2(_attributeReader))
-    if (_rowReader != null) __obj.updateDynamic("_rowReader")(js.Any.fromFunction3(_rowReader))
     __obj.asInstanceOf[Readers]
   }
+  @scala.inline
+  implicit class ReadersOps[Self <: Readers] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_attributeReader(value: (/* cell */ Element, /* record */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_attributeReader")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def without_attributeReader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_attributeReader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_rowReader(value: (/* index */ Double, /* thisRef */ js.Any, /* record */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_rowReader")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def without_rowReader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_rowReader")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

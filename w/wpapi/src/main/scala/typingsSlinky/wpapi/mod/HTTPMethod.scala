@@ -15,16 +15,14 @@ trait HTTPMethod extends js.Object
 
 object HTTPMethod {
   @scala.inline
-  def DELETE: typingsSlinky.wpapi.wpapiStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.wpapi.wpapiStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.wpapi.wpapiStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.wpapi.wpapiStrings.GET = "GET".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.GET]
   @scala.inline
-  def PATCH: typingsSlinky.wpapi.wpapiStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.wpapi.wpapiStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.wpapi.wpapiStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.wpapi.wpapiStrings.POST = "POST".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.wpapi.wpapiStrings.PUT = this.cast("PUT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PUT: typingsSlinky.wpapi.wpapiStrings.PUT = "PUT".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.PUT]
 }
 

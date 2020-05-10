@@ -51,7 +51,7 @@ package object rdsdataserviceMod {
   */
   type TypeHint = typingsSlinky.awsSdk.rdsdataserviceMod._TypeHint | java.lang.String
   type UpdateResults = js.Array[typingsSlinky.awsSdk.rdsdataserviceMod.UpdateResult]
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.rdsdataserviceMod.Blob | java.lang.String
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.rdsdataserviceMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2018-08-01`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

@@ -5,51 +5,144 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgButton
   extends /**
-	 * Option for igButton
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
-  var centerLabel: js.UndefOr[Boolean] = js.undefined
-  var css: js.UndefOr[js.Any] = js.undefined
-  var height: js.UndefOr[js.Any] = js.undefined
-  var icons: js.UndefOr[IgButtonIcons] = js.undefined
-  var labelText: js.UndefOr[String] = js.undefined
-  var link: js.UndefOr[IgButtonLink] = js.undefined
-  var onlyIcons: js.UndefOr[Boolean] = js.undefined
-  var title: js.UndefOr[Boolean] = js.undefined
-  var width: js.UndefOr[js.Any] = js.undefined
+  var centerLabel: js.UndefOr[Boolean] = js.native
+  var css: js.UndefOr[js.Any] = js.native
+  var height: js.UndefOr[js.Any] = js.native
+  var icons: js.UndefOr[IgButtonIcons] = js.native
+  var labelText: js.UndefOr[String] = js.native
+  var link: js.UndefOr[IgButtonLink] = js.native
+  var onlyIcons: js.UndefOr[Boolean] = js.native
+  var title: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[js.Any] = js.native
 }
 
 object IgButton {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for igButton
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    centerLabel: js.UndefOr[Boolean] = js.undefined,
-    css: js.Any = null,
-    height: js.Any = null,
-    icons: IgButtonIcons = null,
-    labelText: String = null,
-    link: IgButtonLink = null,
-    onlyIcons: js.UndefOr[Boolean] = js.undefined,
-    title: js.UndefOr[Boolean] = js.undefined,
-    width: js.Any = null
-  ): IgButton = {
+  def apply(): IgButton = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(centerLabel)) __obj.updateDynamic("centerLabel")(centerLabel.asInstanceOf[js.Any])
-    if (css != null) __obj.updateDynamic("css")(css.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
-    if (labelText != null) __obj.updateDynamic("labelText")(labelText.asInstanceOf[js.Any])
-    if (link != null) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (!js.isUndefined(onlyIcons)) __obj.updateDynamic("onlyIcons")(onlyIcons.asInstanceOf[js.Any])
-    if (!js.isUndefined(title)) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgButton]
   }
+  @scala.inline
+  implicit class IgButtonOps[Self <: IgButton] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCenterLabel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("centerLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenterLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("centerLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCss(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("css")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcons(value: IgButtonIcons): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: IgButtonLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlyIcons(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyIcons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlyIcons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyIcons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

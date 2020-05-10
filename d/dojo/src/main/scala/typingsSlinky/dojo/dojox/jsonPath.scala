@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   * this module.
   *
   */
+@js.native
 trait jsonPath extends js.Object
 
 @JSGlobal("dojox.jsonPath")

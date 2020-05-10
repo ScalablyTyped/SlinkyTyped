@@ -1,44 +1,46 @@
 package typingsSlinky.formol.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.formol.mod.FieldSetProps
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FieldSet
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.formol.mod.FieldSet] {
+object FieldSet {
   @JSImport("formol", "FieldSet")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: type */
-  def apply(
-    choices: js.Array[_] = null,
-    dangerousRawHTMLLabels: js.UndefOr[Boolean] = js.undefined,
-    elementRef: Ref[_] = null,
-    isChecked: js.UndefOr[Boolean] = js.undefined,
-    onChange: () => Unit = null,
-    value: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.formol.mod.FieldSet] = {
-    val __obj = js.Dynamic.literal()
-    if (choices != null) __obj.updateDynamic("choices")(choices.asInstanceOf[js.Any])
-    if (!js.isUndefined(dangerousRawHTMLLabels)) __obj.updateDynamic("dangerousRawHTMLLabels")(dangerousRawHTMLLabels.asInstanceOf[js.Any])
-    if (elementRef != null) __obj.updateDynamic("elementRef")(elementRef.asInstanceOf[js.Any])
-    if (!js.isUndefined(isChecked)) __obj.updateDynamic("isChecked")(isChecked.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction0(onChange))
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.formol.mod.FieldSet] {
+    @scala.inline
+    def choices(value: js.Array[_]): this.type = set("choices", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dangerousRawHTMLLabels(value: Boolean): this.type = set("dangerousRawHTMLLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def elementRefRefObject(value: ReactRef[_]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def elementRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("elementRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def elementRef(value: Ref[_]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def elementRefNull: this.type = set("elementRef", null)
+    @scala.inline
+    def isChecked(value: Boolean): this.type = set("isChecked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: () => Unit): this.type = set("onChange", js.Any.fromFunction0(value))
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.formol.mod.FieldSet] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.formol.mod.FieldSet](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FieldSetProps[js.Any]
+  
+  def withProps(p: FieldSetProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FieldSet.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -22,30 +22,28 @@ trait TypeaheadInputPropKeys extends js.Object
 
 object TypeaheadInputPropKeys {
   @scala.inline
-  def bsSize: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.bsSize = this.cast("bsSize")
+  def bsSize: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.bsSize = "bsSize".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.bsSize]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.disabled = "disabled".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.disabled = this.cast("disabled")
+  def inputProps: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.inputProps = "inputProps".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.inputProps]
   @scala.inline
-  def inputProps: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.inputProps = this.cast("inputProps")
+  def labelKey: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.labelKey = "labelKey".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.labelKey]
   @scala.inline
-  def labelKey: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.labelKey = this.cast("labelKey")
+  def multiple: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.multiple = "multiple".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.multiple]
   @scala.inline
-  def multiple: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.multiple = this.cast("multiple")
+  def onBlur: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onBlur = "onBlur".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onBlur]
   @scala.inline
-  def onBlur: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onBlur = this.cast("onBlur")
+  def onChange: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onChange = "onChange".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onChange]
   @scala.inline
-  def onChange: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onChange = this.cast("onChange")
+  def onFocus: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onFocus = "onFocus".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onFocus]
   @scala.inline
-  def onFocus: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onFocus = this.cast("onFocus")
+  def onKeyDown: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onKeyDown = "onKeyDown".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onKeyDown]
   @scala.inline
-  def onKeyDown: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.onKeyDown = this.cast("onKeyDown")
+  def placeholder: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.placeholder = "placeholder".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.placeholder]
   @scala.inline
-  def placeholder: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.placeholder = this.cast("placeholder")
+  def renderToken: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.renderToken = "renderToken".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.renderToken]
   @scala.inline
-  def renderToken: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.renderToken = this.cast("renderToken")
-  @scala.inline
-  def selected: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.selected = this.cast("selected")
+  def selected: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.selected = "selected".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.selected]
 }
 

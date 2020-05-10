@@ -8,16 +8,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Subscription extends ExtendedBase {
-  var CountDetails: StringDictionary[String]
-  var DeadLetteringOnFilterEvaluationExceptions: String
-  var DeadLetteringOnMessageExpiration: String
-  var LockDuration: String
-  var MaxDeliveryCount: String
-  var MessageCount: String
-  var RequiresSession: String
-  var SubscriptionName: String
-  var TopicName: String
+  var CountDetails: StringDictionary[String] = js.native
+  var DeadLetteringOnFilterEvaluationExceptions: String = js.native
+  var DeadLetteringOnMessageExpiration: String = js.native
+  var LockDuration: String = js.native
+  var MaxDeliveryCount: String = js.native
+  var MessageCount: String = js.native
+  var RequiresSession: String = js.native
+  var SubscriptionName: String = js.native
+  var TopicName: String = js.native
 }
 
 object Subscription {
@@ -53,5 +54,67 @@ object Subscription {
     __obj.updateDynamic("_")(_underscore.asInstanceOf[js.Any])
     __obj.asInstanceOf[Subscription]
   }
+  @scala.inline
+  implicit class SubscriptionOps[Self <: Subscription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountDetails(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CountDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeadLetteringOnFilterEvaluationExceptions(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeadLetteringOnFilterEvaluationExceptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeadLetteringOnMessageExpiration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeadLetteringOnMessageExpiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLockDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LockDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxDeliveryCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxDeliveryCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MessageCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequiresSession(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequiresSession")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubscriptionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTopicName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

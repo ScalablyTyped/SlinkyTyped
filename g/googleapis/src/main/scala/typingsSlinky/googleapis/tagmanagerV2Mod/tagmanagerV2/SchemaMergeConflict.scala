@@ -25,11 +25,41 @@ trait SchemaMergeConflict extends js.Object {
 
 object SchemaMergeConflict {
   @scala.inline
-  def apply(entityInBaseVersion: SchemaEntity = null, entityInWorkspace: SchemaEntity = null): SchemaMergeConflict = {
+  def apply(): SchemaMergeConflict = {
     val __obj = js.Dynamic.literal()
-    if (entityInBaseVersion != null) __obj.updateDynamic("entityInBaseVersion")(entityInBaseVersion.asInstanceOf[js.Any])
-    if (entityInWorkspace != null) __obj.updateDynamic("entityInWorkspace")(entityInWorkspace.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMergeConflict]
   }
+  @scala.inline
+  implicit class SchemaMergeConflictOps[Self <: SchemaMergeConflict] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntityInBaseVersion(value: SchemaEntity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityInBaseVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityInBaseVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityInBaseVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityInWorkspace(value: SchemaEntity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityInWorkspace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityInWorkspace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityInWorkspace")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

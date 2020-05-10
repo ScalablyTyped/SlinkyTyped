@@ -34,18 +34,65 @@ trait SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesErrorDetails exte
 
 object SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesErrorDetails {
   @scala.inline
-  def apply(
-    errorCount: String = null,
-    fhirStore: String = null,
-    inputSize: String = null,
-    successCount: String = null
-  ): SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesErrorDetails = {
+  def apply(): SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesErrorDetails = {
     val __obj = js.Dynamic.literal()
-    if (errorCount != null) __obj.updateDynamic("errorCount")(errorCount.asInstanceOf[js.Any])
-    if (fhirStore != null) __obj.updateDynamic("fhirStore")(fhirStore.asInstanceOf[js.Any])
-    if (inputSize != null) __obj.updateDynamic("inputSize")(inputSize.asInstanceOf[js.Any])
-    if (successCount != null) __obj.updateDynamic("successCount")(successCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesErrorDetails]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesErrorDetailsOps[Self <: SchemaGoogleCloudHealthcareV1beta1FhirRestImportResourcesErrorDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFhirStore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fhirStore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFhirStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fhirStore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ResponsiveNavigationState extends js.Object {
-  var isTitleBarVisible: Boolean
-  var isTopBarVisible: Boolean
+  var isTitleBarVisible: Boolean = js.native
+  var isTopBarVisible: Boolean = js.native
 }
 
 object ResponsiveNavigationState {
   @scala.inline
   def apply(isTitleBarVisible: Boolean, isTopBarVisible: Boolean): ResponsiveNavigationState = {
     val __obj = js.Dynamic.literal(isTitleBarVisible = isTitleBarVisible.asInstanceOf[js.Any], isTopBarVisible = isTopBarVisible.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ResponsiveNavigationState]
   }
+  @scala.inline
+  implicit class ResponsiveNavigationStateOps[Self <: ResponsiveNavigationState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsTitleBarVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTitleBarVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsTopBarVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTopBarVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

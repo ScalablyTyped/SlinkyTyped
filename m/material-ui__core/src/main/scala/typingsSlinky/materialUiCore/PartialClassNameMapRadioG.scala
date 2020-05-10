@@ -13,11 +13,41 @@ trait PartialClassNameMapRadioG extends js.Object {
 
 object PartialClassNameMapRadioG {
   @scala.inline
-  def apply(root: String = null, row: String = null): PartialClassNameMapRadioG = {
+  def apply(): PartialClassNameMapRadioG = {
     val __obj = js.Dynamic.literal()
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapRadioG]
   }
+  @scala.inline
+  implicit class PartialClassNameMapRadioGOps[Self <: PartialClassNameMapRadioG] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

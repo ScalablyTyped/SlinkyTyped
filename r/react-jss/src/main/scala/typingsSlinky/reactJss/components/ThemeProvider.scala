@@ -1,10 +1,7 @@
 package typingsSlinky.reactJss.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.std.NonNullable
 import typingsSlinky.theming.mod.DefaultTheme
 import typingsSlinky.theming.mod.ThemeProviderProps
@@ -12,23 +9,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ThemeProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactJss.mod.ThemeProvider] {
+object ThemeProvider {
   @JSImport("react-jss", "ThemeProvider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    theme: NonNullable[DefaultTheme] | (js.Function1[DefaultTheme, NonNullable[DefaultTheme]]) = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactJss.mod.ThemeProvider] = {
-    val __obj = js.Dynamic.literal()
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactJss.mod.ThemeProvider] {
+    @scala.inline
+    def themeFunction1(value: DefaultTheme => NonNullable[DefaultTheme]): this.type = set("theme", js.Any.fromFunction1(value))
+    @scala.inline
+    def theme(value: NonNullable[DefaultTheme] | (js.Function1[DefaultTheme, NonNullable[DefaultTheme]])): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def themeNull: this.type = set("theme", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactJss.mod.ThemeProvider] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactJss.mod.ThemeProvider](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ThemeProviderProps[DefaultTheme]
+  
+  def withProps(p: ThemeProviderProps[DefaultTheme]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ThemeProvider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

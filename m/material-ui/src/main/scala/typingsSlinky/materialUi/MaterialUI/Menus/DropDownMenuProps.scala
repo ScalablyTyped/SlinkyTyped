@@ -3,6 +3,7 @@ package typingsSlinky.materialUi.MaterialUI.Menus
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
 import typingsSlinky.react.mod.CSSProperties
@@ -11,21 +12,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DropDownMenuProps extends js.Object {
   // <div/> is the element that gets the 'other' properties
-  var anchorOrigin: js.UndefOr[origin] = js.undefined
-  var animated: js.UndefOr[Boolean] = js.undefined
-  var animation: js.UndefOr[ReactComponentClass[PopoverAnimationProps]] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var iconButton: js.UndefOr[TagMod[Any]] = js.undefined
-  var iconStyle: js.UndefOr[CSSProperties] = js.undefined
-  var labelStyle: js.UndefOr[CSSProperties] = js.undefined
-  var listStyle: js.UndefOr[CSSProperties] = js.undefined
-  var maxHeight: js.UndefOr[Double] = js.undefined
-  var menuItemStyle: js.UndefOr[CSSProperties] = js.undefined
-  var menuStyle: js.UndefOr[CSSProperties] = js.undefined
-  var multiple: js.UndefOr[Boolean] = js.undefined
+  var anchorOrigin: js.UndefOr[origin] = js.native
+  var animated: js.UndefOr[Boolean] = js.native
+  var animation: js.UndefOr[ReactComponentClass[PopoverAnimationProps]] = js.native
+  var className: js.UndefOr[String] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var iconButton: js.UndefOr[TagMod[Any]] = js.native
+  var iconStyle: js.UndefOr[CSSProperties] = js.native
+  var labelStyle: js.UndefOr[CSSProperties] = js.native
+  var listStyle: js.UndefOr[CSSProperties] = js.native
+  var maxHeight: js.UndefOr[Double] = js.native
+  var menuItemStyle: js.UndefOr[CSSProperties] = js.native
+  var menuStyle: js.UndefOr[CSSProperties] = js.native
+  var multiple: js.UndefOr[Boolean] = js.native
   var onChange: js.UndefOr[
     js.Function3[
       /* e */ SyntheticEvent[Event_, js.Object], 
@@ -33,67 +35,302 @@ trait DropDownMenuProps extends js.Object {
       /* menuItemValue */ js.Any, 
       Unit
     ]
-  ] = js.undefined
-  var onClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, js.Object], Unit]] = js.undefined
-  var openImmediately: js.UndefOr[Boolean] = js.undefined
-  var selectedMenuItemStyle: js.UndefOr[CSSProperties] = js.undefined
-  var selectionRenderer: js.UndefOr[js.Function2[/* value */ js.Any, /* menuItem */ js.Any, Unit]] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var targetOrigin: js.UndefOr[origin] = js.undefined
-  var underlineStyle: js.UndefOr[CSSProperties] = js.undefined
-  var value: js.UndefOr[js.Any] = js.undefined
+  ] = js.native
+  var onClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, js.Object], Unit]] = js.native
+  var openImmediately: js.UndefOr[Boolean] = js.native
+  var selectedMenuItemStyle: js.UndefOr[CSSProperties] = js.native
+  var selectionRenderer: js.UndefOr[js.Function2[/* value */ js.Any, /* menuItem */ js.Any, Unit]] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var targetOrigin: js.UndefOr[origin] = js.native
+  var underlineStyle: js.UndefOr[CSSProperties] = js.native
+  var value: js.UndefOr[js.Any] = js.native
 }
 
 object DropDownMenuProps {
   @scala.inline
-  def apply(
-    anchorOrigin: origin = null,
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animation: ReactComponentClass[PopoverAnimationProps] = null,
-    className: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    iconButton: TagMod[Any] = null,
-    iconStyle: CSSProperties = null,
-    labelStyle: CSSProperties = null,
-    listStyle: CSSProperties = null,
-    maxHeight: Int | Double = null,
-    menuItemStyle: CSSProperties = null,
-    menuStyle: CSSProperties = null,
-    multiple: js.UndefOr[Boolean] = js.undefined,
-    onChange: (/* e */ SyntheticEvent[Event_, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit = null,
-    onClose: /* e */ SyntheticEvent[Event_, js.Object] => Unit = null,
-    openImmediately: js.UndefOr[Boolean] = js.undefined,
-    selectedMenuItemStyle: CSSProperties = null,
-    selectionRenderer: (/* value */ js.Any, /* menuItem */ js.Any) => Unit = null,
-    style: CSSProperties = null,
-    targetOrigin: origin = null,
-    underlineStyle: CSSProperties = null,
-    value: js.Any = null
-  ): DropDownMenuProps = {
+  def apply(): DropDownMenuProps = {
     val __obj = js.Dynamic.literal()
-    if (anchorOrigin != null) __obj.updateDynamic("anchorOrigin")(anchorOrigin.asInstanceOf[js.Any])
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (iconButton != null) __obj.updateDynamic("iconButton")(iconButton.asInstanceOf[js.Any])
-    if (iconStyle != null) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
-    if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
-    if (listStyle != null) __obj.updateDynamic("listStyle")(listStyle.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (menuItemStyle != null) __obj.updateDynamic("menuItemStyle")(menuItemStyle.asInstanceOf[js.Any])
-    if (menuStyle != null) __obj.updateDynamic("menuStyle")(menuStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiple)) __obj.updateDynamic("multiple")(multiple.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
-    if (!js.isUndefined(openImmediately)) __obj.updateDynamic("openImmediately")(openImmediately.asInstanceOf[js.Any])
-    if (selectedMenuItemStyle != null) __obj.updateDynamic("selectedMenuItemStyle")(selectedMenuItemStyle.asInstanceOf[js.Any])
-    if (selectionRenderer != null) __obj.updateDynamic("selectionRenderer")(js.Any.fromFunction2(selectionRenderer))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (targetOrigin != null) __obj.updateDynamic("targetOrigin")(targetOrigin.asInstanceOf[js.Any])
-    if (underlineStyle != null) __obj.updateDynamic("underlineStyle")(underlineStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DropDownMenuProps]
   }
+  @scala.inline
+  implicit class DropDownMenuPropsOps[Self <: DropDownMenuProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnchorOrigin(value: origin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnchorOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anchorOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimation(value: ReactComponentClass[PopoverAnimationProps]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconButtonReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIconButton(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withListStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuItemStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenuStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenuStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiple(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(
+      value: (/* e */ SyntheticEvent[Event_, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClose(value: /* e */ SyntheticEvent[Event_, js.Object] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenImmediately(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openImmediately")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenImmediately: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openImmediately")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedMenuItemStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedMenuItemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedMenuItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedMenuItemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionRenderer(value: (/* value */ js.Any, /* menuItem */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRenderer")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelectionRenderer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetOrigin(value: origin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnderlineStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underlineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnderlineStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underlineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

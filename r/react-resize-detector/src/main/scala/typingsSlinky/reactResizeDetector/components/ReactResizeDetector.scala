@@ -1,11 +1,9 @@
 package typingsSlinky.reactResizeDetector.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactResizeDetector.AnonLeading
 import typingsSlinky.reactResizeDetector.mod.ReactResizeDetectorDimensions
 import typingsSlinky.reactResizeDetector.mod.ReactResizeDetectorProps
@@ -16,43 +14,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactResizeDetector
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactResizeDetector {
   @JSImport("react-resize-detector", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    handleHeight: js.UndefOr[Boolean] = js.undefined,
-    handleWidth: js.UndefOr[Boolean] = js.undefined,
-    nodeType: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 116 */ js.Any = null,
-    onResize: (/* width */ Double, /* height */ Double) => Unit = null,
-    querySelector: String = null,
-    refreshMode: throttle | debounce = null,
-    refreshOptions: AnonLeading = null,
-    refreshRate: Int | Double = null,
-    render: /* props */ ReactResizeDetectorDimensions => TagMod[Any] = null,
-    skipOnMount: js.UndefOr[Boolean] = js.undefined,
-    targetDomEl: HTMLElement = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(handleHeight)) __obj.updateDynamic("handleHeight")(handleHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(handleWidth)) __obj.updateDynamic("handleWidth")(handleWidth.asInstanceOf[js.Any])
-    if (nodeType != null) __obj.updateDynamic("nodeType")(nodeType.asInstanceOf[js.Any])
-    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction2(onResize))
-    if (querySelector != null) __obj.updateDynamic("querySelector")(querySelector.asInstanceOf[js.Any])
-    if (refreshMode != null) __obj.updateDynamic("refreshMode")(refreshMode.asInstanceOf[js.Any])
-    if (refreshOptions != null) __obj.updateDynamic("refreshOptions")(refreshOptions.asInstanceOf[js.Any])
-    if (refreshRate != null) __obj.updateDynamic("refreshRate")(refreshRate.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (!js.isUndefined(skipOnMount)) __obj.updateDynamic("skipOnMount")(skipOnMount.asInstanceOf[js.Any])
-    if (targetDomEl != null) __obj.updateDynamic("targetDomEl")(targetDomEl.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def handleHeight(value: Boolean): this.type = set("handleHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleWidth(value: Boolean): this.type = set("handleWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeType(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 117 */ js.Any): this.type = set("nodeType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onResize(value: (/* width */ Double, /* height */ Double) => Unit): this.type = set("onResize", js.Any.fromFunction2(value))
+    @scala.inline
+    def querySelector(value: String): this.type = set("querySelector", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refreshMode(value: throttle | debounce): this.type = set("refreshMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refreshOptions(value: AnonLeading): this.type = set("refreshOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refreshRate(value: Double): this.type = set("refreshRate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def render(value: /* props */ ReactResizeDetectorDimensions => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
+    @scala.inline
+    def skipOnMount(value: Boolean): this.type = set("skipOnMount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetDomEl(value: HTMLElement): this.type = set("targetDomEl", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactResizeDetector.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ReactResizeDetectorProps
+  
+  def withProps(p: ReactResizeDetectorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactResizeDetector.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

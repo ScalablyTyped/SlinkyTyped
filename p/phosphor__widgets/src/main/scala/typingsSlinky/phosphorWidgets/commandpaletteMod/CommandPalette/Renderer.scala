@@ -78,36 +78,6 @@ class Renderer () extends IRenderer {
     */
   def formatItemShortcut(data: IItemRenderData): Child = js.native
   /**
-    * Render the empty results message for a command palette.
-    *
-    * @param data - The data to use for rendering the message.
-    *
-    * @returns A virtual element representing the message.
-    */
-  /* CompleteClass */
-  override def renderEmptyMessage(data: IEmptyMessageRenderData): VirtualElement = js.native
-  /**
-    * Render the virtual element for a command palette header.
-    *
-    * @param data - The data to use for rendering the header.
-    *
-    * @returns A virtual element representing the header.
-    */
-  /* CompleteClass */
-  override def renderHeader(data: IHeaderRenderData): VirtualElement = js.native
-  /**
-    * Render the virtual element for a command palette item.
-    *
-    * @param data - The data to use for rendering the item.
-    *
-    * @returns A virtual element representing the item.
-    *
-    * #### Notes
-    * The command palette will not render invisible items.
-    */
-  /* CompleteClass */
-  override def renderItem(data: IItemRenderData): VirtualElement = js.native
-  /**
     * Render the caption for a command palette item.
     *
     * @param data - The data to use for rendering the caption.

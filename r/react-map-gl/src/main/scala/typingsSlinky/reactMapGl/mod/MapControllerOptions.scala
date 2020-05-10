@@ -4,47 +4,162 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MapControllerOptions extends js.Object {
-  var doubleClickZoom: js.UndefOr[Boolean] = js.undefined
-  var dragPan: js.UndefOr[Boolean] = js.undefined
-  var dragRotate: js.UndefOr[Boolean] = js.undefined
-  var eventManager: js.UndefOr[js.Any] = js.undefined
-  var isInteractive: Boolean
-  var keyboard: js.UndefOr[Boolean] = js.undefined
-  var onStateChange: js.UndefOr[js.Function1[/* state */ MapState, Unit]] = js.undefined
-  var onViewportChange: js.UndefOr[ContextViewportChangeHandler] = js.undefined
-  var scrollZoom: js.UndefOr[Boolean] = js.undefined
-  var touchRotate: js.UndefOr[Boolean] = js.undefined
-  var touchZoom: js.UndefOr[Boolean] = js.undefined
+  var doubleClickZoom: js.UndefOr[Boolean] = js.native
+  var dragPan: js.UndefOr[Boolean] = js.native
+  var dragRotate: js.UndefOr[Boolean] = js.native
+  var eventManager: js.UndefOr[js.Any] = js.native
+  var isInteractive: Boolean = js.native
+  var keyboard: js.UndefOr[Boolean] = js.native
+  var onStateChange: js.UndefOr[js.Function1[/* state */ MapState, Unit]] = js.native
+  var onViewportChange: js.UndefOr[ContextViewportChangeHandler] = js.native
+  var scrollZoom: js.UndefOr[Boolean] = js.native
+  var touchRotate: js.UndefOr[Boolean] = js.native
+  var touchZoom: js.UndefOr[Boolean] = js.native
 }
 
 object MapControllerOptions {
   @scala.inline
-  def apply(
-    isInteractive: Boolean,
-    doubleClickZoom: js.UndefOr[Boolean] = js.undefined,
-    dragPan: js.UndefOr[Boolean] = js.undefined,
-    dragRotate: js.UndefOr[Boolean] = js.undefined,
-    eventManager: js.Any = null,
-    keyboard: js.UndefOr[Boolean] = js.undefined,
-    onStateChange: /* state */ MapState => Unit = null,
-    onViewportChange: (/* viewState */ ViewportProps, /* interactionState */ ExtraState, /* oldViewState */ ViewportProps) => Unit = null,
-    scrollZoom: js.UndefOr[Boolean] = js.undefined,
-    touchRotate: js.UndefOr[Boolean] = js.undefined,
-    touchZoom: js.UndefOr[Boolean] = js.undefined
-  ): MapControllerOptions = {
+  def apply(isInteractive: Boolean): MapControllerOptions = {
     val __obj = js.Dynamic.literal(isInteractive = isInteractive.asInstanceOf[js.Any])
-    if (!js.isUndefined(doubleClickZoom)) __obj.updateDynamic("doubleClickZoom")(doubleClickZoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(dragPan)) __obj.updateDynamic("dragPan")(dragPan.asInstanceOf[js.Any])
-    if (!js.isUndefined(dragRotate)) __obj.updateDynamic("dragRotate")(dragRotate.asInstanceOf[js.Any])
-    if (eventManager != null) __obj.updateDynamic("eventManager")(eventManager.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboard)) __obj.updateDynamic("keyboard")(keyboard.asInstanceOf[js.Any])
-    if (onStateChange != null) __obj.updateDynamic("onStateChange")(js.Any.fromFunction1(onStateChange))
-    if (onViewportChange != null) __obj.updateDynamic("onViewportChange")(js.Any.fromFunction3(onViewportChange))
-    if (!js.isUndefined(scrollZoom)) __obj.updateDynamic("scrollZoom")(scrollZoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(touchRotate)) __obj.updateDynamic("touchRotate")(touchRotate.asInstanceOf[js.Any])
-    if (!js.isUndefined(touchZoom)) __obj.updateDynamic("touchZoom")(touchZoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapControllerOptions]
   }
+  @scala.inline
+  implicit class MapControllerOptionsOps[Self <: MapControllerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsInteractive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDoubleClickZoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClickZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoubleClickZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClickZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragPan(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragPan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragPan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragPan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragRotate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragRotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragRotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventManager(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventManager")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventManager: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventManager")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyboard(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyboard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnStateChange(value: /* state */ MapState => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnStateChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnViewportChange(
+      value: (/* viewState */ ViewportProps, /* interactionState */ ExtraState, /* oldViewState */ ViewportProps) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewportChange")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnViewportChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onViewportChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollZoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTouchRotate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchRotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTouchRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchRotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTouchZoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTouchZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchZoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

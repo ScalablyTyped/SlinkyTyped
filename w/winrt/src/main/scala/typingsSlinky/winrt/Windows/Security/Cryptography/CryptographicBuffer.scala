@@ -16,8 +16,8 @@ object CryptographicBuffer extends js.Object {
   def compare(object1: IBuffer, object2: IBuffer): Boolean = js.native
   def convertBinaryToString(encoding: BinaryStringEncoding, buffer: IBuffer): String = js.native
   def convertStringToBinary(value: String, encoding: BinaryStringEncoding): IBuffer = js.native
-  def copyToByteArray(buffer: IBuffer): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def createFromByteArray(value: scala.scalajs.js.typedarray.Uint8Array): IBuffer = js.native
+  def copyToByteArray(buffer: IBuffer): js.typedarray.Uint8Array = js.native
+  def createFromByteArray(value: js.typedarray.Uint8Array): IBuffer = js.native
   def decodeFromBase64String(value: String): IBuffer = js.native
   def decodeFromHexString(value: String): IBuffer = js.native
   def encodeToBase64String(buffer: IBuffer): String = js.native

@@ -25,6 +25,6 @@ object random extends js.Object {
     * @param length Length in bytes to generate
     * @returns Random byte array
     */
-  def getRandomBytes(length: Integer): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def getRandomBytes(length: Integer): js.typedarray.Uint8Array = js.native
 }
 

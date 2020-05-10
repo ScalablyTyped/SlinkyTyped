@@ -12,16 +12,10 @@ import typingsSlinky.angularCompiler.outputAstMod.FunctionExpr
 import typingsSlinky.angularCompiler.outputAstMod.ReadVarExpr
 import typingsSlinky.angularCompiler.outputAstMod.Statement
 import typingsSlinky.angularCompiler.r3AstMod.BoundAttribute
-import typingsSlinky.angularCompiler.r3AstMod.BoundEvent
 import typingsSlinky.angularCompiler.r3AstMod.BoundText
-import typingsSlinky.angularCompiler.r3AstMod.Content
 import typingsSlinky.angularCompiler.r3AstMod.Element
-import typingsSlinky.angularCompiler.r3AstMod.Icu
 import typingsSlinky.angularCompiler.r3AstMod.Node
-import typingsSlinky.angularCompiler.r3AstMod.Reference
-import typingsSlinky.angularCompiler.r3AstMod.Template
 import typingsSlinky.angularCompiler.r3AstMod.Text
-import typingsSlinky.angularCompiler.r3AstMod.TextAttribute
 import typingsSlinky.angularCompiler.r3AstMod.Variable
 import typingsSlinky.angularCompiler.r3AstMod.Visitor
 import typingsSlinky.angularCompiler.selectorMod.SelectorMatcher
@@ -167,8 +161,6 @@ class TemplateDefinitionBuilder protected ()
   def buildTemplateFunction(nodes: js.Array[Node], variables: js.Array[Variable], ngContentSelectorsOffset: Double): FunctionExpr = js.native
   def buildTemplateFunction(nodes: js.Array[Node], variables: js.Array[Variable], ngContentSelectorsOffset: Double, i18n: AST): FunctionExpr = js.native
   def getConstCount(): Double = js.native
-  /* CompleteClass */
-  override def getLocal(name: String): Expression | Null = js.native
   def getNamespaceInstruction(): ExternalReference = js.native
   def getNamespaceInstruction(namespaceKey: String): ExternalReference = js.native
   def getNgContentSelectors(): Expression | Null = js.native
@@ -210,43 +202,19 @@ class TemplateDefinitionBuilder protected ()
     value: js.Any,
     params: js.Array[_]
   ): Unit = js.native
-  /* CompleteClass */
-  override def notifyImplicitReceiverUse(): Unit = js.native
   def registerContextVariables(variable: Variable): Unit = js.native
-  /* CompleteClass */
-  override def visitBoundAttribute(attribute: BoundAttribute): Unit = js.native
   def visitBoundAttribute[T](arg: Expression): scala.Nothing = js.native
   def visitBoundAttribute[T](arg: Statement): scala.Nothing = js.native
   def visitBoundAttribute[T](arg: Node): scala.Nothing = js.native
-  /* CompleteClass */
-  override def visitBoundEvent(attribute: BoundEvent): Unit = js.native
   def visitBoundEvent[T](arg: Expression): scala.Nothing = js.native
   def visitBoundEvent[T](arg: Statement): scala.Nothing = js.native
   def visitBoundEvent[T](arg: Node): scala.Nothing = js.native
-  /* CompleteClass */
-  override def visitBoundText(text: BoundText): Unit = js.native
-  /* CompleteClass */
-  override def visitContent(content: Content): Unit = js.native
-  /* CompleteClass */
-  override def visitElement(element: Element): Unit = js.native
-  /* CompleteClass */
-  override def visitIcu(icu: Icu): Unit = js.native
-  /* CompleteClass */
-  override def visitReference(reference: Reference): Unit = js.native
   def visitReference[T](arg: Expression): scala.Nothing = js.native
   def visitReference[T](arg: Statement): scala.Nothing = js.native
   def visitReference[T](arg: Node): scala.Nothing = js.native
-  /* CompleteClass */
-  override def visitTemplate(template: Template): Unit = js.native
-  /* CompleteClass */
-  override def visitText(text: Text): Unit = js.native
-  /* CompleteClass */
-  override def visitTextAttribute(attribute: TextAttribute): Unit = js.native
   def visitTextAttribute[T](arg: Expression): scala.Nothing = js.native
   def visitTextAttribute[T](arg: Statement): scala.Nothing = js.native
   def visitTextAttribute[T](arg: Node): scala.Nothing = js.native
-  /* CompleteClass */
-  override def visitVariable(variable: Variable): Unit = js.native
   def visitVariable[T](arg: Expression): scala.Nothing = js.native
   def visitVariable[T](arg: Statement): scala.Nothing = js.native
   def visitVariable[T](arg: Node): scala.Nothing = js.native

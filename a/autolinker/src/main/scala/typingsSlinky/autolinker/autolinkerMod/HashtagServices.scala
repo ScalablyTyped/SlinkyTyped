@@ -13,12 +13,10 @@ trait HashtagServices extends js.Object
 
 object HashtagServices {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def facebook: typingsSlinky.autolinker.autolinkerStrings.facebook = "facebook".asInstanceOf[typingsSlinky.autolinker.autolinkerStrings.facebook]
   @scala.inline
-  def facebook: typingsSlinky.autolinker.autolinkerStrings.facebook = this.cast("facebook")
+  def instagram: typingsSlinky.autolinker.autolinkerStrings.instagram = "instagram".asInstanceOf[typingsSlinky.autolinker.autolinkerStrings.instagram]
   @scala.inline
-  def instagram: typingsSlinky.autolinker.autolinkerStrings.instagram = this.cast("instagram")
-  @scala.inline
-  def twitter: typingsSlinky.autolinker.autolinkerStrings.twitter = this.cast("twitter")
+  def twitter: typingsSlinky.autolinker.autolinkerStrings.twitter = "twitter".asInstanceOf[typingsSlinky.autolinker.autolinkerStrings.twitter]
 }
 

@@ -13,12 +13,10 @@ trait Navigation extends js.Object
 
 object Navigation {
   @scala.inline
-  def NAVIGATE: typingsSlinky.figma.figmaStrings.NAVIGATE = this.cast("NAVIGATE")
+  def NAVIGATE: typingsSlinky.figma.figmaStrings.NAVIGATE = "NAVIGATE".asInstanceOf[typingsSlinky.figma.figmaStrings.NAVIGATE]
   @scala.inline
-  def OVERLAY: typingsSlinky.figma.figmaStrings.OVERLAY = this.cast("OVERLAY")
+  def OVERLAY: typingsSlinky.figma.figmaStrings.OVERLAY = "OVERLAY".asInstanceOf[typingsSlinky.figma.figmaStrings.OVERLAY]
   @scala.inline
-  def SWAP: typingsSlinky.figma.figmaStrings.SWAP = this.cast("SWAP")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SWAP: typingsSlinky.figma.figmaStrings.SWAP = "SWAP".asInstanceOf[typingsSlinky.figma.figmaStrings.SWAP]
 }
 

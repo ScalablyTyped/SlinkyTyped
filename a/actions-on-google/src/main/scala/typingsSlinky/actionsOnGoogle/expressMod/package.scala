@@ -6,8 +6,13 @@ import scala.scalajs.js.annotation._
 
 package object expressMod {
   type ExpressHandler = js.Function2[
-    /* request */ typingsSlinky.express.mod.Request_[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary], 
-    /* response */ typingsSlinky.express.mod.Response_, 
+    /* request */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
+    /* response */ typingsSlinky.express.mod.Response_[js.Any], 
     scala.Unit
   ]
 }

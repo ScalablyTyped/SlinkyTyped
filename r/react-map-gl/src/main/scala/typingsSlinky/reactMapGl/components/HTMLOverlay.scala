@@ -1,39 +1,40 @@
 package typingsSlinky.reactMapGl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactMapGl.mod.HTMLOverlayProps
 import typingsSlinky.reactMapGl.mod.HTMLRedrawOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HTMLOverlay
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMapGl.mod.HTMLOverlay] {
+object HTMLOverlay {
   @JSImport("react-map-gl", "HTMLOverlay")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    redraw: HTMLRedrawOptions => Unit,
-    captureClick: js.UndefOr[Boolean] = js.undefined,
-    captureDoubleClick: js.UndefOr[Boolean] = js.undefined,
-    captureDrag: js.UndefOr[Boolean] = js.undefined,
-    captureScroll: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.HTMLOverlay] = {
-    val __obj = js.Dynamic.literal(redraw = js.Any.fromFunction1(redraw))
-    if (!js.isUndefined(captureClick)) __obj.updateDynamic("captureClick")(captureClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDoubleClick)) __obj.updateDynamic("captureDoubleClick")(captureDoubleClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureDrag)) __obj.updateDynamic("captureDrag")(captureDrag.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureScroll)) __obj.updateDynamic("captureScroll")(captureScroll.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMapGl.mod.HTMLOverlay] {
+    @scala.inline
+    def captureClick(value: Boolean): this.type = set("captureClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDoubleClick(value: Boolean): this.type = set("captureDoubleClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureDrag(value: Boolean): this.type = set("captureDrag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureScroll(value: Boolean): this.type = set("captureScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = HTMLOverlayProps
+  
+  def withProps(p: HTMLOverlayProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(redraw: HTMLRedrawOptions => Unit): Builder = {
+    val __props = js.Dynamic.literal(redraw = js.Any.fromFunction1(redraw))
+    new Builder(js.Array(this.component, __props.asInstanceOf[HTMLOverlayProps]))
+  }
 }
 

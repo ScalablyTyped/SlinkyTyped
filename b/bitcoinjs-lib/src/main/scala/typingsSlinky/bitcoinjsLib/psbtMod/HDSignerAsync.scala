@@ -8,9 +8,10 @@ import scala.scalajs.js.annotation._
 /**
   * Same as above but with async sign method
   */
+@js.native
 trait HDSignerAsync extends HDSignerBase {
-  def derivePath(path: String): HDSignerAsync
-  def sign(hash: Buffer): js.Promise[Buffer]
+  def derivePath(path: String): HDSignerAsync = js.native
+  def sign(hash: Buffer): js.Promise[Buffer] = js.native
 }
 
 object HDSignerAsync {
@@ -22,8 +23,27 @@ object HDSignerAsync {
     sign: Buffer => js.Promise[Buffer]
   ): HDSignerAsync = {
     val __obj = js.Dynamic.literal(derivePath = js.Any.fromFunction1(derivePath), fingerprint = fingerprint.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any], sign = js.Any.fromFunction1(sign))
-  
     __obj.asInstanceOf[HDSignerAsync]
   }
+  @scala.inline
+  implicit class HDSignerAsyncOps[Self <: HDSignerAsync] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDerivePath(value: String => HDSignerAsync): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("derivePath")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSign(value: Buffer => js.Promise[Buffer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sign")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

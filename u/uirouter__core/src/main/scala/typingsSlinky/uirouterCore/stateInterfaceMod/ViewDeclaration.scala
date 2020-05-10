@@ -51,3 +51,79 @@ trait ViewDeclaration extends js.Object {
   var $uiViewName: js.UndefOr[String] = js.native
 }
 
+object ViewDeclaration {
+  @scala.inline
+  def apply(): ViewDeclaration = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ViewDeclaration]
+  }
+  @scala.inline
+  implicit class ViewDeclarationOps[Self <: ViewDeclaration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$context(value: ViewContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$context: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$type(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$type: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$uiViewContextAnchor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$uiViewContextAnchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$uiViewContextAnchor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$uiViewContextAnchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$uiViewName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$uiViewName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$uiViewName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$uiViewName")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

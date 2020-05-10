@@ -16,18 +16,16 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  def add: typingsSlinky.sane.saneStrings.add = this.cast("add")
+  def add: typingsSlinky.sane.saneStrings.add = "add".asInstanceOf[typingsSlinky.sane.saneStrings.add]
   @scala.inline
-  def all: typingsSlinky.sane.saneStrings.all = this.cast("all")
+  def all: typingsSlinky.sane.saneStrings.all = "all".asInstanceOf[typingsSlinky.sane.saneStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def change: typingsSlinky.sane.saneStrings.change = "change".asInstanceOf[typingsSlinky.sane.saneStrings.change]
   @scala.inline
-  def change: typingsSlinky.sane.saneStrings.change = this.cast("change")
+  def delete: typingsSlinky.sane.saneStrings.delete = "delete".asInstanceOf[typingsSlinky.sane.saneStrings.delete]
   @scala.inline
-  def delete: typingsSlinky.sane.saneStrings.delete = this.cast("delete")
+  def error: typingsSlinky.sane.saneStrings.error = "error".asInstanceOf[typingsSlinky.sane.saneStrings.error]
   @scala.inline
-  def error: typingsSlinky.sane.saneStrings.error = this.cast("error")
-  @scala.inline
-  def ready: typingsSlinky.sane.saneStrings.ready = this.cast("ready")
+  def ready: typingsSlinky.sane.saneStrings.ready = "ready".asInstanceOf[typingsSlinky.sane.saneStrings.ready]
 }
 

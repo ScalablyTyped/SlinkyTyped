@@ -5,78 +5,309 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CarouselProps extends js.Object {
-  var addArrowClickHandler: js.UndefOr[Boolean] = js.undefined
-  var animationSpeed: js.UndefOr[Double] = js.undefined
-  var arrowLeft: js.UndefOr[ReactElement] = js.undefined
-  var arrowRight: js.UndefOr[ReactElement] = js.undefined
-  var arrows: js.UndefOr[Boolean] = js.undefined
-  var autoPlay: js.UndefOr[Double] = js.undefined
-  var breakpoints: js.UndefOr[js.Any] = js.undefined
-  var centered: js.UndefOr[Boolean] = js.undefined
-  var clickToChange: js.UndefOr[Boolean] = js.undefined
-  var dots: js.UndefOr[Boolean] = js.undefined
-  var draggable: js.UndefOr[Boolean] = js.undefined
-  var infinite: js.UndefOr[Boolean] = js.undefined
-  var itemWidth: js.UndefOr[Double] = js.undefined
-  var keepDirectionWhenDragging: js.UndefOr[Boolean] = js.undefined
-  var offset: js.UndefOr[Double] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.undefined
-  var slides: js.UndefOr[js.Array[ReactElement]] = js.undefined
-  var slidesPerPage: js.UndefOr[Double] = js.undefined
-  var slidesPerScroll: js.UndefOr[Double] = js.undefined
-  var stopAutoPlayOnHover: js.UndefOr[Boolean] = js.undefined
-  var value: js.UndefOr[Double] = js.undefined
+  var addArrowClickHandler: js.UndefOr[Boolean] = js.native
+  var animationSpeed: js.UndefOr[Double] = js.native
+  var arrowLeft: js.UndefOr[ReactElement] = js.native
+  var arrowRight: js.UndefOr[ReactElement] = js.native
+  var arrows: js.UndefOr[Boolean] = js.native
+  var autoPlay: js.UndefOr[Double] = js.native
+  var breakpoints: js.UndefOr[js.Any] = js.native
+  var centered: js.UndefOr[Boolean] = js.native
+  var clickToChange: js.UndefOr[Boolean] = js.native
+  var dots: js.UndefOr[Boolean] = js.native
+  var draggable: js.UndefOr[Boolean] = js.native
+  var infinite: js.UndefOr[Boolean] = js.native
+  var itemWidth: js.UndefOr[Double] = js.native
+  var keepDirectionWhenDragging: js.UndefOr[Boolean] = js.native
+  var offset: js.UndefOr[Double] = js.native
+  var onChange: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
+  var rtl: js.UndefOr[Boolean] = js.native
+  var slides: js.UndefOr[js.Array[ReactElement]] = js.native
+  var slidesPerPage: js.UndefOr[Double] = js.native
+  var slidesPerScroll: js.UndefOr[Double] = js.native
+  var stopAutoPlayOnHover: js.UndefOr[Boolean] = js.native
+  var value: js.UndefOr[Double] = js.native
 }
 
 object CarouselProps {
   @scala.inline
-  def apply(
-    addArrowClickHandler: js.UndefOr[Boolean] = js.undefined,
-    animationSpeed: Int | Double = null,
-    arrowLeft: ReactElement = null,
-    arrowRight: ReactElement = null,
-    arrows: js.UndefOr[Boolean] = js.undefined,
-    autoPlay: Int | Double = null,
-    breakpoints: js.Any = null,
-    centered: js.UndefOr[Boolean] = js.undefined,
-    clickToChange: js.UndefOr[Boolean] = js.undefined,
-    dots: js.UndefOr[Boolean] = js.undefined,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    infinite: js.UndefOr[Boolean] = js.undefined,
-    itemWidth: Int | Double = null,
-    keepDirectionWhenDragging: js.UndefOr[Boolean] = js.undefined,
-    offset: Int | Double = null,
-    onChange: /* value */ Double => Unit = null,
-    slides: js.Array[ReactElement] = null,
-    slidesPerPage: Int | Double = null,
-    slidesPerScroll: Int | Double = null,
-    stopAutoPlayOnHover: js.UndefOr[Boolean] = js.undefined,
-    value: Int | Double = null
-  ): CarouselProps = {
+  def apply(): CarouselProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(addArrowClickHandler)) __obj.updateDynamic("addArrowClickHandler")(addArrowClickHandler.asInstanceOf[js.Any])
-    if (animationSpeed != null) __obj.updateDynamic("animationSpeed")(animationSpeed.asInstanceOf[js.Any])
-    if (arrowLeft != null) __obj.updateDynamic("arrowLeft")(arrowLeft.asInstanceOf[js.Any])
-    if (arrowRight != null) __obj.updateDynamic("arrowRight")(arrowRight.asInstanceOf[js.Any])
-    if (!js.isUndefined(arrows)) __obj.updateDynamic("arrows")(arrows.asInstanceOf[js.Any])
-    if (autoPlay != null) __obj.updateDynamic("autoPlay")(autoPlay.asInstanceOf[js.Any])
-    if (breakpoints != null) __obj.updateDynamic("breakpoints")(breakpoints.asInstanceOf[js.Any])
-    if (!js.isUndefined(centered)) __obj.updateDynamic("centered")(centered.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickToChange)) __obj.updateDynamic("clickToChange")(clickToChange.asInstanceOf[js.Any])
-    if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
-    if (!js.isUndefined(infinite)) __obj.updateDynamic("infinite")(infinite.asInstanceOf[js.Any])
-    if (itemWidth != null) __obj.updateDynamic("itemWidth")(itemWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepDirectionWhenDragging)) __obj.updateDynamic("keepDirectionWhenDragging")(keepDirectionWhenDragging.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (slides != null) __obj.updateDynamic("slides")(slides.asInstanceOf[js.Any])
-    if (slidesPerPage != null) __obj.updateDynamic("slidesPerPage")(slidesPerPage.asInstanceOf[js.Any])
-    if (slidesPerScroll != null) __obj.updateDynamic("slidesPerScroll")(slidesPerScroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(stopAutoPlayOnHover)) __obj.updateDynamic("stopAutoPlayOnHover")(stopAutoPlayOnHover.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CarouselProps]
   }
+  @scala.inline
+  implicit class CarouselPropsOps[Self <: CarouselProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddArrowClickHandler(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addArrowClickHandler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddArrowClickHandler: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addArrowClickHandler")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationSpeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArrowLeft(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrowLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArrowRight(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrowRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArrows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoPlay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoPlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBreakpoints(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreakpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCentered(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("centered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCentered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("centered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClickToChange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickToChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickToChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickToChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDots(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDraggable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDraggable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfinite(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infinite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfinite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infinite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepDirectionWhenDragging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepDirectionWhenDragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepDirectionWhenDragging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepDirectionWhenDragging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* value */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRtl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRtl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rtl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlides(value: js.Array[ReactElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlidesPerPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesPerPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlidesPerPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesPerPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlidesPerScroll(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesPerScroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlidesPerScroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slidesPerScroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopAutoPlayOnHover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopAutoPlayOnHover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopAutoPlayOnHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopAutoPlayOnHover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

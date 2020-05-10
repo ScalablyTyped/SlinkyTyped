@@ -4,18 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ScrollNumberState extends js.Object {
-  var animateStarted: js.UndefOr[Boolean] = js.undefined
-  var count: js.UndefOr[String | Double | Null] = js.undefined
+  var animateStarted: js.UndefOr[Boolean] = js.native
+  var count: js.UndefOr[String | Double | Null] = js.native
 }
 
 object ScrollNumberState {
   @scala.inline
-  def apply(animateStarted: js.UndefOr[Boolean] = js.undefined, count: String | Double = null): ScrollNumberState = {
+  def apply(): ScrollNumberState = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animateStarted)) __obj.updateDynamic("animateStarted")(animateStarted.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScrollNumberState]
   }
+  @scala.inline
+  implicit class ScrollNumberStateOps[Self <: ScrollNumberState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimateStarted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animateStarted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimateStarted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animateStarted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(null)
+        ret
+    }
+  }
+  
 }
 

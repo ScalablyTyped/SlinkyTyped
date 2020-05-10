@@ -22,14 +22,41 @@ trait StartMatchmakingInput extends js.Object {
 
 object StartMatchmakingInput {
   @scala.inline
-  def apply(
-    ConfigurationName: MatchmakingConfigurationName,
-    Players: PlayerList,
-    TicketId: MatchmakingIdStringModel = null
-  ): StartMatchmakingInput = {
+  def apply(ConfigurationName: MatchmakingConfigurationName, Players: PlayerList): StartMatchmakingInput = {
     val __obj = js.Dynamic.literal(ConfigurationName = ConfigurationName.asInstanceOf[js.Any], Players = Players.asInstanceOf[js.Any])
-    if (TicketId != null) __obj.updateDynamic("TicketId")(TicketId.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartMatchmakingInput]
   }
+  @scala.inline
+  implicit class StartMatchmakingInputOps[Self <: StartMatchmakingInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigurationName(value: MatchmakingConfigurationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigurationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlayers(value: PlayerList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Players")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTicketId(value: MatchmakingIdStringModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TicketId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicketId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TicketId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

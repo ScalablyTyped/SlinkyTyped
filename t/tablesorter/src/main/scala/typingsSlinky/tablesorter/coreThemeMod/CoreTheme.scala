@@ -21,28 +21,26 @@ trait CoreTheme extends js.Object
 
 object CoreTheme {
   @scala.inline
-  def blackice: typingsSlinky.tablesorter.tablesorterStrings.blackice = this.cast("blackice")
+  def blackice: typingsSlinky.tablesorter.tablesorterStrings.blackice = "blackice".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.blackice]
   @scala.inline
-  def blue: typingsSlinky.tablesorter.tablesorterStrings.blue = this.cast("blue")
+  def blue: typingsSlinky.tablesorter.tablesorterStrings.blue = "blue".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.blue]
   @scala.inline
-  def bootstrap: typingsSlinky.tablesorter.tablesorterStrings.bootstrap = this.cast("bootstrap")
+  def bootstrap: typingsSlinky.tablesorter.tablesorterStrings.bootstrap = "bootstrap".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.bootstrap]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dark: typingsSlinky.tablesorter.tablesorterStrings.dark = "dark".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.tablesorter.tablesorterStrings.dark = this.cast("dark")
+  def default: typingsSlinky.tablesorter.tablesorterStrings.default = "default".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.default]
   @scala.inline
-  def default: typingsSlinky.tablesorter.tablesorterStrings.default = this.cast("default")
+  def dropbox: typingsSlinky.tablesorter.tablesorterStrings.dropbox = "dropbox".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.dropbox]
   @scala.inline
-  def dropbox: typingsSlinky.tablesorter.tablesorterStrings.dropbox = this.cast("dropbox")
+  def green: typingsSlinky.tablesorter.tablesorterStrings.green = "green".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.green]
   @scala.inline
-  def green: typingsSlinky.tablesorter.tablesorterStrings.green = this.cast("green")
+  def grey: typingsSlinky.tablesorter.tablesorterStrings.grey = "grey".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.grey]
   @scala.inline
-  def grey: typingsSlinky.tablesorter.tablesorterStrings.grey = this.cast("grey")
+  def ice: typingsSlinky.tablesorter.tablesorterStrings.ice = "ice".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.ice]
   @scala.inline
-  def ice: typingsSlinky.tablesorter.tablesorterStrings.ice = this.cast("ice")
+  def jui: typingsSlinky.tablesorter.tablesorterStrings.jui = "jui".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.jui]
   @scala.inline
-  def jui: typingsSlinky.tablesorter.tablesorterStrings.jui = this.cast("jui")
-  @scala.inline
-  def `metro-dark`: typingsSlinky.tablesorter.tablesorterStrings.`metro-dark` = this.cast("metro-dark")
+  def `metro-dark`: typingsSlinky.tablesorter.tablesorterStrings.`metro-dark` = "metro-dark".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.`metro-dark`]
 }
 

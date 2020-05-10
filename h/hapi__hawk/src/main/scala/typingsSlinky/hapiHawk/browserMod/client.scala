@@ -1,5 +1,7 @@
 package typingsSlinky.hapiHawk.browserMod
 
+import org.scalajs.dom.experimental.Response
+import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.hapiHawk.browserMod.utils.ParsedUri
 import typingsSlinky.hapiHawk.clientMod.AuthenticateOptions
 import typingsSlinky.hapiHawk.clientMod.BewitOptions
@@ -9,8 +11,6 @@ import typingsSlinky.hapiHawk.clientMod.Header_
 import typingsSlinky.hapiHawk.clientMod.MessageOptions
 import typingsSlinky.hapiHawk.clientMod.Message_
 import typingsSlinky.hapiHawk.cryptoMod.Artifacts
-import typingsSlinky.std.Response
-import typingsSlinky.std.XMLHttpRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

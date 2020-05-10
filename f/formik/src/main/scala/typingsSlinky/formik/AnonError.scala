@@ -17,7 +17,6 @@ import typingsSlinky.formik.typesMod.FormikErrors
 import typingsSlinky.formik.typesMod.FormikState
 import typingsSlinky.formik.typesMod.FormikTouched
 import typingsSlinky.react.mod.ChangeEvent
-import typingsSlinky.react.mod.FocusEvent
 import typingsSlinky.std.Event_
 import typingsSlinky.std.Pick
 import scala.scalajs.js
@@ -40,7 +39,7 @@ trait AnonError[Values] extends js.Object {
   var validateOnChange: js.UndefOr[Boolean] = js.native
   var values: Values = js.native
   def handleBlur(eventOrPath: String): Unit | (js.Function1[/* e */ js.UndefOr[SyntheticFocusEvent[_]], Unit]) = js.native
-  def handleBlur(eventOrPath: FocusEvent[_]): Unit | (js.Function1[/* e */ js.UndefOr[SyntheticFocusEvent[_]], Unit]) = js.native
+  def handleBlur(eventOrPath: SyntheticFocusEvent[_]): Unit | (js.Function1[/* e */ js.UndefOr[SyntheticFocusEvent[_]], Unit]) = js.native
   def handleChange(eventOrPath: String): Unit | (js.Function1[/* eventOrValue */ js.Any, Unit]) = js.native
   def handleChange(eventOrPath: ChangeEvent[_]): Unit | (js.Function1[/* eventOrValue */ js.Any, Unit]) = js.native
   def handleReset(): Unit = js.native
@@ -51,13 +50,13 @@ trait AnonError[Values] extends js.Object {
   def resetForm(nextValues: Values): Unit = js.native
   def setError(e: js.Any): Unit = js.native
   def setErrors(errors: FormikErrors[Values]): Unit = js.native
-  def setFieldError(field: String, message: String): Unit = js.native
-  def setFieldTouched(field: String): Unit = js.native
-  def setFieldTouched(field: String, isTouched: js.UndefOr[scala.Nothing], shouldValidate: Boolean): Unit = js.native
-  def setFieldTouched(field: String, isTouched: Boolean): Unit = js.native
-  def setFieldTouched(field: String, isTouched: Boolean, shouldValidate: Boolean): Unit = js.native
-  def setFieldValue(field: String, value: js.Any): Unit = js.native
-  def setFieldValue(field: String, value: js.Any, shouldValidate: Boolean): Unit = js.native
+  def setFieldError(field: /* keyof Values */ String, message: String): Unit = js.native
+  def setFieldTouched(field: /* keyof Values */ String): Unit = js.native
+  def setFieldTouched(field: /* keyof Values */ String, isTouched: js.UndefOr[scala.Nothing], shouldValidate: Boolean): Unit = js.native
+  def setFieldTouched(field: /* keyof Values */ String, isTouched: Boolean): Unit = js.native
+  def setFieldTouched(field: /* keyof Values */ String, isTouched: Boolean, shouldValidate: Boolean): Unit = js.native
+  def setFieldValue(field: /* keyof Values */ String, value: js.Any): Unit = js.native
+  def setFieldValue(field: /* keyof Values */ String, value: js.Any, shouldValidate: Boolean): Unit = js.native
   def setFormikState[K /* <: error | values | errors | touched | isValidating | isSubmitting | status | submitCount */](
     f: js.Function2[
       /* prevState */ FormikState[Values], 

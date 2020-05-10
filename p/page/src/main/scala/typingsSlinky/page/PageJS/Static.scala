@@ -1,7 +1,6 @@
 package typingsSlinky.page.PageJS
 
 import typingsSlinky.page.PartialOptions
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -78,7 +77,7 @@ trait Static extends js.Object {
     *
     *  Links that are not of the same origin are disregarded and will not be dispatched.
     */
-  def apply(path: RegExp, callbacks: Callback*): Unit = js.native
+  def apply(path: js.RegExp, callbacks: Callback*): Unit = js.native
   /**
     * Get or set the base path. For example if page.js is operating within /blog/ * set the base path to "/blog".
     */

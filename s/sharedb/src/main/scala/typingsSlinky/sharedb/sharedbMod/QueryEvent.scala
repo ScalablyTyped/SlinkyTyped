@@ -17,20 +17,18 @@ trait QueryEvent extends js.Object
 
 object QueryEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def changed: typingsSlinky.sharedb.sharedbStrings.changed = "changed".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.changed]
   @scala.inline
-  def changed: typingsSlinky.sharedb.sharedbStrings.changed = this.cast("changed")
+  def error: typingsSlinky.sharedb.sharedbStrings.error = "error".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.error]
   @scala.inline
-  def error: typingsSlinky.sharedb.sharedbStrings.error = this.cast("error")
+  def extra: typingsSlinky.sharedb.sharedbStrings.extra = "extra".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.extra]
   @scala.inline
-  def extra: typingsSlinky.sharedb.sharedbStrings.extra = this.cast("extra")
+  def insert: typingsSlinky.sharedb.sharedbStrings.insert = "insert".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.insert]
   @scala.inline
-  def insert: typingsSlinky.sharedb.sharedbStrings.insert = this.cast("insert")
+  def move: typingsSlinky.sharedb.sharedbStrings.move = "move".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.move]
   @scala.inline
-  def move: typingsSlinky.sharedb.sharedbStrings.move = this.cast("move")
+  def ready: typingsSlinky.sharedb.sharedbStrings.ready = "ready".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.ready]
   @scala.inline
-  def ready: typingsSlinky.sharedb.sharedbStrings.ready = this.cast("ready")
-  @scala.inline
-  def remove: typingsSlinky.sharedb.sharedbStrings.remove = this.cast("remove")
+  def remove: typingsSlinky.sharedb.sharedbStrings.remove = "remove".asInstanceOf[typingsSlinky.sharedb.sharedbStrings.remove]
 }
 

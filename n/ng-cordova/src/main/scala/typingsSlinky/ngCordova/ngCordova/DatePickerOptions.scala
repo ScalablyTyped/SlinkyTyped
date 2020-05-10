@@ -4,81 +4,327 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DatePickerOptions extends js.Object {
-  var allowFutureDates: js.UndefOr[Boolean] = js.undefined
-  var allowOldDates: js.UndefOr[Boolean] = js.undefined
-  var androidTheme: js.UndefOr[AndroidTheme] = js.undefined
-  var cancelButtonColor: js.UndefOr[String] = js.undefined
-  var cancelButtonLabel: js.UndefOr[String] = js.undefined
-  var cancelText: js.UndefOr[String] = js.undefined
-  var date: js.UndefOr[js.Date | String | Double] = js.undefined
-  var doneButtonColor: js.UndefOr[String] = js.undefined
-  var doneButtonLabel: js.UndefOr[String] = js.undefined
-  var is24Hour: js.UndefOr[Boolean] = js.undefined
-  var locale: js.UndefOr[String] = js.undefined
-  var maxDate: js.UndefOr[js.Date | String | Double] = js.undefined
-  var minDate: js.UndefOr[js.Date | String | Double] = js.undefined
-  var minuteInterval: js.UndefOr[Double] = js.undefined
-  var mode: js.UndefOr[String] = js.undefined
-  var nowText: js.UndefOr[String] = js.undefined
-  var okText: js.UndefOr[String] = js.undefined
-  var popoverArrowDirection: js.UndefOr[String] = js.undefined
-  var titleText: js.UndefOr[String] = js.undefined
-  var todayText: js.UndefOr[String] = js.undefined
-  var x: js.UndefOr[Double] = js.undefined
-  var y: js.UndefOr[Double] = js.undefined
+  var allowFutureDates: js.UndefOr[Boolean] = js.native
+  var allowOldDates: js.UndefOr[Boolean] = js.native
+  var androidTheme: js.UndefOr[AndroidTheme] = js.native
+  var cancelButtonColor: js.UndefOr[String] = js.native
+  var cancelButtonLabel: js.UndefOr[String] = js.native
+  var cancelText: js.UndefOr[String] = js.native
+  var date: js.UndefOr[js.Date | String | Double] = js.native
+  var doneButtonColor: js.UndefOr[String] = js.native
+  var doneButtonLabel: js.UndefOr[String] = js.native
+  var is24Hour: js.UndefOr[Boolean] = js.native
+  var locale: js.UndefOr[String] = js.native
+  var maxDate: js.UndefOr[js.Date | String | Double] = js.native
+  var minDate: js.UndefOr[js.Date | String | Double] = js.native
+  var minuteInterval: js.UndefOr[Double] = js.native
+  var mode: js.UndefOr[String] = js.native
+  var nowText: js.UndefOr[String] = js.native
+  var okText: js.UndefOr[String] = js.native
+  var popoverArrowDirection: js.UndefOr[String] = js.native
+  var titleText: js.UndefOr[String] = js.native
+  var todayText: js.UndefOr[String] = js.native
+  var x: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.native
 }
 
 object DatePickerOptions {
   @scala.inline
-  def apply(
-    allowFutureDates: js.UndefOr[Boolean] = js.undefined,
-    allowOldDates: js.UndefOr[Boolean] = js.undefined,
-    androidTheme: AndroidTheme = null,
-    cancelButtonColor: String = null,
-    cancelButtonLabel: String = null,
-    cancelText: String = null,
-    date: js.Date | String | Double = null,
-    doneButtonColor: String = null,
-    doneButtonLabel: String = null,
-    is24Hour: js.UndefOr[Boolean] = js.undefined,
-    locale: String = null,
-    maxDate: js.Date | String | Double = null,
-    minDate: js.Date | String | Double = null,
-    minuteInterval: Int | Double = null,
-    mode: String = null,
-    nowText: String = null,
-    okText: String = null,
-    popoverArrowDirection: String = null,
-    titleText: String = null,
-    todayText: String = null,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): DatePickerOptions = {
+  def apply(): DatePickerOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowFutureDates)) __obj.updateDynamic("allowFutureDates")(allowFutureDates.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowOldDates)) __obj.updateDynamic("allowOldDates")(allowOldDates.asInstanceOf[js.Any])
-    if (androidTheme != null) __obj.updateDynamic("androidTheme")(androidTheme.asInstanceOf[js.Any])
-    if (cancelButtonColor != null) __obj.updateDynamic("cancelButtonColor")(cancelButtonColor.asInstanceOf[js.Any])
-    if (cancelButtonLabel != null) __obj.updateDynamic("cancelButtonLabel")(cancelButtonLabel.asInstanceOf[js.Any])
-    if (cancelText != null) __obj.updateDynamic("cancelText")(cancelText.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (doneButtonColor != null) __obj.updateDynamic("doneButtonColor")(doneButtonColor.asInstanceOf[js.Any])
-    if (doneButtonLabel != null) __obj.updateDynamic("doneButtonLabel")(doneButtonLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(is24Hour)) __obj.updateDynamic("is24Hour")(is24Hour.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (minuteInterval != null) __obj.updateDynamic("minuteInterval")(minuteInterval.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (nowText != null) __obj.updateDynamic("nowText")(nowText.asInstanceOf[js.Any])
-    if (okText != null) __obj.updateDynamic("okText")(okText.asInstanceOf[js.Any])
-    if (popoverArrowDirection != null) __obj.updateDynamic("popoverArrowDirection")(popoverArrowDirection.asInstanceOf[js.Any])
-    if (titleText != null) __obj.updateDynamic("titleText")(titleText.asInstanceOf[js.Any])
-    if (todayText != null) __obj.updateDynamic("todayText")(todayText.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatePickerOptions]
   }
+  @scala.inline
+  implicit class DatePickerOptionsOps[Self <: DatePickerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowFutureDates(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFutureDates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowFutureDates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowFutureDates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowOldDates(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowOldDates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowOldDates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowOldDates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAndroidTheme(value: AndroidTheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidTheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidTheme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelButtonColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelButtonColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelButtonColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelButtonColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelButtonLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelButtonLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelButtonLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelButtonLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDate(value: js.Date | String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoneButtonColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doneButtonColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoneButtonColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doneButtonColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoneButtonLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doneButtonLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoneButtonLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doneButtonLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIs24Hour(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is24Hour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIs24Hour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is24Hour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxDate(value: js.Date | String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinDate(value: js.Date | String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinuteInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinuteInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNowText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nowText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNowText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nowText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOkText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("okText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOkText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("okText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopoverArrowDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverArrowDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopoverArrowDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverArrowDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTodayText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("todayText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTodayText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("todayText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

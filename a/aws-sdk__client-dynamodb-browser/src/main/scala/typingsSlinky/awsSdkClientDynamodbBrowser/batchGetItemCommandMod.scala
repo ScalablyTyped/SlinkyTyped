@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkClientDynamodbBrowser
 
+import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientDynamodbBrowser.dynamoDBConfigurationMod.DynamoDBResolvedConfiguration
 import typingsSlinky.awsSdkClientDynamodbBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.outputTypesUnionMod.OutputTypesUnion
@@ -8,7 +9,6 @@ import typingsSlinky.awsSdkClientDynamodbBrowser.typesBatchGetItemOutputMod.Batc
 import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +26,9 @@ object batchGetItemCommandMod extends js.Object {
           Blob
         ] {
     def this(input: BatchGetItemInput) = this()
-    /* CompleteClass */
-    override val input: BatchGetItemInput = js.native
-    val middlewareStack: MiddlewareStack[BatchGetItemInput, BatchGetItemOutput, org.scalajs.dom.raw.Blob] = js.native
+    val middlewareStack: MiddlewareStack[BatchGetItemInput, BatchGetItemOutput, Blob] = js.native
     def resolveMiddleware(
       clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
-      configuration: DynamoDBResolvedConfiguration
-    ): Handler[BatchGetItemInput, BatchGetItemOutput] = js.native
-    /* CompleteClass */
-    override def resolveMiddleware(
-      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
       configuration: DynamoDBResolvedConfiguration
     ): Handler[BatchGetItemInput, BatchGetItemOutput] = js.native
   }

@@ -5,48 +5,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConnectOptions extends js.Object {
-  var connect_timeout: js.UndefOr[Double] = js.undefined
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var headers: js.UndefOr[HttpHeaders] = js.undefined
-  var https: js.UndefOr[Boolean] = js.undefined
-  var max_attempts: js.UndefOr[Double] = js.undefined
-  var nodeOptions: js.UndefOr[RequestOptions | typingsSlinky.node.httpsMod.RequestOptions] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var protocol: js.UndefOr[TProtocolConstructor] = js.undefined
-  var retry_max_delay: js.UndefOr[Double] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
-  var transport: js.UndefOr[TTransportConstructor] = js.undefined
+  var connect_timeout: js.UndefOr[Double] = js.native
+  var debug: js.UndefOr[Boolean] = js.native
+  var headers: js.UndefOr[HttpHeaders] = js.native
+  var https: js.UndefOr[Boolean] = js.native
+  var max_attempts: js.UndefOr[Double] = js.native
+  var nodeOptions: js.UndefOr[RequestOptions | typingsSlinky.node.httpsMod.RequestOptions] = js.native
+  var path: js.UndefOr[String] = js.native
+  var protocol: js.UndefOr[TProtocolConstructor] = js.native
+  var retry_max_delay: js.UndefOr[Double] = js.native
+  var timeout: js.UndefOr[Double] = js.native
+  var transport: js.UndefOr[TTransportConstructor] = js.native
 }
 
 object ConnectOptions {
   @scala.inline
-  def apply(
-    connect_timeout: Int | Double = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    headers: HttpHeaders = null,
-    https: js.UndefOr[Boolean] = js.undefined,
-    max_attempts: Int | Double = null,
-    nodeOptions: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions = null,
-    path: String = null,
-    protocol: TProtocolConstructor = null,
-    retry_max_delay: Int | Double = null,
-    timeout: Int | Double = null,
-    transport: TTransportConstructor = null
-  ): ConnectOptions = {
+  def apply(): ConnectOptions = {
     val __obj = js.Dynamic.literal()
-    if (connect_timeout != null) __obj.updateDynamic("connect_timeout")(connect_timeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (!js.isUndefined(https)) __obj.updateDynamic("https")(https.asInstanceOf[js.Any])
-    if (max_attempts != null) __obj.updateDynamic("max_attempts")(max_attempts.asInstanceOf[js.Any])
-    if (nodeOptions != null) __obj.updateDynamic("nodeOptions")(nodeOptions.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (retry_max_delay != null) __obj.updateDynamic("retry_max_delay")(retry_max_delay.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (transport != null) __obj.updateDynamic("transport")(transport.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectOptions]
   }
+  @scala.inline
+  implicit class ConnectOptionsOps[Self <: ConnectOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnect_timeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect_timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnect_timeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect_timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: HttpHeaders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttps(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("https")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax_attempts(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_attempts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax_attempts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_attempts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeOptions(value: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: TProtocolConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetry_max_delay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_max_delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetry_max_delay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retry_max_delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransport(value: TTransportConstructor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

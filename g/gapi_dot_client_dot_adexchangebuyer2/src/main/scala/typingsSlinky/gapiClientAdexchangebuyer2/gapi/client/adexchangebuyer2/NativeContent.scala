@@ -4,67 +4,205 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NativeContent extends js.Object {
   /** The name of the advertiser or sponsor, to be displayed in the ad creative. */
-  var advertiserName: js.UndefOr[String] = js.undefined
+  var advertiserName: js.UndefOr[String] = js.native
   /** The app icon, for app download ads. */
-  var appIcon: js.UndefOr[Image] = js.undefined
+  var appIcon: js.UndefOr[Image] = js.native
   /** A long description of the ad. */
-  var body: js.UndefOr[String] = js.undefined
+  var body: js.UndefOr[String] = js.native
   /** A label for the button that the user is supposed to click. */
-  var callToAction: js.UndefOr[String] = js.undefined
+  var callToAction: js.UndefOr[String] = js.native
   /** The URL that the browser/SDK will load when the user clicks the ad. */
-  var clickLinkUrl: js.UndefOr[String] = js.undefined
+  var clickLinkUrl: js.UndefOr[String] = js.native
   /** The URL to use for click tracking. */
-  var clickTrackingUrl: js.UndefOr[String] = js.undefined
+  var clickTrackingUrl: js.UndefOr[String] = js.native
   /** A short title for the ad. */
-  var headline: js.UndefOr[String] = js.undefined
+  var headline: js.UndefOr[String] = js.native
   /** A large image. */
-  var image: js.UndefOr[Image] = js.undefined
+  var image: js.UndefOr[Image] = js.native
   /** A smaller image, for the advertiser's logo. */
-  var logo: js.UndefOr[Image] = js.undefined
+  var logo: js.UndefOr[Image] = js.native
   /** The price of the promoted app including currency info. */
-  var priceDisplayText: js.UndefOr[String] = js.undefined
+  var priceDisplayText: js.UndefOr[String] = js.native
   /** The app rating in the app store. Must be in the range [0-5]. */
-  var starRating: js.UndefOr[Double] = js.undefined
+  var starRating: js.UndefOr[Double] = js.native
   /** The URL to the app store to purchase/download the promoted app. */
-  var storeUrl: js.UndefOr[String] = js.undefined
+  var storeUrl: js.UndefOr[String] = js.native
   /** The URL to fetch a native video ad. */
-  var videoUrl: js.UndefOr[String] = js.undefined
+  var videoUrl: js.UndefOr[String] = js.native
 }
 
 object NativeContent {
   @scala.inline
-  def apply(
-    advertiserName: String = null,
-    appIcon: Image = null,
-    body: String = null,
-    callToAction: String = null,
-    clickLinkUrl: String = null,
-    clickTrackingUrl: String = null,
-    headline: String = null,
-    image: Image = null,
-    logo: Image = null,
-    priceDisplayText: String = null,
-    starRating: Int | Double = null,
-    storeUrl: String = null,
-    videoUrl: String = null
-  ): NativeContent = {
+  def apply(): NativeContent = {
     val __obj = js.Dynamic.literal()
-    if (advertiserName != null) __obj.updateDynamic("advertiserName")(advertiserName.asInstanceOf[js.Any])
-    if (appIcon != null) __obj.updateDynamic("appIcon")(appIcon.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (callToAction != null) __obj.updateDynamic("callToAction")(callToAction.asInstanceOf[js.Any])
-    if (clickLinkUrl != null) __obj.updateDynamic("clickLinkUrl")(clickLinkUrl.asInstanceOf[js.Any])
-    if (clickTrackingUrl != null) __obj.updateDynamic("clickTrackingUrl")(clickTrackingUrl.asInstanceOf[js.Any])
-    if (headline != null) __obj.updateDynamic("headline")(headline.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (logo != null) __obj.updateDynamic("logo")(logo.asInstanceOf[js.Any])
-    if (priceDisplayText != null) __obj.updateDynamic("priceDisplayText")(priceDisplayText.asInstanceOf[js.Any])
-    if (starRating != null) __obj.updateDynamic("starRating")(starRating.asInstanceOf[js.Any])
-    if (storeUrl != null) __obj.updateDynamic("storeUrl")(storeUrl.asInstanceOf[js.Any])
-    if (videoUrl != null) __obj.updateDynamic("videoUrl")(videoUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[NativeContent]
   }
+  @scala.inline
+  implicit class NativeContentOps[Self <: NativeContent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdvertiserName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advertiserName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppIcon(value: Image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallToAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callToAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallToAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callToAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClickLinkUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickLinkUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickLinkUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickLinkUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClickTrackingUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickTrackingUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickTrackingUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickTrackingUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeadline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeadline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: Image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogo(value: Image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriceDisplayText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priceDisplayText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriceDisplayText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priceDisplayText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStarRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStarRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

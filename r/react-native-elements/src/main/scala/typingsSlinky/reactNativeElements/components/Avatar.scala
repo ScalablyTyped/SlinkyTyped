@@ -1,12 +1,9 @@
 package typingsSlinky.reactNativeElements.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -24,62 +21,70 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Avatar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeElements.mod.Avatar] {
+object Avatar {
   @JSImport("react-native-elements", "Avatar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: title */
-  def apply(
-    Component: ReactComponentClass[js.Object] = null,
-    ImageComponent: ReactComponentClass[js.Object] = null,
-    activeOpacity: Int | Double = null,
-    avatarStyle: ImageStyle = null,
-    containerStyle: StyleProp[ViewStyle] = null,
-    editButton: PartialIconProps = null,
-    icon: AvatarIcon = null,
-    iconStyle: StyleProp[TextStyle] = null,
-    imageProps: PartialImageProps = null,
-    onEditPress: () => Unit = null,
-    onLongPress: () => Unit = null,
-    onPress: () => Unit = null,
-    overlayContainerStyle: StyleProp[ViewStyle] = null,
-    placeholderStyle: StyleProp[ViewStyle] = null,
-    renderPlaceholderContent: ReactElement = null,
-    rounded: js.UndefOr[Boolean] = js.undefined,
-    showEditButton: js.UndefOr[Boolean] = js.undefined,
-    size: small | medium | large | xlarge | Double = null,
-    source: ImageSourcePropType = null,
-    titleStyle: StyleProp[TextStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Avatar] = {
-    val __obj = js.Dynamic.literal()
-    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
-    if (ImageComponent != null) __obj.updateDynamic("ImageComponent")(ImageComponent.asInstanceOf[js.Any])
-    if (activeOpacity != null) __obj.updateDynamic("activeOpacity")(activeOpacity.asInstanceOf[js.Any])
-    if (avatarStyle != null) __obj.updateDynamic("avatarStyle")(avatarStyle.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (editButton != null) __obj.updateDynamic("editButton")(editButton.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (iconStyle != null) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
-    if (imageProps != null) __obj.updateDynamic("imageProps")(imageProps.asInstanceOf[js.Any])
-    if (onEditPress != null) __obj.updateDynamic("onEditPress")(js.Any.fromFunction0(onEditPress))
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction0(onLongPress))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
-    if (overlayContainerStyle != null) __obj.updateDynamic("overlayContainerStyle")(overlayContainerStyle.asInstanceOf[js.Any])
-    if (placeholderStyle != null) __obj.updateDynamic("placeholderStyle")(placeholderStyle.asInstanceOf[js.Any])
-    if (renderPlaceholderContent != null) __obj.updateDynamic("renderPlaceholderContent")(renderPlaceholderContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(rounded)) __obj.updateDynamic("rounded")(rounded.asInstanceOf[js.Any])
-    if (!js.isUndefined(showEditButton)) __obj.updateDynamic("showEditButton")(showEditButton.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (titleStyle != null) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Avatar] {
+    @scala.inline
+    def Component(value: ReactComponentClass[js.Object]): this.type = set("Component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ImageComponent(value: ReactComponentClass[js.Object]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeOpacity(value: Double): this.type = set("activeOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def avatarStyle(value: ImageStyle): this.type = set("avatarStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyleNull: this.type = set("containerStyle", null)
+    @scala.inline
+    def editButton(value: PartialIconProps): this.type = set("editButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: AvatarIcon): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconStyle(value: StyleProp[TextStyle]): this.type = set("iconStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconStyleNull: this.type = set("iconStyle", null)
+    @scala.inline
+    def imageProps(value: PartialImageProps): this.type = set("imageProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEditPress(value: () => Unit): this.type = set("onEditPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def onLongPress(value: () => Unit): this.type = set("onLongPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def overlayContainerStyle(value: StyleProp[ViewStyle]): this.type = set("overlayContainerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlayContainerStyleNull: this.type = set("overlayContainerStyle", null)
+    @scala.inline
+    def placeholderStyle(value: StyleProp[ViewStyle]): this.type = set("placeholderStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholderStyleNull: this.type = set("placeholderStyle", null)
+    @scala.inline
+    def renderPlaceholderContent(value: ReactElement): this.type = set("renderPlaceholderContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rounded(value: Boolean): this.type = set("rounded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showEditButton(value: Boolean): this.type = set("showEditButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: small | medium | large | xlarge | Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def source(value: ImageSourcePropType): this.type = set("source", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleStyle(value: StyleProp[TextStyle]): this.type = set("titleStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleStyleNull: this.type = set("titleStyle", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Avatar] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeElements.mod.Avatar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AvatarProps
+  
+  def withProps(p: AvatarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Avatar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

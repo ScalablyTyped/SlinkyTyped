@@ -6,10 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IView extends ITable {
   /** [Config Option] (Boolean) */
   @JSName("animate")
-  var animate_IView: js.UndefOr[Boolean] = js.undefined
+  var animate_IView: js.UndefOr[Boolean] = js.native
   /** [Method] Collapses a record that is loaded in the view
   		* @param record Ext.data.Model The record to collapse
   		* @param deep Boolean True to collapse nodes all the way up the tree hierarchy.
@@ -24,7 +25,7 @@ trait IView extends ITable {
       /* scope */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Expands a record that is loaded in the view
   		* @param record Ext.data.Model The record to expand
   		* @param deep Boolean True to expand nodes all the way down the tree hierarchy.
@@ -39,27 +40,27 @@ trait IView extends ITable {
       /* scope */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Gets the listeners to bind to a new store
   		* @returns Object The listeners to be bound to the store in object literal form. The scope may be omitted, it is assumed to be the current instance.
   		*/
   @JSName("getStoreListeners")
-  var getStoreListeners_IView: js.UndefOr[js.Function0[_]] = js.undefined
+  var getStoreListeners_IView: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Gets the base TreeStore from the bound TreePanel  */
-  var getTreeStore: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var getTreeStore: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Property] (Boolean) */
-  var isTreeView: js.UndefOr[Boolean] = js.undefined
+  var isTreeView: js.UndefOr[Boolean] = js.native
   /** [Config Option] (Boolean) */
   @JSName("loadMask")
-  var loadMask_IView: js.UndefOr[Boolean] = js.undefined
+  var loadMask_IView: js.UndefOr[Boolean] = js.native
   /** [Method] Template method it is called when a new store is bound to the current instance  */
   @JSName("onBindStore")
-  var onBindStore_IView: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onBindStore_IView: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Template method it is called when an existing store is unbound from the current instance  */
   @JSName("onUnbindStore")
-  var onUnbindStore_IView: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onUnbindStore_IView: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Config Option] (Boolean) */
-  var rootVisible: js.UndefOr[Boolean] = js.undefined
+  var rootVisible: js.UndefOr[Boolean] = js.native
   /** [Method] Toggles a record between expanded and collapsed
   		* @param record Ext.data.Model
   		* @param deep Boolean True to collapse nodes all the way up the tree hierarchy.
@@ -74,39 +75,160 @@ trait IView extends ITable {
       /* scope */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object IView {
   @scala.inline
-  def apply(
-    ITable: ITable = null,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    collapse: (/* record */ js.UndefOr[IModel], /* deep */ js.UndefOr[Boolean], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit = null,
-    expand: (/* record */ js.UndefOr[IModel], /* deep */ js.UndefOr[Boolean], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit = null,
-    getStoreListeners: () => _ = null,
-    getTreeStore: () => Unit = null,
-    isTreeView: js.UndefOr[Boolean] = js.undefined,
-    loadMask: js.UndefOr[Boolean] = js.undefined,
-    onBindStore: () => Unit = null,
-    onUnbindStore: () => Unit = null,
-    rootVisible: js.UndefOr[Boolean] = js.undefined,
-    toggle: (/* record */ js.UndefOr[IModel], /* deep */ js.UndefOr[Boolean], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit = null
-  ): IView = {
+  def apply(): IView = {
     val __obj = js.Dynamic.literal()
-    if (ITable != null) js.Dynamic.global.Object.assign(__obj, ITable)
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (collapse != null) __obj.updateDynamic("collapse")(js.Any.fromFunction4(collapse))
-    if (expand != null) __obj.updateDynamic("expand")(js.Any.fromFunction4(expand))
-    if (getStoreListeners != null) __obj.updateDynamic("getStoreListeners")(js.Any.fromFunction0(getStoreListeners))
-    if (getTreeStore != null) __obj.updateDynamic("getTreeStore")(js.Any.fromFunction0(getTreeStore))
-    if (!js.isUndefined(isTreeView)) __obj.updateDynamic("isTreeView")(isTreeView.asInstanceOf[js.Any])
-    if (!js.isUndefined(loadMask)) __obj.updateDynamic("loadMask")(loadMask.asInstanceOf[js.Any])
-    if (onBindStore != null) __obj.updateDynamic("onBindStore")(js.Any.fromFunction0(onBindStore))
-    if (onUnbindStore != null) __obj.updateDynamic("onUnbindStore")(js.Any.fromFunction0(onUnbindStore))
-    if (!js.isUndefined(rootVisible)) __obj.updateDynamic("rootVisible")(rootVisible.asInstanceOf[js.Any])
-    if (toggle != null) __obj.updateDynamic("toggle")(js.Any.fromFunction4(toggle))
     __obj.asInstanceOf[IView]
   }
+  @scala.inline
+  implicit class IViewOps[Self <: IView] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapse(
+      value: (/* record */ js.UndefOr[IModel], /* deep */ js.UndefOr[Boolean], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpand(
+      value: (/* record */ js.UndefOr[IModel], /* deep */ js.UndefOr[Boolean], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetStoreListeners(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStoreListeners")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetStoreListeners: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStoreListeners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetTreeStore(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTreeStore")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetTreeStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTreeStore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTreeView(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTreeView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTreeView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTreeView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadMask(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadMask: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadMask")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBindStore(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBindStore")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBindStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBindStore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUnbindStore(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnbindStore")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUnbindStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUnbindStore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRootVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRootVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggle(
+      value: (/* record */ js.UndefOr[IModel], /* deep */ js.UndefOr[Boolean], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutToggle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

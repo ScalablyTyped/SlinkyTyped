@@ -1,6 +1,5 @@
 package typingsSlinky.officeUiFabricReact
 
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.change
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneState
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptions
@@ -29,7 +28,7 @@ object selectionMod extends js.Object {
     def this(props: ISelectionZoneProps) = this()
   }
   
-  val SELECTION_CHANGE: change = js.native
+  val SELECTION_CHANGE: /* "change" */ String = js.native
   @js.native
   object SelectionDirection extends js.Object {
     /* 0 */ val horizontal: typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionDirection.horizontal with Double = js.native

@@ -2,8 +2,7 @@ package typingsSlinky.rsocketWebsocketServer
 
 import typingsSlinky.rsocketCore.rsocketencodingMod.Encoders
 import typingsSlinky.rsocketCore.rsocketserverMod.TransportServer
-import typingsSlinky.rsocketFlowable.mod.Flowable
-import typingsSlinky.rsocketTypes.reactiveSocketTypesMod.DuplexConnection
+import typingsSlinky.ws.mod.Server
 import typingsSlinky.ws.mod.ServerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,10 +15,11 @@ object rsocketwebsocketserverMod extends js.Object {
   class RSocketWebSocketServer protected () extends TransportServer {
     def this(options: ServerOptions) = this()
     def this(options: ServerOptions, encoders: Encoders[_]) = this()
-    /* CompleteClass */
-    override def start(): Flowable[DuplexConnection] = js.native
-    /* CompleteClass */
-    override def stop(): Unit = js.native
+    def this(
+      options: ServerOptions,
+      encoders: Encoders[_],
+      factory: js.Function1[/* options */ ServerOptions, Server]
+    ) = this()
   }
   
 }

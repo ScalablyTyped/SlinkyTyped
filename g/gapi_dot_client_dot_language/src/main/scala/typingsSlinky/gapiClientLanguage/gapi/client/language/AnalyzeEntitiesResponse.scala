@@ -4,24 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnalyzeEntitiesResponse extends js.Object {
   /** The recognized entities in the input document. */
-  var entities: js.UndefOr[js.Array[Entity]] = js.undefined
+  var entities: js.UndefOr[js.Array[Entity]] = js.native
   /**
     * The language of the text, which will be the same as the language specified
     * in the request or, if not specified, the automatically-detected language.
     * See Document.language field for more details.
     */
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
 }
 
 object AnalyzeEntitiesResponse {
   @scala.inline
-  def apply(entities: js.Array[Entity] = null, language: String = null): AnalyzeEntitiesResponse = {
+  def apply(): AnalyzeEntitiesResponse = {
     val __obj = js.Dynamic.literal()
-    if (entities != null) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyzeEntitiesResponse]
   }
+  @scala.inline
+  implicit class AnalyzeEntitiesResponseOps[Self <: AnalyzeEntitiesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntities(value: js.Array[Entity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

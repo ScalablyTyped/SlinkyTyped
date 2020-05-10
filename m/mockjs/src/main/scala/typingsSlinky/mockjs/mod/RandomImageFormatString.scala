@@ -15,12 +15,10 @@ trait RandomImageFormatString extends js.Object
 
 object RandomImageFormatString {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def gif: typingsSlinky.mockjs.mockjsStrings.gif = "gif".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.gif]
   @scala.inline
-  def gif: typingsSlinky.mockjs.mockjsStrings.gif = this.cast("gif")
+  def jpg: typingsSlinky.mockjs.mockjsStrings.jpg = "jpg".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.jpg]
   @scala.inline
-  def jpg: typingsSlinky.mockjs.mockjsStrings.jpg = this.cast("jpg")
-  @scala.inline
-  def png: typingsSlinky.mockjs.mockjsStrings.png = this.cast("png")
+  def png: typingsSlinky.mockjs.mockjsStrings.png = "png".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.png]
 }
 

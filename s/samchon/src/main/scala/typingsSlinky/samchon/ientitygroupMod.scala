@@ -2,7 +2,6 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.ientityMod.IEntity
 import typingsSlinky.sxml.mod.XML
-import typingsSlinky.tstl.icontainerMod.IContainer.Iterator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.mod.base.Container
 import scala.scalajs.js
@@ -29,13 +28,6 @@ object ientitygroupMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[T, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* InferMemberOverrides */
-    override def begin(): Iterator[T, SourceT, IteratorT, ReverseT, T] = js.native
-    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
@@ -60,19 +52,6 @@ object ientitygroupMod extends js.Object {
       * @return A new child Entity belongs to EntityArray.
       */
     def createChild(xml: XML): T = js.native
-    /**
-      * Test whether container is empty.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def empty(): Boolean = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* InferMemberOverrides */
-    override def end(): Iterator[T, SourceT, IteratorT, ReverseT, T] = js.native
     /**
       * Erase elements in range.
       *
@@ -128,37 +107,6 @@ object ientitygroupMod extends js.Object {
       * @return Whether the map has an item having the specified identifier.
       */
     def has(key: js.Any): Boolean = js.native
-    /**
-      * Insert items at the end.
-      *
-      * @param items Items to insert.
-      * @return Number of elements in the container after insertion.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def push(items: T*): Double = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseT = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def rend(): ReverseT = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def size(): Double = js.native
     /**
       * Swap elements.
       *

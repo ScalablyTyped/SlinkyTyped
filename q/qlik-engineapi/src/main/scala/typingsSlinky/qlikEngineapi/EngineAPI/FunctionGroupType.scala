@@ -67,60 +67,58 @@ trait FunctionGroupType extends js.Object
 
 object FunctionGroupType {
   @scala.inline
-  def AGGR: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.AGGR = this.cast("AGGR")
+  def AGGR: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.AGGR = "AGGR".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.AGGR]
   @scala.inline
-  def ALL: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.ALL = this.cast("ALL")
+  def ALL: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.ALL = "ALL".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.ALL]
   @scala.inline
-  def CLR: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CLR = this.cast("CLR")
+  def CLR: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CLR = "CLR".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CLR]
   @scala.inline
-  def CND: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CND = this.cast("CND")
+  def CND: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CND = "CND".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.CND]
   @scala.inline
-  def COUNT: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.COUNT = this.cast("COUNT")
+  def COUNT: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.COUNT = "COUNT".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.COUNT]
   @scala.inline
-  def DATE: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DATE = this.cast("DATE")
+  def DATE: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DATE = "DATE".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.DATE]
   @scala.inline
-  def EXP: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXP = this.cast("EXP")
+  def EXP: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXP = "EXP".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXP]
   @scala.inline
-  def EXT: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXT = this.cast("EXT")
+  def EXT: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXT = "EXT".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.EXT]
   @scala.inline
-  def FILE: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FILE = this.cast("FILE")
+  def FILE: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FILE = "FILE".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FILE]
   @scala.inline
-  def FIN: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FIN = this.cast("FIN")
+  def FIN: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FIN = "FIN".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FIN]
   @scala.inline
-  def FRMT: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FRMT = this.cast("FRMT")
+  def FRMT: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FRMT = "FRMT".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.FRMT]
   @scala.inline
-  def GEO: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.GEO = this.cast("GEO")
+  def GEO: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.GEO = "GEO".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.GEO]
   @scala.inline
-  def LOG: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.LOG = this.cast("LOG")
+  def LOG: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.LOG = "LOG".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.LOG]
   @scala.inline
-  def MAPP: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.MAPP = this.cast("MAPP")
+  def MAPP: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.MAPP = "MAPP".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.MAPP]
   @scala.inline
-  def MATH: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.MATH = this.cast("MATH")
+  def MATH: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.MATH = "MATH".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.MATH]
   @scala.inline
-  def NONE: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NONE = this.cast("NONE")
+  def NONE: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NONE = "NONE".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NONE]
   @scala.inline
-  def NULL: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NULL = this.cast("NULL")
+  def NULL: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NULL = "NULL".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NULL]
   @scala.inline
-  def NUM: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NUM = this.cast("NUM")
+  def NUM: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NUM = "NUM".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NUM]
   @scala.inline
-  def NUMI: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NUMI = this.cast("NUMI")
+  def NUMI: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NUMI = "NUMI".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.NUMI]
   @scala.inline
-  def RCRD: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.RCRD = this.cast("RCRD")
+  def RCRD: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.RCRD = "RCRD".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.RCRD]
   @scala.inline
-  def RNG: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.RNG = this.cast("RNG")
+  def RNG: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.RNG = "RNG".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.RNG]
   @scala.inline
-  def RNK: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.RNK = this.cast("RNK")
+  def RNK: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.RNK = "RNK".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.RNK]
   @scala.inline
-  def STR: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.STR = this.cast("STR")
+  def STR: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.STR = "STR".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.STR]
   @scala.inline
-  def SYS: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.SYS = this.cast("SYS")
+  def SYS: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.SYS = "SYS".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.SYS]
   @scala.inline
-  def TBL: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.TBL = this.cast("TBL")
+  def TBL: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.TBL = "TBL".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.TBL]
   @scala.inline
-  def TRIG: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.TRIG = this.cast("TRIG")
+  def TRIG: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.TRIG = "TRIG".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.TRIG]
   @scala.inline
-  def U: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.U = this.cast("U")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def U: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.U = "U".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.U]
 }
 

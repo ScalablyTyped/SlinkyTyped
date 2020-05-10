@@ -1,57 +1,134 @@
 package typingsSlinky.jqueryui.JQueryUI
 
-import typingsSlinky.jquery.JQueryEventObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // Tabs //////////////////////////////////////////////////
+@js.native
 trait TabsOptions extends TabsEvents {
-  var active: js.UndefOr[js.Any] = js.undefined
+  var active: js.UndefOr[js.Any] = js.native
    // boolean or number
-  var classes: js.UndefOr[TabClasses] = js.undefined
-  var collapsible: js.UndefOr[Boolean] = js.undefined
-  var disabled: js.UndefOr[js.Any] = js.undefined
+  var classes: js.UndefOr[TabClasses] = js.native
+  var collapsible: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[js.Any] = js.native
    // boolean or []
-  var event: js.UndefOr[String] = js.undefined
-  var heightStyle: js.UndefOr[String] = js.undefined
-  var hide: js.UndefOr[js.Any] = js.undefined
+  var event: js.UndefOr[String] = js.native
+  var heightStyle: js.UndefOr[String] = js.native
+  var hide: js.UndefOr[js.Any] = js.native
    // boolean, number, string or object
-  var show: js.UndefOr[js.Any] = js.undefined
+  var show: js.UndefOr[js.Any] = js.native
 }
 
 object TabsOptions {
   @scala.inline
-  def apply(
-    activate: (/* event */ JQueryEventObject, TabsActivationUIParams) => Unit = null,
-    active: js.Any = null,
-    beforeActivate: (/* event */ JQueryEventObject, TabsActivationUIParams) => Unit = null,
-    beforeLoad: (/* event */ JQueryEventObject, TabsBeforeLoadUIParams) => Unit = null,
-    classes: TabClasses = null,
-    collapsible: js.UndefOr[Boolean] = js.undefined,
-    create: (/* event */ JQueryEventObject, TabsCreateOrLoadUIParams) => Unit = null,
-    disabled: js.Any = null,
-    event: String = null,
-    heightStyle: String = null,
-    hide: js.Any = null,
-    load: (/* event */ JQueryEventObject, TabsCreateOrLoadUIParams) => Unit = null,
-    show: js.Any = null
-  ): TabsOptions = {
+  def apply(): TabsOptions = {
     val __obj = js.Dynamic.literal()
-    if (activate != null) __obj.updateDynamic("activate")(js.Any.fromFunction2(activate))
-    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (beforeActivate != null) __obj.updateDynamic("beforeActivate")(js.Any.fromFunction2(beforeActivate))
-    if (beforeLoad != null) __obj.updateDynamic("beforeLoad")(js.Any.fromFunction2(beforeLoad))
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (!js.isUndefined(collapsible)) __obj.updateDynamic("collapsible")(collapsible.asInstanceOf[js.Any])
-    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (heightStyle != null) __obj.updateDynamic("heightStyle")(heightStyle.asInstanceOf[js.Any])
-    if (hide != null) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
-    if (load != null) __obj.updateDynamic("load")(js.Any.fromFunction2(load))
-    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabsOptions]
   }
+  @scala.inline
+  implicit class TabsOptionsOps[Self <: TabsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClasses(value: TabClasses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapsible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapsible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeightStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeightStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHide(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

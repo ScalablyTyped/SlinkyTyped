@@ -1,12 +1,11 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.File
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.uploadInterfaceMod.UploadFile
 import typingsSlinky.antd.uploadInterfaceMod.UploadListProps
 import typingsSlinky.antd.uploadInterfaceMod.UploadListType
@@ -16,49 +15,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object UploadList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object UploadList {
   @JSImport("antd/lib/upload/UploadList", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    locale: UploadLocale,
-    downloadIcon: TagMod[Any] = null,
-    iconRender: (/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any] = null,
-    items: js.Array[UploadFile[_]] = null,
-    listType: UploadListType = null,
-    onDownload: /* file */ UploadFile[_] => Unit = null,
-    onPreview: /* file */ UploadFile[_] => Unit = null,
-    onRemove: /* file */ UploadFile[_] => Unit | Boolean = null,
-    prefixCls: String = null,
-    previewFile: /* file */ File | Blob => js.Thenable[String] = null,
-    progressAttr: js.Object = null,
-    removeIcon: TagMod[Any] = null,
-    showDownloadIcon: js.UndefOr[Boolean] = js.undefined,
-    showPreviewIcon: js.UndefOr[Boolean] = js.undefined,
-    showRemoveIcon: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any])
-    if (downloadIcon != null) __obj.updateDynamic("downloadIcon")(downloadIcon.asInstanceOf[js.Any])
-    if (iconRender != null) __obj.updateDynamic("iconRender")(js.Any.fromFunction2(iconRender))
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (listType != null) __obj.updateDynamic("listType")(listType.asInstanceOf[js.Any])
-    if (onDownload != null) __obj.updateDynamic("onDownload")(js.Any.fromFunction1(onDownload))
-    if (onPreview != null) __obj.updateDynamic("onPreview")(js.Any.fromFunction1(onPreview))
-    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction1(onRemove))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (previewFile != null) __obj.updateDynamic("previewFile")(js.Any.fromFunction1(previewFile))
-    if (progressAttr != null) __obj.updateDynamic("progressAttr")(progressAttr.asInstanceOf[js.Any])
-    if (removeIcon != null) __obj.updateDynamic("removeIcon")(removeIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(showDownloadIcon)) __obj.updateDynamic("showDownloadIcon")(showDownloadIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(showPreviewIcon)) __obj.updateDynamic("showPreviewIcon")(showPreviewIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(showRemoveIcon)) __obj.updateDynamic("showRemoveIcon")(showRemoveIcon.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def downloadIconReactElement(value: ReactElement): this.type = set("downloadIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def downloadIcon(value: TagMod[Any]): this.type = set("downloadIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconRender(value: (/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any]): this.type = set("iconRender", js.Any.fromFunction2(value))
+    @scala.inline
+    def items(value: js.Array[UploadFile[_]]): this.type = set("items", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listType(value: UploadListType): this.type = set("listType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDownload(value: /* file */ UploadFile[_] => Unit): this.type = set("onDownload", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPreview(value: /* file */ UploadFile[_] => Unit): this.type = set("onPreview", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRemove(value: /* file */ UploadFile[_] => Unit | Boolean): this.type = set("onRemove", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def previewFile(value: /* file */ File | Blob => js.Thenable[String]): this.type = set("previewFile", js.Any.fromFunction1(value))
+    @scala.inline
+    def progressAttr(value: js.Object): this.type = set("progressAttr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removeIcon(value: TagMod[Any]): this.type = set("removeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showDownloadIcon(value: Boolean): this.type = set("showDownloadIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showPreviewIcon(value: Boolean): this.type = set("showPreviewIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showRemoveIcon(value: Boolean): this.type = set("showRemoveIcon", value.asInstanceOf[js.Any])
   }
-  type Props = UploadListProps
+  
+  def withProps(p: UploadListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(locale: UploadLocale): Builder = {
+    val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[UploadListProps]))
+  }
 }
 

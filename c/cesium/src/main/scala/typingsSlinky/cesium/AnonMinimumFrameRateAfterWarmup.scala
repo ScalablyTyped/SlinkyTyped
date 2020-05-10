@@ -5,32 +5,95 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonMinimumFrameRateAfterWarmup extends js.Object {
-  var minimumFrameRateAfterWarmup: js.UndefOr[Double] = js.undefined
-  var minimumFrameRateDuringWarmup: js.UndefOr[Double] = js.undefined
-  var quietPeriod: js.UndefOr[Double] = js.undefined
-  var samplingWindow: js.UndefOr[Double] = js.undefined
-  var scene: Scene
-  var warmupPeriod: js.UndefOr[Double] = js.undefined
+  var minimumFrameRateAfterWarmup: js.UndefOr[Double] = js.native
+  var minimumFrameRateDuringWarmup: js.UndefOr[Double] = js.native
+  var quietPeriod: js.UndefOr[Double] = js.native
+  var samplingWindow: js.UndefOr[Double] = js.native
+  var scene: Scene = js.native
+  var warmupPeriod: js.UndefOr[Double] = js.native
 }
 
 object AnonMinimumFrameRateAfterWarmup {
   @scala.inline
-  def apply(
-    scene: Scene,
-    minimumFrameRateAfterWarmup: Int | Double = null,
-    minimumFrameRateDuringWarmup: Int | Double = null,
-    quietPeriod: Int | Double = null,
-    samplingWindow: Int | Double = null,
-    warmupPeriod: Int | Double = null
-  ): AnonMinimumFrameRateAfterWarmup = {
+  def apply(scene: Scene): AnonMinimumFrameRateAfterWarmup = {
     val __obj = js.Dynamic.literal(scene = scene.asInstanceOf[js.Any])
-    if (minimumFrameRateAfterWarmup != null) __obj.updateDynamic("minimumFrameRateAfterWarmup")(minimumFrameRateAfterWarmup.asInstanceOf[js.Any])
-    if (minimumFrameRateDuringWarmup != null) __obj.updateDynamic("minimumFrameRateDuringWarmup")(minimumFrameRateDuringWarmup.asInstanceOf[js.Any])
-    if (quietPeriod != null) __obj.updateDynamic("quietPeriod")(quietPeriod.asInstanceOf[js.Any])
-    if (samplingWindow != null) __obj.updateDynamic("samplingWindow")(samplingWindow.asInstanceOf[js.Any])
-    if (warmupPeriod != null) __obj.updateDynamic("warmupPeriod")(warmupPeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonMinimumFrameRateAfterWarmup]
   }
+  @scala.inline
+  implicit class AnonMinimumFrameRateAfterWarmupOps[Self <: AnonMinimumFrameRateAfterWarmup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScene(value: Scene): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scene")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinimumFrameRateAfterWarmup(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFrameRateAfterWarmup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumFrameRateAfterWarmup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFrameRateAfterWarmup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumFrameRateDuringWarmup(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFrameRateDuringWarmup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumFrameRateDuringWarmup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFrameRateDuringWarmup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuietPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quietPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuietPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quietPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSamplingWindow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSamplingWindow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samplingWindow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarmupPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warmupPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarmupPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warmupPeriod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

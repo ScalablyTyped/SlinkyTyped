@@ -20,11 +20,41 @@ trait SchemaTargetHttpProxiesScopedList extends js.Object {
 
 object SchemaTargetHttpProxiesScopedList {
   @scala.inline
-  def apply(targetHttpProxies: js.Array[SchemaTargetHttpProxy] = null, warning: AnonCode = null): SchemaTargetHttpProxiesScopedList = {
+  def apply(): SchemaTargetHttpProxiesScopedList = {
     val __obj = js.Dynamic.literal()
-    if (targetHttpProxies != null) __obj.updateDynamic("targetHttpProxies")(targetHttpProxies.asInstanceOf[js.Any])
-    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTargetHttpProxiesScopedList]
   }
+  @scala.inline
+  implicit class SchemaTargetHttpProxiesScopedListOps[Self <: SchemaTargetHttpProxiesScopedList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTargetHttpProxies(value: js.Array[SchemaTargetHttpProxy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetHttpProxies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetHttpProxies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetHttpProxies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: AnonCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

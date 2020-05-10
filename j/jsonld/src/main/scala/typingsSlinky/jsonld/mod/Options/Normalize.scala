@@ -1,8 +1,5 @@
 package typingsSlinky.jsonld.mod.Options
 
-import typingsSlinky.jsonld.jsonldSpecMod.Context
-import typingsSlinky.jsonld.jsonldSpecMod.RemoteDocument
-import typingsSlinky.jsonld.jsonldSpecMod.Url
 import typingsSlinky.jsonld.jsonldStrings.URDNA2015
 import typingsSlinky.jsonld.jsonldStrings.URGNA2012
 import typingsSlinky.jsonld.mod.MimeNQuad
@@ -10,39 +7,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Normalize extends Common {
-  var algorithm: js.UndefOr[URDNA2015 | URGNA2012] = js.undefined
-  var expansion: js.UndefOr[Boolean] = js.undefined
-  var format: js.UndefOr[MimeNQuad] = js.undefined
-  var inputFormat: js.UndefOr[MimeNQuad] = js.undefined
-  var skipExpansion: js.UndefOr[Boolean] = js.undefined
-  var useNative: js.UndefOr[Boolean] = js.undefined
+  var algorithm: js.UndefOr[URDNA2015 | URGNA2012] = js.native
+  var expansion: js.UndefOr[Boolean] = js.native
+  var format: js.UndefOr[MimeNQuad] = js.native
+  var inputFormat: js.UndefOr[MimeNQuad] = js.native
+  var skipExpansion: js.UndefOr[Boolean] = js.native
+  var useNative: js.UndefOr[Boolean] = js.native
 }
 
 object Normalize {
   @scala.inline
-  def apply(
-    algorithm: URDNA2015 | URGNA2012 = null,
-    base: String = null,
-    documentLoader: (/* url */ Url, /* callback */ js.Function2[/* err */ js.Error, /* remoteDoc */ RemoteDocument, Unit]) => js.Promise[RemoteDocument] = null,
-    expandContext: Context = null,
-    expansion: js.UndefOr[Boolean] = js.undefined,
-    format: MimeNQuad = null,
-    inputFormat: MimeNQuad = null,
-    skipExpansion: js.UndefOr[Boolean] = js.undefined,
-    useNative: js.UndefOr[Boolean] = js.undefined
-  ): Normalize = {
+  def apply(): Normalize = {
     val __obj = js.Dynamic.literal()
-    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
-    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
-    if (documentLoader != null) __obj.updateDynamic("documentLoader")(js.Any.fromFunction2(documentLoader))
-    if (expandContext != null) __obj.updateDynamic("expandContext")(expandContext.asInstanceOf[js.Any])
-    if (!js.isUndefined(expansion)) __obj.updateDynamic("expansion")(expansion.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (inputFormat != null) __obj.updateDynamic("inputFormat")(inputFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipExpansion)) __obj.updateDynamic("skipExpansion")(skipExpansion.asInstanceOf[js.Any])
-    if (!js.isUndefined(useNative)) __obj.updateDynamic("useNative")(useNative.asInstanceOf[js.Any])
     __obj.asInstanceOf[Normalize]
   }
+  @scala.inline
+  implicit class NormalizeOps[Self <: Normalize] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithm(value: URDNA2015 | URGNA2012): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpansion(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expansion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpansion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expansion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: MimeNQuad): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputFormat(value: MimeNQuad): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipExpansion(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipExpansion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipExpansion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipExpansion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseNative(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseNative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNative")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

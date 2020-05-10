@@ -1,8 +1,8 @@
 package typingsSlinky.preact.mod
 
-import typingsSlinky.std.DocumentFragment
+import org.scalajs.dom.raw.DocumentFragment
+import org.scalajs.dom.raw.Element
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
 import typingsSlinky.std.ShadowRoot
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -4,32 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FormatLocaleDefinition extends js.Object {
   /**
     * The currency prefix and suffix (e.g., ["$", ""]).
     */
-  var currency: js.Tuple2[String, String]
+  var currency: js.Tuple2[String, String] = js.native
   /**
     * The decimal point (e.g., ".")
     */
-  var decimal: String
+  var decimal: String = js.native
   /**
     * The array of group sizes (e.g., [3]), cycled as needed.
     */
-  var grouping: js.Array[Double]
+  var grouping: js.Array[Double] = js.native
   /**
     * An optional array of ten strings to replace the numerals 0-9.
     */
-  var numerals: js.UndefOr[js.Array[String]] = js.undefined
+  var numerals: js.UndefOr[js.Array[String]] = js.native
   /**
     * An optional symbol to replace the `percent` suffix; the percent suffix (defaults to "%").
     */
-  var percent: js.UndefOr[String] = js.undefined
+  var percent: js.UndefOr[String] = js.native
   /**
     * The group separator (e.g., ","). Note that the thousands property is a misnomer, as\
     * the grouping definition allows groups other than thousands.
     */
-  var thousands: String
+  var thousands: String = js.native
 }
 
 object FormatLocaleDefinition {
@@ -38,14 +39,66 @@ object FormatLocaleDefinition {
     currency: js.Tuple2[String, String],
     decimal: String,
     grouping: js.Array[Double],
-    thousands: String,
-    numerals: js.Array[String] = null,
-    percent: String = null
+    thousands: String
   ): FormatLocaleDefinition = {
     val __obj = js.Dynamic.literal(currency = currency.asInstanceOf[js.Any], decimal = decimal.asInstanceOf[js.Any], grouping = grouping.asInstanceOf[js.Any], thousands = thousands.asInstanceOf[js.Any])
-    if (numerals != null) __obj.updateDynamic("numerals")(numerals.asInstanceOf[js.Any])
-    if (percent != null) __obj.updateDynamic("percent")(percent.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormatLocaleDefinition]
   }
+  @scala.inline
+  implicit class FormatLocaleDefinitionOps[Self <: FormatLocaleDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrency(value: js.Tuple2[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDecimal(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGrouping(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThousands(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thousands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumerals(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numerals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumerals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numerals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPercent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

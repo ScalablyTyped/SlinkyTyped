@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonClockwise extends js.Object {
   /**
     * Whether draw clockwise.
@@ -13,7 +14,7 @@ trait AnonClockwise extends js.Object {
     * "true"
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_arc.shape.clockwise
     */
-  var clockwise: js.UndefOr[Boolean] = js.undefined
+  var clockwise: js.UndefOr[Boolean] = js.native
   /**
     * The x value of the center of the element in the coordinate
     * system of its parent.
@@ -21,7 +22,7 @@ trait AnonClockwise extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_arc.shape.cx
     */
-  var cx: js.UndefOr[Double] = js.undefined
+  var cx: js.UndefOr[Double] = js.native
   /**
     * The y value of the center of the element in the coordinate
     * system of its parent.
@@ -29,7 +30,7 @@ trait AnonClockwise extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_arc.shape.cy
     */
-  var cy: js.UndefOr[Double] = js.undefined
+  var cy: js.UndefOr[Double] = js.native
   /**
     * end anble, in radian.
     *
@@ -38,50 +39,127 @@ trait AnonClockwise extends js.Object {
     * "Math.PI * 2"
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_arc.shape.endAngle
     */
-  var endAngle: js.UndefOr[Double] = js.undefined
+  var endAngle: js.UndefOr[Double] = js.native
   /**
     * Outside radius.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_arc.shape.r
     */
-  var r: js.UndefOr[Double] = js.undefined
+  var r: js.UndefOr[Double] = js.native
   /**
     * Inside radius.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_arc.shape.r0
     */
-  var r0: js.UndefOr[Double] = js.undefined
+  var r0: js.UndefOr[Double] = js.native
   /**
     * start angle, in radian.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_arc.shape.startAngle
     */
-  var startAngle: js.UndefOr[Double] = js.undefined
+  var startAngle: js.UndefOr[Double] = js.native
 }
 
 object AnonClockwise {
   @scala.inline
-  def apply(
-    clockwise: js.UndefOr[Boolean] = js.undefined,
-    cx: Int | Double = null,
-    cy: Int | Double = null,
-    endAngle: Int | Double = null,
-    r: Int | Double = null,
-    r0: Int | Double = null,
-    startAngle: Int | Double = null
-  ): AnonClockwise = {
+  def apply(): AnonClockwise = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(clockwise)) __obj.updateDynamic("clockwise")(clockwise.asInstanceOf[js.Any])
-    if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
-    if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
-    if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
-    if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
-    if (r0 != null) __obj.updateDynamic("r0")(r0.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonClockwise]
   }
+  @scala.inline
+  implicit class AnonClockwiseOps[Self <: AnonClockwise] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClockwise(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clockwise")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClockwise: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clockwise")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withR(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutR: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withR0(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutR0: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r0")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,22 +1,19 @@
 package typingsSlinky.passportAzureAd.oidcStrategyMod
 
-import typingsSlinky.passportAzureAd.AnonIv
 import typingsSlinky.passportAzureAd.passportAzureAdBooleans.`true`
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.`code id_token`
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.`id_token code`
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.code
-import typingsSlinky.passportAzureAd.passportAzureAdStrings.error
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.form_post
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.id_token
-import typingsSlinky.passportAzureAd.passportAzureAdStrings.info
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.query
-import typingsSlinky.passportAzureAd.passportAzureAdStrings.warn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IOIDCStrategyOptionWithRequest extends IOIDCStrategyOption {
-  var passReqToCallback: `true`
+  var passReqToCallback: `true` = js.native
 }
 
 object IOIDCStrategyOptionWithRequest {
@@ -27,42 +24,24 @@ object IOIDCStrategyOptionWithRequest {
     passReqToCallback: `true`,
     redirectUrl: String,
     responseMode: query | form_post,
-    responseType: code | (`code id_token`) | (`id_token code`) | id_token,
-    allowHttpForRedirectUrl: js.UndefOr[Boolean] = js.undefined,
-    clientSecret: String = null,
-    clockSkew: Int | Double = null,
-    cookieEncryptionKeys: js.Array[AnonIv] = null,
-    cookieSameSite: js.UndefOr[Boolean] = js.undefined,
-    isB2C: js.UndefOr[Boolean] = js.undefined,
-    issuer: String | js.Array[String] = null,
-    loggingLevel: info | warn | error = null,
-    loggingNoPII: js.UndefOr[Boolean] = js.undefined,
-    nonceLifetime: Int | Double = null,
-    nonceMaxAmount: Int | Double = null,
-    privatePEMKey: String = null,
-    scope: String | js.Array[String] = null,
-    thumbprint: String = null,
-    useCookieInsteadOfSession: js.UndefOr[Boolean] = js.undefined,
-    validateIssuer: js.UndefOr[Boolean] = js.undefined
+    responseType: code | (`code id_token`) | (`id_token code`) | id_token
   ): IOIDCStrategyOptionWithRequest = {
     val __obj = js.Dynamic.literal(clientID = clientID.asInstanceOf[js.Any], identityMetadata = identityMetadata.asInstanceOf[js.Any], passReqToCallback = passReqToCallback.asInstanceOf[js.Any], redirectUrl = redirectUrl.asInstanceOf[js.Any], responseMode = responseMode.asInstanceOf[js.Any], responseType = responseType.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowHttpForRedirectUrl)) __obj.updateDynamic("allowHttpForRedirectUrl")(allowHttpForRedirectUrl.asInstanceOf[js.Any])
-    if (clientSecret != null) __obj.updateDynamic("clientSecret")(clientSecret.asInstanceOf[js.Any])
-    if (clockSkew != null) __obj.updateDynamic("clockSkew")(clockSkew.asInstanceOf[js.Any])
-    if (cookieEncryptionKeys != null) __obj.updateDynamic("cookieEncryptionKeys")(cookieEncryptionKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(cookieSameSite)) __obj.updateDynamic("cookieSameSite")(cookieSameSite.asInstanceOf[js.Any])
-    if (!js.isUndefined(isB2C)) __obj.updateDynamic("isB2C")(isB2C.asInstanceOf[js.Any])
-    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
-    if (loggingLevel != null) __obj.updateDynamic("loggingLevel")(loggingLevel.asInstanceOf[js.Any])
-    if (!js.isUndefined(loggingNoPII)) __obj.updateDynamic("loggingNoPII")(loggingNoPII.asInstanceOf[js.Any])
-    if (nonceLifetime != null) __obj.updateDynamic("nonceLifetime")(nonceLifetime.asInstanceOf[js.Any])
-    if (nonceMaxAmount != null) __obj.updateDynamic("nonceMaxAmount")(nonceMaxAmount.asInstanceOf[js.Any])
-    if (privatePEMKey != null) __obj.updateDynamic("privatePEMKey")(privatePEMKey.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (thumbprint != null) __obj.updateDynamic("thumbprint")(thumbprint.asInstanceOf[js.Any])
-    if (!js.isUndefined(useCookieInsteadOfSession)) __obj.updateDynamic("useCookieInsteadOfSession")(useCookieInsteadOfSession.asInstanceOf[js.Any])
-    if (!js.isUndefined(validateIssuer)) __obj.updateDynamic("validateIssuer")(validateIssuer.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOIDCStrategyOptionWithRequest]
   }
+  @scala.inline
+  implicit class IOIDCStrategyOptionWithRequestOps[Self <: IOIDCStrategyOptionWithRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPassReqToCallback(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

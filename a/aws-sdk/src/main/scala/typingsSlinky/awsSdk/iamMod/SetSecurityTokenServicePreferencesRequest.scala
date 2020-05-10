@@ -16,8 +16,21 @@ object SetSecurityTokenServicePreferencesRequest {
   @scala.inline
   def apply(GlobalEndpointTokenVersion: globalEndpointTokenVersion): SetSecurityTokenServicePreferencesRequest = {
     val __obj = js.Dynamic.literal(GlobalEndpointTokenVersion = GlobalEndpointTokenVersion.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SetSecurityTokenServicePreferencesRequest]
   }
+  @scala.inline
+  implicit class SetSecurityTokenServicePreferencesRequestOps[Self <: SetSecurityTokenServicePreferencesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGlobalEndpointTokenVersion(value: globalEndpointTokenVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalEndpointTokenVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

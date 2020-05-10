@@ -1,8 +1,8 @@
 package typingsSlinky.reduxInfiniteScroll.mod
 
+import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.HTMLProps
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

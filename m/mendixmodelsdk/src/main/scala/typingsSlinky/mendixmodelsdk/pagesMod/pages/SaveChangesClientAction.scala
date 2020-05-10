@@ -28,9 +28,9 @@ class SaveChangesClientAction protected () extends ClientAction {
   ) = this()
   @JSName("model")
   var model_FSaveChangesClientAction: IModel = js.native
-  def closePage(): Boolean = js.native
+  def closePage: Boolean = js.native
   def closePage(newValue: Boolean): js.Any = js.native
-  def syncAutomatically(): Boolean = js.native
+  def syncAutomatically: Boolean = js.native
   def syncAutomatically(newValue: Boolean): js.Any = js.native
 }
 
@@ -181,6 +181,15 @@ object SaveChangesClientAction extends js.Object {
     *  7.0.2 and higher
     */
   def createInStaticImageViewerUnderClickAction(container: StaticImageViewer): SaveChangesClientAction = js.native
+  /**
+    * Creates and returns a new SaveChangesClientAction instance in the SDK and on the server.
+    * The new SaveChangesClientAction will be automatically stored in the 'onEnterKeyPressAction' property
+    * of the parent TextBox element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.7.0 and higher
+    */
+  def createInTextBoxUnderOnEnterKeyPressAction(container: TextBox): SaveChangesClientAction = js.native
   /**
     * Creates and returns a new SaveChangesClientAction instance in the SDK and on the server.
     * The new SaveChangesClientAction will be automatically stored in the 'action' property

@@ -86,7 +86,7 @@ trait TextTrack extends EventTarget {
   def removeEventListener_cuechange(
     `type`: cuechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -100,7 +100,7 @@ trait TextTrack extends EventTarget {
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -114,13 +114,14 @@ trait TextTrack extends EventTarget {
   def removeEventListener_load(
     `type`: load,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("TextTrack")
 @js.native
-object TextTrack extends Instantiable0[TextTrack] {
+object TextTrack
+  extends Instantiable0[org.scalajs.dom.raw.TextTrack] {
   val DISABLED: Double = js.native
   val ERROR: Double = js.native
   val HIDDEN: Double = js.native

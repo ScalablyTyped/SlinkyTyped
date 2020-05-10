@@ -57,20 +57,77 @@ trait SchemaAuthProvider extends js.Object {
 
 object SchemaAuthProvider {
   @scala.inline
-  def apply(
-    audiences: String = null,
-    authorizationUrl: String = null,
-    id: String = null,
-    issuer: String = null,
-    jwksUri: String = null
-  ): SchemaAuthProvider = {
+  def apply(): SchemaAuthProvider = {
     val __obj = js.Dynamic.literal()
-    if (audiences != null) __obj.updateDynamic("audiences")(audiences.asInstanceOf[js.Any])
-    if (authorizationUrl != null) __obj.updateDynamic("authorizationUrl")(authorizationUrl.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
-    if (jwksUri != null) __obj.updateDynamic("jwksUri")(jwksUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAuthProvider]
   }
+  @scala.inline
+  implicit class SchemaAuthProviderOps[Self <: SchemaAuthProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudiences(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audiences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudiences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audiences")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizationUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIssuer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssuer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJwksUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jwksUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJwksUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jwksUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

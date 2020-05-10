@@ -15,16 +15,14 @@ trait StreamEndpoint extends js.Object
 
 object StreamEndpoint {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def site: typingsSlinky.twit.twitStrings.site = "site".asInstanceOf[typingsSlinky.twit.twitStrings.site]
   @scala.inline
-  def site: typingsSlinky.twit.twitStrings.site = this.cast("site")
+  def statusesSlashfilter: typingsSlinky.twit.twitStrings.statusesSlashfilter = "statuses/filter".asInstanceOf[typingsSlinky.twit.twitStrings.statusesSlashfilter]
   @scala.inline
-  def statusesSlashfilter: typingsSlinky.twit.twitStrings.statusesSlashfilter = this.cast("statuses/filter")
+  def statusesSlashfirehose: typingsSlinky.twit.twitStrings.statusesSlashfirehose = "statuses/firehose".asInstanceOf[typingsSlinky.twit.twitStrings.statusesSlashfirehose]
   @scala.inline
-  def statusesSlashfirehose: typingsSlinky.twit.twitStrings.statusesSlashfirehose = this.cast("statuses/firehose")
+  def statusesSlashsample: typingsSlinky.twit.twitStrings.statusesSlashsample = "statuses/sample".asInstanceOf[typingsSlinky.twit.twitStrings.statusesSlashsample]
   @scala.inline
-  def statusesSlashsample: typingsSlinky.twit.twitStrings.statusesSlashsample = this.cast("statuses/sample")
-  @scala.inline
-  def user: typingsSlinky.twit.twitStrings.user = this.cast("user")
+  def user: typingsSlinky.twit.twitStrings.user = "user".asInstanceOf[typingsSlinky.twit.twitStrings.user]
 }
 

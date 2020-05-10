@@ -12,10 +12,8 @@ trait Theme extends js.Object
 
 object Theme {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dark: typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.dark = "dark".asInstanceOf[typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.dark = this.cast("dark")
-  @scala.inline
-  def light: typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.light = this.cast("light")
+  def light: typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.light = "light".asInstanceOf[typingsSlinky.apollographqlGraphqlPlaygroundHtml.apollographqlGraphqlPlaygroundHtmlStrings.light]
 }
 

@@ -17,14 +17,12 @@ trait LineStyle extends js.Object
 
 object LineStyle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dashed: typingsSlinky.cytoscape.cytoscapeStrings.dashed = "dashed".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.dashed]
   @scala.inline
-  def dashed: typingsSlinky.cytoscape.cytoscapeStrings.dashed = this.cast("dashed")
+  def dotted: typingsSlinky.cytoscape.cytoscapeStrings.dotted = "dotted".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.dotted]
   @scala.inline
-  def dotted: typingsSlinky.cytoscape.cytoscapeStrings.dotted = this.cast("dotted")
+  def double: typingsSlinky.cytoscape.cytoscapeStrings.double = "double".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.double]
   @scala.inline
-  def double: typingsSlinky.cytoscape.cytoscapeStrings.double = this.cast("double")
-  @scala.inline
-  def solid: typingsSlinky.cytoscape.cytoscapeStrings.solid = this.cast("solid")
+  def solid: typingsSlinky.cytoscape.cytoscapeStrings.solid = "solid".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.solid]
 }
 

@@ -16,18 +16,16 @@ trait TransitionHandlerKeys extends js.Object
 
 object TransitionHandlerKeys {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onEnter: typingsSlinky.materialUiCore.materialUiCoreStrings.onEnter = "onEnter".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.onEnter]
   @scala.inline
-  def onEnter: typingsSlinky.materialUiCore.materialUiCoreStrings.onEnter = this.cast("onEnter")
+  def onEntered: typingsSlinky.materialUiCore.materialUiCoreStrings.onEntered = "onEntered".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.onEntered]
   @scala.inline
-  def onEntered: typingsSlinky.materialUiCore.materialUiCoreStrings.onEntered = this.cast("onEntered")
+  def onEntering: typingsSlinky.materialUiCore.materialUiCoreStrings.onEntering = "onEntering".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.onEntering]
   @scala.inline
-  def onEntering: typingsSlinky.materialUiCore.materialUiCoreStrings.onEntering = this.cast("onEntering")
+  def onExit: typingsSlinky.materialUiCore.materialUiCoreStrings.onExit = "onExit".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.onExit]
   @scala.inline
-  def onExit: typingsSlinky.materialUiCore.materialUiCoreStrings.onExit = this.cast("onExit")
+  def onExited: typingsSlinky.materialUiCore.materialUiCoreStrings.onExited = "onExited".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.onExited]
   @scala.inline
-  def onExited: typingsSlinky.materialUiCore.materialUiCoreStrings.onExited = this.cast("onExited")
-  @scala.inline
-  def onExiting: typingsSlinky.materialUiCore.materialUiCoreStrings.onExiting = this.cast("onExiting")
+  def onExiting: typingsSlinky.materialUiCore.materialUiCoreStrings.onExiting = "onExiting".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.onExiting]
 }
 

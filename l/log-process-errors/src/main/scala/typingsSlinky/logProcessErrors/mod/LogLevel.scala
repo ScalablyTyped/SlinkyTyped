@@ -19,18 +19,16 @@ trait LogLevel extends js.Object
 
 object LogLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.logProcessErrors.logProcessErrorsStrings.debug = "debug".asInstanceOf[typingsSlinky.logProcessErrors.logProcessErrorsStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.logProcessErrors.logProcessErrorsStrings.debug = this.cast("debug")
+  def default: typingsSlinky.logProcessErrors.logProcessErrorsStrings.default = "default".asInstanceOf[typingsSlinky.logProcessErrors.logProcessErrorsStrings.default]
   @scala.inline
-  def default: typingsSlinky.logProcessErrors.logProcessErrorsStrings.default = this.cast("default")
+  def error: typingsSlinky.logProcessErrors.logProcessErrorsStrings.error = "error".asInstanceOf[typingsSlinky.logProcessErrors.logProcessErrorsStrings.error]
   @scala.inline
-  def error: typingsSlinky.logProcessErrors.logProcessErrorsStrings.error = this.cast("error")
+  def info: typingsSlinky.logProcessErrors.logProcessErrorsStrings.info = "info".asInstanceOf[typingsSlinky.logProcessErrors.logProcessErrorsStrings.info]
   @scala.inline
-  def info: typingsSlinky.logProcessErrors.logProcessErrorsStrings.info = this.cast("info")
+  def silent: typingsSlinky.logProcessErrors.logProcessErrorsStrings.silent = "silent".asInstanceOf[typingsSlinky.logProcessErrors.logProcessErrorsStrings.silent]
   @scala.inline
-  def silent: typingsSlinky.logProcessErrors.logProcessErrorsStrings.silent = this.cast("silent")
-  @scala.inline
-  def warn: typingsSlinky.logProcessErrors.logProcessErrorsStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.logProcessErrors.logProcessErrorsStrings.warn = "warn".asInstanceOf[typingsSlinky.logProcessErrors.logProcessErrorsStrings.warn]
 }
 

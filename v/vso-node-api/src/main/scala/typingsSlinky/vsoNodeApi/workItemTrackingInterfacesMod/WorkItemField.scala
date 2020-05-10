@@ -4,47 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkItemField extends WorkItemTrackingResource {
   /**
     * The description of the field.
     */
-  var description: String
+  var description: String = js.native
   /**
     * Indicates whether this field is an identity field.
     */
-  var isIdentity: Boolean
+  var isIdentity: Boolean = js.native
   /**
     * Indicates whether this instance is picklist.
     */
-  var isPicklist: Boolean
+  var isPicklist: Boolean = js.native
   /**
     * Indicates whether this instance is a suggested picklist .
     */
-  var isPicklistSuggested: Boolean
+  var isPicklistSuggested: Boolean = js.native
   /**
     * The name of the field.
     */
-  var name: String
+  var name: String = js.native
   /**
     * Indicates whether the field is [read only].
     */
-  var readOnly: Boolean
+  var readOnly: Boolean = js.native
   /**
     * The reference name of the field.
     */
-  var referenceName: String
+  var referenceName: String = js.native
   /**
     * The supported operations on this field.
     */
-  var supportedOperations: js.Array[WorkItemFieldOperation]
+  var supportedOperations: js.Array[WorkItemFieldOperation] = js.native
   /**
     * The type of the field.
     */
-  var `type`: FieldType
+  var `type`: FieldType = js.native
   /**
     * The usage of the field.
     */
-  var usage: FieldUsage
+  var usage: FieldUsage = js.native
 }
 
 object WorkItemField {
@@ -67,5 +68,73 @@ object WorkItemField {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkItemField]
   }
+  @scala.inline
+  implicit class WorkItemFieldOps[Self <: WorkItemField] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsIdentity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIdentity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPicklist(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPicklist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPicklistSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPicklistSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReferenceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportedOperations(value: js.Array[WorkItemFieldOperation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedOperations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: FieldType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsage(value: FieldUsage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

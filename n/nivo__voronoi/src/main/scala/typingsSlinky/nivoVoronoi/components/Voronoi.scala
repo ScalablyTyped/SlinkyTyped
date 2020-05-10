@@ -1,9 +1,7 @@
 package typingsSlinky.nivoVoronoi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.Dimensions
 import typingsSlinky.nivoCore.mod.Theme
@@ -19,51 +17,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Voronoi
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoVoronoi.mod.Voronoi] {
+object Voronoi {
   @JSImport("@nivo/voronoi", "Voronoi")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    data: js.Array[VoronoiDatum],
-    height: Double,
-    width: Double,
-    cellLineColor: String = null,
-    cellLineWidth: Int | Double = null,
-    enableCells: js.UndefOr[Boolean] = js.undefined,
-    enableLinks: js.UndefOr[Boolean] = js.undefined,
-    enablePoints: js.UndefOr[Boolean] = js.undefined,
-    layers: js.Array[links | cells | points | bounds | VoronoiCustomLayer] = null,
-    linkLineColor: String = null,
-    linkLineWidth: Int | Double = null,
-    margin: Box = null,
-    pointColor: String = null,
-    pointSize: Int | Double = null,
-    theme: Theme = null,
-    xDomain: VoronoiDomain = null,
-    yDomain: VoronoiDomain = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoVoronoi.mod.Voronoi] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    if (cellLineColor != null) __obj.updateDynamic("cellLineColor")(cellLineColor.asInstanceOf[js.Any])
-    if (cellLineWidth != null) __obj.updateDynamic("cellLineWidth")(cellLineWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableCells)) __obj.updateDynamic("enableCells")(enableCells.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableLinks)) __obj.updateDynamic("enableLinks")(enableLinks.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablePoints)) __obj.updateDynamic("enablePoints")(enablePoints.asInstanceOf[js.Any])
-    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
-    if (linkLineColor != null) __obj.updateDynamic("linkLineColor")(linkLineColor.asInstanceOf[js.Any])
-    if (linkLineWidth != null) __obj.updateDynamic("linkLineWidth")(linkLineWidth.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (pointColor != null) __obj.updateDynamic("pointColor")(pointColor.asInstanceOf[js.Any])
-    if (pointSize != null) __obj.updateDynamic("pointSize")(pointSize.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (xDomain != null) __obj.updateDynamic("xDomain")(xDomain.asInstanceOf[js.Any])
-    if (yDomain != null) __obj.updateDynamic("yDomain")(yDomain.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.nivoVoronoi.mod.Voronoi] {
+    @scala.inline
+    def cellLineColor(value: String): this.type = set("cellLineColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellLineWidth(value: Double): this.type = set("cellLineWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableCells(value: Boolean): this.type = set("enableCells", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableLinks(value: Boolean): this.type = set("enableLinks", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enablePoints(value: Boolean): this.type = set("enablePoints", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layers(value: js.Array[links | cells | points | bounds | VoronoiCustomLayer]): this.type = set("layers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkLineColor(value: String): this.type = set("linkLineColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkLineWidth(value: Double): this.type = set("linkLineWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointColor(value: String): this.type = set("pointColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointSize(value: Double): this.type = set("pointSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xDomain(value: VoronoiDomain): this.type = set("xDomain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yDomain(value: VoronoiDomain): this.type = set("yDomain", value.asInstanceOf[js.Any])
   }
-  type Props = VoronoiProps with Dimensions
+  
+  def withProps(p: VoronoiProps with Dimensions): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[VoronoiDatum], height: Double, width: Double): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[VoronoiProps with Dimensions]))
+  }
 }
 

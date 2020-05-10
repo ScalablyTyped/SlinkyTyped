@@ -60,13 +60,14 @@ trait SVGFEConvolveMatrixElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFEConvolveMatrixElement")
 @js.native
-object SVGFEConvolveMatrixElement extends Instantiable0[SVGFEConvolveMatrixElement] {
+object SVGFEConvolveMatrixElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEConvolveMatrixElement] {
   val SVG_EDGEMODE_DUPLICATE: Double = js.native
   val SVG_EDGEMODE_NONE: Double = js.native
   val SVG_EDGEMODE_UNKNOWN: Double = js.native

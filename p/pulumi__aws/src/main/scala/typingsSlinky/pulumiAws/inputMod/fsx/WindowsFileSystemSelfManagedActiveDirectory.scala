@@ -39,14 +39,66 @@ object WindowsFileSystemSelfManagedActiveDirectory {
     dnsIps: Input[js.Array[Input[String]]],
     domainName: Input[String],
     password: Input[String],
-    username: Input[String],
-    fileSystemAdministratorsGroup: Input[String] = null,
-    organizationalUnitDistinguishedName: Input[String] = null
+    username: Input[String]
   ): WindowsFileSystemSelfManagedActiveDirectory = {
     val __obj = js.Dynamic.literal(dnsIps = dnsIps.asInstanceOf[js.Any], domainName = domainName.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
-    if (fileSystemAdministratorsGroup != null) __obj.updateDynamic("fileSystemAdministratorsGroup")(fileSystemAdministratorsGroup.asInstanceOf[js.Any])
-    if (organizationalUnitDistinguishedName != null) __obj.updateDynamic("organizationalUnitDistinguishedName")(organizationalUnitDistinguishedName.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowsFileSystemSelfManagedActiveDirectory]
   }
+  @scala.inline
+  implicit class WindowsFileSystemSelfManagedActiveDirectoryOps[Self <: WindowsFileSystemSelfManagedActiveDirectory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDnsIps(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnsIps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDomainName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPassword(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsername(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileSystemAdministratorsGroup(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemAdministratorsGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileSystemAdministratorsGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystemAdministratorsGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationalUnitDistinguishedName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organizationalUnitDistinguishedName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationalUnitDistinguishedName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organizationalUnitDistinguishedName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

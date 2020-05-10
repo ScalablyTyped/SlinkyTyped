@@ -1,27 +1,23 @@
 package typingsSlinky.reactBodyClassname.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactBodyClassname.AnonClassName
 import typingsSlinky.reactBodyClassname.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactBodyClassname
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactBodyClassname {
   @JSImport("react-body-classname", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(className: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: AnonClassName): Default[tag.type, ^] = new Default[tag.type, ^](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(className: String): Default[tag.type, ^] = {
+    val __props = js.Dynamic.literal(className = className.asInstanceOf[js.Any])
+    new Default[tag.type, ^](js.Array(this.component, __props.asInstanceOf[AnonClassName]))
   }
-  type Props = AnonClassName
 }
 

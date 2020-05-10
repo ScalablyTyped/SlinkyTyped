@@ -18,11 +18,41 @@ trait ListGeoMatchSetsResponse extends js.Object {
 
 object ListGeoMatchSetsResponse {
   @scala.inline
-  def apply(GeoMatchSets: GeoMatchSetSummaries = null, NextMarker: NextMarker = null): ListGeoMatchSetsResponse = {
+  def apply(): ListGeoMatchSetsResponse = {
     val __obj = js.Dynamic.literal()
-    if (GeoMatchSets != null) __obj.updateDynamic("GeoMatchSets")(GeoMatchSets.asInstanceOf[js.Any])
-    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListGeoMatchSetsResponse]
   }
+  @scala.inline
+  implicit class ListGeoMatchSetsResponseOps[Self <: ListGeoMatchSetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGeoMatchSets(value: GeoMatchSetSummaries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoMatchSets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeoMatchSets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoMatchSets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextMarker(value: NextMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait CreateRuleResponse extends js.Object {
 
 object CreateRuleResponse {
   @scala.inline
-  def apply(ChangeToken: ChangeToken = null, Rule: Rule = null): CreateRuleResponse = {
+  def apply(): CreateRuleResponse = {
     val __obj = js.Dynamic.literal()
-    if (ChangeToken != null) __obj.updateDynamic("ChangeToken")(ChangeToken.asInstanceOf[js.Any])
-    if (Rule != null) __obj.updateDynamic("Rule")(Rule.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRuleResponse]
   }
+  @scala.inline
+  implicit class CreateRuleResponseOps[Self <: CreateRuleResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeToken(value: ChangeToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRule(value: Rule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rule")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

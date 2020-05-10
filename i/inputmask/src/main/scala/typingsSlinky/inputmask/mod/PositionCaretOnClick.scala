@@ -15,16 +15,14 @@ trait PositionCaretOnClick extends js.Object
 
 object PositionCaretOnClick {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ignore: typingsSlinky.inputmask.inputmaskStrings.ignore = "ignore".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.ignore]
   @scala.inline
-  def ignore: typingsSlinky.inputmask.inputmaskStrings.ignore = this.cast("ignore")
+  def lvp: typingsSlinky.inputmask.inputmaskStrings.lvp = "lvp".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.lvp]
   @scala.inline
-  def lvp: typingsSlinky.inputmask.inputmaskStrings.lvp = this.cast("lvp")
+  def none: typingsSlinky.inputmask.inputmaskStrings.none = "none".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.none]
   @scala.inline
-  def none: typingsSlinky.inputmask.inputmaskStrings.none = this.cast("none")
+  def radixFocus: typingsSlinky.inputmask.inputmaskStrings.radixFocus = "radixFocus".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.radixFocus]
   @scala.inline
-  def radixFocus: typingsSlinky.inputmask.inputmaskStrings.radixFocus = this.cast("radixFocus")
-  @scala.inline
-  def select: typingsSlinky.inputmask.inputmaskStrings.select = this.cast("select")
+  def select: typingsSlinky.inputmask.inputmaskStrings.select = "select".asInstanceOf[typingsSlinky.inputmask.inputmaskStrings.select]
 }
 

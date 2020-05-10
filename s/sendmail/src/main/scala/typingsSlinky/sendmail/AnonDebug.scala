@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDebug extends js.Object {
-  var debug: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var error: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var info: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var warn: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var debug: js.UndefOr[js.Function0[Unit]] = js.native
+  var error: js.UndefOr[js.Function0[Unit]] = js.native
+  var info: js.UndefOr[js.Function0[Unit]] = js.native
+  var warn: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object AnonDebug {
   @scala.inline
-  def apply(
-    debug: () => Unit = null,
-    error: () => Unit = null,
-    info: () => Unit = null,
-    warn: () => Unit = null
-  ): AnonDebug = {
+  def apply(): AnonDebug = {
     val __obj = js.Dynamic.literal()
-    if (debug != null) __obj.updateDynamic("debug")(js.Any.fromFunction0(debug))
-    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction0(error))
-    if (info != null) __obj.updateDynamic("info")(js.Any.fromFunction0(info))
-    if (warn != null) __obj.updateDynamic("warn")(js.Any.fromFunction0(warn))
     __obj.asInstanceOf[AnonDebug]
   }
+  @scala.inline
+  implicit class AnonDebugOps[Self <: AnonDebug] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebug(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfo(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarn(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutWarn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

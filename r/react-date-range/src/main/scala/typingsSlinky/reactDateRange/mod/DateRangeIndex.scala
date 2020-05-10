@@ -14,14 +14,12 @@ trait DateRangeIndex extends js.Object
 
 object DateRangeIndex {
   @scala.inline
-  def `Last 30 Days`: typingsSlinky.reactDateRange.reactDateRangeStrings.`Last 30 Days` = this.cast("Last 30 Days")
+  def `Last 30 Days`: typingsSlinky.reactDateRange.reactDateRangeStrings.`Last 30 Days` = ("Last 30 Days").asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.`Last 30 Days`]
   @scala.inline
-  def `Last 7 Days`: typingsSlinky.reactDateRange.reactDateRangeStrings.`Last 7 Days` = this.cast("Last 7 Days")
+  def `Last 7 Days`: typingsSlinky.reactDateRange.reactDateRangeStrings.`Last 7 Days` = ("Last 7 Days").asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.`Last 7 Days`]
   @scala.inline
-  def Today: typingsSlinky.reactDateRange.reactDateRangeStrings.Today = this.cast("Today")
+  def Today: typingsSlinky.reactDateRange.reactDateRangeStrings.Today = "Today".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.Today]
   @scala.inline
-  def Yesterday: typingsSlinky.reactDateRange.reactDateRangeStrings.Yesterday = this.cast("Yesterday")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Yesterday: typingsSlinky.reactDateRange.reactDateRangeStrings.Yesterday = "Yesterday".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.Yesterday]
 }
 

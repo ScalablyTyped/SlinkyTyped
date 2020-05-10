@@ -31,7 +31,8 @@ trait TextEvent extends UIEvent {
 
 @JSGlobal("TextEvent")
 @js.native
-object TextEvent extends Instantiable0[TextEvent] {
+object TextEvent
+  extends Instantiable0[org.scalajs.dom.raw.TextEvent] {
   val DOM_INPUT_METHOD_DROP: Double = js.native
   val DOM_INPUT_METHOD_HANDWRITING: Double = js.native
   val DOM_INPUT_METHOD_IME: Double = js.native

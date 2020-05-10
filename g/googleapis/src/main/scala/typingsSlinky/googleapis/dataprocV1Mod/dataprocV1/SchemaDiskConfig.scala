@@ -31,16 +31,53 @@ trait SchemaDiskConfig extends js.Object {
 
 object SchemaDiskConfig {
   @scala.inline
-  def apply(
-    bootDiskSizeGb: Int | Double = null,
-    bootDiskType: String = null,
-    numLocalSsds: Int | Double = null
-  ): SchemaDiskConfig = {
+  def apply(): SchemaDiskConfig = {
     val __obj = js.Dynamic.literal()
-    if (bootDiskSizeGb != null) __obj.updateDynamic("bootDiskSizeGb")(bootDiskSizeGb.asInstanceOf[js.Any])
-    if (bootDiskType != null) __obj.updateDynamic("bootDiskType")(bootDiskType.asInstanceOf[js.Any])
-    if (numLocalSsds != null) __obj.updateDynamic("numLocalSsds")(numLocalSsds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDiskConfig]
   }
+  @scala.inline
+  implicit class SchemaDiskConfigOps[Self <: SchemaDiskConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBootDiskSizeGb(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDiskSizeGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootDiskSizeGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDiskSizeGb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBootDiskType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDiskType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootDiskType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootDiskType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumLocalSsds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numLocalSsds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumLocalSsds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numLocalSsds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

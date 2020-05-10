@@ -29,18 +29,65 @@ trait SchemaListDataPointChangesResponse extends js.Object {
 
 object SchemaListDataPointChangesResponse {
   @scala.inline
-  def apply(
-    dataSourceId: String = null,
-    deletedDataPoint: js.Array[SchemaDataPoint] = null,
-    insertedDataPoint: js.Array[SchemaDataPoint] = null,
-    nextPageToken: String = null
-  ): SchemaListDataPointChangesResponse = {
+  def apply(): SchemaListDataPointChangesResponse = {
     val __obj = js.Dynamic.literal()
-    if (dataSourceId != null) __obj.updateDynamic("dataSourceId")(dataSourceId.asInstanceOf[js.Any])
-    if (deletedDataPoint != null) __obj.updateDynamic("deletedDataPoint")(deletedDataPoint.asInstanceOf[js.Any])
-    if (insertedDataPoint != null) __obj.updateDynamic("insertedDataPoint")(insertedDataPoint.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListDataPointChangesResponse]
   }
+  @scala.inline
+  implicit class SchemaListDataPointChangesResponseOps[Self <: SchemaListDataPointChangesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeletedDataPoint(value: js.Array[SchemaDataPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedDataPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletedDataPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedDataPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertedDataPoint(value: js.Array[SchemaDataPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertedDataPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertedDataPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertedDataPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

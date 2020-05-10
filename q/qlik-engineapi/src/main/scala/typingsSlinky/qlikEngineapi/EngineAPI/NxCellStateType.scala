@@ -18,22 +18,20 @@ trait NxCellStateType extends js.Object
 
 object NxCellStateType {
   @scala.inline
-  def A: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.A = this.cast("A")
+  def A: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.A = "A".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.A]
   @scala.inline
-  def D: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.D = this.cast("D")
+  def D: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.D = "D".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.D]
   @scala.inline
-  def L: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.L = this.cast("L")
+  def L: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.L = "L".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.L]
   @scala.inline
-  def O: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.O = this.cast("O")
+  def O: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.O = "O".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.O]
   @scala.inline
-  def S: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.S = this.cast("S")
+  def S: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.S = "S".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.S]
   @scala.inline
-  def X: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.X = this.cast("X")
+  def X: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.X = "X".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.X]
   @scala.inline
-  def XL: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.XL = this.cast("XL")
+  def XL: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.XL = "XL".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.XL]
   @scala.inline
-  def XS: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.XS = this.cast("XS")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def XS: typingsSlinky.qlikEngineapi.qlikEngineapiStrings.XS = "XS".asInstanceOf[typingsSlinky.qlikEngineapi.qlikEngineapiStrings.XS]
 }
 

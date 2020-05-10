@@ -1,0 +1,17 @@
+package typingsSlinky.babylonjs
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("babylonjs/Shaders/filter.fragment", JSImport.Namespace)
+@js.native
+object filterFragmentMod extends js.Object {
+  @js.native
+  object filterPixelShader extends js.Object {
+    var name: String = js.native
+    var shader: String = js.native
+  }
+  
+}
+

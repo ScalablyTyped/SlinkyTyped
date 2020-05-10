@@ -26,18 +26,65 @@ trait StreamSummary extends js.Object {
 
 object StreamSummary {
   @scala.inline
-  def apply(
-    description: StreamDescription = null,
-    streamArn: StreamArn = null,
-    streamId: StreamId = null,
-    streamVersion: Int | Double = null
-  ): StreamSummary = {
+  def apply(): StreamSummary = {
     val __obj = js.Dynamic.literal()
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (streamArn != null) __obj.updateDynamic("streamArn")(streamArn.asInstanceOf[js.Any])
-    if (streamId != null) __obj.updateDynamic("streamId")(streamId.asInstanceOf[js.Any])
-    if (streamVersion != null) __obj.updateDynamic("streamVersion")(streamVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamSummary]
   }
+  @scala.inline
+  implicit class StreamSummaryOps[Self <: StreamSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: StreamDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamArn(value: StreamArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamId(value: StreamId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamVersion(value: StreamVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

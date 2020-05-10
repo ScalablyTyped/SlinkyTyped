@@ -7,17 +7,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Adapter extends js.Object {
-  def getCount(): Double
-  def getItem(position: Double): js.Any
-  def getItemId(position: Double): Double
-  def getItemViewType(position: Double): Double
-  def getView(position: Double, convertView: View, parent: ViewGroup): View
-  def getViewTypeCount(): Double
-  def hasStableIds(): Boolean
-  def isEmpty(): Boolean
-  def registerDataSetObserver(observer: DataSetObserver): Unit
-  def unregisterDataSetObserver(observer: DataSetObserver): Unit
+  def getCount(): Double = js.native
+  def getItem(position: Double): js.Any = js.native
+  def getItemId(position: Double): Double = js.native
+  def getItemViewType(position: Double): Double = js.native
+  def getView(position: Double, convertView: View, parent: ViewGroup): View = js.native
+  def getViewTypeCount(): Double = js.native
+  def hasStableIds(): Boolean = js.native
+  def isEmpty(): Boolean = js.native
+  def registerDataSetObserver(observer: DataSetObserver): Unit = js.native
+  def unregisterDataSetObserver(observer: DataSetObserver): Unit = js.native
 }
 
 @JSGlobal("android.widget.Adapter")

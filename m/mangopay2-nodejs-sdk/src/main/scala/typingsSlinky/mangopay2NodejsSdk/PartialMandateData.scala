@@ -10,63 +10,231 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<mangopay2-nodejs-sdk.mangopay2-nodejs-sdk.mandate.MandateData> */
+@js.native
 trait PartialMandateData extends js.Object {
-  var BankAccountId: js.UndefOr[String] = js.undefined
-  var BankReference: js.UndefOr[String] = js.undefined
-  var CreationDate: js.UndefOr[Double] = js.undefined
-  var Culture: js.UndefOr[MandateCultureCode] = js.undefined
-  var DocumentURL: js.UndefOr[String] = js.undefined
-  var ExecutionType: js.UndefOr[MandateExecutionType] = js.undefined
-  var Id: js.UndefOr[String] = js.undefined
-  var MandateType: js.UndefOr[typingsSlinky.mangopay2NodejsSdk.mod.mandate.MandateType] = js.undefined
-  var RedirectURL: js.UndefOr[String] = js.undefined
-  var ResultCode: js.UndefOr[String] = js.undefined
-  var ResultMessage: js.UndefOr[String] = js.undefined
-  var ReturnURL: js.UndefOr[String] = js.undefined
-  var Scheme: js.UndefOr[MandateScheme] = js.undefined
-  var Status: js.UndefOr[MandateStatus] = js.undefined
-  var Tag: js.UndefOr[String] = js.undefined
-  var UserId: js.UndefOr[String] = js.undefined
+  var BankAccountId: js.UndefOr[String] = js.native
+  var BankReference: js.UndefOr[String] = js.native
+  var CreationDate: js.UndefOr[Double] = js.native
+  var Culture: js.UndefOr[MandateCultureCode] = js.native
+  var DocumentURL: js.UndefOr[String] = js.native
+  var ExecutionType: js.UndefOr[MandateExecutionType] = js.native
+  var Id: js.UndefOr[String] = js.native
+  var MandateType: js.UndefOr[typingsSlinky.mangopay2NodejsSdk.mod.mandate.MandateType] = js.native
+  var RedirectURL: js.UndefOr[String] = js.native
+  var ResultCode: js.UndefOr[String] = js.native
+  var ResultMessage: js.UndefOr[String] = js.native
+  var ReturnURL: js.UndefOr[String] = js.native
+  var Scheme: js.UndefOr[MandateScheme] = js.native
+  var Status: js.UndefOr[MandateStatus] = js.native
+  var Tag: js.UndefOr[String] = js.native
+  var UserId: js.UndefOr[String] = js.native
 }
 
 object PartialMandateData {
   @scala.inline
-  def apply(
-    BankAccountId: String = null,
-    BankReference: String = null,
-    CreationDate: Int | Double = null,
-    Culture: MandateCultureCode = null,
-    DocumentURL: String = null,
-    ExecutionType: MandateExecutionType = null,
-    Id: String = null,
-    MandateType: MandateType = null,
-    RedirectURL: String = null,
-    ResultCode: String = null,
-    ResultMessage: String = null,
-    ReturnURL: String = null,
-    Scheme: MandateScheme = null,
-    Status: MandateStatus = null,
-    Tag: String = null,
-    UserId: String = null
-  ): PartialMandateData = {
+  def apply(): PartialMandateData = {
     val __obj = js.Dynamic.literal()
-    if (BankAccountId != null) __obj.updateDynamic("BankAccountId")(BankAccountId.asInstanceOf[js.Any])
-    if (BankReference != null) __obj.updateDynamic("BankReference")(BankReference.asInstanceOf[js.Any])
-    if (CreationDate != null) __obj.updateDynamic("CreationDate")(CreationDate.asInstanceOf[js.Any])
-    if (Culture != null) __obj.updateDynamic("Culture")(Culture.asInstanceOf[js.Any])
-    if (DocumentURL != null) __obj.updateDynamic("DocumentURL")(DocumentURL.asInstanceOf[js.Any])
-    if (ExecutionType != null) __obj.updateDynamic("ExecutionType")(ExecutionType.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (MandateType != null) __obj.updateDynamic("MandateType")(MandateType.asInstanceOf[js.Any])
-    if (RedirectURL != null) __obj.updateDynamic("RedirectURL")(RedirectURL.asInstanceOf[js.Any])
-    if (ResultCode != null) __obj.updateDynamic("ResultCode")(ResultCode.asInstanceOf[js.Any])
-    if (ResultMessage != null) __obj.updateDynamic("ResultMessage")(ResultMessage.asInstanceOf[js.Any])
-    if (ReturnURL != null) __obj.updateDynamic("ReturnURL")(ReturnURL.asInstanceOf[js.Any])
-    if (Scheme != null) __obj.updateDynamic("Scheme")(Scheme.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Tag != null) __obj.updateDynamic("Tag")(Tag.asInstanceOf[js.Any])
-    if (UserId != null) __obj.updateDynamic("UserId")(UserId.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialMandateData]
   }
+  @scala.inline
+  implicit class PartialMandateDataOps[Self <: PartialMandateData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBankAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BankAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBankAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BankAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBankReference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BankReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBankReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BankReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCulture(value: MandateCultureCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Culture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCulture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Culture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionType(value: MandateExecutionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMandateType(value: MandateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MandateType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMandateType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MandateType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRedirectURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedirectURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResultCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResultMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheme(value: MandateScheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scheme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: MandateStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

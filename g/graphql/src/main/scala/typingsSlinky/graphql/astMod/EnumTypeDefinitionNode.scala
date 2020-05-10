@@ -5,33 +5,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EnumTypeDefinitionNode
   extends TypeDefinitionNode
      with ASTNode {
-  val description: js.UndefOr[StringValueNode] = js.undefined
-  val directives: js.UndefOr[js.Array[DirectiveNode]] = js.undefined
-  val kind: EnumTypeDefinition
-  val loc: js.UndefOr[Location] = js.undefined
-  val name: NameNode
-  val values: js.UndefOr[js.Array[EnumValueDefinitionNode]] = js.undefined
+  val description: js.UndefOr[StringValueNode] = js.native
+  val directives: js.UndefOr[js.Array[DirectiveNode]] = js.native
+  val kind: EnumTypeDefinition = js.native
+  val loc: js.UndefOr[Location] = js.native
+  val name: NameNode = js.native
+  val values: js.UndefOr[js.Array[EnumValueDefinitionNode]] = js.native
 }
 
 object EnumTypeDefinitionNode {
   @scala.inline
-  def apply(
-    kind: EnumTypeDefinition,
-    name: NameNode,
-    description: StringValueNode = null,
-    directives: js.Array[DirectiveNode] = null,
-    loc: Location = null,
-    values: js.Array[EnumValueDefinitionNode] = null
-  ): EnumTypeDefinitionNode = {
+  def apply(kind: EnumTypeDefinition, name: NameNode): EnumTypeDefinitionNode = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (directives != null) __obj.updateDynamic("directives")(directives.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnumTypeDefinitionNode]
   }
+  @scala.inline
+  implicit class EnumTypeDefinitionNodeOps[Self <: EnumTypeDefinitionNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: EnumTypeDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: NameNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: StringValueNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectives(value: js.Array[DirectiveNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectives: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: js.Array[EnumValueDefinitionNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

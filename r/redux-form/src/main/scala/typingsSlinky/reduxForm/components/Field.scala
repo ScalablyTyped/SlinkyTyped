@@ -1,20 +1,26 @@
 package typingsSlinky.reduxForm.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reduxForm.fieldMod.BaseFieldProps
+import typingsSlinky.reduxForm.fieldMod.GenericFieldHTMLAttributes
 import typingsSlinky.reduxForm.fieldMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Could't extract props from TypeRef(QualifiedName(IArray(Name(P))),IArray(),NoComments) because couldn't resolve ClassTree. */
-object Field
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from P because couldn't resolve ClassTree. */
+object Field {
   @JSImport("redux-form/lib/Field", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = js.Any
+  @scala.inline
+  class Builder[P <: GenericFieldHTMLAttributes | BaseFieldProps[js.Object]] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]]
+  
+  def apply[P <: GenericFieldHTMLAttributes | BaseFieldProps[js.Object]](p: P): Builder[P] = new Builder[P](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[P <: GenericFieldHTMLAttributes | BaseFieldProps[js.Object]](companion: Field.type): Builder[P] = new Builder[P](js.Array(this.component, js.Dictionary.empty))()
 }
 

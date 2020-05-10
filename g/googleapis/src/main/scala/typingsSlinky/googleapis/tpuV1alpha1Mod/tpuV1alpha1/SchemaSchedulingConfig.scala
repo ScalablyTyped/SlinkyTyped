@@ -11,10 +11,29 @@ trait SchemaSchedulingConfig extends js.Object {
 
 object SchemaSchedulingConfig {
   @scala.inline
-  def apply(preemptible: js.UndefOr[Boolean] = js.undefined): SchemaSchedulingConfig = {
+  def apply(): SchemaSchedulingConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(preemptible)) __obj.updateDynamic("preemptible")(preemptible.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSchedulingConfig]
   }
+  @scala.inline
+  implicit class SchemaSchedulingConfigOps[Self <: SchemaSchedulingConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPreemptible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreemptible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preemptible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

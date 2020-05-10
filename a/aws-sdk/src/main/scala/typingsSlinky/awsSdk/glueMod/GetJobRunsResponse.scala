@@ -18,11 +18,41 @@ trait GetJobRunsResponse extends js.Object {
 
 object GetJobRunsResponse {
   @scala.inline
-  def apply(JobRuns: JobRunList = null, NextToken: GenericString = null): GetJobRunsResponse = {
+  def apply(): GetJobRunsResponse = {
     val __obj = js.Dynamic.literal()
-    if (JobRuns != null) __obj.updateDynamic("JobRuns")(JobRuns.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetJobRunsResponse]
   }
+  @scala.inline
+  implicit class GetJobRunsResponseOps[Self <: GetJobRunsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobRuns(value: JobRunList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobRuns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobRuns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobRuns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

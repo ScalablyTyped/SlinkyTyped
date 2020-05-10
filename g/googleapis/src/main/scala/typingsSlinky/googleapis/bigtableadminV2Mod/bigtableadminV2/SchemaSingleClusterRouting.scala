@@ -25,11 +25,41 @@ trait SchemaSingleClusterRouting extends js.Object {
 
 object SchemaSingleClusterRouting {
   @scala.inline
-  def apply(allowTransactionalWrites: js.UndefOr[Boolean] = js.undefined, clusterId: String = null): SchemaSingleClusterRouting = {
+  def apply(): SchemaSingleClusterRouting = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowTransactionalWrites)) __obj.updateDynamic("allowTransactionalWrites")(allowTransactionalWrites.asInstanceOf[js.Any])
-    if (clusterId != null) __obj.updateDynamic("clusterId")(clusterId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSingleClusterRouting]
   }
+  @scala.inline
+  implicit class SchemaSingleClusterRoutingOps[Self <: SchemaSingleClusterRouting] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowTransactionalWrites(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTransactionalWrites")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowTransactionalWrites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTransactionalWrites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

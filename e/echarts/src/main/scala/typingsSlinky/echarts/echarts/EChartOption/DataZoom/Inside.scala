@@ -20,90 +20,372 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#dataZoom-inside
   */
+@js.native
 trait Inside extends js.Object {
-  var angleAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var disable: js.UndefOr[Boolean] = js.undefined
-  var end: js.UndefOr[Double] = js.undefined
-  var endValue: js.UndefOr[Double | String | js.Date] = js.undefined
-  var filterMode: js.UndefOr[filter | weakFilter | empty | none] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var maxSpan: js.UndefOr[Double] = js.undefined
-  var maxValueSpan: js.UndefOr[Double | String | js.Date] = js.undefined
-  var minSpan: js.UndefOr[Double] = js.undefined
-  var minValueSpan: js.UndefOr[Double | String | js.Date] = js.undefined
-  var moveOnMouseMove: js.UndefOr[Boolean] = js.undefined
-  var moveOnMouseWheel: js.UndefOr[Boolean] = js.undefined
-  var orient: js.UndefOr[String] = js.undefined
-  var preventDefaultMouseMove: js.UndefOr[Boolean] = js.undefined
-  var radiusAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var rangeMode: js.UndefOr[js.Array[String]] = js.undefined
-  var singleAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var start: js.UndefOr[Double] = js.undefined
-  var startValue: js.UndefOr[Double | String | js.Date] = js.undefined
-  var throttle: js.UndefOr[Double] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
-  var xAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var yAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.undefined
-  var zoomLock: js.UndefOr[Boolean] = js.undefined
-  var zoomOnMouseWheel: js.UndefOr[Boolean] = js.undefined
+  var angleAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.native
+  var disable: js.UndefOr[Boolean] = js.native
+  var end: js.UndefOr[Double] = js.native
+  var endValue: js.UndefOr[Double | String | js.Date] = js.native
+  var filterMode: js.UndefOr[filter | weakFilter | empty | none] = js.native
+  var id: js.UndefOr[String] = js.native
+  var maxSpan: js.UndefOr[Double] = js.native
+  var maxValueSpan: js.UndefOr[Double | String | js.Date] = js.native
+  var minSpan: js.UndefOr[Double] = js.native
+  var minValueSpan: js.UndefOr[Double | String | js.Date] = js.native
+  var moveOnMouseMove: js.UndefOr[Boolean] = js.native
+  var moveOnMouseWheel: js.UndefOr[Boolean] = js.native
+  var orient: js.UndefOr[String] = js.native
+  var preventDefaultMouseMove: js.UndefOr[Boolean] = js.native
+  var radiusAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.native
+  var rangeMode: js.UndefOr[js.Array[String]] = js.native
+  var singleAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.native
+  var start: js.UndefOr[Double] = js.native
+  var startValue: js.UndefOr[Double | String | js.Date] = js.native
+  var throttle: js.UndefOr[Double] = js.native
+  var `type`: js.UndefOr[String] = js.native
+  var xAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.native
+  var yAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.native
+  var zoomLock: js.UndefOr[Boolean] = js.native
+  var zoomOnMouseWheel: js.UndefOr[Boolean] = js.native
 }
 
 object Inside {
   @scala.inline
-  def apply(
-    angleAxisIndex: Double | js.Array[Double] = null,
-    disable: js.UndefOr[Boolean] = js.undefined,
-    end: Int | Double = null,
-    endValue: Double | String | js.Date = null,
-    filterMode: filter | weakFilter | empty | none = null,
-    id: String = null,
-    maxSpan: Int | Double = null,
-    maxValueSpan: Double | String | js.Date = null,
-    minSpan: Int | Double = null,
-    minValueSpan: Double | String | js.Date = null,
-    moveOnMouseMove: js.UndefOr[Boolean] = js.undefined,
-    moveOnMouseWheel: js.UndefOr[Boolean] = js.undefined,
-    orient: String = null,
-    preventDefaultMouseMove: js.UndefOr[Boolean] = js.undefined,
-    radiusAxisIndex: Double | js.Array[Double] = null,
-    rangeMode: js.Array[String] = null,
-    singleAxisIndex: Double | js.Array[Double] = null,
-    start: Int | Double = null,
-    startValue: Double | String | js.Date = null,
-    throttle: Int | Double = null,
-    `type`: String = null,
-    xAxisIndex: Double | js.Array[Double] = null,
-    yAxisIndex: Double | js.Array[Double] = null,
-    zoomLock: js.UndefOr[Boolean] = js.undefined,
-    zoomOnMouseWheel: js.UndefOr[Boolean] = js.undefined
-  ): Inside = {
+  def apply(): Inside = {
     val __obj = js.Dynamic.literal()
-    if (angleAxisIndex != null) __obj.updateDynamic("angleAxisIndex")(angleAxisIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(disable)) __obj.updateDynamic("disable")(disable.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (endValue != null) __obj.updateDynamic("endValue")(endValue.asInstanceOf[js.Any])
-    if (filterMode != null) __obj.updateDynamic("filterMode")(filterMode.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (maxSpan != null) __obj.updateDynamic("maxSpan")(maxSpan.asInstanceOf[js.Any])
-    if (maxValueSpan != null) __obj.updateDynamic("maxValueSpan")(maxValueSpan.asInstanceOf[js.Any])
-    if (minSpan != null) __obj.updateDynamic("minSpan")(minSpan.asInstanceOf[js.Any])
-    if (minValueSpan != null) __obj.updateDynamic("minValueSpan")(minValueSpan.asInstanceOf[js.Any])
-    if (!js.isUndefined(moveOnMouseMove)) __obj.updateDynamic("moveOnMouseMove")(moveOnMouseMove.asInstanceOf[js.Any])
-    if (!js.isUndefined(moveOnMouseWheel)) __obj.updateDynamic("moveOnMouseWheel")(moveOnMouseWheel.asInstanceOf[js.Any])
-    if (orient != null) __obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventDefaultMouseMove)) __obj.updateDynamic("preventDefaultMouseMove")(preventDefaultMouseMove.asInstanceOf[js.Any])
-    if (radiusAxisIndex != null) __obj.updateDynamic("radiusAxisIndex")(radiusAxisIndex.asInstanceOf[js.Any])
-    if (rangeMode != null) __obj.updateDynamic("rangeMode")(rangeMode.asInstanceOf[js.Any])
-    if (singleAxisIndex != null) __obj.updateDynamic("singleAxisIndex")(singleAxisIndex.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (startValue != null) __obj.updateDynamic("startValue")(startValue.asInstanceOf[js.Any])
-    if (throttle != null) __obj.updateDynamic("throttle")(throttle.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (xAxisIndex != null) __obj.updateDynamic("xAxisIndex")(xAxisIndex.asInstanceOf[js.Any])
-    if (yAxisIndex != null) __obj.updateDynamic("yAxisIndex")(yAxisIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoomLock)) __obj.updateDynamic("zoomLock")(zoomLock.asInstanceOf[js.Any])
-    if (!js.isUndefined(zoomOnMouseWheel)) __obj.updateDynamic("zoomOnMouseWheel")(zoomOnMouseWheel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Inside]
   }
+  @scala.inline
+  implicit class InsideOps[Self <: Inside] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAngleAxisIndex(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angleAxisIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAngleAxisIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angleAxisIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndValueDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndValue(value: Double | String | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterMode(value: filter | weakFilter | empty | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSpan(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValueSpanDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxValueSpan(value: Double | String | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValueSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSpan(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValueSpanDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinValueSpan(value: Double | String | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValueSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveOnMouseMove(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveOnMouseMove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveOnMouseMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveOnMouseMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveOnMouseWheel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveOnMouseWheel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveOnMouseWheel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveOnMouseWheel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrient(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreventDefaultMouseMove(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefaultMouseMove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreventDefaultMouseMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefaultMouseMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadiusAxisIndex(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusAxisIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadiusAxisIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radiusAxisIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeMode(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleAxisIndex(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleAxisIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleAxisIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleAxisIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartValueDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartValue(value: Double | String | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThrottle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThrottle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXAxisIndex(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxisIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXAxisIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAxisIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYAxisIndex(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYAxisIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yAxisIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomLock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomLock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomLock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomLock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomOnMouseWheel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOnMouseWheel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomOnMouseWheel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomOnMouseWheel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

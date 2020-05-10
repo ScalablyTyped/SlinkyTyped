@@ -41,5 +41,6 @@ trait HTMLOptionElement extends HTMLElement {
 
 @JSGlobal("HTMLOptionElement")
 @js.native
-object HTMLOptionElement extends Instantiable0[HTMLOptionElement]
+object HTMLOptionElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLOptionElement]
 

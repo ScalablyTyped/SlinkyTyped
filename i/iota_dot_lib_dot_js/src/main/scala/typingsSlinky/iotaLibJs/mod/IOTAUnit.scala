@@ -16,18 +16,16 @@ trait IOTAUnit extends js.Object
 
 object IOTAUnit {
   @scala.inline
-  def Gi: typingsSlinky.iotaLibJs.iotaLibJsStrings.Gi = this.cast("Gi")
+  def Gi: typingsSlinky.iotaLibJs.iotaLibJsStrings.Gi = "Gi".asInstanceOf[typingsSlinky.iotaLibJs.iotaLibJsStrings.Gi]
   @scala.inline
-  def Ki: typingsSlinky.iotaLibJs.iotaLibJsStrings.Ki = this.cast("Ki")
+  def Ki: typingsSlinky.iotaLibJs.iotaLibJsStrings.Ki = "Ki".asInstanceOf[typingsSlinky.iotaLibJs.iotaLibJsStrings.Ki]
   @scala.inline
-  def Mi: typingsSlinky.iotaLibJs.iotaLibJsStrings.Mi = this.cast("Mi")
+  def Mi: typingsSlinky.iotaLibJs.iotaLibJsStrings.Mi = "Mi".asInstanceOf[typingsSlinky.iotaLibJs.iotaLibJsStrings.Mi]
   @scala.inline
-  def Pi: typingsSlinky.iotaLibJs.iotaLibJsStrings.Pi = this.cast("Pi")
+  def Pi: typingsSlinky.iotaLibJs.iotaLibJsStrings.Pi = "Pi".asInstanceOf[typingsSlinky.iotaLibJs.iotaLibJsStrings.Pi]
   @scala.inline
-  def Ti: typingsSlinky.iotaLibJs.iotaLibJsStrings.Ti = this.cast("Ti")
+  def Ti: typingsSlinky.iotaLibJs.iotaLibJsStrings.Ti = "Ti".asInstanceOf[typingsSlinky.iotaLibJs.iotaLibJsStrings.Ti]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def i: typingsSlinky.iotaLibJs.iotaLibJsStrings.i = this.cast("i")
+  def i: typingsSlinky.iotaLibJs.iotaLibJsStrings.i = "i".asInstanceOf[typingsSlinky.iotaLibJs.iotaLibJsStrings.i]
 }
 

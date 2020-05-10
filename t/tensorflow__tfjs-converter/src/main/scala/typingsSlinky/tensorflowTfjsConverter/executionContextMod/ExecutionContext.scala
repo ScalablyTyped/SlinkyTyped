@@ -4,7 +4,7 @@ import typingsSlinky.tensorflowTfjsConverter.tensorArrayMod.TensorArray
 import typingsSlinky.tensorflowTfjsConverter.typesMod.NamedTensorsMap
 import typingsSlinky.tensorflowTfjsConverter.typesMod.TensorArrayMap
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,7 +49,7 @@ class ExecutionContext protected () extends js.Object {
     */
   def exitFrame(): Unit = js.native
   def getTensorArray(id: Double): TensorArray = js.native
-  def getWeight(name: String): js.Array[Tensor_[Rank]] = js.native
+  def getWeight(name: String): js.Array[Tensor[Rank]] = js.native
   /**
     * Enter the next iteration of a loop, the iteration id of last context is
     * increased.

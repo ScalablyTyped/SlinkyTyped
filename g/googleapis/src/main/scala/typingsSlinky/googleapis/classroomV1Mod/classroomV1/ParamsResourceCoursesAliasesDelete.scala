@@ -25,3 +25,55 @@ trait ParamsResourceCoursesAliasesDelete extends StandardParameters {
   var courseId: js.UndefOr[String] = js.native
 }
 
+object ParamsResourceCoursesAliasesDelete {
+  @scala.inline
+  def apply(): ParamsResourceCoursesAliasesDelete = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourceCoursesAliasesDelete]
+  }
+  @scala.inline
+  implicit class ParamsResourceCoursesAliasesDeleteOps[Self <: ParamsResourceCoursesAliasesDelete] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlias(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCourseId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("courseId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCourseId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("courseId")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

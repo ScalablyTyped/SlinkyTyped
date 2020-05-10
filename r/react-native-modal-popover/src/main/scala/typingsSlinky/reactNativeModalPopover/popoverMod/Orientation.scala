@@ -15,16 +15,14 @@ trait Orientation extends js.Object
 
 object Orientation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def landscape: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.landscape = "landscape".asInstanceOf[typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.landscape]
   @scala.inline
-  def landscape: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.landscape = this.cast("landscape")
+  def `landscape-left`: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.`landscape-left` = "landscape-left".asInstanceOf[typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.`landscape-left`]
   @scala.inline
-  def `landscape-left`: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.`landscape-left` = this.cast("landscape-left")
+  def `landscape-right`: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.`landscape-right` = "landscape-right".asInstanceOf[typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.`landscape-right`]
   @scala.inline
-  def `landscape-right`: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.`landscape-right` = this.cast("landscape-right")
+  def portrait: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.portrait = "portrait".asInstanceOf[typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.portrait]
   @scala.inline
-  def portrait: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.portrait = this.cast("portrait")
-  @scala.inline
-  def `portrait-upside-down`: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.`portrait-upside-down` = this.cast("portrait-upside-down")
+  def `portrait-upside-down`: typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.`portrait-upside-down` = "portrait-upside-down".asInstanceOf[typingsSlinky.reactNativeModalPopover.reactNativeModalPopoverStrings.`portrait-upside-down`]
 }
 

@@ -17,18 +17,16 @@ trait UndefinedViewType extends js.Object
 
 object UndefinedViewType {
   @scala.inline
-  def background: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.background = this.cast("background")
+  def background: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.background = "background".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.background]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def devtools_page: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.devtools_page = "devtools_page".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.devtools_page]
   @scala.inline
-  def devtools_page: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.devtools_page = this.cast("devtools_page")
+  def devtools_panel: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.devtools_panel = "devtools_panel".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.devtools_panel]
   @scala.inline
-  def devtools_panel: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.devtools_panel = this.cast("devtools_panel")
+  def popup: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.popup = "popup".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.popup]
   @scala.inline
-  def popup: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.popup = this.cast("popup")
+  def sidebar: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sidebar = "sidebar".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sidebar]
   @scala.inline
-  def sidebar: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sidebar = this.cast("sidebar")
-  @scala.inline
-  def tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab = this.cast("tab")
+  def tab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab = "tab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.tab]
 }
 

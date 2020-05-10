@@ -17,10 +17,29 @@ trait SchemaBuildBazelRemoteExecutionV2BatchUpdateBlobsResponse extends js.Objec
 
 object SchemaBuildBazelRemoteExecutionV2BatchUpdateBlobsResponse {
   @scala.inline
-  def apply(responses: js.Array[SchemaBuildBazelRemoteExecutionV2BatchUpdateBlobsResponseResponse] = null): SchemaBuildBazelRemoteExecutionV2BatchUpdateBlobsResponse = {
+  def apply(): SchemaBuildBazelRemoteExecutionV2BatchUpdateBlobsResponse = {
     val __obj = js.Dynamic.literal()
-    if (responses != null) __obj.updateDynamic("responses")(responses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2BatchUpdateBlobsResponse]
   }
+  @scala.inline
+  implicit class SchemaBuildBazelRemoteExecutionV2BatchUpdateBlobsResponseOps[Self <: SchemaBuildBazelRemoteExecutionV2BatchUpdateBlobsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponses(value: js.Array[SchemaBuildBazelRemoteExecutionV2BatchUpdateBlobsResponseResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

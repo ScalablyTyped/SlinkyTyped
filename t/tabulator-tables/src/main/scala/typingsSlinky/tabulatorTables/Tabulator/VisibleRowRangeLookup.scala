@@ -12,10 +12,8 @@ trait VisibleRowRangeLookup extends js.Object
 
 object VisibleRowRangeLookup {
   @scala.inline
-  def active: typingsSlinky.tabulatorTables.tabulatorTablesStrings.active = this.cast("active")
+  def active: typingsSlinky.tabulatorTables.tabulatorTablesStrings.active = "active".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.active]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def visible: typingsSlinky.tabulatorTables.tabulatorTablesStrings.visible = this.cast("visible")
+  def visible: typingsSlinky.tabulatorTables.tabulatorTablesStrings.visible = "visible".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.visible]
 }
 

@@ -18,16 +18,14 @@ trait CryptoCurrency extends js.Object
 
 object CryptoCurrency {
   @scala.inline
-  def BCH: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.BCH = this.cast("BCH")
+  def BCH: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.BCH = "BCH".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.BCH]
   @scala.inline
-  def BTC: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.BTC = this.cast("BTC")
+  def BTC: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.BTC = "BTC".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.BTC]
   @scala.inline
-  def ETH: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.ETH = this.cast("ETH")
+  def ETH: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.ETH = "ETH".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.ETH]
   @scala.inline
-  def LTC: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.LTC = this.cast("LTC")
+  def LTC: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.LTC = "LTC".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.LTC]
   @scala.inline
-  def USDC: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.USDC = this.cast("USDC")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def USDC: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.USDC = "USDC".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.USDC]
 }
 

@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCanvasPadding extends js.Object {
-  var canvasPadding: js.UndefOr[AnonBottom] = js.undefined
-  var colors: js.UndefOr[AnonBackground] = js.undefined
-  var cssPrefix: js.UndefOr[String] = js.undefined
-  var gradient: js.UndefOr[AnonColorEnabled] = js.undefined
-  var pieCenterOffset: js.UndefOr[AnonX] = js.undefined
+  var canvasPadding: js.UndefOr[AnonBottom] = js.native
+  var colors: js.UndefOr[AnonBackground] = js.native
+  var cssPrefix: js.UndefOr[String] = js.native
+  var gradient: js.UndefOr[AnonColorEnabled] = js.native
+  var pieCenterOffset: js.UndefOr[AnonX] = js.native
 }
 
 object AnonCanvasPadding {
   @scala.inline
-  def apply(
-    canvasPadding: AnonBottom = null,
-    colors: AnonBackground = null,
-    cssPrefix: String = null,
-    gradient: AnonColorEnabled = null,
-    pieCenterOffset: AnonX = null
-  ): AnonCanvasPadding = {
+  def apply(): AnonCanvasPadding = {
     val __obj = js.Dynamic.literal()
-    if (canvasPadding != null) __obj.updateDynamic("canvasPadding")(canvasPadding.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (cssPrefix != null) __obj.updateDynamic("cssPrefix")(cssPrefix.asInstanceOf[js.Any])
-    if (gradient != null) __obj.updateDynamic("gradient")(gradient.asInstanceOf[js.Any])
-    if (pieCenterOffset != null) __obj.updateDynamic("pieCenterOffset")(pieCenterOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCanvasPadding]
   }
+  @scala.inline
+  implicit class AnonCanvasPaddingOps[Self <: AnonCanvasPadding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanvasPadding(value: AnonBottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvasPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanvasPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvasPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColors(value: AnonBackground): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCssPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCssPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGradient(value: AnonColorEnabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGradient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPieCenterOffset(value: AnonX): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pieCenterOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPieCenterOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pieCenterOffset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

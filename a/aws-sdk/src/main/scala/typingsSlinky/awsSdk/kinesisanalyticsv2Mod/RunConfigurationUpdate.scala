@@ -18,14 +18,41 @@ trait RunConfigurationUpdate extends js.Object {
 
 object RunConfigurationUpdate {
   @scala.inline
-  def apply(
-    ApplicationRestoreConfiguration: ApplicationRestoreConfiguration = null,
-    FlinkRunConfiguration: FlinkRunConfiguration = null
-  ): RunConfigurationUpdate = {
+  def apply(): RunConfigurationUpdate = {
     val __obj = js.Dynamic.literal()
-    if (ApplicationRestoreConfiguration != null) __obj.updateDynamic("ApplicationRestoreConfiguration")(ApplicationRestoreConfiguration.asInstanceOf[js.Any])
-    if (FlinkRunConfiguration != null) __obj.updateDynamic("FlinkRunConfiguration")(FlinkRunConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[RunConfigurationUpdate]
   }
+  @scala.inline
+  implicit class RunConfigurationUpdateOps[Self <: RunConfigurationUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationRestoreConfiguration(value: ApplicationRestoreConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationRestoreConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationRestoreConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationRestoreConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlinkRunConfiguration(value: FlinkRunConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlinkRunConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlinkRunConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlinkRunConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

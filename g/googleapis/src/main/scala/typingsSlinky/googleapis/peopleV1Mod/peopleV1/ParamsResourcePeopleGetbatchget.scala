@@ -44,3 +44,67 @@ trait ParamsResourcePeopleGetbatchget extends StandardParameters {
   var resourceNames: js.UndefOr[js.Array[String]] = js.native
 }
 
+object ParamsResourcePeopleGetbatchget {
+  @scala.inline
+  def apply(): ParamsResourcePeopleGetbatchget = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ParamsResourcePeopleGetbatchget]
+  }
+  @scala.inline
+  implicit class ParamsResourcePeopleGetbatchgetOps[Self <: ParamsResourcePeopleGetbatchget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuth(value: String | OAuth2Client | JWT | Compute | UserRefreshClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersonFields(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("personFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersonFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("personFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestMaskDotincludeField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMask.includeField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestMaskDotincludeField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestMask.includeField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceNames")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

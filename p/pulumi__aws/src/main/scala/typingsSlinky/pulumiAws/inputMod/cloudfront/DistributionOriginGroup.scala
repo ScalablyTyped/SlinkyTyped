@@ -29,8 +29,33 @@ object DistributionOriginGroup {
     originId: Input[String]
   ): DistributionOriginGroup = {
     val __obj = js.Dynamic.literal(failoverCriteria = failoverCriteria.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], originId = originId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DistributionOriginGroup]
   }
+  @scala.inline
+  implicit class DistributionOriginGroupOps[Self <: DistributionOriginGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailoverCriteria(value: Input[DistributionOriginGroupFailoverCriteria]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failoverCriteria")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMembers(value: Input[js.Array[Input[DistributionOriginGroupMember]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("members")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOriginId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

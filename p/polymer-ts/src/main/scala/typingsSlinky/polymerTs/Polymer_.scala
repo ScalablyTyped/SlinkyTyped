@@ -19,7 +19,7 @@ object Polymer_ extends js.Object {
   def Class(prototype: Element): js.Function = js.native
   def appendChild(node: HTMLElement): HTMLElement = js.native
   def dom(node: Base): HTMLElement = js.native
-  def dom(node: typingsSlinky.std.HTMLElement): HTMLElement = js.native
+  def dom(node: HTMLElement): HTMLElement = js.native
   def insertBefore(node: HTMLElement, beforeNode: HTMLElement): HTMLElement = js.native
   def removeChild(node: HTMLElement): HTMLElement = js.native
   def updateStyles(): Unit = js.native

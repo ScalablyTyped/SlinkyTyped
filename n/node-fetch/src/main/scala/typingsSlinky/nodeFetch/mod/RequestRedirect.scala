@@ -13,12 +13,10 @@ trait RequestRedirect extends js.Object
 
 object RequestRedirect {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.nodeFetch.nodeFetchStrings.error = "error".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.error]
   @scala.inline
-  def error: typingsSlinky.nodeFetch.nodeFetchStrings.error = this.cast("error")
+  def follow: typingsSlinky.nodeFetch.nodeFetchStrings.follow = "follow".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.follow]
   @scala.inline
-  def follow: typingsSlinky.nodeFetch.nodeFetchStrings.follow = this.cast("follow")
-  @scala.inline
-  def manual: typingsSlinky.nodeFetch.nodeFetchStrings.manual = this.cast("manual")
+  def manual: typingsSlinky.nodeFetch.nodeFetchStrings.manual = "manual".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.manual]
 }
 

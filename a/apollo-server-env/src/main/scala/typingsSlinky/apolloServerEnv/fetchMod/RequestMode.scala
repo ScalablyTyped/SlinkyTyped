@@ -14,14 +14,12 @@ trait RequestMode extends js.Object
 
 object RequestMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cors: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.cors = "cors".asInstanceOf[typingsSlinky.apolloServerEnv.apolloServerEnvStrings.cors]
   @scala.inline
-  def cors: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.cors = this.cast("cors")
+  def navigate: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.navigate = "navigate".asInstanceOf[typingsSlinky.apolloServerEnv.apolloServerEnvStrings.navigate]
   @scala.inline
-  def navigate: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.navigate = this.cast("navigate")
+  def `no-cors`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`no-cors` = "no-cors".asInstanceOf[typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`no-cors`]
   @scala.inline
-  def `no-cors`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`no-cors` = this.cast("no-cors")
-  @scala.inline
-  def `same-origin`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`same-origin` = this.cast("same-origin")
+  def `same-origin`: typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`same-origin` = "same-origin".asInstanceOf[typingsSlinky.apolloServerEnv.apolloServerEnvStrings.`same-origin`]
 }
 

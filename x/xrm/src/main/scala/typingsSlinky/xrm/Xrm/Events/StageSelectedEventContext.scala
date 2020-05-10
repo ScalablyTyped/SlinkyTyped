@@ -9,12 +9,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StageSelectedEventContext extends EventContext {
   /**
     * Gets process stage selected event arguments.
     * @returns The event arguments.
     */
-  def getEventArgs(): StageSelectedEventArguments
+  def getEventArgs(): StageSelectedEventArguments = js.native
 }
 
 object StageSelectedEventContext {
@@ -29,8 +30,21 @@ object StageSelectedEventContext {
     setSharedVariable: (String, js.Any) => Unit
   ): StageSelectedEventContext = {
     val __obj = js.Dynamic.literal(getContext = js.Any.fromFunction0(getContext), getDepth = js.Any.fromFunction0(getDepth), getEventArgs = js.Any.fromFunction0(getEventArgs), getEventSource = js.Any.fromFunction0(getEventSource), getFormContext = js.Any.fromFunction0(getFormContext), getSharedVariable = js.Any.fromFunction1(getSharedVariable), setSharedVariable = js.Any.fromFunction2(setSharedVariable))
-  
     __obj.asInstanceOf[StageSelectedEventContext]
   }
+  @scala.inline
+  implicit class StageSelectedEventContextOps[Self <: StageSelectedEventContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetEventArgs(value: () => StageSelectedEventArguments): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEventArgs")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

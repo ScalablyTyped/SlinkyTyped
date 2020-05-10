@@ -11,14 +11,8 @@ object gatherNdGpuMod extends js.Object {
   @js.native
   class GatherNDProgram protected () extends GPGPUProgram {
     def this(sliceDim: Double, strides: js.Array[Double], shape: js.Array[Double]) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
     var sliceDim: js.Any = js.native
     var strides: js.Any = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
 }

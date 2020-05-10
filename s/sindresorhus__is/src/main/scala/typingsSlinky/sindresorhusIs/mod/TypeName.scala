@@ -40,66 +40,64 @@ trait TypeName extends js.Object
 
 object TypeName {
   @scala.inline
-  def Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Array = this.cast("Array")
+  def Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Array = "Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Array]
   @scala.inline
-  def ArrayBuffer: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.ArrayBuffer = this.cast("ArrayBuffer")
+  def ArrayBuffer: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.ArrayBuffer = "ArrayBuffer".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.ArrayBuffer]
   @scala.inline
-  def Buffer: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Buffer = this.cast("Buffer")
+  def Buffer: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Buffer = "Buffer".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Buffer]
   @scala.inline
-  def DataView: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.DataView = this.cast("DataView")
+  def DataView: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.DataView = "DataView".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.DataView]
   @scala.inline
-  def Date: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Date = this.cast("Date")
+  def Date: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Date = "Date".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Date]
   @scala.inline
-  def Error: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Error = this.cast("Error")
+  def Error: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Error = "Error".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Error]
   @scala.inline
-  def Float32Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Float32Array = this.cast("Float32Array")
+  def Float32Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Float32Array = "Float32Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Float32Array]
   @scala.inline
-  def Float64Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Float64Array = this.cast("Float64Array")
+  def Float64Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Float64Array = "Float64Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Float64Array]
   @scala.inline
-  def Function: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Function = this.cast("Function")
+  def Function: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Function = "Function".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Function]
   @scala.inline
-  def Int16Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int16Array = this.cast("Int16Array")
+  def Int16Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int16Array = "Int16Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int16Array]
   @scala.inline
-  def Int32Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int32Array = this.cast("Int32Array")
+  def Int32Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int32Array = "Int32Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int32Array]
   @scala.inline
-  def Int8Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int8Array = this.cast("Int8Array")
+  def Int8Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int8Array = "Int8Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Int8Array]
   @scala.inline
-  def Map: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Map = this.cast("Map")
+  def Map: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Map = "Map".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Map]
   @scala.inline
-  def Object: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Object = this.cast("Object")
+  def Object: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Object = "Object".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Object]
   @scala.inline
-  def Promise: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Promise = this.cast("Promise")
+  def Promise: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Promise = "Promise".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Promise]
   @scala.inline
-  def RegExp: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.RegExp = this.cast("RegExp")
+  def RegExp: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.RegExp = "RegExp".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.RegExp]
   @scala.inline
-  def Set: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Set = this.cast("Set")
+  def Set: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Set = "Set".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Set]
   @scala.inline
-  def SharedArrayBuffer: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.SharedArrayBuffer = this.cast("SharedArrayBuffer")
+  def SharedArrayBuffer: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.SharedArrayBuffer = "SharedArrayBuffer".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.SharedArrayBuffer]
   @scala.inline
-  def Uint16Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint16Array = this.cast("Uint16Array")
+  def Uint16Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint16Array = "Uint16Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint16Array]
   @scala.inline
-  def Uint32Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint32Array = this.cast("Uint32Array")
+  def Uint32Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint32Array = "Uint32Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint32Array]
   @scala.inline
-  def Uint8Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint8Array = this.cast("Uint8Array")
+  def Uint8Array: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint8Array = "Uint8Array".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint8Array]
   @scala.inline
-  def Uint8ClampedArray: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint8ClampedArray = this.cast("Uint8ClampedArray")
+  def Uint8ClampedArray: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint8ClampedArray = "Uint8ClampedArray".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.Uint8ClampedArray]
   @scala.inline
-  def WeakMap: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.WeakMap = this.cast("WeakMap")
+  def WeakMap: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.WeakMap = "WeakMap".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.WeakMap]
   @scala.inline
-  def WeakSet: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.WeakSet = this.cast("WeakSet")
+  def WeakSet: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.WeakSet = "WeakSet".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.WeakSet]
   @scala.inline
-  def boolean: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.boolean = "boolean".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `null`: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.`null` = "null".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.`null`]
   @scala.inline
-  def `null`: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.`null` = this.cast("null")
+  def number: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.number = "number".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.number]
   @scala.inline
-  def number: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.number = this.cast("number")
+  def string: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.string = "string".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.string]
   @scala.inline
-  def string: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.string = this.cast("string")
+  def symbol: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.symbol = "symbol".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.symbol]
   @scala.inline
-  def symbol: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.symbol = this.cast("symbol")
-  @scala.inline
-  def undefined: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.undefined = this.cast("undefined")
+  def undefined: typingsSlinky.sindresorhusIs.sindresorhusIsStrings.undefined = "undefined".asInstanceOf[typingsSlinky.sindresorhusIs.sindresorhusIsStrings.undefined]
 }
 

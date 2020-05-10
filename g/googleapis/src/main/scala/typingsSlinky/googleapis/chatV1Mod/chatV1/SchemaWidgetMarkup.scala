@@ -30,18 +30,65 @@ trait SchemaWidgetMarkup extends js.Object {
 
 object SchemaWidgetMarkup {
   @scala.inline
-  def apply(
-    buttons: js.Array[SchemaButton] = null,
-    image: SchemaImage = null,
-    keyValue: SchemaKeyValue = null,
-    textParagraph: SchemaTextParagraph = null
-  ): SchemaWidgetMarkup = {
+  def apply(): SchemaWidgetMarkup = {
     val __obj = js.Dynamic.literal()
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (keyValue != null) __obj.updateDynamic("keyValue")(keyValue.asInstanceOf[js.Any])
-    if (textParagraph != null) __obj.updateDynamic("textParagraph")(textParagraph.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWidgetMarkup]
   }
+  @scala.inline
+  implicit class SchemaWidgetMarkupOps[Self <: SchemaWidgetMarkup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButtons(value: js.Array[SchemaButton]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: SchemaImage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyValue(value: SchemaKeyValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextParagraph(value: SchemaTextParagraph): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textParagraph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextParagraph: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textParagraph")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

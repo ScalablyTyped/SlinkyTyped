@@ -132,7 +132,7 @@ trait HTMLVideoElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_MSVideoFormatChanged(`type`: MSVideoFormatChanged, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -146,7 +146,7 @@ trait HTMLVideoElement
   def removeEventListener_MSVideoFormatChanged(
     `type`: MSVideoFormatChanged,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_MSVideoFrameStepCompleted(
@@ -163,7 +163,7 @@ trait HTMLVideoElement
   def removeEventListener_MSVideoFrameStepCompleted(
     `type`: MSVideoFrameStepCompleted,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_MSVideoOptimalLayoutChanged(
@@ -180,7 +180,7 @@ trait HTMLVideoElement
   def removeEventListener_MSVideoOptimalLayoutChanged(
     `type`: MSVideoOptimalLayoutChanged,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def webkitEnterFullScreen(): Unit = js.native
   def webkitEnterFullscreen(): Unit = js.native
@@ -190,5 +190,6 @@ trait HTMLVideoElement
 
 @JSGlobal("HTMLVideoElement")
 @js.native
-object HTMLVideoElement extends Instantiable0[HTMLVideoElement]
+object HTMLVideoElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLVideoElement]
 

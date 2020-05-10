@@ -21,28 +21,26 @@ trait DrawerClassKey extends js.Object
 
 object DrawerClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def docked: typingsSlinky.materialUiCore.materialUiCoreStrings.docked = "docked".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.docked]
   @scala.inline
-  def docked: typingsSlinky.materialUiCore.materialUiCoreStrings.docked = this.cast("docked")
+  def modal: typingsSlinky.materialUiCore.materialUiCoreStrings.modal = "modal".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.modal]
   @scala.inline
-  def modal: typingsSlinky.materialUiCore.materialUiCoreStrings.modal = this.cast("modal")
+  def paper: typingsSlinky.materialUiCore.materialUiCoreStrings.paper = "paper".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paper]
   @scala.inline
-  def paper: typingsSlinky.materialUiCore.materialUiCoreStrings.paper = this.cast("paper")
+  def paperAnchorBottom: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorBottom = "paperAnchorBottom".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorBottom]
   @scala.inline
-  def paperAnchorBottom: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorBottom = this.cast("paperAnchorBottom")
+  def paperAnchorDockedBottom: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedBottom = "paperAnchorDockedBottom".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedBottom]
   @scala.inline
-  def paperAnchorDockedBottom: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedBottom = this.cast("paperAnchorDockedBottom")
+  def paperAnchorDockedLeft: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedLeft = "paperAnchorDockedLeft".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedLeft]
   @scala.inline
-  def paperAnchorDockedLeft: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedLeft = this.cast("paperAnchorDockedLeft")
+  def paperAnchorDockedRight: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedRight = "paperAnchorDockedRight".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedRight]
   @scala.inline
-  def paperAnchorDockedRight: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedRight = this.cast("paperAnchorDockedRight")
+  def paperAnchorDockedTop: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedTop = "paperAnchorDockedTop".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedTop]
   @scala.inline
-  def paperAnchorDockedTop: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorDockedTop = this.cast("paperAnchorDockedTop")
+  def paperAnchorLeft: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorLeft = "paperAnchorLeft".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorLeft]
   @scala.inline
-  def paperAnchorLeft: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorLeft = this.cast("paperAnchorLeft")
+  def paperAnchorRight: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorRight = "paperAnchorRight".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorRight]
   @scala.inline
-  def paperAnchorRight: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorRight = this.cast("paperAnchorRight")
-  @scala.inline
-  def paperAnchorTop: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorTop = this.cast("paperAnchorTop")
+  def paperAnchorTop: typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorTop = "paperAnchorTop".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.paperAnchorTop]
 }
 

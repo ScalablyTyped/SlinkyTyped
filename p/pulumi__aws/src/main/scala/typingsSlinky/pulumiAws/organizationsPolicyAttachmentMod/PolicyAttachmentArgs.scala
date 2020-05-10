@@ -21,8 +21,27 @@ object PolicyAttachmentArgs {
   @scala.inline
   def apply(policyId: Input[String], targetId: Input[String]): PolicyAttachmentArgs = {
     val __obj = js.Dynamic.literal(policyId = policyId.asInstanceOf[js.Any], targetId = targetId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PolicyAttachmentArgs]
   }
+  @scala.inline
+  implicit class PolicyAttachmentArgsOps[Self <: PolicyAttachmentArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicyId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

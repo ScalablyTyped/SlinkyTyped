@@ -18,11 +18,41 @@ trait ProjectBadge extends js.Object {
 
 object ProjectBadge {
   @scala.inline
-  def apply(badgeEnabled: js.UndefOr[scala.Boolean] = js.undefined, badgeRequestUrl: String = null): ProjectBadge = {
+  def apply(): ProjectBadge = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(badgeEnabled)) __obj.updateDynamic("badgeEnabled")(badgeEnabled.asInstanceOf[js.Any])
-    if (badgeRequestUrl != null) __obj.updateDynamic("badgeRequestUrl")(badgeRequestUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectBadge]
   }
+  @scala.inline
+  implicit class ProjectBadgeOps[Self <: ProjectBadge] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBadgeEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBadgeEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBadgeRequestUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeRequestUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBadgeRequestUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badgeRequestUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

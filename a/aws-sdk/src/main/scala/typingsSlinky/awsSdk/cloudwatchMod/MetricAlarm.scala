@@ -118,64 +118,341 @@ trait MetricAlarm extends js.Object {
 
 object MetricAlarm {
   @scala.inline
-  def apply(
-    ActionsEnabled: js.UndefOr[Boolean] = js.undefined,
-    AlarmActions: ResourceList = null,
-    AlarmArn: AlarmArn = null,
-    AlarmConfigurationUpdatedTimestamp: js.Date = null,
-    AlarmDescription: AlarmDescription = null,
-    AlarmName: AlarmName = null,
-    ComparisonOperator: ComparisonOperator = null,
-    DatapointsToAlarm: Int | Double = null,
-    Dimensions: Dimensions = null,
-    EvaluateLowSampleCountPercentile: EvaluateLowSampleCountPercentile = null,
-    EvaluationPeriods: Int | Double = null,
-    ExtendedStatistic: ExtendedStatistic = null,
-    InsufficientDataActions: ResourceList = null,
-    MetricName: MetricName = null,
-    Metrics: MetricDataQueries = null,
-    Namespace: Namespace = null,
-    OKActions: ResourceList = null,
-    Period: Int | Double = null,
-    StateReason: StateReason = null,
-    StateReasonData: StateReasonData = null,
-    StateUpdatedTimestamp: js.Date = null,
-    StateValue: StateValue = null,
-    Statistic: Statistic = null,
-    Threshold: Int | Double = null,
-    ThresholdMetricId: MetricId = null,
-    TreatMissingData: TreatMissingData = null,
-    Unit: StandardUnit = null
-  ): MetricAlarm = {
+  def apply(): MetricAlarm = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ActionsEnabled)) __obj.updateDynamic("ActionsEnabled")(ActionsEnabled.asInstanceOf[js.Any])
-    if (AlarmActions != null) __obj.updateDynamic("AlarmActions")(AlarmActions.asInstanceOf[js.Any])
-    if (AlarmArn != null) __obj.updateDynamic("AlarmArn")(AlarmArn.asInstanceOf[js.Any])
-    if (AlarmConfigurationUpdatedTimestamp != null) __obj.updateDynamic("AlarmConfigurationUpdatedTimestamp")(AlarmConfigurationUpdatedTimestamp.asInstanceOf[js.Any])
-    if (AlarmDescription != null) __obj.updateDynamic("AlarmDescription")(AlarmDescription.asInstanceOf[js.Any])
-    if (AlarmName != null) __obj.updateDynamic("AlarmName")(AlarmName.asInstanceOf[js.Any])
-    if (ComparisonOperator != null) __obj.updateDynamic("ComparisonOperator")(ComparisonOperator.asInstanceOf[js.Any])
-    if (DatapointsToAlarm != null) __obj.updateDynamic("DatapointsToAlarm")(DatapointsToAlarm.asInstanceOf[js.Any])
-    if (Dimensions != null) __obj.updateDynamic("Dimensions")(Dimensions.asInstanceOf[js.Any])
-    if (EvaluateLowSampleCountPercentile != null) __obj.updateDynamic("EvaluateLowSampleCountPercentile")(EvaluateLowSampleCountPercentile.asInstanceOf[js.Any])
-    if (EvaluationPeriods != null) __obj.updateDynamic("EvaluationPeriods")(EvaluationPeriods.asInstanceOf[js.Any])
-    if (ExtendedStatistic != null) __obj.updateDynamic("ExtendedStatistic")(ExtendedStatistic.asInstanceOf[js.Any])
-    if (InsufficientDataActions != null) __obj.updateDynamic("InsufficientDataActions")(InsufficientDataActions.asInstanceOf[js.Any])
-    if (MetricName != null) __obj.updateDynamic("MetricName")(MetricName.asInstanceOf[js.Any])
-    if (Metrics != null) __obj.updateDynamic("Metrics")(Metrics.asInstanceOf[js.Any])
-    if (Namespace != null) __obj.updateDynamic("Namespace")(Namespace.asInstanceOf[js.Any])
-    if (OKActions != null) __obj.updateDynamic("OKActions")(OKActions.asInstanceOf[js.Any])
-    if (Period != null) __obj.updateDynamic("Period")(Period.asInstanceOf[js.Any])
-    if (StateReason != null) __obj.updateDynamic("StateReason")(StateReason.asInstanceOf[js.Any])
-    if (StateReasonData != null) __obj.updateDynamic("StateReasonData")(StateReasonData.asInstanceOf[js.Any])
-    if (StateUpdatedTimestamp != null) __obj.updateDynamic("StateUpdatedTimestamp")(StateUpdatedTimestamp.asInstanceOf[js.Any])
-    if (StateValue != null) __obj.updateDynamic("StateValue")(StateValue.asInstanceOf[js.Any])
-    if (Statistic != null) __obj.updateDynamic("Statistic")(Statistic.asInstanceOf[js.Any])
-    if (Threshold != null) __obj.updateDynamic("Threshold")(Threshold.asInstanceOf[js.Any])
-    if (ThresholdMetricId != null) __obj.updateDynamic("ThresholdMetricId")(ThresholdMetricId.asInstanceOf[js.Any])
-    if (TreatMissingData != null) __obj.updateDynamic("TreatMissingData")(TreatMissingData.asInstanceOf[js.Any])
-    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricAlarm]
   }
+  @scala.inline
+  implicit class MetricAlarmOps[Self <: MetricAlarm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionsEnabled(value: ActionsEnabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionsEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlarmActions(value: ResourceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlarmActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlarmArn(value: AlarmArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlarmArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlarmConfigurationUpdatedTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmConfigurationUpdatedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlarmConfigurationUpdatedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmConfigurationUpdatedTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlarmDescription(value: AlarmDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlarmDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlarmName(value: AlarmName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlarmName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlarmName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComparisonOperator(value: ComparisonOperator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComparisonOperator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComparisonOperator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatapointsToAlarm(value: DatapointsToAlarm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatapointsToAlarm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatapointsToAlarm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatapointsToAlarm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensions(value: Dimensions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluateLowSampleCountPercentile(value: EvaluateLowSampleCountPercentile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluateLowSampleCountPercentile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluateLowSampleCountPercentile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluateLowSampleCountPercentile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluationPeriods(value: EvaluationPeriods): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationPeriods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluationPeriods: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationPeriods")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtendedStatistic(value: ExtendedStatistic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedStatistic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendedStatistic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedStatistic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsufficientDataActions(value: ResourceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsufficientDataActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsufficientDataActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsufficientDataActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricName(value: MetricName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetrics(value: MetricDataQueries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: Namespace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOKActions(value: ResourceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OKActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOKActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OKActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateReason(value: StateReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateReasonData(value: StateReasonData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReasonData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateReasonData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateReasonData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateUpdatedTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateUpdatedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateUpdatedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateUpdatedTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateValue(value: StateValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StateValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatistic(value: Statistic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statistic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatistic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statistic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: Threshold): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Threshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThresholdMetricId(value: MetricId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdMetricId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThresholdMetricId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThresholdMetricId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTreatMissingData(value: TreatMissingData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TreatMissingData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTreatMissingData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TreatMissingData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: StandardUnit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,14 +17,12 @@ trait State extends js.Object
 
 object State {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.openlayers.openlayersStrings.error = "error".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.error]
   @scala.inline
-  def error: typingsSlinky.openlayers.openlayersStrings.error = this.cast("error")
+  def loading: typingsSlinky.openlayers.openlayersStrings.loading = "loading".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.loading]
   @scala.inline
-  def loading: typingsSlinky.openlayers.openlayersStrings.loading = this.cast("loading")
+  def ready: typingsSlinky.openlayers.openlayersStrings.ready = "ready".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.ready]
   @scala.inline
-  def ready: typingsSlinky.openlayers.openlayersStrings.ready = this.cast("ready")
-  @scala.inline
-  def undefined: typingsSlinky.openlayers.openlayersStrings.undefined = this.cast("undefined")
+  def undefined: typingsSlinky.openlayers.openlayersStrings.undefined = "undefined".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.undefined]
 }
 

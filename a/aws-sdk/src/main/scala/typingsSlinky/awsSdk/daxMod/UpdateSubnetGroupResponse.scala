@@ -14,10 +14,29 @@ trait UpdateSubnetGroupResponse extends js.Object {
 
 object UpdateSubnetGroupResponse {
   @scala.inline
-  def apply(SubnetGroup: SubnetGroup = null): UpdateSubnetGroupResponse = {
+  def apply(): UpdateSubnetGroupResponse = {
     val __obj = js.Dynamic.literal()
-    if (SubnetGroup != null) __obj.updateDynamic("SubnetGroup")(SubnetGroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSubnetGroupResponse]
   }
+  @scala.inline
+  implicit class UpdateSubnetGroupResponseOps[Self <: UpdateSubnetGroupResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubnetGroup(value: SubnetGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetGroup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

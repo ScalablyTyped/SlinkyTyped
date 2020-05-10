@@ -1,10 +1,10 @@
 package typingsSlinky.tensorflowTfjsLayers.modelsMod
 
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
 import typingsSlinky.tensorflowTfjsCore.mod.serialization.Serializable
 import typingsSlinky.tensorflowTfjsCore.serializationMod.ConfigDict
 import typingsSlinky.tensorflowTfjsCore.serializationMod.SerializableConstructor
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import typingsSlinky.tensorflowTfjsLayers.trainingMod.LayersModel
 import scala.scalajs.js
@@ -45,8 +45,8 @@ class Sequential () extends LayersModel {
     * @exception TypeError if there are no layers in the model.
     */
   def pop(): Unit = js.native
-  def predict(x: js.Array[Tensor_[Rank]], args: ModelPredictArgs): Tensor_[Rank] | js.Array[Tensor_[Rank]] = js.native
-  def predict(x: Tensor_[Rank], args: ModelPredictArgs): Tensor_[Rank] | js.Array[Tensor_[Rank]] = js.native
+  def predict(x: js.Array[Tensor[Rank]], args: ModelPredictArgs): Tensor[Rank] | js.Array[Tensor[Rank]] = js.native
+  def predict(x: Tensor[Rank], args: ModelPredictArgs): Tensor[Rank] | js.Array[Tensor[Rank]] = js.native
 }
 
 /* static members */

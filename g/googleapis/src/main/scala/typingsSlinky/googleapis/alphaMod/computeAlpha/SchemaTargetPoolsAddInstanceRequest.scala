@@ -18,10 +18,29 @@ trait SchemaTargetPoolsAddInstanceRequest extends js.Object {
 
 object SchemaTargetPoolsAddInstanceRequest {
   @scala.inline
-  def apply(instances: js.Array[SchemaInstanceReference] = null): SchemaTargetPoolsAddInstanceRequest = {
+  def apply(): SchemaTargetPoolsAddInstanceRequest = {
     val __obj = js.Dynamic.literal()
-    if (instances != null) __obj.updateDynamic("instances")(instances.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTargetPoolsAddInstanceRequest]
   }
+  @scala.inline
+  implicit class SchemaTargetPoolsAddInstanceRequestOps[Self <: SchemaTargetPoolsAddInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstances(value: js.Array[SchemaInstanceReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,17 +1,16 @@
 package typingsSlinky.mjmlReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
+import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlHead
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.mod.MjmlHead] {
+object MjmlHead {
   @JSImport("mjml-react", "MjmlHead")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: RequiredChildrenProps): SharedBuilder_RequiredChildrenProps872359721[typingsSlinky.mjmlReact.mod.MjmlHead] = new SharedBuilder_RequiredChildrenProps872359721[typingsSlinky.mjmlReact.mod.MjmlHead](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MjmlHead.type): SharedBuilder_RequiredChildrenProps872359721[typingsSlinky.mjmlReact.mod.MjmlHead] = new SharedBuilder_RequiredChildrenProps872359721[typingsSlinky.mjmlReact.mod.MjmlHead](js.Array(this.component, js.Dictionary.empty))()
 }
 

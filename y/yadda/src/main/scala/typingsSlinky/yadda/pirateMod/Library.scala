@@ -1,7 +1,5 @@
 package typingsSlinky.yadda.pirateMod
 
-import typingsSlinky.std.Error
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,20 +10,24 @@ trait Library
   def giveth(
     step: String,
     fn: js.Function1[
-      (/* next */ js.Function1[/* err */ js.UndefOr[Error], Unit]) | (/* repeated */ String), 
+      (/* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | (/* repeated */ String), 
       js.Promise[Unit] | Unit
     ]
   ): this.type = js.native
   def giveth(
     step: String,
-    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], Unit]
+    fn: js.Function2[
+      /* arg1 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
   ): this.type = js.native
   def giveth(
     step: String,
     fn: js.Function3[
       /* arg1 */ String, 
       /* arg2 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -35,7 +37,7 @@ trait Library
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -46,7 +48,7 @@ trait Library
       /* arg2 */ String, 
       /* arg3 */ String, 
       /* arg4 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -58,7 +60,7 @@ trait Library
       /* arg3 */ String, 
       /* arg4 */ String, 
       /* arg5 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -71,65 +73,65 @@ trait Library
       /* arg4 */ String, 
       /* arg5 */ String, 
       /* arg6 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: js.Array[RegExp | String],
+    step: js.Array[js.RegExp | String],
     fn: js.Function1[
-      (/* next */ js.Function1[js.UndefOr[Error], Unit]) | (/* repeated */ String), 
+      (/* next */ js.Function1[js.UndefOr[js.Error], Unit]) | (/* repeated */ String), 
       js.Promise[Unit] | Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: js.Array[RegExp | String],
-    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[js.UndefOr[Error], Unit], Unit]
+    step: js.Array[js.RegExp | String],
+    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[js.UndefOr[js.Error], Unit], Unit]
   ): this.type = js.native
   def giveth(
-    step: js.Array[RegExp | String],
+    step: js.Array[js.RegExp | String],
     fn: js.Function3[
       /* arg1 */ String, 
       /* arg2 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: js.Array[RegExp | String],
+    step: js.Array[js.RegExp | String],
     fn: js.Function4[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: js.Array[RegExp | String],
+    step: js.Array[js.RegExp | String],
     fn: js.Function5[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
       /* arg4 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: js.Array[RegExp | String],
+    step: js.Array[js.RegExp | String],
     fn: js.Function6[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
       /* arg4 */ String, 
       /* arg5 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: js.Array[RegExp | String],
+    step: js.Array[js.RegExp | String],
     fn: js.Function7[
       /* arg1 */ String, 
       /* arg2 */ String, 
@@ -137,65 +139,69 @@ trait Library
       /* arg4 */ String, 
       /* arg5 */ String, 
       /* arg6 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: RegExp,
+    step: js.RegExp,
     fn: js.Function1[
-      (/* next */ js.Function1[/* err */ js.UndefOr[Error], Unit]) | (/* repeated */ String), 
+      (/* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | (/* repeated */ String), 
       js.Promise[Unit] | Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: RegExp,
-    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], Unit]
-  ): this.type = js.native
-  def giveth(
-    step: RegExp,
-    fn: js.Function3[
+    step: js.RegExp,
+    fn: js.Function2[
       /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: RegExp,
+    step: js.RegExp,
+    fn: js.Function3[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def giveth(
+    step: js.RegExp,
     fn: js.Function4[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: RegExp,
+    step: js.RegExp,
     fn: js.Function5[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
       /* arg4 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: RegExp,
+    step: js.RegExp,
     fn: js.Function6[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
       /* arg4 */ String, 
       /* arg5 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def giveth(
-    step: RegExp,
+    step: js.RegExp,
     fn: js.Function7[
       /* arg1 */ String, 
       /* arg2 */ String, 
@@ -203,250 +209,56 @@ trait Library
       /* arg4 */ String, 
       /* arg5 */ String, 
       /* arg6 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
   def thence(
-    step: String,
-    fn: js.Function1[
-      (/* next */ js.Function1[/* err */ js.UndefOr[Error], Unit]) | (/* repeated */ String), 
-      js.Promise[Unit] | Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: String,
-    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], Unit]
-  ): this.type = js.native
-  def thence(
-    step: String,
-    fn: js.Function3[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: String,
-    fn: js.Function4[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: String,
-    fn: js.Function5[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* arg4 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: String,
-    fn: js.Function6[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* arg4 */ String, 
-      /* arg5 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: String,
-    fn: js.Function7[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* arg4 */ String, 
-      /* arg5 */ String, 
-      /* arg6 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: js.Array[RegExp | String],
-    fn: js.Function1[
-      (/* next */ js.Function1[js.UndefOr[Error], Unit]) | (/* repeated */ String), 
-      js.Promise[Unit] | Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: js.Array[RegExp | String],
-    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[js.UndefOr[Error], Unit], Unit]
-  ): this.type = js.native
-  def thence(
-    step: js.Array[RegExp | String],
-    fn: js.Function3[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: js.Array[RegExp | String],
-    fn: js.Function4[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: js.Array[RegExp | String],
-    fn: js.Function5[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* arg4 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: js.Array[RegExp | String],
-    fn: js.Function6[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* arg4 */ String, 
-      /* arg5 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: js.Array[RegExp | String],
-    fn: js.Function7[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* arg4 */ String, 
-      /* arg5 */ String, 
-      /* arg6 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: RegExp,
-    fn: js.Function1[
-      (/* next */ js.Function1[/* err */ js.UndefOr[Error], Unit]) | (/* repeated */ String), 
-      js.Promise[Unit] | Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: RegExp,
-    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], Unit]
-  ): this.type = js.native
-  def thence(
-    step: RegExp,
-    fn: js.Function3[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: RegExp,
-    fn: js.Function4[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: RegExp,
-    fn: js.Function5[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* arg4 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: RegExp,
-    fn: js.Function6[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* arg4 */ String, 
-      /* arg5 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def thence(
-    step: RegExp,
-    fn: js.Function7[
-      /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* arg3 */ String, 
-      /* arg4 */ String, 
-      /* arg5 */ String, 
-      /* arg6 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
-      Unit
-    ]
-  ): this.type = js.native
-  def whence(
     step: String,
     fn: js.Function1[
-      (/* next */ js.Function1[/* err */ js.UndefOr[Error], Unit]) | (/* repeated */ String), 
+      (/* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | (/* repeated */ String), 
       js.Promise[Unit] | Unit
     ]
   ): this.type = js.native
-  def whence(
+  def thence(
     step: String,
-    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], Unit]
+    fn: js.Function2[
+      /* arg1 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
   ): this.type = js.native
-  def whence(
+  def thence(
     step: String,
     fn: js.Function3[
       /* arg1 */ String, 
       /* arg2 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
+  def thence(
     step: String,
     fn: js.Function4[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
+  def thence(
     step: String,
     fn: js.Function5[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
       /* arg4 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
+  def thence(
     step: String,
     fn: js.Function6[
       /* arg1 */ String, 
@@ -454,11 +266,11 @@ trait Library
       /* arg3 */ String, 
       /* arg4 */ String, 
       /* arg5 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
+  def thence(
     step: String,
     fn: js.Function7[
       /* arg1 */ String, 
@@ -467,65 +279,65 @@ trait Library
       /* arg4 */ String, 
       /* arg5 */ String, 
       /* arg6 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: js.Array[RegExp | String],
+  def thence(
+    step: js.Array[js.RegExp | String],
     fn: js.Function1[
-      (/* next */ js.Function1[js.UndefOr[Error], Unit]) | (/* repeated */ String), 
+      (/* next */ js.Function1[js.UndefOr[js.Error], Unit]) | (/* repeated */ String), 
       js.Promise[Unit] | Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: js.Array[RegExp | String],
-    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[js.UndefOr[Error], Unit], Unit]
+  def thence(
+    step: js.Array[js.RegExp | String],
+    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[js.UndefOr[js.Error], Unit], Unit]
   ): this.type = js.native
-  def whence(
-    step: js.Array[RegExp | String],
+  def thence(
+    step: js.Array[js.RegExp | String],
     fn: js.Function3[
       /* arg1 */ String, 
       /* arg2 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: js.Array[RegExp | String],
+  def thence(
+    step: js.Array[js.RegExp | String],
     fn: js.Function4[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: js.Array[RegExp | String],
+  def thence(
+    step: js.Array[js.RegExp | String],
     fn: js.Function5[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
       /* arg4 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: js.Array[RegExp | String],
+  def thence(
+    step: js.Array[js.RegExp | String],
     fn: js.Function6[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
       /* arg4 */ String, 
       /* arg5 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: js.Array[RegExp | String],
+  def thence(
+    step: js.Array[js.RegExp | String],
     fn: js.Function7[
       /* arg1 */ String, 
       /* arg2 */ String, 
@@ -533,65 +345,69 @@ trait Library
       /* arg4 */ String, 
       /* arg5 */ String, 
       /* arg6 */ String, 
-      /* next */ js.Function1[js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: RegExp,
+  def thence(
+    step: js.RegExp,
     fn: js.Function1[
-      (/* next */ js.Function1[/* err */ js.UndefOr[Error], Unit]) | (/* repeated */ String), 
+      (/* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | (/* repeated */ String), 
       js.Promise[Unit] | Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: RegExp,
-    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], Unit]
-  ): this.type = js.native
-  def whence(
-    step: RegExp,
-    fn: js.Function3[
+  def thence(
+    step: js.RegExp,
+    fn: js.Function2[
       /* arg1 */ String, 
-      /* arg2 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: RegExp,
+  def thence(
+    step: js.RegExp,
+    fn: js.Function3[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def thence(
+    step: js.RegExp,
     fn: js.Function4[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: RegExp,
+  def thence(
+    step: js.RegExp,
     fn: js.Function5[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
       /* arg4 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: RegExp,
+  def thence(
+    step: js.RegExp,
     fn: js.Function6[
       /* arg1 */ String, 
       /* arg2 */ String, 
       /* arg3 */ String, 
       /* arg4 */ String, 
       /* arg5 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native
-  def whence(
-    step: RegExp,
+  def thence(
+    step: js.RegExp,
     fn: js.Function7[
       /* arg1 */ String, 
       /* arg2 */ String, 
@@ -599,7 +415,213 @@ trait Library
       /* arg4 */ String, 
       /* arg5 */ String, 
       /* arg6 */ String, 
-      /* next */ js.Function1[/* err */ js.UndefOr[Error], Unit], 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: String,
+    fn: js.Function1[
+      (/* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | (/* repeated */ String), 
+      js.Promise[Unit] | Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: String,
+    fn: js.Function2[
+      /* arg1 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: String,
+    fn: js.Function3[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: String,
+    fn: js.Function4[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: String,
+    fn: js.Function5[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* arg4 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: String,
+    fn: js.Function6[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* arg4 */ String, 
+      /* arg5 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: String,
+    fn: js.Function7[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* arg4 */ String, 
+      /* arg5 */ String, 
+      /* arg6 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.Array[js.RegExp | String],
+    fn: js.Function1[
+      (/* next */ js.Function1[js.UndefOr[js.Error], Unit]) | (/* repeated */ String), 
+      js.Promise[Unit] | Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.Array[js.RegExp | String],
+    fn: js.Function2[/* arg1 */ String, /* next */ js.Function1[js.UndefOr[js.Error], Unit], Unit]
+  ): this.type = js.native
+  def whence(
+    step: js.Array[js.RegExp | String],
+    fn: js.Function3[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.Array[js.RegExp | String],
+    fn: js.Function4[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.Array[js.RegExp | String],
+    fn: js.Function5[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* arg4 */ String, 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.Array[js.RegExp | String],
+    fn: js.Function6[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* arg4 */ String, 
+      /* arg5 */ String, 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.Array[js.RegExp | String],
+    fn: js.Function7[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* arg4 */ String, 
+      /* arg5 */ String, 
+      /* arg6 */ String, 
+      /* next */ js.Function1[js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.RegExp,
+    fn: js.Function1[
+      (/* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit]) | (/* repeated */ String), 
+      js.Promise[Unit] | Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.RegExp,
+    fn: js.Function2[
+      /* arg1 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.RegExp,
+    fn: js.Function3[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.RegExp,
+    fn: js.Function4[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.RegExp,
+    fn: js.Function5[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* arg4 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.RegExp,
+    fn: js.Function6[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* arg4 */ String, 
+      /* arg5 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
+      Unit
+    ]
+  ): this.type = js.native
+  def whence(
+    step: js.RegExp,
+    fn: js.Function7[
+      /* arg1 */ String, 
+      /* arg2 */ String, 
+      /* arg3 */ String, 
+      /* arg4 */ String, 
+      /* arg5 */ String, 
+      /* arg6 */ String, 
+      /* next */ js.Function1[/* err */ js.UndefOr[js.Error], Unit], 
       Unit
     ]
   ): this.type = js.native

@@ -6,18 +6,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IntlRelativeFormatOptions extends js.Object {
-  var style: js.UndefOr[STYLE] = js.undefined
-  var units: js.UndefOr[SUPPORTED_FIELD] = js.undefined
+  var style: js.UndefOr[STYLE] = js.native
+  var units: js.UndefOr[SUPPORTED_FIELD] = js.native
 }
 
 object IntlRelativeFormatOptions {
   @scala.inline
-  def apply(style: STYLE = null, units: SUPPORTED_FIELD = null): IntlRelativeFormatOptions = {
+  def apply(): IntlRelativeFormatOptions = {
     val __obj = js.Dynamic.literal()
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (units != null) __obj.updateDynamic("units")(units.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntlRelativeFormatOptions]
   }
+  @scala.inline
+  implicit class IntlRelativeFormatOptionsOps[Self <: IntlRelativeFormatOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStyle(value: STYLE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnits(value: SUPPORTED_FIELD): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

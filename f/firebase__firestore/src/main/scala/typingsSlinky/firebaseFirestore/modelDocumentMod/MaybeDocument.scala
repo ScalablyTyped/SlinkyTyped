@@ -16,7 +16,7 @@ abstract class MaybeDocument protected () extends js.Object {
     * Whether this document had a local mutation applied that has not yet been
     * acknowledged by Watch.
     */
-  def hasPendingWrites(): Boolean = js.native
+  def hasPendingWrites: Boolean = js.native
   def isEqual(): Boolean = js.native
   def isEqual(other: MaybeDocument): Boolean = js.native
 }

@@ -20,8 +20,27 @@ object MemberFabricConfiguration {
   @scala.inline
   def apply(AdminPassword: PasswordString, AdminUsername: UsernameString): MemberFabricConfiguration = {
     val __obj = js.Dynamic.literal(AdminPassword = AdminPassword.asInstanceOf[js.Any], AdminUsername = AdminUsername.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MemberFabricConfiguration]
   }
+  @scala.inline
+  implicit class MemberFabricConfigurationOps[Self <: MemberFabricConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdminPassword(value: PasswordString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdminUsername(value: UsernameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdminUsername")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

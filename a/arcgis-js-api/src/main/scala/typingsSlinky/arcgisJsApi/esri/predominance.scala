@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-predominance.html)
   */
+@js.native
 trait predominance extends js.Object {
   /**
     * Generates a predominance renderer based on a set of competing numeric fields.  Visualizing predominance involves coloring a [layer’s](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html) features based on which attribute among a set of competing numeric attributes wins or beats the others in total count. Common applications of this include visualizing election results, survey results, and demographic majorities.  For example, suppose you have a layer of U.S. counties with fields containing the total sales of various crops: wheat, soybeans, corn, cotton, and vegetables. If a feature has the following values for each field:
@@ -64,9 +65,11 @@ trait predominance extends js.Object {
     *   tint | Applies the symbol `color` to the desaturated geometry/texture color.
     *   replace | Removes the geometry/texture color and applies the symbol `color`.
     *   multiply | Multiplies geometry/texture color value with the symbol `color` value. The result is a darker color. Multiplying with white keeps the geometry color the same.
+    * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+    * @param params.edgesType Indicates whether to add edges to the output renderer. This setting only applies to mesh SceneLayers.
     *
     */
-  def createRenderer(params: predominanceCreateRendererParams): js.Promise[predominanceRendererResult]
+  def createRenderer(params: predominanceCreateRendererParams): js.Promise[predominanceRendererResult] = js.native
 }
 
 @JSGlobal("__esri.predominance")

@@ -56,8 +56,8 @@ class Window () extends EventEmitter {
   def showDevTools(): Unit = js.native
   def showDevTools(id: String): Unit = js.native
   def showDevTools(id: String, headless: Boolean): Unit = js.native
-  def showDevTools(id: typingsSlinky.std.HTMLIFrameElement): Unit = js.native
-  def showDevTools(id: typingsSlinky.std.HTMLIFrameElement, headless: Boolean): Unit = js.native
+  def showDevTools(id: HTMLIFrameElement): Unit = js.native
+  def showDevTools(id: HTMLIFrameElement, headless: Boolean): Unit = js.native
   def toggleFullscreen(): Unit = js.native
   def toggleKioskMode(): Unit = js.native
   def unmaximize(): Unit = js.native

@@ -33,8 +33,11 @@ trait LodashFlatMapDepth extends js.Object {
       ListOfRecursiveArraysOrValues[TResult] | TResult
     ]
   ): LodashFlatMapDepth2x1[T, TResult] = js.native
-  def apply[T, TResult](
-    iteratee: js.Function1[/* value */ T, ListOfRecursiveArraysOrValues[TResult] | TResult],
+  def apply[T /* <: js.Object */, TResult](
+    iteratee: js.Function1[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
+      ListOfRecursiveArraysOrValues[TResult] | TResult
+    ],
     depth: Double
   ): js.Array[TResult] = js.native
   def apply[T /* <: js.Object */, TResult](

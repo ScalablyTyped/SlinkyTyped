@@ -38,24 +38,101 @@ trait SimulationJobSummary extends js.Object {
 
 object SimulationJobSummary {
   @scala.inline
-  def apply(
-    arn: Arn = null,
-    dataSourceNames: DataSourceNames = null,
-    lastUpdatedAt: js.Date = null,
-    name: Name = null,
-    robotApplicationNames: RobotApplicationNames = null,
-    simulationApplicationNames: SimulationApplicationNames = null,
-    status: SimulationJobStatus = null
-  ): SimulationJobSummary = {
+  def apply(): SimulationJobSummary = {
     val __obj = js.Dynamic.literal()
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (dataSourceNames != null) __obj.updateDynamic("dataSourceNames")(dataSourceNames.asInstanceOf[js.Any])
-    if (lastUpdatedAt != null) __obj.updateDynamic("lastUpdatedAt")(lastUpdatedAt.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (robotApplicationNames != null) __obj.updateDynamic("robotApplicationNames")(robotApplicationNames.asInstanceOf[js.Any])
-    if (simulationApplicationNames != null) __obj.updateDynamic("simulationApplicationNames")(simulationApplicationNames.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimulationJobSummary]
   }
+  @scala.inline
+  implicit class SimulationJobSummaryOps[Self <: SimulationJobSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSourceNames(value: DataSourceNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSourceNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRobotApplicationNames(value: RobotApplicationNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robotApplicationNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRobotApplicationNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robotApplicationNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimulationApplicationNames(value: SimulationApplicationNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationApplicationNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimulationApplicationNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simulationApplicationNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: SimulationJobStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

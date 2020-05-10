@@ -63,6 +63,7 @@ import org.scalajs.dom.raw.HTMLUListElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeListOf
 import org.scalajs.dom.raw.PointerEvent
 import org.scalajs.dom.raw.ProgressEvent
@@ -409,9 +410,7 @@ import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.std.MSGestureEvent
 import typingsSlinky.std.MSInputMethodContext
 import typingsSlinky.std.MSPointerEvent
-import typingsSlinky.std.Node
 import typingsSlinky.std.Number
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.SVGForeignObjectElement
 import typingsSlinky.std.Window_
 import scala.scalajs.js
@@ -934,353 +933,353 @@ object BlissNS extends js.Object {
     def getAttributeNodeNS(namespaceURI: String, localName: String): Attr = js.native
     def getBoundingClientRect(): ClientRect = js.native
     def getClientRects(): ClientRectList = js.native
-    def getElementsByClassName(classNames: String): NodeListOf[Element with org.scalajs.dom.raw.Node] = js.native
-    def getElementsByTagName(name: String): NodeListOf[Element with org.scalajs.dom.raw.Node] = js.native
-    def getElementsByTagNameNS(namespaceURI: String, localName: String): NodeListOf[Element with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByClassName(classNames: String): NodeListOf[Element with Node] = js.native
+    def getElementsByTagName(name: String): NodeListOf[Element with Node] = js.native
+    def getElementsByTagNameNS(namespaceURI: String, localName: String): NodeListOf[Element with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_a(name: a): NodeListOf[HTMLAnchorElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_a(name: a): NodeListOf[HTMLAnchorElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_abbr(name: abbr): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_abbr(name: abbr): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_acronym(name: acronym): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_acronym(name: acronym): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_address(name: address): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_address(name: address): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_applet(name: applet): NodeListOf[HTMLAppletElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_applet(name: applet): NodeListOf[HTMLAppletElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_area(name: area): NodeListOf[HTMLAreaElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_area(name: area): NodeListOf[HTMLAreaElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_article(name: article): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_article(name: article): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_aside(name: aside): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_aside(name: aside): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_audio(name: audio): NodeListOf[HTMLAudioElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_audio(name: audio): NodeListOf[HTMLAudioElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_b(name: b): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_b(name: b): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_base(name: base): NodeListOf[HTMLBaseElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_base(name: base): NodeListOf[HTMLBaseElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_basefont(name: basefont): NodeListOf[HTMLBaseFontElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_basefont(name: basefont): NodeListOf[HTMLBaseFontElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_bdo(name: bdo): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_bdo(name: bdo): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_big(name: big): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_big(name: big): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_blockquote(name: blockquote): NodeListOf[HTMLQuoteElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_blockquote(name: blockquote): NodeListOf[HTMLQuoteElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_body(name: body): NodeListOf[HTMLBodyElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_body(name: body): NodeListOf[HTMLBodyElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_br(name: br): NodeListOf[HTMLBRElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_br(name: br): NodeListOf[HTMLBRElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_button(name: button): NodeListOf[HTMLButtonElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_button(name: button): NodeListOf[HTMLButtonElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_canvas(name: canvas): NodeListOf[HTMLCanvasElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_canvas(name: canvas): NodeListOf[HTMLCanvasElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_caption(name: caption): NodeListOf[HTMLTableCaptionElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_caption(name: caption): NodeListOf[HTMLTableCaptionElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_center(name: center): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_center(name: center): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_circle(name: circle): NodeListOf[SVGCircleElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_circle(name: circle): NodeListOf[SVGCircleElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_cite(name: cite): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_cite(name: cite): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_clippath(name: clippath): NodeListOf[SVGClipPathElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_clippath(name: clippath): NodeListOf[SVGClipPathElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_code(name: code): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_code(name: code): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_col(name: col): NodeListOf[HTMLTableColElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_col(name: col): NodeListOf[HTMLTableColElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_colgroup(name: colgroup): NodeListOf[HTMLTableColElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_colgroup(name: colgroup): NodeListOf[HTMLTableColElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_datalist(name: datalist): NodeListOf[HTMLDataListElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_datalist(name: datalist): NodeListOf[HTMLDataListElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_dd(name: dd): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_dd(name: dd): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_defs(name: defs): NodeListOf[SVGDefsElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_defs(name: defs): NodeListOf[SVGDefsElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_del(name: del): NodeListOf[HTMLModElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_del(name: del): NodeListOf[HTMLModElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_desc(name: desc): NodeListOf[SVGDescElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_desc(name: desc): NodeListOf[SVGDescElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_dfn(name: dfn): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_dfn(name: dfn): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_dir(name: dir): NodeListOf[HTMLDirectoryElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_dir(name: dir): NodeListOf[HTMLDirectoryElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_div(name: div): NodeListOf[HTMLDivElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_div(name: div): NodeListOf[HTMLDivElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_dl(name: dl): NodeListOf[HTMLDListElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_dl(name: dl): NodeListOf[HTMLDListElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_dt(name: dt): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_dt(name: dt): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_ellipse(name: ellipse): NodeListOf[SVGEllipseElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_ellipse(name: ellipse): NodeListOf[SVGEllipseElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_em(name: em): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_em(name: em): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_embed(name: embed): NodeListOf[HTMLEmbedElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_embed(name: embed): NodeListOf[HTMLEmbedElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_feblend(name: feblend): NodeListOf[SVGFEBlendElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_feblend(name: feblend): NodeListOf[SVGFEBlendElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fecolormatrix(name: fecolormatrix): NodeListOf[SVGFEColorMatrixElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fecolormatrix(name: fecolormatrix): NodeListOf[SVGFEColorMatrixElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fecomponenttransfer(name: fecomponenttransfer): NodeListOf[SVGFEComponentTransferElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fecomponenttransfer(name: fecomponenttransfer): NodeListOf[SVGFEComponentTransferElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fecomposite(name: fecomposite): NodeListOf[SVGFECompositeElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fecomposite(name: fecomposite): NodeListOf[SVGFECompositeElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_feconvolvematrix(name: feconvolvematrix): NodeListOf[SVGFEConvolveMatrixElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_feconvolvematrix(name: feconvolvematrix): NodeListOf[SVGFEConvolveMatrixElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fediffuselighting(name: fediffuselighting): NodeListOf[SVGFEDiffuseLightingElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fediffuselighting(name: fediffuselighting): NodeListOf[SVGFEDiffuseLightingElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fedisplacementmap(name: fedisplacementmap): NodeListOf[SVGFEDisplacementMapElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fedisplacementmap(name: fedisplacementmap): NodeListOf[SVGFEDisplacementMapElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fedistantlight(name: fedistantlight): NodeListOf[SVGFEDistantLightElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fedistantlight(name: fedistantlight): NodeListOf[SVGFEDistantLightElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_feflood(name: feflood): NodeListOf[SVGFEFloodElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_feflood(name: feflood): NodeListOf[SVGFEFloodElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fefunca(name: fefunca): NodeListOf[SVGFEFuncAElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fefunca(name: fefunca): NodeListOf[SVGFEFuncAElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fefuncb(name: fefuncb): NodeListOf[SVGFEFuncBElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fefuncb(name: fefuncb): NodeListOf[SVGFEFuncBElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fefuncg(name: fefuncg): NodeListOf[SVGFEFuncGElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fefuncg(name: fefuncg): NodeListOf[SVGFEFuncGElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fefuncr(name: fefuncr): NodeListOf[SVGFEFuncRElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fefuncr(name: fefuncr): NodeListOf[SVGFEFuncRElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fegaussianblur(name: fegaussianblur): NodeListOf[SVGFEGaussianBlurElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fegaussianblur(name: fegaussianblur): NodeListOf[SVGFEGaussianBlurElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_feimage(name: feimage): NodeListOf[SVGFEImageElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_feimage(name: feimage): NodeListOf[SVGFEImageElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_femerge(name: femerge): NodeListOf[SVGFEMergeElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_femerge(name: femerge): NodeListOf[SVGFEMergeElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_femergenode(name: femergenode): NodeListOf[SVGFEMergeNodeElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_femergenode(name: femergenode): NodeListOf[SVGFEMergeNodeElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_femorphology(name: femorphology): NodeListOf[SVGFEMorphologyElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_femorphology(name: femorphology): NodeListOf[SVGFEMorphologyElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_feoffset(name: feoffset): NodeListOf[SVGFEOffsetElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_feoffset(name: feoffset): NodeListOf[SVGFEOffsetElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fepointlight(name: fepointlight): NodeListOf[SVGFEPointLightElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fepointlight(name: fepointlight): NodeListOf[SVGFEPointLightElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fespecularlighting(name: fespecularlighting): NodeListOf[SVGFESpecularLightingElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fespecularlighting(name: fespecularlighting): NodeListOf[SVGFESpecularLightingElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fespotlight(name: fespotlight): NodeListOf[SVGFESpotLightElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fespotlight(name: fespotlight): NodeListOf[SVGFESpotLightElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fetile(name: fetile): NodeListOf[SVGFETileElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fetile(name: fetile): NodeListOf[SVGFETileElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_feturbulence(name: feturbulence): NodeListOf[SVGFETurbulenceElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_feturbulence(name: feturbulence): NodeListOf[SVGFETurbulenceElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_fieldset(name: fieldset): NodeListOf[HTMLFieldSetElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_fieldset(name: fieldset): NodeListOf[HTMLFieldSetElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_figcaption(name: figcaption): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_figcaption(name: figcaption): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_figure(name: figure): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_figure(name: figure): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_filter(name: filter): NodeListOf[SVGFilterElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_filter(name: filter): NodeListOf[SVGFilterElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_font(name: font): NodeListOf[HTMLFontElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_font(name: font): NodeListOf[HTMLFontElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_footer(name: footer): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_footer(name: footer): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_foreignobject(name: foreignobject): NodeListOf[SVGForeignObjectElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_foreignobject(name: foreignobject): NodeListOf[SVGForeignObjectElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_form(name: form): NodeListOf[HTMLFormElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_form(name: form): NodeListOf[HTMLFormElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_frame(name: frame): NodeListOf[HTMLFrameElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_frame(name: frame): NodeListOf[HTMLFrameElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_frameset(name: frameset): NodeListOf[HTMLFrameSetElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_frameset(name: frameset): NodeListOf[HTMLFrameSetElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_g(name: g): NodeListOf[SVGGElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_g(name: g): NodeListOf[SVGGElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_h1(name: h1): NodeListOf[HTMLHeadingElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_h1(name: h1): NodeListOf[HTMLHeadingElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_h2(name: h2): NodeListOf[HTMLHeadingElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_h2(name: h2): NodeListOf[HTMLHeadingElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_h3(name: h3): NodeListOf[HTMLHeadingElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_h3(name: h3): NodeListOf[HTMLHeadingElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_h4(name: h4): NodeListOf[HTMLHeadingElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_h4(name: h4): NodeListOf[HTMLHeadingElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_h5(name: h5): NodeListOf[HTMLHeadingElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_h5(name: h5): NodeListOf[HTMLHeadingElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_h6(name: h6): NodeListOf[HTMLHeadingElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_h6(name: h6): NodeListOf[HTMLHeadingElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_head(name: head): NodeListOf[HTMLHeadElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_head(name: head): NodeListOf[HTMLHeadElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_header(name: header): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_header(name: header): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_hgroup(name: hgroup): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_hgroup(name: hgroup): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_hr(name: hr): NodeListOf[HTMLHRElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_hr(name: hr): NodeListOf[HTMLHRElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_html(name: html): NodeListOf[HTMLHtmlElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_html(name: html): NodeListOf[HTMLHtmlElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_i(name: i): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_i(name: i): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_iframe(name: iframe): NodeListOf[HTMLIFrameElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_iframe(name: iframe): NodeListOf[HTMLIFrameElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_image(name: image): NodeListOf[SVGImageElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_image(name: image): NodeListOf[SVGImageElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_img(name: img): NodeListOf[HTMLImageElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_img(name: img): NodeListOf[HTMLImageElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_input(name: input): NodeListOf[HTMLInputElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_input(name: input): NodeListOf[HTMLInputElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_ins(name: ins): NodeListOf[HTMLModElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_ins(name: ins): NodeListOf[HTMLModElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_isindex(name: isindex): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_isindex(name: isindex): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_kbd(name: kbd): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_kbd(name: kbd): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_keygen(name: keygen): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_keygen(name: keygen): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_label(name: label): NodeListOf[HTMLLabelElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_label(name: label): NodeListOf[HTMLLabelElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_legend(name: legend): NodeListOf[HTMLLegendElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_legend(name: legend): NodeListOf[HTMLLegendElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_li(name: li): NodeListOf[HTMLLIElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_li(name: li): NodeListOf[HTMLLIElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_line(name: line): NodeListOf[SVGLineElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_line(name: line): NodeListOf[SVGLineElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_lineargradient(name: lineargradient): NodeListOf[SVGLinearGradientElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_lineargradient(name: lineargradient): NodeListOf[SVGLinearGradientElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_link(name: link): NodeListOf[HTMLLinkElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_link(name: link): NodeListOf[HTMLLinkElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_listing(name: listing): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_listing(name: listing): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_map(name: map): NodeListOf[HTMLMapElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_map(name: map): NodeListOf[HTMLMapElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_mark(name: mark): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_mark(name: mark): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_marker(name: marker): NodeListOf[SVGMarkerElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_marker(name: marker): NodeListOf[SVGMarkerElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_marquee(name: marquee): NodeListOf[HTMLMarqueeElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_marquee(name: marquee): NodeListOf[HTMLMarqueeElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_mask(name: mask): NodeListOf[SVGMaskElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_mask(name: mask): NodeListOf[SVGMaskElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_menu(name: menu): NodeListOf[HTMLMenuElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_menu(name: menu): NodeListOf[HTMLMenuElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_meta(name: meta): NodeListOf[HTMLMetaElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_meta(name: meta): NodeListOf[HTMLMetaElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_metadata(name: metadata): NodeListOf[SVGMetadataElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_metadata(name: metadata): NodeListOf[SVGMetadataElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_nav(name: nav): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_nav(name: nav): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_nextid(name: nextid): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_nextid(name: nextid): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_nobr(name: nobr): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_nobr(name: nobr): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_noframes(name: noframes): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_noframes(name: noframes): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_noscript(name: noscript): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_noscript(name: noscript): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_object(name: `object`): NodeListOf[HTMLObjectElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_object(name: `object`): NodeListOf[HTMLObjectElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_ol(name: ol): NodeListOf[HTMLOListElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_ol(name: ol): NodeListOf[HTMLOListElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_optgroup(name: optgroup): NodeListOf[HTMLOptGroupElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_optgroup(name: optgroup): NodeListOf[HTMLOptGroupElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_option(name: option): NodeListOf[HTMLOptionElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_option(name: option): NodeListOf[HTMLOptionElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_p(name: p): NodeListOf[HTMLParagraphElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_p(name: p): NodeListOf[HTMLParagraphElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_param(name: param): NodeListOf[HTMLParamElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_param(name: param): NodeListOf[HTMLParamElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_path(name: path): NodeListOf[SVGPathElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_path(name: path): NodeListOf[SVGPathElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_pattern(name: pattern): NodeListOf[SVGPatternElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_pattern(name: pattern): NodeListOf[SVGPatternElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_plaintext(name: plaintext): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_plaintext(name: plaintext): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_polygon(name: polygon): NodeListOf[SVGPolygonElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_polygon(name: polygon): NodeListOf[SVGPolygonElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_polyline(name: polyline): NodeListOf[SVGPolylineElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_polyline(name: polyline): NodeListOf[SVGPolylineElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_pre(name: pre): NodeListOf[HTMLPreElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_pre(name: pre): NodeListOf[HTMLPreElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_progress(name: progress): NodeListOf[HTMLProgressElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_progress(name: progress): NodeListOf[HTMLProgressElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_q(name: q): NodeListOf[HTMLQuoteElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_q(name: q): NodeListOf[HTMLQuoteElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_radialgradient(name: radialgradient): NodeListOf[SVGRadialGradientElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_radialgradient(name: radialgradient): NodeListOf[SVGRadialGradientElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_rect(name: rect): NodeListOf[SVGRectElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_rect(name: rect): NodeListOf[SVGRectElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_rt(name: rt): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_rt(name: rt): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_ruby(name: ruby): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_ruby(name: ruby): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_s(name: s): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_s(name: s): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_samp(name: samp): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_samp(name: samp): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_script(name: script): NodeListOf[HTMLScriptElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_script(name: script): NodeListOf[HTMLScriptElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_section(name: section): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_section(name: section): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_select(name: select): NodeListOf[HTMLSelectElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_select(name: select): NodeListOf[HTMLSelectElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_small(name: small): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_small(name: small): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_source(name: source): NodeListOf[HTMLSourceElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_source(name: source): NodeListOf[HTMLSourceElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_span(name: span): NodeListOf[HTMLSpanElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_span(name: span): NodeListOf[HTMLSpanElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_stop(name: stop): NodeListOf[SVGStopElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_stop(name: stop): NodeListOf[SVGStopElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_strike(name: strike): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_strike(name: strike): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_strong(name: strong): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_strong(name: strong): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_style(name: style): NodeListOf[HTMLStyleElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_style(name: style): NodeListOf[HTMLStyleElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_sub(name: sub): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_sub(name: sub): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_sup(name: sup): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_sup(name: sup): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_svg(name: svg): NodeListOf[SVGSVGElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_svg(name: svg): NodeListOf[SVGSVGElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_switch(name: switch): NodeListOf[SVGSwitchElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_switch(name: switch): NodeListOf[SVGSwitchElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_symbol(name: symbol): NodeListOf[SVGSymbolElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_symbol(name: symbol): NodeListOf[SVGSymbolElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_table(name: table): NodeListOf[HTMLTableElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_table(name: table): NodeListOf[HTMLTableElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_tbody(name: tbody): NodeListOf[HTMLTableSectionElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_tbody(name: tbody): NodeListOf[HTMLTableSectionElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_td(name: td): NodeListOf[HTMLTableDataCellElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_td(name: td): NodeListOf[HTMLTableDataCellElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_text(name: text): NodeListOf[SVGTextElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_text(name: text): NodeListOf[SVGTextElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_textarea(name: textarea): NodeListOf[HTMLTextAreaElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_textarea(name: textarea): NodeListOf[HTMLTextAreaElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_textpath(name: textpath): NodeListOf[SVGTextPathElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_textpath(name: textpath): NodeListOf[SVGTextPathElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_tfoot(name: tfoot): NodeListOf[HTMLTableSectionElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_tfoot(name: tfoot): NodeListOf[HTMLTableSectionElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_th(name: th): NodeListOf[HTMLTableHeaderCellElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_th(name: th): NodeListOf[HTMLTableHeaderCellElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_thead(name: thead): NodeListOf[HTMLTableSectionElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_thead(name: thead): NodeListOf[HTMLTableSectionElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_title(name: title): NodeListOf[HTMLTitleElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_title(name: title): NodeListOf[HTMLTitleElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_tr(name: tr): NodeListOf[HTMLTableRowElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_tr(name: tr): NodeListOf[HTMLTableRowElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_track(name: track): NodeListOf[HTMLTrackElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_track(name: track): NodeListOf[HTMLTrackElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_tspan(name: tspan): NodeListOf[SVGTSpanElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_tspan(name: tspan): NodeListOf[SVGTSpanElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_tt(name: tt): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_tt(name: tt): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_u(name: u): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_u(name: u): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_ul(name: ul): NodeListOf[HTMLUListElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_ul(name: ul): NodeListOf[HTMLUListElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_use(name: use): NodeListOf[SVGUseElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_use(name: use): NodeListOf[SVGUseElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_var(name: `var`): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_var(name: `var`): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_video(name: video): NodeListOf[HTMLVideoElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_video(name: video): NodeListOf[HTMLVideoElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_view(name: view): NodeListOf[SVGViewElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_view(name: view): NodeListOf[SVGViewElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_wbr(name: wbr): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_wbr(name: wbr): NodeListOf[HTMLElement with Node] = js.native
     @JSName("getElementsByTagName")
-    def getElementsByTagName_xmp(name: xmp): NodeListOf[HTMLElement with org.scalajs.dom.raw.Node] = js.native
+    def getElementsByTagName_xmp(name: xmp): NodeListOf[HTMLElement with Node] = js.native
     def hasAttribute(name: String): Boolean = js.native
     def hasAttributeNS(namespaceURI: String, localName: String): Boolean = js.native
     def insertAdjacentElement(position: String, insertedElement: Element): Element = js.native
@@ -1320,9 +1319,9 @@ object BlissNS extends js.Object {
     var classProps: js.Object = js.native
     var hooks: AnonAdd = js.native
     @JSName("$")
-    def $(expr: Node): js.Array[org.scalajs.dom.raw.Node] = js.native
+    def $(expr: Node): js.Array[Node] = js.native
     @JSName("$")
-    def $(expr: Node, context: Element): js.Array[org.scalajs.dom.raw.Node] = js.native
+    def $(expr: Node, context: Element): js.Array[Node] = js.native
     @JSName("$")
     def $(expr: Window_): js.Array[Window_] = js.native
     @JSName("$")
@@ -1627,7 +1626,7 @@ object BlissNS extends js.Object {
     def extend(target: js.Object, source: js.Any, whitelist: String): js.Object = js.native
     def extend(target: js.Object, source: js.Any, whitelist: js.Function): js.Object = js.native
     def extend(target: js.Object, source: js.Any, whitelist: Array[String]): js.Object = js.native
-    def extend(target: js.Object, source: js.Any, whitelist: RegExp): js.Object = js.native
+    def extend(target: js.Object, source: js.Any, whitelist: js.RegExp): js.Object = js.native
     @JSName("extend")
     def extend_T_T[T](target: js.Object, source: js.Any): T = js.native
     @JSName("extend")
@@ -1637,7 +1636,7 @@ object BlissNS extends js.Object {
     @JSName("extend")
     def extend_T_T[T](target: js.Object, source: js.Any, whitelist: Array[String]): T = js.native
     @JSName("extend")
-    def extend_T_T[T](target: js.Object, source: js.Any, whitelist: RegExp): T = js.native
+    def extend_T_T[T](target: js.Object, source: js.Any, whitelist: js.RegExp): T = js.native
     def fetch(url: String): js.Promise[XMLHttpRequest] = js.native
     def fetch(url: String, options: AnonData): js.Promise[XMLHttpRequest] = js.native
     def fire[T](subject: Array[BlissDecoratedElement[T]], `type`: String): Array[BlissDecoratedElement[T]] = js.native
@@ -1697,8 +1696,8 @@ object BlissNS extends js.Object {
   
   @js.native
   trait BlissStaticCollection extends BlissStatic {
-    def apply(expr: Node): js.Array[org.scalajs.dom.raw.Node] = js.native
-    def apply(expr: Node, context: Element): js.Array[org.scalajs.dom.raw.Node] = js.native
+    def apply(expr: Node): js.Array[Node] = js.native
+    def apply(expr: Node, context: Element): js.Array[Node] = js.native
     def apply(expr: Window_): js.Array[Window_] = js.native
     def apply(expr: Window_, context: Element): js.Array[Window_] = js.native
     def apply[T](expr: js.Object): Array[T] = js.native

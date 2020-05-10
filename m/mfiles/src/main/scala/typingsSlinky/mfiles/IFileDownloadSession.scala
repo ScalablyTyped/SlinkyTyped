@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IFileDownloadSession extends js.Object {
-  val DownloadID: Double
-  val FileSize: Double
-  val FileSize32: Double
+  val DownloadID: Double = js.native
+  val FileSize: Double = js.native
+  val FileSize32: Double = js.native
 }
 
 object IFileDownloadSession {
   @scala.inline
   def apply(DownloadID: Double, FileSize: Double, FileSize32: Double): IFileDownloadSession = {
     val __obj = js.Dynamic.literal(DownloadID = DownloadID.asInstanceOf[js.Any], FileSize = FileSize.asInstanceOf[js.Any], FileSize32 = FileSize32.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IFileDownloadSession]
   }
+  @scala.inline
+  implicit class IFileDownloadSessionOps[Self <: IFileDownloadSession] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDownloadID(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DownloadID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileSize32(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSize32")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.storybookComponents.tooltipLinkListMod
 
-import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import typingsSlinky.storybookComponents.listItemMod.ListItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,33 +13,35 @@ trait Link extends ListItemProps {
 
 object Link {
   @scala.inline
-  def apply(
-    id: String,
-    LinkWrapper: ReactComponentClass[js.Object] = null,
-    active: js.UndefOr[Boolean] = js.undefined,
-    center: TagMod[Any] = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    href: String | js.Object = null,
-    isGatsby: js.UndefOr[Boolean] = js.undefined,
-    left: TagMod[Any] = null,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    onClick: () => Unit = null,
-    right: TagMod[Any] = null,
-    title: TagMod[Any] = null
-  ): Link = {
+  def apply(id: String): Link = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    if (LinkWrapper != null) __obj.updateDynamic("LinkWrapper")(LinkWrapper.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (!js.isUndefined(isGatsby)) __obj.updateDynamic("isGatsby")(isGatsby.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Link]
   }
+  @scala.inline
+  implicit class LinkOps[Self <: Link] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsGatsby(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGatsby")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsGatsby: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGatsby")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

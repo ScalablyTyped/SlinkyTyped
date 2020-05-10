@@ -11,5 +11,5 @@ package object unmarshallerMod {
     /* errorBodyParser */ typingsSlinky.awsSdkTypes.unmarshallerMod.BodyParser[java.lang.String], 
     typingsSlinky.awsSdkTypes.exceptionMod.ServiceException[js.Any]
   ]
-  type StreamCollector[StreamType] = js.Function1[/* stream */ StreamType, js.Promise[scala.scalajs.js.typedarray.Uint8Array]]
+  type StreamCollector[StreamType] = js.Function1[/* stream */ StreamType, js.Promise[js.typedarray.Uint8Array]]
 }

@@ -8,27 +8,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHandlerProvider extends js.Object {
-  var handlerProvider: js.UndefOr[HandlerProvider] = js.undefined
-  var missingFieldHandlers: js.UndefOr[js.Array[MissingFieldHandler]] = js.undefined
-  var operationLoader: js.UndefOr[OperationLoader] = js.undefined
-  var operationTracker: js.UndefOr[OperationTracker] = js.undefined
+  var handlerProvider: js.UndefOr[HandlerProvider] = js.native
+  var missingFieldHandlers: js.UndefOr[js.Array[MissingFieldHandler]] = js.native
+  var operationLoader: js.UndefOr[OperationLoader] = js.native
+  var operationTracker: js.UndefOr[OperationTracker] = js.native
 }
 
 object AnonHandlerProvider {
   @scala.inline
-  def apply(
-    handlerProvider: /* handle */ String => js.Any = null,
-    missingFieldHandlers: js.Array[MissingFieldHandler] = null,
-    operationLoader: OperationLoader = null,
-    operationTracker: OperationTracker = null
-  ): AnonHandlerProvider = {
+  def apply(): AnonHandlerProvider = {
     val __obj = js.Dynamic.literal()
-    if (handlerProvider != null) __obj.updateDynamic("handlerProvider")(js.Any.fromFunction1(handlerProvider))
-    if (missingFieldHandlers != null) __obj.updateDynamic("missingFieldHandlers")(missingFieldHandlers.asInstanceOf[js.Any])
-    if (operationLoader != null) __obj.updateDynamic("operationLoader")(operationLoader.asInstanceOf[js.Any])
-    if (operationTracker != null) __obj.updateDynamic("operationTracker")(operationTracker.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHandlerProvider]
   }
+  @scala.inline
+  implicit class AnonHandlerProviderOps[Self <: AnonHandlerProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHandlerProvider(value: /* handle */ String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlerProvider")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHandlerProvider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handlerProvider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMissingFieldHandlers(value: js.Array[MissingFieldHandler]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("missingFieldHandlers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMissingFieldHandlers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("missingFieldHandlers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationLoader(value: OperationLoader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationLoader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationLoader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationLoader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationTracker(value: OperationTracker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationTracker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationTracker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationTracker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

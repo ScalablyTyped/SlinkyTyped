@@ -23,12 +23,53 @@ trait SchemaDeleteQueueItemsRequest extends js.Object {
 
 object SchemaDeleteQueueItemsRequest {
   @scala.inline
-  def apply(connectorName: String = null, debugOptions: SchemaDebugOptions = null, queue: String = null): SchemaDeleteQueueItemsRequest = {
+  def apply(): SchemaDeleteQueueItemsRequest = {
     val __obj = js.Dynamic.literal()
-    if (connectorName != null) __obj.updateDynamic("connectorName")(connectorName.asInstanceOf[js.Any])
-    if (debugOptions != null) __obj.updateDynamic("debugOptions")(debugOptions.asInstanceOf[js.Any])
-    if (queue != null) __obj.updateDynamic("queue")(queue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeleteQueueItemsRequest]
   }
+  @scala.inline
+  implicit class SchemaDeleteQueueItemsRequestOps[Self <: SchemaDeleteQueueItemsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugOptions(value: SchemaDebugOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

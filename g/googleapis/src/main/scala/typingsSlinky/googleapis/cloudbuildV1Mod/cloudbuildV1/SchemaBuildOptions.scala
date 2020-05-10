@@ -79,32 +79,149 @@ trait SchemaBuildOptions extends js.Object {
 
 object SchemaBuildOptions {
   @scala.inline
-  def apply(
-    diskSizeGb: String = null,
-    env: js.Array[String] = null,
-    logStreamingOption: String = null,
-    logging: String = null,
-    machineType: String = null,
-    requestedVerifyOption: String = null,
-    secretEnv: js.Array[String] = null,
-    sourceProvenanceHash: js.Array[String] = null,
-    substitutionOption: String = null,
-    volumes: js.Array[SchemaVolume] = null,
-    workerPool: String = null
-  ): SchemaBuildOptions = {
+  def apply(): SchemaBuildOptions = {
     val __obj = js.Dynamic.literal()
-    if (diskSizeGb != null) __obj.updateDynamic("diskSizeGb")(diskSizeGb.asInstanceOf[js.Any])
-    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
-    if (logStreamingOption != null) __obj.updateDynamic("logStreamingOption")(logStreamingOption.asInstanceOf[js.Any])
-    if (logging != null) __obj.updateDynamic("logging")(logging.asInstanceOf[js.Any])
-    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
-    if (requestedVerifyOption != null) __obj.updateDynamic("requestedVerifyOption")(requestedVerifyOption.asInstanceOf[js.Any])
-    if (secretEnv != null) __obj.updateDynamic("secretEnv")(secretEnv.asInstanceOf[js.Any])
-    if (sourceProvenanceHash != null) __obj.updateDynamic("sourceProvenanceHash")(sourceProvenanceHash.asInstanceOf[js.Any])
-    if (substitutionOption != null) __obj.updateDynamic("substitutionOption")(substitutionOption.asInstanceOf[js.Any])
-    if (volumes != null) __obj.updateDynamic("volumes")(volumes.asInstanceOf[js.Any])
-    if (workerPool != null) __obj.updateDynamic("workerPool")(workerPool.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildOptions]
   }
+  @scala.inline
+  implicit class SchemaBuildOptionsOps[Self <: SchemaBuildOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiskSizeGb(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskSizeGb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSizeGb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnv(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogStreamingOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamingOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogStreamingOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logStreamingOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogging(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMachineType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMachineType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestedVerifyOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedVerifyOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestedVerifyOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedVerifyOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecretEnv(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretEnv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretEnv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretEnv")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceProvenanceHash(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceProvenanceHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceProvenanceHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceProvenanceHash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubstitutionOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("substitutionOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubstitutionOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("substitutionOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumes(value: js.Array[SchemaVolume]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerPool(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerPool")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerPool: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerPool")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

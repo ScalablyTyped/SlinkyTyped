@@ -11,12 +11,6 @@ object fftGpuMod extends js.Object {
   @js.native
   class FFTProgram protected () extends GPGPUProgram {
     def this(op: String, inputShape: js.Tuple2[Double, Double], inverse: Boolean) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
   @js.native

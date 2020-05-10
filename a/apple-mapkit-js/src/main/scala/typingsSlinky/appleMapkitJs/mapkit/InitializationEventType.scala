@@ -12,10 +12,8 @@ trait InitializationEventType extends js.Object
 
 object InitializationEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `configuration-change`: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`configuration-change` = "configuration-change".asInstanceOf[typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`configuration-change`]
   @scala.inline
-  def `configuration-change`: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`configuration-change` = this.cast("configuration-change")
-  @scala.inline
-  def error: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.error = this.cast("error")
+  def error: typingsSlinky.appleMapkitJs.appleMapkitJsStrings.error = "error".asInstanceOf[typingsSlinky.appleMapkitJs.appleMapkitJsStrings.error]
 }
 

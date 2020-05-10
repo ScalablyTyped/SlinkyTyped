@@ -22,15 +22,47 @@ trait SetStackPolicyInput extends js.Object {
 
 object SetStackPolicyInput {
   @scala.inline
-  def apply(
-    StackName: StackName,
-    StackPolicyBody: StackPolicyBody = null,
-    StackPolicyURL: StackPolicyURL = null
-  ): SetStackPolicyInput = {
+  def apply(StackName: StackName): SetStackPolicyInput = {
     val __obj = js.Dynamic.literal(StackName = StackName.asInstanceOf[js.Any])
-    if (StackPolicyBody != null) __obj.updateDynamic("StackPolicyBody")(StackPolicyBody.asInstanceOf[js.Any])
-    if (StackPolicyURL != null) __obj.updateDynamic("StackPolicyURL")(StackPolicyURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetStackPolicyInput]
   }
+  @scala.inline
+  implicit class SetStackPolicyInputOps[Self <: SetStackPolicyInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackName(value: StackName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackPolicyBody(value: StackPolicyBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackPolicyBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackPolicyURL(value: StackPolicyURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackPolicyURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackPolicyURL")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

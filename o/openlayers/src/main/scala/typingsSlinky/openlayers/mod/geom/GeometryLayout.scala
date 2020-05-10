@@ -19,14 +19,12 @@ trait GeometryLayout extends js.Object
 
 object GeometryLayout {
   @scala.inline
-  def XY: typingsSlinky.openlayers.openlayersStrings.XY = this.cast("XY")
+  def XY: typingsSlinky.openlayers.openlayersStrings.XY = "XY".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.XY]
   @scala.inline
-  def XYM: typingsSlinky.openlayers.openlayersStrings.XYM = this.cast("XYM")
+  def XYM: typingsSlinky.openlayers.openlayersStrings.XYM = "XYM".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.XYM]
   @scala.inline
-  def XYZ: typingsSlinky.openlayers.openlayersStrings.XYZ = this.cast("XYZ")
+  def XYZ: typingsSlinky.openlayers.openlayersStrings.XYZ = "XYZ".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.XYZ]
   @scala.inline
-  def XYZM: typingsSlinky.openlayers.openlayersStrings.XYZM = this.cast("XYZM")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def XYZM: typingsSlinky.openlayers.openlayersStrings.XYZM = "XYZM".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.XYZM]
 }
 

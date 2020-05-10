@@ -1,6 +1,6 @@
 package typingsSlinky.tooltipster.JQueryTooltipster
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.tooltipster.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -42,9 +42,9 @@ trait ITooltipsterStatic extends js.Object {
   		 * Returns an array of all HTML elements in the page which have one or several tooltips initialized. If a selector 
   		 * is passed, the results will be limited to the descendants of the matched elements.
   		 */
-  def origins(): js.Array[org.scalajs.dom.raw.HTMLElement] = js.native
-  def origins(selector: String): js.Array[org.scalajs.dom.raw.HTMLElement] = js.native
-  def origins(selector: JQuery): js.Array[org.scalajs.dom.raw.HTMLElement] = js.native
+  def origins(): js.Array[HTMLElement] = js.native
+  def origins(selector: String): js.Array[HTMLElement] = js.native
+  def origins(selector: JQuery): js.Array[HTMLElement] = js.native
   /**
   		 * Changes the default options that will apply to any tooltips created from now on.
   		 */

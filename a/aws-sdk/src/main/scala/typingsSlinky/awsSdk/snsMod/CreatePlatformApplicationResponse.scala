@@ -14,10 +14,29 @@ trait CreatePlatformApplicationResponse extends js.Object {
 
 object CreatePlatformApplicationResponse {
   @scala.inline
-  def apply(PlatformApplicationArn: String = null): CreatePlatformApplicationResponse = {
+  def apply(): CreatePlatformApplicationResponse = {
     val __obj = js.Dynamic.literal()
-    if (PlatformApplicationArn != null) __obj.updateDynamic("PlatformApplicationArn")(PlatformApplicationArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePlatformApplicationResponse]
   }
+  @scala.inline
+  implicit class CreatePlatformApplicationResponseOps[Self <: CreatePlatformApplicationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlatformApplicationArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformApplicationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformApplicationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformApplicationArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -20,10 +20,29 @@ trait SchemaGooglePrivacyDlpV2CategoricalStatsConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2CategoricalStatsConfig {
   @scala.inline
-  def apply(field: SchemaGooglePrivacyDlpV2FieldId = null): SchemaGooglePrivacyDlpV2CategoricalStatsConfig = {
+  def apply(): SchemaGooglePrivacyDlpV2CategoricalStatsConfig = {
     val __obj = js.Dynamic.literal()
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2CategoricalStatsConfig]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2CategoricalStatsConfigOps[Self <: SchemaGooglePrivacyDlpV2CategoricalStatsConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withField(value: SchemaGooglePrivacyDlpV2FieldId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

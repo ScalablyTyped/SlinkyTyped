@@ -13,12 +13,10 @@ trait SortDirection extends js.Object
 
 object SortDirection {
   @scala.inline
-  def asc: typingsSlinky.materialUiCore.materialUiCoreStrings.asc = this.cast("asc")
+  def asc: typingsSlinky.materialUiCore.materialUiCoreStrings.asc = "asc".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.asc]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def desc: typingsSlinky.materialUiCore.materialUiCoreStrings.desc = "desc".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.desc]
   @scala.inline
-  def desc: typingsSlinky.materialUiCore.materialUiCoreStrings.desc = this.cast("desc")
-  @scala.inline
-  def `false`: typingsSlinky.materialUiCore.materialUiCoreBooleans.`false` = this.cast(false)
+  def `false`: typingsSlinky.materialUiCore.materialUiCoreBooleans.`false` = false.asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreBooleans.`false`]
 }
 

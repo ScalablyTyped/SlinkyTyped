@@ -17,10 +17,29 @@ trait SchemaGooglePrivacyDlpV2ReplaceValueConfig extends js.Object {
 
 object SchemaGooglePrivacyDlpV2ReplaceValueConfig {
   @scala.inline
-  def apply(newValue: SchemaGooglePrivacyDlpV2Value = null): SchemaGooglePrivacyDlpV2ReplaceValueConfig = {
+  def apply(): SchemaGooglePrivacyDlpV2ReplaceValueConfig = {
     val __obj = js.Dynamic.literal()
-    if (newValue != null) __obj.updateDynamic("newValue")(newValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2ReplaceValueConfig]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2ReplaceValueConfigOps[Self <: SchemaGooglePrivacyDlpV2ReplaceValueConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewValue(value: SchemaGooglePrivacyDlpV2Value): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

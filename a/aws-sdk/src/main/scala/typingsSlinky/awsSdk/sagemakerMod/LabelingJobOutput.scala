@@ -18,10 +18,35 @@ trait LabelingJobOutput extends js.Object {
 
 object LabelingJobOutput {
   @scala.inline
-  def apply(OutputDatasetS3Uri: S3Uri, FinalActiveLearningModelArn: ModelArn = null): LabelingJobOutput = {
+  def apply(OutputDatasetS3Uri: S3Uri): LabelingJobOutput = {
     val __obj = js.Dynamic.literal(OutputDatasetS3Uri = OutputDatasetS3Uri.asInstanceOf[js.Any])
-    if (FinalActiveLearningModelArn != null) __obj.updateDynamic("FinalActiveLearningModelArn")(FinalActiveLearningModelArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelingJobOutput]
   }
+  @scala.inline
+  implicit class LabelingJobOutputOps[Self <: LabelingJobOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOutputDatasetS3Uri(value: S3Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputDatasetS3Uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFinalActiveLearningModelArn(value: ModelArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalActiveLearningModelArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalActiveLearningModelArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalActiveLearningModelArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

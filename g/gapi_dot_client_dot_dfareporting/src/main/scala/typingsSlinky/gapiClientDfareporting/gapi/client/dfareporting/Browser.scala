@@ -4,49 +4,117 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Browser extends js.Object {
   /** ID referring to this grouping of browser and version numbers. This is the ID used for targeting. */
-  var browserVersionId: js.UndefOr[String] = js.undefined
+  var browserVersionId: js.UndefOr[String] = js.native
   /** DART ID of this browser. This is the ID used when generating reports. */
-  var dartId: js.UndefOr[String] = js.undefined
+  var dartId: js.UndefOr[String] = js.native
   /** Identifies what kind of resource this is. Value: the fixed string "dfareporting#browser". */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /**
     * Major version number (leftmost number) of this browser. For example, for Chrome 5.0.376.86 beta, this field should be set to 5. An asterisk (&#42;) may be
     * used to target any version number, and a question mark (?) may be used to target cases where the version number cannot be identified. For example,
     * Chrome &#42;.&#42; targets any version of Chrome: 1.2, 2.5, 3.5, and so on. Chrome 3.&#42; targets Chrome 3.1, 3.5, but not 4.0. Firefox ?.? targets cases where
     * the ad server knows the browser is Firefox but can't tell which version it is.
     */
-  var majorVersion: js.UndefOr[String] = js.undefined
+  var majorVersion: js.UndefOr[String] = js.native
   /**
     * Minor version number (number after first dot on left) of this browser. For example, for Chrome 5.0.375.86 beta, this field should be set to 0. An
     * asterisk (&#42;) may be used to target any version number, and a question mark (?) may be used to target cases where the version number cannot be
     * identified. For example, Chrome &#42;.&#42; targets any version of Chrome: 1.2, 2.5, 3.5, and so on. Chrome 3.&#42; targets Chrome 3.1, 3.5, but not 4.0. Firefox
     * ?.? targets cases where the ad server knows the browser is Firefox but can't tell which version it is.
     */
-  var minorVersion: js.UndefOr[String] = js.undefined
+  var minorVersion: js.UndefOr[String] = js.native
   /** Name of this browser. */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
 }
 
 object Browser {
   @scala.inline
-  def apply(
-    browserVersionId: String = null,
-    dartId: String = null,
-    kind: String = null,
-    majorVersion: String = null,
-    minorVersion: String = null,
-    name: String = null
-  ): Browser = {
+  def apply(): Browser = {
     val __obj = js.Dynamic.literal()
-    if (browserVersionId != null) __obj.updateDynamic("browserVersionId")(browserVersionId.asInstanceOf[js.Any])
-    if (dartId != null) __obj.updateDynamic("dartId")(dartId.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (majorVersion != null) __obj.updateDynamic("majorVersion")(majorVersion.asInstanceOf[js.Any])
-    if (minorVersion != null) __obj.updateDynamic("minorVersion")(minorVersion.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Browser]
   }
+  @scala.inline
+  implicit class BrowserOps[Self <: Browser] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrowserVersionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowserVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("browserVersionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDartId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dartId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDartId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dartId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMajorVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMajorVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

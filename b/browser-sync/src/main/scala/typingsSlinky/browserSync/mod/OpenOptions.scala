@@ -15,16 +15,14 @@ trait OpenOptions extends js.Object
 
 object OpenOptions {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def external: typingsSlinky.browserSync.browserSyncStrings.external = "external".asInstanceOf[typingsSlinky.browserSync.browserSyncStrings.external]
   @scala.inline
-  def external: typingsSlinky.browserSync.browserSyncStrings.external = this.cast("external")
+  def local: typingsSlinky.browserSync.browserSyncStrings.local = "local".asInstanceOf[typingsSlinky.browserSync.browserSyncStrings.local]
   @scala.inline
-  def local: typingsSlinky.browserSync.browserSyncStrings.local = this.cast("local")
+  def tunnel: typingsSlinky.browserSync.browserSyncStrings.tunnel = "tunnel".asInstanceOf[typingsSlinky.browserSync.browserSyncStrings.tunnel]
   @scala.inline
-  def tunnel: typingsSlinky.browserSync.browserSyncStrings.tunnel = this.cast("tunnel")
+  def ui: typingsSlinky.browserSync.browserSyncStrings.ui = "ui".asInstanceOf[typingsSlinky.browserSync.browserSyncStrings.ui]
   @scala.inline
-  def ui: typingsSlinky.browserSync.browserSyncStrings.ui = this.cast("ui")
-  @scala.inline
-  def `ui-external`: typingsSlinky.browserSync.browserSyncStrings.`ui-external` = this.cast("ui-external")
+  def `ui-external`: typingsSlinky.browserSync.browserSyncStrings.`ui-external` = "ui-external".asInstanceOf[typingsSlinky.browserSync.browserSyncStrings.`ui-external`]
 }
 

@@ -6,24 +6,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HelpBlockProps
   extends AllHTMLAttributes[HelpBlock]
      with ClassAttributes[HelpBlock] {
-  var bsClass: js.UndefOr[String] = js.undefined
+  var bsClass: js.UndefOr[String] = js.native
 }
 
 object HelpBlockProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[HelpBlock] = null,
-    ClassAttributes: ClassAttributes[HelpBlock] = null,
-    bsClass: String = null
-  ): HelpBlockProps = {
+  def apply(): HelpBlockProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[HelpBlockProps]
   }
+  @scala.inline
+  implicit class HelpBlockPropsOps[Self <: HelpBlockProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBsClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBsClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

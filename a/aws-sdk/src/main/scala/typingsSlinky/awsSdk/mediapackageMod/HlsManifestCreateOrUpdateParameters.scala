@@ -55,27 +55,119 @@ trait HlsManifestCreateOrUpdateParameters extends js.Object {
 
 object HlsManifestCreateOrUpdateParameters {
   @scala.inline
-  def apply(
-    Id: string,
-    AdMarkers: AdMarkers = null,
-    AdTriggers: AdTriggers = null,
-    AdsOnDeliveryRestrictions: AdsOnDeliveryRestrictions = null,
-    IncludeIframeOnlyStream: js.UndefOr[Boolean] = js.undefined,
-    ManifestName: string = null,
-    PlaylistType: PlaylistType = null,
-    PlaylistWindowSeconds: Int | Double = null,
-    ProgramDateTimeIntervalSeconds: Int | Double = null
-  ): HlsManifestCreateOrUpdateParameters = {
+  def apply(Id: string): HlsManifestCreateOrUpdateParameters = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any])
-    if (AdMarkers != null) __obj.updateDynamic("AdMarkers")(AdMarkers.asInstanceOf[js.Any])
-    if (AdTriggers != null) __obj.updateDynamic("AdTriggers")(AdTriggers.asInstanceOf[js.Any])
-    if (AdsOnDeliveryRestrictions != null) __obj.updateDynamic("AdsOnDeliveryRestrictions")(AdsOnDeliveryRestrictions.asInstanceOf[js.Any])
-    if (!js.isUndefined(IncludeIframeOnlyStream)) __obj.updateDynamic("IncludeIframeOnlyStream")(IncludeIframeOnlyStream.asInstanceOf[js.Any])
-    if (ManifestName != null) __obj.updateDynamic("ManifestName")(ManifestName.asInstanceOf[js.Any])
-    if (PlaylistType != null) __obj.updateDynamic("PlaylistType")(PlaylistType.asInstanceOf[js.Any])
-    if (PlaylistWindowSeconds != null) __obj.updateDynamic("PlaylistWindowSeconds")(PlaylistWindowSeconds.asInstanceOf[js.Any])
-    if (ProgramDateTimeIntervalSeconds != null) __obj.updateDynamic("ProgramDateTimeIntervalSeconds")(ProgramDateTimeIntervalSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsManifestCreateOrUpdateParameters]
   }
+  @scala.inline
+  implicit class HlsManifestCreateOrUpdateParametersOps[Self <: HlsManifestCreateOrUpdateParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdMarkers(value: AdMarkers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdMarkers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdMarkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdMarkers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdTriggers(value: AdTriggers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdTriggers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdTriggers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdTriggers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdsOnDeliveryRestrictions(value: AdsOnDeliveryRestrictions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdsOnDeliveryRestrictions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdsOnDeliveryRestrictions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdsOnDeliveryRestrictions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeIframeOnlyStream(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeIframeOnlyStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeIframeOnlyStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeIframeOnlyStream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManifestName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManifestName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManifestName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaylistType(value: PlaylistType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaylistType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaylistType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaylistType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaylistWindowSeconds(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaylistWindowSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaylistWindowSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaylistWindowSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgramDateTimeIntervalSeconds(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramDateTimeIntervalSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgramDateTimeIntervalSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProgramDateTimeIntervalSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,19 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FilterDropDownClosedEventUIParam extends js.Object {
   /**
   	 * A reference to the hierarchy.
   	 */
-  var hierarchy: js.UndefOr[js.Any] = js.undefined
+  var hierarchy: js.UndefOr[js.Any] = js.native
 }
 
 object FilterDropDownClosedEventUIParam {
   @scala.inline
-  def apply(hierarchy: js.Any = null): FilterDropDownClosedEventUIParam = {
+  def apply(): FilterDropDownClosedEventUIParam = {
     val __obj = js.Dynamic.literal()
-    if (hierarchy != null) __obj.updateDynamic("hierarchy")(hierarchy.asInstanceOf[js.Any])
     __obj.asInstanceOf[FilterDropDownClosedEventUIParam]
   }
+  @scala.inline
+  implicit class FilterDropDownClosedEventUIParamOps[Self <: FilterDropDownClosedEventUIParam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHierarchy(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHierarchy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

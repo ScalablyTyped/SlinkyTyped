@@ -1,7 +1,6 @@
 package typingsSlinky.winrt.Windows.Devices.Enumeration.Pnp
 
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterable
-import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,16 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObject")
 @js.native
-class PnpObject () extends IPnpObject {
-  /* CompleteClass */
-  override var id: String = js.native
-  /* CompleteClass */
-  override var properties: IMapView[String, _] = js.native
-  /* CompleteClass */
-  override var `type`: PnpObjectType = js.native
-  /* CompleteClass */
-  override def update(updateInfo: PnpObjectUpdate): Unit = js.native
-}
+class PnpObject () extends IPnpObject
 
 /* static members */
 @JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObject")

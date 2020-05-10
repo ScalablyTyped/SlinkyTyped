@@ -21,7 +21,6 @@ import typingsSlinky.ionicCore.ionicCoreStrings.alertLeave
 import typingsSlinky.ionicCore.ionicCoreStrings.animated
 import typingsSlinky.ionicCore.ionicCoreStrings.backButtonIcon
 import typingsSlinky.ionicCore.ionicCoreStrings.backButtonText
-import typingsSlinky.ionicCore.ionicCoreStrings.backdrop
 import typingsSlinky.ionicCore.ionicCoreStrings.experimentalTransitionShadow
 import typingsSlinky.ionicCore.ionicCoreStrings.hardwareBackButton
 import typingsSlinky.ionicCore.ionicCoreStrings.hideCaretOnScroll
@@ -72,7 +71,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ionic/core/dist/types/utils/overlays", JSImport.Namespace)
 @js.native
 object overlaysMod extends js.Object {
-  val BACKDROP: backdrop = js.native
+  val BACKDROP: /* "backdrop" */ String = js.native
   def connectListeners(doc: Document_): Unit = js.native
   def createOverlay[T /* <: HTMLIonOverlayElement */](tagName: String): js.Promise[T] = js.native
   def createOverlay[T /* <: HTMLIonOverlayElement */](tagName: String, opts: js.Object): js.Promise[T] = js.native

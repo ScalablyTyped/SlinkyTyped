@@ -15,14 +15,12 @@ trait ECMA_UNOFFICIAL extends js.Object
 
 object ECMA_UNOFFICIAL {
   @scala.inline
-  def `6`: typingsSlinky.terser.terserNumbers.`6` = this.cast(6)
+  def `6`: typingsSlinky.terser.terserNumbers.`6` = 6.asInstanceOf[typingsSlinky.terser.terserNumbers.`6`]
   @scala.inline
-  def `7`: typingsSlinky.terser.terserNumbers.`7` = this.cast(7)
+  def `7`: typingsSlinky.terser.terserNumbers.`7` = 7.asInstanceOf[typingsSlinky.terser.terserNumbers.`7`]
   @scala.inline
-  def `8`: typingsSlinky.terser.terserNumbers.`8` = this.cast(8)
+  def `8`: typingsSlinky.terser.terserNumbers.`8` = 8.asInstanceOf[typingsSlinky.terser.terserNumbers.`8`]
   @scala.inline
-  def `9`: typingsSlinky.terser.terserNumbers.`9` = this.cast(9)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `9`: typingsSlinky.terser.terserNumbers.`9` = 9.asInstanceOf[typingsSlinky.terser.terserNumbers.`9`]
 }
 

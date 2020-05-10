@@ -30,11 +30,41 @@ trait SchemaAcceleratorConfig extends js.Object {
 
 object SchemaAcceleratorConfig {
   @scala.inline
-  def apply(acceleratorCount: Int | Double = null, acceleratorTypeUri: String = null): SchemaAcceleratorConfig = {
+  def apply(): SchemaAcceleratorConfig = {
     val __obj = js.Dynamic.literal()
-    if (acceleratorCount != null) __obj.updateDynamic("acceleratorCount")(acceleratorCount.asInstanceOf[js.Any])
-    if (acceleratorTypeUri != null) __obj.updateDynamic("acceleratorTypeUri")(acceleratorTypeUri.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAcceleratorConfig]
   }
+  @scala.inline
+  implicit class SchemaAcceleratorConfigOps[Self <: SchemaAcceleratorConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceleratorCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceleratorCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceleratorCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceleratorCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAcceleratorTypeUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceleratorTypeUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceleratorTypeUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceleratorTypeUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

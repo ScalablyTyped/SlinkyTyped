@@ -5,40 +5,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LevelDownOpenOptions extends AbstractOpenOptions {
-  var blockRestartInterval: js.UndefOr[Double] = js.undefined
-  var blockSize: js.UndefOr[Double] = js.undefined
-  var cacheSize: js.UndefOr[Double] = js.undefined
-  var compression: js.UndefOr[Boolean] = js.undefined
-  var maxFileSize: js.UndefOr[Double] = js.undefined
-  var maxOpenFiles: js.UndefOr[Double] = js.undefined
-  var writeBufferSize: js.UndefOr[Double] = js.undefined
+  var blockRestartInterval: js.UndefOr[Double] = js.native
+  var blockSize: js.UndefOr[Double] = js.native
+  var cacheSize: js.UndefOr[Double] = js.native
+  var compression: js.UndefOr[Boolean] = js.native
+  var maxFileSize: js.UndefOr[Double] = js.native
+  var maxOpenFiles: js.UndefOr[Double] = js.native
+  var writeBufferSize: js.UndefOr[Double] = js.native
 }
 
 object LevelDownOpenOptions {
   @scala.inline
-  def apply(
-    blockRestartInterval: Int | Double = null,
-    blockSize: Int | Double = null,
-    cacheSize: Int | Double = null,
-    compression: js.UndefOr[Boolean] = js.undefined,
-    createIfMissing: js.UndefOr[Boolean] = js.undefined,
-    errorIfExists: js.UndefOr[Boolean] = js.undefined,
-    maxFileSize: Int | Double = null,
-    maxOpenFiles: Int | Double = null,
-    writeBufferSize: Int | Double = null
-  ): LevelDownOpenOptions = {
+  def apply(): LevelDownOpenOptions = {
     val __obj = js.Dynamic.literal()
-    if (blockRestartInterval != null) __obj.updateDynamic("blockRestartInterval")(blockRestartInterval.asInstanceOf[js.Any])
-    if (blockSize != null) __obj.updateDynamic("blockSize")(blockSize.asInstanceOf[js.Any])
-    if (cacheSize != null) __obj.updateDynamic("cacheSize")(cacheSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(compression)) __obj.updateDynamic("compression")(compression.asInstanceOf[js.Any])
-    if (!js.isUndefined(createIfMissing)) __obj.updateDynamic("createIfMissing")(createIfMissing.asInstanceOf[js.Any])
-    if (!js.isUndefined(errorIfExists)) __obj.updateDynamic("errorIfExists")(errorIfExists.asInstanceOf[js.Any])
-    if (maxFileSize != null) __obj.updateDynamic("maxFileSize")(maxFileSize.asInstanceOf[js.Any])
-    if (maxOpenFiles != null) __obj.updateDynamic("maxOpenFiles")(maxOpenFiles.asInstanceOf[js.Any])
-    if (writeBufferSize != null) __obj.updateDynamic("writeBufferSize")(writeBufferSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[LevelDownOpenOptions]
   }
+  @scala.inline
+  implicit class LevelDownOpenOptionsOps[Self <: LevelDownOpenOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlockRestartInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockRestartInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockRestartInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockRestartInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlockSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompression(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFileSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxFileSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFileSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxOpenFiles(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOpenFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxOpenFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOpenFiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriteBufferSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeBufferSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWriteBufferSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeBufferSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

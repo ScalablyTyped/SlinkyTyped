@@ -17,20 +17,18 @@ trait SyntaxType extends js.Object
 
 object SyntaxType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `css-in-js`: typingsSlinky.stylelint.stylelintStrings.`css-in-js` = "css-in-js".asInstanceOf[typingsSlinky.stylelint.stylelintStrings.`css-in-js`]
   @scala.inline
-  def `css-in-js`: typingsSlinky.stylelint.stylelintStrings.`css-in-js` = this.cast("css-in-js")
+  def html: typingsSlinky.stylelint.stylelintStrings.html = "html".asInstanceOf[typingsSlinky.stylelint.stylelintStrings.html]
   @scala.inline
-  def html: typingsSlinky.stylelint.stylelintStrings.html = this.cast("html")
+  def less: typingsSlinky.stylelint.stylelintStrings.less = "less".asInstanceOf[typingsSlinky.stylelint.stylelintStrings.less]
   @scala.inline
-  def less: typingsSlinky.stylelint.stylelintStrings.less = this.cast("less")
+  def markdown: typingsSlinky.stylelint.stylelintStrings.markdown = "markdown".asInstanceOf[typingsSlinky.stylelint.stylelintStrings.markdown]
   @scala.inline
-  def markdown: typingsSlinky.stylelint.stylelintStrings.markdown = this.cast("markdown")
+  def sass: typingsSlinky.stylelint.stylelintStrings.sass = "sass".asInstanceOf[typingsSlinky.stylelint.stylelintStrings.sass]
   @scala.inline
-  def sass: typingsSlinky.stylelint.stylelintStrings.sass = this.cast("sass")
+  def scss: typingsSlinky.stylelint.stylelintStrings.scss = "scss".asInstanceOf[typingsSlinky.stylelint.stylelintStrings.scss]
   @scala.inline
-  def scss: typingsSlinky.stylelint.stylelintStrings.scss = this.cast("scss")
-  @scala.inline
-  def sugarss: typingsSlinky.stylelint.stylelintStrings.sugarss = this.cast("sugarss")
+  def sugarss: typingsSlinky.stylelint.stylelintStrings.sugarss = "sugarss".asInstanceOf[typingsSlinky.stylelint.stylelintStrings.sugarss]
 }
 

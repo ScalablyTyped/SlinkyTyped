@@ -11,14 +11,14 @@ class ShowGeometryInstanceAttribute () extends js.Object {
   var componentDatatype: ComponentDatatype = js.native
   var componentsPerAttribute: Double = js.native
   var normalize: Boolean = js.native
-  var value: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var value: js.typedarray.Uint8Array = js.native
 }
 
 /* static members */
 @JSImport("cesium", "ShowGeometryInstanceAttribute")
 @js.native
 object ShowGeometryInstanceAttribute extends js.Object {
-  def toValue(show: Boolean): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def toValue(show: Boolean, result: scala.scalajs.js.typedarray.Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def toValue(show: Boolean): js.typedarray.Uint8Array = js.native
+  def toValue(show: Boolean, result: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
 }
 

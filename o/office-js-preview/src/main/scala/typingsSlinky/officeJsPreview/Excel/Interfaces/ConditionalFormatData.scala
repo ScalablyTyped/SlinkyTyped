@@ -14,6 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `conditionalFormat.toJSON()`. */
+@js.native
 trait ConditionalFormatData extends js.Object {
   /**
     *
@@ -22,7 +23,7 @@ trait ConditionalFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var cellValue: js.UndefOr[CellValueConditionalFormatData] = js.undefined
+  var cellValue: js.UndefOr[CellValueConditionalFormatData] = js.native
   /**
     *
     * Returns the cell value conditional format properties if the current conditional format is a CellValue type.
@@ -30,84 +31,84 @@ trait ConditionalFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var cellValueOrNullObject: js.UndefOr[CellValueConditionalFormatData] = js.undefined
+  var cellValueOrNullObject: js.UndefOr[CellValueConditionalFormatData] = js.native
   /**
     *
     * Returns the ColorScale conditional format properties if the current conditional format is an ColorScale type. Read-only.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var colorScale: js.UndefOr[ColorScaleConditionalFormatData] = js.undefined
+  var colorScale: js.UndefOr[ColorScaleConditionalFormatData] = js.native
   /**
     *
     * Returns the ColorScale conditional format properties if the current conditional format is an ColorScale type. Read-only.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var colorScaleOrNullObject: js.UndefOr[ColorScaleConditionalFormatData] = js.undefined
+  var colorScaleOrNullObject: js.UndefOr[ColorScaleConditionalFormatData] = js.native
   /**
     *
     * Returns the custom conditional format properties if the current conditional format is a custom type. Read-only.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var custom: js.UndefOr[CustomConditionalFormatData] = js.undefined
+  var custom: js.UndefOr[CustomConditionalFormatData] = js.native
   /**
     *
     * Returns the custom conditional format properties if the current conditional format is a custom type. Read-only.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var customOrNullObject: js.UndefOr[CustomConditionalFormatData] = js.undefined
+  var customOrNullObject: js.UndefOr[CustomConditionalFormatData] = js.native
   /**
     *
     * Returns the data bar properties if the current conditional format is a data bar. Read-only.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var dataBar: js.UndefOr[DataBarConditionalFormatData] = js.undefined
+  var dataBar: js.UndefOr[DataBarConditionalFormatData] = js.native
   /**
     *
     * Returns the data bar properties if the current conditional format is a data bar. Read-only.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var dataBarOrNullObject: js.UndefOr[DataBarConditionalFormatData] = js.undefined
+  var dataBarOrNullObject: js.UndefOr[DataBarConditionalFormatData] = js.native
   /**
     *
     * Returns the IconSet conditional format properties if the current conditional format is an IconSet type. Read-only.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var iconSet: js.UndefOr[IconSetConditionalFormatData] = js.undefined
+  var iconSet: js.UndefOr[IconSetConditionalFormatData] = js.native
   /**
     *
     * Returns the IconSet conditional format properties if the current conditional format is an IconSet type. Read-only.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var iconSetOrNullObject: js.UndefOr[IconSetConditionalFormatData] = js.undefined
+  var iconSetOrNullObject: js.UndefOr[IconSetConditionalFormatData] = js.native
   /**
     *
     * The Priority of the Conditional Format within the current ConditionalFormatCollection. Read-only.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     *
     * Returns the preset criteria conditional format. See Excel.PresetCriteriaConditionalFormat for more details.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var preset: js.UndefOr[PresetCriteriaConditionalFormatData] = js.undefined
+  var preset: js.UndefOr[PresetCriteriaConditionalFormatData] = js.native
   /**
     *
     * Returns the preset criteria conditional format. See Excel.PresetCriteriaConditionalFormat for more details.
     *
     * [Api set: ExcelApi 1.6]
     */
-  var presetOrNullObject: js.UndefOr[PresetCriteriaConditionalFormatData] = js.undefined
+  var presetOrNullObject: js.UndefOr[PresetCriteriaConditionalFormatData] = js.native
   /**
     *
     * The priority (or index) within the conditional format collection that this conditional format currently exists in. Changing this also
@@ -118,7 +119,7 @@ trait ConditionalFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var priority: js.UndefOr[Double] = js.undefined
+  var priority: js.UndefOr[Double] = js.native
   /**
     *
     * If the conditions of this conditional format are met, no lower-priority formats shall take effect on that cell.
@@ -126,7 +127,7 @@ trait ConditionalFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var stopIfTrue: js.UndefOr[Boolean] = js.undefined
+  var stopIfTrue: js.UndefOr[Boolean] = js.native
   /**
     *
     * Returns the specific text conditional format properties if the current conditional format is a text type.
@@ -134,7 +135,7 @@ trait ConditionalFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var textComparison: js.UndefOr[TextConditionalFormatData] = js.undefined
+  var textComparison: js.UndefOr[TextConditionalFormatData] = js.native
   /**
     *
     * Returns the specific text conditional format properties if the current conditional format is a text type.
@@ -142,7 +143,7 @@ trait ConditionalFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var textComparisonOrNullObject: js.UndefOr[TextConditionalFormatData] = js.undefined
+  var textComparisonOrNullObject: js.UndefOr[TextConditionalFormatData] = js.native
   /**
     *
     * Returns the Top/Bottom conditional format properties if the current conditional format is an TopBottom type.
@@ -150,7 +151,7 @@ trait ConditionalFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var topBottom: js.UndefOr[TopBottomConditionalFormatData] = js.undefined
+  var topBottom: js.UndefOr[TopBottomConditionalFormatData] = js.native
   /**
     *
     * Returns the Top/Bottom conditional format properties if the current conditional format is an TopBottom type.
@@ -158,7 +159,7 @@ trait ConditionalFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.6]
     */
-  var topBottomOrNullObject: js.UndefOr[TopBottomConditionalFormatData] = js.undefined
+  var topBottomOrNullObject: js.UndefOr[TopBottomConditionalFormatData] = js.native
   /**
     *
     * A type of conditional format. Only one can be set at a time. Read-only.
@@ -167,55 +168,264 @@ trait ConditionalFormatData extends js.Object {
     */
   var `type`: js.UndefOr[
     ConditionalFormatType | Custom | DataBar | ColorScale | IconSet | TopBottom | PresetCriteria | ContainsText | CellValue
-  ] = js.undefined
+  ] = js.native
 }
 
 object ConditionalFormatData {
   @scala.inline
-  def apply(
-    cellValue: CellValueConditionalFormatData = null,
-    cellValueOrNullObject: CellValueConditionalFormatData = null,
-    colorScale: ColorScaleConditionalFormatData = null,
-    colorScaleOrNullObject: ColorScaleConditionalFormatData = null,
-    custom: CustomConditionalFormatData = null,
-    customOrNullObject: CustomConditionalFormatData = null,
-    dataBar: DataBarConditionalFormatData = null,
-    dataBarOrNullObject: DataBarConditionalFormatData = null,
-    iconSet: IconSetConditionalFormatData = null,
-    iconSetOrNullObject: IconSetConditionalFormatData = null,
-    id: String = null,
-    preset: PresetCriteriaConditionalFormatData = null,
-    presetOrNullObject: PresetCriteriaConditionalFormatData = null,
-    priority: Int | Double = null,
-    stopIfTrue: js.UndefOr[Boolean] = js.undefined,
-    textComparison: TextConditionalFormatData = null,
-    textComparisonOrNullObject: TextConditionalFormatData = null,
-    topBottom: TopBottomConditionalFormatData = null,
-    topBottomOrNullObject: TopBottomConditionalFormatData = null,
-    `type`: ConditionalFormatType | Custom | DataBar | ColorScale | IconSet | TopBottom | PresetCriteria | ContainsText | CellValue = null
-  ): ConditionalFormatData = {
+  def apply(): ConditionalFormatData = {
     val __obj = js.Dynamic.literal()
-    if (cellValue != null) __obj.updateDynamic("cellValue")(cellValue.asInstanceOf[js.Any])
-    if (cellValueOrNullObject != null) __obj.updateDynamic("cellValueOrNullObject")(cellValueOrNullObject.asInstanceOf[js.Any])
-    if (colorScale != null) __obj.updateDynamic("colorScale")(colorScale.asInstanceOf[js.Any])
-    if (colorScaleOrNullObject != null) __obj.updateDynamic("colorScaleOrNullObject")(colorScaleOrNullObject.asInstanceOf[js.Any])
-    if (custom != null) __obj.updateDynamic("custom")(custom.asInstanceOf[js.Any])
-    if (customOrNullObject != null) __obj.updateDynamic("customOrNullObject")(customOrNullObject.asInstanceOf[js.Any])
-    if (dataBar != null) __obj.updateDynamic("dataBar")(dataBar.asInstanceOf[js.Any])
-    if (dataBarOrNullObject != null) __obj.updateDynamic("dataBarOrNullObject")(dataBarOrNullObject.asInstanceOf[js.Any])
-    if (iconSet != null) __obj.updateDynamic("iconSet")(iconSet.asInstanceOf[js.Any])
-    if (iconSetOrNullObject != null) __obj.updateDynamic("iconSetOrNullObject")(iconSetOrNullObject.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (preset != null) __obj.updateDynamic("preset")(preset.asInstanceOf[js.Any])
-    if (presetOrNullObject != null) __obj.updateDynamic("presetOrNullObject")(presetOrNullObject.asInstanceOf[js.Any])
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
-    if (!js.isUndefined(stopIfTrue)) __obj.updateDynamic("stopIfTrue")(stopIfTrue.asInstanceOf[js.Any])
-    if (textComparison != null) __obj.updateDynamic("textComparison")(textComparison.asInstanceOf[js.Any])
-    if (textComparisonOrNullObject != null) __obj.updateDynamic("textComparisonOrNullObject")(textComparisonOrNullObject.asInstanceOf[js.Any])
-    if (topBottom != null) __obj.updateDynamic("topBottom")(topBottom.asInstanceOf[js.Any])
-    if (topBottomOrNullObject != null) __obj.updateDynamic("topBottomOrNullObject")(topBottomOrNullObject.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConditionalFormatData]
   }
+  @scala.inline
+  implicit class ConditionalFormatDataOps[Self <: ConditionalFormatData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCellValue(value: CellValueConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellValueOrNullObject(value: CellValueConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellValueOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellValueOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellValueOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorScale(value: ColorScaleConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorScaleOrNullObject(value: ColorScaleConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScaleOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorScaleOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScaleOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustom(value: CustomConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomOrNullObject(value: CustomConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBar(value: DataBarConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBarOrNullObject(value: DataBarConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBarOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataBarOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBarOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconSet(value: IconSetConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconSetOrNullObject(value: IconSetConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSetOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconSetOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSetOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreset(value: PresetCriteriaConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPresetOrNullObject(value: PresetCriteriaConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presetOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPresetOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presetOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopIfTrue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopIfTrue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopIfTrue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopIfTrue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextComparison(value: TextConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textComparison")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextComparison: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textComparison")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextComparisonOrNullObject(value: TextConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textComparisonOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextComparisonOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textComparisonOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopBottom(value: TopBottomConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopBottomOrNullObject(value: TopBottomConditionalFormatData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topBottomOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopBottomOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topBottomOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(
+      value: ConditionalFormatType | Custom | DataBar | ColorScale | IconSet | TopBottom | PresetCriteria | ContainsText | CellValue
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

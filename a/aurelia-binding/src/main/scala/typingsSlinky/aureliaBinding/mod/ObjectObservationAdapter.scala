@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ObjectObservationAdapter extends js.Object {
-  def getObserver(`object`: js.Any, propertyName: String, descriptor: js.PropertyDescriptor): js.UndefOr[InternalPropertyObserver | Null]
+  def getObserver(`object`: js.Any, propertyName: String, descriptor: js.PropertyDescriptor): js.UndefOr[InternalPropertyObserver | Null] = js.native
 }
 
 object ObjectObservationAdapter {
@@ -14,8 +15,21 @@ object ObjectObservationAdapter {
     getObserver: (js.Any, String, js.PropertyDescriptor) => js.UndefOr[InternalPropertyObserver | Null]
   ): ObjectObservationAdapter = {
     val __obj = js.Dynamic.literal(getObserver = js.Any.fromFunction3(getObserver))
-  
     __obj.asInstanceOf[ObjectObservationAdapter]
   }
+  @scala.inline
+  implicit class ObjectObservationAdapterOps[Self <: ObjectObservationAdapter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetObserver(value: (js.Any, String, js.PropertyDescriptor) => js.UndefOr[InternalPropertyObserver | Null]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getObserver")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

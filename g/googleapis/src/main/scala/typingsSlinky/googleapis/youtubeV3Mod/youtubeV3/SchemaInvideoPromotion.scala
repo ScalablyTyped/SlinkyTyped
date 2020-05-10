@@ -36,18 +36,65 @@ trait SchemaInvideoPromotion extends js.Object {
 
 object SchemaInvideoPromotion {
   @scala.inline
-  def apply(
-    defaultTiming: SchemaInvideoTiming = null,
-    items: js.Array[SchemaPromotedItem] = null,
-    position: SchemaInvideoPosition = null,
-    useSmartTiming: js.UndefOr[Boolean] = js.undefined
-  ): SchemaInvideoPromotion = {
+  def apply(): SchemaInvideoPromotion = {
     val __obj = js.Dynamic.literal()
-    if (defaultTiming != null) __obj.updateDynamic("defaultTiming")(defaultTiming.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(useSmartTiming)) __obj.updateDynamic("useSmartTiming")(useSmartTiming.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInvideoPromotion]
   }
+  @scala.inline
+  implicit class SchemaInvideoPromotionOps[Self <: SchemaInvideoPromotion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultTiming(value: SchemaInvideoTiming): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTiming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultTiming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTiming")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Array[SchemaPromotedItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: SchemaInvideoPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseSmartTiming(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSmartTiming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseSmartTiming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSmartTiming")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

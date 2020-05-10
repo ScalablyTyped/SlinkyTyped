@@ -6,11 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MergeStrategy extends IEnum {
-  var Disallowed: MergeStrategySymbol
-  var OverwriteChanges: MergeStrategySymbol
-  var PreserveChanges: MergeStrategySymbol
-  var SkipMerge: MergeStrategySymbol
+  var Disallowed: MergeStrategySymbol = js.native
+  var OverwriteChanges: MergeStrategySymbol = js.native
+  var PreserveChanges: MergeStrategySymbol = js.native
+  var SkipMerge: MergeStrategySymbol = js.native
 }
 
 @JSGlobal("breeze.MergeStrategy")

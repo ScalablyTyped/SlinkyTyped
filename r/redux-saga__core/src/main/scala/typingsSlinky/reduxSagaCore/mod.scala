@@ -1,6 +1,7 @@
 package typingsSlinky.reduxSagaCore
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.node.Buffer
 import typingsSlinky.redux.mod.Action
 import typingsSlinky.reduxSagaCore.effectsMod.ActionChannelEffect
@@ -24,7 +25,6 @@ import typingsSlinky.reduxSagaCore.effectsMod.SelectEffect
 import typingsSlinky.reduxSagaCore.effectsMod.SetContextEffect
 import typingsSlinky.reduxSagaCore.effectsMod.Tail
 import typingsSlinky.reduxSagaCore.effectsMod.TakeEffect
-import typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.apply
 import typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.call_
 import typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.cps_
 import typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.fork_
@@ -49,24 +49,24 @@ object mod extends js.Object {
   def all[T](effects: js.Array[T]): AllEffect[T] = js.native
   def all[T](effects: StringDictionary[T]): AllEffect[T] = js.native
   @JSName("apply")
-  def apply[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](ctx: Ctx, fn: Fn, args: Parameters[Fn]): CallEffect = js.native
-  @JSName("apply")
-  def apply_Ctx_IntersectionapplyAnyName_String[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  def apply[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ apply with js.Any */, Name /* <: String */](
+    */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.apply with TopLevel[js.Any] */, Name /* <: String */](
     ctx: Ctx,
     fnName: Name,
     args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
   ): CallEffect = js.native
+  @JSName("apply")
+  def apply_CtxFn_ThisFunction1CtxAnyWildcard[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](ctx: Ctx, fn: Fn, args: Parameters[Fn]): CallEffect = js.native
   def call[Fn /* <: js.Function1[/* repeated */ js.Any, _] */](
     fn: Fn,
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): CallEffect = js.native
   def call[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ call_ with js.Any */, Name /* <: String */](
+    */ call_ with TopLevel[js.Any] */, Name /* <: String */](
     ctxAndFnName: AnonContext[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
@@ -81,9 +81,9 @@ object mod extends js.Object {
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): CallEffect = js.native
   @JSName("call")
-  def call_Ctx_Intersectioncall_AnyName_String[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  def call_Ctx_Intersectioncall_TopLevelAnyName_String[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ call_ with js.Any */, Name /* <: String */](
+    */ call_ with TopLevel[js.Any] */, Name /* <: String */](
     ctxAndFnName: js.Tuple2[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
@@ -106,28 +106,28 @@ object mod extends js.Object {
   ): CpsEffect = js.native
   def cps[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): void}
-    */ cps_ with js.Any */, Name /* <: String */](
-    ctxAndFnName: js.Tuple2[Ctx, Name],
-    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Ctx[Name]> is not an array type */ args: CpsFunctionParameters[
-      /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
-    ]
-  ): CpsEffect = js.native
-  def cps[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in Name ]: (this : Ctx, args : ...any): void}
-    */ cps_ with js.Any */, Name /* <: String */](
+    */ cps_ with TopLevel[js.Any] */, Name /* <: String */](
     ctxAndFnName: AnonContextFn[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Ctx[Name]> is not an array type */ args: CpsFunctionParameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
   ): CpsEffect = js.native
   def cps[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, Unit] */](
+    ctxAndFn: js.Tuple2[Ctx, Fn],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
+  ): CpsEffect = js.native
+  def cps[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, Unit] */](
     ctxAndFn: AnonContextCtx[Ctx, Fn],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
   ): CpsEffect = js.native
   @JSName("cps")
-  def cps_CtxFn_ThisFunction1CtxAnyUnit[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, Unit] */](
-    ctxAndFn: js.Tuple2[Ctx, Fn],
-    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
+  def cps_Ctx_Intersectioncps_TopLevelAnyName_String[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in Name ]: (this : Ctx, args : ...any): void}
+    */ cps_ with TopLevel[js.Any] */, Name /* <: String */](
+    ctxAndFnName: js.Tuple2[Ctx, Name],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Ctx[Name]> is not an array type */ args: CpsFunctionParameters[
+      /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
+    ]
   ): CpsEffect = js.native
   def debounce[T](ms: Double, channel: TakeableChannel[T], worker: js.Function1[/* item */ T, _]): ForkEffect = js.native
   def debounce[P /* <: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionPattern */ js.Any */](
@@ -173,7 +173,7 @@ object mod extends js.Object {
   ): ForkEffect = js.native
   def fork[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ fork_ with js.Any */, Name /* <: String */](
+    */ fork_ with TopLevel[js.Any] */, Name /* <: String */](
     ctxAndFnName: js.Tuple2[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
@@ -181,7 +181,7 @@ object mod extends js.Object {
   ): ForkEffect = js.native
   def fork[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ fork_ with js.Any */, Name /* <: String */](
+    */ fork_ with TopLevel[js.Any] */, Name /* <: String */](
     ctxAndFnName: AnonContext[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
@@ -232,7 +232,7 @@ object mod extends js.Object {
   ): ForkEffect = js.native
   def spawn[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.spawn with js.Any */, Name /* <: String */](
+    */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.spawn with TopLevel[js.Any] */, Name /* <: String */](
     ctxAndFnName: js.Tuple2[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
@@ -240,7 +240,7 @@ object mod extends js.Object {
   ): ForkEffect = js.native
   def spawn[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
-    */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.spawn with js.Any */, Name /* <: String */](
+    */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.spawn with TopLevel[js.Any] */, Name /* <: String */](
     ctxAndFnName: AnonContext[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any

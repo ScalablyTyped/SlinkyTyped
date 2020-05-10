@@ -15,7 +15,7 @@ class InvokeParameter ()
   def this(`val`: String) = this()
   def this(`val`: Boolean) = this()
   def this(`val`: Double) = this()
-  def this(`val`: scala.scalajs.js.typedarray.Uint8Array) = this()
+  def this(`val`: js.typedarray.Uint8Array) = this()
   def this(`val`: XML) = this()
   def this(name: String, `val`: String) = this()
   /**
@@ -26,7 +26,7 @@ class InvokeParameter ()
     */
   def this(name: String, `val`: Boolean) = this()
   def this(name: String, `val`: Double) = this()
-  def this(name: String, `val`: scala.scalajs.js.typedarray.Uint8Array) = this()
+  def this(name: String, `val`: js.typedarray.Uint8Array) = this()
   def this(name: String, `val`: XML) = this()
 }
 

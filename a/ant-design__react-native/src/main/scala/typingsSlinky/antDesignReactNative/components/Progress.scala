@@ -1,10 +1,7 @@
 package typingsSlinky.antDesignReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.fixed
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.normal
 import typingsSlinky.antDesignReactNative.progressMod.ProgressProps
@@ -17,39 +14,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Progress
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Progress {
   @JSImport("@ant-design/react-native/lib/progress", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    appearTransition: js.UndefOr[Boolean] = js.undefined,
-    barStyle: StyleProp[ViewStyle] = null,
-    percent: Int | Double = null,
-    position: fixed | normal = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: Partial[ProgressStyle] = null,
-    unfilled: js.UndefOr[Boolean] = js.undefined,
-    wrapWidth: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(appearTransition)) __obj.updateDynamic("appearTransition")(appearTransition.asInstanceOf[js.Any])
-    if (barStyle != null) __obj.updateDynamic("barStyle")(barStyle.asInstanceOf[js.Any])
-    if (percent != null) __obj.updateDynamic("percent")(percent.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (!js.isUndefined(unfilled)) __obj.updateDynamic("unfilled")(unfilled.asInstanceOf[js.Any])
-    if (wrapWidth != null) __obj.updateDynamic("wrapWidth")(wrapWidth.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def appearTransition(value: Boolean): this.type = set("appearTransition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def barStyle(value: StyleProp[ViewStyle]): this.type = set("barStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def barStyleNull: this.type = set("barStyle", null)
+    @scala.inline
+    def percent(value: Double): this.type = set("percent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def position(value: fixed | normal): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def styles(value: Partial[ProgressStyle]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unfilled(value: Boolean): this.type = set("unfilled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapWidth(value: Double): this.type = set("wrapWidth", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.antDesignReactNative.progressMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ProgressProps
+  
+  def withProps(p: ProgressProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Progress.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

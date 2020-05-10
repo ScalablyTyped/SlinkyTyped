@@ -76,7 +76,7 @@ package object glacierMod {
     - java.lang.String
   */
   type StorageClass = typingsSlinky.awsSdk.glacierMod._StorageClass | java.lang.String
-  type Stream = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.glacierMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  type Stream = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.glacierMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   type TagKey = java.lang.String
   type TagKeyList = js.Array[java.lang.String]
   type TagMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glacierMod.TagValue]

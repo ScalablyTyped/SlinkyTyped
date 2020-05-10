@@ -18,11 +18,41 @@ trait MetricKeyDataPoints extends js.Object {
 
 object MetricKeyDataPoints {
   @scala.inline
-  def apply(DataPoints: DataPointsList = null, Key: ResponseResourceMetricKey = null): MetricKeyDataPoints = {
+  def apply(): MetricKeyDataPoints = {
     val __obj = js.Dynamic.literal()
-    if (DataPoints != null) __obj.updateDynamic("DataPoints")(DataPoints.asInstanceOf[js.Any])
-    if (Key != null) __obj.updateDynamic("Key")(Key.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricKeyDataPoints]
   }
+  @scala.inline
+  implicit class MetricKeyDataPointsOps[Self <: MetricKeyDataPoints] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataPoints(value: DataPointsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: ResponseResourceMetricKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -123,7 +123,7 @@ trait SVGSVGElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_SVGUnload(`type`: SVGUnload, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -137,7 +137,7 @@ trait SVGSVGElement
   def removeEventListener_SVGUnload(
     `type`: SVGUnload,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_SVGZoom(`type`: SVGZoom, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _]): Unit = js.native
@@ -151,7 +151,7 @@ trait SVGSVGElement
   def removeEventListener_SVGZoom(
     `type`: SVGZoom,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def setCurrentTime(seconds: Double): Unit = js.native
   /** @deprecated */
@@ -165,7 +165,8 @@ trait SVGSVGElement
 
 @JSGlobal("SVGSVGElement")
 @js.native
-object SVGSVGElement extends Instantiable0[SVGSVGElement] {
+object SVGSVGElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGSVGElement] {
   val SVG_ZOOMANDPAN_DISABLE: Double = js.native
   val SVG_ZOOMANDPAN_MAGNIFY: Double = js.native
   val SVG_ZOOMANDPAN_UNKNOWN: Double = js.native

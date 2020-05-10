@@ -22,66 +22,232 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojtagcloud.ojTagCloudSettableProperties<K, D>> */
+@js.native
 trait ojTagCloudSettablePropertiesLenient[K, D]
   extends /* key */ StringDictionary[js.Any] {
-  var animationOnDataChange: js.UndefOr[auto | none] = js.undefined
-  var animationOnDisplay: js.UndefOr[auto | none] = js.undefined
-  var as: js.UndefOr[String] = js.undefined
-  var data: js.UndefOr[DataProvider[K, D]] = js.undefined
-  var hiddenCategories: js.UndefOr[js.Array[String]] = js.undefined
-  var highlightMatch: js.UndefOr[any | all] = js.undefined
-  var highlightedCategories: js.UndefOr[js.Array[String]] = js.undefined
-  var hoverBehavior: js.UndefOr[dim | none] = js.undefined
-  var layout: js.UndefOr[cloud | rectangular] = js.undefined
-  var selection: js.UndefOr[js.Array[K]] = js.undefined
-  var selectionMode: js.UndefOr[single | multiple | none] = js.undefined
-  var styleDefaults: js.UndefOr[AnonHoverBehaviorDelay] = js.undefined
-  var tooltip: js.UndefOr[Anon24[K]] = js.undefined
-  var touchResponse: js.UndefOr[touchStart | auto] = js.undefined
-  var trackResize: js.UndefOr[on | off] = js.undefined
-  var translations: js.UndefOr[AnonLabelAndValue] = js.undefined
+  var animationOnDataChange: js.UndefOr[auto | none] = js.native
+  var animationOnDisplay: js.UndefOr[auto | none] = js.native
+  var as: js.UndefOr[String] = js.native
+  var data: js.UndefOr[DataProvider[K, D]] = js.native
+  var hiddenCategories: js.UndefOr[js.Array[String]] = js.native
+  var highlightMatch: js.UndefOr[any | all] = js.native
+  var highlightedCategories: js.UndefOr[js.Array[String]] = js.native
+  var hoverBehavior: js.UndefOr[dim | none] = js.native
+  var layout: js.UndefOr[cloud | rectangular] = js.native
+  var selection: js.UndefOr[js.Array[K]] = js.native
+  var selectionMode: js.UndefOr[single | multiple | none] = js.native
+  var styleDefaults: js.UndefOr[AnonHoverBehaviorDelay] = js.native
+  var tooltip: js.UndefOr[Anon24[K]] = js.native
+  var touchResponse: js.UndefOr[touchStart | auto] = js.native
+  var trackResize: js.UndefOr[on | off] = js.native
+  var translations: js.UndefOr[AnonLabelAndValue] = js.native
 }
 
 object ojTagCloudSettablePropertiesLenient {
   @scala.inline
-  def apply[K, D](
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    animationOnDataChange: auto | none = null,
-    animationOnDisplay: auto | none = null,
-    as: String = null,
-    data: DataProvider[K, D] = null,
-    hiddenCategories: js.Array[String] = null,
-    highlightMatch: any | all = null,
-    highlightedCategories: js.Array[String] = null,
-    hoverBehavior: dim | none = null,
-    layout: cloud | rectangular = null,
-    selection: js.Array[K] = null,
-    selectionMode: single | multiple | none = null,
-    styleDefaults: AnonHoverBehaviorDelay = null,
-    tooltip: Anon24[K] = null,
-    touchResponse: touchStart | auto = null,
-    trackResize: on | off = null,
-    translations: AnonLabelAndValue = null
-  ): ojTagCloudSettablePropertiesLenient[K, D] = {
+  def apply[K, D](): ojTagCloudSettablePropertiesLenient[K, D] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (animationOnDataChange != null) __obj.updateDynamic("animationOnDataChange")(animationOnDataChange.asInstanceOf[js.Any])
-    if (animationOnDisplay != null) __obj.updateDynamic("animationOnDisplay")(animationOnDisplay.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (hiddenCategories != null) __obj.updateDynamic("hiddenCategories")(hiddenCategories.asInstanceOf[js.Any])
-    if (highlightMatch != null) __obj.updateDynamic("highlightMatch")(highlightMatch.asInstanceOf[js.Any])
-    if (highlightedCategories != null) __obj.updateDynamic("highlightedCategories")(highlightedCategories.asInstanceOf[js.Any])
-    if (hoverBehavior != null) __obj.updateDynamic("hoverBehavior")(hoverBehavior.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (styleDefaults != null) __obj.updateDynamic("styleDefaults")(styleDefaults.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (touchResponse != null) __obj.updateDynamic("touchResponse")(touchResponse.asInstanceOf[js.Any])
-    if (trackResize != null) __obj.updateDynamic("trackResize")(trackResize.asInstanceOf[js.Any])
-    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojTagCloudSettablePropertiesLenient[K, D]]
   }
+  @scala.inline
+  implicit class ojTagCloudSettablePropertiesLenientOps[Self[k, d] <: ojTagCloudSettablePropertiesLenient[k, d], K, D] (val x: Self[K, D]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[K, D] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K, D]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
+    @scala.inline
+    def withAnimationOnDataChange(value: auto | none): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDataChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationOnDataChange: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDataChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationOnDisplay(value: auto | none): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationOnDisplay: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAs(value: String): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAs: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: DataProvider[K, D]): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHiddenCategories(value: js.Array[String]): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenCategories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHiddenCategories: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenCategories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightMatch(value: any | all): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightMatch: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightedCategories(value: js.Array[String]): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightedCategories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightedCategories: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightedCategories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverBehavior(value: dim | none): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverBehavior: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: cloud | rectangular): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelection(value: js.Array[K]): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelection: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionMode(value: single | multiple | none): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionMode: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleDefaults(value: AnonHoverBehaviorDelay): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleDefaults: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: Anon24[K]): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTouchResponse(value: touchStart | auto): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTouchResponse: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackResize(value: on | off): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackResize: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslations(value: AnonLabelAndValue): Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslations: Self[K, D] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,14 +26,41 @@ trait SchemaGoogleCloudVisionV1p3beta1ImportProductSetsResponse extends js.Objec
 
 object SchemaGoogleCloudVisionV1p3beta1ImportProductSetsResponse {
   @scala.inline
-  def apply(
-    referenceImages: js.Array[SchemaGoogleCloudVisionV1p3beta1ReferenceImage] = null,
-    statuses: js.Array[SchemaStatus] = null
-  ): SchemaGoogleCloudVisionV1p3beta1ImportProductSetsResponse = {
+  def apply(): SchemaGoogleCloudVisionV1p3beta1ImportProductSetsResponse = {
     val __obj = js.Dynamic.literal()
-    if (referenceImages != null) __obj.updateDynamic("referenceImages")(referenceImages.asInstanceOf[js.Any])
-    if (statuses != null) __obj.updateDynamic("statuses")(statuses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p3beta1ImportProductSetsResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p3beta1ImportProductSetsResponseOps[Self <: SchemaGoogleCloudVisionV1p3beta1ImportProductSetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReferenceImages(value: js.Array[SchemaGoogleCloudVisionV1p3beta1ReferenceImage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferenceImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceImages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatuses(value: js.Array[SchemaStatus]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statuses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatuses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statuses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

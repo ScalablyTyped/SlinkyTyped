@@ -1,15 +1,16 @@
 package typingsSlinky.reactstrap.components
 
+import typingsSlinky.reactstrap.dropdownMod.UncontrolledDropdownProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object UncontrolledButtonDropdown
-  extends SharedApply_UncontrolledDropdownProps_624550352[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[js.Any]] {
+object UncontrolledButtonDropdown {
   @JSImport("reactstrap", "UncontrolledButtonDropdown")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps[T](p: UncontrolledDropdownProps): SharedBuilder_UncontrolledDropdownProps1809112045[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[js.Any], T] = new SharedBuilder_UncontrolledDropdownProps1809112045[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[js.Any], T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T](companion: UncontrolledButtonDropdown.type): SharedBuilder_UncontrolledDropdownProps1809112045[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[js.Any], T] = new SharedBuilder_UncontrolledDropdownProps1809112045[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[js.Any], T](js.Array(this.component, js.Dictionary.empty))()
 }
 

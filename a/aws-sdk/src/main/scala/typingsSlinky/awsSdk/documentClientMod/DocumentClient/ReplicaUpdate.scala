@@ -18,11 +18,41 @@ trait ReplicaUpdate extends js.Object {
 
 object ReplicaUpdate {
   @scala.inline
-  def apply(Create: CreateReplicaAction = null, Delete: DeleteReplicaAction = null): ReplicaUpdate = {
+  def apply(): ReplicaUpdate = {
     val __obj = js.Dynamic.literal()
-    if (Create != null) __obj.updateDynamic("Create")(Create.asInstanceOf[js.Any])
-    if (Delete != null) __obj.updateDynamic("Delete")(Delete.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicaUpdate]
   }
+  @scala.inline
+  implicit class ReplicaUpdateOps[Self <: ReplicaUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: CreateReplicaAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Create")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelete(value: DeleteReplicaAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

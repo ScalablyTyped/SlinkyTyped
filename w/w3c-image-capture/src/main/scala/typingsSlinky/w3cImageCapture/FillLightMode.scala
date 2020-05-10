@@ -13,12 +13,10 @@ trait FillLightMode extends js.Object
 
 object FillLightMode {
   @scala.inline
-  def auto: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.auto = "auto".asInstanceOf[typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def flash: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.flash = "flash".asInstanceOf[typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.flash]
   @scala.inline
-  def flash: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.flash = this.cast("flash")
-  @scala.inline
-  def off: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.off = this.cast("off")
+  def off: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.off = "off".asInstanceOf[typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.off]
 }
 

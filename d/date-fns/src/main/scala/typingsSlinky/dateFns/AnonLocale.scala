@@ -11,21 +11,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLocale extends js.Object {
-  var locale: js.UndefOr[typingsSlinky.dateFns.mod.Locale] = js.undefined
-  var weekStartsOn: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.undefined
+  var locale: js.UndefOr[typingsSlinky.dateFns.mod.Locale] = js.native
+  var weekStartsOn: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.native
 }
 
 object AnonLocale {
   @scala.inline
-  def apply(
-    locale: typingsSlinky.dateFns.mod.Locale = null,
-    weekStartsOn: `0` | `1` | `2` | `3` | `4` | `5` | `6` = null
-  ): AnonLocale = {
+  def apply(): AnonLocale = {
     val __obj = js.Dynamic.literal()
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (weekStartsOn != null) __obj.updateDynamic("weekStartsOn")(weekStartsOn.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLocale]
   }
+  @scala.inline
+  implicit class AnonLocaleOps[Self <: AnonLocale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocale(value: typingsSlinky.dateFns.mod.Locale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeekStartsOn(value: `0` | `1` | `2` | `3` | `4` | `5` | `6`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekStartsOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeekStartsOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekStartsOn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

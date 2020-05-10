@@ -4,39 +4,139 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BootstrapToggleOptions extends js.Object {
-  var height: js.UndefOr[Double | String | Null] = js.undefined
-  var off: js.UndefOr[String] = js.undefined
-  var offstyle: js.UndefOr[String] = js.undefined
-  var on: js.UndefOr[String] = js.undefined
-  var onstyle: js.UndefOr[String] = js.undefined
-  var size: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[Double | String | Null] = js.undefined
+  var height: js.UndefOr[Double | String | Null] = js.native
+  var off: js.UndefOr[String] = js.native
+  var offstyle: js.UndefOr[String] = js.native
+  var on: js.UndefOr[String] = js.native
+  var onstyle: js.UndefOr[String] = js.native
+  var size: js.UndefOr[String] = js.native
+  var style: js.UndefOr[String] = js.native
+  var width: js.UndefOr[Double | String | Null] = js.native
 }
 
 object BootstrapToggleOptions {
   @scala.inline
-  def apply(
-    height: Double | String = null,
-    off: String = null,
-    offstyle: String = null,
-    on: String = null,
-    onstyle: String = null,
-    size: String = null,
-    style: String = null,
-    width: Double | String = null
-  ): BootstrapToggleOptions = {
+  def apply(): BootstrapToggleOptions = {
     val __obj = js.Dynamic.literal()
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (off != null) __obj.updateDynamic("off")(off.asInstanceOf[js.Any])
-    if (offstyle != null) __obj.updateDynamic("offstyle")(offstyle.asInstanceOf[js.Any])
-    if (on != null) __obj.updateDynamic("on")(on.asInstanceOf[js.Any])
-    if (onstyle != null) __obj.updateDynamic("onstyle")(onstyle.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootstrapToggleOptions]
   }
+  @scala.inline
+  implicit class BootstrapToggleOptionsOps[Self <: BootstrapToggleOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeightNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(null)
+        ret
+    }
+    @scala.inline
+    def withOff(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("off")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOff: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("off")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffstyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offstyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffstyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offstyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnstyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onstyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnstyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onstyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidthNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(null)
+        ret
+    }
+  }
+  
 }
 

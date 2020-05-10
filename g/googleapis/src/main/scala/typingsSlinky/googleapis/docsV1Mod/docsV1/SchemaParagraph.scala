@@ -46,24 +46,101 @@ trait SchemaParagraph extends js.Object {
 
 object SchemaParagraph {
   @scala.inline
-  def apply(
-    bullet: SchemaBullet = null,
-    elements: js.Array[SchemaParagraphElement] = null,
-    paragraphStyle: SchemaParagraphStyle = null,
-    positionedObjectIds: js.Array[String] = null,
-    suggestedBulletChanges: StringDictionary[SchemaSuggestedBullet] = null,
-    suggestedParagraphStyleChanges: StringDictionary[SchemaSuggestedParagraphStyle] = null,
-    suggestedPositionedObjectIds: StringDictionary[SchemaObjectReferences] = null
-  ): SchemaParagraph = {
+  def apply(): SchemaParagraph = {
     val __obj = js.Dynamic.literal()
-    if (bullet != null) __obj.updateDynamic("bullet")(bullet.asInstanceOf[js.Any])
-    if (elements != null) __obj.updateDynamic("elements")(elements.asInstanceOf[js.Any])
-    if (paragraphStyle != null) __obj.updateDynamic("paragraphStyle")(paragraphStyle.asInstanceOf[js.Any])
-    if (positionedObjectIds != null) __obj.updateDynamic("positionedObjectIds")(positionedObjectIds.asInstanceOf[js.Any])
-    if (suggestedBulletChanges != null) __obj.updateDynamic("suggestedBulletChanges")(suggestedBulletChanges.asInstanceOf[js.Any])
-    if (suggestedParagraphStyleChanges != null) __obj.updateDynamic("suggestedParagraphStyleChanges")(suggestedParagraphStyleChanges.asInstanceOf[js.Any])
-    if (suggestedPositionedObjectIds != null) __obj.updateDynamic("suggestedPositionedObjectIds")(suggestedPositionedObjectIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaParagraph]
   }
+  @scala.inline
+  implicit class SchemaParagraphOps[Self <: SchemaParagraph] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBullet(value: SchemaBullet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bullet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBullet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bullet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElements(value: js.Array[SchemaParagraphElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParagraphStyle(value: SchemaParagraphStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParagraphStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionedObjectIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionedObjectIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositionedObjectIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionedObjectIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedBulletChanges(value: StringDictionary[SchemaSuggestedBullet]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedBulletChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedBulletChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedBulletChanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedParagraphStyleChanges(value: StringDictionary[SchemaSuggestedParagraphStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedParagraphStyleChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedParagraphStyleChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedParagraphStyleChanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedPositionedObjectIds(value: StringDictionary[SchemaObjectReferences]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedPositionedObjectIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedPositionedObjectIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedPositionedObjectIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

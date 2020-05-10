@@ -4,175 +4,558 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAlt extends js.Object {
   /** Data format for the response. */
-  var alt: js.UndefOr[String] = js.undefined
+  var alt: js.UndefOr[String] = js.native
   /** Turns off the translation between zh-CN and zh-TW. */
-  var c2coff: js.UndefOr[String] = js.undefined
+  var c2coff: js.UndefOr[String] = js.native
   /** Country restrict(s). */
-  var cr: js.UndefOr[String] = js.undefined
+  var cr: js.UndefOr[String] = js.native
   /** The custom search engine ID to scope this search query */
-  var cx: js.UndefOr[String] = js.undefined
+  var cx: js.UndefOr[String] = js.native
   /** Specifies all search results are from a time period */
-  var dateRestrict: js.UndefOr[String] = js.undefined
+  var dateRestrict: js.UndefOr[String] = js.native
   /** Identifies a phrase that all documents in the search results must contain */
-  var exactTerms: js.UndefOr[String] = js.undefined
+  var exactTerms: js.UndefOr[String] = js.native
   /** Identifies a word or phrase that should not appear in any documents in the search results */
-  var excludeTerms: js.UndefOr[String] = js.undefined
+  var excludeTerms: js.UndefOr[String] = js.native
   /** Selector specifying which fields to include in a partial response. */
-  var fields: js.UndefOr[String] = js.undefined
+  var fields: js.UndefOr[String] = js.native
   /** Returns images of a specified type. Some of the allowed values are: bmp, gif, png, jpg, svg, pdf, ... */
-  var fileType: js.UndefOr[String] = js.undefined
+  var fileType: js.UndefOr[String] = js.native
   /** Controls turning on or off the duplicate content filter. */
-  var filter: js.UndefOr[String] = js.undefined
+  var filter: js.UndefOr[String] = js.native
   /** Geolocation of end user. */
-  var gl: js.UndefOr[String] = js.undefined
+  var gl: js.UndefOr[String] = js.native
   /** The local Google domain to use to perform the search. */
-  var googlehost: js.UndefOr[String] = js.undefined
+  var googlehost: js.UndefOr[String] = js.native
   /** Creates a range in form as_nlo value..as_nhi value and attempts to append it to query */
-  var highRange: js.UndefOr[String] = js.undefined
+  var highRange: js.UndefOr[String] = js.native
   /** Sets the user interface language. */
-  var hl: js.UndefOr[String] = js.undefined
+  var hl: js.UndefOr[String] = js.native
   /** Appends the extra query terms to the query. */
-  var hq: js.UndefOr[String] = js.undefined
+  var hq: js.UndefOr[String] = js.native
   /** Returns black and white, grayscale, or color images: mono, gray, and color. */
-  var imgColorType: js.UndefOr[String] = js.undefined
+  var imgColorType: js.UndefOr[String] = js.native
   /** Returns images of a specific dominant color: yellow, green, teal, blue, purple, pink, white, gray, black and brown. */
-  var imgDominantColor: js.UndefOr[String] = js.undefined
+  var imgDominantColor: js.UndefOr[String] = js.native
   /** Returns images of a specified size, where size can be one of: icon, small, medium, large, xlarge, xxlarge, and huge. */
-  var imgSize: js.UndefOr[String] = js.undefined
+  var imgSize: js.UndefOr[String] = js.native
   /** Returns images of a type, which can be one of: clipart, face, lineart, news, and photo. */
-  var imgType: js.UndefOr[String] = js.undefined
+  var imgType: js.UndefOr[String] = js.native
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  var key: js.UndefOr[String] = js.undefined
+  var key: js.UndefOr[String] = js.native
   /** Specifies that all search results should contain a link to a particular URL */
-  var linkSite: js.UndefOr[String] = js.undefined
+  var linkSite: js.UndefOr[String] = js.native
   /** Creates a range in form as_nlo value..as_nhi value and attempts to append it to query */
-  var lowRange: js.UndefOr[String] = js.undefined
+  var lowRange: js.UndefOr[String] = js.native
   /** The language restriction for the search results */
-  var lr: js.UndefOr[String] = js.undefined
+  var lr: js.UndefOr[String] = js.native
   /** Number of search results to return */
-  var num: js.UndefOr[Double] = js.undefined
+  var num: js.UndefOr[Double] = js.native
   /** OAuth 2.0 token for the current user. */
-  var oauth_token: js.UndefOr[String] = js.undefined
+  var oauth_token: js.UndefOr[String] = js.native
   /**
     * Provides additional search terms to check for in a document, where each document in the search results must contain at least one of the additional
     * search terms
     */
-  var orTerms: js.UndefOr[String] = js.undefined
+  var orTerms: js.UndefOr[String] = js.native
   /** Returns response with indentations and line breaks. */
-  var prettyPrint: js.UndefOr[Boolean] = js.undefined
+  var prettyPrint: js.UndefOr[Boolean] = js.native
   /** Query */
-  var q: String
+  var q: String = js.native
   /**
     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
     * Overrides userIp if both are provided.
     */
-  var quotaUser: js.UndefOr[String] = js.undefined
+  var quotaUser: js.UndefOr[String] = js.native
   /** Specifies that all search results should be pages that are related to the specified URL */
-  var relatedSite: js.UndefOr[String] = js.undefined
+  var relatedSite: js.UndefOr[String] = js.native
   /**
     * Filters based on licensing. Supported values include: cc_publicdomain, cc_attribute, cc_sharealike, cc_noncommercial, cc_nonderived and combinations of
     * these.
     */
-  var rights: js.UndefOr[String] = js.undefined
+  var rights: js.UndefOr[String] = js.native
   /** Search safety level */
-  var safe: js.UndefOr[String] = js.undefined
+  var safe: js.UndefOr[String] = js.native
   /** Specifies the search type: image. */
-  var searchType: js.UndefOr[String] = js.undefined
+  var searchType: js.UndefOr[String] = js.native
   /** Specifies all search results should be pages from a given site */
-  var siteSearch: js.UndefOr[String] = js.undefined
+  var siteSearch: js.UndefOr[String] = js.native
   /** Controls whether to include or exclude results from the site named in the as_sitesearch parameter */
-  var siteSearchFilter: js.UndefOr[String] = js.undefined
+  var siteSearchFilter: js.UndefOr[String] = js.native
   /** The sort expression to apply to the results */
-  var sort: js.UndefOr[String] = js.undefined
+  var sort: js.UndefOr[String] = js.native
   /** The index of the first result to return */
-  var start: js.UndefOr[Double] = js.undefined
+  var start: js.UndefOr[Double] = js.native
   /** IP address of the site where the request originates. Use this if you want to enforce per-user limits. */
-  var userIp: js.UndefOr[String] = js.undefined
+  var userIp: js.UndefOr[String] = js.native
 }
 
 object AnonAlt {
   @scala.inline
-  def apply(
-    q: String,
-    alt: String = null,
-    c2coff: String = null,
-    cr: String = null,
-    cx: String = null,
-    dateRestrict: String = null,
-    exactTerms: String = null,
-    excludeTerms: String = null,
-    fields: String = null,
-    fileType: String = null,
-    filter: String = null,
-    gl: String = null,
-    googlehost: String = null,
-    highRange: String = null,
-    hl: String = null,
-    hq: String = null,
-    imgColorType: String = null,
-    imgDominantColor: String = null,
-    imgSize: String = null,
-    imgType: String = null,
-    key: String = null,
-    linkSite: String = null,
-    lowRange: String = null,
-    lr: String = null,
-    num: Int | Double = null,
-    oauth_token: String = null,
-    orTerms: String = null,
-    prettyPrint: js.UndefOr[Boolean] = js.undefined,
-    quotaUser: String = null,
-    relatedSite: String = null,
-    rights: String = null,
-    safe: String = null,
-    searchType: String = null,
-    siteSearch: String = null,
-    siteSearchFilter: String = null,
-    sort: String = null,
-    start: Int | Double = null,
-    userIp: String = null
-  ): AnonAlt = {
+  def apply(q: String): AnonAlt = {
     val __obj = js.Dynamic.literal(q = q.asInstanceOf[js.Any])
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
-    if (c2coff != null) __obj.updateDynamic("c2coff")(c2coff.asInstanceOf[js.Any])
-    if (cr != null) __obj.updateDynamic("cr")(cr.asInstanceOf[js.Any])
-    if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
-    if (dateRestrict != null) __obj.updateDynamic("dateRestrict")(dateRestrict.asInstanceOf[js.Any])
-    if (exactTerms != null) __obj.updateDynamic("exactTerms")(exactTerms.asInstanceOf[js.Any])
-    if (excludeTerms != null) __obj.updateDynamic("excludeTerms")(excludeTerms.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (fileType != null) __obj.updateDynamic("fileType")(fileType.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (gl != null) __obj.updateDynamic("gl")(gl.asInstanceOf[js.Any])
-    if (googlehost != null) __obj.updateDynamic("googlehost")(googlehost.asInstanceOf[js.Any])
-    if (highRange != null) __obj.updateDynamic("highRange")(highRange.asInstanceOf[js.Any])
-    if (hl != null) __obj.updateDynamic("hl")(hl.asInstanceOf[js.Any])
-    if (hq != null) __obj.updateDynamic("hq")(hq.asInstanceOf[js.Any])
-    if (imgColorType != null) __obj.updateDynamic("imgColorType")(imgColorType.asInstanceOf[js.Any])
-    if (imgDominantColor != null) __obj.updateDynamic("imgDominantColor")(imgDominantColor.asInstanceOf[js.Any])
-    if (imgSize != null) __obj.updateDynamic("imgSize")(imgSize.asInstanceOf[js.Any])
-    if (imgType != null) __obj.updateDynamic("imgType")(imgType.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (linkSite != null) __obj.updateDynamic("linkSite")(linkSite.asInstanceOf[js.Any])
-    if (lowRange != null) __obj.updateDynamic("lowRange")(lowRange.asInstanceOf[js.Any])
-    if (lr != null) __obj.updateDynamic("lr")(lr.asInstanceOf[js.Any])
-    if (num != null) __obj.updateDynamic("num")(num.asInstanceOf[js.Any])
-    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
-    if (orTerms != null) __obj.updateDynamic("orTerms")(orTerms.asInstanceOf[js.Any])
-    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.asInstanceOf[js.Any])
-    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
-    if (relatedSite != null) __obj.updateDynamic("relatedSite")(relatedSite.asInstanceOf[js.Any])
-    if (rights != null) __obj.updateDynamic("rights")(rights.asInstanceOf[js.Any])
-    if (safe != null) __obj.updateDynamic("safe")(safe.asInstanceOf[js.Any])
-    if (searchType != null) __obj.updateDynamic("searchType")(searchType.asInstanceOf[js.Any])
-    if (siteSearch != null) __obj.updateDynamic("siteSearch")(siteSearch.asInstanceOf[js.Any])
-    if (siteSearchFilter != null) __obj.updateDynamic("siteSearchFilter")(siteSearchFilter.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAlt]
   }
+  @scala.inline
+  implicit class AnonAltOps[Self <: AnonAlt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQ(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withC2coff(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("c2coff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutC2coff: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("c2coff")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCx(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateRestrict(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRestrict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateRestrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateRestrict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExactTerms(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exactTerms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExactTerms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exactTerms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludeTerms(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeTerms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludeTerms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeTerms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGooglehost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googlehost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGooglehost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("googlehost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHq(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hq")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHq: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hq")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImgColorType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgColorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImgColorType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgColorType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImgDominantColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgDominantColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImgDominantColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgDominantColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImgSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImgSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImgType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImgType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkSite(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkSite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkSite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkSite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNum(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("num")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("num")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauth_token(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth_token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauth_token: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth_token")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrTerms(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orTerms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrTerms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orTerms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrettyPrint(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettyPrint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrettyPrint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettyPrint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelatedSite(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedSite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelatedSite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedSite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRights(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSafe(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSafe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("safe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSiteSearch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSiteSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteSearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSiteSearchFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteSearchFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSiteSearchFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteSearchFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userIp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

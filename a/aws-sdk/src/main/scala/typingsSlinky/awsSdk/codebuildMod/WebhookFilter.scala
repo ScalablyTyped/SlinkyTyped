@@ -22,15 +22,42 @@ trait WebhookFilter extends js.Object {
 
 object WebhookFilter {
   @scala.inline
-  def apply(
-    pattern: String,
-    `type`: WebhookFilterType,
-    excludeMatchedPattern: js.UndefOr[scala.Boolean] = js.undefined
-  ): WebhookFilter = {
+  def apply(pattern: String, `type`: WebhookFilterType): WebhookFilter = {
     val __obj = js.Dynamic.literal(pattern = pattern.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(excludeMatchedPattern)) __obj.updateDynamic("excludeMatchedPattern")(excludeMatchedPattern.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebhookFilter]
   }
+  @scala.inline
+  implicit class WebhookFilterOps[Self <: WebhookFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: WebhookFilterType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcludeMatchedPattern(value: WrapperBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeMatchedPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludeMatchedPattern: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("excludeMatchedPattern")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

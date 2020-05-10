@@ -1,11 +1,8 @@
 package typingsSlinky.downshift.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.downshift.mod.A11yStatusMessageOptions
 import typingsSlinky.downshift.mod.ControllerStateAndHelpers
 import typingsSlinky.downshift.mod.DownshiftProps
@@ -18,78 +15,96 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Downshift
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Downshift {
   @JSImport("downshift", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id */
-  def apply(
-    defaultHighlightedIndex: Int | Double = null,
-    defaultIsOpen: js.UndefOr[Boolean] = js.undefined,
-    environment: Environment = null,
-    getA11yStatusMessage: /* options */ A11yStatusMessageOptions[js.Any] => String = null,
-    getItemId: /* index */ js.UndefOr[Double] => String = null,
-    highlightedIndex: Int | Double = null,
-    initialHighlightedIndex: Int | Double = null,
-    initialInputValue: String = null,
-    initialIsOpen: js.UndefOr[Boolean] = js.undefined,
-    initialSelectedItem: js.Any = null,
-    inputId: String = null,
-    inputValue: String = null,
-    isOpen: js.UndefOr[Boolean] = js.undefined,
-    itemCount: Int | Double = null,
-    itemToString: /* item */ js.Any | Null => String = null,
-    labelId: String = null,
-    menuId: String = null,
-    onChange: (/* selectedItem */ js.Any | Null, /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit = null,
-    onInputValueChange: (/* inputValue */ String, /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit = null,
-    onOuterClick: /* stateAndHelpers */ ControllerStateAndHelpers[js.Any] => Unit = null,
-    onSelect: (/* selectedItem */ js.Any | Null, /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit = null,
-    onStateChange: (/* options */ StateChangeOptions[js.Any], /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit = null,
-    onUserAction: (/* options */ StateChangeOptions[js.Any], /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit = null,
-    scrollIntoView: (/* node */ HTMLElement, /* menuNode */ HTMLElement) => Unit = null,
-    selectedItem: js.Any = null,
-    selectedItemChanged: (js.Any, js.Any) => Boolean = null,
-    stateReducer: (/* state */ DownshiftState[js.Any], /* changes */ StateChangeOptions[js.Any]) => Partial[StateChangeOptions[js.Any]] = null,
-    suppressRefError: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (defaultHighlightedIndex != null) __obj.updateDynamic("defaultHighlightedIndex")(defaultHighlightedIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultIsOpen)) __obj.updateDynamic("defaultIsOpen")(defaultIsOpen.asInstanceOf[js.Any])
-    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
-    if (getA11yStatusMessage != null) __obj.updateDynamic("getA11yStatusMessage")(js.Any.fromFunction1(getA11yStatusMessage))
-    if (getItemId != null) __obj.updateDynamic("getItemId")(js.Any.fromFunction1(getItemId))
-    if (highlightedIndex != null) __obj.updateDynamic("highlightedIndex")(highlightedIndex.asInstanceOf[js.Any])
-    if (initialHighlightedIndex != null) __obj.updateDynamic("initialHighlightedIndex")(initialHighlightedIndex.asInstanceOf[js.Any])
-    if (initialInputValue != null) __obj.updateDynamic("initialInputValue")(initialInputValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(initialIsOpen)) __obj.updateDynamic("initialIsOpen")(initialIsOpen.asInstanceOf[js.Any])
-    if (initialSelectedItem != null) __obj.updateDynamic("initialSelectedItem")(initialSelectedItem.asInstanceOf[js.Any])
-    if (inputId != null) __obj.updateDynamic("inputId")(inputId.asInstanceOf[js.Any])
-    if (inputValue != null) __obj.updateDynamic("inputValue")(inputValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.asInstanceOf[js.Any])
-    if (itemCount != null) __obj.updateDynamic("itemCount")(itemCount.asInstanceOf[js.Any])
-    if (itemToString != null) __obj.updateDynamic("itemToString")(js.Any.fromFunction1(itemToString))
-    if (labelId != null) __obj.updateDynamic("labelId")(labelId.asInstanceOf[js.Any])
-    if (menuId != null) __obj.updateDynamic("menuId")(menuId.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onInputValueChange != null) __obj.updateDynamic("onInputValueChange")(js.Any.fromFunction2(onInputValueChange))
-    if (onOuterClick != null) __obj.updateDynamic("onOuterClick")(js.Any.fromFunction1(onOuterClick))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
-    if (onStateChange != null) __obj.updateDynamic("onStateChange")(js.Any.fromFunction2(onStateChange))
-    if (onUserAction != null) __obj.updateDynamic("onUserAction")(js.Any.fromFunction2(onUserAction))
-    if (scrollIntoView != null) __obj.updateDynamic("scrollIntoView")(js.Any.fromFunction2(scrollIntoView))
-    if (selectedItem != null) __obj.updateDynamic("selectedItem")(selectedItem.asInstanceOf[js.Any])
-    if (selectedItemChanged != null) __obj.updateDynamic("selectedItemChanged")(js.Any.fromFunction2(selectedItemChanged))
-    if (stateReducer != null) __obj.updateDynamic("stateReducer")(js.Any.fromFunction2(stateReducer))
-    if (!js.isUndefined(suppressRefError)) __obj.updateDynamic("suppressRefError")(suppressRefError.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def defaultHighlightedIndex(value: Double): this.type = set("defaultHighlightedIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultHighlightedIndexNull: this.type = set("defaultHighlightedIndex", null)
+    @scala.inline
+    def defaultIsOpen(value: Boolean): this.type = set("defaultIsOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def environment(value: Environment): this.type = set("environment", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getA11yStatusMessage(value: /* options */ A11yStatusMessageOptions[js.Any] => String): this.type = set("getA11yStatusMessage", js.Any.fromFunction1(value))
+    @scala.inline
+    def getItemId(value: /* index */ js.UndefOr[Double] => String): this.type = set("getItemId", js.Any.fromFunction1(value))
+    @scala.inline
+    def highlightedIndex(value: Double): this.type = set("highlightedIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightedIndexNull: this.type = set("highlightedIndex", null)
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialHighlightedIndex(value: Double): this.type = set("initialHighlightedIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialHighlightedIndexNull: this.type = set("initialHighlightedIndex", null)
+    @scala.inline
+    def initialInputValue(value: String): this.type = set("initialInputValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialIsOpen(value: Boolean): this.type = set("initialIsOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialSelectedItem(value: js.Any): this.type = set("initialSelectedItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputId(value: String): this.type = set("inputId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputValue(value: String): this.type = set("inputValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputValueNull: this.type = set("inputValue", null)
+    @scala.inline
+    def isOpen(value: Boolean): this.type = set("isOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemCount(value: Double): this.type = set("itemCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemToString(value: /* item */ js.Any | Null => String): this.type = set("itemToString", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelId(value: String): this.type = set("labelId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuId(value: String): this.type = set("menuId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(
+      value: (/* selectedItem */ js.Any | Null, /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onInputValueChange(value: (/* inputValue */ String, /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit): this.type = set("onInputValueChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onOuterClick(value: /* stateAndHelpers */ ControllerStateAndHelpers[js.Any] => Unit): this.type = set("onOuterClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(
+      value: (/* selectedItem */ js.Any | Null, /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit
+    ): this.type = set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def onStateChange(
+      value: (/* options */ StateChangeOptions[js.Any], /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit
+    ): this.type = set("onStateChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onUserAction(
+      value: (/* options */ StateChangeOptions[js.Any], /* stateAndHelpers */ ControllerStateAndHelpers[js.Any]) => Unit
+    ): this.type = set("onUserAction", js.Any.fromFunction2(value))
+    @scala.inline
+    def scrollIntoView(value: (/* node */ HTMLElement, /* menuNode */ HTMLElement) => Unit): this.type = set("scrollIntoView", js.Any.fromFunction2(value))
+    @scala.inline
+    def selectedItem(value: js.Any): this.type = set("selectedItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedItemNull: this.type = set("selectedItem", null)
+    @scala.inline
+    def selectedItemChanged(value: (js.Any, js.Any) => Boolean): this.type = set("selectedItemChanged", js.Any.fromFunction2(value))
+    @scala.inline
+    def stateReducer(
+      value: (/* state */ DownshiftState[js.Any], /* changes */ StateChangeOptions[js.Any]) => Partial[StateChangeOptions[js.Any]]
+    ): this.type = set("stateReducer", js.Any.fromFunction2(value))
+    @scala.inline
+    def suppressRefError(value: Boolean): this.type = set("suppressRefError", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.downshift.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DownshiftProps[js.Any]
+  
+  def withProps(p: DownshiftProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Downshift.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

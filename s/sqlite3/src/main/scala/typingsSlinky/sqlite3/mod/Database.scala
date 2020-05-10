@@ -7,7 +7,6 @@ import typingsSlinky.sqlite3.sqlite3Strings.error
 import typingsSlinky.sqlite3.sqlite3Strings.open
 import typingsSlinky.sqlite3.sqlite3Strings.profile
 import typingsSlinky.sqlite3.sqlite3Strings.trace
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +21,7 @@ class Database protected () extends EventEmitter {
   def all(sql: String): this.type = js.native
   def all(
     sql: String,
-    callback: js.ThisFunction2[/* this */ Statement, /* err */ Error | Null, /* rows */ js.Array[_], Unit]
+    callback: js.ThisFunction2[/* this */ Statement, /* err */ js.Error | Null, /* rows */ js.Array[_], Unit]
   ): this.type = js.native
   def all(sql: String, params: js.Any*): this.type = js.native
   def all(sql: String, params: js.Any): this.type = js.native
@@ -38,24 +37,24 @@ class Database protected () extends EventEmitter {
   def each(sql: String): this.type = js.native
   def each(
     sql: String,
-    callback: js.ThisFunction2[/* this */ Statement, /* err */ Error | Null, /* row */ js.Any, Unit]
+    callback: js.ThisFunction2[/* this */ Statement, /* err */ js.Error | Null, /* row */ js.Any, Unit]
   ): this.type = js.native
   def each(
     sql: String,
-    callback: js.ThisFunction2[/* this */ Statement, /* err */ Error | Null, /* row */ js.Any, Unit],
-    complete: js.Function2[/* err */ Error | Null, /* count */ Double, Unit]
+    callback: js.ThisFunction2[/* this */ Statement, /* err */ js.Error | Null, /* row */ js.Any, Unit],
+    complete: js.Function2[/* err */ js.Error | Null, /* count */ Double, Unit]
   ): this.type = js.native
   def each(sql: String, params: js.Any*): this.type = js.native
   def each(sql: String, params: js.Any): this.type = js.native
   def each(
     sql: String,
     params: js.Any,
-    callback: js.ThisFunction2[/* this */ Statement, /* err */ Error | Null, /* row */ js.Any, Unit]
+    callback: js.ThisFunction2[/* this */ Statement, /* err */ js.Error | Null, /* row */ js.Any, Unit]
   ): this.type = js.native
   def each(
     sql: String,
     params: js.Any,
-    callback: js.ThisFunction2[/* this */ Statement, /* err */ Error | Null, /* row */ js.Any, Unit],
+    callback: js.ThisFunction2[/* this */ Statement, /* err */ js.Error | Null, /* row */ js.Any, Unit],
     complete: js.Function2[/* err */ js.Error | Null, /* count */ Double, Unit]
   ): this.type = js.native
   def exec(sql: String): this.type = js.native
@@ -63,7 +62,7 @@ class Database protected () extends EventEmitter {
   def get(sql: String): this.type = js.native
   def get(
     sql: String,
-    callback: js.ThisFunction2[/* this */ Statement, /* err */ Error | Null, /* row */ js.Any, Unit]
+    callback: js.ThisFunction2[/* this */ Statement, /* err */ js.Error | Null, /* row */ js.Any, Unit]
   ): this.type = js.native
   def get(sql: String, params: js.Any*): this.type = js.native
   def get(sql: String, params: js.Any): this.type = js.native
@@ -86,7 +85,7 @@ class Database protected () extends EventEmitter {
   def parallelize(): Unit = js.native
   def parallelize(callback: js.Function0[Unit]): Unit = js.native
   def prepare(sql: String): Statement = js.native
-  def prepare(sql: String, callback: js.ThisFunction1[/* this */ Statement, /* err */ Error | Null, Unit]): Statement = js.native
+  def prepare(sql: String, callback: js.ThisFunction1[/* this */ Statement, /* err */ js.Error | Null, Unit]): Statement = js.native
   def prepare(sql: String, params: js.Any*): Statement = js.native
   def prepare(sql: String, params: js.Any): Statement = js.native
   def prepare(
@@ -95,7 +94,7 @@ class Database protected () extends EventEmitter {
     callback: js.ThisFunction1[/* this */ Statement, /* err */ js.Error | Null, Unit]
   ): Statement = js.native
   def run(sql: String): this.type = js.native
-  def run(sql: String, callback: js.ThisFunction1[/* this */ RunResult, /* err */ Error | Null, Unit]): this.type = js.native
+  def run(sql: String, callback: js.ThisFunction1[/* this */ RunResult, /* err */ js.Error | Null, Unit]): this.type = js.native
   def run(sql: String, params: js.Any*): this.type = js.native
   def run(sql: String, params: js.Any): this.type = js.native
   def run(

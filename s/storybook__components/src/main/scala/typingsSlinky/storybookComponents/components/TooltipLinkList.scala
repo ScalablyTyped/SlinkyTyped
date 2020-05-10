@@ -1,32 +1,31 @@
 package typingsSlinky.storybookComponents.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookComponents.tooltipLinkListMod.TooltipLinkListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TooltipLinkList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TooltipLinkList {
   @JSImport("@storybook/components", "TooltipLinkList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    links: js.Array[typingsSlinky.storybookComponents.tooltipLinkListMod.Link],
-    LinkWrapper: ReactComponentClass[js.Object] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(links = links.asInstanceOf[js.Any])
-    if (LinkWrapper != null) __obj.updateDynamic("LinkWrapper")(LinkWrapper.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def LinkWrapper(value: ReactComponentClass[js.Object]): this.type = set("LinkWrapper", value.asInstanceOf[js.Any])
   }
-  type Props = TooltipLinkListProps
+  
+  def withProps(p: TooltipLinkListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(links: js.Array[typingsSlinky.storybookComponents.tooltipLinkListMod.Link]): Builder = {
+    val __props = js.Dynamic.literal(links = links.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TooltipLinkListProps]))
+  }
 }
 

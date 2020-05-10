@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("sip.js/lib/Constants", "C.MESSAGE")
 @js.native
 object MESSAGE
-  extends TopLevel[typingsSlinky.sipJs.sipJsStrings.MESSAGE]
+  extends TopLevel[/* "0.15.10" */ String]
 

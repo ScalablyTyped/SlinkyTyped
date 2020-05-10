@@ -1,45 +1,43 @@
 package typingsSlinky.grommet.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.grommetStrings.window
 import typingsSlinky.grommet.infiniteScrollMod.InfiniteScrollProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InfiniteScroll
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.mod.InfiniteScroll] {
+object InfiniteScroll {
   @JSImport("grommet", "InfiniteScroll")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    items: js.Array[_] = null,
-    onMore: /* repeated */ js.Any => _ = null,
-    renderMarker: /* repeated */ js.Any => _ = null,
-    replace: js.UndefOr[Boolean] = js.undefined,
-    scrollableAncestor: TagMod[Any] | window = null,
-    show: Int | Double = null,
-    step: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.grommet.mod.InfiniteScroll] = {
-    val __obj = js.Dynamic.literal()
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (onMore != null) __obj.updateDynamic("onMore")(js.Any.fromFunction1(onMore))
-    if (renderMarker != null) __obj.updateDynamic("renderMarker")(js.Any.fromFunction1(renderMarker))
-    if (!js.isUndefined(replace)) __obj.updateDynamic("replace")(replace.asInstanceOf[js.Any])
-    if (scrollableAncestor != null) __obj.updateDynamic("scrollableAncestor")(scrollableAncestor.asInstanceOf[js.Any])
-    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.grommet.mod.InfiniteScroll] {
+    @scala.inline
+    def items(value: js.Array[_]): this.type = set("items", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onMore(value: /* repeated */ js.Any => _): this.type = set("onMore", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderMarker(value: /* repeated */ js.Any => _): this.type = set("renderMarker", js.Any.fromFunction1(value))
+    @scala.inline
+    def replace(value: Boolean): this.type = set("replace", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollableAncestorReactElement(value: ReactElement): this.type = set("scrollableAncestor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollableAncestor(value: TagMod[Any] | window): this.type = set("scrollableAncestor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def show(value: Double): this.type = set("show", value.asInstanceOf[js.Any])
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.grommet.mod.InfiniteScroll] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.grommet.mod.InfiniteScroll](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = InfiniteScrollProps
+  
+  def withProps(p: InfiniteScrollProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: InfiniteScroll.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

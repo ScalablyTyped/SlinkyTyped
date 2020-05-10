@@ -1,45 +1,55 @@
 package typingsSlinky.reactIntl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactIntl.mod.IntlShape
 import typingsSlinky.reactIntl.mod.Props2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormattedPluralWrappedComponent
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object FormattedPluralWrappedComponent {
   @JSImport("react-intl", "FormattedPlural.WrappedComponent")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    intl: IntlShape,
-    other: TagMod[Any],
-    value: Double,
-    few: TagMod[Any] = null,
-    format: String = null,
-    many: TagMod[Any] = null,
-    one: TagMod[Any] = null,
-    two: TagMod[Any] = null,
-    zero: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(intl = intl.asInstanceOf[js.Any], other = other.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (few != null) __obj.updateDynamic("few")(few.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (many != null) __obj.updateDynamic("many")(many.asInstanceOf[js.Any])
-    if (one != null) __obj.updateDynamic("one")(one.asInstanceOf[js.Any])
-    if (two != null) __obj.updateDynamic("two")(two.asInstanceOf[js.Any])
-    if (zero != null) __obj.updateDynamic("zero")(zero.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def fewReactElement(value: ReactElement): this.type = set("few", value.asInstanceOf[js.Any])
+    @scala.inline
+    def few(value: TagMod[Any]): this.type = set("few", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: String): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def manyReactElement(value: ReactElement): this.type = set("many", value.asInstanceOf[js.Any])
+    @scala.inline
+    def many(value: TagMod[Any]): this.type = set("many", value.asInstanceOf[js.Any])
+    @scala.inline
+    def oneReactElement(value: ReactElement): this.type = set("one", value.asInstanceOf[js.Any])
+    @scala.inline
+    def one(value: TagMod[Any]): this.type = set("one", value.asInstanceOf[js.Any])
+    @scala.inline
+    def other(value: TagMod[Any]): this.type = set("other", value.asInstanceOf[js.Any])
+    @scala.inline
+    def twoReactElement(value: ReactElement): this.type = set("two", value.asInstanceOf[js.Any])
+    @scala.inline
+    def two(value: TagMod[Any]): this.type = set("two", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zeroReactElement(value: ReactElement): this.type = set("zero", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zero(value: TagMod[Any]): this.type = set("zero", value.asInstanceOf[js.Any])
   }
-  type Props = Props2
+  
+  def withProps(p: Props2): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(intl: IntlShape, value: Double): Builder = {
+    val __props = js.Dynamic.literal(intl = intl.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props2]))
+  }
 }
 

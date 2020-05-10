@@ -13,12 +13,10 @@ trait PlaybackRepeatState extends js.Object
 
 object PlaybackRepeatState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def context: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.context = "context".asInstanceOf[typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.context]
   @scala.inline
-  def context: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.context = this.cast("context")
+  def off: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.off = "off".asInstanceOf[typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.off]
   @scala.inline
-  def off: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.off = this.cast("off")
-  @scala.inline
-  def track: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.track = this.cast("track")
+  def track: typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.track = "track".asInstanceOf[typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.track]
 }
 

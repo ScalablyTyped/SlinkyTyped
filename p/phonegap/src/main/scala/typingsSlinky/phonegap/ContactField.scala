@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContactField extends js.Object {
-  var pref: Boolean
-  var `type`: String
-  var value: String
+  var pref: Boolean = js.native
+  var `type`: String = js.native
+  var value: String = js.native
 }
 
 @JSGlobal("ContactField")

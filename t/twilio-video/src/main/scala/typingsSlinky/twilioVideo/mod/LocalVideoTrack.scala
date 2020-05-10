@@ -1,8 +1,8 @@
 package typingsSlinky.twilioVideo.mod
 
 import org.scalajs.dom.experimental.mediastream.MediaStreamTrack
+import org.scalajs.dom.raw.HTMLMediaElement
 import org.scalajs.dom.raw.HTMLVideoElement
-import typingsSlinky.std.HTMLMediaElement
 import typingsSlinky.twilioVideo.mod.Track.ID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,11 +24,11 @@ class LocalVideoTrack protected ()
   /* InferMemberOverrides */
   override def attach(element: HTMLMediaElement): HTMLVideoElement = js.native
   /* InferMemberOverrides */
-  override def detach(): js.Array[org.scalajs.dom.raw.HTMLMediaElement] = js.native
+  override def detach(): js.Array[HTMLMediaElement] = js.native
   /* InferMemberOverrides */
-  override def detach(element: String): js.Array[org.scalajs.dom.raw.HTMLMediaElement] = js.native
+  override def detach(element: String): js.Array[HTMLMediaElement] = js.native
   /* InferMemberOverrides */
-  override def detach(element: HTMLMediaElement): js.Array[org.scalajs.dom.raw.HTMLMediaElement] = js.native
+  override def detach(element: HTMLMediaElement): js.Array[HTMLMediaElement] = js.native
   def disable(): LocalVideoTrack = js.native
   def enable(): LocalVideoTrack = js.native
   def enable(enabled: Boolean): LocalVideoTrack = js.native

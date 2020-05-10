@@ -13,12 +13,10 @@ trait HandleMirroring extends js.Object
 
 object HandleMirroring {
   @scala.inline
-  def ANGLE: typingsSlinky.figma.figmaStrings.ANGLE = this.cast("ANGLE")
+  def ANGLE: typingsSlinky.figma.figmaStrings.ANGLE = "ANGLE".asInstanceOf[typingsSlinky.figma.figmaStrings.ANGLE]
   @scala.inline
-  def ANGLE_AND_LENGTH: typingsSlinky.figma.figmaStrings.ANGLE_AND_LENGTH = this.cast("ANGLE_AND_LENGTH")
+  def ANGLE_AND_LENGTH: typingsSlinky.figma.figmaStrings.ANGLE_AND_LENGTH = "ANGLE_AND_LENGTH".asInstanceOf[typingsSlinky.figma.figmaStrings.ANGLE_AND_LENGTH]
   @scala.inline
-  def NONE: typingsSlinky.figma.figmaStrings.NONE = this.cast("NONE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def NONE: typingsSlinky.figma.figmaStrings.NONE = "NONE".asInstanceOf[typingsSlinky.figma.figmaStrings.NONE]
 }
 

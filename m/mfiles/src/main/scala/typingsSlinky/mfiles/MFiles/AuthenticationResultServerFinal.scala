@@ -8,10 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.AuthenticationResultServerFinal")
 @js.native
-class AuthenticationResultServerFinal () extends IAuthenticationResultServerFinal {
-  /* CompleteClass */
-  override val ServerConnection: MFServerConnection = js.native
-}
+class AuthenticationResultServerFinal () extends IAuthenticationResultServerFinal
 
 @JSGlobal("MFiles.AuthenticationResultServerFinal")
 @js.native

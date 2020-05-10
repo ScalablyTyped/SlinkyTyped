@@ -129,58 +129,305 @@ trait SchemaProduct extends js.Object {
 
 object SchemaProduct {
   @scala.inline
-  def apply(
-    appTracks: js.Array[SchemaTrackInfo] = null,
-    appVersion: js.Array[SchemaAppVersion] = null,
-    authorName: String = null,
-    availableCountries: js.Array[String] = null,
-    availableTracks: js.Array[String] = null,
-    category: String = null,
-    contentRating: String = null,
-    description: String = null,
-    detailsUrl: String = null,
-    distributionChannel: String = null,
-    iconUrl: String = null,
-    kind: String = null,
-    lastUpdatedTimestampMillis: String = null,
-    minAndroidSdkVersion: Int | Double = null,
-    permissions: js.Array[SchemaProductPermission] = null,
-    productId: String = null,
-    productPricing: String = null,
-    recentChanges: String = null,
-    requiresContainerApp: js.UndefOr[Boolean] = js.undefined,
-    screenshotUrls: js.Array[String] = null,
-    signingCertificate: SchemaProductSigningCertificate = null,
-    smallIconUrl: String = null,
-    title: String = null,
-    workDetailsUrl: String = null
-  ): SchemaProduct = {
+  def apply(): SchemaProduct = {
     val __obj = js.Dynamic.literal()
-    if (appTracks != null) __obj.updateDynamic("appTracks")(appTracks.asInstanceOf[js.Any])
-    if (appVersion != null) __obj.updateDynamic("appVersion")(appVersion.asInstanceOf[js.Any])
-    if (authorName != null) __obj.updateDynamic("authorName")(authorName.asInstanceOf[js.Any])
-    if (availableCountries != null) __obj.updateDynamic("availableCountries")(availableCountries.asInstanceOf[js.Any])
-    if (availableTracks != null) __obj.updateDynamic("availableTracks")(availableTracks.asInstanceOf[js.Any])
-    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
-    if (contentRating != null) __obj.updateDynamic("contentRating")(contentRating.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (detailsUrl != null) __obj.updateDynamic("detailsUrl")(detailsUrl.asInstanceOf[js.Any])
-    if (distributionChannel != null) __obj.updateDynamic("distributionChannel")(distributionChannel.asInstanceOf[js.Any])
-    if (iconUrl != null) __obj.updateDynamic("iconUrl")(iconUrl.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (lastUpdatedTimestampMillis != null) __obj.updateDynamic("lastUpdatedTimestampMillis")(lastUpdatedTimestampMillis.asInstanceOf[js.Any])
-    if (minAndroidSdkVersion != null) __obj.updateDynamic("minAndroidSdkVersion")(minAndroidSdkVersion.asInstanceOf[js.Any])
-    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
-    if (productId != null) __obj.updateDynamic("productId")(productId.asInstanceOf[js.Any])
-    if (productPricing != null) __obj.updateDynamic("productPricing")(productPricing.asInstanceOf[js.Any])
-    if (recentChanges != null) __obj.updateDynamic("recentChanges")(recentChanges.asInstanceOf[js.Any])
-    if (!js.isUndefined(requiresContainerApp)) __obj.updateDynamic("requiresContainerApp")(requiresContainerApp.asInstanceOf[js.Any])
-    if (screenshotUrls != null) __obj.updateDynamic("screenshotUrls")(screenshotUrls.asInstanceOf[js.Any])
-    if (signingCertificate != null) __obj.updateDynamic("signingCertificate")(signingCertificate.asInstanceOf[js.Any])
-    if (smallIconUrl != null) __obj.updateDynamic("smallIconUrl")(smallIconUrl.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (workDetailsUrl != null) __obj.updateDynamic("workDetailsUrl")(workDetailsUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProduct]
   }
+  @scala.inline
+  implicit class SchemaProductOps[Self <: SchemaProduct] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppTracks(value: js.Array[SchemaTrackInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appTracks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppTracks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appTracks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppVersion(value: js.Array[SchemaAppVersion]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailableCountries(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableCountries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailableCountries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableCountries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailableTracks(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableTracks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailableTracks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availableTracks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentRating(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetailsUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetailsUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistributionChannel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distributionChannel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistributionChannel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distributionChannel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedTimestampMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTimestampMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedTimestampMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTimestampMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinAndroidSdkVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minAndroidSdkVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinAndroidSdkVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minAndroidSdkVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: js.Array[SchemaProductPermission]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductPricing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productPricing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductPricing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productPricing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecentChanges(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recentChanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecentChanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recentChanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequiresContainerApp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requiresContainerApp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequiresContainerApp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requiresContainerApp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenshotUrls(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshotUrls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenshotUrls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshotUrls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSigningCertificate(value: SchemaProductSigningCertificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signingCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigningCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signingCertificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmallIconUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smallIconUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmallIconUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smallIconUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkDetailsUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workDetailsUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkDetailsUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workDetailsUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

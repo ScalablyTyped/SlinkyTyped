@@ -42,26 +42,113 @@ trait Datapoint extends js.Object {
 
 object Datapoint {
   @scala.inline
-  def apply(
-    Average: Int | Double = null,
-    ExtendedStatistics: DatapointValueMap = null,
-    Maximum: Int | Double = null,
-    Minimum: Int | Double = null,
-    SampleCount: Int | Double = null,
-    Sum: Int | Double = null,
-    Timestamp: js.Date = null,
-    Unit: StandardUnit = null
-  ): Datapoint = {
+  def apply(): Datapoint = {
     val __obj = js.Dynamic.literal()
-    if (Average != null) __obj.updateDynamic("Average")(Average.asInstanceOf[js.Any])
-    if (ExtendedStatistics != null) __obj.updateDynamic("ExtendedStatistics")(ExtendedStatistics.asInstanceOf[js.Any])
-    if (Maximum != null) __obj.updateDynamic("Maximum")(Maximum.asInstanceOf[js.Any])
-    if (Minimum != null) __obj.updateDynamic("Minimum")(Minimum.asInstanceOf[js.Any])
-    if (SampleCount != null) __obj.updateDynamic("SampleCount")(SampleCount.asInstanceOf[js.Any])
-    if (Sum != null) __obj.updateDynamic("Sum")(Sum.asInstanceOf[js.Any])
-    if (Timestamp != null) __obj.updateDynamic("Timestamp")(Timestamp.asInstanceOf[js.Any])
-    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[Datapoint]
   }
+  @scala.inline
+  implicit class DatapointOps[Self <: Datapoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAverage(value: DatapointValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Average")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAverage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Average")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtendedStatistics(value: DatapointValueMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedStatistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendedStatistics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendedStatistics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximum(value: DatapointValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Maximum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Maximum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimum(value: DatapointValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Minimum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Minimum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSampleCount(value: DatapointValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSampleCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SampleCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSum(value: DatapointValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: StandardUnit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

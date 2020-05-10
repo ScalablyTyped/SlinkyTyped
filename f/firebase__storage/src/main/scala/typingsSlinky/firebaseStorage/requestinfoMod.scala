@@ -28,7 +28,7 @@ object requestinfoMod extends js.Object {
       timeout: Double
     ) = this()
     var additionalRetryCodes: js.Array[Double] = js.native
-    var body: Blob | String | scala.scalajs.js.typedarray.Uint8Array | Null = js.native
+    var body: Blob | String | js.typedarray.Uint8Array | Null = js.native
     var errorHandler: (js.Function2[/* p1 */ XhrIo, /* p2 */ FirebaseStorageError, FirebaseStorageError]) | Null = js.native
     var headers: Headers = js.native
     var method: String = js.native

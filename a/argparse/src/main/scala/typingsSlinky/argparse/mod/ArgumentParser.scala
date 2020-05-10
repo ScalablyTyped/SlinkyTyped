@@ -1,6 +1,5 @@
 package typingsSlinky.argparse.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,7 @@ class ArgumentParser () extends ArgumentGroup {
   def addSubparsers(options: SubparserOptions): SubParser = js.native
   def convertArgLineToArg(argLine: String): js.Array[String] = js.native
   def error(err: String): Unit = js.native
-  def error(err: Error): Unit = js.native
+  def error(err: js.Error): Unit = js.native
   def exit(status: Double, message: String): Unit = js.native
   def formatHelp(): String = js.native
   def formatUsage(): String = js.native

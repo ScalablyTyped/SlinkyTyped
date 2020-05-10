@@ -1,15 +1,16 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import typingsSlinky.officeUiFabricReact.textFieldTypesMod.ITextFieldProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TextFieldBase
-  extends SharedApply_ITextFieldProps389277546[typingsSlinky.officeUiFabricReact.mod.TextFieldBase] {
+object TextFieldBase {
   @JSImport("office-ui-fabric-react", "TextFieldBase")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ITextFieldProps): SharedBuilder_ITextFieldProps1156210801[typingsSlinky.officeUiFabricReact.mod.TextFieldBase] = new SharedBuilder_ITextFieldProps1156210801[typingsSlinky.officeUiFabricReact.mod.TextFieldBase](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TextFieldBase.type): SharedBuilder_ITextFieldProps1156210801[typingsSlinky.officeUiFabricReact.mod.TextFieldBase] = new SharedBuilder_ITextFieldProps1156210801[typingsSlinky.officeUiFabricReact.mod.TextFieldBase](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -18,12 +18,10 @@ trait TextBaseline extends js.Object
 
 object TextBaseline {
   @scala.inline
-  def bottom: typingsSlinky.zfont.zfontStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.zfont.zfontStrings.bottom = "bottom".asInstanceOf[typingsSlinky.zfont.zfontStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def middle: typingsSlinky.zfont.zfontStrings.middle = "middle".asInstanceOf[typingsSlinky.zfont.zfontStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.zfont.zfontStrings.middle = this.cast("middle")
-  @scala.inline
-  def top: typingsSlinky.zfont.zfontStrings.top = this.cast("top")
+  def top: typingsSlinky.zfont.zfontStrings.top = "top".asInstanceOf[typingsSlinky.zfont.zfontStrings.top]
 }
 

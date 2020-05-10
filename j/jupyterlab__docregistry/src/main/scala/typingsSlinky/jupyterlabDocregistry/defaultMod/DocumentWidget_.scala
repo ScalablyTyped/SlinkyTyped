@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.phosphorDisposable.mod.IDisposable because Already inherited
 - typingsSlinky.phosphorMessaging.mod.IMessageHandler because Already inherited
 - typingsSlinky.phosphorDisposable.mod.IObservableDisposable because Already inherited

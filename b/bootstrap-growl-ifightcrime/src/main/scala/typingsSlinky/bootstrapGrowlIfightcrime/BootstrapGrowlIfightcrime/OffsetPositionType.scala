@@ -12,10 +12,8 @@ trait OffsetPositionType extends js.Object
 
 object OffsetPositionType {
   @scala.inline
-  def bottom: typingsSlinky.bootstrapGrowlIfightcrime.bootstrapGrowlIfightcrimeStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.bootstrapGrowlIfightcrime.bootstrapGrowlIfightcrimeStrings.bottom = "bottom".asInstanceOf[typingsSlinky.bootstrapGrowlIfightcrime.bootstrapGrowlIfightcrimeStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def top: typingsSlinky.bootstrapGrowlIfightcrime.bootstrapGrowlIfightcrimeStrings.top = this.cast("top")
+  def top: typingsSlinky.bootstrapGrowlIfightcrime.bootstrapGrowlIfightcrimeStrings.top = "top".asInstanceOf[typingsSlinky.bootstrapGrowlIfightcrime.bootstrapGrowlIfightcrimeStrings.top]
 }
 

@@ -2,6 +2,7 @@ package typingsSlinky.ractive
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ractive.mod.Adaptor
 import typingsSlinky.ractive.mod.Component
 import typingsSlinky.ractive.mod.Constructor
@@ -26,7 +27,6 @@ import typingsSlinky.ractive.mod.Registries
 import typingsSlinky.ractive.mod.Registry
 import typingsSlinky.ractive.mod.Static
 import typingsSlinky.ractive.mod.ValueMap
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

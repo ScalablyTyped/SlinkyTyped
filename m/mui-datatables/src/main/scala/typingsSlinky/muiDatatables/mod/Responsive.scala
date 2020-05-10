@@ -13,12 +13,10 @@ trait Responsive extends js.Object
 
 object Responsive {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def scrollFullHeight: typingsSlinky.muiDatatables.muiDatatablesStrings.scrollFullHeight = "scrollFullHeight".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.scrollFullHeight]
   @scala.inline
-  def scrollFullHeight: typingsSlinky.muiDatatables.muiDatatablesStrings.scrollFullHeight = this.cast("scrollFullHeight")
+  def scrollMaxHeight: typingsSlinky.muiDatatables.muiDatatablesStrings.scrollMaxHeight = "scrollMaxHeight".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.scrollMaxHeight]
   @scala.inline
-  def scrollMaxHeight: typingsSlinky.muiDatatables.muiDatatablesStrings.scrollMaxHeight = this.cast("scrollMaxHeight")
-  @scala.inline
-  def stacked: typingsSlinky.muiDatatables.muiDatatablesStrings.stacked = this.cast("stacked")
+  def stacked: typingsSlinky.muiDatatables.muiDatatablesStrings.stacked = "stacked".asInstanceOf[typingsSlinky.muiDatatables.muiDatatablesStrings.stacked]
 }
 

@@ -1,10 +1,7 @@
 package typingsSlinky.mjmlReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.csstype.mod.ColorProperty
 import typingsSlinky.mjmlReact.mod.HrefProps
 import typingsSlinky.mjmlReact.mod.MjmlNavbarLinkProps
@@ -13,47 +10,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlNavbarLink
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbarLink] {
+object MjmlNavbarLink {
   @JSImport("mjml-react", "MjmlNavbarLink")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    color: ColorProperty = null,
-    fontFamily: String = null,
-    fontSize: String | Double = null,
-    fontStyle: String = null,
-    fontWeight: Int | Double = null,
-    lineHeight: String | Double = null,
-    padding: String | Double = null,
-    paddingBottom: String | Double = null,
-    paddingLeft: String | Double = null,
-    paddingRight: String | Double = null,
-    paddingTop: String | Double = null,
-    textDecoration: String = null,
-    textTransform: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbarLink] = {
-    val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
-    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (paddingBottom != null) __obj.updateDynamic("paddingBottom")(paddingBottom.asInstanceOf[js.Any])
-    if (paddingLeft != null) __obj.updateDynamic("paddingLeft")(paddingLeft.asInstanceOf[js.Any])
-    if (paddingRight != null) __obj.updateDynamic("paddingRight")(paddingRight.asInstanceOf[js.Any])
-    if (paddingTop != null) __obj.updateDynamic("paddingTop")(paddingTop.asInstanceOf[js.Any])
-    if (textDecoration != null) __obj.updateDynamic("textDecoration")(textDecoration.asInstanceOf[js.Any])
-    if (textTransform != null) __obj.updateDynamic("textTransform")(textTransform.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbarLink] {
+    @scala.inline
+    def color(value: ColorProperty): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontSize(value: String | Double): this.type = set("fontSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontStyle(value: String): this.type = set("fontStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fontWeight(value: Double): this.type = set("fontWeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lineHeight(value: String | Double): this.type = set("lineHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: String | Double): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingBottom(value: String | Double): this.type = set("paddingBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingLeft(value: String | Double): this.type = set("paddingLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingRight(value: String | Double): this.type = set("paddingRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def paddingTop(value: String | Double): this.type = set("paddingTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textDecoration(value: String): this.type = set("textDecoration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textTransform(value: String): this.type = set("textTransform", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbarLink] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbarLink](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MjmlNavbarLinkProps with HrefProps with PaddingProps
+  
+  def withProps(p: MjmlNavbarLinkProps with HrefProps with PaddingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MjmlNavbarLink.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,38 +1,37 @@
 package typingsSlinky.reactYoutubeEmbed.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactYoutubeEmbed.mod.YouTubeEmbedProps
 import typingsSlinky.reactYoutubeEmbed.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactYoutubeEmbed
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactYoutubeEmbed {
   @JSImport("react-youtube-embed", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    id: String,
-    appendSrc: String = null,
-    aspectRatio: String = null,
-    prependSrc: String = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    if (appendSrc != null) __obj.updateDynamic("appendSrc")(appendSrc.asInstanceOf[js.Any])
-    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
-    if (prependSrc != null) __obj.updateDynamic("prependSrc")(prependSrc.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def appendSrc(value: String): this.type = set("appendSrc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def aspectRatio(value: String): this.type = set("aspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prependSrc(value: String): this.type = set("prependSrc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  type Props = YouTubeEmbedProps
+  
+  def withProps(p: YouTubeEmbedProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[YouTubeEmbedProps]))
+  }
 }
 

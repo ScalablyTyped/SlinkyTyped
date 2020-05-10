@@ -126,67 +126,359 @@ trait StartBuildInput extends js.Object {
 
 object StartBuildInput {
   @scala.inline
-  def apply(
-    projectName: NonEmptyString,
-    artifactsOverride: ProjectArtifacts = null,
-    buildspecOverride: String = null,
-    cacheOverride: ProjectCache = null,
-    certificateOverride: String = null,
-    computeTypeOverride: ComputeType = null,
-    encryptionKeyOverride: NonEmptyString = null,
-    environmentTypeOverride: EnvironmentType = null,
-    environmentVariablesOverride: EnvironmentVariables = null,
-    gitCloneDepthOverride: Int | Double = null,
-    gitSubmodulesConfigOverride: GitSubmodulesConfig = null,
-    idempotencyToken: String = null,
-    imageOverride: NonEmptyString = null,
-    imagePullCredentialsTypeOverride: ImagePullCredentialsType = null,
-    insecureSslOverride: js.UndefOr[scala.Boolean] = js.undefined,
-    logsConfigOverride: LogsConfig = null,
-    privilegedModeOverride: js.UndefOr[scala.Boolean] = js.undefined,
-    queuedTimeoutInMinutesOverride: Int | Double = null,
-    registryCredentialOverride: RegistryCredential = null,
-    reportBuildStatusOverride: js.UndefOr[scala.Boolean] = js.undefined,
-    secondaryArtifactsOverride: ProjectArtifactsList = null,
-    secondarySourcesOverride: ProjectSources = null,
-    secondarySourcesVersionOverride: ProjectSecondarySourceVersions = null,
-    serviceRoleOverride: NonEmptyString = null,
-    sourceAuthOverride: SourceAuth = null,
-    sourceLocationOverride: String = null,
-    sourceTypeOverride: SourceType = null,
-    sourceVersion: String = null,
-    timeoutInMinutesOverride: Int | Double = null
-  ): StartBuildInput = {
+  def apply(projectName: NonEmptyString): StartBuildInput = {
     val __obj = js.Dynamic.literal(projectName = projectName.asInstanceOf[js.Any])
-    if (artifactsOverride != null) __obj.updateDynamic("artifactsOverride")(artifactsOverride.asInstanceOf[js.Any])
-    if (buildspecOverride != null) __obj.updateDynamic("buildspecOverride")(buildspecOverride.asInstanceOf[js.Any])
-    if (cacheOverride != null) __obj.updateDynamic("cacheOverride")(cacheOverride.asInstanceOf[js.Any])
-    if (certificateOverride != null) __obj.updateDynamic("certificateOverride")(certificateOverride.asInstanceOf[js.Any])
-    if (computeTypeOverride != null) __obj.updateDynamic("computeTypeOverride")(computeTypeOverride.asInstanceOf[js.Any])
-    if (encryptionKeyOverride != null) __obj.updateDynamic("encryptionKeyOverride")(encryptionKeyOverride.asInstanceOf[js.Any])
-    if (environmentTypeOverride != null) __obj.updateDynamic("environmentTypeOverride")(environmentTypeOverride.asInstanceOf[js.Any])
-    if (environmentVariablesOverride != null) __obj.updateDynamic("environmentVariablesOverride")(environmentVariablesOverride.asInstanceOf[js.Any])
-    if (gitCloneDepthOverride != null) __obj.updateDynamic("gitCloneDepthOverride")(gitCloneDepthOverride.asInstanceOf[js.Any])
-    if (gitSubmodulesConfigOverride != null) __obj.updateDynamic("gitSubmodulesConfigOverride")(gitSubmodulesConfigOverride.asInstanceOf[js.Any])
-    if (idempotencyToken != null) __obj.updateDynamic("idempotencyToken")(idempotencyToken.asInstanceOf[js.Any])
-    if (imageOverride != null) __obj.updateDynamic("imageOverride")(imageOverride.asInstanceOf[js.Any])
-    if (imagePullCredentialsTypeOverride != null) __obj.updateDynamic("imagePullCredentialsTypeOverride")(imagePullCredentialsTypeOverride.asInstanceOf[js.Any])
-    if (!js.isUndefined(insecureSslOverride)) __obj.updateDynamic("insecureSslOverride")(insecureSslOverride.asInstanceOf[js.Any])
-    if (logsConfigOverride != null) __obj.updateDynamic("logsConfigOverride")(logsConfigOverride.asInstanceOf[js.Any])
-    if (!js.isUndefined(privilegedModeOverride)) __obj.updateDynamic("privilegedModeOverride")(privilegedModeOverride.asInstanceOf[js.Any])
-    if (queuedTimeoutInMinutesOverride != null) __obj.updateDynamic("queuedTimeoutInMinutesOverride")(queuedTimeoutInMinutesOverride.asInstanceOf[js.Any])
-    if (registryCredentialOverride != null) __obj.updateDynamic("registryCredentialOverride")(registryCredentialOverride.asInstanceOf[js.Any])
-    if (!js.isUndefined(reportBuildStatusOverride)) __obj.updateDynamic("reportBuildStatusOverride")(reportBuildStatusOverride.asInstanceOf[js.Any])
-    if (secondaryArtifactsOverride != null) __obj.updateDynamic("secondaryArtifactsOverride")(secondaryArtifactsOverride.asInstanceOf[js.Any])
-    if (secondarySourcesOverride != null) __obj.updateDynamic("secondarySourcesOverride")(secondarySourcesOverride.asInstanceOf[js.Any])
-    if (secondarySourcesVersionOverride != null) __obj.updateDynamic("secondarySourcesVersionOverride")(secondarySourcesVersionOverride.asInstanceOf[js.Any])
-    if (serviceRoleOverride != null) __obj.updateDynamic("serviceRoleOverride")(serviceRoleOverride.asInstanceOf[js.Any])
-    if (sourceAuthOverride != null) __obj.updateDynamic("sourceAuthOverride")(sourceAuthOverride.asInstanceOf[js.Any])
-    if (sourceLocationOverride != null) __obj.updateDynamic("sourceLocationOverride")(sourceLocationOverride.asInstanceOf[js.Any])
-    if (sourceTypeOverride != null) __obj.updateDynamic("sourceTypeOverride")(sourceTypeOverride.asInstanceOf[js.Any])
-    if (sourceVersion != null) __obj.updateDynamic("sourceVersion")(sourceVersion.asInstanceOf[js.Any])
-    if (timeoutInMinutesOverride != null) __obj.updateDynamic("timeoutInMinutesOverride")(timeoutInMinutesOverride.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartBuildInput]
   }
+  @scala.inline
+  implicit class StartBuildInputOps[Self <: StartBuildInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjectName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArtifactsOverride(value: ProjectArtifacts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactsOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArtifactsOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artifactsOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuildspecOverride(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildspecOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildspecOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildspecOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheOverride(value: ProjectCache): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cacheOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCertificateOverride(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComputeTypeOverride(value: ComputeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeTypeOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeTypeOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeTypeOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionKeyOverride(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKeyOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionKeyOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKeyOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentTypeOverride(value: EnvironmentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentTypeOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentTypeOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentTypeOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentVariablesOverride(value: EnvironmentVariables): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariablesOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentVariablesOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariablesOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGitCloneDepthOverride(value: GitCloneDepth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitCloneDepthOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGitCloneDepthOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitCloneDepthOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGitSubmodulesConfigOverride(value: GitSubmodulesConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitSubmodulesConfigOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGitSubmodulesConfigOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gitSubmodulesConfigOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdempotencyToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idempotencyToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdempotencyToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idempotencyToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageOverride(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImagePullCredentialsTypeOverride(value: ImagePullCredentialsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePullCredentialsTypeOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImagePullCredentialsTypeOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePullCredentialsTypeOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsecureSslOverride(value: WrapperBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insecureSslOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsecureSslOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insecureSslOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogsConfigOverride(value: LogsConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logsConfigOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogsConfigOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logsConfigOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivilegedModeOverride(value: WrapperBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilegedModeOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivilegedModeOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilegedModeOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueuedTimeoutInMinutesOverride(value: TimeOut): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queuedTimeoutInMinutesOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueuedTimeoutInMinutesOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queuedTimeoutInMinutesOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistryCredentialOverride(value: RegistryCredential): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryCredentialOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistryCredentialOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryCredentialOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportBuildStatusOverride(value: WrapperBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportBuildStatusOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportBuildStatusOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportBuildStatusOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondaryArtifactsOverride(value: ProjectArtifactsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryArtifactsOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondaryArtifactsOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryArtifactsOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondarySourcesOverride(value: ProjectSources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondarySourcesOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondarySourcesOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondarySourcesOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondarySourcesVersionOverride(value: ProjectSecondarySourceVersions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondarySourcesVersionOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondarySourcesVersionOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondarySourcesVersionOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceRoleOverride(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRoleOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceRoleOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRoleOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceAuthOverride(value: SourceAuth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAuthOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceAuthOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceAuthOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceLocationOverride(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceLocationOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceLocationOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceLocationOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceTypeOverride(value: SourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceTypeOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceTypeOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceTypeOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutInMinutesOverride(value: TimeOut): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutInMinutesOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutInMinutesOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutInMinutesOverride")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

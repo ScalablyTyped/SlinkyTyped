@@ -18,20 +18,20 @@ class ToolBar protected () extends Widget {
   def add(command: js.Any): Unit = js.native
   def enable(command: String, enable: Boolean): Unit = js.native
   def enable(command: JQuery, enable: Boolean): Unit = js.native
-  def enable(command: typingsSlinky.std.Element, enable: Boolean): Unit = js.native
+  def enable(command: Element, enable: Boolean): Unit = js.native
   def getSelectedFromGroup(groupName: String): Unit = js.native
   def hide(command: String): Unit = js.native
   def hide(command: JQuery): Unit = js.native
-  def hide(command: typingsSlinky.std.Element): Unit = js.native
+  def hide(command: Element): Unit = js.native
   def remove(command: String): Unit = js.native
   def remove(command: JQuery): Unit = js.native
-  def remove(command: typingsSlinky.std.Element): Unit = js.native
+  def remove(command: Element): Unit = js.native
   def show(command: String): Unit = js.native
   def show(command: JQuery): Unit = js.native
-  def show(command: typingsSlinky.std.Element): Unit = js.native
+  def show(command: Element): Unit = js.native
   def toggle(command: String, state: Boolean): Unit = js.native
   def toggle(command: JQuery, state: Boolean): Unit = js.native
-  def toggle(command: typingsSlinky.std.Element, state: Boolean): Unit = js.native
+  def toggle(command: Element, state: Boolean): Unit = js.native
 }
 
 /* static members */

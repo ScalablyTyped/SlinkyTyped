@@ -13,10 +13,8 @@ trait FocusedInputShape extends js.Object
 
 object FocusedInputShape {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def endDate: typingsSlinky.reactDates.reactDatesStrings.endDate = "endDate".asInstanceOf[typingsSlinky.reactDates.reactDatesStrings.endDate]
   @scala.inline
-  def endDate: typingsSlinky.reactDates.reactDatesStrings.endDate = this.cast("endDate")
-  @scala.inline
-  def startDate: typingsSlinky.reactDates.reactDatesStrings.startDate = this.cast("startDate")
+  def startDate: typingsSlinky.reactDates.reactDatesStrings.startDate = "startDate".asInstanceOf[typingsSlinky.reactDates.reactDatesStrings.startDate]
 }
 

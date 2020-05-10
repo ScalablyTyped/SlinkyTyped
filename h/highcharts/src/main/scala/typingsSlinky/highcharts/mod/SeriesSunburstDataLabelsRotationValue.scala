@@ -13,12 +13,10 @@ trait SeriesSunburstDataLabelsRotationValue extends js.Object
 
 object SeriesSunburstDataLabelsRotationValue {
   @scala.inline
-  def auto: typingsSlinky.highcharts.highchartsStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.highcharts.highchartsStrings.auto = "auto".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def parallel: typingsSlinky.highcharts.highchartsStrings.parallel = "parallel".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.parallel]
   @scala.inline
-  def parallel: typingsSlinky.highcharts.highchartsStrings.parallel = this.cast("parallel")
-  @scala.inline
-  def perpendicular: typingsSlinky.highcharts.highchartsStrings.perpendicular = this.cast("perpendicular")
+  def perpendicular: typingsSlinky.highcharts.highchartsStrings.perpendicular = "perpendicular".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.perpendicular]
 }
 

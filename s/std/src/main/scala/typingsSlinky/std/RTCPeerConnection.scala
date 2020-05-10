@@ -234,16 +234,19 @@ trait RTCPeerConnection extends EventTarget {
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCTrackEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
-  def addIceCandidate(candidate: RTCIceCandidate): js.Promise[Unit] = js.native
-  def addIceCandidate(candidate: RTCIceCandidateInit): js.Promise[Unit] = js.native
+  def addIceCandidate(candidate: org.scalajs.dom.experimental.webrtc.RTCIceCandidate): js.Promise[Unit] = js.native
+  def addIceCandidate(candidate: org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit): js.Promise[Unit] = js.native
   def addTrack(
     track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack,
     streams: org.scalajs.dom.experimental.mediastream.MediaStream*
   ): RTCRtpSender = js.native
   def addTransceiver(trackOrKind: java.lang.String): RTCRtpTransceiver = js.native
   def addTransceiver(trackOrKind: java.lang.String, init: RTCRtpTransceiverInit): RTCRtpTransceiver = js.native
-  def addTransceiver(trackOrKind: MediaStreamTrack): RTCRtpTransceiver = js.native
-  def addTransceiver(trackOrKind: MediaStreamTrack, init: RTCRtpTransceiverInit): RTCRtpTransceiver = js.native
+  def addTransceiver(trackOrKind: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): RTCRtpTransceiver = js.native
+  def addTransceiver(
+    trackOrKind: org.scalajs.dom.experimental.mediastream.MediaStreamTrack,
+    init: RTCRtpTransceiverInit
+  ): RTCRtpTransceiver = js.native
   def close(): Unit = js.native
   def createAnswer(): js.Promise[org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit] = js.native
   def createAnswer(options: org.scalajs.dom.experimental.webrtc.RTCOfferOptions): js.Promise[org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit] = js.native
@@ -273,7 +276,7 @@ trait RTCPeerConnection extends EventTarget {
   def removeEventListener_connectionstatechange(
     `type`: connectionstatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_datachannel(
@@ -302,7 +305,7 @@ trait RTCPeerConnection extends EventTarget {
       /* ev */ org.scalajs.dom.experimental.webrtc.RTCDataChannelEvent, 
       _
     ],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_icecandidate(
@@ -331,7 +334,7 @@ trait RTCPeerConnection extends EventTarget {
       /* ev */ org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEvent, 
       _
     ],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_icecandidateerror(
@@ -348,7 +351,7 @@ trait RTCPeerConnection extends EventTarget {
   def removeEventListener_icecandidateerror(
     `type`: icecandidateerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCPeerConnectionIceErrorEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_iceconnectionstatechange(
@@ -365,7 +368,7 @@ trait RTCPeerConnection extends EventTarget {
   def removeEventListener_iceconnectionstatechange(
     `type`: iceconnectionstatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_icegatheringstatechange(
@@ -382,7 +385,7 @@ trait RTCPeerConnection extends EventTarget {
   def removeEventListener_icegatheringstatechange(
     `type`: icegatheringstatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_negotiationneeded(`type`: negotiationneeded, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -396,7 +399,7 @@ trait RTCPeerConnection extends EventTarget {
   def removeEventListener_negotiationneeded(
     `type`: negotiationneeded,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_signalingstatechange(`type`: signalingstatechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -410,7 +413,7 @@ trait RTCPeerConnection extends EventTarget {
   def removeEventListener_signalingstatechange(
     `type`: signalingstatechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_statsended(`type`: statsended, listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCStatsEvent, _]): Unit = js.native
@@ -424,7 +427,7 @@ trait RTCPeerConnection extends EventTarget {
   def removeEventListener_statsended(
     `type`: statsended,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCStatsEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_track(`type`: track, listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCTrackEvent, _]): Unit = js.native
@@ -438,7 +441,7 @@ trait RTCPeerConnection extends EventTarget {
   def removeEventListener_track(
     `type`: track,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCTrackEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def removeTrack(sender: RTCRtpSender): Unit = js.native
   def setConfiguration(configuration: org.scalajs.dom.experimental.webrtc.RTCConfiguration): Unit = js.native
@@ -451,8 +454,11 @@ trait RTCPeerConnection extends EventTarget {
 @JSGlobal("RTCPeerConnection")
 @js.native
 object RTCPeerConnection
-  extends Instantiable0[RTCPeerConnection]
-     with Instantiable1[/* configuration */ RTCConfiguration, RTCPeerConnection] {
+  extends Instantiable0[org.scalajs.dom.experimental.webrtc.RTCPeerConnection]
+     with Instantiable1[
+      /* configuration */ org.scalajs.dom.experimental.webrtc.RTCConfiguration, 
+      org.scalajs.dom.experimental.webrtc.RTCPeerConnection
+    ] {
   def generateCertificate(keygenAlgorithm: AlgorithmIdentifier): js.Promise[RTCCertificate] = js.native
   def getDefaultIceServers(): js.Array[org.scalajs.dom.experimental.webrtc.RTCIceServer] = js.native
 }

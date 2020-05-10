@@ -13,12 +13,10 @@ trait CarouselCellAlignProp extends js.Object
 
 object CarouselCellAlignProp {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.nukaCarousel.nukaCarouselStrings.center = "center".asInstanceOf[typingsSlinky.nukaCarousel.nukaCarouselStrings.center]
   @scala.inline
-  def center: typingsSlinky.nukaCarousel.nukaCarouselStrings.center = this.cast("center")
+  def left: typingsSlinky.nukaCarousel.nukaCarouselStrings.left = "left".asInstanceOf[typingsSlinky.nukaCarousel.nukaCarouselStrings.left]
   @scala.inline
-  def left: typingsSlinky.nukaCarousel.nukaCarouselStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.nukaCarousel.nukaCarouselStrings.right = this.cast("right")
+  def right: typingsSlinky.nukaCarousel.nukaCarouselStrings.right = "right".asInstanceOf[typingsSlinky.nukaCarousel.nukaCarouselStrings.right]
 }
 

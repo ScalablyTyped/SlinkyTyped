@@ -1,7 +1,6 @@
 package typingsSlinky.firebird.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,11 +37,11 @@ trait FBBlob extends js.Object {
     * @param callback - optional, function (err, buffer, len), err - Error object in case of error, or null;buffer - buffer filled with data; len - actual data length.
     */
   def _readAll(): Unit = js.native
-  def _readAll(callback: js.Function3[/* err */ Error | Null, /* buffer */ Buffer, /* len */ Double, Unit]): Unit = js.native
+  def _readAll(callback: js.Function3[/* err */ js.Error | Null, /* buffer */ Buffer, /* len */ Double, Unit]): Unit = js.native
   def _readAll(initialSize: Double): Unit = js.native
   def _readAll(
     initialSize: Double,
-    callback: js.Function3[/* err */ Error | Null, /* buffer */ Buffer, /* len */ Double, Unit]
+    callback: js.Function3[/* err */ js.Error | Null, /* buffer */ Buffer, /* len */ Double, Unit]
   ): Unit = js.native
   def _readAll(initialSize: Double, chunkSize: Double): Unit = js.native
   def _readAll(

@@ -1,6 +1,5 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.AnonPlural
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,44 +9,56 @@ import scala.scalajs.js.annotation._
   *
   * @see Association class belongsTo method
   */
+@js.native
 trait AssociationOptionsBelongsTo extends AssociationOptions {
   /**
     * A string or a data type to represent the identifier in the table
     */
-  var keyType: js.UndefOr[DataTypeAbstract] = js.undefined
+  var keyType: js.UndefOr[DataTypeAbstract] = js.native
   /**
     * The name of the field to use as the key for the association in the target table. Defaults to the primary
     * key of the target table
     */
-  var targetKey: js.UndefOr[String] = js.undefined
+  var targetKey: js.UndefOr[String] = js.native
 }
 
 object AssociationOptionsBelongsTo {
   @scala.inline
-  def apply(
-    as: String | AnonPlural = null,
-    constraints: js.UndefOr[Boolean] = js.undefined,
-    foreignKey: String | AssociationForeignKeyOptions = null,
-    foreignKeyConstraint: js.UndefOr[Boolean] = js.undefined,
-    hooks: js.UndefOr[Boolean] = js.undefined,
-    keyType: DataTypeAbstract = null,
-    onDelete: String = null,
-    onUpdate: String = null,
-    scope: AssociationScope = null,
-    targetKey: String = null
-  ): AssociationOptionsBelongsTo = {
+  def apply(): AssociationOptionsBelongsTo = {
     val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (!js.isUndefined(constraints)) __obj.updateDynamic("constraints")(constraints.asInstanceOf[js.Any])
-    if (foreignKey != null) __obj.updateDynamic("foreignKey")(foreignKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(foreignKeyConstraint)) __obj.updateDynamic("foreignKeyConstraint")(foreignKeyConstraint.asInstanceOf[js.Any])
-    if (!js.isUndefined(hooks)) __obj.updateDynamic("hooks")(hooks.asInstanceOf[js.Any])
-    if (keyType != null) __obj.updateDynamic("keyType")(keyType.asInstanceOf[js.Any])
-    if (onDelete != null) __obj.updateDynamic("onDelete")(onDelete.asInstanceOf[js.Any])
-    if (onUpdate != null) __obj.updateDynamic("onUpdate")(onUpdate.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (targetKey != null) __obj.updateDynamic("targetKey")(targetKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociationOptionsBelongsTo]
   }
+  @scala.inline
+  implicit class AssociationOptionsBelongsToOps[Self <: AssociationOptionsBelongsTo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyType(value: DataTypeAbstract): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

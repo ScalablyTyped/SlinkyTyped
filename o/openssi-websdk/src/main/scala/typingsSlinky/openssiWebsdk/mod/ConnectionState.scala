@@ -14,14 +14,12 @@ trait ConnectionState extends js.Object
 
 object ConnectionState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connected: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.connected = "connected".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.connected]
   @scala.inline
-  def connected: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.connected = this.cast("connected")
+  def inbound_offer: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.inbound_offer = "inbound_offer".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.inbound_offer]
   @scala.inline
-  def inbound_offer: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.inbound_offer = this.cast("inbound_offer")
+  def outbound_offer: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.outbound_offer = "outbound_offer".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.outbound_offer]
   @scala.inline
-  def outbound_offer: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.outbound_offer = this.cast("outbound_offer")
-  @scala.inline
-  def rejected: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.rejected = this.cast("rejected")
+  def rejected: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.rejected = "rejected".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.rejected]
 }
 

@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 // but the keys being selected or additional properties being augmented are not
 // all known at once and we would want to effectively build up a partial/intersection
 // over multiple steps.
+@js.native
 trait DeferredKeySelection[// The base of selection. In intermediate stages this may be unknown.
 // If it remains unknown at the point of resolution, the selection will fall back to any
 TBase, // Union of keys to be selected
@@ -23,15 +24,15 @@ TAliasMapping /* <: js.Object */, // If enabled, then instead of extracting a pa
 TSingle /* <: Boolean */, // Extra props which will be intersected with the result
 TIntersectProps /* <: js.Object */, // Extra props which will be unioned with the result
 TUnionProps] extends js.Object {
-  var _aliases: TAliasMapping
+  var _aliases: TAliasMapping = js.native
   // These properties are not actually used, but exist simply because
   // typescript doesn't end up happy when type parameters are unused
-  var _base: TBase
-  var _hasSelection: THasSelect
-  var _intersectProps: TIntersectProps
-  var _keys: TKeys
-  var _single: TSingle
-  var _unionProps: TUnionProps
+  var _base: TBase = js.native
+  var _hasSelection: THasSelect = js.native
+  var _intersectProps: TIntersectProps = js.native
+  var _keys: TKeys = js.native
+  var _single: TSingle = js.native
+  var _unionProps: TUnionProps = js.native
 }
 
 // An companion namespace for DeferredKeySelection which provides type operators

@@ -19,10 +19,29 @@ trait SchemaGoogleCloudVideointelligenceV1AnnotateVideoResponse extends js.Objec
 
 object SchemaGoogleCloudVideointelligenceV1AnnotateVideoResponse {
   @scala.inline
-  def apply(annotationResults: js.Array[SchemaGoogleCloudVideointelligenceV1VideoAnnotationResults] = null): SchemaGoogleCloudVideointelligenceV1AnnotateVideoResponse = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1AnnotateVideoResponse = {
     val __obj = js.Dynamic.literal()
-    if (annotationResults != null) __obj.updateDynamic("annotationResults")(annotationResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1AnnotateVideoResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1AnnotateVideoResponseOps[Self <: SchemaGoogleCloudVideointelligenceV1AnnotateVideoResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnnotationResults(value: js.Array[SchemaGoogleCloudVideointelligenceV1VideoAnnotationResults]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnnotationResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

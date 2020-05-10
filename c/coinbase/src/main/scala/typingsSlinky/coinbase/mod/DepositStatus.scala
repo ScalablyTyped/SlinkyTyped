@@ -13,12 +13,10 @@ trait DepositStatus extends js.Object
 
 object DepositStatus {
   @scala.inline
-  def canceled: typingsSlinky.coinbase.coinbaseStrings.canceled = this.cast("canceled")
+  def canceled: typingsSlinky.coinbase.coinbaseStrings.canceled = "canceled".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.canceled]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def completed: typingsSlinky.coinbase.coinbaseStrings.completed = "completed".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.completed]
   @scala.inline
-  def completed: typingsSlinky.coinbase.coinbaseStrings.completed = this.cast("completed")
-  @scala.inline
-  def created: typingsSlinky.coinbase.coinbaseStrings.created = this.cast("created")
+  def created: typingsSlinky.coinbase.coinbaseStrings.created = "created".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.created]
 }
 

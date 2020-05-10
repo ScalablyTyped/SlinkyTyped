@@ -2,9 +2,9 @@ package typingsSlinky.dojo.dojoContainerMod
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.TypeofContainer
 import typingsSlinky.dojo.dojo.dnd.Container
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

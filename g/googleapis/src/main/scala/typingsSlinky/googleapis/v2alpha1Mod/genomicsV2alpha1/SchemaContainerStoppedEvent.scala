@@ -31,12 +31,53 @@ trait SchemaContainerStoppedEvent extends js.Object {
 
 object SchemaContainerStoppedEvent {
   @scala.inline
-  def apply(actionId: Int | Double = null, exitStatus: Int | Double = null, stderr: String = null): SchemaContainerStoppedEvent = {
+  def apply(): SchemaContainerStoppedEvent = {
     val __obj = js.Dynamic.literal()
-    if (actionId != null) __obj.updateDynamic("actionId")(actionId.asInstanceOf[js.Any])
-    if (exitStatus != null) __obj.updateDynamic("exitStatus")(exitStatus.asInstanceOf[js.Any])
-    if (stderr != null) __obj.updateDynamic("stderr")(stderr.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContainerStoppedEvent]
   }
+  @scala.inline
+  implicit class SchemaContainerStoppedEventOps[Self <: SchemaContainerStoppedEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExitStatus(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStderr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stderr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStderr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stderr")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

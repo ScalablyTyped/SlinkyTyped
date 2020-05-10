@@ -17,20 +17,18 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  def apiChange: typingsSlinky.youtubePlayer.youtubePlayerStrings.apiChange = this.cast("apiChange")
+  def apiChange: typingsSlinky.youtubePlayer.youtubePlayerStrings.apiChange = "apiChange".asInstanceOf[typingsSlinky.youtubePlayer.youtubePlayerStrings.apiChange]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.youtubePlayer.youtubePlayerStrings.error = "error".asInstanceOf[typingsSlinky.youtubePlayer.youtubePlayerStrings.error]
   @scala.inline
-  def error: typingsSlinky.youtubePlayer.youtubePlayerStrings.error = this.cast("error")
+  def playbackQualityChange: typingsSlinky.youtubePlayer.youtubePlayerStrings.playbackQualityChange = "playbackQualityChange".asInstanceOf[typingsSlinky.youtubePlayer.youtubePlayerStrings.playbackQualityChange]
   @scala.inline
-  def playbackQualityChange: typingsSlinky.youtubePlayer.youtubePlayerStrings.playbackQualityChange = this.cast("playbackQualityChange")
+  def playbackRateChange: typingsSlinky.youtubePlayer.youtubePlayerStrings.playbackRateChange = "playbackRateChange".asInstanceOf[typingsSlinky.youtubePlayer.youtubePlayerStrings.playbackRateChange]
   @scala.inline
-  def playbackRateChange: typingsSlinky.youtubePlayer.youtubePlayerStrings.playbackRateChange = this.cast("playbackRateChange")
+  def ready: typingsSlinky.youtubePlayer.youtubePlayerStrings.ready = "ready".asInstanceOf[typingsSlinky.youtubePlayer.youtubePlayerStrings.ready]
   @scala.inline
-  def ready: typingsSlinky.youtubePlayer.youtubePlayerStrings.ready = this.cast("ready")
+  def stateChange: typingsSlinky.youtubePlayer.youtubePlayerStrings.stateChange = "stateChange".asInstanceOf[typingsSlinky.youtubePlayer.youtubePlayerStrings.stateChange]
   @scala.inline
-  def stateChange: typingsSlinky.youtubePlayer.youtubePlayerStrings.stateChange = this.cast("stateChange")
-  @scala.inline
-  def volumeChange: typingsSlinky.youtubePlayer.youtubePlayerStrings.volumeChange = this.cast("volumeChange")
+  def volumeChange: typingsSlinky.youtubePlayer.youtubePlayerStrings.volumeChange = "volumeChange".asInstanceOf[typingsSlinky.youtubePlayer.youtubePlayerStrings.volumeChange]
 }
 

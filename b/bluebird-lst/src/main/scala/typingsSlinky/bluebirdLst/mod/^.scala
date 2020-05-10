@@ -2,8 +2,6 @@ package typingsSlinky.bluebirdLst.mod
 
 import typingsSlinky.bluebirdLst.AnonCancellation
 import typingsSlinky.bluebirdLst.TypeofBluebird
-import typingsSlinky.std.Error
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Map
 import scala.scalajs.js
@@ -23,40 +21,6 @@ class ^[R] protected () extends Bluebird[R] {
         /* onCancel */ js.UndefOr[js.Function1[/* callback */ js.Function0[Unit], Unit]], 
         Unit
       ]) = this()
-  /**
-    * See if the underlying promise was cancelled at the creation time of this inspection object.
-    */
-  /* CompleteClass */
-  override def isCancelled(): Boolean = js.native
-  /**
-    * See if the underlying promise was fulfilled at the creation time of this inspection object.
-    */
-  /* CompleteClass */
-  override def isFulfilled(): Boolean = js.native
-  /**
-    * See if the underlying promise was defer at the creation time of this inspection object.
-    */
-  /* CompleteClass */
-  override def isPending(): Boolean = js.native
-  /**
-    * See if the underlying promise was rejected at the creation time of this inspection object.
-    */
-  /* CompleteClass */
-  override def isRejected(): Boolean = js.native
-  /**
-    * Get the rejection reason for the underlying promise. Throws if the promise wasn't rejected at the creation time of this inspection object.
-    *
-    * throws `TypeError`
-    */
-  /* CompleteClass */
-  override def reason(): js.Any = js.native
-  /**
-    * Get the fulfillment value of the underlying promise. Throws if the promise wasn't fulfilled at the creation time of this inspection object.
-    *
-    * throws `TypeError`
-    */
-  /* CompleteClass */
-  override def value(): R = js.native
 }
 
 @JSImport("bluebird-lst", JSImport.Namespace)
@@ -622,20 +586,20 @@ object ^ extends js.Object {
     * *The original array is not modified.*
     */
   def map[R, U](
-    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (Iterable[js.Thenable[R] | R])],
+    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (js.Iterable[js.Thenable[R] | R])],
     mapper: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
   ): Bluebird[js.Array[U]] = js.native
   def map[R, U](
-    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (Iterable[js.Thenable[R] | R])],
+    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (js.Iterable[js.Thenable[R] | R])],
     mapper: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]],
     options: ConcurrencyOption
   ): Bluebird[js.Array[U]] = js.native
   def map[R, U](
-    values: Iterable[js.Thenable[R] | R],
+    values: js.Iterable[js.Thenable[R] | R],
     mapper: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
   ): Bluebird[js.Array[U]] = js.native
   def map[R, U](
-    values: Iterable[js.Thenable[R] | R],
+    values: js.Iterable[js.Thenable[R] | R],
     mapper: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]],
     options: ConcurrencyOption
   ): Bluebird[js.Array[U]] = js.native
@@ -651,11 +615,11 @@ object ^ extends js.Object {
     * If any promise in the input array is rejected or any promise returned by the iterator function is rejected, the result will be rejected as well.
     */
   def mapSeries[R, U](
-    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (Iterable[js.Thenable[R] | R])],
+    values: js.Thenable[(js.Array[js.Thenable[R] | R]) | (js.Iterable[js.Thenable[R] | R])],
     iterator: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
   ): Bluebird[js.Array[U]] = js.native
   def mapSeries[R, U](
-    values: Iterable[js.Thenable[R] | R],
+    values: js.Iterable[js.Thenable[R] | R],
     iterator: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
   ): Bluebird[js.Array[U]] = js.native
   def method[R](fn: js.Function1[/* repeated */ js.Any, R | js.Thenable[R]]): js.Function1[/* repeated */ js.Any, Bluebird[R]] = js.native
@@ -693,7 +657,7 @@ object ^ extends js.Object {
     * Passing no value or a non-function will have the effect of removing any kind of handling for possibly unhandled rejections.
     */
   def onPossiblyUnhandledRejection(handler: js.Function1[/* reason */ js.Any, _]): Unit = js.native
-  def onPossiblyUnhandledRejection(handler: js.Function2[/* error */ Error, /* promise */ Bluebird[_], Unit]): Unit = js.native
+  def onPossiblyUnhandledRejection(handler: js.Function2[/* error */ js.Error, /* promise */ Bluebird[_], Unit]): Unit = js.native
   def promisify(nodeFunction: js.Function1[/* repeated */ js.Any, Unit]): js.Function1[/* repeated */ js.Any, Bluebird[_]] = js.native
   def promisify(nodeFunction: js.Function1[/* repeated */ js.Any, Unit], options: PromisifyOptions): js.Function1[/* repeated */ js.Any, Bluebird[_]] = js.native
   def promisify[T, A1](

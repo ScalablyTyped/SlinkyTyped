@@ -1,0 +1,42 @@
+package typingsSlinky.screeps
+
+import typingsSlinky.screeps.screepsStrings.novice
+import typingsSlinky.screeps.screepsStrings.respawn
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait RoomStatusTemporary extends RoomStatus {
+  var status: novice | respawn = js.native
+  var timestamp: Double = js.native
+}
+
+object RoomStatusTemporary {
+  @scala.inline
+  def apply(status: novice | respawn, timestamp: Double): RoomStatusTemporary = {
+    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RoomStatusTemporary]
+  }
+  @scala.inline
+  implicit class RoomStatusTemporaryOps[Self <: RoomStatusTemporary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatus(value: novice | respawn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

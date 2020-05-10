@@ -13,12 +13,10 @@ trait ButtonBaseClassKey extends js.Object
 
 object ButtonBaseClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def focusVisible: typingsSlinky.materialUiCore.materialUiCoreStrings.focusVisible = "focusVisible".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.focusVisible]
   @scala.inline
-  def focusVisible: typingsSlinky.materialUiCore.materialUiCoreStrings.focusVisible = this.cast("focusVisible")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

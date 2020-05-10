@@ -1,9 +1,7 @@
 package typingsSlinky.reapop.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reapop.mod.Notification
 import typingsSlinky.reapop.mod.NotificationSystemProps
 import typingsSlinky.reapop.mod.NotificationSystemTheme
@@ -12,23 +10,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Reapop
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Reapop {
   @JSImport("reapop", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    theme: NotificationSystemTheme,
-    filter: /* notification */ Notification => Boolean = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def filter(value: /* notification */ Notification => Boolean): this.type = set("filter", js.Any.fromFunction1(value))
   }
-  type Props = NotificationSystemProps
+  
+  def withProps(p: NotificationSystemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(theme: NotificationSystemTheme): Builder = {
+    val __props = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[NotificationSystemProps]))
+  }
 }
 

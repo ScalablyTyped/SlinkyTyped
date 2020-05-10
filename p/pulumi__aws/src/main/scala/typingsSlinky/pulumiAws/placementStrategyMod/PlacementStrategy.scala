@@ -12,10 +12,8 @@ trait PlacementStrategy extends js.Object
 
 object PlacementStrategy {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cluster: typingsSlinky.pulumiAws.pulumiAwsStrings.cluster = "cluster".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.cluster]
   @scala.inline
-  def cluster: typingsSlinky.pulumiAws.pulumiAwsStrings.cluster = this.cast("cluster")
-  @scala.inline
-  def spread: typingsSlinky.pulumiAws.pulumiAwsStrings.spread = this.cast("spread")
+  def spread: typingsSlinky.pulumiAws.pulumiAwsStrings.spread = "spread".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.spread]
 }
 

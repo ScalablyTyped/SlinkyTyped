@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.expressValidator.expressValidatorBooleans.`true`
   - typingsSlinky.expressValidator.AnonErrorMessage[K]
 */
-trait ValidatorSchemaOptions[K /* <: String */] extends js.Object
+trait ValidatorSchemaOptions[K /* <: /* keyof express-validator.express-validator/src/chain/validators.Validators<any> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 70 */ js.Any */] extends js.Object
 

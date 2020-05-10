@@ -31,16 +31,53 @@ trait SchemaRouterNatSubnetworkToNat extends js.Object {
 
 object SchemaRouterNatSubnetworkToNat {
   @scala.inline
-  def apply(
-    name: String = null,
-    secondaryIpRangeNames: js.Array[String] = null,
-    sourceIpRangesToNat: js.Array[String] = null
-  ): SchemaRouterNatSubnetworkToNat = {
+  def apply(): SchemaRouterNatSubnetworkToNat = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (secondaryIpRangeNames != null) __obj.updateDynamic("secondaryIpRangeNames")(secondaryIpRangeNames.asInstanceOf[js.Any])
-    if (sourceIpRangesToNat != null) __obj.updateDynamic("sourceIpRangesToNat")(sourceIpRangesToNat.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRouterNatSubnetworkToNat]
   }
+  @scala.inline
+  implicit class SchemaRouterNatSubnetworkToNatOps[Self <: SchemaRouterNatSubnetworkToNat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondaryIpRangeNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryIpRangeNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondaryIpRangeNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryIpRangeNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceIpRangesToNat(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceIpRangesToNat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceIpRangesToNat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceIpRangesToNat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

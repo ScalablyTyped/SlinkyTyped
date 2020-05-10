@@ -1,9 +1,9 @@
 package typingsSlinky.mapboxGl.mod
 
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.mapboxGl.mapboxGlStrings.boxzoomcancel
 import typingsSlinky.mapboxGl.mapboxGlStrings.boxzoomend
 import typingsSlinky.mapboxGl.mapboxGlStrings.boxzoomstart
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

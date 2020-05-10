@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TransientLifecycle extends Lifecycle
 
 object TransientLifecycle {
@@ -14,7 +15,6 @@ object TransientLifecycle {
     resolve: (typingsSlinky.forgeDi.resolverMod.default, typingsSlinky.forgeDi.contextMod.default, Arguments) => js.Any
   ): TransientLifecycle = {
     val __obj = js.Dynamic.literal(resolve = js.Any.fromFunction3(resolve))
-  
     __obj.asInstanceOf[TransientLifecycle]
   }
 }

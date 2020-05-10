@@ -36,30 +36,137 @@ trait SchemaRestrictItem extends js.Object {
 
 object SchemaRestrictItem {
   @scala.inline
-  def apply(
-    driveFollowUpRestrict: SchemaDriveFollowUpRestrict = null,
-    driveLocationRestrict: SchemaDriveLocationRestrict = null,
-    driveMimeTypeRestrict: SchemaDriveMimeTypeRestrict = null,
-    driveTimeSpanRestrict: SchemaDriveTimeSpanRestrict = null,
-    gmailActionRestrict: SchemaGmailActionRestrict = null,
-    gmailAttachmentRestrict: SchemaGmailAttachmentRestrict = null,
-    gmailFolderRestrict: SchemaGmailFolderRestrict = null,
-    gmailIntelligentRestrict: SchemaGmailIntelligentRestrict = null,
-    gmailTimeRestrict: SchemaGmailTimeRestrict = null,
-    searchOperator: String = null
-  ): SchemaRestrictItem = {
+  def apply(): SchemaRestrictItem = {
     val __obj = js.Dynamic.literal()
-    if (driveFollowUpRestrict != null) __obj.updateDynamic("driveFollowUpRestrict")(driveFollowUpRestrict.asInstanceOf[js.Any])
-    if (driveLocationRestrict != null) __obj.updateDynamic("driveLocationRestrict")(driveLocationRestrict.asInstanceOf[js.Any])
-    if (driveMimeTypeRestrict != null) __obj.updateDynamic("driveMimeTypeRestrict")(driveMimeTypeRestrict.asInstanceOf[js.Any])
-    if (driveTimeSpanRestrict != null) __obj.updateDynamic("driveTimeSpanRestrict")(driveTimeSpanRestrict.asInstanceOf[js.Any])
-    if (gmailActionRestrict != null) __obj.updateDynamic("gmailActionRestrict")(gmailActionRestrict.asInstanceOf[js.Any])
-    if (gmailAttachmentRestrict != null) __obj.updateDynamic("gmailAttachmentRestrict")(gmailAttachmentRestrict.asInstanceOf[js.Any])
-    if (gmailFolderRestrict != null) __obj.updateDynamic("gmailFolderRestrict")(gmailFolderRestrict.asInstanceOf[js.Any])
-    if (gmailIntelligentRestrict != null) __obj.updateDynamic("gmailIntelligentRestrict")(gmailIntelligentRestrict.asInstanceOf[js.Any])
-    if (gmailTimeRestrict != null) __obj.updateDynamic("gmailTimeRestrict")(gmailTimeRestrict.asInstanceOf[js.Any])
-    if (searchOperator != null) __obj.updateDynamic("searchOperator")(searchOperator.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRestrictItem]
   }
+  @scala.inline
+  implicit class SchemaRestrictItemOps[Self <: SchemaRestrictItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDriveFollowUpRestrict(value: SchemaDriveFollowUpRestrict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveFollowUpRestrict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriveFollowUpRestrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveFollowUpRestrict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDriveLocationRestrict(value: SchemaDriveLocationRestrict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveLocationRestrict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriveLocationRestrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveLocationRestrict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDriveMimeTypeRestrict(value: SchemaDriveMimeTypeRestrict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveMimeTypeRestrict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriveMimeTypeRestrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveMimeTypeRestrict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDriveTimeSpanRestrict(value: SchemaDriveTimeSpanRestrict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveTimeSpanRestrict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriveTimeSpanRestrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveTimeSpanRestrict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGmailActionRestrict(value: SchemaGmailActionRestrict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmailActionRestrict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGmailActionRestrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmailActionRestrict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGmailAttachmentRestrict(value: SchemaGmailAttachmentRestrict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmailAttachmentRestrict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGmailAttachmentRestrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmailAttachmentRestrict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGmailFolderRestrict(value: SchemaGmailFolderRestrict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmailFolderRestrict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGmailFolderRestrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmailFolderRestrict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGmailIntelligentRestrict(value: SchemaGmailIntelligentRestrict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmailIntelligentRestrict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGmailIntelligentRestrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmailIntelligentRestrict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGmailTimeRestrict(value: SchemaGmailTimeRestrict): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmailTimeRestrict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGmailTimeRestrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gmailTimeRestrict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchOperator(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchOperator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchOperator")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

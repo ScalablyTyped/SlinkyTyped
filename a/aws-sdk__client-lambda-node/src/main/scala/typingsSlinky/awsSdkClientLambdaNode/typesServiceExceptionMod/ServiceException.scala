@@ -30,6 +30,7 @@ import typingsSlinky.awsSdkClientLambdaNode.updateAliasExceptionsUnionMod.Update
 import typingsSlinky.awsSdkClientLambdaNode.updateEventSourceMappingExceptionsUnionMod.UpdateEventSourceMappingExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateFunctionCodeExceptionsUnionMod.UpdateFunctionCodeExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateFunctionConfigurationExceptionsUnionMod.UpdateFunctionConfigurationExceptionsUnion
+import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,4 +68,12 @@ trait ServiceException
      with UpdateEventSourceMappingExceptionsUnion
      with UpdateFunctionCodeExceptionsUnion
      with UpdateFunctionConfigurationExceptionsUnion
+
+object ServiceException {
+  @scala.inline
+  def apply($metadata: ResponseMetadata, details: ServiceExceptionDetails, message: String, name: String): ServiceException = {
+    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ServiceException]
+  }
+}
 

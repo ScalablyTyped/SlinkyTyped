@@ -13,12 +13,10 @@ trait TypeaheadAlign extends js.Object
 
 object TypeaheadAlign {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def justify: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.justify = "justify".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.justify]
   @scala.inline
-  def justify: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.justify = this.cast("justify")
+  def left: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.left = "left".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.right = this.cast("right")
+  def right: typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.right = "right".asInstanceOf[typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.right]
 }
 

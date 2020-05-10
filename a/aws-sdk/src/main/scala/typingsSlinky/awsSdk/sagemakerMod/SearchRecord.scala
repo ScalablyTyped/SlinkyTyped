@@ -26,18 +26,65 @@ trait SearchRecord extends js.Object {
 
 object SearchRecord {
   @scala.inline
-  def apply(
-    Experiment: Experiment = null,
-    TrainingJob: TrainingJob = null,
-    Trial: Trial = null,
-    TrialComponent: TrialComponent = null
-  ): SearchRecord = {
+  def apply(): SearchRecord = {
     val __obj = js.Dynamic.literal()
-    if (Experiment != null) __obj.updateDynamic("Experiment")(Experiment.asInstanceOf[js.Any])
-    if (TrainingJob != null) __obj.updateDynamic("TrainingJob")(TrainingJob.asInstanceOf[js.Any])
-    if (Trial != null) __obj.updateDynamic("Trial")(Trial.asInstanceOf[js.Any])
-    if (TrialComponent != null) __obj.updateDynamic("TrialComponent")(TrialComponent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchRecord]
   }
+  @scala.inline
+  implicit class SearchRecordOps[Self <: SearchRecord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExperiment(value: Experiment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Experiment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExperiment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Experiment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingJob(value: TrainingJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingJob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingJob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrial(value: Trial): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Trial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Trial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrialComponent(value: TrialComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrialComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrialComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrialComponent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,17 +26,59 @@ trait HyperParameterAlgorithmSpecification extends js.Object {
 
 object HyperParameterAlgorithmSpecification {
   @scala.inline
-  def apply(
-    TrainingInputMode: TrainingInputMode,
-    AlgorithmName: ArnOrName = null,
-    MetricDefinitions: MetricDefinitionList = null,
-    TrainingImage: AlgorithmImage = null
-  ): HyperParameterAlgorithmSpecification = {
+  def apply(TrainingInputMode: TrainingInputMode): HyperParameterAlgorithmSpecification = {
     val __obj = js.Dynamic.literal(TrainingInputMode = TrainingInputMode.asInstanceOf[js.Any])
-    if (AlgorithmName != null) __obj.updateDynamic("AlgorithmName")(AlgorithmName.asInstanceOf[js.Any])
-    if (MetricDefinitions != null) __obj.updateDynamic("MetricDefinitions")(MetricDefinitions.asInstanceOf[js.Any])
-    if (TrainingImage != null) __obj.updateDynamic("TrainingImage")(TrainingImage.asInstanceOf[js.Any])
     __obj.asInstanceOf[HyperParameterAlgorithmSpecification]
   }
+  @scala.inline
+  implicit class HyperParameterAlgorithmSpecificationOps[Self <: HyperParameterAlgorithmSpecification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrainingInputMode(value: TrainingInputMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingInputMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlgorithmName(value: ArnOrName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithmName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricDefinitions(value: MetricDefinitionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricDefinitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricDefinitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricDefinitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingImage(value: AlgorithmImage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingImage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

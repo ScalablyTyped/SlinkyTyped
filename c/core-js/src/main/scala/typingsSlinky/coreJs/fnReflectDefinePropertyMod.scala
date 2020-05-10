@@ -1,7 +1,6 @@
 package typingsSlinky.coreJs
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.PropertyDescriptor
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +13,7 @@ object fnReflectDefinePropertyMod
       js.Function3[
         /* target */ js.Any, 
         /* propertyKey */ PropertyKey, 
-        /* attributes */ PropertyDescriptor, 
+        /* attributes */ js.PropertyDescriptor, 
         Boolean
       ]
     ]

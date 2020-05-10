@@ -1,6 +1,5 @@
 package typingsSlinky.easyXapiSupertest
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +9,14 @@ import scala.scalajs.js.annotation._
 object dnsMod extends js.Object {
   def lookup(
     domain: String,
-    callback: js.Function3[/* err */ Error, /* address */ String, /* family */ Double, Unit]
+    callback: js.Function3[/* err */ js.Error, /* address */ String, /* family */ Double, Unit]
   ): String = js.native
   def lookup(
     domain: String,
     family: Double,
     callback: js.Function3[/* err */ js.Error, /* address */ String, /* family */ Double, Unit]
   ): String = js.native
-  def resolve(domain: String, callback: js.Function2[/* err */ Error, /* addresses */ js.Array[String], Unit]): js.Array[String] = js.native
+  def resolve(domain: String, callback: js.Function2[/* err */ js.Error, /* addresses */ js.Array[String], Unit]): js.Array[String] = js.native
   def resolve(
     domain: String,
     rrtype: String,

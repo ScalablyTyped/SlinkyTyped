@@ -4,21 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPersistent extends js.Object {
-  var persistent: js.UndefOr[Boolean] = js.undefined
-  var suppressRebuildEvent: js.UndefOr[Boolean] = js.undefined
+  var persistent: js.UndefOr[Boolean] = js.native
+  var suppressRebuildEvent: js.UndefOr[Boolean] = js.native
 }
 
 object AnonPersistent {
   @scala.inline
-  def apply(
-    persistent: js.UndefOr[Boolean] = js.undefined,
-    suppressRebuildEvent: js.UndefOr[Boolean] = js.undefined
-  ): AnonPersistent = {
+  def apply(): AnonPersistent = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(persistent)) __obj.updateDynamic("persistent")(persistent.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressRebuildEvent)) __obj.updateDynamic("suppressRebuildEvent")(suppressRebuildEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPersistent]
   }
+  @scala.inline
+  implicit class AnonPersistentOps[Self <: AnonPersistent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPersistent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersistent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuppressRebuildEvent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressRebuildEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppressRebuildEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressRebuildEvent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

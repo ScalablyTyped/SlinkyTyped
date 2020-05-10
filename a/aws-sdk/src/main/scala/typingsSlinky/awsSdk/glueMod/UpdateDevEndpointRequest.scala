@@ -42,25 +42,107 @@ trait UpdateDevEndpointRequest extends js.Object {
 
 object UpdateDevEndpointRequest {
   @scala.inline
-  def apply(
-    EndpointName: GenericString,
-    AddArguments: MapValue = null,
-    AddPublicKeys: PublicKeysList = null,
-    CustomLibraries: DevEndpointCustomLibraries = null,
-    DeleteArguments: StringList = null,
-    DeletePublicKeys: PublicKeysList = null,
-    PublicKey: GenericString = null,
-    UpdateEtlLibraries: js.UndefOr[scala.Boolean] = js.undefined
-  ): UpdateDevEndpointRequest = {
+  def apply(EndpointName: GenericString): UpdateDevEndpointRequest = {
     val __obj = js.Dynamic.literal(EndpointName = EndpointName.asInstanceOf[js.Any])
-    if (AddArguments != null) __obj.updateDynamic("AddArguments")(AddArguments.asInstanceOf[js.Any])
-    if (AddPublicKeys != null) __obj.updateDynamic("AddPublicKeys")(AddPublicKeys.asInstanceOf[js.Any])
-    if (CustomLibraries != null) __obj.updateDynamic("CustomLibraries")(CustomLibraries.asInstanceOf[js.Any])
-    if (DeleteArguments != null) __obj.updateDynamic("DeleteArguments")(DeleteArguments.asInstanceOf[js.Any])
-    if (DeletePublicKeys != null) __obj.updateDynamic("DeletePublicKeys")(DeletePublicKeys.asInstanceOf[js.Any])
-    if (PublicKey != null) __obj.updateDynamic("PublicKey")(PublicKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(UpdateEtlLibraries)) __obj.updateDynamic("UpdateEtlLibraries")(UpdateEtlLibraries.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateDevEndpointRequest]
   }
+  @scala.inline
+  implicit class UpdateDevEndpointRequestOps[Self <: UpdateDevEndpointRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndpointName(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddArguments(value: MapValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddArguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddArguments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddArguments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddPublicKeys(value: PublicKeysList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddPublicKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddPublicKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddPublicKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomLibraries(value: DevEndpointCustomLibraries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomLibraries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomLibraries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomLibraries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteArguments(value: StringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteArguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteArguments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteArguments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeletePublicKeys(value: PublicKeysList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletePublicKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletePublicKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletePublicKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicKey(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateEtlLibraries(value: BooleanValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateEtlLibraries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateEtlLibraries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateEtlLibraries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

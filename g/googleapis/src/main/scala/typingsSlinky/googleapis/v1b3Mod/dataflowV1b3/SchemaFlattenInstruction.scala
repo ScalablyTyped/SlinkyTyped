@@ -18,10 +18,29 @@ trait SchemaFlattenInstruction extends js.Object {
 
 object SchemaFlattenInstruction {
   @scala.inline
-  def apply(inputs: js.Array[SchemaInstructionInput] = null): SchemaFlattenInstruction = {
+  def apply(): SchemaFlattenInstruction = {
     val __obj = js.Dynamic.literal()
-    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFlattenInstruction]
   }
+  @scala.inline
+  implicit class SchemaFlattenInstructionOps[Self <: SchemaFlattenInstruction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputs(value: js.Array[SchemaInstructionInput]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

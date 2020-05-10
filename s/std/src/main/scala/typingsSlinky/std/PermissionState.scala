@@ -13,12 +13,10 @@ trait PermissionState extends js.Object
 
 object PermissionState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def denied: typingsSlinky.std.stdStrings.denied = "denied".asInstanceOf[typingsSlinky.std.stdStrings.denied]
   @scala.inline
-  def denied: typingsSlinky.std.stdStrings.denied = this.cast("denied")
+  def granted: typingsSlinky.std.stdStrings.granted = "granted".asInstanceOf[typingsSlinky.std.stdStrings.granted]
   @scala.inline
-  def granted: typingsSlinky.std.stdStrings.granted = this.cast("granted")
-  @scala.inline
-  def prompt: typingsSlinky.std.stdStrings.prompt = this.cast("prompt")
+  def prompt: typingsSlinky.std.stdStrings.prompt = "prompt".asInstanceOf[typingsSlinky.std.stdStrings.prompt]
 }
 

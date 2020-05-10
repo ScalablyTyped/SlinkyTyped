@@ -19,6 +19,9 @@ trait RolePolicyArgs extends js.Object {
     * prefix. Conflicts with `name`.
     */
   val namePrefix: js.UndefOr[Input[String]] = js.native
+  /**
+    * The policy document attached to the role.
+    */
   val policy: Input[String | PolicyDocument] = js.native
   /**
     * The IAM role to attach to the policy.
@@ -28,16 +31,53 @@ trait RolePolicyArgs extends js.Object {
 
 object RolePolicyArgs {
   @scala.inline
-  def apply(
-    policy: Input[String | PolicyDocument],
-    role: Input[String | Role],
-    name: Input[String] = null,
-    namePrefix: Input[String] = null
-  ): RolePolicyArgs = {
+  def apply(policy: Input[String | PolicyDocument], role: Input[String | Role]): RolePolicyArgs = {
     val __obj = js.Dynamic.literal(policy = policy.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (namePrefix != null) __obj.updateDynamic("namePrefix")(namePrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[RolePolicyArgs]
   }
+  @scala.inline
+  implicit class RolePolicyArgsOps[Self <: RolePolicyArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicy(value: Input[String | PolicyDocument]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRole(value: Input[String | Role]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamePrefix(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namePrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,5 +22,5 @@ package object _Global_ {
   ]
   type TypeDeclarationBuilders = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in string ]: eslint-plugin-react.eslint-plugin-react/lib/types._Global_.TypeDeclarationBuilder}
-    */ typingsSlinky.eslintPluginReact.eslintPluginReactStrings.TypeDeclarationBuilders with js.Any
+    */ typingsSlinky.eslintPluginReact.eslintPluginReactStrings.TypeDeclarationBuilders with org.scalablytyped.runtime.TopLevel[js.Any]
 }

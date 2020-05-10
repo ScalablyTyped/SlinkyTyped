@@ -13,12 +13,10 @@ trait ReferenceType extends js.Object
 
 object ReferenceType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def collapsed: typingsSlinky.mdast.mdastStrings.collapsed = "collapsed".asInstanceOf[typingsSlinky.mdast.mdastStrings.collapsed]
   @scala.inline
-  def collapsed: typingsSlinky.mdast.mdastStrings.collapsed = this.cast("collapsed")
+  def full: typingsSlinky.mdast.mdastStrings.full = "full".asInstanceOf[typingsSlinky.mdast.mdastStrings.full]
   @scala.inline
-  def full: typingsSlinky.mdast.mdastStrings.full = this.cast("full")
-  @scala.inline
-  def shortcut: typingsSlinky.mdast.mdastStrings.shortcut = this.cast("shortcut")
+  def shortcut: typingsSlinky.mdast.mdastStrings.shortcut = "shortcut".asInstanceOf[typingsSlinky.mdast.mdastStrings.shortcut]
 }
 

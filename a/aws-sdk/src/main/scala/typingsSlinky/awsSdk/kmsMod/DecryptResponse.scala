@@ -22,16 +22,59 @@ trait DecryptResponse extends js.Object {
 
 object DecryptResponse {
   @scala.inline
-  def apply(
-    EncryptionAlgorithm: EncryptionAlgorithmSpec = null,
-    KeyId: KeyIdType = null,
-    Plaintext: PlaintextType = null
-  ): DecryptResponse = {
+  def apply(): DecryptResponse = {
     val __obj = js.Dynamic.literal()
-    if (EncryptionAlgorithm != null) __obj.updateDynamic("EncryptionAlgorithm")(EncryptionAlgorithm.asInstanceOf[js.Any])
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
-    if (Plaintext != null) __obj.updateDynamic("Plaintext")(Plaintext.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecryptResponse]
   }
+  @scala.inline
+  implicit class DecryptResponseOps[Self <: DecryptResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncryptionAlgorithm(value: EncryptionAlgorithmSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyId(value: KeyIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaintextUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Plaintext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlaintext(value: PlaintextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Plaintext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaintext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Plaintext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait UpdateSecretVersionStageResponse extends js.Object {
 
 object UpdateSecretVersionStageResponse {
   @scala.inline
-  def apply(ARN: SecretARNType = null, Name: SecretNameType = null): UpdateSecretVersionStageResponse = {
+  def apply(): UpdateSecretVersionStageResponse = {
     val __obj = js.Dynamic.literal()
-    if (ARN != null) __obj.updateDynamic("ARN")(ARN.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateSecretVersionStageResponse]
   }
+  @scala.inline
+  implicit class UpdateSecretVersionStageResponseOps[Self <: UpdateSecretVersionStageResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withARN(value: SecretARNType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: SecretNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

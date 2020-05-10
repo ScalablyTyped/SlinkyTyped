@@ -1,6 +1,5 @@
 package typingsSlinky.winrt.Windows.Storage.Streams
 
-import typingsSlinky.std.Uint8Array
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +20,7 @@ trait IDataWriter extends js.Object {
   def writeBuffer(buffer: IBuffer, start: Double, count: Double): Unit = js.native
   def writeByte(value: Double): Unit = js.native
   def writeBytes(value: js.Array[Double]): Unit = js.native
-  def writeBytes(value: Uint8Array): Unit = js.native
+  def writeBytes(value: js.typedarray.Uint8Array): Unit = js.native
   def writeDateTime(value: js.Date): Unit = js.native
   def writeDouble(value: Double): Unit = js.native
   def writeGuid(value: String): Unit = js.native

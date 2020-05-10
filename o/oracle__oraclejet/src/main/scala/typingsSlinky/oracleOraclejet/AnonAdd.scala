@@ -6,49 +6,145 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAdd
-  extends /* propName */ StringDictionary[js.Any] {
-  var add: js.UndefOr[Boolean] = js.undefined
+  extends /* key */ StringDictionary[js.Any] {
+  var add: js.UndefOr[Boolean] = js.native
   var error: js.UndefOr[
     js.Function3[/* collection */ Collection, /* xhr */ js.Any, /* options */ js.Object, Unit]
-  ] = js.undefined
-  var fetchSize: js.UndefOr[Double] = js.undefined
-  var set: js.UndefOr[Boolean] = js.undefined
-  var since: js.UndefOr[js.Any] = js.undefined
-  var startID: js.UndefOr[js.Any] = js.undefined
-  var startIndex: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var fetchSize: js.UndefOr[Double] = js.native
+  var set: js.UndefOr[Boolean] = js.native
+  var since: js.UndefOr[js.Any] = js.native
+  var startID: js.UndefOr[js.Any] = js.native
+  var startIndex: js.UndefOr[Double] = js.native
   var success: js.UndefOr[
     js.Function3[/* collection */ Collection, /* response */ js.Any, /* options */ js.Object, Unit]
-  ] = js.undefined
-  var until: js.UndefOr[js.Any] = js.undefined
+  ] = js.native
+  var until: js.UndefOr[js.Any] = js.native
 }
 
 object AnonAdd {
   @scala.inline
-  def apply(
-    StringDictionary: /* propName */ StringDictionary[js.Any] = null,
-    add: js.UndefOr[Boolean] = js.undefined,
-    error: (/* collection */ Collection, /* xhr */ js.Any, /* options */ js.Object) => Unit = null,
-    fetchSize: Int | Double = null,
-    set: js.UndefOr[Boolean] = js.undefined,
-    since: js.Any = null,
-    startID: js.Any = null,
-    startIndex: Int | Double = null,
-    success: (/* collection */ Collection, /* response */ js.Any, /* options */ js.Object) => Unit = null,
-    until: js.Any = null
-  ): AnonAdd = {
+  def apply(): AnonAdd = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(add)) __obj.updateDynamic("add")(add.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction3(error))
-    if (fetchSize != null) __obj.updateDynamic("fetchSize")(fetchSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(set)) __obj.updateDynamic("set")(set.asInstanceOf[js.Any])
-    if (since != null) __obj.updateDynamic("since")(since.asInstanceOf[js.Any])
-    if (startID != null) __obj.updateDynamic("startID")(startID.asInstanceOf[js.Any])
-    if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction3(success))
-    if (until != null) __obj.updateDynamic("until")(until.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAdd]
   }
+  @scala.inline
+  implicit class AnonAddOps[Self <: AnonAdd] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: (/* collection */ Collection, /* xhr */ js.Any, /* options */ js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFetchSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFetchSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSet(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSince(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSince: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("since")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartID(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: (/* collection */ Collection, /* response */ js.Any, /* options */ js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUntil(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUntil: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("until")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

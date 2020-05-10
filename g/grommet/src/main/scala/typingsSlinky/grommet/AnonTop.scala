@@ -8,27 +8,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonTop extends js.Object {
-  var bottom: js.UndefOr[top | typingsSlinky.grommet.grommetStrings.bottom] = js.undefined
-  var left: js.UndefOr[right | typingsSlinky.grommet.grommetStrings.left] = js.undefined
-  var right: js.UndefOr[typingsSlinky.grommet.grommetStrings.right | left] = js.undefined
-  var top: js.UndefOr[typingsSlinky.grommet.grommetStrings.top | bottom] = js.undefined
+  var bottom: js.UndefOr[top | typingsSlinky.grommet.grommetStrings.bottom] = js.native
+  var left: js.UndefOr[right | typingsSlinky.grommet.grommetStrings.left] = js.native
+  var right: js.UndefOr[typingsSlinky.grommet.grommetStrings.right | left] = js.native
+  var top: js.UndefOr[typingsSlinky.grommet.grommetStrings.top | bottom] = js.native
 }
 
 object AnonTop {
   @scala.inline
-  def apply(
-    bottom: top | bottom = null,
-    left: right | left = null,
-    right: right | left = null,
-    top: top | bottom = null
-  ): AnonTop = {
+  def apply(): AnonTop = {
     val __obj = js.Dynamic.literal()
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonTop]
   }
+  @scala.inline
+  implicit class AnonTopOps[Self <: AnonTop] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBottom(value: top | bottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: right | left): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRight(value: right | left): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: top | bottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

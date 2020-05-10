@@ -14,10 +14,29 @@ trait TlsContext extends js.Object {
 
 object TlsContext {
   @scala.inline
-  def apply(serverName: ServerName = null): TlsContext = {
+  def apply(): TlsContext = {
     val __obj = js.Dynamic.literal()
-    if (serverName != null) __obj.updateDynamic("serverName")(serverName.asInstanceOf[js.Any])
     __obj.asInstanceOf[TlsContext]
   }
+  @scala.inline
+  implicit class TlsContextOps[Self <: TlsContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServerName(value: ServerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

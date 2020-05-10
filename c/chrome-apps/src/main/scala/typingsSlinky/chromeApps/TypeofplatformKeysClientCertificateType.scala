@@ -10,11 +10,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofplatformKeysClientCertificateType extends js.Object {
   /**
     * @enum
     */
-  val ClientCertificateType: AnonECDSASIGN
+  val ClientCertificateType: AnonECDSASIGN = js.native
   /**
     * @description
     * Passes the key pair of *certificate* for usage with
@@ -39,10 +40,10 @@ trait TypeofplatformKeysClientCertificateType extends js.Object {
     * @see[CryptoKey docs]{@link http://www.w3.org/TR/WebCryptoAPI/#dfn-CryptoKey}
     */
   def getKeyPair(
-    certificate: scala.scalajs.js.typedarray.ArrayBuffer,
+    certificate: js.typedarray.ArrayBuffer,
     parameters: js.Object,
     callback: js.Function2[/* publicKey */ CryptoKey, /* privateKey */ CryptoKey | Null, Unit]
-  ): Unit
+  ): Unit = js.native
   /**
     * This function filters from a list of client certificates the ones that
     * are known to the platform, match *request* and for which the
@@ -54,14 +55,14 @@ trait TypeofplatformKeysClientCertificateType extends js.Object {
     * @param callback Will provide *matches*: The list of certificates that match the request, that the
     *                 app has permission for and, if *interactive* is true, that were selected by the user.
     */
-  def selectClientCertificates(details: SelectDetails, callback: js.Function1[/* matches */ js.Array[Match], Unit]): Unit
+  def selectClientCertificates(details: SelectDetails, callback: js.Function1[/* matches */ js.Array[Match], Unit]): Unit = js.native
   /**
     * An implementation of WebCrypto's SubtleCrypto
     * that allows crypto operations on keys of client
     * certificates that are available to this app.
     * @see[SubtleCrypto]{@link http://www.w3.org/TR/WebCryptoAPI/#subtlecrypto-interface}
     */
-  def subtleCrypto(): SubtleCrypto
+  def subtleCrypto(): SubtleCrypto = js.native
   /**
     * Checks whether *details.serverCertificateChain* can be trusted
     * for *details.hostname* according to the trust settings of the
@@ -73,21 +74,60 @@ trait TypeofplatformKeysClientCertificateType extends js.Object {
     * The implementation is supposed to respect the EKU serverAuth and to
     * support subject alternative names.
     */
-  def verifyTLSServerCertificate(details: VerificationDetails, callback: js.Function1[/* result */ VerificationResult, Unit]): Unit
+  def verifyTLSServerCertificate(details: VerificationDetails, callback: js.Function1[/* result */ VerificationResult, Unit]): Unit = js.native
 }
 
 object TypeofplatformKeysClientCertificateType {
   @scala.inline
   def apply(
     ClientCertificateType: AnonECDSASIGN,
-    getKeyPair: (scala.scalajs.js.typedarray.ArrayBuffer, js.Object, js.Function2[/* publicKey */ CryptoKey, /* privateKey */ CryptoKey | Null, Unit]) => Unit,
+    getKeyPair: (js.typedarray.ArrayBuffer, js.Object, js.Function2[/* publicKey */ CryptoKey, /* privateKey */ CryptoKey | Null, Unit]) => Unit,
     selectClientCertificates: (SelectDetails, js.Function1[/* matches */ js.Array[Match], Unit]) => Unit,
     subtleCrypto: () => SubtleCrypto,
     verifyTLSServerCertificate: (VerificationDetails, js.Function1[/* result */ VerificationResult, Unit]) => Unit
   ): TypeofplatformKeysClientCertificateType = {
     val __obj = js.Dynamic.literal(ClientCertificateType = ClientCertificateType.asInstanceOf[js.Any], getKeyPair = js.Any.fromFunction3(getKeyPair), selectClientCertificates = js.Any.fromFunction2(selectClientCertificates), subtleCrypto = js.Any.fromFunction0(subtleCrypto), verifyTLSServerCertificate = js.Any.fromFunction2(verifyTLSServerCertificate))
-  
     __obj.asInstanceOf[TypeofplatformKeysClientCertificateType]
   }
+  @scala.inline
+  implicit class TypeofplatformKeysClientCertificateTypeOps[Self <: TypeofplatformKeysClientCertificateType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientCertificateType(value: AnonECDSASIGN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCertificateType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetKeyPair(
+      value: (js.typedarray.ArrayBuffer, js.Object, js.Function2[/* publicKey */ CryptoKey, /* privateKey */ CryptoKey | Null, Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getKeyPair")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSelectClientCertificates(value: (SelectDetails, js.Function1[/* matches */ js.Array[Match], Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectClientCertificates")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSubtleCrypto(value: () => SubtleCrypto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtleCrypto")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withVerifyTLSServerCertificate(value: (VerificationDetails, js.Function1[/* result */ VerificationResult, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verifyTLSServerCertificate")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

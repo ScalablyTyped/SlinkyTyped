@@ -3,7 +3,6 @@ package typingsSlinky.jupyterlabInspector.inspectorMod
 import typingsSlinky.jupyterlabApputils.printingMod.Printing.IPrintable
 import typingsSlinky.jupyterlabInspector.inspectorMod.InspectorPanel.IOptions
 import typingsSlinky.jupyterlabInspector.tokensMod.IInspector
-import typingsSlinky.jupyterlabInspector.tokensMod.IInspector.IInspectable
 import typingsSlinky.jupyterlabInspector.tokensMod.IInspector.IInspectorUpdate
 import typingsSlinky.phosphorAlgorithm.iterMod.IIterator
 import typingsSlinky.phosphorMessaging.mod.Message
@@ -28,11 +27,6 @@ class InspectorPanel_ ()
   def this(options: IOptions) = this()
   var _content: js.Any = js.native
   var _source: js.Any = js.native
-  /**
-    * The source of events the inspector listens for.
-    */
-  /* CompleteClass */
-  override var source: IInspectable | Null = js.native
   /**
     * Post an `'activate-request'` message to the widget.
     *
@@ -100,20 +94,6 @@ class InspectorPanel_ ()
     */
   /* InferMemberOverrides */
   override def contains(widget: Widget): Boolean = js.native
-  /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
-    */
-  /* CompleteClass */
-  /* InferMemberOverrides */
-  override def dispose(): Unit = js.native
   /**
     * Post a `'fit-request'` message to the widget.
     *
@@ -293,14 +273,6 @@ class InspectorPanel_ ()
     */
   /* InferMemberOverrides */
   /* protected */ override def onUpdateRequest(msg: Message): Unit = js.native
-  /**
-    * Process a message sent to the handler.
-    *
-    * @param msg - The message to be processed.
-    */
-  /* CompleteClass */
-  /* InferMemberOverrides */
-  override def processMessage(msg: Message): Unit = js.native
   /**
     * Remove a class name from the widget's DOM node.
     *

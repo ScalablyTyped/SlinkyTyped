@@ -7,6 +7,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait StartTranscriptionJobRequest extends js.Object {
   /**
+    * An object that contains the request parameters for content redaction.
+    */
+  var ContentRedaction: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.ContentRedaction] = js.native
+  /**
     * Provides information about how a transcription job is executed. Use this field to indicate that the job can be queued for deferred execution if the concurrency limit is reached and there are no slots available to immediately run the job.
     */
   var JobExecutionSettings: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.JobExecutionSettings] = js.native
@@ -27,7 +31,7 @@ trait StartTranscriptionJobRequest extends js.Object {
     */
   var MediaSampleRateHertz: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.MediaSampleRateHertz] = js.native
   /**
-    * The location where the transcription is stored. If you set the OutputBucketName, Amazon Transcribe puts the transcription in the specified S3 bucket. When you call the GetTranscriptionJob operation, the operation returns this location in the TranscriptFileUri field. The S3 bucket must have permissions that allow Amazon Transcribe to put files in the bucket. For more information, see Permissions Required for IAM User Roles. You can specify an AWS Key Management Service (KMS) key to encrypt the output of your transcription using the OutputEncryptionKMSKeyId parameter. If you don't specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side encryption of transcripts that are placed in your S3 bucket. If you don't set the OutputBucketName, Amazon Transcribe generates a pre-signed URL, a shareable URL that provides secure access to your transcription, and returns it in the TranscriptFileUri field. Use this URL to download the transcription.
+    * The location where the transcription is stored. If you set the OutputBucketName, Amazon Transcribe puts the transcript in the specified S3 bucket. When you call the GetTranscriptionJob operation, the operation returns this location in the TranscriptFileUri field. If you enable content redaction, the redacted transcript appears in RedactedTranscriptFileUri. If you enable content redaction and choose to output an unredacted transcript, that transcript's location still appears in the TranscriptFileUri. The S3 bucket must have permissions that allow Amazon Transcribe to put files in the bucket. For more information, see Permissions Required for IAM User Roles. You can specify an AWS Key Management Service (KMS) key to encrypt the output of your transcription using the OutputEncryptionKMSKeyId parameter. If you don't specify a KMS key, Amazon Transcribe uses the default Amazon S3 key for server-side encryption of transcripts that are placed in your S3 bucket. If you don't set the OutputBucketName, Amazon Transcribe generates a pre-signed URL, a shareable URL that provides secure access to your transcription, and returns it in the TranscriptFileUri field. Use this URL to download the transcription.
     */
   var OutputBucketName: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.OutputBucketName] = js.native
   /**
@@ -46,25 +50,119 @@ trait StartTranscriptionJobRequest extends js.Object {
 
 object StartTranscriptionJobRequest {
   @scala.inline
-  def apply(
-    LanguageCode: LanguageCode,
-    Media: Media,
-    TranscriptionJobName: TranscriptionJobName,
-    JobExecutionSettings: JobExecutionSettings = null,
-    MediaFormat: MediaFormat = null,
-    MediaSampleRateHertz: Int | Double = null,
-    OutputBucketName: OutputBucketName = null,
-    OutputEncryptionKMSKeyId: KMSKeyId = null,
-    Settings: Settings = null
-  ): StartTranscriptionJobRequest = {
+  def apply(LanguageCode: LanguageCode, Media: Media, TranscriptionJobName: TranscriptionJobName): StartTranscriptionJobRequest = {
     val __obj = js.Dynamic.literal(LanguageCode = LanguageCode.asInstanceOf[js.Any], Media = Media.asInstanceOf[js.Any], TranscriptionJobName = TranscriptionJobName.asInstanceOf[js.Any])
-    if (JobExecutionSettings != null) __obj.updateDynamic("JobExecutionSettings")(JobExecutionSettings.asInstanceOf[js.Any])
-    if (MediaFormat != null) __obj.updateDynamic("MediaFormat")(MediaFormat.asInstanceOf[js.Any])
-    if (MediaSampleRateHertz != null) __obj.updateDynamic("MediaSampleRateHertz")(MediaSampleRateHertz.asInstanceOf[js.Any])
-    if (OutputBucketName != null) __obj.updateDynamic("OutputBucketName")(OutputBucketName.asInstanceOf[js.Any])
-    if (OutputEncryptionKMSKeyId != null) __obj.updateDynamic("OutputEncryptionKMSKeyId")(OutputEncryptionKMSKeyId.asInstanceOf[js.Any])
-    if (Settings != null) __obj.updateDynamic("Settings")(Settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartTranscriptionJobRequest]
   }
+  @scala.inline
+  implicit class StartTranscriptionJobRequestOps[Self <: StartTranscriptionJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLanguageCode(value: LanguageCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMedia(value: Media): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Media")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTranscriptionJobName(value: TranscriptionJobName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TranscriptionJobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentRedaction(value: ContentRedaction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentRedaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentRedaction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentRedaction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobExecutionSettings(value: JobExecutionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobExecutionSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobExecutionSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobExecutionSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediaFormat(value: MediaFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediaSampleRateHertz(value: MediaSampleRateHertz): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaSampleRateHertz")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaSampleRateHertz: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediaSampleRateHertz")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputBucketName(value: OutputBucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputBucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputBucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputBucketName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputEncryptionKMSKeyId(value: KMSKeyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputEncryptionKMSKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputEncryptionKMSKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OutputEncryptionKMSKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSettings(value: Settings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Settings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

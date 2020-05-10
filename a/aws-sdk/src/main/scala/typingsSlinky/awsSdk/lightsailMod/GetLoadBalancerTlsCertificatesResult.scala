@@ -14,10 +14,29 @@ trait GetLoadBalancerTlsCertificatesResult extends js.Object {
 
 object GetLoadBalancerTlsCertificatesResult {
   @scala.inline
-  def apply(tlsCertificates: LoadBalancerTlsCertificateList = null): GetLoadBalancerTlsCertificatesResult = {
+  def apply(): GetLoadBalancerTlsCertificatesResult = {
     val __obj = js.Dynamic.literal()
-    if (tlsCertificates != null) __obj.updateDynamic("tlsCertificates")(tlsCertificates.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLoadBalancerTlsCertificatesResult]
   }
+  @scala.inline
+  implicit class GetLoadBalancerTlsCertificatesResultOps[Self <: GetLoadBalancerTlsCertificatesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTlsCertificates(value: LoadBalancerTlsCertificateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsCertificates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTlsCertificates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsCertificates")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

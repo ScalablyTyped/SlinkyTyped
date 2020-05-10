@@ -14,14 +14,12 @@ trait BuiltinLayouts extends js.Object
 
 object BuiltinLayouts {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def diagonal: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.diagonal = "diagonal".asInstanceOf[typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.diagonal]
   @scala.inline
-  def diagonal: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.diagonal = this.cast("diagonal")
+  def horizontal: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.horizontal = this.cast("horizontal")
+  def packed: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.packed = "packed".asInstanceOf[typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.packed]
   @scala.inline
-  def packed: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.packed = this.cast("packed")
-  @scala.inline
-  def vertical: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.vertical = "vertical".asInstanceOf[typingsSlinky.nodeSpriteGenerator.nodeSpriteGeneratorStrings.vertical]
 }
 

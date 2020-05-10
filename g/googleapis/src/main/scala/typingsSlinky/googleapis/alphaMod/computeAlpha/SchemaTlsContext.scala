@@ -23,14 +23,41 @@ trait SchemaTlsContext extends js.Object {
 
 object SchemaTlsContext {
   @scala.inline
-  def apply(
-    certificateContext: SchemaTlsCertificateContext = null,
-    validationContext: SchemaTlsValidationContext = null
-  ): SchemaTlsContext = {
+  def apply(): SchemaTlsContext = {
     val __obj = js.Dynamic.literal()
-    if (certificateContext != null) __obj.updateDynamic("certificateContext")(certificateContext.asInstanceOf[js.Any])
-    if (validationContext != null) __obj.updateDynamic("validationContext")(validationContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTlsContext]
   }
+  @scala.inline
+  implicit class SchemaTlsContextOps[Self <: SchemaTlsContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateContext(value: SchemaTlsCertificateContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationContext(value: SchemaTlsValidationContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationContext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

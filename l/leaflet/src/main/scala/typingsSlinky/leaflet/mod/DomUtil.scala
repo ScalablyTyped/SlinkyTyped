@@ -25,7 +25,7 @@ object DomUtil extends js.Object {
     * Get Element by its ID or with the given HTML-Element
     */
   def get(element: String): HTMLElement | Null = js.native
-  def get(element: typingsSlinky.std.HTMLElement): HTMLElement | Null = js.native
+  def get(element: HTMLElement): HTMLElement | Null = js.native
   def getClass(el: HTMLElement): String = js.native
   def getPosition(el: HTMLElement): Point_ = js.native
   def getStyle(el: HTMLElement, styleAttrib: String): String | Null = js.native

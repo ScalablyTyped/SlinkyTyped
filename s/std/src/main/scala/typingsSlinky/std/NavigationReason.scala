@@ -14,14 +14,12 @@ trait NavigationReason extends js.Object
 
 object NavigationReason {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def down: typingsSlinky.std.stdStrings.down = "down".asInstanceOf[typingsSlinky.std.stdStrings.down]
   @scala.inline
-  def down: typingsSlinky.std.stdStrings.down = this.cast("down")
+  def left: typingsSlinky.std.stdStrings.left = "left".asInstanceOf[typingsSlinky.std.stdStrings.left]
   @scala.inline
-  def left: typingsSlinky.std.stdStrings.left = this.cast("left")
+  def right: typingsSlinky.std.stdStrings.right = "right".asInstanceOf[typingsSlinky.std.stdStrings.right]
   @scala.inline
-  def right: typingsSlinky.std.stdStrings.right = this.cast("right")
-  @scala.inline
-  def up: typingsSlinky.std.stdStrings.up = this.cast("up")
+  def up: typingsSlinky.std.stdStrings.up = "up".asInstanceOf[typingsSlinky.std.stdStrings.up]
 }
 

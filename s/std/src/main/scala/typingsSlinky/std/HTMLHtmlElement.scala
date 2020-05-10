@@ -17,5 +17,6 @@ trait HTMLHtmlElement extends HTMLElement {
 
 @JSGlobal("HTMLHtmlElement")
 @js.native
-object HTMLHtmlElement extends Instantiable0[HTMLHtmlElement]
+object HTMLHtmlElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLHtmlElement]
 

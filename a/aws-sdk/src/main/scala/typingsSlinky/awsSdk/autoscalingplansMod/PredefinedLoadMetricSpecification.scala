@@ -18,10 +18,35 @@ trait PredefinedLoadMetricSpecification extends js.Object {
 
 object PredefinedLoadMetricSpecification {
   @scala.inline
-  def apply(PredefinedLoadMetricType: LoadMetricType, ResourceLabel: ResourceLabel = null): PredefinedLoadMetricSpecification = {
+  def apply(PredefinedLoadMetricType: LoadMetricType): PredefinedLoadMetricSpecification = {
     val __obj = js.Dynamic.literal(PredefinedLoadMetricType = PredefinedLoadMetricType.asInstanceOf[js.Any])
-    if (ResourceLabel != null) __obj.updateDynamic("ResourceLabel")(ResourceLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[PredefinedLoadMetricSpecification]
   }
+  @scala.inline
+  implicit class PredefinedLoadMetricSpecificationOps[Self <: PredefinedLoadMetricSpecification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPredefinedLoadMetricType(value: LoadMetricType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredefinedLoadMetricType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceLabel(value: ResourceLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLabel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

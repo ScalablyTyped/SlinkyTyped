@@ -22,15 +22,47 @@ trait PutPipelineDefinitionOutput extends js.Object {
 
 object PutPipelineDefinitionOutput {
   @scala.inline
-  def apply(
-    errored: Boolean,
-    validationErrors: ValidationErrors = null,
-    validationWarnings: ValidationWarnings = null
-  ): PutPipelineDefinitionOutput = {
+  def apply(errored: Boolean): PutPipelineDefinitionOutput = {
     val __obj = js.Dynamic.literal(errored = errored.asInstanceOf[js.Any])
-    if (validationErrors != null) __obj.updateDynamic("validationErrors")(validationErrors.asInstanceOf[js.Any])
-    if (validationWarnings != null) __obj.updateDynamic("validationWarnings")(validationWarnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutPipelineDefinitionOutput]
   }
+  @scala.inline
+  implicit class PutPipelineDefinitionOutputOps[Self <: PutPipelineDefinitionOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrored(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errored")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValidationErrors(value: ValidationErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationWarnings(value: ValidationWarnings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationWarnings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationWarnings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationWarnings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

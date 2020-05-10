@@ -16,22 +16,89 @@ trait AnonAlg extends js.Object {
 
 object AnonAlg {
   @scala.inline
-  def apply(
-    alg: String = null,
-    e: String = null,
-    kid: String = null,
-    kty: String = null,
-    n: String = null,
-    use: String = null
-  ): AnonAlg = {
+  def apply(): AnonAlg = {
     val __obj = js.Dynamic.literal()
-    if (alg != null) __obj.updateDynamic("alg")(alg.asInstanceOf[js.Any])
-    if (e != null) __obj.updateDynamic("e")(e.asInstanceOf[js.Any])
-    if (kid != null) __obj.updateDynamic("kid")(kid.asInstanceOf[js.Any])
-    if (kty != null) __obj.updateDynamic("kty")(kty.asInstanceOf[js.Any])
-    if (n != null) __obj.updateDynamic("n")(n.asInstanceOf[js.Any])
-    if (use != null) __obj.updateDynamic("use")(use.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAlg]
   }
+  @scala.inline
+  implicit class AnonAlgOps[Self <: AnonAlg] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("e")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("e")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withN(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("n")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUse(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

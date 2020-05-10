@@ -16,18 +16,16 @@ trait Level extends js.Object
 
 object Level {
   @scala.inline
-  def DEBUG: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.DEBUG = this.cast("DEBUG")
+  def DEBUG: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.DEBUG = "DEBUG".asInstanceOf[typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.DEBUG]
   @scala.inline
-  def ERROR: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.ERROR = this.cast("ERROR")
+  def ERROR: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.ERROR = "ERROR".asInstanceOf[typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.ERROR]
   @scala.inline
-  def FATAL: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.FATAL = this.cast("FATAL")
+  def FATAL: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.FATAL = "FATAL".asInstanceOf[typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.FATAL]
   @scala.inline
-  def INFO: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.INFO = this.cast("INFO")
+  def INFO: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.INFO = "INFO".asInstanceOf[typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.INFO]
   @scala.inline
-  def TRACE: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.TRACE = this.cast("TRACE")
+  def TRACE: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.TRACE = "TRACE".asInstanceOf[typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.TRACE]
   @scala.inline
-  def WARN: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.WARN = this.cast("WARN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WARN: typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.WARN = "WARN".asInstanceOf[typingsSlinky.seleniumWebdriver.seleniumWebdriverStrings.WARN]
 }
 

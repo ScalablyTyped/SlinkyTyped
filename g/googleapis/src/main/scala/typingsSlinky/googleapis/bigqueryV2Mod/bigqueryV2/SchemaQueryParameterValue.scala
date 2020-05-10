@@ -24,16 +24,53 @@ trait SchemaQueryParameterValue extends js.Object {
 
 object SchemaQueryParameterValue {
   @scala.inline
-  def apply(
-    arrayValues: js.Array[SchemaQueryParameterValue] = null,
-    structValues: StringDictionary[SchemaQueryParameterValue] = null,
-    value: String = null
-  ): SchemaQueryParameterValue = {
+  def apply(): SchemaQueryParameterValue = {
     val __obj = js.Dynamic.literal()
-    if (arrayValues != null) __obj.updateDynamic("arrayValues")(arrayValues.asInstanceOf[js.Any])
-    if (structValues != null) __obj.updateDynamic("structValues")(structValues.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQueryParameterValue]
   }
+  @scala.inline
+  implicit class SchemaQueryParameterValueOps[Self <: SchemaQueryParameterValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayValues(value: js.Array[SchemaQueryParameterValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStructValues(value: StringDictionary[SchemaQueryParameterValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStructValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

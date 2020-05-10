@@ -35,18 +35,65 @@ trait SchemaCheckRequest extends js.Object {
 
 object SchemaCheckRequest {
   @scala.inline
-  def apply(
-    operation: SchemaOperation = null,
-    requestProjectSettings: js.UndefOr[Boolean] = js.undefined,
-    serviceConfigId: String = null,
-    skipActivationCheck: js.UndefOr[Boolean] = js.undefined
-  ): SchemaCheckRequest = {
+  def apply(): SchemaCheckRequest = {
     val __obj = js.Dynamic.literal()
-    if (operation != null) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
-    if (!js.isUndefined(requestProjectSettings)) __obj.updateDynamic("requestProjectSettings")(requestProjectSettings.asInstanceOf[js.Any])
-    if (serviceConfigId != null) __obj.updateDynamic("serviceConfigId")(serviceConfigId.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipActivationCheck)) __obj.updateDynamic("skipActivationCheck")(skipActivationCheck.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCheckRequest]
   }
+  @scala.inline
+  implicit class SchemaCheckRequestOps[Self <: SchemaCheckRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOperation(value: SchemaOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestProjectSettings(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestProjectSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestProjectSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestProjectSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceConfigId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceConfigId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipActivationCheck(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipActivationCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipActivationCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipActivationCheck")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

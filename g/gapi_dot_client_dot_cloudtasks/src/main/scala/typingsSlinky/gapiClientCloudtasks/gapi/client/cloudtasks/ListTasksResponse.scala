@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListTasksResponse extends js.Object {
   /**
     * A token to retrieve next page of results.
@@ -14,18 +15,48 @@ trait ListTasksResponse extends js.Object {
     *
     * If the next_page_token is empty, there are no more results.
     */
-  var nextPageToken: js.UndefOr[String] = js.undefined
+  var nextPageToken: js.UndefOr[String] = js.native
   /** The list of tasks. */
-  var tasks: js.UndefOr[js.Array[Task]] = js.undefined
+  var tasks: js.UndefOr[js.Array[Task]] = js.native
 }
 
 object ListTasksResponse {
   @scala.inline
-  def apply(nextPageToken: String = null, tasks: js.Array[Task] = null): ListTasksResponse = {
+  def apply(): ListTasksResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (tasks != null) __obj.updateDynamic("tasks")(tasks.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListTasksResponse]
   }
+  @scala.inline
+  implicit class ListTasksResponseOps[Self <: ListTasksResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTasks(value: js.Array[Task]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tasks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTasks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tasks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait NielsenConfiguration extends js.Object {
 
 object NielsenConfiguration {
   @scala.inline
-  def apply(BreakoutCode: Int | Double = null, DistributorId: string = null): NielsenConfiguration = {
+  def apply(): NielsenConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (BreakoutCode != null) __obj.updateDynamic("BreakoutCode")(BreakoutCode.asInstanceOf[js.Any])
-    if (DistributorId != null) __obj.updateDynamic("DistributorId")(DistributorId.asInstanceOf[js.Any])
     __obj.asInstanceOf[NielsenConfiguration]
   }
+  @scala.inline
+  implicit class NielsenConfigurationOps[Self <: NielsenConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBreakoutCode(value: integerMin0Max0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BreakoutCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreakoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BreakoutCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistributorId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DistributorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistributorId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DistributorId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

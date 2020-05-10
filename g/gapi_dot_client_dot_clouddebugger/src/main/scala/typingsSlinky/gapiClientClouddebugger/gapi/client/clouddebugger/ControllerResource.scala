@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ControllerResource extends js.Object {
-  var debuggees: DebuggeesResource
+  var debuggees: DebuggeesResource = js.native
 }
 
 object ControllerResource {
   @scala.inline
   def apply(debuggees: DebuggeesResource): ControllerResource = {
     val __obj = js.Dynamic.literal(debuggees = debuggees.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ControllerResource]
   }
+  @scala.inline
+  implicit class ControllerResourceOps[Self <: ControllerResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebuggees(value: DebuggeesResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggees")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

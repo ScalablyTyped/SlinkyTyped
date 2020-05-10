@@ -38,24 +38,101 @@ trait Counters extends js.Object {
 
 object Counters {
   @scala.inline
-  def apply(
-    errored: Int | scala.Double = null,
-    failed: Int | scala.Double = null,
-    passed: Int | scala.Double = null,
-    skipped: Int | scala.Double = null,
-    stopped: Int | scala.Double = null,
-    total: Int | scala.Double = null,
-    warned: Int | scala.Double = null
-  ): Counters = {
+  def apply(): Counters = {
     val __obj = js.Dynamic.literal()
-    if (errored != null) __obj.updateDynamic("errored")(errored.asInstanceOf[js.Any])
-    if (failed != null) __obj.updateDynamic("failed")(failed.asInstanceOf[js.Any])
-    if (passed != null) __obj.updateDynamic("passed")(passed.asInstanceOf[js.Any])
-    if (skipped != null) __obj.updateDynamic("skipped")(skipped.asInstanceOf[js.Any])
-    if (stopped != null) __obj.updateDynamic("stopped")(stopped.asInstanceOf[js.Any])
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
-    if (warned != null) __obj.updateDynamic("warned")(warned.asInstanceOf[js.Any])
     __obj.asInstanceOf[Counters]
   }
+  @scala.inline
+  implicit class CountersOps[Self <: Counters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrored(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errored")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrored: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errored")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailed(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassed(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipped(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipped")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipped: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipped")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopped(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopped")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopped: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopped")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarned(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warned")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

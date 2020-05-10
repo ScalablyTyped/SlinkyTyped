@@ -30,7 +30,7 @@ object componentsMod extends js.Object {
     var priority: Double = js.native
   }
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.typedoc.componentMod.ComponentHost because Already inherited
   - typingsSlinky.typedoc.utilsEventsMod.EventDispatcher because Already inherited
   - typingsSlinky.typedoc.componentMod.AbstractComponent because Already inherited

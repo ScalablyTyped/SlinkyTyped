@@ -50,30 +50,137 @@ trait Algorithm extends js.Object {
 
 object Algorithm {
   @scala.inline
-  def apply(
-    algorithmArn: Arn = null,
-    algorithmImage: AlgorithmImage = null,
-    creationDateTime: js.Date = null,
-    defaultHyperParameterRanges: DefaultHyperParameterRanges = null,
-    defaultHyperParameters: HyperParameters = null,
-    defaultResourceConfig: ResourceConfig = null,
-    lastUpdatedDateTime: js.Date = null,
-    name: Name = null,
-    roleArn: Arn = null,
-    trainingInputMode: TrainingInputMode = null
-  ): Algorithm = {
+  def apply(): Algorithm = {
     val __obj = js.Dynamic.literal()
-    if (algorithmArn != null) __obj.updateDynamic("algorithmArn")(algorithmArn.asInstanceOf[js.Any])
-    if (algorithmImage != null) __obj.updateDynamic("algorithmImage")(algorithmImage.asInstanceOf[js.Any])
-    if (creationDateTime != null) __obj.updateDynamic("creationDateTime")(creationDateTime.asInstanceOf[js.Any])
-    if (defaultHyperParameterRanges != null) __obj.updateDynamic("defaultHyperParameterRanges")(defaultHyperParameterRanges.asInstanceOf[js.Any])
-    if (defaultHyperParameters != null) __obj.updateDynamic("defaultHyperParameters")(defaultHyperParameters.asInstanceOf[js.Any])
-    if (defaultResourceConfig != null) __obj.updateDynamic("defaultResourceConfig")(defaultResourceConfig.asInstanceOf[js.Any])
-    if (lastUpdatedDateTime != null) __obj.updateDynamic("lastUpdatedDateTime")(lastUpdatedDateTime.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (roleArn != null) __obj.updateDynamic("roleArn")(roleArn.asInstanceOf[js.Any])
-    if (trainingInputMode != null) __obj.updateDynamic("trainingInputMode")(trainingInputMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[Algorithm]
   }
+  @scala.inline
+  implicit class AlgorithmOps[Self <: Algorithm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithmArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithmArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithmArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithmArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlgorithmImage(value: AlgorithmImage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithmImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithmImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithmImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultHyperParameterRanges(value: DefaultHyperParameterRanges): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHyperParameterRanges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultHyperParameterRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHyperParameterRanges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultHyperParameters(value: HyperParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHyperParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultHyperParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHyperParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultResourceConfig(value: ResourceConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultResourceConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultResourceConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultResourceConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingInputMode(value: TrainingInputMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingInputMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingInputMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingInputMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

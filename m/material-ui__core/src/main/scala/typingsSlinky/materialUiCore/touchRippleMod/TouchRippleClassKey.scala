@@ -17,20 +17,18 @@ trait TouchRippleClassKey extends js.Object
 
 object TouchRippleClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def child: typingsSlinky.materialUiCore.materialUiCoreStrings.child = "child".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.child]
   @scala.inline
-  def child: typingsSlinky.materialUiCore.materialUiCoreStrings.child = this.cast("child")
+  def childLeaving: typingsSlinky.materialUiCore.materialUiCoreStrings.childLeaving = "childLeaving".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.childLeaving]
   @scala.inline
-  def childLeaving: typingsSlinky.materialUiCore.materialUiCoreStrings.childLeaving = this.cast("childLeaving")
+  def childPulsate: typingsSlinky.materialUiCore.materialUiCoreStrings.childPulsate = "childPulsate".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.childPulsate]
   @scala.inline
-  def childPulsate: typingsSlinky.materialUiCore.materialUiCoreStrings.childPulsate = this.cast("childPulsate")
+  def ripple: typingsSlinky.materialUiCore.materialUiCoreStrings.ripple = "ripple".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.ripple]
   @scala.inline
-  def ripple: typingsSlinky.materialUiCore.materialUiCoreStrings.ripple = this.cast("ripple")
+  def ripplePulsate: typingsSlinky.materialUiCore.materialUiCoreStrings.ripplePulsate = "ripplePulsate".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.ripplePulsate]
   @scala.inline
-  def ripplePulsate: typingsSlinky.materialUiCore.materialUiCoreStrings.ripplePulsate = this.cast("ripplePulsate")
+  def rippleVisible: typingsSlinky.materialUiCore.materialUiCoreStrings.rippleVisible = "rippleVisible".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.rippleVisible]
   @scala.inline
-  def rippleVisible: typingsSlinky.materialUiCore.materialUiCoreStrings.rippleVisible = this.cast("rippleVisible")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

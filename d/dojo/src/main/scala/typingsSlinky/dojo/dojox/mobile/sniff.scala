@@ -13,5 +13,6 @@ import scala.scalajs.js.annotation._
   * In future versions, "iphone" will be set only when running on an iPhone (not iPad on iPod).
   *
   */
+@js.native
 trait sniff extends js.Object
 

@@ -14,10 +14,29 @@ trait TrackSourceSettings extends js.Object {
 
 object TrackSourceSettings {
   @scala.inline
-  def apply(TrackNumber: Int | Double = null): TrackSourceSettings = {
+  def apply(): TrackSourceSettings = {
     val __obj = js.Dynamic.literal()
-    if (TrackNumber != null) __obj.updateDynamic("TrackNumber")(TrackNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrackSourceSettings]
   }
+  @scala.inline
+  implicit class TrackSourceSettingsOps[Self <: TrackSourceSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrackNumber(value: integerMin1Max2147483647): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrackNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrackNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

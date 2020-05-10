@@ -7,36 +7,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LayerConfig extends PyJsonDict {
-  var batch_input_shape: js.UndefOr[Shape] = js.undefined
-  var batch_size: js.UndefOr[Double] = js.undefined
-  var dtype: js.UndefOr[DataType] = js.undefined
-  var input_dtype: js.UndefOr[DataType] = js.undefined
-  var input_shape: js.UndefOr[Shape] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var trainable: js.UndefOr[Boolean] = js.undefined
+  var batch_input_shape: js.UndefOr[Shape] = js.native
+  var batch_size: js.UndefOr[Double] = js.native
+  var dtype: js.UndefOr[DataType] = js.native
+  var input_dtype: js.UndefOr[DataType] = js.native
+  var input_shape: js.UndefOr[Shape] = js.native
+  var name: js.UndefOr[String] = js.native
+  var trainable: js.UndefOr[Boolean] = js.native
 }
 
 object LayerConfig {
   @scala.inline
-  def apply(
-    batch_input_shape: Shape = null,
-    batch_size: Int | Double = null,
-    dtype: DataType = null,
-    input_dtype: DataType = null,
-    input_shape: Shape = null,
-    name: String = null,
-    trainable: js.UndefOr[Boolean] = js.undefined
-  ): LayerConfig = {
+  def apply(): LayerConfig = {
     val __obj = js.Dynamic.literal()
-    if (batch_input_shape != null) __obj.updateDynamic("batch_input_shape")(batch_input_shape.asInstanceOf[js.Any])
-    if (batch_size != null) __obj.updateDynamic("batch_size")(batch_size.asInstanceOf[js.Any])
-    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
-    if (input_dtype != null) __obj.updateDynamic("input_dtype")(input_dtype.asInstanceOf[js.Any])
-    if (input_shape != null) __obj.updateDynamic("input_shape")(input_shape.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayerConfig]
   }
+  @scala.inline
+  implicit class LayerConfigOps[Self <: LayerConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatch_input_shape(value: Shape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batch_input_shape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatch_input_shape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batch_input_shape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBatch_size(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batch_size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatch_size: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batch_size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDtype(value: DataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDtype: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtype")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput_dtype(value: DataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input_dtype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput_dtype: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input_dtype")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput_shape(value: Shape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input_shape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput_shape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input_shape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainable")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

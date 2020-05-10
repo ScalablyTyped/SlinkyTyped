@@ -27,6 +27,10 @@ trait RestoreTableFromBackupInput extends js.Object {
     */
   var ProvisionedThroughputOverride: js.UndefOr[ProvisionedThroughput] = js.native
   /**
+    * The new server-side encryption settings for the restored table.
+    */
+  var SSESpecificationOverride: js.UndefOr[SSESpecification] = js.native
+  /**
     * The name of the new table to which the backup must be restored.
     */
   var TargetTableName: TableName = js.native
@@ -34,20 +38,89 @@ trait RestoreTableFromBackupInput extends js.Object {
 
 object RestoreTableFromBackupInput {
   @scala.inline
-  def apply(
-    BackupArn: BackupArn,
-    TargetTableName: TableName,
-    BillingModeOverride: BillingMode = null,
-    GlobalSecondaryIndexOverride: GlobalSecondaryIndexList = null,
-    LocalSecondaryIndexOverride: LocalSecondaryIndexList = null,
-    ProvisionedThroughputOverride: ProvisionedThroughput = null
-  ): RestoreTableFromBackupInput = {
+  def apply(BackupArn: BackupArn, TargetTableName: TableName): RestoreTableFromBackupInput = {
     val __obj = js.Dynamic.literal(BackupArn = BackupArn.asInstanceOf[js.Any], TargetTableName = TargetTableName.asInstanceOf[js.Any])
-    if (BillingModeOverride != null) __obj.updateDynamic("BillingModeOverride")(BillingModeOverride.asInstanceOf[js.Any])
-    if (GlobalSecondaryIndexOverride != null) __obj.updateDynamic("GlobalSecondaryIndexOverride")(GlobalSecondaryIndexOverride.asInstanceOf[js.Any])
-    if (LocalSecondaryIndexOverride != null) __obj.updateDynamic("LocalSecondaryIndexOverride")(LocalSecondaryIndexOverride.asInstanceOf[js.Any])
-    if (ProvisionedThroughputOverride != null) __obj.updateDynamic("ProvisionedThroughputOverride")(ProvisionedThroughputOverride.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreTableFromBackupInput]
   }
+  @scala.inline
+  implicit class RestoreTableFromBackupInputOps[Self <: RestoreTableFromBackupInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupArn(value: BackupArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetTableName(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBillingModeOverride(value: BillingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingModeOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingModeOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingModeOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalSecondaryIndexOverride(value: GlobalSecondaryIndexList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalSecondaryIndexOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalSecondaryIndexOverride(value: LocalSecondaryIndexList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalSecondaryIndexOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocalSecondaryIndexOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughputOverride(value: ProvisionedThroughput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedThroughputOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputOverride")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSESpecificationOverride(value: SSESpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSESpecificationOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSESpecificationOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSESpecificationOverride")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

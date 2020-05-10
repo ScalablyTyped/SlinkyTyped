@@ -11,10 +11,29 @@ trait AnonAdHocVerified extends js.Object {
 
 object AnonAdHocVerified {
   @scala.inline
-  def apply(adHocVerified: String = null): AnonAdHocVerified = {
+  def apply(): AnonAdHocVerified = {
     val __obj = js.Dynamic.literal()
-    if (adHocVerified != null) __obj.updateDynamic("adHocVerified")(adHocVerified.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAdHocVerified]
   }
+  @scala.inline
+  implicit class AnonAdHocVerifiedOps[Self <: AnonAdHocVerified] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdHocVerified(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adHocVerified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdHocVerified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adHocVerified")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

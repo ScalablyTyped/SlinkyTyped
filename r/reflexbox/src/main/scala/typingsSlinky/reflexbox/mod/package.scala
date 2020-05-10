@@ -15,7 +15,7 @@ package object mod {
         typingsSlinky.react.mod.HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
         org.scalajs.dom.raw.HTMLDivElement
       ]) with typingsSlinky.reflexbox.mod.BoxProps, 
-      java.lang.String
+      /* keyof react.react.ClassAttributes<any> */ typingsSlinky.reflexbox.reflexboxStrings.ref | typingsSlinky.reflexbox.reflexboxStrings.key
     ], 
     js.Object
   ]

@@ -1,40 +1,39 @@
 package typingsSlinky.reactNativeActionsheet.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeActionsheet.mod.ActionSheetProps
 import typingsSlinky.reactNativeActionsheet.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeActionsheet
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeActionsheet {
   @JSImport("react-native-actionsheet", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: title */
-  def apply(
-    onPress: Double => Unit,
-    options: js.Array[String],
-    cancelButtonIndex: Int | Double = null,
-    destructiveButtonIndex: Int | Double = null,
-    message: String = null,
-    tintColor: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(onPress = js.Any.fromFunction1(onPress), options = options.asInstanceOf[js.Any])
-    if (cancelButtonIndex != null) __obj.updateDynamic("cancelButtonIndex")(cancelButtonIndex.asInstanceOf[js.Any])
-    if (destructiveButtonIndex != null) __obj.updateDynamic("destructiveButtonIndex")(destructiveButtonIndex.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (tintColor != null) __obj.updateDynamic("tintColor")(tintColor.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def cancelButtonIndex(value: Double): this.type = set("cancelButtonIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def destructiveButtonIndex(value: Double): this.type = set("destructiveButtonIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def message(value: String): this.type = set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  type Props = ActionSheetProps
+  
+  def withProps(p: ActionSheetProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onPress: Double => Unit, options: js.Array[String]): Builder = {
+    val __props = js.Dynamic.literal(onPress = js.Any.fromFunction1(onPress), options = options.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ActionSheetProps]))
+  }
 }
 

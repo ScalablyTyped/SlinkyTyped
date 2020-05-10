@@ -5,45 +5,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimelineProps extends js.Object {
-  var bounce: js.UndefOr[Boolean] = js.undefined
-  var ignoreGlobalPause: js.UndefOr[Boolean] = js.undefined
-  var loop: js.UndefOr[Double] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.undefined
-  var onComplete: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.undefined
-  var paused: js.UndefOr[Boolean] = js.undefined
-  var position: js.UndefOr[Double] = js.undefined
-  var reversed: js.UndefOr[Boolean] = js.undefined
-  var timeScale: js.UndefOr[Double] = js.undefined
-  var useTicks: js.UndefOr[Boolean] = js.undefined
+  var bounce: js.UndefOr[Boolean] = js.native
+  var ignoreGlobalPause: js.UndefOr[Boolean] = js.native
+  var loop: js.UndefOr[Double] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
+  var onComplete: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
+  var paused: js.UndefOr[Boolean] = js.native
+  var position: js.UndefOr[Double] = js.native
+  var reversed: js.UndefOr[Boolean] = js.native
+  var timeScale: js.UndefOr[Double] = js.native
+  var useTicks: js.UndefOr[Boolean] = js.native
 }
 
 object TimelineProps {
   @scala.inline
-  def apply(
-    bounce: js.UndefOr[Boolean] = js.undefined,
-    ignoreGlobalPause: js.UndefOr[Boolean] = js.undefined,
-    loop: Int | Double = null,
-    onChange: /* e */ Event => Unit = null,
-    onComplete: /* e */ Event => Unit = null,
-    paused: js.UndefOr[Boolean] = js.undefined,
-    position: Int | Double = null,
-    reversed: js.UndefOr[Boolean] = js.undefined,
-    timeScale: Int | Double = null,
-    useTicks: js.UndefOr[Boolean] = js.undefined
-  ): TimelineProps = {
+  def apply(): TimelineProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bounce)) __obj.updateDynamic("bounce")(bounce.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreGlobalPause)) __obj.updateDynamic("ignoreGlobalPause")(ignoreGlobalPause.asInstanceOf[js.Any])
-    if (loop != null) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction1(onComplete))
-    if (!js.isUndefined(paused)) __obj.updateDynamic("paused")(paused.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(reversed)) __obj.updateDynamic("reversed")(reversed.asInstanceOf[js.Any])
-    if (timeScale != null) __obj.updateDynamic("timeScale")(timeScale.asInstanceOf[js.Any])
-    if (!js.isUndefined(useTicks)) __obj.updateDynamic("useTicks")(useTicks.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimelineProps]
   }
+  @scala.inline
+  implicit class TimelinePropsOps[Self <: TimelineProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBounce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounce")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreGlobalPause(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreGlobalPause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreGlobalPause: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreGlobalPause")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* e */ Event => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnComplete(value: /* e */ Event => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReversed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReversed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reversed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseTicks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useTicks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

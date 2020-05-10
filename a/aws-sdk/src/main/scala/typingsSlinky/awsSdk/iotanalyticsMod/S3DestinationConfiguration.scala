@@ -26,15 +26,47 @@ trait S3DestinationConfiguration extends js.Object {
 
 object S3DestinationConfiguration {
   @scala.inline
-  def apply(
-    bucket: BucketName,
-    key: BucketKeyExpression,
-    roleArn: RoleArn,
-    glueConfiguration: GlueConfiguration = null
-  ): S3DestinationConfiguration = {
+  def apply(bucket: BucketName, key: BucketKeyExpression, roleArn: RoleArn): S3DestinationConfiguration = {
     val __obj = js.Dynamic.literal(bucket = bucket.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
-    if (glueConfiguration != null) __obj.updateDynamic("glueConfiguration")(glueConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3DestinationConfiguration]
   }
+  @scala.inline
+  implicit class S3DestinationConfigurationOps[Self <: S3DestinationConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucket(value: BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: BucketKeyExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGlueConfiguration(value: GlueConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glueConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlueConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("glueConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

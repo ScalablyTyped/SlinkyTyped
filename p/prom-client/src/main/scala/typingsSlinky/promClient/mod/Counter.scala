@@ -1,7 +1,6 @@
 package typingsSlinky.promClient.mod
 
 import typingsSlinky.promClient.mod.Counter.Internal
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,10 +35,10 @@ class Counter protected () extends _Metric_ {
   def inc(labels: labelValues): Unit = js.native
   def inc(labels: labelValues, value: Double): Unit = js.native
   def inc(labels: labelValues, value: Double, timestamp: Double): Unit = js.native
-  def inc(labels: labelValues, value: Double, timestamp: Date): Unit = js.native
+  def inc(labels: labelValues, value: Double, timestamp: js.Date): Unit = js.native
   def inc(value: Double): Unit = js.native
   def inc(value: Double, timestamp: Double): Unit = js.native
-  def inc(value: Double, timestamp: Date): Unit = js.native
+  def inc(value: Double, timestamp: js.Date): Unit = js.native
   /**
   	 * Return the child for given labels
   	 * @param values Label values
@@ -70,7 +69,7 @@ object Counter extends js.Object {
     def inc(): Unit = js.native
     def inc(value: Double): Unit = js.native
     def inc(value: Double, timestamp: Double): Unit = js.native
-    def inc(value: Double, timestamp: Date): Unit = js.native
+    def inc(value: Double, timestamp: js.Date): Unit = js.native
   }
   
 }

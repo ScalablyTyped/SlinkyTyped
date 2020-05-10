@@ -3,7 +3,6 @@ package typingsSlinky.nuclearJs.mod.Immutable
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.immutable.Immutable.Collection.Indexed
 import typingsSlinky.immutable.Immutable.Collection.Keyed
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object Collection extends js.Object {
   def apply[I /* <: typingsSlinky.immutable.Immutable.Collection[_, _] */](collection: I): I = js.native
-  def apply[T](collection: Iterable[T]): Indexed[T] = js.native
+  def apply[T](collection: js.Iterable[T]): Indexed[T] = js.native
   def apply[V](obj: StringDictionary[V]): Keyed[String, V] = js.native
   /**
     * @deprecated use `const { isAssociative } = require('immutable')`
@@ -38,7 +37,7 @@ object Collection extends js.Object {
   @js.native
   object Keyed extends js.Object {
     def apply[V](obj: StringDictionary[V]): typingsSlinky.immutable.Immutable.Collection.Keyed[String, V] = js.native
-    def apply[K, V](collection: Iterable[js.Tuple2[K, V]]): typingsSlinky.immutable.Immutable.Collection.Keyed[K, V] = js.native
+    def apply[K, V](collection: js.Iterable[js.Tuple2[K, V]]): typingsSlinky.immutable.Immutable.Collection.Keyed[K, V] = js.native
   }
   
   @js.native

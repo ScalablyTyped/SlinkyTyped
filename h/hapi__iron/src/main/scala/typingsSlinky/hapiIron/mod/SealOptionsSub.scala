@@ -7,23 +7,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SealOptionsSub extends js.Object {
   /**
     The algorithm used. Defaults to 'aes-256-cbc' for encryption and 'sha256' for integrity.
     */
-  var algorithm: `aes-128-ctr` | `aes-256-cbc` | sha256
+  var algorithm: `aes-128-ctr` | `aes-256-cbc` | sha256 = js.native
   /**
     The number of iterations used to derive a key from the password. Defaults to 1.
     */
-  var iterations: Double
+  var iterations: Double = js.native
   /**
     Minimum password size. Defaults to 32.
     */
-  var minPasswordlength: Double
+  var minPasswordlength: Double = js.native
   /**
     The length of the salt (random buffer used to ensure that two identical objects will generate a different encrypted result). Defaults to 256.
     */
-  var saltBits: Double
+  var saltBits: Double = js.native
 }
 
 object SealOptionsSub {
@@ -35,8 +36,39 @@ object SealOptionsSub {
     saltBits: Double
   ): SealOptionsSub = {
     val __obj = js.Dynamic.literal(algorithm = algorithm.asInstanceOf[js.Any], iterations = iterations.asInstanceOf[js.Any], minPasswordlength = minPasswordlength.asInstanceOf[js.Any], saltBits = saltBits.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SealOptionsSub]
   }
+  @scala.inline
+  implicit class SealOptionsSubOps[Self <: SealOptionsSub] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithm(value: `aes-128-ctr` | `aes-256-cbc` | sha256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIterations(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinPasswordlength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPasswordlength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSaltBits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saltBits")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

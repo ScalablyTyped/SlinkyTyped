@@ -1,10 +1,9 @@
 package typingsSlinky.reactOverlays.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import org.scalajs.dom.raw.Element
+import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.reactOverlays.autoAffixMod.AutoAffixProps
@@ -12,55 +11,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AutoAffix
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOverlays.mod.AutoAffix] {
+object AutoAffix {
   @JSImport("react-overlays", "AutoAffix")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    affixClassName: String = null,
-    affixStyle: CSSProperties = null,
-    autoWidth: js.UndefOr[Boolean] = js.undefined,
-    bottomClassName: String = null,
-    bottomStyle: CSSProperties = null,
-    container: ReactInstance | js.Function0[ReactInstance] = null,
-    offsetBottom: Int | Double = null,
-    offsetTop: Int | Double = null,
-    onAffix: () => Unit = null,
-    onAffixBottom: () => Unit = null,
-    onAffixTop: () => Unit = null,
-    onAffixed: () => Unit = null,
-    onAffixedBottom: () => Unit = null,
-    onAffixedTop: () => Unit = null,
-    topClassName: String = null,
-    topStyle: CSSProperties = null,
-    viewportOffsetTop: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.AutoAffix] = {
-    val __obj = js.Dynamic.literal()
-    if (affixClassName != null) __obj.updateDynamic("affixClassName")(affixClassName.asInstanceOf[js.Any])
-    if (affixStyle != null) __obj.updateDynamic("affixStyle")(affixStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoWidth)) __obj.updateDynamic("autoWidth")(autoWidth.asInstanceOf[js.Any])
-    if (bottomClassName != null) __obj.updateDynamic("bottomClassName")(bottomClassName.asInstanceOf[js.Any])
-    if (bottomStyle != null) __obj.updateDynamic("bottomStyle")(bottomStyle.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (offsetBottom != null) __obj.updateDynamic("offsetBottom")(offsetBottom.asInstanceOf[js.Any])
-    if (offsetTop != null) __obj.updateDynamic("offsetTop")(offsetTop.asInstanceOf[js.Any])
-    if (onAffix != null) __obj.updateDynamic("onAffix")(js.Any.fromFunction0(onAffix))
-    if (onAffixBottom != null) __obj.updateDynamic("onAffixBottom")(js.Any.fromFunction0(onAffixBottom))
-    if (onAffixTop != null) __obj.updateDynamic("onAffixTop")(js.Any.fromFunction0(onAffixTop))
-    if (onAffixed != null) __obj.updateDynamic("onAffixed")(js.Any.fromFunction0(onAffixed))
-    if (onAffixedBottom != null) __obj.updateDynamic("onAffixedBottom")(js.Any.fromFunction0(onAffixedBottom))
-    if (onAffixedTop != null) __obj.updateDynamic("onAffixedTop")(js.Any.fromFunction0(onAffixedTop))
-    if (topClassName != null) __obj.updateDynamic("topClassName")(topClassName.asInstanceOf[js.Any])
-    if (topStyle != null) __obj.updateDynamic("topStyle")(topStyle.asInstanceOf[js.Any])
-    if (viewportOffsetTop != null) __obj.updateDynamic("viewportOffsetTop")(viewportOffsetTop.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.AutoAffix] {
+    @scala.inline
+    def affixClassName(value: String): this.type = set("affixClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def affixStyle(value: CSSProperties): this.type = set("affixStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoWidth(value: Boolean): this.type = set("autoWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bottomClassName(value: String): this.type = set("bottomClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bottomStyle(value: CSSProperties): this.type = set("bottomStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerElement(value: Element): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerFunction0(value: () => ReactInstance): this.type = set("container", js.Any.fromFunction0(value))
+    @scala.inline
+    def containerComponent(value: ReactComponentClass[js.Any]): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def container(value: ReactInstance | js.Function0[ReactInstance]): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetBottom(value: Double): this.type = set("offsetBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetTop(value: Double): this.type = set("offsetTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAffix(value: () => Unit): this.type = set("onAffix", js.Any.fromFunction0(value))
+    @scala.inline
+    def onAffixBottom(value: () => Unit): this.type = set("onAffixBottom", js.Any.fromFunction0(value))
+    @scala.inline
+    def onAffixTop(value: () => Unit): this.type = set("onAffixTop", js.Any.fromFunction0(value))
+    @scala.inline
+    def onAffixed(value: () => Unit): this.type = set("onAffixed", js.Any.fromFunction0(value))
+    @scala.inline
+    def onAffixedBottom(value: () => Unit): this.type = set("onAffixedBottom", js.Any.fromFunction0(value))
+    @scala.inline
+    def onAffixedTop(value: () => Unit): this.type = set("onAffixedTop", js.Any.fromFunction0(value))
+    @scala.inline
+    def topClassName(value: String): this.type = set("topClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def topStyle(value: CSSProperties): this.type = set("topStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewportOffsetTop(value: Double): this.type = set("viewportOffsetTop", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.AutoAffix] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactOverlays.mod.AutoAffix](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AutoAffixProps
+  
+  def withProps(p: AutoAffixProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AutoAffix.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

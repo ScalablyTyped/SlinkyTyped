@@ -7,7 +7,6 @@ import typingsSlinky.algoliasearch.mod.MultiResponse
 import typingsSlinky.algoliasearch.mod.QueryParameters
 import typingsSlinky.algoliasearch.mod.SearchForFacetValues.Parameters
 import typingsSlinky.algoliasearch.mod.SearchForFacetValues.Response
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -80,7 +79,7 @@ object liteMod extends js.Object {
       * Browse an index
       * https://github.com/algolia/algoliasearch-client-js#backup--export-an-index---browse
       */
-    def browse(query: String, cb: js.Function2[/* err */ Error, /* res */ BrowseResponse, Unit]): Unit = js.native
+    def browse(query: String, cb: js.Function2[/* err */ js.Error, /* res */ BrowseResponse, Unit]): Unit = js.native
     def browse(query: String, parameters: BrowseParameters): js.Promise[BrowseResponse] = js.native
     /**
       * Browse an index
@@ -119,7 +118,7 @@ object liteMod extends js.Object {
       * Gets a specific object
       * https://algolia.com/doc/api-reference/api-methods/get-objects/#retrieve-only-one-object
       */
-    def getObject(objectID: String, cb: js.Function2[/* err */ Error, /* res */ js.Object, Unit]): Unit = js.native
+    def getObject(objectID: String, cb: js.Function2[/* err */ js.Error, /* res */ js.Object, Unit]): Unit = js.native
     /**
       * Gets specific attributes from an object
       * https://algolia.com/doc/api-reference/api-methods/get-objects/#retrieve-only-one-object

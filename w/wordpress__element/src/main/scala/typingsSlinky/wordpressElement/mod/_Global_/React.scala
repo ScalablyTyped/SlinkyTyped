@@ -1,5 +1,6 @@
 package typingsSlinky.wordpressElement.mod._Global_
 
+import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Text
 import slinky.core.TagMod
@@ -16,7 +17,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object React extends js.Object {
   val render: Renderer = js.native
-  val unmountComponentAtNode: js.Function1[/* container */ Element, Boolean] = js.native
   /**
     * Component used as equivalent of Fragment with unescaped HTML, in cases where
     * it is desirable to render dangerous HTML without needing a wrapper element.
@@ -73,6 +73,12 @@ object React extends js.Object {
   object findDOMNode extends js.Object {
     def apply(): Element | Null | Text = js.native
     def apply(instance: ReactInstance): Element | Null | Text = js.native
+  }
+  
+  @js.native
+  object unmountComponentAtNode extends js.Object {
+    def apply(container: DocumentFragment): Boolean = js.native
+    def apply(container: Element): Boolean = js.native
   }
   
 }

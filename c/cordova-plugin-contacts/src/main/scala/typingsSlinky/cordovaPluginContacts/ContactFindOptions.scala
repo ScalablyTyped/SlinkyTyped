@@ -9,13 +9,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Search options to filter navigator.contacts.  */
+@js.native
 trait ContactFindOptions extends js.Object {
   /* Contact fields to be returned back. If specified, the resulting Contact object only features values for these fields. */
-  var desiredFields: js.UndefOr[js.Array[ContactFieldType]] = js.undefined
+  var desiredFields: js.UndefOr[js.Array[ContactFieldType]] = js.native
   /** The search string used to find navigator.contacts. */
-  var filter: js.UndefOr[String] = js.undefined
+  var filter: js.UndefOr[String] = js.native
   /** Determines if the find operation returns multiple navigator.contacts. */
-  var multiple: js.UndefOr[Boolean] = js.undefined
+  var multiple: js.UndefOr[Boolean] = js.native
 }
 
 @JSGlobal("ContactFindOptions")

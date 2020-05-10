@@ -1,9 +1,7 @@
 package typingsSlinky.reactVirtualized.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactVirtualized.esInfiniteLoaderMod.InfiniteLoaderProps
 import typingsSlinky.reactVirtualized.mod.Index
 import typingsSlinky.reactVirtualized.mod.IndexRange
@@ -11,28 +9,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InfiniteLoader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactVirtualized.mod.InfiniteLoader] {
+object InfiniteLoader {
   @JSImport("react-virtualized", "InfiniteLoader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    isRowLoaded: Index => Boolean,
-    loadMoreRows: IndexRange => js.Promise[_],
-    minimumBatchSize: Int | Double = null,
-    rowCount: Int | Double = null,
-    threshold: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.InfiniteLoader] = {
-    val __obj = js.Dynamic.literal(isRowLoaded = js.Any.fromFunction1(isRowLoaded), loadMoreRows = js.Any.fromFunction1(loadMoreRows))
-    if (minimumBatchSize != null) __obj.updateDynamic("minimumBatchSize")(minimumBatchSize.asInstanceOf[js.Any])
-    if (rowCount != null) __obj.updateDynamic("rowCount")(rowCount.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.InfiniteLoader] {
+    @scala.inline
+    def minimumBatchSize(value: Double): this.type = set("minimumBatchSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowCount(value: Double): this.type = set("rowCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def threshold(value: Double): this.type = set("threshold", value.asInstanceOf[js.Any])
   }
-  type Props = InfiniteLoaderProps
+  
+  def withProps(p: InfiniteLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(isRowLoaded: Index => Boolean, loadMoreRows: IndexRange => js.Promise[_]): Builder = {
+    val __props = js.Dynamic.literal(isRowLoaded = js.Any.fromFunction1(isRowLoaded), loadMoreRows = js.Any.fromFunction1(loadMoreRows))
+    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteLoaderProps]))
+  }
 }
 

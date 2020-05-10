@@ -15,16 +15,14 @@ trait Mode extends js.Object
 
 object Mode {
   @scala.inline
-  def bezier: typingsSlinky.reactImgpro.reactImgproStrings.bezier = this.cast("bezier")
+  def bezier: typingsSlinky.reactImgpro.reactImgproStrings.bezier = "bezier".asInstanceOf[typingsSlinky.reactImgpro.reactImgproStrings.bezier]
   @scala.inline
-  def bicubic: typingsSlinky.reactImgpro.reactImgproStrings.bicubic = this.cast("bicubic")
+  def bicubic: typingsSlinky.reactImgpro.reactImgproStrings.bicubic = "bicubic".asInstanceOf[typingsSlinky.reactImgpro.reactImgproStrings.bicubic]
   @scala.inline
-  def bilinear: typingsSlinky.reactImgpro.reactImgproStrings.bilinear = this.cast("bilinear")
+  def bilinear: typingsSlinky.reactImgpro.reactImgproStrings.bilinear = "bilinear".asInstanceOf[typingsSlinky.reactImgpro.reactImgproStrings.bilinear]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hermite: typingsSlinky.reactImgpro.reactImgproStrings.hermite = "hermite".asInstanceOf[typingsSlinky.reactImgpro.reactImgproStrings.hermite]
   @scala.inline
-  def hermite: typingsSlinky.reactImgpro.reactImgproStrings.hermite = this.cast("hermite")
-  @scala.inline
-  def neighbor: typingsSlinky.reactImgpro.reactImgproStrings.neighbor = this.cast("neighbor")
+  def neighbor: typingsSlinky.reactImgpro.reactImgproStrings.neighbor = "neighbor".asInstanceOf[typingsSlinky.reactImgpro.reactImgproStrings.neighbor]
 }
 

@@ -34,22 +34,89 @@ trait StackSetOperationResultSummary extends js.Object {
 
 object StackSetOperationResultSummary {
   @scala.inline
-  def apply(
-    Account: Account = null,
-    AccountGateResult: AccountGateResult = null,
-    OrganizationalUnitId: OrganizationalUnitId = null,
-    Region: Region = null,
-    Status: StackSetOperationResultStatus = null,
-    StatusReason: Reason = null
-  ): StackSetOperationResultSummary = {
+  def apply(): StackSetOperationResultSummary = {
     val __obj = js.Dynamic.literal()
-    if (Account != null) __obj.updateDynamic("Account")(Account.asInstanceOf[js.Any])
-    if (AccountGateResult != null) __obj.updateDynamic("AccountGateResult")(AccountGateResult.asInstanceOf[js.Any])
-    if (OrganizationalUnitId != null) __obj.updateDynamic("OrganizationalUnitId")(OrganizationalUnitId.asInstanceOf[js.Any])
-    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (StatusReason != null) __obj.updateDynamic("StatusReason")(StatusReason.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackSetOperationResultSummary]
   }
+  @scala.inline
+  implicit class StackSetOperationResultSummaryOps[Self <: StackSetOperationResultSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccount(value: Account): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Account")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Account")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccountGateResult(value: AccountGateResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountGateResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountGateResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountGateResult")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationalUnitId(value: OrganizationalUnitId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationalUnitId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: Region): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: StackSetOperationResultStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusReason(value: Reason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusReason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

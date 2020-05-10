@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonValueText extends js.Object {
-  var value: js.UndefOr[Double] = js.undefined
-  var valueText: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[Double] = js.native
+  var valueText: js.UndefOr[String] = js.native
 }
 
 object AnonValueText {
   @scala.inline
-  def apply(value: Int | Double = null, valueText: String = null): AnonValueText = {
+  def apply(): AnonValueText = {
     val __obj = js.Dynamic.literal()
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueText != null) __obj.updateDynamic("valueText")(valueText.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonValueText]
   }
+  @scala.inline
+  implicit class AnonValueTextOps[Self <: AnonValueText] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueText")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ trait OpenFinGlobalHotkeyEventType extends js.Object
 
 object OpenFinGlobalHotkeyEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def registered: typingsSlinky.openfin.openfinStrings.registered = "registered".asInstanceOf[typingsSlinky.openfin.openfinStrings.registered]
   @scala.inline
-  def registered: typingsSlinky.openfin.openfinStrings.registered = this.cast("registered")
-  @scala.inline
-  def unregistered: typingsSlinky.openfin.openfinStrings.unregistered = this.cast("unregistered")
+  def unregistered: typingsSlinky.openfin.openfinStrings.unregistered = "unregistered".asInstanceOf[typingsSlinky.openfin.openfinStrings.unregistered]
 }
 

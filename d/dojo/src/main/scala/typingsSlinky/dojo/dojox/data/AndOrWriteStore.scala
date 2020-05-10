@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   *
   * @param keywordParameters The structure of the typeMap object is as follows:{    type0: function || object,    type1: function || object,    ...    typeN: function || object}Where if it is a function, it is assumed to be an object constructor that takes thevalue of _value as the initialization parameters.  It is serialized assuming object.toString()serialization.  If it is an object, then it is assumedto be an object of general form:{    type: function, //constructor.    deserialize:    function(value) //The function that parses the value and constructs the object defined by type appropriately.    serialize:  function(object) //The function that converts the object back into the proper file format form.}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojo.Evented because Already inherited
 - typingsSlinky.dojo.dojo.data.ItemFileReadStore because Already inherited
 - typingsSlinky.dojo.dojox.data.AndOrReadStore because Inheritance from two classes. Inlined close, close, containsValue, emit, errorHandler, fetch, fetchHandler, fetchItemByIdentity, filter, getAttributes, getFeatures, getIdentity, getIdentityAttributes, getLabel, getLabelAttributes, getValue, getValues, hasAttribute, isItem, isItemLoaded, loadItem, on */ @JSGlobal("dojox.data.AndOrWriteStore")

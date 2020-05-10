@@ -16,13 +16,6 @@ class ClientRuntimeContext protected () extends IDisposable {
   def add_requestFailed(value: js.Function2[/* sender */ js.Any, /* args */ ClientRequestFailedEventArgs, Unit]): Unit = js.native
   def add_requestSucceeded(value: js.Function2[/* sender */ js.Any, /* args */ ClientRequestSucceededEventArgs, Unit]): Unit = js.native
   def castTo(obj: ClientObject, `type`: js.Any): ClientObject = js.native
-  //#region Methods
-  /**
-    * Releases resources held by an object that implements the Sys.IDisposable interface.
-    * Implement the dispose method to close or release resources held by an object, or to prepare an object for reuse.
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def executeQueryAsync(): Unit = js.native
   def executeQueryAsync(
     succeededCallback: js.Function2[/* sender */ js.Any, /* args */ ClientRequestSucceededEventArgs, Unit]

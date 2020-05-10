@@ -4,75 +4,135 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IosVppEBook extends ManagedEBook {
   // The Apple ID associated with Vpp token.
-  var appleId: js.UndefOr[String] = js.undefined
+  var appleId: js.UndefOr[String] = js.native
   // Genres.
-  var genres: js.UndefOr[js.Array[String]] = js.undefined
+  var genres: js.UndefOr[js.Array[String]] = js.native
   // Language.
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
   // Seller.
-  var seller: js.UndefOr[String] = js.undefined
+  var seller: js.UndefOr[String] = js.native
   // Total license count.
-  var totalLicenseCount: js.UndefOr[Double] = js.undefined
+  var totalLicenseCount: js.UndefOr[Double] = js.native
   // Used license count.
-  var usedLicenseCount: js.UndefOr[Double] = js.undefined
+  var usedLicenseCount: js.UndefOr[Double] = js.native
   // The Vpp token's organization name.
-  var vppOrganizationName: js.UndefOr[String] = js.undefined
+  var vppOrganizationName: js.UndefOr[String] = js.native
   // The Vpp token ID.
-  var vppTokenId: js.UndefOr[String] = js.undefined
+  var vppTokenId: js.UndefOr[String] = js.native
 }
 
 object IosVppEBook {
   @scala.inline
-  def apply(
-    appleId: String = null,
-    assignments: js.Array[ManagedEBookAssignment] = null,
-    createdDateTime: String = null,
-    description: String = null,
-    deviceStates: js.Array[DeviceInstallState] = null,
-    displayName: String = null,
-    genres: js.Array[String] = null,
-    id: String = null,
-    informationUrl: String = null,
-    installSummary: EBookInstallSummary = null,
-    language: String = null,
-    largeCover: MimeContent = null,
-    lastModifiedDateTime: String = null,
-    privacyInformationUrl: String = null,
-    publishedDateTime: String = null,
-    publisher: String = null,
-    seller: String = null,
-    totalLicenseCount: Int | Double = null,
-    usedLicenseCount: Int | Double = null,
-    userStateSummary: js.Array[UserInstallStateSummary] = null,
-    vppOrganizationName: String = null,
-    vppTokenId: String = null
-  ): IosVppEBook = {
+  def apply(): IosVppEBook = {
     val __obj = js.Dynamic.literal()
-    if (appleId != null) __obj.updateDynamic("appleId")(appleId.asInstanceOf[js.Any])
-    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
-    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (deviceStates != null) __obj.updateDynamic("deviceStates")(deviceStates.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (genres != null) __obj.updateDynamic("genres")(genres.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (informationUrl != null) __obj.updateDynamic("informationUrl")(informationUrl.asInstanceOf[js.Any])
-    if (installSummary != null) __obj.updateDynamic("installSummary")(installSummary.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (largeCover != null) __obj.updateDynamic("largeCover")(largeCover.asInstanceOf[js.Any])
-    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
-    if (privacyInformationUrl != null) __obj.updateDynamic("privacyInformationUrl")(privacyInformationUrl.asInstanceOf[js.Any])
-    if (publishedDateTime != null) __obj.updateDynamic("publishedDateTime")(publishedDateTime.asInstanceOf[js.Any])
-    if (publisher != null) __obj.updateDynamic("publisher")(publisher.asInstanceOf[js.Any])
-    if (seller != null) __obj.updateDynamic("seller")(seller.asInstanceOf[js.Any])
-    if (totalLicenseCount != null) __obj.updateDynamic("totalLicenseCount")(totalLicenseCount.asInstanceOf[js.Any])
-    if (usedLicenseCount != null) __obj.updateDynamic("usedLicenseCount")(usedLicenseCount.asInstanceOf[js.Any])
-    if (userStateSummary != null) __obj.updateDynamic("userStateSummary")(userStateSummary.asInstanceOf[js.Any])
-    if (vppOrganizationName != null) __obj.updateDynamic("vppOrganizationName")(vppOrganizationName.asInstanceOf[js.Any])
-    if (vppTokenId != null) __obj.updateDynamic("vppTokenId")(vppTokenId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IosVppEBook]
   }
+  @scala.inline
+  implicit class IosVppEBookOps[Self <: IosVppEBook] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppleId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenres(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("genres")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenres: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("genres")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeller(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeller: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seller")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalLicenseCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalLicenseCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalLicenseCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalLicenseCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsedLicenseCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usedLicenseCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsedLicenseCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usedLicenseCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVppOrganizationName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vppOrganizationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVppOrganizationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vppOrganizationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVppTokenId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vppTokenId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVppTokenId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vppTokenId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

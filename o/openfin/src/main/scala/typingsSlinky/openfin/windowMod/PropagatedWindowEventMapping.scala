@@ -9,40 +9,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PropagatedWindowEventMapping[Topic, Type] extends BaseEventMap {
-  var `window-begin-user-bounds-changing`: WindowBeginBoundsChangingEvent[Topic, Type]
-  var `window-blurred`: WindowEvent[Topic, Type]
-  var `window-bounds-changed`: WindowBoundsChange[Topic, Type]
-  var `window-bounds-changing`: WindowBoundsChange[Topic, Type]
-  var `window-closed`: WindowEvent[Topic, Type]
-  var `window-closing`: WindowEvent[Topic, Type]
-  var `window-crashed`: CrashedEvent with (WindowEvent[Topic, Type])
-  var `window-disabled-movement-bounds-changed`: WindowBoundsChange[Topic, Type]
-  var `window-disabled-movement-bounds-changing`: WindowBoundsChange[Topic, Type]
-  var `window-embedded`: WindowEvent[Topic, Type]
-  var `window-end-user-bounds-changing`: WindowBeginBoundsChangingEvent[Topic, Type]
-  var `window-external-process-exited`: WindowExternalProcessExitedEvent[Topic, Type]
-  var `window-external-process-started`: WindowExternalProcessStartedEvent[Topic, Type]
-  var `window-focused`: WindowEvent[Topic, Type]
-  var `window-group-changed`: WindowGroupChanged[Topic, Type]
-  var `window-hidden`: WindowHiddenEvent[Topic, Type]
-  var `window-initialized`: WindowEvent[Topic, Type]
-  var `window-maximized`: WindowEvent[Topic, Type]
-  var `window-minimized`: WindowEvent[Topic, Type]
-  var `window-navigation-rejected`: WindowNavigationRejectedEvent[Topic, Type]
-  var `window-options-changed`: WindowOptionsChangedEvent[Topic, Type]
-  var `window-performance-report`: WindowPerformanceReport[Topic, Type]
-  var `window-preload-scripts-state-changed`: WindowPreloadScriptsStateChangeEvent[Topic, Type]
-  var `window-preload-scripts-state-changing`: WindowPreloadScriptsStateChangedEvent[Topic, Type]
-  var `window-reloaded`: WindowReloadedEvent[Topic, Type]
-  var `window-resource-load-failed`: WindowResourceLoadFailedEvent[Topic, Type]
-  var `window-resource-response-received`: WindowResourceResponseReceivedEvent[Topic, Type]
-  var `window-restored`: WindowEvent[Topic, Type]
-  var `window-shown`: WindowEvent[Topic, Type]
-  var `window-user-movement-disabled`: WindowEvent[Topic, Type]
-  var `window-user-movement-enabled`: WindowEvent[Topic, Type]
-  var `window-will-move`: WillMoveOrResize[Topic, Type]
-  var `window-will-resize`: WillMoveOrResize[Topic, Type]
+  var `window-begin-user-bounds-changing`: WindowBeginBoundsChangingEvent[Topic, Type] = js.native
+  var `window-blurred`: WindowEvent[Topic, Type] = js.native
+  var `window-bounds-changed`: WindowBoundsChange[Topic, Type] = js.native
+  var `window-bounds-changing`: WindowBoundsChange[Topic, Type] = js.native
+  var `window-closed`: WindowEvent[Topic, Type] = js.native
+  var `window-closing`: WindowEvent[Topic, Type] = js.native
+  var `window-crashed`: CrashedEvent with (WindowEvent[Topic, Type]) = js.native
+  var `window-disabled-movement-bounds-changed`: WindowBoundsChange[Topic, Type] = js.native
+  var `window-disabled-movement-bounds-changing`: WindowBoundsChange[Topic, Type] = js.native
+  var `window-embedded`: WindowEvent[Topic, Type] = js.native
+  var `window-end-user-bounds-changing`: WindowBeginBoundsChangingEvent[Topic, Type] = js.native
+  var `window-external-process-exited`: WindowExternalProcessExitedEvent[Topic, Type] = js.native
+  var `window-external-process-started`: WindowExternalProcessStartedEvent[Topic, Type] = js.native
+  var `window-focused`: WindowEvent[Topic, Type] = js.native
+  var `window-group-changed`: WindowGroupChanged[Topic, Type] = js.native
+  var `window-hidden`: WindowHiddenEvent[Topic, Type] = js.native
+  var `window-initialized`: WindowEvent[Topic, Type] = js.native
+  var `window-maximized`: WindowEvent[Topic, Type] = js.native
+  var `window-minimized`: WindowEvent[Topic, Type] = js.native
+  var `window-navigation-rejected`: WindowNavigationRejectedEvent[Topic, Type] = js.native
+  var `window-options-changed`: WindowOptionsChangedEvent[Topic, Type] = js.native
+  var `window-performance-report`: WindowPerformanceReport[Topic, Type] = js.native
+  var `window-preload-scripts-state-changed`: WindowPreloadScriptsStateChangeEvent[Topic, Type] = js.native
+  var `window-preload-scripts-state-changing`: WindowPreloadScriptsStateChangedEvent[Topic, Type] = js.native
+  var `window-reloaded`: WindowReloadedEvent[Topic, Type] = js.native
+  var `window-resource-load-failed`: WindowResourceLoadFailedEvent[Topic, Type] = js.native
+  var `window-resource-response-received`: WindowResourceResponseReceivedEvent[Topic, Type] = js.native
+  var `window-restored`: WindowEvent[Topic, Type] = js.native
+  var `window-shown`: WindowEvent[Topic, Type] = js.native
+  var `window-user-movement-disabled`: WindowEvent[Topic, Type] = js.native
+  var `window-user-movement-enabled`: WindowEvent[Topic, Type] = js.native
+  var `window-will-move`: WillMoveOrResize[Topic, Type] = js.native
+  var `window-will-resize`: WillMoveOrResize[Topic, Type] = js.native
 }
 
 object PropagatedWindowEventMapping {
@@ -120,5 +121,211 @@ object PropagatedWindowEventMapping {
     __obj.updateDynamic("window-will-resize")(`window-will-resize`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PropagatedWindowEventMapping[Topic, Type]]
   }
+  @scala.inline
+  implicit class PropagatedWindowEventMappingOps[Self[topic, `type`] <: PropagatedWindowEventMapping[topic, `type`], Topic, Type] (val x: Self[Topic, Type]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Topic, Type] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Topic, Type]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[Topic, Type]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Topic, Type]) with Other]
+    @scala.inline
+    def `withWindow-begin-user-bounds-changing`(value: WindowBeginBoundsChangingEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-begin-user-bounds-changing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-blurred`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-blurred")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-bounds-changed`(value: WindowBoundsChange[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-bounds-changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-bounds-changing`(value: WindowBoundsChange[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-bounds-changing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-closed`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-closed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-closing`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-closing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-crashed`(value: CrashedEvent with (WindowEvent[Topic, Type])): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-crashed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-disabled-movement-bounds-changed`(value: WindowBoundsChange[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-disabled-movement-bounds-changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-disabled-movement-bounds-changing`(value: WindowBoundsChange[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-disabled-movement-bounds-changing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-embedded`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-embedded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-end-user-bounds-changing`(value: WindowBeginBoundsChangingEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-end-user-bounds-changing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-external-process-exited`(value: WindowExternalProcessExitedEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-external-process-exited")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-external-process-started`(value: WindowExternalProcessStartedEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-external-process-started")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-focused`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-focused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-group-changed`(value: WindowGroupChanged[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-group-changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-hidden`(value: WindowHiddenEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-initialized`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-initialized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-maximized`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-maximized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-minimized`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-minimized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-navigation-rejected`(value: WindowNavigationRejectedEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-navigation-rejected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-options-changed`(value: WindowOptionsChangedEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-options-changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-performance-report`(value: WindowPerformanceReport[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-performance-report")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-preload-scripts-state-changed`(value: WindowPreloadScriptsStateChangeEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-preload-scripts-state-changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-preload-scripts-state-changing`(value: WindowPreloadScriptsStateChangedEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-preload-scripts-state-changing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-reloaded`(value: WindowReloadedEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-reloaded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-resource-load-failed`(value: WindowResourceLoadFailedEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-resource-load-failed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-resource-response-received`(value: WindowResourceResponseReceivedEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-resource-response-received")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-restored`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-restored")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-shown`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-shown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-user-movement-disabled`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-user-movement-disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-user-movement-enabled`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-user-movement-enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-will-move`(value: WillMoveOrResize[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-will-move")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withWindow-will-resize`(value: WillMoveOrResize[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window-will-resize")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

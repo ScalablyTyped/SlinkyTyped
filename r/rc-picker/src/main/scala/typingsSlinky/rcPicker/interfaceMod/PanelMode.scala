@@ -16,18 +16,16 @@ trait PanelMode extends js.Object
 
 object PanelMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.rcPicker.rcPickerStrings.date = "date".asInstanceOf[typingsSlinky.rcPicker.rcPickerStrings.date]
   @scala.inline
-  def date: typingsSlinky.rcPicker.rcPickerStrings.date = this.cast("date")
+  def decade: typingsSlinky.rcPicker.rcPickerStrings.decade = "decade".asInstanceOf[typingsSlinky.rcPicker.rcPickerStrings.decade]
   @scala.inline
-  def decade: typingsSlinky.rcPicker.rcPickerStrings.decade = this.cast("decade")
+  def month: typingsSlinky.rcPicker.rcPickerStrings.month = "month".asInstanceOf[typingsSlinky.rcPicker.rcPickerStrings.month]
   @scala.inline
-  def month: typingsSlinky.rcPicker.rcPickerStrings.month = this.cast("month")
+  def time: typingsSlinky.rcPicker.rcPickerStrings.time = "time".asInstanceOf[typingsSlinky.rcPicker.rcPickerStrings.time]
   @scala.inline
-  def time: typingsSlinky.rcPicker.rcPickerStrings.time = this.cast("time")
+  def week: typingsSlinky.rcPicker.rcPickerStrings.week = "week".asInstanceOf[typingsSlinky.rcPicker.rcPickerStrings.week]
   @scala.inline
-  def week: typingsSlinky.rcPicker.rcPickerStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.rcPicker.rcPickerStrings.year = this.cast("year")
+  def year: typingsSlinky.rcPicker.rcPickerStrings.year = "year".asInstanceOf[typingsSlinky.rcPicker.rcPickerStrings.year]
 }
 

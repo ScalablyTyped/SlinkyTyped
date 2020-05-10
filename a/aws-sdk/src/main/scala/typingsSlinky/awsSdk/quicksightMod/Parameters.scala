@@ -26,18 +26,65 @@ trait Parameters extends js.Object {
 
 object Parameters {
   @scala.inline
-  def apply(
-    DateTimeParameters: DateTimeParameterList = null,
-    DecimalParameters: DecimalParameterList = null,
-    IntegerParameters: IntegerParameterList = null,
-    StringParameters: StringParameterList = null
-  ): Parameters = {
+  def apply(): Parameters = {
     val __obj = js.Dynamic.literal()
-    if (DateTimeParameters != null) __obj.updateDynamic("DateTimeParameters")(DateTimeParameters.asInstanceOf[js.Any])
-    if (DecimalParameters != null) __obj.updateDynamic("DecimalParameters")(DecimalParameters.asInstanceOf[js.Any])
-    if (IntegerParameters != null) __obj.updateDynamic("IntegerParameters")(IntegerParameters.asInstanceOf[js.Any])
-    if (StringParameters != null) __obj.updateDynamic("StringParameters")(StringParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[Parameters]
   }
+  @scala.inline
+  implicit class ParametersOps[Self <: Parameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDateTimeParameters(value: DateTimeParameterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateTimeParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateTimeParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateTimeParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecimalParameters(value: DecimalParameterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DecimalParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecimalParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DecimalParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegerParameters(value: IntegerParameterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegerParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringParameters(value: StringParameterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StringParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StringParameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,7 @@
 package typingsSlinky.reactGithubButton.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactGithubButton.mod.ReactGitHubButtonProps
 import typingsSlinky.reactGithubButton.mod.default
 import typingsSlinky.reactGithubButton.reactGithubButtonStrings.forks
@@ -14,26 +12,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactGithubButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactGithubButton {
   @JSImport("react-github-button", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    namespace: String,
-    repo: String,
-    `type`: stargazers | watchers | forks,
-    size: large = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(namespace = namespace.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def size(value: large): this.type = set("size", value.asInstanceOf[js.Any])
   }
-  type Props = ReactGitHubButtonProps
+  
+  def withProps(p: ReactGitHubButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(namespace: String, repo: String, `type`: stargazers | watchers | forks): Builder = {
+    val __props = js.Dynamic.literal(namespace = namespace.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactGitHubButtonProps]))
+  }
 }
 

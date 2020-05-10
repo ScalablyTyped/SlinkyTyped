@@ -1,10 +1,7 @@
 package typingsSlinky.protonNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.protonNative.AnonButtons
 import typingsSlinky.protonNative.AnonH
 import typingsSlinky.protonNative.AnonX
@@ -19,68 +16,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Area
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.protonNative.mod.Area] {
+object Area {
   @JSImport("proton-native", "Area")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: label */
-  def apply(
-    align: AnonH = null,
-    column: Int | Double = null,
-    expand: AnonH = null,
-    fill: String = null,
-    fillOpacity: Int | Double = null,
-    onKeyDown: /* event */ KeyboardEvent => Boolean = null,
-    onKeyUp: /* event */ KeyboardEvent => Boolean = null,
-    onMouseDown: /* event */ MouseEvent => Unit = null,
-    onMouseEnter: () => Unit = null,
-    onMouseLeave: () => Unit = null,
-    onMouseMove: /* event */ AnonButtons => Unit = null,
-    onMouseUp: /* event */ MouseEvent => Unit = null,
-    row: Int | Double = null,
-    span: AnonX = null,
-    stretchy: js.UndefOr[Boolean] = js.undefined,
-    stroke: String = null,
-    strokeLinecap: flat | round | bevel = null,
-    strokeLinejoin: miter | round | bevel = null,
-    strokeMiterlimit: Int | Double = null,
-    strokeOpacity: Int | Double = null,
-    strokeWidth: Int | Double = null,
-    transform: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.protonNative.mod.Area] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (column != null) __obj.updateDynamic("column")(column.asInstanceOf[js.Any])
-    if (expand != null) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction0(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction0(onMouseLeave))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
-    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
-    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
-    if (!js.isUndefined(stretchy)) __obj.updateDynamic("stretchy")(stretchy.asInstanceOf[js.Any])
-    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
-    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
-    if (strokeLinejoin != null) __obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
-    if (strokeMiterlimit != null) __obj.updateDynamic("strokeMiterlimit")(strokeMiterlimit.asInstanceOf[js.Any])
-    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
-    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.protonNative.mod.Area] {
+    @scala.inline
+    def align(value: AnonH): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def column(value: Double): this.type = set("column", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expand(value: AnonH): this.type = set("expand", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: String): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fillOpacity(value: Double): this.type = set("fillOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onKeyDown(value: /* event */ KeyboardEvent => Boolean): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyUp(value: /* event */ KeyboardEvent => Boolean): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseDown(value: /* event */ MouseEvent => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: () => Unit): this.type = set("onMouseEnter", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMouseLeave(value: () => Unit): this.type = set("onMouseLeave", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMouseMove(value: /* event */ AnonButtons => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseUp(value: /* event */ MouseEvent => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def row(value: Double): this.type = set("row", value.asInstanceOf[js.Any])
+    @scala.inline
+    def span(value: AnonX): this.type = set("span", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stretchy(value: Boolean): this.type = set("stretchy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stroke(value: String): this.type = set("stroke", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeLinecap(value: flat | round | bevel): this.type = set("strokeLinecap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeLinejoin(value: miter | round | bevel): this.type = set("strokeLinejoin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeMiterlimit(value: Double): this.type = set("strokeMiterlimit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeOpacity(value: Double): this.type = set("strokeOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def strokeWidth(value: Double): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transform(value: String): this.type = set("transform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.protonNative.mod.Area] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.protonNative.mod.Area](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AreaProps
+  
+  def withProps(p: AreaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Area.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

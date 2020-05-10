@@ -15,15 +15,13 @@ trait RowSelectionStart[K] extends js.Object
 
 object RowSelectionStart {
   @scala.inline
-  def AnonStartIndexAnonRowNumber[K](startIndex: AnonRowNumber, startKey: Anon23[K] = null): RowSelectionStart[K] = {
+  def AnonStartIndexAnonRowNumber[K](startIndex: AnonRowNumber): RowSelectionStart[K] = {
     val __obj = js.Dynamic.literal(startIndex = startIndex.asInstanceOf[js.Any])
-    if (startKey != null) __obj.updateDynamic("startKey")(startKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowSelectionStart[K]]
   }
   @scala.inline
-  def AnonStartKeyAnon23[K](startKey: Anon23[K], startIndex: AnonRowNumber = null): RowSelectionStart[K] = {
+  def AnonStartKeyAnon23[K](startKey: Anon23[K]): RowSelectionStart[K] = {
     val __obj = js.Dynamic.literal(startKey = startKey.asInstanceOf[js.Any])
-    if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowSelectionStart[K]]
   }
 }

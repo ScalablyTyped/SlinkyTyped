@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Enumerator[T] extends Disposable {
-  def getCurrent(): T
-  def moveNext(): Boolean
+  def getCurrent(): T = js.native
+  def moveNext(): Boolean = js.native
 }
 
 @JSGlobal("Ix.Enumerator")

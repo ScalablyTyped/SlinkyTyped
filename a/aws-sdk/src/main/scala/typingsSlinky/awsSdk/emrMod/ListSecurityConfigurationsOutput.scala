@@ -18,11 +18,41 @@ trait ListSecurityConfigurationsOutput extends js.Object {
 
 object ListSecurityConfigurationsOutput {
   @scala.inline
-  def apply(Marker: Marker = null, SecurityConfigurations: SecurityConfigurationList = null): ListSecurityConfigurationsOutput = {
+  def apply(): ListSecurityConfigurationsOutput = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (SecurityConfigurations != null) __obj.updateDynamic("SecurityConfigurations")(SecurityConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListSecurityConfigurationsOutput]
   }
+  @scala.inline
+  implicit class ListSecurityConfigurationsOutputOps[Self <: ListSecurityConfigurationsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityConfigurations(value: SecurityConfigurationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityConfigurations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

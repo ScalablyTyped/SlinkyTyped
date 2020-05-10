@@ -5,8 +5,6 @@ import typingsSlinky.appBuilderLib.packagerApiMod.PackagerOptions
 import typingsSlinky.appBuilderLib.platformSpecificBuildOptionsMod.PlatformSpecificBuildOptions
 import typingsSlinky.builderUtil.archMod.Arch
 import typingsSlinky.electronBuilder.builderMod.CliOptions
-import typingsSlinky.electronBuilder.electronBuilderStrings.default
-import typingsSlinky.electronBuilder.electronBuilderStrings.dir
 import typingsSlinky.electronPublish.mod.PublishOptions
 import typingsSlinky.std.Map
 import scala.scalajs.js
@@ -78,8 +76,8 @@ object mod extends js.Object {
     protected def this(name: String, isAsyncSupported: Boolean) = this()
   }
   
-  val DEFAULT_TARGET: default = js.native
-  val DIR_TARGET: dir = js.native
+  val DEFAULT_TARGET: /* "default" */ String = js.native
+  val DIR_TARGET: /* "dir" */ String = js.native
   def archFromString(name: String): Arch = js.native
   def build(): js.Promise[js.Array[String]] = js.native
   def build(rawOptions: CliOptions): js.Promise[js.Array[String]] = js.native

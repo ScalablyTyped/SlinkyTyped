@@ -16,12 +16,10 @@ trait VerticalAnchorType extends js.Object
 
 object VerticalAnchorType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def end: typingsSlinky.victory.victoryStrings.end = "end".asInstanceOf[typingsSlinky.victory.victoryStrings.end]
   @scala.inline
-  def end: typingsSlinky.victory.victoryStrings.end = this.cast("end")
+  def middle: typingsSlinky.victory.victoryStrings.middle = "middle".asInstanceOf[typingsSlinky.victory.victoryStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.victory.victoryStrings.middle = this.cast("middle")
-  @scala.inline
-  def start: typingsSlinky.victory.victoryStrings.start = this.cast("start")
+  def start: typingsSlinky.victory.victoryStrings.start = "start".asInstanceOf[typingsSlinky.victory.victoryStrings.start]
 }
 

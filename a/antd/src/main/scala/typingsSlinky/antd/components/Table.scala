@@ -1,13 +1,14 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.AnonScrollToFirstRowOnChange
 import typingsSlinky.antd.antdBooleans.`false`
+import typingsSlinky.antd.antdStrings.ltr
+import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.paginationPaginationMod.PaginationConfig
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.antd.spinMod.SpinProps
@@ -28,102 +29,123 @@ import typingsSlinky.rcTable.interfaceMod.RenderExpandIconProps
 import typingsSlinky.rcTable.interfaceMod.RowClassName
 import typingsSlinky.rcTable.interfaceMod.TableComponents
 import typingsSlinky.rcTable.interfaceMod.TableLayout
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Table
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Table {
   @JSImport("antd/lib/table", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, style */
-  def apply[RecordType /* <: js.Object */](
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    childrenColumnName: String = null,
-    columns: ColumnsType[RecordType] = null,
-    components: TableComponents[RecordType] = null,
-    dataSource: js.Array[RecordType] = null,
-    defaultExpandAllRows: js.UndefOr[Boolean] = js.undefined,
-    defaultExpandedRowKeys: js.Array[Key] = null,
-    dropdownPrefixCls: String = null,
-    emptyText: TagMod[Any] | js.Function0[TagMod[Any]] = null,
-    expandIcon: /* props */ RenderExpandIconProps[RecordType] => TagMod[Any] = null,
-    expandRowByClick: js.UndefOr[Boolean] = js.undefined,
-    expandable: ExpandableConfig[RecordType] = null,
-    expandedRowClassName: (RecordType, /* index */ Double, /* indent */ Double) => String = null,
-    expandedRowKeys: js.Array[Key] = null,
-    expandedRowRender: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => TagMod[Any] = null,
-    footer: /* data */ js.Array[RecordType] => TagMod[Any] = null,
-    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
-    indentSize: Int | Double = null,
-    loading: Boolean | SpinProps = null,
-    locale: TableLocale = null,
-    onChange: (/* pagination */ PaginationConfig, /* filters */ Record[String, js.Array[typingsSlinky.antd.tableInterfaceMod.Key] | Null], /* sorter */ SorterResult[RecordType] | js.Array[SorterResult[RecordType]], /* extra */ TableCurrentDataSource[RecordType]) => Unit = null,
-    onExpand: (/* expanded */ Boolean, RecordType) => Unit = null,
-    onExpandedRowsChange: /* expandedKeys */ js.Array[Key] => Unit = null,
-    onHeaderRow: (js.Array[ColumnType[RecordType]], /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement] = null,
-    onRow: (RecordType, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement] = null,
-    pagination: `false` | TablePaginationConfig = null,
-    prefixCls: String = null,
-    rowClassName: String | RowClassName[RecordType] = null,
-    rowKey: String | GetRowKey[RecordType] = null,
-    rowSelection: TableRowSelection[RecordType] = null,
-    scroll: js.UndefOr[AnonX] with AnonScrollToFirstRowOnChange = null,
-    showHeader: js.UndefOr[Boolean] = js.undefined,
-    size: SizeType = null,
-    sortDirections: js.Array[SortOrder] = null,
-    summary: /* data */ js.Array[RecordType] => TagMod[Any] = null,
-    tableLayout: TableLayout = null,
-    title: /* data */ js.Array[RecordType] => TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
-    if (childrenColumnName != null) __obj.updateDynamic("childrenColumnName")(childrenColumnName.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultExpandAllRows)) __obj.updateDynamic("defaultExpandAllRows")(defaultExpandAllRows.asInstanceOf[js.Any])
-    if (defaultExpandedRowKeys != null) __obj.updateDynamic("defaultExpandedRowKeys")(defaultExpandedRowKeys.asInstanceOf[js.Any])
-    if (dropdownPrefixCls != null) __obj.updateDynamic("dropdownPrefixCls")(dropdownPrefixCls.asInstanceOf[js.Any])
-    if (emptyText != null) __obj.updateDynamic("emptyText")(emptyText.asInstanceOf[js.Any])
-    if (expandIcon != null) __obj.updateDynamic("expandIcon")(js.Any.fromFunction1(expandIcon))
-    if (!js.isUndefined(expandRowByClick)) __obj.updateDynamic("expandRowByClick")(expandRowByClick.asInstanceOf[js.Any])
-    if (expandable != null) __obj.updateDynamic("expandable")(expandable.asInstanceOf[js.Any])
-    if (expandedRowClassName != null) __obj.updateDynamic("expandedRowClassName")(js.Any.fromFunction3(expandedRowClassName))
-    if (expandedRowKeys != null) __obj.updateDynamic("expandedRowKeys")(expandedRowKeys.asInstanceOf[js.Any])
-    if (expandedRowRender != null) __obj.updateDynamic("expandedRowRender")(js.Any.fromFunction4(expandedRowRender))
-    if (footer != null) __obj.updateDynamic("footer")(js.Any.fromFunction1(footer))
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (indentSize != null) __obj.updateDynamic("indentSize")(indentSize.asInstanceOf[js.Any])
-    if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction4(onChange))
-    if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction2(onExpand))
-    if (onExpandedRowsChange != null) __obj.updateDynamic("onExpandedRowsChange")(js.Any.fromFunction1(onExpandedRowsChange))
-    if (onHeaderRow != null) __obj.updateDynamic("onHeaderRow")(js.Any.fromFunction2(onHeaderRow))
-    if (onRow != null) __obj.updateDynamic("onRow")(js.Any.fromFunction2(onRow))
-    if (pagination != null) __obj.updateDynamic("pagination")(pagination.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (rowClassName != null) __obj.updateDynamic("rowClassName")(rowClassName.asInstanceOf[js.Any])
-    if (rowKey != null) __obj.updateDynamic("rowKey")(rowKey.asInstanceOf[js.Any])
-    if (rowSelection != null) __obj.updateDynamic("rowSelection")(rowSelection.asInstanceOf[js.Any])
-    if (scroll != null) __obj.updateDynamic("scroll")(scroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHeader)) __obj.updateDynamic("showHeader")(showHeader.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (sortDirections != null) __obj.updateDynamic("sortDirections")(sortDirections.asInstanceOf[js.Any])
-    if (summary != null) __obj.updateDynamic("summary")(js.Any.fromFunction1(summary))
-    if (tableLayout != null) __obj.updateDynamic("tableLayout")(tableLayout.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(js.Any.fromFunction1(title))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
+  @scala.inline
+  class Builder[RecordType <: js.Object] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def childrenColumnName(value: String): this.type = set("childrenColumnName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columns(value: ColumnsType[RecordType]): this.type = set("columns", value.asInstanceOf[js.Any])
+    @scala.inline
+    def components(value: TableComponents[RecordType]): this.type = set("components", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataSource(value: js.Array[RecordType]): this.type = set("dataSource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultExpandAllRows(value: Boolean): this.type = set("defaultExpandAllRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultExpandedRowKeys(value: js.Array[Key]): this.type = set("defaultExpandedRowKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownPrefixCls(value: String): this.type = set("dropdownPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyTextReactElement(value: ReactElement): this.type = set("emptyText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyTextFunction0(value: () => TagMod[Any]): this.type = set("emptyText", js.Any.fromFunction0(value))
+    @scala.inline
+    def emptyText(value: TagMod[Any] | js.Function0[TagMod[Any]]): this.type = set("emptyText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandIcon(value: /* props */ RenderExpandIconProps[RecordType] => TagMod[Any]): this.type = set("expandIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def expandIconColumnIndex(value: Double): this.type = set("expandIconColumnIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandRowByClick(value: Boolean): this.type = set("expandRowByClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandable(value: ExpandableConfig[RecordType]): this.type = set("expandable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandedRowClassName(value: (RecordType, /* index */ Double, /* indent */ Double) => String): this.type = set("expandedRowClassName", js.Any.fromFunction3(value))
+    @scala.inline
+    def expandedRowKeys(value: js.Array[Key]): this.type = set("expandedRowKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandedRowRender(
+      value: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => TagMod[Any]
+    ): this.type = set("expandedRowRender", js.Any.fromFunction4(value))
+    @scala.inline
+    def footer(value: /* data */ js.Array[RecordType] => TagMod[Any]): this.type = set("footer", js.Any.fromFunction1(value))
+    @scala.inline
+    def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indentSize(value: Double): this.type = set("indentSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loading(value: Boolean | SpinProps): this.type = set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: TableLocale): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(
+      value: (/* pagination */ PaginationConfig, /* filters */ Record[String, js.Array[typingsSlinky.antd.tableInterfaceMod.Key] | Null], /* sorter */ SorterResult[RecordType] | js.Array[SorterResult[RecordType]], /* extra */ TableCurrentDataSource[RecordType]) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction4(value))
+    @scala.inline
+    def onExpand(value: (/* expanded */ Boolean, RecordType) => Unit): this.type = set("onExpand", js.Any.fromFunction2(value))
+    @scala.inline
+    def onExpandedRowsChange(value: /* expandedKeys */ js.Array[Key] => Unit): this.type = set("onExpandedRowsChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onHeaderRow(
+      value: (js.Array[ColumnType[RecordType]], /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement]
+    ): this.type = set("onHeaderRow", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRow(value: (RecordType, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement]): this.type = set("onRow", js.Any.fromFunction2(value))
+    @scala.inline
+    def pagination(value: `false` | TablePaginationConfig): this.type = set("pagination", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowClassNameFunction3(value: (RecordType, /* index */ Double, /* indent */ Double) => String): this.type = set("rowClassName", js.Any.fromFunction3(value))
+    @scala.inline
+    def rowClassName(value: String | RowClassName[RecordType]): this.type = set("rowClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowKeyFunction2(value: (RecordType, /* index */ js.UndefOr[Double]) => Key): this.type = set("rowKey", js.Any.fromFunction2(value))
+    @scala.inline
+    def rowKey(value: String | GetRowKey[RecordType]): this.type = set("rowKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowSelection(value: TableRowSelection[RecordType]): this.type = set("rowSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scroll(value: js.UndefOr[AnonX] with AnonScrollToFirstRowOnChange): this.type = set("scroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showHeader(value: Boolean): this.type = set("showHeader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: SizeType): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortDirections(value: js.Array[SortOrder]): this.type = set("sortDirections", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def summary(value: /* data */ js.Array[RecordType] => TagMod[Any]): this.type = set("summary", js.Any.fromFunction1(value))
+    @scala.inline
+    def tableLayout(value: TableLayout): this.type = set("tableLayout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: /* data */ js.Array[RecordType] => TagMod[Any]): this.type = set("title", js.Any.fromFunction1(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TableProps[js.Any]
+  
+  def withProps[RecordType <: js.Object](p: TableProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[RecordType <: js.Object](companion: Table.type): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, js.Dictionary.empty))()
 }
 

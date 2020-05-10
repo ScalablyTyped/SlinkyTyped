@@ -56,7 +56,7 @@ object Chips extends js.Object {
   /**
     * Init Chips
     */
-  def init(els: typingsSlinky.std.Element): Chips = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialChipsOptions): Chips = js.native
+  def init(els: Element): Chips = js.native
+  def init(els: Element, options: PartialChipsOptions): Chips = js.native
 }
 

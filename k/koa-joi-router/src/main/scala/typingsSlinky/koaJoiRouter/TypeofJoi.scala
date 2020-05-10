@@ -27,7 +27,6 @@ import typingsSlinky.joi.mod.ValidationOptions
 import typingsSlinky.joi.mod.ValidationResult
 import typingsSlinky.joi.mod.WhenOptions
 import typingsSlinky.joi.mod.WhenSchemaOptions
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,10 +44,10 @@ trait TypeofJoi extends js.Object {
   def array(): ArraySchema = js.native
   def assert(value: js.Any, schema: SchemaLike): Unit = js.native
   def assert(value: js.Any, schema: SchemaLike, message: String): Unit = js.native
-  def assert(value: js.Any, schema: SchemaLike, message: Error): Unit = js.native
+  def assert(value: js.Any, schema: SchemaLike, message: js.Error): Unit = js.native
   def attempt[T](value: T, schema: SchemaLike): T = js.native
   def attempt[T](value: T, schema: SchemaLike, message: String): T = js.native
-  def attempt[T](value: T, schema: SchemaLike, message: Error): T = js.native
+  def attempt[T](value: T, schema: SchemaLike, message: js.Error): T = js.native
   def binary(): BinarySchema = js.native
   def bool(): BooleanSchema = js.native
   def boolean(): BooleanSchema = js.native

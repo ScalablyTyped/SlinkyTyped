@@ -1,36 +1,38 @@
 package typingsSlinky.reactNativeGoby.mod
 
 import typingsSlinky.reactNativeGoby.mod.Goby.CheckFrequency
-import typingsSlinky.reactNativeGoby.mod.Goby.InstallMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GobyOptions extends SyncOptions {
   /**
     * Specifies when you would like to synchronize updates with the Goby server.
     * Defaults to goby.CheckFrequency.ON_APP_START.
     */
-  var checkFrequency: CheckFrequency
+  var checkFrequency: CheckFrequency = js.native
 }
 
 object GobyOptions {
   @scala.inline
-  def apply(
-    checkFrequency: CheckFrequency,
-    deploymentKey: String = null,
-    installMode: InstallMode = null,
-    mandatoryInstallMode: InstallMode = null,
-    minimumBackgroundDuration: Int | Double = null,
-    updateDialog: UpdateDialog = null
-  ): GobyOptions = {
+  def apply(checkFrequency: CheckFrequency): GobyOptions = {
     val __obj = js.Dynamic.literal(checkFrequency = checkFrequency.asInstanceOf[js.Any])
-    if (deploymentKey != null) __obj.updateDynamic("deploymentKey")(deploymentKey.asInstanceOf[js.Any])
-    if (installMode != null) __obj.updateDynamic("installMode")(installMode.asInstanceOf[js.Any])
-    if (mandatoryInstallMode != null) __obj.updateDynamic("mandatoryInstallMode")(mandatoryInstallMode.asInstanceOf[js.Any])
-    if (minimumBackgroundDuration != null) __obj.updateDynamic("minimumBackgroundDuration")(minimumBackgroundDuration.asInstanceOf[js.Any])
-    if (updateDialog != null) __obj.updateDynamic("updateDialog")(updateDialog.asInstanceOf[js.Any])
     __obj.asInstanceOf[GobyOptions]
   }
+  @scala.inline
+  implicit class GobyOptionsOps[Self <: GobyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCheckFrequency(value: CheckFrequency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkFrequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

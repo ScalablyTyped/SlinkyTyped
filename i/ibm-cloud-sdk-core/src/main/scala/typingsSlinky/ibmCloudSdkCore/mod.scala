@@ -1,6 +1,7 @@
 package typingsSlinky.ibmCloudSdkCore
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.File
 import typingsSlinky.ibmCloudSdkCore.baseServiceMod.UserOptions
 import typingsSlinky.ibmCloudSdkCore.helperMod.FileObject
 import typingsSlinky.ibmCloudSdkCore.helperMod.FileParamAttributes
@@ -8,7 +9,6 @@ import typingsSlinky.ibmCloudSdkCore.v1Mod.Options
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.streamMod.Stream
-import typingsSlinky.std.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -78,7 +78,7 @@ object mod extends js.Object {
     def fromFilename(file: FileObject): String = js.native
     def fromFilename(file: Buffer): String = js.native
     def fromFilename(file: File): String = js.native
-    def fromFilename(file: typingsSlinky.std.ReadableStream[_]): String = js.native
+    def fromFilename(file: org.scalajs.dom.experimental.ReadableStream[_]): String = js.native
     def fromHeader(buffer: Buffer): String = js.native
   }
   

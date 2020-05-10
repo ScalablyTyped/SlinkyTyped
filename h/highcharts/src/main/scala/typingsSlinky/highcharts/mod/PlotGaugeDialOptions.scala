@@ -4,70 +4,158 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotGaugeDialOptions extends js.Object {
   /**
     * (Highcharts) The background or fill color of the gauge's dial.
     */
-  var backgroundColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var backgroundColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts) The length of the dial's base part, relative to the total
     * radius or length of the dial.
     */
-  var baseLength: js.UndefOr[String] = js.undefined
+  var baseLength: js.UndefOr[String] = js.native
   /**
     * (Highcharts) The pixel width of the base of the gauge dial. The base is
     * the part closest to the pivot, defined by baseLength.
     */
-  var baseWidth: js.UndefOr[Double] = js.undefined
+  var baseWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) The border color or stroke of the gauge's dial. By default,
     * the borderWidth is 0, so this must be set in addition to a custom border
     * color.
     */
-  var borderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var borderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts) The width of the gauge dial border in pixels.
     */
-  var borderWidth: js.UndefOr[Double] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) The radius or length of the dial, in percentages relative to
     * the radius of the gauge itself.
     */
-  var radius: js.UndefOr[String] = js.undefined
+  var radius: js.UndefOr[String] = js.native
   /**
     * (Highcharts) The length of the dial's rear end, the part that extends out
     * on the other side of the pivot. Relative to the dial's length.
     */
-  var rearLength: js.UndefOr[String] = js.undefined
+  var rearLength: js.UndefOr[String] = js.native
   /**
     * (Highcharts) The width of the top of the dial, closest to the perimeter.
     * The pivot narrows in from the base to the top.
     */
-  var topWidth: js.UndefOr[Double] = js.undefined
+  var topWidth: js.UndefOr[Double] = js.native
 }
 
 object PlotGaugeDialOptions {
   @scala.inline
-  def apply(
-    backgroundColor: ColorString | GradientColorObject | PatternObject = null,
-    baseLength: String = null,
-    baseWidth: Int | Double = null,
-    borderColor: ColorString | GradientColorObject | PatternObject = null,
-    borderWidth: Int | Double = null,
-    radius: String = null,
-    rearLength: String = null,
-    topWidth: Int | Double = null
-  ): PlotGaugeDialOptions = {
+  def apply(): PlotGaugeDialOptions = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (baseLength != null) __obj.updateDynamic("baseLength")(baseLength.asInstanceOf[js.Any])
-    if (baseWidth != null) __obj.updateDynamic("baseWidth")(baseWidth.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (rearLength != null) __obj.updateDynamic("rearLength")(rearLength.asInstanceOf[js.Any])
-    if (topWidth != null) __obj.updateDynamic("topWidth")(topWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotGaugeDialOptions]
   }
+  @scala.inline
+  implicit class PlotGaugeDialOptionsOps[Self <: PlotGaugeDialOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseLength(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadius(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRearLength(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rearLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRearLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rearLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topWidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

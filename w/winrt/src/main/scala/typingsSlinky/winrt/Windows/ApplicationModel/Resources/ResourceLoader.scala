@@ -9,8 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class ResourceLoader () extends IResourceLoader {
   def this(name: String) = this()
-  /* CompleteClass */
-  override def getString(resource: String): String = js.native
 }
 
 /* static members */

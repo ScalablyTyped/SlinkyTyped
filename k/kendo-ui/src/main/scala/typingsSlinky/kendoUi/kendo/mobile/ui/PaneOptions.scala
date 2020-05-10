@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PaneOptions extends js.Object {
-  var collapsible: js.UndefOr[Boolean] = js.undefined
-  var initial: js.UndefOr[String] = js.undefined
-  var layout: js.UndefOr[String] = js.undefined
-  var loading: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var navigate: js.UndefOr[js.Function1[/* e */ PaneNavigateEvent, Unit]] = js.undefined
-  var portraitWidth: js.UndefOr[Double] = js.undefined
-  var transition: js.UndefOr[String] = js.undefined
-  var viewShow: js.UndefOr[js.Function1[/* e */ PaneViewShowEvent, Unit]] = js.undefined
+  var collapsible: js.UndefOr[Boolean] = js.native
+  var initial: js.UndefOr[String] = js.native
+  var layout: js.UndefOr[String] = js.native
+  var loading: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var navigate: js.UndefOr[js.Function1[/* e */ PaneNavigateEvent, Unit]] = js.native
+  var portraitWidth: js.UndefOr[Double] = js.native
+  var transition: js.UndefOr[String] = js.native
+  var viewShow: js.UndefOr[js.Function1[/* e */ PaneViewShowEvent, Unit]] = js.native
 }
 
 object PaneOptions {
   @scala.inline
-  def apply(
-    collapsible: js.UndefOr[Boolean] = js.undefined,
-    initial: String = null,
-    layout: String = null,
-    loading: String = null,
-    name: String = null,
-    navigate: /* e */ PaneNavigateEvent => Unit = null,
-    portraitWidth: Int | Double = null,
-    transition: String = null,
-    viewShow: /* e */ PaneViewShowEvent => Unit = null
-  ): PaneOptions = {
+  def apply(): PaneOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(collapsible)) __obj.updateDynamic("collapsible")(collapsible.asInstanceOf[js.Any])
-    if (initial != null) __obj.updateDynamic("initial")(initial.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (navigate != null) __obj.updateDynamic("navigate")(js.Any.fromFunction1(navigate))
-    if (portraitWidth != null) __obj.updateDynamic("portraitWidth")(portraitWidth.asInstanceOf[js.Any])
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
-    if (viewShow != null) __obj.updateDynamic("viewShow")(js.Any.fromFunction1(viewShow))
     __obj.asInstanceOf[PaneOptions]
   }
+  @scala.inline
+  implicit class PaneOptionsOps[Self <: PaneOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollapsible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapsible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitial(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoading(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavigate(value: /* e */ PaneNavigateEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNavigate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortraitWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portraitWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortraitWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portraitWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewShow(value: /* e */ PaneViewShowEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewShow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutViewShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewShow")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

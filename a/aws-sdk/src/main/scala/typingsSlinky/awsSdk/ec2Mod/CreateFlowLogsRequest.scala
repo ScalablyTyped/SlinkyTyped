@@ -41,11 +41,15 @@ trait CreateFlowLogsRequest extends js.Object {
   /**
     * The ID of the subnet, network interface, or VPC for which you want to create a flow log. Constraints: Maximum of 1000 resources
     */
-  var ResourceIds: ValueStringList = js.native
+  var ResourceIds: FlowLogResourceIds = js.native
   /**
     * The type of resource for which to create the flow log. For example, if you specified a VPC ID for the ResourceId property, specify VPC for this property.
     */
   var ResourceType: FlowLogsResourceType = js.native
+  /**
+    * The tags to apply to the flow logs.
+    */
+  var TagSpecifications: js.UndefOr[TagSpecificationList] = js.native
   /**
     * The type of traffic to log. You can log traffic that the resource accepts or rejects, or all traffic.
     */
@@ -54,29 +58,143 @@ trait CreateFlowLogsRequest extends js.Object {
 
 object CreateFlowLogsRequest {
   @scala.inline
-  def apply(
-    ResourceIds: ValueStringList,
-    ResourceType: FlowLogsResourceType,
-    TrafficType: TrafficType,
-    ClientToken: String = null,
-    DeliverLogsPermissionArn: String = null,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    LogDestination: String = null,
-    LogDestinationType: LogDestinationType = null,
-    LogFormat: String = null,
-    LogGroupName: String = null,
-    MaxAggregationInterval: Int | scala.Double = null
-  ): CreateFlowLogsRequest = {
+  def apply(ResourceIds: FlowLogResourceIds, ResourceType: FlowLogsResourceType, TrafficType: TrafficType): CreateFlowLogsRequest = {
     val __obj = js.Dynamic.literal(ResourceIds = ResourceIds.asInstanceOf[js.Any], ResourceType = ResourceType.asInstanceOf[js.Any], TrafficType = TrafficType.asInstanceOf[js.Any])
-    if (ClientToken != null) __obj.updateDynamic("ClientToken")(ClientToken.asInstanceOf[js.Any])
-    if (DeliverLogsPermissionArn != null) __obj.updateDynamic("DeliverLogsPermissionArn")(DeliverLogsPermissionArn.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (LogDestination != null) __obj.updateDynamic("LogDestination")(LogDestination.asInstanceOf[js.Any])
-    if (LogDestinationType != null) __obj.updateDynamic("LogDestinationType")(LogDestinationType.asInstanceOf[js.Any])
-    if (LogFormat != null) __obj.updateDynamic("LogFormat")(LogFormat.asInstanceOf[js.Any])
-    if (LogGroupName != null) __obj.updateDynamic("LogGroupName")(LogGroupName.asInstanceOf[js.Any])
-    if (MaxAggregationInterval != null) __obj.updateDynamic("MaxAggregationInterval")(MaxAggregationInterval.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFlowLogsRequest]
   }
+  @scala.inline
+  implicit class CreateFlowLogsRequestOps[Self <: CreateFlowLogsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceIds(value: FlowLogResourceIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: FlowLogsResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrafficType(value: TrafficType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrafficType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeliverLogsPermissionArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverLogsPermissionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeliverLogsPermissionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliverLogsPermissionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogDestination(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogDestination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogDestination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogDestinationType(value: LogDestinationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogDestinationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogDestinationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogDestinationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAggregationInterval(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAggregationInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAggregationInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxAggregationInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagSpecifications(value: TagSpecificationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagSpecifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

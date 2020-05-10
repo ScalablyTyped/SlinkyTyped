@@ -22,16 +22,53 @@ trait AccountTakeoverActionsType extends js.Object {
 
 object AccountTakeoverActionsType {
   @scala.inline
-  def apply(
-    HighAction: AccountTakeoverActionType = null,
-    LowAction: AccountTakeoverActionType = null,
-    MediumAction: AccountTakeoverActionType = null
-  ): AccountTakeoverActionsType = {
+  def apply(): AccountTakeoverActionsType = {
     val __obj = js.Dynamic.literal()
-    if (HighAction != null) __obj.updateDynamic("HighAction")(HighAction.asInstanceOf[js.Any])
-    if (LowAction != null) __obj.updateDynamic("LowAction")(LowAction.asInstanceOf[js.Any])
-    if (MediumAction != null) __obj.updateDynamic("MediumAction")(MediumAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountTakeoverActionsType]
   }
+  @scala.inline
+  implicit class AccountTakeoverActionsTypeOps[Self <: AccountTakeoverActionsType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHighAction(value: AccountTakeoverActionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HighAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HighAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowAction(value: AccountTakeoverActionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LowAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LowAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMediumAction(value: AccountTakeoverActionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediumAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediumAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MediumAction")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

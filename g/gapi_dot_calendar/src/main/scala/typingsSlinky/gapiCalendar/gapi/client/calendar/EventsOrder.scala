@@ -14,10 +14,8 @@ trait EventsOrder extends js.Object
 
 object EventsOrder {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def startTime: typingsSlinky.gapiCalendar.gapiCalendarStrings.startTime = "startTime".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.startTime]
   @scala.inline
-  def startTime: typingsSlinky.gapiCalendar.gapiCalendarStrings.startTime = this.cast("startTime")
-  @scala.inline
-  def updated: typingsSlinky.gapiCalendar.gapiCalendarStrings.updated = this.cast("updated")
+  def updated: typingsSlinky.gapiCalendar.gapiCalendarStrings.updated = "updated".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.updated]
 }
 

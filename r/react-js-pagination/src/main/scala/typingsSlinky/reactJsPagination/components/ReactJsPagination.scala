@@ -1,81 +1,86 @@
 package typingsSlinky.reactJsPagination.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactJsPagination.mod.ReactJsPaginationProps
 import typingsSlinky.reactJsPagination.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactJsPagination
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactJsPagination {
   @JSImport("react-js-pagination", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    activePage: Double,
-    onChange: Double => Unit,
-    totalItemsCount: Double,
-    activeClass: String = null,
-    activeLinkClass: String = null,
-    disabledClass: String = null,
-    firstPageText: String | ReactElement = null,
-    getPageUrl: /* pageNumber */ Double => String = null,
-    hideDisabled: js.UndefOr[Boolean] = js.undefined,
-    hideFirstLastPages: js.UndefOr[Boolean] = js.undefined,
-    hideNavigation: js.UndefOr[Boolean] = js.undefined,
-    innerClass: String = null,
-    itemClass: String = null,
-    itemClassFirst: String = null,
-    itemClassLast: String = null,
-    itemClassNext: String = null,
-    itemClassPrev: String = null,
-    itemsCountPerPage: Int | Double = null,
-    lastPageText: String | ReactElement = null,
-    linkClass: String = null,
-    linkClassFirst: String = null,
-    linkClassLast: String = null,
-    linkClassNext: String = null,
-    linkClassPrev: String = null,
-    nextPageText: String | ReactElement = null,
-    pageRangeDisplayed: Int | Double = null,
-    prevPageText: String | ReactElement = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(activePage = activePage.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), totalItemsCount = totalItemsCount.asInstanceOf[js.Any])
-    if (activeClass != null) __obj.updateDynamic("activeClass")(activeClass.asInstanceOf[js.Any])
-    if (activeLinkClass != null) __obj.updateDynamic("activeLinkClass")(activeLinkClass.asInstanceOf[js.Any])
-    if (disabledClass != null) __obj.updateDynamic("disabledClass")(disabledClass.asInstanceOf[js.Any])
-    if (firstPageText != null) __obj.updateDynamic("firstPageText")(firstPageText.asInstanceOf[js.Any])
-    if (getPageUrl != null) __obj.updateDynamic("getPageUrl")(js.Any.fromFunction1(getPageUrl))
-    if (!js.isUndefined(hideDisabled)) __obj.updateDynamic("hideDisabled")(hideDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideFirstLastPages)) __obj.updateDynamic("hideFirstLastPages")(hideFirstLastPages.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideNavigation)) __obj.updateDynamic("hideNavigation")(hideNavigation.asInstanceOf[js.Any])
-    if (innerClass != null) __obj.updateDynamic("innerClass")(innerClass.asInstanceOf[js.Any])
-    if (itemClass != null) __obj.updateDynamic("itemClass")(itemClass.asInstanceOf[js.Any])
-    if (itemClassFirst != null) __obj.updateDynamic("itemClassFirst")(itemClassFirst.asInstanceOf[js.Any])
-    if (itemClassLast != null) __obj.updateDynamic("itemClassLast")(itemClassLast.asInstanceOf[js.Any])
-    if (itemClassNext != null) __obj.updateDynamic("itemClassNext")(itemClassNext.asInstanceOf[js.Any])
-    if (itemClassPrev != null) __obj.updateDynamic("itemClassPrev")(itemClassPrev.asInstanceOf[js.Any])
-    if (itemsCountPerPage != null) __obj.updateDynamic("itemsCountPerPage")(itemsCountPerPage.asInstanceOf[js.Any])
-    if (lastPageText != null) __obj.updateDynamic("lastPageText")(lastPageText.asInstanceOf[js.Any])
-    if (linkClass != null) __obj.updateDynamic("linkClass")(linkClass.asInstanceOf[js.Any])
-    if (linkClassFirst != null) __obj.updateDynamic("linkClassFirst")(linkClassFirst.asInstanceOf[js.Any])
-    if (linkClassLast != null) __obj.updateDynamic("linkClassLast")(linkClassLast.asInstanceOf[js.Any])
-    if (linkClassNext != null) __obj.updateDynamic("linkClassNext")(linkClassNext.asInstanceOf[js.Any])
-    if (linkClassPrev != null) __obj.updateDynamic("linkClassPrev")(linkClassPrev.asInstanceOf[js.Any])
-    if (nextPageText != null) __obj.updateDynamic("nextPageText")(nextPageText.asInstanceOf[js.Any])
-    if (pageRangeDisplayed != null) __obj.updateDynamic("pageRangeDisplayed")(pageRangeDisplayed.asInstanceOf[js.Any])
-    if (prevPageText != null) __obj.updateDynamic("prevPageText")(prevPageText.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def activeClass(value: String): this.type = set("activeClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeLinkClass(value: String): this.type = set("activeLinkClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledClass(value: String): this.type = set("disabledClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def firstPageTextReactElement(value: ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def firstPageText(value: String | ReactElement): this.type = set("firstPageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getPageUrl(value: /* pageNumber */ Double => String): this.type = set("getPageUrl", js.Any.fromFunction1(value))
+    @scala.inline
+    def hideDisabled(value: Boolean): this.type = set("hideDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideFirstLastPages(value: Boolean): this.type = set("hideFirstLastPages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideNavigation(value: Boolean): this.type = set("hideNavigation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerClass(value: String): this.type = set("innerClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemClass(value: String): this.type = set("itemClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemClassFirst(value: String): this.type = set("itemClassFirst", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemClassLast(value: String): this.type = set("itemClassLast", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemClassNext(value: String): this.type = set("itemClassNext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemClassPrev(value: String): this.type = set("itemClassPrev", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemsCountPerPage(value: Double): this.type = set("itemsCountPerPage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastPageTextReactElement(value: ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lastPageText(value: String | ReactElement): this.type = set("lastPageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkClass(value: String): this.type = set("linkClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkClassFirst(value: String): this.type = set("linkClassFirst", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkClassLast(value: String): this.type = set("linkClassLast", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkClassNext(value: String): this.type = set("linkClassNext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def linkClassPrev(value: String): this.type = set("linkClassPrev", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextPageTextReactElement(value: ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextPageText(value: String | ReactElement): this.type = set("nextPageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pageRangeDisplayed(value: Double): this.type = set("pageRangeDisplayed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevPageTextReactElement(value: ReactElement): this.type = set("prevPageText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevPageText(value: String | ReactElement): this.type = set("prevPageText", value.asInstanceOf[js.Any])
   }
-  type Props = ReactJsPaginationProps
+  
+  def withProps(p: ReactJsPaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(activePage: Double, onChange: Double => Unit, totalItemsCount: Double): Builder = {
+    val __props = js.Dynamic.literal(activePage = activePage.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), totalItemsCount = totalItemsCount.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactJsPaginationProps]))
+  }
 }
 

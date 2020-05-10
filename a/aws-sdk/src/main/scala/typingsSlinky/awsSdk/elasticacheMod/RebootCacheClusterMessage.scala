@@ -20,8 +20,27 @@ object RebootCacheClusterMessage {
   @scala.inline
   def apply(CacheClusterId: String, CacheNodeIdsToReboot: CacheNodeIdsList): RebootCacheClusterMessage = {
     val __obj = js.Dynamic.literal(CacheClusterId = CacheClusterId.asInstanceOf[js.Any], CacheNodeIdsToReboot = CacheNodeIdsToReboot.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RebootCacheClusterMessage]
   }
+  @scala.inline
+  implicit class RebootCacheClusterMessageOps[Self <: RebootCacheClusterMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCacheClusterId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheClusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCacheNodeIdsToReboot(value: CacheNodeIdsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheNodeIdsToReboot")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

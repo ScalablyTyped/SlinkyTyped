@@ -28,16 +28,53 @@ trait SchemaBulletSuggestionState extends js.Object {
 
 object SchemaBulletSuggestionState {
   @scala.inline
-  def apply(
-    listIdSuggested: js.UndefOr[Boolean] = js.undefined,
-    nestingLevelSuggested: js.UndefOr[Boolean] = js.undefined,
-    textStyleSuggestionState: SchemaTextStyleSuggestionState = null
-  ): SchemaBulletSuggestionState = {
+  def apply(): SchemaBulletSuggestionState = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(listIdSuggested)) __obj.updateDynamic("listIdSuggested")(listIdSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(nestingLevelSuggested)) __obj.updateDynamic("nestingLevelSuggested")(nestingLevelSuggested.asInstanceOf[js.Any])
-    if (textStyleSuggestionState != null) __obj.updateDynamic("textStyleSuggestionState")(textStyleSuggestionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBulletSuggestionState]
   }
+  @scala.inline
+  implicit class SchemaBulletSuggestionStateOps[Self <: SchemaBulletSuggestionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withListIdSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listIdSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListIdSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listIdSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNestingLevelSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nestingLevelSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNestingLevelSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nestingLevelSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyleSuggestionState(value: SchemaTextStyleSuggestionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyleSuggestionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyleSuggestionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyleSuggestionState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait GeoLocation extends js.Object {
 
 object GeoLocation {
   @scala.inline
-  def apply(
-    ContinentCode: GeoLocationContinentCode = null,
-    CountryCode: GeoLocationCountryCode = null,
-    SubdivisionCode: GeoLocationSubdivisionCode = null
-  ): GeoLocation = {
+  def apply(): GeoLocation = {
     val __obj = js.Dynamic.literal()
-    if (ContinentCode != null) __obj.updateDynamic("ContinentCode")(ContinentCode.asInstanceOf[js.Any])
-    if (CountryCode != null) __obj.updateDynamic("CountryCode")(CountryCode.asInstanceOf[js.Any])
-    if (SubdivisionCode != null) __obj.updateDynamic("SubdivisionCode")(SubdivisionCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeoLocation]
   }
+  @scala.inline
+  implicit class GeoLocationOps[Self <: GeoLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContinentCode(value: GeoLocationContinentCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinentCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinentCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinentCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountryCode(value: GeoLocationCountryCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CountryCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountryCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CountryCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubdivisionCode(value: GeoLocationSubdivisionCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubdivisionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubdivisionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubdivisionCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

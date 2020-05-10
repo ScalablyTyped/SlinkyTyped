@@ -12,10 +12,29 @@ trait LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget ex
 
 object LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget {
   @scala.inline
-  def apply(capacityReservationId: Input[String] = null): LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget = {
+  def apply(): LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget = {
     val __obj = js.Dynamic.literal()
-    if (capacityReservationId != null) __obj.updateDynamic("capacityReservationId")(capacityReservationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget]
   }
+  @scala.inline
+  implicit class LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetOps[Self <: LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCapacityReservationId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityReservationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapacityReservationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityReservationId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

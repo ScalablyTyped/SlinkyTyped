@@ -26,15 +26,47 @@ trait BatchCreatePartitionRequest extends js.Object {
 
 object BatchCreatePartitionRequest {
   @scala.inline
-  def apply(
-    DatabaseName: NameString,
-    PartitionInputList: PartitionInputList,
-    TableName: NameString,
-    CatalogId: CatalogIdString = null
-  ): BatchCreatePartitionRequest = {
+  def apply(DatabaseName: NameString, PartitionInputList: PartitionInputList, TableName: NameString): BatchCreatePartitionRequest = {
     val __obj = js.Dynamic.literal(DatabaseName = DatabaseName.asInstanceOf[js.Any], PartitionInputList = PartitionInputList.asInstanceOf[js.Any], TableName = TableName.asInstanceOf[js.Any])
-    if (CatalogId != null) __obj.updateDynamic("CatalogId")(CatalogId.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchCreatePartitionRequest]
   }
+  @scala.inline
+  implicit class BatchCreatePartitionRequestOps[Self <: BatchCreatePartitionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatabaseName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPartitionInputList(value: PartitionInputList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PartitionInputList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTableName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCatalogId(value: CatalogIdString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCatalogId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CatalogId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -46,24 +46,101 @@ trait SchemaSku extends js.Object {
 
 object SchemaSku {
   @scala.inline
-  def apply(
-    category: SchemaCategory = null,
-    description: String = null,
-    name: String = null,
-    pricingInfo: js.Array[SchemaPricingInfo] = null,
-    serviceProviderName: String = null,
-    serviceRegions: js.Array[String] = null,
-    skuId: String = null
-  ): SchemaSku = {
+  def apply(): SchemaSku = {
     val __obj = js.Dynamic.literal()
-    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (pricingInfo != null) __obj.updateDynamic("pricingInfo")(pricingInfo.asInstanceOf[js.Any])
-    if (serviceProviderName != null) __obj.updateDynamic("serviceProviderName")(serviceProviderName.asInstanceOf[js.Any])
-    if (serviceRegions != null) __obj.updateDynamic("serviceRegions")(serviceRegions.asInstanceOf[js.Any])
-    if (skuId != null) __obj.updateDynamic("skuId")(skuId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSku]
   }
+  @scala.inline
+  implicit class SchemaSkuOps[Self <: SchemaSku] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCategory(value: SchemaCategory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPricingInfo(value: js.Array[SchemaPricingInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPricingInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pricingInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceProviderName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceProviderName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceProviderName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceProviderName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceRegions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRegions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRegions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkuId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skuId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkuId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skuId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

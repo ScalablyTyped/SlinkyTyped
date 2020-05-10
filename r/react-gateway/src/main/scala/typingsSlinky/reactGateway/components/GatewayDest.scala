@@ -1,34 +1,37 @@
 package typingsSlinky.reactGateway.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactGateway.gatewayDestMod.GatewayDestProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GatewayDest
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactGateway.mod.GatewayDest] {
+object GatewayDest {
   @JSImport("react-gateway", "GatewayDest")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    name: String,
-    component: String | ReactComponentClass[js.Object] = null,
-    tagName: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactGateway.mod.GatewayDest] = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactGateway.mod.GatewayDest] {
+    @scala.inline
+    def componentFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentComponentClass(value: ReactComponentClass[js.Object]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def component(value: String | ReactComponentClass[js.Object]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagName(value: String): this.type = set("tagName", value.asInstanceOf[js.Any])
   }
-  type Props = GatewayDestProps
+  
+  def withProps(p: GatewayDestProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[GatewayDestProps]))
+  }
 }
 

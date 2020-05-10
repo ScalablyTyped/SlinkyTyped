@@ -12,10 +12,8 @@ trait BrazilianPortuguese extends _ALL
 
 object BrazilianPortuguese {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def pt: typingsSlinky.qlik.qlikStrings.pt = "pt".asInstanceOf[typingsSlinky.qlik.qlikStrings.pt]
   @scala.inline
-  def pt: typingsSlinky.qlik.qlikStrings.pt = this.cast("pt")
-  @scala.inline
-  def `pt-BR`: typingsSlinky.qlik.qlikStrings.`pt-BR` = this.cast("pt-BR")
+  def `pt-BR`: typingsSlinky.qlik.qlikStrings.`pt-BR` = "pt-BR".asInstanceOf[typingsSlinky.qlik.qlikStrings.`pt-BR`]
 }
 

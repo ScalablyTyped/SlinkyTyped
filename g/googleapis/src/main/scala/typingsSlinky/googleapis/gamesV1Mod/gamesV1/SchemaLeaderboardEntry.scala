@@ -55,28 +55,125 @@ trait SchemaLeaderboardEntry extends js.Object {
 
 object SchemaLeaderboardEntry {
   @scala.inline
-  def apply(
-    formattedScore: String = null,
-    formattedScoreRank: String = null,
-    kind: String = null,
-    player: SchemaPlayer = null,
-    scoreRank: String = null,
-    scoreTag: String = null,
-    scoreValue: String = null,
-    timeSpan: String = null,
-    writeTimestampMillis: String = null
-  ): SchemaLeaderboardEntry = {
+  def apply(): SchemaLeaderboardEntry = {
     val __obj = js.Dynamic.literal()
-    if (formattedScore != null) __obj.updateDynamic("formattedScore")(formattedScore.asInstanceOf[js.Any])
-    if (formattedScoreRank != null) __obj.updateDynamic("formattedScoreRank")(formattedScoreRank.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (player != null) __obj.updateDynamic("player")(player.asInstanceOf[js.Any])
-    if (scoreRank != null) __obj.updateDynamic("scoreRank")(scoreRank.asInstanceOf[js.Any])
-    if (scoreTag != null) __obj.updateDynamic("scoreTag")(scoreTag.asInstanceOf[js.Any])
-    if (scoreValue != null) __obj.updateDynamic("scoreValue")(scoreValue.asInstanceOf[js.Any])
-    if (timeSpan != null) __obj.updateDynamic("timeSpan")(timeSpan.asInstanceOf[js.Any])
-    if (writeTimestampMillis != null) __obj.updateDynamic("writeTimestampMillis")(writeTimestampMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLeaderboardEntry]
   }
+  @scala.inline
+  implicit class SchemaLeaderboardEntryOps[Self <: SchemaLeaderboardEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormattedScore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedScore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormattedScore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedScore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormattedScoreRank(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedScoreRank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormattedScoreRank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedScoreRank")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayer(value: SchemaPlayer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("player")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScoreRank(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreRank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScoreRank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreRank")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScoreTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScoreTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScoreValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScoreValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scoreValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeSpan(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSpan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeSpan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeSpan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriteTimestampMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeTimestampMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWriteTimestampMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeTimestampMillis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

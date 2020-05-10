@@ -30,16 +30,53 @@ trait Logger extends js.Object {
 
 object Logger {
   @scala.inline
-  def apply(
-    Component: LoggerComponent,
-    Id: string,
-    Level: LoggerLevel,
-    Type: LoggerType,
-    Space: Int | Double = null
-  ): Logger = {
+  def apply(Component: LoggerComponent, Id: string, Level: LoggerLevel, Type: LoggerType): Logger = {
     val __obj = js.Dynamic.literal(Component = Component.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], Level = Level.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
-    if (Space != null) __obj.updateDynamic("Space")(Space.asInstanceOf[js.Any])
     __obj.asInstanceOf[Logger]
   }
+  @scala.inline
+  implicit class LoggerOps[Self <: Logger] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponent(value: LoggerComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLevel(value: LoggerLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: LoggerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpace(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Space")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Space")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

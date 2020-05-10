@@ -8,8 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class FileErrorCls protected () extends FileError {
   def this(code: Double) = this()
-  /** Error code */
-  /* CompleteClass */
-  override var code: Double = js.native
 }
 

@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TokenizeOptions extends js.Object {
-  var comment: js.UndefOr[Boolean] = js.undefined
-  var loc: js.UndefOr[Boolean] = js.undefined
-  var range: js.UndefOr[Boolean] = js.undefined
-  var tolerant: js.UndefOr[Boolean] = js.undefined
+  var comment: js.UndefOr[Boolean] = js.native
+  var loc: js.UndefOr[Boolean] = js.native
+  var range: js.UndefOr[Boolean] = js.native
+  var tolerant: js.UndefOr[Boolean] = js.native
 }
 
 object TokenizeOptions {
   @scala.inline
-  def apply(
-    comment: js.UndefOr[Boolean] = js.undefined,
-    loc: js.UndefOr[Boolean] = js.undefined,
-    range: js.UndefOr[Boolean] = js.undefined,
-    tolerant: js.UndefOr[Boolean] = js.undefined
-  ): TokenizeOptions = {
+  def apply(): TokenizeOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(comment)) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
-    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (!js.isUndefined(range)) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (!js.isUndefined(tolerant)) __obj.updateDynamic("tolerant")(tolerant.asInstanceOf[js.Any])
     __obj.asInstanceOf[TokenizeOptions]
   }
+  @scala.inline
+  implicit class TokenizeOptionsOps[Self <: TokenizeOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComment(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTolerant(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTolerant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerant")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

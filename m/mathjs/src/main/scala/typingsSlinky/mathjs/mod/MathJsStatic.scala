@@ -17,7 +17,6 @@ import typingsSlinky.mathjs.mathjsStrings.sparse
 import typingsSlinky.mathjs.mathjsStrings.unbiased
 import typingsSlinky.mathjs.mathjsStrings.uncorrected
 import typingsSlinky.std.Record
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -937,7 +936,7 @@ trait MathJsStatic extends FactoryDependencies {
     x: js.Array[String] | MathArray,
     test: js.Function3[/* value */ js.Any, /* index */ js.Any, js.Array[String] | MathArray | Matrix, Boolean]
   ): Matrix | MathArray = js.native
-  def filter(x: js.Array[String] | MathArray, test: RegExp): Matrix | MathArray = js.native
+  def filter(x: js.Array[String] | MathArray, test: js.RegExp): Matrix | MathArray = js.native
   /**
     * Filter the items in an array or one dimensional matrix.
     * @param x A one dimensional matrix or array to filter
@@ -956,7 +955,7 @@ trait MathJsStatic extends FactoryDependencies {
       Boolean
     ]
   ): Matrix | MathArray = js.native
-  def filter(x: Matrix, test: RegExp): Matrix | MathArray = js.native
+  def filter(x: Matrix, test: js.RegExp): Matrix | MathArray = js.native
   /**
     * Round a value towards zero. For matrices, the function is evaluated
     * element wise.

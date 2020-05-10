@@ -498,7 +498,7 @@ class DomInline protected () extends js.Object {
     * @param reference Widget, DOMNode, or id of widget or DOMNode
     * @param position               OptionalIf reference is a widget (or id of widget), and that widget has an ".addChild" method,it will be called passing this widget instance into that method, supplying the optionalposition index passed.  In this case position (if specified) should be an integer.If reference is a DOMNode (or id matching a DOMNode but not a widget),the position argument can be a numeric index or a string"first", "last", "before", or "after", same as dojo/dom-construct::place().
     */
-  def placeAt(reference: typingsSlinky.std.HTMLElement, position: String): js.Any = js.native
+  def placeAt(reference: HTMLElement, position: String): js.Any = js.native
   /**
     * Place this widget somewhere in the DOM based
     * on standard domConstruct.place() conventions.
@@ -509,7 +509,7 @@ class DomInline protected () extends js.Object {
     * @param reference Widget, DOMNode, or id of widget or DOMNode
     * @param position               OptionalIf reference is a widget (or id of widget), and that widget has an ".addChild" method,it will be called passing this widget instance into that method, supplying the optionalposition index passed.  In this case position (if specified) should be an integer.If reference is a DOMNode (or id matching a DOMNode but not a widget),the position argument can be a numeric index or a string"first", "last", "before", or "after", same as dojo/dom-construct::place().
     */
-  def placeAt(reference: typingsSlinky.std.HTMLElement, position: Double): js.Any = js.native
+  def placeAt(reference: HTMLElement, position: Double): js.Any = js.native
   /**
     * Processing after the DOM fragment is created
     * Called after the DOM fragment has been created, but not necessarily

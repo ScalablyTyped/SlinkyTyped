@@ -19,24 +19,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ Type in keyof openfin.openfin/_v2/api/events/view.ViewEventMapping<string, string> ]: openfin.openfin/_v2/api/events/view.ViewEventMapping<'view', Type>[Type]} */
+@js.native
 trait ViewEvents extends js.Object {
-  var attached: WindowEvent[view, typingsSlinky.openfin.openfinStrings.attached]
-  var `certificate-error`: CertificateErrorEvent[String, String]
-  var crashed: CrashedEvent with (WindowEvent[String, String])
-  var created: WindowEvent[view, typingsSlinky.openfin.openfinStrings.created]
-  var destroyed: WindowEvent[view, typingsSlinky.openfin.openfinStrings.destroyed]
-  var `did-change-theme-color`: WindowEvent[String, String]
-  var `found-in-page`: WindowEvent[String, String]
-  var hidden: WindowEvent[view, typingsSlinky.openfin.openfinStrings.hidden]
-  var listenerRemoved: String
-  var `navigation-rejected`: WindowNavigationRejectedEvent[String, String]
-  var newListener: String
-  var `page-favicon-updated`: WindowEvent[String, String]
-  var `page-title-updated`: PageTitleUpdatedEvent[String, String]
-  var `resource-load-failed`: WindowResourceLoadFailedEvent[String, String]
-  var `resource-response-received`: WindowResourceResponseReceivedEvent[String, String]
-  var shown: WindowEvent[view, typingsSlinky.openfin.openfinStrings.shown]
-  var `target-changed`: WindowEvent[view, typingsSlinky.openfin.openfinStrings.`target-changed`]
+  var attached: WindowEvent[view, typingsSlinky.openfin.openfinStrings.attached] = js.native
+  var `certificate-error`: CertificateErrorEvent[String, String] = js.native
+  var crashed: CrashedEvent with (WindowEvent[String, String]) = js.native
+  var created: WindowEvent[view, typingsSlinky.openfin.openfinStrings.created] = js.native
+  var destroyed: WindowEvent[view, typingsSlinky.openfin.openfinStrings.destroyed] = js.native
+  var `did-change-theme-color`: WindowEvent[String, String] = js.native
+  var `found-in-page`: WindowEvent[String, String] = js.native
+  var hidden: WindowEvent[view, typingsSlinky.openfin.openfinStrings.hidden] = js.native
+  var listenerRemoved: String = js.native
+  var `navigation-rejected`: WindowNavigationRejectedEvent[String, String] = js.native
+  var newListener: String = js.native
+  var `page-favicon-updated`: WindowEvent[String, String] = js.native
+  var `page-title-updated`: PageTitleUpdatedEvent[String, String] = js.native
+  var `resource-load-failed`: WindowResourceLoadFailedEvent[String, String] = js.native
+  var `resource-response-received`: WindowResourceResponseReceivedEvent[String, String] = js.native
+  var shown: WindowEvent[view, typingsSlinky.openfin.openfinStrings.shown] = js.native
+  var `target-changed`: WindowEvent[view, typingsSlinky.openfin.openfinStrings.`target-changed`] = js.native
 }
 
 object ViewEvents {
@@ -72,5 +73,115 @@ object ViewEvents {
     __obj.updateDynamic("target-changed")(`target-changed`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewEvents]
   }
+  @scala.inline
+  implicit class ViewEventsOps[Self <: ViewEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttached(value: WindowEvent[view, attached]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attached")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withCertificate-error`(value: CertificateErrorEvent[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate-error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCrashed(value: CrashedEvent with (WindowEvent[String, String])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crashed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreated(value: WindowEvent[view, created]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroyed(value: WindowEvent[view, destroyed]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withDid-change-theme-color`(value: WindowEvent[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("did-change-theme-color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withFound-in-page`(value: WindowEvent[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("found-in-page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHidden(value: WindowEvent[view, hidden]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListenerRemoved(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listenerRemoved")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withNavigation-rejected`(value: WindowNavigationRejectedEvent[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigation-rejected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewListener(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newListener")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withPage-favicon-updated`(value: WindowEvent[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page-favicon-updated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withPage-title-updated`(value: PageTitleUpdatedEvent[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page-title-updated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withResource-load-failed`(value: WindowResourceLoadFailedEvent[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource-load-failed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withResource-response-received`(value: WindowResourceResponseReceivedEvent[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource-response-received")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShown(value: WindowEvent[view, shown]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withTarget-changed`(value: WindowEvent[view, `target-changed`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

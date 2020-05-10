@@ -19,10 +19,29 @@ trait SchemaQueryInterpretationOptions extends js.Object {
 
 object SchemaQueryInterpretationOptions {
   @scala.inline
-  def apply(disableNlInterpretation: js.UndefOr[Boolean] = js.undefined): SchemaQueryInterpretationOptions = {
+  def apply(): SchemaQueryInterpretationOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disableNlInterpretation)) __obj.updateDynamic("disableNlInterpretation")(disableNlInterpretation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQueryInterpretationOptions]
   }
+  @scala.inline
+  implicit class SchemaQueryInterpretationOptionsOps[Self <: SchemaQueryInterpretationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisableNlInterpretation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNlInterpretation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableNlInterpretation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableNlInterpretation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

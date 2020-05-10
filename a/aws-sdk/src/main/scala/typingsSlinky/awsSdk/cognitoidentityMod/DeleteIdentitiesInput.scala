@@ -16,8 +16,21 @@ object DeleteIdentitiesInput {
   @scala.inline
   def apply(IdentityIdsToDelete: IdentityIdList): DeleteIdentitiesInput = {
     val __obj = js.Dynamic.literal(IdentityIdsToDelete = IdentityIdsToDelete.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteIdentitiesInput]
   }
+  @scala.inline
+  implicit class DeleteIdentitiesInputOps[Self <: DeleteIdentitiesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdentityIdsToDelete(value: IdentityIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityIdsToDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

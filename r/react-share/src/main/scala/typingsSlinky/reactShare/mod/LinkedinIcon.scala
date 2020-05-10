@@ -1,12 +1,12 @@
 package typingsSlinky.reactShare.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.StatelessComponent
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-share", "LinkedinIcon")
 @js.native
-object LinkedinIcon extends TopLevel[StatelessComponent[IconComponentProps]]
+object LinkedinIcon extends TopLevel[ReactComponentClass[IconComponentProps]]
 

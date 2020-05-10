@@ -1,8 +1,8 @@
 package typingsSlinky.ractive.mod
 
 import org.scalablytyped.runtime.Instantiable0
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ractive.AnonInstantiable
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -26,17 +26,59 @@ trait ActivityScheduledEventDetails extends js.Object {
 
 object ActivityScheduledEventDetails {
   @scala.inline
-  def apply(
-    resource: Arn,
-    heartbeatInSeconds: Int | Double = null,
-    input: SensitiveData = null,
-    timeoutInSeconds: Int | Double = null
-  ): ActivityScheduledEventDetails = {
+  def apply(resource: Arn): ActivityScheduledEventDetails = {
     val __obj = js.Dynamic.literal(resource = resource.asInstanceOf[js.Any])
-    if (heartbeatInSeconds != null) __obj.updateDynamic("heartbeatInSeconds")(heartbeatInSeconds.asInstanceOf[js.Any])
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (timeoutInSeconds != null) __obj.updateDynamic("timeoutInSeconds")(timeoutInSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityScheduledEventDetails]
   }
+  @scala.inline
+  implicit class ActivityScheduledEventDetailsOps[Self <: ActivityScheduledEventDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResource(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeartbeatInSeconds(value: TimeoutInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heartbeatInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeartbeatInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heartbeatInSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput(value: SensitiveData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutInSeconds(value: TimeoutInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutInSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

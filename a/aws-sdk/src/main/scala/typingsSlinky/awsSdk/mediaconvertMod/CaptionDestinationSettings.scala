@@ -42,26 +42,113 @@ trait CaptionDestinationSettings extends js.Object {
 
 object CaptionDestinationSettings {
   @scala.inline
-  def apply(
-    BurninDestinationSettings: BurninDestinationSettings = null,
-    DestinationType: CaptionDestinationType = null,
-    DvbSubDestinationSettings: DvbSubDestinationSettings = null,
-    EmbeddedDestinationSettings: EmbeddedDestinationSettings = null,
-    ImscDestinationSettings: ImscDestinationSettings = null,
-    SccDestinationSettings: SccDestinationSettings = null,
-    TeletextDestinationSettings: TeletextDestinationSettings = null,
-    TtmlDestinationSettings: TtmlDestinationSettings = null
-  ): CaptionDestinationSettings = {
+  def apply(): CaptionDestinationSettings = {
     val __obj = js.Dynamic.literal()
-    if (BurninDestinationSettings != null) __obj.updateDynamic("BurninDestinationSettings")(BurninDestinationSettings.asInstanceOf[js.Any])
-    if (DestinationType != null) __obj.updateDynamic("DestinationType")(DestinationType.asInstanceOf[js.Any])
-    if (DvbSubDestinationSettings != null) __obj.updateDynamic("DvbSubDestinationSettings")(DvbSubDestinationSettings.asInstanceOf[js.Any])
-    if (EmbeddedDestinationSettings != null) __obj.updateDynamic("EmbeddedDestinationSettings")(EmbeddedDestinationSettings.asInstanceOf[js.Any])
-    if (ImscDestinationSettings != null) __obj.updateDynamic("ImscDestinationSettings")(ImscDestinationSettings.asInstanceOf[js.Any])
-    if (SccDestinationSettings != null) __obj.updateDynamic("SccDestinationSettings")(SccDestinationSettings.asInstanceOf[js.Any])
-    if (TeletextDestinationSettings != null) __obj.updateDynamic("TeletextDestinationSettings")(TeletextDestinationSettings.asInstanceOf[js.Any])
-    if (TtmlDestinationSettings != null) __obj.updateDynamic("TtmlDestinationSettings")(TtmlDestinationSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaptionDestinationSettings]
   }
+  @scala.inline
+  implicit class CaptionDestinationSettingsOps[Self <: CaptionDestinationSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBurninDestinationSettings(value: BurninDestinationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BurninDestinationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBurninDestinationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BurninDestinationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationType(value: CaptionDestinationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDvbSubDestinationSettings(value: DvbSubDestinationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSubDestinationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDvbSubDestinationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DvbSubDestinationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmbeddedDestinationSettings(value: EmbeddedDestinationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbeddedDestinationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbeddedDestinationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmbeddedDestinationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImscDestinationSettings(value: ImscDestinationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImscDestinationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImscDestinationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImscDestinationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSccDestinationSettings(value: SccDestinationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SccDestinationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSccDestinationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SccDestinationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeletextDestinationSettings(value: TeletextDestinationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextDestinationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeletextDestinationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TeletextDestinationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTtmlDestinationSettings(value: TtmlDestinationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TtmlDestinationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTtmlDestinationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TtmlDestinationSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

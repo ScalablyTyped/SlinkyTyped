@@ -10,9 +10,10 @@ interface LocalFileSystem {
   requestFileSystem: Function;
   resolveLocalFileSystemURI: Function;
 }*/
+@js.native
 trait LocalFileSystem extends js.Object {
-  var PERSISTENT: Double
-  var TEMPORARY: Double
+  var PERSISTENT: Double = js.native
+  var TEMPORARY: Double = js.native
 }
 
 @JSGlobal("LocalFileSystem")

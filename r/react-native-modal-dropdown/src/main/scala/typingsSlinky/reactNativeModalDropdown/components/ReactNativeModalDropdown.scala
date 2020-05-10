@@ -1,13 +1,39 @@
 package typingsSlinky.reactNativeModalDropdown.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.reactNativeModalDropdown.mod.RNModalDropdown.ModalDropdownProps
-import typingsSlinky.reactNativeModalDropdown.mod.RNModalDropdown.PositionStyle
-import typingsSlinky.reactNativeModalDropdown.mod.^
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.mod.AccessibilityActionInfo
+import typingsSlinky.reactNative.mod.AccessibilityRole
+import typingsSlinky.reactNative.mod.AccessibilityState
+import typingsSlinky.reactNative.mod.AccessibilityStates
+import typingsSlinky.reactNative.mod.AccessibilityTrait
+import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.Insets
+import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.mod.NativeTouchEvent
+import typingsSlinky.reactNative.mod.NodeHandle
+import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TVParallaxProperties
+import typingsSlinky.reactNative.mod.TextStyle
+import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNative.reactNativeStrings.`box-none`
+import typingsSlinky.reactNative.reactNativeStrings.`box-only`
+import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
+import typingsSlinky.reactNative.reactNativeStrings.assertive
+import typingsSlinky.reactNative.reactNativeStrings.auto
+import typingsSlinky.reactNative.reactNativeStrings.button
+import typingsSlinky.reactNative.reactNativeStrings.no
+import typingsSlinky.reactNative.reactNativeStrings.none
+import typingsSlinky.reactNative.reactNativeStrings.polite
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
+import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
+import typingsSlinky.reactNative.reactNativeStrings.yes
+import typingsSlinky.reactNativeModalDropdown.mod.ModalDropdownProps
+import typingsSlinky.reactNativeModalDropdown.mod.PositionStyle
+import typingsSlinky.reactNativeModalDropdown.mod.default
 import typingsSlinky.reactNativeModalDropdown.reactNativeModalDropdownStrings.always
 import typingsSlinky.reactNativeModalDropdown.reactNativeModalDropdownStrings.handled
 import typingsSlinky.reactNativeModalDropdown.reactNativeModalDropdownStrings.never
@@ -15,62 +41,176 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeModalDropdown
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
-  @JSImport("react-native-modal-dropdown", JSImport.Namespace)
+object ReactNativeModalDropdown {
+  @JSImport("react-native-modal-dropdown", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    accessible: js.UndefOr[Boolean] = js.undefined,
-    adjustFrame: /* positionStyle */ PositionStyle => Unit = null,
-    animated: js.UndefOr[Boolean] = js.undefined,
-    defaultIndex: Int | Double = null,
-    defaultValue: String = null,
-    dropdownStyle: js.Any = null,
-    dropdownTextHighlightStyle: js.Any = null,
-    dropdownTextStyle: js.Any = null,
-    keyboardShouldPersistTaps: always | never | handled = null,
-    onDropdownWillHide: () => Boolean = null,
-    onDropdownWillShow: () => Boolean = null,
-    onSelect: (/* index */ Double, /* option */ js.Any) => Unit = null,
-    options: js.Array[_] = null,
-    renderButtonText: /* text */ js.Any => _ = null,
-    renderRow: (/* option */ js.Any, /* index */ Double, /* isSelected */ Boolean) => _ = null,
-    renderSeparator: () => _ = null,
-    scrollEnabled: js.UndefOr[Boolean] = js.undefined,
-    showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.undefined,
-    style: js.Any = null,
-    textStyle: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(accessible)) __obj.updateDynamic("accessible")(accessible.asInstanceOf[js.Any])
-    if (adjustFrame != null) __obj.updateDynamic("adjustFrame")(js.Any.fromFunction1(adjustFrame))
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (defaultIndex != null) __obj.updateDynamic("defaultIndex")(defaultIndex.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (dropdownStyle != null) __obj.updateDynamic("dropdownStyle")(dropdownStyle.asInstanceOf[js.Any])
-    if (dropdownTextHighlightStyle != null) __obj.updateDynamic("dropdownTextHighlightStyle")(dropdownTextHighlightStyle.asInstanceOf[js.Any])
-    if (dropdownTextStyle != null) __obj.updateDynamic("dropdownTextStyle")(dropdownTextStyle.asInstanceOf[js.Any])
-    if (keyboardShouldPersistTaps != null) __obj.updateDynamic("keyboardShouldPersistTaps")(keyboardShouldPersistTaps.asInstanceOf[js.Any])
-    if (onDropdownWillHide != null) __obj.updateDynamic("onDropdownWillHide")(js.Any.fromFunction0(onDropdownWillHide))
-    if (onDropdownWillShow != null) __obj.updateDynamic("onDropdownWillShow")(js.Any.fromFunction0(onDropdownWillShow))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (renderButtonText != null) __obj.updateDynamic("renderButtonText")(js.Any.fromFunction1(renderButtonText))
-    if (renderRow != null) __obj.updateDynamic("renderRow")(js.Any.fromFunction3(renderRow))
-    if (renderSeparator != null) __obj.updateDynamic("renderSeparator")(js.Any.fromFunction0(renderSeparator))
-    if (!js.isUndefined(scrollEnabled)) __obj.updateDynamic("scrollEnabled")(scrollEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(showsVerticalScrollIndicator)) __obj.updateDynamic("showsVerticalScrollIndicator")(showsVerticalScrollIndicator.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]] {
+    @scala.inline
+    def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityElementsHidden(value: Boolean): this.type = set("accessibilityElementsHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityHint(value: String): this.type = set("accessibilityHint", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityIgnoresInvertColors(value: Boolean): this.type = set("accessibilityIgnoresInvertColors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityLabel(value: String): this.type = set("accessibilityLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityLiveRegion(value: none | polite | assertive): this.type = set("accessibilityLiveRegion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityStates(value: js.Array[AccessibilityStates]): this.type = set("accessibilityStates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityViewIsModal(value: Boolean): this.type = set("accessibilityViewIsModal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessible(value: Boolean): this.type = set("accessible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def adjustFrame(value: /* positionStyle */ PositionStyle => PositionStyle): this.type = set("adjustFrame", js.Any.fromFunction1(value))
+    @scala.inline
+    def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultIndex(value: Double): this.type = set("defaultIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownStyle(value: StyleProp[ViewStyle]): this.type = set("dropdownStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownStyleNull: this.type = set("dropdownStyle", null)
+    @scala.inline
+    def dropdownTextHighlightStyle(value: StyleProp[TextStyle]): this.type = set("dropdownTextHighlightStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownTextHighlightStyleNull: this.type = set("dropdownTextHighlightStyle", null)
+    @scala.inline
+    def dropdownTextStyle(value: StyleProp[TextStyle]): this.type = set("dropdownTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownTextStyleNull: this.type = set("dropdownTextStyle", null)
+    @scala.inline
+    def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hitSlop(value: Insets): this.type = set("hitSlop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def importantForAccessibility(value: auto | yes | no | `no-hide-descendants`): this.type = set("importantForAccessibility", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isTVSelectable(value: Boolean): this.type = set("isTVSelectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyboardShouldPersistTaps(value: always | never | handled): this.type = set("keyboardShouldPersistTaps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nativeID(value: String): this.type = set("nativeID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def needsOffscreenAlphaCompositing(value: Boolean): this.type = set("needsOffscreenAlphaCompositing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAccessibilityAction(value: SyntheticEvent[NodeHandle, ReadonlyactionNamestring] => Unit): this.type = set("onAccessibilityAction", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAccessibilityEscape(value: () => Unit): this.type = set("onAccessibilityEscape", js.Any.fromFunction0(value))
+    @scala.inline
+    def onAccessibilityTap(value: () => Unit): this.type = set("onAccessibilityTap", js.Any.fromFunction0(value))
+    @scala.inline
+    def onDropdownWillHide(value: () => Unit | Boolean): this.type = set("onDropdownWillHide", js.Any.fromFunction0(value))
+    @scala.inline
+    def onDropdownWillShow(value: () => Unit | Boolean): this.type = set("onDropdownWillShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMoveShouldSetResponder(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponder", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMoveShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponderCapture", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderGrant(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderGrant", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderMove(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderReject(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderReject", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderRelease(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderRelease", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderStart(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderTerminate(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderTerminate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResponderTerminationRequest(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onResponderTerminationRequest", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: (/* index */ String, T) => Unit | Boolean): this.type = set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def onStartShouldSetResponder(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onStartShouldSetResponder", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStartShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onStartShouldSetResponderCapture", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchCancel(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchEndCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchEndCapture", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchMove(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchMove", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchStart(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def options(value: js.Array[T]): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderButtonText(value: /* text */ String => String): this.type = set("renderButtonText", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderRow(value: (T, /* index */ String, /* isSelected */ Boolean) => TagMod[Any]): this.type = set("renderRow", js.Any.fromFunction3(value))
+    @scala.inline
+    def renderSeparator(
+      value: (/* sectionID */ String, /* index */ String, /* adjacentRowHighlighted */ Boolean) => TagMod[Any]
+    ): this.type = set("renderSeparator", js.Any.fromFunction3(value))
+    @scala.inline
+    def renderToHardwareTextureAndroid(value: Boolean): this.type = set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollEnabled(value: Boolean): this.type = set("scrollEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldRasterizeIOS(value: Boolean): this.type = set("shouldRasterizeIOS", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showsVerticalScrollIndicator(value: Boolean): this.type = set("showsVerticalScrollIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyle(value: StyleProp[TextStyle]): this.type = set("textStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textStyleNull: this.type = set("textStyle", null)
+    @scala.inline
+    def tvParallaxMagnification(value: Double): this.type = set("tvParallaxMagnification", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tvParallaxProperties(value: TVParallaxProperties): this.type = set("tvParallaxProperties", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tvParallaxShiftDistanceX(value: Double): this.type = set("tvParallaxShiftDistanceX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tvParallaxShiftDistanceY(value: Double): this.type = set("tvParallaxShiftDistanceY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeModalDropdown.mod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ModalDropdownProps
+  
+  def withProps[T](p: ModalDropdownProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T](companion: ReactNativeModalDropdown.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -30,20 +30,77 @@ trait Entitlement extends js.Object {
 
 object Entitlement {
   @scala.inline
-  def apply(
-    CustomerIdentifier: NonEmptyString = null,
-    Dimension: NonEmptyString = null,
-    ExpirationDate: js.Date = null,
-    ProductCode: ProductCode = null,
-    Value: EntitlementValue = null
-  ): Entitlement = {
+  def apply(): Entitlement = {
     val __obj = js.Dynamic.literal()
-    if (CustomerIdentifier != null) __obj.updateDynamic("CustomerIdentifier")(CustomerIdentifier.asInstanceOf[js.Any])
-    if (Dimension != null) __obj.updateDynamic("Dimension")(Dimension.asInstanceOf[js.Any])
-    if (ExpirationDate != null) __obj.updateDynamic("ExpirationDate")(ExpirationDate.asInstanceOf[js.Any])
-    if (ProductCode != null) __obj.updateDynamic("ProductCode")(ProductCode.asInstanceOf[js.Any])
-    if (Value != null) __obj.updateDynamic("Value")(Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Entitlement]
   }
+  @scala.inline
+  implicit class EntitlementOps[Self <: Entitlement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomerIdentifier(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomerIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimension(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Dimension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpirationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpirationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpirationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductCode(value: ProductCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: EntitlementValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

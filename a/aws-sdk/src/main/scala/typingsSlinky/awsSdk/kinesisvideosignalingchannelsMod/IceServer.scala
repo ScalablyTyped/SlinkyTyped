@@ -26,13 +26,65 @@ trait IceServer extends js.Object {
 
 object IceServer {
   @scala.inline
-  def apply(Password: Password = null, Ttl: Int | Double = null, Uris: Uris = null, Username: Username = null): IceServer = {
+  def apply(): IceServer = {
     val __obj = js.Dynamic.literal()
-    if (Password != null) __obj.updateDynamic("Password")(Password.asInstanceOf[js.Any])
-    if (Ttl != null) __obj.updateDynamic("Ttl")(Ttl.asInstanceOf[js.Any])
-    if (Uris != null) __obj.updateDynamic("Uris")(Uris.asInstanceOf[js.Any])
-    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[IceServer]
   }
+  @scala.inline
+  implicit class IceServerOps[Self <: IceServer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPassword(value: Password): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTtl(value: Ttl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ttl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTtl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ttl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUris(value: Uris): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Uris")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUris: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Uris")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: Username): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

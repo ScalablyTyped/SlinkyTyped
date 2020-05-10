@@ -25,12 +25,53 @@ trait SchemaOutdatedLibrary extends js.Object {
 
 object SchemaOutdatedLibrary {
   @scala.inline
-  def apply(learnMoreUrls: js.Array[String] = null, libraryName: String = null, version: String = null): SchemaOutdatedLibrary = {
+  def apply(): SchemaOutdatedLibrary = {
     val __obj = js.Dynamic.literal()
-    if (learnMoreUrls != null) __obj.updateDynamic("learnMoreUrls")(learnMoreUrls.asInstanceOf[js.Any])
-    if (libraryName != null) __obj.updateDynamic("libraryName")(libraryName.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOutdatedLibrary]
   }
+  @scala.inline
+  implicit class SchemaOutdatedLibraryOps[Self <: SchemaOutdatedLibrary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLearnMoreUrls(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("learnMoreUrls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLearnMoreUrls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("learnMoreUrls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLibraryName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("libraryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLibraryName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("libraryName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

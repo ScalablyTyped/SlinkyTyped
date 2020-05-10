@@ -5,18 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonUser extends js.Object {
-  var composite: ReadonlyJSONValue
-  var user: ReadonlyJSONValue
+  var composite: ReadonlyJSONValue = js.native
+  var user: ReadonlyJSONValue = js.native
 }
 
 object AnonUser {
   @scala.inline
-  def apply(composite: ReadonlyJSONValue = null, user: ReadonlyJSONValue = null): AnonUser = {
+  def apply(): AnonUser = {
     val __obj = js.Dynamic.literal()
-    if (composite != null) __obj.updateDynamic("composite")(composite.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonUser]
   }
+  @scala.inline
+  implicit class AnonUserOps[Self <: AnonUser] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComposite(value: ReadonlyJSONValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("composite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompositeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("composite")(null)
+        ret
+    }
+    @scala.inline
+    def withUser(value: ReadonlyJSONValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(null)
+        ret
+    }
+  }
+  
 }
 

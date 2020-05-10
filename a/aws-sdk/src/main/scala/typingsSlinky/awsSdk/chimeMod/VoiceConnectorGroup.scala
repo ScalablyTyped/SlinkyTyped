@@ -30,20 +30,77 @@ trait VoiceConnectorGroup extends js.Object {
 
 object VoiceConnectorGroup {
   @scala.inline
-  def apply(
-    CreatedTimestamp: js.Date = null,
-    Name: VoiceConnectorGroupName = null,
-    UpdatedTimestamp: js.Date = null,
-    VoiceConnectorGroupId: NonEmptyString = null,
-    VoiceConnectorItems: VoiceConnectorItemList = null
-  ): VoiceConnectorGroup = {
+  def apply(): VoiceConnectorGroup = {
     val __obj = js.Dynamic.literal()
-    if (CreatedTimestamp != null) __obj.updateDynamic("CreatedTimestamp")(CreatedTimestamp.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (UpdatedTimestamp != null) __obj.updateDynamic("UpdatedTimestamp")(UpdatedTimestamp.asInstanceOf[js.Any])
-    if (VoiceConnectorGroupId != null) __obj.updateDynamic("VoiceConnectorGroupId")(VoiceConnectorGroupId.asInstanceOf[js.Any])
-    if (VoiceConnectorItems != null) __obj.updateDynamic("VoiceConnectorItems")(VoiceConnectorItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoiceConnectorGroup]
   }
+  @scala.inline
+  implicit class VoiceConnectorGroupOps[Self <: VoiceConnectorGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatedTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: VoiceConnectorGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdatedTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdatedTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatedTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoiceConnectorGroupId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceConnectorGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoiceConnectorGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceConnectorGroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVoiceConnectorItems(value: VoiceConnectorItemList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceConnectorItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoiceConnectorItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceConnectorItems")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

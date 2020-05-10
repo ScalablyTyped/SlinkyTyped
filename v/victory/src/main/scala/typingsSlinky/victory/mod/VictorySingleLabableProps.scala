@@ -1,10 +1,10 @@
 package typingsSlinky.victory.mod
 
-import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VictorySingleLabableProps extends VictoryLabableProps {
   /**
     * The label prop defines the label that will appear at the edge of the area.
@@ -13,19 +13,40 @@ trait VictorySingleLabableProps extends VictoryLabableProps {
     * VictoryArea with VictoryScatter
     * @example: "Series 1", (data) => `${data.length} points`
     */
-  var label: js.UndefOr[String | (js.Function1[/* data */ js.Any, String])] = js.undefined
+  var label: js.UndefOr[String | (js.Function1[/* data */ js.Any, String])] = js.native
 }
 
 object VictorySingleLabableProps {
   @scala.inline
-  def apply(
-    label: String | (js.Function1[/* data */ js.Any, String]) = null,
-    labelComponent: ReactElement = null
-  ): VictorySingleLabableProps = {
+  def apply(): VictorySingleLabableProps = {
     val __obj = js.Dynamic.literal()
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictorySingleLabableProps]
   }
+  @scala.inline
+  implicit class VictorySingleLabablePropsOps[Self <: VictorySingleLabableProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabelFunction1(value: /* data */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String | (js.Function1[/* data */ js.Any, String])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

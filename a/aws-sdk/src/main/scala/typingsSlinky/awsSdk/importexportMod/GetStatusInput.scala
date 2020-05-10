@@ -12,10 +12,35 @@ trait GetStatusInput extends js.Object {
 
 object GetStatusInput {
   @scala.inline
-  def apply(JobId: JobId, APIVersion: APIVersion_ = null): GetStatusInput = {
+  def apply(JobId: JobId): GetStatusInput = {
     val __obj = js.Dynamic.literal(JobId = JobId.asInstanceOf[js.Any])
-    if (APIVersion != null) __obj.updateDynamic("APIVersion")(APIVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetStatusInput]
   }
+  @scala.inline
+  implicit class GetStatusInputOps[Self <: GetStatusInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobId(value: JobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAPIVersion(value: APIVersion_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("APIVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAPIVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("APIVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

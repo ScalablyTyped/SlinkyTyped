@@ -98,54 +98,281 @@ trait InstanceTypeInfo extends js.Object {
 
 object InstanceTypeInfo {
   @scala.inline
-  def apply(
-    AutoRecoverySupported: js.UndefOr[scala.Boolean] = js.undefined,
-    BareMetal: js.UndefOr[scala.Boolean] = js.undefined,
-    BurstablePerformanceSupported: js.UndefOr[scala.Boolean] = js.undefined,
-    CurrentGeneration: js.UndefOr[scala.Boolean] = js.undefined,
-    DedicatedHostsSupported: js.UndefOr[scala.Boolean] = js.undefined,
-    EbsInfo: EbsInfo = null,
-    FpgaInfo: FpgaInfo = null,
-    FreeTierEligible: js.UndefOr[scala.Boolean] = js.undefined,
-    GpuInfo: GpuInfo = null,
-    HibernationSupported: js.UndefOr[scala.Boolean] = js.undefined,
-    Hypervisor: InstanceTypeHypervisor = null,
-    InferenceAcceleratorInfo: InferenceAcceleratorInfo = null,
-    InstanceStorageInfo: InstanceStorageInfo = null,
-    InstanceStorageSupported: js.UndefOr[scala.Boolean] = js.undefined,
-    InstanceType: InstanceType = null,
-    MemoryInfo: MemoryInfo = null,
-    NetworkInfo: NetworkInfo = null,
-    PlacementGroupInfo: PlacementGroupInfo = null,
-    ProcessorInfo: ProcessorInfo = null,
-    SupportedRootDeviceTypes: RootDeviceTypeList = null,
-    SupportedUsageClasses: UsageClassTypeList = null,
-    VCpuInfo: VCpuInfo = null
-  ): InstanceTypeInfo = {
+  def apply(): InstanceTypeInfo = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(AutoRecoverySupported)) __obj.updateDynamic("AutoRecoverySupported")(AutoRecoverySupported.asInstanceOf[js.Any])
-    if (!js.isUndefined(BareMetal)) __obj.updateDynamic("BareMetal")(BareMetal.asInstanceOf[js.Any])
-    if (!js.isUndefined(BurstablePerformanceSupported)) __obj.updateDynamic("BurstablePerformanceSupported")(BurstablePerformanceSupported.asInstanceOf[js.Any])
-    if (!js.isUndefined(CurrentGeneration)) __obj.updateDynamic("CurrentGeneration")(CurrentGeneration.asInstanceOf[js.Any])
-    if (!js.isUndefined(DedicatedHostsSupported)) __obj.updateDynamic("DedicatedHostsSupported")(DedicatedHostsSupported.asInstanceOf[js.Any])
-    if (EbsInfo != null) __obj.updateDynamic("EbsInfo")(EbsInfo.asInstanceOf[js.Any])
-    if (FpgaInfo != null) __obj.updateDynamic("FpgaInfo")(FpgaInfo.asInstanceOf[js.Any])
-    if (!js.isUndefined(FreeTierEligible)) __obj.updateDynamic("FreeTierEligible")(FreeTierEligible.asInstanceOf[js.Any])
-    if (GpuInfo != null) __obj.updateDynamic("GpuInfo")(GpuInfo.asInstanceOf[js.Any])
-    if (!js.isUndefined(HibernationSupported)) __obj.updateDynamic("HibernationSupported")(HibernationSupported.asInstanceOf[js.Any])
-    if (Hypervisor != null) __obj.updateDynamic("Hypervisor")(Hypervisor.asInstanceOf[js.Any])
-    if (InferenceAcceleratorInfo != null) __obj.updateDynamic("InferenceAcceleratorInfo")(InferenceAcceleratorInfo.asInstanceOf[js.Any])
-    if (InstanceStorageInfo != null) __obj.updateDynamic("InstanceStorageInfo")(InstanceStorageInfo.asInstanceOf[js.Any])
-    if (!js.isUndefined(InstanceStorageSupported)) __obj.updateDynamic("InstanceStorageSupported")(InstanceStorageSupported.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (MemoryInfo != null) __obj.updateDynamic("MemoryInfo")(MemoryInfo.asInstanceOf[js.Any])
-    if (NetworkInfo != null) __obj.updateDynamic("NetworkInfo")(NetworkInfo.asInstanceOf[js.Any])
-    if (PlacementGroupInfo != null) __obj.updateDynamic("PlacementGroupInfo")(PlacementGroupInfo.asInstanceOf[js.Any])
-    if (ProcessorInfo != null) __obj.updateDynamic("ProcessorInfo")(ProcessorInfo.asInstanceOf[js.Any])
-    if (SupportedRootDeviceTypes != null) __obj.updateDynamic("SupportedRootDeviceTypes")(SupportedRootDeviceTypes.asInstanceOf[js.Any])
-    if (SupportedUsageClasses != null) __obj.updateDynamic("SupportedUsageClasses")(SupportedUsageClasses.asInstanceOf[js.Any])
-    if (VCpuInfo != null) __obj.updateDynamic("VCpuInfo")(VCpuInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceTypeInfo]
   }
+  @scala.inline
+  implicit class InstanceTypeInfoOps[Self <: InstanceTypeInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoRecoverySupported(value: AutoRecoveryFlag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoRecoverySupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoRecoverySupported: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoRecoverySupported")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBareMetal(value: BareMetalFlag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BareMetal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBareMetal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BareMetal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBurstablePerformanceSupported(value: BurstablePerformanceFlag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BurstablePerformanceSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBurstablePerformanceSupported: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BurstablePerformanceSupported")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentGeneration(value: CurrentGenerationFlag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentGeneration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDedicatedHostsSupported(value: DedicatedHostFlag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedHostsSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDedicatedHostsSupported: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedHostsSupported")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEbsInfo(value: EbsInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEbsInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFpgaInfo(value: FpgaInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFpgaInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FpgaInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFreeTierEligible(value: FreeTierEligibleFlag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FreeTierEligible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFreeTierEligible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FreeTierEligible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGpuInfo(value: GpuInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GpuInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGpuInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GpuInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHibernationSupported(value: HibernationFlag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HibernationSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHibernationSupported: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HibernationSupported")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHypervisor(value: InstanceTypeHypervisor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hypervisor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHypervisor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hypervisor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInferenceAcceleratorInfo(value: InferenceAcceleratorInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InferenceAcceleratorInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInferenceAcceleratorInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InferenceAcceleratorInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceStorageInfo(value: InstanceStorageInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceStorageInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceStorageInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceStorageInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceStorageSupported(value: InstanceStorageFlag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceStorageSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceStorageSupported: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceStorageSupported")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: InstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemoryInfo(value: MemoryInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemoryInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemoryInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MemoryInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkInfo(value: NetworkInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacementGroupInfo(value: PlacementGroupInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementGroupInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacementGroupInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementGroupInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessorInfo(value: ProcessorInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessorInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessorInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessorInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedRootDeviceTypes(value: RootDeviceTypeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedRootDeviceTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedRootDeviceTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedRootDeviceTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedUsageClasses(value: UsageClassTypeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedUsageClasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedUsageClasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedUsageClasses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVCpuInfo(value: VCpuInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VCpuInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVCpuInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VCpuInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

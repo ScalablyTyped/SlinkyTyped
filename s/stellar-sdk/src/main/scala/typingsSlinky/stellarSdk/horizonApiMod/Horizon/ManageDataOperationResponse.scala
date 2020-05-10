@@ -1,18 +1,20 @@
 package typingsSlinky.stellarSdk.horizonApiMod.Horizon
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.node.Buffer
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.manageData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ManageDataOperationResponse
   extends BaseOperationResponse[
       manageData, 
       typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.manageData
     ] {
-  var name: String
-  var value: Buffer
+  var name: String = js.native
+  var value: Buffer = js.native
 }
 
 object ManageDataOperationResponse {
@@ -20,7 +22,7 @@ object ManageDataOperationResponse {
   def apply(
     _links: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in T | 'self' ]: stellar-sdk.stellar-sdk/lib/horizon_api.Horizon.ResponseLink}
-    */ typingsSlinky.stellarSdk.stellarSdkStrings.BaseResponse with js.Any,
+    */ typingsSlinky.stellarSdk.stellarSdkStrings.BaseResponse with TopLevel[js.Any],
     created_at: String,
     id: String,
     name: String,
@@ -35,5 +37,25 @@ object ManageDataOperationResponse {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ManageDataOperationResponse]
   }
+  @scala.inline
+  implicit class ManageDataOperationResponseOps[Self <: ManageDataOperationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,55 +1,48 @@
 package typingsSlinky.reactBootstrapTable.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTable.mod.InsertModalFooterProps
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InsertModalFooter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBootstrapTable.mod.InsertModalFooter] {
+object InsertModalFooter {
   @JSImport("react-bootstrap-table", "InsertModalFooter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    beforeClose: /* e */ SyntheticEvent[Event_, _] => Unit = null,
-    beforeSave: /* e */ SyntheticEvent[Event_, _] => Unit = null,
-    closeBtnClass: String = null,
-    closeBtnContextual: String = null,
-    closeBtnText: String = null,
-    onModalClose: /* closeModal */ js.Function0[Unit] => Unit = null,
-    onSave: /* save */ js.Function0[Unit] => Unit = null,
-    saveBtnClass: String = null,
-    saveBtnContextual: String = null,
-    saveBtnText: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBootstrapTable.mod.InsertModalFooter] = {
-    val __obj = js.Dynamic.literal()
-    if (beforeClose != null) __obj.updateDynamic("beforeClose")(js.Any.fromFunction1(beforeClose))
-    if (beforeSave != null) __obj.updateDynamic("beforeSave")(js.Any.fromFunction1(beforeSave))
-    if (closeBtnClass != null) __obj.updateDynamic("closeBtnClass")(closeBtnClass.asInstanceOf[js.Any])
-    if (closeBtnContextual != null) __obj.updateDynamic("closeBtnContextual")(closeBtnContextual.asInstanceOf[js.Any])
-    if (closeBtnText != null) __obj.updateDynamic("closeBtnText")(closeBtnText.asInstanceOf[js.Any])
-    if (onModalClose != null) __obj.updateDynamic("onModalClose")(js.Any.fromFunction1(onModalClose))
-    if (onSave != null) __obj.updateDynamic("onSave")(js.Any.fromFunction1(onSave))
-    if (saveBtnClass != null) __obj.updateDynamic("saveBtnClass")(saveBtnClass.asInstanceOf[js.Any])
-    if (saveBtnContextual != null) __obj.updateDynamic("saveBtnContextual")(saveBtnContextual.asInstanceOf[js.Any])
-    if (saveBtnText != null) __obj.updateDynamic("saveBtnText")(saveBtnText.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTable.mod.InsertModalFooter] {
+    @scala.inline
+    def beforeClose(value: /* e */ SyntheticEvent[Event_, _] => Unit): this.type = set("beforeClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def beforeSave(value: /* e */ SyntheticEvent[Event_, _] => Unit): this.type = set("beforeSave", js.Any.fromFunction1(value))
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeBtnClass(value: String): this.type = set("closeBtnClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeBtnContextual(value: String): this.type = set("closeBtnContextual", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeBtnText(value: String): this.type = set("closeBtnText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onModalClose(value: /* closeModal */ js.Function0[Unit] => Unit): this.type = set("onModalClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSave(value: /* save */ js.Function0[Unit] => Unit): this.type = set("onSave", js.Any.fromFunction1(value))
+    @scala.inline
+    def saveBtnClass(value: String): this.type = set("saveBtnClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def saveBtnContextual(value: String): this.type = set("saveBtnContextual", value.asInstanceOf[js.Any])
+    @scala.inline
+    def saveBtnText(value: String): this.type = set("saveBtnText", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactBootstrapTable.mod.InsertModalFooter] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactBootstrapTable.mod.InsertModalFooter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = InsertModalFooterProps
+  
+  def withProps(p: InsertModalFooterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: InsertModalFooter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

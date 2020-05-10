@@ -2,8 +2,8 @@ package typingsSlinky.tinymce.mod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLBodyElement
+import org.scalajs.dom.raw.Node
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Node
 import typingsSlinky.std.Window_
 import typingsSlinky.tinymce.mod.dom.DOMUtils
 import typingsSlinky.tinymce.mod.dom.DomQuery

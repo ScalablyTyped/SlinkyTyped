@@ -18,22 +18,20 @@ trait EventMap extends js.Object
 
 object EventMap {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def refreshComplete: typingsSlinky.tablesorter.tablesorterStrings.refreshComplete = "refreshComplete".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.refreshComplete]
   @scala.inline
-  def refreshComplete: typingsSlinky.tablesorter.tablesorterStrings.refreshComplete = this.cast("refreshComplete")
+  def sortBegin: typingsSlinky.tablesorter.tablesorterStrings.sortBegin = "sortBegin".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.sortBegin]
   @scala.inline
-  def sortBegin: typingsSlinky.tablesorter.tablesorterStrings.sortBegin = this.cast("sortBegin")
+  def sortEnd: typingsSlinky.tablesorter.tablesorterStrings.sortEnd = "sortEnd".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.sortEnd]
   @scala.inline
-  def sortEnd: typingsSlinky.tablesorter.tablesorterStrings.sortEnd = this.cast("sortEnd")
+  def sortStart: typingsSlinky.tablesorter.tablesorterStrings.sortStart = "sortStart".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.sortStart]
   @scala.inline
-  def sortStart: typingsSlinky.tablesorter.tablesorterStrings.sortStart = this.cast("sortStart")
+  def `tablesorter-initialized`: typingsSlinky.tablesorter.tablesorterStrings.`tablesorter-initialized` = "tablesorter-initialized".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.`tablesorter-initialized`]
   @scala.inline
-  def `tablesorter-initialized`: typingsSlinky.tablesorter.tablesorterStrings.`tablesorter-initialized` = this.cast("tablesorter-initialized")
+  def `tablesorter-ready`: typingsSlinky.tablesorter.tablesorterStrings.`tablesorter-ready` = "tablesorter-ready".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.`tablesorter-ready`]
   @scala.inline
-  def `tablesorter-ready`: typingsSlinky.tablesorter.tablesorterStrings.`tablesorter-ready` = this.cast("tablesorter-ready")
+  def updateComplete: typingsSlinky.tablesorter.tablesorterStrings.updateComplete = "updateComplete".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.updateComplete]
   @scala.inline
-  def updateComplete: typingsSlinky.tablesorter.tablesorterStrings.updateComplete = this.cast("updateComplete")
-  @scala.inline
-  def widgetRemoveEnd: typingsSlinky.tablesorter.tablesorterStrings.widgetRemoveEnd = this.cast("widgetRemoveEnd")
+  def widgetRemoveEnd: typingsSlinky.tablesorter.tablesorterStrings.widgetRemoveEnd = "widgetRemoveEnd".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.widgetRemoveEnd]
 }
 

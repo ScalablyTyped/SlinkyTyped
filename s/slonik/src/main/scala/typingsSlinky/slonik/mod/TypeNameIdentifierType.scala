@@ -20,26 +20,24 @@ trait TypeNameIdentifierType extends js.Object
 
 object TypeNameIdentifierType {
   @scala.inline
-  def bool: typingsSlinky.slonik.slonikStrings.bool = this.cast("bool")
+  def bool: typingsSlinky.slonik.slonikStrings.bool = "bool".asInstanceOf[typingsSlinky.slonik.slonikStrings.bool]
   @scala.inline
-  def bytea: typingsSlinky.slonik.slonikStrings.bytea = this.cast("bytea")
+  def bytea: typingsSlinky.slonik.slonikStrings.bytea = "bytea".asInstanceOf[typingsSlinky.slonik.slonikStrings.bytea]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def float4: typingsSlinky.slonik.slonikStrings.float4 = "float4".asInstanceOf[typingsSlinky.slonik.slonikStrings.float4]
   @scala.inline
-  def float4: typingsSlinky.slonik.slonikStrings.float4 = this.cast("float4")
+  def float8: typingsSlinky.slonik.slonikStrings.float8 = "float8".asInstanceOf[typingsSlinky.slonik.slonikStrings.float8]
   @scala.inline
-  def float8: typingsSlinky.slonik.slonikStrings.float8 = this.cast("float8")
+  def int2: typingsSlinky.slonik.slonikStrings.int2 = "int2".asInstanceOf[typingsSlinky.slonik.slonikStrings.int2]
   @scala.inline
-  def int2: typingsSlinky.slonik.slonikStrings.int2 = this.cast("int2")
+  def int4: typingsSlinky.slonik.slonikStrings.int4 = "int4".asInstanceOf[typingsSlinky.slonik.slonikStrings.int4]
   @scala.inline
-  def int4: typingsSlinky.slonik.slonikStrings.int4 = this.cast("int4")
+  def json: typingsSlinky.slonik.slonikStrings.json = "json".asInstanceOf[typingsSlinky.slonik.slonikStrings.json]
   @scala.inline
-  def json: typingsSlinky.slonik.slonikStrings.json = this.cast("json")
+  def text: typingsSlinky.slonik.slonikStrings.text = "text".asInstanceOf[typingsSlinky.slonik.slonikStrings.text]
   @scala.inline
-  def text: typingsSlinky.slonik.slonikStrings.text = this.cast("text")
+  def timestamptz: typingsSlinky.slonik.slonikStrings.timestamptz = "timestamptz".asInstanceOf[typingsSlinky.slonik.slonikStrings.timestamptz]
   @scala.inline
-  def timestamptz: typingsSlinky.slonik.slonikStrings.timestamptz = this.cast("timestamptz")
-  @scala.inline
-  def uuid: typingsSlinky.slonik.slonikStrings.uuid = this.cast("uuid")
+  def uuid: typingsSlinky.slonik.slonikStrings.uuid = "uuid".asInstanceOf[typingsSlinky.slonik.slonikStrings.uuid]
 }
 

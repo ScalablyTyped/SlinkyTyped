@@ -62,7 +62,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.activexExcel.Excel.AddSheetResult because Already inherited */ @JSGlobal("Excel.Chart")
 @js.native
 class Chart protected () extends Sheet {

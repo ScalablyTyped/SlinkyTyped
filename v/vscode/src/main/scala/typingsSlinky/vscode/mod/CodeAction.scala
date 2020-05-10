@@ -1,5 +1,6 @@
 package typingsSlinky.vscode.mod
 
+import typingsSlinky.vscode.AnonReason
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,12 +21,29 @@ class CodeAction protected () extends js.Object {
   def this(title: String, kind: CodeActionKind) = this()
   /**
   		 * A [command](#Command) this code action executes.
+  		 *
+  		 * If this command throws an exception, VS Code displays the exception message to users in the editor at the
+  		 * current cursor position.
   		 */
   var command: js.UndefOr[Command] = js.native
   /**
   		 * [Diagnostics](#Diagnostic) that this code action resolves.
   		 */
   var diagnostics: js.UndefOr[js.Array[Diagnostic]] = js.native
+  /**
+  		 * Marks that the code action cannot currently be applied.
+  		 *
+  		 * - Disabled code actions are not shown in automatic [lightbulb](https://code.visualstudio.com/docs/editor/editingevolved#_code-action)
+  		 * code action menu.
+  		 *
+  		 * - Disabled actions are shown as faded out in the code action menu when the user request a more specific type
+  		 * of code action, such as refactorings.
+  		 *
+  		 * - If the user has a [keybinding](https://code.visualstudio.com/docs/editor/refactoring#_keybindings-for-code-actions)
+  		 * that auto applies a code action and only a disabled code actions are returned, VS Code will show the user an
+  		 * error message with `reason` in the editor.
+  		 */
+  var disabled: js.UndefOr[AnonReason] = js.native
   /**
   		 * A [workspace edit](#WorkspaceEdit) this code action performs.
   		 */

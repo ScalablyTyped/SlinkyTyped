@@ -1,7 +1,10 @@
 package typingsSlinky.chromeApps.chrome
 
 import typingsSlinky.chromeApps.AnonDISPLAY
-import typingsSlinky.chromeApps.chromeAppsStrings.display
+import typingsSlinky.chromeApps.chromeAppsStrings.DISPLAY
+import typingsSlinky.chromeApps.chromeAppsStrings.SYSTEM
+import typingsSlinky.chromeApps.chromeAppsStrings.display_
+import typingsSlinky.chromeApps.chromeAppsStrings.system_
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,8 +34,8 @@ object power extends js.Object {
   def requestKeepAwake(
     level: ToStringLiteral[
       AnonDISPLAY, 
-      String, 
-      Exclude[String, typingsSlinky.chromeApps.chromeAppsStrings.system | display]
+      /* keyof chrome-apps.AnonDISPLAY */ SYSTEM | DISPLAY, 
+      Exclude[/* keyof chrome-apps.AnonDISPLAY */ SYSTEM | DISPLAY, system_ | display_]
     ]
   ): Unit = js.native
   /**
@@ -42,8 +45,8 @@ object power extends js.Object {
     */
   @js.native
   object Level extends js.Object {
-    var DISPLAY: display = js.native
-    var SYSTEM: typingsSlinky.chromeApps.chromeAppsStrings.system = js.native
+    var DISPLAY: display_ = js.native
+    var SYSTEM: system_ = js.native
   }
   
 }

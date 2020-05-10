@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface for updating data on the InkAnalysisLine object, for use in "inkAnalysisLine.set({ ... })". */
+@js.native
 trait InkAnalysisLineUpdateData extends js.Object {
   /**
     *
@@ -12,15 +13,34 @@ trait InkAnalysisLineUpdateData extends js.Object {
     *
     * [Api set: OneNoteApi 1.1]
     */
-  var paragraph: js.UndefOr[InkAnalysisParagraphUpdateData] = js.undefined
+  var paragraph: js.UndefOr[InkAnalysisParagraphUpdateData] = js.native
 }
 
 object InkAnalysisLineUpdateData {
   @scala.inline
-  def apply(paragraph: InkAnalysisParagraphUpdateData = null): InkAnalysisLineUpdateData = {
+  def apply(): InkAnalysisLineUpdateData = {
     val __obj = js.Dynamic.literal()
-    if (paragraph != null) __obj.updateDynamic("paragraph")(paragraph.asInstanceOf[js.Any])
     __obj.asInstanceOf[InkAnalysisLineUpdateData]
   }
+  @scala.inline
+  implicit class InkAnalysisLineUpdateDataOps[Self <: InkAnalysisLineUpdateData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParagraph(value: InkAnalysisParagraphUpdateData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParagraph: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraph")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

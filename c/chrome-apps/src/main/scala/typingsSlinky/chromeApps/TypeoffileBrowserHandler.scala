@@ -8,13 +8,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeoffileBrowserHandler extends js.Object {
   /**
     * Fired when file system action is executed from ChromeOS file browser.
     */
   val onExecute: Event[
     js.Function2[/* id */ FileBrowserHandleExecuteId, /* details */ AnonEntries, Unit]
-  ]
+  ] = js.native
   /**
     * Prompts user to select file path under which file should be saved.
     * When the file is selected, file access permission required to use
@@ -25,7 +26,7 @@ trait TypeoffileBrowserHandler extends js.Object {
     * @param params Parameters that will be used while selecting the file.
     * @param callback Function called upon completion.
     */
-  def selectFile(params: SelectFileParameters, callback: js.Function1[/* result */ SelectionResult, Unit]): Unit
+  def selectFile(params: SelectFileParameters, callback: js.Function1[/* result */ SelectionResult, Unit]): Unit = js.native
 }
 
 object TypeoffileBrowserHandler {
@@ -37,8 +38,31 @@ object TypeoffileBrowserHandler {
     selectFile: (SelectFileParameters, js.Function1[/* result */ SelectionResult, Unit]) => Unit
   ): TypeoffileBrowserHandler = {
     val __obj = js.Dynamic.literal(onExecute = onExecute.asInstanceOf[js.Any], selectFile = js.Any.fromFunction2(selectFile))
-  
     __obj.asInstanceOf[TypeoffileBrowserHandler]
   }
+  @scala.inline
+  implicit class TypeoffileBrowserHandlerOps[Self <: TypeoffileBrowserHandler] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnExecute(
+      value: Event[
+          js.Function2[/* id */ FileBrowserHandleExecuteId, /* details */ AnonEntries, Unit]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExecute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelectFile(value: (SelectFileParameters, js.Function1[/* result */ SelectionResult, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectFile")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

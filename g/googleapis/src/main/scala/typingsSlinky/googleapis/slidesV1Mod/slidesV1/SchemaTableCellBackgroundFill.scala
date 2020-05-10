@@ -25,11 +25,41 @@ trait SchemaTableCellBackgroundFill extends js.Object {
 
 object SchemaTableCellBackgroundFill {
   @scala.inline
-  def apply(propertyState: String = null, solidFill: SchemaSolidFill = null): SchemaTableCellBackgroundFill = {
+  def apply(): SchemaTableCellBackgroundFill = {
     val __obj = js.Dynamic.literal()
-    if (propertyState != null) __obj.updateDynamic("propertyState")(propertyState.asInstanceOf[js.Any])
-    if (solidFill != null) __obj.updateDynamic("solidFill")(solidFill.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableCellBackgroundFill]
   }
+  @scala.inline
+  implicit class SchemaTableCellBackgroundFillOps[Self <: SchemaTableCellBackgroundFill] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPropertyState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPropertyState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSolidFill(value: SchemaSolidFill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solidFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSolidFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solidFill")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait TabIndicatorClassKey extends js.Object
 
 object TabIndicatorClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = "colorPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary]
   @scala.inline
-  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = this.cast("colorPrimary")
+  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = "colorSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary]
   @scala.inline
-  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = this.cast("colorSecondary")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

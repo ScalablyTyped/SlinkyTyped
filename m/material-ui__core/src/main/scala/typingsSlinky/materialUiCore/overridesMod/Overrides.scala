@@ -193,194 +193,1121 @@ trait Overrides extends js.Object {
 
 object Overrides {
   @scala.inline
-  def apply(
-    MuiAppBar: PartialStyleRulesAppBarCl = null,
-    MuiAvatar: PartialStyleRulesAvatarCl = null,
-    MuiBackdrop: PartialStyleRulesBackdrop = null,
-    MuiBadge: PartialStyleRulesBadgeCla = null,
-    MuiBottomNavigation: PartialStyleRulesBottomNaRoot = null,
-    MuiBottomNavigationAction: PartialStyleRulesBottomNa = null,
-    MuiButton: PartialStyleRulesButtonCl = null,
-    MuiButtonBase: PartialStyleRulesButtonBa = null,
-    MuiCard: PartialStyleRulesCardClas = null,
-    MuiCardActionArea: PartialStyleRulesCardActi = null,
-    MuiCardActions: PartialStyleRulesCardActiAction = null,
-    MuiCardContent: PartialStyleRulesCardCont = null,
-    MuiCardHeader: PartialStyleRulesCardHead = null,
-    MuiCardMedia: PartialStyleRulesCardMedi = null,
-    MuiCheckbox: PartialStyleRulesCheckbox = null,
-    MuiChip: PartialStyleRulesChipClas = null,
-    MuiCircularProgress: PartialStyleRulesCircular = null,
-    MuiCollapse: PartialStyleRulesCollapse = null,
-    MuiCssBaseline: PartialStyleRulesCssBasel = null,
-    MuiDialog: PartialStyleRulesDialogCl = null,
-    MuiDialogActions: PartialStyleRulesDialogAc = null,
-    MuiDialogContent: PartialStyleRulesDialogCo = null,
-    MuiDialogContentText: PartialStyleRulesDialogCo = null,
-    MuiDialogTitle: PartialStyleRulesDialogTi = null,
-    MuiDivider: PartialStyleRulesDividerC = null,
-    MuiDrawer: PartialStyleRulesDrawerCl = null,
-    MuiExpansionPanel: PartialStyleRulesExpansio = null,
-    MuiExpansionPanelActions: PartialStyleRulesExpansioAction = null,
-    MuiExpansionPanelDetails: PartialStyleRulesExpansioRoot = null,
-    MuiExpansionPanelSummary: PartialStyleRulesExpansioContent = null,
-    MuiFab: PartialStyleRulesFabClass = null,
-    MuiFilledInput: PartialStyleRulesFilledIn = null,
-    MuiFormControl: PartialStyleRulesFormCont = null,
-    MuiFormControlLabel: PartialStyleRulesFormContDisabled = null,
-    MuiFormGroup: PartialStyleRulesFormGrou = null,
-    MuiFormHelperText: PartialStyleRulesFormHelp = null,
-    MuiFormLabel: PartialStyleRulesFormLabe = null,
-    MuiGrid: PartialStyleRulesGridClas = null,
-    MuiGridList: PartialStyleRulesGridList = null,
-    MuiGridListTile: PartialStyleRulesGridListImgFullHeight = null,
-    MuiGridListTileBar: PartialStyleRulesGridListActionIcon = null,
-    MuiIcon: PartialStyleRulesIconClas = null,
-    MuiIconButton: PartialStyleRulesIconButt = null,
-    MuiInput: PartialStyleRulesInputCla = null,
-    MuiInputAdornment: PartialStyleRulesInputAdo = null,
-    MuiInputBase: PartialStyleRulesInputBas = null,
-    MuiInputLabel: PartialStyleRulesInputLab = null,
-    MuiLinearProgress: PartialStyleRulesLinearPr = null,
-    MuiLink: PartialStyleRulesLinkClas = null,
-    MuiList: PartialStyleRulesListClas = null,
-    MuiListItem: PartialStyleRulesListItemButton = null,
-    MuiListItemAvatar: PartialStyleRulesListItemIcon = null,
-    MuiListItemIcon: PartialStyleRulesListItem = null,
-    MuiListItemSecondaryAction: PartialStyleRulesListItem = null,
-    MuiListItemText: PartialStyleRulesListItemDense = null,
-    MuiListSubheader: PartialStyleRulesListSubh = null,
-    MuiMenu: PartialStyleRulesMenuClas = null,
-    MuiMenuItem: PartialStyleRulesMenuItem = null,
-    MuiMobileStepper: PartialStyleRulesMobileSt = null,
-    MuiModal: PartialStyleRulesModalCla = null,
-    MuiNativeSelect: PartialStyleRulesNativeSe = null,
-    MuiOutlinedInput: PartialStyleRulesOutlined = null,
-    MuiPaper: PartialStyleRulesPaperCla = null,
-    MuiPopover: PartialStyleRulesPopoverC = null,
-    MuiRadio: PartialStyleRulesRadioCla = null,
-    MuiSelect: PartialStyleRulesSelectCl = null,
-    MuiSnackbar: PartialStyleRulesSnackbar = null,
-    MuiSnackbarContent: PartialStyleRulesSnackbarAction = null,
-    MuiStep: PartialStyleRulesStepClas = null,
-    MuiStepButton: PartialStyleRulesStepButt = null,
-    MuiStepConnector: PartialStyleRulesStepConn = null,
-    MuiStepContent: PartialStyleRulesStepCont = null,
-    MuiStepIcon: PartialStyleRulesStepIcon = null,
-    MuiStepLabel: PartialStyleRulesStepLabe = null,
-    MuiStepper: PartialStyleRulesStepperC = null,
-    MuiSvgIcon: PartialStyleRulesSvgIconC = null,
-    MuiSwitch: PartialStyleRulesSwitchCl = null,
-    MuiSwitchBase: PartialStyleRulesSwitchBa = null,
-    MuiTab: PartialStyleRulesTabClass = null,
-    MuiTable: PartialStyleRulesTableCla = null,
-    MuiTableBody: PartialStyleRulesTableBod = null,
-    MuiTableCell: PartialStyleRulesTableCel = null,
-    MuiTableFooter: PartialStyleRulesTableFoo = null,
-    MuiTableHead: PartialStyleRulesTableHea = null,
-    MuiTablePagination: PartialStyleRulesTablePag = null,
-    MuiTableRow: PartialStyleRulesTableRow = null,
-    MuiTableSortLabel: PartialStyleRulesTableSor = null,
-    MuiTabs: PartialStyleRulesTabsClas = null,
-    MuiToolbar: PartialStyleRulesToolbarC = null,
-    MuiTooltip: PartialStyleRulesTooltipC = null,
-    MuiTouchRipple: PartialStyleRulesTouchRip = null,
-    MuiTypography: PartialStyleRulesTypograp = null
-  ): Overrides = {
+  def apply(): Overrides = {
     val __obj = js.Dynamic.literal()
-    if (MuiAppBar != null) __obj.updateDynamic("MuiAppBar")(MuiAppBar.asInstanceOf[js.Any])
-    if (MuiAvatar != null) __obj.updateDynamic("MuiAvatar")(MuiAvatar.asInstanceOf[js.Any])
-    if (MuiBackdrop != null) __obj.updateDynamic("MuiBackdrop")(MuiBackdrop.asInstanceOf[js.Any])
-    if (MuiBadge != null) __obj.updateDynamic("MuiBadge")(MuiBadge.asInstanceOf[js.Any])
-    if (MuiBottomNavigation != null) __obj.updateDynamic("MuiBottomNavigation")(MuiBottomNavigation.asInstanceOf[js.Any])
-    if (MuiBottomNavigationAction != null) __obj.updateDynamic("MuiBottomNavigationAction")(MuiBottomNavigationAction.asInstanceOf[js.Any])
-    if (MuiButton != null) __obj.updateDynamic("MuiButton")(MuiButton.asInstanceOf[js.Any])
-    if (MuiButtonBase != null) __obj.updateDynamic("MuiButtonBase")(MuiButtonBase.asInstanceOf[js.Any])
-    if (MuiCard != null) __obj.updateDynamic("MuiCard")(MuiCard.asInstanceOf[js.Any])
-    if (MuiCardActionArea != null) __obj.updateDynamic("MuiCardActionArea")(MuiCardActionArea.asInstanceOf[js.Any])
-    if (MuiCardActions != null) __obj.updateDynamic("MuiCardActions")(MuiCardActions.asInstanceOf[js.Any])
-    if (MuiCardContent != null) __obj.updateDynamic("MuiCardContent")(MuiCardContent.asInstanceOf[js.Any])
-    if (MuiCardHeader != null) __obj.updateDynamic("MuiCardHeader")(MuiCardHeader.asInstanceOf[js.Any])
-    if (MuiCardMedia != null) __obj.updateDynamic("MuiCardMedia")(MuiCardMedia.asInstanceOf[js.Any])
-    if (MuiCheckbox != null) __obj.updateDynamic("MuiCheckbox")(MuiCheckbox.asInstanceOf[js.Any])
-    if (MuiChip != null) __obj.updateDynamic("MuiChip")(MuiChip.asInstanceOf[js.Any])
-    if (MuiCircularProgress != null) __obj.updateDynamic("MuiCircularProgress")(MuiCircularProgress.asInstanceOf[js.Any])
-    if (MuiCollapse != null) __obj.updateDynamic("MuiCollapse")(MuiCollapse.asInstanceOf[js.Any])
-    if (MuiCssBaseline != null) __obj.updateDynamic("MuiCssBaseline")(MuiCssBaseline.asInstanceOf[js.Any])
-    if (MuiDialog != null) __obj.updateDynamic("MuiDialog")(MuiDialog.asInstanceOf[js.Any])
-    if (MuiDialogActions != null) __obj.updateDynamic("MuiDialogActions")(MuiDialogActions.asInstanceOf[js.Any])
-    if (MuiDialogContent != null) __obj.updateDynamic("MuiDialogContent")(MuiDialogContent.asInstanceOf[js.Any])
-    if (MuiDialogContentText != null) __obj.updateDynamic("MuiDialogContentText")(MuiDialogContentText.asInstanceOf[js.Any])
-    if (MuiDialogTitle != null) __obj.updateDynamic("MuiDialogTitle")(MuiDialogTitle.asInstanceOf[js.Any])
-    if (MuiDivider != null) __obj.updateDynamic("MuiDivider")(MuiDivider.asInstanceOf[js.Any])
-    if (MuiDrawer != null) __obj.updateDynamic("MuiDrawer")(MuiDrawer.asInstanceOf[js.Any])
-    if (MuiExpansionPanel != null) __obj.updateDynamic("MuiExpansionPanel")(MuiExpansionPanel.asInstanceOf[js.Any])
-    if (MuiExpansionPanelActions != null) __obj.updateDynamic("MuiExpansionPanelActions")(MuiExpansionPanelActions.asInstanceOf[js.Any])
-    if (MuiExpansionPanelDetails != null) __obj.updateDynamic("MuiExpansionPanelDetails")(MuiExpansionPanelDetails.asInstanceOf[js.Any])
-    if (MuiExpansionPanelSummary != null) __obj.updateDynamic("MuiExpansionPanelSummary")(MuiExpansionPanelSummary.asInstanceOf[js.Any])
-    if (MuiFab != null) __obj.updateDynamic("MuiFab")(MuiFab.asInstanceOf[js.Any])
-    if (MuiFilledInput != null) __obj.updateDynamic("MuiFilledInput")(MuiFilledInput.asInstanceOf[js.Any])
-    if (MuiFormControl != null) __obj.updateDynamic("MuiFormControl")(MuiFormControl.asInstanceOf[js.Any])
-    if (MuiFormControlLabel != null) __obj.updateDynamic("MuiFormControlLabel")(MuiFormControlLabel.asInstanceOf[js.Any])
-    if (MuiFormGroup != null) __obj.updateDynamic("MuiFormGroup")(MuiFormGroup.asInstanceOf[js.Any])
-    if (MuiFormHelperText != null) __obj.updateDynamic("MuiFormHelperText")(MuiFormHelperText.asInstanceOf[js.Any])
-    if (MuiFormLabel != null) __obj.updateDynamic("MuiFormLabel")(MuiFormLabel.asInstanceOf[js.Any])
-    if (MuiGrid != null) __obj.updateDynamic("MuiGrid")(MuiGrid.asInstanceOf[js.Any])
-    if (MuiGridList != null) __obj.updateDynamic("MuiGridList")(MuiGridList.asInstanceOf[js.Any])
-    if (MuiGridListTile != null) __obj.updateDynamic("MuiGridListTile")(MuiGridListTile.asInstanceOf[js.Any])
-    if (MuiGridListTileBar != null) __obj.updateDynamic("MuiGridListTileBar")(MuiGridListTileBar.asInstanceOf[js.Any])
-    if (MuiIcon != null) __obj.updateDynamic("MuiIcon")(MuiIcon.asInstanceOf[js.Any])
-    if (MuiIconButton != null) __obj.updateDynamic("MuiIconButton")(MuiIconButton.asInstanceOf[js.Any])
-    if (MuiInput != null) __obj.updateDynamic("MuiInput")(MuiInput.asInstanceOf[js.Any])
-    if (MuiInputAdornment != null) __obj.updateDynamic("MuiInputAdornment")(MuiInputAdornment.asInstanceOf[js.Any])
-    if (MuiInputBase != null) __obj.updateDynamic("MuiInputBase")(MuiInputBase.asInstanceOf[js.Any])
-    if (MuiInputLabel != null) __obj.updateDynamic("MuiInputLabel")(MuiInputLabel.asInstanceOf[js.Any])
-    if (MuiLinearProgress != null) __obj.updateDynamic("MuiLinearProgress")(MuiLinearProgress.asInstanceOf[js.Any])
-    if (MuiLink != null) __obj.updateDynamic("MuiLink")(MuiLink.asInstanceOf[js.Any])
-    if (MuiList != null) __obj.updateDynamic("MuiList")(MuiList.asInstanceOf[js.Any])
-    if (MuiListItem != null) __obj.updateDynamic("MuiListItem")(MuiListItem.asInstanceOf[js.Any])
-    if (MuiListItemAvatar != null) __obj.updateDynamic("MuiListItemAvatar")(MuiListItemAvatar.asInstanceOf[js.Any])
-    if (MuiListItemIcon != null) __obj.updateDynamic("MuiListItemIcon")(MuiListItemIcon.asInstanceOf[js.Any])
-    if (MuiListItemSecondaryAction != null) __obj.updateDynamic("MuiListItemSecondaryAction")(MuiListItemSecondaryAction.asInstanceOf[js.Any])
-    if (MuiListItemText != null) __obj.updateDynamic("MuiListItemText")(MuiListItemText.asInstanceOf[js.Any])
-    if (MuiListSubheader != null) __obj.updateDynamic("MuiListSubheader")(MuiListSubheader.asInstanceOf[js.Any])
-    if (MuiMenu != null) __obj.updateDynamic("MuiMenu")(MuiMenu.asInstanceOf[js.Any])
-    if (MuiMenuItem != null) __obj.updateDynamic("MuiMenuItem")(MuiMenuItem.asInstanceOf[js.Any])
-    if (MuiMobileStepper != null) __obj.updateDynamic("MuiMobileStepper")(MuiMobileStepper.asInstanceOf[js.Any])
-    if (MuiModal != null) __obj.updateDynamic("MuiModal")(MuiModal.asInstanceOf[js.Any])
-    if (MuiNativeSelect != null) __obj.updateDynamic("MuiNativeSelect")(MuiNativeSelect.asInstanceOf[js.Any])
-    if (MuiOutlinedInput != null) __obj.updateDynamic("MuiOutlinedInput")(MuiOutlinedInput.asInstanceOf[js.Any])
-    if (MuiPaper != null) __obj.updateDynamic("MuiPaper")(MuiPaper.asInstanceOf[js.Any])
-    if (MuiPopover != null) __obj.updateDynamic("MuiPopover")(MuiPopover.asInstanceOf[js.Any])
-    if (MuiRadio != null) __obj.updateDynamic("MuiRadio")(MuiRadio.asInstanceOf[js.Any])
-    if (MuiSelect != null) __obj.updateDynamic("MuiSelect")(MuiSelect.asInstanceOf[js.Any])
-    if (MuiSnackbar != null) __obj.updateDynamic("MuiSnackbar")(MuiSnackbar.asInstanceOf[js.Any])
-    if (MuiSnackbarContent != null) __obj.updateDynamic("MuiSnackbarContent")(MuiSnackbarContent.asInstanceOf[js.Any])
-    if (MuiStep != null) __obj.updateDynamic("MuiStep")(MuiStep.asInstanceOf[js.Any])
-    if (MuiStepButton != null) __obj.updateDynamic("MuiStepButton")(MuiStepButton.asInstanceOf[js.Any])
-    if (MuiStepConnector != null) __obj.updateDynamic("MuiStepConnector")(MuiStepConnector.asInstanceOf[js.Any])
-    if (MuiStepContent != null) __obj.updateDynamic("MuiStepContent")(MuiStepContent.asInstanceOf[js.Any])
-    if (MuiStepIcon != null) __obj.updateDynamic("MuiStepIcon")(MuiStepIcon.asInstanceOf[js.Any])
-    if (MuiStepLabel != null) __obj.updateDynamic("MuiStepLabel")(MuiStepLabel.asInstanceOf[js.Any])
-    if (MuiStepper != null) __obj.updateDynamic("MuiStepper")(MuiStepper.asInstanceOf[js.Any])
-    if (MuiSvgIcon != null) __obj.updateDynamic("MuiSvgIcon")(MuiSvgIcon.asInstanceOf[js.Any])
-    if (MuiSwitch != null) __obj.updateDynamic("MuiSwitch")(MuiSwitch.asInstanceOf[js.Any])
-    if (MuiSwitchBase != null) __obj.updateDynamic("MuiSwitchBase")(MuiSwitchBase.asInstanceOf[js.Any])
-    if (MuiTab != null) __obj.updateDynamic("MuiTab")(MuiTab.asInstanceOf[js.Any])
-    if (MuiTable != null) __obj.updateDynamic("MuiTable")(MuiTable.asInstanceOf[js.Any])
-    if (MuiTableBody != null) __obj.updateDynamic("MuiTableBody")(MuiTableBody.asInstanceOf[js.Any])
-    if (MuiTableCell != null) __obj.updateDynamic("MuiTableCell")(MuiTableCell.asInstanceOf[js.Any])
-    if (MuiTableFooter != null) __obj.updateDynamic("MuiTableFooter")(MuiTableFooter.asInstanceOf[js.Any])
-    if (MuiTableHead != null) __obj.updateDynamic("MuiTableHead")(MuiTableHead.asInstanceOf[js.Any])
-    if (MuiTablePagination != null) __obj.updateDynamic("MuiTablePagination")(MuiTablePagination.asInstanceOf[js.Any])
-    if (MuiTableRow != null) __obj.updateDynamic("MuiTableRow")(MuiTableRow.asInstanceOf[js.Any])
-    if (MuiTableSortLabel != null) __obj.updateDynamic("MuiTableSortLabel")(MuiTableSortLabel.asInstanceOf[js.Any])
-    if (MuiTabs != null) __obj.updateDynamic("MuiTabs")(MuiTabs.asInstanceOf[js.Any])
-    if (MuiToolbar != null) __obj.updateDynamic("MuiToolbar")(MuiToolbar.asInstanceOf[js.Any])
-    if (MuiTooltip != null) __obj.updateDynamic("MuiTooltip")(MuiTooltip.asInstanceOf[js.Any])
-    if (MuiTouchRipple != null) __obj.updateDynamic("MuiTouchRipple")(MuiTouchRipple.asInstanceOf[js.Any])
-    if (MuiTypography != null) __obj.updateDynamic("MuiTypography")(MuiTypography.asInstanceOf[js.Any])
     __obj.asInstanceOf[Overrides]
   }
+  @scala.inline
+  implicit class OverridesOps[Self <: Overrides] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMuiAppBar(value: PartialStyleRulesAppBarCl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiAppBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiAppBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiAppBar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiAvatar(value: PartialStyleRulesAvatarCl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiAvatar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiAvatar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiAvatar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiBackdrop(value: PartialStyleRulesBackdrop): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBackdrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiBackdrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBackdrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiBadge(value: PartialStyleRulesBadgeCla): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBadge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiBadge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBadge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiBottomNavigation(value: PartialStyleRulesBottomNaRoot): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBottomNavigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiBottomNavigation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBottomNavigation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiBottomNavigationAction(value: PartialStyleRulesBottomNa): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBottomNavigationAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiBottomNavigationAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBottomNavigationAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiButton(value: PartialStyleRulesButtonCl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiButtonBase(value: PartialStyleRulesButtonBa): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiButtonBase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiButtonBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiButtonBase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiCard(value: PartialStyleRulesCardClas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiCard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiCardActionArea(value: PartialStyleRulesCardActi): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardActionArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiCardActionArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardActionArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiCardActions(value: PartialStyleRulesCardActiAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiCardActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiCardContent(value: PartialStyleRulesCardCont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiCardContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiCardHeader(value: PartialStyleRulesCardHead): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiCardHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiCardMedia(value: PartialStyleRulesCardMedi): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardMedia")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiCardMedia: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardMedia")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiCheckbox(value: PartialStyleRulesCheckbox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCheckbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiCheckbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCheckbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiChip(value: PartialStyleRulesChipClas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiChip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiChip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiChip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiCircularProgress(value: PartialStyleRulesCircular): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCircularProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiCircularProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCircularProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiCollapse(value: PartialStyleRulesCollapse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCollapse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCollapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiCssBaseline(value: PartialStyleRulesCssBasel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCssBaseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiCssBaseline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCssBaseline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiDialog(value: PartialStyleRulesDialogCl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiDialog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialog")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiDialogActions(value: PartialStyleRulesDialogAc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiDialogActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiDialogContent(value: PartialStyleRulesDialogCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiDialogContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiDialogContentText(value: PartialStyleRulesDialogCo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogContentText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiDialogContentText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogContentText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiDialogTitle(value: PartialStyleRulesDialogTi): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiDialogTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiDivider(value: PartialStyleRulesDividerC): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDivider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiDivider: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDivider")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiDrawer(value: PartialStyleRulesDrawerCl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDrawer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiDrawer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDrawer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiExpansionPanel(value: PartialStyleRulesExpansio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiExpansionPanel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiExpansionPanelActions(value: PartialStyleRulesExpansioAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanelActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiExpansionPanelActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanelActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiExpansionPanelDetails(value: PartialStyleRulesExpansioRoot): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanelDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiExpansionPanelDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanelDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiExpansionPanelSummary(value: PartialStyleRulesExpansioContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanelSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiExpansionPanelSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanelSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiFab(value: PartialStyleRulesFabClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiFab: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFab")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiFilledInput(value: PartialStyleRulesFilledIn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFilledInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiFilledInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFilledInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiFormControl(value: PartialStyleRulesFormCont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiFormControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiFormControlLabel(value: PartialStyleRulesFormContDisabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormControlLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiFormControlLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormControlLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiFormGroup(value: PartialStyleRulesFormGrou): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiFormGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiFormHelperText(value: PartialStyleRulesFormHelp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormHelperText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiFormHelperText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormHelperText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiFormLabel(value: PartialStyleRulesFormLabe): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiFormLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiGrid(value: PartialStyleRulesGridClas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGrid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiGrid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGrid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiGridList(value: PartialStyleRulesGridList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGridList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiGridList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGridList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiGridListTile(value: PartialStyleRulesGridListImgFullHeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGridListTile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiGridListTile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGridListTile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiGridListTileBar(value: PartialStyleRulesGridListActionIcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGridListTileBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiGridListTileBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGridListTileBar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiIcon(value: PartialStyleRulesIconClas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiIconButton(value: PartialStyleRulesIconButt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiIconButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiIconButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiIconButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiInput(value: PartialStyleRulesInputCla): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiInputAdornment(value: PartialStyleRulesInputAdo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInputAdornment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiInputAdornment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInputAdornment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiInputBase(value: PartialStyleRulesInputBas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInputBase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiInputBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInputBase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiInputLabel(value: PartialStyleRulesInputLab): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInputLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiInputLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInputLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiLinearProgress(value: PartialStyleRulesLinearPr): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiLinearProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiLinearProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiLinearProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiLink(value: PartialStyleRulesLinkClas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiList(value: PartialStyleRulesListClas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiListItem(value: PartialStyleRulesListItemButton): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiListItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiListItemAvatar(value: PartialStyleRulesListItemIcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemAvatar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiListItemAvatar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemAvatar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiListItemIcon(value: PartialStyleRulesListItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiListItemIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiListItemSecondaryAction(value: PartialStyleRulesListItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemSecondaryAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiListItemSecondaryAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemSecondaryAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiListItemText(value: PartialStyleRulesListItemDense): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiListItemText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiListSubheader(value: PartialStyleRulesListSubh): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListSubheader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiListSubheader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListSubheader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiMenu(value: PartialStyleRulesMenuClas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiMenuItem(value: PartialStyleRulesMenuItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiMenuItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiMenuItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiMenuItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiMobileStepper(value: PartialStyleRulesMobileSt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiMobileStepper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiMobileStepper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiMobileStepper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiModal(value: PartialStyleRulesModalCla): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiModal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiModal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiModal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiNativeSelect(value: PartialStyleRulesNativeSe): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiNativeSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiNativeSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiNativeSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiOutlinedInput(value: PartialStyleRulesOutlined): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiOutlinedInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiOutlinedInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiOutlinedInput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiPaper(value: PartialStyleRulesPaperCla): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiPaper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiPaper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiPaper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiPopover(value: PartialStyleRulesPopoverC): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiPopover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiPopover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiPopover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiRadio(value: PartialStyleRulesRadioCla): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiRadio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiRadio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiRadio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiSelect(value: PartialStyleRulesSelectCl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSelect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiSnackbar(value: PartialStyleRulesSnackbar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSnackbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiSnackbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSnackbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiSnackbarContent(value: PartialStyleRulesSnackbarAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSnackbarContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiSnackbarContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSnackbarContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiStep(value: PartialStyleRulesStepClas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiStepButton(value: PartialStyleRulesStepButt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiStepButton: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepButton")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiStepConnector(value: PartialStyleRulesStepConn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepConnector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiStepConnector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepConnector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiStepContent(value: PartialStyleRulesStepCont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiStepContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiStepIcon(value: PartialStyleRulesStepIcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiStepIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiStepLabel(value: PartialStyleRulesStepLabe): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiStepLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiStepper(value: PartialStyleRulesStepperC): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiStepper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepper")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiSvgIcon(value: PartialStyleRulesSvgIconC): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSvgIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiSvgIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSvgIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiSwitch(value: PartialStyleRulesSwitchCl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSwitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiSwitch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSwitch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiSwitchBase(value: PartialStyleRulesSwitchBa): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSwitchBase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiSwitchBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSwitchBase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTab(value: PartialStyleRulesTabClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTab: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTab")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTable(value: PartialStyleRulesTableCla): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTableBody(value: PartialStyleRulesTableBod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTableBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableBody")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTableCell(value: PartialStyleRulesTableCel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTableCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTableFooter(value: PartialStyleRulesTableFoo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableFooter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTableFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableFooter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTableHead(value: PartialStyleRulesTableHea): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableHead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTableHead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableHead")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTablePagination(value: PartialStyleRulesTablePag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTablePagination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTablePagination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTablePagination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTableRow(value: PartialStyleRulesTableRow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTableRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableRow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTableSortLabel(value: PartialStyleRulesTableSor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableSortLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTableSortLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableSortLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTabs(value: PartialStyleRulesTabsClas): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTabs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTabs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTabs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiToolbar(value: PartialStyleRulesToolbarC): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiToolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiToolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiToolbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTooltip(value: PartialStyleRulesTooltipC): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTouchRipple(value: PartialStyleRulesTouchRip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTouchRipple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTouchRipple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTouchRipple")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMuiTypography(value: PartialStyleRulesTypograp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTypography")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMuiTypography: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTypography")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

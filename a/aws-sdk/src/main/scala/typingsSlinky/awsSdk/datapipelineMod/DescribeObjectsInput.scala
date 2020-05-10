@@ -26,16 +26,53 @@ trait DescribeObjectsInput extends js.Object {
 
 object DescribeObjectsInput {
   @scala.inline
-  def apply(
-    objectIds: idList,
-    pipelineId: id,
-    evaluateExpressions: js.UndefOr[Boolean] = js.undefined,
-    marker: String = null
-  ): DescribeObjectsInput = {
+  def apply(objectIds: idList, pipelineId: id): DescribeObjectsInput = {
     val __obj = js.Dynamic.literal(objectIds = objectIds.asInstanceOf[js.Any], pipelineId = pipelineId.asInstanceOf[js.Any])
-    if (!js.isUndefined(evaluateExpressions)) __obj.updateDynamic("evaluateExpressions")(evaluateExpressions.asInstanceOf[js.Any])
-    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeObjectsInput]
   }
+  @scala.inline
+  implicit class DescribeObjectsInputOps[Self <: DescribeObjectsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withObjectIds(value: idList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPipelineId(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvaluateExpressions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluateExpressions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluateExpressions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evaluateExpressions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

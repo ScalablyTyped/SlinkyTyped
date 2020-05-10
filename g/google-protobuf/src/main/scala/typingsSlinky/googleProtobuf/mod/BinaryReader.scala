@@ -20,7 +20,7 @@ class BinaryReader () extends js.Object {
   def alloc(bytes: ByteSource, start: Double): BinaryReader = js.native
   def alloc(bytes: ByteSource, start: Double, length: Double): BinaryReader = js.native
   def free(): Unit = js.native
-  def getBuffer(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def getBuffer(): js.typedarray.Uint8Array = js.native
   def getCursor(): Double = js.native
   def getError(): Boolean = js.native
   def getFieldCursor(): Double = js.native
@@ -31,7 +31,7 @@ class BinaryReader () extends js.Object {
   def nextField(): Boolean = js.native
   def readAny(fieldType: FieldType): AnyFieldType = js.native
   def readBool(): Boolean = js.native
-  def readBytes(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def readBytes(): js.typedarray.Uint8Array = js.native
   def readDouble(): Double = js.native
   def readEnum(): Double = js.native
   def readFixed32(): Double = js.native

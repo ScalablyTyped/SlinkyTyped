@@ -20,26 +20,24 @@ trait TransactionType extends js.Object
 
 object TransactionType {
   @scala.inline
-  def buy: typingsSlinky.coinbase.coinbaseStrings.buy = this.cast("buy")
+  def buy: typingsSlinky.coinbase.coinbaseStrings.buy = "buy".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.buy]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def exchange_deposit: typingsSlinky.coinbase.coinbaseStrings.exchange_deposit = "exchange_deposit".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.exchange_deposit]
   @scala.inline
-  def exchange_deposit: typingsSlinky.coinbase.coinbaseStrings.exchange_deposit = this.cast("exchange_deposit")
+  def exchange_withdrawal: typingsSlinky.coinbase.coinbaseStrings.exchange_withdrawal = "exchange_withdrawal".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.exchange_withdrawal]
   @scala.inline
-  def exchange_withdrawal: typingsSlinky.coinbase.coinbaseStrings.exchange_withdrawal = this.cast("exchange_withdrawal")
+  def fiat_deposit: typingsSlinky.coinbase.coinbaseStrings.fiat_deposit = "fiat_deposit".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.fiat_deposit]
   @scala.inline
-  def fiat_deposit: typingsSlinky.coinbase.coinbaseStrings.fiat_deposit = this.cast("fiat_deposit")
+  def fiat_withdrawal: typingsSlinky.coinbase.coinbaseStrings.fiat_withdrawal = "fiat_withdrawal".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.fiat_withdrawal]
   @scala.inline
-  def fiat_withdrawal: typingsSlinky.coinbase.coinbaseStrings.fiat_withdrawal = this.cast("fiat_withdrawal")
+  def request: typingsSlinky.coinbase.coinbaseStrings.request = "request".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.request]
   @scala.inline
-  def request: typingsSlinky.coinbase.coinbaseStrings.request = this.cast("request")
+  def sell: typingsSlinky.coinbase.coinbaseStrings.sell = "sell".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.sell]
   @scala.inline
-  def sell: typingsSlinky.coinbase.coinbaseStrings.sell = this.cast("sell")
+  def send: typingsSlinky.coinbase.coinbaseStrings.send = "send".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.send]
   @scala.inline
-  def send: typingsSlinky.coinbase.coinbaseStrings.send = this.cast("send")
+  def transfer: typingsSlinky.coinbase.coinbaseStrings.transfer = "transfer".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.transfer]
   @scala.inline
-  def transfer: typingsSlinky.coinbase.coinbaseStrings.transfer = this.cast("transfer")
-  @scala.inline
-  def vault_withdrawal: typingsSlinky.coinbase.coinbaseStrings.vault_withdrawal = this.cast("vault_withdrawal")
+  def vault_withdrawal: typingsSlinky.coinbase.coinbaseStrings.vault_withdrawal = "vault_withdrawal".asInstanceOf[typingsSlinky.coinbase.coinbaseStrings.vault_withdrawal]
 }
 

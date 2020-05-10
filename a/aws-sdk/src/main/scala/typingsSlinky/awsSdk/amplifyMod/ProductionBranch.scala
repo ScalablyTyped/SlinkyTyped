@@ -26,18 +26,65 @@ trait ProductionBranch extends js.Object {
 
 object ProductionBranch {
   @scala.inline
-  def apply(
-    branchName: BranchName = null,
-    lastDeployTime: js.Date = null,
-    status: Status = null,
-    thumbnailUrl: ThumbnailUrl = null
-  ): ProductionBranch = {
+  def apply(): ProductionBranch = {
     val __obj = js.Dynamic.literal()
-    if (branchName != null) __obj.updateDynamic("branchName")(branchName.asInstanceOf[js.Any])
-    if (lastDeployTime != null) __obj.updateDynamic("lastDeployTime")(lastDeployTime.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (thumbnailUrl != null) __obj.updateDynamic("thumbnailUrl")(thumbnailUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProductionBranch]
   }
+  @scala.inline
+  implicit class ProductionBranchOps[Self <: ProductionBranch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBranchName(value: BranchName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branchName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBranchName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branchName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastDeployTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastDeployTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastDeployTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastDeployTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: Status): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbnailUrl(value: ThumbnailUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbnailUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

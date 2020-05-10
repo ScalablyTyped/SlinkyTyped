@@ -5,14 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Card extends js.Object {
-  var code: AnonName
-  var gaps: js.Array[Double]
-  var isAmex: Boolean
-  var lengths: js.Array[Double]
-  var niceType: String
-  var pattern: String
-  var `type`: String
+  var code: AnonName = js.native
+  var gaps: js.Array[Double] = js.native
+  var isAmex: Boolean = js.native
+  var lengths: js.Array[Double] = js.native
+  var niceType: String = js.native
+  var pattern: String = js.native
+  var `type`: String = js.native
 }
 
 object Card {
@@ -30,5 +31,55 @@ object Card {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Card]
   }
+  @scala.inline
+  implicit class CardOps[Self <: Card] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: AnonName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGaps(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gaps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAmex(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAmex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLengths(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lengths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNiceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("niceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

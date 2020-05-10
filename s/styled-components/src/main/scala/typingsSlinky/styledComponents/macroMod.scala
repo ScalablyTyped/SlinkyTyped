@@ -3,7 +3,6 @@ package typingsSlinky.styledComponents
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.ConsumerProps
 import typingsSlinky.react.mod.Context
 import typingsSlinky.std.TemplateStringsArray
@@ -17,7 +16,6 @@ import typingsSlinky.styledComponents.styledComponentsMod.Keyframes_
 import typingsSlinky.styledComponents.styledComponentsMod.SimpleInterpolation
 import typingsSlinky.styledComponents.styledComponentsMod.StyleSheetManagerProps
 import typingsSlinky.styledComponents.styledComponentsMod.StyledInterface
-import typingsSlinky.styledComponents.styledComponentsMod.ThemeProviderComponent
 import typingsSlinky.styledComponents.styledComponentsMod.ThemeProviderProps
 import typingsSlinky.styledComponents.styledComponentsMod.ThemedCssFunction
 import typingsSlinky.styledComponents.styledComponentsMod.ThemedGlobalStyledClassProps
@@ -42,7 +40,7 @@ object macroMod extends js.Object {
   class ThemeProvider protected ()
     extends Component[
           ThemeProviderProps[AnyIfEmpty[AnyIfEmpty[DefaultTheme]], AnyIfEmpty[AnyIfEmpty[DefaultTheme]]], 
-          ComponentState, 
+          js.Object, 
           js.Any
         ] {
     def this(props: ThemeProviderProps[AnyIfEmpty[AnyIfEmpty[DefaultTheme]], AnyIfEmpty[AnyIfEmpty[DefaultTheme]]]) = this()
@@ -68,7 +66,11 @@ object macroMod extends js.Object {
   def keyframes(strings: CSSKeyframes, interpolations: SimpleInterpolation*): Keyframes_ = js.native
   def useTheme(): DefaultTheme = js.native
   @js.native
-  object ThemeProvider extends TopLevel[ThemeProviderComponent[AnyIfEmpty[DefaultTheme], AnyIfEmpty[DefaultTheme]]]
+  object ThemeProvider extends TopLevel[
+          ReactComponentClass[
+            ThemeProviderProps[AnyIfEmpty[AnyIfEmpty[DefaultTheme]], AnyIfEmpty[AnyIfEmpty[DefaultTheme]]]
+          ]
+        ]
   
 }
 

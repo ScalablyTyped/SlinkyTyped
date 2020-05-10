@@ -13,12 +13,10 @@ trait FollowupFlagStatus extends js.Object
 
 object FollowupFlagStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def complete: typingsSlinky.microsoftGraph.microsoftGraphStrings.complete = "complete".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.complete]
   @scala.inline
-  def complete: typingsSlinky.microsoftGraph.microsoftGraphStrings.complete = this.cast("complete")
+  def flagged: typingsSlinky.microsoftGraph.microsoftGraphStrings.flagged = "flagged".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.flagged]
   @scala.inline
-  def flagged: typingsSlinky.microsoftGraph.microsoftGraphStrings.flagged = this.cast("flagged")
-  @scala.inline
-  def notFlagged: typingsSlinky.microsoftGraph.microsoftGraphStrings.notFlagged = this.cast("notFlagged")
+  def notFlagged: typingsSlinky.microsoftGraph.microsoftGraphStrings.notFlagged = "notFlagged".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notFlagged]
 }
 

@@ -22,15 +22,47 @@ trait ListVirtualMFADevicesResponse extends js.Object {
 
 object ListVirtualMFADevicesResponse {
   @scala.inline
-  def apply(
-    VirtualMFADevices: virtualMFADeviceListType,
-    IsTruncated: js.UndefOr[Boolean] = js.undefined,
-    Marker: responseMarkerType = null
-  ): ListVirtualMFADevicesResponse = {
+  def apply(VirtualMFADevices: virtualMFADeviceListType): ListVirtualMFADevicesResponse = {
     val __obj = js.Dynamic.literal(VirtualMFADevices = VirtualMFADevices.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsTruncated)) __obj.updateDynamic("IsTruncated")(IsTruncated.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListVirtualMFADevicesResponse]
   }
+  @scala.inline
+  implicit class ListVirtualMFADevicesResponseOps[Self <: ListVirtualMFADevicesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVirtualMFADevices(value: virtualMFADeviceListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VirtualMFADevices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsTruncated(value: booleanType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTruncated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: responseMarkerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -20,10 +20,29 @@ trait SchemaColumnFamily extends js.Object {
 
 object SchemaColumnFamily {
   @scala.inline
-  def apply(gcRule: SchemaGcRule = null): SchemaColumnFamily = {
+  def apply(): SchemaColumnFamily = {
     val __obj = js.Dynamic.literal()
-    if (gcRule != null) __obj.updateDynamic("gcRule")(gcRule.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaColumnFamily]
   }
+  @scala.inline
+  implicit class SchemaColumnFamilyOps[Self <: SchemaColumnFamily] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGcRule(value: SchemaGcRule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGcRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcRule")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

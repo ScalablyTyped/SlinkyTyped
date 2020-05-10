@@ -4,51 +4,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SignOptions extends js.Object {
-  var algorithm: js.UndefOr[String] = js.undefined
-  var audience: js.UndefOr[String | js.Array[String]] = js.undefined
-  var expiresIn: js.UndefOr[String] = js.undefined
-  var header: js.UndefOr[js.Object] = js.undefined
-  var iat: js.UndefOr[Boolean] = js.undefined
-  var issuer: js.UndefOr[String] = js.undefined
-  var jti: js.UndefOr[String] = js.undefined
-  var kid: js.UndefOr[Boolean] = js.undefined
-  var nonce: js.UndefOr[String] = js.undefined
-  var notBefore: js.UndefOr[String] = js.undefined
-  var now: js.UndefOr[js.Date] = js.undefined
-  var subject: js.UndefOr[String] = js.undefined
+  var algorithm: js.UndefOr[String] = js.native
+  var audience: js.UndefOr[String | js.Array[String]] = js.native
+  var expiresIn: js.UndefOr[String] = js.native
+  var header: js.UndefOr[js.Object] = js.native
+  var iat: js.UndefOr[Boolean] = js.native
+  var issuer: js.UndefOr[String] = js.native
+  var jti: js.UndefOr[String] = js.native
+  var kid: js.UndefOr[Boolean] = js.native
+  var nonce: js.UndefOr[String] = js.native
+  var notBefore: js.UndefOr[String] = js.native
+  var now: js.UndefOr[js.Date] = js.native
+  var subject: js.UndefOr[String] = js.native
 }
 
 object SignOptions {
   @scala.inline
-  def apply(
-    algorithm: String = null,
-    audience: String | js.Array[String] = null,
-    expiresIn: String = null,
-    header: js.Object = null,
-    iat: js.UndefOr[Boolean] = js.undefined,
-    issuer: String = null,
-    jti: String = null,
-    kid: js.UndefOr[Boolean] = js.undefined,
-    nonce: String = null,
-    notBefore: String = null,
-    now: js.Date = null,
-    subject: String = null
-  ): SignOptions = {
+  def apply(): SignOptions = {
     val __obj = js.Dynamic.literal()
-    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
-    if (audience != null) __obj.updateDynamic("audience")(audience.asInstanceOf[js.Any])
-    if (expiresIn != null) __obj.updateDynamic("expiresIn")(expiresIn.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (!js.isUndefined(iat)) __obj.updateDynamic("iat")(iat.asInstanceOf[js.Any])
-    if (issuer != null) __obj.updateDynamic("issuer")(issuer.asInstanceOf[js.Any])
-    if (jti != null) __obj.updateDynamic("jti")(jti.asInstanceOf[js.Any])
-    if (!js.isUndefined(kid)) __obj.updateDynamic("kid")(kid.asInstanceOf[js.Any])
-    if (nonce != null) __obj.updateDynamic("nonce")(nonce.asInstanceOf[js.Any])
-    if (notBefore != null) __obj.updateDynamic("notBefore")(notBefore.asInstanceOf[js.Any])
-    if (now != null) __obj.updateDynamic("now")(now.asInstanceOf[js.Any])
-    if (subject != null) __obj.updateDynamic("subject")(subject.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignOptions]
   }
+  @scala.inline
+  implicit class SignOptionsOps[Self <: SignOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAudience(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudience: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audience")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpiresIn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpiresIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeader(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIat(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIssuer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssuer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJti(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jti")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJti: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jti")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonce(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonce")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotBefore(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNow(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("now")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("now")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

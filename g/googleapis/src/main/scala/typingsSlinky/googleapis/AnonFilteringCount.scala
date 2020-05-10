@@ -12,11 +12,41 @@ trait AnonFilteringCount extends js.Object {
 
 object AnonFilteringCount {
   @scala.inline
-  def apply(filteringCount: String = null, filteringStatus: Int | Double = null): AnonFilteringCount = {
+  def apply(): AnonFilteringCount = {
     val __obj = js.Dynamic.literal()
-    if (filteringCount != null) __obj.updateDynamic("filteringCount")(filteringCount.asInstanceOf[js.Any])
-    if (filteringStatus != null) __obj.updateDynamic("filteringStatus")(filteringStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFilteringCount]
   }
+  @scala.inline
+  implicit class AnonFilteringCountOps[Self <: AnonFilteringCount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilteringCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteringCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilteringCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteringCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilteringStatus(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteringStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilteringStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteringStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

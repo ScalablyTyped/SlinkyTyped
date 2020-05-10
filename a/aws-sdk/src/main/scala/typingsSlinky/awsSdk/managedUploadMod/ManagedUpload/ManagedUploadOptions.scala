@@ -41,22 +41,89 @@ trait ManagedUploadOptions extends js.Object {
 
 object ManagedUploadOptions {
   @scala.inline
-  def apply(
-    leavePartsOnError: js.UndefOr[Boolean] = js.undefined,
-    params: PutObjectRequest = null,
-    partSize: Int | Double = null,
-    queueSize: Int | Double = null,
-    service: typingsSlinky.awsSdk.s3Mod.^ = null,
-    tags: js.Array[Tag] = null
-  ): ManagedUploadOptions = {
+  def apply(): ManagedUploadOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(leavePartsOnError)) __obj.updateDynamic("leavePartsOnError")(leavePartsOnError.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (partSize != null) __obj.updateDynamic("partSize")(partSize.asInstanceOf[js.Any])
-    if (queueSize != null) __obj.updateDynamic("queueSize")(queueSize.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[ManagedUploadOptions]
   }
+  @scala.inline
+  implicit class ManagedUploadOptionsOps[Self <: ManagedUploadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLeavePartsOnError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leavePartsOnError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeavePartsOnError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leavePartsOnError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParams(value: PutObjectRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("params")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueueSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queueSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueueSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queueSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withService(value: typingsSlinky.awsSdk.s3Mod.^): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[Tag]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/nativeui.html](http://www.html5plus.org/doc/zh_cn/nativeui.html)
   */
+@js.native
 trait PlusNativeUINativeUIObj extends js.Object {
   /**
     * 关闭显示的系统原生界面
@@ -18,15 +19,28 @@ trait PlusNativeUINativeUIObj extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/nativeui.html](http://www.html5plus.org/doc/zh_cn/nativeui.html)
     */
-  def close(): Unit
+  def close(): Unit = js.native
 }
 
 object PlusNativeUINativeUIObj {
   @scala.inline
   def apply(close: () => Unit): PlusNativeUINativeUIObj = {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close))
-  
     __obj.asInstanceOf[PlusNativeUINativeUIObj]
   }
+  @scala.inline
+  implicit class PlusNativeUINativeUIObjOps[Self <: PlusNativeUINativeUIObj] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

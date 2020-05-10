@@ -1,35 +1,35 @@
 package typingsSlinky.bandagedbdBdapi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.SuspenseProps
 import typingsSlinky.std.NonNullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BdApiModuleReactSuspense
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object BdApiModuleReactSuspense {
   @JSImport("@bandagedbd/bdapi", "BdApiModule.React.Suspense")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    fallback: NonNullable[TagMod[Any]] = null,
-    unstable_avoidThisFallback: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (fallback != null) __obj.updateDynamic("fallback")(fallback.asInstanceOf[js.Any])
-    if (!js.isUndefined(unstable_avoidThisFallback)) __obj.updateDynamic("unstable_avoidThisFallback")(unstable_avoidThisFallback.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def fallbackReactElement(value: ReactElement): this.type = set("fallback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fallback(value: NonNullable[TagMod[Any]]): this.type = set("fallback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fallbackNull: this.type = set("fallback", null)
+    @scala.inline
+    def unstable_avoidThisFallback(value: Boolean): this.type = set("unstable_avoidThisFallback", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SuspenseProps
+  
+  def withProps(p: SuspenseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BdApiModuleReactSuspense.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

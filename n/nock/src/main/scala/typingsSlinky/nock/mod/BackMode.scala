@@ -14,14 +14,12 @@ trait BackMode extends js.Object
 
 object BackMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dryrun: typingsSlinky.nock.nockStrings.dryrun = "dryrun".asInstanceOf[typingsSlinky.nock.nockStrings.dryrun]
   @scala.inline
-  def dryrun: typingsSlinky.nock.nockStrings.dryrun = this.cast("dryrun")
+  def lockdown: typingsSlinky.nock.nockStrings.lockdown = "lockdown".asInstanceOf[typingsSlinky.nock.nockStrings.lockdown]
   @scala.inline
-  def lockdown: typingsSlinky.nock.nockStrings.lockdown = this.cast("lockdown")
+  def record: typingsSlinky.nock.nockStrings.record = "record".asInstanceOf[typingsSlinky.nock.nockStrings.record]
   @scala.inline
-  def record: typingsSlinky.nock.nockStrings.record = this.cast("record")
-  @scala.inline
-  def wild: typingsSlinky.nock.nockStrings.wild = this.cast("wild")
+  def wild: typingsSlinky.nock.nockStrings.wild = "wild".asInstanceOf[typingsSlinky.nock.nockStrings.wild]
 }
 

@@ -4,28 +4,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonErrorColor extends js.Object {
   // See https://github.com/rsmbl/Resemble.js
-  var errorColor: js.UndefOr[AnonBlue] = js.undefined
-  var errorType: js.UndefOr[String] = js.undefined
-  var ignoreAntialiasing: js.UndefOr[Boolean] = js.undefined
-  var transparency: js.UndefOr[Double] = js.undefined
+  var errorColor: js.UndefOr[AnonBlue] = js.native
+  var errorType: js.UndefOr[String] = js.native
+  var ignoreAntialiasing: js.UndefOr[Boolean] = js.native
+  var transparency: js.UndefOr[Double] = js.native
 }
 
 object AnonErrorColor {
   @scala.inline
-  def apply(
-    errorColor: AnonBlue = null,
-    errorType: String = null,
-    ignoreAntialiasing: js.UndefOr[Boolean] = js.undefined,
-    transparency: Int | Double = null
-  ): AnonErrorColor = {
+  def apply(): AnonErrorColor = {
     val __obj = js.Dynamic.literal()
-    if (errorColor != null) __obj.updateDynamic("errorColor")(errorColor.asInstanceOf[js.Any])
-    if (errorType != null) __obj.updateDynamic("errorType")(errorType.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreAntialiasing)) __obj.updateDynamic("ignoreAntialiasing")(ignoreAntialiasing.asInstanceOf[js.Any])
-    if (transparency != null) __obj.updateDynamic("transparency")(transparency.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonErrorColor]
   }
+  @scala.inline
+  implicit class AnonErrorColorOps[Self <: AnonErrorColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorColor(value: AnonBlue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreAntialiasing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreAntialiasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreAntialiasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreAntialiasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransparency(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transparency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransparency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transparency")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

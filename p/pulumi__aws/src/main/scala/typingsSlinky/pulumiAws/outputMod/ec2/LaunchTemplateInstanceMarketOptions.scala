@@ -12,11 +12,41 @@ trait LaunchTemplateInstanceMarketOptions extends js.Object {
 
 object LaunchTemplateInstanceMarketOptions {
   @scala.inline
-  def apply(marketType: String = null, spotOptions: LaunchTemplateInstanceMarketOptionsSpotOptions = null): LaunchTemplateInstanceMarketOptions = {
+  def apply(): LaunchTemplateInstanceMarketOptions = {
     val __obj = js.Dynamic.literal()
-    if (marketType != null) __obj.updateDynamic("marketType")(marketType.asInstanceOf[js.Any])
-    if (spotOptions != null) __obj.updateDynamic("spotOptions")(spotOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchTemplateInstanceMarketOptions]
   }
+  @scala.inline
+  implicit class LaunchTemplateInstanceMarketOptionsOps[Self <: LaunchTemplateInstanceMarketOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarketType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marketType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarketType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marketType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpotOptions(value: LaunchTemplateInstanceMarketOptionsSpotOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spotOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpotOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spotOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

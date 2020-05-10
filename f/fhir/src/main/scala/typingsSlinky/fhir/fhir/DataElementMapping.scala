@@ -7,74 +7,145 @@ import scala.scalajs.js.annotation._
 /**
   * External specification mapped to
   */
+@js.native
 trait DataElementMapping extends BackboneElement {
   /**
     * Contains extended information for property 'comment'.
     */
-  var _comment: js.UndefOr[Element] = js.undefined
+  var _comment: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'identity'.
     */
-  var _identity: js.UndefOr[Element] = js.undefined
+  var _identity: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.undefined
+  var _name: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'uri'.
     */
-  var _uri: js.UndefOr[Element] = js.undefined
+  var _uri: js.UndefOr[Element] = js.native
   /**
     * Versions, issues, scope limitations, etc.
     */
-  var comment: js.UndefOr[String] = js.undefined
+  var comment: js.UndefOr[String] = js.native
   /**
     * Internal id when this mapping is used
     */
-  var identity: id
+  var identity: id = js.native
   /**
     * Names what this mapping refers to
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Identifies what this mapping refers to
     */
-  var uri: js.UndefOr[typingsSlinky.fhir.fhir.uri] = js.undefined
+  var uri: js.UndefOr[typingsSlinky.fhir.fhir.uri] = js.native
 }
 
 object DataElementMapping {
   @scala.inline
-  def apply(
-    identity: id,
-    _comment: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _identity: Element = null,
-    _name: Element = null,
-    _uri: Element = null,
-    comment: String = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null,
-    name: String = null,
-    uri: uri = null
-  ): DataElementMapping = {
+  def apply(identity: id): DataElementMapping = {
     val __obj = js.Dynamic.literal(identity = identity.asInstanceOf[js.Any])
-    if (_comment != null) __obj.updateDynamic("_comment")(_comment.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_identity != null) __obj.updateDynamic("_identity")(_identity.asInstanceOf[js.Any])
-    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
-    if (_uri != null) __obj.updateDynamic("_uri")(_uri.asInstanceOf[js.Any])
-    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (uri != null) __obj.updateDynamic("uri")(uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataElementMapping]
   }
+  @scala.inline
+  implicit class DataElementMappingOps[Self <: DataElementMapping] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdentity(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_comment(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_comment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_identity(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_identity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_identity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_identity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_name(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_uri(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_uri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_uri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUri(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

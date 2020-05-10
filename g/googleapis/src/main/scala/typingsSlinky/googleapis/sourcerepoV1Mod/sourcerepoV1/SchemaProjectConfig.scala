@@ -28,16 +28,53 @@ trait SchemaProjectConfig extends js.Object {
 
 object SchemaProjectConfig {
   @scala.inline
-  def apply(
-    enablePrivateKeyCheck: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    pubsubConfigs: StringDictionary[SchemaPubsubConfig] = null
-  ): SchemaProjectConfig = {
+  def apply(): SchemaProjectConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enablePrivateKeyCheck)) __obj.updateDynamic("enablePrivateKeyCheck")(enablePrivateKeyCheck.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (pubsubConfigs != null) __obj.updateDynamic("pubsubConfigs")(pubsubConfigs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProjectConfig]
   }
+  @scala.inline
+  implicit class SchemaProjectConfigOps[Self <: SchemaProjectConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnablePrivateKeyCheck(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePrivateKeyCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablePrivateKeyCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePrivateKeyCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPubsubConfigs(value: StringDictionary[SchemaPubsubConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pubsubConfigs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPubsubConfigs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pubsubConfigs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

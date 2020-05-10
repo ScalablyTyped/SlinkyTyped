@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/stream.html](http://www.html5plus.org/doc/zh_cn/stream.html)
   */
+@js.native
 trait PlusStreamLaunchWebviewStyles extends js.Object {
   /**
     * 流应用首页是否阻塞网络图片的加载
@@ -17,14 +18,14 @@ trait PlusStreamLaunchWebviewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/stream.html](http://www.html5plus.org/doc/zh_cn/stream.html)
     */
-  var blockNetworkImage: js.UndefOr[Boolean] = js.undefined
+  var blockNetworkImage: js.UndefOr[Boolean] = js.native
   /**
     * 指定首页Webview的id
     * 如果未指定id，则使用应用的appid作为首页Webview的id。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/stream.html](http://www.html5plus.org/doc/zh_cn/stream.html)
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * 指定流应用首页地址
     * 可使用网络地址（http://或https://开头），也可使用本地地址（相对应用资源路径）。
@@ -33,7 +34,7 @@ trait PlusStreamLaunchWebviewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/stream.html](http://www.html5plus.org/doc/zh_cn/stream.html)
     */
-  var launch_path: js.UndefOr[String] = js.undefined
+  var launch_path: js.UndefOr[String] = js.native
   /**
     * 流应用首页是否显示
     * true表示显示，false表示不显示。默认值为true。
@@ -41,23 +42,70 @@ trait PlusStreamLaunchWebviewStyles extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/stream.html](http://www.html5plus.org/doc/zh_cn/stream.html)
     */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object PlusStreamLaunchWebviewStyles {
   @scala.inline
-  def apply(
-    blockNetworkImage: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    launch_path: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): PlusStreamLaunchWebviewStyles = {
+  def apply(): PlusStreamLaunchWebviewStyles = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(blockNetworkImage)) __obj.updateDynamic("blockNetworkImage")(blockNetworkImage.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (launch_path != null) __obj.updateDynamic("launch_path")(launch_path.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusStreamLaunchWebviewStyles]
   }
+  @scala.inline
+  implicit class PlusStreamLaunchWebviewStylesOps[Self <: PlusStreamLaunchWebviewStyles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlockNetworkImage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockNetworkImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockNetworkImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockNetworkImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunch_path(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launch_path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunch_path: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launch_path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

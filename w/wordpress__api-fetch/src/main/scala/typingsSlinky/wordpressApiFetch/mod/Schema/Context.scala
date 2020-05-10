@@ -13,12 +13,10 @@ trait Context extends js.Object
 
 object Context {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def edit: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.edit = "edit".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.edit]
   @scala.inline
-  def edit: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.edit = this.cast("edit")
+  def embed: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.embed = "embed".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.embed]
   @scala.inline
-  def embed: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.embed = this.cast("embed")
-  @scala.inline
-  def view: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.view = this.cast("view")
+  def view: typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.view = "view".asInstanceOf[typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.view]
 }
 

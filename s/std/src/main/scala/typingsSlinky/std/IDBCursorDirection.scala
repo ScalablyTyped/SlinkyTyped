@@ -14,14 +14,12 @@ trait IDBCursorDirection extends js.Object
 
 object IDBCursorDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def next: typingsSlinky.std.stdStrings.next = "next".asInstanceOf[typingsSlinky.std.stdStrings.next]
   @scala.inline
-  def next: typingsSlinky.std.stdStrings.next = this.cast("next")
+  def nextunique: typingsSlinky.std.stdStrings.nextunique = "nextunique".asInstanceOf[typingsSlinky.std.stdStrings.nextunique]
   @scala.inline
-  def nextunique: typingsSlinky.std.stdStrings.nextunique = this.cast("nextunique")
+  def prev: typingsSlinky.std.stdStrings.prev = "prev".asInstanceOf[typingsSlinky.std.stdStrings.prev]
   @scala.inline
-  def prev: typingsSlinky.std.stdStrings.prev = this.cast("prev")
-  @scala.inline
-  def prevunique: typingsSlinky.std.stdStrings.prevunique = this.cast("prevunique")
+  def prevunique: typingsSlinky.std.stdStrings.prevunique = "prevunique".asInstanceOf[typingsSlinky.std.stdStrings.prevunique]
 }
 

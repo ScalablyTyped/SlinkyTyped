@@ -7,8 +7,6 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.SharedArrayBuffer
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,12 +59,12 @@ trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
   def byteLength(string: ArrayBufferView, encoding: BufferEncoding): Double = js.native
   def byteLength(string: SharedArrayBuffer): Double = js.native
   def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
-  def byteLength(string: ArrayBuffer): Double = js.native
-  def byteLength(string: ArrayBuffer, encoding: BufferEncoding): Double = js.native
+  def byteLength(string: js.typedarray.ArrayBuffer): Double = js.native
+  def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = js.native
   /**
     * The same as buf1.compare(buf2).
     */
-  def compare(buf1: scala.scalajs.js.typedarray.Uint8Array, buf2: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
+  def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = js.native
   /**
     * Returns a buffer which is the result of concatenating all the buffers in the list together.
     *
@@ -78,8 +76,8 @@ trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
     * @param totalLength Total length of the buffers when concatenated.
     *   If totalLength is not provided, it is read from the buffers in the list. However, this adds an additional loop to the function, so it is faster to provide the length explicitly.
     */
-  def concat(list: js.Array[scala.scalajs.js.typedarray.Uint8Array]): Buffer = js.native
-  def concat(list: js.Array[scala.scalajs.js.typedarray.Uint8Array], totalLength: Double): Buffer = js.native
+  def concat(list: js.Array[js.typedarray.Uint8Array]): Buffer = js.native
+  def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): Buffer = js.native
   def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
@@ -91,15 +89,15 @@ trait TypeofBuffer extends Instantiable1[/* str */ String, Buffer] {
     *
     * @param arrayBuffer The .buffer property of any TypedArray or a new ArrayBuffer()
     */
-  def from(arrayBuffer: ArrayBuffer): Buffer = js.native
-  def from(arrayBuffer: ArrayBuffer, byteOffset: Double): Buffer = js.native
-  def from(arrayBuffer: ArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
+  def from(arrayBuffer: js.typedarray.ArrayBuffer): Buffer = js.native
+  def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): Buffer = js.native
+  def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
   /**
     * Creates a new Buffer using the passed {data}
     * @param data data to create a new Buffer
     */
   def from(data: js.Array[Double]): Buffer = js.native
-  def from(data: Uint8Array): Buffer = js.native
+  def from(data: js.typedarray.Uint8Array): Buffer = js.native
   def from(obj: AnonToPrimitive): Buffer = js.native
   def from(obj: AnonToPrimitive, byteOffset: Double): Buffer = js.native
   def from(obj: AnonToPrimitive, byteOffset: Double, length: Double): Buffer = js.native

@@ -1,12 +1,11 @@
 package typingsSlinky.blueprintjsTable.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.PartialIPopoverProps
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
@@ -17,48 +16,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CopyCellsMenuItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsTable.mod.CopyCellsMenuItem] {
+object CopyCellsMenuItem {
   @JSImport("@blueprintjs/table", "CopyCellsMenuItem")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, href, label, target */
-  def apply(
-    context: IMenuContext,
-    getCellData: (Double, Double) => js.Any,
-    text: TagMod[Any],
-    active: js.UndefOr[Boolean] = js.undefined,
-    icon: IconName | MaybeElement = null,
-    intent: Intent = null,
-    labelClassName: String = null,
-    labelElement: TagMod[Any] = null,
-    multiline: js.UndefOr[Boolean] = js.undefined,
-    onClick: /* event */ SyntheticMouseEvent[HTMLElement] => Unit = null,
-    onCopy: /* success */ Boolean => Unit = null,
-    popoverProps: PartialIPopoverProps = null,
-    shouldDismissPopover: js.UndefOr[Boolean] = js.undefined,
-    tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any = null,
-    textClassName: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsTable.mod.CopyCellsMenuItem] = {
-    val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], getCellData = js.Any.fromFunction2(getCellData), text = text.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (intent != null) __obj.updateDynamic("intent")(intent.asInstanceOf[js.Any])
-    if (labelClassName != null) __obj.updateDynamic("labelClassName")(labelClassName.asInstanceOf[js.Any])
-    if (labelElement != null) __obj.updateDynamic("labelElement")(labelElement.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiline)) __obj.updateDynamic("multiline")(multiline.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
-    if (popoverProps != null) __obj.updateDynamic("popoverProps")(popoverProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldDismissPopover)) __obj.updateDynamic("shouldDismissPopover")(shouldDismissPopover.asInstanceOf[js.Any])
-    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
-    if (textClassName != null) __obj.updateDynamic("textClassName")(textClassName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsTable.mod.CopyCellsMenuItem] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def icon(value: IconName | MaybeElement): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconNull: this.type = set("icon", null)
+    @scala.inline
+    def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelClassName(value: String): this.type = set("labelClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelElementReactElement(value: ReactElement): this.type = set("labelElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelElement(value: TagMod[Any]): this.type = set("labelElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiline(value: Boolean): this.type = set("multiline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* event */ SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCopy(value: /* success */ Boolean => Unit): this.type = set("onCopy", js.Any.fromFunction1(value))
+    @scala.inline
+    def popoverProps(value: PartialIPopoverProps): this.type = set("popoverProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldDismissPopover(value: Boolean): this.type = set("shouldDismissPopover", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagName(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any): this.type = set("tagName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def text(value: TagMod[Any]): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textClassName(value: String): this.type = set("textClassName", value.asInstanceOf[js.Any])
   }
-  type Props = ICopyCellsMenuItemProps
+  
+  def withProps(p: ICopyCellsMenuItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(context: IMenuContext, getCellData: (Double, Double) => js.Any): Builder = {
+    val __props = js.Dynamic.literal(context = context.asInstanceOf[js.Any], getCellData = js.Any.fromFunction2(getCellData))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ICopyCellsMenuItemProps]))
+  }
 }
 

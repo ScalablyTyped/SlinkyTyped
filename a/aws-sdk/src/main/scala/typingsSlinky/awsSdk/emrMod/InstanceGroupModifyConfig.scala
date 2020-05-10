@@ -30,19 +30,71 @@ trait InstanceGroupModifyConfig extends js.Object {
 
 object InstanceGroupModifyConfig {
   @scala.inline
-  def apply(
-    InstanceGroupId: XmlStringMaxLen256,
-    Configurations: ConfigurationList = null,
-    EC2InstanceIdsToTerminate: EC2InstanceIdsToTerminateList = null,
-    InstanceCount: Int | Double = null,
-    ShrinkPolicy: ShrinkPolicy = null
-  ): InstanceGroupModifyConfig = {
+  def apply(InstanceGroupId: XmlStringMaxLen256): InstanceGroupModifyConfig = {
     val __obj = js.Dynamic.literal(InstanceGroupId = InstanceGroupId.asInstanceOf[js.Any])
-    if (Configurations != null) __obj.updateDynamic("Configurations")(Configurations.asInstanceOf[js.Any])
-    if (EC2InstanceIdsToTerminate != null) __obj.updateDynamic("EC2InstanceIdsToTerminate")(EC2InstanceIdsToTerminate.asInstanceOf[js.Any])
-    if (InstanceCount != null) __obj.updateDynamic("InstanceCount")(InstanceCount.asInstanceOf[js.Any])
-    if (ShrinkPolicy != null) __obj.updateDynamic("ShrinkPolicy")(ShrinkPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceGroupModifyConfig]
   }
+  @scala.inline
+  implicit class InstanceGroupModifyConfigOps[Self <: InstanceGroupModifyConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceGroupId(value: XmlStringMaxLen256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfigurations(value: ConfigurationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Configurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Configurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEC2InstanceIdsToTerminate(value: EC2InstanceIdsToTerminateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2InstanceIdsToTerminate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEC2InstanceIdsToTerminate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EC2InstanceIdsToTerminate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShrinkPolicy(value: ShrinkPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShrinkPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShrinkPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShrinkPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

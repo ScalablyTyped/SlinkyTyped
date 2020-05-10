@@ -1,14 +1,14 @@
 package typingsSlinky.reactPdf.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.pdfjsDist.mod.PDFDocumentProxy
 import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactPdf.AnonPageNumber
+import typingsSlinky.reactPdf.documentMod.Props
 import typingsSlinky.reactPdf.documentMod.RenderFunction
 import typingsSlinky.reactPdf.documentMod.default
 import typingsSlinky.reactPdf.reactPdfStrings._blank
@@ -22,51 +22,70 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Document
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Document {
   @JSImport("react-pdf/dist/Document", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    file: js.Any,
-    className: String | js.Array[String] = null,
-    error: String | ReactElement | RenderFunction = null,
-    externalLinkTarget: _self | _blank | _parent | _top = null,
-    inputRef: LegacyRef[HTMLDivElement] = null,
-    loading: String | ReactElement | RenderFunction = null,
-    noData: String | ReactElement | RenderFunction = null,
-    onItemClick: /* hasPageNumber */ AnonPageNumber => Unit = null,
-    onLoadError: /* error */ js.Error => Unit = null,
-    onLoadSuccess: /* pdf */ PDFDocumentProxy => Unit = null,
-    onPassword: /* callback */ js.Function1[/* repeated */ js.Any, _] => Unit = null,
-    onSourceError: /* error */ js.Error => Unit = null,
-    onSourceSuccess: () => Unit = null,
-    options: js.Any = null,
-    renderMode: canvas | svg | none = null,
-    rotate: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (externalLinkTarget != null) __obj.updateDynamic("externalLinkTarget")(externalLinkTarget.asInstanceOf[js.Any])
-    if (inputRef != null) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
-    if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (noData != null) __obj.updateDynamic("noData")(noData.asInstanceOf[js.Any])
-    if (onItemClick != null) __obj.updateDynamic("onItemClick")(js.Any.fromFunction1(onItemClick))
-    if (onLoadError != null) __obj.updateDynamic("onLoadError")(js.Any.fromFunction1(onLoadError))
-    if (onLoadSuccess != null) __obj.updateDynamic("onLoadSuccess")(js.Any.fromFunction1(onLoadSuccess))
-    if (onPassword != null) __obj.updateDynamic("onPassword")(js.Any.fromFunction1(onPassword))
-    if (onSourceError != null) __obj.updateDynamic("onSourceError")(js.Any.fromFunction1(onSourceError))
-    if (onSourceSuccess != null) __obj.updateDynamic("onSourceSuccess")(js.Any.fromFunction0(onSourceSuccess))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (renderMode != null) __obj.updateDynamic("renderMode")(renderMode.asInstanceOf[js.Any])
-    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String | js.Array[String]): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorFunction0(value: () => ReactElement): this.type = set("error", js.Any.fromFunction0(value))
+    @scala.inline
+    def error(value: String | ReactElement | RenderFunction): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def externalLinkTarget(value: _self | _blank | _parent | _top): this.type = set("externalLinkTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefRefObject(value: ReactRef[HTMLDivElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefFunction1(value: /* instance */ HTMLDivElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def inputRef(value: LegacyRef[HTMLDivElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputRefNull: this.type = set("inputRef", null)
+    @scala.inline
+    def loadingReactElement(value: ReactElement): this.type = set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadingFunction0(value: () => ReactElement): this.type = set("loading", js.Any.fromFunction0(value))
+    @scala.inline
+    def loading(value: String | ReactElement | RenderFunction): this.type = set("loading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noDataReactElement(value: ReactElement): this.type = set("noData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noDataFunction0(value: () => ReactElement): this.type = set("noData", js.Any.fromFunction0(value))
+    @scala.inline
+    def noData(value: String | ReactElement | RenderFunction): this.type = set("noData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onItemClick(value: /* hasPageNumber */ AnonPageNumber => Unit): this.type = set("onItemClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadError(value: /* error */ js.Error => Unit): this.type = set("onLoadError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadSuccess(value: /* pdf */ PDFDocumentProxy => Unit): this.type = set("onLoadSuccess", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPassword(value: /* callback */ js.Function1[/* repeated */ js.Any, _] => Unit): this.type = set("onPassword", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSourceError(value: /* error */ js.Error => Unit): this.type = set("onSourceError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSourceSuccess(value: () => Unit): this.type = set("onSourceSuccess", js.Any.fromFunction0(value))
+    @scala.inline
+    def options(value: js.Any): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderMode(value: canvas | svg | none): this.type = set("renderMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rotate(value: Double): this.type = set("rotate", value.asInstanceOf[js.Any])
   }
-  type Props = typingsSlinky.reactPdf.documentMod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(file: js.Any): Builder = {
+    val __props = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
 }
 

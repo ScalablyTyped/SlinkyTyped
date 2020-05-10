@@ -13,11 +13,41 @@ trait DeploymentConfigTrafficRoutingConfigTimeBasedCanary extends js.Object {
 
 object DeploymentConfigTrafficRoutingConfigTimeBasedCanary {
   @scala.inline
-  def apply(interval: Input[Double] = null, percentage: Input[Double] = null): DeploymentConfigTrafficRoutingConfigTimeBasedCanary = {
+  def apply(): DeploymentConfigTrafficRoutingConfigTimeBasedCanary = {
     val __obj = js.Dynamic.literal()
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (percentage != null) __obj.updateDynamic("percentage")(percentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentConfigTrafficRoutingConfigTimeBasedCanary]
   }
+  @scala.inline
+  implicit class DeploymentConfigTrafficRoutingConfigTimeBasedCanaryOps[Self <: DeploymentConfigTrafficRoutingConfigTimeBasedCanary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInterval(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPercentage(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

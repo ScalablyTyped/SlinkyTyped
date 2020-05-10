@@ -29,11 +29,41 @@ trait SchemaGoogleDevtoolsRemoteworkersV1test2CommandOutputs extends js.Object {
 
 object SchemaGoogleDevtoolsRemoteworkersV1test2CommandOutputs {
   @scala.inline
-  def apply(exitCode: Int | Double = null, outputs: SchemaGoogleDevtoolsRemoteworkersV1test2Digest = null): SchemaGoogleDevtoolsRemoteworkersV1test2CommandOutputs = {
+  def apply(): SchemaGoogleDevtoolsRemoteworkersV1test2CommandOutputs = {
     val __obj = js.Dynamic.literal()
-    if (exitCode != null) __obj.updateDynamic("exitCode")(exitCode.asInstanceOf[js.Any])
-    if (outputs != null) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsRemoteworkersV1test2CommandOutputs]
   }
+  @scala.inline
+  implicit class SchemaGoogleDevtoolsRemoteworkersV1test2CommandOutputsOps[Self <: SchemaGoogleDevtoolsRemoteworkersV1test2CommandOutputs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExitCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputs(value: SchemaGoogleDevtoolsRemoteworkersV1test2Digest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

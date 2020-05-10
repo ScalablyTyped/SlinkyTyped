@@ -1,6 +1,5 @@
 package typingsSlinky.dateFns
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ object closestToMod extends js.Object {
   @js.native
   object default extends js.Object {
     def apply(dateToCompare: Double, datesArray: js.Array[js.Date | Double]): js.Date = js.native
-    def apply(dateToCompare: Date, datesArray: js.Array[js.Date | Double]): js.Date = js.native
+    def apply(dateToCompare: js.Date, datesArray: js.Array[js.Date | Double]): js.Date = js.native
   }
   
 }

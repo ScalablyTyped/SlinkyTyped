@@ -9,17 +9,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledBackupDetails extends BackupDetails {
   /**
     * <p>Time at which the backup was created. This is the request time of the backup. </p>
     */
   @JSName("BackupCreationDateTime")
-  var BackupCreationDateTime_UnmarshalledBackupDetails: js.Date
+  var BackupCreationDateTime_UnmarshalledBackupDetails: js.Date = js.native
   /**
     * <p>Time at which the automatic on-demand backup created by DynamoDB will expire. This <code>SYSTEM</code> on-demand backup expires automatically 35 days after its creation.</p>
     */
   @JSName("BackupExpiryDateTime")
-  var BackupExpiryDateTime_UnmarshalledBackupDetails: js.UndefOr[js.Date] = js.undefined
+  var BackupExpiryDateTime_UnmarshalledBackupDetails: js.UndefOr[js.Date] = js.native
 }
 
 object UnmarshalledBackupDetails {
@@ -29,14 +30,36 @@ object UnmarshalledBackupDetails {
     BackupCreationDateTime: js.Date,
     BackupName: String,
     BackupStatus: CREATING | DELETED | AVAILABLE | String,
-    BackupType: USER | SYSTEM | String,
-    BackupExpiryDateTime: js.Date = null,
-    BackupSizeBytes: Int | Double = null
+    BackupType: USER | SYSTEM | String
   ): UnmarshalledBackupDetails = {
     val __obj = js.Dynamic.literal(BackupArn = BackupArn.asInstanceOf[js.Any], BackupCreationDateTime = BackupCreationDateTime.asInstanceOf[js.Any], BackupName = BackupName.asInstanceOf[js.Any], BackupStatus = BackupStatus.asInstanceOf[js.Any], BackupType = BackupType.asInstanceOf[js.Any])
-    if (BackupExpiryDateTime != null) __obj.updateDynamic("BackupExpiryDateTime")(BackupExpiryDateTime.asInstanceOf[js.Any])
-    if (BackupSizeBytes != null) __obj.updateDynamic("BackupSizeBytes")(BackupSizeBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledBackupDetails]
   }
+  @scala.inline
+  implicit class UnmarshalledBackupDetailsOps[Self <: UnmarshalledBackupDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupCreationDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupCreationDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackupExpiryDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupExpiryDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackupExpiryDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupExpiryDateTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

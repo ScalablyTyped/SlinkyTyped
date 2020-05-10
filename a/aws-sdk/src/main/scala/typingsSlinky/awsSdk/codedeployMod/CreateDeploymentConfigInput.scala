@@ -26,17 +26,59 @@ trait CreateDeploymentConfigInput extends js.Object {
 
 object CreateDeploymentConfigInput {
   @scala.inline
-  def apply(
-    deploymentConfigName: DeploymentConfigName,
-    computePlatform: ComputePlatform = null,
-    minimumHealthyHosts: MinimumHealthyHosts = null,
-    trafficRoutingConfig: TrafficRoutingConfig = null
-  ): CreateDeploymentConfigInput = {
+  def apply(deploymentConfigName: DeploymentConfigName): CreateDeploymentConfigInput = {
     val __obj = js.Dynamic.literal(deploymentConfigName = deploymentConfigName.asInstanceOf[js.Any])
-    if (computePlatform != null) __obj.updateDynamic("computePlatform")(computePlatform.asInstanceOf[js.Any])
-    if (minimumHealthyHosts != null) __obj.updateDynamic("minimumHealthyHosts")(minimumHealthyHosts.asInstanceOf[js.Any])
-    if (trafficRoutingConfig != null) __obj.updateDynamic("trafficRoutingConfig")(trafficRoutingConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDeploymentConfigInput]
   }
+  @scala.inline
+  implicit class CreateDeploymentConfigInputOps[Self <: CreateDeploymentConfigInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentConfigName(value: DeploymentConfigName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentConfigName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComputePlatform(value: ComputePlatform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computePlatform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputePlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computePlatform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumHealthyHosts(value: MinimumHealthyHosts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumHealthyHosts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumHealthyHosts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumHealthyHosts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrafficRoutingConfig(value: TrafficRoutingConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trafficRoutingConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrafficRoutingConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trafficRoutingConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

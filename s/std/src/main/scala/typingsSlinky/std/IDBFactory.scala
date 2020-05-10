@@ -27,5 +27,6 @@ trait IDBFactory extends js.Object {
 
 @JSGlobal("IDBFactory")
 @js.native
-object IDBFactory extends Instantiable0[IDBFactory]
+object IDBFactory
+  extends Instantiable0[org.scalajs.dom.raw.IDBFactory]
 

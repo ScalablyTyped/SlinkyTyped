@@ -4,32 +4,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxPolarChartValueAxisStrips extends dxPolarChartCommonAxisSettingsStripStyle {
   /** Specifies a color for a strip. */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
   /** Specifies an end value for a strip. */
-  var endValue: js.UndefOr[Double | js.Date | String] = js.undefined
+  var endValue: js.UndefOr[Double | js.Date | String] = js.native
   /** An object that defines the label configuration options of a strip. */
   @JSName("label")
-  var label_dxPolarChartValueAxisStrips: js.UndefOr[dxPolarChartValueAxisStripsLabel] = js.undefined
+  var label_dxPolarChartValueAxisStrips: js.UndefOr[dxPolarChartValueAxisStripsLabel] = js.native
   /** Specifies a start value for a strip. */
-  var startValue: js.UndefOr[Double | js.Date | String] = js.undefined
+  var startValue: js.UndefOr[Double | js.Date | String] = js.native
 }
 
 object dxPolarChartValueAxisStrips {
   @scala.inline
-  def apply(
-    color: String = null,
-    endValue: Double | js.Date | String = null,
-    label: dxPolarChartValueAxisStripsLabel = null,
-    startValue: Double | js.Date | String = null
-  ): dxPolarChartValueAxisStrips = {
+  def apply(): dxPolarChartValueAxisStrips = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (endValue != null) __obj.updateDynamic("endValue")(endValue.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (startValue != null) __obj.updateDynamic("startValue")(startValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPolarChartValueAxisStrips]
   }
+  @scala.inline
+  implicit class dxPolarChartValueAxisStripsOps[Self <: dxPolarChartValueAxisStrips] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndValueDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndValue(value: Double | js.Date | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: dxPolarChartValueAxisStripsLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartValueDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartValue(value: Double | js.Date | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,13 +1,12 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.TimePickerProps
 import typingsSlinky.materialUi.materialUiStrings.`24hr`
 import typingsSlinky.materialUi.materialUiStrings.ampm
@@ -17,94 +16,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object TimePicker {
   @JSImport("material-ui/TimePicker", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, name, rows, style, type */
-  def apply(
-    autoOk: js.UndefOr[Boolean] = js.undefined,
-    cancelLabel: TagMod[Any] = null,
-    defaultTime: js.Date = null,
-    defaultValue: String | Double = null,
-    dialogBodyStyle: CSSProperties = null,
-    dialogStyle: CSSProperties = null,
-    errorStyle: CSSProperties = null,
-    errorText: TagMod[Any] = null,
-    floatingLabelFixed: js.UndefOr[Boolean] = js.undefined,
-    floatingLabelFocusStyle: CSSProperties = null,
-    floatingLabelStyle: CSSProperties = null,
-    floatingLabelText: TagMod[Any] = null,
-    format: ampm | `24hr` = null,
-    fullWidth: js.UndefOr[Boolean] = js.undefined,
-    hintStyle: CSSProperties = null,
-    hintText: TagMod[Any] = null,
-    inputStyle: CSSProperties = null,
-    minutesStep: Int | Double = null,
-    multiLine: js.UndefOr[Boolean] = js.undefined,
-    okLabel: TagMod[Any] = null,
-    onBlur: SyntheticFocusEvent[js.Object] => Unit = null,
-    onChange: (/* e */ js.Any, /* time */ js.Date) => Unit = null,
-    onClick: SyntheticMouseEvent[js.Object] => Unit = null,
-    onDismiss: () => Unit = null,
-    onFocus: SyntheticFocusEvent[js.Object] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    onShow: () => Unit = null,
-    pedantic: js.UndefOr[Boolean] = js.undefined,
-    rowsMax: Int | Double = null,
-    textFieldStyle: CSSProperties = null,
-    textareaStyle: CSSProperties = null,
-    underlineDisabledStyle: CSSProperties = null,
-    underlineFocusStyle: CSSProperties = null,
-    underlineShow: js.UndefOr[Boolean] = js.undefined,
-    underlineStyle: CSSProperties = null,
-    value: js.Date = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoOk)) __obj.updateDynamic("autoOk")(autoOk.asInstanceOf[js.Any])
-    if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
-    if (defaultTime != null) __obj.updateDynamic("defaultTime")(defaultTime.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (dialogBodyStyle != null) __obj.updateDynamic("dialogBodyStyle")(dialogBodyStyle.asInstanceOf[js.Any])
-    if (dialogStyle != null) __obj.updateDynamic("dialogStyle")(dialogStyle.asInstanceOf[js.Any])
-    if (errorStyle != null) __obj.updateDynamic("errorStyle")(errorStyle.asInstanceOf[js.Any])
-    if (errorText != null) __obj.updateDynamic("errorText")(errorText.asInstanceOf[js.Any])
-    if (!js.isUndefined(floatingLabelFixed)) __obj.updateDynamic("floatingLabelFixed")(floatingLabelFixed.asInstanceOf[js.Any])
-    if (floatingLabelFocusStyle != null) __obj.updateDynamic("floatingLabelFocusStyle")(floatingLabelFocusStyle.asInstanceOf[js.Any])
-    if (floatingLabelStyle != null) __obj.updateDynamic("floatingLabelStyle")(floatingLabelStyle.asInstanceOf[js.Any])
-    if (floatingLabelText != null) __obj.updateDynamic("floatingLabelText")(floatingLabelText.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullWidth)) __obj.updateDynamic("fullWidth")(fullWidth.asInstanceOf[js.Any])
-    if (hintStyle != null) __obj.updateDynamic("hintStyle")(hintStyle.asInstanceOf[js.Any])
-    if (hintText != null) __obj.updateDynamic("hintText")(hintText.asInstanceOf[js.Any])
-    if (inputStyle != null) __obj.updateDynamic("inputStyle")(inputStyle.asInstanceOf[js.Any])
-    if (minutesStep != null) __obj.updateDynamic("minutesStep")(minutesStep.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiLine)) __obj.updateDynamic("multiLine")(multiLine.asInstanceOf[js.Any])
-    if (okLabel != null) __obj.updateDynamic("okLabel")(okLabel.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
-    if (!js.isUndefined(pedantic)) __obj.updateDynamic("pedantic")(pedantic.asInstanceOf[js.Any])
-    if (rowsMax != null) __obj.updateDynamic("rowsMax")(rowsMax.asInstanceOf[js.Any])
-    if (textFieldStyle != null) __obj.updateDynamic("textFieldStyle")(textFieldStyle.asInstanceOf[js.Any])
-    if (textareaStyle != null) __obj.updateDynamic("textareaStyle")(textareaStyle.asInstanceOf[js.Any])
-    if (underlineDisabledStyle != null) __obj.updateDynamic("underlineDisabledStyle")(underlineDisabledStyle.asInstanceOf[js.Any])
-    if (underlineFocusStyle != null) __obj.updateDynamic("underlineFocusStyle")(underlineFocusStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(underlineShow)) __obj.updateDynamic("underlineShow")(underlineShow.asInstanceOf[js.Any])
-    if (underlineStyle != null) __obj.updateDynamic("underlineStyle")(underlineStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def autoOk(value: Boolean): this.type = set("autoOk", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelLabelReactElement(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelLabel(value: TagMod[Any]): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultTime(value: js.Date): this.type = set("defaultTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String | Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dialogBodyStyle(value: CSSProperties): this.type = set("dialogBodyStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dialogStyle(value: CSSProperties): this.type = set("dialogStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorStyle(value: CSSProperties): this.type = set("errorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorTextReactElement(value: ReactElement): this.type = set("errorText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorText(value: TagMod[Any]): this.type = set("errorText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelFixed(value: Boolean): this.type = set("floatingLabelFixed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelFocusStyle(value: CSSProperties): this.type = set("floatingLabelFocusStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelStyle(value: CSSProperties): this.type = set("floatingLabelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelTextReactElement(value: ReactElement): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def floatingLabelText(value: TagMod[Any]): this.type = set("floatingLabelText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: ampm | `24hr`): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fullWidth(value: Boolean): this.type = set("fullWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hintStyle(value: CSSProperties): this.type = set("hintStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hintTextReactElement(value: ReactElement): this.type = set("hintText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hintText(value: TagMod[Any]): this.type = set("hintText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputStyle(value: CSSProperties): this.type = set("inputStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minutesStep(value: Double): this.type = set("minutesStep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiLine(value: Boolean): this.type = set("multiLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okLabelReactElement(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okLabel(value: TagMod[Any]): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: (/* e */ js.Any, /* time */ js.Date) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onClick(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDismiss(value: () => Unit): this.type = set("onDismiss", js.Any.fromFunction0(value))
+    @scala.inline
+    def onFocus(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onShow(value: () => Unit): this.type = set("onShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def pedantic(value: Boolean): this.type = set("pedantic", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowsMax(value: Double): this.type = set("rowsMax", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textFieldStyle(value: CSSProperties): this.type = set("textFieldStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textareaStyle(value: CSSProperties): this.type = set("textareaStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineDisabledStyle(value: CSSProperties): this.type = set("underlineDisabledStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineFocusStyle(value: CSSProperties): this.type = set("underlineFocusStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineShow(value: Boolean): this.type = set("underlineShow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def underlineStyle(value: CSSProperties): this.type = set("underlineStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.timePickerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TimePickerProps
+  
+  def withProps(p: TimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TimePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

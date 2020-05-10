@@ -22,11 +22,47 @@ trait MetricQuery extends js.Object {
 
 object MetricQuery {
   @scala.inline
-  def apply(Metric: String, Filter: MetricQueryFilterMap = null, GroupBy: DimensionGroup = null): MetricQuery = {
+  def apply(Metric: String): MetricQuery = {
     val __obj = js.Dynamic.literal(Metric = Metric.asInstanceOf[js.Any])
-    if (Filter != null) __obj.updateDynamic("Filter")(Filter.asInstanceOf[js.Any])
-    if (GroupBy != null) __obj.updateDynamic("GroupBy")(GroupBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricQuery]
   }
+  @scala.inline
+  implicit class MetricQueryOps[Self <: MetricQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetric(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metric")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilter(value: MetricQueryFilterMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupBy(value: DimensionGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupBy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

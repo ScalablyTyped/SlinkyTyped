@@ -6,5 +6,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CustomElementConstructor extends Instantiable0[HTMLElement]
+trait CustomElementConstructor
+  extends Instantiable0[org.scalajs.dom.raw.HTMLElement]
 

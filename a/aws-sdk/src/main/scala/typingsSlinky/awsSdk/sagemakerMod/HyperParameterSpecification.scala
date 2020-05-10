@@ -38,22 +38,89 @@ trait HyperParameterSpecification extends js.Object {
 
 object HyperParameterSpecification {
   @scala.inline
-  def apply(
-    Name: ParameterName,
-    Type: ParameterType,
-    DefaultValue: ParameterValue = null,
-    Description: EntityDescription = null,
-    IsRequired: js.UndefOr[scala.Boolean] = js.undefined,
-    IsTunable: js.UndefOr[scala.Boolean] = js.undefined,
-    Range: ParameterRange = null
-  ): HyperParameterSpecification = {
+  def apply(Name: ParameterName, Type: ParameterType): HyperParameterSpecification = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
-    if (DefaultValue != null) __obj.updateDynamic("DefaultValue")(DefaultValue.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsRequired)) __obj.updateDynamic("IsRequired")(IsRequired.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsTunable)) __obj.updateDynamic("IsTunable")(IsTunable.asInstanceOf[js.Any])
-    if (Range != null) __obj.updateDynamic("Range")(Range.asInstanceOf[js.Any])
     __obj.asInstanceOf[HyperParameterSpecification]
   }
+  @scala.inline
+  implicit class HyperParameterSpecificationOps[Self <: HyperParameterSpecification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: ParameterName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: ParameterType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: ParameterValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: EntityDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTunable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTunable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTunable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTunable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: ParameterRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

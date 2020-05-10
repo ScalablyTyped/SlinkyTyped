@@ -14,14 +14,12 @@ trait AnchorType extends js.Object
 
 object AnchorType {
   @scala.inline
-  def `bottom-left`: typingsSlinky.openfin.openfinStrings.`bottom-left` = this.cast("bottom-left")
+  def `bottom-left`: typingsSlinky.openfin.openfinStrings.`bottom-left` = "bottom-left".asInstanceOf[typingsSlinky.openfin.openfinStrings.`bottom-left`]
   @scala.inline
-  def `bottom-right`: typingsSlinky.openfin.openfinStrings.`bottom-right` = this.cast("bottom-right")
+  def `bottom-right`: typingsSlinky.openfin.openfinStrings.`bottom-right` = "bottom-right".asInstanceOf[typingsSlinky.openfin.openfinStrings.`bottom-right`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `top-left`: typingsSlinky.openfin.openfinStrings.`top-left` = "top-left".asInstanceOf[typingsSlinky.openfin.openfinStrings.`top-left`]
   @scala.inline
-  def `top-left`: typingsSlinky.openfin.openfinStrings.`top-left` = this.cast("top-left")
-  @scala.inline
-  def `top-right`: typingsSlinky.openfin.openfinStrings.`top-right` = this.cast("top-right")
+  def `top-right`: typingsSlinky.openfin.openfinStrings.`top-right` = "top-right".asInstanceOf[typingsSlinky.openfin.openfinStrings.`top-right`]
 }
 

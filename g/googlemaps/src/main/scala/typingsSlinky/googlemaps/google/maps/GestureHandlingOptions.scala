@@ -14,14 +14,12 @@ trait GestureHandlingOptions extends js.Object
 
 object GestureHandlingOptions {
   @scala.inline
-  def auto: typingsSlinky.googlemaps.googlemapsStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.googlemaps.googlemapsStrings.auto = "auto".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cooperative: typingsSlinky.googlemaps.googlemapsStrings.cooperative = "cooperative".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.cooperative]
   @scala.inline
-  def cooperative: typingsSlinky.googlemaps.googlemapsStrings.cooperative = this.cast("cooperative")
+  def greedy: typingsSlinky.googlemaps.googlemapsStrings.greedy = "greedy".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.greedy]
   @scala.inline
-  def greedy: typingsSlinky.googlemaps.googlemapsStrings.greedy = this.cast("greedy")
-  @scala.inline
-  def none: typingsSlinky.googlemaps.googlemapsStrings.none = this.cast("none")
+  def none: typingsSlinky.googlemaps.googlemapsStrings.none = "none".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.none]
 }
 

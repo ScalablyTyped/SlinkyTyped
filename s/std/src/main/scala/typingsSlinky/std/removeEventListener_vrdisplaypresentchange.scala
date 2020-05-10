@@ -17,7 +17,7 @@ object removeEventListener_vrdisplaypresentchange extends js.Object {
   def apply(
     `type`: vrdisplaypresentchange,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

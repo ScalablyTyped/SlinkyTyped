@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.postmanCollection.mod.PropertyBaseDefinition because Already inherited
 - typingsSlinky.postmanCollection.mod.PropertyDefinition because Already inherited
 - typingsSlinky.postmanCollection.mod.ResponseDefinition because var conflicts: description, disabled, id, name. Inlined code, header, cookie, body, stream, responseTime, originalRequest */ @JSImport("postman-collection", "Response")
@@ -25,7 +25,7 @@ class Response protected () extends Property[ResponseDefinition] {
   var responseSize: js.UndefOr[Double] = js.native
   var responseTime: Double = js.native
   var status: String = js.native
-  var stream: js.UndefOr[Buffer | scala.scalajs.js.typedarray.Uint8Array] = js.native
+  var stream: js.UndefOr[Buffer | js.typedarray.Uint8Array] = js.native
   def dataURI(): String = js.native
   def details(): js.UndefOr[AnonCode] = js.native
   def encoding(): AnonFormat = js.native

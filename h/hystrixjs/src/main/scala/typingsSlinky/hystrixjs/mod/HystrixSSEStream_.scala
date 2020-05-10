@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HystrixSSEStream_ extends js.Object {
-  def toCommandJson(metrics: js.Any): String
-  def toObservable(): Observable[_]
+  def toCommandJson(metrics: js.Any): String = js.native
+  def toObservable(): Observable[_] = js.native
 }
 
 object HystrixSSEStream_ {
   @scala.inline
   def apply(toCommandJson: js.Any => String, toObservable: () => Observable[_]): HystrixSSEStream_ = {
     val __obj = js.Dynamic.literal(toCommandJson = js.Any.fromFunction1(toCommandJson), toObservable = js.Any.fromFunction0(toObservable))
-  
     __obj.asInstanceOf[HystrixSSEStream_]
   }
+  @scala.inline
+  implicit class HystrixSSEStream_Ops[Self <: HystrixSSEStream_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withToCommandJson(value: js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toCommandJson")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withToObservable(value: () => Observable[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toObservable")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

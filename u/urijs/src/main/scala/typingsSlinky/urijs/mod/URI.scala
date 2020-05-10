@@ -1,6 +1,5 @@
 package typingsSlinky.urijs.mod
 
-import typingsSlinky.std.RegExp
 import typingsSlinky.urijs.urijsStrings.absolute
 import typingsSlinky.urijs.urijsStrings.domain
 import typingsSlinky.urijs.urijsStrings.idn
@@ -46,6 +45,7 @@ trait URI extends js.Object {
   def equals(): Boolean = js.native
   def equals(url: String): Boolean = js.native
   def equals(url: URI): Boolean = js.native
+  def escapeQuerySpace(`val`: Boolean): URI = js.native
   def filename(): String = js.native
   def filename(file: String): URI = js.native
   def filename(file: Boolean): String = js.native
@@ -63,8 +63,8 @@ trait URI extends js.Object {
   def hasQuery(name: /*string | */ js.Any, value: Boolean, withinArray: Boolean): Boolean = js.native
   def hasQuery(name: /*string | */ js.Any, value: Double): Boolean = js.native
   def hasQuery(name: /*string | */ js.Any, value: Double, withinArray: Boolean): Boolean = js.native
-  def hasQuery(name: /*string | */ js.Any, value: RegExp): Boolean = js.native
-  def hasQuery(name: /*string | */ js.Any, value: RegExp, withinArray: Boolean): Boolean = js.native
+  def hasQuery(name: /*string | */ js.Any, value: js.RegExp): Boolean = js.native
+  def hasQuery(name: /*string | */ js.Any, value: js.RegExp, withinArray: Boolean): Boolean = js.native
   def hasSearch(name: /*string | */ js.Any): Boolean = js.native
   def hasSearch(name: /*string | */ js.Any, value: String): Boolean = js.native
   def hasSearch(name: /*string | */ js.Any, value: String, withinArray: Boolean): Boolean = js.native
@@ -76,8 +76,8 @@ trait URI extends js.Object {
   def hasSearch(name: /*string | */ js.Any, value: Boolean, withinArray: Boolean): Boolean = js.native
   def hasSearch(name: /*string | */ js.Any, value: Double): Boolean = js.native
   def hasSearch(name: /*string | */ js.Any, value: Double, withinArray: Boolean): Boolean = js.native
-  def hasSearch(name: /*string | */ js.Any, value: RegExp): Boolean = js.native
-  def hasSearch(name: /*string | */ js.Any, value: RegExp, withinArray: Boolean): Boolean = js.native
+  def hasSearch(name: /*string | */ js.Any, value: js.RegExp): Boolean = js.native
+  def hasSearch(name: /*string | */ js.Any, value: js.RegExp, withinArray: Boolean): Boolean = js.native
   def hash(): String = js.native
   def hash(hash: String): URI = js.native
   def host(): String = js.native
@@ -113,6 +113,7 @@ trait URI extends js.Object {
   def pathname(path: Boolean): String = js.native
   def port(): String = js.native
   def port(port: String): URI = js.native
+  def preventInvalidHostname(`val`: Boolean): URI = js.native
   def protocol(): String = js.native
   def protocol(protocol: String): URI = js.native
   def query(): String = js.native

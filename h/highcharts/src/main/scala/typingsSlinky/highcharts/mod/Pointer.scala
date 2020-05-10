@@ -1,7 +1,8 @@
 package typingsSlinky.highcharts.mod
 
-import typingsSlinky.std.PointerEvent
-import typingsSlinky.std.TouchEvent
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.PointerEvent
+import org.scalajs.dom.raw.TouchEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,8 +73,8 @@ class Pointer protected () extends js.Object {
     * @return True if either the element or one of its parents has the given
     *         class name.
     */
-  def inClass(element: HTMLDOMElement, className: String): js.UndefOr[Boolean] = js.native
-  def inClass(element: SVGDOMElement, className: String): js.UndefOr[Boolean] = js.native
+  def inClass(element: HTMLElement, className: String): js.UndefOr[Boolean] = js.native
+  def inClass(element: org.scalajs.dom.raw.SVGElement, className: String): js.UndefOr[Boolean] = js.native
   /**
     * Takes a browser event object and extends it with custom Highcharts
     * properties `chartX` and `chartY` in order to work on the internal

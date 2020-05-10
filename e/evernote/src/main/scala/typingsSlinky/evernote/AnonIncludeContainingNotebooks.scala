@@ -6,42 +6,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIncludeContainingNotebooks extends js.Object {
-  var includeContainingNotebooks: js.UndefOr[Boolean] = js.undefined
-  var includeDebugInfo: js.UndefOr[Boolean] = js.undefined
-  var maxExperts: js.UndefOr[Double] = js.undefined
-  var maxNotebooks: js.UndefOr[Double] = js.undefined
-  var maxNotes: js.UndefOr[Double] = js.undefined
-  var maxRelatedContent: js.UndefOr[Double] = js.undefined
-  var maxTags: js.UndefOr[Double] = js.undefined
-  var relatedContentTypes: js.UndefOr[Set[RelatedContentType]] = js.undefined
-  var writableNotebooksOnly: js.UndefOr[Boolean] = js.undefined
+  var includeContainingNotebooks: js.UndefOr[Boolean] = js.native
+  var includeDebugInfo: js.UndefOr[Boolean] = js.native
+  var maxExperts: js.UndefOr[Double] = js.native
+  var maxNotebooks: js.UndefOr[Double] = js.native
+  var maxNotes: js.UndefOr[Double] = js.native
+  var maxRelatedContent: js.UndefOr[Double] = js.native
+  var maxTags: js.UndefOr[Double] = js.native
+  var relatedContentTypes: js.UndefOr[Set[RelatedContentType]] = js.native
+  var writableNotebooksOnly: js.UndefOr[Boolean] = js.native
 }
 
 object AnonIncludeContainingNotebooks {
   @scala.inline
-  def apply(
-    includeContainingNotebooks: js.UndefOr[Boolean] = js.undefined,
-    includeDebugInfo: js.UndefOr[Boolean] = js.undefined,
-    maxExperts: Int | Double = null,
-    maxNotebooks: Int | Double = null,
-    maxNotes: Int | Double = null,
-    maxRelatedContent: Int | Double = null,
-    maxTags: Int | Double = null,
-    relatedContentTypes: Set[RelatedContentType] = null,
-    writableNotebooksOnly: js.UndefOr[Boolean] = js.undefined
-  ): AnonIncludeContainingNotebooks = {
+  def apply(): AnonIncludeContainingNotebooks = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(includeContainingNotebooks)) __obj.updateDynamic("includeContainingNotebooks")(includeContainingNotebooks.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeDebugInfo)) __obj.updateDynamic("includeDebugInfo")(includeDebugInfo.asInstanceOf[js.Any])
-    if (maxExperts != null) __obj.updateDynamic("maxExperts")(maxExperts.asInstanceOf[js.Any])
-    if (maxNotebooks != null) __obj.updateDynamic("maxNotebooks")(maxNotebooks.asInstanceOf[js.Any])
-    if (maxNotes != null) __obj.updateDynamic("maxNotes")(maxNotes.asInstanceOf[js.Any])
-    if (maxRelatedContent != null) __obj.updateDynamic("maxRelatedContent")(maxRelatedContent.asInstanceOf[js.Any])
-    if (maxTags != null) __obj.updateDynamic("maxTags")(maxTags.asInstanceOf[js.Any])
-    if (relatedContentTypes != null) __obj.updateDynamic("relatedContentTypes")(relatedContentTypes.asInstanceOf[js.Any])
-    if (!js.isUndefined(writableNotebooksOnly)) __obj.updateDynamic("writableNotebooksOnly")(writableNotebooksOnly.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonIncludeContainingNotebooks]
   }
+  @scala.inline
+  implicit class AnonIncludeContainingNotebooksOps[Self <: AnonIncludeContainingNotebooks] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIncludeContainingNotebooks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeContainingNotebooks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeContainingNotebooks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeContainingNotebooks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeDebugInfo(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDebugInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeDebugInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDebugInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxExperts(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxExperts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxExperts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxExperts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxNotebooks(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNotebooks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxNotebooks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNotebooks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxNotes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNotes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxNotes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRelatedContent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRelatedContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRelatedContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxRelatedContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTags(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelatedContentTypes(value: Set[RelatedContentType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedContentTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelatedContentTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedContentTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWritableNotebooksOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writableNotebooksOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWritableNotebooksOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writableNotebooksOnly")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

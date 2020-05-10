@@ -26,12 +26,53 @@ trait SchemaCollectionOverride extends js.Object {
 
 object SchemaCollectionOverride {
   @scala.inline
-  def apply(collection: String = null, methodMap: SchemaMethodMap = null, options: SchemaOptions = null): SchemaCollectionOverride = {
+  def apply(): SchemaCollectionOverride = {
     val __obj = js.Dynamic.literal()
-    if (collection != null) __obj.updateDynamic("collection")(collection.asInstanceOf[js.Any])
-    if (methodMap != null) __obj.updateDynamic("methodMap")(methodMap.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCollectionOverride]
   }
+  @scala.inline
+  implicit class SchemaCollectionOverrideOps[Self <: SchemaCollectionOverride] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethodMap(value: SchemaMethodMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("methodMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethodMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("methodMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: SchemaOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

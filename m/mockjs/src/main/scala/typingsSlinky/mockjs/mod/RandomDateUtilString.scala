@@ -19,20 +19,18 @@ trait RandomDateUtilString extends js.Object
 
 object RandomDateUtilString {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.mockjs.mockjsStrings.day = "day".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.day]
   @scala.inline
-  def day: typingsSlinky.mockjs.mockjsStrings.day = this.cast("day")
+  def hour: typingsSlinky.mockjs.mockjsStrings.hour = "hour".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.mockjs.mockjsStrings.hour = this.cast("hour")
+  def minute: typingsSlinky.mockjs.mockjsStrings.minute = "minute".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.mockjs.mockjsStrings.minute = this.cast("minute")
+  def month: typingsSlinky.mockjs.mockjsStrings.month = "month".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.month]
   @scala.inline
-  def month: typingsSlinky.mockjs.mockjsStrings.month = this.cast("month")
+  def second: typingsSlinky.mockjs.mockjsStrings.second = "second".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.second]
   @scala.inline
-  def second: typingsSlinky.mockjs.mockjsStrings.second = this.cast("second")
+  def week: typingsSlinky.mockjs.mockjsStrings.week = "week".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.week]
   @scala.inline
-  def week: typingsSlinky.mockjs.mockjsStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.mockjs.mockjsStrings.year = this.cast("year")
+  def year: typingsSlinky.mockjs.mockjsStrings.year = "year".asInstanceOf[typingsSlinky.mockjs.mockjsStrings.year]
 }
 

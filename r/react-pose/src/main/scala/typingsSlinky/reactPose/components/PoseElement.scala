@@ -1,9 +1,8 @@
 package typingsSlinky.reactPose.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.Element
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionConfig
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionPoser
 import typingsSlinky.reactPose.AnonCurrent
@@ -16,42 +15,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PoseElement
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactPose.poseElementMod.PoseElement] {
+object PoseElement {
   @JSImport("react-pose/lib/components/PoseElement", "PoseElement")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    elementType: js.Any,
-    poseConfig: DomPopmotionConfig | ConfigFactory,
-    _pose: CurrentPose = null,
-    getInitialPoseFromParent: () => CurrentPose | Unit = null,
-    getParentPoseConfig: () => DomPopmotionConfig = null,
-    initialPose: CurrentPose = null,
-    innerRef: AnonCurrent | RefFunc = null,
-    onPoseComplete: /* pose */ CurrentPose => _ = null,
-    onUnmount: /* child */ DomPopmotionPoser => _ = null,
-    pose: CurrentPose = null,
-    registerChild: /* props */ ChildRegistration => Unit = null,
-    withParent: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactPose.poseElementMod.PoseElement] = {
-    val __obj = js.Dynamic.literal(elementType = elementType.asInstanceOf[js.Any], poseConfig = poseConfig.asInstanceOf[js.Any])
-    if (_pose != null) __obj.updateDynamic("_pose")(_pose.asInstanceOf[js.Any])
-    if (getInitialPoseFromParent != null) __obj.updateDynamic("getInitialPoseFromParent")(js.Any.fromFunction0(getInitialPoseFromParent))
-    if (getParentPoseConfig != null) __obj.updateDynamic("getParentPoseConfig")(js.Any.fromFunction0(getParentPoseConfig))
-    if (initialPose != null) __obj.updateDynamic("initialPose")(initialPose.asInstanceOf[js.Any])
-    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (onPoseComplete != null) __obj.updateDynamic("onPoseComplete")(js.Any.fromFunction1(onPoseComplete))
-    if (onUnmount != null) __obj.updateDynamic("onUnmount")(js.Any.fromFunction1(onUnmount))
-    if (pose != null) __obj.updateDynamic("pose")(pose.asInstanceOf[js.Any])
-    if (registerChild != null) __obj.updateDynamic("registerChild")(js.Any.fromFunction1(registerChild))
-    if (!js.isUndefined(withParent)) __obj.updateDynamic("withParent")(withParent.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactPose.poseElementMod.PoseElement] {
+    @scala.inline
+    def _pose(value: CurrentPose): this.type = set("_pose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getInitialPoseFromParent(value: () => CurrentPose | Unit): this.type = set("getInitialPoseFromParent", js.Any.fromFunction0(value))
+    @scala.inline
+    def getParentPoseConfig(value: () => DomPopmotionConfig): this.type = set("getParentPoseConfig", js.Any.fromFunction0(value))
+    @scala.inline
+    def initialPose(value: CurrentPose): this.type = set("initialPose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefFunction1(value: /* el */ Element => js.Any): this.type = set("innerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def innerRef(value: AnonCurrent | RefFunc): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPoseComplete(value: /* pose */ CurrentPose => _): this.type = set("onPoseComplete", js.Any.fromFunction1(value))
+    @scala.inline
+    def onUnmount(value: /* child */ DomPopmotionPoser => _): this.type = set("onUnmount", js.Any.fromFunction1(value))
+    @scala.inline
+    def pose(value: CurrentPose): this.type = set("pose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def registerChild(value: /* props */ ChildRegistration => Unit): this.type = set("registerChild", js.Any.fromFunction1(value))
+    @scala.inline
+    def withParent(value: Boolean): this.type = set("withParent", value.asInstanceOf[js.Any])
   }
-  type Props = PoseElementInternalProps
+  
+  def withProps(p: PoseElementInternalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(elementType: js.Any, poseConfig: DomPopmotionConfig | ConfigFactory): Builder = {
+    val __props = js.Dynamic.literal(elementType = elementType.asInstanceOf[js.Any], poseConfig = poseConfig.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PoseElementInternalProps]))
+  }
 }
 

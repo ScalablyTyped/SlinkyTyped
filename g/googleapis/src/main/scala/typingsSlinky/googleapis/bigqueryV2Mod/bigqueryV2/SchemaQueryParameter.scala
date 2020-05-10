@@ -23,16 +23,53 @@ trait SchemaQueryParameter extends js.Object {
 
 object SchemaQueryParameter {
   @scala.inline
-  def apply(
-    name: String = null,
-    parameterType: SchemaQueryParameterType = null,
-    parameterValue: SchemaQueryParameterValue = null
-  ): SchemaQueryParameter = {
+  def apply(): SchemaQueryParameter = {
     val __obj = js.Dynamic.literal()
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (parameterType != null) __obj.updateDynamic("parameterType")(parameterType.asInstanceOf[js.Any])
-    if (parameterValue != null) __obj.updateDynamic("parameterValue")(parameterValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQueryParameter]
   }
+  @scala.inline
+  implicit class SchemaQueryParameterOps[Self <: SchemaQueryParameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterType(value: SchemaQueryParameterType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterValue(value: SchemaQueryParameterValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

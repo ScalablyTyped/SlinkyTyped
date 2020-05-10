@@ -1,10 +1,7 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.auto
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.baseline
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.center
@@ -25,42 +22,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StackItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object StackItem {
   @JSImport("office-ui-fabric-react/lib/components/Stack/StackItem/StackItem", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    align: auto | stretch | baseline | start | center | end = null,
-    disableShrink: js.UndefOr[Boolean] = js.undefined,
-    grow: Boolean | Double | inherit | initial | unset = null,
-    order: Double | String = null,
-    root: IHTMLSlot = null,
-    shrink: Boolean | Double | inherit | initial | unset = null,
-    styles: IStylesFunctionOrObject[IStackItemProps, IStackItemTokens, IStackItemStyles] = null,
-    theme: ITheme = null,
-    tokens: ITokenFunctionOrObject[IStackItemProps, IStackItemTokens] = null,
-    verticalFill: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableShrink)) __obj.updateDynamic("disableShrink")(disableShrink.asInstanceOf[js.Any])
-    if (grow != null) __obj.updateDynamic("grow")(grow.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (shrink != null) __obj.updateDynamic("shrink")(shrink.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tokens != null) __obj.updateDynamic("tokens")(tokens.asInstanceOf[js.Any])
-    if (!js.isUndefined(verticalFill)) __obj.updateDynamic("verticalFill")(verticalFill.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def align(value: auto | stretch | baseline | start | center | end): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableShrink(value: Boolean): this.type = set("disableShrink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def grow(value: Boolean | Double | inherit | initial | unset): this.type = set("grow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def order(value: Double | String): this.type = set("order", value.asInstanceOf[js.Any])
+    @scala.inline
+    def root(value: IHTMLSlot): this.type = set("root", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shrink(value: Boolean | Double | inherit | initial | unset): this.type = set("shrink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction3(value: (IStackItemProps, /* theme */ ITheme, IStackItemTokens) => IStackItemStyles): this.type = set("styles", js.Any.fromFunction3(value))
+    @scala.inline
+    def styles(value: IStylesFunctionOrObject[IStackItemProps, IStackItemTokens, IStackItemStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tokens(value: ITokenFunctionOrObject[IStackItemProps, IStackItemTokens]): this.type = set("tokens", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalFill(value: Boolean): this.type = set("verticalFill", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IStackItemProps
+  
+  def withProps(p: IStackItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StackItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

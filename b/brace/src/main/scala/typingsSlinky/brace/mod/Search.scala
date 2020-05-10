@@ -5,21 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Search extends js.Object {
   /**
     * Searches for `options.needle`. If found, this method returns the [[Range `Range`]] where the text first occurs. If `options.backwards` is `true`, the search goes backwards in the session.
     * @param session The session to search with
     **/
-  def find(session: IEditSession): Range
+  def find(session: IEditSession): Range = js.native
   /**
     * Searches for all occurances `options.needle`. If found, this method returns an array of [[Range `Range`s]] where the text first occurs. If `options.backwards` is `true`, the search goes backwards in the session.
     * @param session The session to search with
     **/
-  def findAll(session: IEditSession): js.Array[Range]
+  def findAll(session: IEditSession): js.Array[Range] = js.native
   /**
     * [Returns an object containing all the search options.]{: #Search.getOptions}
     **/
-  def getOptions(): js.Any
+  def getOptions(): js.Any = js.native
   /**
     * Searches for `options.needle` in `input`, and, if found, replaces it with `replacement`.
     * @param input The text to search in
@@ -27,17 +28,17 @@ trait Search extends js.Object {
     * + (String): If `options.regExp` is `true`, this function returns `input` with the replacement already made. Otherwise, this function just returns `replacement`.<br/>
     * If `options.needle` was not found, this function returns `null`.
     **/
-  def replace(input: String, replacement: String): String
+  def replace(input: String, replacement: String): String = js.native
   /**
     * Sets the search options via the `options` parameter.
     * @param options An object containing all the new search properties
     **/
-  def set(options: js.Any): Search
+  def set(options: js.Any): Search = js.native
   /**
     * Sets the search options via the `options` parameter.
     * @param An object containing all the search propertie
     **/
-  def setOptions(An: js.Any): Unit
+  def setOptions(An: js.Any): Unit = js.native
 }
 
 @JSImport("brace", "Search")

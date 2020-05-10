@@ -32,12 +32,53 @@ trait SchemaInterconnectAttachmentPartnerMetadata extends js.Object {
 
 object SchemaInterconnectAttachmentPartnerMetadata {
   @scala.inline
-  def apply(interconnectName: String = null, partnerName: String = null, portalUrl: String = null): SchemaInterconnectAttachmentPartnerMetadata = {
+  def apply(): SchemaInterconnectAttachmentPartnerMetadata = {
     val __obj = js.Dynamic.literal()
-    if (interconnectName != null) __obj.updateDynamic("interconnectName")(interconnectName.asInstanceOf[js.Any])
-    if (partnerName != null) __obj.updateDynamic("partnerName")(partnerName.asInstanceOf[js.Any])
-    if (portalUrl != null) __obj.updateDynamic("portalUrl")(portalUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInterconnectAttachmentPartnerMetadata]
   }
+  @scala.inline
+  implicit class SchemaInterconnectAttachmentPartnerMetadataOps[Self <: SchemaInterconnectAttachmentPartnerMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInterconnectName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interconnectName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterconnectName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interconnectName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartnerName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partnerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartnerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partnerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortalUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portalUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortalUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portalUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

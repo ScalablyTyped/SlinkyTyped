@@ -1,11 +1,11 @@
 package typingsSlinky.reactBootstrapTypeahead.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLUListElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.html.ul.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadLabelKey
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenuProps
@@ -15,39 +15,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TypeaheadMenu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenu[js.Any]] {
+object TypeaheadMenu {
   @JSImport("react-bootstrap-typeahead", "TypeaheadMenu")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply[T /* <: TypeaheadModel */](
-    id: String,
-    options: js.Array[T],
-    emptyLabel: String = null,
-    innerRef: LegacyRef[HTMLUListElement] = null,
-    labelKey: TypeaheadLabelKey[T] = null,
-    maxHeight: String = null,
-    newSelectionPrefix: String = null,
-    renderMenuItemChildren: (/* option */ TypeaheadResult[T], /* props */ TypeaheadMenuProps[T], /* index */ Double) => TagMod[Any] = null,
-    text: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenu[js.Any]] = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
-    if (emptyLabel != null) __obj.updateDynamic("emptyLabel")(emptyLabel.asInstanceOf[js.Any])
-    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (labelKey != null) __obj.updateDynamic("labelKey")(labelKey.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (newSelectionPrefix != null) __obj.updateDynamic("newSelectionPrefix")(newSelectionPrefix.asInstanceOf[js.Any])
-    if (renderMenuItemChildren != null) __obj.updateDynamic("renderMenuItemChildren")(js.Any.fromFunction3(renderMenuItemChildren))
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.ul.tag.type, 
-  typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenu[js.Any]]]
+  @scala.inline
+  class Builder[T <: TypeaheadModel] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenu[js.Any]] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyLabel(value: String): this.type = set("emptyLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ HTMLUListElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def innerRef(value: LegacyRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
+    @scala.inline
+    def labelKeyFunction1(value: T => String): this.type = set("labelKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelKey(value: TypeaheadLabelKey[T]): this.type = set("labelKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxHeight(value: String): this.type = set("maxHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def newSelectionPrefix(value: String): this.type = set("newSelectionPrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderMenuItemChildren(
+      value: (/* option */ TypeaheadResult[T], /* props */ TypeaheadMenuProps[T], /* index */ Double) => TagMod[Any]
+    ): this.type = set("renderMenuItemChildren", js.Any.fromFunction3(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
   }
-  type Props = TypeaheadMenuProps[js.Any]
+  
+  def withProps[T <: TypeaheadModel](p: TypeaheadMenuProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T <: TypeaheadModel](id: String, options: js.Array[T]): Builder[T] = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[TypeaheadMenuProps[T]]))
+  }
 }
 

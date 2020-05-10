@@ -4,21 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListOptions extends BasicListOptions {
   /**
     * Restricts results to those created after the given id.
     */
-  var since_id: js.UndefOr[Double] = js.undefined
+  var since_id: js.UndefOr[Double] = js.native
 }
 
 object ListOptions {
   @scala.inline
-  def apply(limit: Int | Double = null, page: Int | Double = null, since_id: Int | Double = null): ListOptions = {
+  def apply(): ListOptions = {
     val __obj = js.Dynamic.literal()
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (since_id != null) __obj.updateDynamic("since_id")(since_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListOptions]
   }
+  @scala.inline
+  implicit class ListOptionsOps[Self <: ListOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSince_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("since_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSince_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("since_id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

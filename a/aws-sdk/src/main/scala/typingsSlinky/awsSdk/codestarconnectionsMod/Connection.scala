@@ -30,20 +30,77 @@ trait Connection extends js.Object {
 
 object Connection {
   @scala.inline
-  def apply(
-    ConnectionArn: ConnectionArn = null,
-    ConnectionName: ConnectionName = null,
-    ConnectionStatus: ConnectionStatus = null,
-    OwnerAccountId: AccountId = null,
-    ProviderType: ProviderType = null
-  ): Connection = {
+  def apply(): Connection = {
     val __obj = js.Dynamic.literal()
-    if (ConnectionArn != null) __obj.updateDynamic("ConnectionArn")(ConnectionArn.asInstanceOf[js.Any])
-    if (ConnectionName != null) __obj.updateDynamic("ConnectionName")(ConnectionName.asInstanceOf[js.Any])
-    if (ConnectionStatus != null) __obj.updateDynamic("ConnectionStatus")(ConnectionStatus.asInstanceOf[js.Any])
-    if (OwnerAccountId != null) __obj.updateDynamic("OwnerAccountId")(OwnerAccountId.asInstanceOf[js.Any])
-    if (ProviderType != null) __obj.updateDynamic("ProviderType")(ProviderType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Connection]
   }
+  @scala.inline
+  implicit class ConnectionOps[Self <: Connection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionArn(value: ConnectionArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionName(value: ConnectionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionStatus(value: ConnectionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerAccountId(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProviderType(value: ProviderType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProviderType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProviderType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

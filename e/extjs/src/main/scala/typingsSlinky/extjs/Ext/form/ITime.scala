@@ -4,77 +4,213 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ITime
   extends typingsSlinky.extjs.Ext.form.field.IComboBox {
   /** [Config Option] (String) */
-  var altFormats: js.UndefOr[String] = js.undefined
+  var altFormats: js.UndefOr[String] = js.native
   /** [Config Option] (String) */
-  var format: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[String] = js.native
   /** [Config Option] (Number) */
-  var increment: js.UndefOr[Double] = js.undefined
+  var increment: js.UndefOr[Double] = js.native
   /** [Config Option] (String) */
-  var maxText: js.UndefOr[String] = js.undefined
+  var maxText: js.UndefOr[String] = js.native
   /** [Config Option] (Date/String) */
-  var maxValue: js.UndefOr[js.Any] = js.undefined
+  var maxValue: js.UndefOr[js.Any] = js.native
   /** [Config Option] (String) */
-  var minText: js.UndefOr[String] = js.undefined
+  var minText: js.UndefOr[String] = js.native
   /** [Config Option] (Date/String) */
-  var minValue: js.UndefOr[js.Any] = js.undefined
+  var minValue: js.UndefOr[js.Any] = js.native
   /** [Config Option] (Number) */
-  var pickerMaxHeight: js.UndefOr[Double] = js.undefined
+  var pickerMaxHeight: js.UndefOr[Double] = js.native
   /** [Method] Replaces any existing maxValue with the new time and refreshes the picker s range
   		* @param value Date/String The maximum time that can be selected
   		*/
-  var setMaxValue: js.UndefOr[js.Function1[/* value */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setMaxValue: js.UndefOr[js.Function1[/* value */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Replaces any existing minValue with the new time and refreshes the picker s range
   		* @param value Date/String The minimum time that can be selected
   		*/
-  var setMinValue: js.UndefOr[js.Function1[/* value */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setMinValue: js.UndefOr[js.Function1[/* value */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the specified value s into the field
   		* @returns any this
   		*/
   @JSName("setValue")
-  var setValue_ITime: js.UndefOr[js.Function0[_]] = js.undefined
+  var setValue_ITime: js.UndefOr[js.Function0[_]] = js.native
   /** [Config Option] (Boolean) */
-  var snapToIncrement: js.UndefOr[Boolean] = js.undefined
+  var snapToIncrement: js.UndefOr[Boolean] = js.native
   /** [Config Option] (String) */
-  var submitFormat: js.UndefOr[String] = js.undefined
+  var submitFormat: js.UndefOr[String] = js.native
 }
 
 object ITime {
   @scala.inline
-  def apply(
-    IComboBox: typingsSlinky.extjs.Ext.form.field.IComboBox = null,
-    altFormats: String = null,
-    format: String = null,
-    increment: Int | Double = null,
-    maxText: String = null,
-    maxValue: js.Any = null,
-    minText: String = null,
-    minValue: js.Any = null,
-    pickerMaxHeight: Int | Double = null,
-    setMaxValue: /* value */ js.UndefOr[js.Any] => Unit = null,
-    setMinValue: /* value */ js.UndefOr[js.Any] => Unit = null,
-    setValue: () => _ = null,
-    snapToIncrement: js.UndefOr[Boolean] = js.undefined,
-    submitFormat: String = null
-  ): ITime = {
+  def apply(): ITime = {
     val __obj = js.Dynamic.literal()
-    if (IComboBox != null) js.Dynamic.global.Object.assign(__obj, IComboBox)
-    if (altFormats != null) __obj.updateDynamic("altFormats")(altFormats.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (increment != null) __obj.updateDynamic("increment")(increment.asInstanceOf[js.Any])
-    if (maxText != null) __obj.updateDynamic("maxText")(maxText.asInstanceOf[js.Any])
-    if (maxValue != null) __obj.updateDynamic("maxValue")(maxValue.asInstanceOf[js.Any])
-    if (minText != null) __obj.updateDynamic("minText")(minText.asInstanceOf[js.Any])
-    if (minValue != null) __obj.updateDynamic("minValue")(minValue.asInstanceOf[js.Any])
-    if (pickerMaxHeight != null) __obj.updateDynamic("pickerMaxHeight")(pickerMaxHeight.asInstanceOf[js.Any])
-    if (setMaxValue != null) __obj.updateDynamic("setMaxValue")(js.Any.fromFunction1(setMaxValue))
-    if (setMinValue != null) __obj.updateDynamic("setMinValue")(js.Any.fromFunction1(setMinValue))
-    if (setValue != null) __obj.updateDynamic("setValue")(js.Any.fromFunction0(setValue))
-    if (!js.isUndefined(snapToIncrement)) __obj.updateDynamic("snapToIncrement")(snapToIncrement.asInstanceOf[js.Any])
-    if (submitFormat != null) __obj.updateDynamic("submitFormat")(submitFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[ITime]
   }
+  @scala.inline
+  implicit class ITimeOps[Self <: ITime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAltFormats(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altFormats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAltFormats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altFormats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncrement(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncrement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("increment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPickerMaxHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerMaxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPickerMaxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickerMaxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetMaxValue(value: /* value */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetMaxValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetMinValue(value: /* value */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetMinValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetValue(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapToIncrement(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapToIncrement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapToIncrement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapToIncrement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubmitFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubmitFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("submitFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

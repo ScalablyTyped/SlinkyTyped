@@ -1,92 +1,347 @@
 package typingsSlinky.recharts.mod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.recharts.PartialMargin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CategoricalChartWrapper[L] extends js.Object {
-  var barCategoryGap: js.UndefOr[Double | String] = js.undefined
-  var barGap: js.UndefOr[Double | String] = js.undefined
-  var barSize: js.UndefOr[Double | String] = js.undefined
-  var baseValue: js.UndefOr[BaseValueType] = js.undefined
-  var children: js.UndefOr[TagMod[Any] | js.Array[TagMod[Any]]] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var compact: js.UndefOr[Boolean] = js.undefined
-  var data: js.UndefOr[js.Array[js.Object]] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var layout: js.UndefOr[L] = js.undefined
-  var margin: js.UndefOr[PartialMargin] = js.undefined
-  var maxBarSize: js.UndefOr[Double] = js.undefined
-  var onClick: js.UndefOr[RechartsFunction] = js.undefined
-  var onMouseDown: js.UndefOr[RechartsFunction] = js.undefined
-  var onMouseEnter: js.UndefOr[RechartsFunction] = js.undefined
-  var onMouseLeave: js.UndefOr[RechartsFunction] = js.undefined
-  var onMouseMove: js.UndefOr[RechartsFunction] = js.undefined
-  var onMouseUp: js.UndefOr[RechartsFunction] = js.undefined
-  var reverseStackOrder: js.UndefOr[Boolean] = js.undefined
-  var stackOffset: js.UndefOr[StackOffsetType] = js.undefined
-  var style: js.UndefOr[js.Object] = js.undefined
-  var syncId: js.UndefOr[String | Double] = js.undefined
-  var throttleDelay: js.UndefOr[Double] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var barCategoryGap: js.UndefOr[Double | String] = js.native
+  var barGap: js.UndefOr[Double | String] = js.native
+  var barSize: js.UndefOr[Double | String] = js.native
+  var baseValue: js.UndefOr[BaseValueType] = js.native
+  var children: js.UndefOr[TagMod[Any] | js.Array[TagMod[Any]]] = js.native
+  var className: js.UndefOr[String] = js.native
+  var compact: js.UndefOr[Boolean] = js.native
+  var data: js.UndefOr[js.Array[js.Object]] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var layout: js.UndefOr[L] = js.native
+  var margin: js.UndefOr[PartialMargin] = js.native
+  var maxBarSize: js.UndefOr[Double] = js.native
+  var onClick: js.UndefOr[RechartsFunction] = js.native
+  var onMouseDown: js.UndefOr[RechartsFunction] = js.native
+  var onMouseEnter: js.UndefOr[RechartsFunction] = js.native
+  var onMouseLeave: js.UndefOr[RechartsFunction] = js.native
+  var onMouseMove: js.UndefOr[RechartsFunction] = js.native
+  var onMouseUp: js.UndefOr[RechartsFunction] = js.native
+  var reverseStackOrder: js.UndefOr[Boolean] = js.native
+  var stackOffset: js.UndefOr[StackOffsetType] = js.native
+  var style: js.UndefOr[js.Object] = js.native
+  var syncId: js.UndefOr[String | Double] = js.native
+  var throttleDelay: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object CategoricalChartWrapper {
   @scala.inline
-  def apply[L](
-    barCategoryGap: Double | String = null,
-    barGap: Double | String = null,
-    barSize: Double | String = null,
-    baseValue: BaseValueType = null,
-    children: TagMod[Any] | js.Array[TagMod[Any]] = null,
-    className: String = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    data: js.Array[js.Object] = null,
-    height: Int | Double = null,
-    layout: L = null,
-    margin: PartialMargin = null,
-    maxBarSize: Int | Double = null,
-    onClick: /* repeated */ js.Any => Unit = null,
-    onMouseDown: /* repeated */ js.Any => Unit = null,
-    onMouseEnter: /* repeated */ js.Any => Unit = null,
-    onMouseLeave: /* repeated */ js.Any => Unit = null,
-    onMouseMove: /* repeated */ js.Any => Unit = null,
-    onMouseUp: /* repeated */ js.Any => Unit = null,
-    reverseStackOrder: js.UndefOr[Boolean] = js.undefined,
-    stackOffset: StackOffsetType = null,
-    style: js.Object = null,
-    syncId: String | Double = null,
-    throttleDelay: Int | Double = null,
-    width: Int | Double = null
-  ): CategoricalChartWrapper[L] = {
+  def apply[L](): CategoricalChartWrapper[L] = {
     val __obj = js.Dynamic.literal()
-    if (barCategoryGap != null) __obj.updateDynamic("barCategoryGap")(barCategoryGap.asInstanceOf[js.Any])
-    if (barGap != null) __obj.updateDynamic("barGap")(barGap.asInstanceOf[js.Any])
-    if (barSize != null) __obj.updateDynamic("barSize")(barSize.asInstanceOf[js.Any])
-    if (baseValue != null) __obj.updateDynamic("baseValue")(baseValue.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (maxBarSize != null) __obj.updateDynamic("maxBarSize")(maxBarSize.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
-    if (!js.isUndefined(reverseStackOrder)) __obj.updateDynamic("reverseStackOrder")(reverseStackOrder.asInstanceOf[js.Any])
-    if (stackOffset != null) __obj.updateDynamic("stackOffset")(stackOffset.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (syncId != null) __obj.updateDynamic("syncId")(syncId.asInstanceOf[js.Any])
-    if (throttleDelay != null) __obj.updateDynamic("throttleDelay")(throttleDelay.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[CategoricalChartWrapper[L]]
   }
+  @scala.inline
+  implicit class CategoricalChartWrapperOps[Self[l] <: CategoricalChartWrapper[l], L] (val x: Self[L]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[L] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[L]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[L] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[L] with Other]
+    @scala.inline
+    def withBarCategoryGap(value: Double | String): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barCategoryGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarCategoryGap: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barCategoryGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarGap(value: Double | String): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barGap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarGap: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barGap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarSize(value: Double | String): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarSize: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseValue(value: BaseValueType): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseValue: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any] | js.Array[TagMod[Any]]): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompact(value: Boolean): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompact: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[js.Object]): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: L): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: PartialMargin): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBarSize(value: Double): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBarSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBarSize: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBarSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: /* repeated */ js.Any => Unit): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseDown(value: /* repeated */ js.Any => Unit): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseDown: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseEnter(value: /* repeated */ js.Any => Unit): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseEnter: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseLeave(value: /* repeated */ js.Any => Unit): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseLeave: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseMove(value: /* repeated */ js.Any => Unit): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseMove: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnMouseUp(value: /* repeated */ js.Any => Unit): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnMouseUp: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverseStackOrder(value: Boolean): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseStackOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverseStackOrder: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseStackOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackOffset(value: StackOffsetType): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackOffset: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: js.Object): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSyncId(value: String | Double): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyncId: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThrottleDelay(value: Double): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttleDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThrottleDelay: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throttleDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self[L] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

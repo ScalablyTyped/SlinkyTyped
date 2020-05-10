@@ -21,11 +21,41 @@ trait SchemaBucketByActivity extends js.Object {
 
 object SchemaBucketByActivity {
   @scala.inline
-  def apply(activityDataSourceId: String = null, minDurationMillis: String = null): SchemaBucketByActivity = {
+  def apply(): SchemaBucketByActivity = {
     val __obj = js.Dynamic.literal()
-    if (activityDataSourceId != null) __obj.updateDynamic("activityDataSourceId")(activityDataSourceId.asInstanceOf[js.Any])
-    if (minDurationMillis != null) __obj.updateDynamic("minDurationMillis")(minDurationMillis.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBucketByActivity]
   }
+  @scala.inline
+  implicit class SchemaBucketByActivityOps[Self <: SchemaBucketByActivity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActivityDataSourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityDataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityDataSourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityDataSourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDurationMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDurationMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinDurationMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDurationMillis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -39,24 +39,101 @@ trait DomainClusterConfig extends js.Object {
 
 object DomainClusterConfig {
   @scala.inline
-  def apply(
-    dedicatedMasterCount: Input[Double] = null,
-    dedicatedMasterEnabled: Input[Boolean] = null,
-    dedicatedMasterType: Input[String] = null,
-    instanceCount: Input[Double] = null,
-    instanceType: Input[String] = null,
-    zoneAwarenessConfig: Input[DomainClusterConfigZoneAwarenessConfig] = null,
-    zoneAwarenessEnabled: Input[Boolean] = null
-  ): DomainClusterConfig = {
+  def apply(): DomainClusterConfig = {
     val __obj = js.Dynamic.literal()
-    if (dedicatedMasterCount != null) __obj.updateDynamic("dedicatedMasterCount")(dedicatedMasterCount.asInstanceOf[js.Any])
-    if (dedicatedMasterEnabled != null) __obj.updateDynamic("dedicatedMasterEnabled")(dedicatedMasterEnabled.asInstanceOf[js.Any])
-    if (dedicatedMasterType != null) __obj.updateDynamic("dedicatedMasterType")(dedicatedMasterType.asInstanceOf[js.Any])
-    if (instanceCount != null) __obj.updateDynamic("instanceCount")(instanceCount.asInstanceOf[js.Any])
-    if (instanceType != null) __obj.updateDynamic("instanceType")(instanceType.asInstanceOf[js.Any])
-    if (zoneAwarenessConfig != null) __obj.updateDynamic("zoneAwarenessConfig")(zoneAwarenessConfig.asInstanceOf[js.Any])
-    if (zoneAwarenessEnabled != null) __obj.updateDynamic("zoneAwarenessEnabled")(zoneAwarenessEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainClusterConfig]
   }
+  @scala.inline
+  implicit class DomainClusterConfigOps[Self <: DomainClusterConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDedicatedMasterCount(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dedicatedMasterCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDedicatedMasterCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dedicatedMasterCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDedicatedMasterEnabled(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dedicatedMasterEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDedicatedMasterEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dedicatedMasterEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDedicatedMasterType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dedicatedMasterType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDedicatedMasterType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dedicatedMasterType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceCount(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoneAwarenessConfig(value: Input[DomainClusterConfigZoneAwarenessConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneAwarenessConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoneAwarenessConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneAwarenessConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoneAwarenessEnabled(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneAwarenessEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoneAwarenessEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneAwarenessEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

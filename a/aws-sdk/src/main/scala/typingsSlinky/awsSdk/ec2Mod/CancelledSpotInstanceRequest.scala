@@ -18,11 +18,41 @@ trait CancelledSpotInstanceRequest extends js.Object {
 
 object CancelledSpotInstanceRequest {
   @scala.inline
-  def apply(SpotInstanceRequestId: String = null, State: CancelSpotInstanceRequestState = null): CancelledSpotInstanceRequest = {
+  def apply(): CancelledSpotInstanceRequest = {
     val __obj = js.Dynamic.literal()
-    if (SpotInstanceRequestId != null) __obj.updateDynamic("SpotInstanceRequestId")(SpotInstanceRequestId.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
     __obj.asInstanceOf[CancelledSpotInstanceRequest]
   }
+  @scala.inline
+  implicit class CancelledSpotInstanceRequestOps[Self <: CancelledSpotInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSpotInstanceRequestId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotInstanceRequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpotInstanceRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpotInstanceRequestId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: CancelSpotInstanceRequestState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

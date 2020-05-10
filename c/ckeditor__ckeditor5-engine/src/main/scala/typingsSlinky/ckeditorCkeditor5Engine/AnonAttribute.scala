@@ -4,17 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAttribute extends js.Object {
-  var attribute: js.UndefOr[js.Array[String]] = js.undefined
-  var name: Boolean
+  var attribute: js.UndefOr[js.Array[String]] = js.native
+  var name: Boolean = js.native
 }
 
 object AnonAttribute {
   @scala.inline
-  def apply(name: Boolean, attribute: js.Array[String] = null): AnonAttribute = {
+  def apply(name: Boolean): AnonAttribute = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (attribute != null) __obj.updateDynamic("attribute")(attribute.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAttribute]
   }
+  @scala.inline
+  implicit class AnonAttributeOps[Self <: AnonAttribute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttribute(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttribute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attribute")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

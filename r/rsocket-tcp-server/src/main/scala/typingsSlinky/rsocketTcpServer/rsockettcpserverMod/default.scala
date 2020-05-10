@@ -1,8 +1,6 @@
 package typingsSlinky.rsocketTcpServer.rsockettcpserverMod
 
 import typingsSlinky.rsocketCore.rsocketencodingMod.Encoders
-import typingsSlinky.rsocketFlowable.mod.Flowable
-import typingsSlinky.rsocketTypes.reactiveSocketTypesMod.DuplexConnection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,9 +10,5 @@ import scala.scalajs.js.annotation._
 class default protected () extends RSocketTCPServer {
   def this(options: ServerOptions) = this()
   def this(options: ServerOptions, encoders: Encoders[_]) = this()
-  /* CompleteClass */
-  override def start(): Flowable[DuplexConnection] = js.native
-  /* CompleteClass */
-  override def stop(): Unit = js.native
 }
 

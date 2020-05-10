@@ -14,14 +14,12 @@ trait DataType extends js.Object
 
 object DataType {
   @scala.inline
-  def all: typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.all = this.cast("all")
+  def all: typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.all = "all".asInstanceOf[typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.all]
   @scala.inline
-  def bus: typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.bus = this.cast("bus")
+  def bus: typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.bus = "bus".asInstanceOf[typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.bus]
   @scala.inline
-  def busline: typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.busline = this.cast("busline")
+  def busline: typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.busline = "busline".asInstanceOf[typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.busline]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def poi: typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.poi = this.cast("poi")
+  def poi: typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.poi = "poi".asInstanceOf[typingsSlinky.amapJsApiAutocomplete.amapJsApiAutocompleteStrings.poi]
 }
 

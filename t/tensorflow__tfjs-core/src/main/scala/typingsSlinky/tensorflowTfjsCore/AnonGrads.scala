@@ -6,17 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonGrads[T /* <: Tensor[Rank] */] extends js.Object {
-  var grads: js.Array[Tensor[Rank]]
-  var value: T
+  var grads: js.Array[Tensor[Rank]] = js.native
+  var value: T = js.native
 }
 
 object AnonGrads {
   @scala.inline
-  def apply[T /* <: Tensor[Rank] */](grads: js.Array[Tensor[Rank]], value: T): AnonGrads[T] = {
+  def apply[T](grads: js.Array[Tensor[Rank]], value: T): AnonGrads[T] = {
     val __obj = js.Dynamic.literal(grads = grads.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonGrads[T]]
   }
+  @scala.inline
+  implicit class AnonGradsOps[Self[t] <: AnonGrads[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withGrads(value: js.Array[Tensor[Rank]]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

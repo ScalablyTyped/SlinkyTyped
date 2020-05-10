@@ -34,22 +34,89 @@ trait DBClusterBacktrack extends js.Object {
 
 object DBClusterBacktrack {
   @scala.inline
-  def apply(
-    BacktrackIdentifier: String = null,
-    BacktrackRequestCreationTime: js.Date = null,
-    BacktrackTo: js.Date = null,
-    BacktrackedFrom: js.Date = null,
-    DBClusterIdentifier: String = null,
-    Status: String = null
-  ): DBClusterBacktrack = {
+  def apply(): DBClusterBacktrack = {
     val __obj = js.Dynamic.literal()
-    if (BacktrackIdentifier != null) __obj.updateDynamic("BacktrackIdentifier")(BacktrackIdentifier.asInstanceOf[js.Any])
-    if (BacktrackRequestCreationTime != null) __obj.updateDynamic("BacktrackRequestCreationTime")(BacktrackRequestCreationTime.asInstanceOf[js.Any])
-    if (BacktrackTo != null) __obj.updateDynamic("BacktrackTo")(BacktrackTo.asInstanceOf[js.Any])
-    if (BacktrackedFrom != null) __obj.updateDynamic("BacktrackedFrom")(BacktrackedFrom.asInstanceOf[js.Any])
-    if (DBClusterIdentifier != null) __obj.updateDynamic("DBClusterIdentifier")(DBClusterIdentifier.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBClusterBacktrack]
   }
+  @scala.inline
+  implicit class DBClusterBacktrackOps[Self <: DBClusterBacktrack] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBacktrackIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBacktrackIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBacktrackRequestCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackRequestCreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBacktrackRequestCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackRequestCreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBacktrackTo(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBacktrackTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBacktrackedFrom(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackedFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBacktrackedFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BacktrackedFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDBClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDBClusterIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

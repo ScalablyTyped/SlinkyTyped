@@ -5,24 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonQueue extends js.Object {
-  var dontPurgeData: js.UndefOr[Boolean] = js.undefined
-  var queue: js.UndefOr[AsyncQueue] = js.undefined
-  var synchronizeTabs: js.UndefOr[Boolean] = js.undefined
+  var dontPurgeData: js.UndefOr[Boolean] = js.native
+  var queue: js.UndefOr[AsyncQueue] = js.native
+  var synchronizeTabs: js.UndefOr[Boolean] = js.native
 }
 
 object AnonQueue {
   @scala.inline
-  def apply(
-    dontPurgeData: js.UndefOr[Boolean] = js.undefined,
-    queue: AsyncQueue = null,
-    synchronizeTabs: js.UndefOr[Boolean] = js.undefined
-  ): AnonQueue = {
+  def apply(): AnonQueue = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(dontPurgeData)) __obj.updateDynamic("dontPurgeData")(dontPurgeData.asInstanceOf[js.Any])
-    if (queue != null) __obj.updateDynamic("queue")(queue.asInstanceOf[js.Any])
-    if (!js.isUndefined(synchronizeTabs)) __obj.updateDynamic("synchronizeTabs")(synchronizeTabs.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonQueue]
   }
+  @scala.inline
+  implicit class AnonQueueOps[Self <: AnonQueue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDontPurgeData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dontPurgeData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDontPurgeData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dontPurgeData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueue(value: AsyncQueue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynchronizeTabs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronizeTabs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynchronizeTabs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronizeTabs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

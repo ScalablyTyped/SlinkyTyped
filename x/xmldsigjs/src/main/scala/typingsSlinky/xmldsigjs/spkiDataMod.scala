@@ -13,7 +13,7 @@ object spkiDataMod extends js.Object {
   class SPKIData () extends KeyInfoClause {
     @JSName("Key")
     var Key_SPKIData: CryptoKey = js.native
-    var SPKIexp: scala.scalajs.js.typedarray.Uint8Array | Null = js.native
+    var SPKIexp: js.typedarray.Uint8Array | Null = js.native
   }
   
 }

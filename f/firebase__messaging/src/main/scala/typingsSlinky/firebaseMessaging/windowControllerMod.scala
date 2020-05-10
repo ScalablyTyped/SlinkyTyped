@@ -1,8 +1,8 @@
 package typingsSlinky.firebaseMessaging
 
-import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
 import typingsSlinky.firebaseAppTypes.privateMod.FirebaseService
 import typingsSlinky.firebaseMessaging.internalDependenciesMod.FirebaseInternalDependencies
+import typingsSlinky.firebaseMessaging.mod.FirebaseApp
 import typingsSlinky.firebaseMessagingTypes.mod.FirebaseMessaging
 import typingsSlinky.firebaseUtil.subscribeMod.Unsubscribe
 import scala.scalajs.js
@@ -17,8 +17,6 @@ object windowControllerMod extends js.Object {
     extends FirebaseMessaging
        with FirebaseService {
     def this(firebaseDependencies: FirebaseInternalDependencies) = this()
-    /* CompleteClass */
-    override var app: FirebaseApp = js.native
     val firebaseDependencies: js.Any = js.native
     /**
       * Creates or updates the default service worker registration.
@@ -31,7 +29,7 @@ object windowControllerMod extends js.Object {
     var swRegistration: js.UndefOr[js.Any] = js.native
     var vapidKey: js.Any = js.native
     @JSName("app")
-    def app_MWindowController(): typingsSlinky.firebaseMessaging.mod.FirebaseApp = js.native
+    def app_MWindowController: FirebaseApp = js.native
     def deleteToken(): js.Promise[Boolean] = js.native
     def onTokenRefresh(): Unsubscribe = js.native
     def setBackgroundMessageHandler(): Unit = js.native

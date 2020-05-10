@@ -1,36 +1,40 @@
 package typingsSlinky.grommet
 
+import typingsSlinky.grommet.utilsMod.OpacityType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Anon3 extends js.Object {
-  var `1`: js.UndefOr[AnonFont] = js.undefined
-  var `2`: js.UndefOr[AnonFont] = js.undefined
-  var `3`: js.UndefOr[AnonFont] = js.undefined
-  var `4`: js.UndefOr[AnonFont] = js.undefined
-  var `5`: js.UndefOr[AnonFont] = js.undefined
-  var `6`: js.UndefOr[AnonFont] = js.undefined
+  var opacity: js.UndefOr[OpacityType] = js.native
 }
 
 object Anon3 {
   @scala.inline
-  def apply(
-    `1`: AnonFont = null,
-    `2`: AnonFont = null,
-    `3`: AnonFont = null,
-    `4`: AnonFont = null,
-    `5`: AnonFont = null,
-    `6`: AnonFont = null
-  ): Anon3 = {
+  def apply(): Anon3 = {
     val __obj = js.Dynamic.literal()
-    if (`1` != null) __obj.updateDynamic("1")(`1`.asInstanceOf[js.Any])
-    if (`2` != null) __obj.updateDynamic("2")(`2`.asInstanceOf[js.Any])
-    if (`3` != null) __obj.updateDynamic("3")(`3`.asInstanceOf[js.Any])
-    if (`4` != null) __obj.updateDynamic("4")(`4`.asInstanceOf[js.Any])
-    if (`5` != null) __obj.updateDynamic("5")(`5`.asInstanceOf[js.Any])
-    if (`6` != null) __obj.updateDynamic("6")(`6`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Anon3]
   }
+  @scala.inline
+  implicit class Anon3Ops[Self <: Anon3] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOpacity(value: OpacityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

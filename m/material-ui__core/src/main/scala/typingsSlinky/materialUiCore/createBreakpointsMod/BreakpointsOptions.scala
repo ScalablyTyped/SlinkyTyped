@@ -20,28 +20,125 @@ trait BreakpointsOptions extends js.Object {
 
 object BreakpointsOptions {
   @scala.inline
-  def apply(
-    between: (/* start */ Breakpoint, /* end */ Breakpoint) => String = null,
-    down: /* key */ Breakpoint | Double => String = null,
-    keys: js.Array[Breakpoint] = null,
-    only: /* key */ Breakpoint => String = null,
-    step: Int | Double = null,
-    unit: String = null,
-    up: /* key */ Breakpoint | Double => String = null,
-    values: BreakpointValues = null,
-    width: /* key */ Breakpoint => Double = null
-  ): BreakpointsOptions = {
+  def apply(): BreakpointsOptions = {
     val __obj = js.Dynamic.literal()
-    if (between != null) __obj.updateDynamic("between")(js.Any.fromFunction2(between))
-    if (down != null) __obj.updateDynamic("down")(js.Any.fromFunction1(down))
-    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
-    if (only != null) __obj.updateDynamic("only")(js.Any.fromFunction1(only))
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (up != null) __obj.updateDynamic("up")(js.Any.fromFunction1(up))
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(js.Any.fromFunction1(width))
     __obj.asInstanceOf[BreakpointsOptions]
   }
+  @scala.inline
+  implicit class BreakpointsOptionsOps[Self <: BreakpointsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBetween(value: (/* start */ Breakpoint, /* end */ Breakpoint) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("between")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBetween: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("between")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDown(value: /* key */ Breakpoint | Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("down")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("down")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeys(value: js.Array[Breakpoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnly(value: /* key */ Breakpoint => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("only")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("only")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUp(value: /* key */ Breakpoint | Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("up")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: BreakpointValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: /* key */ Breakpoint => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.x2js.mod
 
-import typingsSlinky.std.Date
 import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -75,7 +74,7 @@ trait X2JS extends js.Object {
     * 
     * @memberOf X2JS
     */
-  def toXmlDateTime(dt: Date): String = js.native
+  def toXmlDateTime(dt: js.Date): String = js.native
   /**
     * Transformns an XML string into DOM-tree
     * 

@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ItemTreeDto extends js.Object {
-  var header: String
-  var tags: js.Array[String]
+  var header: String = js.native
+  var tags: js.Array[String] = js.native
 }
 
 object ItemTreeDto {
   @scala.inline
   def apply(header: String, tags: js.Array[String]): ItemTreeDto = {
     val __obj = js.Dynamic.literal(header = header.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ItemTreeDto]
   }
+  @scala.inline
+  implicit class ItemTreeDtoOps[Self <: ItemTreeDto] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

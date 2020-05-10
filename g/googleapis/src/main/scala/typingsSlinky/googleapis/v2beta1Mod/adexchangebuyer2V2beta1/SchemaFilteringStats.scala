@@ -24,11 +24,41 @@ trait SchemaFilteringStats extends js.Object {
 
 object SchemaFilteringStats {
   @scala.inline
-  def apply(date: SchemaDate = null, reasons: js.Array[SchemaReason] = null): SchemaFilteringStats = {
+  def apply(): SchemaFilteringStats = {
     val __obj = js.Dynamic.literal()
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (reasons != null) __obj.updateDynamic("reasons")(reasons.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFilteringStats]
   }
+  @scala.inline
+  implicit class SchemaFilteringStatsOps[Self <: SchemaFilteringStats] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDate(value: SchemaDate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReasons(value: js.Array[SchemaReason]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReasons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasons")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

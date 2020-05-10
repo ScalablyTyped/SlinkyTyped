@@ -1,39 +1,43 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.gestalt.gestaltStrings.`check-circle`
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
+import typingsSlinky.gestalt.gestaltStrings.pintrest
 import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.mod.AvatarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Avatar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Avatar] {
+object Avatar {
   @JSImport("gestalt", "Avatar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: src */
-  def apply(
-    name: String,
-    outline: js.UndefOr[Boolean] = js.undefined,
-    size: sm | md | lg = null,
-    verified: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Avatar] = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (!js.isUndefined(outline)) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(verified)) __obj.updateDynamic("verified")(verified.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Avatar] {
+    @scala.inline
+    def icon(value: `check-circle` | pintrest): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def outline(value: Boolean): this.type = set("outline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: sm | md | lg): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def src(value: String): this.type = set("src", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verified(value: Boolean): this.type = set("verified", value.asInstanceOf[js.Any])
   }
-  type Props = AvatarProps
+  
+  def withProps(p: AvatarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String): Builder = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AvatarProps]))
+  }
 }
 

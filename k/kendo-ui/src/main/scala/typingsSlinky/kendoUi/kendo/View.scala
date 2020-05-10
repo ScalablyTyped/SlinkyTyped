@@ -20,8 +20,8 @@ class View protected () extends Observable_ {
   def destroy(): Unit = js.native
   def init(element: String): Unit = js.native
   def init(element: String, options: ViewOptions): Unit = js.native
-  def init(element: typingsSlinky.std.Element): Unit = js.native
-  def init(element: typingsSlinky.std.Element, options: ViewOptions): Unit = js.native
+  def init(element: Element): Unit = js.native
+  def init(element: Element, options: ViewOptions): Unit = js.native
   def render(): JQuery = js.native
   def render(container: js.Any): JQuery = js.native
 }

@@ -5,46 +5,131 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InlineQueryResultGif
   extends InlineQueryResultBase
      with InlineQueryResult {
-  var caption: js.UndefOr[String] = js.undefined
-  var gif_duration: js.UndefOr[Double] = js.undefined
-  var gif_height: js.UndefOr[Double] = js.undefined
-  var gif_url: String
-  var gif_width: js.UndefOr[Double] = js.undefined
-  var input_message_content: js.UndefOr[InputMessageContent] = js.undefined
-  var thumb_url: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var `type`: gif
+  var caption: js.UndefOr[String] = js.native
+  var gif_duration: js.UndefOr[Double] = js.native
+  var gif_height: js.UndefOr[Double] = js.native
+  var gif_url: String = js.native
+  var gif_width: js.UndefOr[Double] = js.native
+  var input_message_content: js.UndefOr[InputMessageContent] = js.native
+  var thumb_url: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String] = js.native
+  var `type`: gif = js.native
 }
 
 object InlineQueryResultGif {
   @scala.inline
-  def apply(
-    gif_url: String,
-    id: String,
-    `type`: gif,
-    caption: String = null,
-    gif_duration: Int | Double = null,
-    gif_height: Int | Double = null,
-    gif_width: Int | Double = null,
-    input_message_content: InputMessageContent = null,
-    reply_markup: InlineKeyboardMarkup = null,
-    thumb_url: String = null,
-    title: String = null
-  ): InlineQueryResultGif = {
+  def apply(gif_url: String, id: String, `type`: gif): InlineQueryResultGif = {
     val __obj = js.Dynamic.literal(gif_url = gif_url.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
-    if (gif_duration != null) __obj.updateDynamic("gif_duration")(gif_duration.asInstanceOf[js.Any])
-    if (gif_height != null) __obj.updateDynamic("gif_height")(gif_height.asInstanceOf[js.Any])
-    if (gif_width != null) __obj.updateDynamic("gif_width")(gif_width.asInstanceOf[js.Any])
-    if (input_message_content != null) __obj.updateDynamic("input_message_content")(input_message_content.asInstanceOf[js.Any])
-    if (reply_markup != null) __obj.updateDynamic("reply_markup")(reply_markup.asInstanceOf[js.Any])
-    if (thumb_url != null) __obj.updateDynamic("thumb_url")(thumb_url.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[InlineQueryResultGif]
   }
+  @scala.inline
+  implicit class InlineQueryResultGifOps[Self <: InlineQueryResultGif] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGif_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gif_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: gif): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGif_duration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gif_duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGif_duration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gif_duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGif_height(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gif_height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGif_height: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gif_height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGif_width(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gif_width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGif_width: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gif_width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput_message_content(value: InputMessageContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input_message_content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput_message_content: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input_message_content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumb_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumb_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumb_url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

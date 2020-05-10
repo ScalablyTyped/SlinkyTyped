@@ -12,10 +12,8 @@ trait OpenFinExternalApplicationEventType extends js.Object
 
 object OpenFinExternalApplicationEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connected: typingsSlinky.openfin.openfinStrings.connected = "connected".asInstanceOf[typingsSlinky.openfin.openfinStrings.connected]
   @scala.inline
-  def connected: typingsSlinky.openfin.openfinStrings.connected = this.cast("connected")
-  @scala.inline
-  def disconnected: typingsSlinky.openfin.openfinStrings.disconnected = this.cast("disconnected")
+  def disconnected: typingsSlinky.openfin.openfinStrings.disconnected = "disconnected".asInstanceOf[typingsSlinky.openfin.openfinStrings.disconnected]
 }
 

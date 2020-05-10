@@ -1,31 +1,32 @@
 package typingsSlinky.reactBootstrap.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrap.mediaBodyMod.MediaBodyProps
 import typingsSlinky.reactBootstrap.mediaBodyMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MediaBody
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object MediaBody {
   @JSImport("react-bootstrap/lib/MediaBody", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(componentClass: ReactComponentClass[_] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
-    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def componentClassFunctionComponent(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentClassComponentClass(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentClass(value: ReactComponentClass[_]): this.type = set("componentClass", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactBootstrap.mediaBodyMod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MediaBodyProps
+  
+  def withProps(p: MediaBodyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MediaBody.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

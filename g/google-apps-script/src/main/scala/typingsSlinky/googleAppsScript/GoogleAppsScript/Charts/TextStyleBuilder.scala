@@ -16,11 +16,12 @@ import scala.scalajs.js.annotation._
   *         .setColor('#0000FF').setFontName('Ariel').setFontSize(26);
   *     var style = textStyleBuilder.build();
   */
+@js.native
 trait TextStyleBuilder extends js.Object {
-  def build(): TextStyle
-  def setColor(cssValue: String): TextStyleBuilder
-  def setFontName(fontName: String): TextStyleBuilder
-  def setFontSize(fontSize: Double): TextStyleBuilder
+  def build(): TextStyle = js.native
+  def setColor(cssValue: String): TextStyleBuilder = js.native
+  def setFontName(fontName: String): TextStyleBuilder = js.native
+  def setFontSize(fontSize: Double): TextStyleBuilder = js.native
 }
 
 object TextStyleBuilder {
@@ -32,8 +33,39 @@ object TextStyleBuilder {
     setFontSize: Double => TextStyleBuilder
   ): TextStyleBuilder = {
     val __obj = js.Dynamic.literal(build = js.Any.fromFunction0(build), setColor = js.Any.fromFunction1(setColor), setFontName = js.Any.fromFunction1(setFontName), setFontSize = js.Any.fromFunction1(setFontSize))
-  
     __obj.asInstanceOf[TextStyleBuilder]
   }
+  @scala.inline
+  implicit class TextStyleBuilderOps[Self <: TextStyleBuilder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuild(value: () => TextStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetColor(value: String => TextStyleBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFontName(value: String => TextStyleBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFontName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFontSize(value: Double => TextStyleBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFontSize")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

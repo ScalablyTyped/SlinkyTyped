@@ -2,143 +2,174 @@ package typingsSlinky.reactResponsive.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ClassType
 import typingsSlinky.reactResponsive.PartialMediaQueryMatchers
-import typingsSlinky.reactResponsive.reactResponsiveStrings.interlace
-import typingsSlinky.reactResponsive.reactResponsiveStrings.landscape
-import typingsSlinky.reactResponsive.reactResponsiveStrings.portrait
-import typingsSlinky.reactResponsive.reactResponsiveStrings.progressive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MediaQueryProps
   extends MediaQueryFeatures
      with MediaQueryTypes {
-  var children: js.UndefOr[TagMod[Any] | (js.Function1[/* matches */ Boolean, TagMod[Any]])] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var component: js.UndefOr[String | ReactComponentClass[_] | (ClassType[_, _, _])] = js.undefined
-  var device: js.UndefOr[MediaQueryMatchers] = js.undefined
-  var onBeforeChange: js.UndefOr[js.Function1[/* matches */ Boolean, Unit]] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* matches */ Boolean, Unit]] = js.undefined
-  var query: js.UndefOr[String] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var values: js.UndefOr[PartialMediaQueryMatchers] = js.undefined
+  var children: js.UndefOr[TagMod[Any] | (js.Function1[/* matches */ Boolean, TagMod[Any]])] = js.native
+  var className: js.UndefOr[String] = js.native
+  var component: js.UndefOr[String | ReactComponentClass[_] | (ClassType[_, _, _])] = js.native
+  var device: js.UndefOr[MediaQueryMatchers] = js.native
+  var onBeforeChange: js.UndefOr[js.Function1[/* matches */ Boolean, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* matches */ Boolean, Unit]] = js.native
+  var query: js.UndefOr[String] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var values: js.UndefOr[PartialMediaQueryMatchers] = js.native
 }
 
 object MediaQueryProps {
   @scala.inline
-  def apply(
-    all: js.UndefOr[Boolean] = js.undefined,
-    aspectRatio: String = null,
-    aural: js.UndefOr[Boolean] = js.undefined,
-    braille: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] | (js.Function1[/* matches */ Boolean, TagMod[Any]]) = null,
-    className: String = null,
-    color: js.UndefOr[Boolean] = js.undefined,
-    colorIndex: js.UndefOr[Boolean] = js.undefined,
-    component: String | ReactComponentClass[_] | (ClassType[_, _, _]) = null,
-    device: MediaQueryMatchers = null,
-    deviceAspectRatio: String = null,
-    deviceHeight: Double | String = null,
-    deviceWidth: Double | String = null,
-    embossed: js.UndefOr[Boolean] = js.undefined,
-    grid: js.UndefOr[Boolean] = js.undefined,
-    handheld: js.UndefOr[Boolean] = js.undefined,
-    height: Double | String = null,
-    maxAspectRatio: String = null,
-    maxColor: Int | Double = null,
-    maxColorIndex: Int | Double = null,
-    maxDeviceAspectRatio: String = null,
-    maxDeviceHeight: Double | String = null,
-    maxDeviceWidth: Double | String = null,
-    maxHeight: Double | String = null,
-    maxMonochrome: Int | Double = null,
-    maxResolution: Double | String = null,
-    maxWidth: Double | String = null,
-    minAspectRatio: String = null,
-    minColor: Int | Double = null,
-    minColorIndex: Int | Double = null,
-    minDeviceAspectRatio: String = null,
-    minDeviceHeight: Double | String = null,
-    minDeviceWidth: Double | String = null,
-    minHeight: Double | String = null,
-    minMonochrome: Int | Double = null,
-    minResolution: Double | String = null,
-    minWidth: Double | String = null,
-    monochrome: js.UndefOr[Boolean] = js.undefined,
-    onBeforeChange: /* matches */ Boolean => Unit = null,
-    onChange: /* matches */ Boolean => Unit = null,
-    orientation: portrait | landscape = null,
-    print: js.UndefOr[Boolean] = js.undefined,
-    projection: js.UndefOr[Boolean] = js.undefined,
-    query: String = null,
-    resolution: Double | String = null,
-    scan: progressive | interlace = null,
-    screen: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    tty: js.UndefOr[Boolean] = js.undefined,
-    tv: js.UndefOr[Boolean] = js.undefined,
-    `type`: MediaQueryType = null,
-    values: PartialMediaQueryMatchers = null,
-    width: Double | String = null
-  ): MediaQueryProps = {
+  def apply(): MediaQueryProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(all)) __obj.updateDynamic("all")(all.asInstanceOf[js.Any])
-    if (aspectRatio != null) __obj.updateDynamic("aspectRatio")(aspectRatio.asInstanceOf[js.Any])
-    if (!js.isUndefined(aural)) __obj.updateDynamic("aural")(aural.asInstanceOf[js.Any])
-    if (!js.isUndefined(braille)) __obj.updateDynamic("braille")(braille.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(color)) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(colorIndex)) __obj.updateDynamic("colorIndex")(colorIndex.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (device != null) __obj.updateDynamic("device")(device.asInstanceOf[js.Any])
-    if (deviceAspectRatio != null) __obj.updateDynamic("deviceAspectRatio")(deviceAspectRatio.asInstanceOf[js.Any])
-    if (deviceHeight != null) __obj.updateDynamic("deviceHeight")(deviceHeight.asInstanceOf[js.Any])
-    if (deviceWidth != null) __obj.updateDynamic("deviceWidth")(deviceWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(embossed)) __obj.updateDynamic("embossed")(embossed.asInstanceOf[js.Any])
-    if (!js.isUndefined(grid)) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
-    if (!js.isUndefined(handheld)) __obj.updateDynamic("handheld")(handheld.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (maxAspectRatio != null) __obj.updateDynamic("maxAspectRatio")(maxAspectRatio.asInstanceOf[js.Any])
-    if (maxColor != null) __obj.updateDynamic("maxColor")(maxColor.asInstanceOf[js.Any])
-    if (maxColorIndex != null) __obj.updateDynamic("maxColorIndex")(maxColorIndex.asInstanceOf[js.Any])
-    if (maxDeviceAspectRatio != null) __obj.updateDynamic("maxDeviceAspectRatio")(maxDeviceAspectRatio.asInstanceOf[js.Any])
-    if (maxDeviceHeight != null) __obj.updateDynamic("maxDeviceHeight")(maxDeviceHeight.asInstanceOf[js.Any])
-    if (maxDeviceWidth != null) __obj.updateDynamic("maxDeviceWidth")(maxDeviceWidth.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (maxMonochrome != null) __obj.updateDynamic("maxMonochrome")(maxMonochrome.asInstanceOf[js.Any])
-    if (maxResolution != null) __obj.updateDynamic("maxResolution")(maxResolution.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minAspectRatio != null) __obj.updateDynamic("minAspectRatio")(minAspectRatio.asInstanceOf[js.Any])
-    if (minColor != null) __obj.updateDynamic("minColor")(minColor.asInstanceOf[js.Any])
-    if (minColorIndex != null) __obj.updateDynamic("minColorIndex")(minColorIndex.asInstanceOf[js.Any])
-    if (minDeviceAspectRatio != null) __obj.updateDynamic("minDeviceAspectRatio")(minDeviceAspectRatio.asInstanceOf[js.Any])
-    if (minDeviceHeight != null) __obj.updateDynamic("minDeviceHeight")(minDeviceHeight.asInstanceOf[js.Any])
-    if (minDeviceWidth != null) __obj.updateDynamic("minDeviceWidth")(minDeviceWidth.asInstanceOf[js.Any])
-    if (minHeight != null) __obj.updateDynamic("minHeight")(minHeight.asInstanceOf[js.Any])
-    if (minMonochrome != null) __obj.updateDynamic("minMonochrome")(minMonochrome.asInstanceOf[js.Any])
-    if (minResolution != null) __obj.updateDynamic("minResolution")(minResolution.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(monochrome)) __obj.updateDynamic("monochrome")(monochrome.asInstanceOf[js.Any])
-    if (onBeforeChange != null) __obj.updateDynamic("onBeforeChange")(js.Any.fromFunction1(onBeforeChange))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (!js.isUndefined(print)) __obj.updateDynamic("print")(print.asInstanceOf[js.Any])
-    if (!js.isUndefined(projection)) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (resolution != null) __obj.updateDynamic("resolution")(resolution.asInstanceOf[js.Any])
-    if (scan != null) __obj.updateDynamic("scan")(scan.asInstanceOf[js.Any])
-    if (!js.isUndefined(screen)) __obj.updateDynamic("screen")(screen.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(tty)) __obj.updateDynamic("tty")(tty.asInstanceOf[js.Any])
-    if (!js.isUndefined(tv)) __obj.updateDynamic("tv")(tv.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaQueryProps]
   }
+  @scala.inline
+  implicit class MediaQueryPropsOps[Self <: MediaQueryProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildrenFunction1(value: /* matches */ Boolean => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any] | (js.Function1[/* matches */ Boolean, TagMod[Any]])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponentComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponent(value: String | ReactComponentClass[_] | (ClassType[_, _, _])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevice(value: MediaQueryMatchers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBeforeChange(value: /* matches */ Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBeforeChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* matches */ Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: PartialMediaQueryMatchers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

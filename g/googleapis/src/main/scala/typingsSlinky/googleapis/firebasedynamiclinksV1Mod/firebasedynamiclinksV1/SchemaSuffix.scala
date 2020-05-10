@@ -21,11 +21,41 @@ trait SchemaSuffix extends js.Object {
 
 object SchemaSuffix {
   @scala.inline
-  def apply(customSuffix: String = null, option: String = null): SchemaSuffix = {
+  def apply(): SchemaSuffix = {
     val __obj = js.Dynamic.literal()
-    if (customSuffix != null) __obj.updateDynamic("customSuffix")(customSuffix.asInstanceOf[js.Any])
-    if (option != null) __obj.updateDynamic("option")(option.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSuffix]
   }
+  @scala.inline
+  implicit class SchemaSuffixOps[Self <: SchemaSuffix] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomSuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customSuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomSuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customSuffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

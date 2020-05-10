@@ -12,16 +12,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
+@js.native
 trait BindExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var callee: ExpressionKind
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `object`: ExpressionKind | Null
-  var `type`: typingsSlinky.astTypes.astTypesStrings.BindExpression
+  var callee: ExpressionKind = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `object`: ExpressionKind | Null = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.BindExpression = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.BindExpression")

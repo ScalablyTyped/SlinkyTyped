@@ -1,256 +1,425 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import typingsSlinky.devextreme.AnonArgumentComponent
-import typingsSlinky.devextreme.AnonCancelComponentData
 import typingsSlinky.devextreme.AnonComponentDxPolarChart
-import typingsSlinky.devextreme.AnonComponentTElementDxElement
-import typingsSlinky.devextreme.AnonComponentTElementDxElementModelAny
 import typingsSlinky.devextreme.AnonConvertToAxisDataType
 import typingsSlinky.devextreme.AnonCustomizeSeriesNameField
-import typingsSlinky.devextreme.AnonDuration
-import typingsSlinky.devextreme.AnonElement
-import typingsSlinky.devextreme.AnonElementModelTarget
-import typingsSlinky.devextreme.AnonElementTarget
-import typingsSlinky.devextreme.AnonFormatModel
 import typingsSlinky.devextreme.AnonJQueryEventModelTarget
-import typingsSlinky.devextreme.AnonModel
-import typingsSlinky.devextreme.AnonModelTarget
-import typingsSlinky.devextreme.AnonName
 import typingsSlinky.devextreme.AnonPreviousRange
 import typingsSlinky.devextreme.AnonRange
-import typingsSlinky.devextreme.AnonTargetAny
-import typingsSlinky.devextreme.devextremeStrings.Bright
-import typingsSlinky.devextreme.devextremeStrings.Carmine
-import typingsSlinky.devextreme.devextremeStrings.Default
-import typingsSlinky.devextreme.devextremeStrings.Material
-import typingsSlinky.devextreme.devextremeStrings.Ocean
-import typingsSlinky.devextreme.devextremeStrings.Office
-import typingsSlinky.devextreme.devextremeStrings.Pastel
-import typingsSlinky.devextreme.devextremeStrings.Soft
-import typingsSlinky.devextreme.devextremeStrings.Vintage
-import typingsSlinky.devextreme.devextremeStrings.Violet
-import typingsSlinky.devextreme.devextremeStrings.`Dark Moon`
-import typingsSlinky.devextreme.devextremeStrings.`Dark Violet`
-import typingsSlinky.devextreme.devextremeStrings.`Green Mist`
-import typingsSlinky.devextreme.devextremeStrings.`Harmony Light`
-import typingsSlinky.devextreme.devextremeStrings.`Soft Blue`
-import typingsSlinky.devextreme.devextremeStrings.`Soft Pastel`
-import typingsSlinky.devextreme.devextremeStrings.alternate
-import typingsSlinky.devextreme.devextremeStrings.blend
-import typingsSlinky.devextreme.devextremeStrings.extrapolate
-import typingsSlinky.devextreme.devextremeStrings.genericDotcarmine
-import typingsSlinky.devextreme.devextremeStrings.genericDotcontrast
-import typingsSlinky.devextreme.devextremeStrings.genericDotdark
-import typingsSlinky.devextreme.devextremeStrings.genericDotdarkmoon
-import typingsSlinky.devextreme.devextremeStrings.genericDotdarkviolet
-import typingsSlinky.devextreme.devextremeStrings.genericDotgreenmist
-import typingsSlinky.devextreme.devextremeStrings.genericDotlight
-import typingsSlinky.devextreme.devextremeStrings.genericDotsoftblue
 import typingsSlinky.devextreme.devextremeStrings.hide
-import typingsSlinky.devextreme.devextremeStrings.ios7Dotdefault
-import typingsSlinky.devextreme.devextremeStrings.materialDotblueDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotlimeDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotorangeDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotpurpleDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDottealDotlight
 import typingsSlinky.devextreme.devextremeStrings.multiple
 import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.devextremeStrings.single_
-import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
-import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxPolarChartOptions extends BaseChartOptions[dxPolarChart] {
   /** Specifies adaptive layout options. */
   @JSName("adaptiveLayout")
-  var adaptiveLayout_dxPolarChartOptions: js.UndefOr[dxPolarChartAdaptiveLayout] = js.undefined
+  var adaptiveLayout_dxPolarChartOptions: js.UndefOr[dxPolarChartAdaptiveLayout] = js.native
   /** Specifies argument axis options for the PolarChart widget. */
-  var argumentAxis: js.UndefOr[dxPolarChartArgumentAxis] = js.undefined
+  var argumentAxis: js.UndefOr[dxPolarChartArgumentAxis] = js.native
   /** Controls the padding and consequently the angular width of a group of bars with the same argument using relative units. Ignored if the barGroupWidth option is set. */
-  var barGroupPadding: js.UndefOr[Double] = js.undefined
+  var barGroupPadding: js.UndefOr[Double] = js.native
   /** Specifies a fixed angular width for groups of bars with the same argument, measured in degrees. Takes precedence over the barGroupPadding option. */
-  var barGroupWidth: js.UndefOr[Double] = js.undefined
+  var barGroupWidth: js.UndefOr[Double] = js.native
   /** @deprecated Use CommonPolarChartSeries.barPadding instead. */
   /** Specifies a common bar width as a percentage from 0 to 1. */
-  var barWidth: js.UndefOr[Double] = js.undefined
+  var barWidth: js.UndefOr[Double] = js.native
   /** An object defining the configuration options that are common for all axes of the PolarChart widget. */
-  var commonAxisSettings: js.UndefOr[dxPolarChartCommonAxisSettings] = js.undefined
+  var commonAxisSettings: js.UndefOr[dxPolarChartCommonAxisSettings] = js.native
   /** An object defining the configuration options that are common for all series of the PolarChart widget. */
-  var commonSeriesSettings: js.UndefOr[dxPolarChartCommonSeriesSettings] = js.undefined
+  var commonSeriesSettings: js.UndefOr[dxPolarChartCommonSeriesSettings] = js.native
   /** Specifies the color of the parent page element. */
-  var containerBackgroundColor: js.UndefOr[String] = js.undefined
+  var containerBackgroundColor: js.UndefOr[String] = js.native
   /** An object providing options for managing data from a data source. */
-  var dataPrepareSettings: js.UndefOr[AnonConvertToAxisDataType] = js.undefined
+  var dataPrepareSettings: js.UndefOr[AnonConvertToAxisDataType] = js.native
   /** @deprecated Use CommonPolarChartSeries.ignoreEmptyPoints instead. */
   /** Specifies whether or not all bars in a series must have the same angle, or may have different angles if any points in other series are missing. */
-  var equalBarWidth: js.UndefOr[Boolean] = js.undefined
+  var equalBarWidth: js.UndefOr[Boolean] = js.native
   /** Specifies the options of a chart's legend. */
   @JSName("legend")
-  var legend_dxPolarChartOptions: js.UndefOr[dxPolarChartLegend] = js.undefined
+  var legend_dxPolarChartOptions: js.UndefOr[dxPolarChartLegend] = js.native
   /** Forces the widget to treat negative values as zeroes. Applies to stacked-like series only. */
-  var negativesAsZeroes: js.UndefOr[Boolean] = js.undefined
+  var negativesAsZeroes: js.UndefOr[Boolean] = js.native
   /** A function that is executed when a label on the argument axis is clicked or tapped. */
-  var onArgumentAxisClick: js.UndefOr[(js.Function1[/* e */ AnonArgumentComponent, _]) | String] = js.undefined
+  var onArgumentAxisClick: js.UndefOr[(js.Function1[/* e */ AnonArgumentComponent, _]) | String] = js.native
   /** A function that is executed when a legend item is clicked or tapped. */
-  var onLegendClick: js.UndefOr[(js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String] = js.undefined
+  var onLegendClick: js.UndefOr[(js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String] = js.native
   /** A function that is executed when a series is clicked or tapped. */
-  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String] = js.undefined
+  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String] = js.native
   /** A function that is executed after the pointer enters or leaves a series. */
-  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxPolarChart, _]] = js.undefined
+  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxPolarChart, _]] = js.native
   /** A function that is executed when a series is selected or selection is canceled. */
-  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxPolarChart, _]] = js.undefined
+  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxPolarChart, _]] = js.native
   /** A function that is executed when zooming or panning ends. */
-  var onZoomEnd: js.UndefOr[js.Function1[/* e */ AnonPreviousRange, _]] = js.undefined
+  var onZoomEnd: js.UndefOr[js.Function1[/* e */ AnonPreviousRange, _]] = js.native
   /** A function that is executed when zooming or panning begins. */
-  var onZoomStart: js.UndefOr[js.Function1[/* e */ AnonRange, _]] = js.undefined
+  var onZoomStart: js.UndefOr[js.Function1[/* e */ AnonRange, _]] = js.native
   /** Specifies how the chart must behave when series point labels overlap. */
-  var resolveLabelOverlapping: js.UndefOr[hide | none] = js.undefined
+  var resolveLabelOverlapping: js.UndefOr[hide | none] = js.native
   /** Specifies whether a single series or multiple series can be selected in the chart. */
-  var seriesSelectionMode: js.UndefOr[multiple | single_] = js.undefined
+  var seriesSelectionMode: js.UndefOr[multiple | single_] = js.native
   /** Defines options for the series template. */
-  var seriesTemplate: js.UndefOr[AnonCustomizeSeriesNameField] = js.undefined
+  var seriesTemplate: js.UndefOr[AnonCustomizeSeriesNameField] = js.native
   /** Specifies options for PolarChart widget series. */
   @JSName("series")
-  var series_dxPolarChartOptions: js.UndefOr[PolarChartSeries | js.Array[PolarChartSeries]] = js.undefined
+  var series_dxPolarChartOptions: js.UndefOr[PolarChartSeries | js.Array[PolarChartSeries]] = js.native
   /** Configures tooltips. */
   @JSName("tooltip")
-  var tooltip_dxPolarChartOptions: js.UndefOr[dxPolarChartTooltip] = js.undefined
+  var tooltip_dxPolarChartOptions: js.UndefOr[dxPolarChartTooltip] = js.native
   /** Indicates whether or not to display a "spider web". */
-  var useSpiderWeb: js.UndefOr[Boolean] = js.undefined
+  var useSpiderWeb: js.UndefOr[Boolean] = js.native
   /** Specifies value axis options for the PolarChart widget. */
-  var valueAxis: js.UndefOr[dxPolarChartValueAxis] = js.undefined
+  var valueAxis: js.UndefOr[dxPolarChartValueAxis] = js.native
 }
 
 object dxPolarChartOptions {
   @scala.inline
-  def apply(
-    adaptiveLayout: dxPolarChartAdaptiveLayout = null,
-    animation: AnonDuration | Boolean = null,
-    argumentAxis: dxPolarChartArgumentAxis = null,
-    barGroupPadding: Int | Double = null,
-    barGroupWidth: Int | Double = null,
-    barWidth: Int | Double = null,
-    bindingOptions: js.Any = null,
-    commonAxisSettings: dxPolarChartCommonAxisSettings = null,
-    commonSeriesSettings: dxPolarChartCommonSeriesSettings = null,
-    containerBackgroundColor: String = null,
-    customizeLabel: /* pointInfo */ js.Any => dxChartSeriesTypesCommonSeriesLabel = null,
-    customizePoint: /* pointInfo */ js.Any => dxChartSeriesTypesCommonSeriesPoint = null,
-    dataPrepareSettings: AnonConvertToAxisDataType = null,
-    dataSource: js.Array[_] | DataSource | DataSourceOptions | String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    elementAttr: js.Any = null,
-    equalBarWidth: js.UndefOr[Boolean] = js.undefined,
-    export: BaseWidgetExport = null,
-    height: Double | String | (js.Function0[Double | String]) = null,
-    legend: dxPolarChartLegend = null,
-    loadingIndicator: BaseWidgetLoadingIndicator = null,
-    margin: BaseWidgetMargin = null,
-    negativesAsZeroes: js.UndefOr[Boolean] = js.undefined,
-    onArgumentAxisClick: (js.Function1[/* e */ AnonArgumentComponent, _]) | String = null,
-    onDisposing: /* e */ AnonModel[dxPolarChart] => _ = null,
-    onDone: /* e */ AnonComponentTElementDxElement[dxPolarChart] => _ = null,
-    onDrawn: /* e */ AnonComponentTElementDxElementModelAny[dxPolarChart] => _ = null,
-    onExported: /* e */ AnonComponentTElementDxElementModelAny[dxPolarChart] => _ = null,
-    onExporting: /* e */ AnonFormatModel[dxPolarChart] => _ = null,
-    onFileSaving: /* e */ AnonCancelComponentData[dxPolarChart] => _ = null,
-    onIncidentOccurred: /* e */ AnonTargetAny[dxPolarChart] => _ = null,
-    onInitialized: /* e */ AnonElement[dxPolarChart] => _ = null,
-    onLegendClick: (js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String = null,
-    onOptionChanged: /* e */ AnonName[dxPolarChart] => _ = null,
-    onPointClick: (js.Function1[/* e */ AnonModelTarget[dxPolarChart], _]) | String = null,
-    onPointHoverChanged: /* e */ AnonElementTarget => _ = null,
-    onPointSelectionChanged: /* e */ AnonElementTarget => _ = null,
-    onSeriesClick: (js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String = null,
-    onSeriesHoverChanged: /* e */ AnonComponentDxPolarChart => _ = null,
-    onSeriesSelectionChanged: /* e */ AnonComponentDxPolarChart => _ = null,
-    onTooltipHidden: /* e */ AnonElementModelTarget[dxPolarChart] => _ = null,
-    onTooltipShown: /* e */ AnonElementModelTarget[dxPolarChart] => _ = null,
-    onZoomEnd: /* e */ AnonPreviousRange => _ = null,
-    onZoomStart: /* e */ AnonRange => _ = null,
-    palette: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office = null,
-    paletteExtensionMode: alternate | blend | extrapolate = null,
-    pathModified: js.UndefOr[Boolean] = js.undefined,
-    pointSelectionMode: multiple | single_ = null,
-    redrawOnResize: js.UndefOr[Boolean] = js.undefined,
-    resolveLabelOverlapping: hide | none = null,
-    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
-    series: PolarChartSeries | js.Array[PolarChartSeries] = null,
-    seriesSelectionMode: multiple | single_ = null,
-    seriesTemplate: AnonCustomizeSeriesNameField = null,
-    size: BaseWidgetSize = null,
-    theme: genericDotdark | genericDotlight | genericDotcontrast | ios7Dotdefault | genericDotcarmine | genericDotdarkmoon | genericDotdarkviolet | genericDotgreenmist | genericDotsoftblue | materialDotblueDotlight | materialDotlimeDotlight | materialDotorangeDotlight | materialDotpurpleDotlight | materialDottealDotlight = null,
-    title: BaseWidgetTitle | String = null,
-    tooltip: dxPolarChartTooltip = null,
-    useSpiderWeb: js.UndefOr[Boolean] = js.undefined,
-    valueAxis: dxPolarChartValueAxis = null,
-    width: Double | String | (js.Function0[Double | String]) = null
-  ): dxPolarChartOptions = {
+  def apply(): dxPolarChartOptions = {
     val __obj = js.Dynamic.literal()
-    if (adaptiveLayout != null) __obj.updateDynamic("adaptiveLayout")(adaptiveLayout.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (argumentAxis != null) __obj.updateDynamic("argumentAxis")(argumentAxis.asInstanceOf[js.Any])
-    if (barGroupPadding != null) __obj.updateDynamic("barGroupPadding")(barGroupPadding.asInstanceOf[js.Any])
-    if (barGroupWidth != null) __obj.updateDynamic("barGroupWidth")(barGroupWidth.asInstanceOf[js.Any])
-    if (barWidth != null) __obj.updateDynamic("barWidth")(barWidth.asInstanceOf[js.Any])
-    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
-    if (commonAxisSettings != null) __obj.updateDynamic("commonAxisSettings")(commonAxisSettings.asInstanceOf[js.Any])
-    if (commonSeriesSettings != null) __obj.updateDynamic("commonSeriesSettings")(commonSeriesSettings.asInstanceOf[js.Any])
-    if (containerBackgroundColor != null) __obj.updateDynamic("containerBackgroundColor")(containerBackgroundColor.asInstanceOf[js.Any])
-    if (customizeLabel != null) __obj.updateDynamic("customizeLabel")(js.Any.fromFunction1(customizeLabel))
-    if (customizePoint != null) __obj.updateDynamic("customizePoint")(js.Any.fromFunction1(customizePoint))
-    if (dataPrepareSettings != null) __obj.updateDynamic("dataPrepareSettings")(dataPrepareSettings.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
-    if (!js.isUndefined(equalBarWidth)) __obj.updateDynamic("equalBarWidth")(equalBarWidth.asInstanceOf[js.Any])
-    if (export != null) __obj.updateDynamic("export")(export.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (legend != null) __obj.updateDynamic("legend")(legend.asInstanceOf[js.Any])
-    if (loadingIndicator != null) __obj.updateDynamic("loadingIndicator")(loadingIndicator.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (!js.isUndefined(negativesAsZeroes)) __obj.updateDynamic("negativesAsZeroes")(negativesAsZeroes.asInstanceOf[js.Any])
-    if (onArgumentAxisClick != null) __obj.updateDynamic("onArgumentAxisClick")(onArgumentAxisClick.asInstanceOf[js.Any])
-    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
-    if (onDone != null) __obj.updateDynamic("onDone")(js.Any.fromFunction1(onDone))
-    if (onDrawn != null) __obj.updateDynamic("onDrawn")(js.Any.fromFunction1(onDrawn))
-    if (onExported != null) __obj.updateDynamic("onExported")(js.Any.fromFunction1(onExported))
-    if (onExporting != null) __obj.updateDynamic("onExporting")(js.Any.fromFunction1(onExporting))
-    if (onFileSaving != null) __obj.updateDynamic("onFileSaving")(js.Any.fromFunction1(onFileSaving))
-    if (onIncidentOccurred != null) __obj.updateDynamic("onIncidentOccurred")(js.Any.fromFunction1(onIncidentOccurred))
-    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
-    if (onLegendClick != null) __obj.updateDynamic("onLegendClick")(onLegendClick.asInstanceOf[js.Any])
-    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
-    if (onPointClick != null) __obj.updateDynamic("onPointClick")(onPointClick.asInstanceOf[js.Any])
-    if (onPointHoverChanged != null) __obj.updateDynamic("onPointHoverChanged")(js.Any.fromFunction1(onPointHoverChanged))
-    if (onPointSelectionChanged != null) __obj.updateDynamic("onPointSelectionChanged")(js.Any.fromFunction1(onPointSelectionChanged))
-    if (onSeriesClick != null) __obj.updateDynamic("onSeriesClick")(onSeriesClick.asInstanceOf[js.Any])
-    if (onSeriesHoverChanged != null) __obj.updateDynamic("onSeriesHoverChanged")(js.Any.fromFunction1(onSeriesHoverChanged))
-    if (onSeriesSelectionChanged != null) __obj.updateDynamic("onSeriesSelectionChanged")(js.Any.fromFunction1(onSeriesSelectionChanged))
-    if (onTooltipHidden != null) __obj.updateDynamic("onTooltipHidden")(js.Any.fromFunction1(onTooltipHidden))
-    if (onTooltipShown != null) __obj.updateDynamic("onTooltipShown")(js.Any.fromFunction1(onTooltipShown))
-    if (onZoomEnd != null) __obj.updateDynamic("onZoomEnd")(js.Any.fromFunction1(onZoomEnd))
-    if (onZoomStart != null) __obj.updateDynamic("onZoomStart")(js.Any.fromFunction1(onZoomStart))
-    if (palette != null) __obj.updateDynamic("palette")(palette.asInstanceOf[js.Any])
-    if (paletteExtensionMode != null) __obj.updateDynamic("paletteExtensionMode")(paletteExtensionMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(pathModified)) __obj.updateDynamic("pathModified")(pathModified.asInstanceOf[js.Any])
-    if (pointSelectionMode != null) __obj.updateDynamic("pointSelectionMode")(pointSelectionMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(redrawOnResize)) __obj.updateDynamic("redrawOnResize")(redrawOnResize.asInstanceOf[js.Any])
-    if (resolveLabelOverlapping != null) __obj.updateDynamic("resolveLabelOverlapping")(resolveLabelOverlapping.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.asInstanceOf[js.Any])
-    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
-    if (seriesSelectionMode != null) __obj.updateDynamic("seriesSelectionMode")(seriesSelectionMode.asInstanceOf[js.Any])
-    if (seriesTemplate != null) __obj.updateDynamic("seriesTemplate")(seriesTemplate.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (!js.isUndefined(useSpiderWeb)) __obj.updateDynamic("useSpiderWeb")(useSpiderWeb.asInstanceOf[js.Any])
-    if (valueAxis != null) __obj.updateDynamic("valueAxis")(valueAxis.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPolarChartOptions]
   }
+  @scala.inline
+  implicit class dxPolarChartOptionsOps[Self <: dxPolarChartOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdaptiveLayout(value: dxPolarChartAdaptiveLayout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adaptiveLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdaptiveLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adaptiveLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArgumentAxis(value: dxPolarChartArgumentAxis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgumentAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarGroupPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barGroupPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarGroupPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barGroupPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarGroupWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barGroupWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarGroupWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barGroupWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommonAxisSettings(value: dxPolarChartCommonAxisSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonAxisSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonAxisSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonAxisSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommonSeriesSettings(value: dxPolarChartCommonSeriesSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonSeriesSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonSeriesSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonSeriesSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBackgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBackgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataPrepareSettings(value: AnonConvertToAxisDataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataPrepareSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataPrepareSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataPrepareSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEqualBarWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equalBarWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEqualBarWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equalBarWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegend(value: dxPolarChartLegend): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegativesAsZeroes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativesAsZeroes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegativesAsZeroes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativesAsZeroes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnArgumentAxisClickFunction1(value: /* e */ AnonArgumentComponent => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onArgumentAxisClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnArgumentAxisClick(value: (js.Function1[/* e */ AnonArgumentComponent, _]) | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onArgumentAxisClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnArgumentAxisClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onArgumentAxisClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLegendClickFunction1(value: /* e */ AnonJQueryEventModelTarget => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnLegendClick(value: (js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnLegendClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSeriesClickFunction1(value: /* e */ AnonJQueryEventModelTarget => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnSeriesClick(value: (js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnSeriesClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSeriesHoverChanged(value: /* e */ AnonComponentDxPolarChart => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesHoverChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSeriesHoverChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesHoverChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSeriesSelectionChanged(value: /* e */ AnonComponentDxPolarChart => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesSelectionChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSeriesSelectionChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesSelectionChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnZoomEnd(value: /* e */ AnonPreviousRange => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnZoomEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnZoomStart(value: /* e */ AnonRange => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnZoomStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolveLabelOverlapping(value: hide | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveLabelOverlapping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolveLabelOverlapping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveLabelOverlapping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeries(value: PolarChartSeries | js.Array[PolarChartSeries]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesSelectionMode(value: multiple | single_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesSelectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesSelectionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesSelectionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesTemplate(value: AnonCustomizeSeriesNameField): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: dxPolarChartTooltip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseSpiderWeb(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSpiderWeb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseSpiderWeb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSpiderWeb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueAxis(value: dxPolarChartValueAxis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAxis")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

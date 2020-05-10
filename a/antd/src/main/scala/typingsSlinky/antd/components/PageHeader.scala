@@ -1,56 +1,67 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.avatarMod.AvatarProps
 import typingsSlinky.antd.breadcrumbBreadcrumbMod.BreadcrumbProps
 import typingsSlinky.antd.pageHeaderMod.PageHeaderProps
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PageHeader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object PageHeader {
   @JSImport("antd/lib/page-header", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    title: TagMod[Any],
-    avatar: AvatarProps = null,
-    backIcon: TagMod[Any] = null,
-    breadcrumb: BreadcrumbProps = null,
-    extra: TagMod[Any] = null,
-    footer: TagMod[Any] = null,
-    ghost: js.UndefOr[Boolean] = js.undefined,
-    onBack: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    prefixCls: String = null,
-    subTitle: TagMod[Any] = null,
-    tags: ReactElement | js.Array[ReactElement] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-    if (avatar != null) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
-    if (backIcon != null) __obj.updateDynamic("backIcon")(backIcon.asInstanceOf[js.Any])
-    if (breadcrumb != null) __obj.updateDynamic("breadcrumb")(breadcrumb.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (!js.isUndefined(ghost)) __obj.updateDynamic("ghost")(ghost.asInstanceOf[js.Any])
-    if (onBack != null) __obj.updateDynamic("onBack")(js.Any.fromFunction1(onBack))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (subTitle != null) __obj.updateDynamic("subTitle")(subTitle.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def avatar(value: AvatarProps): this.type = set("avatar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backIconReactElement(value: ReactElement): this.type = set("backIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backIcon(value: TagMod[Any]): this.type = set("backIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def breadcrumb(value: BreadcrumbProps): this.type = set("breadcrumb", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extra(value: TagMod[Any]): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footer(value: TagMod[Any]): this.type = set("footer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ghost(value: Boolean): this.type = set("ghost", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBack(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onBack", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subTitleReactElement(value: ReactElement): this.type = set("subTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subTitle(value: TagMod[Any]): this.type = set("subTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagsReactElement(value: ReactElement): this.type = set("tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tags(value: ReactElement | js.Array[ReactElement]): this.type = set("tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
   }
-  type Props = PageHeaderProps
+  
+  def withProps(p: PageHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PageHeader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

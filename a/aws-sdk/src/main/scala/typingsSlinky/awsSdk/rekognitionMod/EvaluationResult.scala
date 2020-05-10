@@ -18,11 +18,41 @@ trait EvaluationResult extends js.Object {
 
 object EvaluationResult {
   @scala.inline
-  def apply(F1Score: Int | Double = null, Summary: Summary = null): EvaluationResult = {
+  def apply(): EvaluationResult = {
     val __obj = js.Dynamic.literal()
-    if (F1Score != null) __obj.updateDynamic("F1Score")(F1Score.asInstanceOf[js.Any])
-    if (Summary != null) __obj.updateDynamic("Summary")(Summary.asInstanceOf[js.Any])
     __obj.asInstanceOf[EvaluationResult]
   }
+  @scala.inline
+  implicit class EvaluationResultOps[Self <: EvaluationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withF1Score(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("F1Score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutF1Score: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("F1Score")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummary(value: Summary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Summary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

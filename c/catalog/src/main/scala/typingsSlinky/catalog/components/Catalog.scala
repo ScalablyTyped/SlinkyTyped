@@ -1,9 +1,7 @@
 package typingsSlinky.catalog.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.catalog.PartialTheme
 import typingsSlinky.catalog.mod.Config
 import typingsSlinky.catalog.mod.ConfigPageOrGroup
@@ -12,36 +10,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Catalog
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.catalog.mod.Catalog] {
+object Catalog {
   @JSImport("catalog", "Catalog")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    pages: js.Array[ConfigPageOrGroup],
-    title: String,
-    basePath: String = null,
-    logoSrc: String = null,
-    responsiveSizes: js.Array[ConfigResponsiveSize] = null,
-    scripts: js.Array[String] = null,
-    styles: js.Array[String] = null,
-    theme: PartialTheme = null,
-    useBrowserHistory: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.catalog.mod.Catalog] = {
-    val __obj = js.Dynamic.literal(pages = pages.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    if (basePath != null) __obj.updateDynamic("basePath")(basePath.asInstanceOf[js.Any])
-    if (logoSrc != null) __obj.updateDynamic("logoSrc")(logoSrc.asInstanceOf[js.Any])
-    if (responsiveSizes != null) __obj.updateDynamic("responsiveSizes")(responsiveSizes.asInstanceOf[js.Any])
-    if (scripts != null) __obj.updateDynamic("scripts")(scripts.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (!js.isUndefined(useBrowserHistory)) __obj.updateDynamic("useBrowserHistory")(useBrowserHistory.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.catalog.mod.Catalog] {
+    @scala.inline
+    def basePath(value: String): this.type = set("basePath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def logoSrc(value: String): this.type = set("logoSrc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def responsiveSizes(value: js.Array[ConfigResponsiveSize]): this.type = set("responsiveSizes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scripts(value: js.Array[String]): this.type = set("scripts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styles(value: js.Array[String]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: PartialTheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useBrowserHistory(value: Boolean): this.type = set("useBrowserHistory", value.asInstanceOf[js.Any])
   }
-  type Props = Config
+  
+  def withProps(p: Config): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(pages: js.Array[ConfigPageOrGroup], title: String): Builder = {
+    val __props = js.Dynamic.literal(pages = pages.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Config]))
+  }
 }
 

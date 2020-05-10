@@ -28,7 +28,7 @@ class ViewSnapshot protected () extends js.Object {
   val oldDocs: DocumentSet = js.native
   val query: Query = js.native
   val syncStateChanged: Boolean = js.native
-  def hasPendingWrites(): Boolean = js.native
+  def hasPendingWrites: Boolean = js.native
   def isEqual(other: ViewSnapshot): Boolean = js.native
 }
 

@@ -7,8 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {  objectMode ? :false} & node.stream.ReadableOptions */
+@js.native
 trait Options extends js.Object {
-  var autoDestroy: js.UndefOr[Boolean] = js.undefined
+  var autoDestroy: js.UndefOr[Boolean] = js.native
   var destroy: js.UndefOr[
     js.ThisFunction2[
       /* this */ Readable, 
@@ -16,36 +17,105 @@ trait Options extends js.Object {
       /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
       Unit
     ]
-  ] = js.undefined
-  var encoding: js.UndefOr[String] = js.undefined
-  var highWaterMark: js.UndefOr[Double] = js.undefined
-  var objectMode: js.UndefOr[`false` with Boolean] = js.undefined
-  var read: js.UndefOr[js.ThisFunction1[/* this */ Readable, /* size */ Double, Unit]] = js.undefined
+  ] = js.native
+  var encoding: js.UndefOr[String] = js.native
+  var highWaterMark: js.UndefOr[Double] = js.native
+  var objectMode: js.UndefOr[`false` with Boolean] = js.native
+  var read: js.UndefOr[js.ThisFunction1[/* this */ Readable, /* size */ Double, Unit]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    autoDestroy: js.UndefOr[Boolean] = js.undefined,
-    destroy: js.ThisFunction2[
-      /* this */ Readable, 
-      /* error */ js.Error | Null, 
-      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
-      Unit
-    ] = null,
-    encoding: String = null,
-    highWaterMark: Int | Double = null,
-    objectMode: js.UndefOr[`false` with Boolean] = js.undefined,
-    read: js.ThisFunction1[/* this */ Readable, /* size */ Double, Unit] = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoDestroy)) __obj.updateDynamic("autoDestroy")(autoDestroy.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(destroy.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (highWaterMark != null) __obj.updateDynamic("highWaterMark")(highWaterMark.asInstanceOf[js.Any])
-    if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.asInstanceOf[js.Any])
-    if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoDestroy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDestroy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDestroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestroy(
+      value: js.ThisFunction2[
+          /* this */ Readable, 
+          /* error */ js.Error | Null, 
+          /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
+          Unit
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighWaterMark(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highWaterMark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighWaterMark: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highWaterMark")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectMode(value: `false` with Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRead(value: js.ThisFunction1[/* this */ Readable, /* size */ Double, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

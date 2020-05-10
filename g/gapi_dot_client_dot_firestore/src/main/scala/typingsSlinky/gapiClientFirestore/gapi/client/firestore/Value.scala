@@ -4,37 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Value extends js.Object {
   /**
     * An array value.
     *
     * Cannot contain another array value.
     */
-  var arrayValue: js.UndefOr[ArrayValue] = js.undefined
+  var arrayValue: js.UndefOr[ArrayValue] = js.native
   /** A boolean value. */
-  var booleanValue: js.UndefOr[Boolean] = js.undefined
+  var booleanValue: js.UndefOr[Boolean] = js.native
   /**
     * A bytes value.
     *
     * Must not exceed 1 MiB - 89 bytes.
     * Only the first 1,500 bytes are considered by queries.
     */
-  var bytesValue: js.UndefOr[String] = js.undefined
+  var bytesValue: js.UndefOr[String] = js.native
   /** A double value. */
-  var doubleValue: js.UndefOr[Double] = js.undefined
+  var doubleValue: js.UndefOr[Double] = js.native
   /** A geo point value representing a point on the surface of Earth. */
-  var geoPointValue: js.UndefOr[LatLng] = js.undefined
+  var geoPointValue: js.UndefOr[LatLng] = js.native
   /** An integer value. */
-  var integerValue: js.UndefOr[String] = js.undefined
+  var integerValue: js.UndefOr[String] = js.native
   /** A map value. */
-  var mapValue: js.UndefOr[MapValue] = js.undefined
+  var mapValue: js.UndefOr[MapValue] = js.native
   /** A null value. */
-  var nullValue: js.UndefOr[String] = js.undefined
+  var nullValue: js.UndefOr[String] = js.native
   /**
     * A reference to a document. For example:
     * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
     */
-  var referenceValue: js.UndefOr[String] = js.undefined
+  var referenceValue: js.UndefOr[String] = js.native
   /**
     * A string value.
     *
@@ -42,44 +43,161 @@ trait Value extends js.Object {
     * Only the first 1,500 bytes of the UTF-8 representation are considered by
     * queries.
     */
-  var stringValue: js.UndefOr[String] = js.undefined
+  var stringValue: js.UndefOr[String] = js.native
   /**
     * A timestamp value.
     *
     * Precise only to microseconds. When stored, any additional precision is
     * rounded down.
     */
-  var timestampValue: js.UndefOr[String] = js.undefined
+  var timestampValue: js.UndefOr[String] = js.native
 }
 
 object Value {
   @scala.inline
-  def apply(
-    arrayValue: ArrayValue = null,
-    booleanValue: js.UndefOr[Boolean] = js.undefined,
-    bytesValue: String = null,
-    doubleValue: Int | Double = null,
-    geoPointValue: LatLng = null,
-    integerValue: String = null,
-    mapValue: MapValue = null,
-    nullValue: String = null,
-    referenceValue: String = null,
-    stringValue: String = null,
-    timestampValue: String = null
-  ): Value = {
+  def apply(): Value = {
     val __obj = js.Dynamic.literal()
-    if (arrayValue != null) __obj.updateDynamic("arrayValue")(arrayValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(booleanValue)) __obj.updateDynamic("booleanValue")(booleanValue.asInstanceOf[js.Any])
-    if (bytesValue != null) __obj.updateDynamic("bytesValue")(bytesValue.asInstanceOf[js.Any])
-    if (doubleValue != null) __obj.updateDynamic("doubleValue")(doubleValue.asInstanceOf[js.Any])
-    if (geoPointValue != null) __obj.updateDynamic("geoPointValue")(geoPointValue.asInstanceOf[js.Any])
-    if (integerValue != null) __obj.updateDynamic("integerValue")(integerValue.asInstanceOf[js.Any])
-    if (mapValue != null) __obj.updateDynamic("mapValue")(mapValue.asInstanceOf[js.Any])
-    if (nullValue != null) __obj.updateDynamic("nullValue")(nullValue.asInstanceOf[js.Any])
-    if (referenceValue != null) __obj.updateDynamic("referenceValue")(referenceValue.asInstanceOf[js.Any])
-    if (stringValue != null) __obj.updateDynamic("stringValue")(stringValue.asInstanceOf[js.Any])
-    if (timestampValue != null) __obj.updateDynamic("timestampValue")(timestampValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[Value]
   }
+  @scala.inline
+  implicit class ValueOps[Self <: Value] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayValue(value: ArrayValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBooleanValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBooleanValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoubleValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoubleValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeoPointValue(value: LatLng): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geoPointValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeoPointValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geoPointValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegerValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integerValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegerValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integerValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapValue(value: MapValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNullValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNullValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nullValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferenceValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferenceValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestampValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestampValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,28 +21,26 @@ trait AnimationMethods extends js.Object
 
 object AnimationMethods {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def collapse: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.collapse = "collapse".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.collapse]
   @scala.inline
-  def collapse: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.collapse = this.cast("collapse")
+  def expand: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.expand = "expand".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.expand]
   @scala.inline
-  def expand: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.expand = this.cast("expand")
+  def fadeIn: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.fadeIn = "fadeIn".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.fadeIn]
   @scala.inline
-  def fadeIn: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.fadeIn = this.cast("fadeIn")
+  def fadeOut: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.fadeOut = "fadeOut".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.fadeOut]
   @scala.inline
-  def fadeOut: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.fadeOut = this.cast("fadeOut")
+  def flipIn: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.flipIn = "flipIn".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.flipIn]
   @scala.inline
-  def flipIn: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.flipIn = this.cast("flipIn")
+  def flipOut: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.flipOut = "flipOut".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.flipOut]
   @scala.inline
-  def flipOut: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.flipOut = this.cast("flipOut")
+  def ripple: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.ripple = "ripple".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.ripple]
   @scala.inline
-  def ripple: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.ripple = this.cast("ripple")
+  def slideIn: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.slideIn = "slideIn".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.slideIn]
   @scala.inline
-  def slideIn: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.slideIn = this.cast("slideIn")
+  def slideOut: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.slideOut = "slideOut".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.slideOut]
   @scala.inline
-  def slideOut: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.slideOut = this.cast("slideOut")
+  def zoomIn: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.zoomIn = "zoomIn".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.zoomIn]
   @scala.inline
-  def zoomIn: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.zoomIn = this.cast("zoomIn")
-  @scala.inline
-  def zoomOut: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.zoomOut = this.cast("zoomOut")
+  def zoomOut: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.zoomOut = "zoomOut".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.zoomOut]
 }
 

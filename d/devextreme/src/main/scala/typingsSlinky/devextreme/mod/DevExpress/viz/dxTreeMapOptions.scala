@@ -1,37 +1,16 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonCancelComponentData
 import typingsSlinky.devextreme.AnonColorCodeField
-import typingsSlinky.devextreme.AnonComponentTElementDxElementModelAny
-import typingsSlinky.devextreme.AnonElement
 import typingsSlinky.devextreme.AnonElementModelNode
-import typingsSlinky.devextreme.AnonFormatModel
 import typingsSlinky.devextreme.AnonHeaderHeight
 import typingsSlinky.devextreme.AnonJQueryEventModelNode
-import typingsSlinky.devextreme.AnonModel
 import typingsSlinky.devextreme.AnonModelRoot
-import typingsSlinky.devextreme.AnonName
 import typingsSlinky.devextreme.AnonRect
 import typingsSlinky.devextreme.AnonSelectionStyle
-import typingsSlinky.devextreme.AnonTargetAny
 import typingsSlinky.devextreme.devextremeStrings.ellipsis
-import typingsSlinky.devextreme.devextremeStrings.genericDotcarmine
-import typingsSlinky.devextreme.devextremeStrings.genericDotcontrast
-import typingsSlinky.devextreme.devextremeStrings.genericDotdark
-import typingsSlinky.devextreme.devextremeStrings.genericDotdarkmoon
-import typingsSlinky.devextreme.devextremeStrings.genericDotdarkviolet
-import typingsSlinky.devextreme.devextremeStrings.genericDotgreenmist
-import typingsSlinky.devextreme.devextremeStrings.genericDotlight
-import typingsSlinky.devextreme.devextremeStrings.genericDotsoftblue
 import typingsSlinky.devextreme.devextremeStrings.hide
-import typingsSlinky.devextreme.devextremeStrings.ios7Dotdefault
 import typingsSlinky.devextreme.devextremeStrings.leftBottomRightTop
 import typingsSlinky.devextreme.devextremeStrings.leftTopRightBottom
-import typingsSlinky.devextreme.devextremeStrings.materialDotblueDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotlimeDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotorangeDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotpurpleDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDottealDotlight
 import typingsSlinky.devextreme.devextremeStrings.multiple
 import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.devextremeStrings.rightBottomLeftTop
@@ -46,159 +25,375 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxTreeMapOptions extends BaseWidgetOptions[dxTreeMap] {
   /** Specifies the name of the data source field that provides nested items for a group. Applies to hierarchical data sources only. */
-  var childrenField: js.UndefOr[String] = js.undefined
+  var childrenField: js.UndefOr[String] = js.native
   /** Specifies the name of the data source field that provides colors for tiles. */
-  var colorField: js.UndefOr[String] = js.undefined
+  var colorField: js.UndefOr[String] = js.native
   /** Manages the color settings. */
-  var colorizer: js.UndefOr[AnonColorCodeField] = js.undefined
+  var colorizer: js.UndefOr[AnonColorCodeField] = js.native
   /** Binds the widget to data. */
-  var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.undefined
+  var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.native
   /** Configures groups. */
-  var group: js.UndefOr[AnonHeaderHeight] = js.undefined
+  var group: js.UndefOr[AnonHeaderHeight] = js.native
   /** Specifies whether tiles and groups change their style when a user pauses on them. */
-  var hoverEnabled: js.UndefOr[Boolean] = js.undefined
+  var hoverEnabled: js.UndefOr[Boolean] = js.native
   /** Specifies the name of the data source field that provides IDs for items. Applies to plain data sources only. */
-  var idField: js.UndefOr[String] = js.undefined
+  var idField: js.UndefOr[String] = js.native
   /** Specifies whether the user will interact with a single tile or its group. */
-  var interactWithGroup: js.UndefOr[Boolean] = js.undefined
+  var interactWithGroup: js.UndefOr[Boolean] = js.native
   /** Specifies the name of the data source field that provides texts for tile and group labels. */
-  var labelField: js.UndefOr[String] = js.undefined
+  var labelField: js.UndefOr[String] = js.native
   /** Specifies the layout algorithm. */
-  var layoutAlgorithm: js.UndefOr[sliceanddice | squarified | strip | (js.Function1[/* e */ AnonRect, _])] = js.undefined
+  var layoutAlgorithm: js.UndefOr[sliceanddice | squarified | strip | (js.Function1[/* e */ AnonRect, _])] = js.native
   /** Specifies the direction in which the items will be laid out. */
   var layoutDirection: js.UndefOr[
     leftBottomRightTop | leftTopRightBottom | rightBottomLeftTop | rightTopLeftBottom
-  ] = js.undefined
+  ] = js.native
   /** Specifies how many hierarchical levels must be visualized. */
-  var maxDepth: js.UndefOr[Double] = js.undefined
+  var maxDepth: js.UndefOr[Double] = js.native
   /** A function that is executed when a node is clicked or tapped. */
-  var onClick: js.UndefOr[(js.Function1[/* e */ AnonJQueryEventModelNode, _]) | String] = js.undefined
+  var onClick: js.UndefOr[(js.Function1[/* e */ AnonJQueryEventModelNode, _]) | String] = js.native
   /** A function that is executed when a user drills up or down. */
-  var onDrill: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.undefined
+  var onDrill: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.native
   /** A function that is executed after the pointer enters or leaves a node. */
-  var onHoverChanged: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.undefined
+  var onHoverChanged: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.native
   /** A function that is executed only once, after the nodes are initialized. */
-  var onNodesInitialized: js.UndefOr[js.Function1[/* e */ AnonModelRoot, _]] = js.undefined
+  var onNodesInitialized: js.UndefOr[js.Function1[/* e */ AnonModelRoot, _]] = js.native
   /** A function that is executed before the nodes are displayed and each time the collection of active nodes is changed. */
-  var onNodesRendering: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.undefined
+  var onNodesRendering: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.native
   /** A function that is executed when a node is selected or selection is canceled. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.undefined
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.native
   /** Specifies the name of the data source field that provides parent IDs for items. Applies to plain data sources only. */
-  var parentField: js.UndefOr[String] = js.undefined
+  var parentField: js.UndefOr[String] = js.native
   /** @deprecated Use the tile.label.textOverflow option instead. */
   /** Decides whether those labels that overflow their tile/group should be hidden or truncated with ellipsis. */
-  var resolveLabelOverflow: js.UndefOr[ellipsis | hide] = js.undefined
+  var resolveLabelOverflow: js.UndefOr[ellipsis | hide] = js.native
   /** Specifies whether a single or multiple nodes can be in the selected state simultaneously. */
-  var selectionMode: js.UndefOr[multiple | none | single_] = js.undefined
+  var selectionMode: js.UndefOr[multiple | none | single_] = js.native
   /** Configures tiles. */
-  var tile: js.UndefOr[AnonSelectionStyle] = js.undefined
+  var tile: js.UndefOr[AnonSelectionStyle] = js.native
   /** Configures tooltips - small pop-up rectangles that display information about a data-visualizing widget element being pressed or hovered over with the mouse pointer. */
   @JSName("tooltip")
-  var tooltip_dxTreeMapOptions: js.UndefOr[dxTreeMapTooltip] = js.undefined
+  var tooltip_dxTreeMapOptions: js.UndefOr[dxTreeMapTooltip] = js.native
   /** Specifies the name of the data source field that provides values for tiles. */
-  var valueField: js.UndefOr[String] = js.undefined
+  var valueField: js.UndefOr[String] = js.native
 }
 
 object dxTreeMapOptions {
   @scala.inline
-  def apply(
-    bindingOptions: js.Any = null,
-    childrenField: String = null,
-    colorField: String = null,
-    colorizer: AnonColorCodeField = null,
-    dataSource: js.Array[_] | DataSource | DataSourceOptions | String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    elementAttr: js.Any = null,
-    export: BaseWidgetExport = null,
-    group: AnonHeaderHeight = null,
-    height: Double | String | (js.Function0[Double | String]) = null,
-    hoverEnabled: js.UndefOr[Boolean] = js.undefined,
-    idField: String = null,
-    interactWithGroup: js.UndefOr[Boolean] = js.undefined,
-    labelField: String = null,
-    layoutAlgorithm: sliceanddice | squarified | strip | (js.Function1[/* e */ AnonRect, _]) = null,
-    layoutDirection: leftBottomRightTop | leftTopRightBottom | rightBottomLeftTop | rightTopLeftBottom = null,
-    loadingIndicator: BaseWidgetLoadingIndicator = null,
-    margin: BaseWidgetMargin = null,
-    maxDepth: Int | Double = null,
-    onClick: (js.Function1[/* e */ AnonJQueryEventModelNode, _]) | String = null,
-    onDisposing: /* e */ AnonModel[dxTreeMap] => _ = null,
-    onDrawn: /* e */ AnonComponentTElementDxElementModelAny[dxTreeMap] => _ = null,
-    onDrill: /* e */ AnonElementModelNode => _ = null,
-    onExported: /* e */ AnonComponentTElementDxElementModelAny[dxTreeMap] => _ = null,
-    onExporting: /* e */ AnonFormatModel[dxTreeMap] => _ = null,
-    onFileSaving: /* e */ AnonCancelComponentData[dxTreeMap] => _ = null,
-    onHoverChanged: /* e */ AnonElementModelNode => _ = null,
-    onIncidentOccurred: /* e */ AnonTargetAny[dxTreeMap] => _ = null,
-    onInitialized: /* e */ AnonElement[dxTreeMap] => _ = null,
-    onNodesInitialized: /* e */ AnonModelRoot => _ = null,
-    onNodesRendering: /* e */ AnonElementModelNode => _ = null,
-    onOptionChanged: /* e */ AnonName[dxTreeMap] => _ = null,
-    onSelectionChanged: /* e */ AnonElementModelNode => _ = null,
-    parentField: String = null,
-    pathModified: js.UndefOr[Boolean] = js.undefined,
-    redrawOnResize: js.UndefOr[Boolean] = js.undefined,
-    resolveLabelOverflow: ellipsis | hide = null,
-    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
-    selectionMode: multiple | none | single_ = null,
-    size: BaseWidgetSize = null,
-    theme: genericDotdark | genericDotlight | genericDotcontrast | ios7Dotdefault | genericDotcarmine | genericDotdarkmoon | genericDotdarkviolet | genericDotgreenmist | genericDotsoftblue | materialDotblueDotlight | materialDotlimeDotlight | materialDotorangeDotlight | materialDotpurpleDotlight | materialDottealDotlight = null,
-    tile: AnonSelectionStyle = null,
-    title: BaseWidgetTitle | String = null,
-    tooltip: dxTreeMapTooltip = null,
-    valueField: String = null,
-    width: Double | String | (js.Function0[Double | String]) = null
-  ): dxTreeMapOptions = {
+  def apply(): dxTreeMapOptions = {
     val __obj = js.Dynamic.literal()
-    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
-    if (childrenField != null) __obj.updateDynamic("childrenField")(childrenField.asInstanceOf[js.Any])
-    if (colorField != null) __obj.updateDynamic("colorField")(colorField.asInstanceOf[js.Any])
-    if (colorizer != null) __obj.updateDynamic("colorizer")(colorizer.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
-    if (export != null) __obj.updateDynamic("export")(export.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverEnabled)) __obj.updateDynamic("hoverEnabled")(hoverEnabled.asInstanceOf[js.Any])
-    if (idField != null) __obj.updateDynamic("idField")(idField.asInstanceOf[js.Any])
-    if (!js.isUndefined(interactWithGroup)) __obj.updateDynamic("interactWithGroup")(interactWithGroup.asInstanceOf[js.Any])
-    if (labelField != null) __obj.updateDynamic("labelField")(labelField.asInstanceOf[js.Any])
-    if (layoutAlgorithm != null) __obj.updateDynamic("layoutAlgorithm")(layoutAlgorithm.asInstanceOf[js.Any])
-    if (layoutDirection != null) __obj.updateDynamic("layoutDirection")(layoutDirection.asInstanceOf[js.Any])
-    if (loadingIndicator != null) __obj.updateDynamic("loadingIndicator")(loadingIndicator.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (maxDepth != null) __obj.updateDynamic("maxDepth")(maxDepth.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(onClick.asInstanceOf[js.Any])
-    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
-    if (onDrawn != null) __obj.updateDynamic("onDrawn")(js.Any.fromFunction1(onDrawn))
-    if (onDrill != null) __obj.updateDynamic("onDrill")(js.Any.fromFunction1(onDrill))
-    if (onExported != null) __obj.updateDynamic("onExported")(js.Any.fromFunction1(onExported))
-    if (onExporting != null) __obj.updateDynamic("onExporting")(js.Any.fromFunction1(onExporting))
-    if (onFileSaving != null) __obj.updateDynamic("onFileSaving")(js.Any.fromFunction1(onFileSaving))
-    if (onHoverChanged != null) __obj.updateDynamic("onHoverChanged")(js.Any.fromFunction1(onHoverChanged))
-    if (onIncidentOccurred != null) __obj.updateDynamic("onIncidentOccurred")(js.Any.fromFunction1(onIncidentOccurred))
-    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
-    if (onNodesInitialized != null) __obj.updateDynamic("onNodesInitialized")(js.Any.fromFunction1(onNodesInitialized))
-    if (onNodesRendering != null) __obj.updateDynamic("onNodesRendering")(js.Any.fromFunction1(onNodesRendering))
-    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
-    if (onSelectionChanged != null) __obj.updateDynamic("onSelectionChanged")(js.Any.fromFunction1(onSelectionChanged))
-    if (parentField != null) __obj.updateDynamic("parentField")(parentField.asInstanceOf[js.Any])
-    if (!js.isUndefined(pathModified)) __obj.updateDynamic("pathModified")(pathModified.asInstanceOf[js.Any])
-    if (!js.isUndefined(redrawOnResize)) __obj.updateDynamic("redrawOnResize")(redrawOnResize.asInstanceOf[js.Any])
-    if (resolveLabelOverflow != null) __obj.updateDynamic("resolveLabelOverflow")(resolveLabelOverflow.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tile != null) __obj.updateDynamic("tile")(tile.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (valueField != null) __obj.updateDynamic("valueField")(valueField.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxTreeMapOptions]
   }
+  @scala.inline
+  implicit class dxTreeMapOptionsOps[Self <: dxTreeMapOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildrenField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildrenField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childrenField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorizer(value: AnonColorCodeField): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorizer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorizer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorizer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: js.Array[_] | DataSource | DataSourceOptions | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroup(value: AnonHeaderHeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInteractWithGroup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactWithGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInteractWithGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactWithGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayoutAlgorithmFunction1(value: /* e */ AnonRect => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutAlgorithm")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLayoutAlgorithm(value: sliceanddice | squarified | strip | (js.Function1[/* e */ AnonRect, _])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayoutAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayoutDirection(value: leftBottomRightTop | leftTopRightBottom | rightBottomLeftTop | rightTopLeftBottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClickFunction1(value: /* e */ AnonJQueryEventModelNode => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: (js.Function1[/* e */ AnonJQueryEventModelNode, _]) | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDrill(value: /* e */ AnonElementModelNode => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrill")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDrill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDrill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHoverChanged(value: /* e */ AnonElementModelNode => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHoverChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHoverChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHoverChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnNodesInitialized(value: /* e */ AnonModelRoot => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodesInitialized")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnNodesInitialized: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodesInitialized")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnNodesRendering(value: /* e */ AnonElementModelNode => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodesRendering")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnNodesRendering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNodesRendering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelectionChanged(value: /* e */ AnonElementModelNode => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelectionChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolveLabelOverflow(value: ellipsis | hide): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveLabelOverflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolveLabelOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveLabelOverflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionMode(value: multiple | none | single_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTile(value: AnonSelectionStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: dxTreeMapTooltip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueField")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

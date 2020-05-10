@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Settings extends js.Object {
-  var columns: js.UndefOr[Boolean] = js.undefined
-  var onlyTrimmed: js.UndefOr[Boolean] = js.undefined
-  var rows: js.UndefOr[Boolean] = js.undefined
+  var columns: js.UndefOr[Boolean] = js.native
+  var onlyTrimmed: js.UndefOr[Boolean] = js.native
+  var rows: js.UndefOr[Boolean] = js.native
 }
 
 object Settings {
   @scala.inline
-  def apply(
-    columns: js.UndefOr[Boolean] = js.undefined,
-    onlyTrimmed: js.UndefOr[Boolean] = js.undefined,
-    rows: js.UndefOr[Boolean] = js.undefined
-  ): Settings = {
+  def apply(): Settings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(columns)) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (!js.isUndefined(onlyTrimmed)) __obj.updateDynamic("onlyTrimmed")(onlyTrimmed.asInstanceOf[js.Any])
-    if (!js.isUndefined(rows)) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
+  @scala.inline
+  implicit class SettingsOps[Self <: Settings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumns(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlyTrimmed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyTrimmed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlyTrimmed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlyTrimmed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

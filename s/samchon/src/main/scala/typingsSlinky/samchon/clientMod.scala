@@ -1,6 +1,5 @@
 package typingsSlinky.samchon
 
-import typingsSlinky.samchon.invokeMod.Invoke
 import typingsSlinky.samchon.iprotocolMod.IProtocol
 import typingsSlinky.samchon.serviceServiceMod.Service
 import typingsSlinky.samchon.userMod.User
@@ -110,24 +109,6 @@ object clientMod extends js.Object {
       * @return The parent {@link User} object.
       */
     def getUser(): User = js.native
-    /**
-      * Sending message.
-      *
-      * Sends message to related system or shifts the responsibility to chain.
-      *
-      * @param invoke Invoke message to send
-      */
-    /* CompleteClass */
-    override def replyData(invoke: Invoke): Unit = js.native
-    /**
-      * Handling replied message.
-      *
-      * Handles replied message or shifts the responsibility to chain.
-      *
-      * @param invoke An {@link Invoke} message has received.
-      */
-    /* CompleteClass */
-    override def sendData(invoke: Invoke): Unit = js.native
   }
   
 }

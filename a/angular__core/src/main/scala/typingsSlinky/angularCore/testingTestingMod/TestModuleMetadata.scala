@@ -5,30 +5,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TestModuleMetadata extends js.Object {
-  var aotSummaries: js.UndefOr[js.Function0[js.Array[_]]] = js.undefined
-  var declarations: js.UndefOr[js.Array[_]] = js.undefined
-  var imports: js.UndefOr[js.Array[_]] = js.undefined
-  var providers: js.UndefOr[js.Array[_]] = js.undefined
-  var schemas: js.UndefOr[js.Array[SchemaMetadata | js.Array[_]]] = js.undefined
+  var aotSummaries: js.UndefOr[js.Function0[js.Array[_]]] = js.native
+  var declarations: js.UndefOr[js.Array[_]] = js.native
+  var imports: js.UndefOr[js.Array[_]] = js.native
+  var providers: js.UndefOr[js.Array[_]] = js.native
+  var schemas: js.UndefOr[js.Array[SchemaMetadata | js.Array[_]]] = js.native
 }
 
 object TestModuleMetadata {
   @scala.inline
-  def apply(
-    aotSummaries: () => js.Array[_] = null,
-    declarations: js.Array[_] = null,
-    imports: js.Array[_] = null,
-    providers: js.Array[_] = null,
-    schemas: js.Array[SchemaMetadata | js.Array[_]] = null
-  ): TestModuleMetadata = {
+  def apply(): TestModuleMetadata = {
     val __obj = js.Dynamic.literal()
-    if (aotSummaries != null) __obj.updateDynamic("aotSummaries")(js.Any.fromFunction0(aotSummaries))
-    if (declarations != null) __obj.updateDynamic("declarations")(declarations.asInstanceOf[js.Any])
-    if (imports != null) __obj.updateDynamic("imports")(imports.asInstanceOf[js.Any])
-    if (providers != null) __obj.updateDynamic("providers")(providers.asInstanceOf[js.Any])
-    if (schemas != null) __obj.updateDynamic("schemas")(schemas.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestModuleMetadata]
   }
+  @scala.inline
+  implicit class TestModuleMetadataOps[Self <: TestModuleMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAotSummaries(value: () => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aotSummaries")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutAotSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aotSummaries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeclarations(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declarations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeclarations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("declarations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImports(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImports: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProviders(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProviders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemas(value: js.Array[SchemaMetadata | js.Array[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemas")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

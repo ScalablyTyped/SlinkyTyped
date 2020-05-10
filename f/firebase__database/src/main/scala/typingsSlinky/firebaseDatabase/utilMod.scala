@@ -1,8 +1,6 @@
 package typingsSlinky.firebaseDatabase
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.`[MAX_NAME]`
-import typingsSlinky.firebaseDatabase.firebaseDatabaseStrings.`[MIN_NAME]`
 import typingsSlinky.firebaseDatabase.queryMod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object utilMod extends js.Object {
   val INTEGER_REGEXP_ : js.RegExp = js.native
-  val MAX_NAME: `[MAX_NAME]` = js.native
-  val MIN_NAME: `[MIN_NAME]` = js.native
+  val MAX_NAME: /* "[MAX_NAME]" */ String = js.native
+  val MIN_NAME: /* "[MIN_NAME]" */ String = js.native
   var logger: (js.Function1[/* a */ String, Unit]) | Null = js.native
   def LUIDGenerator(): Double = js.native
   def ObjectToUniqueKey(obj: js.Any): String = js.native

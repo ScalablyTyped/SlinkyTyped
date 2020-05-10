@@ -12,10 +12,8 @@ trait FulfillmentType extends js.Object
 
 object FulfillmentType {
   @scala.inline
-  def PICKUP: typingsSlinky.squareConnect.squareConnectStrings.PICKUP = this.cast("PICKUP")
+  def PICKUP: typingsSlinky.squareConnect.squareConnectStrings.PICKUP = "PICKUP".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.PICKUP]
   @scala.inline
-  def SHIPMENT: typingsSlinky.squareConnect.squareConnectStrings.SHIPMENT = this.cast("SHIPMENT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SHIPMENT: typingsSlinky.squareConnect.squareConnectStrings.SHIPMENT = "SHIPMENT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SHIPMENT]
 }
 

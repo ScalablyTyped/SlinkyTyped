@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HeterogeneousExpandableList extends js.Object {
-  def getChildType(groupPosition: Double, childPosition: Double): Double
-  def getChildTypeCount(): Double
-  def getGroupType(groupPosition: Double): Double
-  def getGroupTypeCount(): Double
+  def getChildType(groupPosition: Double, childPosition: Double): Double = js.native
+  def getChildTypeCount(): Double = js.native
+  def getGroupType(groupPosition: Double): Double = js.native
+  def getGroupTypeCount(): Double = js.native
 }
 
 @JSGlobal("android.widget.HeterogeneousExpandableList")

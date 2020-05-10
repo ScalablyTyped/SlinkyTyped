@@ -18,14 +18,41 @@ trait DataCatalogEncryptionSettings extends js.Object {
 
 object DataCatalogEncryptionSettings {
   @scala.inline
-  def apply(
-    ConnectionPasswordEncryption: ConnectionPasswordEncryption = null,
-    EncryptionAtRest: EncryptionAtRest = null
-  ): DataCatalogEncryptionSettings = {
+  def apply(): DataCatalogEncryptionSettings = {
     val __obj = js.Dynamic.literal()
-    if (ConnectionPasswordEncryption != null) __obj.updateDynamic("ConnectionPasswordEncryption")(ConnectionPasswordEncryption.asInstanceOf[js.Any])
-    if (EncryptionAtRest != null) __obj.updateDynamic("EncryptionAtRest")(EncryptionAtRest.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataCatalogEncryptionSettings]
   }
+  @scala.inline
+  implicit class DataCatalogEncryptionSettingsOps[Self <: DataCatalogEncryptionSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionPasswordEncryption(value: ConnectionPasswordEncryption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionPasswordEncryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionPasswordEncryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionPasswordEncryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionAtRest(value: EncryptionAtRest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionAtRest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionAtRest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionAtRest")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

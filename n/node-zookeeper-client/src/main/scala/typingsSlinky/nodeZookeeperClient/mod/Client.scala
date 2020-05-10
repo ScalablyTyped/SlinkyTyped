@@ -8,7 +8,6 @@ import typingsSlinky.nodeZookeeperClient.nodeZookeeperClientStrings.connectedRea
 import typingsSlinky.nodeZookeeperClient.nodeZookeeperClientStrings.disconnected
 import typingsSlinky.nodeZookeeperClient.nodeZookeeperClientStrings.expired
 import typingsSlinky.nodeZookeeperClient.nodeZookeeperClientStrings.state
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +30,7 @@ trait Client extends EventEmitter {
   def addListener_state(event: state, cb: js.Function1[/* state */ State, Unit]): this.type = js.native
   def close(): Unit = js.native
   def connect(): Unit = js.native
-  def create(path: String, callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]): Unit = js.native
+  def create(path: String, callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Buffer | js.Array[ACL] | Double,
@@ -42,73 +41,73 @@ trait Client extends EventEmitter {
   def create(
     path: String,
     dataOrAclsOrmode1: js.Array[ACL],
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: js.Array[ACL],
     dataOrAclsOrmode2: js.Array[ACL],
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: js.Array[ACL],
     dataOrAclsOrmode2: Double,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: js.Array[ACL],
     dataOrAclsOrmode2: Buffer,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Double,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Double,
     dataOrAclsOrmode2: js.Array[ACL],
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Double,
     dataOrAclsOrmode2: Double,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Double,
     dataOrAclsOrmode2: Buffer,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Buffer,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Buffer,
     dataOrAclsOrmode2: js.Array[ACL],
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Buffer,
     dataOrAclsOrmode2: Double,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def create(
     path: String,
     dataOrAclsOrmode1: Buffer,
     dataOrAclsOrmode2: Buffer,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
-  def exists(path: String, callback: js.Function2[/* error */ Error | Exception, /* stat */ Stat, Unit]): Unit = js.native
+  def exists(path: String, callback: js.Function2[/* error */ js.Error | Exception, /* stat */ Stat, Unit]): Unit = js.native
   def exists(
     path: String,
     watcher: js.Function1[/* event */ Event, Unit],
@@ -120,7 +119,12 @@ trait Client extends EventEmitter {
   ): Unit = js.native
   def getChildren(
     path: String,
-    callback: js.Function3[/* error */ Error | Exception, /* children */ js.Array[String], /* stat */ Stat, Unit]
+    callback: js.Function3[
+      /* error */ js.Error | Exception, 
+      /* children */ js.Array[String], 
+      /* stat */ Stat, 
+      Unit
+    ]
   ): Unit = js.native
   def getChildren(
     path: String,
@@ -134,7 +138,7 @@ trait Client extends EventEmitter {
   ): Unit = js.native
   def getData(
     path: String,
-    callback: js.Function3[/* error */ Error | Exception, /* data */ Buffer, /* stat */ Stat, Unit]
+    callback: js.Function3[/* error */ js.Error | Exception, /* data */ Buffer, /* stat */ Stat, Unit]
   ): Unit = js.native
   def getData(
     path: String,
@@ -145,7 +149,7 @@ trait Client extends EventEmitter {
   def getSessionPassword(): Buffer = js.native
   def getSessionTimeout(): Double = js.native
   def getState(): State = js.native
-  def mkdirp(path: String, callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]): Unit = js.native
+  def mkdirp(path: String, callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Buffer | js.Array[ACL] | Double,
@@ -156,71 +160,71 @@ trait Client extends EventEmitter {
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: js.Array[ACL],
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: js.Array[ACL],
     dataOrAclsOrmode2: js.Array[ACL],
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: js.Array[ACL],
     dataOrAclsOrmode2: Double,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: js.Array[ACL],
     dataOrAclsOrmode2: Buffer,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Double,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Double,
     dataOrAclsOrmode2: js.Array[ACL],
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Double,
     dataOrAclsOrmode2: Double,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Double,
     dataOrAclsOrmode2: Buffer,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Buffer,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Buffer,
     dataOrAclsOrmode2: js.Array[ACL],
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Buffer,
     dataOrAclsOrmode2: Double,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def mkdirp(
     path: String,
     dataOrAclsOrmode1: Buffer,
     dataOrAclsOrmode2: Buffer,
-    callback: js.Function2[/* error */ Error | Exception, /* path */ String, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* path */ String, Unit]
   ): Unit = js.native
   def on(event: String, cb: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -248,12 +252,12 @@ trait Client extends EventEmitter {
   def once_expired(event: expired, cb: js.Function0[Unit]): this.type = js.native
   @JSName("once")
   def once_state(event: state, cb: js.Function1[/* state */ State, Unit]): this.type = js.native
-  def remove(path: String, callback: js.Function1[/* error */ Error | Exception, Unit]): Unit = js.native
+  def remove(path: String, callback: js.Function1[/* error */ js.Error | Exception, Unit]): Unit = js.native
   def remove(path: String, version: Double, callback: js.Function1[/* error */ js.Error | Exception, Unit]): Unit = js.native
   def setACL(
     path: String,
     acls: js.Array[ACL],
-    callback: js.Function2[/* error */ Error | Exception, /* stat */ Stat, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* stat */ Stat, Unit]
   ): Unit = js.native
   def setACL(
     path: String,
@@ -264,7 +268,7 @@ trait Client extends EventEmitter {
   def setData(
     path: String,
     data: Null,
-    callback: js.Function2[/* error */ Error | Exception, /* stat */ Stat, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* stat */ Stat, Unit]
   ): Unit = js.native
   def setData(
     path: String,
@@ -275,7 +279,7 @@ trait Client extends EventEmitter {
   def setData(
     path: String,
     data: Buffer,
-    callback: js.Function2[/* error */ Error | Exception, /* stat */ Stat, Unit]
+    callback: js.Function2[/* error */ js.Error | Exception, /* stat */ Stat, Unit]
   ): Unit = js.native
   def setData(
     path: String,

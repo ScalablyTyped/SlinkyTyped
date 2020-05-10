@@ -46,28 +46,125 @@ trait Activity extends js.Object {
 
 object Activity {
   @scala.inline
-  def apply(
-    CommentMetadata: CommentMetadata = null,
-    Initiator: UserMetadata = null,
-    IsIndirectActivity: js.UndefOr[Boolean] = js.undefined,
-    OrganizationId: IdType = null,
-    OriginalParent: ResourceMetadata = null,
-    Participants: Participants = null,
-    ResourceMetadata: ResourceMetadata = null,
-    TimeStamp: js.Date = null,
-    Type: ActivityType = null
-  ): Activity = {
+  def apply(): Activity = {
     val __obj = js.Dynamic.literal()
-    if (CommentMetadata != null) __obj.updateDynamic("CommentMetadata")(CommentMetadata.asInstanceOf[js.Any])
-    if (Initiator != null) __obj.updateDynamic("Initiator")(Initiator.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsIndirectActivity)) __obj.updateDynamic("IsIndirectActivity")(IsIndirectActivity.asInstanceOf[js.Any])
-    if (OrganizationId != null) __obj.updateDynamic("OrganizationId")(OrganizationId.asInstanceOf[js.Any])
-    if (OriginalParent != null) __obj.updateDynamic("OriginalParent")(OriginalParent.asInstanceOf[js.Any])
-    if (Participants != null) __obj.updateDynamic("Participants")(Participants.asInstanceOf[js.Any])
-    if (ResourceMetadata != null) __obj.updateDynamic("ResourceMetadata")(ResourceMetadata.asInstanceOf[js.Any])
-    if (TimeStamp != null) __obj.updateDynamic("TimeStamp")(TimeStamp.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[Activity]
   }
+  @scala.inline
+  implicit class ActivityOps[Self <: Activity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommentMetadata(value: CommentMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommentMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommentMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommentMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitiator(value: UserMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Initiator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitiator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Initiator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsIndirectActivity(value: BooleanType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsIndirectActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsIndirectActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsIndirectActivity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationId(value: IdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalParent(value: ResourceMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginalParent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginalParent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParticipants(value: Participants): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Participants")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParticipants: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Participants")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceMetadata(value: ResourceMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeStamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeStamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeStamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeStamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: ActivityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

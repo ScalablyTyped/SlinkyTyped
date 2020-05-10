@@ -1,59 +1,77 @@
 package typingsSlinky.blueprintjsTable.jsonFormatMod
 
-import typingsSlinky.blueprintjsTable.truncatedFormatMod.ITrucatedFormateMeasureByApproximateOptions
 import typingsSlinky.blueprintjsTable.truncatedFormatMod.ITruncatedFormatProps
-import typingsSlinky.blueprintjsTable.truncatedFormatMod.TruncatedPopoverMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IJSONFormatProps extends ITruncatedFormatProps {
   @JSName("children")
-  var children_IJSONFormatProps: js.UndefOr[js.Any] = js.undefined
+  var children_IJSONFormatProps: js.UndefOr[js.Any] = js.native
   /**
     * By default, we omit stringifying native JavaScript strings since
     * `JSON.stringify` awkwardly adds double-quotes to the display value.
     * This behavior can be turned off by setting this boolean to `false`.
     * @default true
     */
-  var omitQuotesOnStrings: js.UndefOr[Boolean] = js.undefined
+  var omitQuotesOnStrings: js.UndefOr[Boolean] = js.native
   /**
     * Optionally specify the stringify method. Default is `JSON.stringify`
     * with 2-space indentation.
     */
-  var stringify: js.UndefOr[js.Function1[/* obj */ js.Any, String]] = js.undefined
+  var stringify: js.UndefOr[js.Function1[/* obj */ js.Any, String]] = js.native
 }
 
 object IJSONFormatProps {
   @scala.inline
-  def apply(
-    children: js.Any = null,
-    className: String = null,
-    detectTruncation: js.UndefOr[Boolean] = js.undefined,
-    measureByApproxOptions: ITrucatedFormateMeasureByApproximateOptions = null,
-    omitQuotesOnStrings: js.UndefOr[Boolean] = js.undefined,
-    parentCellHeight: Int | Double = null,
-    parentCellWidth: Int | Double = null,
-    preformatted: js.UndefOr[Boolean] = js.undefined,
-    showPopover: TruncatedPopoverMode = null,
-    stringify: /* obj */ js.Any => String = null,
-    truncateLength: Int | Double = null,
-    truncationSuffix: String = null
-  ): IJSONFormatProps = {
+  def apply(): IJSONFormatProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(detectTruncation)) __obj.updateDynamic("detectTruncation")(detectTruncation.asInstanceOf[js.Any])
-    if (measureByApproxOptions != null) __obj.updateDynamic("measureByApproxOptions")(measureByApproxOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(omitQuotesOnStrings)) __obj.updateDynamic("omitQuotesOnStrings")(omitQuotesOnStrings.asInstanceOf[js.Any])
-    if (parentCellHeight != null) __obj.updateDynamic("parentCellHeight")(parentCellHeight.asInstanceOf[js.Any])
-    if (parentCellWidth != null) __obj.updateDynamic("parentCellWidth")(parentCellWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(preformatted)) __obj.updateDynamic("preformatted")(preformatted.asInstanceOf[js.Any])
-    if (showPopover != null) __obj.updateDynamic("showPopover")(showPopover.asInstanceOf[js.Any])
-    if (stringify != null) __obj.updateDynamic("stringify")(js.Any.fromFunction1(stringify))
-    if (truncateLength != null) __obj.updateDynamic("truncateLength")(truncateLength.asInstanceOf[js.Any])
-    if (truncationSuffix != null) __obj.updateDynamic("truncationSuffix")(truncationSuffix.asInstanceOf[js.Any])
     __obj.asInstanceOf[IJSONFormatProps]
   }
+  @scala.inline
+  implicit class IJSONFormatPropsOps[Self <: IJSONFormatProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOmitQuotesOnStrings(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("omitQuotesOnStrings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOmitQuotesOnStrings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("omitQuotesOnStrings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringify(value: /* obj */ js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutStringify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

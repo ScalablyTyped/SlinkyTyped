@@ -22,14 +22,41 @@ trait CreateOpenIDConnectProviderRequest extends js.Object {
 
 object CreateOpenIDConnectProviderRequest {
   @scala.inline
-  def apply(
-    ThumbprintList: thumbprintListType,
-    Url: OpenIDConnectProviderUrlType,
-    ClientIDList: clientIDListType = null
-  ): CreateOpenIDConnectProviderRequest = {
+  def apply(ThumbprintList: thumbprintListType, Url: OpenIDConnectProviderUrlType): CreateOpenIDConnectProviderRequest = {
     val __obj = js.Dynamic.literal(ThumbprintList = ThumbprintList.asInstanceOf[js.Any], Url = Url.asInstanceOf[js.Any])
-    if (ClientIDList != null) __obj.updateDynamic("ClientIDList")(ClientIDList.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateOpenIDConnectProviderRequest]
   }
+  @scala.inline
+  implicit class CreateOpenIDConnectProviderRequestOps[Self <: CreateOpenIDConnectProviderRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThumbprintList(value: thumbprintListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThumbprintList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: OpenIDConnectProviderUrlType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientIDList(value: clientIDListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIDList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientIDList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIDList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

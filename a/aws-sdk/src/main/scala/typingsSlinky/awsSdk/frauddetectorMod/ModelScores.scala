@@ -18,11 +18,41 @@ trait ModelScores extends js.Object {
 
 object ModelScores {
   @scala.inline
-  def apply(modelVersion: ModelVersion = null, scores: ModelPredictionMap = null): ModelScores = {
+  def apply(): ModelScores = {
     val __obj = js.Dynamic.literal()
-    if (modelVersion != null) __obj.updateDynamic("modelVersion")(modelVersion.asInstanceOf[js.Any])
-    if (scores != null) __obj.updateDynamic("scores")(scores.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelScores]
   }
+  @scala.inline
+  implicit class ModelScoresOps[Self <: ModelScores] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withModelVersion(value: ModelVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScores(value: ModelPredictionMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scores")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScores: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scores")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

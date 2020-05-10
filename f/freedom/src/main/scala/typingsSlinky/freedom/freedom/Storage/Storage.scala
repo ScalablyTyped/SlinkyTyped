@@ -4,18 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Storage extends js.Object {
   // Remove all data from storage.
-  def clear(): js.Promise[Unit]
+  def clear(): js.Promise[Unit] = js.native
   // Fetch a value for a key.
-  def get(key: String): js.Promise[String]
+  def get(key: String): js.Promise[String] = js.native
   // Fetch array of all keys.
-  def keys(): js.Promise[js.Array[String]]
+  def keys(): js.Promise[js.Array[String]] = js.native
   // Remove a single key. Fulfills promise with previous value, if exists.
-  def remove(key: String): js.Promise[String]
+  def remove(key: String): js.Promise[String] = js.native
   // Sets a value to a key. Fulfills promise with the previous value, if it
   // exists.
-  def set(key: String, value: String): js.Promise[String]
+  def set(key: String, value: String): js.Promise[String] = js.native
 }
 
 object Storage {
@@ -28,8 +29,45 @@ object Storage {
     set: (String, String) => js.Promise[String]
   ): Storage = {
     val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), get = js.Any.fromFunction1(get), keys = js.Any.fromFunction0(keys), remove = js.Any.fromFunction1(remove), set = js.Any.fromFunction2(set))
-  
     __obj.asInstanceOf[Storage]
   }
+  @scala.inline
+  implicit class StorageOps[Self <: typingsSlinky.freedom.freedom.Storage.Storage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClear(value: () => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: String => js.Promise[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKeys(value: () => js.Promise[js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: String => js.Promise[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (String, String) => js.Promise[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

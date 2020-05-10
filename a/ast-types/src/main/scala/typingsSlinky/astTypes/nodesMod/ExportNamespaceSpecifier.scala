@@ -8,26 +8,64 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/nodes.Specifier, 'type'> */
+@js.native
 trait ExportNamespaceSpecifier extends ASTNode {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var exported: IdentifierKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ExportNamespaceSpecifier
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var exported: IdentifierKind = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ExportNamespaceSpecifier = js.native
 }
 
 object ExportNamespaceSpecifier {
   @scala.inline
-  def apply(
-    exported: IdentifierKind,
-    `type`: typingsSlinky.astTypes.astTypesStrings.ExportNamespaceSpecifier,
-    comments: js.Array[CommentKind] = null,
-    loc: SourceLocationKind = null
-  ): ExportNamespaceSpecifier = {
+  def apply(exported: IdentifierKind, `type`: typingsSlinky.astTypes.astTypesStrings.ExportNamespaceSpecifier): ExportNamespaceSpecifier = {
     val __obj = js.Dynamic.literal(exported = exported.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportNamespaceSpecifier]
   }
+  @scala.inline
+  implicit class ExportNamespaceSpecifierOps[Self <: ExportNamespaceSpecifier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExported(value: IdentifierKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: typingsSlinky.astTypes.astTypesStrings.ExportNamespaceSpecifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[CommentKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: SourceLocationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

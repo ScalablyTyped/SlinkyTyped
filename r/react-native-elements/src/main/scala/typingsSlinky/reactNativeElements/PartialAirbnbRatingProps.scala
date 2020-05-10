@@ -6,39 +6,127 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<react-native-ratings.react-native-ratings.AirbnbRatingProps> */
+@js.native
 trait PartialAirbnbRatingProps extends js.Object {
-  var count: js.UndefOr[Double] = js.undefined
-  var defaultRating: js.UndefOr[Double] = js.undefined
-  var isDisabled: js.UndefOr[Boolean] = js.undefined
-  var onFinishRating: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.undefined
-  var reviews: js.UndefOr[js.Array[String]] = js.undefined
-  var showRating: js.UndefOr[Boolean] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var starStyle: js.UndefOr[ImageStyle] = js.undefined
+  var count: js.UndefOr[Double] = js.native
+  var defaultRating: js.UndefOr[Double] = js.native
+  var isDisabled: js.UndefOr[Boolean] = js.native
+  var onFinishRating: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
+  var reviews: js.UndefOr[js.Array[String]] = js.native
+  var showRating: js.UndefOr[Boolean] = js.native
+  var size: js.UndefOr[Double] = js.native
+  var starStyle: js.UndefOr[ImageStyle] = js.native
 }
 
 object PartialAirbnbRatingProps {
   @scala.inline
-  def apply(
-    count: Int | Double = null,
-    defaultRating: Int | Double = null,
-    isDisabled: js.UndefOr[Boolean] = js.undefined,
-    onFinishRating: /* value */ Double => Unit = null,
-    reviews: js.Array[String] = null,
-    showRating: js.UndefOr[Boolean] = js.undefined,
-    size: Int | Double = null,
-    starStyle: ImageStyle = null
-  ): PartialAirbnbRatingProps = {
+  def apply(): PartialAirbnbRatingProps = {
     val __obj = js.Dynamic.literal()
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (defaultRating != null) __obj.updateDynamic("defaultRating")(defaultRating.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.asInstanceOf[js.Any])
-    if (onFinishRating != null) __obj.updateDynamic("onFinishRating")(js.Any.fromFunction1(onFinishRating))
-    if (reviews != null) __obj.updateDynamic("reviews")(reviews.asInstanceOf[js.Any])
-    if (!js.isUndefined(showRating)) __obj.updateDynamic("showRating")(showRating.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (starStyle != null) __obj.updateDynamic("starStyle")(starStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialAirbnbRatingProps]
   }
+  @scala.inline
+  implicit class PartialAirbnbRatingPropsOps[Self <: PartialAirbnbRatingProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultRating(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFinishRating(value: /* value */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFinishRating")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFinishRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFinishRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReviews(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviews")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReviews: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviews")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowRating(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showRating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowRating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showRating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStarStyle(value: ImageStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStarStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

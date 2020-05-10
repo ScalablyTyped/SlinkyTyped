@@ -1,6 +1,6 @@
 package typingsSlinky.navigation.mod
 
-import typingsSlinky.std.HTMLAnchorElement
+import org.scalajs.dom.raw.HTMLAnchorElement
 import typingsSlinky.std.Location_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

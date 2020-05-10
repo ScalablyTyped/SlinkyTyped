@@ -14,14 +14,12 @@ trait OnenoteSourceService extends js.Object
 
 object OnenoteSourceService {
   @scala.inline
-  def OnPremOneDriveForBusiness: typingsSlinky.microsoftGraph.microsoftGraphStrings.OnPremOneDriveForBusiness = this.cast("OnPremOneDriveForBusiness")
+  def OnPremOneDriveForBusiness: typingsSlinky.microsoftGraph.microsoftGraphStrings.OnPremOneDriveForBusiness = "OnPremOneDriveForBusiness".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.OnPremOneDriveForBusiness]
   @scala.inline
-  def OneDrive: typingsSlinky.microsoftGraph.microsoftGraphStrings.OneDrive = this.cast("OneDrive")
+  def OneDrive: typingsSlinky.microsoftGraph.microsoftGraphStrings.OneDrive = "OneDrive".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.OneDrive]
   @scala.inline
-  def OneDriveForBusiness: typingsSlinky.microsoftGraph.microsoftGraphStrings.OneDriveForBusiness = this.cast("OneDriveForBusiness")
+  def OneDriveForBusiness: typingsSlinky.microsoftGraph.microsoftGraphStrings.OneDriveForBusiness = "OneDriveForBusiness".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.OneDriveForBusiness]
   @scala.inline
-  def Unknown: typingsSlinky.microsoftGraph.microsoftGraphStrings.Unknown = this.cast("Unknown")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Unknown: typingsSlinky.microsoftGraph.microsoftGraphStrings.Unknown = "Unknown".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.Unknown]
 }
 

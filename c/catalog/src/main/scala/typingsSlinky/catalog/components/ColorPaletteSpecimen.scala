@@ -1,9 +1,7 @@
 package typingsSlinky.catalog.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.catalog.catalogNumbers.`1`
 import typingsSlinky.catalog.catalogNumbers.`2`
 import typingsSlinky.catalog.catalogNumbers.`3`
@@ -17,29 +15,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ColorPaletteSpecimen
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.catalog.mod.ColorPaletteSpecimen] {
+object ColorPaletteSpecimen {
   @JSImport("catalog", "ColorPaletteSpecimen")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    colors: js.Array[ColorSpecimenProps],
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    rawBody: String = null,
-    rawOptions: String = null,
-    span: `1` | `2` | `3` | `4` | `5` | `6` = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.catalog.mod.ColorPaletteSpecimen] = {
-    val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (rawBody != null) __obj.updateDynamic("rawBody")(rawBody.asInstanceOf[js.Any])
-    if (rawOptions != null) __obj.updateDynamic("rawOptions")(rawOptions.asInstanceOf[js.Any])
-    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.catalog.mod.ColorPaletteSpecimen] {
+    @scala.inline
+    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rawBody(value: String): this.type = set("rawBody", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rawOptions(value: String): this.type = set("rawOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def span(value: `1` | `2` | `3` | `4` | `5` | `6`): this.type = set("span", value.asInstanceOf[js.Any])
   }
-  type Props = SpecimenProps with ColorPaletteSpecimenProps
+  
+  def withProps(p: SpecimenProps with ColorPaletteSpecimenProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(colors: js.Array[ColorSpecimenProps]): Builder = {
+    val __props = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SpecimenProps with ColorPaletteSpecimenProps]))
+  }
 }
 

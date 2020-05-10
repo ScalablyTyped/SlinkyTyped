@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AnonCall extends js.Object {
-  def apply(audioData: AudioData): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-  def apply(audioData: AudioData, opts: Options): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-  def sync(audioData: AudioData): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def sync(audioData: AudioData, opts: Options): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def apply(audioData: AudioData): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def apply(audioData: AudioData, opts: Options): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sync(audioData: AudioData): js.typedarray.ArrayBuffer = js.native
+  def sync(audioData: AudioData, opts: Options): js.typedarray.ArrayBuffer = js.native
 }
 

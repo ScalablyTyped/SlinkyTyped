@@ -24,11 +24,41 @@ trait SchemaClusterMetrics extends js.Object {
 
 object SchemaClusterMetrics {
   @scala.inline
-  def apply(hdfsMetrics: StringDictionary[String] = null, yarnMetrics: StringDictionary[String] = null): SchemaClusterMetrics = {
+  def apply(): SchemaClusterMetrics = {
     val __obj = js.Dynamic.literal()
-    if (hdfsMetrics != null) __obj.updateDynamic("hdfsMetrics")(hdfsMetrics.asInstanceOf[js.Any])
-    if (yarnMetrics != null) __obj.updateDynamic("yarnMetrics")(yarnMetrics.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClusterMetrics]
   }
+  @scala.inline
+  implicit class SchemaClusterMetricsOps[Self <: SchemaClusterMetrics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHdfsMetrics(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hdfsMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHdfsMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hdfsMetrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYarnMetrics(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yarnMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYarnMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yarnMetrics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

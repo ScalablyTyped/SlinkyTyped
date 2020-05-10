@@ -15,7 +15,7 @@ package object mod {
     org.scalajs.dom.raw.HTMLCanvasElement
   ]
   type ColorLike_ = java.lang.String | org.scalajs.dom.raw.CanvasPattern | org.scalajs.dom.raw.CanvasGradient
-  type Color_ = (js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double]) | scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8ClampedArray
+  type Color_ = (js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double]) | js.typedarray.Uint8Array | js.typedarray.Uint8ClampedArray
   type CoordinateFormatType = js.Function1[
     /* coords */ js.UndefOr[typingsSlinky.openlayers.mod.Coordinate_], 
     java.lang.String

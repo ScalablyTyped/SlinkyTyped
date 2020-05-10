@@ -16,8 +16,21 @@ object DescribeAnalysisSchemesResponse {
   @scala.inline
   def apply(AnalysisSchemes: AnalysisSchemeStatusList): DescribeAnalysisSchemesResponse = {
     val __obj = js.Dynamic.literal(AnalysisSchemes = AnalysisSchemes.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeAnalysisSchemesResponse]
   }
+  @scala.inline
+  implicit class DescribeAnalysisSchemesResponseOps[Self <: DescribeAnalysisSchemesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnalysisSchemes(value: AnalysisSchemeStatusList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AnalysisSchemes")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

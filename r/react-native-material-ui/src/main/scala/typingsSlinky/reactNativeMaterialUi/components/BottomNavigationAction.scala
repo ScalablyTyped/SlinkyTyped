@@ -1,39 +1,40 @@
 package typingsSlinky.reactNativeMaterialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeMaterialUi.AnonActive
 import typingsSlinky.reactNativeMaterialUi.mod.BottomNavigation.Action
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BottomNavigationAction
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Action] {
+object BottomNavigationAction {
   @JSImport("react-native-material-ui", "BottomNavigation.Action")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, label */
-  def apply(
-    active: Boolean,
-    icon: ReactElement | String,
-    onPress: () => Unit = null,
-    style: AnonActive = null,
-    testID: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, Action] = {
-    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any])
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (testID != null) __obj.updateDynamic("testID")(testID.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Action] {
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def style(value: AnonActive): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
   }
-  type Props = typingsSlinky.reactNativeMaterialUi.mod.BottomNavigationAction
+  
+  def withProps(p: typingsSlinky.reactNativeMaterialUi.mod.BottomNavigationAction): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(active: Boolean, icon: ReactElement | String): Builder = {
+    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactNativeMaterialUi.mod.BottomNavigationAction]))
+  }
 }
 

@@ -14,10 +14,29 @@ trait EventTriggerDefinition extends js.Object {
 
 object EventTriggerDefinition {
   @scala.inline
-  def apply(EventResourceARN: ResourceARN = null): EventTriggerDefinition = {
+  def apply(): EventTriggerDefinition = {
     val __obj = js.Dynamic.literal()
-    if (EventResourceARN != null) __obj.updateDynamic("EventResourceARN")(EventResourceARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventTriggerDefinition]
   }
+  @scala.inline
+  implicit class EventTriggerDefinitionOps[Self <: EventTriggerDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventResourceARN(value: ResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventResourceARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventResourceARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventResourceARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

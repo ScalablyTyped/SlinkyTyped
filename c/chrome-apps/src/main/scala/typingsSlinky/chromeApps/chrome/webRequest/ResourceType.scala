@@ -1,5 +1,6 @@
 package typingsSlinky.chromeApps.chrome.webRequest
 
+import typingsSlinky.chromeApps.chromeAppsStrings.image_
 import typingsSlinky.chromeApps.chromeAppsStrings.other_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.chromeApps.chromeAppsStrings.sub_frame
   - typingsSlinky.chromeApps.chromeAppsStrings.stylesheet
   - typingsSlinky.chromeApps.chromeAppsStrings.script
-  - typingsSlinky.chromeApps.chromeAppsStrings.image
+  - typingsSlinky.chromeApps.chromeAppsStrings.image_
   - typingsSlinky.chromeApps.chromeAppsStrings.font
   - typingsSlinky.chromeApps.chromeAppsStrings.`object`
   - typingsSlinky.chromeApps.chromeAppsStrings.xmlhttprequest
@@ -24,32 +25,30 @@ trait ResourceType extends js.Object
 
 object ResourceType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def csp_report: typingsSlinky.chromeApps.chromeAppsStrings.csp_report = "csp_report".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.csp_report]
   @scala.inline
-  def csp_report: typingsSlinky.chromeApps.chromeAppsStrings.csp_report = this.cast("csp_report")
+  def font: typingsSlinky.chromeApps.chromeAppsStrings.font = "font".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.font]
   @scala.inline
-  def font: typingsSlinky.chromeApps.chromeAppsStrings.font = this.cast("font")
+  def image: image_ = "image".asInstanceOf[image_]
   @scala.inline
-  def image: typingsSlinky.chromeApps.chromeAppsStrings.image = this.cast("image")
+  def main_frame: typingsSlinky.chromeApps.chromeAppsStrings.main_frame = "main_frame".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.main_frame]
   @scala.inline
-  def main_frame: typingsSlinky.chromeApps.chromeAppsStrings.main_frame = this.cast("main_frame")
+  def media: typingsSlinky.chromeApps.chromeAppsStrings.media = "media".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.media]
   @scala.inline
-  def media: typingsSlinky.chromeApps.chromeAppsStrings.media = this.cast("media")
+  def `object`: typingsSlinky.chromeApps.chromeAppsStrings.`object` = "object".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.chromeApps.chromeAppsStrings.`object` = this.cast("object")
+  def other: other_ = "other".asInstanceOf[other_]
   @scala.inline
-  def other: other_ = this.cast("other")
+  def ping: typingsSlinky.chromeApps.chromeAppsStrings.ping = "ping".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.ping]
   @scala.inline
-  def ping: typingsSlinky.chromeApps.chromeAppsStrings.ping = this.cast("ping")
+  def script: typingsSlinky.chromeApps.chromeAppsStrings.script = "script".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.script]
   @scala.inline
-  def script: typingsSlinky.chromeApps.chromeAppsStrings.script = this.cast("script")
+  def stylesheet: typingsSlinky.chromeApps.chromeAppsStrings.stylesheet = "stylesheet".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.stylesheet]
   @scala.inline
-  def stylesheet: typingsSlinky.chromeApps.chromeAppsStrings.stylesheet = this.cast("stylesheet")
+  def sub_frame: typingsSlinky.chromeApps.chromeAppsStrings.sub_frame = "sub_frame".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.sub_frame]
   @scala.inline
-  def sub_frame: typingsSlinky.chromeApps.chromeAppsStrings.sub_frame = this.cast("sub_frame")
+  def websocket: typingsSlinky.chromeApps.chromeAppsStrings.websocket = "websocket".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.websocket]
   @scala.inline
-  def websocket: typingsSlinky.chromeApps.chromeAppsStrings.websocket = this.cast("websocket")
-  @scala.inline
-  def xmlhttprequest: typingsSlinky.chromeApps.chromeAppsStrings.xmlhttprequest = this.cast("xmlhttprequest")
+  def xmlhttprequest: typingsSlinky.chromeApps.chromeAppsStrings.xmlhttprequest = "xmlhttprequest".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.xmlhttprequest]
 }
 

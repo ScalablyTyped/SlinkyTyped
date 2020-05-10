@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SearchOrganizationsRequest extends js.Object {
   /**
     * An optional query string used to filter the Organizations to return in
@@ -21,28 +22,69 @@ trait SearchOrganizationsRequest extends js.Object {
     *
     * This field is optional.
     */
-  var filter: js.UndefOr[String] = js.undefined
+  var filter: js.UndefOr[String] = js.native
   /**
     * The maximum number of Organizations to return in the response.
     * This field is optional.
     */
-  var pageSize: js.UndefOr[Double] = js.undefined
+  var pageSize: js.UndefOr[Double] = js.native
   /**
     * A pagination token returned from a previous call to `SearchOrganizations`
     * that indicates from where listing should continue.
     * This field is optional.
     */
-  var pageToken: js.UndefOr[String] = js.undefined
+  var pageToken: js.UndefOr[String] = js.native
 }
 
 object SearchOrganizationsRequest {
   @scala.inline
-  def apply(filter: String = null, pageSize: Int | Double = null, pageToken: String = null): SearchOrganizationsRequest = {
+  def apply(): SearchOrganizationsRequest = {
     val __obj = js.Dynamic.literal()
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchOrganizationsRequest]
   }
+  @scala.inline
+  implicit class SearchOrganizationsRequestOps[Self <: SearchOrganizationsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

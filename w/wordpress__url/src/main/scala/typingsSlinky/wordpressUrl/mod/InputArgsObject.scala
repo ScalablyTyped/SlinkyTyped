@@ -5,15 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InputArgsObject
   extends /* key */ StringDictionary[InputArgsValue]
      with _InputArgsValue
 
 object InputArgsObject {
   @scala.inline
-  def apply(StringDictionary: /* key */ StringDictionary[InputArgsValue] = null): InputArgsObject = {
+  def apply(): InputArgsObject = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[InputArgsObject]
   }
 }

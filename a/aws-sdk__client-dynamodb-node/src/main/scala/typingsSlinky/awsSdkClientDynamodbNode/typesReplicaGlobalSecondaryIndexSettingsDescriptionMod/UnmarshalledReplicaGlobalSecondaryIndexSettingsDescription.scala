@@ -1,44 +1,61 @@
 package typingsSlinky.awsSdkClientDynamodbNode.typesReplicaGlobalSecondaryIndexSettingsDescriptionMod
 
-import typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.ACTIVE
-import typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.CREATING
-import typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.DELETING
-import typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.UPDATING
 import typingsSlinky.awsSdkClientDynamodbNode.typesAutoScalingSettingsDescriptionMod.UnmarshalledAutoScalingSettingsDescription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledReplicaGlobalSecondaryIndexSettingsDescription extends ReplicaGlobalSecondaryIndexSettingsDescription {
   /**
     * <p>Autoscaling settings for a global secondary index replica's read capacity units.</p>
     */
   @JSName("ProvisionedReadCapacityAutoScalingSettings")
-  var ProvisionedReadCapacityAutoScalingSettings_UnmarshalledReplicaGlobalSecondaryIndexSettingsDescription: js.UndefOr[UnmarshalledAutoScalingSettingsDescription] = js.undefined
+  var ProvisionedReadCapacityAutoScalingSettings_UnmarshalledReplicaGlobalSecondaryIndexSettingsDescription: js.UndefOr[UnmarshalledAutoScalingSettingsDescription] = js.native
   /**
     * <p>AutoScaling settings for a global secondary index replica's write capacity units.</p>
     */
   @JSName("ProvisionedWriteCapacityAutoScalingSettings")
-  var ProvisionedWriteCapacityAutoScalingSettings_UnmarshalledReplicaGlobalSecondaryIndexSettingsDescription: js.UndefOr[UnmarshalledAutoScalingSettingsDescription] = js.undefined
+  var ProvisionedWriteCapacityAutoScalingSettings_UnmarshalledReplicaGlobalSecondaryIndexSettingsDescription: js.UndefOr[UnmarshalledAutoScalingSettingsDescription] = js.native
 }
 
 object UnmarshalledReplicaGlobalSecondaryIndexSettingsDescription {
   @scala.inline
-  def apply(
-    IndexName: String,
-    IndexStatus: CREATING | UPDATING | DELETING | ACTIVE | String = null,
-    ProvisionedReadCapacityAutoScalingSettings: UnmarshalledAutoScalingSettingsDescription = null,
-    ProvisionedReadCapacityUnits: Int | Double = null,
-    ProvisionedWriteCapacityAutoScalingSettings: UnmarshalledAutoScalingSettingsDescription = null,
-    ProvisionedWriteCapacityUnits: Int | Double = null
-  ): UnmarshalledReplicaGlobalSecondaryIndexSettingsDescription = {
+  def apply(IndexName: String): UnmarshalledReplicaGlobalSecondaryIndexSettingsDescription = {
     val __obj = js.Dynamic.literal(IndexName = IndexName.asInstanceOf[js.Any])
-    if (IndexStatus != null) __obj.updateDynamic("IndexStatus")(IndexStatus.asInstanceOf[js.Any])
-    if (ProvisionedReadCapacityAutoScalingSettings != null) __obj.updateDynamic("ProvisionedReadCapacityAutoScalingSettings")(ProvisionedReadCapacityAutoScalingSettings.asInstanceOf[js.Any])
-    if (ProvisionedReadCapacityUnits != null) __obj.updateDynamic("ProvisionedReadCapacityUnits")(ProvisionedReadCapacityUnits.asInstanceOf[js.Any])
-    if (ProvisionedWriteCapacityAutoScalingSettings != null) __obj.updateDynamic("ProvisionedWriteCapacityAutoScalingSettings")(ProvisionedWriteCapacityAutoScalingSettings.asInstanceOf[js.Any])
-    if (ProvisionedWriteCapacityUnits != null) __obj.updateDynamic("ProvisionedWriteCapacityUnits")(ProvisionedWriteCapacityUnits.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledReplicaGlobalSecondaryIndexSettingsDescription]
   }
+  @scala.inline
+  implicit class UnmarshalledReplicaGlobalSecondaryIndexSettingsDescriptionOps[Self <: UnmarshalledReplicaGlobalSecondaryIndexSettingsDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProvisionedReadCapacityAutoScalingSettings(value: UnmarshalledAutoScalingSettingsDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedReadCapacityAutoScalingSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedReadCapacityAutoScalingSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedReadCapacityAutoScalingSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedWriteCapacityAutoScalingSettings(value: UnmarshalledAutoScalingSettingsDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedWriteCapacityAutoScalingSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedWriteCapacityAutoScalingSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedWriteCapacityAutoScalingSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

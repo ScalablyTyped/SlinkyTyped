@@ -22,10 +22,41 @@ trait FleetRuntimeConfigurationServerProcess extends js.Object {
 
 object FleetRuntimeConfigurationServerProcess {
   @scala.inline
-  def apply(concurrentExecutions: Double, launchPath: String, parameters: String = null): FleetRuntimeConfigurationServerProcess = {
+  def apply(concurrentExecutions: Double, launchPath: String): FleetRuntimeConfigurationServerProcess = {
     val __obj = js.Dynamic.literal(concurrentExecutions = concurrentExecutions.asInstanceOf[js.Any], launchPath = launchPath.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[FleetRuntimeConfigurationServerProcess]
   }
+  @scala.inline
+  implicit class FleetRuntimeConfigurationServerProcessOps[Self <: FleetRuntimeConfigurationServerProcess] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConcurrentExecutions(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrentExecutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLaunchPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParameters(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

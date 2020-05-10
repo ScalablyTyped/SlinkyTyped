@@ -22,16 +22,53 @@ trait FecOutputSettings extends js.Object {
 
 object FecOutputSettings {
   @scala.inline
-  def apply(
-    ColumnDepth: Int | Double = null,
-    IncludeFec: FecOutputIncludeFec = null,
-    RowLength: Int | Double = null
-  ): FecOutputSettings = {
+  def apply(): FecOutputSettings = {
     val __obj = js.Dynamic.literal()
-    if (ColumnDepth != null) __obj.updateDynamic("ColumnDepth")(ColumnDepth.asInstanceOf[js.Any])
-    if (IncludeFec != null) __obj.updateDynamic("IncludeFec")(IncludeFec.asInstanceOf[js.Any])
-    if (RowLength != null) __obj.updateDynamic("RowLength")(RowLength.asInstanceOf[js.Any])
     __obj.asInstanceOf[FecOutputSettings]
   }
+  @scala.inline
+  implicit class FecOutputSettingsOps[Self <: FecOutputSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnDepth(value: integerMin4Max20): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeFec(value: FecOutputIncludeFec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeFec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeFec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeFec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowLength(value: integerMin1Max20): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowLength")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

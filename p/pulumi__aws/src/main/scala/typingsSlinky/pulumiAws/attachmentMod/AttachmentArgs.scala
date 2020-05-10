@@ -23,15 +23,47 @@ trait AttachmentArgs extends js.Object {
 
 object AttachmentArgs {
   @scala.inline
-  def apply(
-    autoscalingGroupName: Input[String],
-    albTargetGroupArn: Input[String] = null,
-    elb: Input[String] = null
-  ): AttachmentArgs = {
+  def apply(autoscalingGroupName: Input[String]): AttachmentArgs = {
     val __obj = js.Dynamic.literal(autoscalingGroupName = autoscalingGroupName.asInstanceOf[js.Any])
-    if (albTargetGroupArn != null) __obj.updateDynamic("albTargetGroupArn")(albTargetGroupArn.asInstanceOf[js.Any])
-    if (elb != null) __obj.updateDynamic("elb")(elb.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachmentArgs]
   }
+  @scala.inline
+  implicit class AttachmentArgsOps[Self <: AttachmentArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoscalingGroupName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlbTargetGroupArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("albTargetGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlbTargetGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("albTargetGroupArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElb(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elb")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,59 +4,178 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDestination extends js.Object {
   /** Data format for the response. */
-  var alt: js.UndefOr[String] = js.undefined
+  var alt: js.UndefOr[String] = js.native
   /** Calendar identifier of the source calendar where the event currently is on. */
-  var calendarId: String
+  var calendarId: String = js.native
   /** Calendar identifier of the target calendar where the event is to be moved to. */
-  var destination: String
+  var destination: String = js.native
   /** Event identifier. */
-  var eventId: String
+  var eventId: String = js.native
   /** Selector specifying which fields to include in a partial response. */
-  var fields: js.UndefOr[String] = js.undefined
+  var fields: js.UndefOr[String] = js.native
   /** API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token. */
-  var key: js.UndefOr[String] = js.undefined
+  var key: js.UndefOr[String] = js.native
   /** OAuth 2.0 token for the current user. */
-  var oauth_token: js.UndefOr[String] = js.undefined
+  var oauth_token: js.UndefOr[String] = js.native
   /** Returns response with indentations and line breaks. */
-  var prettyPrint: js.UndefOr[Boolean] = js.undefined
+  var prettyPrint: js.UndefOr[Boolean] = js.native
+  /** An opaque string that represents a user for quota purposes. Must not exceed 40 characters. */
+  var quotaUser: js.UndefOr[String] = js.native
   /**
-    * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
-    * Overrides userIp if both are provided.
+    * Deprecated. Please use sendUpdates instead.
+    *
+    * Whether to send notifications about the change of the event's organizer. Note that some emails might still be sent even if you set the value to false.
+    * The default is false.
     */
-  var quotaUser: js.UndefOr[String] = js.undefined
-  /** Whether to send notifications about the change of the event's organizer. Optional. The default is False. */
-  var sendNotifications: js.UndefOr[Boolean] = js.undefined
-  /** IP address of the site where the request originates. Use this if you want to enforce per-user limits. */
-  var userIp: js.UndefOr[String] = js.undefined
+  var sendNotifications: js.UndefOr[Boolean] = js.native
+  /** Guests who should receive notifications about the change of the event's organizer. */
+  var sendUpdates: js.UndefOr[String] = js.native
+  /** Deprecated. Please use quotaUser instead. */
+  var userIp: js.UndefOr[String] = js.native
 }
 
 object AnonDestination {
   @scala.inline
-  def apply(
-    calendarId: String,
-    destination: String,
-    eventId: String,
-    alt: String = null,
-    fields: String = null,
-    key: String = null,
-    oauth_token: String = null,
-    prettyPrint: js.UndefOr[Boolean] = js.undefined,
-    quotaUser: String = null,
-    sendNotifications: js.UndefOr[Boolean] = js.undefined,
-    userIp: String = null
-  ): AnonDestination = {
+  def apply(calendarId: String, destination: String, eventId: String): AnonDestination = {
     val __obj = js.Dynamic.literal(calendarId = calendarId.asInstanceOf[js.Any], destination = destination.asInstanceOf[js.Any], eventId = eventId.asInstanceOf[js.Any])
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (oauth_token != null) __obj.updateDynamic("oauth_token")(oauth_token.asInstanceOf[js.Any])
-    if (!js.isUndefined(prettyPrint)) __obj.updateDynamic("prettyPrint")(prettyPrint.asInstanceOf[js.Any])
-    if (quotaUser != null) __obj.updateDynamic("quotaUser")(quotaUser.asInstanceOf[js.Any])
-    if (!js.isUndefined(sendNotifications)) __obj.updateDynamic("sendNotifications")(sendNotifications.asInstanceOf[js.Any])
-    if (userIp != null) __obj.updateDynamic("userIp")(userIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDestination]
   }
+  @scala.inline
+  implicit class AnonDestinationOps[Self <: AnonDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCalendarId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestination(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEventId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlt(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOauth_token(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth_token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOauth_token: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oauth_token")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrettyPrint(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettyPrint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrettyPrint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prettyPrint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSendNotifications(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendNotifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendNotifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendNotifications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSendUpdates(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendUpdates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendUpdates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userIp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait EditorAutoSurroundStrategy extends js.Object
 
 object EditorAutoSurroundStrategy {
   @scala.inline
-  def brackets: typingsSlinky.monacoEditor.monacoEditorStrings.brackets = this.cast("brackets")
+  def brackets: typingsSlinky.monacoEditor.monacoEditorStrings.brackets = "brackets".asInstanceOf[typingsSlinky.monacoEditor.monacoEditorStrings.brackets]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def languageDefined: typingsSlinky.monacoEditor.monacoEditorStrings.languageDefined = "languageDefined".asInstanceOf[typingsSlinky.monacoEditor.monacoEditorStrings.languageDefined]
   @scala.inline
-  def languageDefined: typingsSlinky.monacoEditor.monacoEditorStrings.languageDefined = this.cast("languageDefined")
+  def never: typingsSlinky.monacoEditor.monacoEditorStrings.never = "never".asInstanceOf[typingsSlinky.monacoEditor.monacoEditorStrings.never]
   @scala.inline
-  def never: typingsSlinky.monacoEditor.monacoEditorStrings.never = this.cast("never")
-  @scala.inline
-  def quotes: typingsSlinky.monacoEditor.monacoEditorStrings.quotes = this.cast("quotes")
+  def quotes: typingsSlinky.monacoEditor.monacoEditorStrings.quotes = "quotes".asInstanceOf[typingsSlinky.monacoEditor.monacoEditorStrings.quotes]
 }
 

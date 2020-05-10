@@ -22,15 +22,47 @@ trait PutEvaluationsRequest extends js.Object {
 
 object PutEvaluationsRequest {
   @scala.inline
-  def apply(
-    ResultToken: String,
-    Evaluations: Evaluations = null,
-    TestMode: js.UndefOr[scala.Boolean] = js.undefined
-  ): PutEvaluationsRequest = {
+  def apply(ResultToken: String): PutEvaluationsRequest = {
     val __obj = js.Dynamic.literal(ResultToken = ResultToken.asInstanceOf[js.Any])
-    if (Evaluations != null) __obj.updateDynamic("Evaluations")(Evaluations.asInstanceOf[js.Any])
-    if (!js.isUndefined(TestMode)) __obj.updateDynamic("TestMode")(TestMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutEvaluationsRequest]
   }
+  @scala.inline
+  implicit class PutEvaluationsRequestOps[Self <: PutEvaluationsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResultToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvaluations(value: Evaluations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Evaluations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Evaluations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

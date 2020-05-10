@@ -12,10 +12,8 @@ trait MediaStreamTrackState extends js.Object
 
 object MediaStreamTrackState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ended: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.ended = "ended".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.ended]
   @scala.inline
-  def ended: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.ended = this.cast("ended")
-  @scala.inline
-  def live: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.live = this.cast("live")
+  def live: typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.live = "live".asInstanceOf[typingsSlinky.reactNativeWebrtc.reactNativeWebrtcStrings.live]
 }
 

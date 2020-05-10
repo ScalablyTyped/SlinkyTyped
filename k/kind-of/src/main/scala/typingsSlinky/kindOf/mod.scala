@@ -32,21 +32,8 @@ import typingsSlinky.kindOf.kindOfStrings.uint8clampedarray
 import typingsSlinky.kindOf.kindOfStrings.weakmap
 import typingsSlinky.kindOf.kindOfStrings.weakset
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Date
-import typingsSlinky.std.Error
-import typingsSlinky.std.Float32Array
-import typingsSlinky.std.Float64Array
-import typingsSlinky.std.Int16Array
-import typingsSlinky.std.Int32Array
-import typingsSlinky.std.Int8Array
-import typingsSlinky.std.Iterator
 import typingsSlinky.std.Map
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.Set
-import typingsSlinky.std.Uint16Array
-import typingsSlinky.std.Uint32Array
-import typingsSlinky.std.Uint8Array
-import typingsSlinky.std.Uint8ClampedArray
 import typingsSlinky.std.WeakMap
 import typingsSlinky.std.WeakSet
 import scala.scalajs.js
@@ -66,21 +53,21 @@ object mod extends js.Object {
   def apply(thing: Boolean): boolean = js.native
   def apply(thing: Double): number = js.native
   def apply(thing: Buffer): buffer = js.native
-  def apply(thing: Date): date = js.native
-  def apply(thing: Error): error = js.native
-  def apply(thing: Float32Array): float32array = js.native
-  def apply(thing: Float64Array): float64array = js.native
-  def apply(thing: Int16Array): int16array = js.native
-  def apply(thing: Int32Array): int32array = js.native
-  def apply(thing: Int8Array): int8array = js.native
-  def apply(thing: Iterator[_, _, js.UndefOr[scala.Nothing]]): generator | stringiterator | arrayiterator | mapiterator | setiterator = js.native
+  def apply(thing: js.Date): date = js.native
+  def apply(thing: js.Error): error = js.native
+  def apply(thing: js.typedarray.Float32Array): float32array = js.native
+  def apply(thing: js.typedarray.Float64Array): float64array = js.native
+  def apply(thing: js.typedarray.Int16Array): int16array = js.native
+  def apply(thing: js.typedarray.Int32Array): int32array = js.native
+  def apply(thing: js.typedarray.Int8Array): int8array = js.native
+  def apply(thing: js.Iterator[_]): generator | stringiterator | arrayiterator | mapiterator | setiterator = js.native
   def apply(thing: Map[_, _]): map = js.native
-  def apply(thing: RegExp): regexp = js.native
+  def apply(thing: js.RegExp): regexp = js.native
   def apply(thing: Set[_]): set = js.native
-  def apply(thing: Uint16Array): uint16array = js.native
-  def apply(thing: Uint32Array): uint32array = js.native
-  def apply(thing: Uint8Array): uint8array = js.native
-  def apply(thing: Uint8ClampedArray): uint8clampedarray = js.native
+  def apply(thing: js.typedarray.Uint16Array): uint16array = js.native
+  def apply(thing: js.typedarray.Uint32Array): uint32array = js.native
+  def apply(thing: js.typedarray.Uint8Array): uint8array = js.native
+  def apply(thing: js.typedarray.Uint8ClampedArray): uint8clampedarray = js.native
   def apply(thing: WeakMap[_, _]): weakmap = js.native
   def apply(thing: WeakSet[_]): weakset = js.native
 }

@@ -15,7 +15,7 @@ object getCertificates extends js.Object {
     */
   def apply(
     tokenId: String,
-    callback: js.Function1[/* certificates */ js.Array[scala.scalajs.js.typedarray.ArrayBuffer], Unit]
+    callback: js.Function1[/* certificates */ js.Array[js.typedarray.ArrayBuffer], Unit]
   ): Unit = js.native
 }
 

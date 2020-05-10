@@ -14,14 +14,12 @@ trait keyType extends js.Object
 
 object keyType {
   @scala.inline
-  def EC: typingsSlinky.jose.joseStrings.EC = this.cast("EC")
+  def EC: typingsSlinky.jose.joseStrings.EC = "EC".asInstanceOf[typingsSlinky.jose.joseStrings.EC]
   @scala.inline
-  def OKP: typingsSlinky.jose.joseStrings.OKP = this.cast("OKP")
+  def OKP: typingsSlinky.jose.joseStrings.OKP = "OKP".asInstanceOf[typingsSlinky.jose.joseStrings.OKP]
   @scala.inline
-  def RSA: typingsSlinky.jose.joseStrings.RSA = this.cast("RSA")
+  def RSA: typingsSlinky.jose.joseStrings.RSA = "RSA".asInstanceOf[typingsSlinky.jose.joseStrings.RSA]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def oct: typingsSlinky.jose.joseStrings.oct = this.cast("oct")
+  def oct: typingsSlinky.jose.joseStrings.oct = "oct".asInstanceOf[typingsSlinky.jose.joseStrings.oct]
 }
 

@@ -34,11 +34,41 @@ trait SchemaRegularFile extends js.Object {
 
 object SchemaRegularFile {
   @scala.inline
-  def apply(content: SchemaFileReference = null, devicePath: String = null): SchemaRegularFile = {
+  def apply(): SchemaRegularFile = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (devicePath != null) __obj.updateDynamic("devicePath")(devicePath.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegularFile]
   }
+  @scala.inline
+  implicit class SchemaRegularFileOps[Self <: SchemaRegularFile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: SchemaFileReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevicePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevicePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicePath")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

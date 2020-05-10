@@ -37,20 +37,77 @@ trait SchemaGoogleDatastoreAdminV1ExportEntitiesMetadata extends js.Object {
 
 object SchemaGoogleDatastoreAdminV1ExportEntitiesMetadata {
   @scala.inline
-  def apply(
-    common: SchemaGoogleDatastoreAdminV1CommonMetadata = null,
-    entityFilter: SchemaGoogleDatastoreAdminV1EntityFilter = null,
-    outputUrlPrefix: String = null,
-    progressBytes: SchemaGoogleDatastoreAdminV1Progress = null,
-    progressEntities: SchemaGoogleDatastoreAdminV1Progress = null
-  ): SchemaGoogleDatastoreAdminV1ExportEntitiesMetadata = {
+  def apply(): SchemaGoogleDatastoreAdminV1ExportEntitiesMetadata = {
     val __obj = js.Dynamic.literal()
-    if (common != null) __obj.updateDynamic("common")(common.asInstanceOf[js.Any])
-    if (entityFilter != null) __obj.updateDynamic("entityFilter")(entityFilter.asInstanceOf[js.Any])
-    if (outputUrlPrefix != null) __obj.updateDynamic("outputUrlPrefix")(outputUrlPrefix.asInstanceOf[js.Any])
-    if (progressBytes != null) __obj.updateDynamic("progressBytes")(progressBytes.asInstanceOf[js.Any])
-    if (progressEntities != null) __obj.updateDynamic("progressEntities")(progressEntities.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDatastoreAdminV1ExportEntitiesMetadata]
   }
+  @scala.inline
+  implicit class SchemaGoogleDatastoreAdminV1ExportEntitiesMetadataOps[Self <: SchemaGoogleDatastoreAdminV1ExportEntitiesMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommon(value: SchemaGoogleDatastoreAdminV1CommonMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("common")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityFilter(value: SchemaGoogleDatastoreAdminV1EntityFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputUrlPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputUrlPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputUrlPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputUrlPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressBytes(value: SchemaGoogleDatastoreAdminV1Progress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressEntities(value: SchemaGoogleDatastoreAdminV1Progress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressEntities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressEntities")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

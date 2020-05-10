@@ -42,25 +42,107 @@ trait UpdateTableInput extends js.Object {
 
 object UpdateTableInput {
   @scala.inline
-  def apply(
-    TableName: TableName,
-    AttributeDefinitions: AttributeDefinitions = null,
-    BillingMode: BillingMode = null,
-    GlobalSecondaryIndexUpdates: GlobalSecondaryIndexUpdateList = null,
-    ProvisionedThroughput: ProvisionedThroughput = null,
-    ReplicaUpdates: ReplicationGroupUpdateList = null,
-    SSESpecification: SSESpecification = null,
-    StreamSpecification: StreamSpecification = null
-  ): UpdateTableInput = {
+  def apply(TableName: TableName): UpdateTableInput = {
     val __obj = js.Dynamic.literal(TableName = TableName.asInstanceOf[js.Any])
-    if (AttributeDefinitions != null) __obj.updateDynamic("AttributeDefinitions")(AttributeDefinitions.asInstanceOf[js.Any])
-    if (BillingMode != null) __obj.updateDynamic("BillingMode")(BillingMode.asInstanceOf[js.Any])
-    if (GlobalSecondaryIndexUpdates != null) __obj.updateDynamic("GlobalSecondaryIndexUpdates")(GlobalSecondaryIndexUpdates.asInstanceOf[js.Any])
-    if (ProvisionedThroughput != null) __obj.updateDynamic("ProvisionedThroughput")(ProvisionedThroughput.asInstanceOf[js.Any])
-    if (ReplicaUpdates != null) __obj.updateDynamic("ReplicaUpdates")(ReplicaUpdates.asInstanceOf[js.Any])
-    if (SSESpecification != null) __obj.updateDynamic("SSESpecification")(SSESpecification.asInstanceOf[js.Any])
-    if (StreamSpecification != null) __obj.updateDynamic("StreamSpecification")(StreamSpecification.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateTableInput]
   }
+  @scala.inline
+  implicit class UpdateTableInputOps[Self <: UpdateTableInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTableName(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeDefinitions(value: AttributeDefinitions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeDefinitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeDefinitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeDefinitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBillingMode(value: BillingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalSecondaryIndexUpdates(value: GlobalSecondaryIndexUpdateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexUpdates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalSecondaryIndexUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexUpdates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughput(value: ProvisionedThroughput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedThroughput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicaUpdates(value: ReplicationGroupUpdateList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaUpdates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicaUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicaUpdates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSSESpecification(value: SSESpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSESpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSSESpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SSESpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamSpecification(value: StreamSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamSpecification")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

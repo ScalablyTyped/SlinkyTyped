@@ -7,11 +7,12 @@ import scala.scalajs.js.annotation._
 /**
   * WebhookConversion describes how to call a conversion webhook
   */
+@js.native
 trait WebhookConversion extends js.Object {
   /**
     * clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.
     */
-  val clientConfig: WebhookClientConfig
+  val clientConfig: WebhookClientConfig = js.native
   /**
     * conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the
     * Webhook expects. The API server will use the first version in the list which it supports.
@@ -20,15 +21,34 @@ trait WebhookConversion extends js.Object {
     * versions and does not include any versions known to the API Server, calls to the webhook
     * will fail.
     */
-  val conversionReviewVersions: js.Array[String]
+  val conversionReviewVersions: js.Array[String] = js.native
 }
 
 object WebhookConversion {
   @scala.inline
   def apply(clientConfig: WebhookClientConfig, conversionReviewVersions: js.Array[String]): WebhookConversion = {
     val __obj = js.Dynamic.literal(clientConfig = clientConfig.asInstanceOf[js.Any], conversionReviewVersions = conversionReviewVersions.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[WebhookConversion]
   }
+  @scala.inline
+  implicit class WebhookConversionOps[Self <: WebhookConversion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientConfig(value: WebhookClientConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConversionReviewVersions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conversionReviewVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

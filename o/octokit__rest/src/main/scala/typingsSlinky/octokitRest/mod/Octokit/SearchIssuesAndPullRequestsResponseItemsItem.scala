@@ -4,29 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SearchIssuesAndPullRequestsResponseItemsItem extends js.Object {
-  var assignee: Null
-  var body: String
-  var closed_at: Null
-  var comments: Double
-  var comments_url: String
-  var created_at: String
-  var events_url: String
-  var html_url: String
-  var id: Double
-  var labels: js.Array[SearchIssuesAndPullRequestsResponseItemsItemLabelsItem]
-  var labels_url: String
-  var milestone: Null
-  var node_id: String
-  var number: Double
-  var pull_request: SearchIssuesAndPullRequestsResponseItemsItemPullRequest
-  var repository_url: String
-  var score: Double
-  var state: String
-  var title: String
-  var updated_at: String
-  var url: String
-  var user: SearchIssuesAndPullRequestsResponseItemsItemUser
+  var assignee: Null = js.native
+  var body: String = js.native
+  var closed_at: Null = js.native
+  var comments: Double = js.native
+  var comments_url: String = js.native
+  var created_at: String = js.native
+  var events_url: String = js.native
+  var html_url: String = js.native
+  var id: Double = js.native
+  var labels: js.Array[SearchIssuesAndPullRequestsResponseItemsItemLabelsItem] = js.native
+  var labels_url: String = js.native
+  var milestone: Null = js.native
+  var node_id: String = js.native
+  var number: Double = js.native
+  var pull_request: SearchIssuesAndPullRequestsResponseItemsItemPullRequest = js.native
+  var repository_url: String = js.native
+  var score: Double = js.native
+  var state: String = js.native
+  var title: String = js.native
+  var updated_at: String = js.native
+  var url: String = js.native
+  var user: SearchIssuesAndPullRequestsResponseItemsItemUser = js.native
 }
 
 object SearchIssuesAndPullRequestsResponseItemsItem {
@@ -56,8 +57,147 @@ object SearchIssuesAndPullRequestsResponseItemsItem {
     user: SearchIssuesAndPullRequestsResponseItemsItemUser
   ): SearchIssuesAndPullRequestsResponseItemsItem = {
     val __obj = js.Dynamic.literal(assignee = assignee.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], closed_at = closed_at.asInstanceOf[js.Any], comments = comments.asInstanceOf[js.Any], comments_url = comments_url.asInstanceOf[js.Any], created_at = created_at.asInstanceOf[js.Any], events_url = events_url.asInstanceOf[js.Any], html_url = html_url.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], labels_url = labels_url.asInstanceOf[js.Any], milestone = milestone.asInstanceOf[js.Any], node_id = node_id.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], pull_request = pull_request.asInstanceOf[js.Any], repository_url = repository_url.asInstanceOf[js.Any], score = score.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], updated_at = updated_at.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SearchIssuesAndPullRequestsResponseItemsItem]
   }
+  @scala.inline
+  implicit class SearchIssuesAndPullRequestsResponseItemsItemOps[Self <: SearchIssuesAndPullRequestsResponseItemsItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignee(value: Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignee")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClosed_at(value: Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closed_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreated_at(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvents_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabels(value: js.Array[SearchIssuesAndPullRequestsResponseItemsItemLabelsItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabels_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMilestone(value: Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("milestone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNode_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPull_request(value: SearchIssuesAndPullRequestsResponseItemsItemPullRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pull_request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepository_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repository_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScore(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdated_at(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUser(value: SearchIssuesAndPullRequestsResponseItemsItemUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

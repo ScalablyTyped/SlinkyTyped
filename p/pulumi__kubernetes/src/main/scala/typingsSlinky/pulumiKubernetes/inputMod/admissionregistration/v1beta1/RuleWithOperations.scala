@@ -9,22 +9,23 @@ import scala.scalajs.js.annotation._
   * RuleWithOperations is a tuple of Operations and Resources. It is recommended to make sure
   * that all the tuple expansions are valid.
   */
+@js.native
 trait RuleWithOperations extends js.Object {
   /**
     * APIGroups is the API groups the resources belong to. '*' is all groups. If '*' is present,
     * the length of the slice must be one. Required.
     */
-  var apiGroups: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
+  var apiGroups: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   /**
     * APIVersions is the API versions the resources belong to. '*' is all versions. If '*' is
     * present, the length of the slice must be one. Required.
     */
-  var apiVersions: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
+  var apiVersions: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   /**
     * Operations is the operations the admission hook cares about - CREATE, UPDATE, or * for all
     * operations. If '*' is present, the length of the slice must be one. Required.
     */
-  var operations: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
+  var operations: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   /**
     * Resources is a list of resources this rule applies to.
     *
@@ -37,7 +38,7 @@ trait RuleWithOperations extends js.Object {
     *
     * Depending on the enclosing object, subresources might not be allowed. Required.
     */
-  var resources: js.UndefOr[Input[js.Array[Input[String]]]] = js.undefined
+  var resources: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   /**
     * scope specifies the scope of this rule. Valid values are "Cluster", "Namespaced", and "*"
     * "Cluster" means that only cluster-scoped resources will match this rule. Namespace API
@@ -45,25 +46,82 @@ trait RuleWithOperations extends js.Object {
     * this rule. "*" means that there are no scope restrictions. Subresources match the scope of
     * their parent resource. Default is "*".
     */
-  var scope: js.UndefOr[Input[String]] = js.undefined
+  var scope: js.UndefOr[Input[String]] = js.native
 }
 
 object RuleWithOperations {
   @scala.inline
-  def apply(
-    apiGroups: Input[js.Array[Input[String]]] = null,
-    apiVersions: Input[js.Array[Input[String]]] = null,
-    operations: Input[js.Array[Input[String]]] = null,
-    resources: Input[js.Array[Input[String]]] = null,
-    scope: Input[String] = null
-  ): RuleWithOperations = {
+  def apply(): RuleWithOperations = {
     val __obj = js.Dynamic.literal()
-    if (apiGroups != null) __obj.updateDynamic("apiGroups")(apiGroups.asInstanceOf[js.Any])
-    if (apiVersions != null) __obj.updateDynamic("apiVersions")(apiVersions.asInstanceOf[js.Any])
-    if (operations != null) __obj.updateDynamic("operations")(operations.asInstanceOf[js.Any])
-    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleWithOperations]
   }
+  @scala.inline
+  implicit class RuleWithOperationsOps[Self <: RuleWithOperations] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiGroups(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApiVersions(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperations(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

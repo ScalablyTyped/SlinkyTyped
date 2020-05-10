@@ -15,11 +15,41 @@ trait UpdateFlowEntitlementResponse extends js.Object {
 
 object UpdateFlowEntitlementResponse {
   @scala.inline
-  def apply(Entitlement: Entitlement = null, FlowArn: string = null): UpdateFlowEntitlementResponse = {
+  def apply(): UpdateFlowEntitlementResponse = {
     val __obj = js.Dynamic.literal()
-    if (Entitlement != null) __obj.updateDynamic("Entitlement")(Entitlement.asInstanceOf[js.Any])
-    if (FlowArn != null) __obj.updateDynamic("FlowArn")(FlowArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFlowEntitlementResponse]
   }
+  @scala.inline
+  implicit class UpdateFlowEntitlementResponseOps[Self <: UpdateFlowEntitlementResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntitlement(value: Entitlement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Entitlement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntitlement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Entitlement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlowArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlowArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlowArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

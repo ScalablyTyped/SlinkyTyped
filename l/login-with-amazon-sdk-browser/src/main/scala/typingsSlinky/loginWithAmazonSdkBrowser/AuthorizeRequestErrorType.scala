@@ -17,20 +17,18 @@ trait AuthorizeRequestErrorType extends js.Object
 
 object AuthorizeRequestErrorType {
   @scala.inline
-  def access_denied: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.access_denied = this.cast("access_denied")
+  def access_denied: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.access_denied = "access_denied".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.access_denied]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def invalid_grant: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.invalid_grant = "invalid_grant".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.invalid_grant]
   @scala.inline
-  def invalid_grant: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.invalid_grant = this.cast("invalid_grant")
+  def invalid_request: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.invalid_request = "invalid_request".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.invalid_request]
   @scala.inline
-  def invalid_request: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.invalid_request = this.cast("invalid_request")
+  def invalid_scope: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.invalid_scope = "invalid_scope".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.invalid_scope]
   @scala.inline
-  def invalid_scope: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.invalid_scope = this.cast("invalid_scope")
+  def server_error: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.server_error = "server_error".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.server_error]
   @scala.inline
-  def server_error: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.server_error = this.cast("server_error")
+  def temporarily_unavailable: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.temporarily_unavailable = "temporarily_unavailable".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.temporarily_unavailable]
   @scala.inline
-  def temporarily_unavailable: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.temporarily_unavailable = this.cast("temporarily_unavailable")
-  @scala.inline
-  def unauthorized_client: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.unauthorized_client = this.cast("unauthorized_client")
+  def unauthorized_client: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.unauthorized_client = "unauthorized_client".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.unauthorized_client]
 }
 

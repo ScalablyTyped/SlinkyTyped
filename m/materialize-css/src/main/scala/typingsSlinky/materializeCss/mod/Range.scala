@@ -28,7 +28,7 @@ object Range extends js.Object {
   /**
     * Init Range
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Range = js.native
-  def init(els: typingsSlinky.std.Element, options: Partial[js.UndefOr[scala.Nothing]]): typingsSlinky.materializeCss.M.Range = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Range = js.native
+  def init(els: Element, options: Partial[js.UndefOr[scala.Nothing]]): typingsSlinky.materializeCss.M.Range = js.native
 }
 

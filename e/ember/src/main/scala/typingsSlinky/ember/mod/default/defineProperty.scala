@@ -1,6 +1,5 @@
 package typingsSlinky.ember.mod.default
 
-import typingsSlinky.std.PropertyDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,8 +26,8 @@ object defineProperty extends js.Object {
     data: js.Any,
     meta: js.Any
   ): Unit = js.native
-  def apply(obj: js.Object, keyName: java.lang.String, desc: PropertyDescriptor): Unit = js.native
-  def apply(obj: js.Object, keyName: java.lang.String, desc: PropertyDescriptor, data: js.Any): Unit = js.native
-  def apply(obj: js.Object, keyName: java.lang.String, desc: PropertyDescriptor, data: js.Any, meta: js.Any): Unit = js.native
+  def apply(obj: js.Object, keyName: java.lang.String, desc: js.PropertyDescriptor): Unit = js.native
+  def apply(obj: js.Object, keyName: java.lang.String, desc: js.PropertyDescriptor, data: js.Any): Unit = js.native
+  def apply(obj: js.Object, keyName: java.lang.String, desc: js.PropertyDescriptor, data: js.Any, meta: js.Any): Unit = js.native
 }
 

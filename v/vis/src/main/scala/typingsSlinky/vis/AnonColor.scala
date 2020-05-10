@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonColor extends js.Object {
-  var color: js.UndefOr[String] = js.undefined
-  var highlight: js.UndefOr[String] = js.undefined
-  var hover: js.UndefOr[String] = js.undefined
-  var inherit: js.UndefOr[Boolean | String] = js.undefined
-  var opacity: js.UndefOr[Double] = js.undefined
+  var color: js.UndefOr[String] = js.native
+  var highlight: js.UndefOr[String] = js.native
+  var hover: js.UndefOr[String] = js.native
+  var inherit: js.UndefOr[Boolean | String] = js.native
+  var opacity: js.UndefOr[Double] = js.native
 }
 
 object AnonColor {
   @scala.inline
-  def apply(
-    color: String = null,
-    highlight: String = null,
-    hover: String = null,
-    inherit: Boolean | String = null,
-    opacity: Int | Double = null
-  ): AnonColor = {
+  def apply(): AnonColor = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (highlight != null) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
-    if (hover != null) __obj.updateDynamic("hover")(hover.asInstanceOf[js.Any])
-    if (inherit != null) __obj.updateDynamic("inherit")(inherit.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonColor]
   }
+  @scala.inline
+  implicit class AnonColorOps[Self <: AnonColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHover(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInherit(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInherit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inherit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

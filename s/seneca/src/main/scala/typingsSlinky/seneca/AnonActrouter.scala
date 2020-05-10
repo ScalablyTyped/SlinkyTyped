@@ -5,28 +5,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonActrouter extends js.Object {
-  var actrouter: js.UndefOr[UnknownType] = js.undefined
-  var clientrouter: js.UndefOr[UnknownType] = js.undefined
+  var actrouter: js.UndefOr[UnknownType] = js.native
+  var clientrouter: js.UndefOr[UnknownType] = js.native
   // Close instance on these signals, if true.
-  var close_signals: js.UndefOr[AnonSIGBREAK] = js.undefined
-  var subrouter: js.UndefOr[UnknownType] = js.undefined
+  var close_signals: js.UndefOr[AnonSIGBREAK] = js.native
+  var subrouter: js.UndefOr[UnknownType] = js.native
 }
 
 object AnonActrouter {
   @scala.inline
-  def apply(
-    actrouter: UnknownType = null,
-    clientrouter: UnknownType = null,
-    close_signals: AnonSIGBREAK = null,
-    subrouter: UnknownType = null
-  ): AnonActrouter = {
+  def apply(): AnonActrouter = {
     val __obj = js.Dynamic.literal()
-    if (actrouter != null) __obj.updateDynamic("actrouter")(actrouter.asInstanceOf[js.Any])
-    if (clientrouter != null) __obj.updateDynamic("clientrouter")(clientrouter.asInstanceOf[js.Any])
-    if (close_signals != null) __obj.updateDynamic("close_signals")(close_signals.asInstanceOf[js.Any])
-    if (subrouter != null) __obj.updateDynamic("subrouter")(subrouter.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonActrouter]
   }
+  @scala.inline
+  implicit class AnonActrouterOps[Self <: AnonActrouter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActrouter(value: UnknownType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actrouter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActrouter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actrouter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientrouter(value: UnknownType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientrouter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientrouter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientrouter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClose_signals(value: AnonSIGBREAK): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close_signals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClose_signals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close_signals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubrouter(value: UnknownType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subrouter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubrouter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subrouter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -27,5 +27,5 @@ package object mod {
     */
   type QueryResults[Queries] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof Queries ]: boolean}
-    */ typingsSlinky.reactMedia.reactMediaStrings.QueryResults with js.Any
+    */ typingsSlinky.reactMedia.reactMediaStrings.QueryResults with org.scalablytyped.runtime.TopLevel[js.Any]
 }

@@ -4,60 +4,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GPUFeatureStatus extends js.Object {
   // Docs: http://electronjs.org/docs/api/structures/gpu-feature-status
   /**
     * Canvas.
     */
-  var `2d_canvas`: String
+  var `2d_canvas`: String = js.native
   /**
     * Flash.
     */
-  var flash_3d: String
+  var flash_3d: String = js.native
   /**
     * Flash Stage3D.
     */
-  var flash_stage3d: String
+  var flash_stage3d: String = js.native
   /**
     * Flash Stage3D Baseline profile.
     */
-  var flash_stage3d_baseline: String
+  var flash_stage3d_baseline: String = js.native
   /**
     * Compositing.
     */
-  var gpu_compositing: String
+  var gpu_compositing: String = js.native
   /**
     * Multiple Raster Threads.
     */
-  var multiple_raster_threads: String
+  var multiple_raster_threads: String = js.native
   /**
     * Native GpuMemoryBuffers.
     */
-  var native_gpu_memory_buffers: String
+  var native_gpu_memory_buffers: String = js.native
   /**
     * Rasterization.
     */
-  var rasterization: String
+  var rasterization: String = js.native
   /**
     * Video Decode.
     */
-  var video_decode: String
+  var video_decode: String = js.native
   /**
     * Video Encode.
     */
-  var video_encode: String
+  var video_encode: String = js.native
   /**
     * VPx Video Decode.
     */
-  var vpx_decode: String
+  var vpx_decode: String = js.native
   /**
     * WebGL.
     */
-  var webgl: String
+  var webgl: String = js.native
   /**
     * WebGL2.
     */
-  var webgl2: String
+  var webgl2: String = js.native
 }
 
 object GPUFeatureStatus {
@@ -81,5 +82,91 @@ object GPUFeatureStatus {
     __obj.updateDynamic("2d_canvas")(`2d_canvas`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GPUFeatureStatus]
   }
+  @scala.inline
+  implicit class GPUFeatureStatusOps[Self <: GPUFeatureStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with2d_canvas(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("2d_canvas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlash_3d(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flash_3d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlash_stage3d(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flash_stage3d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlash_stage3d_baseline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flash_stage3d_baseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGpu_compositing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gpu_compositing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMultiple_raster_threads(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple_raster_threads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNative_gpu_memory_buffers(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("native_gpu_memory_buffers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRasterization(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rasterization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideo_decode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video_decode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideo_encode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video_encode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpx_decode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpx_decode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebgl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webgl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebgl2(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webgl2")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

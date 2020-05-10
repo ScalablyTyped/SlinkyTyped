@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DriveRestrictions extends js.Object {
-  var adminManagedRestrictions: js.UndefOr[Boolean] = js.undefined
-  var copyRequiresWriterPermission: js.UndefOr[Boolean] = js.undefined
-  var domainUsersOnly: js.UndefOr[Boolean] = js.undefined
-  var driveMembersOnly: js.UndefOr[Boolean] = js.undefined
+  var adminManagedRestrictions: js.UndefOr[Boolean] = js.native
+  var copyRequiresWriterPermission: js.UndefOr[Boolean] = js.native
+  var domainUsersOnly: js.UndefOr[Boolean] = js.native
+  var driveMembersOnly: js.UndefOr[Boolean] = js.native
 }
 
 object DriveRestrictions {
   @scala.inline
-  def apply(
-    adminManagedRestrictions: js.UndefOr[Boolean] = js.undefined,
-    copyRequiresWriterPermission: js.UndefOr[Boolean] = js.undefined,
-    domainUsersOnly: js.UndefOr[Boolean] = js.undefined,
-    driveMembersOnly: js.UndefOr[Boolean] = js.undefined
-  ): DriveRestrictions = {
+  def apply(): DriveRestrictions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(adminManagedRestrictions)) __obj.updateDynamic("adminManagedRestrictions")(adminManagedRestrictions.asInstanceOf[js.Any])
-    if (!js.isUndefined(copyRequiresWriterPermission)) __obj.updateDynamic("copyRequiresWriterPermission")(copyRequiresWriterPermission.asInstanceOf[js.Any])
-    if (!js.isUndefined(domainUsersOnly)) __obj.updateDynamic("domainUsersOnly")(domainUsersOnly.asInstanceOf[js.Any])
-    if (!js.isUndefined(driveMembersOnly)) __obj.updateDynamic("driveMembersOnly")(driveMembersOnly.asInstanceOf[js.Any])
     __obj.asInstanceOf[DriveRestrictions]
   }
+  @scala.inline
+  implicit class DriveRestrictionsOps[Self <: DriveRestrictions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdminManagedRestrictions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adminManagedRestrictions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdminManagedRestrictions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adminManagedRestrictions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyRequiresWriterPermission(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyRequiresWriterPermission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyRequiresWriterPermission: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyRequiresWriterPermission")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainUsersOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainUsersOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainUsersOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainUsersOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDriveMembersOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveMembersOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriveMembersOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveMembersOnly")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

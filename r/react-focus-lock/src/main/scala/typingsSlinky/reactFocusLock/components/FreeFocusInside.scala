@@ -1,17 +1,26 @@
 package typingsSlinky.reactFocusLock.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactFocusLock.interfacesMod.FreeFocusProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FreeFocusInside
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactFocusLock.mod.FreeFocusInside] {
+object FreeFocusInside {
   @JSImport("react-focus-lock", "FreeFocusInside")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactFocusLock.mod.FreeFocusInside] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: FreeFocusProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FreeFocusInside.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

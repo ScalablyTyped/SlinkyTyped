@@ -15,10 +15,8 @@ trait AdvancedConfigSettingOption extends js.Object
 
 object AdvancedConfigSettingOption {
   @scala.inline
-  def MaxChildIncidentNumber: typingsSlinky.xrm.xrmStrings.MaxChildIncidentNumber = this.cast("MaxChildIncidentNumber")
+  def MaxChildIncidentNumber: typingsSlinky.xrm.xrmStrings.MaxChildIncidentNumber = "MaxChildIncidentNumber".asInstanceOf[typingsSlinky.xrm.xrmStrings.MaxChildIncidentNumber]
   @scala.inline
-  def MaxIncidentMergeNumber: typingsSlinky.xrm.xrmStrings.MaxIncidentMergeNumber = this.cast("MaxIncidentMergeNumber")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def MaxIncidentMergeNumber: typingsSlinky.xrm.xrmStrings.MaxIncidentMergeNumber = "MaxIncidentMergeNumber".asInstanceOf[typingsSlinky.xrm.xrmStrings.MaxIncidentMergeNumber]
 }
 

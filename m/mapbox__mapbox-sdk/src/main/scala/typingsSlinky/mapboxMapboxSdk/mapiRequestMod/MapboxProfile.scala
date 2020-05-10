@@ -13,12 +13,10 @@ trait MapboxProfile extends js.Object
 
 object MapboxProfile {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cycling: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.cycling = "cycling".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.cycling]
   @scala.inline
-  def cycling: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.cycling = this.cast("cycling")
+  def driving: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.driving = "driving".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.driving]
   @scala.inline
-  def driving: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.driving = this.cast("driving")
-  @scala.inline
-  def walking: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.walking = this.cast("walking")
+  def walking: typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.walking = "walking".asInstanceOf[typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.walking]
 }
 

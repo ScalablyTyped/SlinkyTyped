@@ -1,17 +1,17 @@
 package typingsSlinky.reactSortablePane.mod
 
 import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.TouchEvent
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.MouseEvent
-import typingsSlinky.react.mod.NativeMouseEvent
-import typingsSlinky.react.mod.TouchEvent
 import typingsSlinky.reactSortablePane.AnonChildren
 import typingsSlinky.reactSortablePane.AnonNext
 import typingsSlinky.reactSortablePane.AnonPageX
 import typingsSlinky.resizeObserverPolyfill.mod._Global_.ResizeObserver
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -69,56 +69,50 @@ class SortablePane protected ()
     *                                  pane halfway points
     */
   def getSurroundingHalfSizes(currentPane: Double, sizes: js.Array[Double], margin: Double): AnonNext = js.native
-  def handleMouseDown(pos: Double, pressX: Double, pressY: Double, e: MouseEvent[HTMLElement, NativeMouseEvent]): Unit = js.native
-  def handleMouseDown(pos: Double, pressX: Double, pressY: Double, e: TouchEvent[HTMLElement]): Unit = js.native
-  def handleMouseUp(e: typingsSlinky.std.MouseEvent): Unit = js.native
-  def handleMouseUp(e: typingsSlinky.std.TouchEvent): Unit = js.native
+  def handleMouseDown(pos: Double, pressX: Double, pressY: Double, e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
+  def handleMouseDown(pos: Double, pressX: Double, pressY: Double, e: SyntheticTouchEvent[HTMLElement]): Unit = js.native
+  def handleMouseUp(e: MouseEvent): Unit = js.native
+  def handleMouseUp(e: TouchEvent): Unit = js.native
   def handleMove(hasPageXPageY: AnonPageX): Unit = js.native
   def handleResizeStart(
     i: Double,
-    e: MouseEvent[HTMLElement, NativeMouseEvent],
+    e: SyntheticMouseEvent[HTMLElement],
     dir: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResizableDirection */ js.Any
   ): Unit = js.native
   def handleResizeStart(
     i: Double,
-    e: TouchEvent[HTMLElement],
+    e: SyntheticTouchEvent[HTMLElement],
     dir: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResizableDirection */ js.Any
   ): Unit = js.native
   def handleResizeStop(
     i: Double,
-    e: typingsSlinky.std.MouseEvent,
+    e: MouseEvent,
     dir: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResizableDirection */ js.Any,
-    elementRef: org.scalajs.dom.raw.HTMLElement,
+    elementRef: HTMLElement,
     delta: PaneSize
   ): Unit = js.native
   def handleResizeStop(
     i: Double,
-    e: typingsSlinky.std.TouchEvent,
+    e: TouchEvent,
     dir: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResizableDirection */ js.Any,
-    elementRef: org.scalajs.dom.raw.HTMLElement,
+    elementRef: HTMLElement,
     delta: PaneSize
   ): Unit = js.native
-  def handleTouchMove(e: org.scalajs.dom.raw.TouchEvent): Unit = js.native
-  def handleTouchStart(
-    key: Double,
-    x: Double,
-    y: Double,
-    e: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLElement],
-    child: ReactElement
-  ): Unit = js.native
+  def handleTouchMove(e: TouchEvent): Unit = js.native
+  def handleTouchStart(key: Double, x: Double, y: Double, e: SyntheticTouchEvent[HTMLElement], child: ReactElement): Unit = js.native
   def isHorizontal(): Boolean = js.native
   def onResize(
     i: Double,
-    e: typingsSlinky.std.MouseEvent,
+    e: MouseEvent,
     dir: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResizableDirection */ js.Any,
-    elementRef: org.scalajs.dom.raw.HTMLElement,
+    elementRef: HTMLElement,
     delta: PaneSize
   ): Unit = js.native
   def onResize(
     i: Double,
-    e: typingsSlinky.std.TouchEvent,
+    e: TouchEvent,
     dir: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResizableDirection */ js.Any,
-    elementRef: org.scalajs.dom.raw.HTMLElement,
+    elementRef: HTMLElement,
     delta: PaneSize
   ): Unit = js.native
   def removePane(): Unit = js.native

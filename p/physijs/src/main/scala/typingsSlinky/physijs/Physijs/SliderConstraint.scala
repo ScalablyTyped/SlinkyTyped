@@ -15,8 +15,6 @@ class SliderConstraint protected () extends Constraint {
   def disableLinearMotor(): Unit = js.native
   def enableAngularMotor(velocity: Double, acceleration: Double): Unit = js.native
   def enableLinearMotor(velocity: Double, acceleration: Double): Unit = js.native
-  /* CompleteClass */
-  override def getDefinition(): js.Any = js.native
   def setLimits(lin_lower: Double, lin_upper: Double, ang_lower: Double, ang_upper: Double): Unit = js.native
   def setRestitution(linear: Double, angular: Double): Unit = js.native
 }

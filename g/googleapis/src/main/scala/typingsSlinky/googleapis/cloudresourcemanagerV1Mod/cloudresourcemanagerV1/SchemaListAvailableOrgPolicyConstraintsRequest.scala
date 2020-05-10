@@ -25,11 +25,41 @@ trait SchemaListAvailableOrgPolicyConstraintsRequest extends js.Object {
 
 object SchemaListAvailableOrgPolicyConstraintsRequest {
   @scala.inline
-  def apply(pageSize: Int | Double = null, pageToken: String = null): SchemaListAvailableOrgPolicyConstraintsRequest = {
+  def apply(): SchemaListAvailableOrgPolicyConstraintsRequest = {
     val __obj = js.Dynamic.literal()
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListAvailableOrgPolicyConstraintsRequest]
   }
+  @scala.inline
+  implicit class SchemaListAvailableOrgPolicyConstraintsRequestOps[Self <: SchemaListAvailableOrgPolicyConstraintsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPageSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

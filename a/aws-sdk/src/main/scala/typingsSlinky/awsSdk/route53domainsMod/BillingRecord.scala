@@ -30,20 +30,77 @@ trait BillingRecord extends js.Object {
 
 object BillingRecord {
   @scala.inline
-  def apply(
-    BillDate: js.Date = null,
-    DomainName: DomainName = null,
-    InvoiceId: InvoiceId = null,
-    Operation: OperationType = null,
-    Price: Int | Double = null
-  ): BillingRecord = {
+  def apply(): BillingRecord = {
     val __obj = js.Dynamic.literal()
-    if (BillDate != null) __obj.updateDynamic("BillDate")(BillDate.asInstanceOf[js.Any])
-    if (DomainName != null) __obj.updateDynamic("DomainName")(DomainName.asInstanceOf[js.Any])
-    if (InvoiceId != null) __obj.updateDynamic("InvoiceId")(InvoiceId.asInstanceOf[js.Any])
-    if (Operation != null) __obj.updateDynamic("Operation")(Operation.asInstanceOf[js.Any])
-    if (Price != null) __obj.updateDynamic("Price")(Price.asInstanceOf[js.Any])
     __obj.asInstanceOf[BillingRecord]
   }
+  @scala.inline
+  implicit class BillingRecordOps[Self <: BillingRecord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBillDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BillDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomainName(value: DomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvoiceId(value: InvoiceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvoiceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvoiceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvoiceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperation(value: OperationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Operation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Operation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrice(value: Price): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Price")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

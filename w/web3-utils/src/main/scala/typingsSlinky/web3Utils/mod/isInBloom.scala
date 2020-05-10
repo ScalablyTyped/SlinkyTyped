@@ -1,6 +1,5 @@
 package typingsSlinky.web3Utils.mod
 
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object isInBloom extends js.Object {
   def apply(bloom: String, value: String): Boolean = js.native
-  def apply(bloom: String, value: Uint8Array): Boolean = js.native
+  def apply(bloom: String, value: js.typedarray.Uint8Array): Boolean = js.native
 }
 

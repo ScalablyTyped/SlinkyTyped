@@ -24,11 +24,41 @@ trait SchemaTestRulesetResponse extends js.Object {
 
 object SchemaTestRulesetResponse {
   @scala.inline
-  def apply(issues: js.Array[SchemaIssue] = null, testResults: js.Array[SchemaTestResult] = null): SchemaTestRulesetResponse = {
+  def apply(): SchemaTestRulesetResponse = {
     val __obj = js.Dynamic.literal()
-    if (issues != null) __obj.updateDynamic("issues")(issues.asInstanceOf[js.Any])
-    if (testResults != null) __obj.updateDynamic("testResults")(testResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestRulesetResponse]
   }
+  @scala.inline
+  implicit class SchemaTestRulesetResponseOps[Self <: SchemaTestRulesetResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIssues(value: js.Array[SchemaIssue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestResults(value: js.Array[SchemaTestResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

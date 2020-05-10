@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SceneOptions extends js.Object {
-  var cache: js.UndefOr[Boolean] = js.undefined
-  var camera: js.UndefOr[Camera] = js.undefined
-  var cullBackfaces: js.UndefOr[Boolean] = js.undefined
-  var fractionalPoints: js.UndefOr[Boolean] = js.undefined
-  var model: js.UndefOr[Model] = js.undefined
-  var shader: js.UndefOr[Shader] = js.undefined
-  var viewport: js.UndefOr[Viewport] = js.undefined
+  var cache: js.UndefOr[Boolean] = js.native
+  var camera: js.UndefOr[Camera] = js.native
+  var cullBackfaces: js.UndefOr[Boolean] = js.native
+  var fractionalPoints: js.UndefOr[Boolean] = js.native
+  var model: js.UndefOr[Model] = js.native
+  var shader: js.UndefOr[Shader] = js.native
+  var viewport: js.UndefOr[Viewport] = js.native
 }
 
 object SceneOptions {
   @scala.inline
-  def apply(
-    cache: js.UndefOr[Boolean] = js.undefined,
-    camera: Camera = null,
-    cullBackfaces: js.UndefOr[Boolean] = js.undefined,
-    fractionalPoints: js.UndefOr[Boolean] = js.undefined,
-    model: Model = null,
-    shader: Shader = null,
-    viewport: Viewport = null
-  ): SceneOptions = {
+  def apply(): SceneOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (camera != null) __obj.updateDynamic("camera")(camera.asInstanceOf[js.Any])
-    if (!js.isUndefined(cullBackfaces)) __obj.updateDynamic("cullBackfaces")(cullBackfaces.asInstanceOf[js.Any])
-    if (!js.isUndefined(fractionalPoints)) __obj.updateDynamic("fractionalPoints")(fractionalPoints.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (shader != null) __obj.updateDynamic("shader")(shader.asInstanceOf[js.Any])
-    if (viewport != null) __obj.updateDynamic("viewport")(viewport.asInstanceOf[js.Any])
     __obj.asInstanceOf[SceneOptions]
   }
+  @scala.inline
+  implicit class SceneOptionsOps[Self <: SceneOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCamera(value: Camera): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCamera: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCullBackfaces(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cullBackfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCullBackfaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cullBackfaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFractionalPoints(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fractionalPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFractionalPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fractionalPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: Model): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShader(value: Shader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewport(value: Viewport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

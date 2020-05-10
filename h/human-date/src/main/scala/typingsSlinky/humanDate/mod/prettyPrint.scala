@@ -1,6 +1,5 @@
 package typingsSlinky.humanDate.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ object prettyPrint extends js.Object {
   def apply(arg: String, options: PrettyPrintOptions): String = js.native
   def apply(arg: Double): String = js.native
   def apply(arg: Double, options: PrettyPrintOptions): String = js.native
-  def apply(arg: Date): String = js.native
-  def apply(arg: Date, options: PrettyPrintOptions): String = js.native
+  def apply(arg: js.Date): String = js.native
+  def apply(arg: js.Date, options: PrettyPrintOptions): String = js.native
 }
 

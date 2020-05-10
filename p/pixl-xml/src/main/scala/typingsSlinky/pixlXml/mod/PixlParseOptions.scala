@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PixlParseOptions extends js.Object {
-  var forceArrays: js.UndefOr[Boolean] = js.undefined
-  var lowerCase: js.UndefOr[Boolean] = js.undefined
-  var preserveAttributes: js.UndefOr[Boolean] = js.undefined
-  var preserveDocumentNode: js.UndefOr[Boolean] = js.undefined
-  var preserveWhitespace: js.UndefOr[Boolean] = js.undefined
+  var forceArrays: js.UndefOr[Boolean] = js.native
+  var lowerCase: js.UndefOr[Boolean] = js.native
+  var preserveAttributes: js.UndefOr[Boolean] = js.native
+  var preserveDocumentNode: js.UndefOr[Boolean] = js.native
+  var preserveWhitespace: js.UndefOr[Boolean] = js.native
 }
 
 object PixlParseOptions {
   @scala.inline
-  def apply(
-    forceArrays: js.UndefOr[Boolean] = js.undefined,
-    lowerCase: js.UndefOr[Boolean] = js.undefined,
-    preserveAttributes: js.UndefOr[Boolean] = js.undefined,
-    preserveDocumentNode: js.UndefOr[Boolean] = js.undefined,
-    preserveWhitespace: js.UndefOr[Boolean] = js.undefined
-  ): PixlParseOptions = {
+  def apply(): PixlParseOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(forceArrays)) __obj.updateDynamic("forceArrays")(forceArrays.asInstanceOf[js.Any])
-    if (!js.isUndefined(lowerCase)) __obj.updateDynamic("lowerCase")(lowerCase.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveAttributes)) __obj.updateDynamic("preserveAttributes")(preserveAttributes.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveDocumentNode)) __obj.updateDynamic("preserveDocumentNode")(preserveDocumentNode.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveWhitespace)) __obj.updateDynamic("preserveWhitespace")(preserveWhitespace.asInstanceOf[js.Any])
     __obj.asInstanceOf[PixlParseOptions]
   }
+  @scala.inline
+  implicit class PixlParseOptionsOps[Self <: PixlParseOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForceArrays(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceArrays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceArrays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceArrays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowerCase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerCase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowerCase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerCase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveAttributes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveDocumentNode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveDocumentNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveDocumentNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveDocumentNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveWhitespace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveWhitespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveWhitespace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveWhitespace")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

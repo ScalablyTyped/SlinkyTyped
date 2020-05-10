@@ -42,16 +42,53 @@ trait SchemaUserOwnedDrydockNote extends js.Object {
 
 object SchemaUserOwnedDrydockNote {
   @scala.inline
-  def apply(
-    delegationServiceAccountEmail: String = null,
-    noteReference: String = null,
-    publicKeys: js.Array[SchemaAttestorPublicKey] = null
-  ): SchemaUserOwnedDrydockNote = {
+  def apply(): SchemaUserOwnedDrydockNote = {
     val __obj = js.Dynamic.literal()
-    if (delegationServiceAccountEmail != null) __obj.updateDynamic("delegationServiceAccountEmail")(delegationServiceAccountEmail.asInstanceOf[js.Any])
-    if (noteReference != null) __obj.updateDynamic("noteReference")(noteReference.asInstanceOf[js.Any])
-    if (publicKeys != null) __obj.updateDynamic("publicKeys")(publicKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUserOwnedDrydockNote]
   }
+  @scala.inline
+  implicit class SchemaUserOwnedDrydockNoteOps[Self <: SchemaUserOwnedDrydockNote] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelegationServiceAccountEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegationServiceAccountEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelegationServiceAccountEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegationServiceAccountEmail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoteReference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noteReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoteReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noteReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicKeys(value: js.Array[SchemaAttestorPublicKey]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeys")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

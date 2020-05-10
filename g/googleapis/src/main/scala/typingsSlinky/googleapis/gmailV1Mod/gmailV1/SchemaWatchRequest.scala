@@ -34,12 +34,53 @@ trait SchemaWatchRequest extends js.Object {
 
 object SchemaWatchRequest {
   @scala.inline
-  def apply(labelFilterAction: String = null, labelIds: js.Array[String] = null, topicName: String = null): SchemaWatchRequest = {
+  def apply(): SchemaWatchRequest = {
     val __obj = js.Dynamic.literal()
-    if (labelFilterAction != null) __obj.updateDynamic("labelFilterAction")(labelFilterAction.asInstanceOf[js.Any])
-    if (labelIds != null) __obj.updateDynamic("labelIds")(labelIds.asInstanceOf[js.Any])
-    if (topicName != null) __obj.updateDynamic("topicName")(topicName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWatchRequest]
   }
+  @scala.inline
+  implicit class SchemaWatchRequestOps[Self <: SchemaWatchRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabelFilterAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFilterAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelFilterAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelFilterAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopicName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topicName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopicName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topicName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,16 +15,14 @@ trait CanvasTextAlign extends js.Object
 
 object CanvasTextAlign {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.std.stdStrings.center = "center".asInstanceOf[typingsSlinky.std.stdStrings.center]
   @scala.inline
-  def center: typingsSlinky.std.stdStrings.center = this.cast("center")
+  def end: typingsSlinky.std.stdStrings.end = "end".asInstanceOf[typingsSlinky.std.stdStrings.end]
   @scala.inline
-  def end: typingsSlinky.std.stdStrings.end = this.cast("end")
+  def left: typingsSlinky.std.stdStrings.left = "left".asInstanceOf[typingsSlinky.std.stdStrings.left]
   @scala.inline
-  def left: typingsSlinky.std.stdStrings.left = this.cast("left")
+  def right: typingsSlinky.std.stdStrings.right = "right".asInstanceOf[typingsSlinky.std.stdStrings.right]
   @scala.inline
-  def right: typingsSlinky.std.stdStrings.right = this.cast("right")
-  @scala.inline
-  def start: typingsSlinky.std.stdStrings.start = this.cast("start")
+  def start: typingsSlinky.std.stdStrings.start = "start".asInstanceOf[typingsSlinky.std.stdStrings.start]
 }
 

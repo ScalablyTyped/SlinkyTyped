@@ -1,42 +1,113 @@
 package typingsSlinky.wixStyleReact.loaderMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.wixStyleReact.baseComponentsMod.WixComponentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LoaderProps extends WixComponentProps {
-  var color: js.UndefOr[LoaderColor] = js.undefined
-  var shouldLoadAsync: js.UndefOr[Boolean] = js.undefined
-  var size: js.UndefOr[LoaderSize] = js.undefined
-  var status: js.UndefOr[LoaderStatus] = js.undefined
-  var statusMessage: js.UndefOr[String] = js.undefined
-  var text: js.UndefOr[TagMod[Any]] = js.undefined
+  var color: js.UndefOr[LoaderColor] = js.native
+  var shouldLoadAsync: js.UndefOr[Boolean] = js.native
+  var size: js.UndefOr[LoaderSize] = js.native
+  var status: js.UndefOr[LoaderStatus] = js.native
+  var statusMessage: js.UndefOr[String] = js.native
+  var text: js.UndefOr[TagMod[Any]] = js.native
 }
 
 object LoaderProps {
   @scala.inline
-  def apply(
-    color: LoaderColor = null,
-    dataHook: String = null,
-    shouldLoadAsync: js.UndefOr[Boolean] = js.undefined,
-    size: LoaderSize = null,
-    status: LoaderStatus = null,
-    statusMessage: String = null,
-    styles: String = null,
-    text: TagMod[Any] = null
-  ): LoaderProps = {
+  def apply(): LoaderProps = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (dataHook != null) __obj.updateDynamic("dataHook")(dataHook.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldLoadAsync)) __obj.updateDynamic("shouldLoadAsync")(shouldLoadAsync.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (statusMessage != null) __obj.updateDynamic("statusMessage")(statusMessage.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoaderProps]
   }
+  @scala.inline
+  implicit class LoaderPropsOps[Self <: LoaderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: LoaderColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShouldLoadAsync(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldLoadAsync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShouldLoadAsync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldLoadAsync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: LoaderSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: LoaderStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

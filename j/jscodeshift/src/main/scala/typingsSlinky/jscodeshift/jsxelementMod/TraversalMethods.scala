@@ -5,25 +5,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TraversalMethods extends js.Object {
   /**
     * Returns all children that are JSXElements.
     * This method only applies to JSXElement typed collections.
     */
-  def childElements(): Collection[JSXElement]
+  def childElements(): Collection[JSXElement] = js.native
   /**
     * Returns all child nodes, including literals and expressions.
     * This method only applies to JSXElement typed collections.
     */
-  def childNodes(): Collection[JSXElementChild]
+  def childNodes(): Collection[JSXElementChild] = js.native
 }
 
 object TraversalMethods {
   @scala.inline
   def apply(childElements: () => Collection[JSXElement], childNodes: () => Collection[JSXElementChild]): TraversalMethods = {
     val __obj = js.Dynamic.literal(childElements = js.Any.fromFunction0(childElements), childNodes = js.Any.fromFunction0(childNodes))
-  
     __obj.asInstanceOf[TraversalMethods]
   }
+  @scala.inline
+  implicit class TraversalMethodsOps[Self <: TraversalMethods] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildElements(value: () => Collection[JSXElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childElements")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withChildNodes(value: () => Collection[JSXElementChild]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childNodes")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

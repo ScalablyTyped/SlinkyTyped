@@ -13,12 +13,10 @@ trait FundsType extends js.Object
 
 object FundsType {
   @scala.inline
-  def CREDIT: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CREDIT = this.cast("CREDIT")
+  def CREDIT: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CREDIT = "CREDIT".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CREDIT]
   @scala.inline
-  def DEFAULT: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.DEFAULT = this.cast("DEFAULT")
+  def DEFAULT: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.DEFAULT = "DEFAULT".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.DEFAULT]
   @scala.inline
-  def FEES: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.FEES = this.cast("FEES")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def FEES: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.FEES = "FEES".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.FEES]
 }
 

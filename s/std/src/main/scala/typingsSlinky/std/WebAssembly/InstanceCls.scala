@@ -9,7 +9,5 @@ import scala.scalajs.js.annotation._
 class InstanceCls protected () extends Instance {
   def this(module: Module) = this()
   def this(module: Module, importObject: Imports) = this()
-  /* CompleteClass */
-  override val exports: Exports = js.native
 }
 

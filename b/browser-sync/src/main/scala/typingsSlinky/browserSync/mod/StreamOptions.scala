@@ -4,27 +4,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StreamOptions extends js.Object {
   var `match`: js.UndefOr[
     (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mm.Pattern */ js.Any) | (js.Array[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mm.Pattern */ _
     ])
-  ] = js.undefined
-  var once: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var once: js.UndefOr[Boolean] = js.native
 }
 
 object StreamOptions {
   @scala.inline
-  def apply(
-    `match`: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mm.Pattern */ js.Any) | (js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mm.Pattern */ _
-    ]) = null,
-    once: js.UndefOr[Boolean] = js.undefined
-  ): StreamOptions = {
+  def apply(): StreamOptions = {
     val __obj = js.Dynamic.literal()
-    if (`match` != null) __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
-    if (!js.isUndefined(once)) __obj.updateDynamic("once")(once.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamOptions]
   }
+  @scala.inline
+  implicit class StreamOptionsOps[Self <: StreamOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMatch(
+      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mm.Pattern */ js.Any) | (js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mm.Pattern */ _
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

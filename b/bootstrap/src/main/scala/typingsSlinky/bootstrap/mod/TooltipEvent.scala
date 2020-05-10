@@ -15,16 +15,14 @@ trait TooltipEvent extends js.Object
 
 object TooltipEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hiddenDotbsDottooltip: typingsSlinky.bootstrap.bootstrapStrings.hiddenDotbsDottooltip = "hidden.bs.tooltip".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.hiddenDotbsDottooltip]
   @scala.inline
-  def hiddenDotbsDottooltip: typingsSlinky.bootstrap.bootstrapStrings.hiddenDotbsDottooltip = this.cast("hidden.bs.tooltip")
+  def hideDotbsDottooltip: typingsSlinky.bootstrap.bootstrapStrings.hideDotbsDottooltip = "hide.bs.tooltip".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.hideDotbsDottooltip]
   @scala.inline
-  def hideDotbsDottooltip: typingsSlinky.bootstrap.bootstrapStrings.hideDotbsDottooltip = this.cast("hide.bs.tooltip")
+  def insertedDotbsDottooltip: typingsSlinky.bootstrap.bootstrapStrings.insertedDotbsDottooltip = "inserted.bs.tooltip".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.insertedDotbsDottooltip]
   @scala.inline
-  def insertedDotbsDottooltip: typingsSlinky.bootstrap.bootstrapStrings.insertedDotbsDottooltip = this.cast("inserted.bs.tooltip")
+  def showDotbsDottooltip: typingsSlinky.bootstrap.bootstrapStrings.showDotbsDottooltip = "show.bs.tooltip".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.showDotbsDottooltip]
   @scala.inline
-  def showDotbsDottooltip: typingsSlinky.bootstrap.bootstrapStrings.showDotbsDottooltip = this.cast("show.bs.tooltip")
-  @scala.inline
-  def shownDotbsDottooltip: typingsSlinky.bootstrap.bootstrapStrings.shownDotbsDottooltip = this.cast("shown.bs.tooltip")
+  def shownDotbsDottooltip: typingsSlinky.bootstrap.bootstrapStrings.shownDotbsDottooltip = "shown.bs.tooltip".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.shownDotbsDottooltip]
 }
 

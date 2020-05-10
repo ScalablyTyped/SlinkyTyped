@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IViewerOptions extends js.Object {
-  var bgColor: js.UndefOr[Double] = js.undefined
-  var color: js.UndefOr[js.Array[Double]] = js.undefined
-  var drawFaces: js.UndefOr[Boolean] = js.undefined
-  var drawLines: js.UndefOr[Boolean] = js.undefined
-  var noWebGL: js.UndefOr[Boolean] = js.undefined
+  var bgColor: js.UndefOr[Double] = js.native
+  var color: js.UndefOr[js.Array[Double]] = js.native
+  var drawFaces: js.UndefOr[Boolean] = js.native
+  var drawLines: js.UndefOr[Boolean] = js.native
+  var noWebGL: js.UndefOr[Boolean] = js.native
 }
 
 object IViewerOptions {
   @scala.inline
-  def apply(
-    bgColor: Int | Double = null,
-    color: js.Array[Double] = null,
-    drawFaces: js.UndefOr[Boolean] = js.undefined,
-    drawLines: js.UndefOr[Boolean] = js.undefined,
-    noWebGL: js.UndefOr[Boolean] = js.undefined
-  ): IViewerOptions = {
+  def apply(): IViewerOptions = {
     val __obj = js.Dynamic.literal()
-    if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (!js.isUndefined(drawFaces)) __obj.updateDynamic("drawFaces")(drawFaces.asInstanceOf[js.Any])
-    if (!js.isUndefined(drawLines)) __obj.updateDynamic("drawLines")(drawLines.asInstanceOf[js.Any])
-    if (!js.isUndefined(noWebGL)) __obj.updateDynamic("noWebGL")(noWebGL.asInstanceOf[js.Any])
     __obj.asInstanceOf[IViewerOptions]
   }
+  @scala.inline
+  implicit class IViewerOptionsOps[Self <: IViewerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBgColor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBgColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawFaces(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawFaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrawFaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawFaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawLines(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrawLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoWebGL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noWebGL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoWebGL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noWebGL")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

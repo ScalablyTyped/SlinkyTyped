@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryWindow.JQueryWindow
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jqueryWindow.JQuery
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

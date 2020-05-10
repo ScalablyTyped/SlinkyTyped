@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object schemasMod {
-  type Body = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.schemasMod.Blob | java.lang.String
+  type Body = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.schemasMod.Blob | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.schemasMod.ClientApiVersions
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CREATE_IN_PROGRESS

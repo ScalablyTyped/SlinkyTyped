@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ServiceUIFrameContext extends js.Object {
-  def getCachedFrameMessage(key: java.lang.String): java.lang.String
-  def postFrameMessage(key: java.lang.String, data: java.lang.String): Unit
+  def getCachedFrameMessage(key: java.lang.String): java.lang.String = js.native
+  def postFrameMessage(key: java.lang.String, data: java.lang.String): Unit = js.native
 }
 
 @JSGlobal("ServiceUIFrameContext")

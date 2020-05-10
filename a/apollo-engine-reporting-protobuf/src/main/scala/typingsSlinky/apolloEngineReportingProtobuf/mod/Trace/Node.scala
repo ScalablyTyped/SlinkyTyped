@@ -5,7 +5,6 @@ import typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.INode
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,8 +42,8 @@ object Node extends js.Object {
     */
   def decode(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Node = js.native
   def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Node = js.native
-  def decode(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Node = js.native
-  def decode(reader: Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Node = js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Node = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Node = js.native
   /**
     * Decodes a Node message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -53,7 +52,7 @@ object Node extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Node = js.native
-  def decodeDelimited(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Node = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.Node = js.native
   /**
     * Encodes the specified Node message. Does not implicitly {@link Trace.Node.verify|verify} messages.
     * @param message Node message or plain object to encode

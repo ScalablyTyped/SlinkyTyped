@@ -1,7 +1,6 @@
 package typingsSlinky.samchon
 
 import typingsSlinky.samchon.clientMod.Client
-import typingsSlinky.samchon.invokeMod.Invoke
 import typingsSlinky.samchon.iprotocolMod.IProtocol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -48,24 +47,6 @@ object serviceServiceMod extends js.Object {
       * Get requested path.
       */
     def getPath(): String = js.native
-    /**
-      * Sending message.
-      *
-      * Sends message to related system or shifts the responsibility to chain.
-      *
-      * @param invoke Invoke message to send
-      */
-    /* CompleteClass */
-    override def replyData(invoke: Invoke): Unit = js.native
-    /**
-      * Handling replied message.
-      *
-      * Handles replied message or shifts the responsibility to chain.
-      *
-      * @param invoke An {@link Invoke} message has received.
-      */
-    /* CompleteClass */
-    override def sendData(invoke: Invoke): Unit = js.native
   }
   
 }

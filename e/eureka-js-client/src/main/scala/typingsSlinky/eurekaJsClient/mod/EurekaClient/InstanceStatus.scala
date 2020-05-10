@@ -15,16 +15,14 @@ trait InstanceStatus extends js.Object
 
 object InstanceStatus {
   @scala.inline
-  def DOWN: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.DOWN = this.cast("DOWN")
+  def DOWN: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.DOWN = "DOWN".asInstanceOf[typingsSlinky.eurekaJsClient.eurekaJsClientStrings.DOWN]
   @scala.inline
-  def OUT_OF_SERVICE: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.OUT_OF_SERVICE = this.cast("OUT_OF_SERVICE")
+  def OUT_OF_SERVICE: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.OUT_OF_SERVICE = "OUT_OF_SERVICE".asInstanceOf[typingsSlinky.eurekaJsClient.eurekaJsClientStrings.OUT_OF_SERVICE]
   @scala.inline
-  def STARTING: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.STARTING = this.cast("STARTING")
+  def STARTING: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.STARTING = "STARTING".asInstanceOf[typingsSlinky.eurekaJsClient.eurekaJsClientStrings.STARTING]
   @scala.inline
-  def UNKNOWN: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.UNKNOWN = this.cast("UNKNOWN")
+  def UNKNOWN: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.UNKNOWN = "UNKNOWN".asInstanceOf[typingsSlinky.eurekaJsClient.eurekaJsClientStrings.UNKNOWN]
   @scala.inline
-  def UP: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.UP = this.cast("UP")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UP: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.UP = "UP".asInstanceOf[typingsSlinky.eurekaJsClient.eurekaJsClientStrings.UP]
 }
 

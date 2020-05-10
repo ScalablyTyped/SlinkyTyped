@@ -4,35 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ArrayFileProviderOptions extends FileProviderOptions[ArrayFileProvider] {
   /** Specifies an array of data objects that represent files and directories. */
-  var data: js.UndefOr[js.Array[_]] = js.undefined
+  var data: js.UndefOr[js.Array[_]] = js.native
   /** Specifies which data field provides information about nested files and directories. */
-  var itemsExpr: js.UndefOr[String | js.Function] = js.undefined
+  var itemsExpr: js.UndefOr[String | js.Function] = js.native
 }
 
 object ArrayFileProviderOptions {
   @scala.inline
-  def apply(
-    data: js.Array[_] = null,
-    dateModifiedExpr: String | js.Function = null,
-    isDirectoryExpr: String | js.Function = null,
-    itemsExpr: String | js.Function = null,
-    keyExpr: String | js.Function = null,
-    nameExpr: String | js.Function = null,
-    sizeExpr: String | js.Function = null,
-    thumbnailExpr: String | js.Function = null
-  ): ArrayFileProviderOptions = {
+  def apply(): ArrayFileProviderOptions = {
     val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dateModifiedExpr != null) __obj.updateDynamic("dateModifiedExpr")(dateModifiedExpr.asInstanceOf[js.Any])
-    if (isDirectoryExpr != null) __obj.updateDynamic("isDirectoryExpr")(isDirectoryExpr.asInstanceOf[js.Any])
-    if (itemsExpr != null) __obj.updateDynamic("itemsExpr")(itemsExpr.asInstanceOf[js.Any])
-    if (keyExpr != null) __obj.updateDynamic("keyExpr")(keyExpr.asInstanceOf[js.Any])
-    if (nameExpr != null) __obj.updateDynamic("nameExpr")(nameExpr.asInstanceOf[js.Any])
-    if (sizeExpr != null) __obj.updateDynamic("sizeExpr")(sizeExpr.asInstanceOf[js.Any])
-    if (thumbnailExpr != null) __obj.updateDynamic("thumbnailExpr")(thumbnailExpr.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArrayFileProviderOptions]
   }
+  @scala.inline
+  implicit class ArrayFileProviderOptionsOps[Self <: ArrayFileProviderOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemsExpr(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsExpr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemsExpr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsExpr")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

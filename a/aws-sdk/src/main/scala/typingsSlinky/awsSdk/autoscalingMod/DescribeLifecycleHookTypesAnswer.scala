@@ -14,10 +14,29 @@ trait DescribeLifecycleHookTypesAnswer extends js.Object {
 
 object DescribeLifecycleHookTypesAnswer {
   @scala.inline
-  def apply(LifecycleHookTypes: AutoScalingNotificationTypes = null): DescribeLifecycleHookTypesAnswer = {
+  def apply(): DescribeLifecycleHookTypesAnswer = {
     val __obj = js.Dynamic.literal()
-    if (LifecycleHookTypes != null) __obj.updateDynamic("LifecycleHookTypes")(LifecycleHookTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeLifecycleHookTypesAnswer]
   }
+  @scala.inline
+  implicit class DescribeLifecycleHookTypesAnswerOps[Self <: DescribeLifecycleHookTypesAnswer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLifecycleHookTypes(value: AutoScalingNotificationTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleHookTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycleHookTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LifecycleHookTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

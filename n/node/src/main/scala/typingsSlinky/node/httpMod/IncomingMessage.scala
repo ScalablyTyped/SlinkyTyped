@@ -1,6 +1,6 @@
 package typingsSlinky.node.httpMod
 
-import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.node.NodeJS.Dict
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class IncomingMessage protected () extends Readable {
   def this(socket: Socket) = this()
+  var aborted: Boolean = js.native
   var complete: Boolean = js.native
   /**
     * @deprecate Use `socket` instead.
@@ -35,7 +36,7 @@ class IncomingMessage protected () extends Readable {
     * Only valid for response obtained from http.ClientRequest.
     */
   var statusMessage: js.UndefOr[String] = js.native
-  var trailers: StringDictionary[js.UndefOr[String]] = js.native
+  var trailers: Dict[String] = js.native
   /**
     * Only valid for request obtained from http.Server.
     */

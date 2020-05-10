@@ -13,12 +13,10 @@ trait TrailingSlashMode extends js.Object
 
 object TrailingSlashMode {
   @scala.inline
-  def always: typingsSlinky.routeNode.routeNodeStrings.always = this.cast("always")
+  def always: typingsSlinky.routeNode.routeNodeStrings.always = "always".asInstanceOf[typingsSlinky.routeNode.routeNodeStrings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.routeNode.routeNodeStrings.default = "default".asInstanceOf[typingsSlinky.routeNode.routeNodeStrings.default]
   @scala.inline
-  def default: typingsSlinky.routeNode.routeNodeStrings.default = this.cast("default")
-  @scala.inline
-  def never: typingsSlinky.routeNode.routeNodeStrings.never = this.cast("never")
+  def never: typingsSlinky.routeNode.routeNodeStrings.never = "never".asInstanceOf[typingsSlinky.routeNode.routeNodeStrings.never]
 }
 

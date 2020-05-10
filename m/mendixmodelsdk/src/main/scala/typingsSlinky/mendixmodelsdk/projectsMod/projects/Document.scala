@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -30,24 +30,16 @@ abstract class Document protected ()
   var model_FDocument: IModel = js.native
   @JSName("name")
   val name_FDocument: String = js.native
-  /**
-    * Returns the qualified name of this element, or
-    * null if this element is not a part of the model,
-    * or if it or one of its namespace containers does not have a
-    * valid name.
-    */
-  /* CompleteClass */
-  override val qualifiedName: String | Null = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MDocument(): FolderBase = js.native
-  def documentation(): String = js.native
+  def containerAsFolderBase_MDocument: FolderBase = js.native
+  def documentation: String = js.native
   def documentation(newValue: String): js.Any = js.native
-  def excluded(): Boolean = js.native
+  def excluded: Boolean = js.native
   def excluded(newValue: Boolean): js.Any = js.native
-  def name(): String = js.native
+  def name: String = js.native
   def name(newValue: String): js.Any = js.native
   @JSName("qualifiedName")
-  def qualifiedName_MDocument(): String | Null = js.native
+  def qualifiedName_MDocument: String | Null = js.native
 }
 
 /* static members */

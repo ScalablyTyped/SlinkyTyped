@@ -1,10 +1,9 @@
 package typingsSlinky.reactSidebar.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSidebar.mod.SidebarProps
 import typingsSlinky.reactSidebar.mod.SidebarStyles
 import typingsSlinky.reactSidebar.mod.default
@@ -12,60 +11,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactSidebar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactSidebar {
   @JSImport("react-sidebar", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: open */
-  def apply(
-    contentClassName: String = null,
-    contentId: String = null,
-    defaultSidebarWidth: Int | Double = null,
-    docked: js.UndefOr[Boolean] = js.undefined,
-    dragToggleDistance: Int | Double = null,
-    onSetOpen: /* open */ Boolean => Unit = null,
-    overlayClassName: String = null,
-    overlayId: String = null,
-    pullRight: js.UndefOr[Boolean] = js.undefined,
-    rootClassName: String = null,
-    rootId: String = null,
-    shadow: js.UndefOr[Boolean] = js.undefined,
-    sidebar: TagMod[Any] = null,
-    sidebarClassName: String = null,
-    sidebarId: String = null,
-    styles: SidebarStyles = null,
-    touch: js.UndefOr[Boolean] = js.undefined,
-    touchHandleWidth: Int | Double = null,
-    transitions: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (contentClassName != null) __obj.updateDynamic("contentClassName")(contentClassName.asInstanceOf[js.Any])
-    if (contentId != null) __obj.updateDynamic("contentId")(contentId.asInstanceOf[js.Any])
-    if (defaultSidebarWidth != null) __obj.updateDynamic("defaultSidebarWidth")(defaultSidebarWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(docked)) __obj.updateDynamic("docked")(docked.asInstanceOf[js.Any])
-    if (dragToggleDistance != null) __obj.updateDynamic("dragToggleDistance")(dragToggleDistance.asInstanceOf[js.Any])
-    if (onSetOpen != null) __obj.updateDynamic("onSetOpen")(js.Any.fromFunction1(onSetOpen))
-    if (overlayClassName != null) __obj.updateDynamic("overlayClassName")(overlayClassName.asInstanceOf[js.Any])
-    if (overlayId != null) __obj.updateDynamic("overlayId")(overlayId.asInstanceOf[js.Any])
-    if (!js.isUndefined(pullRight)) __obj.updateDynamic("pullRight")(pullRight.asInstanceOf[js.Any])
-    if (rootClassName != null) __obj.updateDynamic("rootClassName")(rootClassName.asInstanceOf[js.Any])
-    if (rootId != null) __obj.updateDynamic("rootId")(rootId.asInstanceOf[js.Any])
-    if (!js.isUndefined(shadow)) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
-    if (sidebar != null) __obj.updateDynamic("sidebar")(sidebar.asInstanceOf[js.Any])
-    if (sidebarClassName != null) __obj.updateDynamic("sidebarClassName")(sidebarClassName.asInstanceOf[js.Any])
-    if (sidebarId != null) __obj.updateDynamic("sidebarId")(sidebarId.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (!js.isUndefined(touch)) __obj.updateDynamic("touch")(touch.asInstanceOf[js.Any])
-    if (touchHandleWidth != null) __obj.updateDynamic("touchHandleWidth")(touchHandleWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(transitions)) __obj.updateDynamic("transitions")(transitions.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def contentClassName(value: String): this.type = set("contentClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentId(value: String): this.type = set("contentId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSidebarWidth(value: Double): this.type = set("defaultSidebarWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def docked(value: Boolean): this.type = set("docked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragToggleDistance(value: Double): this.type = set("dragToggleDistance", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSetOpen(value: /* open */ Boolean => Unit): this.type = set("onSetOpen", js.Any.fromFunction1(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlayId(value: String): this.type = set("overlayId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pullRight(value: Boolean): this.type = set("pullRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rootClassName(value: String): this.type = set("rootClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rootId(value: String): this.type = set("rootId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shadow(value: Boolean): this.type = set("shadow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sidebarReactElement(value: ReactElement): this.type = set("sidebar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sidebar(value: TagMod[Any]): this.type = set("sidebar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sidebarClassName(value: String): this.type = set("sidebarClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sidebarId(value: String): this.type = set("sidebarId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styles(value: SidebarStyles): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def touch(value: Boolean): this.type = set("touch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def touchHandleWidth(value: Double): this.type = set("touchHandleWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitions(value: Boolean): this.type = set("transitions", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSidebar.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SidebarProps
+  
+  def withProps(p: SidebarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactSidebar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

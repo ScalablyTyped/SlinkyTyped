@@ -10,83 +10,261 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StrictIconProps extends js.Object {
   /** Icon can have an aria hidden. */
-  var `aria-hidden`: js.UndefOr[String] = js.undefined
+  var `aria-hidden`: js.UndefOr[String] = js.native
   /** Icon can have an aria label. */
-  var `aria-label`: js.UndefOr[String] = js.undefined
+  var `aria-label`: js.UndefOr[String] = js.native
   /** An element type to render as (string or function). */
-  var as: js.UndefOr[js.Any] = js.undefined
+  var as: js.UndefOr[js.Any] = js.native
   /** Formatted to appear bordered */
-  var bordered: js.UndefOr[Boolean] = js.undefined
+  var bordered: js.UndefOr[Boolean] = js.native
   /** Icon can formatted to appear circular. */
-  var circular: js.UndefOr[Boolean] = js.undefined
+  var circular: js.UndefOr[Boolean] = js.native
   /** Additional classes. */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /** Color of the icon. */
-  var color: js.UndefOr[SemanticCOLORS] = js.undefined
+  var color: js.UndefOr[SemanticCOLORS] = js.native
   /** Icons can display a smaller corner icon. */
-  var corner: js.UndefOr[Boolean | IconCorner] = js.undefined
+  var corner: js.UndefOr[Boolean | IconCorner] = js.native
   /** Show that the icon is inactive. */
-  var disabled: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean] = js.native
   /** Fitted, without space to left or right of Icon. */
-  var fitted: js.UndefOr[Boolean] = js.undefined
+  var fitted: js.UndefOr[Boolean] = js.native
   /** Icon can be flipped. */
-  var flipped: js.UndefOr[horizontally | vertically] = js.undefined
+  var flipped: js.UndefOr[horizontally | vertically] = js.native
   /** Formatted to have its colors inverted for contrast. */
-  var inverted: js.UndefOr[Boolean] = js.undefined
+  var inverted: js.UndefOr[Boolean] = js.native
   /** Icon can be formatted as a link. */
-  var link: js.UndefOr[Boolean] = js.undefined
+  var link: js.UndefOr[Boolean] = js.native
   /** Icon can be used as a simple loader. */
-  var loading: js.UndefOr[Boolean] = js.undefined
+  var loading: js.UndefOr[Boolean] = js.native
   /** Name of the icon. */
-  var name: js.UndefOr[SemanticICONS] = js.undefined
+  var name: js.UndefOr[SemanticICONS] = js.native
   /** Icon can rotated. */
-  var rotated: js.UndefOr[clockwise | counterclockwise] = js.undefined
+  var rotated: js.UndefOr[clockwise | counterclockwise] = js.native
   /** Size of the icon. */
-  var size: js.UndefOr[IconSizeProp] = js.undefined
+  var size: js.UndefOr[IconSizeProp] = js.native
 }
 
 object StrictIconProps {
   @scala.inline
-  def apply(
-    `aria-hidden`: String = null,
-    `aria-label`: String = null,
-    as: js.Any = null,
-    bordered: js.UndefOr[Boolean] = js.undefined,
-    circular: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    color: SemanticCOLORS = null,
-    corner: Boolean | IconCorner = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    fitted: js.UndefOr[Boolean] = js.undefined,
-    flipped: horizontally | vertically = null,
-    inverted: js.UndefOr[Boolean] = js.undefined,
-    link: js.UndefOr[Boolean] = js.undefined,
-    loading: js.UndefOr[Boolean] = js.undefined,
-    name: SemanticICONS = null,
-    rotated: clockwise | counterclockwise = null,
-    size: IconSizeProp = null
-  ): StrictIconProps = {
+  def apply(): StrictIconProps = {
     val __obj = js.Dynamic.literal()
-    if (`aria-hidden` != null) __obj.updateDynamic("aria-hidden")(`aria-hidden`.asInstanceOf[js.Any])
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
-    if (!js.isUndefined(circular)) __obj.updateDynamic("circular")(circular.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (corner != null) __obj.updateDynamic("corner")(corner.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(fitted)) __obj.updateDynamic("fitted")(fitted.asInstanceOf[js.Any])
-    if (flipped != null) __obj.updateDynamic("flipped")(flipped.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
-    if (!js.isUndefined(link)) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (rotated != null) __obj.updateDynamic("rotated")(rotated.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrictIconProps]
   }
+  @scala.inline
+  implicit class StrictIconPropsOps[Self <: StrictIconProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withAria-hidden`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-hidden`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAria-label`(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAria-label`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aria-label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBordered(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bordered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBordered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bordered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCircular(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circular")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCircular: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circular")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: SemanticCOLORS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCorner(value: Boolean | IconCorner): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCorner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFitted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fitted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFitted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fitted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlipped(value: horizontally | vertically): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flipped")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlipped: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flipped")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInverted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInverted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoading(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: SemanticICONS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotated(value: clockwise | counterclockwise): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: IconSizeProp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

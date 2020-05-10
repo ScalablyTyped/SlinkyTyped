@@ -26,15 +26,47 @@ trait AddFacetToObjectRequest extends js.Object {
 
 object AddFacetToObjectRequest {
   @scala.inline
-  def apply(
-    DirectoryArn: Arn,
-    ObjectReference: ObjectReference,
-    SchemaFacet: SchemaFacet,
-    ObjectAttributeList: AttributeKeyAndValueList = null
-  ): AddFacetToObjectRequest = {
+  def apply(DirectoryArn: Arn, ObjectReference: ObjectReference, SchemaFacet: SchemaFacet): AddFacetToObjectRequest = {
     val __obj = js.Dynamic.literal(DirectoryArn = DirectoryArn.asInstanceOf[js.Any], ObjectReference = ObjectReference.asInstanceOf[js.Any], SchemaFacet = SchemaFacet.asInstanceOf[js.Any])
-    if (ObjectAttributeList != null) __obj.updateDynamic("ObjectAttributeList")(ObjectAttributeList.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddFacetToObjectRequest]
   }
+  @scala.inline
+  implicit class AddFacetToObjectRequestOps[Self <: AddFacetToObjectRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectReference(value: ObjectReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSchemaFacet(value: SchemaFacet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaFacet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectAttributeList(value: AttributeKeyAndValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectAttributeList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectAttributeList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectAttributeList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

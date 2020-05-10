@@ -21,10 +21,29 @@ trait SchemaDateShiftConfig extends js.Object {
 
 object SchemaDateShiftConfig {
   @scala.inline
-  def apply(cryptoKey: String = null): SchemaDateShiftConfig = {
+  def apply(): SchemaDateShiftConfig = {
     val __obj = js.Dynamic.literal()
-    if (cryptoKey != null) __obj.updateDynamic("cryptoKey")(cryptoKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDateShiftConfig]
   }
+  @scala.inline
+  implicit class SchemaDateShiftConfigOps[Self <: SchemaDateShiftConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCryptoKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCryptoKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cryptoKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

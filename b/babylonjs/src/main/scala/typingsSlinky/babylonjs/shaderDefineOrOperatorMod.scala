@@ -1,0 +1,18 @@
+package typingsSlinky.babylonjs
+
+import typingsSlinky.babylonjs.shaderDefineExpressionMod.ShaderDefineExpression
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("babylonjs/Engines/Processors/Expressions/Operators/shaderDefineOrOperator", JSImport.Namespace)
+@js.native
+object shaderDefineOrOperatorMod extends js.Object {
+  @js.native
+  class ShaderDefineOrOperator () extends ShaderDefineExpression {
+    var leftOperand: ShaderDefineExpression = js.native
+    var rightOperand: ShaderDefineExpression = js.native
+  }
+  
+}
+

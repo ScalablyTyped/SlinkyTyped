@@ -1,7 +1,12 @@
 package typingsSlinky.roads
 
+import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.roads.buildMod.RoadsBuildOptions
 import typingsSlinky.roads.requestMod.default
+import typingsSlinky.roads.roadMod.ResponseMiddleware
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -57,6 +62,78 @@ object mod extends js.Object {
       * @param {Window} window - The pages window object to help set page title and other items
       */
     def this(road: typingsSlinky.roads.roadMod.default, container_element: HTMLElement, window: Window_) = this()
+  }
+  
+  def build(input_file: String, output_file: String, options: RoadsBuildOptions): Unit = js.native
+  @js.native
+  object Middleware extends js.Object {
+    @js.native
+    /**
+      * @param {Road} [road] - The road that will receive the SimpleRouter middleware
+      */
+    class SimpleRouter ()
+      extends typingsSlinky.roads.simpleRouterMod.default {
+      def this(road: typingsSlinky.roads.roadMod.default) = this()
+    }
+    
+    @JSName("applyToContext")
+    var applyToContext_Original: js.Function2[/* key */ String, /* val */ js.Any, typingsSlinky.roads.roadMod.Middleware] = js.native
+    @JSName("cookie")
+    var cookie_Original: typingsSlinky.roads.roadMod.Middleware = js.native
+    @JSName("cors")
+    var cors_Original: js.Function1[/* options */ AnonCacheMaxAge, typingsSlinky.roads.roadMod.Middleware] = js.native
+    @JSName("killSlash")
+    var killSlash_Original: typingsSlinky.roads.roadMod.Middleware = js.native
+    @JSName("parseBody")
+    var parseBody_Original: typingsSlinky.roads.roadMod.Middleware = js.native
+    @JSName("reroute")
+    var reroute_Original: js.Function2[
+        /* key */ String, 
+        /* road */ typingsSlinky.roads.roadMod.default, 
+        typingsSlinky.roads.roadMod.Middleware
+      ] = js.native
+    @JSName("setTitle")
+    var setTitle_Original: typingsSlinky.roads.roadMod.Middleware = js.native
+    def applyToContext(key: String, `val`: js.Any): typingsSlinky.roads.roadMod.Middleware = js.native
+    def cookie(
+      method: String,
+      path: String,
+      body: String,
+      headers: StringDictionary[js.Any],
+      next: ResponseMiddleware
+    ): js.Promise[typingsSlinky.roads.responseMod.default] = js.native
+    def cors(options: AnonCacheMaxAge): typingsSlinky.roads.roadMod.Middleware = js.native
+    def killSlash(
+      method: String,
+      path: String,
+      body: String,
+      headers: StringDictionary[js.Any],
+      next: ResponseMiddleware
+    ): js.Promise[typingsSlinky.roads.responseMod.default] = js.native
+    def parseBody(
+      method: String,
+      path: String,
+      body: String,
+      headers: StringDictionary[js.Any],
+      next: ResponseMiddleware
+    ): js.Promise[typingsSlinky.roads.responseMod.default] = js.native
+    def reroute(key: String, road: typingsSlinky.roads.roadMod.default): typingsSlinky.roads.roadMod.Middleware = js.native
+    def setTitle(
+      method: String,
+      path: String,
+      body: String,
+      headers: StringDictionary[js.Any],
+      next: ResponseMiddleware
+    ): js.Promise[typingsSlinky.roads.responseMod.default] = js.native
+    @js.native
+    object SimpleRouter
+      extends TopLevel[
+              Instantiable1[
+                js.UndefOr[/* road */ typingsSlinky.roads.roadMod.default], 
+                typingsSlinky.roads.simpleRouterMod.default
+              ]
+            ]
+    
   }
   
 }

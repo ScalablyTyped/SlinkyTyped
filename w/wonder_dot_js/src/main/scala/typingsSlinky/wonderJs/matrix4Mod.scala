@@ -13,12 +13,12 @@ import scala.scalajs.js.annotation._
 object matrix4Mod extends js.Object {
   @js.native
   class Matrix4 () extends js.Object {
-    def this(mat: scala.scalajs.js.typedarray.Float32Array) = this()
-    var values: scala.scalajs.js.typedarray.Float32Array = js.native
+    def this(mat: js.typedarray.Float32Array) = this()
+    var values: js.typedarray.Float32Array = js.native
     def applyMatrix(other: Matrix4): Matrix4 = js.native
     def applyMatrix(other: Matrix4, notChangeSelf: Boolean): Matrix4 = js.native
-    def cloneToArray(array: scala.scalajs.js.typedarray.Float32Array): Matrix4 = js.native
-    def cloneToArray(array: scala.scalajs.js.typedarray.Float32Array, offset: Double): Matrix4 = js.native
+    def cloneToArray(array: js.typedarray.Float32Array): Matrix4 = js.native
+    def cloneToArray(array: js.typedarray.Float32Array, offset: Double): Matrix4 = js.native
     def getEulerAngles(): js.Any = js.native
     def getRotation(): Quaternion = js.native
     def getScale(): Vector3 = js.native
@@ -98,7 +98,7 @@ object matrix4Mod extends js.Object {
   @js.native
   object Matrix4 extends js.Object {
     def create(): Matrix4 = js.native
-    def create(mat: scala.scalajs.js.typedarray.Float32Array): Matrix4 = js.native
+    def create(mat: js.typedarray.Float32Array): Matrix4 = js.native
   }
   
 }

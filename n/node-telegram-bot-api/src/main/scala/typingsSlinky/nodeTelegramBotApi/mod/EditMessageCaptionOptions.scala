@@ -4,24 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EditMessageCaptionOptions extends EditMessageReplyMarkupOptions {
-  var reply_markup: js.UndefOr[InlineKeyboardMarkup] = js.undefined
+  var reply_markup: js.UndefOr[InlineKeyboardMarkup] = js.native
 }
 
 object EditMessageCaptionOptions {
   @scala.inline
-  def apply(
-    chat_id: Double | String = null,
-    inline_message_id: String = null,
-    message_id: Int | Double = null,
-    reply_markup: InlineKeyboardMarkup = null
-  ): EditMessageCaptionOptions = {
+  def apply(): EditMessageCaptionOptions = {
     val __obj = js.Dynamic.literal()
-    if (chat_id != null) __obj.updateDynamic("chat_id")(chat_id.asInstanceOf[js.Any])
-    if (inline_message_id != null) __obj.updateDynamic("inline_message_id")(inline_message_id.asInstanceOf[js.Any])
-    if (message_id != null) __obj.updateDynamic("message_id")(message_id.asInstanceOf[js.Any])
-    if (reply_markup != null) __obj.updateDynamic("reply_markup")(reply_markup.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditMessageCaptionOptions]
   }
+  @scala.inline
+  implicit class EditMessageCaptionOptionsOps[Self <: EditMessageCaptionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReply_markup(value: InlineKeyboardMarkup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reply_markup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReply_markup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reply_markup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

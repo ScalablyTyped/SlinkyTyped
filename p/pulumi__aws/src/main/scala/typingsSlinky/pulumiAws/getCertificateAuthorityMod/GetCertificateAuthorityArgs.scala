@@ -18,15 +18,47 @@ trait GetCertificateAuthorityArgs extends js.Object {
 
 object GetCertificateAuthorityArgs {
   @scala.inline
-  def apply(
-    arn: String,
-    revocationConfigurations: js.Array[GetCertificateAuthorityRevocationConfiguration] = null,
-    tags: StringDictionary[js.Any] = null
-  ): GetCertificateAuthorityArgs = {
+  def apply(arn: String): GetCertificateAuthorityArgs = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any])
-    if (revocationConfigurations != null) __obj.updateDynamic("revocationConfigurations")(revocationConfigurations.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCertificateAuthorityArgs]
   }
+  @scala.inline
+  implicit class GetCertificateAuthorityArgsOps[Self <: GetCertificateAuthorityArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRevocationConfigurations(value: js.Array[GetCertificateAuthorityRevocationConfiguration]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revocationConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevocationConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revocationConfigurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

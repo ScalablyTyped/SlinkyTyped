@@ -34,22 +34,89 @@ trait ProcessDetails extends js.Object {
 
 object ProcessDetails {
   @scala.inline
-  def apply(
-    LaunchedAt: NonEmptyString = null,
-    Name: NonEmptyString = null,
-    ParentPid: Int | scala.Double = null,
-    Path: NonEmptyString = null,
-    Pid: Int | scala.Double = null,
-    TerminatedAt: NonEmptyString = null
-  ): ProcessDetails = {
+  def apply(): ProcessDetails = {
     val __obj = js.Dynamic.literal()
-    if (LaunchedAt != null) __obj.updateDynamic("LaunchedAt")(LaunchedAt.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (ParentPid != null) __obj.updateDynamic("ParentPid")(ParentPid.asInstanceOf[js.Any])
-    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
-    if (Pid != null) __obj.updateDynamic("Pid")(Pid.asInstanceOf[js.Any])
-    if (TerminatedAt != null) __obj.updateDynamic("TerminatedAt")(TerminatedAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessDetails]
   }
+  @scala.inline
+  implicit class ProcessDetailsOps[Self <: ProcessDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLaunchedAt(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentPid(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentPid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentPid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParentPid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPid(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminatedAt(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TerminatedAt")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object mod {
   /* Rewritten from type alias, can be one of: 
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - scala.Boolean
     - scala.Double
     - java.lang.String
@@ -23,7 +23,7 @@ package object mod {
   type CSSProperties = typingsSlinky.csstype.mod.PropertiesFallback[scala.Double | java.lang.String]
   /* Rewritten from type alias, can be one of: 
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - scala.Boolean
     - scala.Double
     - java.lang.String

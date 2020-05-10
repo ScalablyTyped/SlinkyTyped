@@ -18,22 +18,20 @@ trait Types extends js.Object
 
 object Types {
   @scala.inline
-  def any: typingsSlinky.revalidator.revalidatorStrings.any = this.cast("any")
+  def any: typingsSlinky.revalidator.revalidatorStrings.any = "any".asInstanceOf[typingsSlinky.revalidator.revalidatorStrings.any]
   @scala.inline
-  def array: typingsSlinky.revalidator.revalidatorStrings.array = this.cast("array")
+  def array: typingsSlinky.revalidator.revalidatorStrings.array = "array".asInstanceOf[typingsSlinky.revalidator.revalidatorStrings.array]
   @scala.inline
-  def boolean: typingsSlinky.revalidator.revalidatorStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.revalidator.revalidatorStrings.boolean = "boolean".asInstanceOf[typingsSlinky.revalidator.revalidatorStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def integer: typingsSlinky.revalidator.revalidatorStrings.integer = "integer".asInstanceOf[typingsSlinky.revalidator.revalidatorStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.revalidator.revalidatorStrings.integer = this.cast("integer")
+  def `null`: typingsSlinky.revalidator.revalidatorStrings.`null` = "null".asInstanceOf[typingsSlinky.revalidator.revalidatorStrings.`null`]
   @scala.inline
-  def `null`: typingsSlinky.revalidator.revalidatorStrings.`null` = this.cast("null")
+  def number: typingsSlinky.revalidator.revalidatorStrings.number = "number".asInstanceOf[typingsSlinky.revalidator.revalidatorStrings.number]
   @scala.inline
-  def number: typingsSlinky.revalidator.revalidatorStrings.number = this.cast("number")
+  def `object`: typingsSlinky.revalidator.revalidatorStrings.`object` = "object".asInstanceOf[typingsSlinky.revalidator.revalidatorStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.revalidator.revalidatorStrings.`object` = this.cast("object")
-  @scala.inline
-  def string: typingsSlinky.revalidator.revalidatorStrings.string = this.cast("string")
+  def string: typingsSlinky.revalidator.revalidatorStrings.string = "string".asInstanceOf[typingsSlinky.revalidator.revalidatorStrings.string]
 }
 

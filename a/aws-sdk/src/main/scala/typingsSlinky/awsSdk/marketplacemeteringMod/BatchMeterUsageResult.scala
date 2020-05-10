@@ -18,11 +18,41 @@ trait BatchMeterUsageResult extends js.Object {
 
 object BatchMeterUsageResult {
   @scala.inline
-  def apply(Results: UsageRecordResultList = null, UnprocessedRecords: UsageRecordList = null): BatchMeterUsageResult = {
+  def apply(): BatchMeterUsageResult = {
     val __obj = js.Dynamic.literal()
-    if (Results != null) __obj.updateDynamic("Results")(Results.asInstanceOf[js.Any])
-    if (UnprocessedRecords != null) __obj.updateDynamic("UnprocessedRecords")(UnprocessedRecords.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchMeterUsageResult]
   }
+  @scala.inline
+  implicit class BatchMeterUsageResultOps[Self <: BatchMeterUsageResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResults(value: UsageRecordResultList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Results")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Results")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnprocessedRecords(value: UsageRecordList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessedRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnprocessedRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnprocessedRecords")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

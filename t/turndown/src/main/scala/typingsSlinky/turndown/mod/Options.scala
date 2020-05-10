@@ -21,54 +21,192 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var blankReplacement: js.UndefOr[ReplacementFunction] = js.undefined
-  var br: js.UndefOr[String] = js.undefined
-  var bulletListMarker: js.UndefOr[`-_` | Plussign | Asterisk] = js.undefined
-  var codeBlockStyle: js.UndefOr[indented | fenced] = js.undefined
-  var defaultReplacement: js.UndefOr[ReplacementFunction] = js.undefined
-  var emDelimiter: js.UndefOr[_underscore | Asterisk] = js.undefined
-  var fence: js.UndefOr[GraveaccentGraveaccentGraveaccent | TildeTildeTilde] = js.undefined
-  var headingStyle: js.UndefOr[setext | atx] = js.undefined
-  var hr: js.UndefOr[String] = js.undefined
-  var keepReplacement: js.UndefOr[ReplacementFunction] = js.undefined
-  var linkReferenceStyle: js.UndefOr[full | collapsed | shortcut] = js.undefined
-  var linkStyle: js.UndefOr[inlined | referenced] = js.undefined
-  var strongDelimiter: js.UndefOr[__ | AsteriskAsterisk] = js.undefined
+  var blankReplacement: js.UndefOr[ReplacementFunction] = js.native
+  var br: js.UndefOr[String] = js.native
+  var bulletListMarker: js.UndefOr[`-_` | Plussign | Asterisk] = js.native
+  var codeBlockStyle: js.UndefOr[indented | fenced] = js.native
+  var defaultReplacement: js.UndefOr[ReplacementFunction] = js.native
+  var emDelimiter: js.UndefOr[_underscore | Asterisk] = js.native
+  var fence: js.UndefOr[GraveaccentGraveaccentGraveaccent | TildeTildeTilde] = js.native
+  var headingStyle: js.UndefOr[setext | atx] = js.native
+  var hr: js.UndefOr[String] = js.native
+  var keepReplacement: js.UndefOr[ReplacementFunction] = js.native
+  var linkReferenceStyle: js.UndefOr[full | collapsed | shortcut] = js.native
+  var linkStyle: js.UndefOr[inlined | referenced] = js.native
+  var strongDelimiter: js.UndefOr[__ | AsteriskAsterisk] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    blankReplacement: (/* content */ String, /* node */ Node, /* options */ Options) => String = null,
-    br: String = null,
-    bulletListMarker: `-_` | Plussign | Asterisk = null,
-    codeBlockStyle: indented | fenced = null,
-    defaultReplacement: (/* content */ String, /* node */ Node, /* options */ Options) => String = null,
-    emDelimiter: _underscore | Asterisk = null,
-    fence: GraveaccentGraveaccentGraveaccent | TildeTildeTilde = null,
-    headingStyle: setext | atx = null,
-    hr: String = null,
-    keepReplacement: (/* content */ String, /* node */ Node, /* options */ Options) => String = null,
-    linkReferenceStyle: full | collapsed | shortcut = null,
-    linkStyle: inlined | referenced = null,
-    strongDelimiter: __ | AsteriskAsterisk = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (blankReplacement != null) __obj.updateDynamic("blankReplacement")(js.Any.fromFunction3(blankReplacement))
-    if (br != null) __obj.updateDynamic("br")(br.asInstanceOf[js.Any])
-    if (bulletListMarker != null) __obj.updateDynamic("bulletListMarker")(bulletListMarker.asInstanceOf[js.Any])
-    if (codeBlockStyle != null) __obj.updateDynamic("codeBlockStyle")(codeBlockStyle.asInstanceOf[js.Any])
-    if (defaultReplacement != null) __obj.updateDynamic("defaultReplacement")(js.Any.fromFunction3(defaultReplacement))
-    if (emDelimiter != null) __obj.updateDynamic("emDelimiter")(emDelimiter.asInstanceOf[js.Any])
-    if (fence != null) __obj.updateDynamic("fence")(fence.asInstanceOf[js.Any])
-    if (headingStyle != null) __obj.updateDynamic("headingStyle")(headingStyle.asInstanceOf[js.Any])
-    if (hr != null) __obj.updateDynamic("hr")(hr.asInstanceOf[js.Any])
-    if (keepReplacement != null) __obj.updateDynamic("keepReplacement")(js.Any.fromFunction3(keepReplacement))
-    if (linkReferenceStyle != null) __obj.updateDynamic("linkReferenceStyle")(linkReferenceStyle.asInstanceOf[js.Any])
-    if (linkStyle != null) __obj.updateDynamic("linkStyle")(linkStyle.asInstanceOf[js.Any])
-    if (strongDelimiter != null) __obj.updateDynamic("strongDelimiter")(strongDelimiter.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlankReplacement(value: (/* content */ String, /* node */ Node, /* options */ Options) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blankReplacement")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutBlankReplacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blankReplacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBulletListMarker(value: `-_` | Plussign | Asterisk): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletListMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBulletListMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bulletListMarker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeBlockStyle(value: indented | fenced): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeBlockStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeBlockStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeBlockStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultReplacement(value: (/* content */ String, /* node */ Node, /* options */ Options) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultReplacement")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutDefaultReplacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultReplacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmDelimiter(value: _underscore | Asterisk): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emDelimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emDelimiter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFence(value: GraveaccentGraveaccentGraveaccent | TildeTildeTilde): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeadingStyle(value: setext | atx): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headingStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeadingStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headingStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepReplacement(value: (/* content */ String, /* node */ Node, /* options */ Options) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepReplacement")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutKeepReplacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepReplacement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkReferenceStyle(value: full | collapsed | shortcut): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkReferenceStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkReferenceStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkReferenceStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkStyle(value: inlined | referenced): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrongDelimiter(value: __ | AsteriskAsterisk): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strongDelimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrongDelimiter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strongDelimiter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

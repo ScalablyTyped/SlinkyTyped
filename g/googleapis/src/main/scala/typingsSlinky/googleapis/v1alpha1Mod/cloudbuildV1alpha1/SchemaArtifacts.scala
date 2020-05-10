@@ -32,11 +32,41 @@ trait SchemaArtifacts extends js.Object {
 
 object SchemaArtifacts {
   @scala.inline
-  def apply(images: js.Array[String] = null, objects: SchemaArtifactObjects = null): SchemaArtifacts = {
+  def apply(): SchemaArtifacts = {
     val __obj = js.Dynamic.literal()
-    if (images != null) __obj.updateDynamic("images")(images.asInstanceOf[js.Any])
-    if (objects != null) __obj.updateDynamic("objects")(objects.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaArtifacts]
   }
+  @scala.inline
+  implicit class SchemaArtifactsOps[Self <: SchemaArtifacts] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImages(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjects(value: SchemaArtifactObjects): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

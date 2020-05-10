@@ -60,8 +60,6 @@ class SceneRenderer protected () extends Disposable {
     segments: Double,
     color: Color
   ): Unit = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def drawRegion(region: TextureAtlasRegion, x: Double, y: Double, width: Double, height: Double): Unit = js.native
   def drawRegion(region: TextureAtlasRegion, x: Double, y: Double, width: Double, height: Double, color: Color): Unit = js.native
   def drawRegion(

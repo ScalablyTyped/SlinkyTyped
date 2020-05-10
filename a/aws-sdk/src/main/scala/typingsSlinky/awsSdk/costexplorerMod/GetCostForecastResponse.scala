@@ -18,11 +18,41 @@ trait GetCostForecastResponse extends js.Object {
 
 object GetCostForecastResponse {
   @scala.inline
-  def apply(ForecastResultsByTime: ForecastResultsByTime = null, Total: MetricValue = null): GetCostForecastResponse = {
+  def apply(): GetCostForecastResponse = {
     val __obj = js.Dynamic.literal()
-    if (ForecastResultsByTime != null) __obj.updateDynamic("ForecastResultsByTime")(ForecastResultsByTime.asInstanceOf[js.Any])
-    if (Total != null) __obj.updateDynamic("Total")(Total.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCostForecastResponse]
   }
+  @scala.inline
+  implicit class GetCostForecastResponseOps[Self <: GetCostForecastResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForecastResultsByTime(value: ForecastResultsByTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastResultsByTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForecastResultsByTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastResultsByTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: MetricValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

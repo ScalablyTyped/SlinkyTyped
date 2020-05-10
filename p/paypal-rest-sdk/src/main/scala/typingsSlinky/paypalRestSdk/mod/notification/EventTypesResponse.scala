@@ -5,24 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EventTypesResponse extends Response {
-  val event_types: js.Array[NotificationEventType]
+  val event_types: js.Array[NotificationEventType] = js.native
 }
 
 object EventTypesResponse {
   @scala.inline
-  def apply(
-    event_types: js.Array[NotificationEventType],
-    httpStatusCode: Double,
-    count: Int | Double = null,
-    create_time: String = null,
-    total_count: Int | Double = null
-  ): EventTypesResponse = {
+  def apply(event_types: js.Array[NotificationEventType], httpStatusCode: Double): EventTypesResponse = {
     val __obj = js.Dynamic.literal(event_types = event_types.asInstanceOf[js.Any], httpStatusCode = httpStatusCode.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (create_time != null) __obj.updateDynamic("create_time")(create_time.asInstanceOf[js.Any])
-    if (total_count != null) __obj.updateDynamic("total_count")(total_count.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventTypesResponse]
   }
+  @scala.inline
+  implicit class EventTypesResponseOps[Self <: EventTypesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvent_types(value: js.Array[NotificationEventType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event_types")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

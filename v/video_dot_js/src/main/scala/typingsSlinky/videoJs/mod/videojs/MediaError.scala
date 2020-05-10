@@ -17,48 +17,49 @@ import scala.scalajs.js.annotation._
   * @see [Encrypted MediaError Spec]{@link https://www.w3.org/TR/2013/WD-encrypted-media-20130510/#error-codes}
   *
   */
+@js.native
 trait MediaError extends js.Object {
   /**
     * W3C error code for media error aborted.
     * @default 1
     */
-  var MEDIA_ERR_ABORTED: `1`
+  var MEDIA_ERR_ABORTED: `1` = js.native
   /**
     * W3C error code for any custom error.
     * @default 0
     */
-  var MEDIA_ERR_CUSTOM: `0`
+  var MEDIA_ERR_CUSTOM: `0` = js.native
   /**
     * W3C error code for any decoding error.
     * @default 3
     */
-  var MEDIA_ERR_DECODE: `3`
+  var MEDIA_ERR_DECODE: `3` = js.native
   /**
     * W3C error code for any time that a source is encrypted.
     * @default 5
     */
-  var MEDIA_ERR_ENCRYPTED: `5`
+  var MEDIA_ERR_ENCRYPTED: `5` = js.native
   /**
     * W3C error code for any network error.
     * @default 2
     */
-  var MEDIA_ERR_NETWORK: `2`
+  var MEDIA_ERR_NETWORK: `2` = js.native
   /**
     * W3C error code for any time that a source is not supported.
     * @default 4
     */
-  var MEDIA_ERR_SRC_NOT_SUPPORTED: `4`
+  var MEDIA_ERR_SRC_NOT_SUPPORTED: `4` = js.native
   /**
     * The error code that refers two one of the defined `MediaError` types
     *
     */
-  var code: Double
+  var code: Double = js.native
   /**
     * An optional message that to show with the error. Message is not part of the HTML5
     * video spec but allows for more informative custom errors.
     *
     */
-  var message: String
+  var message: String = js.native
   /**
     * An optional status code that can be set by plugins to allow even more detail about
     * the error. For example a plugin might provide a specific HTTP status code and an
@@ -67,7 +68,7 @@ trait MediaError extends js.Object {
     * up on the `Player` error overlay.
     *
     */
-  var status: js.Array[_]
+  var status: js.Array[_] = js.native
 }
 
 object MediaError {
@@ -84,8 +85,69 @@ object MediaError {
     status: js.Array[_]
   ): MediaError = {
     val __obj = js.Dynamic.literal(MEDIA_ERR_ABORTED = MEDIA_ERR_ABORTED.asInstanceOf[js.Any], MEDIA_ERR_CUSTOM = MEDIA_ERR_CUSTOM.asInstanceOf[js.Any], MEDIA_ERR_DECODE = MEDIA_ERR_DECODE.asInstanceOf[js.Any], MEDIA_ERR_ENCRYPTED = MEDIA_ERR_ENCRYPTED.asInstanceOf[js.Any], MEDIA_ERR_NETWORK = MEDIA_ERR_NETWORK.asInstanceOf[js.Any], MEDIA_ERR_SRC_NOT_SUPPORTED = MEDIA_ERR_SRC_NOT_SUPPORTED.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MediaError]
   }
+  @scala.inline
+  implicit class MediaErrorOps[Self <: MediaError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMEDIA_ERR_ABORTED(value: `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MEDIA_ERR_ABORTED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMEDIA_ERR_CUSTOM(value: `0`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MEDIA_ERR_CUSTOM")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMEDIA_ERR_DECODE(value: `3`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MEDIA_ERR_DECODE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMEDIA_ERR_ENCRYPTED(value: `5`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MEDIA_ERR_ENCRYPTED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMEDIA_ERR_NETWORK(value: `2`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MEDIA_ERR_NETWORK")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMEDIA_ERR_SRC_NOT_SUPPORTED(value: `4`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MEDIA_ERR_SRC_NOT_SUPPORTED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait PropType extends js.Object
 
 object PropType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def expression: typingsSlinky.idyllCompiler.idyllCompilerStrings.expression = "expression".asInstanceOf[typingsSlinky.idyllCompiler.idyllCompilerStrings.expression]
   @scala.inline
-  def expression: typingsSlinky.idyllCompiler.idyllCompilerStrings.expression = this.cast("expression")
+  def value: typingsSlinky.idyllCompiler.idyllCompilerStrings.value = "value".asInstanceOf[typingsSlinky.idyllCompiler.idyllCompilerStrings.value]
   @scala.inline
-  def value: typingsSlinky.idyllCompiler.idyllCompilerStrings.value = this.cast("value")
-  @scala.inline
-  def variable: typingsSlinky.idyllCompiler.idyllCompilerStrings.variable = this.cast("variable")
+  def variable: typingsSlinky.idyllCompiler.idyllCompilerStrings.variable = "variable".asInstanceOf[typingsSlinky.idyllCompiler.idyllCompilerStrings.variable]
 }
 

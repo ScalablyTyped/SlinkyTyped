@@ -22,11 +22,41 @@ trait SchemaBackendServiceCloudFunctionBackend extends js.Object {
 
 object SchemaBackendServiceCloudFunctionBackend {
   @scala.inline
-  def apply(functionName: String = null, targetProject: String = null): SchemaBackendServiceCloudFunctionBackend = {
+  def apply(): SchemaBackendServiceCloudFunctionBackend = {
     val __obj = js.Dynamic.literal()
-    if (functionName != null) __obj.updateDynamic("functionName")(functionName.asInstanceOf[js.Any])
-    if (targetProject != null) __obj.updateDynamic("targetProject")(targetProject.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBackendServiceCloudFunctionBackend]
   }
+  @scala.inline
+  implicit class SchemaBackendServiceCloudFunctionBackendOps[Self <: SchemaBackendServiceCloudFunctionBackend] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFunctionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunctionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("functionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetProject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetProject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetProject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetProject")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

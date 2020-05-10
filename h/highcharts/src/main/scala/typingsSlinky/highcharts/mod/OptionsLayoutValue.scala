@@ -13,12 +13,10 @@ trait OptionsLayoutValue extends js.Object
 
 object OptionsLayoutValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.highcharts.highchartsStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.highcharts.highchartsStrings.horizontal = this.cast("horizontal")
+  def proximate: typingsSlinky.highcharts.highchartsStrings.proximate = "proximate".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.proximate]
   @scala.inline
-  def proximate: typingsSlinky.highcharts.highchartsStrings.proximate = this.cast("proximate")
-  @scala.inline
-  def vertical: typingsSlinky.highcharts.highchartsStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.highcharts.highchartsStrings.vertical = "vertical".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.vertical]
 }
 

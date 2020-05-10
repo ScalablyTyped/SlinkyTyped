@@ -13,12 +13,10 @@ trait GeometriesTypes extends js.Object
 
 object GeometriesTypes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def geojson: typingsSlinky.osrm.osrmStrings.geojson = "geojson".asInstanceOf[typingsSlinky.osrm.osrmStrings.geojson]
   @scala.inline
-  def geojson: typingsSlinky.osrm.osrmStrings.geojson = this.cast("geojson")
+  def polyline: typingsSlinky.osrm.osrmStrings.polyline = "polyline".asInstanceOf[typingsSlinky.osrm.osrmStrings.polyline]
   @scala.inline
-  def polyline: typingsSlinky.osrm.osrmStrings.polyline = this.cast("polyline")
-  @scala.inline
-  def polyline6: typingsSlinky.osrm.osrmStrings.polyline6 = this.cast("polyline6")
+  def polyline6: typingsSlinky.osrm.osrmStrings.polyline6 = "polyline6".asInstanceOf[typingsSlinky.osrm.osrmStrings.polyline6]
 }
 

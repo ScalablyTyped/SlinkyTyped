@@ -1,39 +1,41 @@
 package typingsSlinky.reactAlbus.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactAlbus.mod.WithWizard_
 import typingsSlinky.reactAlbus.mod.WizardContext
-import typingsSlinky.reactAlbus.mod.WizardContextRenderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object WithWizard
-  extends ExternalComponentWithAttributesWithRefType[tag.type, WithWizard_] {
-  @JSImport("react-albus", "WithWizard")
-  @js.native
-  object componentImport extends js.Object
+object WithWizard {
+  object AnonChildren {
+    @JSImport("react-albus", "WithWizard")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: typingsSlinky.reactAlbus.AnonChildren): Default[tag.type, WithWizard_] = new Default[tag.type, WithWizard_](js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: AnonChildren.type): Default[tag.type, WithWizard_] = new Default[tag.type, WithWizard_](js.Array(this.component, js.Dictionary.empty))()
+  }
   
-  override val component: String | js.Object = this.componentImport
-  def AnonRender(
-    render: /* wizard */ WizardContext => TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, WithWizard_] = {
-    val __obj = js.Dynamic.literal()
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  object AnonRender {
+    @JSImport("react-albus", "WithWizard")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, WithWizard_] {
+      @scala.inline
+      def render(value: /* wizard */ WizardContext => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
+    }
+    
+    def withProps(p: typingsSlinky.reactAlbus.AnonRender): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: AnonRender.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   }
-  def AnonChildren(_overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, WithWizard_] = {
-    val __obj = js.Dynamic.literal()
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
-  }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, WithWizard_] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactAlbus.mod.WithWizard_](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = WizardContextRenderProps
+  
 }
 

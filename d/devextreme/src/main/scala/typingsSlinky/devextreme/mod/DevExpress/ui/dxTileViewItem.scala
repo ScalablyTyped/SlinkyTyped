@@ -1,38 +1,54 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.mod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxTileViewItem extends CollectionWidgetItem {
   /** Specifies a multiplier for the baseItemHeight option value (for the purpose of obtaining the actual item height). */
-  var heightRatio: js.UndefOr[Double] = js.undefined
+  var heightRatio: js.UndefOr[Double] = js.native
   /** Specifies a multiplier for the baseItemWidth option value (for the purpose of obtaining the actual item width). */
-  var widthRatio: js.UndefOr[Double] = js.undefined
+  var widthRatio: js.UndefOr[Double] = js.native
 }
 
 object dxTileViewItem {
   @scala.inline
-  def apply(
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    heightRatio: Int | Double = null,
-    html: String = null,
-    template: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function0[String | Element | JQuery]) = null,
-    text: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    widthRatio: Int | Double = null
-  ): dxTileViewItem = {
+  def apply(): dxTileViewItem = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (heightRatio != null) __obj.updateDynamic("heightRatio")(heightRatio.asInstanceOf[js.Any])
-    if (html != null) __obj.updateDynamic("html")(html.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (widthRatio != null) __obj.updateDynamic("widthRatio")(widthRatio.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxTileViewItem]
   }
+  @scala.inline
+  implicit class dxTileViewItemOps[Self <: dxTileViewItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeightRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeightRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidthRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidthRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthRatio")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

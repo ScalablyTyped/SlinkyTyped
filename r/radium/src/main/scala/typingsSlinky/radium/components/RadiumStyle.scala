@@ -1,9 +1,7 @@
 package typingsSlinky.radium.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.radium.mod.Radium.StyleProps
 import typingsSlinky.radium.mod.Radium.StyleRules
 import typingsSlinky.radium.mod.default.Style
@@ -12,23 +10,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RadiumStyle
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Style] {
+object RadiumStyle {
   @JSImport("radium", "default.Style")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    rules: CSSProperties | StyleRules,
-    scopeSelector: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, Style] = {
-    val __obj = js.Dynamic.literal(rules = rules.asInstanceOf[js.Any])
-    if (scopeSelector != null) __obj.updateDynamic("scopeSelector")(scopeSelector.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Style] {
+    @scala.inline
+    def scopeSelector(value: String): this.type = set("scopeSelector", value.asInstanceOf[js.Any])
   }
-  type Props = StyleProps
+  
+  def withProps(p: StyleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(rules: CSSProperties | StyleRules): Builder = {
+    val __props = js.Dynamic.literal(rules = rules.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[StyleProps]))
+  }
 }
 

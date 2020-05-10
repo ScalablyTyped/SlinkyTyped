@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Comment")
 @js.native
 object Comment
-  extends Instantiable0[Comment]
-     with Instantiable1[/* data */ java.lang.String, Comment]
+  extends Instantiable0[org.scalajs.dom.raw.Comment]
+     with Instantiable1[/* data */ java.lang.String, org.scalajs.dom.raw.Comment]
 

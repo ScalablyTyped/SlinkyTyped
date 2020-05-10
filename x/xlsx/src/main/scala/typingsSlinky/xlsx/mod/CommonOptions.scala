@@ -4,60 +4,128 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CommonOptions extends js.Object {
   /**
     * If true, throw errors when features are not understood
     * @default false
     */
-  var WTF: js.UndefOr[Boolean] = js.undefined
+  var WTF: js.UndefOr[Boolean] = js.native
   /**
     * When reading a file with VBA macros, expose CFB blob to `vbaraw` field
     * When writing BIFF8/XLSB/XLSM, reseat `vbaraw` and export to file
     * @default false
     */
-  var bookVBA: js.UndefOr[Boolean] = js.undefined
+  var bookVBA: js.UndefOr[Boolean] = js.native
   /**
     * When reading a file, store dates as type d (default is n)
     * When writing XLSX/XLSM file, use native date (default uses date codes)
     * @default false
     */
-  var cellDates: js.UndefOr[Boolean] = js.undefined
+  var cellDates: js.UndefOr[Boolean] = js.native
   /**
     * When reading a file, save style/theme info to the .s field
     * When writing a file, export style/theme info
     * @default false
     */
-  var cellStyles: js.UndefOr[Boolean] = js.undefined
+  var cellStyles: js.UndefOr[Boolean] = js.native
   /**
     * If defined and file is encrypted, use password
     * @default ''
     */
-  var password: js.UndefOr[String] = js.undefined
+  var password: js.UndefOr[String] = js.native
   /**
     * Create cell objects for stub cells
     * @default false
     */
-  var sheetStubs: js.UndefOr[Boolean] = js.undefined
+  var sheetStubs: js.UndefOr[Boolean] = js.native
 }
 
 object CommonOptions {
   @scala.inline
-  def apply(
-    WTF: js.UndefOr[Boolean] = js.undefined,
-    bookVBA: js.UndefOr[Boolean] = js.undefined,
-    cellDates: js.UndefOr[Boolean] = js.undefined,
-    cellStyles: js.UndefOr[Boolean] = js.undefined,
-    password: String = null,
-    sheetStubs: js.UndefOr[Boolean] = js.undefined
-  ): CommonOptions = {
+  def apply(): CommonOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(WTF)) __obj.updateDynamic("WTF")(WTF.asInstanceOf[js.Any])
-    if (!js.isUndefined(bookVBA)) __obj.updateDynamic("bookVBA")(bookVBA.asInstanceOf[js.Any])
-    if (!js.isUndefined(cellDates)) __obj.updateDynamic("cellDates")(cellDates.asInstanceOf[js.Any])
-    if (!js.isUndefined(cellStyles)) __obj.updateDynamic("cellStyles")(cellStyles.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (!js.isUndefined(sheetStubs)) __obj.updateDynamic("sheetStubs")(sheetStubs.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonOptions]
   }
+  @scala.inline
+  implicit class CommonOptionsOps[Self <: CommonOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWTF(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WTF")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWTF: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WTF")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBookVBA(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bookVBA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBookVBA: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bookVBA")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellDates(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellDates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellDates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellDates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSheetStubs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetStubs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSheetStubs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetStubs")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

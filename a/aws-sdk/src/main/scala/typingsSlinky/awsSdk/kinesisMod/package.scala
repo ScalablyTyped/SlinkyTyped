@@ -18,7 +18,7 @@ package object kinesisMod {
     - java.lang.String
   */
   type ConsumerStatus = typingsSlinky.awsSdk.kinesisMod._ConsumerStatus | java.lang.String
-  type Data = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.kinesisMod.Blob | java.lang.String
+  type Data = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kinesisMod.Blob | java.lang.String
   type DescribeStreamInputLimit = scala.Double
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NONE

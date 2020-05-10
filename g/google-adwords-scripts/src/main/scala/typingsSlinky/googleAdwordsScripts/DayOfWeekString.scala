@@ -17,20 +17,18 @@ trait DayOfWeekString extends js.Object
 
 object DayOfWeekString {
   @scala.inline
-  def FRIDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.FRIDAY = this.cast("FRIDAY")
+  def FRIDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.FRIDAY = "FRIDAY".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.FRIDAY]
   @scala.inline
-  def MONDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.MONDAY = this.cast("MONDAY")
+  def MONDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.MONDAY = "MONDAY".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.MONDAY]
   @scala.inline
-  def SATURDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.SATURDAY = this.cast("SATURDAY")
+  def SATURDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.SATURDAY = "SATURDAY".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.SATURDAY]
   @scala.inline
-  def SUNDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.SUNDAY = this.cast("SUNDAY")
+  def SUNDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.SUNDAY = "SUNDAY".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.SUNDAY]
   @scala.inline
-  def THURSDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.THURSDAY = this.cast("THURSDAY")
+  def THURSDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.THURSDAY = "THURSDAY".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.THURSDAY]
   @scala.inline
-  def TUESDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TUESDAY = this.cast("TUESDAY")
+  def TUESDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TUESDAY = "TUESDAY".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.TUESDAY]
   @scala.inline
-  def WEDNESDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.WEDNESDAY = this.cast("WEDNESDAY")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WEDNESDAY: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.WEDNESDAY = "WEDNESDAY".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.WEDNESDAY]
 }
 

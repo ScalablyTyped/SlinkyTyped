@@ -14,5 +14,6 @@ trait HTMLDListElement extends HTMLElement {
 
 @JSGlobal("HTMLDListElement")
 @js.native
-object HTMLDListElement extends Instantiable0[HTMLDListElement]
+object HTMLDListElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLDListElement]
 

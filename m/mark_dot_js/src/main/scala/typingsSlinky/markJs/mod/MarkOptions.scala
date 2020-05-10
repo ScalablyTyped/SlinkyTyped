@@ -9,17 +9,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MarkOptions extends js.Object {
-  var accuracy: js.UndefOr[MarkAccuracy | MarkAccuracyObject] = js.undefined
-  var acrossElements: js.UndefOr[Boolean] = js.undefined
-  var caseSensitive: js.UndefOr[Boolean] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var diacritics: js.UndefOr[Boolean] = js.undefined
-  var done: js.UndefOr[js.Function1[/* marksTotal */ Double, Unit]] = js.undefined
-  var each: js.UndefOr[js.Function1[/* element */ Element, Unit]] = js.undefined
-  var element: js.UndefOr[String] = js.undefined
-  var exclude: js.UndefOr[js.Array[String]] = js.undefined
+  var accuracy: js.UndefOr[MarkAccuracy | MarkAccuracyObject] = js.native
+  var acrossElements: js.UndefOr[Boolean] = js.native
+  var caseSensitive: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.native
+  var debug: js.UndefOr[Boolean] = js.native
+  var diacritics: js.UndefOr[Boolean] = js.native
+  var done: js.UndefOr[js.Function1[/* marksTotal */ Double, Unit]] = js.native
+  var each: js.UndefOr[js.Function1[/* element */ Element, Unit]] = js.native
+  var element: js.UndefOr[String] = js.native
+  var exclude: js.UndefOr[js.Array[String]] = js.native
   var filter: js.UndefOr[
     js.Function4[
       /* textNode */ Element, 
@@ -28,64 +29,273 @@ trait MarkOptions extends js.Object {
       /* marksTotal */ Double, 
       Boolean
     ]
-  ] = js.undefined
-  var iframes: js.UndefOr[Boolean] = js.undefined
-  var iframesTimeout: js.UndefOr[Double] = js.undefined
-  var ignoreJoiners: js.UndefOr[Boolean] = js.undefined
-  var ignorePunctuation: js.UndefOr[js.Array[String]] = js.undefined
-  var log: js.UndefOr[js.Object] = js.undefined
-  var noMatch: js.UndefOr[js.Function1[/* term */ String, Unit]] = js.undefined
-  var separateWordSearch: js.UndefOr[Boolean] = js.undefined
-  var synonyms: js.UndefOr[StringDictionary[String]] = js.undefined
-  var wildcards: js.UndefOr[disabled | enabled | withSpaces] = js.undefined
+  ] = js.native
+  var iframes: js.UndefOr[Boolean] = js.native
+  var iframesTimeout: js.UndefOr[Double] = js.native
+  var ignoreJoiners: js.UndefOr[Boolean] = js.native
+  var ignorePunctuation: js.UndefOr[js.Array[String]] = js.native
+  var log: js.UndefOr[js.Object] = js.native
+  var noMatch: js.UndefOr[js.Function1[/* term */ String, Unit]] = js.native
+  var separateWordSearch: js.UndefOr[Boolean] = js.native
+  var synonyms: js.UndefOr[StringDictionary[String]] = js.native
+  var wildcards: js.UndefOr[disabled | enabled | withSpaces] = js.native
 }
 
 object MarkOptions {
   @scala.inline
-  def apply(
-    accuracy: MarkAccuracy | MarkAccuracyObject = null,
-    acrossElements: js.UndefOr[Boolean] = js.undefined,
-    caseSensitive: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    diacritics: js.UndefOr[Boolean] = js.undefined,
-    done: /* marksTotal */ Double => Unit = null,
-    each: /* element */ Element => Unit = null,
-    element: String = null,
-    exclude: js.Array[String] = null,
-    filter: (/* textNode */ Element, /* term */ String, /* marksSoFar */ Double, /* marksTotal */ Double) => Boolean = null,
-    iframes: js.UndefOr[Boolean] = js.undefined,
-    iframesTimeout: Int | Double = null,
-    ignoreJoiners: js.UndefOr[Boolean] = js.undefined,
-    ignorePunctuation: js.Array[String] = null,
-    log: js.Object = null,
-    noMatch: /* term */ String => Unit = null,
-    separateWordSearch: js.UndefOr[Boolean] = js.undefined,
-    synonyms: StringDictionary[String] = null,
-    wildcards: disabled | enabled | withSpaces = null
-  ): MarkOptions = {
+  def apply(): MarkOptions = {
     val __obj = js.Dynamic.literal()
-    if (accuracy != null) __obj.updateDynamic("accuracy")(accuracy.asInstanceOf[js.Any])
-    if (!js.isUndefined(acrossElements)) __obj.updateDynamic("acrossElements")(acrossElements.asInstanceOf[js.Any])
-    if (!js.isUndefined(caseSensitive)) __obj.updateDynamic("caseSensitive")(caseSensitive.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (!js.isUndefined(diacritics)) __obj.updateDynamic("diacritics")(diacritics.asInstanceOf[js.Any])
-    if (done != null) __obj.updateDynamic("done")(js.Any.fromFunction1(done))
-    if (each != null) __obj.updateDynamic("each")(js.Any.fromFunction1(each))
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction4(filter))
-    if (!js.isUndefined(iframes)) __obj.updateDynamic("iframes")(iframes.asInstanceOf[js.Any])
-    if (iframesTimeout != null) __obj.updateDynamic("iframesTimeout")(iframesTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreJoiners)) __obj.updateDynamic("ignoreJoiners")(ignoreJoiners.asInstanceOf[js.Any])
-    if (ignorePunctuation != null) __obj.updateDynamic("ignorePunctuation")(ignorePunctuation.asInstanceOf[js.Any])
-    if (log != null) __obj.updateDynamic("log")(log.asInstanceOf[js.Any])
-    if (noMatch != null) __obj.updateDynamic("noMatch")(js.Any.fromFunction1(noMatch))
-    if (!js.isUndefined(separateWordSearch)) __obj.updateDynamic("separateWordSearch")(separateWordSearch.asInstanceOf[js.Any])
-    if (synonyms != null) __obj.updateDynamic("synonyms")(synonyms.asInstanceOf[js.Any])
-    if (wildcards != null) __obj.updateDynamic("wildcards")(wildcards.asInstanceOf[js.Any])
     __obj.asInstanceOf[MarkOptions]
   }
+  @scala.inline
+  implicit class MarkOptionsOps[Self <: MarkOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccuracy(value: MarkAccuracy | MarkAccuracyObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccuracy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAcrossElements(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acrossElements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcrossElements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acrossElements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaseSensitive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaseSensitive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caseSensitive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiacritics(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diacritics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiacritics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diacritics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDone(value: /* marksTotal */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("done")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEach(value: /* element */ Element => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("each")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutEach: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("each")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclude(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(
+      value: (/* textNode */ Element, /* term */ String, /* marksSoFar */ Double, /* marksTotal */ Double) => Boolean
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIframes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIframes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIframesTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframesTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIframesTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframesTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreJoiners(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreJoiners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreJoiners: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreJoiners")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnorePunctuation(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePunctuation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnorePunctuation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePunctuation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLog(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLog: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoMatch(value: /* term */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noMatch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNoMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeparateWordSearch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separateWordSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeparateWordSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separateWordSearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynonyms(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synonyms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynonyms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synonyms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWildcards(value: disabled | enabled | withSpaces): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wildcards")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWildcards: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wildcards")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

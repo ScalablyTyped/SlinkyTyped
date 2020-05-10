@@ -4,23 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IModelLanguageChangedEvent extends js.Object {
   /**
     * New language
     */
-  val newLanguage: String
+  val newLanguage: String = js.native
   /**
     * Previous language
     */
-  val oldLanguage: String
+  val oldLanguage: String = js.native
 }
 
 object IModelLanguageChangedEvent {
   @scala.inline
   def apply(newLanguage: String, oldLanguage: String): IModelLanguageChangedEvent = {
     val __obj = js.Dynamic.literal(newLanguage = newLanguage.asInstanceOf[js.Any], oldLanguage = oldLanguage.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IModelLanguageChangedEvent]
   }
+  @scala.inline
+  implicit class IModelLanguageChangedEventOps[Self <: IModelLanguageChangedEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOldLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

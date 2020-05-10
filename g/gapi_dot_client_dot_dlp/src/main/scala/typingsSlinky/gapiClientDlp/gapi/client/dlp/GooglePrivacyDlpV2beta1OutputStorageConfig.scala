@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GooglePrivacyDlpV2beta1OutputStorageConfig extends js.Object {
   /**
     * The path to a Google Cloud Storage location to store output.
@@ -45,21 +46,48 @@ trait GooglePrivacyDlpV2beta1OutputStorageConfig extends js.Object {
     * - dataset_id
     * - table_id
     */
-  var storagePath: js.UndefOr[GooglePrivacyDlpV2beta1CloudStoragePath] = js.undefined
+  var storagePath: js.UndefOr[GooglePrivacyDlpV2beta1CloudStoragePath] = js.native
   /** Store findings in a new table in the dataset. */
-  var table: js.UndefOr[GooglePrivacyDlpV2beta1BigQueryTable] = js.undefined
+  var table: js.UndefOr[GooglePrivacyDlpV2beta1BigQueryTable] = js.native
 }
 
 object GooglePrivacyDlpV2beta1OutputStorageConfig {
   @scala.inline
-  def apply(
-    storagePath: GooglePrivacyDlpV2beta1CloudStoragePath = null,
-    table: GooglePrivacyDlpV2beta1BigQueryTable = null
-  ): GooglePrivacyDlpV2beta1OutputStorageConfig = {
+  def apply(): GooglePrivacyDlpV2beta1OutputStorageConfig = {
     val __obj = js.Dynamic.literal()
-    if (storagePath != null) __obj.updateDynamic("storagePath")(storagePath.asInstanceOf[js.Any])
-    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[GooglePrivacyDlpV2beta1OutputStorageConfig]
   }
+  @scala.inline
+  implicit class GooglePrivacyDlpV2beta1OutputStorageConfigOps[Self <: GooglePrivacyDlpV2beta1OutputStorageConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStoragePath(value: GooglePrivacyDlpV2beta1CloudStoragePath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storagePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoragePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storagePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTable(value: GooglePrivacyDlpV2beta1BigQueryTable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

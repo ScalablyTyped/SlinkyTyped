@@ -6,7 +6,7 @@ import slinky.web.SyntheticClipboardEvent
 import typingsSlinky.officeUiFabricReact.baseSelectedItemsListTypesMod.IBaseSelectedItemsList
 import typingsSlinky.officeUiFabricReact.baseSelectedItemsListTypesMod.IBaseSelectedItemsListProps
 import typingsSlinky.officeUiFabricReact.libSelectionMod.Selection
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/components/SelectedItemsList/BaseSelectedItemsList", "BaseSelectedItemsList")
 @js.native
 class BaseSelectedItemsList[T, P /* <: IBaseSelectedItemsListProps[T] */] protected ()
-  extends BaseComponent[P, IBaseSelectedItemsListState[T]]
+  extends Component[P, IBaseSelectedItemsListState[T], js.Any]
      with IBaseSelectedItemsList[T] {
   def this(basePickerProps: P) = this()
   var _canRemoveItem: js.Any = js.native
@@ -28,8 +28,6 @@ class BaseSelectedItemsList[T, P /* <: IBaseSelectedItemsListProps[T] */] protec
   def UNSAFE_componentWillReceiveProps_MBaseSelectedItemsList(newProps: P): Unit = js.native
   @JSName("UNSAFE_componentWillUpdate")
   def UNSAFE_componentWillUpdate_MBaseSelectedItemsList(newProps: P, newState: IBaseSelectedItemsListState[_]): Unit = js.native
-  /* CompleteClass */
-  override def addItems(items: js.Array[T]): Unit = js.native
   @JSName("componentDidMount")
   def componentDidMount_MBaseSelectedItemsList(): Unit = js.native
   /* protected */ def copyItems(items: js.Array[T]): Unit = js.native
@@ -49,7 +47,7 @@ class BaseSelectedItemsList[T, P /* <: IBaseSelectedItemsListProps[T] */] protec
   def unselectAll(): Unit = js.native
   /**
     * Controls what happens whenever there is an action that impacts the selected items.
-    * If selectedItems is provided as a property then this will act as a controlled component and it will not update it's own state.
+    * If selectedItems is provided, this will act as a controlled component and will not update its own state.
     */
   def updateItems(items: js.Array[T]): Unit = js.native
   def updateItems(items: js.Array[T], focusIndex: Double): Unit = js.native

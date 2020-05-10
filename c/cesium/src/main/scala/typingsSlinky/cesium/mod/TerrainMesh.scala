@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 class TerrainMesh protected () extends js.Object {
   def this(
     center: Cartesian3,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    indices: scala.scalajs.js.typedarray.Uint16Array,
+    vertices: js.typedarray.Float32Array,
+    indices: js.typedarray.Uint16Array,
     minimumHeight: Double,
     maximumHeight: Double,
     boundingSphere3D: BoundingSphere,
@@ -18,8 +18,8 @@ class TerrainMesh protected () extends js.Object {
   ) = this()
   def this(
     center: Cartesian3,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    indices: scala.scalajs.js.typedarray.Uint32Array,
+    vertices: js.typedarray.Float32Array,
+    indices: js.typedarray.Uint32Array,
     minimumHeight: Double,
     maximumHeight: Double,
     boundingSphere3D: BoundingSphere,
@@ -27,8 +27,8 @@ class TerrainMesh protected () extends js.Object {
   ) = this()
   def this(
     center: Cartesian3,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    indices: scala.scalajs.js.typedarray.Uint16Array,
+    vertices: js.typedarray.Float32Array,
+    indices: js.typedarray.Uint16Array,
     minimumHeight: Double,
     maximumHeight: Double,
     boundingSphere3D: BoundingSphere,
@@ -37,8 +37,8 @@ class TerrainMesh protected () extends js.Object {
   ) = this()
   def this(
     center: Cartesian3,
-    vertices: scala.scalajs.js.typedarray.Float32Array,
-    indices: scala.scalajs.js.typedarray.Uint32Array,
+    vertices: js.typedarray.Float32Array,
+    indices: js.typedarray.Uint32Array,
     minimumHeight: Double,
     maximumHeight: Double,
     boundingSphere3D: BoundingSphere,
@@ -47,11 +47,11 @@ class TerrainMesh protected () extends js.Object {
   ) = this()
   var boundingSphere3D: BoundingSphere = js.native
   var center: Cartesian3 = js.native
-  var indices: scala.scalajs.js.typedarray.Uint16Array | scala.scalajs.js.typedarray.Uint32Array = js.native
+  var indices: js.typedarray.Uint16Array | js.typedarray.Uint32Array = js.native
   var maximumHeight: Double = js.native
   var minimumHeight: Double = js.native
   var occludeePointInScaledSpace: Cartesian3 = js.native
   var stride: Double = js.native
-  var vertices: scala.scalajs.js.typedarray.Float32Array = js.native
+  var vertices: js.typedarray.Float32Array = js.native
 }
 

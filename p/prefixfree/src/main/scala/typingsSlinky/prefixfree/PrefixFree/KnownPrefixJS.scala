@@ -15,14 +15,12 @@ trait KnownPrefixJS extends js.Object
 
 object KnownPrefixJS {
   @scala.inline
-  def Moz: typingsSlinky.prefixfree.prefixfreeStrings.Moz = this.cast("Moz")
+  def Moz: typingsSlinky.prefixfree.prefixfreeStrings.Moz = "Moz".asInstanceOf[typingsSlinky.prefixfree.prefixfreeStrings.Moz]
   @scala.inline
-  def Ms: typingsSlinky.prefixfree.prefixfreeStrings.Ms = this.cast("Ms")
+  def Ms: typingsSlinky.prefixfree.prefixfreeStrings.Ms = "Ms".asInstanceOf[typingsSlinky.prefixfree.prefixfreeStrings.Ms]
   @scala.inline
-  def O: typingsSlinky.prefixfree.prefixfreeStrings.O = this.cast("O")
+  def O: typingsSlinky.prefixfree.prefixfreeStrings.O = "O".asInstanceOf[typingsSlinky.prefixfree.prefixfreeStrings.O]
   @scala.inline
-  def Webkit: typingsSlinky.prefixfree.prefixfreeStrings.Webkit = this.cast("Webkit")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Webkit: typingsSlinky.prefixfree.prefixfreeStrings.Webkit = "Webkit".asInstanceOf[typingsSlinky.prefixfree.prefixfreeStrings.Webkit]
 }
 

@@ -20,5 +20,6 @@ trait HTMLMapElement extends HTMLElement {
 
 @JSGlobal("HTMLMapElement")
 @js.native
-object HTMLMapElement extends Instantiable0[HTMLMapElement]
+object HTMLMapElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLMapElement]
 

@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SecureOptions extends js.Object {
   /**
     * The minimum and maximum acceptable versions of TLS.
@@ -13,15 +14,34 @@ trait SecureOptions extends js.Object {
     * tls1.3 should be supported from Chrome 67.
     * @see[TLS Info and support table]{@link https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.3}
     */
-  var tlsVersion: js.UndefOr[AnonMax] = js.undefined
+  var tlsVersion: js.UndefOr[AnonMax] = js.native
 }
 
 object SecureOptions {
   @scala.inline
-  def apply(tlsVersion: AnonMax = null): SecureOptions = {
+  def apply(): SecureOptions = {
     val __obj = js.Dynamic.literal()
-    if (tlsVersion != null) __obj.updateDynamic("tlsVersion")(tlsVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecureOptions]
   }
+  @scala.inline
+  implicit class SecureOptionsOps[Self <: SecureOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTlsVersion(value: AnonMax): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTlsVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

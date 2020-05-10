@@ -9,6 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JdenticonConfig extends js.Object {
   /**
     * Specifies the background color to be rendered behind the icon.
@@ -19,20 +20,20 @@ trait JdenticonConfig extends js.Object {
     *  * `"#rrggbb"`
     *  * `"#rrggbbaa"`
     */
-  var backColor: js.UndefOr[String] = js.undefined
+  var backColor: js.UndefOr[String] = js.native
   /**
     * Limits the possible hues in generated icons. The hues are specified as an array of hues in degrees. If the
     * option is omitted or an empty array is specified, all hues are allowed.
     */
-  var hues: js.UndefOr[js.Array[Double]] = js.undefined
+  var hues: js.UndefOr[js.Array[Double]] = js.native
   /**
     * Specifies the lightness of the generated icon.
     */
-  var lightness: js.UndefOr[AnonColor] = js.undefined
+  var lightness: js.UndefOr[AnonColor] = js.native
   /**
     * Specifies the padding surrounding the icon in percents in the range [0.0, 0.5).
     */
-  var padding: js.UndefOr[Double] = js.undefined
+  var padding: js.UndefOr[Double] = js.native
   /**
     * Specifies when icons will be rendered.
     * 
@@ -49,34 +50,101 @@ trait JdenticonConfig extends js.Object {
     * @remarks
     * This option has no effect in Node environments.
     */
-  var replaceMode: js.UndefOr[never | once | observe] = js.undefined
+  var replaceMode: js.UndefOr[never | once | observe] = js.native
   /**
     * Specifies the saturation of the generated icon.
     * 
     * For backward compatibility a single number can be specified instead of a `{ color, grayscale }`
     * object. This single number refers to the saturation of colored shapes.
     */
-  var saturation: js.UndefOr[AnonGrayscale | Double] = js.undefined
+  var saturation: js.UndefOr[AnonGrayscale | Double] = js.native
 }
 
 object JdenticonConfig {
   @scala.inline
-  def apply(
-    backColor: String = null,
-    hues: js.Array[Double] = null,
-    lightness: AnonColor = null,
-    padding: Int | Double = null,
-    replaceMode: never | once | observe = null,
-    saturation: AnonGrayscale | Double = null
-  ): JdenticonConfig = {
+  def apply(): JdenticonConfig = {
     val __obj = js.Dynamic.literal()
-    if (backColor != null) __obj.updateDynamic("backColor")(backColor.asInstanceOf[js.Any])
-    if (hues != null) __obj.updateDynamic("hues")(hues.asInstanceOf[js.Any])
-    if (lightness != null) __obj.updateDynamic("lightness")(lightness.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (replaceMode != null) __obj.updateDynamic("replaceMode")(replaceMode.asInstanceOf[js.Any])
-    if (saturation != null) __obj.updateDynamic("saturation")(saturation.asInstanceOf[js.Any])
     __obj.asInstanceOf[JdenticonConfig]
   }
+  @scala.inline
+  implicit class JdenticonConfigOps[Self <: JdenticonConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHues(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLightness(value: AnonColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lightness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLightness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lightness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceMode(value: never | once | observe): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplaceMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSaturation(value: AnonGrayscale | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saturation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSaturation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saturation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

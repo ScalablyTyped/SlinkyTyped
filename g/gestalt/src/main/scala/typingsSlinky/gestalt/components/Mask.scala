@@ -1,38 +1,44 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.gestalt.gestaltNumbers.`0`
+import typingsSlinky.gestalt.gestaltNumbers.`1`
+import typingsSlinky.gestalt.gestaltNumbers.`2`
+import typingsSlinky.gestalt.gestaltNumbers.`3`
+import typingsSlinky.gestalt.gestaltNumbers.`4`
+import typingsSlinky.gestalt.gestaltNumbers.`5`
+import typingsSlinky.gestalt.gestaltNumbers.`6`
+import typingsSlinky.gestalt.gestaltNumbers.`7`
+import typingsSlinky.gestalt.gestaltNumbers.`8`
 import typingsSlinky.gestalt.gestaltStrings.circle
-import typingsSlinky.gestalt.gestaltStrings.rounded
-import typingsSlinky.gestalt.gestaltStrings.square
 import typingsSlinky.gestalt.mod.MaskProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Mask
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Mask] {
+object Mask {
   @JSImport("gestalt", "Mask")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: height, width */
-  def apply(
-    shape: circle | rounded | square = null,
-    wash: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Mask] = {
-    val __obj = js.Dynamic.literal()
-    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
-    if (!js.isUndefined(wash)) __obj.updateDynamic("wash")(wash.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Mask] {
+    @scala.inline
+    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rounding(value: circle | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8`): this.type = set("rounding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wash(value: Boolean): this.type = set("wash", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def willChangeTransform(value: Boolean): this.type = set("willChangeTransform", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Mask] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.mod.Mask](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MaskProps
+  
+  def withProps(p: MaskProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Mask.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

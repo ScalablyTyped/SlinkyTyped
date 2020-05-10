@@ -1,36 +1,35 @@
 package typingsSlinky.reactNativeMaterialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeMaterialUi.AnonText
 import typingsSlinky.reactNativeMaterialUi.mod.SubheaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Subheader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Subheader] {
+object Subheader {
   @JSImport("react-native-material-ui", "Subheader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    text: String,
-    inset: js.UndefOr[Boolean] = js.undefined,
-    lines: Int | Double = null,
-    style: AnonText = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Subheader] = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    if (!js.isUndefined(inset)) __obj.updateDynamic("inset")(inset.asInstanceOf[js.Any])
-    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Subheader] {
+    @scala.inline
+    def inset(value: Boolean): this.type = set("inset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lines(value: Double): this.type = set("lines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: AnonText): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = SubheaderProps
+  
+  def withProps(p: SubheaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(text: String): Builder = {
+    val __props = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SubheaderProps]))
+  }
 }
 

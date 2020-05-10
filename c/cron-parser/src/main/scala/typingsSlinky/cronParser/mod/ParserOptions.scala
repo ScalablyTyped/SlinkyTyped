@@ -4,33 +4,119 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParserOptions extends js.Object {
-  var currentDate: js.UndefOr[String | Double | js.Date] = js.undefined
-  var endDate: js.UndefOr[String | Double | js.Date] = js.undefined
-  var iterator: js.UndefOr[Boolean] = js.undefined
-  var startDate: js.UndefOr[String | Double | js.Date] = js.undefined
-  var tz: js.UndefOr[String] = js.undefined
-  var utc: js.UndefOr[Boolean] = js.undefined
+  var currentDate: js.UndefOr[String | Double | js.Date] = js.native
+  var endDate: js.UndefOr[String | Double | js.Date] = js.native
+  var iterator: js.UndefOr[Boolean] = js.native
+  var startDate: js.UndefOr[String | Double | js.Date] = js.native
+  var tz: js.UndefOr[String] = js.native
+  var utc: js.UndefOr[Boolean] = js.native
 }
 
 object ParserOptions {
   @scala.inline
-  def apply(
-    currentDate: String | Double | js.Date = null,
-    endDate: String | Double | js.Date = null,
-    iterator: js.UndefOr[Boolean] = js.undefined,
-    startDate: String | Double | js.Date = null,
-    tz: String = null,
-    utc: js.UndefOr[Boolean] = js.undefined
-  ): ParserOptions = {
+  def apply(): ParserOptions = {
     val __obj = js.Dynamic.literal()
-    if (currentDate != null) __obj.updateDynamic("currentDate")(currentDate.asInstanceOf[js.Any])
-    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
-    if (!js.isUndefined(iterator)) __obj.updateDynamic("iterator")(iterator.asInstanceOf[js.Any])
-    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
-    if (tz != null) __obj.updateDynamic("tz")(tz.asInstanceOf[js.Any])
-    if (!js.isUndefined(utc)) __obj.updateDynamic("utc")(utc.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParserOptions]
   }
+  @scala.inline
+  implicit class ParserOptionsOps[Self <: ParserOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentDateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentDate(value: String | Double | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndDateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndDate(value: String | Double | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIterator(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIterator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartDateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartDate(value: String | Double | js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTz(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tz")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTz: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tz")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utc")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

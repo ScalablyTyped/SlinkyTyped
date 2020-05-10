@@ -2,18 +2,20 @@ package typingsSlinky.officeUiFabricReact.suggestionsControlMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButton
 import typingsSlinky.officeUiFabricReact.suggestionsCoreMod.SuggestionsCore
 import typingsSlinky.officeUiFabricReact.suggestionsDottypesMod.ISuggestionsControlProps
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react/lib/components/FloatingPicker/Suggestions/SuggestionsControl", "SuggestionsControl")
 @js.native
-class SuggestionsControl[T] protected () extends BaseComponent[ISuggestionsControlProps[T], ISuggestionsControlState[T]] {
+class SuggestionsControl[T] protected ()
+  extends Component[ISuggestionsControlProps[T], ISuggestionsControlState[T], js.Any] {
   def this(suggestionsProps: ISuggestionsControlProps[T]) = this()
   var SuggestionsOfProperType: js.Any = js.native
   var _forceResolveButton: IButton = js.native
@@ -35,9 +37,9 @@ class SuggestionsControl[T] protected () extends BaseComponent[ISuggestionsContr
     * @param currentIndex - The current index. If none is provided, the default is the items length of specified type
     */
   var _selectPreviousItemOfItemType: js.Any = js.native
-  var _selectedElement: HTMLDivElement = js.native
-  var _suggestions: SuggestionsCore[T] = js.native
-  val currentSuggestion: ISuggestionModel[T] = js.native
+  var _selectedElement: ReactRef[HTMLDivElement] = js.native
+  var _suggestions: ReactRef[SuggestionsCore[T]] = js.native
+  val currentSuggestion: js.UndefOr[ISuggestionModel[T]] = js.native
   val currentSuggestionIndex: Double = js.native
   val selectedElement: js.UndefOr[HTMLDivElement] = js.native
   @JSName("UNSAFE_componentWillReceiveProps")

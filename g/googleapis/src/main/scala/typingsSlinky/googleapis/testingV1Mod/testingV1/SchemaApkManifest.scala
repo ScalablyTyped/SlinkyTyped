@@ -32,20 +32,77 @@ trait SchemaApkManifest extends js.Object {
 
 object SchemaApkManifest {
   @scala.inline
-  def apply(
-    applicationLabel: String = null,
-    intentFilters: js.Array[SchemaIntentFilter] = null,
-    maxSdkVersion: Int | Double = null,
-    minSdkVersion: Int | Double = null,
-    packageName: String = null
-  ): SchemaApkManifest = {
+  def apply(): SchemaApkManifest = {
     val __obj = js.Dynamic.literal()
-    if (applicationLabel != null) __obj.updateDynamic("applicationLabel")(applicationLabel.asInstanceOf[js.Any])
-    if (intentFilters != null) __obj.updateDynamic("intentFilters")(intentFilters.asInstanceOf[js.Any])
-    if (maxSdkVersion != null) __obj.updateDynamic("maxSdkVersion")(maxSdkVersion.asInstanceOf[js.Any])
-    if (minSdkVersion != null) __obj.updateDynamic("minSdkVersion")(minSdkVersion.asInstanceOf[js.Any])
-    if (packageName != null) __obj.updateDynamic("packageName")(packageName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaApkManifest]
   }
+  @scala.inline
+  implicit class SchemaApkManifestOps[Self <: SchemaApkManifest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntentFilters(value: js.Array[SchemaIntentFilter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intentFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntentFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intentFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSdkVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSdkVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSdkVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSdkVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSdkVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSdkVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSdkVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSdkVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPackageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPackageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

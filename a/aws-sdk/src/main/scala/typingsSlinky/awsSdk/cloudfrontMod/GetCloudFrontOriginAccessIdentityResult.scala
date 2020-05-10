@@ -18,11 +18,41 @@ trait GetCloudFrontOriginAccessIdentityResult extends js.Object {
 
 object GetCloudFrontOriginAccessIdentityResult {
   @scala.inline
-  def apply(CloudFrontOriginAccessIdentity: CloudFrontOriginAccessIdentity = null, ETag: String = null): GetCloudFrontOriginAccessIdentityResult = {
+  def apply(): GetCloudFrontOriginAccessIdentityResult = {
     val __obj = js.Dynamic.literal()
-    if (CloudFrontOriginAccessIdentity != null) __obj.updateDynamic("CloudFrontOriginAccessIdentity")(CloudFrontOriginAccessIdentity.asInstanceOf[js.Any])
-    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCloudFrontOriginAccessIdentityResult]
   }
+  @scala.inline
+  implicit class GetCloudFrontOriginAccessIdentityResultOps[Self <: GetCloudFrontOriginAccessIdentityResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudFrontOriginAccessIdentity(value: CloudFrontOriginAccessIdentity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontOriginAccessIdentity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudFrontOriginAccessIdentity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontOriginAccessIdentity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withETag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutETag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

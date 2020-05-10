@@ -6,17 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IBUDDY_LIST_INIT extends js.Object {
-  var buddyList: js.Array[SFSBuddy]
-  var myVariables: js.Array[SFSBuddyVariable]
+  var buddyList: js.Array[SFSBuddy] = js.native
+  var myVariables: js.Array[SFSBuddyVariable] = js.native
 }
 
 object IBUDDY_LIST_INIT {
   @scala.inline
   def apply(buddyList: js.Array[SFSBuddy], myVariables: js.Array[SFSBuddyVariable]): IBUDDY_LIST_INIT = {
     val __obj = js.Dynamic.literal(buddyList = buddyList.asInstanceOf[js.Any], myVariables = myVariables.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IBUDDY_LIST_INIT]
   }
+  @scala.inline
+  implicit class IBUDDY_LIST_INITOps[Self <: IBUDDY_LIST_INIT] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuddyList(value: js.Array[SFSBuddy]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buddyList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMyVariables(value: js.Array[SFSBuddyVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("myVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

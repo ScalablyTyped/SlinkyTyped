@@ -1,0 +1,78 @@
+package typingsSlinky.reactBootstrapTable2Paginator.components
+
+import slinky.core.facade.ReactElement
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactBootstrapTableNext.AnonText
+import typingsSlinky.reactBootstrapTableNext.mod.PageButtonRendererOptions
+import typingsSlinky.reactBootstrapTableNext.mod.PageListRendererOptions
+import typingsSlinky.reactBootstrapTableNext.mod.SizePerPageOptionRendererOptions
+import typingsSlinky.reactBootstrapTableNext.mod.SizePerPageRendererOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@scala.inline
+class SharedBuilder_PaginationChildProps_1899556761 (val args: js.Array[js.Any])
+  extends AnyVal
+     with StBuildingComponent[tag.type, scala.Nothing] {
+  @scala.inline
+  def alwaysShowAllBtns(value: Boolean): this.type = set("alwaysShowAllBtns", value.asInstanceOf[js.Any])
+  @scala.inline
+  def bootstrap4(value: Boolean): this.type = set("bootstrap4", value.asInstanceOf[js.Any])
+  @scala.inline
+  def custom(value: Boolean): this.type = set("custom", value.asInstanceOf[js.Any])
+  @scala.inline
+  def firstPageText(value: String): this.type = set("firstPageText", value.asInstanceOf[js.Any])
+  @scala.inline
+  def firstPageTitle(value: String): this.type = set("firstPageTitle", value.asInstanceOf[js.Any])
+  @scala.inline
+  def hidePageListOnlyOnePage(value: Boolean): this.type = set("hidePageListOnlyOnePage", value.asInstanceOf[js.Any])
+  @scala.inline
+  def hideSizePerPage(value: Boolean): this.type = set("hideSizePerPage", value.asInstanceOf[js.Any])
+  @scala.inline
+  def lastPageText(value: String): this.type = set("lastPageText", value.asInstanceOf[js.Any])
+  @scala.inline
+  def lastPageTitle(value: String): this.type = set("lastPageTitle", value.asInstanceOf[js.Any])
+  @scala.inline
+  def nextPageText(value: String): this.type = set("nextPageText", value.asInstanceOf[js.Any])
+  @scala.inline
+  def nextPageTitle(value: String): this.type = set("nextPageTitle", value.asInstanceOf[js.Any])
+  @scala.inline
+  def onPageChange(value: (/* page */ Double, /* sizePerPage */ Double) => Unit): this.type = set("onPageChange", js.Any.fromFunction2(value))
+  @scala.inline
+  def onSizePerPageChange(value: (/* page */ Double, /* sizePerPage */ Double) => Unit): this.type = set("onSizePerPageChange", js.Any.fromFunction2(value))
+  @scala.inline
+  def page(value: Double): this.type = set("page", value.asInstanceOf[js.Any])
+  @scala.inline
+  def pageButtonRenderer(value: /* options */ PageButtonRendererOptions => ReactElement): this.type = set("pageButtonRenderer", js.Any.fromFunction1(value))
+  @scala.inline
+  def pageListRenderer(value: /* options */ PageListRendererOptions => ReactElement): this.type = set("pageListRenderer", js.Any.fromFunction1(value))
+  @scala.inline
+  def pageStartIndex(value: Double): this.type = set("pageStartIndex", value.asInstanceOf[js.Any])
+  @scala.inline
+  def paginationSize(value: Double): this.type = set("paginationSize", value.asInstanceOf[js.Any])
+  @scala.inline
+  def paginationTotalRenderer(value: (/* from */ Double, /* to */ Double, /* size */ Double) => ReactElement): this.type = set("paginationTotalRenderer", js.Any.fromFunction3(value))
+  @scala.inline
+  def prePageText(value: String): this.type = set("prePageText", value.asInstanceOf[js.Any])
+  @scala.inline
+  def prePageTitle(value: String): this.type = set("prePageTitle", value.asInstanceOf[js.Any])
+  @scala.inline
+  def showTotal(value: Boolean): this.type = set("showTotal", value.asInstanceOf[js.Any])
+  @scala.inline
+  def sizePerPage(value: Double): this.type = set("sizePerPage", value.asInstanceOf[js.Any])
+  @scala.inline
+  def sizePerPageList(value: js.Array[AnonText | Double]): this.type = set("sizePerPageList", value.asInstanceOf[js.Any])
+  @scala.inline
+  def sizePerPageOptionRenderer(value: /* options */ SizePerPageOptionRendererOptions => ReactElement): this.type = set("sizePerPageOptionRenderer", js.Any.fromFunction1(value))
+  @scala.inline
+  def sizePerPageRenderer(value: /* options */ SizePerPageRendererOptions => ReactElement): this.type = set("sizePerPageRenderer", js.Any.fromFunction1(value))
+  @scala.inline
+  def tableId(value: String): this.type = set("tableId", value.asInstanceOf[js.Any])
+  @scala.inline
+  def totalSize(value: Double): this.type = set("totalSize", value.asInstanceOf[js.Any])
+  @scala.inline
+  def withFirstAndLast(value: Boolean): this.type = set("withFirstAndLast", value.asInstanceOf[js.Any])
+}
+

@@ -6,7 +6,6 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.antd.layoutLayoutMod.BasicProps
 import typingsSlinky.antd.siderMod.SiderProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.GetDerivedStateFromError
 import typingsSlinky.react.mod.GetDerivedStateFromProps
@@ -20,19 +19,15 @@ import scala.scalajs.js.annotation._
 object layoutMod extends js.Object {
   @js.native
   class default protected ()
-    extends Component[BasicProps, ComponentState, js.Any] {
+    extends Component[BasicProps, js.Object, js.Any] {
     def this(props: BasicProps) = this()
     def this(props: BasicProps, context: js.Any) = this()
   }
   
   @js.native
   object default
-    extends Instantiable1[/* props */ BasicProps, Component[BasicProps, ComponentState, js.Any]]
-       with Instantiable2[
-          /* props */ BasicProps, 
-          /* context */ js.Any, 
-          Component[BasicProps, ComponentState, js.Any]
-        ] {
+    extends Instantiable1[/* props */ BasicProps, ReactComponentClass[BasicProps]]
+       with Instantiable2[/* props */ BasicProps, /* context */ js.Any, ReactComponentClass[BasicProps]] {
     var Content: ReactComponentClass[BasicProps] = js.native
     var Footer: ReactComponentClass[BasicProps] = js.native
     var Header: ReactComponentClass[BasicProps] = js.native

@@ -13,12 +13,10 @@ trait OperationMode extends js.Object
 
 object OperationMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def concatenate: typingsSlinky.gm.gmStrings.concatenate = "concatenate".asInstanceOf[typingsSlinky.gm.gmStrings.concatenate]
   @scala.inline
-  def concatenate: typingsSlinky.gm.gmStrings.concatenate = this.cast("concatenate")
+  def frame: typingsSlinky.gm.gmStrings.frame = "frame".asInstanceOf[typingsSlinky.gm.gmStrings.frame]
   @scala.inline
-  def frame: typingsSlinky.gm.gmStrings.frame = this.cast("frame")
-  @scala.inline
-  def unframe: typingsSlinky.gm.gmStrings.unframe = this.cast("unframe")
+  def unframe: typingsSlinky.gm.gmStrings.unframe = "unframe".asInstanceOf[typingsSlinky.gm.gmStrings.unframe]
 }
 

@@ -13,35 +13,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CommonRadarProps[Datum] extends js.Object {
-  var blendMode: js.UndefOr[CssMixBlendMode] = js.undefined
-  var borderColor: js.UndefOr[InheritedColorProp[_]] = js.undefined
-  var borderWidth: js.UndefOr[Double] = js.undefined
-  var colors: js.UndefOr[OrdinalColorsInstruction[_]] = js.undefined
-  var curve: js.UndefOr[String] = js.undefined
-  var data: js.Array[js.Object]
-  var dotBorderColor: js.UndefOr[InheritedColorProp[_]] = js.undefined
-  var dotBorderWidth: js.UndefOr[Double] = js.undefined
-  var dotColor: js.UndefOr[InheritedColorProp[_]] = js.undefined
-  var dotLabel: js.UndefOr[String | CustomDotLabel] = js.undefined
-  var dotLabelFormat: js.UndefOr[String | CustomFormatter] = js.undefined
-  var dotLabelYOffset: js.UndefOr[Double] = js.undefined
-  var dotSize: js.UndefOr[Double] = js.undefined
-  var dotSymbol: js.UndefOr[CustomDotSymbol] = js.undefined
-  var enableDotLabel: js.UndefOr[Boolean] = js.undefined
-  var enableDots: js.UndefOr[Boolean] = js.undefined
-  var fillOpacity: js.UndefOr[Double] = js.undefined
-  var gridLabel: js.UndefOr[GridLabelCustomFunction] = js.undefined
-  var gridLabelOffset: js.UndefOr[Double] = js.undefined
-  var gridLevels: js.UndefOr[Double] = js.undefined
-  var gridShape: js.UndefOr[circular | linear] = js.undefined
-  var indexBy: Double | String | IndexByCustomFunctiono[Datum]
-  var isInteractive: js.UndefOr[Boolean] = js.undefined
-  var keys: js.Array[String | Double]
-  var legends: js.Array[LegendProps]
-  var margin: js.UndefOr[Box] = js.undefined
-  var maxValue: js.UndefOr[auto | Double] = js.undefined
-  var tooltipFormat: js.UndefOr[String | CustomFormatter] = js.undefined
+  var blendMode: js.UndefOr[CssMixBlendMode] = js.native
+  var borderColor: js.UndefOr[InheritedColorProp[_]] = js.native
+  var borderWidth: js.UndefOr[Double] = js.native
+  var colors: js.UndefOr[OrdinalColorsInstruction[_]] = js.native
+  var curve: js.UndefOr[String] = js.native
+  var data: js.Array[js.Object] = js.native
+  var dotBorderColor: js.UndefOr[InheritedColorProp[_]] = js.native
+  var dotBorderWidth: js.UndefOr[Double] = js.native
+  var dotColor: js.UndefOr[InheritedColorProp[_]] = js.native
+  var dotLabel: js.UndefOr[String | CustomDotLabel] = js.native
+  var dotLabelFormat: js.UndefOr[String | CustomFormatter] = js.native
+  var dotLabelYOffset: js.UndefOr[Double] = js.native
+  var dotSize: js.UndefOr[Double] = js.native
+  var dotSymbol: js.UndefOr[CustomDotSymbol] = js.native
+  var enableDotLabel: js.UndefOr[Boolean] = js.native
+  var enableDots: js.UndefOr[Boolean] = js.native
+  var fillOpacity: js.UndefOr[Double] = js.native
+  var gridLabel: js.UndefOr[GridLabelCustomFunction] = js.native
+  var gridLabelOffset: js.UndefOr[Double] = js.native
+  var gridLevels: js.UndefOr[Double] = js.native
+  var gridShape: js.UndefOr[circular | linear] = js.native
+  var indexBy: Double | String | IndexByCustomFunctiono[Datum] = js.native
+  var isInteractive: js.UndefOr[Boolean] = js.native
+  var keys: js.Array[String | Double] = js.native
+  var legends: js.Array[LegendProps] = js.native
+  var margin: js.UndefOr[Box] = js.native
+  var maxValue: js.UndefOr[auto | Double] = js.native
+  var tooltipFormat: js.UndefOr[String | CustomFormatter] = js.native
 }
 
 object CommonRadarProps {
@@ -50,58 +51,378 @@ object CommonRadarProps {
     data: js.Array[js.Object],
     indexBy: Double | String | IndexByCustomFunctiono[Datum],
     keys: js.Array[String | Double],
-    legends: js.Array[LegendProps],
-    blendMode: CssMixBlendMode = null,
-    borderColor: InheritedColorProp[_] = null,
-    borderWidth: Int | Double = null,
-    colors: OrdinalColorsInstruction[_] = null,
-    curve: String = null,
-    dotBorderColor: InheritedColorProp[_] = null,
-    dotBorderWidth: Int | Double = null,
-    dotColor: InheritedColorProp[_] = null,
-    dotLabel: String | CustomDotLabel = null,
-    dotLabelFormat: String | CustomFormatter = null,
-    dotLabelYOffset: Int | Double = null,
-    dotSize: Int | Double = null,
-    dotSymbol: /* repeated */ js.Any => TagMod[Any] = null,
-    enableDotLabel: js.UndefOr[Boolean] = js.undefined,
-    enableDots: js.UndefOr[Boolean] = js.undefined,
-    fillOpacity: Int | Double = null,
-    gridLabel: /* repeated */ js.Any => String = null,
-    gridLabelOffset: Int | Double = null,
-    gridLevels: Int | Double = null,
-    gridShape: circular | linear = null,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    margin: Box = null,
-    maxValue: auto | Double = null,
-    tooltipFormat: String | CustomFormatter = null
+    legends: js.Array[LegendProps]
   ): CommonRadarProps[Datum] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], indexBy = indexBy.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any], legends = legends.asInstanceOf[js.Any])
-    if (blendMode != null) __obj.updateDynamic("blendMode")(blendMode.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (curve != null) __obj.updateDynamic("curve")(curve.asInstanceOf[js.Any])
-    if (dotBorderColor != null) __obj.updateDynamic("dotBorderColor")(dotBorderColor.asInstanceOf[js.Any])
-    if (dotBorderWidth != null) __obj.updateDynamic("dotBorderWidth")(dotBorderWidth.asInstanceOf[js.Any])
-    if (dotColor != null) __obj.updateDynamic("dotColor")(dotColor.asInstanceOf[js.Any])
-    if (dotLabel != null) __obj.updateDynamic("dotLabel")(dotLabel.asInstanceOf[js.Any])
-    if (dotLabelFormat != null) __obj.updateDynamic("dotLabelFormat")(dotLabelFormat.asInstanceOf[js.Any])
-    if (dotLabelYOffset != null) __obj.updateDynamic("dotLabelYOffset")(dotLabelYOffset.asInstanceOf[js.Any])
-    if (dotSize != null) __obj.updateDynamic("dotSize")(dotSize.asInstanceOf[js.Any])
-    if (dotSymbol != null) __obj.updateDynamic("dotSymbol")(js.Any.fromFunction1(dotSymbol))
-    if (!js.isUndefined(enableDotLabel)) __obj.updateDynamic("enableDotLabel")(enableDotLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableDots)) __obj.updateDynamic("enableDots")(enableDots.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (gridLabel != null) __obj.updateDynamic("gridLabel")(js.Any.fromFunction1(gridLabel))
-    if (gridLabelOffset != null) __obj.updateDynamic("gridLabelOffset")(gridLabelOffset.asInstanceOf[js.Any])
-    if (gridLevels != null) __obj.updateDynamic("gridLevels")(gridLevels.asInstanceOf[js.Any])
-    if (gridShape != null) __obj.updateDynamic("gridShape")(gridShape.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (maxValue != null) __obj.updateDynamic("maxValue")(maxValue.asInstanceOf[js.Any])
-    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(tooltipFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonRadarProps[Datum]]
   }
+  @scala.inline
+  implicit class CommonRadarPropsOps[Self[datum] <: CommonRadarProps[datum], Datum] (val x: Self[Datum]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Datum] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Datum]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[Datum] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Datum] with Other]
+    @scala.inline
+    def withData(value: js.Array[js.Object]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndexByFunction1(value: Datum => String | Double): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexBy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIndexBy(value: Double | String | IndexByCustomFunctiono[Datum]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeys(value: js.Array[String | Double]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLegends(value: js.Array[LegendProps]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legends")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlendMode(value: CssMixBlendMode): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blendMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlendMode: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blendMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderColorFunction1(value: _ => String): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBorderColor(value: InheritedColorProp[_]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderColor: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidth(value: Double): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorsFunction1(value: _ => String): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withColors(value: OrdinalColorsInstruction[_]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColors: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurve(value: String): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurve: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotBorderColorFunction1(value: _ => String): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDotBorderColor(value: InheritedColorProp[_]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotBorderColor: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotBorderWidth(value: Double): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotBorderWidth: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotBorderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotColorFunction1(value: _ => String): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDotColor(value: InheritedColorProp[_]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotColor: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotLabelFunction1(value: /* repeated */ js.Any => TagMod[Any]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotLabel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDotLabel(value: String | CustomDotLabel): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotLabel: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotLabelFormatFunction1(value: /* repeated */ js.Any => TagMod[Any]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotLabelFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDotLabelFormat(value: String | CustomFormatter): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotLabelFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotLabelFormat: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotLabelFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotLabelYOffset(value: Double): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotLabelYOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotLabelYOffset: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotLabelYOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotSize(value: Double): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDotSize: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDotSymbol(value: /* repeated */ js.Any => TagMod[Any]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotSymbol")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDotSymbol: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotSymbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableDotLabel(value: Boolean): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDotLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableDotLabel: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDotLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableDots(value: Boolean): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableDots: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillOpacity(value: Double): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillOpacity: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridLabel(value: /* repeated */ js.Any => String): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLabel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGridLabel: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridLabelOffset(value: Double): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLabelOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridLabelOffset: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLabelOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridLevels(value: Double): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLevels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridLevels: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridLevels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridShape(value: circular | linear): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridShape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridShape: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridShape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsInteractive(value: Boolean): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsInteractive: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Box): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValue(value: auto | Double): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValue: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipFormatFunction1(value: /* repeated */ js.Any => TagMod[Any]): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTooltipFormat(value: String | CustomFormatter): Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipFormat: Self[Datum] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

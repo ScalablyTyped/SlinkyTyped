@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PhantomCSSTest extends js.Object {
-  var error: js.UndefOr[Boolean] = js.undefined
-  var fail: js.UndefOr[Boolean] = js.undefined
-  var failFile: js.UndefOr[String] = js.undefined
-  var filename: js.UndefOr[String] = js.undefined
-  var mismatch: js.UndefOr[js.Any] = js.undefined
-  var success: js.UndefOr[Boolean] = js.undefined
+  var error: js.UndefOr[Boolean] = js.native
+  var fail: js.UndefOr[Boolean] = js.native
+  var failFile: js.UndefOr[String] = js.native
+  var filename: js.UndefOr[String] = js.native
+  var mismatch: js.UndefOr[js.Any] = js.native
+  var success: js.UndefOr[Boolean] = js.native
 }
 
 object PhantomCSSTest {
   @scala.inline
-  def apply(
-    error: js.UndefOr[Boolean] = js.undefined,
-    fail: js.UndefOr[Boolean] = js.undefined,
-    failFile: String = null,
-    filename: String = null,
-    mismatch: js.Any = null,
-    success: js.UndefOr[Boolean] = js.undefined
-  ): PhantomCSSTest = {
+  def apply(): PhantomCSSTest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (!js.isUndefined(fail)) __obj.updateDynamic("fail")(fail.asInstanceOf[js.Any])
-    if (failFile != null) __obj.updateDynamic("failFile")(failFile.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (mismatch != null) __obj.updateDynamic("mismatch")(mismatch.asInstanceOf[js.Any])
-    if (!js.isUndefined(success)) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
     __obj.asInstanceOf[PhantomCSSTest]
   }
+  @scala.inline
+  implicit class PhantomCSSTestOps[Self <: PhantomCSSTest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFail(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilename(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilename: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMismatch(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mismatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMismatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mismatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

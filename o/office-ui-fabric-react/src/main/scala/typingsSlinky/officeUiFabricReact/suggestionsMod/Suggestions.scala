@@ -4,14 +4,15 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButton
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionsProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react/lib/components/pickers/Suggestions/Suggestions", "Suggestions")
 @js.native
-class Suggestions[T] protected () extends BaseComponent[ISuggestionsProps[T], ISuggestionsState] {
+class Suggestions[T] protected ()
+  extends Component[ISuggestionsProps[T], ISuggestionsState, js.Any] {
   def this(suggestionsProps: ISuggestionsProps[T]) = this()
   var _classNames: js.Any = js.native
   var _forceResolve: js.Any = js.native

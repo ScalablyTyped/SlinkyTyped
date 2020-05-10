@@ -4,27 +4,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TempFileNaming extends js.Object {
   /**
     * File name prefix to use.
     *
     * For example: `frida`.
     */
-  var prefix: String
+  var prefix: String = js.native
   /**
     * File name suffix to use.
     *
     * For example: `dat`.
     */
-  var suffix: String
+  var suffix: String = js.native
 }
 
 object TempFileNaming {
   @scala.inline
   def apply(prefix: String, suffix: String): TempFileNaming = {
     val __obj = js.Dynamic.literal(prefix = prefix.asInstanceOf[js.Any], suffix = suffix.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TempFileNaming]
   }
+  @scala.inline
+  implicit class TempFileNamingOps[Self <: TempFileNaming] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

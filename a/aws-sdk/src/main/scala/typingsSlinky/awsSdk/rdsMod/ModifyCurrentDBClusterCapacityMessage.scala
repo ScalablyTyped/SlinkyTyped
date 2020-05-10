@@ -26,17 +26,59 @@ trait ModifyCurrentDBClusterCapacityMessage extends js.Object {
 
 object ModifyCurrentDBClusterCapacityMessage {
   @scala.inline
-  def apply(
-    DBClusterIdentifier: String,
-    Capacity: Int | scala.Double = null,
-    SecondsBeforeTimeout: Int | scala.Double = null,
-    TimeoutAction: String = null
-  ): ModifyCurrentDBClusterCapacityMessage = {
+  def apply(DBClusterIdentifier: String): ModifyCurrentDBClusterCapacityMessage = {
     val __obj = js.Dynamic.literal(DBClusterIdentifier = DBClusterIdentifier.asInstanceOf[js.Any])
-    if (Capacity != null) __obj.updateDynamic("Capacity")(Capacity.asInstanceOf[js.Any])
-    if (SecondsBeforeTimeout != null) __obj.updateDynamic("SecondsBeforeTimeout")(SecondsBeforeTimeout.asInstanceOf[js.Any])
-    if (TimeoutAction != null) __obj.updateDynamic("TimeoutAction")(TimeoutAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyCurrentDBClusterCapacityMessage]
   }
+  @scala.inline
+  implicit class ModifyCurrentDBClusterCapacityMessageOps[Self <: ModifyCurrentDBClusterCapacityMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCapacity(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Capacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondsBeforeTimeout(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondsBeforeTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondsBeforeTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecondsBeforeTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutAction")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

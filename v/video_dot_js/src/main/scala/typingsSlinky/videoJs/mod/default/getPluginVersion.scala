@@ -17,6 +17,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object getPluginVersion
   extends TopLevel[
-      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Plugin.getPluginVersion */ js.Any
+      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Plugin.getPlugin */ js.Any
     ]
 

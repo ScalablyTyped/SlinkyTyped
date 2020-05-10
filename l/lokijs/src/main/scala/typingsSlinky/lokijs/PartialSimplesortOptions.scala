@@ -5,27 +5,75 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<lokijs.SimplesortOptions> */
+@js.native
 trait PartialSimplesortOptions extends js.Object {
-  var desc: js.UndefOr[Boolean] = js.undefined
-  var disableIndexIntersect: js.UndefOr[Boolean] = js.undefined
-  var forceIndexIntersect: js.UndefOr[Boolean] = js.undefined
-  var useJavascriptSorting: js.UndefOr[Boolean] = js.undefined
+  var desc: js.UndefOr[Boolean] = js.native
+  var disableIndexIntersect: js.UndefOr[Boolean] = js.native
+  var forceIndexIntersect: js.UndefOr[Boolean] = js.native
+  var useJavascriptSorting: js.UndefOr[Boolean] = js.native
 }
 
 object PartialSimplesortOptions {
   @scala.inline
-  def apply(
-    desc: js.UndefOr[Boolean] = js.undefined,
-    disableIndexIntersect: js.UndefOr[Boolean] = js.undefined,
-    forceIndexIntersect: js.UndefOr[Boolean] = js.undefined,
-    useJavascriptSorting: js.UndefOr[Boolean] = js.undefined
-  ): PartialSimplesortOptions = {
+  def apply(): PartialSimplesortOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(desc)) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableIndexIntersect)) __obj.updateDynamic("disableIndexIntersect")(disableIndexIntersect.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceIndexIntersect)) __obj.updateDynamic("forceIndexIntersect")(forceIndexIntersect.asInstanceOf[js.Any])
-    if (!js.isUndefined(useJavascriptSorting)) __obj.updateDynamic("useJavascriptSorting")(useJavascriptSorting.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialSimplesortOptions]
   }
+  @scala.inline
+  implicit class PartialSimplesortOptionsOps[Self <: PartialSimplesortOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableIndexIntersect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableIndexIntersect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableIndexIntersect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableIndexIntersect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceIndexIntersect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceIndexIntersect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceIndexIntersect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceIndexIntersect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseJavascriptSorting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useJavascriptSorting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseJavascriptSorting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useJavascriptSorting")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

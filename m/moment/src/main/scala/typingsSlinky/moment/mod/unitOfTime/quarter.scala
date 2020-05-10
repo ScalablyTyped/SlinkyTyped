@@ -13,12 +13,10 @@ trait quarter extends _StartOf
 
 object quarter {
   @scala.inline
-  def Q: typingsSlinky.moment.momentStrings.Q = this.cast("Q")
+  def Q: typingsSlinky.moment.momentStrings.Q = "Q".asInstanceOf[typingsSlinky.moment.momentStrings.Q]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def quarter: typingsSlinky.moment.momentStrings.quarter = "quarter".asInstanceOf[typingsSlinky.moment.momentStrings.quarter]
   @scala.inline
-  def quarter: typingsSlinky.moment.momentStrings.quarter = this.cast("quarter")
-  @scala.inline
-  def quarters: typingsSlinky.moment.momentStrings.quarters = this.cast("quarters")
+  def quarters: typingsSlinky.moment.momentStrings.quarters = "quarters".asInstanceOf[typingsSlinky.moment.momentStrings.quarters]
 }
 

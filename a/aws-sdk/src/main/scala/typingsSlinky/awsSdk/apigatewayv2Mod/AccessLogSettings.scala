@@ -18,11 +18,41 @@ trait AccessLogSettings extends js.Object {
 
 object AccessLogSettings {
   @scala.inline
-  def apply(DestinationArn: Arn = null, Format: StringWithLengthBetween1And1024 = null): AccessLogSettings = {
+  def apply(): AccessLogSettings = {
     val __obj = js.Dynamic.literal()
-    if (DestinationArn != null) __obj.updateDynamic("DestinationArn")(DestinationArn.asInstanceOf[js.Any])
-    if (Format != null) __obj.updateDynamic("Format")(Format.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessLogSettings]
   }
+  @scala.inline
+  implicit class AccessLogSettingsOps[Self <: AccessLogSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinationArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: StringWithLengthBetween1And1024): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

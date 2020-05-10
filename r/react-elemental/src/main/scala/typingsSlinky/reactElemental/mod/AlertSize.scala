@@ -12,10 +12,8 @@ trait AlertSize extends js.Object
 
 object AlertSize {
   @scala.inline
-  def alpha: typingsSlinky.reactElemental.reactElementalStrings.alpha = this.cast("alpha")
+  def alpha: typingsSlinky.reactElemental.reactElementalStrings.alpha = "alpha".asInstanceOf[typingsSlinky.reactElemental.reactElementalStrings.alpha]
   @scala.inline
-  def beta: typingsSlinky.reactElemental.reactElementalStrings.beta = this.cast("beta")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def beta: typingsSlinky.reactElemental.reactElementalStrings.beta = "beta".asInstanceOf[typingsSlinky.reactElemental.reactElementalStrings.beta]
 }
 

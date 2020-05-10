@@ -7,54 +7,204 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAsDestination extends js.Object {
-  var asDestination: js.UndefOr[Boolean] = js.undefined
-  var asOrigin: js.UndefOr[Boolean] = js.undefined
-  var autoMove: js.UndefOr[Boolean] = js.undefined
-  var closeWhenClickMap: js.UndefOr[Boolean] = js.undefined
-  var content: js.UndefOr[String | HTMLElement] = js.undefined
-  var driving: js.UndefOr[Boolean] = js.undefined
-  var offset: js.UndefOr[Pixel] = js.undefined
-  var panel: js.UndefOr[String | HTMLElement] = js.undefined
-  var placeSearch: js.UndefOr[Boolean] = js.undefined
-  var position: js.UndefOr[LngLat] = js.undefined
-  var searchRadius: js.UndefOr[Double] = js.undefined
-  var transit: js.UndefOr[Boolean] = js.undefined
-  var walking: js.UndefOr[Boolean] = js.undefined
+  var asDestination: js.UndefOr[Boolean] = js.native
+  var asOrigin: js.UndefOr[Boolean] = js.native
+  var autoMove: js.UndefOr[Boolean] = js.native
+  var closeWhenClickMap: js.UndefOr[Boolean] = js.native
+  var content: js.UndefOr[String | HTMLElement] = js.native
+  var driving: js.UndefOr[Boolean] = js.native
+  var offset: js.UndefOr[Pixel] = js.native
+  var panel: js.UndefOr[String | HTMLElement] = js.native
+  var placeSearch: js.UndefOr[Boolean] = js.native
+  var position: js.UndefOr[LngLat] = js.native
+  var searchRadius: js.UndefOr[Double] = js.native
+  var transit: js.UndefOr[Boolean] = js.native
+  var walking: js.UndefOr[Boolean] = js.native
 }
 
 object AnonAsDestination {
   @scala.inline
-  def apply(
-    asDestination: js.UndefOr[Boolean] = js.undefined,
-    asOrigin: js.UndefOr[Boolean] = js.undefined,
-    autoMove: js.UndefOr[Boolean] = js.undefined,
-    closeWhenClickMap: js.UndefOr[Boolean] = js.undefined,
-    content: String | HTMLElement = null,
-    driving: js.UndefOr[Boolean] = js.undefined,
-    offset: Pixel = null,
-    panel: String | HTMLElement = null,
-    placeSearch: js.UndefOr[Boolean] = js.undefined,
-    position: LngLat = null,
-    searchRadius: Int | Double = null,
-    transit: js.UndefOr[Boolean] = js.undefined,
-    walking: js.UndefOr[Boolean] = js.undefined
-  ): AnonAsDestination = {
+  def apply(): AnonAsDestination = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(asDestination)) __obj.updateDynamic("asDestination")(asDestination.asInstanceOf[js.Any])
-    if (!js.isUndefined(asOrigin)) __obj.updateDynamic("asOrigin")(asOrigin.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoMove)) __obj.updateDynamic("autoMove")(autoMove.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeWhenClickMap)) __obj.updateDynamic("closeWhenClickMap")(closeWhenClickMap.asInstanceOf[js.Any])
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(driving)) __obj.updateDynamic("driving")(driving.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (panel != null) __obj.updateDynamic("panel")(panel.asInstanceOf[js.Any])
-    if (!js.isUndefined(placeSearch)) __obj.updateDynamic("placeSearch")(placeSearch.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (searchRadius != null) __obj.updateDynamic("searchRadius")(searchRadius.asInstanceOf[js.Any])
-    if (!js.isUndefined(transit)) __obj.updateDynamic("transit")(transit.asInstanceOf[js.Any])
-    if (!js.isUndefined(walking)) __obj.updateDynamic("walking")(walking.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAsDestination]
   }
+  @scala.inline
+  implicit class AnonAsDestinationOps[Self <: AnonAsDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsDestination(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asDestination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asDestination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAsOrigin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoMove(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseWhenClickMap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeWhenClickMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseWhenClickMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeWhenClickMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContent(value: String | HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDriving(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driving")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriving: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driving")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Pixel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPanelHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPanel(value: String | HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPanel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceSearch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeSearch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: LngLat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWalking(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("walking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWalking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("walking")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

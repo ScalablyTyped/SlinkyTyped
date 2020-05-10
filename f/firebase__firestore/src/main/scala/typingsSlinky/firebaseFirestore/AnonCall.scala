@@ -2,7 +2,7 @@ package typingsSlinky.firebaseFirestore
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.firebaseFirestore.mod.firebaseAppTypesAugmentingMod.FirebaseApp
+import typingsSlinky.firebaseFirestore.mod.FirebaseApp
 import typingsSlinky.firebaseFirestoreTypes.mod.FirebaseFirestore
 import typingsSlinky.firebaseFirestoreTypes.mod.LogLevel
 import scala.scalajs.js

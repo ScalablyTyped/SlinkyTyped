@@ -1,8 +1,8 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.HTMLInputElement
-import typingsSlinky.std.HTMLTextAreaElement
+import org.scalajs.dom.raw.HTMLInputElement
+import org.scalajs.dom.raw.HTMLTextAreaElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

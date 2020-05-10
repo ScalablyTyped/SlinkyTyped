@@ -28,6 +28,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TextInputAndroidProps extends js.Object {
   /**
     * Determines which content to suggest on auto complete, e.g.`username`.
@@ -53,14 +54,14 @@ trait TextInputAndroidProps extends js.Object {
     */
   var autoCompleteType: js.UndefOr[
     `cc-csc` | `cc-exp` | `cc-exp-month` | `cc-exp-year` | `cc-number` | email | name | password | `postal-code` | `street-address` | tel | username | off
-  ] = js.undefined
+  ] = js.native
   /**
     * When false, if there is a small amount of space available around a text input (e.g. landscape orientation on a phone),
     *   the OS may choose to have the user edit the text inside of a full screen text input mode.
     * When true, this feature is disabled and users will always edit the text directly inside of the text input.
     * Defaults to false.
     */
-  var disableFullscreenUI: js.UndefOr[Boolean] = js.undefined
+  var disableFullscreenUI: js.UndefOr[Boolean] = js.native
   /**
     * Determines whether the individual fields in your app should be included in a
     * view structure for autofill purposes on Android API Level 26+. Defaults to auto.
@@ -76,66 +77,191 @@ trait TextInputAndroidProps extends js.Object {
     * - `yes` - is important for autofill
     * - `yesExcludeDescendants` - this view is important for autofill but its children aren't
     */
-  var importantForAutofill: js.UndefOr[auto | no | noExcludeDescendants | yes | yesExcludeDescendants] = js.undefined
+  var importantForAutofill: js.UndefOr[auto | no | noExcludeDescendants | yes | yesExcludeDescendants] = js.native
   /**
     * If defined, the provided image resource will be rendered on the left.
     */
-  var inlineImageLeft: js.UndefOr[String] = js.undefined
+  var inlineImageLeft: js.UndefOr[String] = js.native
   /**
     * Padding between the inline image, if any, and the text input itself.
     */
-  var inlineImagePadding: js.UndefOr[Double] = js.undefined
+  var inlineImagePadding: js.UndefOr[Double] = js.native
   /**
     * Sets the number of lines for a TextInput.
     * Use it with multiline set to true to be able to fill the lines.
     */
-  var numberOfLines: js.UndefOr[Double] = js.undefined
+  var numberOfLines: js.UndefOr[Double] = js.native
   /**
     * Sets the return key to the label. Use it instead of `returnKeyType`.
     * @platform android
     */
-  var returnKeyLabel: js.UndefOr[String] = js.undefined
+  var returnKeyLabel: js.UndefOr[String] = js.native
+  /**
+    * When false, it will prevent the soft keyboard from showing when the field is focused. The default value is true
+    */
+  var showSoftInputOnFocus: js.UndefOr[Boolean] = js.native
   /**
     * Vertically align text when `multiline` is set to true
     */
-  var textAlignVertical: js.UndefOr[auto | top | bottom | center] = js.undefined
+  var textAlignVertical: js.UndefOr[auto | top | bottom | center] = js.native
   /**
     * Set text break strategy on Android API Level 23+, possible values are simple, highQuality, balanced
     * The default value is simple.
     */
-  var textBreakStrategy: js.UndefOr[simple | highQuality | balanced] = js.undefined
+  var textBreakStrategy: js.UndefOr[simple | highQuality | balanced] = js.native
   /**
     * The color of the textInput underline.
     */
-  var underlineColorAndroid: js.UndefOr[String] = js.undefined
+  var underlineColorAndroid: js.UndefOr[String] = js.native
 }
 
 object TextInputAndroidProps {
   @scala.inline
-  def apply(
-    autoCompleteType: `cc-csc` | `cc-exp` | `cc-exp-month` | `cc-exp-year` | `cc-number` | email | name | password | `postal-code` | `street-address` | tel | username | off = null,
-    disableFullscreenUI: js.UndefOr[Boolean] = js.undefined,
-    importantForAutofill: auto | no | noExcludeDescendants | yes | yesExcludeDescendants = null,
-    inlineImageLeft: String = null,
-    inlineImagePadding: Int | Double = null,
-    numberOfLines: Int | Double = null,
-    returnKeyLabel: String = null,
-    textAlignVertical: auto | top | bottom | center = null,
-    textBreakStrategy: simple | highQuality | balanced = null,
-    underlineColorAndroid: String = null
-  ): TextInputAndroidProps = {
+  def apply(): TextInputAndroidProps = {
     val __obj = js.Dynamic.literal()
-    if (autoCompleteType != null) __obj.updateDynamic("autoCompleteType")(autoCompleteType.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableFullscreenUI)) __obj.updateDynamic("disableFullscreenUI")(disableFullscreenUI.asInstanceOf[js.Any])
-    if (importantForAutofill != null) __obj.updateDynamic("importantForAutofill")(importantForAutofill.asInstanceOf[js.Any])
-    if (inlineImageLeft != null) __obj.updateDynamic("inlineImageLeft")(inlineImageLeft.asInstanceOf[js.Any])
-    if (inlineImagePadding != null) __obj.updateDynamic("inlineImagePadding")(inlineImagePadding.asInstanceOf[js.Any])
-    if (numberOfLines != null) __obj.updateDynamic("numberOfLines")(numberOfLines.asInstanceOf[js.Any])
-    if (returnKeyLabel != null) __obj.updateDynamic("returnKeyLabel")(returnKeyLabel.asInstanceOf[js.Any])
-    if (textAlignVertical != null) __obj.updateDynamic("textAlignVertical")(textAlignVertical.asInstanceOf[js.Any])
-    if (textBreakStrategy != null) __obj.updateDynamic("textBreakStrategy")(textBreakStrategy.asInstanceOf[js.Any])
-    if (underlineColorAndroid != null) __obj.updateDynamic("underlineColorAndroid")(underlineColorAndroid.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextInputAndroidProps]
   }
+  @scala.inline
+  implicit class TextInputAndroidPropsOps[Self <: TextInputAndroidProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoCompleteType(
+      value: `cc-csc` | `cc-exp` | `cc-exp-month` | `cc-exp-year` | `cc-number` | email | name | password | `postal-code` | `street-address` | tel | username | off
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCompleteType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoCompleteType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoCompleteType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableFullscreenUI(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFullscreenUI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableFullscreenUI: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFullscreenUI")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportantForAutofill(value: auto | no | noExcludeDescendants | yes | yesExcludeDescendants): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importantForAutofill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportantForAutofill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importantForAutofill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineImageLeft(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineImageLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineImageLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineImageLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInlineImagePadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineImagePadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInlineImagePadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inlineImagePadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfLines(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnKeyLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnKeyLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnKeyLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnKeyLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowSoftInputOnFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showSoftInputOnFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowSoftInputOnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showSoftInputOnFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextAlignVertical(value: auto | top | bottom | center): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlignVertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextAlignVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textAlignVertical")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextBreakStrategy(value: simple | highQuality | balanced): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textBreakStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextBreakStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textBreakStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnderlineColorAndroid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underlineColorAndroid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnderlineColorAndroid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underlineColorAndroid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

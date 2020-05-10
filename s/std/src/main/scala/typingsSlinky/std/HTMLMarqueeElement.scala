@@ -93,7 +93,7 @@ trait HTMLMarqueeElement extends HTMLElement {
   def removeEventListener_bounce(
     `type`: bounce,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_finish(`type`: finish, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -107,7 +107,7 @@ trait HTMLMarqueeElement extends HTMLElement {
   def removeEventListener_finish(
     `type`: finish,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_start(`type`: start, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -121,7 +121,7 @@ trait HTMLMarqueeElement extends HTMLElement {
   def removeEventListener_start(
     `type`: start,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   /** @deprecated */
   def start(): Unit = js.native

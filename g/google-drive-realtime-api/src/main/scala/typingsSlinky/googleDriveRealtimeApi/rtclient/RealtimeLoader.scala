@@ -6,10 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RealtimeLoader extends js.Object {
-  def handleErrors(e: Error): Unit
-  def load(): Unit
-  def start(): Unit
+  def handleErrors(e: Error): Unit = js.native
+  def load(): Unit = js.native
+  def start(): Unit = js.native
 }
 
 @JSGlobal("rtclient.RealtimeLoader")

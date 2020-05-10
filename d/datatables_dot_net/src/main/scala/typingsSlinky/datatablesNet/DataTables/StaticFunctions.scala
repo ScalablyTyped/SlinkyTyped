@@ -18,7 +18,7 @@ trait StaticFunctions extends js.Object {
     * @param table Selector string for table
     */
   var Api: Instantiable1[
-    /* selector */ String | Node | js.Array[Node] | JQuery, 
+    /* selector */ String | Node | js.Array[Node] | JQuery | SettingsLegacy, 
     typingsSlinky.datatablesNet.DataTables.Api
   ] = js.native
   /**
@@ -57,7 +57,7 @@ trait StaticFunctions extends js.Object {
   def isDataTable(table: String): Boolean = js.native
   def isDataTable(table: Api): Boolean = js.native
   def isDataTable(table: JQuery): Boolean = js.native
-  def isDataTable(table: typingsSlinky.std.Node): Boolean = js.native
+  def isDataTable(table: Node): Boolean = js.native
   /**
     * Get all DataTable tables that have been initialised - optionally you can select to get only currently visible tables and / or retrieve the tables as API instances.
     *

@@ -34,21 +34,83 @@ trait TestInvokeAuthorizerRequest extends js.Object {
 
 object TestInvokeAuthorizerRequest {
   @scala.inline
-  def apply(
-    authorizerName: AuthorizerName,
-    httpContext: HttpContext = null,
-    mqttContext: MqttContext = null,
-    tlsContext: TlsContext = null,
-    token: Token = null,
-    tokenSignature: TokenSignature = null
-  ): TestInvokeAuthorizerRequest = {
+  def apply(authorizerName: AuthorizerName): TestInvokeAuthorizerRequest = {
     val __obj = js.Dynamic.literal(authorizerName = authorizerName.asInstanceOf[js.Any])
-    if (httpContext != null) __obj.updateDynamic("httpContext")(httpContext.asInstanceOf[js.Any])
-    if (mqttContext != null) __obj.updateDynamic("mqttContext")(mqttContext.asInstanceOf[js.Any])
-    if (tlsContext != null) __obj.updateDynamic("tlsContext")(tlsContext.asInstanceOf[js.Any])
-    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
-    if (tokenSignature != null) __obj.updateDynamic("tokenSignature")(tokenSignature.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestInvokeAuthorizerRequest]
   }
+  @scala.inline
+  implicit class TestInvokeAuthorizerRequestOps[Self <: TestInvokeAuthorizerRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizerName(value: AuthorizerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHttpContext(value: HttpContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMqttContext(value: MqttContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mqttContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMqttContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mqttContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTlsContext(value: TlsContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTlsContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tlsContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToken(value: Token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokenSignature(value: TokenSignature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokenSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenSignature")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

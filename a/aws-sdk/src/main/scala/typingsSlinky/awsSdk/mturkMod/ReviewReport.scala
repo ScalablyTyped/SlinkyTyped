@@ -18,11 +18,41 @@ trait ReviewReport extends js.Object {
 
 object ReviewReport {
   @scala.inline
-  def apply(ReviewActions: ReviewActionDetailList = null, ReviewResults: ReviewResultDetailList = null): ReviewReport = {
+  def apply(): ReviewReport = {
     val __obj = js.Dynamic.literal()
-    if (ReviewActions != null) __obj.updateDynamic("ReviewActions")(ReviewActions.asInstanceOf[js.Any])
-    if (ReviewResults != null) __obj.updateDynamic("ReviewResults")(ReviewResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReviewReport]
   }
+  @scala.inline
+  implicit class ReviewReportOps[Self <: ReviewReport] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReviewActions(value: ReviewActionDetailList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReviewActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReviewActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReviewActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReviewResults(value: ReviewResultDetailList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReviewResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReviewResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReviewResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

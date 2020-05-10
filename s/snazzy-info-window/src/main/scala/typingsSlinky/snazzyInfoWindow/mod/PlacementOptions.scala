@@ -14,14 +14,12 @@ trait PlacementOptions extends js.Object
 
 object PlacementOptions {
   @scala.inline
-  def bottom: typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.bottom = "bottom".asInstanceOf[typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.left = "left".asInstanceOf[typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.left]
   @scala.inline
-  def left: typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.left = this.cast("left")
+  def right: typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.right = "right".asInstanceOf[typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.right]
   @scala.inline
-  def right: typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.top = this.cast("top")
+  def top: typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.top = "top".asInstanceOf[typingsSlinky.snazzyInfoWindow.snazzyInfoWindowStrings.top]
 }
 

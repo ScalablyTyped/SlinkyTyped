@@ -13,45 +13,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorldMapProps extends js.Object {
-  var a11yTitle: js.UndefOr[A11yTitleType] = js.undefined
-  var alignSelf: js.UndefOr[AlignSelfType] = js.undefined
-  var color: js.UndefOr[ColorType] = js.undefined
-  var continents: js.UndefOr[js.Array[AnonName]] = js.undefined
-  var fill: js.UndefOr[FillType] = js.undefined
-  var gridArea: js.UndefOr[GridAreaType] = js.undefined
-  var hoverColor: js.UndefOr[String | AnonLight] = js.undefined
-  var margin: js.UndefOr[MarginType] = js.undefined
-  var onSelectPlace: js.UndefOr[js.Function1[/* place */ js.Array[Double], Unit]] = js.undefined
-  var places: js.UndefOr[js.Array[AnonLocation]] = js.undefined
+  var a11yTitle: js.UndefOr[A11yTitleType] = js.native
+  var alignSelf: js.UndefOr[AlignSelfType] = js.native
+  var color: js.UndefOr[ColorType] = js.native
+  var continents: js.UndefOr[js.Array[AnonName]] = js.native
+  var fill: js.UndefOr[FillType] = js.native
+  var gridArea: js.UndefOr[GridAreaType] = js.native
+  var hoverColor: js.UndefOr[String | AnonLight] = js.native
+  var margin: js.UndefOr[MarginType] = js.native
+  var onSelectPlace: js.UndefOr[js.Function1[/* place */ js.Array[Double], Unit]] = js.native
+  var places: js.UndefOr[js.Array[AnonLocation]] = js.native
 }
 
 object WorldMapProps {
   @scala.inline
-  def apply(
-    a11yTitle: A11yTitleType = null,
-    alignSelf: AlignSelfType = null,
-    color: ColorType = null,
-    continents: js.Array[AnonName] = null,
-    fill: FillType = null,
-    gridArea: GridAreaType = null,
-    hoverColor: String | AnonLight = null,
-    margin: MarginType = null,
-    onSelectPlace: /* place */ js.Array[Double] => Unit = null,
-    places: js.Array[AnonLocation] = null
-  ): WorldMapProps = {
+  def apply(): WorldMapProps = {
     val __obj = js.Dynamic.literal()
-    if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
-    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (continents != null) __obj.updateDynamic("continents")(continents.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
-    if (hoverColor != null) __obj.updateDynamic("hoverColor")(hoverColor.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (onSelectPlace != null) __obj.updateDynamic("onSelectPlace")(js.Any.fromFunction1(onSelectPlace))
-    if (places != null) __obj.updateDynamic("places")(places.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorldMapProps]
   }
+  @scala.inline
+  implicit class WorldMapPropsOps[Self <: WorldMapProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withA11yTitle(value: A11yTitleType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutA11yTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a11yTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignSelf(value: AlignSelfType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignSelf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: ColorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinents(value: js.Array[AnonName]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: FillType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridArea(value: GridAreaType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverColor(value: String | AnonLight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: MarginType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelectPlace(value: /* place */ js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectPlace")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelectPlace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectPlace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaces(value: js.Array[AnonLocation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("places")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("places")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

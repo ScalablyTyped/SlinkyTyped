@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.mod
 
+import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.std.AddEventListenerOptions
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import typingsSlinky.std.HTMLElement
 import scala.scalajs.js

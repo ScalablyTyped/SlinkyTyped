@@ -1,38 +1,35 @@
 package typingsSlinky.jupyterlabApputils.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.jupyterlabApputils.vdomMod.IUseSignalProps
 import typingsSlinky.phosphorSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object UseSignal
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.jupyterlabApputils.mod.UseSignal[js.Any, js.Any]] {
+object UseSignal {
   @JSImport("@jupyterlab/apputils", "UseSignal")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[SENDER, ARGS](
-    signal: ISignal[SENDER, ARGS],
-    initialArgs: ARGS = null,
-    initialSender: SENDER = null,
-    shouldUpdate: (SENDER, ARGS) => Boolean = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.jupyterlabApputils.mod.UseSignal[js.Any, js.Any]] = {
-    val __obj = js.Dynamic.literal(signal = signal.asInstanceOf[js.Any])
-    if (initialArgs != null) __obj.updateDynamic("initialArgs")(initialArgs.asInstanceOf[js.Any])
-    if (initialSender != null) __obj.updateDynamic("initialSender")(initialSender.asInstanceOf[js.Any])
-    if (shouldUpdate != null) __obj.updateDynamic("shouldUpdate")(js.Any.fromFunction2(shouldUpdate))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.jupyterlabApputils.mod.UseSignal[js.Any, js.Any]]]
+  @scala.inline
+  class Builder[SENDER, ARGS] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.jupyterlabApputils.mod.UseSignal[js.Any, js.Any]] {
+    @scala.inline
+    def initialArgs(value: ARGS): this.type = set("initialArgs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialSender(value: SENDER): this.type = set("initialSender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldUpdate(value: (SENDER, ARGS) => Boolean): this.type = set("shouldUpdate", js.Any.fromFunction2(value))
   }
-  type Props = IUseSignalProps[js.Any, js.Any]
+  
+  def withProps[SENDER, ARGS](p: IUseSignalProps[SENDER, ARGS]): Builder[SENDER, ARGS] = new Builder[SENDER, ARGS](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[SENDER, ARGS](signal: ISignal[SENDER, ARGS]): Builder[SENDER, ARGS] = {
+    val __props = js.Dynamic.literal(signal = signal.asInstanceOf[js.Any])
+    new Builder[SENDER, ARGS](js.Array(this.component, __props.asInstanceOf[IUseSignalProps[SENDER, ARGS]]))
+  }
 }
 

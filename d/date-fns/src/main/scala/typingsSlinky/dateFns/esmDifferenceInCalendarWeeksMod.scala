@@ -1,6 +1,5 @@
 package typingsSlinky.dateFns
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,15 +12,15 @@ object esmDifferenceInCalendarWeeksMod extends js.Object {
     def apply(dateLeft: Double, dateRight: Double): Double = js.native
     def apply(dateLeft: Double, dateRight: Double, options: AnonLocale): Double = js.native
     def apply(dateLeft: Double, dateRight: Double, options: AnonWeekStartsOn): Double = js.native
-    def apply(dateLeft: Double, dateRight: Date): Double = js.native
-    def apply(dateLeft: Double, dateRight: Date, options: AnonLocale): Double = js.native
-    def apply(dateLeft: Double, dateRight: Date, options: AnonWeekStartsOn): Double = js.native
-    def apply(dateLeft: Date, dateRight: Double): Double = js.native
-    def apply(dateLeft: Date, dateRight: Double, options: AnonLocale): Double = js.native
-    def apply(dateLeft: Date, dateRight: Double, options: AnonWeekStartsOn): Double = js.native
-    def apply(dateLeft: Date, dateRight: Date): Double = js.native
-    def apply(dateLeft: Date, dateRight: Date, options: AnonLocale): Double = js.native
-    def apply(dateLeft: Date, dateRight: Date, options: AnonWeekStartsOn): Double = js.native
+    def apply(dateLeft: Double, dateRight: js.Date): Double = js.native
+    def apply(dateLeft: Double, dateRight: js.Date, options: AnonLocale): Double = js.native
+    def apply(dateLeft: Double, dateRight: js.Date, options: AnonWeekStartsOn): Double = js.native
+    def apply(dateLeft: js.Date, dateRight: Double): Double = js.native
+    def apply(dateLeft: js.Date, dateRight: Double, options: AnonLocale): Double = js.native
+    def apply(dateLeft: js.Date, dateRight: Double, options: AnonWeekStartsOn): Double = js.native
+    def apply(dateLeft: js.Date, dateRight: js.Date): Double = js.native
+    def apply(dateLeft: js.Date, dateRight: js.Date, options: AnonLocale): Double = js.native
+    def apply(dateLeft: js.Date, dateRight: js.Date, options: AnonWeekStartsOn): Double = js.native
   }
   
 }

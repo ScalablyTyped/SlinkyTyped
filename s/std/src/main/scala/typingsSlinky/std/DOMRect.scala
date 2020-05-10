@@ -9,6 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DOMRect extends DOMRectReadOnly
 
 @JSGlobal("DOMRect")

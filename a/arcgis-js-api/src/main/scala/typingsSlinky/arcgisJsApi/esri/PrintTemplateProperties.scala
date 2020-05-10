@@ -21,6 +21,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PrintTemplateProperties extends js.Object {
   /**
     * When `false`, the attribution is not displayed on the printout. This only applies when the [layout](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-PrintTemplate.html#layout) value is `map-only`. Reference our policies on [Licensing & Attribution](https://developers.arcgis.com/javascript/latest/guide/licensing/) for specific attribution requirements.
@@ -29,13 +30,13 @@ trait PrintTemplateProperties extends js.Object {
     *
     * @default true
     */
-  var attributionVisible: js.UndefOr[Boolean] = js.undefined
+  var attributionVisible: js.UndefOr[Boolean] = js.native
   /**
     * Define the map width, height and dpi. Required when `layout = 'map-only'`. See the object specification table below for available options to set for exportOptions.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-PrintTemplate.html#exportOptions)
     */
-  var exportOptions: js.UndefOr[PrintTemplateExportOptions] = js.undefined
+  var exportOptions: js.UndefOr[PrintTemplateExportOptions] = js.native
   /**
     * When true, the feature's attributes are included in feature collection layers even when they are not needed for rendering. By default they are removed to reduce the request size. Only applicable to custom print services which use the feature attributes, for example to display a table of features and their attributes.
     *
@@ -43,7 +44,7 @@ trait PrintTemplateProperties extends js.Object {
     *
     * @default false
     */
-  var forceFeatureAttributes: js.UndefOr[Boolean] = js.undefined
+  var forceFeatureAttributes: js.UndefOr[Boolean] = js.native
   /**
     * The output format for the printed map.
     *
@@ -51,7 +52,7 @@ trait PrintTemplateProperties extends js.Object {
     *
     * @default png32
     */
-  var format: js.UndefOr[pdf | png32 | png8 | jpg | gif | eps | svg | svgz] = js.undefined
+  var format: js.UndefOr[pdf | png32 | png8 | jpg | gif | eps | svg | svgz] = js.native
   /**
     * The layout used for the print output. When the value is `map-only` or is empty, the output map does not contain any page layout surroundings (for example, title, legend, scale bar and so forth). The print service provides out-of-the-box templates listed in possible values. The server administrator can add additional templates to the print service.  Possible values are listed below:
     *
@@ -74,13 +75,13 @@ trait PrintTemplateProperties extends js.Object {
     */
   var layout: js.UndefOr[
     `map-only` | `a3-landscape` | `a3-portrait` | `a4-landscape` | `a4-portrait` | `letter-ansi-a-landscape` | `letter-ansi-a-portrait` | `tabloid-ansi-b-landscape` | `tabloid-ansi-b-portrait`
-  ] = js.undefined
+  ] = js.native
   /**
     * Defines the layout elements. It's an object with the following properties:
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-PrintTemplate.html#layoutOptions)
     */
-  var layoutOptions: js.UndefOr[PrintTemplateLayoutOptions] = js.undefined
+  var layoutOptions: js.UndefOr[PrintTemplateLayoutOptions] = js.native
   /**
     * The optional map scale of the printed map. Only applies when `preserveScale = true`. If `outScale` is less than 1, then the printed map will use the scale of the input map.
     *
@@ -88,7 +89,7 @@ trait PrintTemplateProperties extends js.Object {
     *
     * @default 0
     */
-  var outScale: js.UndefOr[Double] = js.undefined
+  var outScale: js.UndefOr[Double] = js.native
   /**
     * Define whether the printed map should preserve map scale or map extent. If `true`, the printed map will use the `outScale` property or default to the scale of the input map. If `false`, the printed map will use the same extent as the input map and thus scale might change.
     *
@@ -96,7 +97,7 @@ trait PrintTemplateProperties extends js.Object {
     *
     * @default true
     */
-  var preserveScale: js.UndefOr[Boolean] = js.undefined
+  var preserveScale: js.UndefOr[Boolean] = js.native
   /**
     * When `true`, labels will be shown on the layout.
     *
@@ -104,33 +105,132 @@ trait PrintTemplateProperties extends js.Object {
     *
     * @default true
     */
-  var showLabels: js.UndefOr[Boolean] = js.undefined
+  var showLabels: js.UndefOr[Boolean] = js.native
 }
 
 object PrintTemplateProperties {
   @scala.inline
-  def apply(
-    attributionVisible: js.UndefOr[Boolean] = js.undefined,
-    exportOptions: PrintTemplateExportOptions = null,
-    forceFeatureAttributes: js.UndefOr[Boolean] = js.undefined,
-    format: pdf | png32 | png8 | jpg | gif | eps | svg | svgz = null,
-    layout: `map-only` | `a3-landscape` | `a3-portrait` | `a4-landscape` | `a4-portrait` | `letter-ansi-a-landscape` | `letter-ansi-a-portrait` | `tabloid-ansi-b-landscape` | `tabloid-ansi-b-portrait` = null,
-    layoutOptions: PrintTemplateLayoutOptions = null,
-    outScale: Int | Double = null,
-    preserveScale: js.UndefOr[Boolean] = js.undefined,
-    showLabels: js.UndefOr[Boolean] = js.undefined
-  ): PrintTemplateProperties = {
+  def apply(): PrintTemplateProperties = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(attributionVisible)) __obj.updateDynamic("attributionVisible")(attributionVisible.asInstanceOf[js.Any])
-    if (exportOptions != null) __obj.updateDynamic("exportOptions")(exportOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceFeatureAttributes)) __obj.updateDynamic("forceFeatureAttributes")(forceFeatureAttributes.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (layoutOptions != null) __obj.updateDynamic("layoutOptions")(layoutOptions.asInstanceOf[js.Any])
-    if (outScale != null) __obj.updateDynamic("outScale")(outScale.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveScale)) __obj.updateDynamic("preserveScale")(preserveScale.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLabels)) __obj.updateDynamic("showLabels")(showLabels.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrintTemplateProperties]
   }
+  @scala.inline
+  implicit class PrintTemplatePropertiesOps[Self <: PrintTemplateProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributionVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributionVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExportOptions(value: PrintTemplateExportOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExportOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceFeatureAttributes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceFeatureAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceFeatureAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceFeatureAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: pdf | png32 | png8 | jpg | gif | eps | svg | svgz): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(
+      value: `map-only` | `a3-landscape` | `a3-portrait` | `a4-landscape` | `a4-portrait` | `letter-ansi-a-landscape` | `letter-ansi-a-portrait` | `tabloid-ansi-b-landscape` | `tabloid-ansi-b-portrait`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayoutOptions(value: PrintTemplateLayoutOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveScale(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowLabels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLabels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

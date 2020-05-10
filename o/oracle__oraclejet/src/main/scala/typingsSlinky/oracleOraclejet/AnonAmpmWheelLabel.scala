@@ -4,48 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAmpmWheelLabel extends js.Object {
-  var ampmWheelLabel: js.UndefOr[String] = js.undefined
-  var cancelText: js.UndefOr[String] = js.undefined
-  var currentTimeText: js.UndefOr[String] = js.undefined
-  var dateTimeRange: js.UndefOr[AnonMessageDetail] = js.undefined
-  var hourWheelLabel: js.UndefOr[String] = js.undefined
-  var minuteWheelLabel: js.UndefOr[String] = js.undefined
-  var okText: js.UndefOr[String] = js.undefined
-  var regexp: js.UndefOr[AnonMessageSummary] = js.undefined
-  var required: js.UndefOr[AnonHint] = js.undefined
-  var tooltipTime: js.UndefOr[String] = js.undefined
-  var tooltipTimeDisabled: js.UndefOr[String] = js.undefined
+  var ampmWheelLabel: js.UndefOr[String] = js.native
+  var cancelText: js.UndefOr[String] = js.native
+  var currentTimeText: js.UndefOr[String] = js.native
+  var dateTimeRange: js.UndefOr[AnonMessageDetail] = js.native
+  var hourWheelLabel: js.UndefOr[String] = js.native
+  var minuteWheelLabel: js.UndefOr[String] = js.native
+  var okText: js.UndefOr[String] = js.native
+  var regexp: js.UndefOr[AnonMessageSummary] = js.native
+  var required: js.UndefOr[AnonHint] = js.native
+  var tooltipTime: js.UndefOr[String] = js.native
+  var tooltipTimeDisabled: js.UndefOr[String] = js.native
 }
 
 object AnonAmpmWheelLabel {
   @scala.inline
-  def apply(
-    ampmWheelLabel: String = null,
-    cancelText: String = null,
-    currentTimeText: String = null,
-    dateTimeRange: AnonMessageDetail = null,
-    hourWheelLabel: String = null,
-    minuteWheelLabel: String = null,
-    okText: String = null,
-    regexp: AnonMessageSummary = null,
-    required: AnonHint = null,
-    tooltipTime: String = null,
-    tooltipTimeDisabled: String = null
-  ): AnonAmpmWheelLabel = {
+  def apply(): AnonAmpmWheelLabel = {
     val __obj = js.Dynamic.literal()
-    if (ampmWheelLabel != null) __obj.updateDynamic("ampmWheelLabel")(ampmWheelLabel.asInstanceOf[js.Any])
-    if (cancelText != null) __obj.updateDynamic("cancelText")(cancelText.asInstanceOf[js.Any])
-    if (currentTimeText != null) __obj.updateDynamic("currentTimeText")(currentTimeText.asInstanceOf[js.Any])
-    if (dateTimeRange != null) __obj.updateDynamic("dateTimeRange")(dateTimeRange.asInstanceOf[js.Any])
-    if (hourWheelLabel != null) __obj.updateDynamic("hourWheelLabel")(hourWheelLabel.asInstanceOf[js.Any])
-    if (minuteWheelLabel != null) __obj.updateDynamic("minuteWheelLabel")(minuteWheelLabel.asInstanceOf[js.Any])
-    if (okText != null) __obj.updateDynamic("okText")(okText.asInstanceOf[js.Any])
-    if (regexp != null) __obj.updateDynamic("regexp")(regexp.asInstanceOf[js.Any])
-    if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
-    if (tooltipTime != null) __obj.updateDynamic("tooltipTime")(tooltipTime.asInstanceOf[js.Any])
-    if (tooltipTimeDisabled != null) __obj.updateDynamic("tooltipTimeDisabled")(tooltipTimeDisabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAmpmWheelLabel]
   }
+  @scala.inline
+  implicit class AnonAmpmWheelLabelOps[Self <: AnonAmpmWheelLabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmpmWheelLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ampmWheelLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpmWheelLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ampmWheelLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentTimeText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTimeText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentTimeText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTimeText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateTimeRange(value: AnonMessageDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateTimeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateTimeRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHourWheelLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hourWheelLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHourWheelLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hourWheelLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinuteWheelLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteWheelLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinuteWheelLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteWheelLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOkText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("okText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOkText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("okText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegexp(value: AnonMessageSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regexp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegexp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regexp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequired(value: AnonHint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("required")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipTimeDisabled(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipTimeDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipTimeDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipTimeDisabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

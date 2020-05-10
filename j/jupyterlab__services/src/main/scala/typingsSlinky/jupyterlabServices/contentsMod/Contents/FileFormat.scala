@@ -16,12 +16,10 @@ trait FileFormat extends js.Object
 
 object FileFormat {
   @scala.inline
-  def base64: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.base64 = this.cast("base64")
+  def base64: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.base64 = "base64".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.base64]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def json: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.json = "json".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.json]
   @scala.inline
-  def json: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.json = this.cast("json")
-  @scala.inline
-  def text: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.text = this.cast("text")
+  def text: typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.text = "text".asInstanceOf[typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.text]
 }
 

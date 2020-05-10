@@ -22,11 +22,41 @@ trait SchemaScoresResetMultipleForAllRequest extends js.Object {
 
 object SchemaScoresResetMultipleForAllRequest {
   @scala.inline
-  def apply(kind: String = null, leaderboard_ids: js.Array[String] = null): SchemaScoresResetMultipleForAllRequest = {
+  def apply(): SchemaScoresResetMultipleForAllRequest = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (leaderboard_ids != null) __obj.updateDynamic("leaderboard_ids")(leaderboard_ids.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaScoresResetMultipleForAllRequest]
   }
+  @scala.inline
+  implicit class SchemaScoresResetMultipleForAllRequestOps[Self <: SchemaScoresResetMultipleForAllRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeaderboard_ids(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaderboard_ids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeaderboard_ids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaderboard_ids")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

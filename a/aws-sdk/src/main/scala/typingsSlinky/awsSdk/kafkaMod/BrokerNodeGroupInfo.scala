@@ -42,18 +42,65 @@ trait BrokerNodeGroupInfo extends js.Object {
 
 object BrokerNodeGroupInfo {
   @scala.inline
-  def apply(
-    ClientSubnets: listOfString,
-    InstanceType: stringMin5Max32,
-    BrokerAZDistribution: BrokerAZDistribution = null,
-    SecurityGroups: listOfString = null,
-    StorageInfo: StorageInfo = null
-  ): BrokerNodeGroupInfo = {
+  def apply(ClientSubnets: listOfString, InstanceType: stringMin5Max32): BrokerNodeGroupInfo = {
     val __obj = js.Dynamic.literal(ClientSubnets = ClientSubnets.asInstanceOf[js.Any], InstanceType = InstanceType.asInstanceOf[js.Any])
-    if (BrokerAZDistribution != null) __obj.updateDynamic("BrokerAZDistribution")(BrokerAZDistribution.asInstanceOf[js.Any])
-    if (SecurityGroups != null) __obj.updateDynamic("SecurityGroups")(SecurityGroups.asInstanceOf[js.Any])
-    if (StorageInfo != null) __obj.updateDynamic("StorageInfo")(StorageInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrokerNodeGroupInfo]
   }
+  @scala.inline
+  implicit class BrokerNodeGroupInfoOps[Self <: BrokerNodeGroupInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientSubnets(value: listOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientSubnets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: stringMin5Max32): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBrokerAZDistribution(value: BrokerAZDistribution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerAZDistribution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrokerAZDistribution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BrokerAZDistribution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroups(value: listOfString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageInfo(value: StorageInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,19 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Bucket extends js.Object {
-  var StorageClass: StorageType
-  var creationDate: String
-  var name: String
-  var region: String
+  var StorageClass: StorageType = js.native
+  var creationDate: String = js.native
+  var name: String = js.native
+  var region: String = js.native
 }
 
 object Bucket {
   @scala.inline
   def apply(StorageClass: StorageType, creationDate: String, name: String, region: String): Bucket = {
     val __obj = js.Dynamic.literal(StorageClass = StorageClass.asInstanceOf[js.Any], creationDate = creationDate.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], region = region.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Bucket]
   }
+  @scala.inline
+  implicit class BucketOps[Self <: Bucket] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStorageClass(value: StorageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -44,11 +44,12 @@ trait SVGPolygonElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGPolygonElement")
 @js.native
-object SVGPolygonElement extends Instantiable0[SVGPolygonElement]
+object SVGPolygonElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGPolygonElement]
 

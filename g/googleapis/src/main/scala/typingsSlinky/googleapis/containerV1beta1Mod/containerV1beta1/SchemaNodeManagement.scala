@@ -26,16 +26,53 @@ trait SchemaNodeManagement extends js.Object {
 
 object SchemaNodeManagement {
   @scala.inline
-  def apply(
-    autoRepair: js.UndefOr[Boolean] = js.undefined,
-    autoUpgrade: js.UndefOr[Boolean] = js.undefined,
-    upgradeOptions: SchemaAutoUpgradeOptions = null
-  ): SchemaNodeManagement = {
+  def apply(): SchemaNodeManagement = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoRepair)) __obj.updateDynamic("autoRepair")(autoRepair.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoUpgrade)) __obj.updateDynamic("autoUpgrade")(autoUpgrade.asInstanceOf[js.Any])
-    if (upgradeOptions != null) __obj.updateDynamic("upgradeOptions")(upgradeOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaNodeManagement]
   }
+  @scala.inline
+  implicit class SchemaNodeManagementOps[Self <: SchemaNodeManagement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoRepair(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRepair")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoRepair: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRepair")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoUpgrade(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpgrade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoUpgrade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpgrade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpgradeOptions(value: SchemaAutoUpgradeOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upgradeOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpgradeOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upgradeOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

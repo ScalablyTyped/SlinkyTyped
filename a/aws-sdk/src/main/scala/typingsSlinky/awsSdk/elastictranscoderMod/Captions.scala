@@ -22,16 +22,53 @@ trait Captions extends js.Object {
 
 object Captions {
   @scala.inline
-  def apply(
-    CaptionFormats: CaptionFormats = null,
-    CaptionSources: CaptionSources = null,
-    MergePolicy: CaptionMergePolicy = null
-  ): Captions = {
+  def apply(): Captions = {
     val __obj = js.Dynamic.literal()
-    if (CaptionFormats != null) __obj.updateDynamic("CaptionFormats")(CaptionFormats.asInstanceOf[js.Any])
-    if (CaptionSources != null) __obj.updateDynamic("CaptionSources")(CaptionSources.asInstanceOf[js.Any])
-    if (MergePolicy != null) __obj.updateDynamic("MergePolicy")(MergePolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[Captions]
   }
+  @scala.inline
+  implicit class CaptionsOps[Self <: Captions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaptionFormats(value: CaptionFormats): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionFormats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionFormats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionFormats")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptionSources(value: CaptionSources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionSources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptionSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CaptionSources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMergePolicy(value: CaptionMergePolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MergePolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMergePolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MergePolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

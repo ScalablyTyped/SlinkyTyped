@@ -1,6 +1,7 @@
 package typingsSlinky.next
 
 import typingsSlinky.next.checkCustomRoutesMod.RouteType
+import typingsSlinky.next.routerMod.HistoryMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,16 +35,28 @@ object nextStrings {
   sealed trait hybrid extends js.Object
   
   @js.native
+  sealed trait pause extends js.Object
+  
+  @js.native
   sealed trait pipe extends js.Object
   
   @js.native
   sealed trait production extends js.Object
   
   @js.native
+  sealed trait pushState extends HistoryMethod
+  
+  @js.native
   sealed trait readable extends js.Object
   
   @js.native
   sealed trait redirect extends RouteType
+  
+  @js.native
+  sealed trait replaceState extends HistoryMethod
+  
+  @js.native
+  sealed trait resume extends js.Object
   
   @js.native
   sealed trait rewrite extends RouteType
@@ -73,13 +86,21 @@ object nextStrings {
   @scala.inline
   def hybrid: hybrid = "hybrid".asInstanceOf[hybrid]
   @scala.inline
+  def pause: pause = "pause".asInstanceOf[pause]
+  @scala.inline
   def pipe: pipe = "pipe".asInstanceOf[pipe]
   @scala.inline
   def production: production = "production".asInstanceOf[production]
   @scala.inline
+  def pushState: pushState = "pushState".asInstanceOf[pushState]
+  @scala.inline
   def readable: readable = "readable".asInstanceOf[readable]
   @scala.inline
   def redirect: redirect = "redirect".asInstanceOf[redirect]
+  @scala.inline
+  def replaceState: replaceState = "replaceState".asInstanceOf[replaceState]
+  @scala.inline
+  def resume: resume = "resume".asInstanceOf[resume]
   @scala.inline
   def rewrite: rewrite = "rewrite".asInstanceOf[rewrite]
   @scala.inline

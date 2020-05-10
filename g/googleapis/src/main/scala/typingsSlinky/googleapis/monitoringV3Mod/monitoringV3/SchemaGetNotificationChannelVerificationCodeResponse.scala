@@ -26,11 +26,41 @@ trait SchemaGetNotificationChannelVerificationCodeResponse extends js.Object {
 
 object SchemaGetNotificationChannelVerificationCodeResponse {
   @scala.inline
-  def apply(code: String = null, expireTime: String = null): SchemaGetNotificationChannelVerificationCodeResponse = {
+  def apply(): SchemaGetNotificationChannelVerificationCodeResponse = {
     val __obj = js.Dynamic.literal()
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (expireTime != null) __obj.updateDynamic("expireTime")(expireTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetNotificationChannelVerificationCodeResponse]
   }
+  @scala.inline
+  implicit class SchemaGetNotificationChannelVerificationCodeResponseOps[Self <: SchemaGetNotificationChannelVerificationCodeResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpireTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expireTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpireTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expireTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

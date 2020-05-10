@@ -3,7 +3,6 @@ package typingsSlinky.cassandraDriver
 import typingsSlinky.cassandraDriver.mod.errors.AuthenticationError
 import typingsSlinky.cassandraDriver.mod.errors.OperationTimedOutError
 import typingsSlinky.cassandraDriver.mod.errors.ResponseError
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object metricsMod extends js.Object {
     @js.native
     trait ClientMetrics extends js.Object {
       def onAuthenticationError(e: AuthenticationError): Unit = js.native
-      def onAuthenticationError(e: Error): Unit = js.native
+      def onAuthenticationError(e: js.Error): Unit = js.native
       def onClientTimeoutError(e: OperationTimedOutError): Unit = js.native
       def onClientTimeoutRetry(e: js.Error): Unit = js.native
       def onConnectionError(e: js.Error): Unit = js.native

@@ -1,7 +1,8 @@
 package typingsSlinky.reactTimeago.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactTimeago.mod.ReactTimeagoProps
 import typingsSlinky.reactTimeago.mod.^
@@ -9,14 +10,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Couldn't find props for TypeRef(QualifiedName(IArray(Name(<intersection>))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(reactTimeago), Name(mod), Name(ReactTimeagoProps))),IArray(TypeRef(QualifiedName(IArray(Name(T))),IArray(),NoComments)),NoComments), TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(react), Name(mod), Name(ComponentProps))),IArray(TypeRef(QualifiedName(IArray(Name(T))),IArray(),NoComments)),NoComments)),NoComments) because: Not a trait, Could't extract props from TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),Comments(1)) because couldn't resolve ClassTree. */
-object ReactTimeago
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^[js.Any]] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reactTimeago.mod.ReactTimeagoProps[T] with typingsSlinky.react.mod.ComponentProps[T] because: IArray(Not a trait, Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.) */
+object ReactTimeago {
   @JSImport("react-timeago", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = ReactTimeagoProps[js.Any] with ComponentProps[js.Any]
+  @scala.inline
+  class Builder[T <: ReactComponentClass[js.Object]] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^[js.Any]]
+  
+  def apply[T <: ReactComponentClass[js.Object]](p: ReactTimeagoProps[T] with ComponentProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T <: ReactComponentClass[js.Object]](companion: ReactTimeago.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

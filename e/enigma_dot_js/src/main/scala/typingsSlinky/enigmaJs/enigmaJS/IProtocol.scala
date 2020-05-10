@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IProtocol extends js.Object {
   // Set to false to disable the use of the bandwidth-reducing delta protocol.
-  var delta: js.UndefOr[Boolean] = js.undefined
+  var delta: js.UndefOr[Boolean] = js.native
 }
 
 object IProtocol {
   @scala.inline
-  def apply(delta: js.UndefOr[Boolean] = js.undefined): IProtocol = {
+  def apply(): IProtocol = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(delta)) __obj.updateDynamic("delta")(delta.asInstanceOf[js.Any])
     __obj.asInstanceOf[IProtocol]
   }
+  @scala.inline
+  implicit class IProtocolOps[Self <: IProtocol] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelta(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

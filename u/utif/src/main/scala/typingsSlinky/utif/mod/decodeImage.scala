@@ -1,7 +1,6 @@
 package typingsSlinky.utif.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object decodeImage extends js.Object {
   def apply(buffer: Buffer, ifd: IFD): Unit = js.native
-  def apply(buffer: ArrayBuffer, ifd: IFD): Unit = js.native
+  def apply(buffer: js.typedarray.ArrayBuffer, ifd: IFD): Unit = js.native
 }
 

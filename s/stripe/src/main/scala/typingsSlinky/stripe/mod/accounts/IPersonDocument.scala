@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IPersonDocument extends IPersonDocumentCreateUpdateOptions {
   /**
     * A user-displayable string describing the verification state of this document.
     * For example, if a document is uploaded and the picture is too fuzzy, this may
     * say “Identity document is too unclear to read”.
     */
-  var details: js.UndefOr[String] = js.undefined
+  var details: js.UndefOr[String] = js.native
   /**
     * One of document_corrupt, document_country_not_supported, document_expired, document_failed_copy,
     * document_failed_other, document_failed_test_mode, document_fraudulent, document_failed_greyscale,
@@ -18,18 +19,46 @@ trait IPersonDocument extends IPersonDocumentCreateUpdateOptions {
     * document_not_readable, document_not_uploaded, document_photo_mismatch, document_too_large, or document_type_not_supported.
     * A machine-readable code specifying the verification state for this document.
     */
-  var details_code: js.UndefOr[String] = js.undefined
+  var details_code: js.UndefOr[String] = js.native
 }
 
 object IPersonDocument {
   @scala.inline
-  def apply(back: String = null, details: String = null, details_code: String = null, front: String = null): IPersonDocument = {
+  def apply(): IPersonDocument = {
     val __obj = js.Dynamic.literal()
-    if (back != null) __obj.updateDynamic("back")(back.asInstanceOf[js.Any])
-    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
-    if (details_code != null) __obj.updateDynamic("details_code")(details_code.asInstanceOf[js.Any])
-    if (front != null) __obj.updateDynamic("front")(front.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPersonDocument]
   }
+  @scala.inline
+  implicit class IPersonDocumentOps[Self <: IPersonDocument] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetails(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDetails_code(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details_code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails_code: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details_code")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

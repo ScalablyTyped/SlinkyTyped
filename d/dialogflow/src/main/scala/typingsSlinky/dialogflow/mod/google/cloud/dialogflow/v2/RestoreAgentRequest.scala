@@ -6,7 +6,6 @@ import typingsSlinky.dialogflow.dialogflowStrings.agentUri
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +23,7 @@ class RestoreAgentRequest () extends IRestoreAgentRequest {
   var agent: js.UndefOr[agentUri | agentContent] = js.native
   /** RestoreAgentRequest agentContent. */
   @JSName("agentContent")
-  var agentContent_RestoreAgentRequest: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var agentContent_RestoreAgentRequest: js.typedarray.Uint8Array = js.native
   /** RestoreAgentRequest agentUri. */
   @JSName("agentUri")
   var agentUri_RestoreAgentRequest: String = js.native
@@ -59,8 +58,8 @@ object RestoreAgentRequest extends js.Object {
     */
   def decode(reader: Reader): RestoreAgentRequest = js.native
   def decode(reader: Reader, length: Double): RestoreAgentRequest = js.native
-  def decode(reader: Uint8Array): RestoreAgentRequest = js.native
-  def decode(reader: Uint8Array, length: Double): RestoreAgentRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array): RestoreAgentRequest = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): RestoreAgentRequest = js.native
   /**
     * Decodes a RestoreAgentRequest message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -69,7 +68,7 @@ object RestoreAgentRequest extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): RestoreAgentRequest = js.native
-  def decodeDelimited(reader: Uint8Array): RestoreAgentRequest = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): RestoreAgentRequest = js.native
   /**
     * Encodes the specified RestoreAgentRequest message. Does not implicitly {@link google.cloud.dialogflow.v2.RestoreAgentRequest.verify|verify} messages.
     * @param message RestoreAgentRequest message or plain object to encode

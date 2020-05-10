@@ -46,9 +46,9 @@ import typingsSlinky.androiduix.android.widget.AdapterView.OnItemClickListener
 import typingsSlinky.androiduix.android.widget.AdapterView.OnItemLongClickListener
 import typingsSlinky.androiduix.android.widget.AdapterView.OnItemSelectedListener
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
-import typingsSlinky.androiduix.java.lang.Runnable
-import typingsSlinky.androiduix.java.util.ArrayList
-import typingsSlinky.androiduix.java.util.List
+import typingsSlinky.androiduix.java_.lang.Runnable
+import typingsSlinky.androiduix.java_.util.ArrayList
+import typingsSlinky.androiduix.java_.util.List
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -905,8 +905,6 @@ abstract class AbsListView_ protected ()
   override def onFocusLost(): Unit = js.native
   /* InferMemberOverrides */
   override def onGenericMotionEvent(event: MotionEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onGlobalLayout(): js.Any = js.native
   /* InferMemberOverrides */
   override def onInterceptTouchEvent(ev: MotionEvent): Boolean = js.native
   /* InferMemberOverrides */
@@ -932,8 +930,6 @@ abstract class AbsListView_ protected ()
   /* private */ def onTouchDown(ev: js.Any): js.Any = js.native
   /* InferMemberOverrides */
   override def onTouchEvent(event: MotionEvent): Boolean = js.native
-  /* CompleteClass */
-  override def onTouchModeChanged(isInTouchMode: Boolean): js.Any = js.native
   /* private */ def onTouchMove(ev: js.Any): js.Any = js.native
   /* private */ def onTouchUp(ev: js.Any): js.Any = js.native
   /* InferMemberOverrides */

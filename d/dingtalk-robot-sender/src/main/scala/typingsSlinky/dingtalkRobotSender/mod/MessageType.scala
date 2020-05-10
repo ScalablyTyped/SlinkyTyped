@@ -1,6 +1,5 @@
 package typingsSlinky.dingtalkRobotSender.mod
 
-import typingsSlinky.dingtalkRobotSender.AnonAtMobiles
 import typingsSlinky.dingtalkRobotSender.AnonBtnOrientation
 import typingsSlinky.dingtalkRobotSender.AnonContent
 import typingsSlinky.dingtalkRobotSender.AnonIsAtAll
@@ -28,31 +27,26 @@ object MessageType {
   @scala.inline
   def Link(link: AnonMessageUrl, msgtype: link): MessageType = {
     val __obj = js.Dynamic.literal(link = link.asInstanceOf[js.Any], msgtype = msgtype.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MessageType]
   }
   @scala.inline
   def FeedCardItem(feedCard: AnonMessageURL_, msgtype: feedCard): MessageType = {
     val __obj = js.Dynamic.literal(feedCard = feedCard.asInstanceOf[js.Any], msgtype = msgtype.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MessageType]
   }
   @scala.inline
-  def Text(msgtype: text, text: AnonContent, at: AnonAtMobiles = null): MessageType = {
+  def Text(msgtype: text, text: AnonContent): MessageType = {
     val __obj = js.Dynamic.literal(msgtype = msgtype.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
-    if (at != null) __obj.updateDynamic("at")(at.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageType]
   }
   @scala.inline
   def Markdown(markdown: AnonIsAtAll, msgtype: markdown): MessageType = {
     val __obj = js.Dynamic.literal(markdown = markdown.asInstanceOf[js.Any], msgtype = msgtype.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MessageType]
   }
   @scala.inline
   def ActionCard(actionCard: AnonBtnOrientation, msgtype: actionCard): MessageType = {
     val __obj = js.Dynamic.literal(actionCard = actionCard.asInstanceOf[js.Any], msgtype = msgtype.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[MessageType]
   }
 }

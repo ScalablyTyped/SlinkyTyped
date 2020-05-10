@@ -21,7 +21,6 @@ import typingsSlinky.chromeApps.chromeAppsStrings.NO_SPACE
 import typingsSlinky.chromeApps.chromeAppsStrings.OK
 import typingsSlinky.chromeApps.chromeAppsStrings.SECURITY
 import typingsSlinky.chromeApps.chromeAppsStrings.TOO_MANY_OPENED
-import typingsSlinky.std.ArrayBuffer
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,13 +39,13 @@ object onReadFileRequested
       Event[
         js.Function3[
           /* options */ ReadFileRequestedEventOptions, 
-          /* successCallback */ js.Function2[/* data */ ArrayBuffer, /* hasMore */ Boolean, Unit], 
+          /* successCallback */ js.Function2[/* data */ js.typedarray.ArrayBuffer, /* hasMore */ Boolean, Unit], 
           /* errorCallback */ js.Function1[
             /* error */ ToStringLiteral[
               AnonABORT, 
-              String, 
+              /* keyof chrome-apps.AnonABORT */ OK | FAILED | IN_USE | EXISTS | NOT_FOUND | ACCESS_DENIED | TOO_MANY_OPENED | NO_MEMORY | NO_SPACE | NOT_A_DIRECTORY | INVALID_OPERATION | SECURITY | ABORT | NOT_A_FILE | NOT_EMPTY | INVALID_URL | IO, 
               Exclude[
-                String, 
+                /* keyof chrome-apps.AnonABORT */ OK | FAILED | IN_USE | EXISTS | NOT_FOUND | ACCESS_DENIED | TOO_MANY_OPENED | NO_MEMORY | NO_SPACE | NOT_A_DIRECTORY | INVALID_OPERATION | SECURITY | ABORT | NOT_A_FILE | NOT_EMPTY | INVALID_URL | IO, 
                 INVALID_URL | IN_USE | OK | ABORT | SECURITY | NOT_A_DIRECTORY | NOT_A_FILE | INVALID_OPERATION | TOO_MANY_OPENED | NO_MEMORY | ACCESS_DENIED | NOT_FOUND | FAILED | NO_SPACE | EXISTS | NOT_EMPTY | IO
               ]
             ], 

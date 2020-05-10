@@ -4,57 +4,205 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDragging extends js.Object {
-  var dragging: js.UndefOr[Boolean] = js.undefined
-  var drillThroughMaxRows: js.UndefOr[Double] = js.undefined
-  var grandTotalsPosition: js.UndefOr[String] = js.undefined
-  var showAutoCalculationBar: js.UndefOr[Boolean] = js.undefined
-  var showEmptyValues: js.UndefOr[Boolean] = js.undefined
-  var showFilter: js.UndefOr[Boolean] = js.undefined
-  var showGrandTotals: js.UndefOr[String] = js.undefined
-  var showHeaders: js.UndefOr[Boolean] = js.undefined
-  var showHierarchies: js.UndefOr[Boolean] = js.undefined
-  var showHierarchyCaptions: js.UndefOr[Boolean] = js.undefined
-  var showReportFiltersArea: js.UndefOr[Boolean] = js.undefined
-  var showTotals: js.UndefOr[Boolean] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
+  var dragging: js.UndefOr[Boolean] = js.native
+  var drillThroughMaxRows: js.UndefOr[Double] = js.native
+  var grandTotalsPosition: js.UndefOr[String] = js.native
+  var showAutoCalculationBar: js.UndefOr[Boolean] = js.native
+  var showEmptyValues: js.UndefOr[Boolean] = js.native
+  var showFilter: js.UndefOr[Boolean] = js.native
+  var showGrandTotals: js.UndefOr[String] = js.native
+  var showHeaders: js.UndefOr[Boolean] = js.native
+  var showHierarchies: js.UndefOr[Boolean] = js.native
+  var showHierarchyCaptions: js.UndefOr[Boolean] = js.native
+  var showReportFiltersArea: js.UndefOr[Boolean] = js.native
+  var showTotals: js.UndefOr[Boolean] = js.native
+  var title: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object AnonDragging {
   @scala.inline
-  def apply(
-    dragging: js.UndefOr[Boolean] = js.undefined,
-    drillThroughMaxRows: Int | Double = null,
-    grandTotalsPosition: String = null,
-    showAutoCalculationBar: js.UndefOr[Boolean] = js.undefined,
-    showEmptyValues: js.UndefOr[Boolean] = js.undefined,
-    showFilter: js.UndefOr[Boolean] = js.undefined,
-    showGrandTotals: String = null,
-    showHeaders: js.UndefOr[Boolean] = js.undefined,
-    showHierarchies: js.UndefOr[Boolean] = js.undefined,
-    showHierarchyCaptions: js.UndefOr[Boolean] = js.undefined,
-    showReportFiltersArea: js.UndefOr[Boolean] = js.undefined,
-    showTotals: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
-    `type`: String = null
-  ): AnonDragging = {
+  def apply(): AnonDragging = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(dragging)) __obj.updateDynamic("dragging")(dragging.asInstanceOf[js.Any])
-    if (drillThroughMaxRows != null) __obj.updateDynamic("drillThroughMaxRows")(drillThroughMaxRows.asInstanceOf[js.Any])
-    if (grandTotalsPosition != null) __obj.updateDynamic("grandTotalsPosition")(grandTotalsPosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(showAutoCalculationBar)) __obj.updateDynamic("showAutoCalculationBar")(showAutoCalculationBar.asInstanceOf[js.Any])
-    if (!js.isUndefined(showEmptyValues)) __obj.updateDynamic("showEmptyValues")(showEmptyValues.asInstanceOf[js.Any])
-    if (!js.isUndefined(showFilter)) __obj.updateDynamic("showFilter")(showFilter.asInstanceOf[js.Any])
-    if (showGrandTotals != null) __obj.updateDynamic("showGrandTotals")(showGrandTotals.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHeaders)) __obj.updateDynamic("showHeaders")(showHeaders.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHierarchies)) __obj.updateDynamic("showHierarchies")(showHierarchies.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHierarchyCaptions)) __obj.updateDynamic("showHierarchyCaptions")(showHierarchyCaptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(showReportFiltersArea)) __obj.updateDynamic("showReportFiltersArea")(showReportFiltersArea.asInstanceOf[js.Any])
-    if (!js.isUndefined(showTotals)) __obj.updateDynamic("showTotals")(showTotals.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDragging]
   }
+  @scala.inline
+  implicit class AnonDraggingOps[Self <: AnonDragging] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDragging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrillThroughMaxRows(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillThroughMaxRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrillThroughMaxRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drillThroughMaxRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrandTotalsPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grandTotalsPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrandTotalsPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grandTotalsPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowAutoCalculationBar(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showAutoCalculationBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowAutoCalculationBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showAutoCalculationBar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowEmptyValues(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showEmptyValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowEmptyValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showEmptyValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowFilter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowGrandTotals(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showGrandTotals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowGrandTotals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showGrandTotals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowHeaders(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowHierarchies(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHierarchies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowHierarchies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHierarchies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowHierarchyCaptions(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHierarchyCaptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowHierarchyCaptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showHierarchyCaptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowReportFiltersArea(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showReportFiltersArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowReportFiltersArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showReportFiltersArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowTotals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowTotals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showTotals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

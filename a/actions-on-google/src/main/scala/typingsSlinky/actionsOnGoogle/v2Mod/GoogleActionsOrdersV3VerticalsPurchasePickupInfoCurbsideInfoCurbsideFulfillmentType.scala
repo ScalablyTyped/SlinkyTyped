@@ -12,10 +12,8 @@ trait GoogleActionsOrdersV3VerticalsPurchasePickupInfoCurbsideInfoCurbsideFulfil
 
 object GoogleActionsOrdersV3VerticalsPurchasePickupInfoCurbsideInfoCurbsideFulfillmentType {
   @scala.inline
-  def UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNSPECIFIED = this.cast("UNSPECIFIED")
+  def UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNSPECIFIED = "UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNSPECIFIED]
   @scala.inline
-  def VEHICLE_DETAIL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VEHICLE_DETAIL = this.cast("VEHICLE_DETAIL")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VEHICLE_DETAIL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VEHICLE_DETAIL = "VEHICLE_DETAIL".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.VEHICLE_DETAIL]
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.validator
 
-import typingsSlinky.validator.mod.validator.AlphanumericLocale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,7 @@ object isAlphanumericMod extends js.Object {
     * @param [locale] - AlphanumericLocale
     */
   def default(str: String): Boolean = js.native
-  def default(str: String, locale: AlphanumericLocale): Boolean = js.native
+  def default(str: String, locale: typingsSlinky.validator.mod.validator.AlphanumericLocale): Boolean = js.native
+  type AlphanumericLocale = typingsSlinky.validator.mod.validator.AlphanumericLocale
 }
 

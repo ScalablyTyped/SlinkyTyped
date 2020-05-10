@@ -21,6 +21,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An interface describing the data returned by calling `rangeFormat.toJSON()`. */
+@js.native
 trait RangeFormatData extends js.Object {
   /**
     *
@@ -28,35 +29,35 @@ trait RangeFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var autoIndent: js.UndefOr[Boolean] = js.undefined
+  var autoIndent: js.UndefOr[Boolean] = js.native
   /**
     *
     * Collection of border objects that apply to the overall range. Read-only.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var borders: js.UndefOr[js.Array[RangeBorderData]] = js.undefined
+  var borders: js.UndefOr[js.Array[RangeBorderData]] = js.native
   /**
     *
     * Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
     *
     * [Api set: ExcelApi 1.2]
     */
-  var columnWidth: js.UndefOr[Double] = js.undefined
+  var columnWidth: js.UndefOr[Double] = js.native
   /**
     *
     * Returns the fill object defined on the overall range. Read-only.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var fill: js.UndefOr[RangeFillData] = js.undefined
+  var fill: js.UndefOr[RangeFillData] = js.native
   /**
     *
     * Returns the font object defined on the overall range. Read-only.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var font: js.UndefOr[RangeFontData] = js.undefined
+  var font: js.UndefOr[RangeFontData] = js.native
   /**
     *
     * Represents the horizontal alignment for the specified object. See Excel.HorizontalAlignment for details.
@@ -65,42 +66,42 @@ trait RangeFormatData extends js.Object {
     */
   var horizontalAlignment: js.UndefOr[
     HorizontalAlignment | General | Left | Center | Right | Fill | Justify | CenterAcrossSelection | Distributed
-  ] = js.undefined
+  ] = js.native
   /**
     *
     * An integer from 0 to 250 that indicates the indent level.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var indentLevel: js.UndefOr[Double] = js.undefined
+  var indentLevel: js.UndefOr[Double] = js.native
   /**
     *
     * Returns the format protection object for a range. Read-only.
     *
     * [Api set: ExcelApi 1.2]
     */
-  var protection: js.UndefOr[FormatProtectionData] = js.undefined
+  var protection: js.UndefOr[FormatProtectionData] = js.native
   /**
     *
     * The reading order for the range.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var readingOrder: js.UndefOr[ReadingOrder | Context | LeftToRight | RightToLeft] = js.undefined
+  var readingOrder: js.UndefOr[ReadingOrder | Context | LeftToRight | RightToLeft] = js.native
   /**
     *
     * Gets or sets the height of all rows in the range. If the row heights are not uniform, null will be returned.
     *
     * [Api set: ExcelApi 1.2]
     */
-  var rowHeight: js.UndefOr[Double] = js.undefined
+  var rowHeight: js.UndefOr[Double] = js.native
   /**
     *
     * Indicates if text automatically shrinks to fit in the available column width.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var shrinkToFit: js.UndefOr[Boolean] = js.undefined
+  var shrinkToFit: js.UndefOr[Boolean] = js.native
   /**
     *
     * Gets or sets the text orientation of all the cells within the range.
@@ -109,7 +110,7 @@ trait RangeFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.7]
     */
-  var textOrientation: js.UndefOr[Double] = js.undefined
+  var textOrientation: js.UndefOr[Double] = js.native
   /**
     *
     * Determines if the row height of the Range object equals the standard height of the sheet.
@@ -119,7 +120,7 @@ trait RangeFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.7]
     */
-  var useStandardHeight: js.UndefOr[Boolean] = js.undefined
+  var useStandardHeight: js.UndefOr[Boolean] = js.native
   /**
     *
     * Indicates whether the column width of the Range object equals the standard width of the sheet.
@@ -129,61 +130,230 @@ trait RangeFormatData extends js.Object {
     *
     * [Api set: ExcelApi 1.7]
     */
-  var useStandardWidth: js.UndefOr[Boolean] = js.undefined
+  var useStandardWidth: js.UndefOr[Boolean] = js.native
   /**
     *
     * Represents the vertical alignment for the specified object. See Excel.VerticalAlignment for details.
     *
     * [Api set: ExcelApi 1.1]
     */
-  var verticalAlignment: js.UndefOr[VerticalAlignment | Top | Center | Bottom | Justify | Distributed] = js.undefined
+  var verticalAlignment: js.UndefOr[VerticalAlignment | Top | Center | Bottom | Justify | Distributed] = js.native
   /**
     *
     * Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
     *
     * [Api set: ExcelApi 1.1]
     */
-  var wrapText: js.UndefOr[Boolean] = js.undefined
+  var wrapText: js.UndefOr[Boolean] = js.native
 }
 
 object RangeFormatData {
   @scala.inline
-  def apply(
-    autoIndent: js.UndefOr[Boolean] = js.undefined,
-    borders: js.Array[RangeBorderData] = null,
-    columnWidth: Int | Double = null,
-    fill: RangeFillData = null,
-    font: RangeFontData = null,
-    horizontalAlignment: HorizontalAlignment | General | Left | Center | Right | Fill | Justify | CenterAcrossSelection | Distributed = null,
-    indentLevel: Int | Double = null,
-    protection: FormatProtectionData = null,
-    readingOrder: ReadingOrder | Context | LeftToRight | RightToLeft = null,
-    rowHeight: Int | Double = null,
-    shrinkToFit: js.UndefOr[Boolean] = js.undefined,
-    textOrientation: Int | Double = null,
-    useStandardHeight: js.UndefOr[Boolean] = js.undefined,
-    useStandardWidth: js.UndefOr[Boolean] = js.undefined,
-    verticalAlignment: VerticalAlignment | Top | Center | Bottom | Justify | Distributed = null,
-    wrapText: js.UndefOr[Boolean] = js.undefined
-  ): RangeFormatData = {
+  def apply(): RangeFormatData = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoIndent)) __obj.updateDynamic("autoIndent")(autoIndent.asInstanceOf[js.Any])
-    if (borders != null) __obj.updateDynamic("borders")(borders.asInstanceOf[js.Any])
-    if (columnWidth != null) __obj.updateDynamic("columnWidth")(columnWidth.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (horizontalAlignment != null) __obj.updateDynamic("horizontalAlignment")(horizontalAlignment.asInstanceOf[js.Any])
-    if (indentLevel != null) __obj.updateDynamic("indentLevel")(indentLevel.asInstanceOf[js.Any])
-    if (protection != null) __obj.updateDynamic("protection")(protection.asInstanceOf[js.Any])
-    if (readingOrder != null) __obj.updateDynamic("readingOrder")(readingOrder.asInstanceOf[js.Any])
-    if (rowHeight != null) __obj.updateDynamic("rowHeight")(rowHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(shrinkToFit)) __obj.updateDynamic("shrinkToFit")(shrinkToFit.asInstanceOf[js.Any])
-    if (textOrientation != null) __obj.updateDynamic("textOrientation")(textOrientation.asInstanceOf[js.Any])
-    if (!js.isUndefined(useStandardHeight)) __obj.updateDynamic("useStandardHeight")(useStandardHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(useStandardWidth)) __obj.updateDynamic("useStandardWidth")(useStandardWidth.asInstanceOf[js.Any])
-    if (verticalAlignment != null) __obj.updateDynamic("verticalAlignment")(verticalAlignment.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapText)) __obj.updateDynamic("wrapText")(wrapText.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangeFormatData]
   }
+  @scala.inline
+  implicit class RangeFormatDataOps[Self <: RangeFormatData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoIndent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIndent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoIndent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoIndent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorders(value: js.Array[RangeBorderData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFill(value: RangeFillData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: RangeFontData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalAlignment(
+      value: HorizontalAlignment | General | Left | Center | Right | Fill | Justify | CenterAcrossSelection | Distributed
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndentLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndentLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtection(value: FormatProtectionData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadingOrder(value: ReadingOrder | Context | LeftToRight | RightToLeft): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readingOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadingOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readingOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShrinkToFit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shrinkToFit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShrinkToFit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shrinkToFit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextOrientation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textOrientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseStandardHeight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useStandardHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseStandardHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useStandardHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseStandardWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useStandardWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseStandardWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useStandardWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalAlignment(value: VerticalAlignment | Top | Center | Bottom | Justify | Distributed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapText(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapText")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

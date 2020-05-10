@@ -14,19 +14,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Font extends js.Object {
-  var bold: Boolean
-  var charset: Double
-  var color: PartialColor
-  var family: Double
-  var italic: Boolean
-  var name: String
-  var outline: Boolean
-  var scheme: minor | major | none_
-  var size: Double
-  var strike: Boolean
-  var underline: Boolean | none_ | single | double | singleAccounting | doubleAccounting
-  var vertAlign: superscript | subscript
+  var bold: Boolean = js.native
+  var charset: Double = js.native
+  var color: PartialColor = js.native
+  var family: Double = js.native
+  var italic: Boolean = js.native
+  var name: String = js.native
+  var outline: Boolean = js.native
+  var scheme: minor | major | none_ = js.native
+  var size: Double = js.native
+  var strike: Boolean = js.native
+  var underline: Boolean | none_ | single | double | singleAccounting | doubleAccounting = js.native
+  var vertAlign: superscript | subscript = js.native
 }
 
 object Font {
@@ -46,8 +47,87 @@ object Font {
     vertAlign: superscript | subscript
   ): Font = {
     val __obj = js.Dynamic.literal(bold = bold.asInstanceOf[js.Any], charset = charset.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], family = family.asInstanceOf[js.Any], italic = italic.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], outline = outline.asInstanceOf[js.Any], scheme = scheme.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], strike = strike.asInstanceOf[js.Any], underline = underline.asInstanceOf[js.Any], vertAlign = vertAlign.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Font]
   }
+  @scala.inline
+  implicit class FontOps[Self <: Font] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBold(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCharset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColor(value: PartialColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFamily(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItalic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("italic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScheme(value: minor | major | none_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrike(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strike")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnderline(value: Boolean | none_ | single | double | singleAccounting | doubleAccounting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("underline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertAlign(value: superscript | subscript): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

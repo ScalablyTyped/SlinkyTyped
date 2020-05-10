@@ -19,24 +19,22 @@ trait AppBarClassKey extends js.Object
 
 object AppBarClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def colorDefault: typingsSlinky.materialUiCore.materialUiCoreStrings.colorDefault = "colorDefault".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorDefault]
   @scala.inline
-  def colorDefault: typingsSlinky.materialUiCore.materialUiCoreStrings.colorDefault = this.cast("colorDefault")
+  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = "colorPrimary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary]
   @scala.inline
-  def colorPrimary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorPrimary = this.cast("colorPrimary")
+  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = "colorSecondary".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary]
   @scala.inline
-  def colorSecondary: typingsSlinky.materialUiCore.materialUiCoreStrings.colorSecondary = this.cast("colorSecondary")
+  def positionAbsolute: typingsSlinky.materialUiCore.materialUiCoreStrings.positionAbsolute = "positionAbsolute".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.positionAbsolute]
   @scala.inline
-  def positionAbsolute: typingsSlinky.materialUiCore.materialUiCoreStrings.positionAbsolute = this.cast("positionAbsolute")
+  def positionFixed: typingsSlinky.materialUiCore.materialUiCoreStrings.positionFixed = "positionFixed".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.positionFixed]
   @scala.inline
-  def positionFixed: typingsSlinky.materialUiCore.materialUiCoreStrings.positionFixed = this.cast("positionFixed")
+  def positionRelative: typingsSlinky.materialUiCore.materialUiCoreStrings.positionRelative = "positionRelative".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.positionRelative]
   @scala.inline
-  def positionRelative: typingsSlinky.materialUiCore.materialUiCoreStrings.positionRelative = this.cast("positionRelative")
+  def positionStatic: typingsSlinky.materialUiCore.materialUiCoreStrings.positionStatic = "positionStatic".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.positionStatic]
   @scala.inline
-  def positionStatic: typingsSlinky.materialUiCore.materialUiCoreStrings.positionStatic = this.cast("positionStatic")
+  def positionSticky: typingsSlinky.materialUiCore.materialUiCoreStrings.positionSticky = "positionSticky".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.positionSticky]
   @scala.inline
-  def positionSticky: typingsSlinky.materialUiCore.materialUiCoreStrings.positionSticky = this.cast("positionSticky")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

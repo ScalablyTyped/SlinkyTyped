@@ -34,7 +34,6 @@ import typingsSlinky.electron.electronStrings.activate
 import typingsSlinky.electron.electronStrings.login
 import typingsSlinky.electron.electronStrings.quit
 import typingsSlinky.electron.electronStrings.ready
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -301,7 +300,7 @@ trait App_ extends EventEmitter {
     * Linux and macOS, icons depend on the application associated with file mime type.
     * Deprecated Soon
     */
-  def getFileIcon(path: String, callback: js.Function2[/* error */ Error, /* icon */ NativeImage_, Unit]): Unit = js.native
+  def getFileIcon(path: String, callback: js.Function2[/* error */ js.Error, /* icon */ NativeImage_, Unit]): Unit = js.native
   def getFileIcon(path: String, options: FileIconOptions): js.Promise[NativeImage_] = js.native
   /**
     * Fetches a path's associated icon. On Windows, there are 2 kinds of icons: On
@@ -1136,7 +1135,12 @@ trait App_ extends EventEmitter {
   /**
     * Set the about panel options. This will override the values defined in the app's
     * .plist file on MacOS. See the Apple docs for more details. On Linux, values must
-    * be set in order to be shown; there are no defaults.
+    * be set in order to be shown; there are no defaults. If you do not set credits
+    * but still wish to surface them in your app, AppKit will look for a file named
+    * "Credits.html", "Credits.rtf", and "Credits.rtfd", in that order, in the bundle
+    * returned by the NSBundle class method main. The first file found is used, and if
+    * none is found, the info area is left blank. See Apple documentation for more
+    * information.
     */
   def setAboutPanelOptions(options: AboutPanelOptionsOptions): Unit = js.native
   /**

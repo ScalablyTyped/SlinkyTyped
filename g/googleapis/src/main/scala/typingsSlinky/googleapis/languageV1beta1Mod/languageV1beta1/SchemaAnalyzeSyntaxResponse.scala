@@ -27,16 +27,53 @@ trait SchemaAnalyzeSyntaxResponse extends js.Object {
 
 object SchemaAnalyzeSyntaxResponse {
   @scala.inline
-  def apply(
-    language: String = null,
-    sentences: js.Array[SchemaSentence] = null,
-    tokens: js.Array[SchemaToken] = null
-  ): SchemaAnalyzeSyntaxResponse = {
+  def apply(): SchemaAnalyzeSyntaxResponse = {
     val __obj = js.Dynamic.literal()
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (sentences != null) __obj.updateDynamic("sentences")(sentences.asInstanceOf[js.Any])
-    if (tokens != null) __obj.updateDynamic("tokens")(tokens.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnalyzeSyntaxResponse]
   }
+  @scala.inline
+  implicit class SchemaAnalyzeSyntaxResponseOps[Self <: SchemaAnalyzeSyntaxResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSentences(value: js.Array[SchemaSentence]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sentences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSentences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sentences")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokens(value: js.Array[SchemaToken]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

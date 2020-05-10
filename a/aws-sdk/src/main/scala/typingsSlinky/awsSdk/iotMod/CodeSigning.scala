@@ -22,16 +22,53 @@ trait CodeSigning extends js.Object {
 
 object CodeSigning {
   @scala.inline
-  def apply(
-    awsSignerJobId: SigningJobId = null,
-    customCodeSigning: CustomCodeSigning = null,
-    startSigningJobParameter: StartSigningJobParameter = null
-  ): CodeSigning = {
+  def apply(): CodeSigning = {
     val __obj = js.Dynamic.literal()
-    if (awsSignerJobId != null) __obj.updateDynamic("awsSignerJobId")(awsSignerJobId.asInstanceOf[js.Any])
-    if (customCodeSigning != null) __obj.updateDynamic("customCodeSigning")(customCodeSigning.asInstanceOf[js.Any])
-    if (startSigningJobParameter != null) __obj.updateDynamic("startSigningJobParameter")(startSigningJobParameter.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeSigning]
   }
+  @scala.inline
+  implicit class CodeSigningOps[Self <: CodeSigning] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwsSignerJobId(value: SigningJobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsSignerJobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsSignerJobId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsSignerJobId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomCodeSigning(value: CustomCodeSigning): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customCodeSigning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomCodeSigning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customCodeSigning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartSigningJobParameter(value: StartSigningJobParameter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startSigningJobParameter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartSigningJobParameter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startSigningJobParameter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

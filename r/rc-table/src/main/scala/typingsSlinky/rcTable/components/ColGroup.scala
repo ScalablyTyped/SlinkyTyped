@@ -1,34 +1,33 @@
 package typingsSlinky.rcTable.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcTable.colGroupMod.ColGroupProps
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ColGroup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ColGroup {
   @JSImport("rc-table/lib/ColGroup", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[RecordType](
-    colWidths: js.Array[Double | String],
-    columCount: Int | Double = null,
-    columns: js.Array[ColumnType[RecordType]] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(colWidths = colWidths.asInstanceOf[js.Any])
-    if (columCount != null) __obj.updateDynamic("columCount")(columCount.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
+  @scala.inline
+  class Builder[RecordType] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def columCount(value: Double): this.type = set("columCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columns(value: js.Array[ColumnType[RecordType]]): this.type = set("columns", value.asInstanceOf[js.Any])
   }
-  type Props = ColGroupProps[js.Any]
+  
+  def withProps[RecordType](p: ColGroupProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[RecordType](colWidths: js.Array[Double | String]): Builder[RecordType] = {
+    val __props = js.Dynamic.literal(colWidths = colWidths.asInstanceOf[js.Any])
+    new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[ColGroupProps[RecordType]]))
+  }
 }
 

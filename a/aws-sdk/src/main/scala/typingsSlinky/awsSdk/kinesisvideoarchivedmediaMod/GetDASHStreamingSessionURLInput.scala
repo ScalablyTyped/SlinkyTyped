@@ -42,26 +42,113 @@ trait GetDASHStreamingSessionURLInput extends js.Object {
 
 object GetDASHStreamingSessionURLInput {
   @scala.inline
-  def apply(
-    DASHFragmentSelector: DASHFragmentSelector = null,
-    DisplayFragmentNumber: DASHDisplayFragmentNumber = null,
-    DisplayFragmentTimestamp: DASHDisplayFragmentTimestamp = null,
-    Expires: Int | Double = null,
-    MaxManifestFragmentResults: Int | Double = null,
-    PlaybackMode: DASHPlaybackMode = null,
-    StreamARN: ResourceARN = null,
-    StreamName: StreamName = null
-  ): GetDASHStreamingSessionURLInput = {
+  def apply(): GetDASHStreamingSessionURLInput = {
     val __obj = js.Dynamic.literal()
-    if (DASHFragmentSelector != null) __obj.updateDynamic("DASHFragmentSelector")(DASHFragmentSelector.asInstanceOf[js.Any])
-    if (DisplayFragmentNumber != null) __obj.updateDynamic("DisplayFragmentNumber")(DisplayFragmentNumber.asInstanceOf[js.Any])
-    if (DisplayFragmentTimestamp != null) __obj.updateDynamic("DisplayFragmentTimestamp")(DisplayFragmentTimestamp.asInstanceOf[js.Any])
-    if (Expires != null) __obj.updateDynamic("Expires")(Expires.asInstanceOf[js.Any])
-    if (MaxManifestFragmentResults != null) __obj.updateDynamic("MaxManifestFragmentResults")(MaxManifestFragmentResults.asInstanceOf[js.Any])
-    if (PlaybackMode != null) __obj.updateDynamic("PlaybackMode")(PlaybackMode.asInstanceOf[js.Any])
-    if (StreamARN != null) __obj.updateDynamic("StreamARN")(StreamARN.asInstanceOf[js.Any])
-    if (StreamName != null) __obj.updateDynamic("StreamName")(StreamName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDASHStreamingSessionURLInput]
   }
+  @scala.inline
+  implicit class GetDASHStreamingSessionURLInputOps[Self <: GetDASHStreamingSessionURLInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDASHFragmentSelector(value: DASHFragmentSelector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DASHFragmentSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDASHFragmentSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DASHFragmentSelector")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayFragmentNumber(value: DASHDisplayFragmentNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayFragmentNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayFragmentNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayFragmentNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayFragmentTimestamp(value: DASHDisplayFragmentTimestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayFragmentTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayFragmentTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayFragmentTimestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpires(value: Expires): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expires")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpires: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expires")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxManifestFragmentResults(value: PageLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxManifestFragmentResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxManifestFragmentResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxManifestFragmentResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaybackMode(value: DASHPlaybackMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaybackMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaybackMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlaybackMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamARN(value: ResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamName(value: StreamName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

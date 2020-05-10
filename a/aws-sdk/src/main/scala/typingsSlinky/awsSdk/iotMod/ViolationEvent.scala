@@ -38,24 +38,101 @@ trait ViolationEvent extends js.Object {
 
 object ViolationEvent {
   @scala.inline
-  def apply(
-    behavior: Behavior = null,
-    metricValue: MetricValue = null,
-    securityProfileName: SecurityProfileName = null,
-    thingName: DeviceDefenderThingName = null,
-    violationEventTime: js.Date = null,
-    violationEventType: ViolationEventType = null,
-    violationId: ViolationId = null
-  ): ViolationEvent = {
+  def apply(): ViolationEvent = {
     val __obj = js.Dynamic.literal()
-    if (behavior != null) __obj.updateDynamic("behavior")(behavior.asInstanceOf[js.Any])
-    if (metricValue != null) __obj.updateDynamic("metricValue")(metricValue.asInstanceOf[js.Any])
-    if (securityProfileName != null) __obj.updateDynamic("securityProfileName")(securityProfileName.asInstanceOf[js.Any])
-    if (thingName != null) __obj.updateDynamic("thingName")(thingName.asInstanceOf[js.Any])
-    if (violationEventTime != null) __obj.updateDynamic("violationEventTime")(violationEventTime.asInstanceOf[js.Any])
-    if (violationEventType != null) __obj.updateDynamic("violationEventType")(violationEventType.asInstanceOf[js.Any])
-    if (violationId != null) __obj.updateDynamic("violationId")(violationId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViolationEvent]
   }
+  @scala.inline
+  implicit class ViolationEventOps[Self <: ViolationEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBehavior(value: Behavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricValue(value: MetricValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityProfileName(value: SecurityProfileName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityProfileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityProfileName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingName(value: DeviceDefenderThingName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViolationEventTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("violationEventTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViolationEventTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("violationEventTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViolationEventType(value: ViolationEventType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("violationEventType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViolationEventType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("violationEventType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViolationId(value: ViolationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("violationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViolationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("violationId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

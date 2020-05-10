@@ -6,111 +6,112 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined phaser.Phaser.Types.GameObjects.JSONGameObject & {  font  :string,   text  :string,   fontSize  :number,   letterSpacing  :number,   align  :phaser.integer} */
+@js.native
 trait JSONBitmapText extends js.Object {
   /**
     * The alignment of the text in a multi-line BitmapText object.
     */
-  var align: integer
+  var align: integer = js.native
   /**
     * The alpha value of the Game Object.
     */
-  var alpha: Double
+  var alpha: Double = js.native
   /**
     * Sets the Blend Mode being used by this Game Object.
     */
-  var blendMode: integer | String
+  var blendMode: integer | String = js.native
   /**
     * The data of this Game Object.
     */
-  var data: js.Object
+  var data: js.Object = js.native
   /**
     * The horizontally flipped state of the Game Object.
     */
-  var flipX: Boolean
+  var flipX: Boolean = js.native
   /**
     * The vertically flipped state of the Game Object.
     */
-  var flipY: Boolean
+  var flipY: Boolean = js.native
   /**
     * The name of the font.
     */
-  var font: String
+  var font: String = js.native
   /**
     * The size of the font.
     */
-  var fontSize: Double
+  var fontSize: Double = js.native
   /**
     * The frame key of this Game Object.
     */
-  var frameKey: String
+  var frameKey: String = js.native
   /**
     * Adds / Removes spacing between characters.
     */
-  var letterSpacing: Double
+  var letterSpacing: Double = js.native
   /**
     * The name of this Game Object.
     */
-  var name: String
+  var name: String = js.native
   /**
     * The origin of this Game Object.
     */
-  var origin: js.Object
+  var origin: js.Object = js.native
   /**
     * The horizontal origin of this Game Object.
     */
   @JSName("origin.x")
-  var originDotx: Double
+  var originDotx: Double = js.native
   /**
     * The vertical origin of this Game Object.
     */
   @JSName("origin.y")
-  var originDoty: Double
+  var originDoty: Double = js.native
   /**
     * The angle of this Game Object in radians.
     */
-  var rotation: Double
+  var rotation: Double = js.native
   /**
     * The scale of this Game Object
     */
-  var scale: js.Object
+  var scale: js.Object = js.native
   /**
     * The horizontal scale of this Game Object.
     */
   @JSName("scale.x")
-  var scaleDotx: Double
+  var scaleDotx: Double = js.native
   /**
     * The vertical scale of this Game Object.
     */
   @JSName("scale.y")
-  var scaleDoty: Double
+  var scaleDoty: Double = js.native
   /**
     * The Scale Mode being used by this Game Object.
     */
-  var scaleMode: integer
+  var scaleMode: integer = js.native
   /**
     * The text that this Bitmap Text displays.
     */
-  var text: String
+  var text: String = js.native
   /**
     * The texture key of this Game Object.
     */
-  var textureKey: String
+  var textureKey: String = js.native
   /**
     * A textual representation of this Game Object, i.e. `sprite`.
     */
-  var `type`: String
+  var `type`: String = js.native
   /**
     * The visible state of the Game Object.
     */
-  var visible: Boolean
+  var visible: Boolean = js.native
   /**
     * The x position of this Game Object.
     */
-  var x: Double
+  var x: Double = js.native
   /**
     * The y position of this Game Object.
     */
-  var y: Double
+  var y: Double = js.native
 }
 
 object JSONBitmapText {
@@ -150,5 +151,163 @@ object JSONBitmapText {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[JSONBitmapText]
   }
+  @scala.inline
+  implicit class JSONBitmapTextOps[Self <: JSONBitmapText] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlpha(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlendMode(value: integer | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blendMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlipX(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flipX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlipY(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flipY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFont(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrameKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLetterSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("letterSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOriginDotx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin.x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOriginDoty(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin.y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScale(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleDotx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale.x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleDoty(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale.y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleMode(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextureKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textureKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

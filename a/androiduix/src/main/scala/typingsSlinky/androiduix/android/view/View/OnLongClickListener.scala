@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnLongClickListener extends js.Object {
-  def onLongClick(v: typingsSlinky.androiduix.android.view.View): Boolean
+  def onLongClick(v: typingsSlinky.androiduix.android.view.View): Boolean = js.native
 }
 
 @JSGlobal("android.view.View.OnLongClickListener")

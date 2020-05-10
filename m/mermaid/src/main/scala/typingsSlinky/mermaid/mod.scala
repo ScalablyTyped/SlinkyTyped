@@ -38,8 +38,8 @@ object mod extends js.Object {
     var startOnLoad: Boolean = js.native
     def contentLoaded(): Unit = js.native
     def init(nodes: String): Unit = js.native
-    def init(nodes: typingsSlinky.std.Node): Unit = js.native
-    def init(nodes: typingsSlinky.std.NodeList): Unit = js.native
+    def init(nodes: Node): Unit = js.native
+    def init(nodes: NodeList): Unit = js.native
     def initialize(config: Config): Unit = js.native
     def parse(text: String): js.Any = js.native
     def render(

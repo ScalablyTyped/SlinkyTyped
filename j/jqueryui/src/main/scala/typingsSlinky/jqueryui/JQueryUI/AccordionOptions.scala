@@ -1,52 +1,133 @@
 package typingsSlinky.jqueryui.JQueryUI
 
-import typingsSlinky.jquery.JQueryEventObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // Accordion //////////////////////////////////////////////////
+@js.native
 trait AccordionOptions extends AccordionEvents {
-  var active: js.UndefOr[js.Any] = js.undefined
+  var active: js.UndefOr[js.Any] = js.native
    // boolean or number
-  var animate: js.UndefOr[js.Any] = js.undefined
+  var animate: js.UndefOr[js.Any] = js.native
    // boolean, number, string or object
-  var collapsible: js.UndefOr[Boolean] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var event: js.UndefOr[String] = js.undefined
-  var header: js.UndefOr[String] = js.undefined
-  var heightStyle: js.UndefOr[String] = js.undefined
-  var icons: js.UndefOr[js.Any] = js.undefined
+  var collapsible: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var event: js.UndefOr[String] = js.native
+  var header: js.UndefOr[String] = js.native
+  var heightStyle: js.UndefOr[String] = js.native
+  var icons: js.UndefOr[js.Any] = js.native
 }
 
 object AccordionOptions {
   @scala.inline
-  def apply(
-    activate: (/* event */ JQueryEventObject, /* ui */ AccordionUIParams) => Unit = null,
-    active: js.Any = null,
-    animate: js.Any = null,
-    beforeActivate: (/* event */ JQueryEventObject, /* ui */ AccordionUIParams) => Unit = null,
-    collapsible: js.UndefOr[Boolean] = js.undefined,
-    create: (/* event */ JQueryEventObject, /* ui */ AccordionUIParams) => Unit = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    event: String = null,
-    header: String = null,
-    heightStyle: String = null,
-    icons: js.Any = null
-  ): AccordionOptions = {
+  def apply(): AccordionOptions = {
     val __obj = js.Dynamic.literal()
-    if (activate != null) __obj.updateDynamic("activate")(js.Any.fromFunction2(activate))
-    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (beforeActivate != null) __obj.updateDynamic("beforeActivate")(js.Any.fromFunction2(beforeActivate))
-    if (!js.isUndefined(collapsible)) __obj.updateDynamic("collapsible")(collapsible.asInstanceOf[js.Any])
-    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction2(create))
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (heightStyle != null) __obj.updateDynamic("heightStyle")(heightStyle.asInstanceOf[js.Any])
-    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccordionOptions]
   }
+  @scala.inline
+  implicit class AccordionOptionsOps[Self <: AccordionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimate(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapsible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollapsible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapsible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeightStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeightStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcons(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

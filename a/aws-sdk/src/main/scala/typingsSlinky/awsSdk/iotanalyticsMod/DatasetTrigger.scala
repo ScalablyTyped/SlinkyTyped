@@ -18,11 +18,41 @@ trait DatasetTrigger extends js.Object {
 
 object DatasetTrigger {
   @scala.inline
-  def apply(dataset: TriggeringDataset = null, schedule: Schedule = null): DatasetTrigger = {
+  def apply(): DatasetTrigger = {
     val __obj = js.Dynamic.literal()
-    if (dataset != null) __obj.updateDynamic("dataset")(dataset.asInstanceOf[js.Any])
-    if (schedule != null) __obj.updateDynamic("schedule")(schedule.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatasetTrigger]
   }
+  @scala.inline
+  implicit class DatasetTriggerOps[Self <: DatasetTrigger] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataset(value: TriggeringDataset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchedule(value: Schedule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

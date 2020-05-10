@@ -12,10 +12,8 @@ trait columnKind extends js.Object
 
 object columnKind {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def unicodeCodePoints: typingsSlinky.sarif.sarifStrings.unicodeCodePoints = "unicodeCodePoints".asInstanceOf[typingsSlinky.sarif.sarifStrings.unicodeCodePoints]
   @scala.inline
-  def unicodeCodePoints: typingsSlinky.sarif.sarifStrings.unicodeCodePoints = this.cast("unicodeCodePoints")
-  @scala.inline
-  def utf16CodeUnits: typingsSlinky.sarif.sarifStrings.utf16CodeUnits = this.cast("utf16CodeUnits")
+  def utf16CodeUnits: typingsSlinky.sarif.sarifStrings.utf16CodeUnits = "utf16CodeUnits".asInstanceOf[typingsSlinky.sarif.sarifStrings.utf16CodeUnits]
 }
 

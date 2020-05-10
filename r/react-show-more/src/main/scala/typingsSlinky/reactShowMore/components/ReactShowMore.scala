@@ -1,39 +1,33 @@
 package typingsSlinky.reactShowMore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactShowMore.mod.ReactShowMoreProps
 import typingsSlinky.reactShowMore.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactShowMore
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactShowMore {
   @JSImport("react-show-more", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    anchorClass: String = null,
-    less: String = null,
-    lines: Int | Double = null,
-    more: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (anchorClass != null) __obj.updateDynamic("anchorClass")(anchorClass.asInstanceOf[js.Any])
-    if (less != null) __obj.updateDynamic("less")(less.asInstanceOf[js.Any])
-    if (lines != null) __obj.updateDynamic("lines")(lines.asInstanceOf[js.Any])
-    if (more != null) __obj.updateDynamic("more")(more.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def anchorClass(value: String): this.type = set("anchorClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def less(value: String): this.type = set("less", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lines(value: Double): this.type = set("lines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def more(value: String): this.type = set("more", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactShowMore.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ReactShowMoreProps
+  
+  def withProps(p: ReactShowMoreProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactShowMore.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

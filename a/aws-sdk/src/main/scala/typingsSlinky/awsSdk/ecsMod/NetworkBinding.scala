@@ -26,18 +26,65 @@ trait NetworkBinding extends js.Object {
 
 object NetworkBinding {
   @scala.inline
-  def apply(
-    bindIP: String = null,
-    containerPort: Int | scala.Double = null,
-    hostPort: Int | scala.Double = null,
-    protocol: TransportProtocol = null
-  ): NetworkBinding = {
+  def apply(): NetworkBinding = {
     val __obj = js.Dynamic.literal()
-    if (bindIP != null) __obj.updateDynamic("bindIP")(bindIP.asInstanceOf[js.Any])
-    if (containerPort != null) __obj.updateDynamic("containerPort")(containerPort.asInstanceOf[js.Any])
-    if (hostPort != null) __obj.updateDynamic("hostPort")(hostPort.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkBinding]
   }
+  @scala.inline
+  implicit class NetworkBindingOps[Self <: NetworkBinding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBindIP(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindIP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBindIP: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindIP")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerPort(value: BoxedInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostPort(value: BoxedInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: TransportProtocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

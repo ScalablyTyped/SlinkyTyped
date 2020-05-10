@@ -1,43 +1,34 @@
 package typingsSlinky.node.utilMod
 
-import typingsSlinky.node.nodeStrings.get
-import typingsSlinky.node.nodeStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InspectOptionsStylized
   extends typingsSlinky.node.NodeJS.InspectOptions {
-  def stylize(text: String, styleType: Style): String
+  def stylize(text: String, styleType: Style): String = js.native
 }
 
 object InspectOptionsStylized {
   @scala.inline
-  def apply(
-    stylize: (String, Style) => String,
-    breakLength: Int | Double = null,
-    colors: js.UndefOr[Boolean] = js.undefined,
-    compact: Boolean | Double = null,
-    customInspect: js.UndefOr[Boolean] = js.undefined,
-    depth: Int | Double = null,
-    getters: get | set | Boolean = null,
-    maxArrayLength: Int | Double = null,
-    showHidden: js.UndefOr[Boolean] = js.undefined,
-    showProxy: js.UndefOr[Boolean] = js.undefined,
-    sorted: Boolean | (js.Function2[/* a */ String, /* b */ String, Double]) = null
-  ): InspectOptionsStylized = {
+  def apply(stylize: (String, Style) => String): InspectOptionsStylized = {
     val __obj = js.Dynamic.literal(stylize = js.Any.fromFunction2(stylize))
-    if (breakLength != null) __obj.updateDynamic("breakLength")(breakLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(colors)) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (compact != null) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (!js.isUndefined(customInspect)) __obj.updateDynamic("customInspect")(customInspect.asInstanceOf[js.Any])
-    if (depth != null) __obj.updateDynamic("depth")(depth.asInstanceOf[js.Any])
-    if (getters != null) __obj.updateDynamic("getters")(getters.asInstanceOf[js.Any])
-    if (maxArrayLength != null) __obj.updateDynamic("maxArrayLength")(maxArrayLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHidden)) __obj.updateDynamic("showHidden")(showHidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(showProxy)) __obj.updateDynamic("showProxy")(showProxy.asInstanceOf[js.Any])
-    if (sorted != null) __obj.updateDynamic("sorted")(sorted.asInstanceOf[js.Any])
     __obj.asInstanceOf[InspectOptionsStylized]
   }
+  @scala.inline
+  implicit class InspectOptionsStylizedOps[Self <: InspectOptionsStylized] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStylize(value: (String, Style) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stylize")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

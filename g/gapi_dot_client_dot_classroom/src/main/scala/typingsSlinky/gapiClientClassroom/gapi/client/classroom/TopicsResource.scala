@@ -37,6 +37,7 @@ trait TopicsResource extends js.Object {
     * deleted.
     * &#42; `NOT_FOUND` if no course or topic exists with the requested ID.
     */
+  def delete(): Request_[js.Object] = js.native
   def delete(request: AnonFields): Request_[js.Object] = js.native
   /**
     * Returns a topic.
@@ -48,6 +49,7 @@ trait TopicsResource extends js.Object {
     * &#42; `INVALID_ARGUMENT` if the request is malformed.
     * &#42; `NOT_FOUND` if the requested course or topic does not exist.
     */
+  def get(): Request_[Topic] = js.native
   def get(request: AnonFields): Request_[Topic] = js.native
   /**
     * Returns the list of topics that the requester is permitted to view.
@@ -59,6 +61,7 @@ trait TopicsResource extends js.Object {
     * &#42; `INVALID_ARGUMENT` if the request is malformed.
     * &#42; `NOT_FOUND` if the requested course does not exist.
     */
+  def list(): Request_[ListTopicResponse] = js.native
   def list(request: AnonCallback): Request_[ListTopicResponse] = js.native
   /**
     * Updates one or more fields of a topic.

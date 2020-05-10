@@ -679,6 +679,9 @@ object reactStrings {
   sealed trait select extends js.Object
   
   @js.native
+  sealed trait slot extends js.Object
+  
+  @js.native
   sealed trait small extends js.Object
   
   @js.native
@@ -864,7 +867,7 @@ object reactStrings {
   @scala.inline
   def additions: additions = "additions".asInstanceOf[additions]
   @scala.inline
-  def `additions text`: `additions text` = "additions text".asInstanceOf[`additions text`]
+  def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   @scala.inline
   def address: address = "address".asInstanceOf[address]
   @scala.inline
@@ -1287,6 +1290,8 @@ object reactStrings {
   def section: section = "section".asInstanceOf[section]
   @scala.inline
   def select: select = "select".asInstanceOf[select]
+  @scala.inline
+  def slot: slot = "slot".asInstanceOf[slot]
   @scala.inline
   def small: small = "small".asInstanceOf[small]
   @scala.inline

@@ -4,7 +4,6 @@ import typingsSlinky.gtagJs.gtagJsStrings.config
 import typingsSlinky.gtagJs.gtagJsStrings.event
 import typingsSlinky.gtagJs.gtagJsStrings.js_
 import typingsSlinky.gtagJs.gtagJsStrings.set
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +22,7 @@ trait Gtag extends js.Object {
   def apply(command: event, eventName: EventNames, eventParams: ControlParams): Unit = js.native
   def apply(command: event, eventName: EventNames, eventParams: CustomParams): Unit = js.native
   def apply(command: event, eventName: EventNames, eventParams: EventParams): Unit = js.native
-  def apply(command: js_, config: Date): Unit = js.native
+  def apply(command: js_, config: js.Date): Unit = js.native
   def apply(command: set, config: CustomParams): Unit = js.native
 }
 

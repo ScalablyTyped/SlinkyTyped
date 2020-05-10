@@ -14,14 +14,12 @@ trait PaymentStatus extends js.Object
 
 object PaymentStatus {
   @scala.inline
-  def CANCELED: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CANCELED = this.cast("CANCELED")
+  def CANCELED: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CANCELED = "CANCELED".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CANCELED]
   @scala.inline
-  def EXPIRED: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.EXPIRED = this.cast("EXPIRED")
+  def EXPIRED: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.EXPIRED = "EXPIRED".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.EXPIRED]
   @scala.inline
-  def VALIDATED: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.VALIDATED = this.cast("VALIDATED")
+  def VALIDATED: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.VALIDATED = "VALIDATED".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.VALIDATED]
   @scala.inline
-  def WAITING: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.WAITING = this.cast("WAITING")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WAITING: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.WAITING = "WAITING".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.WAITING]
 }
 

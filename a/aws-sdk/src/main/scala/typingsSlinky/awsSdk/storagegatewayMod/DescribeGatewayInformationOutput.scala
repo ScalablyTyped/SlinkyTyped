@@ -67,40 +67,197 @@ trait DescribeGatewayInformationOutput extends js.Object {
 
 object DescribeGatewayInformationOutput {
   @scala.inline
-  def apply(
-    CloudWatchLogGroupARN: CloudWatchLogGroupARN = null,
-    Ec2InstanceId: Ec2InstanceId = null,
-    Ec2InstanceRegion: Ec2InstanceRegion = null,
-    GatewayARN: GatewayARN = null,
-    GatewayId: GatewayId = null,
-    GatewayName: String = null,
-    GatewayNetworkInterfaces: GatewayNetworkInterfaces = null,
-    GatewayState: GatewayState = null,
-    GatewayTimezone: GatewayTimezone = null,
-    GatewayType: GatewayType = null,
-    HostEnvironment: HostEnvironment = null,
-    LastSoftwareUpdate: LastSoftwareUpdate = null,
-    NextUpdateAvailabilityDate: NextUpdateAvailabilityDate = null,
-    Tags: Tags = null,
-    VPCEndpoint: String = null
-  ): DescribeGatewayInformationOutput = {
+  def apply(): DescribeGatewayInformationOutput = {
     val __obj = js.Dynamic.literal()
-    if (CloudWatchLogGroupARN != null) __obj.updateDynamic("CloudWatchLogGroupARN")(CloudWatchLogGroupARN.asInstanceOf[js.Any])
-    if (Ec2InstanceId != null) __obj.updateDynamic("Ec2InstanceId")(Ec2InstanceId.asInstanceOf[js.Any])
-    if (Ec2InstanceRegion != null) __obj.updateDynamic("Ec2InstanceRegion")(Ec2InstanceRegion.asInstanceOf[js.Any])
-    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
-    if (GatewayId != null) __obj.updateDynamic("GatewayId")(GatewayId.asInstanceOf[js.Any])
-    if (GatewayName != null) __obj.updateDynamic("GatewayName")(GatewayName.asInstanceOf[js.Any])
-    if (GatewayNetworkInterfaces != null) __obj.updateDynamic("GatewayNetworkInterfaces")(GatewayNetworkInterfaces.asInstanceOf[js.Any])
-    if (GatewayState != null) __obj.updateDynamic("GatewayState")(GatewayState.asInstanceOf[js.Any])
-    if (GatewayTimezone != null) __obj.updateDynamic("GatewayTimezone")(GatewayTimezone.asInstanceOf[js.Any])
-    if (GatewayType != null) __obj.updateDynamic("GatewayType")(GatewayType.asInstanceOf[js.Any])
-    if (HostEnvironment != null) __obj.updateDynamic("HostEnvironment")(HostEnvironment.asInstanceOf[js.Any])
-    if (LastSoftwareUpdate != null) __obj.updateDynamic("LastSoftwareUpdate")(LastSoftwareUpdate.asInstanceOf[js.Any])
-    if (NextUpdateAvailabilityDate != null) __obj.updateDynamic("NextUpdateAvailabilityDate")(NextUpdateAvailabilityDate.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (VPCEndpoint != null) __obj.updateDynamic("VPCEndpoint")(VPCEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeGatewayInformationOutput]
   }
+  @scala.inline
+  implicit class DescribeGatewayInformationOutputOps[Self <: DescribeGatewayInformationOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudWatchLogGroupARN(value: CloudWatchLogGroupARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogGroupARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudWatchLogGroupARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogGroupARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEc2InstanceId(value: Ec2InstanceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2InstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEc2InstanceRegion(value: Ec2InstanceRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2InstanceRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2InstanceRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ec2InstanceRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayId(value: GatewayId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayNetworkInterfaces(value: GatewayNetworkInterfaces): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayNetworkInterfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayNetworkInterfaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayNetworkInterfaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayState(value: GatewayState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayTimezone(value: GatewayTimezone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayTimezone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayTimezone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayTimezone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayType(value: GatewayType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostEnvironment(value: HostEnvironment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostEnvironment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostEnvironment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HostEnvironment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastSoftwareUpdate(value: LastSoftwareUpdate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSoftwareUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastSoftwareUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastSoftwareUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextUpdateAvailabilityDate(value: NextUpdateAvailabilityDate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextUpdateAvailabilityDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextUpdateAvailabilityDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextUpdateAvailabilityDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVPCEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VPCEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVPCEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VPCEndpoint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

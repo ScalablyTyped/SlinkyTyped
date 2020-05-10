@@ -199,339 +199,340 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Dfareporting_ extends js.Object {
-  var AccountActiveAdSummaries: js.UndefOr[AccountActiveAdSummariesCollection] = js.undefined
-  var AccountPermissionGroups: js.UndefOr[AccountPermissionGroupsCollection] = js.undefined
-  var AccountPermissions: js.UndefOr[AccountPermissionsCollection] = js.undefined
-  var AccountUserProfiles: js.UndefOr[AccountUserProfilesCollection] = js.undefined
-  var Accounts: js.UndefOr[AccountsCollection] = js.undefined
-  var Ads: js.UndefOr[AdsCollection] = js.undefined
-  var AdvertiserGroups: js.UndefOr[AdvertiserGroupsCollection] = js.undefined
-  var AdvertiserLandingPages: js.UndefOr[AdvertiserLandingPagesCollection] = js.undefined
-  var Advertisers: js.UndefOr[AdvertisersCollection] = js.undefined
-  var Browsers: js.UndefOr[BrowsersCollection] = js.undefined
-  var CampaignCreativeAssociations: js.UndefOr[CampaignCreativeAssociationsCollection] = js.undefined
-  var Campaigns: js.UndefOr[CampaignsCollection] = js.undefined
-  var ChangeLogs: js.UndefOr[ChangeLogsCollection] = js.undefined
-  var Cities: js.UndefOr[CitiesCollection] = js.undefined
-  var ConnectionTypes: js.UndefOr[ConnectionTypesCollection] = js.undefined
-  var ContentCategories: js.UndefOr[ContentCategoriesCollection] = js.undefined
-  var Conversions: js.UndefOr[ConversionsCollection] = js.undefined
-  var Countries: js.UndefOr[CountriesCollection] = js.undefined
-  var CreativeAssets: js.UndefOr[CreativeAssetsCollection] = js.undefined
-  var CreativeFieldValues: js.UndefOr[CreativeFieldValuesCollection] = js.undefined
-  var CreativeFields: js.UndefOr[CreativeFieldsCollection] = js.undefined
-  var CreativeGroups: js.UndefOr[CreativeGroupsCollection] = js.undefined
-  var Creatives: js.UndefOr[CreativesCollection] = js.undefined
-  var DimensionValues: js.UndefOr[DimensionValuesCollection] = js.undefined
-  var DirectorySites: js.UndefOr[DirectorySitesCollection] = js.undefined
-  var DynamicTargetingKeys: js.UndefOr[DynamicTargetingKeysCollection] = js.undefined
-  var EventTags: js.UndefOr[EventTagsCollection] = js.undefined
-  var Files: js.UndefOr[FilesCollection] = js.undefined
-  var FloodlightActivities: js.UndefOr[FloodlightActivitiesCollection] = js.undefined
-  var FloodlightActivityGroups: js.UndefOr[FloodlightActivityGroupsCollection] = js.undefined
-  var FloodlightConfigurations: js.UndefOr[FloodlightConfigurationsCollection] = js.undefined
-  var InventoryItems: js.UndefOr[InventoryItemsCollection] = js.undefined
-  var Languages: js.UndefOr[LanguagesCollection] = js.undefined
-  var Metros: js.UndefOr[MetrosCollection] = js.undefined
-  var MobileApps: js.UndefOr[MobileAppsCollection] = js.undefined
-  var MobileCarriers: js.UndefOr[MobileCarriersCollection] = js.undefined
-  var OperatingSystemVersions: js.UndefOr[OperatingSystemVersionsCollection] = js.undefined
-  var OperatingSystems: js.UndefOr[OperatingSystemsCollection] = js.undefined
-  var OrderDocuments: js.UndefOr[OrderDocumentsCollection] = js.undefined
-  var Orders: js.UndefOr[OrdersCollection] = js.undefined
-  var PlacementGroups: js.UndefOr[PlacementGroupsCollection] = js.undefined
-  var PlacementStrategies: js.UndefOr[PlacementStrategiesCollection] = js.undefined
-  var Placements: js.UndefOr[PlacementsCollection] = js.undefined
-  var PlatformTypes: js.UndefOr[PlatformTypesCollection] = js.undefined
-  var PostalCodes: js.UndefOr[PostalCodesCollection] = js.undefined
-  var Projects: js.UndefOr[ProjectsCollection] = js.undefined
-  var Regions: js.UndefOr[RegionsCollection] = js.undefined
-  var RemarketingListShares: js.UndefOr[RemarketingListSharesCollection] = js.undefined
-  var RemarketingLists: js.UndefOr[RemarketingListsCollection] = js.undefined
-  var Reports: js.UndefOr[ReportsCollection] = js.undefined
-  var Sites: js.UndefOr[SitesCollection] = js.undefined
-  var Sizes: js.UndefOr[SizesCollection] = js.undefined
-  var Subaccounts: js.UndefOr[SubaccountsCollection] = js.undefined
-  var TargetableRemarketingLists: js.UndefOr[TargetableRemarketingListsCollection] = js.undefined
-  var TargetingTemplates: js.UndefOr[TargetingTemplatesCollection] = js.undefined
-  var UserProfiles: js.UndefOr[UserProfilesCollection] = js.undefined
-  var UserRolePermissionGroups: js.UndefOr[UserRolePermissionGroupsCollection] = js.undefined
-  var UserRolePermissions: js.UndefOr[UserRolePermissionsCollection] = js.undefined
-  var UserRoles: js.UndefOr[UserRolesCollection] = js.undefined
-  var VideoFormats: js.UndefOr[VideoFormatsCollection] = js.undefined
+  var AccountActiveAdSummaries: js.UndefOr[AccountActiveAdSummariesCollection] = js.native
+  var AccountPermissionGroups: js.UndefOr[AccountPermissionGroupsCollection] = js.native
+  var AccountPermissions: js.UndefOr[AccountPermissionsCollection] = js.native
+  var AccountUserProfiles: js.UndefOr[AccountUserProfilesCollection] = js.native
+  var Accounts: js.UndefOr[AccountsCollection] = js.native
+  var Ads: js.UndefOr[AdsCollection] = js.native
+  var AdvertiserGroups: js.UndefOr[AdvertiserGroupsCollection] = js.native
+  var AdvertiserLandingPages: js.UndefOr[AdvertiserLandingPagesCollection] = js.native
+  var Advertisers: js.UndefOr[AdvertisersCollection] = js.native
+  var Browsers: js.UndefOr[BrowsersCollection] = js.native
+  var CampaignCreativeAssociations: js.UndefOr[CampaignCreativeAssociationsCollection] = js.native
+  var Campaigns: js.UndefOr[CampaignsCollection] = js.native
+  var ChangeLogs: js.UndefOr[ChangeLogsCollection] = js.native
+  var Cities: js.UndefOr[CitiesCollection] = js.native
+  var ConnectionTypes: js.UndefOr[ConnectionTypesCollection] = js.native
+  var ContentCategories: js.UndefOr[ContentCategoriesCollection] = js.native
+  var Conversions: js.UndefOr[ConversionsCollection] = js.native
+  var Countries: js.UndefOr[CountriesCollection] = js.native
+  var CreativeAssets: js.UndefOr[CreativeAssetsCollection] = js.native
+  var CreativeFieldValues: js.UndefOr[CreativeFieldValuesCollection] = js.native
+  var CreativeFields: js.UndefOr[CreativeFieldsCollection] = js.native
+  var CreativeGroups: js.UndefOr[CreativeGroupsCollection] = js.native
+  var Creatives: js.UndefOr[CreativesCollection] = js.native
+  var DimensionValues: js.UndefOr[DimensionValuesCollection] = js.native
+  var DirectorySites: js.UndefOr[DirectorySitesCollection] = js.native
+  var DynamicTargetingKeys: js.UndefOr[DynamicTargetingKeysCollection] = js.native
+  var EventTags: js.UndefOr[EventTagsCollection] = js.native
+  var Files: js.UndefOr[FilesCollection] = js.native
+  var FloodlightActivities: js.UndefOr[FloodlightActivitiesCollection] = js.native
+  var FloodlightActivityGroups: js.UndefOr[FloodlightActivityGroupsCollection] = js.native
+  var FloodlightConfigurations: js.UndefOr[FloodlightConfigurationsCollection] = js.native
+  var InventoryItems: js.UndefOr[InventoryItemsCollection] = js.native
+  var Languages: js.UndefOr[LanguagesCollection] = js.native
+  var Metros: js.UndefOr[MetrosCollection] = js.native
+  var MobileApps: js.UndefOr[MobileAppsCollection] = js.native
+  var MobileCarriers: js.UndefOr[MobileCarriersCollection] = js.native
+  var OperatingSystemVersions: js.UndefOr[OperatingSystemVersionsCollection] = js.native
+  var OperatingSystems: js.UndefOr[OperatingSystemsCollection] = js.native
+  var OrderDocuments: js.UndefOr[OrderDocumentsCollection] = js.native
+  var Orders: js.UndefOr[OrdersCollection] = js.native
+  var PlacementGroups: js.UndefOr[PlacementGroupsCollection] = js.native
+  var PlacementStrategies: js.UndefOr[PlacementStrategiesCollection] = js.native
+  var Placements: js.UndefOr[PlacementsCollection] = js.native
+  var PlatformTypes: js.UndefOr[PlatformTypesCollection] = js.native
+  var PostalCodes: js.UndefOr[PostalCodesCollection] = js.native
+  var Projects: js.UndefOr[ProjectsCollection] = js.native
+  var Regions: js.UndefOr[RegionsCollection] = js.native
+  var RemarketingListShares: js.UndefOr[RemarketingListSharesCollection] = js.native
+  var RemarketingLists: js.UndefOr[RemarketingListsCollection] = js.native
+  var Reports: js.UndefOr[ReportsCollection] = js.native
+  var Sites: js.UndefOr[SitesCollection] = js.native
+  var Sizes: js.UndefOr[SizesCollection] = js.native
+  var Subaccounts: js.UndefOr[SubaccountsCollection] = js.native
+  var TargetableRemarketingLists: js.UndefOr[TargetableRemarketingListsCollection] = js.native
+  var TargetingTemplates: js.UndefOr[TargetingTemplatesCollection] = js.native
+  var UserProfiles: js.UndefOr[UserProfilesCollection] = js.native
+  var UserRolePermissionGroups: js.UndefOr[UserRolePermissionGroupsCollection] = js.native
+  var UserRolePermissions: js.UndefOr[UserRolePermissionsCollection] = js.native
+  var UserRoles: js.UndefOr[UserRolesCollection] = js.native
+  var VideoFormats: js.UndefOr[VideoFormatsCollection] = js.native
   // Create a new instance of Account
-  def newAccount(): Account
+  def newAccount(): Account = js.native
   // Create a new instance of AccountUserProfile
-  def newAccountUserProfile(): AccountUserProfile
+  def newAccountUserProfile(): AccountUserProfile = js.native
   // Create a new instance of Activities
-  def newActivities(): Activities
+  def newActivities(): Activities = js.native
   // Create a new instance of Ad
-  def newAd(): Ad
+  def newAd(): Ad = js.native
   // Create a new instance of AdBlockingConfiguration
-  def newAdBlockingConfiguration(): AdBlockingConfiguration
+  def newAdBlockingConfiguration(): AdBlockingConfiguration = js.native
   // Create a new instance of Advertiser
-  def newAdvertiser(): Advertiser
+  def newAdvertiser(): Advertiser = js.native
   // Create a new instance of AdvertiserGroup
-  def newAdvertiserGroup(): AdvertiserGroup
+  def newAdvertiserGroup(): AdvertiserGroup = js.native
   // Create a new instance of AudienceSegment
-  def newAudienceSegment(): AudienceSegment
+  def newAudienceSegment(): AudienceSegment = js.native
   // Create a new instance of AudienceSegmentGroup
-  def newAudienceSegmentGroup(): AudienceSegmentGroup
+  def newAudienceSegmentGroup(): AudienceSegmentGroup = js.native
   // Create a new instance of Browser
-  def newBrowser(): Browser
+  def newBrowser(): Browser = js.native
   // Create a new instance of Campaign
-  def newCampaign(): Campaign
+  def newCampaign(): Campaign = js.native
   // Create a new instance of CampaignCreativeAssociation
-  def newCampaignCreativeAssociation(): CampaignCreativeAssociation
+  def newCampaignCreativeAssociation(): CampaignCreativeAssociation = js.native
   // Create a new instance of City
-  def newCity(): City
+  def newCity(): City = js.native
   // Create a new instance of ClickTag
-  def newClickTag(): ClickTag
+  def newClickTag(): ClickTag = js.native
   // Create a new instance of ClickThroughUrl
-  def newClickThroughUrl(): ClickThroughUrl
+  def newClickThroughUrl(): ClickThroughUrl = js.native
   // Create a new instance of ClickThroughUrlSuffixProperties
-  def newClickThroughUrlSuffixProperties(): ClickThroughUrlSuffixProperties
+  def newClickThroughUrlSuffixProperties(): ClickThroughUrlSuffixProperties = js.native
   // Create a new instance of CompanionClickThroughOverride
-  def newCompanionClickThroughOverride(): CompanionClickThroughOverride
+  def newCompanionClickThroughOverride(): CompanionClickThroughOverride = js.native
   // Create a new instance of CompanionSetting
-  def newCompanionSetting(): CompanionSetting
+  def newCompanionSetting(): CompanionSetting = js.native
   // Create a new instance of ConnectionType
-  def newConnectionType(): ConnectionType
+  def newConnectionType(): ConnectionType = js.native
   // Create a new instance of ContentCategory
-  def newContentCategory(): ContentCategory
+  def newContentCategory(): ContentCategory = js.native
   // Create a new instance of Conversion
-  def newConversion(): Conversion
+  def newConversion(): Conversion = js.native
   // Create a new instance of ConversionsBatchInsertRequest
-  def newConversionsBatchInsertRequest(): ConversionsBatchInsertRequest
+  def newConversionsBatchInsertRequest(): ConversionsBatchInsertRequest = js.native
   // Create a new instance of ConversionsBatchUpdateRequest
-  def newConversionsBatchUpdateRequest(): ConversionsBatchUpdateRequest
+  def newConversionsBatchUpdateRequest(): ConversionsBatchUpdateRequest = js.native
   // Create a new instance of Country
-  def newCountry(): Country
+  def newCountry(): Country = js.native
   // Create a new instance of Creative
-  def newCreative(): Creative
+  def newCreative(): Creative = js.native
   // Create a new instance of CreativeAsset
-  def newCreativeAsset(): CreativeAsset
+  def newCreativeAsset(): CreativeAsset = js.native
   // Create a new instance of CreativeAssetId
-  def newCreativeAssetId(): CreativeAssetId
+  def newCreativeAssetId(): CreativeAssetId = js.native
   // Create a new instance of CreativeAssetMetadata
-  def newCreativeAssetMetadata(): CreativeAssetMetadata
+  def newCreativeAssetMetadata(): CreativeAssetMetadata = js.native
   // Create a new instance of CreativeAssetSelection
-  def newCreativeAssetSelection(): CreativeAssetSelection
+  def newCreativeAssetSelection(): CreativeAssetSelection = js.native
   // Create a new instance of CreativeAssignment
-  def newCreativeAssignment(): CreativeAssignment
+  def newCreativeAssignment(): CreativeAssignment = js.native
   // Create a new instance of CreativeClickThroughUrl
-  def newCreativeClickThroughUrl(): CreativeClickThroughUrl
+  def newCreativeClickThroughUrl(): CreativeClickThroughUrl = js.native
   // Create a new instance of CreativeCustomEvent
-  def newCreativeCustomEvent(): CreativeCustomEvent
+  def newCreativeCustomEvent(): CreativeCustomEvent = js.native
   // Create a new instance of CreativeField
-  def newCreativeField(): CreativeField
+  def newCreativeField(): CreativeField = js.native
   // Create a new instance of CreativeFieldAssignment
-  def newCreativeFieldAssignment(): CreativeFieldAssignment
+  def newCreativeFieldAssignment(): CreativeFieldAssignment = js.native
   // Create a new instance of CreativeFieldValue
-  def newCreativeFieldValue(): CreativeFieldValue
+  def newCreativeFieldValue(): CreativeFieldValue = js.native
   // Create a new instance of CreativeGroup
-  def newCreativeGroup(): CreativeGroup
+  def newCreativeGroup(): CreativeGroup = js.native
   // Create a new instance of CreativeGroupAssignment
-  def newCreativeGroupAssignment(): CreativeGroupAssignment
+  def newCreativeGroupAssignment(): CreativeGroupAssignment = js.native
   // Create a new instance of CreativeOptimizationConfiguration
-  def newCreativeOptimizationConfiguration(): CreativeOptimizationConfiguration
+  def newCreativeOptimizationConfiguration(): CreativeOptimizationConfiguration = js.native
   // Create a new instance of CreativeRotation
-  def newCreativeRotation(): CreativeRotation
+  def newCreativeRotation(): CreativeRotation = js.native
   // Create a new instance of CustomFloodlightVariable
-  def newCustomFloodlightVariable(): CustomFloodlightVariable
+  def newCustomFloodlightVariable(): CustomFloodlightVariable = js.native
   // Create a new instance of CustomRichMediaEvents
-  def newCustomRichMediaEvents(): CustomRichMediaEvents
+  def newCustomRichMediaEvents(): CustomRichMediaEvents = js.native
   // Create a new instance of CustomViewabilityMetric
-  def newCustomViewabilityMetric(): CustomViewabilityMetric
+  def newCustomViewabilityMetric(): CustomViewabilityMetric = js.native
   // Create a new instance of CustomViewabilityMetricConfiguration
-  def newCustomViewabilityMetricConfiguration(): CustomViewabilityMetricConfiguration
+  def newCustomViewabilityMetricConfiguration(): CustomViewabilityMetricConfiguration = js.native
   // Create a new instance of DateRange
-  def newDateRange(): DateRange
+  def newDateRange(): DateRange = js.native
   // Create a new instance of DayPartTargeting
-  def newDayPartTargeting(): DayPartTargeting
+  def newDayPartTargeting(): DayPartTargeting = js.native
   // Create a new instance of DeepLink
-  def newDeepLink(): DeepLink
+  def newDeepLink(): DeepLink = js.native
   // Create a new instance of DefaultClickThroughEventTagProperties
-  def newDefaultClickThroughEventTagProperties(): DefaultClickThroughEventTagProperties
+  def newDefaultClickThroughEventTagProperties(): DefaultClickThroughEventTagProperties = js.native
   // Create a new instance of DeliverySchedule
-  def newDeliverySchedule(): DeliverySchedule
+  def newDeliverySchedule(): DeliverySchedule = js.native
   // Create a new instance of DfpSettings
-  def newDfpSettings(): DfpSettings
+  def newDfpSettings(): DfpSettings = js.native
   // Create a new instance of DimensionFilter
-  def newDimensionFilter(): DimensionFilter
+  def newDimensionFilter(): DimensionFilter = js.native
   // Create a new instance of DimensionValue
-  def newDimensionValue(): DimensionValue
+  def newDimensionValue(): DimensionValue = js.native
   // Create a new instance of DimensionValueRequest
-  def newDimensionValueRequest(): DimensionValueRequest
+  def newDimensionValueRequest(): DimensionValueRequest = js.native
   // Create a new instance of DirectorySite
-  def newDirectorySite(): DirectorySite
+  def newDirectorySite(): DirectorySite = js.native
   // Create a new instance of DirectorySiteSettings
-  def newDirectorySiteSettings(): DirectorySiteSettings
+  def newDirectorySiteSettings(): DirectorySiteSettings = js.native
   // Create a new instance of DynamicTargetingKey
-  def newDynamicTargetingKey(): DynamicTargetingKey
+  def newDynamicTargetingKey(): DynamicTargetingKey = js.native
   // Create a new instance of EncryptionInfo
-  def newEncryptionInfo(): EncryptionInfo
+  def newEncryptionInfo(): EncryptionInfo = js.native
   // Create a new instance of EventTag
-  def newEventTag(): EventTag
+  def newEventTag(): EventTag = js.native
   // Create a new instance of EventTagOverride
-  def newEventTagOverride(): EventTagOverride
+  def newEventTagOverride(): EventTagOverride = js.native
   // Create a new instance of FloodlightActivity
-  def newFloodlightActivity(): FloodlightActivity
+  def newFloodlightActivity(): FloodlightActivity = js.native
   // Create a new instance of FloodlightActivityDynamicTag
-  def newFloodlightActivityDynamicTag(): FloodlightActivityDynamicTag
+  def newFloodlightActivityDynamicTag(): FloodlightActivityDynamicTag = js.native
   // Create a new instance of FloodlightActivityGroup
-  def newFloodlightActivityGroup(): FloodlightActivityGroup
+  def newFloodlightActivityGroup(): FloodlightActivityGroup = js.native
   // Create a new instance of FloodlightActivityPublisherDynamicTag
-  def newFloodlightActivityPublisherDynamicTag(): FloodlightActivityPublisherDynamicTag
+  def newFloodlightActivityPublisherDynamicTag(): FloodlightActivityPublisherDynamicTag = js.native
   // Create a new instance of FloodlightConfiguration
-  def newFloodlightConfiguration(): FloodlightConfiguration
+  def newFloodlightConfiguration(): FloodlightConfiguration = js.native
   // Create a new instance of FrequencyCap
-  def newFrequencyCap(): FrequencyCap
+  def newFrequencyCap(): FrequencyCap = js.native
   // Create a new instance of FsCommand
-  def newFsCommand(): FsCommand
+  def newFsCommand(): FsCommand = js.native
   // Create a new instance of GeoTargeting
-  def newGeoTargeting(): GeoTargeting
+  def newGeoTargeting(): GeoTargeting = js.native
   // Create a new instance of KeyValueTargetingExpression
-  def newKeyValueTargetingExpression(): KeyValueTargetingExpression
+  def newKeyValueTargetingExpression(): KeyValueTargetingExpression = js.native
   // Create a new instance of LandingPage
-  def newLandingPage(): LandingPage
+  def newLandingPage(): LandingPage = js.native
   // Create a new instance of Language
-  def newLanguage(): typingsSlinky.googleAppsScript.GoogleAppsScript.Dfareporting.Schema.Language
+  def newLanguage(): typingsSlinky.googleAppsScript.GoogleAppsScript.Dfareporting.Schema.Language = js.native
   // Create a new instance of LanguageTargeting
-  def newLanguageTargeting(): LanguageTargeting
+  def newLanguageTargeting(): LanguageTargeting = js.native
   // Create a new instance of LastModifiedInfo
-  def newLastModifiedInfo(): LastModifiedInfo
+  def newLastModifiedInfo(): LastModifiedInfo = js.native
   // Create a new instance of ListPopulationClause
-  def newListPopulationClause(): ListPopulationClause
+  def newListPopulationClause(): ListPopulationClause = js.native
   // Create a new instance of ListPopulationRule
-  def newListPopulationRule(): ListPopulationRule
+  def newListPopulationRule(): ListPopulationRule = js.native
   // Create a new instance of ListPopulationTerm
-  def newListPopulationTerm(): ListPopulationTerm
+  def newListPopulationTerm(): ListPopulationTerm = js.native
   // Create a new instance of ListTargetingExpression
-  def newListTargetingExpression(): ListTargetingExpression
+  def newListTargetingExpression(): ListTargetingExpression = js.native
   // Create a new instance of LookbackConfiguration
-  def newLookbackConfiguration(): LookbackConfiguration
+  def newLookbackConfiguration(): LookbackConfiguration = js.native
   // Create a new instance of Metro
-  def newMetro(): Metro
+  def newMetro(): Metro = js.native
   // Create a new instance of MobileApp
-  def newMobileApp(): MobileApp
+  def newMobileApp(): MobileApp = js.native
   // Create a new instance of MobileCarrier
-  def newMobileCarrier(): MobileCarrier
+  def newMobileCarrier(): MobileCarrier = js.native
   // Create a new instance of ObjectFilter
-  def newObjectFilter(): ObjectFilter
+  def newObjectFilter(): ObjectFilter = js.native
   // Create a new instance of OffsetPosition
-  def newOffsetPosition(): OffsetPosition
+  def newOffsetPosition(): OffsetPosition = js.native
   // Create a new instance of OmnitureSettings
-  def newOmnitureSettings(): OmnitureSettings
+  def newOmnitureSettings(): OmnitureSettings = js.native
   // Create a new instance of OperatingSystem
-  def newOperatingSystem(): OperatingSystem
+  def newOperatingSystem(): OperatingSystem = js.native
   // Create a new instance of OperatingSystemVersion
-  def newOperatingSystemVersion(): OperatingSystemVersion
+  def newOperatingSystemVersion(): OperatingSystemVersion = js.native
   // Create a new instance of OptimizationActivity
-  def newOptimizationActivity(): OptimizationActivity
+  def newOptimizationActivity(): OptimizationActivity = js.native
   // Create a new instance of Placement
-  def newPlacement(): Placement
+  def newPlacement(): Placement = js.native
   // Create a new instance of PlacementAssignment
-  def newPlacementAssignment(): PlacementAssignment
+  def newPlacementAssignment(): PlacementAssignment = js.native
   // Create a new instance of PlacementGroup
-  def newPlacementGroup(): PlacementGroup
+  def newPlacementGroup(): PlacementGroup = js.native
   // Create a new instance of PlacementStrategy
-  def newPlacementStrategy(): PlacementStrategy
+  def newPlacementStrategy(): PlacementStrategy = js.native
   // Create a new instance of PlatformType
-  def newPlatformType(): PlatformType
+  def newPlatformType(): PlatformType = js.native
   // Create a new instance of PopupWindowProperties
-  def newPopupWindowProperties(): PopupWindowProperties
+  def newPopupWindowProperties(): PopupWindowProperties = js.native
   // Create a new instance of PostalCode
-  def newPostalCode(): PostalCode
+  def newPostalCode(): PostalCode = js.native
   // Create a new instance of PricingSchedule
-  def newPricingSchedule(): PricingSchedule
+  def newPricingSchedule(): PricingSchedule = js.native
   // Create a new instance of PricingSchedulePricingPeriod
-  def newPricingSchedulePricingPeriod(): PricingSchedulePricingPeriod
+  def newPricingSchedulePricingPeriod(): PricingSchedulePricingPeriod = js.native
   // Create a new instance of Recipient
-  def newRecipient(): Recipient
+  def newRecipient(): Recipient = js.native
   // Create a new instance of Region
-  def newRegion(): Region
+  def newRegion(): Region = js.native
   // Create a new instance of RemarketingList
-  def newRemarketingList(): RemarketingList
+  def newRemarketingList(): RemarketingList = js.native
   // Create a new instance of RemarketingListShare
-  def newRemarketingListShare(): RemarketingListShare
+  def newRemarketingListShare(): RemarketingListShare = js.native
   // Create a new instance of Report
-  def newReport(): Report
+  def newReport(): Report = js.native
   // Create a new instance of ReportCriteria
-  def newReportCriteria(): ReportCriteria
+  def newReportCriteria(): ReportCriteria = js.native
   // Create a new instance of ReportCrossDimensionReachCriteria
-  def newReportCrossDimensionReachCriteria(): ReportCrossDimensionReachCriteria
+  def newReportCrossDimensionReachCriteria(): ReportCrossDimensionReachCriteria = js.native
   // Create a new instance of ReportDelivery
-  def newReportDelivery(): ReportDelivery
+  def newReportDelivery(): ReportDelivery = js.native
   // Create a new instance of ReportFloodlightCriteria
-  def newReportFloodlightCriteria(): ReportFloodlightCriteria
+  def newReportFloodlightCriteria(): ReportFloodlightCriteria = js.native
   // Create a new instance of ReportFloodlightCriteriaReportProperties
-  def newReportFloodlightCriteriaReportProperties(): ReportFloodlightCriteriaReportProperties
+  def newReportFloodlightCriteriaReportProperties(): ReportFloodlightCriteriaReportProperties = js.native
   // Create a new instance of ReportPathToConversionCriteria
-  def newReportPathToConversionCriteria(): ReportPathToConversionCriteria
+  def newReportPathToConversionCriteria(): ReportPathToConversionCriteria = js.native
   // Create a new instance of ReportPathToConversionCriteriaReportProperties
-  def newReportPathToConversionCriteriaReportProperties(): ReportPathToConversionCriteriaReportProperties
+  def newReportPathToConversionCriteriaReportProperties(): ReportPathToConversionCriteriaReportProperties = js.native
   // Create a new instance of ReportReachCriteria
-  def newReportReachCriteria(): ReportReachCriteria
+  def newReportReachCriteria(): ReportReachCriteria = js.native
   // Create a new instance of ReportSchedule
-  def newReportSchedule(): ReportSchedule
+  def newReportSchedule(): ReportSchedule = js.native
   // Create a new instance of ReportsConfiguration
-  def newReportsConfiguration(): ReportsConfiguration
+  def newReportsConfiguration(): ReportsConfiguration = js.native
   // Create a new instance of RichMediaExitOverride
-  def newRichMediaExitOverride(): RichMediaExitOverride
+  def newRichMediaExitOverride(): RichMediaExitOverride = js.native
   // Create a new instance of Rule
-  def newRule(): Rule
+  def newRule(): Rule = js.native
   // Create a new instance of Site
-  def newSite(): Site
+  def newSite(): Site = js.native
   // Create a new instance of SiteCompanionSetting
-  def newSiteCompanionSetting(): SiteCompanionSetting
+  def newSiteCompanionSetting(): SiteCompanionSetting = js.native
   // Create a new instance of SiteContact
-  def newSiteContact(): SiteContact
+  def newSiteContact(): SiteContact = js.native
   // Create a new instance of SiteSettings
-  def newSiteSettings(): SiteSettings
+  def newSiteSettings(): SiteSettings = js.native
   // Create a new instance of SiteSkippableSetting
-  def newSiteSkippableSetting(): SiteSkippableSetting
+  def newSiteSkippableSetting(): SiteSkippableSetting = js.native
   // Create a new instance of SiteTranscodeSetting
-  def newSiteTranscodeSetting(): SiteTranscodeSetting
+  def newSiteTranscodeSetting(): SiteTranscodeSetting = js.native
   // Create a new instance of SiteVideoSettings
-  def newSiteVideoSettings(): SiteVideoSettings
+  def newSiteVideoSettings(): SiteVideoSettings = js.native
   // Create a new instance of Size
-  def newSize(): Size
+  def newSize(): Size = js.native
   // Create a new instance of SkippableSetting
-  def newSkippableSetting(): SkippableSetting
+  def newSkippableSetting(): SkippableSetting = js.native
   // Create a new instance of SortedDimension
-  def newSortedDimension(): SortedDimension
+  def newSortedDimension(): SortedDimension = js.native
   // Create a new instance of Subaccount
-  def newSubaccount(): Subaccount
+  def newSubaccount(): Subaccount = js.native
   // Create a new instance of TagSetting
-  def newTagSetting(): TagSetting
+  def newTagSetting(): TagSetting = js.native
   // Create a new instance of TagSettings
-  def newTagSettings(): TagSettings
+  def newTagSettings(): TagSettings = js.native
   // Create a new instance of TargetWindow
-  def newTargetWindow(): TargetWindow
+  def newTargetWindow(): TargetWindow = js.native
   // Create a new instance of TargetingTemplate
-  def newTargetingTemplate(): TargetingTemplate
+  def newTargetingTemplate(): TargetingTemplate = js.native
   // Create a new instance of TechnologyTargeting
-  def newTechnologyTargeting(): TechnologyTargeting
+  def newTechnologyTargeting(): TechnologyTargeting = js.native
   // Create a new instance of ThirdPartyAuthenticationToken
-  def newThirdPartyAuthenticationToken(): ThirdPartyAuthenticationToken
+  def newThirdPartyAuthenticationToken(): ThirdPartyAuthenticationToken = js.native
   // Create a new instance of ThirdPartyTrackingUrl
-  def newThirdPartyTrackingUrl(): ThirdPartyTrackingUrl
+  def newThirdPartyTrackingUrl(): ThirdPartyTrackingUrl = js.native
   // Create a new instance of TranscodeSetting
-  def newTranscodeSetting(): TranscodeSetting
+  def newTranscodeSetting(): TranscodeSetting = js.native
   // Create a new instance of UniversalAdId
-  def newUniversalAdId(): UniversalAdId
+  def newUniversalAdId(): UniversalAdId = js.native
   // Create a new instance of UserDefinedVariableConfiguration
-  def newUserDefinedVariableConfiguration(): UserDefinedVariableConfiguration
+  def newUserDefinedVariableConfiguration(): UserDefinedVariableConfiguration = js.native
   // Create a new instance of UserRole
-  def newUserRole(): UserRole
+  def newUserRole(): UserRole = js.native
   // Create a new instance of UserRolePermission
-  def newUserRolePermission(): UserRolePermission
+  def newUserRolePermission(): UserRolePermission = js.native
   // Create a new instance of VideoOffset
-  def newVideoOffset(): VideoOffset
+  def newVideoOffset(): VideoOffset = js.native
   // Create a new instance of VideoSettings
-  def newVideoSettings(): VideoSettings
+  def newVideoSettings(): VideoSettings = js.native
 }
 
 object Dfareporting_ {
@@ -672,130 +673,1554 @@ object Dfareporting_ {
     newUserRole: () => UserRole,
     newUserRolePermission: () => UserRolePermission,
     newVideoOffset: () => VideoOffset,
-    newVideoSettings: () => VideoSettings,
-    AccountActiveAdSummaries: AccountActiveAdSummariesCollection = null,
-    AccountPermissionGroups: AccountPermissionGroupsCollection = null,
-    AccountPermissions: AccountPermissionsCollection = null,
-    AccountUserProfiles: AccountUserProfilesCollection = null,
-    Accounts: AccountsCollection = null,
-    Ads: AdsCollection = null,
-    AdvertiserGroups: AdvertiserGroupsCollection = null,
-    AdvertiserLandingPages: AdvertiserLandingPagesCollection = null,
-    Advertisers: AdvertisersCollection = null,
-    Browsers: BrowsersCollection = null,
-    CampaignCreativeAssociations: CampaignCreativeAssociationsCollection = null,
-    Campaigns: CampaignsCollection = null,
-    ChangeLogs: ChangeLogsCollection = null,
-    Cities: CitiesCollection = null,
-    ConnectionTypes: ConnectionTypesCollection = null,
-    ContentCategories: ContentCategoriesCollection = null,
-    Conversions: ConversionsCollection = null,
-    Countries: CountriesCollection = null,
-    CreativeAssets: CreativeAssetsCollection = null,
-    CreativeFieldValues: CreativeFieldValuesCollection = null,
-    CreativeFields: CreativeFieldsCollection = null,
-    CreativeGroups: CreativeGroupsCollection = null,
-    Creatives: CreativesCollection = null,
-    DimensionValues: DimensionValuesCollection = null,
-    DirectorySites: DirectorySitesCollection = null,
-    DynamicTargetingKeys: DynamicTargetingKeysCollection = null,
-    EventTags: EventTagsCollection = null,
-    Files: FilesCollection = null,
-    FloodlightActivities: FloodlightActivitiesCollection = null,
-    FloodlightActivityGroups: FloodlightActivityGroupsCollection = null,
-    FloodlightConfigurations: FloodlightConfigurationsCollection = null,
-    InventoryItems: InventoryItemsCollection = null,
-    Languages: LanguagesCollection = null,
-    Metros: MetrosCollection = null,
-    MobileApps: MobileAppsCollection = null,
-    MobileCarriers: MobileCarriersCollection = null,
-    OperatingSystemVersions: OperatingSystemVersionsCollection = null,
-    OperatingSystems: OperatingSystemsCollection = null,
-    OrderDocuments: OrderDocumentsCollection = null,
-    Orders: OrdersCollection = null,
-    PlacementGroups: PlacementGroupsCollection = null,
-    PlacementStrategies: PlacementStrategiesCollection = null,
-    Placements: PlacementsCollection = null,
-    PlatformTypes: PlatformTypesCollection = null,
-    PostalCodes: PostalCodesCollection = null,
-    Projects: ProjectsCollection = null,
-    Regions: RegionsCollection = null,
-    RemarketingListShares: RemarketingListSharesCollection = null,
-    RemarketingLists: RemarketingListsCollection = null,
-    Reports: ReportsCollection = null,
-    Sites: SitesCollection = null,
-    Sizes: SizesCollection = null,
-    Subaccounts: SubaccountsCollection = null,
-    TargetableRemarketingLists: TargetableRemarketingListsCollection = null,
-    TargetingTemplates: TargetingTemplatesCollection = null,
-    UserProfiles: UserProfilesCollection = null,
-    UserRolePermissionGroups: UserRolePermissionGroupsCollection = null,
-    UserRolePermissions: UserRolePermissionsCollection = null,
-    UserRoles: UserRolesCollection = null,
-    VideoFormats: VideoFormatsCollection = null
+    newVideoSettings: () => VideoSettings
   ): Dfareporting_ = {
     val __obj = js.Dynamic.literal(newAccount = js.Any.fromFunction0(newAccount), newAccountUserProfile = js.Any.fromFunction0(newAccountUserProfile), newActivities = js.Any.fromFunction0(newActivities), newAd = js.Any.fromFunction0(newAd), newAdBlockingConfiguration = js.Any.fromFunction0(newAdBlockingConfiguration), newAdvertiser = js.Any.fromFunction0(newAdvertiser), newAdvertiserGroup = js.Any.fromFunction0(newAdvertiserGroup), newAudienceSegment = js.Any.fromFunction0(newAudienceSegment), newAudienceSegmentGroup = js.Any.fromFunction0(newAudienceSegmentGroup), newBrowser = js.Any.fromFunction0(newBrowser), newCampaign = js.Any.fromFunction0(newCampaign), newCampaignCreativeAssociation = js.Any.fromFunction0(newCampaignCreativeAssociation), newCity = js.Any.fromFunction0(newCity), newClickTag = js.Any.fromFunction0(newClickTag), newClickThroughUrl = js.Any.fromFunction0(newClickThroughUrl), newClickThroughUrlSuffixProperties = js.Any.fromFunction0(newClickThroughUrlSuffixProperties), newCompanionClickThroughOverride = js.Any.fromFunction0(newCompanionClickThroughOverride), newCompanionSetting = js.Any.fromFunction0(newCompanionSetting), newConnectionType = js.Any.fromFunction0(newConnectionType), newContentCategory = js.Any.fromFunction0(newContentCategory), newConversion = js.Any.fromFunction0(newConversion), newConversionsBatchInsertRequest = js.Any.fromFunction0(newConversionsBatchInsertRequest), newConversionsBatchUpdateRequest = js.Any.fromFunction0(newConversionsBatchUpdateRequest), newCountry = js.Any.fromFunction0(newCountry), newCreative = js.Any.fromFunction0(newCreative), newCreativeAsset = js.Any.fromFunction0(newCreativeAsset), newCreativeAssetId = js.Any.fromFunction0(newCreativeAssetId), newCreativeAssetMetadata = js.Any.fromFunction0(newCreativeAssetMetadata), newCreativeAssetSelection = js.Any.fromFunction0(newCreativeAssetSelection), newCreativeAssignment = js.Any.fromFunction0(newCreativeAssignment), newCreativeClickThroughUrl = js.Any.fromFunction0(newCreativeClickThroughUrl), newCreativeCustomEvent = js.Any.fromFunction0(newCreativeCustomEvent), newCreativeField = js.Any.fromFunction0(newCreativeField), newCreativeFieldAssignment = js.Any.fromFunction0(newCreativeFieldAssignment), newCreativeFieldValue = js.Any.fromFunction0(newCreativeFieldValue), newCreativeGroup = js.Any.fromFunction0(newCreativeGroup), newCreativeGroupAssignment = js.Any.fromFunction0(newCreativeGroupAssignment), newCreativeOptimizationConfiguration = js.Any.fromFunction0(newCreativeOptimizationConfiguration), newCreativeRotation = js.Any.fromFunction0(newCreativeRotation), newCustomFloodlightVariable = js.Any.fromFunction0(newCustomFloodlightVariable), newCustomRichMediaEvents = js.Any.fromFunction0(newCustomRichMediaEvents), newCustomViewabilityMetric = js.Any.fromFunction0(newCustomViewabilityMetric), newCustomViewabilityMetricConfiguration = js.Any.fromFunction0(newCustomViewabilityMetricConfiguration), newDateRange = js.Any.fromFunction0(newDateRange), newDayPartTargeting = js.Any.fromFunction0(newDayPartTargeting), newDeepLink = js.Any.fromFunction0(newDeepLink), newDefaultClickThroughEventTagProperties = js.Any.fromFunction0(newDefaultClickThroughEventTagProperties), newDeliverySchedule = js.Any.fromFunction0(newDeliverySchedule), newDfpSettings = js.Any.fromFunction0(newDfpSettings), newDimensionFilter = js.Any.fromFunction0(newDimensionFilter), newDimensionValue = js.Any.fromFunction0(newDimensionValue), newDimensionValueRequest = js.Any.fromFunction0(newDimensionValueRequest), newDirectorySite = js.Any.fromFunction0(newDirectorySite), newDirectorySiteSettings = js.Any.fromFunction0(newDirectorySiteSettings), newDynamicTargetingKey = js.Any.fromFunction0(newDynamicTargetingKey), newEncryptionInfo = js.Any.fromFunction0(newEncryptionInfo), newEventTag = js.Any.fromFunction0(newEventTag), newEventTagOverride = js.Any.fromFunction0(newEventTagOverride), newFloodlightActivity = js.Any.fromFunction0(newFloodlightActivity), newFloodlightActivityDynamicTag = js.Any.fromFunction0(newFloodlightActivityDynamicTag), newFloodlightActivityGroup = js.Any.fromFunction0(newFloodlightActivityGroup), newFloodlightActivityPublisherDynamicTag = js.Any.fromFunction0(newFloodlightActivityPublisherDynamicTag), newFloodlightConfiguration = js.Any.fromFunction0(newFloodlightConfiguration), newFrequencyCap = js.Any.fromFunction0(newFrequencyCap), newFsCommand = js.Any.fromFunction0(newFsCommand), newGeoTargeting = js.Any.fromFunction0(newGeoTargeting), newKeyValueTargetingExpression = js.Any.fromFunction0(newKeyValueTargetingExpression), newLandingPage = js.Any.fromFunction0(newLandingPage), newLanguage = js.Any.fromFunction0(newLanguage), newLanguageTargeting = js.Any.fromFunction0(newLanguageTargeting), newLastModifiedInfo = js.Any.fromFunction0(newLastModifiedInfo), newListPopulationClause = js.Any.fromFunction0(newListPopulationClause), newListPopulationRule = js.Any.fromFunction0(newListPopulationRule), newListPopulationTerm = js.Any.fromFunction0(newListPopulationTerm), newListTargetingExpression = js.Any.fromFunction0(newListTargetingExpression), newLookbackConfiguration = js.Any.fromFunction0(newLookbackConfiguration), newMetro = js.Any.fromFunction0(newMetro), newMobileApp = js.Any.fromFunction0(newMobileApp), newMobileCarrier = js.Any.fromFunction0(newMobileCarrier), newObjectFilter = js.Any.fromFunction0(newObjectFilter), newOffsetPosition = js.Any.fromFunction0(newOffsetPosition), newOmnitureSettings = js.Any.fromFunction0(newOmnitureSettings), newOperatingSystem = js.Any.fromFunction0(newOperatingSystem), newOperatingSystemVersion = js.Any.fromFunction0(newOperatingSystemVersion), newOptimizationActivity = js.Any.fromFunction0(newOptimizationActivity), newPlacement = js.Any.fromFunction0(newPlacement), newPlacementAssignment = js.Any.fromFunction0(newPlacementAssignment), newPlacementGroup = js.Any.fromFunction0(newPlacementGroup), newPlacementStrategy = js.Any.fromFunction0(newPlacementStrategy), newPlatformType = js.Any.fromFunction0(newPlatformType), newPopupWindowProperties = js.Any.fromFunction0(newPopupWindowProperties), newPostalCode = js.Any.fromFunction0(newPostalCode), newPricingSchedule = js.Any.fromFunction0(newPricingSchedule), newPricingSchedulePricingPeriod = js.Any.fromFunction0(newPricingSchedulePricingPeriod), newRecipient = js.Any.fromFunction0(newRecipient), newRegion = js.Any.fromFunction0(newRegion), newRemarketingList = js.Any.fromFunction0(newRemarketingList), newRemarketingListShare = js.Any.fromFunction0(newRemarketingListShare), newReport = js.Any.fromFunction0(newReport), newReportCriteria = js.Any.fromFunction0(newReportCriteria), newReportCrossDimensionReachCriteria = js.Any.fromFunction0(newReportCrossDimensionReachCriteria), newReportDelivery = js.Any.fromFunction0(newReportDelivery), newReportFloodlightCriteria = js.Any.fromFunction0(newReportFloodlightCriteria), newReportFloodlightCriteriaReportProperties = js.Any.fromFunction0(newReportFloodlightCriteriaReportProperties), newReportPathToConversionCriteria = js.Any.fromFunction0(newReportPathToConversionCriteria), newReportPathToConversionCriteriaReportProperties = js.Any.fromFunction0(newReportPathToConversionCriteriaReportProperties), newReportReachCriteria = js.Any.fromFunction0(newReportReachCriteria), newReportSchedule = js.Any.fromFunction0(newReportSchedule), newReportsConfiguration = js.Any.fromFunction0(newReportsConfiguration), newRichMediaExitOverride = js.Any.fromFunction0(newRichMediaExitOverride), newRule = js.Any.fromFunction0(newRule), newSite = js.Any.fromFunction0(newSite), newSiteCompanionSetting = js.Any.fromFunction0(newSiteCompanionSetting), newSiteContact = js.Any.fromFunction0(newSiteContact), newSiteSettings = js.Any.fromFunction0(newSiteSettings), newSiteSkippableSetting = js.Any.fromFunction0(newSiteSkippableSetting), newSiteTranscodeSetting = js.Any.fromFunction0(newSiteTranscodeSetting), newSiteVideoSettings = js.Any.fromFunction0(newSiteVideoSettings), newSize = js.Any.fromFunction0(newSize), newSkippableSetting = js.Any.fromFunction0(newSkippableSetting), newSortedDimension = js.Any.fromFunction0(newSortedDimension), newSubaccount = js.Any.fromFunction0(newSubaccount), newTagSetting = js.Any.fromFunction0(newTagSetting), newTagSettings = js.Any.fromFunction0(newTagSettings), newTargetWindow = js.Any.fromFunction0(newTargetWindow), newTargetingTemplate = js.Any.fromFunction0(newTargetingTemplate), newTechnologyTargeting = js.Any.fromFunction0(newTechnologyTargeting), newThirdPartyAuthenticationToken = js.Any.fromFunction0(newThirdPartyAuthenticationToken), newThirdPartyTrackingUrl = js.Any.fromFunction0(newThirdPartyTrackingUrl), newTranscodeSetting = js.Any.fromFunction0(newTranscodeSetting), newUniversalAdId = js.Any.fromFunction0(newUniversalAdId), newUserDefinedVariableConfiguration = js.Any.fromFunction0(newUserDefinedVariableConfiguration), newUserRole = js.Any.fromFunction0(newUserRole), newUserRolePermission = js.Any.fromFunction0(newUserRolePermission), newVideoOffset = js.Any.fromFunction0(newVideoOffset), newVideoSettings = js.Any.fromFunction0(newVideoSettings))
-    if (AccountActiveAdSummaries != null) __obj.updateDynamic("AccountActiveAdSummaries")(AccountActiveAdSummaries.asInstanceOf[js.Any])
-    if (AccountPermissionGroups != null) __obj.updateDynamic("AccountPermissionGroups")(AccountPermissionGroups.asInstanceOf[js.Any])
-    if (AccountPermissions != null) __obj.updateDynamic("AccountPermissions")(AccountPermissions.asInstanceOf[js.Any])
-    if (AccountUserProfiles != null) __obj.updateDynamic("AccountUserProfiles")(AccountUserProfiles.asInstanceOf[js.Any])
-    if (Accounts != null) __obj.updateDynamic("Accounts")(Accounts.asInstanceOf[js.Any])
-    if (Ads != null) __obj.updateDynamic("Ads")(Ads.asInstanceOf[js.Any])
-    if (AdvertiserGroups != null) __obj.updateDynamic("AdvertiserGroups")(AdvertiserGroups.asInstanceOf[js.Any])
-    if (AdvertiserLandingPages != null) __obj.updateDynamic("AdvertiserLandingPages")(AdvertiserLandingPages.asInstanceOf[js.Any])
-    if (Advertisers != null) __obj.updateDynamic("Advertisers")(Advertisers.asInstanceOf[js.Any])
-    if (Browsers != null) __obj.updateDynamic("Browsers")(Browsers.asInstanceOf[js.Any])
-    if (CampaignCreativeAssociations != null) __obj.updateDynamic("CampaignCreativeAssociations")(CampaignCreativeAssociations.asInstanceOf[js.Any])
-    if (Campaigns != null) __obj.updateDynamic("Campaigns")(Campaigns.asInstanceOf[js.Any])
-    if (ChangeLogs != null) __obj.updateDynamic("ChangeLogs")(ChangeLogs.asInstanceOf[js.Any])
-    if (Cities != null) __obj.updateDynamic("Cities")(Cities.asInstanceOf[js.Any])
-    if (ConnectionTypes != null) __obj.updateDynamic("ConnectionTypes")(ConnectionTypes.asInstanceOf[js.Any])
-    if (ContentCategories != null) __obj.updateDynamic("ContentCategories")(ContentCategories.asInstanceOf[js.Any])
-    if (Conversions != null) __obj.updateDynamic("Conversions")(Conversions.asInstanceOf[js.Any])
-    if (Countries != null) __obj.updateDynamic("Countries")(Countries.asInstanceOf[js.Any])
-    if (CreativeAssets != null) __obj.updateDynamic("CreativeAssets")(CreativeAssets.asInstanceOf[js.Any])
-    if (CreativeFieldValues != null) __obj.updateDynamic("CreativeFieldValues")(CreativeFieldValues.asInstanceOf[js.Any])
-    if (CreativeFields != null) __obj.updateDynamic("CreativeFields")(CreativeFields.asInstanceOf[js.Any])
-    if (CreativeGroups != null) __obj.updateDynamic("CreativeGroups")(CreativeGroups.asInstanceOf[js.Any])
-    if (Creatives != null) __obj.updateDynamic("Creatives")(Creatives.asInstanceOf[js.Any])
-    if (DimensionValues != null) __obj.updateDynamic("DimensionValues")(DimensionValues.asInstanceOf[js.Any])
-    if (DirectorySites != null) __obj.updateDynamic("DirectorySites")(DirectorySites.asInstanceOf[js.Any])
-    if (DynamicTargetingKeys != null) __obj.updateDynamic("DynamicTargetingKeys")(DynamicTargetingKeys.asInstanceOf[js.Any])
-    if (EventTags != null) __obj.updateDynamic("EventTags")(EventTags.asInstanceOf[js.Any])
-    if (Files != null) __obj.updateDynamic("Files")(Files.asInstanceOf[js.Any])
-    if (FloodlightActivities != null) __obj.updateDynamic("FloodlightActivities")(FloodlightActivities.asInstanceOf[js.Any])
-    if (FloodlightActivityGroups != null) __obj.updateDynamic("FloodlightActivityGroups")(FloodlightActivityGroups.asInstanceOf[js.Any])
-    if (FloodlightConfigurations != null) __obj.updateDynamic("FloodlightConfigurations")(FloodlightConfigurations.asInstanceOf[js.Any])
-    if (InventoryItems != null) __obj.updateDynamic("InventoryItems")(InventoryItems.asInstanceOf[js.Any])
-    if (Languages != null) __obj.updateDynamic("Languages")(Languages.asInstanceOf[js.Any])
-    if (Metros != null) __obj.updateDynamic("Metros")(Metros.asInstanceOf[js.Any])
-    if (MobileApps != null) __obj.updateDynamic("MobileApps")(MobileApps.asInstanceOf[js.Any])
-    if (MobileCarriers != null) __obj.updateDynamic("MobileCarriers")(MobileCarriers.asInstanceOf[js.Any])
-    if (OperatingSystemVersions != null) __obj.updateDynamic("OperatingSystemVersions")(OperatingSystemVersions.asInstanceOf[js.Any])
-    if (OperatingSystems != null) __obj.updateDynamic("OperatingSystems")(OperatingSystems.asInstanceOf[js.Any])
-    if (OrderDocuments != null) __obj.updateDynamic("OrderDocuments")(OrderDocuments.asInstanceOf[js.Any])
-    if (Orders != null) __obj.updateDynamic("Orders")(Orders.asInstanceOf[js.Any])
-    if (PlacementGroups != null) __obj.updateDynamic("PlacementGroups")(PlacementGroups.asInstanceOf[js.Any])
-    if (PlacementStrategies != null) __obj.updateDynamic("PlacementStrategies")(PlacementStrategies.asInstanceOf[js.Any])
-    if (Placements != null) __obj.updateDynamic("Placements")(Placements.asInstanceOf[js.Any])
-    if (PlatformTypes != null) __obj.updateDynamic("PlatformTypes")(PlatformTypes.asInstanceOf[js.Any])
-    if (PostalCodes != null) __obj.updateDynamic("PostalCodes")(PostalCodes.asInstanceOf[js.Any])
-    if (Projects != null) __obj.updateDynamic("Projects")(Projects.asInstanceOf[js.Any])
-    if (Regions != null) __obj.updateDynamic("Regions")(Regions.asInstanceOf[js.Any])
-    if (RemarketingListShares != null) __obj.updateDynamic("RemarketingListShares")(RemarketingListShares.asInstanceOf[js.Any])
-    if (RemarketingLists != null) __obj.updateDynamic("RemarketingLists")(RemarketingLists.asInstanceOf[js.Any])
-    if (Reports != null) __obj.updateDynamic("Reports")(Reports.asInstanceOf[js.Any])
-    if (Sites != null) __obj.updateDynamic("Sites")(Sites.asInstanceOf[js.Any])
-    if (Sizes != null) __obj.updateDynamic("Sizes")(Sizes.asInstanceOf[js.Any])
-    if (Subaccounts != null) __obj.updateDynamic("Subaccounts")(Subaccounts.asInstanceOf[js.Any])
-    if (TargetableRemarketingLists != null) __obj.updateDynamic("TargetableRemarketingLists")(TargetableRemarketingLists.asInstanceOf[js.Any])
-    if (TargetingTemplates != null) __obj.updateDynamic("TargetingTemplates")(TargetingTemplates.asInstanceOf[js.Any])
-    if (UserProfiles != null) __obj.updateDynamic("UserProfiles")(UserProfiles.asInstanceOf[js.Any])
-    if (UserRolePermissionGroups != null) __obj.updateDynamic("UserRolePermissionGroups")(UserRolePermissionGroups.asInstanceOf[js.Any])
-    if (UserRolePermissions != null) __obj.updateDynamic("UserRolePermissions")(UserRolePermissions.asInstanceOf[js.Any])
-    if (UserRoles != null) __obj.updateDynamic("UserRoles")(UserRoles.asInstanceOf[js.Any])
-    if (VideoFormats != null) __obj.updateDynamic("VideoFormats")(VideoFormats.asInstanceOf[js.Any])
     __obj.asInstanceOf[Dfareporting_]
   }
+  @scala.inline
+  implicit class Dfareporting_Ops[Self <: Dfareporting_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewAccount(value: () => Account): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newAccount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewAccountUserProfile(value: () => AccountUserProfile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newAccountUserProfile")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewActivities(value: () => Activities): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newActivities")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewAd(value: () => Ad): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newAd")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewAdBlockingConfiguration(value: () => AdBlockingConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newAdBlockingConfiguration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewAdvertiser(value: () => Advertiser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newAdvertiser")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewAdvertiserGroup(value: () => AdvertiserGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newAdvertiserGroup")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewAudienceSegment(value: () => AudienceSegment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newAudienceSegment")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewAudienceSegmentGroup(value: () => AudienceSegmentGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newAudienceSegmentGroup")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewBrowser(value: () => Browser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newBrowser")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCampaign(value: () => Campaign): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCampaign")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCampaignCreativeAssociation(value: () => CampaignCreativeAssociation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCampaignCreativeAssociation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCity(value: () => City): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCity")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewClickTag(value: () => ClickTag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newClickTag")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewClickThroughUrl(value: () => ClickThroughUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newClickThroughUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewClickThroughUrlSuffixProperties(value: () => ClickThroughUrlSuffixProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newClickThroughUrlSuffixProperties")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCompanionClickThroughOverride(value: () => CompanionClickThroughOverride): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCompanionClickThroughOverride")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCompanionSetting(value: () => CompanionSetting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCompanionSetting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewConnectionType(value: () => ConnectionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newConnectionType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewContentCategory(value: () => ContentCategory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newContentCategory")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewConversion(value: () => Conversion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newConversion")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewConversionsBatchInsertRequest(value: () => ConversionsBatchInsertRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newConversionsBatchInsertRequest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewConversionsBatchUpdateRequest(value: () => ConversionsBatchUpdateRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newConversionsBatchUpdateRequest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCountry(value: () => Country): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCountry")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreative(value: () => Creative): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreative")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeAsset(value: () => CreativeAsset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeAsset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeAssetId(value: () => CreativeAssetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeAssetId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeAssetMetadata(value: () => CreativeAssetMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeAssetMetadata")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeAssetSelection(value: () => CreativeAssetSelection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeAssetSelection")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeAssignment(value: () => CreativeAssignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeAssignment")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeClickThroughUrl(value: () => CreativeClickThroughUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeClickThroughUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeCustomEvent(value: () => CreativeCustomEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeCustomEvent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeField(value: () => CreativeField): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeField")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeFieldAssignment(value: () => CreativeFieldAssignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeFieldAssignment")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeFieldValue(value: () => CreativeFieldValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeFieldValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeGroup(value: () => CreativeGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeGroup")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeGroupAssignment(value: () => CreativeGroupAssignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeGroupAssignment")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeOptimizationConfiguration(value: () => CreativeOptimizationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeOptimizationConfiguration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCreativeRotation(value: () => CreativeRotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCreativeRotation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCustomFloodlightVariable(value: () => CustomFloodlightVariable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCustomFloodlightVariable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCustomRichMediaEvents(value: () => CustomRichMediaEvents): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCustomRichMediaEvents")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCustomViewabilityMetric(value: () => CustomViewabilityMetric): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCustomViewabilityMetric")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewCustomViewabilityMetricConfiguration(value: () => CustomViewabilityMetricConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newCustomViewabilityMetricConfiguration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDateRange(value: () => DateRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDateRange")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDayPartTargeting(value: () => DayPartTargeting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDayPartTargeting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDeepLink(value: () => DeepLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeepLink")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDefaultClickThroughEventTagProperties(value: () => DefaultClickThroughEventTagProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDefaultClickThroughEventTagProperties")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDeliverySchedule(value: () => DeliverySchedule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDeliverySchedule")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDfpSettings(value: () => DfpSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDfpSettings")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDimensionFilter(value: () => DimensionFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDimensionFilter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDimensionValue(value: () => DimensionValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDimensionValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDimensionValueRequest(value: () => DimensionValueRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDimensionValueRequest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDirectorySite(value: () => DirectorySite): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDirectorySite")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDirectorySiteSettings(value: () => DirectorySiteSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDirectorySiteSettings")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewDynamicTargetingKey(value: () => DynamicTargetingKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newDynamicTargetingKey")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewEncryptionInfo(value: () => EncryptionInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newEncryptionInfo")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewEventTag(value: () => EventTag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newEventTag")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewEventTagOverride(value: () => EventTagOverride): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newEventTagOverride")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewFloodlightActivity(value: () => FloodlightActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newFloodlightActivity")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewFloodlightActivityDynamicTag(value: () => FloodlightActivityDynamicTag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newFloodlightActivityDynamicTag")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewFloodlightActivityGroup(value: () => FloodlightActivityGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newFloodlightActivityGroup")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewFloodlightActivityPublisherDynamicTag(value: () => FloodlightActivityPublisherDynamicTag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newFloodlightActivityPublisherDynamicTag")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewFloodlightConfiguration(value: () => FloodlightConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newFloodlightConfiguration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewFrequencyCap(value: () => FrequencyCap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newFrequencyCap")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewFsCommand(value: () => FsCommand): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newFsCommand")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewGeoTargeting(value: () => GeoTargeting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newGeoTargeting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewKeyValueTargetingExpression(value: () => KeyValueTargetingExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newKeyValueTargetingExpression")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewLandingPage(value: () => LandingPage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newLandingPage")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewLanguage(value: () => typingsSlinky.googleAppsScript.GoogleAppsScript.Dfareporting.Schema.Language): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newLanguage")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewLanguageTargeting(value: () => LanguageTargeting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newLanguageTargeting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewLastModifiedInfo(value: () => LastModifiedInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newLastModifiedInfo")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewListPopulationClause(value: () => ListPopulationClause): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newListPopulationClause")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewListPopulationRule(value: () => ListPopulationRule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newListPopulationRule")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewListPopulationTerm(value: () => ListPopulationTerm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newListPopulationTerm")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewListTargetingExpression(value: () => ListTargetingExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newListTargetingExpression")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewLookbackConfiguration(value: () => LookbackConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newLookbackConfiguration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewMetro(value: () => Metro): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newMetro")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewMobileApp(value: () => MobileApp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newMobileApp")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewMobileCarrier(value: () => MobileCarrier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newMobileCarrier")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewObjectFilter(value: () => ObjectFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newObjectFilter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewOffsetPosition(value: () => OffsetPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newOffsetPosition")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewOmnitureSettings(value: () => OmnitureSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newOmnitureSettings")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewOperatingSystem(value: () => OperatingSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newOperatingSystem")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewOperatingSystemVersion(value: () => OperatingSystemVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newOperatingSystemVersion")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewOptimizationActivity(value: () => OptimizationActivity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newOptimizationActivity")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewPlacement(value: () => Placement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPlacement")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewPlacementAssignment(value: () => PlacementAssignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPlacementAssignment")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewPlacementGroup(value: () => PlacementGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPlacementGroup")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewPlacementStrategy(value: () => PlacementStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPlacementStrategy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewPlatformType(value: () => PlatformType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPlatformType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewPopupWindowProperties(value: () => PopupWindowProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPopupWindowProperties")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewPostalCode(value: () => PostalCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPostalCode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewPricingSchedule(value: () => PricingSchedule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPricingSchedule")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewPricingSchedulePricingPeriod(value: () => PricingSchedulePricingPeriod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newPricingSchedulePricingPeriod")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewRecipient(value: () => Recipient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newRecipient")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewRegion(value: () => Region): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newRegion")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewRemarketingList(value: () => RemarketingList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newRemarketingList")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewRemarketingListShare(value: () => RemarketingListShare): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newRemarketingListShare")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReport(value: () => Report): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReport")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReportCriteria(value: () => ReportCriteria): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReportCriteria")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReportCrossDimensionReachCriteria(value: () => ReportCrossDimensionReachCriteria): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReportCrossDimensionReachCriteria")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReportDelivery(value: () => ReportDelivery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReportDelivery")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReportFloodlightCriteria(value: () => ReportFloodlightCriteria): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReportFloodlightCriteria")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReportFloodlightCriteriaReportProperties(value: () => ReportFloodlightCriteriaReportProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReportFloodlightCriteriaReportProperties")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReportPathToConversionCriteria(value: () => ReportPathToConversionCriteria): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReportPathToConversionCriteria")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReportPathToConversionCriteriaReportProperties(value: () => ReportPathToConversionCriteriaReportProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReportPathToConversionCriteriaReportProperties")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReportReachCriteria(value: () => ReportReachCriteria): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReportReachCriteria")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReportSchedule(value: () => ReportSchedule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReportSchedule")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewReportsConfiguration(value: () => ReportsConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newReportsConfiguration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewRichMediaExitOverride(value: () => RichMediaExitOverride): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newRichMediaExitOverride")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewRule(value: () => Rule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newRule")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSite(value: () => Site): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSite")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSiteCompanionSetting(value: () => SiteCompanionSetting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSiteCompanionSetting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSiteContact(value: () => SiteContact): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSiteContact")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSiteSettings(value: () => SiteSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSiteSettings")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSiteSkippableSetting(value: () => SiteSkippableSetting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSiteSkippableSetting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSiteTranscodeSetting(value: () => SiteTranscodeSetting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSiteTranscodeSetting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSiteVideoSettings(value: () => SiteVideoSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSiteVideoSettings")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSize(value: () => Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSkippableSetting(value: () => SkippableSetting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSkippableSetting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSortedDimension(value: () => SortedDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSortedDimension")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewSubaccount(value: () => Subaccount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSubaccount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewTagSetting(value: () => TagSetting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTagSetting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewTagSettings(value: () => TagSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTagSettings")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewTargetWindow(value: () => TargetWindow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTargetWindow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewTargetingTemplate(value: () => TargetingTemplate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTargetingTemplate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewTechnologyTargeting(value: () => TechnologyTargeting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTechnologyTargeting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewThirdPartyAuthenticationToken(value: () => ThirdPartyAuthenticationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newThirdPartyAuthenticationToken")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewThirdPartyTrackingUrl(value: () => ThirdPartyTrackingUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newThirdPartyTrackingUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewTranscodeSetting(value: () => TranscodeSetting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newTranscodeSetting")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewUniversalAdId(value: () => UniversalAdId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newUniversalAdId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewUserDefinedVariableConfiguration(value: () => UserDefinedVariableConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newUserDefinedVariableConfiguration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewUserRole(value: () => UserRole): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newUserRole")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewUserRolePermission(value: () => UserRolePermission): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newUserRolePermission")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewVideoOffset(value: () => VideoOffset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newVideoOffset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNewVideoSettings(value: () => VideoSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newVideoSettings")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withAccountActiveAdSummaries(value: AccountActiveAdSummariesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountActiveAdSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountActiveAdSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountActiveAdSummaries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccountPermissionGroups(value: AccountPermissionGroupsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountPermissionGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountPermissionGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountPermissionGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccountPermissions(value: AccountPermissionsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountPermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountPermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccountUserProfiles(value: AccountUserProfilesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountUserProfiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountUserProfiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccountUserProfiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccounts(value: AccountsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAds(value: AdsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ads")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdvertiserGroups(value: AdvertiserGroupsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdvertiserGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdvertiserGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdvertiserLandingPages(value: AdvertiserLandingPagesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdvertiserLandingPages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertiserLandingPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdvertiserLandingPages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdvertisers(value: AdvertisersCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Advertisers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvertisers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Advertisers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrowsers(value: BrowsersCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Browsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Browsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCampaignCreativeAssociations(value: CampaignCreativeAssociationsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignCreativeAssociations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCampaignCreativeAssociations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CampaignCreativeAssociations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCampaigns(value: CampaignsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Campaigns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCampaigns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Campaigns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChangeLogs(value: ChangeLogsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeLogs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeLogs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeLogs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCities(value: CitiesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionTypes(value: ConnectionTypesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentCategories(value: ContentCategoriesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentCategories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentCategories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConversions(value: ConversionsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Conversions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConversions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Conversions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountries(value: CountriesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Countries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Countries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreativeAssets(value: CreativeAssetsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreativeAssets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeAssets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreativeAssets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreativeFieldValues(value: CreativeFieldValuesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreativeFieldValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeFieldValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreativeFieldValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreativeFields(value: CreativeFieldsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreativeFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreativeFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreativeGroups(value: CreativeGroupsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreativeGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreativeGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreativeGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatives(value: CreativesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Creatives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatives: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Creatives")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensionValues(value: DimensionValuesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DimensionValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensionValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DimensionValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectorySites(value: DirectorySitesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectorySites")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectorySites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectorySites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicTargetingKeys(value: DynamicTargetingKeysCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicTargetingKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicTargetingKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DynamicTargetingKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventTags(value: EventTagsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFiles(value: FilesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Files")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightActivities(value: FloodlightActivitiesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FloodlightActivities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightActivities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FloodlightActivities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightActivityGroups(value: FloodlightActivityGroupsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FloodlightActivityGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightActivityGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FloodlightActivityGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFloodlightConfigurations(value: FloodlightConfigurationsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FloodlightConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFloodlightConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FloodlightConfigurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInventoryItems(value: InventoryItemsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InventoryItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInventoryItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InventoryItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguages(value: LanguagesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Languages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Languages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetros(value: MetrosCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metros")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetros: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Metros")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMobileApps(value: MobileAppsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MobileApps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMobileApps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MobileApps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMobileCarriers(value: MobileCarriersCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MobileCarriers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMobileCarriers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MobileCarriers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystemVersions(value: OperatingSystemVersionsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystemVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystemVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystemVersions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatingSystems(value: OperatingSystemsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatingSystems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OperatingSystems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderDocuments(value: OrderDocumentsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderDocuments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderDocuments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderDocuments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrders(value: OrdersCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Orders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Orders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacementGroups(value: PlacementGroupsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacementGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacementStrategies(value: PlacementStrategiesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementStrategies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacementStrategies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementStrategies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlacements(value: PlacementsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Placements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Placements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformTypes(value: PlatformTypesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostalCodes(value: PostalCodesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PostalCodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostalCodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PostalCodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjects(value: ProjectsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Projects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Projects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegions(value: RegionsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Regions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Regions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemarketingListShares(value: RemarketingListSharesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemarketingListShares")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemarketingListShares: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemarketingListShares")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemarketingLists(value: RemarketingListsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemarketingLists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemarketingLists: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemarketingLists")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReports(value: ReportsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReports: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSites(value: SitesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sites")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizes(value: SizesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sizes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sizes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubaccounts(value: SubaccountsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subaccounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubaccounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subaccounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetableRemarketingLists(value: TargetableRemarketingListsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetableRemarketingLists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetableRemarketingLists: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetableRemarketingLists")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetingTemplates(value: TargetingTemplatesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetingTemplates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetingTemplates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetingTemplates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserProfiles(value: UserProfilesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserProfiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserRolePermissionGroups(value: UserRolePermissionGroupsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserRolePermissionGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserRolePermissionGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserRolePermissionGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserRolePermissions(value: UserRolePermissionsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserRolePermissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserRolePermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserRolePermissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserRoles(value: UserRolesCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserRoles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserRoles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserRoles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoFormats(value: VideoFormatsCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoFormats")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoFormats: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoFormats")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

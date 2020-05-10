@@ -6,24 +6,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridRemoveEvent extends GridEvent {
-  var model: js.UndefOr[Model] = js.undefined
-  var row: js.UndefOr[JQuery] = js.undefined
+  var model: js.UndefOr[Model] = js.native
+  var row: js.UndefOr[JQuery] = js.native
 }
 
 object GridRemoveEvent {
   @scala.inline
-  def apply(
-    isDefaultPrevented: () => Boolean,
-    preventDefault: js.Function,
-    sender: Grid,
-    model: Model = null,
-    row: JQuery = null
-  ): GridRemoveEvent = {
+  def apply(isDefaultPrevented: () => Boolean, preventDefault: js.Function, sender: Grid): GridRemoveEvent = {
     val __obj = js.Dynamic.literal(isDefaultPrevented = js.Any.fromFunction0(isDefaultPrevented), preventDefault = preventDefault.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (row != null) __obj.updateDynamic("row")(row.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridRemoveEvent]
   }
+  @scala.inline
+  implicit class GridRemoveEventOps[Self <: GridRemoveEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withModel(value: Model): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRow(value: JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

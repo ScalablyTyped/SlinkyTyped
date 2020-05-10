@@ -24,34 +24,32 @@ trait ErrorCode extends js.Object
 
 object ErrorCode {
   @scala.inline
-  def aborted: typingsSlinky.puppeteer.puppeteerStrings.aborted = this.cast("aborted")
+  def aborted: typingsSlinky.puppeteer.puppeteerStrings.aborted = "aborted".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.aborted]
   @scala.inline
-  def accessdenied: typingsSlinky.puppeteer.puppeteerStrings.accessdenied = this.cast("accessdenied")
+  def accessdenied: typingsSlinky.puppeteer.puppeteerStrings.accessdenied = "accessdenied".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.accessdenied]
   @scala.inline
-  def addressunreachable: typingsSlinky.puppeteer.puppeteerStrings.addressunreachable = this.cast("addressunreachable")
+  def addressunreachable: typingsSlinky.puppeteer.puppeteerStrings.addressunreachable = "addressunreachable".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.addressunreachable]
   @scala.inline
-  def blockedbyclient: typingsSlinky.puppeteer.puppeteerStrings.blockedbyclient = this.cast("blockedbyclient")
+  def blockedbyclient: typingsSlinky.puppeteer.puppeteerStrings.blockedbyclient = "blockedbyclient".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.blockedbyclient]
   @scala.inline
-  def blockedbyresponse: typingsSlinky.puppeteer.puppeteerStrings.blockedbyresponse = this.cast("blockedbyresponse")
+  def blockedbyresponse: typingsSlinky.puppeteer.puppeteerStrings.blockedbyresponse = "blockedbyresponse".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.blockedbyresponse]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connectionaborted: typingsSlinky.puppeteer.puppeteerStrings.connectionaborted = "connectionaborted".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.connectionaborted]
   @scala.inline
-  def connectionaborted: typingsSlinky.puppeteer.puppeteerStrings.connectionaborted = this.cast("connectionaborted")
+  def connectionclosed: typingsSlinky.puppeteer.puppeteerStrings.connectionclosed = "connectionclosed".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.connectionclosed]
   @scala.inline
-  def connectionclosed: typingsSlinky.puppeteer.puppeteerStrings.connectionclosed = this.cast("connectionclosed")
+  def connectionfailed: typingsSlinky.puppeteer.puppeteerStrings.connectionfailed = "connectionfailed".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.connectionfailed]
   @scala.inline
-  def connectionfailed: typingsSlinky.puppeteer.puppeteerStrings.connectionfailed = this.cast("connectionfailed")
+  def connectionrefused: typingsSlinky.puppeteer.puppeteerStrings.connectionrefused = "connectionrefused".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.connectionrefused]
   @scala.inline
-  def connectionrefused: typingsSlinky.puppeteer.puppeteerStrings.connectionrefused = this.cast("connectionrefused")
+  def connectionreset: typingsSlinky.puppeteer.puppeteerStrings.connectionreset = "connectionreset".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.connectionreset]
   @scala.inline
-  def connectionreset: typingsSlinky.puppeteer.puppeteerStrings.connectionreset = this.cast("connectionreset")
+  def failed: typingsSlinky.puppeteer.puppeteerStrings.failed = "failed".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.puppeteer.puppeteerStrings.failed = this.cast("failed")
+  def internetdisconnected: typingsSlinky.puppeteer.puppeteerStrings.internetdisconnected = "internetdisconnected".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.internetdisconnected]
   @scala.inline
-  def internetdisconnected: typingsSlinky.puppeteer.puppeteerStrings.internetdisconnected = this.cast("internetdisconnected")
+  def namenotresolved: typingsSlinky.puppeteer.puppeteerStrings.namenotresolved = "namenotresolved".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.namenotresolved]
   @scala.inline
-  def namenotresolved: typingsSlinky.puppeteer.puppeteerStrings.namenotresolved = this.cast("namenotresolved")
-  @scala.inline
-  def timedout: typingsSlinky.puppeteer.puppeteerStrings.timedout = this.cast("timedout")
+  def timedout: typingsSlinky.puppeteer.puppeteerStrings.timedout = "timedout".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.timedout]
 }
 

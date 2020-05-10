@@ -19,7 +19,7 @@ class Serializer () extends js.Object {
     * Marks an ArrayBuffer as having its contents transferred out of band.\
     * Pass the corresponding ArrayBuffer in the deserializing context to deserializer.transferArrayBuffer().
     */
-  def transferArrayBuffer(id: Double, arrayBuffer: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
+  def transferArrayBuffer(id: Double, arrayBuffer: js.typedarray.ArrayBuffer): Unit = js.native
   /**
     * Write a JS number value.
     */

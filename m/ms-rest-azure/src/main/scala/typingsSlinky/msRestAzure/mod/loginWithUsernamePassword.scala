@@ -1,6 +1,5 @@
 package typingsSlinky.msRestAzure.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,7 @@ object loginWithUsernamePassword extends js.Object {
     username: String,
     password: String,
     callback: js.Function3[
-      /* err */ Error, 
+      /* err */ js.Error, 
       /* credentials */ UserTokenCredentials, 
       /* subscriptions */ js.Array[LinkedSubscription], 
       Unit

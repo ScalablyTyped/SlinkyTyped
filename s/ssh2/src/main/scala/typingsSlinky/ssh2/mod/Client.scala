@@ -16,7 +16,6 @@ import typingsSlinky.ssh2.ssh2Strings.ready
 import typingsSlinky.ssh2.ssh2Strings.timeout
 import typingsSlinky.ssh2.ssh2Strings.x11
 import typingsSlinky.ssh2Streams.mod.Prompt
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,7 +49,7 @@ class Client () extends EventEmitter {
     */
   def exec(
     command: String,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* channel */ ClientChannel, Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* channel */ ClientChannel, Unit]
   ): Boolean = js.native
   /**
     * Executes a command on the server.
@@ -281,7 +280,7 @@ class Client () extends EventEmitter {
     *
     * @param callback The callback to execute when the channel has been created.
     */
-  def shell(callback: js.Function2[/* err */ js.UndefOr[Error], /* channel */ ClientChannel, Unit]): Boolean = js.native
+  def shell(callback: js.Function2[/* err */ js.UndefOr[js.Error], /* channel */ ClientChannel, Unit]): Boolean = js.native
   /**
     * Starts an interactive shell session on the server.
     *
@@ -292,7 +291,7 @@ class Client () extends EventEmitter {
     */
   def shell(
     options: ShellOptions,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* channel */ ClientChannel, Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* channel */ ClientChannel, Unit]
   ): Boolean = js.native
   /**
     * Starts an interactive shell session on the server.
@@ -304,7 +303,7 @@ class Client () extends EventEmitter {
     */
   def shell(
     window: PseudoTtyOptions,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* channel */ ClientChannel, Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* channel */ ClientChannel, Unit]
   ): Boolean = js.native
   /**
     * Starts an interactive shell session on the server.
@@ -323,7 +322,7 @@ class Client () extends EventEmitter {
   @JSName("shell")
   def shell_false(
     window: `false`,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* channel */ ClientChannel, Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* channel */ ClientChannel, Unit]
   ): Boolean = js.native
   @JSName("shell")
   def shell_false(

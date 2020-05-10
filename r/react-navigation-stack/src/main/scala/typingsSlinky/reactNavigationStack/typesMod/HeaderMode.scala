@@ -13,12 +13,10 @@ trait HeaderMode extends js.Object
 
 object HeaderMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def float: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.float = "float".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.float]
   @scala.inline
-  def float: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.float = this.cast("float")
+  def none: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.none = "none".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.none]
   @scala.inline
-  def none: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.none = this.cast("none")
-  @scala.inline
-  def screen: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.screen = this.cast("screen")
+  def screen: typingsSlinky.reactNavigationStack.reactNavigationStackStrings.screen = "screen".asInstanceOf[typingsSlinky.reactNavigationStack.reactNavigationStackStrings.screen]
 }
 

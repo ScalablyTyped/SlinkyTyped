@@ -4,23 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait JsonOptions extends js.Object {
   /**
     * Changes the default textNode property from $t to _t when option is set to true.
     * Alternatively a string can be specified which will override $t to what ever the string is.
     */
-  var alternateTextNode: js.UndefOr[Boolean] = js.undefined
+  var alternateTextNode: js.UndefOr[Boolean] = js.native
   /**
     * XML child nodes are always treated as arrays.
     * You can specify a selective array of nodes for this to apply to instead of the whole document.
     */
-  var arrayNotation: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var arrayNotation: js.UndefOr[Boolean | js.Array[String]] = js.native
   /**
     * Makes type coercion.
     * i.e.: numbers and booleans present in attributes and element values are converted from string to its correspondent data types.
     * Coerce can be optionally defined as an object with specific methods of coercion based on attribute name or tag name, with fallback to default coercion.
     */
-  var coerce: js.UndefOr[Boolean] = js.undefined
+  var coerce: js.UndefOr[Boolean] = js.native
   /**
     * Returns a Javascript object instead of a JSON string.
     */
@@ -29,7 +30,7 @@ trait JsonOptions extends js.Object {
     * Makes the JSON reversible to XML.
     * xml2json tranforms CDATA content to JSON, but it doesn't generate a reversible structure.
     */
-  var reversible: js.UndefOr[Boolean] = js.undefined
+  var reversible: js.UndefOr[Boolean] = js.native
   /**
     * Sanitizes the following characters present in element values (default true):
     * @example
@@ -45,32 +46,99 @@ trait JsonOptions extends js.Object {
     * };
     * @example
     */
-  var sanitize: js.UndefOr[Boolean] = js.undefined
+  var sanitize: js.UndefOr[Boolean] = js.native
   /**
     * Removes leading and trailing whitespaces as well as line terminators in element values.
     * Defaults to true.
     */
-  var trim: js.UndefOr[Boolean] = js.undefined
+  var trim: js.UndefOr[Boolean] = js.native
 }
 
 object JsonOptions {
   @scala.inline
-  def apply(
-    alternateTextNode: js.UndefOr[Boolean] = js.undefined,
-    arrayNotation: Boolean | js.Array[String] = null,
-    coerce: js.UndefOr[Boolean] = js.undefined,
-    reversible: js.UndefOr[Boolean] = js.undefined,
-    sanitize: js.UndefOr[Boolean] = js.undefined,
-    trim: js.UndefOr[Boolean] = js.undefined
-  ): JsonOptions = {
+  def apply(): JsonOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alternateTextNode)) __obj.updateDynamic("alternateTextNode")(alternateTextNode.asInstanceOf[js.Any])
-    if (arrayNotation != null) __obj.updateDynamic("arrayNotation")(arrayNotation.asInstanceOf[js.Any])
-    if (!js.isUndefined(coerce)) __obj.updateDynamic("coerce")(coerce.asInstanceOf[js.Any])
-    if (!js.isUndefined(reversible)) __obj.updateDynamic("reversible")(reversible.asInstanceOf[js.Any])
-    if (!js.isUndefined(sanitize)) __obj.updateDynamic("sanitize")(sanitize.asInstanceOf[js.Any])
-    if (!js.isUndefined(trim)) __obj.updateDynamic("trim")(trim.asInstanceOf[js.Any])
     __obj.asInstanceOf[JsonOptions]
   }
+  @scala.inline
+  implicit class JsonOptionsOps[Self <: JsonOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlternateTextNode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateTextNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlternateTextNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateTextNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArrayNotation(value: Boolean | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayNotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayNotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayNotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoerce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coerce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoerce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coerce")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReversible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reversible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReversible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reversible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSanitize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSanitize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrim(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,10 +14,29 @@ trait VoiceChannelRequest extends js.Object {
 
 object VoiceChannelRequest {
   @scala.inline
-  def apply(Enabled: js.UndefOr[Boolean] = js.undefined): VoiceChannelRequest = {
+  def apply(): VoiceChannelRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoiceChannelRequest]
   }
+  @scala.inline
+  implicit class VoiceChannelRequestOps[Self <: VoiceChannelRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

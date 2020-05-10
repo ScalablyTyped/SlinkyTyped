@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NestedCSSSelectors
   extends /**
   * Also cater for any other nested query you want
@@ -14,211 +15,673 @@ trait NestedCSSSelectors
     * Desktop first media query example
     **/
   @JSName("@media screen and (max-width: 700px)")
-  var `@media screen and Leftparenthesismax-widthColon 700pxRightparenthesis`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `@media screen and Leftparenthesismax-widthColon 700pxRightparenthesis`: js.UndefOr[NestedCSSProperties] = js.native
   /**
     * Mobile first media query example
     **/
   @JSName("@media screen and (min-width: 700px)")
-  var `@media screen and Leftparenthesismin-widthColon 700pxRightparenthesis`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `@media screen and Leftparenthesismin-widthColon 700pxRightparenthesis`: js.UndefOr[NestedCSSProperties] = js.native
   /**
     * Pseudo-elements
     * https://developer.mozilla.org/en/docs/Web/CSS/Pseudo-elements
     */
   @JSName("&::after")
-  var AmpersandColonColonafter: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonColonafter: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&::backdrop")
-  var AmpersandColonColonbackdrop: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonColonbackdrop: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&::before")
-  var AmpersandColonColonbefore: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonColonbefore: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&::first-letter")
-  var `AmpersandColonColonfirst-letter`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonColonfirst-letter`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&::first-line")
-  var `AmpersandColonColonfirst-line`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonColonfirst-line`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&::grammar-error")
-  var `AmpersandColonColongrammar-error`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonColongrammar-error`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&::marker")
-  var AmpersandColonColonmarker: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonColonmarker: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&::placeholder")
-  var AmpersandColonColonplaceholder: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonColonplaceholder: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&::selection")
-  var AmpersandColonColonselection: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonColonselection: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&::spelling-error")
-  var `AmpersandColonColonspelling-error`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonColonspelling-error`: js.UndefOr[NestedCSSProperties] = js.native
   /** State selector */
   @JSName("&:active")
-  var AmpersandColonactive: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonactive: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:any")
-  var AmpersandColonany: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonany: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:checked")
-  var AmpersandColonchecked: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonchecked: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:default")
-  var AmpersandColondefault: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColondefault: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:disabled")
-  var AmpersandColondisabled: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColondisabled: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:empty")
-  var AmpersandColonempty: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonempty: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:enabled")
-  var AmpersandColonenabled: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonenabled: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:first")
-  var AmpersandColonfirst: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonfirst: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:first-child")
-  var `AmpersandColonfirst-child`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonfirst-child`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:first-of-type")
-  var `AmpersandColonfirst-of-type`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonfirst-of-type`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:focus")
-  var AmpersandColonfocus: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonfocus: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:fullscreen")
-  var AmpersandColonfullscreen: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonfullscreen: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:hover")
-  var AmpersandColonhover: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonhover: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:in-range")
-  var `AmpersandColonin-range`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonin-range`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:indeterminate")
-  var AmpersandColonindeterminate: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonindeterminate: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:invalid")
-  var AmpersandColoninvalid: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColoninvalid: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:last-child")
-  var `AmpersandColonlast-child`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonlast-child`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:last-of-type")
-  var `AmpersandColonlast-of-type`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonlast-of-type`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:left")
-  var AmpersandColonleft: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonleft: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:link")
-  var AmpersandColonlink: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonlink: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:only-child")
-  var `AmpersandColononly-child`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColononly-child`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:only-of-type")
-  var `AmpersandColononly-of-type`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColononly-of-type`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:optional")
-  var AmpersandColonoptional: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonoptional: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:out-of-range")
-  var `AmpersandColonout-of-range`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonout-of-range`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:read-only")
-  var `AmpersandColonread-only`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonread-only`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:read-write")
-  var `AmpersandColonread-write`: js.UndefOr[NestedCSSProperties] = js.undefined
+  var `AmpersandColonread-write`: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:required")
-  var AmpersandColonrequired: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonrequired: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:right")
-  var AmpersandColonright: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonright: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:root")
-  var AmpersandColonroot: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonroot: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:scope")
-  var AmpersandColonscope: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonscope: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:target")
-  var AmpersandColontarget: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColontarget: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:valid")
-  var AmpersandColonvalid: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonvalid: js.UndefOr[NestedCSSProperties] = js.native
   @JSName("&:visited")
-  var AmpersandColonvisited: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandColonvisited: js.UndefOr[NestedCSSProperties] = js.native
   /** Children */
   @JSName("&>*")
-  var AmpersandGreaterthansignAsterisk: js.UndefOr[NestedCSSProperties] = js.undefined
+  var AmpersandGreaterthansignAsterisk: js.UndefOr[NestedCSSProperties] = js.native
 }
 
 object NestedCSSSelectors {
   @scala.inline
-  def apply(
-    `@media screen and Leftparenthesismax-widthColon 700pxRightparenthesis`: NestedCSSProperties = null,
-    `@media screen and Leftparenthesismin-widthColon 700pxRightparenthesis`: NestedCSSProperties = null,
-    AmpersandColonColonafter: NestedCSSProperties = null,
-    AmpersandColonColonbackdrop: NestedCSSProperties = null,
-    AmpersandColonColonbefore: NestedCSSProperties = null,
-    `AmpersandColonColonfirst-letter`: NestedCSSProperties = null,
-    `AmpersandColonColonfirst-line`: NestedCSSProperties = null,
-    `AmpersandColonColongrammar-error`: NestedCSSProperties = null,
-    AmpersandColonColonmarker: NestedCSSProperties = null,
-    AmpersandColonColonplaceholder: NestedCSSProperties = null,
-    AmpersandColonColonselection: NestedCSSProperties = null,
-    `AmpersandColonColonspelling-error`: NestedCSSProperties = null,
-    AmpersandColonactive: NestedCSSProperties = null,
-    AmpersandColonany: NestedCSSProperties = null,
-    AmpersandColonchecked: NestedCSSProperties = null,
-    AmpersandColondefault: NestedCSSProperties = null,
-    AmpersandColondisabled: NestedCSSProperties = null,
-    AmpersandColonempty: NestedCSSProperties = null,
-    AmpersandColonenabled: NestedCSSProperties = null,
-    AmpersandColonfirst: NestedCSSProperties = null,
-    `AmpersandColonfirst-child`: NestedCSSProperties = null,
-    `AmpersandColonfirst-of-type`: NestedCSSProperties = null,
-    AmpersandColonfocus: NestedCSSProperties = null,
-    AmpersandColonfullscreen: NestedCSSProperties = null,
-    AmpersandColonhover: NestedCSSProperties = null,
-    `AmpersandColonin-range`: NestedCSSProperties = null,
-    AmpersandColonindeterminate: NestedCSSProperties = null,
-    AmpersandColoninvalid: NestedCSSProperties = null,
-    `AmpersandColonlast-child`: NestedCSSProperties = null,
-    `AmpersandColonlast-of-type`: NestedCSSProperties = null,
-    AmpersandColonleft: NestedCSSProperties = null,
-    AmpersandColonlink: NestedCSSProperties = null,
-    `AmpersandColononly-child`: NestedCSSProperties = null,
-    `AmpersandColononly-of-type`: NestedCSSProperties = null,
-    AmpersandColonoptional: NestedCSSProperties = null,
-    `AmpersandColonout-of-range`: NestedCSSProperties = null,
-    `AmpersandColonread-only`: NestedCSSProperties = null,
-    `AmpersandColonread-write`: NestedCSSProperties = null,
-    AmpersandColonrequired: NestedCSSProperties = null,
-    AmpersandColonright: NestedCSSProperties = null,
-    AmpersandColonroot: NestedCSSProperties = null,
-    AmpersandColonscope: NestedCSSProperties = null,
-    AmpersandColontarget: NestedCSSProperties = null,
-    AmpersandColonvalid: NestedCSSProperties = null,
-    AmpersandColonvisited: NestedCSSProperties = null,
-    AmpersandGreaterthansignAsterisk: NestedCSSProperties = null,
-    StringDictionary: /**
-    * Also cater for any other nested query you want
-    */
-  /* selector */ StringDictionary[js.UndefOr[NestedCSSProperties]] = null
-  ): NestedCSSSelectors = {
+  def apply(): NestedCSSSelectors = {
     val __obj = js.Dynamic.literal()
-    if (`@media screen and Leftparenthesismax-widthColon 700pxRightparenthesis` != null) __obj.updateDynamic("@media screen and (max-width: 700px)")(`@media screen and Leftparenthesismax-widthColon 700pxRightparenthesis`.asInstanceOf[js.Any])
-    if (`@media screen and Leftparenthesismin-widthColon 700pxRightparenthesis` != null) __obj.updateDynamic("@media screen and (min-width: 700px)")(`@media screen and Leftparenthesismin-widthColon 700pxRightparenthesis`.asInstanceOf[js.Any])
-    if (AmpersandColonColonafter != null) __obj.updateDynamic("&::after")(AmpersandColonColonafter.asInstanceOf[js.Any])
-    if (AmpersandColonColonbackdrop != null) __obj.updateDynamic("&::backdrop")(AmpersandColonColonbackdrop.asInstanceOf[js.Any])
-    if (AmpersandColonColonbefore != null) __obj.updateDynamic("&::before")(AmpersandColonColonbefore.asInstanceOf[js.Any])
-    if (`AmpersandColonColonfirst-letter` != null) __obj.updateDynamic("&::first-letter")(`AmpersandColonColonfirst-letter`.asInstanceOf[js.Any])
-    if (`AmpersandColonColonfirst-line` != null) __obj.updateDynamic("&::first-line")(`AmpersandColonColonfirst-line`.asInstanceOf[js.Any])
-    if (`AmpersandColonColongrammar-error` != null) __obj.updateDynamic("&::grammar-error")(`AmpersandColonColongrammar-error`.asInstanceOf[js.Any])
-    if (AmpersandColonColonmarker != null) __obj.updateDynamic("&::marker")(AmpersandColonColonmarker.asInstanceOf[js.Any])
-    if (AmpersandColonColonplaceholder != null) __obj.updateDynamic("&::placeholder")(AmpersandColonColonplaceholder.asInstanceOf[js.Any])
-    if (AmpersandColonColonselection != null) __obj.updateDynamic("&::selection")(AmpersandColonColonselection.asInstanceOf[js.Any])
-    if (`AmpersandColonColonspelling-error` != null) __obj.updateDynamic("&::spelling-error")(`AmpersandColonColonspelling-error`.asInstanceOf[js.Any])
-    if (AmpersandColonactive != null) __obj.updateDynamic("&:active")(AmpersandColonactive.asInstanceOf[js.Any])
-    if (AmpersandColonany != null) __obj.updateDynamic("&:any")(AmpersandColonany.asInstanceOf[js.Any])
-    if (AmpersandColonchecked != null) __obj.updateDynamic("&:checked")(AmpersandColonchecked.asInstanceOf[js.Any])
-    if (AmpersandColondefault != null) __obj.updateDynamic("&:default")(AmpersandColondefault.asInstanceOf[js.Any])
-    if (AmpersandColondisabled != null) __obj.updateDynamic("&:disabled")(AmpersandColondisabled.asInstanceOf[js.Any])
-    if (AmpersandColonempty != null) __obj.updateDynamic("&:empty")(AmpersandColonempty.asInstanceOf[js.Any])
-    if (AmpersandColonenabled != null) __obj.updateDynamic("&:enabled")(AmpersandColonenabled.asInstanceOf[js.Any])
-    if (AmpersandColonfirst != null) __obj.updateDynamic("&:first")(AmpersandColonfirst.asInstanceOf[js.Any])
-    if (`AmpersandColonfirst-child` != null) __obj.updateDynamic("&:first-child")(`AmpersandColonfirst-child`.asInstanceOf[js.Any])
-    if (`AmpersandColonfirst-of-type` != null) __obj.updateDynamic("&:first-of-type")(`AmpersandColonfirst-of-type`.asInstanceOf[js.Any])
-    if (AmpersandColonfocus != null) __obj.updateDynamic("&:focus")(AmpersandColonfocus.asInstanceOf[js.Any])
-    if (AmpersandColonfullscreen != null) __obj.updateDynamic("&:fullscreen")(AmpersandColonfullscreen.asInstanceOf[js.Any])
-    if (AmpersandColonhover != null) __obj.updateDynamic("&:hover")(AmpersandColonhover.asInstanceOf[js.Any])
-    if (`AmpersandColonin-range` != null) __obj.updateDynamic("&:in-range")(`AmpersandColonin-range`.asInstanceOf[js.Any])
-    if (AmpersandColonindeterminate != null) __obj.updateDynamic("&:indeterminate")(AmpersandColonindeterminate.asInstanceOf[js.Any])
-    if (AmpersandColoninvalid != null) __obj.updateDynamic("&:invalid")(AmpersandColoninvalid.asInstanceOf[js.Any])
-    if (`AmpersandColonlast-child` != null) __obj.updateDynamic("&:last-child")(`AmpersandColonlast-child`.asInstanceOf[js.Any])
-    if (`AmpersandColonlast-of-type` != null) __obj.updateDynamic("&:last-of-type")(`AmpersandColonlast-of-type`.asInstanceOf[js.Any])
-    if (AmpersandColonleft != null) __obj.updateDynamic("&:left")(AmpersandColonleft.asInstanceOf[js.Any])
-    if (AmpersandColonlink != null) __obj.updateDynamic("&:link")(AmpersandColonlink.asInstanceOf[js.Any])
-    if (`AmpersandColononly-child` != null) __obj.updateDynamic("&:only-child")(`AmpersandColononly-child`.asInstanceOf[js.Any])
-    if (`AmpersandColononly-of-type` != null) __obj.updateDynamic("&:only-of-type")(`AmpersandColononly-of-type`.asInstanceOf[js.Any])
-    if (AmpersandColonoptional != null) __obj.updateDynamic("&:optional")(AmpersandColonoptional.asInstanceOf[js.Any])
-    if (`AmpersandColonout-of-range` != null) __obj.updateDynamic("&:out-of-range")(`AmpersandColonout-of-range`.asInstanceOf[js.Any])
-    if (`AmpersandColonread-only` != null) __obj.updateDynamic("&:read-only")(`AmpersandColonread-only`.asInstanceOf[js.Any])
-    if (`AmpersandColonread-write` != null) __obj.updateDynamic("&:read-write")(`AmpersandColonread-write`.asInstanceOf[js.Any])
-    if (AmpersandColonrequired != null) __obj.updateDynamic("&:required")(AmpersandColonrequired.asInstanceOf[js.Any])
-    if (AmpersandColonright != null) __obj.updateDynamic("&:right")(AmpersandColonright.asInstanceOf[js.Any])
-    if (AmpersandColonroot != null) __obj.updateDynamic("&:root")(AmpersandColonroot.asInstanceOf[js.Any])
-    if (AmpersandColonscope != null) __obj.updateDynamic("&:scope")(AmpersandColonscope.asInstanceOf[js.Any])
-    if (AmpersandColontarget != null) __obj.updateDynamic("&:target")(AmpersandColontarget.asInstanceOf[js.Any])
-    if (AmpersandColonvalid != null) __obj.updateDynamic("&:valid")(AmpersandColonvalid.asInstanceOf[js.Any])
-    if (AmpersandColonvisited != null) __obj.updateDynamic("&:visited")(AmpersandColonvisited.asInstanceOf[js.Any])
-    if (AmpersandGreaterthansignAsterisk != null) __obj.updateDynamic("&>*")(AmpersandGreaterthansignAsterisk.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[NestedCSSSelectors]
   }
+  @scala.inline
+  implicit class NestedCSSSelectorsOps[Self <: NestedCSSSelectors] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `with@media screen and Leftparenthesismax-widthColon 700pxRightparenthesis`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("@media screen and (max-width: 700px)")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without@media screen and Leftparenthesismax-widthColon 700pxRightparenthesis`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("@media screen and (max-width: 700px)")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `with@media screen and Leftparenthesismin-widthColon 700pxRightparenthesis`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("@media screen and (min-width: 700px)")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `without@media screen and Leftparenthesismin-widthColon 700pxRightparenthesis`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("@media screen and (min-width: 700px)")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonColonafter(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::after")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonColonafter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::after")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonColonbackdrop(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::backdrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonColonbackdrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::backdrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonColonbefore(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::before")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonColonbefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::before")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonColonfirst-letter`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::first-letter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonColonfirst-letter`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::first-letter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonColonfirst-line`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::first-line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonColonfirst-line`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::first-line")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonColongrammar-error`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::grammar-error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonColongrammar-error`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::grammar-error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonColonmarker(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonColonmarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonColonplaceholder(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonColonplaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonColonselection(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::selection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonColonselection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::selection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonColonspelling-error`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::spelling-error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonColonspelling-error`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&::spelling-error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonactive(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonactive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonany(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:any")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonany: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:any")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonchecked(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:checked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonchecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:checked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColondefault(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColondefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:default")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColondisabled(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColondisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonempty(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:empty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonempty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:empty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonenabled(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonenabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonfirst(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:first")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonfirst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:first")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonfirst-child`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:first-child")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonfirst-child`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:first-child")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonfirst-of-type`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:first-of-type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonfirst-of-type`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:first-of-type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonfocus(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:focus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonfocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:focus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonfullscreen(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:fullscreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonfullscreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:fullscreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonhover(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:hover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonhover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:hover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonin-range`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:in-range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonin-range`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:in-range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonindeterminate(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:indeterminate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonindeterminate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:indeterminate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColoninvalid(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:invalid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColoninvalid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:invalid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonlast-child`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:last-child")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonlast-child`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:last-child")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonlast-of-type`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:last-of-type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonlast-of-type`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:last-of-type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonleft(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonleft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonlink(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonlink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:link")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColononly-child`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:only-child")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColononly-child`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:only-child")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColononly-of-type`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:only-of-type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColononly-of-type`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:only-of-type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonoptional(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:optional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonoptional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:optional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonout-of-range`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:out-of-range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonout-of-range`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:out-of-range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonread-only`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:read-only")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonread-only`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:read-only")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withAmpersandColonread-write`(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:read-write")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutAmpersandColonread-write`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:read-write")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonrequired(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:required")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonrequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:required")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonright(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonright: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonroot(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonroot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonscope(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonscope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:scope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColontarget(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColontarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonvalid(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:valid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonvalid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:valid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandColonvisited(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:visited")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandColonvisited: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&:visited")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAmpersandGreaterthansignAsterisk(value: NestedCSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&>*")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmpersandGreaterthansignAsterisk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("&>*")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -25,7 +25,7 @@ object ioMod extends js.Object {
   def browserFiles(files: js.Array[File]): IOHandler = js.native
   def browserHTTPRequest(path: String): IOHandler = js.native
   def browserHTTPRequest(path: String, loadOptions: LoadOptions): IOHandler = js.native
-  def concatenateArrayBuffers(buffers: js.Array[scala.scalajs.js.typedarray.ArrayBuffer]): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def concatenateArrayBuffers(buffers: js.Array[js.typedarray.ArrayBuffer]): js.typedarray.ArrayBuffer = js.native
   /**
     * Copy a model from one URL to another.
     *
@@ -75,7 +75,7 @@ object ioMod extends js.Object {
     * }
     */
   def copyModel(sourceURL: String, destURL: String): js.Promise[ModelArtifactsInfo] = js.native
-  def decodeWeights(buffer: scala.scalajs.js.typedarray.ArrayBuffer, specs: js.Array[WeightsManifestEntry]): NamedTensorMap = js.native
+  def decodeWeights(buffer: js.typedarray.ArrayBuffer, specs: js.Array[WeightsManifestEntry]): NamedTensorMap = js.native
   def encodeWeights(tensors: js.Array[NamedTensor]): js.Promise[AnonData] = js.native
   def encodeWeights(tensors: js.Array[NamedTensor], group: WeightGroup): js.Promise[AnonData] = js.native
   def encodeWeights(tensors: NamedTensorMap): js.Promise[AnonData] = js.native
@@ -85,12 +85,12 @@ object ioMod extends js.Object {
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer
+    weightData: js.typedarray.ArrayBuffer
   ): IOHandler = js.native
   def fromMemory(
     modelArtifacts: js.Object,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer,
+    weightData: js.typedarray.ArrayBuffer,
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
   def fromMemory(modelArtifacts: ModelArtifacts): IOHandler = js.native
@@ -98,12 +98,12 @@ object ioMod extends js.Object {
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer
+    weightData: js.typedarray.ArrayBuffer
   ): IOHandler = js.native
   def fromMemory(
     modelArtifacts: ModelArtifacts,
     weightSpecs: js.Array[WeightsManifestEntry],
-    weightData: scala.scalajs.js.typedarray.ArrayBuffer,
+    weightData: js.typedarray.ArrayBuffer,
     trainingConfig: TrainingConfig
   ): IOHandler = js.native
   def getLoadHandlers(url: String): js.Array[IOHandler] = js.native
@@ -248,10 +248,7 @@ object ioMod extends js.Object {
     */
   def removeModel(url: String): js.Promise[ModelArtifactsInfo] = js.native
   def weightsLoaderFactory(
-    fetchWeightsFunction: js.Function1[
-      /* fetchUrls */ js.Array[String], 
-      js.Promise[js.Array[scala.scalajs.js.typedarray.ArrayBuffer]]
-    ]
+    fetchWeightsFunction: js.Function1[/* fetchUrls */ js.Array[String], js.Promise[js.Array[js.typedarray.ArrayBuffer]]]
   ): js.Function3[
     /* manifest */ WeightsManifestConfig, 
     /* filePathPrefix */ js.UndefOr[String], 

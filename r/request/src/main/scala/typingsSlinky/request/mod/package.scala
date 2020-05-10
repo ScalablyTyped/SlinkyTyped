@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object mod {
   type Cookie = typingsSlinky.toughCookie.mod.Cookie
   type Headers = org.scalablytyped.runtime.StringDictionary[js.Any]
-  type MultipartBody = java.lang.String | typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.Uint8Array
+  type MultipartBody = java.lang.String | typingsSlinky.node.Buffer | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array
   type OptionalUriUrl = typingsSlinky.request.mod.RequiredUriUrl | js.Object
   type Options = typingsSlinky.request.mod.OptionsWithUri | typingsSlinky.request.mod.OptionsWithUrl
   type OptionsWithUri = typingsSlinky.request.mod.UriOptions with typingsSlinky.request.mod.CoreOptions

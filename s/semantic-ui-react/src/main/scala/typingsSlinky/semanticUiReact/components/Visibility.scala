@@ -1,10 +1,7 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.events
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.repaint
 import typingsSlinky.semanticUiReact.visibilityMod.default
@@ -15,63 +12,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Visibility
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Visibility {
   @JSImport("semantic-ui-react/dist/commonjs/behaviors/Visibility", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    as: js.Any = null,
-    context: js.Object = null,
-    continuous: js.UndefOr[Boolean] = js.undefined,
-    fireOnMount: js.UndefOr[Boolean] = js.undefined,
-    offset: Double | String | (js.Array[Double | String]) = null,
-    onBottomPassed: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onBottomPassedReverse: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onBottomVisible: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onBottomVisibleReverse: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onOffScreen: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onOnScreen: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onPassed: VisibilityOnPassed = null,
-    onPassing: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onPassingReverse: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onTopPassed: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onTopPassedReverse: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onTopVisible: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onTopVisibleReverse: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    onUpdate: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit = null,
-    once: js.UndefOr[Boolean] = js.undefined,
-    updateOn: events | repaint = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (!js.isUndefined(continuous)) __obj.updateDynamic("continuous")(continuous.asInstanceOf[js.Any])
-    if (!js.isUndefined(fireOnMount)) __obj.updateDynamic("fireOnMount")(fireOnMount.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onBottomPassed != null) __obj.updateDynamic("onBottomPassed")(js.Any.fromFunction2(onBottomPassed))
-    if (onBottomPassedReverse != null) __obj.updateDynamic("onBottomPassedReverse")(js.Any.fromFunction2(onBottomPassedReverse))
-    if (onBottomVisible != null) __obj.updateDynamic("onBottomVisible")(js.Any.fromFunction2(onBottomVisible))
-    if (onBottomVisibleReverse != null) __obj.updateDynamic("onBottomVisibleReverse")(js.Any.fromFunction2(onBottomVisibleReverse))
-    if (onOffScreen != null) __obj.updateDynamic("onOffScreen")(js.Any.fromFunction2(onOffScreen))
-    if (onOnScreen != null) __obj.updateDynamic("onOnScreen")(js.Any.fromFunction2(onOnScreen))
-    if (onPassed != null) __obj.updateDynamic("onPassed")(onPassed.asInstanceOf[js.Any])
-    if (onPassing != null) __obj.updateDynamic("onPassing")(js.Any.fromFunction2(onPassing))
-    if (onPassingReverse != null) __obj.updateDynamic("onPassingReverse")(js.Any.fromFunction2(onPassingReverse))
-    if (onTopPassed != null) __obj.updateDynamic("onTopPassed")(js.Any.fromFunction2(onTopPassed))
-    if (onTopPassedReverse != null) __obj.updateDynamic("onTopPassedReverse")(js.Any.fromFunction2(onTopPassedReverse))
-    if (onTopVisible != null) __obj.updateDynamic("onTopVisible")(js.Any.fromFunction2(onTopVisible))
-    if (onTopVisibleReverse != null) __obj.updateDynamic("onTopVisibleReverse")(js.Any.fromFunction2(onTopVisibleReverse))
-    if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction2(onUpdate))
-    if (!js.isUndefined(once)) __obj.updateDynamic("once")(once.asInstanceOf[js.Any])
-    if (updateOn != null) __obj.updateDynamic("updateOn")(updateOn.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+    @scala.inline
+    def context(value: js.Object): this.type = set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def continuous(value: Boolean): this.type = set("continuous", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fireOnMount(value: Boolean): this.type = set("fireOnMount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double | String | (js.Array[Double | String])): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBottomPassed(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onBottomPassed", js.Any.fromFunction2(value))
+    @scala.inline
+    def onBottomPassedReverse(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onBottomPassedReverse", js.Any.fromFunction2(value))
+    @scala.inline
+    def onBottomVisible(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onBottomVisible", js.Any.fromFunction2(value))
+    @scala.inline
+    def onBottomVisibleReverse(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onBottomVisibleReverse", js.Any.fromFunction2(value))
+    @scala.inline
+    def onOffScreen(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onOffScreen", js.Any.fromFunction2(value))
+    @scala.inline
+    def onOnScreen(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onOnScreen", js.Any.fromFunction2(value))
+    @scala.inline
+    def onPassed(value: VisibilityOnPassed): this.type = set("onPassed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPassing(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onPassing", js.Any.fromFunction2(value))
+    @scala.inline
+    def onPassingReverse(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onPassingReverse", js.Any.fromFunction2(value))
+    @scala.inline
+    def onTopPassed(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onTopPassed", js.Any.fromFunction2(value))
+    @scala.inline
+    def onTopPassedReverse(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onTopPassedReverse", js.Any.fromFunction2(value))
+    @scala.inline
+    def onTopVisible(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onTopVisible", js.Any.fromFunction2(value))
+    @scala.inline
+    def onTopVisibleReverse(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onTopVisibleReverse", js.Any.fromFunction2(value))
+    @scala.inline
+    def onUpdate(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onUpdate", js.Any.fromFunction2(value))
+    @scala.inline
+    def once(value: Boolean): this.type = set("once", value.asInstanceOf[js.Any])
+    @scala.inline
+    def updateOn(value: events | repaint): this.type = set("updateOn", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.semanticUiReact.visibilityMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = VisibilityProps
+  
+  def withProps(p: VisibilityProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Visibility.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait XML2JS
   extends ChangingKeyNames
      with IgnoreOptions {
-  var addParent: js.UndefOr[Boolean] = js.undefined
-  var alwaysArray: js.UndefOr[Boolean | js.Array[String]] = js.undefined
-  var alwaysChildren: js.UndefOr[Boolean] = js.undefined
+  var addParent: js.UndefOr[Boolean] = js.native
+  var alwaysArray: js.UndefOr[Boolean | js.Array[String]] = js.native
+  var alwaysChildren: js.UndefOr[Boolean] = js.native
   var attributeNameFn: js.UndefOr[
     js.Function3[
       /* attributeName */ String, 
@@ -17,7 +18,7 @@ trait XML2JS
       /* parentElement */ String, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var attributeValueFn: js.UndefOr[
     js.Function3[
       /* attributeValue */ String, 
@@ -25,14 +26,14 @@ trait XML2JS
       /* parentElement */ String, 
       Unit
     ]
-  ] = js.undefined
-  var attributesFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ String, Unit]] = js.undefined
-  var captureSpacesBetweenElements: js.UndefOr[Boolean] = js.undefined
-  var cdataFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ js.Object, Unit]] = js.undefined
-  var commentFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ js.Object, Unit]] = js.undefined
-  var compact: js.UndefOr[Boolean] = js.undefined
-  var doctypeFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ js.Object, Unit]] = js.undefined
-  var elementNameFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ js.Object, Unit]] = js.undefined
+  ] = js.native
+  var attributesFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ String, Unit]] = js.native
+  var captureSpacesBetweenElements: js.UndefOr[Boolean] = js.native
+  var cdataFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ js.Object, Unit]] = js.native
+  var commentFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ js.Object, Unit]] = js.native
+  var compact: js.UndefOr[Boolean] = js.native
+  var doctypeFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ js.Object, Unit]] = js.native
+  var elementNameFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ js.Object, Unit]] = js.native
   var instructionFn: js.UndefOr[
     js.Function3[
       /* instructionValue */ String, 
@@ -40,8 +41,8 @@ trait XML2JS
       /* parentElement */ String, 
       Unit
     ]
-  ] = js.undefined
-  var instructionHasAttributes: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var instructionHasAttributes: js.UndefOr[Boolean] = js.native
   var instructionNameFn: js.UndefOr[
     js.Function3[
       /* instructionName */ String, 
@@ -49,93 +50,262 @@ trait XML2JS
       /* parentElement */ String, 
       Unit
     ]
-  ] = js.undefined
-  var nativeType: js.UndefOr[Boolean] = js.undefined
-  var sanitize: js.UndefOr[Boolean] = js.undefined
-  var textFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ js.Object, Unit]] = js.undefined
-  var trim: js.UndefOr[Boolean] = js.undefined
+  ] = js.native
+  var nativeType: js.UndefOr[Boolean] = js.native
+  var sanitize: js.UndefOr[Boolean] = js.native
+  var textFn: js.UndefOr[js.Function2[/* value */ String, /* parentElement */ js.Object, Unit]] = js.native
+  var trim: js.UndefOr[Boolean] = js.native
 }
 
 object XML2JS {
   @scala.inline
-  def apply(
-    addParent: js.UndefOr[Boolean] = js.undefined,
-    alwaysArray: Boolean | js.Array[String] = null,
-    alwaysChildren: js.UndefOr[Boolean] = js.undefined,
-    attributeNameFn: (/* attributeName */ String, /* attributeValue */ String, /* parentElement */ String) => Unit = null,
-    attributeValueFn: (/* attributeValue */ String, /* attributeName */ String, /* parentElement */ String) => Unit = null,
-    attributesFn: (/* value */ String, /* parentElement */ String) => Unit = null,
-    attributesKey: String = null,
-    captureSpacesBetweenElements: js.UndefOr[Boolean] = js.undefined,
-    cdataFn: (/* value */ String, /* parentElement */ js.Object) => Unit = null,
-    cdataKey: String = null,
-    commentFn: (/* value */ String, /* parentElement */ js.Object) => Unit = null,
-    commentKey: String = null,
-    compact: js.UndefOr[Boolean] = js.undefined,
-    declarationKey: String = null,
-    doctypeFn: (/* value */ String, /* parentElement */ js.Object) => Unit = null,
-    doctypeKey: String = null,
-    elementNameFn: (/* value */ String, /* parentElement */ js.Object) => Unit = null,
-    elementsKey: String = null,
-    ignoreAttributes: js.UndefOr[Boolean] = js.undefined,
-    ignoreCdata: js.UndefOr[Boolean] = js.undefined,
-    ignoreComment: js.UndefOr[Boolean] = js.undefined,
-    ignoreDeclaration: js.UndefOr[Boolean] = js.undefined,
-    ignoreDoctype: js.UndefOr[Boolean] = js.undefined,
-    ignoreInstruction: js.UndefOr[Boolean] = js.undefined,
-    ignoreText: js.UndefOr[Boolean] = js.undefined,
-    instructionFn: (/* instructionValue */ String, /* instructionName */ String, /* parentElement */ String) => Unit = null,
-    instructionHasAttributes: js.UndefOr[Boolean] = js.undefined,
-    instructionKey: String = null,
-    instructionNameFn: (/* instructionName */ String, /* instructionValue */ String, /* parentElement */ String) => Unit = null,
-    nameKey: String = null,
-    nativeType: js.UndefOr[Boolean] = js.undefined,
-    parentKey: String = null,
-    sanitize: js.UndefOr[Boolean] = js.undefined,
-    textFn: (/* value */ String, /* parentElement */ js.Object) => Unit = null,
-    textKey: String = null,
-    trim: js.UndefOr[Boolean] = js.undefined,
-    typeKey: String = null
-  ): XML2JS = {
+  def apply(): XML2JS = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(addParent)) __obj.updateDynamic("addParent")(addParent.asInstanceOf[js.Any])
-    if (alwaysArray != null) __obj.updateDynamic("alwaysArray")(alwaysArray.asInstanceOf[js.Any])
-    if (!js.isUndefined(alwaysChildren)) __obj.updateDynamic("alwaysChildren")(alwaysChildren.asInstanceOf[js.Any])
-    if (attributeNameFn != null) __obj.updateDynamic("attributeNameFn")(js.Any.fromFunction3(attributeNameFn))
-    if (attributeValueFn != null) __obj.updateDynamic("attributeValueFn")(js.Any.fromFunction3(attributeValueFn))
-    if (attributesFn != null) __obj.updateDynamic("attributesFn")(js.Any.fromFunction2(attributesFn))
-    if (attributesKey != null) __obj.updateDynamic("attributesKey")(attributesKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureSpacesBetweenElements)) __obj.updateDynamic("captureSpacesBetweenElements")(captureSpacesBetweenElements.asInstanceOf[js.Any])
-    if (cdataFn != null) __obj.updateDynamic("cdataFn")(js.Any.fromFunction2(cdataFn))
-    if (cdataKey != null) __obj.updateDynamic("cdataKey")(cdataKey.asInstanceOf[js.Any])
-    if (commentFn != null) __obj.updateDynamic("commentFn")(js.Any.fromFunction2(commentFn))
-    if (commentKey != null) __obj.updateDynamic("commentKey")(commentKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (declarationKey != null) __obj.updateDynamic("declarationKey")(declarationKey.asInstanceOf[js.Any])
-    if (doctypeFn != null) __obj.updateDynamic("doctypeFn")(js.Any.fromFunction2(doctypeFn))
-    if (doctypeKey != null) __obj.updateDynamic("doctypeKey")(doctypeKey.asInstanceOf[js.Any])
-    if (elementNameFn != null) __obj.updateDynamic("elementNameFn")(js.Any.fromFunction2(elementNameFn))
-    if (elementsKey != null) __obj.updateDynamic("elementsKey")(elementsKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreAttributes)) __obj.updateDynamic("ignoreAttributes")(ignoreAttributes.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreCdata)) __obj.updateDynamic("ignoreCdata")(ignoreCdata.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreComment)) __obj.updateDynamic("ignoreComment")(ignoreComment.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreDeclaration)) __obj.updateDynamic("ignoreDeclaration")(ignoreDeclaration.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreDoctype)) __obj.updateDynamic("ignoreDoctype")(ignoreDoctype.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreInstruction)) __obj.updateDynamic("ignoreInstruction")(ignoreInstruction.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreText)) __obj.updateDynamic("ignoreText")(ignoreText.asInstanceOf[js.Any])
-    if (instructionFn != null) __obj.updateDynamic("instructionFn")(js.Any.fromFunction3(instructionFn))
-    if (!js.isUndefined(instructionHasAttributes)) __obj.updateDynamic("instructionHasAttributes")(instructionHasAttributes.asInstanceOf[js.Any])
-    if (instructionKey != null) __obj.updateDynamic("instructionKey")(instructionKey.asInstanceOf[js.Any])
-    if (instructionNameFn != null) __obj.updateDynamic("instructionNameFn")(js.Any.fromFunction3(instructionNameFn))
-    if (nameKey != null) __obj.updateDynamic("nameKey")(nameKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(nativeType)) __obj.updateDynamic("nativeType")(nativeType.asInstanceOf[js.Any])
-    if (parentKey != null) __obj.updateDynamic("parentKey")(parentKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(sanitize)) __obj.updateDynamic("sanitize")(sanitize.asInstanceOf[js.Any])
-    if (textFn != null) __obj.updateDynamic("textFn")(js.Any.fromFunction2(textFn))
-    if (textKey != null) __obj.updateDynamic("textKey")(textKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(trim)) __obj.updateDynamic("trim")(trim.asInstanceOf[js.Any])
-    if (typeKey != null) __obj.updateDynamic("typeKey")(typeKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[XML2JS]
   }
+  @scala.inline
+  implicit class XML2JSOps[Self <: XML2JS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddParent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addParent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addParent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlwaysArray(value: Boolean | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysArray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlwaysArray: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysArray")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlwaysChildren(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlwaysChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysChildren")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeNameFn(
+      value: (/* attributeName */ String, /* attributeValue */ String, /* parentElement */ String) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeNameFn")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutAttributeNameFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeNameFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeValueFn(
+      value: (/* attributeValue */ String, /* attributeName */ String, /* parentElement */ String) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeValueFn")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutAttributeValueFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeValueFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributesFn(value: (/* value */ String, /* parentElement */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributesFn")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAttributesFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributesFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCaptureSpacesBetweenElements(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captureSpacesBetweenElements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaptureSpacesBetweenElements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captureSpacesBetweenElements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCdataFn(value: (/* value */ String, /* parentElement */ js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cdataFn")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCdataFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cdataFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommentFn(value: (/* value */ String, /* parentElement */ js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commentFn")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCommentFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commentFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompact(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoctypeFn(value: (/* value */ String, /* parentElement */ js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doctypeFn")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDoctypeFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doctypeFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElementNameFn(value: (/* value */ String, /* parentElement */ js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementNameFn")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutElementNameFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementNameFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstructionFn(
+      value: (/* instructionValue */ String, /* instructionName */ String, /* parentElement */ String) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionFn")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutInstructionFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstructionHasAttributes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionHasAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstructionHasAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionHasAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstructionNameFn(
+      value: (/* instructionName */ String, /* instructionValue */ String, /* parentElement */ String) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionNameFn")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutInstructionNameFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instructionNameFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNativeType(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNativeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSanitize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSanitize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sanitize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextFn(value: (/* value */ String, /* parentElement */ js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textFn")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutTextFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textFn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrim(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trim")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

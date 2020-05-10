@@ -13,8 +13,6 @@ class CompositeDisposable protected () extends IDisposable {
   var isDisposed: Boolean = js.native
   var length: Double = js.native
   def add(item: IDisposable): Unit = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def remove(item: IDisposable): Boolean = js.native
   def toArray(): js.Array[IDisposable] = js.native
 }

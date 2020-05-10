@@ -43,7 +43,7 @@ trait RTCDtlsTransport
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
-  def getRemoteCertificates(): js.Array[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def getRemoteCertificates(): js.Array[js.typedarray.ArrayBuffer] = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _]): Unit = js.native
   @JSName("removeEventListener")
@@ -56,7 +56,7 @@ trait RTCDtlsTransport
   def removeEventListener_error(
     `type`: error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCErrorEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_statechange(`type`: statechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -70,7 +70,7 @@ trait RTCDtlsTransport
   def removeEventListener_statechange(
     `type`: statechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

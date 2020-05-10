@@ -2,11 +2,11 @@ package typingsSlinky.grammarkdown.hostMod
 
 import typingsSlinky.grammarkdown.grammarkdownBooleans.`false`
 import typingsSlinky.prex.mod.CancellationToken
-import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SyncHostOptions extends HostBaseOptions {
   var readFileSync: js.UndefOr[
     (js.ThisFunction2[
@@ -15,7 +15,7 @@ trait SyncHostOptions extends HostBaseOptions {
       /* cancellationToken */ js.UndefOr[CancellationToken], 
       String
     ]) | `false`
-  ] = js.undefined
+  ] = js.native
   var writeFileSync: js.UndefOr[
     (js.ThisFunction3[
       /* this */ scala.Nothing, 
@@ -24,36 +24,61 @@ trait SyncHostOptions extends HostBaseOptions {
       /* cancellationToken */ js.UndefOr[CancellationToken], 
       Unit
     ]) | `false`
-  ] = js.undefined
+  ] = js.native
 }
 
 object SyncHostOptions {
   @scala.inline
-  def apply(
-    ignoreCase: js.UndefOr[Boolean] = js.undefined,
-    knownGrammars: Record[String, String] = null,
-    readFileSync: (js.ThisFunction2[
-      /* this */ scala.Nothing, 
-      /* file */ String, 
-      /* cancellationToken */ js.UndefOr[CancellationToken], 
-      String
-    ]) | `false` = null,
-    useBuiltinGrammars: js.UndefOr[Boolean] = js.undefined,
-    writeFileSync: (js.ThisFunction3[
-      /* this */ scala.Nothing, 
-      /* file */ String, 
-      /* content */ String, 
-      /* cancellationToken */ js.UndefOr[CancellationToken], 
-      Unit
-    ]) | `false` = null
-  ): SyncHostOptions = {
+  def apply(): SyncHostOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ignoreCase)) __obj.updateDynamic("ignoreCase")(ignoreCase.asInstanceOf[js.Any])
-    if (knownGrammars != null) __obj.updateDynamic("knownGrammars")(knownGrammars.asInstanceOf[js.Any])
-    if (readFileSync != null) __obj.updateDynamic("readFileSync")(readFileSync.asInstanceOf[js.Any])
-    if (!js.isUndefined(useBuiltinGrammars)) __obj.updateDynamic("useBuiltinGrammars")(useBuiltinGrammars.asInstanceOf[js.Any])
-    if (writeFileSync != null) __obj.updateDynamic("writeFileSync")(writeFileSync.asInstanceOf[js.Any])
     __obj.asInstanceOf[SyncHostOptions]
   }
+  @scala.inline
+  implicit class SyncHostOptionsOps[Self <: SyncHostOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReadFileSync(
+      value: (js.ThisFunction2[
+          /* this */ scala.Nothing, 
+          /* file */ String, 
+          /* cancellationToken */ js.UndefOr[CancellationToken], 
+          String
+        ]) | `false`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readFileSync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadFileSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readFileSync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriteFileSync(
+      value: (js.ThisFunction3[
+          /* this */ scala.Nothing, 
+          /* file */ String, 
+          /* content */ String, 
+          /* cancellationToken */ js.UndefOr[CancellationToken], 
+          Unit
+        ]) | `false`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeFileSync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWriteFileSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeFileSync")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,60 +7,218 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IMapOptions extends js.Object {
-  var autoFitToViewport: js.UndefOr[none | ifNull | always] = js.undefined
-  var avoidFractionalZoom: js.UndefOr[Boolean] = js.undefined
-  var exitFullscreenByEsc: js.UndefOr[Boolean] = js.undefined
-  var fullscreenZIndex: js.UndefOr[Double] = js.undefined
-  var mapAutoFocus: js.UndefOr[Boolean] = js.undefined
-  var maxAnimationZoomDifference: js.UndefOr[Double] = js.undefined
-  var maxZoom: js.UndefOr[Double] = js.undefined
-  var minZoom: js.UndefOr[Double] = js.undefined
-  var nativeFullscreen: js.UndefOr[Boolean] = js.undefined
-  var projection: js.UndefOr[IProjection] = js.undefined
-  var restrictMapArea: js.UndefOr[Boolean] = js.undefined
-  var suppressMapOpenBlock: js.UndefOr[Boolean] = js.undefined
-  var suppressObsoleteBrowserNotifier: js.UndefOr[Boolean] = js.undefined
-  var yandexMapAutoSwitch: js.UndefOr[Boolean] = js.undefined
-  var yandexMapDisablePoiInteractivity: js.UndefOr[Boolean] = js.undefined
+  var autoFitToViewport: js.UndefOr[none | ifNull | always] = js.native
+  var avoidFractionalZoom: js.UndefOr[Boolean] = js.native
+  var exitFullscreenByEsc: js.UndefOr[Boolean] = js.native
+  var fullscreenZIndex: js.UndefOr[Double] = js.native
+  var mapAutoFocus: js.UndefOr[Boolean] = js.native
+  var maxAnimationZoomDifference: js.UndefOr[Double] = js.native
+  var maxZoom: js.UndefOr[Double] = js.native
+  var minZoom: js.UndefOr[Double] = js.native
+  var nativeFullscreen: js.UndefOr[Boolean] = js.native
+  var projection: js.UndefOr[IProjection] = js.native
+  var restrictMapArea: js.UndefOr[Boolean] = js.native
+  var suppressMapOpenBlock: js.UndefOr[Boolean] = js.native
+  var suppressObsoleteBrowserNotifier: js.UndefOr[Boolean] = js.native
+  var yandexMapAutoSwitch: js.UndefOr[Boolean] = js.native
+  var yandexMapDisablePoiInteractivity: js.UndefOr[Boolean] = js.native
 }
 
 object IMapOptions {
   @scala.inline
-  def apply(
-    autoFitToViewport: none | ifNull | always = null,
-    avoidFractionalZoom: js.UndefOr[Boolean] = js.undefined,
-    exitFullscreenByEsc: js.UndefOr[Boolean] = js.undefined,
-    fullscreenZIndex: Int | Double = null,
-    mapAutoFocus: js.UndefOr[Boolean] = js.undefined,
-    maxAnimationZoomDifference: Int | Double = null,
-    maxZoom: Int | Double = null,
-    minZoom: Int | Double = null,
-    nativeFullscreen: js.UndefOr[Boolean] = js.undefined,
-    projection: IProjection = null,
-    restrictMapArea: js.UndefOr[Boolean] = js.undefined,
-    suppressMapOpenBlock: js.UndefOr[Boolean] = js.undefined,
-    suppressObsoleteBrowserNotifier: js.UndefOr[Boolean] = js.undefined,
-    yandexMapAutoSwitch: js.UndefOr[Boolean] = js.undefined,
-    yandexMapDisablePoiInteractivity: js.UndefOr[Boolean] = js.undefined
-  ): IMapOptions = {
+  def apply(): IMapOptions = {
     val __obj = js.Dynamic.literal()
-    if (autoFitToViewport != null) __obj.updateDynamic("autoFitToViewport")(autoFitToViewport.asInstanceOf[js.Any])
-    if (!js.isUndefined(avoidFractionalZoom)) __obj.updateDynamic("avoidFractionalZoom")(avoidFractionalZoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(exitFullscreenByEsc)) __obj.updateDynamic("exitFullscreenByEsc")(exitFullscreenByEsc.asInstanceOf[js.Any])
-    if (fullscreenZIndex != null) __obj.updateDynamic("fullscreenZIndex")(fullscreenZIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(mapAutoFocus)) __obj.updateDynamic("mapAutoFocus")(mapAutoFocus.asInstanceOf[js.Any])
-    if (maxAnimationZoomDifference != null) __obj.updateDynamic("maxAnimationZoomDifference")(maxAnimationZoomDifference.asInstanceOf[js.Any])
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(nativeFullscreen)) __obj.updateDynamic("nativeFullscreen")(nativeFullscreen.asInstanceOf[js.Any])
-    if (projection != null) __obj.updateDynamic("projection")(projection.asInstanceOf[js.Any])
-    if (!js.isUndefined(restrictMapArea)) __obj.updateDynamic("restrictMapArea")(restrictMapArea.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressMapOpenBlock)) __obj.updateDynamic("suppressMapOpenBlock")(suppressMapOpenBlock.asInstanceOf[js.Any])
-    if (!js.isUndefined(suppressObsoleteBrowserNotifier)) __obj.updateDynamic("suppressObsoleteBrowserNotifier")(suppressObsoleteBrowserNotifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(yandexMapAutoSwitch)) __obj.updateDynamic("yandexMapAutoSwitch")(yandexMapAutoSwitch.asInstanceOf[js.Any])
-    if (!js.isUndefined(yandexMapDisablePoiInteractivity)) __obj.updateDynamic("yandexMapDisablePoiInteractivity")(yandexMapDisablePoiInteractivity.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMapOptions]
   }
+  @scala.inline
+  implicit class IMapOptionsOps[Self <: IMapOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoFitToViewport(value: none | ifNull | always): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFitToViewport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFitToViewport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFitToViewport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvoidFractionalZoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avoidFractionalZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvoidFractionalZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avoidFractionalZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExitFullscreenByEsc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitFullscreenByEsc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExitFullscreenByEsc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exitFullscreenByEsc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullscreenZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenZIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullscreenZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenZIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapAutoFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapAutoFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapAutoFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapAutoFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAnimationZoomDifference(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAnimationZoomDifference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAnimationZoomDifference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAnimationZoomDifference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNativeFullscreen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeFullscreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNativeFullscreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeFullscreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjection(value: IProjection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestrictMapArea(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictMapArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestrictMapArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictMapArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuppressMapOpenBlock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressMapOpenBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppressMapOpenBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressMapOpenBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuppressObsoleteBrowserNotifier(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressObsoleteBrowserNotifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuppressObsoleteBrowserNotifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressObsoleteBrowserNotifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYandexMapAutoSwitch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yandexMapAutoSwitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYandexMapAutoSwitch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yandexMapAutoSwitch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYandexMapDisablePoiInteractivity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yandexMapDisablePoiInteractivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYandexMapDisablePoiInteractivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yandexMapDisablePoiInteractivity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -54,13 +54,14 @@ trait SVGFEDisplacementMapElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFEDisplacementMapElement")
 @js.native
-object SVGFEDisplacementMapElement extends Instantiable0[SVGFEDisplacementMapElement] {
+object SVGFEDisplacementMapElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEDisplacementMapElement] {
   val SVG_CHANNEL_A: Double = js.native
   val SVG_CHANNEL_B: Double = js.native
   val SVG_CHANNEL_G: Double = js.native

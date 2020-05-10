@@ -16,6 +16,10 @@ trait ConvolverNode extends AudioNode {
 @JSGlobal("ConvolverNode")
 @js.native
 object ConvolverNode
-  extends Instantiable1[/* context */ BaseAudioContext, ConvolverNode]
-     with Instantiable2[/* context */ BaseAudioContext, /* options */ ConvolverOptions, ConvolverNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.ConvolverNode]
+     with Instantiable2[
+      /* context */ BaseAudioContext, 
+      /* options */ ConvolverOptions, 
+      org.scalajs.dom.raw.ConvolverNode
+    ]
 

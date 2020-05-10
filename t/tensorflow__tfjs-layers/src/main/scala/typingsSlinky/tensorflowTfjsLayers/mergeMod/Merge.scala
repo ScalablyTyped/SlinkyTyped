@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.mergeMod
 
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js
@@ -28,6 +28,6 @@ abstract class Merge () extends Layer {
     * Logic for merging multiple tensors, to be overridden by subclasses.
     * @param inputs
     */
-  /* protected */ def mergeFunction(inputs: js.Array[Tensor_[Rank]]): Tensor_[Rank] = js.native
+  /* protected */ def mergeFunction(inputs: js.Array[Tensor[Rank]]): Tensor[Rank] = js.native
 }
 

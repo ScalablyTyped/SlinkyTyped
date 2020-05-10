@@ -4,60 +4,198 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LoggerOptions extends js.Object {
-  var autoSendLogs: js.UndefOr[Boolean] = js.undefined
+  var autoSendLogs: js.UndefOr[Boolean] = js.native
   /**
     * @deprecated since version 6.2. use filters instead.
     */
-  var blacklist: js.UndefOr[js.Array[String]] = js.undefined
-  var callback: js.UndefOr[LoggerCallback] = js.undefined
-  var capture: js.UndefOr[Boolean] = js.undefined
-  var filters: js.UndefOr[Filter] = js.undefined
-  var level: js.UndefOr[js.Array[String] | String | Double] = js.undefined
-  var maxFileSize: js.UndefOr[Double] = js.undefined
-  var pkg: js.UndefOr[String] = js.undefined
-  var pretty: js.UndefOr[Boolean] = js.undefined
-  var stacktrace: js.UndefOr[Boolean] = js.undefined
-  var stringify: js.UndefOr[Boolean] = js.undefined
-  var tag: js.UndefOr[Tag] = js.undefined
+  var blacklist: js.UndefOr[js.Array[String]] = js.native
+  var callback: js.UndefOr[LoggerCallback] = js.native
+  var capture: js.UndefOr[Boolean] = js.native
+  var filters: js.UndefOr[Filter] = js.native
+  var level: js.UndefOr[js.Array[String] | String | Double] = js.native
+  var maxFileSize: js.UndefOr[Double] = js.native
+  var pkg: js.UndefOr[String] = js.native
+  var pretty: js.UndefOr[Boolean] = js.native
+  var stacktrace: js.UndefOr[Boolean] = js.native
+  var stringify: js.UndefOr[Boolean] = js.native
+  var tag: js.UndefOr[Tag] = js.native
   /**
     * @deprecated since version 6.2. use filters instead.
     */
-  var whitelist: js.UndefOr[js.Array[String]] = js.undefined
+  var whitelist: js.UndefOr[js.Array[String]] = js.native
 }
 
 object LoggerOptions {
   @scala.inline
-  def apply(
-    autoSendLogs: js.UndefOr[Boolean] = js.undefined,
-    blacklist: js.Array[String] = null,
-    callback: (/* message */ String | js.Array[String], /* level */ String, /* package */ String) => Unit = null,
-    capture: js.UndefOr[Boolean] = js.undefined,
-    filters: Filter = null,
-    level: js.Array[String] | String | Double = null,
-    maxFileSize: Int | Double = null,
-    pkg: String = null,
-    pretty: js.UndefOr[Boolean] = js.undefined,
-    stacktrace: js.UndefOr[Boolean] = js.undefined,
-    stringify: js.UndefOr[Boolean] = js.undefined,
-    tag: Tag = null,
-    whitelist: js.Array[String] = null
-  ): LoggerOptions = {
+  def apply(): LoggerOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoSendLogs)) __obj.updateDynamic("autoSendLogs")(autoSendLogs.asInstanceOf[js.Any])
-    if (blacklist != null) __obj.updateDynamic("blacklist")(blacklist.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction3(callback))
-    if (!js.isUndefined(capture)) __obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
-    if (filters != null) __obj.updateDynamic("filters")(filters.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (maxFileSize != null) __obj.updateDynamic("maxFileSize")(maxFileSize.asInstanceOf[js.Any])
-    if (pkg != null) __obj.updateDynamic("pkg")(pkg.asInstanceOf[js.Any])
-    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
-    if (!js.isUndefined(stacktrace)) __obj.updateDynamic("stacktrace")(stacktrace.asInstanceOf[js.Any])
-    if (!js.isUndefined(stringify)) __obj.updateDynamic("stringify")(stringify.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (whitelist != null) __obj.updateDynamic("whitelist")(whitelist.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoggerOptions]
   }
+  @scala.inline
+  implicit class LoggerOptionsOps[Self <: LoggerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoSendLogs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSendLogs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoSendLogs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoSendLogs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlacklist(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlacklist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blacklist")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallback(value: (/* message */ String | js.Array[String], /* level */ String, /* package */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCapture(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: Filter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: js.Array[String] | String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxFileSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxFileSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFileSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPkg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pkg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPkg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pkg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPretty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPretty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pretty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStacktrace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stacktrace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStacktrace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stacktrace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringify(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringify: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: Tag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhitelist(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhitelist: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whitelist")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

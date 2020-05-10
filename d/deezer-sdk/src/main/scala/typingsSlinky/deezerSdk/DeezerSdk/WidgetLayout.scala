@@ -15,10 +15,8 @@ trait WidgetLayout extends js.Object
 
 object WidgetLayout {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dark: typingsSlinky.deezerSdk.deezerSdkStrings.dark = "dark".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.deezerSdk.deezerSdkStrings.dark = this.cast("dark")
-  @scala.inline
-  def light: typingsSlinky.deezerSdk.deezerSdkStrings.light = this.cast("light")
+  def light: typingsSlinky.deezerSdk.deezerSdkStrings.light = "light".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.light]
 }
 

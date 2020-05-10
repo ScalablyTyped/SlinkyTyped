@@ -12,10 +12,8 @@ trait HistoryDirection extends js.Object
 
 object HistoryDirection {
   @scala.inline
-  def back: typingsSlinky.cypress.cypressStrings.back = this.cast("back")
+  def back: typingsSlinky.cypress.cypressStrings.back = "back".asInstanceOf[typingsSlinky.cypress.cypressStrings.back]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def forward: typingsSlinky.cypress.cypressStrings.forward = this.cast("forward")
+  def forward: typingsSlinky.cypress.cypressStrings.forward = "forward".asInstanceOf[typingsSlinky.cypress.cypressStrings.forward]
 }
 

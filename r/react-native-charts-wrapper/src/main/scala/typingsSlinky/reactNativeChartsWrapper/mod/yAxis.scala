@@ -1,103 +1,120 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
 import typingsSlinky.reactNativeChartsWrapper.AnonEnabled
-import typingsSlinky.reactNativeChartsWrapper.AnonLabel
-import typingsSlinky.reactNativeChartsWrapper.AnonLineLength
-import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.DAYS
-import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.HOURS
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.INSIDE_CHART
-import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.MILLISECONDS
-import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.MINUTES
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.OUTSIDE_CHART
-import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.SECONDS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait yAxis extends Axis {
-  var inverted: js.UndefOr[Boolean] = js.undefined
-  var maxWidth: js.UndefOr[Double] = js.undefined
-  var minWidth: js.UndefOr[Double] = js.undefined
-  var position: js.UndefOr[OUTSIDE_CHART | INSIDE_CHART] = js.undefined
-  var spaceBottom: js.UndefOr[Double] = js.undefined
-  var spaceTop: js.UndefOr[Double] = js.undefined
-  var zeroLine: js.UndefOr[AnonEnabled] = js.undefined
+  var inverted: js.UndefOr[Boolean] = js.native
+  var maxWidth: js.UndefOr[Double] = js.native
+  var minWidth: js.UndefOr[Double] = js.native
+  var position: js.UndefOr[OUTSIDE_CHART | INSIDE_CHART] = js.native
+  var spaceBottom: js.UndefOr[Double] = js.native
+  var spaceTop: js.UndefOr[Double] = js.native
+  var zeroLine: js.UndefOr[AnonEnabled] = js.native
 }
 
 object yAxis {
   @scala.inline
-  def apply(
-    axisLineColor: Int | Double = null,
-    axisLineWidth: Int | Double = null,
-    axisMaximum: Int | Double = null,
-    axisMinimum: Int | Double = null,
-    centerAxisLabels: js.UndefOr[Boolean] = js.undefined,
-    drawAxisLines: js.UndefOr[Boolean] = js.undefined,
-    drawGridLines: js.UndefOr[Boolean] = js.undefined,
-    drawLabels: js.UndefOr[Boolean] = js.undefined,
-    drawLimitLinesBehindData: js.UndefOr[Boolean] = js.undefined,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    fontFamily: String = null,
-    fontStyle: String = null,
-    fontWeight: Int | Double = null,
-    granularity: Int | Double = null,
-    granularityEnabled: js.UndefOr[Boolean] = js.undefined,
-    gridColor: Int | Double = null,
-    gridDashedLine: AnonLineLength = null,
-    gridLineWidth: Int | Double = null,
-    inverted: js.UndefOr[Boolean] = js.undefined,
-    labelCount: Int | Double = null,
-    labelCountForce: js.UndefOr[Boolean] = js.undefined,
-    limitLines: js.Array[AnonLabel] = null,
-    maxWidth: Int | Double = null,
-    minWidth: Int | Double = null,
-    position: OUTSIDE_CHART | INSIDE_CHART = null,
-    since: Int | Double = null,
-    spaceBottom: Int | Double = null,
-    spaceTop: Int | Double = null,
-    textColor: Int | Double = null,
-    textSize: Int | Double = null,
-    timeUnit: MILLISECONDS | SECONDS | MINUTES | HOURS | DAYS = null,
-    valueFormatter: ValueFormatter = null,
-    valueFormatterPattern: String = null,
-    zeroLine: AnonEnabled = null
-  ): yAxis = {
+  def apply(): yAxis = {
     val __obj = js.Dynamic.literal()
-    if (axisLineColor != null) __obj.updateDynamic("axisLineColor")(axisLineColor.asInstanceOf[js.Any])
-    if (axisLineWidth != null) __obj.updateDynamic("axisLineWidth")(axisLineWidth.asInstanceOf[js.Any])
-    if (axisMaximum != null) __obj.updateDynamic("axisMaximum")(axisMaximum.asInstanceOf[js.Any])
-    if (axisMinimum != null) __obj.updateDynamic("axisMinimum")(axisMinimum.asInstanceOf[js.Any])
-    if (!js.isUndefined(centerAxisLabels)) __obj.updateDynamic("centerAxisLabels")(centerAxisLabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(drawAxisLines)) __obj.updateDynamic("drawAxisLines")(drawAxisLines.asInstanceOf[js.Any])
-    if (!js.isUndefined(drawGridLines)) __obj.updateDynamic("drawGridLines")(drawGridLines.asInstanceOf[js.Any])
-    if (!js.isUndefined(drawLabels)) __obj.updateDynamic("drawLabels")(drawLabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(drawLimitLinesBehindData)) __obj.updateDynamic("drawLimitLinesBehindData")(drawLimitLinesBehindData.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
-    if (granularity != null) __obj.updateDynamic("granularity")(granularity.asInstanceOf[js.Any])
-    if (!js.isUndefined(granularityEnabled)) __obj.updateDynamic("granularityEnabled")(granularityEnabled.asInstanceOf[js.Any])
-    if (gridColor != null) __obj.updateDynamic("gridColor")(gridColor.asInstanceOf[js.Any])
-    if (gridDashedLine != null) __obj.updateDynamic("gridDashedLine")(gridDashedLine.asInstanceOf[js.Any])
-    if (gridLineWidth != null) __obj.updateDynamic("gridLineWidth")(gridLineWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
-    if (labelCount != null) __obj.updateDynamic("labelCount")(labelCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(labelCountForce)) __obj.updateDynamic("labelCountForce")(labelCountForce.asInstanceOf[js.Any])
-    if (limitLines != null) __obj.updateDynamic("limitLines")(limitLines.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (since != null) __obj.updateDynamic("since")(since.asInstanceOf[js.Any])
-    if (spaceBottom != null) __obj.updateDynamic("spaceBottom")(spaceBottom.asInstanceOf[js.Any])
-    if (spaceTop != null) __obj.updateDynamic("spaceTop")(spaceTop.asInstanceOf[js.Any])
-    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
-    if (textSize != null) __obj.updateDynamic("textSize")(textSize.asInstanceOf[js.Any])
-    if (timeUnit != null) __obj.updateDynamic("timeUnit")(timeUnit.asInstanceOf[js.Any])
-    if (valueFormatter != null) __obj.updateDynamic("valueFormatter")(valueFormatter.asInstanceOf[js.Any])
-    if (valueFormatterPattern != null) __obj.updateDynamic("valueFormatterPattern")(valueFormatterPattern.asInstanceOf[js.Any])
-    if (zeroLine != null) __obj.updateDynamic("zeroLine")(zeroLine.asInstanceOf[js.Any])
     __obj.asInstanceOf[yAxis]
   }
+  @scala.inline
+  implicit class yAxisOps[Self <: yAxis] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInverted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInverted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inverted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: OUTSIDE_CHART | INSIDE_CHART): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpaceBottom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpaceBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpaceTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpaceTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZeroLine(value: AnonEnabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZeroLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroLine")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

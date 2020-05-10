@@ -14,12 +14,10 @@ trait MediaKeysRequirement extends js.Object
 
 object MediaKeysRequirement {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `not-allowed`: typingsSlinky.std.stdStrings.`not-allowed` = "not-allowed".asInstanceOf[typingsSlinky.std.stdStrings.`not-allowed`]
   @scala.inline
-  def `not-allowed`: typingsSlinky.std.stdStrings.`not-allowed` = this.cast("not-allowed")
+  def optional: typingsSlinky.std.stdStrings.optional = "optional".asInstanceOf[typingsSlinky.std.stdStrings.optional]
   @scala.inline
-  def optional: typingsSlinky.std.stdStrings.optional = this.cast("optional")
-  @scala.inline
-  def required: required_ = this.cast("required")
+  def required: required_ = "required".asInstanceOf[required_]
 }
 

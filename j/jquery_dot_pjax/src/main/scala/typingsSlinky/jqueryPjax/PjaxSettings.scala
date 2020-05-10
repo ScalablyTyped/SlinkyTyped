@@ -1,31 +1,12 @@
 package typingsSlinky.jqueryPjax
 
 import org.scalajs.dom.raw.EventTarget
-import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.jquery.JQuery_.Ajax.CompleteCallback
-import typingsSlinky.jquery.JQuery_.Ajax.ErrorCallback
-import typingsSlinky.jquery.JQuery_.Ajax.StatusCodeCallbacks
-import typingsSlinky.jquery.JQuery_.Ajax.SuccessCallback
-import typingsSlinky.jquery.JQuery_.Ajax.XHRFields
 import typingsSlinky.jquery.JQuery_.AjaxSettings
-import typingsSlinky.jquery.JQuery_.PlainObject
-import typingsSlinky.jquery.JQuery_.TypeOrArray
-import typingsSlinky.jquery.JQuery_.jqXHR
-import typingsSlinky.jquery.jqueryBooleans.`false`
-import typingsSlinky.jquery.jqueryBooleans.`true`
-import typingsSlinky.jquery.jqueryStrings.`applicationSlashx-www-form-urlencoded`
-import typingsSlinky.jquery.jqueryStrings.`multipartSlashform-data`
-import typingsSlinky.jquery.jqueryStrings.html
-import typingsSlinky.jquery.jqueryStrings.json
-import typingsSlinky.jquery.jqueryStrings.jsonp
-import typingsSlinky.jquery.jqueryStrings.script
-import typingsSlinky.jquery.jqueryStrings.text
-import typingsSlinky.jquery.jqueryStrings.textSlashplain
-import typingsSlinky.jquery.jqueryStrings.xml
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PjaxSettings
   extends AjaxSettings[js.Any] {
   /**
@@ -33,130 +14,153 @@ trait PjaxSettings
     * If it is not defined, the `data-pjax` attribute of the link will be treated as container.
     * If such an attribute is not defined too, the context will be treated as container.
     */
-  var container: js.UndefOr[String] = js.undefined
+  var container: js.UndefOr[String] = js.native
   /**
     * CSS selector for the fragment to extract from ajax response.
     */
-  var fragment: js.UndefOr[String] = js.undefined
+  var fragment: js.UndefOr[String] = js.native
   /**
     * How many requests to cache. Defaults to 20.
     */
-  var maxCacheLength: js.UndefOr[Double] = js.undefined
+  var maxCacheLength: js.UndefOr[Double] = js.native
   /**
     * Whether to pushState the URL. Defaults to true.
     */
-  var push: js.UndefOr[Boolean] = js.undefined
+  var push: js.UndefOr[Boolean] = js.native
   /**
     * Whether to replaceState the URL. Defaults to false.
     */
-  var replace: js.UndefOr[Boolean] = js.undefined
+  var replace: js.UndefOr[Boolean] = js.native
   /**
     * Vertical position to scroll to after navigation.
     * To avoid changing scroll position, pass false.
     */
-  var scrollTo: js.UndefOr[Double | Boolean] = js.undefined
+  var scrollTo: js.UndefOr[Double | Boolean] = js.native
   /**
     * Eventually the relatedTarget value for pjax events.
     */
-  var target: js.UndefOr[EventTarget] = js.undefined
+  var target: js.UndefOr[EventTarget] = js.native
   /**
     * A string or function returning the current pjax version
     */
-  var version: js.UndefOr[String | js.Function0[String]] = js.undefined
+  var version: js.UndefOr[String | js.Function0[String]] = js.native
 }
 
 object PjaxSettings {
   @scala.inline
-  def apply(
-    accepts: PlainObject[String] = null,
-    async: js.UndefOr[Boolean] = js.undefined,
-    beforeSend: js.ThisFunction2[js.Any, /* jqXHR */ jqXHR[_], PjaxSettings, `false` | Unit] = null,
-    cache: js.UndefOr[Boolean] = js.undefined,
-    complete: TypeOrArray[CompleteCallback[js.Any]] = null,
-    container: String = null,
-    contentType: String | `false` = null,
-    contents: PlainObject[js.RegExp] = null,
-    context: js.Any = null,
-    converters: PlainObject[(js.Function1[/* value */ _, _]) | `true`] = null,
-    crossDomain: js.UndefOr[Boolean] = js.undefined,
-    data: PlainObject[_] | String = null,
-    dataFilter: (/* data */ String, /* type */ String) => _ = null,
-    dataType: xml | html | script | json | jsonp | text | String = null,
-    enctype: `applicationSlashx-www-form-urlencoded` | `multipartSlashform-data` | textSlashplain = null,
-    error: TypeOrArray[ErrorCallback[js.Any]] = null,
-    fragment: String = null,
-    global: js.UndefOr[Boolean] = js.undefined,
-    headers: PlainObject[js.UndefOr[String | Null]] = null,
-    ifModified: js.UndefOr[Boolean] = js.undefined,
-    isLocal: js.UndefOr[Boolean] = js.undefined,
-    jsonp: String | `false` = null,
-    jsonpCallback: String | (js.ThisFunction0[js.Any, String]) = null,
-    maxCacheLength: Int | Double = null,
-    method: String = null,
-    mimeType: String = null,
-    password: String = null,
-    processData: js.UndefOr[Boolean] = js.undefined,
-    push: js.UndefOr[Boolean] = js.undefined,
-    replace: js.UndefOr[Boolean] = js.undefined,
-    scriptCharset: String = null,
-    scrollTo: Double | Boolean = null,
-    statusCode: StatusCodeCallbacks[js.Any] = null,
-    success: TypeOrArray[SuccessCallback[js.Any]] = null,
-    target: EventTarget = null,
-    timeout: Int | Double = null,
-    traditional: js.UndefOr[Boolean] = js.undefined,
-    `type`: String = null,
-    url: String = null,
-    username: String = null,
-    version: String | js.Function0[String] = null,
-    xhr: () => XMLHttpRequest = null,
-    xhrFields: XHRFields = null
-  ): PjaxSettings = {
+  def apply(): PjaxSettings = {
     val __obj = js.Dynamic.literal()
-    if (accepts != null) __obj.updateDynamic("accepts")(accepts.asInstanceOf[js.Any])
-    if (!js.isUndefined(async)) __obj.updateDynamic("async")(async.asInstanceOf[js.Any])
-    if (beforeSend != null) __obj.updateDynamic("beforeSend")(beforeSend.asInstanceOf[js.Any])
-    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (complete != null) __obj.updateDynamic("complete")(complete.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (contents != null) __obj.updateDynamic("contents")(contents.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (converters != null) __obj.updateDynamic("converters")(converters.asInstanceOf[js.Any])
-    if (!js.isUndefined(crossDomain)) __obj.updateDynamic("crossDomain")(crossDomain.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataFilter != null) __obj.updateDynamic("dataFilter")(js.Any.fromFunction2(dataFilter))
-    if (dataType != null) __obj.updateDynamic("dataType")(dataType.asInstanceOf[js.Any])
-    if (enctype != null) __obj.updateDynamic("enctype")(enctype.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (fragment != null) __obj.updateDynamic("fragment")(fragment.asInstanceOf[js.Any])
-    if (!js.isUndefined(global)) __obj.updateDynamic("global")(global.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (!js.isUndefined(ifModified)) __obj.updateDynamic("ifModified")(ifModified.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLocal)) __obj.updateDynamic("isLocal")(isLocal.asInstanceOf[js.Any])
-    if (jsonp != null) __obj.updateDynamic("jsonp")(jsonp.asInstanceOf[js.Any])
-    if (jsonpCallback != null) __obj.updateDynamic("jsonpCallback")(jsonpCallback.asInstanceOf[js.Any])
-    if (maxCacheLength != null) __obj.updateDynamic("maxCacheLength")(maxCacheLength.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (mimeType != null) __obj.updateDynamic("mimeType")(mimeType.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (!js.isUndefined(processData)) __obj.updateDynamic("processData")(processData.asInstanceOf[js.Any])
-    if (!js.isUndefined(push)) __obj.updateDynamic("push")(push.asInstanceOf[js.Any])
-    if (!js.isUndefined(replace)) __obj.updateDynamic("replace")(replace.asInstanceOf[js.Any])
-    if (scriptCharset != null) __obj.updateDynamic("scriptCharset")(scriptCharset.asInstanceOf[js.Any])
-    if (scrollTo != null) __obj.updateDynamic("scrollTo")(scrollTo.asInstanceOf[js.Any])
-    if (statusCode != null) __obj.updateDynamic("statusCode")(statusCode.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(success.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(traditional)) __obj.updateDynamic("traditional")(traditional.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (xhr != null) __obj.updateDynamic("xhr")(js.Any.fromFunction0(xhr))
-    if (xhrFields != null) __obj.updateDynamic("xhrFields")(xhrFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[PjaxSettings]
   }
+  @scala.inline
+  implicit class PjaxSettingsOps[Self <: PjaxSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFragment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFragment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxCacheLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCacheLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxCacheLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCacheLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPush(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollTo(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: EventTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionFunction0(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String | js.Function0[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

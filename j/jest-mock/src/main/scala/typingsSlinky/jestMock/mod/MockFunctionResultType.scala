@@ -21,12 +21,10 @@ trait MockFunctionResultType extends js.Object
 
 object MockFunctionResultType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def incomplete: typingsSlinky.jestMock.jestMockStrings.incomplete = "incomplete".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.incomplete]
   @scala.inline
-  def incomplete: typingsSlinky.jestMock.jestMockStrings.incomplete = this.cast("incomplete")
+  def `return`: typingsSlinky.jestMock.jestMockStrings.`return` = "return".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.`return`]
   @scala.inline
-  def `return`: typingsSlinky.jestMock.jestMockStrings.`return` = this.cast("return")
-  @scala.inline
-  def `throw`: typingsSlinky.jestMock.jestMockStrings.`throw` = this.cast("throw")
+  def `throw`: typingsSlinky.jestMock.jestMockStrings.`throw` = "throw".asInstanceOf[typingsSlinky.jestMock.jestMockStrings.`throw`]
 }
 

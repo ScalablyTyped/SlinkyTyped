@@ -1,6 +1,7 @@
 package typingsSlinky.antDesignReactNative
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
@@ -8,48 +9,190 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Readonly<{  children ? :react.react.ReactNode}> & std.Readonly<@ant-design/react-native.@ant-design/react-native/lib/picker/PickerTypes.PickerProps> */
+@js.native
 trait ReadonlychildrenReactNodeChildren extends js.Object {
-  val children: js.UndefOr[TagMod[Any]] = js.undefined
-  val defaultSelectedValue: js.UndefOr[js.Any] = js.undefined
-  val disabled: js.UndefOr[Boolean] = js.undefined
-  val indicatorClassName: js.UndefOr[String] = js.undefined
-  val indicatorStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  val itemStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  val noAnimate: js.UndefOr[Boolean] = js.undefined
-  val onScrollChange: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.undefined
-  val onValueChange: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.undefined
-  val selectedValue: js.UndefOr[js.Any] = js.undefined
-  val style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  val children: js.UndefOr[TagMod[Any]] = js.native
+  val defaultSelectedValue: js.UndefOr[js.Any] = js.native
+  val disabled: js.UndefOr[Boolean] = js.native
+  val indicatorClassName: js.UndefOr[String] = js.native
+  val indicatorStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  val itemStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  val noAnimate: js.UndefOr[Boolean] = js.native
+  val onScrollChange: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.native
+  val onValueChange: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.native
+  val selectedValue: js.UndefOr[js.Any] = js.native
+  val style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
 object ReadonlychildrenReactNodeChildren {
   @scala.inline
-  def apply(
-    children: TagMod[Any] = null,
-    defaultSelectedValue: js.Any = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    indicatorClassName: String = null,
-    indicatorStyle: StyleProp[ViewStyle] = null,
-    itemStyle: StyleProp[ViewStyle] = null,
-    noAnimate: js.UndefOr[Boolean] = js.undefined,
-    onScrollChange: /* value */ js.Any => Unit = null,
-    onValueChange: /* value */ js.Any => Unit = null,
-    selectedValue: js.Any = null,
-    style: StyleProp[ViewStyle] = null
-  ): ReadonlychildrenReactNodeChildren = {
+  def apply(): ReadonlychildrenReactNodeChildren = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (defaultSelectedValue != null) __obj.updateDynamic("defaultSelectedValue")(defaultSelectedValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (indicatorClassName != null) __obj.updateDynamic("indicatorClassName")(indicatorClassName.asInstanceOf[js.Any])
-    if (indicatorStyle != null) __obj.updateDynamic("indicatorStyle")(indicatorStyle.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(noAnimate)) __obj.updateDynamic("noAnimate")(noAnimate.asInstanceOf[js.Any])
-    if (onScrollChange != null) __obj.updateDynamic("onScrollChange")(js.Any.fromFunction1(onScrollChange))
-    if (onValueChange != null) __obj.updateDynamic("onValueChange")(js.Any.fromFunction1(onValueChange))
-    if (selectedValue != null) __obj.updateDynamic("selectedValue")(selectedValue.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadonlychildrenReactNodeChildren]
   }
+  @scala.inline
+  implicit class ReadonlychildrenReactNodeChildrenOps[Self <: ReadonlychildrenReactNodeChildren] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultSelectedValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSelectedValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultSelectedValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSelectedValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndicatorClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndicatorClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndicatorStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndicatorStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndicatorStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withNoAnimate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noAnimate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noAnimate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnScrollChange(value: /* value */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnScrollChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnValueChange(value: /* value */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnValueChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+  }
+  
 }
 

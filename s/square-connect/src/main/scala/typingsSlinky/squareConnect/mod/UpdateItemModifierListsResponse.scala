@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class UpdateItemModifierListsResponse () extends js.Object {
   /**
-    * The set of [Error](#type-error)s encountered.
+    * Information on any errors encountered.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   /**

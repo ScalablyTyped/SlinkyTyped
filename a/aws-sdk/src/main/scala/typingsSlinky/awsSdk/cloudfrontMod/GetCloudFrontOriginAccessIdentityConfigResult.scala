@@ -18,14 +18,41 @@ trait GetCloudFrontOriginAccessIdentityConfigResult extends js.Object {
 
 object GetCloudFrontOriginAccessIdentityConfigResult {
   @scala.inline
-  def apply(
-    CloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfig = null,
-    ETag: String = null
-  ): GetCloudFrontOriginAccessIdentityConfigResult = {
+  def apply(): GetCloudFrontOriginAccessIdentityConfigResult = {
     val __obj = js.Dynamic.literal()
-    if (CloudFrontOriginAccessIdentityConfig != null) __obj.updateDynamic("CloudFrontOriginAccessIdentityConfig")(CloudFrontOriginAccessIdentityConfig.asInstanceOf[js.Any])
-    if (ETag != null) __obj.updateDynamic("ETag")(ETag.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCloudFrontOriginAccessIdentityConfigResult]
   }
+  @scala.inline
+  implicit class GetCloudFrontOriginAccessIdentityConfigResultOps[Self <: GetCloudFrontOriginAccessIdentityConfigResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudFrontOriginAccessIdentityConfig(value: CloudFrontOriginAccessIdentityConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontOriginAccessIdentityConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudFrontOriginAccessIdentityConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFrontOriginAccessIdentityConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withETag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutETag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ETag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

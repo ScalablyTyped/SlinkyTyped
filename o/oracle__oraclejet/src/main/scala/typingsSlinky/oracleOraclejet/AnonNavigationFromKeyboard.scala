@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonNavigationFromKeyboard extends js.Object {
-  var navigationFromKeyboard: js.UndefOr[String] = js.undefined
-  var navigationToKeyboard: js.UndefOr[String] = js.undefined
-  var navigationToTouch: js.UndefOr[String] = js.undefined
-  var newMessage: js.UndefOr[String] = js.undefined
+  var navigationFromKeyboard: js.UndefOr[String] = js.native
+  var navigationToKeyboard: js.UndefOr[String] = js.native
+  var navigationToTouch: js.UndefOr[String] = js.native
+  var newMessage: js.UndefOr[String] = js.native
 }
 
 object AnonNavigationFromKeyboard {
   @scala.inline
-  def apply(
-    navigationFromKeyboard: String = null,
-    navigationToKeyboard: String = null,
-    navigationToTouch: String = null,
-    newMessage: String = null
-  ): AnonNavigationFromKeyboard = {
+  def apply(): AnonNavigationFromKeyboard = {
     val __obj = js.Dynamic.literal()
-    if (navigationFromKeyboard != null) __obj.updateDynamic("navigationFromKeyboard")(navigationFromKeyboard.asInstanceOf[js.Any])
-    if (navigationToKeyboard != null) __obj.updateDynamic("navigationToKeyboard")(navigationToKeyboard.asInstanceOf[js.Any])
-    if (navigationToTouch != null) __obj.updateDynamic("navigationToTouch")(navigationToTouch.asInstanceOf[js.Any])
-    if (newMessage != null) __obj.updateDynamic("newMessage")(newMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonNavigationFromKeyboard]
   }
+  @scala.inline
+  implicit class AnonNavigationFromKeyboardOps[Self <: AnonNavigationFromKeyboard] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNavigationFromKeyboard(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationFromKeyboard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavigationFromKeyboard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationFromKeyboard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavigationToKeyboard(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationToKeyboard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavigationToKeyboard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationToKeyboard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavigationToTouch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationToTouch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavigationToTouch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigationToTouch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newMessage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

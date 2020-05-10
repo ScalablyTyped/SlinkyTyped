@@ -20,5 +20,6 @@ trait SVGFESpotLightElement extends SVGElement {
 
 @JSGlobal("SVGFESpotLightElement")
 @js.native
-object SVGFESpotLightElement extends Instantiable0[SVGFESpotLightElement]
+object SVGFESpotLightElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFESpotLightElement]
 

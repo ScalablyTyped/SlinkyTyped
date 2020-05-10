@@ -13,12 +13,10 @@ trait icon extends js.Object
 
 object icon {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def loading: typingsSlinky.weappApi.weappApiStrings.loading = "loading".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.loading]
   @scala.inline
-  def loading: typingsSlinky.weappApi.weappApiStrings.loading = this.cast("loading")
+  def none: typingsSlinky.weappApi.weappApiStrings.none = "none".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.none]
   @scala.inline
-  def none: typingsSlinky.weappApi.weappApiStrings.none = this.cast("none")
-  @scala.inline
-  def success: typingsSlinky.weappApi.weappApiStrings.success = this.cast("success")
+  def success: typingsSlinky.weappApi.weappApiStrings.success = "success".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.success]
 }
 

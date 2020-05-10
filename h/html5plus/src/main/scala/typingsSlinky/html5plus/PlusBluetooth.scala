@@ -299,7 +299,7 @@ trait PlusBluetooth extends js.Object {
     deviceId: js.UndefOr[String],
     serviceId: js.UndefOr[String],
     characteristicId: js.UndefOr[String],
-    value: js.UndefOr[scala.scalajs.js.typedarray.ArrayBuffer],
+    value: js.UndefOr[js.typedarray.ArrayBuffer],
     success: js.UndefOr[js.Function1[/* result */ js.Any, Unit]],
     fail: js.UndefOr[js.Function1[/* result */ js.Any, Unit]],
     complete: js.UndefOr[js.Function1[/* result */ js.Any, Unit]]

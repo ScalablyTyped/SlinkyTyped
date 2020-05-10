@@ -44,74 +44,72 @@ trait HTTPMethod extends js.Object
 
 object HTTPMethod {
   @scala.inline
-  def ACL: typingsSlinky.findMyWay.findMyWayStrings.ACL = this.cast("ACL")
+  def ACL: typingsSlinky.findMyWay.findMyWayStrings.ACL = "ACL".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.ACL]
   @scala.inline
-  def BIND: typingsSlinky.findMyWay.findMyWayStrings.BIND = this.cast("BIND")
+  def BIND: typingsSlinky.findMyWay.findMyWayStrings.BIND = "BIND".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.BIND]
   @scala.inline
-  def CHECKOUT: typingsSlinky.findMyWay.findMyWayStrings.CHECKOUT = this.cast("CHECKOUT")
+  def CHECKOUT: typingsSlinky.findMyWay.findMyWayStrings.CHECKOUT = "CHECKOUT".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.CHECKOUT]
   @scala.inline
-  def CONNECT: typingsSlinky.findMyWay.findMyWayStrings.CONNECT = this.cast("CONNECT")
+  def CONNECT: typingsSlinky.findMyWay.findMyWayStrings.CONNECT = "CONNECT".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.CONNECT]
   @scala.inline
-  def COPY: typingsSlinky.findMyWay.findMyWayStrings.COPY = this.cast("COPY")
+  def COPY: typingsSlinky.findMyWay.findMyWayStrings.COPY = "COPY".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.COPY]
   @scala.inline
-  def DELETE: typingsSlinky.findMyWay.findMyWayStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.findMyWay.findMyWayStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.findMyWay.findMyWayStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.findMyWay.findMyWayStrings.GET = "GET".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.GET]
   @scala.inline
-  def HEAD: typingsSlinky.findMyWay.findMyWayStrings.HEAD = this.cast("HEAD")
+  def HEAD: typingsSlinky.findMyWay.findMyWayStrings.HEAD = "HEAD".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.HEAD]
   @scala.inline
-  def LINK: typingsSlinky.findMyWay.findMyWayStrings.LINK = this.cast("LINK")
+  def LINK: typingsSlinky.findMyWay.findMyWayStrings.LINK = "LINK".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.LINK]
   @scala.inline
-  def LOCK: typingsSlinky.findMyWay.findMyWayStrings.LOCK = this.cast("LOCK")
+  def LOCK: typingsSlinky.findMyWay.findMyWayStrings.LOCK = "LOCK".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.LOCK]
   @scala.inline
-  def `M-SEARCH`: typingsSlinky.findMyWay.findMyWayStrings.`M-SEARCH` = this.cast("M-SEARCH")
+  def `M-SEARCH`: typingsSlinky.findMyWay.findMyWayStrings.`M-SEARCH` = "M-SEARCH".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.`M-SEARCH`]
   @scala.inline
-  def MERGE: typingsSlinky.findMyWay.findMyWayStrings.MERGE = this.cast("MERGE")
+  def MERGE: typingsSlinky.findMyWay.findMyWayStrings.MERGE = "MERGE".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.MERGE]
   @scala.inline
-  def MKACTIVITY: typingsSlinky.findMyWay.findMyWayStrings.MKACTIVITY = this.cast("MKACTIVITY")
+  def MKACTIVITY: typingsSlinky.findMyWay.findMyWayStrings.MKACTIVITY = "MKACTIVITY".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.MKACTIVITY]
   @scala.inline
-  def MKCALENDAR: typingsSlinky.findMyWay.findMyWayStrings.MKCALENDAR = this.cast("MKCALENDAR")
+  def MKCALENDAR: typingsSlinky.findMyWay.findMyWayStrings.MKCALENDAR = "MKCALENDAR".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.MKCALENDAR]
   @scala.inline
-  def MKCOL: typingsSlinky.findMyWay.findMyWayStrings.MKCOL = this.cast("MKCOL")
+  def MKCOL: typingsSlinky.findMyWay.findMyWayStrings.MKCOL = "MKCOL".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.MKCOL]
   @scala.inline
-  def MOVE: typingsSlinky.findMyWay.findMyWayStrings.MOVE = this.cast("MOVE")
+  def MOVE: typingsSlinky.findMyWay.findMyWayStrings.MOVE = "MOVE".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.MOVE]
   @scala.inline
-  def NOTIFY: typingsSlinky.findMyWay.findMyWayStrings.NOTIFY = this.cast("NOTIFY")
+  def NOTIFY: typingsSlinky.findMyWay.findMyWayStrings.NOTIFY = "NOTIFY".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.NOTIFY]
   @scala.inline
-  def OPTIONS: typingsSlinky.findMyWay.findMyWayStrings.OPTIONS = this.cast("OPTIONS")
+  def OPTIONS: typingsSlinky.findMyWay.findMyWayStrings.OPTIONS = "OPTIONS".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.OPTIONS]
   @scala.inline
-  def PATCH: typingsSlinky.findMyWay.findMyWayStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.findMyWay.findMyWayStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.findMyWay.findMyWayStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.findMyWay.findMyWayStrings.POST = "POST".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.POST]
   @scala.inline
-  def PROPFIND: typingsSlinky.findMyWay.findMyWayStrings.PROPFIND = this.cast("PROPFIND")
+  def PROPFIND: typingsSlinky.findMyWay.findMyWayStrings.PROPFIND = "PROPFIND".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.PROPFIND]
   @scala.inline
-  def PROPPATCH: typingsSlinky.findMyWay.findMyWayStrings.PROPPATCH = this.cast("PROPPATCH")
+  def PROPPATCH: typingsSlinky.findMyWay.findMyWayStrings.PROPPATCH = "PROPPATCH".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.PROPPATCH]
   @scala.inline
-  def PURGE: typingsSlinky.findMyWay.findMyWayStrings.PURGE = this.cast("PURGE")
+  def PURGE: typingsSlinky.findMyWay.findMyWayStrings.PURGE = "PURGE".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.PURGE]
   @scala.inline
-  def PUT: typingsSlinky.findMyWay.findMyWayStrings.PUT = this.cast("PUT")
+  def PUT: typingsSlinky.findMyWay.findMyWayStrings.PUT = "PUT".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.PUT]
   @scala.inline
-  def REBIND: typingsSlinky.findMyWay.findMyWayStrings.REBIND = this.cast("REBIND")
+  def REBIND: typingsSlinky.findMyWay.findMyWayStrings.REBIND = "REBIND".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.REBIND]
   @scala.inline
-  def REPORT: typingsSlinky.findMyWay.findMyWayStrings.REPORT = this.cast("REPORT")
+  def REPORT: typingsSlinky.findMyWay.findMyWayStrings.REPORT = "REPORT".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.REPORT]
   @scala.inline
-  def SEARCH: typingsSlinky.findMyWay.findMyWayStrings.SEARCH = this.cast("SEARCH")
+  def SEARCH: typingsSlinky.findMyWay.findMyWayStrings.SEARCH = "SEARCH".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.SEARCH]
   @scala.inline
-  def SOURCE: typingsSlinky.findMyWay.findMyWayStrings.SOURCE = this.cast("SOURCE")
+  def SOURCE: typingsSlinky.findMyWay.findMyWayStrings.SOURCE = "SOURCE".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.SOURCE]
   @scala.inline
-  def SUBSCRIBE: typingsSlinky.findMyWay.findMyWayStrings.SUBSCRIBE = this.cast("SUBSCRIBE")
+  def SUBSCRIBE: typingsSlinky.findMyWay.findMyWayStrings.SUBSCRIBE = "SUBSCRIBE".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.SUBSCRIBE]
   @scala.inline
-  def TRACE: typingsSlinky.findMyWay.findMyWayStrings.TRACE = this.cast("TRACE")
+  def TRACE: typingsSlinky.findMyWay.findMyWayStrings.TRACE = "TRACE".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.TRACE]
   @scala.inline
-  def UNBIND: typingsSlinky.findMyWay.findMyWayStrings.UNBIND = this.cast("UNBIND")
+  def UNBIND: typingsSlinky.findMyWay.findMyWayStrings.UNBIND = "UNBIND".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.UNBIND]
   @scala.inline
-  def UNLINK: typingsSlinky.findMyWay.findMyWayStrings.UNLINK = this.cast("UNLINK")
+  def UNLINK: typingsSlinky.findMyWay.findMyWayStrings.UNLINK = "UNLINK".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.UNLINK]
   @scala.inline
-  def UNLOCK: typingsSlinky.findMyWay.findMyWayStrings.UNLOCK = this.cast("UNLOCK")
+  def UNLOCK: typingsSlinky.findMyWay.findMyWayStrings.UNLOCK = "UNLOCK".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.UNLOCK]
   @scala.inline
-  def UNSUBSCRIBE: typingsSlinky.findMyWay.findMyWayStrings.UNSUBSCRIBE = this.cast("UNSUBSCRIBE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNSUBSCRIBE: typingsSlinky.findMyWay.findMyWayStrings.UNSUBSCRIBE = "UNSUBSCRIBE".asInstanceOf[typingsSlinky.findMyWay.findMyWayStrings.UNSUBSCRIBE]
 }
 

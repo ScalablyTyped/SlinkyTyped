@@ -13,12 +13,10 @@ trait ResultType extends js.Object
 
 object ResultType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def mixed: typingsSlinky.twit.twitStrings.mixed = "mixed".asInstanceOf[typingsSlinky.twit.twitStrings.mixed]
   @scala.inline
-  def mixed: typingsSlinky.twit.twitStrings.mixed = this.cast("mixed")
+  def popular: typingsSlinky.twit.twitStrings.popular = "popular".asInstanceOf[typingsSlinky.twit.twitStrings.popular]
   @scala.inline
-  def popular: typingsSlinky.twit.twitStrings.popular = this.cast("popular")
-  @scala.inline
-  def recent: typingsSlinky.twit.twitStrings.recent = this.cast("recent")
+  def recent: typingsSlinky.twit.twitStrings.recent = "recent".asInstanceOf[typingsSlinky.twit.twitStrings.recent]
 }
 

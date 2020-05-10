@@ -15,16 +15,14 @@ trait TextSkin extends js.Object
 
 object TextSkin {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.wixStyleReact.wixStyleReactStrings.disabled = "disabled".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.wixStyleReact.wixStyleReactStrings.disabled = this.cast("disabled")
+  def error: typingsSlinky.wixStyleReact.wixStyleReactStrings.error = "error".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.error]
   @scala.inline
-  def error: typingsSlinky.wixStyleReact.wixStyleReactStrings.error = this.cast("error")
+  def premium: typingsSlinky.wixStyleReact.wixStyleReactStrings.premium = "premium".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.premium]
   @scala.inline
-  def premium: typingsSlinky.wixStyleReact.wixStyleReactStrings.premium = this.cast("premium")
+  def standard: typingsSlinky.wixStyleReact.wixStyleReactStrings.standard = "standard".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.standard]
   @scala.inline
-  def standard: typingsSlinky.wixStyleReact.wixStyleReactStrings.standard = this.cast("standard")
-  @scala.inline
-  def success: typingsSlinky.wixStyleReact.wixStyleReactStrings.success = this.cast("success")
+  def success: typingsSlinky.wixStyleReact.wixStyleReactStrings.success = "success".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.success]
 }
 

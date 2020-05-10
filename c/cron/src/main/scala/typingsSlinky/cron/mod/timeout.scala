@@ -1,7 +1,6 @@
 package typingsSlinky.cron.mod
 
 import typingsSlinky.moment.mod.Moment
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +10,6 @@ import scala.scalajs.js.annotation._
 object timeout extends js.Object {
   def apply(cronTime: String): Double = js.native
   def apply(cronTime: Moment): Double = js.native
-  def apply(cronTime: Date): Double = js.native
+  def apply(cronTime: js.Date): Double = js.native
 }
 

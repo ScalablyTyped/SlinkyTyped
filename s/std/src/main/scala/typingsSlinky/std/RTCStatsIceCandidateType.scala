@@ -14,14 +14,12 @@ trait RTCStatsIceCandidateType extends js.Object
 
 object RTCStatsIceCandidateType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def host: typingsSlinky.std.stdStrings.host = "host".asInstanceOf[typingsSlinky.std.stdStrings.host]
   @scala.inline
-  def host: typingsSlinky.std.stdStrings.host = this.cast("host")
+  def peerreflexive: typingsSlinky.std.stdStrings.peerreflexive = "peerreflexive".asInstanceOf[typingsSlinky.std.stdStrings.peerreflexive]
   @scala.inline
-  def peerreflexive: typingsSlinky.std.stdStrings.peerreflexive = this.cast("peerreflexive")
+  def relayed: typingsSlinky.std.stdStrings.relayed = "relayed".asInstanceOf[typingsSlinky.std.stdStrings.relayed]
   @scala.inline
-  def relayed: typingsSlinky.std.stdStrings.relayed = this.cast("relayed")
-  @scala.inline
-  def serverreflexive: typingsSlinky.std.stdStrings.serverreflexive = this.cast("serverreflexive")
+  def serverreflexive: typingsSlinky.std.stdStrings.serverreflexive = "serverreflexive".asInstanceOf[typingsSlinky.std.stdStrings.serverreflexive]
 }
 

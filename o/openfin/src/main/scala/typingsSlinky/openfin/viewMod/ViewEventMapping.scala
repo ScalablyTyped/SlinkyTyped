@@ -12,13 +12,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ViewEventMapping[Topic, Type] extends WebContentsEventMapping[String, String] {
-  var attached: WindowEvent[Topic, Type]
-  var created: WindowEvent[Topic, Type]
-  var destroyed: WindowEvent[Topic, Type]
-  var hidden: WindowEvent[Topic, Type]
-  var shown: WindowEvent[Topic, Type]
-  var `target-changed`: WindowEvent[Topic, Type]
+  var attached: WindowEvent[Topic, Type] = js.native
+  var created: WindowEvent[Topic, Type] = js.native
+  var destroyed: WindowEvent[Topic, Type] = js.native
+  var hidden: WindowEvent[Topic, Type] = js.native
+  var shown: WindowEvent[Topic, Type] = js.native
+  var `target-changed`: WindowEvent[Topic, Type] = js.native
 }
 
 object ViewEventMapping {
@@ -54,5 +55,49 @@ object ViewEventMapping {
     __obj.updateDynamic("target-changed")(`target-changed`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewEventMapping[Topic, Type]]
   }
+  @scala.inline
+  implicit class ViewEventMappingOps[Self[topic, `type`] <: ViewEventMapping[topic, `type`], Topic, Type] (val x: Self[Topic, Type]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Topic, Type] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Topic, Type]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[Topic, Type]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[Topic, Type]) with Other]
+    @scala.inline
+    def withAttached(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attached")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreated(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroyed(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroyed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHidden(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShown(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withTarget-changed`(value: WindowEvent[Topic, Type]): Self[Topic, Type] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target-changed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

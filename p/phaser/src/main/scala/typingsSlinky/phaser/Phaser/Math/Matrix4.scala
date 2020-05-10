@@ -18,7 +18,7 @@ class Matrix4 () extends js.Object {
   /**
     * The matrix values.
     */
-  var `val`: scala.scalajs.js.typedarray.Float32Array = js.native
+  var `val`: js.typedarray.Float32Array = js.native
   /**
     * Calculate the adjoint, or adjugate, of this Matrix.
     */

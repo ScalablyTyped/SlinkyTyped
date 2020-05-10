@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLabel extends js.Object {
-  var label: js.UndefOr[AnonCustomizeTextFormat] = js.undefined
-  var separatorHeight: js.UndefOr[Double] = js.undefined
-  var textLeftIndent: js.UndefOr[Double] = js.undefined
-  var textTopIndent: js.UndefOr[Double] = js.undefined
-  var topIndent: js.UndefOr[Double] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var label: js.UndefOr[AnonCustomizeTextFormat] = js.native
+  var separatorHeight: js.UndefOr[Double] = js.native
+  var textLeftIndent: js.UndefOr[Double] = js.native
+  var textTopIndent: js.UndefOr[Double] = js.native
+  var topIndent: js.UndefOr[Double] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object AnonLabel {
   @scala.inline
-  def apply(
-    label: AnonCustomizeTextFormat = null,
-    separatorHeight: Int | Double = null,
-    textLeftIndent: Int | Double = null,
-    textTopIndent: Int | Double = null,
-    topIndent: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): AnonLabel = {
+  def apply(): AnonLabel = {
     val __obj = js.Dynamic.literal()
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (separatorHeight != null) __obj.updateDynamic("separatorHeight")(separatorHeight.asInstanceOf[js.Any])
-    if (textLeftIndent != null) __obj.updateDynamic("textLeftIndent")(textLeftIndent.asInstanceOf[js.Any])
-    if (textTopIndent != null) __obj.updateDynamic("textTopIndent")(textTopIndent.asInstanceOf[js.Any])
-    if (topIndent != null) __obj.updateDynamic("topIndent")(topIndent.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLabel]
   }
+  @scala.inline
+  implicit class AnonLabelOps[Self <: AnonLabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabel(value: AnonCustomizeTextFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeparatorHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separatorHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeparatorHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separatorHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextLeftIndent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textLeftIndent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextLeftIndent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textLeftIndent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextTopIndent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textTopIndent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextTopIndent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textTopIndent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopIndent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topIndent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopIndent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topIndent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

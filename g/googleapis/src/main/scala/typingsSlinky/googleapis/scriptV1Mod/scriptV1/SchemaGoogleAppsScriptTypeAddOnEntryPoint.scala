@@ -37,22 +37,89 @@ trait SchemaGoogleAppsScriptTypeAddOnEntryPoint extends js.Object {
 
 object SchemaGoogleAppsScriptTypeAddOnEntryPoint {
   @scala.inline
-  def apply(
-    addOnType: String = null,
-    description: String = null,
-    helpUrl: String = null,
-    postInstallTipUrl: String = null,
-    reportIssueUrl: String = null,
-    title: String = null
-  ): SchemaGoogleAppsScriptTypeAddOnEntryPoint = {
+  def apply(): SchemaGoogleAppsScriptTypeAddOnEntryPoint = {
     val __obj = js.Dynamic.literal()
-    if (addOnType != null) __obj.updateDynamic("addOnType")(addOnType.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (helpUrl != null) __obj.updateDynamic("helpUrl")(helpUrl.asInstanceOf[js.Any])
-    if (postInstallTipUrl != null) __obj.updateDynamic("postInstallTipUrl")(postInstallTipUrl.asInstanceOf[js.Any])
-    if (reportIssueUrl != null) __obj.updateDynamic("reportIssueUrl")(reportIssueUrl.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleAppsScriptTypeAddOnEntryPoint]
   }
+  @scala.inline
+  implicit class SchemaGoogleAppsScriptTypeAddOnEntryPointOps[Self <: SchemaGoogleAppsScriptTypeAddOnEntryPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddOnType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddOnType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addOnType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHelpUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("helpUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHelpUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("helpUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostInstallTipUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postInstallTipUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostInstallTipUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postInstallTipUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportIssueUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportIssueUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportIssueUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportIssueUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

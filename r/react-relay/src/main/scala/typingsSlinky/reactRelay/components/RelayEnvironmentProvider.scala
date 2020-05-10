@@ -1,26 +1,23 @@
 package typingsSlinky.reactRelay.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.reactRelay.relayEnvironmentProviderMod.Props
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Environment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RelayEnvironmentProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object RelayEnvironmentProvider {
   @JSImport("react-relay/hooks", "RelayEnvironmentProvider")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(environment: Environment, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: Props): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(environment: Environment): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any])
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[Props]))
   }
-  type Props = typingsSlinky.reactRelay.relayEnvironmentProviderMod.Props
 }
 

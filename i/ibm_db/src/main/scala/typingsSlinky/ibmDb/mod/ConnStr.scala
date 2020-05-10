@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConnStr extends js.Object {
-  var DATABASE: String
-  var HOSTNAME: String
-  var PORT: Double | String
-  var PROTOCOL: String
-  var PWD: String
-  var UID: String
+  var DATABASE: String = js.native
+  var HOSTNAME: String = js.native
+  var PORT: Double | String = js.native
+  var PROTOCOL: String = js.native
+  var PWD: String = js.native
+  var UID: String = js.native
 }
 
 object ConnStr {
@@ -24,8 +25,51 @@ object ConnStr {
     UID: String
   ): ConnStr = {
     val __obj = js.Dynamic.literal(DATABASE = DATABASE.asInstanceOf[js.Any], HOSTNAME = HOSTNAME.asInstanceOf[js.Any], PORT = PORT.asInstanceOf[js.Any], PROTOCOL = PROTOCOL.asInstanceOf[js.Any], PWD = PWD.asInstanceOf[js.Any], UID = UID.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ConnStr]
   }
+  @scala.inline
+  implicit class ConnStrOps[Self <: ConnStr] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDATABASE(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DATABASE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHOSTNAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HOSTNAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPORT(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PORT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPROTOCOL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PROTOCOL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPWD(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PWD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UID")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

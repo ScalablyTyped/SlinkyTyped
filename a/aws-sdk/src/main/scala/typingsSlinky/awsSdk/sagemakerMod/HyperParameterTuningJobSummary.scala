@@ -57,16 +57,96 @@ object HyperParameterTuningJobSummary {
     HyperParameterTuningJobStatus: HyperParameterTuningJobStatus,
     ObjectiveStatusCounters: ObjectiveStatusCounters,
     Strategy: HyperParameterTuningJobStrategyType,
-    TrainingJobStatusCounters: TrainingJobStatusCounters,
-    HyperParameterTuningEndTime: js.Date = null,
-    LastModifiedTime: js.Date = null,
-    ResourceLimits: ResourceLimits = null
+    TrainingJobStatusCounters: TrainingJobStatusCounters
   ): HyperParameterTuningJobSummary = {
     val __obj = js.Dynamic.literal(CreationTime = CreationTime.asInstanceOf[js.Any], HyperParameterTuningJobArn = HyperParameterTuningJobArn.asInstanceOf[js.Any], HyperParameterTuningJobName = HyperParameterTuningJobName.asInstanceOf[js.Any], HyperParameterTuningJobStatus = HyperParameterTuningJobStatus.asInstanceOf[js.Any], ObjectiveStatusCounters = ObjectiveStatusCounters.asInstanceOf[js.Any], Strategy = Strategy.asInstanceOf[js.Any], TrainingJobStatusCounters = TrainingJobStatusCounters.asInstanceOf[js.Any])
-    if (HyperParameterTuningEndTime != null) __obj.updateDynamic("HyperParameterTuningEndTime")(HyperParameterTuningEndTime.asInstanceOf[js.Any])
-    if (LastModifiedTime != null) __obj.updateDynamic("LastModifiedTime")(LastModifiedTime.asInstanceOf[js.Any])
-    if (ResourceLimits != null) __obj.updateDynamic("ResourceLimits")(ResourceLimits.asInstanceOf[js.Any])
     __obj.asInstanceOf[HyperParameterTuningJobSummary]
   }
+  @scala.inline
+  implicit class HyperParameterTuningJobSummaryOps[Self <: HyperParameterTuningJobSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHyperParameterTuningJobArn(value: HyperParameterTuningJobArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameterTuningJobArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHyperParameterTuningJobName(value: HyperParameterTuningJobName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameterTuningJobName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHyperParameterTuningJobStatus(value: HyperParameterTuningJobStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameterTuningJobStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectiveStatusCounters(value: ObjectiveStatusCounters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectiveStatusCounters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrategy(value: HyperParameterTuningJobStrategyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Strategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrainingJobStatusCounters(value: TrainingJobStatusCounters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingJobStatusCounters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHyperParameterTuningEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameterTuningEndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHyperParameterTuningEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HyperParameterTuningEndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastModifiedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceLimits(value: ResourceLimits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLimits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceLimits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLimits")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

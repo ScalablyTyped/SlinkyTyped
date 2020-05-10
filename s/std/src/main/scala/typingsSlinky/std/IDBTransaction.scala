@@ -93,7 +93,7 @@ trait IDBTransaction extends EventTarget {
   def removeEventListener_abort(
     `type`: abort,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_complete(`type`: complete, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -107,7 +107,7 @@ trait IDBTransaction extends EventTarget {
   def removeEventListener_complete(
     `type`: complete,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
@@ -124,11 +124,12 @@ trait IDBTransaction extends EventTarget {
   def removeEventListener_error(
     `type`: typingsSlinky.std.stdStrings.error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("IDBTransaction")
 @js.native
-object IDBTransaction extends Instantiable0[IDBTransaction]
+object IDBTransaction
+  extends Instantiable0[org.scalajs.dom.raw.IDBTransaction]
 

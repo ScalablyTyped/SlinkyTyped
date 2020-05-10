@@ -1,15 +1,16 @@
 package typingsSlinky.reactColor.components
 
+import typingsSlinky.reactColor.mod.ColorPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SliderPicker
-  extends SharedApply_SliderPickerProps1658065626[typingsSlinky.reactColor.mod.SliderPicker] {
+object SliderPicker {
   @JSImport("react-color", "SliderPicker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ColorPickerProps[typingsSlinky.reactColor.sliderMod.SliderPicker]): SharedBuilder_SliderPickerProps_2143603056[typingsSlinky.reactColor.mod.SliderPicker] = new SharedBuilder_SliderPickerProps_2143603056[typingsSlinky.reactColor.mod.SliderPicker](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SliderPicker.type): SharedBuilder_SliderPickerProps_2143603056[typingsSlinky.reactColor.mod.SliderPicker] = new SharedBuilder_SliderPickerProps_2143603056[typingsSlinky.reactColor.mod.SliderPicker](js.Array(this.component, js.Dictionary.empty))()
 }
 

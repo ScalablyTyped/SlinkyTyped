@@ -18,11 +18,41 @@ trait NodeOverrides extends js.Object {
 
 object NodeOverrides {
   @scala.inline
-  def apply(nodePropertyOverrides: NodePropertyOverrides = null, numNodes: Int | Double = null): NodeOverrides = {
+  def apply(): NodeOverrides = {
     val __obj = js.Dynamic.literal()
-    if (nodePropertyOverrides != null) __obj.updateDynamic("nodePropertyOverrides")(nodePropertyOverrides.asInstanceOf[js.Any])
-    if (numNodes != null) __obj.updateDynamic("numNodes")(numNodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeOverrides]
   }
+  @scala.inline
+  implicit class NodeOverridesOps[Self <: NodeOverrides] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNodePropertyOverrides(value: NodePropertyOverrides): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePropertyOverrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodePropertyOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePropertyOverrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumNodes(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numNodes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

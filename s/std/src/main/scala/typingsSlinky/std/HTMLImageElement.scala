@@ -125,11 +125,12 @@ trait HTMLImageElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("HTMLImageElement")
 @js.native
-object HTMLImageElement extends Instantiable0[HTMLImageElement]
+object HTMLImageElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLImageElement]
 

@@ -12,10 +12,8 @@ trait Conflicts extends js.Object
 
 object Conflicts {
   @scala.inline
-  def abort: typingsSlinky.elasticsearch.elasticsearchStrings.abort = this.cast("abort")
+  def abort: typingsSlinky.elasticsearch.elasticsearchStrings.abort = "abort".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.abort]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def proceed: typingsSlinky.elasticsearch.elasticsearchStrings.proceed = this.cast("proceed")
+  def proceed: typingsSlinky.elasticsearch.elasticsearchStrings.proceed = "proceed".asInstanceOf[typingsSlinky.elasticsearch.elasticsearchStrings.proceed]
 }
 

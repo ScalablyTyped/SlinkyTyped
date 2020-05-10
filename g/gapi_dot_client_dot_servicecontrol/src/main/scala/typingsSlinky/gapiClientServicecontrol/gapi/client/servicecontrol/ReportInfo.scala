@@ -4,20 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReportInfo extends js.Object {
   /** The Operation.operation_id value from the request. */
-  var operationId: js.UndefOr[String] = js.undefined
+  var operationId: js.UndefOr[String] = js.native
   /** Quota usage info when processing the `Operation`. */
-  var quotaInfo: js.UndefOr[QuotaInfo] = js.undefined
+  var quotaInfo: js.UndefOr[QuotaInfo] = js.native
 }
 
 object ReportInfo {
   @scala.inline
-  def apply(operationId: String = null, quotaInfo: QuotaInfo = null): ReportInfo = {
+  def apply(): ReportInfo = {
     val __obj = js.Dynamic.literal()
-    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
-    if (quotaInfo != null) __obj.updateDynamic("quotaInfo")(quotaInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReportInfo]
   }
+  @scala.inline
+  implicit class ReportInfoOps[Self <: ReportInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOperationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuotaInfo(value: QuotaInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuotaInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quotaInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

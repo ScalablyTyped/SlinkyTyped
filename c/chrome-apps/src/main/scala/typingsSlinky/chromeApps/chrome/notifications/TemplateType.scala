@@ -1,9 +1,9 @@
 package typingsSlinky.chromeApps.chrome.notifications
 
-import typingsSlinky.chromeApps.chromeAppsStrings.basic
-import typingsSlinky.chromeApps.chromeAppsStrings.image
-import typingsSlinky.chromeApps.chromeAppsStrings.list
-import typingsSlinky.chromeApps.chromeAppsStrings.progress
+import typingsSlinky.chromeApps.chromeAppsStrings.basic_
+import typingsSlinky.chromeApps.chromeAppsStrings.image_
+import typingsSlinky.chromeApps.chromeAppsStrings.list_
+import typingsSlinky.chromeApps.chromeAppsStrings.progress_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +18,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.notifications.TemplateType")
 @js.native
 object TemplateType extends js.Object {
-  var BASIC: basic = js.native
-  var IMAGE: image = js.native
-  var LIST: list = js.native
-  var PROGRESS: progress = js.native
+  var BASIC: basic_ = js.native
+  var IMAGE: image_ = js.native
+  var LIST: list_ = js.native
+  var PROGRESS: progress_ = js.native
 }
 

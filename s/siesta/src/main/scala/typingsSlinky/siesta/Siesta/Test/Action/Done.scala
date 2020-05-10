@@ -8,17 +8,36 @@ import scala.scalajs.js.annotation._
 /**
   * @class
   */
+@js.native
 trait Done extends IAction {
-  var delay: js.UndefOr[Double] = js.undefined
+  var delay: js.UndefOr[Double] = js.native
 }
 
 object Done {
   @scala.inline
-  def apply(delay: Int | Double = null, desc: String = null): Done = {
+  def apply(): Done = {
     val __obj = js.Dynamic.literal()
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (desc != null) __obj.updateDynamic("desc")(desc.asInstanceOf[js.Any])
     __obj.asInstanceOf[Done]
   }
+  @scala.inline
+  implicit class DoneOps[Self <: Done] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

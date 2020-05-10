@@ -6,42 +6,116 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PanelCollapseProps
   extends AllHTMLAttributes[PanelCollapse]
      with ClassAttributes[PanelCollapse] {
-  var bsClass: js.UndefOr[String] = js.undefined
-  var onEnter: js.UndefOr[js.Function] = js.undefined
-  var onEntered: js.UndefOr[js.Function] = js.undefined
-  var onEntering: js.UndefOr[js.Function] = js.undefined
-  var onExit: js.UndefOr[js.Function] = js.undefined
-  var onExited: js.UndefOr[js.Function] = js.undefined
-  var onExiting: js.UndefOr[js.Function] = js.undefined
+  var bsClass: js.UndefOr[String] = js.native
+  var onEnter: js.UndefOr[js.Function] = js.native
+  var onEntered: js.UndefOr[js.Function] = js.native
+  var onEntering: js.UndefOr[js.Function] = js.native
+  var onExit: js.UndefOr[js.Function] = js.native
+  var onExited: js.UndefOr[js.Function] = js.native
+  var onExiting: js.UndefOr[js.Function] = js.native
 }
 
 object PanelCollapseProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[PanelCollapse] = null,
-    ClassAttributes: ClassAttributes[PanelCollapse] = null,
-    bsClass: String = null,
-    onEnter: js.Function = null,
-    onEntered: js.Function = null,
-    onEntering: js.Function = null,
-    onExit: js.Function = null,
-    onExited: js.Function = null,
-    onExiting: js.Function = null
-  ): PanelCollapseProps = {
+  def apply(): PanelCollapseProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
-    if (onEnter != null) __obj.updateDynamic("onEnter")(onEnter.asInstanceOf[js.Any])
-    if (onEntered != null) __obj.updateDynamic("onEntered")(onEntered.asInstanceOf[js.Any])
-    if (onEntering != null) __obj.updateDynamic("onEntering")(onEntering.asInstanceOf[js.Any])
-    if (onExit != null) __obj.updateDynamic("onExit")(onExit.asInstanceOf[js.Any])
-    if (onExited != null) __obj.updateDynamic("onExited")(onExited.asInstanceOf[js.Any])
-    if (onExiting != null) __obj.updateDynamic("onExiting")(onExiting.asInstanceOf[js.Any])
     __obj.asInstanceOf[PanelCollapseProps]
   }
+  @scala.inline
+  implicit class PanelCollapsePropsOps[Self <: PanelCollapseProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBsClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBsClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEnter(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEntered(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEntered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnEntered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEntered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnEntering(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEntering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnEntering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEntering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnExit(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnExited(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExited")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnExited: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExited")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnExiting(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExiting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnExiting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExiting")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,27 +6,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SvgIconSet extends SvgIcon {
   /**
     * A value indicating whether the icons are loaded separately.
     */
-  var cumulative: js.UndefOr[`false`] = js.undefined
+  var cumulative: js.UndefOr[`false`] = js.native
 }
 
 object SvgIconSet {
   @scala.inline
-  def apply(
-    cumulative: `false` = null,
-    iconIdParser: (/* id */ String, /* params */ js.Array[String]) => String = null,
-    iconSize: Int | Double = null,
-    viewBox: String = null
-  ): SvgIconSet = {
+  def apply(): SvgIconSet = {
     val __obj = js.Dynamic.literal()
-    if (cumulative != null) __obj.updateDynamic("cumulative")(cumulative.asInstanceOf[js.Any])
-    if (iconIdParser != null) __obj.updateDynamic("iconIdParser")(js.Any.fromFunction2(iconIdParser))
-    if (iconSize != null) __obj.updateDynamic("iconSize")(iconSize.asInstanceOf[js.Any])
-    if (viewBox != null) __obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
     __obj.asInstanceOf[SvgIconSet]
   }
+  @scala.inline
+  implicit class SvgIconSetOps[Self <: SvgIconSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCumulative(value: `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cumulative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCumulative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cumulative")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

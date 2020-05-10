@@ -14,10 +14,29 @@ trait ListAvailableZonesResponse extends js.Object {
 
 object ListAvailableZonesResponse {
   @scala.inline
-  def apply(AZList: AZList = null): ListAvailableZonesResponse = {
+  def apply(): ListAvailableZonesResponse = {
     val __obj = js.Dynamic.literal()
-    if (AZList != null) __obj.updateDynamic("AZList")(AZList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAvailableZonesResponse]
   }
+  @scala.inline
+  implicit class ListAvailableZonesResponseOps[Self <: ListAvailableZonesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAZList(value: AZList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AZList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAZList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AZList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

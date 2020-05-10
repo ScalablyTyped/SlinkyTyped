@@ -14,10 +14,29 @@ trait CreatePortfolioShareOutput extends js.Object {
 
 object CreatePortfolioShareOutput {
   @scala.inline
-  def apply(PortfolioShareToken: Id = null): CreatePortfolioShareOutput = {
+  def apply(): CreatePortfolioShareOutput = {
     val __obj = js.Dynamic.literal()
-    if (PortfolioShareToken != null) __obj.updateDynamic("PortfolioShareToken")(PortfolioShareToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePortfolioShareOutput]
   }
+  @scala.inline
+  implicit class CreatePortfolioShareOutputOps[Self <: CreatePortfolioShareOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPortfolioShareToken(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioShareToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortfolioShareToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioShareToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

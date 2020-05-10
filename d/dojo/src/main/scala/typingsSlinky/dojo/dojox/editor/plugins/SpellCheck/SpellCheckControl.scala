@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
   * The widget that is used for the UI of the batch spelling check
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
 - typingsSlinky.dojo.dijit.WidgetsInTemplateMixin because Inheritance from two classes. Inlined 
 - typingsSlinky.dojo.dijit.TemplatedMixin because Inheritance from two classes. Inlined 

@@ -7,58 +7,171 @@ import scala.scalajs.js.annotation._
 /**
   * http://js.cytoscape.org/#collection/layout
   */
+@js.native
 trait LayoutPositionOptions extends js.Object {
   // whether to animate changes to the layout
-  var animate: js.UndefOr[Boolean] = js.undefined
+  var animate: js.UndefOr[Boolean] = js.native
   // duration of animation in ms, if enabled
-  var animationDuration: js.UndefOr[Double] = js.undefined
+  var animationDuration: js.UndefOr[Double] = js.native
   // easing of animation, if enabled
-  var animationEasing: js.UndefOr[Double] = js.undefined
+  var animationEasing: js.UndefOr[Double] = js.native
   // collection of elements involved in the layout; set by cy.layout() or eles.layout(s)
-  var eles: CollectionArgument
+  var eles: CollectionArgument = js.native
   // whether to fit the viewport to the graph
-  var fit: js.UndefOr[Boolean] = js.undefined
+  var fit: js.UndefOr[Boolean] = js.native
   // padding to leave between graph and viewport
-  var padding: js.UndefOr[Double] = js.undefined
+  var padding: js.UndefOr[Double] = js.native
   // pan the graph to the provided position, given as { x, y }
-  var pan: js.UndefOr[Position] = js.undefined
+  var pan: js.UndefOr[Position] = js.native
   // callback for the layoutready event
-  var ready: js.UndefOr[scala.Nothing] = js.undefined
+  var ready: js.UndefOr[scala.Nothing] = js.native
   // a positive value which adjusts spacing between nodes (>1 means greater than usual spacing)
-  var spacingFactor: js.UndefOr[Double] = js.undefined
+  var spacingFactor: js.UndefOr[Double] = js.native
   // callback for the layoutstop event
-  var stop: js.UndefOr[scala.Nothing] = js.undefined
+  var stop: js.UndefOr[scala.Nothing] = js.native
   // zoom level as a positive number to set after animation
-  var zoom: js.UndefOr[Double] = js.undefined
+  var zoom: js.UndefOr[Double] = js.native
 }
 
 object LayoutPositionOptions {
   @scala.inline
-  def apply(
-    eles: CollectionArgument,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    animationDuration: Int | Double = null,
-    animationEasing: Int | Double = null,
-    fit: js.UndefOr[Boolean] = js.undefined,
-    padding: Int | Double = null,
-    pan: Position = null,
-    ready: js.UndefOr[scala.Nothing] = js.undefined,
-    spacingFactor: Int | Double = null,
-    stop: js.UndefOr[scala.Nothing] = js.undefined,
-    zoom: Int | Double = null
-  ): LayoutPositionOptions = {
+  def apply(eles: CollectionArgument): LayoutPositionOptions = {
     val __obj = js.Dynamic.literal(eles = eles.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (!js.isUndefined(fit)) __obj.updateDynamic("fit")(fit.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (pan != null) __obj.updateDynamic("pan")(pan.asInstanceOf[js.Any])
-    if (!js.isUndefined(ready)) __obj.updateDynamic("ready")(ready.asInstanceOf[js.Any])
-    if (spacingFactor != null) __obj.updateDynamic("spacingFactor")(spacingFactor.asInstanceOf[js.Any])
-    if (!js.isUndefined(stop)) __obj.updateDynamic("stop")(stop.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[LayoutPositionOptions]
   }
+  @scala.inline
+  implicit class LayoutPositionOptionsOps[Self <: LayoutPositionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEles(value: CollectionArgument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnimate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPan(value: Position): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReady(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReady: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpacingFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpacingFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStop(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

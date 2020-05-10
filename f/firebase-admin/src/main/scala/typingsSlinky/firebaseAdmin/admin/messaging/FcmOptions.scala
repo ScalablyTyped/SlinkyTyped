@@ -7,19 +7,39 @@ import scala.scalajs.js.annotation._
 /**
   * Represents platform-independent options for features provided by the FCM SDKs.
   */
+@js.native
 trait FcmOptions extends js.Object {
   /**
     * The label associated with the message's analytics data.
     */
-  var analyticsLabel: js.UndefOr[String] = js.undefined
+  var analyticsLabel: js.UndefOr[String] = js.native
 }
 
 object FcmOptions {
   @scala.inline
-  def apply(analyticsLabel: String = null): FcmOptions = {
+  def apply(): FcmOptions = {
     val __obj = js.Dynamic.literal()
-    if (analyticsLabel != null) __obj.updateDynamic("analyticsLabel")(analyticsLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[FcmOptions]
   }
+  @scala.inline
+  implicit class FcmOptionsOps[Self <: FcmOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnalyticsLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("analyticsLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnalyticsLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("analyticsLabel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

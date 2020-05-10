@@ -17,20 +17,18 @@ trait MozStackSizingProperty extends js.Object
 
 object MozStackSizingProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ignore: typingsSlinky.csstype.csstypeStrings.ignore = "ignore".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ignore]
   @scala.inline
-  def ignore: typingsSlinky.csstype.csstypeStrings.ignore = this.cast("ignore")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def `stretch-to-fit`: typingsSlinky.csstype.csstypeStrings.`stretch-to-fit` = "stretch-to-fit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`stretch-to-fit`]
   @scala.inline
-  def `stretch-to-fit`: typingsSlinky.csstype.csstypeStrings.`stretch-to-fit` = this.cast("stretch-to-fit")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

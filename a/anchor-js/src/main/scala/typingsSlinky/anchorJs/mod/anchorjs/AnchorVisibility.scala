@@ -13,12 +13,10 @@ trait AnchorVisibility extends js.Object
 
 object AnchorVisibility {
   @scala.inline
-  def always: typingsSlinky.anchorJs.anchorJsStrings.always = this.cast("always")
+  def always: typingsSlinky.anchorJs.anchorJsStrings.always = "always".asInstanceOf[typingsSlinky.anchorJs.anchorJsStrings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hover: typingsSlinky.anchorJs.anchorJsStrings.hover = "hover".asInstanceOf[typingsSlinky.anchorJs.anchorJsStrings.hover]
   @scala.inline
-  def hover: typingsSlinky.anchorJs.anchorJsStrings.hover = this.cast("hover")
-  @scala.inline
-  def touch: typingsSlinky.anchorJs.anchorJsStrings.touch = this.cast("touch")
+  def touch: typingsSlinky.anchorJs.anchorJsStrings.touch = "touch".asInstanceOf[typingsSlinky.anchorJs.anchorJsStrings.touch]
 }
 

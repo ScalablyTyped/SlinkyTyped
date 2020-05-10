@@ -8,7 +8,6 @@ import typingsSlinky.node.nodeStrings.error
 import typingsSlinky.node.nodeStrings.finish
 import typingsSlinky.node.nodeStrings.pipe
 import typingsSlinky.node.nodeStrings.unpipe
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +33,7 @@ class Writable ()
   val writableLength: Double = js.native
   val writableObjectMode: Boolean = js.native
   def _destroy(error: Null, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
-  def _destroy(error: Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
+  def _destroy(error: js.Error, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _final(callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def _write(
     chunk: js.Any,
@@ -145,7 +144,7 @@ class Writable ()
   def setDefaultEncoding(encoding: String): this.type = js.native
   def uncork(): Unit = js.native
   def write(chunk: js.Any): Boolean = js.native
-  def write(chunk: js.Any, cb: js.Function1[/* error */ js.UndefOr[Error | Null], Unit]): Boolean = js.native
+  def write(chunk: js.Any, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
   def write(chunk: js.Any, encoding: String): Boolean = js.native
   def write(chunk: js.Any, encoding: String, cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
 }

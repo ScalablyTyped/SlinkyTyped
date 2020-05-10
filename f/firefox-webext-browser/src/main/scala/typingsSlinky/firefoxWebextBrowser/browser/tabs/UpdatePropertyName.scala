@@ -24,30 +24,28 @@ trait UpdatePropertyName extends js.Object
 
 object UpdatePropertyName {
   @scala.inline
-  def attention: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.attention = this.cast("attention")
+  def attention: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.attention = "attention".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.attention]
   @scala.inline
-  def audible: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.audible = this.cast("audible")
+  def audible: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.audible = "audible".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.audible]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def discarded: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.discarded = "discarded".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.discarded]
   @scala.inline
-  def discarded: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.discarded = this.cast("discarded")
+  def favIconUrl: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.favIconUrl = "favIconUrl".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.favIconUrl]
   @scala.inline
-  def favIconUrl: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.favIconUrl = this.cast("favIconUrl")
+  def hidden: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.hidden = "hidden".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.hidden = this.cast("hidden")
+  def isArticle: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.isArticle = "isArticle".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.isArticle]
   @scala.inline
-  def isArticle: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.isArticle = this.cast("isArticle")
+  def isarticle: isarticle_ = "isarticle".asInstanceOf[isarticle_]
   @scala.inline
-  def isarticle: isarticle_ = this.cast("isarticle")
+  def mutedInfo: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.mutedInfo = "mutedInfo".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.mutedInfo]
   @scala.inline
-  def mutedInfo: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.mutedInfo = this.cast("mutedInfo")
+  def pinned: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.pinned = "pinned".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.pinned]
   @scala.inline
-  def pinned: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.pinned = this.cast("pinned")
+  def sharingState: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sharingState = "sharingState".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sharingState]
   @scala.inline
-  def sharingState: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sharingState = this.cast("sharingState")
+  def status: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.status = "status".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.status]
   @scala.inline
-  def status: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.status = this.cast("status")
-  @scala.inline
-  def title: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.title = this.cast("title")
+  def title: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.title = "title".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.title]
 }
 

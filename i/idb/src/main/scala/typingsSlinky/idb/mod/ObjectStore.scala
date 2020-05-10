@@ -1,8 +1,8 @@
 package typingsSlinky.idb.mod
 
 import org.scalajs.dom.raw.DOMStringList
+import org.scalajs.dom.raw.IDBKeyRange
 import typingsSlinky.std.IDBIndexParameters
-import typingsSlinky.std.IDBKeyRange
 import typingsSlinky.std.IDBValidKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -74,8 +74,8 @@ trait ObjectStore[TValue, TKey] extends HasCursor[TValue, TKey] {
     * @param count Optional. Specifies the number of values to return if more than one is found. If it is lower than 0 or greater than 232-1 a TypeError exception will be thrown.
     * @returns A promise that resolves with the record keys when the underlying getAllKeys IDBRequest is successful. */
   def getAllKeys(): js.Promise[js.Array[TKey]] = js.native
-  def getAllKeys(query: org.scalajs.dom.raw.IDBKeyRange): js.Promise[js.Array[TKey]] = js.native
-  def getAllKeys(query: org.scalajs.dom.raw.IDBKeyRange, count: Double): js.Promise[js.Array[TKey]] = js.native
+  def getAllKeys(query: IDBKeyRange): js.Promise[js.Array[TKey]] = js.native
+  def getAllKeys(query: IDBKeyRange, count: Double): js.Promise[js.Array[TKey]] = js.native
   /** Returns a Promise of an IDBRequest object that (in a separate thread) finds either the given key or the primary key, if key is an IDBKeyRange.
     * @param key The key or key range that identifies the record to be retrieved.
     * @returns A promise that resolves with the item when the underlying get IDBRequest is successful. */

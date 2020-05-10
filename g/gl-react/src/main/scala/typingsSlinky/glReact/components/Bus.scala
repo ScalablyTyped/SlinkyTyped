@@ -1,27 +1,30 @@
 package typingsSlinky.glReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.glReact.mod.BusProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Bus
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.glReact.mod.Bus] {
+object Bus {
   @JSImport("gl-react", "Bus")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(index: Double, uniform: String = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.glReact.mod.Bus] = {
-    val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
-    if (uniform != null) __obj.updateDynamic("uniform")(uniform.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.glReact.mod.Bus] {
+    @scala.inline
+    def uniform(value: String): this.type = set("uniform", value.asInstanceOf[js.Any])
   }
-  type Props = BusProps
+  
+  def withProps(p: BusProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(index: Double): Builder = {
+    val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BusProps]))
+  }
 }
 

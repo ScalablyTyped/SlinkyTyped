@@ -18,11 +18,41 @@ trait NetworkInterfacePermissionState extends js.Object {
 
 object NetworkInterfacePermissionState {
   @scala.inline
-  def apply(State: NetworkInterfacePermissionStateCode = null, StatusMessage: String = null): NetworkInterfacePermissionState = {
+  def apply(): NetworkInterfacePermissionState = {
     val __obj = js.Dynamic.literal()
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (StatusMessage != null) __obj.updateDynamic("StatusMessage")(StatusMessage.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkInterfacePermissionState]
   }
+  @scala.inline
+  implicit class NetworkInterfacePermissionStateOps[Self <: NetworkInterfacePermissionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withState(value: NetworkInterfacePermissionStateCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusMessage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

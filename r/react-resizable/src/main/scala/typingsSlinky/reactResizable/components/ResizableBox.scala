@@ -1,13 +1,13 @@
 package typingsSlinky.reactResizable.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.Element
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactResizable.mod.Axis
-import typingsSlinky.reactResizable.mod.ResizableBoxProps
+import typingsSlinky.reactResizable.mod.ResizableProps
 import typingsSlinky.reactResizable.mod.ResizeCallbackData
 import typingsSlinky.reactResizable.mod.ResizeHandle
 import typingsSlinky.std.Event_
@@ -15,45 +15,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ResizableBox
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactResizable.mod.ResizableBox] {
+object ResizableBox {
   @JSImport("react-resizable", "ResizableBox")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    height: Double,
-    width: Double,
-    axis: Axis = null,
-    draggableOpts: js.Any = null,
-    handle: TagMod[Any] | (js.Function1[/* resizeHandle */ ResizeHandle, TagMod[Any]]) = null,
-    handleSize: js.Tuple2[Double, Double] = null,
-    lockAspectRatio: js.UndefOr[Boolean] = js.undefined,
-    maxConstraints: js.Tuple2[Double, Double] = null,
-    minConstraints: js.Tuple2[Double, Double] = null,
-    onResize: (/* e */ SyntheticEvent[Event_, org.scalajs.dom.raw.Element], /* data */ ResizeCallbackData) => _ = null,
-    onResizeStart: (/* e */ SyntheticEvent[Event_, org.scalajs.dom.raw.Element], /* data */ ResizeCallbackData) => _ = null,
-    onResizeStop: (/* e */ SyntheticEvent[Event_, org.scalajs.dom.raw.Element], /* data */ ResizeCallbackData) => _ = null,
-    resizeHandles: js.Array[ResizeHandle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactResizable.mod.ResizableBox] = {
-    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (draggableOpts != null) __obj.updateDynamic("draggableOpts")(draggableOpts.asInstanceOf[js.Any])
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (handleSize != null) __obj.updateDynamic("handleSize")(handleSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(lockAspectRatio)) __obj.updateDynamic("lockAspectRatio")(lockAspectRatio.asInstanceOf[js.Any])
-    if (maxConstraints != null) __obj.updateDynamic("maxConstraints")(maxConstraints.asInstanceOf[js.Any])
-    if (minConstraints != null) __obj.updateDynamic("minConstraints")(minConstraints.asInstanceOf[js.Any])
-    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction2(onResize))
-    if (onResizeStart != null) __obj.updateDynamic("onResizeStart")(js.Any.fromFunction2(onResizeStart))
-    if (onResizeStop != null) __obj.updateDynamic("onResizeStop")(js.Any.fromFunction2(onResizeStop))
-    if (resizeHandles != null) __obj.updateDynamic("resizeHandles")(resizeHandles.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactResizable.mod.ResizableBox] {
+    @scala.inline
+    def axis(value: Axis): this.type = set("axis", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggableOpts(value: js.Any): this.type = set("draggableOpts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleReactElement(value: ReactElement): this.type = set("handle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleFunction1(value: /* resizeHandle */ ResizeHandle => TagMod[Any]): this.type = set("handle", js.Any.fromFunction1(value))
+    @scala.inline
+    def handle(value: TagMod[Any] | (js.Function1[/* resizeHandle */ ResizeHandle, TagMod[Any]])): this.type = set("handle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handleSize(value: js.Tuple2[Double, Double]): this.type = set("handleSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lockAspectRatio(value: Boolean): this.type = set("lockAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxConstraints(value: js.Tuple2[Double, Double]): this.type = set("maxConstraints", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minConstraints(value: js.Tuple2[Double, Double]): this.type = set("minConstraints", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onResize(value: (/* e */ SyntheticEvent[Event_, Element], /* data */ ResizeCallbackData) => _): this.type = set("onResize", js.Any.fromFunction2(value))
+    @scala.inline
+    def onResizeStart(value: (/* e */ SyntheticEvent[Event_, Element], /* data */ ResizeCallbackData) => _): this.type = set("onResizeStart", js.Any.fromFunction2(value))
+    @scala.inline
+    def onResizeStop(value: (/* e */ SyntheticEvent[Event_, Element], /* data */ ResizeCallbackData) => _): this.type = set("onResizeStop", js.Any.fromFunction2(value))
+    @scala.inline
+    def resizeHandles(value: js.Array[ResizeHandle]): this.type = set("resizeHandles", value.asInstanceOf[js.Any])
   }
-  type Props = ResizableBoxProps
+  
+  def withProps(p: ResizableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(height: Double, width: Double): Builder = {
+    val __props = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ResizableProps]))
+  }
 }
 

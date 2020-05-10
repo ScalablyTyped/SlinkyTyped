@@ -1,6 +1,5 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,13 +16,13 @@ trait dxChart extends BaseChart {
   def resetVisualRange(): Unit = js.native
   def zoomArgument(startValue: String, endValue: String): Unit = js.native
   def zoomArgument(startValue: String, endValue: Double): Unit = js.native
-  def zoomArgument(startValue: String, endValue: Date): Unit = js.native
+  def zoomArgument(startValue: String, endValue: js.Date): Unit = js.native
   def zoomArgument(startValue: Double, endValue: String): Unit = js.native
   /** Sets the argument axis' start and end values. */
   def zoomArgument(startValue: Double, endValue: Double): Unit = js.native
-  def zoomArgument(startValue: Double, endValue: Date): Unit = js.native
-  def zoomArgument(startValue: Date, endValue: String): Unit = js.native
-  def zoomArgument(startValue: Date, endValue: Double): Unit = js.native
-  def zoomArgument(startValue: Date, endValue: Date): Unit = js.native
+  def zoomArgument(startValue: Double, endValue: js.Date): Unit = js.native
+  def zoomArgument(startValue: js.Date, endValue: String): Unit = js.native
+  def zoomArgument(startValue: js.Date, endValue: Double): Unit = js.native
+  def zoomArgument(startValue: js.Date, endValue: js.Date): Unit = js.native
 }
 

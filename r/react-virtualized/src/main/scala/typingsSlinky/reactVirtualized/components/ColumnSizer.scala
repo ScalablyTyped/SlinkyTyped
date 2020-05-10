@@ -1,35 +1,34 @@
 package typingsSlinky.reactVirtualized.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactVirtualized.esColumnSizerMod.ColumnSizerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ColumnSizer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactVirtualized.mod.ColumnSizer] {
+object ColumnSizer {
   @JSImport("react-virtualized", "ColumnSizer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    width: Double,
-    columnCount: Int | Double = null,
-    columnMaxWidth: Int | Double = null,
-    columnMinWidth: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.ColumnSizer] = {
-    val __obj = js.Dynamic.literal(width = width.asInstanceOf[js.Any])
-    if (columnCount != null) __obj.updateDynamic("columnCount")(columnCount.asInstanceOf[js.Any])
-    if (columnMaxWidth != null) __obj.updateDynamic("columnMaxWidth")(columnMaxWidth.asInstanceOf[js.Any])
-    if (columnMinWidth != null) __obj.updateDynamic("columnMinWidth")(columnMinWidth.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactVirtualized.mod.ColumnSizer] {
+    @scala.inline
+    def columnCount(value: Double): this.type = set("columnCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnMaxWidth(value: Double): this.type = set("columnMaxWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnMinWidth(value: Double): this.type = set("columnMinWidth", value.asInstanceOf[js.Any])
   }
-  type Props = ColumnSizerProps
+  
+  def withProps(p: ColumnSizerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(width: Double): Builder = {
+    val __props = js.Dynamic.literal(width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ColumnSizerProps]))
+  }
 }
 

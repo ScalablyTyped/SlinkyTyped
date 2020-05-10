@@ -1,10 +1,10 @@
 package typingsSlinky.phaser
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.phaser.spine.Texture
 import typingsSlinky.phaser.spine.TextureFilter
 import typingsSlinky.phaser.spine.TextureWrap
-import typingsSlinky.std.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

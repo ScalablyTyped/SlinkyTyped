@@ -11,12 +11,6 @@ object lrnGpuMod extends js.Object {
   @js.native
   class LRNProgram protected () extends GPGPUProgram {
     def this(xShape: js.Array[Double], radius: Double, bias: Double, alpha: Double, beta: Double) = this()
-    /* CompleteClass */
-    override var outputShape: js.Array[Double] = js.native
-    /* CompleteClass */
-    override var userCode: String = js.native
-    /* CompleteClass */
-    override var variableNames: js.Array[String] = js.native
   }
   
 }

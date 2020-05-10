@@ -20,10 +20,29 @@ trait SchemaRequestMirrorPolicy extends js.Object {
 
 object SchemaRequestMirrorPolicy {
   @scala.inline
-  def apply(backendService: String = null): SchemaRequestMirrorPolicy = {
+  def apply(): SchemaRequestMirrorPolicy = {
     val __obj = js.Dynamic.literal()
-    if (backendService != null) __obj.updateDynamic("backendService")(backendService.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRequestMirrorPolicy]
   }
+  @scala.inline
+  implicit class SchemaRequestMirrorPolicyOps[Self <: SchemaRequestMirrorPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackendService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backendService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackendService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backendService")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

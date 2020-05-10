@@ -22,15 +22,47 @@ trait UpdateInputSecurityGroupRequest extends js.Object {
 
 object UpdateInputSecurityGroupRequest {
   @scala.inline
-  def apply(
-    InputSecurityGroupId: string,
-    Tags: Tags = null,
-    WhitelistRules: listOfInputWhitelistRuleCidr = null
-  ): UpdateInputSecurityGroupRequest = {
+  def apply(InputSecurityGroupId: string): UpdateInputSecurityGroupRequest = {
     val __obj = js.Dynamic.literal(InputSecurityGroupId = InputSecurityGroupId.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (WhitelistRules != null) __obj.updateDynamic("WhitelistRules")(WhitelistRules.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateInputSecurityGroupRequest]
   }
+  @scala.inline
+  implicit class UpdateInputSecurityGroupRequestOps[Self <: UpdateInputSecurityGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputSecurityGroupId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSecurityGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhitelistRules(value: listOfInputWhitelistRuleCidr): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitelistRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhitelistRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitelistRules")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
   * @deprecated apps/v1beta1/StatefulSet is deprecated by apps/v1/StatefulSet and not supported
   * by Kubernetes v1.16+ clusters.
   */
+@js.native
 trait StatefulSet extends js.Object {
   /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -24,35 +25,82 @@ trait StatefulSet extends js.Object {
     * values. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-  var apiVersion: js.UndefOr[Input[appsSlashv1beta1]] = js.undefined
+  var apiVersion: js.UndefOr[Input[appsSlashv1beta1]] = js.native
   /**
     * Kind is a string value representing the REST resource this object represents. Servers may
     * infer this from the endpoint the client submits requests to. Cannot be updated. In
     * CamelCase. More info:
     * https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-  var kind: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.StatefulSet]] = js.undefined
-  var metadata: js.UndefOr[Input[ObjectMeta]] = js.undefined
+  var kind: js.UndefOr[Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.StatefulSet]] = js.native
+  var metadata: js.UndefOr[Input[ObjectMeta]] = js.native
   /**
     * Spec defines the desired identities of pods in this set.
     */
-  var spec: js.UndefOr[Input[StatefulSetSpec]] = js.undefined
+  var spec: js.UndefOr[Input[StatefulSetSpec]] = js.native
 }
 
 object StatefulSet {
   @scala.inline
-  def apply(
-    apiVersion: Input[appsSlashv1beta1] = null,
-    kind: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.StatefulSet] = null,
-    metadata: Input[ObjectMeta] = null,
-    spec: Input[StatefulSetSpec] = null
-  ): StatefulSet = {
+  def apply(): StatefulSet = {
     val __obj = js.Dynamic.literal()
-    if (apiVersion != null) __obj.updateDynamic("apiVersion")(apiVersion.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (spec != null) __obj.updateDynamic("spec")(spec.asInstanceOf[js.Any])
     __obj.asInstanceOf[StatefulSet]
   }
+  @scala.inline
+  implicit class StatefulSetOps[Self <: StatefulSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiVersion(value: Input[appsSlashv1beta1]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: Input[typingsSlinky.pulumiKubernetes.pulumiKubernetesStrings.StatefulSet]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: Input[ObjectMeta]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpec(value: Input[StatefulSetSpec]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

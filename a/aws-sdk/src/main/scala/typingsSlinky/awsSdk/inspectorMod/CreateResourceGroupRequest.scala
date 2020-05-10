@@ -16,8 +16,21 @@ object CreateResourceGroupRequest {
   @scala.inline
   def apply(resourceGroupTags: ResourceGroupTags): CreateResourceGroupRequest = {
     val __obj = js.Dynamic.literal(resourceGroupTags = resourceGroupTags.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CreateResourceGroupRequest]
   }
+  @scala.inline
+  implicit class CreateResourceGroupRequestOps[Self <: CreateResourceGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceGroupTags(value: ResourceGroupTags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceGroupTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

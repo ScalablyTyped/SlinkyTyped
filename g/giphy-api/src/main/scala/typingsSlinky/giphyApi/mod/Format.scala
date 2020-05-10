@@ -12,10 +12,8 @@ trait Format extends js.Object
 
 object Format {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def html: typingsSlinky.giphyApi.giphyApiStrings.html = "html".asInstanceOf[typingsSlinky.giphyApi.giphyApiStrings.html]
   @scala.inline
-  def html: typingsSlinky.giphyApi.giphyApiStrings.html = this.cast("html")
-  @scala.inline
-  def json: typingsSlinky.giphyApi.giphyApiStrings.json = this.cast("json")
+  def json: typingsSlinky.giphyApi.giphyApiStrings.json = "json".asInstanceOf[typingsSlinky.giphyApi.giphyApiStrings.json]
 }
 

@@ -15,16 +15,14 @@ trait OptionsOnKeyValue extends js.Object
 
 object OptionsOnKeyValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def close: typingsSlinky.highcharts.highchartsStrings.close = "close".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.close]
   @scala.inline
-  def close: typingsSlinky.highcharts.highchartsStrings.close = this.cast("close")
+  def high: typingsSlinky.highcharts.highchartsStrings.high = "high".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.high]
   @scala.inline
-  def high: typingsSlinky.highcharts.highchartsStrings.high = this.cast("high")
+  def low: typingsSlinky.highcharts.highchartsStrings.low = "low".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.low]
   @scala.inline
-  def low: typingsSlinky.highcharts.highchartsStrings.low = this.cast("low")
+  def open: typingsSlinky.highcharts.highchartsStrings.open = "open".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.open]
   @scala.inline
-  def open: typingsSlinky.highcharts.highchartsStrings.open = this.cast("open")
-  @scala.inline
-  def y: typingsSlinky.highcharts.highchartsStrings.y = this.cast("y")
+  def y: typingsSlinky.highcharts.highchartsStrings.y = "y".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.y]
 }
 

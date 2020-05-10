@@ -61,7 +61,7 @@ trait Performance_ extends EventTarget {
   def removeEventListener_resourcetimingbufferfull(
     `type`: resourcetimingbufferfull,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def setResourceTimingBufferSize(maxSize: Double): Unit = js.native
   def toJSON(): js.Any = js.native

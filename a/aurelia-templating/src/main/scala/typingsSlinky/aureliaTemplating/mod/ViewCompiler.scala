@@ -1,7 +1,7 @@
 package typingsSlinky.aureliaTemplating.mod
 
-import typingsSlinky.std.DocumentFragment
-import typingsSlinky.std.Element
+import org.scalajs.dom.raw.DocumentFragment
+import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,5 +31,12 @@ class ViewCompiler protected () extends js.Object {
   def compile(source: Element): ViewFactory = js.native
   def compile(source: Element, resources: ViewResources_): ViewFactory = js.native
   def compile(source: Element, resources: ViewResources_, compileInstruction: ViewCompileInstruction): ViewFactory = js.native
+}
+
+/* static members */
+@JSImport("aurelia-templating", "ViewCompiler")
+@js.native
+object ViewCompiler extends js.Object {
+  def inject(): js.Any = js.native
 }
 

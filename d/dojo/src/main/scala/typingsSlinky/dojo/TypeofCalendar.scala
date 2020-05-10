@@ -8,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofCalendar extends js.Object {
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/Calendar._MonthDropDown.html
@@ -21,7 +22,7 @@ trait TypeofCalendar extends js.Object {
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
     MonthDropDown
-  ]
+  ] = js.native
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/Calendar._MonthDropDownButton.html
     *
@@ -35,7 +36,7 @@ trait TypeofCalendar extends js.Object {
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
     MonthDropDownButton
-  ]
+  ] = js.native
 }
 
 object TypeofCalendar {
@@ -53,8 +54,39 @@ object TypeofCalendar {
     ]
   ): TypeofCalendar = {
     val __obj = js.Dynamic.literal(_MonthDropDown = _MonthDropDown.asInstanceOf[js.Any], _MonthDropDownButton = _MonthDropDownButton.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypeofCalendar]
   }
+  @scala.inline
+  implicit class TypeofCalendarOps[Self <: TypeofCalendar] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_MonthDropDown(
+      value: Instantiable2[
+          js.UndefOr[/* params */ js.Object], 
+          js.UndefOr[/* srcNodeRef */ HTMLElement], 
+          MonthDropDown
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_MonthDropDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_MonthDropDownButton(
+      value: Instantiable2[
+          js.UndefOr[/* params */ js.Object], 
+          js.UndefOr[/* srcNodeRef */ HTMLElement], 
+          MonthDropDownButton
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_MonthDropDownButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.voca.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,8 +30,8 @@ trait ExplicitChain[T] extends js.Object {
   def countWords(): ExplicitChain[Double] = js.native
   def countWords(pattern: String): ExplicitChain[Double] = js.native
   def countWords(pattern: String, flags: String): ExplicitChain[Double] = js.native
-  def countWords(pattern: RegExp): ExplicitChain[Double] = js.native
-  def countWords(pattern: RegExp, flags: String): ExplicitChain[Double] = js.native
+  def countWords(pattern: js.RegExp): ExplicitChain[Double] = js.native
+  def countWords(pattern: js.RegExp, flags: String): ExplicitChain[Double] = js.native
   def decapitalize(): ExplicitChain[String] = js.native
   // Query
   def endsWith(): ExplicitChain[Boolean] = js.native
@@ -77,8 +76,8 @@ trait ExplicitChain[T] extends js.Object {
   def matches(): ExplicitChain[Boolean] = js.native
   def matches(pattern: String): ExplicitChain[Boolean] = js.native
   def matches(pattern: String, flags: String): ExplicitChain[Boolean] = js.native
-  def matches(pattern: RegExp): ExplicitChain[Boolean] = js.native
-  def matches(pattern: RegExp, flags: String): ExplicitChain[Boolean] = js.native
+  def matches(pattern: js.RegExp): ExplicitChain[Boolean] = js.native
+  def matches(pattern: js.RegExp, flags: String): ExplicitChain[Boolean] = js.native
   def pad(): ExplicitChain[String] = js.native
   def pad(length: Double): ExplicitChain[String] = js.native
   def pad(length: Double, pad: String): ExplicitChain[String] = js.native
@@ -97,23 +96,23 @@ trait ExplicitChain[T] extends js.Object {
   def replace(pattern: String): ExplicitChain[String] = js.native
   def replace(pattern: String, replacement: String): ExplicitChain[String] = js.native
   def replace(pattern: String, replacement: ReplacementFunction): ExplicitChain[String] = js.native
-  def replace(pattern: RegExp): ExplicitChain[String] = js.native
-  def replace(pattern: RegExp, replacement: String): ExplicitChain[String] = js.native
-  def replace(pattern: RegExp, replacement: ReplacementFunction): ExplicitChain[String] = js.native
+  def replace(pattern: js.RegExp): ExplicitChain[String] = js.native
+  def replace(pattern: js.RegExp, replacement: String): ExplicitChain[String] = js.native
+  def replace(pattern: js.RegExp, replacement: ReplacementFunction): ExplicitChain[String] = js.native
   def replaceAll(): ExplicitChain[String] = js.native
   def replaceAll(pattern: String): ExplicitChain[String] = js.native
   def replaceAll(pattern: String, replacement: String): ExplicitChain[String] = js.native
   def replaceAll(pattern: String, replacement: ReplacementFunction): ExplicitChain[String] = js.native
-  def replaceAll(pattern: RegExp): ExplicitChain[String] = js.native
-  def replaceAll(pattern: RegExp, replacement: String): ExplicitChain[String] = js.native
-  def replaceAll(pattern: RegExp, replacement: ReplacementFunction): ExplicitChain[String] = js.native
+  def replaceAll(pattern: js.RegExp): ExplicitChain[String] = js.native
+  def replaceAll(pattern: js.RegExp, replacement: String): ExplicitChain[String] = js.native
+  def replaceAll(pattern: js.RegExp, replacement: ReplacementFunction): ExplicitChain[String] = js.native
   def reverse(): ExplicitChain[String] = js.native
   def reverseGrapheme(): ExplicitChain[String] = js.native
   def search(): ExplicitChain[Double] = js.native
   def search(pattern: String): ExplicitChain[Double] = js.native
   def search(pattern: String, fromIndex: Double): ExplicitChain[Double] = js.native
-  def search(pattern: RegExp): ExplicitChain[Double] = js.native
-  def search(pattern: RegExp, fromIndex: Double): ExplicitChain[Double] = js.native
+  def search(pattern: js.RegExp): ExplicitChain[Double] = js.native
+  def search(pattern: js.RegExp, fromIndex: Double): ExplicitChain[Double] = js.native
   def slice(): ExplicitChain[String] = js.native
   def slice(start: Double): ExplicitChain[String] = js.native
   def slice(start: Double, end: Double): ExplicitChain[String] = js.native
@@ -126,8 +125,8 @@ trait ExplicitChain[T] extends js.Object {
   def split(): ExplicitChain[js.Array[String]] = js.native
   def split(separator: String): ExplicitChain[js.Array[String]] = js.native
   def split(separator: String, limit: Double): ExplicitChain[js.Array[String]] = js.native
-  def split(separator: RegExp): ExplicitChain[js.Array[String]] = js.native
-  def split(separator: RegExp, limit: Double): ExplicitChain[js.Array[String]] = js.native
+  def split(separator: js.RegExp): ExplicitChain[js.Array[String]] = js.native
+  def split(separator: js.RegExp, limit: Double): ExplicitChain[js.Array[String]] = js.native
   // Format
   def sprintf(replacements: js.Any*): ExplicitChain[String] = js.native
   def startsWith(): ExplicitChain[Boolean] = js.native
@@ -173,7 +172,7 @@ trait ExplicitChain[T] extends js.Object {
   def words(): ExplicitChain[js.Array[String]] = js.native
   def words(pattern: String): ExplicitChain[js.Array[String]] = js.native
   def words(pattern: String, flag: String): ExplicitChain[js.Array[String]] = js.native
-  def words(pattern: RegExp): ExplicitChain[js.Array[String]] = js.native
-  def words(pattern: RegExp, flag: String): ExplicitChain[js.Array[String]] = js.native
+  def words(pattern: js.RegExp): ExplicitChain[js.Array[String]] = js.native
+  def words(pattern: js.RegExp, flag: String): ExplicitChain[js.Array[String]] = js.native
 }
 

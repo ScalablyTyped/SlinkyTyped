@@ -1,10 +1,7 @@
 package typingsSlinky.materialUiCore.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.createBreakpointsMod.Breakpoint
 import typingsSlinky.materialUiCore.hiddenJsMod.HiddenJsProps
 import typingsSlinky.materialUiCore.hiddenJsMod.default
@@ -12,45 +9,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object HiddenJs
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object HiddenJs {
   @JSImport("@material-ui/core/Hidden/HiddenJs", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    initialWidth: Breakpoint = null,
-    lgDown: js.UndefOr[Boolean] = js.undefined,
-    lgUp: js.UndefOr[Boolean] = js.undefined,
-    mdDown: js.UndefOr[Boolean] = js.undefined,
-    mdUp: js.UndefOr[Boolean] = js.undefined,
-    only: Breakpoint | js.Array[Breakpoint] = null,
-    smDown: js.UndefOr[Boolean] = js.undefined,
-    smUp: js.UndefOr[Boolean] = js.undefined,
-    xlDown: js.UndefOr[Boolean] = js.undefined,
-    xlUp: js.UndefOr[Boolean] = js.undefined,
-    xsDown: js.UndefOr[Boolean] = js.undefined,
-    xsUp: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (initialWidth != null) __obj.updateDynamic("initialWidth")(initialWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(lgDown)) __obj.updateDynamic("lgDown")(lgDown.asInstanceOf[js.Any])
-    if (!js.isUndefined(lgUp)) __obj.updateDynamic("lgUp")(lgUp.asInstanceOf[js.Any])
-    if (!js.isUndefined(mdDown)) __obj.updateDynamic("mdDown")(mdDown.asInstanceOf[js.Any])
-    if (!js.isUndefined(mdUp)) __obj.updateDynamic("mdUp")(mdUp.asInstanceOf[js.Any])
-    if (only != null) __obj.updateDynamic("only")(only.asInstanceOf[js.Any])
-    if (!js.isUndefined(smDown)) __obj.updateDynamic("smDown")(smDown.asInstanceOf[js.Any])
-    if (!js.isUndefined(smUp)) __obj.updateDynamic("smUp")(smUp.asInstanceOf[js.Any])
-    if (!js.isUndefined(xlDown)) __obj.updateDynamic("xlDown")(xlDown.asInstanceOf[js.Any])
-    if (!js.isUndefined(xlUp)) __obj.updateDynamic("xlUp")(xlUp.asInstanceOf[js.Any])
-    if (!js.isUndefined(xsDown)) __obj.updateDynamic("xsDown")(xsDown.asInstanceOf[js.Any])
-    if (!js.isUndefined(xsUp)) __obj.updateDynamic("xsUp")(xsUp.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def initialWidth(value: Breakpoint): this.type = set("initialWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lgDown(value: Boolean): this.type = set("lgDown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lgUp(value: Boolean): this.type = set("lgUp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mdDown(value: Boolean): this.type = set("mdDown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mdUp(value: Boolean): this.type = set("mdUp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def only(value: Breakpoint | js.Array[Breakpoint]): this.type = set("only", value.asInstanceOf[js.Any])
+    @scala.inline
+    def smDown(value: Boolean): this.type = set("smDown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def smUp(value: Boolean): this.type = set("smUp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xlDown(value: Boolean): this.type = set("xlDown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xlUp(value: Boolean): this.type = set("xlUp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xsDown(value: Boolean): this.type = set("xsDown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xsUp(value: Boolean): this.type = set("xsUp", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUiCore.hiddenJsMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HiddenJsProps
+  
+  def withProps(p: HiddenJsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: HiddenJs.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

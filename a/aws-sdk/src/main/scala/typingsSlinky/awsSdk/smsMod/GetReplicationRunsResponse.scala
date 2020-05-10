@@ -22,16 +22,53 @@ trait GetReplicationRunsResponse extends js.Object {
 
 object GetReplicationRunsResponse {
   @scala.inline
-  def apply(
-    nextToken: NextToken = null,
-    replicationJob: ReplicationJob = null,
-    replicationRunList: ReplicationRunList = null
-  ): GetReplicationRunsResponse = {
+  def apply(): GetReplicationRunsResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
-    if (replicationJob != null) __obj.updateDynamic("replicationJob")(replicationJob.asInstanceOf[js.Any])
-    if (replicationRunList != null) __obj.updateDynamic("replicationRunList")(replicationRunList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetReplicationRunsResponse]
   }
+  @scala.inline
+  implicit class GetReplicationRunsResponseOps[Self <: GetReplicationRunsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationJob(value: ReplicationJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationJob")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationJob")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationRunList(value: ReplicationRunList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationRunList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationRunList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationRunList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

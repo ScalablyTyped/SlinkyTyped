@@ -1,8 +1,8 @@
 package typingsSlinky.testingLibraryDom
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLDocument
 import typingsSlinky.prettyFormat.mod.OptionsReceived
-import typingsSlinky.std.Element
-import typingsSlinky.std.HTMLDocument
 import typingsSlinky.testingLibraryDom.testingLibraryDomBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

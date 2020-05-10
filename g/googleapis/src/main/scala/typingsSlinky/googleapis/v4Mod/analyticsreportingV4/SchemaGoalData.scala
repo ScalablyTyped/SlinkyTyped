@@ -45,26 +45,113 @@ trait SchemaGoalData extends js.Object {
 
 object SchemaGoalData {
   @scala.inline
-  def apply(
-    goalCompletionLocation: String = null,
-    goalCompletions: String = null,
-    goalIndex: Int | Double = null,
-    goalName: String = null,
-    goalPreviousStep1: String = null,
-    goalPreviousStep2: String = null,
-    goalPreviousStep3: String = null,
-    goalValue: Int | Double = null
-  ): SchemaGoalData = {
+  def apply(): SchemaGoalData = {
     val __obj = js.Dynamic.literal()
-    if (goalCompletionLocation != null) __obj.updateDynamic("goalCompletionLocation")(goalCompletionLocation.asInstanceOf[js.Any])
-    if (goalCompletions != null) __obj.updateDynamic("goalCompletions")(goalCompletions.asInstanceOf[js.Any])
-    if (goalIndex != null) __obj.updateDynamic("goalIndex")(goalIndex.asInstanceOf[js.Any])
-    if (goalName != null) __obj.updateDynamic("goalName")(goalName.asInstanceOf[js.Any])
-    if (goalPreviousStep1 != null) __obj.updateDynamic("goalPreviousStep1")(goalPreviousStep1.asInstanceOf[js.Any])
-    if (goalPreviousStep2 != null) __obj.updateDynamic("goalPreviousStep2")(goalPreviousStep2.asInstanceOf[js.Any])
-    if (goalPreviousStep3 != null) __obj.updateDynamic("goalPreviousStep3")(goalPreviousStep3.asInstanceOf[js.Any])
-    if (goalValue != null) __obj.updateDynamic("goalValue")(goalValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoalData]
   }
+  @scala.inline
+  implicit class SchemaGoalDataOps[Self <: SchemaGoalData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGoalCompletionLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalCompletionLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoalCompletionLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalCompletionLocation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoalCompletions(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalCompletions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoalCompletions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalCompletions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoalIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoalIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoalName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoalName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoalPreviousStep1(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalPreviousStep1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoalPreviousStep1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalPreviousStep1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoalPreviousStep2(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalPreviousStep2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoalPreviousStep2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalPreviousStep2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoalPreviousStep3(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalPreviousStep3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoalPreviousStep3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalPreviousStep3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoalValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoalValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goalValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

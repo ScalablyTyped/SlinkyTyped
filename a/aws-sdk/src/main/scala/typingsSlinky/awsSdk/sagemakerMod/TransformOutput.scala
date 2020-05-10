@@ -26,17 +26,59 @@ trait TransformOutput extends js.Object {
 
 object TransformOutput {
   @scala.inline
-  def apply(
-    S3OutputPath: S3Uri,
-    Accept: Accept = null,
-    AssembleWith: AssemblyType = null,
-    KmsKeyId: KmsKeyId = null
-  ): TransformOutput = {
+  def apply(S3OutputPath: S3Uri): TransformOutput = {
     val __obj = js.Dynamic.literal(S3OutputPath = S3OutputPath.asInstanceOf[js.Any])
-    if (Accept != null) __obj.updateDynamic("Accept")(Accept.asInstanceOf[js.Any])
-    if (AssembleWith != null) __obj.updateDynamic("AssembleWith")(AssembleWith.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformOutput]
   }
+  @scala.inline
+  implicit class TransformOutputOps[Self <: TransformOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withS3OutputPath(value: S3Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3OutputPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccept(value: Accept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssembleWith(value: AssemblyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssembleWith")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssembleWith: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssembleWith")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: KmsKeyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

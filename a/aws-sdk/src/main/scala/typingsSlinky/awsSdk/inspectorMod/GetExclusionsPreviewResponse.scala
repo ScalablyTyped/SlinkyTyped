@@ -22,15 +22,47 @@ trait GetExclusionsPreviewResponse extends js.Object {
 
 object GetExclusionsPreviewResponse {
   @scala.inline
-  def apply(
-    previewStatus: PreviewStatus,
-    exclusionPreviews: ExclusionPreviewList = null,
-    nextToken: PaginationToken = null
-  ): GetExclusionsPreviewResponse = {
+  def apply(previewStatus: PreviewStatus): GetExclusionsPreviewResponse = {
     val __obj = js.Dynamic.literal(previewStatus = previewStatus.asInstanceOf[js.Any])
-    if (exclusionPreviews != null) __obj.updateDynamic("exclusionPreviews")(exclusionPreviews.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetExclusionsPreviewResponse]
   }
+  @scala.inline
+  implicit class GetExclusionsPreviewResponseOps[Self <: GetExclusionsPreviewResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPreviewStatus(value: PreviewStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previewStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExclusionPreviews(value: ExclusionPreviewList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusionPreviews")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusionPreviews: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusionPreviews")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

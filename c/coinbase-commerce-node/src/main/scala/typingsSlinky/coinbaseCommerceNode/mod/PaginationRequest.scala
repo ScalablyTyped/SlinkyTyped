@@ -11,46 +11,106 @@ import scala.scalajs.js.annotation._
   *
   * @link https://commerce.coinbase.com/docs/api/#pagination
   */
+@js.native
 trait PaginationRequest extends js.Object {
   /**
     * A cursor for use in pagination.
     * This is a resource ID that defines your place in the list.
     */
-  var ending_before: js.UndefOr[String | Null] = js.undefined
+  var ending_before: js.UndefOr[String | Null] = js.native
   /**
     * Number of results per call.
     *
     * Accepted values: 0 - 100
     * Default: 25
     */
-  var limit: js.UndefOr[Double] = js.undefined
+  var limit: js.UndefOr[Double] = js.native
   /**
     * Order of resources in the response.
     *
     * default: desc
     */
-  var order: js.UndefOr[asc | desc] = js.undefined
+  var order: js.UndefOr[asc | desc] = js.native
   /**
     * A cursor for use in pagination.
     * This is a resource ID that defines your place in the list.
     */
-  var starting_after: js.UndefOr[String | Null] = js.undefined
+  var starting_after: js.UndefOr[String | Null] = js.native
 }
 
 object PaginationRequest {
   @scala.inline
-  def apply(
-    ending_before: String = null,
-    limit: Int | Double = null,
-    order: asc | desc = null,
-    starting_after: String = null
-  ): PaginationRequest = {
+  def apply(): PaginationRequest = {
     val __obj = js.Dynamic.literal()
-    if (ending_before != null) __obj.updateDynamic("ending_before")(ending_before.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (starting_after != null) __obj.updateDynamic("starting_after")(starting_after.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaginationRequest]
   }
+  @scala.inline
+  implicit class PaginationRequestOps[Self <: PaginationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnding_before(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ending_before")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnding_before: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ending_before")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnding_beforeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ending_before")(null)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: asc | desc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStarting_after(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starting_after")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStarting_after: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starting_after")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStarting_afterNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starting_after")(null)
+        ret
+    }
+  }
+  
 }
 

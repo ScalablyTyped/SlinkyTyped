@@ -17,7 +17,7 @@ object receive extends js.Object {
     */
   def apply(
     connectionId: integer,
-    callback: js.Function2[/* reportId */ integer, /* data */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]
+    callback: js.Function2[/* reportId */ integer, /* data */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
 }
 

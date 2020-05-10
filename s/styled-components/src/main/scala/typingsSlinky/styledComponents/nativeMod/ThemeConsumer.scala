@@ -1,7 +1,8 @@
 package typingsSlinky.styledComponents.nativeMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.Consumer
+import slinky.core.ReactComponentClass
+import typingsSlinky.react.mod.ConsumerProps
 import typingsSlinky.styledComponents.styledComponentsMod.DefaultTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,6 +12,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object ThemeConsumer
   extends TopLevel[
-      Consumer[typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[DefaultTheme]]
+      ReactComponentClass[
+        ConsumerProps[typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[DefaultTheme]]
+      ]
     ]
 

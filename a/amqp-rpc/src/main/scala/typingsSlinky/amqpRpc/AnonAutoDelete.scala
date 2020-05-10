@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAutoDelete extends js.Object {
-  var autoDelete: js.UndefOr[Boolean] = js.undefined
-  var exclusive: js.UndefOr[Boolean] = js.undefined
+  var autoDelete: js.UndefOr[Boolean] = js.native
+  var exclusive: js.UndefOr[Boolean] = js.native
 }
 
 object AnonAutoDelete {
   @scala.inline
-  def apply(autoDelete: js.UndefOr[Boolean] = js.undefined, exclusive: js.UndefOr[Boolean] = js.undefined): AnonAutoDelete = {
+  def apply(): AnonAutoDelete = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoDelete)) __obj.updateDynamic("autoDelete")(autoDelete.asInstanceOf[js.Any])
-    if (!js.isUndefined(exclusive)) __obj.updateDynamic("exclusive")(exclusive.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAutoDelete]
   }
+  @scala.inline
+  implicit class AnonAutoDeleteOps[Self <: AnonAutoDelete] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoDelete(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclusive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait FormatComponentsPublic extends js.Object
 
 object FormatComponentsPublic {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `components-public`: typingsSlinky.nodeRsa.nodeRsaStrings.`components-public` = "components-public".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.`components-public`]
   @scala.inline
-  def `components-public`: typingsSlinky.nodeRsa.nodeRsaStrings.`components-public` = this.cast("components-public")
+  def `components-public-der`: typingsSlinky.nodeRsa.nodeRsaStrings.`components-public-der` = "components-public-der".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.`components-public-der`]
   @scala.inline
-  def `components-public-der`: typingsSlinky.nodeRsa.nodeRsaStrings.`components-public-der` = this.cast("components-public-der")
-  @scala.inline
-  def `components-public-pem`: typingsSlinky.nodeRsa.nodeRsaStrings.`components-public-pem` = this.cast("components-public-pem")
+  def `components-public-pem`: typingsSlinky.nodeRsa.nodeRsaStrings.`components-public-pem` = "components-public-pem".asInstanceOf[typingsSlinky.nodeRsa.nodeRsaStrings.`components-public-pem`]
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.expressServeStaticCore.mod
 
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +42,7 @@ trait Response[ResBody]
     * After middleware.init executed, Response will contain req property
     * See: express/lib/middleware/init.js
     */
-  var req: js.UndefOr[Request[ParamsDictionary, _, _]] = js.native
+  var req: js.UndefOr[Request[ParamsDictionary, _, _, Query]] = js.native
   /**
     * Send a response.
     *
@@ -60,8 +59,8 @@ trait Response[ResBody]
     * Express instance itself is a request handler, which could be invoked without
     * third argument.
     */
-  def app(req: Request[ParamsDictionary, _, _], res: Response[_]): js.Any = js.native
-  def app(req: Request[ParamsDictionary, _, _], res: ServerResponse): js.Any = js.native
+  def app(req: Request[ParamsDictionary, _, _, Query], res: Response[_]): js.Any = js.native
+  def app(req: Request[ParamsDictionary, _, _, Query], res: ServerResponse): js.Any = js.native
   def app(req: IncomingMessage, res: Response[_]): js.Any = js.native
   def app(req: IncomingMessage, res: ServerResponse): js.Any = js.native
   /**
@@ -287,7 +286,7 @@ trait Response[ResBody]
     *  - `filename`  filename of the view being rendered
     */
   def render(view: String): Unit = js.native
-  def render(view: String, callback: js.Function2[/* err */ Error, /* html */ String, Unit]): Unit = js.native
+  def render(view: String, callback: js.Function2[/* err */ js.Error, /* html */ String, Unit]): Unit = js.native
   def render(view: String, options: js.Object): Unit = js.native
   def render(
     view: String,

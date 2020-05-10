@@ -6,30 +6,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DialogButtonOptions
   extends /* attr */ StringDictionary[js.Any] {
-  var click: js.UndefOr[js.Function1[/* eventObject */ JQueryEventObject, _]] = js.undefined
-  var icons: js.UndefOr[js.Any] = js.undefined
-  var showText: js.UndefOr[String | Boolean] = js.undefined
-  var text: js.UndefOr[String] = js.undefined
+  var click: js.UndefOr[js.Function1[/* eventObject */ JQueryEventObject, _]] = js.native
+  var icons: js.UndefOr[js.Any] = js.native
+  var showText: js.UndefOr[String | Boolean] = js.native
+  var text: js.UndefOr[String] = js.native
 }
 
 object DialogButtonOptions {
   @scala.inline
-  def apply(
-    StringDictionary: /* attr */ StringDictionary[js.Any] = null,
-    click: /* eventObject */ JQueryEventObject => _ = null,
-    icons: js.Any = null,
-    showText: String | Boolean = null,
-    text: String = null
-  ): DialogButtonOptions = {
+  def apply(): DialogButtonOptions = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (click != null) __obj.updateDynamic("click")(js.Any.fromFunction1(click))
-    if (icons != null) __obj.updateDynamic("icons")(icons.asInstanceOf[js.Any])
-    if (showText != null) __obj.updateDynamic("showText")(showText.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[DialogButtonOptions]
   }
+  @scala.inline
+  implicit class DialogButtonOptionsOps[Self <: DialogButtonOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClick(value: /* eventObject */ JQueryEventObject => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcons(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowText(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

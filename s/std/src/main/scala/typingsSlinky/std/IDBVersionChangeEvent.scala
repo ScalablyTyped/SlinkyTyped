@@ -16,10 +16,10 @@ trait IDBVersionChangeEvent extends Event_ {
 @JSGlobal("IDBVersionChangeEvent")
 @js.native
 object IDBVersionChangeEvent
-  extends Instantiable1[/* type */ java.lang.String, IDBVersionChangeEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.IDBVersionChangeEvent]
      with Instantiable2[
       /* type */ java.lang.String, 
       /* eventInitDict */ IDBVersionChangeEventInit, 
-      IDBVersionChangeEvent
+      org.scalajs.dom.raw.IDBVersionChangeEvent
     ]
 

@@ -4,21 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OrgsUpdateHookParamsConfig extends js.Object {
-  var content_type: js.UndefOr[String] = js.undefined
-  var insecure_ssl: js.UndefOr[String] = js.undefined
-  var secret: js.UndefOr[String] = js.undefined
-  var url: String
+  var content_type: js.UndefOr[String] = js.native
+  var insecure_ssl: js.UndefOr[String] = js.native
+  var secret: js.UndefOr[String] = js.native
+  var url: String = js.native
 }
 
 object OrgsUpdateHookParamsConfig {
   @scala.inline
-  def apply(url: String, content_type: String = null, insecure_ssl: String = null, secret: String = null): OrgsUpdateHookParamsConfig = {
+  def apply(url: String): OrgsUpdateHookParamsConfig = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    if (content_type != null) __obj.updateDynamic("content_type")(content_type.asInstanceOf[js.Any])
-    if (insecure_ssl != null) __obj.updateDynamic("insecure_ssl")(insecure_ssl.asInstanceOf[js.Any])
-    if (secret != null) __obj.updateDynamic("secret")(secret.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgsUpdateHookParamsConfig]
   }
+  @scala.inline
+  implicit class OrgsUpdateHookParamsConfigOps[Self <: OrgsUpdateHookParamsConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContent_type(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent_type: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content_type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsecure_ssl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insecure_ssl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsecure_ssl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insecure_ssl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecret(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecret: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

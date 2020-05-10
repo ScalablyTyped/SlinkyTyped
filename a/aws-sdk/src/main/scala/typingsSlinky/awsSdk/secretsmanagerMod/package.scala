@@ -35,7 +35,7 @@ package object secretsmanagerMod {
   type RotationEnabledType = scala.Boolean
   type RotationLambdaARNType = java.lang.String
   type SecretARNType = java.lang.String
-  type SecretBinaryType = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.secretsmanagerMod.Blob | java.lang.String
+  type SecretBinaryType = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.secretsmanagerMod.Blob | java.lang.String
   type SecretIdType = java.lang.String
   type SecretListType = js.Array[typingsSlinky.awsSdk.secretsmanagerMod.SecretListEntry]
   type SecretNameType = java.lang.String

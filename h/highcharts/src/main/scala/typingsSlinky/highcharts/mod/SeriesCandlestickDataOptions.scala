@@ -4,17 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SeriesCandlestickDataOptions extends js.Object {
-  var accessibility: js.UndefOr[SeriesCandlestickDataAccessibilityOptions] = js.undefined
+  var accessibility: js.UndefOr[SeriesCandlestickDataAccessibilityOptions] = js.native
   /**
     * (Highcharts, Gantt) An additional, individual class name for the data
     * point's graphic representation.
     */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /**
     * (Highstock) The closing value of each data point.
     */
-  var close: js.UndefOr[Double] = js.undefined
+  var close: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Individual color for the point. By default
     * the color is pulled from the global `colors` array.
@@ -22,7 +23,7 @@ trait SeriesCandlestickDataOptions extends js.Object {
     * In styled mode, the `color` option doesn't take effect. Instead, use
     * `colorIndex`.
     */
-  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts, Gantt) A specific color index to use for the point, so its
     * graphic representations are given the class name `highcharts-color-{n}`.
@@ -30,116 +31,303 @@ trait SeriesCandlestickDataOptions extends js.Object {
     * mode, the color by is set by the `fill` attribute, so the change in class
     * name won't have a visual effect by default.
     */
-  var colorIndex: js.UndefOr[Double] = js.undefined
+  var colorIndex: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) Individual data label for each point. The options
     * are the same as the ones for plotOptions.series.dataLabels.
     */
   var dataLabels: js.UndefOr[
     SeriesAreaRangeDataLabelsOptionsObject | js.Array[SeriesAreaRangeDataLabelsOptionsObject]
-  ] = js.undefined
+  ] = js.native
   /**
     * (Highstock) A description of the point to add to the screen reader
     * information about the point.
     */
-  var description: js.UndefOr[String] = js.undefined
+  var description: js.UndefOr[String] = js.native
   /**
     * (Highstock) Point specific options for the draggable-points module.
     * Overrides options on `series.dragDrop`.
     */
-  var dragDrop: js.UndefOr[SeriesCandlestickDataDragDropOptions] = js.undefined
+  var dragDrop: js.UndefOr[SeriesCandlestickDataDragDropOptions] = js.native
   /**
     * (Highcharts) The `id` of a series in the drilldown.series array to use
     * for a drilldown for this point.
     */
-  var drilldown: js.UndefOr[String] = js.undefined
+  var drilldown: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Individual point events
     */
-  var events: js.UndefOr[SeriesCandlestickDataEventsOptions] = js.undefined
+  var events: js.UndefOr[SeriesCandlestickDataEventsOptions] = js.native
   /**
     * (Highcharts, Highstock) The high or maximum value for each data point.
     */
-  var high: js.UndefOr[Double] = js.undefined
+  var high: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) An id for the point. This can be used
     * after render time to get a pointer to the point object through
     * `chart.get()`.
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * (Highstock) The rank for this point's data label in case of collision. If
     * two data labels are about to overlap, only the one with the highest
     * `labelrank` will be drawn.
     */
-  var labelrank: js.UndefOr[Double] = js.undefined
+  var labelrank: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock) The low or minimum value for each data point.
     */
-  var low: js.UndefOr[Double] = js.undefined
+  var low: js.UndefOr[Double] = js.native
   /**
     * (Highstock) The name of the point as shown in the legend, tooltip,
     * dataLabels etc.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * (Highstock) The opening value of each data point.
     */
-  var open: js.UndefOr[Double] = js.undefined
+  var open: js.UndefOr[Double] = js.native
   /**
     * (Highcharts, Highstock, Gantt) Whether the data point is selected
     * initially.
     */
-  var selected: js.UndefOr[Boolean] = js.undefined
+  var selected: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts, Highstock) The x value of the point. For datetime axes, the
     * X value is the timestamp in milliseconds since 1970.
     */
-  var x: js.UndefOr[Double] = js.undefined
+  var x: js.UndefOr[Double] = js.native
 }
 
 object SeriesCandlestickDataOptions {
   @scala.inline
-  def apply(
-    accessibility: SeriesCandlestickDataAccessibilityOptions = null,
-    className: String = null,
-    close: Int | Double = null,
-    color: ColorString | GradientColorObject | PatternObject = null,
-    colorIndex: Int | Double = null,
-    dataLabels: SeriesAreaRangeDataLabelsOptionsObject | js.Array[SeriesAreaRangeDataLabelsOptionsObject] = null,
-    description: String = null,
-    dragDrop: SeriesCandlestickDataDragDropOptions = null,
-    drilldown: String = null,
-    events: SeriesCandlestickDataEventsOptions = null,
-    high: Int | Double = null,
-    id: String = null,
-    labelrank: Int | Double = null,
-    low: Int | Double = null,
-    name: String = null,
-    open: Int | Double = null,
-    selected: js.UndefOr[Boolean] = js.undefined,
-    x: Int | Double = null
-  ): SeriesCandlestickDataOptions = {
+  def apply(): SeriesCandlestickDataOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessibility != null) __obj.updateDynamic("accessibility")(accessibility.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (close != null) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (colorIndex != null) __obj.updateDynamic("colorIndex")(colorIndex.asInstanceOf[js.Any])
-    if (dataLabels != null) __obj.updateDynamic("dataLabels")(dataLabels.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (dragDrop != null) __obj.updateDynamic("dragDrop")(dragDrop.asInstanceOf[js.Any])
-    if (drilldown != null) __obj.updateDynamic("drilldown")(drilldown.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (high != null) __obj.updateDynamic("high")(high.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (labelrank != null) __obj.updateDynamic("labelrank")(labelrank.asInstanceOf[js.Any])
-    if (low != null) __obj.updateDynamic("low")(low.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (open != null) __obj.updateDynamic("open")(open.asInstanceOf[js.Any])
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesCandlestickDataOptions]
   }
+  @scala.inline
+  implicit class SeriesCandlestickDataOptionsOps[Self <: SeriesCandlestickDataOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessibility(value: SeriesCandlestickDataAccessibilityOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClose(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataLabels(value: SeriesAreaRangeDataLabelsOptionsObject | js.Array[SeriesAreaRangeDataLabelsOptionsObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDragDrop(value: SeriesCandlestickDataDragDropOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDragDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrilldown(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drilldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrilldown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drilldown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: SeriesCandlestickDataEventsOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHigh(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHigh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("high")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelrank(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelrank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelrank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelrank")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("low")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpen(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

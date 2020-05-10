@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDns extends GeneralNameParam {
-  var dns: String
+  var dns: String = js.native
 }
 
 object AnonDns {
   @scala.inline
   def apply(dns: String): AnonDns = {
     val __obj = js.Dynamic.literal(dns = dns.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonDns]
   }
+  @scala.inline
+  implicit class AnonDnsOps[Self <: AnonDns] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDns(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dns")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

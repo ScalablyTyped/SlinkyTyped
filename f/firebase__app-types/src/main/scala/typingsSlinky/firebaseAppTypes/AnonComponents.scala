@@ -2,6 +2,7 @@ package typingsSlinky.firebaseAppTypes
 
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
 import typingsSlinky.firebaseAppTypes.mod.FirebaseNamespace
 import typingsSlinky.firebaseAppTypes.privateMod.FirebaseService
@@ -27,7 +28,7 @@ trait AnonComponents extends js.Object {
       String, 
       /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {readonly [ K in / * import warning: RewrittenClass.unapply cls was tparam ErrorCode * / any ]:? @firebase/util.@firebase/util/dist/src/errors.ErrorData}
-    */ typingsSlinky.firebaseAppTypes.firebaseAppTypesStrings.AnonComponents with js.Any
+    */ typingsSlinky.firebaseAppTypes.firebaseAppTypesStrings.AnonComponents with TopLevel[js.Any]
     ]
   ] = js.native
   /**

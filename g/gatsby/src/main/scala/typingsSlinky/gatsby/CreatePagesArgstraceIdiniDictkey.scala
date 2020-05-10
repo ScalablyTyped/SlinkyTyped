@@ -19,7 +19,7 @@ trait CreatePagesArgstraceIdiniDictkey
   var actions: Actions = js.native
   var boundActionCreators: Actions = js.native
   var cache: AnonDel = js.native
-  var createContentDigest: js.Function1[/* input */ js.Any, String] = js.native
+  var createContentDigest: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof createContentDigest */ js.Any = js.native
   var createNodeId: js.Function = js.native
   var emitter: EventEmitter = js.native
   var getNode: js.Function = js.native
@@ -36,7 +36,7 @@ trait CreatePagesArgstraceIdiniDictkey
   var traceId: String with `initial-createPagesStatefully` = js.native
   var tracing: Tracing = js.native
   var waitForCascadingActions: Boolean = js.native
-  def graphql[TData, TVariables](query: String): js.Promise[AnonData[TData]] = js.native
-  def graphql[TData, TVariables](query: String, variables: TVariables): js.Promise[AnonData[TData]] = js.native
+  def graphql[TData, TVariables](query: String): js.Promise[AnonErrors[TData]] = js.native
+  def graphql[TData, TVariables](query: String, variables: TVariables): js.Promise[AnonErrors[TData]] = js.native
 }
 

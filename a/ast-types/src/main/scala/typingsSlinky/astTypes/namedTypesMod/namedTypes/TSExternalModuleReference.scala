@@ -14,16 +14,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
+@js.native
 trait TSExternalModuleReference
   extends ASTNode
      with DeclarationKind
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var expression: StringLiteralKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSExternalModuleReference
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var expression: StringLiteralKind = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSExternalModuleReference = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSExternalModuleReference")

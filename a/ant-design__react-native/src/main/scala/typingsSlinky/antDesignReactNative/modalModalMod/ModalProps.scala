@@ -1,64 +1,72 @@
 package typingsSlinky.antDesignReactNative.modalModalMod
 
-import slinky.core.TagMod
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
-import typingsSlinky.antDesignReactNative.modalPropsTypeMod.Action
 import typingsSlinky.antDesignReactNative.modalPropsTypeMod.ModalPropsType
 import typingsSlinky.antDesignReactNative.modalStyleMod.ModalStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ModalProps
   extends ModalPropsType[TextStyle]
      with WithThemeStyles[ModalStyle] {
-  var bodyStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var bodyStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
 object ModalProps {
   @scala.inline
-  def apply(
-    visible: Boolean,
-    animateAppear: js.UndefOr[Boolean] = js.undefined,
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animationType: js.Any = null,
-    bodyStyle: StyleProp[ViewStyle] = null,
-    closable: js.UndefOr[Boolean] = js.undefined,
-    footer: js.Array[Action[TextStyle]] = null,
-    locale: js.Object = null,
-    maskClosable: js.UndefOr[Boolean] = js.undefined,
-    onAnimationEnd: /* visible */ Boolean => Unit = null,
-    onClose: () => Unit = null,
-    operation: js.UndefOr[Boolean] = js.undefined,
-    popup: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[ViewStyle] = null,
-    styles: Partial[ModalStyle] = null,
-    title: TagMod[Any] = null,
-    transparent: js.UndefOr[Boolean] = js.undefined
-  ): ModalProps = {
+  def apply(visible: Boolean): ModalProps = {
     val __obj = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
-    if (!js.isUndefined(animateAppear)) __obj.updateDynamic("animateAppear")(animateAppear.asInstanceOf[js.Any])
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.asInstanceOf[js.Any])
-    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (!js.isUndefined(maskClosable)) __obj.updateDynamic("maskClosable")(maskClosable.asInstanceOf[js.Any])
-    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (!js.isUndefined(operation)) __obj.updateDynamic("operation")(operation.asInstanceOf[js.Any])
-    if (!js.isUndefined(popup)) __obj.updateDynamic("popup")(popup.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModalProps]
   }
+  @scala.inline
+  implicit class ModalPropsOps[Self <: ModalProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBodyStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBodyStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBodyStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bodyStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+  }
+  
 }
 

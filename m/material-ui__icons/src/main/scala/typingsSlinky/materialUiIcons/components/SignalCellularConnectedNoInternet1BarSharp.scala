@@ -1,15 +1,17 @@
 package typingsSlinky.materialUiIcons.components
 
+import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import typingsSlinky.materialUiIcons.signalCellularConnectedNoInternet1BarSharpMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SignalCellularConnectedNoInternet1BarSharp extends SharedApply_SvgIconProps1442979138[default] {
-  @JSImport("@material-ui/icons/SignalCellularConnectedNoInternet1BarSharp", "default")
+object SignalCellularConnectedNoInternet1BarSharp {
+  @JSImport("@material-ui/icons/SignalCellularConnectedNoInternet1BarSharp", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SignalCellularConnectedNoInternet1BarSharp.type): SharedBuilder_SvgIconProps_1164301990[default] = new SharedBuilder_SvgIconProps_1164301990[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

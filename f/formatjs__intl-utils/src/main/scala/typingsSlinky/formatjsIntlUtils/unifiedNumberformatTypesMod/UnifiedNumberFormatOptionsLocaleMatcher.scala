@@ -12,10 +12,8 @@ trait UnifiedNumberFormatOptionsLocaleMatcher extends js.Object
 
 object UnifiedNumberFormatOptionsLocaleMatcher {
   @scala.inline
-  def `best fit`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`best fit` = this.cast("best fit")
+  def `best fit`: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`best fit` = ("best fit").asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.`best fit`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def lookup: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.lookup = this.cast("lookup")
+  def lookup: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.lookup = "lookup".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.lookup]
 }
 

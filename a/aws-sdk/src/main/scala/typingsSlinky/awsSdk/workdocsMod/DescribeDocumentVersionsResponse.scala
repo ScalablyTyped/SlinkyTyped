@@ -18,11 +18,41 @@ trait DescribeDocumentVersionsResponse extends js.Object {
 
 object DescribeDocumentVersionsResponse {
   @scala.inline
-  def apply(DocumentVersions: DocumentVersionMetadataList = null, Marker: PageMarkerType = null): DescribeDocumentVersionsResponse = {
+  def apply(): DescribeDocumentVersionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (DocumentVersions != null) __obj.updateDynamic("DocumentVersions")(DocumentVersions.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeDocumentVersionsResponse]
   }
+  @scala.inline
+  implicit class DescribeDocumentVersionsResponseOps[Self <: DescribeDocumentVersionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentVersions(value: DocumentVersionMetadataList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: PageMarkerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,16 +16,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Node, 'type'> */
+@js.native
 trait JSXOpeningElement
   extends ASTNode
      with NodeKind
      with PrintableKind {
-  var attributes: js.UndefOr[js.Array[JSXAttributeKind | JSXSpreadAttributeKind]] = js.undefined
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var name: JSXIdentifierKind | JSXNamespacedNameKind | JSXMemberExpressionKind
-  var selfClosing: js.UndefOr[Boolean] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.JSXOpeningElement
+  var attributes: js.UndefOr[js.Array[JSXAttributeKind | JSXSpreadAttributeKind]] = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var name: JSXIdentifierKind | JSXNamespacedNameKind | JSXMemberExpressionKind = js.native
+  var selfClosing: js.UndefOr[Boolean] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.JSXOpeningElement = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.JSXOpeningElement")

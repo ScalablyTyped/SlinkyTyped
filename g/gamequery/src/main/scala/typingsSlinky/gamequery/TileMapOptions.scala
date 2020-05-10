@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TileMapOptions extends js.Object {
-  var buffer: js.UndefOr[Double] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var posx: js.UndefOr[Double] = js.undefined
-  var posy: js.UndefOr[Double] = js.undefined
-  var sizex: js.UndefOr[Double] = js.undefined
-  var sizey: js.UndefOr[Double] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var buffer: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var posx: js.UndefOr[Double] = js.native
+  var posy: js.UndefOr[Double] = js.native
+  var sizex: js.UndefOr[Double] = js.native
+  var sizey: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object TileMapOptions {
   @scala.inline
-  def apply(
-    buffer: Int | Double = null,
-    height: Int | Double = null,
-    posx: Int | Double = null,
-    posy: Int | Double = null,
-    sizex: Int | Double = null,
-    sizey: Int | Double = null,
-    width: Int | Double = null
-  ): TileMapOptions = {
+  def apply(): TileMapOptions = {
     val __obj = js.Dynamic.literal()
-    if (buffer != null) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (posx != null) __obj.updateDynamic("posx")(posx.asInstanceOf[js.Any])
-    if (posy != null) __obj.updateDynamic("posy")(posy.asInstanceOf[js.Any])
-    if (sizex != null) __obj.updateDynamic("sizex")(sizex.asInstanceOf[js.Any])
-    if (sizey != null) __obj.updateDynamic("sizey")(sizey.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[TileMapOptions]
   }
+  @scala.inline
+  implicit class TileMapOptionsOps[Self <: TileMapOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuffer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("posx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("posx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("posy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("posy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizey(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

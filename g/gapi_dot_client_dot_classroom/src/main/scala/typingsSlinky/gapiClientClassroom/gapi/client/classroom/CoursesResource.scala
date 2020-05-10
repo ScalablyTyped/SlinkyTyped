@@ -48,6 +48,7 @@ trait CoursesResource extends js.Object {
     * requested course or for access errors.
     * &#42; `NOT_FOUND` if no course exists with the requested ID.
     */
+  def delete(): Request_[js.Object] = js.native
   def delete(request: AnonIdKey): Request_[js.Object] = js.native
   /**
     * Returns a course.
@@ -58,6 +59,7 @@ trait CoursesResource extends js.Object {
     * requested course or for access errors.
     * &#42; `NOT_FOUND` if no course exists with the requested ID.
     */
+  def get(): Request_[Course] = js.native
   def get(request: AnonIdKey): Request_[Course] = js.native
   /**
     * Returns a list of courses that the requesting user is permitted to view,
@@ -70,6 +72,7 @@ trait CoursesResource extends js.Object {
     * &#42; `INVALID_ARGUMENT` if the query argument is malformed.
     * &#42; `NOT_FOUND` if any users specified in the query arguments do not exist.
     */
+  def list(): Request_[ListCoursesResponse] = js.native
   def list(request: AnonCourseStates): Request_[ListCoursesResponse] = js.native
   /**
     * Updates one or more fields in a course.

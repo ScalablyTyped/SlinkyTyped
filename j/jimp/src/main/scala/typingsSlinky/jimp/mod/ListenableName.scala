@@ -19,24 +19,22 @@ trait ListenableName extends js.Object
 
 object ListenableName {
   @scala.inline
-  def any: typingsSlinky.jimp.jimpStrings.any = this.cast("any")
+  def any: typingsSlinky.jimp.jimpStrings.any = "any".asInstanceOf[typingsSlinky.jimp.jimpStrings.any]
   @scala.inline
-  def background: typingsSlinky.jimp.jimpStrings.background = this.cast("background")
+  def background: typingsSlinky.jimp.jimpStrings.background = "background".asInstanceOf[typingsSlinky.jimp.jimpStrings.background]
   @scala.inline
-  def `before-change`: typingsSlinky.jimp.jimpStrings.`before-change` = this.cast("before-change")
+  def `before-change`: typingsSlinky.jimp.jimpStrings.`before-change` = "before-change".asInstanceOf[typingsSlinky.jimp.jimpStrings.`before-change`]
   @scala.inline
-  def `before-clone`: typingsSlinky.jimp.jimpStrings.`before-clone` = this.cast("before-clone")
+  def `before-clone`: typingsSlinky.jimp.jimpStrings.`before-clone` = "before-clone".asInstanceOf[typingsSlinky.jimp.jimpStrings.`before-clone`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def changed: typingsSlinky.jimp.jimpStrings.changed = "changed".asInstanceOf[typingsSlinky.jimp.jimpStrings.changed]
   @scala.inline
-  def changed: typingsSlinky.jimp.jimpStrings.changed = this.cast("changed")
+  def cloned: typingsSlinky.jimp.jimpStrings.cloned = "cloned".asInstanceOf[typingsSlinky.jimp.jimpStrings.cloned]
   @scala.inline
-  def cloned: typingsSlinky.jimp.jimpStrings.cloned = this.cast("cloned")
+  def crop: typingsSlinky.jimp.jimpStrings.crop = "crop".asInstanceOf[typingsSlinky.jimp.jimpStrings.crop]
   @scala.inline
-  def crop: typingsSlinky.jimp.jimpStrings.crop = this.cast("crop")
+  def initialized: typingsSlinky.jimp.jimpStrings.initialized = "initialized".asInstanceOf[typingsSlinky.jimp.jimpStrings.initialized]
   @scala.inline
-  def initialized: typingsSlinky.jimp.jimpStrings.initialized = this.cast("initialized")
-  @scala.inline
-  def scan: typingsSlinky.jimp.jimpStrings.scan = this.cast("scan")
+  def scan: typingsSlinky.jimp.jimpStrings.scan = "scan".asInstanceOf[typingsSlinky.jimp.jimpStrings.scan]
 }
 

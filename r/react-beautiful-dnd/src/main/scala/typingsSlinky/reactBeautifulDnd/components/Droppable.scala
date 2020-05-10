@@ -1,10 +1,8 @@
 package typingsSlinky.reactBeautifulDnd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBeautifulDnd.mod.Direction
 import typingsSlinky.reactBeautifulDnd.mod.DraggableProvided
 import typingsSlinky.reactBeautifulDnd.mod.DraggableRubric
@@ -12,40 +10,45 @@ import typingsSlinky.reactBeautifulDnd.mod.DraggableStateSnapshot
 import typingsSlinky.reactBeautifulDnd.mod.DroppableId
 import typingsSlinky.reactBeautifulDnd.mod.DroppableMode
 import typingsSlinky.reactBeautifulDnd.mod.DroppableProps
+import typingsSlinky.reactBeautifulDnd.mod.TypeId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Droppable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBeautifulDnd.mod.Droppable] {
+object Droppable {
   @JSImport("react-beautiful-dnd", "Droppable")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: type */
-  def apply(
-    droppableId: DroppableId,
-    direction: Direction = null,
-    getContainerForClone: () => ReactElement = null,
-    ignoreContainerClipping: js.UndefOr[Boolean] = js.undefined,
-    isCombineEnabled: js.UndefOr[Boolean] = js.undefined,
-    isDropDisabled: js.UndefOr[Boolean] = js.undefined,
-    mode: DroppableMode = null,
-    renderClone: (/* provided */ DraggableProvided, /* snapshot */ DraggableStateSnapshot, /* rubric */ DraggableRubric) => ReactElement = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBeautifulDnd.mod.Droppable] = {
-    val __obj = js.Dynamic.literal(droppableId = droppableId.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (getContainerForClone != null) __obj.updateDynamic("getContainerForClone")(js.Any.fromFunction0(getContainerForClone))
-    if (!js.isUndefined(ignoreContainerClipping)) __obj.updateDynamic("ignoreContainerClipping")(ignoreContainerClipping.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCombineEnabled)) __obj.updateDynamic("isCombineEnabled")(isCombineEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDropDisabled)) __obj.updateDynamic("isDropDisabled")(isDropDisabled.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (renderClone != null) __obj.updateDynamic("renderClone")(js.Any.fromFunction3(renderClone))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBeautifulDnd.mod.Droppable] {
+    @scala.inline
+    def direction(value: Direction): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getContainerForClone(value: () => ReactElement): this.type = set("getContainerForClone", js.Any.fromFunction0(value))
+    @scala.inline
+    def ignoreContainerClipping(value: Boolean): this.type = set("ignoreContainerClipping", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isCombineEnabled(value: Boolean): this.type = set("isCombineEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDropDisabled(value: Boolean): this.type = set("isDropDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: DroppableMode): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderClone(
+      value: (/* provided */ DraggableProvided, /* snapshot */ DraggableStateSnapshot, /* rubric */ DraggableRubric) => ReactElement
+    ): this.type = set("renderClone", js.Any.fromFunction3(value))
+    @scala.inline
+    def `type`(value: TypeId): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = DroppableProps
+  
+  def withProps(p: DroppableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(droppableId: DroppableId): Builder = {
+    val __props = js.Dynamic.literal(droppableId = droppableId.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DroppableProps]))
+  }
 }
 

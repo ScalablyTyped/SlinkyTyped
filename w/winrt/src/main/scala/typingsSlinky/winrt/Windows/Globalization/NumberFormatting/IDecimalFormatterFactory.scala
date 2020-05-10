@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDecimalFormatterFactory extends js.Object {
-  def createDecimalFormatter(languages: IIterable[String], geographicRegion: String): DecimalFormatter
+  def createDecimalFormatter(languages: IIterable[String], geographicRegion: String): DecimalFormatter = js.native
 }
 
 object IDecimalFormatterFactory {
   @scala.inline
   def apply(createDecimalFormatter: (IIterable[String], String) => DecimalFormatter): IDecimalFormatterFactory = {
     val __obj = js.Dynamic.literal(createDecimalFormatter = js.Any.fromFunction2(createDecimalFormatter))
-  
     __obj.asInstanceOf[IDecimalFormatterFactory]
   }
+  @scala.inline
+  implicit class IDecimalFormatterFactoryOps[Self <: IDecimalFormatterFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateDecimalFormatter(value: (IIterable[String], String) => DecimalFormatter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createDecimalFormatter")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.bluebirdLst.mod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.Error
 import typingsSlinky.std.Map
 import typingsSlinky.std.PromiseLike
 import scala.scalajs.js
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait Bluebird[R]
   extends PromiseLike[R]
      with Inspection[R] {
-  @JSName(scala.scalajs.js.Symbol.toStringTag)
+  @JSName(js.Symbol.toStringTag)
   var toStringTag: js.Any = js.native
   /**
     * Same as calling `Promise.all(thisPromise)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
@@ -360,47 +359,47 @@ trait Bluebird[R]
     * Same limitations apply as with `.catchReturn()`.
     * TODO: disallow non-objects
     */
-  def catchThrow(reason: Error): Bluebird[R] = js.native
-  def catchThrow[E1 /* <: js.Error */](filter1: js.Function1[/* error */ js.Any, Boolean], reason: Error): Bluebird[R] = js.native
-  def catchThrow[E1 /* <: js.Error */](filter1: js.Object, reason: Error): Bluebird[R] = js.native
-  def catchThrow[E1 /* <: js.Error */](filter1: Instantiable1[/* args (repeated) */ js.Any, E1], reason: Error): Bluebird[R] = js.native
+  def catchThrow(reason: js.Error): Bluebird[R] = js.native
+  def catchThrow[E1 /* <: js.Error */](filter1: js.Function1[/* error */ js.Any, Boolean], reason: js.Error): Bluebird[R] = js.native
+  def catchThrow[E1 /* <: js.Error */](filter1: js.Object, reason: js.Error): Bluebird[R] = js.native
+  def catchThrow[E1 /* <: js.Error */](filter1: Instantiable1[/* args (repeated) */ js.Any, E1], reason: js.Error): Bluebird[R] = js.native
   def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](
     filter1: js.Function1[/* error */ js.Any, Boolean],
     filter2: js.Function1[/* error */ js.Any, Boolean],
-    reason: Error
+    reason: js.Error
   ): Bluebird[R] = js.native
-  def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](filter1: js.Function1[/* error */ js.Any, Boolean], filter2: js.Object, reason: Error): Bluebird[R] = js.native
+  def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](filter1: js.Function1[/* error */ js.Any, Boolean], filter2: js.Object, reason: js.Error): Bluebird[R] = js.native
   def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](
     filter1: js.Function1[/* error */ js.Any, Boolean],
     filter2: Instantiable1[/* args (repeated) */ js.Any, E2],
-    reason: Error
+    reason: js.Error
   ): Bluebird[R] = js.native
-  def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](filter1: js.Object, filter2: js.Function1[/* error */ js.Any, Boolean], reason: Error): Bluebird[R] = js.native
-  def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](filter1: js.Object, filter2: js.Object, reason: Error): Bluebird[R] = js.native
-  def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](filter1: js.Object, filter2: Instantiable1[/* args (repeated) */ js.Any, E2], reason: Error): Bluebird[R] = js.native
+  def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](filter1: js.Object, filter2: js.Function1[/* error */ js.Any, Boolean], reason: js.Error): Bluebird[R] = js.native
+  def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](filter1: js.Object, filter2: js.Object, reason: js.Error): Bluebird[R] = js.native
+  def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](filter1: js.Object, filter2: Instantiable1[/* args (repeated) */ js.Any, E2], reason: js.Error): Bluebird[R] = js.native
   def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](
     filter1: Instantiable1[/* args (repeated) */ js.Any, E1],
     filter2: js.Function1[/* error */ js.Any, Boolean],
-    reason: Error
+    reason: js.Error
   ): Bluebird[R] = js.native
-  def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](filter1: Instantiable1[/* args (repeated) */ js.Any, E1], filter2: js.Object, reason: Error): Bluebird[R] = js.native
+  def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](filter1: Instantiable1[/* args (repeated) */ js.Any, E1], filter2: js.Object, reason: js.Error): Bluebird[R] = js.native
   def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */](
     filter1: Instantiable1[/* args (repeated) */ js.Any, E1],
     filter2: Instantiable1[/* args (repeated) */ js.Any, E2],
-    reason: Error
+    reason: js.Error
   ): Bluebird[R] = js.native
   def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */, E3 /* <: js.Error */](
     filter1: (Instantiable1[/* args (repeated) */ js.Any, E1]) | (js.Function1[/* error */ js.Any, Boolean]) | js.Object,
     filter2: (Instantiable1[/* args (repeated) */ js.Any, E2]) | (js.Function1[/* error */ js.Any, Boolean]) | js.Object,
     filter3: (Instantiable1[/* args (repeated) */ js.Any, E3]) | (js.Function1[/* error */ js.Any, Boolean]) | js.Object,
-    reason: Error
+    reason: js.Error
   ): Bluebird[R] = js.native
   def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */, E3 /* <: js.Error */, E4 /* <: js.Error */](
     filter1: (Instantiable1[/* args (repeated) */ js.Any, E1]) | (js.Function1[/* error */ js.Any, Boolean]) | js.Object,
     filter2: (Instantiable1[/* args (repeated) */ js.Any, E2]) | (js.Function1[/* error */ js.Any, Boolean]) | js.Object,
     filter3: (Instantiable1[/* args (repeated) */ js.Any, E3]) | (js.Function1[/* error */ js.Any, Boolean]) | js.Object,
     filter4: (Instantiable1[/* args (repeated) */ js.Any, E4]) | (js.Function1[/* error */ js.Any, Boolean]) | js.Object,
-    reason: Error
+    reason: js.Error
   ): Bluebird[R] = js.native
   def catchThrow[E1 /* <: js.Error */, E2 /* <: js.Error */, E3 /* <: js.Error */, E4 /* <: js.Error */, E5 /* <: js.Error */](
     filter1: (Instantiable1[/* args (repeated) */ js.Any, E1]) | (js.Function1[/* error */ js.Any, Boolean]) | js.Object,
@@ -1457,7 +1456,7 @@ trait Bluebird[R]
     */
   def timeout(ms: Double): Bluebird[R] = js.native
   def timeout(ms: Double, message: String): Bluebird[R] = js.native
-  def timeout(ms: Double, message: Error): Bluebird[R] = js.native
+  def timeout(ms: Double, message: js.Error): Bluebird[R] = js.native
   /**
     * This is implicitly called by `JSON.stringify` when serializing the object. Returns a serialized representation of the `Promise`.
     */

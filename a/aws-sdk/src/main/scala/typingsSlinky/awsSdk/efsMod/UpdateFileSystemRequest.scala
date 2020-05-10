@@ -22,15 +22,47 @@ trait UpdateFileSystemRequest extends js.Object {
 
 object UpdateFileSystemRequest {
   @scala.inline
-  def apply(
-    FileSystemId: FileSystemId,
-    ProvisionedThroughputInMibps: Int | Double = null,
-    ThroughputMode: ThroughputMode = null
-  ): UpdateFileSystemRequest = {
+  def apply(FileSystemId: FileSystemId): UpdateFileSystemRequest = {
     val __obj = js.Dynamic.literal(FileSystemId = FileSystemId.asInstanceOf[js.Any])
-    if (ProvisionedThroughputInMibps != null) __obj.updateDynamic("ProvisionedThroughputInMibps")(ProvisionedThroughputInMibps.asInstanceOf[js.Any])
-    if (ThroughputMode != null) __obj.updateDynamic("ThroughputMode")(ThroughputMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFileSystemRequest]
   }
+  @scala.inline
+  implicit class UpdateFileSystemRequestOps[Self <: UpdateFileSystemRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileSystemId(value: FileSystemId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughputInMibps(value: ProvisionedThroughputInMibps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputInMibps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedThroughputInMibps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputInMibps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThroughputMode(value: ThroughputMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThroughputMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThroughputMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThroughputMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

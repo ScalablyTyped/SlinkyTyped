@@ -4,23 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkItemStatus extends js.Object {
   /** True if the WorkItem was completed (successfully or unsuccessfully). */
-  var completed: js.UndefOr[Boolean] = js.undefined
+  var completed: js.UndefOr[Boolean] = js.native
   /** Worker output counters for this WorkItem. */
-  var counterUpdates: js.UndefOr[js.Array[CounterUpdate]] = js.undefined
+  var counterUpdates: js.UndefOr[js.Array[CounterUpdate]] = js.native
   /** See documentation of stop_position. */
-  var dynamicSourceSplit: js.UndefOr[DynamicSourceSplit] = js.undefined
+  var dynamicSourceSplit: js.UndefOr[DynamicSourceSplit] = js.native
   /**
     * Specifies errors which occurred during processing.  If errors are
     * provided, and completed = true, then the WorkItem is considered
     * to have failed.
     */
-  var errors: js.UndefOr[js.Array[Status]] = js.undefined
+  var errors: js.UndefOr[js.Array[Status]] = js.native
   /** DEPRECATED in favor of counter_updates. */
-  var metricUpdates: js.UndefOr[js.Array[MetricUpdate]] = js.undefined
+  var metricUpdates: js.UndefOr[js.Array[MetricUpdate]] = js.native
   /** DEPRECATED in favor of reported_progress. */
-  var progress: js.UndefOr[ApproximateProgress] = js.undefined
+  var progress: js.UndefOr[ApproximateProgress] = js.native
   /**
     * The report index.  When a WorkItem is leased, the lease will
     * contain an initial report index.  When a WorkItem's status is
@@ -35,18 +36,18 @@ trait WorkItemStatus extends js.Object {
     * should not submit a subsequent report until the response for the
     * previous report had been received from the service.
     */
-  var reportIndex: js.UndefOr[String] = js.undefined
+  var reportIndex: js.UndefOr[String] = js.native
   /** The worker's progress through this WorkItem. */
-  var reportedProgress: js.UndefOr[ApproximateReportedProgress] = js.undefined
+  var reportedProgress: js.UndefOr[ApproximateReportedProgress] = js.native
   /** Amount of time the worker requests for its lease. */
-  var requestedLeaseDuration: js.UndefOr[String] = js.undefined
+  var requestedLeaseDuration: js.UndefOr[String] = js.native
   /** DEPRECATED in favor of dynamic_source_split. */
-  var sourceFork: js.UndefOr[SourceFork] = js.undefined
+  var sourceFork: js.UndefOr[SourceFork] = js.native
   /**
     * If the work item represented a SourceOperationRequest, and the work
     * is completed, contains the result of the operation.
     */
-  var sourceOperationResponse: js.UndefOr[SourceOperationResponse] = js.undefined
+  var sourceOperationResponse: js.UndefOr[SourceOperationResponse] = js.native
   /**
     * A worker may split an active map task in two parts, "primary" and
     * "residual", continuing to process the primary part and returning the
@@ -79,47 +80,194 @@ trait WorkItemStatus extends js.Object {
     * to P, and in a potential subsequent dynamic_source_split into {P', R'},
     * P' and R' must be together equivalent to P, etc.
     */
-  var stopPosition: js.UndefOr[Position] = js.undefined
+  var stopPosition: js.UndefOr[Position] = js.native
   /** Total time the worker spent being throttled by external systems. */
-  var totalThrottlerWaitTimeSeconds: js.UndefOr[Double] = js.undefined
+  var totalThrottlerWaitTimeSeconds: js.UndefOr[Double] = js.native
   /** Identifies the WorkItem. */
-  var workItemId: js.UndefOr[String] = js.undefined
+  var workItemId: js.UndefOr[String] = js.native
 }
 
 object WorkItemStatus {
   @scala.inline
-  def apply(
-    completed: js.UndefOr[Boolean] = js.undefined,
-    counterUpdates: js.Array[CounterUpdate] = null,
-    dynamicSourceSplit: DynamicSourceSplit = null,
-    errors: js.Array[Status] = null,
-    metricUpdates: js.Array[MetricUpdate] = null,
-    progress: ApproximateProgress = null,
-    reportIndex: String = null,
-    reportedProgress: ApproximateReportedProgress = null,
-    requestedLeaseDuration: String = null,
-    sourceFork: SourceFork = null,
-    sourceOperationResponse: SourceOperationResponse = null,
-    stopPosition: Position = null,
-    totalThrottlerWaitTimeSeconds: Int | Double = null,
-    workItemId: String = null
-  ): WorkItemStatus = {
+  def apply(): WorkItemStatus = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(completed)) __obj.updateDynamic("completed")(completed.asInstanceOf[js.Any])
-    if (counterUpdates != null) __obj.updateDynamic("counterUpdates")(counterUpdates.asInstanceOf[js.Any])
-    if (dynamicSourceSplit != null) __obj.updateDynamic("dynamicSourceSplit")(dynamicSourceSplit.asInstanceOf[js.Any])
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
-    if (metricUpdates != null) __obj.updateDynamic("metricUpdates")(metricUpdates.asInstanceOf[js.Any])
-    if (progress != null) __obj.updateDynamic("progress")(progress.asInstanceOf[js.Any])
-    if (reportIndex != null) __obj.updateDynamic("reportIndex")(reportIndex.asInstanceOf[js.Any])
-    if (reportedProgress != null) __obj.updateDynamic("reportedProgress")(reportedProgress.asInstanceOf[js.Any])
-    if (requestedLeaseDuration != null) __obj.updateDynamic("requestedLeaseDuration")(requestedLeaseDuration.asInstanceOf[js.Any])
-    if (sourceFork != null) __obj.updateDynamic("sourceFork")(sourceFork.asInstanceOf[js.Any])
-    if (sourceOperationResponse != null) __obj.updateDynamic("sourceOperationResponse")(sourceOperationResponse.asInstanceOf[js.Any])
-    if (stopPosition != null) __obj.updateDynamic("stopPosition")(stopPosition.asInstanceOf[js.Any])
-    if (totalThrottlerWaitTimeSeconds != null) __obj.updateDynamic("totalThrottlerWaitTimeSeconds")(totalThrottlerWaitTimeSeconds.asInstanceOf[js.Any])
-    if (workItemId != null) __obj.updateDynamic("workItemId")(workItemId.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkItemStatus]
   }
+  @scala.inline
+  implicit class WorkItemStatusOps[Self <: WorkItemStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompleted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCounterUpdates(value: js.Array[CounterUpdate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterUpdates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCounterUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("counterUpdates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicSourceSplit(value: DynamicSourceSplit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicSourceSplit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicSourceSplit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicSourceSplit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrors(value: js.Array[Status]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricUpdates(value: js.Array[MetricUpdate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricUpdates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricUpdates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgress(value: ApproximateProgress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportIndex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportedProgress(value: ApproximateReportedProgress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportedProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportedProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportedProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestedLeaseDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedLeaseDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestedLeaseDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedLeaseDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceFork(value: SourceFork): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFork")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceFork: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFork")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceOperationResponse(value: SourceOperationResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceOperationResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceOperationResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceOperationResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopPosition(value: Position): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalThrottlerWaitTimeSeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalThrottlerWaitTimeSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalThrottlerWaitTimeSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalThrottlerWaitTimeSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkItemId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workItemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkItemId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workItemId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

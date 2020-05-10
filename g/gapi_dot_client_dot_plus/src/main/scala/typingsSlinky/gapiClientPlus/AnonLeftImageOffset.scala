@@ -4,20 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLeftImageOffset extends js.Object {
   /** The difference between the left position of the cover image and the actual displayed cover image. Only valid for banner layout. */
-  var leftImageOffset: js.UndefOr[Double] = js.undefined
+  var leftImageOffset: js.UndefOr[Double] = js.native
   /** The difference between the top position of the cover image and the actual displayed cover image. Only valid for banner layout. */
-  var topImageOffset: js.UndefOr[Double] = js.undefined
+  var topImageOffset: js.UndefOr[Double] = js.native
 }
 
 object AnonLeftImageOffset {
   @scala.inline
-  def apply(leftImageOffset: Int | Double = null, topImageOffset: Int | Double = null): AnonLeftImageOffset = {
+  def apply(): AnonLeftImageOffset = {
     val __obj = js.Dynamic.literal()
-    if (leftImageOffset != null) __obj.updateDynamic("leftImageOffset")(leftImageOffset.asInstanceOf[js.Any])
-    if (topImageOffset != null) __obj.updateDynamic("topImageOffset")(topImageOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonLeftImageOffset]
   }
+  @scala.inline
+  implicit class AnonLeftImageOffsetOps[Self <: AnonLeftImageOffset] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLeftImageOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftImageOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeftImageOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftImageOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopImageOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topImageOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopImageOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topImageOffset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

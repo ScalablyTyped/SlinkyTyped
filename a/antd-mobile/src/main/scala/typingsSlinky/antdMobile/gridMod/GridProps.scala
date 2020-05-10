@@ -1,54 +1,106 @@
 package typingsSlinky.antdMobile.gridMod
 
-import slinky.core.facade.ReactElement
-import typingsSlinky.antdMobile.gridPropsTypeMod.DataItem
 import typingsSlinky.antdMobile.gridPropsTypeMod.GridPropsType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridProps extends GridPropsType {
-  var activeClassName: js.UndefOr[String] = js.undefined
-  var activeStyle: js.UndefOr[Boolean | CSSProperties] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var itemStyle: js.UndefOr[CSSProperties] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var square: js.UndefOr[Boolean] = js.undefined
+  var activeClassName: js.UndefOr[String] = js.native
+  var activeStyle: js.UndefOr[Boolean | CSSProperties] = js.native
+  var className: js.UndefOr[String] = js.native
+  var itemStyle: js.UndefOr[CSSProperties] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var square: js.UndefOr[Boolean] = js.native
 }
 
 object GridProps {
   @scala.inline
-  def apply(
-    activeClassName: String = null,
-    activeStyle: Boolean | CSSProperties = null,
-    carouselMaxRow: Int | Double = null,
-    className: String = null,
-    columnNum: Int | Double = null,
-    data: js.Array[js.UndefOr[DataItem]] = null,
-    hasLine: js.UndefOr[Boolean] = js.undefined,
-    isCarousel: js.UndefOr[Boolean] = js.undefined,
-    itemStyle: CSSProperties = null,
-    onClick: (/* dataItem */ js.UndefOr[DataItem], /* itemIndex */ Double) => Unit = null,
-    prefixCls: String = null,
-    renderItem: (/* dataItem */ js.UndefOr[DataItem], /* itemIndex */ Double) => ReactElement = null,
-    square: js.UndefOr[Boolean] = js.undefined
-  ): GridProps = {
+  def apply(): GridProps = {
     val __obj = js.Dynamic.literal()
-    if (activeClassName != null) __obj.updateDynamic("activeClassName")(activeClassName.asInstanceOf[js.Any])
-    if (activeStyle != null) __obj.updateDynamic("activeStyle")(activeStyle.asInstanceOf[js.Any])
-    if (carouselMaxRow != null) __obj.updateDynamic("carouselMaxRow")(carouselMaxRow.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (columnNum != null) __obj.updateDynamic("columnNum")(columnNum.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasLine)) __obj.updateDynamic("hasLine")(hasLine.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCarousel)) __obj.updateDynamic("isCarousel")(isCarousel.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (renderItem != null) __obj.updateDynamic("renderItem")(js.Any.fromFunction2(renderItem))
-    if (!js.isUndefined(square)) __obj.updateDynamic("square")(square.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridProps]
   }
+  @scala.inline
+  implicit class GridPropsOps[Self <: GridProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActiveStyle(value: Boolean | CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSquare(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("square")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSquare: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("square")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.webix.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
 import typingsSlinky.webix.webix.ui.baseview
 import scala.scalajs.js
 import scala.scalajs.js.`|`

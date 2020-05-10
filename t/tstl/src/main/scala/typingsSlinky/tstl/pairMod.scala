@@ -20,24 +20,6 @@ object pairMod extends js.Object {
       * @param second The second element.
       */
     def this(first: First, second: Second) = this()
-    /**
-      * The first element.
-      */
-    /* CompleteClass */
-    override var first: First = js.native
-    /**
-      * The second element.
-      */
-    /* CompleteClass */
-    override var second: Second = js.native
-    /**
-      * Test whether less than some object.
-      *
-      * @param obj The object to compare.
-      * @return Whether less or not.
-      */
-    /* CompleteClass */
-    override def less(obj: Pair[First, Second]): Boolean = js.native
   }
   
   @JSName("make_pair")

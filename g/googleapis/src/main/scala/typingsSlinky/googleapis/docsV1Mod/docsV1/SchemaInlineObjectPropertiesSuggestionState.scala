@@ -20,10 +20,29 @@ trait SchemaInlineObjectPropertiesSuggestionState extends js.Object {
 
 object SchemaInlineObjectPropertiesSuggestionState {
   @scala.inline
-  def apply(embeddedObjectSuggestionState: SchemaEmbeddedObjectSuggestionState = null): SchemaInlineObjectPropertiesSuggestionState = {
+  def apply(): SchemaInlineObjectPropertiesSuggestionState = {
     val __obj = js.Dynamic.literal()
-    if (embeddedObjectSuggestionState != null) __obj.updateDynamic("embeddedObjectSuggestionState")(embeddedObjectSuggestionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInlineObjectPropertiesSuggestionState]
   }
+  @scala.inline
+  implicit class SchemaInlineObjectPropertiesSuggestionStateOps[Self <: SchemaInlineObjectPropertiesSuggestionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmbeddedObjectSuggestionState(value: SchemaEmbeddedObjectSuggestionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedObjectSuggestionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbeddedObjectSuggestionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embeddedObjectSuggestionState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,33 +1,35 @@
 package typingsSlinky.sipJs.referrerDelegateMod
 
-import typingsSlinky.sipJs.incomingResponseMod.IncomingResponse
 import typingsSlinky.sipJs.notificationMod.Notification
 import typingsSlinky.sipJs.outgoingRequestMod.OutgoingRequestDelegate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReferrerDelegate extends OutgoingRequestDelegate {
-  def onNotify(notification: Notification): Unit
+  def onNotify(notification: Notification): Unit = js.native
 }
 
 object ReferrerDelegate {
   @scala.inline
-  def apply(
-    onNotify: Notification => Unit,
-    onAccept: /* response */ IncomingResponse => Unit = null,
-    onProgress: /* response */ IncomingResponse => Unit = null,
-    onRedirect: /* response */ IncomingResponse => Unit = null,
-    onReject: /* response */ IncomingResponse => Unit = null,
-    onTrying: /* response */ IncomingResponse => Unit = null
-  ): ReferrerDelegate = {
+  def apply(onNotify: Notification => Unit): ReferrerDelegate = {
     val __obj = js.Dynamic.literal(onNotify = js.Any.fromFunction1(onNotify))
-    if (onAccept != null) __obj.updateDynamic("onAccept")(js.Any.fromFunction1(onAccept))
-    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
-    if (onRedirect != null) __obj.updateDynamic("onRedirect")(js.Any.fromFunction1(onRedirect))
-    if (onReject != null) __obj.updateDynamic("onReject")(js.Any.fromFunction1(onReject))
-    if (onTrying != null) __obj.updateDynamic("onTrying")(js.Any.fromFunction1(onTrying))
     __obj.asInstanceOf[ReferrerDelegate]
   }
+  @scala.inline
+  implicit class ReferrerDelegateOps[Self <: ReferrerDelegate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnNotify(value: Notification => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNotify")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

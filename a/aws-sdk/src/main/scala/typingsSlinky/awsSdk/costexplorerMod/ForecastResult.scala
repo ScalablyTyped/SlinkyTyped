@@ -26,18 +26,65 @@ trait ForecastResult extends js.Object {
 
 object ForecastResult {
   @scala.inline
-  def apply(
-    MeanValue: GenericString = null,
-    PredictionIntervalLowerBound: GenericString = null,
-    PredictionIntervalUpperBound: GenericString = null,
-    TimePeriod: DateInterval = null
-  ): ForecastResult = {
+  def apply(): ForecastResult = {
     val __obj = js.Dynamic.literal()
-    if (MeanValue != null) __obj.updateDynamic("MeanValue")(MeanValue.asInstanceOf[js.Any])
-    if (PredictionIntervalLowerBound != null) __obj.updateDynamic("PredictionIntervalLowerBound")(PredictionIntervalLowerBound.asInstanceOf[js.Any])
-    if (PredictionIntervalUpperBound != null) __obj.updateDynamic("PredictionIntervalUpperBound")(PredictionIntervalUpperBound.asInstanceOf[js.Any])
-    if (TimePeriod != null) __obj.updateDynamic("TimePeriod")(TimePeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForecastResult]
   }
+  @scala.inline
+  implicit class ForecastResultOps[Self <: ForecastResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMeanValue(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MeanValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeanValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MeanValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredictionIntervalLowerBound(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictionIntervalLowerBound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredictionIntervalLowerBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictionIntervalLowerBound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredictionIntervalUpperBound(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictionIntervalUpperBound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredictionIntervalUpperBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictionIntervalUpperBound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimePeriod(value: DateInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimePeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimePeriod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

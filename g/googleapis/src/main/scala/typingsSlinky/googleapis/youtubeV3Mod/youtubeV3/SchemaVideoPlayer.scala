@@ -22,12 +22,53 @@ trait SchemaVideoPlayer extends js.Object {
 
 object SchemaVideoPlayer {
   @scala.inline
-  def apply(embedHeight: String = null, embedHtml: String = null, embedWidth: String = null): SchemaVideoPlayer = {
+  def apply(): SchemaVideoPlayer = {
     val __obj = js.Dynamic.literal()
-    if (embedHeight != null) __obj.updateDynamic("embedHeight")(embedHeight.asInstanceOf[js.Any])
-    if (embedHtml != null) __obj.updateDynamic("embedHtml")(embedHtml.asInstanceOf[js.Any])
-    if (embedWidth != null) __obj.updateDynamic("embedWidth")(embedWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaVideoPlayer]
   }
+  @scala.inline
+  implicit class SchemaVideoPlayerOps[Self <: SchemaVideoPlayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmbedHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embedHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbedHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embedHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmbedHtml(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embedHtml")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbedHtml: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embedHtml")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmbedWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embedWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmbedWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embedWidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

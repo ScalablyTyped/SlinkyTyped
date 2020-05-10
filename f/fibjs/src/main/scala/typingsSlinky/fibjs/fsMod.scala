@@ -1,8 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.fibjs.fibjsNumbers.`0`
-import typingsSlinky.fibjs.fibjsNumbers.`1`
-import typingsSlinky.fibjs.fibjsNumbers.`2`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +12,9 @@ import scala.scalajs.js.annotation._
 @JSImport("fs", JSImport.Namespace)
 @js.native
 object fsMod extends js.Object {
-  val SEEK_CUR: `1` = js.native
-  val SEEK_END: `2` = js.native
-  val SEEK_SET: `0` = js.native
+  val SEEK_CUR: /* 1 */ Double = js.native
+  val SEEK_END: /* 2 */ Double = js.native
+  val SEEK_SET: /* 0 */ Double = js.native
   val constants: js.Object = js.native
   def access(path: String): Unit = js.native
   def access(path: String, mode: Double): Unit = js.native

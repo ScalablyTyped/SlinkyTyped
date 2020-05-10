@@ -13,12 +13,10 @@ trait AlignYType extends js.Object
 
 object AlignYType {
   @scala.inline
-  def bottom: typingsSlinky.bizcharts.bizchartsStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.bizcharts.bizchartsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def middle: typingsSlinky.bizcharts.bizchartsStrings.middle = "middle".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.bizcharts.bizchartsStrings.middle = this.cast("middle")
-  @scala.inline
-  def top: typingsSlinky.bizcharts.bizchartsStrings.top = this.cast("top")
+  def top: typingsSlinky.bizcharts.bizchartsStrings.top = "top".asInstanceOf[typingsSlinky.bizcharts.bizchartsStrings.top]
 }
 

@@ -16,9 +16,9 @@ object mod extends js.Object {
     * @param {number} [inputLength=inputBuffer.byteLength]
     * @returns {string}
     */
-  def bufferToHexCodes(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer): String = js.native
-  def bufferToHexCodes(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer, inputOffset: Double): String = js.native
-  def bufferToHexCodes(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): String = js.native
+  def bufferToHexCodes(inputBuffer: js.typedarray.ArrayBuffer): String = js.native
+  def bufferToHexCodes(inputBuffer: js.typedarray.ArrayBuffer, inputOffset: Double): String = js.native
+  def bufferToHexCodes(inputBuffer: js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): String = js.native
   /**
     * Check input "ArrayBuffer" for common functions
     * @param {LocalBaseBlock} baseBlock
@@ -29,7 +29,7 @@ object mod extends js.Object {
     */
   def checkBufferParams(
     baseBlock: js.Any,
-    inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer,
+    inputBuffer: js.typedarray.ArrayBuffer,
     inputOffset: Double,
     inputLength: Double
   ): Boolean = js.native
@@ -63,10 +63,7 @@ object mod extends js.Object {
     * @param {!ArrayBuffer} inputBuffer2
     * @returns {boolean}
     */
-  def isEqualBuffer(
-    inputBuffer1: scala.scalajs.js.typedarray.ArrayBuffer,
-    inputBuffer2: scala.scalajs.js.typedarray.ArrayBuffer
-  ): Boolean = js.native
+  def isEqualBuffer(inputBuffer1: js.typedarray.ArrayBuffer, inputBuffer2: js.typedarray.ArrayBuffer): Boolean = js.native
   /**
     * Get nearest to input length power of 2
     * @param {number} length Current length of existing array
@@ -80,7 +77,7 @@ object mod extends js.Object {
     * @returns {string}
     */
   def padNumber(inputNumber: Double, fullLength: Double): String = js.native
-  def stringToArrayBuffer(str: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def stringToArrayBuffer(str: String): js.typedarray.ArrayBuffer = js.native
   /**
     * Encode string into BASE64 (or "base64url")
     * @param {string} input
@@ -96,7 +93,7 @@ object mod extends js.Object {
     * @param {...ArrayBuffer[]} buffers First ArrayBuffer (first part of concatenated array)
     * @returns {ArrayBuffer}
     */
-  def utilConcatBuf(buf: scala.scalajs.js.typedarray.ArrayBuffer*): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def utilConcatBuf(buf: js.typedarray.ArrayBuffer*): js.typedarray.ArrayBuffer = js.native
   /**
     * Decoding of "two complement" values
     * The function must be called in scope of instance of "hexBlock" class ("valueHex" and "warnings" properties must be present)
@@ -108,14 +105,14 @@ object mod extends js.Object {
     * @param {number} value Value to encode
     * @returns {ArrayBuffer}
     */
-  def utilEncodeTC(value: Double): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def utilEncodeTC(value: Double): js.typedarray.ArrayBuffer = js.native
   /**
     * Convert number from 2^base to 2^10
     * @param {Uint8Array} inputBuffer
     * @param {number} inputBase
     * @returns {number}
     */
-  def utilFromBase(inputBuffer: scala.scalajs.js.typedarray.Uint8Array, inputBase: Double): Double = js.native
+  def utilFromBase(inputBuffer: js.typedarray.Uint8Array, inputBase: Double): Double = js.native
   /**
     * Convert number from 2^10 to 2^base
     * @param {!number} value The number to convert
@@ -123,7 +120,7 @@ object mod extends js.Object {
     * @param {number} [reserved=0] Pre-defined number of bytes in output array (-1 = limited by function itself)
     * @returns {ArrayBuffer}
     */
-  def utilToBase(value: Double, base: Double): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def utilToBase(value: Double, base: Double, reserved: Double): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def utilToBase(value: Double, base: Double): js.typedarray.ArrayBuffer = js.native
+  def utilToBase(value: Double, base: Double, reserved: Double): js.typedarray.ArrayBuffer = js.native
 }
 

@@ -1,11 +1,9 @@
 package typingsSlinky.reactIntl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.intlMessageformat.mod.PrimitiveType
 import typingsSlinky.reactIntl.mod.Props3
 import typingsSlinky.std.Record
@@ -13,31 +11,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormattedHTMLMessage
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactIntl.mod.FormattedHTMLMessage] {
+object FormattedHTMLMessage {
   @JSImport("react-intl", "FormattedHTMLMessage")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    defaultMessage: String = null,
-    description: String | js.Object = null,
-    id: String | Double = null,
-    tagName: ReactElement = null,
-    values: Record[String, PrimitiveType] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactIntl.mod.FormattedHTMLMessage] = {
-    val __obj = js.Dynamic.literal()
-    if (defaultMessage != null) __obj.updateDynamic("defaultMessage")(defaultMessage.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (tagName != null) __obj.updateDynamic("tagName")(tagName.asInstanceOf[js.Any])
-    if (values != null) __obj.updateDynamic("values")(values.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactIntl.mod.FormattedHTMLMessage] {
+    @scala.inline
+    def defaultMessage(value: String): this.type = set("defaultMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def description(value: String | js.Object): this.type = set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String | Double): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagNameFunctionComponent(value: ReactComponentClass[_]): this.type = set("tagName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagNameComponentClass(value: ReactComponentClass[_]): this.type = set("tagName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagName(value: ReactElement): this.type = set("tagName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def values(value: Record[String, PrimitiveType]): this.type = set("values", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactIntl.mod.FormattedHTMLMessage] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactIntl.mod.FormattedHTMLMessage](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = Props3[Record[String, PrimitiveType]]
+  
+  def withProps(p: Props3[Record[String, PrimitiveType]]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FormattedHTMLMessage.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -8,27 +8,75 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<jsreport-core.jsreport-core.Template> */
+@js.native
 trait PartialTemplate extends js.Object {
-  var content: js.UndefOr[String] = js.undefined
-  var engine: js.UndefOr[Engine | String] = js.undefined
-  var helpers: js.UndefOr[Helpers] = js.undefined
-  var recipe: js.UndefOr[Recipe | String] = js.undefined
+  var content: js.UndefOr[String] = js.native
+  var engine: js.UndefOr[Engine | String] = js.native
+  var helpers: js.UndefOr[Helpers] = js.native
+  var recipe: js.UndefOr[Recipe | String] = js.native
 }
 
 object PartialTemplate {
   @scala.inline
-  def apply(
-    content: String = null,
-    engine: Engine | String = null,
-    helpers: Helpers = null,
-    recipe: Recipe | String = null
-  ): PartialTemplate = {
+  def apply(): PartialTemplate = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (engine != null) __obj.updateDynamic("engine")(engine.asInstanceOf[js.Any])
-    if (helpers != null) __obj.updateDynamic("helpers")(helpers.asInstanceOf[js.Any])
-    if (recipe != null) __obj.updateDynamic("recipe")(recipe.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialTemplate]
   }
+  @scala.inline
+  implicit class PartialTemplateOps[Self <: PartialTemplate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngine(value: Engine | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHelpers(value: Helpers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("helpers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHelpers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("helpers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipe(value: Recipe | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipe")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

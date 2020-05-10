@@ -18,10 +18,35 @@ trait CreateVoiceConnectorGroupRequest extends js.Object {
 
 object CreateVoiceConnectorGroupRequest {
   @scala.inline
-  def apply(Name: VoiceConnectorGroupName, VoiceConnectorItems: VoiceConnectorItemList = null): CreateVoiceConnectorGroupRequest = {
+  def apply(Name: VoiceConnectorGroupName): CreateVoiceConnectorGroupRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (VoiceConnectorItems != null) __obj.updateDynamic("VoiceConnectorItems")(VoiceConnectorItems.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVoiceConnectorGroupRequest]
   }
+  @scala.inline
+  implicit class CreateVoiceConnectorGroupRequestOps[Self <: CreateVoiceConnectorGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: VoiceConnectorGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVoiceConnectorItems(value: VoiceConnectorItemList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceConnectorItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVoiceConnectorItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VoiceConnectorItems")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

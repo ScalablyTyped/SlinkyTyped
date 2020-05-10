@@ -21,26 +21,24 @@ trait StaticKeys extends js.Object
 
 object StaticKeys {
   @scala.inline
-  def CreationDate: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CreationDate = this.cast("CreationDate")
+  def CreationDate: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CreationDate = "CreationDate".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CreationDate]
   @scala.inline
-  def Id: Id_ = this.cast("Id")
+  def Id: Id_ = "Id".asInstanceOf[Id_]
   @scala.inline
-  def KYCLevel: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.KYCLevel = this.cast("KYCLevel")
+  def KYCLevel: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.KYCLevel = "KYCLevel".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.KYCLevel]
   @scala.inline
-  def LegalRepresentativeProofOfIdentity: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeProofOfIdentity = this.cast("LegalRepresentativeProofOfIdentity")
+  def LegalRepresentativeProofOfIdentity: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeProofOfIdentity = "LegalRepresentativeProofOfIdentity".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LegalRepresentativeProofOfIdentity]
   @scala.inline
-  def PersonType: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.PersonType = this.cast("PersonType")
+  def PersonType: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.PersonType = "PersonType".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.PersonType]
   @scala.inline
-  def ProofOfAddress: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ProofOfAddress = this.cast("ProofOfAddress")
+  def ProofOfAddress: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ProofOfAddress = "ProofOfAddress".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ProofOfAddress]
   @scala.inline
-  def ProofOfIdentity: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ProofOfIdentity = this.cast("ProofOfIdentity")
+  def ProofOfIdentity: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ProofOfIdentity = "ProofOfIdentity".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ProofOfIdentity]
   @scala.inline
-  def ProofOfRegistration: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ProofOfRegistration = this.cast("ProofOfRegistration")
+  def ProofOfRegistration: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ProofOfRegistration = "ProofOfRegistration".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ProofOfRegistration]
   @scala.inline
-  def ShareholderDeclaration: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ShareholderDeclaration = this.cast("ShareholderDeclaration")
+  def ShareholderDeclaration: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ShareholderDeclaration = "ShareholderDeclaration".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.ShareholderDeclaration]
   @scala.inline
-  def Statute: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.Statute = this.cast("Statute")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Statute: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.Statute = "Statute".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.Statute]
 }
 

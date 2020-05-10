@@ -1,125 +1,134 @@
 package typingsSlinky.googleCloudPaginator.mod
 
-import typingsSlinky.node.AnonChunk
-import typingsSlinky.node.streamMod.Transform
-import typingsSlinky.node.streamMod.TransformCallback
 import typingsSlinky.node.streamMod.TransformOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParsedArguments extends TransformOptions {
   /**
     * Auto-pagination enabled.
     */
-  var autoPaginate: js.UndefOr[Boolean] = js.undefined
+  var autoPaginate: js.UndefOr[Boolean] = js.native
   /**
     * Callback function.
     */
-  var callback: js.UndefOr[js.Function] = js.undefined
+  var callback: js.UndefOr[js.Function] = js.native
   /**
     * Maximum API calls to make.
     */
-  var maxApiCalls: js.UndefOr[Double] = js.undefined
+  var maxApiCalls: js.UndefOr[Double] = js.native
   /**
     * Maximum results to return.
     */
-  var maxResults: js.UndefOr[Double] = js.undefined
-  var pageSize: js.UndefOr[Double] = js.undefined
+  var maxResults: js.UndefOr[Double] = js.native
+  var pageSize: js.UndefOr[Double] = js.native
   /**
     * Query object. This is most commonly an object, but to make the API more
     * simple, it can also be a string in some places.
     */
-  var query: js.UndefOr[ParsedArguments] = js.undefined
-  var streamOptions: js.UndefOr[ParsedArguments] = js.undefined
+  var query: js.UndefOr[ParsedArguments] = js.native
+  var streamOptions: js.UndefOr[ParsedArguments] = js.native
 }
 
 object ParsedArguments {
   @scala.inline
-  def apply(
-    allowHalfOpen: js.UndefOr[Boolean] = js.undefined,
-    autoDestroy: js.UndefOr[Boolean] = js.undefined,
-    autoPaginate: js.UndefOr[Boolean] = js.undefined,
-    callback: js.Function = null,
-    decodeStrings: js.UndefOr[Boolean] = js.undefined,
-    defaultEncoding: String = null,
-    destroy: js.ThisFunction2[
-      /* this */ Transform, 
-      /* error */ js.Error | Null, 
-      /* callback */ js.Function1[/* error */ js.Error | Null, Unit], 
-      Unit
-    ] = null,
-    emitClose: js.UndefOr[Boolean] = js.undefined,
-    encoding: String = null,
-    `final`: js.ThisFunction1[
-      /* this */ Transform, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null,
-    flush: js.ThisFunction1[/* this */ Transform, /* callback */ TransformCallback, Unit] = null,
-    highWaterMark: Int | Double = null,
-    maxApiCalls: Int | Double = null,
-    maxResults: Int | Double = null,
-    objectMode: js.UndefOr[Boolean] = js.undefined,
-    pageSize: Int | Double = null,
-    query: ParsedArguments = null,
-    read: js.ThisFunction1[/* this */ Transform, /* size */ Double, Unit] = null,
-    readableHighWaterMark: Int | Double = null,
-    readableObjectMode: js.UndefOr[Boolean] = js.undefined,
-    streamOptions: ParsedArguments = null,
-    transform: js.ThisFunction3[
-      /* this */ Transform, 
-      /* chunk */ js.Any, 
-      /* encoding */ String, 
-      /* callback */ TransformCallback, 
-      Unit
-    ] = null,
-    writableCorked: Int | Double = null,
-    writableHighWaterMark: Int | Double = null,
-    writableObjectMode: js.UndefOr[Boolean] = js.undefined,
-    write: js.ThisFunction3[
-      /* this */ Transform, 
-      /* chunk */ js.Any, 
-      /* encoding */ String, 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null,
-    writev: js.ThisFunction2[
-      /* this */ Transform, 
-      /* chunks */ js.Array[AnonChunk], 
-      /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
-      Unit
-    ] = null
-  ): ParsedArguments = {
+  def apply(): ParsedArguments = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowHalfOpen)) __obj.updateDynamic("allowHalfOpen")(allowHalfOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoDestroy)) __obj.updateDynamic("autoDestroy")(autoDestroy.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoPaginate)) __obj.updateDynamic("autoPaginate")(autoPaginate.asInstanceOf[js.Any])
-    if (callback != null) __obj.updateDynamic("callback")(callback.asInstanceOf[js.Any])
-    if (!js.isUndefined(decodeStrings)) __obj.updateDynamic("decodeStrings")(decodeStrings.asInstanceOf[js.Any])
-    if (defaultEncoding != null) __obj.updateDynamic("defaultEncoding")(defaultEncoding.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(destroy.asInstanceOf[js.Any])
-    if (!js.isUndefined(emitClose)) __obj.updateDynamic("emitClose")(emitClose.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
-    if (`final` != null) __obj.updateDynamic("final")(`final`.asInstanceOf[js.Any])
-    if (flush != null) __obj.updateDynamic("flush")(flush.asInstanceOf[js.Any])
-    if (highWaterMark != null) __obj.updateDynamic("highWaterMark")(highWaterMark.asInstanceOf[js.Any])
-    if (maxApiCalls != null) __obj.updateDynamic("maxApiCalls")(maxApiCalls.asInstanceOf[js.Any])
-    if (maxResults != null) __obj.updateDynamic("maxResults")(maxResults.asInstanceOf[js.Any])
-    if (!js.isUndefined(objectMode)) __obj.updateDynamic("objectMode")(objectMode.asInstanceOf[js.Any])
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
-    if (readableHighWaterMark != null) __obj.updateDynamic("readableHighWaterMark")(readableHighWaterMark.asInstanceOf[js.Any])
-    if (!js.isUndefined(readableObjectMode)) __obj.updateDynamic("readableObjectMode")(readableObjectMode.asInstanceOf[js.Any])
-    if (streamOptions != null) __obj.updateDynamic("streamOptions")(streamOptions.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
-    if (writableCorked != null) __obj.updateDynamic("writableCorked")(writableCorked.asInstanceOf[js.Any])
-    if (writableHighWaterMark != null) __obj.updateDynamic("writableHighWaterMark")(writableHighWaterMark.asInstanceOf[js.Any])
-    if (!js.isUndefined(writableObjectMode)) __obj.updateDynamic("writableObjectMode")(writableObjectMode.asInstanceOf[js.Any])
-    if (write != null) __obj.updateDynamic("write")(write.asInstanceOf[js.Any])
-    if (writev != null) __obj.updateDynamic("writev")(writev.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParsedArguments]
   }
+  @scala.inline
+  implicit class ParsedArgumentsOps[Self <: ParsedArguments] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoPaginate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPaginate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoPaginate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoPaginate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallback(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxApiCalls(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxApiCalls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxApiCalls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxApiCalls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: ParsedArguments): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamOptions(value: ParsedArguments): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

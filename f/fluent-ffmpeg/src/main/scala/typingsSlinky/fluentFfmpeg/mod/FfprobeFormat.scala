@@ -5,51 +5,167 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FfprobeFormat
   extends /* key */ StringDictionary[js.Any] {
-  var bit_rate: js.UndefOr[Double] = js.undefined
-  var duration: js.UndefOr[Double] = js.undefined
-  var filename: js.UndefOr[String] = js.undefined
-  var format_long_name: js.UndefOr[String] = js.undefined
-  var format_name: js.UndefOr[String] = js.undefined
-  var nb_programs: js.UndefOr[Double] = js.undefined
-  var nb_streams: js.UndefOr[Double] = js.undefined
-  var probe_score: js.UndefOr[Double] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var start_time: js.UndefOr[Double] = js.undefined
-  var tags: js.UndefOr[js.Array[_]] = js.undefined
+  var bit_rate: js.UndefOr[Double] = js.native
+  var duration: js.UndefOr[Double] = js.native
+  var filename: js.UndefOr[String] = js.native
+  var format_long_name: js.UndefOr[String] = js.native
+  var format_name: js.UndefOr[String] = js.native
+  var nb_programs: js.UndefOr[Double] = js.native
+  var nb_streams: js.UndefOr[Double] = js.native
+  var probe_score: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double] = js.native
+  var start_time: js.UndefOr[Double] = js.native
+  var tags: js.UndefOr[js.Array[_]] = js.native
 }
 
 object FfprobeFormat {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    bit_rate: Int | Double = null,
-    duration: Int | Double = null,
-    filename: String = null,
-    format_long_name: String = null,
-    format_name: String = null,
-    nb_programs: Int | Double = null,
-    nb_streams: Int | Double = null,
-    probe_score: Int | Double = null,
-    size: Int | Double = null,
-    start_time: Int | Double = null,
-    tags: js.Array[_] = null
-  ): FfprobeFormat = {
+  def apply(): FfprobeFormat = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (bit_rate != null) __obj.updateDynamic("bit_rate")(bit_rate.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (format_long_name != null) __obj.updateDynamic("format_long_name")(format_long_name.asInstanceOf[js.Any])
-    if (format_name != null) __obj.updateDynamic("format_name")(format_name.asInstanceOf[js.Any])
-    if (nb_programs != null) __obj.updateDynamic("nb_programs")(nb_programs.asInstanceOf[js.Any])
-    if (nb_streams != null) __obj.updateDynamic("nb_streams")(nb_streams.asInstanceOf[js.Any])
-    if (probe_score != null) __obj.updateDynamic("probe_score")(probe_score.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (start_time != null) __obj.updateDynamic("start_time")(start_time.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[FfprobeFormat]
   }
+  @scala.inline
+  implicit class FfprobeFormatOps[Self <: FfprobeFormat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBit_rate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bit_rate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBit_rate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bit_rate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilename(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilename: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_long_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_long_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_long_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_long_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNb_programs(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nb_programs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNb_programs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nb_programs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNb_streams(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nb_streams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNb_streams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nb_streams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProbe_score(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("probe_score")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProbe_score: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("probe_score")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart_time(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart_time: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start_time")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

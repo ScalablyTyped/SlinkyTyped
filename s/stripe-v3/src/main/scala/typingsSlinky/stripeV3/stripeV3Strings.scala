@@ -535,6 +535,9 @@ object stripeV3Strings {
   sealed trait validated extends statusType
   
   @js.native
+  sealed trait validation_error extends ErrorType
+  
+  @js.native
   sealed trait van_lanschot extends js.Object
   
   @js.native
@@ -559,9 +562,9 @@ object stripeV3Strings {
   sealed trait wechat extends js.Object
   
   @scala.inline
-  def `American Express`: `American Express` = "American Express".asInstanceOf[`American Express`]
+  def `American Express`: `American Express` = ("American Express").asInstanceOf[`American Express`]
   @scala.inline
-  def `Diners Club`: `Diners Club` = "Diners Club".asInstanceOf[`Diners Club`]
+  def `Diners Club`: `Diners Club` = ("Diners Club").asInstanceOf[`Diners Club`]
   @scala.inline
   def Discover: Discover = "Discover".asInstanceOf[Discover]
   @scala.inline
@@ -886,6 +889,8 @@ object stripeV3Strings {
   def use_stripe_sdk: use_stripe_sdk = "use_stripe_sdk".asInstanceOf[use_stripe_sdk]
   @scala.inline
   def validated: validated = "validated".asInstanceOf[validated]
+  @scala.inline
+  def validation_error: validation_error = "validation_error".asInstanceOf[validation_error]
   @scala.inline
   def van_lanschot: van_lanschot = "van_lanschot".asInstanceOf[van_lanschot]
   @scala.inline

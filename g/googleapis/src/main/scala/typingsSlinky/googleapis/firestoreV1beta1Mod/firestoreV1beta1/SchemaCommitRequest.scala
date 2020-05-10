@@ -21,11 +21,41 @@ trait SchemaCommitRequest extends js.Object {
 
 object SchemaCommitRequest {
   @scala.inline
-  def apply(transaction: String = null, writes: js.Array[SchemaWrite] = null): SchemaCommitRequest = {
+  def apply(): SchemaCommitRequest = {
     val __obj = js.Dynamic.literal()
-    if (transaction != null) __obj.updateDynamic("transaction")(transaction.asInstanceOf[js.Any])
-    if (writes != null) __obj.updateDynamic("writes")(writes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCommitRequest]
   }
+  @scala.inline
+  implicit class SchemaCommitRequestOps[Self <: SchemaCommitRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransaction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransaction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrites(value: js.Array[SchemaWrite]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

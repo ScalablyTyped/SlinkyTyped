@@ -5,6 +5,7 @@ import typingsSlinky.express.mod.NextFunction
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.nodeRal.mod.BalanceContextConstructor
 import typingsSlinky.nodeRal.mod.LoggerFactory
 import typingsSlinky.nodeRal.mod.Service
@@ -38,14 +39,14 @@ object mod extends js.Object {
   val Config: typingsSlinky.nodeRal.mod.Config = js.native
   val Logger: LoggerFactory = js.native
   def Middleware(): js.Function3[
-    /* req */ Request_[ParamsDictionary], 
-    /* resp */ Response_, 
+    /* req */ Request_[ParamsDictionary, _, _, Query], 
+    /* resp */ Response_[_], 
     /* next */ NextFunction, 
     Unit
   ] = js.native
   def Middleware(options: Service): js.Function3[
-    /* req */ Request_[ParamsDictionary], 
-    /* resp */ Response_, 
+    /* req */ Request_[ParamsDictionary, _, _, Query], 
+    /* resp */ Response_[_], 
     /* next */ NextFunction, 
     Unit
   ] = js.native

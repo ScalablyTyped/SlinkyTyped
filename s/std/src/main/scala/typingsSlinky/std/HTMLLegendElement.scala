@@ -18,5 +18,6 @@ trait HTMLLegendElement extends HTMLElement {
 
 @JSGlobal("HTMLLegendElement")
 @js.native
-object HTMLLegendElement extends Instantiable0[HTMLLegendElement]
+object HTMLLegendElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLLegendElement]
 

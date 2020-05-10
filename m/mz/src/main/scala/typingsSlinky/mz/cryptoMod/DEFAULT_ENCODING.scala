@@ -1,0 +1,12 @@
+package typingsSlinky.mz.cryptoMod
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** @deprecated since v10.0.0 */
+@JSImport("mz/crypto", "DEFAULT_ENCODING")
+@js.native
+object DEFAULT_ENCODING extends TopLevel[String]
+

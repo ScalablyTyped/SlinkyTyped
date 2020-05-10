@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.protractor.browserMod.ElementHelper
 import typingsSlinky.protractor.browserMod.ProtractorBrowser
 import typingsSlinky.protractor.locatorsMod.Locator
-import typingsSlinky.seleniumWebdriver.mod.IWebElementId
 import typingsSlinky.seleniumWebdriver.mod.WebElement
 import typingsSlinky.seleniumWebdriver.mod.WebElementPromise
 import scala.scalajs.js
@@ -764,20 +763,7 @@ object elementMod extends js.Object {
   @js.native
   class WebdriverWebElement ()
     extends WebElement
-       with /* key */ StringDictionary[js.Any] {
-    /**
-      * Returns either this instance's serialized represention, if immediately
-      * available, or a promise for its serialized representation. This function is
-      * conceptually equivalent to objects that have a {@code toJSON()} property,
-      * except the serialize() result may be a promise or an object containing a
-      * promise (which are not directly JSON friendly).
-      *
-      * @return {!(T|IThenable.<!T>)} This instance's serialized wire format.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def serialize(): IWebElementId | js.Promise[IWebElementId] = js.native
-  }
+       with /* key */ StringDictionary[js.Any]
   
   @JSName("build$")
   var build: js.Function2[

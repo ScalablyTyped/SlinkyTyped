@@ -1,7 +1,6 @@
 package typingsSlinky.ronomonCryptoAsync.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ object hash extends js.Object {
   def apply(
     algorithm: String,
     source: Buffer,
-    cb: js.Function2[/* error */ js.UndefOr[Error], /* hash */ Buffer, Unit]
+    cb: js.Function2[/* error */ js.UndefOr[js.Error], /* hash */ Buffer, Unit]
   ): Unit = js.native
   def apply(
     algorithm: String,

@@ -18,14 +18,41 @@ trait AutoMLJobConfig extends js.Object {
 
 object AutoMLJobConfig {
   @scala.inline
-  def apply(
-    CompletionCriteria: AutoMLJobCompletionCriteria = null,
-    SecurityConfig: AutoMLSecurityConfig = null
-  ): AutoMLJobConfig = {
+  def apply(): AutoMLJobConfig = {
     val __obj = js.Dynamic.literal()
-    if (CompletionCriteria != null) __obj.updateDynamic("CompletionCriteria")(CompletionCriteria.asInstanceOf[js.Any])
-    if (SecurityConfig != null) __obj.updateDynamic("SecurityConfig")(SecurityConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoMLJobConfig]
   }
+  @scala.inline
+  implicit class AutoMLJobConfigOps[Self <: AutoMLJobConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompletionCriteria(value: AutoMLJobCompletionCriteria): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionCriteria")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletionCriteria: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionCriteria")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityConfig(value: AutoMLSecurityConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,18 +14,65 @@ trait ListDiscoverersRequest extends js.Object {
 
 object ListDiscoverersRequest {
   @scala.inline
-  def apply(
-    DiscovererIdPrefix: string = null,
-    Limit: Int | Double = null,
-    NextToken: string = null,
-    SourceArnPrefix: string = null
-  ): ListDiscoverersRequest = {
+  def apply(): ListDiscoverersRequest = {
     val __obj = js.Dynamic.literal()
-    if (DiscovererIdPrefix != null) __obj.updateDynamic("DiscovererIdPrefix")(DiscovererIdPrefix.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (SourceArnPrefix != null) __obj.updateDynamic("SourceArnPrefix")(SourceArnPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDiscoverersRequest]
   }
+  @scala.inline
+  implicit class ListDiscoverersRequestOps[Self <: ListDiscoverersRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiscovererIdPrefix(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiscovererIdPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiscovererIdPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiscovererIdPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceArnPrefix(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArnPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceArnPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArnPrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

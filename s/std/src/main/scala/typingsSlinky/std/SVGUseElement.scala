@@ -50,11 +50,12 @@ trait SVGUseElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGUseElement")
 @js.native
-object SVGUseElement extends Instantiable0[SVGUseElement]
+object SVGUseElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGUseElement]
 

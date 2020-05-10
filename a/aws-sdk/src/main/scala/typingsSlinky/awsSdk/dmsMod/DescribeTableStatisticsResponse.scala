@@ -22,16 +22,53 @@ trait DescribeTableStatisticsResponse extends js.Object {
 
 object DescribeTableStatisticsResponse {
   @scala.inline
-  def apply(
-    Marker: String = null,
-    ReplicationTaskArn: String = null,
-    TableStatistics: TableStatisticsList = null
-  ): DescribeTableStatisticsResponse = {
+  def apply(): DescribeTableStatisticsResponse = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (ReplicationTaskArn != null) __obj.updateDynamic("ReplicationTaskArn")(ReplicationTaskArn.asInstanceOf[js.Any])
-    if (TableStatistics != null) __obj.updateDynamic("TableStatistics")(TableStatistics.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTableStatisticsResponse]
   }
+  @scala.inline
+  implicit class DescribeTableStatisticsResponseOps[Self <: DescribeTableStatisticsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableStatistics(value: TableStatisticsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableStatistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableStatistics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableStatistics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

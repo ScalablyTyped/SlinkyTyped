@@ -325,8 +325,8 @@ class Font protected () extends js.Object {
   def nameToGlyphIndex(name: String): Double = js.native
   def stringToGlyphs(s: String): js.Array[Glyph] = js.native
   def substitution(font: Font): js.Any = js.native
-  def toArrayBuffer(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def toBuffer(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def toArrayBuffer(): js.typedarray.ArrayBuffer = js.native
+  def toBuffer(): js.typedarray.ArrayBuffer = js.native
   def toTables(): Table = js.native
   def validate(): Unit = js.native
 }

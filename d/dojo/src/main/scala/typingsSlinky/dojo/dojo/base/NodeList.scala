@@ -13,5 +13,6 @@ import scala.scalajs.js.annotation._
   * mouseout(), mouseover(), mouseup(), and submit() methods.
   *
   */
+@js.native
 trait NodeList extends js.Object
 

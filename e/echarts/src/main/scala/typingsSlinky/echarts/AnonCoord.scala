@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCoord extends js.Object {
   /**
     * Coordinates of the starting point or ending point, whose
@@ -46,18 +47,18 @@ trait AnonCoord extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.coord
     */
-  var coord: js.UndefOr[js.Array[_]] = js.undefined
+  var coord: js.UndefOr[js.Array[_]] = js.native
   /**
     * Mark point style.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonEmphasis] = js.undefined
+  var itemStyle: js.UndefOr[AnonEmphasis] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.label
     */
-  var label: js.UndefOr[AnonFontFamily] = js.undefined
+  var label: js.UndefOr[AnonFontFamily] = js.native
   /**
     * Mark point name.
     *
@@ -66,7 +67,7 @@ trait AnonCoord extends js.Object {
     * ''
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.name
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Symbol of .
     *
@@ -106,14 +107,14 @@ trait AnonCoord extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.symbol
     */
-  var symbol: js.UndefOr[String] = js.undefined
+  var symbol: js.UndefOr[String] = js.native
   /**
     * Whether to keep aspect for symbols in the form of `path://`.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.symbolKeepAspect
     */
-  var symbolKeepAspect: js.UndefOr[Boolean] = js.undefined
+  var symbolKeepAspect: js.UndefOr[Boolean] = js.native
   /**
     * Offset of symbol relative to original position.
     * By default, symbol will be put in the center position
@@ -135,7 +136,7 @@ trait AnonCoord extends js.Object {
     * [0, 0]
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.symbolOffset
     */
-  var symbolOffset: js.UndefOr[js.Array[_]] = js.undefined
+  var symbolOffset: js.UndefOr[js.Array[_]] = js.native
   /**
     * Rotate degree of symbol.
     * Note that when `symbol` is set to be `'arrow'` in `markLine`,
@@ -145,7 +146,7 @@ trait AnonCoord extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.symbolRotate
     */
-  var symbolRotate: js.UndefOr[Double] = js.undefined
+  var symbolRotate: js.UndefOr[Double] = js.native
   /**
     * symbol size.
     * It can be set to single numbers like `10`, or use an
@@ -156,7 +157,7 @@ trait AnonCoord extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.symbolSize
     */
-  var symbolSize: js.UndefOr[js.Array[_] | Double] = js.undefined
+  var symbolSize: js.UndefOr[js.Array[_] | Double] = js.native
   /**
     * Special label types, are used to label maximum value,
     * minimum value and so on.
@@ -170,14 +171,14 @@ trait AnonCoord extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.type
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * Label value, which can be ignored.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.value
     */
-  var value: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[Double] = js.native
   /**
     * Works only when
     * [type](https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.type)
@@ -191,7 +192,7 @@ trait AnonCoord extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.valueDim
     */
-  var valueDim: js.UndefOr[String] = js.undefined
+  var valueDim: js.UndefOr[String] = js.native
   /**
     * Available when using
     * [type](https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.type)
@@ -203,59 +204,216 @@ trait AnonCoord extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.valueIndex
     */
-  var valueIndex: js.UndefOr[Double] = js.undefined
+  var valueIndex: js.UndefOr[Double] = js.native
   /**
     * X position according to container, in pixel.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.x
     */
-  var x: js.UndefOr[Double] = js.undefined
+  var x: js.UndefOr[Double] = js.native
   /**
     * Y position according to container, in pixel.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint.data.y
     */
-  var y: js.UndefOr[Double] = js.undefined
+  var y: js.UndefOr[Double] = js.native
 }
 
 object AnonCoord {
   @scala.inline
-  def apply(
-    coord: js.Array[_] = null,
-    itemStyle: AnonEmphasis = null,
-    label: AnonFontFamily = null,
-    name: String = null,
-    symbol: String = null,
-    symbolKeepAspect: js.UndefOr[Boolean] = js.undefined,
-    symbolOffset: js.Array[_] = null,
-    symbolRotate: Int | Double = null,
-    symbolSize: js.Array[_] | Double = null,
-    `type`: String = null,
-    value: Int | Double = null,
-    valueDim: String = null,
-    valueIndex: Int | Double = null,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): AnonCoord = {
+  def apply(): AnonCoord = {
     val __obj = js.Dynamic.literal()
-    if (coord != null) __obj.updateDynamic("coord")(coord.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
-    if (!js.isUndefined(symbolKeepAspect)) __obj.updateDynamic("symbolKeepAspect")(symbolKeepAspect.asInstanceOf[js.Any])
-    if (symbolOffset != null) __obj.updateDynamic("symbolOffset")(symbolOffset.asInstanceOf[js.Any])
-    if (symbolRotate != null) __obj.updateDynamic("symbolRotate")(symbolRotate.asInstanceOf[js.Any])
-    if (symbolSize != null) __obj.updateDynamic("symbolSize")(symbolSize.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueDim != null) __obj.updateDynamic("valueDim")(valueDim.asInstanceOf[js.Any])
-    if (valueIndex != null) __obj.updateDynamic("valueIndex")(valueIndex.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCoord]
   }
+  @scala.inline
+  implicit class AnonCoordOps[Self <: AnonCoord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoord(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coord")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoord: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coord")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: AnonEmphasis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonFontFamily): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolKeepAspect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolKeepAspect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolKeepAspect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolKeepAspect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolOffset(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolRotate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolRotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolRotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbolSize(value: js.Array[_] | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbolSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbolSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueDim(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueDim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueDim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

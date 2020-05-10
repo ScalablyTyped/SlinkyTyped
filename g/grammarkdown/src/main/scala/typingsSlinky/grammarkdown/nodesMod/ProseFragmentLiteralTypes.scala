@@ -9,11 +9,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ P in grammarkdown.grammarkdown/dist/tokens.ProseFragmentLiteralKind ]: grammarkdown.grammarkdown/dist/nodes.ProseFragmentLiteral<P>} */
+@js.native
 trait ProseFragmentLiteralTypes extends js.Object {
-  var `49`: ProseFragmentLiteral[typingsSlinky.grammarkdown.grammarkdownNumbers.`49`]
-  var `50`: ProseFragmentLiteral[typingsSlinky.grammarkdown.grammarkdownNumbers.`50`]
-  var `51`: ProseFragmentLiteral[typingsSlinky.grammarkdown.grammarkdownNumbers.`51`]
-  var `52`: ProseFragmentLiteral[typingsSlinky.grammarkdown.grammarkdownNumbers.`52`]
+  var `49`: ProseFragmentLiteral[typingsSlinky.grammarkdown.grammarkdownNumbers.`49`] = js.native
+  var `50`: ProseFragmentLiteral[typingsSlinky.grammarkdown.grammarkdownNumbers.`50`] = js.native
+  var `51`: ProseFragmentLiteral[typingsSlinky.grammarkdown.grammarkdownNumbers.`51`] = js.native
+  var `52`: ProseFragmentLiteral[typingsSlinky.grammarkdown.grammarkdownNumbers.`52`] = js.native
 }
 
 object ProseFragmentLiteralTypes {
@@ -31,5 +32,37 @@ object ProseFragmentLiteralTypes {
     __obj.updateDynamic("52")(`52`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProseFragmentLiteralTypes]
   }
+  @scala.inline
+  implicit class ProseFragmentLiteralTypesOps[Self <: ProseFragmentLiteralTypes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with49(value: ProseFragmentLiteral[`49`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("49")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with50(value: ProseFragmentLiteral[`50`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("50")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with51(value: ProseFragmentLiteral[`51`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("51")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with52(value: ProseFragmentLiteral[`52`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("52")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

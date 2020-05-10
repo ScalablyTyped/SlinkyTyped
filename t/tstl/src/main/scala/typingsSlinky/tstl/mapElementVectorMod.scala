@@ -46,7 +46,7 @@ object mapElementVectorMod extends js.Object {
       *
       * @author Jeongho Nam - https://github.com/samchon
       */
-    /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+    /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.tstl.itreemapMod.ITreeMap.Iterator because var conflicts: value. Inlined first, second */ @js.native
     class Iterator[Key, T, Unique /* <: Boolean */, Source /* <: ITreeMap[
         Key, 
@@ -76,11 +76,11 @@ object mapElementVectorMod extends js.Object {
       /**
         * @inheritDoc
         */
-      def first(): Key = js.native
+      def first: Key = js.native
       /**
         * @inheritDoc
         */
-      def second(): T = js.native
+      def second: T = js.native
       /**
         * @inheritDoc
         */
@@ -97,7 +97,7 @@ object mapElementVectorMod extends js.Object {
       *
       * @author Jeongho Nam - https://github.com/samchon
       */
-    /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+    /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.tstl.itreemapMod.ITreeMap.ReverseIterator because var conflicts: value. Inlined first, second */ @js.native
     class ReverseIterator[Key, T, Unique /* <: Boolean */, Source /* <: ITreeMap[
         Key, 
@@ -127,11 +127,11 @@ object mapElementVectorMod extends js.Object {
       /**
         * @inheritDoc
         */
-      def first(): Key = js.native
+      def first: Key = js.native
       /**
         * @inheritDoc
         */
-      def second(): T = js.native
+      def second: T = js.native
       /**
         * @inheritDoc
         */

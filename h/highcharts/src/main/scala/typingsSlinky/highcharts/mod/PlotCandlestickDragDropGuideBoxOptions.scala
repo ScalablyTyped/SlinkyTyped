@@ -4,19 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotCandlestickDragDropGuideBoxOptions extends js.Object {
   /**
     * (Highstock) Style options for the guide box default state.
     */
-  var default: js.UndefOr[PlotCandlestickDragDropGuideBoxDefaultOptions] = js.undefined
+  var default: js.UndefOr[PlotCandlestickDragDropGuideBoxDefaultOptions] = js.native
 }
 
 object PlotCandlestickDragDropGuideBoxOptions {
   @scala.inline
-  def apply(default: PlotCandlestickDragDropGuideBoxDefaultOptions = null): PlotCandlestickDragDropGuideBoxOptions = {
+  def apply(): PlotCandlestickDragDropGuideBoxOptions = {
     val __obj = js.Dynamic.literal()
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotCandlestickDragDropGuideBoxOptions]
   }
+  @scala.inline
+  implicit class PlotCandlestickDragDropGuideBoxOptionsOps[Self <: PlotCandlestickDragDropGuideBoxOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefault(value: PlotCandlestickDragDropGuideBoxDefaultOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

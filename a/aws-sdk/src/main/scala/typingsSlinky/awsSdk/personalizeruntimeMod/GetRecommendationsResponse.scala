@@ -14,10 +14,29 @@ trait GetRecommendationsResponse extends js.Object {
 
 object GetRecommendationsResponse {
   @scala.inline
-  def apply(itemList: ItemList = null): GetRecommendationsResponse = {
+  def apply(): GetRecommendationsResponse = {
     val __obj = js.Dynamic.literal()
-    if (itemList != null) __obj.updateDynamic("itemList")(itemList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRecommendationsResponse]
   }
+  @scala.inline
+  implicit class GetRecommendationsResponseOps[Self <: GetRecommendationsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItemList(value: ItemList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

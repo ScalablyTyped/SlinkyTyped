@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCapture extends js.Object {
-  var capture: js.UndefOr[Boolean] = js.undefined
-  var passive: js.UndefOr[Boolean] = js.undefined
+  var capture: js.UndefOr[Boolean] = js.native
+  var passive: js.UndefOr[Boolean] = js.native
 }
 
 object AnonCapture {
   @scala.inline
-  def apply(capture: js.UndefOr[Boolean] = js.undefined, passive: js.UndefOr[Boolean] = js.undefined): AnonCapture = {
+  def apply(): AnonCapture = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(capture)) __obj.updateDynamic("capture")(capture.asInstanceOf[js.Any])
-    if (!js.isUndefined(passive)) __obj.updateDynamic("passive")(passive.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCapture]
   }
+  @scala.inline
+  implicit class AnonCaptureOps[Self <: AnonCapture] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCapture(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passive")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

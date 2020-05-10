@@ -12,22 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.eslint.eslintStrings.warn
   - typingsSlinky.eslint.eslintStrings.error
 */
-trait RuleLevel extends js.Object
+trait RuleLevel extends RuleEntry
 
 object RuleLevel {
   @scala.inline
-  def `0`: typingsSlinky.eslint.eslintNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.eslint.eslintNumbers.`0` = 0.asInstanceOf[typingsSlinky.eslint.eslintNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.eslint.eslintNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.eslint.eslintNumbers.`1` = 1.asInstanceOf[typingsSlinky.eslint.eslintNumbers.`1`]
   @scala.inline
-  def `2`: typingsSlinky.eslint.eslintNumbers.`2` = this.cast(2)
+  def `2`: typingsSlinky.eslint.eslintNumbers.`2` = 2.asInstanceOf[typingsSlinky.eslint.eslintNumbers.`2`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.eslint.eslintStrings.error = "error".asInstanceOf[typingsSlinky.eslint.eslintStrings.error]
   @scala.inline
-  def error: typingsSlinky.eslint.eslintStrings.error = this.cast("error")
+  def off: typingsSlinky.eslint.eslintStrings.off = "off".asInstanceOf[typingsSlinky.eslint.eslintStrings.off]
   @scala.inline
-  def off: typingsSlinky.eslint.eslintStrings.off = this.cast("off")
-  @scala.inline
-  def warn: typingsSlinky.eslint.eslintStrings.warn = this.cast("warn")
+  def warn: typingsSlinky.eslint.eslintStrings.warn = "warn".asInstanceOf[typingsSlinky.eslint.eslintStrings.warn]
 }
 

@@ -5,16 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Keyboard extends js.Object {
-  var automaticScrollToTopOnHiding: Boolean
-  var isVisible: Boolean
-  var onhide: js.Function
-  var onhiding: js.Function
-  var onshow: js.Function
-  var onshowing: js.Function
-  def disableScrollingInShrinkView(disable: Boolean): Unit
-  def hideFormAccessoryBar(hide: Boolean): Unit
-  def shrinkView(shrink: Boolean): Unit
+  var automaticScrollToTopOnHiding: Boolean = js.native
+  var isVisible: Boolean = js.native
+  var onhide: js.Function = js.native
+  var onhiding: js.Function = js.native
+  var onshow: js.Function = js.native
+  var onshowing: js.Function = js.native
+  def disableScrollingInShrinkView(disable: Boolean): Unit = js.native
+  def hideFormAccessoryBar(hide: Boolean): Unit = js.native
+  def shrinkView(shrink: Boolean): Unit = js.native
 }
 
 @JSGlobal("Keyboard")

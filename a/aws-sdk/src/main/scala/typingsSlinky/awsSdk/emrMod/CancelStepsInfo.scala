@@ -22,12 +22,53 @@ trait CancelStepsInfo extends js.Object {
 
 object CancelStepsInfo {
   @scala.inline
-  def apply(Reason: String = null, Status: CancelStepsRequestStatus = null, StepId: StepId = null): CancelStepsInfo = {
+  def apply(): CancelStepsInfo = {
     val __obj = js.Dynamic.literal()
-    if (Reason != null) __obj.updateDynamic("Reason")(Reason.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (StepId != null) __obj.updateDynamic("StepId")(StepId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CancelStepsInfo]
   }
+  @scala.inline
+  implicit class CancelStepsInfoOps[Self <: CancelStepsInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: CancelStepsRequestStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepId(value: StepId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StepId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

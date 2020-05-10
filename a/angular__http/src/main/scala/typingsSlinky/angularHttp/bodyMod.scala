@@ -15,7 +15,7 @@ object bodyMod extends js.Object {
     /**
       * Return the body as an ArrayBuffer
       */
-    def arrayBuffer(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+    def arrayBuffer(): js.typedarray.ArrayBuffer = js.native
     /**
       * Returns the request's body as a Blob, assuming that body exists.
       */

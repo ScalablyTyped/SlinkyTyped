@@ -24,11 +24,41 @@ trait SchemaSyncWorkspaceResponse extends js.Object {
 
 object SchemaSyncWorkspaceResponse {
   @scala.inline
-  def apply(mergeConflict: js.Array[SchemaMergeConflict] = null, syncStatus: SchemaSyncStatus = null): SchemaSyncWorkspaceResponse = {
+  def apply(): SchemaSyncWorkspaceResponse = {
     val __obj = js.Dynamic.literal()
-    if (mergeConflict != null) __obj.updateDynamic("mergeConflict")(mergeConflict.asInstanceOf[js.Any])
-    if (syncStatus != null) __obj.updateDynamic("syncStatus")(syncStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSyncWorkspaceResponse]
   }
+  @scala.inline
+  implicit class SchemaSyncWorkspaceResponseOps[Self <: SchemaSyncWorkspaceResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMergeConflict(value: js.Array[SchemaMergeConflict]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeConflict")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMergeConflict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeConflict")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSyncStatus(value: SchemaSyncStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSyncStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syncStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

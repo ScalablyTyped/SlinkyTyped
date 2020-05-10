@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressDom.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.DOMRect
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

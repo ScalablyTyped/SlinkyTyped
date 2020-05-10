@@ -1,27 +1,23 @@
 package typingsSlinky.storybookComponents.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.storybookComponents.propDefMod.PropDef
 import typingsSlinky.storybookComponents.propRowMod.PropRowProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PropRow
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object PropRow {
   @JSImport("@storybook/components/dist/blocks/PropsTable/PropRow", "PropRow")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(row: PropDef, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(row = row.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: PropRowProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(row: PropDef): Default[tag.type, js.Object] = {
+    val __props = js.Dynamic.literal(row = row.asInstanceOf[js.Any])
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[PropRowProps]))
   }
-  type Props = PropRowProps
 }
 

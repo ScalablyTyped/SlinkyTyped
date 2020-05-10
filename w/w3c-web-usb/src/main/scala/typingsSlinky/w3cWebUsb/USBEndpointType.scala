@@ -13,12 +13,10 @@ trait USBEndpointType extends js.Object
 
 object USBEndpointType {
   @scala.inline
-  def bulk: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.bulk = this.cast("bulk")
+  def bulk: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.bulk = "bulk".asInstanceOf[typingsSlinky.w3cWebUsb.w3cWebUsbStrings.bulk]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def interrupt: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.interrupt = "interrupt".asInstanceOf[typingsSlinky.w3cWebUsb.w3cWebUsbStrings.interrupt]
   @scala.inline
-  def interrupt: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.interrupt = this.cast("interrupt")
-  @scala.inline
-  def isochronous: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.isochronous = this.cast("isochronous")
+  def isochronous: typingsSlinky.w3cWebUsb.w3cWebUsbStrings.isochronous = "isochronous".asInstanceOf[typingsSlinky.w3cWebUsb.w3cWebUsbStrings.isochronous]
 }
 

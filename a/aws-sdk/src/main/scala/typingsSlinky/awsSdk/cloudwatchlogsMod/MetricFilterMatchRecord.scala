@@ -22,16 +22,53 @@ trait MetricFilterMatchRecord extends js.Object {
 
 object MetricFilterMatchRecord {
   @scala.inline
-  def apply(
-    eventMessage: EventMessage = null,
-    eventNumber: Int | Double = null,
-    extractedValues: ExtractedValues = null
-  ): MetricFilterMatchRecord = {
+  def apply(): MetricFilterMatchRecord = {
     val __obj = js.Dynamic.literal()
-    if (eventMessage != null) __obj.updateDynamic("eventMessage")(eventMessage.asInstanceOf[js.Any])
-    if (eventNumber != null) __obj.updateDynamic("eventNumber")(eventNumber.asInstanceOf[js.Any])
-    if (extractedValues != null) __obj.updateDynamic("extractedValues")(extractedValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricFilterMatchRecord]
   }
+  @scala.inline
+  implicit class MetricFilterMatchRecordOps[Self <: MetricFilterMatchRecord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventMessage(value: EventMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventNumber(value: EventNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtractedValues(value: ExtractedValues): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractedValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtractedValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extractedValues")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

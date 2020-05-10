@@ -76,7 +76,7 @@ trait MediaSource extends EventTarget {
   def removeEventListener_sourceclose(
     `type`: sourceclose,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_sourceended(`type`: sourceended, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -90,7 +90,7 @@ trait MediaSource extends EventTarget {
   def removeEventListener_sourceended(
     `type`: sourceended,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_sourceopen(`type`: sourceopen, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -104,7 +104,7 @@ trait MediaSource extends EventTarget {
   def removeEventListener_sourceopen(
     `type`: sourceopen,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def removeSourceBuffer(sourceBuffer: SourceBuffer): Unit = js.native
   def setLiveSeekableRange(start: Double, end: Double): Unit = js.native

@@ -12,10 +12,8 @@ trait WordcloudSpiral extends js.Object
 
 object WordcloudSpiral {
   @scala.inline
-  def archimedian: typingsSlinky.vegaTypings.vegaTypingsStrings.archimedian = this.cast("archimedian")
+  def archimedian: typingsSlinky.vegaTypings.vegaTypingsStrings.archimedian = "archimedian".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.archimedian]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def rectangular: typingsSlinky.vegaTypings.vegaTypingsStrings.rectangular = this.cast("rectangular")
+  def rectangular: typingsSlinky.vegaTypings.vegaTypingsStrings.rectangular = "rectangular".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.rectangular]
 }
 

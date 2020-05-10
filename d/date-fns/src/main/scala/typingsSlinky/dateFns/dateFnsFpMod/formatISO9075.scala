@@ -2,12 +2,12 @@ package typingsSlinky.dateFns.dateFnsFpMod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dateFns.CurriedFn1
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("date-fns/fp", "formatISO9075")
 @js.native
-object formatISO9075 extends TopLevel[CurriedFn1[Date | Double, String]]
+object formatISO9075
+  extends TopLevel[CurriedFn1[js.Date | Double, String]]
 

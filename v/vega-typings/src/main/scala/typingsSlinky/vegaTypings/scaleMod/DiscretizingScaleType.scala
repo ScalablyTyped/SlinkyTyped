@@ -14,14 +14,12 @@ trait DiscretizingScaleType extends js.Object
 
 object DiscretizingScaleType {
   @scala.inline
-  def `bin-ordinal`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bin-ordinal` = this.cast("bin-ordinal")
+  def `bin-ordinal`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bin-ordinal` = "bin-ordinal".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bin-ordinal`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def quantile: typingsSlinky.vegaTypings.vegaTypingsStrings.quantile = "quantile".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.quantile]
   @scala.inline
-  def quantile: typingsSlinky.vegaTypings.vegaTypingsStrings.quantile = this.cast("quantile")
+  def quantize: typingsSlinky.vegaTypings.vegaTypingsStrings.quantize = "quantize".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.quantize]
   @scala.inline
-  def quantize: typingsSlinky.vegaTypings.vegaTypingsStrings.quantize = this.cast("quantize")
-  @scala.inline
-  def threshold: typingsSlinky.vegaTypings.vegaTypingsStrings.threshold = this.cast("threshold")
+  def threshold: typingsSlinky.vegaTypings.vegaTypingsStrings.threshold = "threshold".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.threshold]
 }
 

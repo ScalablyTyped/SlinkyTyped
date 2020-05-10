@@ -1,7 +1,7 @@
 package typingsSlinky.jdenticon.mod._Global_
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

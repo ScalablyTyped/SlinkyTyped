@@ -1,7 +1,7 @@
 package typingsSlinky.appframework
 
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -113,9 +113,9 @@ trait appFrameworkStatic extends js.Object {
     * @param {bool} Kill nodes
     * @title $.cleanUpContent(node,itself,kill)
     */
-  def cleanUpContent(node: org.scalajs.dom.raw.HTMLElement): Unit = js.native
-  def cleanUpContent(node: org.scalajs.dom.raw.HTMLElement, itself: Boolean): Unit = js.native
-  def cleanUpContent(node: org.scalajs.dom.raw.HTMLElement, itself: Boolean, kill: Boolean): Unit = js.native
+  def cleanUpContent(node: HTMLElement): Unit = js.native
+  def cleanUpContent(node: HTMLElement, itself: Boolean): Unit = js.native
+  def cleanUpContent(node: HTMLElement, itself: Boolean, kill: Boolean): Unit = js.native
   /**
     * $.create - a faster alertnative to $("<div id='main'>this is some text</div>");
     ```
@@ -200,7 +200,7 @@ trait appFrameworkStatic extends js.Object {
     fn: js.Function3[
       /* data */ js.Any, 
       /* status */ js.UndefOr[String], 
-      /* xhr */ js.UndefOr[typingsSlinky.std.XMLHttpRequest], 
+      /* xhr */ js.UndefOr[XMLHttpRequest], 
       Unit
     ]
   ): XMLHttpRequest = js.native
@@ -325,7 +325,7 @@ trait appFrameworkStatic extends js.Object {
     fn: js.Function3[
       /* data */ js.Any, 
       /* status */ js.UndefOr[String], 
-      /* xhr */ js.UndefOr[typingsSlinky.std.XMLHttpRequest], 
+      /* xhr */ js.UndefOr[XMLHttpRequest], 
       Unit
     ]
   ): XMLHttpRequest = js.native
@@ -335,7 +335,7 @@ trait appFrameworkStatic extends js.Object {
     fn: js.Function3[
       /* data */ js.Any, 
       /* status */ js.UndefOr[String], 
-      /* xhr */ js.UndefOr[typingsSlinky.std.XMLHttpRequest], 
+      /* xhr */ js.UndefOr[XMLHttpRequest], 
       Unit
     ],
     dataType: String
@@ -356,7 +356,7 @@ trait appFrameworkStatic extends js.Object {
     fn: js.Function3[
       /* data */ js.Any, 
       /* status */ js.UndefOr[String], 
-      /* xhr */ js.UndefOr[typingsSlinky.std.XMLHttpRequest], 
+      /* xhr */ js.UndefOr[XMLHttpRequest], 
       Unit
     ]
   ): XMLHttpRequest = js.native
@@ -365,7 +365,7 @@ trait appFrameworkStatic extends js.Object {
     fn: js.Function3[
       /* data */ js.Any, 
       /* status */ js.UndefOr[String], 
-      /* xhr */ js.UndefOr[typingsSlinky.std.XMLHttpRequest], 
+      /* xhr */ js.UndefOr[XMLHttpRequest], 
       Unit
     ],
     dataType: String

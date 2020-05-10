@@ -51,22 +51,11 @@ class DataView[T /* <: SlickData */] () extends DataProvider[T] {
   def getGrouping(): js.Array[GroupingOptions[T]] = js.native
   def getGroups(): js.Array[Group[T]] = js.native
   def getIdxById(id: String): Double = js.native
-  /**
-  		 * Returns the item at a given index.
-  		 * @param index
-  		 */
-  /* CompleteClass */
-  override def getItem(index: Double): T = js.native
   def getItemById(id: js.Any): T = js.native
   def getItemByIdx(idx: Double): T = js.native
   @JSName("getItemMetadata")
   def getItemMetadata_MDataView(index: Double): RowMetadata[T] = js.native
   def getItems(): js.Array[T] = js.native
-  /**
-  		 * Returns the number of data items in the set.
-  		 */
-  /* CompleteClass */
-  override def getLength(): Double = js.native
   def getPagingInfo(): PagingOptions = js.native
   def getRowById(id: String): Double = js.native
   /**

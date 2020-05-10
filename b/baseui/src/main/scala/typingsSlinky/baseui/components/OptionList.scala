@@ -1,11 +1,9 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonListItem
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -14,38 +12,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object OptionList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object OptionList {
   @JSImport("baseui/menu", "OptionList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    getItemLabel: js.Any => TagMod[Any],
-    item: js.Any,
-    $isFocused: js.UndefOr[Boolean] = js.undefined,
-    $isHighlighted: js.UndefOr[Boolean] = js.undefined,
-    getChildMenu: /* item */ js.Any => TagMod[Any] = null,
-    onMouseEnter: /* event */ MouseEvent => _ = null,
-    overrides: AnonListItem = null,
-    renderAll: js.UndefOr[Boolean] = js.undefined,
-    resetMenu: () => Unit = null,
-    size: default_ | compact = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(getItemLabel = js.Any.fromFunction1(getItemLabel), item = item.asInstanceOf[js.Any])
-    if (!js.isUndefined($isFocused)) __obj.updateDynamic("$isFocused")($isFocused.asInstanceOf[js.Any])
-    if (!js.isUndefined($isHighlighted)) __obj.updateDynamic("$isHighlighted")($isHighlighted.asInstanceOf[js.Any])
-    if (getChildMenu != null) __obj.updateDynamic("getChildMenu")(js.Any.fromFunction1(getChildMenu))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.asInstanceOf[js.Any])
-    if (resetMenu != null) __obj.updateDynamic("resetMenu")(js.Any.fromFunction0(resetMenu))
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def $isFocused(value: Boolean): this.type = set("$isFocused", value.asInstanceOf[js.Any])
+    @scala.inline
+    def $isHighlighted(value: Boolean): this.type = set("$isHighlighted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getChildMenu(value: /* item */ js.Any => TagMod[Any]): this.type = set("getChildMenu", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: /* event */ MouseEvent => _): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: AnonListItem): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderAll(value: Boolean): this.type = set("renderAll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resetMenu(value: () => Unit): this.type = set("resetMenu", js.Any.fromFunction0(value))
+    @scala.inline
+    def size(value: default_ | compact): this.type = set("size", value.asInstanceOf[js.Any])
   }
-  type Props = OptionListProps
+  
+  def withProps(p: OptionListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(getItemLabel: js.Any => TagMod[Any], item: js.Any): Builder = {
+    val __props = js.Dynamic.literal(getItemLabel = js.Any.fromFunction1(getItemLabel), item = item.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[OptionListProps]))
+  }
 }
 

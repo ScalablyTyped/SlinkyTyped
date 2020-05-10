@@ -1,8 +1,8 @@
 package typingsSlinky.phaser.Phaser.Types
 
+import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.phaser.Phaser.Display.Color
 import typingsSlinky.phaser.integer
-import typingsSlinky.std.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,7 +66,7 @@ object Renderer extends js.Object {
       def callback(snapshot: HTMLImageElement): Unit = js.native
     }
     
-    type SnapshotCallback = js.Function1[/* snapshot */ Color | org.scalajs.dom.raw.HTMLImageElement, Unit]
+    type SnapshotCallback = js.Function1[/* snapshot */ Color | HTMLImageElement, Unit]
   }
   
 }

@@ -10,11 +10,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class NodeInfo protected () extends DetectedInfo[node, Platform, String] {
   def this(version: String) = this()
-  /* CompleteClass */
-  override val name: node = js.native
-  /* CompleteClass */
-  override val os: Platform = js.native
-  /* CompleteClass */
-  override val version: String = js.native
 }
 

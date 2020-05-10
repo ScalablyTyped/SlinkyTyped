@@ -21,28 +21,26 @@ trait ArrowShape extends js.Object
 
 object ArrowShape {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chevron: typingsSlinky.cytoscape.cytoscapeStrings.chevron = "chevron".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.chevron]
   @scala.inline
-  def chevron: typingsSlinky.cytoscape.cytoscapeStrings.chevron = this.cast("chevron")
+  def circle: typingsSlinky.cytoscape.cytoscapeStrings.circle = "circle".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.circle]
   @scala.inline
-  def circle: typingsSlinky.cytoscape.cytoscapeStrings.circle = this.cast("circle")
+  def diamond: typingsSlinky.cytoscape.cytoscapeStrings.diamond = "diamond".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.diamond]
   @scala.inline
-  def diamond: typingsSlinky.cytoscape.cytoscapeStrings.diamond = this.cast("diamond")
+  def none: typingsSlinky.cytoscape.cytoscapeStrings.none = "none".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.none]
   @scala.inline
-  def none: typingsSlinky.cytoscape.cytoscapeStrings.none = this.cast("none")
+  def square: typingsSlinky.cytoscape.cytoscapeStrings.square = "square".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.square]
   @scala.inline
-  def square: typingsSlinky.cytoscape.cytoscapeStrings.square = this.cast("square")
+  def tee: typingsSlinky.cytoscape.cytoscapeStrings.tee = "tee".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.tee]
   @scala.inline
-  def tee: typingsSlinky.cytoscape.cytoscapeStrings.tee = this.cast("tee")
+  def triangle: typingsSlinky.cytoscape.cytoscapeStrings.triangle = "triangle".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.triangle]
   @scala.inline
-  def triangle: typingsSlinky.cytoscape.cytoscapeStrings.triangle = this.cast("triangle")
+  def `triangle-backcurve`: typingsSlinky.cytoscape.cytoscapeStrings.`triangle-backcurve` = "triangle-backcurve".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.`triangle-backcurve`]
   @scala.inline
-  def `triangle-backcurve`: typingsSlinky.cytoscape.cytoscapeStrings.`triangle-backcurve` = this.cast("triangle-backcurve")
+  def `triangle-cross`: typingsSlinky.cytoscape.cytoscapeStrings.`triangle-cross` = "triangle-cross".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.`triangle-cross`]
   @scala.inline
-  def `triangle-cross`: typingsSlinky.cytoscape.cytoscapeStrings.`triangle-cross` = this.cast("triangle-cross")
+  def `triangle-tee`: typingsSlinky.cytoscape.cytoscapeStrings.`triangle-tee` = "triangle-tee".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.`triangle-tee`]
   @scala.inline
-  def `triangle-tee`: typingsSlinky.cytoscape.cytoscapeStrings.`triangle-tee` = this.cast("triangle-tee")
-  @scala.inline
-  def vee: typingsSlinky.cytoscape.cytoscapeStrings.vee = this.cast("vee")
+  def vee: typingsSlinky.cytoscape.cytoscapeStrings.vee = "vee".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.vee]
 }
 

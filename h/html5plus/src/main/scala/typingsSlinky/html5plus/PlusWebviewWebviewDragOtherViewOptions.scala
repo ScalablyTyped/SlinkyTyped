@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
   */
+@js.native
 trait PlusWebviewWebviewDragOtherViewOptions extends js.Object {
   /**
     * 滑动模式
@@ -22,23 +23,53 @@ trait PlusWebviewWebviewDragOtherViewOptions extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var moveMode: js.UndefOr[follow | silent] = js.undefined
+  var moveMode: js.UndefOr[follow | silent] = js.native
   /**
     * 手势关联对象
     * 可取值Webview窗口的id（String类型）、Webview窗口对象、原生View窗口对象（plus.nativeObj.View）。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var view: js.UndefOr[String] = js.undefined
+  var view: js.UndefOr[String] = js.native
 }
 
 object PlusWebviewWebviewDragOtherViewOptions {
   @scala.inline
-  def apply(moveMode: follow | silent = null, view: String = null): PlusWebviewWebviewDragOtherViewOptions = {
+  def apply(): PlusWebviewWebviewDragOtherViewOptions = {
     val __obj = js.Dynamic.literal()
-    if (moveMode != null) __obj.updateDynamic("moveMode")(moveMode.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusWebviewWebviewDragOtherViewOptions]
   }
+  @scala.inline
+  implicit class PlusWebviewWebviewDragOtherViewOptionsOps[Self <: PlusWebviewWebviewDragOtherViewOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMoveMode(value: follow | silent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withView(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

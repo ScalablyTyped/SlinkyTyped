@@ -29,7 +29,7 @@ class TreeList protected () extends Widget {
   var wrapper: JQuery = js.native
   def addRow(parentRow: String): Unit = js.native
   def addRow(parentRow: JQuery): Unit = js.native
-  def addRow(parentRow: typingsSlinky.std.Element): Unit = js.native
+  def addRow(parentRow: Element): Unit = js.native
   def autoFitColumn(column: String): Unit = js.native
   def autoFitColumn(column: js.Any): Unit = js.native
   def autoFitColumn(column: Double): Unit = js.native
@@ -40,15 +40,15 @@ class TreeList protected () extends Widget {
   def closeCell(isCancel: Boolean): Unit = js.native
   def collapse(row: String): JQueryPromise[_] = js.native
   def collapse(row: JQuery): JQueryPromise[_] = js.native
-  def collapse(row: typingsSlinky.std.Element): JQueryPromise[_] = js.native
+  def collapse(row: Element): JQueryPromise[_] = js.native
   def dataItem(row: String): TreeListModel = js.native
   def dataItem(row: JQuery): TreeListModel = js.native
-  def dataItem(row: typingsSlinky.std.Element): TreeListModel = js.native
+  def dataItem(row: Element): TreeListModel = js.native
   def editCell(cell: JQuery): Unit = js.native
   def editRow(row: JQuery): Unit = js.native
   def expand(row: String): JQueryPromise[_] = js.native
   def expand(row: JQuery): JQueryPromise[_] = js.native
-  def expand(row: typingsSlinky.std.Element): JQueryPromise[_] = js.native
+  def expand(row: Element): JQueryPromise[_] = js.native
   def hideColumn(column: String): Unit = js.native
   def hideColumn(column: Double): Unit = js.native
   def itemFor(model: js.Any): JQuery = js.native
@@ -59,7 +59,7 @@ class TreeList protected () extends Widget {
   def refresh(): Unit = js.native
   def removeRow(row: String): Unit = js.native
   def removeRow(row: JQuery): Unit = js.native
-  def removeRow(row: typingsSlinky.std.Element): Unit = js.native
+  def removeRow(row: Element): Unit = js.native
   def reorderColumn(destIndex: Double, column: js.Any): Unit = js.native
   def saveAsExcel(): Unit = js.native
   def saveAsPDF(): JQueryPromise[_] = js.native
@@ -67,7 +67,7 @@ class TreeList protected () extends Widget {
   def saveRow(): Unit = js.native
   def select(): JQuery = js.native
   def select(rows: JQuery): Unit = js.native
-  def select(rows: typingsSlinky.std.Element): Unit = js.native
+  def select(rows: Element): Unit = js.native
   def setDataSource(dataSource: TreeListDataSource): Unit = js.native
   def showColumn(column: String): Unit = js.native
   def showColumn(column: Double): Unit = js.native

@@ -10,26 +10,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TrackLyricsFeedbackParams extends js.Object {
   var feedback: js.UndefOr[
     wrong_lyrics | wrong_attribution | bad_characters | lines_too_long | wrong_verses | wrong_formatting
-  ] = js.undefined
-  var lyrics_id: js.UndefOr[Double] = js.undefined
-  var track_id: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var lyrics_id: js.UndefOr[Double] = js.native
+  var track_id: js.UndefOr[Double] = js.native
 }
 
 object TrackLyricsFeedbackParams {
   @scala.inline
-  def apply(
-    feedback: wrong_lyrics | wrong_attribution | bad_characters | lines_too_long | wrong_verses | wrong_formatting = null,
-    lyrics_id: Int | Double = null,
-    track_id: Int | Double = null
-  ): TrackLyricsFeedbackParams = {
+  def apply(): TrackLyricsFeedbackParams = {
     val __obj = js.Dynamic.literal()
-    if (feedback != null) __obj.updateDynamic("feedback")(feedback.asInstanceOf[js.Any])
-    if (lyrics_id != null) __obj.updateDynamic("lyrics_id")(lyrics_id.asInstanceOf[js.Any])
-    if (track_id != null) __obj.updateDynamic("track_id")(track_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrackLyricsFeedbackParams]
   }
+  @scala.inline
+  implicit class TrackLyricsFeedbackParamsOps[Self <: TrackLyricsFeedbackParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFeedback(
+      value: wrong_lyrics | wrong_attribution | bad_characters | lines_too_long | wrong_verses | wrong_formatting
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeedback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feedback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLyrics_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lyrics_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLyrics_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lyrics_id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrack_id(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrack_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track_id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait FlowTemplateDescription extends js.Object {
 
 object FlowTemplateDescription {
   @scala.inline
-  def apply(
-    definition: DefinitionDocument = null,
-    summary: FlowTemplateSummary = null,
-    validatedNamespaceVersion: Int | Double = null
-  ): FlowTemplateDescription = {
+  def apply(): FlowTemplateDescription = {
     val __obj = js.Dynamic.literal()
-    if (definition != null) __obj.updateDynamic("definition")(definition.asInstanceOf[js.Any])
-    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
-    if (validatedNamespaceVersion != null) __obj.updateDynamic("validatedNamespaceVersion")(validatedNamespaceVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowTemplateDescription]
   }
+  @scala.inline
+  implicit class FlowTemplateDescriptionOps[Self <: FlowTemplateDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefinition(value: DefinitionDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummary(value: FlowTemplateSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidatedNamespaceVersion(value: Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validatedNamespaceVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidatedNamespaceVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validatedNamespaceVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

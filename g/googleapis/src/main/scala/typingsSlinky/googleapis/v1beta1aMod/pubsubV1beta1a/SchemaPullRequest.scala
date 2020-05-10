@@ -25,11 +25,41 @@ trait SchemaPullRequest extends js.Object {
 
 object SchemaPullRequest {
   @scala.inline
-  def apply(returnImmediately: js.UndefOr[Boolean] = js.undefined, subscription: String = null): SchemaPullRequest = {
+  def apply(): SchemaPullRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(returnImmediately)) __obj.updateDynamic("returnImmediately")(returnImmediately.asInstanceOf[js.Any])
-    if (subscription != null) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPullRequest]
   }
+  @scala.inline
+  implicit class SchemaPullRequestOps[Self <: SchemaPullRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReturnImmediately(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnImmediately")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnImmediately: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnImmediately")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

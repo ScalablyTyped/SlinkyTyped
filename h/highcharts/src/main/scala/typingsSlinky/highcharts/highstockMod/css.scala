@@ -1,8 +1,7 @@
 package typingsSlinky.highcharts.highstockMod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.highcharts.mod.CSSObject
-import typingsSlinky.highcharts.mod.HTMLDOMElement
-import typingsSlinky.highcharts.mod.SVGDOMElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("highcharts/highstock", "css")
 @js.native
 object css extends js.Object {
-  def apply(el: HTMLDOMElement, styles: CSSObject): Unit = js.native
-  def apply(el: SVGDOMElement, styles: CSSObject): Unit = js.native
+  def apply(el: HTMLElement, styles: CSSObject): Unit = js.native
+  def apply(el: org.scalajs.dom.raw.SVGElement, styles: CSSObject): Unit = js.native
 }
 

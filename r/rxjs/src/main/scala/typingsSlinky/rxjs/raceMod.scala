@@ -5,7 +5,6 @@ import typingsSlinky.rxjs.operatorMod.Operator
 import typingsSlinky.rxjs.outerSubscriberMod.OuterSubscriber
 import typingsSlinky.rxjs.subscriberMod.Subscriber
 import typingsSlinky.rxjs.typesMod.ObservableInput
-import typingsSlinky.rxjs.typesMod.TeardownLogic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,10 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object raceMod extends js.Object {
   @js.native
-  class RaceOperator[T] () extends Operator[T, T] {
-    /* CompleteClass */
-    override def call(subscriber: Subscriber[T], source: js.Any): TeardownLogic = js.native
-  }
+  class RaceOperator[T] () extends Operator[T, T]
   
   @js.native
   class RaceSubscriber[T] protected () extends OuterSubscriber[T, T] {

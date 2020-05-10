@@ -11,17 +11,18 @@ import scala.scalajs.js.annotation._
   * Effects library on top of Base animations
   *
   */
+@js.native
 trait fx extends js.Object {
   /**
     * Collection of easing functions to use beyond the default
     * dojo._defaultEasing function.
     *
     */
-  var easing: js.Object
+  var easing: js.Object = js.native
   /**
     *
     */
-  def Toggler(): Unit
+  def Toggler(): Unit = js.native
   /**
     * Chain a list of dojo/_base/fx.Animations to run in sequence
     * Return a dojo/_base/fx.Animation which will play all passed
@@ -32,7 +33,7 @@ trait fx extends js.Object {
     *
     * @param animations
     */
-  def chain(animations: js.Array[Animation]): js.Any
+  def chain(animations: js.Array[Animation]): js.Any = js.native
   /**
     * Combine a list of dojo/_base/fx.Animations to run in parallel
     * Combine an array of dojo/_base/fx.Animations to run in parallel,
@@ -41,7 +42,7 @@ trait fx extends js.Object {
     *
     * @param animations
     */
-  def combine(animations: js.Array[Animation]): js.Any
+  def combine(animations: js.Array[Animation]): js.Any = js.native
   /**
     * Slide a node to a new top/left position
     * Returns an animation that will slide "node"
@@ -50,7 +51,7 @@ trait fx extends js.Object {
     *
     * @param args A hash-map of standard dojo/_base/fx.Animation constructor properties(such as easing: node: duration: and so on). Special args membersare top and left, which indicate the new position to slide to.
     */
-  def slideTo(args: js.Object): js.Any
+  def slideTo(args: js.Object): js.Any = js.native
   /**
     * Expand a node to it's natural height.
     * Returns an animation that will expand the
@@ -60,7 +61,7 @@ trait fx extends js.Object {
     *
     * @param args A hash-map of standard dojo/_base/fx.Animation constructor properties(such as easing: node: duration: and so on)
     */
-  def wipeIn(args: js.Object): js.Any
+  def wipeIn(args: js.Object): js.Any = js.native
   /**
     * Shrink a node to nothing and hide it.
     * Returns an animation that will shrink node defined in "args"
@@ -68,7 +69,7 @@ trait fx extends js.Object {
     *
     * @param args A hash-map of standard dojo/_base/fx.Animation constructor properties(such as easing: node: duration: and so on)
     */
-  def wipeOut(args: js.Object): js.Any
+  def wipeOut(args: js.Object): js.Any = js.native
 }
 
 object fx {
@@ -83,8 +84,57 @@ object fx {
     wipeOut: js.Object => js.Any
   ): fx = {
     val __obj = js.Dynamic.literal(Toggler = js.Any.fromFunction0(Toggler), chain = js.Any.fromFunction1(chain), combine = js.Any.fromFunction1(combine), easing = easing.asInstanceOf[js.Any], slideTo = js.Any.fromFunction1(slideTo), wipeIn = js.Any.fromFunction1(wipeIn), wipeOut = js.Any.fromFunction1(wipeOut))
-  
     __obj.asInstanceOf[fx]
   }
+  @scala.inline
+  implicit class fxOps[Self <: fx] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withToggler(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Toggler")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withChain(value: js.Array[Animation] => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chain")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCombine(value: js.Array[Animation] => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("combine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEasing(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSlideTo(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWipeIn(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wipeIn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWipeOut(value: js.Object => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wipeOut")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

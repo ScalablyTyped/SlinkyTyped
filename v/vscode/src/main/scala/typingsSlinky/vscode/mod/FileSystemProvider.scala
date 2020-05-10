@@ -81,7 +81,7 @@ trait FileSystemProvider extends js.Object {
   		 * @return An array of bytes or a thenable that resolves to such.
   		 * @throws [`FileNotFound`](#FileSystemError.FileNotFound) when `uri` doesn't exist.
   		 */
-  def readFile(uri: Uri): scala.scalajs.js.typedarray.Uint8Array | Thenable[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def readFile(uri: Uri): js.typedarray.Uint8Array | Thenable[js.typedarray.Uint8Array] = js.native
   /**
   		 * Rename a file or folder.
   		 *
@@ -129,6 +129,6 @@ trait FileSystemProvider extends js.Object {
   		 * @throws [`FileExists`](#FileSystemError.FileExists) when `uri` already exists, `create` is set but `overwrite` is not set.
   		 * @throws [`NoPermissions`](#FileSystemError.NoPermissions) when permissions aren't sufficient.
   		 */
-  def writeFile(uri: Uri, content: scala.scalajs.js.typedarray.Uint8Array, options: AnonCreate): Unit | Thenable[Unit] = js.native
+  def writeFile(uri: Uri, content: js.typedarray.Uint8Array, options: AnonCreate): Unit | Thenable[Unit] = js.native
 }
 

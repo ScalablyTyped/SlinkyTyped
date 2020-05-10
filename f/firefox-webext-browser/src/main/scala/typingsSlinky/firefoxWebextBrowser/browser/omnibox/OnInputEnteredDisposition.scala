@@ -18,12 +18,10 @@ trait OnInputEnteredDisposition extends js.Object
 
 object OnInputEnteredDisposition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def currentTab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.currentTab = "currentTab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.currentTab]
   @scala.inline
-  def currentTab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.currentTab = this.cast("currentTab")
+  def newBackgroundTab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.newBackgroundTab = "newBackgroundTab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.newBackgroundTab]
   @scala.inline
-  def newBackgroundTab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.newBackgroundTab = this.cast("newBackgroundTab")
-  @scala.inline
-  def newForegroundTab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.newForegroundTab = this.cast("newForegroundTab")
+  def newForegroundTab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.newForegroundTab = "newForegroundTab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.newForegroundTab]
 }
 

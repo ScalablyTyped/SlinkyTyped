@@ -14,10 +14,29 @@ trait CreateProjectResponse extends js.Object {
 
 object CreateProjectResponse {
   @scala.inline
-  def apply(ProjectArn: ProjectArn = null): CreateProjectResponse = {
+  def apply(): CreateProjectResponse = {
     val __obj = js.Dynamic.literal()
-    if (ProjectArn != null) __obj.updateDynamic("ProjectArn")(ProjectArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateProjectResponse]
   }
+  @scala.inline
+  implicit class CreateProjectResponseOps[Self <: CreateProjectResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjectArn(value: ProjectArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

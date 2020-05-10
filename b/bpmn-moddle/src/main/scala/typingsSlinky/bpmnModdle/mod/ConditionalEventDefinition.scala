@@ -9,3 +9,25 @@ trait ConditionalEventDefinition extends BaseElement {
   var condition: Expression = js.native
 }
 
+object ConditionalEventDefinition {
+  @scala.inline
+  def apply($parent: TypeDerived, $type: ElementType, condition: Expression, id: String): ConditionalEventDefinition = {
+    val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], condition = condition.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConditionalEventDefinition]
+  }
+  @scala.inline
+  implicit class ConditionalEventDefinitionOps[Self <: ConditionalEventDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCondition(value: Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

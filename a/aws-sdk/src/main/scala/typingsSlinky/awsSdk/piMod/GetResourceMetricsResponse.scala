@@ -30,20 +30,77 @@ trait GetResourceMetricsResponse extends js.Object {
 
 object GetResourceMetricsResponse {
   @scala.inline
-  def apply(
-    AlignedEndTime: js.Date = null,
-    AlignedStartTime: js.Date = null,
-    Identifier: String = null,
-    MetricList: MetricKeyDataPointsList = null,
-    NextToken: String = null
-  ): GetResourceMetricsResponse = {
+  def apply(): GetResourceMetricsResponse = {
     val __obj = js.Dynamic.literal()
-    if (AlignedEndTime != null) __obj.updateDynamic("AlignedEndTime")(AlignedEndTime.asInstanceOf[js.Any])
-    if (AlignedStartTime != null) __obj.updateDynamic("AlignedStartTime")(AlignedStartTime.asInstanceOf[js.Any])
-    if (Identifier != null) __obj.updateDynamic("Identifier")(Identifier.asInstanceOf[js.Any])
-    if (MetricList != null) __obj.updateDynamic("MetricList")(MetricList.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetResourceMetricsResponse]
   }
+  @scala.inline
+  implicit class GetResourceMetricsResponseOps[Self <: GetResourceMetricsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignedEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignedEndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignedEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignedEndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignedStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignedStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignedStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlignedStartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricList(value: MetricKeyDataPointsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

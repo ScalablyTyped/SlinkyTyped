@@ -16,10 +16,29 @@ trait SchemaConferenceProperties extends js.Object {
 
 object SchemaConferenceProperties {
   @scala.inline
-  def apply(allowedConferenceSolutionTypes: js.Array[String] = null): SchemaConferenceProperties = {
+  def apply(): SchemaConferenceProperties = {
     val __obj = js.Dynamic.literal()
-    if (allowedConferenceSolutionTypes != null) __obj.updateDynamic("allowedConferenceSolutionTypes")(allowedConferenceSolutionTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConferenceProperties]
   }
+  @scala.inline
+  implicit class SchemaConferencePropertiesOps[Self <: SchemaConferenceProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowedConferenceSolutionTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedConferenceSolutionTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedConferenceSolutionTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedConferenceSolutionTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

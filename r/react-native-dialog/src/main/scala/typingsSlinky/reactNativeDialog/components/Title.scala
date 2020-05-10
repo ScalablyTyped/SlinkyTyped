@@ -1,15 +1,18 @@
 package typingsSlinky.reactNativeDialog.components
 
+import typingsSlinky.reactNative.mod.TextProps
+import typingsSlinky.reactNative.mod.ViewProps
+import typingsSlinky.reactNativeDialog.mod.TitleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Title
-  extends `SharedApply_<intersection>1592881742`[typingsSlinky.reactNativeDialog.mod.default.Title] {
+object Title {
   @JSImport("react-native-dialog", "default.Title")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TitleProps with ViewProps with TextProps): `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.default.Title] = new `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.default.Title](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Title.type): `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.default.Title] = new `SharedBuilder_<intersection>_1344350995`[typingsSlinky.reactNativeDialog.mod.default.Title](js.Array(this.component, js.Dictionary.empty))()
 }
 

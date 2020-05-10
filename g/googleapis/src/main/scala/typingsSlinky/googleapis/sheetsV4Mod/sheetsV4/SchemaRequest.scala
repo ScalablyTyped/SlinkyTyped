@@ -238,122 +238,689 @@ trait SchemaRequest extends js.Object {
 
 object SchemaRequest {
   @scala.inline
-  def apply(
-    addBanding: SchemaAddBandingRequest = null,
-    addChart: SchemaAddChartRequest = null,
-    addConditionalFormatRule: SchemaAddConditionalFormatRuleRequest = null,
-    addDimensionGroup: SchemaAddDimensionGroupRequest = null,
-    addFilterView: SchemaAddFilterViewRequest = null,
-    addNamedRange: SchemaAddNamedRangeRequest = null,
-    addProtectedRange: SchemaAddProtectedRangeRequest = null,
-    addSheet: SchemaAddSheetRequest = null,
-    appendCells: SchemaAppendCellsRequest = null,
-    appendDimension: SchemaAppendDimensionRequest = null,
-    autoFill: SchemaAutoFillRequest = null,
-    autoResizeDimensions: SchemaAutoResizeDimensionsRequest = null,
-    clearBasicFilter: SchemaClearBasicFilterRequest = null,
-    copyPaste: SchemaCopyPasteRequest = null,
-    createDeveloperMetadata: SchemaCreateDeveloperMetadataRequest = null,
-    cutPaste: SchemaCutPasteRequest = null,
-    deleteBanding: SchemaDeleteBandingRequest = null,
-    deleteConditionalFormatRule: SchemaDeleteConditionalFormatRuleRequest = null,
-    deleteDeveloperMetadata: SchemaDeleteDeveloperMetadataRequest = null,
-    deleteDimension: SchemaDeleteDimensionRequest = null,
-    deleteDimensionGroup: SchemaDeleteDimensionGroupRequest = null,
-    deleteEmbeddedObject: SchemaDeleteEmbeddedObjectRequest = null,
-    deleteFilterView: SchemaDeleteFilterViewRequest = null,
-    deleteNamedRange: SchemaDeleteNamedRangeRequest = null,
-    deleteProtectedRange: SchemaDeleteProtectedRangeRequest = null,
-    deleteRange: SchemaDeleteRangeRequest = null,
-    deleteSheet: SchemaDeleteSheetRequest = null,
-    duplicateFilterView: SchemaDuplicateFilterViewRequest = null,
-    duplicateSheet: SchemaDuplicateSheetRequest = null,
-    findReplace: SchemaFindReplaceRequest = null,
-    insertDimension: SchemaInsertDimensionRequest = null,
-    insertRange: SchemaInsertRangeRequest = null,
-    mergeCells: SchemaMergeCellsRequest = null,
-    moveDimension: SchemaMoveDimensionRequest = null,
-    pasteData: SchemaPasteDataRequest = null,
-    randomizeRange: SchemaRandomizeRangeRequest = null,
-    repeatCell: SchemaRepeatCellRequest = null,
-    setBasicFilter: SchemaSetBasicFilterRequest = null,
-    setDataValidation: SchemaSetDataValidationRequest = null,
-    sortRange: SchemaSortRangeRequest = null,
-    textToColumns: SchemaTextToColumnsRequest = null,
-    unmergeCells: SchemaUnmergeCellsRequest = null,
-    updateBanding: SchemaUpdateBandingRequest = null,
-    updateBorders: SchemaUpdateBordersRequest = null,
-    updateCells: SchemaUpdateCellsRequest = null,
-    updateChartSpec: SchemaUpdateChartSpecRequest = null,
-    updateConditionalFormatRule: SchemaUpdateConditionalFormatRuleRequest = null,
-    updateDeveloperMetadata: SchemaUpdateDeveloperMetadataRequest = null,
-    updateDimensionGroup: SchemaUpdateDimensionGroupRequest = null,
-    updateDimensionProperties: SchemaUpdateDimensionPropertiesRequest = null,
-    updateEmbeddedObjectPosition: SchemaUpdateEmbeddedObjectPositionRequest = null,
-    updateFilterView: SchemaUpdateFilterViewRequest = null,
-    updateNamedRange: SchemaUpdateNamedRangeRequest = null,
-    updateProtectedRange: SchemaUpdateProtectedRangeRequest = null,
-    updateSheetProperties: SchemaUpdateSheetPropertiesRequest = null,
-    updateSpreadsheetProperties: SchemaUpdateSpreadsheetPropertiesRequest = null
-  ): SchemaRequest = {
+  def apply(): SchemaRequest = {
     val __obj = js.Dynamic.literal()
-    if (addBanding != null) __obj.updateDynamic("addBanding")(addBanding.asInstanceOf[js.Any])
-    if (addChart != null) __obj.updateDynamic("addChart")(addChart.asInstanceOf[js.Any])
-    if (addConditionalFormatRule != null) __obj.updateDynamic("addConditionalFormatRule")(addConditionalFormatRule.asInstanceOf[js.Any])
-    if (addDimensionGroup != null) __obj.updateDynamic("addDimensionGroup")(addDimensionGroup.asInstanceOf[js.Any])
-    if (addFilterView != null) __obj.updateDynamic("addFilterView")(addFilterView.asInstanceOf[js.Any])
-    if (addNamedRange != null) __obj.updateDynamic("addNamedRange")(addNamedRange.asInstanceOf[js.Any])
-    if (addProtectedRange != null) __obj.updateDynamic("addProtectedRange")(addProtectedRange.asInstanceOf[js.Any])
-    if (addSheet != null) __obj.updateDynamic("addSheet")(addSheet.asInstanceOf[js.Any])
-    if (appendCells != null) __obj.updateDynamic("appendCells")(appendCells.asInstanceOf[js.Any])
-    if (appendDimension != null) __obj.updateDynamic("appendDimension")(appendDimension.asInstanceOf[js.Any])
-    if (autoFill != null) __obj.updateDynamic("autoFill")(autoFill.asInstanceOf[js.Any])
-    if (autoResizeDimensions != null) __obj.updateDynamic("autoResizeDimensions")(autoResizeDimensions.asInstanceOf[js.Any])
-    if (clearBasicFilter != null) __obj.updateDynamic("clearBasicFilter")(clearBasicFilter.asInstanceOf[js.Any])
-    if (copyPaste != null) __obj.updateDynamic("copyPaste")(copyPaste.asInstanceOf[js.Any])
-    if (createDeveloperMetadata != null) __obj.updateDynamic("createDeveloperMetadata")(createDeveloperMetadata.asInstanceOf[js.Any])
-    if (cutPaste != null) __obj.updateDynamic("cutPaste")(cutPaste.asInstanceOf[js.Any])
-    if (deleteBanding != null) __obj.updateDynamic("deleteBanding")(deleteBanding.asInstanceOf[js.Any])
-    if (deleteConditionalFormatRule != null) __obj.updateDynamic("deleteConditionalFormatRule")(deleteConditionalFormatRule.asInstanceOf[js.Any])
-    if (deleteDeveloperMetadata != null) __obj.updateDynamic("deleteDeveloperMetadata")(deleteDeveloperMetadata.asInstanceOf[js.Any])
-    if (deleteDimension != null) __obj.updateDynamic("deleteDimension")(deleteDimension.asInstanceOf[js.Any])
-    if (deleteDimensionGroup != null) __obj.updateDynamic("deleteDimensionGroup")(deleteDimensionGroup.asInstanceOf[js.Any])
-    if (deleteEmbeddedObject != null) __obj.updateDynamic("deleteEmbeddedObject")(deleteEmbeddedObject.asInstanceOf[js.Any])
-    if (deleteFilterView != null) __obj.updateDynamic("deleteFilterView")(deleteFilterView.asInstanceOf[js.Any])
-    if (deleteNamedRange != null) __obj.updateDynamic("deleteNamedRange")(deleteNamedRange.asInstanceOf[js.Any])
-    if (deleteProtectedRange != null) __obj.updateDynamic("deleteProtectedRange")(deleteProtectedRange.asInstanceOf[js.Any])
-    if (deleteRange != null) __obj.updateDynamic("deleteRange")(deleteRange.asInstanceOf[js.Any])
-    if (deleteSheet != null) __obj.updateDynamic("deleteSheet")(deleteSheet.asInstanceOf[js.Any])
-    if (duplicateFilterView != null) __obj.updateDynamic("duplicateFilterView")(duplicateFilterView.asInstanceOf[js.Any])
-    if (duplicateSheet != null) __obj.updateDynamic("duplicateSheet")(duplicateSheet.asInstanceOf[js.Any])
-    if (findReplace != null) __obj.updateDynamic("findReplace")(findReplace.asInstanceOf[js.Any])
-    if (insertDimension != null) __obj.updateDynamic("insertDimension")(insertDimension.asInstanceOf[js.Any])
-    if (insertRange != null) __obj.updateDynamic("insertRange")(insertRange.asInstanceOf[js.Any])
-    if (mergeCells != null) __obj.updateDynamic("mergeCells")(mergeCells.asInstanceOf[js.Any])
-    if (moveDimension != null) __obj.updateDynamic("moveDimension")(moveDimension.asInstanceOf[js.Any])
-    if (pasteData != null) __obj.updateDynamic("pasteData")(pasteData.asInstanceOf[js.Any])
-    if (randomizeRange != null) __obj.updateDynamic("randomizeRange")(randomizeRange.asInstanceOf[js.Any])
-    if (repeatCell != null) __obj.updateDynamic("repeatCell")(repeatCell.asInstanceOf[js.Any])
-    if (setBasicFilter != null) __obj.updateDynamic("setBasicFilter")(setBasicFilter.asInstanceOf[js.Any])
-    if (setDataValidation != null) __obj.updateDynamic("setDataValidation")(setDataValidation.asInstanceOf[js.Any])
-    if (sortRange != null) __obj.updateDynamic("sortRange")(sortRange.asInstanceOf[js.Any])
-    if (textToColumns != null) __obj.updateDynamic("textToColumns")(textToColumns.asInstanceOf[js.Any])
-    if (unmergeCells != null) __obj.updateDynamic("unmergeCells")(unmergeCells.asInstanceOf[js.Any])
-    if (updateBanding != null) __obj.updateDynamic("updateBanding")(updateBanding.asInstanceOf[js.Any])
-    if (updateBorders != null) __obj.updateDynamic("updateBorders")(updateBorders.asInstanceOf[js.Any])
-    if (updateCells != null) __obj.updateDynamic("updateCells")(updateCells.asInstanceOf[js.Any])
-    if (updateChartSpec != null) __obj.updateDynamic("updateChartSpec")(updateChartSpec.asInstanceOf[js.Any])
-    if (updateConditionalFormatRule != null) __obj.updateDynamic("updateConditionalFormatRule")(updateConditionalFormatRule.asInstanceOf[js.Any])
-    if (updateDeveloperMetadata != null) __obj.updateDynamic("updateDeveloperMetadata")(updateDeveloperMetadata.asInstanceOf[js.Any])
-    if (updateDimensionGroup != null) __obj.updateDynamic("updateDimensionGroup")(updateDimensionGroup.asInstanceOf[js.Any])
-    if (updateDimensionProperties != null) __obj.updateDynamic("updateDimensionProperties")(updateDimensionProperties.asInstanceOf[js.Any])
-    if (updateEmbeddedObjectPosition != null) __obj.updateDynamic("updateEmbeddedObjectPosition")(updateEmbeddedObjectPosition.asInstanceOf[js.Any])
-    if (updateFilterView != null) __obj.updateDynamic("updateFilterView")(updateFilterView.asInstanceOf[js.Any])
-    if (updateNamedRange != null) __obj.updateDynamic("updateNamedRange")(updateNamedRange.asInstanceOf[js.Any])
-    if (updateProtectedRange != null) __obj.updateDynamic("updateProtectedRange")(updateProtectedRange.asInstanceOf[js.Any])
-    if (updateSheetProperties != null) __obj.updateDynamic("updateSheetProperties")(updateSheetProperties.asInstanceOf[js.Any])
-    if (updateSpreadsheetProperties != null) __obj.updateDynamic("updateSpreadsheetProperties")(updateSpreadsheetProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRequest]
   }
+  @scala.inline
+  implicit class SchemaRequestOps[Self <: SchemaRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddBanding(value: SchemaAddBandingRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addBanding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddBanding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addBanding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddChart(value: SchemaAddChartRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addChart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddChart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addChart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddConditionalFormatRule(value: SchemaAddConditionalFormatRuleRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addConditionalFormatRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddConditionalFormatRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addConditionalFormatRule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddDimensionGroup(value: SchemaAddDimensionGroupRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addDimensionGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddDimensionGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addDimensionGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddFilterView(value: SchemaAddFilterViewRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addFilterView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddFilterView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addFilterView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddNamedRange(value: SchemaAddNamedRangeRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addNamedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddNamedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addNamedRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddProtectedRange(value: SchemaAddProtectedRangeRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addProtectedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddProtectedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addProtectedRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddSheet(value: SchemaAddSheetRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSheet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddSheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppendCells(value: SchemaAppendCellsRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendCells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppendCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendCells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppendDimension(value: SchemaAppendDimensionRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppendDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendDimension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoFill(value: SchemaAutoFillRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoResizeDimensions(value: SchemaAutoResizeDimensionsRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResizeDimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoResizeDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoResizeDimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClearBasicFilter(value: SchemaClearBasicFilterRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearBasicFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClearBasicFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearBasicFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyPaste(value: SchemaCopyPasteRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyPaste")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyPaste: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyPaste")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateDeveloperMetadata(value: SchemaCreateDeveloperMetadataRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createDeveloperMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateDeveloperMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createDeveloperMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCutPaste(value: SchemaCutPasteRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cutPaste")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCutPaste: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cutPaste")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteBanding(value: SchemaDeleteBandingRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteBanding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteBanding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteBanding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteConditionalFormatRule(value: SchemaDeleteConditionalFormatRuleRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteConditionalFormatRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteConditionalFormatRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteConditionalFormatRule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteDeveloperMetadata(value: SchemaDeleteDeveloperMetadataRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteDeveloperMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteDeveloperMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteDeveloperMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteDimension(value: SchemaDeleteDimensionRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteDimension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteDimensionGroup(value: SchemaDeleteDimensionGroupRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteDimensionGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteDimensionGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteDimensionGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteEmbeddedObject(value: SchemaDeleteEmbeddedObjectRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteEmbeddedObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteEmbeddedObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteEmbeddedObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteFilterView(value: SchemaDeleteFilterViewRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteFilterView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteFilterView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteFilterView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteNamedRange(value: SchemaDeleteNamedRangeRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteNamedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteNamedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteNamedRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteProtectedRange(value: SchemaDeleteProtectedRangeRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteProtectedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteProtectedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteProtectedRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteRange(value: SchemaDeleteRangeRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteSheet(value: SchemaDeleteSheetRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteSheet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteSheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteSheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuplicateFilterView(value: SchemaDuplicateFilterViewRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateFilterView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuplicateFilterView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateFilterView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuplicateSheet(value: SchemaDuplicateSheetRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateSheet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuplicateSheet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duplicateSheet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFindReplace(value: SchemaFindReplaceRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findReplace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFindReplace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findReplace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertDimension(value: SchemaInsertDimensionRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertDimension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertRange(value: SchemaInsertRangeRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsertRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMergeCells(value: SchemaMergeCellsRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeCells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMergeCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeCells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveDimension(value: SchemaMoveDimensionRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveDimension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveDimension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasteData(value: SchemaPasteDataRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasteData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRandomizeRange(value: SchemaRandomizeRangeRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("randomizeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRandomizeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("randomizeRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepeatCell(value: SchemaRepeatCellRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepeatCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repeatCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetBasicFilter(value: SchemaSetBasicFilterRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBasicFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetBasicFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBasicFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetDataValidation(value: SchemaSetDataValidationRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDataValidation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetDataValidation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDataValidation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortRange(value: SchemaSortRangeRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextToColumns(value: SchemaTextToColumnsRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textToColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextToColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textToColumns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnmergeCells(value: SchemaUnmergeCellsRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unmergeCells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnmergeCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unmergeCells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateBanding(value: SchemaUpdateBandingRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateBanding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateBanding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateBanding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateBorders(value: SchemaUpdateBordersRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateBorders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateBorders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateBorders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateCells(value: SchemaUpdateCellsRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCells")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateChartSpec(value: SchemaUpdateChartSpecRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateChartSpec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateChartSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateChartSpec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateConditionalFormatRule(value: SchemaUpdateConditionalFormatRuleRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateConditionalFormatRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateConditionalFormatRule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateConditionalFormatRule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateDeveloperMetadata(value: SchemaUpdateDeveloperMetadataRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDeveloperMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateDeveloperMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDeveloperMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateDimensionGroup(value: SchemaUpdateDimensionGroupRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDimensionGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateDimensionGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDimensionGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateDimensionProperties(value: SchemaUpdateDimensionPropertiesRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDimensionProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateDimensionProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateDimensionProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateEmbeddedObjectPosition(value: SchemaUpdateEmbeddedObjectPositionRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateEmbeddedObjectPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateEmbeddedObjectPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateEmbeddedObjectPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateFilterView(value: SchemaUpdateFilterViewRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateFilterView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateFilterView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateFilterView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateNamedRange(value: SchemaUpdateNamedRangeRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateNamedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateNamedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateNamedRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateProtectedRange(value: SchemaUpdateProtectedRangeRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateProtectedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateProtectedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateProtectedRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateSheetProperties(value: SchemaUpdateSheetPropertiesRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSheetProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateSheetProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSheetProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateSpreadsheetProperties(value: SchemaUpdateSpreadsheetPropertiesRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSpreadsheetProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateSpreadsheetProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSpreadsheetProperties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

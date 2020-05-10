@@ -10,12 +10,12 @@ package object mod {
     - typingsSlinky.webpackConfigUtils.webpackConfigUtilsBooleans.`false`
     - typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings._empty
     - typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.`false`
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
     - scala.Null
     - typingsSlinky.webpackConfigUtils.webpackConfigUtilsNumbers.`0`
   */
   type Falsy = js.UndefOr[typingsSlinky.webpackConfigUtils.mod._Falsy | scala.Null]
   type NonEmptyObject[T, P /* <: typingsSlinky.webpackConfigUtils.mod.DefinedObjKeys[T] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ PP in P ]: T[PP]}
-    */ typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.NonEmptyObject with T
+    */ typingsSlinky.webpackConfigUtils.webpackConfigUtilsStrings.NonEmptyObject with org.scalablytyped.runtime.TopLevel[T]
 }

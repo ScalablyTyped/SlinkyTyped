@@ -9,7 +9,7 @@ package object kinesisvideomediaMod {
   type ContentType = java.lang.String
   type ContinuationToken = java.lang.String
   type FragmentNumberString = java.lang.String
-  type Payload = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.kinesisvideomediaMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
+  type Payload = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kinesisvideomediaMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   type ResourceARN = java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.FRAGMENT_NUMBER

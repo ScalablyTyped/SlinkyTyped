@@ -1,6 +1,6 @@
 package typingsSlinky.amapJsApi.AMap
 
-import typingsSlinky.std.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLCanvasElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ class CanvasLayer () extends MediaLayer[HTMLCanvasElement] {
   /**
     * 返回Canvas对象
     */
-  def getCanvas(): js.UndefOr[org.scalajs.dom.raw.HTMLCanvasElement] = js.native
+  def getCanvas(): js.UndefOr[HTMLCanvasElement] = js.native
   /**
     * 当canvas的内容发生改变是用于刷新图层
     */
@@ -20,6 +20,6 @@ class CanvasLayer () extends MediaLayer[HTMLCanvasElement] {
     * 修改显示的Canvas
     * @param canvas Canvas对象
     */
-  def setCanvas(canvas: org.scalajs.dom.raw.HTMLCanvasElement): Unit = js.native
+  def setCanvas(canvas: HTMLCanvasElement): Unit = js.native
 }
 

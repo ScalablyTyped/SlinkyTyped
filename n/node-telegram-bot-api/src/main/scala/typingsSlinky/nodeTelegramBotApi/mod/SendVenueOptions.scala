@@ -4,24 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SendVenueOptions extends SendBasicOptions {
-  var foursquare_id: js.UndefOr[String] = js.undefined
+  var foursquare_id: js.UndefOr[String] = js.native
 }
 
 object SendVenueOptions {
   @scala.inline
-  def apply(
-    disable_notification: js.UndefOr[Boolean] = js.undefined,
-    foursquare_id: String = null,
-    reply_markup: InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply = null,
-    reply_to_message_id: Int | Double = null
-  ): SendVenueOptions = {
+  def apply(): SendVenueOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disable_notification)) __obj.updateDynamic("disable_notification")(disable_notification.asInstanceOf[js.Any])
-    if (foursquare_id != null) __obj.updateDynamic("foursquare_id")(foursquare_id.asInstanceOf[js.Any])
-    if (reply_markup != null) __obj.updateDynamic("reply_markup")(reply_markup.asInstanceOf[js.Any])
-    if (reply_to_message_id != null) __obj.updateDynamic("reply_to_message_id")(reply_to_message_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendVenueOptions]
   }
+  @scala.inline
+  implicit class SendVenueOptionsOps[Self <: SendVenueOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFoursquare_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foursquare_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFoursquare_id: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foursquare_id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

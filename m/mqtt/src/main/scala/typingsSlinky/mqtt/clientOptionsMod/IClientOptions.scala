@@ -14,143 +14,382 @@ import typingsSlinky.mqtt.mqttStrings.wss
 import typingsSlinky.mqtt.mqttStrings.wx
 import typingsSlinky.mqtt.mqttStrings.wxs
 import typingsSlinky.mqtt.storeMod.Store
-import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IClientOptions extends ISecureClientOptions {
   /**
     * true, set to false to receive QoS 1 and 2 messages while offline
     */
-  var clean: js.UndefOr[Boolean] = js.undefined
+  var clean: js.UndefOr[Boolean] = js.native
   /**
     * 'mqttjs_' + Math.random().toString(16).substr(2, 8)
     */
-  var clientId: js.UndefOr[String] = js.undefined
+  var clientId: js.UndefOr[String] = js.native
   /**
     * 30 * 1000 milliseconds, time to wait before a CONNACK is received
     */
-  var connectTimeout: js.UndefOr[Double] = js.undefined
+  var connectTimeout: js.UndefOr[Double] = js.native
   // port is made into a number subsequently
-  var host: js.UndefOr[String] = js.undefined
+  var host: js.UndefOr[String] = js.native
   // host does NOT include port
-  var hostname: js.UndefOr[String] = js.undefined
+  var hostname: js.UndefOr[String] = js.native
   /**
     * a Store for the incoming packets
     */
-  var incomingStore: js.UndefOr[Store] = js.undefined
+  var incomingStore: js.UndefOr[Store] = js.native
   /**
     *  10 seconds, set to 0 to disable
     */
-  var keepalive: js.UndefOr[Double] = js.undefined
+  var keepalive: js.UndefOr[Double] = js.native
   /**
     * a Store for the outgoing packets
     */
-  var outgoingStore: js.UndefOr[Store] = js.undefined
+  var outgoingStore: js.UndefOr[Store] = js.native
   /**
     * the password required by your broker, if any
     */
-  var password: js.UndefOr[String] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
-  var properties: js.UndefOr[AnonAuthenticationData] = js.undefined
-  var protocol: js.UndefOr[wss | ws | mqtt | mqtts | tcp | ssl | wx | wxs] = js.undefined
+  var password: js.UndefOr[String] = js.native
+  var path: js.UndefOr[String] = js.native
+  var port: js.UndefOr[Double] = js.native
+  var properties: js.UndefOr[AnonAuthenticationData] = js.native
+  var protocol: js.UndefOr[wss | ws | mqtt | mqtts | tcp | ssl | wx | wxs] = js.native
   /**
     * 'MQTT'
     */
-  var protocolId: js.UndefOr[String] = js.undefined
+  var protocolId: js.UndefOr[String] = js.native
   /**
     * 4
     */
-  var protocolVersion: js.UndefOr[Double] = js.undefined
-  var queueQoSZero: js.UndefOr[Boolean] = js.undefined
+  var protocolVersion: js.UndefOr[Double] = js.native
+  var queueQoSZero: js.UndefOr[Boolean] = js.native
   /**
     * 1000 milliseconds, interval between two reconnections
     */
-  var reconnectPeriod: js.UndefOr[Double] = js.undefined
-  var reschedulePings: js.UndefOr[Boolean] = js.undefined
+  var reconnectPeriod: js.UndefOr[Double] = js.native
+  var reschedulePings: js.UndefOr[Boolean] = js.native
   /**
     * true, set to false to disable re-subscribe functionality
     */
-  var resubscribe: js.UndefOr[Boolean] = js.undefined
-  var servers: js.UndefOr[js.Array[AnonHost]] = js.undefined
+  var resubscribe: js.UndefOr[Boolean] = js.native
+  var servers: js.UndefOr[js.Array[AnonHost]] = js.native
   var transformWsUrl: js.UndefOr[
     js.Function3[/* url */ String, /* options */ IClientOptions, /* client */ MqttClient, String]
-  ] = js.undefined
+  ] = js.native
   /**
     * the username required by your broker, if any
     */
-  var username: js.UndefOr[String] = js.undefined
+  var username: js.UndefOr[String] = js.native
   /**
     * a message that will sent by the broker automatically when the client disconnect badly.
     */
-  var will: js.UndefOr[AnonPayload] = js.undefined
-  var wsOptions: js.UndefOr[StringDictionary[js.Any]] = js.undefined
+  var will: js.UndefOr[AnonPayload] = js.native
+  var wsOptions: js.UndefOr[StringDictionary[js.Any]] = js.native
 }
 
 object IClientOptions {
   @scala.inline
-  def apply(
-    ca: String | (js.Array[Buffer | String]) | Buffer = null,
-    cert: String | (js.Array[Buffer | String]) | Buffer = null,
-    clean: js.UndefOr[Boolean] = js.undefined,
-    clientId: String = null,
-    connectTimeout: Int | Double = null,
-    host: String = null,
-    hostname: String = null,
-    incomingStore: Store = null,
-    keepalive: Int | Double = null,
-    key: String | (js.Array[Buffer | js.Object | String]) | Buffer = null,
-    outgoingStore: Store = null,
-    password: String = null,
-    path: String = null,
-    port: Int | Double = null,
-    properties: AnonAuthenticationData = null,
-    protocol: wss | ws | mqtt | mqtts | tcp | ssl | wx | wxs = null,
-    protocolId: String = null,
-    protocolVersion: Int | Double = null,
-    queueQoSZero: js.UndefOr[Boolean] = js.undefined,
-    reconnectPeriod: Int | Double = null,
-    rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
-    reschedulePings: js.UndefOr[Boolean] = js.undefined,
-    resubscribe: js.UndefOr[Boolean] = js.undefined,
-    servers: js.Array[AnonHost] = null,
-    transformWsUrl: (/* url */ String, /* options */ IClientOptions, /* client */ MqttClient) => String = null,
-    username: String = null,
-    will: AnonPayload = null,
-    wsOptions: StringDictionary[js.Any] = null
-  ): IClientOptions = {
+  def apply(): IClientOptions = {
     val __obj = js.Dynamic.literal()
-    if (ca != null) __obj.updateDynamic("ca")(ca.asInstanceOf[js.Any])
-    if (cert != null) __obj.updateDynamic("cert")(cert.asInstanceOf[js.Any])
-    if (!js.isUndefined(clean)) __obj.updateDynamic("clean")(clean.asInstanceOf[js.Any])
-    if (clientId != null) __obj.updateDynamic("clientId")(clientId.asInstanceOf[js.Any])
-    if (connectTimeout != null) __obj.updateDynamic("connectTimeout")(connectTimeout.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (hostname != null) __obj.updateDynamic("hostname")(hostname.asInstanceOf[js.Any])
-    if (incomingStore != null) __obj.updateDynamic("incomingStore")(incomingStore.asInstanceOf[js.Any])
-    if (keepalive != null) __obj.updateDynamic("keepalive")(keepalive.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (outgoingStore != null) __obj.updateDynamic("outgoingStore")(outgoingStore.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
-    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
-    if (protocolId != null) __obj.updateDynamic("protocolId")(protocolId.asInstanceOf[js.Any])
-    if (protocolVersion != null) __obj.updateDynamic("protocolVersion")(protocolVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(queueQoSZero)) __obj.updateDynamic("queueQoSZero")(queueQoSZero.asInstanceOf[js.Any])
-    if (reconnectPeriod != null) __obj.updateDynamic("reconnectPeriod")(reconnectPeriod.asInstanceOf[js.Any])
-    if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
-    if (!js.isUndefined(reschedulePings)) __obj.updateDynamic("reschedulePings")(reschedulePings.asInstanceOf[js.Any])
-    if (!js.isUndefined(resubscribe)) __obj.updateDynamic("resubscribe")(resubscribe.asInstanceOf[js.Any])
-    if (servers != null) __obj.updateDynamic("servers")(servers.asInstanceOf[js.Any])
-    if (transformWsUrl != null) __obj.updateDynamic("transformWsUrl")(js.Any.fromFunction3(transformWsUrl))
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
-    if (will != null) __obj.updateDynamic("will")(will.asInstanceOf[js.Any])
-    if (wsOptions != null) __obj.updateDynamic("wsOptions")(wsOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[IClientOptions]
   }
+  @scala.inline
+  implicit class IClientOptionsOps[Self <: IClientOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClean(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHostname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHostname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncomingStore(value: Store): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incomingStore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncomingStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incomingStore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepalive(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepalive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepalive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepalive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutgoingStore(value: Store): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outgoingStore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutgoingStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outgoingStore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: AnonAuthenticationData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocol(value: wss | ws | mqtt | mqtts | tcp | ssl | wx | wxs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocolId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocolId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtocolVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtocolVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueueQoSZero(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queueQoSZero")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueueQoSZero: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queueQoSZero")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReconnectPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnectPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReconnectPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reconnectPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReschedulePings(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reschedulePings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReschedulePings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reschedulePings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResubscribe(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resubscribe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResubscribe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resubscribe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServers(value: js.Array[AnonHost]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("servers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformWsUrl(value: (/* url */ String, /* options */ IClientOptions, /* client */ MqttClient) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformWsUrl")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutTransformWsUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformWsUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWill(value: AnonPayload): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("will")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("will")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWsOptions(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWsOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wsOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

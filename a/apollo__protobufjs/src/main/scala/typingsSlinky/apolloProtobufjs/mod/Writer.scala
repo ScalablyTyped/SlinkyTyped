@@ -1,7 +1,6 @@
 package typingsSlinky.apolloProtobufjs.mod
 
 import typingsSlinky.long.mod.Long
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +29,7 @@ class Writer () extends js.Object {
     * @param value Buffer or base64 encoded string to write
     * @returns `this`
     */
-  def bytes(value: Uint8Array): Writer = js.native
+  def bytes(value: js.typedarray.Uint8Array): Writer = js.native
   /**
     * Writes a double (64 bit float).
     * @param value Value to write
@@ -41,7 +40,7 @@ class Writer () extends js.Object {
     * Finishes the write operation.
     * @returns Finished buffer
     */
-  def finish(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def finish(): js.typedarray.Uint8Array = js.native
   /**
     * Writes an unsigned 32 bit value as fixed 32 bits.
     * @param value Value to write
@@ -156,7 +155,7 @@ object Writer extends js.Object {
     * @param size Buffer size
     * @returns Buffer
     */
-  def alloc(size: Double): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def alloc(size: Double): js.typedarray.Uint8Array = js.native
   /**
     * Creates a new writer.
     * @returns A {@link BufferWriter} when Buffers are supported, otherwise a {@link Writer}

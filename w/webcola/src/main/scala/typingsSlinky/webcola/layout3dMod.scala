@@ -2,8 +2,6 @@ package typingsSlinky.webcola
 
 import typingsSlinky.webcola.descentMod.Descent
 import typingsSlinky.webcola.rectangleMod.GraphNode
-import typingsSlinky.webcola.rectangleMod.Rectangle
-import typingsSlinky.webcola.vpscMod.Variable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,24 +40,6 @@ object layout3dMod extends js.Object {
     def this(x: Double) = this()
     def this(x: Double, y: Double) = this()
     def this(x: Double, y: Double, z: Double) = this()
-    /* CompleteClass */
-    override var bounds: Rectangle = js.native
-    /* CompleteClass */
-    override var fixed: Boolean = js.native
-    /* CompleteClass */
-    override var height: Double = js.native
-    /* CompleteClass */
-    override var px: Double = js.native
-    /* CompleteClass */
-    override var py: Double = js.native
-    /* CompleteClass */
-    override var variable: Variable = js.native
-    /* CompleteClass */
-    override var width: Double = js.native
-    /* CompleteClass */
-    override var x: Double = js.native
-    /* CompleteClass */
-    override var y: Double = js.native
     var z: Double = js.native
   }
   

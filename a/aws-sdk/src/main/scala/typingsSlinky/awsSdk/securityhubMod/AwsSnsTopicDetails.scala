@@ -26,18 +26,65 @@ trait AwsSnsTopicDetails extends js.Object {
 
 object AwsSnsTopicDetails {
   @scala.inline
-  def apply(
-    KmsMasterKeyId: NonEmptyString = null,
-    Owner: NonEmptyString = null,
-    Subscription: AwsSnsTopicSubscriptionList = null,
-    TopicName: NonEmptyString = null
-  ): AwsSnsTopicDetails = {
+  def apply(): AwsSnsTopicDetails = {
     val __obj = js.Dynamic.literal()
-    if (KmsMasterKeyId != null) __obj.updateDynamic("KmsMasterKeyId")(KmsMasterKeyId.asInstanceOf[js.Any])
-    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
-    if (Subscription != null) __obj.updateDynamic("Subscription")(Subscription.asInstanceOf[js.Any])
-    if (TopicName != null) __obj.updateDynamic("TopicName")(TopicName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsSnsTopicDetails]
   }
+  @scala.inline
+  implicit class AwsSnsTopicDetailsOps[Self <: AwsSnsTopicDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKmsMasterKeyId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsMasterKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsMasterKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsMasterKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwner(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscription(value: AwsSnsTopicSubscriptionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subscription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subscription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopicName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopicName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopicName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

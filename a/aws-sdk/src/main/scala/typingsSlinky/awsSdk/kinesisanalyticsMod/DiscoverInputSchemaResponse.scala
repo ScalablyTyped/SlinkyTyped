@@ -26,18 +26,65 @@ trait DiscoverInputSchemaResponse extends js.Object {
 
 object DiscoverInputSchemaResponse {
   @scala.inline
-  def apply(
-    InputSchema: SourceSchema = null,
-    ParsedInputRecords: ParsedInputRecords = null,
-    ProcessedInputRecords: ProcessedInputRecords = null,
-    RawInputRecords: RawInputRecords = null
-  ): DiscoverInputSchemaResponse = {
+  def apply(): DiscoverInputSchemaResponse = {
     val __obj = js.Dynamic.literal()
-    if (InputSchema != null) __obj.updateDynamic("InputSchema")(InputSchema.asInstanceOf[js.Any])
-    if (ParsedInputRecords != null) __obj.updateDynamic("ParsedInputRecords")(ParsedInputRecords.asInstanceOf[js.Any])
-    if (ProcessedInputRecords != null) __obj.updateDynamic("ProcessedInputRecords")(ProcessedInputRecords.asInstanceOf[js.Any])
-    if (RawInputRecords != null) __obj.updateDynamic("RawInputRecords")(RawInputRecords.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiscoverInputSchemaResponse]
   }
+  @scala.inline
+  implicit class DiscoverInputSchemaResponseOps[Self <: DiscoverInputSchemaResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputSchema(value: SourceSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSchema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputSchema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParsedInputRecords(value: ParsedInputRecords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParsedInputRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParsedInputRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParsedInputRecords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessedInputRecords(value: ProcessedInputRecords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessedInputRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessedInputRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProcessedInputRecords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRawInputRecords(value: RawInputRecords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RawInputRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRawInputRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RawInputRecords")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

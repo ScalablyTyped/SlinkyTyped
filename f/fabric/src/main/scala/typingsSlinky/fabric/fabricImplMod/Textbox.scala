@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.fabric.fabricImplMod.IObjectOptions because Already inherited
 - typingsSlinky.fabric.fabricImplMod.TextOptions because Already inherited
 - typingsSlinky.fabric.fabricImplMod.ITextOptions because Already inherited

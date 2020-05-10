@@ -13,12 +13,10 @@ trait XPosition extends js.Object
 
 object XPosition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.angularUiNotification.angularUiNotificationStrings.center = "center".asInstanceOf[typingsSlinky.angularUiNotification.angularUiNotificationStrings.center]
   @scala.inline
-  def center: typingsSlinky.angularUiNotification.angularUiNotificationStrings.center = this.cast("center")
+  def left: typingsSlinky.angularUiNotification.angularUiNotificationStrings.left = "left".asInstanceOf[typingsSlinky.angularUiNotification.angularUiNotificationStrings.left]
   @scala.inline
-  def left: typingsSlinky.angularUiNotification.angularUiNotificationStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.angularUiNotification.angularUiNotificationStrings.right = this.cast("right")
+  def right: typingsSlinky.angularUiNotification.angularUiNotificationStrings.right = "right".asInstanceOf[typingsSlinky.angularUiNotification.angularUiNotificationStrings.right]
 }
 

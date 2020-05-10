@@ -24,25 +24,23 @@ import scala.scalajs.js.annotation._
 trait TNodeFlags extends js.Object
 
 object TNodeFlags {
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
   /** This bit is set if the node has any "class" inputs */
   @scala.inline
-  def hasClassInput: `8` = this.cast(8)
+  def hasClassInput: `8` = 8.asInstanceOf[`8`]
   /** This bit is set if any directive on this node has content queries */
   @scala.inline
-  def hasContentQuery: `4` = this.cast(4)
+  def hasContentQuery: `4` = 4.asInstanceOf[`4`]
   /** This bit is set if the node has any "style" inputs */
   @scala.inline
-  def hasStyleInput: `16` = this.cast(16)
+  def hasStyleInput: `16` = 16.asInstanceOf[`16`]
   /** This bit is set if the node is a component */
   @scala.inline
-  def isComponent: `1` = this.cast(1)
+  def isComponent: `1` = 1.asInstanceOf[`1`]
   /** This bit is set if the node has been detached by i18n */
   @scala.inline
-  def isDetached: `32` = this.cast(32)
+  def isDetached: `32` = 32.asInstanceOf[`32`]
   /** This bit is set if the node has been projected */
   @scala.inline
-  def isProjected: `2` = this.cast(2)
+  def isProjected: `2` = 2.asInstanceOf[`2`]
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.meteor
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,6 +63,6 @@ trait ITinytestAssertions extends js.Object {
   def runId(): String = js.native
   def throws(f: js.Function): Unit = js.native
   def throws(f: js.Function, expected: String): Unit = js.native
-  def throws(f: js.Function, expected: RegExp): Unit = js.native
+  def throws(f: js.Function, expected: js.RegExp): Unit = js.native
 }
 

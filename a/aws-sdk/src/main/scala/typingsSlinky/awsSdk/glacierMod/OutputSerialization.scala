@@ -14,10 +14,29 @@ trait OutputSerialization extends js.Object {
 
 object OutputSerialization {
   @scala.inline
-  def apply(csv: CSVOutput = null): OutputSerialization = {
+  def apply(): OutputSerialization = {
     val __obj = js.Dynamic.literal()
-    if (csv != null) __obj.updateDynamic("csv")(csv.asInstanceOf[js.Any])
     __obj.asInstanceOf[OutputSerialization]
   }
+  @scala.inline
+  implicit class OutputSerializationOps[Self <: OutputSerialization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCsv(value: CSVOutput): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCsv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

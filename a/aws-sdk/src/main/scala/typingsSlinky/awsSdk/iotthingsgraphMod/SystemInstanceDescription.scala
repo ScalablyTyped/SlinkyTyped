@@ -32,24 +32,101 @@ trait SystemInstanceDescription extends js.Object {
 
 object SystemInstanceDescription {
   @scala.inline
-  def apply(
-    definition: DefinitionDocument = null,
-    flowActionsRoleArn: RoleArn = null,
-    metricsConfiguration: MetricsConfiguration = null,
-    s3BucketName: S3BucketName = null,
-    summary: SystemInstanceSummary = null,
-    validatedDependencyRevisions: DependencyRevisions = null,
-    validatedNamespaceVersion: Int | Double = null
-  ): SystemInstanceDescription = {
+  def apply(): SystemInstanceDescription = {
     val __obj = js.Dynamic.literal()
-    if (definition != null) __obj.updateDynamic("definition")(definition.asInstanceOf[js.Any])
-    if (flowActionsRoleArn != null) __obj.updateDynamic("flowActionsRoleArn")(flowActionsRoleArn.asInstanceOf[js.Any])
-    if (metricsConfiguration != null) __obj.updateDynamic("metricsConfiguration")(metricsConfiguration.asInstanceOf[js.Any])
-    if (s3BucketName != null) __obj.updateDynamic("s3BucketName")(s3BucketName.asInstanceOf[js.Any])
-    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
-    if (validatedDependencyRevisions != null) __obj.updateDynamic("validatedDependencyRevisions")(validatedDependencyRevisions.asInstanceOf[js.Any])
-    if (validatedNamespaceVersion != null) __obj.updateDynamic("validatedNamespaceVersion")(validatedNamespaceVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SystemInstanceDescription]
   }
+  @scala.inline
+  implicit class SystemInstanceDescriptionOps[Self <: SystemInstanceDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefinition(value: DefinitionDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlowActionsRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flowActionsRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlowActionsRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flowActionsRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricsConfiguration(value: MetricsConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricsConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricsConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricsConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3BucketName(value: S3BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3BucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3BucketName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummary(value: SystemInstanceSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidatedDependencyRevisions(value: DependencyRevisions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validatedDependencyRevisions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidatedDependencyRevisions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validatedDependencyRevisions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidatedNamespaceVersion(value: Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validatedNamespaceVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidatedNamespaceVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validatedNamespaceVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -30,19 +30,71 @@ trait GenerateDataKeyWithoutPlaintextRequest extends js.Object {
 
 object GenerateDataKeyWithoutPlaintextRequest {
   @scala.inline
-  def apply(
-    KeyId: KeyIdType,
-    EncryptionContext: EncryptionContextType = null,
-    GrantTokens: GrantTokenList = null,
-    KeySpec: DataKeySpec = null,
-    NumberOfBytes: Int | Double = null
-  ): GenerateDataKeyWithoutPlaintextRequest = {
+  def apply(KeyId: KeyIdType): GenerateDataKeyWithoutPlaintextRequest = {
     val __obj = js.Dynamic.literal(KeyId = KeyId.asInstanceOf[js.Any])
-    if (EncryptionContext != null) __obj.updateDynamic("EncryptionContext")(EncryptionContext.asInstanceOf[js.Any])
-    if (GrantTokens != null) __obj.updateDynamic("GrantTokens")(GrantTokens.asInstanceOf[js.Any])
-    if (KeySpec != null) __obj.updateDynamic("KeySpec")(KeySpec.asInstanceOf[js.Any])
-    if (NumberOfBytes != null) __obj.updateDynamic("NumberOfBytes")(NumberOfBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateDataKeyWithoutPlaintextRequest]
   }
+  @scala.inline
+  implicit class GenerateDataKeyWithoutPlaintextRequestOps[Self <: GenerateDataKeyWithoutPlaintextRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyId(value: KeyIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncryptionContext(value: EncryptionContextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrantTokens(value: GrantTokenList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantTokens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTokens")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeySpec(value: DataKeySpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySpec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeySpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeySpec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfBytes(value: NumberOfBytesType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NumberOfBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,14 +21,41 @@ trait SchemaGoogleCloudDialogflowV2beta1IntentMessageListSelect extends js.Objec
 
 object SchemaGoogleCloudDialogflowV2beta1IntentMessageListSelect {
   @scala.inline
-  def apply(
-    items: js.Array[SchemaGoogleCloudDialogflowV2beta1IntentMessageListSelectItem] = null,
-    title: String = null
-  ): SchemaGoogleCloudDialogflowV2beta1IntentMessageListSelect = {
+  def apply(): SchemaGoogleCloudDialogflowV2beta1IntentMessageListSelect = {
     val __obj = js.Dynamic.literal()
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1IntentMessageListSelect]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2beta1IntentMessageListSelectOps[Self <: SchemaGoogleCloudDialogflowV2beta1IntentMessageListSelect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: js.Array[SchemaGoogleCloudDialogflowV2beta1IntentMessageListSelectItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

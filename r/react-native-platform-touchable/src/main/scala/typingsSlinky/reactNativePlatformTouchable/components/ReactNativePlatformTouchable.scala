@@ -1,15 +1,17 @@
 package typingsSlinky.reactNativePlatformTouchable.components
 
+import typingsSlinky.reactNativePlatformTouchable.mod.PlatformTouchableProps
 import typingsSlinky.reactNativePlatformTouchable.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativePlatformTouchable extends SharedApply_PlatformTouchableProps_1224225798[default] {
+object ReactNativePlatformTouchable {
   @JSImport("react-native-platform-touchable", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: PlatformTouchableProps): SharedBuilder_PlatformTouchableProps1790487014[default] = new SharedBuilder_PlatformTouchableProps1790487014[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativePlatformTouchable.type): SharedBuilder_PlatformTouchableProps1790487014[default] = new SharedBuilder_PlatformTouchableProps1790487014[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

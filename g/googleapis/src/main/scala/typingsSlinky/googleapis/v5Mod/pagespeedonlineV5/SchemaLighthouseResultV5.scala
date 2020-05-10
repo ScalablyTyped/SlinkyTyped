@@ -75,38 +75,185 @@ trait SchemaLighthouseResultV5 extends js.Object {
 
 object SchemaLighthouseResultV5 {
   @scala.inline
-  def apply(
-    audits: StringDictionary[SchemaLighthouseAuditResultV5] = null,
-    categories: AnonAccessibility = null,
-    categoryGroups: StringDictionary[AnonDescriptionTitle] = null,
-    configSettings: AnonEmulatedFormFactor = null,
-    environment: AnonBenchmarkIndex = null,
-    fetchTime: String = null,
-    finalUrl: String = null,
-    i18n: AnonRendererFormattedStrings = null,
-    lighthouseVersion: String = null,
-    requestedUrl: String = null,
-    runWarnings: js.Array[_] = null,
-    runtimeError: AnonCodeMessage = null,
-    timing: AnonTotal = null,
-    userAgent: String = null
-  ): SchemaLighthouseResultV5 = {
+  def apply(): SchemaLighthouseResultV5 = {
     val __obj = js.Dynamic.literal()
-    if (audits != null) __obj.updateDynamic("audits")(audits.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (categoryGroups != null) __obj.updateDynamic("categoryGroups")(categoryGroups.asInstanceOf[js.Any])
-    if (configSettings != null) __obj.updateDynamic("configSettings")(configSettings.asInstanceOf[js.Any])
-    if (environment != null) __obj.updateDynamic("environment")(environment.asInstanceOf[js.Any])
-    if (fetchTime != null) __obj.updateDynamic("fetchTime")(fetchTime.asInstanceOf[js.Any])
-    if (finalUrl != null) __obj.updateDynamic("finalUrl")(finalUrl.asInstanceOf[js.Any])
-    if (i18n != null) __obj.updateDynamic("i18n")(i18n.asInstanceOf[js.Any])
-    if (lighthouseVersion != null) __obj.updateDynamic("lighthouseVersion")(lighthouseVersion.asInstanceOf[js.Any])
-    if (requestedUrl != null) __obj.updateDynamic("requestedUrl")(requestedUrl.asInstanceOf[js.Any])
-    if (runWarnings != null) __obj.updateDynamic("runWarnings")(runWarnings.asInstanceOf[js.Any])
-    if (runtimeError != null) __obj.updateDynamic("runtimeError")(runtimeError.asInstanceOf[js.Any])
-    if (timing != null) __obj.updateDynamic("timing")(timing.asInstanceOf[js.Any])
-    if (userAgent != null) __obj.updateDynamic("userAgent")(userAgent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLighthouseResultV5]
   }
+  @scala.inline
+  implicit class SchemaLighthouseResultV5Ops[Self <: SchemaLighthouseResultV5] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudits(value: StringDictionary[SchemaLighthouseAuditResultV5]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategories(value: AnonAccessibility): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategoryGroups(value: StringDictionary[AnonDescriptionTitle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategoryGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigSettings(value: AnonEmulatedFormFactor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironment(value: AnonBenchmarkIndex): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFetchTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFetchTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinalUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withI18n(value: AnonRendererFormattedStrings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutI18n: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLighthouseVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lighthouseVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLighthouseVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lighthouseVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestedUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestedUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunWarnings(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runWarnings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunWarnings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runWarnings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuntimeError(value: AnonCodeMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuntimeError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTiming(value: AnonTotal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTiming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserAgent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

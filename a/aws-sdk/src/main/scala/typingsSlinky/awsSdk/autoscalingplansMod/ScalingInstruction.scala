@@ -72,26 +72,150 @@ object ScalingInstruction {
     ResourceId: ResourceIdMaxLen1600,
     ScalableDimension: ScalableDimension,
     ServiceNamespace: ServiceNamespace,
-    TargetTrackingConfigurations: TargetTrackingConfigurations,
-    CustomizedLoadMetricSpecification: CustomizedLoadMetricSpecification = null,
-    DisableDynamicScaling: js.UndefOr[Boolean] = js.undefined,
-    PredefinedLoadMetricSpecification: PredefinedLoadMetricSpecification = null,
-    PredictiveScalingMaxCapacityBehavior: PredictiveScalingMaxCapacityBehavior = null,
-    PredictiveScalingMaxCapacityBuffer: Int | Double = null,
-    PredictiveScalingMode: PredictiveScalingMode = null,
-    ScalingPolicyUpdateBehavior: ScalingPolicyUpdateBehavior = null,
-    ScheduledActionBufferTime: Int | Double = null
+    TargetTrackingConfigurations: TargetTrackingConfigurations
   ): ScalingInstruction = {
     val __obj = js.Dynamic.literal(MaxCapacity = MaxCapacity.asInstanceOf[js.Any], MinCapacity = MinCapacity.asInstanceOf[js.Any], ResourceId = ResourceId.asInstanceOf[js.Any], ScalableDimension = ScalableDimension.asInstanceOf[js.Any], ServiceNamespace = ServiceNamespace.asInstanceOf[js.Any], TargetTrackingConfigurations = TargetTrackingConfigurations.asInstanceOf[js.Any])
-    if (CustomizedLoadMetricSpecification != null) __obj.updateDynamic("CustomizedLoadMetricSpecification")(CustomizedLoadMetricSpecification.asInstanceOf[js.Any])
-    if (!js.isUndefined(DisableDynamicScaling)) __obj.updateDynamic("DisableDynamicScaling")(DisableDynamicScaling.asInstanceOf[js.Any])
-    if (PredefinedLoadMetricSpecification != null) __obj.updateDynamic("PredefinedLoadMetricSpecification")(PredefinedLoadMetricSpecification.asInstanceOf[js.Any])
-    if (PredictiveScalingMaxCapacityBehavior != null) __obj.updateDynamic("PredictiveScalingMaxCapacityBehavior")(PredictiveScalingMaxCapacityBehavior.asInstanceOf[js.Any])
-    if (PredictiveScalingMaxCapacityBuffer != null) __obj.updateDynamic("PredictiveScalingMaxCapacityBuffer")(PredictiveScalingMaxCapacityBuffer.asInstanceOf[js.Any])
-    if (PredictiveScalingMode != null) __obj.updateDynamic("PredictiveScalingMode")(PredictiveScalingMode.asInstanceOf[js.Any])
-    if (ScalingPolicyUpdateBehavior != null) __obj.updateDynamic("ScalingPolicyUpdateBehavior")(ScalingPolicyUpdateBehavior.asInstanceOf[js.Any])
-    if (ScheduledActionBufferTime != null) __obj.updateDynamic("ScheduledActionBufferTime")(ScheduledActionBufferTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScalingInstruction]
   }
+  @scala.inline
+  implicit class ScalingInstructionOps[Self <: ScalingInstruction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxCapacity(value: ResourceCapacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinCapacity(value: ResourceCapacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: ResourceIdMaxLen1600): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScalableDimension(value: ScalableDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalableDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceNamespace(value: ServiceNamespace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceNamespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetTrackingConfigurations(value: TargetTrackingConfigurations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetTrackingConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustomizedLoadMetricSpecification(value: CustomizedLoadMetricSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomizedLoadMetricSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomizedLoadMetricSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomizedLoadMetricSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableDynamicScaling(value: DisableDynamicScaling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableDynamicScaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableDynamicScaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisableDynamicScaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredefinedLoadMetricSpecification(value: PredefinedLoadMetricSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredefinedLoadMetricSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredefinedLoadMetricSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredefinedLoadMetricSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredictiveScalingMaxCapacityBehavior(value: PredictiveScalingMaxCapacityBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictiveScalingMaxCapacityBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredictiveScalingMaxCapacityBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictiveScalingMaxCapacityBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredictiveScalingMaxCapacityBuffer(value: ResourceCapacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictiveScalingMaxCapacityBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredictiveScalingMaxCapacityBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictiveScalingMaxCapacityBuffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPredictiveScalingMode(value: PredictiveScalingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictiveScalingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPredictiveScalingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictiveScalingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScalingPolicyUpdateBehavior(value: ScalingPolicyUpdateBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingPolicyUpdateBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScalingPolicyUpdateBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScalingPolicyUpdateBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduledActionBufferTime(value: ScheduledActionBufferTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledActionBufferTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduledActionBufferTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduledActionBufferTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

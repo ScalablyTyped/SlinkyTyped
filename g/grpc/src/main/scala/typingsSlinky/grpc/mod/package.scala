@@ -34,7 +34,7 @@ package object mod {
   ]
   type ServiceDefinition[ImplementationType] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {readonly [ I in keyof ImplementationType ]: grpc.grpc.MethodDefinition<any, any>}
-    */ typingsSlinky.grpc.grpcStrings.ServiceDefinition with js.Any
+    */ typingsSlinky.grpc.grpcStrings.ServiceDefinition with org.scalablytyped.runtime.TopLevel[js.Any]
   type StatusListener = js.Function2[/* status */ typingsSlinky.grpc.mod.StatusObject, /* next */ js.Function, scala.Unit]
   type UntypedServiceImplementation = org.scalablytyped.runtime.StringDictionary[typingsSlinky.grpc.mod.handleCall[js.Any, js.Any]]
   /**

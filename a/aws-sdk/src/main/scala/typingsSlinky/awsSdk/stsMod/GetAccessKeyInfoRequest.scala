@@ -16,8 +16,21 @@ object GetAccessKeyInfoRequest {
   @scala.inline
   def apply(AccessKeyId: accessKeyIdType): GetAccessKeyInfoRequest = {
     val __obj = js.Dynamic.literal(AccessKeyId = AccessKeyId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetAccessKeyInfoRequest]
   }
+  @scala.inline
+  implicit class GetAccessKeyInfoRequestOps[Self <: GetAccessKeyInfoRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessKeyId(value: accessKeyIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

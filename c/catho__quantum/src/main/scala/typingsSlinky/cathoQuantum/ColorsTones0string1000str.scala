@@ -5,14 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined @catho/quantum.@catho/quantum/Colors.ColorsTones & {  0  :string,   1000  :string} */
+@js.native
 trait ColorsTones0string1000str extends js.Object {
-  var `0`: String
-  var `100`: String
-  var `1000`: String
-  var `300`: String
-  var `500`: String
-  var `700`: String
-  var `900`: String
+  var `0`: String = js.native
+  var `100`: String = js.native
+  var `1000`: String = js.native
+  var `300`: String = js.native
+  var `500`: String = js.native
+  var `700`: String = js.native
+  var `900`: String = js.native
 }
 
 object ColorsTones0string1000str {
@@ -36,5 +37,55 @@ object ColorsTones0string1000str {
     __obj.updateDynamic("900")(`900`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColorsTones0string1000str]
   }
+  @scala.inline
+  implicit class ColorsTones0string1000strOps[Self <: ColorsTones0string1000str] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with0(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with100(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("100")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1000(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with300(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("300")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with500(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("500")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with700(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("700")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with900(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("900")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

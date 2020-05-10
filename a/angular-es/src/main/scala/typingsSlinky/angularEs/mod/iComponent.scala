@@ -8,34 +8,102 @@ import scala.scalajs.js.annotation._
   * Component interface
   * @see https://docs.angularjs.org/guide/component
   */
+@js.native
 trait iComponent extends js.Object {
-  var bindings: js.UndefOr[js.Object] = js.undefined
-  var controllerAs: js.UndefOr[String] = js.undefined
-  var require: js.UndefOr[String] = js.undefined
-  var selector: String
-  var template: String
-  var templateUrl: js.UndefOr[String] = js.undefined
-  var transclude: js.UndefOr[String] = js.undefined
+  var bindings: js.UndefOr[js.Object] = js.native
+  var controllerAs: js.UndefOr[String] = js.native
+  var require: js.UndefOr[String] = js.native
+  var selector: String = js.native
+  var template: String = js.native
+  var templateUrl: js.UndefOr[String] = js.native
+  var transclude: js.UndefOr[String] = js.native
 }
 
 object iComponent {
   @scala.inline
-  def apply(
-    selector: String,
-    template: String,
-    bindings: js.Object = null,
-    controllerAs: String = null,
-    require: String = null,
-    templateUrl: String = null,
-    transclude: String = null
-  ): iComponent = {
+  def apply(selector: String, template: String): iComponent = {
     val __obj = js.Dynamic.literal(selector = selector.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
-    if (bindings != null) __obj.updateDynamic("bindings")(bindings.asInstanceOf[js.Any])
-    if (controllerAs != null) __obj.updateDynamic("controllerAs")(controllerAs.asInstanceOf[js.Any])
-    if (require != null) __obj.updateDynamic("require")(require.asInstanceOf[js.Any])
-    if (templateUrl != null) __obj.updateDynamic("templateUrl")(templateUrl.asInstanceOf[js.Any])
-    if (transclude != null) __obj.updateDynamic("transclude")(transclude.asInstanceOf[js.Any])
     __obj.asInstanceOf[iComponent]
   }
+  @scala.inline
+  implicit class iComponentOps[Self <: iComponent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBindings(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBindings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControllerAs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerAs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControllerAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerAs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequire(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequire: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplateUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransclude(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transclude")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

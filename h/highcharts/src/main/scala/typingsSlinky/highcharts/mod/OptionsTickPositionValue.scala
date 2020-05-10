@@ -12,10 +12,8 @@ trait OptionsTickPositionValue extends js.Object
 
 object OptionsTickPositionValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inside: typingsSlinky.highcharts.highchartsStrings.inside = "inside".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.inside]
   @scala.inline
-  def inside: typingsSlinky.highcharts.highchartsStrings.inside = this.cast("inside")
-  @scala.inline
-  def outside: typingsSlinky.highcharts.highchartsStrings.outside = this.cast("outside")
+  def outside: typingsSlinky.highcharts.highchartsStrings.outside = "outside".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.outside]
 }
 

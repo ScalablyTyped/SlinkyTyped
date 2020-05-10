@@ -22,11 +22,47 @@ trait InspectorServiceAttributes extends js.Object {
 
 object InspectorServiceAttributes {
   @scala.inline
-  def apply(schemaVersion: NumericVersion, assessmentRunArn: Arn = null, rulesPackageArn: Arn = null): InspectorServiceAttributes = {
+  def apply(schemaVersion: NumericVersion): InspectorServiceAttributes = {
     val __obj = js.Dynamic.literal(schemaVersion = schemaVersion.asInstanceOf[js.Any])
-    if (assessmentRunArn != null) __obj.updateDynamic("assessmentRunArn")(assessmentRunArn.asInstanceOf[js.Any])
-    if (rulesPackageArn != null) __obj.updateDynamic("rulesPackageArn")(rulesPackageArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[InspectorServiceAttributes]
   }
+  @scala.inline
+  implicit class InspectorServiceAttributesOps[Self <: InspectorServiceAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSchemaVersion(value: NumericVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssessmentRunArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentRunArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssessmentRunArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assessmentRunArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRulesPackageArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRulesPackageArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rulesPackageArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

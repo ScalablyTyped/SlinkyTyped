@@ -3,10 +3,8 @@ package typingsSlinky.ecol
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Listener
-import typingsSlinky.ecol.collectionEventMod.CollectionEvent.Type
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
-import typingsSlinky.tstl.IteratoranyanyanyEquals
+import typingsSlinky.tstl.Iteratoranyanyany
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.mod.base.Container
 import typingsSlinky.tstl.setContainerMod.SetContainer
@@ -22,7 +20,7 @@ import scala.scalajs.js.annotation._
 @JSImport("ecol/lib/sets/TreeMultiSetCollection", JSImport.Namespace)
 @js.native
 object treeMultiSetCollectionMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.isizeMod.ISize because Already inherited
   - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
   - typingsSlinky.tstl.ipushMod.IPush because Already inherited
@@ -57,8 +55,6 @@ object treeMultiSetCollectionMod extends js.Object {
     /* protected */ override def _Insert_by_range[InputIterator /* <: IForwardIterator[T, InputIterator] */](begin: InputIterator, end: InputIterator): Unit = js.native
     /* InferMemberOverrides */
     /* protected */ override def _Key_eq(x: T, y: T): Boolean = js.native
-    /* CompleteClass */
-    override def addEventListener(`type`: Type, listener: Listener[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
     /**
       * Range Assigner.
       *
@@ -67,14 +63,6 @@ object treeMultiSetCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[T, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
-    /**
-      * Iterator to the first element.
-      *
-      * @return Iterator to the first element.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T], T] = js.native
     /**
       * @inheritDoc
       */
@@ -91,22 +79,6 @@ object treeMultiSetCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def count(key: T): Double = js.native
-    /* CompleteClass */
-    override def dispatchEvent(event: CollectionEvent[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
-    /**
-      * Test whether container is empty.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def empty(): Boolean = js.native
-    /**
-      * Iterator to the end.
-      *
-      * @return Iterator to the end.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T], T] = js.native
     /**
       * Erase elements in range.
       *
@@ -152,8 +124,6 @@ object treeMultiSetCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def has(key: T): Boolean = js.native
-    /* CompleteClass */
-    override def hasEventListener(`type`: Type): Boolean = js.native
     /* InferMemberOverrides */
     override def insert(hint: Iterator[T], key: T): Iterator[T] = js.native
     /* InferMemberOverrides */
@@ -167,23 +137,6 @@ object treeMultiSetCollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def merge(source: TreeMultiSet[T]): Unit = js.native
     /**
-      * Insert items at the end.
-      *
-      * @param items Items to insert.
-      * @return Number of elements in the container after insertion.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def push(items: T*): Double = js.native
-    /**
-      * Reverse iterator to the first element in reverse.
-      *
-      * @return Reverse iterator to the first.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def rbegin(): ReverseIterator[T] = js.native
-    /**
       * @inheritDoc
       */
     def refresh(): Unit = js.native
@@ -195,22 +148,6 @@ object treeMultiSetCollectionMod extends js.Object {
       * @inheritDoc
       */
     def refresh(it: Iterator[T]): Unit = js.native
-    /* CompleteClass */
-    override def removeEventListener(`type`: Type, listener: Listener[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T]]): Unit = js.native
-    /**
-      * Reverse iterator to the reverse end.
-      *
-      * @return Reverse iterator to the end.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def rend(): ReverseIterator[T] = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* CompleteClass */
-    /* InferMemberOverrides */
-    override def size(): Double = js.native
     /**
       * Swap elements.
       *
@@ -254,7 +191,7 @@ object treeMultiSetCollectionMod extends js.Object {
             /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-            IteratoranyanyanyEquals, 
+            Iteratoranyanyany, 
             typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
               /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
               /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
@@ -271,7 +208,7 @@ object treeMultiSetCollectionMod extends js.Object {
             /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
             /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-            IteratoranyanyanyEquals, 
+            Iteratoranyanyany, 
             typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
               /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
               /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 

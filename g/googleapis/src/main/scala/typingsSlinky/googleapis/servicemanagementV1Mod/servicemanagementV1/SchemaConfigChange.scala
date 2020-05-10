@@ -47,20 +47,77 @@ trait SchemaConfigChange extends js.Object {
 
 object SchemaConfigChange {
   @scala.inline
-  def apply(
-    advices: js.Array[SchemaAdvice] = null,
-    changeType: String = null,
-    element: String = null,
-    newValue: String = null,
-    oldValue: String = null
-  ): SchemaConfigChange = {
+  def apply(): SchemaConfigChange = {
     val __obj = js.Dynamic.literal()
-    if (advices != null) __obj.updateDynamic("advices")(advices.asInstanceOf[js.Any])
-    if (changeType != null) __obj.updateDynamic("changeType")(changeType.asInstanceOf[js.Any])
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (newValue != null) __obj.updateDynamic("newValue")(newValue.asInstanceOf[js.Any])
-    if (oldValue != null) __obj.updateDynamic("oldValue")(oldValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConfigChange]
   }
+  @scala.inline
+  implicit class SchemaConfigChangeOps[Self <: SchemaConfigChange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdvices(value: js.Array[SchemaAdvice]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdvices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("advices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChangeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

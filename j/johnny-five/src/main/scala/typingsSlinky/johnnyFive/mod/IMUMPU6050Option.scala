@@ -4,17 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IMUMPU6050Option extends IMUGeneralOption {
-  var address: Double
+  var address: Double = js.native
 }
 
 object IMUMPU6050Option {
   @scala.inline
-  def apply(address: Double, controller: String = null, freq: Int | Double = null): IMUMPU6050Option = {
+  def apply(address: Double): IMUMPU6050Option = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any])
-    if (controller != null) __obj.updateDynamic("controller")(controller.asInstanceOf[js.Any])
-    if (freq != null) __obj.updateDynamic("freq")(freq.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMUMPU6050Option]
   }
+  @scala.inline
+  implicit class IMUMPU6050OptionOps[Self <: IMUMPU6050Option] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

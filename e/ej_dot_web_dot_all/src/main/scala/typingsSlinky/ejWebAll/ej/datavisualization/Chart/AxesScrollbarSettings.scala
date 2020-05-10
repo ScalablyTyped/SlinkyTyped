@@ -4,38 +4,86 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AxesScrollbarSettings extends js.Object {
   /** Controls whether scrollbar has to be responsive in the chart.
     * @Default {false}
     */
-  var canResize: js.UndefOr[Boolean] = js.undefined
+  var canResize: js.UndefOr[Boolean] = js.native
   /** The maximum number of points to be displayed in the scrollbar.
     * @Default {null}
     */
-  var pointsLength: js.UndefOr[Double] = js.undefined
+  var pointsLength: js.UndefOr[Double] = js.native
   /** Options to customize the range for the scrollbar in the axis.
     */
-  var range: js.UndefOr[AxesScrollbarSettingsRange] = js.undefined
+  var range: js.UndefOr[AxesScrollbarSettingsRange] = js.native
   /** Specifies to enable or disable the scrollbar.
     * @Default {false}
     */
-  var visible: js.UndefOr[Boolean] = js.undefined
+  var visible: js.UndefOr[Boolean] = js.native
 }
 
 object AxesScrollbarSettings {
   @scala.inline
-  def apply(
-    canResize: js.UndefOr[Boolean] = js.undefined,
-    pointsLength: Int | Double = null,
-    range: AxesScrollbarSettingsRange = null,
-    visible: js.UndefOr[Boolean] = js.undefined
-  ): AxesScrollbarSettings = {
+  def apply(): AxesScrollbarSettings = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(canResize)) __obj.updateDynamic("canResize")(canResize.asInstanceOf[js.Any])
-    if (pointsLength != null) __obj.updateDynamic("pointsLength")(pointsLength.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[AxesScrollbarSettings]
   }
+  @scala.inline
+  implicit class AxesScrollbarSettingsOps[Self <: AxesScrollbarSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanResize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canResize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointsLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointsLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointsLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointsLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: AxesScrollbarSettingsRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

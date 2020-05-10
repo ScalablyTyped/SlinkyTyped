@@ -48,7 +48,7 @@ trait Dom_ extends js.Object {
   @JSName("$")
   def $(selector: String, context: String): Element = js.native
   @JSName("$")
-  def $(selector: String, context: typingsSlinky.std.Element): Element = js.native
+  def $(selector: String, context: Element): Element = js.native
   /**
     * Finds a all DOM elements matching `selector` within the optional
     * `context` of another DOM element (defaulting to `document`).
@@ -70,7 +70,7 @@ trait Dom_ extends js.Object {
   @JSName("$$")
   def DollarDollar(selector: String, context: String): NodeList = js.native
   @JSName("$$")
-  def DollarDollar(selector: String, context: typingsSlinky.std.Element): NodeList = js.native
+  def DollarDollar(selector: String, context: Element): NodeList = js.native
   /**
     * Add a CSS class name to an element
     *
@@ -290,7 +290,7 @@ trait Dom_ extends js.Object {
     */
   def insertContent(el: Element, content: String): Element = js.native
   def insertContent(el: Element, content: js.Function0[_]): Element = js.native
-  def insertContent(el: Element, content: typingsSlinky.std.Element): Element = js.native
+  def insertContent(el: Element, content: Element): Element = js.native
   /**
     * Determines, via duck typing, whether or not a value is a DOM element.
     *

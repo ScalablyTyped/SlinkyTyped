@@ -1,10 +1,7 @@
 package typingsSlinky.spectacle.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.spectacle.mod.DeckProps
 import typingsSlinky.spectacle.mod.Theme
 import typingsSlinky.spectacle.mod.progressType
@@ -13,54 +10,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Deck
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.Deck] {
+object Deck {
   @JSImport("spectacle", "Deck")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: controls */
-  def apply(
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    autoplayDuration: Int | Double = null,
-    autoplayLoop: js.UndefOr[Boolean] = js.undefined,
-    autoplayOnStart: js.UndefOr[Boolean] = js.undefined,
-    contentHeight: String = null,
-    contentWidth: String = null,
-    disableKeyboardControls: js.UndefOr[Boolean] = js.undefined,
-    disableTouchControls: js.UndefOr[Boolean] = js.undefined,
-    globalStyles: js.UndefOr[Boolean] = js.undefined,
-    history: js.Any = null,
-    onStateChange: (/* previousState */ js.UndefOr[String], /* nextState */ js.UndefOr[String]) => Unit = null,
-    progress: progressType = null,
-    showFullscreenControl: js.UndefOr[Boolean] = js.undefined,
-    theme: Theme = null,
-    transition: js.Array[transitionType] = null,
-    transitionDuration: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Deck] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (autoplayDuration != null) __obj.updateDynamic("autoplayDuration")(autoplayDuration.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplayLoop)) __obj.updateDynamic("autoplayLoop")(autoplayLoop.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplayOnStart)) __obj.updateDynamic("autoplayOnStart")(autoplayOnStart.asInstanceOf[js.Any])
-    if (contentHeight != null) __obj.updateDynamic("contentHeight")(contentHeight.asInstanceOf[js.Any])
-    if (contentWidth != null) __obj.updateDynamic("contentWidth")(contentWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableKeyboardControls)) __obj.updateDynamic("disableKeyboardControls")(disableKeyboardControls.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableTouchControls)) __obj.updateDynamic("disableTouchControls")(disableTouchControls.asInstanceOf[js.Any])
-    if (!js.isUndefined(globalStyles)) __obj.updateDynamic("globalStyles")(globalStyles.asInstanceOf[js.Any])
-    if (history != null) __obj.updateDynamic("history")(history.asInstanceOf[js.Any])
-    if (onStateChange != null) __obj.updateDynamic("onStateChange")(js.Any.fromFunction2(onStateChange))
-    if (progress != null) __obj.updateDynamic("progress")(progress.asInstanceOf[js.Any])
-    if (!js.isUndefined(showFullscreenControl)) __obj.updateDynamic("showFullscreenControl")(showFullscreenControl.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.spectacle.mod.Deck] {
+    @scala.inline
+    def autoplay(value: Boolean): this.type = set("autoplay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplayDuration(value: Double): this.type = set("autoplayDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplayLoop(value: Boolean): this.type = set("autoplayLoop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplayOnStart(value: Boolean): this.type = set("autoplayOnStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentHeight(value: String): this.type = set("contentHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentWidth(value: String): this.type = set("contentWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def controls(value: Boolean): this.type = set("controls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableKeyboardControls(value: Boolean): this.type = set("disableKeyboardControls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableTouchControls(value: Boolean): this.type = set("disableTouchControls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def globalStyles(value: Boolean): this.type = set("globalStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def history(value: js.Any): this.type = set("history", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onStateChange(value: (/* previousState */ js.UndefOr[String], /* nextState */ js.UndefOr[String]) => Unit): this.type = set("onStateChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def progress(value: progressType): this.type = set("progress", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showFullscreenControl(value: Boolean): this.type = set("showFullscreenControl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transition(value: js.Array[transitionType]): this.type = set("transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionDuration(value: Double): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Deck] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.mod.Deck](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DeckProps
+  
+  def withProps(p: DeckProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Deck.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

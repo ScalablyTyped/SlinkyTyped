@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridColumnCommandItem extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var click: js.UndefOr[js.Function] = js.undefined
-  var iconClass: js.UndefOr[String | GridColumnCommandItemIconClass] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var template: js.UndefOr[String] = js.undefined
-  var text: js.UndefOr[String | GridColumnCommandItemText] = js.undefined
-  var visible: js.UndefOr[js.Function] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var click: js.UndefOr[js.Function] = js.native
+  var iconClass: js.UndefOr[String | GridColumnCommandItemIconClass] = js.native
+  var name: js.UndefOr[String] = js.native
+  var template: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String | GridColumnCommandItemText] = js.native
+  var visible: js.UndefOr[js.Function] = js.native
 }
 
 object GridColumnCommandItem {
   @scala.inline
-  def apply(
-    className: String = null,
-    click: js.Function = null,
-    iconClass: String | GridColumnCommandItemIconClass = null,
-    name: String = null,
-    template: String = null,
-    text: String | GridColumnCommandItemText = null,
-    visible: js.Function = null
-  ): GridColumnCommandItem = {
+  def apply(): GridColumnCommandItem = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (click != null) __obj.updateDynamic("click")(click.asInstanceOf[js.Any])
-    if (iconClass != null) __obj.updateDynamic("iconClass")(iconClass.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (visible != null) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridColumnCommandItem]
   }
+  @scala.inline
+  implicit class GridColumnCommandItemOps[Self <: GridColumnCommandItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClick(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconClass(value: String | GridColumnCommandItemIconClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String | GridColumnCommandItemText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

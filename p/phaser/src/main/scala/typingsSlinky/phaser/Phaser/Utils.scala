@@ -558,13 +558,13 @@ object Utils extends js.Object {
       * @param arrayBuffer The Array Buffer to encode.
       * @param mediaType An optional media type, i.e. `audio/ogg` or `image/jpeg`. If included the resulting string will be a data URI.
       */
-    def ArrayBufferToBase64(arrayBuffer: scala.scalajs.js.typedarray.ArrayBuffer): String = js.native
-    def ArrayBufferToBase64(arrayBuffer: scala.scalajs.js.typedarray.ArrayBuffer, mediaType: String): String = js.native
+    def ArrayBufferToBase64(arrayBuffer: js.typedarray.ArrayBuffer): String = js.native
+    def ArrayBufferToBase64(arrayBuffer: js.typedarray.ArrayBuffer, mediaType: String): String = js.native
     /**
       * Converts a base64 string, either with or without a data uri, into an Array Buffer.
       * @param base64 The base64 string to be decoded. Can optionally contain a data URI header, which will be stripped out prior to decoding.
       */
-    def Base64ToArrayBuffer(base64: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+    def Base64ToArrayBuffer(base64: String): js.typedarray.ArrayBuffer = js.native
   }
   
   @js.native

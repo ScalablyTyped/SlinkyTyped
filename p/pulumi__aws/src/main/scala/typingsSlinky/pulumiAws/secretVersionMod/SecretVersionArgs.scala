@@ -27,17 +27,59 @@ trait SecretVersionArgs extends js.Object {
 
 object SecretVersionArgs {
   @scala.inline
-  def apply(
-    secretId: Input[String],
-    secretBinary: Input[String] = null,
-    secretString: Input[String] = null,
-    versionStages: Input[js.Array[Input[String]]] = null
-  ): SecretVersionArgs = {
+  def apply(secretId: Input[String]): SecretVersionArgs = {
     val __obj = js.Dynamic.literal(secretId = secretId.asInstanceOf[js.Any])
-    if (secretBinary != null) __obj.updateDynamic("secretBinary")(secretBinary.asInstanceOf[js.Any])
-    if (secretString != null) __obj.updateDynamic("secretString")(secretString.asInstanceOf[js.Any])
-    if (versionStages != null) __obj.updateDynamic("versionStages")(versionStages.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecretVersionArgs]
   }
+  @scala.inline
+  implicit class SecretVersionArgsOps[Self <: SecretVersionArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSecretId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecretBinary(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretBinary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretBinary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretBinary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecretString(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionStages(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionStages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionStages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionStages")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

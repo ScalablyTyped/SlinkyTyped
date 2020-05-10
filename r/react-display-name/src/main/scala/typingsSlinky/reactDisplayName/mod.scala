@@ -1,6 +1,6 @@
 package typingsSlinky.reactDisplayName
 
-import typingsSlinky.react.mod.ComponentType
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def default(Component: String): String = js.native
-  def default(Component: ComponentType[_]): String = js.native
+  def default(Component: ReactComponentClass[_]): String = js.native
 }
 

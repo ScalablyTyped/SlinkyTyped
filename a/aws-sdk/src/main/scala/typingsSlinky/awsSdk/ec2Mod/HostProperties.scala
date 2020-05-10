@@ -30,20 +30,77 @@ trait HostProperties extends js.Object {
 
 object HostProperties {
   @scala.inline
-  def apply(
-    Cores: Int | scala.Double = null,
-    InstanceFamily: String = null,
-    InstanceType: String = null,
-    Sockets: Int | scala.Double = null,
-    TotalVCpus: Int | scala.Double = null
-  ): HostProperties = {
+  def apply(): HostProperties = {
     val __obj = js.Dynamic.literal()
-    if (Cores != null) __obj.updateDynamic("Cores")(Cores.asInstanceOf[js.Any])
-    if (InstanceFamily != null) __obj.updateDynamic("InstanceFamily")(InstanceFamily.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (Sockets != null) __obj.updateDynamic("Sockets")(Sockets.asInstanceOf[js.Any])
-    if (TotalVCpus != null) __obj.updateDynamic("TotalVCpus")(TotalVCpus.asInstanceOf[js.Any])
     __obj.asInstanceOf[HostProperties]
   }
+  @scala.inline
+  implicit class HostPropertiesOps[Self <: HostProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCores(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cores")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCores: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cores")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSockets(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sockets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSockets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sockets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalVCpus(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalVCpus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalVCpus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalVCpus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

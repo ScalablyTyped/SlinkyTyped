@@ -18,11 +18,41 @@ trait ResourceLocation extends js.Object {
 
 object ResourceLocation {
   @scala.inline
-  def apply(availabilityZone: String = null, regionName: RegionName = null): ResourceLocation = {
+  def apply(): ResourceLocation = {
     val __obj = js.Dynamic.literal()
-    if (availabilityZone != null) __obj.updateDynamic("availabilityZone")(availabilityZone.asInstanceOf[js.Any])
-    if (regionName != null) __obj.updateDynamic("regionName")(regionName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceLocation]
   }
+  @scala.inline
+  implicit class ResourceLocationOps[Self <: ResourceLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegionName(value: RegionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,7 +4,6 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpMod.ClientRequest
 import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.std.Error
 import typingsSlinky.ws.AnonBinary
 import typingsSlinky.ws.AnonCode
 import typingsSlinky.ws.AnonData
@@ -159,7 +158,7 @@ trait WebSocket extends EventEmitter {
   @JSName("removeListener")
   def removeListener_upgrade(event: upgrade, listener: js.Function1[/* request */ IncomingMessage, Unit]): this.type = js.native
   def send(data: js.Any): Unit = js.native
-  def send(data: js.Any, cb: js.Function1[/* err */ js.UndefOr[Error], Unit]): Unit = js.native
+  def send(data: js.Any, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def send(data: js.Any, options: AnonBinary): Unit = js.native
   def send(data: js.Any, options: AnonBinary, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def terminate(): Unit = js.native

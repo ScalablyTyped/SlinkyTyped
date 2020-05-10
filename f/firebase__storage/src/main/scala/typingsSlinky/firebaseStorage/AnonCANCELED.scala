@@ -5,20 +5,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCANCELED extends js.Object {
-  var CANCELED: TaskState
-  var ERROR: TaskState
-  var PAUSED: TaskState
-  var RUNNING: TaskState
-  var SUCCESS: TaskState
+  var CANCELED: TaskState = js.native
+  var ERROR: TaskState = js.native
+  var PAUSED: TaskState = js.native
+  var RUNNING: TaskState = js.native
+  var SUCCESS: TaskState = js.native
 }
 
 object AnonCANCELED {
   @scala.inline
   def apply(CANCELED: TaskState, ERROR: TaskState, PAUSED: TaskState, RUNNING: TaskState, SUCCESS: TaskState): AnonCANCELED = {
     val __obj = js.Dynamic.literal(CANCELED = CANCELED.asInstanceOf[js.Any], ERROR = ERROR.asInstanceOf[js.Any], PAUSED = PAUSED.asInstanceOf[js.Any], RUNNING = RUNNING.asInstanceOf[js.Any], SUCCESS = SUCCESS.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonCANCELED]
   }
+  @scala.inline
+  implicit class AnonCANCELEDOps[Self <: AnonCANCELED] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCANCELED(value: TaskState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CANCELED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withERROR(value: TaskState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ERROR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPAUSED(value: TaskState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PAUSED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRUNNING(value: TaskState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RUNNING")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSUCCESS(value: TaskState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SUCCESS")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

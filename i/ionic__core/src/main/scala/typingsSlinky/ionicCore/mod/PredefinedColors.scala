@@ -19,24 +19,22 @@ trait PredefinedColors extends js.Object
 
 object PredefinedColors {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def danger: typingsSlinky.ionicCore.ionicCoreStrings.danger = "danger".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.danger]
   @scala.inline
-  def danger: typingsSlinky.ionicCore.ionicCoreStrings.danger = this.cast("danger")
+  def dark: typingsSlinky.ionicCore.ionicCoreStrings.dark = "dark".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.ionicCore.ionicCoreStrings.dark = this.cast("dark")
+  def light: typingsSlinky.ionicCore.ionicCoreStrings.light = "light".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.light]
   @scala.inline
-  def light: typingsSlinky.ionicCore.ionicCoreStrings.light = this.cast("light")
+  def medium: typingsSlinky.ionicCore.ionicCoreStrings.medium = "medium".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.medium]
   @scala.inline
-  def medium: typingsSlinky.ionicCore.ionicCoreStrings.medium = this.cast("medium")
+  def primary: typingsSlinky.ionicCore.ionicCoreStrings.primary = "primary".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.primary]
   @scala.inline
-  def primary: typingsSlinky.ionicCore.ionicCoreStrings.primary = this.cast("primary")
+  def secondary: typingsSlinky.ionicCore.ionicCoreStrings.secondary = "secondary".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.secondary]
   @scala.inline
-  def secondary: typingsSlinky.ionicCore.ionicCoreStrings.secondary = this.cast("secondary")
+  def success: typingsSlinky.ionicCore.ionicCoreStrings.success = "success".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.success]
   @scala.inline
-  def success: typingsSlinky.ionicCore.ionicCoreStrings.success = this.cast("success")
+  def tertiary: typingsSlinky.ionicCore.ionicCoreStrings.tertiary = "tertiary".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.tertiary]
   @scala.inline
-  def tertiary: typingsSlinky.ionicCore.ionicCoreStrings.tertiary = this.cast("tertiary")
-  @scala.inline
-  def warning: typingsSlinky.ionicCore.ionicCoreStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.ionicCore.ionicCoreStrings.warning = "warning".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.warning]
 }
 

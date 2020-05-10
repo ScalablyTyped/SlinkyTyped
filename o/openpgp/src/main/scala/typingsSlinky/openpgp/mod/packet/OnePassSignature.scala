@@ -59,11 +59,11 @@ class OnePassSignature () extends js.Object {
     * @param bytes payload of a tag 4 packet
     * @returns object representation
     */
-  def read(bytes: scala.scalajs.js.typedarray.Uint8Array): OnePassSignature = js.native
+  def read(bytes: js.typedarray.Uint8Array): OnePassSignature = js.native
   /**
     * creates a string representation of a one-pass signature packet
     * @returns a Uint8Array representation of a one-pass signature packet
     */
-  def write(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def write(): js.typedarray.Uint8Array = js.native
 }
 

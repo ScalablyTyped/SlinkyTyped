@@ -5,8 +5,6 @@ import typingsSlinky.rxCore.Rx.IDisposable
 import typingsSlinky.rxCore.Rx.IPromise
 import typingsSlinky.rxLite.AnonInstantiable
 import typingsSlinky.rxLite.AnonInstantiableIPromise
-import typingsSlinky.std.Date
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +12,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Observable[T] extends IObservable[T] {
   def asObservable(): Observable[T] = js.native
-  def `catch`(handler: js.Function1[/* exception */ Error, IPromise[T] | Observable[T]]): Observable[T] = js.native
+  def `catch`(handler: js.Function1[/* exception */ js.Error, IPromise[T] | Observable[T]]): Observable[T] = js.native
   def `catch`(second: Observable[T]): Observable[T] = js.native
-  def catchException(handler: js.Function1[/* exception */ Error, IPromise[T] | Observable[T]]): Observable[T] = js.native
+  def catchException(handler: js.Function1[/* exception */ js.Error, IPromise[T] | Observable[T]]): Observable[T] = js.native
       // alias for catch
   def catchException(second: Observable[T]): Observable[T] = js.native
   def combineLatest[T2](second: IPromise[T2]): Observable[js.Tuple2[T, T2]] = js.native
@@ -258,8 +256,8 @@ trait Observable[T] extends IObservable[T] {
   def debounce(dueTime: Double, scheduler: IScheduler): Observable[T] = js.native
   def delay(dueTime: Double): Observable[T] = js.native
   def delay(dueTime: Double, scheduler: IScheduler): Observable[T] = js.native
-  def delay(dueTime: Date): Observable[T] = js.native
-  def delay(dueTime: Date, scheduler: IScheduler): Observable[T] = js.native
+  def delay(dueTime: js.Date): Observable[T] = js.native
+  def delay(dueTime: js.Date, scheduler: IScheduler): Observable[T] = js.native
   def dematerialize[TOrigin](): Observable[TOrigin] = js.native
   def distinctUntilChanged(skipParameter: Boolean, comparer: js.Function2[/* x */ T, /* y */ T, Boolean]): Observable[T] = js.native
   def distinctUntilChanged[TValue](): Observable[T] = js.native
@@ -556,9 +554,9 @@ trait Observable[T] extends IObservable[T] {
   def timeout(dueTime: Double): Observable[T] = js.native
   def timeout(dueTime: Double, other: Observable[T]): Observable[T] = js.native
   def timeout(dueTime: Double, other: Observable[T], scheduler: IScheduler): Observable[T] = js.native
-  def timeout(dueTime: Date): Observable[T] = js.native
-  def timeout(dueTime: Date, other: Observable[T]): Observable[T] = js.native
-  def timeout(dueTime: Date, other: Observable[T], scheduler: IScheduler): Observable[T] = js.native
+  def timeout(dueTime: js.Date): Observable[T] = js.native
+  def timeout(dueTime: js.Date, other: Observable[T]): Observable[T] = js.native
+  def timeout(dueTime: js.Date, other: Observable[T], scheduler: IScheduler): Observable[T] = js.native
   def timestamp(): Observable[Timestamp[T]] = js.native
   def timestamp(scheduler: IScheduler): Observable[Timestamp[T]] = js.native
       // alias for subscribe

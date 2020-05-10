@@ -1,10 +1,9 @@
 package typingsSlinky.ol.featureMod
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.ol.formatTypeMod.FormatType
 import typingsSlinky.ol.olFeatureMod.FeatureLike
-import typingsSlinky.std.ArrayBuffer
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,8 +36,8 @@ trait FeatureFormat extends js.Object {
   def readFeatures(source: String, opt_options: ReadOptions): js.Array[FeatureLike] = js.native
   def readFeatures(source: js.Object): js.Array[FeatureLike] = js.native
   def readFeatures(source: js.Object, opt_options: ReadOptions): js.Array[FeatureLike] = js.native
-  def readFeatures(source: ArrayBuffer): js.Array[FeatureLike] = js.native
-  def readFeatures(source: ArrayBuffer, opt_options: ReadOptions): js.Array[FeatureLike] = js.native
+  def readFeatures(source: js.typedarray.ArrayBuffer): js.Array[FeatureLike] = js.native
+  def readFeatures(source: js.typedarray.ArrayBuffer, opt_options: ReadOptions): js.Array[FeatureLike] = js.native
   def readFeatures(source: Document_): js.Array[FeatureLike] = js.native
   def readFeatures(source: Document_, opt_options: ReadOptions): js.Array[FeatureLike] = js.native
   def readFeatures(source: Node): js.Array[FeatureLike] = js.native

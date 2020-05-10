@@ -9,9 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class BitmapTypedValue protected () extends IBitmapTypedValue {
   def this(value: js.Any, `type`: PropertyType) = this()
-  /* CompleteClass */
-  override var `type`: PropertyType = js.native
-  /* CompleteClass */
-  override var value: js.Any = js.native
 }
 

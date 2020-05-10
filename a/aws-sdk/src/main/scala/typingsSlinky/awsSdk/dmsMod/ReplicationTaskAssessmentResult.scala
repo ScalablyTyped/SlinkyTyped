@@ -38,24 +38,101 @@ trait ReplicationTaskAssessmentResult extends js.Object {
 
 object ReplicationTaskAssessmentResult {
   @scala.inline
-  def apply(
-    AssessmentResults: String = null,
-    AssessmentResultsFile: String = null,
-    AssessmentStatus: String = null,
-    ReplicationTaskArn: String = null,
-    ReplicationTaskIdentifier: String = null,
-    ReplicationTaskLastAssessmentDate: js.Date = null,
-    S3ObjectUrl: String = null
-  ): ReplicationTaskAssessmentResult = {
+  def apply(): ReplicationTaskAssessmentResult = {
     val __obj = js.Dynamic.literal()
-    if (AssessmentResults != null) __obj.updateDynamic("AssessmentResults")(AssessmentResults.asInstanceOf[js.Any])
-    if (AssessmentResultsFile != null) __obj.updateDynamic("AssessmentResultsFile")(AssessmentResultsFile.asInstanceOf[js.Any])
-    if (AssessmentStatus != null) __obj.updateDynamic("AssessmentStatus")(AssessmentStatus.asInstanceOf[js.Any])
-    if (ReplicationTaskArn != null) __obj.updateDynamic("ReplicationTaskArn")(ReplicationTaskArn.asInstanceOf[js.Any])
-    if (ReplicationTaskIdentifier != null) __obj.updateDynamic("ReplicationTaskIdentifier")(ReplicationTaskIdentifier.asInstanceOf[js.Any])
-    if (ReplicationTaskLastAssessmentDate != null) __obj.updateDynamic("ReplicationTaskLastAssessmentDate")(ReplicationTaskLastAssessmentDate.asInstanceOf[js.Any])
-    if (S3ObjectUrl != null) __obj.updateDynamic("S3ObjectUrl")(S3ObjectUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplicationTaskAssessmentResult]
   }
+  @scala.inline
+  implicit class ReplicationTaskAssessmentResultOps[Self <: ReplicationTaskAssessmentResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssessmentResults(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssessmentResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssessmentResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssessmentResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssessmentResultsFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssessmentResultsFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssessmentResultsFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssessmentResultsFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssessmentStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssessmentStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssessmentStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssessmentStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationTaskLastAssessmentDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskLastAssessmentDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationTaskLastAssessmentDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReplicationTaskLastAssessmentDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3ObjectUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3ObjectUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3ObjectUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3ObjectUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -23,11 +23,41 @@ trait SchemaTableCellProperties extends js.Object {
 
 object SchemaTableCellProperties {
   @scala.inline
-  def apply(contentAlignment: String = null, tableCellBackgroundFill: SchemaTableCellBackgroundFill = null): SchemaTableCellProperties = {
+  def apply(): SchemaTableCellProperties = {
     val __obj = js.Dynamic.literal()
-    if (contentAlignment != null) __obj.updateDynamic("contentAlignment")(contentAlignment.asInstanceOf[js.Any])
-    if (tableCellBackgroundFill != null) __obj.updateDynamic("tableCellBackgroundFill")(tableCellBackgroundFill.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableCellProperties]
   }
+  @scala.inline
+  implicit class SchemaTableCellPropertiesOps[Self <: SchemaTableCellProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentAlignment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentAlignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableCellBackgroundFill(value: SchemaTableCellBackgroundFill): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellBackgroundFill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableCellBackgroundFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellBackgroundFill")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

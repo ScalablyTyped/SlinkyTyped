@@ -14,14 +14,12 @@ trait SlideFromTypes extends js.Object
 
 object SlideFromTypes {
   @scala.inline
-  def bottom: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.bottom = "bottom".asInstanceOf[typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.left = "left".asInstanceOf[typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.left = this.cast("left")
+  def right: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.right = "right".asInstanceOf[typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.right]
   @scala.inline
-  def right: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.top = this.cast("top")
+  def top: typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.top = "top".asInstanceOf[typingsSlinky.reactNativePopupDialog.reactNativePopupDialogStrings.top]
 }
 

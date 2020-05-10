@@ -6,69 +6,208 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IndexDocumentParams[T] extends GenericParams {
   @JSName("body")
-  var body_IndexDocumentParams: T
-  var id: js.UndefOr[String] = js.undefined
-  var index: String
-  var opType: js.UndefOr[index | create] = js.undefined
-  var parent: js.UndefOr[String] = js.undefined
-  var pipeline: js.UndefOr[String] = js.undefined
-  var refresh: js.UndefOr[Refresh] = js.undefined
-  var routing: js.UndefOr[String] = js.undefined
-  var timeout: js.UndefOr[TimeSpan] = js.undefined
-  var timestamp: js.UndefOr[js.Date | Double] = js.undefined
-  var ttl: js.UndefOr[TimeSpan] = js.undefined
-  var `type`: String
-  var version: js.UndefOr[Double] = js.undefined
-  var versionType: js.UndefOr[VersionType] = js.undefined
-  var waitForActiveShards: js.UndefOr[String] = js.undefined
+  var body_IndexDocumentParams: T = js.native
+  var id: js.UndefOr[String] = js.native
+  var index: String = js.native
+  var opType: js.UndefOr[index | create] = js.native
+  var parent: js.UndefOr[String] = js.native
+  var pipeline: js.UndefOr[String] = js.native
+  var refresh: js.UndefOr[Refresh] = js.native
+  var routing: js.UndefOr[String] = js.native
+  var timeout: js.UndefOr[TimeSpan] = js.native
+  var timestamp: js.UndefOr[js.Date | Double] = js.native
+  var ttl: js.UndefOr[TimeSpan] = js.native
+  var `type`: String = js.native
+  var version: js.UndefOr[Double] = js.native
+  var versionType: js.UndefOr[VersionType] = js.native
+  var waitForActiveShards: js.UndefOr[String] = js.native
 }
 
 object IndexDocumentParams {
   @scala.inline
-  def apply[T](
-    body: T,
-    index: String,
-    `type`: String,
-    filterPath: String | js.Array[String] = null,
-    id: String = null,
-    ignore: Double | js.Array[Double] = null,
-    maxRetries: Int | Double = null,
-    method: String = null,
-    opType: index | create = null,
-    parent: String = null,
-    pipeline: String = null,
-    refresh: Refresh = null,
-    requestTimeout: Int | Double = null,
-    routing: String = null,
-    timeout: TimeSpan = null,
-    timestamp: js.Date | Double = null,
-    ttl: TimeSpan = null,
-    version: Int | Double = null,
-    versionType: VersionType = null,
-    waitForActiveShards: String = null
-  ): IndexDocumentParams[T] = {
+  def apply[T](body: T, index: String, `type`: String): IndexDocumentParams[T] = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (maxRetries != null) __obj.updateDynamic("maxRetries")(maxRetries.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (opType != null) __obj.updateDynamic("opType")(opType.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (pipeline != null) __obj.updateDynamic("pipeline")(pipeline.asInstanceOf[js.Any])
-    if (refresh != null) __obj.updateDynamic("refresh")(refresh.asInstanceOf[js.Any])
-    if (requestTimeout != null) __obj.updateDynamic("requestTimeout")(requestTimeout.asInstanceOf[js.Any])
-    if (routing != null) __obj.updateDynamic("routing")(routing.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (timestamp != null) __obj.updateDynamic("timestamp")(timestamp.asInstanceOf[js.Any])
-    if (ttl != null) __obj.updateDynamic("ttl")(ttl.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (versionType != null) __obj.updateDynamic("versionType")(versionType.asInstanceOf[js.Any])
-    if (waitForActiveShards != null) __obj.updateDynamic("waitForActiveShards")(waitForActiveShards.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndexDocumentParams[T]]
   }
+  @scala.inline
+  implicit class IndexDocumentParamsOps[Self[t] <: IndexDocumentParams[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withBody(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndex(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpType(value: index | create): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpType: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPipeline(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipeline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPipeline: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipeline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefresh(value: Refresh): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefresh: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRouting(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRouting: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("routing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: TimeSpan): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestampDate(value: js.Date): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: js.Date | Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTtl(value: TimeSpan): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTtl: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionType(value: VersionType): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionType: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitForActiveShards(value: String): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForActiveShards")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitForActiveShards: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForActiveShards")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

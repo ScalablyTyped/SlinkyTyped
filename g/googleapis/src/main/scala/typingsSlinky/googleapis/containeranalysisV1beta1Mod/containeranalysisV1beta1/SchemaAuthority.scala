@@ -25,10 +25,29 @@ trait SchemaAuthority extends js.Object {
 
 object SchemaAuthority {
   @scala.inline
-  def apply(hint: SchemaHint = null): SchemaAuthority = {
+  def apply(): SchemaAuthority = {
     val __obj = js.Dynamic.literal()
-    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAuthority]
   }
+  @scala.inline
+  implicit class SchemaAuthorityOps[Self <: SchemaAuthority] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHint(value: SchemaHint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

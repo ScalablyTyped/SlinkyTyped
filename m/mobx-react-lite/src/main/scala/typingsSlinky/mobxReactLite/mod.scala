@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def isUsingStaticRendering(): Boolean = js.native
-  def observer[P /* <: js.Object */](baseComponent: FunctionComponent[P]): ReactComponentClass[P] = js.native
+  def observer[P /* <: js.Object */](baseComponent: ReactComponentClass[P]): ReactComponentClass[P] = js.native
   def observer[P /* <: js.Object */](baseComponent: FunctionComponent[P], options: IObserverOptions): ReactComponentClass[P] = js.native
   def observer[P /* <: js.Object */, TRef](baseComponent: RefForwardingComponent[TRef, P], options: IObserverOptionsforwardRe): ReactComponentClass[ForwardRefExoticComponent[PropsWithoutRef[P] with RefAttributes[TRef]]] = js.native
   def optimizeScheduler(reactionScheduler: IBatchedUpdates): Unit = js.native

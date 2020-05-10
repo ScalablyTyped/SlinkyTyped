@@ -157,7 +157,7 @@ trait JQuery extends js.Object {
     * @param contained A DOM element to match elements against.
     * @return JQuery
     */
-  def haz(contained: typingsSlinky.std.HTMLElement): JQuery = js.native
+  def haz(contained: HTMLElement): JQuery = js.native
   /**
     * Reduce the set of matched elements to those that have a descendant that matches the selector or DOM element.
     *
@@ -185,7 +185,7 @@ trait JQuery extends js.Object {
     * @param contained A DOM element to match elements against.
     * @return JQuery
     */
-  def haznt(contained: typingsSlinky.std.HTMLElement): JQuery = js.native
+  def haznt(contained: HTMLElement): JQuery = js.native
   /**
     * Reduce the set of matched elements to those that have a descendant that does not match the selector or DOM element.
     *

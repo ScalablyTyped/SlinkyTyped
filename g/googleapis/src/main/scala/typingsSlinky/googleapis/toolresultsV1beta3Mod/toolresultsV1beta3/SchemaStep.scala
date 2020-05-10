@@ -156,40 +156,197 @@ trait SchemaStep extends js.Object {
 
 object SchemaStep {
   @scala.inline
-  def apply(
-    completionTime: SchemaTimestamp = null,
-    creationTime: SchemaTimestamp = null,
-    description: String = null,
-    deviceUsageDuration: SchemaDuration = null,
-    dimensionValue: js.Array[SchemaStepDimensionValueEntry] = null,
-    hasImages: js.UndefOr[Boolean] = js.undefined,
-    labels: js.Array[SchemaStepLabelsEntry] = null,
-    multiStep: SchemaMultiStep = null,
-    name: String = null,
-    outcome: SchemaOutcome = null,
-    runDuration: SchemaDuration = null,
-    state: String = null,
-    stepId: String = null,
-    testExecutionStep: SchemaTestExecutionStep = null,
-    toolExecutionStep: SchemaToolExecutionStep = null
-  ): SchemaStep = {
+  def apply(): SchemaStep = {
     val __obj = js.Dynamic.literal()
-    if (completionTime != null) __obj.updateDynamic("completionTime")(completionTime.asInstanceOf[js.Any])
-    if (creationTime != null) __obj.updateDynamic("creationTime")(creationTime.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (deviceUsageDuration != null) __obj.updateDynamic("deviceUsageDuration")(deviceUsageDuration.asInstanceOf[js.Any])
-    if (dimensionValue != null) __obj.updateDynamic("dimensionValue")(dimensionValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasImages)) __obj.updateDynamic("hasImages")(hasImages.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (multiStep != null) __obj.updateDynamic("multiStep")(multiStep.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (outcome != null) __obj.updateDynamic("outcome")(outcome.asInstanceOf[js.Any])
-    if (runDuration != null) __obj.updateDynamic("runDuration")(runDuration.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (stepId != null) __obj.updateDynamic("stepId")(stepId.asInstanceOf[js.Any])
-    if (testExecutionStep != null) __obj.updateDynamic("testExecutionStep")(testExecutionStep.asInstanceOf[js.Any])
-    if (toolExecutionStep != null) __obj.updateDynamic("toolExecutionStep")(toolExecutionStep.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStep]
   }
+  @scala.inline
+  implicit class SchemaStepOps[Self <: SchemaStep] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompletionTime(value: SchemaTimestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completionTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletionTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completionTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: SchemaTimestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceUsageDuration(value: SchemaDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceUsageDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceUsageDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceUsageDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDimensionValue(value: js.Array[SchemaStepDimensionValueEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensionValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasImages(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasImages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasImages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: js.Array[SchemaStepLabelsEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiStep(value: SchemaMultiStep): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiStep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutcome(value: SchemaOutcome): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outcome")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutcome: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outcome")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunDuration(value: SchemaDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTestExecutionStep(value: SchemaTestExecutionStep): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testExecutionStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTestExecutionStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testExecutionStep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolExecutionStep(value: SchemaToolExecutionStep): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolExecutionStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolExecutionStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolExecutionStep")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

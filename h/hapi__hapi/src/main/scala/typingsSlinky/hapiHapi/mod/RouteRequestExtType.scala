@@ -16,18 +16,16 @@ trait RouteRequestExtType extends js.Object
 
 object RouteRequestExtType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onCredentials: typingsSlinky.hapiHapi.hapiHapiStrings.onCredentials = "onCredentials".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onCredentials]
   @scala.inline
-  def onCredentials: typingsSlinky.hapiHapi.hapiHapiStrings.onCredentials = this.cast("onCredentials")
+  def onPostAuth: typingsSlinky.hapiHapi.hapiHapiStrings.onPostAuth = "onPostAuth".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPostAuth]
   @scala.inline
-  def onPostAuth: typingsSlinky.hapiHapi.hapiHapiStrings.onPostAuth = this.cast("onPostAuth")
+  def onPostHandler: typingsSlinky.hapiHapi.hapiHapiStrings.onPostHandler = "onPostHandler".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPostHandler]
   @scala.inline
-  def onPostHandler: typingsSlinky.hapiHapi.hapiHapiStrings.onPostHandler = this.cast("onPostHandler")
+  def onPreAuth: typingsSlinky.hapiHapi.hapiHapiStrings.onPreAuth = "onPreAuth".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPreAuth]
   @scala.inline
-  def onPreAuth: typingsSlinky.hapiHapi.hapiHapiStrings.onPreAuth = this.cast("onPreAuth")
+  def onPreHandler: typingsSlinky.hapiHapi.hapiHapiStrings.onPreHandler = "onPreHandler".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPreHandler]
   @scala.inline
-  def onPreHandler: typingsSlinky.hapiHapi.hapiHapiStrings.onPreHandler = this.cast("onPreHandler")
-  @scala.inline
-  def onPreResponse: typingsSlinky.hapiHapi.hapiHapiStrings.onPreResponse = this.cast("onPreResponse")
+  def onPreResponse: typingsSlinky.hapiHapi.hapiHapiStrings.onPreResponse = "onPreResponse".asInstanceOf[typingsSlinky.hapiHapi.hapiHapiStrings.onPreResponse]
 }
 

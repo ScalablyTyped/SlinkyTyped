@@ -26,17 +26,59 @@ trait UpdateJobQueueRequest extends js.Object {
 
 object UpdateJobQueueRequest {
   @scala.inline
-  def apply(
-    jobQueue: String,
-    computeEnvironmentOrder: ComputeEnvironmentOrders = null,
-    priority: Int | Double = null,
-    state: JQState = null
-  ): UpdateJobQueueRequest = {
+  def apply(jobQueue: String): UpdateJobQueueRequest = {
     val __obj = js.Dynamic.literal(jobQueue = jobQueue.asInstanceOf[js.Any])
-    if (computeEnvironmentOrder != null) __obj.updateDynamic("computeEnvironmentOrder")(computeEnvironmentOrder.asInstanceOf[js.Any])
-    if (priority != null) __obj.updateDynamic("priority")(priority.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateJobQueueRequest]
   }
+  @scala.inline
+  implicit class UpdateJobQueueRequestOps[Self <: UpdateJobQueueRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobQueue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobQueue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComputeEnvironmentOrder(value: ComputeEnvironmentOrders): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputeEnvironmentOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeEnvironmentOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: JQState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

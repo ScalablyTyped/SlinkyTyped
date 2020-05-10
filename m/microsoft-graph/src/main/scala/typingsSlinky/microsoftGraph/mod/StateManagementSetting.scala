@@ -13,12 +13,10 @@ trait StateManagementSetting extends js.Object
 
 object StateManagementSetting {
   @scala.inline
-  def allowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allowed = this.cast("allowed")
+  def allowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allowed = "allowed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allowed]
   @scala.inline
-  def blocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked = this.cast("blocked")
+  def blocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked = "blocked".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def notConfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured = this.cast("notConfigured")
+  def notConfigured: typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured = "notConfigured".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notConfigured]
 }
 

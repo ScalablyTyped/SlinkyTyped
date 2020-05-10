@@ -14,14 +14,12 @@ trait Summarizers extends js.Object
 
 object Summarizers {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def defaultSummarizer: typingsSlinky.istanbulLibReport.istanbulLibReportStrings.defaultSummarizer = "defaultSummarizer".asInstanceOf[typingsSlinky.istanbulLibReport.istanbulLibReportStrings.defaultSummarizer]
   @scala.inline
-  def defaultSummarizer: typingsSlinky.istanbulLibReport.istanbulLibReportStrings.defaultSummarizer = this.cast("defaultSummarizer")
+  def flat: typingsSlinky.istanbulLibReport.istanbulLibReportStrings.flat = "flat".asInstanceOf[typingsSlinky.istanbulLibReport.istanbulLibReportStrings.flat]
   @scala.inline
-  def flat: typingsSlinky.istanbulLibReport.istanbulLibReportStrings.flat = this.cast("flat")
+  def nested: typingsSlinky.istanbulLibReport.istanbulLibReportStrings.nested = "nested".asInstanceOf[typingsSlinky.istanbulLibReport.istanbulLibReportStrings.nested]
   @scala.inline
-  def nested: typingsSlinky.istanbulLibReport.istanbulLibReportStrings.nested = this.cast("nested")
-  @scala.inline
-  def pkg: typingsSlinky.istanbulLibReport.istanbulLibReportStrings.pkg = this.cast("pkg")
+  def pkg: typingsSlinky.istanbulLibReport.istanbulLibReportStrings.pkg = "pkg".asInstanceOf[typingsSlinky.istanbulLibReport.istanbulLibReportStrings.pkg]
 }
 

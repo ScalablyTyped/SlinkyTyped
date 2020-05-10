@@ -30,20 +30,77 @@ trait SolutionConfig extends js.Object {
 
 object SolutionConfig {
   @scala.inline
-  def apply(
-    algorithmHyperParameters: HyperParameters = null,
-    autoMLConfig: AutoMLConfig = null,
-    eventValueThreshold: EventValueThreshold = null,
-    featureTransformationParameters: FeatureTransformationParameters = null,
-    hpoConfig: HPOConfig = null
-  ): SolutionConfig = {
+  def apply(): SolutionConfig = {
     val __obj = js.Dynamic.literal()
-    if (algorithmHyperParameters != null) __obj.updateDynamic("algorithmHyperParameters")(algorithmHyperParameters.asInstanceOf[js.Any])
-    if (autoMLConfig != null) __obj.updateDynamic("autoMLConfig")(autoMLConfig.asInstanceOf[js.Any])
-    if (eventValueThreshold != null) __obj.updateDynamic("eventValueThreshold")(eventValueThreshold.asInstanceOf[js.Any])
-    if (featureTransformationParameters != null) __obj.updateDynamic("featureTransformationParameters")(featureTransformationParameters.asInstanceOf[js.Any])
-    if (hpoConfig != null) __obj.updateDynamic("hpoConfig")(hpoConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[SolutionConfig]
   }
+  @scala.inline
+  implicit class SolutionConfigOps[Self <: SolutionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithmHyperParameters(value: HyperParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithmHyperParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithmHyperParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithmHyperParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoMLConfig(value: AutoMLConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMLConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoMLConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoMLConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventValueThreshold(value: EventValueThreshold): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventValueThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventValueThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventValueThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFeatureTransformationParameters(value: FeatureTransformationParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureTransformationParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFeatureTransformationParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("featureTransformationParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHpoConfig(value: HPOConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hpoConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHpoConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hpoConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

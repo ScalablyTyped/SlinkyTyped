@@ -1,7 +1,6 @@
 package typingsSlinky.cordovaPluginContacts
 
 import org.scalablytyped.runtime.Instantiable14
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +10,14 @@ import scala.scalajs.js.annotation._
   * from the device contacts database. Contacts can also be retrieved (individually or in bulk)
   * from the database by invoking the navigator.contacts.find method.
   */
+@js.native
 trait Contact extends ContactProperties {
   /**
     * Removes the contact from the device contacts database, otherwise executes an error callback with a ContactError object.
     * @param onSuccess Success callback function invoked on success operation.
     * @param onError Error callback function, invoked when an error occurs.
     */
-  def remove(onSuccess: js.Function0[Unit], onError: js.Function1[/* error */ js.Error, Unit]): Unit
+  def remove(onSuccess: js.Function0[Unit], onError: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   /**
     * Saves a new contact to the device contacts database, or updates an existing contact if a contact with the same id already exists.
     * @param onSuccess Success callback function invoked on success operation with che Contact object.
@@ -26,7 +26,7 @@ trait Contact extends ContactProperties {
   def save(
     onSuccess: js.Function1[/* contact */ this.type, Unit],
     onError: js.Function1[/* error */ js.Error, Unit]
-  ): Unit
+  ): Unit = js.native
 }
 
 @JSGlobal("Contact")
@@ -43,7 +43,7 @@ Instantiable14[
       js.UndefOr[/* addresses */ js.Array[ContactAddress]], 
       js.UndefOr[/* ims */ js.Array[ContactField]], 
       js.UndefOr[/* organizations */ js.Array[ContactOrganization]], 
-      js.UndefOr[/* birthday */ Date], 
+      js.UndefOr[/* birthday */ js.Date], 
       js.UndefOr[/* note */ String], 
       js.UndefOr[/* photos */ js.Array[ContactField]], 
       js.UndefOr[/* categories */ ContactField], 

@@ -1,5 +1,6 @@
 package typingsSlinky.reduxSagaCore.effectsMod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.reduxSagaCore.AnonContextCtx
 import typingsSlinky.reduxSagaCore.AnonContextFn
 import typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.cps_
@@ -17,19 +18,15 @@ object cps extends js.Object {
   ): CpsEffect = js.native
   def apply[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): void}
-    */ cps_ with js.Any */, Name /* <: String */](
-    ctxAndFnName: js.Tuple2[Ctx, Name],
-    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Ctx[Name]> is not an array type */ args: CpsFunctionParameters[
-      /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
-    ]
-  ): CpsEffect = js.native
-  def apply[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in Name ]: (this : Ctx, args : ...any): void}
-    */ cps_ with js.Any */, Name /* <: String */](
+    */ cps_ with TopLevel[js.Any] */, Name /* <: String */](
     ctxAndFnName: AnonContextFn[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Ctx[Name]> is not an array type */ args: CpsFunctionParameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
+  ): CpsEffect = js.native
+  def apply[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, Unit] */](
+    ctxAndFn: js.Tuple2[Ctx, Fn],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
   ): CpsEffect = js.native
   def apply[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, Unit] */](
     ctxAndFn: AnonContextCtx[Ctx, Fn],

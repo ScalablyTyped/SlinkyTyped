@@ -12,10 +12,8 @@ trait PlacesNearbyRanking extends js.Object
 
 object PlacesNearbyRanking {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def distance: typingsSlinky.googleMaps.googleMapsStrings.distance = "distance".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.distance]
   @scala.inline
-  def distance: typingsSlinky.googleMaps.googleMapsStrings.distance = this.cast("distance")
-  @scala.inline
-  def prominence: typingsSlinky.googleMaps.googleMapsStrings.prominence = this.cast("prominence")
+  def prominence: typingsSlinky.googleMaps.googleMapsStrings.prominence = "prominence".asInstanceOf[typingsSlinky.googleMaps.googleMapsStrings.prominence]
 }
 

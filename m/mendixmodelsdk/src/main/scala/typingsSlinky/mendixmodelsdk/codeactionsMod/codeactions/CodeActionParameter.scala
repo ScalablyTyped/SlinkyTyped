@@ -13,7 +13,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -51,34 +51,26 @@ abstract class CodeActionParameter protected ()
   @JSName("name")
   val name_FCodeActionParameter: String = js.native
   /**
-    * Returns the qualified name of this element, or
-    * null if this element is not a part of the model,
-    * or if it or one of its namespace containers does not have a
-    * valid name.
-    */
-  /* CompleteClass */
-  override val qualifiedName: String | Null = js.native
-  /**
     * In version 7.21.0: introduced
     */
-  def actionParameterType(): ParameterType = js.native
+  def actionParameterType: ParameterType = js.native
   def actionParameterType(newValue: ParameterType): js.Any = js.native
   /**
     * In version 7.18.0: introduced
     */
-  def category(): String = js.native
+  def category: String = js.native
   def category(newValue: String): js.Any = js.native
-  def containerAsCodeAction(): CodeAction = js.native
-  def containerAsJavaAction(): JavaAction = js.native
+  def containerAsCodeAction: CodeAction = js.native
+  def containerAsJavaAction: JavaAction = js.native
   /**
     * In version 6.10.0: introduced
     */
-  def description(): String = js.native
+  def description: String = js.native
   def description(newValue: String): js.Any = js.native
-  def name(): String = js.native
+  def name: String = js.native
   def name(newValue: String): js.Any = js.native
   @JSName("qualifiedName")
-  def qualifiedName_MCodeActionParameter(): String | Null = js.native
+  def qualifiedName_MCodeActionParameter: String | Null = js.native
 }
 
 /* static members */

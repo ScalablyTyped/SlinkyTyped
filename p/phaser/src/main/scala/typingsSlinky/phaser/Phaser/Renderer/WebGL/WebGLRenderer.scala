@@ -111,7 +111,7 @@ class WebGLRenderer protected () extends js.Object {
   /**
     * Stores the current scissor data
     */
-  var currentScissor: scala.scalajs.js.typedarray.Uint32Array = js.native
+  var currentScissor: js.typedarray.Uint32Array = js.native
   /**
     * Indicates if the the scissor state is enabled in WebGLRenderingContext
     */
@@ -213,7 +213,7 @@ class WebGLRenderer protected () extends js.Object {
   /**
     * Stack of scissor data
     */
-  var scissorStack: scala.scalajs.js.typedarray.Uint32Array = js.native
+  var scissorStack: js.typedarray.Uint32Array = js.native
   /**
     * Details about the currently scheduled snapshot.
     * 
@@ -289,7 +289,7 @@ class WebGLRenderer protected () extends js.Object {
     * @param initialDataOrSize Either ArrayBuffer or an integer indicating the size of the vbo.
     * @param bufferUsage How the buffer is used. gl.DYNAMIC_DRAW, gl.STATIC_DRAW or gl.STREAM_DRAW.
     */
-  def createIndexBuffer(initialDataOrSize: scala.scalajs.js.typedarray.ArrayBuffer, bufferUsage: integer): WebGLBuffer = js.native
+  def createIndexBuffer(initialDataOrSize: js.typedarray.ArrayBuffer, bufferUsage: integer): WebGLBuffer = js.native
   /**
     * Wrapper for creating a WebGLProgram
     * @param vertexShader Source to the vertex shader
@@ -374,7 +374,7 @@ class WebGLRenderer protected () extends js.Object {
     * @param initialDataOrSize It's either ArrayBuffer or an integer indicating the size of the vbo
     * @param bufferUsage How the buffer is used. gl.DYNAMIC_DRAW, gl.STATIC_DRAW or gl.STREAM_DRAW
     */
-  def createVertexBuffer(initialDataOrSize: scala.scalajs.js.typedarray.ArrayBuffer, bufferUsage: integer): WebGLBuffer = js.native
+  def createVertexBuffer(initialDataOrSize: js.typedarray.ArrayBuffer, bufferUsage: integer): WebGLBuffer = js.native
   /**
     * Creates a new WebGL Texture based on the given HTML Video Element.
     * @param srcVideo The Video to create the WebGL Texture from
@@ -569,7 +569,7 @@ class WebGLRenderer protected () extends js.Object {
     * @param name The name of the uniform to look-up and modify.
     * @param arr The new value to be used for the uniform variable.
     */
-  def setFloat1v(program: WebGLProgram, name: String, arr: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setFloat1v(program: WebGLProgram, name: String, arr: js.typedarray.Float32Array): this.type = js.native
   /**
     * [description]
     * @param program The target WebGLProgram from which the uniform location will be looked-up.
@@ -584,7 +584,7 @@ class WebGLRenderer protected () extends js.Object {
     * @param name The name of the uniform to look-up and modify.
     * @param arr The new value to be used for the uniform variable.
     */
-  def setFloat2v(program: WebGLProgram, name: String, arr: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setFloat2v(program: WebGLProgram, name: String, arr: js.typedarray.Float32Array): this.type = js.native
   /**
     * [description]
     * @param program The target WebGLProgram from which the uniform location will be looked-up.
@@ -600,7 +600,7 @@ class WebGLRenderer protected () extends js.Object {
     * @param name The name of the uniform to look-up and modify.
     * @param arr The new value to be used for the uniform variable.
     */
-  def setFloat3v(program: WebGLProgram, name: String, arr: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setFloat3v(program: WebGLProgram, name: String, arr: js.typedarray.Float32Array): this.type = js.native
   /**
     * Sets uniform of a WebGLProgram
     * @param program The target WebGLProgram from which the uniform location will be looked-up.
@@ -617,7 +617,7 @@ class WebGLRenderer protected () extends js.Object {
     * @param name The name of the uniform to look-up and modify.
     * @param arr The new value to be used for the uniform variable.
     */
-  def setFloat4v(program: WebGLProgram, name: String, arr: scala.scalajs.js.typedarray.Float32Array): this.type = js.native
+  def setFloat4v(program: WebGLProgram, name: String, arr: js.typedarray.Float32Array): this.type = js.native
   /**
     * Binds a framebuffer. If there was another framebuffer already bound it will force a pipeline flush.
     * @param framebuffer The framebuffer that needs to be bound.
@@ -671,12 +671,7 @@ class WebGLRenderer protected () extends js.Object {
     * @param transpose The value indicating whether to transpose the matrix. Must be false.
     * @param matrix The new matrix value.
     */
-  def setMatrix2(
-    program: WebGLProgram,
-    name: String,
-    transpose: Boolean,
-    matrix: scala.scalajs.js.typedarray.Float32Array
-  ): this.type = js.native
+  def setMatrix2(program: WebGLProgram, name: String, transpose: Boolean, matrix: js.typedarray.Float32Array): this.type = js.native
   /**
     * [description]
     * @param program The target WebGLProgram from which the uniform location will be looked-up.
@@ -684,12 +679,7 @@ class WebGLRenderer protected () extends js.Object {
     * @param transpose [description]
     * @param matrix [description]
     */
-  def setMatrix3(
-    program: WebGLProgram,
-    name: String,
-    transpose: Boolean,
-    matrix: scala.scalajs.js.typedarray.Float32Array
-  ): this.type = js.native
+  def setMatrix3(program: WebGLProgram, name: String, transpose: Boolean, matrix: js.typedarray.Float32Array): this.type = js.native
   /**
     * Sets uniform of a WebGLProgram
     * @param program The target WebGLProgram from which the uniform location will be looked-up.
@@ -697,12 +687,7 @@ class WebGLRenderer protected () extends js.Object {
     * @param transpose Is the matrix transposed
     * @param matrix Matrix data
     */
-  def setMatrix4(
-    program: WebGLProgram,
-    name: String,
-    transpose: Boolean,
-    matrix: scala.scalajs.js.typedarray.Float32Array
-  ): this.type = js.native
+  def setMatrix4(program: WebGLProgram, name: String, transpose: Boolean, matrix: js.typedarray.Float32Array): this.type = js.native
   /**
     * Binds a WebGLPipeline and sets it as the current pipeline to be used.
     * @param pipelineInstance The pipeline instance to be activated.

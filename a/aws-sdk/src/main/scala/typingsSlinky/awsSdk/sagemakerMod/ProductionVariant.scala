@@ -38,14 +38,66 @@ object ProductionVariant {
     InitialInstanceCount: TaskCount,
     InstanceType: ProductionVariantInstanceType,
     ModelName: ModelName,
-    VariantName: VariantName,
-    AcceleratorType: ProductionVariantAcceleratorType = null,
-    InitialVariantWeight: Int | Double = null
+    VariantName: VariantName
   ): ProductionVariant = {
     val __obj = js.Dynamic.literal(InitialInstanceCount = InitialInstanceCount.asInstanceOf[js.Any], InstanceType = InstanceType.asInstanceOf[js.Any], ModelName = ModelName.asInstanceOf[js.Any], VariantName = VariantName.asInstanceOf[js.Any])
-    if (AcceleratorType != null) __obj.updateDynamic("AcceleratorType")(AcceleratorType.asInstanceOf[js.Any])
-    if (InitialVariantWeight != null) __obj.updateDynamic("InitialVariantWeight")(InitialVariantWeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProductionVariant]
   }
+  @scala.inline
+  implicit class ProductionVariantOps[Self <: ProductionVariant] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInitialInstanceCount(value: TaskCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialInstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: ProductionVariantInstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModelName(value: ModelName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVariantName(value: VariantName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VariantName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAcceleratorType(value: ProductionVariantAcceleratorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceleratorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceleratorType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AcceleratorType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialVariantWeight(value: VariantWeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialVariantWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialVariantWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialVariantWeight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

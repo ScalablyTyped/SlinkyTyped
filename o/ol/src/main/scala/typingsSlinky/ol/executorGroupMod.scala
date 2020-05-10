@@ -1,6 +1,7 @@
 package typingsSlinky.ol
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import typingsSlinky.ol.builderTypeMod.BuilderType
 import typingsSlinky.ol.canvasMod.DeclutterGroup
@@ -17,8 +18,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object executorGroupMod extends js.Object {
   @js.native
-  trait ExecutorGroup
-    extends typingsSlinky.ol.disposableMod.default {
+  trait ExecutorGroup extends js.Object {
     def clip(context: CanvasRenderingContext2D, transform: Transform): Unit = js.native
     def execute(
       context: CanvasRenderingContext2D,
@@ -61,14 +61,14 @@ object executorGroupMod extends js.Object {
       resolution: Double,
       pixelRatio: Double,
       overlaps: Boolean,
-      allInstructions: StringDictionary[typingsSlinky.ol.olStrings.default with js.Any]
+      allInstructions: StringDictionary[typingsSlinky.ol.olStrings.default with TopLevel[js.Any]]
     ) = this()
     def this(
       maxExtent: Extent,
       resolution: Double,
       pixelRatio: Double,
       overlaps: Boolean,
-      allInstructions: StringDictionary[typingsSlinky.ol.olStrings.default with js.Any],
+      allInstructions: StringDictionary[typingsSlinky.ol.olStrings.default with TopLevel[js.Any]],
       opt_renderBuffer: Double
     ) = this()
   }

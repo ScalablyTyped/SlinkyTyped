@@ -18,10 +18,35 @@ trait StartOnDemandReplicationRunRequest extends js.Object {
 
 object StartOnDemandReplicationRunRequest {
   @scala.inline
-  def apply(replicationJobId: ReplicationJobId, description: Description = null): StartOnDemandReplicationRunRequest = {
+  def apply(replicationJobId: ReplicationJobId): StartOnDemandReplicationRunRequest = {
     val __obj = js.Dynamic.literal(replicationJobId = replicationJobId.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartOnDemandReplicationRunRequest]
   }
+  @scala.inline
+  implicit class StartOnDemandReplicationRunRequestOps[Self <: StartOnDemandReplicationRunRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReplicationJobId(value: ReplicationJobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationJobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

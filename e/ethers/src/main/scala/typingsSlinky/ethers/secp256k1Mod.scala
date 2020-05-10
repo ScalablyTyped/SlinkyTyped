@@ -15,7 +15,7 @@ object secp256k1Mod extends js.Object {
     val compressedPublicKey: String = js.native
     val privateKey: String = js.native
     val publicKey: String = js.native
-    val publicKeyBytes: scala.scalajs.js.typedarray.Uint8Array = js.native
+    val publicKeyBytes: js.typedarray.Uint8Array = js.native
     def sign(digest: Arrayish): Signature = js.native
   }
   

@@ -4,14 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IUrl
   extends typingsSlinky.senchaTouch.Ext.field.IText
 
 object IUrl {
   @scala.inline
-  def apply(IText: typingsSlinky.senchaTouch.Ext.field.IText = null): IUrl = {
+  def apply(): IUrl = {
     val __obj = js.Dynamic.literal()
-    if (IText != null) js.Dynamic.global.Object.assign(__obj, IText)
     __obj.asInstanceOf[IUrl]
   }
 }

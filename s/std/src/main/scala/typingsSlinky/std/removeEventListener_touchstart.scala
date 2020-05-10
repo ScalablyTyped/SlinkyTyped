@@ -20,7 +20,7 @@ object removeEventListener_touchstart extends js.Object {
   def apply(
     `type`: touchstart,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

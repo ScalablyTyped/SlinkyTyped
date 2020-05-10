@@ -34,22 +34,89 @@ trait Node extends js.Object {
 
 object Node {
   @scala.inline
-  def apply(
-    CrawlerDetails: CrawlerNodeDetails = null,
-    JobDetails: JobNodeDetails = null,
-    Name: NameString = null,
-    TriggerDetails: TriggerNodeDetails = null,
-    Type: NodeType = null,
-    UniqueId: NameString = null
-  ): Node = {
+  def apply(): Node = {
     val __obj = js.Dynamic.literal()
-    if (CrawlerDetails != null) __obj.updateDynamic("CrawlerDetails")(CrawlerDetails.asInstanceOf[js.Any])
-    if (JobDetails != null) __obj.updateDynamic("JobDetails")(JobDetails.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (TriggerDetails != null) __obj.updateDynamic("TriggerDetails")(TriggerDetails.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
-    if (UniqueId != null) __obj.updateDynamic("UniqueId")(UniqueId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  @scala.inline
+  implicit class NodeOps[Self <: Node] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCrawlerDetails(value: CrawlerNodeDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CrawlerDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrawlerDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CrawlerDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobDetails(value: JobNodeDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTriggerDetails(value: TriggerNodeDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TriggerDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTriggerDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TriggerDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: NodeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniqueId(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniqueId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UniqueId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

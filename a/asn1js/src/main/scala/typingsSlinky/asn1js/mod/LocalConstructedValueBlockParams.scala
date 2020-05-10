@@ -4,29 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LocalConstructedValueBlockParams extends LocalBaseBlockParams {
-  var isIndefiniteForm: js.UndefOr[scala.Boolean] = js.undefined
-  var value: js.UndefOr[LocalValueBlock] = js.undefined
+  var isIndefiniteForm: js.UndefOr[scala.Boolean] = js.native
+  var value: js.UndefOr[LocalValueBlock] = js.native
 }
 
 object LocalConstructedValueBlockParams {
   @scala.inline
-  def apply(
-    blockLength: Int | Double = null,
-    error: String = null,
-    isIndefiniteForm: js.UndefOr[scala.Boolean] = js.undefined,
-    value: LocalValueBlock = null,
-    valueBeforeDecode: scala.scalajs.js.typedarray.ArrayBuffer = null,
-    warnings: js.Array[String] = null
-  ): LocalConstructedValueBlockParams = {
+  def apply(): LocalConstructedValueBlockParams = {
     val __obj = js.Dynamic.literal()
-    if (blockLength != null) __obj.updateDynamic("blockLength")(blockLength.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (!js.isUndefined(isIndefiniteForm)) __obj.updateDynamic("isIndefiniteForm")(isIndefiniteForm.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueBeforeDecode != null) __obj.updateDynamic("valueBeforeDecode")(valueBeforeDecode.asInstanceOf[js.Any])
-    if (warnings != null) __obj.updateDynamic("warnings")(warnings.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocalConstructedValueBlockParams]
   }
+  @scala.inline
+  implicit class LocalConstructedValueBlockParamsOps[Self <: LocalConstructedValueBlockParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsIndefiniteForm(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIndefiniteForm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsIndefiniteForm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIndefiniteForm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: LocalValueBlock): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

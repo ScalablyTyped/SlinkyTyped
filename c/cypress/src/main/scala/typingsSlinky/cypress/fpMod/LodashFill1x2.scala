@@ -14,7 +14,7 @@ trait LodashFill1x2 extends js.Object {
   def apply[U](start: Double, value: __, array: js.Array[U]): LodashFill1x11[U] = js.native
   def apply[U](start: Double, value: __, array: List[U]): LodashFill2x11[U] = js.native
   def apply[T](start: __, value: T): LodashFill1x6[T] = js.native
-  def apply[U](start: __, value: __): LodashFill1x10[U] = js.native
+  def apply[U](start: __, value: __): LodashFill2x10[U] = js.native
   def apply[U](start: __, value: __, array: js.Array[U]): LodashFill1x10[U] = js.native
   def apply[U](start: __, value: __, array: List[U]): LodashFill2x10[U] = js.native
   def apply[T, U](start: Double, value: T, array: js.Array[U]): js.Array[T | U] = js.native

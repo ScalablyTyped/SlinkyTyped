@@ -12,10 +12,8 @@ trait OrientationType extends js.Object
 
 object OrientationType {
   @scala.inline
-  def black: typingsSlinky.chessboardjs.chessboardjsStrings.black = this.cast("black")
+  def black: typingsSlinky.chessboardjs.chessboardjsStrings.black = "black".asInstanceOf[typingsSlinky.chessboardjs.chessboardjsStrings.black]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def white: typingsSlinky.chessboardjs.chessboardjsStrings.white = this.cast("white")
+  def white: typingsSlinky.chessboardjs.chessboardjsStrings.white = "white".asInstanceOf[typingsSlinky.chessboardjs.chessboardjsStrings.white]
 }
 

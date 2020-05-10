@@ -4,59 +4,155 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Invitation extends Entity {
   // The URL user can use to redeem his invitation. Read-Only
-  var inviteRedeemUrl: js.UndefOr[String] = js.undefined
+  var inviteRedeemUrl: js.UndefOr[String] = js.native
   // The URL user should be redirected to once the invitation is redeemed. Required.
-  var inviteRedirectUrl: js.UndefOr[String] = js.undefined
+  var inviteRedirectUrl: js.UndefOr[String] = js.native
   // The user created as part of the invitation creation. Read-Only
-  var invitedUser: js.UndefOr[User] = js.undefined
+  var invitedUser: js.UndefOr[User] = js.native
   // The display name of the user being invited.
-  var invitedUserDisplayName: js.UndefOr[String] = js.undefined
+  var invitedUserDisplayName: js.UndefOr[String] = js.native
   // The email address of the user being invited. Required.
-  var invitedUserEmailAddress: js.UndefOr[String] = js.undefined
+  var invitedUserEmailAddress: js.UndefOr[String] = js.native
   /**
     * Additional configuration for the message being sent to the invited user, including customizing message text, language
     * and cc recipient list.
     */
-  var invitedUserMessageInfo: js.UndefOr[InvitedUserMessageInfo] = js.undefined
+  var invitedUserMessageInfo: js.UndefOr[InvitedUserMessageInfo] = js.native
   /**
     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company
     * administrator.
     */
-  var invitedUserType: js.UndefOr[String] = js.undefined
+  var invitedUserType: js.UndefOr[String] = js.native
   // Indicates whether an email should be sent to the user being invited or not. The default is false.
-  var sendInvitationMessage: js.UndefOr[Boolean] = js.undefined
+  var sendInvitationMessage: js.UndefOr[Boolean] = js.native
   // The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
-  var status: js.UndefOr[String] = js.undefined
+  var status: js.UndefOr[String] = js.native
 }
 
 object Invitation {
   @scala.inline
-  def apply(
-    id: String = null,
-    inviteRedeemUrl: String = null,
-    inviteRedirectUrl: String = null,
-    invitedUser: User = null,
-    invitedUserDisplayName: String = null,
-    invitedUserEmailAddress: String = null,
-    invitedUserMessageInfo: InvitedUserMessageInfo = null,
-    invitedUserType: String = null,
-    sendInvitationMessage: js.UndefOr[Boolean] = js.undefined,
-    status: String = null
-  ): Invitation = {
+  def apply(): Invitation = {
     val __obj = js.Dynamic.literal()
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (inviteRedeemUrl != null) __obj.updateDynamic("inviteRedeemUrl")(inviteRedeemUrl.asInstanceOf[js.Any])
-    if (inviteRedirectUrl != null) __obj.updateDynamic("inviteRedirectUrl")(inviteRedirectUrl.asInstanceOf[js.Any])
-    if (invitedUser != null) __obj.updateDynamic("invitedUser")(invitedUser.asInstanceOf[js.Any])
-    if (invitedUserDisplayName != null) __obj.updateDynamic("invitedUserDisplayName")(invitedUserDisplayName.asInstanceOf[js.Any])
-    if (invitedUserEmailAddress != null) __obj.updateDynamic("invitedUserEmailAddress")(invitedUserEmailAddress.asInstanceOf[js.Any])
-    if (invitedUserMessageInfo != null) __obj.updateDynamic("invitedUserMessageInfo")(invitedUserMessageInfo.asInstanceOf[js.Any])
-    if (invitedUserType != null) __obj.updateDynamic("invitedUserType")(invitedUserType.asInstanceOf[js.Any])
-    if (!js.isUndefined(sendInvitationMessage)) __obj.updateDynamic("sendInvitationMessage")(sendInvitationMessage.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
     __obj.asInstanceOf[Invitation]
   }
+  @scala.inline
+  implicit class InvitationOps[Self <: Invitation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInviteRedeemUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inviteRedeemUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInviteRedeemUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inviteRedeemUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInviteRedirectUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inviteRedirectUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInviteRedirectUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inviteRedirectUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitedUser(value: User): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitedUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitedUserDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedUserDisplayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitedUserDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedUserDisplayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitedUserEmailAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedUserEmailAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitedUserEmailAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedUserEmailAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitedUserMessageInfo(value: InvitedUserMessageInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedUserMessageInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitedUserMessageInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedUserMessageInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvitedUserType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedUserType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvitedUserType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invitedUserType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSendInvitationMessage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendInvitationMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendInvitationMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendInvitationMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

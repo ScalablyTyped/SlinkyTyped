@@ -16,5 +16,6 @@ trait SVGLineElement extends SVGGeometryElement {
 
 @JSGlobal("SVGLineElement")
 @js.native
-object SVGLineElement extends Instantiable0[SVGLineElement]
+object SVGLineElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGLineElement]
 

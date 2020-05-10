@@ -15,16 +15,14 @@ trait BottomNavigationActionClassKey extends js.Object
 
 object BottomNavigationActionClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def iconOnly: typingsSlinky.materialUiCore.materialUiCoreStrings.iconOnly = "iconOnly".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.iconOnly]
   @scala.inline
-  def iconOnly: typingsSlinky.materialUiCore.materialUiCoreStrings.iconOnly = this.cast("iconOnly")
+  def label: typingsSlinky.materialUiCore.materialUiCoreStrings.label = "label".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.label]
   @scala.inline
-  def label: typingsSlinky.materialUiCore.materialUiCoreStrings.label = this.cast("label")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
   @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def selected: typingsSlinky.materialUiCore.materialUiCoreStrings.selected = "selected".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.selected]
   @scala.inline
-  def selected: typingsSlinky.materialUiCore.materialUiCoreStrings.selected = this.cast("selected")
-  @scala.inline
-  def wrapper: typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper = this.cast("wrapper")
+  def wrapper: typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper = "wrapper".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper]
 }
 

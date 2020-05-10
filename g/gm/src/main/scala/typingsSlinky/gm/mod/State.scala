@@ -11,7 +11,6 @@ import typingsSlinky.gm.gmStrings.shared
 import typingsSlinky.gm.gmStrings.topleft
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.PassThrough
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -339,7 +338,7 @@ trait State extends js.Object {
   ): State = js.native
   def tile(filename: String): State = js.native
   def title(title: String): State = js.native
-  def toBuffer(callback: js.Function2[/* err */ Error | Null, /* buffer */ Buffer, _]): PassThrough = js.native
+  def toBuffer(callback: js.Function2[/* err */ js.Error | Null, /* buffer */ Buffer, _]): PassThrough = js.native
   def toBuffer(format: String, callback: js.Function2[/* err */ js.Error | Null, /* buffer */ Buffer, _]): PassThrough = js.native
   def transform(color: String): State = js.native
   def transparent(color: String): State = js.native

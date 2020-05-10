@@ -22,10 +22,41 @@ trait CreateBackupSelectionInput extends js.Object {
 
 object CreateBackupSelectionInput {
   @scala.inline
-  def apply(BackupPlanId: String, BackupSelection: BackupSelection, CreatorRequestId: String = null): CreateBackupSelectionInput = {
+  def apply(BackupPlanId: String, BackupSelection: BackupSelection): CreateBackupSelectionInput = {
     val __obj = js.Dynamic.literal(BackupPlanId = BackupPlanId.asInstanceOf[js.Any], BackupSelection = BackupSelection.asInstanceOf[js.Any])
-    if (CreatorRequestId != null) __obj.updateDynamic("CreatorRequestId")(CreatorRequestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateBackupSelectionInput]
   }
+  @scala.inline
+  implicit class CreateBackupSelectionInputOps[Self <: CreateBackupSelectionInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupPlanId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackupSelection(value: BackupSelection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreatorRequestId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatorRequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatorRequestId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatorRequestId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -2,9 +2,9 @@ package typingsSlinky.rcMenu
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import slinky.core.ReactComponentClass
 import typingsSlinky.rcMenu.subPopupMenuMod.SubPopupMenu
 import typingsSlinky.rcMenu.subPopupMenuMod.SubPopupMenuProps
-import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.GetDerivedStateFromError
 import typingsSlinky.react.mod.GetDerivedStateFromProps
@@ -16,11 +16,11 @@ import scala.scalajs.js.annotation._
 /* Inlined react.react.ComponentClass<rc-menu.rc-menu/lib/SubPopupMenu.SubPopupMenuProps, any> & {getWrappedInstance (): rc-menu.rc-menu/lib/SubPopupMenu.SubPopupMenu} */
 @js.native
 trait ComponentClassSubPopupMen
-  extends Instantiable1[/* props */ SubPopupMenuProps, Component[SubPopupMenuProps, js.Any, js.Any]]
+  extends Instantiable1[/* props */ SubPopupMenuProps, ReactComponentClass[SubPopupMenuProps]]
      with Instantiable2[
       /* props */ SubPopupMenuProps, 
       /* context */ js.Any, 
-      Component[SubPopupMenuProps, js.Any, js.Any]
+      ReactComponentClass[SubPopupMenuProps]
     ] {
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native
   var contextType: js.UndefOr[Context[_]] = js.native

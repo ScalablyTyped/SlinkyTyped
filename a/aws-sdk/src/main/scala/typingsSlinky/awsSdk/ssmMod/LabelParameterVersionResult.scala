@@ -18,11 +18,41 @@ trait LabelParameterVersionResult extends js.Object {
 
 object LabelParameterVersionResult {
   @scala.inline
-  def apply(InvalidLabels: ParameterLabelList = null, ParameterVersion: Int | Double = null): LabelParameterVersionResult = {
+  def apply(): LabelParameterVersionResult = {
     val __obj = js.Dynamic.literal()
-    if (InvalidLabels != null) __obj.updateDynamic("InvalidLabels")(InvalidLabels.asInstanceOf[js.Any])
-    if (ParameterVersion != null) __obj.updateDynamic("ParameterVersion")(ParameterVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[LabelParameterVersionResult]
   }
+  @scala.inline
+  implicit class LabelParameterVersionResultOps[Self <: LabelParameterVersionResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInvalidLabels(value: ParameterLabelList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvalidLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterVersion(value: PSParameterVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

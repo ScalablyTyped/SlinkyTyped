@@ -18,11 +18,41 @@ trait FunctionRunAsConfig extends js.Object {
 
 object FunctionRunAsConfig {
   @scala.inline
-  def apply(Gid: Int | Double = null, Uid: Int | Double = null): FunctionRunAsConfig = {
+  def apply(): FunctionRunAsConfig = {
     val __obj = js.Dynamic.literal()
-    if (Gid != null) __obj.updateDynamic("Gid")(Gid.asInstanceOf[js.Any])
-    if (Uid != null) __obj.updateDynamic("Uid")(Uid.asInstanceOf[js.Any])
     __obj.asInstanceOf[FunctionRunAsConfig]
   }
+  @scala.inline
+  implicit class FunctionRunAsConfigOps[Self <: FunctionRunAsConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGid(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUid(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Uid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Uid")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -45,11 +45,11 @@ class TextureTintPipeline protected () extends WebGLPipeline {
   /**
     * Float32 view of the array buffer containing the pipeline's vertices.
     */
-  var vertexViewF32: scala.scalajs.js.typedarray.Float32Array = js.native
+  var vertexViewF32: js.typedarray.Float32Array = js.native
   /**
     * Uint32 view of the array buffer containing the pipeline's vertices.
     */
-  var vertexViewU32: scala.scalajs.js.typedarray.Uint32Array = js.native
+  var vertexViewU32: js.typedarray.Uint32Array = js.native
   /**
     * Adds the given path to the vertex batch for rendering.
     * 
@@ -119,7 +119,7 @@ class TextureTintPipeline protected () extends WebGLPipeline {
     by: Double,
     aLineWidth: Double,
     bLineWidth: Double,
-    currentMatrix: scala.scalajs.js.typedarray.Float32Array
+    currentMatrix: js.typedarray.Float32Array
   ): Unit = js.native
   def batchQuad(
     x0: Double,

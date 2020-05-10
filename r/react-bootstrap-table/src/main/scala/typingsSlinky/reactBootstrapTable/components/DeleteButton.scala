@@ -1,15 +1,16 @@
 package typingsSlinky.reactBootstrapTable.components
 
+import typingsSlinky.reactBootstrapTable.mod.ButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DeleteButton
-  extends SharedApply_ButtonProps_1824506284[typingsSlinky.reactBootstrapTable.mod.DeleteButton] {
+object DeleteButton {
   @JSImport("react-bootstrap-table", "DeleteButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ButtonProps): SharedBuilder_ButtonProps_792854078[typingsSlinky.reactBootstrapTable.mod.DeleteButton] = new SharedBuilder_ButtonProps_792854078[typingsSlinky.reactBootstrapTable.mod.DeleteButton](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DeleteButton.type): SharedBuilder_ButtonProps_792854078[typingsSlinky.reactBootstrapTable.mod.DeleteButton] = new SharedBuilder_ButtonProps_792854078[typingsSlinky.reactBootstrapTable.mod.DeleteButton](js.Array(this.component, js.Dictionary.empty))()
 }
 

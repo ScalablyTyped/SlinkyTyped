@@ -1,6 +1,5 @@
 package typingsSlinky.extractStack
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +31,7 @@ object mod extends js.Object {
   	// 	at startup (node.js:139:18)
   	```
   	 */
-  def apply(error: Error): String = js.native
+  def apply(error: js.Error): String = js.native
   def lines(): js.Array[String] = js.native
   def lines(error: String): js.Array[String] = js.native
   /**
@@ -58,6 +57,6 @@ object mod extends js.Object {
   	// ]
   	```
   	 */
-  def lines(error: Error): js.Array[String] = js.native
+  def lines(error: js.Error): js.Array[String] = js.native
 }
 

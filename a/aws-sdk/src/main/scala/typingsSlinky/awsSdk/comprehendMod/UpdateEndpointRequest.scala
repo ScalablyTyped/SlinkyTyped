@@ -20,8 +20,27 @@ object UpdateEndpointRequest {
   @scala.inline
   def apply(DesiredInferenceUnits: InferenceUnitsInteger, EndpointArn: ComprehendEndpointArn): UpdateEndpointRequest = {
     val __obj = js.Dynamic.literal(DesiredInferenceUnits = DesiredInferenceUnits.asInstanceOf[js.Any], EndpointArn = EndpointArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UpdateEndpointRequest]
   }
+  @scala.inline
+  implicit class UpdateEndpointRequestOps[Self <: UpdateEndpointRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesiredInferenceUnits(value: InferenceUnitsInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredInferenceUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointArn(value: ComprehendEndpointArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

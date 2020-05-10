@@ -30,8 +30,33 @@ object UpdateBrokerCountRequest {
   @scala.inline
   def apply(ClusterArn: string, CurrentVersion: string, TargetNumberOfBrokerNodes: integerMin1Max15): UpdateBrokerCountRequest = {
     val __obj = js.Dynamic.literal(ClusterArn = ClusterArn.asInstanceOf[js.Any], CurrentVersion = CurrentVersion.asInstanceOf[js.Any], TargetNumberOfBrokerNodes = TargetNumberOfBrokerNodes.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UpdateBrokerCountRequest]
   }
+  @scala.inline
+  implicit class UpdateBrokerCountRequestOps[Self <: UpdateBrokerCountRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentVersion(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetNumberOfBrokerNodes(value: integerMin1Max15): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetNumberOfBrokerNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

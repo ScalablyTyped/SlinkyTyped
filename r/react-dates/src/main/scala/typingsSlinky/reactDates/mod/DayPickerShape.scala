@@ -15,110 +15,440 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // components/DayPickerShape.jsx
+@js.native
 trait DayPickerShape extends js.Object {
-  var calendarInfoPosition: js.UndefOr[CalendarInfoPositionShape] = js.undefined
-  var dayAriaLabelFormat: js.UndefOr[String] = js.undefined
-  var daySize: js.UndefOr[Double] = js.undefined
-  var enableOutsideDays: js.UndefOr[Boolean] = js.undefined
-  var firstDayOfWeek: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.undefined
-  var hideKeyboardShortcutsPanel: js.UndefOr[Boolean] = js.undefined
-  var horizontalMonthPadding: js.UndefOr[Double] = js.undefined
-  var initialVisibleMonth: js.UndefOr[js.Function0[momentObj]] = js.undefined
-  var isFocused: js.UndefOr[Boolean] = js.undefined
-  var isRTL: js.UndefOr[Boolean] = js.undefined
+  var calendarInfoPosition: js.UndefOr[CalendarInfoPositionShape] = js.native
+  var dayAriaLabelFormat: js.UndefOr[String] = js.native
+  var daySize: js.UndefOr[Double] = js.native
+  var enableOutsideDays: js.UndefOr[Boolean] = js.native
+  var firstDayOfWeek: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.native
+  var hideKeyboardShortcutsPanel: js.UndefOr[Boolean] = js.native
+  var horizontalMonthPadding: js.UndefOr[Double] = js.native
+  var initialVisibleMonth: js.UndefOr[js.Function0[momentObj]] = js.native
+  var isFocused: js.UndefOr[Boolean] = js.native
+  var isRTL: js.UndefOr[Boolean] = js.native
   // i18n
-  var monthFormat: js.UndefOr[String] = js.undefined
-  var navNext: js.UndefOr[String | ReactElement] = js.undefined
-  var navPrev: js.UndefOr[String | ReactElement] = js.undefined
-  var noBorder: js.UndefOr[Boolean] = js.undefined
-  var numberOfMonths: js.UndefOr[Double] = js.undefined
+  var monthFormat: js.UndefOr[String] = js.native
+  var navNext: js.UndefOr[String | ReactElement] = js.native
+  var navPrev: js.UndefOr[String | ReactElement] = js.native
+  var noBorder: js.UndefOr[Boolean] = js.native
+  var numberOfMonths: js.UndefOr[Double] = js.native
   // accessibility
-  var onBlur: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onNextMonthClick: js.UndefOr[js.Function1[/* newCurrentMonth */ momentObj, Unit]] = js.undefined
-  var onOutsideClick: js.UndefOr[js.Function1[/* e */ js.Any, Unit]] = js.undefined
-  var onPrevMonthClick: js.UndefOr[js.Function1[/* newCurrentMonth */ momentObj, Unit]] = js.undefined
-  var orientation: js.UndefOr[ScrollableOrientationShape] = js.undefined
-  var phrases: js.UndefOr[SingleDatePickerPhrases] = js.undefined
-  var renderCalendarDay: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.undefined
-  var renderCalendarInfo: js.UndefOr[js.Function0[String | ReactElement]] = js.undefined
-  var renderDayContents: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.undefined
-  var renderMonthElement: js.UndefOr[js.Function1[/* props */ AnonIsVisible, String | ReactElement]] = js.undefined
-  var renderMonthText: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.undefined
-  var showKeyboardShortcuts: js.UndefOr[Boolean] = js.undefined
-  var transitionDuration: js.UndefOr[Double] = js.undefined
-  var verticalHeight: js.UndefOr[Double] = js.undefined
-  var weekDayFormat: js.UndefOr[String] = js.undefined
-  var withPortal: js.UndefOr[Boolean] = js.undefined
+  var onBlur: js.UndefOr[js.Function0[Unit]] = js.native
+  var onNextMonthClick: js.UndefOr[js.Function1[/* newCurrentMonth */ momentObj, Unit]] = js.native
+  var onOutsideClick: js.UndefOr[js.Function1[/* e */ js.Any, Unit]] = js.native
+  var onPrevMonthClick: js.UndefOr[js.Function1[/* newCurrentMonth */ momentObj, Unit]] = js.native
+  var orientation: js.UndefOr[ScrollableOrientationShape] = js.native
+  var phrases: js.UndefOr[SingleDatePickerPhrases] = js.native
+  var renderCalendarDay: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.native
+  var renderCalendarInfo: js.UndefOr[js.Function0[String | ReactElement]] = js.native
+  var renderDayContents: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.native
+  var renderMonthElement: js.UndefOr[js.Function1[/* props */ AnonIsVisible, String | ReactElement]] = js.native
+  var renderMonthText: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.native
+  var showKeyboardShortcuts: js.UndefOr[Boolean] = js.native
+  var transitionDuration: js.UndefOr[Double] = js.native
+  var verticalHeight: js.UndefOr[Double] = js.native
+  var weekDayFormat: js.UndefOr[String] = js.native
+  var withPortal: js.UndefOr[Boolean] = js.native
 }
 
 object DayPickerShape {
   @scala.inline
-  def apply(
-    calendarInfoPosition: CalendarInfoPositionShape = null,
-    dayAriaLabelFormat: String = null,
-    daySize: Int | Double = null,
-    enableOutsideDays: js.UndefOr[Boolean] = js.undefined,
-    firstDayOfWeek: `0` | `1` | `2` | `3` | `4` | `5` | `6` = null,
-    hideKeyboardShortcutsPanel: js.UndefOr[Boolean] = js.undefined,
-    horizontalMonthPadding: Int | Double = null,
-    initialVisibleMonth: () => momentObj = null,
-    isFocused: js.UndefOr[Boolean] = js.undefined,
-    isRTL: js.UndefOr[Boolean] = js.undefined,
-    monthFormat: String = null,
-    navNext: String | ReactElement = null,
-    navPrev: String | ReactElement = null,
-    noBorder: js.UndefOr[Boolean] = js.undefined,
-    numberOfMonths: Int | Double = null,
-    onBlur: () => Unit = null,
-    onNextMonthClick: /* newCurrentMonth */ momentObj => Unit = null,
-    onOutsideClick: /* e */ js.Any => Unit = null,
-    onPrevMonthClick: /* newCurrentMonth */ momentObj => Unit = null,
-    orientation: ScrollableOrientationShape = null,
-    phrases: SingleDatePickerPhrases = null,
-    renderCalendarDay: /* day */ momentObj => String | ReactElement = null,
-    renderCalendarInfo: () => String | ReactElement = null,
-    renderDayContents: /* day */ momentObj => String | ReactElement = null,
-    renderMonthElement: /* props */ AnonIsVisible => String | ReactElement = null,
-    renderMonthText: /* day */ momentObj => String | ReactElement = null,
-    showKeyboardShortcuts: js.UndefOr[Boolean] = js.undefined,
-    transitionDuration: Int | Double = null,
-    verticalHeight: Int | Double = null,
-    weekDayFormat: String = null,
-    withPortal: js.UndefOr[Boolean] = js.undefined
-  ): DayPickerShape = {
+  def apply(): DayPickerShape = {
     val __obj = js.Dynamic.literal()
-    if (calendarInfoPosition != null) __obj.updateDynamic("calendarInfoPosition")(calendarInfoPosition.asInstanceOf[js.Any])
-    if (dayAriaLabelFormat != null) __obj.updateDynamic("dayAriaLabelFormat")(dayAriaLabelFormat.asInstanceOf[js.Any])
-    if (daySize != null) __obj.updateDynamic("daySize")(daySize.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableOutsideDays)) __obj.updateDynamic("enableOutsideDays")(enableOutsideDays.asInstanceOf[js.Any])
-    if (firstDayOfWeek != null) __obj.updateDynamic("firstDayOfWeek")(firstDayOfWeek.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideKeyboardShortcutsPanel)) __obj.updateDynamic("hideKeyboardShortcutsPanel")(hideKeyboardShortcutsPanel.asInstanceOf[js.Any])
-    if (horizontalMonthPadding != null) __obj.updateDynamic("horizontalMonthPadding")(horizontalMonthPadding.asInstanceOf[js.Any])
-    if (initialVisibleMonth != null) __obj.updateDynamic("initialVisibleMonth")(js.Any.fromFunction0(initialVisibleMonth))
-    if (!js.isUndefined(isFocused)) __obj.updateDynamic("isFocused")(isFocused.asInstanceOf[js.Any])
-    if (!js.isUndefined(isRTL)) __obj.updateDynamic("isRTL")(isRTL.asInstanceOf[js.Any])
-    if (monthFormat != null) __obj.updateDynamic("monthFormat")(monthFormat.asInstanceOf[js.Any])
-    if (navNext != null) __obj.updateDynamic("navNext")(navNext.asInstanceOf[js.Any])
-    if (navPrev != null) __obj.updateDynamic("navPrev")(navPrev.asInstanceOf[js.Any])
-    if (!js.isUndefined(noBorder)) __obj.updateDynamic("noBorder")(noBorder.asInstanceOf[js.Any])
-    if (numberOfMonths != null) __obj.updateDynamic("numberOfMonths")(numberOfMonths.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction0(onBlur))
-    if (onNextMonthClick != null) __obj.updateDynamic("onNextMonthClick")(js.Any.fromFunction1(onNextMonthClick))
-    if (onOutsideClick != null) __obj.updateDynamic("onOutsideClick")(js.Any.fromFunction1(onOutsideClick))
-    if (onPrevMonthClick != null) __obj.updateDynamic("onPrevMonthClick")(js.Any.fromFunction1(onPrevMonthClick))
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (phrases != null) __obj.updateDynamic("phrases")(phrases.asInstanceOf[js.Any])
-    if (renderCalendarDay != null) __obj.updateDynamic("renderCalendarDay")(js.Any.fromFunction1(renderCalendarDay))
-    if (renderCalendarInfo != null) __obj.updateDynamic("renderCalendarInfo")(js.Any.fromFunction0(renderCalendarInfo))
-    if (renderDayContents != null) __obj.updateDynamic("renderDayContents")(js.Any.fromFunction1(renderDayContents))
-    if (renderMonthElement != null) __obj.updateDynamic("renderMonthElement")(js.Any.fromFunction1(renderMonthElement))
-    if (renderMonthText != null) __obj.updateDynamic("renderMonthText")(js.Any.fromFunction1(renderMonthText))
-    if (!js.isUndefined(showKeyboardShortcuts)) __obj.updateDynamic("showKeyboardShortcuts")(showKeyboardShortcuts.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (verticalHeight != null) __obj.updateDynamic("verticalHeight")(verticalHeight.asInstanceOf[js.Any])
-    if (weekDayFormat != null) __obj.updateDynamic("weekDayFormat")(weekDayFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(withPortal)) __obj.updateDynamic("withPortal")(withPortal.asInstanceOf[js.Any])
     __obj.asInstanceOf[DayPickerShape]
   }
+  @scala.inline
+  implicit class DayPickerShapeOps[Self <: DayPickerShape] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCalendarInfoPosition(value: CalendarInfoPositionShape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarInfoPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalendarInfoPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarInfoPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDayAriaLabelFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayAriaLabelFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDayAriaLabelFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayAriaLabelFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDaySize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daySize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDaySize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daySize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableOutsideDays(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableOutsideDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableOutsideDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableOutsideDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstDayOfWeek(value: `0` | `1` | `2` | `3` | `4` | `5` | `6`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstDayOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideKeyboardShortcutsPanel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideKeyboardShortcutsPanel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideKeyboardShortcutsPanel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideKeyboardShortcutsPanel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalMonthPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalMonthPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalMonthPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalMonthPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialVisibleMonth(value: () => momentObj): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialVisibleMonth")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutInitialVisibleMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialVisibleMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsFocused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFocused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsFocused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFocused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRTL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsRTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonthFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonthFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monthFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavNextReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navNext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNavNext(value: String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navNext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navNext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavPrevReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navPrev")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNavPrev(value: String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navPrev")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavPrev: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navPrev")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoBorder(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noBorder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noBorder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfMonths(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfMonths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfMonths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfMonths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBlur(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnNextMonthClick(value: /* newCurrentMonth */ momentObj => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNextMonthClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnNextMonthClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNextMonthClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOutsideClick(value: /* e */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOutsideClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnOutsideClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOutsideClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPrevMonthClick(value: /* newCurrentMonth */ momentObj => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrevMonthClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPrevMonthClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrevMonthClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: ScrollableOrientationShape): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhrases(value: SingleDatePickerPhrases): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phrases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhrases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phrases")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderCalendarDay(value: /* day */ momentObj => String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCalendarDay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderCalendarDay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCalendarDay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderCalendarInfo(value: () => String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCalendarInfo")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderCalendarInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderCalendarInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderDayContents(value: /* day */ momentObj => String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderDayContents")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderDayContents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderDayContents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderMonthElement(value: /* props */ AnonIsVisible => String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMonthElement")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderMonthElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMonthElement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderMonthText(value: /* day */ momentObj => String | ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMonthText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderMonthText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderMonthText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowKeyboardShortcuts(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showKeyboardShortcuts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowKeyboardShortcuts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showKeyboardShortcuts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeekDayFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekDayFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeekDayFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekDayFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithPortal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withPortal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithPortal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withPortal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

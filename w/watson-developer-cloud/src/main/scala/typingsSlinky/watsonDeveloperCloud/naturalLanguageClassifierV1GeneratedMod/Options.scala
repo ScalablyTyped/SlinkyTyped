@@ -5,39 +5,127 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Options for the `NaturalLanguageClassifierV1` constructor. */
+@js.native
 trait Options extends js.Object {
-  var headers: js.UndefOr[js.Object] = js.undefined
-  var iam_access_token: js.UndefOr[String] = js.undefined
-  var iam_apikey: js.UndefOr[String] = js.undefined
-  var iam_url: js.UndefOr[String] = js.undefined
-  var password: js.UndefOr[String] = js.undefined
-  var url: js.UndefOr[String] = js.undefined
-  var use_unauthenticated: js.UndefOr[Boolean] = js.undefined
-  var username: js.UndefOr[String] = js.undefined
+  var headers: js.UndefOr[js.Object] = js.native
+  var iam_access_token: js.UndefOr[String] = js.native
+  var iam_apikey: js.UndefOr[String] = js.native
+  var iam_url: js.UndefOr[String] = js.native
+  var password: js.UndefOr[String] = js.native
+  var url: js.UndefOr[String] = js.native
+  var use_unauthenticated: js.UndefOr[Boolean] = js.native
+  var username: js.UndefOr[String] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    headers: js.Object = null,
-    iam_access_token: String = null,
-    iam_apikey: String = null,
-    iam_url: String = null,
-    password: String = null,
-    url: String = null,
-    use_unauthenticated: js.UndefOr[Boolean] = js.undefined,
-    username: String = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (iam_access_token != null) __obj.updateDynamic("iam_access_token")(iam_access_token.asInstanceOf[js.Any])
-    if (iam_apikey != null) __obj.updateDynamic("iam_apikey")(iam_apikey.asInstanceOf[js.Any])
-    if (iam_url != null) __obj.updateDynamic("iam_url")(iam_url.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (!js.isUndefined(use_unauthenticated)) __obj.updateDynamic("use_unauthenticated")(use_unauthenticated.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaders(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIam_access_token(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iam_access_token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIam_access_token: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iam_access_token")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIam_apikey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iam_apikey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIam_apikey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iam_apikey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIam_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iam_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIam_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iam_url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUse_unauthenticated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use_unauthenticated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUse_unauthenticated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("use_unauthenticated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

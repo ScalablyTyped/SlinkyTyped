@@ -1,8 +1,8 @@
 package typingsSlinky.antd.checkboxCheckboxMod
 
-import typingsSlinky.antd.AnonCheckboxGroup
 import typingsSlinky.antd.AnonIndeterminate
 import typingsSlinky.antd.TypeofCheckboxGroup
+import typingsSlinky.antd.groupMod.CheckboxGroupContext
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ class default () extends Checkbox
 object default extends js.Object {
   var Group: TypeofCheckboxGroup = js.native
   var __ANT_CHECKBOX: Boolean = js.native
-  var contextType: Context[AnonCheckboxGroup] = js.native
+  var contextType: Context[CheckboxGroupContext | Null] = js.native
   var defaultProps: AnonIndeterminate = js.native
 }
 

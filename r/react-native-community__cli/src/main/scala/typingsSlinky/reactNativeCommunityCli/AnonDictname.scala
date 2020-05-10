@@ -13,6 +13,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDictname extends /* name */ StringDictionary[PlatformConfig[_, _, _, _]] {
   var android: js.UndefOr[
     PlatformConfig[
@@ -21,29 +22,56 @@ trait AnonDictname extends /* name */ StringDictionary[PlatformConfig[_, _, _, _
       ProjectConfigAndroid, 
       DependencyConfigAndroid
     ]
-  ] = js.undefined
+  ] = js.native
   var ios: js.UndefOr[
     PlatformConfig[ProjectParamsIOS, ProjectParamsIOS, ProjectConfigIOS, DependencyConfigIOS]
-  ] = js.undefined
+  ] = js.native
 }
 
 object AnonDictname {
   @scala.inline
-  def apply(
-    StringDictionary: /* name */ StringDictionary[PlatformConfig[_, _, _, _]] = null,
-    android: PlatformConfig[
-      ProjectParamsAndroid, 
-      DependencyParamsAndroid, 
-      ProjectConfigAndroid, 
-      DependencyConfigAndroid
-    ] = null,
-    ios: PlatformConfig[ProjectParamsIOS, ProjectParamsIOS, ProjectConfigIOS, DependencyConfigIOS] = null
-  ): AnonDictname = {
+  def apply(): AnonDictname = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (android != null) __obj.updateDynamic("android")(android.asInstanceOf[js.Any])
-    if (ios != null) __obj.updateDynamic("ios")(ios.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDictname]
   }
+  @scala.inline
+  implicit class AnonDictnameOps[Self <: AnonDictname] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndroid(
+      value: PlatformConfig[
+          ProjectParamsAndroid, 
+          DependencyParamsAndroid, 
+          ProjectConfigAndroid, 
+          DependencyConfigAndroid
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIos(value: PlatformConfig[ProjectParamsIOS, ProjectParamsIOS, ProjectConfigIOS, DependencyConfigIOS]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

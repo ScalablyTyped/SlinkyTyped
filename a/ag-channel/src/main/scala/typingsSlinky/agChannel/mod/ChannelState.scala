@@ -13,12 +13,10 @@ trait ChannelState extends js.Object
 
 object ChannelState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def pending: typingsSlinky.agChannel.agChannelStrings.pending = "pending".asInstanceOf[typingsSlinky.agChannel.agChannelStrings.pending]
   @scala.inline
-  def pending: typingsSlinky.agChannel.agChannelStrings.pending = this.cast("pending")
+  def subscribed: typingsSlinky.agChannel.agChannelStrings.subscribed = "subscribed".asInstanceOf[typingsSlinky.agChannel.agChannelStrings.subscribed]
   @scala.inline
-  def subscribed: typingsSlinky.agChannel.agChannelStrings.subscribed = this.cast("subscribed")
-  @scala.inline
-  def unsubscribed: typingsSlinky.agChannel.agChannelStrings.unsubscribed = this.cast("unsubscribed")
+  def unsubscribed: typingsSlinky.agChannel.agChannelStrings.unsubscribed = "unsubscribed".asInstanceOf[typingsSlinky.agChannel.agChannelStrings.unsubscribed]
 }
 

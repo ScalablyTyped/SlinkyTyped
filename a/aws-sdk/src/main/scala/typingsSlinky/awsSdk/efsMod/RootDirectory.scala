@@ -18,11 +18,41 @@ trait RootDirectory extends js.Object {
 
 object RootDirectory {
   @scala.inline
-  def apply(CreationInfo: CreationInfo = null, Path: Path = null): RootDirectory = {
+  def apply(): RootDirectory = {
     val __obj = js.Dynamic.literal()
-    if (CreationInfo != null) __obj.updateDynamic("CreationInfo")(CreationInfo.asInstanceOf[js.Any])
-    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
     __obj.asInstanceOf[RootDirectory]
   }
+  @scala.inline
+  implicit class RootDirectoryOps[Self <: RootDirectory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreationInfo(value: CreationInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: Path): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

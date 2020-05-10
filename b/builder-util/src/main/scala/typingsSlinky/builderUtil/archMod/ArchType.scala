@@ -14,14 +14,12 @@ trait ArchType extends js.Object
 
 object ArchType {
   @scala.inline
-  def arm64: typingsSlinky.builderUtil.builderUtilStrings.arm64 = this.cast("arm64")
+  def arm64: typingsSlinky.builderUtil.builderUtilStrings.arm64 = "arm64".asInstanceOf[typingsSlinky.builderUtil.builderUtilStrings.arm64]
   @scala.inline
-  def armv7l: typingsSlinky.builderUtil.builderUtilStrings.armv7l = this.cast("armv7l")
+  def armv7l: typingsSlinky.builderUtil.builderUtilStrings.armv7l = "armv7l".asInstanceOf[typingsSlinky.builderUtil.builderUtilStrings.armv7l]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ia32: typingsSlinky.builderUtil.builderUtilStrings.ia32 = "ia32".asInstanceOf[typingsSlinky.builderUtil.builderUtilStrings.ia32]
   @scala.inline
-  def ia32: typingsSlinky.builderUtil.builderUtilStrings.ia32 = this.cast("ia32")
-  @scala.inline
-  def x64: typingsSlinky.builderUtil.builderUtilStrings.x64 = this.cast("x64")
+  def x64: typingsSlinky.builderUtil.builderUtilStrings.x64 = "x64".asInstanceOf[typingsSlinky.builderUtil.builderUtilStrings.x64]
 }
 

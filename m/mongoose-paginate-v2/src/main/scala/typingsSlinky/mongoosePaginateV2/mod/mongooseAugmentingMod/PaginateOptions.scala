@@ -5,55 +5,183 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PaginateOptions extends js.Object {
-  var collation: js.UndefOr[CollationOptions] = js.undefined
-  var customLabels: js.UndefOr[CustomLabels] = js.undefined
-  var lean: js.UndefOr[Boolean] = js.undefined
-  var leanWithId: js.UndefOr[Boolean] = js.undefined
-  var limit: js.UndefOr[Double] = js.undefined
-  var offset: js.UndefOr[Double] = js.undefined
-  var page: js.UndefOr[Double] = js.undefined
+  var collation: js.UndefOr[CollationOptions] = js.native
+  var customLabels: js.UndefOr[CustomLabels] = js.native
+  var lean: js.UndefOr[Boolean] = js.native
+  var leanWithId: js.UndefOr[Boolean] = js.native
+  var limit: js.UndefOr[Double] = js.native
+  var offset: js.UndefOr[Double] = js.native
+  var page: js.UndefOr[Double] = js.native
   /* If pagination is set to `false`, it will return all docs without adding limit condition. (Default: `true`) */
-  var pagination: js.UndefOr[Boolean] = js.undefined
+  var pagination: js.UndefOr[Boolean] = js.native
   /* tslint:disable-next-line: ban-types */
-  var populate: js.UndefOr[(js.Array[js.Object | String]) | js.Object | String | QueryPopulateOptions] = js.undefined
-  var read: js.UndefOr[ReadOptions] = js.undefined
+  var populate: js.UndefOr[(js.Array[js.Object | String]) | js.Object | String | QueryPopulateOptions] = js.native
+  var read: js.UndefOr[ReadOptions] = js.native
   /* tslint:disable-next-line: ban-types */
-  var select: js.UndefOr[js.Object | String] = js.undefined
+  var select: js.UndefOr[js.Object | String] = js.native
   /* tslint:disable-next-line: ban-types */
-  var sort: js.UndefOr[js.Object | String] = js.undefined
+  var sort: js.UndefOr[js.Object | String] = js.native
 }
 
 object PaginateOptions {
   @scala.inline
-  def apply(
-    collation: CollationOptions = null,
-    customLabels: CustomLabels = null,
-    lean: js.UndefOr[Boolean] = js.undefined,
-    leanWithId: js.UndefOr[Boolean] = js.undefined,
-    limit: Int | Double = null,
-    offset: Int | Double = null,
-    page: Int | Double = null,
-    pagination: js.UndefOr[Boolean] = js.undefined,
-    populate: (js.Array[js.Object | String]) | js.Object | String | QueryPopulateOptions = null,
-    read: ReadOptions = null,
-    select: js.Object | String = null,
-    sort: js.Object | String = null
-  ): PaginateOptions = {
+  def apply(): PaginateOptions = {
     val __obj = js.Dynamic.literal()
-    if (collation != null) __obj.updateDynamic("collation")(collation.asInstanceOf[js.Any])
-    if (customLabels != null) __obj.updateDynamic("customLabels")(customLabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(lean)) __obj.updateDynamic("lean")(lean.asInstanceOf[js.Any])
-    if (!js.isUndefined(leanWithId)) __obj.updateDynamic("leanWithId")(leanWithId.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (!js.isUndefined(pagination)) __obj.updateDynamic("pagination")(pagination.asInstanceOf[js.Any])
-    if (populate != null) __obj.updateDynamic("populate")(populate.asInstanceOf[js.Any])
-    if (read != null) __obj.updateDynamic("read")(read.asInstanceOf[js.Any])
-    if (select != null) __obj.updateDynamic("select")(select.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaginateOptions]
   }
+  @scala.inline
+  implicit class PaginateOptionsOps[Self <: PaginateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollation(value: CollationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomLabels(value: CustomLabels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLean(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeanWithId(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leanWithId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeanWithId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leanWithId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPagination(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPagination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopulate(value: (js.Array[js.Object | String]) | js.Object | String | QueryPopulateOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("populate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopulate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("populate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRead(value: ReadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelect(value: js.Object | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: js.Object | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

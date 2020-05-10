@@ -1,8 +1,8 @@
 package typingsSlinky.hark.mod
 
-import typingsSlinky.std.HTMLAudioElement
-import typingsSlinky.std.HTMLVideoElement
-import typingsSlinky.std.MediaStream
+import org.scalajs.dom.experimental.mediastream.MediaStream
+import org.scalajs.dom.raw.HTMLAudioElement
+import org.scalajs.dom.raw.HTMLVideoElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

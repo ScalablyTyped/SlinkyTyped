@@ -1,31 +1,40 @@
 package typingsSlinky.materialUi.clickAwayListenerMod
 
-import slinky.core.TagMod
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClickAwayListenerProps extends Props[ClickAwayListener] {
-  var onClickAway: js.UndefOr[js.Any] = js.undefined
+  var onClickAway: js.UndefOr[js.Any] = js.native
 }
 
 object ClickAwayListenerProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any] = null,
-    key: Key = null,
-    onClickAway: js.Any = null,
-    ref: LegacyRef[ClickAwayListener] = null
-  ): ClickAwayListenerProps = {
+  def apply(): ClickAwayListenerProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (onClickAway != null) __obj.updateDynamic("onClickAway")(onClickAway.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClickAwayListenerProps]
   }
+  @scala.inline
+  implicit class ClickAwayListenerPropsOps[Self <: ClickAwayListenerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnClickAway(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickAway")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnClickAway: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClickAway")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

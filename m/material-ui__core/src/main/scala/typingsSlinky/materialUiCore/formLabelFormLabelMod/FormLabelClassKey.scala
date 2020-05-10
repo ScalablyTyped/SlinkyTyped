@@ -17,20 +17,18 @@ trait FormLabelClassKey extends js.Object
 
 object FormLabelClassKey {
   @scala.inline
-  def asterisk: typingsSlinky.materialUiCore.materialUiCoreStrings.asterisk = this.cast("asterisk")
+  def asterisk: typingsSlinky.materialUiCore.materialUiCoreStrings.asterisk = "asterisk".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.asterisk]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = "disabled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.materialUiCore.materialUiCoreStrings.disabled = this.cast("disabled")
+  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = "error".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.error]
   @scala.inline
-  def error: typingsSlinky.materialUiCore.materialUiCoreStrings.error = this.cast("error")
+  def filled: typingsSlinky.materialUiCore.materialUiCoreStrings.filled = "filled".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.filled]
   @scala.inline
-  def filled: typingsSlinky.materialUiCore.materialUiCoreStrings.filled = this.cast("filled")
+  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = "focused".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.focused]
   @scala.inline
-  def focused: typingsSlinky.materialUiCore.materialUiCoreStrings.focused = this.cast("focused")
+  def required: typingsSlinky.materialUiCore.materialUiCoreStrings.required = "required".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.required]
   @scala.inline
-  def required: typingsSlinky.materialUiCore.materialUiCoreStrings.required = this.cast("required")
-  @scala.inline
-  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = this.cast("root")
+  def root: typingsSlinky.materialUiCore.materialUiCoreStrings.root = "root".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.root]
 }
 

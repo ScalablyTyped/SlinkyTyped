@@ -4,19 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotAroonoscillatorParamsOptions extends js.Object {
   /**
     * (Highstock) Period for Aroon Oscillator
     */
-  var period: js.UndefOr[Double] = js.undefined
+  var period: js.UndefOr[Double] = js.native
 }
 
 object PlotAroonoscillatorParamsOptions {
   @scala.inline
-  def apply(period: Int | Double = null): PlotAroonoscillatorParamsOptions = {
+  def apply(): PlotAroonoscillatorParamsOptions = {
     val __obj = js.Dynamic.literal()
-    if (period != null) __obj.updateDynamic("period")(period.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotAroonoscillatorParamsOptions]
   }
+  @scala.inline
+  implicit class PlotAroonoscillatorParamsOptionsOps[Self <: PlotAroonoscillatorParamsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPeriod(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("period")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

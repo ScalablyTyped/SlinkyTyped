@@ -1,26 +1,27 @@
 package typingsSlinky.reachRouter.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reachRouter.mod.MatchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Match
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reachRouter.mod.Match[js.Any]] {
+object Match {
   @JSImport("@reach/router", "Match")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[TParams](path: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reachRouter.mod.Match[js.Any]] = {
-    val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reachRouter.mod.Match[js.Any]]]
+  @scala.inline
+  class Builder[TParams] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reachRouter.mod.Match[js.Any]]
+  
+  def withProps[TParams](p: MatchProps[TParams]): Builder[TParams] = new Builder[TParams](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[TParams](path: String): Builder[TParams] = {
+    val __props = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
+    new Builder[TParams](js.Array(this.component, __props.asInstanceOf[MatchProps[TParams]]))
   }
-  type Props = MatchProps[js.Any]
 }
 

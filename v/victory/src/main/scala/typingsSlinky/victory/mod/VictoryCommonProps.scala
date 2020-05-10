@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
 /**
   * Common properties
   */
+@js.native
 trait VictoryCommonProps extends js.Object {
   /**
     * The animate prop specifies props for VictoryAnimation to use.
@@ -19,7 +20,7 @@ trait VictoryCommonProps extends js.Object {
     * @example
     * {duration: 500, onExit: () => {}, onEnter: {duration: 500, before: () => ({y: 0})}}
     */
-  var animate: js.UndefOr[Boolean | AnimatePropTypeInterface] = js.undefined
+  var animate: js.UndefOr[Boolean | AnimatePropTypeInterface] = js.native
   /**
     * The containerComponent prop takes an entire component which will be used to
     * create a container element for standalone charts.
@@ -35,26 +36,26 @@ trait VictoryCommonProps extends js.Object {
     * @example <VictoryContainer title="Chart of Dog Breeds" desc="This chart shows how popular each dog breed is by percentage in Seattle." />
     * @default <VictoryContainer/>
     */
-  var containerComponent: js.UndefOr[ReactElement] = js.undefined
+  var containerComponent: js.UndefOr[ReactElement] = js.native
   /**
     * The groupComponent prop takes an entire component which will be used to
     * create group elements for use within container elements. This prop defaults
     * to a <g> tag on web, and a react-native-svg <G> tag on mobile
     * @default <g/>
     */
-  var groupComponent: js.UndefOr[ReactElement] = js.undefined
+  var groupComponent: js.UndefOr[ReactElement] = js.native
   /**
     * The height props specifies the height the svg viewBox of the chart container.
     * This value should be given as a number of pixels
     */
-  var height: js.UndefOr[Double] = js.undefined
+  var height: js.UndefOr[Double] = js.native
   /**
     * The horizontal prop determines whether data will be plotted horizontally.
     * When this prop is set to true, the independent variable will be plotted on the y axis
     * and the dependent variable will be plotted on the x axis.
     * @default false
     */
-  var horizontal: js.UndefOr[Boolean] = js.undefined
+  var horizontal: js.UndefOr[Boolean] = js.native
   /**
     * The maxDomain prop defines a maximum domain value for a chart. This prop is useful in
     * situations where the maximum domain of a chart is static, while the minimum value
@@ -65,7 +66,7 @@ trait VictoryCommonProps extends js.Object {
     * and the y value refers to the dependent variable. This may cause confusion in
     * horizontal charts, as the independent variable will corresponds to the y axis.
     */
-  var maxDomain: js.UndefOr[Double | AnonY] = js.undefined
+  var maxDomain: js.UndefOr[Double | AnonY] = js.native
   /**
     * The minDomain prop defines a minimum domain value for a chart. This prop is useful in
     * situations where the minimum domain of a chart is static, while the maximum value
@@ -76,11 +77,11 @@ trait VictoryCommonProps extends js.Object {
     * and the y value refers to the dependent variable. This may cause confusion in
     * horizontal charts, as the independent variable will corresponds to the y axis.
     */
-  var minDomain: js.UndefOr[Double | AnonY] = js.undefined
+  var minDomain: js.UndefOr[Double | AnonY] = js.native
   /**
     * The name prop is used to reference a component instance when defining shared events.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * The padding props specifies the amount of padding in number of pixels between
     * the edge of the chart and any rendered child components. This prop can be given
@@ -88,7 +89,7 @@ trait VictoryCommonProps extends js.Object {
     * and right.
     * @default 50
     */
-  var padding: js.UndefOr[PaddingProps] = js.undefined
+  var padding: js.UndefOr[PaddingProps] = js.native
   /**
     * The scale prop determines which scales your chart should use. This prop can be
     * given as a string specifying a supported scale ("linear", "time", "log", "sqrt"),
@@ -96,7 +97,7 @@ trait VictoryCommonProps extends js.Object {
     * @example d3Scale.time(), {x: "linear", y: "log"}
     * @default "linear"
     */
-  var scale: js.UndefOr[ScalePropType | D3Scale | Anon1] = js.undefined
+  var scale: js.UndefOr[ScalePropType | D3Scale | Anon1] = js.native
   /**
     * By default `domainPadding` is coerced to existing quadrants. This means that if a given domain only
     * includes positive values, no amount of padding applied by `domainPadding` will result in a domain with
@@ -110,14 +111,14 @@ trait VictoryCommonProps extends js.Object {
     * and the `y` value refers to the *dependent* variable. This may cause confusion in horizontal charts, as the
     * independent variable will corresponds to the y axis.
     */
-  var singleQuadrantDomainPadding: js.UndefOr[Boolean | AnonXBoolean] = js.undefined
+  var singleQuadrantDomainPadding: js.UndefOr[Boolean | AnonXBoolean] = js.native
   /**
     * The standalone prop determines whether the component will render a standalone svg
     * or a <g> tag that will be included in an external svg. Set standalone to false to
     * compose VictoryAxis with other components within an enclosing <svg> tag.
     * @default true
     */
-  var standalone: js.UndefOr[Boolean] = js.undefined
+  var standalone: js.UndefOr[Boolean] = js.native
   /**
     * The theme prop takes a style object with nested data, labels, and parent objects.
     * You can create this object yourself, or you can use a theme provided by Victory.
@@ -127,48 +128,195 @@ trait VictoryCommonProps extends js.Object {
     * @example theme={VictoryTheme.material}
     * http://www.github.com/FormidableLabs/victory-core/tree/master/src/victory-theme/material.js
     */
-  var theme: js.UndefOr[VictoryThemeDefinition] = js.undefined
+  var theme: js.UndefOr[VictoryThemeDefinition] = js.native
   /**
     * The width props specifies the width of the svg viewBox of the chart container
     * This value should be given as a number of pixels
     */
-  var width: js.UndefOr[Double] = js.undefined
+  var width: js.UndefOr[Double] = js.native
 }
 
 object VictoryCommonProps {
   @scala.inline
-  def apply(
-    animate: Boolean | AnimatePropTypeInterface = null,
-    containerComponent: ReactElement = null,
-    groupComponent: ReactElement = null,
-    height: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    maxDomain: Double | AnonY = null,
-    minDomain: Double | AnonY = null,
-    name: String = null,
-    padding: PaddingProps = null,
-    scale: ScalePropType | D3Scale | Anon1 = null,
-    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
-    standalone: js.UndefOr[Boolean] = js.undefined,
-    theme: VictoryThemeDefinition = null,
-    width: Int | Double = null
-  ): VictoryCommonProps = {
+  def apply(): VictoryCommonProps = {
     val __obj = js.Dynamic.literal()
-    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
-    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
-    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryCommonProps]
   }
+  @scala.inline
+  implicit class VictoryCommonPropsOps[Self <: VictoryCommonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimate(value: Boolean | AnimatePropTypeInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerComponent(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupComponent(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupComponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupComponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxDomain(value: Double | AnonY): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinDomain(value: Double | AnonY): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: PaddingProps): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScale(value: ScalePropType | D3Scale | Anon1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleQuadrantDomainPadding(value: Boolean | AnonXBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleQuadrantDomainPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleQuadrantDomainPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleQuadrantDomainPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStandalone(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standalone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStandalone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standalone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: VictoryThemeDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

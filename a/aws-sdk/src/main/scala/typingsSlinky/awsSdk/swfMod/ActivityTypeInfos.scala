@@ -18,10 +18,35 @@ trait ActivityTypeInfos extends js.Object {
 
 object ActivityTypeInfos {
   @scala.inline
-  def apply(typeInfos: ActivityTypeInfoList, nextPageToken: PageToken = null): ActivityTypeInfos = {
+  def apply(typeInfos: ActivityTypeInfoList): ActivityTypeInfos = {
     val __obj = js.Dynamic.literal(typeInfos = typeInfos.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityTypeInfos]
   }
+  @scala.inline
+  implicit class ActivityTypeInfosOps[Self <: ActivityTypeInfos] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTypeInfos(value: ActivityTypeInfoList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

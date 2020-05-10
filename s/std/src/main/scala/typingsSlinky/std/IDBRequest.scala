@@ -80,7 +80,7 @@ trait IDBRequest[T] extends EventTarget {
   def removeEventListener_error(
     `type`: typingsSlinky.std.stdStrings.error,
     listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_success(
@@ -97,12 +97,12 @@ trait IDBRequest[T] extends EventTarget {
   def removeEventListener_success(
     `type`: success,
     listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("IDBRequest")
 @js.native
 object IDBRequest
-  extends Instantiable0[IDBRequest[js.Any]]
+  extends Instantiable0[org.scalajs.dom.raw.IDBRequest]
 

@@ -11,7 +11,7 @@ object mod extends js.Object {
   /**
   	 * The `globalThis` object.
   	 */
-  val implementation: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof globalThis */ js.Any = js.native
+  val implementation: /* globalThis */ js.Any = js.native
   def apply(): js.Any = js.native
   /**
   	 * Gets the `globalThis` object.

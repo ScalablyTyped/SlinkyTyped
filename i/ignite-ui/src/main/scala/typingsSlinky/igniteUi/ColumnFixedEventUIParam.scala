@@ -4,33 +4,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ColumnFixedEventUIParam extends js.Object {
   /**
   	 * Gets the columnKey or the columnIndex.
   	 */
-  var columnIdentifier: js.UndefOr[js.Any] = js.undefined
+  var columnIdentifier: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets whether header cell has children(use this argument ONLY when multi-column-headers are enabled).
   	 */
-  var isGroupHeader: js.UndefOr[Boolean] = js.undefined
+  var isGroupHeader: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets a reference to the widget.
   	 */
-  var owner: js.UndefOr[js.Any] = js.undefined
+  var owner: js.UndefOr[js.Any] = js.native
 }
 
 object ColumnFixedEventUIParam {
   @scala.inline
-  def apply(
-    columnIdentifier: js.Any = null,
-    isGroupHeader: js.UndefOr[Boolean] = js.undefined,
-    owner: js.Any = null
-  ): ColumnFixedEventUIParam = {
+  def apply(): ColumnFixedEventUIParam = {
     val __obj = js.Dynamic.literal()
-    if (columnIdentifier != null) __obj.updateDynamic("columnIdentifier")(columnIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(isGroupHeader)) __obj.updateDynamic("isGroupHeader")(isGroupHeader.asInstanceOf[js.Any])
-    if (owner != null) __obj.updateDynamic("owner")(owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColumnFixedEventUIParam]
   }
+  @scala.inline
+  implicit class ColumnFixedEventUIParamOps[Self <: ColumnFixedEventUIParam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnIdentifier(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsGroupHeader(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGroupHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsGroupHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGroupHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwner(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

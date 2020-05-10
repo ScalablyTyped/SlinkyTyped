@@ -16,18 +16,16 @@ trait LockType extends js.Object
 
 object LockType {
   @scala.inline
-  def bidi: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.bidi = this.cast("bidi")
+  def bidi: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.bidi = "bidi".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.bidi]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def commit: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.commit = "commit".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.commit]
   @scala.inline
-  def commit: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.commit = this.cast("commit")
+  def conversion: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.conversion = "conversion".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.conversion]
   @scala.inline
-  def conversion: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.conversion = this.cast("conversion")
+  def edit: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.edit = "edit".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.edit]
   @scala.inline
-  def edit: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.edit = this.cast("edit")
+  def switch: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.switch = "switch".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.switch]
   @scala.inline
-  def switch: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.switch = this.cast("switch")
-  @scala.inline
-  def update: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.update = this.cast("update")
+  def update: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.update = "update".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.update]
 }
 

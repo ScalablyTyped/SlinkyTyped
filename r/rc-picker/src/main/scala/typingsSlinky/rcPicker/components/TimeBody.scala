@@ -1,9 +1,7 @@
 package typingsSlinky.rcPicker.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.Locale
 import typingsSlinky.rcPicker.rcPickerStrings.key
@@ -16,54 +14,59 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimeBody
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TimeBody {
   @JSImport("rc-picker/lib/panels/TimePanel/TimeBody", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder[DateType] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def defaultValue(value: DateType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledHours(value: () => js.Array[Double]): this.type = set("disabledHours", js.Any.fromFunction0(value))
+    @scala.inline
+    def disabledMinutes(value: /* hour */ Double => js.Array[Double]): this.type = set("disabledMinutes", js.Any.fromFunction1(value))
+    @scala.inline
+    def disabledSeconds(value: (/* hour */ Double, /* minute */ Double) => js.Array[Double]): this.type = set("disabledSeconds", js.Any.fromFunction2(value))
+    @scala.inline
+    def format(value: String): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideDisabledOptions(value: Boolean): this.type = set("hideDisabledOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hourStep(value: Double): this.type = set("hourStep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minuteStep(value: Double): this.type = set("minuteStep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def secondStep(value: Double): this.type = set("secondStep", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showHour(value: Boolean): this.type = set("showHour", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showMinute(value: Boolean): this.type = set("showMinute", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSecond(value: Boolean): this.type = set("showSecond", value.asInstanceOf[js.Any])
+    @scala.inline
+    def use12Hours(value: Boolean): this.type = set("use12Hours", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: DateType): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueNull: this.type = set("value", null)
+  }
+  
+  def withProps[DateType](p: TimeBodyProps[DateType]): Builder[DateType] = new Builder[DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply[DateType](
     activeColumnIndex: Double,
     generateConfig: GenerateConfig[DateType],
     locale: Locale,
     onSelect: (DateType, /* type */ key | mouse | submit) => Unit,
     operationRef: MutableRefObject[js.UndefOr[BodyOperationRef]],
-    prefixCls: String,
-    defaultValue: DateType = null,
-    disabledHours: () => js.Array[Double] = null,
-    disabledMinutes: /* hour */ Double => js.Array[Double] = null,
-    disabledSeconds: (/* hour */ Double, /* minute */ Double) => js.Array[Double] = null,
-    format: String = null,
-    hideDisabledOptions: js.UndefOr[Boolean] = js.undefined,
-    hourStep: Int | Double = null,
-    minuteStep: Int | Double = null,
-    secondStep: Int | Double = null,
-    showHour: js.UndefOr[Boolean] = js.undefined,
-    showMinute: js.UndefOr[Boolean] = js.undefined,
-    showSecond: js.UndefOr[Boolean] = js.undefined,
-    use12Hours: js.UndefOr[Boolean] = js.undefined,
-    value: DateType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(activeColumnIndex = activeColumnIndex.asInstanceOf[js.Any], generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], onSelect = js.Any.fromFunction2(onSelect), operationRef = operationRef.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (disabledHours != null) __obj.updateDynamic("disabledHours")(js.Any.fromFunction0(disabledHours))
-    if (disabledMinutes != null) __obj.updateDynamic("disabledMinutes")(js.Any.fromFunction1(disabledMinutes))
-    if (disabledSeconds != null) __obj.updateDynamic("disabledSeconds")(js.Any.fromFunction2(disabledSeconds))
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideDisabledOptions)) __obj.updateDynamic("hideDisabledOptions")(hideDisabledOptions.asInstanceOf[js.Any])
-    if (hourStep != null) __obj.updateDynamic("hourStep")(hourStep.asInstanceOf[js.Any])
-    if (minuteStep != null) __obj.updateDynamic("minuteStep")(minuteStep.asInstanceOf[js.Any])
-    if (secondStep != null) __obj.updateDynamic("secondStep")(secondStep.asInstanceOf[js.Any])
-    if (!js.isUndefined(showHour)) __obj.updateDynamic("showHour")(showHour.asInstanceOf[js.Any])
-    if (!js.isUndefined(showMinute)) __obj.updateDynamic("showMinute")(showMinute.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSecond)) __obj.updateDynamic("showSecond")(showSecond.asInstanceOf[js.Any])
-    if (!js.isUndefined(use12Hours)) __obj.updateDynamic("use12Hours")(use12Hours.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
+    prefixCls: String
+  ): Builder[DateType] = {
+    val __props = js.Dynamic.literal(activeColumnIndex = activeColumnIndex.asInstanceOf[js.Any], generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], onSelect = js.Any.fromFunction2(onSelect), operationRef = operationRef.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
+    new Builder[DateType](js.Array(this.component, __props.asInstanceOf[TimeBodyProps[DateType]]))
   }
-  type Props = TimeBodyProps[js.Any]
 }
 

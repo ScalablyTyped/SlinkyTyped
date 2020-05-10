@@ -22,11 +22,47 @@ trait DelegationSet extends js.Object {
 
 object DelegationSet {
   @scala.inline
-  def apply(NameServers: DelegationSetNameServers, CallerReference: Nonce = null, Id: ResourceId = null): DelegationSet = {
+  def apply(NameServers: DelegationSetNameServers): DelegationSet = {
     val __obj = js.Dynamic.literal(NameServers = NameServers.asInstanceOf[js.Any])
-    if (CallerReference != null) __obj.updateDynamic("CallerReference")(CallerReference.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
     __obj.asInstanceOf[DelegationSet]
   }
+  @scala.inline
+  implicit class DelegationSetOps[Self <: DelegationSet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNameServers(value: DelegationSetNameServers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NameServers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallerReference(value: Nonce): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallerReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

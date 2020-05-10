@@ -34,22 +34,89 @@ trait Event extends js.Object {
 
 object Event {
   @scala.inline
-  def apply(
-    EventCode: EventCode = null,
-    EventId: NonZeroAndMaxString = null,
-    EventTime: js.Date = null,
-    Message: NonEmptyString = null,
-    PreSignedLogUrl: NonZeroAndMaxString = null,
-    ResourceId: NonZeroAndMaxString = null
-  ): Event = {
+  def apply(): Event = {
     val __obj = js.Dynamic.literal()
-    if (EventCode != null) __obj.updateDynamic("EventCode")(EventCode.asInstanceOf[js.Any])
-    if (EventId != null) __obj.updateDynamic("EventId")(EventId.asInstanceOf[js.Any])
-    if (EventTime != null) __obj.updateDynamic("EventTime")(EventTime.asInstanceOf[js.Any])
-    if (Message != null) __obj.updateDynamic("Message")(Message.asInstanceOf[js.Any])
-    if (PreSignedLogUrl != null) __obj.updateDynamic("PreSignedLogUrl")(PreSignedLogUrl.asInstanceOf[js.Any])
-    if (ResourceId != null) __obj.updateDynamic("ResourceId")(ResourceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Event]
   }
+  @scala.inline
+  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventCode(value: EventCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreSignedLogUrl(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreSignedLogUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreSignedLogUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreSignedLogUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

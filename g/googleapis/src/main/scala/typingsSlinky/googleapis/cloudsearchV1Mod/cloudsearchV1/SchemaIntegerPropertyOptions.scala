@@ -36,18 +36,65 @@ trait SchemaIntegerPropertyOptions extends js.Object {
 
 object SchemaIntegerPropertyOptions {
   @scala.inline
-  def apply(
-    maximumValue: String = null,
-    minimumValue: String = null,
-    operatorOptions: SchemaIntegerOperatorOptions = null,
-    orderedRanking: String = null
-  ): SchemaIntegerPropertyOptions = {
+  def apply(): SchemaIntegerPropertyOptions = {
     val __obj = js.Dynamic.literal()
-    if (maximumValue != null) __obj.updateDynamic("maximumValue")(maximumValue.asInstanceOf[js.Any])
-    if (minimumValue != null) __obj.updateDynamic("minimumValue")(minimumValue.asInstanceOf[js.Any])
-    if (operatorOptions != null) __obj.updateDynamic("operatorOptions")(operatorOptions.asInstanceOf[js.Any])
-    if (orderedRanking != null) __obj.updateDynamic("orderedRanking")(orderedRanking.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaIntegerPropertyOptions]
   }
+  @scala.inline
+  implicit class SchemaIntegerPropertyOptionsOps[Self <: SchemaIntegerPropertyOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaximumValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperatorOptions(value: SchemaIntegerOperatorOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperatorOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operatorOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderedRanking(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderedRanking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderedRanking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderedRanking")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

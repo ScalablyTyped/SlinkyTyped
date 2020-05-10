@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * Deprecated module, use dijit/tree/dndSource instead.
   * 
   */
+@js.native
 trait dndSource extends js.Object
 

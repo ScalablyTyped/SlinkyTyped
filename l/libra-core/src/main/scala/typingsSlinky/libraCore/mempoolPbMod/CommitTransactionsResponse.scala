@@ -20,7 +20,7 @@ class CommitTransactionsResponse () extends Message
 object CommitTransactionsResponse extends js.Object {
   var extensions: NumberDictionary[ExtensionFieldInfo[Message]] = js.native
   var extensionsBinary: NumberDictionary[ExtensionFieldBinaryInfo[Message]] = js.native
-  def deserializeBinary(bytes: scala.scalajs.js.typedarray.Uint8Array): CommitTransactionsResponse = js.native
+  def deserializeBinary(bytes: js.typedarray.Uint8Array): CommitTransactionsResponse = js.native
   def deserializeBinaryFromReader(message: CommitTransactionsResponse, reader: BinaryReader): CommitTransactionsResponse = js.native
   def serializeBinaryToWriter(message: CommitTransactionsResponse, writer: BinaryWriter): Unit = js.native
   def toObject(includeInstance: Boolean, msg: CommitTransactionsResponse): AsObject = js.native

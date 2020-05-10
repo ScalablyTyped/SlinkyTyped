@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UserUndelete extends js.Object {
-  var orgUnitPath: js.UndefOr[String] = js.undefined
+  var orgUnitPath: js.UndefOr[String] = js.native
 }
 
 object UserUndelete {
   @scala.inline
-  def apply(orgUnitPath: String = null): UserUndelete = {
+  def apply(): UserUndelete = {
     val __obj = js.Dynamic.literal()
-    if (orgUnitPath != null) __obj.updateDynamic("orgUnitPath")(orgUnitPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserUndelete]
   }
+  @scala.inline
+  implicit class UserUndeleteOps[Self <: UserUndelete] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrgUnitPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrgUnitPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitPath")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

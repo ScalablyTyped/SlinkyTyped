@@ -13,12 +13,10 @@ trait DataSource extends js.Object
 
 object DataSource {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chat: typingsSlinky.twilioChat.twilioChatStrings.chat = "chat".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.chat]
   @scala.inline
-  def chat: typingsSlinky.twilioChat.twilioChatStrings.chat = this.cast("chat")
+  def sync: typingsSlinky.twilioChat.twilioChatStrings.sync = "sync".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.sync]
   @scala.inline
-  def sync: typingsSlinky.twilioChat.twilioChatStrings.sync = this.cast("sync")
-  @scala.inline
-  def synclist: typingsSlinky.twilioChat.twilioChatStrings.synclist = this.cast("synclist")
+  def synclist: typingsSlinky.twilioChat.twilioChatStrings.synclist = "synclist".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.synclist]
 }
 

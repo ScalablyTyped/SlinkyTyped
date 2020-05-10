@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WatchOptions extends js.Object {
   /**
     * If relying upon the [`fs.Stats`](http://nodejs.org/api/fs.html#fs_class_fs_stats) object that
     * may get passed with `add`, `addDir`, and `change` events, set this to `true` to ensure it is
     * provided even in cases where it wasn't already available from the underlying watch events.
     */
-  var alwaysStat: js.UndefOr[Boolean] = js.undefined
+  var alwaysStat: js.UndefOr[Boolean] = js.native
   /**
     * `true` if `useFsEvents` and `usePolling` are `false`). Automatically filters out artifacts
     * that occur when using editors that use "atomic writes" instead of writing directly to the
@@ -18,57 +19,57 @@ trait WatchOptions extends js.Object {
     * event rather than `unlink` then `add`. If the default of 100 ms does not work well for you,
     * you can override it by setting `atomic` to a custom value, in milliseconds.
     */
-  var atomic: js.UndefOr[Boolean | Double] = js.undefined
+  var atomic: js.UndefOr[Boolean | Double] = js.native
   /**
     * can be set to an object in order to adjust timing params:
     */
-  var awaitWriteFinish: js.UndefOr[AwaitWriteFinishOptions | Boolean] = js.undefined
+  var awaitWriteFinish: js.UndefOr[AwaitWriteFinishOptions | Boolean] = js.native
   /**
     * Interval of file system polling for binary files. ([see list of binary extensions](https://gi
     * thub.com/sindresorhus/binary-extensions/blob/master/binary-extensions.json))
     */
-  var binaryInterval: js.UndefOr[Double] = js.undefined
+  var binaryInterval: js.UndefOr[Double] = js.native
   /**
     * The base directory from which watch `paths` are to be derived. Paths emitted with events will
     * be relative to this.
     */
-  var cwd: js.UndefOr[String] = js.undefined
+  var cwd: js.UndefOr[String] = js.native
   /**
     * The delay to wait before triggering the fn.
     * Useful for waiting on many changes before doing the work on changed files, e.g. find-and-replace on many files.
     * @default 200
     */
-  var delay: js.UndefOr[Double] = js.undefined
+  var delay: js.UndefOr[Double] = js.native
   /**
     * If set, limits how many levels of subdirectories will be traversed.
     */
-  var depth: js.UndefOr[Double] = js.undefined
+  var depth: js.UndefOr[Double] = js.native
   /**
     *  If set to true then the strings passed to .watch() and .add() are treated as literal path
     *  names, even if they look like globs. Default: false.
     */
-  var disableGlobbing: js.UndefOr[Boolean] = js.undefined
+  var disableGlobbing: js.UndefOr[Boolean] = js.native
   /**
     * An event name or array of event names to listen for. Useful if you only need to watch specific events.
     * @default [ 'add', 'change', 'unlink' ]
     */
-  var events: js.UndefOr[String | js.Array[String]] = js.undefined
+  var events: js.UndefOr[String | js.Array[String]] = js.native
   /**
     * When `false`, only the symlinks themselves will be watched for changes instead of following
     * the link references and bubbling events through the link's path.
     */
-  var followSymlinks: js.UndefOr[Boolean] = js.undefined
+  var followSymlinks: js.UndefOr[Boolean] = js.native
   /**
     * If set to `false` then `add`/`addDir` events are also emitted for matching paths while
     * instantiating the watching as chokidar discovers these file paths (before the `ready` event).
     */
-  var ignoreInitial: js.UndefOr[Boolean] = js.undefined
+  var ignoreInitial: js.UndefOr[Boolean] = js.native
   /**
     *  Indicates whether to watch files that don't have read permissions if possible. If watching
     *  fails due to `EPERM` or `EACCES` with this set to `true`, the errors will be suppressed
     *  silently.
     */
-  var ignorePermissionErrors: js.UndefOr[Boolean] = js.undefined
+  var ignorePermissionErrors: js.UndefOr[Boolean] = js.native
   /**
     * ([anymatch](https://github.com/es128/anymatch)-compatible definition) Defines files/paths to
     * be ignored. The whole relative or absolute path is tested, not just filename. If a function
@@ -76,29 +77,29 @@ trait WatchOptions extends js.Object {
     * (the path), second time with two arguments (the path and the
     * [`fs.Stats`](http://nodejs.org/api/fs.html#fs_class_fs_stats) object of that path).
     */
-  var ignored: js.UndefOr[js.Any] = js.undefined
+  var ignored: js.UndefOr[js.Any] = js.native
   /**
     * Interval of file system polling.
     */
-  var interval: js.UndefOr[Double] = js.undefined
+  var interval: js.UndefOr[Double] = js.native
   // copied from https://github.com/paulmillr/chokidar/blob/5e09c85ea04ffb7fd9cdb829892540e93ce63553/types/index.d.ts
   /**
     * Indicates whether the process should continue to run as long as files are being watched. If
     * set to `false` when using `fsevents` to watch, no more events will be emitted after `ready`,
     * even if the process continues to run.
     */
-  var persistent: js.UndefOr[Boolean] = js.undefined
+  var persistent: js.UndefOr[Boolean] = js.native
   /**
     * Whether or not a file change should queue the fn execution if the fn is already running. Useful for a long running fn.
     * @default true
     */
-  var queue: js.UndefOr[Boolean] = js.undefined
+  var queue: js.UndefOr[Boolean] = js.native
   /**
     * Whether to use the `fsevents` watching interface if available. When set to `true` explicitly
     * and `fsevents` is available this supercedes the `usePolling` setting. When set to `false` on
     * OS X, `usePolling: true` becomes the default.
     */
-  var useFsEvents: js.UndefOr[Boolean] = js.undefined
+  var useFsEvents: js.UndefOr[Boolean] = js.native
   /**
     * Whether to use fs.watchFile (backed by polling), or fs.watch. If polling leads to high CPU
     * utilization, consider setting this to `false`. It is typically necessary to **set this to
@@ -106,51 +107,238 @@ trait WatchOptions extends js.Object {
     * watch files in other non-standard situations. Setting to `true` explicitly on OS X overrides
     * the `useFsEvents` default.
     */
-  var usePolling: js.UndefOr[Boolean] = js.undefined
+  var usePolling: js.UndefOr[Boolean] = js.native
 }
 
 object WatchOptions {
   @scala.inline
-  def apply(
-    alwaysStat: js.UndefOr[Boolean] = js.undefined,
-    atomic: Boolean | Double = null,
-    awaitWriteFinish: AwaitWriteFinishOptions | Boolean = null,
-    binaryInterval: Int | Double = null,
-    cwd: String = null,
-    delay: Int | Double = null,
-    depth: Int | Double = null,
-    disableGlobbing: js.UndefOr[Boolean] = js.undefined,
-    events: String | js.Array[String] = null,
-    followSymlinks: js.UndefOr[Boolean] = js.undefined,
-    ignoreInitial: js.UndefOr[Boolean] = js.undefined,
-    ignorePermissionErrors: js.UndefOr[Boolean] = js.undefined,
-    ignored: js.Any = null,
-    interval: Int | Double = null,
-    persistent: js.UndefOr[Boolean] = js.undefined,
-    queue: js.UndefOr[Boolean] = js.undefined,
-    useFsEvents: js.UndefOr[Boolean] = js.undefined,
-    usePolling: js.UndefOr[Boolean] = js.undefined
-  ): WatchOptions = {
+  def apply(): WatchOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alwaysStat)) __obj.updateDynamic("alwaysStat")(alwaysStat.asInstanceOf[js.Any])
-    if (atomic != null) __obj.updateDynamic("atomic")(atomic.asInstanceOf[js.Any])
-    if (awaitWriteFinish != null) __obj.updateDynamic("awaitWriteFinish")(awaitWriteFinish.asInstanceOf[js.Any])
-    if (binaryInterval != null) __obj.updateDynamic("binaryInterval")(binaryInterval.asInstanceOf[js.Any])
-    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (depth != null) __obj.updateDynamic("depth")(depth.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableGlobbing)) __obj.updateDynamic("disableGlobbing")(disableGlobbing.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (!js.isUndefined(followSymlinks)) __obj.updateDynamic("followSymlinks")(followSymlinks.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreInitial)) __obj.updateDynamic("ignoreInitial")(ignoreInitial.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignorePermissionErrors)) __obj.updateDynamic("ignorePermissionErrors")(ignorePermissionErrors.asInstanceOf[js.Any])
-    if (ignored != null) __obj.updateDynamic("ignored")(ignored.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (!js.isUndefined(persistent)) __obj.updateDynamic("persistent")(persistent.asInstanceOf[js.Any])
-    if (!js.isUndefined(queue)) __obj.updateDynamic("queue")(queue.asInstanceOf[js.Any])
-    if (!js.isUndefined(useFsEvents)) __obj.updateDynamic("useFsEvents")(useFsEvents.asInstanceOf[js.Any])
-    if (!js.isUndefined(usePolling)) __obj.updateDynamic("usePolling")(usePolling.asInstanceOf[js.Any])
     __obj.asInstanceOf[WatchOptions]
   }
+  @scala.inline
+  implicit class WatchOptionsOps[Self <: WatchOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlwaysStat(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysStat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlwaysStat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alwaysStat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAtomic(value: Boolean | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atomic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAtomic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atomic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwaitWriteFinish(value: AwaitWriteFinishOptions | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awaitWriteFinish")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwaitWriteFinish: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awaitWriteFinish")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBinaryInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBinaryInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binaryInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCwd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCwd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableGlobbing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableGlobbing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableGlobbing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableGlobbing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFollowSymlinks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followSymlinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFollowSymlinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followSymlinks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreInitial(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreInitial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreInitial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreInitial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnorePermissionErrors(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePermissionErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnorePermissionErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePermissionErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnored(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignored")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnored: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignored")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersistent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersistent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("persistent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseFsEvents(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useFsEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseFsEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useFsEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsePolling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePolling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsePolling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePolling")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

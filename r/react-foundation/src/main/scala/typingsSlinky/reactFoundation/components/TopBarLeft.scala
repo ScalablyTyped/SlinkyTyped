@@ -1,14 +1,16 @@
 package typingsSlinky.reactFoundation.components
 
+import typingsSlinky.reactFoundation.topBarMod.TopBarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TopBarLeft extends SharedApply_TopBarProps1012424028 {
+object TopBarLeft {
   @JSImport("react-foundation", "TopBarLeft")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TopBarProps): SharedBuilder_TopBarProps1287358894 = new SharedBuilder_TopBarProps1287358894(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TopBarLeft.type): SharedBuilder_TopBarProps1287358894 = new SharedBuilder_TopBarProps1287358894(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -15,16 +15,14 @@ trait GenericFamily extends _FontFamilyProperty
 
 object GenericFamily {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cursive: typingsSlinky.csstype.csstypeStrings.cursive = "cursive".asInstanceOf[typingsSlinky.csstype.csstypeStrings.cursive]
   @scala.inline
-  def cursive: typingsSlinky.csstype.csstypeStrings.cursive = this.cast("cursive")
+  def fantasy: typingsSlinky.csstype.csstypeStrings.fantasy = "fantasy".asInstanceOf[typingsSlinky.csstype.csstypeStrings.fantasy]
   @scala.inline
-  def fantasy: typingsSlinky.csstype.csstypeStrings.fantasy = this.cast("fantasy")
+  def monospace: typingsSlinky.csstype.csstypeStrings.monospace = "monospace".asInstanceOf[typingsSlinky.csstype.csstypeStrings.monospace]
   @scala.inline
-  def monospace: typingsSlinky.csstype.csstypeStrings.monospace = this.cast("monospace")
+  def `sans-serif`: typingsSlinky.csstype.csstypeStrings.`sans-serif` = "sans-serif".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`sans-serif`]
   @scala.inline
-  def `sans-serif`: typingsSlinky.csstype.csstypeStrings.`sans-serif` = this.cast("sans-serif")
-  @scala.inline
-  def serif: typingsSlinky.csstype.csstypeStrings.serif = this.cast("serif")
+  def serif: typingsSlinky.csstype.csstypeStrings.serif = "serif".asInstanceOf[typingsSlinky.csstype.csstypeStrings.serif]
 }
 

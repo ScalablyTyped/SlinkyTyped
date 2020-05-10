@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Typeofsl extends js.Object {
-  def send_reply(code: Double, reason: String): Double
-  def sl_forward_reply(code: String, reason: String): Double
-  def sl_reply_error(): Double
-  def sl_send_reply(code: Double, reason: String): Double
+  def send_reply(code: Double, reason: String): Double = js.native
+  def sl_forward_reply(code: String, reason: String): Double = js.native
+  def sl_reply_error(): Double = js.native
+  def sl_send_reply(code: Double, reason: String): Double = js.native
 }
 
 object Typeofsl {
@@ -20,8 +21,39 @@ object Typeofsl {
     sl_send_reply: (Double, String) => Double
   ): Typeofsl = {
     val __obj = js.Dynamic.literal(send_reply = js.Any.fromFunction2(send_reply), sl_forward_reply = js.Any.fromFunction2(sl_forward_reply), sl_reply_error = js.Any.fromFunction0(sl_reply_error), sl_send_reply = js.Any.fromFunction2(sl_send_reply))
-  
     __obj.asInstanceOf[Typeofsl]
   }
+  @scala.inline
+  implicit class TypeofslOps[Self <: Typeofsl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSend_reply(value: (Double, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("send_reply")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSl_forward_reply(value: (String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sl_forward_reply")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSl_reply_error(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sl_reply_error")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSl_send_reply(value: (Double, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sl_send_reply")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

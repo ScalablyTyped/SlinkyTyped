@@ -12,9 +12,9 @@ trait DoubleArrayBuilder extends js.Object {
   def build(): DoubleArray = js.native
   def build(keys: js.Array[KeyValue]): DoubleArray = js.native
   def build(keys: js.Array[KeyValue], sorted: Boolean): DoubleArray = js.native
-  def findAllocatableBase(children_info: scala.scalajs.js.typedarray.Int32Array): Double = js.native
-  def getChildrenInfo(position: Double, start: Double, length: Double): scala.scalajs.js.typedarray.Int32Array = js.native
+  def findAllocatableBase(children_info: js.typedarray.Int32Array): Double = js.native
+  def getChildrenInfo(position: Double, start: Double, length: Double): js.typedarray.Int32Array = js.native
   def isUnusedNode(index: Double): Boolean = js.native
-  def setBC(parent_id: Double, children_info: scala.scalajs.js.typedarray.Int32Array, _base: Double): Unit = js.native
+  def setBC(parent_id: Double, children_info: js.typedarray.Int32Array, _base: Double): Unit = js.native
 }
 

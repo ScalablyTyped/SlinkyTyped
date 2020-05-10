@@ -18,11 +18,41 @@ trait DeleteNamespaceResponse extends js.Object {
 
 object DeleteNamespaceResponse {
   @scala.inline
-  def apply(namespaceArn: Arn = null, namespaceName: NamespaceName = null): DeleteNamespaceResponse = {
+  def apply(): DeleteNamespaceResponse = {
     val __obj = js.Dynamic.literal()
-    if (namespaceArn != null) __obj.updateDynamic("namespaceArn")(namespaceArn.asInstanceOf[js.Any])
-    if (namespaceName != null) __obj.updateDynamic("namespaceName")(namespaceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteNamespaceResponse]
   }
+  @scala.inline
+  implicit class DeleteNamespaceResponseOps[Self <: DeleteNamespaceResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNamespaceArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespaceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamespaceName(value: NamespaceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamespaceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

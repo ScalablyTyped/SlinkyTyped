@@ -38,24 +38,101 @@ trait SpotOptionsRequest extends js.Object {
 
 object SpotOptionsRequest {
   @scala.inline
-  def apply(
-    AllocationStrategy: SpotAllocationStrategy = null,
-    InstanceInterruptionBehavior: SpotInstanceInterruptionBehavior = null,
-    InstancePoolsToUseCount: Int | scala.Double = null,
-    MaxTotalPrice: String = null,
-    MinTargetCapacity: Int | scala.Double = null,
-    SingleAvailabilityZone: js.UndefOr[scala.Boolean] = js.undefined,
-    SingleInstanceType: js.UndefOr[scala.Boolean] = js.undefined
-  ): SpotOptionsRequest = {
+  def apply(): SpotOptionsRequest = {
     val __obj = js.Dynamic.literal()
-    if (AllocationStrategy != null) __obj.updateDynamic("AllocationStrategy")(AllocationStrategy.asInstanceOf[js.Any])
-    if (InstanceInterruptionBehavior != null) __obj.updateDynamic("InstanceInterruptionBehavior")(InstanceInterruptionBehavior.asInstanceOf[js.Any])
-    if (InstancePoolsToUseCount != null) __obj.updateDynamic("InstancePoolsToUseCount")(InstancePoolsToUseCount.asInstanceOf[js.Any])
-    if (MaxTotalPrice != null) __obj.updateDynamic("MaxTotalPrice")(MaxTotalPrice.asInstanceOf[js.Any])
-    if (MinTargetCapacity != null) __obj.updateDynamic("MinTargetCapacity")(MinTargetCapacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(SingleAvailabilityZone)) __obj.updateDynamic("SingleAvailabilityZone")(SingleAvailabilityZone.asInstanceOf[js.Any])
-    if (!js.isUndefined(SingleInstanceType)) __obj.updateDynamic("SingleInstanceType")(SingleInstanceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpotOptionsRequest]
   }
+  @scala.inline
+  implicit class SpotOptionsRequestOps[Self <: SpotOptionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllocationStrategy(value: SpotAllocationStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocationStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceInterruptionBehavior(value: SpotInstanceInterruptionBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInterruptionBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceInterruptionBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceInterruptionBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstancePoolsToUseCount(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancePoolsToUseCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstancePoolsToUseCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstancePoolsToUseCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxTotalPrice(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxTotalPrice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxTotalPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxTotalPrice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinTargetCapacity(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinTargetCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinTargetCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinTargetCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleAvailabilityZone(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleAvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleAvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleInstanceType(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleInstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SingleInstanceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

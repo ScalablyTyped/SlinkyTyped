@@ -17,7 +17,7 @@ object removeEventListener_devicelight extends js.Object {
   def apply(
     `type`: devicelight,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ DeviceLightEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

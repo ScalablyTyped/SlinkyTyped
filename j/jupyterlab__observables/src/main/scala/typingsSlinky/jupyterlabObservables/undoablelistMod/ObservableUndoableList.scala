@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.phosphorDisposable.mod.IDisposable because Already inherited
 - typingsSlinky.jupyterlabObservables.observablelistMod.IObservableList because Already inherited
 - typingsSlinky.jupyterlabObservables.undoablelistMod.IObservableUndoableList because var conflicts: length. Inlined canRedo, canUndo, beginCompoundOperation, beginCompoundOperation, endCompoundOperation, undo, redo, clearUndo */ @JSImport("@jupyterlab/observables/lib/undoablelist", "ObservableUndoableList")
@@ -85,18 +85,7 @@ object ObservableUndoableList extends js.Object {
     * A default, identity serializer.
     */
   @js.native
-  class IdentitySerializer[T /* <: JSONValue */] () extends ISerializer[T] {
-    /**
-      * Deserialize the object from JSON.
-      */
-    /* CompleteClass */
-    override def fromJSON(value: JSONValue): T = js.native
-    /**
-      * Convert the object to JSON.
-      */
-    /* CompleteClass */
-    override def toJSON(value: T): JSONValue = js.native
-  }
+  class IdentitySerializer[T /* <: JSONValue */] () extends ISerializer[T]
   
 }
 

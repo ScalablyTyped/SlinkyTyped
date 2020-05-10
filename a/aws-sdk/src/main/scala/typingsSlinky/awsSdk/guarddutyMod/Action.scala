@@ -30,20 +30,77 @@ trait Action extends js.Object {
 
 object Action {
   @scala.inline
-  def apply(
-    ActionType: String = null,
-    AwsApiCallAction: AwsApiCallAction = null,
-    DnsRequestAction: DnsRequestAction = null,
-    NetworkConnectionAction: NetworkConnectionAction = null,
-    PortProbeAction: PortProbeAction = null
-  ): Action = {
+  def apply(): Action = {
     val __obj = js.Dynamic.literal()
-    if (ActionType != null) __obj.updateDynamic("ActionType")(ActionType.asInstanceOf[js.Any])
-    if (AwsApiCallAction != null) __obj.updateDynamic("AwsApiCallAction")(AwsApiCallAction.asInstanceOf[js.Any])
-    if (DnsRequestAction != null) __obj.updateDynamic("DnsRequestAction")(DnsRequestAction.asInstanceOf[js.Any])
-    if (NetworkConnectionAction != null) __obj.updateDynamic("NetworkConnectionAction")(NetworkConnectionAction.asInstanceOf[js.Any])
-    if (PortProbeAction != null) __obj.updateDynamic("PortProbeAction")(PortProbeAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[Action]
   }
+  @scala.inline
+  implicit class ActionOps[Self <: Action] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsApiCallAction(value: AwsApiCallAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsApiCallAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsApiCallAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsApiCallAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnsRequestAction(value: DnsRequestAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsRequestAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsRequestAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsRequestAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkConnectionAction(value: NetworkConnectionAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkConnectionAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkConnectionAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkConnectionAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortProbeAction(value: PortProbeAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortProbeAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortProbeAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortProbeAction")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

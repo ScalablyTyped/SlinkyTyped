@@ -14,10 +14,29 @@ trait CreateAppResponse extends js.Object {
 
 object CreateAppResponse {
   @scala.inline
-  def apply(AppArn: AppArn = null): CreateAppResponse = {
+  def apply(): CreateAppResponse = {
     val __obj = js.Dynamic.literal()
-    if (AppArn != null) __obj.updateDynamic("AppArn")(AppArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateAppResponse]
   }
+  @scala.inline
+  implicit class CreateAppResponseOps[Self <: CreateAppResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppArn(value: AppArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

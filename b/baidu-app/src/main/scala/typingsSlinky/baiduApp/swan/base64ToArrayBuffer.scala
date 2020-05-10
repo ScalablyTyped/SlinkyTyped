@@ -11,6 +11,6 @@ object base64ToArrayBuffer extends js.Object {
   	 * 将 Base64 字符串转成 ArrayBuffer 数据
   	 *
   	 */
-  def apply(base64: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def apply(base64: String): js.typedarray.ArrayBuffer = js.native
 }
 

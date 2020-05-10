@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Project extends js.Object {
   /**
     * Creation time.
     *
     * Read-only.
     */
-  var createTime: js.UndefOr[String] = js.undefined
+  var createTime: js.UndefOr[String] = js.native
   /**
     * The labels associated with this Project.
     *
@@ -29,13 +30,13 @@ trait Project extends js.Object {
     * Example: <code>"environment" : "dev"</code>
     * Read-write.
     */
-  var labels: js.UndefOr[Record[String, String]] = js.undefined
+  var labels: js.UndefOr[Record[String, String]] = js.native
   /**
     * The Project lifecycle state.
     *
     * Read-only.
     */
-  var lifecycleState: js.UndefOr[String] = js.undefined
+  var lifecycleState: js.UndefOr[String] = js.native
   /**
     * The user-assigned display name of the Project.
     * It must be 4 to 30 characters.
@@ -45,7 +46,7 @@ trait Project extends js.Object {
     * Example: <code>My Project</code>
     * Read-write.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * An optional reference to a parent Resource.
     *
@@ -56,7 +57,7 @@ trait Project extends js.Object {
     *
     * Read-write.
     */
-  var parent: js.UndefOr[ResourceId] = js.undefined
+  var parent: js.UndefOr[ResourceId] = js.native
   /**
     * The unique, user-assigned ID of the Project.
     * It must be 6 to 30 lowercase letters, digits, or hyphens.
@@ -66,36 +67,113 @@ trait Project extends js.Object {
     * Example: <code>tokyo-rain-123</code>
     * Read-only after creation.
     */
-  var projectId: js.UndefOr[String] = js.undefined
+  var projectId: js.UndefOr[String] = js.native
   /**
     * The number uniquely identifying the project.
     *
     * Example: <code>415104041262</code>
     * Read-only.
     */
-  var projectNumber: js.UndefOr[String] = js.undefined
+  var projectNumber: js.UndefOr[String] = js.native
 }
 
 object Project {
   @scala.inline
-  def apply(
-    createTime: String = null,
-    labels: Record[String, String] = null,
-    lifecycleState: String = null,
-    name: String = null,
-    parent: ResourceId = null,
-    projectId: String = null,
-    projectNumber: String = null
-  ): Project = {
+  def apply(): Project = {
     val __obj = js.Dynamic.literal()
-    if (createTime != null) __obj.updateDynamic("createTime")(createTime.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (lifecycleState != null) __obj.updateDynamic("lifecycleState")(lifecycleState.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (projectId != null) __obj.updateDynamic("projectId")(projectId.asInstanceOf[js.Any])
-    if (projectNumber != null) __obj.updateDynamic("projectNumber")(projectNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[Project]
   }
+  @scala.inline
+  implicit class ProjectOps[Self <: Project] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: Record[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecycleState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycleState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycleState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

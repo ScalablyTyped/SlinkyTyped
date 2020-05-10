@@ -11,17 +11,37 @@ import scala.scalajs.js.annotation._
   * @property {boolean} unionPay.supportsTwoStepAuthAndCapture Determines if the card allows for an authorization, but settling the transaction later.
   * @property {boolean} unionPay.isSupported Determines if Braintree can process this UnionPay card. When false, Braintree cannot process this card and the user should use a different card.
   */
+@js.native
 trait UnionPayProperties extends js.Object {
-  var isSupported: Boolean
-  var supportsTwoStepAuthAndCapture: Boolean
+  var isSupported: Boolean = js.native
+  var supportsTwoStepAuthAndCapture: Boolean = js.native
 }
 
 object UnionPayProperties {
   @scala.inline
   def apply(isSupported: Boolean, supportsTwoStepAuthAndCapture: Boolean): UnionPayProperties = {
     val __obj = js.Dynamic.literal(isSupported = isSupported.asInstanceOf[js.Any], supportsTwoStepAuthAndCapture = supportsTwoStepAuthAndCapture.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[UnionPayProperties]
   }
+  @scala.inline
+  implicit class UnionPayPropertiesOps[Self <: UnionPayProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportsTwoStepAuthAndCapture(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsTwoStepAuthAndCapture")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

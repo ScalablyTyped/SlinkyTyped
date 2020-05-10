@@ -28,7 +28,5 @@ class MPRandGauss protected () extends RandomBase {
   var stdDev: js.Any = js.native
   var truncated: js.UndefOr[js.Any] = js.native
   var upper: js.UndefOr[js.Any] = js.native
-  /* CompleteClass */
-  override def nextValue(): Double = js.native
 }
 

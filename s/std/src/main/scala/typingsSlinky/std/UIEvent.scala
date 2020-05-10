@@ -18,6 +18,10 @@ trait UIEvent extends Event_ {
 @JSGlobal("UIEvent")
 @js.native
 object UIEvent
-  extends Instantiable1[/* type */ java.lang.String, UIEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ UIEventInit, UIEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.UIEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ UIEventInit, 
+      org.scalajs.dom.raw.UIEvent
+    ]
 

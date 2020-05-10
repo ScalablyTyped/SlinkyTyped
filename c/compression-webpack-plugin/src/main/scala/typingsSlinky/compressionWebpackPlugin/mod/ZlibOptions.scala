@@ -4,39 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ZlibOptions
   extends BaseOptions
      with Options[js.Any] {
-  var algorithm: js.UndefOr[ZlibAlgorithm] = js.undefined
-  var compressionOptions: js.UndefOr[typingsSlinky.node.zlibMod.ZlibOptions] = js.undefined
+  var algorithm: js.UndefOr[ZlibAlgorithm] = js.native
+  var compressionOptions: js.UndefOr[typingsSlinky.node.zlibMod.ZlibOptions] = js.native
 }
 
 object ZlibOptions {
   @scala.inline
-  def apply(
-    algorithm: ZlibAlgorithm = null,
-    cache: Boolean | String = null,
-    compressionOptions: typingsSlinky.node.zlibMod.ZlibOptions = null,
-    deleteOriginalAssets: js.UndefOr[Boolean] = js.undefined,
-    exclude: Pattern = null,
-    filename: String = null,
-    include: Pattern = null,
-    minRatio: Int | Double = null,
-    test: Pattern = null,
-    threshold: Int | Double = null
-  ): ZlibOptions = {
+  def apply(): ZlibOptions = {
     val __obj = js.Dynamic.literal()
-    if (algorithm != null) __obj.updateDynamic("algorithm")(algorithm.asInstanceOf[js.Any])
-    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (compressionOptions != null) __obj.updateDynamic("compressionOptions")(compressionOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(deleteOriginalAssets)) __obj.updateDynamic("deleteOriginalAssets")(deleteOriginalAssets.asInstanceOf[js.Any])
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (minRatio != null) __obj.updateDynamic("minRatio")(minRatio.asInstanceOf[js.Any])
-    if (test != null) __obj.updateDynamic("test")(test.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZlibOptions]
   }
+  @scala.inline
+  implicit class ZlibOptionsOps[Self <: ZlibOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithm(value: ZlibAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompressionOptions(value: typingsSlinky.node.zlibMod.ZlibOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompressionOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compressionOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

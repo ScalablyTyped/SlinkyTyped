@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.bpmnModdle.mod.TypeDerived because Already inherited
 - typingsSlinky.bpmnModdle.mod.InteractionNode because var conflicts: $parent, $type. Inlined incomingConversationLinks, outgoingConversationLinks */ @js.native
 trait ReceiveTask extends Activity {
@@ -14,5 +14,84 @@ trait ReceiveTask extends Activity {
   var messageRef: Message = js.native
   var operationRef: Operation = js.native
   var outgoingConversationLinks: js.Array[ConversationLink] = js.native
+}
+
+object ReceiveTask {
+  @scala.inline
+  def apply(
+    $parent: TypeDerived,
+    $type: ElementType,
+    auditing: Auditing,
+    boundaryEventRefs: js.Array[BoundaryEvent],
+    categoryValueRef: js.Array[CategoryValue],
+    completionQuantity: Double,
+    dataInputAssociations: js.Array[DataInputAssociation],
+    dataOutputAssociations: js.Array[DataOutputAssociation],
+    default: SequenceFlow,
+    id: String,
+    implementation: String,
+    incoming: js.Array[SequenceFlow],
+    incomingConversationLinks: js.Array[ConversationLink],
+    instantiate: Boolean,
+    ioSpecification: InputOutputSpecification,
+    isForCompensation: Boolean,
+    lanes: js.Array[Lane],
+    loopCharacteristics: LoopCharacteristics,
+    messageRef: Message,
+    monitoring: Monitoring,
+    operationRef: Operation,
+    outgoing: js.Array[SequenceFlow],
+    outgoingConversationLinks: js.Array[ConversationLink],
+    properties: js.Array[Property],
+    resources: ResourceRole,
+    startQuantity: Double
+  ): ReceiveTask = {
+    val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], auditing = auditing.asInstanceOf[js.Any], boundaryEventRefs = boundaryEventRefs.asInstanceOf[js.Any], categoryValueRef = categoryValueRef.asInstanceOf[js.Any], completionQuantity = completionQuantity.asInstanceOf[js.Any], dataInputAssociations = dataInputAssociations.asInstanceOf[js.Any], dataOutputAssociations = dataOutputAssociations.asInstanceOf[js.Any], default = default.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], implementation = implementation.asInstanceOf[js.Any], incoming = incoming.asInstanceOf[js.Any], incomingConversationLinks = incomingConversationLinks.asInstanceOf[js.Any], instantiate = instantiate.asInstanceOf[js.Any], ioSpecification = ioSpecification.asInstanceOf[js.Any], isForCompensation = isForCompensation.asInstanceOf[js.Any], lanes = lanes.asInstanceOf[js.Any], loopCharacteristics = loopCharacteristics.asInstanceOf[js.Any], messageRef = messageRef.asInstanceOf[js.Any], monitoring = monitoring.asInstanceOf[js.Any], operationRef = operationRef.asInstanceOf[js.Any], outgoing = outgoing.asInstanceOf[js.Any], outgoingConversationLinks = outgoingConversationLinks.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], resources = resources.asInstanceOf[js.Any], startQuantity = startQuantity.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReceiveTask]
+  }
+  @scala.inline
+  implicit class ReceiveTaskOps[Self <: ReceiveTask] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImplementation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIncomingConversationLinks(value: js.Array[ConversationLink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incomingConversationLinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstantiate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instantiate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageRef(value: Message): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOperationRef(value: Operation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutgoingConversationLinks(value: js.Array[ConversationLink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outgoingConversationLinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,14 +1,11 @@
 package typingsSlinky.tensorflowTfjsLayers.recurrentMod
 
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
-import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BaseRNNLayerArgs extends LayerArgs {
   /**
     * A RNN cell instance. A RNN cell is a class that has:
@@ -32,18 +29,18 @@ trait BaseRNNLayerArgs extends LayerArgs {
     * case the cells get stacked on after the other in the RNN, implementing an
     * efficient stacked RNN.
     */
-  var cell: js.UndefOr[RNNCell | js.Array[RNNCell]] = js.undefined
+  var cell: js.UndefOr[RNNCell | js.Array[RNNCell]] = js.native
   /**
     * If `true`, process the input sequence backwards and return the reversed
     * sequence (default: `false`).
     */
-  var goBackwards: js.UndefOr[Boolean] = js.undefined
+  var goBackwards: js.UndefOr[Boolean] = js.native
   /**
     * Dimensionality of the input (integer).
     *   This option (or alternatively, the option `inputShape`) is required when
     *   this layer is used as the first layer in a model.
     */
-  var inputDim: js.UndefOr[Double] = js.undefined
+  var inputDim: js.UndefOr[Double] = js.native
   /**
     * Length of the input sequences, to be specified when it is constant.
     * This argument is required if you are going to connect `Flatten` then
@@ -52,16 +49,16 @@ trait BaseRNNLayerArgs extends LayerArgs {
     * your model, you would need to specify the input length at the level of the
     * first layer (e.g., via the `inputShape` option).
     */
-  var inputLength: js.UndefOr[Double] = js.undefined
+  var inputLength: js.UndefOr[Double] = js.native
   /**
     * Whether to return the last output in the output sequence, or the full
     * sequence.
     */
-  var returnSequences: js.UndefOr[Boolean] = js.undefined
+  var returnSequences: js.UndefOr[Boolean] = js.native
   /**
     * Whether to return the last state in addition to the output.
     */
-  var returnState: js.UndefOr[Boolean] = js.undefined
+  var returnState: js.UndefOr[Boolean] = js.native
   /**
     * If `true`, the last state for each sample at index i in a batch will be
     * used as initial state of the sample of index i in the following batch
@@ -87,7 +84,7 @@ trait BaseRNNLayerArgs extends LayerArgs {
     * To reset the state of your model, call `resetStates()` on either the
     * specific layer or on the entire model.
     */
-  var stateful: js.UndefOr[Boolean] = js.undefined
+  var stateful: js.UndefOr[Boolean] = js.native
   /**
     * If `true`, the network will be unrolled, else a symbolic loop will be
     * used. Unrolling can speed-up a RNN, although it tends to be more memory-
@@ -97,47 +94,118 @@ trait BaseRNNLayerArgs extends LayerArgs {
     *   normal TypeScript control flow. Hence this property is inapplicable and
     *   ignored in tfjs-layers.
     */
-  var unroll: js.UndefOr[Boolean] = js.undefined
+  var unroll: js.UndefOr[Boolean] = js.native
 }
 
 object BaseRNNLayerArgs {
   @scala.inline
-  def apply(
-    batchInputShape: Shape = null,
-    batchSize: Int | Double = null,
-    cell: RNNCell | js.Array[RNNCell] = null,
-    dtype: DataType = null,
-    goBackwards: js.UndefOr[Boolean] = js.undefined,
-    inputDType: DataType = null,
-    inputDim: Int | Double = null,
-    inputLength: Int | Double = null,
-    inputShape: Shape = null,
-    name: String = null,
-    returnSequences: js.UndefOr[Boolean] = js.undefined,
-    returnState: js.UndefOr[Boolean] = js.undefined,
-    stateful: js.UndefOr[Boolean] = js.undefined,
-    trainable: js.UndefOr[Boolean] = js.undefined,
-    unroll: js.UndefOr[Boolean] = js.undefined,
-    weights: js.Array[Tensor_[Rank]] = null
-  ): BaseRNNLayerArgs = {
+  def apply(): BaseRNNLayerArgs = {
     val __obj = js.Dynamic.literal()
-    if (batchInputShape != null) __obj.updateDynamic("batchInputShape")(batchInputShape.asInstanceOf[js.Any])
-    if (batchSize != null) __obj.updateDynamic("batchSize")(batchSize.asInstanceOf[js.Any])
-    if (cell != null) __obj.updateDynamic("cell")(cell.asInstanceOf[js.Any])
-    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
-    if (!js.isUndefined(goBackwards)) __obj.updateDynamic("goBackwards")(goBackwards.asInstanceOf[js.Any])
-    if (inputDType != null) __obj.updateDynamic("inputDType")(inputDType.asInstanceOf[js.Any])
-    if (inputDim != null) __obj.updateDynamic("inputDim")(inputDim.asInstanceOf[js.Any])
-    if (inputLength != null) __obj.updateDynamic("inputLength")(inputLength.asInstanceOf[js.Any])
-    if (inputShape != null) __obj.updateDynamic("inputShape")(inputShape.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnSequences)) __obj.updateDynamic("returnSequences")(returnSequences.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnState)) __obj.updateDynamic("returnState")(returnState.asInstanceOf[js.Any])
-    if (!js.isUndefined(stateful)) __obj.updateDynamic("stateful")(stateful.asInstanceOf[js.Any])
-    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.asInstanceOf[js.Any])
-    if (!js.isUndefined(unroll)) __obj.updateDynamic("unroll")(unroll.asInstanceOf[js.Any])
-    if (weights != null) __obj.updateDynamic("weights")(weights.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseRNNLayerArgs]
   }
+  @scala.inline
+  implicit class BaseRNNLayerArgsOps[Self <: BaseRNNLayerArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCell(value: RNNCell | js.Array[RNNCell]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoBackwards(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goBackwards")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoBackwards: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goBackwards")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputDim(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputDim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputDim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputDim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnSequences(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnSequences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnSequences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnSequences")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnState(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateful(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateful")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateful: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateful")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnroll(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unroll")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

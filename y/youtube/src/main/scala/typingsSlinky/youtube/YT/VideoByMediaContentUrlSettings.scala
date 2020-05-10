@@ -4,26 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VideoByMediaContentUrlSettings extends VideoOrPlaylistSettings {
   /**
   		 * Fully qualified player URL.
   		 */
-  var mediaContentUrl: String
+  var mediaContentUrl: String = js.native
 }
 
 object VideoByMediaContentUrlSettings {
   @scala.inline
-  def apply(
-    mediaContentUrl: String,
-    endSeconds: Int | Double = null,
-    startSeconds: Int | Double = null,
-    suggestedQuality: SuggestedVideoQuality = null
-  ): VideoByMediaContentUrlSettings = {
+  def apply(mediaContentUrl: String): VideoByMediaContentUrlSettings = {
     val __obj = js.Dynamic.literal(mediaContentUrl = mediaContentUrl.asInstanceOf[js.Any])
-    if (endSeconds != null) __obj.updateDynamic("endSeconds")(endSeconds.asInstanceOf[js.Any])
-    if (startSeconds != null) __obj.updateDynamic("startSeconds")(startSeconds.asInstanceOf[js.Any])
-    if (suggestedQuality != null) __obj.updateDynamic("suggestedQuality")(suggestedQuality.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoByMediaContentUrlSettings]
   }
+  @scala.inline
+  implicit class VideoByMediaContentUrlSettingsOps[Self <: VideoByMediaContentUrlSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMediaContentUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaContentUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

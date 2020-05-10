@@ -30,18 +30,65 @@ trait SchemaQuerySource extends js.Object {
 
 object SchemaQuerySource {
   @scala.inline
-  def apply(
-    displayName: String = null,
-    operators: js.Array[SchemaQueryOperator] = null,
-    shortName: String = null,
-    source: SchemaSource = null
-  ): SchemaQuerySource = {
+  def apply(): SchemaQuerySource = {
     val __obj = js.Dynamic.literal()
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (operators != null) __obj.updateDynamic("operators")(operators.asInstanceOf[js.Any])
-    if (shortName != null) __obj.updateDynamic("shortName")(shortName.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQuerySource]
   }
+  @scala.inline
+  implicit class SchemaQuerySourceOps[Self <: SchemaQuerySource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperators(value: js.Array[SchemaQueryOperator]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: SchemaSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

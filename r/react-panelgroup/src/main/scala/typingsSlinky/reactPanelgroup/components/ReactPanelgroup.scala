@@ -1,10 +1,7 @@
 package typingsSlinky.reactPanelgroup.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactPanelgroup.mod.PanelWidth
 import typingsSlinky.reactPanelgroup.mod.PropTypes
 import typingsSlinky.reactPanelgroup.mod.default
@@ -14,33 +11,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactPanelgroup
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactPanelgroup {
   @JSImport("react-panelgroup", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    borderColor: String = null,
-    direction: row | column = null,
-    onUpdate: /* data */ PanelWidth => Unit = null,
-    panelColor: String = null,
-    panelWidths: js.Array[PanelWidth | Null] = null,
-    spacing: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction1(onUpdate))
-    if (panelColor != null) __obj.updateDynamic("panelColor")(panelColor.asInstanceOf[js.Any])
-    if (panelWidths != null) __obj.updateDynamic("panelWidths")(panelWidths.asInstanceOf[js.Any])
-    if (spacing != null) __obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def borderColor(value: String): this.type = set("borderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def direction(value: row | column): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onUpdate(value: /* data */ PanelWidth => Unit): this.type = set("onUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def panelColor(value: String): this.type = set("panelColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def panelWidths(value: js.Array[PanelWidth | Null]): this.type = set("panelWidths", value.asInstanceOf[js.Any])
+    @scala.inline
+    def spacing(value: Double): this.type = set("spacing", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactPanelgroup.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PropTypes
+  
+  def withProps(p: PropTypes): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactPanelgroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

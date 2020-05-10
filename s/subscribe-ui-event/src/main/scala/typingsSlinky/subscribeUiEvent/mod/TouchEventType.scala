@@ -15,16 +15,14 @@ trait TouchEventType extends js.Object
 
 object TouchEventType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def touchend: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchend = "touchend".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchend]
   @scala.inline
-  def touchend: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchend = this.cast("touchend")
+  def touchmove: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmove = "touchmove".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmove]
   @scala.inline
-  def touchmove: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmove = this.cast("touchmove")
+  def touchmoveEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveEnd = "touchmoveEnd".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveEnd]
   @scala.inline
-  def touchmoveEnd: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveEnd = this.cast("touchmoveEnd")
+  def touchmoveStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveStart = "touchmoveStart".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveStart]
   @scala.inline
-  def touchmoveStart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchmoveStart = this.cast("touchmoveStart")
-  @scala.inline
-  def touchstart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchstart = this.cast("touchstart")
+  def touchstart: typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchstart = "touchstart".asInstanceOf[typingsSlinky.subscribeUiEvent.subscribeUiEventStrings.touchstart]
 }
 

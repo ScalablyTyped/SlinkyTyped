@@ -23,10 +23,41 @@ trait ZoneAssociationArgs extends js.Object {
 
 object ZoneAssociationArgs {
   @scala.inline
-  def apply(vpcId: Input[String], zoneId: Input[String], vpcRegion: Input[String] = null): ZoneAssociationArgs = {
+  def apply(vpcId: Input[String], zoneId: Input[String]): ZoneAssociationArgs = {
     val __obj = js.Dynamic.literal(vpcId = vpcId.asInstanceOf[js.Any], zoneId = zoneId.asInstanceOf[js.Any])
-    if (vpcRegion != null) __obj.updateDynamic("vpcRegion")(vpcRegion.asInstanceOf[js.Any])
     __obj.asInstanceOf[ZoneAssociationArgs]
   }
+  @scala.inline
+  implicit class ZoneAssociationArgsOps[Self <: ZoneAssociationArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVpcId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZoneId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoneId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpcRegion(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpcRegion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

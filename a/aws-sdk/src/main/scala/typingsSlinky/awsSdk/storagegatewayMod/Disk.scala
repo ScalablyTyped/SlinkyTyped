@@ -36,26 +36,113 @@ trait Disk extends js.Object {
 
 object Disk {
   @scala.inline
-  def apply(
-    DiskAllocationResource: String = null,
-    DiskAllocationType: DiskAllocationType = null,
-    DiskAttributeList: DiskAttributeList = null,
-    DiskId: DiskId = null,
-    DiskNode: String = null,
-    DiskPath: String = null,
-    DiskSizeInBytes: Int | Double = null,
-    DiskStatus: String = null
-  ): Disk = {
+  def apply(): Disk = {
     val __obj = js.Dynamic.literal()
-    if (DiskAllocationResource != null) __obj.updateDynamic("DiskAllocationResource")(DiskAllocationResource.asInstanceOf[js.Any])
-    if (DiskAllocationType != null) __obj.updateDynamic("DiskAllocationType")(DiskAllocationType.asInstanceOf[js.Any])
-    if (DiskAttributeList != null) __obj.updateDynamic("DiskAttributeList")(DiskAttributeList.asInstanceOf[js.Any])
-    if (DiskId != null) __obj.updateDynamic("DiskId")(DiskId.asInstanceOf[js.Any])
-    if (DiskNode != null) __obj.updateDynamic("DiskNode")(DiskNode.asInstanceOf[js.Any])
-    if (DiskPath != null) __obj.updateDynamic("DiskPath")(DiskPath.asInstanceOf[js.Any])
-    if (DiskSizeInBytes != null) __obj.updateDynamic("DiskSizeInBytes")(DiskSizeInBytes.asInstanceOf[js.Any])
-    if (DiskStatus != null) __obj.updateDynamic("DiskStatus")(DiskStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[Disk]
   }
+  @scala.inline
+  implicit class DiskOps[Self <: Disk] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiskAllocationResource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskAllocationResource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskAllocationResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskAllocationResource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskAllocationType(value: DiskAllocationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskAllocationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskAllocationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskAllocationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskAttributeList(value: DiskAttributeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskAttributeList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskAttributeList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskAttributeList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskId(value: DiskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskNode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskSizeInBytes(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskSizeInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskSizeInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskSizeInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

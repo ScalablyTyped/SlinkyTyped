@@ -16,18 +16,16 @@ trait CanvasTextBaseline extends js.Object
 
 object CanvasTextBaseline {
   @scala.inline
-  def alphabetic: typingsSlinky.std.stdStrings.alphabetic = this.cast("alphabetic")
+  def alphabetic: typingsSlinky.std.stdStrings.alphabetic = "alphabetic".asInstanceOf[typingsSlinky.std.stdStrings.alphabetic]
   @scala.inline
-  def bottom: typingsSlinky.std.stdStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.std.stdStrings.bottom = "bottom".asInstanceOf[typingsSlinky.std.stdStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hanging: typingsSlinky.std.stdStrings.hanging = "hanging".asInstanceOf[typingsSlinky.std.stdStrings.hanging]
   @scala.inline
-  def hanging: typingsSlinky.std.stdStrings.hanging = this.cast("hanging")
+  def ideographic: typingsSlinky.std.stdStrings.ideographic = "ideographic".asInstanceOf[typingsSlinky.std.stdStrings.ideographic]
   @scala.inline
-  def ideographic: typingsSlinky.std.stdStrings.ideographic = this.cast("ideographic")
+  def middle: typingsSlinky.std.stdStrings.middle = "middle".asInstanceOf[typingsSlinky.std.stdStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.std.stdStrings.middle = this.cast("middle")
-  @scala.inline
-  def top: typingsSlinky.std.stdStrings.top = this.cast("top")
+  def top: typingsSlinky.std.stdStrings.top = "top".asInstanceOf[typingsSlinky.std.stdStrings.top]
 }
 

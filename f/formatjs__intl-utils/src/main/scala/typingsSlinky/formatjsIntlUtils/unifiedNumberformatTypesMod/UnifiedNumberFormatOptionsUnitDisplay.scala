@@ -13,12 +13,10 @@ trait UnifiedNumberFormatOptionsUnitDisplay extends js.Object
 
 object UnifiedNumberFormatOptionsUnitDisplay {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def long: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.long = "long".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.long]
   @scala.inline
-  def long: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.long = this.cast("long")
+  def narrow: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.narrow = "narrow".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.narrow]
   @scala.inline
-  def narrow: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.narrow = this.cast("narrow")
-  @scala.inline
-  def short: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.short = this.cast("short")
+  def short: typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.short = "short".asInstanceOf[typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.short]
 }
 

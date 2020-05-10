@@ -5,24 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAscending extends js.Object {
-  var ascending: js.UndefOr[Boolean] = js.undefined
-  var labelMapping: js.UndefOr[StringDictionary[String]] = js.undefined
-  var sortIndex: js.UndefOr[Double] = js.undefined
+  var ascending: js.UndefOr[Boolean] = js.native
+  var labelMapping: js.UndefOr[StringDictionary[String]] = js.native
+  var sortIndex: js.UndefOr[Double] = js.native
 }
 
 object AnonAscending {
   @scala.inline
-  def apply(
-    ascending: js.UndefOr[Boolean] = js.undefined,
-    labelMapping: StringDictionary[String] = null,
-    sortIndex: Int | Double = null
-  ): AnonAscending = {
+  def apply(): AnonAscending = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ascending)) __obj.updateDynamic("ascending")(ascending.asInstanceOf[js.Any])
-    if (labelMapping != null) __obj.updateDynamic("labelMapping")(labelMapping.asInstanceOf[js.Any])
-    if (sortIndex != null) __obj.updateDynamic("sortIndex")(sortIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAscending]
   }
+  @scala.inline
+  implicit class AnonAscendingOps[Self <: AnonAscending] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAscending(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ascending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAscending: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ascending")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelMapping(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelMapping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelMapping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelMapping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

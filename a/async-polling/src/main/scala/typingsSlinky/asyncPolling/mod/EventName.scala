@@ -17,20 +17,18 @@ trait EventName extends js.Object
 
 object EventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def end: typingsSlinky.asyncPolling.asyncPollingStrings.end = "end".asInstanceOf[typingsSlinky.asyncPolling.asyncPollingStrings.end]
   @scala.inline
-  def end: typingsSlinky.asyncPolling.asyncPollingStrings.end = this.cast("end")
+  def error: typingsSlinky.asyncPolling.asyncPollingStrings.error = "error".asInstanceOf[typingsSlinky.asyncPolling.asyncPollingStrings.error]
   @scala.inline
-  def error: typingsSlinky.asyncPolling.asyncPollingStrings.error = this.cast("error")
+  def result: typingsSlinky.asyncPolling.asyncPollingStrings.result = "result".asInstanceOf[typingsSlinky.asyncPolling.asyncPollingStrings.result]
   @scala.inline
-  def result: typingsSlinky.asyncPolling.asyncPollingStrings.result = this.cast("result")
+  def run: typingsSlinky.asyncPolling.asyncPollingStrings.run = "run".asInstanceOf[typingsSlinky.asyncPolling.asyncPollingStrings.run]
   @scala.inline
-  def run: typingsSlinky.asyncPolling.asyncPollingStrings.run = this.cast("run")
+  def schedule: typingsSlinky.asyncPolling.asyncPollingStrings.schedule = "schedule".asInstanceOf[typingsSlinky.asyncPolling.asyncPollingStrings.schedule]
   @scala.inline
-  def schedule: typingsSlinky.asyncPolling.asyncPollingStrings.schedule = this.cast("schedule")
+  def start: typingsSlinky.asyncPolling.asyncPollingStrings.start = "start".asInstanceOf[typingsSlinky.asyncPolling.asyncPollingStrings.start]
   @scala.inline
-  def start: typingsSlinky.asyncPolling.asyncPollingStrings.start = this.cast("start")
-  @scala.inline
-  def stop: typingsSlinky.asyncPolling.asyncPollingStrings.stop = this.cast("stop")
+  def stop: typingsSlinky.asyncPolling.asyncPollingStrings.stop = "stop".asInstanceOf[typingsSlinky.asyncPolling.asyncPollingStrings.stop]
 }
 

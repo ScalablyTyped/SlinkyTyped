@@ -9,37 +9,75 @@ import scala.scalajs.js.annotation._
   *
   * @see https://docs.oracle.com/en/database/oracle/simple-oracle-document-access/adsdi/soda-index-specifications-reference.html#GUID-00C06941-6FFD-4CEB-81B6-9A7FBD577A2C
   */
+@js.native
 trait BTreeIndex extends js.Object {
   /** Each object targets a field in the indexed documents that has a scalar JSON value. */
-  var fields: js.Array[BTreeIndexField]
+  var fields: js.Array[BTreeIndexField] = js.native
   /**
     * Specifies whether or not to index NULL values for the selected columns (by appending the numeric value 1 to the list of columns to index).
     *
     * @default false
     */
-  var indexNulls: js.UndefOr[Boolean] = js.undefined
+  var indexNulls: js.UndefOr[Boolean] = js.native
   /** Name of the index. */
-  var name: String
+  var name: String = js.native
   /**
     * Specifies whether or not the index is unique.
     *
     * @default false
     */
-  var unique: js.UndefOr[Boolean] = js.undefined
+  var unique: js.UndefOr[Boolean] = js.native
 }
 
 object BTreeIndex {
   @scala.inline
-  def apply(
-    fields: js.Array[BTreeIndexField],
-    name: String,
-    indexNulls: js.UndefOr[Boolean] = js.undefined,
-    unique: js.UndefOr[Boolean] = js.undefined
-  ): BTreeIndex = {
+  def apply(fields: js.Array[BTreeIndexField], name: String): BTreeIndex = {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (!js.isUndefined(indexNulls)) __obj.updateDynamic("indexNulls")(indexNulls.asInstanceOf[js.Any])
-    if (!js.isUndefined(unique)) __obj.updateDynamic("unique")(unique.asInstanceOf[js.Any])
     __obj.asInstanceOf[BTreeIndex]
   }
+  @scala.inline
+  implicit class BTreeIndexOps[Self <: BTreeIndex] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFields(value: js.Array[BTreeIndexField]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndexNulls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexNulls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexNulls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexNulls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnique(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnique: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,30 +7,76 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SubmoduleUpdateOptions
   extends /* key */ StringDictionary[js.Any] {
-  var checkoutOpts: js.UndefOr[CheckoutOptions] = js.undefined
-  var cloneCheckoutStrategy: js.UndefOr[Double] = js.undefined
-  var fetchOpts: js.UndefOr[FetchOptions] = js.undefined
-  var version: js.UndefOr[Double] = js.undefined
+  var checkoutOpts: js.UndefOr[CheckoutOptions] = js.native
+  var cloneCheckoutStrategy: js.UndefOr[Double] = js.native
+  var fetchOpts: js.UndefOr[FetchOptions] = js.native
+  var version: js.UndefOr[Double] = js.native
 }
 
 object SubmoduleUpdateOptions {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    checkoutOpts: CheckoutOptions = null,
-    cloneCheckoutStrategy: Int | Double = null,
-    fetchOpts: FetchOptions = null,
-    version: Int | Double = null
-  ): SubmoduleUpdateOptions = {
+  def apply(): SubmoduleUpdateOptions = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (checkoutOpts != null) __obj.updateDynamic("checkoutOpts")(checkoutOpts.asInstanceOf[js.Any])
-    if (cloneCheckoutStrategy != null) __obj.updateDynamic("cloneCheckoutStrategy")(cloneCheckoutStrategy.asInstanceOf[js.Any])
-    if (fetchOpts != null) __obj.updateDynamic("fetchOpts")(fetchOpts.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubmoduleUpdateOptions]
   }
+  @scala.inline
+  implicit class SubmoduleUpdateOptionsOps[Self <: SubmoduleUpdateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCheckoutOpts(value: CheckoutOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkoutOpts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckoutOpts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkoutOpts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloneCheckoutStrategy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneCheckoutStrategy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloneCheckoutStrategy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneCheckoutStrategy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFetchOpts(value: FetchOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchOpts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFetchOpts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchOpts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

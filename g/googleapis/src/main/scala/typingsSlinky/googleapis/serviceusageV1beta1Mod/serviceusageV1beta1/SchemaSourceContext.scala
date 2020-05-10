@@ -20,10 +20,29 @@ trait SchemaSourceContext extends js.Object {
 
 object SchemaSourceContext {
   @scala.inline
-  def apply(fileName: String = null): SchemaSourceContext = {
+  def apply(): SchemaSourceContext = {
     val __obj = js.Dynamic.literal()
-    if (fileName != null) __obj.updateDynamic("fileName")(fileName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSourceContext]
   }
+  @scala.inline
+  implicit class SchemaSourceContextOps[Self <: SchemaSourceContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

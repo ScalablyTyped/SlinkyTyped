@@ -18,11 +18,41 @@ trait GetInsightSelectorsResponse extends js.Object {
 
 object GetInsightSelectorsResponse {
   @scala.inline
-  def apply(InsightSelectors: InsightSelectors = null, TrailARN: String = null): GetInsightSelectorsResponse = {
+  def apply(): GetInsightSelectorsResponse = {
     val __obj = js.Dynamic.literal()
-    if (InsightSelectors != null) __obj.updateDynamic("InsightSelectors")(InsightSelectors.asInstanceOf[js.Any])
-    if (TrailARN != null) __obj.updateDynamic("TrailARN")(TrailARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInsightSelectorsResponse]
   }
+  @scala.inline
+  implicit class GetInsightSelectorsResponseOps[Self <: GetInsightSelectorsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInsightSelectors(value: InsightSelectors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsightSelectors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInsightSelectors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsightSelectors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrailARN(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrailARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrailARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrailARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

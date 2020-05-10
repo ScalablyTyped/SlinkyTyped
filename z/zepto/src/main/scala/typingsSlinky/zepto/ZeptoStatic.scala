@@ -1,8 +1,8 @@
 package typingsSlinky.zepto
 
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -133,7 +133,7 @@ trait ZeptoStatic extends js.Object {
   	* @param node
   	* @return
   	**/
-  def contains(parent: org.scalajs.dom.raw.HTMLElement, node: org.scalajs.dom.raw.HTMLElement): Boolean = js.native
+  def contains(parent: HTMLElement, node: HTMLElement): Boolean = js.native
   /**
   	* @see ZeptoStatic.each
   	**/
@@ -174,12 +174,7 @@ trait ZeptoStatic extends js.Object {
   	**/
   def get(
     url: String,
-    fn: js.Function3[
-      /* data */ js.Any, 
-      /* status */ String, 
-      /* xhr */ typingsSlinky.std.XMLHttpRequest, 
-      Unit
-    ]
+    fn: js.Function3[/* data */ js.Any, /* status */ String, /* xhr */ XMLHttpRequest, Unit]
   ): XMLHttpRequest = js.native
   /**
   	* @see ZeptoStatic.getJSON
@@ -198,12 +193,7 @@ trait ZeptoStatic extends js.Object {
   	**/
   def getJSON(
     url: String,
-    fn: js.Function3[
-      /* data */ js.Any, 
-      /* status */ String, 
-      /* xhr */ typingsSlinky.std.XMLHttpRequest, 
-      Unit
-    ]
+    fn: js.Function3[/* data */ js.Any, /* status */ String, /* xhr */ XMLHttpRequest, Unit]
   ): XMLHttpRequest = js.native
   /**
   	* Get a new array containing only the items for which the callback function returned true.
@@ -274,22 +264,12 @@ trait ZeptoStatic extends js.Object {
   def post(
     url: String,
     data: js.Any,
-    fn: js.Function3[
-      /* data */ js.Any, 
-      /* status */ String, 
-      /* xhr */ typingsSlinky.std.XMLHttpRequest, 
-      Unit
-    ]
+    fn: js.Function3[/* data */ js.Any, /* status */ String, /* xhr */ XMLHttpRequest, Unit]
   ): XMLHttpRequest = js.native
   def post(
     url: String,
     data: js.Any,
-    fn: js.Function3[
-      /* data */ js.Any, 
-      /* status */ String, 
-      /* xhr */ typingsSlinky.std.XMLHttpRequest, 
-      Unit
-    ],
+    fn: js.Function3[/* data */ js.Any, /* status */ String, /* xhr */ XMLHttpRequest, Unit],
     dataType: String
   ): XMLHttpRequest = js.native
   /**
@@ -300,21 +280,11 @@ trait ZeptoStatic extends js.Object {
   	**/
   def post(
     url: String,
-    fn: js.Function3[
-      /* data */ js.Any, 
-      /* status */ String, 
-      /* xhr */ typingsSlinky.std.XMLHttpRequest, 
-      Unit
-    ]
+    fn: js.Function3[/* data */ js.Any, /* status */ String, /* xhr */ XMLHttpRequest, Unit]
   ): XMLHttpRequest = js.native
   def post(
     url: String,
-    fn: js.Function3[
-      /* data */ js.Any, 
-      /* status */ String, 
-      /* xhr */ typingsSlinky.std.XMLHttpRequest, 
-      Unit
-    ],
+    fn: js.Function3[/* data */ js.Any, /* status */ String, /* xhr */ XMLHttpRequest, Unit],
     dataType: String
   ): XMLHttpRequest = js.native
   /**

@@ -30,17 +30,59 @@ trait AttachVolumeInput extends js.Object {
 
 object AttachVolumeInput {
   @scala.inline
-  def apply(
-    GatewayARN: GatewayARN,
-    NetworkInterfaceId: NetworkInterfaceId,
-    VolumeARN: VolumeARN,
-    DiskId: DiskId = null,
-    TargetName: TargetName = null
-  ): AttachVolumeInput = {
+  def apply(GatewayARN: GatewayARN, NetworkInterfaceId: NetworkInterfaceId, VolumeARN: VolumeARN): AttachVolumeInput = {
     val __obj = js.Dynamic.literal(GatewayARN = GatewayARN.asInstanceOf[js.Any], NetworkInterfaceId = NetworkInterfaceId.asInstanceOf[js.Any], VolumeARN = VolumeARN.asInstanceOf[js.Any])
-    if (DiskId != null) __obj.updateDynamic("DiskId")(DiskId.asInstanceOf[js.Any])
-    if (TargetName != null) __obj.updateDynamic("TargetName")(TargetName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachVolumeInput]
   }
+  @scala.inline
+  implicit class AttachVolumeInputOps[Self <: AttachVolumeInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetworkInterfaceId(value: NetworkInterfaceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkInterfaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVolumeARN(value: VolumeARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VolumeARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDiskId(value: DiskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetName(value: TargetName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

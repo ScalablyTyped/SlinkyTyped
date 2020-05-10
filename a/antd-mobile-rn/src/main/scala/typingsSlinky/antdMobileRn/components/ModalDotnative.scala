@@ -1,15 +1,21 @@
 package typingsSlinky.antdMobileRn.components
 
+import typingsSlinky.antdMobileRn.modalNativeMod.IModalNativeProps
 import typingsSlinky.antdMobileRn.modalNativeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ModalDotnative extends SharedApply_IModalNativeProps_1874896717[default] {
+object ModalDotnative {
   @JSImport("antd-mobile-rn/lib/modal/Modal.native", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IModalNativeProps): SharedBuilder_IModalNativeProps2000388185[default] = new SharedBuilder_IModalNativeProps2000388185[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(visible: Boolean): SharedBuilder_IModalNativeProps2000388185[default] = {
+    val __props = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
+    new SharedBuilder_IModalNativeProps2000388185[default](js.Array(this.component, __props.asInstanceOf[IModalNativeProps]))
+  }
 }
 

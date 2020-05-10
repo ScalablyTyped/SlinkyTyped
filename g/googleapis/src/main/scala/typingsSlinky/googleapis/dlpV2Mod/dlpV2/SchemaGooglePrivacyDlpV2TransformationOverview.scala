@@ -21,14 +21,41 @@ trait SchemaGooglePrivacyDlpV2TransformationOverview extends js.Object {
 
 object SchemaGooglePrivacyDlpV2TransformationOverview {
   @scala.inline
-  def apply(
-    transformationSummaries: js.Array[SchemaGooglePrivacyDlpV2TransformationSummary] = null,
-    transformedBytes: String = null
-  ): SchemaGooglePrivacyDlpV2TransformationOverview = {
+  def apply(): SchemaGooglePrivacyDlpV2TransformationOverview = {
     val __obj = js.Dynamic.literal()
-    if (transformationSummaries != null) __obj.updateDynamic("transformationSummaries")(transformationSummaries.asInstanceOf[js.Any])
-    if (transformedBytes != null) __obj.updateDynamic("transformedBytes")(transformedBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2TransformationOverview]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2TransformationOverviewOps[Self <: SchemaGooglePrivacyDlpV2TransformationOverview] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransformationSummaries(value: js.Array[SchemaGooglePrivacyDlpV2TransformationSummary]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformationSummaries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransformationSummaries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformationSummaries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransformedBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformedBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransformedBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformedBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

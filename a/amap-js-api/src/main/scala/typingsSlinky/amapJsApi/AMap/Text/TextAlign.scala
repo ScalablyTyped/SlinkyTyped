@@ -13,12 +13,10 @@ trait TextAlign extends js.Object
 
 object TextAlign {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.amapJsApi.amapJsApiStrings.center = "center".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.center]
   @scala.inline
-  def center: typingsSlinky.amapJsApi.amapJsApiStrings.center = this.cast("center")
+  def left: typingsSlinky.amapJsApi.amapJsApiStrings.left = "left".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.left]
   @scala.inline
-  def left: typingsSlinky.amapJsApi.amapJsApiStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.amapJsApi.amapJsApiStrings.right = this.cast("right")
+  def right: typingsSlinky.amapJsApi.amapJsApiStrings.right = "right".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.right]
 }
 

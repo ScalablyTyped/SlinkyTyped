@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BarChartMediaInfo
   extends JSONSupport
      with MediaInfo
@@ -16,7 +17,7 @@ trait BarChartMediaInfo
     *
     * @default bar-chart
     */
-  val `type`: String
+  val `type`: String = js.native
 }
 
 @JSGlobal("__esri.BarChartMediaInfo")

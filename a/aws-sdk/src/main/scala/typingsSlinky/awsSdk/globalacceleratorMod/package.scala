@@ -13,6 +13,22 @@ package object globalacceleratorMod {
   type AcceleratorStatus = typingsSlinky.awsSdk.globalacceleratorMod._AcceleratorStatus | java.lang.String
   type Accelerators = js.Array[typingsSlinky.awsSdk.globalacceleratorMod.Accelerator]
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_PROVISIONING
+    - typingsSlinky.awsSdk.awsSdkStrings.READY
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_ADVERTISING
+    - typingsSlinky.awsSdk.awsSdkStrings.ADVERTISING
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_WITHDRAWING
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_DEPROVISIONING
+    - typingsSlinky.awsSdk.awsSdkStrings.DEPROVISIONED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED_PROVISION
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED_ADVERTISING
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED_WITHDRAW
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED_DEPROVISION
+    - java.lang.String
+  */
+  type ByoipCidrState = typingsSlinky.awsSdk.globalacceleratorMod._ByoipCidrState | java.lang.String
+  type ByoipCidrs = js.Array[typingsSlinky.awsSdk.globalacceleratorMod.ByoipCidr]
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NONE
     - typingsSlinky.awsSdk.awsSdkStrings.SOURCE_IP
     - java.lang.String
@@ -56,6 +72,11 @@ package object globalacceleratorMod {
     - java.lang.String
   */
   type Protocol = typingsSlinky.awsSdk.globalacceleratorMod._Protocol | java.lang.String
+  type ResourceArn = java.lang.String
+  type TagKey = java.lang.String
+  type TagKeys = js.Array[typingsSlinky.awsSdk.globalacceleratorMod.TagKey]
+  type TagValue = java.lang.String
+  type Tags = js.Array[typingsSlinky.awsSdk.globalacceleratorMod.Tag]
   type ThresholdCount = scala.Double
   type Timestamp = js.Date
   type TrafficDialPercentage = scala.Double

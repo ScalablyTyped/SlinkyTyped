@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Props extends js.Object {
-  var children: TagMod[Any]
+  var children: TagMod[Any] = js.native
   /**
     * Custom anchor tag creator
     * Default to using exisint <a> tag with the provided href={decoratedHref}, key={key}
@@ -14,39 +15,97 @@ trait Props extends js.Object {
     */
   var componentDecorator: js.UndefOr[
     js.Function3[/* decoratedHref */ String, /* decoratedText */ String, /* key */ Double, TagMod[Any]]
-  ] = js.undefined
+  ] = js.native
   /**
     * Custom href decorator or mapper on the matched (url) href
     * Default to no transformation
     */
-  var hrefDecorator: js.UndefOr[js.Function1[/* urlHref */ String, String]] = js.undefined
+  var hrefDecorator: js.UndefOr[js.Function1[/* urlHref */ String, String]] = js.native
   /**
     * Custom matcher for (url), that returns each match with the matching information
     * Default to https://github.com/markdown-it/linkify-it's LinkifyIt().tlds(tlds).match
     */
-  var matchDecorator: js.UndefOr[js.Function1[/* text */ String, js.Array[MatchInfo] | Null]] = js.undefined
+  var matchDecorator: js.UndefOr[js.Function1[/* text */ String, js.Array[MatchInfo] | Null]] = js.native
   /**
     * Custom text decorator or mapper on the matched (url) text
     * Default to no transformation
     */
-  var textDecorator: js.UndefOr[js.Function1[/* urlText */ String, String]] = js.undefined
+  var textDecorator: js.UndefOr[js.Function1[/* urlText */ String, String]] = js.native
 }
 
 object Props {
   @scala.inline
-  def apply(
-    children: TagMod[Any],
-    componentDecorator: (/* decoratedHref */ String, /* decoratedText */ String, /* key */ Double) => TagMod[Any] = null,
-    hrefDecorator: /* urlHref */ String => String = null,
-    matchDecorator: /* text */ String => js.Array[MatchInfo] | Null = null,
-    textDecorator: /* urlText */ String => String = null
-  ): Props = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    if (componentDecorator != null) __obj.updateDynamic("componentDecorator")(js.Any.fromFunction3(componentDecorator))
-    if (hrefDecorator != null) __obj.updateDynamic("hrefDecorator")(js.Any.fromFunction1(hrefDecorator))
-    if (matchDecorator != null) __obj.updateDynamic("matchDecorator")(js.Any.fromFunction1(matchDecorator))
-    if (textDecorator != null) __obj.updateDynamic("textDecorator")(js.Any.fromFunction1(textDecorator))
+  def apply(): Props = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Props]
   }
+  @scala.inline
+  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponentDecorator(value: (/* decoratedHref */ String, /* decoratedText */ String, /* key */ Double) => TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentDecorator")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutComponentDecorator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentDecorator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHrefDecorator(value: /* urlHref */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hrefDecorator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHrefDecorator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hrefDecorator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchDecorator(value: /* text */ String => js.Array[MatchInfo] | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchDecorator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMatchDecorator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchDecorator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextDecorator(value: /* urlText */ String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecorator")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutTextDecorator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDecorator")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

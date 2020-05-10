@@ -12,10 +12,8 @@ trait Channels extends js.Object
 
 object Channels {
   @scala.inline
-  def `1`: typingsSlinky.audiosprite.audiospriteNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.audiosprite.audiospriteNumbers.`1` = 1.asInstanceOf[typingsSlinky.audiosprite.audiospriteNumbers.`1`]
   @scala.inline
-  def `2`: typingsSlinky.audiosprite.audiospriteNumbers.`2` = this.cast(2)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `2`: typingsSlinky.audiosprite.audiospriteNumbers.`2` = 2.asInstanceOf[typingsSlinky.audiosprite.audiospriteNumbers.`2`]
 }
 

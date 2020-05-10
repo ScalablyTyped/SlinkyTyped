@@ -5,46 +5,47 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line interface-name
+@js.native
 trait IConstants extends js.Object {
-  var FORCETEMPLATEURL: Boolean
-  var LOADER_STEPS_ENABLE_AUTOCLEAR: Boolean
-  var LOADER_STEPS_ENABLE_AUTOLOGINTOAPPMANAGER: Boolean
-  var LOADER_STEPS_ENABLE_DEBUGINFO: Boolean
-  var LOADER_STEPS_ENABLE_DETECTMULTIPLEVISIBLELANGS: Boolean
-  var LOADER_STEPS_ENABLE_DISPLAYLOADER: Boolean
-  var LOADER_STEPS_ENABLE_DISPLAYSHAREPOINTBAR: Boolean
-  var LOADER_STEPS_ENABLE_EVENTSUBSCRIPTION: Boolean
-  var LOADER_STEPS_ENABLE_FETCHADGROUPS: Boolean
-  var LOADER_STEPS_ENABLE_FETCHCONFIGCONTEXT: Boolean
-  var LOADER_STEPS_ENABLE_FETCHLANGUAGENEUTRALLISTS: Boolean
-  var LOADER_STEPS_ENABLE_FETCHLANGUAGES: Boolean
-  var LOADER_STEPS_ENABLE_FETCHPAGEPERMISSIONS: Boolean
-  var LOADER_STEPS_ENABLE_FETCHSPGROUPS: Boolean
-  var LOADER_STEPS_ENABLE_FETCHUSERPROPERTIES: Boolean
-  var LOADER_STEPS_ENABLE_FETCHWORKSPACECONTEXT: Boolean
-  var LOADER_STEPS_ENABLE_GETADDITIONALMARKUP: Boolean
-  var LOADER_STEPS_ENABLE_GETGRAPHTOKEN: Boolean
-  var LOADER_STEPS_ENABLE_GETINDIVIDUALWIDGETSJS: Boolean
-  var LOADER_STEPS_ENABLE_GETINTERCHANGELOGINURL: Boolean
-  var LOADER_STEPS_ENABLE_GETLOADINGTEMPLATE: Boolean
-  var LOADER_STEPS_ENABLE_GETWIDGETJS: Boolean
-  var LOADER_STEPS_ENABLE_INDEXPAGEDATA: Boolean
-  var LOADER_STEPS_ENABLE_INITSNIPPETS: Boolean
-  var LOADER_STEPS_ENABLE_INITWIDGETS: Boolean
-  var LOADER_STEPS_ENABLE_LOADDASHBOARDWIDGETS: Boolean
-  var LOADER_STEPS_ENABLE_LOADUSERLANGSETTINGS: Boolean
-  var LOADER_STEPS_ENABLE_LOADWIDGETSINSTANCES: Boolean
-  var LOADER_STEPS_ENABLE_LOADWIDGETSTYPES: Boolean
-  var LOADER_STEPS_ENABLE_PROVISIONDASHBOARD: Boolean
-  var LOADER_STEPS_ENABLE_REFRESHAKTOKEN: Boolean
-  var LOADER_STEPS_ENABLE_RESUMEMAINWINDOWLOADER: Boolean
-  var LOADER_STEPS_ENABLE_SETSITETHEME: Boolean
-  var LOADER_STEPS_ENABLE_TRAYMENU: Boolean
-  var LOADER_STEPS_ENABLE_VALIDATEINTERCHANGEKEY: Boolean
-  var LOADER_STEPS_ENABLE_VALIDATEWORKSPACECONFIG: Boolean
-  var LOG_LEVEL: Double
-  var REDIRECTONERROR: Boolean
-  var WIDGET_OPTIONS_LOADFROMAPPMANAGER: Boolean
+  var FORCETEMPLATEURL: Boolean = js.native
+  var LOADER_STEPS_ENABLE_AUTOCLEAR: Boolean = js.native
+  var LOADER_STEPS_ENABLE_AUTOLOGINTOAPPMANAGER: Boolean = js.native
+  var LOADER_STEPS_ENABLE_DEBUGINFO: Boolean = js.native
+  var LOADER_STEPS_ENABLE_DETECTMULTIPLEVISIBLELANGS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_DISPLAYLOADER: Boolean = js.native
+  var LOADER_STEPS_ENABLE_DISPLAYSHAREPOINTBAR: Boolean = js.native
+  var LOADER_STEPS_ENABLE_EVENTSUBSCRIPTION: Boolean = js.native
+  var LOADER_STEPS_ENABLE_FETCHADGROUPS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_FETCHCONFIGCONTEXT: Boolean = js.native
+  var LOADER_STEPS_ENABLE_FETCHLANGUAGENEUTRALLISTS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_FETCHLANGUAGES: Boolean = js.native
+  var LOADER_STEPS_ENABLE_FETCHPAGEPERMISSIONS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_FETCHSPGROUPS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_FETCHUSERPROPERTIES: Boolean = js.native
+  var LOADER_STEPS_ENABLE_FETCHWORKSPACECONTEXT: Boolean = js.native
+  var LOADER_STEPS_ENABLE_GETADDITIONALMARKUP: Boolean = js.native
+  var LOADER_STEPS_ENABLE_GETGRAPHTOKEN: Boolean = js.native
+  var LOADER_STEPS_ENABLE_GETINDIVIDUALWIDGETSJS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_GETINTERCHANGELOGINURL: Boolean = js.native
+  var LOADER_STEPS_ENABLE_GETLOADINGTEMPLATE: Boolean = js.native
+  var LOADER_STEPS_ENABLE_GETWIDGETJS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_INDEXPAGEDATA: Boolean = js.native
+  var LOADER_STEPS_ENABLE_INITSNIPPETS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_INITWIDGETS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_LOADDASHBOARDWIDGETS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_LOADUSERLANGSETTINGS: Boolean = js.native
+  var LOADER_STEPS_ENABLE_LOADWIDGETSINSTANCES: Boolean = js.native
+  var LOADER_STEPS_ENABLE_LOADWIDGETSTYPES: Boolean = js.native
+  var LOADER_STEPS_ENABLE_PROVISIONDASHBOARD: Boolean = js.native
+  var LOADER_STEPS_ENABLE_REFRESHAKTOKEN: Boolean = js.native
+  var LOADER_STEPS_ENABLE_RESUMEMAINWINDOWLOADER: Boolean = js.native
+  var LOADER_STEPS_ENABLE_SETSITETHEME: Boolean = js.native
+  var LOADER_STEPS_ENABLE_TRAYMENU: Boolean = js.native
+  var LOADER_STEPS_ENABLE_VALIDATEINTERCHANGEKEY: Boolean = js.native
+  var LOADER_STEPS_ENABLE_VALIDATEWORKSPACECONFIG: Boolean = js.native
+  var LOG_LEVEL: Double = js.native
+  var REDIRECTONERROR: Boolean = js.native
+  var WIDGET_OPTIONS_LOADFROMAPPMANAGER: Boolean = js.native
 }
 
 object IConstants {
@@ -91,8 +92,249 @@ object IConstants {
     WIDGET_OPTIONS_LOADFROMAPPMANAGER: Boolean
   ): IConstants = {
     val __obj = js.Dynamic.literal(FORCETEMPLATEURL = FORCETEMPLATEURL.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_AUTOCLEAR = LOADER_STEPS_ENABLE_AUTOCLEAR.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_AUTOLOGINTOAPPMANAGER = LOADER_STEPS_ENABLE_AUTOLOGINTOAPPMANAGER.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_DEBUGINFO = LOADER_STEPS_ENABLE_DEBUGINFO.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_DETECTMULTIPLEVISIBLELANGS = LOADER_STEPS_ENABLE_DETECTMULTIPLEVISIBLELANGS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_DISPLAYLOADER = LOADER_STEPS_ENABLE_DISPLAYLOADER.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_DISPLAYSHAREPOINTBAR = LOADER_STEPS_ENABLE_DISPLAYSHAREPOINTBAR.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_EVENTSUBSCRIPTION = LOADER_STEPS_ENABLE_EVENTSUBSCRIPTION.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_FETCHADGROUPS = LOADER_STEPS_ENABLE_FETCHADGROUPS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_FETCHCONFIGCONTEXT = LOADER_STEPS_ENABLE_FETCHCONFIGCONTEXT.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_FETCHLANGUAGENEUTRALLISTS = LOADER_STEPS_ENABLE_FETCHLANGUAGENEUTRALLISTS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_FETCHLANGUAGES = LOADER_STEPS_ENABLE_FETCHLANGUAGES.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_FETCHPAGEPERMISSIONS = LOADER_STEPS_ENABLE_FETCHPAGEPERMISSIONS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_FETCHSPGROUPS = LOADER_STEPS_ENABLE_FETCHSPGROUPS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_FETCHUSERPROPERTIES = LOADER_STEPS_ENABLE_FETCHUSERPROPERTIES.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_FETCHWORKSPACECONTEXT = LOADER_STEPS_ENABLE_FETCHWORKSPACECONTEXT.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_GETADDITIONALMARKUP = LOADER_STEPS_ENABLE_GETADDITIONALMARKUP.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_GETGRAPHTOKEN = LOADER_STEPS_ENABLE_GETGRAPHTOKEN.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_GETINDIVIDUALWIDGETSJS = LOADER_STEPS_ENABLE_GETINDIVIDUALWIDGETSJS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_GETINTERCHANGELOGINURL = LOADER_STEPS_ENABLE_GETINTERCHANGELOGINURL.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_GETLOADINGTEMPLATE = LOADER_STEPS_ENABLE_GETLOADINGTEMPLATE.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_GETWIDGETJS = LOADER_STEPS_ENABLE_GETWIDGETJS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_INDEXPAGEDATA = LOADER_STEPS_ENABLE_INDEXPAGEDATA.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_INITSNIPPETS = LOADER_STEPS_ENABLE_INITSNIPPETS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_INITWIDGETS = LOADER_STEPS_ENABLE_INITWIDGETS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_LOADDASHBOARDWIDGETS = LOADER_STEPS_ENABLE_LOADDASHBOARDWIDGETS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_LOADUSERLANGSETTINGS = LOADER_STEPS_ENABLE_LOADUSERLANGSETTINGS.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_LOADWIDGETSINSTANCES = LOADER_STEPS_ENABLE_LOADWIDGETSINSTANCES.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_LOADWIDGETSTYPES = LOADER_STEPS_ENABLE_LOADWIDGETSTYPES.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_PROVISIONDASHBOARD = LOADER_STEPS_ENABLE_PROVISIONDASHBOARD.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_REFRESHAKTOKEN = LOADER_STEPS_ENABLE_REFRESHAKTOKEN.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_RESUMEMAINWINDOWLOADER = LOADER_STEPS_ENABLE_RESUMEMAINWINDOWLOADER.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_SETSITETHEME = LOADER_STEPS_ENABLE_SETSITETHEME.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_TRAYMENU = LOADER_STEPS_ENABLE_TRAYMENU.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_VALIDATEINTERCHANGEKEY = LOADER_STEPS_ENABLE_VALIDATEINTERCHANGEKEY.asInstanceOf[js.Any], LOADER_STEPS_ENABLE_VALIDATEWORKSPACECONFIG = LOADER_STEPS_ENABLE_VALIDATEWORKSPACECONFIG.asInstanceOf[js.Any], LOG_LEVEL = LOG_LEVEL.asInstanceOf[js.Any], REDIRECTONERROR = REDIRECTONERROR.asInstanceOf[js.Any], WIDGET_OPTIONS_LOADFROMAPPMANAGER = WIDGET_OPTIONS_LOADFROMAPPMANAGER.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IConstants]
   }
+  @scala.inline
+  implicit class IConstantsOps[Self <: IConstants] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFORCETEMPLATEURL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FORCETEMPLATEURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_AUTOCLEAR(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_AUTOCLEAR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_AUTOLOGINTOAPPMANAGER(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_AUTOLOGINTOAPPMANAGER")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_DEBUGINFO(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_DEBUGINFO")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_DETECTMULTIPLEVISIBLELANGS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_DETECTMULTIPLEVISIBLELANGS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_DISPLAYLOADER(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_DISPLAYLOADER")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_DISPLAYSHAREPOINTBAR(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_DISPLAYSHAREPOINTBAR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_EVENTSUBSCRIPTION(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_EVENTSUBSCRIPTION")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_FETCHADGROUPS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_FETCHADGROUPS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_FETCHCONFIGCONTEXT(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_FETCHCONFIGCONTEXT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_FETCHLANGUAGENEUTRALLISTS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_FETCHLANGUAGENEUTRALLISTS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_FETCHLANGUAGES(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_FETCHLANGUAGES")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_FETCHPAGEPERMISSIONS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_FETCHPAGEPERMISSIONS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_FETCHSPGROUPS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_FETCHSPGROUPS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_FETCHUSERPROPERTIES(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_FETCHUSERPROPERTIES")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_FETCHWORKSPACECONTEXT(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_FETCHWORKSPACECONTEXT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_GETADDITIONALMARKUP(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_GETADDITIONALMARKUP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_GETGRAPHTOKEN(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_GETGRAPHTOKEN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_GETINDIVIDUALWIDGETSJS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_GETINDIVIDUALWIDGETSJS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_GETINTERCHANGELOGINURL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_GETINTERCHANGELOGINURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_GETLOADINGTEMPLATE(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_GETLOADINGTEMPLATE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_GETWIDGETJS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_GETWIDGETJS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_INDEXPAGEDATA(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_INDEXPAGEDATA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_INITSNIPPETS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_INITSNIPPETS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_INITWIDGETS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_INITWIDGETS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_LOADDASHBOARDWIDGETS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_LOADDASHBOARDWIDGETS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_LOADUSERLANGSETTINGS(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_LOADUSERLANGSETTINGS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_LOADWIDGETSINSTANCES(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_LOADWIDGETSINSTANCES")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_LOADWIDGETSTYPES(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_LOADWIDGETSTYPES")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_PROVISIONDASHBOARD(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_PROVISIONDASHBOARD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_REFRESHAKTOKEN(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_REFRESHAKTOKEN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_RESUMEMAINWINDOWLOADER(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_RESUMEMAINWINDOWLOADER")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_SETSITETHEME(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_SETSITETHEME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_TRAYMENU(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_TRAYMENU")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_VALIDATEINTERCHANGEKEY(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_VALIDATEINTERCHANGEKEY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADER_STEPS_ENABLE_VALIDATEWORKSPACECONFIG(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADER_STEPS_ENABLE_VALIDATEWORKSPACECONFIG")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOG_LEVEL(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOG_LEVEL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withREDIRECTONERROR(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("REDIRECTONERROR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWIDGET_OPTIONS_LOADFROMAPPMANAGER(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WIDGET_OPTIONS_LOADFROMAPPMANAGER")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

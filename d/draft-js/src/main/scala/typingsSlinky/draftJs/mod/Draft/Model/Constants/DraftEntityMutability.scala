@@ -39,12 +39,10 @@ trait DraftEntityMutability extends js.Object
 
 object DraftEntityMutability {
   @scala.inline
-  def IMMUTABLE: typingsSlinky.draftJs.draftJsStrings.IMMUTABLE = this.cast("IMMUTABLE")
+  def IMMUTABLE: typingsSlinky.draftJs.draftJsStrings.IMMUTABLE = "IMMUTABLE".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.IMMUTABLE]
   @scala.inline
-  def MUTABLE: typingsSlinky.draftJs.draftJsStrings.MUTABLE = this.cast("MUTABLE")
+  def MUTABLE: typingsSlinky.draftJs.draftJsStrings.MUTABLE = "MUTABLE".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.MUTABLE]
   @scala.inline
-  def SEGMENTED: typingsSlinky.draftJs.draftJsStrings.SEGMENTED = this.cast("SEGMENTED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SEGMENTED: typingsSlinky.draftJs.draftJsStrings.SEGMENTED = "SEGMENTED".asInstanceOf[typingsSlinky.draftJs.draftJsStrings.SEGMENTED]
 }
 

@@ -16,8 +16,21 @@ object ClaimDevicesByClaimCodeRequest {
   @scala.inline
   def apply(ClaimCode: string): ClaimDevicesByClaimCodeRequest = {
     val __obj = js.Dynamic.literal(ClaimCode = ClaimCode.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ClaimDevicesByClaimCodeRequest]
   }
+  @scala.inline
+  implicit class ClaimDevicesByClaimCodeRequestOps[Self <: ClaimDevicesByClaimCodeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClaimCode(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClaimCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

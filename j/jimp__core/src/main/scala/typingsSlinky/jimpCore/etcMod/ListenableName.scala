@@ -19,24 +19,22 @@ trait ListenableName extends js.Object
 
 object ListenableName {
   @scala.inline
-  def any: typingsSlinky.jimpCore.jimpCoreStrings.any = this.cast("any")
+  def any: typingsSlinky.jimpCore.jimpCoreStrings.any = "any".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.any]
   @scala.inline
-  def background: typingsSlinky.jimpCore.jimpCoreStrings.background = this.cast("background")
+  def background: typingsSlinky.jimpCore.jimpCoreStrings.background = "background".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.background]
   @scala.inline
-  def `before-change`: typingsSlinky.jimpCore.jimpCoreStrings.`before-change` = this.cast("before-change")
+  def `before-change`: typingsSlinky.jimpCore.jimpCoreStrings.`before-change` = "before-change".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.`before-change`]
   @scala.inline
-  def `before-clone`: typingsSlinky.jimpCore.jimpCoreStrings.`before-clone` = this.cast("before-clone")
+  def `before-clone`: typingsSlinky.jimpCore.jimpCoreStrings.`before-clone` = "before-clone".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.`before-clone`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def changed: typingsSlinky.jimpCore.jimpCoreStrings.changed = "changed".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.changed]
   @scala.inline
-  def changed: typingsSlinky.jimpCore.jimpCoreStrings.changed = this.cast("changed")
+  def cloned: typingsSlinky.jimpCore.jimpCoreStrings.cloned = "cloned".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.cloned]
   @scala.inline
-  def cloned: typingsSlinky.jimpCore.jimpCoreStrings.cloned = this.cast("cloned")
+  def crop: typingsSlinky.jimpCore.jimpCoreStrings.crop = "crop".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.crop]
   @scala.inline
-  def crop: typingsSlinky.jimpCore.jimpCoreStrings.crop = this.cast("crop")
+  def initialized: typingsSlinky.jimpCore.jimpCoreStrings.initialized = "initialized".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.initialized]
   @scala.inline
-  def initialized: typingsSlinky.jimpCore.jimpCoreStrings.initialized = this.cast("initialized")
-  @scala.inline
-  def scan: typingsSlinky.jimpCore.jimpCoreStrings.scan = this.cast("scan")
+  def scan: typingsSlinky.jimpCore.jimpCoreStrings.scan = "scan".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.scan]
 }
 

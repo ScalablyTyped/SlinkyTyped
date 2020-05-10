@@ -6,26 +6,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BottomNavigationProps extends js.Object {
-  var active: js.UndefOr[String] = js.undefined
-  var children: ReactElement | js.Array[ReactElement]
-  var hidden: js.UndefOr[Boolean] = js.undefined
-  var style: js.UndefOr[AnonContainerViewStyle] = js.undefined
+  var active: js.UndefOr[String] = js.native
+  var children: ReactElement | js.Array[ReactElement] = js.native
+  var hidden: js.UndefOr[Boolean] = js.native
+  var style: js.UndefOr[AnonContainerViewStyle] = js.native
 }
 
 object BottomNavigationProps {
   @scala.inline
-  def apply(
-    children: ReactElement | js.Array[ReactElement],
-    active: String = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    style: AnonContainerViewStyle = null
-  ): BottomNavigationProps = {
+  def apply(children: ReactElement | js.Array[ReactElement]): BottomNavigationProps = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    if (active != null) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[BottomNavigationProps]
   }
+  @scala.inline
+  implicit class BottomNavigationPropsOps[Self <: BottomNavigationProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: ReactElement | js.Array[ReactElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: AnonContainerViewStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -3,6 +3,15 @@ package typingsSlinky.tern.ternMod
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.tern.AnonQuery
 import typingsSlinky.tern.inferMod.Context
+import typingsSlinky.tern.ternStrings.afterLoad
+import typingsSlinky.tern.ternStrings.beforeLoad
+import typingsSlinky.tern.ternStrings.completion
+import typingsSlinky.tern.ternStrings.postInfer
+import typingsSlinky.tern.ternStrings.postParse
+import typingsSlinky.tern.ternStrings.preInfer
+import typingsSlinky.tern.ternStrings.preParse
+import typingsSlinky.tern.ternStrings.reset
+import typingsSlinky.tern.ternStrings.typeAt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +49,12 @@ trait Server extends js.Object {
   /** Load a server plugin (or don’t do anything, if the plugin is already loaded). */
   def loadPlugin(name: String, options: js.Object): Unit = js.native
   /** Unregister an event handler. */
-  def off[K /* <: String */](
+  def off[K /* <: /* keyof tern.tern/lib/tern.Events */ reset | beforeLoad | afterLoad | preParse | postParse | preInfer | postInfer | typeAt | completion */](
     eventType: K,
     handler: /* import warning: importer.ImportType#apply Failed type conversion: tern.tern/lib/tern.Events[K] */ js.Any
   ): Unit = js.native
   /** Register an event handler for the named type of event. */
-  def on[K /* <: String */](
+  def on[K /* <: /* keyof tern.tern/lib/tern.Events */ reset | beforeLoad | afterLoad | preParse | postParse | preInfer | postInfer | typeAt | completion */](
     eventType: K,
     handler: /* import warning: importer.ImportType#apply Failed type conversion: tern.tern/lib/tern.Events[K] */ js.Any
   ): Unit = js.native
@@ -65,7 +74,10 @@ trait Server extends js.Object {
     ]
   ): Unit = js.native
   def reset(): Unit = js.native
-  def signal(event: String, file: File): Unit = js.native
+  def signal(
+    event: /* keyof tern.tern/lib/tern.Events */ reset | beforeLoad | afterLoad | preParse | postParse | preInfer | postInfer | typeAt | completion,
+    file: File
+  ): Unit = js.native
 }
 
 @JSImport("tern/lib/tern", "Server")

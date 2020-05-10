@@ -15,7 +15,7 @@ trait CreateFileSystemWindowsConfiguration extends js.Object {
     */
   var AutomaticBackupRetentionDays: js.UndefOr[typingsSlinky.awsSdk.fsxMod.AutomaticBackupRetentionDays] = js.native
   /**
-    * A boolean flag indicating whether tags for the file system should be copied to backups. This value defaults to false. If it's set to true, all tags for the file system are copied to all automatic and user-initiated backups where the user doesn't specify tags. If this value is true, and you specify one or more tags, only the specified tags are copied to backups.
+    * A boolean flag indicating whether tags for the file system should be copied to backups. This value defaults to false. If it's set to true, all tags for the file system are copied to all automatic and user-initiated backups where the user doesn't specify tags. If this value is true, and you specify one or more tags, only the specified tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system, regardless of this value.
     */
   var CopyTagsToBackups: js.UndefOr[Flag] = js.native
   /**
@@ -43,27 +43,119 @@ trait CreateFileSystemWindowsConfiguration extends js.Object {
 
 object CreateFileSystemWindowsConfiguration {
   @scala.inline
-  def apply(
-    ThroughputCapacity: MegabytesPerSecond,
-    ActiveDirectoryId: DirectoryId = null,
-    AutomaticBackupRetentionDays: Int | Double = null,
-    CopyTagsToBackups: js.UndefOr[Boolean] = js.undefined,
-    DailyAutomaticBackupStartTime: DailyTime = null,
-    DeploymentType: WindowsDeploymentType = null,
-    PreferredSubnetId: SubnetId = null,
-    SelfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfiguration = null,
-    WeeklyMaintenanceStartTime: WeeklyTime = null
-  ): CreateFileSystemWindowsConfiguration = {
+  def apply(ThroughputCapacity: MegabytesPerSecond): CreateFileSystemWindowsConfiguration = {
     val __obj = js.Dynamic.literal(ThroughputCapacity = ThroughputCapacity.asInstanceOf[js.Any])
-    if (ActiveDirectoryId != null) __obj.updateDynamic("ActiveDirectoryId")(ActiveDirectoryId.asInstanceOf[js.Any])
-    if (AutomaticBackupRetentionDays != null) __obj.updateDynamic("AutomaticBackupRetentionDays")(AutomaticBackupRetentionDays.asInstanceOf[js.Any])
-    if (!js.isUndefined(CopyTagsToBackups)) __obj.updateDynamic("CopyTagsToBackups")(CopyTagsToBackups.asInstanceOf[js.Any])
-    if (DailyAutomaticBackupStartTime != null) __obj.updateDynamic("DailyAutomaticBackupStartTime")(DailyAutomaticBackupStartTime.asInstanceOf[js.Any])
-    if (DeploymentType != null) __obj.updateDynamic("DeploymentType")(DeploymentType.asInstanceOf[js.Any])
-    if (PreferredSubnetId != null) __obj.updateDynamic("PreferredSubnetId")(PreferredSubnetId.asInstanceOf[js.Any])
-    if (SelfManagedActiveDirectoryConfiguration != null) __obj.updateDynamic("SelfManagedActiveDirectoryConfiguration")(SelfManagedActiveDirectoryConfiguration.asInstanceOf[js.Any])
-    if (WeeklyMaintenanceStartTime != null) __obj.updateDynamic("WeeklyMaintenanceStartTime")(WeeklyMaintenanceStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateFileSystemWindowsConfiguration]
   }
+  @scala.inline
+  implicit class CreateFileSystemWindowsConfigurationOps[Self <: CreateFileSystemWindowsConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThroughputCapacity(value: MegabytesPerSecond): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThroughputCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActiveDirectoryId(value: DirectoryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveDirectoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActiveDirectoryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveDirectoryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutomaticBackupRetentionDays(value: AutomaticBackupRetentionDays): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticBackupRetentionDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutomaticBackupRetentionDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticBackupRetentionDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyTagsToBackups(value: Flag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTagsToBackups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyTagsToBackups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyTagsToBackups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDailyAutomaticBackupStartTime(value: DailyTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DailyAutomaticBackupStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDailyAutomaticBackupStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DailyAutomaticBackupStartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeploymentType(value: WindowsDeploymentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreferredSubnetId(value: SubnetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredSubnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreferredSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreferredSubnetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfManagedActiveDirectoryConfiguration(value: SelfManagedActiveDirectoryConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelfManagedActiveDirectoryConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfManagedActiveDirectoryConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelfManagedActiveDirectoryConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeeklyMaintenanceStartTime(value: WeeklyTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeeklyMaintenanceStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

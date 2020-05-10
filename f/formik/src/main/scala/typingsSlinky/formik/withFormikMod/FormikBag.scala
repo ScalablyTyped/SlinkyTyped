@@ -24,12 +24,12 @@ trait FormikBag[P, V] extends js.Object {
   def resetForm(nextValues: V): Unit = js.native
   def setError(e: js.Any): Unit = js.native
   def setErrors(errors: FormikErrors[V]): Unit = js.native
-  def setFieldError(field: String, message: String): Unit = js.native
-  def setFieldTouched(field: String): Unit = js.native
-  def setFieldTouched(field: String, isTouched: Boolean): Unit = js.native
-  def setFieldTouched(field: String, isTouched: Boolean, shouldValidate: Boolean): Unit = js.native
-  def setFieldValue(field: String, value: js.Any): Unit = js.native
-  def setFieldValue(field: String, value: js.Any, shouldValidate: Boolean): Unit = js.native
+  def setFieldError(field: /* keyof V */ String, message: String): Unit = js.native
+  def setFieldTouched(field: /* keyof V */ String): Unit = js.native
+  def setFieldTouched(field: /* keyof V */ String, isTouched: Boolean): Unit = js.native
+  def setFieldTouched(field: /* keyof V */ String, isTouched: Boolean, shouldValidate: Boolean): Unit = js.native
+  def setFieldValue(field: /* keyof V */ String, value: js.Any): Unit = js.native
+  def setFieldValue(field: /* keyof V */ String, value: js.Any, shouldValidate: Boolean): Unit = js.native
   @JSName("setFormikState")
   def setFormikState_error(f: js.Function2[/* prevState */ FormikState[V], /* props */ js.Any, Pick[FormikState[V], error]]): Unit = js.native
   @JSName("setFormikState")

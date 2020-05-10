@@ -18,11 +18,41 @@ trait ListProtectionsResponse extends js.Object {
 
 object ListProtectionsResponse {
   @scala.inline
-  def apply(NextToken: Token = null, Protections: Protections = null): ListProtectionsResponse = {
+  def apply(): ListProtectionsResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (Protections != null) __obj.updateDynamic("Protections")(Protections.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListProtectionsResponse]
   }
+  @scala.inline
+  implicit class ListProtectionsResponseOps[Self <: ListProtectionsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: Token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProtections(value: Protections): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Protections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProtections: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Protections")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

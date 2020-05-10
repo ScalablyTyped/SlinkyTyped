@@ -22,7 +22,7 @@ trait IFileIOStatics extends js.Object {
   def readTextAsync(file: IStorageFile): IAsyncOperation[String] = js.native
   def readTextAsync(file: IStorageFile, encoding: UnicodeEncoding): IAsyncOperation[String] = js.native
   def writeBufferAsync(file: IStorageFile, buffer: IBuffer): IAsyncAction = js.native
-  def writeBytesAsync(file: IStorageFile, buffer: scala.scalajs.js.typedarray.Uint8Array): IAsyncAction = js.native
+  def writeBytesAsync(file: IStorageFile, buffer: js.typedarray.Uint8Array): IAsyncAction = js.native
   def writeLinesAsync(file: IStorageFile, lines: IIterable[String]): IAsyncAction = js.native
   def writeLinesAsync(file: IStorageFile, lines: IIterable[String], encoding: UnicodeEncoding): IAsyncAction = js.native
   def writeTextAsync(file: IStorageFile, contents: String): IAsyncAction = js.native

@@ -7,27 +7,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonConvert extends js.Object {
-  var convert: js.UndefOr[Boolean] = js.undefined
-  var destination: js.UndefOr[Cartesian3 | Rectangle] = js.undefined
-  var endTransform: js.UndefOr[Matrix4] = js.undefined
-  var orientation: js.UndefOr[AnonDirection | AnonHeading] = js.undefined
+  var convert: js.UndefOr[Boolean] = js.native
+  var destination: js.UndefOr[Cartesian3 | Rectangle] = js.native
+  var endTransform: js.UndefOr[Matrix4] = js.native
+  var orientation: js.UndefOr[AnonDirection | AnonHeading] = js.native
 }
 
 object AnonConvert {
   @scala.inline
-  def apply(
-    convert: js.UndefOr[Boolean] = js.undefined,
-    destination: Cartesian3 | Rectangle = null,
-    endTransform: Matrix4 = null,
-    orientation: AnonDirection | AnonHeading = null
-  ): AnonConvert = {
+  def apply(): AnonConvert = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(convert)) __obj.updateDynamic("convert")(convert.asInstanceOf[js.Any])
-    if (destination != null) __obj.updateDynamic("destination")(destination.asInstanceOf[js.Any])
-    if (endTransform != null) __obj.updateDynamic("endTransform")(endTransform.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonConvert]
   }
+  @scala.inline
+  implicit class AnonConvertOps[Self <: AnonConvert] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConvert(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestination(value: Cartesian3 | Rectangle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTransform(value: Matrix4): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTransform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTransform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: AnonDirection | AnonHeading): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

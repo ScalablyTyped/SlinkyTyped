@@ -30,18 +30,65 @@ trait SchemaGoogleCloudMlV1BuiltInAlgorithmOutput extends js.Object {
 
 object SchemaGoogleCloudMlV1BuiltInAlgorithmOutput {
   @scala.inline
-  def apply(
-    framework: String = null,
-    modelPath: String = null,
-    pythonVersion: String = null,
-    runtimeVersion: String = null
-  ): SchemaGoogleCloudMlV1BuiltInAlgorithmOutput = {
+  def apply(): SchemaGoogleCloudMlV1BuiltInAlgorithmOutput = {
     val __obj = js.Dynamic.literal()
-    if (framework != null) __obj.updateDynamic("framework")(framework.asInstanceOf[js.Any])
-    if (modelPath != null) __obj.updateDynamic("modelPath")(modelPath.asInstanceOf[js.Any])
-    if (pythonVersion != null) __obj.updateDynamic("pythonVersion")(pythonVersion.asInstanceOf[js.Any])
-    if (runtimeVersion != null) __obj.updateDynamic("runtimeVersion")(runtimeVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudMlV1BuiltInAlgorithmOutput]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudMlV1BuiltInAlgorithmOutputOps[Self <: SchemaGoogleCloudMlV1BuiltInAlgorithmOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFramework(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framework")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramework: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framework")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPythonVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pythonVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPythonVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pythonVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuntimeVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuntimeVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

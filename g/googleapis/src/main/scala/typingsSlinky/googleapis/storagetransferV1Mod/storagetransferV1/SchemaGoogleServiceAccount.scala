@@ -17,10 +17,29 @@ trait SchemaGoogleServiceAccount extends js.Object {
 
 object SchemaGoogleServiceAccount {
   @scala.inline
-  def apply(accountEmail: String = null): SchemaGoogleServiceAccount = {
+  def apply(): SchemaGoogleServiceAccount = {
     val __obj = js.Dynamic.literal()
-    if (accountEmail != null) __obj.updateDynamic("accountEmail")(accountEmail.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleServiceAccount]
   }
+  @scala.inline
+  implicit class SchemaGoogleServiceAccountOps[Self <: SchemaGoogleServiceAccount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountEmail")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

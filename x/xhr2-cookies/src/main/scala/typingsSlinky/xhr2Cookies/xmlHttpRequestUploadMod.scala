@@ -2,8 +2,6 @@ package typingsSlinky.xhr2Cookies
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.httpMod.ClientRequest
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.ArrayBufferView
 import typingsSlinky.xhr2Cookies.xmlHttpRequestEventTargetMod.XMLHttpRequestEventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,8 +19,8 @@ object xmlHttpRequestUploadMod extends js.Object {
     def _setData(): Unit = js.native
     def _setData(data: String): Unit = js.native
     def _setData(data: Buffer): Unit = js.native
-    def _setData(data: ArrayBuffer): Unit = js.native
-    def _setData(data: ArrayBufferView): Unit = js.native
+    def _setData(data: js.typedarray.ArrayBuffer): Unit = js.native
+    def _setData(data: js.typedarray.ArrayBufferView): Unit = js.native
     def _startUpload(request: ClientRequest): Unit = js.native
   }
   

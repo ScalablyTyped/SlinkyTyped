@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExtendedValue extends js.Object {
-  var boolValue: js.UndefOr[Boolean] = js.undefined
-  var errorValue: js.UndefOr[ErrorValue] = js.undefined
-  var formulaValue: js.UndefOr[String] = js.undefined
-  var numberValue: js.UndefOr[Double] = js.undefined
-  var stringValue: js.UndefOr[String] = js.undefined
+  var boolValue: js.UndefOr[Boolean] = js.native
+  var errorValue: js.UndefOr[ErrorValue] = js.native
+  var formulaValue: js.UndefOr[String] = js.native
+  var numberValue: js.UndefOr[Double] = js.native
+  var stringValue: js.UndefOr[String] = js.native
 }
 
 object ExtendedValue {
   @scala.inline
-  def apply(
-    boolValue: js.UndefOr[Boolean] = js.undefined,
-    errorValue: ErrorValue = null,
-    formulaValue: String = null,
-    numberValue: Int | Double = null,
-    stringValue: String = null
-  ): ExtendedValue = {
+  def apply(): ExtendedValue = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(boolValue)) __obj.updateDynamic("boolValue")(boolValue.asInstanceOf[js.Any])
-    if (errorValue != null) __obj.updateDynamic("errorValue")(errorValue.asInstanceOf[js.Any])
-    if (formulaValue != null) __obj.updateDynamic("formulaValue")(formulaValue.asInstanceOf[js.Any])
-    if (numberValue != null) __obj.updateDynamic("numberValue")(numberValue.asInstanceOf[js.Any])
-    if (stringValue != null) __obj.updateDynamic("stringValue")(stringValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtendedValue]
   }
+  @scala.inline
+  implicit class ExtendedValueOps[Self <: ExtendedValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBoolValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boolValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoolValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boolValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorValue(value: ErrorValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormulaValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormulaValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formulaValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

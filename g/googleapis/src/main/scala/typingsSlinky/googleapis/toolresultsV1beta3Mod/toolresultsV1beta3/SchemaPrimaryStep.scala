@@ -23,11 +23,41 @@ trait SchemaPrimaryStep extends js.Object {
 
 object SchemaPrimaryStep {
   @scala.inline
-  def apply(individualOutcome: js.Array[SchemaIndividualOutcome] = null, rollUp: String = null): SchemaPrimaryStep = {
+  def apply(): SchemaPrimaryStep = {
     val __obj = js.Dynamic.literal()
-    if (individualOutcome != null) __obj.updateDynamic("individualOutcome")(individualOutcome.asInstanceOf[js.Any])
-    if (rollUp != null) __obj.updateDynamic("rollUp")(rollUp.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPrimaryStep]
   }
+  @scala.inline
+  implicit class SchemaPrimaryStepOps[Self <: SchemaPrimaryStep] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndividualOutcome(value: js.Array[SchemaIndividualOutcome]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("individualOutcome")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndividualOutcome: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("individualOutcome")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRollUp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rollUp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRollUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rollUp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

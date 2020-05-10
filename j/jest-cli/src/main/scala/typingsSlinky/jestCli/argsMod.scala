@@ -1,7 +1,5 @@
 package typingsSlinky.jestCli
 
-import typingsSlinky.jestCli.jestCliStrings.`DocumentationColon httpsColonSlashSlashjestjsDotioSlash`
-import typingsSlinky.jestCli.jestCliStrings.`UsageColon $0 [--configEqualssignLessthansignpathToConfigFileGreaterthansign] [TestPathPattern]`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +7,8 @@ import scala.scalajs.js.annotation._
 @JSImport("jest-cli/build/cli/args", JSImport.Namespace)
 @js.native
 object argsMod extends js.Object {
-  val docs: `DocumentationColon httpsColonSlashSlashjestjsDotioSlash` = js.native
-  val usage: `UsageColon $0 [--configEqualssignLessthansignpathToConfigFileGreaterthansign] [TestPathPattern]` = js.native
+  val docs: /* "Documentation: https://jestjs.io/" */ String = js.native
+  val usage: /* "Usage: $0 [--config=<pathToConfigFile>] [TestPathPattern]" */ String = js.native
   def check(argv: ArgumentsPartialallboolea): Boolean = js.native
   @js.native
   object options extends js.Object {

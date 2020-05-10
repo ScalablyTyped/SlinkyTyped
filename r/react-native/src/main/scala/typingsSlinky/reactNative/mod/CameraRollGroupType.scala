@@ -17,20 +17,18 @@ trait CameraRollGroupType extends js.Object
 
 object CameraRollGroupType {
   @scala.inline
-  def Album: typingsSlinky.reactNative.reactNativeStrings.Album = this.cast("Album")
+  def Album: typingsSlinky.reactNative.reactNativeStrings.Album = "Album".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.Album]
   @scala.inline
-  def All: typingsSlinky.reactNative.reactNativeStrings.All = this.cast("All")
+  def All: typingsSlinky.reactNative.reactNativeStrings.All = "All".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.All]
   @scala.inline
-  def Event: typingsSlinky.reactNative.reactNativeStrings.Event = this.cast("Event")
+  def Event: typingsSlinky.reactNative.reactNativeStrings.Event = "Event".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.Event]
   @scala.inline
-  def Faces: typingsSlinky.reactNative.reactNativeStrings.Faces = this.cast("Faces")
+  def Faces: typingsSlinky.reactNative.reactNativeStrings.Faces = "Faces".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.Faces]
   @scala.inline
-  def Library: typingsSlinky.reactNative.reactNativeStrings.Library = this.cast("Library")
+  def Library: typingsSlinky.reactNative.reactNativeStrings.Library = "Library".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.Library]
   @scala.inline
-  def PhotoStream: typingsSlinky.reactNative.reactNativeStrings.PhotoStream = this.cast("PhotoStream")
+  def PhotoStream: typingsSlinky.reactNative.reactNativeStrings.PhotoStream = "PhotoStream".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.PhotoStream]
   @scala.inline
-  def SavedPhotos: typingsSlinky.reactNative.reactNativeStrings.SavedPhotos = this.cast("SavedPhotos")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SavedPhotos: typingsSlinky.reactNative.reactNativeStrings.SavedPhotos = "SavedPhotos".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.SavedPhotos]
 }
 

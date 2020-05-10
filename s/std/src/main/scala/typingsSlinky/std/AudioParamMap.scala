@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AudioParamMap
-  extends ReadonlyMap[java.lang.String, AudioParam]
+  extends ReadonlyMap[java.lang.String, org.scalajs.dom.raw.AudioParam]
 
 @JSGlobal("AudioParamMap")
 @js.native

@@ -6,30 +6,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonNoteStoreUrl extends js.Object {
-  var noteStoreUrl: js.UndefOr[String] = js.undefined
-  var serviceLevel: js.UndefOr[ServiceLevel] = js.undefined
-  var userId: js.UndefOr[UserID] = js.undefined
-  var username: js.UndefOr[String] = js.undefined
-  var webApiUrlPrefix: js.UndefOr[String] = js.undefined
+  var noteStoreUrl: js.UndefOr[String] = js.native
+  var serviceLevel: js.UndefOr[ServiceLevel] = js.native
+  var userId: js.UndefOr[UserID] = js.native
+  var username: js.UndefOr[String] = js.native
+  var webApiUrlPrefix: js.UndefOr[String] = js.native
 }
 
 object AnonNoteStoreUrl {
   @scala.inline
-  def apply(
-    noteStoreUrl: String = null,
-    serviceLevel: ServiceLevel = null,
-    userId: Int | Double = null,
-    username: String = null,
-    webApiUrlPrefix: String = null
-  ): AnonNoteStoreUrl = {
+  def apply(): AnonNoteStoreUrl = {
     val __obj = js.Dynamic.literal()
-    if (noteStoreUrl != null) __obj.updateDynamic("noteStoreUrl")(noteStoreUrl.asInstanceOf[js.Any])
-    if (serviceLevel != null) __obj.updateDynamic("serviceLevel")(serviceLevel.asInstanceOf[js.Any])
-    if (userId != null) __obj.updateDynamic("userId")(userId.asInstanceOf[js.Any])
-    if (username != null) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
-    if (webApiUrlPrefix != null) __obj.updateDynamic("webApiUrlPrefix")(webApiUrlPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonNoteStoreUrl]
   }
+  @scala.inline
+  implicit class AnonNoteStoreUrlOps[Self <: AnonNoteStoreUrl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNoteStoreUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noteStoreUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoteStoreUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noteStoreUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceLevel(value: ServiceLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserId(value: UserID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebApiUrlPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webApiUrlPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebApiUrlPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webApiUrlPrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

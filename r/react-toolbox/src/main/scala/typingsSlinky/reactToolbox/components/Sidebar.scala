@@ -1,10 +1,7 @@
 package typingsSlinky.reactToolbox.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactToolbox.layoutSidebarMod.SidebarProps
 import typingsSlinky.reactToolbox.layoutSidebarMod.SidebarTheme
 import typingsSlinky.reactToolbox.reactToolboxStrings.left
@@ -21,41 +18,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Sidebar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactToolbox.mod.Sidebar] {
+object Sidebar {
   @JSImport("react-toolbox", "Sidebar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    active: js.UndefOr[Boolean] = js.undefined,
-    clipped: js.UndefOr[Boolean] = js.undefined,
-    insideTree: js.UndefOr[Boolean] = js.undefined,
-    onOverlayClick: js.Function = null,
-    permanentAt: sm | smTablet | md | lg | lgTablet | xl | xxl | xxxl = null,
-    pinned: js.UndefOr[Boolean] = js.undefined,
-    theme: SidebarTheme = null,
-    `type`: left | right = null,
-    width: Int | Double = null,
-    withOverlay: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactToolbox.mod.Sidebar] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (!js.isUndefined(clipped)) __obj.updateDynamic("clipped")(clipped.asInstanceOf[js.Any])
-    if (!js.isUndefined(insideTree)) __obj.updateDynamic("insideTree")(insideTree.asInstanceOf[js.Any])
-    if (onOverlayClick != null) __obj.updateDynamic("onOverlayClick")(onOverlayClick.asInstanceOf[js.Any])
-    if (permanentAt != null) __obj.updateDynamic("permanentAt")(permanentAt.asInstanceOf[js.Any])
-    if (!js.isUndefined(pinned)) __obj.updateDynamic("pinned")(pinned.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (!js.isUndefined(withOverlay)) __obj.updateDynamic("withOverlay")(withOverlay.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactToolbox.mod.Sidebar] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clipped(value: Boolean): this.type = set("clipped", value.asInstanceOf[js.Any])
+    @scala.inline
+    def insideTree(value: Boolean): this.type = set("insideTree", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onOverlayClick(value: js.Function): this.type = set("onOverlayClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def permanentAt(value: sm | smTablet | md | lg | lgTablet | xl | xxl | xxxl): this.type = set("permanentAt", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pinned(value: Boolean): this.type = set("pinned", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: SidebarTheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: left | right): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def withOverlay(value: Boolean): this.type = set("withOverlay", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactToolbox.mod.Sidebar] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactToolbox.mod.Sidebar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SidebarProps
+  
+  def withProps(p: SidebarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Sidebar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -21,28 +21,26 @@ trait TextTransformProperty extends js.Object
 
 object TextTransformProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  def capitalize: typingsSlinky.csstype.csstypeStrings.capitalize = this.cast("capitalize")
+  def capitalize: typingsSlinky.csstype.csstypeStrings.capitalize = "capitalize".asInstanceOf[typingsSlinky.csstype.csstypeStrings.capitalize]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `full-size-kana`: typingsSlinky.csstype.csstypeStrings.`full-size-kana` = "full-size-kana".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`full-size-kana`]
   @scala.inline
-  def `full-size-kana`: typingsSlinky.csstype.csstypeStrings.`full-size-kana` = this.cast("full-size-kana")
+  def `full-width`: typingsSlinky.csstype.csstypeStrings.`full-width` = "full-width".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`full-width`]
   @scala.inline
-  def `full-width`: typingsSlinky.csstype.csstypeStrings.`full-width` = this.cast("full-width")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def lowercase: typingsSlinky.csstype.csstypeStrings.lowercase = "lowercase".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lowercase]
   @scala.inline
-  def lowercase: typingsSlinky.csstype.csstypeStrings.lowercase = this.cast("lowercase")
+  def none: typingsSlinky.csstype.csstypeStrings.none = "none".asInstanceOf[typingsSlinky.csstype.csstypeStrings.none]
   @scala.inline
-  def none: typingsSlinky.csstype.csstypeStrings.none = this.cast("none")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
   @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
-  @scala.inline
-  def uppercase: typingsSlinky.csstype.csstypeStrings.uppercase = this.cast("uppercase")
+  def uppercase: typingsSlinky.csstype.csstypeStrings.uppercase = "uppercase".asInstanceOf[typingsSlinky.csstype.csstypeStrings.uppercase]
 }
 

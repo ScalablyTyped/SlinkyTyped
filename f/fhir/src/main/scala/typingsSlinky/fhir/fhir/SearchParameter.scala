@@ -7,184 +7,185 @@ import scala.scalajs.js.annotation._
 /**
   * Search Parameter for a resource
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait SearchParameter extends DomainResource {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
+trait SearchParameter extends DomainResource {
   /**
     * Contains extended information for property 'base'.
     */
-  var _base: js.UndefOr[js.Array[Element]] = js.undefined
+  var _base: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'chain'.
     */
-  var _chain: js.UndefOr[js.Array[Element]] = js.undefined
+  var _chain: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'code'.
     */
-  var _code: js.UndefOr[Element] = js.undefined
+  var _code: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'comparator'.
     */
-  var _comparator: js.UndefOr[js.Array[Element]] = js.undefined
+  var _comparator: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'date'.
     */
-  var _date: js.UndefOr[Element] = js.undefined
+  var _date: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'derivedFrom'.
     */
-  var _derivedFrom: js.UndefOr[Element] = js.undefined
+  var _derivedFrom: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.undefined
+  var _description: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'experimental'.
     */
-  var _experimental: js.UndefOr[Element] = js.undefined
+  var _experimental: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'expression'.
     */
-  var _expression: js.UndefOr[Element] = js.undefined
+  var _expression: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'modifier'.
     */
-  var _modifier: js.UndefOr[js.Array[Element]] = js.undefined
+  var _modifier: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.undefined
+  var _name: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'publisher'.
     */
-  var _publisher: js.UndefOr[Element] = js.undefined
+  var _publisher: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'purpose'.
     */
-  var _purpose: js.UndefOr[Element] = js.undefined
+  var _purpose: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.undefined
+  var _status: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'target'.
     */
-  var _target: js.UndefOr[js.Array[Element]] = js.undefined
+  var _target: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'type'.
     */
-  var _type: js.UndefOr[Element] = js.undefined
+  var _type: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'url'.
     */
-  var _url: js.UndefOr[Element] = js.undefined
+  var _url: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'version'.
     */
-  var _version: js.UndefOr[Element] = js.undefined
+  var _version: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'xpath'.
     */
-  var _xpath: js.UndefOr[Element] = js.undefined
+  var _xpath: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'xpathUsage'.
     */
-  var _xpathUsage: js.UndefOr[Element] = js.undefined
+  var _xpathUsage: js.UndefOr[Element] = js.native
   /**
     * The resource type(s) this search parameter applies to
     */
-  var base: js.Array[code]
+  var base: js.Array[code] = js.native
   /**
     * Chained names supported
     */
-  var chain: js.UndefOr[js.Array[String]] = js.undefined
+  var chain: js.UndefOr[js.Array[String]] = js.native
   /**
     * Code used in URL
     */
-  var code: typingsSlinky.fhir.fhir.code
+  var code: typingsSlinky.fhir.fhir.code = js.native
   /**
     * eq | ne | gt | lt | ge | le | sa | eb | ap
     */
-  var comparator: js.UndefOr[js.Array[code]] = js.undefined
+  var comparator: js.UndefOr[js.Array[code]] = js.native
   /**
     * For Composite resources to define the parts
     */
-  var component: js.UndefOr[js.Array[SearchParameterComponent]] = js.undefined
+  var component: js.UndefOr[js.Array[SearchParameterComponent]] = js.native
   /**
     * Contact details for the publisher
     */
-  var contact: js.UndefOr[js.Array[ContactDetail]] = js.undefined
+  var contact: js.UndefOr[js.Array[ContactDetail]] = js.native
   /**
     * Date this was last changed
     */
-  var date: js.UndefOr[dateTime] = js.undefined
+  var date: js.UndefOr[dateTime] = js.native
   /**
     * Original Definition for the search parameter
     */
-  var derivedFrom: js.UndefOr[uri] = js.undefined
+  var derivedFrom: js.UndefOr[uri] = js.native
   /**
     * Natural language description of the search parameter
     */
-  var description: markdown
+  var description: markdown = js.native
   /**
     * For testing purposes, not real usage
     */
-  var experimental: js.UndefOr[Boolean] = js.undefined
+  var experimental: js.UndefOr[Boolean] = js.native
   /**
     * FHIRPath expression that extracts the values
     */
-  var expression: js.UndefOr[String] = js.undefined
+  var expression: js.UndefOr[String] = js.native
   /**
     * Intended jurisdiction for search parameter (if applicable)
     */
-  var jurisdiction: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
+  var jurisdiction: js.UndefOr[js.Array[CodeableConcept]] = js.native
   /**
     * missing | exact | contains | not | text | in | not-in | below | above | type
     */
-  var modifier: js.UndefOr[js.Array[code]] = js.undefined
+  var modifier: js.UndefOr[js.Array[code]] = js.native
   /**
     * Name for this search parameter (computer friendly)
     */
-  var name: String
+  var name: String = js.native
   /**
     * Name of the publisher (organization or individual)
     */
-  var publisher: js.UndefOr[String] = js.undefined
+  var publisher: js.UndefOr[String] = js.native
   /**
     * Why this search parameter is defined
     */
-  var purpose: js.UndefOr[markdown] = js.undefined
+  var purpose: js.UndefOr[markdown] = js.native
   /**
     * draft | active | retired | unknown
     */
-  var status: code
+  var status: code = js.native
   /**
     * Types of resource (if a resource reference)
     */
-  var target: js.UndefOr[js.Array[code]] = js.undefined
+  var target: js.UndefOr[js.Array[code]] = js.native
   /**
     * number | date | string | token | reference | composite | quantity | uri
     */
-  var `type`: code
+  var `type`: code = js.native
   /**
     * Logical URI to reference this search parameter (globally unique)
     */
-  var url: uri
+  var url: uri = js.native
   /**
     * Context the content is intended to support
     */
-  var useContext: js.UndefOr[js.Array[UsageContext]] = js.undefined
+  var useContext: js.UndefOr[js.Array[UsageContext]] = js.native
   /**
     * Business version of the search parameter
     */
-  var version: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.native
   /**
     * XPath that extracts the values
     */
-  var xpath: js.UndefOr[String] = js.undefined
+  var xpath: js.UndefOr[String] = js.native
   /**
     * normal | phonetic | nearby | distance | other
     */
-  var xpathUsage: js.UndefOr[code] = js.undefined
+  var xpathUsage: js.UndefOr[code] = js.native
 }
 
 object SearchParameter {
@@ -196,111 +197,505 @@ object SearchParameter {
     name: String,
     status: code,
     `type`: code,
-    url: uri,
-    _base: js.Array[Element] = null,
-    _chain: js.Array[Element] = null,
-    _code: Element = null,
-    _comparator: js.Array[Element] = null,
-    _date: Element = null,
-    _derivedFrom: Element = null,
-    _description: Element = null,
-    _experimental: Element = null,
-    _expression: Element = null,
-    _id: Element = null,
-    _implicitRules: Element = null,
-    _language: Element = null,
-    _modifier: js.Array[Element] = null,
-    _name: Element = null,
-    _publisher: Element = null,
-    _purpose: Element = null,
-    _resourceType: Element = null,
-    _status: Element = null,
-    _target: js.Array[Element] = null,
-    _type: Element = null,
-    _url: Element = null,
-    _version: Element = null,
-    _xpath: Element = null,
-    _xpathUsage: Element = null,
-    chain: js.Array[String] = null,
-    comparator: js.Array[code] = null,
-    component: js.Array[SearchParameterComponent] = null,
-    contact: js.Array[ContactDetail] = null,
-    contained: js.Array[Resource] = null,
-    date: dateTime = null,
-    derivedFrom: uri = null,
-    experimental: js.UndefOr[Boolean] = js.undefined,
-    expression: String = null,
-    extension: js.Array[Extension] = null,
-    id: id = null,
-    implicitRules: uri = null,
-    jurisdiction: js.Array[CodeableConcept] = null,
-    language: code = null,
-    meta: Meta = null,
-    modifier: js.Array[code] = null,
-    modifierExtension: js.Array[Extension] = null,
-    publisher: String = null,
-    purpose: markdown = null,
-    resourceType: code = null,
-    target: js.Array[code] = null,
-    text: Narrative = null,
-    useContext: js.Array[UsageContext] = null,
-    version: String = null,
-    xpath: String = null,
-    xpathUsage: code = null
+    url: uri
   ): SearchParameter = {
     val __obj = js.Dynamic.literal(base = base.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_base != null) __obj.updateDynamic("_base")(_base.asInstanceOf[js.Any])
-    if (_chain != null) __obj.updateDynamic("_chain")(_chain.asInstanceOf[js.Any])
-    if (_code != null) __obj.updateDynamic("_code")(_code.asInstanceOf[js.Any])
-    if (_comparator != null) __obj.updateDynamic("_comparator")(_comparator.asInstanceOf[js.Any])
-    if (_date != null) __obj.updateDynamic("_date")(_date.asInstanceOf[js.Any])
-    if (_derivedFrom != null) __obj.updateDynamic("_derivedFrom")(_derivedFrom.asInstanceOf[js.Any])
-    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
-    if (_experimental != null) __obj.updateDynamic("_experimental")(_experimental.asInstanceOf[js.Any])
-    if (_expression != null) __obj.updateDynamic("_expression")(_expression.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
-    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
-    if (_modifier != null) __obj.updateDynamic("_modifier")(_modifier.asInstanceOf[js.Any])
-    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
-    if (_publisher != null) __obj.updateDynamic("_publisher")(_publisher.asInstanceOf[js.Any])
-    if (_purpose != null) __obj.updateDynamic("_purpose")(_purpose.asInstanceOf[js.Any])
-    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
-    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
-    if (_target != null) __obj.updateDynamic("_target")(_target.asInstanceOf[js.Any])
-    if (_type != null) __obj.updateDynamic("_type")(_type.asInstanceOf[js.Any])
-    if (_url != null) __obj.updateDynamic("_url")(_url.asInstanceOf[js.Any])
-    if (_version != null) __obj.updateDynamic("_version")(_version.asInstanceOf[js.Any])
-    if (_xpath != null) __obj.updateDynamic("_xpath")(_xpath.asInstanceOf[js.Any])
-    if (_xpathUsage != null) __obj.updateDynamic("_xpathUsage")(_xpathUsage.asInstanceOf[js.Any])
-    if (chain != null) __obj.updateDynamic("chain")(chain.asInstanceOf[js.Any])
-    if (comparator != null) __obj.updateDynamic("comparator")(comparator.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (contact != null) __obj.updateDynamic("contact")(contact.asInstanceOf[js.Any])
-    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (derivedFrom != null) __obj.updateDynamic("derivedFrom")(derivedFrom.asInstanceOf[js.Any])
-    if (!js.isUndefined(experimental)) __obj.updateDynamic("experimental")(experimental.asInstanceOf[js.Any])
-    if (expression != null) __obj.updateDynamic("expression")(expression.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
-    if (jurisdiction != null) __obj.updateDynamic("jurisdiction")(jurisdiction.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (modifier != null) __obj.updateDynamic("modifier")(modifier.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (publisher != null) __obj.updateDynamic("publisher")(publisher.asInstanceOf[js.Any])
-    if (purpose != null) __obj.updateDynamic("purpose")(purpose.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (useContext != null) __obj.updateDynamic("useContext")(useContext.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
-    if (xpath != null) __obj.updateDynamic("xpath")(xpath.asInstanceOf[js.Any])
-    if (xpathUsage != null) __obj.updateDynamic("xpathUsage")(xpathUsage.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchParameter]
   }
+  @scala.inline
+  implicit class SearchParameterOps[Self <: SearchParameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBase(value: js.Array[code]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCode(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_base(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_base: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_base")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_chain(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_chain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_chain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_chain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_code(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_code: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_comparator(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_comparator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_comparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_comparator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_date(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_date: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_derivedFrom(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_derivedFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_derivedFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_derivedFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_description(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_description: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_experimental(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_experimental")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_experimental: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_experimental")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_expression(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_expression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_expression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_expression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_modifier(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_modifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_modifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_modifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_name(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_publisher(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_publisher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_publisher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_publisher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_purpose(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_purpose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_purpose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_purpose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_status(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_status: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_target(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_target: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_type(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_type: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_url(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_version(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_version: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_xpath(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_xpath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_xpath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_xpath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_xpathUsage(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_xpathUsage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_xpathUsage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_xpathUsage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChain(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComparator(value: js.Array[code]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComparator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comparator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponent(value: js.Array[SearchParameterComponent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContact(value: js.Array[ContactDetail]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDate(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDerivedFrom(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("derivedFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDerivedFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("derivedFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExperimental(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExperimental: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpression(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJurisdiction(value: js.Array[CodeableConcept]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jurisdiction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJurisdiction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jurisdiction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModifier(value: js.Array[code]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublisher(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublisher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPurpose(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPurpose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: js.Array[code]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseContext(value: js.Array[UsageContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXpath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xpath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXpath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xpath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXpathUsage(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xpathUsage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXpathUsage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xpathUsage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

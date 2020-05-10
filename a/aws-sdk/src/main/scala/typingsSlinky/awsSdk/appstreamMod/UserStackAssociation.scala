@@ -26,15 +26,47 @@ trait UserStackAssociation extends js.Object {
 
 object UserStackAssociation {
   @scala.inline
-  def apply(
-    AuthenticationType: AuthenticationType,
-    StackName: String,
-    UserName: Username,
-    SendEmailNotification: js.UndefOr[scala.Boolean] = js.undefined
-  ): UserStackAssociation = {
+  def apply(AuthenticationType: AuthenticationType, StackName: String, UserName: Username): UserStackAssociation = {
     val __obj = js.Dynamic.literal(AuthenticationType = AuthenticationType.asInstanceOf[js.Any], StackName = StackName.asInstanceOf[js.Any], UserName = UserName.asInstanceOf[js.Any])
-    if (!js.isUndefined(SendEmailNotification)) __obj.updateDynamic("SendEmailNotification")(SendEmailNotification.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserStackAssociation]
   }
+  @scala.inline
+  implicit class UserStackAssociationOps[Self <: UserStackAssociation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticationType(value: AuthenticationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserName(value: Username): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSendEmailNotification(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SendEmailNotification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendEmailNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SendEmailNotification")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

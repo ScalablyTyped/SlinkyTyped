@@ -1,6 +1,5 @@
 package typingsSlinky.wordpressRichText.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,10 +13,10 @@ object replace extends js.Object {
     pattern: String,
     replacement: js.Function2[/* match */ String, /* repeated */ js.Any, String]
   ): Value = js.native
-  def apply(value: Value, pattern: RegExp, replacement: String): Value = js.native
+  def apply(value: Value, pattern: js.RegExp, replacement: String): Value = js.native
   def apply(
     value: Value,
-    pattern: RegExp,
+    pattern: js.RegExp,
     replacement: js.Function2[/* match */ String, /* repeated */ js.Any, String]
   ): Value = js.native
 }

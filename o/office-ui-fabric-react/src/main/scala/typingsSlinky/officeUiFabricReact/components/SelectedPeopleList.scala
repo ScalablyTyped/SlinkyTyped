@@ -1,15 +1,16 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import typingsSlinky.officeUiFabricReact.selectedPeopleListMod.ISelectedPeopleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SelectedPeopleList
-  extends SharedApply_ISelectedPeopleProps1779138841[typingsSlinky.officeUiFabricReact.mod.SelectedPeopleList] {
+object SelectedPeopleList {
   @JSImport("office-ui-fabric-react", "SelectedPeopleList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ISelectedPeopleProps): SharedBuilder_ISelectedPeopleProps528717756[typingsSlinky.officeUiFabricReact.mod.SelectedPeopleList] = new SharedBuilder_ISelectedPeopleProps528717756[typingsSlinky.officeUiFabricReact.mod.SelectedPeopleList](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SelectedPeopleList.type): SharedBuilder_ISelectedPeopleProps528717756[typingsSlinky.officeUiFabricReact.mod.SelectedPeopleList] = new SharedBuilder_ISelectedPeopleProps528717756[typingsSlinky.officeUiFabricReact.mod.SelectedPeopleList](js.Array(this.component, js.Dictionary.empty))()
 }
 

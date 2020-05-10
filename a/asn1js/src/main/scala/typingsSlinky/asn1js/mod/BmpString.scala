@@ -15,7 +15,7 @@ class BmpString () extends BaseBlock[LocalBmpStringValueBlock] {
     * 
     * @memberOf BmpString
     */
-  def fromBuffer(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer): Unit = js.native
+  def fromBuffer(inputBuffer: js.typedarray.ArrayBuffer): Unit = js.native
   /**
     * Function converting JavaScript string into ASN.1 internal class
     * 

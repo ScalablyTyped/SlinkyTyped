@@ -1,7 +1,6 @@
 package typingsSlinky.pgPromise.pgSubsetMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +25,7 @@ trait IClient extends EventEmitter {
   var ssl: Boolean | ISSLConfig = js.native
   var user: String = js.native
   def query(config: js.Any): js.Promise[IResult] = js.native
-  def query(config: js.Any, callback: js.Function2[/* err */ Error, /* result */ IResult, Unit]): js.UndefOr[scala.Nothing] = js.native
+  def query(config: js.Any, callback: js.Function2[/* err */ js.Error, /* result */ IResult, Unit]): js.UndefOr[scala.Nothing] = js.native
   def query(config: js.Any, values: js.Array[_]): js.Promise[IResult] = js.native
   def query(
     config: js.Any,

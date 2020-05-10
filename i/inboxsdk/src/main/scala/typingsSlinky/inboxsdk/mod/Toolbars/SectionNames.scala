@@ -13,12 +13,10 @@ trait SectionNames extends js.Object
 
 object SectionNames {
   @scala.inline
-  def INBOX_STATE: typingsSlinky.inboxsdk.inboxsdkStrings.INBOX_STATE = this.cast("INBOX_STATE")
+  def INBOX_STATE: typingsSlinky.inboxsdk.inboxsdkStrings.INBOX_STATE = "INBOX_STATE".asInstanceOf[typingsSlinky.inboxsdk.inboxsdkStrings.INBOX_STATE]
   @scala.inline
-  def METADATA_STATE: typingsSlinky.inboxsdk.inboxsdkStrings.METADATA_STATE = this.cast("METADATA_STATE")
+  def METADATA_STATE: typingsSlinky.inboxsdk.inboxsdkStrings.METADATA_STATE = "METADATA_STATE".asInstanceOf[typingsSlinky.inboxsdk.inboxsdkStrings.METADATA_STATE]
   @scala.inline
-  def OTHER: typingsSlinky.inboxsdk.inboxsdkStrings.OTHER = this.cast("OTHER")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OTHER: typingsSlinky.inboxsdk.inboxsdkStrings.OTHER = "OTHER".asInstanceOf[typingsSlinky.inboxsdk.inboxsdkStrings.OTHER]
 }
 

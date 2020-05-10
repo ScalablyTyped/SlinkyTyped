@@ -4,7 +4,6 @@ import typingsSlinky.rrule.PartialIterArgs
 import typingsSlinky.rrule.iterresultMod.IterArgs
 import typingsSlinky.rrule.rruleBooleans.`false`
 import typingsSlinky.rrule.rruleStrings.all
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,23 +21,23 @@ class Cache () extends js.Object {
     * @param {Array,Date} value - an array of dates, one date, or null
     * @param {Object?} args - _iter arguments
     */
-  def _cacheAdd(what: CacheKeys, value: js.Array[Date]): Unit = js.native
-  def _cacheAdd(what: CacheKeys, value: js.Array[Date], args: PartialIterArgs): Unit = js.native
+  def _cacheAdd(what: CacheKeys, value: js.Array[js.Date]): Unit = js.native
+  def _cacheAdd(what: CacheKeys, value: js.Array[js.Date], args: PartialIterArgs): Unit = js.native
   def _cacheAdd(what: CacheKeys, value: Null, args: PartialIterArgs): Unit = js.native
-  def _cacheAdd(what: CacheKeys, value: Date): Unit = js.native
-  def _cacheAdd(what: CacheKeys, value: Date, args: PartialIterArgs): Unit = js.native
+  def _cacheAdd(what: CacheKeys, value: js.Date): Unit = js.native
+  def _cacheAdd(what: CacheKeys, value: js.Date, args: PartialIterArgs): Unit = js.native
   @JSName("_cacheAdd")
   def _cacheAdd_all(what: all): Unit = js.native
   @JSName("_cacheAdd")
-  def _cacheAdd_all(what: all, value: js.Array[Date]): Unit = js.native
+  def _cacheAdd_all(what: all, value: js.Array[js.Date]): Unit = js.native
   @JSName("_cacheAdd")
-  def _cacheAdd_all(what: all, value: js.Array[Date], args: PartialIterArgs): Unit = js.native
+  def _cacheAdd_all(what: all, value: js.Array[js.Date], args: PartialIterArgs): Unit = js.native
   @JSName("_cacheAdd")
   def _cacheAdd_all(what: all, value: Null, args: PartialIterArgs): Unit = js.native
   @JSName("_cacheAdd")
-  def _cacheAdd_all(what: all, value: Date): Unit = js.native
+  def _cacheAdd_all(what: all, value: js.Date): Unit = js.native
   @JSName("_cacheAdd")
-  def _cacheAdd_all(what: all, value: Date, args: PartialIterArgs): Unit = js.native
+  def _cacheAdd_all(what: all, value: js.Date, args: PartialIterArgs): Unit = js.native
   /**
     * @return false - not in the cache
     *         null  - cached, but zero occurrences (before/after)

@@ -5,7 +5,6 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.bnJs.mod.^
 import typingsSlinky.node.netMod.Socket
-import typingsSlinky.std.Error
 import typingsSlinky.web3Core.mod.BlockNumber
 import typingsSlinky.web3Core.mod.Common
 import typingsSlinky.web3Core.mod.Extension
@@ -71,7 +70,7 @@ class Eth () extends js.Object {
   def call(transactionConfig: TransactionConfig): js.Promise[String | RevertInstructionError] = js.native
   def call(
     transactionConfig: TransactionConfig,
-    callback: js.Function2[/* error */ Error, /* data */ String, Unit]
+    callback: js.Function2[/* error */ js.Error, /* data */ String, Unit]
   ): js.Promise[String | RevertInstructionError] = js.native
   def call(transactionConfig: TransactionConfig, defaultBlock: BlockNumber): js.Promise[String | RevertInstructionError] = js.native
   def call(
@@ -89,7 +88,7 @@ class Eth () extends js.Object {
   def getAccounts(): js.Promise[js.Array[String]] = js.native
   def getAccounts(callback: js.Function2[/* error */ js.Error, /* accounts */ js.Array[String], Unit]): js.Promise[js.Array[String]] = js.native
   def getBalance(address: String): js.Promise[String] = js.native
-  def getBalance(address: String, callback: js.Function2[/* error */ Error, /* balance */ String, Unit]): js.Promise[String] = js.native
+  def getBalance(address: String, callback: js.Function2[/* error */ js.Error, /* balance */ String, Unit]): js.Promise[String] = js.native
   def getBalance(address: String, defaultBlock: BlockNumber): js.Promise[String] = js.native
   def getBalance(
     address: String,
@@ -147,7 +146,7 @@ class Eth () extends js.Object {
   def getChainId(): js.Promise[Double] = js.native
   def getChainId(callback: js.Function2[/* error */ js.Error, /* version */ Double, Unit]): js.Promise[Double] = js.native
   def getCode(address: String): js.Promise[String] = js.native
-  def getCode(address: String, callback: js.Function2[/* error */ Error, /* code */ String, Unit]): js.Promise[String] = js.native
+  def getCode(address: String, callback: js.Function2[/* error */ js.Error, /* code */ String, Unit]): js.Promise[String] = js.native
   def getCode(address: String, defaultBlock: BlockNumber): js.Promise[String] = js.native
   def getCode(
     address: String,
@@ -190,7 +189,7 @@ class Eth () extends js.Object {
   def getStorageAt(
     address: String,
     position: String,
-    callback: js.Function2[/* error */ Error, /* storageAt */ String, Unit]
+    callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
   ): js.Promise[String] = js.native
   def getStorageAt(address: String, position: String, defaultBlock: BlockNumber): js.Promise[String] = js.native
   def getStorageAt(
@@ -206,7 +205,7 @@ class Eth () extends js.Object {
   def getStorageAt(
     address: String,
     position: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BigNumber */ js.Any,
-    callback: js.Function2[/* error */ Error, /* storageAt */ String, Unit]
+    callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
   ): js.Promise[String] = js.native
   def getStorageAt(
     address: String,
@@ -223,7 +222,7 @@ class Eth () extends js.Object {
   def getStorageAt(
     address: String,
     position: Double,
-    callback: js.Function2[/* error */ Error, /* storageAt */ String, Unit]
+    callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
   ): js.Promise[String] = js.native
   def getStorageAt(address: String, position: Double, defaultBlock: BlockNumber): js.Promise[String] = js.native
   def getStorageAt(
@@ -236,7 +235,7 @@ class Eth () extends js.Object {
   def getStorageAt(
     address: String,
     position: ^,
-    callback: js.Function2[/* error */ Error, /* storageAt */ String, Unit]
+    callback: js.Function2[/* error */ js.Error, /* storageAt */ String, Unit]
   ): js.Promise[String] = js.native
   def getStorageAt(address: String, position: ^, defaultBlock: BlockNumber): js.Promise[String] = js.native
   def getStorageAt(
@@ -251,7 +250,7 @@ class Eth () extends js.Object {
     callback: js.Function2[/* error */ js.Error, /* transaction */ Transaction, Unit]
   ): js.Promise[Transaction] = js.native
   def getTransactionCount(address: String): js.Promise[Double] = js.native
-  def getTransactionCount(address: String, callback: js.Function2[/* error */ Error, /* count */ Double, Unit]): js.Promise[Double] = js.native
+  def getTransactionCount(address: String, callback: js.Function2[/* error */ js.Error, /* count */ Double, Unit]): js.Promise[Double] = js.native
   def getTransactionCount(address: String, defaultBlock: BlockNumber): js.Promise[Double] = js.native
   def getTransactionCount(
     address: String,
@@ -429,7 +428,7 @@ class Eth () extends js.Object {
   ): js.Promise[RLPEncodedTransaction] = js.native
   def signTransaction(
     transactionConfig: TransactionConfig,
-    callback: js.Function2[/* error */ Error, /* signedTransaction */ RLPEncodedTransaction, Unit]
+    callback: js.Function2[/* error */ js.Error, /* signedTransaction */ RLPEncodedTransaction, Unit]
   ): js.Promise[RLPEncodedTransaction] = js.native
   def submitWork(data: js.Tuple3[String, String, String]): js.Promise[Boolean] = js.native
   def submitWork(

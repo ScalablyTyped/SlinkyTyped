@@ -5,66 +5,257 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAlignedAxis extends js.Object {
-  var alignedAxis: js.UndefOr[Property] = js.undefined
-  var color: js.UndefOr[Property] = js.undefined
-  var eyeOffset: js.UndefOr[Property] = js.undefined
-  var height: js.UndefOr[Property] = js.undefined
-  var heightReference: js.UndefOr[Property] = js.undefined
-  var horizontalOrigin: js.UndefOr[Property] = js.undefined
-  var image: js.UndefOr[Property] = js.undefined
-  var imageSubRegion: js.UndefOr[Property] = js.undefined
-  var pixelOffset: js.UndefOr[Property] = js.undefined
-  var pixelOffsetScaleByDistance: js.UndefOr[Property] = js.undefined
-  var rotation: js.UndefOr[Property] = js.undefined
-  var scale: js.UndefOr[Property] = js.undefined
-  var scaleByDistance: js.UndefOr[Property] = js.undefined
-  var show: js.UndefOr[Property] = js.undefined
-  var translucencyByDistance: js.UndefOr[Property] = js.undefined
-  var verticalOrigin: js.UndefOr[Property] = js.undefined
-  var width: js.UndefOr[Property] = js.undefined
+  var alignedAxis: js.UndefOr[Property] = js.native
+  var color: js.UndefOr[Property] = js.native
+  var disableDepthTestDistance: js.UndefOr[Property] = js.native
+  var eyeOffset: js.UndefOr[Property] = js.native
+  var height: js.UndefOr[Property] = js.native
+  var heightReference: js.UndefOr[Property] = js.native
+  var horizontalOrigin: js.UndefOr[Property] = js.native
+  var image: js.UndefOr[Property] = js.native
+  var imageSubRegion: js.UndefOr[Property] = js.native
+  var pixelOffset: js.UndefOr[Property] = js.native
+  var pixelOffsetScaleByDistance: js.UndefOr[Property] = js.native
+  var rotation: js.UndefOr[Property] = js.native
+  var scale: js.UndefOr[Property] = js.native
+  var scaleByDistance: js.UndefOr[Property] = js.native
+  var show: js.UndefOr[Property] = js.native
+  var translucencyByDistance: js.UndefOr[Property] = js.native
+  var verticalOrigin: js.UndefOr[Property] = js.native
+  var width: js.UndefOr[Property] = js.native
 }
 
 object AnonAlignedAxis {
   @scala.inline
-  def apply(
-    alignedAxis: Property = null,
-    color: Property = null,
-    eyeOffset: Property = null,
-    height: Property = null,
-    heightReference: Property = null,
-    horizontalOrigin: Property = null,
-    image: Property = null,
-    imageSubRegion: Property = null,
-    pixelOffset: Property = null,
-    pixelOffsetScaleByDistance: Property = null,
-    rotation: Property = null,
-    scale: Property = null,
-    scaleByDistance: Property = null,
-    show: Property = null,
-    translucencyByDistance: Property = null,
-    verticalOrigin: Property = null,
-    width: Property = null
-  ): AnonAlignedAxis = {
+  def apply(): AnonAlignedAxis = {
     val __obj = js.Dynamic.literal()
-    if (alignedAxis != null) __obj.updateDynamic("alignedAxis")(alignedAxis.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (eyeOffset != null) __obj.updateDynamic("eyeOffset")(eyeOffset.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (heightReference != null) __obj.updateDynamic("heightReference")(heightReference.asInstanceOf[js.Any])
-    if (horizontalOrigin != null) __obj.updateDynamic("horizontalOrigin")(horizontalOrigin.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (imageSubRegion != null) __obj.updateDynamic("imageSubRegion")(imageSubRegion.asInstanceOf[js.Any])
-    if (pixelOffset != null) __obj.updateDynamic("pixelOffset")(pixelOffset.asInstanceOf[js.Any])
-    if (pixelOffsetScaleByDistance != null) __obj.updateDynamic("pixelOffsetScaleByDistance")(pixelOffsetScaleByDistance.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (scaleByDistance != null) __obj.updateDynamic("scaleByDistance")(scaleByDistance.asInstanceOf[js.Any])
-    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (translucencyByDistance != null) __obj.updateDynamic("translucencyByDistance")(translucencyByDistance.asInstanceOf[js.Any])
-    if (verticalOrigin != null) __obj.updateDynamic("verticalOrigin")(verticalOrigin.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAlignedAxis]
   }
+  @scala.inline
+  implicit class AnonAlignedAxisOps[Self <: AnonAlignedAxis] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignedAxis(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignedAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignedAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignedAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableDepthTestDistance(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDepthTestDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableDepthTestDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableDepthTestDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEyeOffset(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eyeOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEyeOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eyeOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeightReference(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeightReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHorizontalOrigin(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHorizontalOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageSubRegion(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSubRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageSubRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSubRegion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelOffset(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelOffsetScaleByDistance(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelOffsetScaleByDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelOffsetScaleByDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelOffsetScaleByDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScale(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleByDistance(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleByDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleByDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleByDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslucencyByDistance(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translucencyByDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslucencyByDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translucencyByDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVerticalOrigin(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerticalOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

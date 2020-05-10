@@ -5,87 +5,335 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FileManagerOptions extends js.Object {
-  var breadcrumb: js.UndefOr[Boolean | FileManagerBreadcrumb] = js.undefined
-  var contextMenu: js.UndefOr[Boolean | FileManagerContextMenu] = js.undefined
-  var dataBinding: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.undefined
-  var dataBound: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.undefined
-  var dataSource: js.UndefOr[js.Any | FileManagerDataSource] = js.undefined
-  var dialogs: js.UndefOr[FileManagerDialogs] = js.undefined
-  var draggable: js.UndefOr[Boolean] = js.undefined
-  var drop: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.undefined
-  var error: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.undefined
-  var execute: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.undefined
-  var height: js.UndefOr[Double | String] = js.undefined
-  var initialView: js.UndefOr[String] = js.undefined
-  var messages: js.UndefOr[FileManagerMessages] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var navigate: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.undefined
-  var open: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.undefined
-  var previewPane: js.UndefOr[FileManagerPreviewPane] = js.undefined
-  var resizable: js.UndefOr[Boolean] = js.undefined
-  var select: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.undefined
-  var toolbar: js.UndefOr[Boolean | FileManagerToolbar] = js.undefined
-  var upload: js.UndefOr[js.Any] = js.undefined
-  var uploadUrl: js.UndefOr[String] = js.undefined
-  var views: js.UndefOr[FileManagerViews] = js.undefined
-  var width: js.UndefOr[Double | String] = js.undefined
+  var breadcrumb: js.UndefOr[Boolean | FileManagerBreadcrumb] = js.native
+  var contextMenu: js.UndefOr[Boolean | FileManagerContextMenu] = js.native
+  var dataBinding: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.native
+  var dataBound: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.native
+  var dataSource: js.UndefOr[js.Any | FileManagerDataSource] = js.native
+  var dialogs: js.UndefOr[FileManagerDialogs] = js.native
+  var draggable: js.UndefOr[Boolean] = js.native
+  var drop: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.native
+  var error: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.native
+  var execute: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.native
+  var height: js.UndefOr[Double | String] = js.native
+  var initialView: js.UndefOr[String] = js.native
+  var messages: js.UndefOr[FileManagerMessages] = js.native
+  var name: js.UndefOr[String] = js.native
+  var navigate: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.native
+  var open: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.native
+  var previewPane: js.UndefOr[FileManagerPreviewPane] = js.native
+  var resizable: js.UndefOr[Boolean] = js.native
+  var select: js.UndefOr[js.Function1[/* e */ FileManagerEvent, Unit]] = js.native
+  var toolbar: js.UndefOr[Boolean | FileManagerToolbar] = js.native
+  var upload: js.UndefOr[js.Any] = js.native
+  var uploadUrl: js.UndefOr[String] = js.native
+  var views: js.UndefOr[FileManagerViews] = js.native
+  var width: js.UndefOr[Double | String] = js.native
 }
 
 object FileManagerOptions {
   @scala.inline
-  def apply(
-    breadcrumb: Boolean | FileManagerBreadcrumb = null,
-    contextMenu: Boolean | FileManagerContextMenu = null,
-    dataBinding: /* e */ FileManagerEvent => Unit = null,
-    dataBound: /* e */ FileManagerEvent => Unit = null,
-    dataSource: js.Any | FileManagerDataSource = null,
-    dialogs: FileManagerDialogs = null,
-    draggable: js.UndefOr[Boolean] = js.undefined,
-    drop: /* e */ FileManagerEvent => Unit = null,
-    error: /* e */ FileManagerEvent => Unit = null,
-    execute: /* e */ FileManagerEvent => Unit = null,
-    height: Double | String = null,
-    initialView: String = null,
-    messages: FileManagerMessages = null,
-    name: String = null,
-    navigate: /* e */ FileManagerEvent => Unit = null,
-    open: /* e */ FileManagerEvent => Unit = null,
-    previewPane: FileManagerPreviewPane = null,
-    resizable: js.UndefOr[Boolean] = js.undefined,
-    select: /* e */ FileManagerEvent => Unit = null,
-    toolbar: Boolean | FileManagerToolbar = null,
-    upload: js.Any = null,
-    uploadUrl: String = null,
-    views: FileManagerViews = null,
-    width: Double | String = null
-  ): FileManagerOptions = {
+  def apply(): FileManagerOptions = {
     val __obj = js.Dynamic.literal()
-    if (breadcrumb != null) __obj.updateDynamic("breadcrumb")(breadcrumb.asInstanceOf[js.Any])
-    if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
-    if (dataBinding != null) __obj.updateDynamic("dataBinding")(js.Any.fromFunction1(dataBinding))
-    if (dataBound != null) __obj.updateDynamic("dataBound")(js.Any.fromFunction1(dataBound))
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (dialogs != null) __obj.updateDynamic("dialogs")(dialogs.asInstanceOf[js.Any])
-    if (!js.isUndefined(draggable)) __obj.updateDynamic("draggable")(draggable.asInstanceOf[js.Any])
-    if (drop != null) __obj.updateDynamic("drop")(js.Any.fromFunction1(drop))
-    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
-    if (execute != null) __obj.updateDynamic("execute")(js.Any.fromFunction1(execute))
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (initialView != null) __obj.updateDynamic("initialView")(initialView.asInstanceOf[js.Any])
-    if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (navigate != null) __obj.updateDynamic("navigate")(js.Any.fromFunction1(navigate))
-    if (open != null) __obj.updateDynamic("open")(js.Any.fromFunction1(open))
-    if (previewPane != null) __obj.updateDynamic("previewPane")(previewPane.asInstanceOf[js.Any])
-    if (!js.isUndefined(resizable)) __obj.updateDynamic("resizable")(resizable.asInstanceOf[js.Any])
-    if (select != null) __obj.updateDynamic("select")(js.Any.fromFunction1(select))
-    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
-    if (upload != null) __obj.updateDynamic("upload")(upload.asInstanceOf[js.Any])
-    if (uploadUrl != null) __obj.updateDynamic("uploadUrl")(uploadUrl.asInstanceOf[js.Any])
-    if (views != null) __obj.updateDynamic("views")(views.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileManagerOptions]
   }
+  @scala.inline
+  implicit class FileManagerOptionsOps[Self <: FileManagerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBreadcrumb(value: Boolean | FileManagerBreadcrumb): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreadcrumb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextMenu(value: Boolean | FileManagerContextMenu): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBinding(value: /* e */ FileManagerEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataBinding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBound(value: /* e */ FileManagerEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDataBound: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataSource(value: js.Any | FileManagerDataSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDialogs(value: FileManagerDialogs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDialogs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialogs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDraggable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDraggable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrop(value: /* e */ FileManagerEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: /* e */ FileManagerEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecute(value: /* e */ FileManagerEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutExecute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialView(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessages(value: FileManagerMessages): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavigate(value: /* e */ FileManagerEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNavigate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navigate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpen(value: /* e */ FileManagerEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviewPane(value: FileManagerPreviewPane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previewPane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviewPane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previewPane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelect(value: /* e */ FileManagerEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar(value: Boolean | FileManagerToolbar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpload(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViews(value: FileManagerViews): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViews: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("views")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

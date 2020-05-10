@@ -4,37 +4,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TestSuiteOverview extends js.Object {
   /**
     * Number of test cases in error, typically set by the service by parsing the xml_source.
     *
     * - In create/response: always set - In update request: never
     */
-  var errorCount: js.UndefOr[Double] = js.undefined
+  var errorCount: js.UndefOr[Double] = js.native
   /**
     * Number of failed test cases, typically set by the service by parsing the xml_source. May also be set by the user.
     *
     * - In create/response: always set - In update request: never
     */
-  var failureCount: js.UndefOr[Double] = js.undefined
+  var failureCount: js.UndefOr[Double] = js.native
   /**
     * The name of the test suite.
     *
     * - In create/response: always set - In update request: never
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Number of test cases not run, typically set by the service by parsing the xml_source.
     *
     * - In create/response: always set - In update request: never
     */
-  var skippedCount: js.UndefOr[Double] = js.undefined
+  var skippedCount: js.UndefOr[Double] = js.native
   /**
     * Number of test cases, typically set by the service by parsing the xml_source.
     *
     * - In create/response: always set - In update request: never
     */
-  var totalCount: js.UndefOr[Double] = js.undefined
+  var totalCount: js.UndefOr[Double] = js.native
   /**
     * If this test suite was parsed from XML, this is the URI where the original XML file is stored.
     *
@@ -44,27 +45,94 @@ trait TestSuiteOverview extends js.Object {
     *
     * - In create/response: optional - In update request: never
     */
-  var xmlSource: js.UndefOr[FileReference] = js.undefined
+  var xmlSource: js.UndefOr[FileReference] = js.native
 }
 
 object TestSuiteOverview {
   @scala.inline
-  def apply(
-    errorCount: Int | Double = null,
-    failureCount: Int | Double = null,
-    name: String = null,
-    skippedCount: Int | Double = null,
-    totalCount: Int | Double = null,
-    xmlSource: FileReference = null
-  ): TestSuiteOverview = {
+  def apply(): TestSuiteOverview = {
     val __obj = js.Dynamic.literal()
-    if (errorCount != null) __obj.updateDynamic("errorCount")(errorCount.asInstanceOf[js.Any])
-    if (failureCount != null) __obj.updateDynamic("failureCount")(failureCount.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (skippedCount != null) __obj.updateDynamic("skippedCount")(skippedCount.asInstanceOf[js.Any])
-    if (totalCount != null) __obj.updateDynamic("totalCount")(totalCount.asInstanceOf[js.Any])
-    if (xmlSource != null) __obj.updateDynamic("xmlSource")(xmlSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestSuiteOverview]
   }
+  @scala.inline
+  implicit class TestSuiteOverviewOps[Self <: TestSuiteOverview] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkippedCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkippedCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skippedCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXmlSource(value: FileReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXmlSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xmlSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

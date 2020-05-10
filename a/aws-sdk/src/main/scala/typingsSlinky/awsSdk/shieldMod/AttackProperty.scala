@@ -30,20 +30,77 @@ trait AttackProperty extends js.Object {
 
 object AttackProperty {
   @scala.inline
-  def apply(
-    AttackLayer: AttackLayer = null,
-    AttackPropertyIdentifier: AttackPropertyIdentifier = null,
-    TopContributors: TopContributors = null,
-    Total: Int | scala.Double = null,
-    Unit: Unit = null
-  ): AttackProperty = {
+  def apply(): AttackProperty = {
     val __obj = js.Dynamic.literal()
-    if (AttackLayer != null) __obj.updateDynamic("AttackLayer")(AttackLayer.asInstanceOf[js.Any])
-    if (AttackPropertyIdentifier != null) __obj.updateDynamic("AttackPropertyIdentifier")(AttackPropertyIdentifier.asInstanceOf[js.Any])
-    if (TopContributors != null) __obj.updateDynamic("TopContributors")(TopContributors.asInstanceOf[js.Any])
-    if (Total != null) __obj.updateDynamic("Total")(Total.asInstanceOf[js.Any])
-    if (Unit != null) __obj.updateDynamic("Unit")(Unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttackProperty]
   }
+  @scala.inline
+  implicit class AttackPropertyOps[Self <: AttackProperty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttackLayer(value: AttackLayer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttackLayer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttackLayer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttackLayer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttackPropertyIdentifier(value: AttackPropertyIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttackPropertyIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttackPropertyIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttackPropertyIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopContributors(value: TopContributors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopContributors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopContributors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TopContributors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Total")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unit")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

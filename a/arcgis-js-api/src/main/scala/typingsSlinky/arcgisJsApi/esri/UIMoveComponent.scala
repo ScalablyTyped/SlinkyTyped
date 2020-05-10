@@ -1,25 +1,43 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bottom-leading`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bottom-left`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bottom-right`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bottom-trailing`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-leading`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-left`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-right`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`top-trailing`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.manual
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UIMoveComponent extends Object {
   /**
     * The component to move. This can be a widget instance, HTML element, a string value representing a DOM node ID.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#move)
     */
-  var component: Widget_ | HTMLElement | String
+  var component: Widget_ | HTMLElement | String = js.native
   /**
-    * The destination position. The component will be placed in the UI [container](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#container) when not provided. If not specified, `manual` is used by default. Using `manual` allows you to place the component in a container where you can position it anywhere using CSS. **Possible Values:** bottom-leading | bottom-left | bottom-right | bottom-trailing | top-leading | top-left | top-right | top-trailing | manual
+    * The placement index of the component. This index shows where to place the component relative to other components. For example a value of 0 would place it topmost when position is top-*, leftmost for bottom-left and right most for bottom-right.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#move)
     */
-  var position: js.UndefOr[String] = js.undefined
+  var index: js.UndefOr[Double] = js.native
+  /**
+    * The destination position. The component will be placed in the UI [container](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#container) when not provided. If not specified, `manual` is used by default. Using `manual` allows you to place the component in a container where you can position it anywhere using CSS.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#move)
+    */
+  var position: js.UndefOr[
+    `bottom-leading` | `bottom-left` | `bottom-right` | `bottom-trailing` | `top-leading` | `top-left` | `top-right` | `top-trailing` | manual
+  ] = js.native
 }
 
 object UIMoveComponent {
@@ -28,12 +46,56 @@ object UIMoveComponent {
     component: Widget_ | HTMLElement | String,
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    position: String = null
+    propertyIsEnumerable: PropertyKey => Boolean
   ): UIMoveComponent = {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     __obj.asInstanceOf[UIMoveComponent]
   }
+  @scala.inline
+  implicit class UIMoveComponentOps[Self <: UIMoveComponent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponentHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponent(value: Widget_ | HTMLElement | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(
+      value: `bottom-leading` | `bottom-left` | `bottom-right` | `bottom-trailing` | `top-leading` | `top-left` | `top-right` | `top-trailing` | manual
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

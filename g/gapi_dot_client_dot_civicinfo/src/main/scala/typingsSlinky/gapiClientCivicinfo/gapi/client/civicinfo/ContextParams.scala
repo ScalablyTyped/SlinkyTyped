@@ -4,16 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContextParams extends js.Object {
-  var clientProfile: js.UndefOr[String] = js.undefined
+  var clientProfile: js.UndefOr[String] = js.native
 }
 
 object ContextParams {
   @scala.inline
-  def apply(clientProfile: String = null): ContextParams = {
+  def apply(): ContextParams = {
     val __obj = js.Dynamic.literal()
-    if (clientProfile != null) __obj.updateDynamic("clientProfile")(clientProfile.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextParams]
   }
+  @scala.inline
+  implicit class ContextParamsOps[Self <: ContextParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientProfile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientProfile")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

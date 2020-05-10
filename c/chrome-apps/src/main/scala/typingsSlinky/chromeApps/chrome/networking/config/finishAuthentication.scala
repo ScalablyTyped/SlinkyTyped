@@ -2,10 +2,14 @@ package typingsSlinky.chromeApps.chrome.networking.config
 
 import typingsSlinky.chromeApps.AnonFAILED
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
+import typingsSlinky.chromeApps.chromeAppsStrings.FAILED
+import typingsSlinky.chromeApps.chromeAppsStrings.REJECTED
+import typingsSlinky.chromeApps.chromeAppsStrings.SUCCEEDED
+import typingsSlinky.chromeApps.chromeAppsStrings.UNHANDLED
 import typingsSlinky.chromeApps.chromeAppsStrings.failed_
-import typingsSlinky.chromeApps.chromeAppsStrings.rejected
-import typingsSlinky.chromeApps.chromeAppsStrings.succeeded
-import typingsSlinky.chromeApps.chromeAppsStrings.unhandled
+import typingsSlinky.chromeApps.chromeAppsStrings.rejected_
+import typingsSlinky.chromeApps.chromeAppsStrings.succeeded_
+import typingsSlinky.chromeApps.chromeAppsStrings.unhandled_
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,11 +28,25 @@ object finishAuthentication extends js.Object {
     */
   def apply(
     GUID: String,
-    result: ToStringLiteral[AnonFAILED, String, Exclude[String, unhandled | succeeded | rejected | failed_]]
+    result: ToStringLiteral[
+      AnonFAILED, 
+      /* keyof chrome-apps.AnonFAILED */ UNHANDLED | SUCCEEDED | REJECTED | FAILED, 
+      Exclude[
+        /* keyof chrome-apps.AnonFAILED */ UNHANDLED | SUCCEEDED | REJECTED | FAILED, 
+        unhandled_ | succeeded_ | rejected_ | failed_
+      ]
+    ]
   ): Unit = js.native
   def apply(
     GUID: String,
-    result: ToStringLiteral[AnonFAILED, String, Exclude[String, unhandled | succeeded | rejected | failed_]],
+    result: ToStringLiteral[
+      AnonFAILED, 
+      /* keyof chrome-apps.AnonFAILED */ UNHANDLED | SUCCEEDED | REJECTED | FAILED, 
+      Exclude[
+        /* keyof chrome-apps.AnonFAILED */ UNHANDLED | SUCCEEDED | REJECTED | FAILED, 
+        unhandled_ | succeeded_ | rejected_ | failed_
+      ]
+    ],
     callback: js.Function0[Unit]
   ): Unit = js.native
 }

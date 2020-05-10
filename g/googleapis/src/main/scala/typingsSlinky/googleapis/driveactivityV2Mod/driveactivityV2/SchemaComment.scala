@@ -29,18 +29,65 @@ trait SchemaComment extends js.Object {
 
 object SchemaComment {
   @scala.inline
-  def apply(
-    assignment: SchemaAssignment = null,
-    mentionedUsers: js.Array[SchemaUser] = null,
-    post: SchemaPost = null,
-    suggestion: SchemaSuggestion = null
-  ): SchemaComment = {
+  def apply(): SchemaComment = {
     val __obj = js.Dynamic.literal()
-    if (assignment != null) __obj.updateDynamic("assignment")(assignment.asInstanceOf[js.Any])
-    if (mentionedUsers != null) __obj.updateDynamic("mentionedUsers")(mentionedUsers.asInstanceOf[js.Any])
-    if (post != null) __obj.updateDynamic("post")(post.asInstanceOf[js.Any])
-    if (suggestion != null) __obj.updateDynamic("suggestion")(suggestion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaComment]
   }
+  @scala.inline
+  implicit class SchemaCommentOps[Self <: SchemaComment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignment(value: SchemaAssignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMentionedUsers(value: js.Array[SchemaUser]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mentionedUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMentionedUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mentionedUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPost(value: SchemaPost): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestion(value: SchemaSuggestion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -20,7 +20,7 @@ object getNextElement extends js.Object {
   ): HTMLElement | Null = js.native
   def apply(
     rootElement: HTMLElement,
-    currentElement: typingsSlinky.std.HTMLElement,
+    currentElement: HTMLElement,
     checkNode: js.UndefOr[Boolean],
     suppressParentTraversal: js.UndefOr[Boolean],
     suppressChildTraversal: js.UndefOr[Boolean],

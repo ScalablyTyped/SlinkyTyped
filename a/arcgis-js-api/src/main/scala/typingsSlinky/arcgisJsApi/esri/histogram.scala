@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-statistics-histogram.html)
   */
+@js.native
 trait histogram extends js.Object {
   /**
     * Generates a histogram for data returned from a `field` in a given `layer`. The returned object can be used for displaying a histogram to the UI in visualization authoring applications and analytical apps that query and display statistics.
@@ -38,9 +39,10 @@ trait histogram extends js.Object {
     * @param params.sqlWhere A SQL where clause used to filter features for the statistics query. For example, this is useful in situations where you want to avoid dividing by zero as is the case with creating a predominance visualization.
     * @param params.view A [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) or [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) instance is required when a `valueExpression` is specified.
     * @param params.features A subset of features for which to generate the histogram.
+    * @param params.signal Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
     *
     */
-  def histogram(params: histogramHistogramParams): js.Promise[HistogramResult]
+  def histogram(params: histogramHistogramParams): js.Promise[HistogramResult] = js.native
 }
 
 @JSGlobal("__esri.histogram")

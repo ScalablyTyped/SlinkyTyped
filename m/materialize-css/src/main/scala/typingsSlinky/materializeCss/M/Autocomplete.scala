@@ -20,12 +20,6 @@ class Autocomplete ()
     * Number of matching autocomplete options.
     */
   var count: Double = js.native
-  /* CompleteClass */
-  override var isOpen: Boolean = js.native
-  /* CompleteClass */
-  override def close(): Unit = js.native
-  /* CompleteClass */
-  override def open(): Unit = js.native
   /**
     * Select a specific autocomplete options.
     * @param el Element of the autocomplete option.
@@ -54,7 +48,7 @@ object Autocomplete extends js.Object {
   /**
     * Init autocomplete
     */
-  def init(els: typingsSlinky.std.Element): Autocomplete = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialAutocompleteOption): Autocomplete = js.native
+  def init(els: Element): Autocomplete = js.native
+  def init(els: Element, options: PartialAutocompleteOption): Autocomplete = js.native
 }
 

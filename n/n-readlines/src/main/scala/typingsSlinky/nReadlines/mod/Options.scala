@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var newLineCharacter: js.UndefOr[String] = js.undefined
-  var readChunk: js.UndefOr[Double] = js.undefined
+  var newLineCharacter: js.UndefOr[String] = js.native
+  var readChunk: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(newLineCharacter: String = null, readChunk: Int | Double = null): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (newLineCharacter != null) __obj.updateDynamic("newLineCharacter")(newLineCharacter.asInstanceOf[js.Any])
-    if (readChunk != null) __obj.updateDynamic("readChunk")(readChunk.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewLineCharacter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newLineCharacter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewLineCharacter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newLineCharacter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadChunk(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readChunk")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadChunk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readChunk")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

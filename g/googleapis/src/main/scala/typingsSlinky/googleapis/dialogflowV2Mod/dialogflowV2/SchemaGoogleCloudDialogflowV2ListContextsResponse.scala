@@ -23,11 +23,41 @@ trait SchemaGoogleCloudDialogflowV2ListContextsResponse extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2ListContextsResponse {
   @scala.inline
-  def apply(contexts: js.Array[SchemaGoogleCloudDialogflowV2Context] = null, nextPageToken: String = null): SchemaGoogleCloudDialogflowV2ListContextsResponse = {
+  def apply(): SchemaGoogleCloudDialogflowV2ListContextsResponse = {
     val __obj = js.Dynamic.literal()
-    if (contexts != null) __obj.updateDynamic("contexts")(contexts.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2ListContextsResponse]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2ListContextsResponseOps[Self <: SchemaGoogleCloudDialogflowV2ListContextsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContexts(value: js.Array[SchemaGoogleCloudDialogflowV2Context]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contexts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContexts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contexts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

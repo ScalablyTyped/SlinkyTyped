@@ -61,24 +61,101 @@ trait SchemaPricingExpression extends js.Object {
 
 object SchemaPricingExpression {
   @scala.inline
-  def apply(
-    baseUnit: String = null,
-    baseUnitConversionFactor: Int | Double = null,
-    baseUnitDescription: String = null,
-    displayQuantity: Int | Double = null,
-    tieredRates: js.Array[SchemaTierRate] = null,
-    usageUnit: String = null,
-    usageUnitDescription: String = null
-  ): SchemaPricingExpression = {
+  def apply(): SchemaPricingExpression = {
     val __obj = js.Dynamic.literal()
-    if (baseUnit != null) __obj.updateDynamic("baseUnit")(baseUnit.asInstanceOf[js.Any])
-    if (baseUnitConversionFactor != null) __obj.updateDynamic("baseUnitConversionFactor")(baseUnitConversionFactor.asInstanceOf[js.Any])
-    if (baseUnitDescription != null) __obj.updateDynamic("baseUnitDescription")(baseUnitDescription.asInstanceOf[js.Any])
-    if (displayQuantity != null) __obj.updateDynamic("displayQuantity")(displayQuantity.asInstanceOf[js.Any])
-    if (tieredRates != null) __obj.updateDynamic("tieredRates")(tieredRates.asInstanceOf[js.Any])
-    if (usageUnit != null) __obj.updateDynamic("usageUnit")(usageUnit.asInstanceOf[js.Any])
-    if (usageUnitDescription != null) __obj.updateDynamic("usageUnitDescription")(usageUnitDescription.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPricingExpression]
   }
+  @scala.inline
+  implicit class SchemaPricingExpressionOps[Self <: SchemaPricingExpression] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseUnitConversionFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitConversionFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUnitConversionFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitConversionFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseUnitDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseUnitDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUnitDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayQuantity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayQuantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTieredRates(value: js.Array[SchemaTierRate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tieredRates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTieredRates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tieredRates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsageUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usageUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsageUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usageUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsageUnitDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usageUnitDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsageUnitDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usageUnitDescription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

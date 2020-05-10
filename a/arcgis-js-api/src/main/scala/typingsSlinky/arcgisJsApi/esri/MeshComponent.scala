@@ -15,13 +15,13 @@ trait MeshComponent extends Accessor {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-MeshComponent.html#faces)
     */
-  var faces: scala.scalajs.js.typedarray.Uint32Array = js.native
+  var faces: js.typedarray.Uint32Array = js.native
   /**
     * The material determines how the component is visualized.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-MeshComponent.html#material)
     */
-  var material: MeshMaterial = js.native
+  var material: MeshMaterial | MeshMaterialMetallicRoughness = js.native
   /**
     * Specifies the type of normals used for lighting. This determines whether the object has a smooth or an angular appearance. The following shading types are supported:
     *

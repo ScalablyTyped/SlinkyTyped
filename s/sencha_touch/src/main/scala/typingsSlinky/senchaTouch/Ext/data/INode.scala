@@ -2,17 +2,17 @@ package typingsSlinky.senchaTouch.Ext.data
 
 import typingsSlinky.senchaTouch.Ext.Array
 import typingsSlinky.senchaTouch.Ext.IBase
-import typingsSlinky.senchaTouch.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait INode extends IBase {
   /** [Method] Insert node s as the last child node of this node
   		* @param node Ext.data.NodeInterface/Ext.data.NodeInterface[] The node or Array of nodes to append.
   		* @returns Ext.data.NodeInterface The appended node if single append, or null if an array was passed.
   		*/
-  var appendChild: js.UndefOr[js.Function1[/* node */ js.UndefOr[js.Any], INodeInterface]] = js.undefined
+  var appendChild: js.UndefOr[js.Function1[/* node */ js.UndefOr[js.Any], INodeInterface]] = js.native
   /** [Method] Bubbles up the tree from this node calling the specified function with each node
   		* @param fn Function The function to call.
   		* @param scope Object The scope (this reference) in which the function is executed. Defaults to the current Node.
@@ -25,7 +25,7 @@ trait INode extends IBase {
       /* args */ js.UndefOr[Array], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Cascades down the tree from this node calling the specified function with each node
   		* @param fn Function The function to call
   		* @param scope Object The scope (this reference) in which the function is executed. Defaults to the current Node.
@@ -38,9 +38,9 @@ trait INode extends IBase {
       /* args */ js.UndefOr[Array], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Property] (Object) */
-  var childNodes: js.UndefOr[js.Any] = js.undefined
+  var childNodes: js.UndefOr[js.Any] = js.native
   /** [Method] Collapse this node
   		* @param recursive Function true to recursively collapse all the children.
   		* @param callback Function The function to execute once the collapse completes.
@@ -53,12 +53,12 @@ trait INode extends IBase {
       /* scope */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Returns true if this node is an ancestor at any point of the passed node
   		* @param node Ext.data.NodeInterface
   		* @returns Boolean
   		*/
-  var contains: js.UndefOr[js.Function1[/* node */ js.UndefOr[INodeInterface], Boolean]] = js.undefined
+  var contains: js.UndefOr[js.Function1[/* node */ js.UndefOr[INodeInterface], Boolean]] = js.native
   /** [Method] Creates a copy clone of this Node
   		* @param newId String A new id, defaults to this Node's id.
   		* @param deep Boolean If passed as true, all child Nodes are recursively copied into the new Node. If omitted or false, the copy will have no child Nodes.
@@ -66,12 +66,12 @@ trait INode extends IBase {
   		*/
   var copy: js.UndefOr[
     js.Function2[/* newId */ js.UndefOr[String], /* deep */ js.UndefOr[Boolean], INodeInterface]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Destroys the node
   		* @param silent Object
   		*/
   @JSName("destroy")
-  var destroy_INode: js.UndefOr[js.Function1[/* silent */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var destroy_INode: js.UndefOr[js.Function1[/* silent */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Iterates the child nodes of this node calling the specified function with each node
   		* @param fn Function The function to call.
   		* @param scope Object The scope (this reference) in which the function is executed. Defaults to the current Node in the iteration.
@@ -84,7 +84,7 @@ trait INode extends IBase {
       /* args */ js.UndefOr[Array], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Expand this node
   		* @param recursive Function true to recursively expand all the children.
   		* @param callback Function The function to execute once the expand completes.
@@ -97,7 +97,7 @@ trait INode extends IBase {
       /* scope */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Finds the first child that has the attribute with the specified value
   		* @param attribute String The attribute name.
   		* @param value Object The value to search for.
@@ -111,7 +111,7 @@ trait INode extends IBase {
       /* deep */ js.UndefOr[Boolean], 
       INodeInterface
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Finds the first child by a custom function
   		* @param fn Function A function which must return true if the passed Node is the required Node.
   		* @param scope Object The scope (this reference) in which the function is executed. Defaults to the Node being tested.
@@ -125,18 +125,18 @@ trait INode extends IBase {
       /* deep */ js.UndefOr[Boolean], 
       INodeInterface
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Property] (Object) */
-  var firstChild: js.UndefOr[js.Any] = js.undefined
+  var firstChild: js.UndefOr[js.Any] = js.native
   /** [Method] Returns the child node at the specified index
   		* @param index Number
   		* @returns Ext.data.NodeInterface
   		*/
-  var getChildAt: js.UndefOr[js.Function1[/* index */ js.UndefOr[Double], INodeInterface]] = js.undefined
+  var getChildAt: js.UndefOr[js.Function1[/* index */ js.UndefOr[Double], INodeInterface]] = js.native
   /** [Method] Returns depth of this node the root node has a depth of 0
   		* @returns Number
   		*/
-  var getDepth: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getDepth: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Gets the hierarchical path from the root of the current node
   		* @param field String The field to construct the path from. Defaults to the model idProperty.
   		* @param separator String A separator to use.
@@ -144,16 +144,16 @@ trait INode extends IBase {
   		*/
   var getPath: js.UndefOr[
     js.Function2[/* field */ js.UndefOr[String], /* separator */ js.UndefOr[String], String]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Returns true if this node has one or more child nodes else false
   		* @returns Boolean
   		*/
-  var hasChildNodes: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var hasChildNodes: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns the index of a child node
   		* @param child Ext.data.NodeInterface
   		* @returns Number The index of the node or -1 if it was not found.
   		*/
-  var indexOf: js.UndefOr[js.Function1[/* child */ js.UndefOr[INodeInterface], Double]] = js.undefined
+  var indexOf: js.UndefOr[js.Function1[/* child */ js.UndefOr[INodeInterface], Double]] = js.native
   /** [Method] Inserts the first node before the second node in this nodes childNodes collection
   		* @param node Ext.data.NodeInterface The node to insert.
   		* @param refNode Ext.data.NodeInterface The node to insert before (if null the node is appended).
@@ -165,7 +165,7 @@ trait INode extends IBase {
       /* refNode */ js.UndefOr[INodeInterface], 
       INodeInterface
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Insert a node into this node
   		* @param index Number The zero-based index to insert the node at.
   		* @param node Ext.data.Model The node to insert.
@@ -173,66 +173,66 @@ trait INode extends IBase {
   		*/
   var insertChild: js.UndefOr[
     js.Function2[/* index */ js.UndefOr[Double], /* node */ js.UndefOr[IModel], IModel]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Returns true if the passed node is an ancestor at any point of this node
   		* @param node Ext.data.NodeInterface
   		* @returns Boolean
   		*/
-  var isAncestor: js.UndefOr[js.Function1[/* node */ js.UndefOr[INodeInterface], Boolean]] = js.undefined
+  var isAncestor: js.UndefOr[js.Function1[/* node */ js.UndefOr[INodeInterface], Boolean]] = js.native
   /** [Method] Returns true if this node has one or more child nodes or if the expandable node attribute is explicitly specified as
   		* @returns Boolean
   		*/
-  var isExpandable: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isExpandable: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns true if this node is expanded
   		* @returns Boolean
   		*/
-  var isExpanded: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isExpanded: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns true if this node is the first child of its parent
   		* @returns Boolean
   		*/
-  var isFirst: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isFirst: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns true if this node is the last child of its parent
   		* @returns Boolean
   		*/
-  var isLast: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isLast: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns true if this node is a leaf
   		* @returns Boolean
   		*/
-  var isLeaf: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isLeaf: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns true if this node is loaded
   		* @returns Boolean
   		*/
-  var isLoaded: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isLoaded: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns true if this node is loading
   		* @returns Boolean
   		*/
-  var isLoading: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isLoading: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns true if this node is the root node
   		* @returns Boolean
   		*/
-  var isRoot: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isRoot: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Returns true if this node is visible
   		* @returns Boolean
   		*/
-  var isVisible: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isVisible: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Property] (Object) */
-  var lastChild: js.UndefOr[js.Any] = js.undefined
+  var lastChild: js.UndefOr[js.Any] = js.native
   /** [Property] (Object) */
-  var nextSibling: js.UndefOr[js.Any] = js.undefined
+  var nextSibling: js.UndefOr[js.Any] = js.native
   /** [Property] (Object) */
-  var parentNode: js.UndefOr[js.Any] = js.undefined
+  var parentNode: js.UndefOr[js.Any] = js.native
   /** [Property] (Object) */
-  var previousSibling: js.UndefOr[js.Any] = js.undefined
+  var previousSibling: js.UndefOr[js.Any] = js.native
   /** [Method] Removes this node from its parent
   		* @param destroy Boolean true to destroy the node upon removal.
   		* @returns Ext.data.NodeInterface this
   		*/
-  var remove: js.UndefOr[js.Function1[/* destroy */ js.UndefOr[Boolean], INodeInterface]] = js.undefined
+  var remove: js.UndefOr[js.Function1[/* destroy */ js.UndefOr[Boolean], INodeInterface]] = js.native
   /** [Method] Removes all child nodes from this node
   		* @param destroy Boolean true to destroy the node upon removal.
   		* @returns Ext.data.NodeInterface this
   		*/
-  var removeAll: js.UndefOr[js.Function1[/* destroy */ js.UndefOr[Boolean], INodeInterface]] = js.undefined
+  var removeAll: js.UndefOr[js.Function1[/* destroy */ js.UndefOr[Boolean], INodeInterface]] = js.native
   /** [Method] Removes a child node from this node
   		* @param node Ext.data.NodeInterface The node to remove.
   		* @param destroy Boolean true to destroy the node upon removal.
@@ -244,7 +244,7 @@ trait INode extends IBase {
       /* destroy */ js.UndefOr[Boolean], 
       INodeInterface
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Replaces one child node in this node with another
   		* @param newChild Ext.data.NodeInterface The replacement node.
   		* @param oldChild Ext.data.NodeInterface The node to replace.
@@ -256,7 +256,7 @@ trait INode extends IBase {
       /* oldChild */ js.UndefOr[INodeInterface], 
       INodeInterface
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Sorts this nodes children using the supplied sort function
   		* @param sortFn Function A function which, when passed two Nodes, returns -1, 0 or 1 depending upon required sort order.
   		* @param recursive Boolean Whether or not to apply this sort recursively.
@@ -269,132 +269,529 @@ trait INode extends IBase {
       /* suppressEvent */ js.UndefOr[Boolean], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** [Method] Updates general data of this node like isFirst isLast depth
   		* @param silent Object
   		* @returns Boolean
   		*/
-  var updateInfo: js.UndefOr[js.Function1[/* silent */ js.UndefOr[js.Any], Boolean]] = js.undefined
+  var updateInfo: js.UndefOr[js.Function1[/* silent */ js.UndefOr[js.Any], Boolean]] = js.native
 }
 
 object INode {
   @scala.inline
-  def apply(
-    alias: Array = null,
-    alternateClassName: js.Any = null,
-    appendChild: /* node */ js.UndefOr[js.Any] => INodeInterface = null,
-    bubble: (/* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* args */ js.UndefOr[Array]) => Unit = null,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    cascadeBy: (/* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* args */ js.UndefOr[Array]) => Unit = null,
-    childNodes: js.Any = null,
-    collapse: (/* recursive */ js.UndefOr[js.Any], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit = null,
-    config: js.Any = null,
-    contains: /* node */ js.UndefOr[INodeInterface] => Boolean = null,
-    copy: (/* newId */ js.UndefOr[String], /* deep */ js.UndefOr[Boolean]) => INodeInterface = null,
-    destroy: /* silent */ js.UndefOr[js.Any] => Unit = null,
-    eachChild: (/* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* args */ js.UndefOr[Array]) => Unit = null,
-    expand: (/* recursive */ js.UndefOr[js.Any], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit = null,
-    extend: String = null,
-    findChild: (/* attribute */ js.UndefOr[String], /* value */ js.UndefOr[js.Any], /* deep */ js.UndefOr[Boolean]) => INodeInterface = null,
-    findChildBy: (/* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* deep */ js.UndefOr[Boolean]) => INodeInterface = null,
-    firstChild: js.Any = null,
-    getChildAt: /* index */ js.UndefOr[Double] => INodeInterface = null,
-    getDepth: () => Double = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    getPath: (/* field */ js.UndefOr[String], /* separator */ js.UndefOr[String]) => String = null,
-    hasChildNodes: () => Boolean = null,
-    indexOf: /* child */ js.UndefOr[INodeInterface] => Double = null,
-    inheritableStatics: js.Any = null,
-    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
-    insertBefore: (/* node */ js.UndefOr[INodeInterface], /* refNode */ js.UndefOr[INodeInterface]) => INodeInterface = null,
-    insertChild: (/* index */ js.UndefOr[Double], /* node */ js.UndefOr[IModel]) => IModel = null,
-    isAncestor: /* node */ js.UndefOr[INodeInterface] => Boolean = null,
-    isExpandable: () => Boolean = null,
-    isExpanded: () => Boolean = null,
-    isFirst: () => Boolean = null,
-    isLast: () => Boolean = null,
-    isLeaf: () => Boolean = null,
-    isLoaded: () => Boolean = null,
-    isLoading: () => Boolean = null,
-    isRoot: () => Boolean = null,
-    isVisible: () => Boolean = null,
-    lastChild: js.Any = null,
-    mixins: js.Any = null,
-    nextSibling: js.Any = null,
-    parentNode: js.Any = null,
-    platformConfig: js.Any = null,
-    previousSibling: js.Any = null,
-    remove: /* destroy */ js.UndefOr[Boolean] => INodeInterface = null,
-    removeAll: /* destroy */ js.UndefOr[Boolean] => INodeInterface = null,
-    removeChild: (/* node */ js.UndefOr[INodeInterface], /* destroy */ js.UndefOr[Boolean]) => INodeInterface = null,
-    replaceChild: (/* newChild */ js.UndefOr[INodeInterface], /* oldChild */ js.UndefOr[INodeInterface]) => INodeInterface = null,
-    self: IClass = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    sort: (/* sortFn */ js.UndefOr[js.Any], /* recursive */ js.UndefOr[Boolean], /* suppressEvent */ js.UndefOr[Boolean]) => Unit = null,
-    statics: js.Any = null,
-    updateInfo: /* silent */ js.UndefOr[js.Any] => Boolean = null,
-    uses: Array = null
-  ): INode = {
+  def apply(): INode = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (appendChild != null) __obj.updateDynamic("appendChild")(js.Any.fromFunction1(appendChild))
-    if (bubble != null) __obj.updateDynamic("bubble")(js.Any.fromFunction3(bubble))
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (cascadeBy != null) __obj.updateDynamic("cascadeBy")(js.Any.fromFunction3(cascadeBy))
-    if (childNodes != null) __obj.updateDynamic("childNodes")(childNodes.asInstanceOf[js.Any])
-    if (collapse != null) __obj.updateDynamic("collapse")(js.Any.fromFunction3(collapse))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (contains != null) __obj.updateDynamic("contains")(js.Any.fromFunction1(contains))
-    if (copy != null) __obj.updateDynamic("copy")(js.Any.fromFunction2(copy))
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction1(destroy))
-    if (eachChild != null) __obj.updateDynamic("eachChild")(js.Any.fromFunction3(eachChild))
-    if (expand != null) __obj.updateDynamic("expand")(js.Any.fromFunction3(expand))
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (findChild != null) __obj.updateDynamic("findChild")(js.Any.fromFunction3(findChild))
-    if (findChildBy != null) __obj.updateDynamic("findChildBy")(js.Any.fromFunction3(findChildBy))
-    if (firstChild != null) __obj.updateDynamic("firstChild")(firstChild.asInstanceOf[js.Any])
-    if (getChildAt != null) __obj.updateDynamic("getChildAt")(js.Any.fromFunction1(getChildAt))
-    if (getDepth != null) __obj.updateDynamic("getDepth")(js.Any.fromFunction0(getDepth))
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (getPath != null) __obj.updateDynamic("getPath")(js.Any.fromFunction2(getPath))
-    if (hasChildNodes != null) __obj.updateDynamic("hasChildNodes")(js.Any.fromFunction0(hasChildNodes))
-    if (indexOf != null) __obj.updateDynamic("indexOf")(js.Any.fromFunction1(indexOf))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (insertBefore != null) __obj.updateDynamic("insertBefore")(js.Any.fromFunction2(insertBefore))
-    if (insertChild != null) __obj.updateDynamic("insertChild")(js.Any.fromFunction2(insertChild))
-    if (isAncestor != null) __obj.updateDynamic("isAncestor")(js.Any.fromFunction1(isAncestor))
-    if (isExpandable != null) __obj.updateDynamic("isExpandable")(js.Any.fromFunction0(isExpandable))
-    if (isExpanded != null) __obj.updateDynamic("isExpanded")(js.Any.fromFunction0(isExpanded))
-    if (isFirst != null) __obj.updateDynamic("isFirst")(js.Any.fromFunction0(isFirst))
-    if (isLast != null) __obj.updateDynamic("isLast")(js.Any.fromFunction0(isLast))
-    if (isLeaf != null) __obj.updateDynamic("isLeaf")(js.Any.fromFunction0(isLeaf))
-    if (isLoaded != null) __obj.updateDynamic("isLoaded")(js.Any.fromFunction0(isLoaded))
-    if (isLoading != null) __obj.updateDynamic("isLoading")(js.Any.fromFunction0(isLoading))
-    if (isRoot != null) __obj.updateDynamic("isRoot")(js.Any.fromFunction0(isRoot))
-    if (isVisible != null) __obj.updateDynamic("isVisible")(js.Any.fromFunction0(isVisible))
-    if (lastChild != null) __obj.updateDynamic("lastChild")(lastChild.asInstanceOf[js.Any])
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (nextSibling != null) __obj.updateDynamic("nextSibling")(nextSibling.asInstanceOf[js.Any])
-    if (parentNode != null) __obj.updateDynamic("parentNode")(parentNode.asInstanceOf[js.Any])
-    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
-    if (previousSibling != null) __obj.updateDynamic("previousSibling")(previousSibling.asInstanceOf[js.Any])
-    if (remove != null) __obj.updateDynamic("remove")(js.Any.fromFunction1(remove))
-    if (removeAll != null) __obj.updateDynamic("removeAll")(js.Any.fromFunction1(removeAll))
-    if (removeChild != null) __obj.updateDynamic("removeChild")(js.Any.fromFunction2(removeChild))
-    if (replaceChild != null) __obj.updateDynamic("replaceChild")(js.Any.fromFunction2(replaceChild))
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(js.Any.fromFunction3(sort))
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (updateInfo != null) __obj.updateDynamic("updateInfo")(js.Any.fromFunction1(updateInfo))
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[INode]
   }
+  @scala.inline
+  implicit class INodeOps[Self <: INode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppendChild(value: /* node */ js.UndefOr[js.Any] => INodeInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendChild")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAppendChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBubble(
+      value: (/* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* args */ js.UndefOr[Array]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubble")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutBubble: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubble")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCascadeBy(
+      value: (/* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* args */ js.UndefOr[Array]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cascadeBy")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCascadeBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cascadeBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildNodes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childNodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCollapse(
+      value: (/* recursive */ js.UndefOr[js.Any], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCollapse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContains(value: /* node */ js.UndefOr[INodeInterface] => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutContains: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopy(value: (/* newId */ js.UndefOr[String], /* deep */ js.UndefOr[Boolean]) => INodeInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCopy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: /* silent */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEachChild(
+      value: (/* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* args */ js.UndefOr[Array]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eachChild")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutEachChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eachChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpand(
+      value: (/* recursive */ js.UndefOr[js.Any], /* callback */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFindChild(
+      value: (/* attribute */ js.UndefOr[String], /* value */ js.UndefOr[js.Any], /* deep */ js.UndefOr[Boolean]) => INodeInterface
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findChild")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutFindChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFindChildBy(
+      value: (/* fn */ js.UndefOr[js.Any], /* scope */ js.UndefOr[js.Any], /* deep */ js.UndefOr[Boolean]) => INodeInterface
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findChildBy")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutFindChildBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findChildBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstChild(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetChildAt(value: /* index */ js.UndefOr[Double] => INodeInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildAt")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetChildAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChildAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetDepth(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDepth")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetDepth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDepth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetPath(value: (/* field */ js.UndefOr[String], /* separator */ js.UndefOr[String]) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPath")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasChildNodes(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildNodes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutHasChildNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildNodes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexOf(value: /* child */ js.UndefOr[INodeInterface] => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexOf")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutIndexOf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexOf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertBefore(
+      value: (/* node */ js.UndefOr[INodeInterface], /* refNode */ js.UndefOr[INodeInterface]) => INodeInterface
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInsertChild(value: (/* index */ js.UndefOr[Double], /* node */ js.UndefOr[IModel]) => IModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertChild")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutInsertChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsAncestor(value: /* node */ js.UndefOr[INodeInterface] => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAncestor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsAncestor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAncestor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsExpandable(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpandable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsExpandable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpandable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsExpanded(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsExpanded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsFirst(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFirst")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsFirst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFirst")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLast(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLast")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsLast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLast")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLeaf(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLeaf")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsLeaf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLeaf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLoaded(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoaded")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsLoaded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoaded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLoading(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoading")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsLoading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLoading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsRoot(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRoot")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRoot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsVisible(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutIsVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastChild(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextSibling(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextSibling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentNode(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousSibling(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousSibling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemove(value: /* destroy */ js.UndefOr[Boolean] => INodeInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveAll(value: /* destroy */ js.UndefOr[Boolean] => INodeInterface): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAll")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveChild(
+      value: (/* node */ js.UndefOr[INodeInterface], /* destroy */ js.UndefOr[Boolean]) => INodeInterface
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeChild")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplaceChild(
+      value: (/* newChild */ js.UndefOr[INodeInterface], /* oldChild */ js.UndefOr[INodeInterface]) => INodeInterface
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceChild")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutReplaceChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceChild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(
+      value: (/* sortFn */ js.UndefOr[js.Any], /* recursive */ js.UndefOr[Boolean], /* suppressEvent */ js.UndefOr[Boolean]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateInfo(value: /* silent */ js.UndefOr[js.Any] => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateInfo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutUpdateInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

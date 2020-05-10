@@ -22,10 +22,41 @@ trait CreateVoiceConnectorRequest extends js.Object {
 
 object CreateVoiceConnectorRequest {
   @scala.inline
-  def apply(Name: VoiceConnectorName, RequireEncryption: Boolean, AwsRegion: VoiceConnectorAwsRegion = null): CreateVoiceConnectorRequest = {
+  def apply(Name: VoiceConnectorName, RequireEncryption: Boolean): CreateVoiceConnectorRequest = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], RequireEncryption = RequireEncryption.asInstanceOf[js.Any])
-    if (AwsRegion != null) __obj.updateDynamic("AwsRegion")(AwsRegion.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVoiceConnectorRequest]
   }
+  @scala.inline
+  implicit class CreateVoiceConnectorRequestOps[Self <: CreateVoiceConnectorRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: VoiceConnectorName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequireEncryption(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequireEncryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAwsRegion(value: VoiceConnectorAwsRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsRegion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsRegion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.samchon
 
 import typingsSlinky.samchon.entityMod.Entity
-import typingsSlinky.std.Uint8Array
 import typingsSlinky.sxml.mod.XML
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +17,7 @@ object invokeParameterMod extends js.Object {
     def this(`val`: String) = this()
     def this(`val`: Boolean) = this()
     def this(`val`: Double) = this()
-    def this(`val`: scala.scalajs.js.typedarray.Uint8Array) = this()
+    def this(`val`: js.typedarray.Uint8Array) = this()
     def this(`val`: XML) = this()
     def this(name: String, `val`: String) = this()
     /**
@@ -29,7 +28,7 @@ object invokeParameterMod extends js.Object {
       */
     def this(name: String, `val`: Boolean) = this()
     def this(name: String, `val`: Double) = this()
-    def this(name: String, `val`: scala.scalajs.js.typedarray.Uint8Array) = this()
+    def this(name: String, `val`: js.typedarray.Uint8Array) = this()
     def this(name: String, `val`: XML) = this()
     /**
       * Name of the parameter.
@@ -44,7 +43,7 @@ object invokeParameterMod extends js.Object {
     /**
       * Value of the parameter.
       */
-    var value: Boolean | Double | String | XML | scala.scalajs.js.typedarray.Uint8Array = js.native
+    var value: Boolean | Double | String | XML | js.typedarray.Uint8Array = js.native
     /**
       * Get name.
       */
@@ -60,7 +59,7 @@ object invokeParameterMod extends js.Object {
     def setValue(value: String): Unit = js.native
     def setValue(value: Boolean): Unit = js.native
     def setValue(value: Double): Unit = js.native
-    def setValue(value: Uint8Array): Unit = js.native
+    def setValue(value: js.typedarray.Uint8Array): Unit = js.native
     def setValue(value: XML): Unit = js.native
   }
   

@@ -29,16 +29,53 @@ trait SchemaProductSearchResults extends js.Object {
 
 object SchemaProductSearchResults {
   @scala.inline
-  def apply(
-    indexTime: String = null,
-    productGroupedResults: js.Array[SchemaGroupedResult] = null,
-    results: js.Array[SchemaResult] = null
-  ): SchemaProductSearchResults = {
+  def apply(): SchemaProductSearchResults = {
     val __obj = js.Dynamic.literal()
-    if (indexTime != null) __obj.updateDynamic("indexTime")(indexTime.asInstanceOf[js.Any])
-    if (productGroupedResults != null) __obj.updateDynamic("productGroupedResults")(productGroupedResults.asInstanceOf[js.Any])
-    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProductSearchResults]
   }
+  @scala.inline
+  implicit class SchemaProductSearchResultsOps[Self <: SchemaProductSearchResults] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndexTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductGroupedResults(value: js.Array[SchemaGroupedResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productGroupedResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductGroupedResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productGroupedResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResults(value: js.Array[SchemaResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

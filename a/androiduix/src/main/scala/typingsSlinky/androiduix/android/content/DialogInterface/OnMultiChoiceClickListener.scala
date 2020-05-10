@@ -4,20 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnMultiChoiceClickListener extends js.Object {
   def onClick(
     dialog: typingsSlinky.androiduix.android.content.DialogInterface,
     which: Double,
     isChecked: Boolean
-  ): Unit
+  ): Unit = js.native
 }
 
 object OnMultiChoiceClickListener {
   @scala.inline
   def apply(onClick: (typingsSlinky.androiduix.android.content.DialogInterface, Double, Boolean) => Unit): OnMultiChoiceClickListener = {
     val __obj = js.Dynamic.literal(onClick = js.Any.fromFunction3(onClick))
-  
     __obj.asInstanceOf[OnMultiChoiceClickListener]
   }
+  @scala.inline
+  implicit class OnMultiChoiceClickListenerOps[Self <: OnMultiChoiceClickListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnClick(value: (typingsSlinky.androiduix.android.content.DialogInterface, Double, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

@@ -4,29 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxPolarChartArgumentAxisMinorTick extends dxPolarChartCommonAxisSettingsMinorTick {
   /** Shifts minor ticks from the reference position. */
-  var shift: js.UndefOr[Double] = js.undefined
+  var shift: js.UndefOr[Double] = js.native
 }
 
 object dxPolarChartArgumentAxisMinorTick {
   @scala.inline
-  def apply(
-    color: String = null,
-    length: Int | Double = null,
-    opacity: Int | Double = null,
-    shift: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): dxPolarChartArgumentAxisMinorTick = {
+  def apply(): dxPolarChartArgumentAxisMinorTick = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (shift != null) __obj.updateDynamic("shift")(shift.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPolarChartArgumentAxisMinorTick]
   }
+  @scala.inline
+  implicit class dxPolarChartArgumentAxisMinorTickOps[Self <: dxPolarChartArgumentAxisMinorTick] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShift(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShift: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

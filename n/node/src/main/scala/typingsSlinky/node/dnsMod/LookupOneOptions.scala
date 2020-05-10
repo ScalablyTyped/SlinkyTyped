@@ -5,25 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LookupOneOptions extends LookupOptions {
   @JSName("all")
-  var all_LookupOneOptions: js.UndefOr[`false`] = js.undefined
+  var all_LookupOneOptions: js.UndefOr[`false`] = js.native
 }
 
 object LookupOneOptions {
   @scala.inline
-  def apply(
-    all: `false` = null,
-    family: Int | Double = null,
-    hints: Int | Double = null,
-    verbatim: js.UndefOr[Boolean] = js.undefined
-  ): LookupOneOptions = {
+  def apply(): LookupOneOptions = {
     val __obj = js.Dynamic.literal()
-    if (all != null) __obj.updateDynamic("all")(all.asInstanceOf[js.Any])
-    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
-    if (hints != null) __obj.updateDynamic("hints")(hints.asInstanceOf[js.Any])
-    if (!js.isUndefined(verbatim)) __obj.updateDynamic("verbatim")(verbatim.asInstanceOf[js.Any])
     __obj.asInstanceOf[LookupOneOptions]
   }
+  @scala.inline
+  implicit class LookupOneOptionsOps[Self <: LookupOneOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAll(value: `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

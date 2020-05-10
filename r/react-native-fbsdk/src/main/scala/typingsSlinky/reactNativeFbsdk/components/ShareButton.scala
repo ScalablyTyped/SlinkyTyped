@@ -1,9 +1,7 @@
 package typingsSlinky.reactNativeFbsdk.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeFbsdk.mod.ShareButtonProps
 import typingsSlinky.reactNativeFbsdk.mod.ShareContent
@@ -11,19 +9,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ShareButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeFbsdk.mod.ShareButton] {
+object ShareButton {
   @JSImport("react-native-fbsdk", "ShareButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(shareContent: ShareContent, style: ViewStyle = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactNativeFbsdk.mod.ShareButton] = {
-    val __obj = js.Dynamic.literal(shareContent = shareContent.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeFbsdk.mod.ShareButton] {
+    @scala.inline
+    def style(value: ViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = ShareButtonProps
+  
+  def withProps(p: ShareButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(shareContent: ShareContent): Builder = {
+    val __props = js.Dynamic.literal(shareContent = shareContent.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ShareButtonProps]))
+  }
 }
 

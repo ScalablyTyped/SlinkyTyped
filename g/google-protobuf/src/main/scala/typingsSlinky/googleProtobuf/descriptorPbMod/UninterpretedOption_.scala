@@ -2,7 +2,6 @@ package typingsSlinky.googleProtobuf.descriptorPbMod
 
 import typingsSlinky.googleProtobuf.descriptorPbMod.UninterpretedOption.NamePart
 import typingsSlinky.googleProtobuf.mod.Message
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,9 +25,9 @@ class UninterpretedOption_ () extends Message {
   def getNameList(): js.Array[NamePart] = js.native
   def getNegativeIntValue(): js.UndefOr[Double] = js.native
   def getPositiveIntValue(): js.UndefOr[Double] = js.native
-  def getStringValue(): scala.scalajs.js.typedarray.Uint8Array | String = js.native
+  def getStringValue(): js.typedarray.Uint8Array | String = js.native
   def getStringValue_asB64(): String = js.native
-  def getStringValue_asU8(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def getStringValue_asU8(): js.typedarray.Uint8Array = js.native
   def hasAggregateValue(): Boolean = js.native
   def hasDoubleValue(): Boolean = js.native
   def hasIdentifierValue(): Boolean = js.native
@@ -42,6 +41,6 @@ class UninterpretedOption_ () extends Message {
   def setNegativeIntValue(value: Double): Unit = js.native
   def setPositiveIntValue(value: Double): Unit = js.native
   def setStringValue(value: String): Unit = js.native
-  def setStringValue(value: Uint8Array): Unit = js.native
+  def setStringValue(value: js.typedarray.Uint8Array): Unit = js.native
 }
 

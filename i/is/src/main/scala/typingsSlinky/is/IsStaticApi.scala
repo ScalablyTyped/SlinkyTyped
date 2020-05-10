@@ -1,6 +1,5 @@
 package typingsSlinky.is
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -207,11 +206,11 @@ trait IsStaticApi extends js.Object {
   /**
     * Checks if the given date object indicate future.
     */
-  def future(value: Date*): Boolean = js.native
+  def future(value: js.Date*): Boolean = js.native
   /**
     * Checks if the given date object indicate future.
     */
-  def future(value: js.Array[Date]): Boolean = js.native
+  def future(value: js.Array[js.Date]): Boolean = js.native
   /**
     * Checks if the given value matches hexcolor regexp.
     */
@@ -359,11 +358,11 @@ trait IsStaticApi extends js.Object {
   /**
     * Checks if the given date object indicate past.
     */
-  def past(value: Date*): Boolean = js.native
+  def past(value: js.Date*): Boolean = js.native
   /**
     * Checks if the given date object indicate past.
     */
-  def past(value: js.Array[Date]): Boolean = js.native
+  def past(value: js.Array[js.Date]): Boolean = js.native
   /**
     * Checks if the given value is positive.
     */
@@ -427,19 +426,19 @@ trait IsStaticApi extends js.Object {
   /**
     * Checks if the given date object indicate today.
     */
-  def today(value: Date*): Boolean = js.native
+  def today(value: js.Date*): Boolean = js.native
   /**
     * Checks if the given date object indicate today.
     */
-  def today(value: js.Array[Date]): Boolean = js.native
+  def today(value: js.Array[js.Date]): Boolean = js.native
   /**
     * Checks if the given date object indicate tomorrow.
     */
-  def tomorrow(value: Date*): Boolean = js.native
+  def tomorrow(value: js.Date*): Boolean = js.native
   /**
     * Checks if the given date object indicate tomorrow.
     */
-  def tomorrow(value: js.Array[Date]): Boolean = js.native
+  def tomorrow(value: js.Array[js.Date]): Boolean = js.native
   /**
     * Checks if the given value is truthy. (existy and not false)
     */
@@ -495,19 +494,19 @@ trait IsStaticApi extends js.Object {
   /**
     * Checks if the given date objects' day is weekday.
     */
-  def weekday(value: Date*): Boolean = js.native
+  def weekday(value: js.Date*): Boolean = js.native
   /**
     * Checks if the given date objects' day is weekday.
     */
-  def weekday(value: js.Array[Date]): Boolean = js.native
+  def weekday(value: js.Array[js.Date]): Boolean = js.native
   /**
     * Checks if the given date objects' day is weekend.
     */
-  def weekend(value: Date*): Boolean = js.native
+  def weekend(value: js.Date*): Boolean = js.native
   /**
     * Checks if the given date objects' day is weekend.
     */
-  def weekend(value: js.Array[Date]): Boolean = js.native
+  def weekend(value: js.Array[js.Date]): Boolean = js.native
   //#endregion
   //#region Object checks
   /**
@@ -521,10 +520,10 @@ trait IsStaticApi extends js.Object {
   /**
     * Checks if the given date object indicate yesterday.
     */
-  def yesterday(value: Date*): Boolean = js.native
+  def yesterday(value: js.Date*): Boolean = js.native
   /**
     * Checks if the given date object indicate yesterday.
     */
-  def yesterday(value: js.Array[Date]): Boolean = js.native
+  def yesterday(value: js.Array[js.Date]): Boolean = js.native
 }
 

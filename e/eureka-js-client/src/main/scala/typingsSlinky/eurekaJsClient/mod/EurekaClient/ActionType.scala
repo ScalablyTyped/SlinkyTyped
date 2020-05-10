@@ -13,12 +13,10 @@ trait ActionType extends js.Object
 
 object ActionType {
   @scala.inline
-  def ADDED: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.ADDED = this.cast("ADDED")
+  def ADDED: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.ADDED = "ADDED".asInstanceOf[typingsSlinky.eurekaJsClient.eurekaJsClientStrings.ADDED]
   @scala.inline
-  def DELETED: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.DELETED = this.cast("DELETED")
+  def DELETED: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.DELETED = "DELETED".asInstanceOf[typingsSlinky.eurekaJsClient.eurekaJsClientStrings.DELETED]
   @scala.inline
-  def MODIFIED: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.MODIFIED = this.cast("MODIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def MODIFIED: typingsSlinky.eurekaJsClient.eurekaJsClientStrings.MODIFIED = "MODIFIED".asInstanceOf[typingsSlinky.eurekaJsClient.eurekaJsClientStrings.MODIFIED]
 }
 

@@ -49,7 +49,7 @@ trait RTCDtmfSender extends EventTarget {
   def removeEventListener_tonechange(
     `type`: tonechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ RTCDTMFToneChangeEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

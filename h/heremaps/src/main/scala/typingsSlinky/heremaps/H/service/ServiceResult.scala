@@ -12,30 +12,64 @@ import scala.scalajs.js.annotation._
 /**
   * This type encapsulates a response object provider by a HERE platform service.
   */
+@js.native
 trait ServiceResult
   extends /* key */ StringDictionary[js.Any] {
-  var Response: js.UndefOr[AnonIsolines] = js.undefined
-  var response: js.UndefOr[AnonLanguage] = js.undefined
-  var results: js.UndefOr[AnonItems] = js.undefined
-  var search: js.UndefOr[AnonContext] = js.undefined
+  var Response: js.UndefOr[AnonIsolines] = js.native
+  var response: js.UndefOr[AnonLanguage] = js.native
+  var results: js.UndefOr[AnonItems] = js.native
+  var search: js.UndefOr[AnonContext] = js.native
 }
 
 object ServiceResult {
   @scala.inline
-  def apply(
-    Response: AnonIsolines = null,
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    response: AnonLanguage = null,
-    results: AnonItems = null,
-    search: AnonContext = null
-  ): ServiceResult = {
+  def apply(): ServiceResult = {
     val __obj = js.Dynamic.literal()
-    if (Response != null) __obj.updateDynamic("Response")(Response.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (response != null) __obj.updateDynamic("response")(response.asInstanceOf[js.Any])
-    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
-    if (search != null) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceResult]
   }
+  @scala.inline
+  implicit class ServiceResultOps[Self <: ServiceResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponse(value: AnonIsolines): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Response")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Response")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResults(value: AnonItems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearch(value: AnonContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

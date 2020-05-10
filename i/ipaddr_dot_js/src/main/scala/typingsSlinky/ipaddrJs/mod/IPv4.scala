@@ -1,6 +1,5 @@
 package typingsSlinky.ipaddrJs.mod
 
-import typingsSlinky.ipaddrJs.ipaddrJsBooleans.`false`
 import typingsSlinky.ipaddrJs.ipaddrJsStrings.ipv4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,16 +12,10 @@ class IPv4 protected () extends IP {
   def kind(): ipv4 = js.native
   def `match`(addr: IPv4, bits: Double): Boolean = js.native
   def `match`(mask: js.Tuple2[IPv4, Double]): Boolean = js.native
-  /* CompleteClass */
-  override def prefixLengthFromSubnetMask(): Double | `false` = js.native
   def range(): IPv4Range = js.native
   def subnetMatch(rangeList: RangeList[IPv4]): String = js.native
   def subnetMatch(rangeList: RangeList[IPv4], defaultName: String): String = js.native
-  /* CompleteClass */
-  override def toByteArray(): js.Array[Double] = js.native
   def toIPv4MappedAddress(): IPv6 = js.native
-  /* CompleteClass */
-  override def toNormalizedString(): String = js.native
 }
 
 /* static members */

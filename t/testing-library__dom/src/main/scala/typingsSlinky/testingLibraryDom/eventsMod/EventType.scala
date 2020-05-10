@@ -93,172 +93,170 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  def abort: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.abort = this.cast("abort")
+  def abort: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.abort = "abort".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.abort]
   @scala.inline
-  def animationEnd: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.animationEnd = this.cast("animationEnd")
+  def animationEnd: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.animationEnd = "animationEnd".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.animationEnd]
   @scala.inline
-  def animationIteration: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.animationIteration = this.cast("animationIteration")
+  def animationIteration: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.animationIteration = "animationIteration".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.animationIteration]
   @scala.inline
-  def animationStart: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.animationStart = this.cast("animationStart")
+  def animationStart: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.animationStart = "animationStart".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.animationStart]
   @scala.inline
-  def blur: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.blur = this.cast("blur")
+  def blur: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.blur = "blur".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.blur]
   @scala.inline
-  def canPlay: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.canPlay = this.cast("canPlay")
+  def canPlay: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.canPlay = "canPlay".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.canPlay]
   @scala.inline
-  def canPlayThrough: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.canPlayThrough = this.cast("canPlayThrough")
+  def canPlayThrough: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.canPlayThrough = "canPlayThrough".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.canPlayThrough]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def change: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.change = "change".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.change]
   @scala.inline
-  def change: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.change = this.cast("change")
+  def click: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.click = "click".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.click]
   @scala.inline
-  def click: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.click = this.cast("click")
+  def compositionEnd: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.compositionEnd = "compositionEnd".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.compositionEnd]
   @scala.inline
-  def compositionEnd: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.compositionEnd = this.cast("compositionEnd")
+  def compositionStart: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.compositionStart = "compositionStart".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.compositionStart]
   @scala.inline
-  def compositionStart: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.compositionStart = this.cast("compositionStart")
+  def compositionUpdate: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.compositionUpdate = "compositionUpdate".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.compositionUpdate]
   @scala.inline
-  def compositionUpdate: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.compositionUpdate = this.cast("compositionUpdate")
+  def contextMenu: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.contextMenu = "contextMenu".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.contextMenu]
   @scala.inline
-  def contextMenu: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.contextMenu = this.cast("contextMenu")
+  def copy: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.copy = "copy".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.copy]
   @scala.inline
-  def copy: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.copy = this.cast("copy")
+  def cut: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.cut = "cut".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.cut]
   @scala.inline
-  def cut: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.cut = this.cast("cut")
+  def dblClick: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dblClick = "dblClick".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dblClick]
   @scala.inline
-  def dblClick: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dblClick = this.cast("dblClick")
+  def doubleClick: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.doubleClick = "doubleClick".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.doubleClick]
   @scala.inline
-  def doubleClick: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.doubleClick = this.cast("doubleClick")
+  def drag: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.drag = "drag".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.drag]
   @scala.inline
-  def drag: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.drag = this.cast("drag")
+  def dragEnd: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragEnd = "dragEnd".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragEnd]
   @scala.inline
-  def dragEnd: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragEnd = this.cast("dragEnd")
+  def dragEnter: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragEnter = "dragEnter".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragEnter]
   @scala.inline
-  def dragEnter: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragEnter = this.cast("dragEnter")
+  def dragExit: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragExit = "dragExit".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragExit]
   @scala.inline
-  def dragExit: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragExit = this.cast("dragExit")
+  def dragLeave: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragLeave = "dragLeave".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragLeave]
   @scala.inline
-  def dragLeave: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragLeave = this.cast("dragLeave")
+  def dragOver: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragOver = "dragOver".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragOver]
   @scala.inline
-  def dragOver: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragOver = this.cast("dragOver")
+  def dragStart: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragStart = "dragStart".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragStart]
   @scala.inline
-  def dragStart: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.dragStart = this.cast("dragStart")
+  def drop: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.drop = "drop".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.drop]
   @scala.inline
-  def drop: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.drop = this.cast("drop")
+  def durationChange: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.durationChange = "durationChange".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.durationChange]
   @scala.inline
-  def durationChange: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.durationChange = this.cast("durationChange")
+  def emptied: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.emptied = "emptied".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.emptied]
   @scala.inline
-  def emptied: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.emptied = this.cast("emptied")
+  def encrypted: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.encrypted = "encrypted".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.encrypted]
   @scala.inline
-  def encrypted: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.encrypted = this.cast("encrypted")
+  def ended: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.ended = "ended".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.ended]
   @scala.inline
-  def ended: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.ended = this.cast("ended")
+  def error: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.error = "error".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.error]
   @scala.inline
-  def error: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.error = this.cast("error")
+  def focus: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.focus = "focus".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.focus]
   @scala.inline
-  def focus: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.focus = this.cast("focus")
+  def focusIn: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.focusIn = "focusIn".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.focusIn]
   @scala.inline
-  def focusIn: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.focusIn = this.cast("focusIn")
+  def focusOut: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.focusOut = "focusOut".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.focusOut]
   @scala.inline
-  def focusOut: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.focusOut = this.cast("focusOut")
+  def gotPointerCapture: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.gotPointerCapture = "gotPointerCapture".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.gotPointerCapture]
   @scala.inline
-  def gotPointerCapture: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.gotPointerCapture = this.cast("gotPointerCapture")
+  def input: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.input = "input".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.input]
   @scala.inline
-  def input: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.input = this.cast("input")
+  def invalid: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.invalid = "invalid".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.invalid]
   @scala.inline
-  def invalid: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.invalid = this.cast("invalid")
+  def keyDown: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.keyDown = "keyDown".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.keyDown]
   @scala.inline
-  def keyDown: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.keyDown = this.cast("keyDown")
+  def keyPress: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.keyPress = "keyPress".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.keyPress]
   @scala.inline
-  def keyPress: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.keyPress = this.cast("keyPress")
+  def keyUp: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.keyUp = "keyUp".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.keyUp]
   @scala.inline
-  def keyUp: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.keyUp = this.cast("keyUp")
+  def load: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.load = "load".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.load]
   @scala.inline
-  def load: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.load = this.cast("load")
+  def loadStart: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.loadStart = "loadStart".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.loadStart]
   @scala.inline
-  def loadStart: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.loadStart = this.cast("loadStart")
+  def loadedData: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.loadedData = "loadedData".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.loadedData]
   @scala.inline
-  def loadedData: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.loadedData = this.cast("loadedData")
+  def loadedMetadata: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.loadedMetadata = "loadedMetadata".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.loadedMetadata]
   @scala.inline
-  def loadedMetadata: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.loadedMetadata = this.cast("loadedMetadata")
+  def lostPointerCapture: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.lostPointerCapture = "lostPointerCapture".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.lostPointerCapture]
   @scala.inline
-  def lostPointerCapture: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.lostPointerCapture = this.cast("lostPointerCapture")
+  def mouseDown: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseDown = "mouseDown".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseDown]
   @scala.inline
-  def mouseDown: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseDown = this.cast("mouseDown")
+  def mouseEnter: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseEnter = "mouseEnter".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseEnter]
   @scala.inline
-  def mouseEnter: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseEnter = this.cast("mouseEnter")
+  def mouseLeave: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseLeave = "mouseLeave".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseLeave]
   @scala.inline
-  def mouseLeave: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseLeave = this.cast("mouseLeave")
+  def mouseMove: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseMove = "mouseMove".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseMove]
   @scala.inline
-  def mouseMove: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseMove = this.cast("mouseMove")
+  def mouseOut: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseOut = "mouseOut".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseOut]
   @scala.inline
-  def mouseOut: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseOut = this.cast("mouseOut")
+  def mouseOver: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseOver = "mouseOver".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseOver]
   @scala.inline
-  def mouseOver: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseOver = this.cast("mouseOver")
+  def mouseUp: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseUp = "mouseUp".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseUp]
   @scala.inline
-  def mouseUp: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.mouseUp = this.cast("mouseUp")
+  def paste: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.paste = "paste".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.paste]
   @scala.inline
-  def paste: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.paste = this.cast("paste")
+  def pause: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pause = "pause".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pause]
   @scala.inline
-  def pause: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pause = this.cast("pause")
+  def play: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.play = "play".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.play]
   @scala.inline
-  def play: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.play = this.cast("play")
+  def playing: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.playing = "playing".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.playing]
   @scala.inline
-  def playing: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.playing = this.cast("playing")
+  def pointerCancel: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerCancel = "pointerCancel".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerCancel]
   @scala.inline
-  def pointerCancel: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerCancel = this.cast("pointerCancel")
+  def pointerDown: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerDown = "pointerDown".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerDown]
   @scala.inline
-  def pointerDown: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerDown = this.cast("pointerDown")
+  def pointerEnter: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerEnter = "pointerEnter".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerEnter]
   @scala.inline
-  def pointerEnter: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerEnter = this.cast("pointerEnter")
+  def pointerLeave: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerLeave = "pointerLeave".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerLeave]
   @scala.inline
-  def pointerLeave: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerLeave = this.cast("pointerLeave")
+  def pointerMove: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerMove = "pointerMove".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerMove]
   @scala.inline
-  def pointerMove: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerMove = this.cast("pointerMove")
+  def pointerOut: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerOut = "pointerOut".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerOut]
   @scala.inline
-  def pointerOut: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerOut = this.cast("pointerOut")
+  def pointerOver: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerOver = "pointerOver".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerOver]
   @scala.inline
-  def pointerOver: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerOver = this.cast("pointerOver")
+  def pointerUp: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerUp = "pointerUp".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerUp]
   @scala.inline
-  def pointerUp: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.pointerUp = this.cast("pointerUp")
+  def popState: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.popState = "popState".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.popState]
   @scala.inline
-  def popState: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.popState = this.cast("popState")
+  def progress: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.progress = "progress".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.progress]
   @scala.inline
-  def progress: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.progress = this.cast("progress")
+  def rateChange: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.rateChange = "rateChange".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.rateChange]
   @scala.inline
-  def rateChange: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.rateChange = this.cast("rateChange")
+  def reset: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.reset = "reset".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.reset]
   @scala.inline
-  def reset: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.reset = this.cast("reset")
+  def scroll: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.scroll = "scroll".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.scroll]
   @scala.inline
-  def scroll: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.scroll = this.cast("scroll")
+  def seeked: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.seeked = "seeked".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.seeked]
   @scala.inline
-  def seeked: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.seeked = this.cast("seeked")
+  def seeking: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.seeking = "seeking".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.seeking]
   @scala.inline
-  def seeking: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.seeking = this.cast("seeking")
+  def select: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.select = "select".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.select]
   @scala.inline
-  def select: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.select = this.cast("select")
+  def stalled: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.stalled = "stalled".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.stalled]
   @scala.inline
-  def stalled: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.stalled = this.cast("stalled")
+  def submit: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.submit = "submit".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.submit]
   @scala.inline
-  def submit: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.submit = this.cast("submit")
+  def suspend: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.suspend = "suspend".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.suspend]
   @scala.inline
-  def suspend: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.suspend = this.cast("suspend")
+  def timeUpdate: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.timeUpdate = "timeUpdate".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.timeUpdate]
   @scala.inline
-  def timeUpdate: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.timeUpdate = this.cast("timeUpdate")
+  def touchCancel: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchCancel = "touchCancel".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchCancel]
   @scala.inline
-  def touchCancel: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchCancel = this.cast("touchCancel")
+  def touchEnd: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchEnd = "touchEnd".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchEnd]
   @scala.inline
-  def touchEnd: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchEnd = this.cast("touchEnd")
+  def touchMove: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchMove = "touchMove".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchMove]
   @scala.inline
-  def touchMove: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchMove = this.cast("touchMove")
+  def touchStart: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchStart = "touchStart".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchStart]
   @scala.inline
-  def touchStart: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.touchStart = this.cast("touchStart")
+  def transitionEnd: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.transitionEnd = "transitionEnd".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.transitionEnd]
   @scala.inline
-  def transitionEnd: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.transitionEnd = this.cast("transitionEnd")
+  def volumeChange: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.volumeChange = "volumeChange".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.volumeChange]
   @scala.inline
-  def volumeChange: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.volumeChange = this.cast("volumeChange")
+  def waiting: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.waiting = "waiting".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.waiting]
   @scala.inline
-  def waiting: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.waiting = this.cast("waiting")
-  @scala.inline
-  def wheel: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.wheel = this.cast("wheel")
+  def wheel: typingsSlinky.testingLibraryDom.testingLibraryDomStrings.wheel = "wheel".asInstanceOf[typingsSlinky.testingLibraryDom.testingLibraryDomStrings.wheel]
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.jssha.mod
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,12 +18,12 @@ trait jsSHA
 Instantiable2[
       /* variant */ String, 
       (/* inputFormat */ ArrayBufferDataFormat) | (/* inputFormat */ StringDataFormat), 
-      Hasher[ArrayBuffer | String]
+      Hasher[js.typedarray.ArrayBuffer | String]
     ]
      with Instantiable3[
       /* variant */ String, 
       (/* inputFormat */ ArrayBufferDataFormat) | (/* inputFormat */ StringDataFormat), 
       /* options */ Options, 
-      Hasher[ArrayBuffer | String]
+      Hasher[js.typedarray.ArrayBuffer | String]
     ]
 

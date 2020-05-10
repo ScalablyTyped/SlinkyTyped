@@ -12,11 +12,11 @@ trait ApplicationAppversionLifecycle extends js.Object {
     */
   var deleteSourceFromS3: js.UndefOr[Input[Boolean]] = js.native
   /**
-    * The number of days to retain an application version.
+    * The number of days to retain an application version ('max_age_in_days' and 'max_count' cannot be enabled simultaneously.).
     */
   var maxAgeInDays: js.UndefOr[Input[Double]] = js.native
   /**
-    * The maximum number of application versions to retain.
+    * The maximum number of application versions to retain ('max_age_in_days' and 'max_count' cannot be enabled simultaneously.).
     */
   var maxCount: js.UndefOr[Input[Double]] = js.native
   /**
@@ -27,17 +27,59 @@ trait ApplicationAppversionLifecycle extends js.Object {
 
 object ApplicationAppversionLifecycle {
   @scala.inline
-  def apply(
-    serviceRole: Input[String],
-    deleteSourceFromS3: Input[Boolean] = null,
-    maxAgeInDays: Input[Double] = null,
-    maxCount: Input[Double] = null
-  ): ApplicationAppversionLifecycle = {
+  def apply(serviceRole: Input[String]): ApplicationAppversionLifecycle = {
     val __obj = js.Dynamic.literal(serviceRole = serviceRole.asInstanceOf[js.Any])
-    if (deleteSourceFromS3 != null) __obj.updateDynamic("deleteSourceFromS3")(deleteSourceFromS3.asInstanceOf[js.Any])
-    if (maxAgeInDays != null) __obj.updateDynamic("maxAgeInDays")(maxAgeInDays.asInstanceOf[js.Any])
-    if (maxCount != null) __obj.updateDynamic("maxCount")(maxCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplicationAppversionLifecycle]
   }
+  @scala.inline
+  implicit class ApplicationAppversionLifecycleOps[Self <: ApplicationAppversionLifecycle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceRole(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteSourceFromS3(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteSourceFromS3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteSourceFromS3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteSourceFromS3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAgeInDays(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAgeInDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAgeInDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAgeInDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxCount(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

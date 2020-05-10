@@ -26,18 +26,65 @@ trait Radios extends js.Object {
 
 object Radios {
   @scala.inline
-  def apply(
-    bluetooth: js.UndefOr[scala.Boolean] = js.undefined,
-    gps: js.UndefOr[scala.Boolean] = js.undefined,
-    nfc: js.UndefOr[scala.Boolean] = js.undefined,
-    wifi: js.UndefOr[scala.Boolean] = js.undefined
-  ): Radios = {
+  def apply(): Radios = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bluetooth)) __obj.updateDynamic("bluetooth")(bluetooth.asInstanceOf[js.Any])
-    if (!js.isUndefined(gps)) __obj.updateDynamic("gps")(gps.asInstanceOf[js.Any])
-    if (!js.isUndefined(nfc)) __obj.updateDynamic("nfc")(nfc.asInstanceOf[js.Any])
-    if (!js.isUndefined(wifi)) __obj.updateDynamic("wifi")(wifi.asInstanceOf[js.Any])
     __obj.asInstanceOf[Radios]
   }
+  @scala.inline
+  implicit class RadiosOps[Self <: Radios] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBluetooth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetooth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBluetooth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bluetooth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGps(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNfc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nfc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNfc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nfc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWifi(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wifi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWifi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wifi")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

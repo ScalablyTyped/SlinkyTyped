@@ -16,18 +16,16 @@ trait KeyboardType extends _KeyboardTypeOptions
 
 object KeyboardType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `decimal-pad`: typingsSlinky.reactNative.reactNativeStrings.`decimal-pad` = "decimal-pad".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.`decimal-pad`]
   @scala.inline
-  def `decimal-pad`: typingsSlinky.reactNative.reactNativeStrings.`decimal-pad` = this.cast("decimal-pad")
+  def default: typingsSlinky.reactNative.reactNativeStrings.default = "default".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.default]
   @scala.inline
-  def default: typingsSlinky.reactNative.reactNativeStrings.default = this.cast("default")
+  def `email-address`: typingsSlinky.reactNative.reactNativeStrings.`email-address` = "email-address".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.`email-address`]
   @scala.inline
-  def `email-address`: typingsSlinky.reactNative.reactNativeStrings.`email-address` = this.cast("email-address")
+  def `number-pad`: typingsSlinky.reactNative.reactNativeStrings.`number-pad` = "number-pad".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.`number-pad`]
   @scala.inline
-  def `number-pad`: typingsSlinky.reactNative.reactNativeStrings.`number-pad` = this.cast("number-pad")
+  def numeric: typingsSlinky.reactNative.reactNativeStrings.numeric = "numeric".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.numeric]
   @scala.inline
-  def numeric: typingsSlinky.reactNative.reactNativeStrings.numeric = this.cast("numeric")
-  @scala.inline
-  def `phone-pad`: typingsSlinky.reactNative.reactNativeStrings.`phone-pad` = this.cast("phone-pad")
+  def `phone-pad`: typingsSlinky.reactNative.reactNativeStrings.`phone-pad` = "phone-pad".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.`phone-pad`]
 }
 

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MINERAL_DENSITY_PROBABILITY")
 @js.native
-object MINERAL_DENSITY_PROBABILITY extends /* level */ NumberDictionary[Double] {
+object MINERAL_DENSITY_PROBABILITY extends /* rcl */ NumberDictionary[Double] {
   var `1`: Double = js.native
   var `2`: Double = js.native
   var `3`: Double = js.native

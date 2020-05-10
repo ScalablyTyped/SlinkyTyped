@@ -14,14 +14,12 @@ trait AccessRoleWithoutNone extends js.Object
 
 object AccessRoleWithoutNone {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def freeBusyReader: typingsSlinky.gapiCalendar.gapiCalendarStrings.freeBusyReader = "freeBusyReader".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.freeBusyReader]
   @scala.inline
-  def freeBusyReader: typingsSlinky.gapiCalendar.gapiCalendarStrings.freeBusyReader = this.cast("freeBusyReader")
+  def owner: typingsSlinky.gapiCalendar.gapiCalendarStrings.owner = "owner".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.owner]
   @scala.inline
-  def owner: typingsSlinky.gapiCalendar.gapiCalendarStrings.owner = this.cast("owner")
+  def reader: typingsSlinky.gapiCalendar.gapiCalendarStrings.reader = "reader".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.reader]
   @scala.inline
-  def reader: typingsSlinky.gapiCalendar.gapiCalendarStrings.reader = this.cast("reader")
-  @scala.inline
-  def writer: typingsSlinky.gapiCalendar.gapiCalendarStrings.writer = this.cast("writer")
+  def writer: typingsSlinky.gapiCalendar.gapiCalendarStrings.writer = "writer".asInstanceOf[typingsSlinky.gapiCalendar.gapiCalendarStrings.writer]
 }
 

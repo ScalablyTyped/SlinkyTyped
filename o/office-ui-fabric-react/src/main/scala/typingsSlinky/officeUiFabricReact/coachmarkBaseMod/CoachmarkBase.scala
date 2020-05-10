@@ -1,13 +1,13 @@
 package typingsSlinky.officeUiFabricReact.coachmarkBaseMod
 
+import org.scalajs.dom.raw.HTMLElement
+import slinky.web.SyntheticKeyboardEvent
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.officeUiFabricReact.PartialICoachmarkProps
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmark
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
-import typingsSlinky.react.mod.KeyboardEvent
+import typingsSlinky.react.mod.Component
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +15,13 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/components/Coachmark/Coachmark.base", "CoachmarkBase")
 @js.native
 class CoachmarkBase protected ()
-  extends BaseComponent[ICoachmarkProps, ICoachmarkState]
+  extends Component[ICoachmarkProps, ICoachmarkState, js.Any]
      with ICoachmark {
   def this(props: ICoachmarkProps) = this()
   var _addListeners: js.Any = js.native
   var _addProximityHandler: js.Any = js.native
   var _ariaAlertContainer: js.Any = js.native
+  var _async: js.Any = js.native
   val _beakDirection: js.Any = js.native
   var _childrenContainer: js.Any = js.native
   var _dismissOnLostFocus: js.Any = js.native
@@ -30,6 +31,7 @@ class CoachmarkBase protected ()
     */
   var _entityHost: js.Any = js.native
   var _entityInnerHostElement: js.Any = js.native
+  var _events: js.Any = js.native
   var _getBounds: js.Any = js.native
   var _isInsideElement: js.Any = js.native
   var _onFocusHandler: js.Any = js.native
@@ -51,12 +53,14 @@ class CoachmarkBase protected ()
   def componentDidMount_MCoachmarkBase(): Unit = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MCoachmarkBase(prevProps: ICoachmarkProps, prevState: ICoachmarkState): Unit = js.native
+  @JSName("componentWillUnmount")
+  def componentWillUnmount_MCoachmarkBase(): Unit = js.native
   @JSName("dismiss")
   def dismiss_MCoachmarkBase(): Unit = js.native
   @JSName("dismiss")
-  def dismiss_MCoachmarkBase(ev: KeyboardEvent[HTMLElement]): Unit = js.native
+  def dismiss_MCoachmarkBase(ev: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
   @JSName("dismiss")
-  def dismiss_MCoachmarkBase(ev: typingsSlinky.react.mod.MouseEvent[HTMLElement, MouseEvent]): Unit = js.native
+  def dismiss_MCoachmarkBase(ev: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   @JSName("dismiss")
   def dismiss_MCoachmarkBase(ev: Event_): Unit = js.native
   @JSName("shouldComponentUpdate")

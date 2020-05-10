@@ -12,10 +12,8 @@ trait IssuingDisputeReason extends js.Object
 
 object IssuingDisputeReason {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fraudlent: typingsSlinky.stripe.stripeStrings.fraudlent = "fraudlent".asInstanceOf[typingsSlinky.stripe.stripeStrings.fraudlent]
   @scala.inline
-  def fraudlent: typingsSlinky.stripe.stripeStrings.fraudlent = this.cast("fraudlent")
-  @scala.inline
-  def other: typingsSlinky.stripe.stripeStrings.other = this.cast("other")
+  def other: typingsSlinky.stripe.stripeStrings.other = "other".asInstanceOf[typingsSlinky.stripe.stripeStrings.other]
 }
 

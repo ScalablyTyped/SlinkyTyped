@@ -2,8 +2,8 @@ package typingsSlinky.d3Tip.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.d3Array.mod.Primitive
-import typingsSlinky.std.SVGElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,19 +42,12 @@ trait Tooltip extends js.Object {
     ]
   ): Tooltip = js.native
   def rootElement(): HTMLElement = js.native
-  def rootElement(element: typingsSlinky.std.HTMLElement): Tooltip = js.native
-  def rootElement[Datum](
-    func: js.Function3[
-      /* datum */ Datum, 
-      /* index */ Double, 
-      /* outerIndex */ Double, 
-      typingsSlinky.std.HTMLElement
-    ]
-  ): Tooltip = js.native
+  def rootElement(element: HTMLElement): Tooltip = js.native
+  def rootElement[Datum](func: js.Function3[/* datum */ Datum, /* index */ Double, /* outerIndex */ Double, HTMLElement]): Tooltip = js.native
   def show(): Tooltip = js.native
   def show(target: SVGElement): Tooltip = js.native
   def show[Datum](data: js.Array[Datum]): Tooltip = js.native
-  def show[Datum](data: js.Array[Datum], target: org.scalajs.dom.raw.SVGElement): Tooltip = js.native
+  def show[Datum](data: js.Array[Datum], target: SVGElement): Tooltip = js.native
   def style(name: String): String = js.native
   def style(name: String, value: Primitive): Tooltip = js.native
   def style(name: String, value: Primitive, priority: String): Tooltip = js.native

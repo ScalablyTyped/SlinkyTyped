@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeAnnotation */
+@js.native
 trait TSIndexSignature
   extends ASTNode
      with DeclarationKind
@@ -24,12 +25,12 @@ trait TSIndexSignature
      with PrintableKind
      with StatementKind
      with TSHasOptionalTypeAnnotationKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var parameters: js.Array[IdentifierKind]
-  var readonly: js.UndefOr[Boolean] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSIndexSignature
-  var typeAnnotation: js.UndefOr[TSTypeAnnotationKind | Null] = js.undefined
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var parameters: js.Array[IdentifierKind] = js.native
+  var readonly: js.UndefOr[Boolean] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSIndexSignature = js.native
+  var typeAnnotation: js.UndefOr[TSTypeAnnotationKind | Null] = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSIndexSignature")

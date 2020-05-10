@@ -13,12 +13,10 @@ trait DistTag extends js.Object
 
 object DistTag {
   @scala.inline
-  def canary: typingsSlinky.ionic.ionicStrings.canary = this.cast("canary")
+  def canary: typingsSlinky.ionic.ionicStrings.canary = "canary".asInstanceOf[typingsSlinky.ionic.ionicStrings.canary]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def latest: typingsSlinky.ionic.ionicStrings.latest = "latest".asInstanceOf[typingsSlinky.ionic.ionicStrings.latest]
   @scala.inline
-  def latest: typingsSlinky.ionic.ionicStrings.latest = this.cast("latest")
-  @scala.inline
-  def testing: typingsSlinky.ionic.ionicStrings.testing = this.cast("testing")
+  def testing: typingsSlinky.ionic.ionicStrings.testing = "testing".asInstanceOf[typingsSlinky.ionic.ionicStrings.testing]
 }
 

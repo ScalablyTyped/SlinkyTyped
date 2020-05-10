@@ -8,7 +8,7 @@ import typingsSlinky.androiduix.android.graphics.drawable.AnimationDrawable.Anim
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable.Callback
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable.ConstantState
 import typingsSlinky.androiduix.android.graphics.drawable.DrawableContainer.DrawableContainerState
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,8 +65,6 @@ class AnimationDrawable ()
   /* InferMemberOverrides */
   override def isAutoMirrored(): Boolean = js.native
   def isOneShot(): Boolean = js.native
-  /* CompleteClass */
-  override def isRunning(): Boolean = js.native
   /* InferMemberOverrides */
   override def isStateful(): Boolean = js.native
   /* InferMemberOverrides */
@@ -84,8 +82,6 @@ class AnimationDrawable ()
   /* protected */ override def onLevelChange(level: Double): Boolean = js.native
   /* InferMemberOverrides */
   /* protected */ override def onStateChange(state: js.Array[Double]): Boolean = js.native
-  /* CompleteClass */
-  override def run(): js.Any = js.native
   /* InferMemberOverrides */
   override def scheduleSelf(what: js.Any, when: js.Any): Unit = js.native
   /* InferMemberOverrides */
@@ -110,10 +106,6 @@ class AnimationDrawable ()
   override def setState(stateSet: js.Array[Double]): Boolean = js.native
   /* InferMemberOverrides */
   override def setVisible(visible: Boolean, restart: Boolean): Boolean = js.native
-  /* CompleteClass */
-  override def start(): Unit = js.native
-  /* CompleteClass */
-  override def stop(): Unit = js.native
   /* InferMemberOverrides */
   override def unscheduleSelf(what: js.Any): Unit = js.native
   def unscheduleSelf(what: Runnable): Unit = js.native

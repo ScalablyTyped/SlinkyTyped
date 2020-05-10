@@ -12,10 +12,8 @@ trait OptionsHeaderShapeValue extends js.Object
 
 object OptionsHeaderShapeValue {
   @scala.inline
-  def callout: typingsSlinky.highcharts.highchartsStrings.callout = this.cast("callout")
+  def callout: typingsSlinky.highcharts.highchartsStrings.callout = "callout".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.callout]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def square: typingsSlinky.highcharts.highchartsStrings.square = this.cast("square")
+  def square: typingsSlinky.highcharts.highchartsStrings.square = "square".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.square]
 }
 

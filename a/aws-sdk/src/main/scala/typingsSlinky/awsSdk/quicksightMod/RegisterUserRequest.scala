@@ -47,16 +47,84 @@ object RegisterUserRequest {
     Email: String,
     IdentityType: IdentityType,
     Namespace: Namespace,
-    UserRole: UserRole,
-    IamArn: String = null,
-    SessionName: RoleSessionName = null,
-    UserName: UserName_ = null
+    UserRole: UserRole
   ): RegisterUserRequest = {
     val __obj = js.Dynamic.literal(AwsAccountId = AwsAccountId.asInstanceOf[js.Any], Email = Email.asInstanceOf[js.Any], IdentityType = IdentityType.asInstanceOf[js.Any], Namespace = Namespace.asInstanceOf[js.Any], UserRole = UserRole.asInstanceOf[js.Any])
-    if (IamArn != null) __obj.updateDynamic("IamArn")(IamArn.asInstanceOf[js.Any])
-    if (SessionName != null) __obj.updateDynamic("SessionName")(SessionName.asInstanceOf[js.Any])
-    if (UserName != null) __obj.updateDynamic("UserName")(UserName.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterUserRequest]
   }
+  @scala.inline
+  implicit class RegisterUserRequestOps[Self <: RegisterUserRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwsAccountId(value: AwsAccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdentityType(value: IdentityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IdentityType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamespace(value: Namespace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Namespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserRole(value: UserRole): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIamArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionName(value: RoleSessionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserName(value: UserName_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

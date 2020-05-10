@@ -30,20 +30,77 @@ trait AccountLimit extends js.Object {
 
 object AccountLimit {
   @scala.inline
-  def apply(
-    CodeSizeUnzipped: Int | Double = null,
-    CodeSizeZipped: Int | Double = null,
-    ConcurrentExecutions: Int | Double = null,
-    TotalCodeSize: Int | Double = null,
-    UnreservedConcurrentExecutions: Int | Double = null
-  ): AccountLimit = {
+  def apply(): AccountLimit = {
     val __obj = js.Dynamic.literal()
-    if (CodeSizeUnzipped != null) __obj.updateDynamic("CodeSizeUnzipped")(CodeSizeUnzipped.asInstanceOf[js.Any])
-    if (CodeSizeZipped != null) __obj.updateDynamic("CodeSizeZipped")(CodeSizeZipped.asInstanceOf[js.Any])
-    if (ConcurrentExecutions != null) __obj.updateDynamic("ConcurrentExecutions")(ConcurrentExecutions.asInstanceOf[js.Any])
-    if (TotalCodeSize != null) __obj.updateDynamic("TotalCodeSize")(TotalCodeSize.asInstanceOf[js.Any])
-    if (UnreservedConcurrentExecutions != null) __obj.updateDynamic("UnreservedConcurrentExecutions")(UnreservedConcurrentExecutions.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountLimit]
   }
+  @scala.inline
+  implicit class AccountLimitOps[Self <: AccountLimit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCodeSizeUnzipped(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSizeUnzipped")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeSizeUnzipped: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSizeUnzipped")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodeSizeZipped(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSizeZipped")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodeSizeZipped: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CodeSizeZipped")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConcurrentExecutions(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConcurrentExecutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConcurrentExecutions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConcurrentExecutions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalCodeSize(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCodeSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalCodeSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalCodeSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnreservedConcurrentExecutions(value: UnreservedConcurrentExecutions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnreservedConcurrentExecutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnreservedConcurrentExecutions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnreservedConcurrentExecutions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

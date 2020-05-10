@@ -14,10 +14,29 @@ trait SchemaProjectsSetDefaultNetworkTierRequest extends js.Object {
 
 object SchemaProjectsSetDefaultNetworkTierRequest {
   @scala.inline
-  def apply(networkTier: String = null): SchemaProjectsSetDefaultNetworkTierRequest = {
+  def apply(): SchemaProjectsSetDefaultNetworkTierRequest = {
     val __obj = js.Dynamic.literal()
-    if (networkTier != null) __obj.updateDynamic("networkTier")(networkTier.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProjectsSetDefaultNetworkTierRequest]
   }
+  @scala.inline
+  implicit class SchemaProjectsSetDefaultNetworkTierRequestOps[Self <: SchemaProjectsSetDefaultNetworkTierRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworkTier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkTier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

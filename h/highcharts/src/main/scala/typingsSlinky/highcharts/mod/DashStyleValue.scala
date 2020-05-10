@@ -21,28 +21,26 @@ trait DashStyleValue extends js.Object
 
 object DashStyleValue {
   @scala.inline
-  def Dash: typingsSlinky.highcharts.highchartsStrings.Dash = this.cast("Dash")
+  def Dash: typingsSlinky.highcharts.highchartsStrings.Dash = "Dash".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.Dash]
   @scala.inline
-  def DashDot: typingsSlinky.highcharts.highchartsStrings.DashDot = this.cast("DashDot")
+  def DashDot: typingsSlinky.highcharts.highchartsStrings.DashDot = "DashDot".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.DashDot]
   @scala.inline
-  def Dot: typingsSlinky.highcharts.highchartsStrings.Dot = this.cast("Dot")
+  def Dot: typingsSlinky.highcharts.highchartsStrings.Dot = "Dot".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.Dot]
   @scala.inline
-  def LongDash: typingsSlinky.highcharts.highchartsStrings.LongDash = this.cast("LongDash")
+  def LongDash: typingsSlinky.highcharts.highchartsStrings.LongDash = "LongDash".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.LongDash]
   @scala.inline
-  def LongDashDot: typingsSlinky.highcharts.highchartsStrings.LongDashDot = this.cast("LongDashDot")
+  def LongDashDot: typingsSlinky.highcharts.highchartsStrings.LongDashDot = "LongDashDot".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.LongDashDot]
   @scala.inline
-  def LongDashDotDot: typingsSlinky.highcharts.highchartsStrings.LongDashDotDot = this.cast("LongDashDotDot")
+  def LongDashDotDot: typingsSlinky.highcharts.highchartsStrings.LongDashDotDot = "LongDashDotDot".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.LongDashDotDot]
   @scala.inline
-  def ShortDash: typingsSlinky.highcharts.highchartsStrings.ShortDash = this.cast("ShortDash")
+  def ShortDash: typingsSlinky.highcharts.highchartsStrings.ShortDash = "ShortDash".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.ShortDash]
   @scala.inline
-  def ShortDashDot: typingsSlinky.highcharts.highchartsStrings.ShortDashDot = this.cast("ShortDashDot")
+  def ShortDashDot: typingsSlinky.highcharts.highchartsStrings.ShortDashDot = "ShortDashDot".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.ShortDashDot]
   @scala.inline
-  def ShortDashDotDot: typingsSlinky.highcharts.highchartsStrings.ShortDashDotDot = this.cast("ShortDashDotDot")
+  def ShortDashDotDot: typingsSlinky.highcharts.highchartsStrings.ShortDashDotDot = "ShortDashDotDot".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.ShortDashDotDot]
   @scala.inline
-  def ShortDot: typingsSlinky.highcharts.highchartsStrings.ShortDot = this.cast("ShortDot")
+  def ShortDot: typingsSlinky.highcharts.highchartsStrings.ShortDot = "ShortDot".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.ShortDot]
   @scala.inline
-  def Solid: typingsSlinky.highcharts.highchartsStrings.Solid = this.cast("Solid")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Solid: typingsSlinky.highcharts.highchartsStrings.Solid = "Solid".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.Solid]
 }
 

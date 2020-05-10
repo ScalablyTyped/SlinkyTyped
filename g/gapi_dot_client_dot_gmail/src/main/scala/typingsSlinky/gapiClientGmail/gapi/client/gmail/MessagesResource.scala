@@ -11,33 +11,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MessagesResource extends js.Object {
-  var attachments: AttachmentsResource
+  var attachments: AttachmentsResource = js.native
   /** Deletes many messages by message ID. Provides no guarantees that messages were not already deleted or even existed at all. */
-  def batchDelete(request: AnonAlt): Request_[Unit]
+  def batchDelete(request: AnonAlt): Request_[Unit] = js.native
   /** Modifies the labels on the specified messages. */
-  def batchModify(request: AnonAlt): Request_[Unit]
+  def batchModify(request: AnonAlt): Request_[Unit] = js.native
   /** Immediately and permanently deletes the specified message. This operation cannot be undone. Prefer messages.trash instead. */
-  def delete(request: AnonFields): Request_[Unit]
+  def delete(request: AnonFields): Request_[Unit] = js.native
   /** Gets the specified message. */
-  def get(request: AnonKey): Request_[Message]
+  def get(request: AnonKey): Request_[Message] = js.native
   /**
     * Imports a message into only this user's mailbox, with standard email delivery scanning and classification similar to receiving via SMTP. Does not send
     * a message.
     */
-  def `import`(request: AnonDeleted): Request_[Message]
+  def `import`(request: AnonDeleted): Request_[Message] = js.native
   /** Directly inserts a message into only this user's mailbox similar to IMAP APPEND, bypassing most scanning and classification. Does not send a message. */
-  def insert(request: AnonInternalDateSource): Request_[Message]
+  def insert(request: AnonInternalDateSource): Request_[Message] = js.native
   /** Lists the messages in the user's mailbox. */
-  def list(request: AnonLabelIds): Request_[ListMessagesResponse]
+  def list(request: AnonLabelIds): Request_[ListMessagesResponse] = js.native
   /** Modifies the labels on the specified message. */
-  def modify(request: AnonFields): Request_[Message]
+  def modify(request: AnonFields): Request_[Message] = js.native
   /** Sends the specified message to the recipients in the To, Cc, and Bcc headers. */
-  def send(request: AnonAlt): Request_[Message]
+  def send(request: AnonAlt): Request_[Message] = js.native
   /** Moves the specified message to the trash. */
-  def trash(request: AnonFields): Request_[Message]
+  def trash(request: AnonFields): Request_[Message] = js.native
   /** Removes the specified message from the trash. */
-  def untrash(request: AnonFields): Request_[Message]
+  def untrash(request: AnonFields): Request_[Message] = js.native
 }
 
 object MessagesResource {
@@ -60,5 +61,85 @@ object MessagesResource {
     __obj.updateDynamic("import")(js.Any.fromFunction1(`import`))
     __obj.asInstanceOf[MessagesResource]
   }
+  @scala.inline
+  implicit class MessagesResourceOps[Self <: MessagesResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachments(value: AttachmentsResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBatchDelete(value: AnonAlt => Request_[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchDelete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBatchModify(value: AnonAlt => Request_[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchModify")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonFields => Request_[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonKey => Request_[Message]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withImport(value: AnonDeleted => Request_[Message]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("import")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsert(value: AnonInternalDateSource => Request_[Message]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonLabelIds => Request_[ListMessagesResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withModify(value: AnonFields => Request_[Message]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modify")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSend(value: AnonAlt => Request_[Message]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTrash(value: AnonFields => Request_[Message]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trash")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUntrash(value: AnonFields => Request_[Message]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("untrash")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

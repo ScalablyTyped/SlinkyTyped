@@ -26,11 +26,53 @@ trait InitiateMultipartUploadInput extends js.Object {
 
 object InitiateMultipartUploadInput {
   @scala.inline
-  def apply(accountId: String, vaultName: String, archiveDescription: String = null, partSize: String = null): InitiateMultipartUploadInput = {
+  def apply(accountId: String, vaultName: String): InitiateMultipartUploadInput = {
     val __obj = js.Dynamic.literal(accountId = accountId.asInstanceOf[js.Any], vaultName = vaultName.asInstanceOf[js.Any])
-    if (archiveDescription != null) __obj.updateDynamic("archiveDescription")(archiveDescription.asInstanceOf[js.Any])
-    if (partSize != null) __obj.updateDynamic("partSize")(partSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitiateMultipartUploadInput]
   }
+  @scala.inline
+  implicit class InitiateMultipartUploadInputOps[Self <: InitiateMultipartUploadInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVaultName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vaultName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArchiveDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchiveDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

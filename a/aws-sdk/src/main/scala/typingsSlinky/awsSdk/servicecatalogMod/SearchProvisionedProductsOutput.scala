@@ -22,16 +22,53 @@ trait SearchProvisionedProductsOutput extends js.Object {
 
 object SearchProvisionedProductsOutput {
   @scala.inline
-  def apply(
-    NextPageToken: PageToken = null,
-    ProvisionedProducts: ProvisionedProductAttributes = null,
-    TotalResultsCount: Int | Double = null
-  ): SearchProvisionedProductsOutput = {
+  def apply(): SearchProvisionedProductsOutput = {
     val __obj = js.Dynamic.literal()
-    if (NextPageToken != null) __obj.updateDynamic("NextPageToken")(NextPageToken.asInstanceOf[js.Any])
-    if (ProvisionedProducts != null) __obj.updateDynamic("ProvisionedProducts")(ProvisionedProducts.asInstanceOf[js.Any])
-    if (TotalResultsCount != null) __obj.updateDynamic("TotalResultsCount")(TotalResultsCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchProvisionedProductsOutput]
   }
+  @scala.inline
+  implicit class SearchProvisionedProductsOutputOps[Self <: SearchProvisionedProductsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: PageToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedProducts(value: ProvisionedProductAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedProducts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedProducts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedProducts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalResultsCount(value: TotalResultsCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalResultsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalResultsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalResultsCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

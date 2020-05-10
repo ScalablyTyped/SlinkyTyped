@@ -1,6 +1,5 @@
 package typingsSlinky.jake.mod._Global_.jake
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ class FileList () extends js.Object {
   	 	 * Get rid of any current exclusion rules
     	 */
   def clearExclude(): Unit = js.native
-  def exclude(file: (FileFilter | RegExp | String)*): Unit = js.native
+  def exclude(file: (FileFilter | js.RegExp | String)*): Unit = js.native
   /**
   		 * Excludes file-patterns from the FileList. Should be called with one or more
   		 * pattern for finding file to include in the list. Arguments can be:
@@ -20,7 +19,7 @@ class FileList () extends js.Object {
   		 * 2. Regular expression literals
   		 * 3. Functions to be run on the filename that return a true/false
   		 */
-  def exclude(file: js.Array[FileFilter | RegExp | String]): Unit = js.native
+  def exclude(file: js.Array[FileFilter | js.RegExp | String]): Unit = js.native
   def include(files: String*): Unit = js.native
   /**
   	     * Includes file-patterns in the FileList. Should be called with one or more

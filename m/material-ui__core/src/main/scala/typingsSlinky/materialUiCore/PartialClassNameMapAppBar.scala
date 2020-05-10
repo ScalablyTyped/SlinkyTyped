@@ -20,28 +20,125 @@ trait PartialClassNameMapAppBar extends js.Object {
 
 object PartialClassNameMapAppBar {
   @scala.inline
-  def apply(
-    colorDefault: String = null,
-    colorPrimary: String = null,
-    colorSecondary: String = null,
-    positionAbsolute: String = null,
-    positionFixed: String = null,
-    positionRelative: String = null,
-    positionStatic: String = null,
-    positionSticky: String = null,
-    root: String = null
-  ): PartialClassNameMapAppBar = {
+  def apply(): PartialClassNameMapAppBar = {
     val __obj = js.Dynamic.literal()
-    if (colorDefault != null) __obj.updateDynamic("colorDefault")(colorDefault.asInstanceOf[js.Any])
-    if (colorPrimary != null) __obj.updateDynamic("colorPrimary")(colorPrimary.asInstanceOf[js.Any])
-    if (colorSecondary != null) __obj.updateDynamic("colorSecondary")(colorSecondary.asInstanceOf[js.Any])
-    if (positionAbsolute != null) __obj.updateDynamic("positionAbsolute")(positionAbsolute.asInstanceOf[js.Any])
-    if (positionFixed != null) __obj.updateDynamic("positionFixed")(positionFixed.asInstanceOf[js.Any])
-    if (positionRelative != null) __obj.updateDynamic("positionRelative")(positionRelative.asInstanceOf[js.Any])
-    if (positionStatic != null) __obj.updateDynamic("positionStatic")(positionStatic.asInstanceOf[js.Any])
-    if (positionSticky != null) __obj.updateDynamic("positionSticky")(positionSticky.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialClassNameMapAppBar]
   }
+  @scala.inline
+  implicit class PartialClassNameMapAppBarOps[Self <: PartialClassNameMapAppBar] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColorDefault(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorPrimary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorPrimary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorPrimary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorSecondary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSecondary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorSecondary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSecondary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionAbsolute(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionAbsolute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositionAbsolute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionAbsolute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionFixed(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionFixed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositionFixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionFixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionRelative(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionRelative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositionRelative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionRelative")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionStatic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionStatic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositionStatic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionStatic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositionSticky(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionSticky")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositionSticky: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionSticky")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

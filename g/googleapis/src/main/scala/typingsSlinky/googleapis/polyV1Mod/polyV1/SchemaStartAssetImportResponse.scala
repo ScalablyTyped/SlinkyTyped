@@ -33,18 +33,65 @@ trait SchemaStartAssetImportResponse extends js.Object {
 
 object SchemaStartAssetImportResponse {
   @scala.inline
-  def apply(
-    assetId: String = null,
-    assetImportId: String = null,
-    assetImportMessages: js.Array[SchemaAssetImportMessage] = null,
-    publishUrl: String = null
-  ): SchemaStartAssetImportResponse = {
+  def apply(): SchemaStartAssetImportResponse = {
     val __obj = js.Dynamic.literal()
-    if (assetId != null) __obj.updateDynamic("assetId")(assetId.asInstanceOf[js.Any])
-    if (assetImportId != null) __obj.updateDynamic("assetImportId")(assetImportId.asInstanceOf[js.Any])
-    if (assetImportMessages != null) __obj.updateDynamic("assetImportMessages")(assetImportMessages.asInstanceOf[js.Any])
-    if (publishUrl != null) __obj.updateDynamic("publishUrl")(publishUrl.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaStartAssetImportResponse]
   }
+  @scala.inline
+  implicit class SchemaStartAssetImportResponseOps[Self <: SchemaStartAssetImportResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssetImportId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetImportId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssetImportId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetImportId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssetImportMessages(value: js.Array[SchemaAssetImportMessage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetImportMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssetImportMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assetImportMessages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublishUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublishUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publishUrl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

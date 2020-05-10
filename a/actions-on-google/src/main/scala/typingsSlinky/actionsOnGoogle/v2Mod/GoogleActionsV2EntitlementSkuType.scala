@@ -14,14 +14,12 @@ trait GoogleActionsV2EntitlementSkuType extends js.Object
 
 object GoogleActionsV2EntitlementSkuType {
   @scala.inline
-  def APP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.APP = this.cast("APP")
+  def APP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.APP = "APP".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.APP]
   @scala.inline
-  def IN_APP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.IN_APP = this.cast("IN_APP")
+  def IN_APP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.IN_APP = "IN_APP".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.IN_APP]
   @scala.inline
-  def SUBSCRIPTION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SUBSCRIPTION = this.cast("SUBSCRIPTION")
+  def SUBSCRIPTION: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SUBSCRIPTION = "SUBSCRIPTION".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SUBSCRIPTION]
   @scala.inline
-  def TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED = this.cast("TYPE_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED = "TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED]
 }
 

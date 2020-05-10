@@ -6,33 +6,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ArrayOptions extends js.Object {
-  var sortCollate: js.UndefOr[Function] = js.undefined
-  var sortEquivalents: js.UndefOr[js.Object] = js.undefined
-  var sortIgnore: js.UndefOr[RegExp] = js.undefined
-  var sortIgnoreCase: js.UndefOr[Boolean] = js.undefined
-  var sortNatural: js.UndefOr[Boolean] = js.undefined
-  var sortOrder: js.UndefOr[String] = js.undefined
+  var sortCollate: js.UndefOr[Function] = js.native
+  var sortEquivalents: js.UndefOr[js.Object] = js.native
+  var sortIgnore: js.UndefOr[RegExp] = js.native
+  var sortIgnoreCase: js.UndefOr[Boolean] = js.native
+  var sortNatural: js.UndefOr[Boolean] = js.native
+  var sortOrder: js.UndefOr[String] = js.native
 }
 
 object ArrayOptions {
   @scala.inline
-  def apply(
-    sortCollate: Function = null,
-    sortEquivalents: js.Object = null,
-    sortIgnore: RegExp = null,
-    sortIgnoreCase: js.UndefOr[Boolean] = js.undefined,
-    sortNatural: js.UndefOr[Boolean] = js.undefined,
-    sortOrder: String = null
-  ): ArrayOptions = {
+  def apply(): ArrayOptions = {
     val __obj = js.Dynamic.literal()
-    if (sortCollate != null) __obj.updateDynamic("sortCollate")(sortCollate.asInstanceOf[js.Any])
-    if (sortEquivalents != null) __obj.updateDynamic("sortEquivalents")(sortEquivalents.asInstanceOf[js.Any])
-    if (sortIgnore != null) __obj.updateDynamic("sortIgnore")(sortIgnore.asInstanceOf[js.Any])
-    if (!js.isUndefined(sortIgnoreCase)) __obj.updateDynamic("sortIgnoreCase")(sortIgnoreCase.asInstanceOf[js.Any])
-    if (!js.isUndefined(sortNatural)) __obj.updateDynamic("sortNatural")(sortNatural.asInstanceOf[js.Any])
-    if (sortOrder != null) __obj.updateDynamic("sortOrder")(sortOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArrayOptions]
   }
+  @scala.inline
+  implicit class ArrayOptionsOps[Self <: ArrayOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSortCollate(value: Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortCollate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortCollate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortCollate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortEquivalents(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortEquivalents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortEquivalents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortEquivalents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortIgnore(value: RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortIgnore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortIgnore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortIgnore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortIgnoreCase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortIgnoreCase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortIgnoreCase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortIgnoreCase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortNatural(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortNatural")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortNatural: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortNatural")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortOrder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

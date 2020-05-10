@@ -1,6 +1,7 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.DocumentFragment
 import typingsSlinky.ckeditor.AnonAria
 import typingsSlinky.ckeditor.AnonBottom
 import typingsSlinky.ckeditor.AnonColor
@@ -8,7 +9,6 @@ import typingsSlinky.ckeditor.AnonDisplay
 import typingsSlinky.ckeditor.AnonInput
 import typingsSlinky.ckeditor.AnonStyle
 import typingsSlinky.ckeditor.Window
-import typingsSlinky.std.DocumentFragment
 import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

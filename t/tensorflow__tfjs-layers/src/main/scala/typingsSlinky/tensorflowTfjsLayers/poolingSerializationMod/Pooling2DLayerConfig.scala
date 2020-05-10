@@ -1,49 +1,81 @@
 package typingsSlinky.tensorflowTfjsLayers.poolingSerializationMod
 
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.DataFormatSerialization
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.PaddingMode
-import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyConfigMod.LayerConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Pooling2DLayerConfig extends LayerConfig {
-  var data_format: js.UndefOr[DataFormatSerialization] = js.undefined
-  var padding: js.UndefOr[PaddingMode] = js.undefined
-  var pool_size: js.UndefOr[Double | (js.Tuple2[Double, Double])] = js.undefined
-  var strides: js.UndefOr[Double | (js.Tuple2[Double, Double])] = js.undefined
+  var data_format: js.UndefOr[DataFormatSerialization] = js.native
+  var padding: js.UndefOr[PaddingMode] = js.native
+  var pool_size: js.UndefOr[Double | (js.Tuple2[Double, Double])] = js.native
+  var strides: js.UndefOr[Double | (js.Tuple2[Double, Double])] = js.native
 }
 
 object Pooling2DLayerConfig {
   @scala.inline
-  def apply(
-    batch_input_shape: Shape = null,
-    batch_size: Int | Double = null,
-    data_format: DataFormatSerialization = null,
-    dtype: DataType = null,
-    input_dtype: DataType = null,
-    input_shape: Shape = null,
-    name: String = null,
-    padding: PaddingMode = null,
-    pool_size: Double | (js.Tuple2[Double, Double]) = null,
-    strides: Double | (js.Tuple2[Double, Double]) = null,
-    trainable: js.UndefOr[Boolean] = js.undefined
-  ): Pooling2DLayerConfig = {
+  def apply(): Pooling2DLayerConfig = {
     val __obj = js.Dynamic.literal()
-    if (batch_input_shape != null) __obj.updateDynamic("batch_input_shape")(batch_input_shape.asInstanceOf[js.Any])
-    if (batch_size != null) __obj.updateDynamic("batch_size")(batch_size.asInstanceOf[js.Any])
-    if (data_format != null) __obj.updateDynamic("data_format")(data_format.asInstanceOf[js.Any])
-    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
-    if (input_dtype != null) __obj.updateDynamic("input_dtype")(input_dtype.asInstanceOf[js.Any])
-    if (input_shape != null) __obj.updateDynamic("input_shape")(input_shape.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (pool_size != null) __obj.updateDynamic("pool_size")(pool_size.asInstanceOf[js.Any])
-    if (strides != null) __obj.updateDynamic("strides")(strides.asInstanceOf[js.Any])
-    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pooling2DLayerConfig]
   }
+  @scala.inline
+  implicit class Pooling2DLayerConfigOps[Self <: Pooling2DLayerConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData_format(value: DataFormatSerialization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data_format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData_format: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data_format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: PaddingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPool_size(value: Double | (js.Tuple2[Double, Double])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pool_size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPool_size: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pool_size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrides(value: Double | (js.Tuple2[Double, Double])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strides")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

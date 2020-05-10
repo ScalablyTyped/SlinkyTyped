@@ -15,16 +15,14 @@ trait RoutineStages extends js.Object
 
 object RoutineStages {
   @scala.inline
-  def FAILURE: typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.FAILURE = this.cast("FAILURE")
+  def FAILURE: typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.FAILURE = "FAILURE".asInstanceOf[typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.FAILURE]
   @scala.inline
-  def FULFILL: typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.FULFILL = this.cast("FULFILL")
+  def FULFILL: typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.FULFILL = "FULFILL".asInstanceOf[typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.FULFILL]
   @scala.inline
-  def REQUEST: typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.REQUEST = this.cast("REQUEST")
+  def REQUEST: typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.REQUEST = "REQUEST".asInstanceOf[typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.REQUEST]
   @scala.inline
-  def SUCCESS: typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.SUCCESS = this.cast("SUCCESS")
+  def SUCCESS: typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.SUCCESS = "SUCCESS".asInstanceOf[typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.SUCCESS]
   @scala.inline
-  def TRIGGER: typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.TRIGGER = this.cast("TRIGGER")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TRIGGER: typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.TRIGGER = "TRIGGER".asInstanceOf[typingsSlinky.reduxSagaRoutines.reduxSagaRoutinesStrings.TRIGGER]
 }
 

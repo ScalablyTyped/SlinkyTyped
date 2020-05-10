@@ -15,16 +15,14 @@ trait SupportedDBTypes extends js.Object
 
 object SupportedDBTypes {
   @scala.inline
-  def azuretable: typingsSlinky.cqrsDomain.cqrsDomainStrings.azuretable = this.cast("azuretable")
+  def azuretable: typingsSlinky.cqrsDomain.cqrsDomainStrings.azuretable = "azuretable".asInstanceOf[typingsSlinky.cqrsDomain.cqrsDomainStrings.azuretable]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inmemory: typingsSlinky.cqrsDomain.cqrsDomainStrings.inmemory = "inmemory".asInstanceOf[typingsSlinky.cqrsDomain.cqrsDomainStrings.inmemory]
   @scala.inline
-  def inmemory: typingsSlinky.cqrsDomain.cqrsDomainStrings.inmemory = this.cast("inmemory")
+  def mongodb: typingsSlinky.cqrsDomain.cqrsDomainStrings.mongodb = "mongodb".asInstanceOf[typingsSlinky.cqrsDomain.cqrsDomainStrings.mongodb]
   @scala.inline
-  def mongodb: typingsSlinky.cqrsDomain.cqrsDomainStrings.mongodb = this.cast("mongodb")
+  def redis: typingsSlinky.cqrsDomain.cqrsDomainStrings.redis = "redis".asInstanceOf[typingsSlinky.cqrsDomain.cqrsDomainStrings.redis]
   @scala.inline
-  def redis: typingsSlinky.cqrsDomain.cqrsDomainStrings.redis = this.cast("redis")
-  @scala.inline
-  def tingodb: typingsSlinky.cqrsDomain.cqrsDomainStrings.tingodb = this.cast("tingodb")
+  def tingodb: typingsSlinky.cqrsDomain.cqrsDomainStrings.tingodb = "tingodb".asInstanceOf[typingsSlinky.cqrsDomain.cqrsDomainStrings.tingodb]
 }
 

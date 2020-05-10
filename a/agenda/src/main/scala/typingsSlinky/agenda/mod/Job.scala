@@ -2,8 +2,6 @@ package typingsSlinky.agenda.mod
 
 import typingsSlinky.agenda.AnonInsertOnly
 import typingsSlinky.agenda.AnonSkipImmediate
-import typingsSlinky.std.Date
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +36,7 @@ trait Job[T /* <: JobAttributesData */] extends js.Object {
     * @param reason A message or Error object that indicates why the job failed.
     */
   def fail(reason: String): this.type = js.native
-  def fail(reason: Error): this.type = js.native
+  def fail(reason: js.Error): this.type = js.native
   /**
     * Returns true if the job is running; otherwise, returns false.
     */
@@ -82,7 +80,7 @@ trait Job[T /* <: JobAttributesData */] extends js.Object {
     * @param time The next time at which the job should run.
     */
   def schedule(time: String): this.type = js.native
-  def schedule(time: Date): this.type = js.native
+  def schedule(time: js.Date): this.type = js.native
   /**
     * Resets the lock on the job. Useful to indicate that the job hasn't timed out when you have very long running
     * jobs.

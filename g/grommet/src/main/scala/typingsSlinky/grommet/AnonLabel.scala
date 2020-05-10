@@ -4,26 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonLabel extends js.Object {
-  var label: js.UndefOr[String] = js.undefined
-  var onClick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
-  var onHover: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.undefined
-  var value: Double | js.Array[Double]
+  var label: js.UndefOr[String] = js.native
+  var onClick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var onHover: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var value: Double | js.Array[Double] = js.native
 }
 
 object AnonLabel {
   @scala.inline
-  def apply(
-    value: Double | js.Array[Double],
-    label: String = null,
-    onClick: /* repeated */ js.Any => _ = null,
-    onHover: /* repeated */ js.Any => _ = null
-  ): AnonLabel = {
+  def apply(value: Double | js.Array[Double]): AnonLabel = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction1(onHover))
     __obj.asInstanceOf[AnonLabel]
   }
+  @scala.inline
+  implicit class AnonLabelOps[Self <: AnonLabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnHover(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHover")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnHover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onHover")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

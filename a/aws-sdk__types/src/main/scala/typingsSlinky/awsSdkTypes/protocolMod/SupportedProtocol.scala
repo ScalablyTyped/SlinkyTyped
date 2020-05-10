@@ -15,16 +15,14 @@ trait SupportedProtocol extends js.Object
 
 object SupportedProtocol {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ec2: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.ec2 = "ec2".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.ec2]
   @scala.inline
-  def ec2: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.ec2 = this.cast("ec2")
+  def json: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.json = "json".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.json]
   @scala.inline
-  def json: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.json = this.cast("json")
+  def query: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.query = "query".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.query]
   @scala.inline
-  def query: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.query = this.cast("query")
+  def `rest-json`: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.`rest-json` = "rest-json".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.`rest-json`]
   @scala.inline
-  def `rest-json`: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.`rest-json` = this.cast("rest-json")
-  @scala.inline
-  def `rest-xml`: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.`rest-xml` = this.cast("rest-xml")
+  def `rest-xml`: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.`rest-xml` = "rest-xml".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.`rest-xml`]
 }
 

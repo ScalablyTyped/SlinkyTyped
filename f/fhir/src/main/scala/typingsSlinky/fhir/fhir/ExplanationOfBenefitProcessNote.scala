@@ -7,63 +7,119 @@ import scala.scalajs.js.annotation._
 /**
   * Processing notes
   */
+@js.native
 trait ExplanationOfBenefitProcessNote extends BackboneElement {
   /**
     * Contains extended information for property 'number'.
     */
-  var _number: js.UndefOr[Element] = js.undefined
+  var _number: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'text'.
     */
-  var _text: js.UndefOr[Element] = js.undefined
+  var _text: js.UndefOr[Element] = js.native
   /**
     * Language if different from the resource
     */
-  var language: js.UndefOr[CodeableConcept] = js.undefined
+  var language: js.UndefOr[CodeableConcept] = js.native
   /**
     * Sequence number for this note
     */
-  var number: js.UndefOr[positiveInt] = js.undefined
+  var number: js.UndefOr[positiveInt] = js.native
   /**
     * Note explanitory text
     */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
   /**
     * display | print | printoper
     */
-  var `type`: js.UndefOr[CodeableConcept] = js.undefined
+  var `type`: js.UndefOr[CodeableConcept] = js.native
 }
 
 object ExplanationOfBenefitProcessNote {
   @scala.inline
-  def apply(
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    _number: Element = null,
-    _text: Element = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    language: CodeableConcept = null,
-    modifierExtension: js.Array[Extension] = null,
-    number: Int | Double = null,
-    text: String = null,
-    `type`: CodeableConcept = null
-  ): ExplanationOfBenefitProcessNote = {
+  def apply(): ExplanationOfBenefitProcessNote = {
     val __obj = js.Dynamic.literal()
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_number != null) __obj.updateDynamic("_number")(_number.asInstanceOf[js.Any])
-    if (_text != null) __obj.updateDynamic("_text")(_text.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExplanationOfBenefitProcessNote]
   }
+  @scala.inline
+  implicit class ExplanationOfBenefitProcessNoteOps[Self <: ExplanationOfBenefitProcessNote] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_number(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_number: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_number")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_text(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_text: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumber(value: positiveInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

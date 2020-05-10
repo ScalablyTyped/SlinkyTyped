@@ -12,10 +12,8 @@ trait FormatMatcher extends js.Object
 
 object FormatMatcher {
   @scala.inline
-  def basic: typingsSlinky.vueI18n.vueI18nStrings.basic = this.cast("basic")
+  def basic: typingsSlinky.vueI18n.vueI18nStrings.basic = "basic".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.basic]
   @scala.inline
-  def `best-fit`: typingsSlinky.vueI18n.vueI18nStrings.`best-fit` = this.cast("best-fit")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `best-fit`: typingsSlinky.vueI18n.vueI18nStrings.`best-fit` = "best-fit".asInstanceOf[typingsSlinky.vueI18n.vueI18nStrings.`best-fit`]
 }
 

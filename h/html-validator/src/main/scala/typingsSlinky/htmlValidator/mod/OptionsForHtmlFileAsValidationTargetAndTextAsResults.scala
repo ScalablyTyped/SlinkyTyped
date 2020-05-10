@@ -5,33 +5,34 @@ import typingsSlinky.htmlValidator.htmlValidatorStrings.html
 import typingsSlinky.htmlValidator.htmlValidatorStrings.text
 import typingsSlinky.htmlValidator.htmlValidatorStrings.xhtml
 import typingsSlinky.htmlValidator.htmlValidatorStrings.xml
-import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OptionsForHtmlFileAsValidationTargetAndTextAsResults extends OptionsForHtmlFileAsValidationTarget {
-  var format: html | xhtml | xml | gnu | text
+  var format: html | xhtml | xml | gnu | text = js.native
 }
 
 object OptionsForHtmlFileAsValidationTargetAndTextAsResults {
   @scala.inline
-  def apply(
-    data: String,
-    format: html | xhtml | xml | gnu | text,
-    headers: Record[String, String] = null,
-    ignore: String | js.Array[String] = null,
-    isFragment: js.UndefOr[Boolean] = js.undefined,
-    isLocal: js.UndefOr[Boolean] = js.undefined,
-    validator: js.Object = null
-  ): OptionsForHtmlFileAsValidationTargetAndTextAsResults = {
+  def apply(data: String, format: html | xhtml | xml | gnu | text): OptionsForHtmlFileAsValidationTargetAndTextAsResults = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (!js.isUndefined(isFragment)) __obj.updateDynamic("isFragment")(isFragment.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLocal)) __obj.updateDynamic("isLocal")(isLocal.asInstanceOf[js.Any])
-    if (validator != null) __obj.updateDynamic("validator")(validator.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsForHtmlFileAsValidationTargetAndTextAsResults]
   }
+  @scala.inline
+  implicit class OptionsForHtmlFileAsValidationTargetAndTextAsResultsOps[Self <: OptionsForHtmlFileAsValidationTargetAndTextAsResults] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: html | xhtml | xml | gnu | text): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

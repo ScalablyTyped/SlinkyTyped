@@ -1,11 +1,9 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.AnonGoButton
 import typingsSlinky.antd.antdStrings.`jump-next`
 import typingsSlinky.antd.antdStrings.`jump-prev`
@@ -14,66 +12,71 @@ import typingsSlinky.antd.antdStrings.page
 import typingsSlinky.antd.antdStrings.prev
 import typingsSlinky.antd.paginationMod.default
 import typingsSlinky.antd.paginationPaginationMod.PaginationProps
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Pagination
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Pagination {
   @JSImport("antd/lib/pagination", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, style */
-  def apply(
-    current: Int | Double = null,
-    defaultCurrent: Int | Double = null,
-    defaultPageSize: Int | Double = null,
-    hideOnSinglePage: js.UndefOr[Boolean] = js.undefined,
-    itemRender: (/* page */ Double, /* type */ page | prev | next | `jump-prev` | `jump-next`, /* originalElement */ ReactElement) => TagMod[Any] = null,
-    locale: js.Object = null,
-    onChange: (/* page */ Double, /* pageSize */ js.UndefOr[Double]) => Unit = null,
-    onShowSizeChange: (/* current */ Double, /* size */ Double) => Unit = null,
-    pageSize: Int | Double = null,
-    pageSizeOptions: js.Array[String] = null,
-    prefixCls: String = null,
-    role: String = null,
-    selectPrefixCls: String = null,
-    showLessItems: js.UndefOr[Boolean] = js.undefined,
-    showQuickJumper: Boolean | AnonGoButton = null,
-    showSizeChanger: js.UndefOr[Boolean] = js.undefined,
-    showTotal: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any] = null,
-    simple: js.UndefOr[Boolean] = js.undefined,
-    size: String = null,
-    total: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (current != null) __obj.updateDynamic("current")(current.asInstanceOf[js.Any])
-    if (defaultCurrent != null) __obj.updateDynamic("defaultCurrent")(defaultCurrent.asInstanceOf[js.Any])
-    if (defaultPageSize != null) __obj.updateDynamic("defaultPageSize")(defaultPageSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideOnSinglePage)) __obj.updateDynamic("hideOnSinglePage")(hideOnSinglePage.asInstanceOf[js.Any])
-    if (itemRender != null) __obj.updateDynamic("itemRender")(js.Any.fromFunction3(itemRender))
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onShowSizeChange != null) __obj.updateDynamic("onShowSizeChange")(js.Any.fromFunction2(onShowSizeChange))
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (pageSizeOptions != null) __obj.updateDynamic("pageSizeOptions")(pageSizeOptions.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
-    if (selectPrefixCls != null) __obj.updateDynamic("selectPrefixCls")(selectPrefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLessItems)) __obj.updateDynamic("showLessItems")(showLessItems.asInstanceOf[js.Any])
-    if (showQuickJumper != null) __obj.updateDynamic("showQuickJumper")(showQuickJumper.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSizeChanger)) __obj.updateDynamic("showSizeChanger")(showSizeChanger.asInstanceOf[js.Any])
-    if (showTotal != null) __obj.updateDynamic("showTotal")(js.Any.fromFunction2(showTotal))
-    if (!js.isUndefined(simple)) __obj.updateDynamic("simple")(simple.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def current(value: Double): this.type = set("current", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultCurrent(value: Double): this.type = set("defaultCurrent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultPageSize(value: Double): this.type = set("defaultPageSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideOnSinglePage(value: Boolean): this.type = set("hideOnSinglePage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemRender(
+      value: (/* page */ Double, /* type */ page | prev | next | `jump-prev` | `jump-next`, /* originalElement */ ReactElement) => TagMod[Any]
+    ): this.type = set("itemRender", js.Any.fromFunction3(value))
+    @scala.inline
+    def locale(value: js.Object): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: (/* page */ Double, /* pageSize */ js.UndefOr[Double]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onShowSizeChange(value: (/* current */ Double, /* size */ Double) => Unit): this.type = set("onShowSizeChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def pageSize(value: Double): this.type = set("pageSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pageSizeOptions(value: js.Array[String]): this.type = set("pageSizeOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectPrefixCls(value: String): this.type = set("selectPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showLessItems(value: Boolean): this.type = set("showLessItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showQuickJumper(value: Boolean | AnonGoButton): this.type = set("showQuickJumper", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSizeChanger(value: Boolean): this.type = set("showSizeChanger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showTotal(value: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any]): this.type = set("showTotal", js.Any.fromFunction2(value))
+    @scala.inline
+    def simple(value: Boolean): this.type = set("simple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: String): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def total(value: Double): this.type = set("total", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.paginationMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PaginationProps
+  
+  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Pagination.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -5,16 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // common AMD type
+@js.native
 trait AMDModule extends _ViewModel {
-  var require: String
+  var require: String = js.native
 }
 
 object AMDModule {
   @scala.inline
   def apply(require: String): AMDModule = {
     val __obj = js.Dynamic.literal(require = require.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AMDModule]
   }
+  @scala.inline
+  implicit class AMDModuleOps[Self <: AMDModule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequire(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("require")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * Deprecated widget, used dijit/Calendar instead.   Will be removed in 2.0.
   * 
   */
+@js.native
 trait _Calendar extends js.Object
 

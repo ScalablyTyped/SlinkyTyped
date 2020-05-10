@@ -26,18 +26,65 @@ trait EmbeddedSourceSettings extends js.Object {
 
 object EmbeddedSourceSettings {
   @scala.inline
-  def apply(
-    Convert608To708: EmbeddedConvert608To708 = null,
-    Scte20Detection: EmbeddedScte20Detection = null,
-    Source608ChannelNumber: Int | Double = null,
-    Source608TrackNumber: Int | Double = null
-  ): EmbeddedSourceSettings = {
+  def apply(): EmbeddedSourceSettings = {
     val __obj = js.Dynamic.literal()
-    if (Convert608To708 != null) __obj.updateDynamic("Convert608To708")(Convert608To708.asInstanceOf[js.Any])
-    if (Scte20Detection != null) __obj.updateDynamic("Scte20Detection")(Scte20Detection.asInstanceOf[js.Any])
-    if (Source608ChannelNumber != null) __obj.updateDynamic("Source608ChannelNumber")(Source608ChannelNumber.asInstanceOf[js.Any])
-    if (Source608TrackNumber != null) __obj.updateDynamic("Source608TrackNumber")(Source608TrackNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmbeddedSourceSettings]
   }
+  @scala.inline
+  implicit class EmbeddedSourceSettingsOps[Self <: EmbeddedSourceSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConvert608To708(value: EmbeddedConvert608To708): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Convert608To708")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvert608To708: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Convert608To708")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScte20Detection(value: EmbeddedScte20Detection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte20Detection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScte20Detection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scte20Detection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource608ChannelNumber(value: integerMin1Max4): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source608ChannelNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource608ChannelNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source608ChannelNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource608TrackNumber(value: integerMin1Max5): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source608TrackNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource608TrackNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Source608TrackNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

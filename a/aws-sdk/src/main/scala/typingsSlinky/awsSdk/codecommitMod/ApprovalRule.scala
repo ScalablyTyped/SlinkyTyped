@@ -42,26 +42,113 @@ trait ApprovalRule extends js.Object {
 
 object ApprovalRule {
   @scala.inline
-  def apply(
-    approvalRuleContent: ApprovalRuleContent = null,
-    approvalRuleId: ApprovalRuleId = null,
-    approvalRuleName: ApprovalRuleName = null,
-    creationDate: js.Date = null,
-    lastModifiedDate: js.Date = null,
-    lastModifiedUser: Arn = null,
-    originApprovalRuleTemplate: OriginApprovalRuleTemplate = null,
-    ruleContentSha256: RuleContentSha256 = null
-  ): ApprovalRule = {
+  def apply(): ApprovalRule = {
     val __obj = js.Dynamic.literal()
-    if (approvalRuleContent != null) __obj.updateDynamic("approvalRuleContent")(approvalRuleContent.asInstanceOf[js.Any])
-    if (approvalRuleId != null) __obj.updateDynamic("approvalRuleId")(approvalRuleId.asInstanceOf[js.Any])
-    if (approvalRuleName != null) __obj.updateDynamic("approvalRuleName")(approvalRuleName.asInstanceOf[js.Any])
-    if (creationDate != null) __obj.updateDynamic("creationDate")(creationDate.asInstanceOf[js.Any])
-    if (lastModifiedDate != null) __obj.updateDynamic("lastModifiedDate")(lastModifiedDate.asInstanceOf[js.Any])
-    if (lastModifiedUser != null) __obj.updateDynamic("lastModifiedUser")(lastModifiedUser.asInstanceOf[js.Any])
-    if (originApprovalRuleTemplate != null) __obj.updateDynamic("originApprovalRuleTemplate")(originApprovalRuleTemplate.asInstanceOf[js.Any])
-    if (ruleContentSha256 != null) __obj.updateDynamic("ruleContentSha256")(ruleContentSha256.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApprovalRule]
   }
+  @scala.inline
+  implicit class ApprovalRuleOps[Self <: ApprovalRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApprovalRuleContent(value: ApprovalRuleContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRuleContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApprovalRuleId(value: ApprovalRuleId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRuleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApprovalRuleName(value: ApprovalRuleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRuleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedUser(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginApprovalRuleTemplate(value: OriginApprovalRuleTemplate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originApprovalRuleTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginApprovalRuleTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originApprovalRuleTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleContentSha256(value: RuleContentSha256): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleContentSha256")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleContentSha256: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruleContentSha256")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

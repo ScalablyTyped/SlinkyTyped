@@ -38,24 +38,101 @@ trait StreamRecord extends js.Object {
 
 object StreamRecord {
   @scala.inline
-  def apply(
-    ApproximateCreationDateTime: js.Date = null,
-    Keys: AttributeMap = null,
-    NewImage: AttributeMap = null,
-    OldImage: AttributeMap = null,
-    SequenceNumber: SequenceNumber = null,
-    SizeBytes: Int | Double = null,
-    StreamViewType: StreamViewType = null
-  ): StreamRecord = {
+  def apply(): StreamRecord = {
     val __obj = js.Dynamic.literal()
-    if (ApproximateCreationDateTime != null) __obj.updateDynamic("ApproximateCreationDateTime")(ApproximateCreationDateTime.asInstanceOf[js.Any])
-    if (Keys != null) __obj.updateDynamic("Keys")(Keys.asInstanceOf[js.Any])
-    if (NewImage != null) __obj.updateDynamic("NewImage")(NewImage.asInstanceOf[js.Any])
-    if (OldImage != null) __obj.updateDynamic("OldImage")(OldImage.asInstanceOf[js.Any])
-    if (SequenceNumber != null) __obj.updateDynamic("SequenceNumber")(SequenceNumber.asInstanceOf[js.Any])
-    if (SizeBytes != null) __obj.updateDynamic("SizeBytes")(SizeBytes.asInstanceOf[js.Any])
-    if (StreamViewType != null) __obj.updateDynamic("StreamViewType")(StreamViewType.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamRecord]
   }
+  @scala.inline
+  implicit class StreamRecordOps[Self <: StreamRecord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApproximateCreationDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApproximateCreationDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApproximateCreationDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApproximateCreationDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeys(value: AttributeMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Keys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Keys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewImage(value: AttributeMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldImage(value: AttributeMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OldImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OldImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSequenceNumber(value: SequenceNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSequenceNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeBytes(value: PositiveLongObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreamViewType(value: StreamViewType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamViewType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreamViewType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamViewType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

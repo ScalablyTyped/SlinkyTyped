@@ -1,12 +1,12 @@
 package typingsSlinky.reactFoundation.badgeMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.StatelessComponent
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-foundation/components/badge", "Badge")
 @js.native
-object Badge extends TopLevel[StatelessComponent[BadgeProps]]
+object Badge extends TopLevel[ReactComponentClass[BadgeProps]]
 

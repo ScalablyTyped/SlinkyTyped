@@ -20,6 +20,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<std.GlobalEventHandlers> */
+@js.native
 trait PartialGlobalEventHandler extends js.Object {
   var addEventListener: js.UndefOr[
     js.Function2[
@@ -27,281 +28,1170 @@ trait PartialGlobalEventHandler extends js.Object {
       /* listener */ js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _], 
       Unit
     ]
-  ] = js.undefined
-  var onabort: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.undefined
-  var onanimationcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
-  var onanimationend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
-  var onanimationiteration: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
-  var onanimationstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
-  var onauxclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onblur: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.undefined
-  var oncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var oncanplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onclose: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var oncontextmenu: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var oncuechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var ondblclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var ondrag: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondragend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondragenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondragexit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var ondragleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondragover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondragstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondrop: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onemptied: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onended: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onerror: js.UndefOr[OnErrorEventHandler] = js.undefined
-  var onfocus: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.undefined
-  var ongotpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var oninput: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var oninvalid: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onkeydown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.undefined
-  var onkeypress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.undefined
-  var onkeyup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.undefined
-  var onload: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onloadstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onlostpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onmousedown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmouseenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmouseleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmousemove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmouseout: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmouseover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmouseup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onpause: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onplaying: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onpointercancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerdown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointermove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerout: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onprogress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ProgressEvent, _]] = js.undefined
-  var onratechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onreset: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onresize: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.undefined
-  var onscroll: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onsecuritypolicyviolation: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, _]] = js.undefined
-  var onseeked: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onseeking: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onselect: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onselectionchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onselectstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onstalled: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onsubmit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onsuspend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var ontoggle: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var ontouchcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
-  var ontouchend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
-  var ontouchmove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
-  var ontouchstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
-  var ontransitioncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
-  var ontransitionend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
-  var ontransitionrun: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
-  var ontransitionstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
-  var onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onwaiting: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.undefined
-  var onwheel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _]] = js.undefined
+  ] = js.native
+  var onabort: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.native
+  var onanimationcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.native
+  var onanimationend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.native
+  var onanimationiteration: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.native
+  var onanimationstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.native
+  var onauxclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var onblur: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.native
+  var oncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var oncanplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var onclose: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var oncontextmenu: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var oncuechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var ondblclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var ondrag: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
+  var ondragend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
+  var ondragenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
+  var ondragexit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var ondragleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
+  var ondragover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
+  var ondragstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
+  var ondrop: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
+  var ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onemptied: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onended: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onerror: js.UndefOr[OnErrorEventHandler] = js.native
+  var onfocus: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.native
+  var ongotpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
+  var oninput: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var oninvalid: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onkeydown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.native
+  var onkeypress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.native
+  var onkeyup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.native
+  var onload: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onloadstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onlostpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
+  var onmousedown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var onmouseenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var onmouseleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var onmousemove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var onmouseout: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var onmouseover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var onmouseup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
+  var onpause: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onplaying: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onpointercancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
+  var onpointerdown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
+  var onpointerenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
+  var onpointerleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
+  var onpointermove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
+  var onpointerout: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
+  var onpointerover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
+  var onpointerup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
+  var onprogress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ProgressEvent, _]] = js.native
+  var onratechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onreset: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onresize: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.native
+  var onscroll: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onsecuritypolicyviolation: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, _]] = js.native
+  var onseeked: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onseeking: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onselect: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onselectionchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onselectstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onstalled: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onsubmit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onsuspend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var ontoggle: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var ontouchcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
+  var ontouchend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
+  var ontouchmove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
+  var ontouchstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
+  var ontransitioncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
+  var ontransitionend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
+  var ontransitionrun: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
+  var ontransitionstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
+  var onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onwaiting: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onwheel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _]] = js.native
   var removeEventListener: js.UndefOr[
     js.Function2[
       abort, 
       /* listener */ js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object PartialGlobalEventHandler {
   @scala.inline
-  def apply(
-    addEventListener: (abort, /* listener */ js.ThisFunction1[PartialGlobalEventHandler, /* ev */ UIEvent, _]) => Unit = null,
-    onabort: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ UIEvent, _] = null,
-    onanimationcancel: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ AnimationEvent, _] = null,
-    onanimationend: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ AnimationEvent, _] = null,
-    onanimationiteration: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ AnimationEvent, _] = null,
-    onanimationstart: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ AnimationEvent, _] = null,
-    onauxclick: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    onblur: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ FocusEvent, _] = null,
-    oncancel: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    oncanplay: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    oncanplaythrough: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onchange: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onclick: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    onclose: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    oncontextmenu: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    oncuechange: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    ondblclick: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    ondrag: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _] = null,
-    ondragend: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _] = null,
-    ondragenter: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _] = null,
-    ondragexit: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    ondragleave: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _] = null,
-    ondragover: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _] = null,
-    ondragstart: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _] = null,
-    ondrop: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _] = null,
-    ondurationchange: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onemptied: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onended: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onerror: (/* event */ Event_ | String, /* source */ js.UndefOr[String], /* lineno */ js.UndefOr[Double], /* colno */ js.UndefOr[Double], /* error */ js.UndefOr[js.Error]) => js.Any = null,
-    onfocus: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ FocusEvent, _] = null,
-    ongotpointercapture: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _] = null,
-    oninput: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    oninvalid: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onkeydown: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ KeyboardEvent, _] = null,
-    onkeypress: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ KeyboardEvent, _] = null,
-    onkeyup: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ KeyboardEvent, _] = null,
-    onload: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onloadeddata: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onloadedmetadata: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onloadstart: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onlostpointercapture: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _] = null,
-    onmousedown: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    onmouseenter: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    onmouseleave: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    onmousemove: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    onmouseout: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    onmouseover: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    onmouseup: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _] = null,
-    onpause: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onplay: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onplaying: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onpointercancel: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _] = null,
-    onpointerdown: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _] = null,
-    onpointerenter: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _] = null,
-    onpointerleave: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _] = null,
-    onpointermove: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _] = null,
-    onpointerout: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _] = null,
-    onpointerover: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _] = null,
-    onpointerup: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _] = null,
-    onprogress: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ ProgressEvent, _] = null,
-    onratechange: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onreset: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onresize: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ UIEvent, _] = null,
-    onscroll: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onsecuritypolicyviolation: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ SecurityPolicyViolationEvent, _] = null,
-    onseeked: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onseeking: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onselect: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onselectionchange: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onselectstart: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onstalled: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onsubmit: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onsuspend: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    ontimeupdate: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    ontoggle: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    ontouchcancel: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TouchEvent, _] = null,
-    ontouchend: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TouchEvent, _] = null,
-    ontouchmove: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TouchEvent, _] = null,
-    ontouchstart: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TouchEvent, _] = null,
-    ontransitioncancel: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TransitionEvent, _] = null,
-    ontransitionend: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TransitionEvent, _] = null,
-    ontransitionrun: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TransitionEvent, _] = null,
-    ontransitionstart: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TransitionEvent, _] = null,
-    onvolumechange: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onwaiting: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _] = null,
-    onwheel: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ WheelEvent, _] = null,
-    removeEventListener: (abort, /* listener */ js.ThisFunction1[PartialGlobalEventHandler, /* ev */ UIEvent, _]) => Unit = null
-  ): PartialGlobalEventHandler = {
+  def apply(): PartialGlobalEventHandler = {
     val __obj = js.Dynamic.literal()
-    if (addEventListener != null) __obj.updateDynamic("addEventListener")(js.Any.fromFunction2(addEventListener))
-    if (onabort != null) __obj.updateDynamic("onabort")(onabort.asInstanceOf[js.Any])
-    if (onanimationcancel != null) __obj.updateDynamic("onanimationcancel")(onanimationcancel.asInstanceOf[js.Any])
-    if (onanimationend != null) __obj.updateDynamic("onanimationend")(onanimationend.asInstanceOf[js.Any])
-    if (onanimationiteration != null) __obj.updateDynamic("onanimationiteration")(onanimationiteration.asInstanceOf[js.Any])
-    if (onanimationstart != null) __obj.updateDynamic("onanimationstart")(onanimationstart.asInstanceOf[js.Any])
-    if (onauxclick != null) __obj.updateDynamic("onauxclick")(onauxclick.asInstanceOf[js.Any])
-    if (onblur != null) __obj.updateDynamic("onblur")(onblur.asInstanceOf[js.Any])
-    if (oncancel != null) __obj.updateDynamic("oncancel")(oncancel.asInstanceOf[js.Any])
-    if (oncanplay != null) __obj.updateDynamic("oncanplay")(oncanplay.asInstanceOf[js.Any])
-    if (oncanplaythrough != null) __obj.updateDynamic("oncanplaythrough")(oncanplaythrough.asInstanceOf[js.Any])
-    if (onchange != null) __obj.updateDynamic("onchange")(onchange.asInstanceOf[js.Any])
-    if (onclick != null) __obj.updateDynamic("onclick")(onclick.asInstanceOf[js.Any])
-    if (onclose != null) __obj.updateDynamic("onclose")(onclose.asInstanceOf[js.Any])
-    if (oncontextmenu != null) __obj.updateDynamic("oncontextmenu")(oncontextmenu.asInstanceOf[js.Any])
-    if (oncuechange != null) __obj.updateDynamic("oncuechange")(oncuechange.asInstanceOf[js.Any])
-    if (ondblclick != null) __obj.updateDynamic("ondblclick")(ondblclick.asInstanceOf[js.Any])
-    if (ondrag != null) __obj.updateDynamic("ondrag")(ondrag.asInstanceOf[js.Any])
-    if (ondragend != null) __obj.updateDynamic("ondragend")(ondragend.asInstanceOf[js.Any])
-    if (ondragenter != null) __obj.updateDynamic("ondragenter")(ondragenter.asInstanceOf[js.Any])
-    if (ondragexit != null) __obj.updateDynamic("ondragexit")(ondragexit.asInstanceOf[js.Any])
-    if (ondragleave != null) __obj.updateDynamic("ondragleave")(ondragleave.asInstanceOf[js.Any])
-    if (ondragover != null) __obj.updateDynamic("ondragover")(ondragover.asInstanceOf[js.Any])
-    if (ondragstart != null) __obj.updateDynamic("ondragstart")(ondragstart.asInstanceOf[js.Any])
-    if (ondrop != null) __obj.updateDynamic("ondrop")(ondrop.asInstanceOf[js.Any])
-    if (ondurationchange != null) __obj.updateDynamic("ondurationchange")(ondurationchange.asInstanceOf[js.Any])
-    if (onemptied != null) __obj.updateDynamic("onemptied")(onemptied.asInstanceOf[js.Any])
-    if (onended != null) __obj.updateDynamic("onended")(onended.asInstanceOf[js.Any])
-    if (onerror != null) __obj.updateDynamic("onerror")(js.Any.fromFunction5(onerror))
-    if (onfocus != null) __obj.updateDynamic("onfocus")(onfocus.asInstanceOf[js.Any])
-    if (ongotpointercapture != null) __obj.updateDynamic("ongotpointercapture")(ongotpointercapture.asInstanceOf[js.Any])
-    if (oninput != null) __obj.updateDynamic("oninput")(oninput.asInstanceOf[js.Any])
-    if (oninvalid != null) __obj.updateDynamic("oninvalid")(oninvalid.asInstanceOf[js.Any])
-    if (onkeydown != null) __obj.updateDynamic("onkeydown")(onkeydown.asInstanceOf[js.Any])
-    if (onkeypress != null) __obj.updateDynamic("onkeypress")(onkeypress.asInstanceOf[js.Any])
-    if (onkeyup != null) __obj.updateDynamic("onkeyup")(onkeyup.asInstanceOf[js.Any])
-    if (onload != null) __obj.updateDynamic("onload")(onload.asInstanceOf[js.Any])
-    if (onloadeddata != null) __obj.updateDynamic("onloadeddata")(onloadeddata.asInstanceOf[js.Any])
-    if (onloadedmetadata != null) __obj.updateDynamic("onloadedmetadata")(onloadedmetadata.asInstanceOf[js.Any])
-    if (onloadstart != null) __obj.updateDynamic("onloadstart")(onloadstart.asInstanceOf[js.Any])
-    if (onlostpointercapture != null) __obj.updateDynamic("onlostpointercapture")(onlostpointercapture.asInstanceOf[js.Any])
-    if (onmousedown != null) __obj.updateDynamic("onmousedown")(onmousedown.asInstanceOf[js.Any])
-    if (onmouseenter != null) __obj.updateDynamic("onmouseenter")(onmouseenter.asInstanceOf[js.Any])
-    if (onmouseleave != null) __obj.updateDynamic("onmouseleave")(onmouseleave.asInstanceOf[js.Any])
-    if (onmousemove != null) __obj.updateDynamic("onmousemove")(onmousemove.asInstanceOf[js.Any])
-    if (onmouseout != null) __obj.updateDynamic("onmouseout")(onmouseout.asInstanceOf[js.Any])
-    if (onmouseover != null) __obj.updateDynamic("onmouseover")(onmouseover.asInstanceOf[js.Any])
-    if (onmouseup != null) __obj.updateDynamic("onmouseup")(onmouseup.asInstanceOf[js.Any])
-    if (onpause != null) __obj.updateDynamic("onpause")(onpause.asInstanceOf[js.Any])
-    if (onplay != null) __obj.updateDynamic("onplay")(onplay.asInstanceOf[js.Any])
-    if (onplaying != null) __obj.updateDynamic("onplaying")(onplaying.asInstanceOf[js.Any])
-    if (onpointercancel != null) __obj.updateDynamic("onpointercancel")(onpointercancel.asInstanceOf[js.Any])
-    if (onpointerdown != null) __obj.updateDynamic("onpointerdown")(onpointerdown.asInstanceOf[js.Any])
-    if (onpointerenter != null) __obj.updateDynamic("onpointerenter")(onpointerenter.asInstanceOf[js.Any])
-    if (onpointerleave != null) __obj.updateDynamic("onpointerleave")(onpointerleave.asInstanceOf[js.Any])
-    if (onpointermove != null) __obj.updateDynamic("onpointermove")(onpointermove.asInstanceOf[js.Any])
-    if (onpointerout != null) __obj.updateDynamic("onpointerout")(onpointerout.asInstanceOf[js.Any])
-    if (onpointerover != null) __obj.updateDynamic("onpointerover")(onpointerover.asInstanceOf[js.Any])
-    if (onpointerup != null) __obj.updateDynamic("onpointerup")(onpointerup.asInstanceOf[js.Any])
-    if (onprogress != null) __obj.updateDynamic("onprogress")(onprogress.asInstanceOf[js.Any])
-    if (onratechange != null) __obj.updateDynamic("onratechange")(onratechange.asInstanceOf[js.Any])
-    if (onreset != null) __obj.updateDynamic("onreset")(onreset.asInstanceOf[js.Any])
-    if (onresize != null) __obj.updateDynamic("onresize")(onresize.asInstanceOf[js.Any])
-    if (onscroll != null) __obj.updateDynamic("onscroll")(onscroll.asInstanceOf[js.Any])
-    if (onsecuritypolicyviolation != null) __obj.updateDynamic("onsecuritypolicyviolation")(onsecuritypolicyviolation.asInstanceOf[js.Any])
-    if (onseeked != null) __obj.updateDynamic("onseeked")(onseeked.asInstanceOf[js.Any])
-    if (onseeking != null) __obj.updateDynamic("onseeking")(onseeking.asInstanceOf[js.Any])
-    if (onselect != null) __obj.updateDynamic("onselect")(onselect.asInstanceOf[js.Any])
-    if (onselectionchange != null) __obj.updateDynamic("onselectionchange")(onselectionchange.asInstanceOf[js.Any])
-    if (onselectstart != null) __obj.updateDynamic("onselectstart")(onselectstart.asInstanceOf[js.Any])
-    if (onstalled != null) __obj.updateDynamic("onstalled")(onstalled.asInstanceOf[js.Any])
-    if (onsubmit != null) __obj.updateDynamic("onsubmit")(onsubmit.asInstanceOf[js.Any])
-    if (onsuspend != null) __obj.updateDynamic("onsuspend")(onsuspend.asInstanceOf[js.Any])
-    if (ontimeupdate != null) __obj.updateDynamic("ontimeupdate")(ontimeupdate.asInstanceOf[js.Any])
-    if (ontoggle != null) __obj.updateDynamic("ontoggle")(ontoggle.asInstanceOf[js.Any])
-    if (ontouchcancel != null) __obj.updateDynamic("ontouchcancel")(ontouchcancel.asInstanceOf[js.Any])
-    if (ontouchend != null) __obj.updateDynamic("ontouchend")(ontouchend.asInstanceOf[js.Any])
-    if (ontouchmove != null) __obj.updateDynamic("ontouchmove")(ontouchmove.asInstanceOf[js.Any])
-    if (ontouchstart != null) __obj.updateDynamic("ontouchstart")(ontouchstart.asInstanceOf[js.Any])
-    if (ontransitioncancel != null) __obj.updateDynamic("ontransitioncancel")(ontransitioncancel.asInstanceOf[js.Any])
-    if (ontransitionend != null) __obj.updateDynamic("ontransitionend")(ontransitionend.asInstanceOf[js.Any])
-    if (ontransitionrun != null) __obj.updateDynamic("ontransitionrun")(ontransitionrun.asInstanceOf[js.Any])
-    if (ontransitionstart != null) __obj.updateDynamic("ontransitionstart")(ontransitionstart.asInstanceOf[js.Any])
-    if (onvolumechange != null) __obj.updateDynamic("onvolumechange")(onvolumechange.asInstanceOf[js.Any])
-    if (onwaiting != null) __obj.updateDynamic("onwaiting")(onwaiting.asInstanceOf[js.Any])
-    if (onwheel != null) __obj.updateDynamic("onwheel")(onwheel.asInstanceOf[js.Any])
-    if (removeEventListener != null) __obj.updateDynamic("removeEventListener")(js.Any.fromFunction2(removeEventListener))
     __obj.asInstanceOf[PartialGlobalEventHandler]
   }
+  @scala.inline
+  implicit class PartialGlobalEventHandlerOps[Self <: PartialGlobalEventHandler] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddEventListener(
+      value: (abort, /* listener */ js.ThisFunction1[PartialGlobalEventHandler, /* ev */ UIEvent, _]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addEventListener")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAddEventListener: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addEventListener")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnabort(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ UIEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onabort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnabort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onabort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnanimationcancel(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ AnimationEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationcancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnanimationcancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationcancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnanimationend(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ AnimationEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnanimationend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnanimationiteration(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ AnimationEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationiteration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnanimationiteration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationiteration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnanimationstart(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ AnimationEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationstart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnanimationstart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onanimationstart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnauxclick(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onauxclick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnauxclick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onauxclick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnblur(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ FocusEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onblur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnblur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onblur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOncancel(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOncancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOncanplay(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOncanplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOncanplaythrough(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplaythrough")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOncanplaythrough: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplaythrough")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnchange(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onchange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnchange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onchange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnclick(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnclick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnclose(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnclose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOncontextmenu(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncontextmenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOncontextmenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncontextmenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOncuechange(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncuechange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOncuechange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oncuechange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOndblclick(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondblclick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOndblclick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondblclick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOndrag(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOndrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOndragend(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOndragend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOndragenter(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOndragenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragenter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOndragexit(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragexit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOndragexit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragexit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOndragleave(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragleave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOndragleave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragleave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOndragover(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOndragover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOndragstart(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragstart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOndragstart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondragstart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOndrop(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ DragEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOndrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOndurationchange(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondurationchange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOndurationchange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondurationchange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnemptied(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onemptied")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnemptied: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onemptied")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnended(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onended")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnended: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onended")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnerror(
+      value: (/* event */ Event_ | String, /* source */ js.UndefOr[String], /* lineno */ js.UndefOr[Double], /* colno */ js.UndefOr[Double], /* error */ js.UndefOr[js.Error]) => js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnerror: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnerrorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(null)
+        ret
+    }
+    @scala.inline
+    def withOnfocus(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ FocusEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onfocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnfocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onfocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOngotpointercapture(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ongotpointercapture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOngotpointercapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ongotpointercapture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOninput(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oninput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOninput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oninput")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOninvalid(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oninvalid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOninvalid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oninvalid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnkeydown(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ KeyboardEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeydown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnkeydown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeydown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnkeypress(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ KeyboardEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeypress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnkeypress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeypress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnkeyup(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ KeyboardEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeyup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnkeyup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onkeyup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnload(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnloadeddata(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadeddata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnloadeddata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadeddata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnloadedmetadata(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadedmetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnloadedmetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadedmetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnloadstart(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadstart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnloadstart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onloadstart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnlostpointercapture(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlostpointercapture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnlostpointercapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onlostpointercapture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnmousedown(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousedown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnmousedown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousedown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnmouseenter(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnmouseenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseenter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnmouseleave(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseleave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnmouseleave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseleave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnmousemove(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnmousemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmousemove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnmouseout(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnmouseout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnmouseover(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnmouseover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnmouseup(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ MouseEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnmouseup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onmouseup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnpause(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnpause: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpause")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnplay(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnplaying(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onplaying")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnplaying: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onplaying")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnpointercancel(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointercancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnpointercancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointercancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnpointerdown(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerdown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnpointerdown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerdown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnpointerenter(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnpointerenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerenter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnpointerleave(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerleave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnpointerleave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerleave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnpointermove(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointermove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnpointermove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointermove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnpointerout(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnpointerout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnpointerover(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnpointerover: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerover")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnpointerup(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ PointerEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnpointerup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onpointerup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnprogress(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ ProgressEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onprogress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnprogress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onprogress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnratechange(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onratechange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnratechange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onratechange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnreset(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnreset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnresize(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ UIEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onresize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnresize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onresize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnscroll(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onscroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnscroll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onscroll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnsecuritypolicyviolation(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ SecurityPolicyViolationEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onsecuritypolicyviolation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnsecuritypolicyviolation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onsecuritypolicyviolation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnseeked(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnseeked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnseeking(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnseeking: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onseeking")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnselect(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onselect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnselect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onselect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnselectionchange(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onselectionchange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnselectionchange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onselectionchange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnselectstart(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onselectstart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnselectstart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onselectstart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnstalled(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onstalled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnstalled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onstalled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnsubmit(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onsubmit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnsubmit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onsubmit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnsuspend(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onsuspend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnsuspend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onsuspend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntimeupdate(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontimeupdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOntimeupdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontimeupdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntoggle(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontoggle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOntoggle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontoggle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntouchcancel(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TouchEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchcancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOntouchcancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchcancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntouchend(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TouchEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOntouchend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntouchmove(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TouchEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchmove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOntouchmove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchmove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntouchstart(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TouchEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchstart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOntouchstart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontouchstart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntransitioncancel(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TransitionEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitioncancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOntransitioncancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitioncancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntransitionend(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TransitionEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOntransitionend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntransitionrun(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TransitionEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionrun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOntransitionrun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionrun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOntransitionstart(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ TransitionEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionstart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOntransitionstart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ontransitionstart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnvolumechange(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onvolumechange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnvolumechange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onvolumechange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnwaiting(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ Event_, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onwaiting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnwaiting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onwaiting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnwheel(value: js.ThisFunction1[PartialGlobalEventHandler, /* ev */ WheelEvent, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onwheel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnwheel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onwheel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveEventListener(
+      value: (abort, /* listener */ js.ThisFunction1[PartialGlobalEventHandler, /* ev */ UIEvent, _]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEventListener")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutRemoveEventListener: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEventListener")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

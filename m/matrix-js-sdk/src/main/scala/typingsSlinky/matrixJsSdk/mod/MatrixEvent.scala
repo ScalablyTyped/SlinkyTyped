@@ -11,7 +11,7 @@ class MatrixEvent protected () extends js.Object {
   def this(event: js.Object) = this()
     //  The sending status of the event.
   var error: js.Error = js.native
-  var event: js.Object = js.native
+  var event: js.Any = js.native
           //  most recent error associated with sending the event, if any
   var forwardLooking: Boolean = js.native
          //  The raw (possibly encrypted) event. Do not access this property directly unless you absolutely have to. Prefer the getter methods defined
@@ -20,5 +20,7 @@ class MatrixEvent protected () extends js.Object {
   var status: EventStatus = js.native
      //  The room member who sent this event, or null e.g. this is a presence event. This is only guaranteed to be set for events that appear in
   var target: RoomMember = js.native
+  def getSender(): String = js.native
+  def getType(): EventType = js.native
 }
 

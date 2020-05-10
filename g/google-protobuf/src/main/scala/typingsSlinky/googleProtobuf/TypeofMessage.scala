@@ -31,10 +31,10 @@ trait TypeofMessage extends Instantiable0[Message] {
     ctor: AnonInstantiable[T],
     index: Double
   ): T = js.native
-  def bytesAsB64(bytes: scala.scalajs.js.typedarray.Uint8Array): String = js.native
-  def bytesAsU8(str: String): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def bytesListAsB64(bytesList: js.Array[scala.scalajs.js.typedarray.Uint8Array]): js.Array[String] = js.native
-  def bytesListAsU8(strList: js.Array[String]): js.Array[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def bytesAsB64(bytes: js.typedarray.Uint8Array): String = js.native
+  def bytesAsU8(str: String): js.typedarray.Uint8Array = js.native
+  def bytesListAsB64(bytesList: js.Array[js.typedarray.Uint8Array]): js.Array[String] = js.native
+  def bytesListAsU8(strList: js.Array[String]): js.Array[js.typedarray.Uint8Array] = js.native
   def clone[T /* <: Message */](msg: T): T = js.native
   def cloneMessage[T /* <: Message */](msg: T): T = js.native
   def compareExtensions(extension1: js.Object, extension2: js.Object): Boolean = js.native
@@ -43,7 +43,7 @@ trait TypeofMessage extends Instantiable0[Message] {
   def copyInto(fromMessage: Message, toMessage: Message): Unit = js.native
   // These are `abstract static`, but that isn't allowed. Subclasses of Message will have these methods and properties
   // and not having them on Message makes using this class for its intended purpose quite difficult.
-  def deserializeBinary(bytes: scala.scalajs.js.typedarray.Uint8Array): Message = js.native
+  def deserializeBinary(bytes: js.typedarray.Uint8Array): Message = js.native
   def deserializeBinaryFromReader(message: Message, reader: BinaryReader): Message = js.native
   def difference[T /* <: Message */](m1: T, m2: T): T = js.native
   def equals(m1: Message, m2: Message): Boolean = js.native

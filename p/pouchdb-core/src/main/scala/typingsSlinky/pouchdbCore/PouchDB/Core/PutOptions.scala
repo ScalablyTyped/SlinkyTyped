@@ -1,25 +1,39 @@
 package typingsSlinky.pouchdbCore.PouchDB.Core
 
-import org.scalajs.dom.experimental.Request
-import org.scalajs.dom.experimental.RequestInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PutOptions extends Options {
-  var force: js.UndefOr[Boolean] = js.undefined
+  var force: js.UndefOr[Boolean] = js.native
 }
 
 object PutOptions {
   @scala.inline
-  def apply(
-    fetch: (/* url */ String | Request, /* opts */ js.UndefOr[RequestInit]) => js.Promise[org.scalajs.dom.experimental.Response] = null,
-    force: js.UndefOr[Boolean] = js.undefined
-  ): PutOptions = {
+  def apply(): PutOptions = {
     val __obj = js.Dynamic.literal()
-    if (fetch != null) __obj.updateDynamic("fetch")(js.Any.fromFunction2(fetch))
-    if (!js.isUndefined(force)) __obj.updateDynamic("force")(force.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutOptions]
   }
+  @scala.inline
+  implicit class PutOptionsOps[Self <: PutOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("force")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

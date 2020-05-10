@@ -18,11 +18,41 @@ trait ListGatewaysOutput extends js.Object {
 
 object ListGatewaysOutput {
   @scala.inline
-  def apply(Gateways: Gateways = null, Marker: Marker = null): ListGatewaysOutput = {
+  def apply(): ListGatewaysOutput = {
     val __obj = js.Dynamic.literal()
-    if (Gateways != null) __obj.updateDynamic("Gateways")(Gateways.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListGatewaysOutput]
   }
+  @scala.inline
+  implicit class ListGatewaysOutputOps[Self <: ListGatewaysOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGateways(value: Gateways): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gateways")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGateways: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gateways")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

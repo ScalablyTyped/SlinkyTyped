@@ -1,11 +1,8 @@
 package typingsSlinky.victory.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.victory.Anon1
 import typingsSlinky.victory.AnonXBoolean
 import typingsSlinky.victory.AnonY
@@ -28,78 +25,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object VictoryLine
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryLine] {
+object VictoryLine {
   @JSImport("victory", "VictoryLine")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name */
-  def apply(
-    animate: Boolean | AnimatePropTypeInterface = null,
-    categories: CategoryPropType = null,
-    containerComponent: ReactElement = null,
-    data: js.Array[_] = null,
-    dataComponent: ReactElement = null,
-    domain: DomainPropType = null,
-    events: js.Array[EventPropTypeInterface[data | labels | parent, Double | String]] = null,
-    groupComponent: ReactElement = null,
-    height: Int | Double = null,
-    horizontal: js.UndefOr[Boolean] = js.undefined,
-    interpolation: InterpolationPropType = null,
-    label: String | (js.Function1[/* data */ js.Any, String]) = null,
-    labelComponent: ReactElement = null,
-    labels: (js.Array[Double | String]) | js.Function = null,
-    maxDomain: Double | AnonY = null,
-    minDomain: Double | AnonY = null,
-    padding: PaddingProps = null,
-    samples: Int | Double = null,
-    scale: ScalePropType | D3Scale | Anon1 = null,
-    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
-    sortKey: String | js.Array[String] | js.Function = null,
-    standalone: js.UndefOr[Boolean] = js.undefined,
-    style: VictoryStyleInterface = null,
-    theme: VictoryThemeDefinition = null,
-    width: Int | Double = null,
-    x: DataGetterPropType = null,
-    y: DataGetterPropType = null,
-    y0: DataGetterPropType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryLine] = {
-    val __obj = js.Dynamic.literal()
-    if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (containerComponent != null) __obj.updateDynamic("containerComponent")(containerComponent.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (dataComponent != null) __obj.updateDynamic("dataComponent")(dataComponent.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (events != null) __obj.updateDynamic("events")(events.asInstanceOf[js.Any])
-    if (groupComponent != null) __obj.updateDynamic("groupComponent")(groupComponent.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(horizontal)) __obj.updateDynamic("horizontal")(horizontal.asInstanceOf[js.Any])
-    if (interpolation != null) __obj.updateDynamic("interpolation")(interpolation.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelComponent != null) __obj.updateDynamic("labelComponent")(labelComponent.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (maxDomain != null) __obj.updateDynamic("maxDomain")(maxDomain.asInstanceOf[js.Any])
-    if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (samples != null) __obj.updateDynamic("samples")(samples.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
-    if (sortKey != null) __obj.updateDynamic("sortKey")(sortKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (y0 != null) __obj.updateDynamic("y0")(y0.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryLine] {
+    @scala.inline
+    def animate(value: Boolean | AnimatePropTypeInterface): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def categories(value: CategoryPropType): this.type = set("categories", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerComponent(value: ReactElement): this.type = set("containerComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataComponent(value: ReactElement): this.type = set("dataComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def domain(value: DomainPropType): this.type = set("domain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def events(value: js.Array[EventPropTypeInterface[data | labels | parent, Double | String]]): this.type = set("events", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupComponent(value: ReactElement): this.type = set("groupComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def interpolation(value: InterpolationPropType): this.type = set("interpolation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFunction1(value: /* data */ js.Any => String): this.type = set("label", js.Any.fromFunction1(value))
+    @scala.inline
+    def label(value: String | (js.Function1[/* data */ js.Any, String])): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelComponent(value: ReactElement): this.type = set("labelComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labels(value: (js.Array[Double | String]) | js.Function): this.type = set("labels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDomain(value: Double | AnonY): this.type = set("maxDomain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDomain(value: Double | AnonY): this.type = set("minDomain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def padding(value: PaddingProps): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def samples(value: Double): this.type = set("samples", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: ScalePropType | D3Scale | Anon1): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def singleQuadrantDomainPadding(value: Boolean | AnonXBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sortKey(value: String | js.Array[String] | js.Function): this.type = set("sortKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def standalone(value: Boolean): this.type = set("standalone", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: VictoryStyleInterface): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: VictoryThemeDefinition): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xFunction1(value: /* data */ js.Any => Double | String | js.Array[String]): this.type = set("x", js.Any.fromFunction1(value))
+    @scala.inline
+    def x(value: DataGetterPropType): this.type = set("x", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yFunction1(value: /* data */ js.Any => Double | String | js.Array[String]): this.type = set("y", js.Any.fromFunction1(value))
+    @scala.inline
+    def y(value: DataGetterPropType): this.type = set("y", value.asInstanceOf[js.Any])
+    @scala.inline
+    def y0Function1(value: /* data */ js.Any => Double | String | js.Array[String]): this.type = set("y0", js.Any.fromFunction1(value))
+    @scala.inline
+    def y0(value: DataGetterPropType): this.type = set("y0", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryLine] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryLine](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = VictoryLineProps
+  
+  def withProps(p: VictoryLineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: VictoryLine.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

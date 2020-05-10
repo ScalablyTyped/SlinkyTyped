@@ -4,39 +4,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MakePhoneCallOptions extends js.Object {
   /**
     * 结束的回调函数（调用成功、失败都会执行）
     */
-  var complete: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var complete: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * 失败的回调函数
     */
-  var fail: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var fail: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * 需要拨打的电话号码
     */
-  var phoneNumber: js.UndefOr[String] = js.undefined
+  var phoneNumber: js.UndefOr[String] = js.native
   /**
     * 成功返回的回调函数
     */
-  var success: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var success: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object MakePhoneCallOptions {
   @scala.inline
-  def apply(
-    complete: () => Unit = null,
-    fail: () => Unit = null,
-    phoneNumber: String = null,
-    success: () => Unit = null
-  ): MakePhoneCallOptions = {
+  def apply(): MakePhoneCallOptions = {
     val __obj = js.Dynamic.literal()
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction0(complete))
-    if (fail != null) __obj.updateDynamic("fail")(js.Any.fromFunction0(fail))
-    if (phoneNumber != null) __obj.updateDynamic("phoneNumber")(phoneNumber.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction0(success))
     __obj.asInstanceOf[MakePhoneCallOptions]
   }
+  @scala.inline
+  implicit class MakePhoneCallOptionsOps[Self <: MakePhoneCallOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFail(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutFail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhoneNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhoneNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccess(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

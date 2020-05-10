@@ -1,6 +1,6 @@
 package typingsSlinky.muicss
 
-import slinky.core.ReactComponentClass
+import org.scalajs.dom.raw.HTMLInputElement
 import typingsSlinky.muicss.reactMod.InputProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -11,9 +11,13 @@ import scala.scalajs.js.annotation._
 @js.native
 object inputMod extends js.Object {
   @js.native
-  class default ()
-    extends Component[InputProps, js.Object, js.Any]
+  trait Input
+    extends Component[InputProps, js.Object, js.Any] {
+    var controlEl: js.UndefOr[HTMLInputElement] = js.native
+  }
   
-  type Input = ReactComponentClass[InputProps]
+  @js.native
+  class default () extends Input
+  
 }
 

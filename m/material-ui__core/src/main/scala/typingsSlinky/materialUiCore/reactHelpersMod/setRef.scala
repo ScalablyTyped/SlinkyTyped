@@ -1,6 +1,6 @@
 package typingsSlinky.materialUiCore.reactHelpersMod
 
-import typingsSlinky.react.mod.RefObject
+import slinky.core.facade.ReactRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ object setRef extends js.Object {
   def apply[T](ref: js.Function1[/* instance */ T | Null, Unit]): Unit = js.native
   def apply[T](ref: js.Function1[/* instance */ T | Null, Unit], value: T): Unit = js.native
   def apply[T](ref: Null, value: T): Unit = js.native
-  def apply[T](ref: RefObject[T]): Unit = js.native
-  def apply[T](ref: RefObject[T], value: T): Unit = js.native
+  def apply[T](ref: ReactRef[T]): Unit = js.native
+  def apply[T](ref: ReactRef[T], value: T): Unit = js.native
 }
 

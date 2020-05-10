@@ -20,8 +20,27 @@ object ModifyIdFormatRequest {
   @scala.inline
   def apply(Resource: String, UseLongIds: Boolean): ModifyIdFormatRequest = {
     val __obj = js.Dynamic.literal(Resource = Resource.asInstanceOf[js.Any], UseLongIds = UseLongIds.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ModifyIdFormatRequest]
   }
+  @scala.inline
+  implicit class ModifyIdFormatRequestOps[Self <: ModifyIdFormatRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseLongIds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseLongIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

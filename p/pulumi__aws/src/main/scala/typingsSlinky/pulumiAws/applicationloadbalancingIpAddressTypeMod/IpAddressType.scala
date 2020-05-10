@@ -12,10 +12,8 @@ trait IpAddressType extends js.Object
 
 object IpAddressType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dualstack: typingsSlinky.pulumiAws.pulumiAwsStrings.dualstack = "dualstack".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.dualstack]
   @scala.inline
-  def dualstack: typingsSlinky.pulumiAws.pulumiAwsStrings.dualstack = this.cast("dualstack")
-  @scala.inline
-  def ipv4: typingsSlinky.pulumiAws.pulumiAwsStrings.ipv4 = this.cast("ipv4")
+  def ipv4: typingsSlinky.pulumiAws.pulumiAwsStrings.ipv4 = "ipv4".asInstanceOf[typingsSlinky.pulumiAws.pulumiAwsStrings.ipv4]
 }
 

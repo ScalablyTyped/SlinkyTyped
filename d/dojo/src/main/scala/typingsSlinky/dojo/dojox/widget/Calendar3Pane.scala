@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   * A Calendar with three panes, includes day, month, and year views
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.widget.CalendarYear because Inheritance from two classes. Inlined 
 - typingsSlinky.dojo.dojox.widget.CalendarMonth because Inheritance from two classes. Inlined 
 - typingsSlinky.dojo.dojox.widget.CalendarDay because Inheritance from two classes. Inlined parent */ @JSGlobal("dojox.widget.Calendar3Pane")

@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ThrottleOptions extends js.Object {
-  var burst: js.UndefOr[Double] = js.undefined
-  var ip: js.UndefOr[Boolean] = js.undefined
-  var maxKeys: js.UndefOr[Double] = js.undefined
-  var overrides: js.UndefOr[js.Any] = js.undefined
-  var rate: js.UndefOr[Double] = js.undefined
-  var setHeaders: js.UndefOr[Boolean] = js.undefined
-  var tokensTable: js.UndefOr[js.Any] = js.undefined
-  var username: js.UndefOr[Boolean] = js.undefined
-  var xff: js.UndefOr[Boolean] = js.undefined
+  var burst: js.UndefOr[Double] = js.native
+  var ip: js.UndefOr[Boolean] = js.native
+  var maxKeys: js.UndefOr[Double] = js.native
+  var overrides: js.UndefOr[js.Any] = js.native
+  var rate: js.UndefOr[Double] = js.native
+  var setHeaders: js.UndefOr[Boolean] = js.native
+  var tokensTable: js.UndefOr[js.Any] = js.native
+  var username: js.UndefOr[Boolean] = js.native
+  var xff: js.UndefOr[Boolean] = js.native
 }
 
 object ThrottleOptions {
   @scala.inline
-  def apply(
-    burst: Int | Double = null,
-    ip: js.UndefOr[Boolean] = js.undefined,
-    maxKeys: Int | Double = null,
-    overrides: js.Any = null,
-    rate: Int | Double = null,
-    setHeaders: js.UndefOr[Boolean] = js.undefined,
-    tokensTable: js.Any = null,
-    username: js.UndefOr[Boolean] = js.undefined,
-    xff: js.UndefOr[Boolean] = js.undefined
-  ): ThrottleOptions = {
+  def apply(): ThrottleOptions = {
     val __obj = js.Dynamic.literal()
-    if (burst != null) __obj.updateDynamic("burst")(burst.asInstanceOf[js.Any])
-    if (!js.isUndefined(ip)) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
-    if (maxKeys != null) __obj.updateDynamic("maxKeys")(maxKeys.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (rate != null) __obj.updateDynamic("rate")(rate.asInstanceOf[js.Any])
-    if (!js.isUndefined(setHeaders)) __obj.updateDynamic("setHeaders")(setHeaders.asInstanceOf[js.Any])
-    if (tokensTable != null) __obj.updateDynamic("tokensTable")(tokensTable.asInstanceOf[js.Any])
-    if (!js.isUndefined(username)) __obj.updateDynamic("username")(username.asInstanceOf[js.Any])
-    if (!js.isUndefined(xff)) __obj.updateDynamic("xff")(xff.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThrottleOptions]
   }
+  @scala.inline
+  implicit class ThrottleOptionsOps[Self <: ThrottleOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBurst(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("burst")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBurst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("burst")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxKeys(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrides(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetHeaders(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokensTable(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokensTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokensTable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokensTable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("username")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXff(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXff: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xff")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

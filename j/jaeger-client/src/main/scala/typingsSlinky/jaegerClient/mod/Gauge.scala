@@ -4,17 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Gauge extends js.Object {
   // Update the gauge to the value passed in.
-  def update(value: Double): Unit
+  def update(value: Double): Unit = js.native
 }
 
 object Gauge {
   @scala.inline
   def apply(update: Double => Unit): Gauge = {
     val __obj = js.Dynamic.literal(update = js.Any.fromFunction1(update))
-  
     __obj.asInstanceOf[Gauge]
   }
+  @scala.inline
+  implicit class GaugeOps[Self <: Gauge] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUpdate(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

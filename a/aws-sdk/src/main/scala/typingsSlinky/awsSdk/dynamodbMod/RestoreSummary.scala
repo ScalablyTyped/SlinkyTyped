@@ -26,16 +26,53 @@ trait RestoreSummary extends js.Object {
 
 object RestoreSummary {
   @scala.inline
-  def apply(
-    RestoreDateTime: js.Date,
-    RestoreInProgress: RestoreInProgress,
-    SourceBackupArn: BackupArn = null,
-    SourceTableArn: TableArn = null
-  ): RestoreSummary = {
+  def apply(RestoreDateTime: js.Date, RestoreInProgress: RestoreInProgress): RestoreSummary = {
     val __obj = js.Dynamic.literal(RestoreDateTime = RestoreDateTime.asInstanceOf[js.Any], RestoreInProgress = RestoreInProgress.asInstanceOf[js.Any])
-    if (SourceBackupArn != null) __obj.updateDynamic("SourceBackupArn")(SourceBackupArn.asInstanceOf[js.Any])
-    if (SourceTableArn != null) __obj.updateDynamic("SourceTableArn")(SourceTableArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreSummary]
   }
+  @scala.inline
+  implicit class RestoreSummaryOps[Self <: RestoreSummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRestoreDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestoreInProgress(value: RestoreInProgress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreInProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceBackupArn(value: BackupArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceBackupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceBackupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceBackupArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceTableArn(value: TableArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceTableArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceTableArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceTableArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

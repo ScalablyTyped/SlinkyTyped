@@ -4,39 +4,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FileAttachment extends Attachment {
   // The base64-encoded contents of the file.
-  var contentBytes: js.UndefOr[Double] = js.undefined
+  var contentBytes: js.UndefOr[Double] = js.native
   // The ID of the attachment in the Exchange store.
-  var contentId: js.UndefOr[String] = js.undefined
+  var contentId: js.UndefOr[String] = js.native
   // Do not use this property as it is not supported.
-  var contentLocation: js.UndefOr[String] = js.undefined
+  var contentLocation: js.UndefOr[String] = js.native
 }
 
 object FileAttachment {
   @scala.inline
-  def apply(
-    contentBytes: Int | Double = null,
-    contentId: String = null,
-    contentLocation: String = null,
-    contentType: String = null,
-    id: String = null,
-    isInline: js.UndefOr[Boolean] = js.undefined,
-    lastModifiedDateTime: String = null,
-    name: String = null,
-    size: Int | Double = null
-  ): FileAttachment = {
+  def apply(): FileAttachment = {
     val __obj = js.Dynamic.literal()
-    if (contentBytes != null) __obj.updateDynamic("contentBytes")(contentBytes.asInstanceOf[js.Any])
-    if (contentId != null) __obj.updateDynamic("contentId")(contentId.asInstanceOf[js.Any])
-    if (contentLocation != null) __obj.updateDynamic("contentLocation")(contentLocation.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInline)) __obj.updateDynamic("isInline")(isInline.asInstanceOf[js.Any])
-    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileAttachment]
   }
+  @scala.inline
+  implicit class FileAttachmentOps[Self <: FileAttachment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentBytes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLocation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

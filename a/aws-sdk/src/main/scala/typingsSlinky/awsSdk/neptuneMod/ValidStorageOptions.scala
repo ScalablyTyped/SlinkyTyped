@@ -26,18 +26,65 @@ trait ValidStorageOptions extends js.Object {
 
 object ValidStorageOptions {
   @scala.inline
-  def apply(
-    IopsToStorageRatio: DoubleRangeList = null,
-    ProvisionedIops: RangeList = null,
-    StorageSize: RangeList = null,
-    StorageType: String = null
-  ): ValidStorageOptions = {
+  def apply(): ValidStorageOptions = {
     val __obj = js.Dynamic.literal()
-    if (IopsToStorageRatio != null) __obj.updateDynamic("IopsToStorageRatio")(IopsToStorageRatio.asInstanceOf[js.Any])
-    if (ProvisionedIops != null) __obj.updateDynamic("ProvisionedIops")(ProvisionedIops.asInstanceOf[js.Any])
-    if (StorageSize != null) __obj.updateDynamic("StorageSize")(StorageSize.asInstanceOf[js.Any])
-    if (StorageType != null) __obj.updateDynamic("StorageType")(StorageType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidStorageOptions]
   }
+  @scala.inline
+  implicit class ValidStorageOptionsOps[Self <: ValidStorageOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIopsToStorageRatio(value: DoubleRangeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IopsToStorageRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIopsToStorageRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IopsToStorageRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedIops(value: RangeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedIops")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedIops: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedIops")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageSize(value: RangeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStorageType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorageType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StorageType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

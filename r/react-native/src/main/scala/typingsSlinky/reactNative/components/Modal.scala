@@ -1,11 +1,8 @@
 package typingsSlinky.reactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ModalProps
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.reactNativeStrings.`landscape-left`
@@ -24,45 +21,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Modal
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNative.mod.Modal] {
+object Modal {
   @JSImport("react-native", "Modal")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animationType: none | slide | fade = null,
-    hardwareAccelerated: js.UndefOr[Boolean] = js.undefined,
-    onDismiss: () => Unit = null,
-    onOrientationChange: SyntheticEvent[NodeHandle, _] => Unit = null,
-    onRequestClose: () => Unit = null,
-    onShow: SyntheticEvent[NodeHandle, _] => Unit = null,
-    presentationStyle: fullScreen | pageSheet | formSheet | overFullScreen = null,
-    supportedOrientations: js.Array[
-      portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`
-    ] = null,
-    transparent: js.UndefOr[Boolean] = js.undefined,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNative.mod.Modal] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (animationType != null) __obj.updateDynamic("animationType")(animationType.asInstanceOf[js.Any])
-    if (!js.isUndefined(hardwareAccelerated)) __obj.updateDynamic("hardwareAccelerated")(hardwareAccelerated.asInstanceOf[js.Any])
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
-    if (onOrientationChange != null) __obj.updateDynamic("onOrientationChange")(js.Any.fromFunction1(onOrientationChange))
-    if (onRequestClose != null) __obj.updateDynamic("onRequestClose")(js.Any.fromFunction0(onRequestClose))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction1(onShow))
-    if (presentationStyle != null) __obj.updateDynamic("presentationStyle")(presentationStyle.asInstanceOf[js.Any])
-    if (supportedOrientations != null) __obj.updateDynamic("supportedOrientations")(supportedOrientations.asInstanceOf[js.Any])
-    if (!js.isUndefined(transparent)) __obj.updateDynamic("transparent")(transparent.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.Modal] {
+    @scala.inline
+    def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animationType(value: none | slide | fade): this.type = set("animationType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hardwareAccelerated(value: Boolean): this.type = set("hardwareAccelerated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDismiss(value: () => Unit): this.type = set("onDismiss", js.Any.fromFunction0(value))
+    @scala.inline
+    def onOrientationChange(value: SyntheticEvent[NodeHandle, _] => Unit): this.type = set("onOrientationChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRequestClose(value: () => Unit): this.type = set("onRequestClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def onShow(value: SyntheticEvent[NodeHandle, _] => Unit): this.type = set("onShow", js.Any.fromFunction1(value))
+    @scala.inline
+    def presentationStyle(value: fullScreen | pageSheet | formSheet | overFullScreen): this.type = set("presentationStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def supportedOrientations(
+      value: js.Array[
+          portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`
+        ]
+    ): this.type = set("supportedOrientations", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transparent(value: Boolean): this.type = set("transparent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNative.mod.Modal] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNative.mod.Modal](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ModalProps
+  
+  def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Modal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -34,20 +34,77 @@ trait CreatePresetRequest extends js.Object {
 
 object CreatePresetRequest {
   @scala.inline
-  def apply(
-    Container: PresetContainer,
-    Name: Name,
-    Audio: AudioParameters = null,
-    Description: Description = null,
-    Thumbnails: Thumbnails = null,
-    Video: VideoParameters = null
-  ): CreatePresetRequest = {
+  def apply(Container: PresetContainer, Name: Name): CreatePresetRequest = {
     val __obj = js.Dynamic.literal(Container = Container.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-    if (Audio != null) __obj.updateDynamic("Audio")(Audio.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (Thumbnails != null) __obj.updateDynamic("Thumbnails")(Thumbnails.asInstanceOf[js.Any])
-    if (Video != null) __obj.updateDynamic("Video")(Video.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePresetRequest]
   }
+  @scala.inline
+  implicit class CreatePresetRequestOps[Self <: CreatePresetRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainer(value: PresetContainer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAudio(value: AudioParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Audio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Audio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbnails(value: Thumbnails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Thumbnails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbnails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Thumbnails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideo(value: VideoParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Video")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Video")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

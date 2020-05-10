@@ -4,25 +4,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IColorPalette extends js.Object {
-  var amber: IPalette
-  var blue: IPalette
-  var `blue-grey`: IPalette
-  var brown: IPalette
-  var cyan: IPalette
-  var `deep-orange`: IPalette
-  var `deep-purple`: IPalette
-  var green: IPalette
-  var grey: IPalette
-  var indigo: IPalette
-  var `light-blue`: IPalette
-  var `light-green`: IPalette
-  var lime: IPalette
-  var orange: IPalette
-  var pink: IPalette
-  var red: IPalette
-  var teal: IPalette
-  var yellow: IPalette
+  var amber: IPalette = js.native
+  var blue: IPalette = js.native
+  var `blue-grey`: IPalette = js.native
+  var brown: IPalette = js.native
+  var cyan: IPalette = js.native
+  var `deep-orange`: IPalette = js.native
+  var `deep-purple`: IPalette = js.native
+  var green: IPalette = js.native
+  var grey: IPalette = js.native
+  var indigo: IPalette = js.native
+  var `light-blue`: IPalette = js.native
+  var `light-green`: IPalette = js.native
+  var lime: IPalette = js.native
+  var orange: IPalette = js.native
+  var pink: IPalette = js.native
+  var red: IPalette = js.native
+  var teal: IPalette = js.native
+  var yellow: IPalette = js.native
 }
 
 object IColorPalette {
@@ -55,5 +56,121 @@ object IColorPalette {
     __obj.updateDynamic("light-green")(`light-green`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IColorPalette]
   }
+  @scala.inline
+  implicit class IColorPaletteOps[Self <: IColorPalette] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmber(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlue(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withBlue-grey`(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blue-grey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBrown(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCyan(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cyan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withDeep-orange`(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deep-orange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withDeep-purple`(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deep-purple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGreen(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("green")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGrey(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndigo(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indigo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withLight-blue`(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("light-blue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withLight-green`(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("light-green")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLime(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrange(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPink(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRed(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("red")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTeal(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withYellow(value: IPalette): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yellow")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

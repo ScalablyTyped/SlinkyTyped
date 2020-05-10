@@ -16,10 +16,8 @@ trait DisplayState extends js.Object
 
 object DisplayState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def collapsed: typingsSlinky.xrm.xrmStrings.collapsed = "collapsed".asInstanceOf[typingsSlinky.xrm.xrmStrings.collapsed]
   @scala.inline
-  def collapsed: typingsSlinky.xrm.xrmStrings.collapsed = this.cast("collapsed")
-  @scala.inline
-  def expanded: typingsSlinky.xrm.xrmStrings.expanded = this.cast("expanded")
+  def expanded: typingsSlinky.xrm.xrmStrings.expanded = "expanded".asInstanceOf[typingsSlinky.xrm.xrmStrings.expanded]
 }
 

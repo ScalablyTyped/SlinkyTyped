@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def pack(data: js.Any): Blob = js.native
-  def unpack(data: scala.scalajs.js.typedarray.ArrayBuffer): js.Any = js.native
+  def unpack(data: js.typedarray.ArrayBuffer): js.Any = js.native
 }
 

@@ -19,6 +19,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object getPlugins
   extends TopLevel[
-      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Plugin.getPlugins */ js.Any
+      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Plugin.getPlugin */ js.Any
     ]
 

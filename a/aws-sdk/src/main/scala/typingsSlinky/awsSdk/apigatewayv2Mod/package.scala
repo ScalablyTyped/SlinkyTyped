@@ -75,7 +75,7 @@ package object apigatewayv2Mod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ERROR
     - typingsSlinky.awsSdk.awsSdkStrings.INFO
-    - typingsSlinky.awsSdk.awsSdkStrings.false__
+    - typingsSlinky.awsSdk.awsSdkStrings.OFF
     - java.lang.String
   */
   type LoggingLevel = typingsSlinky.awsSdk.apigatewayv2Mod._LoggingLevel | java.lang.String
@@ -96,6 +96,7 @@ package object apigatewayv2Mod {
   type RouteModels = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.apigatewayv2Mod.StringWithLengthBetween1And128]
   type RouteParameters = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.apigatewayv2Mod.ParameterConstraints]
   type RouteSettingsMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.apigatewayv2Mod.RouteSettings]
+  type SecurityGroupIdList = js.Array[typingsSlinky.awsSdk.apigatewayv2Mod.string]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.TLS_1_0
     - typingsSlinky.awsSdk.awsSdkStrings.TLS_1_2
@@ -114,9 +115,20 @@ package object apigatewayv2Mod {
   type StringWithLengthBetween1And256 = java.lang.String
   type StringWithLengthBetween1And512 = java.lang.String
   type StringWithLengthBetween1And64 = java.lang.String
+  type SubnetIdList = js.Array[typingsSlinky.awsSdk.apigatewayv2Mod.string]
   type Tags = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.apigatewayv2Mod.StringWithLengthBetween1And1600]
   type TemplateMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.apigatewayv2Mod.StringWithLengthBetween0And32K]
   type UriWithLengthBetween1And2048 = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - java.lang.String
+  */
+  type VpcLinkStatus = typingsSlinky.awsSdk.apigatewayv2Mod._VpcLinkStatus | java.lang.String
+  type VpcLinkVersion = typingsSlinky.awsSdk.awsSdkStrings.V2 | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2018-11-29`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_
@@ -138,6 +150,7 @@ package object apigatewayv2Mod {
   type listOfRouteResponse = js.Array[typingsSlinky.awsSdk.apigatewayv2Mod.RouteResponse]
   type listOfStage = js.Array[typingsSlinky.awsSdk.apigatewayv2Mod.Stage]
   type listOfString = js.Array[typingsSlinky.awsSdk.apigatewayv2Mod.string]
+  type listOfVpcLink = js.Array[typingsSlinky.awsSdk.apigatewayv2Mod.VpcLink]
   type string = java.lang.String
   type timestampIso8601 = js.Date
 }

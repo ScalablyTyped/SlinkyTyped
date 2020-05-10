@@ -35,18 +35,65 @@ trait SchemaCustomViewabilityMetricConfiguration extends js.Object {
 
 object SchemaCustomViewabilityMetricConfiguration {
   @scala.inline
-  def apply(
-    audible: js.UndefOr[Boolean] = js.undefined,
-    timeMillis: Int | Double = null,
-    timePercent: Int | Double = null,
-    viewabilityPercent: Int | Double = null
-  ): SchemaCustomViewabilityMetricConfiguration = {
+  def apply(): SchemaCustomViewabilityMetricConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(audible)) __obj.updateDynamic("audible")(audible.asInstanceOf[js.Any])
-    if (timeMillis != null) __obj.updateDynamic("timeMillis")(timeMillis.asInstanceOf[js.Any])
-    if (timePercent != null) __obj.updateDynamic("timePercent")(timePercent.asInstanceOf[js.Any])
-    if (viewabilityPercent != null) __obj.updateDynamic("viewabilityPercent")(viewabilityPercent.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCustomViewabilityMetricConfiguration]
   }
+  @scala.inline
+  implicit class SchemaCustomViewabilityMetricConfigurationOps[Self <: SchemaCustomViewabilityMetricConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeMillis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimePercent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePercent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimePercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timePercent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewabilityPercent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewabilityPercent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewabilityPercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewabilityPercent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

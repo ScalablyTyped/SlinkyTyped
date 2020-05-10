@@ -11,10 +11,29 @@ trait ModifyInstanceEventStartTimeResult extends js.Object {
 
 object ModifyInstanceEventStartTimeResult {
   @scala.inline
-  def apply(Event: InstanceStatusEvent = null): ModifyInstanceEventStartTimeResult = {
+  def apply(): ModifyInstanceEventStartTimeResult = {
     val __obj = js.Dynamic.literal()
-    if (Event != null) __obj.updateDynamic("Event")(Event.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyInstanceEventStartTimeResult]
   }
+  @scala.inline
+  implicit class ModifyInstanceEventStartTimeResultOps[Self <: ModifyInstanceEventStartTimeResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvent(value: InstanceStatusEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,8 +4,6 @@ import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.memFs.mod.Store
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
-import typingsSlinky.std.RegExp
 import typingsSlinky.yeomanEnvironment.TypeofGenerator
 import typingsSlinky.yeomanGenerator.mod.Storage
 import scala.scalajs.js
@@ -23,10 +21,10 @@ trait Environment[O /* <: Options */] extends EventEmitter {
   var store: Storage = js.native
   /* private */ def _tryRegistering(generatorReference: String): Unit = js.native
   def alias(`match`: String, value: String): Unit = js.native
-  def alias(`match`: RegExp, value: String): Unit = js.native
+  def alias(`match`: js.RegExp, value: String): Unit = js.native
   def create(name: String, options: js.Object): Unit = js.native
   def error(err: js.Object): js.Error = js.native
-  def error(err: Error): js.Error = js.native
+  def error(err: js.Error): js.Error = js.native
   def findGeneratorsIn(list: js.Array[String]): js.Array[String] = js.native
   def get(namespace: String): typingsSlinky.yeomanGenerator.mod.^  | Null = js.native
   def getByPath(path: String): typingsSlinky.yeomanGenerator.mod.^  | Null = js.native

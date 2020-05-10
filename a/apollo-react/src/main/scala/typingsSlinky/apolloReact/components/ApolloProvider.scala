@@ -1,9 +1,7 @@
 package typingsSlinky.apolloReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.apolloReact.apolloProviderMod.ProviderProps
 import typingsSlinky.apolloReact.apolloProviderMod.default
 import typingsSlinky.redux.mod.AnyAction
@@ -12,27 +10,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ApolloProvider
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ApolloProvider {
   @JSImport("apollo-react/lib/ApolloProvider", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def immutable(value: Boolean): this.type = set("immutable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def store(value: Store[_, AnyAction]): this.type = set("store", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: ProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     client: typingsSlinky.apolloClient.mod.default[
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for TCacheShape */ _
-    ],
-    immutable: js.UndefOr[Boolean] = js.undefined,
-    store: Store[_, AnyAction] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(client = client.asInstanceOf[js.Any])
-    if (!js.isUndefined(immutable)) __obj.updateDynamic("immutable")(immutable.asInstanceOf[js.Any])
-    if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    ]
+  ): Builder = {
+    val __props = js.Dynamic.literal(client = client.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ProviderProps]))
   }
-  type Props = ProviderProps
 }
 

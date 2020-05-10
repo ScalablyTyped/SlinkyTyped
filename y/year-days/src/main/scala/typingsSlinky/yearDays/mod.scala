@@ -1,6 +1,5 @@
 package typingsSlinky.yearDays
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +9,6 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   def apply(): Double = js.native
   def apply(yearOrDate: Double): Double = js.native
-  def apply(yearOrDate: Date): Double = js.native
+  def apply(yearOrDate: js.Date): Double = js.native
 }
 

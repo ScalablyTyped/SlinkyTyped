@@ -56,13 +56,14 @@ trait SVGFETurbulenceElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFETurbulenceElement")
 @js.native
-object SVGFETurbulenceElement extends Instantiable0[SVGFETurbulenceElement] {
+object SVGFETurbulenceElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFETurbulenceElement] {
   val SVG_STITCHTYPE_NOSTITCH: Double = js.native
   val SVG_STITCHTYPE_STITCH: Double = js.native
   val SVG_STITCHTYPE_UNKNOWN: Double = js.native

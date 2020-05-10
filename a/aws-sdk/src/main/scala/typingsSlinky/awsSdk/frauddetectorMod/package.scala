@@ -103,7 +103,7 @@ package object frauddetectorMod {
   type apiVersion = typingsSlinky.awsSdk.frauddetectorMod._apiVersion | java.lang.String
   type attributeKey = java.lang.String
   type attributeValue = java.lang.String
-  type blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.frauddetectorMod.Blob_ | java.lang.String
+  type blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.frauddetectorMod.Blob_ | java.lang.String
   type contentType = java.lang.String
   type description = java.lang.String
   type float = scala.Double

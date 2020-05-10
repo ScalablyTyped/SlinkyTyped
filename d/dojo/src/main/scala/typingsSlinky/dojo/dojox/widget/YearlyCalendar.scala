@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   * A calendar with only a year view.
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.widget.CalendarYear because Inheritance from two classes. Inlined parent */ @JSGlobal("dojox.widget.YearlyCalendar")
 @js.native
 class YearlyCalendar () extends CalendarBase {

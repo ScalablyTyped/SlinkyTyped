@@ -1,6 +1,5 @@
 package typingsSlinky.jest.mod.jest
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,6 +38,6 @@ trait InverseAsymmetricMatchers extends js.Object {
     * `expect.stringMatching`.
     */
   def stringMatching(str: String): js.Any = js.native
-  def stringMatching(str: RegExp): js.Any = js.native
+  def stringMatching(str: js.RegExp): js.Any = js.native
 }
 

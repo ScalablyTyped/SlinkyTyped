@@ -17,10 +17,29 @@ trait SchemaGoogleCloudDialogflowV2beta1KnowledgeOperationMetadata extends js.Ob
 
 object SchemaGoogleCloudDialogflowV2beta1KnowledgeOperationMetadata {
   @scala.inline
-  def apply(state: String = null): SchemaGoogleCloudDialogflowV2beta1KnowledgeOperationMetadata = {
+  def apply(): SchemaGoogleCloudDialogflowV2beta1KnowledgeOperationMetadata = {
     val __obj = js.Dynamic.literal()
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1KnowledgeOperationMetadata]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2beta1KnowledgeOperationMetadataOps[Self <: SchemaGoogleCloudDialogflowV2beta1KnowledgeOperationMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

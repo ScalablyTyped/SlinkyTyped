@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChartParallelAxesLabelsOptions extends js.Object {
   /**
     * (Highcharts) What part of the string the given position is anchored to.
@@ -15,7 +16,7 @@ trait ChartParallelAxesLabelsOptions extends js.Object {
     * two labels have additional option `"auto"` for automatic horizontal and
     * vertical alignment.
     */
-  var align: js.UndefOr[String] = js.undefined
+  var align: js.UndefOr[String] = js.native
   /**
     * (Highcharts, Highstock, Gantt) For horizontal axes, the allowed degrees
     * of label rotation to prevent overlapping labels. If there is enough
@@ -24,7 +25,7 @@ trait ChartParallelAxesLabelsOptions extends js.Object {
     * again with rotations 0 and -45 etc. Set it to `false` to disable
     * rotation, which will cause the labels to word-wrap if possible.
     */
-  var autoRotation: js.UndefOr[`false` | js.Array[Double]] = js.undefined
+  var autoRotation: js.UndefOr[`false` | js.Array[Double]] = js.native
   /**
     * (Highcharts, Gantt) When each category width is more than this many
     * pixels, we don't apply auto rotation. Instead, we lay out the axis label
@@ -32,7 +33,7 @@ trait ChartParallelAxesLabelsOptions extends js.Object {
     * multiple short words that don't extend the available horizontal space for
     * each label.
     */
-  var autoRotationLimit: js.UndefOr[Double] = js.undefined
+  var autoRotationLimit: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) Angular gauges and solid gauges only. The label's pixel
     * distance from the perimeter of the plot area.
@@ -40,15 +41,15 @@ trait ChartParallelAxesLabelsOptions extends js.Object {
     * Since v7.1.2: If it's a percentage string, it is interpreted the same as
     * series.radius, so label can be aligned under the gauge's shape.
     */
-  var distance: js.UndefOr[Double | String] = js.undefined
+  var distance: js.UndefOr[Double | String] = js.native
   /**
     * (Highcharts) Enable or disable the axis labels.
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts) A format string for the axis label.
     */
-  var format: js.UndefOr[String] = js.undefined
+  var format: js.UndefOr[String] = js.native
   /**
     * (Highcharts) Callback JavaScript function to format the label. The value
     * is given by `this.value`. Additional properties for `this` are `axis`,
@@ -60,29 +61,29 @@ trait ChartParallelAxesLabelsOptions extends js.Object {
     *
     *  (see online documentation for example)
     */
-  var formatter: js.UndefOr[FormatterCallbackFunction[AxisLabelsFormatterContextObject]] = js.undefined
+  var formatter: js.UndefOr[FormatterCallbackFunction[AxisLabelsFormatterContextObject]] = js.native
   /**
     * (Gantt) The number of pixels to indent the labels per level in a treegrid
     * axis.
     */
-  var indentation: js.UndefOr[Double] = js.undefined
+  var indentation: js.UndefOr[Double] = js.native
   /**
     * (Gantt) Set options on specific levels in a tree grid axis. Takes
     * precedence over labels options.
     */
-  var levels: js.UndefOr[js.Array[ChartParallelAxesLabelsLevelsOptions]] = js.undefined
+  var levels: js.UndefOr[js.Array[ChartParallelAxesLabelsLevelsOptions]] = js.native
   /**
     * (Highcharts) How to handle overflowing labels on horizontal axis. If set
     * to `"allow"`, it will not be aligned at all. By default it `"justify"`
     * labels inside the chart area. If there is room to move it, it will be
     * aligned to the edge, else it will be removed.
     */
-  var overflow: js.UndefOr[OptionsOverflowValue] = js.undefined
+  var overflow: js.UndefOr[OptionsOverflowValue] = js.native
   /**
     * (Highcharts, Gantt) The pixel padding for axis labels, to ensure white
     * space between them.
     */
-  var padding: js.UndefOr[Double] = js.undefined
+  var padding: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) Defines how the labels are be repositioned according to the
     * 3D chart orientation.
@@ -102,7 +103,7 @@ trait ChartParallelAxesLabelsOptions extends js.Object {
     * orthogonal to the axis. This is very similar to `'flap'`, but prevents
     * skewing the labels (X and Y scaling are still present).
     */
-  var position3d: js.UndefOr[OptionsPosition3dValue] = js.undefined
+  var position3d: js.UndefOr[OptionsPosition3dValue] = js.native
   /**
     * (Highcharts, Gantt) Whether to reserve space for the labels. By default,
     * space is reserved for the labels in these cases:
@@ -117,11 +118,11 @@ trait ChartParallelAxesLabelsOptions extends js.Object {
     * This can be turned off when for example the labels are rendered inside
     * the plot area instead of outside.
     */
-  var reserveSpace: js.UndefOr[Boolean] = js.undefined
+  var reserveSpace: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts) Rotation of the labels in degrees.
     */
-  var rotation: js.UndefOr[Double] = js.undefined
+  var rotation: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) If enabled, the axis labels will skewed to follow the
     * perspective.
@@ -131,12 +132,12 @@ trait ChartParallelAxesLabelsOptions extends js.Object {
     *
     * The final appearance depends heavily on `labels.position3d`.
     */
-  var skew3d: js.UndefOr[Boolean] = js.undefined
+  var skew3d: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts) Horizontal axes only. The number of lines to spread the
     * labels over to make room or tighter labels.
     */
-  var staggerLines: js.UndefOr[Double] = js.undefined
+  var staggerLines: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) To show only every _n_'th label on the axis, set the step to
     * _n_. Setting the step to 2 shows every other label.
@@ -147,7 +148,7 @@ trait ChartParallelAxesLabelsOptions extends js.Object {
     *
     * Read more at Axis docs => What axis should I use?
     */
-  var step: js.UndefOr[Double] = js.undefined
+  var step: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) CSS styles for the label. Use `whiteSpace: 'nowrap'` to
     * prevent wrapping of category labels. Use `textOverflow: 'none'` to
@@ -156,83 +157,320 @@ trait ChartParallelAxesLabelsOptions extends js.Object {
     * In styled mode, the labels are styled with the `.highcharts-axis-labels`
     * class.
     */
-  var style: js.UndefOr[CSSObject] = js.undefined
+  var style: js.UndefOr[CSSObject] = js.native
   /**
     * (Gantt) The symbol for the collapse and expand icon in a treegrid.
     */
-  var symbol: js.UndefOr[ChartParallelAxesLabelsSymbolOptions] = js.undefined
+  var symbol: js.UndefOr[ChartParallelAxesLabelsSymbolOptions] = js.native
   /**
     * (Highcharts) Whether to use HTML to render the labels.
     */
-  var useHTML: js.UndefOr[Boolean] = js.undefined
+  var useHTML: js.UndefOr[Boolean] = js.native
   /**
     * (Highcharts) The x position offset of the label relative to the tick
     * position on the axis. Defaults to -15 for left axis, 15 for right axis.
     */
-  var x: js.UndefOr[Double] = js.undefined
+  var x: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) The y position offset of the label relative to the tick
     * position on the axis.
     */
-  var y: js.UndefOr[Double] = js.undefined
+  var y: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) The Z index for the axis labels.
     */
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object ChartParallelAxesLabelsOptions {
   @scala.inline
-  def apply(
-    align: String = null,
-    autoRotation: `false` | js.Array[Double] = null,
-    autoRotationLimit: Int | Double = null,
-    distance: Double | String = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    format: String = null,
-    formatter: FormatterCallbackFunction[AxisLabelsFormatterContextObject] = null,
-    indentation: Int | Double = null,
-    levels: js.Array[ChartParallelAxesLabelsLevelsOptions] = null,
-    overflow: OptionsOverflowValue = null,
-    padding: Int | Double = null,
-    position3d: OptionsPosition3dValue = null,
-    reserveSpace: js.UndefOr[Boolean] = js.undefined,
-    rotation: Int | Double = null,
-    skew3d: js.UndefOr[Boolean] = js.undefined,
-    staggerLines: Int | Double = null,
-    step: Int | Double = null,
-    style: CSSObject = null,
-    symbol: ChartParallelAxesLabelsSymbolOptions = null,
-    useHTML: js.UndefOr[Boolean] = js.undefined,
-    x: Int | Double = null,
-    y: Int | Double = null,
-    zIndex: Int | Double = null
-  ): ChartParallelAxesLabelsOptions = {
+  def apply(): ChartParallelAxesLabelsOptions = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (autoRotation != null) __obj.updateDynamic("autoRotation")(autoRotation.asInstanceOf[js.Any])
-    if (autoRotationLimit != null) __obj.updateDynamic("autoRotationLimit")(autoRotationLimit.asInstanceOf[js.Any])
-    if (distance != null) __obj.updateDynamic("distance")(distance.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(formatter.asInstanceOf[js.Any])
-    if (indentation != null) __obj.updateDynamic("indentation")(indentation.asInstanceOf[js.Any])
-    if (levels != null) __obj.updateDynamic("levels")(levels.asInstanceOf[js.Any])
-    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (position3d != null) __obj.updateDynamic("position3d")(position3d.asInstanceOf[js.Any])
-    if (!js.isUndefined(reserveSpace)) __obj.updateDynamic("reserveSpace")(reserveSpace.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (!js.isUndefined(skew3d)) __obj.updateDynamic("skew3d")(skew3d.asInstanceOf[js.Any])
-    if (staggerLines != null) __obj.updateDynamic("staggerLines")(staggerLines.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
-    if (!js.isUndefined(useHTML)) __obj.updateDynamic("useHTML")(useHTML.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartParallelAxesLabelsOptions]
   }
+  @scala.inline
+  implicit class ChartParallelAxesLabelsOptionsOps[Self <: ChartParallelAxesLabelsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoRotation(value: `false` | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoRotationLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRotationLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoRotationLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoRotationLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistance(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatter(value: FormatterCallbackFunction[AxisLabelsFormatterContextObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndentation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndentation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevels(value: js.Array[ChartParallelAxesLabelsLevelsOptions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverflow(value: OptionsOverflowValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverflow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition3d(value: OptionsPosition3dValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position3d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition3d: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position3d")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReserveSpace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reserveSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReserveSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reserveSpace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkew3d(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skew3d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkew3d: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skew3d")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStaggerLines(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("staggerLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStaggerLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("staggerLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: ChartParallelAxesLabelsSymbolOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseHTML(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useHTML")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseHTML: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useHTML")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

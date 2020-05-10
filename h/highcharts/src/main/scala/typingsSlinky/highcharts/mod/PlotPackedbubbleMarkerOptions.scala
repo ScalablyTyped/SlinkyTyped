@@ -4,29 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotPackedbubbleMarkerOptions extends js.Object {
   /**
     * (Highcharts) The fill color of the point marker. When `undefined`, the
     * series' or point's color is used.
     */
-  var fillColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var fillColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   /**
     * (Highcharts) The fill opacity of the bubble markers.
     */
-  var fillOpacity: js.UndefOr[Double] = js.undefined
+  var fillOpacity: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) The color of the point marker's outline. When `undefined`,
     * the series' or point's color is used.
     */
-  var lineColor: js.UndefOr[js.Any] = js.undefined
+  var lineColor: js.UndefOr[js.Any] = js.native
   /**
     * (Highcharts) The width of the point marker's outline.
     */
-  var lineWidth: js.UndefOr[Double] = js.undefined
+  var lineWidth: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) States for a single point marker.
     */
-  var states: js.UndefOr[PlotPackedbubbleMarkerStatesOptions] = js.undefined
+  var states: js.UndefOr[PlotPackedbubbleMarkerStatesOptions] = js.native
   /**
     * (Highcharts) A predefined shape or symbol for the marker. Possible values
     * are "circle", "square", "diamond", "triangle" and "triangle-down".
@@ -39,27 +40,94 @@ trait PlotPackedbubbleMarkerOptions extends js.Object {
     * `Highcharts.SVGRenderer.prototype.symbols`. The callback is then used by
     * its method name, as shown in the demo.
     */
-  var symbol: js.UndefOr[String | SymbolKeyValue] = js.undefined
+  var symbol: js.UndefOr[String | SymbolKeyValue] = js.native
 }
 
 object PlotPackedbubbleMarkerOptions {
   @scala.inline
-  def apply(
-    fillColor: ColorString | GradientColorObject | PatternObject = null,
-    fillOpacity: Int | Double = null,
-    lineColor: js.Any = null,
-    lineWidth: Int | Double = null,
-    states: PlotPackedbubbleMarkerStatesOptions = null,
-    symbol: String | SymbolKeyValue = null
-  ): PlotPackedbubbleMarkerOptions = {
+  def apply(): PlotPackedbubbleMarkerOptions = {
     val __obj = js.Dynamic.literal()
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (lineColor != null) __obj.updateDynamic("lineColor")(lineColor.asInstanceOf[js.Any])
-    if (lineWidth != null) __obj.updateDynamic("lineWidth")(lineWidth.asInstanceOf[js.Any])
-    if (states != null) __obj.updateDynamic("states")(states.asInstanceOf[js.Any])
-    if (symbol != null) __obj.updateDynamic("symbol")(symbol.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotPackedbubbleMarkerOptions]
   }
+  @scala.inline
+  implicit class PlotPackedbubbleMarkerOptionsOps[Self <: PlotPackedbubbleMarkerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFillColor(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineColor(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStates(value: PlotPackedbubbleMarkerStatesOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymbol(value: String | SymbolKeyValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

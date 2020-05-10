@@ -1,13 +1,13 @@
 package typingsSlinky.antd.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.antd.dividerMod.DividerProps
-import typingsSlinky.react.mod.SFC
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("antd", "Divider")
 @js.native
-object Divider extends TopLevel[SFC[DividerProps]]
+object Divider extends TopLevel[ReactComponentClass[DividerProps]]
 

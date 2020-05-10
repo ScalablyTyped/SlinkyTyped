@@ -51,7 +51,7 @@ trait IDBObjectStore extends js.Object {
     * If successful, request's result will be the count.
     */
   def count(): org.scalajs.dom.raw.IDBRequest = js.native
-  def count(key: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def count(key: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   def count(key: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   /**
     * Creates a new index in store with the given name, keyPath and options and returns a new IDBIndex. If the keyPath and options define constraints that cannot be satisfied with the data already in store the upgrade transaction will abort with a "ConstraintError" DOMException.
@@ -62,9 +62,9 @@ trait IDBObjectStore extends js.Object {
   def createIndex(name: java.lang.String, keyPath: java.lang.String, options: IDBIndexParameters): org.scalajs.dom.raw.IDBIndex = js.native
   def createIndex(name: java.lang.String, keyPath: js.Array[java.lang.String]): org.scalajs.dom.raw.IDBIndex = js.native
   def createIndex(name: java.lang.String, keyPath: js.Array[java.lang.String], options: IDBIndexParameters): org.scalajs.dom.raw.IDBIndex = js.native
-  def createIndex(name: java.lang.String, keyPath: Iterable[java.lang.String]): org.scalajs.dom.raw.IDBIndex = js.native
-  def createIndex(name: java.lang.String, keyPath: Iterable[java.lang.String], options: IDBIndexParameters): org.scalajs.dom.raw.IDBIndex = js.native
-  def delete(key: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def createIndex(name: java.lang.String, keyPath: js.Iterable[java.lang.String]): org.scalajs.dom.raw.IDBIndex = js.native
+  def createIndex(name: java.lang.String, keyPath: js.Iterable[java.lang.String], options: IDBIndexParameters): org.scalajs.dom.raw.IDBIndex = js.native
+  def delete(key: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   /**
     * Deletes records in store with the given key or in the given key range in query.
     * 
@@ -77,7 +77,7 @@ trait IDBObjectStore extends js.Object {
     * Throws an "InvalidStateError" DOMException if not called within an upgrade transaction.
     */
   def deleteIndex(name: java.lang.String): Unit = js.native
-  def get(query: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def get(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   /**
     * Retrieves the value of the first record matching the given key or key range in query.
     * 
@@ -91,8 +91,8 @@ trait IDBObjectStore extends js.Object {
     */
   def getAll(): org.scalajs.dom.raw.IDBRequest = js.native
   def getAll(query: Null, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
+  def getAll(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def getAll(query: org.scalajs.dom.raw.IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
   def getAll(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   def getAll(query: IDBValidKey, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
   /**
@@ -102,11 +102,11 @@ trait IDBObjectStore extends js.Object {
     */
   def getAllKeys(): org.scalajs.dom.raw.IDBRequest = js.native
   def getAllKeys(query: Null, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
+  def getAllKeys(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def getAllKeys(query: org.scalajs.dom.raw.IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
   def getAllKeys(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   def getAllKeys(query: IDBValidKey, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getKey(query: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def getKey(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
   /**
     * Retrieves the key of the first record matching the given key or key range in query.
     * 
@@ -121,8 +121,8 @@ trait IDBObjectStore extends js.Object {
     */
   def openCursor(): org.scalajs.dom.raw.IDBRequest = js.native
   def openCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
+  def openCursor(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def openCursor(query: org.scalajs.dom.raw.IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   def openCursor(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   def openCursor(query: IDBValidKey, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   /**
@@ -132,8 +132,8 @@ trait IDBObjectStore extends js.Object {
     */
   def openKeyCursor(): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
+  def openKeyCursor(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def openKeyCursor(query: org.scalajs.dom.raw.IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: IDBValidKey, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
   /**
@@ -151,5 +151,6 @@ trait IDBObjectStore extends js.Object {
 
 @JSGlobal("IDBObjectStore")
 @js.native
-object IDBObjectStore extends Instantiable0[IDBObjectStore]
+object IDBObjectStore
+  extends Instantiable0[org.scalajs.dom.raw.IDBObjectStore]
 

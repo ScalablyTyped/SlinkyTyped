@@ -16,8 +16,21 @@ object TrackingConfig {
   @scala.inline
   def apply(autotrack: Criticality): TrackingConfig = {
     val __obj = js.Dynamic.literal(autotrack = autotrack.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TrackingConfig]
   }
+  @scala.inline
+  implicit class TrackingConfigOps[Self <: TrackingConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutotrack(value: Criticality): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autotrack")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

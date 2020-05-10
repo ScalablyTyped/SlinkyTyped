@@ -6,45 +6,153 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@feathersjs/authentication-local.@feathersjs/authentication-local.FeathersAuthenticationLocalOptions> */
+@js.native
 trait PartialFeathersAuthentica extends js.Object {
-  var Verifier: js.UndefOr[LocalVerifier] = js.undefined
-  var entity: js.UndefOr[String] = js.undefined
-  var entityPasswordField: js.UndefOr[String] = js.undefined
-  var entityUsernameField: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var passReqToCallback: js.UndefOr[Boolean] = js.undefined
-  var passwordField: js.UndefOr[String] = js.undefined
-  var service: js.UndefOr[String] = js.undefined
-  var session: js.UndefOr[Boolean] = js.undefined
-  var usernameField: js.UndefOr[String] = js.undefined
+  var Verifier: js.UndefOr[LocalVerifier] = js.native
+  var entity: js.UndefOr[String] = js.native
+  var entityPasswordField: js.UndefOr[String] = js.native
+  var entityUsernameField: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var passReqToCallback: js.UndefOr[Boolean] = js.native
+  var passwordField: js.UndefOr[String] = js.native
+  var service: js.UndefOr[String] = js.native
+  var session: js.UndefOr[Boolean] = js.native
+  var usernameField: js.UndefOr[String] = js.native
 }
 
 object PartialFeathersAuthentica {
   @scala.inline
-  def apply(
-    Verifier: LocalVerifier = null,
-    entity: String = null,
-    entityPasswordField: String = null,
-    entityUsernameField: String = null,
-    name: String = null,
-    passReqToCallback: js.UndefOr[Boolean] = js.undefined,
-    passwordField: String = null,
-    service: String = null,
-    session: js.UndefOr[Boolean] = js.undefined,
-    usernameField: String = null
-  ): PartialFeathersAuthentica = {
+  def apply(): PartialFeathersAuthentica = {
     val __obj = js.Dynamic.literal()
-    if (Verifier != null) __obj.updateDynamic("Verifier")(Verifier.asInstanceOf[js.Any])
-    if (entity != null) __obj.updateDynamic("entity")(entity.asInstanceOf[js.Any])
-    if (entityPasswordField != null) __obj.updateDynamic("entityPasswordField")(entityPasswordField.asInstanceOf[js.Any])
-    if (entityUsernameField != null) __obj.updateDynamic("entityUsernameField")(entityUsernameField.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(passReqToCallback)) __obj.updateDynamic("passReqToCallback")(passReqToCallback.asInstanceOf[js.Any])
-    if (passwordField != null) __obj.updateDynamic("passwordField")(passwordField.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
-    if (!js.isUndefined(session)) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (usernameField != null) __obj.updateDynamic("usernameField")(usernameField.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialFeathersAuthentica]
   }
+  @scala.inline
+  implicit class PartialFeathersAuthenticaOps[Self <: PartialFeathersAuthentica] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVerifier(value: LocalVerifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Verifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVerifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Verifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityPasswordField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityPasswordField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityPasswordField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityPasswordField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityUsernameField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityUsernameField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityUsernameField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityUsernameField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassReqToCallback(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassReqToCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passReqToCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPasswordField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPasswordField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordField")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSession(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsernameField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usernameField")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsernameField: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usernameField")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

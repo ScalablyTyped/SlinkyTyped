@@ -1,6 +1,5 @@
 package typingsSlinky.later.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -99,7 +98,7 @@ trait RecurrenceBuilder extends ScheduleData {
     *
     * @param value - A Date or string representing your value.
     */
-  def on(value: Date): RecurrenceBuilder = js.native
+  def on(value: js.Date): RecurrenceBuilder = js.native
   /**
     * Equivalent to .on(2,3,4,5,6).dayOfWeek()
     */

@@ -30,46 +30,44 @@ trait NodeType extends js.Object
 
 object NodeType {
   @scala.inline
-  def block_quote: typingsSlinky.commonmark.commonmarkStrings.block_quote = this.cast("block_quote")
+  def block_quote: typingsSlinky.commonmark.commonmarkStrings.block_quote = "block_quote".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.block_quote]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def code: typingsSlinky.commonmark.commonmarkStrings.code = "code".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.code]
   @scala.inline
-  def code: typingsSlinky.commonmark.commonmarkStrings.code = this.cast("code")
+  def code_block: typingsSlinky.commonmark.commonmarkStrings.code_block = "code_block".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.code_block]
   @scala.inline
-  def code_block: typingsSlinky.commonmark.commonmarkStrings.code_block = this.cast("code_block")
+  def custom_block: typingsSlinky.commonmark.commonmarkStrings.custom_block = "custom_block".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.custom_block]
   @scala.inline
-  def custom_block: typingsSlinky.commonmark.commonmarkStrings.custom_block = this.cast("custom_block")
+  def custom_inline: typingsSlinky.commonmark.commonmarkStrings.custom_inline = "custom_inline".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.custom_inline]
   @scala.inline
-  def custom_inline: typingsSlinky.commonmark.commonmarkStrings.custom_inline = this.cast("custom_inline")
+  def document: typingsSlinky.commonmark.commonmarkStrings.document = "document".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.document]
   @scala.inline
-  def document: typingsSlinky.commonmark.commonmarkStrings.document = this.cast("document")
+  def emph: typingsSlinky.commonmark.commonmarkStrings.emph = "emph".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.emph]
   @scala.inline
-  def emph: typingsSlinky.commonmark.commonmarkStrings.emph = this.cast("emph")
+  def heading: typingsSlinky.commonmark.commonmarkStrings.heading = "heading".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.heading]
   @scala.inline
-  def heading: typingsSlinky.commonmark.commonmarkStrings.heading = this.cast("heading")
+  def html_block: typingsSlinky.commonmark.commonmarkStrings.html_block = "html_block".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.html_block]
   @scala.inline
-  def html_block: typingsSlinky.commonmark.commonmarkStrings.html_block = this.cast("html_block")
+  def html_inline: typingsSlinky.commonmark.commonmarkStrings.html_inline = "html_inline".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.html_inline]
   @scala.inline
-  def html_inline: typingsSlinky.commonmark.commonmarkStrings.html_inline = this.cast("html_inline")
+  def image: typingsSlinky.commonmark.commonmarkStrings.image = "image".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.image]
   @scala.inline
-  def image: typingsSlinky.commonmark.commonmarkStrings.image = this.cast("image")
+  def item: typingsSlinky.commonmark.commonmarkStrings.item = "item".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.item]
   @scala.inline
-  def item: typingsSlinky.commonmark.commonmarkStrings.item = this.cast("item")
+  def linebreak: typingsSlinky.commonmark.commonmarkStrings.linebreak = "linebreak".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.linebreak]
   @scala.inline
-  def linebreak: typingsSlinky.commonmark.commonmarkStrings.linebreak = this.cast("linebreak")
+  def link: typingsSlinky.commonmark.commonmarkStrings.link = "link".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.link]
   @scala.inline
-  def link: typingsSlinky.commonmark.commonmarkStrings.link = this.cast("link")
+  def list: typingsSlinky.commonmark.commonmarkStrings.list = "list".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.list]
   @scala.inline
-  def list: typingsSlinky.commonmark.commonmarkStrings.list = this.cast("list")
+  def paragraph: typingsSlinky.commonmark.commonmarkStrings.paragraph = "paragraph".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.paragraph]
   @scala.inline
-  def paragraph: typingsSlinky.commonmark.commonmarkStrings.paragraph = this.cast("paragraph")
+  def softbreak: typingsSlinky.commonmark.commonmarkStrings.softbreak = "softbreak".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.softbreak]
   @scala.inline
-  def softbreak: typingsSlinky.commonmark.commonmarkStrings.softbreak = this.cast("softbreak")
+  def strong: typingsSlinky.commonmark.commonmarkStrings.strong = "strong".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.strong]
   @scala.inline
-  def strong: typingsSlinky.commonmark.commonmarkStrings.strong = this.cast("strong")
+  def text: typingsSlinky.commonmark.commonmarkStrings.text = "text".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.text]
   @scala.inline
-  def text: typingsSlinky.commonmark.commonmarkStrings.text = this.cast("text")
-  @scala.inline
-  def thematic_break: typingsSlinky.commonmark.commonmarkStrings.thematic_break = this.cast("thematic_break")
+  def thematic_break: typingsSlinky.commonmark.commonmarkStrings.thematic_break = "thematic_break".asInstanceOf[typingsSlinky.commonmark.commonmarkStrings.thematic_break]
 }
 

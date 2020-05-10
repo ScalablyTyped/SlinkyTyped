@@ -18,11 +18,41 @@ trait InstanceStorageInfo extends js.Object {
 
 object InstanceStorageInfo {
   @scala.inline
-  def apply(Disks: DiskInfoList = null, TotalSizeInGB: Int | scala.Double = null): InstanceStorageInfo = {
+  def apply(): InstanceStorageInfo = {
     val __obj = js.Dynamic.literal()
-    if (Disks != null) __obj.updateDynamic("Disks")(Disks.asInstanceOf[js.Any])
-    if (TotalSizeInGB != null) __obj.updateDynamic("TotalSizeInGB")(TotalSizeInGB.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceStorageInfo]
   }
+  @scala.inline
+  implicit class InstanceStorageInfoOps[Self <: InstanceStorageInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisks(value: DiskInfoList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Disks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Disks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalSizeInGB(value: DiskSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalSizeInGB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalSizeInGB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalSizeInGB")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

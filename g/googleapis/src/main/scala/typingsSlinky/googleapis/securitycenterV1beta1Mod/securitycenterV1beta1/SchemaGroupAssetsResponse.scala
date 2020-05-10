@@ -28,16 +28,53 @@ trait SchemaGroupAssetsResponse extends js.Object {
 
 object SchemaGroupAssetsResponse {
   @scala.inline
-  def apply(
-    groupByResults: js.Array[SchemaGroupResult] = null,
-    nextPageToken: String = null,
-    readTime: String = null
-  ): SchemaGroupAssetsResponse = {
+  def apply(): SchemaGroupAssetsResponse = {
     val __obj = js.Dynamic.literal()
-    if (groupByResults != null) __obj.updateDynamic("groupByResults")(groupByResults.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (readTime != null) __obj.updateDynamic("readTime")(readTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGroupAssetsResponse]
   }
+  @scala.inline
+  implicit class SchemaGroupAssetsResponseOps[Self <: SchemaGroupAssetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupByResults(value: js.Array[SchemaGroupResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupByResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupByResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupByResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

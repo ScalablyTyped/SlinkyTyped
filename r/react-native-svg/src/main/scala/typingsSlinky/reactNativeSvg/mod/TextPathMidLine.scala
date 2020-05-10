@@ -12,10 +12,8 @@ trait TextPathMidLine extends js.Object
 
 object TextPathMidLine {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def sharp: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.sharp = "sharp".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.sharp]
   @scala.inline
-  def sharp: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.sharp = this.cast("sharp")
-  @scala.inline
-  def smooth: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.smooth = this.cast("smooth")
+  def smooth: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.smooth = "smooth".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.smooth]
 }
 

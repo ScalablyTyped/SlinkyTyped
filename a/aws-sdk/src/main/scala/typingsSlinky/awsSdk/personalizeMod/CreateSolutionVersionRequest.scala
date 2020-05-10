@@ -18,10 +18,35 @@ trait CreateSolutionVersionRequest extends js.Object {
 
 object CreateSolutionVersionRequest {
   @scala.inline
-  def apply(solutionArn: Arn, trainingMode: TrainingMode = null): CreateSolutionVersionRequest = {
+  def apply(solutionArn: Arn): CreateSolutionVersionRequest = {
     val __obj = js.Dynamic.literal(solutionArn = solutionArn.asInstanceOf[js.Any])
-    if (trainingMode != null) __obj.updateDynamic("trainingMode")(trainingMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSolutionVersionRequest]
   }
+  @scala.inline
+  implicit class CreateSolutionVersionRequestOps[Self <: CreateSolutionVersionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSolutionArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("solutionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrainingMode(value: TrainingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trainingMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

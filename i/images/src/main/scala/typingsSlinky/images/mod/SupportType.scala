@@ -16,18 +16,16 @@ trait SupportType extends js.Object
 
 object SupportType {
   @scala.inline
-  def bmp: typingsSlinky.images.imagesStrings.bmp = this.cast("bmp")
+  def bmp: typingsSlinky.images.imagesStrings.bmp = "bmp".asInstanceOf[typingsSlinky.images.imagesStrings.bmp]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def gif: typingsSlinky.images.imagesStrings.gif = "gif".asInstanceOf[typingsSlinky.images.imagesStrings.gif]
   @scala.inline
-  def gif: typingsSlinky.images.imagesStrings.gif = this.cast("gif")
+  def jpg: typingsSlinky.images.imagesStrings.jpg = "jpg".asInstanceOf[typingsSlinky.images.imagesStrings.jpg]
   @scala.inline
-  def jpg: typingsSlinky.images.imagesStrings.jpg = this.cast("jpg")
+  def png: typingsSlinky.images.imagesStrings.png = "png".asInstanceOf[typingsSlinky.images.imagesStrings.png]
   @scala.inline
-  def png: typingsSlinky.images.imagesStrings.png = this.cast("png")
+  def raw: typingsSlinky.images.imagesStrings.raw = "raw".asInstanceOf[typingsSlinky.images.imagesStrings.raw]
   @scala.inline
-  def raw: typingsSlinky.images.imagesStrings.raw = this.cast("raw")
-  @scala.inline
-  def webp: typingsSlinky.images.imagesStrings.webp = this.cast("webp")
+  def webp: typingsSlinky.images.imagesStrings.webp = "webp".asInstanceOf[typingsSlinky.images.imagesStrings.webp]
 }
 

@@ -14,10 +14,29 @@ trait JobExecutionStatusDetails extends js.Object {
 
 object JobExecutionStatusDetails {
   @scala.inline
-  def apply(detailsMap: DetailsMap = null): JobExecutionStatusDetails = {
+  def apply(): JobExecutionStatusDetails = {
     val __obj = js.Dynamic.literal()
-    if (detailsMap != null) __obj.updateDynamic("detailsMap")(detailsMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[JobExecutionStatusDetails]
   }
+  @scala.inline
+  implicit class JobExecutionStatusDetailsOps[Self <: JobExecutionStatusDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetailsMap(value: DetailsMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetailsMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detailsMap")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

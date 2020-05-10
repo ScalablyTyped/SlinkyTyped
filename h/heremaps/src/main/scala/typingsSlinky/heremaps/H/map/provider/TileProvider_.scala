@@ -1,9 +1,9 @@
 package typingsSlinky.heremaps.H.map.provider
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.heremaps.H.map.provider.TileProvider.Options
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

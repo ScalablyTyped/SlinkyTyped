@@ -85,17 +85,6 @@ class Wrapper () extends Instance {
     */
   def TAG(): String = js.native
   /**
-    * <p> A type, identifier of derived class. </p>
-    *
-    * <h4> Derived types </h4>
-    * <ul>
-    *	<li> {@link Product product} </li>
-    *	<li> {@link Wrapper wrapper} </li>
-    * <ul>
-    */
-  /* CompleteClass */
-  override def TYPE(): String = js.native
-  /**
     * <p> Wrapper is enough greater? </p>
     *
     * <p> Test whether the Wrapper is enough greater than an Instance to contain. </p>
@@ -144,21 +133,6 @@ class Wrapper () extends Instance {
     */
   def getContainableWidth(): Double = js.native
   /**
-    * Get height, length on the Y-axis in 3D.
-    */
-  /* CompleteClass */
-  override def getHeight(): Double = js.native
-  /**
-    * Get length, length on the Z-axis in 3D.
-    */
-  /* CompleteClass */
-  override def getLength(): Double = js.native
-  /**
-    * Get name.
-    */
-  /* CompleteClass */
-  override def getName(): String = js.native
-  /**
     * Get price.
     */
   def getPrice(): Double = js.native
@@ -173,36 +147,9 @@ class Wrapper () extends Instance {
     */
   def getUtilization(): Double = js.native
   /**
-    * Get (calculate) volume.
-    *
-    * @return width x height x length
-    */
-  /* CompleteClass */
-  override def getVolume(): Double = js.native
-  /**
-    * Get width, length on the X-axis in 3D.
-    */
-  /* CompleteClass */
-  override def getWidth(): Double = js.native
-  /**
     * Key of a Wrapper is its name.
     */
   def key(): js.Any = js.native
-  /**
-    * Set height, length on the Y-axis in 3D.
-    */
-  /* CompleteClass */
-  override def setHeight(`val`: Double): Unit = js.native
-  /**
-    * Set length, length on the Z-axis in 3D.
-    */
-  /* CompleteClass */
-  override def setLength(`val`: Double): Unit = js.native
-  /**
-    * Set name.
-    */
-  /* CompleteClass */
-  override def setName(`val`: String): Unit = js.native
   /**
     * Set price.
     */
@@ -211,11 +158,6 @@ class Wrapper () extends Instance {
     * Set thickness.
     */
   def setThickness(`val`: Double): Unit = js.native
-  /**
-    * Set width, length on the X-axis in 3D.
-    */
-  /* CompleteClass */
-  override def setWidth(`val`: Double): Unit = js.native
   /**
     * @inheritdoc
     */

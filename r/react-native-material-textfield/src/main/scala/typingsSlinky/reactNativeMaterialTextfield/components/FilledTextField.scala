@@ -1,15 +1,16 @@
 package typingsSlinky.reactNativeMaterialTextfield.components
 
+import typingsSlinky.reactNativeMaterialTextfield.mod.TextFieldProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FilledTextField
-  extends SharedApply_TextFieldProps1266926298[typingsSlinky.reactNativeMaterialTextfield.mod.FilledTextField] {
+object FilledTextField {
   @JSImport("react-native-material-textfield", "FilledTextField")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TextFieldProps): SharedBuilder_TextFieldProps_1541991017[typingsSlinky.reactNativeMaterialTextfield.mod.FilledTextField] = new SharedBuilder_TextFieldProps_1541991017[typingsSlinky.reactNativeMaterialTextfield.mod.FilledTextField](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FilledTextField.type): SharedBuilder_TextFieldProps_1541991017[typingsSlinky.reactNativeMaterialTextfield.mod.FilledTextField] = new SharedBuilder_TextFieldProps_1541991017[typingsSlinky.reactNativeMaterialTextfield.mod.FilledTextField](js.Array(this.component, js.Dictionary.empty))()
 }
 

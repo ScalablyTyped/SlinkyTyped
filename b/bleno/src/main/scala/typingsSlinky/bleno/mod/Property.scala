@@ -15,14 +15,12 @@ trait Property extends js.Object
 
 object Property {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def indicate: typingsSlinky.bleno.blenoStrings.indicate = "indicate".asInstanceOf[typingsSlinky.bleno.blenoStrings.indicate]
   @scala.inline
-  def indicate: typingsSlinky.bleno.blenoStrings.indicate = this.cast("indicate")
+  def read: typingsSlinky.bleno.blenoStrings.read = "read".asInstanceOf[typingsSlinky.bleno.blenoStrings.read]
   @scala.inline
-  def read: typingsSlinky.bleno.blenoStrings.read = this.cast("read")
+  def write: typingsSlinky.bleno.blenoStrings.write = "write".asInstanceOf[typingsSlinky.bleno.blenoStrings.write]
   @scala.inline
-  def write: typingsSlinky.bleno.blenoStrings.write = this.cast("write")
-  @scala.inline
-  def writeWithoutResponse: typingsSlinky.bleno.blenoStrings.writeWithoutResponse = this.cast("writeWithoutResponse")
+  def writeWithoutResponse: typingsSlinky.bleno.blenoStrings.writeWithoutResponse = "writeWithoutResponse".asInstanceOf[typingsSlinky.bleno.blenoStrings.writeWithoutResponse]
 }
 

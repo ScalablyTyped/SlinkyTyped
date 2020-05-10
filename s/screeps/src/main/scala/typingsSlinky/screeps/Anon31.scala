@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Anon31 extends js.Object {
-  var damage: `0.3`
+  var damage: `0.3` = js.native
 }
 
 object Anon31 {
   @scala.inline
   def apply(damage: `0.3`): Anon31 = {
     val __obj = js.Dynamic.literal(damage = damage.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Anon31]
   }
+  @scala.inline
+  implicit class Anon31Ops[Self <: Anon31] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDamage(value: `0.3`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("damage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

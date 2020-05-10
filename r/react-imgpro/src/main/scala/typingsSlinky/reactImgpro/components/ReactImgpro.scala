@@ -1,9 +1,7 @@
 package typingsSlinky.reactImgpro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactImgpro.AnonBlue
 import typingsSlinky.reactImgpro.AnonDegree
 import typingsSlinky.reactImgpro.AnonHeight
@@ -16,72 +14,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactImgpro
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactImgpro {
   @JSImport("react-imgpro", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    image: String,
-    onProcessFinish: () => Unit,
-    blur: Int | Double = null,
-    brightness: Int | Double = null,
-    colors: AnonBlue = null,
-    contain: Size = null,
-    contrast: Int | Double = null,
-    cover: Size = null,
-    customCdn: String = null,
-    disableRerender: js.UndefOr[Boolean] = js.undefined,
-    disableWebWorker: js.UndefOr[Boolean] = js.undefined,
-    dither565: js.UndefOr[Boolean] = js.undefined,
-    fade: Int | Double = null,
-    flip: AnonHorizontal = null,
-    greyscale: js.UndefOr[Boolean] = js.undefined,
-    invert: js.UndefOr[Boolean] = js.undefined,
-    normalize: js.UndefOr[Boolean] = js.undefined,
-    opacity: Int | Double = null,
-    opaque: js.UndefOr[Boolean] = js.undefined,
-    posterize: Int | Double = null,
-    quality: Int | Double = null,
-    resize: Shape = null,
-    rotate: AnonDegree = null,
-    scale: js.UndefOr[Boolean] = js.undefined,
-    scaleToFitImage: AnonHeight = null,
-    sepia: js.UndefOr[Boolean] = js.undefined,
-    storage: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(image = image.asInstanceOf[js.Any], onProcessFinish = js.Any.fromFunction0(onProcessFinish))
-    if (blur != null) __obj.updateDynamic("blur")(blur.asInstanceOf[js.Any])
-    if (brightness != null) __obj.updateDynamic("brightness")(brightness.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (contain != null) __obj.updateDynamic("contain")(contain.asInstanceOf[js.Any])
-    if (contrast != null) __obj.updateDynamic("contrast")(contrast.asInstanceOf[js.Any])
-    if (cover != null) __obj.updateDynamic("cover")(cover.asInstanceOf[js.Any])
-    if (customCdn != null) __obj.updateDynamic("customCdn")(customCdn.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableRerender)) __obj.updateDynamic("disableRerender")(disableRerender.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableWebWorker)) __obj.updateDynamic("disableWebWorker")(disableWebWorker.asInstanceOf[js.Any])
-    if (!js.isUndefined(dither565)) __obj.updateDynamic("dither565")(dither565.asInstanceOf[js.Any])
-    if (fade != null) __obj.updateDynamic("fade")(fade.asInstanceOf[js.Any])
-    if (flip != null) __obj.updateDynamic("flip")(flip.asInstanceOf[js.Any])
-    if (!js.isUndefined(greyscale)) __obj.updateDynamic("greyscale")(greyscale.asInstanceOf[js.Any])
-    if (!js.isUndefined(invert)) __obj.updateDynamic("invert")(invert.asInstanceOf[js.Any])
-    if (!js.isUndefined(normalize)) __obj.updateDynamic("normalize")(normalize.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(opaque)) __obj.updateDynamic("opaque")(opaque.asInstanceOf[js.Any])
-    if (posterize != null) __obj.updateDynamic("posterize")(posterize.asInstanceOf[js.Any])
-    if (quality != null) __obj.updateDynamic("quality")(quality.asInstanceOf[js.Any])
-    if (resize != null) __obj.updateDynamic("resize")(resize.asInstanceOf[js.Any])
-    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
-    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (scaleToFitImage != null) __obj.updateDynamic("scaleToFitImage")(scaleToFitImage.asInstanceOf[js.Any])
-    if (!js.isUndefined(sepia)) __obj.updateDynamic("sepia")(sepia.asInstanceOf[js.Any])
-    if (!js.isUndefined(storage)) __obj.updateDynamic("storage")(storage.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def blur(value: Double): this.type = set("blur", value.asInstanceOf[js.Any])
+    @scala.inline
+    def brightness(value: Double): this.type = set("brightness", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colors(value: AnonBlue): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contain(value: Size): this.type = set("contain", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contrast(value: Double): this.type = set("contrast", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cover(value: Size): this.type = set("cover", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customCdn(value: String): this.type = set("customCdn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableRerender(value: Boolean): this.type = set("disableRerender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableWebWorker(value: Boolean): this.type = set("disableWebWorker", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dither565(value: Boolean): this.type = set("dither565", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fade(value: Double): this.type = set("fade", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flip(value: AnonHorizontal): this.type = set("flip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def greyscale(value: Boolean): this.type = set("greyscale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def invert(value: Boolean): this.type = set("invert", value.asInstanceOf[js.Any])
+    @scala.inline
+    def normalize(value: Boolean): this.type = set("normalize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def opacity(value: Double): this.type = set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def opaque(value: Boolean): this.type = set("opaque", value.asInstanceOf[js.Any])
+    @scala.inline
+    def posterize(value: Double): this.type = set("posterize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def quality(value: Double): this.type = set("quality", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resize(value: Shape): this.type = set("resize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rotate(value: AnonDegree): this.type = set("rotate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: Boolean): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scaleToFitImage(value: AnonHeight): this.type = set("scaleToFitImage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sepia(value: Boolean): this.type = set("sepia", value.asInstanceOf[js.Any])
+    @scala.inline
+    def storage(value: Boolean): this.type = set("storage", value.asInstanceOf[js.Any])
   }
-  type Props = ProcessImageProps
+  
+  def withProps(p: ProcessImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(image: String, onProcessFinish: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(image = image.asInstanceOf[js.Any], onProcessFinish = js.Any.fromFunction0(onProcessFinish))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ProcessImageProps]))
+  }
 }
 

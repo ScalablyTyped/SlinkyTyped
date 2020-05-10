@@ -1,10 +1,8 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonId
 import typingsSlinky.baseui.AnonSelect
 import typingsSlinky.baseui.datepickerMod.TimezonePickerProps
@@ -13,36 +11,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimezonePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.datepickerMod.TimezonePicker] {
+object TimezonePicker {
   @JSImport("baseui/datepicker", "TimezonePicker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    date: js.Date = null,
-    error: js.UndefOr[Boolean] = js.undefined,
-    mapLabels: /* args */ Option => TagMod[Any] = null,
-    onChange: /* value */ AnonId => _ = null,
-    overrides: AnonSelect = null,
-    positive: js.UndefOr[Boolean] = js.undefined,
-    value: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.datepickerMod.TimezonePicker] = {
-    val __obj = js.Dynamic.literal()
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (mapLabels != null) __obj.updateDynamic("mapLabels")(js.Any.fromFunction1(mapLabels))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.datepickerMod.TimezonePicker] {
+    @scala.inline
+    def date(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mapLabels(value: /* args */ Option => TagMod[Any]): this.type = set("mapLabels", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* value */ AnonId => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: AnonSelect): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positive(value: Boolean): this.type = set("positive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.datepickerMod.TimezonePicker] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.datepickerMod.TimezonePicker](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TimezonePickerProps
+  
+  def withProps(p: TimezonePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TimezonePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

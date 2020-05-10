@@ -17,14 +17,12 @@ trait ApplePayMerchantCapability extends js.Object
 
 object ApplePayMerchantCapability {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def supports3DS: typingsSlinky.applepayjs.applepayjsStrings.supports3DS = "supports3DS".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.supports3DS]
   @scala.inline
-  def supports3DS: typingsSlinky.applepayjs.applepayjsStrings.supports3DS = this.cast("supports3DS")
+  def supportsCredit: typingsSlinky.applepayjs.applepayjsStrings.supportsCredit = "supportsCredit".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.supportsCredit]
   @scala.inline
-  def supportsCredit: typingsSlinky.applepayjs.applepayjsStrings.supportsCredit = this.cast("supportsCredit")
+  def supportsDebit: typingsSlinky.applepayjs.applepayjsStrings.supportsDebit = "supportsDebit".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.supportsDebit]
   @scala.inline
-  def supportsDebit: typingsSlinky.applepayjs.applepayjsStrings.supportsDebit = this.cast("supportsDebit")
-  @scala.inline
-  def supportsEMV: typingsSlinky.applepayjs.applepayjsStrings.supportsEMV = this.cast("supportsEMV")
+  def supportsEMV: typingsSlinky.applepayjs.applepayjsStrings.supportsEMV = "supportsEMV".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.supportsEMV]
 }
 

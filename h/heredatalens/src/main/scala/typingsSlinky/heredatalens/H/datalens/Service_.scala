@@ -49,8 +49,8 @@ class Service_ () extends IConfigurable {
     * @param onError - Callback called on an unsuccessful request with the Error object
     * @returns - Typed array with tile data
     */
-  def fetchLayerTile(layerName: String, x: X, y: Y, z: Zoom): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
-  def fetchLayerTile(layerName: String, x: X, y: Y, z: Zoom, params: js.Any): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def fetchLayerTile(layerName: String, x: X, y: Y, z: Zoom): js.Promise[js.typedarray.Uint8Array] = js.native
+  def fetchLayerTile(layerName: String, x: X, y: Y, z: Zoom, params: js.Any): js.Promise[js.typedarray.Uint8Array] = js.native
   def fetchLayerTile(
     layerName: String,
     x: X,
@@ -58,7 +58,7 @@ class Service_ () extends IConfigurable {
     z: Zoom,
     params: js.Any,
     onResult: js.Function1[/* result */ js.Any, Unit]
-  ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  ): js.Promise[js.typedarray.Uint8Array] = js.native
   def fetchLayerTile(
     layerName: String,
     x: X,
@@ -67,7 +67,7 @@ class Service_ () extends IConfigurable {
     params: js.Any,
     onResult: js.Function1[/* result */ js.Any, Unit],
     onError: js.Function1[/* error */ js.Any, Unit]
-  ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  ): js.Promise[js.typedarray.Uint8Array] = js.native
   /**
     * This method fetches query data for a given query ID.
     * This method can be used when implementing a custom provider.

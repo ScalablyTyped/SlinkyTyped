@@ -7,188 +7,189 @@ import scala.scalajs.js.annotation._
 /**
   * A statement of system capabilities
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait CapabilityStatement extends DomainResource {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
+trait CapabilityStatement extends DomainResource {
   /**
     * Contains extended information for property 'acceptUnknown'.
     */
-  var _acceptUnknown: js.UndefOr[Element] = js.undefined
+  var _acceptUnknown: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'copyright'.
     */
-  var _copyright: js.UndefOr[Element] = js.undefined
+  var _copyright: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'date'.
     */
-  var _date: js.UndefOr[Element] = js.undefined
+  var _date: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'description'.
     */
-  var _description: js.UndefOr[Element] = js.undefined
+  var _description: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'experimental'.
     */
-  var _experimental: js.UndefOr[Element] = js.undefined
+  var _experimental: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fhirVersion'.
     */
-  var _fhirVersion: js.UndefOr[Element] = js.undefined
+  var _fhirVersion: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'format'.
     */
-  var _format: js.UndefOr[js.Array[Element]] = js.undefined
+  var _format: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'implementationGuide'.
     */
-  var _implementationGuide: js.UndefOr[js.Array[Element]] = js.undefined
+  var _implementationGuide: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'instantiates'.
     */
-  var _instantiates: js.UndefOr[js.Array[Element]] = js.undefined
+  var _instantiates: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'kind'.
     */
-  var _kind: js.UndefOr[Element] = js.undefined
+  var _kind: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'name'.
     */
-  var _name: js.UndefOr[Element] = js.undefined
+  var _name: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patchFormat'.
     */
-  var _patchFormat: js.UndefOr[js.Array[Element]] = js.undefined
+  var _patchFormat: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'publisher'.
     */
-  var _publisher: js.UndefOr[Element] = js.undefined
+  var _publisher: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'purpose'.
     */
-  var _purpose: js.UndefOr[Element] = js.undefined
+  var _purpose: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.undefined
+  var _status: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'title'.
     */
-  var _title: js.UndefOr[Element] = js.undefined
+  var _title: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'url'.
     */
-  var _url: js.UndefOr[Element] = js.undefined
+  var _url: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'version'.
     */
-  var _version: js.UndefOr[Element] = js.undefined
+  var _version: js.UndefOr[Element] = js.native
   /**
     * no | extensions | elements | both
     */
-  var acceptUnknown: code
+  var acceptUnknown: code = js.native
   /**
     * Contact details for the publisher
     */
-  var contact: js.UndefOr[js.Array[ContactDetail]] = js.undefined
+  var contact: js.UndefOr[js.Array[ContactDetail]] = js.native
   /**
     * Use and/or publishing restrictions
     */
-  var copyright: js.UndefOr[markdown] = js.undefined
+  var copyright: js.UndefOr[markdown] = js.native
   /**
     * Date this was last changed
     */
-  var date: dateTime
+  var date: dateTime = js.native
   /**
     * Natural language description of the capability statement
     */
-  var description: js.UndefOr[markdown] = js.undefined
+  var description: js.UndefOr[markdown] = js.native
   /**
     * Document definition
     */
-  var document: js.UndefOr[js.Array[CapabilityStatementDocument]] = js.undefined
+  var document: js.UndefOr[js.Array[CapabilityStatementDocument]] = js.native
   /**
     * For testing purposes, not real usage
     */
-  var experimental: js.UndefOr[Boolean] = js.undefined
+  var experimental: js.UndefOr[Boolean] = js.native
   /**
     * FHIR Version the system uses
     */
-  var fhirVersion: id
+  var fhirVersion: id = js.native
   /**
     * formats supported (xml | json | ttl | mime type)
     */
-  var format: js.Array[code]
+  var format: js.Array[code] = js.native
   /**
     * If this describes a specific instance
     */
-  var implementation: js.UndefOr[CapabilityStatementImplementation] = js.undefined
+  var implementation: js.UndefOr[CapabilityStatementImplementation] = js.native
   /**
     * Implementation guides supported
     */
-  var implementationGuide: js.UndefOr[js.Array[uri]] = js.undefined
+  var implementationGuide: js.UndefOr[js.Array[uri]] = js.native
   /**
     * Canonical URL of another capability statement this implements
     */
-  var instantiates: js.UndefOr[js.Array[uri]] = js.undefined
+  var instantiates: js.UndefOr[js.Array[uri]] = js.native
   /**
     * Intended jurisdiction for capability statement (if applicable)
     */
-  var jurisdiction: js.UndefOr[js.Array[CodeableConcept]] = js.undefined
+  var jurisdiction: js.UndefOr[js.Array[CodeableConcept]] = js.native
   /**
     * instance | capability | requirements
     */
-  var kind: code
+  var kind: code = js.native
   /**
     * If messaging is supported
     */
-  var messaging: js.UndefOr[js.Array[CapabilityStatementMessaging]] = js.undefined
+  var messaging: js.UndefOr[js.Array[CapabilityStatementMessaging]] = js.native
   /**
     * Name for this capability statement (computer friendly)
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Patch formats supported
     */
-  var patchFormat: js.UndefOr[js.Array[code]] = js.undefined
+  var patchFormat: js.UndefOr[js.Array[code]] = js.native
   /**
     * Profiles for use cases supported
     */
-  var profile: js.UndefOr[js.Array[Reference]] = js.undefined
+  var profile: js.UndefOr[js.Array[Reference]] = js.native
   /**
     * Name of the publisher (organization or individual)
     */
-  var publisher: js.UndefOr[String] = js.undefined
+  var publisher: js.UndefOr[String] = js.native
   /**
     * Why this capability statement is defined
     */
-  var purpose: js.UndefOr[markdown] = js.undefined
+  var purpose: js.UndefOr[markdown] = js.native
   /**
     * If the endpoint is a RESTful one
     */
-  var rest: js.UndefOr[js.Array[CapabilityStatementRest]] = js.undefined
+  var rest: js.UndefOr[js.Array[CapabilityStatementRest]] = js.native
   /**
     * Software that is covered by this capability statement
     */
-  var software: js.UndefOr[CapabilityStatementSoftware] = js.undefined
+  var software: js.UndefOr[CapabilityStatementSoftware] = js.native
   /**
     * draft | active | retired | unknown
     */
-  var status: code
+  var status: code = js.native
   /**
     * Name for this capability statement (human friendly)
     */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
   /**
     * Logical URI to reference this capability statement (globally unique)
     */
-  var url: js.UndefOr[uri] = js.undefined
+  var url: js.UndefOr[uri] = js.native
   /**
     * Context the content is intended to support
     */
-  var useContext: js.UndefOr[js.Array[UsageContext]] = js.undefined
+  var useContext: js.UndefOr[js.Array[UsageContext]] = js.native
   /**
     * Business version of the capability statement
     */
-  var version: js.UndefOr[String] = js.undefined
+  var version: js.UndefOr[String] = js.native
 }
 
 object CapabilityStatement {
@@ -199,114 +200,522 @@ object CapabilityStatement {
     fhirVersion: id,
     format: js.Array[code],
     kind: code,
-    status: code,
-    _acceptUnknown: Element = null,
-    _copyright: Element = null,
-    _date: Element = null,
-    _description: Element = null,
-    _experimental: Element = null,
-    _fhirVersion: Element = null,
-    _format: js.Array[Element] = null,
-    _id: Element = null,
-    _implementationGuide: js.Array[Element] = null,
-    _implicitRules: Element = null,
-    _instantiates: js.Array[Element] = null,
-    _kind: Element = null,
-    _language: Element = null,
-    _name: Element = null,
-    _patchFormat: js.Array[Element] = null,
-    _publisher: Element = null,
-    _purpose: Element = null,
-    _resourceType: Element = null,
-    _status: Element = null,
-    _title: Element = null,
-    _url: Element = null,
-    _version: Element = null,
-    contact: js.Array[ContactDetail] = null,
-    contained: js.Array[Resource] = null,
-    copyright: markdown = null,
-    description: markdown = null,
-    document: js.Array[CapabilityStatementDocument] = null,
-    experimental: js.UndefOr[Boolean] = js.undefined,
-    extension: js.Array[Extension] = null,
-    id: id = null,
-    implementation: CapabilityStatementImplementation = null,
-    implementationGuide: js.Array[uri] = null,
-    implicitRules: uri = null,
-    instantiates: js.Array[uri] = null,
-    jurisdiction: js.Array[CodeableConcept] = null,
-    language: code = null,
-    messaging: js.Array[CapabilityStatementMessaging] = null,
-    meta: Meta = null,
-    modifierExtension: js.Array[Extension] = null,
-    name: String = null,
-    patchFormat: js.Array[code] = null,
-    profile: js.Array[Reference] = null,
-    publisher: String = null,
-    purpose: markdown = null,
-    resourceType: code = null,
-    rest: js.Array[CapabilityStatementRest] = null,
-    software: CapabilityStatementSoftware = null,
-    text: Narrative = null,
-    title: String = null,
-    url: uri = null,
-    useContext: js.Array[UsageContext] = null,
-    version: String = null
+    status: code
   ): CapabilityStatement = {
     val __obj = js.Dynamic.literal(acceptUnknown = acceptUnknown.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], fhirVersion = fhirVersion.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    if (_acceptUnknown != null) __obj.updateDynamic("_acceptUnknown")(_acceptUnknown.asInstanceOf[js.Any])
-    if (_copyright != null) __obj.updateDynamic("_copyright")(_copyright.asInstanceOf[js.Any])
-    if (_date != null) __obj.updateDynamic("_date")(_date.asInstanceOf[js.Any])
-    if (_description != null) __obj.updateDynamic("_description")(_description.asInstanceOf[js.Any])
-    if (_experimental != null) __obj.updateDynamic("_experimental")(_experimental.asInstanceOf[js.Any])
-    if (_fhirVersion != null) __obj.updateDynamic("_fhirVersion")(_fhirVersion.asInstanceOf[js.Any])
-    if (_format != null) __obj.updateDynamic("_format")(_format.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_implementationGuide != null) __obj.updateDynamic("_implementationGuide")(_implementationGuide.asInstanceOf[js.Any])
-    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
-    if (_instantiates != null) __obj.updateDynamic("_instantiates")(_instantiates.asInstanceOf[js.Any])
-    if (_kind != null) __obj.updateDynamic("_kind")(_kind.asInstanceOf[js.Any])
-    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
-    if (_name != null) __obj.updateDynamic("_name")(_name.asInstanceOf[js.Any])
-    if (_patchFormat != null) __obj.updateDynamic("_patchFormat")(_patchFormat.asInstanceOf[js.Any])
-    if (_publisher != null) __obj.updateDynamic("_publisher")(_publisher.asInstanceOf[js.Any])
-    if (_purpose != null) __obj.updateDynamic("_purpose")(_purpose.asInstanceOf[js.Any])
-    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
-    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
-    if (_title != null) __obj.updateDynamic("_title")(_title.asInstanceOf[js.Any])
-    if (_url != null) __obj.updateDynamic("_url")(_url.asInstanceOf[js.Any])
-    if (_version != null) __obj.updateDynamic("_version")(_version.asInstanceOf[js.Any])
-    if (contact != null) __obj.updateDynamic("contact")(contact.asInstanceOf[js.Any])
-    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
-    if (copyright != null) __obj.updateDynamic("copyright")(copyright.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (document != null) __obj.updateDynamic("document")(document.asInstanceOf[js.Any])
-    if (!js.isUndefined(experimental)) __obj.updateDynamic("experimental")(experimental.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (implementation != null) __obj.updateDynamic("implementation")(implementation.asInstanceOf[js.Any])
-    if (implementationGuide != null) __obj.updateDynamic("implementationGuide")(implementationGuide.asInstanceOf[js.Any])
-    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
-    if (instantiates != null) __obj.updateDynamic("instantiates")(instantiates.asInstanceOf[js.Any])
-    if (jurisdiction != null) __obj.updateDynamic("jurisdiction")(jurisdiction.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (messaging != null) __obj.updateDynamic("messaging")(messaging.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (patchFormat != null) __obj.updateDynamic("patchFormat")(patchFormat.asInstanceOf[js.Any])
-    if (profile != null) __obj.updateDynamic("profile")(profile.asInstanceOf[js.Any])
-    if (publisher != null) __obj.updateDynamic("publisher")(publisher.asInstanceOf[js.Any])
-    if (purpose != null) __obj.updateDynamic("purpose")(purpose.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
-    if (rest != null) __obj.updateDynamic("rest")(rest.asInstanceOf[js.Any])
-    if (software != null) __obj.updateDynamic("software")(software.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (useContext != null) __obj.updateDynamic("useContext")(useContext.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[CapabilityStatement]
   }
+  @scala.inline
+  implicit class CapabilityStatementOps[Self <: CapabilityStatement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceptUnknown(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptUnknown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDate(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFhirVersion(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fhirVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: js.Array[code]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_acceptUnknown(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_acceptUnknown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_acceptUnknown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_acceptUnknown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_copyright(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_copyright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_copyright: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_copyright")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_date(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_date: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_description(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_description: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_experimental(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_experimental")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_experimental: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_experimental")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fhirVersion(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fhirVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fhirVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fhirVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_format(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_format: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_implementationGuide(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_implementationGuide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_implementationGuide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_implementationGuide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_instantiates(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_instantiates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_instantiates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_instantiates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_kind(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_kind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_name(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_name: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patchFormat(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patchFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patchFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patchFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_publisher(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_publisher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_publisher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_publisher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_purpose(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_purpose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_purpose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_purpose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_status(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_status: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_title(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_title: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_url(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_version(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_version: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_version")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContact(value: js.Array[ContactDetail]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContact: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contact")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyright(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyright: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocument(value: js.Array[CapabilityStatementDocument]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExperimental(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExperimental: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImplementation(value: CapabilityStatementImplementation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImplementation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImplementationGuide(value: js.Array[uri]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementationGuide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImplementationGuide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementationGuide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstantiates(value: js.Array[uri]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instantiates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstantiates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instantiates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJurisdiction(value: js.Array[CodeableConcept]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jurisdiction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJurisdiction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jurisdiction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessaging(value: js.Array[CapabilityStatementMessaging]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messaging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessaging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messaging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatchFormat(value: js.Array[code]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patchFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatchFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patchFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProfile(value: js.Array[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProfile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublisher(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublisher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPurpose(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPurpose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purpose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRest(value: js.Array[CapabilityStatementRest]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSoftware(value: CapabilityStatementSoftware): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("software")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSoftware: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("software")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseContext(value: js.Array[UsageContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

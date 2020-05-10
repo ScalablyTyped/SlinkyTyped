@@ -12,10 +12,8 @@ trait ViewMode extends js.Object
 
 object ViewMode {
   @scala.inline
-  def `2D`: typingsSlinky.amapJsApi.amapJsApiStrings.`2D` = this.cast("2D")
+  def `2D`: typingsSlinky.amapJsApi.amapJsApiStrings.`2D` = "2D".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.`2D`]
   @scala.inline
-  def `3D`: typingsSlinky.amapJsApi.amapJsApiStrings.`3D` = this.cast("3D")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `3D`: typingsSlinky.amapJsApi.amapJsApiStrings.`3D` = "3D".asInstanceOf[typingsSlinky.amapJsApi.amapJsApiStrings.`3D`]
 }
 

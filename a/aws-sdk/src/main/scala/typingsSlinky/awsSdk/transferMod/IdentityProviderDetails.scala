@@ -18,11 +18,41 @@ trait IdentityProviderDetails extends js.Object {
 
 object IdentityProviderDetails {
   @scala.inline
-  def apply(InvocationRole: Role = null, Url: Url = null): IdentityProviderDetails = {
+  def apply(): IdentityProviderDetails = {
     val __obj = js.Dynamic.literal()
-    if (InvocationRole != null) __obj.updateDynamic("InvocationRole")(InvocationRole.asInstanceOf[js.Any])
-    if (Url != null) __obj.updateDynamic("Url")(Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityProviderDetails]
   }
+  @scala.inline
+  implicit class IdentityProviderDetailsOps[Self <: IdentityProviderDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInvocationRole(value: Role): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvocationRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: Url): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

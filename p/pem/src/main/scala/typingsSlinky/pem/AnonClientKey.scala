@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonClientKey extends js.Object {
-  var clientKey: String
-  var csr: String
+  var clientKey: String = js.native
+  var csr: String = js.native
 }
 
 object AnonClientKey {
   @scala.inline
   def apply(clientKey: String, csr: String): AnonClientKey = {
     val __obj = js.Dynamic.literal(clientKey = clientKey.asInstanceOf[js.Any], csr = csr.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonClientKey]
   }
+  @scala.inline
+  implicit class AnonClientKeyOps[Self <: AnonClientKey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCsr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csr")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

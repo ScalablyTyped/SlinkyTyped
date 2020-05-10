@@ -4,20 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait S3Integration extends js.Object {
   // credentials for an AWS access key integration
-  var aws_access_key: js.UndefOr[AwsAccessKey] = js.undefined
+  var aws_access_key: js.UndefOr[AwsAccessKey] = js.native
   // details of an AWS cross-account role integration
-  var aws_role: js.UndefOr[AwsRole] = js.undefined
+  var aws_role: js.UndefOr[AwsRole] = js.native
 }
 
 object S3Integration {
   @scala.inline
-  def apply(aws_access_key: AwsAccessKey = null, aws_role: AwsRole = null): S3Integration = {
+  def apply(): S3Integration = {
     val __obj = js.Dynamic.literal()
-    if (aws_access_key != null) __obj.updateDynamic("aws_access_key")(aws_access_key.asInstanceOf[js.Any])
-    if (aws_role != null) __obj.updateDynamic("aws_role")(aws_role.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3Integration]
   }
+  @scala.inline
+  implicit class S3IntegrationOps[Self <: S3Integration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAws_access_key(value: AwsAccessKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aws_access_key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAws_access_key: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aws_access_key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAws_role(value: AwsRole): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aws_role")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAws_role: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aws_role")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

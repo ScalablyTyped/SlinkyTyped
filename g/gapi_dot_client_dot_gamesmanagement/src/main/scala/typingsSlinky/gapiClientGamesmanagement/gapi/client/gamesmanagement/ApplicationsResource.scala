@@ -6,17 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ApplicationsResource extends js.Object {
   /** Get the list of players hidden from the given application. This method is only available to user accounts for your developer console. */
-  def listHidden(request: AnonApplicationId): Request_[HiddenPlayerList]
+  def listHidden(request: AnonApplicationId): Request_[HiddenPlayerList] = js.native
 }
 
 object ApplicationsResource {
   @scala.inline
   def apply(listHidden: AnonApplicationId => Request_[HiddenPlayerList]): ApplicationsResource = {
     val __obj = js.Dynamic.literal(listHidden = js.Any.fromFunction1(listHidden))
-  
     __obj.asInstanceOf[ApplicationsResource]
   }
+  @scala.inline
+  implicit class ApplicationsResourceOps[Self <: ApplicationsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withListHidden(value: AnonApplicationId => Request_[HiddenPlayerList]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listHidden")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -14,6 +14,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledLambdaFunctionConfiguration extends LambdaFunctionConfiguration {
   /**
     * _EventList shape
@@ -21,12 +22,12 @@ trait UnmarshalledLambdaFunctionConfiguration extends LambdaFunctionConfiguratio
   @JSName("Events")
   var Events_UnmarshalledLambdaFunctionConfiguration: js.Array[
     s3ColonReducedRedundancyLostObject | s3ColonObjectCreatedColonAsterisk | s3ColonObjectCreatedColonPut | s3ColonObjectCreatedColonPost | s3ColonObjectCreatedColonCopy | s3ColonObjectCreatedColonCompleteMultipartUpload | s3ColonObjectRemovedColonAsterisk | s3ColonObjectRemovedColonDelete | s3ColonObjectRemovedColonDeleteMarkerCreated | String
-  ]
+  ] = js.native
   /**
     * <p>Container for object key name filtering rules. For information about key name filtering, go to <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Configuring Event Notifications</a> in the Amazon Simple Storage Service Developer Guide.</p>
     */
   @JSName("Filter")
-  var Filter_UnmarshalledLambdaFunctionConfiguration: js.UndefOr[UnmarshalledNotificationConfigurationFilter] = js.undefined
+  var Filter_UnmarshalledLambdaFunctionConfiguration: js.UndefOr[UnmarshalledNotificationConfigurationFilter] = js.native
 }
 
 object UnmarshalledLambdaFunctionConfiguration {
@@ -35,14 +36,40 @@ object UnmarshalledLambdaFunctionConfiguration {
     Events: js.Array[
       s3ColonReducedRedundancyLostObject | s3ColonObjectCreatedColonAsterisk | s3ColonObjectCreatedColonPut | s3ColonObjectCreatedColonPost | s3ColonObjectCreatedColonCopy | s3ColonObjectCreatedColonCompleteMultipartUpload | s3ColonObjectRemovedColonAsterisk | s3ColonObjectRemovedColonDelete | s3ColonObjectRemovedColonDeleteMarkerCreated | String
     ],
-    LambdaFunctionArn: String,
-    Filter: UnmarshalledNotificationConfigurationFilter = null,
-    Id: String = null
+    LambdaFunctionArn: String
   ): UnmarshalledLambdaFunctionConfiguration = {
     val __obj = js.Dynamic.literal(Events = Events.asInstanceOf[js.Any], LambdaFunctionArn = LambdaFunctionArn.asInstanceOf[js.Any])
-    if (Filter != null) __obj.updateDynamic("Filter")(Filter.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledLambdaFunctionConfiguration]
   }
+  @scala.inline
+  implicit class UnmarshalledLambdaFunctionConfigurationOps[Self <: UnmarshalledLambdaFunctionConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvents(
+      value: js.Array[
+          s3ColonReducedRedundancyLostObject | s3ColonObjectCreatedColonAsterisk | s3ColonObjectCreatedColonPut | s3ColonObjectCreatedColonPost | s3ColonObjectCreatedColonCopy | s3ColonObjectCreatedColonCompleteMultipartUpload | s3ColonObjectRemovedColonAsterisk | s3ColonObjectRemovedColonDelete | s3ColonObjectRemovedColonDeleteMarkerCreated | String
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilter(value: UnmarshalledNotificationConfigurationFilter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filter")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

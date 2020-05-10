@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 8.3.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -32,9 +32,9 @@ class VoidType protected () extends PrimitiveType {
   @JSName("model")
   var model_FVoidType: IModel = js.native
   @JSName("containerAsBasicParameterType")
-  def containerAsBasicParameterType_MVoidType(): BasicParameterType = js.native
+  def containerAsBasicParameterType_MVoidType: BasicParameterType = js.native
   @JSName("containerAsCodeAction")
-  def containerAsCodeAction_MVoidType(): CodeAction = js.native
+  def containerAsCodeAction_MVoidType: CodeAction = js.native
 }
 
 /* static members */

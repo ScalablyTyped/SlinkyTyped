@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeSvg.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeSvg.mod.MarkerProps
 import typingsSlinky.reactNativeSvg.mod.MarkerUnits
 import typingsSlinky.reactNativeSvg.mod.NumberProp
@@ -13,38 +10,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Marker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeSvg.mod.Marker] {
+object Marker {
   @JSImport("react-native-svg", "Marker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id */
-  def apply(
-    markerHeight: NumberProp = null,
-    markerUnits: MarkerUnits = null,
-    markerWidth: NumberProp = null,
-    orient: Orient | NumberProp = null,
-    preserveAspectRatio: String = null,
-    refX: NumberProp = null,
-    refY: NumberProp = null,
-    viewBox: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.Marker] = {
-    val __obj = js.Dynamic.literal()
-    if (markerHeight != null) __obj.updateDynamic("markerHeight")(markerHeight.asInstanceOf[js.Any])
-    if (markerUnits != null) __obj.updateDynamic("markerUnits")(markerUnits.asInstanceOf[js.Any])
-    if (markerWidth != null) __obj.updateDynamic("markerWidth")(markerWidth.asInstanceOf[js.Any])
-    if (orient != null) __obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
-    if (preserveAspectRatio != null) __obj.updateDynamic("preserveAspectRatio")(preserveAspectRatio.asInstanceOf[js.Any])
-    if (refX != null) __obj.updateDynamic("refX")(refX.asInstanceOf[js.Any])
-    if (refY != null) __obj.updateDynamic("refY")(refY.asInstanceOf[js.Any])
-    if (viewBox != null) __obj.updateDynamic("viewBox")(viewBox.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.Marker] {
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markerHeight(value: NumberProp): this.type = set("markerHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markerUnits(value: MarkerUnits): this.type = set("markerUnits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markerWidth(value: NumberProp): this.type = set("markerWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def orient(value: Orient | NumberProp): this.type = set("orient", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preserveAspectRatio(value: String): this.type = set("preserveAspectRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refX(value: NumberProp): this.type = set("refX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refY(value: NumberProp): this.type = set("refY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewBox(value: String): this.type = set("viewBox", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactNativeSvg.mod.Marker] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeSvg.mod.Marker](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MarkerProps
+  
+  def withProps(p: MarkerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Marker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

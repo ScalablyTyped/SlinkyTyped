@@ -14,18 +14,65 @@ trait AnonAdsAppearOn extends js.Object {
 
 object AnonAdsAppearOn {
   @scala.inline
-  def apply(
-    adsAppearOn: String = null,
-    description: String = null,
-    location: String = null,
-    siteLanguage: String = null
-  ): AnonAdsAppearOn = {
+  def apply(): AnonAdsAppearOn = {
     val __obj = js.Dynamic.literal()
-    if (adsAppearOn != null) __obj.updateDynamic("adsAppearOn")(adsAppearOn.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (siteLanguage != null) __obj.updateDynamic("siteLanguage")(siteLanguage.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAdsAppearOn]
   }
+  @scala.inline
+  implicit class AnonAdsAppearOnOps[Self <: AnonAdsAppearOn] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdsAppearOn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adsAppearOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdsAppearOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adsAppearOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSiteLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSiteLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("siteLanguage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

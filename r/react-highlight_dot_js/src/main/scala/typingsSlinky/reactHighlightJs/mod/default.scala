@@ -1,9 +1,8 @@
 package typingsSlinky.reactHighlightJs.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("react-highlight.js", JSImport.Default)
 @js.native
 class default protected ()
-  extends Component[HighlightProps, ComponentState, js.Any] {
+  extends Component[HighlightProps, js.Object, js.Any] {
   def this(props: HighlightProps) = this()
   def this(props: HighlightProps, context: js.Any) = this()
 }
@@ -21,5 +20,5 @@ class default protected ()
   */
 @JSImport("react-highlight.js", JSImport.Default)
 @js.native
-object default extends TopLevel[ComponentClass[HighlightProps, ComponentState]]
+object default extends TopLevel[ReactComponentClass[HighlightProps]]
 

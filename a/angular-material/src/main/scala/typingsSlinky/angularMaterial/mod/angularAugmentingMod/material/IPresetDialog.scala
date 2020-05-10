@@ -1,13 +1,13 @@
 package typingsSlinky.angularMaterial.mod.angularAugmentingMod.material
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.angular.JQuery
 import typingsSlinky.angular.mod.IControllerConstructor
 import typingsSlinky.angular.mod.IScope
 import typingsSlinky.angular.mod.Injectable
 import typingsSlinky.angularMaterial.AnonLeft
-import typingsSlinky.std.Element
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

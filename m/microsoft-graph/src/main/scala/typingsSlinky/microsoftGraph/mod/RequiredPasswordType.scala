@@ -13,12 +13,10 @@ trait RequiredPasswordType extends js.Object
 
 object RequiredPasswordType {
   @scala.inline
-  def alphanumeric: typingsSlinky.microsoftGraph.microsoftGraphStrings.alphanumeric = this.cast("alphanumeric")
+  def alphanumeric: typingsSlinky.microsoftGraph.microsoftGraphStrings.alphanumeric = "alphanumeric".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.alphanumeric]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = "deviceDefault".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault]
   @scala.inline
-  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = this.cast("deviceDefault")
-  @scala.inline
-  def numeric: typingsSlinky.microsoftGraph.microsoftGraphStrings.numeric = this.cast("numeric")
+  def numeric: typingsSlinky.microsoftGraph.microsoftGraphStrings.numeric = "numeric".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.numeric]
 }
 

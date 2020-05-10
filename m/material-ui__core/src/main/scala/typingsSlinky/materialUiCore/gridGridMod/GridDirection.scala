@@ -14,14 +14,12 @@ trait GridDirection extends js.Object
 
 object GridDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def column: typingsSlinky.materialUiCore.materialUiCoreStrings.column = "column".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.column]
   @scala.inline
-  def column: typingsSlinky.materialUiCore.materialUiCoreStrings.column = this.cast("column")
+  def `column-reverse`: typingsSlinky.materialUiCore.materialUiCoreStrings.`column-reverse` = "column-reverse".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`column-reverse`]
   @scala.inline
-  def `column-reverse`: typingsSlinky.materialUiCore.materialUiCoreStrings.`column-reverse` = this.cast("column-reverse")
+  def row: typingsSlinky.materialUiCore.materialUiCoreStrings.row = "row".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.row]
   @scala.inline
-  def row: typingsSlinky.materialUiCore.materialUiCoreStrings.row = this.cast("row")
-  @scala.inline
-  def `row-reverse`: typingsSlinky.materialUiCore.materialUiCoreStrings.`row-reverse` = this.cast("row-reverse")
+  def `row-reverse`: typingsSlinky.materialUiCore.materialUiCoreStrings.`row-reverse` = "row-reverse".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.`row-reverse`]
 }
 

@@ -22,10 +22,41 @@ trait UpdateServerEngineAttributesRequest extends js.Object {
 
 object UpdateServerEngineAttributesRequest {
   @scala.inline
-  def apply(AttributeName: AttributeName, ServerName: ServerName, AttributeValue: AttributeValue = null): UpdateServerEngineAttributesRequest = {
+  def apply(AttributeName: AttributeName, ServerName: ServerName): UpdateServerEngineAttributesRequest = {
     val __obj = js.Dynamic.literal(AttributeName = AttributeName.asInstanceOf[js.Any], ServerName = ServerName.asInstanceOf[js.Any])
-    if (AttributeValue != null) __obj.updateDynamic("AttributeValue")(AttributeValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateServerEngineAttributesRequest]
   }
+  @scala.inline
+  implicit class UpdateServerEngineAttributesRequestOps[Self <: UpdateServerEngineAttributesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributeName(value: AttributeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerName(value: ServerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeValue(value: AttributeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

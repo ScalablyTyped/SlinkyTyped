@@ -7,19 +7,56 @@ import scala.scalajs.js.annotation._
 /**
   * The answer field is true if the current context size is between the minSize and maxSize values that are specified in the object, and false otherwise.
   */
+@js.native
 trait ContextSizeResponse extends js.Object {
-  var answer: Boolean
-  var maxSize: js.UndefOr[Double] = js.undefined
-  var minSize: js.UndefOr[Double] = js.undefined
+  var answer: Boolean = js.native
+  var maxSize: js.UndefOr[Double] = js.native
+  var minSize: js.UndefOr[Double] = js.native
 }
 
 object ContextSizeResponse {
   @scala.inline
-  def apply(answer: Boolean, maxSize: Int | Double = null, minSize: Int | Double = null): ContextSizeResponse = {
+  def apply(answer: Boolean): ContextSizeResponse = {
     val __obj = js.Dynamic.literal(answer = answer.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (minSize != null) __obj.updateDynamic("minSize")(minSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextSizeResponse]
   }
+  @scala.inline
+  implicit class ContextSizeResponseOps[Self <: ContextSizeResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnswer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("answer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

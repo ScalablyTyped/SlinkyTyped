@@ -5,63 +5,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SpineGameObjectConfig extends GameObjectConfig {
-  var animationName: js.UndefOr[String] = js.undefined
-  var attachmentName: js.UndefOr[String] = js.undefined
-  var key: js.UndefOr[String] = js.undefined
-  var loop: js.UndefOr[Boolean] = js.undefined
-  var skinName: js.UndefOr[String] = js.undefined
-  var slotName: js.UndefOr[String] = js.undefined
+  var animationName: js.UndefOr[String] = js.native
+  var attachmentName: js.UndefOr[String] = js.native
+  var key: js.UndefOr[String] = js.native
+  var loop: js.UndefOr[Boolean] = js.native
+  var skinName: js.UndefOr[String] = js.native
+  var slotName: js.UndefOr[String] = js.native
 }
 
 object SpineGameObjectConfig {
   @scala.inline
-  def apply(
-    add: js.UndefOr[Boolean] = js.undefined,
-    alpha: Int | Double = null,
-    angle: Int | Double = null,
-    animationName: String = null,
-    attachmentName: String = null,
-    blendMode: Int | Double = null,
-    depth: Int | Double = null,
-    flipX: js.UndefOr[Boolean] = js.undefined,
-    flipY: js.UndefOr[Boolean] = js.undefined,
-    key: String = null,
-    loop: js.UndefOr[Boolean] = js.undefined,
-    origin: Double | js.Object = null,
-    rotation: Int | Double = null,
-    scale: Double | js.Object = null,
-    scaleMode: Int | Double = null,
-    scrollFactor: Double | js.Object = null,
-    skinName: String = null,
-    slotName: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): SpineGameObjectConfig = {
+  def apply(): SpineGameObjectConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(add)) __obj.updateDynamic("add")(add.asInstanceOf[js.Any])
-    if (alpha != null) __obj.updateDynamic("alpha")(alpha.asInstanceOf[js.Any])
-    if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
-    if (animationName != null) __obj.updateDynamic("animationName")(animationName.asInstanceOf[js.Any])
-    if (attachmentName != null) __obj.updateDynamic("attachmentName")(attachmentName.asInstanceOf[js.Any])
-    if (blendMode != null) __obj.updateDynamic("blendMode")(blendMode.asInstanceOf[js.Any])
-    if (depth != null) __obj.updateDynamic("depth")(depth.asInstanceOf[js.Any])
-    if (!js.isUndefined(flipX)) __obj.updateDynamic("flipX")(flipX.asInstanceOf[js.Any])
-    if (!js.isUndefined(flipY)) __obj.updateDynamic("flipY")(flipY.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (scaleMode != null) __obj.updateDynamic("scaleMode")(scaleMode.asInstanceOf[js.Any])
-    if (scrollFactor != null) __obj.updateDynamic("scrollFactor")(scrollFactor.asInstanceOf[js.Any])
-    if (skinName != null) __obj.updateDynamic("skinName")(skinName.asInstanceOf[js.Any])
-    if (slotName != null) __obj.updateDynamic("slotName")(slotName.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpineGameObjectConfig]
   }
+  @scala.inline
+  implicit class SpineGameObjectConfigOps[Self <: SpineGameObjectConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimationName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttachmentName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkinName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skinName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkinName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skinName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlotName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlotName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slotName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

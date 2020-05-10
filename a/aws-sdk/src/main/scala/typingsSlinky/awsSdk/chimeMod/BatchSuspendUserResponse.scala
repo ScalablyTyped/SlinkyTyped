@@ -14,10 +14,29 @@ trait BatchSuspendUserResponse extends js.Object {
 
 object BatchSuspendUserResponse {
   @scala.inline
-  def apply(UserErrors: UserErrorList = null): BatchSuspendUserResponse = {
+  def apply(): BatchSuspendUserResponse = {
     val __obj = js.Dynamic.literal()
-    if (UserErrors != null) __obj.updateDynamic("UserErrors")(UserErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchSuspendUserResponse]
   }
+  @scala.inline
+  implicit class BatchSuspendUserResponseOps[Self <: BatchSuspendUserResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserErrors(value: UserErrorList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserErrors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

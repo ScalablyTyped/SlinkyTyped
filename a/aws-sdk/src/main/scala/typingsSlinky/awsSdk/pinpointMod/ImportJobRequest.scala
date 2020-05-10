@@ -35,30 +35,102 @@ trait ImportJobRequest extends js.Object {
     */
   var SegmentId: js.UndefOr[string] = js.native
   /**
-    * The custom name for the segment that's created by the import job, if the value of the DefineSegment property is true.
+    * A custom name for the segment that's created by the import job, if the value of the DefineSegment property is true.
     */
   var SegmentName: js.UndefOr[string] = js.native
 }
 
 object ImportJobRequest {
   @scala.inline
-  def apply(
-    Format: Format,
-    RoleArn: string,
-    S3Url: string,
-    DefineSegment: js.UndefOr[Boolean] = js.undefined,
-    ExternalId: string = null,
-    RegisterEndpoints: js.UndefOr[Boolean] = js.undefined,
-    SegmentId: string = null,
-    SegmentName: string = null
-  ): ImportJobRequest = {
+  def apply(Format: Format, RoleArn: string, S3Url: string): ImportJobRequest = {
     val __obj = js.Dynamic.literal(Format = Format.asInstanceOf[js.Any], RoleArn = RoleArn.asInstanceOf[js.Any], S3Url = S3Url.asInstanceOf[js.Any])
-    if (!js.isUndefined(DefineSegment)) __obj.updateDynamic("DefineSegment")(DefineSegment.asInstanceOf[js.Any])
-    if (ExternalId != null) __obj.updateDynamic("ExternalId")(ExternalId.asInstanceOf[js.Any])
-    if (!js.isUndefined(RegisterEndpoints)) __obj.updateDynamic("RegisterEndpoints")(RegisterEndpoints.asInstanceOf[js.Any])
-    if (SegmentId != null) __obj.updateDynamic("SegmentId")(SegmentId.asInstanceOf[js.Any])
-    if (SegmentName != null) __obj.updateDynamic("SegmentName")(SegmentName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportJobRequest]
   }
+  @scala.inline
+  implicit class ImportJobRequestOps[Self <: ImportJobRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: Format): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoleArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3Url(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefineSegment(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefineSegment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefineSegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefineSegment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExternalId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegisterEndpoints(value: boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisterEndpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegisterEndpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisterEndpoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentId(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

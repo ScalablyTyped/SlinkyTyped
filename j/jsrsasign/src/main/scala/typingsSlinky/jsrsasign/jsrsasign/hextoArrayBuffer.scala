@@ -16,6 +16,6 @@ object hextoArrayBuffer extends js.Object {
     * @example
     * hextoArrayBuffer("fffa01") → ArrayBuffer of [255, 250, 1]
     */
-  def apply(hex: String): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def apply(hex: String): js.typedarray.ArrayBuffer = js.native
 }
 

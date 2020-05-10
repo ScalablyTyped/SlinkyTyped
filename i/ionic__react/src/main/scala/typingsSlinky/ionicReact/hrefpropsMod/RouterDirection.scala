@@ -14,14 +14,12 @@ trait RouterDirection extends js.Object
 
 object RouterDirection {
   @scala.inline
-  def back: typingsSlinky.ionicReact.ionicReactStrings.back = this.cast("back")
+  def back: typingsSlinky.ionicReact.ionicReactStrings.back = "back".asInstanceOf[typingsSlinky.ionicReact.ionicReactStrings.back]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def forward: typingsSlinky.ionicReact.ionicReactStrings.forward = "forward".asInstanceOf[typingsSlinky.ionicReact.ionicReactStrings.forward]
   @scala.inline
-  def forward: typingsSlinky.ionicReact.ionicReactStrings.forward = this.cast("forward")
+  def none: typingsSlinky.ionicReact.ionicReactStrings.none = "none".asInstanceOf[typingsSlinky.ionicReact.ionicReactStrings.none]
   @scala.inline
-  def none: typingsSlinky.ionicReact.ionicReactStrings.none = this.cast("none")
-  @scala.inline
-  def root: typingsSlinky.ionicReact.ionicReactStrings.root = this.cast("root")
+  def root: typingsSlinky.ionicReact.ionicReactStrings.root = "root".asInstanceOf[typingsSlinky.ionicReact.ionicReactStrings.root]
 }
 

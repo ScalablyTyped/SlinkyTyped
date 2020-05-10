@@ -2,7 +2,6 @@ package typingsSlinky.kue.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.redis.mod.RedisClient
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +35,7 @@ class Job protected () extends EventEmitter {
   def complete(): Job = js.native
   def complete(fn: js.Function): Job = js.native
   def delay(ms: Double): Job = js.native
-  def delay(ms: Date): Job = js.native
+  def delay(ms: js.Date): Job = js.native
   def delayed(): Job = js.native
   def delayed(fn: js.Function): Job = js.native
   def error(err: js.Error): Job = js.native

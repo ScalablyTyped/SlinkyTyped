@@ -30,20 +30,77 @@ trait Server extends js.Object {
 
 object Server {
   @scala.inline
-  def apply(
-    replicationJobId: ReplicationJobId = null,
-    replicationJobTerminated: js.UndefOr[Boolean] = js.undefined,
-    serverId: ServerId = null,
-    serverType: ServerType = null,
-    vmServer: VmServer = null
-  ): Server = {
+  def apply(): Server = {
     val __obj = js.Dynamic.literal()
-    if (replicationJobId != null) __obj.updateDynamic("replicationJobId")(replicationJobId.asInstanceOf[js.Any])
-    if (!js.isUndefined(replicationJobTerminated)) __obj.updateDynamic("replicationJobTerminated")(replicationJobTerminated.asInstanceOf[js.Any])
-    if (serverId != null) __obj.updateDynamic("serverId")(serverId.asInstanceOf[js.Any])
-    if (serverType != null) __obj.updateDynamic("serverType")(serverType.asInstanceOf[js.Any])
-    if (vmServer != null) __obj.updateDynamic("vmServer")(vmServer.asInstanceOf[js.Any])
     __obj.asInstanceOf[Server]
   }
+  @scala.inline
+  implicit class ServerOps[Self <: Server] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReplicationJobId(value: ReplicationJobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationJobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationJobId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationJobId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplicationJobTerminated(value: ReplicationJobTerminated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationJobTerminated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplicationJobTerminated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replicationJobTerminated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerId(value: ServerId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerType(value: ServerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmServer(value: VmServer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmServer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmServer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmServer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

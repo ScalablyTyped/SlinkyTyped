@@ -12,10 +12,8 @@ trait GamepadMappingType extends js.Object
 
 object GamepadMappingType {
   @scala.inline
-  def _empty: typingsSlinky.std.stdStrings._empty = this.cast("")
+  def _empty: typingsSlinky.std.stdStrings._empty = "".asInstanceOf[typingsSlinky.std.stdStrings._empty]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def standard: typingsSlinky.std.stdStrings.standard = this.cast("standard")
+  def standard: typingsSlinky.std.stdStrings.standard = "standard".asInstanceOf[typingsSlinky.std.stdStrings.standard]
 }
 

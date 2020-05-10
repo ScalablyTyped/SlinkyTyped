@@ -18,7 +18,7 @@ class SkeletonBinary protected () extends js.Object {
   var readSkin: js.Any = js.native
   var readVertices: js.Any = js.native
   var scale: Double = js.native
-  def readSkeletonData(binary: scala.scalajs.js.typedarray.Uint8Array): SkeletonData = js.native
+  def readSkeletonData(binary: js.typedarray.Uint8Array): SkeletonData = js.native
   def setCurve(timeline: CurveTimeline, frameIndex: Double, cx1: Double, cy1: Double, cx2: Double, cy2: Double): Unit = js.native
 }
 

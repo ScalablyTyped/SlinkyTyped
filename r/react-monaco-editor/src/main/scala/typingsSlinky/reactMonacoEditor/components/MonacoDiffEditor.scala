@@ -1,10 +1,7 @@
 package typingsSlinky.reactMonacoEditor.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.monacoEditor.mod.editor.IDiffEditorConstructionOptions
 import typingsSlinky.monacoEditor.mod.editor.IEditorOverrideServices
 import typingsSlinky.monacoEditor.mod.editor.IModelContentChangedEvent
@@ -15,47 +12,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MonacoDiffEditor
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactMonacoEditor.mod.MonacoDiffEditor] {
+object MonacoDiffEditor {
   @JSImport("react-monaco-editor", "MonacoDiffEditor")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    context: js.Any = null,
-    defaultValue: String = null,
-    editorDidMount: (/* editor */ IStandaloneDiffEditor, /* monaco */ TypeofmonacoEditor) => Unit = null,
-    editorWillMount: /* monaco */ TypeofmonacoEditor => Unit = null,
-    height: String | Double = null,
-    language: String = null,
-    onChange: (/* value */ String, /* event */ IModelContentChangedEvent) => Unit = null,
-    options: IDiffEditorConstructionOptions = null,
-    original: String = null,
-    overrideServices: IEditorOverrideServices = null,
-    theme: String = null,
-    value: String = null,
-    width: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactMonacoEditor.mod.MonacoDiffEditor] = {
-    val __obj = js.Dynamic.literal()
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (editorDidMount != null) __obj.updateDynamic("editorDidMount")(js.Any.fromFunction2(editorDidMount))
-    if (editorWillMount != null) __obj.updateDynamic("editorWillMount")(js.Any.fromFunction1(editorWillMount))
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (original != null) __obj.updateDynamic("original")(original.asInstanceOf[js.Any])
-    if (overrideServices != null) __obj.updateDynamic("overrideServices")(overrideServices.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactMonacoEditor.mod.MonacoDiffEditor] {
+    @scala.inline
+    def context(value: js.Any): this.type = set("context", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editorDidMount(value: (/* editor */ IStandaloneDiffEditor, /* monaco */ TypeofmonacoEditor) => Unit): this.type = set("editorDidMount", js.Any.fromFunction2(value))
+    @scala.inline
+    def editorWillMount(value: /* monaco */ TypeofmonacoEditor => Unit): this.type = set("editorWillMount", js.Any.fromFunction1(value))
+    @scala.inline
+    def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def language(value: String): this.type = set("language", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: (/* value */ String, /* event */ IModelContentChangedEvent) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def options(value: IDiffEditorConstructionOptions): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def original(value: String): this.type = set("original", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overrideServices(value: IEditorOverrideServices): this.type = set("overrideServices", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: String): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def themeNull: this.type = set("theme", null)
+    @scala.inline
+    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactMonacoEditor.mod.MonacoDiffEditor] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactMonacoEditor.mod.MonacoDiffEditor](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MonacoDiffEditorProps
+  
+  def withProps(p: MonacoDiffEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MonacoDiffEditor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -17,10 +17,29 @@ trait SchemaPolicyDelta extends js.Object {
 
 object SchemaPolicyDelta {
   @scala.inline
-  def apply(bindingDeltas: js.Array[SchemaBindingDelta] = null): SchemaPolicyDelta = {
+  def apply(): SchemaPolicyDelta = {
     val __obj = js.Dynamic.literal()
-    if (bindingDeltas != null) __obj.updateDynamic("bindingDeltas")(bindingDeltas.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPolicyDelta]
   }
+  @scala.inline
+  implicit class SchemaPolicyDeltaOps[Self <: SchemaPolicyDelta] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBindingDeltas(value: js.Array[SchemaBindingDelta]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingDeltas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBindingDeltas: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindingDeltas")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

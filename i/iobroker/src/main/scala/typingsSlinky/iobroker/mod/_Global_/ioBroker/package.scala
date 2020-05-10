@@ -53,14 +53,18 @@ package object ioBroker {
   ]
   type GetEnumCallback = js.Function3[
     /* err */ java.lang.String | scala.Null, 
-    /* enums */ typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod._Global_.ioBroker.Enum], 
-    /* requestedEnum */ java.lang.String, 
+    /* enums */ js.UndefOr[
+      typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod._Global_.ioBroker.Enum]
+    ], 
+    /* requestedEnum */ js.UndefOr[java.lang.String], 
     scala.Unit
   ]
   type GetEnumsCallback = js.Function2[
     /* err */ java.lang.String | scala.Null, 
-    /* result */ org.scalablytyped.runtime.StringDictionary[
-      typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod._Global_.ioBroker.Enum]
+    /* result */ js.UndefOr[
+      org.scalablytyped.runtime.StringDictionary[
+        typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod._Global_.ioBroker.Enum]
+      ]
     ], 
     scala.Unit
   ]
@@ -82,6 +86,8 @@ package object ioBroker {
     /* result */ js.UndefOr[typingsSlinky.iobroker.AnonRowsArray], 
     scala.Unit
   ]
+  /** Parameters for adapter.getObjectList */
+  type GetObjectListParams = typingsSlinky.iobroker.mod._Global_.ioBroker.GetObjectViewParams
   type GetObjectViewCallback = js.Function2[
     /* err */ java.lang.String | scala.Null, 
     /* result */ js.UndefOr[typingsSlinky.iobroker.AnonRows], 
@@ -89,7 +95,9 @@ package object ioBroker {
   ]
   type GetObjectsCallback = js.Function2[
     /* err */ java.lang.String | scala.Null, 
-    /* objects */ typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod._Global_.ioBroker.Object], 
+    /* objects */ js.UndefOr[
+      typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod._Global_.ioBroker.Object]
+    ], 
     scala.Unit
   ]
   // This is a version used by GetDevices/GetChannelsOf/GetStatesOf
@@ -124,11 +132,21 @@ package object ioBroker {
     typingsSlinky.iobroker.mod._Global_.ioBroker.SecondParameterOf[T], 
     js.UndefOr[scala.Null]
   ]
+  // For all objects that are exposed to the user we need to tone the strictness down.
+  // Otherwise, every operation on objects becomes a pain to work with
+  type Object = typingsSlinky.iobroker.mod._Global_.ioBroker.AnyObject with typingsSlinky.iobroker.AnonCommon
   type ObjectChangeHandler = js.Function2[
     /* id */ java.lang.String, 
     /* obj */ js.UndefOr[typingsSlinky.iobroker.mod._Global_.ioBroker.Object | scala.Null], 
     scala.Unit | js.Promise[scala.Unit]
   ]
+  // Objects are JSON-serializable
+  type ObjectField = java.lang.String | scala.Double | scala.Boolean | scala.Null | (js.Array[
+    /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias iobroker.iobroker._Global_.ioBroker.ObjectField */ js.Object
+  ]) | (org.scalablytyped.runtime.StringDictionary[
+    /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias iobroker.iobroker._Global_.ioBroker.ObjectField */ js.Object
+  ])
+  type Plugin = typingsSlinky.std.Record[java.lang.String, js.Any]
   type ReadDirCallback = js.Function2[
     /* err */ java.lang.String | scala.Null, 
     /* entries */ js.UndefOr[js.Array[typingsSlinky.iobroker.mod._Global_.ioBroker.ReadDirResult]], 
@@ -151,7 +169,7 @@ package object ioBroker {
   type Session = js.Any
   type SetObjectCallback = js.Function2[
     /* err */ java.lang.String | scala.Null, 
-    /* obj */ typingsSlinky.iobroker.AnonIdString, 
+    /* obj */ js.UndefOr[typingsSlinky.iobroker.AnonIdString], 
     scala.Unit
   ]
   type SetStateCallback = js.Function2[
@@ -165,12 +183,10 @@ package object ioBroker {
     /* notChanged */ scala.Boolean, 
     scala.Unit
   ]
-  // In set[Foreign]Object[NotExists] methods, the ID and acl of the object is optional
-  type SettableObject = typingsSlinky.iobroker.mod._Global_.ioBroker.SettableObjectWorker[typingsSlinky.iobroker.mod._Global_.ioBroker.Object]
-  type SettableObjectWorker[T /* <: typingsSlinky.iobroker.mod._Global_.ioBroker.Object */] = (typingsSlinky.std.Pick[
+  type SettableObjectWorker[T /* <: typingsSlinky.iobroker.mod._Global_.ioBroker.AnyObject */] = (typingsSlinky.std.Pick[
     T, 
     typingsSlinky.std.Exclude[
-      java.lang.String, 
+      /* keyof T */ java.lang.String, 
       typingsSlinky.iobroker.iobrokerStrings._id | typingsSlinky.iobroker.iobrokerStrings.acl
     ]
   ]) with typingsSlinky.iobroker.AnonAcl[T]

@@ -26,16 +26,53 @@ trait ModifyDBClusterSnapshotAttributeMessage extends js.Object {
 
 object ModifyDBClusterSnapshotAttributeMessage {
   @scala.inline
-  def apply(
-    AttributeName: String,
-    DBClusterSnapshotIdentifier: String,
-    ValuesToAdd: AttributeValueList = null,
-    ValuesToRemove: AttributeValueList = null
-  ): ModifyDBClusterSnapshotAttributeMessage = {
+  def apply(AttributeName: String, DBClusterSnapshotIdentifier: String): ModifyDBClusterSnapshotAttributeMessage = {
     val __obj = js.Dynamic.literal(AttributeName = AttributeName.asInstanceOf[js.Any], DBClusterSnapshotIdentifier = DBClusterSnapshotIdentifier.asInstanceOf[js.Any])
-    if (ValuesToAdd != null) __obj.updateDynamic("ValuesToAdd")(ValuesToAdd.asInstanceOf[js.Any])
-    if (ValuesToRemove != null) __obj.updateDynamic("ValuesToRemove")(ValuesToRemove.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyDBClusterSnapshotAttributeMessage]
   }
+  @scala.inline
+  implicit class ModifyDBClusterSnapshotAttributeMessageOps[Self <: ModifyDBClusterSnapshotAttributeMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDBClusterSnapshotIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBClusterSnapshotIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValuesToAdd(value: AttributeValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValuesToAdd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValuesToAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValuesToAdd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValuesToRemove(value: AttributeValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValuesToRemove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValuesToRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValuesToRemove")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait RouteType extends js.Object
 
 object RouteType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def header: typingsSlinky.next.nextStrings.header = "header".asInstanceOf[typingsSlinky.next.nextStrings.header]
   @scala.inline
-  def header: typingsSlinky.next.nextStrings.header = this.cast("header")
+  def redirect: typingsSlinky.next.nextStrings.redirect = "redirect".asInstanceOf[typingsSlinky.next.nextStrings.redirect]
   @scala.inline
-  def redirect: typingsSlinky.next.nextStrings.redirect = this.cast("redirect")
-  @scala.inline
-  def rewrite: typingsSlinky.next.nextStrings.rewrite = this.cast("rewrite")
+  def rewrite: typingsSlinky.next.nextStrings.rewrite = "rewrite".asInstanceOf[typingsSlinky.next.nextStrings.rewrite]
 }
 

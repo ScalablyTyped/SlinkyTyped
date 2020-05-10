@@ -12,10 +12,8 @@ trait ThemeColor extends js.Object
 
 object ThemeColor {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dark: typingsSlinky.reactEmailEditor.reactEmailEditorStrings.dark = "dark".asInstanceOf[typingsSlinky.reactEmailEditor.reactEmailEditorStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.reactEmailEditor.reactEmailEditorStrings.dark = this.cast("dark")
-  @scala.inline
-  def light: typingsSlinky.reactEmailEditor.reactEmailEditorStrings.light = this.cast("light")
+  def light: typingsSlinky.reactEmailEditor.reactEmailEditorStrings.light = "light".asInstanceOf[typingsSlinky.reactEmailEditor.reactEmailEditorStrings.light]
 }
 

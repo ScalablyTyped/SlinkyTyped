@@ -6,6 +6,7 @@ import typingsSlinky.mapboxGl.mapboxGlStrings.auto
 import typingsSlinky.mapboxGl.mapboxGlStrings.both
 import typingsSlinky.mapboxGl.mapboxGlStrings.center
 import typingsSlinky.mapboxGl.mapboxGlStrings.height
+import typingsSlinky.mapboxGl.mapboxGlStrings.horizontal
 import typingsSlinky.mapboxGl.mapboxGlStrings.left
 import typingsSlinky.mapboxGl.mapboxGlStrings.line
 import typingsSlinky.mapboxGl.mapboxGlStrings.lowercase
@@ -15,136 +16,565 @@ import typingsSlinky.mapboxGl.mapboxGlStrings.point
 import typingsSlinky.mapboxGl.mapboxGlStrings.right
 import typingsSlinky.mapboxGl.mapboxGlStrings.source_
 import typingsSlinky.mapboxGl.mapboxGlStrings.uppercase
+import typingsSlinky.mapboxGl.mapboxGlStrings.vertical
 import typingsSlinky.mapboxGl.mapboxGlStrings.viewport
 import typingsSlinky.mapboxGl.mapboxGlStrings.width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SymbolLayout
   extends Layout
      with _AnyLayout {
-  var `icon-allow-overlap`: js.UndefOr[Boolean | StyleFunction | Expression] = js.undefined
-  var `icon-anchor`: js.UndefOr[Anchor | StyleFunction | Expression] = js.undefined
-  var `icon-ignore-placement`: js.UndefOr[Boolean] = js.undefined
-  var `icon-image`: js.UndefOr[String | StyleFunction | Expression] = js.undefined
-  var `icon-keep-upright`: js.UndefOr[Boolean] = js.undefined
-  var `icon-offset`: js.UndefOr[js.Array[Double] | StyleFunction | Expression] = js.undefined
-  var `icon-optional`: js.UndefOr[Boolean] = js.undefined
-  var `icon-padding`: js.UndefOr[Double | Expression] = js.undefined
-  var `icon-pitch-alignment`: js.UndefOr[map | viewport | auto] = js.undefined
-  var `icon-rotate`: js.UndefOr[Double | StyleFunction | Expression] = js.undefined
-  var `icon-rotation-alignment`: js.UndefOr[map | viewport | auto] = js.undefined
-  var `icon-size`: js.UndefOr[Double | StyleFunction | Expression] = js.undefined
-  var `icon-text-fit`: js.UndefOr[none | both | width | height] = js.undefined
-  var `icon-text-fit-padding`: js.UndefOr[js.Array[Double] | Expression] = js.undefined
-  var `symbol-avoid-edges`: js.UndefOr[Boolean] = js.undefined
-  var `symbol-placement`: js.UndefOr[point | line | `line-center`] = js.undefined
-  var `symbol-spacing`: js.UndefOr[Double | Expression] = js.undefined
-  var `symbol-z-order`: js.UndefOr[`viewport-y` | source_] = js.undefined
-  var `text-allow-overlap`: js.UndefOr[Boolean] = js.undefined
-  var `text-anchor`: js.UndefOr[Anchor | StyleFunction | Expression] = js.undefined
-  var `text-field`: js.UndefOr[String | StyleFunction | Expression] = js.undefined
-  var `text-font`: js.UndefOr[String | js.Array[String] | Expression] = js.undefined
-  var `text-ignore-placement`: js.UndefOr[Boolean] = js.undefined
-  var `text-justify`: js.UndefOr[left | center | right | Expression] = js.undefined
-  var `text-keep-upright`: js.UndefOr[Boolean] = js.undefined
-  var `text-letter-spacing`: js.UndefOr[Double | Expression] = js.undefined
-  var `text-line-height`: js.UndefOr[Double | Expression] = js.undefined
-  var `text-max-angle`: js.UndefOr[Double | Expression] = js.undefined
-  var `text-max-width`: js.UndefOr[Double | Expression] = js.undefined
-  var `text-offset`: js.UndefOr[js.Array[Double] | Expression] = js.undefined
-  var `text-optional`: js.UndefOr[Boolean] = js.undefined
-  var `text-padding`: js.UndefOr[Double | Expression] = js.undefined
-  var `text-pitch-alignment`: js.UndefOr[map | viewport | auto] = js.undefined
-  var `text-rotate`: js.UndefOr[Double | StyleFunction | Expression] = js.undefined
-  var `text-rotation-alignment`: js.UndefOr[map | viewport | auto] = js.undefined
-  var `text-size`: js.UndefOr[Double | StyleFunction | Expression] = js.undefined
-  var `text-transform`: js.UndefOr[none | uppercase | lowercase | StyleFunction | Expression] = js.undefined
+  var `icon-allow-overlap`: js.UndefOr[Boolean | StyleFunction | Expression] = js.native
+  var `icon-anchor`: js.UndefOr[Anchor | StyleFunction | Expression] = js.native
+  var `icon-ignore-placement`: js.UndefOr[Boolean] = js.native
+  var `icon-image`: js.UndefOr[String | StyleFunction | Expression] = js.native
+  var `icon-keep-upright`: js.UndefOr[Boolean] = js.native
+  var `icon-offset`: js.UndefOr[js.Array[Double] | StyleFunction | Expression] = js.native
+  var `icon-optional`: js.UndefOr[Boolean] = js.native
+  var `icon-padding`: js.UndefOr[Double | Expression] = js.native
+  var `icon-pitch-alignment`: js.UndefOr[map | viewport | auto] = js.native
+  var `icon-rotate`: js.UndefOr[Double | StyleFunction | Expression] = js.native
+  var `icon-rotation-alignment`: js.UndefOr[map | viewport | auto] = js.native
+  var `icon-size`: js.UndefOr[Double | StyleFunction | Expression] = js.native
+  var `icon-text-fit`: js.UndefOr[none | both | width | height] = js.native
+  var `icon-text-fit-padding`: js.UndefOr[js.Array[Double] | Expression] = js.native
+  var `symbol-avoid-edges`: js.UndefOr[Boolean] = js.native
+  var `symbol-placement`: js.UndefOr[point | line | `line-center`] = js.native
+  var `symbol-sort-key`: js.UndefOr[Double | Expression] = js.native
+  var `symbol-spacing`: js.UndefOr[Double | Expression] = js.native
+  var `symbol-z-order`: js.UndefOr[`viewport-y` | source_] = js.native
+  var `text-allow-overlap`: js.UndefOr[Boolean] = js.native
+  var `text-anchor`: js.UndefOr[Anchor | StyleFunction | Expression] = js.native
+  var `text-field`: js.UndefOr[String | StyleFunction | Expression] = js.native
+  var `text-font`: js.UndefOr[String | js.Array[String] | Expression] = js.native
+  var `text-ignore-placement`: js.UndefOr[Boolean] = js.native
+  var `text-justify`: js.UndefOr[left | center | right | Expression] = js.native
+  var `text-keep-upright`: js.UndefOr[Boolean] = js.native
+  var `text-letter-spacing`: js.UndefOr[Double | Expression] = js.native
+  var `text-line-height`: js.UndefOr[Double | Expression] = js.native
+  var `text-max-angle`: js.UndefOr[Double | Expression] = js.native
+  var `text-max-width`: js.UndefOr[Double | Expression] = js.native
+  var `text-offset`: js.UndefOr[js.Array[Double] | Expression] = js.native
+  var `text-optional`: js.UndefOr[Boolean] = js.native
+  var `text-padding`: js.UndefOr[Double | Expression] = js.native
+  var `text-pitch-alignment`: js.UndefOr[map | viewport | auto] = js.native
+  var `text-radial-offset`: js.UndefOr[Double | Expression] = js.native
+  var `text-rotate`: js.UndefOr[Double | StyleFunction | Expression] = js.native
+  var `text-rotation-alignment`: js.UndefOr[map | viewport | auto] = js.native
+  var `text-size`: js.UndefOr[Double | StyleFunction | Expression] = js.native
+  var `text-transform`: js.UndefOr[none | uppercase | lowercase | StyleFunction | Expression] = js.native
+  var `text-variable-anchor`: js.UndefOr[js.Array[Anchor]] = js.native
+  var `text-writing-mode`: js.UndefOr[js.Array[horizontal | vertical]] = js.native
 }
 
 object SymbolLayout {
   @scala.inline
-  def apply(
-    `icon-allow-overlap`: Boolean | StyleFunction | Expression = null,
-    `icon-anchor`: Anchor | StyleFunction | Expression = null,
-    `icon-ignore-placement`: js.UndefOr[Boolean] = js.undefined,
-    `icon-image`: String | StyleFunction | Expression = null,
-    `icon-keep-upright`: js.UndefOr[Boolean] = js.undefined,
-    `icon-offset`: js.Array[Double] | StyleFunction | Expression = null,
-    `icon-optional`: js.UndefOr[Boolean] = js.undefined,
-    `icon-padding`: Double | Expression = null,
-    `icon-pitch-alignment`: map | viewport | auto = null,
-    `icon-rotate`: Double | StyleFunction | Expression = null,
-    `icon-rotation-alignment`: map | viewport | auto = null,
-    `icon-size`: Double | StyleFunction | Expression = null,
-    `icon-text-fit`: none | both | width | height = null,
-    `icon-text-fit-padding`: js.Array[Double] | Expression = null,
-    `symbol-avoid-edges`: js.UndefOr[Boolean] = js.undefined,
-    `symbol-placement`: point | line | `line-center` = null,
-    `symbol-spacing`: Double | Expression = null,
-    `symbol-z-order`: `viewport-y` | source_ = null,
-    `text-allow-overlap`: js.UndefOr[Boolean] = js.undefined,
-    `text-anchor`: Anchor | StyleFunction | Expression = null,
-    `text-field`: String | StyleFunction | Expression = null,
-    `text-font`: String | js.Array[String] | Expression = null,
-    `text-ignore-placement`: js.UndefOr[Boolean] = js.undefined,
-    `text-justify`: left | center | right | Expression = null,
-    `text-keep-upright`: js.UndefOr[Boolean] = js.undefined,
-    `text-letter-spacing`: Double | Expression = null,
-    `text-line-height`: Double | Expression = null,
-    `text-max-angle`: Double | Expression = null,
-    `text-max-width`: Double | Expression = null,
-    `text-offset`: js.Array[Double] | Expression = null,
-    `text-optional`: js.UndefOr[Boolean] = js.undefined,
-    `text-padding`: Double | Expression = null,
-    `text-pitch-alignment`: map | viewport | auto = null,
-    `text-rotate`: Double | StyleFunction | Expression = null,
-    `text-rotation-alignment`: map | viewport | auto = null,
-    `text-size`: Double | StyleFunction | Expression = null,
-    `text-transform`: none | uppercase | lowercase | StyleFunction | Expression = null,
-    visibility: Visibility = null
-  ): SymbolLayout = {
+  def apply(): SymbolLayout = {
     val __obj = js.Dynamic.literal()
-    if (`icon-allow-overlap` != null) __obj.updateDynamic("icon-allow-overlap")(`icon-allow-overlap`.asInstanceOf[js.Any])
-    if (`icon-anchor` != null) __obj.updateDynamic("icon-anchor")(`icon-anchor`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`icon-ignore-placement`)) __obj.updateDynamic("icon-ignore-placement")(`icon-ignore-placement`.asInstanceOf[js.Any])
-    if (`icon-image` != null) __obj.updateDynamic("icon-image")(`icon-image`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`icon-keep-upright`)) __obj.updateDynamic("icon-keep-upright")(`icon-keep-upright`.asInstanceOf[js.Any])
-    if (`icon-offset` != null) __obj.updateDynamic("icon-offset")(`icon-offset`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`icon-optional`)) __obj.updateDynamic("icon-optional")(`icon-optional`.asInstanceOf[js.Any])
-    if (`icon-padding` != null) __obj.updateDynamic("icon-padding")(`icon-padding`.asInstanceOf[js.Any])
-    if (`icon-pitch-alignment` != null) __obj.updateDynamic("icon-pitch-alignment")(`icon-pitch-alignment`.asInstanceOf[js.Any])
-    if (`icon-rotate` != null) __obj.updateDynamic("icon-rotate")(`icon-rotate`.asInstanceOf[js.Any])
-    if (`icon-rotation-alignment` != null) __obj.updateDynamic("icon-rotation-alignment")(`icon-rotation-alignment`.asInstanceOf[js.Any])
-    if (`icon-size` != null) __obj.updateDynamic("icon-size")(`icon-size`.asInstanceOf[js.Any])
-    if (`icon-text-fit` != null) __obj.updateDynamic("icon-text-fit")(`icon-text-fit`.asInstanceOf[js.Any])
-    if (`icon-text-fit-padding` != null) __obj.updateDynamic("icon-text-fit-padding")(`icon-text-fit-padding`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`symbol-avoid-edges`)) __obj.updateDynamic("symbol-avoid-edges")(`symbol-avoid-edges`.asInstanceOf[js.Any])
-    if (`symbol-placement` != null) __obj.updateDynamic("symbol-placement")(`symbol-placement`.asInstanceOf[js.Any])
-    if (`symbol-spacing` != null) __obj.updateDynamic("symbol-spacing")(`symbol-spacing`.asInstanceOf[js.Any])
-    if (`symbol-z-order` != null) __obj.updateDynamic("symbol-z-order")(`symbol-z-order`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`text-allow-overlap`)) __obj.updateDynamic("text-allow-overlap")(`text-allow-overlap`.asInstanceOf[js.Any])
-    if (`text-anchor` != null) __obj.updateDynamic("text-anchor")(`text-anchor`.asInstanceOf[js.Any])
-    if (`text-field` != null) __obj.updateDynamic("text-field")(`text-field`.asInstanceOf[js.Any])
-    if (`text-font` != null) __obj.updateDynamic("text-font")(`text-font`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`text-ignore-placement`)) __obj.updateDynamic("text-ignore-placement")(`text-ignore-placement`.asInstanceOf[js.Any])
-    if (`text-justify` != null) __obj.updateDynamic("text-justify")(`text-justify`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`text-keep-upright`)) __obj.updateDynamic("text-keep-upright")(`text-keep-upright`.asInstanceOf[js.Any])
-    if (`text-letter-spacing` != null) __obj.updateDynamic("text-letter-spacing")(`text-letter-spacing`.asInstanceOf[js.Any])
-    if (`text-line-height` != null) __obj.updateDynamic("text-line-height")(`text-line-height`.asInstanceOf[js.Any])
-    if (`text-max-angle` != null) __obj.updateDynamic("text-max-angle")(`text-max-angle`.asInstanceOf[js.Any])
-    if (`text-max-width` != null) __obj.updateDynamic("text-max-width")(`text-max-width`.asInstanceOf[js.Any])
-    if (`text-offset` != null) __obj.updateDynamic("text-offset")(`text-offset`.asInstanceOf[js.Any])
-    if (!js.isUndefined(`text-optional`)) __obj.updateDynamic("text-optional")(`text-optional`.asInstanceOf[js.Any])
-    if (`text-padding` != null) __obj.updateDynamic("text-padding")(`text-padding`.asInstanceOf[js.Any])
-    if (`text-pitch-alignment` != null) __obj.updateDynamic("text-pitch-alignment")(`text-pitch-alignment`.asInstanceOf[js.Any])
-    if (`text-rotate` != null) __obj.updateDynamic("text-rotate")(`text-rotate`.asInstanceOf[js.Any])
-    if (`text-rotation-alignment` != null) __obj.updateDynamic("text-rotation-alignment")(`text-rotation-alignment`.asInstanceOf[js.Any])
-    if (`text-size` != null) __obj.updateDynamic("text-size")(`text-size`.asInstanceOf[js.Any])
-    if (`text-transform` != null) __obj.updateDynamic("text-transform")(`text-transform`.asInstanceOf[js.Any])
-    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[SymbolLayout]
   }
+  @scala.inline
+  implicit class SymbolLayoutOps[Self <: SymbolLayout] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withIcon-allow-overlap`(value: Boolean | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-allow-overlap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-allow-overlap`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-allow-overlap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-anchor`(value: Anchor | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-anchor`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-anchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-ignore-placement`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-ignore-placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-ignore-placement`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-ignore-placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-image`(value: String | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-image`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-keep-upright`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-keep-upright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-keep-upright`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-keep-upright")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-offset`(value: js.Array[Double] | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-offset`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-optional`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-optional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-optional`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-optional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-padding`(value: Double | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-padding`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-pitch-alignment`(value: map | viewport | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-pitch-alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-pitch-alignment`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-pitch-alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-rotate`(value: Double | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-rotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-rotate`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-rotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-rotation-alignment`(value: map | viewport | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-rotation-alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-rotation-alignment`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-rotation-alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-size`(value: Double | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-size`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-text-fit`(value: none | both | width | height): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-text-fit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-text-fit`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-text-fit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withIcon-text-fit-padding`(value: js.Array[Double] | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-text-fit-padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutIcon-text-fit-padding`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon-text-fit-padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSymbol-avoid-edges`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol-avoid-edges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSymbol-avoid-edges`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol-avoid-edges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSymbol-placement`(value: point | line | `line-center`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol-placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSymbol-placement`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol-placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSymbol-sort-key`(value: Double | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol-sort-key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSymbol-sort-key`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol-sort-key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSymbol-spacing`(value: Double | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol-spacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSymbol-spacing`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol-spacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSymbol-z-order`(value: `viewport-y` | source_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol-z-order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSymbol-z-order`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symbol-z-order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-allow-overlap`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-allow-overlap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-allow-overlap`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-allow-overlap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-anchor`(value: Anchor | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-anchor`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-anchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-field`(value: String | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-field`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-field")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-font`(value: String | js.Array[String] | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-font`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-ignore-placement`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-ignore-placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-ignore-placement`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-ignore-placement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-justify`(value: left | center | right | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-justify")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-justify`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-justify")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-keep-upright`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-keep-upright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-keep-upright`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-keep-upright")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-letter-spacing`(value: Double | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-letter-spacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-letter-spacing`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-letter-spacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-line-height`(value: Double | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-line-height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-line-height`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-line-height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-max-angle`(value: Double | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-max-angle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-max-angle`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-max-angle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-max-width`(value: Double | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-max-width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-max-width`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-max-width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-offset`(value: js.Array[Double] | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-offset`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-optional`(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-optional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-optional`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-optional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-padding`(value: Double | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-padding`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-pitch-alignment`(value: map | viewport | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-pitch-alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-pitch-alignment`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-pitch-alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-radial-offset`(value: Double | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-radial-offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-radial-offset`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-radial-offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-rotate`(value: Double | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-rotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-rotate`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-rotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-rotation-alignment`(value: map | viewport | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-rotation-alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-rotation-alignment`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-rotation-alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-size`(value: Double | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-size`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-transform`(value: none | uppercase | lowercase | StyleFunction | Expression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-transform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-transform`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-transform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-variable-anchor`(value: js.Array[Anchor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-variable-anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-variable-anchor`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-variable-anchor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withText-writing-mode`(value: js.Array[horizontal | vertical]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-writing-mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutText-writing-mode`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text-writing-mode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,6 @@
 package typingsSlinky.ionic
 
 import typingsSlinky.ionic.definitionsMod.ReactBuildOptions
-import typingsSlinky.ionic.ionicStrings.`React Scripts`
-import typingsSlinky.ionic.ionicStrings.`react-scripts`
-import typingsSlinky.ionic.ionicStrings.ionicColonbuild
 import typingsSlinky.ionic.libBuildMod.BuildCLI
 import typingsSlinky.ionic.libBuildMod.BuildRunner
 import typingsSlinky.ionic.libBuildMod.BuildRunnerDeps
@@ -17,15 +14,9 @@ import scala.scalajs.js.annotation._
 object reactBuildMod extends js.Object {
   @js.native
   class ReactBuildCLI () extends BuildCLI[ReactBuildOptions] {
-    @JSName("name")
-    val name_ReactBuildCLI: `React Scripts` = js.native
-    @JSName("pkg")
-    val pkg_ReactBuildCLI: `react-scripts` = js.native
-    val prefix: `react-scripts` = js.native
-    @JSName("program")
-    val program_ReactBuildCLI: `react-scripts` = js.native
+    val prefix: /* "react-scripts" */ String = js.native
     @JSName("script")
-    val script_ReactBuildCLI: ionicColonbuild = js.native
+    val script_ReactBuildCLI: /* "ionic:build" */ String = js.native
   }
   
   @js.native

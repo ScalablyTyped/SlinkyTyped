@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IFormattingOptions extends js.Object {
-  var capSQL: js.UndefOr[Boolean] = js.undefined
-  var `def`: js.UndefOr[js.Any] = js.undefined
-  var partial: js.UndefOr[Boolean] = js.undefined
+  var capSQL: js.UndefOr[Boolean] = js.native
+  var `def`: js.UndefOr[js.Any] = js.native
+  var partial: js.UndefOr[Boolean] = js.native
 }
 
 object IFormattingOptions {
   @scala.inline
-  def apply(
-    capSQL: js.UndefOr[Boolean] = js.undefined,
-    `def`: js.Any = null,
-    partial: js.UndefOr[Boolean] = js.undefined
-  ): IFormattingOptions = {
+  def apply(): IFormattingOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(capSQL)) __obj.updateDynamic("capSQL")(capSQL.asInstanceOf[js.Any])
-    if (`def` != null) __obj.updateDynamic("def")(`def`.asInstanceOf[js.Any])
-    if (!js.isUndefined(partial)) __obj.updateDynamic("partial")(partial.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFormattingOptions]
   }
+  @scala.inline
+  implicit class IFormattingOptionsOps[Self <: IFormattingOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCapSQL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capSQL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapSQL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capSQL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDef(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("def")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("def")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartial(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partial")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

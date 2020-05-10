@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Response extends js.Object {
-  def setLink(link: String, rel: String): Unit
+  def setLink(link: String, rel: String): Unit = js.native
 }
 
 object Response {
   @scala.inline
   def apply(setLink: (String, String) => Unit): Response = {
     val __obj = js.Dynamic.literal(setLink = js.Any.fromFunction2(setLink))
-  
     __obj.asInstanceOf[Response]
   }
+  @scala.inline
+  implicit class ResponseOps[Self <: Response] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetLink(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLink")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

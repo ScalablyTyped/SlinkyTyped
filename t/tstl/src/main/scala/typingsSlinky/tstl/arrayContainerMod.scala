@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @JSImport("tstl/internal/container/linear/ArrayContainer", JSImport.Namespace)
 @js.native
 object arrayContainerMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.isizeMod.ISize because Already inherited
   - typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer because Already inherited
   - typingsSlinky.tstl.ipushMod.IPush because Already inherited
@@ -127,13 +127,6 @@ object arrayContainerMod extends js.Object {
       * Erase the last element.
       */
     def pop_back(): Unit = js.native
-    /**
-      * Insert an element at the end.
-      *
-      * @param val Value to insert.
-      */
-    /* CompleteClass */
-    override def push_back(`val`: T): Unit = js.native
     /**
       * @inheritDoc
       */

@@ -14,14 +14,12 @@ trait ErgonomicType extends js.Object
 
 object ErgonomicType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def desk: typingsSlinky.reactFlexr.reactFlexrStrings.desk = "desk".asInstanceOf[typingsSlinky.reactFlexr.reactFlexrStrings.desk]
   @scala.inline
-  def desk: typingsSlinky.reactFlexr.reactFlexrStrings.desk = this.cast("desk")
+  def lap: typingsSlinky.reactFlexr.reactFlexrStrings.lap = "lap".asInstanceOf[typingsSlinky.reactFlexr.reactFlexrStrings.lap]
   @scala.inline
-  def lap: typingsSlinky.reactFlexr.reactFlexrStrings.lap = this.cast("lap")
+  def palm: typingsSlinky.reactFlexr.reactFlexrStrings.palm = "palm".asInstanceOf[typingsSlinky.reactFlexr.reactFlexrStrings.palm]
   @scala.inline
-  def palm: typingsSlinky.reactFlexr.reactFlexrStrings.palm = this.cast("palm")
-  @scala.inline
-  def portable: typingsSlinky.reactFlexr.reactFlexrStrings.portable = this.cast("portable")
+  def portable: typingsSlinky.reactFlexr.reactFlexrStrings.portable = "portable".asInstanceOf[typingsSlinky.reactFlexr.reactFlexrStrings.portable]
 }
 

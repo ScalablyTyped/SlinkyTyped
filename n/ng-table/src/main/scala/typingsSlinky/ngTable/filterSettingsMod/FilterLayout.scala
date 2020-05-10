@@ -12,10 +12,8 @@ trait FilterLayout extends js.Object
 
 object FilterLayout {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.ngTable.ngTableStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.ngTable.ngTableStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.ngTable.ngTableStrings.horizontal = this.cast("horizontal")
-  @scala.inline
-  def stack: typingsSlinky.ngTable.ngTableStrings.stack = this.cast("stack")
+  def stack: typingsSlinky.ngTable.ngTableStrings.stack = "stack".asInstanceOf[typingsSlinky.ngTable.ngTableStrings.stack]
 }
 

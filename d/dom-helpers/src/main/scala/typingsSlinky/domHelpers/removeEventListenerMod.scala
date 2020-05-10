@@ -1,5 +1,6 @@
 package typingsSlinky.domHelpers
 
+import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.domHelpers.addEventListenerMod.TaggedEventHandler
 import typingsSlinky.domHelpers.domHelpersStrings.abort
@@ -94,7 +95,6 @@ import typingsSlinky.domHelpers.domHelpersStrings.transitionstart
 import typingsSlinky.domHelpers.domHelpersStrings.volumechange
 import typingsSlinky.domHelpers.domHelpersStrings.waiting
 import typingsSlinky.domHelpers.domHelpersStrings.wheel
-import typingsSlinky.std.EventListenerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

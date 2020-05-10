@@ -16,18 +16,16 @@ trait PerformanceLoggerEvent extends js.Object
 
 object PerformanceLoggerEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def domEvent: typingsSlinky.maquette.maquetteStrings.domEvent = "domEvent".asInstanceOf[typingsSlinky.maquette.maquetteStrings.domEvent]
   @scala.inline
-  def domEvent: typingsSlinky.maquette.maquetteStrings.domEvent = this.cast("domEvent")
+  def domEventProcessed: typingsSlinky.maquette.maquetteStrings.domEventProcessed = "domEventProcessed".asInstanceOf[typingsSlinky.maquette.maquetteStrings.domEventProcessed]
   @scala.inline
-  def domEventProcessed: typingsSlinky.maquette.maquetteStrings.domEventProcessed = this.cast("domEventProcessed")
+  def patched: typingsSlinky.maquette.maquetteStrings.patched = "patched".asInstanceOf[typingsSlinky.maquette.maquetteStrings.patched]
   @scala.inline
-  def patched: typingsSlinky.maquette.maquetteStrings.patched = this.cast("patched")
+  def renderDone: typingsSlinky.maquette.maquetteStrings.renderDone = "renderDone".asInstanceOf[typingsSlinky.maquette.maquetteStrings.renderDone]
   @scala.inline
-  def renderDone: typingsSlinky.maquette.maquetteStrings.renderDone = this.cast("renderDone")
+  def renderStart: typingsSlinky.maquette.maquetteStrings.renderStart = "renderStart".asInstanceOf[typingsSlinky.maquette.maquetteStrings.renderStart]
   @scala.inline
-  def renderStart: typingsSlinky.maquette.maquetteStrings.renderStart = this.cast("renderStart")
-  @scala.inline
-  def rendered: typingsSlinky.maquette.maquetteStrings.rendered = this.cast("rendered")
+  def rendered: typingsSlinky.maquette.maquetteStrings.rendered = "rendered".asInstanceOf[typingsSlinky.maquette.maquetteStrings.rendered]
 }
 

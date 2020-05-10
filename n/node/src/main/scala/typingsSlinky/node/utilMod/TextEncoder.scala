@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class TextEncoder () extends js.Object {
   val encoding: String = js.native
-  def encode(): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def encode(input: String): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def encodeInto(input: String, output: scala.scalajs.js.typedarray.Uint8Array): EncodeIntoResult = js.native
+  def encode(): js.typedarray.Uint8Array = js.native
+  def encode(input: String): js.typedarray.Uint8Array = js.native
+  def encodeInto(input: String, output: js.typedarray.Uint8Array): EncodeIntoResult = js.native
 }
 

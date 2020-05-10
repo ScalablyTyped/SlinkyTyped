@@ -4,24 +4,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IInstallInfoEntry extends js.Object {
   /**
     * Whether the package also includes the lab extension.
     */
-  var bundles_extension: js.UndefOr[Boolean] = js.undefined
+  var bundles_extension: js.UndefOr[Boolean] = js.native
   /**
     * The name of the companion package/module.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
 }
 
 object IInstallInfoEntry {
   @scala.inline
-  def apply(bundles_extension: js.UndefOr[Boolean] = js.undefined, name: String = null): IInstallInfoEntry = {
+  def apply(): IInstallInfoEntry = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bundles_extension)) __obj.updateDynamic("bundles_extension")(bundles_extension.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[IInstallInfoEntry]
   }
+  @scala.inline
+  implicit class IInstallInfoEntryOps[Self <: IInstallInfoEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBundles_extension(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundles_extension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBundles_extension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bundles_extension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

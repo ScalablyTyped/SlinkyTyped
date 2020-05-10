@@ -1,15 +1,13 @@
 package typingsSlinky.blueprintjsSelect.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.input.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsSelect.itemListRendererMod.IItemListRendererProps
 import typingsSlinky.blueprintjsSelect.itemRendererMod.IItemRendererProps
 import typingsSlinky.blueprintjsSelect.listItemsPropsMod.ItemsEqualProp
@@ -23,65 +21,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object QueryList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsSelect.mod.QueryList[js.Any]] {
+object QueryList {
   @JSImport("@blueprintjs/select", "QueryList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsSelect.mod.QueryList[js.Any]] {
+    @scala.inline
+    def activeItem(value: T | ICreateNewItem): this.type = set("activeItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def activeItemNull: this.type = set("activeItem", null)
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def createNewItemFromQuery(value: /* query */ String => T): this.type = set("createNewItemFromQuery", js.Any.fromFunction1(value))
+    @scala.inline
+    def createNewItemRenderer(
+      value: (/* query */ String, /* active */ Boolean, /* handleClick */ MouseEventHandler[HTMLElement]) => js.UndefOr[ReactElement]
+    ): this.type = set("createNewItemRenderer", js.Any.fromFunction3(value))
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialActiveItem(value: T): this.type = set("initialActiveItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialContentReactElement(value: ReactElement): this.type = set("initialContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialContent(value: TagMod[Any]): this.type = set("initialContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialContentNull: this.type = set("initialContent", null)
+    @scala.inline
+    def itemDisabledFunction2(value: (T, /* index */ Double) => Boolean): this.type = set("itemDisabled", js.Any.fromFunction2(value))
+    @scala.inline
+    def itemDisabled(value: (/* keyof T */ String) | (js.Function2[T, /* index */ Double, Boolean])): this.type = set("itemDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemListPredicate(value: (/* query */ String, /* items */ js.Array[T]) => js.Array[T]): this.type = set("itemListPredicate", js.Any.fromFunction2(value))
+    @scala.inline
+    def itemListRenderer(value: /* itemListProps */ IItemListRendererProps[T] => ReactElement): this.type = set("itemListRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def itemPredicate(
+      value: (/* query */ String, T, /* index */ js.UndefOr[Double], /* exactMatch */ js.UndefOr[Boolean]) => Boolean
+    ): this.type = set("itemPredicate", js.Any.fromFunction4(value))
+    @scala.inline
+    def itemsEqualFunction2(value: (T, T) => Boolean): this.type = set("itemsEqual", js.Any.fromFunction2(value))
+    @scala.inline
+    def itemsEqual(value: ItemsEqualProp[T]): this.type = set("itemsEqual", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noResultsReactElement(value: ReactElement): this.type = set("noResults", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noResults(value: TagMod[Any]): this.type = set("noResults", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onActiveItemChange(value: (/* activeItem */ T | Null, /* isCreateNewItem */ Boolean) => Unit): this.type = set("onActiveItemChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onItemsPaste(value: /* items */ js.Array[T] => Unit): this.type = set("onItemsPaste", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyDown(value: SyntheticKeyboardEvent[HTMLElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyUp(value: SyntheticKeyboardEvent[HTMLElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onQueryChange(value: (/* query */ String, /* event */ js.UndefOr[ChangeEvent[HTMLInputElement]]) => Unit): this.type = set("onQueryChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def query(value: String): this.type = set("query", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resetOnQuery(value: Boolean): this.type = set("resetOnQuery", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resetOnSelect(value: Boolean): this.type = set("resetOnSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollToActiveItem(value: Boolean): this.type = set("scrollToActiveItem", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps[T](p: IQueryListProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply[T](
     itemRenderer: (T, /* itemProps */ IItemRendererProps) => ReactElement | Null,
     items: js.Array[T],
     onItemSelect: (T, js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit,
-    renderer: IQueryListRendererProps[T] => ReactElement,
-    activeItem: T | ICreateNewItem = null,
-    createNewItemFromQuery: /* query */ String => T = null,
-    createNewItemRenderer: (/* query */ String, /* active */ Boolean, /* handleClick */ MouseEventHandler[HTMLElement]) => js.UndefOr[ReactElement] = null,
-    initialContent: TagMod[Any] = null,
-    itemDisabled: String | (js.Function2[T, /* index */ Double, Boolean]) = null,
-    itemListPredicate: (/* query */ String, /* items */ js.Array[T]) => js.Array[T] = null,
-    itemListRenderer: /* itemListProps */ IItemListRendererProps[T] => ReactElement = null,
-    itemPredicate: (/* query */ String, T, /* index */ js.UndefOr[Double], /* exactMatch */ js.UndefOr[Boolean]) => Boolean = null,
-    itemsEqual: ItemsEqualProp[T] = null,
-    noResults: TagMod[Any] = null,
-    onActiveItemChange: (/* activeItem */ T | Null, /* isCreateNewItem */ Boolean) => Unit = null,
-    onItemsPaste: /* items */ js.Array[T] => Unit = null,
-    onKeyDown: SyntheticKeyboardEvent[HTMLElement] => Unit = null,
-    onKeyUp: SyntheticKeyboardEvent[HTMLElement] => Unit = null,
-    onQueryChange: (/* query */ String, /* event */ js.UndefOr[ChangeEvent[HTMLInputElement]]) => Unit = null,
-    query: String = null,
-    resetOnQuery: js.UndefOr[Boolean] = js.undefined,
-    resetOnSelect: js.UndefOr[Boolean] = js.undefined,
-    scrollToActiveItem: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsSelect.mod.QueryList[js.Any]] = {
-    val __obj = js.Dynamic.literal(itemRenderer = js.Any.fromFunction2(itemRenderer), items = items.asInstanceOf[js.Any], onItemSelect = js.Any.fromFunction2(onItemSelect), renderer = js.Any.fromFunction1(renderer))
-    if (activeItem != null) __obj.updateDynamic("activeItem")(activeItem.asInstanceOf[js.Any])
-    if (createNewItemFromQuery != null) __obj.updateDynamic("createNewItemFromQuery")(js.Any.fromFunction1(createNewItemFromQuery))
-    if (createNewItemRenderer != null) __obj.updateDynamic("createNewItemRenderer")(js.Any.fromFunction3(createNewItemRenderer))
-    if (initialContent != null) __obj.updateDynamic("initialContent")(initialContent.asInstanceOf[js.Any])
-    if (itemDisabled != null) __obj.updateDynamic("itemDisabled")(itemDisabled.asInstanceOf[js.Any])
-    if (itemListPredicate != null) __obj.updateDynamic("itemListPredicate")(js.Any.fromFunction2(itemListPredicate))
-    if (itemListRenderer != null) __obj.updateDynamic("itemListRenderer")(js.Any.fromFunction1(itemListRenderer))
-    if (itemPredicate != null) __obj.updateDynamic("itemPredicate")(js.Any.fromFunction4(itemPredicate))
-    if (itemsEqual != null) __obj.updateDynamic("itemsEqual")(itemsEqual.asInstanceOf[js.Any])
-    if (noResults != null) __obj.updateDynamic("noResults")(noResults.asInstanceOf[js.Any])
-    if (onActiveItemChange != null) __obj.updateDynamic("onActiveItemChange")(js.Any.fromFunction2(onActiveItemChange))
-    if (onItemsPaste != null) __obj.updateDynamic("onItemsPaste")(js.Any.fromFunction1(onItemsPaste))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
-    if (onQueryChange != null) __obj.updateDynamic("onQueryChange")(js.Any.fromFunction2(onQueryChange))
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (!js.isUndefined(resetOnQuery)) __obj.updateDynamic("resetOnQuery")(resetOnQuery.asInstanceOf[js.Any])
-    if (!js.isUndefined(resetOnSelect)) __obj.updateDynamic("resetOnSelect")(resetOnSelect.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollToActiveItem)) __obj.updateDynamic("scrollToActiveItem")(scrollToActiveItem.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.input.tag.type, 
-  typingsSlinky.blueprintjsSelect.mod.QueryList[js.Any]]]
+    renderer: IQueryListRendererProps[T] => ReactElement
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(itemRenderer = js.Any.fromFunction2(itemRenderer), items = items.asInstanceOf[js.Any], onItemSelect = js.Any.fromFunction2(onItemSelect), renderer = js.Any.fromFunction1(renderer))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[IQueryListProps[T]]))
   }
-  type Props = IQueryListProps[js.Any]
 }
 

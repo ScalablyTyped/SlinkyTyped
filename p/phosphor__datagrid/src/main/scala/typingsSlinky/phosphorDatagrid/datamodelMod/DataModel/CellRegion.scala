@@ -17,14 +17,12 @@ trait CellRegion extends js.Object
 
 object CellRegion {
   @scala.inline
-  def body: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.body = this.cast("body")
+  def body: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.body = "body".asInstanceOf[typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.body]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `column-header`: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`column-header` = "column-header".asInstanceOf[typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`column-header`]
   @scala.inline
-  def `column-header`: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`column-header` = this.cast("column-header")
+  def `corner-header`: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`corner-header` = "corner-header".asInstanceOf[typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`corner-header`]
   @scala.inline
-  def `corner-header`: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`corner-header` = this.cast("corner-header")
-  @scala.inline
-  def `row-header`: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`row-header` = this.cast("row-header")
+  def `row-header`: typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`row-header` = "row-header".asInstanceOf[typingsSlinky.phosphorDatagrid.phosphorDatagridStrings.`row-header`]
 }
 

@@ -63,36 +63,173 @@ trait CertificateAuthorityCertificateAuthorityConfigurationSubject extends js.Ob
 
 object CertificateAuthorityCertificateAuthorityConfigurationSubject {
   @scala.inline
-  def apply(
-    commonName: Input[String] = null,
-    country: Input[String] = null,
-    distinguishedNameQualifier: Input[String] = null,
-    generationQualifier: Input[String] = null,
-    givenName: Input[String] = null,
-    initials: Input[String] = null,
-    locality: Input[String] = null,
-    organization: Input[String] = null,
-    organizationalUnit: Input[String] = null,
-    pseudonym: Input[String] = null,
-    state: Input[String] = null,
-    surname: Input[String] = null,
-    title: Input[String] = null
-  ): CertificateAuthorityCertificateAuthorityConfigurationSubject = {
+  def apply(): CertificateAuthorityCertificateAuthorityConfigurationSubject = {
     val __obj = js.Dynamic.literal()
-    if (commonName != null) __obj.updateDynamic("commonName")(commonName.asInstanceOf[js.Any])
-    if (country != null) __obj.updateDynamic("country")(country.asInstanceOf[js.Any])
-    if (distinguishedNameQualifier != null) __obj.updateDynamic("distinguishedNameQualifier")(distinguishedNameQualifier.asInstanceOf[js.Any])
-    if (generationQualifier != null) __obj.updateDynamic("generationQualifier")(generationQualifier.asInstanceOf[js.Any])
-    if (givenName != null) __obj.updateDynamic("givenName")(givenName.asInstanceOf[js.Any])
-    if (initials != null) __obj.updateDynamic("initials")(initials.asInstanceOf[js.Any])
-    if (locality != null) __obj.updateDynamic("locality")(locality.asInstanceOf[js.Any])
-    if (organization != null) __obj.updateDynamic("organization")(organization.asInstanceOf[js.Any])
-    if (organizationalUnit != null) __obj.updateDynamic("organizationalUnit")(organizationalUnit.asInstanceOf[js.Any])
-    if (pseudonym != null) __obj.updateDynamic("pseudonym")(pseudonym.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (surname != null) __obj.updateDynamic("surname")(surname.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateAuthorityCertificateAuthorityConfigurationSubject]
   }
+  @scala.inline
+  implicit class CertificateAuthorityCertificateAuthorityConfigurationSubjectOps[Self <: CertificateAuthorityCertificateAuthorityConfigurationSubject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommonName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountry(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistinguishedNameQualifier(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distinguishedNameQualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistinguishedNameQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distinguishedNameQualifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenerationQualifier(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generationQualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenerationQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generationQualifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGivenName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGivenName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("givenName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitials(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocality(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganization(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationalUnit(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organizationalUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationalUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organizationalUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPseudonym(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pseudonym")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPseudonym: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pseudonym")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSurname(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("surname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSurname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("surname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

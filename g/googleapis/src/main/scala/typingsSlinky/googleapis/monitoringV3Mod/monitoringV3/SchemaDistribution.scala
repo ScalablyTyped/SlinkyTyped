@@ -69,24 +69,101 @@ trait SchemaDistribution extends js.Object {
 
 object SchemaDistribution {
   @scala.inline
-  def apply(
-    bucketCounts: js.Array[String] = null,
-    bucketOptions: SchemaBucketOptions = null,
-    count: String = null,
-    exemplars: js.Array[SchemaExemplar] = null,
-    mean: Int | Double = null,
-    range: SchemaRange = null,
-    sumOfSquaredDeviation: Int | Double = null
-  ): SchemaDistribution = {
+  def apply(): SchemaDistribution = {
     val __obj = js.Dynamic.literal()
-    if (bucketCounts != null) __obj.updateDynamic("bucketCounts")(bucketCounts.asInstanceOf[js.Any])
-    if (bucketOptions != null) __obj.updateDynamic("bucketOptions")(bucketOptions.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (exemplars != null) __obj.updateDynamic("exemplars")(exemplars.asInstanceOf[js.Any])
-    if (mean != null) __obj.updateDynamic("mean")(mean.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (sumOfSquaredDeviation != null) __obj.updateDynamic("sumOfSquaredDeviation")(sumOfSquaredDeviation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDistribution]
   }
+  @scala.inline
+  implicit class SchemaDistributionOps[Self <: SchemaDistribution] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucketCounts(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketCounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketCounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketCounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBucketOptions(value: SchemaBucketOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExemplars(value: js.Array[SchemaExemplar]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exemplars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExemplars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exemplars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMean(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: SchemaRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSumOfSquaredDeviation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sumOfSquaredDeviation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSumOfSquaredDeviation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sumOfSquaredDeviation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

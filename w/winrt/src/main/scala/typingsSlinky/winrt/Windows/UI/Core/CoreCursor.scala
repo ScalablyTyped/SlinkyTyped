@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 class CoreCursor protected () extends ICoreCursor {
   def this(`type`: CoreCursorType, id: Double) = this()
-  /* CompleteClass */
-  override var id: Double = js.native
-  /* CompleteClass */
-  override var `type`: CoreCursorType = js.native
 }
 

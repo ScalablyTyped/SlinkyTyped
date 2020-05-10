@@ -1,13 +1,11 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.layerTypesMod.ILayerProps
 import typingsSlinky.officeUiFabricReact.modalTypesMod.IDragOptions
 import typingsSlinky.officeUiFabricReact.modalTypesMod.IModal
@@ -17,6 +15,7 @@ import typingsSlinky.officeUiFabricReact.modalTypesMod.IModalStyles
 import typingsSlinky.officeUiFabricReact.overlayTypesMod.IOverlayProps
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
 import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -24,76 +23,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Modal
-  extends ExternalComponentWithAttributesWithRefType[tag.type, LegacyRef[js.Any] with js.Object] {
+object Modal {
   @JSImport("office-ui-fabric-react/lib/Modal", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, key */
-  def apply(
-    allowTouchBodyScroll: js.UndefOr[Boolean] = js.undefined,
-    closeButtonAriaLabel: String = null,
-    componentRef: IRefObject[IModal] = null,
-    containerClassName: String = null,
-    dragOptions: IDragOptions = null,
-    elementToFocusOnDismiss: HTMLElement = null,
-    firstFocusableSelector: String | js.Function0[String] = null,
-    forceFocusInsideTrap: js.UndefOr[Boolean] = js.undefined,
-    ignoreExternalFocusing: js.UndefOr[Boolean] = js.undefined,
-    isBlocking: js.UndefOr[Boolean] = js.undefined,
-    isClickableOutsideFocusTrap: js.UndefOr[Boolean] = js.undefined,
-    isDarkOverlay: js.UndefOr[Boolean] = js.undefined,
-    isModeless: js.UndefOr[Boolean] = js.undefined,
-    isOpen: js.UndefOr[Boolean] = js.undefined,
-    layerProps: ILayerProps = null,
-    onDismiss: /* ev */ js.UndefOr[SyntheticMouseEvent[HTMLButtonElement]] => _ = null,
-    onDismissed: () => _ = null,
-    onLayerDidMount: () => Unit = null,
-    overlay: IOverlayProps = null,
-    responsiveMode: ResponsiveMode = null,
-    scrollableContentClassName: String = null,
-    styles: IStyleFunctionOrObject[IModalStyleProps, IModalStyles] = null,
-    subtitleAriaId: String = null,
-    theme: ITheme = null,
-    titleAriaId: String = null,
-    topOffsetFixed: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowTouchBodyScroll)) __obj.updateDynamic("allowTouchBodyScroll")(allowTouchBodyScroll.asInstanceOf[js.Any])
-    if (closeButtonAriaLabel != null) __obj.updateDynamic("closeButtonAriaLabel")(closeButtonAriaLabel.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
-    if (dragOptions != null) __obj.updateDynamic("dragOptions")(dragOptions.asInstanceOf[js.Any])
-    if (elementToFocusOnDismiss != null) __obj.updateDynamic("elementToFocusOnDismiss")(elementToFocusOnDismiss.asInstanceOf[js.Any])
-    if (firstFocusableSelector != null) __obj.updateDynamic("firstFocusableSelector")(firstFocusableSelector.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceFocusInsideTrap)) __obj.updateDynamic("forceFocusInsideTrap")(forceFocusInsideTrap.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreExternalFocusing)) __obj.updateDynamic("ignoreExternalFocusing")(ignoreExternalFocusing.asInstanceOf[js.Any])
-    if (!js.isUndefined(isBlocking)) __obj.updateDynamic("isBlocking")(isBlocking.asInstanceOf[js.Any])
-    if (!js.isUndefined(isClickableOutsideFocusTrap)) __obj.updateDynamic("isClickableOutsideFocusTrap")(isClickableOutsideFocusTrap.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDarkOverlay)) __obj.updateDynamic("isDarkOverlay")(isDarkOverlay.asInstanceOf[js.Any])
-    if (!js.isUndefined(isModeless)) __obj.updateDynamic("isModeless")(isModeless.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.asInstanceOf[js.Any])
-    if (layerProps != null) __obj.updateDynamic("layerProps")(layerProps.asInstanceOf[js.Any])
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction1(onDismiss))
-    if (onDismissed != null) __obj.updateDynamic("onDismissed")(js.Any.fromFunction0(onDismissed))
-    if (onLayerDidMount != null) __obj.updateDynamic("onLayerDidMount")(js.Any.fromFunction0(onLayerDidMount))
-    if (overlay != null) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
-    if (responsiveMode != null) __obj.updateDynamic("responsiveMode")(responsiveMode.asInstanceOf[js.Any])
-    if (scrollableContentClassName != null) __obj.updateDynamic("scrollableContentClassName")(scrollableContentClassName.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (subtitleAriaId != null) __obj.updateDynamic("subtitleAriaId")(subtitleAriaId.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (titleAriaId != null) __obj.updateDynamic("titleAriaId")(titleAriaId.asInstanceOf[js.Any])
-    if (!js.isUndefined(topOffsetFixed)) __obj.updateDynamic("topOffsetFixed")(topOffsetFixed.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+    @scala.inline
+    def allowTouchBodyScroll(value: Boolean): this.type = set("allowTouchBodyScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeButtonAriaLabel(value: String): this.type = set("closeButtonAriaLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ IModal | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[IModal]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[IModal]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerClassName(value: String): this.type = set("containerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragOptions(value: IDragOptions): this.type = set("dragOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def elementToFocusOnDismiss(value: HTMLElement): this.type = set("elementToFocusOnDismiss", value.asInstanceOf[js.Any])
+    @scala.inline
+    def firstFocusableSelectorFunction0(value: () => String): this.type = set("firstFocusableSelector", js.Any.fromFunction0(value))
+    @scala.inline
+    def firstFocusableSelector(value: String | js.Function0[String]): this.type = set("firstFocusableSelector", value.asInstanceOf[js.Any])
+    @scala.inline
+    def forceFocusInsideTrap(value: Boolean): this.type = set("forceFocusInsideTrap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoreExternalFocusing(value: Boolean): this.type = set("ignoreExternalFocusing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isBlocking(value: Boolean): this.type = set("isBlocking", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isClickableOutsideFocusTrap(value: Boolean): this.type = set("isClickableOutsideFocusTrap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDarkOverlay(value: Boolean): this.type = set("isDarkOverlay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isModeless(value: Boolean): this.type = set("isModeless", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isOpen(value: Boolean): this.type = set("isOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layerProps(value: ILayerProps): this.type = set("layerProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDismiss(value: /* ev */ js.UndefOr[SyntheticMouseEvent[HTMLButtonElement]] => _): this.type = set("onDismiss", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDismissed(value: () => _): this.type = set("onDismissed", js.Any.fromFunction0(value))
+    @scala.inline
+    def onLayerDidMount(value: () => Unit): this.type = set("onLayerDidMount", js.Any.fromFunction0(value))
+    @scala.inline
+    def overlay(value: IOverlayProps): this.type = set("overlay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def responsiveMode(value: ResponsiveMode): this.type = set("responsiveMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollableContentClassName(value: String): this.type = set("scrollableContentClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stylesFunction1(value: IModalStyleProps => Partial[IModalStyles]): this.type = set("styles", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: IStyleFunctionOrObject[IModalStyleProps, IModalStyles]): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subtitleAriaId(value: String): this.type = set("subtitleAriaId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleAriaId(value: String): this.type = set("titleAriaId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def topOffsetFixed(value: Boolean): this.type = set("topOffsetFixed", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] = new slinky.core.BuildingComponent[
-  slinky.web.html.button.tag.type, 
-  typingsSlinky.react.mod.LegacyRef[js.Any] with js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IModalProps
+  
+  def withProps(p: IModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Modal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

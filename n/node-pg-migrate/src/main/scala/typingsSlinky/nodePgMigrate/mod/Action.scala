@@ -15,16 +15,14 @@ trait Action extends js.Object
 
 object Action {
   @scala.inline
-  def CASCADE: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.CASCADE = this.cast("CASCADE")
+  def CASCADE: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.CASCADE = "CASCADE".asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.CASCADE]
   @scala.inline
-  def `NO ACTION`: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.`NO ACTION` = this.cast("NO ACTION")
+  def `NO ACTION`: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.`NO ACTION` = ("NO ACTION").asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.`NO ACTION`]
   @scala.inline
-  def RESTRICT: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.RESTRICT = this.cast("RESTRICT")
+  def RESTRICT: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.RESTRICT = "RESTRICT".asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.RESTRICT]
   @scala.inline
-  def `SET DEFAULT`: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.`SET DEFAULT` = this.cast("SET DEFAULT")
+  def `SET DEFAULT`: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.`SET DEFAULT` = ("SET DEFAULT").asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.`SET DEFAULT`]
   @scala.inline
-  def `SET NULL`: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.`SET NULL` = this.cast("SET NULL")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `SET NULL`: typingsSlinky.nodePgMigrate.nodePgMigrateStrings.`SET NULL` = ("SET NULL").asInstanceOf[typingsSlinky.nodePgMigrate.nodePgMigrateStrings.`SET NULL`]
 }
 

@@ -148,7 +148,7 @@ package object directconnectMod {
     - java.lang.String
   */
   type LagState = typingsSlinky.awsSdk.directconnectMod._LagState | java.lang.String
-  type LoaContent = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.directconnectMod.Blob | java.lang.String
+  type LoaContent = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.directconnectMod.Blob | java.lang.String
   type LoaContentType = typingsSlinky.awsSdk.awsSdkStrings.applicationSlashpdf | java.lang.String
   type LoaIssueTime = js.Date
   type LocationCode = java.lang.String

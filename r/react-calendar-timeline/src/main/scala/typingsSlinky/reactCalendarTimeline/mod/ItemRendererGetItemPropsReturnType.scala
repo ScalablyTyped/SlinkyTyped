@@ -2,6 +2,7 @@ package typingsSlinky.reactCalendarTimeline.mod
 
 import org.scalajs.dom.raw.Element
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.react.mod.CSSProperties
@@ -14,17 +15,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ItemRendererGetItemPropsReturnType extends js.Object {
-  var className: String
-  var key: Id
-  var onContextMenu: ReactEventHandler[Element]
-  var onDoubleClick: MouseEventHandler[Element]
-  var onMouseDown: MouseEventHandler[Element]
-  var onMouseUp: MouseEventHandler[Element]
-  var onTouchEnd: TouchEventHandler[Element]
-  var onTouchStart: TouchEventHandler[Element]
-  var ref: Ref[_]
-  var style: CSSProperties
+  var className: String = js.native
+  var key: Id = js.native
+  var onContextMenu: ReactEventHandler[Element] = js.native
+  var onDoubleClick: MouseEventHandler[Element] = js.native
+  var onMouseDown: MouseEventHandler[Element] = js.native
+  var onMouseUp: MouseEventHandler[Element] = js.native
+  var onTouchEnd: TouchEventHandler[Element] = js.native
+  var onTouchStart: TouchEventHandler[Element] = js.native
+  var ref: Ref[_] = js.native
+  var style: CSSProperties = js.native
 }
 
 object ItemRendererGetItemPropsReturnType {
@@ -38,12 +40,96 @@ object ItemRendererGetItemPropsReturnType {
     onMouseUp: SyntheticMouseEvent[Element] => scala.Unit,
     onTouchEnd: SyntheticTouchEvent[Element] => scala.Unit,
     onTouchStart: SyntheticTouchEvent[Element] => scala.Unit,
-    style: CSSProperties,
-    ref: Ref[_] = null
+    style: CSSProperties
   ): ItemRendererGetItemPropsReturnType = {
     val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], onContextMenu = js.Any.fromFunction1(onContextMenu), onDoubleClick = js.Any.fromFunction1(onDoubleClick), onMouseDown = js.Any.fromFunction1(onMouseDown), onMouseUp = js.Any.fromFunction1(onMouseUp), onTouchEnd = js.Any.fromFunction1(onTouchEnd), onTouchStart = js.Any.fromFunction1(onTouchStart), style = style.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemRendererGetItemPropsReturnType]
   }
+  @scala.inline
+  implicit class ItemRendererGetItemPropsReturnTypeOps[Self <: ItemRendererGetItemPropsReturnType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnContextMenu(value: SyntheticEvent[Event_, Element] => scala.Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnDoubleClick(value: SyntheticMouseEvent[Element] => scala.Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnMouseDown(value: SyntheticMouseEvent[Element] => scala.Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnMouseUp(value: SyntheticMouseEvent[Element] => scala.Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnTouchEnd(value: SyntheticTouchEvent[Element] => scala.Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnTouchStart(value: SyntheticTouchEvent[Element] => scala.Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRefRefObject(value: ReactRef[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRefFunction1(value: /* instance */ _ | Null => scala.Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRef(value: Ref[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRefNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(null)
+        ret
+    }
+  }
+  
 }
 

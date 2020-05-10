@@ -26,38 +26,36 @@ trait Interval extends js.Object
 
 object Interval {
   @scala.inline
-  def `10min`: typingsSlinky.morrisJs.morrisJsStrings.`10min` = this.cast("10min")
+  def `10min`: typingsSlinky.morrisJs.morrisJsStrings.`10min` = "10min".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.`10min`]
   @scala.inline
-  def `10sec`: typingsSlinky.morrisJs.morrisJsStrings.`10sec` = this.cast("10sec")
+  def `10sec`: typingsSlinky.morrisJs.morrisJsStrings.`10sec` = "10sec".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.`10sec`]
   @scala.inline
-  def `15min`: typingsSlinky.morrisJs.morrisJsStrings.`15min` = this.cast("15min")
+  def `15min`: typingsSlinky.morrisJs.morrisJsStrings.`15min` = "15min".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.`15min`]
   @scala.inline
-  def `15sec`: typingsSlinky.morrisJs.morrisJsStrings.`15sec` = this.cast("15sec")
+  def `15sec`: typingsSlinky.morrisJs.morrisJsStrings.`15sec` = "15sec".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.`15sec`]
   @scala.inline
-  def `30min`: typingsSlinky.morrisJs.morrisJsStrings.`30min` = this.cast("30min")
+  def `30min`: typingsSlinky.morrisJs.morrisJsStrings.`30min` = "30min".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.`30min`]
   @scala.inline
-  def `30sec`: typingsSlinky.morrisJs.morrisJsStrings.`30sec` = this.cast("30sec")
+  def `30sec`: typingsSlinky.morrisJs.morrisJsStrings.`30sec` = "30sec".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.`30sec`]
   @scala.inline
-  def `5min`: typingsSlinky.morrisJs.morrisJsStrings.`5min` = this.cast("5min")
+  def `5min`: typingsSlinky.morrisJs.morrisJsStrings.`5min` = "5min".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.`5min`]
   @scala.inline
-  def `5sec`: typingsSlinky.morrisJs.morrisJsStrings.`5sec` = this.cast("5sec")
+  def `5sec`: typingsSlinky.morrisJs.morrisJsStrings.`5sec` = "5sec".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.`5sec`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.morrisJs.morrisJsStrings.day = "day".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.day]
   @scala.inline
-  def day: typingsSlinky.morrisJs.morrisJsStrings.day = this.cast("day")
+  def decade: typingsSlinky.morrisJs.morrisJsStrings.decade = "decade".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.decade]
   @scala.inline
-  def decade: typingsSlinky.morrisJs.morrisJsStrings.decade = this.cast("decade")
+  def hour: typingsSlinky.morrisJs.morrisJsStrings.hour = "hour".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.morrisJs.morrisJsStrings.hour = this.cast("hour")
+  def minute: typingsSlinky.morrisJs.morrisJsStrings.minute = "minute".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.morrisJs.morrisJsStrings.minute = this.cast("minute")
+  def month: typingsSlinky.morrisJs.morrisJsStrings.month = "month".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.month]
   @scala.inline
-  def month: typingsSlinky.morrisJs.morrisJsStrings.month = this.cast("month")
+  def second: typingsSlinky.morrisJs.morrisJsStrings.second = "second".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.second]
   @scala.inline
-  def second: typingsSlinky.morrisJs.morrisJsStrings.second = this.cast("second")
+  def week: typingsSlinky.morrisJs.morrisJsStrings.week = "week".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.week]
   @scala.inline
-  def week: typingsSlinky.morrisJs.morrisJsStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.morrisJs.morrisJsStrings.year = this.cast("year")
+  def year: typingsSlinky.morrisJs.morrisJsStrings.year = "year".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.year]
 }
 

@@ -14,10 +14,29 @@ trait GetDeploymentInstanceOutput extends js.Object {
 
 object GetDeploymentInstanceOutput {
   @scala.inline
-  def apply(instanceSummary: InstanceSummary = null): GetDeploymentInstanceOutput = {
+  def apply(): GetDeploymentInstanceOutput = {
     val __obj = js.Dynamic.literal()
-    if (instanceSummary != null) __obj.updateDynamic("instanceSummary")(instanceSummary.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetDeploymentInstanceOutput]
   }
+  @scala.inline
+  implicit class GetDeploymentInstanceOutputOps[Self <: GetDeploymentInstanceOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceSummary(value: InstanceSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceSummary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

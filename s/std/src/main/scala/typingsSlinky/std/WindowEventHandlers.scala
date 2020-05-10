@@ -304,7 +304,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_afterprint(`type`: afterprint, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -318,7 +318,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_afterprint(
     `type`: afterprint,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_beforeprint(`type`: beforeprint, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -332,7 +332,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_beforeprint(
     `type`: beforeprint,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_beforeunload(
@@ -349,7 +349,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_beforeunload(
     `type`: beforeunload,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_hashchange(
@@ -366,7 +366,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_hashchange(
     `type`: hashchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.HashChangeEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_languagechange(`type`: languagechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -380,7 +380,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_languagechange(
     `type`: languagechange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_message(
@@ -397,7 +397,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_message(
     `type`: message,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_messageerror(
@@ -414,7 +414,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_messageerror(
     `type`: messageerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_offline(`type`: offline, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -428,7 +428,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_offline(
     `type`: offline,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_online(`type`: online, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -442,7 +442,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_online(
     `type`: online,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pagehide(
@@ -459,7 +459,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_pagehide(
     `type`: pagehide,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PageTransitionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pageshow(
@@ -476,7 +476,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_pageshow(
     `type`: pageshow,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PageTransitionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_popstate(
@@ -493,7 +493,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_popstate(
     `type`: popstate,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.PopStateEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_rejectionhandled(
@@ -510,7 +510,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_rejectionhandled(
     `type`: rejectionhandled,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PromiseRejectionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_storage(
@@ -527,7 +527,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_storage(
     `type`: storage,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.StorageEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_unhandledrejection(
@@ -544,7 +544,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_unhandledrejection(
     `type`: unhandledrejection,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ PromiseRejectionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_unload(`type`: unload, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -558,7 +558,7 @@ trait WindowEventHandlers extends js.Object {
   def removeEventListener_unload(
     `type`: unload,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

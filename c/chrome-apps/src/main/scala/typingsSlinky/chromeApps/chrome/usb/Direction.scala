@@ -1,7 +1,7 @@
 package typingsSlinky.chromeApps.chrome.usb
 
-import typingsSlinky.chromeApps.chromeAppsStrings.in
-import typingsSlinky.chromeApps.chromeAppsStrings.out
+import typingsSlinky.chromeApps.chromeAppsStrings.in_
+import typingsSlinky.chromeApps.chromeAppsStrings.out_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.usb.Direction")
 @js.native
 object Direction extends js.Object {
-  var IN: in = js.native
-  var OUT: out = js.native
+  var IN: in_ = js.native
+  var OUT: out_ = js.native
 }
 

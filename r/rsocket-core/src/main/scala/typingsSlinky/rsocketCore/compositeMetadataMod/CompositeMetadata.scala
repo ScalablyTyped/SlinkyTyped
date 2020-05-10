@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class CompositeMetadata protected () extends js.Object {
   def this(buffer: Buffer) = this()
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[js.Iterator[Entry]] = js.native
 }
 

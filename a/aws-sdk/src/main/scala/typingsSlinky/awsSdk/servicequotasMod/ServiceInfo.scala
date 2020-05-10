@@ -18,11 +18,41 @@ trait ServiceInfo extends js.Object {
 
 object ServiceInfo {
   @scala.inline
-  def apply(ServiceCode: ServiceCode = null, ServiceName: ServiceName = null): ServiceInfo = {
+  def apply(): ServiceInfo = {
     val __obj = js.Dynamic.literal()
-    if (ServiceCode != null) __obj.updateDynamic("ServiceCode")(ServiceCode.asInstanceOf[js.Any])
-    if (ServiceName != null) __obj.updateDynamic("ServiceName")(ServiceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceInfo]
   }
+  @scala.inline
+  implicit class ServiceInfoOps[Self <: ServiceInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withServiceCode(value: ServiceCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceName(value: ServiceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServiceName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

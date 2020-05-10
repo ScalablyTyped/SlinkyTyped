@@ -14,10 +14,29 @@ trait EnvironmentResourcesDescription extends js.Object {
 
 object EnvironmentResourcesDescription {
   @scala.inline
-  def apply(LoadBalancer: LoadBalancerDescription = null): EnvironmentResourcesDescription = {
+  def apply(): EnvironmentResourcesDescription = {
     val __obj = js.Dynamic.literal()
-    if (LoadBalancer != null) __obj.updateDynamic("LoadBalancer")(LoadBalancer.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvironmentResourcesDescription]
   }
+  @scala.inline
+  implicit class EnvironmentResourcesDescriptionOps[Self <: EnvironmentResourcesDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadBalancer(value: LoadBalancerDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadBalancer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

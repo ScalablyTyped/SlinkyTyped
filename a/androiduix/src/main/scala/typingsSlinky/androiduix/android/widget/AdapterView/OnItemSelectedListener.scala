@@ -5,14 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OnItemSelectedListener extends js.Object {
   def onItemSelected(
     parent: typingsSlinky.androiduix.android.widget.AdapterView[_],
     view: View,
     position: Double,
     id: Double
-  ): Unit
-  def onNothingSelected(parent: typingsSlinky.androiduix.android.widget.AdapterView[_]): Unit
+  ): Unit = js.native
+  def onNothingSelected(parent: typingsSlinky.androiduix.android.widget.AdapterView[_]): Unit = js.native
 }
 
 object OnItemSelectedListener {
@@ -22,8 +23,27 @@ object OnItemSelectedListener {
     onNothingSelected: typingsSlinky.androiduix.android.widget.AdapterView[_] => Unit
   ): OnItemSelectedListener = {
     val __obj = js.Dynamic.literal(onItemSelected = js.Any.fromFunction4(onItemSelected), onNothingSelected = js.Any.fromFunction1(onNothingSelected))
-  
     __obj.asInstanceOf[OnItemSelectedListener]
   }
+  @scala.inline
+  implicit class OnItemSelectedListenerOps[Self <: OnItemSelectedListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnItemSelected(value: (typingsSlinky.androiduix.android.widget.AdapterView[_], View, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSelected")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnNothingSelected(value: typingsSlinky.androiduix.android.widget.AdapterView[_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onNothingSelected")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -42,7 +42,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@jupyterlab/services", "KernelMessage")
 @js.native
 object KernelMessage extends js.Object {
-  def createMessage[T /* <: IInfoRequestMsg */](options: IOptions[T]): T = js.native
+  def createMessage[T /* <: IDisplayDataMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
   def createMessage_T_IClearOutputMsg[T /* <: IClearOutputMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
@@ -93,8 +93,6 @@ object KernelMessage extends js.Object {
   @JSName("createMessage")
   def createMessage_T_IDebugRequestMsg[T /* <: IDebugRequestMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
-  def createMessage_T_IDisplayDataMsg[T /* <: IDisplayDataMsg */](options: IOptions[T]): T = js.native
-  @JSName("createMessage")
   def createMessage_T_IErrorMsg[T /* <: IErrorMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
   def createMessage_T_IExecuteInputMsg[T /* <: IExecuteInputMsg */](options: IOptions[T]): T = js.native
@@ -110,6 +108,8 @@ object KernelMessage extends js.Object {
   def createMessage_T_IHistoryRequestMsg[T /* <: IHistoryRequestMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
   def createMessage_T_IInfoReplyMsg[T /* <: IInfoReplyMsg */](options: IOptions[T]): T = js.native
+  @JSName("createMessage")
+  def createMessage_T_IInfoRequestMsg[T /* <: IInfoRequestMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")
   def createMessage_T_IInputReplyMsg[T /* <: IInputReplyMsg */](options: IOptions[T]): T = js.native
   @JSName("createMessage")

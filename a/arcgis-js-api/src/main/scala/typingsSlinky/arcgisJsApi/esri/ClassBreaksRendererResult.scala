@@ -6,43 +6,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClassBreaksRendererResult extends Object {
   /**
     * The ID of the basemap used to determine the optimal fill color of the features.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-color.html#ClassBreaksRendererResult)
     */
-  var basemapId: String
+  var basemapId: String = js.native
   /**
     * Indicates whether the average color of the input view's basemap is `light` or `dark`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-color.html#ClassBreaksRendererResult)
     */
-  var basemapTheme: String
+  var basemapTheme: String = js.native
   /**
     * This object describes class breaks generated from data in a layer for a given field with a specified classification method.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-color.html#ClassBreaksRendererResult)
     */
-  var classBreaksResult: ClassBreaksResult
+  var classBreaksResult: ClassBreaksResult = js.native
   /**
     * The color scheme used for the class breaks.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-color.html#ClassBreaksRendererResult)
     */
-  var colorScheme: ColorScheme
+  var colorScheme: ColorScheme = js.native
   /**
     * Indicates whether default values are used in the absence of sufficient data and/or statistics from the layer. Default values are typically used when all features have the same field value or no value at all.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-color.html#ClassBreaksRendererResult)
     */
-  var defaultValuesUsed: Boolean
+  var defaultValuesUsed: Boolean = js.native
   /**
     * The renderer object configured to best match the given basemap and the spread of the data. Set this on a layer's `renderer` property to update its visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-smartMapping-creators-color.html#ClassBreaksRendererResult)
     */
-  var renderer: ClassBreaksRenderer
+  var renderer: ClassBreaksRenderer = js.native
 }
 
 object ClassBreaksRendererResult {
@@ -59,8 +60,51 @@ object ClassBreaksRendererResult {
     renderer: ClassBreaksRenderer
   ): ClassBreaksRendererResult = {
     val __obj = js.Dynamic.literal(basemapId = basemapId.asInstanceOf[js.Any], basemapTheme = basemapTheme.asInstanceOf[js.Any], classBreaksResult = classBreaksResult.asInstanceOf[js.Any], colorScheme = colorScheme.asInstanceOf[js.Any], constructor = constructor.asInstanceOf[js.Any], defaultValuesUsed = defaultValuesUsed.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable), renderer = renderer.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ClassBreaksRendererResult]
   }
+  @scala.inline
+  implicit class ClassBreaksRendererResultOps[Self <: ClassBreaksRendererResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBasemapId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basemapId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBasemapTheme(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basemapTheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassBreaksResult(value: ClassBreaksResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classBreaksResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColorScheme(value: ColorScheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultValuesUsed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValuesUsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRenderer(value: ClassBreaksRenderer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

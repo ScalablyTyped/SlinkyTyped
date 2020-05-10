@@ -1,10 +1,7 @@
 package typingsSlinky.semanticUiReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.portalPortalMod.PortalProps
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionEventData
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionProps
@@ -15,34 +12,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TransitionablePortal
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object TransitionablePortal {
   @JSImport("semantic-ui-react/dist/commonjs/addons/TransitionablePortal", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: open */
-  def apply(
-    onClose: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit = null,
-    onHide: (/* nothing */ Null, /* data */ TransitionEventData with TransitionablePortalState) => Unit = null,
-    onOpen: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit = null,
-    onStart: (/* nothing */ Null, /* data */ TransitionEventData with TransitionablePortalState) => Unit = null,
-    transition: TransitionProps = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction2(onClose))
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction2(onHide))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction2(onOpen))
-    if (onStart != null) __obj.updateDynamic("onStart")(js.Any.fromFunction2(onStart))
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def onClose(value: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
+    @scala.inline
+    def onHide(value: (/* nothing */ Null, /* data */ TransitionEventData with TransitionablePortalState) => Unit): this.type = set("onHide", js.Any.fromFunction2(value))
+    @scala.inline
+    def onOpen(value: (/* nothing */ Null, /* data */ PortalProps with TransitionablePortalState) => Unit): this.type = set("onOpen", js.Any.fromFunction2(value))
+    @scala.inline
+    def onStart(value: (/* nothing */ Null, /* data */ TransitionEventData with TransitionablePortalState) => Unit): this.type = set("onStart", js.Any.fromFunction2(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transition(value: TransitionProps): this.type = set("transition", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.semanticUiReact.transitionablePortalMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TransitionablePortalProps
+  
+  def withProps(p: TransitionablePortalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TransitionablePortal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

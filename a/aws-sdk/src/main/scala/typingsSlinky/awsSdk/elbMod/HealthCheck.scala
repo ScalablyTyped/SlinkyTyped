@@ -38,8 +38,45 @@ object HealthCheck {
     UnhealthyThreshold: UnhealthyThreshold
   ): HealthCheck = {
     val __obj = js.Dynamic.literal(HealthyThreshold = HealthyThreshold.asInstanceOf[js.Any], Interval = Interval.asInstanceOf[js.Any], Target = Target.asInstanceOf[js.Any], Timeout = Timeout.asInstanceOf[js.Any], UnhealthyThreshold = UnhealthyThreshold.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[HealthCheck]
   }
+  @scala.inline
+  implicit class HealthCheckOps[Self <: HealthCheck] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHealthyThreshold(value: HealthyThreshold): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthyThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterval(value: HealthCheckInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: HealthCheckTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: HealthCheckTimeout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnhealthyThreshold(value: UnhealthyThreshold): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnhealthyThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

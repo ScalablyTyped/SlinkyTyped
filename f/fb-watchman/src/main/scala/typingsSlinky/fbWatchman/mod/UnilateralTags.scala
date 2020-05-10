@@ -12,10 +12,8 @@ trait UnilateralTags extends js.Object
 
 object UnilateralTags {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def log: typingsSlinky.fbWatchman.fbWatchmanStrings.log = "log".asInstanceOf[typingsSlinky.fbWatchman.fbWatchmanStrings.log]
   @scala.inline
-  def log: typingsSlinky.fbWatchman.fbWatchmanStrings.log = this.cast("log")
-  @scala.inline
-  def unilateralTags: typingsSlinky.fbWatchman.fbWatchmanStrings.unilateralTags = this.cast("unilateralTags")
+  def unilateralTags: typingsSlinky.fbWatchman.fbWatchmanStrings.unilateralTags = "unilateralTags".asInstanceOf[typingsSlinky.fbWatchman.fbWatchmanStrings.unilateralTags]
 }
 

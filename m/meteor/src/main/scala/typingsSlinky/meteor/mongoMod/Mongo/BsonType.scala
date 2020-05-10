@@ -53,92 +53,90 @@ trait BsonType extends js.Object
 
 object BsonType {
   @scala.inline
-  def `-1`: typingsSlinky.meteor.meteorNumbers.`-1` = this.cast(-1)
+  def `-1`: typingsSlinky.meteor.meteorNumbers.`-1` = -1.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`-1`]
   @scala.inline
-  def `1`: typingsSlinky.meteor.meteorNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.meteor.meteorNumbers.`1` = 1.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`1`]
   @scala.inline
-  def `10`: typingsSlinky.meteor.meteorNumbers.`10` = this.cast(10)
+  def `10`: typingsSlinky.meteor.meteorNumbers.`10` = 10.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`10`]
   @scala.inline
-  def `11`: typingsSlinky.meteor.meteorNumbers.`11` = this.cast(11)
+  def `11`: typingsSlinky.meteor.meteorNumbers.`11` = 11.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`11`]
   @scala.inline
-  def `12`: typingsSlinky.meteor.meteorNumbers.`12` = this.cast(12)
+  def `12`: typingsSlinky.meteor.meteorNumbers.`12` = 12.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`12`]
   @scala.inline
-  def `127`: typingsSlinky.meteor.meteorNumbers.`127` = this.cast(127)
+  def `127`: typingsSlinky.meteor.meteorNumbers.`127` = 127.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`127`]
   @scala.inline
-  def `13`: typingsSlinky.meteor.meteorNumbers.`13` = this.cast(13)
+  def `13`: typingsSlinky.meteor.meteorNumbers.`13` = 13.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`13`]
   @scala.inline
-  def `14`: typingsSlinky.meteor.meteorNumbers.`14` = this.cast(14)
+  def `14`: typingsSlinky.meteor.meteorNumbers.`14` = 14.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`14`]
   @scala.inline
-  def `15`: typingsSlinky.meteor.meteorNumbers.`15` = this.cast(15)
+  def `15`: typingsSlinky.meteor.meteorNumbers.`15` = 15.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`15`]
   @scala.inline
-  def `16`: typingsSlinky.meteor.meteorNumbers.`16` = this.cast(16)
+  def `16`: typingsSlinky.meteor.meteorNumbers.`16` = 16.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`16`]
   @scala.inline
-  def `17`: typingsSlinky.meteor.meteorNumbers.`17` = this.cast(17)
+  def `17`: typingsSlinky.meteor.meteorNumbers.`17` = 17.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`17`]
   @scala.inline
-  def `18`: typingsSlinky.meteor.meteorNumbers.`18` = this.cast(18)
+  def `18`: typingsSlinky.meteor.meteorNumbers.`18` = 18.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`18`]
   @scala.inline
-  def `19`: typingsSlinky.meteor.meteorNumbers.`19` = this.cast(19)
+  def `19`: typingsSlinky.meteor.meteorNumbers.`19` = 19.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`19`]
   @scala.inline
-  def `2`: typingsSlinky.meteor.meteorNumbers.`2` = this.cast(2)
+  def `2`: typingsSlinky.meteor.meteorNumbers.`2` = 2.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`2`]
   @scala.inline
-  def `3`: typingsSlinky.meteor.meteorNumbers.`3` = this.cast(3)
+  def `3`: typingsSlinky.meteor.meteorNumbers.`3` = 3.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`3`]
   @scala.inline
-  def `4`: typingsSlinky.meteor.meteorNumbers.`4` = this.cast(4)
+  def `4`: typingsSlinky.meteor.meteorNumbers.`4` = 4.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`4`]
   @scala.inline
-  def `5`: typingsSlinky.meteor.meteorNumbers.`5` = this.cast(5)
+  def `5`: typingsSlinky.meteor.meteorNumbers.`5` = 5.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`5`]
   @scala.inline
-  def `6`: typingsSlinky.meteor.meteorNumbers.`6` = this.cast(6)
+  def `6`: typingsSlinky.meteor.meteorNumbers.`6` = 6.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`6`]
   @scala.inline
-  def `7`: typingsSlinky.meteor.meteorNumbers.`7` = this.cast(7)
+  def `7`: typingsSlinky.meteor.meteorNumbers.`7` = 7.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`7`]
   @scala.inline
-  def `8`: typingsSlinky.meteor.meteorNumbers.`8` = this.cast(8)
+  def `8`: typingsSlinky.meteor.meteorNumbers.`8` = 8.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`8`]
   @scala.inline
-  def `9`: typingsSlinky.meteor.meteorNumbers.`9` = this.cast(9)
+  def `9`: typingsSlinky.meteor.meteorNumbers.`9` = 9.asInstanceOf[typingsSlinky.meteor.meteorNumbers.`9`]
   @scala.inline
-  def array: typingsSlinky.meteor.meteorStrings.array = this.cast("array")
+  def array: typingsSlinky.meteor.meteorStrings.array = "array".asInstanceOf[typingsSlinky.meteor.meteorStrings.array]
   @scala.inline
-  def binData: typingsSlinky.meteor.meteorStrings.binData = this.cast("binData")
+  def binData: typingsSlinky.meteor.meteorStrings.binData = "binData".asInstanceOf[typingsSlinky.meteor.meteorStrings.binData]
   @scala.inline
-  def bool: typingsSlinky.meteor.meteorStrings.bool = this.cast("bool")
+  def bool: typingsSlinky.meteor.meteorStrings.bool = "bool".asInstanceOf[typingsSlinky.meteor.meteorStrings.bool]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.meteor.meteorStrings.date = "date".asInstanceOf[typingsSlinky.meteor.meteorStrings.date]
   @scala.inline
-  def date: typingsSlinky.meteor.meteorStrings.date = this.cast("date")
+  def dbPointer: typingsSlinky.meteor.meteorStrings.dbPointer = "dbPointer".asInstanceOf[typingsSlinky.meteor.meteorStrings.dbPointer]
   @scala.inline
-  def dbPointer: typingsSlinky.meteor.meteorStrings.dbPointer = this.cast("dbPointer")
+  def decimal: typingsSlinky.meteor.meteorStrings.decimal = "decimal".asInstanceOf[typingsSlinky.meteor.meteorStrings.decimal]
   @scala.inline
-  def decimal: typingsSlinky.meteor.meteorStrings.decimal = this.cast("decimal")
+  def double: typingsSlinky.meteor.meteorStrings.double = "double".asInstanceOf[typingsSlinky.meteor.meteorStrings.double]
   @scala.inline
-  def double: typingsSlinky.meteor.meteorStrings.double = this.cast("double")
+  def int: typingsSlinky.meteor.meteorStrings.int = "int".asInstanceOf[typingsSlinky.meteor.meteorStrings.int]
   @scala.inline
-  def int: typingsSlinky.meteor.meteorStrings.int = this.cast("int")
+  def javascript: typingsSlinky.meteor.meteorStrings.javascript = "javascript".asInstanceOf[typingsSlinky.meteor.meteorStrings.javascript]
   @scala.inline
-  def javascript: typingsSlinky.meteor.meteorStrings.javascript = this.cast("javascript")
+  def javascriptWithScope: typingsSlinky.meteor.meteorStrings.javascriptWithScope = "javascriptWithScope".asInstanceOf[typingsSlinky.meteor.meteorStrings.javascriptWithScope]
   @scala.inline
-  def javascriptWithScope: typingsSlinky.meteor.meteorStrings.javascriptWithScope = this.cast("javascriptWithScope")
+  def long: typingsSlinky.meteor.meteorStrings.long = "long".asInstanceOf[typingsSlinky.meteor.meteorStrings.long]
   @scala.inline
-  def long: typingsSlinky.meteor.meteorStrings.long = this.cast("long")
+  def maxKey: typingsSlinky.meteor.meteorStrings.maxKey = "maxKey".asInstanceOf[typingsSlinky.meteor.meteorStrings.maxKey]
   @scala.inline
-  def maxKey: typingsSlinky.meteor.meteorStrings.maxKey = this.cast("maxKey")
+  def minKey: typingsSlinky.meteor.meteorStrings.minKey = "minKey".asInstanceOf[typingsSlinky.meteor.meteorStrings.minKey]
   @scala.inline
-  def minKey: typingsSlinky.meteor.meteorStrings.minKey = this.cast("minKey")
+  def `null`: typingsSlinky.meteor.meteorStrings.`null` = "null".asInstanceOf[typingsSlinky.meteor.meteorStrings.`null`]
   @scala.inline
-  def `null`: typingsSlinky.meteor.meteorStrings.`null` = this.cast("null")
+  def number: typingsSlinky.meteor.meteorStrings.number = "number".asInstanceOf[typingsSlinky.meteor.meteorStrings.number]
   @scala.inline
-  def number: typingsSlinky.meteor.meteorStrings.number = this.cast("number")
+  def `object`: typingsSlinky.meteor.meteorStrings.`object` = "object".asInstanceOf[typingsSlinky.meteor.meteorStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.meteor.meteorStrings.`object` = this.cast("object")
+  def objectId: typingsSlinky.meteor.meteorStrings.objectId = "objectId".asInstanceOf[typingsSlinky.meteor.meteorStrings.objectId]
   @scala.inline
-  def objectId: typingsSlinky.meteor.meteorStrings.objectId = this.cast("objectId")
+  def regex: typingsSlinky.meteor.meteorStrings.regex = "regex".asInstanceOf[typingsSlinky.meteor.meteorStrings.regex]
   @scala.inline
-  def regex: typingsSlinky.meteor.meteorStrings.regex = this.cast("regex")
+  def string: typingsSlinky.meteor.meteorStrings.string = "string".asInstanceOf[typingsSlinky.meteor.meteorStrings.string]
   @scala.inline
-  def string: typingsSlinky.meteor.meteorStrings.string = this.cast("string")
+  def symbol: typingsSlinky.meteor.meteorStrings.symbol = "symbol".asInstanceOf[typingsSlinky.meteor.meteorStrings.symbol]
   @scala.inline
-  def symbol: typingsSlinky.meteor.meteorStrings.symbol = this.cast("symbol")
+  def timestamp: typingsSlinky.meteor.meteorStrings.timestamp = "timestamp".asInstanceOf[typingsSlinky.meteor.meteorStrings.timestamp]
   @scala.inline
-  def timestamp: typingsSlinky.meteor.meteorStrings.timestamp = this.cast("timestamp")
-  @scala.inline
-  def undefined: typingsSlinky.meteor.meteorStrings.undefined = this.cast("undefined")
+  def undefined: typingsSlinky.meteor.meteorStrings.undefined = "undefined".asInstanceOf[typingsSlinky.meteor.meteorStrings.undefined]
 }
 

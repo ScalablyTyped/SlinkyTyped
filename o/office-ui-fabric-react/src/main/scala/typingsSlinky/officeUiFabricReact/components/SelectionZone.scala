@@ -1,9 +1,7 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.std.Event_
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
@@ -13,39 +11,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SelectionZone
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.mod.SelectionZone] {
+object SelectionZone {
   @JSImport("office-ui-fabric-react", "SelectionZone")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    selection: ISelection[IObjectWithKey],
-    componentRef: () => Unit = null,
-    disableAutoSelectOnInputElements: js.UndefOr[Boolean] = js.undefined,
-    enterModalOnTouch: js.UndefOr[Boolean] = js.undefined,
-    isSelectedOnFocus: js.UndefOr[Boolean] = js.undefined,
-    layout: js.Object = null,
-    onItemContextMenu: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit | Boolean = null,
-    onItemInvoked: (/* item */ js.UndefOr[IObjectWithKey], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit = null,
-    selectionMode: SelectionMode = null,
-    selectionPreservedOnEmptyClick: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.SelectionZone] = {
-    val __obj = js.Dynamic.literal(selection = selection.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(js.Any.fromFunction0(componentRef))
-    if (!js.isUndefined(disableAutoSelectOnInputElements)) __obj.updateDynamic("disableAutoSelectOnInputElements")(disableAutoSelectOnInputElements.asInstanceOf[js.Any])
-    if (!js.isUndefined(enterModalOnTouch)) __obj.updateDynamic("enterModalOnTouch")(enterModalOnTouch.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSelectedOnFocus)) __obj.updateDynamic("isSelectedOnFocus")(isSelectedOnFocus.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (onItemContextMenu != null) __obj.updateDynamic("onItemContextMenu")(js.Any.fromFunction3(onItemContextMenu))
-    if (onItemInvoked != null) __obj.updateDynamic("onItemInvoked")(js.Any.fromFunction3(onItemInvoked))
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectionPreservedOnEmptyClick)) __obj.updateDynamic("selectionPreservedOnEmptyClick")(selectionPreservedOnEmptyClick.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.SelectionZone] {
+    @scala.inline
+    def componentRef(value: () => Unit): this.type = set("componentRef", js.Any.fromFunction0(value))
+    @scala.inline
+    def disableAutoSelectOnInputElements(value: Boolean): this.type = set("disableAutoSelectOnInputElements", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enterModalOnTouch(value: Boolean): this.type = set("enterModalOnTouch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isSelectedOnFocus(value: Boolean): this.type = set("isSelectedOnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layout(value: js.Object): this.type = set("layout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onItemContextMenu(
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit | Boolean
+    ): this.type = set("onItemContextMenu", js.Any.fromFunction3(value))
+    @scala.inline
+    def onItemInvoked(
+      value: (/* item */ js.UndefOr[IObjectWithKey], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit
+    ): this.type = set("onItemInvoked", js.Any.fromFunction3(value))
+    @scala.inline
+    def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectionPreservedOnEmptyClick(value: Boolean): this.type = set("selectionPreservedOnEmptyClick", value.asInstanceOf[js.Any])
   }
-  type Props = ISelectionZoneProps
+  
+  def withProps(p: ISelectionZoneProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(selection: ISelection[IObjectWithKey]): Builder = {
+    val __props = js.Dynamic.literal(selection = selection.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ISelectionZoneProps]))
+  }
 }
 

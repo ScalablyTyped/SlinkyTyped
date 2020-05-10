@@ -10,7 +10,7 @@ class LocalBaseBlock () extends js.Object {
   def this(params: LocalBaseBlockParams) = this()
   var blockLength: Double = js.native
   var error: String = js.native
-  var valueBeforeDecode: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var valueBeforeDecode: js.typedarray.ArrayBuffer = js.native
   var warnings: js.Array[String] = js.native
   /**
     * Convertion for the block to JSON object

@@ -26,18 +26,65 @@ trait DkimAttributes extends js.Object {
 
 object DkimAttributes {
   @scala.inline
-  def apply(
-    SigningAttributesOrigin: DkimSigningAttributesOrigin = null,
-    SigningEnabled: js.UndefOr[Boolean] = js.undefined,
-    Status: DkimStatus = null,
-    Tokens: DnsTokenList = null
-  ): DkimAttributes = {
+  def apply(): DkimAttributes = {
     val __obj = js.Dynamic.literal()
-    if (SigningAttributesOrigin != null) __obj.updateDynamic("SigningAttributesOrigin")(SigningAttributesOrigin.asInstanceOf[js.Any])
-    if (!js.isUndefined(SigningEnabled)) __obj.updateDynamic("SigningEnabled")(SigningEnabled.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Tokens != null) __obj.updateDynamic("Tokens")(Tokens.asInstanceOf[js.Any])
     __obj.asInstanceOf[DkimAttributes]
   }
+  @scala.inline
+  implicit class DkimAttributesOps[Self <: DkimAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSigningAttributesOrigin(value: DkimSigningAttributesOrigin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningAttributesOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigningAttributesOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningAttributesOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSigningEnabled(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSigningEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SigningEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: DkimStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokens(value: DnsTokenList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tokens")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

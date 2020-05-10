@@ -5,26 +5,47 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Blob
   extends Shape
      with SerializationModel {
-  var streaming: js.UndefOr[scala.Boolean] = js.undefined
+  var streaming: js.UndefOr[scala.Boolean] = js.native
   @JSName("type")
-  var type_Blob: blob
+  var type_Blob: blob = js.native
 }
 
 object Blob {
   @scala.inline
-  def apply(
-    `type`: blob,
-    sensitive: js.UndefOr[scala.Boolean] = js.undefined,
-    streaming: js.UndefOr[scala.Boolean] = js.undefined
-  ): Blob = {
+  def apply(`type`: blob): Blob = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(sensitive)) __obj.updateDynamic("sensitive")(sensitive.asInstanceOf[js.Any])
-    if (!js.isUndefined(streaming)) __obj.updateDynamic("streaming")(streaming.asInstanceOf[js.Any])
     __obj.asInstanceOf[Blob]
   }
+  @scala.inline
+  implicit class BlobOps[Self <: Blob] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: blob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStreaming(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streaming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreaming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streaming")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -140,10 +140,10 @@ object Localize extends js.Object {
     variables: js.Any,
     callback: js.Function1[/* translation */ String | HTMLElement, Unit]
   ): Unit = js.native
-  def translate(input: typingsSlinky.std.HTMLElement): Unit = js.native
-  def translate(input: typingsSlinky.std.HTMLElement, variables: js.Any): Unit = js.native
+  def translate(input: HTMLElement): Unit = js.native
+  def translate(input: HTMLElement, variables: js.Any): Unit = js.native
   def translate(
-    input: typingsSlinky.std.HTMLElement,
+    input: HTMLElement,
     variables: js.Any,
     callback: js.Function1[/* translation */ String | HTMLElement, Unit]
   ): Unit = js.native

@@ -42,26 +42,113 @@ trait ReservationResourceSpecification extends js.Object {
 
 object ReservationResourceSpecification {
   @scala.inline
-  def apply(
-    ChannelClass: ChannelClass = null,
-    Codec: ReservationCodec = null,
-    MaximumBitrate: ReservationMaximumBitrate = null,
-    MaximumFramerate: ReservationMaximumFramerate = null,
-    Resolution: ReservationResolution = null,
-    ResourceType: ReservationResourceType = null,
-    SpecialFeature: ReservationSpecialFeature = null,
-    VideoQuality: ReservationVideoQuality = null
-  ): ReservationResourceSpecification = {
+  def apply(): ReservationResourceSpecification = {
     val __obj = js.Dynamic.literal()
-    if (ChannelClass != null) __obj.updateDynamic("ChannelClass")(ChannelClass.asInstanceOf[js.Any])
-    if (Codec != null) __obj.updateDynamic("Codec")(Codec.asInstanceOf[js.Any])
-    if (MaximumBitrate != null) __obj.updateDynamic("MaximumBitrate")(MaximumBitrate.asInstanceOf[js.Any])
-    if (MaximumFramerate != null) __obj.updateDynamic("MaximumFramerate")(MaximumFramerate.asInstanceOf[js.Any])
-    if (Resolution != null) __obj.updateDynamic("Resolution")(Resolution.asInstanceOf[js.Any])
-    if (ResourceType != null) __obj.updateDynamic("ResourceType")(ResourceType.asInstanceOf[js.Any])
-    if (SpecialFeature != null) __obj.updateDynamic("SpecialFeature")(SpecialFeature.asInstanceOf[js.Any])
-    if (VideoQuality != null) __obj.updateDynamic("VideoQuality")(VideoQuality.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReservationResourceSpecification]
   }
+  @scala.inline
+  implicit class ReservationResourceSpecificationOps[Self <: ReservationResourceSpecification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannelClass(value: ChannelClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCodec(value: ReservationCodec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Codec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCodec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Codec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumBitrate(value: ReservationMaximumBitrate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumBitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumBitrate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumBitrate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumFramerate(value: ReservationMaximumFramerate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumFramerate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumFramerate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumFramerate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolution(value: ReservationResolution): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resolution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: ReservationResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpecialFeature(value: ReservationSpecialFeature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpecialFeature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpecialFeature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpecialFeature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoQuality(value: ReservationVideoQuality): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoQuality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoQuality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VideoQuality")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

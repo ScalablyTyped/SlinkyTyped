@@ -13,36 +13,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonKind extends js.Object {
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
-  var computed: js.UndefOr[Boolean] = js.undefined
-  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.undefined
-  var key: ExpressionKind
-  var kind: constructor | method | get | set
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var static: js.UndefOr[Boolean] = js.undefined
-  var value: FunctionKind
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  var computed: js.UndefOr[Boolean] = js.native
+  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.native
+  var key: ExpressionKind = js.native
+  var kind: constructor | method | get | set = js.native
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  var static: js.UndefOr[Boolean] = js.native
+  var value: FunctionKind = js.native
 }
 
 object AnonKind {
   @scala.inline
-  def apply(
-    key: ExpressionKind,
-    kind: constructor | method | get | set,
-    value: FunctionKind,
-    comments: js.Array[CommentKind] = null,
-    computed: js.UndefOr[Boolean] = js.undefined,
-    decorators: js.Array[DecoratorKind] = null,
-    loc: SourceLocationKind = null,
-    static: js.UndefOr[Boolean] = js.undefined
-  ): AnonKind = {
+  def apply(key: ExpressionKind, kind: constructor | method | get | set, value: FunctionKind): AnonKind = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (!js.isUndefined(computed)) __obj.updateDynamic("computed")(computed.asInstanceOf[js.Any])
-    if (decorators != null) __obj.updateDynamic("decorators")(decorators.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (!js.isUndefined(static)) __obj.updateDynamic("static")(static.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonKind]
   }
+  @scala.inline
+  implicit class AnonKindOps[Self <: AnonKind] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKey(value: ExpressionKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: constructor | method | get | set): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: FunctionKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[CommentKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommentsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
+        ret
+    }
+    @scala.inline
+    def withComputed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecorators(value: js.Array[DecoratorKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecorators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecoratorsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(null)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: SourceLocationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
+        ret
+    }
+    @scala.inline
+    def withStatic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("static")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

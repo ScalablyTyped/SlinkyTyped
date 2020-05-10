@@ -13,12 +13,10 @@ trait challengeType extends js.Object
 
 object challengeType {
   @scala.inline
-  def ackNeeded: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ackNeeded = this.cast("ackNeeded")
+  def ackNeeded: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ackNeeded = "ackNeeded".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ackNeeded]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def challengeFailedPinNeeded: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.challengeFailedPinNeeded = "challengeFailedPinNeeded".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.challengeFailedPinNeeded]
   @scala.inline
-  def challengeFailedPinNeeded: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.challengeFailedPinNeeded = this.cast("challengeFailedPinNeeded")
-  @scala.inline
-  def pinNeeded: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.pinNeeded = this.cast("pinNeeded")
+  def pinNeeded: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.pinNeeded = "pinNeeded".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.pinNeeded]
 }
 

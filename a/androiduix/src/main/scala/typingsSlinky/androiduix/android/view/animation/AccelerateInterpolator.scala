@@ -10,7 +10,5 @@ class AccelerateInterpolator () extends Interpolator {
   def this(factor: Double) = this()
   var mDoubleFactor: js.Any = js.native
   var mFactor: js.Any = js.native
-  /* CompleteClass */
-  override def getInterpolation(input: Double): Double = js.native
 }
 

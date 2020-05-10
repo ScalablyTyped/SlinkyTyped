@@ -1,10 +1,10 @@
 package typingsSlinky.antd.inputInputMod
 
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLInputElement
+import org.scalajs.dom.raw.HTMLTextAreaElement
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ChangeEvent
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.HTMLInputElement
-import typingsSlinky.std.HTMLTextAreaElement
-import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,37 +16,25 @@ object resolveOnChange extends js.Object {
   def apply(
     target: HTMLInputElement,
     e: ChangeEvent[HTMLTextAreaElement | HTMLInputElement],
-    onChange: js.Function1[
-      /* event */ ChangeEvent[org.scalajs.dom.raw.HTMLInputElement | org.scalajs.dom.raw.HTMLTextAreaElement], 
-      Unit
-    ]
+    onChange: js.Function1[/* event */ ChangeEvent[HTMLInputElement | HTMLTextAreaElement], Unit]
   ): Unit = js.native
-  def apply(target: HTMLInputElement, e: typingsSlinky.react.mod.MouseEvent[HTMLElement, MouseEvent]): Unit = js.native
+  def apply(target: HTMLInputElement, e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   def apply(
     target: HTMLInputElement,
-    e: typingsSlinky.react.mod.MouseEvent[HTMLElement, MouseEvent],
-    onChange: js.Function1[
-      /* event */ ChangeEvent[org.scalajs.dom.raw.HTMLInputElement | org.scalajs.dom.raw.HTMLTextAreaElement], 
-      Unit
-    ]
+    e: SyntheticMouseEvent[HTMLElement],
+    onChange: js.Function1[/* event */ ChangeEvent[HTMLInputElement | HTMLTextAreaElement], Unit]
   ): Unit = js.native
   def apply(target: HTMLTextAreaElement, e: ChangeEvent[HTMLTextAreaElement | HTMLInputElement]): Unit = js.native
   def apply(
     target: HTMLTextAreaElement,
     e: ChangeEvent[HTMLTextAreaElement | HTMLInputElement],
-    onChange: js.Function1[
-      /* event */ ChangeEvent[org.scalajs.dom.raw.HTMLInputElement | org.scalajs.dom.raw.HTMLTextAreaElement], 
-      Unit
-    ]
+    onChange: js.Function1[/* event */ ChangeEvent[HTMLInputElement | HTMLTextAreaElement], Unit]
   ): Unit = js.native
-  def apply(target: HTMLTextAreaElement, e: typingsSlinky.react.mod.MouseEvent[HTMLElement, MouseEvent]): Unit = js.native
+  def apply(target: HTMLTextAreaElement, e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   def apply(
     target: HTMLTextAreaElement,
-    e: typingsSlinky.react.mod.MouseEvent[HTMLElement, MouseEvent],
-    onChange: js.Function1[
-      /* event */ ChangeEvent[org.scalajs.dom.raw.HTMLInputElement | org.scalajs.dom.raw.HTMLTextAreaElement], 
-      Unit
-    ]
+    e: SyntheticMouseEvent[HTMLElement],
+    onChange: js.Function1[/* event */ ChangeEvent[HTMLInputElement | HTMLTextAreaElement], Unit]
   ): Unit = js.native
 }
 

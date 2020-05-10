@@ -12,10 +12,29 @@ trait SchemaConferenceParametersAddOnParameters extends js.Object {
 
 object SchemaConferenceParametersAddOnParameters {
   @scala.inline
-  def apply(parameters: StringDictionary[String] = null): SchemaConferenceParametersAddOnParameters = {
+  def apply(): SchemaConferenceParametersAddOnParameters = {
     val __obj = js.Dynamic.literal()
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConferenceParametersAddOnParameters]
   }
+  @scala.inline
+  implicit class SchemaConferenceParametersAddOnParametersOps[Self <: SchemaConferenceParametersAddOnParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParameters(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

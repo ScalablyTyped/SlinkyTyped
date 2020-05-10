@@ -23,8 +23,27 @@ object GetBlockPublicAccessConfigurationOutput {
     BlockPublicAccessConfigurationMetadata: BlockPublicAccessConfigurationMetadata
   ): GetBlockPublicAccessConfigurationOutput = {
     val __obj = js.Dynamic.literal(BlockPublicAccessConfiguration = BlockPublicAccessConfiguration.asInstanceOf[js.Any], BlockPublicAccessConfigurationMetadata = BlockPublicAccessConfigurationMetadata.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetBlockPublicAccessConfigurationOutput]
   }
+  @scala.inline
+  implicit class GetBlockPublicAccessConfigurationOutputOps[Self <: GetBlockPublicAccessConfigurationOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlockPublicAccessConfiguration(value: BlockPublicAccessConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockPublicAccessConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockPublicAccessConfigurationMetadata(value: BlockPublicAccessConfigurationMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BlockPublicAccessConfigurationMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

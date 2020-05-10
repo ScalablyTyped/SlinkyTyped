@@ -8,34 +8,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NavigationSwitchRouterConfig extends js.Object {
-  var backBehavior: js.UndefOr[none | initialRoute | history | order] = js.undefined
-  var initialRouteName: js.UndefOr[String] = js.undefined
-  var initialRouteParams: js.UndefOr[NavigationParams] = js.undefined
-  var order: js.UndefOr[js.Array[String]] = js.undefined
-  var paths: js.UndefOr[NavigationPathsConfig] = js.undefined
+  var backBehavior: js.UndefOr[none | initialRoute | history | order] = js.native
+  var initialRouteName: js.UndefOr[String] = js.native
+  var initialRouteParams: js.UndefOr[NavigationParams] = js.native
+  var order: js.UndefOr[js.Array[String]] = js.native
+  var paths: js.UndefOr[NavigationPathsConfig] = js.native
    // defaults to 'none'
-  var resetOnBlur: js.UndefOr[Boolean] = js.undefined
+  var resetOnBlur: js.UndefOr[Boolean] = js.native
 }
 
 object NavigationSwitchRouterConfig {
   @scala.inline
-  def apply(
-    backBehavior: none | initialRoute | history | order = null,
-    initialRouteName: String = null,
-    initialRouteParams: NavigationParams = null,
-    order: js.Array[String] = null,
-    paths: NavigationPathsConfig = null,
-    resetOnBlur: js.UndefOr[Boolean] = js.undefined
-  ): NavigationSwitchRouterConfig = {
+  def apply(): NavigationSwitchRouterConfig = {
     val __obj = js.Dynamic.literal()
-    if (backBehavior != null) __obj.updateDynamic("backBehavior")(backBehavior.asInstanceOf[js.Any])
-    if (initialRouteName != null) __obj.updateDynamic("initialRouteName")(initialRouteName.asInstanceOf[js.Any])
-    if (initialRouteParams != null) __obj.updateDynamic("initialRouteParams")(initialRouteParams.asInstanceOf[js.Any])
-    if (order != null) __obj.updateDynamic("order")(order.asInstanceOf[js.Any])
-    if (paths != null) __obj.updateDynamic("paths")(paths.asInstanceOf[js.Any])
-    if (!js.isUndefined(resetOnBlur)) __obj.updateDynamic("resetOnBlur")(resetOnBlur.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigationSwitchRouterConfig]
   }
+  @scala.inline
+  implicit class NavigationSwitchRouterConfigOps[Self <: NavigationSwitchRouterConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackBehavior(value: none | initialRoute | history | order): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialRouteName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialRouteName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialRouteName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialRouteName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialRouteParams(value: NavigationParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialRouteParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialRouteParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialRouteParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrder(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("order")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaths(value: NavigationPathsConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetOnBlur(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetOnBlur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResetOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetOnBlur")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

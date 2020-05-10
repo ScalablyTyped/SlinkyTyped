@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
   */
+@js.native
 trait PlusMapsMapType extends js.Object {
   /**
     * 普通街道视图类型
@@ -16,23 +17,53 @@ trait PlusMapsMapType extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  var MAPTYPE_NORMAL: js.UndefOr[Double] = js.undefined
+  var MAPTYPE_NORMAL: js.UndefOr[Double] = js.native
   /**
     * 卫星视图
     * 地图视图类型常量，卫星视图。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/maps.html](http://www.html5plus.org/doc/zh_cn/maps.html)
     */
-  var MAPTYPE_SATELLITE: js.UndefOr[Double] = js.undefined
+  var MAPTYPE_SATELLITE: js.UndefOr[Double] = js.native
 }
 
 object PlusMapsMapType {
   @scala.inline
-  def apply(MAPTYPE_NORMAL: Int | Double = null, MAPTYPE_SATELLITE: Int | Double = null): PlusMapsMapType = {
+  def apply(): PlusMapsMapType = {
     val __obj = js.Dynamic.literal()
-    if (MAPTYPE_NORMAL != null) __obj.updateDynamic("MAPTYPE_NORMAL")(MAPTYPE_NORMAL.asInstanceOf[js.Any])
-    if (MAPTYPE_SATELLITE != null) __obj.updateDynamic("MAPTYPE_SATELLITE")(MAPTYPE_SATELLITE.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusMapsMapType]
   }
+  @scala.inline
+  implicit class PlusMapsMapTypeOps[Self <: PlusMapsMapType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMAPTYPE_NORMAL(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MAPTYPE_NORMAL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMAPTYPE_NORMAL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MAPTYPE_NORMAL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMAPTYPE_SATELLITE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MAPTYPE_SATELLITE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMAPTYPE_SATELLITE: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MAPTYPE_SATELLITE")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

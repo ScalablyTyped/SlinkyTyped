@@ -28,7 +28,7 @@ object publicKey extends js.Object {
       */
     def sign(
       hash_algo: Integer,
-      hashed: scala.scalajs.js.typedarray.Uint8Array,
+      hashed: js.typedarray.Uint8Array,
       g: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       p: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       q: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
@@ -50,7 +50,7 @@ object publicKey extends js.Object {
       hash_algo: Integer,
       r: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       s: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
-      hashed: scala.scalajs.js.typedarray.Uint8Array,
+      hashed: js.typedarray.Uint8Array,
       g: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       p: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
       q: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any,
@@ -122,9 +122,9 @@ object publicKey extends js.Object {
         oid: OID,
         cipher_algo: symmetric,
         hash_algo: typingsSlinky.openpgp.mod.enums.hash,
-        V: scala.scalajs.js.typedarray.Uint8Array,
-        C: scala.scalajs.js.typedarray.Uint8Array,
-        d: scala.scalajs.js.typedarray.Uint8Array,
+        V: js.typedarray.Uint8Array,
+        C: js.typedarray.Uint8Array,
+        d: js.typedarray.Uint8Array,
         fingerprint: String
       ): js.Promise[
             /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ _
@@ -144,7 +144,7 @@ object publicKey extends js.Object {
         cipher_algo: symmetric,
         hash_algo: typingsSlinky.openpgp.mod.enums.hash,
         m: MPI,
-        Q: scala.scalajs.js.typedarray.Uint8Array,
+        Q: js.typedarray.Uint8Array,
         fingerprint: String
       ): js.Promise[AnonC] = js.native
       /**
@@ -154,7 +154,7 @@ object publicKey extends js.Object {
         * @param d Recipient private key
         * @returns Generated ephemeral secret
         */
-      def genPrivateEphemeralKey(curve: Curve, V: scala.scalajs.js.typedarray.Uint8Array, d: scala.scalajs.js.typedarray.Uint8Array): js.Promise[
+      def genPrivateEphemeralKey(curve: Curve, V: js.typedarray.Uint8Array, d: js.typedarray.Uint8Array): js.Promise[
             /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ _
           ] = js.native
       /**
@@ -163,7 +163,7 @@ object publicKey extends js.Object {
         * @param Q Recipient public key
         * @returns Returns public part of ephemeral key and generated ephemeral secret
         */
-      def genPublicEphemeralKey(curve: Curve, Q: scala.scalajs.js.typedarray.Uint8Array): js.Promise[AnonS] = js.native
+      def genPublicEphemeralKey(curve: Curve, Q: js.typedarray.Uint8Array): js.Promise[AnonS] = js.native
     }
     
     @js.native
@@ -180,9 +180,9 @@ object publicKey extends js.Object {
       def sign(
         oid: OID,
         hash_algo: typingsSlinky.openpgp.mod.enums.hash,
-        m: scala.scalajs.js.typedarray.Uint8Array,
-        d: scala.scalajs.js.typedarray.Uint8Array,
-        hashed: scala.scalajs.js.typedarray.Uint8Array
+        m: js.typedarray.Uint8Array,
+        d: js.typedarray.Uint8Array,
+        hashed: js.typedarray.Uint8Array
       ): js.Object = js.native
       /**
         * Verifies if a signature is valid for a message
@@ -198,9 +198,9 @@ object publicKey extends js.Object {
         oid: OID,
         hash_algo: typingsSlinky.openpgp.mod.enums.hash,
         signature: js.Object,
-        m: scala.scalajs.js.typedarray.Uint8Array,
-        Q: scala.scalajs.js.typedarray.Uint8Array,
-        hashed: scala.scalajs.js.typedarray.Uint8Array
+        m: js.typedarray.Uint8Array,
+        Q: js.typedarray.Uint8Array,
+        hashed: js.typedarray.Uint8Array
       ): Boolean = js.native
     }
     
@@ -218,9 +218,9 @@ object publicKey extends js.Object {
       def sign(
         oid: OID,
         hash_algo: typingsSlinky.openpgp.mod.enums.hash,
-        m: scala.scalajs.js.typedarray.Uint8Array,
-        d: scala.scalajs.js.typedarray.Uint8Array,
-        hashed: scala.scalajs.js.typedarray.Uint8Array
+        m: js.typedarray.Uint8Array,
+        d: js.typedarray.Uint8Array,
+        hashed: js.typedarray.Uint8Array
       ): js.Object = js.native
       /**
         * Verifies if a signature is valid for a message
@@ -236,9 +236,9 @@ object publicKey extends js.Object {
         oid: OID,
         hash_algo: typingsSlinky.openpgp.mod.enums.hash,
         signature: js.Object,
-        m: scala.scalajs.js.typedarray.Uint8Array,
-        Q: scala.scalajs.js.typedarray.Uint8Array,
-        hashed: scala.scalajs.js.typedarray.Uint8Array
+        m: js.typedarray.Uint8Array,
+        Q: js.typedarray.Uint8Array,
+        hashed: js.typedarray.Uint8Array
       ): Boolean = js.native
     }
     

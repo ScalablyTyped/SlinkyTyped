@@ -11,16 +11,6 @@ object wordlistMod extends js.Object {
   abstract class Wordlist protected ()
     extends typingsSlinky.ethers.typesMod.Wordlist {
     def this(locale: String) = this()
-    /* CompleteClass */
-    override var locale: String = js.native
-    /* CompleteClass */
-    override def getWord(index: Double): String = js.native
-    /* CompleteClass */
-    override def getWordIndex(word: String): Double = js.native
-    /* CompleteClass */
-    override def join(words: js.Array[String]): String = js.native
-    /* CompleteClass */
-    override def split(mnemonic: String): js.Array[String] = js.native
   }
   
   def check(wordlist: typingsSlinky.ethers.typesMod.Wordlist): String = js.native

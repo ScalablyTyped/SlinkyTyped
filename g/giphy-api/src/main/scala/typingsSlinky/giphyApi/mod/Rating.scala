@@ -15,16 +15,14 @@ trait Rating extends js.Object
 
 object Rating {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def g: typingsSlinky.giphyApi.giphyApiStrings.g = "g".asInstanceOf[typingsSlinky.giphyApi.giphyApiStrings.g]
   @scala.inline
-  def g: typingsSlinky.giphyApi.giphyApiStrings.g = this.cast("g")
+  def pg: typingsSlinky.giphyApi.giphyApiStrings.pg = "pg".asInstanceOf[typingsSlinky.giphyApi.giphyApiStrings.pg]
   @scala.inline
-  def pg: typingsSlinky.giphyApi.giphyApiStrings.pg = this.cast("pg")
+  def `pg-13`: typingsSlinky.giphyApi.giphyApiStrings.`pg-13` = "pg-13".asInstanceOf[typingsSlinky.giphyApi.giphyApiStrings.`pg-13`]
   @scala.inline
-  def `pg-13`: typingsSlinky.giphyApi.giphyApiStrings.`pg-13` = this.cast("pg-13")
+  def r: typingsSlinky.giphyApi.giphyApiStrings.r = "r".asInstanceOf[typingsSlinky.giphyApi.giphyApiStrings.r]
   @scala.inline
-  def r: typingsSlinky.giphyApi.giphyApiStrings.r = this.cast("r")
-  @scala.inline
-  def y: typingsSlinky.giphyApi.giphyApiStrings.y = this.cast("y")
+  def y: typingsSlinky.giphyApi.giphyApiStrings.y = "y".asInstanceOf[typingsSlinky.giphyApi.giphyApiStrings.y]
 }
 

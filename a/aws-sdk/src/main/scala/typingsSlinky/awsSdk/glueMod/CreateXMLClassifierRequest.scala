@@ -22,10 +22,41 @@ trait CreateXMLClassifierRequest extends js.Object {
 
 object CreateXMLClassifierRequest {
   @scala.inline
-  def apply(Classification: Classification, Name: NameString, RowTag: RowTag = null): CreateXMLClassifierRequest = {
+  def apply(Classification: Classification, Name: NameString): CreateXMLClassifierRequest = {
     val __obj = js.Dynamic.literal(Classification = Classification.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-    if (RowTag != null) __obj.updateDynamic("RowTag")(RowTag.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateXMLClassifierRequest]
   }
+  @scala.inline
+  implicit class CreateXMLClassifierRequestOps[Self <: CreateXMLClassifierRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassification(value: Classification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Classification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRowTag(value: RowTag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowTag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

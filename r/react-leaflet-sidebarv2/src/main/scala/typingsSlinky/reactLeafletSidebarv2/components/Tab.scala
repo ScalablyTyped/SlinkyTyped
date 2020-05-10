@@ -1,9 +1,8 @@
 package typingsSlinky.reactLeafletSidebarv2.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactLeafletSidebarv2.mod.Anchor
 import typingsSlinky.reactLeafletSidebarv2.mod.Icon
 import typingsSlinky.reactLeafletSidebarv2.mod.Position
@@ -12,34 +11,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tab
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactLeafletSidebarv2.mod.Tab] {
+object Tab {
   @JSImport("react-leaflet-sidebarv2", "Tab")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    header: String,
-    icon: Icon,
-    id: String,
-    active: js.UndefOr[Boolean] = js.undefined,
-    anchor: Anchor = null,
-    closeIcon: Icon = null,
-    onClose: () => Unit = null,
-    position: Position = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactLeafletSidebarv2.mod.Tab] = {
-    val __obj = js.Dynamic.literal(header = header.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (anchor != null) __obj.updateDynamic("anchor")(anchor.asInstanceOf[js.Any])
-    if (closeIcon != null) __obj.updateDynamic("closeIcon")(closeIcon.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactLeafletSidebarv2.mod.Tab] {
+    @scala.inline
+    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+    @scala.inline
+    def anchor(value: Anchor): this.type = set("anchor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeIcon(value: Icon): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def position(value: Position): this.type = set("position", value.asInstanceOf[js.Any])
   }
-  type Props = TabProps
+  
+  def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(header: String, icon: Icon, id: String): Builder = {
+    val __props = js.Dynamic.literal(header = header.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TabProps]))
+  }
 }
 

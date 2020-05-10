@@ -17,18 +17,16 @@ trait RiskLevel extends js.Object
 
 object RiskLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hidden: typingsSlinky.microsoftGraph.microsoftGraphStrings.hidden = "hidden".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.hidden]
   @scala.inline
-  def hidden: typingsSlinky.microsoftGraph.microsoftGraphStrings.hidden = this.cast("hidden")
+  def high: typingsSlinky.microsoftGraph.microsoftGraphStrings.high = "high".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.high]
   @scala.inline
-  def high: typingsSlinky.microsoftGraph.microsoftGraphStrings.high = this.cast("high")
+  def low: typingsSlinky.microsoftGraph.microsoftGraphStrings.low = "low".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.low]
   @scala.inline
-  def low: typingsSlinky.microsoftGraph.microsoftGraphStrings.low = this.cast("low")
+  def medium: typingsSlinky.microsoftGraph.microsoftGraphStrings.medium = "medium".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.medium]
   @scala.inline
-  def medium: typingsSlinky.microsoftGraph.microsoftGraphStrings.medium = this.cast("medium")
+  def none: none_ = "none".asInstanceOf[none_]
   @scala.inline
-  def none: none_ = this.cast("none")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

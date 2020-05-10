@@ -16,18 +16,16 @@ trait Operator extends js.Object
 
 object Operator {
   @scala.inline
-  def AND: typingsSlinky.lucene.luceneStrings.AND = this.cast("AND")
+  def AND: typingsSlinky.lucene.luceneStrings.AND = "AND".asInstanceOf[typingsSlinky.lucene.luceneStrings.AND]
   @scala.inline
-  def `AND NOT`: typingsSlinky.lucene.luceneStrings.`AND NOT` = this.cast("AND NOT")
+  def `AND NOT`: typingsSlinky.lucene.luceneStrings.`AND NOT` = ("AND NOT").asInstanceOf[typingsSlinky.lucene.luceneStrings.`AND NOT`]
   @scala.inline
-  def LessthansignimplicitGreaterthansign: typingsSlinky.lucene.luceneStrings.LessthansignimplicitGreaterthansign = this.cast("<implicit>")
+  def LessthansignimplicitGreaterthansign: typingsSlinky.lucene.luceneStrings.LessthansignimplicitGreaterthansign = "<implicit>".asInstanceOf[typingsSlinky.lucene.luceneStrings.LessthansignimplicitGreaterthansign]
   @scala.inline
-  def NOT: typingsSlinky.lucene.luceneStrings.NOT = this.cast("NOT")
+  def NOT: typingsSlinky.lucene.luceneStrings.NOT = "NOT".asInstanceOf[typingsSlinky.lucene.luceneStrings.NOT]
   @scala.inline
-  def OR: typingsSlinky.lucene.luceneStrings.OR = this.cast("OR")
+  def OR: typingsSlinky.lucene.luceneStrings.OR = "OR".asInstanceOf[typingsSlinky.lucene.luceneStrings.OR]
   @scala.inline
-  def `OR NOT`: typingsSlinky.lucene.luceneStrings.`OR NOT` = this.cast("OR NOT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `OR NOT`: typingsSlinky.lucene.luceneStrings.`OR NOT` = ("OR NOT").asInstanceOf[typingsSlinky.lucene.luceneStrings.`OR NOT`]
 }
 

@@ -1,10 +1,9 @@
 package typingsSlinky.reactSvgInline.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSvgInline.mod.SVGInlineProps
 import typingsSlinky.reactSvgInline.mod.^
 import typingsSlinky.reactSvgInline.reactSvgInlineStrings.comment
@@ -21,44 +20,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactSvgInline
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactSvgInline {
   @JSImport("react-svg-inline", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    svg: String,
-    accessibilityDesc: String = null,
-    accessibilityLabel: String = null,
-    classSuffix: String = null,
-    cleanup: Boolean | (js.Array[
-      title | desc | comment | defs | width | height | fill | sketchMSShapeGroup | sketchMSPage | sketchMSLayerGroup
-    ]) = null,
-    cleanupExceptions: js.Array[
-      title | desc | comment | defs | width | height | fill | sketchMSShapeGroup | sketchMSPage | sketchMSLayerGroup
-    ] = null,
-    component: TagMod[Any] = null,
-    fill: String = null,
-    height: String = null,
-    width: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(svg = svg.asInstanceOf[js.Any])
-    if (accessibilityDesc != null) __obj.updateDynamic("accessibilityDesc")(accessibilityDesc.asInstanceOf[js.Any])
-    if (accessibilityLabel != null) __obj.updateDynamic("accessibilityLabel")(accessibilityLabel.asInstanceOf[js.Any])
-    if (classSuffix != null) __obj.updateDynamic("classSuffix")(classSuffix.asInstanceOf[js.Any])
-    if (cleanup != null) __obj.updateDynamic("cleanup")(cleanup.asInstanceOf[js.Any])
-    if (cleanupExceptions != null) __obj.updateDynamic("cleanupExceptions")(cleanupExceptions.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def accessibilityDesc(value: String): this.type = set("accessibilityDesc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityLabel(value: String): this.type = set("accessibilityLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def classSuffix(value: String): this.type = set("classSuffix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cleanup(
+      value: Boolean | (js.Array[
+          title | desc | comment | defs | width | height | fill | sketchMSShapeGroup | sketchMSPage | sketchMSLayerGroup
+        ])
+    ): this.type = set("cleanup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cleanupExceptions(
+      value: js.Array[
+          title | desc | comment | defs | width | height | fill | sketchMSShapeGroup | sketchMSPage | sketchMSLayerGroup
+        ]
+    ): this.type = set("cleanupExceptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentReactElement(value: ReactElement): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def component(value: TagMod[Any]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: String): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  type Props = SVGInlineProps
+  
+  def withProps(p: SVGInlineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(svg: String): Builder = {
+    val __props = js.Dynamic.literal(svg = svg.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SVGInlineProps]))
+  }
 }
 

@@ -15,14 +15,12 @@ trait OptionsPosition3dValue extends js.Object
 
 object OptionsPosition3dValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chart: chart_ = "chart".asInstanceOf[chart_]
   @scala.inline
-  def chart: chart_ = this.cast("chart")
+  def flap: typingsSlinky.highcharts.highchartsStrings.flap = "flap".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.flap]
   @scala.inline
-  def flap: typingsSlinky.highcharts.highchartsStrings.flap = this.cast("flap")
+  def offset: typingsSlinky.highcharts.highchartsStrings.offset = "offset".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.offset]
   @scala.inline
-  def offset: typingsSlinky.highcharts.highchartsStrings.offset = this.cast("offset")
-  @scala.inline
-  def ortho: typingsSlinky.highcharts.highchartsStrings.ortho = this.cast("ortho")
+  def ortho: typingsSlinky.highcharts.highchartsStrings.ortho = "ortho".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.ortho]
 }
 

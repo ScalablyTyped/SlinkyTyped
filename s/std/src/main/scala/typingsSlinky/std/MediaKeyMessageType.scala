@@ -14,14 +14,12 @@ trait MediaKeyMessageType extends js.Object
 
 object MediaKeyMessageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `individualization-request`: typingsSlinky.std.stdStrings.`individualization-request` = "individualization-request".asInstanceOf[typingsSlinky.std.stdStrings.`individualization-request`]
   @scala.inline
-  def `individualization-request`: typingsSlinky.std.stdStrings.`individualization-request` = this.cast("individualization-request")
+  def `license-release`: typingsSlinky.std.stdStrings.`license-release` = "license-release".asInstanceOf[typingsSlinky.std.stdStrings.`license-release`]
   @scala.inline
-  def `license-release`: typingsSlinky.std.stdStrings.`license-release` = this.cast("license-release")
+  def `license-renewal`: typingsSlinky.std.stdStrings.`license-renewal` = "license-renewal".asInstanceOf[typingsSlinky.std.stdStrings.`license-renewal`]
   @scala.inline
-  def `license-renewal`: typingsSlinky.std.stdStrings.`license-renewal` = this.cast("license-renewal")
-  @scala.inline
-  def `license-request`: typingsSlinky.std.stdStrings.`license-request` = this.cast("license-request")
+  def `license-request`: typingsSlinky.std.stdStrings.`license-request` = "license-request".asInstanceOf[typingsSlinky.std.stdStrings.`license-request`]
 }
 

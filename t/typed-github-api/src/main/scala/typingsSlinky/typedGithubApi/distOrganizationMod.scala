@@ -19,27 +19,9 @@ object distOrganizationMod extends js.Object {
     extends OrganizationClass
        with MyOrganization {
     def this(data: PrivateOrganization, options: OptionsOrRef) = this()
-    /* CompleteClass */
-    override var billingEmail: String = js.native
-    /* CompleteClass */
-    override var collaborators: Double = js.native
-    /* CompleteClass */
-    override var defaultRepositorySettings: String = js.native
-    /* CompleteClass */
-    override var diskUsage: Double = js.native
-    /* CompleteClass */
-    override var membersCanCreateRepositories: Boolean = js.native
-    /* CompleteClass */
-    override var plan: AnonName = js.native
-    /* CompleteClass */
-    override var privateGists: Double = js.native
-    /* CompleteClass */
-    override var privateReposOwned: Double = js.native
-    /* CompleteClass */
-    override var privateReposTotal: Double = js.native
   }
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.typedGithubApi.ownerRefMod.OwnerRef because Already inherited
   - typingsSlinky.typedGithubApi.organizationMod.OrganizationSummary because Already inherited
   - typingsSlinky.typedGithubApi.organizationMod.Organization because var conflicts: avatarUri, description, id, login. Inlined name, company, blog, location, email, publicRepos, publicGists, followers, following, createdAt, updatedAt, htmlUri, hasOrganizationProjects, hasRepositoryProjects */ @js.native
@@ -61,7 +43,7 @@ object distOrganizationMod extends js.Object {
     var updatedAt: Moment = js.native
   }
   
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.typedGithubApi.ownerRefMod.OwnerRef because Already inherited
   - typingsSlinky.typedGithubApi.organizationMod.OrganizationSummary because var conflicts: login. Inlined id, avatarUri, description */ @js.native
   class OrganizationSummaryClass protected () extends OwnerRefClass {

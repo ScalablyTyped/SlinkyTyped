@@ -13,12 +13,10 @@ trait OptionsPinchTypeValue extends js.Object
 
 object OptionsPinchTypeValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def x: typingsSlinky.highcharts.highchartsStrings.x = "x".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.x]
   @scala.inline
-  def x: typingsSlinky.highcharts.highchartsStrings.x = this.cast("x")
+  def xy: typingsSlinky.highcharts.highchartsStrings.xy = "xy".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.xy]
   @scala.inline
-  def xy: typingsSlinky.highcharts.highchartsStrings.xy = this.cast("xy")
-  @scala.inline
-  def y: typingsSlinky.highcharts.highchartsStrings.y = this.cast("y")
+  def y: typingsSlinky.highcharts.highchartsStrings.y = "y".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.y]
 }
 

@@ -83,34 +83,192 @@ object DistributionConfig {
     Comment: CommentType,
     DefaultCacheBehavior: DefaultCacheBehavior,
     Enabled: Boolean,
-    Origins: Origins,
-    Aliases: Aliases = null,
-    CacheBehaviors: CacheBehaviors = null,
-    CustomErrorResponses: CustomErrorResponses = null,
-    DefaultRootObject: String = null,
-    HttpVersion: HttpVersion = null,
-    IsIPV6Enabled: js.UndefOr[Boolean] = js.undefined,
-    Logging: LoggingConfig = null,
-    OriginGroups: OriginGroups = null,
-    PriceClass: PriceClass = null,
-    Restrictions: Restrictions = null,
-    ViewerCertificate: ViewerCertificate = null,
-    WebACLId: String = null
+    Origins: Origins
   ): DistributionConfig = {
     val __obj = js.Dynamic.literal(CallerReference = CallerReference.asInstanceOf[js.Any], Comment = Comment.asInstanceOf[js.Any], DefaultCacheBehavior = DefaultCacheBehavior.asInstanceOf[js.Any], Enabled = Enabled.asInstanceOf[js.Any], Origins = Origins.asInstanceOf[js.Any])
-    if (Aliases != null) __obj.updateDynamic("Aliases")(Aliases.asInstanceOf[js.Any])
-    if (CacheBehaviors != null) __obj.updateDynamic("CacheBehaviors")(CacheBehaviors.asInstanceOf[js.Any])
-    if (CustomErrorResponses != null) __obj.updateDynamic("CustomErrorResponses")(CustomErrorResponses.asInstanceOf[js.Any])
-    if (DefaultRootObject != null) __obj.updateDynamic("DefaultRootObject")(DefaultRootObject.asInstanceOf[js.Any])
-    if (HttpVersion != null) __obj.updateDynamic("HttpVersion")(HttpVersion.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsIPV6Enabled)) __obj.updateDynamic("IsIPV6Enabled")(IsIPV6Enabled.asInstanceOf[js.Any])
-    if (Logging != null) __obj.updateDynamic("Logging")(Logging.asInstanceOf[js.Any])
-    if (OriginGroups != null) __obj.updateDynamic("OriginGroups")(OriginGroups.asInstanceOf[js.Any])
-    if (PriceClass != null) __obj.updateDynamic("PriceClass")(PriceClass.asInstanceOf[js.Any])
-    if (Restrictions != null) __obj.updateDynamic("Restrictions")(Restrictions.asInstanceOf[js.Any])
-    if (ViewerCertificate != null) __obj.updateDynamic("ViewerCertificate")(ViewerCertificate.asInstanceOf[js.Any])
-    if (WebACLId != null) __obj.updateDynamic("WebACLId")(WebACLId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistributionConfig]
   }
+  @scala.inline
+  implicit class DistributionConfigOps[Self <: DistributionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallerReference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallerReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComment(value: CommentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultCacheBehavior(value: DefaultCacheBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultCacheBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrigins(value: Origins): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Origins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAliases(value: Aliases): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Aliases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAliases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Aliases")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCacheBehaviors(value: CacheBehaviors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheBehaviors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCacheBehaviors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CacheBehaviors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomErrorResponses(value: CustomErrorResponses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomErrorResponses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomErrorResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CustomErrorResponses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultRootObject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRootObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultRootObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultRootObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpVersion(value: HttpVersion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HttpVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsIPV6Enabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsIPV6Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsIPV6Enabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsIPV6Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogging(value: LoggingConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Logging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogging: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Logging")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginGroups(value: OriginGroups): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OriginGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriceClass(value: PriceClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PriceClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriceClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PriceClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestrictions(value: Restrictions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Restrictions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestrictions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Restrictions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewerCertificate(value: ViewerCertificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewerCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewerCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ViewerCertificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebACLId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebACLId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebACLId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebACLId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

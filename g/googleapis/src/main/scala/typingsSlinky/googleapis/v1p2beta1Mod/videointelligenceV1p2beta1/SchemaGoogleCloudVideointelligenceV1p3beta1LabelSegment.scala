@@ -21,14 +21,41 @@ trait SchemaGoogleCloudVideointelligenceV1p3beta1LabelSegment extends js.Object 
 
 object SchemaGoogleCloudVideointelligenceV1p3beta1LabelSegment {
   @scala.inline
-  def apply(
-    confidence: Int | Double = null,
-    segment: SchemaGoogleCloudVideointelligenceV1p3beta1VideoSegment = null
-  ): SchemaGoogleCloudVideointelligenceV1p3beta1LabelSegment = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1p3beta1LabelSegment = {
     val __obj = js.Dynamic.literal()
-    if (confidence != null) __obj.updateDynamic("confidence")(confidence.asInstanceOf[js.Any])
-    if (segment != null) __obj.updateDynamic("segment")(segment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1p3beta1LabelSegment]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1p3beta1LabelSegmentOps[Self <: SchemaGoogleCloudVideointelligenceV1p3beta1LabelSegment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfidence(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegment(value: SchemaGoogleCloudVideointelligenceV1p3beta1VideoSegment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

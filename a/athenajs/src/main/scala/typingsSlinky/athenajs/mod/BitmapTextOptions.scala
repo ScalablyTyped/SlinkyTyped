@@ -1,73 +1,158 @@
 package typingsSlinky.athenajs.mod
 
-import typingsSlinky.athenajs.AnonInstantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BitmapTextOptions extends DrawableOptions {
-  var charHeight: Double
-  var charWidth: Double
-  var height: js.UndefOr[Double] = js.undefined
-  var imageId: js.UndefOr[String] = js.undefined
-  var imageSrc: js.UndefOr[String] = js.undefined
-  var offsetX: Double
-  var scrollOffsetX: js.UndefOr[Double] = js.undefined
-  var scrollOffsetY: js.UndefOr[Double] = js.undefined
-  var size: js.UndefOr[String] = js.undefined
-  var startY: Double
-  var text: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var charHeight: Double = js.native
+  var charWidth: Double = js.native
+  var height: js.UndefOr[Double] = js.native
+  var imageId: js.UndefOr[String] = js.native
+  var imageSrc: js.UndefOr[String] = js.native
+  var offsetX: Double = js.native
+  var scrollOffsetX: js.UndefOr[Double] = js.native
+  var scrollOffsetY: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[String] = js.native
+  var startY: Double = js.native
+  var text: js.UndefOr[String] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object BitmapTextOptions {
   @scala.inline
-  def apply(
-    charHeight: Double,
-    charWidth: Double,
-    offsetX: Double,
-    startY: Double,
-    behavior: AnonInstantiable = null,
-    canCollide: js.UndefOr[Boolean] = js.undefined,
-    canCollideFriendBullet: js.UndefOr[Boolean] = js.undefined,
-    collideGroup: Int | Double = null,
-    height: Int | Double = null,
-    imageId: String = null,
-    imageSrc: String = null,
-    layer: Int | Double = null,
-    map: Map = null,
-    objectId: String = null,
-    pool: Int | Double = null,
-    scrollOffsetX: Int | Double = null,
-    scrollOffsetY: Int | Double = null,
-    size: String = null,
-    text: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): BitmapTextOptions = {
+  def apply(charHeight: Double, charWidth: Double, offsetX: Double, startY: Double): BitmapTextOptions = {
     val __obj = js.Dynamic.literal(charHeight = charHeight.asInstanceOf[js.Any], charWidth = charWidth.asInstanceOf[js.Any], offsetX = offsetX.asInstanceOf[js.Any], startY = startY.asInstanceOf[js.Any])
-    if (behavior != null) __obj.updateDynamic("behavior")(behavior.asInstanceOf[js.Any])
-    if (!js.isUndefined(canCollide)) __obj.updateDynamic("canCollide")(canCollide.asInstanceOf[js.Any])
-    if (!js.isUndefined(canCollideFriendBullet)) __obj.updateDynamic("canCollideFriendBullet")(canCollideFriendBullet.asInstanceOf[js.Any])
-    if (collideGroup != null) __obj.updateDynamic("collideGroup")(collideGroup.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (imageId != null) __obj.updateDynamic("imageId")(imageId.asInstanceOf[js.Any])
-    if (imageSrc != null) __obj.updateDynamic("imageSrc")(imageSrc.asInstanceOf[js.Any])
-    if (layer != null) __obj.updateDynamic("layer")(layer.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (objectId != null) __obj.updateDynamic("objectId")(objectId.asInstanceOf[js.Any])
-    if (pool != null) __obj.updateDynamic("pool")(pool.asInstanceOf[js.Any])
-    if (scrollOffsetX != null) __obj.updateDynamic("scrollOffsetX")(scrollOffsetX.asInstanceOf[js.Any])
-    if (scrollOffsetY != null) __obj.updateDynamic("scrollOffsetY")(scrollOffsetY.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[BitmapTextOptions]
   }
+  @scala.inline
+  implicit class BitmapTextOptionsOps[Self <: BitmapTextOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCharHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCharWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffsetX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageSrc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollOffsetX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollOffsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollOffsetX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollOffsetX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollOffsetY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollOffsetY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollOffsetY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollOffsetY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

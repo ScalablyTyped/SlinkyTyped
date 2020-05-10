@@ -1,6 +1,5 @@
 package typingsSlinky.appBuilderLib
 
-import typingsSlinky.appBuilderLib.appBuilderLibStrings.Bintray
 import typingsSlinky.builderUtilRuntime.publishOptionsMod.BintrayOptions
 import typingsSlinky.electronPublish.mod.HttpPublisher
 import typingsSlinky.electronPublish.mod.PublishContext
@@ -20,8 +19,6 @@ object bintrayPublisherMod extends js.Object {
     val client: js.Any = js.native
     var init: js.Any = js.native
     val options: js.Any = js.native
-    @JSName("providerName")
-    val providerName_BintrayPublisher: Bintray = js.native
     val version: js.Any = js.native
     def deleteRelease(): js.Promise[Unit] = js.native
     def deleteRelease(isForce: Boolean): js.Promise[Unit] = js.native

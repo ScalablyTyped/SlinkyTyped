@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DocumentFormattingEditProvider extends js.Object {
   /**
   		 * Provide formatting edits for a whole document.
@@ -14,7 +15,7 @@ trait DocumentFormattingEditProvider extends js.Object {
   		 * @return A set of text edits or a thenable that resolves to such. The lack of a result can be
   		 * signaled by returning `undefined`, `null`, or an empty array.
   		 */
-  def provideDocumentFormattingEdits(document: TextDocument, options: FormattingOptions, token: CancellationToken): ProviderResult[js.Array[TextEdit]]
+  def provideDocumentFormattingEdits(document: TextDocument, options: FormattingOptions, token: CancellationToken): ProviderResult[js.Array[TextEdit]] = js.native
 }
 
 object DocumentFormattingEditProvider {
@@ -23,8 +24,21 @@ object DocumentFormattingEditProvider {
     provideDocumentFormattingEdits: (TextDocument, FormattingOptions, CancellationToken) => ProviderResult[js.Array[TextEdit]]
   ): DocumentFormattingEditProvider = {
     val __obj = js.Dynamic.literal(provideDocumentFormattingEdits = js.Any.fromFunction3(provideDocumentFormattingEdits))
-  
     __obj.asInstanceOf[DocumentFormattingEditProvider]
   }
+  @scala.inline
+  implicit class DocumentFormattingEditProviderOps[Self <: DocumentFormattingEditProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProvideDocumentFormattingEdits(value: (TextDocument, FormattingOptions, CancellationToken) => ProviderResult[js.Array[TextEdit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provideDocumentFormattingEdits")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

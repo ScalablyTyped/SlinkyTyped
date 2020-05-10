@@ -1,77 +1,84 @@
 package typingsSlinky.reactLazylog.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.raw.Range
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactLazylog.lazyLogMod.LazyLogProps
+import typingsSlinky.reactLazylog.lazyLogMod.WebsocketOptions
 import typingsSlinky.reactLazylog.lazyLogMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LazyLog
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object LazyLog {
   @JSImport("react-lazylog/build/LazyLog", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    url: String,
-    caseInsensitive: js.UndefOr[Boolean] = js.undefined,
-    containerStyle: CSSProperties = null,
-    extraLines: Int | Double = null,
-    fetchOptions: RequestInit = null,
-    follow: js.UndefOr[Boolean] = js.undefined,
-    formatPart: /* text */ String => TagMod[Any] = null,
-    height: String | Double = null,
-    highlight: Double | js.Array[Double] = null,
-    highlightLineClassName: String = null,
-    lineClassName: String = null,
-    loadingComponent: js.Any = null,
-    onError: /* error */ js.Any => _ = null,
-    onHighlight: /* range */ Range => _ = null,
-    onLoad: () => _ = null,
-    overscanRowCount: Int | Double = null,
-    rowHeight: Int | Double = null,
-    scrollToLine: Int | Double = null,
-    selectableLines: js.UndefOr[Boolean] = js.undefined,
-    stream: js.UndefOr[Boolean] = js.undefined,
-    text: String = null,
-    width: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    if (!js.isUndefined(caseInsensitive)) __obj.updateDynamic("caseInsensitive")(caseInsensitive.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (extraLines != null) __obj.updateDynamic("extraLines")(extraLines.asInstanceOf[js.Any])
-    if (fetchOptions != null) __obj.updateDynamic("fetchOptions")(fetchOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(follow)) __obj.updateDynamic("follow")(follow.asInstanceOf[js.Any])
-    if (formatPart != null) __obj.updateDynamic("formatPart")(js.Any.fromFunction1(formatPart))
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (highlight != null) __obj.updateDynamic("highlight")(highlight.asInstanceOf[js.Any])
-    if (highlightLineClassName != null) __obj.updateDynamic("highlightLineClassName")(highlightLineClassName.asInstanceOf[js.Any])
-    if (lineClassName != null) __obj.updateDynamic("lineClassName")(lineClassName.asInstanceOf[js.Any])
-    if (loadingComponent != null) __obj.updateDynamic("loadingComponent")(loadingComponent.asInstanceOf[js.Any])
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onHighlight != null) __obj.updateDynamic("onHighlight")(js.Any.fromFunction1(onHighlight))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction0(onLoad))
-    if (overscanRowCount != null) __obj.updateDynamic("overscanRowCount")(overscanRowCount.asInstanceOf[js.Any])
-    if (rowHeight != null) __obj.updateDynamic("rowHeight")(rowHeight.asInstanceOf[js.Any])
-    if (scrollToLine != null) __obj.updateDynamic("scrollToLine")(scrollToLine.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectableLines)) __obj.updateDynamic("selectableLines")(selectableLines.asInstanceOf[js.Any])
-    if (!js.isUndefined(stream)) __obj.updateDynamic("stream")(stream.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def caseInsensitive(value: Boolean): this.type = set("caseInsensitive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyle(value: CSSProperties): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableSearch(value: Boolean): this.type = set("enableSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extraLines(value: Double): this.type = set("extraLines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fetchOptions(value: RequestInit): this.type = set("fetchOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def follow(value: Boolean): this.type = set("follow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatPart(value: /* text */ String => TagMod[Any]): this.type = set("formatPart", js.Any.fromFunction1(value))
+    @scala.inline
+    def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlight(value: Double | js.Array[Double]): this.type = set("highlight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def highlightLineClassName(value: String): this.type = set("highlightLineClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lineClassName(value: String): this.type = set("lineClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadingComponent(value: js.Any): this.type = set("loadingComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onError(value: /* error */ js.Any => _): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onHighlight(value: /* range */ Range => _): this.type = set("onHighlight", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoad(value: () => _): this.type = set("onLoad", js.Any.fromFunction0(value))
+    @scala.inline
+    def overscanRowCount(value: Double): this.type = set("overscanRowCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowHeight(value: Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollToLine(value: Double): this.type = set("scrollToLine", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectableLines(value: Boolean): this.type = set("selectableLines", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stream(value: Boolean): this.type = set("stream", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def websocket(value: Boolean): this.type = set("websocket", value.asInstanceOf[js.Any])
+    @scala.inline
+    def websocketOptions(value: WebsocketOptions): this.type = set("websocketOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  type Props = LazyLogProps
+  
+  def withProps(p: LazyLogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(url: String): Builder = {
+    val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LazyLogProps]))
+  }
 }
 

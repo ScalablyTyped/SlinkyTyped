@@ -1,42 +1,45 @@
 package typingsSlinky.reactImageloader.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactImageloader.mod.ImageLoaderProps
 import typingsSlinky.reactImageloader.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactImageloader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactImageloader {
   @JSImport("react-imageloader", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    src: String,
-    imgProps: js.Any = null,
-    onError: /* event */ js.Any => Unit = null,
-    onLoad: /* event */ js.Any => Unit = null,
-    preloader: /* params */ js.Any => ReactElement = null,
-    wrapper: /* props */ js.Any => ReactElement = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    if (imgProps != null) __obj.updateDynamic("imgProps")(imgProps.asInstanceOf[js.Any])
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
-    if (preloader != null) __obj.updateDynamic("preloader")(js.Any.fromFunction1(preloader))
-    if (wrapper != null) __obj.updateDynamic("wrapper")(js.Any.fromFunction1(wrapper))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def imgProps(value: js.Any): this.type = set("imgProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onError(value: /* event */ js.Any => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoad(value: /* event */ js.Any => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+    @scala.inline
+    def preloader(value: /* params */ js.Any => ReactElement): this.type = set("preloader", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapper(value: /* props */ js.Any => ReactElement): this.type = set("wrapper", js.Any.fromFunction1(value))
   }
-  type Props = ImageLoaderProps
+  
+  def withProps(p: ImageLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(src: String): Builder = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ImageLoaderProps]))
+  }
 }
 

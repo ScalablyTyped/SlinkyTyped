@@ -21,3 +21,43 @@ trait CollectionLoadOptions extends js.Object {
   var $top: js.UndefOr[Double] = js.native
 }
 
+object CollectionLoadOptions {
+  @scala.inline
+  def apply(): CollectionLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[CollectionLoadOptions]
+  }
+  @scala.inline
+  implicit class CollectionLoadOptionsOps[Self <: CollectionLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$skip(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$skip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$skip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$skip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with$top(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$top: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$top")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

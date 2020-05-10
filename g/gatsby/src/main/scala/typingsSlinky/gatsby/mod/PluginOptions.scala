@@ -5,17 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PluginOptions
   extends /* key */ StringDictionary[js.Any] {
-  var plugins: js.Array[_]
+  var plugins: js.Array[_] = js.native
 }
 
 object PluginOptions {
   @scala.inline
-  def apply(plugins: js.Array[_], StringDictionary: /* key */ StringDictionary[js.Any] = null): PluginOptions = {
+  def apply(plugins: js.Array[_]): PluginOptions = {
     val __obj = js.Dynamic.literal(plugins = plugins.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[PluginOptions]
   }
+  @scala.inline
+  implicit class PluginOptionsOps[Self <: PluginOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlugins(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

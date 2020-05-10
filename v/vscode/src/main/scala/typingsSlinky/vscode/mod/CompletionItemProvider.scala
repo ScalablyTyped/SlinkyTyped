@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CompletionItemProvider extends js.Object {
   /**
   		 * Given a completion item fill in more data, like [doc-comment](#CompletionItem.documentation)
@@ -26,7 +27,7 @@ trait CompletionItemProvider extends js.Object {
       /* token */ CancellationToken, 
       ProviderResult[CompletionItem]
     ]
-  ] = js.undefined
+  ] = js.native
   /**
   		 * Provide completion items for the given position and document.
   		 *
@@ -38,18 +39,46 @@ trait CompletionItemProvider extends js.Object {
   		 * @return An array of completions, a [completion list](#CompletionList), or a thenable that resolves to either.
   		 * The lack of a result can be signaled by returning `undefined`, `null`, or an empty array.
   		 */
-  def provideCompletionItems(document: TextDocument, position: Position, token: CancellationToken, context: CompletionContext): ProviderResult[js.Array[CompletionItem] | CompletionList]
+  def provideCompletionItems(document: TextDocument, position: Position, token: CancellationToken, context: CompletionContext): ProviderResult[js.Array[CompletionItem] | CompletionList] = js.native
 }
 
 object CompletionItemProvider {
   @scala.inline
   def apply(
-    provideCompletionItems: (TextDocument, Position, CancellationToken, CompletionContext) => ProviderResult[js.Array[CompletionItem] | CompletionList],
-    resolveCompletionItem: (/* item */ CompletionItem, /* token */ CancellationToken) => ProviderResult[CompletionItem] = null
+    provideCompletionItems: (TextDocument, Position, CancellationToken, CompletionContext) => ProviderResult[js.Array[CompletionItem] | CompletionList]
   ): CompletionItemProvider = {
     val __obj = js.Dynamic.literal(provideCompletionItems = js.Any.fromFunction4(provideCompletionItems))
-    if (resolveCompletionItem != null) __obj.updateDynamic("resolveCompletionItem")(js.Any.fromFunction2(resolveCompletionItem))
     __obj.asInstanceOf[CompletionItemProvider]
   }
+  @scala.inline
+  implicit class CompletionItemProviderOps[Self <: CompletionItemProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProvideCompletionItems(
+      value: (TextDocument, Position, CancellationToken, CompletionContext) => ProviderResult[js.Array[CompletionItem] | CompletionList]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provideCompletionItems")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withResolveCompletionItem(
+      value: (/* item */ CompletionItem, /* token */ CancellationToken) => ProviderResult[CompletionItem]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveCompletionItem")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutResolveCompletionItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveCompletionItem")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,30 +4,72 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NewMediaItemResult extends js.Object {
   /**
     * Media item created with the upload token. It's populated if no errors
     * occurred and the media item was created successfully.
     */
-  var mediaItem: js.UndefOr[MediaItem] = js.undefined
+  var mediaItem: js.UndefOr[MediaItem] = js.native
   /**
     * If an error occurred during the creation of this media item, this field
     * is  populated with information related to the error. For details regarding
     * this field, see <a href="#Status">Status</a>.
     */
-  var status: js.UndefOr[Status] = js.undefined
+  var status: js.UndefOr[Status] = js.native
   /** The upload token used to create this new media item. */
-  var uploadToken: js.UndefOr[String] = js.undefined
+  var uploadToken: js.UndefOr[String] = js.native
 }
 
 object NewMediaItemResult {
   @scala.inline
-  def apply(mediaItem: MediaItem = null, status: Status = null, uploadToken: String = null): NewMediaItemResult = {
+  def apply(): NewMediaItemResult = {
     val __obj = js.Dynamic.literal()
-    if (mediaItem != null) __obj.updateDynamic("mediaItem")(mediaItem.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (uploadToken != null) __obj.updateDynamic("uploadToken")(uploadToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[NewMediaItemResult]
   }
+  @scala.inline
+  implicit class NewMediaItemResultOps[Self <: NewMediaItemResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMediaItem(value: MediaItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMediaItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: Status): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

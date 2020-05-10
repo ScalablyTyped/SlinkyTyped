@@ -25,9 +25,9 @@ class Dropkick protected () extends js.Object {
   def add(value: String): Unit = js.native
   def add(value: String, before: String): Unit = js.native
   def add(value: String, before: Double): Unit = js.native
-  def add(value: typingsSlinky.std.Node): Unit = js.native
-  def add(value: typingsSlinky.std.Node, before: String): Unit = js.native
-  def add(value: typingsSlinky.std.Node, before: Double): Unit = js.native
+  def add(value: Node): Unit = js.native
+  def add(value: Node, before: String): Unit = js.native
+  def add(value: Node, before: Double): Unit = js.native
   def close(): Unit = js.native
   def disable(): Unit = js.native
   def disable(disabled: Boolean): Unit = js.native

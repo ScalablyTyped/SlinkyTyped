@@ -13,12 +13,10 @@ trait GoogleActionsOrdersV3VerticalsPurchasePurchaseFulfillmentInfoFulfillmentTy
 
 object GoogleActionsOrdersV3VerticalsPurchasePurchaseFulfillmentInfoFulfillmentType {
   @scala.inline
-  def DELIVERY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY = this.cast("DELIVERY")
+  def DELIVERY: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY = "DELIVERY".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DELIVERY]
   @scala.inline
-  def PICKUP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PICKUP = this.cast("PICKUP")
+  def PICKUP: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PICKUP = "PICKUP".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PICKUP]
   @scala.inline
-  def TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED = this.cast("TYPE_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TYPE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED = "TYPE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNSPECIFIED]
 }
 

@@ -43,6 +43,8 @@ trait ClusterState extends js.Object {
   val configurationsJson: js.UndefOr[Input[String]] = js.native
   /**
     * Use the `coreInstanceGroup` configuration block `instanceCount` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`coreInstanceCount`-1) as core nodes. Cannot be specified if `coreInstanceGroup` or `instanceGroup` configuration blocks are set. Default `1`
+    *
+    * @deprecated use `core_instance_group` configuration block `instance_count` argument instead
     */
   val coreInstanceCount: js.UndefOr[Input[Double]] = js.native
   /**
@@ -51,6 +53,8 @@ trait ClusterState extends js.Object {
   val coreInstanceGroup: js.UndefOr[Input[ClusterCoreInstanceGroup]] = js.native
   /**
     * Use the `coreInstanceGroup` configuration block `instanceType` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `coreInstanceGroup` or `instanceGroup` configuration blocks are set.
+    *
+    * @deprecated use `core_instance_group` configuration block `instance_type` argument instead
     */
   val coreInstanceType: js.UndefOr[Input[String]] = js.native
   /**
@@ -67,6 +71,8 @@ trait ClusterState extends js.Object {
   val ec2Attributes: js.UndefOr[Input[ClusterEc2Attributes]] = js.native
   /**
     * Use the `masterInstanceGroup` configuration block, `coreInstanceGroup` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instanceGroup` objects for each instance group in the cluster. Exactly one of `masterInstanceType` and `instanceGroup` must be specified. If `instanceGroup` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `masterInstanceGroup` or `coreInstanceGroup` configuration blocks are set. Defined below
+    *
+    * @deprecated use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead
     */
   val instanceGroups: js.UndefOr[Input[js.Array[Input[ClusterInstanceGroup]]]] = js.native
   /**
@@ -87,6 +93,8 @@ trait ClusterState extends js.Object {
   val masterInstanceGroup: js.UndefOr[Input[ClusterMasterInstanceGroup]] = js.native
   /**
     * Use the `masterInstanceGroup` configuration block `instanceType` argument instead. The EC2 instance type of the master node. Cannot be specified if `masterInstanceGroup` or `instanceGroup` configuration blocks are set.
+    *
+    * @deprecated use `master_instance_group` configuration block `instance_type` argument instead
     */
   val masterInstanceType: js.UndefOr[Input[String]] = js.native
   /**
@@ -138,72 +146,389 @@ trait ClusterState extends js.Object {
 
 object ClusterState {
   @scala.inline
-  def apply(
-    additionalInfo: Input[String] = null,
-    applications: Input[js.Array[Input[String]]] = null,
-    arn: Input[String] = null,
-    autoscalingRole: Input[String] = null,
-    bootstrapActions: Input[js.Array[Input[ClusterBootstrapAction]]] = null,
-    clusterState: Input[String] = null,
-    configurations: Input[String] = null,
-    configurationsJson: Input[String] = null,
-    coreInstanceCount: Input[Double] = null,
-    coreInstanceGroup: Input[ClusterCoreInstanceGroup] = null,
-    coreInstanceType: Input[String] = null,
-    customAmiId: Input[String] = null,
-    ebsRootVolumeSize: Input[Double] = null,
-    ec2Attributes: Input[ClusterEc2Attributes] = null,
-    instanceGroups: Input[js.Array[Input[ClusterInstanceGroup]]] = null,
-    keepJobFlowAliveWhenNoSteps: Input[Boolean] = null,
-    kerberosAttributes: Input[ClusterKerberosAttributes] = null,
-    logUri: Input[String] = null,
-    masterInstanceGroup: Input[ClusterMasterInstanceGroup] = null,
-    masterInstanceType: Input[String] = null,
-    masterPublicDns: Input[String] = null,
-    name: Input[String] = null,
-    releaseLabel: Input[String] = null,
-    scaleDownBehavior: Input[String] = null,
-    securityConfiguration: Input[String] = null,
-    serviceRole: Input[String] = null,
-    stepConcurrencyLevel: Input[Double] = null,
-    steps: Input[js.Array[Input[ClusterStep]]] = null,
-    tags: Input[StringDictionary[_]] = null,
-    terminationProtection: Input[Boolean] = null,
-    visibleToAllUsers: Input[Boolean] = null
-  ): ClusterState = {
+  def apply(): ClusterState = {
     val __obj = js.Dynamic.literal()
-    if (additionalInfo != null) __obj.updateDynamic("additionalInfo")(additionalInfo.asInstanceOf[js.Any])
-    if (applications != null) __obj.updateDynamic("applications")(applications.asInstanceOf[js.Any])
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (autoscalingRole != null) __obj.updateDynamic("autoscalingRole")(autoscalingRole.asInstanceOf[js.Any])
-    if (bootstrapActions != null) __obj.updateDynamic("bootstrapActions")(bootstrapActions.asInstanceOf[js.Any])
-    if (clusterState != null) __obj.updateDynamic("clusterState")(clusterState.asInstanceOf[js.Any])
-    if (configurations != null) __obj.updateDynamic("configurations")(configurations.asInstanceOf[js.Any])
-    if (configurationsJson != null) __obj.updateDynamic("configurationsJson")(configurationsJson.asInstanceOf[js.Any])
-    if (coreInstanceCount != null) __obj.updateDynamic("coreInstanceCount")(coreInstanceCount.asInstanceOf[js.Any])
-    if (coreInstanceGroup != null) __obj.updateDynamic("coreInstanceGroup")(coreInstanceGroup.asInstanceOf[js.Any])
-    if (coreInstanceType != null) __obj.updateDynamic("coreInstanceType")(coreInstanceType.asInstanceOf[js.Any])
-    if (customAmiId != null) __obj.updateDynamic("customAmiId")(customAmiId.asInstanceOf[js.Any])
-    if (ebsRootVolumeSize != null) __obj.updateDynamic("ebsRootVolumeSize")(ebsRootVolumeSize.asInstanceOf[js.Any])
-    if (ec2Attributes != null) __obj.updateDynamic("ec2Attributes")(ec2Attributes.asInstanceOf[js.Any])
-    if (instanceGroups != null) __obj.updateDynamic("instanceGroups")(instanceGroups.asInstanceOf[js.Any])
-    if (keepJobFlowAliveWhenNoSteps != null) __obj.updateDynamic("keepJobFlowAliveWhenNoSteps")(keepJobFlowAliveWhenNoSteps.asInstanceOf[js.Any])
-    if (kerberosAttributes != null) __obj.updateDynamic("kerberosAttributes")(kerberosAttributes.asInstanceOf[js.Any])
-    if (logUri != null) __obj.updateDynamic("logUri")(logUri.asInstanceOf[js.Any])
-    if (masterInstanceGroup != null) __obj.updateDynamic("masterInstanceGroup")(masterInstanceGroup.asInstanceOf[js.Any])
-    if (masterInstanceType != null) __obj.updateDynamic("masterInstanceType")(masterInstanceType.asInstanceOf[js.Any])
-    if (masterPublicDns != null) __obj.updateDynamic("masterPublicDns")(masterPublicDns.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (releaseLabel != null) __obj.updateDynamic("releaseLabel")(releaseLabel.asInstanceOf[js.Any])
-    if (scaleDownBehavior != null) __obj.updateDynamic("scaleDownBehavior")(scaleDownBehavior.asInstanceOf[js.Any])
-    if (securityConfiguration != null) __obj.updateDynamic("securityConfiguration")(securityConfiguration.asInstanceOf[js.Any])
-    if (serviceRole != null) __obj.updateDynamic("serviceRole")(serviceRole.asInstanceOf[js.Any])
-    if (stepConcurrencyLevel != null) __obj.updateDynamic("stepConcurrencyLevel")(stepConcurrencyLevel.asInstanceOf[js.Any])
-    if (steps != null) __obj.updateDynamic("steps")(steps.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (terminationProtection != null) __obj.updateDynamic("terminationProtection")(terminationProtection.asInstanceOf[js.Any])
-    if (visibleToAllUsers != null) __obj.updateDynamic("visibleToAllUsers")(visibleToAllUsers.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterState]
   }
+  @scala.inline
+  implicit class ClusterStateOps[Self <: ClusterState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditionalInfo(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplications(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoscalingRole(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoscalingRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoscalingRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBootstrapActions(value: Input[js.Array[Input[ClusterBootstrapAction]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBootstrapActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bootstrapActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterState(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigurations(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigurationsJson(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationsJson")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationsJson: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationsJson")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoreInstanceCount(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreInstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoreInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreInstanceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoreInstanceGroup(value: Input[ClusterCoreInstanceGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreInstanceGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoreInstanceGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreInstanceGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoreInstanceType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreInstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoreInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coreInstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomAmiId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customAmiId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomAmiId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customAmiId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEbsRootVolumeSize(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ebsRootVolumeSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEbsRootVolumeSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ebsRootVolumeSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEc2Attributes(value: Input[ClusterEc2Attributes]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2Attributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2Attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceGroups(value: Input[js.Array[Input[ClusterInstanceGroup]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepJobFlowAliveWhenNoSteps(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepJobFlowAliveWhenNoSteps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepJobFlowAliveWhenNoSteps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepJobFlowAliveWhenNoSteps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKerberosAttributes(value: Input[ClusterKerberosAttributes]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kerberosAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKerberosAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kerberosAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogUri(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterInstanceGroup(value: Input[ClusterMasterInstanceGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterInstanceGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterInstanceGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterInstanceGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterInstanceType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterInstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterInstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterPublicDns(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterPublicDns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterPublicDns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterPublicDns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReleaseLabel(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReleaseLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releaseLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleDownBehavior(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleDownBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleDownBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleDownBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityConfiguration(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceRole(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStepConcurrencyLevel(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepConcurrencyLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStepConcurrencyLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepConcurrencyLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSteps(value: Input[js.Array[Input[ClusterStep]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSteps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminationProtection(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationProtection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminationProtection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationProtection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibleToAllUsers(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleToAllUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibleToAllUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleToAllUsers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

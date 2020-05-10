@@ -14,14 +14,12 @@ trait AnimationDirection extends js.Object
 
 object AnimationDirection {
   @scala.inline
-  def alternate: typingsSlinky.ionicCore.ionicCoreStrings.alternate = this.cast("alternate")
+  def alternate: typingsSlinky.ionicCore.ionicCoreStrings.alternate = "alternate".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.alternate]
   @scala.inline
-  def `alternate-reverse`: typingsSlinky.ionicCore.ionicCoreStrings.`alternate-reverse` = this.cast("alternate-reverse")
+  def `alternate-reverse`: typingsSlinky.ionicCore.ionicCoreStrings.`alternate-reverse` = "alternate-reverse".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.`alternate-reverse`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def normal: typingsSlinky.ionicCore.ionicCoreStrings.normal = "normal".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.ionicCore.ionicCoreStrings.normal = this.cast("normal")
-  @scala.inline
-  def reverse: typingsSlinky.ionicCore.ionicCoreStrings.reverse = this.cast("reverse")
+  def reverse: typingsSlinky.ionicCore.ionicCoreStrings.reverse = "reverse".asInstanceOf[typingsSlinky.ionicCore.ionicCoreStrings.reverse]
 }
 

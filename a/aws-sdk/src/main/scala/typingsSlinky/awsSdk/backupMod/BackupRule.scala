@@ -46,26 +46,113 @@ trait BackupRule extends js.Object {
 
 object BackupRule {
   @scala.inline
-  def apply(
-    RuleName: BackupRuleName,
-    TargetBackupVaultName: BackupVaultName,
-    CompletionWindowMinutes: Int | Double = null,
-    CopyActions: CopyActions = null,
-    Lifecycle: Lifecycle = null,
-    RecoveryPointTags: Tags = null,
-    RuleId: String = null,
-    ScheduleExpression: CronExpression = null,
-    StartWindowMinutes: Int | Double = null
-  ): BackupRule = {
+  def apply(RuleName: BackupRuleName, TargetBackupVaultName: BackupVaultName): BackupRule = {
     val __obj = js.Dynamic.literal(RuleName = RuleName.asInstanceOf[js.Any], TargetBackupVaultName = TargetBackupVaultName.asInstanceOf[js.Any])
-    if (CompletionWindowMinutes != null) __obj.updateDynamic("CompletionWindowMinutes")(CompletionWindowMinutes.asInstanceOf[js.Any])
-    if (CopyActions != null) __obj.updateDynamic("CopyActions")(CopyActions.asInstanceOf[js.Any])
-    if (Lifecycle != null) __obj.updateDynamic("Lifecycle")(Lifecycle.asInstanceOf[js.Any])
-    if (RecoveryPointTags != null) __obj.updateDynamic("RecoveryPointTags")(RecoveryPointTags.asInstanceOf[js.Any])
-    if (RuleId != null) __obj.updateDynamic("RuleId")(RuleId.asInstanceOf[js.Any])
-    if (ScheduleExpression != null) __obj.updateDynamic("ScheduleExpression")(ScheduleExpression.asInstanceOf[js.Any])
-    if (StartWindowMinutes != null) __obj.updateDynamic("StartWindowMinutes")(StartWindowMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackupRule]
   }
+  @scala.inline
+  implicit class BackupRuleOps[Self <: BackupRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRuleName(value: BackupRuleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetBackupVaultName(value: BackupVaultName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetBackupVaultName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompletionWindowMinutes(value: WindowMinutes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionWindowMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompletionWindowMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompletionWindowMinutes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCopyActions(value: CopyActions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyActions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecycle(value: Lifecycle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Lifecycle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Lifecycle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecoveryPointTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryPointTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecoveryPointTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecoveryPointTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleExpression(value: CronExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScheduleExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartWindowMinutes(value: WindowMinutes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartWindowMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartWindowMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartWindowMinutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,18 +26,65 @@ trait ClientData extends js.Object {
 
 object ClientData {
   @scala.inline
-  def apply(
-    Comment: String = null,
-    UploadEnd: js.Date = null,
-    UploadSize: Int | scala.Double = null,
-    UploadStart: js.Date = null
-  ): ClientData = {
+  def apply(): ClientData = {
     val __obj = js.Dynamic.literal()
-    if (Comment != null) __obj.updateDynamic("Comment")(Comment.asInstanceOf[js.Any])
-    if (UploadEnd != null) __obj.updateDynamic("UploadEnd")(UploadEnd.asInstanceOf[js.Any])
-    if (UploadSize != null) __obj.updateDynamic("UploadSize")(UploadSize.asInstanceOf[js.Any])
-    if (UploadStart != null) __obj.updateDynamic("UploadStart")(UploadStart.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientData]
   }
+  @scala.inline
+  implicit class ClientDataOps[Self <: ClientData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadEnd(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadStart(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadStart")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

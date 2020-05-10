@@ -23,11 +23,41 @@ trait SchemaCsv extends js.Object {
 
 object SchemaCsv {
   @scala.inline
-  def apply(dataRows: js.Array[SchemaCsvRow] = null, headers: js.Array[String] = null): SchemaCsv = {
+  def apply(): SchemaCsv = {
     val __obj = js.Dynamic.literal()
-    if (dataRows != null) __obj.updateDynamic("dataRows")(dataRows.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCsv]
   }
+  @scala.inline
+  implicit class SchemaCsvOps[Self <: SchemaCsv] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataRows(value: js.Array[SchemaCsvRow]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

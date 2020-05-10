@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ILocalHexBlock extends js.Object {
   var isHexOnly: scala.Boolean = js.native
-  var valueHex: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var valueHex: js.typedarray.ArrayBuffer = js.native
   /**
     * Base function for converting block from BER encoded array of bytes
     * 
@@ -18,7 +18,7 @@ trait ILocalHexBlock extends js.Object {
     * 
     * @memberOf LocalHexBlockMixin
     */
-  def fromBER(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
+  def fromBER(inputBuffer: js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
   /**
     * Encoding of current ASN.1 block into ASN.1 encoded array (BER rules)
     * 
@@ -27,8 +27,8 @@ trait ILocalHexBlock extends js.Object {
     * 
     * @memberOf LocalHexBlockMixin
     */
-  def toBER(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def toBER(sizeOnly: scala.Boolean): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def toBER(): js.typedarray.ArrayBuffer = js.native
+  def toBER(sizeOnly: scala.Boolean): js.typedarray.ArrayBuffer = js.native
   /**
     * Convertion for the block to JSON object
     * @returns {*}

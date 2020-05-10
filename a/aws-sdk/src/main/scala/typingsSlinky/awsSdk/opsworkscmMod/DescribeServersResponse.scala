@@ -18,11 +18,41 @@ trait DescribeServersResponse extends js.Object {
 
 object DescribeServersResponse {
   @scala.inline
-  def apply(NextToken: String = null, Servers: Servers = null): DescribeServersResponse = {
+  def apply(): DescribeServersResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (Servers != null) __obj.updateDynamic("Servers")(Servers.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeServersResponse]
   }
+  @scala.inline
+  implicit class DescribeServersResponseOps[Self <: DescribeServersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServers(value: Servers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Servers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Servers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

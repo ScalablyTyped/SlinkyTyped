@@ -7,51 +7,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AotCompilerOptions extends js.Object {
-  var allowEmptyCodegenFiles: js.UndefOr[Boolean] = js.undefined
-  var createExternalSymbolFactoryReexports: js.UndefOr[Boolean] = js.undefined
-  var enableIvy: js.UndefOr[Boolean | ngtsc | tsc] = js.undefined
-  var enableSummariesForJit: js.UndefOr[Boolean] = js.undefined
-  var fullTemplateTypeCheck: js.UndefOr[Boolean] = js.undefined
-  var i18nFormat: js.UndefOr[String] = js.undefined
-  var i18nUseExternalIds: js.UndefOr[Boolean] = js.undefined
-  var locale: js.UndefOr[String] = js.undefined
-  var missingTranslation: js.UndefOr[MissingTranslationStrategy] = js.undefined
-  var preserveWhitespaces: js.UndefOr[Boolean] = js.undefined
-  var strictInjectionParameters: js.UndefOr[Boolean] = js.undefined
-  var translations: js.UndefOr[String] = js.undefined
+  var allowEmptyCodegenFiles: js.UndefOr[Boolean] = js.native
+  var createExternalSymbolFactoryReexports: js.UndefOr[Boolean] = js.native
+  var enableIvy: js.UndefOr[Boolean | ngtsc | tsc] = js.native
+  var enableSummariesForJit: js.UndefOr[Boolean] = js.native
+  var fullTemplateTypeCheck: js.UndefOr[Boolean] = js.native
+  var i18nFormat: js.UndefOr[String] = js.native
+  var i18nUseExternalIds: js.UndefOr[Boolean] = js.native
+  var locale: js.UndefOr[String] = js.native
+  var missingTranslation: js.UndefOr[MissingTranslationStrategy] = js.native
+  var preserveWhitespaces: js.UndefOr[Boolean] = js.native
+  var strictInjectionParameters: js.UndefOr[Boolean] = js.native
+  var translations: js.UndefOr[String] = js.native
 }
 
 object AotCompilerOptions {
   @scala.inline
-  def apply(
-    allowEmptyCodegenFiles: js.UndefOr[Boolean] = js.undefined,
-    createExternalSymbolFactoryReexports: js.UndefOr[Boolean] = js.undefined,
-    enableIvy: Boolean | ngtsc | tsc = null,
-    enableSummariesForJit: js.UndefOr[Boolean] = js.undefined,
-    fullTemplateTypeCheck: js.UndefOr[Boolean] = js.undefined,
-    i18nFormat: String = null,
-    i18nUseExternalIds: js.UndefOr[Boolean] = js.undefined,
-    locale: String = null,
-    missingTranslation: MissingTranslationStrategy = null,
-    preserveWhitespaces: js.UndefOr[Boolean] = js.undefined,
-    strictInjectionParameters: js.UndefOr[Boolean] = js.undefined,
-    translations: String = null
-  ): AotCompilerOptions = {
+  def apply(): AotCompilerOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowEmptyCodegenFiles)) __obj.updateDynamic("allowEmptyCodegenFiles")(allowEmptyCodegenFiles.asInstanceOf[js.Any])
-    if (!js.isUndefined(createExternalSymbolFactoryReexports)) __obj.updateDynamic("createExternalSymbolFactoryReexports")(createExternalSymbolFactoryReexports.asInstanceOf[js.Any])
-    if (enableIvy != null) __obj.updateDynamic("enableIvy")(enableIvy.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableSummariesForJit)) __obj.updateDynamic("enableSummariesForJit")(enableSummariesForJit.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullTemplateTypeCheck)) __obj.updateDynamic("fullTemplateTypeCheck")(fullTemplateTypeCheck.asInstanceOf[js.Any])
-    if (i18nFormat != null) __obj.updateDynamic("i18nFormat")(i18nFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(i18nUseExternalIds)) __obj.updateDynamic("i18nUseExternalIds")(i18nUseExternalIds.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (missingTranslation != null) __obj.updateDynamic("missingTranslation")(missingTranslation.asInstanceOf[js.Any])
-    if (!js.isUndefined(preserveWhitespaces)) __obj.updateDynamic("preserveWhitespaces")(preserveWhitespaces.asInstanceOf[js.Any])
-    if (!js.isUndefined(strictInjectionParameters)) __obj.updateDynamic("strictInjectionParameters")(strictInjectionParameters.asInstanceOf[js.Any])
-    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[AotCompilerOptions]
   }
+  @scala.inline
+  implicit class AotCompilerOptionsOps[Self <: AotCompilerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowEmptyCodegenFiles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEmptyCodegenFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowEmptyCodegenFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEmptyCodegenFiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateExternalSymbolFactoryReexports(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createExternalSymbolFactoryReexports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateExternalSymbolFactoryReexports: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createExternalSymbolFactoryReexports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableIvy(value: Boolean | ngtsc | tsc): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableIvy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableIvy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableIvy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableSummariesForJit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSummariesForJit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableSummariesForJit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSummariesForJit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullTemplateTypeCheck(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullTemplateTypeCheck")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullTemplateTypeCheck: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullTemplateTypeCheck")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withI18nFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18nFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutI18nFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18nFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withI18nUseExternalIds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18nUseExternalIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutI18nUseExternalIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i18nUseExternalIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMissingTranslation(value: MissingTranslationStrategy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("missingTranslation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMissingTranslation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("missingTranslation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreserveWhitespaces(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveWhitespaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreserveWhitespaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preserveWhitespaces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrictInjectionParameters(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictInjectionParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrictInjectionParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictInjectionParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslations(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

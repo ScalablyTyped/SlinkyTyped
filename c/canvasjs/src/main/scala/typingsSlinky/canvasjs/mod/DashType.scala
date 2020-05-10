@@ -21,28 +21,26 @@ trait DashType extends js.Object
 
 object DashType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dash: typingsSlinky.canvasjs.canvasjsStrings.dash = "dash".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.dash]
   @scala.inline
-  def dash: typingsSlinky.canvasjs.canvasjsStrings.dash = this.cast("dash")
+  def dashDot: typingsSlinky.canvasjs.canvasjsStrings.dashDot = "dashDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.dashDot]
   @scala.inline
-  def dashDot: typingsSlinky.canvasjs.canvasjsStrings.dashDot = this.cast("dashDot")
+  def dot: typingsSlinky.canvasjs.canvasjsStrings.dot = "dot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.dot]
   @scala.inline
-  def dot: typingsSlinky.canvasjs.canvasjsStrings.dot = this.cast("dot")
+  def longDash: typingsSlinky.canvasjs.canvasjsStrings.longDash = "longDash".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.longDash]
   @scala.inline
-  def longDash: typingsSlinky.canvasjs.canvasjsStrings.longDash = this.cast("longDash")
+  def longDashDot: typingsSlinky.canvasjs.canvasjsStrings.longDashDot = "longDashDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.longDashDot]
   @scala.inline
-  def longDashDot: typingsSlinky.canvasjs.canvasjsStrings.longDashDot = this.cast("longDashDot")
+  def longDashDotDot: typingsSlinky.canvasjs.canvasjsStrings.longDashDotDot = "longDashDotDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.longDashDotDot]
   @scala.inline
-  def longDashDotDot: typingsSlinky.canvasjs.canvasjsStrings.longDashDotDot = this.cast("longDashDotDot")
+  def shortDash: typingsSlinky.canvasjs.canvasjsStrings.shortDash = "shortDash".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.shortDash]
   @scala.inline
-  def shortDash: typingsSlinky.canvasjs.canvasjsStrings.shortDash = this.cast("shortDash")
+  def shortDashDot: typingsSlinky.canvasjs.canvasjsStrings.shortDashDot = "shortDashDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.shortDashDot]
   @scala.inline
-  def shortDashDot: typingsSlinky.canvasjs.canvasjsStrings.shortDashDot = this.cast("shortDashDot")
+  def shortDashDotDot: typingsSlinky.canvasjs.canvasjsStrings.shortDashDotDot = "shortDashDotDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.shortDashDotDot]
   @scala.inline
-  def shortDashDotDot: typingsSlinky.canvasjs.canvasjsStrings.shortDashDotDot = this.cast("shortDashDotDot")
+  def shortDot: typingsSlinky.canvasjs.canvasjsStrings.shortDot = "shortDot".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.shortDot]
   @scala.inline
-  def shortDot: typingsSlinky.canvasjs.canvasjsStrings.shortDot = this.cast("shortDot")
-  @scala.inline
-  def solid: typingsSlinky.canvasjs.canvasjsStrings.solid = this.cast("solid")
+  def solid: typingsSlinky.canvasjs.canvasjsStrings.solid = "solid".asInstanceOf[typingsSlinky.canvasjs.canvasjsStrings.solid]
 }
 

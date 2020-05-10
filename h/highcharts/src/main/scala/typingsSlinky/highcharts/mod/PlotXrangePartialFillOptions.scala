@@ -4,20 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotXrangePartialFillOptions extends js.Object {
   /**
     * (Highcharts, Highstock, Gantt) The fill color to be used for partial
     * fills. Defaults to a darker shade of the point color.
     */
-  var fill: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.undefined
+  var fill: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
 }
 
 object PlotXrangePartialFillOptions {
   @scala.inline
-  def apply(fill: ColorString | GradientColorObject | PatternObject = null): PlotXrangePartialFillOptions = {
+  def apply(): PlotXrangePartialFillOptions = {
     val __obj = js.Dynamic.literal()
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotXrangePartialFillOptions]
   }
+  @scala.inline
+  implicit class PlotXrangePartialFillOptionsOps[Self <: PlotXrangePartialFillOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFill(value: ColorString | GradientColorObject | PatternObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

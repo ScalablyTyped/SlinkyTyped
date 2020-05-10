@@ -16,16 +16,14 @@ trait AlertFeedback extends js.Object
 
 object AlertFeedback {
   @scala.inline
-  def benignPositive: typingsSlinky.microsoftGraph.microsoftGraphStrings.benignPositive = this.cast("benignPositive")
+  def benignPositive: typingsSlinky.microsoftGraph.microsoftGraphStrings.benignPositive = "benignPositive".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.benignPositive]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def falsePositive: typingsSlinky.microsoftGraph.microsoftGraphStrings.falsePositive = "falsePositive".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.falsePositive]
   @scala.inline
-  def falsePositive: typingsSlinky.microsoftGraph.microsoftGraphStrings.falsePositive = this.cast("falsePositive")
+  def truePositive: typingsSlinky.microsoftGraph.microsoftGraphStrings.truePositive = "truePositive".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.truePositive]
   @scala.inline
-  def truePositive: typingsSlinky.microsoftGraph.microsoftGraphStrings.truePositive = this.cast("truePositive")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

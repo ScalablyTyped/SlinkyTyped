@@ -34,18 +34,65 @@ trait SchemaDealTermsGuaranteedFixedPriceTermsBillingInfo extends js.Object {
 
 object SchemaDealTermsGuaranteedFixedPriceTermsBillingInfo {
   @scala.inline
-  def apply(
-    currencyConversionTimeMs: String = null,
-    dfpLineItemId: String = null,
-    originalContractedQuantity: String = null,
-    price: SchemaPrice = null
-  ): SchemaDealTermsGuaranteedFixedPriceTermsBillingInfo = {
+  def apply(): SchemaDealTermsGuaranteedFixedPriceTermsBillingInfo = {
     val __obj = js.Dynamic.literal()
-    if (currencyConversionTimeMs != null) __obj.updateDynamic("currencyConversionTimeMs")(currencyConversionTimeMs.asInstanceOf[js.Any])
-    if (dfpLineItemId != null) __obj.updateDynamic("dfpLineItemId")(dfpLineItemId.asInstanceOf[js.Any])
-    if (originalContractedQuantity != null) __obj.updateDynamic("originalContractedQuantity")(originalContractedQuantity.asInstanceOf[js.Any])
-    if (price != null) __obj.updateDynamic("price")(price.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDealTermsGuaranteedFixedPriceTermsBillingInfo]
   }
+  @scala.inline
+  implicit class SchemaDealTermsGuaranteedFixedPriceTermsBillingInfoOps[Self <: SchemaDealTermsGuaranteedFixedPriceTermsBillingInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrencyConversionTimeMs(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyConversionTimeMs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyConversionTimeMs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyConversionTimeMs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDfpLineItemId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dfpLineItemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDfpLineItemId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dfpLineItemId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalContractedQuantity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalContractedQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalContractedQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalContractedQuantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrice(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

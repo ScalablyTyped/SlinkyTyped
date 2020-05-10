@@ -70,40 +70,197 @@ trait DescribeTypeOutput extends js.Object {
 
 object DescribeTypeOutput {
   @scala.inline
-  def apply(
-    Arn: TypeArn = null,
-    DefaultVersionId: TypeVersionId = null,
-    DeprecatedStatus: DeprecatedStatus = null,
-    Description: Description = null,
-    DocumentationUrl: OptionalSecureUrl = null,
-    ExecutionRoleArn: RoleArn = null,
-    LastUpdated: js.Date = null,
-    LoggingConfig: LoggingConfig = null,
-    ProvisioningType: ProvisioningType = null,
-    Schema: TypeSchema = null,
-    SourceUrl: OptionalSecureUrl = null,
-    TimeCreated: js.Date = null,
-    Type: RegistryType = null,
-    TypeName: TypeName = null,
-    Visibility: Visibility = null
-  ): DescribeTypeOutput = {
+  def apply(): DescribeTypeOutput = {
     val __obj = js.Dynamic.literal()
-    if (Arn != null) __obj.updateDynamic("Arn")(Arn.asInstanceOf[js.Any])
-    if (DefaultVersionId != null) __obj.updateDynamic("DefaultVersionId")(DefaultVersionId.asInstanceOf[js.Any])
-    if (DeprecatedStatus != null) __obj.updateDynamic("DeprecatedStatus")(DeprecatedStatus.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (DocumentationUrl != null) __obj.updateDynamic("DocumentationUrl")(DocumentationUrl.asInstanceOf[js.Any])
-    if (ExecutionRoleArn != null) __obj.updateDynamic("ExecutionRoleArn")(ExecutionRoleArn.asInstanceOf[js.Any])
-    if (LastUpdated != null) __obj.updateDynamic("LastUpdated")(LastUpdated.asInstanceOf[js.Any])
-    if (LoggingConfig != null) __obj.updateDynamic("LoggingConfig")(LoggingConfig.asInstanceOf[js.Any])
-    if (ProvisioningType != null) __obj.updateDynamic("ProvisioningType")(ProvisioningType.asInstanceOf[js.Any])
-    if (Schema != null) __obj.updateDynamic("Schema")(Schema.asInstanceOf[js.Any])
-    if (SourceUrl != null) __obj.updateDynamic("SourceUrl")(SourceUrl.asInstanceOf[js.Any])
-    if (TimeCreated != null) __obj.updateDynamic("TimeCreated")(TimeCreated.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
-    if (TypeName != null) __obj.updateDynamic("TypeName")(TypeName.asInstanceOf[js.Any])
-    if (Visibility != null) __obj.updateDynamic("Visibility")(Visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTypeOutput]
   }
+  @scala.inline
+  implicit class DescribeTypeOutputOps[Self <: DescribeTypeOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: TypeArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultVersionId(value: TypeVersionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultVersionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultVersionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultVersionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeprecatedStatus(value: DeprecatedStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeprecatedStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeprecatedStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeprecatedStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentationUrl(value: OptionalSecureUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentationUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentationUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentationUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionRoleArn(value: RoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdated(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggingConfig(value: LoggingConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoggingConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoggingConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisioningType(value: ProvisioningType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisioningType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisioningType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: TypeSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceUrl(value: OptionalSecureUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeCreated(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeCreated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeCreated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: RegistryType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeName(value: TypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibility(value: Visibility): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Visibility")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,338 +4,685 @@ import typingsSlinky.devextreme.AnonActionType
 import typingsSlinky.devextreme.AnonAllowMouseWheel
 import typingsSlinky.devextreme.AnonArgument
 import typingsSlinky.devextreme.AnonAxis
-import typingsSlinky.devextreme.AnonCancelComponentData
 import typingsSlinky.devextreme.AnonCheckTypeForAllData
 import typingsSlinky.devextreme.AnonComponentDxChart
-import typingsSlinky.devextreme.AnonComponentTElementDxElement
-import typingsSlinky.devextreme.AnonComponentTElementDxElementModelAny
 import typingsSlinky.devextreme.AnonCustomizeSeries
-import typingsSlinky.devextreme.AnonDuration
-import typingsSlinky.devextreme.AnonElement
-import typingsSlinky.devextreme.AnonElementModelTarget
-import typingsSlinky.devextreme.AnonElementTarget
 import typingsSlinky.devextreme.AnonEventJQueryEventModel
-import typingsSlinky.devextreme.AnonFormatModel
 import typingsSlinky.devextreme.AnonHorizontalLine
-import typingsSlinky.devextreme.AnonModel
-import typingsSlinky.devextreme.AnonModelTarget
-import typingsSlinky.devextreme.AnonName
 import typingsSlinky.devextreme.AnonOffset
-import typingsSlinky.devextreme.AnonTargetAny
-import typingsSlinky.devextreme.devextremeStrings.Bright
-import typingsSlinky.devextreme.devextremeStrings.Carmine
-import typingsSlinky.devextreme.devextremeStrings.Default
-import typingsSlinky.devextreme.devextremeStrings.Material
-import typingsSlinky.devextreme.devextremeStrings.Ocean
-import typingsSlinky.devextreme.devextremeStrings.Office
-import typingsSlinky.devextreme.devextremeStrings.Pastel
-import typingsSlinky.devextreme.devextremeStrings.Soft
-import typingsSlinky.devextreme.devextremeStrings.Vintage
-import typingsSlinky.devextreme.devextremeStrings.Violet
-import typingsSlinky.devextreme.devextremeStrings.`Dark Moon`
-import typingsSlinky.devextreme.devextremeStrings.`Dark Violet`
-import typingsSlinky.devextreme.devextremeStrings.`Green Mist`
-import typingsSlinky.devextreme.devextremeStrings.`Harmony Light`
-import typingsSlinky.devextreme.devextremeStrings.`Soft Blue`
-import typingsSlinky.devextreme.devextremeStrings.`Soft Pastel`
 import typingsSlinky.devextreme.devextremeStrings.all
-import typingsSlinky.devextreme.devextremeStrings.alternate
-import typingsSlinky.devextreme.devextremeStrings.blend
-import typingsSlinky.devextreme.devextremeStrings.extrapolate
-import typingsSlinky.devextreme.devextremeStrings.genericDotcarmine
-import typingsSlinky.devextreme.devextremeStrings.genericDotcontrast
-import typingsSlinky.devextreme.devextremeStrings.genericDotdark
-import typingsSlinky.devextreme.devextremeStrings.genericDotdarkmoon
-import typingsSlinky.devextreme.devextremeStrings.genericDotdarkviolet
-import typingsSlinky.devextreme.devextremeStrings.genericDotgreenmist
-import typingsSlinky.devextreme.devextremeStrings.genericDotlight
-import typingsSlinky.devextreme.devextremeStrings.genericDotsoftblue
 import typingsSlinky.devextreme.devextremeStrings.hide
-import typingsSlinky.devextreme.devextremeStrings.ios7Dotdefault
-import typingsSlinky.devextreme.devextremeStrings.materialDotblueDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotlimeDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotorangeDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDotpurpleDotlight
-import typingsSlinky.devextreme.devextremeStrings.materialDottealDotlight
 import typingsSlinky.devextreme.devextremeStrings.mouse
 import typingsSlinky.devextreme.devextremeStrings.multiple
 import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.devextremeStrings.single_
 import typingsSlinky.devextreme.devextremeStrings.stack
 import typingsSlinky.devextreme.devextremeStrings.touch
-import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
-import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxChartOptions extends BaseChartOptions[dxChart] {
   /** Specifies whether to adjust the value axis's visualRange when the argument axis is being zoomed or panned. */
-  var adjustOnZoom: js.UndefOr[Boolean] = js.undefined
+  var adjustOnZoom: js.UndefOr[Boolean] = js.native
   /** Specifies the annotation collection. */
-  var annotations: js.UndefOr[js.Array[dxChartAnnotationConfig | _]] = js.undefined
+  var annotations: js.UndefOr[js.Array[dxChartAnnotationConfig | _]] = js.native
   /** Configures the argument axis. */
-  var argumentAxis: js.UndefOr[dxChartArgumentAxis] = js.undefined
+  var argumentAxis: js.UndefOr[dxChartArgumentAxis] = js.native
   /** Specifies whether to hide series point markers automatically to reduce visual clutter. */
-  var autoHidePointMarkers: js.UndefOr[Boolean] = js.undefined
+  var autoHidePointMarkers: js.UndefOr[Boolean] = js.native
   /** Controls the padding and consequently the width of a group of bars with the same argument using relative units. Ignored if the barGroupWidth option is set. */
-  var barGroupPadding: js.UndefOr[Double] = js.undefined
+  var barGroupPadding: js.UndefOr[Double] = js.native
   /** Specifies a fixed width for groups of bars with the same argument, measured in pixels. Takes precedence over the barGroupPadding option. */
-  var barGroupWidth: js.UndefOr[Double] = js.undefined
+  var barGroupWidth: js.UndefOr[Double] = js.native
   /** @deprecated Use CommonSeries.barPadding instead. */
   /** Controls the width of bars in the widget. Applies only to bar-like series and when the equalBarWidth option is true. */
-  var barWidth: js.UndefOr[Double] = js.undefined
+  var barWidth: js.UndefOr[Double] = js.native
   /** Specifies settings common for all annotations in the chart. */
-  var commonAnnotationSettings: js.UndefOr[dxChartCommonAnnotationConfig] = js.undefined
+  var commonAnnotationSettings: js.UndefOr[dxChartCommonAnnotationConfig] = js.native
   /** Defines common settings for both the argument and value axis in a chart. */
-  var commonAxisSettings: js.UndefOr[dxChartCommonAxisSettings] = js.undefined
+  var commonAxisSettings: js.UndefOr[dxChartCommonAxisSettings] = js.native
   /** Defines common settings for all panes in a chart. */
-  var commonPaneSettings: js.UndefOr[dxChartCommonPaneSettings] = js.undefined
+  var commonPaneSettings: js.UndefOr[dxChartCommonPaneSettings] = js.native
   /** Specifies settings common for all series in the chart. */
-  var commonSeriesSettings: js.UndefOr[dxChartCommonSeriesSettings] = js.undefined
+  var commonSeriesSettings: js.UndefOr[dxChartCommonSeriesSettings] = js.native
   /** Colors the background of the chart container. */
-  var containerBackgroundColor: js.UndefOr[String] = js.undefined
+  var containerBackgroundColor: js.UndefOr[String] = js.native
   /** Configures the crosshair feature. */
-  var crosshair: js.UndefOr[AnonHorizontalLine] = js.undefined
+  var crosshair: js.UndefOr[AnonHorizontalLine] = js.native
   /** Customizes an individual annotation. */
   var customizeAnnotation: js.UndefOr[
     js.Function1[/* annotation */ dxChartAnnotationConfig | js.Any, dxChartAnnotationConfig]
-  ] = js.undefined
+  ] = js.native
   /** Processes data before visualizing it. */
-  var dataPrepareSettings: js.UndefOr[AnonCheckTypeForAllData] = js.undefined
+  var dataPrepareSettings: js.UndefOr[AnonCheckTypeForAllData] = js.native
   /** Specifies which pane should be used by default. */
-  var defaultPane: js.UndefOr[String] = js.undefined
+  var defaultPane: js.UndefOr[String] = js.native
   /** @deprecated Use CommonSeries.ignoreEmptyPoints instead. */
   /** Specifies whether all bars should have equal width, even if some values are missing from a series. Applies only to bar-like series. */
-  var equalBarWidth: js.UndefOr[Boolean] = js.undefined
+  var equalBarWidth: js.UndefOr[Boolean] = js.native
   /** Specifies the options of a chart's legend. */
   @JSName("legend")
-  var legend_dxChartOptions: js.UndefOr[dxChartLegend] = js.undefined
+  var legend_dxChartOptions: js.UndefOr[dxChartLegend] = js.native
   /** Specifies a coefficient determining the diameter of the largest bubble. */
-  var maxBubbleSize: js.UndefOr[Double] = js.undefined
+  var maxBubbleSize: js.UndefOr[Double] = js.native
   /** Specifies the diameter of the smallest bubble measured in pixels. */
-  var minBubbleSize: js.UndefOr[Double] = js.undefined
+  var minBubbleSize: js.UndefOr[Double] = js.native
   /** Forces the widget to treat negative values as zeroes. Applies to stacked-like series only. */
-  var negativesAsZeroes: js.UndefOr[Boolean] = js.undefined
+  var negativesAsZeroes: js.UndefOr[Boolean] = js.native
   /** A function that is executed when a label on the argument axis is clicked or tapped. */
-  var onArgumentAxisClick: js.UndefOr[(js.Function1[/* e */ AnonArgument, _]) | String] = js.undefined
+  var onArgumentAxisClick: js.UndefOr[(js.Function1[/* e */ AnonArgument, _]) | String] = js.native
   /** A function that is executed when a legend item is clicked or tapped. */
-  var onLegendClick: js.UndefOr[(js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String] = js.undefined
+  var onLegendClick: js.UndefOr[(js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String] = js.native
   /** A function that is executed when a series is clicked or tapped. */
-  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String] = js.undefined
+  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String] = js.native
   /** A function that is executed after the pointer enters or leaves a series. */
-  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxChart, _]] = js.undefined
+  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxChart, _]] = js.native
   /** A function that is executed when a series is selected or selection is canceled. */
-  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxChart, _]] = js.undefined
+  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxChart, _]] = js.native
   /** A function that is executed when zooming or panning ends. */
-  var onZoomEnd: js.UndefOr[js.Function1[/* e */ AnonActionType, _]] = js.undefined
+  var onZoomEnd: js.UndefOr[js.Function1[/* e */ AnonActionType, _]] = js.native
   /** A function that is executed when zooming or panning begins. */
-  var onZoomStart: js.UndefOr[js.Function1[/* e */ AnonAxis, _]] = js.undefined
+  var onZoomStart: js.UndefOr[js.Function1[/* e */ AnonAxis, _]] = js.native
   /** Declares a collection of panes. */
-  var panes: js.UndefOr[dxChartPanes | js.Array[dxChartPanes]] = js.undefined
+  var panes: js.UndefOr[dxChartPanes | js.Array[dxChartPanes]] = js.native
   /** Specifies whether panes can be resized if other chart elements require more space after zooming or panning. */
-  var resizePanesOnZoom: js.UndefOr[Boolean] = js.undefined
+  var resizePanesOnZoom: js.UndefOr[Boolean] = js.native
   /** Specifies how the chart must behave when series point labels overlap. */
-  var resolveLabelOverlapping: js.UndefOr[hide | none | stack] = js.undefined
+  var resolveLabelOverlapping: js.UndefOr[hide | none | stack] = js.native
   /** Swaps the axes around making the value axis horizontal and the argument axis vertical. */
-  var rotated: js.UndefOr[Boolean] = js.undefined
+  var rotated: js.UndefOr[Boolean] = js.native
   /** Specifies the settings of the scroll bar. */
-  var scrollBar: js.UndefOr[AnonOffset] = js.undefined
+  var scrollBar: js.UndefOr[AnonOffset] = js.native
   /** @deprecated Use the zoomAndPan option instead. */
   /** Enables scrolling in your chart. */
-  var scrollingMode: js.UndefOr[all | mouse | none | touch] = js.undefined
+  var scrollingMode: js.UndefOr[all | mouse | none | touch] = js.native
   /** Specifies whether a single series or multiple series can be selected in the chart. */
-  var seriesSelectionMode: js.UndefOr[multiple | single_] = js.undefined
+  var seriesSelectionMode: js.UndefOr[multiple | single_] = js.native
   /** Defines options for the series template. */
-  var seriesTemplate: js.UndefOr[AnonCustomizeSeries] = js.undefined
+  var seriesTemplate: js.UndefOr[AnonCustomizeSeries] = js.native
   /** Specifies options for Chart widget series. */
   @JSName("series")
-  var series_dxChartOptions: js.UndefOr[ChartSeries | js.Array[ChartSeries]] = js.undefined
+  var series_dxChartOptions: js.UndefOr[ChartSeries | js.Array[ChartSeries]] = js.native
   /** Specifies whether a point should remain in the hover state when the mouse pointer moves away. */
-  var stickyHovering: js.UndefOr[Boolean] = js.undefined
+  var stickyHovering: js.UndefOr[Boolean] = js.native
   /** Indicates whether or not to synchronize value axes when they are displayed on a single pane. */
-  var synchronizeMultiAxes: js.UndefOr[Boolean] = js.undefined
+  var synchronizeMultiAxes: js.UndefOr[Boolean] = js.native
   /** Configures tooltips. */
   @JSName("tooltip")
-  var tooltip_dxChartOptions: js.UndefOr[dxChartTooltip] = js.undefined
+  var tooltip_dxChartOptions: js.UndefOr[dxChartTooltip] = js.native
   /** @deprecated Use CommonSeries.aggregation.enabled instead. */
   /** Specifies whether or not to filter the series points depending on their quantity. */
-  var useAggregation: js.UndefOr[Boolean] = js.undefined
+  var useAggregation: js.UndefOr[Boolean] = js.native
   /** Configures the value axis. */
-  var valueAxis: js.UndefOr[dxChartValueAxis | js.Array[dxChartValueAxis]] = js.undefined
+  var valueAxis: js.UndefOr[dxChartValueAxis | js.Array[dxChartValueAxis]] = js.native
   /** Configures zooming and panning. */
-  var zoomAndPan: js.UndefOr[AnonAllowMouseWheel] = js.undefined
+  var zoomAndPan: js.UndefOr[AnonAllowMouseWheel] = js.native
   /** @deprecated Use the zoomAndPan option instead. */
   /** Enables zooming in your chart. */
-  var zoomingMode: js.UndefOr[all | mouse | none | touch] = js.undefined
+  var zoomingMode: js.UndefOr[all | mouse | none | touch] = js.native
 }
 
 object dxChartOptions {
   @scala.inline
-  def apply(
-    adaptiveLayout: BaseChartAdaptiveLayout = null,
-    adjustOnZoom: js.UndefOr[Boolean] = js.undefined,
-    animation: AnonDuration | Boolean = null,
-    annotations: js.Array[dxChartAnnotationConfig | _] = null,
-    argumentAxis: dxChartArgumentAxis = null,
-    autoHidePointMarkers: js.UndefOr[Boolean] = js.undefined,
-    barGroupPadding: Int | Double = null,
-    barGroupWidth: Int | Double = null,
-    barWidth: Int | Double = null,
-    bindingOptions: js.Any = null,
-    commonAnnotationSettings: dxChartCommonAnnotationConfig = null,
-    commonAxisSettings: dxChartCommonAxisSettings = null,
-    commonPaneSettings: dxChartCommonPaneSettings = null,
-    commonSeriesSettings: dxChartCommonSeriesSettings = null,
-    containerBackgroundColor: String = null,
-    crosshair: AnonHorizontalLine = null,
-    customizeAnnotation: /* annotation */ dxChartAnnotationConfig | js.Any => dxChartAnnotationConfig = null,
-    customizeLabel: /* pointInfo */ js.Any => dxChartSeriesTypesCommonSeriesLabel = null,
-    customizePoint: /* pointInfo */ js.Any => dxChartSeriesTypesCommonSeriesPoint = null,
-    dataPrepareSettings: AnonCheckTypeForAllData = null,
-    dataSource: js.Array[_] | DataSource | DataSourceOptions | String = null,
-    defaultPane: String = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    elementAttr: js.Any = null,
-    equalBarWidth: js.UndefOr[Boolean] = js.undefined,
-    export: BaseWidgetExport = null,
-    height: Double | String | (js.Function0[Double | String]) = null,
-    legend: dxChartLegend = null,
-    loadingIndicator: BaseWidgetLoadingIndicator = null,
-    margin: BaseWidgetMargin = null,
-    maxBubbleSize: Int | Double = null,
-    minBubbleSize: Int | Double = null,
-    negativesAsZeroes: js.UndefOr[Boolean] = js.undefined,
-    onArgumentAxisClick: (js.Function1[/* e */ AnonArgument, _]) | String = null,
-    onDisposing: /* e */ AnonModel[dxChart] => _ = null,
-    onDone: /* e */ AnonComponentTElementDxElement[dxChart] => _ = null,
-    onDrawn: /* e */ AnonComponentTElementDxElementModelAny[dxChart] => _ = null,
-    onExported: /* e */ AnonComponentTElementDxElementModelAny[dxChart] => _ = null,
-    onExporting: /* e */ AnonFormatModel[dxChart] => _ = null,
-    onFileSaving: /* e */ AnonCancelComponentData[dxChart] => _ = null,
-    onIncidentOccurred: /* e */ AnonTargetAny[dxChart] => _ = null,
-    onInitialized: /* e */ AnonElement[dxChart] => _ = null,
-    onLegendClick: (js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String = null,
-    onOptionChanged: /* e */ AnonName[dxChart] => _ = null,
-    onPointClick: (js.Function1[/* e */ AnonModelTarget[dxChart], _]) | String = null,
-    onPointHoverChanged: /* e */ AnonElementTarget => _ = null,
-    onPointSelectionChanged: /* e */ AnonElementTarget => _ = null,
-    onSeriesClick: (js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String = null,
-    onSeriesHoverChanged: /* e */ AnonComponentDxChart => _ = null,
-    onSeriesSelectionChanged: /* e */ AnonComponentDxChart => _ = null,
-    onTooltipHidden: /* e */ AnonElementModelTarget[dxChart] => _ = null,
-    onTooltipShown: /* e */ AnonElementModelTarget[dxChart] => _ = null,
-    onZoomEnd: /* e */ AnonActionType => _ = null,
-    onZoomStart: /* e */ AnonAxis => _ = null,
-    palette: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office = null,
-    paletteExtensionMode: alternate | blend | extrapolate = null,
-    panes: dxChartPanes | js.Array[dxChartPanes] = null,
-    pathModified: js.UndefOr[Boolean] = js.undefined,
-    pointSelectionMode: multiple | single_ = null,
-    redrawOnResize: js.UndefOr[Boolean] = js.undefined,
-    resizePanesOnZoom: js.UndefOr[Boolean] = js.undefined,
-    resolveLabelOverlapping: hide | none | stack = null,
-    rotated: js.UndefOr[Boolean] = js.undefined,
-    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
-    scrollBar: AnonOffset = null,
-    scrollingMode: all | mouse | none | touch = null,
-    series: ChartSeries | js.Array[ChartSeries] = null,
-    seriesSelectionMode: multiple | single_ = null,
-    seriesTemplate: AnonCustomizeSeries = null,
-    size: BaseWidgetSize = null,
-    stickyHovering: js.UndefOr[Boolean] = js.undefined,
-    synchronizeMultiAxes: js.UndefOr[Boolean] = js.undefined,
-    theme: genericDotdark | genericDotlight | genericDotcontrast | ios7Dotdefault | genericDotcarmine | genericDotdarkmoon | genericDotdarkviolet | genericDotgreenmist | genericDotsoftblue | materialDotblueDotlight | materialDotlimeDotlight | materialDotorangeDotlight | materialDotpurpleDotlight | materialDottealDotlight = null,
-    title: BaseWidgetTitle | String = null,
-    tooltip: dxChartTooltip = null,
-    useAggregation: js.UndefOr[Boolean] = js.undefined,
-    valueAxis: dxChartValueAxis | js.Array[dxChartValueAxis] = null,
-    width: Double | String | (js.Function0[Double | String]) = null,
-    zoomAndPan: AnonAllowMouseWheel = null,
-    zoomingMode: all | mouse | none | touch = null
-  ): dxChartOptions = {
+  def apply(): dxChartOptions = {
     val __obj = js.Dynamic.literal()
-    if (adaptiveLayout != null) __obj.updateDynamic("adaptiveLayout")(adaptiveLayout.asInstanceOf[js.Any])
-    if (!js.isUndefined(adjustOnZoom)) __obj.updateDynamic("adjustOnZoom")(adjustOnZoom.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (annotations != null) __obj.updateDynamic("annotations")(annotations.asInstanceOf[js.Any])
-    if (argumentAxis != null) __obj.updateDynamic("argumentAxis")(argumentAxis.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoHidePointMarkers)) __obj.updateDynamic("autoHidePointMarkers")(autoHidePointMarkers.asInstanceOf[js.Any])
-    if (barGroupPadding != null) __obj.updateDynamic("barGroupPadding")(barGroupPadding.asInstanceOf[js.Any])
-    if (barGroupWidth != null) __obj.updateDynamic("barGroupWidth")(barGroupWidth.asInstanceOf[js.Any])
-    if (barWidth != null) __obj.updateDynamic("barWidth")(barWidth.asInstanceOf[js.Any])
-    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
-    if (commonAnnotationSettings != null) __obj.updateDynamic("commonAnnotationSettings")(commonAnnotationSettings.asInstanceOf[js.Any])
-    if (commonAxisSettings != null) __obj.updateDynamic("commonAxisSettings")(commonAxisSettings.asInstanceOf[js.Any])
-    if (commonPaneSettings != null) __obj.updateDynamic("commonPaneSettings")(commonPaneSettings.asInstanceOf[js.Any])
-    if (commonSeriesSettings != null) __obj.updateDynamic("commonSeriesSettings")(commonSeriesSettings.asInstanceOf[js.Any])
-    if (containerBackgroundColor != null) __obj.updateDynamic("containerBackgroundColor")(containerBackgroundColor.asInstanceOf[js.Any])
-    if (crosshair != null) __obj.updateDynamic("crosshair")(crosshair.asInstanceOf[js.Any])
-    if (customizeAnnotation != null) __obj.updateDynamic("customizeAnnotation")(js.Any.fromFunction1(customizeAnnotation))
-    if (customizeLabel != null) __obj.updateDynamic("customizeLabel")(js.Any.fromFunction1(customizeLabel))
-    if (customizePoint != null) __obj.updateDynamic("customizePoint")(js.Any.fromFunction1(customizePoint))
-    if (dataPrepareSettings != null) __obj.updateDynamic("dataPrepareSettings")(dataPrepareSettings.asInstanceOf[js.Any])
-    if (dataSource != null) __obj.updateDynamic("dataSource")(dataSource.asInstanceOf[js.Any])
-    if (defaultPane != null) __obj.updateDynamic("defaultPane")(defaultPane.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
-    if (!js.isUndefined(equalBarWidth)) __obj.updateDynamic("equalBarWidth")(equalBarWidth.asInstanceOf[js.Any])
-    if (export != null) __obj.updateDynamic("export")(export.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (legend != null) __obj.updateDynamic("legend")(legend.asInstanceOf[js.Any])
-    if (loadingIndicator != null) __obj.updateDynamic("loadingIndicator")(loadingIndicator.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (maxBubbleSize != null) __obj.updateDynamic("maxBubbleSize")(maxBubbleSize.asInstanceOf[js.Any])
-    if (minBubbleSize != null) __obj.updateDynamic("minBubbleSize")(minBubbleSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(negativesAsZeroes)) __obj.updateDynamic("negativesAsZeroes")(negativesAsZeroes.asInstanceOf[js.Any])
-    if (onArgumentAxisClick != null) __obj.updateDynamic("onArgumentAxisClick")(onArgumentAxisClick.asInstanceOf[js.Any])
-    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
-    if (onDone != null) __obj.updateDynamic("onDone")(js.Any.fromFunction1(onDone))
-    if (onDrawn != null) __obj.updateDynamic("onDrawn")(js.Any.fromFunction1(onDrawn))
-    if (onExported != null) __obj.updateDynamic("onExported")(js.Any.fromFunction1(onExported))
-    if (onExporting != null) __obj.updateDynamic("onExporting")(js.Any.fromFunction1(onExporting))
-    if (onFileSaving != null) __obj.updateDynamic("onFileSaving")(js.Any.fromFunction1(onFileSaving))
-    if (onIncidentOccurred != null) __obj.updateDynamic("onIncidentOccurred")(js.Any.fromFunction1(onIncidentOccurred))
-    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
-    if (onLegendClick != null) __obj.updateDynamic("onLegendClick")(onLegendClick.asInstanceOf[js.Any])
-    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
-    if (onPointClick != null) __obj.updateDynamic("onPointClick")(onPointClick.asInstanceOf[js.Any])
-    if (onPointHoverChanged != null) __obj.updateDynamic("onPointHoverChanged")(js.Any.fromFunction1(onPointHoverChanged))
-    if (onPointSelectionChanged != null) __obj.updateDynamic("onPointSelectionChanged")(js.Any.fromFunction1(onPointSelectionChanged))
-    if (onSeriesClick != null) __obj.updateDynamic("onSeriesClick")(onSeriesClick.asInstanceOf[js.Any])
-    if (onSeriesHoverChanged != null) __obj.updateDynamic("onSeriesHoverChanged")(js.Any.fromFunction1(onSeriesHoverChanged))
-    if (onSeriesSelectionChanged != null) __obj.updateDynamic("onSeriesSelectionChanged")(js.Any.fromFunction1(onSeriesSelectionChanged))
-    if (onTooltipHidden != null) __obj.updateDynamic("onTooltipHidden")(js.Any.fromFunction1(onTooltipHidden))
-    if (onTooltipShown != null) __obj.updateDynamic("onTooltipShown")(js.Any.fromFunction1(onTooltipShown))
-    if (onZoomEnd != null) __obj.updateDynamic("onZoomEnd")(js.Any.fromFunction1(onZoomEnd))
-    if (onZoomStart != null) __obj.updateDynamic("onZoomStart")(js.Any.fromFunction1(onZoomStart))
-    if (palette != null) __obj.updateDynamic("palette")(palette.asInstanceOf[js.Any])
-    if (paletteExtensionMode != null) __obj.updateDynamic("paletteExtensionMode")(paletteExtensionMode.asInstanceOf[js.Any])
-    if (panes != null) __obj.updateDynamic("panes")(panes.asInstanceOf[js.Any])
-    if (!js.isUndefined(pathModified)) __obj.updateDynamic("pathModified")(pathModified.asInstanceOf[js.Any])
-    if (pointSelectionMode != null) __obj.updateDynamic("pointSelectionMode")(pointSelectionMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(redrawOnResize)) __obj.updateDynamic("redrawOnResize")(redrawOnResize.asInstanceOf[js.Any])
-    if (!js.isUndefined(resizePanesOnZoom)) __obj.updateDynamic("resizePanesOnZoom")(resizePanesOnZoom.asInstanceOf[js.Any])
-    if (resolveLabelOverlapping != null) __obj.updateDynamic("resolveLabelOverlapping")(resolveLabelOverlapping.asInstanceOf[js.Any])
-    if (!js.isUndefined(rotated)) __obj.updateDynamic("rotated")(rotated.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.asInstanceOf[js.Any])
-    if (scrollBar != null) __obj.updateDynamic("scrollBar")(scrollBar.asInstanceOf[js.Any])
-    if (scrollingMode != null) __obj.updateDynamic("scrollingMode")(scrollingMode.asInstanceOf[js.Any])
-    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
-    if (seriesSelectionMode != null) __obj.updateDynamic("seriesSelectionMode")(seriesSelectionMode.asInstanceOf[js.Any])
-    if (seriesTemplate != null) __obj.updateDynamic("seriesTemplate")(seriesTemplate.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(stickyHovering)) __obj.updateDynamic("stickyHovering")(stickyHovering.asInstanceOf[js.Any])
-    if (!js.isUndefined(synchronizeMultiAxes)) __obj.updateDynamic("synchronizeMultiAxes")(synchronizeMultiAxes.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (!js.isUndefined(useAggregation)) __obj.updateDynamic("useAggregation")(useAggregation.asInstanceOf[js.Any])
-    if (valueAxis != null) __obj.updateDynamic("valueAxis")(valueAxis.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (zoomAndPan != null) __obj.updateDynamic("zoomAndPan")(zoomAndPan.asInstanceOf[js.Any])
-    if (zoomingMode != null) __obj.updateDynamic("zoomingMode")(zoomingMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartOptions]
   }
+  @scala.inline
+  implicit class dxChartOptionsOps[Self <: dxChartOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdjustOnZoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustOnZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdjustOnZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustOnZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnnotations(value: js.Array[dxChartAnnotationConfig | _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnnotations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArgumentAxis(value: dxChartArgumentAxis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgumentAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoHidePointMarkers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHidePointMarkers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoHidePointMarkers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoHidePointMarkers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarGroupPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barGroupPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarGroupPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barGroupPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarGroupWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barGroupWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarGroupWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barGroupWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommonAnnotationSettings(value: dxChartCommonAnnotationConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonAnnotationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonAnnotationSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonAnnotationSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommonAxisSettings(value: dxChartCommonAxisSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonAxisSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonAxisSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonAxisSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommonPaneSettings(value: dxChartCommonPaneSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonPaneSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonPaneSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonPaneSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommonSeriesSettings(value: dxChartCommonSeriesSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonSeriesSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonSeriesSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commonSeriesSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBackgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerBackgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrosshair(value: AnonHorizontalLine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrosshair: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomizeAnnotation(value: /* annotation */ dxChartAnnotationConfig | js.Any => dxChartAnnotationConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeAnnotation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomizeAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeAnnotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataPrepareSettings(value: AnonCheckTypeForAllData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataPrepareSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataPrepareSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataPrepareSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultPane(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultPane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEqualBarWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equalBarWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEqualBarWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equalBarWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLegend(value: dxChartLegend): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLegend: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxBubbleSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBubbleSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBubbleSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBubbleSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinBubbleSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minBubbleSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinBubbleSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minBubbleSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegativesAsZeroes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativesAsZeroes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegativesAsZeroes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("negativesAsZeroes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnArgumentAxisClickFunction1(value: /* e */ AnonArgument => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onArgumentAxisClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnArgumentAxisClick(value: (js.Function1[/* e */ AnonArgument, _]) | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onArgumentAxisClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnArgumentAxisClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onArgumentAxisClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLegendClickFunction1(value: /* e */ AnonEventJQueryEventModel => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnLegendClick(value: (js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnLegendClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSeriesClickFunction1(value: /* e */ AnonEventJQueryEventModel => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnSeriesClick(value: (js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnSeriesClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSeriesHoverChanged(value: /* e */ AnonComponentDxChart => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesHoverChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSeriesHoverChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesHoverChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSeriesSelectionChanged(value: /* e */ AnonComponentDxChart => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesSelectionChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSeriesSelectionChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesSelectionChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnZoomEnd(value: /* e */ AnonActionType => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnZoomEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnZoomStart(value: /* e */ AnonAxis => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnZoomStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPanes(value: dxChartPanes | js.Array[dxChartPanes]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPanes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizePanesOnZoom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizePanesOnZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizePanesOnZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizePanesOnZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolveLabelOverlapping(value: hide | none | stack): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveLabelOverlapping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolveLabelOverlapping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveLabelOverlapping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollBar(value: AnonOffset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollingMode(value: all | mouse | none | touch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeries(value: ChartSeries | js.Array[ChartSeries]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesSelectionMode(value: multiple | single_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesSelectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesSelectionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesSelectionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesTemplate(value: AnonCustomizeSeries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStickyHovering(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stickyHovering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStickyHovering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stickyHovering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynchronizeMultiAxes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronizeMultiAxes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynchronizeMultiAxes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronizeMultiAxes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: dxChartTooltip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseAggregation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useAggregation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseAggregation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useAggregation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueAxis(value: dxChartValueAxis | js.Array[dxChartValueAxis]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomAndPan(value: AnonAllowMouseWheel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomAndPan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomAndPan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomAndPan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomingMode(value: all | mouse | none | touch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoomingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomingMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.promiseAllsettled.mod
 
 import typingsSlinky.promiseAllsettled.FnCall
 import typingsSlinky.promiseAllsettled.implementationMod.PromiseTuple
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +21,11 @@ trait ExportedImplementationType extends js.Object {
   ] = js.native
   def apply(): js.Promise[js.Array[js.Any]] = js.native
   def apply[T /* <: Array[js.Any] */](iterable: PromiseTuple[T]): js.Promise[typingsSlinky.promiseAllsettled.implementationMod.PromiseResultTuple[T]] = js.native
-  def apply[T](iterable: Iterable[js.Promise[T] | T]): js.Promise[js.Array[typingsSlinky.promiseAllsettled.typesMod.PromiseResult[T, _]]] = js.native
+  def apply[T](iterable: js.Iterable[js.Promise[T] | T]): js.Promise[js.Array[typingsSlinky.promiseAllsettled.typesMod.PromiseResult[T, _]]] = js.native
   def getPolyfill(): /* import warning: importer.ImportType#apply Failed type conversion: typeof implementation */ js.Any = js.native
   def implementation(): js.Promise[js.Array[js.Any]] = js.native
   def implementation[T /* <: Array[js.Any] */](iterable: PromiseTuple[T]): js.Promise[typingsSlinky.promiseAllsettled.implementationMod.PromiseResultTuple[T]] = js.native
-  def implementation[T](iterable: Iterable[js.Promise[T] | T]): js.Promise[js.Array[typingsSlinky.promiseAllsettled.typesMod.PromiseResult[T, _]]] = js.native
+  def implementation[T](iterable: js.Iterable[js.Promise[T] | T]): js.Promise[js.Array[typingsSlinky.promiseAllsettled.typesMod.PromiseResult[T, _]]] = js.native
   def shim(): /* import warning: importer.ImportType#apply Failed type conversion: typeof implementation */ js.Any = js.native
 }
 

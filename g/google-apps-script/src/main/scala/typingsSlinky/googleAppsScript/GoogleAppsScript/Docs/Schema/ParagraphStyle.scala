@@ -4,78 +4,296 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParagraphStyle extends js.Object {
-  var alignment: js.UndefOr[String] = js.undefined
-  var avoidWidowAndOrphan: js.UndefOr[Boolean] = js.undefined
-  var borderBetween: js.UndefOr[ParagraphBorder] = js.undefined
-  var borderBottom: js.UndefOr[ParagraphBorder] = js.undefined
-  var borderLeft: js.UndefOr[ParagraphBorder] = js.undefined
-  var borderRight: js.UndefOr[ParagraphBorder] = js.undefined
-  var borderTop: js.UndefOr[ParagraphBorder] = js.undefined
-  var direction: js.UndefOr[String] = js.undefined
-  var headingId: js.UndefOr[String] = js.undefined
-  var indentEnd: js.UndefOr[Dimension] = js.undefined
-  var indentFirstLine: js.UndefOr[Dimension] = js.undefined
-  var indentStart: js.UndefOr[Dimension] = js.undefined
-  var keepLinesTogether: js.UndefOr[Boolean] = js.undefined
-  var keepWithNext: js.UndefOr[Boolean] = js.undefined
-  var lineSpacing: js.UndefOr[Double] = js.undefined
-  var namedStyleType: js.UndefOr[String] = js.undefined
-  var shading: js.UndefOr[Shading] = js.undefined
-  var spaceAbove: js.UndefOr[Dimension] = js.undefined
-  var spaceBelow: js.UndefOr[Dimension] = js.undefined
-  var spacingMode: js.UndefOr[String] = js.undefined
-  var tabStops: js.UndefOr[js.Array[TabStop]] = js.undefined
+  var alignment: js.UndefOr[String] = js.native
+  var avoidWidowAndOrphan: js.UndefOr[Boolean] = js.native
+  var borderBetween: js.UndefOr[ParagraphBorder] = js.native
+  var borderBottom: js.UndefOr[ParagraphBorder] = js.native
+  var borderLeft: js.UndefOr[ParagraphBorder] = js.native
+  var borderRight: js.UndefOr[ParagraphBorder] = js.native
+  var borderTop: js.UndefOr[ParagraphBorder] = js.native
+  var direction: js.UndefOr[String] = js.native
+  var headingId: js.UndefOr[String] = js.native
+  var indentEnd: js.UndefOr[Dimension] = js.native
+  var indentFirstLine: js.UndefOr[Dimension] = js.native
+  var indentStart: js.UndefOr[Dimension] = js.native
+  var keepLinesTogether: js.UndefOr[Boolean] = js.native
+  var keepWithNext: js.UndefOr[Boolean] = js.native
+  var lineSpacing: js.UndefOr[Double] = js.native
+  var namedStyleType: js.UndefOr[String] = js.native
+  var shading: js.UndefOr[Shading] = js.native
+  var spaceAbove: js.UndefOr[Dimension] = js.native
+  var spaceBelow: js.UndefOr[Dimension] = js.native
+  var spacingMode: js.UndefOr[String] = js.native
+  var tabStops: js.UndefOr[js.Array[TabStop]] = js.native
 }
 
 object ParagraphStyle {
   @scala.inline
-  def apply(
-    alignment: String = null,
-    avoidWidowAndOrphan: js.UndefOr[Boolean] = js.undefined,
-    borderBetween: ParagraphBorder = null,
-    borderBottom: ParagraphBorder = null,
-    borderLeft: ParagraphBorder = null,
-    borderRight: ParagraphBorder = null,
-    borderTop: ParagraphBorder = null,
-    direction: String = null,
-    headingId: String = null,
-    indentEnd: Dimension = null,
-    indentFirstLine: Dimension = null,
-    indentStart: Dimension = null,
-    keepLinesTogether: js.UndefOr[Boolean] = js.undefined,
-    keepWithNext: js.UndefOr[Boolean] = js.undefined,
-    lineSpacing: Int | Double = null,
-    namedStyleType: String = null,
-    shading: Shading = null,
-    spaceAbove: Dimension = null,
-    spaceBelow: Dimension = null,
-    spacingMode: String = null,
-    tabStops: js.Array[TabStop] = null
-  ): ParagraphStyle = {
+  def apply(): ParagraphStyle = {
     val __obj = js.Dynamic.literal()
-    if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])
-    if (!js.isUndefined(avoidWidowAndOrphan)) __obj.updateDynamic("avoidWidowAndOrphan")(avoidWidowAndOrphan.asInstanceOf[js.Any])
-    if (borderBetween != null) __obj.updateDynamic("borderBetween")(borderBetween.asInstanceOf[js.Any])
-    if (borderBottom != null) __obj.updateDynamic("borderBottom")(borderBottom.asInstanceOf[js.Any])
-    if (borderLeft != null) __obj.updateDynamic("borderLeft")(borderLeft.asInstanceOf[js.Any])
-    if (borderRight != null) __obj.updateDynamic("borderRight")(borderRight.asInstanceOf[js.Any])
-    if (borderTop != null) __obj.updateDynamic("borderTop")(borderTop.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (headingId != null) __obj.updateDynamic("headingId")(headingId.asInstanceOf[js.Any])
-    if (indentEnd != null) __obj.updateDynamic("indentEnd")(indentEnd.asInstanceOf[js.Any])
-    if (indentFirstLine != null) __obj.updateDynamic("indentFirstLine")(indentFirstLine.asInstanceOf[js.Any])
-    if (indentStart != null) __obj.updateDynamic("indentStart")(indentStart.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepLinesTogether)) __obj.updateDynamic("keepLinesTogether")(keepLinesTogether.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepWithNext)) __obj.updateDynamic("keepWithNext")(keepWithNext.asInstanceOf[js.Any])
-    if (lineSpacing != null) __obj.updateDynamic("lineSpacing")(lineSpacing.asInstanceOf[js.Any])
-    if (namedStyleType != null) __obj.updateDynamic("namedStyleType")(namedStyleType.asInstanceOf[js.Any])
-    if (shading != null) __obj.updateDynamic("shading")(shading.asInstanceOf[js.Any])
-    if (spaceAbove != null) __obj.updateDynamic("spaceAbove")(spaceAbove.asInstanceOf[js.Any])
-    if (spaceBelow != null) __obj.updateDynamic("spaceBelow")(spaceBelow.asInstanceOf[js.Any])
-    if (spacingMode != null) __obj.updateDynamic("spacingMode")(spacingMode.asInstanceOf[js.Any])
-    if (tabStops != null) __obj.updateDynamic("tabStops")(tabStops.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParagraphStyle]
   }
+  @scala.inline
+  implicit class ParagraphStyleOps[Self <: ParagraphStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvoidWidowAndOrphan(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avoidWidowAndOrphan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvoidWidowAndOrphan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avoidWidowAndOrphan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBetween(value: ParagraphBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBetween")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBetween: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBetween")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBottom(value: ParagraphBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderLeft(value: ParagraphBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderRight(value: ParagraphBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderTop(value: ParagraphBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeadingId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeadingId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headingId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndentEnd(value: Dimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndentEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndentFirstLine(value: Dimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentFirstLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndentFirstLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentFirstLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndentStart(value: Dimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndentStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indentStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepLinesTogether(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepLinesTogether")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepLinesTogether: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepLinesTogether")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepWithNext(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepWithNext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepWithNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepWithNext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineSpacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamedStyleType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedStyleType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamedStyleType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedStyleType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShading(value: Shading): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpaceAbove(value: Dimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceAbove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpaceAbove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceAbove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpaceBelow(value: Dimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceBelow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpaceBelow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spaceBelow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpacingMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpacingMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabStops(value: js.Array[TabStop]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabStops")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabStops: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabStops")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

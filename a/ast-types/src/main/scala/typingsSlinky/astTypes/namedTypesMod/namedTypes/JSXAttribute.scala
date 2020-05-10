@@ -15,15 +15,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Node, 'type'> */
+@js.native
 trait JSXAttribute
   extends ASTNode
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var name: JSXIdentifierKind | JSXNamespacedNameKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.JSXAttribute
-  var value: js.UndefOr[LiteralKind | JSXExpressionContainerKind | Null] = js.undefined
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var name: JSXIdentifierKind | JSXNamespacedNameKind = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.JSXAttribute = js.native
+  var value: js.UndefOr[LiteralKind | JSXExpressionContainerKind | Null] = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.JSXAttribute")

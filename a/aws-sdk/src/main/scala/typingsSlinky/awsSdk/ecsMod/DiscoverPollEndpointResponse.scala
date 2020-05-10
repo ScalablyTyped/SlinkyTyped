@@ -18,11 +18,41 @@ trait DiscoverPollEndpointResponse extends js.Object {
 
 object DiscoverPollEndpointResponse {
   @scala.inline
-  def apply(endpoint: String = null, telemetryEndpoint: String = null): DiscoverPollEndpointResponse = {
+  def apply(): DiscoverPollEndpointResponse = {
     val __obj = js.Dynamic.literal()
-    if (endpoint != null) __obj.updateDynamic("endpoint")(endpoint.asInstanceOf[js.Any])
-    if (telemetryEndpoint != null) __obj.updateDynamic("telemetryEndpoint")(telemetryEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[DiscoverPollEndpointResponse]
   }
+  @scala.inline
+  implicit class DiscoverPollEndpointResponseOps[Self <: DiscoverPollEndpointResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTelemetryEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telemetryEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTelemetryEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telemetryEndpoint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

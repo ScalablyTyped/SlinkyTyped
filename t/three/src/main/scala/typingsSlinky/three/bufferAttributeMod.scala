@@ -1,6 +1,5 @@
 package typingsSlinky.three
 
-import typingsSlinky.std.ArrayBufferView
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,8 +38,8 @@ object bufferAttributeMod extends js.Object {
     def getX(index: Double): Double = js.native
     def getY(index: Double): Double = js.native
     def getZ(index: Double): Double = js.native
-    def set(value: ArrayBufferView): BufferAttribute = js.native
-    def set(value: ArrayBufferView, offset: Double): BufferAttribute = js.native
+    def set(value: js.typedarray.ArrayBufferView): BufferAttribute = js.native
+    def set(value: js.typedarray.ArrayBufferView, offset: Double): BufferAttribute = js.native
     def set(value: ArrayLike[Double]): BufferAttribute = js.native
     def set(value: ArrayLike[Double], offset: Double): BufferAttribute = js.native
     def setDynamic(dynamic: Boolean): BufferAttribute = js.native
@@ -60,10 +59,10 @@ object bufferAttributeMod extends js.Object {
   
   @js.native
   class Float32BufferAttribute protected () extends BufferAttribute {
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
     def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
   }
@@ -75,10 +74,10 @@ object bufferAttributeMod extends js.Object {
   
   @js.native
   class Float64BufferAttribute protected () extends BufferAttribute {
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
     def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
   }
@@ -90,10 +89,10 @@ object bufferAttributeMod extends js.Object {
   
   @js.native
   class Int16BufferAttribute protected () extends BufferAttribute {
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
     def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
   }
@@ -105,10 +104,10 @@ object bufferAttributeMod extends js.Object {
   
   @js.native
   class Int32BufferAttribute protected () extends BufferAttribute {
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
     def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
   }
@@ -120,10 +119,10 @@ object bufferAttributeMod extends js.Object {
   
   @js.native
   class Int8BufferAttribute protected () extends BufferAttribute {
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
     def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
   }
@@ -135,10 +134,10 @@ object bufferAttributeMod extends js.Object {
   
   @js.native
   class Uint16BufferAttribute protected () extends BufferAttribute {
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
     def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
   }
@@ -150,10 +149,10 @@ object bufferAttributeMod extends js.Object {
   
   @js.native
   class Uint32BufferAttribute protected () extends BufferAttribute {
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
     def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
   }
@@ -165,10 +164,10 @@ object bufferAttributeMod extends js.Object {
   
   @js.native
   class Uint8BufferAttribute protected () extends BufferAttribute {
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
     def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
   }
@@ -180,10 +179,10 @@ object bufferAttributeMod extends js.Object {
   
   @js.native
   class Uint8ClampedBufferAttribute protected () extends BufferAttribute {
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double) = this()
     def this(array: ArrayLike[Double], itemSize: Double) = this()
     def this(array: js.Iterable[Double], itemSize: Double) = this()
-    def this(array: scala.scalajs.js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
+    def this(array: js.typedarray.ArrayBuffer, itemSize: Double, normalized: Boolean) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean) = this()
     def this(array: js.Iterable[Double], itemSize: Double, normalized: Boolean) = this()
   }

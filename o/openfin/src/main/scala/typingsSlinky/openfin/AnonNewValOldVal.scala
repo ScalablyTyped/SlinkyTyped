@@ -5,18 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonNewValOldVal extends js.Object {
-  var newVal: js.UndefOr[js.Array[DownloadPreloadOption]] = js.undefined
-  var oldVal: js.UndefOr[js.Array[DownloadPreloadOption]] = js.undefined
+  var newVal: js.UndefOr[js.Array[DownloadPreloadOption]] = js.native
+  var oldVal: js.UndefOr[js.Array[DownloadPreloadOption]] = js.native
 }
 
 object AnonNewValOldVal {
   @scala.inline
-  def apply(newVal: js.Array[DownloadPreloadOption] = null, oldVal: js.Array[DownloadPreloadOption] = null): AnonNewValOldVal = {
+  def apply(): AnonNewValOldVal = {
     val __obj = js.Dynamic.literal()
-    if (newVal != null) __obj.updateDynamic("newVal")(newVal.asInstanceOf[js.Any])
-    if (oldVal != null) __obj.updateDynamic("oldVal")(oldVal.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonNewValOldVal]
   }
+  @scala.inline
+  implicit class AnonNewValOldValOps[Self <: AnonNewValOldVal] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewVal(value: js.Array[DownloadPreloadOption]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newVal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewVal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newVal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOldVal(value: js.Array[DownloadPreloadOption]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldVal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOldVal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldVal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

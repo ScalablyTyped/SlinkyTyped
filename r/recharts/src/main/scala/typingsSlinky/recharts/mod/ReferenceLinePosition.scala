@@ -13,12 +13,10 @@ trait ReferenceLinePosition extends js.Object
 
 object ReferenceLinePosition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def end: typingsSlinky.recharts.rechartsStrings.end = "end".asInstanceOf[typingsSlinky.recharts.rechartsStrings.end]
   @scala.inline
-  def end: typingsSlinky.recharts.rechartsStrings.end = this.cast("end")
+  def middle: typingsSlinky.recharts.rechartsStrings.middle = "middle".asInstanceOf[typingsSlinky.recharts.rechartsStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.recharts.rechartsStrings.middle = this.cast("middle")
-  @scala.inline
-  def start: typingsSlinky.recharts.rechartsStrings.start = this.cast("start")
+  def start: typingsSlinky.recharts.rechartsStrings.start = "start".asInstanceOf[typingsSlinky.recharts.rechartsStrings.start]
 }
 

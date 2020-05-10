@@ -1,15 +1,20 @@
 package typingsSlinky.reactTypist.components
 
+import typingsSlinky.reactTypist.mod.Typist.DelayProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Delay
-  extends SharedApply_DelayProps_607067711[typingsSlinky.reactTypist.mod.default.Delay] {
+object Delay {
   @JSImport("react-typist", "default.Delay")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: DelayProps): SharedBuilder_DelayProps_1968894352[typingsSlinky.reactTypist.mod.default.Delay] = new SharedBuilder_DelayProps_1968894352[typingsSlinky.reactTypist.mod.default.Delay](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(ms: Double): SharedBuilder_DelayProps_1968894352[typingsSlinky.reactTypist.mod.default.Delay] = {
+    val __props = js.Dynamic.literal(ms = ms.asInstanceOf[js.Any])
+    new SharedBuilder_DelayProps_1968894352[typingsSlinky.reactTypist.mod.default.Delay](js.Array(this.component, __props.asInstanceOf[DelayProps]))
+  }
 }
 

@@ -219,7 +219,7 @@ package object cognitoidentityserviceproviderMod {
   type IdentityProviderTypeType = typingsSlinky.awsSdk.cognitoidentityserviceproviderMod._IdentityProviderTypeType | java.lang.String
   type IdpIdentifierType = java.lang.String
   type IdpIdentifiersListType = js.Array[typingsSlinky.awsSdk.cognitoidentityserviceproviderMod.IdpIdentifierType]
-  type ImageFileType = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.cognitoidentityserviceproviderMod.Blob | java.lang.String
+  type ImageFileType = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.cognitoidentityserviceproviderMod.Blob | java.lang.String
   type ImageUrlType = java.lang.String
   type IntegerType = scala.Double
   type ListOfStringTypes = js.Array[typingsSlinky.awsSdk.cognitoidentityserviceproviderMod.StringType]

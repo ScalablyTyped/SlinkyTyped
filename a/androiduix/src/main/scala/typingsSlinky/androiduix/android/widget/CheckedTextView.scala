@@ -46,8 +46,8 @@ import typingsSlinky.androiduix.android.view.animation.Animation
 import typingsSlinky.androiduix.android.widget.TextView.BufferType
 import typingsSlinky.androiduix.android.widget.TextView.OnEditorActionListener
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
-import typingsSlinky.androiduix.java.lang.Runnable
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.lang.Runnable
+import typingsSlinky.androiduix.java_.util.ArrayList
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -734,8 +734,6 @@ class CheckedTextView protected ()
   override def isActivated(): Boolean = js.native
   /* InferMemberOverrides */
   override def isAttachedToWindow(): Boolean = js.native
-  /* CompleteClass */
-  override def isChecked(): Boolean = js.native
   /* InferMemberOverrides */
   override def isClickable(): Boolean = js.native
   /* InferMemberOverrides */
@@ -1073,8 +1071,6 @@ class CheckedTextView protected ()
   /* InferMemberOverrides */
   override def setBottom(bottom: Double): Unit = js.native
   def setCheckMarkDrawable(d: Drawable): Unit = js.native
-  /* CompleteClass */
-  override def setChecked(checked: Boolean): Unit = js.native
   /* InferMemberOverrides */
   override def setClickable(clickable: Boolean): Unit = js.native
   /* InferMemberOverrides */
@@ -1423,8 +1419,6 @@ class CheckedTextView protected ()
   override def tagName(): String = js.native
   /* InferMemberOverrides */
   override def textCanBeSelected(): Boolean = js.native
-  /* CompleteClass */
-  override def toggle(): Unit = js.native
   /* InferMemberOverrides */
   override def transformRect(rect: Rect): Unit = js.native
   /* InferMemberOverrides */

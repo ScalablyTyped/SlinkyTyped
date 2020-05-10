@@ -4,29 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Node extends InputNode {
   @JSName("x")
-  var x_Node: Double
+  var x_Node: Double = js.native
   @JSName("y")
-  var y_Node: Double
+  var y_Node: Double = js.native
 }
 
 object Node {
   @scala.inline
-  def apply(
-    x: Double,
-    y: Double,
-    fixed: Int | Double = null,
-    height: Int | Double = null,
-    index: Int | Double = null,
-    width: Int | Double = null
-  ): Node = {
+  def apply(x: Double, y: Double): Node = {
     val __obj = js.Dynamic.literal(x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    if (fixed != null) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
+  @scala.inline
+  implicit class NodeOps[Self <: Node] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

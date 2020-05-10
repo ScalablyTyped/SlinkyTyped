@@ -80,38 +80,185 @@ trait SchemaQuery extends js.Object {
 
 object SchemaQuery {
   @scala.inline
-  def apply(
-    accountInfo: SchemaAccountInfo = null,
-    corpus: String = null,
-    dataScope: String = null,
-    driveOptions: SchemaDriveOptions = null,
-    endTime: String = null,
-    hangoutsChatInfo: SchemaHangoutsChatInfo = null,
-    hangoutsChatOptions: SchemaHangoutsChatOptions = null,
-    mailOptions: SchemaMailOptions = null,
-    orgUnitInfo: SchemaOrgUnitInfo = null,
-    searchMethod: String = null,
-    startTime: String = null,
-    teamDriveInfo: SchemaTeamDriveInfo = null,
-    terms: String = null,
-    timeZone: String = null
-  ): SchemaQuery = {
+  def apply(): SchemaQuery = {
     val __obj = js.Dynamic.literal()
-    if (accountInfo != null) __obj.updateDynamic("accountInfo")(accountInfo.asInstanceOf[js.Any])
-    if (corpus != null) __obj.updateDynamic("corpus")(corpus.asInstanceOf[js.Any])
-    if (dataScope != null) __obj.updateDynamic("dataScope")(dataScope.asInstanceOf[js.Any])
-    if (driveOptions != null) __obj.updateDynamic("driveOptions")(driveOptions.asInstanceOf[js.Any])
-    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
-    if (hangoutsChatInfo != null) __obj.updateDynamic("hangoutsChatInfo")(hangoutsChatInfo.asInstanceOf[js.Any])
-    if (hangoutsChatOptions != null) __obj.updateDynamic("hangoutsChatOptions")(hangoutsChatOptions.asInstanceOf[js.Any])
-    if (mailOptions != null) __obj.updateDynamic("mailOptions")(mailOptions.asInstanceOf[js.Any])
-    if (orgUnitInfo != null) __obj.updateDynamic("orgUnitInfo")(orgUnitInfo.asInstanceOf[js.Any])
-    if (searchMethod != null) __obj.updateDynamic("searchMethod")(searchMethod.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
-    if (teamDriveInfo != null) __obj.updateDynamic("teamDriveInfo")(teamDriveInfo.asInstanceOf[js.Any])
-    if (terms != null) __obj.updateDynamic("terms")(terms.asInstanceOf[js.Any])
-    if (timeZone != null) __obj.updateDynamic("timeZone")(timeZone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaQuery]
   }
+  @scala.inline
+  implicit class SchemaQueryOps[Self <: SchemaQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountInfo(value: SchemaAccountInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCorpus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corpus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCorpus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corpus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataScope(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataScope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDriveOptions(value: SchemaDriveOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDriveOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driveOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHangoutsChatInfo(value: SchemaHangoutsChatInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hangoutsChatInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHangoutsChatInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hangoutsChatInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHangoutsChatOptions(value: SchemaHangoutsChatOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hangoutsChatOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHangoutsChatOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hangoutsChatOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMailOptions(value: SchemaMailOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mailOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMailOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mailOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrgUnitInfo(value: SchemaOrgUnitInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrgUnitInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orgUnitInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTeamDriveInfo(value: SchemaTeamDriveInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDriveInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTeamDriveInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teamDriveInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerms(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,7 @@
 package typingsSlinky.reactNavigationStack.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.Animated.Value
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
@@ -20,13 +18,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Header
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Header {
   @JSImport("react-navigation-stack/lib/typescript/views/Header/Header", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def backTitleVisible(value: Boolean): this.type = set("backTitleVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backgroundInterpolator(value: /* props */ SceneInterpolatorProps => _): this.type = set("backgroundInterpolator", js.Any.fromFunction1(value))
+    @scala.inline
+    def leftInterpolator(value: /* props */ SceneInterpolatorProps => _): this.type = set("leftInterpolator", js.Any.fromFunction1(value))
+    @scala.inline
+    def rightInterpolator(value: /* props */ SceneInterpolatorProps => _): this.type = set("rightInterpolator", js.Any.fromFunction1(value))
+    @scala.inline
+    def titleInterpolator(value: /* props */ SceneInterpolatorProps => _): this.type = set("titleInterpolator", js.Any.fromFunction1(value))
+    @scala.inline
+    def transitionPreset(value: HeaderTransitionPreset): this.type = set("transitionPreset", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: PickPropsscenenavigationp): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     layout: TransitionerLayout,
     layoutInterpolator: /* props */ SceneInterpolatorProps => _,
@@ -39,25 +55,10 @@ object Header
     scene: Scene,
     scenes: js.Array[Scene],
     theme: String,
-    titleFromLeftInterpolator: /* props */ SceneInterpolatorProps => _,
-    backTitleVisible: js.UndefOr[Boolean] = js.undefined,
-    backgroundInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    leftInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    rightInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    titleInterpolator: /* props */ SceneInterpolatorProps => _ = null,
-    transitionPreset: HeaderTransitionPreset = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(layout = layout.asInstanceOf[js.Any], layoutInterpolator = js.Any.fromFunction1(layoutInterpolator), layoutPreset = layoutPreset.asInstanceOf[js.Any], leftButtonInterpolator = js.Any.fromFunction1(leftButtonInterpolator), leftLabelInterpolator = js.Any.fromFunction1(leftLabelInterpolator), mode = mode.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any], scenes = scenes.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any], titleFromLeftInterpolator = js.Any.fromFunction1(titleFromLeftInterpolator))
-    if (!js.isUndefined(backTitleVisible)) __obj.updateDynamic("backTitleVisible")(backTitleVisible.asInstanceOf[js.Any])
-    if (backgroundInterpolator != null) __obj.updateDynamic("backgroundInterpolator")(js.Any.fromFunction1(backgroundInterpolator))
-    if (leftInterpolator != null) __obj.updateDynamic("leftInterpolator")(js.Any.fromFunction1(leftInterpolator))
-    if (rightInterpolator != null) __obj.updateDynamic("rightInterpolator")(js.Any.fromFunction1(rightInterpolator))
-    if (titleInterpolator != null) __obj.updateDynamic("titleInterpolator")(js.Any.fromFunction1(titleInterpolator))
-    if (transitionPreset != null) __obj.updateDynamic("transitionPreset")(transitionPreset.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    titleFromLeftInterpolator: /* props */ SceneInterpolatorProps => _
+  ): Builder = {
+    val __props = js.Dynamic.literal(layout = layout.asInstanceOf[js.Any], layoutInterpolator = js.Any.fromFunction1(layoutInterpolator), layoutPreset = layoutPreset.asInstanceOf[js.Any], leftButtonInterpolator = js.Any.fromFunction1(leftButtonInterpolator), leftLabelInterpolator = js.Any.fromFunction1(leftLabelInterpolator), mode = mode.asInstanceOf[js.Any], navigation = navigation.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any], scenes = scenes.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any], titleFromLeftInterpolator = js.Any.fromFunction1(titleFromLeftInterpolator))
+    new Builder(js.Array(this.component, __props.asInstanceOf[PickPropsscenenavigationp]))
   }
-  type Props = PickPropsscenenavigationp
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.devextreme
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxFormButtonItem
@@ -11,55 +12,193 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAlignItemLabels extends js.Object {
-  var alignItemLabels: js.UndefOr[Boolean] = js.undefined
-  var badge: js.UndefOr[String] = js.undefined
-  var colCount: js.UndefOr[Double] = js.undefined
-  var colCountByScreen: js.UndefOr[js.Any] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[String] = js.undefined
+  var alignItemLabels: js.UndefOr[Boolean] = js.native
+  var badge: js.UndefOr[String] = js.native
+  var colCount: js.UndefOr[Double] = js.native
+  var colCountByScreen: js.UndefOr[js.Any] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var icon: js.UndefOr[String] = js.native
   var items: js.UndefOr[
     js.Array[
       dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem
     ]
-  ] = js.undefined
+  ] = js.native
   var tabTemplate: js.UndefOr[
     template | (js.Function3[/* tabData */ js.Any, /* tabIndex */ Double, /* tabElement */ dxElement, _])
-  ] = js.undefined
+  ] = js.native
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[/* tabData */ js.Any, /* tabIndex */ Double, /* tabElement */ dxElement, _])
-  ] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object AnonAlignItemLabels {
   @scala.inline
-  def apply(
-    alignItemLabels: js.UndefOr[Boolean] = js.undefined,
-    badge: String = null,
-    colCount: Int | Double = null,
-    colCountByScreen: js.Any = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    icon: String = null,
-    items: js.Array[
-      dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem
-    ] = null,
-    tabTemplate: template | (js.Function3[/* tabData */ js.Any, /* tabIndex */ Double, /* tabElement */ dxElement, _]) = null,
-    template: template | (js.Function3[/* tabData */ js.Any, /* tabIndex */ Double, /* tabElement */ dxElement, _]) = null,
-    title: String = null
-  ): AnonAlignItemLabels = {
+  def apply(): AnonAlignItemLabels = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alignItemLabels)) __obj.updateDynamic("alignItemLabels")(alignItemLabels.asInstanceOf[js.Any])
-    if (badge != null) __obj.updateDynamic("badge")(badge.asInstanceOf[js.Any])
-    if (colCount != null) __obj.updateDynamic("colCount")(colCount.asInstanceOf[js.Any])
-    if (colCountByScreen != null) __obj.updateDynamic("colCountByScreen")(colCountByScreen.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (tabTemplate != null) __obj.updateDynamic("tabTemplate")(tabTemplate.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAlignItemLabels]
   }
+  @scala.inline
+  implicit class AnonAlignItemLabelsOps[Self <: AnonAlignItemLabels] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignItemLabels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItemLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignItemLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignItemLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBadge(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBadge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("badge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColCountByScreen(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colCountByScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColCountByScreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colCountByScreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(
+      value: js.Array[
+          dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTabTemplateFunction3(value: (/* tabData */ js.Any, /* tabIndex */ Double, /* tabElement */ dxElement) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withTabTemplate(
+      value: template | (js.Function3[/* tabData */ js.Any, /* tabIndex */ Double, /* tabElement */ dxElement, _])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplateFunction3(value: (/* tabData */ js.Any, /* tabIndex */ Double, /* tabElement */ dxElement) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withTemplate(
+      value: template | (js.Function3[/* tabData */ js.Any, /* tabIndex */ Double, /* tabElement */ dxElement, _])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

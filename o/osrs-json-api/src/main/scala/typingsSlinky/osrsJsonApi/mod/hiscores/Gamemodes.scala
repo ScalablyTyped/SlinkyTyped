@@ -17,20 +17,18 @@ trait Gamemodes extends js.Object
 
 object Gamemodes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dmm: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.dmm = "dmm".asInstanceOf[typingsSlinky.osrsJsonApi.osrsJsonApiStrings.dmm]
   @scala.inline
-  def dmm: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.dmm = this.cast("dmm")
+  def dmmt: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.dmmt = "dmmt".asInstanceOf[typingsSlinky.osrsJsonApi.osrsJsonApiStrings.dmmt]
   @scala.inline
-  def dmmt: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.dmmt = this.cast("dmmt")
+  def hcim: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.hcim = "hcim".asInstanceOf[typingsSlinky.osrsJsonApi.osrsJsonApiStrings.hcim]
   @scala.inline
-  def hcim: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.hcim = this.cast("hcim")
+  def iron: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.iron = "iron".asInstanceOf[typingsSlinky.osrsJsonApi.osrsJsonApiStrings.iron]
   @scala.inline
-  def iron: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.iron = this.cast("iron")
+  def main: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.main = "main".asInstanceOf[typingsSlinky.osrsJsonApi.osrsJsonApiStrings.main]
   @scala.inline
-  def main: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.main = this.cast("main")
+  def sdmm: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.sdmm = "sdmm".asInstanceOf[typingsSlinky.osrsJsonApi.osrsJsonApiStrings.sdmm]
   @scala.inline
-  def sdmm: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.sdmm = this.cast("sdmm")
-  @scala.inline
-  def uim: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.uim = this.cast("uim")
+  def uim: typingsSlinky.osrsJsonApi.osrsJsonApiStrings.uim = "uim".asInstanceOf[typingsSlinky.osrsJsonApi.osrsJsonApiStrings.uim]
 }
 

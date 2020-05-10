@@ -3,6 +3,7 @@ package typingsSlinky.testingLibraryReact
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.prettyFormat.mod.OptionsReceived
 import typingsSlinky.testingLibraryDom.getQueriesForElementMod.BoundFunction
 import typingsSlinky.testingLibraryDom.queriesMod.AllByBoundAttribute
 import typingsSlinky.testingLibraryDom.queriesMod.AllByRole
@@ -78,9 +79,15 @@ trait RenderResultreadonlygetAl extends js.Object {
   var queryByTitle: BoundFunction[QueryByBoundAttribute] = js.native
   def asFragment(): DocumentFragment = js.native
   def debug(): Unit = js.native
-  def debug(baseElement: js.Array[typingsSlinky.std.HTMLElement | typingsSlinky.std.DocumentFragment]): Unit = js.native
-  def debug(baseElement: typingsSlinky.std.DocumentFragment): Unit = js.native
-  def debug(baseElement: typingsSlinky.std.HTMLElement): Unit = js.native
+  def debug(baseElement: js.Array[HTMLElement | DocumentFragment]): Unit = js.native
+  def debug(baseElement: js.Array[HTMLElement | DocumentFragment], maxLength: Double): Unit = js.native
+  def debug(baseElement: js.Array[HTMLElement | DocumentFragment], maxLength: Double, options: OptionsReceived): Unit = js.native
+  def debug(baseElement: DocumentFragment): Unit = js.native
+  def debug(baseElement: DocumentFragment, maxLength: Double): Unit = js.native
+  def debug(baseElement: DocumentFragment, maxLength: Double, options: OptionsReceived): Unit = js.native
+  def debug(baseElement: HTMLElement): Unit = js.native
+  def debug(baseElement: HTMLElement, maxLength: Double): Unit = js.native
+  def debug(baseElement: HTMLElement, maxLength: Double, options: OptionsReceived): Unit = js.native
   def rerender(ui: ReactElement): Unit = js.native
   def unmount(): Boolean = js.native
 }

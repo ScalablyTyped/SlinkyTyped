@@ -26,14 +26,41 @@ trait SchemaListCreativeStatusBreakdownByCreativeResponse extends js.Object {
 
 object SchemaListCreativeStatusBreakdownByCreativeResponse {
   @scala.inline
-  def apply(
-    filteredBidCreativeRows: js.Array[SchemaFilteredBidCreativeRow] = null,
-    nextPageToken: String = null
-  ): SchemaListCreativeStatusBreakdownByCreativeResponse = {
+  def apply(): SchemaListCreativeStatusBreakdownByCreativeResponse = {
     val __obj = js.Dynamic.literal()
-    if (filteredBidCreativeRows != null) __obj.updateDynamic("filteredBidCreativeRows")(filteredBidCreativeRows.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListCreativeStatusBreakdownByCreativeResponse]
   }
+  @scala.inline
+  implicit class SchemaListCreativeStatusBreakdownByCreativeResponseOps[Self <: SchemaListCreativeStatusBreakdownByCreativeResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilteredBidCreativeRows(value: js.Array[SchemaFilteredBidCreativeRow]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredBidCreativeRows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilteredBidCreativeRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filteredBidCreativeRows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

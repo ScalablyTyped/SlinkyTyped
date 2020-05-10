@@ -22,16 +22,10 @@ object ionicCoreNumbers {
        with SlidingState
   
   @js.native
-  sealed trait `3` extends js.Object
-  
-  @js.native
   sealed trait `32` extends SlidingState
   
   @js.native
   sealed trait `4` extends SlidingState
-  
-  @js.native
-  sealed trait `400` extends js.Object
   
   @js.native
   sealed trait `64` extends SlidingState
@@ -48,13 +42,9 @@ object ionicCoreNumbers {
   @scala.inline
   def `2`: `2` = 2.asInstanceOf[`2`]
   @scala.inline
-  def `3`: `3` = 3.asInstanceOf[`3`]
-  @scala.inline
   def `32`: `32` = 32.asInstanceOf[`32`]
   @scala.inline
   def `4`: `4` = 4.asInstanceOf[`4`]
-  @scala.inline
-  def `400`: `400` = 400.asInstanceOf[`400`]
   @scala.inline
   def `64`: `64` = 64.asInstanceOf[`64`]
   @scala.inline

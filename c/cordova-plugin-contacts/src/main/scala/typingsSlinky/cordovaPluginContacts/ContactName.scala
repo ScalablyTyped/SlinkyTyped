@@ -6,19 +6,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains different kinds of information about a Contact object's name. */
+@js.native
 trait ContactName extends js.Object {
   /** The contact's family name. */
-  var familyName: js.UndefOr[String] = js.undefined
+  var familyName: js.UndefOr[String] = js.native
   /** The complete name of the contact. */
-  var formatted: js.UndefOr[String] = js.undefined
+  var formatted: js.UndefOr[String] = js.native
   /** The contact's given name. */
-  var givenName: js.UndefOr[String] = js.undefined
+  var givenName: js.UndefOr[String] = js.native
   /** The contact's prefix (example Mr. or Dr.) */
-  var honorificPrefix: js.UndefOr[String] = js.undefined
+  var honorificPrefix: js.UndefOr[String] = js.native
   /** The contact's suffix (example Esq.). */
-  var honorificSuffix: js.UndefOr[String] = js.undefined
+  var honorificSuffix: js.UndefOr[String] = js.native
   /** The contact's middle name. */
-  var middleName: js.UndefOr[String] = js.undefined
+  var middleName: js.UndefOr[String] = js.native
 }
 
 @JSGlobal("ContactName")

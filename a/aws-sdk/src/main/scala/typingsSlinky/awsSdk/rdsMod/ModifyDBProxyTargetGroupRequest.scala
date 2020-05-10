@@ -26,16 +26,53 @@ trait ModifyDBProxyTargetGroupRequest extends js.Object {
 
 object ModifyDBProxyTargetGroupRequest {
   @scala.inline
-  def apply(
-    DBProxyName: String,
-    TargetGroupName: String,
-    ConnectionPoolConfig: ConnectionPoolConfiguration = null,
-    NewName: String = null
-  ): ModifyDBProxyTargetGroupRequest = {
+  def apply(DBProxyName: String, TargetGroupName: String): ModifyDBProxyTargetGroupRequest = {
     val __obj = js.Dynamic.literal(DBProxyName = DBProxyName.asInstanceOf[js.Any], TargetGroupName = TargetGroupName.asInstanceOf[js.Any])
-    if (ConnectionPoolConfig != null) __obj.updateDynamic("ConnectionPoolConfig")(ConnectionPoolConfig.asInstanceOf[js.Any])
-    if (NewName != null) __obj.updateDynamic("NewName")(NewName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyDBProxyTargetGroupRequest]
   }
+  @scala.inline
+  implicit class ModifyDBProxyTargetGroupRequestOps[Self <: ModifyDBProxyTargetGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDBProxyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DBProxyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetGroupName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConnectionPoolConfig(value: ConnectionPoolConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionPoolConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionPoolConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionPoolConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

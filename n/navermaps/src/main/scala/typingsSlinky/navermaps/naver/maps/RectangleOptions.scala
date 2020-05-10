@@ -4,53 +4,186 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RectangleOptions extends js.Object {
-  var bounds: Bounds | BoundsLiteral
-  var clickable: js.UndefOr[Boolean] = js.undefined
-  var fillColor: js.UndefOr[String] = js.undefined
-  var fillOpacity: js.UndefOr[Double] = js.undefined
-  var map: js.UndefOr[Map] = js.undefined
-  var strokeColor: js.UndefOr[String] = js.undefined
-  var strokeLineCap: js.UndefOr[strokeLineCapType] = js.undefined
-  var strokeLineJoin: js.UndefOr[strokeLineJoinType] = js.undefined
-  var strokeOpacity: js.UndefOr[Double] = js.undefined
-  var strokeStyle: js.UndefOr[strokeStyleType] = js.undefined
-  var strokeWeight: js.UndefOr[Double] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var bounds: Bounds | BoundsLiteral = js.native
+  var clickable: js.UndefOr[Boolean] = js.native
+  var fillColor: js.UndefOr[String] = js.native
+  var fillOpacity: js.UndefOr[Double] = js.native
+  var map: js.UndefOr[Map] = js.native
+  var strokeColor: js.UndefOr[String] = js.native
+  var strokeLineCap: js.UndefOr[strokeLineCapType] = js.native
+  var strokeLineJoin: js.UndefOr[strokeLineJoinType] = js.native
+  var strokeOpacity: js.UndefOr[Double] = js.native
+  var strokeStyle: js.UndefOr[strokeStyleType] = js.native
+  var strokeWeight: js.UndefOr[Double] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object RectangleOptions {
   @scala.inline
-  def apply(
-    bounds: Bounds | BoundsLiteral,
-    clickable: js.UndefOr[Boolean] = js.undefined,
-    fillColor: String = null,
-    fillOpacity: Int | Double = null,
-    map: Map = null,
-    strokeColor: String = null,
-    strokeLineCap: strokeLineCapType = null,
-    strokeLineJoin: strokeLineJoinType = null,
-    strokeOpacity: Int | Double = null,
-    strokeStyle: strokeStyleType = null,
-    strokeWeight: Int | Double = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zIndex: Int | Double = null
-  ): RectangleOptions = {
+  def apply(bounds: Bounds | BoundsLiteral): RectangleOptions = {
     val __obj = js.Dynamic.literal(bounds = bounds.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.asInstanceOf[js.Any])
-    if (fillColor != null) __obj.updateDynamic("fillColor")(fillColor.asInstanceOf[js.Any])
-    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
-    if (strokeLineCap != null) __obj.updateDynamic("strokeLineCap")(strokeLineCap.asInstanceOf[js.Any])
-    if (strokeLineJoin != null) __obj.updateDynamic("strokeLineJoin")(strokeLineJoin.asInstanceOf[js.Any])
-    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
-    if (strokeStyle != null) __obj.updateDynamic("strokeStyle")(strokeStyle.asInstanceOf[js.Any])
-    if (strokeWeight != null) __obj.updateDynamic("strokeWeight")(strokeWeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[RectangleOptions]
   }
+  @scala.inline
+  implicit class RectangleOptionsOps[Self <: RectangleOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBounds(value: Bounds | BoundsLiteral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClickable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClickable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clickable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFillOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFillOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMap(value: Map): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeLineCap(value: strokeLineCapType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLineCap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeLineCap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLineCap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeLineJoin(value: strokeLineJoinType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLineJoin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeLineJoin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeLineJoin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeStyle(value: strokeStyleType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrokeWeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrokeWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

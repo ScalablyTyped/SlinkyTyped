@@ -9,8 +9,8 @@ import typingsSlinky.androiduix.android.view.KeyEvent
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.View.Predicate
 import typingsSlinky.androiduix.android.widget.ListView.FixedViewInfo
-import typingsSlinky.androiduix.java.lang.Runnable
-import typingsSlinky.androiduix.java.util.ArrayList
+import typingsSlinky.androiduix.java_.lang.Runnable
+import typingsSlinky.androiduix.java_.util.ArrayList
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -159,8 +159,6 @@ object ListView extends js.Object {
     var _ListView_this: ListView = js.native
     var mPosition: js.Any = js.native
     var mPositionTop: js.Any = js.native
-    /* CompleteClass */
-    override def run(): js.Any = js.native
     def setup(position: Double, top: Double): FocusSelector = js.native
   }
   

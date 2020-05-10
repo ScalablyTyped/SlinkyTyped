@@ -13,7 +13,6 @@ import typingsSlinky.reactNativeI18n.reactNativeI18nStrings.guess
 import typingsSlinky.reactNativeI18n.reactNativeI18nStrings.message
 import typingsSlinky.reactNativeI18n.reactNativeI18nStrings.number
 import typingsSlinky.reactNativeI18n.reactNativeI18nStrings.percentage
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,6 +26,12 @@ object mod extends js.Object {
     var defaultLocale: String = js.native
     var defaultSeparator: String = js.native
     var fallbacks: Boolean = js.native
+    // tslint:disable-next-line prefer-declare-function
+    var getFullScope: js.Function2[
+        /* scope */ String | js.Array[String], 
+        /* options */ js.UndefOr[TranslateOptions], 
+        String
+      ] = js.native
     var locale: String = js.native
     var missingBehaviour: message | guess = js.native
     // tslint:disable-next-line prefer-declare-function
@@ -56,8 +61,8 @@ object mod extends js.Object {
     def l(scope: Scope, value: String, options: InterpolateOptions): String = js.native
     def l(scope: Scope, value: Double): String = js.native
     def l(scope: Scope, value: Double, options: InterpolateOptions): String = js.native
-    def l(scope: Scope, value: Date): String = js.native
-    def l(scope: Scope, value: Date, options: InterpolateOptions): String = js.native
+    def l(scope: Scope, value: js.Date): String = js.native
+    def l(scope: Scope, value: js.Date, options: InterpolateOptions): String = js.native
     @JSName("l")
     def l_currency(scope: currency, value: Double): String = js.native
     @JSName("l")
@@ -74,8 +79,8 @@ object mod extends js.Object {
     def localize(scope: Scope, value: String, options: InterpolateOptions): String = js.native
     def localize(scope: Scope, value: Double): String = js.native
     def localize(scope: Scope, value: Double, options: InterpolateOptions): String = js.native
-    def localize(scope: Scope, value: Date): String = js.native
-    def localize(scope: Scope, value: Date, options: InterpolateOptions): String = js.native
+    def localize(scope: Scope, value: js.Date): String = js.native
+    def localize(scope: Scope, value: js.Date, options: InterpolateOptions): String = js.native
     @JSName("localize")
     def localize_currency(scope: currency, value: Double): String = js.native
     @JSName("localize")
@@ -102,7 +107,7 @@ object mod extends js.Object {
     def toPercentage(num: Double, options: ToPercentageOptions): String = js.native
     def toTime(scope: Scope, value: String): String = js.native
     def toTime(scope: Scope, value: Double): String = js.native
-    def toTime(scope: Scope, value: Date): String = js.native
+    def toTime(scope: Scope, value: js.Date): String = js.native
     def translate(scope: Scope): String = js.native
     def translate(scope: Scope, options: TranslateOptions): String = js.native
     @js.native

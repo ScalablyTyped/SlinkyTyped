@@ -14,10 +14,29 @@ trait CopyProductOutput extends js.Object {
 
 object CopyProductOutput {
   @scala.inline
-  def apply(CopyProductToken: Id = null): CopyProductOutput = {
+  def apply(): CopyProductOutput = {
     val __obj = js.Dynamic.literal()
-    if (CopyProductToken != null) __obj.updateDynamic("CopyProductToken")(CopyProductToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[CopyProductOutput]
   }
+  @scala.inline
+  implicit class CopyProductOutputOps[Self <: CopyProductOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCopyProductToken(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyProductToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCopyProductToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CopyProductToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

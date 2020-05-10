@@ -2,7 +2,6 @@ package typingsSlinky.stompit
 
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.streamMod.TransformOptions
-import typingsSlinky.std.Error
 import typingsSlinky.stompit.channelMod.ChannelOptions
 import typingsSlinky.stompit.channelMod.^
 import typingsSlinky.stompit.channelPoolMod.ChannelPoolOptions
@@ -68,12 +67,12 @@ object mod extends js.Object {
     def apply(optionsOrPath: String): typingsSlinky.stompit.clientMod.^ = js.native
     def apply(
       optionsOrPath: String,
-      connectionListener: js.Function2[/* err */ Error | Null, /* client */ typingsSlinky.stompit.clientMod.^, Unit]
+      connectionListener: js.Function2[/* err */ js.Error | Null, /* client */ typingsSlinky.stompit.clientMod.^, Unit]
     ): typingsSlinky.stompit.clientMod.^ = js.native
     def apply(optionsOrPath: ConnectOptions): typingsSlinky.stompit.clientMod.^ = js.native
     def apply(
       optionsOrPath: ConnectOptions,
-      connectionListener: js.Function2[/* err */ Error | Null, /* client */ typingsSlinky.stompit.clientMod.^, Unit]
+      connectionListener: js.Function2[/* err */ js.Error | Null, /* client */ typingsSlinky.stompit.clientMod.^, Unit]
     ): typingsSlinky.stompit.clientMod.^ = js.native
     def apply(port: Double): typingsSlinky.stompit.clientMod.^ = js.native
     def apply(port: Double, host: String): typingsSlinky.stompit.clientMod.^ = js.native

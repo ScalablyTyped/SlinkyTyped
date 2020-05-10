@@ -6,11 +6,11 @@ import scala.scalajs.js.annotation._
 
 package object typesMod {
   type NamedTensorMap = org.scalablytyped.runtime.StringDictionary[
-    typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+    typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
   ]
   type NamedTensorsMap = org.scalablytyped.runtime.StringDictionary[
     js.Array[
-      typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+      typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
     ]
   ]
   type TensorArrayMap = org.scalablytyped.runtime.NumberDictionary[typingsSlinky.tensorflowTfjsConverter.tensorArrayMod.TensorArray]

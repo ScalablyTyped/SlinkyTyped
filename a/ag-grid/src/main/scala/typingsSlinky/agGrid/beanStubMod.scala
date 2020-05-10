@@ -1,9 +1,9 @@
 package typingsSlinky.agGrid
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.agGrid.eventsMod.AgEvent
 import typingsSlinky.agGrid.gridOptionsWrapperMod.GridOptionsWrapper
 import typingsSlinky.agGrid.iEventEmitterMod.IEventEmitter
-import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -20,8 +20,27 @@ object AssociateContactWithAddressBookRequest {
   @scala.inline
   def apply(AddressBookArn: Arn, ContactArn: Arn): AssociateContactWithAddressBookRequest = {
     val __obj = js.Dynamic.literal(AddressBookArn = AddressBookArn.asInstanceOf[js.Any], ContactArn = ContactArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AssociateContactWithAddressBookRequest]
   }
+  @scala.inline
+  implicit class AssociateContactWithAddressBookRequestOps[Self <: AssociateContactWithAddressBookRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddressBookArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressBookArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContactArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContactArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

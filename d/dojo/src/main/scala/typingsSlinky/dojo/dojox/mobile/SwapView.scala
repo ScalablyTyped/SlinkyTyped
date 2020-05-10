@@ -43,7 +43,7 @@ import scala.scalajs.js.annotation._
   * @param params Contains the parameters.
   * @param node       OptionalThe DOM node. If none is specified, it is automatically created.
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.mobile.scrollable because Inheritance from two classes. Inlined 
 - typingsSlinky.dojo.dojox.mobile.ScrollableMixin because Inheritance from two classes. Inlined allowNestedScrolls, appBars, constraint, dirLock, disableFlashScrollBar, fadeScrollBar, fixedFooter, fixedFooterHeight, fixedHeader, fixedHeaderHeight, height, isLocalFooter, propagatable, scrollableParams, scrollBar, scrollDir, scrollType, threshold, touchNode, weight, abort, addCover, adjustDestination, calcScrollBarPos, calcSpeed, checkFixedBar, cleanup, createMask, destroy, findAppBars, findDisp, flashScrollBar, getDim, getPos, getScreenSize, getSpeed, hideScrollBar, init, isFormElement, isTopLevel, makeTranslateStr, removeCover, resetScrollBar, resize, scrollIntoView, scrollScrollBarTo, scrollTo, setKeyframes, setSelectable, showScrollBar, slideScrollBarTo, slideTo, startup, stopAnimation, onAfterScroll, onBeforeScroll, onFlickAnimationEnd, onFlickAnimationStart, onTouchEnd, onTouchMove, onTouchStart */ @JSGlobal("dojox.mobile.SwapView")
 @js.native

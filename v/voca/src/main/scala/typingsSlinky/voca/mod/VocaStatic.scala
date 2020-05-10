@@ -1,7 +1,6 @@
 package typingsSlinky.voca.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,8 +45,8 @@ trait VocaStatic extends js.Object {
   def countWords(subject: String): Double = js.native
   def countWords(subject: String, pattern: String): Double = js.native
   def countWords(subject: String, pattern: String, flags: String): Double = js.native
-  def countWords(subject: String, pattern: RegExp): Double = js.native
-  def countWords(subject: String, pattern: RegExp, flags: String): Double = js.native
+  def countWords(subject: String, pattern: js.RegExp): Double = js.native
+  def countWords(subject: String, pattern: js.RegExp, flags: String): Double = js.native
   def decapitalize(): String = js.native
   def decapitalize(subject: String): String = js.native
   // Query
@@ -117,8 +116,8 @@ trait VocaStatic extends js.Object {
   def matches(subject: String): Boolean = js.native
   def matches(subject: String, pattern: String): Boolean = js.native
   def matches(subject: String, pattern: String, flags: String): Boolean = js.native
-  def matches(subject: String, pattern: RegExp): Boolean = js.native
-  def matches(subject: String, pattern: RegExp, flags: String): Boolean = js.native
+  def matches(subject: String, pattern: js.RegExp): Boolean = js.native
+  def matches(subject: String, pattern: js.RegExp, flags: String): Boolean = js.native
   // Util
   def noConflict(): VocaStatic = js.native
   def pad(): String = js.native
@@ -145,17 +144,17 @@ trait VocaStatic extends js.Object {
   def replace(subject: String, pattern: String): String = js.native
   def replace(subject: String, pattern: String, replacement: String): String = js.native
   def replace(subject: String, pattern: String, replacement: ReplacementFunction): String = js.native
-  def replace(subject: String, pattern: RegExp): String = js.native
-  def replace(subject: String, pattern: RegExp, replacement: String): String = js.native
-  def replace(subject: String, pattern: RegExp, replacement: ReplacementFunction): String = js.native
+  def replace(subject: String, pattern: js.RegExp): String = js.native
+  def replace(subject: String, pattern: js.RegExp, replacement: String): String = js.native
+  def replace(subject: String, pattern: js.RegExp, replacement: ReplacementFunction): String = js.native
   def replaceAll(): String = js.native
   def replaceAll(subject: String): String = js.native
   def replaceAll(subject: String, pattern: String): String = js.native
   def replaceAll(subject: String, pattern: String, replacement: String): String = js.native
   def replaceAll(subject: String, pattern: String, replacement: ReplacementFunction): String = js.native
-  def replaceAll(subject: String, pattern: RegExp): String = js.native
-  def replaceAll(subject: String, pattern: RegExp, replacement: String): String = js.native
-  def replaceAll(subject: String, pattern: RegExp, replacement: ReplacementFunction): String = js.native
+  def replaceAll(subject: String, pattern: js.RegExp): String = js.native
+  def replaceAll(subject: String, pattern: js.RegExp, replacement: String): String = js.native
+  def replaceAll(subject: String, pattern: js.RegExp, replacement: ReplacementFunction): String = js.native
   def reverse(): String = js.native
   def reverse(subject: String): String = js.native
   def reverseGrapheme(): String = js.native
@@ -164,8 +163,8 @@ trait VocaStatic extends js.Object {
   def search(subject: String): Double = js.native
   def search(subject: String, pattern: String): Double = js.native
   def search(subject: String, pattern: String, fromIndex: Double): Double = js.native
-  def search(subject: String, pattern: RegExp): Double = js.native
-  def search(subject: String, pattern: RegExp, fromIndex: Double): Double = js.native
+  def search(subject: String, pattern: js.RegExp): Double = js.native
+  def search(subject: String, pattern: js.RegExp, fromIndex: Double): Double = js.native
   def slice(): String = js.native
   def slice(subject: String): String = js.native
   def slice(subject: String, start: Double): String = js.native
@@ -183,8 +182,8 @@ trait VocaStatic extends js.Object {
   def split(subject: String): js.Array[String] = js.native
   def split(subject: String, separator: String): js.Array[String] = js.native
   def split(subject: String, separator: String, limit: Double): js.Array[String] = js.native
-  def split(subject: String, separator: RegExp): js.Array[String] = js.native
-  def split(subject: String, separator: RegExp, limit: Double): js.Array[String] = js.native
+  def split(subject: String, separator: js.RegExp): js.Array[String] = js.native
+  def split(subject: String, separator: js.RegExp, limit: Double): js.Array[String] = js.native
   // Format
   def sprintf(): String = js.native
   def sprintf(format: String, replacements: js.Any*): String = js.native
@@ -245,7 +244,7 @@ trait VocaStatic extends js.Object {
   def words(subject: String): js.Array[String] = js.native
   def words(subject: String, pattern: String): js.Array[String] = js.native
   def words(subject: String, pattern: String, flag: String): js.Array[String] = js.native
-  def words(subject: String, pattern: RegExp): js.Array[String] = js.native
-  def words(subject: String, pattern: RegExp, flag: String): js.Array[String] = js.native
+  def words(subject: String, pattern: js.RegExp): js.Array[String] = js.native
+  def words(subject: String, pattern: js.RegExp, flag: String): js.Array[String] = js.native
 }
 

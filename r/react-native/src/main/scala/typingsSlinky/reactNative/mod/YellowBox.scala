@@ -2,6 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.GetDerivedStateFromError
@@ -24,8 +25,8 @@ class YellowBox protected ()
 @JSImport("react-native", "YellowBox")
 @js.native
 object YellowBox
-  extends Instantiable1[/* props */ js.Any, Component[js.Any, js.Any, js.Any]]
-     with Instantiable2[/* props */ js.Any, /* context */ js.Any, Component[js.Any, js.Any, js.Any]] {
+  extends Instantiable1[/* props */ js.Any, ReactComponentClass[js.Any]]
+     with Instantiable2[/* props */ js.Any, /* context */ js.Any, ReactComponentClass[js.Any]] {
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native
   var contextType: js.UndefOr[Context[_]] = js.native
   var contextTypes: js.UndefOr[ValidationMap[_]] = js.native

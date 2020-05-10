@@ -13,12 +13,10 @@ trait States extends js.Object
 
 object States {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def closed: typingsSlinky.socketclusterClient.socketclusterClientStrings.closed = "closed".asInstanceOf[typingsSlinky.socketclusterClient.socketclusterClientStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.socketclusterClient.socketclusterClientStrings.closed = this.cast("closed")
+  def connecting: typingsSlinky.socketclusterClient.socketclusterClientStrings.connecting = "connecting".asInstanceOf[typingsSlinky.socketclusterClient.socketclusterClientStrings.connecting]
   @scala.inline
-  def connecting: typingsSlinky.socketclusterClient.socketclusterClientStrings.connecting = this.cast("connecting")
-  @scala.inline
-  def open: typingsSlinky.socketclusterClient.socketclusterClientStrings.open = this.cast("open")
+  def open: typingsSlinky.socketclusterClient.socketclusterClientStrings.open = "open".asInstanceOf[typingsSlinky.socketclusterClient.socketclusterClientStrings.open]
 }
 

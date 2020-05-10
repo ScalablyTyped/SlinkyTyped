@@ -22,16 +22,53 @@ trait GetPipelineDefinitionOutput extends js.Object {
 
 object GetPipelineDefinitionOutput {
   @scala.inline
-  def apply(
-    parameterObjects: ParameterObjectList = null,
-    parameterValues: ParameterValueList = null,
-    pipelineObjects: PipelineObjectList = null
-  ): GetPipelineDefinitionOutput = {
+  def apply(): GetPipelineDefinitionOutput = {
     val __obj = js.Dynamic.literal()
-    if (parameterObjects != null) __obj.updateDynamic("parameterObjects")(parameterObjects.asInstanceOf[js.Any])
-    if (parameterValues != null) __obj.updateDynamic("parameterValues")(parameterValues.asInstanceOf[js.Any])
-    if (pipelineObjects != null) __obj.updateDynamic("pipelineObjects")(pipelineObjects.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPipelineDefinitionOutput]
   }
+  @scala.inline
+  implicit class GetPipelineDefinitionOutputOps[Self <: GetPipelineDefinitionOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParameterObjects(value: ParameterObjectList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterObjects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterObjects")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterValues(value: ParameterValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPipelineObjects(value: PipelineObjectList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineObjects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPipelineObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineObjects")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

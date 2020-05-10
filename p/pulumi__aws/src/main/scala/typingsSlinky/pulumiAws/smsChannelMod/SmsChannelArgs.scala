@@ -27,17 +27,59 @@ trait SmsChannelArgs extends js.Object {
 
 object SmsChannelArgs {
   @scala.inline
-  def apply(
-    applicationId: Input[String],
-    enabled: Input[Boolean] = null,
-    senderId: Input[String] = null,
-    shortCode: Input[String] = null
-  ): SmsChannelArgs = {
+  def apply(applicationId: Input[String]): SmsChannelArgs = {
     val __obj = js.Dynamic.literal(applicationId = applicationId.asInstanceOf[js.Any])
-    if (enabled != null) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (senderId != null) __obj.updateDynamic("senderId")(senderId.asInstanceOf[js.Any])
-    if (shortCode != null) __obj.updateDynamic("shortCode")(shortCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmsChannelArgs]
   }
+  @scala.inline
+  implicit class SmsChannelArgsOps[Self <: SmsChannelArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSenderId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("senderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSenderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("senderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortCode(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

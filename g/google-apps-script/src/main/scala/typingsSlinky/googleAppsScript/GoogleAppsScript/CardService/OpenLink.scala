@@ -25,18 +25,44 @@ import scala.scalajs.js.annotation._
   *             .setOnClose(CardService.OnClose.NOTHING));
   *         .build();
   */
+@js.native
 trait OpenLink extends js.Object {
-  def setOnClose(onClose: OnClose): OpenLink
-  def setOpenAs(openAs: OpenAs): OpenLink
-  def setUrl(url: String): OpenLink
+  def setOnClose(onClose: OnClose): OpenLink = js.native
+  def setOpenAs(openAs: OpenAs): OpenLink = js.native
+  def setUrl(url: String): OpenLink = js.native
 }
 
 object OpenLink {
   @scala.inline
   def apply(setOnClose: OnClose => OpenLink, setOpenAs: OpenAs => OpenLink, setUrl: String => OpenLink): OpenLink = {
     val __obj = js.Dynamic.literal(setOnClose = js.Any.fromFunction1(setOnClose), setOpenAs = js.Any.fromFunction1(setOpenAs), setUrl = js.Any.fromFunction1(setUrl))
-  
     __obj.asInstanceOf[OpenLink]
   }
+  @scala.inline
+  implicit class OpenLinkOps[Self <: OpenLink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetOnClose(value: OnClose => OpenLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOnClose")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOpenAs(value: OpenAs => OpenLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOpenAs")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetUrl(value: String => OpenLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

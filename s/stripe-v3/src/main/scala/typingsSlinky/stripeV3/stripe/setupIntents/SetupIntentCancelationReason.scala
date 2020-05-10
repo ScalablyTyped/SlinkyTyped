@@ -13,12 +13,10 @@ trait SetupIntentCancelationReason extends js.Object
 
 object SetupIntentCancelationReason {
   @scala.inline
-  def abandoned: typingsSlinky.stripeV3.stripeV3Strings.abandoned = this.cast("abandoned")
+  def abandoned: typingsSlinky.stripeV3.stripeV3Strings.abandoned = "abandoned".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.abandoned]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def duplicate: typingsSlinky.stripeV3.stripeV3Strings.duplicate = "duplicate".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.duplicate]
   @scala.inline
-  def duplicate: typingsSlinky.stripeV3.stripeV3Strings.duplicate = this.cast("duplicate")
-  @scala.inline
-  def requested_by_customer: typingsSlinky.stripeV3.stripeV3Strings.requested_by_customer = this.cast("requested_by_customer")
+  def requested_by_customer: typingsSlinky.stripeV3.stripeV3Strings.requested_by_customer = "requested_by_customer".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.requested_by_customer]
 }
 

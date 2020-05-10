@@ -13,6 +13,6 @@ trait CanvasPathDrawingStyles extends js.Object {
   var miterLimit: Double = js.native
   def getLineDash(): js.Array[Double] = js.native
   def setLineDash(segments: js.Array[Double]): Unit = js.native
-  def setLineDash(segments: Iterable[Double]): Unit = js.native
+  def setLineDash(segments: js.Iterable[Double]): Unit = js.native
 }
 

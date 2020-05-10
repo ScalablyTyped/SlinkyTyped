@@ -25,11 +25,41 @@ trait SchemaGoogleCloudVisionV1p1beta1Image extends js.Object {
 
 object SchemaGoogleCloudVisionV1p1beta1Image {
   @scala.inline
-  def apply(content: String = null, source: SchemaGoogleCloudVisionV1p1beta1ImageSource = null): SchemaGoogleCloudVisionV1p1beta1Image = {
+  def apply(): SchemaGoogleCloudVisionV1p1beta1Image = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVisionV1p1beta1Image]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVisionV1p1beta1ImageOps[Self <: SchemaGoogleCloudVisionV1p1beta1Image] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: SchemaGoogleCloudVisionV1p1beta1ImageSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

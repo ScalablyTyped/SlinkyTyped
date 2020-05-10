@@ -1,6 +1,5 @@
 package typingsSlinky.bcryptNodejs
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,11 @@ object mod extends js.Object {
   def genSaltSync(): String = js.native
   def genSaltSync(rounds: Double): String = js.native
   def getRounds(hash: String): Double = js.native
-  def hash(data: String, salt: String, callback: js.Function2[/* error */ Error, /* result */ String, Unit]): Unit = js.native
+  def hash(
+    data: String,
+    salt: String,
+    callback: js.Function2[/* error */ js.Error, /* result */ String, Unit]
+  ): Unit = js.native
   def hash(
     data: String,
     salt: String,

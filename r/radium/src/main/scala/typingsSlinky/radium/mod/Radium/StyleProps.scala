@@ -5,26 +5,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StyleProps extends js.Object {
   /**
     * An object of styles, or an object of CSS rules to render. Each key of the rules object is a CSS
     * selector and the value is an object of styles. If rules is empty, the component will render nothing.
     */
-  var rules: CSSProperties | StyleRules
+  var rules: CSSProperties | StyleRules = js.native
   /**
     * A string that any included selectors in rules will be appended to.
     * Use to scope styles in the component to a particular element. A good use case might be to generate a unique
     * ID for a component to scope any styles to the particular component that owns the <Style> component instance.
     */
-  var scopeSelector: js.UndefOr[String] = js.undefined
+  var scopeSelector: js.UndefOr[String] = js.native
 }
 
 object StyleProps {
   @scala.inline
-  def apply(rules: CSSProperties | StyleRules, scopeSelector: String = null): StyleProps = {
+  def apply(rules: CSSProperties | StyleRules): StyleProps = {
     val __obj = js.Dynamic.literal(rules = rules.asInstanceOf[js.Any])
-    if (scopeSelector != null) __obj.updateDynamic("scopeSelector")(scopeSelector.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleProps]
   }
+  @scala.inline
+  implicit class StylePropsOps[Self <: StyleProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRules(value: CSSProperties | StyleRules): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScopeSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopeSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScopeSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scopeSelector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

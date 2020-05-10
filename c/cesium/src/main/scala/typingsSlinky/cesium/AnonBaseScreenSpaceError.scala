@@ -13,161 +13,659 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBaseScreenSpaceError extends js.Object {
-  var baseScreenSpaceError: js.UndefOr[Double] = js.undefined
-  var classificationType: js.UndefOr[ClassificationType] = js.undefined
-  var clippingPlane: js.UndefOr[ClippingPlaneCollection] = js.undefined
-  var cullRequestsWhileMoving: js.UndefOr[Boolean] = js.undefined
-  var cullRequestsWhileMovingMultiplier: js.UndefOr[Double] = js.undefined
-  var cullWithChildrenBounds: js.UndefOr[Boolean] = js.undefined
-  var debugColorizeTiles: js.UndefOr[Boolean] = js.undefined
-  var debugFreezeFrame: js.UndefOr[Boolean] = js.undefined
-  var debugHeatmapTilePropertyName: js.UndefOr[String] = js.undefined
-  var debugShowBoundingVolume: js.UndefOr[Boolean] = js.undefined
-  var debugShowContentBoundingVolume: js.UndefOr[Boolean] = js.undefined
-  var debugShowGeometricError: js.UndefOr[Boolean] = js.undefined
-  var debugShowMemoryUsage: js.UndefOr[Boolean] = js.undefined
-  var debugShowRenderingStatistics: js.UndefOr[Boolean] = js.undefined
-  var debugShowUrl: js.UndefOr[Boolean] = js.undefined
-  var debugShowViewerRequestVolume: js.UndefOr[Boolean] = js.undefined
-  var debugWireframe: js.UndefOr[Boolean] = js.undefined
-  var dynamicScreenSpaceError: js.UndefOr[Boolean] = js.undefined
-  var dynamicScreenSpaceErrorDensity: js.UndefOr[Double] = js.undefined
-  var dynamicScreenSpaceErrorFactor: js.UndefOr[Double] = js.undefined
-  var dynamicScreenSpaceErrorHeightFalloff: js.UndefOr[Double] = js.undefined
-  var ellipsoid: js.UndefOr[Ellipsoid] = js.undefined
-  var foveatedConeSize: js.UndefOr[Double] = js.undefined
-  var foveatedInterpolationCallback: js.UndefOr[Cesium3DTileset] = js.undefined
-  var foveatedMinimumScreenSpaceErrorRelaxation: js.UndefOr[Double] = js.undefined
-  var foveatedScreenSpaceError: js.UndefOr[Boolean] = js.undefined
-  var foveatedTimeDelay: js.UndefOr[Double] = js.undefined
-  var imageBasedLightingFactor: js.UndefOr[Cartesian2] = js.undefined
-  var immediatelyLoadDesiredLevelOfDetail: js.UndefOr[Boolean] = js.undefined
-  var lightColor: js.UndefOr[Cartesian3] = js.undefined
-  var loadSiblings: js.UndefOr[Boolean] = js.undefined
-  var luminanceAtZenith: js.UndefOr[Double] = js.undefined
-  var maximumMemoryUsage: js.UndefOr[Double] = js.undefined
-  var maximumNumberOfLoadedTiles: js.UndefOr[Double] = js.undefined
-  var maximumScreenSpaceError: js.UndefOr[Double] = js.undefined
-  var modelMatrix: js.UndefOr[Matrix4] = js.undefined
-  var pointCloudShading: js.UndefOr[js.Any] = js.undefined
-  var preferLeaves: js.UndefOr[Boolean] = js.undefined
-  var preloadFlightDestinations: js.UndefOr[Boolean] = js.undefined
-  var preloadWhenHidden: js.UndefOr[Boolean] = js.undefined
-  var progressiveResolutionHeightFraction: js.UndefOr[Double] = js.undefined
-  var shadows: js.UndefOr[ShadowMode] = js.undefined
-  var show: js.UndefOr[Boolean] = js.undefined
-  var skipLevelOfDetail: js.UndefOr[Boolean] = js.undefined
-  var skipLevels: js.UndefOr[Double] = js.undefined
-  var skipScreenSpaceErrorFactor: js.UndefOr[Double] = js.undefined
-  var specularEnvironmentMaps: js.UndefOr[String] = js.undefined
-  var sphericalHarmonicCoefficients: js.UndefOr[js.Array[Cartesian3]] = js.undefined
-  var url: Resource | String | (js.Promise[Resource | String])
+  var baseScreenSpaceError: js.UndefOr[Double] = js.native
+  var classificationType: js.UndefOr[ClassificationType] = js.native
+  var clippingPlane: js.UndefOr[ClippingPlaneCollection] = js.native
+  var cullRequestsWhileMoving: js.UndefOr[Boolean] = js.native
+  var cullRequestsWhileMovingMultiplier: js.UndefOr[Double] = js.native
+  var cullWithChildrenBounds: js.UndefOr[Boolean] = js.native
+  var debugColorizeTiles: js.UndefOr[Boolean] = js.native
+  var debugFreezeFrame: js.UndefOr[Boolean] = js.native
+  var debugHeatmapTilePropertyName: js.UndefOr[String] = js.native
+  var debugShowBoundingVolume: js.UndefOr[Boolean] = js.native
+  var debugShowContentBoundingVolume: js.UndefOr[Boolean] = js.native
+  var debugShowGeometricError: js.UndefOr[Boolean] = js.native
+  var debugShowMemoryUsage: js.UndefOr[Boolean] = js.native
+  var debugShowRenderingStatistics: js.UndefOr[Boolean] = js.native
+  var debugShowUrl: js.UndefOr[Boolean] = js.native
+  var debugShowViewerRequestVolume: js.UndefOr[Boolean] = js.native
+  var debugWireframe: js.UndefOr[Boolean] = js.native
+  var dynamicScreenSpaceError: js.UndefOr[Boolean] = js.native
+  var dynamicScreenSpaceErrorDensity: js.UndefOr[Double] = js.native
+  var dynamicScreenSpaceErrorFactor: js.UndefOr[Double] = js.native
+  var dynamicScreenSpaceErrorHeightFalloff: js.UndefOr[Double] = js.native
+  var ellipsoid: js.UndefOr[Ellipsoid] = js.native
+  var foveatedConeSize: js.UndefOr[Double] = js.native
+  var foveatedInterpolationCallback: js.UndefOr[Cesium3DTileset] = js.native
+  var foveatedMinimumScreenSpaceErrorRelaxation: js.UndefOr[Double] = js.native
+  var foveatedScreenSpaceError: js.UndefOr[Boolean] = js.native
+  var foveatedTimeDelay: js.UndefOr[Double] = js.native
+  var imageBasedLightingFactor: js.UndefOr[Cartesian2] = js.native
+  var immediatelyLoadDesiredLevelOfDetail: js.UndefOr[Boolean] = js.native
+  var lightColor: js.UndefOr[Cartesian3] = js.native
+  var loadSiblings: js.UndefOr[Boolean] = js.native
+  var luminanceAtZenith: js.UndefOr[Double] = js.native
+  var maximumMemoryUsage: js.UndefOr[Double] = js.native
+  var maximumNumberOfLoadedTiles: js.UndefOr[Double] = js.native
+  var maximumScreenSpaceError: js.UndefOr[Double] = js.native
+  var modelMatrix: js.UndefOr[Matrix4] = js.native
+  var pointCloudShading: js.UndefOr[js.Any] = js.native
+  var preferLeaves: js.UndefOr[Boolean] = js.native
+  var preloadFlightDestinations: js.UndefOr[Boolean] = js.native
+  var preloadWhenHidden: js.UndefOr[Boolean] = js.native
+  var progressiveResolutionHeightFraction: js.UndefOr[Double] = js.native
+  var shadows: js.UndefOr[ShadowMode] = js.native
+  var show: js.UndefOr[Boolean] = js.native
+  /**
+    * Optimization option.
+    * Determines if level of detail skipping should be applied during the traversal.
+    * @default false
+    */
+  var skipLevelOfDetail: js.UndefOr[Boolean] = js.native
+  var skipLevels: js.UndefOr[Double] = js.native
+  var skipScreenSpaceErrorFactor: js.UndefOr[Double] = js.native
+  var specularEnvironmentMaps: js.UndefOr[String] = js.native
+  var sphericalHarmonicCoefficients: js.UndefOr[js.Array[Cartesian3]] = js.native
+  var url: Resource | String | (js.Promise[Resource | String]) = js.native
 }
 
 object AnonBaseScreenSpaceError {
   @scala.inline
-  def apply(
-    url: Resource | String | (js.Promise[Resource | String]),
-    baseScreenSpaceError: Int | Double = null,
-    classificationType: ClassificationType = null,
-    clippingPlane: ClippingPlaneCollection = null,
-    cullRequestsWhileMoving: js.UndefOr[Boolean] = js.undefined,
-    cullRequestsWhileMovingMultiplier: Int | Double = null,
-    cullWithChildrenBounds: js.UndefOr[Boolean] = js.undefined,
-    debugColorizeTiles: js.UndefOr[Boolean] = js.undefined,
-    debugFreezeFrame: js.UndefOr[Boolean] = js.undefined,
-    debugHeatmapTilePropertyName: String = null,
-    debugShowBoundingVolume: js.UndefOr[Boolean] = js.undefined,
-    debugShowContentBoundingVolume: js.UndefOr[Boolean] = js.undefined,
-    debugShowGeometricError: js.UndefOr[Boolean] = js.undefined,
-    debugShowMemoryUsage: js.UndefOr[Boolean] = js.undefined,
-    debugShowRenderingStatistics: js.UndefOr[Boolean] = js.undefined,
-    debugShowUrl: js.UndefOr[Boolean] = js.undefined,
-    debugShowViewerRequestVolume: js.UndefOr[Boolean] = js.undefined,
-    debugWireframe: js.UndefOr[Boolean] = js.undefined,
-    dynamicScreenSpaceError: js.UndefOr[Boolean] = js.undefined,
-    dynamicScreenSpaceErrorDensity: Int | Double = null,
-    dynamicScreenSpaceErrorFactor: Int | Double = null,
-    dynamicScreenSpaceErrorHeightFalloff: Int | Double = null,
-    ellipsoid: Ellipsoid = null,
-    foveatedConeSize: Int | Double = null,
-    foveatedInterpolationCallback: Cesium3DTileset = null,
-    foveatedMinimumScreenSpaceErrorRelaxation: Int | Double = null,
-    foveatedScreenSpaceError: js.UndefOr[Boolean] = js.undefined,
-    foveatedTimeDelay: Int | Double = null,
-    imageBasedLightingFactor: Cartesian2 = null,
-    immediatelyLoadDesiredLevelOfDetail: js.UndefOr[Boolean] = js.undefined,
-    lightColor: Cartesian3 = null,
-    loadSiblings: js.UndefOr[Boolean] = js.undefined,
-    luminanceAtZenith: Int | Double = null,
-    maximumMemoryUsage: Int | Double = null,
-    maximumNumberOfLoadedTiles: Int | Double = null,
-    maximumScreenSpaceError: Int | Double = null,
-    modelMatrix: Matrix4 = null,
-    pointCloudShading: js.Any = null,
-    preferLeaves: js.UndefOr[Boolean] = js.undefined,
-    preloadFlightDestinations: js.UndefOr[Boolean] = js.undefined,
-    preloadWhenHidden: js.UndefOr[Boolean] = js.undefined,
-    progressiveResolutionHeightFraction: Int | Double = null,
-    shadows: ShadowMode = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    skipLevelOfDetail: js.UndefOr[Boolean] = js.undefined,
-    skipLevels: Int | Double = null,
-    skipScreenSpaceErrorFactor: Int | Double = null,
-    specularEnvironmentMaps: String = null,
-    sphericalHarmonicCoefficients: js.Array[Cartesian3] = null
-  ): AnonBaseScreenSpaceError = {
+  def apply(url: Resource | String | (js.Promise[Resource | String])): AnonBaseScreenSpaceError = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    if (baseScreenSpaceError != null) __obj.updateDynamic("baseScreenSpaceError")(baseScreenSpaceError.asInstanceOf[js.Any])
-    if (classificationType != null) __obj.updateDynamic("classificationType")(classificationType.asInstanceOf[js.Any])
-    if (clippingPlane != null) __obj.updateDynamic("clippingPlane")(clippingPlane.asInstanceOf[js.Any])
-    if (!js.isUndefined(cullRequestsWhileMoving)) __obj.updateDynamic("cullRequestsWhileMoving")(cullRequestsWhileMoving.asInstanceOf[js.Any])
-    if (cullRequestsWhileMovingMultiplier != null) __obj.updateDynamic("cullRequestsWhileMovingMultiplier")(cullRequestsWhileMovingMultiplier.asInstanceOf[js.Any])
-    if (!js.isUndefined(cullWithChildrenBounds)) __obj.updateDynamic("cullWithChildrenBounds")(cullWithChildrenBounds.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugColorizeTiles)) __obj.updateDynamic("debugColorizeTiles")(debugColorizeTiles.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugFreezeFrame)) __obj.updateDynamic("debugFreezeFrame")(debugFreezeFrame.asInstanceOf[js.Any])
-    if (debugHeatmapTilePropertyName != null) __obj.updateDynamic("debugHeatmapTilePropertyName")(debugHeatmapTilePropertyName.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugShowBoundingVolume)) __obj.updateDynamic("debugShowBoundingVolume")(debugShowBoundingVolume.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugShowContentBoundingVolume)) __obj.updateDynamic("debugShowContentBoundingVolume")(debugShowContentBoundingVolume.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugShowGeometricError)) __obj.updateDynamic("debugShowGeometricError")(debugShowGeometricError.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugShowMemoryUsage)) __obj.updateDynamic("debugShowMemoryUsage")(debugShowMemoryUsage.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugShowRenderingStatistics)) __obj.updateDynamic("debugShowRenderingStatistics")(debugShowRenderingStatistics.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugShowUrl)) __obj.updateDynamic("debugShowUrl")(debugShowUrl.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugShowViewerRequestVolume)) __obj.updateDynamic("debugShowViewerRequestVolume")(debugShowViewerRequestVolume.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugWireframe)) __obj.updateDynamic("debugWireframe")(debugWireframe.asInstanceOf[js.Any])
-    if (!js.isUndefined(dynamicScreenSpaceError)) __obj.updateDynamic("dynamicScreenSpaceError")(dynamicScreenSpaceError.asInstanceOf[js.Any])
-    if (dynamicScreenSpaceErrorDensity != null) __obj.updateDynamic("dynamicScreenSpaceErrorDensity")(dynamicScreenSpaceErrorDensity.asInstanceOf[js.Any])
-    if (dynamicScreenSpaceErrorFactor != null) __obj.updateDynamic("dynamicScreenSpaceErrorFactor")(dynamicScreenSpaceErrorFactor.asInstanceOf[js.Any])
-    if (dynamicScreenSpaceErrorHeightFalloff != null) __obj.updateDynamic("dynamicScreenSpaceErrorHeightFalloff")(dynamicScreenSpaceErrorHeightFalloff.asInstanceOf[js.Any])
-    if (ellipsoid != null) __obj.updateDynamic("ellipsoid")(ellipsoid.asInstanceOf[js.Any])
-    if (foveatedConeSize != null) __obj.updateDynamic("foveatedConeSize")(foveatedConeSize.asInstanceOf[js.Any])
-    if (foveatedInterpolationCallback != null) __obj.updateDynamic("foveatedInterpolationCallback")(foveatedInterpolationCallback.asInstanceOf[js.Any])
-    if (foveatedMinimumScreenSpaceErrorRelaxation != null) __obj.updateDynamic("foveatedMinimumScreenSpaceErrorRelaxation")(foveatedMinimumScreenSpaceErrorRelaxation.asInstanceOf[js.Any])
-    if (!js.isUndefined(foveatedScreenSpaceError)) __obj.updateDynamic("foveatedScreenSpaceError")(foveatedScreenSpaceError.asInstanceOf[js.Any])
-    if (foveatedTimeDelay != null) __obj.updateDynamic("foveatedTimeDelay")(foveatedTimeDelay.asInstanceOf[js.Any])
-    if (imageBasedLightingFactor != null) __obj.updateDynamic("imageBasedLightingFactor")(imageBasedLightingFactor.asInstanceOf[js.Any])
-    if (!js.isUndefined(immediatelyLoadDesiredLevelOfDetail)) __obj.updateDynamic("immediatelyLoadDesiredLevelOfDetail")(immediatelyLoadDesiredLevelOfDetail.asInstanceOf[js.Any])
-    if (lightColor != null) __obj.updateDynamic("lightColor")(lightColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(loadSiblings)) __obj.updateDynamic("loadSiblings")(loadSiblings.asInstanceOf[js.Any])
-    if (luminanceAtZenith != null) __obj.updateDynamic("luminanceAtZenith")(luminanceAtZenith.asInstanceOf[js.Any])
-    if (maximumMemoryUsage != null) __obj.updateDynamic("maximumMemoryUsage")(maximumMemoryUsage.asInstanceOf[js.Any])
-    if (maximumNumberOfLoadedTiles != null) __obj.updateDynamic("maximumNumberOfLoadedTiles")(maximumNumberOfLoadedTiles.asInstanceOf[js.Any])
-    if (maximumScreenSpaceError != null) __obj.updateDynamic("maximumScreenSpaceError")(maximumScreenSpaceError.asInstanceOf[js.Any])
-    if (modelMatrix != null) __obj.updateDynamic("modelMatrix")(modelMatrix.asInstanceOf[js.Any])
-    if (pointCloudShading != null) __obj.updateDynamic("pointCloudShading")(pointCloudShading.asInstanceOf[js.Any])
-    if (!js.isUndefined(preferLeaves)) __obj.updateDynamic("preferLeaves")(preferLeaves.asInstanceOf[js.Any])
-    if (!js.isUndefined(preloadFlightDestinations)) __obj.updateDynamic("preloadFlightDestinations")(preloadFlightDestinations.asInstanceOf[js.Any])
-    if (!js.isUndefined(preloadWhenHidden)) __obj.updateDynamic("preloadWhenHidden")(preloadWhenHidden.asInstanceOf[js.Any])
-    if (progressiveResolutionHeightFraction != null) __obj.updateDynamic("progressiveResolutionHeightFraction")(progressiveResolutionHeightFraction.asInstanceOf[js.Any])
-    if (shadows != null) __obj.updateDynamic("shadows")(shadows.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(skipLevelOfDetail)) __obj.updateDynamic("skipLevelOfDetail")(skipLevelOfDetail.asInstanceOf[js.Any])
-    if (skipLevels != null) __obj.updateDynamic("skipLevels")(skipLevels.asInstanceOf[js.Any])
-    if (skipScreenSpaceErrorFactor != null) __obj.updateDynamic("skipScreenSpaceErrorFactor")(skipScreenSpaceErrorFactor.asInstanceOf[js.Any])
-    if (specularEnvironmentMaps != null) __obj.updateDynamic("specularEnvironmentMaps")(specularEnvironmentMaps.asInstanceOf[js.Any])
-    if (sphericalHarmonicCoefficients != null) __obj.updateDynamic("sphericalHarmonicCoefficients")(sphericalHarmonicCoefficients.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBaseScreenSpaceError]
   }
+  @scala.inline
+  implicit class AnonBaseScreenSpaceErrorOps[Self <: AnonBaseScreenSpaceError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUrl(value: Resource | String | (js.Promise[Resource | String])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBaseScreenSpaceError(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseScreenSpaceError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseScreenSpaceError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseScreenSpaceError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassificationType(value: ClassificationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassificationType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classificationType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClippingPlane(value: ClippingPlaneCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clippingPlane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClippingPlane: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clippingPlane")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCullRequestsWhileMoving(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cullRequestsWhileMoving")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCullRequestsWhileMoving: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cullRequestsWhileMoving")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCullRequestsWhileMovingMultiplier(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cullRequestsWhileMovingMultiplier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCullRequestsWhileMovingMultiplier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cullRequestsWhileMovingMultiplier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCullWithChildrenBounds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cullWithChildrenBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCullWithChildrenBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cullWithChildrenBounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugColorizeTiles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugColorizeTiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugColorizeTiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugColorizeTiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugFreezeFrame(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugFreezeFrame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugFreezeFrame: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugFreezeFrame")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugHeatmapTilePropertyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugHeatmapTilePropertyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugHeatmapTilePropertyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugHeatmapTilePropertyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugShowBoundingVolume(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowBoundingVolume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugShowBoundingVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowBoundingVolume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugShowContentBoundingVolume(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowContentBoundingVolume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugShowContentBoundingVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowContentBoundingVolume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugShowGeometricError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowGeometricError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugShowGeometricError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowGeometricError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugShowMemoryUsage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowMemoryUsage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugShowMemoryUsage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowMemoryUsage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugShowRenderingStatistics(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowRenderingStatistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugShowRenderingStatistics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowRenderingStatistics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugShowUrl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugShowUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugShowViewerRequestVolume(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowViewerRequestVolume")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugShowViewerRequestVolume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugShowViewerRequestVolume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebugWireframe(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugWireframe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebugWireframe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debugWireframe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicScreenSpaceError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicScreenSpaceError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicScreenSpaceError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicScreenSpaceError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicScreenSpaceErrorDensity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicScreenSpaceErrorDensity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicScreenSpaceErrorDensity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicScreenSpaceErrorDensity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicScreenSpaceErrorFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicScreenSpaceErrorFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicScreenSpaceErrorFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicScreenSpaceErrorFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDynamicScreenSpaceErrorHeightFalloff(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicScreenSpaceErrorHeightFalloff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDynamicScreenSpaceErrorHeightFalloff: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamicScreenSpaceErrorHeightFalloff")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEllipsoid(value: Ellipsoid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEllipsoid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFoveatedConeSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foveatedConeSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFoveatedConeSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foveatedConeSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFoveatedInterpolationCallback(value: Cesium3DTileset): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foveatedInterpolationCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFoveatedInterpolationCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foveatedInterpolationCallback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFoveatedMinimumScreenSpaceErrorRelaxation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foveatedMinimumScreenSpaceErrorRelaxation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFoveatedMinimumScreenSpaceErrorRelaxation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foveatedMinimumScreenSpaceErrorRelaxation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFoveatedScreenSpaceError(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foveatedScreenSpaceError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFoveatedScreenSpaceError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foveatedScreenSpaceError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFoveatedTimeDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foveatedTimeDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFoveatedTimeDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foveatedTimeDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageBasedLightingFactor(value: Cartesian2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageBasedLightingFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageBasedLightingFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageBasedLightingFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImmediatelyLoadDesiredLevelOfDetail(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("immediatelyLoadDesiredLevelOfDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImmediatelyLoadDesiredLevelOfDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("immediatelyLoadDesiredLevelOfDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLightColor(value: Cartesian3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lightColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLightColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lightColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadSiblings(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadSiblings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadSiblings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadSiblings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLuminanceAtZenith(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("luminanceAtZenith")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLuminanceAtZenith: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("luminanceAtZenith")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumMemoryUsage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumMemoryUsage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumMemoryUsage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumMemoryUsage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumNumberOfLoadedTiles(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumNumberOfLoadedTiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumNumberOfLoadedTiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumNumberOfLoadedTiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumScreenSpaceError(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumScreenSpaceError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumScreenSpaceError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumScreenSpaceError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelMatrix(value: Matrix4): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelMatrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelMatrix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelMatrix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPointCloudShading(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointCloudShading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPointCloudShading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointCloudShading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreferLeaves(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferLeaves")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreferLeaves: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferLeaves")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreloadFlightDestinations(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadFlightDestinations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreloadFlightDestinations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadFlightDestinations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreloadWhenHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadWhenHidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreloadWhenHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preloadWhenHidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgressiveResolutionHeightFraction(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveResolutionHeightFraction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgressiveResolutionHeightFraction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveResolutionHeightFraction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadows(value: ShadowMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipLevelOfDetail(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLevelOfDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipLevelOfDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLevelOfDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipLevels(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLevels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipLevels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipLevels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkipScreenSpaceErrorFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipScreenSpaceErrorFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkipScreenSpaceErrorFactor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipScreenSpaceErrorFactor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpecularEnvironmentMaps(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("specularEnvironmentMaps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpecularEnvironmentMaps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("specularEnvironmentMaps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSphericalHarmonicCoefficients(value: js.Array[Cartesian3]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sphericalHarmonicCoefficients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSphericalHarmonicCoefficients: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sphericalHarmonicCoefficients")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

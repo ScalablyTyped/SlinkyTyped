@@ -12,10 +12,8 @@ trait OverlayBackgroundInteraction extends js.Object
 
 object OverlayBackgroundInteraction {
   @scala.inline
-  def CLOSE_ON_CLICK_OUTSIDE: typingsSlinky.figma.figmaStrings.CLOSE_ON_CLICK_OUTSIDE = this.cast("CLOSE_ON_CLICK_OUTSIDE")
+  def CLOSE_ON_CLICK_OUTSIDE: typingsSlinky.figma.figmaStrings.CLOSE_ON_CLICK_OUTSIDE = "CLOSE_ON_CLICK_OUTSIDE".asInstanceOf[typingsSlinky.figma.figmaStrings.CLOSE_ON_CLICK_OUTSIDE]
   @scala.inline
-  def NONE: typingsSlinky.figma.figmaStrings.NONE = this.cast("NONE")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def NONE: typingsSlinky.figma.figmaStrings.NONE = "NONE".asInstanceOf[typingsSlinky.figma.figmaStrings.NONE]
 }
 

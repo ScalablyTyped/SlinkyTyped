@@ -17,35 +17,36 @@ import scala.scalajs.js.annotation._
 /* Inlined parent std.Partial<typedoc.typedoc/dist/lib/serialization/browser.TypeParameterContainer> */
 /* Inlined parent std.Partial<typedoc.typedoc/dist/lib/serialization/browser.SignatureReflectionContainer<typedoc.typedoc/dist/lib/serialization/browser.ParameterReflectionObject>> */
 /* Inlined parent typedoc.typedoc/dist/lib/serialization/browser.DeclarationReflectionContainer<typedoc.typedoc/dist/lib/serialization/browser.SignatureReflectionObject> */
+@js.native
 trait DeclarationReflectionObject extends js.Object {
-  var categories: js.UndefOr[js.Array[ReflectionCategoryObject]] = js.undefined
-  var children: js.Array[ReflectionObject]
-  var comment: js.UndefOr[CommentObject] = js.undefined
-  var decorates: js.UndefOr[js.Array[TypeObject]] = js.undefined
-  var decorators: js.UndefOr[js.Array[DecoratorObject]] = js.undefined
-  var defaultValue: String
-  var extendedBy: js.UndefOr[js.Array[TypeObject]] = js.undefined
-  var extendedTypes: js.UndefOr[js.Array[TypeObject]] = js.undefined
-  var flags: ReflectionFlagsObject
-  var getSignature: js.UndefOr[js.Array[SignatureReflectionObject]] = js.undefined
-  var groups: js.UndefOr[js.Array[ReflectionGroupObject]] = js.undefined
-  var id: Double
-  var implementationOf: js.UndefOr[TypeObject] = js.undefined
-  var implementedBy: js.UndefOr[js.Array[TypeObject]] = js.undefined
-  var implementedTypes: js.UndefOr[js.Array[TypeObject]] = js.undefined
-  var indexSignature: js.UndefOr[js.Array[SignatureReflectionObject]] = js.undefined
-  var inheritedFrom: js.UndefOr[TypeObject] = js.undefined
-  var kind: Double
-  var kindString: String
-  var name: String
-  var originalName: js.UndefOr[String] = js.undefined
-  var overwrites: js.UndefOr[TypeObject] = js.undefined
-  var parameters: js.UndefOr[js.Array[ParameterReflectionObject]] = js.undefined
-  var setSignature: js.UndefOr[js.Array[SignatureReflectionObject]] = js.undefined
-  var signatures: js.UndefOr[js.Array[SignatureReflectionObject]] = js.undefined
-  var sources: js.UndefOr[js.Array[SourceReferenceObject]] = js.undefined
-  var `type`: js.UndefOr[TypeObject] = js.undefined
-  var typeParameters: js.UndefOr[js.Array[TypeContainer]] = js.undefined
+  var categories: js.UndefOr[js.Array[ReflectionCategoryObject]] = js.native
+  var children: js.Array[ReflectionObject] = js.native
+  var comment: js.UndefOr[CommentObject] = js.native
+  var decorates: js.UndefOr[js.Array[TypeObject]] = js.native
+  var decorators: js.UndefOr[js.Array[DecoratorObject]] = js.native
+  var defaultValue: String = js.native
+  var extendedBy: js.UndefOr[js.Array[TypeObject]] = js.native
+  var extendedTypes: js.UndefOr[js.Array[TypeObject]] = js.native
+  var flags: ReflectionFlagsObject = js.native
+  var getSignature: js.UndefOr[js.Array[SignatureReflectionObject]] = js.native
+  var groups: js.UndefOr[js.Array[ReflectionGroupObject]] = js.native
+  var id: Double = js.native
+  var implementationOf: js.UndefOr[TypeObject] = js.native
+  var implementedBy: js.UndefOr[js.Array[TypeObject]] = js.native
+  var implementedTypes: js.UndefOr[js.Array[TypeObject]] = js.native
+  var indexSignature: js.UndefOr[js.Array[SignatureReflectionObject]] = js.native
+  var inheritedFrom: js.UndefOr[TypeObject] = js.native
+  var kind: Double = js.native
+  var kindString: String = js.native
+  var name: String = js.native
+  var originalName: js.UndefOr[String] = js.native
+  var overwrites: js.UndefOr[TypeObject] = js.native
+  var parameters: js.UndefOr[js.Array[ParameterReflectionObject]] = js.native
+  var setSignature: js.UndefOr[js.Array[SignatureReflectionObject]] = js.native
+  var signatures: js.UndefOr[js.Array[SignatureReflectionObject]] = js.native
+  var sources: js.UndefOr[js.Array[SourceReferenceObject]] = js.native
+  var `type`: js.UndefOr[TypeObject] = js.native
+  var typeParameters: js.UndefOr[js.Array[TypeContainer]] = js.native
 }
 
 object DeclarationReflectionObject {
@@ -57,52 +58,312 @@ object DeclarationReflectionObject {
     id: Double,
     kind: Double,
     kindString: String,
-    name: String,
-    categories: js.Array[ReflectionCategoryObject] = null,
-    comment: CommentObject = null,
-    decorates: js.Array[TypeObject] = null,
-    decorators: js.Array[DecoratorObject] = null,
-    extendedBy: js.Array[TypeObject] = null,
-    extendedTypes: js.Array[TypeObject] = null,
-    getSignature: js.Array[SignatureReflectionObject] = null,
-    groups: js.Array[ReflectionGroupObject] = null,
-    implementationOf: TypeObject = null,
-    implementedBy: js.Array[TypeObject] = null,
-    implementedTypes: js.Array[TypeObject] = null,
-    indexSignature: js.Array[SignatureReflectionObject] = null,
-    inheritedFrom: TypeObject = null,
-    originalName: String = null,
-    overwrites: TypeObject = null,
-    parameters: js.Array[ParameterReflectionObject] = null,
-    setSignature: js.Array[SignatureReflectionObject] = null,
-    signatures: js.Array[SignatureReflectionObject] = null,
-    sources: js.Array[SourceReferenceObject] = null,
-    `type`: TypeObject = null,
-    typeParameters: js.Array[TypeContainer] = null
+    name: String
   ): DeclarationReflectionObject = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], defaultValue = defaultValue.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], kindString = kindString.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
-    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
-    if (decorates != null) __obj.updateDynamic("decorates")(decorates.asInstanceOf[js.Any])
-    if (decorators != null) __obj.updateDynamic("decorators")(decorators.asInstanceOf[js.Any])
-    if (extendedBy != null) __obj.updateDynamic("extendedBy")(extendedBy.asInstanceOf[js.Any])
-    if (extendedTypes != null) __obj.updateDynamic("extendedTypes")(extendedTypes.asInstanceOf[js.Any])
-    if (getSignature != null) __obj.updateDynamic("getSignature")(getSignature.asInstanceOf[js.Any])
-    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
-    if (implementationOf != null) __obj.updateDynamic("implementationOf")(implementationOf.asInstanceOf[js.Any])
-    if (implementedBy != null) __obj.updateDynamic("implementedBy")(implementedBy.asInstanceOf[js.Any])
-    if (implementedTypes != null) __obj.updateDynamic("implementedTypes")(implementedTypes.asInstanceOf[js.Any])
-    if (indexSignature != null) __obj.updateDynamic("indexSignature")(indexSignature.asInstanceOf[js.Any])
-    if (inheritedFrom != null) __obj.updateDynamic("inheritedFrom")(inheritedFrom.asInstanceOf[js.Any])
-    if (originalName != null) __obj.updateDynamic("originalName")(originalName.asInstanceOf[js.Any])
-    if (overwrites != null) __obj.updateDynamic("overwrites")(overwrites.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
-    if (setSignature != null) __obj.updateDynamic("setSignature")(setSignature.asInstanceOf[js.Any])
-    if (signatures != null) __obj.updateDynamic("signatures")(signatures.asInstanceOf[js.Any])
-    if (sources != null) __obj.updateDynamic("sources")(sources.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (typeParameters != null) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeclarationReflectionObject]
   }
+  @scala.inline
+  implicit class DeclarationReflectionObjectOps[Self <: DeclarationReflectionObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: js.Array[ReflectionObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlags(value: ReflectionFlagsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKindString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kindString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCategories(value: js.Array[ReflectionCategoryObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComment(value: CommentObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecorates(value: js.Array[TypeObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecorates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecorators(value: js.Array[DecoratorObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecorators: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decorators")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtendedBy(value: js.Array[TypeObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtendedTypes(value: js.Array[TypeObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendedTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetSignature(value: js.Array[SignatureReflectionObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSignature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroups(value: js.Array[ReflectionGroupObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImplementationOf(value: TypeObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementationOf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImplementationOf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementationOf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImplementedBy(value: js.Array[TypeObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImplementedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementedBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImplementedTypes(value: js.Array[TypeObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementedTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImplementedTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("implementedTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexSignature(value: js.Array[SignatureReflectionObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexSignature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInheritedFrom(value: TypeObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritedFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInheritedFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritedFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverwrites(value: TypeObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrites")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverwrites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overwrites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: js.Array[ParameterReflectionObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetSignature(value: js.Array[SignatureReflectionObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSignature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignatures(value: js.Array[SignatureReflectionObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signatures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSources(value: js.Array[SourceReferenceObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: TypeObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeParameters(value: js.Array[TypeContainer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("typeParameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

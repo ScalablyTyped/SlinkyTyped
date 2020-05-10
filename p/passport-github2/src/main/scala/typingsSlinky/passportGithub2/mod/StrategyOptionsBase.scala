@@ -1,56 +1,127 @@
 package typingsSlinky.passportGithub2.mod
 
-import typingsSlinky.node.httpMod.OutgoingHttpHeaders
-import typingsSlinky.passportOauth2.mod.StateStore
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StrategyOptionsBase extends OAuth2StrategyOptionsWithoutRequiredURLs {
-  var authorizationURL: js.UndefOr[String] = js.undefined
+  var authorizationURL: js.UndefOr[String] = js.native
   @JSName("callbackURL")
-  var callbackURL_StrategyOptionsBase: String
+  var callbackURL_StrategyOptionsBase: String = js.native
   @JSName("scope")
-  var scope_StrategyOptionsBase: js.UndefOr[js.Array[String]] = js.undefined
+  var scope_StrategyOptionsBase: js.UndefOr[js.Array[String]] = js.native
   @JSName("state")
-  var state_StrategyOptionsBase: js.UndefOr[String] = js.undefined
-  var tokenURL: js.UndefOr[String] = js.undefined
-  var userAgent: js.UndefOr[String] = js.undefined
-  var userEmailURL: js.UndefOr[String] = js.undefined
-  var userProfileURL: js.UndefOr[String] = js.undefined
+  var state_StrategyOptionsBase: js.UndefOr[String] = js.native
+  var tokenURL: js.UndefOr[String] = js.native
+  var userAgent: js.UndefOr[String] = js.native
+  var userEmailURL: js.UndefOr[String] = js.native
+  var userProfileURL: js.UndefOr[String] = js.native
 }
 
 object StrategyOptionsBase {
   @scala.inline
-  def apply(
-    callbackURL: String,
-    clientID: String,
-    clientSecret: String,
-    authorizationURL: String = null,
-    customHeaders: OutgoingHttpHeaders = null,
-    scope: js.Array[String] = null,
-    scopeSeparator: String = null,
-    sessionKey: String = null,
-    state: String = null,
-    store: StateStore = null,
-    tokenURL: String = null,
-    userAgent: String = null,
-    userEmailURL: String = null,
-    userProfileURL: String = null
-  ): StrategyOptionsBase = {
+  def apply(callbackURL: String, clientID: String, clientSecret: String): StrategyOptionsBase = {
     val __obj = js.Dynamic.literal(callbackURL = callbackURL.asInstanceOf[js.Any], clientID = clientID.asInstanceOf[js.Any], clientSecret = clientSecret.asInstanceOf[js.Any])
-    if (authorizationURL != null) __obj.updateDynamic("authorizationURL")(authorizationURL.asInstanceOf[js.Any])
-    if (customHeaders != null) __obj.updateDynamic("customHeaders")(customHeaders.asInstanceOf[js.Any])
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (scopeSeparator != null) __obj.updateDynamic("scopeSeparator")(scopeSeparator.asInstanceOf[js.Any])
-    if (sessionKey != null) __obj.updateDynamic("sessionKey")(sessionKey.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
-    if (tokenURL != null) __obj.updateDynamic("tokenURL")(tokenURL.asInstanceOf[js.Any])
-    if (userAgent != null) __obj.updateDynamic("userAgent")(userAgent.asInstanceOf[js.Any])
-    if (userEmailURL != null) __obj.updateDynamic("userEmailURL")(userEmailURL.asInstanceOf[js.Any])
-    if (userProfileURL != null) __obj.updateDynamic("userProfileURL")(userProfileURL.asInstanceOf[js.Any])
     __obj.asInstanceOf[StrategyOptionsBase]
   }
+  @scala.inline
+  implicit class StrategyOptionsBaseOps[Self <: StrategyOptionsBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallbackURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthorizationURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokenURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokenURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserAgent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserAgent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAgent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserEmailURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userEmailURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserEmailURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userEmailURL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserProfileURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userProfileURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserProfileURL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userProfileURL")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,12 +7,6 @@ import scala.scalajs.js.annotation._
 
 object sequelizeStrings {
   @js.native
-  sealed trait `10` extends js.Object
-  
-  @js.native
-  sealed trait `13` extends js.Object
-  
-  @js.native
   sealed trait `3` extends js.Object
   
   @js.native
@@ -20,9 +14,6 @@ object sequelizeStrings {
   
   @js.native
   sealed trait `5` extends js.Object
-  
-  @js.native
-  sealed trait `6` extends js.Object
   
   @js.native
   sealed trait DEFERRED extends js.Object
@@ -97,17 +88,11 @@ object sequelizeStrings {
   sealed trait where extends js.Object
   
   @scala.inline
-  def `10`: `10` = "10".asInstanceOf[`10`]
-  @scala.inline
-  def `13`: `13` = "13".asInstanceOf[`13`]
-  @scala.inline
   def `3`: `3` = "3".asInstanceOf[`3`]
   @scala.inline
   def `4`: `4` = "4".asInstanceOf[`4`]
   @scala.inline
   def `5`: `5` = "5".asInstanceOf[`5`]
-  @scala.inline
-  def `6`: `6` = "6".asInstanceOf[`6`]
   @scala.inline
   def DEFERRED: DEFERRED = "DEFERRED".asInstanceOf[DEFERRED]
   @scala.inline
@@ -119,15 +104,15 @@ object sequelizeStrings {
   @scala.inline
   def IMMEDIATE: IMMEDIATE = "IMMEDIATE".asInstanceOf[IMMEDIATE]
   @scala.inline
-  def `KEY SHARE`: `KEY SHARE` = "KEY SHARE".asInstanceOf[`KEY SHARE`]
+  def `KEY SHARE`: `KEY SHARE` = ("KEY SHARE").asInstanceOf[`KEY SHARE`]
   @scala.inline
-  def `NO KEY UPDATE`: `NO KEY UPDATE` = "NO KEY UPDATE".asInstanceOf[`NO KEY UPDATE`]
+  def `NO KEY UPDATE`: `NO KEY UPDATE` = ("NO KEY UPDATE").asInstanceOf[`NO KEY UPDATE`]
   @scala.inline
-  def `READ COMMITTED`: `READ COMMITTED` = "READ COMMITTED".asInstanceOf[`READ COMMITTED`]
+  def `READ COMMITTED`: `READ COMMITTED` = ("READ COMMITTED").asInstanceOf[`READ COMMITTED`]
   @scala.inline
-  def `READ UNCOMMITTED`: `READ UNCOMMITTED` = "READ UNCOMMITTED".asInstanceOf[`READ UNCOMMITTED`]
+  def `READ UNCOMMITTED`: `READ UNCOMMITTED` = ("READ UNCOMMITTED").asInstanceOf[`READ UNCOMMITTED`]
   @scala.inline
-  def `REPEATABLE READ`: `REPEATABLE READ` = "REPEATABLE READ".asInstanceOf[`REPEATABLE READ`]
+  def `REPEATABLE READ`: `REPEATABLE READ` = ("REPEATABLE READ").asInstanceOf[`REPEATABLE READ`]
   @scala.inline
   def SERIALIZABLE: SERIALIZABLE = "SERIALIZABLE".asInstanceOf[SERIALIZABLE]
   @scala.inline
@@ -149,9 +134,9 @@ object sequelizeStrings {
   @scala.inline
   def default: default = "default".asInstanceOf[default]
   @scala.inline
-  def `foreign key`: `foreign key` = "foreign key".asInstanceOf[`foreign key`]
+  def `foreign key`: `foreign key` = ("foreign key").asInstanceOf[`foreign key`]
   @scala.inline
-  def `primary key`: `primary key` = "primary key".asInstanceOf[`primary key`]
+  def `primary key`: `primary key` = ("primary key").asInstanceOf[`primary key`]
   @scala.inline
   def unique_ : unique_ = "unique".asInstanceOf[unique_]
   @scala.inline

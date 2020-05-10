@@ -46,28 +46,125 @@ trait RegisterContainerInstanceRequest extends js.Object {
 
 object RegisterContainerInstanceRequest {
   @scala.inline
-  def apply(
-    attributes: Attributes = null,
-    cluster: String = null,
-    containerInstanceArn: String = null,
-    instanceIdentityDocument: String = null,
-    instanceIdentityDocumentSignature: String = null,
-    platformDevices: PlatformDevices = null,
-    tags: Tags = null,
-    totalResources: Resources = null,
-    versionInfo: VersionInfo = null
-  ): RegisterContainerInstanceRequest = {
+  def apply(): RegisterContainerInstanceRequest = {
     val __obj = js.Dynamic.literal()
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (cluster != null) __obj.updateDynamic("cluster")(cluster.asInstanceOf[js.Any])
-    if (containerInstanceArn != null) __obj.updateDynamic("containerInstanceArn")(containerInstanceArn.asInstanceOf[js.Any])
-    if (instanceIdentityDocument != null) __obj.updateDynamic("instanceIdentityDocument")(instanceIdentityDocument.asInstanceOf[js.Any])
-    if (instanceIdentityDocumentSignature != null) __obj.updateDynamic("instanceIdentityDocumentSignature")(instanceIdentityDocumentSignature.asInstanceOf[js.Any])
-    if (platformDevices != null) __obj.updateDynamic("platformDevices")(platformDevices.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (totalResources != null) __obj.updateDynamic("totalResources")(totalResources.asInstanceOf[js.Any])
-    if (versionInfo != null) __obj.updateDynamic("versionInfo")(versionInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[RegisterContainerInstanceRequest]
   }
+  @scala.inline
+  implicit class RegisterContainerInstanceRequestOps[Self <: RegisterContainerInstanceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: Attributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCluster(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCluster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerInstanceArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerInstanceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerInstanceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerInstanceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceIdentityDocument(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceIdentityDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceIdentityDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceIdentityDocument")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceIdentityDocumentSignature(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceIdentityDocumentSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceIdentityDocumentSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceIdentityDocumentSignature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformDevices(value: PlatformDevices): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformDevices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformDevices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformDevices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalResources(value: Resources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionInfo(value: VersionInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("versionInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

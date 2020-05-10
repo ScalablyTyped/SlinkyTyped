@@ -4,28 +4,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AudioTrackMenuItemOptions extends MenuItemOptions {
-  var track: js.UndefOr[org.scalajs.dom.raw.AudioTrack] = js.undefined
+  var track: js.UndefOr[VideojsAudioTrack] = js.native
 }
 
 object AudioTrackMenuItemOptions {
   @scala.inline
-  def apply(
-    children: js.Array[Child] = null,
-    label: String = null,
-    multiSelectable: js.UndefOr[Boolean] = js.undefined,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    selected: js.UndefOr[Boolean] = js.undefined,
-    track: org.scalajs.dom.raw.AudioTrack = null
-  ): AudioTrackMenuItemOptions = {
+  def apply(): AudioTrackMenuItemOptions = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiSelectable)) __obj.updateDynamic("multiSelectable")(multiSelectable.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (!js.isUndefined(selected)) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (track != null) __obj.updateDynamic("track")(track.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioTrackMenuItemOptions]
   }
+  @scala.inline
+  implicit class AudioTrackMenuItemOptionsOps[Self <: AudioTrackMenuItemOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrack(value: VideojsAudioTrack): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

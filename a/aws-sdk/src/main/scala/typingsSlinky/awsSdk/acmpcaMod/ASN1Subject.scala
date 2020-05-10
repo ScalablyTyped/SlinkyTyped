@@ -66,38 +66,185 @@ trait ASN1Subject extends js.Object {
 
 object ASN1Subject {
   @scala.inline
-  def apply(
-    CommonName: String64 = null,
-    Country: CountryCodeString = null,
-    DistinguishedNameQualifier: DistinguishedNameQualifierString = null,
-    GenerationQualifier: String3 = null,
-    GivenName: String16 = null,
-    Initials: String5 = null,
-    Locality: String128 = null,
-    Organization: String64 = null,
-    OrganizationalUnit: String64 = null,
-    Pseudonym: String128 = null,
-    SerialNumber: String64 = null,
-    State: String128 = null,
-    Surname: String40 = null,
-    Title: String64 = null
-  ): ASN1Subject = {
+  def apply(): ASN1Subject = {
     val __obj = js.Dynamic.literal()
-    if (CommonName != null) __obj.updateDynamic("CommonName")(CommonName.asInstanceOf[js.Any])
-    if (Country != null) __obj.updateDynamic("Country")(Country.asInstanceOf[js.Any])
-    if (DistinguishedNameQualifier != null) __obj.updateDynamic("DistinguishedNameQualifier")(DistinguishedNameQualifier.asInstanceOf[js.Any])
-    if (GenerationQualifier != null) __obj.updateDynamic("GenerationQualifier")(GenerationQualifier.asInstanceOf[js.Any])
-    if (GivenName != null) __obj.updateDynamic("GivenName")(GivenName.asInstanceOf[js.Any])
-    if (Initials != null) __obj.updateDynamic("Initials")(Initials.asInstanceOf[js.Any])
-    if (Locality != null) __obj.updateDynamic("Locality")(Locality.asInstanceOf[js.Any])
-    if (Organization != null) __obj.updateDynamic("Organization")(Organization.asInstanceOf[js.Any])
-    if (OrganizationalUnit != null) __obj.updateDynamic("OrganizationalUnit")(OrganizationalUnit.asInstanceOf[js.Any])
-    if (Pseudonym != null) __obj.updateDynamic("Pseudonym")(Pseudonym.asInstanceOf[js.Any])
-    if (SerialNumber != null) __obj.updateDynamic("SerialNumber")(SerialNumber.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (Surname != null) __obj.updateDynamic("Surname")(Surname.asInstanceOf[js.Any])
-    if (Title != null) __obj.updateDynamic("Title")(Title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASN1Subject]
   }
+  @scala.inline
+  implicit class ASN1SubjectOps[Self <: ASN1Subject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommonName(value: String64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommonName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommonName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountry(value: CountryCodeString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistinguishedNameQualifier(value: DistinguishedNameQualifierString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DistinguishedNameQualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistinguishedNameQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DistinguishedNameQualifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenerationQualifier(value: String3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GenerationQualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenerationQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GenerationQualifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGivenName(value: String16): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GivenName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGivenName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GivenName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitials(value: String5): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Initials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Initials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocality(value: String128): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Locality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Locality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganization(value: String64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Organization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Organization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationalUnit(value: String64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationalUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPseudonym(value: String128): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pseudonym")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPseudonym: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pseudonym")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerialNumber(value: String64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerialNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String128): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSurname(value: String40): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Surname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSurname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Surname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

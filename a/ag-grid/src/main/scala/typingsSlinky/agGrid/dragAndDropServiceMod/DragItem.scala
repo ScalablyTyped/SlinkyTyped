@@ -7,24 +7,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DragItem extends js.Object {
-  var columns: js.UndefOr[js.Array[Column]] = js.undefined
-  var rowNode: js.UndefOr[RowNode] = js.undefined
-  var visibleState: js.UndefOr[StringDictionary[Boolean]] = js.undefined
+  var columns: js.UndefOr[js.Array[Column]] = js.native
+  var rowNode: js.UndefOr[RowNode] = js.native
+  var visibleState: js.UndefOr[StringDictionary[Boolean]] = js.native
 }
 
 object DragItem {
   @scala.inline
-  def apply(
-    columns: js.Array[Column] = null,
-    rowNode: RowNode = null,
-    visibleState: StringDictionary[Boolean] = null
-  ): DragItem = {
+  def apply(): DragItem = {
     val __obj = js.Dynamic.literal()
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (rowNode != null) __obj.updateDynamic("rowNode")(rowNode.asInstanceOf[js.Any])
-    if (visibleState != null) __obj.updateDynamic("visibleState")(visibleState.asInstanceOf[js.Any])
     __obj.asInstanceOf[DragItem]
   }
+  @scala.inline
+  implicit class DragItemOps[Self <: DragItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumns(value: js.Array[Column]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowNode(value: RowNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibleState(value: StringDictionary[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibleState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,16 +15,14 @@ trait LogLevel extends js.Object
 
 object LogLevel {
   @scala.inline
-  def DEBUG: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.DEBUG = this.cast("DEBUG")
+  def DEBUG: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.DEBUG = "DEBUG".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.DEBUG]
   @scala.inline
-  def ERROR: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.ERROR = this.cast("ERROR")
+  def ERROR: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.ERROR = "ERROR".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.ERROR]
   @scala.inline
-  def INFO: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.INFO = this.cast("INFO")
+  def INFO: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.INFO = "INFO".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.INFO]
   @scala.inline
-  def TRACE: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.TRACE = this.cast("TRACE")
+  def TRACE: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.TRACE = "TRACE".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.TRACE]
   @scala.inline
-  def WARN: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.WARN = this.cast("WARN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WARN: typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.WARN = "WARN".asInstanceOf[typingsSlinky.reactNativeMauron85BackgroundGeolocation.reactNativeMauron85BackgroundGeolocationStrings.WARN]
 }
 

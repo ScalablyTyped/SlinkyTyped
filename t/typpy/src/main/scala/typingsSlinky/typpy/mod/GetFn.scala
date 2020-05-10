@@ -4,7 +4,6 @@ import typingsSlinky.std.ArrayConstructor
 import typingsSlinky.std.BooleanConstructor
 import typingsSlinky.std.FunctionConstructor
 import typingsSlinky.std.NumberConstructor
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.RegExpConstructor
 import typingsSlinky.std.StringConstructor
 import typingsSlinky.typpy.typpyBooleans.`false`
@@ -49,8 +48,8 @@ trait GetFn extends js.Object {
   def apply(input: Double, asString: `true`): number | nan = js.native
   def apply(input: Null, asString: `false`): Null = js.native
   def apply(input: Null, asString: `true`): `null` = js.native
-  def apply(input: RegExp): RegExpConstructor = js.native
-  def apply(input: RegExp, asString: `false`): RegExpConstructor = js.native
-  def apply(input: RegExp, asString: `true`): regexp = js.native
+  def apply(input: js.RegExp): RegExpConstructor = js.native
+  def apply(input: js.RegExp, asString: `false`): RegExpConstructor = js.native
+  def apply(input: js.RegExp, asString: `true`): regexp = js.native
 }
 

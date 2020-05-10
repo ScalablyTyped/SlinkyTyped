@@ -1,6 +1,5 @@
 package typingsSlinky.expectJs
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -144,7 +143,7 @@ object Expect_ extends js.Object {
       *
       * @param regexp regexp to match error string against
       */
-    def throwError(regexp: RegExp): Unit = js.native
+    def throwError(regexp: js.RegExp): Unit = js.native
     /**
       * Assert that the function throws.
       *
@@ -157,7 +156,7 @@ object Expect_ extends js.Object {
       *
       * @param fn callback to match error string against
       */
-    def throwException(regexp: RegExp): Unit = js.native
+    def throwException(regexp: js.RegExp): Unit = js.native
     /**
       * Creates an anonymous function which calls fn with arguments.
       */

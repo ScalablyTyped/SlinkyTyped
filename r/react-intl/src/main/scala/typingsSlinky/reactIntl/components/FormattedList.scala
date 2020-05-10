@@ -1,10 +1,8 @@
 package typingsSlinky.reactIntl.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactIntl.IntlListFormatOptionsvalu
 import typingsSlinky.reactIntl.reactIntlStrings.`best fit`
 import typingsSlinky.reactIntl.reactIntlStrings.conjunction
@@ -18,27 +16,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormattedList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object FormattedList {
   @JSImport("react-intl", "FormattedList")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    value: js.Array[TagMod[Any]],
-    localeMatcher: (`best fit`) | lookup = null,
-    style: long | short | narrow = null,
-    `type`: conjunction | disjunction | unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    if (localeMatcher != null) __obj.updateDynamic("localeMatcher")(localeMatcher.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def localeMatcher(value: (`best fit`) | lookup): this.type = set("localeMatcher", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: long | short | narrow): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: conjunction | disjunction | unit): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = IntlListFormatOptionsvalu
+  
+  def withProps(p: IntlListFormatOptionsvalu): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(value: js.Array[TagMod[Any]]): Builder = {
+    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IntlListFormatOptionsvalu]))
+  }
 }
 

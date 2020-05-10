@@ -13,12 +13,10 @@ trait GoogleActionsOrdersV3PriceAttributeState extends js.Object
 
 object GoogleActionsOrdersV3PriceAttributeState {
   @scala.inline
-  def ACTUAL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTUAL = this.cast("ACTUAL")
+  def ACTUAL: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTUAL = "ACTUAL".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTUAL]
   @scala.inline
-  def ESTIMATE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ESTIMATE = this.cast("ESTIMATE")
+  def ESTIMATE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ESTIMATE = "ESTIMATE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ESTIMATE]
   @scala.inline
-  def STATE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.STATE_UNSPECIFIED = this.cast("STATE_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def STATE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.STATE_UNSPECIFIED = "STATE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.STATE_UNSPECIFIED]
 }
 

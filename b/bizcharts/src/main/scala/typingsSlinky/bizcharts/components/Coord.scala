@@ -1,10 +1,7 @@
 package typingsSlinky.bizcharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.bizcharts.bizchartsStrings.x
 import typingsSlinky.bizcharts.bizchartsStrings.y
 import typingsSlinky.bizcharts.mod.CoordProps
@@ -13,39 +10,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Coord
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Coord] {
+object Coord {
   @JSImport("bizcharts", "Coord")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    endAngle: Int | Double = null,
-    innerRadius: Int | Double = null,
-    radius: Int | Double = null,
-    reflect: x | y = null,
-    rotate: Int | Double = null,
-    scale: js.Tuple2[Double, Double] = null,
-    startAngle: Int | Double = null,
-    transpose: js.UndefOr[Boolean] = js.undefined,
-    `type`: CoordType = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Coord] = {
-    val __obj = js.Dynamic.literal()
-    if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
-    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
-    if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
-    if (reflect != null) __obj.updateDynamic("reflect")(reflect.asInstanceOf[js.Any])
-    if (rotate != null) __obj.updateDynamic("rotate")(rotate.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
-    if (!js.isUndefined(transpose)) __obj.updateDynamic("transpose")(transpose.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Coord] {
+    @scala.inline
+    def endAngle(value: Double): this.type = set("endAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRadius(value: Double): this.type = set("innerRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def radius(value: Double): this.type = set("radius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reflect(value: x | y): this.type = set("reflect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rotate(value: Double): this.type = set("rotate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scale(value: js.Tuple2[Double, Double]): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startAngle(value: Double): this.type = set("startAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transpose(value: Boolean): this.type = set("transpose", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: CoordType): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Coord] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Coord](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CoordProps
+  
+  def withProps(p: CoordProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Coord.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

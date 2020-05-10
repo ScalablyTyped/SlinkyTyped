@@ -1,6 +1,5 @@
 package typingsSlinky.i18nJs.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +9,6 @@ import scala.scalajs.js.annotation._
 object toTime extends js.Object {
   def apply(scope: Scope, value: String): String = js.native
   def apply(scope: Scope, value: Double): String = js.native
-  def apply(scope: Scope, value: Date): String = js.native
+  def apply(scope: Scope, value: js.Date): String = js.native
 }
 

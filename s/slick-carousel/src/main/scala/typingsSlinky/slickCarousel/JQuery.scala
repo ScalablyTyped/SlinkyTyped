@@ -1,5 +1,6 @@
 package typingsSlinky.slickCarousel
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.slickCarousel.slickCarouselStrings.getSlick
 import typingsSlinky.slickCarousel.slickCarouselStrings.slickAdd
 import typingsSlinky.slickCarousel.slickCarouselStrings.slickCurrentSlide
@@ -14,7 +15,6 @@ import typingsSlinky.slickCarousel.slickCarouselStrings.slickRemove
 import typingsSlinky.slickCarousel.slickCarouselStrings.slickSetOption
 import typingsSlinky.slickCarousel.slickCarouselStrings.slickUnfilter
 import typingsSlinky.slickCarousel.slickCarouselStrings.unslick
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

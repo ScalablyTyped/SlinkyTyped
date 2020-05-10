@@ -43,16 +43,53 @@ trait SchemaPushConfig extends js.Object {
 
 object SchemaPushConfig {
   @scala.inline
-  def apply(
-    attributes: StringDictionary[String] = null,
-    oidcToken: SchemaOidcToken = null,
-    pushEndpoint: String = null
-  ): SchemaPushConfig = {
+  def apply(): SchemaPushConfig = {
     val __obj = js.Dynamic.literal()
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (oidcToken != null) __obj.updateDynamic("oidcToken")(oidcToken.asInstanceOf[js.Any])
-    if (pushEndpoint != null) __obj.updateDynamic("pushEndpoint")(pushEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPushConfig]
   }
+  @scala.inline
+  implicit class SchemaPushConfigOps[Self <: SchemaPushConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOidcToken(value: SchemaOidcToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oidcToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOidcToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oidcToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPushEndpoint(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pushEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPushEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pushEndpoint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

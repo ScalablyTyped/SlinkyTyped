@@ -12,10 +12,8 @@ trait Type extends js.Object
 
 object Type {
   @scala.inline
-  def audio: typingsSlinky.grecaptcha.grecaptchaStrings.audio = this.cast("audio")
+  def audio: typingsSlinky.grecaptcha.grecaptchaStrings.audio = "audio".asInstanceOf[typingsSlinky.grecaptcha.grecaptchaStrings.audio]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def image: typingsSlinky.grecaptcha.grecaptchaStrings.image = this.cast("image")
+  def image: typingsSlinky.grecaptcha.grecaptchaStrings.image = "image".asInstanceOf[typingsSlinky.grecaptcha.grecaptchaStrings.image]
 }
 

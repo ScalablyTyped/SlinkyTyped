@@ -7,27 +7,53 @@ import scala.scalajs.js.annotation._
 /**
   * Container for the dynamic properties of an attribute expression.
   */
+@js.native
 trait INxTickCell extends js.Object {
   /*
     * End value.
     */
-  var qEnd: Double
+  var qEnd: Double = js.native
   /**
     * Start value.
     */
-  var qStart: Double
+  var qStart: Double = js.native
   /**
     * Tick's label.
     */
-  var qText: String
+  var qText: String = js.native
 }
 
 object INxTickCell {
   @scala.inline
   def apply(qEnd: Double, qStart: Double, qText: String): INxTickCell = {
     val __obj = js.Dynamic.literal(qEnd = qEnd.asInstanceOf[js.Any], qStart = qStart.asInstanceOf[js.Any], qText = qText.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[INxTickCell]
   }
+  @scala.inline
+  implicit class INxTickCellOps[Self <: INxTickCell] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQEnd(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qText")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

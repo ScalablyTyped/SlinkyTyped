@@ -370,7 +370,7 @@ package object gameliftMod {
   type VpcPeeringAuthorizationList = js.Array[typingsSlinky.awsSdk.gameliftMod.VpcPeeringAuthorization]
   type VpcPeeringConnectionList = js.Array[typingsSlinky.awsSdk.gameliftMod.VpcPeeringConnection]
   type WholeNumber = scala.Double
-  type ZipBlob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.gameliftMod.Blob | java.lang.String
+  type ZipBlob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.gameliftMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2015-10-01`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

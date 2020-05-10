@@ -20,26 +20,24 @@ trait MsTextAutospaceProperty extends js.Object
 
 object MsTextAutospaceProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `ideograph-alpha`: typingsSlinky.csstype.csstypeStrings.`ideograph-alpha` = "ideograph-alpha".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ideograph-alpha`]
   @scala.inline
-  def `ideograph-alpha`: typingsSlinky.csstype.csstypeStrings.`ideograph-alpha` = this.cast("ideograph-alpha")
+  def `ideograph-numeric`: typingsSlinky.csstype.csstypeStrings.`ideograph-numeric` = "ideograph-numeric".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ideograph-numeric`]
   @scala.inline
-  def `ideograph-numeric`: typingsSlinky.csstype.csstypeStrings.`ideograph-numeric` = this.cast("ideograph-numeric")
+  def `ideograph-parenthesis`: typingsSlinky.csstype.csstypeStrings.`ideograph-parenthesis` = "ideograph-parenthesis".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ideograph-parenthesis`]
   @scala.inline
-  def `ideograph-parenthesis`: typingsSlinky.csstype.csstypeStrings.`ideograph-parenthesis` = this.cast("ideograph-parenthesis")
+  def `ideograph-space`: typingsSlinky.csstype.csstypeStrings.`ideograph-space` = "ideograph-space".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ideograph-space`]
   @scala.inline
-  def `ideograph-space`: typingsSlinky.csstype.csstypeStrings.`ideograph-space` = this.cast("ideograph-space")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def none: typingsSlinky.csstype.csstypeStrings.none = "none".asInstanceOf[typingsSlinky.csstype.csstypeStrings.none]
   @scala.inline
-  def none: typingsSlinky.csstype.csstypeStrings.none = this.cast("none")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

@@ -9,69 +9,257 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ResolverOption extends js.Object {
-  var alias: js.UndefOr[js.Array[AliasItem] | Dictionary[String]] = js.undefined
-  var aliasFields: js.UndefOr[js.Array[String]] = js.undefined
-  var cachePredicate: js.UndefOr[js.Function1[/* val */ ResolverRequest, Boolean]] = js.undefined
-  var descriptionFiles: js.UndefOr[js.Array[String]] = js.undefined
-  var enforceExtension: js.UndefOr[Boolean] = js.undefined
-  var enforceModuleExtension: js.UndefOr[Boolean] = js.undefined
-  var extensions: js.UndefOr[js.Array[String]] = js.undefined
-  var fileSystem: js.UndefOr[AbstractInputFileSystem] = js.undefined
-  var mainFields: js.UndefOr[js.Array[String]] = js.undefined
-  var mainFiles: js.UndefOr[js.Array[String]] = js.undefined
-  var moduleExtensions: js.UndefOr[js.Array[String]] = js.undefined
-  var modules: js.UndefOr[js.Array[String]] = js.undefined
-  var plugins: js.UndefOr[js.Array[Plugin]] = js.undefined
-  var resolveToContext: js.UndefOr[Boolean] = js.undefined
-  var resolver: js.UndefOr[^] = js.undefined
-  var symlinks: js.UndefOr[js.Array[String] | Boolean] = js.undefined
-  var unsafeCache: js.UndefOr[Boolean | Dictionary[_]] = js.undefined
-  var useSyncFileSystemCalls: js.UndefOr[Boolean] = js.undefined
+  var alias: js.UndefOr[js.Array[AliasItem] | Dictionary[String]] = js.native
+  var aliasFields: js.UndefOr[js.Array[String]] = js.native
+  var cachePredicate: js.UndefOr[js.Function1[/* val */ ResolverRequest, Boolean]] = js.native
+  var descriptionFiles: js.UndefOr[js.Array[String]] = js.native
+  var enforceExtension: js.UndefOr[Boolean] = js.native
+  var enforceModuleExtension: js.UndefOr[Boolean] = js.native
+  var extensions: js.UndefOr[js.Array[String]] = js.native
+  var fileSystem: js.UndefOr[AbstractInputFileSystem] = js.native
+  var mainFields: js.UndefOr[js.Array[String]] = js.native
+  var mainFiles: js.UndefOr[js.Array[String]] = js.native
+  var moduleExtensions: js.UndefOr[js.Array[String]] = js.native
+  var modules: js.UndefOr[js.Array[String]] = js.native
+  var plugins: js.UndefOr[js.Array[Plugin]] = js.native
+  var resolveToContext: js.UndefOr[Boolean] = js.native
+  var resolver: js.UndefOr[^] = js.native
+  var symlinks: js.UndefOr[js.Array[String] | Boolean] = js.native
+  var unsafeCache: js.UndefOr[Boolean | Dictionary[_]] = js.native
+  var useSyncFileSystemCalls: js.UndefOr[Boolean] = js.native
 }
 
 object ResolverOption {
   @scala.inline
-  def apply(
-    alias: js.Array[AliasItem] | Dictionary[String] = null,
-    aliasFields: js.Array[String] = null,
-    cachePredicate: /* val */ ResolverRequest => Boolean = null,
-    descriptionFiles: js.Array[String] = null,
-    enforceExtension: js.UndefOr[Boolean] = js.undefined,
-    enforceModuleExtension: js.UndefOr[Boolean] = js.undefined,
-    extensions: js.Array[String] = null,
-    fileSystem: AbstractInputFileSystem = null,
-    mainFields: js.Array[String] = null,
-    mainFiles: js.Array[String] = null,
-    moduleExtensions: js.Array[String] = null,
-    modules: js.Array[String] = null,
-    plugins: js.Array[Plugin] = null,
-    resolveToContext: js.UndefOr[Boolean] = js.undefined,
-    resolver: ^ = null,
-    symlinks: js.Array[String] | Boolean = null,
-    unsafeCache: Boolean | Dictionary[_] = null,
-    useSyncFileSystemCalls: js.UndefOr[Boolean] = js.undefined
-  ): ResolverOption = {
+  def apply(): ResolverOption = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (aliasFields != null) __obj.updateDynamic("aliasFields")(aliasFields.asInstanceOf[js.Any])
-    if (cachePredicate != null) __obj.updateDynamic("cachePredicate")(js.Any.fromFunction1(cachePredicate))
-    if (descriptionFiles != null) __obj.updateDynamic("descriptionFiles")(descriptionFiles.asInstanceOf[js.Any])
-    if (!js.isUndefined(enforceExtension)) __obj.updateDynamic("enforceExtension")(enforceExtension.asInstanceOf[js.Any])
-    if (!js.isUndefined(enforceModuleExtension)) __obj.updateDynamic("enforceModuleExtension")(enforceModuleExtension.asInstanceOf[js.Any])
-    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
-    if (fileSystem != null) __obj.updateDynamic("fileSystem")(fileSystem.asInstanceOf[js.Any])
-    if (mainFields != null) __obj.updateDynamic("mainFields")(mainFields.asInstanceOf[js.Any])
-    if (mainFiles != null) __obj.updateDynamic("mainFiles")(mainFiles.asInstanceOf[js.Any])
-    if (moduleExtensions != null) __obj.updateDynamic("moduleExtensions")(moduleExtensions.asInstanceOf[js.Any])
-    if (modules != null) __obj.updateDynamic("modules")(modules.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (!js.isUndefined(resolveToContext)) __obj.updateDynamic("resolveToContext")(resolveToContext.asInstanceOf[js.Any])
-    if (resolver != null) __obj.updateDynamic("resolver")(resolver.asInstanceOf[js.Any])
-    if (symlinks != null) __obj.updateDynamic("symlinks")(symlinks.asInstanceOf[js.Any])
-    if (unsafeCache != null) __obj.updateDynamic("unsafeCache")(unsafeCache.asInstanceOf[js.Any])
-    if (!js.isUndefined(useSyncFileSystemCalls)) __obj.updateDynamic("useSyncFileSystemCalls")(useSyncFileSystemCalls.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolverOption]
   }
+  @scala.inline
+  implicit class ResolverOptionOps[Self <: ResolverOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlias(value: js.Array[AliasItem] | Dictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAliasFields(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliasFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAliasFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliasFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCachePredicate(value: /* val */ ResolverRequest => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cachePredicate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCachePredicate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cachePredicate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescriptionFiles(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptionFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescriptionFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptionFiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnforceExtension(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceExtension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnforceExtension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceExtension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnforceModuleExtension(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceModuleExtension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnforceModuleExtension: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceModuleExtension")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileSystem(value: AbstractInputFileSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileSystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMainFields(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMainFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMainFiles(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMainFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainFiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModuleExtensions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleExtensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModuleExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moduleExtensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModules(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Array[Plugin]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolveToContext(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveToContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolveToContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveToContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolver(value: ^): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSymlinks(value: js.Array[String] | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symlinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSymlinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("symlinks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnsafeCache(value: Boolean | Dictionary[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unsafeCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnsafeCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unsafeCache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseSyncFileSystemCalls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSyncFileSystemCalls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseSyncFileSystemCalls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSyncFileSystemCalls")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

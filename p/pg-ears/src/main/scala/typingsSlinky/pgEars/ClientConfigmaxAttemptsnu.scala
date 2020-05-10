@@ -8,58 +8,232 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined pg.pg.ClientConfig & {  maxAttempts ? :number,   checkInterval ? :number} */
+@js.native
 trait ClientConfigmaxAttemptsnu extends js.Object {
   // Interval between connection retries, in milliseconds.
-  var checkInterval: js.UndefOr[Double] = js.undefined
-  var connectionString: js.UndefOr[String] = js.undefined
-  var database: js.UndefOr[String] = js.undefined
-  var host: js.UndefOr[String] = js.undefined
-  var keepAlive: js.UndefOr[Boolean] = js.undefined
-  var keepAliveInitialDelayMillis: js.UndefOr[Double] = js.undefined
-  var maxAttempts: js.UndefOr[Double] = js.undefined
-  var password: js.UndefOr[String] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
-  var query_timeout: js.UndefOr[Double] = js.undefined
-  var ssl: js.UndefOr[Boolean | ConnectionOptions] = js.undefined
-  var statement_timeout: js.UndefOr[`false` | Double] = js.undefined
-  var stream: js.UndefOr[Duplex] = js.undefined
-  var user: js.UndefOr[String] = js.undefined
+  var checkInterval: js.UndefOr[Double] = js.native
+  var connectionString: js.UndefOr[String] = js.native
+  var database: js.UndefOr[String] = js.native
+  var host: js.UndefOr[String] = js.native
+  var idle_in_transaction_session_timeout: js.UndefOr[Double] = js.native
+  var keepAlive: js.UndefOr[Boolean] = js.native
+  var keepAliveInitialDelayMillis: js.UndefOr[Double] = js.native
+  var maxAttempts: js.UndefOr[Double] = js.native
+  var parseInputDatesAsUTC: js.UndefOr[Boolean] = js.native
+  var password: js.UndefOr[String] = js.native
+  var port: js.UndefOr[Double] = js.native
+  var query_timeout: js.UndefOr[Double] = js.native
+  var ssl: js.UndefOr[Boolean | ConnectionOptions] = js.native
+  var statement_timeout: js.UndefOr[`false` | Double] = js.native
+  var stream: js.UndefOr[Duplex] = js.native
+  var user: js.UndefOr[String] = js.native
 }
 
 object ClientConfigmaxAttemptsnu {
   @scala.inline
-  def apply(
-    checkInterval: Int | Double = null,
-    connectionString: String = null,
-    database: String = null,
-    host: String = null,
-    keepAlive: js.UndefOr[Boolean] = js.undefined,
-    keepAliveInitialDelayMillis: Int | Double = null,
-    maxAttempts: Int | Double = null,
-    password: String = null,
-    port: Int | Double = null,
-    query_timeout: Int | Double = null,
-    ssl: Boolean | ConnectionOptions = null,
-    statement_timeout: `false` | Double = null,
-    stream: Duplex = null,
-    user: String = null
-  ): ClientConfigmaxAttemptsnu = {
+  def apply(): ClientConfigmaxAttemptsnu = {
     val __obj = js.Dynamic.literal()
-    if (checkInterval != null) __obj.updateDynamic("checkInterval")(checkInterval.asInstanceOf[js.Any])
-    if (connectionString != null) __obj.updateDynamic("connectionString")(connectionString.asInstanceOf[js.Any])
-    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepAlive)) __obj.updateDynamic("keepAlive")(keepAlive.asInstanceOf[js.Any])
-    if (keepAliveInitialDelayMillis != null) __obj.updateDynamic("keepAliveInitialDelayMillis")(keepAliveInitialDelayMillis.asInstanceOf[js.Any])
-    if (maxAttempts != null) __obj.updateDynamic("maxAttempts")(maxAttempts.asInstanceOf[js.Any])
-    if (password != null) __obj.updateDynamic("password")(password.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (query_timeout != null) __obj.updateDynamic("query_timeout")(query_timeout.asInstanceOf[js.Any])
-    if (ssl != null) __obj.updateDynamic("ssl")(ssl.asInstanceOf[js.Any])
-    if (statement_timeout != null) __obj.updateDynamic("statement_timeout")(statement_timeout.asInstanceOf[js.Any])
-    if (stream != null) __obj.updateDynamic("stream")(stream.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientConfigmaxAttemptsnu]
   }
+  @scala.inline
+  implicit class ClientConfigmaxAttemptsnuOps[Self <: ClientConfigmaxAttemptsnu] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCheckInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdle_in_transaction_session_timeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idle_in_transaction_session_timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdle_in_transaction_session_timeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idle_in_transaction_session_timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepAlive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepAlive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAlive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeepAliveInitialDelayMillis(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAliveInitialDelayMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepAliveInitialDelayMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepAliveInitialDelayMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAttempts(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttempts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAttempts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAttempts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParseInputDatesAsUTC(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseInputDatesAsUTC")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParseInputDatesAsUTC: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseInputDatesAsUTC")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery_timeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query_timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery_timeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query_timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSsl(value: Boolean | ConnectionOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSsl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatement_timeout(value: `false` | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatement_timeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statement_timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStream(value: Duplex): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

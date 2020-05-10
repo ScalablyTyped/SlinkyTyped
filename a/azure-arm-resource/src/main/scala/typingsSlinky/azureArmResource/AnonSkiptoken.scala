@@ -5,18 +5,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonSkiptoken extends js.Object {
-  var customHeaders: js.UndefOr[StringDictionary[String]] = js.undefined
-  var skiptoken: js.UndefOr[String] = js.undefined
+  var customHeaders: js.UndefOr[StringDictionary[String]] = js.native
+  var skiptoken: js.UndefOr[String] = js.native
 }
 
 object AnonSkiptoken {
   @scala.inline
-  def apply(customHeaders: StringDictionary[String] = null, skiptoken: String = null): AnonSkiptoken = {
+  def apply(): AnonSkiptoken = {
     val __obj = js.Dynamic.literal()
-    if (customHeaders != null) __obj.updateDynamic("customHeaders")(customHeaders.asInstanceOf[js.Any])
-    if (skiptoken != null) __obj.updateDynamic("skiptoken")(skiptoken.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonSkiptoken]
   }
+  @scala.inline
+  implicit class AnonSkiptokenOps[Self <: AnonSkiptoken] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomHeaders(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customHeaders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkiptoken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skiptoken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkiptoken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skiptoken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,17 +6,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AndroidNotifications extends js.Object {
-  def createChannel(channel: Channel): js.Promise[Unit]
-  def createChannelGroup(channelGroup: ChannelGroup): js.Promise[Unit]
-  def createChannelGroups(channelGroups: js.Array[ChannelGroup]): js.Promise[Unit]
-  def createChannels(channels: js.Array[Channel]): js.Promise[Unit]
-  def deleteChannel(channelId: String): js.Promise[Unit]
-  def deleteChannelGroup(groupId: String): js.Promise[Unit]
-  def getChannel(channelId: String): js.Promise[NativeAndroidChannel | Null]
-  def getChannelGroup(channelId: String): js.Promise[NativeAndroidChannelGroup | Null]
-  def getChannelGroups(channelId: String): js.Promise[js.Array[NativeAndroidChannelGroup]]
-  def getChannels(channelId: String): js.Promise[js.Array[NativeAndroidChannel]]
+  def createChannel(channel: Channel): js.Promise[Unit] = js.native
+  def createChannelGroup(channelGroup: ChannelGroup): js.Promise[Unit] = js.native
+  def createChannelGroups(channelGroups: js.Array[ChannelGroup]): js.Promise[Unit] = js.native
+  def createChannels(channels: js.Array[Channel]): js.Promise[Unit] = js.native
+  def deleteChannel(channelId: String): js.Promise[Unit] = js.native
+  def deleteChannelGroup(groupId: String): js.Promise[Unit] = js.native
+  def getChannel(channelId: String): js.Promise[NativeAndroidChannel | Null] = js.native
+  def getChannelGroup(channelId: String): js.Promise[NativeAndroidChannelGroup | Null] = js.native
+  def getChannelGroups(channelId: String): js.Promise[js.Array[NativeAndroidChannelGroup]] = js.native
+  def getChannels(channelId: String): js.Promise[js.Array[NativeAndroidChannel]] = js.native
 }
 
 object AndroidNotifications {
@@ -34,8 +35,75 @@ object AndroidNotifications {
     getChannels: String => js.Promise[js.Array[NativeAndroidChannel]]
   ): AndroidNotifications = {
     val __obj = js.Dynamic.literal(createChannel = js.Any.fromFunction1(createChannel), createChannelGroup = js.Any.fromFunction1(createChannelGroup), createChannelGroups = js.Any.fromFunction1(createChannelGroups), createChannels = js.Any.fromFunction1(createChannels), deleteChannel = js.Any.fromFunction1(deleteChannel), deleteChannelGroup = js.Any.fromFunction1(deleteChannelGroup), getChannel = js.Any.fromFunction1(getChannel), getChannelGroup = js.Any.fromFunction1(getChannelGroup), getChannelGroups = js.Any.fromFunction1(getChannelGroups), getChannels = js.Any.fromFunction1(getChannels))
-  
     __obj.asInstanceOf[AndroidNotifications]
   }
+  @scala.inline
+  implicit class AndroidNotificationsOps[Self <: AndroidNotifications] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateChannel(value: Channel => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createChannel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateChannelGroup(value: ChannelGroup => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createChannelGroup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateChannelGroups(value: js.Array[ChannelGroup] => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createChannelGroups")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateChannels(value: js.Array[Channel] => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createChannels")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDeleteChannel(value: String => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteChannel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDeleteChannelGroup(value: String => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteChannelGroup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetChannel(value: String => js.Promise[NativeAndroidChannel | Null]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChannel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetChannelGroup(value: String => js.Promise[NativeAndroidChannelGroup | Null]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChannelGroup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetChannelGroups(value: String => js.Promise[js.Array[NativeAndroidChannelGroup]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChannelGroups")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetChannels(value: String => js.Promise[js.Array[NativeAndroidChannel]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChannels")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -50,28 +50,125 @@ trait Source extends js.Object {
 
 object Source {
   @scala.inline
-  def apply(
-    Name: string,
-    SourceArn: string,
-    DataTransferSubscriberFeePercent: Int | Double = null,
-    Decryption: Encryption = null,
-    Description: string = null,
-    EntitlementArn: string = null,
-    IngestIp: string = null,
-    IngestPort: Int | Double = null,
-    Transport: Transport = null,
-    WhitelistCidr: string = null
-  ): Source = {
+  def apply(Name: string, SourceArn: string): Source = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], SourceArn = SourceArn.asInstanceOf[js.Any])
-    if (DataTransferSubscriberFeePercent != null) __obj.updateDynamic("DataTransferSubscriberFeePercent")(DataTransferSubscriberFeePercent.asInstanceOf[js.Any])
-    if (Decryption != null) __obj.updateDynamic("Decryption")(Decryption.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (EntitlementArn != null) __obj.updateDynamic("EntitlementArn")(EntitlementArn.asInstanceOf[js.Any])
-    if (IngestIp != null) __obj.updateDynamic("IngestIp")(IngestIp.asInstanceOf[js.Any])
-    if (IngestPort != null) __obj.updateDynamic("IngestPort")(IngestPort.asInstanceOf[js.Any])
-    if (Transport != null) __obj.updateDynamic("Transport")(Transport.asInstanceOf[js.Any])
-    if (WhitelistCidr != null) __obj.updateDynamic("WhitelistCidr")(WhitelistCidr.asInstanceOf[js.Any])
     __obj.asInstanceOf[Source]
   }
+  @scala.inline
+  implicit class SourceOps[Self <: Source] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataTransferSubscriberFeePercent(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataTransferSubscriberFeePercent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataTransferSubscriberFeePercent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataTransferSubscriberFeePercent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecryption(value: Encryption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Decryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Decryption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntitlementArn(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntitlementArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntitlementArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EntitlementArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIngestIp(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIngestIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIngestPort(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIngestPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngestPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransport(value: Transport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Transport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Transport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhitelistCidr(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitelistCidr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhitelistCidr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WhitelistCidr")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

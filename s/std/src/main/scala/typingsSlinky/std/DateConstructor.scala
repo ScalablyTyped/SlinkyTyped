@@ -14,21 +14,21 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DateConstructor
-  extends Instantiable0[Date]
+  extends Instantiable0[js.Date]
      with Instantiable1[
-      (/* value */ Date) | (/* value */ Double) | (/* value */ java.lang.String) | (/* vd */ VarDate), 
-      Date
+      (/* value */ js.Date) | (/* value */ Double) | (/* value */ java.lang.String) | (/* vd */ VarDate), 
+      js.Date
     ]
-     with Instantiable2[/* year */ Double, /* month */ Double, Date]
-     with Instantiable3[/* year */ Double, /* month */ Double, /* date */ Double, Date]
-     with Instantiable4[/* year */ Double, /* month */ Double, /* date */ Double, /* hours */ Double, Date]
+     with Instantiable2[/* year */ Double, /* month */ Double, js.Date]
+     with Instantiable3[/* year */ Double, /* month */ Double, /* date */ Double, js.Date]
+     with Instantiable4[/* year */ Double, /* month */ Double, /* date */ Double, /* hours */ Double, js.Date]
      with Instantiable5[
       /* year */ Double, 
       /* month */ Double, 
       /* date */ Double, 
       /* hours */ Double, 
       /* minutes */ Double, 
-      Date
+      js.Date
     ]
      with Instantiable6[
       /* year */ Double, 
@@ -37,7 +37,7 @@ trait DateConstructor
       /* hours */ Double, 
       /* minutes */ Double, 
       /* seconds */ Double, 
-      Date
+      js.Date
     ]
      with Instantiable7[
       /* year */ Double, 
@@ -47,7 +47,7 @@ trait DateConstructor
       /* minutes */ Double, 
       /* seconds */ Double, 
       /* ms */ Double, 
-      Date
+      js.Date
     ] {
   def apply(): java.lang.String = js.native
   /**

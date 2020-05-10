@@ -1,5 +1,7 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
+import typingsSlinky.chromeApps.chromeAppsStrings.audio_
+import typingsSlinky.chromeApps.chromeAppsStrings.background_
 import typingsSlinky.chromeApps.chromeAppsStrings.usb_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +18,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotfullscreen
   - typingsSlinky.chromeApps.chromeAppsStrings.alarms
   - typingsSlinky.chromeApps.chromeAppsStrings.contextMenus
-  - typingsSlinky.chromeApps.chromeAppsStrings.audio
+  - typingsSlinky.chromeApps.chromeAppsStrings.audio_
   - typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashAsteriskSlashAsterisk
   - typingsSlinky.chromeApps.chromeAppsStrings.gcm
   - typingsSlinky.chromeApps.chromeAppsStrings.idle
@@ -25,7 +27,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.chromeApps.chromeAppsStrings.enterpriseDotplatformKeys
   - typingsSlinky.chromeApps.chromeAppsStrings.systemDotnetwork
   - typingsSlinky.chromeApps.chromeAppsStrings.platformKeys
-  - typingsSlinky.chromeApps.chromeAppsStrings.background
+  - typingsSlinky.chromeApps.chromeAppsStrings.background_
   - typingsSlinky.chromeApps.chromeAppsStrings.dns
   - typingsSlinky.chromeApps.chromeAppsStrings.systemDotpowerSource
   - typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk
@@ -78,130 +80,128 @@ trait OptionalPermission extends js.Object
 
 object OptionalPermission {
   @scala.inline
-  def Lessthansignall_urlsGreaterthansign: typingsSlinky.chromeApps.chromeAppsStrings.Lessthansignall_urlsGreaterthansign = this.cast("<all_urls>")
+  def Lessthansignall_urlsGreaterthansign: typingsSlinky.chromeApps.chromeAppsStrings.Lessthansignall_urlsGreaterthansign = "<all_urls>".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.Lessthansignall_urlsGreaterthansign]
   @scala.inline
-  def alarms: typingsSlinky.chromeApps.chromeAppsStrings.alarms = this.cast("alarms")
+  def alarms: typingsSlinky.chromeApps.chromeAppsStrings.alarms = "alarms".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.alarms]
   @scala.inline
-  def alwaysOnTopWindows: typingsSlinky.chromeApps.chromeAppsStrings.alwaysOnTopWindows = this.cast("alwaysOnTopWindows")
+  def alwaysOnTopWindows: typingsSlinky.chromeApps.chromeAppsStrings.alwaysOnTopWindows = "alwaysOnTopWindows".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.alwaysOnTopWindows]
   @scala.inline
-  def appDotwindowDotalwaysOnTop: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotalwaysOnTop = this.cast("app.window.alwaysOnTop")
+  def appDotwindowDotalwaysOnTop: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotalwaysOnTop = "app.window.alwaysOnTop".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotalwaysOnTop]
   @scala.inline
-  def appDotwindowDotfullscreen: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotfullscreen = this.cast("app.window.fullscreen")
+  def appDotwindowDotfullscreen: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotfullscreen = "app.window.fullscreen".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotfullscreen]
   @scala.inline
-  def appDotwindowDotfullscreenDotoverrideEsc: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotfullscreenDotoverrideEsc = this.cast("app.window.fullscreen.overrideEsc")
+  def appDotwindowDotfullscreenDotoverrideEsc: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotfullscreenDotoverrideEsc = "app.window.fullscreen.overrideEsc".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotfullscreenDotoverrideEsc]
   @scala.inline
-  def appDotwindowDotshape: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotshape = this.cast("app.window.shape")
+  def appDotwindowDotshape: typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotshape = "app.window.shape".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotshape]
   @scala.inline
-  def appview: typingsSlinky.chromeApps.chromeAppsStrings.appview = this.cast("appview")
+  def appview: typingsSlinky.chromeApps.chromeAppsStrings.appview = "appview".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.appview]
   @scala.inline
-  def audio: typingsSlinky.chromeApps.chromeAppsStrings.audio = this.cast("audio")
+  def audio: audio_ = "audio".asInstanceOf[audio_]
   @scala.inline
-  def audioCapture: typingsSlinky.chromeApps.chromeAppsStrings.audioCapture = this.cast("audioCapture")
+  def audioCapture: typingsSlinky.chromeApps.chromeAppsStrings.audioCapture = "audioCapture".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.audioCapture]
   @scala.inline
-  def background: typingsSlinky.chromeApps.chromeAppsStrings.background = this.cast("background")
+  def background: background_ = "background".asInstanceOf[background_]
   @scala.inline
-  def browser: typingsSlinky.chromeApps.chromeAppsStrings.browser = this.cast("browser")
+  def browser: typingsSlinky.chromeApps.chromeAppsStrings.browser = "browser".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.browser]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def certificateProvider: typingsSlinky.chromeApps.chromeAppsStrings.certificateProvider = "certificateProvider".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.certificateProvider]
   @scala.inline
-  def certificateProvider: typingsSlinky.chromeApps.chromeAppsStrings.certificateProvider = this.cast("certificateProvider")
+  def chromeColonSlashSlashfaviconSlash: typingsSlinky.chromeApps.chromeAppsStrings.chromeColonSlashSlashfaviconSlash = "chrome://favicon/".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.chromeColonSlashSlashfaviconSlash]
   @scala.inline
-  def chromeColonSlashSlashfaviconSlash: typingsSlinky.chromeApps.chromeAppsStrings.chromeColonSlashSlashfaviconSlash = this.cast("chrome://favicon/")
+  def clipboard: typingsSlinky.chromeApps.chromeAppsStrings.clipboard = "clipboard".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.clipboard]
   @scala.inline
-  def clipboard: typingsSlinky.chromeApps.chromeAppsStrings.clipboard = this.cast("clipboard")
+  def clipboardRead: typingsSlinky.chromeApps.chromeAppsStrings.clipboardRead = "clipboardRead".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.clipboardRead]
   @scala.inline
-  def clipboardRead: typingsSlinky.chromeApps.chromeAppsStrings.clipboardRead = this.cast("clipboardRead")
+  def clipboardWrite: typingsSlinky.chromeApps.chromeAppsStrings.clipboardWrite = "clipboardWrite".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.clipboardWrite]
   @scala.inline
-  def clipboardWrite: typingsSlinky.chromeApps.chromeAppsStrings.clipboardWrite = this.cast("clipboardWrite")
+  def contextMenus: typingsSlinky.chromeApps.chromeAppsStrings.contextMenus = "contextMenus".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.contextMenus]
   @scala.inline
-  def contextMenus: typingsSlinky.chromeApps.chromeAppsStrings.contextMenus = this.cast("contextMenus")
+  def desktopCapture: typingsSlinky.chromeApps.chromeAppsStrings.desktopCapture = "desktopCapture".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.desktopCapture]
   @scala.inline
-  def desktopCapture: typingsSlinky.chromeApps.chromeAppsStrings.desktopCapture = this.cast("desktopCapture")
+  def dns: typingsSlinky.chromeApps.chromeAppsStrings.dns = "dns".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.dns]
   @scala.inline
-  def dns: typingsSlinky.chromeApps.chromeAppsStrings.dns = this.cast("dns")
+  def documentScan: typingsSlinky.chromeApps.chromeAppsStrings.documentScan = "documentScan".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.documentScan]
   @scala.inline
-  def documentScan: typingsSlinky.chromeApps.chromeAppsStrings.documentScan = this.cast("documentScan")
+  def enterpriseDotdeviceAttributes: typingsSlinky.chromeApps.chromeAppsStrings.enterpriseDotdeviceAttributes = "enterprise.deviceAttributes".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.enterpriseDotdeviceAttributes]
   @scala.inline
-  def enterpriseDotdeviceAttributes: typingsSlinky.chromeApps.chromeAppsStrings.enterpriseDotdeviceAttributes = this.cast("enterprise.deviceAttributes")
+  def enterpriseDotplatformKeys: typingsSlinky.chromeApps.chromeAppsStrings.enterpriseDotplatformKeys = "enterprise.platformKeys".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.enterpriseDotplatformKeys]
   @scala.inline
-  def enterpriseDotplatformKeys: typingsSlinky.chromeApps.chromeAppsStrings.enterpriseDotplatformKeys = this.cast("enterprise.platformKeys")
+  def fileBrowserHandler: typingsSlinky.chromeApps.chromeAppsStrings.fileBrowserHandler = "fileBrowserHandler".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.fileBrowserHandler]
   @scala.inline
-  def fileBrowserHandler: typingsSlinky.chromeApps.chromeAppsStrings.fileBrowserHandler = this.cast("fileBrowserHandler")
+  def fileColonSlashSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.fileColonSlashSlashSlashAsteriskSlashAsterisk = "file:///*/*".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.fileColonSlashSlashSlashAsteriskSlashAsterisk]
   @scala.inline
-  def fileColonSlashSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.fileColonSlashSlashSlashAsteriskSlashAsterisk = this.cast("file:///*/*")
+  def fileSystem: typingsSlinky.chromeApps.chromeAppsStrings.fileSystem = "fileSystem".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.fileSystem]
   @scala.inline
-  def fileSystem: typingsSlinky.chromeApps.chromeAppsStrings.fileSystem = this.cast("fileSystem")
+  def fileSystemProvider: typingsSlinky.chromeApps.chromeAppsStrings.fileSystemProvider = "fileSystemProvider".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.fileSystemProvider]
   @scala.inline
-  def fileSystemProvider: typingsSlinky.chromeApps.chromeAppsStrings.fileSystemProvider = this.cast("fileSystemProvider")
+  def gcm: typingsSlinky.chromeApps.chromeAppsStrings.gcm = "gcm".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.gcm]
   @scala.inline
-  def gcm: typingsSlinky.chromeApps.chromeAppsStrings.gcm = this.cast("gcm")
+  def hid: typingsSlinky.chromeApps.chromeAppsStrings.hid = "hid".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.hid]
   @scala.inline
-  def hid: typingsSlinky.chromeApps.chromeAppsStrings.hid = this.cast("hid")
+  def httpColonSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpColonSlashSlashAsteriskSlashAsterisk = "http://*/*".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.httpColonSlashSlashAsteriskSlashAsterisk]
   @scala.inline
-  def httpColonSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpColonSlashSlashAsteriskSlashAsterisk = this.cast("http://*/*")
+  def httpsColonSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashAsteriskSlashAsterisk = "https://*/*".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashAsteriskSlashAsterisk]
   @scala.inline
-  def httpsColonSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashAsteriskSlashAsterisk = this.cast("https://*/*")
+  def `httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk`: typingsSlinky.chromeApps.chromeAppsStrings.`httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk` = "https://www.google-analytics.com/*".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.`httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk`]
   @scala.inline
-  def `httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk`: typingsSlinky.chromeApps.chromeAppsStrings.`httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk` = this.cast("https://www.google-analytics.com/*")
+  def httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk = "https://www.googleapis.com/*".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk]
   @scala.inline
-  def httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk = this.cast("https://www.googleapis.com/*")
+  def identity: typingsSlinky.chromeApps.chromeAppsStrings.identity = "identity".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.identity]
   @scala.inline
-  def identity: typingsSlinky.chromeApps.chromeAppsStrings.identity = this.cast("identity")
+  def idle: typingsSlinky.chromeApps.chromeAppsStrings.idle = "idle".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.idle]
   @scala.inline
-  def idle: typingsSlinky.chromeApps.chromeAppsStrings.idle = this.cast("idle")
+  def mediaGalleries: typingsSlinky.chromeApps.chromeAppsStrings.mediaGalleries = "mediaGalleries".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.mediaGalleries]
   @scala.inline
-  def mediaGalleries: typingsSlinky.chromeApps.chromeAppsStrings.mediaGalleries = this.cast("mediaGalleries")
+  def nativeMessaging: typingsSlinky.chromeApps.chromeAppsStrings.nativeMessaging = "nativeMessaging".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.nativeMessaging]
   @scala.inline
-  def nativeMessaging: typingsSlinky.chromeApps.chromeAppsStrings.nativeMessaging = this.cast("nativeMessaging")
+  def networkingDotconfig: typingsSlinky.chromeApps.chromeAppsStrings.networkingDotconfig = "networking.config".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.networkingDotconfig]
   @scala.inline
-  def networkingDotconfig: typingsSlinky.chromeApps.chromeAppsStrings.networkingDotconfig = this.cast("networking.config")
+  def networkingDotonc: typingsSlinky.chromeApps.chromeAppsStrings.networkingDotonc = "networking.onc".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.networkingDotonc]
   @scala.inline
-  def networkingDotonc: typingsSlinky.chromeApps.chromeAppsStrings.networkingDotonc = this.cast("networking.onc")
+  def notifications: typingsSlinky.chromeApps.chromeAppsStrings.notifications = "notifications".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.notifications]
   @scala.inline
-  def notifications: typingsSlinky.chromeApps.chromeAppsStrings.notifications = this.cast("notifications")
+  def platformKeys: typingsSlinky.chromeApps.chromeAppsStrings.platformKeys = "platformKeys".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.platformKeys]
   @scala.inline
-  def platformKeys: typingsSlinky.chromeApps.chromeAppsStrings.platformKeys = this.cast("platformKeys")
+  def pointerLock: typingsSlinky.chromeApps.chromeAppsStrings.pointerLock = "pointerLock".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.pointerLock]
   @scala.inline
-  def pointerLock: typingsSlinky.chromeApps.chromeAppsStrings.pointerLock = this.cast("pointerLock")
+  def power: typingsSlinky.chromeApps.chromeAppsStrings.power = "power".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.power]
   @scala.inline
-  def power: typingsSlinky.chromeApps.chromeAppsStrings.power = this.cast("power")
+  def printerProvider: typingsSlinky.chromeApps.chromeAppsStrings.printerProvider = "printerProvider".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.printerProvider]
   @scala.inline
-  def printerProvider: typingsSlinky.chromeApps.chromeAppsStrings.printerProvider = this.cast("printerProvider")
+  def runtime: typingsSlinky.chromeApps.chromeAppsStrings.runtime = "runtime".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.runtime]
   @scala.inline
-  def runtime: typingsSlinky.chromeApps.chromeAppsStrings.runtime = this.cast("runtime")
+  def serial: typingsSlinky.chromeApps.chromeAppsStrings.serial = "serial".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.serial]
   @scala.inline
-  def serial: typingsSlinky.chromeApps.chromeAppsStrings.serial = this.cast("serial")
+  def socket: typingsSlinky.chromeApps.chromeAppsStrings.socket = "socket".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.socket]
   @scala.inline
-  def socket: typingsSlinky.chromeApps.chromeAppsStrings.socket = this.cast("socket")
+  def storage: typingsSlinky.chromeApps.chromeAppsStrings.storage = "storage".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.storage]
   @scala.inline
-  def storage: typingsSlinky.chromeApps.chromeAppsStrings.storage = this.cast("storage")
+  def syncFileSystem: typingsSlinky.chromeApps.chromeAppsStrings.syncFileSystem = "syncFileSystem".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.syncFileSystem]
   @scala.inline
-  def syncFileSystem: typingsSlinky.chromeApps.chromeAppsStrings.syncFileSystem = this.cast("syncFileSystem")
+  def systemDotcpu: typingsSlinky.chromeApps.chromeAppsStrings.systemDotcpu = "system.cpu".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.systemDotcpu]
   @scala.inline
-  def systemDotcpu: typingsSlinky.chromeApps.chromeAppsStrings.systemDotcpu = this.cast("system.cpu")
+  def systemDotdisplay: typingsSlinky.chromeApps.chromeAppsStrings.systemDotdisplay = "system.display".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.systemDotdisplay]
   @scala.inline
-  def systemDotdisplay: typingsSlinky.chromeApps.chromeAppsStrings.systemDotdisplay = this.cast("system.display")
+  def systemDotmemory: typingsSlinky.chromeApps.chromeAppsStrings.systemDotmemory = "system.memory".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.systemDotmemory]
   @scala.inline
-  def systemDotmemory: typingsSlinky.chromeApps.chromeAppsStrings.systemDotmemory = this.cast("system.memory")
+  def systemDotnetwork: typingsSlinky.chromeApps.chromeAppsStrings.systemDotnetwork = "system.network".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.systemDotnetwork]
   @scala.inline
-  def systemDotnetwork: typingsSlinky.chromeApps.chromeAppsStrings.systemDotnetwork = this.cast("system.network")
+  def systemDotpowerSource: typingsSlinky.chromeApps.chromeAppsStrings.systemDotpowerSource = "system.powerSource".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.systemDotpowerSource]
   @scala.inline
-  def systemDotpowerSource: typingsSlinky.chromeApps.chromeAppsStrings.systemDotpowerSource = this.cast("system.powerSource")
+  def systemDotstorage: typingsSlinky.chromeApps.chromeAppsStrings.systemDotstorage = "system.storage".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.systemDotstorage]
   @scala.inline
-  def systemDotstorage: typingsSlinky.chromeApps.chromeAppsStrings.systemDotstorage = this.cast("system.storage")
+  def unlimitedStorage: typingsSlinky.chromeApps.chromeAppsStrings.unlimitedStorage = "unlimitedStorage".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.unlimitedStorage]
   @scala.inline
-  def unlimitedStorage: typingsSlinky.chromeApps.chromeAppsStrings.unlimitedStorage = this.cast("unlimitedStorage")
+  def usb: usb_ = "usb".asInstanceOf[usb_]
   @scala.inline
-  def usb: usb_ = this.cast("usb")
+  def usbDevices: typingsSlinky.chromeApps.chromeAppsStrings.usbDevices = "usbDevices".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.usbDevices]
   @scala.inline
-  def usbDevices: typingsSlinky.chromeApps.chromeAppsStrings.usbDevices = this.cast("usbDevices")
+  def videoCapture: typingsSlinky.chromeApps.chromeAppsStrings.videoCapture = "videoCapture".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.videoCapture]
   @scala.inline
-  def videoCapture: typingsSlinky.chromeApps.chromeAppsStrings.videoCapture = this.cast("videoCapture")
+  def virtualKeyboard: typingsSlinky.chromeApps.chromeAppsStrings.virtualKeyboard = "virtualKeyboard".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.virtualKeyboard]
   @scala.inline
-  def virtualKeyboard: typingsSlinky.chromeApps.chromeAppsStrings.virtualKeyboard = this.cast("virtualKeyboard")
+  def vpnProvider: typingsSlinky.chromeApps.chromeAppsStrings.vpnProvider = "vpnProvider".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.vpnProvider]
   @scala.inline
-  def vpnProvider: typingsSlinky.chromeApps.chromeAppsStrings.vpnProvider = this.cast("vpnProvider")
-  @scala.inline
-  def webview: typingsSlinky.chromeApps.chromeAppsStrings.webview = this.cast("webview")
+  def webview: typingsSlinky.chromeApps.chromeAppsStrings.webview = "webview".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.webview]
 }
 

@@ -5,60 +5,206 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ShortcutsArray
   extends /* action */ StringDictionary[js.UndefOr[String]] {
-  var cleanBlock: js.UndefOr[String] = js.undefined
-  var drawImage: js.UndefOr[String] = js.undefined
-  var drawLink: js.UndefOr[String] = js.undefined
-  var toggleBlockquote: js.UndefOr[String] = js.undefined
-  var toggleBold: js.UndefOr[String] = js.undefined
-  var toggleCodeBlock: js.UndefOr[String] = js.undefined
-  var toggleFullScreen: js.UndefOr[String] = js.undefined
-  var toggleHeadingBigger: js.UndefOr[String] = js.undefined
-  var toggleHeadingSmaller: js.UndefOr[String] = js.undefined
-  var toggleItalic: js.UndefOr[String] = js.undefined
-  var toggleOrderedList: js.UndefOr[String] = js.undefined
-  var togglePreview: js.UndefOr[String] = js.undefined
-  var toggleSideBySide: js.UndefOr[String] = js.undefined
-  var toggleUnorderedList: js.UndefOr[String] = js.undefined
+  var cleanBlock: js.UndefOr[String] = js.native
+  var drawImage: js.UndefOr[String] = js.native
+  var drawLink: js.UndefOr[String] = js.native
+  var toggleBlockquote: js.UndefOr[String] = js.native
+  var toggleBold: js.UndefOr[String] = js.native
+  var toggleCodeBlock: js.UndefOr[String] = js.native
+  var toggleFullScreen: js.UndefOr[String] = js.native
+  var toggleHeadingBigger: js.UndefOr[String] = js.native
+  var toggleHeadingSmaller: js.UndefOr[String] = js.native
+  var toggleItalic: js.UndefOr[String] = js.native
+  var toggleOrderedList: js.UndefOr[String] = js.native
+  var togglePreview: js.UndefOr[String] = js.native
+  var toggleSideBySide: js.UndefOr[String] = js.native
+  var toggleUnorderedList: js.UndefOr[String] = js.native
 }
 
 object ShortcutsArray {
   @scala.inline
-  def apply(
-    StringDictionary: /* action */ StringDictionary[js.UndefOr[String]] = null,
-    cleanBlock: String = null,
-    drawImage: String = null,
-    drawLink: String = null,
-    toggleBlockquote: String = null,
-    toggleBold: String = null,
-    toggleCodeBlock: String = null,
-    toggleFullScreen: String = null,
-    toggleHeadingBigger: String = null,
-    toggleHeadingSmaller: String = null,
-    toggleItalic: String = null,
-    toggleOrderedList: String = null,
-    togglePreview: String = null,
-    toggleSideBySide: String = null,
-    toggleUnorderedList: String = null
-  ): ShortcutsArray = {
+  def apply(): ShortcutsArray = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (cleanBlock != null) __obj.updateDynamic("cleanBlock")(cleanBlock.asInstanceOf[js.Any])
-    if (drawImage != null) __obj.updateDynamic("drawImage")(drawImage.asInstanceOf[js.Any])
-    if (drawLink != null) __obj.updateDynamic("drawLink")(drawLink.asInstanceOf[js.Any])
-    if (toggleBlockquote != null) __obj.updateDynamic("toggleBlockquote")(toggleBlockquote.asInstanceOf[js.Any])
-    if (toggleBold != null) __obj.updateDynamic("toggleBold")(toggleBold.asInstanceOf[js.Any])
-    if (toggleCodeBlock != null) __obj.updateDynamic("toggleCodeBlock")(toggleCodeBlock.asInstanceOf[js.Any])
-    if (toggleFullScreen != null) __obj.updateDynamic("toggleFullScreen")(toggleFullScreen.asInstanceOf[js.Any])
-    if (toggleHeadingBigger != null) __obj.updateDynamic("toggleHeadingBigger")(toggleHeadingBigger.asInstanceOf[js.Any])
-    if (toggleHeadingSmaller != null) __obj.updateDynamic("toggleHeadingSmaller")(toggleHeadingSmaller.asInstanceOf[js.Any])
-    if (toggleItalic != null) __obj.updateDynamic("toggleItalic")(toggleItalic.asInstanceOf[js.Any])
-    if (toggleOrderedList != null) __obj.updateDynamic("toggleOrderedList")(toggleOrderedList.asInstanceOf[js.Any])
-    if (togglePreview != null) __obj.updateDynamic("togglePreview")(togglePreview.asInstanceOf[js.Any])
-    if (toggleSideBySide != null) __obj.updateDynamic("toggleSideBySide")(toggleSideBySide.asInstanceOf[js.Any])
-    if (toggleUnorderedList != null) __obj.updateDynamic("toggleUnorderedList")(toggleUnorderedList.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShortcutsArray]
   }
+  @scala.inline
+  implicit class ShortcutsArrayOps[Self <: ShortcutsArray] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCleanBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCleanBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cleanBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrawImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrawLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDrawLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleBlockquote(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleBlockquote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleBlockquote: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleBlockquote")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleBold(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleBold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleBold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleBold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleCodeBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleCodeBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleCodeBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleCodeBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleFullScreen(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleFullScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleFullScreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleFullScreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleHeadingBigger(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleHeadingBigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleHeadingBigger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleHeadingBigger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleHeadingSmaller(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleHeadingSmaller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleHeadingSmaller: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleHeadingSmaller")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleItalic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleItalic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleItalic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleItalic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleOrderedList(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleOrderedList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleOrderedList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleOrderedList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTogglePreview(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("togglePreview")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTogglePreview: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("togglePreview")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleSideBySide(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleSideBySide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleSideBySide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleSideBySide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggleUnorderedList(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleUnorderedList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggleUnorderedList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggleUnorderedList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

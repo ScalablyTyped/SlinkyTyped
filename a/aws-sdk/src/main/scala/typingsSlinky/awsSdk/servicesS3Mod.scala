@@ -7,7 +7,6 @@ import typingsSlinky.awsSdk.presignedPostMod.PresignedPost.Params
 import typingsSlinky.awsSdk.s3Mod.PresignedPost
 import typingsSlinky.awsSdk.s3Mod.PutObjectRequest
 import typingsSlinky.awsSdk.serviceMod.Service
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,7 +48,7 @@ object servicesS3Mod extends js.Object {
       * bodies.
       */
     def upload(params: PutObjectRequest): ManagedUpload = js.native
-    def upload(params: PutObjectRequest, callback: js.Function2[/* err */ Error, /* data */ SendData, Unit]): ManagedUpload = js.native
+    def upload(params: PutObjectRequest, callback: js.Function2[/* err */ js.Error, /* data */ SendData, Unit]): ManagedUpload = js.native
     def upload(params: PutObjectRequest, options: ManagedUploadOptions): ManagedUpload = js.native
     def upload(
       params: PutObjectRequest,

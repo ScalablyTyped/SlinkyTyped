@@ -22,16 +22,53 @@ trait CustomerArtifactPaths extends js.Object {
 
 object CustomerArtifactPaths {
   @scala.inline
-  def apply(
-    androidPaths: AndroidPaths = null,
-    deviceHostPaths: DeviceHostPaths = null,
-    iosPaths: IosPaths = null
-  ): CustomerArtifactPaths = {
+  def apply(): CustomerArtifactPaths = {
     val __obj = js.Dynamic.literal()
-    if (androidPaths != null) __obj.updateDynamic("androidPaths")(androidPaths.asInstanceOf[js.Any])
-    if (deviceHostPaths != null) __obj.updateDynamic("deviceHostPaths")(deviceHostPaths.asInstanceOf[js.Any])
-    if (iosPaths != null) __obj.updateDynamic("iosPaths")(iosPaths.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomerArtifactPaths]
   }
+  @scala.inline
+  implicit class CustomerArtifactPathsOps[Self <: CustomerArtifactPaths] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndroidPaths(value: AndroidPaths): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroidPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("androidPaths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceHostPaths(value: DeviceHostPaths): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceHostPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceHostPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceHostPaths")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIosPaths(value: IosPaths): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosPaths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIosPaths: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iosPaths")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

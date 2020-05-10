@@ -24,16 +24,53 @@ trait DefaultVpcDhcpOptionsArgs extends js.Object {
 
 object DefaultVpcDhcpOptionsArgs {
   @scala.inline
-  def apply(
-    netbiosNameServers: Input[js.Array[Input[String]]] = null,
-    netbiosNodeType: Input[String] = null,
-    tags: Input[StringDictionary[_]] = null
-  ): DefaultVpcDhcpOptionsArgs = {
+  def apply(): DefaultVpcDhcpOptionsArgs = {
     val __obj = js.Dynamic.literal()
-    if (netbiosNameServers != null) __obj.updateDynamic("netbiosNameServers")(netbiosNameServers.asInstanceOf[js.Any])
-    if (netbiosNodeType != null) __obj.updateDynamic("netbiosNodeType")(netbiosNodeType.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultVpcDhcpOptionsArgs]
   }
+  @scala.inline
+  implicit class DefaultVpcDhcpOptionsArgsOps[Self <: DefaultVpcDhcpOptionsArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetbiosNameServers(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("netbiosNameServers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetbiosNameServers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("netbiosNameServers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetbiosNodeType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("netbiosNodeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetbiosNodeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("netbiosNodeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: Input[StringDictionary[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

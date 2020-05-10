@@ -29,11 +29,41 @@ trait SchemaCancelLeaseRequest extends js.Object {
 
 object SchemaCancelLeaseRequest {
   @scala.inline
-  def apply(responseView: String = null, scheduleTime: String = null): SchemaCancelLeaseRequest = {
+  def apply(): SchemaCancelLeaseRequest = {
     val __obj = js.Dynamic.literal()
-    if (responseView != null) __obj.updateDynamic("responseView")(responseView.asInstanceOf[js.Any])
-    if (scheduleTime != null) __obj.updateDynamic("scheduleTime")(scheduleTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCancelLeaseRequest]
   }
+  @scala.inline
+  implicit class SchemaCancelLeaseRequestOps[Self <: SchemaCancelLeaseRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponseView(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseView")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

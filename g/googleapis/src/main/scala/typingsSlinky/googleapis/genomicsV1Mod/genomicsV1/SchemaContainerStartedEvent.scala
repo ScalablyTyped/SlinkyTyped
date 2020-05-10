@@ -31,16 +31,53 @@ trait SchemaContainerStartedEvent extends js.Object {
 
 object SchemaContainerStartedEvent {
   @scala.inline
-  def apply(
-    actionId: Int | Double = null,
-    ipAddress: String = null,
-    portMappings: StringDictionary[Double] = null
-  ): SchemaContainerStartedEvent = {
+  def apply(): SchemaContainerStartedEvent = {
     val __obj = js.Dynamic.literal()
-    if (actionId != null) __obj.updateDynamic("actionId")(actionId.asInstanceOf[js.Any])
-    if (ipAddress != null) __obj.updateDynamic("ipAddress")(ipAddress.asInstanceOf[js.Any])
-    if (portMappings != null) __obj.updateDynamic("portMappings")(portMappings.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContainerStartedEvent]
   }
+  @scala.inline
+  implicit class SchemaContainerStartedEventOps[Self <: SchemaContainerStartedEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortMappings(value: StringDictionary[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portMappings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

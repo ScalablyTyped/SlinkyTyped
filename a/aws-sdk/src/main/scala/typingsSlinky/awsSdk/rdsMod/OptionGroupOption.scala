@@ -74,42 +74,209 @@ trait OptionGroupOption extends js.Object {
 
 object OptionGroupOption {
   @scala.inline
-  def apply(
-    DefaultPort: Int | scala.Double = null,
-    Description: String = null,
-    EngineName: String = null,
-    MajorEngineVersion: String = null,
-    MinimumRequiredMinorEngineVersion: String = null,
-    Name: String = null,
-    OptionGroupOptionSettings: OptionGroupOptionSettingsList = null,
-    OptionGroupOptionVersions: OptionGroupOptionVersionsList = null,
-    OptionsConflictsWith: OptionsConflictsWith = null,
-    OptionsDependedOn: OptionsDependedOn = null,
-    Permanent: js.UndefOr[scala.Boolean] = js.undefined,
-    Persistent: js.UndefOr[scala.Boolean] = js.undefined,
-    PortRequired: js.UndefOr[scala.Boolean] = js.undefined,
-    RequiresAutoMinorEngineVersionUpgrade: js.UndefOr[scala.Boolean] = js.undefined,
-    SupportsOptionVersionDowngrade: js.UndefOr[scala.Boolean] = js.undefined,
-    VpcOnly: js.UndefOr[scala.Boolean] = js.undefined
-  ): OptionGroupOption = {
+  def apply(): OptionGroupOption = {
     val __obj = js.Dynamic.literal()
-    if (DefaultPort != null) __obj.updateDynamic("DefaultPort")(DefaultPort.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (EngineName != null) __obj.updateDynamic("EngineName")(EngineName.asInstanceOf[js.Any])
-    if (MajorEngineVersion != null) __obj.updateDynamic("MajorEngineVersion")(MajorEngineVersion.asInstanceOf[js.Any])
-    if (MinimumRequiredMinorEngineVersion != null) __obj.updateDynamic("MinimumRequiredMinorEngineVersion")(MinimumRequiredMinorEngineVersion.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (OptionGroupOptionSettings != null) __obj.updateDynamic("OptionGroupOptionSettings")(OptionGroupOptionSettings.asInstanceOf[js.Any])
-    if (OptionGroupOptionVersions != null) __obj.updateDynamic("OptionGroupOptionVersions")(OptionGroupOptionVersions.asInstanceOf[js.Any])
-    if (OptionsConflictsWith != null) __obj.updateDynamic("OptionsConflictsWith")(OptionsConflictsWith.asInstanceOf[js.Any])
-    if (OptionsDependedOn != null) __obj.updateDynamic("OptionsDependedOn")(OptionsDependedOn.asInstanceOf[js.Any])
-    if (!js.isUndefined(Permanent)) __obj.updateDynamic("Permanent")(Permanent.asInstanceOf[js.Any])
-    if (!js.isUndefined(Persistent)) __obj.updateDynamic("Persistent")(Persistent.asInstanceOf[js.Any])
-    if (!js.isUndefined(PortRequired)) __obj.updateDynamic("PortRequired")(PortRequired.asInstanceOf[js.Any])
-    if (!js.isUndefined(RequiresAutoMinorEngineVersionUpgrade)) __obj.updateDynamic("RequiresAutoMinorEngineVersionUpgrade")(RequiresAutoMinorEngineVersionUpgrade.asInstanceOf[js.Any])
-    if (!js.isUndefined(SupportsOptionVersionDowngrade)) __obj.updateDynamic("SupportsOptionVersionDowngrade")(SupportsOptionVersionDowngrade.asInstanceOf[js.Any])
-    if (!js.isUndefined(VpcOnly)) __obj.updateDynamic("VpcOnly")(VpcOnly.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionGroupOption]
   }
+  @scala.inline
+  implicit class OptionGroupOptionOps[Self <: OptionGroupOption] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultPort(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEngineName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEngineName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EngineName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMajorEngineVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MajorEngineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMajorEngineVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MajorEngineVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumRequiredMinorEngineVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumRequiredMinorEngineVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumRequiredMinorEngineVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimumRequiredMinorEngineVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionGroupOptionSettings(value: OptionGroupOptionSettingsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupOptionSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionGroupOptionSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupOptionSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionGroupOptionVersions(value: OptionGroupOptionVersionsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupOptionVersions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionGroupOptionVersions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionGroupOptionVersions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionsConflictsWith(value: OptionsConflictsWith): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionsConflictsWith")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionsConflictsWith: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionsConflictsWith")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptionsDependedOn(value: OptionsDependedOn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionsDependedOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptionsDependedOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionsDependedOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermanent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Permanent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermanent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Permanent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPersistent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Persistent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPersistent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Persistent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequiresAutoMinorEngineVersionUpgrade(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequiresAutoMinorEngineVersionUpgrade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequiresAutoMinorEngineVersionUpgrade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequiresAutoMinorEngineVersionUpgrade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportsOptionVersionDowngrade(value: BooleanOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsOptionVersionDowngrade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportsOptionVersionDowngrade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportsOptionVersionDowngrade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcOnly")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

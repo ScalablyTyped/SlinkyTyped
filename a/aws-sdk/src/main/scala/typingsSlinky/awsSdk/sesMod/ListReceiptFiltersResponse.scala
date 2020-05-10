@@ -14,10 +14,29 @@ trait ListReceiptFiltersResponse extends js.Object {
 
 object ListReceiptFiltersResponse {
   @scala.inline
-  def apply(Filters: ReceiptFilterList = null): ListReceiptFiltersResponse = {
+  def apply(): ListReceiptFiltersResponse = {
     val __obj = js.Dynamic.literal()
-    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListReceiptFiltersResponse]
   }
+  @scala.inline
+  implicit class ListReceiptFiltersResponseOps[Self <: ListReceiptFiltersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilters(value: ReceiptFilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

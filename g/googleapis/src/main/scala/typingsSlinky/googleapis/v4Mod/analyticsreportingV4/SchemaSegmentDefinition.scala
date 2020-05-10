@@ -19,10 +19,29 @@ trait SchemaSegmentDefinition extends js.Object {
 
 object SchemaSegmentDefinition {
   @scala.inline
-  def apply(segmentFilters: js.Array[SchemaSegmentFilter] = null): SchemaSegmentDefinition = {
+  def apply(): SchemaSegmentDefinition = {
     val __obj = js.Dynamic.literal()
-    if (segmentFilters != null) __obj.updateDynamic("segmentFilters")(segmentFilters.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSegmentDefinition]
   }
+  @scala.inline
+  implicit class SchemaSegmentDefinitionOps[Self <: SchemaSegmentDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSegmentFilters(value: js.Array[SchemaSegmentFilter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentFilters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

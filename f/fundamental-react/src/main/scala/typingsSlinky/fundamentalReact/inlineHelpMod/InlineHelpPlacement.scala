@@ -15,16 +15,14 @@ trait InlineHelpPlacement extends js.Object
 
 object InlineHelpPlacement {
   @scala.inline
-  def `bottom-center`: typingsSlinky.fundamentalReact.fundamentalReactStrings.`bottom-center` = this.cast("bottom-center")
+  def `bottom-center`: typingsSlinky.fundamentalReact.fundamentalReactStrings.`bottom-center` = "bottom-center".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.`bottom-center`]
   @scala.inline
-  def `bottom-left`: typingsSlinky.fundamentalReact.fundamentalReactStrings.`bottom-left` = this.cast("bottom-left")
+  def `bottom-left`: typingsSlinky.fundamentalReact.fundamentalReactStrings.`bottom-left` = "bottom-left".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.`bottom-left`]
   @scala.inline
-  def `bottom-right`: typingsSlinky.fundamentalReact.fundamentalReactStrings.`bottom-right` = this.cast("bottom-right")
+  def `bottom-right`: typingsSlinky.fundamentalReact.fundamentalReactStrings.`bottom-right` = "bottom-right".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.`bottom-right`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.fundamentalReact.fundamentalReactStrings.left = "left".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.left]
   @scala.inline
-  def left: typingsSlinky.fundamentalReact.fundamentalReactStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.fundamentalReact.fundamentalReactStrings.right = this.cast("right")
+  def right: typingsSlinky.fundamentalReact.fundamentalReactStrings.right = "right".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.right]
 }
 

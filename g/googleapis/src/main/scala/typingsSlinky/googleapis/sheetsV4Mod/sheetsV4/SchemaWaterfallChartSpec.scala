@@ -37,22 +37,89 @@ trait SchemaWaterfallChartSpec extends js.Object {
 
 object SchemaWaterfallChartSpec {
   @scala.inline
-  def apply(
-    connectorLineStyle: SchemaLineStyle = null,
-    domain: SchemaWaterfallChartDomain = null,
-    firstValueIsTotal: js.UndefOr[Boolean] = js.undefined,
-    hideConnectorLines: js.UndefOr[Boolean] = js.undefined,
-    series: js.Array[SchemaWaterfallChartSeries] = null,
-    stackedType: String = null
-  ): SchemaWaterfallChartSpec = {
+  def apply(): SchemaWaterfallChartSpec = {
     val __obj = js.Dynamic.literal()
-    if (connectorLineStyle != null) __obj.updateDynamic("connectorLineStyle")(connectorLineStyle.asInstanceOf[js.Any])
-    if (domain != null) __obj.updateDynamic("domain")(domain.asInstanceOf[js.Any])
-    if (!js.isUndefined(firstValueIsTotal)) __obj.updateDynamic("firstValueIsTotal")(firstValueIsTotal.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideConnectorLines)) __obj.updateDynamic("hideConnectorLines")(hideConnectorLines.asInstanceOf[js.Any])
-    if (series != null) __obj.updateDynamic("series")(series.asInstanceOf[js.Any])
-    if (stackedType != null) __obj.updateDynamic("stackedType")(stackedType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWaterfallChartSpec]
   }
+  @scala.inline
+  implicit class SchemaWaterfallChartSpecOps[Self <: SchemaWaterfallChartSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectorLineStyle(value: SchemaLineStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorLineStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectorLineStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectorLineStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDomain(value: SchemaWaterfallChartDomain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstValueIsTotal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstValueIsTotal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstValueIsTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstValueIsTotal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideConnectorLines(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideConnectorLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideConnectorLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideConnectorLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeries(value: js.Array[SchemaWaterfallChartSeries]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("series")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStackedType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackedType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

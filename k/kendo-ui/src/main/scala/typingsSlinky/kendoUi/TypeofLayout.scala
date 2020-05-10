@@ -2,9 +2,9 @@ package typingsSlinky.kendoUi
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.kendo.mobile.ui.Layout
 import typingsSlinky.kendoUi.kendo.mobile.ui.LayoutOptions
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

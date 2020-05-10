@@ -26,18 +26,65 @@ trait ListGeoLocationsRequest extends js.Object {
 
 object ListGeoLocationsRequest {
   @scala.inline
-  def apply(
-    MaxItems: PageMaxItems = null,
-    StartContinentCode: GeoLocationContinentCode = null,
-    StartCountryCode: GeoLocationCountryCode = null,
-    StartSubdivisionCode: GeoLocationSubdivisionCode = null
-  ): ListGeoLocationsRequest = {
+  def apply(): ListGeoLocationsRequest = {
     val __obj = js.Dynamic.literal()
-    if (MaxItems != null) __obj.updateDynamic("MaxItems")(MaxItems.asInstanceOf[js.Any])
-    if (StartContinentCode != null) __obj.updateDynamic("StartContinentCode")(StartContinentCode.asInstanceOf[js.Any])
-    if (StartCountryCode != null) __obj.updateDynamic("StartCountryCode")(StartCountryCode.asInstanceOf[js.Any])
-    if (StartSubdivisionCode != null) __obj.updateDynamic("StartSubdivisionCode")(StartSubdivisionCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListGeoLocationsRequest]
   }
+  @scala.inline
+  implicit class ListGeoLocationsRequestOps[Self <: ListGeoLocationsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxItems(value: PageMaxItems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartContinentCode(value: GeoLocationContinentCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartContinentCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartContinentCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartContinentCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartCountryCode(value: GeoLocationCountryCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartCountryCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartCountryCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartCountryCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartSubdivisionCode(value: GeoLocationSubdivisionCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartSubdivisionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartSubdivisionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartSubdivisionCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,12 +16,10 @@ trait ItemType extends js.Object
 
 object ItemType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def command: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.command = "command".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.command]
   @scala.inline
-  def command: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.command = this.cast("command")
+  def separator: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.separator = "separator".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.separator]
   @scala.inline
-  def separator: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.separator = this.cast("separator")
-  @scala.inline
-  def submenu: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.submenu = this.cast("submenu")
+  def submenu: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.submenu = "submenu".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.submenu]
 }
 

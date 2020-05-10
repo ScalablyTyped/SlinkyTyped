@@ -1,9 +1,8 @@
 package typingsSlinky.bwipJs.mod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
-import typingsSlinky.std.Error
-import typingsSlinky.std.HTMLCanvasElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +20,7 @@ object ^ extends js.Object {
     canvas: String,
     opts: ToBufferOptions,
     callback: js.Function2[
-      /* err */ js.UndefOr[String | Error], 
+      /* err */ js.UndefOr[String | js.Error], 
       /* canvas */ js.UndefOr[HTMLCanvasElement], 
       Unit
     ]
@@ -30,7 +29,7 @@ object ^ extends js.Object {
     canvas: HTMLCanvasElement,
     opts: ToBufferOptions,
     callback: js.Function2[
-      /* err */ js.UndefOr[String | Error], 
+      /* err */ js.UndefOr[String | js.Error], 
       /* canvas */ js.UndefOr[HTMLCanvasElement], 
       Unit
     ]

@@ -22,16 +22,53 @@ trait ApprovalRuleEventMetadata extends js.Object {
 
 object ApprovalRuleEventMetadata {
   @scala.inline
-  def apply(
-    approvalRuleContent: ApprovalRuleContent = null,
-    approvalRuleId: ApprovalRuleId = null,
-    approvalRuleName: ApprovalRuleName = null
-  ): ApprovalRuleEventMetadata = {
+  def apply(): ApprovalRuleEventMetadata = {
     val __obj = js.Dynamic.literal()
-    if (approvalRuleContent != null) __obj.updateDynamic("approvalRuleContent")(approvalRuleContent.asInstanceOf[js.Any])
-    if (approvalRuleId != null) __obj.updateDynamic("approvalRuleId")(approvalRuleId.asInstanceOf[js.Any])
-    if (approvalRuleName != null) __obj.updateDynamic("approvalRuleName")(approvalRuleName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApprovalRuleEventMetadata]
   }
+  @scala.inline
+  implicit class ApprovalRuleEventMetadataOps[Self <: ApprovalRuleEventMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApprovalRuleContent(value: ApprovalRuleContent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRuleContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApprovalRuleId(value: ApprovalRuleId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRuleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApprovalRuleName(value: ApprovalRuleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalRuleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approvalRuleName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

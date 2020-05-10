@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 class Database () extends js.Object {
   def this(data: js.Array[Double]) = this()
   def this(data: Buffer) = this()
-  def this(data: scala.scalajs.js.typedarray.Uint8Array) = this()
+  def this(data: js.typedarray.Uint8Array) = this()
   def close(): Unit = js.native
   def create_function(name: String, func: js.Function): Unit = js.native
   def each(sql: String, callback: ParamsCallback, done: js.Function0[Unit]): Unit = js.native
   def each(sql: String, params: js.Array[ValueType], callback: ParamsCallback, done: js.Function0[Unit]): Unit = js.native
   def each(sql: String, params: ParamsObject, callback: ParamsCallback, done: js.Function0[Unit]): Unit = js.native
   def exec(sql: String): js.Array[QueryResults] = js.native
-  def export(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def export(): js.typedarray.Uint8Array = js.native
   def getRowsModified(): Double = js.native
   def prepare(sql: String): Statement = js.native
   def prepare(sql: String, params: js.Array[ValueType]): Statement = js.native

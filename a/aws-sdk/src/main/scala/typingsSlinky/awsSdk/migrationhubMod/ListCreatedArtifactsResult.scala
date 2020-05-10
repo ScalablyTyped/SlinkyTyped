@@ -18,11 +18,41 @@ trait ListCreatedArtifactsResult extends js.Object {
 
 object ListCreatedArtifactsResult {
   @scala.inline
-  def apply(CreatedArtifactList: CreatedArtifactList = null, NextToken: Token = null): ListCreatedArtifactsResult = {
+  def apply(): ListCreatedArtifactsResult = {
     val __obj = js.Dynamic.literal()
-    if (CreatedArtifactList != null) __obj.updateDynamic("CreatedArtifactList")(CreatedArtifactList.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListCreatedArtifactsResult]
   }
+  @scala.inline
+  implicit class ListCreatedArtifactsResultOps[Self <: ListCreatedArtifactsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatedArtifactList(value: CreatedArtifactList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedArtifactList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedArtifactList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedArtifactList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: Token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,42 +1,47 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.formControlMod.FormControlOverrides
 import typingsSlinky.baseui.formControlMod.FormControlProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object FormControl
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.formControlMod.FormControl] {
+object FormControl {
   @JSImport("baseui/form-control", "FormControl")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled */
-  def apply(
-    caption: TagMod[Any] = null,
-    error: Boolean | TagMod[Any] = null,
-    label: TagMod[Any] = null,
-    overrides: FormControlOverrides = null,
-    positive: TagMod[Any] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.formControlMod.FormControl] = {
-    val __obj = js.Dynamic.literal()
-    if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (positive != null) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.formControlMod.FormControl] {
+    @scala.inline
+    def captionReactElement(value: ReactElement): this.type = set("caption", value.asInstanceOf[js.Any])
+    @scala.inline
+    def caption(value: TagMod[Any]): this.type = set("caption", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: Boolean | TagMod[Any]): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: TagMod[Any]): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overrides(value: FormControlOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positiveReactElement(value: ReactElement): this.type = set("positive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positive(value: TagMod[Any]): this.type = set("positive", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.formControlMod.FormControl] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.formControlMod.FormControl](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FormControlProps
+  
+  def withProps(p: FormControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FormControl.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

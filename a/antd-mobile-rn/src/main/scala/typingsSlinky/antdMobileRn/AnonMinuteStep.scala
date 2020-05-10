@@ -6,11 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonMinuteStep extends js.Object {
-  var minuteStep: Double
-  var mode: String
-  var styles: StringDictionary[RegisteredStyle[_]]
-  var triggerType: String
+  var minuteStep: Double = js.native
+  var mode: String = js.native
+  var styles: StringDictionary[RegisteredStyle[_]] = js.native
+  var triggerType: String = js.native
 }
 
 object AnonMinuteStep {
@@ -22,8 +23,39 @@ object AnonMinuteStep {
     triggerType: String
   ): AnonMinuteStep = {
     val __obj = js.Dynamic.literal(minuteStep = minuteStep.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any], triggerType = triggerType.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonMinuteStep]
   }
+  @scala.inline
+  implicit class AnonMinuteStepOps[Self <: AnonMinuteStep] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinuteStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minuteStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyles(value: StringDictionary[RegisteredStyle[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTriggerType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

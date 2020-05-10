@@ -1,7 +1,6 @@
 package typingsSlinky.plotlyJs
 
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +13,8 @@ trait FnCall extends js.Object {
   def apply(array: ArrayLike[Double], x: Double): Double = js.native
   def apply(array: ArrayLike[Double], x: Double, lo: Double): Double = js.native
   def apply(array: ArrayLike[Double], x: Double, lo: Double, hi: Double): Double = js.native
-  def apply(array: ArrayLike[Date], x: Date): Double = js.native
-  def apply(array: ArrayLike[Date], x: Date, lo: Double): Double = js.native
-  def apply(array: ArrayLike[Date], x: Date, lo: Double, hi: Double): Double = js.native
+  def apply(array: ArrayLike[js.Date], x: js.Date): Double = js.native
+  def apply(array: ArrayLike[js.Date], x: js.Date, lo: Double): Double = js.native
+  def apply(array: ArrayLike[js.Date], x: js.Date, lo: Double, hi: Double): Double = js.native
 }
 

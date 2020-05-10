@@ -22,12 +22,53 @@ trait IpAddressUpdate extends js.Object {
 
 object IpAddressUpdate {
   @scala.inline
-  def apply(Ip: Ip = null, IpId: ResourceId = null, SubnetId: SubnetId = null): IpAddressUpdate = {
+  def apply(): IpAddressUpdate = {
     val __obj = js.Dynamic.literal()
-    if (Ip != null) __obj.updateDynamic("Ip")(Ip.asInstanceOf[js.Any])
-    if (IpId != null) __obj.updateDynamic("IpId")(IpId.asInstanceOf[js.Any])
-    if (SubnetId != null) __obj.updateDynamic("SubnetId")(SubnetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[IpAddressUpdate]
   }
+  @scala.inline
+  implicit class IpAddressUpdateOps[Self <: IpAddressUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIp(value: Ip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IpId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetId(value: SubnetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

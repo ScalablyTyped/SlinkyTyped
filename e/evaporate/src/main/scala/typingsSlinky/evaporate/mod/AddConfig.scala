@@ -7,78 +7,286 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AddConfig extends js.Object {
-  var beforeSigner: js.UndefOr[js.Function2[/* xhr */ XMLHttpRequest, /* url */ String, Unit]] = js.undefined
-  var cancelled: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var beforeSigner: js.UndefOr[js.Function2[/* xhr */ XMLHttpRequest, /* url */ String, Unit]] = js.native
+  var cancelled: js.UndefOr[js.Function0[Unit]] = js.native
   var complete: js.UndefOr[
     js.Function3[/* xhr */ XMLHttpRequest, /* awsObjectKey */ String, /* stats */ TransferStats, Unit]
-  ] = js.undefined
-  var contentType: js.UndefOr[String] = js.undefined
-  var error: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.undefined
-  var file: File
-  var info: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.undefined
-  var name: String
-  var nameChanged: js.UndefOr[js.Function1[/* awsObjectKey */ String, Unit]] = js.undefined
-  var notSignedHeadersAtInitiate: js.UndefOr[StringDictionary[String]] = js.undefined
-  var paused: js.UndefOr[js.Function1[/* file_key */ String, Unit]] = js.undefined
-  var pausing: js.UndefOr[js.Function1[/* file_key */ String, Unit]] = js.undefined
-  var progress: js.UndefOr[js.Function2[/* p */ Double, /* stats */ TransferStats, Unit]] = js.undefined
-  var resumed: js.UndefOr[js.Function1[/* file_key */ String, Unit]] = js.undefined
-  var started: js.UndefOr[js.Function1[/* file_key */ String, Unit]] = js.undefined
-  var uploadInitiated: js.UndefOr[js.Function1[/* s3UploadId */ js.UndefOr[String], Unit]] = js.undefined
-  var warn: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.undefined
-  var xAmzHeadersAtComplete: js.UndefOr[StringDictionary[String]] = js.undefined
-  var xAmzHeadersAtInitiate: js.UndefOr[StringDictionary[String]] = js.undefined
-  var xAmzHeadersAtUpload: js.UndefOr[StringDictionary[String]] = js.undefined
-  var xAmzHeadersCommon: js.UndefOr[StringDictionary[String]] = js.undefined
+  ] = js.native
+  var contentType: js.UndefOr[String] = js.native
+  var error: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
+  var file: File = js.native
+  var info: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
+  var name: String = js.native
+  var nameChanged: js.UndefOr[js.Function1[/* awsObjectKey */ String, Unit]] = js.native
+  var notSignedHeadersAtInitiate: js.UndefOr[StringDictionary[String]] = js.native
+  var paused: js.UndefOr[js.Function1[/* file_key */ String, Unit]] = js.native
+  var pausing: js.UndefOr[js.Function1[/* file_key */ String, Unit]] = js.native
+  var progress: js.UndefOr[js.Function2[/* p */ Double, /* stats */ TransferStats, Unit]] = js.native
+  var resumed: js.UndefOr[js.Function1[/* file_key */ String, Unit]] = js.native
+  var started: js.UndefOr[js.Function1[/* file_key */ String, Unit]] = js.native
+  var uploadInitiated: js.UndefOr[js.Function1[/* s3UploadId */ js.UndefOr[String], Unit]] = js.native
+  var warn: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
+  var xAmzHeadersAtComplete: js.UndefOr[StringDictionary[String]] = js.native
+  var xAmzHeadersAtInitiate: js.UndefOr[StringDictionary[String]] = js.native
+  var xAmzHeadersAtUpload: js.UndefOr[StringDictionary[String]] = js.native
+  var xAmzHeadersCommon: js.UndefOr[StringDictionary[String]] = js.native
 }
 
 object AddConfig {
   @scala.inline
-  def apply(
-    file: File,
-    name: String,
-    beforeSigner: (/* xhr */ XMLHttpRequest, /* url */ String) => Unit = null,
-    cancelled: () => Unit = null,
-    complete: (/* xhr */ XMLHttpRequest, /* awsObjectKey */ String, /* stats */ TransferStats) => Unit = null,
-    contentType: String = null,
-    error: /* msg */ String => Unit = null,
-    info: /* msg */ String => Unit = null,
-    nameChanged: /* awsObjectKey */ String => Unit = null,
-    notSignedHeadersAtInitiate: StringDictionary[String] = null,
-    paused: /* file_key */ String => Unit = null,
-    pausing: /* file_key */ String => Unit = null,
-    progress: (/* p */ Double, /* stats */ TransferStats) => Unit = null,
-    resumed: /* file_key */ String => Unit = null,
-    started: /* file_key */ String => Unit = null,
-    uploadInitiated: /* s3UploadId */ js.UndefOr[String] => Unit = null,
-    warn: /* msg */ String => Unit = null,
-    xAmzHeadersAtComplete: StringDictionary[String] = null,
-    xAmzHeadersAtInitiate: StringDictionary[String] = null,
-    xAmzHeadersAtUpload: StringDictionary[String] = null,
-    xAmzHeadersCommon: StringDictionary[String] = null
-  ): AddConfig = {
+  def apply(file: File, name: String): AddConfig = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (beforeSigner != null) __obj.updateDynamic("beforeSigner")(js.Any.fromFunction2(beforeSigner))
-    if (cancelled != null) __obj.updateDynamic("cancelled")(js.Any.fromFunction0(cancelled))
-    if (complete != null) __obj.updateDynamic("complete")(js.Any.fromFunction3(complete))
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
-    if (info != null) __obj.updateDynamic("info")(js.Any.fromFunction1(info))
-    if (nameChanged != null) __obj.updateDynamic("nameChanged")(js.Any.fromFunction1(nameChanged))
-    if (notSignedHeadersAtInitiate != null) __obj.updateDynamic("notSignedHeadersAtInitiate")(notSignedHeadersAtInitiate.asInstanceOf[js.Any])
-    if (paused != null) __obj.updateDynamic("paused")(js.Any.fromFunction1(paused))
-    if (pausing != null) __obj.updateDynamic("pausing")(js.Any.fromFunction1(pausing))
-    if (progress != null) __obj.updateDynamic("progress")(js.Any.fromFunction2(progress))
-    if (resumed != null) __obj.updateDynamic("resumed")(js.Any.fromFunction1(resumed))
-    if (started != null) __obj.updateDynamic("started")(js.Any.fromFunction1(started))
-    if (uploadInitiated != null) __obj.updateDynamic("uploadInitiated")(js.Any.fromFunction1(uploadInitiated))
-    if (warn != null) __obj.updateDynamic("warn")(js.Any.fromFunction1(warn))
-    if (xAmzHeadersAtComplete != null) __obj.updateDynamic("xAmzHeadersAtComplete")(xAmzHeadersAtComplete.asInstanceOf[js.Any])
-    if (xAmzHeadersAtInitiate != null) __obj.updateDynamic("xAmzHeadersAtInitiate")(xAmzHeadersAtInitiate.asInstanceOf[js.Any])
-    if (xAmzHeadersAtUpload != null) __obj.updateDynamic("xAmzHeadersAtUpload")(xAmzHeadersAtUpload.asInstanceOf[js.Any])
-    if (xAmzHeadersCommon != null) __obj.updateDynamic("xAmzHeadersCommon")(xAmzHeadersCommon.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddConfig]
   }
+  @scala.inline
+  implicit class AddConfigOps[Self <: AddConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFile(value: File): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBeforeSigner(value: (/* xhr */ XMLHttpRequest, /* url */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSigner")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeSigner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSigner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelled(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutCancelled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComplete(value: (/* xhr */ XMLHttpRequest, /* awsObjectKey */ String, /* stats */ TransferStats) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: /* msg */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfo(value: /* msg */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameChanged(value: /* awsObjectKey */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutNameChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotSignedHeadersAtInitiate(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notSignedHeadersAtInitiate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotSignedHeadersAtInitiate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notSignedHeadersAtInitiate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaused(value: /* file_key */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPaused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPausing(value: /* file_key */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pausing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPausing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pausing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgress(value: (/* p */ Double, /* stats */ TransferStats) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResumed(value: /* file_key */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resumed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutResumed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resumed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStarted(value: /* file_key */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("started")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutStarted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("started")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadInitiated(value: /* s3UploadId */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadInitiated")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutUploadInitiated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadInitiated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarn(value: /* msg */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutWarn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXAmzHeadersAtComplete(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAmzHeadersAtComplete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXAmzHeadersAtComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAmzHeadersAtComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXAmzHeadersAtInitiate(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAmzHeadersAtInitiate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXAmzHeadersAtInitiate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAmzHeadersAtInitiate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXAmzHeadersAtUpload(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAmzHeadersAtUpload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXAmzHeadersAtUpload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAmzHeadersAtUpload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXAmzHeadersCommon(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAmzHeadersCommon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXAmzHeadersCommon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xAmzHeadersCommon")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,6 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ionicCore.ionicCoreNumbers.`1`
-import typingsSlinky.ionicCore.ionicCoreNumbers.`2`
-import typingsSlinky.ionicCore.ionicCoreNumbers.`3`
 import typingsSlinky.ionicCore.mod.ComponentProps
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
 import scala.scalajs.js
@@ -30,9 +27,9 @@ object viewControllerMod extends js.Object {
     def init(container: HTMLElement): js.Promise[Unit] = js.native
   }
   
-  val VIEW_STATE_ATTACHED: `2` = js.native
-  val VIEW_STATE_DESTROYED: `3` = js.native
-  val VIEW_STATE_NEW: `1` = js.native
+  val VIEW_STATE_ATTACHED: /* 2 */ Double = js.native
+  val VIEW_STATE_DESTROYED: /* 3 */ Double = js.native
+  val VIEW_STATE_NEW: /* 1 */ Double = js.native
   def convertToView(page: js.Any): ViewController | Null = js.native
   def convertToView(page: js.Any, params: ComponentProps[Null]): ViewController | Null = js.native
   def convertToViews(pages: js.Array[_]): js.Array[ViewController] = js.native

@@ -1,9 +1,7 @@
 package typingsSlinky.rmcCalendar.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcCalendar.confirmPanelMod.ConfirmPanelPropsType
 import typingsSlinky.rmcCalendar.confirmPanelMod.default
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.Locale
@@ -13,34 +11,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ConfirmPanel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ConfirmPanel {
   @JSImport("rmc-calendar/lib/calendar/ConfirmPanel", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    locale: Locale,
-    onConfirm: () => Unit,
-    disableBtn: js.UndefOr[Boolean] = js.undefined,
-    endDateTime: js.Date = null,
-    formatStr: String = null,
-    onlyConfirm: js.UndefOr[Boolean] = js.undefined,
-    startDateTime: js.Date = null,
-    `type`: one | range = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], onConfirm = js.Any.fromFunction0(onConfirm))
-    if (!js.isUndefined(disableBtn)) __obj.updateDynamic("disableBtn")(disableBtn.asInstanceOf[js.Any])
-    if (endDateTime != null) __obj.updateDynamic("endDateTime")(endDateTime.asInstanceOf[js.Any])
-    if (formatStr != null) __obj.updateDynamic("formatStr")(formatStr.asInstanceOf[js.Any])
-    if (!js.isUndefined(onlyConfirm)) __obj.updateDynamic("onlyConfirm")(onlyConfirm.asInstanceOf[js.Any])
-    if (startDateTime != null) __obj.updateDynamic("startDateTime")(startDateTime.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def disableBtn(value: Boolean): this.type = set("disableBtn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endDateTime(value: js.Date): this.type = set("endDateTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatStr(value: String): this.type = set("formatStr", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onlyConfirm(value: Boolean): this.type = set("onlyConfirm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startDateTime(value: js.Date): this.type = set("startDateTime", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: one | range): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  type Props = ConfirmPanelPropsType
+  
+  def withProps(p: ConfirmPanelPropsType): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(locale: Locale, onConfirm: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], onConfirm = js.Any.fromFunction0(onConfirm))
+    new Builder(js.Array(this.component, __props.asInstanceOf[ConfirmPanelPropsType]))
+  }
 }
 

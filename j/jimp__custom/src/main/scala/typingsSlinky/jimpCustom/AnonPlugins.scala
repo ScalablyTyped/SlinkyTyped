@@ -8,18 +8,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPlugins[TypesFuncArr /* <: js.UndefOr[FunctionRet[JimpType[Image]]] */, PluginFuncArr /* <: js.UndefOr[FunctionRet[JimpPlugin[Image]]] */] extends js.Object {
-  var plugins: js.UndefOr[PluginFuncArr] = js.undefined
-  var types: js.UndefOr[TypesFuncArr] = js.undefined
+  var plugins: js.UndefOr[PluginFuncArr] = js.native
+  var types: js.UndefOr[TypesFuncArr] = js.native
 }
 
 object AnonPlugins {
   @scala.inline
-  def apply[TypesFuncArr /* <: js.UndefOr[FunctionRet[JimpType[Image]]] */, PluginFuncArr /* <: js.UndefOr[FunctionRet[JimpPlugin[Image]]] */](plugins: PluginFuncArr = null, types: TypesFuncArr = null): AnonPlugins[TypesFuncArr, PluginFuncArr] = {
+  def apply[TypesFuncArr, PluginFuncArr](): AnonPlugins[TypesFuncArr, PluginFuncArr] = {
     val __obj = js.Dynamic.literal()
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (types != null) __obj.updateDynamic("types")(types.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPlugins[TypesFuncArr, PluginFuncArr]]
   }
+  @scala.inline
+  implicit class AnonPluginsOps[Self[typesfuncarr, pluginfuncarr] <: AnonPlugins[typesfuncarr, pluginfuncarr], TypesFuncArr, PluginFuncArr] (val x: Self[TypesFuncArr, PluginFuncArr]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TypesFuncArr, PluginFuncArr] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TypesFuncArr, PluginFuncArr]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[TypesFuncArr, PluginFuncArr]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TypesFuncArr, PluginFuncArr]) with Other]
+    @scala.inline
+    def withPlugins(value: PluginFuncArr): Self[TypesFuncArr, PluginFuncArr] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self[TypesFuncArr, PluginFuncArr] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypes(value: TypesFuncArr): Self[TypesFuncArr, PluginFuncArr] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypes: Self[TypesFuncArr, PluginFuncArr] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("types")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

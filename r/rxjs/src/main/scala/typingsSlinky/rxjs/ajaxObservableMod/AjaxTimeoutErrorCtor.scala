@@ -1,7 +1,7 @@
 package typingsSlinky.rxjs.ajaxObservableMod
 
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.std.XMLHttpRequest
+import org.scalajs.dom.raw.XMLHttpRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

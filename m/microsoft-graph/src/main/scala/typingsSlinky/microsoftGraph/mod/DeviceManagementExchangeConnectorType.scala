@@ -14,14 +14,12 @@ trait DeviceManagementExchangeConnectorType extends js.Object
 
 object DeviceManagementExchangeConnectorType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dedicated: typingsSlinky.microsoftGraph.microsoftGraphStrings.dedicated = "dedicated".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.dedicated]
   @scala.inline
-  def dedicated: typingsSlinky.microsoftGraph.microsoftGraphStrings.dedicated = this.cast("dedicated")
+  def hosted: typingsSlinky.microsoftGraph.microsoftGraphStrings.hosted = "hosted".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.hosted]
   @scala.inline
-  def hosted: typingsSlinky.microsoftGraph.microsoftGraphStrings.hosted = this.cast("hosted")
+  def onPremises: typingsSlinky.microsoftGraph.microsoftGraphStrings.onPremises = "onPremises".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.onPremises]
   @scala.inline
-  def onPremises: typingsSlinky.microsoftGraph.microsoftGraphStrings.onPremises = this.cast("onPremises")
-  @scala.inline
-  def serviceToService: typingsSlinky.microsoftGraph.microsoftGraphStrings.serviceToService = this.cast("serviceToService")
+  def serviceToService: typingsSlinky.microsoftGraph.microsoftGraphStrings.serviceToService = "serviceToService".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.serviceToService]
 }
 

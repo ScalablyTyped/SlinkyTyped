@@ -3,6 +3,7 @@ package typingsSlinky.pouchdbCore.PouchDB
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import org.scalajs.dom.experimental.Request
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.debug.mod.Debugger
@@ -13,7 +14,6 @@ import typingsSlinky.pouchdbCore.Fetch
 import typingsSlinky.pouchdbCore.PouchDB.Configuration.DatabaseConfiguration
 import typingsSlinky.pouchdbCore.pouchdbCoreStrings.created
 import typingsSlinky.pouchdbCore.pouchdbCoreStrings.destroyed
-import typingsSlinky.std.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

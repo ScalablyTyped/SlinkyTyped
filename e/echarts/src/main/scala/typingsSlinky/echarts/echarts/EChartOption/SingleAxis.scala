@@ -1,20 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonMax
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis
-import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.DataObject
-import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Label
-import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Pointer
-import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.SplitArea
-import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.SplitLine
-import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Tick
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Type
-import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.Line
-import typingsSlinky.echarts.echartsStrings.center
-import typingsSlinky.echarts.echartsStrings.end
 import typingsSlinky.echarts.echartsStrings.horizontal
-import typingsSlinky.echarts.echartsStrings.middle
-import typingsSlinky.echarts.echartsStrings.start
 import typingsSlinky.echarts.echartsStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,6 +13,7 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#xAxis
   */
+@js.native
 trait SingleAxis extends CartesianAxis {
   /**
     * Distance between grid component and the bottom side of the container.
@@ -33,13 +22,13 @@ trait SingleAxis extends CartesianAxis {
     *
     * @default '5%'
     */
-  var bottom: js.UndefOr[String | Double] = js.undefined
+  var bottom: js.UndefOr[String | Double] = js.native
   /**
     * Height of grid component. Adaptive by default.
     *
     * @default 'auto'
     */
-  var height: js.UndefOr[String | Double] = js.undefined
+  var height: js.UndefOr[String | Double] = js.native
   /**
     * Distance between grid component and the left side of the container.
     * left value can be instant pixel value like 20;
@@ -50,14 +39,14 @@ trait SingleAxis extends CartesianAxis {
     *
     * @default '5%'
     */
-  var left: js.UndefOr[String | Double] = js.undefined
+  var left: js.UndefOr[String | Double] = js.native
   /**
     * Orientation of the axis. By default, it's 'horizontal'.
     * You can set it to be 'vertical' to make a vertical axis.
     *
     * @default 'horizontal'
     */
-  var orient: js.UndefOr[horizontal | vertical] = js.undefined
+  var orient: js.UndefOr[horizontal | vertical] = js.native
   /**
     * Distance between grid component and the right side of the container.
     * right value can be instant pixel value like 20;
@@ -65,7 +54,7 @@ trait SingleAxis extends CartesianAxis {
     *
     * @default '5%'
     */
-  var right: js.UndefOr[String | Double] = js.undefined
+  var right: js.UndefOr[String | Double] = js.native
   /**
     * Distance between grid component and the top side of the container.
     * top value can be instant pixel value like 20;
@@ -76,7 +65,7 @@ trait SingleAxis extends CartesianAxis {
     *
     * @default '5%'
     */
-  var top: js.UndefOr[String | Double] = js.undefined
+  var top: js.UndefOr[String | Double] = js.native
   /**
     * Options:
     * + 'value' - Numerical axis, suitable for continuous data.
@@ -92,95 +81,124 @@ trait SingleAxis extends CartesianAxis {
     * @default 'value'
     * @see https://echarts.apache.org/en/option.html#singleAxis.type
     */
-  var `type`: js.UndefOr[Type] = js.undefined
+  var `type`: js.UndefOr[Type] = js.native
   /**
     * Width of grid component. Adaptive by default.
     *
     * @default 'auto'
     */
-  var width: js.UndefOr[String | Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.native
 }
 
 object SingleAxis {
   @scala.inline
-  def apply(
-    axisLabel: Label = null,
-    axisLine: Line = null,
-    axisPointer: Pointer = null,
-    axisTick: Tick = null,
-    bottom: String | Double = null,
-    boundaryGap: Boolean | (js.Array[String | Double]) = null,
-    data: js.Array[String | Double | DataObject] = null,
-    gridIndex: Int | Double = null,
-    height: String | Double = null,
-    id: String = null,
-    interval: Int | Double = null,
-    inverse: js.UndefOr[Boolean] = js.undefined,
-    left: String | Double = null,
-    logBase: Int | Double = null,
-    max: Double | String | (js.Function1[/* value */ AnonMax, Double]) = null,
-    min: Double | String | (js.Function1[/* value */ AnonMax, Double]) = null,
-    minInterval: js.Any = null,
-    name: String = null,
-    nameGap: Int | Double = null,
-    nameLocation: start | middle | center | end = null,
-    nameRotate: Int | Double = null,
-    nameTextStyle: TextStyleWithRich = null,
-    offset: Int | Double = null,
-    orient: horizontal | vertical = null,
-    right: String | Double = null,
-    scale: js.UndefOr[Boolean] = js.undefined,
-    show: js.UndefOr[Boolean] = js.undefined,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    splitArea: SplitArea = null,
-    splitLine: SplitLine = null,
-    splitNumber: Int | Double = null,
-    top: String | Double = null,
-    triggerEvent: js.UndefOr[Boolean] = js.undefined,
-    `type`: Type = null,
-    width: String | Double = null,
-    z: Int | Double = null,
-    zlevel: Int | Double = null
-  ): SingleAxis = {
+  def apply(): SingleAxis = {
     val __obj = js.Dynamic.literal()
-    if (axisLabel != null) __obj.updateDynamic("axisLabel")(axisLabel.asInstanceOf[js.Any])
-    if (axisLine != null) __obj.updateDynamic("axisLine")(axisLine.asInstanceOf[js.Any])
-    if (axisPointer != null) __obj.updateDynamic("axisPointer")(axisPointer.asInstanceOf[js.Any])
-    if (axisTick != null) __obj.updateDynamic("axisTick")(axisTick.asInstanceOf[js.Any])
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (boundaryGap != null) __obj.updateDynamic("boundaryGap")(boundaryGap.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (gridIndex != null) __obj.updateDynamic("gridIndex")(gridIndex.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (!js.isUndefined(inverse)) __obj.updateDynamic("inverse")(inverse.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (logBase != null) __obj.updateDynamic("logBase")(logBase.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minInterval != null) __obj.updateDynamic("minInterval")(minInterval.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (nameGap != null) __obj.updateDynamic("nameGap")(nameGap.asInstanceOf[js.Any])
-    if (nameLocation != null) __obj.updateDynamic("nameLocation")(nameLocation.asInstanceOf[js.Any])
-    if (nameRotate != null) __obj.updateDynamic("nameRotate")(nameRotate.asInstanceOf[js.Any])
-    if (nameTextStyle != null) __obj.updateDynamic("nameTextStyle")(nameTextStyle.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (orient != null) __obj.updateDynamic("orient")(orient.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (!js.isUndefined(scale)) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (splitArea != null) __obj.updateDynamic("splitArea")(splitArea.asInstanceOf[js.Any])
-    if (splitLine != null) __obj.updateDynamic("splitLine")(splitLine.asInstanceOf[js.Any])
-    if (splitNumber != null) __obj.updateDynamic("splitNumber")(splitNumber.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (!js.isUndefined(triggerEvent)) __obj.updateDynamic("triggerEvent")(triggerEvent.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
-    if (zlevel != null) __obj.updateDynamic("zlevel")(zlevel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SingleAxis]
   }
+  @scala.inline
+  implicit class SingleAxisOps[Self <: SingleAxis] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBottom(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrient(value: horizontal | vertical): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Type): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

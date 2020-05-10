@@ -31,14 +31,41 @@ trait SchemaGooglePrivacyDlpV2Key extends js.Object {
 
 object SchemaGooglePrivacyDlpV2Key {
   @scala.inline
-  def apply(
-    partitionId: SchemaGooglePrivacyDlpV2PartitionId = null,
-    path: js.Array[SchemaGooglePrivacyDlpV2PathElement] = null
-  ): SchemaGooglePrivacyDlpV2Key = {
+  def apply(): SchemaGooglePrivacyDlpV2Key = {
     val __obj = js.Dynamic.literal()
-    if (partitionId != null) __obj.updateDynamic("partitionId")(partitionId.asInstanceOf[js.Any])
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2Key]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2KeyOps[Self <: SchemaGooglePrivacyDlpV2Key] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPartitionId(value: SchemaGooglePrivacyDlpV2PartitionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartitionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partitionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: js.Array[SchemaGooglePrivacyDlpV2PathElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

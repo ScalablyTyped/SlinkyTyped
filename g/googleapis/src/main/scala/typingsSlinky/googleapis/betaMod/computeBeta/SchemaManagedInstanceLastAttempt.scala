@@ -16,10 +16,29 @@ trait SchemaManagedInstanceLastAttempt extends js.Object {
 
 object SchemaManagedInstanceLastAttempt {
   @scala.inline
-  def apply(errors: AnonErrorsArray = null): SchemaManagedInstanceLastAttempt = {
+  def apply(): SchemaManagedInstanceLastAttempt = {
     val __obj = js.Dynamic.literal()
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaManagedInstanceLastAttempt]
   }
+  @scala.inline
+  implicit class SchemaManagedInstanceLastAttemptOps[Self <: SchemaManagedInstanceLastAttempt] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrors(value: AnonErrorsArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,30 +5,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonHmacHashAlgorithm extends js.Object {
-  var hmacHashAlgorithm: js.UndefOr[String] = js.undefined
-  var iterationCount: js.UndefOr[Double] = js.undefined
-  var keyEncryptionAlgorithm: js.UndefOr[Algorithm] = js.undefined
-  var keyEncryptionAlgorithmParams: js.UndefOr[js.Any] = js.undefined
-  var keyIdentifier: js.UndefOr[scala.scalajs.js.typedarray.ArrayBuffer] = js.undefined
+  var hmacHashAlgorithm: js.UndefOr[String] = js.native
+  var iterationCount: js.UndefOr[Double] = js.native
+  var keyEncryptionAlgorithm: js.UndefOr[Algorithm] = js.native
+  var keyEncryptionAlgorithmParams: js.UndefOr[js.Any] = js.native
+  var keyIdentifier: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
 }
 
 object AnonHmacHashAlgorithm {
   @scala.inline
-  def apply(
-    hmacHashAlgorithm: String = null,
-    iterationCount: Int | Double = null,
-    keyEncryptionAlgorithm: Algorithm = null,
-    keyEncryptionAlgorithmParams: js.Any = null,
-    keyIdentifier: scala.scalajs.js.typedarray.ArrayBuffer = null
-  ): AnonHmacHashAlgorithm = {
+  def apply(): AnonHmacHashAlgorithm = {
     val __obj = js.Dynamic.literal()
-    if (hmacHashAlgorithm != null) __obj.updateDynamic("hmacHashAlgorithm")(hmacHashAlgorithm.asInstanceOf[js.Any])
-    if (iterationCount != null) __obj.updateDynamic("iterationCount")(iterationCount.asInstanceOf[js.Any])
-    if (keyEncryptionAlgorithm != null) __obj.updateDynamic("keyEncryptionAlgorithm")(keyEncryptionAlgorithm.asInstanceOf[js.Any])
-    if (keyEncryptionAlgorithmParams != null) __obj.updateDynamic("keyEncryptionAlgorithmParams")(keyEncryptionAlgorithmParams.asInstanceOf[js.Any])
-    if (keyIdentifier != null) __obj.updateDynamic("keyIdentifier")(keyIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonHmacHashAlgorithm]
   }
+  @scala.inline
+  implicit class AnonHmacHashAlgorithmOps[Self <: AnonHmacHashAlgorithm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHmacHashAlgorithm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hmacHashAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHmacHashAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hmacHashAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIterationCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIterationCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterationCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyEncryptionAlgorithm(value: Algorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyEncryptionAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyEncryptionAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyEncryptionAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyEncryptionAlgorithmParams(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyEncryptionAlgorithmParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyEncryptionAlgorithmParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyEncryptionAlgorithmParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyIdentifier(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyIdentifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

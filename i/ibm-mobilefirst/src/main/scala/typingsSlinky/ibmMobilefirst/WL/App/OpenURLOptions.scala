@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OpenURLOptions extends js.Object {
-  var directories: js.UndefOr[Double] = js.undefined
-  var location: js.UndefOr[Double] = js.undefined
-  var menubar: js.UndefOr[Double] = js.undefined
-  var resizable: js.UndefOr[Double] = js.undefined
-  var scrollbars: js.UndefOr[Double] = js.undefined
-  var status: js.UndefOr[Double] = js.undefined
-  var toolbar: js.UndefOr[Double] = js.undefined
+  var directories: js.UndefOr[Double] = js.native
+  var location: js.UndefOr[Double] = js.native
+  var menubar: js.UndefOr[Double] = js.native
+  var resizable: js.UndefOr[Double] = js.native
+  var scrollbars: js.UndefOr[Double] = js.native
+  var status: js.UndefOr[Double] = js.native
+  var toolbar: js.UndefOr[Double] = js.native
 }
 
 object OpenURLOptions {
   @scala.inline
-  def apply(
-    directories: Int | Double = null,
-    location: Int | Double = null,
-    menubar: Int | Double = null,
-    resizable: Int | Double = null,
-    scrollbars: Int | Double = null,
-    status: Int | Double = null,
-    toolbar: Int | Double = null
-  ): OpenURLOptions = {
+  def apply(): OpenURLOptions = {
     val __obj = js.Dynamic.literal()
-    if (directories != null) __obj.updateDynamic("directories")(directories.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (menubar != null) __obj.updateDynamic("menubar")(menubar.asInstanceOf[js.Any])
-    if (resizable != null) __obj.updateDynamic("resizable")(resizable.asInstanceOf[js.Any])
-    if (scrollbars != null) __obj.updateDynamic("scrollbars")(scrollbars.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenURLOptions]
   }
+  @scala.inline
+  implicit class OpenURLOptionsOps[Self <: OpenURLOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectories(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenubar(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menubar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenubar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menubar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResizable(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResizable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollbars(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollbars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolbar(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolbar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

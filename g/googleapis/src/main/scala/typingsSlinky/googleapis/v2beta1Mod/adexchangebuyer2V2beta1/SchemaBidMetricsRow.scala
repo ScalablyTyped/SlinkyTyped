@@ -45,24 +45,101 @@ trait SchemaBidMetricsRow extends js.Object {
 
 object SchemaBidMetricsRow {
   @scala.inline
-  def apply(
-    bids: SchemaMetricValue = null,
-    bidsInAuction: SchemaMetricValue = null,
-    billedImpressions: SchemaMetricValue = null,
-    impressionsWon: SchemaMetricValue = null,
-    measurableImpressions: SchemaMetricValue = null,
-    rowDimensions: SchemaRowDimensions = null,
-    viewableImpressions: SchemaMetricValue = null
-  ): SchemaBidMetricsRow = {
+  def apply(): SchemaBidMetricsRow = {
     val __obj = js.Dynamic.literal()
-    if (bids != null) __obj.updateDynamic("bids")(bids.asInstanceOf[js.Any])
-    if (bidsInAuction != null) __obj.updateDynamic("bidsInAuction")(bidsInAuction.asInstanceOf[js.Any])
-    if (billedImpressions != null) __obj.updateDynamic("billedImpressions")(billedImpressions.asInstanceOf[js.Any])
-    if (impressionsWon != null) __obj.updateDynamic("impressionsWon")(impressionsWon.asInstanceOf[js.Any])
-    if (measurableImpressions != null) __obj.updateDynamic("measurableImpressions")(measurableImpressions.asInstanceOf[js.Any])
-    if (rowDimensions != null) __obj.updateDynamic("rowDimensions")(rowDimensions.asInstanceOf[js.Any])
-    if (viewableImpressions != null) __obj.updateDynamic("viewableImpressions")(viewableImpressions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBidMetricsRow]
   }
+  @scala.inline
+  implicit class SchemaBidMetricsRowOps[Self <: SchemaBidMetricsRow] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBids(value: SchemaMetricValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bids")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBids: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bids")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBidsInAuction(value: SchemaMetricValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bidsInAuction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBidsInAuction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bidsInAuction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBilledImpressions(value: SchemaMetricValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billedImpressions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBilledImpressions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billedImpressions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImpressionsWon(value: SchemaMetricValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("impressionsWon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImpressionsWon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("impressionsWon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeasurableImpressions(value: SchemaMetricValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measurableImpressions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeasurableImpressions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measurableImpressions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowDimensions(value: SchemaRowDimensions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowDimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewableImpressions(value: SchemaMetricValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewableImpressions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutViewableImpressions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewableImpressions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

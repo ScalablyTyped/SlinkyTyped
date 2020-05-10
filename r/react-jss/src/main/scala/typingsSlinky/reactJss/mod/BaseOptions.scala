@@ -1,40 +1,41 @@
 package typingsSlinky.reactJss.mod
 
-import org.scalajs.dom.raw.HTMLStyleElement
-import typingsSlinky.jss.mod.Rule
-import typingsSlinky.jss.mod.StyleSheet
 import typingsSlinky.jss.mod.StyleSheetFactoryOptions
 import typingsSlinky.theming.mod.Theming
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BaseOptions extends StyleSheetFactoryOptions {
-  var theming: js.UndefOr[Theming[js.Object]] = js.undefined
+  var theming: js.UndefOr[Theming[js.Object]] = js.native
 }
 
 object BaseOptions {
   @scala.inline
-  def apply(
-    classNamePrefix: String = null,
-    element: HTMLStyleElement = null,
-    generateId: (/* rule */ Rule, /* sheet */ js.UndefOr[StyleSheet[String]]) => String = null,
-    index: Int | Double = null,
-    link: js.UndefOr[Boolean] = js.undefined,
-    media: String = null,
-    meta: String = null,
-    theming: Theming[js.Object] = null
-  ): BaseOptions = {
+  def apply(): BaseOptions = {
     val __obj = js.Dynamic.literal()
-    if (classNamePrefix != null) __obj.updateDynamic("classNamePrefix")(classNamePrefix.asInstanceOf[js.Any])
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (generateId != null) __obj.updateDynamic("generateId")(js.Any.fromFunction2(generateId))
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (!js.isUndefined(link)) __obj.updateDynamic("link")(link.asInstanceOf[js.Any])
-    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (theming != null) __obj.updateDynamic("theming")(theming.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseOptions]
   }
+  @scala.inline
+  implicit class BaseOptionsOps[Self <: BaseOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTheming(value: Theming[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theming")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

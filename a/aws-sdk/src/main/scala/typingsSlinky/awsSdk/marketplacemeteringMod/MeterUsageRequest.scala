@@ -30,17 +30,59 @@ trait MeterUsageRequest extends js.Object {
 
 object MeterUsageRequest {
   @scala.inline
-  def apply(
-    ProductCode: ProductCode,
-    Timestamp: js.Date,
-    UsageDimension: UsageDimension,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    UsageQuantity: Int | Double = null
-  ): MeterUsageRequest = {
+  def apply(ProductCode: ProductCode, Timestamp: js.Date, UsageDimension: UsageDimension): MeterUsageRequest = {
     val __obj = js.Dynamic.literal(ProductCode = ProductCode.asInstanceOf[js.Any], Timestamp = Timestamp.asInstanceOf[js.Any], UsageDimension = UsageDimension.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (UsageQuantity != null) __obj.updateDynamic("UsageQuantity")(UsageQuantity.asInstanceOf[js.Any])
     __obj.asInstanceOf[MeterUsageRequest]
   }
+  @scala.inline
+  implicit class MeterUsageRequestOps[Self <: MeterUsageRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProductCode(value: ProductCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProductCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsageDimension(value: UsageDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsageDimension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsageQuantity(value: UsageQuantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsageQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsageQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsageQuantity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

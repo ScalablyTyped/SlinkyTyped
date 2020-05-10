@@ -6,11 +6,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Quixote extends js.Object {
   def createFrame(
     options: QuixoteFrameOptions,
     callback: js.Function2[/* err */ js.Error, /* loadedFrame */ QFrame, Unit]
-  ): QFrame
+  ): QFrame = js.native
 }
 
 object Quixote {
@@ -19,8 +20,23 @@ object Quixote {
     createFrame: (QuixoteFrameOptions, js.Function2[/* err */ js.Error, /* loadedFrame */ QFrame, Unit]) => QFrame
   ): Quixote = {
     val __obj = js.Dynamic.literal(createFrame = js.Any.fromFunction2(createFrame))
-  
     __obj.asInstanceOf[Quixote]
   }
+  @scala.inline
+  implicit class QuixoteOps[Self <: Quixote] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateFrame(
+      value: (QuixoteFrameOptions, js.Function2[/* err */ js.Error, /* loadedFrame */ QFrame, Unit]) => QFrame
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createFrame")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

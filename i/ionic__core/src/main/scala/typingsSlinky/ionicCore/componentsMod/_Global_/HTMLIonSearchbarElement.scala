@@ -22,7 +22,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.ionicCore.componentsMod.Components.IonSearchbar because var conflicts: spellcheck. Inlined animated, autocomplete, autocorrect, cancelButtonIcon, cancelButtonText, clearIcon, color, debounce, disabled, getInputElement, inputmode, mode, placeholder, searchIcon, setFocus, showCancelButton, `type`, value */ @js.native
 trait HTMLIonSearchbarElement extends HTMLStencilElement {
   /**

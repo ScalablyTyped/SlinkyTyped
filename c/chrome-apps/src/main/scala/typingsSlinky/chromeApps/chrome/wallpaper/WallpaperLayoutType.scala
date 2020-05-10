@@ -13,12 +13,10 @@ trait WallpaperLayoutType extends js.Object
 
 object WallpaperLayoutType {
   @scala.inline
-  def CENTER: typingsSlinky.chromeApps.chromeAppsStrings.CENTER = this.cast("CENTER")
+  def CENTER: typingsSlinky.chromeApps.chromeAppsStrings.CENTER = "CENTER".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.CENTER]
   @scala.inline
-  def CENTER_CROPPED: typingsSlinky.chromeApps.chromeAppsStrings.CENTER_CROPPED = this.cast("CENTER_CROPPED")
+  def CENTER_CROPPED: typingsSlinky.chromeApps.chromeAppsStrings.CENTER_CROPPED = "CENTER_CROPPED".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.CENTER_CROPPED]
   @scala.inline
-  def STRETCH: typingsSlinky.chromeApps.chromeAppsStrings.STRETCH = this.cast("STRETCH")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def STRETCH: typingsSlinky.chromeApps.chromeAppsStrings.STRETCH = "STRETCH".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.STRETCH]
 }
 

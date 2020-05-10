@@ -45,89 +45,339 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAllowEditImage extends js.Object {
-  var allowEditImage: js.UndefOr[Boolean] = js.undefined
-  var allowEditText: js.UndefOr[Boolean] = js.undefined
-  var backgroundImageHeight: js.UndefOr[Double] = js.undefined
-  var backgroundImageLeft: js.UndefOr[Double] = js.undefined
-  var backgroundImageTop: js.UndefOr[Double] = js.undefined
-  var backgroundImageUrl: js.UndefOr[String] = js.undefined
-  var backgroundImageWidth: js.UndefOr[Double] = js.undefined
+  var allowEditImage: js.UndefOr[Boolean] = js.native
+  var allowEditText: js.UndefOr[Boolean] = js.native
+  var backgroundImageHeight: js.UndefOr[Double] = js.native
+  var backgroundImageLeft: js.UndefOr[Double] = js.native
+  var backgroundImageTop: js.UndefOr[Double] = js.native
+  var backgroundImageUrl: js.UndefOr[String] = js.native
+  var backgroundImageWidth: js.UndefOr[Double] = js.native
   var baseType: js.UndefOr[
     text | rectangle | ellipse | cross | triangle | diamond | heart | pentagon | octagon | star | arrowLeft | arrowTop | arrowRight | arrowBottom | arrowNorthSouth | arrowEastWest | process | decision | terminator | predefinedProcess | document | multipleDocuments | manualInput | preparation | data | database | hardDisk | internalStorage | paperTape | manualOperation | delay | storedData | display | merge | or | summingJunction | verticalContainer | horizontalContainer | cardWithImageOnLeft | cardWithImageOnTop | cardWithImageOnRight | String
-  ] = js.undefined
-  var category: js.UndefOr[String] = js.undefined
-  var connectionPoints: js.UndefOr[js.Array[AnonY]] = js.undefined
-  var defaultHeight: js.UndefOr[Double] = js.undefined
-  var defaultImageUrl: js.UndefOr[String] = js.undefined
-  var defaultText: js.UndefOr[String] = js.undefined
-  var defaultWidth: js.UndefOr[Double] = js.undefined
-  var imageHeight: js.UndefOr[Double] = js.undefined
-  var imageLeft: js.UndefOr[Double] = js.undefined
-  var imageTop: js.UndefOr[Double] = js.undefined
-  var imageWidth: js.UndefOr[Double] = js.undefined
-  var textHeight: js.UndefOr[Double] = js.undefined
-  var textLeft: js.UndefOr[Double] = js.undefined
-  var textTop: js.UndefOr[Double] = js.undefined
-  var textWidth: js.UndefOr[Double] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var `type`: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var category: js.UndefOr[String] = js.native
+  var connectionPoints: js.UndefOr[js.Array[AnonY]] = js.native
+  var defaultHeight: js.UndefOr[Double] = js.native
+  var defaultImageUrl: js.UndefOr[String] = js.native
+  var defaultText: js.UndefOr[String] = js.native
+  var defaultWidth: js.UndefOr[Double] = js.native
+  var imageHeight: js.UndefOr[Double] = js.native
+  var imageLeft: js.UndefOr[Double] = js.native
+  var imageTop: js.UndefOr[Double] = js.native
+  var imageWidth: js.UndefOr[Double] = js.native
+  var textHeight: js.UndefOr[Double] = js.native
+  var textLeft: js.UndefOr[Double] = js.native
+  var textTop: js.UndefOr[Double] = js.native
+  var textWidth: js.UndefOr[Double] = js.native
+  var title: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object AnonAllowEditImage {
   @scala.inline
-  def apply(
-    allowEditImage: js.UndefOr[Boolean] = js.undefined,
-    allowEditText: js.UndefOr[Boolean] = js.undefined,
-    backgroundImageHeight: Int | Double = null,
-    backgroundImageLeft: Int | Double = null,
-    backgroundImageTop: Int | Double = null,
-    backgroundImageUrl: String = null,
-    backgroundImageWidth: Int | Double = null,
-    baseType: text | rectangle | ellipse | cross | triangle | diamond | heart | pentagon | octagon | star | arrowLeft | arrowTop | arrowRight | arrowBottom | arrowNorthSouth | arrowEastWest | process | decision | terminator | predefinedProcess | document | multipleDocuments | manualInput | preparation | data | database | hardDisk | internalStorage | paperTape | manualOperation | delay | storedData | display | merge | or | summingJunction | verticalContainer | horizontalContainer | cardWithImageOnLeft | cardWithImageOnTop | cardWithImageOnRight | String = null,
-    category: String = null,
-    connectionPoints: js.Array[AnonY] = null,
-    defaultHeight: Int | Double = null,
-    defaultImageUrl: String = null,
-    defaultText: String = null,
-    defaultWidth: Int | Double = null,
-    imageHeight: Int | Double = null,
-    imageLeft: Int | Double = null,
-    imageTop: Int | Double = null,
-    imageWidth: Int | Double = null,
-    textHeight: Int | Double = null,
-    textLeft: Int | Double = null,
-    textTop: Int | Double = null,
-    textWidth: Int | Double = null,
-    title: String = null,
-    `type`: String = null
-  ): AnonAllowEditImage = {
+  def apply(): AnonAllowEditImage = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowEditImage)) __obj.updateDynamic("allowEditImage")(allowEditImage.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowEditText)) __obj.updateDynamic("allowEditText")(allowEditText.asInstanceOf[js.Any])
-    if (backgroundImageHeight != null) __obj.updateDynamic("backgroundImageHeight")(backgroundImageHeight.asInstanceOf[js.Any])
-    if (backgroundImageLeft != null) __obj.updateDynamic("backgroundImageLeft")(backgroundImageLeft.asInstanceOf[js.Any])
-    if (backgroundImageTop != null) __obj.updateDynamic("backgroundImageTop")(backgroundImageTop.asInstanceOf[js.Any])
-    if (backgroundImageUrl != null) __obj.updateDynamic("backgroundImageUrl")(backgroundImageUrl.asInstanceOf[js.Any])
-    if (backgroundImageWidth != null) __obj.updateDynamic("backgroundImageWidth")(backgroundImageWidth.asInstanceOf[js.Any])
-    if (baseType != null) __obj.updateDynamic("baseType")(baseType.asInstanceOf[js.Any])
-    if (category != null) __obj.updateDynamic("category")(category.asInstanceOf[js.Any])
-    if (connectionPoints != null) __obj.updateDynamic("connectionPoints")(connectionPoints.asInstanceOf[js.Any])
-    if (defaultHeight != null) __obj.updateDynamic("defaultHeight")(defaultHeight.asInstanceOf[js.Any])
-    if (defaultImageUrl != null) __obj.updateDynamic("defaultImageUrl")(defaultImageUrl.asInstanceOf[js.Any])
-    if (defaultText != null) __obj.updateDynamic("defaultText")(defaultText.asInstanceOf[js.Any])
-    if (defaultWidth != null) __obj.updateDynamic("defaultWidth")(defaultWidth.asInstanceOf[js.Any])
-    if (imageHeight != null) __obj.updateDynamic("imageHeight")(imageHeight.asInstanceOf[js.Any])
-    if (imageLeft != null) __obj.updateDynamic("imageLeft")(imageLeft.asInstanceOf[js.Any])
-    if (imageTop != null) __obj.updateDynamic("imageTop")(imageTop.asInstanceOf[js.Any])
-    if (imageWidth != null) __obj.updateDynamic("imageWidth")(imageWidth.asInstanceOf[js.Any])
-    if (textHeight != null) __obj.updateDynamic("textHeight")(textHeight.asInstanceOf[js.Any])
-    if (textLeft != null) __obj.updateDynamic("textLeft")(textLeft.asInstanceOf[js.Any])
-    if (textTop != null) __obj.updateDynamic("textTop")(textTop.asInstanceOf[js.Any])
-    if (textWidth != null) __obj.updateDynamic("textWidth")(textWidth.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAllowEditImage]
   }
+  @scala.inline
+  implicit class AnonAllowEditImageOps[Self <: AnonAllowEditImage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowEditImage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEditImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowEditImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEditImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowEditText(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEditText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowEditText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEditText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundImageHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundImageHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundImageLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundImageLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundImageTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundImageTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundImageUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundImageUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundImageWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundImageWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBaseType(
+      value: text | rectangle | ellipse | cross | triangle | diamond | heart | pentagon | octagon | star | arrowLeft | arrowTop | arrowRight | arrowBottom | arrowNorthSouth | arrowEastWest | process | decision | terminator | predefinedProcess | document | multipleDocuments | manualInput | preparation | data | database | hardDisk | internalStorage | paperTape | manualOperation | delay | storedData | display | merge | or | summingJunction | verticalContainer | horizontalContainer | cardWithImageOnLeft | cardWithImageOnTop | cardWithImageOnRight | String
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("category")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionPoints(value: js.Array[AnonY]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionPoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionPoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionPoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultImageUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultImageUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultImageUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultImageUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

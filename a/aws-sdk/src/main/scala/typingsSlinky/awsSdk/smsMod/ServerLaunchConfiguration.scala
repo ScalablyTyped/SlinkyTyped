@@ -46,28 +46,125 @@ trait ServerLaunchConfiguration extends js.Object {
 
 object ServerLaunchConfiguration {
   @scala.inline
-  def apply(
-    associatePublicIpAddress: js.UndefOr[Boolean] = js.undefined,
-    ec2KeyName: EC2KeyName = null,
-    instanceType: InstanceType = null,
-    logicalId: LogicalId = null,
-    securityGroup: SecurityGroup = null,
-    server: Server = null,
-    subnet: Subnet = null,
-    userData: UserData = null,
-    vpc: VPC = null
-  ): ServerLaunchConfiguration = {
+  def apply(): ServerLaunchConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(associatePublicIpAddress)) __obj.updateDynamic("associatePublicIpAddress")(associatePublicIpAddress.asInstanceOf[js.Any])
-    if (ec2KeyName != null) __obj.updateDynamic("ec2KeyName")(ec2KeyName.asInstanceOf[js.Any])
-    if (instanceType != null) __obj.updateDynamic("instanceType")(instanceType.asInstanceOf[js.Any])
-    if (logicalId != null) __obj.updateDynamic("logicalId")(logicalId.asInstanceOf[js.Any])
-    if (securityGroup != null) __obj.updateDynamic("securityGroup")(securityGroup.asInstanceOf[js.Any])
-    if (server != null) __obj.updateDynamic("server")(server.asInstanceOf[js.Any])
-    if (subnet != null) __obj.updateDynamic("subnet")(subnet.asInstanceOf[js.Any])
-    if (userData != null) __obj.updateDynamic("userData")(userData.asInstanceOf[js.Any])
-    if (vpc != null) __obj.updateDynamic("vpc")(vpc.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerLaunchConfiguration]
   }
+  @scala.inline
+  implicit class ServerLaunchConfigurationOps[Self <: ServerLaunchConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociatePublicIpAddress(value: AssociatePublicIpAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("associatePublicIpAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociatePublicIpAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("associatePublicIpAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEc2KeyName(value: EC2KeyName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2KeyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEc2KeyName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ec2KeyName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: InstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogicalId(value: LogicalId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logicalId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogicalId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logicalId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroup(value: SecurityGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServer(value: Server): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("server")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnet(value: Subnet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserData(value: UserData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpc(value: VPC): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vpc")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

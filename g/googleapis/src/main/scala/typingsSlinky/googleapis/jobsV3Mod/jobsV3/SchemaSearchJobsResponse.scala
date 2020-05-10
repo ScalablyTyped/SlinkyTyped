@@ -65,28 +65,125 @@ trait SchemaSearchJobsResponse extends js.Object {
 
 object SchemaSearchJobsResponse {
   @scala.inline
-  def apply(
-    broadenedQueryJobsCount: Int | Double = null,
-    estimatedTotalSize: Int | Double = null,
-    histogramResults: SchemaHistogramResults = null,
-    locationFilters: js.Array[SchemaLocation] = null,
-    matchingJobs: js.Array[SchemaMatchingJob] = null,
-    metadata: SchemaResponseMetadata = null,
-    nextPageToken: String = null,
-    spellCorrection: SchemaSpellingCorrection = null,
-    totalSize: Int | Double = null
-  ): SchemaSearchJobsResponse = {
+  def apply(): SchemaSearchJobsResponse = {
     val __obj = js.Dynamic.literal()
-    if (broadenedQueryJobsCount != null) __obj.updateDynamic("broadenedQueryJobsCount")(broadenedQueryJobsCount.asInstanceOf[js.Any])
-    if (estimatedTotalSize != null) __obj.updateDynamic("estimatedTotalSize")(estimatedTotalSize.asInstanceOf[js.Any])
-    if (histogramResults != null) __obj.updateDynamic("histogramResults")(histogramResults.asInstanceOf[js.Any])
-    if (locationFilters != null) __obj.updateDynamic("locationFilters")(locationFilters.asInstanceOf[js.Any])
-    if (matchingJobs != null) __obj.updateDynamic("matchingJobs")(matchingJobs.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (spellCorrection != null) __obj.updateDynamic("spellCorrection")(spellCorrection.asInstanceOf[js.Any])
-    if (totalSize != null) __obj.updateDynamic("totalSize")(totalSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSearchJobsResponse]
   }
+  @scala.inline
+  implicit class SchemaSearchJobsResponseOps[Self <: SchemaSearchJobsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBroadenedQueryJobsCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("broadenedQueryJobsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBroadenedQueryJobsCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("broadenedQueryJobsCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEstimatedTotalSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedTotalSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEstimatedTotalSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedTotalSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHistogramResults(value: SchemaHistogramResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHistogramResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("histogramResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocationFilters(value: js.Array[SchemaLocation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocationFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locationFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchingJobs(value: js.Array[SchemaMatchingJob]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchingJobs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchingJobs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchingJobs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: SchemaResponseMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpellCorrection(value: SchemaSpellingCorrection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCorrection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpellCorrection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCorrection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

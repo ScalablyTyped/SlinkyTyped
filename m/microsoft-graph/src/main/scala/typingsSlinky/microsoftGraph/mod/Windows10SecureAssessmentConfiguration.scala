@@ -4,65 +4,99 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Windows10SecureAssessmentConfiguration extends DeviceConfiguration {
   // Indicates whether or not to allow the app from printing during the test.
-  var allowPrinting: js.UndefOr[Boolean] = js.undefined
+  var allowPrinting: js.UndefOr[Boolean] = js.native
   // Indicates whether or not to allow screen capture capability during a test.
-  var allowScreenCapture: js.UndefOr[Boolean] = js.undefined
+  var allowScreenCapture: js.UndefOr[Boolean] = js.native
   // Indicates whether or not to allow text suggestions during the test.
-  var allowTextSuggestion: js.UndefOr[Boolean] = js.undefined
+  var allowTextSuggestion: js.UndefOr[Boolean] = js.native
   /**
     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user),
     * an AAD account (username@tenant.com) or a local account (username).
     */
-  var configurationAccount: js.UndefOr[String] = js.undefined
+  var configurationAccount: js.UndefOr[String] = js.native
   /**
     * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a
     * valid Url (http[s]://msdn.microsoft.com/).
     */
-  var launchUri: js.UndefOr[String] = js.undefined
+  var launchUri: js.UndefOr[String] = js.native
 }
 
 object Windows10SecureAssessmentConfiguration {
   @scala.inline
-  def apply(
-    allowPrinting: js.UndefOr[Boolean] = js.undefined,
-    allowScreenCapture: js.UndefOr[Boolean] = js.undefined,
-    allowTextSuggestion: js.UndefOr[Boolean] = js.undefined,
-    assignments: js.Array[DeviceConfigurationAssignment] = null,
-    configurationAccount: String = null,
-    createdDateTime: String = null,
-    description: String = null,
-    deviceSettingStateSummaries: js.Array[SettingStateDeviceSummary] = null,
-    deviceStatusOverview: DeviceConfigurationDeviceOverview = null,
-    deviceStatuses: js.Array[DeviceConfigurationDeviceStatus] = null,
-    displayName: String = null,
-    id: String = null,
-    lastModifiedDateTime: String = null,
-    launchUri: String = null,
-    userStatusOverview: DeviceConfigurationUserOverview = null,
-    userStatuses: js.Array[DeviceConfigurationUserStatus] = null,
-    version: Int | Double = null
-  ): Windows10SecureAssessmentConfiguration = {
+  def apply(): Windows10SecureAssessmentConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowPrinting)) __obj.updateDynamic("allowPrinting")(allowPrinting.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowScreenCapture)) __obj.updateDynamic("allowScreenCapture")(allowScreenCapture.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowTextSuggestion)) __obj.updateDynamic("allowTextSuggestion")(allowTextSuggestion.asInstanceOf[js.Any])
-    if (assignments != null) __obj.updateDynamic("assignments")(assignments.asInstanceOf[js.Any])
-    if (configurationAccount != null) __obj.updateDynamic("configurationAccount")(configurationAccount.asInstanceOf[js.Any])
-    if (createdDateTime != null) __obj.updateDynamic("createdDateTime")(createdDateTime.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (deviceSettingStateSummaries != null) __obj.updateDynamic("deviceSettingStateSummaries")(deviceSettingStateSummaries.asInstanceOf[js.Any])
-    if (deviceStatusOverview != null) __obj.updateDynamic("deviceStatusOverview")(deviceStatusOverview.asInstanceOf[js.Any])
-    if (deviceStatuses != null) __obj.updateDynamic("deviceStatuses")(deviceStatuses.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (lastModifiedDateTime != null) __obj.updateDynamic("lastModifiedDateTime")(lastModifiedDateTime.asInstanceOf[js.Any])
-    if (launchUri != null) __obj.updateDynamic("launchUri")(launchUri.asInstanceOf[js.Any])
-    if (userStatusOverview != null) __obj.updateDynamic("userStatusOverview")(userStatusOverview.asInstanceOf[js.Any])
-    if (userStatuses != null) __obj.updateDynamic("userStatuses")(userStatuses.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Windows10SecureAssessmentConfiguration]
   }
+  @scala.inline
+  implicit class Windows10SecureAssessmentConfigurationOps[Self <: Windows10SecureAssessmentConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowPrinting(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPrinting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowPrinting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPrinting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowScreenCapture(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowScreenCapture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowScreenCapture: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowScreenCapture")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowTextSuggestion(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTextSuggestion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowTextSuggestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowTextSuggestion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigurationAccount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigurationAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationAccount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchUri")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

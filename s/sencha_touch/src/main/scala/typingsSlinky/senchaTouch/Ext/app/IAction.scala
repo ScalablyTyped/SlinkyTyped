@@ -2,198 +2,441 @@ package typingsSlinky.senchaTouch.Ext.app
 
 import typingsSlinky.senchaTouch.Ext.Array
 import typingsSlinky.senchaTouch.Ext.IBase
-import typingsSlinky.senchaTouch.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IAction extends IBase {
   /** [Config Option] (String) */
-  var action: js.UndefOr[String] = js.undefined
+  var action: js.UndefOr[String] = js.native
   /** [Config Option] (Ext.app.Application) */
-  var application: js.UndefOr[IApplication] = js.undefined
+  var application: js.UndefOr[IApplication] = js.native
   /** [Config Option] (Array) */
-  var args: js.UndefOr[Array] = js.undefined
+  var args: js.UndefOr[Array] = js.native
   /** [Config Option] (Array) */
-  var beforeFilters: js.UndefOr[Array] = js.undefined
+  var beforeFilters: js.UndefOr[Array] = js.native
   /** [Config Option] (Ext.app.Controller) */
-  var controller: js.UndefOr[IController] = js.undefined
+  var controller: js.UndefOr[IController] = js.native
   /** [Method] Starts execution of this Action by calling each of the beforeFilters in turn if any are specified  before calling t  */
-  var execute: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var execute: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Returns the value of action
   		* @returns String
   		*/
-  var getAction: js.UndefOr[js.Function0[String]] = js.undefined
+  var getAction: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Returns the value of application
   		* @returns Ext.app.Application
   		*/
-  var getApplication: js.UndefOr[js.Function0[IApplication]] = js.undefined
+  var getApplication: js.UndefOr[js.Function0[IApplication]] = js.native
   /** [Method] Returns the value of args
   		* @returns Array
   		*/
-  var getArgs: js.UndefOr[js.Function0[Array]] = js.undefined
+  var getArgs: js.UndefOr[js.Function0[Array]] = js.native
   /** [Method] Returns the value of beforeFilters
   		* @returns Array
   		*/
-  var getBeforeFilters: js.UndefOr[js.Function0[Array]] = js.undefined
+  var getBeforeFilters: js.UndefOr[js.Function0[Array]] = js.native
   /** [Method] Returns the value of controller
   		* @returns Ext.app.Controller
   		*/
-  var getController: js.UndefOr[js.Function0[IController]] = js.undefined
+  var getController: js.UndefOr[js.Function0[IController]] = js.native
   /** [Method] Returns the value of data
   		* @returns Object
   		*/
-  var getData: js.UndefOr[js.Function0[_]] = js.undefined
+  var getData: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of scope
   		* @returns Object
   		*/
-  var getScope: js.UndefOr[js.Function0[_]] = js.undefined
+  var getScope: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of title
   		* @returns Object
   		*/
-  var getTitle: js.UndefOr[js.Function0[_]] = js.undefined
+  var getTitle: js.UndefOr[js.Function0[_]] = js.native
   /** [Method] Returns the value of url
   		* @returns String
   		*/
-  var getUrl: js.UndefOr[js.Function0[String]] = js.undefined
+  var getUrl: js.UndefOr[js.Function0[String]] = js.native
   /** [Method] Resumes the execution of this Action or starts it if it had not been started already */
-  var resume: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var resume: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Config Option] (Object) */
-  var scope: js.UndefOr[js.Any] = js.undefined
+  var scope: js.UndefOr[js.Any] = js.native
   /** [Method] Sets the value of action
   		* @param action String The new value.
   		*/
-  var setAction: js.UndefOr[js.Function1[/* action */ js.UndefOr[String], Unit]] = js.undefined
+  var setAction: js.UndefOr[js.Function1[/* action */ js.UndefOr[String], Unit]] = js.native
   /** [Method] Sets the value of application
   		* @param application Ext.app.Application The new value.
   		*/
-  var setApplication: js.UndefOr[js.Function1[/* application */ js.UndefOr[IApplication], Unit]] = js.undefined
+  var setApplication: js.UndefOr[js.Function1[/* application */ js.UndefOr[IApplication], Unit]] = js.native
   /** [Method] Sets the value of args
   		* @param args Array The new value.
   		*/
-  var setArgs: js.UndefOr[js.Function1[/* args */ js.UndefOr[Array], Unit]] = js.undefined
+  var setArgs: js.UndefOr[js.Function1[/* args */ js.UndefOr[Array], Unit]] = js.native
   /** [Method] Sets the value of beforeFilters
   		* @param beforeFilters Array The new value.
   		*/
-  var setBeforeFilters: js.UndefOr[js.Function1[/* beforeFilters */ js.UndefOr[Array], Unit]] = js.undefined
+  var setBeforeFilters: js.UndefOr[js.Function1[/* beforeFilters */ js.UndefOr[Array], Unit]] = js.native
   /** [Method] Sets the value of controller
   		* @param controller Ext.app.Controller The new value.
   		*/
-  var setController: js.UndefOr[js.Function1[/* controller */ js.UndefOr[IController], Unit]] = js.undefined
+  var setController: js.UndefOr[js.Function1[/* controller */ js.UndefOr[IController], Unit]] = js.native
   /** [Method] Sets the value of data
   		* @param data Object The new value.
   		*/
-  var setData: js.UndefOr[js.Function1[/* data */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setData: js.UndefOr[js.Function1[/* data */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of scope
   		* @param scope Object The new value.
   		*/
-  var setScope: js.UndefOr[js.Function1[/* scope */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setScope: js.UndefOr[js.Function1[/* scope */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of title
   		* @param title Object The new value.
   		*/
-  var setTitle: js.UndefOr[js.Function1[/* title */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var setTitle: js.UndefOr[js.Function1[/* title */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Sets the value of url
   		* @param url String The new value.
   		*/
-  var setUrl: js.UndefOr[js.Function1[/* url */ js.UndefOr[String], Unit]] = js.undefined
+  var setUrl: js.UndefOr[js.Function1[/* url */ js.UndefOr[String], Unit]] = js.native
   /** [Config Option] (String) */
-  var url: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.native
 }
 
 object IAction {
   @scala.inline
-  def apply(
-    action: String = null,
-    alias: Array = null,
-    alternateClassName: js.Any = null,
-    application: IApplication = null,
-    args: Array = null,
-    beforeFilters: Array = null,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    config: js.Any = null,
-    controller: IController = null,
-    destroy: () => Unit = null,
-    execute: () => Unit = null,
-    extend: String = null,
-    getAction: () => String = null,
-    getApplication: () => IApplication = null,
-    getArgs: () => Array = null,
-    getBeforeFilters: () => Array = null,
-    getController: () => IController = null,
-    getData: () => _ = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    getScope: () => _ = null,
-    getTitle: () => _ = null,
-    getUrl: () => String = null,
-    inheritableStatics: js.Any = null,
-    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
-    mixins: js.Any = null,
-    platformConfig: js.Any = null,
-    resume: () => Unit = null,
-    scope: js.Any = null,
-    self: IClass = null,
-    setAction: /* action */ js.UndefOr[String] => Unit = null,
-    setApplication: /* application */ js.UndefOr[IApplication] => Unit = null,
-    setArgs: /* args */ js.UndefOr[Array] => Unit = null,
-    setBeforeFilters: /* beforeFilters */ js.UndefOr[Array] => Unit = null,
-    setController: /* controller */ js.UndefOr[IController] => Unit = null,
-    setData: /* data */ js.UndefOr[js.Any] => Unit = null,
-    setScope: /* scope */ js.UndefOr[js.Any] => Unit = null,
-    setTitle: /* title */ js.UndefOr[js.Any] => Unit = null,
-    setUrl: /* url */ js.UndefOr[String] => Unit = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    statics: js.Any = null,
-    url: String = null,
-    uses: Array = null
-  ): IAction = {
+  def apply(): IAction = {
     val __obj = js.Dynamic.literal()
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (application != null) __obj.updateDynamic("application")(application.asInstanceOf[js.Any])
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (beforeFilters != null) __obj.updateDynamic("beforeFilters")(beforeFilters.asInstanceOf[js.Any])
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (controller != null) __obj.updateDynamic("controller")(controller.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
-    if (execute != null) __obj.updateDynamic("execute")(js.Any.fromFunction0(execute))
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (getAction != null) __obj.updateDynamic("getAction")(js.Any.fromFunction0(getAction))
-    if (getApplication != null) __obj.updateDynamic("getApplication")(js.Any.fromFunction0(getApplication))
-    if (getArgs != null) __obj.updateDynamic("getArgs")(js.Any.fromFunction0(getArgs))
-    if (getBeforeFilters != null) __obj.updateDynamic("getBeforeFilters")(js.Any.fromFunction0(getBeforeFilters))
-    if (getController != null) __obj.updateDynamic("getController")(js.Any.fromFunction0(getController))
-    if (getData != null) __obj.updateDynamic("getData")(js.Any.fromFunction0(getData))
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (getScope != null) __obj.updateDynamic("getScope")(js.Any.fromFunction0(getScope))
-    if (getTitle != null) __obj.updateDynamic("getTitle")(js.Any.fromFunction0(getTitle))
-    if (getUrl != null) __obj.updateDynamic("getUrl")(js.Any.fromFunction0(getUrl))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
-    if (resume != null) __obj.updateDynamic("resume")(js.Any.fromFunction0(resume))
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (setAction != null) __obj.updateDynamic("setAction")(js.Any.fromFunction1(setAction))
-    if (setApplication != null) __obj.updateDynamic("setApplication")(js.Any.fromFunction1(setApplication))
-    if (setArgs != null) __obj.updateDynamic("setArgs")(js.Any.fromFunction1(setArgs))
-    if (setBeforeFilters != null) __obj.updateDynamic("setBeforeFilters")(js.Any.fromFunction1(setBeforeFilters))
-    if (setController != null) __obj.updateDynamic("setController")(js.Any.fromFunction1(setController))
-    if (setData != null) __obj.updateDynamic("setData")(js.Any.fromFunction1(setData))
-    if (setScope != null) __obj.updateDynamic("setScope")(js.Any.fromFunction1(setScope))
-    if (setTitle != null) __obj.updateDynamic("setTitle")(js.Any.fromFunction1(setTitle))
-    if (setUrl != null) __obj.updateDynamic("setUrl")(js.Any.fromFunction1(setUrl))
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAction]
   }
+  @scala.inline
+  implicit class IActionOps[Self <: IAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withApplication(value: IApplication): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("application")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArgs(value: Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeFilters(value: Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeforeFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withController(value: IController): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutController: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecute(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutExecute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAction(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAction")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetApplication(value: () => IApplication): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getApplication")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetApplication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getApplication")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetArgs(value: () => Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getArgs")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getArgs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetBeforeFilters(value: () => Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBeforeFilters")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetBeforeFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBeforeFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetController(value: () => IController): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getController")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetController: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getController")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetData(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetScope(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScope")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetTitle(value: () => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTitle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResume(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resume")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutResume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScope(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAction(value: /* action */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetApplication(value: /* application */ js.UndefOr[IApplication] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setApplication")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetApplication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setApplication")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetArgs(value: /* args */ js.UndefOr[Array] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setArgs")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setArgs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetBeforeFilters(value: /* beforeFilters */ js.UndefOr[Array] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBeforeFilters")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetBeforeFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBeforeFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetController(value: /* controller */ js.UndefOr[IController] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setController")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetController: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setController")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetData(value: /* data */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetScope(value: /* scope */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setScope")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setScope")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetTitle(value: /* title */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetUrl(value: /* url */ js.UndefOr[String] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

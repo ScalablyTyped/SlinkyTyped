@@ -12,10 +12,8 @@ trait TransactionType extends js.Object
 
 object TransactionType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def explicit: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.explicit = "explicit".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.explicit]
   @scala.inline
-  def explicit: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.explicit = this.cast("explicit")
-  @scala.inline
-  def `implicit`: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.`implicit` = this.cast("implicit")
+  def `implicit`: typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.`implicit` = "implicit".asInstanceOf[typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.`implicit`]
 }
 

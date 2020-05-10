@@ -18,22 +18,20 @@ trait Trigger extends js.Object
 
 object Trigger {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def click: typingsSlinky.bootstrap.bootstrapStrings.click = "click".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.click]
   @scala.inline
-  def click: typingsSlinky.bootstrap.bootstrapStrings.click = this.cast("click")
+  def `click focus`: typingsSlinky.bootstrap.bootstrapStrings.`click focus` = ("click focus").asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.`click focus`]
   @scala.inline
-  def `click focus`: typingsSlinky.bootstrap.bootstrapStrings.`click focus` = this.cast("click focus")
+  def `click hover`: typingsSlinky.bootstrap.bootstrapStrings.`click hover` = ("click hover").asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.`click hover`]
   @scala.inline
-  def `click hover`: typingsSlinky.bootstrap.bootstrapStrings.`click hover` = this.cast("click hover")
+  def `click hover focus`: typingsSlinky.bootstrap.bootstrapStrings.`click hover focus` = ("click hover focus").asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.`click hover focus`]
   @scala.inline
-  def `click hover focus`: typingsSlinky.bootstrap.bootstrapStrings.`click hover focus` = this.cast("click hover focus")
+  def focus: typingsSlinky.bootstrap.bootstrapStrings.focus = "focus".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.focus]
   @scala.inline
-  def focus: typingsSlinky.bootstrap.bootstrapStrings.focus = this.cast("focus")
+  def hover: typingsSlinky.bootstrap.bootstrapStrings.hover = "hover".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.hover]
   @scala.inline
-  def hover: typingsSlinky.bootstrap.bootstrapStrings.hover = this.cast("hover")
+  def `hover focus`: typingsSlinky.bootstrap.bootstrapStrings.`hover focus` = ("hover focus").asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.`hover focus`]
   @scala.inline
-  def `hover focus`: typingsSlinky.bootstrap.bootstrapStrings.`hover focus` = this.cast("hover focus")
-  @scala.inline
-  def manual: typingsSlinky.bootstrap.bootstrapStrings.manual = this.cast("manual")
+  def manual: typingsSlinky.bootstrap.bootstrapStrings.manual = "manual".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.manual]
 }
 

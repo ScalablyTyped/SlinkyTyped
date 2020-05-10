@@ -26,16 +26,53 @@ trait ActivityTaskCanceledEventAttributes extends js.Object {
 
 object ActivityTaskCanceledEventAttributes {
   @scala.inline
-  def apply(
-    scheduledEventId: EventId,
-    startedEventId: EventId,
-    details: Data = null,
-    latestCancelRequestedEventId: Int | Double = null
-  ): ActivityTaskCanceledEventAttributes = {
+  def apply(scheduledEventId: EventId, startedEventId: EventId): ActivityTaskCanceledEventAttributes = {
     val __obj = js.Dynamic.literal(scheduledEventId = scheduledEventId.asInstanceOf[js.Any], startedEventId = startedEventId.asInstanceOf[js.Any])
-    if (details != null) __obj.updateDynamic("details")(details.asInstanceOf[js.Any])
-    if (latestCancelRequestedEventId != null) __obj.updateDynamic("latestCancelRequestedEventId")(latestCancelRequestedEventId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityTaskCanceledEventAttributes]
   }
+  @scala.inline
+  implicit class ActivityTaskCanceledEventAttributesOps[Self <: ActivityTaskCanceledEventAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScheduledEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduledEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartedEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startedEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetails(value: Data): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatestCancelRequestedEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestCancelRequestedEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatestCancelRequestedEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latestCancelRequestedEventId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

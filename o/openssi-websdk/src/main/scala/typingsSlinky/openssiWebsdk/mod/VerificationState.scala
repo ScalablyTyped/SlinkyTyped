@@ -18,22 +18,20 @@ trait VerificationState extends js.Object
 
 object VerificationState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def failed: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.failed = "failed".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.failed = this.cast("failed")
+  def inbound_proof_request: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.inbound_proof_request = "inbound_proof_request".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.inbound_proof_request]
   @scala.inline
-  def inbound_proof_request: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.inbound_proof_request = this.cast("inbound_proof_request")
+  def inbound_verification_request: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.inbound_verification_request = "inbound_verification_request".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.inbound_verification_request]
   @scala.inline
-  def inbound_verification_request: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.inbound_verification_request = this.cast("inbound_verification_request")
+  def outbound_proof_request: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.outbound_proof_request = "outbound_proof_request".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.outbound_proof_request]
   @scala.inline
-  def outbound_proof_request: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.outbound_proof_request = this.cast("outbound_proof_request")
+  def outbound_verification_request: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.outbound_verification_request = "outbound_verification_request".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.outbound_verification_request]
   @scala.inline
-  def outbound_verification_request: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.outbound_verification_request = this.cast("outbound_verification_request")
+  def passed: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.passed = "passed".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.passed]
   @scala.inline
-  def passed: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.passed = this.cast("passed")
+  def proof_generated: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.proof_generated = "proof_generated".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.proof_generated]
   @scala.inline
-  def proof_generated: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.proof_generated = this.cast("proof_generated")
-  @scala.inline
-  def proof_shared: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.proof_shared = this.cast("proof_shared")
+  def proof_shared: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.proof_shared = "proof_shared".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.proof_shared]
 }
 

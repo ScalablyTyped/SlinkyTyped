@@ -14,14 +14,12 @@ trait Quote extends _ContentList
 
 object Quote {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `close-quote`: typingsSlinky.csstype.csstypeStrings.`close-quote` = "close-quote".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`close-quote`]
   @scala.inline
-  def `close-quote`: typingsSlinky.csstype.csstypeStrings.`close-quote` = this.cast("close-quote")
+  def `no-close-quote`: typingsSlinky.csstype.csstypeStrings.`no-close-quote` = "no-close-quote".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`no-close-quote`]
   @scala.inline
-  def `no-close-quote`: typingsSlinky.csstype.csstypeStrings.`no-close-quote` = this.cast("no-close-quote")
+  def `no-open-quote`: typingsSlinky.csstype.csstypeStrings.`no-open-quote` = "no-open-quote".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`no-open-quote`]
   @scala.inline
-  def `no-open-quote`: typingsSlinky.csstype.csstypeStrings.`no-open-quote` = this.cast("no-open-quote")
-  @scala.inline
-  def `open-quote`: typingsSlinky.csstype.csstypeStrings.`open-quote` = this.cast("open-quote")
+  def `open-quote`: typingsSlinky.csstype.csstypeStrings.`open-quote` = "open-quote".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`open-quote`]
 }
 

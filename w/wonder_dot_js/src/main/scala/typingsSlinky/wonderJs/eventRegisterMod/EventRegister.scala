@@ -1,6 +1,6 @@
 package typingsSlinky.wonderJs.eventRegisterMod
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.wonderJs.entityObjectMod.EntityObject
 import typingsSlinky.wonderJs.eventListenerMapMod.EventListenerMap
 import typingsSlinky.wonderJs.eventNameHandlerMod.EEventName

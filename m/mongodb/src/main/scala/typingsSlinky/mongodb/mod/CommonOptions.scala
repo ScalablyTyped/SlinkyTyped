@@ -1,28 +1,39 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.mongodbStrings.majority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CommonOptions extends WriteConcern {
-  var session: js.UndefOr[ClientSession] = js.undefined
+  var session: js.UndefOr[ClientSession] = js.native
 }
 
 object CommonOptions {
   @scala.inline
-  def apply(
-    j: js.UndefOr[Boolean] = js.undefined,
-    session: ClientSession = null,
-    w: scala.Double | majority | String = null,
-    wtimeout: Int | scala.Double = null
-  ): CommonOptions = {
+  def apply(): CommonOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(j)) __obj.updateDynamic("j")(j.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
-    if (w != null) __obj.updateDynamic("w")(w.asInstanceOf[js.Any])
-    if (wtimeout != null) __obj.updateDynamic("wtimeout")(wtimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommonOptions]
   }
+  @scala.inline
+  implicit class CommonOptionsOps[Self <: CommonOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSession(value: ClientSession): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,11 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AxisSetExtremesEventObject extends ExtremesObject {
-  var preventDefault: js.Function
-  var target: SVGElement
-  var trigger: String | AxisExtremesTriggerValue
-  var `type`: setExtremes
+  var preventDefault: js.Function = js.native
+  var target: SVGElement = js.native
+  var trigger: String | AxisExtremesTriggerValue = js.native
+  var `type`: setExtremes = js.native
 }
 
 object AxisSetExtremesEventObject {
@@ -30,5 +31,37 @@ object AxisSetExtremesEventObject {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AxisSetExtremesEventObject]
   }
+  @scala.inline
+  implicit class AxisSetExtremesEventObjectOps[Self <: AxisSetExtremesEventObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPreventDefault(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: SVGElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrigger(value: String | AxisExtremesTriggerValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: setExtremes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

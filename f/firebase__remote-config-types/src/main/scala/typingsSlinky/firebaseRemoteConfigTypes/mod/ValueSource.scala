@@ -13,12 +13,10 @@ trait ValueSource extends js.Object
 
 object ValueSource {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.firebaseRemoteConfigTypes.firebaseRemoteConfigTypesStrings.default = "default".asInstanceOf[typingsSlinky.firebaseRemoteConfigTypes.firebaseRemoteConfigTypesStrings.default]
   @scala.inline
-  def default: typingsSlinky.firebaseRemoteConfigTypes.firebaseRemoteConfigTypesStrings.default = this.cast("default")
+  def remote: typingsSlinky.firebaseRemoteConfigTypes.firebaseRemoteConfigTypesStrings.remote = "remote".asInstanceOf[typingsSlinky.firebaseRemoteConfigTypes.firebaseRemoteConfigTypesStrings.remote]
   @scala.inline
-  def remote: typingsSlinky.firebaseRemoteConfigTypes.firebaseRemoteConfigTypesStrings.remote = this.cast("remote")
-  @scala.inline
-  def static: typingsSlinky.firebaseRemoteConfigTypes.firebaseRemoteConfigTypesStrings.static = this.cast("static")
+  def static: typingsSlinky.firebaseRemoteConfigTypes.firebaseRemoteConfigTypesStrings.static = "static".asInstanceOf[typingsSlinky.firebaseRemoteConfigTypes.firebaseRemoteConfigTypesStrings.static]
 }
 

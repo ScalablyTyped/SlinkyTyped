@@ -81,44 +81,221 @@ trait SchemaOrdersCustomBatchRequestEntry extends js.Object {
 
 object SchemaOrdersCustomBatchRequestEntry {
   @scala.inline
-  def apply(
-    batchId: Int | Double = null,
-    cancel: SchemaOrdersCustomBatchRequestEntryCancel = null,
-    cancelLineItem: SchemaOrdersCustomBatchRequestEntryCancelLineItem = null,
-    inStoreRefundLineItem: SchemaOrdersCustomBatchRequestEntryInStoreRefundLineItem = null,
-    merchantId: String = null,
-    merchantOrderId: String = null,
-    method: String = null,
-    operationId: String = null,
-    orderId: String = null,
-    refund: SchemaOrdersCustomBatchRequestEntryRefund = null,
-    rejectReturnLineItem: SchemaOrdersCustomBatchRequestEntryRejectReturnLineItem = null,
-    returnLineItem: SchemaOrdersCustomBatchRequestEntryReturnLineItem = null,
-    returnRefundLineItem: SchemaOrdersCustomBatchRequestEntryReturnRefundLineItem = null,
-    setLineItemMetadata: SchemaOrdersCustomBatchRequestEntrySetLineItemMetadata = null,
-    shipLineItems: SchemaOrdersCustomBatchRequestEntryShipLineItems = null,
-    updateLineItemShippingDetails: SchemaOrdersCustomBatchRequestEntryUpdateLineItemShippingDetails = null,
-    updateShipment: SchemaOrdersCustomBatchRequestEntryUpdateShipment = null
-  ): SchemaOrdersCustomBatchRequestEntry = {
+  def apply(): SchemaOrdersCustomBatchRequestEntry = {
     val __obj = js.Dynamic.literal()
-    if (batchId != null) __obj.updateDynamic("batchId")(batchId.asInstanceOf[js.Any])
-    if (cancel != null) __obj.updateDynamic("cancel")(cancel.asInstanceOf[js.Any])
-    if (cancelLineItem != null) __obj.updateDynamic("cancelLineItem")(cancelLineItem.asInstanceOf[js.Any])
-    if (inStoreRefundLineItem != null) __obj.updateDynamic("inStoreRefundLineItem")(inStoreRefundLineItem.asInstanceOf[js.Any])
-    if (merchantId != null) __obj.updateDynamic("merchantId")(merchantId.asInstanceOf[js.Any])
-    if (merchantOrderId != null) __obj.updateDynamic("merchantOrderId")(merchantOrderId.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
-    if (orderId != null) __obj.updateDynamic("orderId")(orderId.asInstanceOf[js.Any])
-    if (refund != null) __obj.updateDynamic("refund")(refund.asInstanceOf[js.Any])
-    if (rejectReturnLineItem != null) __obj.updateDynamic("rejectReturnLineItem")(rejectReturnLineItem.asInstanceOf[js.Any])
-    if (returnLineItem != null) __obj.updateDynamic("returnLineItem")(returnLineItem.asInstanceOf[js.Any])
-    if (returnRefundLineItem != null) __obj.updateDynamic("returnRefundLineItem")(returnRefundLineItem.asInstanceOf[js.Any])
-    if (setLineItemMetadata != null) __obj.updateDynamic("setLineItemMetadata")(setLineItemMetadata.asInstanceOf[js.Any])
-    if (shipLineItems != null) __obj.updateDynamic("shipLineItems")(shipLineItems.asInstanceOf[js.Any])
-    if (updateLineItemShippingDetails != null) __obj.updateDynamic("updateLineItemShippingDetails")(updateLineItemShippingDetails.asInstanceOf[js.Any])
-    if (updateShipment != null) __obj.updateDynamic("updateShipment")(updateShipment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrdersCustomBatchRequestEntry]
   }
+  @scala.inline
+  implicit class SchemaOrdersCustomBatchRequestEntryOps[Self <: SchemaOrdersCustomBatchRequestEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancel(value: SchemaOrdersCustomBatchRequestEntryCancel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelLineItem(value: SchemaOrdersCustomBatchRequestEntryCancelLineItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLineItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelLineItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLineItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInStoreRefundLineItem(value: SchemaOrdersCustomBatchRequestEntryInStoreRefundLineItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inStoreRefundLineItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInStoreRefundLineItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inStoreRefundLineItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMerchantId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMerchantId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMerchantOrderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantOrderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMerchantOrderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantOrderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefund(value: SchemaOrdersCustomBatchRequestEntryRefund): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refund")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefund: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refund")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRejectReturnLineItem(value: SchemaOrdersCustomBatchRequestEntryRejectReturnLineItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectReturnLineItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRejectReturnLineItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rejectReturnLineItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnLineItem(value: SchemaOrdersCustomBatchRequestEntryReturnLineItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnLineItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnLineItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnLineItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnRefundLineItem(value: SchemaOrdersCustomBatchRequestEntryReturnRefundLineItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnRefundLineItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnRefundLineItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnRefundLineItem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetLineItemMetadata(value: SchemaOrdersCustomBatchRequestEntrySetLineItemMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLineItemMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetLineItemMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLineItemMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShipLineItems(value: SchemaOrdersCustomBatchRequestEntryShipLineItems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shipLineItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShipLineItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shipLineItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateLineItemShippingDetails(value: SchemaOrdersCustomBatchRequestEntryUpdateLineItemShippingDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateLineItemShippingDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateLineItemShippingDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateLineItemShippingDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateShipment(value: SchemaOrdersCustomBatchRequestEntryUpdateShipment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateShipment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateShipment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateShipment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

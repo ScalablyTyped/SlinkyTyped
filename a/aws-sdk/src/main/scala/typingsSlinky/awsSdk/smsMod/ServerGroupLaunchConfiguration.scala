@@ -22,16 +22,53 @@ trait ServerGroupLaunchConfiguration extends js.Object {
 
 object ServerGroupLaunchConfiguration {
   @scala.inline
-  def apply(
-    launchOrder: Int | Double = null,
-    serverGroupId: ServerGroupId = null,
-    serverLaunchConfigurations: ServerLaunchConfigurations = null
-  ): ServerGroupLaunchConfiguration = {
+  def apply(): ServerGroupLaunchConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (launchOrder != null) __obj.updateDynamic("launchOrder")(launchOrder.asInstanceOf[js.Any])
-    if (serverGroupId != null) __obj.updateDynamic("serverGroupId")(serverGroupId.asInstanceOf[js.Any])
-    if (serverLaunchConfigurations != null) __obj.updateDynamic("serverLaunchConfigurations")(serverLaunchConfigurations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerGroupLaunchConfiguration]
   }
+  @scala.inline
+  implicit class ServerGroupLaunchConfigurationOps[Self <: ServerGroupLaunchConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLaunchOrder(value: LaunchOrder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerGroupId(value: ServerGroupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverGroupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerLaunchConfigurations(value: ServerLaunchConfigurations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverLaunchConfigurations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerLaunchConfigurations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverLaunchConfigurations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait NoiseReducerSpatialFilterSettings extends js.Object {
 
 object NoiseReducerSpatialFilterSettings {
   @scala.inline
-  def apply(
-    PostFilterSharpenStrength: Int | Double = null,
-    Speed: Int | Double = null,
-    Strength: Int | Double = null
-  ): NoiseReducerSpatialFilterSettings = {
+  def apply(): NoiseReducerSpatialFilterSettings = {
     val __obj = js.Dynamic.literal()
-    if (PostFilterSharpenStrength != null) __obj.updateDynamic("PostFilterSharpenStrength")(PostFilterSharpenStrength.asInstanceOf[js.Any])
-    if (Speed != null) __obj.updateDynamic("Speed")(Speed.asInstanceOf[js.Any])
-    if (Strength != null) __obj.updateDynamic("Strength")(Strength.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoiseReducerSpatialFilterSettings]
   }
+  @scala.inline
+  implicit class NoiseReducerSpatialFilterSettingsOps[Self <: NoiseReducerSpatialFilterSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPostFilterSharpenStrength(value: integerMin0Max3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PostFilterSharpenStrength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostFilterSharpenStrength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PostFilterSharpenStrength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpeed(value: integerMinNegative2Max3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Speed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Speed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrength(value: integerMin0Max16): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Strength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Strength")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

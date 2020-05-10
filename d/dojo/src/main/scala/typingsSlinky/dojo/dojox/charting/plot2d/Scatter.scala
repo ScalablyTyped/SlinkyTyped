@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   * @param chart The chart this plot belongs to.
   * @param kwArgs       OptionalAn optional keyword arguments object to help define this plot's parameters.
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.charting.plot2d.PlotEvents because Inheritance from two classes. Inlined connect, connect, destroy, events, fireEvent, plotEvent, raiseEvent, resetEvents */ @JSGlobal("dojox.charting.plot2d.Scatter")
 @js.native
 class Scatter protected () extends CartesianBase {

@@ -7,7 +7,6 @@ import typingsSlinky.raygun.mod.raygun.RaygunOptions
 import typingsSlinky.raygun.mod.raygun.RaygunPayload
 import typingsSlinky.raygun.mod.raygun.RaygunRequest
 import typingsSlinky.raygun.mod.raygun.RaygunUser
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,21 +61,21 @@ class Client () extends js.Object {
     request: RaygunRequest,
     tags: js.Array[String]
   ): RaygunPayload = js.native
-  def send(exception: Error): RaygunPayload = js.native
-  def send(exception: Error, customData: KeyValueObject): RaygunPayload = js.native
+  def send(exception: js.Error): RaygunPayload = js.native
+  def send(exception: js.Error, customData: KeyValueObject): RaygunPayload = js.native
   def send(
-    exception: Error,
+    exception: js.Error,
     customData: KeyValueObject,
     offlineStorageCallback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]
   ): RaygunPayload = js.native
   def send(
-    exception: Error,
+    exception: js.Error,
     customData: KeyValueObject,
     offlineStorageCallback: js.Function1[/* error */ js.UndefOr[js.Error], Unit],
     request: RaygunRequest
   ): RaygunPayload = js.native
   def send(
-    exception: Error,
+    exception: js.Error,
     customData: KeyValueObject,
     offlineStorageCallback: js.Function1[/* error */ js.UndefOr[js.Error], Unit],
     request: RaygunRequest,

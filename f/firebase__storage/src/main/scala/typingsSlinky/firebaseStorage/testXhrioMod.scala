@@ -59,7 +59,7 @@ object testXhrioMod extends js.Object {
     /* xhrio */ TestingXhrIo, 
     /* url */ String, 
     /* method */ String, 
-    /* body */ js.UndefOr[scala.scalajs.js.typedarray.ArrayBufferView | Blob | String | Null], 
+    /* body */ js.UndefOr[js.typedarray.ArrayBufferView | Blob | String | Null], 
     /* headers */ js.UndefOr[Headers], 
     Unit
   ]

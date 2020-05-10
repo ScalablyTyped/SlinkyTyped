@@ -37,12 +37,53 @@ trait SchemaLabel extends js.Object {
 
 object SchemaLabel {
   @scala.inline
-  def apply(key: String = null, numValue: String = null, strValue: String = null): SchemaLabel = {
+  def apply(): SchemaLabel = {
     val __obj = js.Dynamic.literal()
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (numValue != null) __obj.updateDynamic("numValue")(numValue.asInstanceOf[js.Any])
-    if (strValue != null) __obj.updateDynamic("strValue")(strValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLabel]
   }
+  @scala.inline
+  implicit class SchemaLabelOps[Self <: SchemaLabel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

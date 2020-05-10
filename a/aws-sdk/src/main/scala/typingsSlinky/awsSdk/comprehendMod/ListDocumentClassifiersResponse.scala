@@ -18,14 +18,41 @@ trait ListDocumentClassifiersResponse extends js.Object {
 
 object ListDocumentClassifiersResponse {
   @scala.inline
-  def apply(
-    DocumentClassifierPropertiesList: DocumentClassifierPropertiesList = null,
-    NextToken: String = null
-  ): ListDocumentClassifiersResponse = {
+  def apply(): ListDocumentClassifiersResponse = {
     val __obj = js.Dynamic.literal()
-    if (DocumentClassifierPropertiesList != null) __obj.updateDynamic("DocumentClassifierPropertiesList")(DocumentClassifierPropertiesList.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListDocumentClassifiersResponse]
   }
+  @scala.inline
+  implicit class ListDocumentClassifiersResponseOps[Self <: ListDocumentClassifiersResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentClassifierPropertiesList(value: DocumentClassifierPropertiesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentClassifierPropertiesList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentClassifierPropertiesList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentClassifierPropertiesList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

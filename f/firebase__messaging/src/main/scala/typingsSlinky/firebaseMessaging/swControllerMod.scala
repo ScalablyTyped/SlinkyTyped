@@ -1,9 +1,9 @@
 package typingsSlinky.firebaseMessaging
 
-import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
 import typingsSlinky.firebaseAppTypes.privateMod.FirebaseService
 import typingsSlinky.firebaseMessaging.internalDependenciesMod.FirebaseInternalDependencies
 import typingsSlinky.firebaseMessaging.messagePayloadMod.MessagePayload
+import typingsSlinky.firebaseMessaging.mod.FirebaseApp
 import typingsSlinky.firebaseMessagingTypes.mod.FirebaseMessaging
 import typingsSlinky.firebaseUtil.subscribeMod.Unsubscribe
 import scala.scalajs.js
@@ -18,13 +18,11 @@ object swControllerMod extends js.Object {
     extends FirebaseMessaging
        with FirebaseService {
     def this(firebaseDependencies: FirebaseInternalDependencies) = this()
-    /* CompleteClass */
-    override var app: FirebaseApp = js.native
     var bgMessageHandler: js.Any = js.native
     val firebaseDependencies: js.Any = js.native
     var vapidKey: js.Any = js.native
     @JSName("app")
-    def app_MSwController(): typingsSlinky.firebaseMessaging.mod.FirebaseApp = js.native
+    def app_MSwController: FirebaseApp = js.native
     def deleteToken(): js.Promise[Boolean] = js.native
     def onMessage(): Unsubscribe = js.native
     def onNotificationClick(event: NotificationEvent): js.Promise[Unit] = js.native

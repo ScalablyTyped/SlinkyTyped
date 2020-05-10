@@ -1,6 +1,5 @@
 package typingsSlinky.uirouterCore
 
-import typingsSlinky.std.RegExp
 import typingsSlinky.uirouterCore.paramsInterfaceMod.RawParams
 import typingsSlinky.uirouterCore.routerMod.UIRouter
 import typingsSlinky.uirouterCore.stateInterfaceMod.TargetStateDef
@@ -104,10 +103,10 @@ object urlRouterMod extends js.Object {
     def when(matcher: String, handler: String, options: AnonPriority): UrlRule = js.native
     def when(matcher: String, handler: UrlRuleHandlerFn): UrlRule = js.native
     def when(matcher: String, handler: UrlRuleHandlerFn, options: AnonPriority): UrlRule = js.native
-    def when(matcher: RegExp, handler: String): UrlRule = js.native
-    def when(matcher: RegExp, handler: String, options: AnonPriority): UrlRule = js.native
-    def when(matcher: RegExp, handler: UrlRuleHandlerFn): UrlRule = js.native
-    def when(matcher: RegExp, handler: UrlRuleHandlerFn, options: AnonPriority): UrlRule = js.native
+    def when(matcher: js.RegExp, handler: String): UrlRule = js.native
+    def when(matcher: js.RegExp, handler: String, options: AnonPriority): UrlRule = js.native
+    def when(matcher: js.RegExp, handler: UrlRuleHandlerFn): UrlRule = js.native
+    def when(matcher: js.RegExp, handler: UrlRuleHandlerFn, options: AnonPriority): UrlRule = js.native
     def when(matcher: UrlMatcher, handler: String): UrlRule = js.native
     def when(matcher: UrlMatcher, handler: String, options: AnonPriority): UrlRule = js.native
     def when(matcher: UrlMatcher, handler: UrlRuleHandlerFn): UrlRule = js.native

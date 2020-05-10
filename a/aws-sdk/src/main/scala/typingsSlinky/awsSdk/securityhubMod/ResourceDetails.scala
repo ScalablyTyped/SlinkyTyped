@@ -63,6 +63,10 @@ trait ResourceDetails extends js.Object {
     */
   var AwsS3Bucket: js.UndefOr[AwsS3BucketDetails] = js.native
   /**
+    * Details about an Amazon S3 object related to a finding.
+    */
+  var AwsS3Object: js.UndefOr[AwsS3ObjectDetails] = js.native
+  /**
     * Details about an SNS topic.
     */
   var AwsSnsTopic: js.UndefOr[AwsSnsTopicDetails] = js.native
@@ -86,48 +90,257 @@ trait ResourceDetails extends js.Object {
 
 object ResourceDetails {
   @scala.inline
-  def apply(
-    AwsCloudFrontDistribution: AwsCloudFrontDistributionDetails = null,
-    AwsCodeBuildProject: AwsCodeBuildProjectDetails = null,
-    AwsEc2Instance: AwsEc2InstanceDetails = null,
-    AwsEc2NetworkInterface: AwsEc2NetworkInterfaceDetails = null,
-    AwsEc2SecurityGroup: AwsEc2SecurityGroupDetails = null,
-    AwsElasticsearchDomain: AwsElasticsearchDomainDetails = null,
-    AwsElbv2LoadBalancer: AwsElbv2LoadBalancerDetails = null,
-    AwsIamAccessKey: AwsIamAccessKeyDetails = null,
-    AwsIamRole: AwsIamRoleDetails = null,
-    AwsKmsKey: AwsKmsKeyDetails = null,
-    AwsLambdaFunction: AwsLambdaFunctionDetails = null,
-    AwsLambdaLayerVersion: AwsLambdaLayerVersionDetails = null,
-    AwsRdsDbInstance: AwsRdsDbInstanceDetails = null,
-    AwsS3Bucket: AwsS3BucketDetails = null,
-    AwsSnsTopic: AwsSnsTopicDetails = null,
-    AwsSqsQueue: AwsSqsQueueDetails = null,
-    AwsWafWebAcl: AwsWafWebAclDetails = null,
-    Container: ContainerDetails = null,
-    Other: FieldMap = null
-  ): ResourceDetails = {
+  def apply(): ResourceDetails = {
     val __obj = js.Dynamic.literal()
-    if (AwsCloudFrontDistribution != null) __obj.updateDynamic("AwsCloudFrontDistribution")(AwsCloudFrontDistribution.asInstanceOf[js.Any])
-    if (AwsCodeBuildProject != null) __obj.updateDynamic("AwsCodeBuildProject")(AwsCodeBuildProject.asInstanceOf[js.Any])
-    if (AwsEc2Instance != null) __obj.updateDynamic("AwsEc2Instance")(AwsEc2Instance.asInstanceOf[js.Any])
-    if (AwsEc2NetworkInterface != null) __obj.updateDynamic("AwsEc2NetworkInterface")(AwsEc2NetworkInterface.asInstanceOf[js.Any])
-    if (AwsEc2SecurityGroup != null) __obj.updateDynamic("AwsEc2SecurityGroup")(AwsEc2SecurityGroup.asInstanceOf[js.Any])
-    if (AwsElasticsearchDomain != null) __obj.updateDynamic("AwsElasticsearchDomain")(AwsElasticsearchDomain.asInstanceOf[js.Any])
-    if (AwsElbv2LoadBalancer != null) __obj.updateDynamic("AwsElbv2LoadBalancer")(AwsElbv2LoadBalancer.asInstanceOf[js.Any])
-    if (AwsIamAccessKey != null) __obj.updateDynamic("AwsIamAccessKey")(AwsIamAccessKey.asInstanceOf[js.Any])
-    if (AwsIamRole != null) __obj.updateDynamic("AwsIamRole")(AwsIamRole.asInstanceOf[js.Any])
-    if (AwsKmsKey != null) __obj.updateDynamic("AwsKmsKey")(AwsKmsKey.asInstanceOf[js.Any])
-    if (AwsLambdaFunction != null) __obj.updateDynamic("AwsLambdaFunction")(AwsLambdaFunction.asInstanceOf[js.Any])
-    if (AwsLambdaLayerVersion != null) __obj.updateDynamic("AwsLambdaLayerVersion")(AwsLambdaLayerVersion.asInstanceOf[js.Any])
-    if (AwsRdsDbInstance != null) __obj.updateDynamic("AwsRdsDbInstance")(AwsRdsDbInstance.asInstanceOf[js.Any])
-    if (AwsS3Bucket != null) __obj.updateDynamic("AwsS3Bucket")(AwsS3Bucket.asInstanceOf[js.Any])
-    if (AwsSnsTopic != null) __obj.updateDynamic("AwsSnsTopic")(AwsSnsTopic.asInstanceOf[js.Any])
-    if (AwsSqsQueue != null) __obj.updateDynamic("AwsSqsQueue")(AwsSqsQueue.asInstanceOf[js.Any])
-    if (AwsWafWebAcl != null) __obj.updateDynamic("AwsWafWebAcl")(AwsWafWebAcl.asInstanceOf[js.Any])
-    if (Container != null) __obj.updateDynamic("Container")(Container.asInstanceOf[js.Any])
-    if (Other != null) __obj.updateDynamic("Other")(Other.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceDetails]
   }
+  @scala.inline
+  implicit class ResourceDetailsOps[Self <: ResourceDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwsCloudFrontDistribution(value: AwsCloudFrontDistributionDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsCloudFrontDistribution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsCloudFrontDistribution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsCloudFrontDistribution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsCodeBuildProject(value: AwsCodeBuildProjectDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsCodeBuildProject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsCodeBuildProject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsCodeBuildProject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsEc2Instance(value: AwsEc2InstanceDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsEc2Instance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsEc2Instance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsEc2Instance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsEc2NetworkInterface(value: AwsEc2NetworkInterfaceDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsEc2NetworkInterface")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsEc2NetworkInterface: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsEc2NetworkInterface")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsEc2SecurityGroup(value: AwsEc2SecurityGroupDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsEc2SecurityGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsEc2SecurityGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsEc2SecurityGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsElasticsearchDomain(value: AwsElasticsearchDomainDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsElasticsearchDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsElasticsearchDomain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsElasticsearchDomain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsElbv2LoadBalancer(value: AwsElbv2LoadBalancerDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsElbv2LoadBalancer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsElbv2LoadBalancer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsElbv2LoadBalancer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsIamAccessKey(value: AwsIamAccessKeyDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsIamAccessKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsIamAccessKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsIamAccessKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsIamRole(value: AwsIamRoleDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsIamRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsIamRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsIamRole")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsKmsKey(value: AwsKmsKeyDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsKmsKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsKmsKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsKmsKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsLambdaFunction(value: AwsLambdaFunctionDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsLambdaFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsLambdaFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsLambdaFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsLambdaLayerVersion(value: AwsLambdaLayerVersionDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsLambdaLayerVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsLambdaLayerVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsLambdaLayerVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsRdsDbInstance(value: AwsRdsDbInstanceDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsRdsDbInstance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsRdsDbInstance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsRdsDbInstance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsS3Bucket(value: AwsS3BucketDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsS3Bucket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsS3Bucket: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsS3Bucket")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsS3Object(value: AwsS3ObjectDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsS3Object")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsS3Object: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsS3Object")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsSnsTopic(value: AwsSnsTopicDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsSnsTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsSnsTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsSnsTopic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsSqsQueue(value: AwsSqsQueueDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsSqsQueue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsSqsQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsSqsQueue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsWafWebAcl(value: AwsWafWebAclDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsWafWebAcl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsWafWebAcl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsWafWebAcl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainer(value: ContainerDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Container")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOther(value: FieldMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Other")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOther: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Other")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

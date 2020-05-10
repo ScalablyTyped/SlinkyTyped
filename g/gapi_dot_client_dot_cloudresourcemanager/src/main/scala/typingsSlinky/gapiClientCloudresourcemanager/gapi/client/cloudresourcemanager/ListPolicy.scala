@@ -4,21 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListPolicy extends js.Object {
   /** The policy all_values state. */
-  var allValues: js.UndefOr[String] = js.undefined
+  var allValues: js.UndefOr[String] = js.native
   /**
     * List of values allowed  at this resource. Can only be set if no values
     * are set for `denied_values` and `all_values` is set to
     * `ALL_VALUES_UNSPECIFIED`.
     */
-  var allowedValues: js.UndefOr[js.Array[String]] = js.undefined
+  var allowedValues: js.UndefOr[js.Array[String]] = js.native
   /**
     * List of values denied at this resource. Can only be set if no values are
     * set for `allowed_values` and `all_values` is set to
     * `ALL_VALUES_UNSPECIFIED`.
     */
-  var deniedValues: js.UndefOr[js.Array[String]] = js.undefined
+  var deniedValues: js.UndefOr[js.Array[String]] = js.native
   /**
     * Determines the inheritance behavior for this `Policy`.
     *
@@ -103,32 +104,89 @@ trait ListPolicy extends js.Object {
     * The accepted values at `organizations/foo` are `E1`, E2`.
     * No value is accepted at `projects/bar`.
     */
-  var inheritFromParent: js.UndefOr[Boolean] = js.undefined
+  var inheritFromParent: js.UndefOr[Boolean] = js.native
   /**
     * Optional. The Google Cloud Console will try to default to a configuration
     * that matches the value specified in this `Policy`. If `suggested_value`
     * is not set, it will inherit the value specified higher in the hierarchy,
     * unless `inherit_from_parent` is `false`.
     */
-  var suggestedValue: js.UndefOr[String] = js.undefined
+  var suggestedValue: js.UndefOr[String] = js.native
 }
 
 object ListPolicy {
   @scala.inline
-  def apply(
-    allValues: String = null,
-    allowedValues: js.Array[String] = null,
-    deniedValues: js.Array[String] = null,
-    inheritFromParent: js.UndefOr[Boolean] = js.undefined,
-    suggestedValue: String = null
-  ): ListPolicy = {
+  def apply(): ListPolicy = {
     val __obj = js.Dynamic.literal()
-    if (allValues != null) __obj.updateDynamic("allValues")(allValues.asInstanceOf[js.Any])
-    if (allowedValues != null) __obj.updateDynamic("allowedValues")(allowedValues.asInstanceOf[js.Any])
-    if (deniedValues != null) __obj.updateDynamic("deniedValues")(deniedValues.asInstanceOf[js.Any])
-    if (!js.isUndefined(inheritFromParent)) __obj.updateDynamic("inheritFromParent")(inheritFromParent.asInstanceOf[js.Any])
-    if (suggestedValue != null) __obj.updateDynamic("suggestedValue")(suggestedValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListPolicy]
   }
+  @scala.inline
+  implicit class ListPolicyOps[Self <: ListPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllValues(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowedValues(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowedValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeniedValues(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deniedValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeniedValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deniedValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInheritFromParent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritFromParent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInheritFromParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inheritFromParent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestedValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestedValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

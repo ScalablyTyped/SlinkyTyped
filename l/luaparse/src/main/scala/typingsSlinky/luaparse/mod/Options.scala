@@ -11,40 +11,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /** Store comments as an array in the chunk object. */
-  var comments: Boolean
+  var comments: Boolean = js.native
   /**
     * Whether to allow code points ≥ U+0080 in identifiers, like LuaJIT does.
     * See 'Note on character encodings' below if you wish to use this option.
     * Note: setting luaVersion: 'LuaJIT' currently does not enable this option; this may change in the future.
     */
-  var extendedIdentifiers: `false`
+  var extendedIdentifiers: `false` = js.native
   /** Store location information on each syntax node. */
-  var locations: Boolean
+  var locations: Boolean = js.native
   /** The version of Lua the parser will target; supported values are '5.1', '5.2', '5.3' and 'LuaJIT'. */
-  var luaVersion: `5Dot1` | `5Dot2` | `5Dot3` | LuaJIT
+  var luaVersion: `5Dot1` | `5Dot2` | `5Dot3` | LuaJIT = js.native
   /** Store the start and end character locations on each syntax node. */
-  var ranges: Boolean
+  var ranges: Boolean = js.native
   /** Track identifier scopes. */
-  var scope: Boolean
+  var scope: Boolean = js.native
   /** Explicitly tell the parser when the input ends. */
   @JSName("wait")
-  var wait_FOptions: Boolean
+  var wait_FOptions: Boolean = js.native
   /**
     * A callback which will be invoked when a syntax node has been completed.
     * The node which has been created will be passed as the only parameter.
     */
-  def onCreateNode(node: Node): Unit
+  def onCreateNode(node: Node): Unit = js.native
   /** A callback which will be invoked when a new scope is created. */
-  def onCreateScope(): Unit
+  def onCreateScope(): Unit = js.native
   /** A callback which will be invoked when the current scope is destroyed. */
-  def onDestroyScope(): Unit
+  def onDestroyScope(): Unit = js.native
   /**
     * A callback which will be invoked when a local variable is declared.
     * The identifier will be passed as the only parameter.
     */
-  def onLocalDeclaration(identifier: Identifier): Unit
+  def onLocalDeclaration(identifier: Identifier): Unit = js.native
 }
 
 object Options {
@@ -63,8 +64,81 @@ object Options {
     wait: Boolean
   ): Options = {
     val __obj = js.Dynamic.literal(comments = comments.asInstanceOf[js.Any], extendedIdentifiers = extendedIdentifiers.asInstanceOf[js.Any], locations = locations.asInstanceOf[js.Any], luaVersion = luaVersion.asInstanceOf[js.Any], onCreateNode = js.Any.fromFunction1(onCreateNode), onCreateScope = js.Any.fromFunction0(onCreateScope), onDestroyScope = js.Any.fromFunction0(onDestroyScope), onLocalDeclaration = js.Any.fromFunction1(onLocalDeclaration), ranges = ranges.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any], wait = wait.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComments(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtendedIdentifiers(value: `false`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedIdentifiers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocations(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLuaVersion(value: `5Dot1` | `5Dot2` | `5Dot3` | LuaJIT): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("luaVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnCreateNode(value: Node => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreateNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnCreateScope(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreateScope")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnDestroyScope(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDestroyScope")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnLocalDeclaration(value: Identifier => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLocalDeclaration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRanges(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScope(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWait(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wait")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

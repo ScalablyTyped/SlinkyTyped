@@ -1,6 +1,5 @@
 package typingsSlinky.code.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +20,7 @@ trait Types[T] extends js.Object {
   def error(): AssertionChain[T] = js.native
   def error(`type`: js.Any): AssertionChain[T] = js.native
   def error(`type`: js.Any, message: String): AssertionChain[T] = js.native
-  def error(`type`: js.Any, message: RegExp): AssertionChain[T] = js.native
+  def error(`type`: js.Any, message: js.RegExp): AssertionChain[T] = js.native
   /** Asserts that the reference value is a function. */
   def function(): AssertionChain[T] = js.native
   /** Asserts that the reference value is a number. */

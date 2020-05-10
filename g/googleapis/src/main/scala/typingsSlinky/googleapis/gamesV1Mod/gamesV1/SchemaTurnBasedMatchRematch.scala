@@ -28,16 +28,53 @@ trait SchemaTurnBasedMatchRematch extends js.Object {
 
 object SchemaTurnBasedMatchRematch {
   @scala.inline
-  def apply(
-    kind: String = null,
-    previousMatch: SchemaTurnBasedMatch = null,
-    rematch: SchemaTurnBasedMatch = null
-  ): SchemaTurnBasedMatchRematch = {
+  def apply(): SchemaTurnBasedMatchRematch = {
     val __obj = js.Dynamic.literal()
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (previousMatch != null) __obj.updateDynamic("previousMatch")(previousMatch.asInstanceOf[js.Any])
-    if (rematch != null) __obj.updateDynamic("rematch")(rematch.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTurnBasedMatchRematch]
   }
+  @scala.inline
+  implicit class SchemaTurnBasedMatchRematchOps[Self <: SchemaTurnBasedMatchRematch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousMatch(value: SchemaTurnBasedMatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRematch(value: SchemaTurnBasedMatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rematch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRematch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rematch")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

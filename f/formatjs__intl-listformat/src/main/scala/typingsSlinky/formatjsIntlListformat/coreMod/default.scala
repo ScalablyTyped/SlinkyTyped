@@ -15,12 +15,6 @@ class default () extends ListFormat {
   def this(locales: js.Array[String]) = this()
   def this(locales: String, options: IntlListFormatOptions) = this()
   def this(locales: js.Array[String], options: IntlListFormatOptions) = this()
-  /* CompleteClass */
-  override def format(elements: js.Array[String]): String = js.native
-  /* CompleteClass */
-  override def formatToParts(elements: js.Array[String]): js.Array[Part] = js.native
-  /* CompleteClass */
-  override def resolvedOptions(): ResolvedIntlListFormatOptions = js.native
 }
 
 /* static members */

@@ -13,12 +13,10 @@ trait QueryParamsMode extends js.Object
 
 object QueryParamsMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.routeNode.routeNodeStrings.default = "default".asInstanceOf[typingsSlinky.routeNode.routeNodeStrings.default]
   @scala.inline
-  def default: typingsSlinky.routeNode.routeNodeStrings.default = this.cast("default")
+  def loose: typingsSlinky.routeNode.routeNodeStrings.loose = "loose".asInstanceOf[typingsSlinky.routeNode.routeNodeStrings.loose]
   @scala.inline
-  def loose: typingsSlinky.routeNode.routeNodeStrings.loose = this.cast("loose")
-  @scala.inline
-  def strict: typingsSlinky.routeNode.routeNodeStrings.strict = this.cast("strict")
+  def strict: typingsSlinky.routeNode.routeNodeStrings.strict = "strict".asInstanceOf[typingsSlinky.routeNode.routeNodeStrings.strict]
 }
 

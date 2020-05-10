@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CognitoIdentity extends js.Object {
-  var cognitoIdentityId: String
-  var cognitoIdentityPoolId: String
+  var cognitoIdentityId: String = js.native
+  var cognitoIdentityPoolId: String = js.native
 }
 
 object CognitoIdentity {
   @scala.inline
   def apply(cognitoIdentityId: String, cognitoIdentityPoolId: String): CognitoIdentity = {
     val __obj = js.Dynamic.literal(cognitoIdentityId = cognitoIdentityId.asInstanceOf[js.Any], cognitoIdentityPoolId = cognitoIdentityPoolId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CognitoIdentity]
   }
+  @scala.inline
+  implicit class CognitoIdentityOps[Self <: CognitoIdentity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCognitoIdentityId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoIdentityId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCognitoIdentityPoolId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cognitoIdentityPoolId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

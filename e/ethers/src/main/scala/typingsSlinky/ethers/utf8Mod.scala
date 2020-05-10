@@ -12,8 +12,8 @@ object utf8Mod extends js.Object {
   @js.native
   sealed trait UnicodeNormalizationForm extends js.Object
   
-  def toUtf8Bytes(str: String): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def toUtf8Bytes(str: String, form: UnicodeNormalizationForm): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def toUtf8Bytes(str: String): js.typedarray.Uint8Array = js.native
+  def toUtf8Bytes(str: String, form: UnicodeNormalizationForm): js.typedarray.Uint8Array = js.native
   def toUtf8String(bytes: Arrayish): String = js.native
   @js.native
   object UnicodeNormalizationForm extends js.Object {

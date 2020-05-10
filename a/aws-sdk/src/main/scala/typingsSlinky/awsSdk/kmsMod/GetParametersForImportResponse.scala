@@ -26,18 +26,77 @@ trait GetParametersForImportResponse extends js.Object {
 
 object GetParametersForImportResponse {
   @scala.inline
-  def apply(
-    ImportToken: CiphertextType = null,
-    KeyId: KeyIdType = null,
-    ParametersValidTo: js.Date = null,
-    PublicKey: PlaintextType = null
-  ): GetParametersForImportResponse = {
+  def apply(): GetParametersForImportResponse = {
     val __obj = js.Dynamic.literal()
-    if (ImportToken != null) __obj.updateDynamic("ImportToken")(ImportToken.asInstanceOf[js.Any])
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
-    if (ParametersValidTo != null) __obj.updateDynamic("ParametersValidTo")(ParametersValidTo.asInstanceOf[js.Any])
-    if (PublicKey != null) __obj.updateDynamic("PublicKey")(PublicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetParametersForImportResponse]
   }
+  @scala.inline
+  implicit class GetParametersForImportResponseOps[Self <: GetParametersForImportResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImportTokenUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImportToken(value: CiphertextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyId(value: KeyIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParametersValidTo(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParametersValidTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParametersValidTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParametersValidTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublicKeyUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublicKey(value: PlaintextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublicKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublicKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

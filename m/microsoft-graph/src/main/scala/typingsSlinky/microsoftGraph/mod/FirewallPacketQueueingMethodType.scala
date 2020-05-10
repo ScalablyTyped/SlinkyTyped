@@ -15,16 +15,14 @@ trait FirewallPacketQueueingMethodType extends js.Object
 
 object FirewallPacketQueueingMethodType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = "deviceDefault".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault]
   @scala.inline
-  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = this.cast("deviceDefault")
+  def disabled: typingsSlinky.microsoftGraph.microsoftGraphStrings.disabled = "disabled".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.disabled]
   @scala.inline
-  def disabled: typingsSlinky.microsoftGraph.microsoftGraphStrings.disabled = this.cast("disabled")
+  def queueBoth: typingsSlinky.microsoftGraph.microsoftGraphStrings.queueBoth = "queueBoth".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.queueBoth]
   @scala.inline
-  def queueBoth: typingsSlinky.microsoftGraph.microsoftGraphStrings.queueBoth = this.cast("queueBoth")
+  def queueInbound: typingsSlinky.microsoftGraph.microsoftGraphStrings.queueInbound = "queueInbound".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.queueInbound]
   @scala.inline
-  def queueInbound: typingsSlinky.microsoftGraph.microsoftGraphStrings.queueInbound = this.cast("queueInbound")
-  @scala.inline
-  def queueOutbound: typingsSlinky.microsoftGraph.microsoftGraphStrings.queueOutbound = this.cast("queueOutbound")
+  def queueOutbound: typingsSlinky.microsoftGraph.microsoftGraphStrings.queueOutbound = "queueOutbound".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.queueOutbound]
 }
 

@@ -1,13 +1,12 @@
 package typingsSlinky.grommet.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLDivElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.accordionPanelMod.AccordionPanelProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,18 +16,12 @@ import scala.scalajs.js.annotation._
 class AccordionPanel protected ()
   extends Component[
       AccordionPanelProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]), 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
-  def this(props: AccordionPanelProps with (DetailedHTMLProps[
-        HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
-        org.scalajs.dom.raw.HTMLDivElement
-      ])) = this()
+  def this(props: AccordionPanelProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])) = this()
   def this(
-    props: AccordionPanelProps with (DetailedHTMLProps[
-        HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
-        org.scalajs.dom.raw.HTMLDivElement
-      ]),
+    props: AccordionPanelProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]),
     context: js.Any
   ) = this()
 }
@@ -36,9 +29,8 @@ class AccordionPanel protected ()
 @JSImport("grommet", "AccordionPanel")
 @js.native
 object AccordionPanel extends TopLevel[
-      ComponentClass[
-        AccordionPanelProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]), 
-        ComponentState
+      ReactComponentClass[
+        AccordionPanelProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement])
       ]
     ]
 

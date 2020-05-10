@@ -91,52 +91,269 @@ trait DescribeHsmResponse extends js.Object {
 
 object DescribeHsmResponse {
   @scala.inline
-  def apply(
-    AvailabilityZone: AZ = null,
-    EniId: EniId = null,
-    EniIp: IpAddress = null,
-    HsmArn: HsmArn = null,
-    HsmType: String = null,
-    IamRoleArn: IamRoleArn = null,
-    Partitions: PartitionList = null,
-    SerialNumber: HsmSerialNumber = null,
-    ServerCertLastUpdated: Timestamp = null,
-    ServerCertUri: String = null,
-    SoftwareVersion: String = null,
-    SshKeyLastUpdated: Timestamp = null,
-    SshPublicKey: SshKey = null,
-    Status: HsmStatus = null,
-    StatusDetails: String = null,
-    SubnetId: SubnetId = null,
-    SubscriptionEndDate: Timestamp = null,
-    SubscriptionStartDate: Timestamp = null,
-    SubscriptionType: SubscriptionType = null,
-    VendorName: String = null,
-    VpcId: VpcId = null
-  ): DescribeHsmResponse = {
+  def apply(): DescribeHsmResponse = {
     val __obj = js.Dynamic.literal()
-    if (AvailabilityZone != null) __obj.updateDynamic("AvailabilityZone")(AvailabilityZone.asInstanceOf[js.Any])
-    if (EniId != null) __obj.updateDynamic("EniId")(EniId.asInstanceOf[js.Any])
-    if (EniIp != null) __obj.updateDynamic("EniIp")(EniIp.asInstanceOf[js.Any])
-    if (HsmArn != null) __obj.updateDynamic("HsmArn")(HsmArn.asInstanceOf[js.Any])
-    if (HsmType != null) __obj.updateDynamic("HsmType")(HsmType.asInstanceOf[js.Any])
-    if (IamRoleArn != null) __obj.updateDynamic("IamRoleArn")(IamRoleArn.asInstanceOf[js.Any])
-    if (Partitions != null) __obj.updateDynamic("Partitions")(Partitions.asInstanceOf[js.Any])
-    if (SerialNumber != null) __obj.updateDynamic("SerialNumber")(SerialNumber.asInstanceOf[js.Any])
-    if (ServerCertLastUpdated != null) __obj.updateDynamic("ServerCertLastUpdated")(ServerCertLastUpdated.asInstanceOf[js.Any])
-    if (ServerCertUri != null) __obj.updateDynamic("ServerCertUri")(ServerCertUri.asInstanceOf[js.Any])
-    if (SoftwareVersion != null) __obj.updateDynamic("SoftwareVersion")(SoftwareVersion.asInstanceOf[js.Any])
-    if (SshKeyLastUpdated != null) __obj.updateDynamic("SshKeyLastUpdated")(SshKeyLastUpdated.asInstanceOf[js.Any])
-    if (SshPublicKey != null) __obj.updateDynamic("SshPublicKey")(SshPublicKey.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (StatusDetails != null) __obj.updateDynamic("StatusDetails")(StatusDetails.asInstanceOf[js.Any])
-    if (SubnetId != null) __obj.updateDynamic("SubnetId")(SubnetId.asInstanceOf[js.Any])
-    if (SubscriptionEndDate != null) __obj.updateDynamic("SubscriptionEndDate")(SubscriptionEndDate.asInstanceOf[js.Any])
-    if (SubscriptionStartDate != null) __obj.updateDynamic("SubscriptionStartDate")(SubscriptionStartDate.asInstanceOf[js.Any])
-    if (SubscriptionType != null) __obj.updateDynamic("SubscriptionType")(SubscriptionType.asInstanceOf[js.Any])
-    if (VendorName != null) __obj.updateDynamic("VendorName")(VendorName.asInstanceOf[js.Any])
-    if (VpcId != null) __obj.updateDynamic("VpcId")(VpcId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeHsmResponse]
   }
+  @scala.inline
+  implicit class DescribeHsmResponseOps[Self <: DescribeHsmResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZone(value: AZ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEniId(value: EniId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EniId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEniId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EniId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEniIp(value: IpAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EniIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEniIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EniIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsmArn(value: HsmArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsmType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HsmType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIamRoleArn(value: IamRoleArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamRoleArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IamRoleArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartitions(value: PartitionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Partitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Partitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSerialNumber(value: HsmSerialNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSerialNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SerialNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerCertLastUpdated(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertLastUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerCertLastUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertLastUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerCertUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerCertUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSoftwareVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SoftwareVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSoftwareVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SoftwareVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSshKeyLastUpdated(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SshKeyLastUpdated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSshKeyLastUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SshKeyLastUpdated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSshPublicKey(value: SshKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SshPublicKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSshPublicKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SshPublicKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: HsmStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusDetails(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StatusDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetId(value: SubnetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscriptionEndDate(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionEndDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscriptionEndDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionEndDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscriptionStartDate(value: Timestamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionStartDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscriptionStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionStartDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscriptionType(value: SubscriptionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscriptionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubscriptionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVendorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VendorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVendorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VendorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: VpcId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

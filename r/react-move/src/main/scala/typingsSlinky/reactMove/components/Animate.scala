@@ -1,40 +1,41 @@
 package typingsSlinky.reactMove.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMove.animateMod.IAnimateProps
 import typingsSlinky.reactMove.animateMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Animate
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Animate {
   @JSImport("react-move/Animate", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    start: js.Any,
-    enter: js.Any = null,
-    interpolation: (/* begValue */ js.UndefOr[js.Any], /* endValue */ js.UndefOr[js.Any], /* attr */ js.UndefOr[String], /* namespace */ js.UndefOr[String]) => js.Function1[/* t */ Double, js.Any] = null,
-    leave: js.Any = null,
-    show: js.UndefOr[Boolean] = js.undefined,
-    update: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(start = start.asInstanceOf[js.Any])
-    if (enter != null) __obj.updateDynamic("enter")(enter.asInstanceOf[js.Any])
-    if (interpolation != null) __obj.updateDynamic("interpolation")(js.Any.fromFunction4(interpolation))
-    if (leave != null) __obj.updateDynamic("leave")(leave.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (update != null) __obj.updateDynamic("update")(update.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def enter(value: js.Any): this.type = set("enter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def interpolation(
+      value: (/* begValue */ js.UndefOr[js.Any], /* endValue */ js.UndefOr[js.Any], /* attr */ js.UndefOr[String], /* namespace */ js.UndefOr[String]) => js.Function1[/* t */ Double, js.Any]
+    ): this.type = set("interpolation", js.Any.fromFunction4(value))
+    @scala.inline
+    def leave(value: js.Any): this.type = set("leave", value.asInstanceOf[js.Any])
+    @scala.inline
+    def show(value: Boolean): this.type = set("show", value.asInstanceOf[js.Any])
+    @scala.inline
+    def update(value: js.Any): this.type = set("update", value.asInstanceOf[js.Any])
   }
-  type Props = IAnimateProps
+  
+  def withProps(p: IAnimateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(start: js.Any): Builder = {
+    val __props = js.Dynamic.literal(start = start.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IAnimateProps]))
+  }
 }
 

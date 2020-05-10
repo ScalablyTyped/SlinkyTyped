@@ -1,9 +1,9 @@
 package typingsSlinky.mapboxGl.mod
 
+import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.mapboxGl.mapboxGlStrings.touchcancel
 import typingsSlinky.mapboxGl.mapboxGlStrings.touchend
 import typingsSlinky.mapboxGl.mapboxGlStrings.touchstart
-import typingsSlinky.std.TouchEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

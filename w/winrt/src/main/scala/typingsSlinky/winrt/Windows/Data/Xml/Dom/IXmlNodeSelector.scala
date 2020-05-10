@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IXmlNodeSelector extends js.Object {
-  def selectNodes(xpath: String): XmlNodeList
-  def selectNodesNS(xpath: String, namespaces: js.Any): XmlNodeList
-  def selectSingleNode(xpath: String): IXmlNode
-  def selectSingleNodeNS(xpath: String, namespaces: js.Any): IXmlNode
+  def selectNodes(xpath: String): XmlNodeList = js.native
+  def selectNodesNS(xpath: String, namespaces: js.Any): XmlNodeList = js.native
+  def selectSingleNode(xpath: String): IXmlNode = js.native
+  def selectSingleNodeNS(xpath: String, namespaces: js.Any): IXmlNode = js.native
 }
 
 object IXmlNodeSelector {
@@ -20,8 +21,39 @@ object IXmlNodeSelector {
     selectSingleNodeNS: (String, js.Any) => IXmlNode
   ): IXmlNodeSelector = {
     val __obj = js.Dynamic.literal(selectNodes = js.Any.fromFunction1(selectNodes), selectNodesNS = js.Any.fromFunction2(selectNodesNS), selectSingleNode = js.Any.fromFunction1(selectSingleNode), selectSingleNodeNS = js.Any.fromFunction2(selectSingleNodeNS))
-  
     __obj.asInstanceOf[IXmlNodeSelector]
   }
+  @scala.inline
+  implicit class IXmlNodeSelectorOps[Self <: IXmlNodeSelector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSelectNodes(value: String => XmlNodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNodes")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSelectNodesNS(value: (String, js.Any) => XmlNodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNodesNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSelectSingleNode(value: String => IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectSingleNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSelectSingleNodeNS(value: (String, js.Any) => IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectSingleNodeNS")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

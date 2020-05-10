@@ -5,39 +5,127 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // addListener
+@js.native
 trait ListenerParameters extends js.Object {
-  var membership: js.UndefOr[js.Function1[/* membershipEvent */ MembershipEvent, Unit]] = js.undefined
-  var message: js.UndefOr[js.Function1[/* messageEvent */ MessageEvent, Unit]] = js.undefined
-  var messageAction: js.UndefOr[js.Function1[/* messageActionEvent */ MessageActionEvent, Unit]] = js.undefined
-  var presence: js.UndefOr[js.Function1[/* presenceEvent */ PresenceEvent, Unit]] = js.undefined
-  var signal: js.UndefOr[js.Function1[/* signalEvent */ SignalEvent, Unit]] = js.undefined
-  var space: js.UndefOr[js.Function1[/* spaceEvent */ SpaceEvent, Unit]] = js.undefined
-  var status: js.UndefOr[js.Function1[/* statusEvent */ StatusEvent, Unit]] = js.undefined
-  var user: js.UndefOr[js.Function1[/* userEvent */ UserEvent, Unit]] = js.undefined
+  var membership: js.UndefOr[js.Function1[/* membershipEvent */ MembershipEvent, Unit]] = js.native
+  var message: js.UndefOr[js.Function1[/* messageEvent */ MessageEvent, Unit]] = js.native
+  var messageAction: js.UndefOr[js.Function1[/* messageActionEvent */ MessageActionEvent, Unit]] = js.native
+  var presence: js.UndefOr[js.Function1[/* presenceEvent */ PresenceEvent, Unit]] = js.native
+  var signal: js.UndefOr[js.Function1[/* signalEvent */ SignalEvent, Unit]] = js.native
+  var space: js.UndefOr[js.Function1[/* spaceEvent */ SpaceEvent, Unit]] = js.native
+  var status: js.UndefOr[js.Function1[/* statusEvent */ StatusEvent, Unit]] = js.native
+  var user: js.UndefOr[js.Function1[/* userEvent */ UserEvent, Unit]] = js.native
 }
 
 object ListenerParameters {
   @scala.inline
-  def apply(
-    membership: /* membershipEvent */ MembershipEvent => Unit = null,
-    message: /* messageEvent */ MessageEvent => Unit = null,
-    messageAction: /* messageActionEvent */ MessageActionEvent => Unit = null,
-    presence: /* presenceEvent */ PresenceEvent => Unit = null,
-    signal: /* signalEvent */ SignalEvent => Unit = null,
-    space: /* spaceEvent */ SpaceEvent => Unit = null,
-    status: /* statusEvent */ StatusEvent => Unit = null,
-    user: /* userEvent */ UserEvent => Unit = null
-  ): ListenerParameters = {
+  def apply(): ListenerParameters = {
     val __obj = js.Dynamic.literal()
-    if (membership != null) __obj.updateDynamic("membership")(js.Any.fromFunction1(membership))
-    if (message != null) __obj.updateDynamic("message")(js.Any.fromFunction1(message))
-    if (messageAction != null) __obj.updateDynamic("messageAction")(js.Any.fromFunction1(messageAction))
-    if (presence != null) __obj.updateDynamic("presence")(js.Any.fromFunction1(presence))
-    if (signal != null) __obj.updateDynamic("signal")(js.Any.fromFunction1(signal))
-    if (space != null) __obj.updateDynamic("space")(js.Any.fromFunction1(space))
-    if (status != null) __obj.updateDynamic("status")(js.Any.fromFunction1(status))
-    if (user != null) __obj.updateDynamic("user")(js.Any.fromFunction1(user))
     __obj.asInstanceOf[ListenerParameters]
   }
+  @scala.inline
+  implicit class ListenerParametersOps[Self <: ListenerParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMembership(value: /* membershipEvent */ MembershipEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("membership")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMembership: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("membership")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: /* messageEvent */ MessageEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageAction(value: /* messageActionEvent */ MessageActionEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageAction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutMessageAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPresence(value: /* presenceEvent */ PresenceEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presence")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutPresence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignal(value: /* signalEvent */ SignalEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSignal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpace(value: /* spaceEvent */ SpaceEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("space")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: /* statusEvent */ StatusEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: /* userEvent */ UserEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

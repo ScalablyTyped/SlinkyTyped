@@ -17,18 +17,16 @@ trait TaxIdType extends js.Object
 
 object TaxIdType {
   @scala.inline
-  def au_abn: typingsSlinky.stripe.stripeStrings.au_abn = this.cast("au_abn")
+  def au_abn: typingsSlinky.stripe.stripeStrings.au_abn = "au_abn".asInstanceOf[typingsSlinky.stripe.stripeStrings.au_abn]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def eu_vat: typingsSlinky.stripe.stripeStrings.eu_vat = "eu_vat".asInstanceOf[typingsSlinky.stripe.stripeStrings.eu_vat]
   @scala.inline
-  def eu_vat: typingsSlinky.stripe.stripeStrings.eu_vat = this.cast("eu_vat")
+  def in_gst: typingsSlinky.stripe.stripeStrings.in_gst = "in_gst".asInstanceOf[typingsSlinky.stripe.stripeStrings.in_gst]
   @scala.inline
-  def in_gst: typingsSlinky.stripe.stripeStrings.in_gst = this.cast("in_gst")
+  def no_vat: typingsSlinky.stripe.stripeStrings.no_vat = "no_vat".asInstanceOf[typingsSlinky.stripe.stripeStrings.no_vat]
   @scala.inline
-  def no_vat: typingsSlinky.stripe.stripeStrings.no_vat = this.cast("no_vat")
+  def nz_gst: typingsSlinky.stripe.stripeStrings.nz_gst = "nz_gst".asInstanceOf[typingsSlinky.stripe.stripeStrings.nz_gst]
   @scala.inline
-  def nz_gst: typingsSlinky.stripe.stripeStrings.nz_gst = this.cast("nz_gst")
-  @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
 }
 

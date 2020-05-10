@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonIsCaseSensitive extends js.Object {
-  var isCaseSensitive: js.UndefOr[Boolean] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var usesSql92CompliantStringComparison: js.UndefOr[Boolean] = js.undefined
+  var isCaseSensitive: js.UndefOr[Boolean] = js.native
+  var name: js.UndefOr[String] = js.native
+  var usesSql92CompliantStringComparison: js.UndefOr[Boolean] = js.native
 }
 
 object AnonIsCaseSensitive {
   @scala.inline
-  def apply(
-    isCaseSensitive: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    usesSql92CompliantStringComparison: js.UndefOr[Boolean] = js.undefined
-  ): AnonIsCaseSensitive = {
+  def apply(): AnonIsCaseSensitive = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(isCaseSensitive)) __obj.updateDynamic("isCaseSensitive")(isCaseSensitive.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(usesSql92CompliantStringComparison)) __obj.updateDynamic("usesSql92CompliantStringComparison")(usesSql92CompliantStringComparison.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonIsCaseSensitive]
   }
+  @scala.inline
+  implicit class AnonIsCaseSensitiveOps[Self <: AnonIsCaseSensitive] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsCaseSensitive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCaseSensitive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsCaseSensitive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCaseSensitive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsesSql92CompliantStringComparison(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usesSql92CompliantStringComparison")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsesSql92CompliantStringComparison: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usesSql92CompliantStringComparison")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -11,54 +11,198 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<googlemaps.google.maps.InfoWindowOptions> */
+@js.native
 trait InfoWindowProps extends js.Object {
-  var content: js.UndefOr[String | Node] = js.undefined
-  var disableAutoPan: js.UndefOr[Boolean] = js.undefined
-  var google: js.UndefOr[Typeofgoogle] = js.undefined
-  var map: js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]] = js.undefined
-  var mapCenter: js.UndefOr[LatLng | LatLngLiteral] = js.undefined
-  var marker: js.UndefOr[typingsSlinky.googlemaps.google.maps.Marker] = js.undefined
-  var maxWidth: js.UndefOr[Double] = js.undefined
-  var onClose: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onOpen: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var pixelOffset: js.UndefOr[Size] = js.undefined
-  var position: js.UndefOr[LatLng | LatLngLiteral] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var content: js.UndefOr[String | Node] = js.native
+  var disableAutoPan: js.UndefOr[Boolean] = js.native
+  var google: js.UndefOr[Typeofgoogle] = js.native
+  var map: js.UndefOr[typingsSlinky.googlemaps.google.maps.Map[Element]] = js.native
+  var mapCenter: js.UndefOr[LatLng | LatLngLiteral] = js.native
+  var marker: js.UndefOr[typingsSlinky.googlemaps.google.maps.Marker] = js.native
+  var maxWidth: js.UndefOr[Double] = js.native
+  var onClose: js.UndefOr[js.Function0[Unit]] = js.native
+  var onOpen: js.UndefOr[js.Function0[Unit]] = js.native
+  var pixelOffset: js.UndefOr[Size] = js.native
+  var position: js.UndefOr[LatLng | LatLngLiteral] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object InfoWindowProps {
   @scala.inline
-  def apply(
-    content: String | Node = null,
-    disableAutoPan: js.UndefOr[Boolean] = js.undefined,
-    google: Typeofgoogle = null,
-    map: typingsSlinky.googlemaps.google.maps.Map[Element] = null,
-    mapCenter: LatLng | LatLngLiteral = null,
-    marker: typingsSlinky.googlemaps.google.maps.Marker = null,
-    maxWidth: Int | Double = null,
-    onClose: () => Unit = null,
-    onOpen: () => Unit = null,
-    pixelOffset: Size = null,
-    position: LatLng | LatLngLiteral = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zIndex: Int | Double = null
-  ): InfoWindowProps = {
+  def apply(): InfoWindowProps = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableAutoPan)) __obj.updateDynamic("disableAutoPan")(disableAutoPan.asInstanceOf[js.Any])
-    if (google != null) __obj.updateDynamic("google")(google.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (mapCenter != null) __obj.updateDynamic("mapCenter")(mapCenter.asInstanceOf[js.Any])
-    if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
-    if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction0(onOpen))
-    if (pixelOffset != null) __obj.updateDynamic("pixelOffset")(pixelOffset.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[InfoWindowProps]
   }
+  @scala.inline
+  implicit class InfoWindowPropsOps[Self <: InfoWindowProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentNode(value: Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContent(value: String | Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableAutoPan(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutoPan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableAutoPan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableAutoPan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGoogle(value: Typeofgoogle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("google")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGoogle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("google")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMap(value: typingsSlinky.googlemaps.google.maps.Map[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapCenter(value: LatLng | LatLngLiteral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapCenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapCenter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: typingsSlinky.googlemaps.google.maps.Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelOffset(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: LatLng | LatLngLiteral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

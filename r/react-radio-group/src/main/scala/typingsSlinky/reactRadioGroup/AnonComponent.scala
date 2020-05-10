@@ -9,24 +9,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonComponent extends js.Object {
-  var Component: js.UndefOr[ReactComponentClass[Omit[HTMLProps[_], onChange | role]]] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.undefined
-  var selectedValue: js.UndefOr[js.Any] = js.undefined
+  var Component: js.UndefOr[ReactComponentClass[Omit[HTMLProps[_], onChange | role]]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.native
+  var selectedValue: js.UndefOr[js.Any] = js.native
 }
 
 object AnonComponent {
   @scala.inline
-  def apply(
-    Component: ReactComponentClass[Omit[HTMLProps[_], onChange | role]] = null,
-    onChange: /* value */ js.Any => Unit = null,
-    selectedValue: js.Any = null
-  ): AnonComponent = {
+  def apply(): AnonComponent = {
     val __obj = js.Dynamic.literal()
-    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (selectedValue != null) __obj.updateDynamic("selectedValue")(selectedValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonComponent]
   }
+  @scala.inline
+  implicit class AnonComponentOps[Self <: AnonComponent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponentFunctionComponent(value: ReactComponentClass[Omit[HTMLProps[_], onChange | role]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponentComponentClass(value: ReactComponentClass[Omit[HTMLProps[_], onChange | role]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponent(value: ReactComponentClass[Omit[HTMLProps[_], onChange | role]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* value */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

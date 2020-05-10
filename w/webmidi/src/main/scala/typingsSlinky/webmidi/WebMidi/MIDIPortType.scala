@@ -12,10 +12,8 @@ trait MIDIPortType extends js.Object
 
 object MIDIPortType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def input: typingsSlinky.webmidi.webmidiStrings.input = "input".asInstanceOf[typingsSlinky.webmidi.webmidiStrings.input]
   @scala.inline
-  def input: typingsSlinky.webmidi.webmidiStrings.input = this.cast("input")
-  @scala.inline
-  def output: typingsSlinky.webmidi.webmidiStrings.output = this.cast("output")
+  def output: typingsSlinky.webmidi.webmidiStrings.output = "output".asInstanceOf[typingsSlinky.webmidi.webmidiStrings.output]
 }
 

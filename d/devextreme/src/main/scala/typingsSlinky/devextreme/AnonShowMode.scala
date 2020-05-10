@@ -9,27 +9,81 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonShowMode extends js.Object {
-  var enabled: js.UndefOr[Boolean] = js.undefined
-  var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.undefined
-  var position: js.UndefOr[bottom | top] = js.undefined
-  var showMode: js.UndefOr[always | onHover] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
+  var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
+  var position: js.UndefOr[bottom | top] = js.native
+  var showMode: js.UndefOr[always | onHover] = js.native
 }
 
 object AnonShowMode {
   @scala.inline
-  def apply(
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    format: format = null,
-    position: bottom | top = null,
-    showMode: always | onHover = null
-  ): AnonShowMode = {
+  def apply(): AnonShowMode = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (showMode != null) __obj.updateDynamic("showMode")(showMode.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonShowMode]
   }
+  @scala.inline
+  implicit class AnonShowModeOps[Self <: AnonShowMode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatFunction1(value: /* value */ Double | js.Date => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFormat(value: format): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: bottom | top): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowMode(value: always | onHover): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,14 +7,14 @@ import scala.scalajs.js.annotation._
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.chromeApps.chromeAppsStrings.alarms
   - typingsSlinky.chromeApps.chromeAppsStrings.appview
-  - typingsSlinky.chromeApps.chromeAppsStrings.audio
+  - typingsSlinky.chromeApps.chromeAppsStrings.audio_
   - typingsSlinky.chromeApps.chromeAppsStrings.alwaysOnTopWindows
   - typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotalwaysOnTop
   - typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotfullscreen
   - typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotfullscreenDotoverrideEsc
   - typingsSlinky.chromeApps.chromeAppsStrings.appDotwindowDotshape
   - typingsSlinky.chromeApps.chromeAppsStrings.audioCapture
-  - typingsSlinky.chromeApps.chromeAppsStrings.background
+  - typingsSlinky.chromeApps.chromeAppsStrings.background_
   - typingsSlinky.chromeApps.chromeAppsStrings.browser
   - typingsSlinky.chromeApps.chromeAppsStrings.clipboardRead
   - typingsSlinky.chromeApps.chromeAppsStrings.clipboardWrite

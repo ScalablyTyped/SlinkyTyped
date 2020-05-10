@@ -17,20 +17,18 @@ trait RestHTTPMethods extends js.Object
 
 object RestHTTPMethods {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def delete: typingsSlinky.servicenowLondon.servicenowLondonStrings.delete = "delete".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.delete]
   @scala.inline
-  def delete: typingsSlinky.servicenowLondon.servicenowLondonStrings.delete = this.cast("delete")
+  def get: typingsSlinky.servicenowLondon.servicenowLondonStrings.get = "get".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.get]
   @scala.inline
-  def get: typingsSlinky.servicenowLondon.servicenowLondonStrings.get = this.cast("get")
+  def head: typingsSlinky.servicenowLondon.servicenowLondonStrings.head = "head".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.head]
   @scala.inline
-  def head: typingsSlinky.servicenowLondon.servicenowLondonStrings.head = this.cast("head")
+  def options: typingsSlinky.servicenowLondon.servicenowLondonStrings.options = "options".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.options]
   @scala.inline
-  def options: typingsSlinky.servicenowLondon.servicenowLondonStrings.options = this.cast("options")
+  def patch: typingsSlinky.servicenowLondon.servicenowLondonStrings.patch = "patch".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.patch]
   @scala.inline
-  def patch: typingsSlinky.servicenowLondon.servicenowLondonStrings.patch = this.cast("patch")
+  def post: typingsSlinky.servicenowLondon.servicenowLondonStrings.post = "post".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.post]
   @scala.inline
-  def post: typingsSlinky.servicenowLondon.servicenowLondonStrings.post = this.cast("post")
-  @scala.inline
-  def put: typingsSlinky.servicenowLondon.servicenowLondonStrings.put = this.cast("put")
+  def put: typingsSlinky.servicenowLondon.servicenowLondonStrings.put = "put".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.put]
 }
 

@@ -22,12 +22,53 @@ trait GetConfigResponse extends js.Object {
 
 object GetConfigResponse {
   @scala.inline
-  def apply(ConfigCred: String = null, ConfigFile: String = null, ConfigType: String = null): GetConfigResponse = {
+  def apply(): GetConfigResponse = {
     val __obj = js.Dynamic.literal()
-    if (ConfigCred != null) __obj.updateDynamic("ConfigCred")(ConfigCred.asInstanceOf[js.Any])
-    if (ConfigFile != null) __obj.updateDynamic("ConfigFile")(ConfigFile.asInstanceOf[js.Any])
-    if (ConfigType != null) __obj.updateDynamic("ConfigType")(ConfigType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConfigResponse]
   }
+  @scala.inline
+  implicit class GetConfigResponseOps[Self <: GetConfigResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigCred(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigCred")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigCred: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigCred")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfigType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConfigType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

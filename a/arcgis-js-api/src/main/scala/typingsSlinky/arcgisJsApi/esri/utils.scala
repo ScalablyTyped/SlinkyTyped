@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait utils extends js.Object {
   /**
     * Formats a UNIX timestamp to a basic date string. This function is only intended for convenience in formatting thumb values in slider widgets and does not include additional formatting options.
@@ -14,7 +15,7 @@ trait utils extends js.Object {
     * @param value The UNIX timestamp to convert to a formatted date string.
     *
     */
-  def formatDateLabel(value: Double): String
+  def formatDateLabel(value: Double): String = js.native
   /**
     * Computes and returns standard deviation values based on the given average and standard deviation.
     *
@@ -25,7 +26,7 @@ trait utils extends js.Object {
     * @param count The number of standard deviations from the mean to compute.
     *
     */
-  def getDeviationValues(standardDeviation: Double, average: Double, count: Double): js.Array[Double]
+  def getDeviationValues(standardDeviation: Double, average: Double, count: Double): js.Array[Double] = js.native
 }
 
 @JSGlobal("__esri.utils")

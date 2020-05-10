@@ -51,22 +51,89 @@ trait SchemaOrgChartSpec extends js.Object {
 
 object SchemaOrgChartSpec {
   @scala.inline
-  def apply(
-    labels: SchemaChartData = null,
-    nodeColor: SchemaColor = null,
-    nodeSize: String = null,
-    parentLabels: SchemaChartData = null,
-    selectedNodeColor: SchemaColor = null,
-    tooltips: SchemaChartData = null
-  ): SchemaOrgChartSpec = {
+  def apply(): SchemaOrgChartSpec = {
     val __obj = js.Dynamic.literal()
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (nodeColor != null) __obj.updateDynamic("nodeColor")(nodeColor.asInstanceOf[js.Any])
-    if (nodeSize != null) __obj.updateDynamic("nodeSize")(nodeSize.asInstanceOf[js.Any])
-    if (parentLabels != null) __obj.updateDynamic("parentLabels")(parentLabels.asInstanceOf[js.Any])
-    if (selectedNodeColor != null) __obj.updateDynamic("selectedNodeColor")(selectedNodeColor.asInstanceOf[js.Any])
-    if (tooltips != null) __obj.updateDynamic("tooltips")(tooltips.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOrgChartSpec]
   }
+  @scala.inline
+  implicit class SchemaOrgChartSpecOps[Self <: SchemaOrgChartSpec] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabels(value: SchemaChartData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeColor(value: SchemaColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentLabels(value: SchemaChartData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParentLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedNodeColor(value: SchemaColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedNodeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedNodeColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedNodeColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltips(value: SchemaChartData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltips")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltips: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltips")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

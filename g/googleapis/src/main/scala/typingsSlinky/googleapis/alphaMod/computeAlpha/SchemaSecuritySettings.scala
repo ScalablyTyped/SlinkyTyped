@@ -32,18 +32,65 @@ trait SchemaSecuritySettings extends js.Object {
 
 object SchemaSecuritySettings {
   @scala.inline
-  def apply(
-    authenticationPolicy: SchemaAuthenticationPolicy = null,
-    authorizationConfig: SchemaAuthorizationConfig = null,
-    clientTlsSettings: SchemaClientTlsSettings = null,
-    serverSettingsSelector: SchemaServerSecuritySettingsSelector = null
-  ): SchemaSecuritySettings = {
+  def apply(): SchemaSecuritySettings = {
     val __obj = js.Dynamic.literal()
-    if (authenticationPolicy != null) __obj.updateDynamic("authenticationPolicy")(authenticationPolicy.asInstanceOf[js.Any])
-    if (authorizationConfig != null) __obj.updateDynamic("authorizationConfig")(authorizationConfig.asInstanceOf[js.Any])
-    if (clientTlsSettings != null) __obj.updateDynamic("clientTlsSettings")(clientTlsSettings.asInstanceOf[js.Any])
-    if (serverSettingsSelector != null) __obj.updateDynamic("serverSettingsSelector")(serverSettingsSelector.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecuritySettings]
   }
+  @scala.inline
+  implicit class SchemaSecuritySettingsOps[Self <: SchemaSecuritySettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticationPolicy(value: SchemaAuthenticationPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticationPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthorizationConfig(value: SchemaAuthorizationConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientTlsSettings(value: SchemaClientTlsSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientTlsSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientTlsSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientTlsSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerSettingsSelector(value: SchemaServerSecuritySettingsSelector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSettingsSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerSettingsSelector: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverSettingsSelector")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

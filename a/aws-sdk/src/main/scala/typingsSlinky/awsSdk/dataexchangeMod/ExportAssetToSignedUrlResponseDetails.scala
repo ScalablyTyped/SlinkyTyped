@@ -30,17 +30,59 @@ trait ExportAssetToSignedUrlResponseDetails extends js.Object {
 
 object ExportAssetToSignedUrlResponseDetails {
   @scala.inline
-  def apply(
-    AssetId: Id,
-    DataSetId: Id,
-    RevisionId: Id,
-    SignedUrl: string = null,
-    SignedUrlExpiresAt: js.Date = null
-  ): ExportAssetToSignedUrlResponseDetails = {
+  def apply(AssetId: Id, DataSetId: Id, RevisionId: Id): ExportAssetToSignedUrlResponseDetails = {
     val __obj = js.Dynamic.literal(AssetId = AssetId.asInstanceOf[js.Any], DataSetId = DataSetId.asInstanceOf[js.Any], RevisionId = RevisionId.asInstanceOf[js.Any])
-    if (SignedUrl != null) __obj.updateDynamic("SignedUrl")(SignedUrl.asInstanceOf[js.Any])
-    if (SignedUrlExpiresAt != null) __obj.updateDynamic("SignedUrlExpiresAt")(SignedUrlExpiresAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportAssetToSignedUrlResponseDetails]
   }
+  @scala.inline
+  implicit class ExportAssetToSignedUrlResponseDetailsOps[Self <: ExportAssetToSignedUrlResponseDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssetId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataSetId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRevisionId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RevisionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSignedUrl(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SignedUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignedUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SignedUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignedUrlExpiresAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SignedUrlExpiresAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignedUrlExpiresAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SignedUrlExpiresAt")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

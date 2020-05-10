@@ -17,6 +17,7 @@ import scala.scalajs.js.annotation._
   * 
   * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
   */
+@js.native
 trait Diagnostics extends js.Object {
   /**
     * Gets a string that represents the current view of Outlook on the web.
@@ -41,7 +42,7 @@ trait Diagnostics extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var OWAView: typingsSlinky.officeJsPreview.Office.MailboxEnums.OWAView | OneColumn | TwoColumns | ThreeColumns
+  var OWAView: typingsSlinky.officeJsPreview.Office.MailboxEnums.OWAView | OneColumn | TwoColumns | ThreeColumns = js.native
   /**
     * Gets a string that represents the name of the host application.
     *
@@ -55,7 +56,7 @@ trait Diagnostics extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var hostName: String
+  var hostName: String = js.native
   /**
     * Gets a string that represents the version of either the host application or the Exchange Server (e.g., "15.0.468.0").
     *
@@ -68,15 +69,40 @@ trait Diagnostics extends js.Object {
     * 
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
     */
-  var hostVersion: String
+  var hostVersion: String = js.native
 }
 
 object Diagnostics {
   @scala.inline
   def apply(OWAView: OWAView | OneColumn | TwoColumns | ThreeColumns, hostName: String, hostVersion: String): Diagnostics = {
     val __obj = js.Dynamic.literal(OWAView = OWAView.asInstanceOf[js.Any], hostName = hostName.asInstanceOf[js.Any], hostVersion = hostVersion.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Diagnostics]
   }
+  @scala.inline
+  implicit class DiagnosticsOps[Self <: Diagnostics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOWAView(value: OWAView | OneColumn | TwoColumns | ThreeColumns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OWAView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

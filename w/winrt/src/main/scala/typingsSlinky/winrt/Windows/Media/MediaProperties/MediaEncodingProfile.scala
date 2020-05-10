@@ -9,14 +9,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.Media.MediaProperties.MediaEncodingProfile")
 @js.native
-class MediaEncodingProfile () extends IMediaEncodingProfile {
-  /* CompleteClass */
-  override var audio: AudioEncodingProperties = js.native
-  /* CompleteClass */
-  override var container: ContainerEncodingProperties = js.native
-  /* CompleteClass */
-  override var video: VideoEncodingProperties = js.native
-}
+class MediaEncodingProfile () extends IMediaEncodingProfile
 
 /* static members */
 @JSGlobal("Windows.Media.MediaProperties.MediaEncodingProfile")

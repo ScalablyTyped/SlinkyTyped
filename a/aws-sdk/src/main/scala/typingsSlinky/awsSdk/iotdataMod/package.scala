@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 package object iotdataMod {
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.iotdataMod.ClientApiVersions
-  type JsonDocument = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotdataMod.Blob | java.lang.String
-  type Payload = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotdataMod.Blob | java.lang.String
+  type JsonDocument = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotdataMod.Blob | java.lang.String
+  type Payload = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotdataMod.Blob | java.lang.String
   type Qos = scala.Double
   type ThingName = java.lang.String
   type Topic = java.lang.String

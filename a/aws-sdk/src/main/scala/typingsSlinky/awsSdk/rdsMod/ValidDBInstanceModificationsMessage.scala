@@ -18,14 +18,41 @@ trait ValidDBInstanceModificationsMessage extends js.Object {
 
 object ValidDBInstanceModificationsMessage {
   @scala.inline
-  def apply(
-    Storage: ValidStorageOptionsList = null,
-    ValidProcessorFeatures: AvailableProcessorFeatureList = null
-  ): ValidDBInstanceModificationsMessage = {
+  def apply(): ValidDBInstanceModificationsMessage = {
     val __obj = js.Dynamic.literal()
-    if (Storage != null) __obj.updateDynamic("Storage")(Storage.asInstanceOf[js.Any])
-    if (ValidProcessorFeatures != null) __obj.updateDynamic("ValidProcessorFeatures")(ValidProcessorFeatures.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidDBInstanceModificationsMessage]
   }
+  @scala.inline
+  implicit class ValidDBInstanceModificationsMessageOps[Self <: ValidDBInstanceModificationsMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStorage(value: ValidStorageOptionsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Storage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStorage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Storage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidProcessorFeatures(value: AvailableProcessorFeatureList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidProcessorFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidProcessorFeatures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidProcessorFeatures")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

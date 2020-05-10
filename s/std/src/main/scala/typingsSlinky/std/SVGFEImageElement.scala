@@ -46,11 +46,12 @@ trait SVGFEImageElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("SVGFEImageElement")
 @js.native
-object SVGFEImageElement extends Instantiable0[SVGFEImageElement]
+object SVGFEImageElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGFEImageElement]
 

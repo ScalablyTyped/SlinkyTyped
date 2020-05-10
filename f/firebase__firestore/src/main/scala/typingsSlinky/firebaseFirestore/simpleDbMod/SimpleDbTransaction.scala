@@ -20,7 +20,7 @@ class SimpleDbTransaction protected () extends js.Object {
   val transaction: js.Any = js.native
   def abort(): Unit = js.native
   def abort(error: js.Error): Unit = js.native
-  def completionPromise(): js.Promise[Unit] = js.native
+  def completionPromise: js.Promise[Unit] = js.native
   /**
     * Returns a SimpleDbStore<KeyType, ValueType> for the specified store. All
     * operations performed on the SimpleDbStore happen within the context of this

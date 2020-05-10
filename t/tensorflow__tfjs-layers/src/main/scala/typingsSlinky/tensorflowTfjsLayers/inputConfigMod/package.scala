@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object inputConfigMod {
+  /* Inlined @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/input_config.InputLayerSerialization['class_name'] */
   type InputLayerClassName = typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.InputLayer
   type InputLayerSerialization = typingsSlinky.tensorflowTfjsLayers.topologyConfigMod.BaseLayerSerialization[
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.InputLayer, 

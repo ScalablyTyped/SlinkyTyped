@@ -2,14 +2,13 @@ package typingsSlinky.dexie.mod.Dexie
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.dexie.AnonInstantiableTError
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Promise[T] extends js.Object {
-  @JSName(scala.scalajs.js.Symbol.toStringTag)
+  @JSName(js.Symbol.toStringTag)
   val toStringTag: typingsSlinky.dexie.dexieStrings.Promise = js.native
   def `catch`(): Promise[T] = js.native
   /**
@@ -19,7 +18,7 @@ trait Promise[T] extends js.Object {
     * @param onrejected The callback to execute when the Promise is rejected.
     * @returns A Promise for the completion of the callback.
     */
-  def `catch`(errorName: String, onrejected: js.Function1[/* reason */ Error, T | js.Thenable[T]]): Promise[T] = js.native
+  def `catch`(errorName: String, onrejected: js.Function1[/* reason */ js.Error, T | js.Thenable[T]]): Promise[T] = js.native
   def `catch`(onrejected: js.Function1[/* reason */ js.Any, T | js.Thenable[T]]): Promise[T] = js.native
   /**
     * Catch errors where error => error instanceof errorConstructor. Other errors will remain uncaught.

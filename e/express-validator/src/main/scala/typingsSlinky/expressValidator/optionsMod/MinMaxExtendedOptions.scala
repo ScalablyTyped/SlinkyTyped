@@ -4,25 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait MinMaxExtendedOptions extends MinMaxOptions {
-  var gt: js.UndefOr[Double] = js.undefined
-  var lt: js.UndefOr[Double] = js.undefined
+  var gt: js.UndefOr[Double] = js.native
+  var lt: js.UndefOr[Double] = js.native
 }
 
 object MinMaxExtendedOptions {
   @scala.inline
-  def apply(
-    gt: Int | Double = null,
-    lt: Int | Double = null,
-    max: Int | Double = null,
-    min: Int | Double = null
-  ): MinMaxExtendedOptions = {
+  def apply(): MinMaxExtendedOptions = {
     val __obj = js.Dynamic.literal()
-    if (gt != null) __obj.updateDynamic("gt")(gt.asInstanceOf[js.Any])
-    if (lt != null) __obj.updateDynamic("lt")(lt.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
     __obj.asInstanceOf[MinMaxExtendedOptions]
   }
+  @scala.inline
+  implicit class MinMaxExtendedOptionsOps[Self <: MinMaxExtendedOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGt(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLt(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lt")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

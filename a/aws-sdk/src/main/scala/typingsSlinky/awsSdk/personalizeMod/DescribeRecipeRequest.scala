@@ -16,8 +16,21 @@ object DescribeRecipeRequest {
   @scala.inline
   def apply(recipeArn: Arn): DescribeRecipeRequest = {
     val __obj = js.Dynamic.literal(recipeArn = recipeArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeRecipeRequest]
   }
+  @scala.inline
+  implicit class DescribeRecipeRequestOps[Self <: DescribeRecipeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecipeArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipeArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

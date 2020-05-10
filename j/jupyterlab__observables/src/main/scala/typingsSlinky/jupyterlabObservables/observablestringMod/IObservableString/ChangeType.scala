@@ -16,12 +16,10 @@ trait ChangeType extends js.Object
 
 object ChangeType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def insert: typingsSlinky.jupyterlabObservables.jupyterlabObservablesStrings.insert = "insert".asInstanceOf[typingsSlinky.jupyterlabObservables.jupyterlabObservablesStrings.insert]
   @scala.inline
-  def insert: typingsSlinky.jupyterlabObservables.jupyterlabObservablesStrings.insert = this.cast("insert")
+  def remove: typingsSlinky.jupyterlabObservables.jupyterlabObservablesStrings.remove = "remove".asInstanceOf[typingsSlinky.jupyterlabObservables.jupyterlabObservablesStrings.remove]
   @scala.inline
-  def remove: typingsSlinky.jupyterlabObservables.jupyterlabObservablesStrings.remove = this.cast("remove")
-  @scala.inline
-  def set: typingsSlinky.jupyterlabObservables.jupyterlabObservablesStrings.set = this.cast("set")
+  def set: typingsSlinky.jupyterlabObservables.jupyterlabObservablesStrings.set = "set".asInstanceOf[typingsSlinky.jupyterlabObservables.jupyterlabObservablesStrings.set]
 }
 

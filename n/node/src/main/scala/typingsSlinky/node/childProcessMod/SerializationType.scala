@@ -12,10 +12,8 @@ trait SerializationType extends js.Object
 
 object SerializationType {
   @scala.inline
-  def advanced: typingsSlinky.node.nodeStrings.advanced = this.cast("advanced")
+  def advanced: typingsSlinky.node.nodeStrings.advanced = "advanced".asInstanceOf[typingsSlinky.node.nodeStrings.advanced]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def json: typingsSlinky.node.nodeStrings.json = this.cast("json")
+  def json: typingsSlinky.node.nodeStrings.json = "json".asInstanceOf[typingsSlinky.node.nodeStrings.json]
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.chocolatechipjs
 
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Text
 import typingsSlinky.std.Array
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -486,8 +486,8 @@ trait ChocolateChipElementArray extends Array[HTMLElement] {
     *        When Number is supplied, it will be converted to a String representation.
     *        To delete text, use ChocolateChipElementArray.empty() or ChocolateChipElementArray.remove().
     */
-  def text(text: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def text(text: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def text(text: String): HTMLElement = js.native
+  def text(text: Double): HTMLElement = js.native
   /**
     * Add or remove a classe from each element in the set of matched elements, depending on whether the class is present or not.
     *

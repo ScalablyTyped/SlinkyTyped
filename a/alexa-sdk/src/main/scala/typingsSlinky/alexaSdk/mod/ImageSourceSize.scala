@@ -15,16 +15,14 @@ trait ImageSourceSize extends js.Object
 
 object ImageSourceSize {
   @scala.inline
-  def LARGE: typingsSlinky.alexaSdk.alexaSdkStrings.LARGE = this.cast("LARGE")
+  def LARGE: typingsSlinky.alexaSdk.alexaSdkStrings.LARGE = "LARGE".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.LARGE]
   @scala.inline
-  def MEDIUM: typingsSlinky.alexaSdk.alexaSdkStrings.MEDIUM = this.cast("MEDIUM")
+  def MEDIUM: typingsSlinky.alexaSdk.alexaSdkStrings.MEDIUM = "MEDIUM".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.MEDIUM]
   @scala.inline
-  def SMALL: typingsSlinky.alexaSdk.alexaSdkStrings.SMALL = this.cast("SMALL")
+  def SMALL: typingsSlinky.alexaSdk.alexaSdkStrings.SMALL = "SMALL".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.SMALL]
   @scala.inline
-  def X_LARGE: typingsSlinky.alexaSdk.alexaSdkStrings.X_LARGE = this.cast("X_LARGE")
+  def X_LARGE: typingsSlinky.alexaSdk.alexaSdkStrings.X_LARGE = "X_LARGE".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.X_LARGE]
   @scala.inline
-  def X_SMALL: typingsSlinky.alexaSdk.alexaSdkStrings.X_SMALL = this.cast("X_SMALL")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def X_SMALL: typingsSlinky.alexaSdk.alexaSdkStrings.X_SMALL = "X_SMALL".asInstanceOf[typingsSlinky.alexaSdk.alexaSdkStrings.X_SMALL]
 }
 

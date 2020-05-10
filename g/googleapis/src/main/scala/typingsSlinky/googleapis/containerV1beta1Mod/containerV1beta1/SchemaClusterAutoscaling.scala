@@ -24,14 +24,41 @@ trait SchemaClusterAutoscaling extends js.Object {
 
 object SchemaClusterAutoscaling {
   @scala.inline
-  def apply(
-    enableNodeAutoprovisioning: js.UndefOr[Boolean] = js.undefined,
-    resourceLimits: js.Array[SchemaResourceLimit] = null
-  ): SchemaClusterAutoscaling = {
+  def apply(): SchemaClusterAutoscaling = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enableNodeAutoprovisioning)) __obj.updateDynamic("enableNodeAutoprovisioning")(enableNodeAutoprovisioning.asInstanceOf[js.Any])
-    if (resourceLimits != null) __obj.updateDynamic("resourceLimits")(resourceLimits.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClusterAutoscaling]
   }
+  @scala.inline
+  implicit class SchemaClusterAutoscalingOps[Self <: SchemaClusterAutoscaling] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnableNodeAutoprovisioning(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableNodeAutoprovisioning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableNodeAutoprovisioning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableNodeAutoprovisioning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceLimits(value: js.Array[SchemaResourceLimit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLimits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceLimits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceLimits")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

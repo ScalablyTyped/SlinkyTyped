@@ -1,10 +1,10 @@
 package typingsSlinky.webtorrent.mod
 
+import org.scalajs.dom.raw.File
+import org.scalajs.dom.raw.FileList
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.EventEmitter
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.std.File
-import typingsSlinky.std.FileList
 import typingsSlinky.webtorrent.webtorrentStrings.error
 import typingsSlinky.webtorrent.webtorrentStrings.torrent
 import scala.scalajs.js

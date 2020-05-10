@@ -65,26 +65,113 @@ trait SchemaDataPoint extends js.Object {
 
 object SchemaDataPoint {
   @scala.inline
-  def apply(
-    computationTimeMillis: String = null,
-    dataTypeName: String = null,
-    endTimeNanos: String = null,
-    modifiedTimeMillis: String = null,
-    originDataSourceId: String = null,
-    rawTimestampNanos: String = null,
-    startTimeNanos: String = null,
-    value: js.Array[SchemaValue] = null
-  ): SchemaDataPoint = {
+  def apply(): SchemaDataPoint = {
     val __obj = js.Dynamic.literal()
-    if (computationTimeMillis != null) __obj.updateDynamic("computationTimeMillis")(computationTimeMillis.asInstanceOf[js.Any])
-    if (dataTypeName != null) __obj.updateDynamic("dataTypeName")(dataTypeName.asInstanceOf[js.Any])
-    if (endTimeNanos != null) __obj.updateDynamic("endTimeNanos")(endTimeNanos.asInstanceOf[js.Any])
-    if (modifiedTimeMillis != null) __obj.updateDynamic("modifiedTimeMillis")(modifiedTimeMillis.asInstanceOf[js.Any])
-    if (originDataSourceId != null) __obj.updateDynamic("originDataSourceId")(originDataSourceId.asInstanceOf[js.Any])
-    if (rawTimestampNanos != null) __obj.updateDynamic("rawTimestampNanos")(rawTimestampNanos.asInstanceOf[js.Any])
-    if (startTimeNanos != null) __obj.updateDynamic("startTimeNanos")(startTimeNanos.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDataPoint]
   }
+  @scala.inline
+  implicit class SchemaDataPointOps[Self <: SchemaDataPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComputationTimeMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computationTimeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputationTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computationTimeMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataTypeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTypeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataTypeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataTypeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTimeNanos(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeNanos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTimeNanos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTimeNanos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModifiedTimeMillis(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedTimeMillis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModifiedTimeMillis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedTimeMillis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginDataSourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originDataSourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginDataSourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originDataSourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRawTimestampNanos(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawTimestampNanos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRawTimestampNanos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawTimestampNanos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTimeNanos(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeNanos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimeNanos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimeNanos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Array[SchemaValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

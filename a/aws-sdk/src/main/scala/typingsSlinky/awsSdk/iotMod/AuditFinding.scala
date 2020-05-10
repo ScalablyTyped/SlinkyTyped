@@ -50,30 +50,137 @@ trait AuditFinding extends js.Object {
 
 object AuditFinding {
   @scala.inline
-  def apply(
-    checkName: AuditCheckName = null,
-    findingId: FindingId = null,
-    findingTime: js.Date = null,
-    nonCompliantResource: NonCompliantResource = null,
-    reasonForNonCompliance: ReasonForNonCompliance = null,
-    reasonForNonComplianceCode: ReasonForNonComplianceCode = null,
-    relatedResources: RelatedResources = null,
-    severity: AuditFindingSeverity = null,
-    taskId: AuditTaskId = null,
-    taskStartTime: js.Date = null
-  ): AuditFinding = {
+  def apply(): AuditFinding = {
     val __obj = js.Dynamic.literal()
-    if (checkName != null) __obj.updateDynamic("checkName")(checkName.asInstanceOf[js.Any])
-    if (findingId != null) __obj.updateDynamic("findingId")(findingId.asInstanceOf[js.Any])
-    if (findingTime != null) __obj.updateDynamic("findingTime")(findingTime.asInstanceOf[js.Any])
-    if (nonCompliantResource != null) __obj.updateDynamic("nonCompliantResource")(nonCompliantResource.asInstanceOf[js.Any])
-    if (reasonForNonCompliance != null) __obj.updateDynamic("reasonForNonCompliance")(reasonForNonCompliance.asInstanceOf[js.Any])
-    if (reasonForNonComplianceCode != null) __obj.updateDynamic("reasonForNonComplianceCode")(reasonForNonComplianceCode.asInstanceOf[js.Any])
-    if (relatedResources != null) __obj.updateDynamic("relatedResources")(relatedResources.asInstanceOf[js.Any])
-    if (severity != null) __obj.updateDynamic("severity")(severity.asInstanceOf[js.Any])
-    if (taskId != null) __obj.updateDynamic("taskId")(taskId.asInstanceOf[js.Any])
-    if (taskStartTime != null) __obj.updateDynamic("taskStartTime")(taskStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuditFinding]
   }
+  @scala.inline
+  implicit class AuditFindingOps[Self <: AuditFinding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCheckName(value: AuditCheckName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFindingId(value: FindingId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFindingId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findingId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFindingTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findingTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFindingTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findingTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonCompliantResource(value: NonCompliantResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonCompliantResource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonCompliantResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonCompliantResource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReasonForNonCompliance(value: ReasonForNonCompliance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonForNonCompliance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReasonForNonCompliance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonForNonCompliance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReasonForNonComplianceCode(value: ReasonForNonComplianceCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonForNonComplianceCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReasonForNonComplianceCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reasonForNonComplianceCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelatedResources(value: RelatedResources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelatedResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatedResources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeverity(value: AuditFindingSeverity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeverity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("severity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskId(value: AuditTaskId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStartTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

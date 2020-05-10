@@ -18,11 +18,41 @@ trait EventCategoriesMap extends js.Object {
 
 object EventCategoriesMap {
   @scala.inline
-  def apply(Events: EventInfoMapList = null, SourceType: String = null): EventCategoriesMap = {
+  def apply(): EventCategoriesMap = {
     val __obj = js.Dynamic.literal()
-    if (Events != null) __obj.updateDynamic("Events")(Events.asInstanceOf[js.Any])
-    if (SourceType != null) __obj.updateDynamic("SourceType")(SourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventCategoriesMap]
   }
+  @scala.inline
+  implicit class EventCategoriesMapOps[Self <: EventCategoriesMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvents(value: EventInfoMapList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,7 +21,12 @@ class ^ protected () extends WebSocket {
 @js.native
 object ^
   extends TopLevel[
-      (Instantiable1[/* url */ String, WebSocket]) with (Instantiable2[/* url */ String, /* _reserved */ js.Any, WebSocket]) with (Instantiable3[/* url */ String, /* _reserved */ js.Any, /* options */ Options, WebSocket])
+      (Instantiable1[/* url */ String, org.scalajs.dom.raw.WebSocket]) with (Instantiable2[/* url */ String, /* _reserved */ js.Any, org.scalajs.dom.raw.WebSocket]) with (Instantiable3[
+        /* url */ String, 
+        /* _reserved */ js.Any, 
+        /* options */ Options, 
+        org.scalajs.dom.raw.WebSocket
+      ])
     ] {
   var CLOSED: typingsSlinky.sockjsClient.mod.CLOSED = js.native
   var CLOSING: typingsSlinky.sockjsClient.mod.CLOSING = js.native

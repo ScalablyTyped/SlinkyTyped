@@ -34,18 +34,65 @@ trait Rule extends js.Object {
 
 object Rule {
   @scala.inline
-  def apply(
-    Name: EntityName,
-    Priority: RulePriority,
-    Statement: Statement,
-    VisibilityConfig: VisibilityConfig,
-    Action: RuleAction = null,
-    OverrideAction: OverrideAction = null
-  ): Rule = {
+  def apply(Name: EntityName, Priority: RulePriority, Statement: Statement, VisibilityConfig: VisibilityConfig): Rule = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], Priority = Priority.asInstanceOf[js.Any], Statement = Statement.asInstanceOf[js.Any], VisibilityConfig = VisibilityConfig.asInstanceOf[js.Any])
-    if (Action != null) __obj.updateDynamic("Action")(Action.asInstanceOf[js.Any])
-    if (OverrideAction != null) __obj.updateDynamic("OverrideAction")(OverrideAction.asInstanceOf[js.Any])
     __obj.asInstanceOf[Rule]
   }
+  @scala.inline
+  implicit class RuleOps[Self <: Rule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: EntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPriority(value: RulePriority): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatement(value: Statement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Statement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisibilityConfig(value: VisibilityConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VisibilityConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAction(value: RuleAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverrideAction(value: OverrideAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OverrideAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrideAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OverrideAction")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,30 +4,89 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait App extends js.Object {
-  var association: js.UndefOr[Null | AppAssociation] = js.undefined
-  var id: String
-  var name: String
-  var org: Null | Org
-  var repo_url: js.UndefOr[String] = js.undefined
-  var slug: String
+  var association: js.UndefOr[Null | AppAssociation] = js.native
+  var id: String = js.native
+  var name: String = js.native
+  var org: Null | Org = js.native
+  var repo_url: js.UndefOr[String] = js.native
+  var slug: String = js.native
 }
 
 object App {
   @scala.inline
-  def apply(
-    id: String,
-    name: String,
-    slug: String,
-    association: AppAssociation = null,
-    org: Org = null,
-    repo_url: String = null
-  ): App = {
+  def apply(id: String, name: String, slug: String): App = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any])
-    if (association != null) __obj.updateDynamic("association")(association.asInstanceOf[js.Any])
-    if (org != null) __obj.updateDynamic("org")(org.asInstanceOf[js.Any])
-    if (repo_url != null) __obj.updateDynamic("repo_url")(repo_url.asInstanceOf[js.Any])
     __obj.asInstanceOf[App]
   }
+  @scala.inline
+  implicit class AppOps[Self <: App] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSlug(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssociation(value: AppAssociation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("association")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("association")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAssociationNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("association")(null)
+        ret
+    }
+    @scala.inline
+    def withOrg(value: Org): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrgNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("org")(null)
+        ret
+    }
+    @scala.inline
+    def withRepo_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repo_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepo_url: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repo_url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

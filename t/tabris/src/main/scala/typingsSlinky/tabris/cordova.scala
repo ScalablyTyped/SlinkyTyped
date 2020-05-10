@@ -1,0 +1,11 @@
+package typingsSlinky.tabris
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("cordova")
+@js.native
+object cordova extends TopLevel[Cordova_]
+

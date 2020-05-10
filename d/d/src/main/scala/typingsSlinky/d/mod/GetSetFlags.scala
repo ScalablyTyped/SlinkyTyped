@@ -13,12 +13,10 @@ trait GetSetFlags extends js.Object
 
 object GetSetFlags {
   @scala.inline
-  def c: typingsSlinky.d.dStrings.c = this.cast("c")
+  def c: typingsSlinky.d.dStrings.c = "c".asInstanceOf[typingsSlinky.d.dStrings.c]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ce: typingsSlinky.d.dStrings.ce = "ce".asInstanceOf[typingsSlinky.d.dStrings.ce]
   @scala.inline
-  def ce: typingsSlinky.d.dStrings.ce = this.cast("ce")
-  @scala.inline
-  def e: typingsSlinky.d.dStrings.e = this.cast("e")
+  def e: typingsSlinky.d.dStrings.e = "e".asInstanceOf[typingsSlinky.d.dStrings.e]
 }
 

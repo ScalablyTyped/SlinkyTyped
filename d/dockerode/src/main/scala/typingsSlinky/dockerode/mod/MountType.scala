@@ -13,12 +13,10 @@ trait MountType extends js.Object
 
 object MountType {
   @scala.inline
-  def bind: typingsSlinky.dockerode.dockerodeStrings.bind = this.cast("bind")
+  def bind: typingsSlinky.dockerode.dockerodeStrings.bind = "bind".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.bind]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def tmpfs: typingsSlinky.dockerode.dockerodeStrings.tmpfs = "tmpfs".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.tmpfs]
   @scala.inline
-  def tmpfs: typingsSlinky.dockerode.dockerodeStrings.tmpfs = this.cast("tmpfs")
-  @scala.inline
-  def volume: typingsSlinky.dockerode.dockerodeStrings.volume = this.cast("volume")
+  def volume: typingsSlinky.dockerode.dockerodeStrings.volume = "volume".asInstanceOf[typingsSlinky.dockerode.dockerodeStrings.volume]
 }
 

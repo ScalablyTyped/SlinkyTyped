@@ -12,10 +12,8 @@ trait Applicability extends js.Object
 
 object Applicability {
   @scala.inline
-  def always: typingsSlinky.commitlintLoad.commitlintLoadStrings.always = this.cast("always")
+  def always: typingsSlinky.commitlintLoad.commitlintLoadStrings.always = "always".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def never: typingsSlinky.commitlintLoad.commitlintLoadStrings.never = this.cast("never")
+  def never: typingsSlinky.commitlintLoad.commitlintLoadStrings.never = "never".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.never]
 }
 

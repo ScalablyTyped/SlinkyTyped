@@ -26,17 +26,59 @@ trait GetOrganizationsAccessReportRequest extends js.Object {
 
 object GetOrganizationsAccessReportRequest {
   @scala.inline
-  def apply(
-    JobId: jobIDType,
-    Marker: markerType = null,
-    MaxItems: Int | Double = null,
-    SortKey: sortKeyType = null
-  ): GetOrganizationsAccessReportRequest = {
+  def apply(JobId: jobIDType): GetOrganizationsAccessReportRequest = {
     val __obj = js.Dynamic.literal(JobId = JobId.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (MaxItems != null) __obj.updateDynamic("MaxItems")(MaxItems.asInstanceOf[js.Any])
-    if (SortKey != null) __obj.updateDynamic("SortKey")(SortKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetOrganizationsAccessReportRequest]
   }
+  @scala.inline
+  implicit class GetOrganizationsAccessReportRequestOps[Self <: GetOrganizationsAccessReportRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobId(value: jobIDType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMarker(value: markerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxItems(value: maxItemsType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortKey(value: sortKeyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SortKey")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

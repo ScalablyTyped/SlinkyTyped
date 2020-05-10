@@ -1,0 +1,35 @@
+package typingsSlinky.ariClient.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait RecordingFinished extends Event {
+  /* Properties */
+  var recording: LiveRecording = js.native
+}
+
+object RecordingFinished {
+  @scala.inline
+  def apply(application: String, recording: LiveRecording, timestamp: js.Date, `type`: String): RecordingFinished = {
+    val __obj = js.Dynamic.literal(application = application.asInstanceOf[js.Any], recording = recording.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RecordingFinished]
+  }
+  @scala.inline
+  implicit class RecordingFinishedOps[Self <: RecordingFinished] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecording(value: LiveRecording): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recording")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

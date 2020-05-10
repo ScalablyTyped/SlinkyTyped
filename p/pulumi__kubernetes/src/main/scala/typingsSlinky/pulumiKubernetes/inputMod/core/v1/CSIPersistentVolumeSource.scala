@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 /**
   * Represents storage that is managed by an external CSI volume driver (Beta feature)
   */
+@js.native
 trait CSIPersistentVolumeSource extends js.Object {
   /**
     * ControllerExpandSecretRef is a reference to the secret object containing sensitive
@@ -17,75 +18,162 @@ trait CSIPersistentVolumeSource extends js.Object {
     * optional, and may be empty if no secret is required. If the secret object contains more
     * than one secret, all secrets are passed.
     */
-  var controllerExpandSecretRef: js.UndefOr[Input[SecretReference]] = js.undefined
+  var controllerExpandSecretRef: js.UndefOr[Input[SecretReference]] = js.native
   /**
     * ControllerPublishSecretRef is a reference to the secret object containing sensitive
     * information to pass to the CSI driver to complete the CSI ControllerPublishVolume and
     * ControllerUnpublishVolume calls. This field is optional, and may be empty if no secret is
     * required. If the secret object contains more than one secret, all secrets are passed.
     */
-  var controllerPublishSecretRef: js.UndefOr[Input[SecretReference]] = js.undefined
+  var controllerPublishSecretRef: js.UndefOr[Input[SecretReference]] = js.native
   /**
     * Driver is the name of the driver to use for this volume. Required.
     */
-  var driver: Input[String]
+  var driver: Input[String] = js.native
   /**
     * Filesystem type to mount. Must be a filesystem type supported by the host operating system.
     * Ex. "ext4", "xfs", "ntfs".
     */
-  var fsType: js.UndefOr[Input[String]] = js.undefined
+  var fsType: js.UndefOr[Input[String]] = js.native
   /**
     * NodePublishSecretRef is a reference to the secret object containing sensitive information
     * to pass to the CSI driver to complete the CSI NodePublishVolume and NodeUnpublishVolume
     * calls. This field is optional, and may be empty if no secret is required. If the secret
     * object contains more than one secret, all secrets are passed.
     */
-  var nodePublishSecretRef: js.UndefOr[Input[SecretReference]] = js.undefined
+  var nodePublishSecretRef: js.UndefOr[Input[SecretReference]] = js.native
   /**
     * NodeStageSecretRef is a reference to the secret object containing sensitive information to
     * pass to the CSI driver to complete the CSI NodeStageVolume and NodeStageVolume and
     * NodeUnstageVolume calls. This field is optional, and may be empty if no secret is required.
     * If the secret object contains more than one secret, all secrets are passed.
     */
-  var nodeStageSecretRef: js.UndefOr[Input[SecretReference]] = js.undefined
+  var nodeStageSecretRef: js.UndefOr[Input[SecretReference]] = js.native
   /**
     * Optional: The value to pass to ControllerPublishVolumeRequest. Defaults to false
     * (read/write).
     */
-  var readOnly: js.UndefOr[Input[Boolean]] = js.undefined
+  var readOnly: js.UndefOr[Input[Boolean]] = js.native
   /**
     * Attributes of the volume to publish.
     */
-  var volumeAttributes: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.undefined
+  var volumeAttributes: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   /**
     * VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume
     * to refer to the volume on all subsequent calls. Required.
     */
-  var volumeHandle: Input[String]
+  var volumeHandle: Input[String] = js.native
 }
 
 object CSIPersistentVolumeSource {
   @scala.inline
-  def apply(
-    driver: Input[String],
-    volumeHandle: Input[String],
-    controllerExpandSecretRef: Input[SecretReference] = null,
-    controllerPublishSecretRef: Input[SecretReference] = null,
-    fsType: Input[String] = null,
-    nodePublishSecretRef: Input[SecretReference] = null,
-    nodeStageSecretRef: Input[SecretReference] = null,
-    readOnly: Input[Boolean] = null,
-    volumeAttributes: Input[StringDictionary[Input[String]]] = null
-  ): CSIPersistentVolumeSource = {
+  def apply(driver: Input[String], volumeHandle: Input[String]): CSIPersistentVolumeSource = {
     val __obj = js.Dynamic.literal(driver = driver.asInstanceOf[js.Any], volumeHandle = volumeHandle.asInstanceOf[js.Any])
-    if (controllerExpandSecretRef != null) __obj.updateDynamic("controllerExpandSecretRef")(controllerExpandSecretRef.asInstanceOf[js.Any])
-    if (controllerPublishSecretRef != null) __obj.updateDynamic("controllerPublishSecretRef")(controllerPublishSecretRef.asInstanceOf[js.Any])
-    if (fsType != null) __obj.updateDynamic("fsType")(fsType.asInstanceOf[js.Any])
-    if (nodePublishSecretRef != null) __obj.updateDynamic("nodePublishSecretRef")(nodePublishSecretRef.asInstanceOf[js.Any])
-    if (nodeStageSecretRef != null) __obj.updateDynamic("nodeStageSecretRef")(nodeStageSecretRef.asInstanceOf[js.Any])
-    if (readOnly != null) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (volumeAttributes != null) __obj.updateDynamic("volumeAttributes")(volumeAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[CSIPersistentVolumeSource]
   }
+  @scala.inline
+  implicit class CSIPersistentVolumeSourceOps[Self <: CSIPersistentVolumeSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDriver(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("driver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVolumeHandle(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeHandle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControllerExpandSecretRef(value: Input[SecretReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerExpandSecretRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControllerExpandSecretRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerExpandSecretRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControllerPublishSecretRef(value: Input[SecretReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerPublishSecretRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControllerPublishSecretRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controllerPublishSecretRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFsType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fsType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFsType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fsType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodePublishSecretRef(value: Input[SecretReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePublishSecretRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodePublishSecretRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodePublishSecretRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeStageSecretRef(value: Input[SecretReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeStageSecretRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeStageSecretRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeStageSecretRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeAttributes(value: Input[StringDictionary[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

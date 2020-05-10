@@ -17,10 +17,29 @@ trait SchemaDisplayDevice extends js.Object {
 
 object SchemaDisplayDevice {
   @scala.inline
-  def apply(enableDisplay: js.UndefOr[Boolean] = js.undefined): SchemaDisplayDevice = {
+  def apply(): SchemaDisplayDevice = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enableDisplay)) __obj.updateDynamic("enableDisplay")(enableDisplay.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDisplayDevice]
   }
+  @scala.inline
+  implicit class SchemaDisplayDeviceOps[Self <: SchemaDisplayDevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnableDisplay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableDisplay")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

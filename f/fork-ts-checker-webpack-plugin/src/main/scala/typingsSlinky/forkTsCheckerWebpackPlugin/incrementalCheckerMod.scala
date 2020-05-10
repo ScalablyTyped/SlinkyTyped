@@ -1,9 +1,7 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.cancellationTokenMod.CancellationToken
 import typingsSlinky.forkTsCheckerWebpackPlugin.incrementalCheckerInterfaceMod.IncrementalCheckerInterface
 import typingsSlinky.forkTsCheckerWebpackPlugin.incrementalCheckerInterfaceMod.IncrementalCheckerParams
-import typingsSlinky.forkTsCheckerWebpackPlugin.normalizedMessageMod.NormalizedMessage
 import typingsSlinky.minimatch.mod.IMinimatch
 import typingsSlinky.typescript.mod.ParsedCommandLine
 import typingsSlinky.typescript.mod.Program
@@ -46,18 +44,6 @@ object incrementalCheckerMod extends js.Object {
     var watcher: js.UndefOr[js.Any] = js.native
     val workDivision: js.Any = js.native
     val workNumber: js.Any = js.native
-    /* CompleteClass */
-    override def getDiagnostics(cancellationToken: CancellationToken): js.Promise[js.Array[NormalizedMessage]] = js.native
-    /* CompleteClass */
-    override def getEsLints(cancellationToken: CancellationToken): js.Array[NormalizedMessage] = js.native
-    /* CompleteClass */
-    override def getLints(cancellationToken: CancellationToken): js.Array[NormalizedMessage] = js.native
-    /* CompleteClass */
-    override def hasEsLinter(): Boolean = js.native
-    /* CompleteClass */
-    override def hasLinter(): Boolean = js.native
-    /* CompleteClass */
-    override def nextIteration(): Unit = js.native
   }
   
   /* static members */

@@ -7,19 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data about the state of a prompt.
   */
+@js.native
 trait PromptStateData extends js.Object {
   /**
     * Either a string which describes the error of the prompt or a boolean indicating whether the prompt-value is valid.
     */
-  var isValid: String | Boolean
+  var isValid: String | Boolean = js.native
 }
 
 object PromptStateData {
   @scala.inline
   def apply(isValid: String | Boolean): PromptStateData = {
     val __obj = js.Dynamic.literal(isValid = isValid.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PromptStateData]
   }
+  @scala.inline
+  implicit class PromptStateDataOps[Self <: PromptStateData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsValid(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -5,11 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SimpleEventEmitter extends js.Object {
-  var listeners: js.Array[js.Function1[/* repeated */ _, Unit]]
-  def emit(data: js.Any*): js.Any
-  def on(listener: js.Function1[/* repeated */ js.Any, Unit]): Lambda
-  def once(listener: js.Function1[/* repeated */ js.Any, Unit]): Lambda
+  var listeners: js.Array[js.Function1[/* repeated */ _, Unit]] = js.native
+  def emit(data: js.Any*): js.Any = js.native
+  def on(listener: js.Function1[/* repeated */ js.Any, Unit]): Lambda = js.native
+  def once(listener: js.Function1[/* repeated */ js.Any, Unit]): Lambda = js.native
 }
 
 object SimpleEventEmitter {
@@ -21,8 +22,39 @@ object SimpleEventEmitter {
     once: js.Function1[/* repeated */ js.Any, Unit] => Lambda
   ): SimpleEventEmitter = {
     val __obj = js.Dynamic.literal(emit = js.Any.fromFunction1(emit), listeners = listeners.asInstanceOf[js.Any], on = js.Any.fromFunction1(on), once = js.Any.fromFunction1(once))
-  
     __obj.asInstanceOf[SimpleEventEmitter]
   }
+  @scala.inline
+  implicit class SimpleEventEmitterOps[Self <: SimpleEventEmitter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmit(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withListeners(value: js.Array[js.Function1[/* repeated */ _, Unit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listeners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOn(value: js.Function1[/* repeated */ js.Any, Unit] => Lambda): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnce(value: js.Function1[/* repeated */ js.Any, Unit] => Lambda): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("once")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

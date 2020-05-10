@@ -22,15 +22,47 @@ trait ModifyClusterSnapshotMessage extends js.Object {
 
 object ModifyClusterSnapshotMessage {
   @scala.inline
-  def apply(
-    SnapshotIdentifier: String,
-    Force: js.UndefOr[scala.Boolean] = js.undefined,
-    ManualSnapshotRetentionPeriod: Int | scala.Double = null
-  ): ModifyClusterSnapshotMessage = {
+  def apply(SnapshotIdentifier: String): ModifyClusterSnapshotMessage = {
     val __obj = js.Dynamic.literal(SnapshotIdentifier = SnapshotIdentifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(Force)) __obj.updateDynamic("Force")(Force.asInstanceOf[js.Any])
-    if (ManualSnapshotRetentionPeriod != null) __obj.updateDynamic("ManualSnapshotRetentionPeriod")(ManualSnapshotRetentionPeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyClusterSnapshotMessage]
   }
+  @scala.inline
+  implicit class ModifyClusterSnapshotMessageOps[Self <: ModifyClusterSnapshotMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSnapshotIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SnapshotIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Force")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Force")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManualSnapshotRetentionPeriod(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotRetentionPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManualSnapshotRetentionPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManualSnapshotRetentionPeriod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

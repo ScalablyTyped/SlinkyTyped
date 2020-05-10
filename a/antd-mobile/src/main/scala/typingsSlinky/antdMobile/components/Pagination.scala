@@ -1,51 +1,53 @@
 package typingsSlinky.antdMobile.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobile.antdMobileStrings.button
 import typingsSlinky.antdMobile.antdMobileStrings.number
 import typingsSlinky.antdMobile.antdMobileStrings.pointer
 import typingsSlinky.antdMobile.paginationMod.PaginationProps
 import typingsSlinky.antdMobile.paginationMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Pagination
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Pagination {
   @JSImport("antd-mobile/lib/pagination", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    current: Double,
-    total: Double,
-    mode: button | number | pointer = null,
-    nextText: String = null,
-    onChange: /* current */ Double => Unit = null,
-    onNext: () => Unit = null,
-    onPrev: () => Unit = null,
-    prefixCls: String = null,
-    prevText: String = null,
-    simple: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(current = current.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (nextText != null) __obj.updateDynamic("nextText")(nextText.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onNext != null) __obj.updateDynamic("onNext")(js.Any.fromFunction0(onNext))
-    if (onPrev != null) __obj.updateDynamic("onPrev")(js.Any.fromFunction0(onPrev))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (prevText != null) __obj.updateDynamic("prevText")(prevText.asInstanceOf[js.Any])
-    if (!js.isUndefined(simple)) __obj.updateDynamic("simple")(simple.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: button | number | pointer): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nextText(value: String): this.type = set("nextText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* current */ Double => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onNext(value: () => Unit): this.type = set("onNext", js.Any.fromFunction0(value))
+    @scala.inline
+    def onPrev(value: () => Unit): this.type = set("onPrev", js.Any.fromFunction0(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prevText(value: String): this.type = set("prevText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def simple(value: Boolean): this.type = set("simple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = PaginationProps
+  
+  def withProps(p: PaginationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(current: Double, total: Double): Builder = {
+    val __props = js.Dynamic.literal(current = current.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PaginationProps]))
+  }
 }
 

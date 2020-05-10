@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SkColorFilter extends SkObject[SkColorFilter]
 
 object SkColorFilter {
@@ -15,7 +16,6 @@ object SkColorFilter {
     isDeleted: () => Boolean
   ): SkColorFilter = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction0(delete), deleteAfter = js.Any.fromFunction0(deleteAfter), isAliasOf = js.Any.fromFunction1(isAliasOf), isDeleted = js.Any.fromFunction0(isDeleted))
-  
     __obj.asInstanceOf[SkColorFilter]
   }
 }

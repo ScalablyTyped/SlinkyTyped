@@ -5,10 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PublicKeyCredential extends Credential {
-  val rawId: scala.scalajs.js.typedarray.ArrayBuffer
-  val response: AuthenticatorResponse
-  def getClientExtensionResults(): AuthenticationExtensionsClientOutputs
+  val rawId: js.typedarray.ArrayBuffer = js.native
+  val response: AuthenticatorResponse = js.native
+  def getClientExtensionResults(): AuthenticationExtensionsClientOutputs = js.native
 }
 
 @JSGlobal("PublicKeyCredential")

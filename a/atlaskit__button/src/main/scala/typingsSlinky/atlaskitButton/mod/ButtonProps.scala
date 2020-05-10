@@ -10,99 +10,323 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ButtonProps extends js.Object {
   /** The base styling to apply to the button. */
-  val appearance: js.UndefOr[ButtonAppearances] = js.undefined
+  val appearance: js.UndefOr[ButtonAppearances] = js.native
   /** Pass aria-controls to underlying html button. */
-  val ariaControls: js.UndefOr[String] = js.undefined
+  val ariaControls: js.UndefOr[String] = js.native
   /** Pass aria-expanded to underlying html button. */
-  val ariaExpanded: js.UndefOr[Boolean] = js.undefined
+  val ariaExpanded: js.UndefOr[Boolean] = js.native
   /** Pass aria-haspopup to underlying html button. */
-  val ariaHaspopup: js.UndefOr[Boolean] = js.undefined
+  val ariaHaspopup: js.UndefOr[Boolean] = js.native
   /** This button's child nodes. */
-  val children: js.UndefOr[TagMod[Any]] = js.undefined
+  val children: js.UndefOr[TagMod[Any]] = js.native
   /** Add a classname to the button. */
-  val className: js.UndefOr[String] = js.undefined
+  val className: js.UndefOr[String] = js.native
   /** A custom component to use instead of the default button. */
-  val component: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  val component: js.UndefOr[ReactComponentClass[_]] = js.native
   /** Name property of a linked form that the button submits when clicked. */
-  val form: js.UndefOr[String] = js.undefined
+  val form: js.UndefOr[String] = js.native
   /** Provides a url for buttons being used as a link. */
-  val href: js.UndefOr[String] = js.undefined
+  val href: js.UndefOr[String] = js.native
   /** Places an icon within the button, after the button's text. */
-  val iconAfter: js.UndefOr[ReactElement] = js.undefined
+  val iconAfter: js.UndefOr[ReactElement] = js.native
   /** Places an icon within the button, before the button's text. */
-  val iconBefore: js.UndefOr[ReactElement] = js.undefined
+  val iconBefore: js.UndefOr[ReactElement] = js.native
   /** Provide a unique id to the button. */
-  val id: js.UndefOr[String] = js.undefined
+  val id: js.UndefOr[String] = js.native
   /** Pass a reference on to the styled component */
-  val innerRef: js.UndefOr[js.Function1[/* instance */ js.Any, Unit]] = js.undefined
+  val innerRef: js.UndefOr[js.Function1[/* instance */ js.Any, Unit]] = js.native
   /** Set if the button is disabled. */
-  val isDisabled: js.UndefOr[Boolean] = js.undefined
+  val isDisabled: js.UndefOr[Boolean] = js.native
   /** Change the style to indicate the button is selected. */
-  val isSelected: js.UndefOr[Boolean] = js.undefined
+  val isSelected: js.UndefOr[Boolean] = js.native
   /** Handler to be called on click. */
-  val onClick: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.undefined
+  val onClick: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.native
   /** Option to fit button width to its parent width */
-  val shouldFitContainer: js.UndefOr[Boolean] = js.undefined
+  val shouldFitContainer: js.UndefOr[Boolean] = js.native
   /** Set the amount of padding in the button. */
-  val spacing: js.UndefOr[ButtonSpacing] = js.undefined
+  val spacing: js.UndefOr[ButtonSpacing] = js.native
   /** Assign specific tabIndex order to the underlying html button. */
-  val tabIndex: js.UndefOr[Double] = js.undefined
+  val tabIndex: js.UndefOr[Double] = js.native
   /** Pass target down to a link within the button component, if a href is provided. */
-  val target: js.UndefOr[String] = js.undefined
+  val target: js.UndefOr[String] = js.native
   /** Set whether it is a button or a form submission. */
-  val `type`: js.UndefOr[ButtonType] = js.undefined
+  val `type`: js.UndefOr[ButtonType] = js.native
 }
 
 object ButtonProps {
   @scala.inline
-  def apply(
-    appearance: ButtonAppearances = null,
-    ariaControls: String = null,
-    ariaExpanded: js.UndefOr[Boolean] = js.undefined,
-    ariaHaspopup: js.UndefOr[Boolean] = js.undefined,
-    children: TagMod[Any] = null,
-    className: String = null,
-    component: ReactComponentClass[_] = null,
-    form: String = null,
-    href: String = null,
-    iconAfter: ReactElement = null,
-    iconBefore: ReactElement = null,
-    id: String = null,
-    innerRef: /* instance */ js.Any => Unit = null,
-    isDisabled: js.UndefOr[Boolean] = js.undefined,
-    isSelected: js.UndefOr[Boolean] = js.undefined,
-    onClick: SyntheticMouseEvent[HTMLButtonElement] => Unit = null,
-    shouldFitContainer: js.UndefOr[Boolean] = js.undefined,
-    spacing: ButtonSpacing = null,
-    tabIndex: Int | Double = null,
-    target: String = null,
-    `type`: ButtonType = null
-  ): ButtonProps = {
+  def apply(): ButtonProps = {
     val __obj = js.Dynamic.literal()
-    if (appearance != null) __obj.updateDynamic("appearance")(appearance.asInstanceOf[js.Any])
-    if (ariaControls != null) __obj.updateDynamic("ariaControls")(ariaControls.asInstanceOf[js.Any])
-    if (!js.isUndefined(ariaExpanded)) __obj.updateDynamic("ariaExpanded")(ariaExpanded.asInstanceOf[js.Any])
-    if (!js.isUndefined(ariaHaspopup)) __obj.updateDynamic("ariaHaspopup")(ariaHaspopup.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (iconAfter != null) __obj.updateDynamic("iconAfter")(iconAfter.asInstanceOf[js.Any])
-    if (iconBefore != null) __obj.updateDynamic("iconBefore")(iconBefore.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (innerRef != null) __obj.updateDynamic("innerRef")(js.Any.fromFunction1(innerRef))
-    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (!js.isUndefined(shouldFitContainer)) __obj.updateDynamic("shouldFitContainer")(shouldFitContainer.asInstanceOf[js.Any])
-    if (spacing != null) __obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonProps]
   }
+  @scala.inline
+  implicit class ButtonPropsOps[Self <: ButtonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppearance(value: ButtonAppearances): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppearance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appearance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAriaControls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaControls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAriaControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAriaExpanded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaExpanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAriaExpanded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaExpanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAriaHaspopup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaHaspopup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAriaHaspopup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ariaHaspopup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildrenReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForm(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHref(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconAfter(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconAfter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconAfter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconAfter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconBefore(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconBefore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconBefore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconBefore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerRef(value: /* instance */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutInnerRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsSelected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShouldFitContainer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldFitContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShouldFitContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldFitContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpacing(value: ButtonSpacing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: ButtonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

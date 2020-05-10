@@ -14,10 +14,29 @@ trait UpdateS3ResourcesResult extends js.Object {
 
 object UpdateS3ResourcesResult {
   @scala.inline
-  def apply(failedS3Resources: FailedS3Resources = null): UpdateS3ResourcesResult = {
+  def apply(): UpdateS3ResourcesResult = {
     val __obj = js.Dynamic.literal()
-    if (failedS3Resources != null) __obj.updateDynamic("failedS3Resources")(failedS3Resources.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateS3ResourcesResult]
   }
+  @scala.inline
+  implicit class UpdateS3ResourcesResultOps[Self <: UpdateS3ResourcesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailedS3Resources(value: FailedS3Resources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failedS3Resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedS3Resources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failedS3Resources")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

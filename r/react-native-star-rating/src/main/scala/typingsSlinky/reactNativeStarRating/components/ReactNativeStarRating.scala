@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeStarRating.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -24,56 +21,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeStarRating
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeStarRating {
   @JSImport("react-native-star-rating", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, reversed */
-  def apply(
-    activeOpacity: Int | Double = null,
-    animation: bounce | flash | jello | pulse | rotate | rubberBand | shake | swing | tada | wobble = null,
-    buttonStyle: StyleProp[ViewStyle] = null,
-    containerStyle: StyleProp[ViewStyle] = null,
-    emptyStar: String | ImageURISource = null,
-    emptyStarColor: String = null,
-    fullStar: String | ImageURISource = null,
-    fullStarColor: String = null,
-    halfStar: String | ImageURISource = null,
-    halfStarColor: String = null,
-    halfStarEnabled: js.UndefOr[Boolean] = js.undefined,
-    iconSet: String = null,
-    maxStars: Int | Double = null,
-    rating: Int | Double = null,
-    selectedStar: /* rating */ Double => Unit = null,
-    starSize: Int | Double = null,
-    starStyle: StyleProp[ViewStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (activeOpacity != null) __obj.updateDynamic("activeOpacity")(activeOpacity.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (buttonStyle != null) __obj.updateDynamic("buttonStyle")(buttonStyle.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (emptyStar != null) __obj.updateDynamic("emptyStar")(emptyStar.asInstanceOf[js.Any])
-    if (emptyStarColor != null) __obj.updateDynamic("emptyStarColor")(emptyStarColor.asInstanceOf[js.Any])
-    if (fullStar != null) __obj.updateDynamic("fullStar")(fullStar.asInstanceOf[js.Any])
-    if (fullStarColor != null) __obj.updateDynamic("fullStarColor")(fullStarColor.asInstanceOf[js.Any])
-    if (halfStar != null) __obj.updateDynamic("halfStar")(halfStar.asInstanceOf[js.Any])
-    if (halfStarColor != null) __obj.updateDynamic("halfStarColor")(halfStarColor.asInstanceOf[js.Any])
-    if (!js.isUndefined(halfStarEnabled)) __obj.updateDynamic("halfStarEnabled")(halfStarEnabled.asInstanceOf[js.Any])
-    if (iconSet != null) __obj.updateDynamic("iconSet")(iconSet.asInstanceOf[js.Any])
-    if (maxStars != null) __obj.updateDynamic("maxStars")(maxStars.asInstanceOf[js.Any])
-    if (rating != null) __obj.updateDynamic("rating")(rating.asInstanceOf[js.Any])
-    if (selectedStar != null) __obj.updateDynamic("selectedStar")(js.Any.fromFunction1(selectedStar))
-    if (starSize != null) __obj.updateDynamic("starSize")(starSize.asInstanceOf[js.Any])
-    if (starStyle != null) __obj.updateDynamic("starStyle")(starStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def activeOpacity(value: Double): this.type = set("activeOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animation(value: bounce | flash | jello | pulse | rotate | rubberBand | shake | swing | tada | wobble): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonStyle(value: StyleProp[ViewStyle]): this.type = set("buttonStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonStyleNull: this.type = set("buttonStyle", null)
+    @scala.inline
+    def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerStyleNull: this.type = set("containerStyle", null)
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyStar(value: String | ImageURISource): this.type = set("emptyStar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyStarColor(value: String): this.type = set("emptyStarColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fullStar(value: String | ImageURISource): this.type = set("fullStar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fullStarColor(value: String): this.type = set("fullStarColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def halfStar(value: String | ImageURISource): this.type = set("halfStar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def halfStarColor(value: String): this.type = set("halfStarColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def halfStarEnabled(value: Boolean): this.type = set("halfStarEnabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconSet(value: String): this.type = set("iconSet", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxStars(value: Double): this.type = set("maxStars", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rating(value: Double): this.type = set("rating", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reversed(value: Boolean): this.type = set("reversed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedStar(value: /* rating */ Double => Unit): this.type = set("selectedStar", js.Any.fromFunction1(value))
+    @scala.inline
+    def starSize(value: Double): this.type = set("starSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def starStyle(value: StyleProp[ViewStyle]): this.type = set("starStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def starStyleNull: this.type = set("starStyle", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeStarRating.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StarRatingProps
+  
+  def withProps(p: StarRatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativeStarRating.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

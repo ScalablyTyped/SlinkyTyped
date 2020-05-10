@@ -1,7 +1,6 @@
 package typingsSlinky.builderUtilRuntime.httpExecutorMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.builderUtilRuntime.builderUtilRuntimeNumbers.`10`
 import typingsSlinky.builderUtilRuntime.cancellationTokenMod.CancellationToken
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.httpMod.RequestOptions
@@ -15,7 +14,7 @@ import scala.scalajs.js.annotation._
 abstract class HttpExecutor[REQUEST] () extends js.Object {
   var addTimeOutHandler: js.Any = js.native
   var handleResponse: js.Any = js.native
-  val maxRedirects: `10` = js.native
+  val maxRedirects: /* 10 */ Double = js.native
   def addErrorAndTimeoutHandlers(request: js.Any, reject: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   /* protected */ def addRedirectHandlers(
     request: js.Any,

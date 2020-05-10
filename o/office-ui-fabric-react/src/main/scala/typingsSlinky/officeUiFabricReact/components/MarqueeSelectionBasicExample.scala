@@ -1,20 +1,23 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MarqueeSelectionBasicExample
-  extends ExternalComponentNoPropsWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.officeUiFabricReact.marqueeSelectionBasicExampleMod.MarqueeSelectionBasicExample
-    ] {
+object MarqueeSelectionBasicExample {
   @JSImport("office-ui-fabric-react/lib/components/MarqueeSelection/examples/MarqueeSelection.Basic.Example", "MarqueeSelectionBasicExample")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.marqueeSelectionBasicExampleMod.MarqueeSelectionBasicExample
+  ] = new SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.marqueeSelectionBasicExampleMod.MarqueeSelectionBasicExample
+  ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MarqueeSelectionBasicExample.type): SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.marqueeSelectionBasicExampleMod.MarqueeSelectionBasicExample
+  ] = new SharedBuilder_Object_159303587[
+    typingsSlinky.officeUiFabricReact.marqueeSelectionBasicExampleMod.MarqueeSelectionBasicExample
+  ](js.Array(this.component, js.Dictionary.empty))()
 }
 

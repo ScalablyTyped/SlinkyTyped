@@ -28,9 +28,9 @@ object challengeUserKey extends js.Object {
     * @param callback Called back with the challenge response.
     */
   def apply(
-    challenge: scala.scalajs.js.typedarray.ArrayBuffer,
+    challenge: js.typedarray.ArrayBuffer,
     registerKey: Boolean,
-    callback: js.Function1[/* response */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]
+    callback: js.Function1[/* response */ js.typedarray.ArrayBuffer, Unit]
   ): Unit = js.native
 }
 

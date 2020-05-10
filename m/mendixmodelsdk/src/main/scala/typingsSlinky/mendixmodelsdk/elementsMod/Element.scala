@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/sdk/internal/elements", "Element")
@@ -42,8 +42,8 @@ abstract class Element protected () extends AbstractElement {
     *  -  if false, a load is required to access these properties.
     */
   @JSName("isLoaded")
-  def isLoaded_MElement(): Boolean = js.native
+  def isLoaded_MElement: Boolean = js.native
   @JSName("unit")
-  def unit_MElement(): ModelUnit = js.native
+  def unit_MElement: ModelUnit = js.native
 }
 

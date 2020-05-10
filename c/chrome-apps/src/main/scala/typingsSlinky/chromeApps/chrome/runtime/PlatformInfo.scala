@@ -3,17 +3,28 @@ package typingsSlinky.chromeApps.chrome.runtime
 import typingsSlinky.chromeApps.AnonANDROID
 import typingsSlinky.chromeApps.AnonARM
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
+import typingsSlinky.chromeApps.chromeAppsStrings.ANDROID
+import typingsSlinky.chromeApps.chromeAppsStrings.ARM
+import typingsSlinky.chromeApps.chromeAppsStrings.CROS
+import typingsSlinky.chromeApps.chromeAppsStrings.LINUX
+import typingsSlinky.chromeApps.chromeAppsStrings.MAC
+import typingsSlinky.chromeApps.chromeAppsStrings.MIPS
+import typingsSlinky.chromeApps.chromeAppsStrings.MIPS64
+import typingsSlinky.chromeApps.chromeAppsStrings.OPENBSD
+import typingsSlinky.chromeApps.chromeAppsStrings.WIN
+import typingsSlinky.chromeApps.chromeAppsStrings.X86_32
+import typingsSlinky.chromeApps.chromeAppsStrings.X86_64
 import typingsSlinky.chromeApps.chromeAppsStrings.`x86-32`
 import typingsSlinky.chromeApps.chromeAppsStrings.`x86-64`
-import typingsSlinky.chromeApps.chromeAppsStrings.android
-import typingsSlinky.chromeApps.chromeAppsStrings.arm
-import typingsSlinky.chromeApps.chromeAppsStrings.cros
-import typingsSlinky.chromeApps.chromeAppsStrings.linux
-import typingsSlinky.chromeApps.chromeAppsStrings.mac
-import typingsSlinky.chromeApps.chromeAppsStrings.mips
-import typingsSlinky.chromeApps.chromeAppsStrings.mips64
-import typingsSlinky.chromeApps.chromeAppsStrings.openbsd
-import typingsSlinky.chromeApps.chromeAppsStrings.win
+import typingsSlinky.chromeApps.chromeAppsStrings.android_
+import typingsSlinky.chromeApps.chromeAppsStrings.arm_
+import typingsSlinky.chromeApps.chromeAppsStrings.cros_
+import typingsSlinky.chromeApps.chromeAppsStrings.linux_
+import typingsSlinky.chromeApps.chromeAppsStrings.mac_
+import typingsSlinky.chromeApps.chromeAppsStrings.mips64_
+import typingsSlinky.chromeApps.chromeAppsStrings.mips_
+import typingsSlinky.chromeApps.chromeAppsStrings.openbsd_
+import typingsSlinky.chromeApps.chromeAppsStrings.win_
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,34 +34,129 @@ import scala.scalajs.js.annotation._
   * An object containing information about the current platform.
   * @since Chrome 36.
   */
+@js.native
 trait PlatformInfo extends js.Object {
   /**
     * The machine's processor architecture.
     * @see enum PlatformArch
     */
-  var arch: ToStringLiteral[AnonARM, String, Exclude[String, mips64 | arm | `x86-64` | `x86-32` | mips]]
+  var arch: ToStringLiteral[
+    AnonARM, 
+    /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+    Exclude[
+      /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+      mips64_ | arm_ | `x86-64` | `x86-32` | mips_
+    ]
+  ] = js.native
   /**
     * The native client architecture. This may be different from arch on some platforms.
     * @see enum PlatformNaclArch
     */
-  var nacl_arch: ToStringLiteral[AnonARM, String, Exclude[String, mips64 | arm | `x86-64` | `x86-32` | mips]]
+  var nacl_arch: ToStringLiteral[
+    AnonARM, 
+    /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+    Exclude[
+      /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+      mips64_ | arm_ | `x86-64` | `x86-32` | mips_
+    ]
+  ] = js.native
   /**
     * The operating system chrome is running on.
     * @see enum PlatformOs
     */
-  var os: ToStringLiteral[AnonANDROID, String, Exclude[String, linux | openbsd | android | win | cros | mac]]
+  var os: ToStringLiteral[
+    AnonANDROID, 
+    /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+    Exclude[
+      /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+      linux_ | openbsd_ | android_ | win_ | cros_ | mac_
+    ]
+  ] = js.native
 }
 
 object PlatformInfo {
   @scala.inline
   def apply(
-    arch: ToStringLiteral[AnonARM, String, Exclude[String, mips64 | arm | `x86-64` | `x86-32` | mips]],
-    nacl_arch: ToStringLiteral[AnonARM, String, Exclude[String, mips64 | arm | `x86-64` | `x86-32` | mips]],
-    os: ToStringLiteral[AnonANDROID, String, Exclude[String, linux | openbsd | android | win | cros | mac]]
+    arch: ToStringLiteral[
+      AnonARM, 
+      /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+      Exclude[
+        /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+        mips64_ | arm_ | `x86-64` | `x86-32` | mips_
+      ]
+    ],
+    nacl_arch: ToStringLiteral[
+      AnonARM, 
+      /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+      Exclude[
+        /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+        mips64_ | arm_ | `x86-64` | `x86-32` | mips_
+      ]
+    ],
+    os: ToStringLiteral[
+      AnonANDROID, 
+      /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+      Exclude[
+        /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+        linux_ | openbsd_ | android_ | win_ | cros_ | mac_
+      ]
+    ]
   ): PlatformInfo = {
     val __obj = js.Dynamic.literal(arch = arch.asInstanceOf[js.Any], nacl_arch = nacl_arch.asInstanceOf[js.Any], os = os.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PlatformInfo]
   }
+  @scala.inline
+  implicit class PlatformInfoOps[Self <: PlatformInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArch(
+      value: ToStringLiteral[
+          AnonARM, 
+          /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+          Exclude[
+            /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+            mips64_ | arm_ | `x86-64` | `x86-32` | mips_
+          ]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNacl_arch(
+      value: ToStringLiteral[
+          AnonARM, 
+          /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+          Exclude[
+            /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+            mips64_ | arm_ | `x86-64` | `x86-32` | mips_
+          ]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nacl_arch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOs(
+      value: ToStringLiteral[
+          AnonANDROID, 
+          /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+          Exclude[
+            /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+            linux_ | openbsd_ | android_ | win_ | cros_ | mac_
+          ]
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

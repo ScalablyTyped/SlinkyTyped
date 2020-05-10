@@ -4,27 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PaymentDetailsUpdate extends PaymentDetailsBase {
-  var error: js.UndefOr[java.lang.String] = js.undefined
-  var total: js.UndefOr[PaymentItem] = js.undefined
+  var error: js.UndefOr[java.lang.String] = js.native
+  var total: js.UndefOr[PaymentItem] = js.native
 }
 
 object PaymentDetailsUpdate {
   @scala.inline
-  def apply(
-    displayItems: js.Array[PaymentItem] = null,
-    error: java.lang.String = null,
-    modifiers: js.Array[PaymentDetailsModifier] = null,
-    shippingOptions: js.Array[PaymentShippingOption] = null,
-    total: PaymentItem = null
-  ): PaymentDetailsUpdate = {
+  def apply(): PaymentDetailsUpdate = {
     val __obj = js.Dynamic.literal()
-    if (displayItems != null) __obj.updateDynamic("displayItems")(displayItems.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (modifiers != null) __obj.updateDynamic("modifiers")(modifiers.asInstanceOf[js.Any])
-    if (shippingOptions != null) __obj.updateDynamic("shippingOptions")(shippingOptions.asInstanceOf[js.Any])
-    if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentDetailsUpdate]
   }
+  @scala.inline
+  implicit class PaymentDetailsUpdateOps[Self <: PaymentDetailsUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotal(value: PaymentItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

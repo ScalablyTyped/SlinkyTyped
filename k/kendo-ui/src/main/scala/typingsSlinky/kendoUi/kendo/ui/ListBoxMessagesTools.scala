@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListBoxMessagesTools extends js.Object {
-  var moveDown: js.UndefOr[String] = js.undefined
-  var moveUp: js.UndefOr[String] = js.undefined
-  var remove: js.UndefOr[String] = js.undefined
-  var transferAllFrom: js.UndefOr[String] = js.undefined
-  var transferAllTo: js.UndefOr[String] = js.undefined
-  var transferFrom: js.UndefOr[String] = js.undefined
-  var transferTo: js.UndefOr[String] = js.undefined
+  var moveDown: js.UndefOr[String] = js.native
+  var moveUp: js.UndefOr[String] = js.native
+  var remove: js.UndefOr[String] = js.native
+  var transferAllFrom: js.UndefOr[String] = js.native
+  var transferAllTo: js.UndefOr[String] = js.native
+  var transferFrom: js.UndefOr[String] = js.native
+  var transferTo: js.UndefOr[String] = js.native
 }
 
 object ListBoxMessagesTools {
   @scala.inline
-  def apply(
-    moveDown: String = null,
-    moveUp: String = null,
-    remove: String = null,
-    transferAllFrom: String = null,
-    transferAllTo: String = null,
-    transferFrom: String = null,
-    transferTo: String = null
-  ): ListBoxMessagesTools = {
+  def apply(): ListBoxMessagesTools = {
     val __obj = js.Dynamic.literal()
-    if (moveDown != null) __obj.updateDynamic("moveDown")(moveDown.asInstanceOf[js.Any])
-    if (moveUp != null) __obj.updateDynamic("moveUp")(moveUp.asInstanceOf[js.Any])
-    if (remove != null) __obj.updateDynamic("remove")(remove.asInstanceOf[js.Any])
-    if (transferAllFrom != null) __obj.updateDynamic("transferAllFrom")(transferAllFrom.asInstanceOf[js.Any])
-    if (transferAllTo != null) __obj.updateDynamic("transferAllTo")(transferAllTo.asInstanceOf[js.Any])
-    if (transferFrom != null) __obj.updateDynamic("transferFrom")(transferFrom.asInstanceOf[js.Any])
-    if (transferTo != null) __obj.updateDynamic("transferTo")(transferTo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBoxMessagesTools]
   }
+  @scala.inline
+  implicit class ListBoxMessagesToolsOps[Self <: ListBoxMessagesTools] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMoveDown(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveUp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveUp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemove(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferAllFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferAllFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferAllFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferAllFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferAllTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferAllTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferAllTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferAllTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransferTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransferTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferTo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

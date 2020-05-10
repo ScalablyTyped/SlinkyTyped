@@ -5,19 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typedGithubApi.userMod.UserOrOrgSummary because Already inherited
 - typingsSlinky.typedGithubApi.userMod.UserOrOrg because Already inherited
-- typingsSlinky.typedGithubApi.userMod.PrivateUserOrOrg because var conflicts: avatar_url, blog, company, created_at, email, events_url, followers, following, id, location, login, name, public_gists, public_repos, repos_url, `type`, updated_at, url. Inlined total_private_repos, owned_private_repos, private_gists, disk_usage, collaborators, plan */ trait PrivateOrganization extends Organization {
-  var billing_email: String
-  var collaborators: Double
-  var default_repository_settings: String
-  var disk_usage: Double
-  var members_can_create_repositories: Boolean
-  var owned_private_repos: Double
-  var plan: AnonCollaborators
-  var private_gists: Double
-  var total_private_repos: Double
+- typingsSlinky.typedGithubApi.userMod.PrivateUserOrOrg because var conflicts: avatar_url, blog, company, created_at, email, events_url, followers, following, id, location, login, name, public_gists, public_repos, repos_url, `type`, updated_at, url. Inlined total_private_repos, owned_private_repos, private_gists, disk_usage, collaborators, plan */ @js.native
+trait PrivateOrganization extends Organization {
+  var billing_email: String = js.native
+  var collaborators: Double = js.native
+  var default_repository_settings: String = js.native
+  var disk_usage: Double = js.native
+  var members_can_create_repositories: Boolean = js.native
+  var owned_private_repos: Double = js.native
+  var plan: AnonCollaborators = js.native
+  var private_gists: Double = js.native
+  var total_private_repos: Double = js.native
 }
 
 object PrivateOrganization {
@@ -63,5 +64,67 @@ object PrivateOrganization {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrivateOrganization]
   }
+  @scala.inline
+  implicit class PrivateOrganizationOps[Self <: PrivateOrganization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBilling_email(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billing_email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCollaborators(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collaborators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefault_repository_settings(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_repository_settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisk_usage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disk_usage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMembers_can_create_repositories(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("members_can_create_repositories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOwned_private_repos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owned_private_repos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlan(value: AnonCollaborators): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivate_gists(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private_gists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotal_private_repos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total_private_repos")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

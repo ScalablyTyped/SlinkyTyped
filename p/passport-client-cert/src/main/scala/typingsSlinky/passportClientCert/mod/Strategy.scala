@@ -2,18 +2,20 @@ package typingsSlinky.passportClientCert.mod
 
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("passport-client-cert", "Strategy")
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Strategy * / any */ @JSImport("passport-client-cert", "Strategy")
 @js.native
 class Strategy protected () extends js.Object {
   def this(verify: VerifyFunction) = this()
   def this(options: StrategyOptionsWithRequest, verify: VerifyFunctionWithRequest) = this()
   def this(options: StrategyOptions, verify: VerifyFunction) = this()
   var name: String = js.native
-  def authenticate(req: Request_[ParamsDictionary]): Unit = js.native
-  def authenticate(req: Request_[ParamsDictionary], options: js.Object): Unit = js.native
+  def authenticate(req: Request_[ParamsDictionary, _, _, Query]): Unit = js.native
+  def authenticate(req: Request_[ParamsDictionary, _, _, Query], options: js.Object): Unit = js.native
 }
 

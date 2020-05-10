@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type Buffer = scala.scalajs.js.typedarray.Uint8Array
+  type Buffer = js.typedarray.Uint8Array
   /**
     * Appends code to the function's body or finishes generation.
     * @param [formatStringOrScope] Format string or, to finish the function, an object of additional scope variables, if any
@@ -66,7 +66,7 @@ package object mod {
     * @param size Buffer size
     * @returns Buffer
     */
-  type PoolAllocator = js.Function1[/* size */ scala.Double, scala.scalajs.js.typedarray.Uint8Array]
+  type PoolAllocator = js.Function1[/* size */ scala.Double, js.typedarray.Uint8Array]
   /**
     * A slicer as used by {@link util.pool}.
     * @param start Start offset
@@ -74,15 +74,15 @@ package object mod {
     * @returns Buffer slice
     */
   type PoolSlicer = js.ThisFunction2[
-    /* this */ scala.scalajs.js.typedarray.Uint8Array, 
+    /* this */ js.typedarray.Uint8Array, 
     /* start */ scala.Double, 
     /* end */ scala.Double, 
-    scala.scalajs.js.typedarray.Uint8Array
+    js.typedarray.Uint8Array
   ]
   /** Properties type. */
   type Properties[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]:? T[P]}
-    */ typingsSlinky.apolloProtobufjs.apolloProtobufjsStrings.Properties with T
+    */ typingsSlinky.apolloProtobufjs.apolloProtobufjsStrings.Properties with org.scalablytyped.runtime.TopLevel[T]
   /**
     * RPC implementation passed to {@link Service#create} performing a service request on network level, i.e. by utilizing http requests or websockets.
     * @param method Reflected or static method being called
@@ -94,7 +94,7 @@ package object mod {
       typingsSlinky.apolloProtobufjs.mod.Message[js.Object], 
       typingsSlinky.apolloProtobufjs.mod.Message[js.Object]
     ]), 
-    /* requestData */ scala.scalajs.js.typedarray.Uint8Array, 
+    /* requestData */ js.typedarray.Uint8Array, 
     /* callback */ typingsSlinky.apolloProtobufjs.mod.RPCImplCallback, 
     scala.Unit
   ]
@@ -105,7 +105,7 @@ package object mod {
     */
   type RPCImplCallback = js.Function2[
     /* error */ js.Error | scala.Null, 
-    /* response */ js.UndefOr[scala.scalajs.js.typedarray.Uint8Array | scala.Null], 
+    /* response */ js.UndefOr[js.typedarray.Uint8Array | scala.Null], 
     scala.Unit
   ]
   /**

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /**
     * The target asset name. Defaults to `'[path].br[query]'`.
@@ -14,41 +15,98 @@ trait Options extends js.Object {
     * - `[path]` is replaced with the path of the original asset.
     * - `[query]` is replaced with the query.
     */
-  var asset: js.UndefOr[String] = js.undefined
+  var asset: js.UndefOr[String] = js.native
   /**
     * Remove original files that were compressed with brotli. Default: `false`.
     */
-  var deleteOriginalAssets: js.UndefOr[Boolean] = js.undefined
+  var deleteOriginalAssets: js.UndefOr[Boolean] = js.native
   /**
     * Only assets that compress better that this ratio are processed. Defaults to `0.8`.
     */
-  var minRatio: js.UndefOr[Double] = js.undefined
+  var minRatio: js.UndefOr[Double] = js.native
   /**
     * All assets matching this RegExp are processed. Defaults to every asset.
     */
-  var test: js.UndefOr[js.RegExp] = js.undefined
+  var test: js.UndefOr[js.RegExp] = js.native
   /**
     * Only assets bigger than this size (in bytes) are processed. Defaults to `0`.
     */
-  var threshold: js.UndefOr[Double] = js.undefined
+  var threshold: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    asset: String = null,
-    deleteOriginalAssets: js.UndefOr[Boolean] = js.undefined,
-    minRatio: Int | Double = null,
-    test: js.RegExp = null,
-    threshold: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (asset != null) __obj.updateDynamic("asset")(asset.asInstanceOf[js.Any])
-    if (!js.isUndefined(deleteOriginalAssets)) __obj.updateDynamic("deleteOriginalAssets")(deleteOriginalAssets.asInstanceOf[js.Any])
-    if (minRatio != null) __obj.updateDynamic("minRatio")(minRatio.asInstanceOf[js.Any])
-    if (test != null) __obj.updateDynamic("test")(test.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAsset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeleteOriginalAssets(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOriginalAssets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteOriginalAssets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteOriginalAssets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTest(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

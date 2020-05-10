@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 /**
   * SearchCombinationOptions...
   */
+@js.native
 trait ISearchCombinationOptions extends js.Object {
   /**
     * For SearchSuggest method, this array is empty.
@@ -17,12 +18,12 @@ trait ISearchCombinationOptions extends js.Object {
     * It allows the user to request details in the outputted SearchGroupItemMatch.
     * For more information, see SearchGroupItemMatch
     */
-  var qAttributes: js.UndefOr[js.Array[String]] = js.undefined
+  var qAttributes: js.UndefOr[js.Array[String]] = js.native
   /**
     * Encoding used to compute qRanges of type SearchCharRange.
     * Possible values: Utf8 (default), Utf16
     */
-  var qCharEncoding: Utf8 | Utf16
+  var qCharEncoding: Utf8 | Utf16 = js.native
   /**
     * Search context.
     * The default value is LockedFieldsOnly.
@@ -41,25 +42,57 @@ trait ISearchCombinationOptions extends js.Object {
     *   in the values of the app. New selections are made on top of the current selections. If no selections were
     *   made before the search, this mode is identical to the Cleared context.
     */
-  var qContext: ContextType
+  var qContext: ContextType = js.native
   /**
     * List of the search fields.
     * If empty, the search is performed in all fields of the app.
     */
-  var qSearchFields: js.Array[String]
+  var qSearchFields: js.Array[String] = js.native
 }
 
 object ISearchCombinationOptions {
   @scala.inline
-  def apply(
-    qCharEncoding: Utf8 | Utf16,
-    qContext: ContextType,
-    qSearchFields: js.Array[String],
-    qAttributes: js.Array[String] = null
-  ): ISearchCombinationOptions = {
+  def apply(qCharEncoding: Utf8 | Utf16, qContext: ContextType, qSearchFields: js.Array[String]): ISearchCombinationOptions = {
     val __obj = js.Dynamic.literal(qCharEncoding = qCharEncoding.asInstanceOf[js.Any], qContext = qContext.asInstanceOf[js.Any], qSearchFields = qSearchFields.asInstanceOf[js.Any])
-    if (qAttributes != null) __obj.updateDynamic("qAttributes")(qAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISearchCombinationOptions]
   }
+  @scala.inline
+  implicit class ISearchCombinationOptionsOps[Self <: ISearchCombinationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQCharEncoding(value: Utf8 | Utf16): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qCharEncoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQContext(value: ContextType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQSearchFields(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qSearchFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQAttributes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

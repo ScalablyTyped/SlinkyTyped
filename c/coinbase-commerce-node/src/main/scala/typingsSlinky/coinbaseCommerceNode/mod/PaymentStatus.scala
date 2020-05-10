@@ -20,20 +20,18 @@ trait PaymentStatus extends js.Object
 
 object PaymentStatus {
   @scala.inline
-  def CANCELED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CANCELED = this.cast("CANCELED")
+  def CANCELED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CANCELED = "CANCELED".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CANCELED]
   @scala.inline
-  def CONFIRMED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CONFIRMED = this.cast("CONFIRMED")
+  def CONFIRMED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CONFIRMED = "CONFIRMED".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.CONFIRMED]
   @scala.inline
-  def EXPIRED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.EXPIRED = this.cast("EXPIRED")
+  def EXPIRED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.EXPIRED = "EXPIRED".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.EXPIRED]
   @scala.inline
-  def NEW: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.NEW = this.cast("NEW")
+  def NEW: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.NEW = "NEW".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.NEW]
   @scala.inline
-  def PENDING: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.PENDING = this.cast("PENDING")
+  def PENDING: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.PENDING = "PENDING".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.PENDING]
   @scala.inline
-  def RESOLVED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.RESOLVED = this.cast("RESOLVED")
+  def RESOLVED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.RESOLVED = "RESOLVED".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.RESOLVED]
   @scala.inline
-  def UNRESOLVED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.UNRESOLVED = this.cast("UNRESOLVED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNRESOLVED: typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.UNRESOLVED = "UNRESOLVED".asInstanceOf[typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.UNRESOLVED]
 }
 

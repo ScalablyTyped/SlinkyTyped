@@ -10,42 +10,85 @@ import scala.scalajs.js.annotation._
   * to a container. The volume must also be in the same region as the kubelet. Cinder volumes
   * support ownership management and SELinux relabeling.
   */
+@js.native
 trait CinderPersistentVolumeSource extends js.Object {
   /**
     * Filesystem type to mount. Must be a filesystem type supported by the host operating system.
     * Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More
     * info: https://examples.k8s.io/mysql-cinder-pd/README.md
     */
-  var fsType: js.UndefOr[Input[String]] = js.undefined
+  var fsType: js.UndefOr[Input[String]] = js.native
   /**
     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
     * VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
     */
-  var readOnly: js.UndefOr[Input[Boolean]] = js.undefined
+  var readOnly: js.UndefOr[Input[Boolean]] = js.native
   /**
     * Optional: points to a secret object containing parameters used to connect to OpenStack.
     */
-  var secretRef: js.UndefOr[Input[SecretReference]] = js.undefined
+  var secretRef: js.UndefOr[Input[SecretReference]] = js.native
   /**
     * volume id used to identify the volume in cinder. More info:
     * https://examples.k8s.io/mysql-cinder-pd/README.md
     */
-  var volumeID: Input[String]
+  var volumeID: Input[String] = js.native
 }
 
 object CinderPersistentVolumeSource {
   @scala.inline
-  def apply(
-    volumeID: Input[String],
-    fsType: Input[String] = null,
-    readOnly: Input[Boolean] = null,
-    secretRef: Input[SecretReference] = null
-  ): CinderPersistentVolumeSource = {
+  def apply(volumeID: Input[String]): CinderPersistentVolumeSource = {
     val __obj = js.Dynamic.literal(volumeID = volumeID.asInstanceOf[js.Any])
-    if (fsType != null) __obj.updateDynamic("fsType")(fsType.asInstanceOf[js.Any])
-    if (readOnly != null) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (secretRef != null) __obj.updateDynamic("secretRef")(secretRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[CinderPersistentVolumeSource]
   }
+  @scala.inline
+  implicit class CinderPersistentVolumeSourceOps[Self <: CinderPersistentVolumeSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVolumeID(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFsType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fsType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFsType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fsType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: Input[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecretRef(value: Input[SecretReference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretRef")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

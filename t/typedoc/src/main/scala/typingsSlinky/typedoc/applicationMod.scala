@@ -30,7 +30,7 @@ object applicationMod extends js.Object {
     var renderer: Renderer = js.native
     var serializer: Serializer = js.native
     @JSName("application")
-    def application_MApplication(): Application = js.native
+    def application_MApplication: Application = js.native
     /* protected */ def bootstrap(): OptionsReadResult = js.native
     /* protected */ def bootstrap(options: js.Object): OptionsReadResult = js.native
     def convert(src: js.Array[String]): js.UndefOr[ProjectReflection] = js.native
@@ -42,7 +42,7 @@ object applicationMod extends js.Object {
     def generateJson(src: js.Array[String], out: String): Boolean = js.native
     def getTypeScriptPath(): String = js.native
     def getTypeScriptVersion(): String = js.native
-    def isCLI(): Boolean = js.native
+    def isCLI: Boolean = js.native
   }
   
   /* static members */

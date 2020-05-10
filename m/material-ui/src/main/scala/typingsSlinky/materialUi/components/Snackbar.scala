@@ -1,11 +1,10 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.SnackbarProps
 import typingsSlinky.materialUi.snackbarMod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -13,35 +12,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Snackbar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Snackbar {
   @JSImport("material-ui/Snackbar", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    message: TagMod[Any],
-    open: Boolean,
-    action: TagMod[Any] = null,
-    autoHideDuration: Int | Double = null,
-    bodyStyle: CSSProperties = null,
-    contentStyle: CSSProperties = null,
-    onActionClick: SyntheticMouseEvent[js.Object] => Unit = null,
-    onRequestClose: /* reason */ String => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any])
-    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
-    if (autoHideDuration != null) __obj.updateDynamic("autoHideDuration")(autoHideDuration.asInstanceOf[js.Any])
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
-    if (contentStyle != null) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
-    if (onActionClick != null) __obj.updateDynamic("onActionClick")(js.Any.fromFunction1(onActionClick))
-    if (onRequestClose != null) __obj.updateDynamic("onRequestClose")(js.Any.fromFunction1(onRequestClose))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def actionReactElement(value: ReactElement): this.type = set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def action(value: TagMod[Any]): this.type = set("action", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoHideDuration(value: Double): this.type = set("autoHideDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyStyle(value: CSSProperties): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentStyle(value: CSSProperties): this.type = set("contentStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def message(value: TagMod[Any]): this.type = set("message", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onActionClick(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onActionClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRequestClose(value: /* reason */ String => Unit): this.type = set("onRequestClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = SnackbarProps
+  
+  def withProps(p: SnackbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(open: Boolean): Builder = {
+    val __props = js.Dynamic.literal(open = open.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SnackbarProps]))
+  }
 }
 

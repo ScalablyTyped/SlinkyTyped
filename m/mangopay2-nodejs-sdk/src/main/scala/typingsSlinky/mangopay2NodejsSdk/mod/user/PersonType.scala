@@ -12,10 +12,8 @@ trait PersonType extends js.Object
 
 object PersonType {
   @scala.inline
-  def LEGAL: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LEGAL = this.cast("LEGAL")
+  def LEGAL: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LEGAL = "LEGAL".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.LEGAL]
   @scala.inline
-  def NATURAL: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.NATURAL = this.cast("NATURAL")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def NATURAL: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.NATURAL = "NATURAL".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.NATURAL]
 }
 

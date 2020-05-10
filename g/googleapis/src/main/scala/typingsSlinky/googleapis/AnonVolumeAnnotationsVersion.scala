@@ -12,11 +12,41 @@ trait AnonVolumeAnnotationsVersion extends js.Object {
 
 object AnonVolumeAnnotationsVersion {
   @scala.inline
-  def apply(layerId: String = null, volumeAnnotationsVersion: String = null): AnonVolumeAnnotationsVersion = {
+  def apply(): AnonVolumeAnnotationsVersion = {
     val __obj = js.Dynamic.literal()
-    if (layerId != null) __obj.updateDynamic("layerId")(layerId.asInstanceOf[js.Any])
-    if (volumeAnnotationsVersion != null) __obj.updateDynamic("volumeAnnotationsVersion")(volumeAnnotationsVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonVolumeAnnotationsVersion]
   }
+  @scala.inline
+  implicit class AnonVolumeAnnotationsVersionOps[Self <: AnonVolumeAnnotationsVersion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeAnnotationsVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeAnnotationsVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeAnnotationsVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeAnnotationsVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

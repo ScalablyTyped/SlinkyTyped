@@ -62,9 +62,9 @@ trait XRayResolvedConfiguration extends XRayConfiguration {
   @JSName("utf8Encoder")
   var utf8Encoder_Original: Encoder = js.native
   @JSName("base64Decoder")
-  def base64Decoder_MXRayResolvedConfiguration(input: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def base64Decoder_MXRayResolvedConfiguration(input: String): js.typedarray.Uint8Array = js.native
   @JSName("base64Encoder")
-  def base64Encoder_MXRayResolvedConfiguration(input: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def base64Encoder_MXRayResolvedConfiguration(input: js.typedarray.Uint8Array): String = js.native
   def bodyLengthChecker(body: js.Any): js.UndefOr[Double] = js.native
   @JSName("credentials")
   def credentials_MXRayResolvedConfiguration(): js.Promise[Credentials] = js.native
@@ -76,12 +76,12 @@ trait XRayResolvedConfiguration extends XRayConfiguration {
   def region_MXRayResolvedConfiguration(): js.Promise[String] = js.native
   def serializer(): js.Promise[RequestSerializer[Readable]] = js.native
   @JSName("streamCollector")
-  def streamCollector_MXRayResolvedConfiguration(stream: Readable): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  def streamCollector_MXRayResolvedConfiguration(stream: Readable): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("urlParser")
   def urlParser_MXRayResolvedConfiguration(url: String): HttpEndpoint = js.native
   @JSName("utf8Decoder")
-  def utf8Decoder_MXRayResolvedConfiguration(input: String): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def utf8Decoder_MXRayResolvedConfiguration(input: String): js.typedarray.Uint8Array = js.native
   @JSName("utf8Encoder")
-  def utf8Encoder_MXRayResolvedConfiguration(input: scala.scalajs.js.typedarray.Uint8Array): String = js.native
+  def utf8Encoder_MXRayResolvedConfiguration(input: js.typedarray.Uint8Array): String = js.native
 }
 

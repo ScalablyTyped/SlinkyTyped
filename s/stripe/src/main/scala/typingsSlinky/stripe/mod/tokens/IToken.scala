@@ -1,7 +1,6 @@
 package typingsSlinky.stripe.mod.tokens
 
 import typingsSlinky.stripe.mod.bankAccounts.IBankAccountHash
-import typingsSlinky.stripe.mod.cards.ICardHash
 import typingsSlinky.stripe.stripeStrings.bank_account
 import typingsSlinky.stripe.stripeStrings.card
 import typingsSlinky.stripe.stripeStrings.token
@@ -9,15 +8,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.stripe.mod.IObject because Already inherited
 - typingsSlinky.stripe.mod.IResourceObject because Already inherited
 - typingsSlinky.stripe.mod.tokens.ITokenBase because Already inherited
-- typingsSlinky.stripe.mod.tokens.IBankAccountToken because var conflicts: client_ip, created, id, livemode, `object`, `type`, used. Inlined bank_account */ trait IToken extends ICardToken {
+- typingsSlinky.stripe.mod.tokens.IBankAccountToken because var conflicts: client_ip, created, id, livemode, `object`, `type`, used. Inlined bank_account */ @js.native
+trait IToken extends ICardToken {
   /**
     * Hash describing the bank account
     */
-  var bank_account: js.UndefOr[IBankAccountHash] = js.undefined
+  var bank_account: js.UndefOr[IBankAccountHash] = js.native
 }
 
 object IToken {
@@ -29,16 +29,32 @@ object IToken {
     livemode: Boolean,
     `object`: token,
     `type`: card | bank_account,
-    used: Boolean,
-    bank_account: IBankAccountHash = null,
-    card: ICardHash = null
+    used: Boolean
   ): IToken = {
     val __obj = js.Dynamic.literal(client_ip = client_ip.asInstanceOf[js.Any], created = created.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], livemode = livemode.asInstanceOf[js.Any], used = used.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (bank_account != null) __obj.updateDynamic("bank_account")(bank_account.asInstanceOf[js.Any])
-    if (card != null) __obj.updateDynamic("card")(card.asInstanceOf[js.Any])
     __obj.asInstanceOf[IToken]
   }
+  @scala.inline
+  implicit class ITokenOps[Self <: IToken] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBank_account(value: IBankAccountHash): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bank_account")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBank_account: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bank_account")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,10 +13,8 @@ trait MostVisitedURLType extends js.Object
 
 object MostVisitedURLType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def search: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search = "search".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search]
   @scala.inline
-  def search: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.search = this.cast("search")
-  @scala.inline
-  def url: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url = this.cast("url")
+  def url: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url = "url".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.url]
 }
 

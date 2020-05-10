@@ -4,51 +4,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TableCellStyleSuggestionState extends js.Object {
-  var backgroundColorSuggested: js.UndefOr[Boolean] = js.undefined
-  var borderBottomSuggested: js.UndefOr[Boolean] = js.undefined
-  var borderLeftSuggested: js.UndefOr[Boolean] = js.undefined
-  var borderRightSuggested: js.UndefOr[Boolean] = js.undefined
-  var borderTopSuggested: js.UndefOr[Boolean] = js.undefined
-  var columnSpanSuggested: js.UndefOr[Boolean] = js.undefined
-  var contentAlignmentSuggested: js.UndefOr[Boolean] = js.undefined
-  var paddingBottomSuggested: js.UndefOr[Boolean] = js.undefined
-  var paddingLeftSuggested: js.UndefOr[Boolean] = js.undefined
-  var paddingRightSuggested: js.UndefOr[Boolean] = js.undefined
-  var paddingTopSuggested: js.UndefOr[Boolean] = js.undefined
-  var rowSpanSuggested: js.UndefOr[Boolean] = js.undefined
+  var backgroundColorSuggested: js.UndefOr[Boolean] = js.native
+  var borderBottomSuggested: js.UndefOr[Boolean] = js.native
+  var borderLeftSuggested: js.UndefOr[Boolean] = js.native
+  var borderRightSuggested: js.UndefOr[Boolean] = js.native
+  var borderTopSuggested: js.UndefOr[Boolean] = js.native
+  var columnSpanSuggested: js.UndefOr[Boolean] = js.native
+  var contentAlignmentSuggested: js.UndefOr[Boolean] = js.native
+  var paddingBottomSuggested: js.UndefOr[Boolean] = js.native
+  var paddingLeftSuggested: js.UndefOr[Boolean] = js.native
+  var paddingRightSuggested: js.UndefOr[Boolean] = js.native
+  var paddingTopSuggested: js.UndefOr[Boolean] = js.native
+  var rowSpanSuggested: js.UndefOr[Boolean] = js.native
 }
 
 object TableCellStyleSuggestionState {
   @scala.inline
-  def apply(
-    backgroundColorSuggested: js.UndefOr[Boolean] = js.undefined,
-    borderBottomSuggested: js.UndefOr[Boolean] = js.undefined,
-    borderLeftSuggested: js.UndefOr[Boolean] = js.undefined,
-    borderRightSuggested: js.UndefOr[Boolean] = js.undefined,
-    borderTopSuggested: js.UndefOr[Boolean] = js.undefined,
-    columnSpanSuggested: js.UndefOr[Boolean] = js.undefined,
-    contentAlignmentSuggested: js.UndefOr[Boolean] = js.undefined,
-    paddingBottomSuggested: js.UndefOr[Boolean] = js.undefined,
-    paddingLeftSuggested: js.UndefOr[Boolean] = js.undefined,
-    paddingRightSuggested: js.UndefOr[Boolean] = js.undefined,
-    paddingTopSuggested: js.UndefOr[Boolean] = js.undefined,
-    rowSpanSuggested: js.UndefOr[Boolean] = js.undefined
-  ): TableCellStyleSuggestionState = {
+  def apply(): TableCellStyleSuggestionState = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(backgroundColorSuggested)) __obj.updateDynamic("backgroundColorSuggested")(backgroundColorSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderBottomSuggested)) __obj.updateDynamic("borderBottomSuggested")(borderBottomSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderLeftSuggested)) __obj.updateDynamic("borderLeftSuggested")(borderLeftSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderRightSuggested)) __obj.updateDynamic("borderRightSuggested")(borderRightSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(borderTopSuggested)) __obj.updateDynamic("borderTopSuggested")(borderTopSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(columnSpanSuggested)) __obj.updateDynamic("columnSpanSuggested")(columnSpanSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(contentAlignmentSuggested)) __obj.updateDynamic("contentAlignmentSuggested")(contentAlignmentSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(paddingBottomSuggested)) __obj.updateDynamic("paddingBottomSuggested")(paddingBottomSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(paddingLeftSuggested)) __obj.updateDynamic("paddingLeftSuggested")(paddingLeftSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(paddingRightSuggested)) __obj.updateDynamic("paddingRightSuggested")(paddingRightSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(paddingTopSuggested)) __obj.updateDynamic("paddingTopSuggested")(paddingTopSuggested.asInstanceOf[js.Any])
-    if (!js.isUndefined(rowSpanSuggested)) __obj.updateDynamic("rowSpanSuggested")(rowSpanSuggested.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableCellStyleSuggestionState]
   }
+  @scala.inline
+  implicit class TableCellStyleSuggestionStateOps[Self <: TableCellStyleSuggestionState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColorSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColorSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColorSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColorSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderBottomSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderBottomSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderBottomSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderLeftSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderLeftSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderLeftSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderRightSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderRightSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRightSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderTopSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderTopSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderTopSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnSpanSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSpanSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnSpanSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSpanSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentAlignmentSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentAlignmentSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentAlignmentSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentAlignmentSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingBottomSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottomSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingBottomSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingBottomSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingLeftSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeftSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingLeftSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingLeftSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingRightSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRightSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingRightSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingRightSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaddingTopSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTopSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaddingTopSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paddingTopSuggested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRowSpanSuggested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpanSuggested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowSpanSuggested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpanSuggested")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

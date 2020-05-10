@@ -25,36 +25,173 @@ trait PartialStyleRulesOutlined extends js.Object {
 
 object PartialStyleRulesOutlined {
   @scala.inline
-  def apply(
-    adornedEnd: CSSProperties = null,
-    adornedStart: CSSProperties = null,
-    disabled: CSSProperties = null,
-    error: CSSProperties = null,
-    focused: CSSProperties = null,
-    input: CSSProperties = null,
-    inputAdornedEnd: CSSProperties = null,
-    inputAdornedStart: CSSProperties = null,
-    inputMarginDense: CSSProperties = null,
-    inputMultiline: CSSProperties = null,
-    multiline: CSSProperties = null,
-    notchedOutline: CSSProperties = null,
-    root: CSSProperties = null
-  ): PartialStyleRulesOutlined = {
+  def apply(): PartialStyleRulesOutlined = {
     val __obj = js.Dynamic.literal()
-    if (adornedEnd != null) __obj.updateDynamic("adornedEnd")(adornedEnd.asInstanceOf[js.Any])
-    if (adornedStart != null) __obj.updateDynamic("adornedStart")(adornedStart.asInstanceOf[js.Any])
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (focused != null) __obj.updateDynamic("focused")(focused.asInstanceOf[js.Any])
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (inputAdornedEnd != null) __obj.updateDynamic("inputAdornedEnd")(inputAdornedEnd.asInstanceOf[js.Any])
-    if (inputAdornedStart != null) __obj.updateDynamic("inputAdornedStart")(inputAdornedStart.asInstanceOf[js.Any])
-    if (inputMarginDense != null) __obj.updateDynamic("inputMarginDense")(inputMarginDense.asInstanceOf[js.Any])
-    if (inputMultiline != null) __obj.updateDynamic("inputMultiline")(inputMultiline.asInstanceOf[js.Any])
-    if (multiline != null) __obj.updateDynamic("multiline")(multiline.asInstanceOf[js.Any])
-    if (notchedOutline != null) __obj.updateDynamic("notchedOutline")(notchedOutline.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesOutlined]
   }
+  @scala.inline
+  implicit class PartialStyleRulesOutlinedOps[Self <: PartialStyleRulesOutlined] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdornedEnd(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adornedEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdornedEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adornedEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAdornedStart(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adornedStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdornedStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adornedStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withError(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocused(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFocused: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInput(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputAdornedEnd(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputAdornedEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputAdornedEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputAdornedEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputAdornedStart(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputAdornedStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputAdornedStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputAdornedStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputMarginDense(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMarginDense")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputMarginDense: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMarginDense")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputMultiline(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMultiline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputMultiline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputMultiline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiline(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotchedOutline(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notchedOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotchedOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notchedOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

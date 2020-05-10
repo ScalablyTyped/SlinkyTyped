@@ -12,10 +12,8 @@ trait DockPosition extends js.Object
 
 object DockPosition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.reactEmailEditor.reactEmailEditorStrings.left = "left".asInstanceOf[typingsSlinky.reactEmailEditor.reactEmailEditorStrings.left]
   @scala.inline
-  def left: typingsSlinky.reactEmailEditor.reactEmailEditorStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.reactEmailEditor.reactEmailEditorStrings.right = this.cast("right")
+  def right: typingsSlinky.reactEmailEditor.reactEmailEditorStrings.right = "right".asInstanceOf[typingsSlinky.reactEmailEditor.reactEmailEditorStrings.right]
 }
 

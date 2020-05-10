@@ -20,24 +20,22 @@ trait RegistryHive extends js.Object
 
 object RegistryHive {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def currentConfig: typingsSlinky.microsoftGraph.microsoftGraphStrings.currentConfig = "currentConfig".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.currentConfig]
   @scala.inline
-  def currentConfig: typingsSlinky.microsoftGraph.microsoftGraphStrings.currentConfig = this.cast("currentConfig")
+  def currentUser: typingsSlinky.microsoftGraph.microsoftGraphStrings.currentUser = "currentUser".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.currentUser]
   @scala.inline
-  def currentUser: typingsSlinky.microsoftGraph.microsoftGraphStrings.currentUser = this.cast("currentUser")
+  def localMachineSam: typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSam = "localMachineSam".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSam]
   @scala.inline
-  def localMachineSam: typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSam = this.cast("localMachineSam")
+  def localMachineSecurity: typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSecurity = "localMachineSecurity".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSecurity]
   @scala.inline
-  def localMachineSecurity: typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSecurity = this.cast("localMachineSecurity")
+  def localMachineSoftware: typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSoftware = "localMachineSoftware".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSoftware]
   @scala.inline
-  def localMachineSoftware: typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSoftware = this.cast("localMachineSoftware")
+  def localMachineSystem: typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSystem = "localMachineSystem".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSystem]
   @scala.inline
-  def localMachineSystem: typingsSlinky.microsoftGraph.microsoftGraphStrings.localMachineSystem = this.cast("localMachineSystem")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
   @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
-  @scala.inline
-  def usersDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.usersDefault = this.cast("usersDefault")
+  def usersDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.usersDefault = "usersDefault".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.usersDefault]
 }
 

@@ -20,5 +20,6 @@ trait HTMLModElement extends HTMLElement {
 
 @JSGlobal("HTMLModElement")
 @js.native
-object HTMLModElement extends Instantiable0[HTMLModElement]
+object HTMLModElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLModElement]
 

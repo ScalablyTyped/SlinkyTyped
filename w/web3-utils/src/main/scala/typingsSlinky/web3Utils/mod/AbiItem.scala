@@ -4,39 +4,122 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AbiItem extends js.Object {
-  var anonymous: js.UndefOr[Boolean] = js.undefined
-  var constant: js.UndefOr[Boolean] = js.undefined
-  var inputs: js.UndefOr[js.Array[AbiInput]] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var outputs: js.UndefOr[js.Array[AbiOutput]] = js.undefined
-  var payable: js.UndefOr[Boolean] = js.undefined
-  var stateMutability: js.UndefOr[StateMutabilityType] = js.undefined
-  var `type`: AbiType
+  var anonymous: js.UndefOr[Boolean] = js.native
+  var constant: js.UndefOr[Boolean] = js.native
+  var inputs: js.UndefOr[js.Array[AbiInput]] = js.native
+  var name: js.UndefOr[String] = js.native
+  var outputs: js.UndefOr[js.Array[AbiOutput]] = js.native
+  var payable: js.UndefOr[Boolean] = js.native
+  var stateMutability: js.UndefOr[StateMutabilityType] = js.native
+  var `type`: AbiType = js.native
 }
 
 object AbiItem {
   @scala.inline
-  def apply(
-    `type`: AbiType,
-    anonymous: js.UndefOr[Boolean] = js.undefined,
-    constant: js.UndefOr[Boolean] = js.undefined,
-    inputs: js.Array[AbiInput] = null,
-    name: String = null,
-    outputs: js.Array[AbiOutput] = null,
-    payable: js.UndefOr[Boolean] = js.undefined,
-    stateMutability: StateMutabilityType = null
-  ): AbiItem = {
+  def apply(`type`: AbiType): AbiItem = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(anonymous)) __obj.updateDynamic("anonymous")(anonymous.asInstanceOf[js.Any])
-    if (!js.isUndefined(constant)) __obj.updateDynamic("constant")(constant.asInstanceOf[js.Any])
-    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (outputs != null) __obj.updateDynamic("outputs")(outputs.asInstanceOf[js.Any])
-    if (!js.isUndefined(payable)) __obj.updateDynamic("payable")(payable.asInstanceOf[js.Any])
-    if (stateMutability != null) __obj.updateDynamic("stateMutability")(stateMutability.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbiItem]
   }
+  @scala.inline
+  implicit class AbiItemOps[Self <: AbiItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: AbiType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnonymous(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anonymous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnonymous: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anonymous")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConstant(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputs(value: js.Array[AbiInput]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputs(value: js.Array[AbiOutput]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateMutability(value: StateMutabilityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateMutability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateMutability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateMutability")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

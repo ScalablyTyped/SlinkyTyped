@@ -4,24 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ModularScaleRatio extends js.Object {
-  var augFourth: Double
-  var doubleOctave: Double
-  var goldenSection: Double
-  var majorEleventh: Double
-  var majorSecond: Double
-  var majorSeventh: Double
-  var majorSixth: Double
-  var majorTenth: Double
-  var majorThird: Double
-  var majorTwelfth: Double
-  var minorSecond: Double
-  var minorSeventh: Double
-  var minorSixth: Double
-  var minorThird: Double
-  var octave: Double
-  var perfectFifth: Double
-  var perfectFourth: Double
+  var augFourth: Double = js.native
+  var doubleOctave: Double = js.native
+  var goldenSection: Double = js.native
+  var majorEleventh: Double = js.native
+  var majorSecond: Double = js.native
+  var majorSeventh: Double = js.native
+  var majorSixth: Double = js.native
+  var majorTenth: Double = js.native
+  var majorThird: Double = js.native
+  var majorTwelfth: Double = js.native
+  var minorSecond: Double = js.native
+  var minorSeventh: Double = js.native
+  var minorSixth: Double = js.native
+  var minorThird: Double = js.native
+  var octave: Double = js.native
+  var perfectFifth: Double = js.native
+  var perfectFourth: Double = js.native
 }
 
 object ModularScaleRatio {
@@ -46,8 +47,117 @@ object ModularScaleRatio {
     perfectFourth: Double
   ): ModularScaleRatio = {
     val __obj = js.Dynamic.literal(augFourth = augFourth.asInstanceOf[js.Any], doubleOctave = doubleOctave.asInstanceOf[js.Any], goldenSection = goldenSection.asInstanceOf[js.Any], majorEleventh = majorEleventh.asInstanceOf[js.Any], majorSecond = majorSecond.asInstanceOf[js.Any], majorSeventh = majorSeventh.asInstanceOf[js.Any], majorSixth = majorSixth.asInstanceOf[js.Any], majorTenth = majorTenth.asInstanceOf[js.Any], majorThird = majorThird.asInstanceOf[js.Any], majorTwelfth = majorTwelfth.asInstanceOf[js.Any], minorSecond = minorSecond.asInstanceOf[js.Any], minorSeventh = minorSeventh.asInstanceOf[js.Any], minorSixth = minorSixth.asInstanceOf[js.Any], minorThird = minorThird.asInstanceOf[js.Any], octave = octave.asInstanceOf[js.Any], perfectFifth = perfectFifth.asInstanceOf[js.Any], perfectFourth = perfectFourth.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ModularScaleRatio]
   }
+  @scala.inline
+  implicit class ModularScaleRatioOps[Self <: ModularScaleRatio] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAugFourth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("augFourth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDoubleOctave(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleOctave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGoldenSection(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goldenSection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMajorEleventh(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorEleventh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMajorSecond(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMajorSeventh(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorSeventh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMajorSixth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorSixth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMajorTenth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTenth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMajorThird(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorThird")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMajorTwelfth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorTwelfth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinorSecond(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinorSeventh(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorSeventh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinorSixth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorSixth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinorThird(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorThird")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOctave(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("octave")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPerfectFifth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perfectFifth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPerfectFourth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perfectFourth")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

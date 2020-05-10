@@ -13,12 +13,10 @@ trait MutationRecordType extends js.Object
 
 object MutationRecordType {
   @scala.inline
-  def attributes: typingsSlinky.std.stdStrings.attributes = this.cast("attributes")
+  def attributes: typingsSlinky.std.stdStrings.attributes = "attributes".asInstanceOf[typingsSlinky.std.stdStrings.attributes]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def characterData: typingsSlinky.std.stdStrings.characterData = "characterData".asInstanceOf[typingsSlinky.std.stdStrings.characterData]
   @scala.inline
-  def characterData: typingsSlinky.std.stdStrings.characterData = this.cast("characterData")
-  @scala.inline
-  def childList: typingsSlinky.std.stdStrings.childList = this.cast("childList")
+  def childList: typingsSlinky.std.stdStrings.childList = "childList".asInstanceOf[typingsSlinky.std.stdStrings.childList]
 }
 

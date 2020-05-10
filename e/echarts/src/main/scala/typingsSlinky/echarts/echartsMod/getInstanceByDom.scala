@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echartsMod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.echarts.echarts.ECharts
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -14,14 +14,12 @@ trait IconType extends js.Object
 
 object IconType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.antd.antdStrings.error = "error".asInstanceOf[typingsSlinky.antd.antdStrings.error]
   @scala.inline
-  def error: typingsSlinky.antd.antdStrings.error = this.cast("error")
+  def info: typingsSlinky.antd.antdStrings.info = "info".asInstanceOf[typingsSlinky.antd.antdStrings.info]
   @scala.inline
-  def info: typingsSlinky.antd.antdStrings.info = this.cast("info")
+  def success: typingsSlinky.antd.antdStrings.success = "success".asInstanceOf[typingsSlinky.antd.antdStrings.success]
   @scala.inline
-  def success: typingsSlinky.antd.antdStrings.success = this.cast("success")
-  @scala.inline
-  def warning: typingsSlinky.antd.antdStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.antd.antdStrings.warning = "warning".asInstanceOf[typingsSlinky.antd.antdStrings.warning]
 }
 

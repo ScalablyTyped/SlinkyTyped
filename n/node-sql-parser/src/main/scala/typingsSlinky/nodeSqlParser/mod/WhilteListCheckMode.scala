@@ -12,10 +12,8 @@ trait WhilteListCheckMode extends js.Object
 
 object WhilteListCheckMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def column: typingsSlinky.nodeSqlParser.nodeSqlParserStrings.column = "column".asInstanceOf[typingsSlinky.nodeSqlParser.nodeSqlParserStrings.column]
   @scala.inline
-  def column: typingsSlinky.nodeSqlParser.nodeSqlParserStrings.column = this.cast("column")
-  @scala.inline
-  def table: typingsSlinky.nodeSqlParser.nodeSqlParserStrings.table = this.cast("table")
+  def table: typingsSlinky.nodeSqlParser.nodeSqlParserStrings.table = "table".asInstanceOf[typingsSlinky.nodeSqlParser.nodeSqlParserStrings.table]
 }
 

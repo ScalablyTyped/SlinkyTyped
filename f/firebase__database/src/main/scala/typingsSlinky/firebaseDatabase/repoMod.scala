@@ -12,7 +12,6 @@ import typingsSlinky.firebaseDatabase.pathMod.Path
 import typingsSlinky.firebaseDatabase.persistentConnectionMod.PersistentConnection
 import typingsSlinky.firebaseDatabase.queryMod.Query
 import typingsSlinky.firebaseDatabase.repoInfoMod.RepoInfo
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,17 +62,17 @@ object repoMod extends js.Object {
     var updateInfo_ : js.Any = js.native
     def addEventCallbackForQuery(query: Query, eventRegistration: EventRegistration): Unit = js.native
     def callOnCompleteCallback(
-      callback: js.Function2[/* status */ Error | Null, /* errorReason */ js.UndefOr[String], Unit],
+      callback: js.Function2[/* status */ js.Error | Null, /* errorReason */ js.UndefOr[String], Unit],
       status: String
     ): Unit = js.native
     def callOnCompleteCallback(
-      callback: js.Function2[/* status */ Error | Null, /* errorReason */ js.UndefOr[String], Unit],
+      callback: js.Function2[/* status */ js.Error | Null, /* errorReason */ js.UndefOr[String], Unit],
       status: String,
       errorReason: String
     ): Unit = js.native
     def callOnCompleteCallback(callback: Null, status: String): Unit = js.native
     def callOnCompleteCallback(callback: Null, status: String, errorReason: String): Unit = js.native
-    def database(): Database = js.native
+    def database: Database = js.native
     /**
       * Generate ServerValues using some variables from the repo object.
       */
@@ -139,7 +138,7 @@ object repoMod extends js.Object {
     def startTransaction(
       path: Path,
       transactionUpdate: js.Function1[/* a */ js.Any, Unit],
-      onComplete: js.Function3[/* a */ Error, /* b */ Boolean, /* c */ DataSnapshot, Unit],
+      onComplete: js.Function3[/* a */ js.Error, /* b */ Boolean, /* c */ DataSnapshot, Unit],
       applyLocally: Boolean
     ): Unit = js.native
     def startTransaction(

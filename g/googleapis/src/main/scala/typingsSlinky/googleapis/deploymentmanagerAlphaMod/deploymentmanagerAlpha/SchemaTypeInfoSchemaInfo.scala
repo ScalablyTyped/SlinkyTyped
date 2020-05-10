@@ -21,11 +21,41 @@ trait SchemaTypeInfoSchemaInfo extends js.Object {
 
 object SchemaTypeInfoSchemaInfo {
   @scala.inline
-  def apply(input: String = null, output: String = null): SchemaTypeInfoSchemaInfo = {
+  def apply(): SchemaTypeInfoSchemaInfo = {
     val __obj = js.Dynamic.literal()
-    if (input != null) __obj.updateDynamic("input")(input.asInstanceOf[js.Any])
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTypeInfoSchemaInfo]
   }
+  @scala.inline
+  implicit class SchemaTypeInfoSchemaInfoOps[Self <: SchemaTypeInfoSchemaInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInput(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutput(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

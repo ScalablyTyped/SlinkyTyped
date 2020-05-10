@@ -366,6 +366,12 @@ object plotMod extends js.Object {
     def selections(datasets: js.Array[Dataset]): SimpleSelection[_] = js.native
   }
   
+  /* keyof plottable.AnonCanvas */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.svg
+    - typingsSlinky.plottable.plottableStrings.canvas
+  */
+  trait Renderer extends js.Object
+  
   /* static members */
   @js.native
   object Plot extends js.Object {
@@ -382,6 +388,5 @@ object plotMod extends js.Object {
     var svg: typingsSlinky.plottable.plottableStrings.svg = js.native
   }
   
-  type Renderer = String
 }
 

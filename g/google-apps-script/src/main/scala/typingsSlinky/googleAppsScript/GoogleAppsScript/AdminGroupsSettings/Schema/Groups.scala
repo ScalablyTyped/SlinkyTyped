@@ -4,198 +4,816 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Groups extends js.Object {
-  var allowExternalMembers: js.UndefOr[String] = js.undefined
-  var allowGoogleCommunication: js.UndefOr[String] = js.undefined
-  var allowWebPosting: js.UndefOr[String] = js.undefined
-  var archiveOnly: js.UndefOr[String] = js.undefined
-  var customFooterText: js.UndefOr[String] = js.undefined
-  var customReplyTo: js.UndefOr[String] = js.undefined
-  var customRolesEnabledForSettingsToBeMerged: js.UndefOr[String] = js.undefined
-  var defaultMessageDenyNotificationText: js.UndefOr[String] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var email: js.UndefOr[String] = js.undefined
-  var enableCollaborativeInbox: js.UndefOr[String] = js.undefined
-  var favoriteRepliesOnTop: js.UndefOr[String] = js.undefined
-  var includeCustomFooter: js.UndefOr[String] = js.undefined
-  var includeInGlobalAddressList: js.UndefOr[String] = js.undefined
-  var isArchived: js.UndefOr[String] = js.undefined
-  var kind: js.UndefOr[String] = js.undefined
-  var maxMessageBytes: js.UndefOr[Double] = js.undefined
-  var membersCanPostAsTheGroup: js.UndefOr[String] = js.undefined
-  var messageDisplayFont: js.UndefOr[String] = js.undefined
-  var messageModerationLevel: js.UndefOr[String] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var primaryLanguage: js.UndefOr[String] = js.undefined
-  var replyTo: js.UndefOr[String] = js.undefined
-  var sendMessageDenyNotification: js.UndefOr[String] = js.undefined
-  var showInGroupDirectory: js.UndefOr[String] = js.undefined
-  var spamModerationLevel: js.UndefOr[String] = js.undefined
-  var whoCanAdd: js.UndefOr[String] = js.undefined
-  var whoCanAddReferences: js.UndefOr[String] = js.undefined
-  var whoCanApproveMembers: js.UndefOr[String] = js.undefined
-  var whoCanApproveMessages: js.UndefOr[String] = js.undefined
-  var whoCanAssignTopics: js.UndefOr[String] = js.undefined
-  var whoCanAssistContent: js.UndefOr[String] = js.undefined
-  var whoCanBanUsers: js.UndefOr[String] = js.undefined
-  var whoCanContactOwner: js.UndefOr[String] = js.undefined
-  var whoCanDeleteAnyPost: js.UndefOr[String] = js.undefined
-  var whoCanDeleteTopics: js.UndefOr[String] = js.undefined
-  var whoCanDiscoverGroup: js.UndefOr[String] = js.undefined
-  var whoCanEnterFreeFormTags: js.UndefOr[String] = js.undefined
-  var whoCanHideAbuse: js.UndefOr[String] = js.undefined
-  var whoCanInvite: js.UndefOr[String] = js.undefined
-  var whoCanJoin: js.UndefOr[String] = js.undefined
-  var whoCanLeaveGroup: js.UndefOr[String] = js.undefined
-  var whoCanLockTopics: js.UndefOr[String] = js.undefined
-  var whoCanMakeTopicsSticky: js.UndefOr[String] = js.undefined
-  var whoCanMarkDuplicate: js.UndefOr[String] = js.undefined
-  var whoCanMarkFavoriteReplyOnAnyTopic: js.UndefOr[String] = js.undefined
-  var whoCanMarkFavoriteReplyOnOwnTopic: js.UndefOr[String] = js.undefined
-  var whoCanMarkNoResponseNeeded: js.UndefOr[String] = js.undefined
-  var whoCanModerateContent: js.UndefOr[String] = js.undefined
-  var whoCanModerateMembers: js.UndefOr[String] = js.undefined
-  var whoCanModifyMembers: js.UndefOr[String] = js.undefined
-  var whoCanModifyTagsAndCategories: js.UndefOr[String] = js.undefined
-  var whoCanMoveTopicsIn: js.UndefOr[String] = js.undefined
-  var whoCanMoveTopicsOut: js.UndefOr[String] = js.undefined
-  var whoCanPostAnnouncements: js.UndefOr[String] = js.undefined
-  var whoCanPostMessage: js.UndefOr[String] = js.undefined
-  var whoCanTakeTopics: js.UndefOr[String] = js.undefined
-  var whoCanUnassignTopic: js.UndefOr[String] = js.undefined
-  var whoCanUnmarkFavoriteReplyOnAnyTopic: js.UndefOr[String] = js.undefined
-  var whoCanViewGroup: js.UndefOr[String] = js.undefined
-  var whoCanViewMembership: js.UndefOr[String] = js.undefined
+  var allowExternalMembers: js.UndefOr[String] = js.native
+  var allowGoogleCommunication: js.UndefOr[String] = js.native
+  var allowWebPosting: js.UndefOr[String] = js.native
+  var archiveOnly: js.UndefOr[String] = js.native
+  var customFooterText: js.UndefOr[String] = js.native
+  var customReplyTo: js.UndefOr[String] = js.native
+  var customRolesEnabledForSettingsToBeMerged: js.UndefOr[String] = js.native
+  var defaultMessageDenyNotificationText: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.native
+  var email: js.UndefOr[String] = js.native
+  var enableCollaborativeInbox: js.UndefOr[String] = js.native
+  var favoriteRepliesOnTop: js.UndefOr[String] = js.native
+  var includeCustomFooter: js.UndefOr[String] = js.native
+  var includeInGlobalAddressList: js.UndefOr[String] = js.native
+  var isArchived: js.UndefOr[String] = js.native
+  var kind: js.UndefOr[String] = js.native
+  var maxMessageBytes: js.UndefOr[Double] = js.native
+  var membersCanPostAsTheGroup: js.UndefOr[String] = js.native
+  var messageDisplayFont: js.UndefOr[String] = js.native
+  var messageModerationLevel: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String] = js.native
+  var primaryLanguage: js.UndefOr[String] = js.native
+  var replyTo: js.UndefOr[String] = js.native
+  var sendMessageDenyNotification: js.UndefOr[String] = js.native
+  var showInGroupDirectory: js.UndefOr[String] = js.native
+  var spamModerationLevel: js.UndefOr[String] = js.native
+  var whoCanAdd: js.UndefOr[String] = js.native
+  var whoCanAddReferences: js.UndefOr[String] = js.native
+  var whoCanApproveMembers: js.UndefOr[String] = js.native
+  var whoCanApproveMessages: js.UndefOr[String] = js.native
+  var whoCanAssignTopics: js.UndefOr[String] = js.native
+  var whoCanAssistContent: js.UndefOr[String] = js.native
+  var whoCanBanUsers: js.UndefOr[String] = js.native
+  var whoCanContactOwner: js.UndefOr[String] = js.native
+  var whoCanDeleteAnyPost: js.UndefOr[String] = js.native
+  var whoCanDeleteTopics: js.UndefOr[String] = js.native
+  var whoCanDiscoverGroup: js.UndefOr[String] = js.native
+  var whoCanEnterFreeFormTags: js.UndefOr[String] = js.native
+  var whoCanHideAbuse: js.UndefOr[String] = js.native
+  var whoCanInvite: js.UndefOr[String] = js.native
+  var whoCanJoin: js.UndefOr[String] = js.native
+  var whoCanLeaveGroup: js.UndefOr[String] = js.native
+  var whoCanLockTopics: js.UndefOr[String] = js.native
+  var whoCanMakeTopicsSticky: js.UndefOr[String] = js.native
+  var whoCanMarkDuplicate: js.UndefOr[String] = js.native
+  var whoCanMarkFavoriteReplyOnAnyTopic: js.UndefOr[String] = js.native
+  var whoCanMarkFavoriteReplyOnOwnTopic: js.UndefOr[String] = js.native
+  var whoCanMarkNoResponseNeeded: js.UndefOr[String] = js.native
+  var whoCanModerateContent: js.UndefOr[String] = js.native
+  var whoCanModerateMembers: js.UndefOr[String] = js.native
+  var whoCanModifyMembers: js.UndefOr[String] = js.native
+  var whoCanModifyTagsAndCategories: js.UndefOr[String] = js.native
+  var whoCanMoveTopicsIn: js.UndefOr[String] = js.native
+  var whoCanMoveTopicsOut: js.UndefOr[String] = js.native
+  var whoCanPostAnnouncements: js.UndefOr[String] = js.native
+  var whoCanPostMessage: js.UndefOr[String] = js.native
+  var whoCanTakeTopics: js.UndefOr[String] = js.native
+  var whoCanUnassignTopic: js.UndefOr[String] = js.native
+  var whoCanUnmarkFavoriteReplyOnAnyTopic: js.UndefOr[String] = js.native
+  var whoCanViewGroup: js.UndefOr[String] = js.native
+  var whoCanViewMembership: js.UndefOr[String] = js.native
 }
 
 object Groups {
   @scala.inline
-  def apply(
-    allowExternalMembers: String = null,
-    allowGoogleCommunication: String = null,
-    allowWebPosting: String = null,
-    archiveOnly: String = null,
-    customFooterText: String = null,
-    customReplyTo: String = null,
-    customRolesEnabledForSettingsToBeMerged: String = null,
-    defaultMessageDenyNotificationText: String = null,
-    description: String = null,
-    email: String = null,
-    enableCollaborativeInbox: String = null,
-    favoriteRepliesOnTop: String = null,
-    includeCustomFooter: String = null,
-    includeInGlobalAddressList: String = null,
-    isArchived: String = null,
-    kind: String = null,
-    maxMessageBytes: Int | Double = null,
-    membersCanPostAsTheGroup: String = null,
-    messageDisplayFont: String = null,
-    messageModerationLevel: String = null,
-    name: String = null,
-    primaryLanguage: String = null,
-    replyTo: String = null,
-    sendMessageDenyNotification: String = null,
-    showInGroupDirectory: String = null,
-    spamModerationLevel: String = null,
-    whoCanAdd: String = null,
-    whoCanAddReferences: String = null,
-    whoCanApproveMembers: String = null,
-    whoCanApproveMessages: String = null,
-    whoCanAssignTopics: String = null,
-    whoCanAssistContent: String = null,
-    whoCanBanUsers: String = null,
-    whoCanContactOwner: String = null,
-    whoCanDeleteAnyPost: String = null,
-    whoCanDeleteTopics: String = null,
-    whoCanDiscoverGroup: String = null,
-    whoCanEnterFreeFormTags: String = null,
-    whoCanHideAbuse: String = null,
-    whoCanInvite: String = null,
-    whoCanJoin: String = null,
-    whoCanLeaveGroup: String = null,
-    whoCanLockTopics: String = null,
-    whoCanMakeTopicsSticky: String = null,
-    whoCanMarkDuplicate: String = null,
-    whoCanMarkFavoriteReplyOnAnyTopic: String = null,
-    whoCanMarkFavoriteReplyOnOwnTopic: String = null,
-    whoCanMarkNoResponseNeeded: String = null,
-    whoCanModerateContent: String = null,
-    whoCanModerateMembers: String = null,
-    whoCanModifyMembers: String = null,
-    whoCanModifyTagsAndCategories: String = null,
-    whoCanMoveTopicsIn: String = null,
-    whoCanMoveTopicsOut: String = null,
-    whoCanPostAnnouncements: String = null,
-    whoCanPostMessage: String = null,
-    whoCanTakeTopics: String = null,
-    whoCanUnassignTopic: String = null,
-    whoCanUnmarkFavoriteReplyOnAnyTopic: String = null,
-    whoCanViewGroup: String = null,
-    whoCanViewMembership: String = null
-  ): Groups = {
+  def apply(): Groups = {
     val __obj = js.Dynamic.literal()
-    if (allowExternalMembers != null) __obj.updateDynamic("allowExternalMembers")(allowExternalMembers.asInstanceOf[js.Any])
-    if (allowGoogleCommunication != null) __obj.updateDynamic("allowGoogleCommunication")(allowGoogleCommunication.asInstanceOf[js.Any])
-    if (allowWebPosting != null) __obj.updateDynamic("allowWebPosting")(allowWebPosting.asInstanceOf[js.Any])
-    if (archiveOnly != null) __obj.updateDynamic("archiveOnly")(archiveOnly.asInstanceOf[js.Any])
-    if (customFooterText != null) __obj.updateDynamic("customFooterText")(customFooterText.asInstanceOf[js.Any])
-    if (customReplyTo != null) __obj.updateDynamic("customReplyTo")(customReplyTo.asInstanceOf[js.Any])
-    if (customRolesEnabledForSettingsToBeMerged != null) __obj.updateDynamic("customRolesEnabledForSettingsToBeMerged")(customRolesEnabledForSettingsToBeMerged.asInstanceOf[js.Any])
-    if (defaultMessageDenyNotificationText != null) __obj.updateDynamic("defaultMessageDenyNotificationText")(defaultMessageDenyNotificationText.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (enableCollaborativeInbox != null) __obj.updateDynamic("enableCollaborativeInbox")(enableCollaborativeInbox.asInstanceOf[js.Any])
-    if (favoriteRepliesOnTop != null) __obj.updateDynamic("favoriteRepliesOnTop")(favoriteRepliesOnTop.asInstanceOf[js.Any])
-    if (includeCustomFooter != null) __obj.updateDynamic("includeCustomFooter")(includeCustomFooter.asInstanceOf[js.Any])
-    if (includeInGlobalAddressList != null) __obj.updateDynamic("includeInGlobalAddressList")(includeInGlobalAddressList.asInstanceOf[js.Any])
-    if (isArchived != null) __obj.updateDynamic("isArchived")(isArchived.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (maxMessageBytes != null) __obj.updateDynamic("maxMessageBytes")(maxMessageBytes.asInstanceOf[js.Any])
-    if (membersCanPostAsTheGroup != null) __obj.updateDynamic("membersCanPostAsTheGroup")(membersCanPostAsTheGroup.asInstanceOf[js.Any])
-    if (messageDisplayFont != null) __obj.updateDynamic("messageDisplayFont")(messageDisplayFont.asInstanceOf[js.Any])
-    if (messageModerationLevel != null) __obj.updateDynamic("messageModerationLevel")(messageModerationLevel.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (primaryLanguage != null) __obj.updateDynamic("primaryLanguage")(primaryLanguage.asInstanceOf[js.Any])
-    if (replyTo != null) __obj.updateDynamic("replyTo")(replyTo.asInstanceOf[js.Any])
-    if (sendMessageDenyNotification != null) __obj.updateDynamic("sendMessageDenyNotification")(sendMessageDenyNotification.asInstanceOf[js.Any])
-    if (showInGroupDirectory != null) __obj.updateDynamic("showInGroupDirectory")(showInGroupDirectory.asInstanceOf[js.Any])
-    if (spamModerationLevel != null) __obj.updateDynamic("spamModerationLevel")(spamModerationLevel.asInstanceOf[js.Any])
-    if (whoCanAdd != null) __obj.updateDynamic("whoCanAdd")(whoCanAdd.asInstanceOf[js.Any])
-    if (whoCanAddReferences != null) __obj.updateDynamic("whoCanAddReferences")(whoCanAddReferences.asInstanceOf[js.Any])
-    if (whoCanApproveMembers != null) __obj.updateDynamic("whoCanApproveMembers")(whoCanApproveMembers.asInstanceOf[js.Any])
-    if (whoCanApproveMessages != null) __obj.updateDynamic("whoCanApproveMessages")(whoCanApproveMessages.asInstanceOf[js.Any])
-    if (whoCanAssignTopics != null) __obj.updateDynamic("whoCanAssignTopics")(whoCanAssignTopics.asInstanceOf[js.Any])
-    if (whoCanAssistContent != null) __obj.updateDynamic("whoCanAssistContent")(whoCanAssistContent.asInstanceOf[js.Any])
-    if (whoCanBanUsers != null) __obj.updateDynamic("whoCanBanUsers")(whoCanBanUsers.asInstanceOf[js.Any])
-    if (whoCanContactOwner != null) __obj.updateDynamic("whoCanContactOwner")(whoCanContactOwner.asInstanceOf[js.Any])
-    if (whoCanDeleteAnyPost != null) __obj.updateDynamic("whoCanDeleteAnyPost")(whoCanDeleteAnyPost.asInstanceOf[js.Any])
-    if (whoCanDeleteTopics != null) __obj.updateDynamic("whoCanDeleteTopics")(whoCanDeleteTopics.asInstanceOf[js.Any])
-    if (whoCanDiscoverGroup != null) __obj.updateDynamic("whoCanDiscoverGroup")(whoCanDiscoverGroup.asInstanceOf[js.Any])
-    if (whoCanEnterFreeFormTags != null) __obj.updateDynamic("whoCanEnterFreeFormTags")(whoCanEnterFreeFormTags.asInstanceOf[js.Any])
-    if (whoCanHideAbuse != null) __obj.updateDynamic("whoCanHideAbuse")(whoCanHideAbuse.asInstanceOf[js.Any])
-    if (whoCanInvite != null) __obj.updateDynamic("whoCanInvite")(whoCanInvite.asInstanceOf[js.Any])
-    if (whoCanJoin != null) __obj.updateDynamic("whoCanJoin")(whoCanJoin.asInstanceOf[js.Any])
-    if (whoCanLeaveGroup != null) __obj.updateDynamic("whoCanLeaveGroup")(whoCanLeaveGroup.asInstanceOf[js.Any])
-    if (whoCanLockTopics != null) __obj.updateDynamic("whoCanLockTopics")(whoCanLockTopics.asInstanceOf[js.Any])
-    if (whoCanMakeTopicsSticky != null) __obj.updateDynamic("whoCanMakeTopicsSticky")(whoCanMakeTopicsSticky.asInstanceOf[js.Any])
-    if (whoCanMarkDuplicate != null) __obj.updateDynamic("whoCanMarkDuplicate")(whoCanMarkDuplicate.asInstanceOf[js.Any])
-    if (whoCanMarkFavoriteReplyOnAnyTopic != null) __obj.updateDynamic("whoCanMarkFavoriteReplyOnAnyTopic")(whoCanMarkFavoriteReplyOnAnyTopic.asInstanceOf[js.Any])
-    if (whoCanMarkFavoriteReplyOnOwnTopic != null) __obj.updateDynamic("whoCanMarkFavoriteReplyOnOwnTopic")(whoCanMarkFavoriteReplyOnOwnTopic.asInstanceOf[js.Any])
-    if (whoCanMarkNoResponseNeeded != null) __obj.updateDynamic("whoCanMarkNoResponseNeeded")(whoCanMarkNoResponseNeeded.asInstanceOf[js.Any])
-    if (whoCanModerateContent != null) __obj.updateDynamic("whoCanModerateContent")(whoCanModerateContent.asInstanceOf[js.Any])
-    if (whoCanModerateMembers != null) __obj.updateDynamic("whoCanModerateMembers")(whoCanModerateMembers.asInstanceOf[js.Any])
-    if (whoCanModifyMembers != null) __obj.updateDynamic("whoCanModifyMembers")(whoCanModifyMembers.asInstanceOf[js.Any])
-    if (whoCanModifyTagsAndCategories != null) __obj.updateDynamic("whoCanModifyTagsAndCategories")(whoCanModifyTagsAndCategories.asInstanceOf[js.Any])
-    if (whoCanMoveTopicsIn != null) __obj.updateDynamic("whoCanMoveTopicsIn")(whoCanMoveTopicsIn.asInstanceOf[js.Any])
-    if (whoCanMoveTopicsOut != null) __obj.updateDynamic("whoCanMoveTopicsOut")(whoCanMoveTopicsOut.asInstanceOf[js.Any])
-    if (whoCanPostAnnouncements != null) __obj.updateDynamic("whoCanPostAnnouncements")(whoCanPostAnnouncements.asInstanceOf[js.Any])
-    if (whoCanPostMessage != null) __obj.updateDynamic("whoCanPostMessage")(whoCanPostMessage.asInstanceOf[js.Any])
-    if (whoCanTakeTopics != null) __obj.updateDynamic("whoCanTakeTopics")(whoCanTakeTopics.asInstanceOf[js.Any])
-    if (whoCanUnassignTopic != null) __obj.updateDynamic("whoCanUnassignTopic")(whoCanUnassignTopic.asInstanceOf[js.Any])
-    if (whoCanUnmarkFavoriteReplyOnAnyTopic != null) __obj.updateDynamic("whoCanUnmarkFavoriteReplyOnAnyTopic")(whoCanUnmarkFavoriteReplyOnAnyTopic.asInstanceOf[js.Any])
-    if (whoCanViewGroup != null) __obj.updateDynamic("whoCanViewGroup")(whoCanViewGroup.asInstanceOf[js.Any])
-    if (whoCanViewMembership != null) __obj.updateDynamic("whoCanViewMembership")(whoCanViewMembership.asInstanceOf[js.Any])
     __obj.asInstanceOf[Groups]
   }
+  @scala.inline
+  implicit class GroupsOps[Self <: Groups] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowExternalMembers(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExternalMembers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowExternalMembers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowExternalMembers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowGoogleCommunication(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowGoogleCommunication")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowGoogleCommunication: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowGoogleCommunication")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAllowWebPosting(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowWebPosting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowWebPosting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowWebPosting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArchiveOnly(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchiveOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomFooterText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customFooterText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomFooterText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customFooterText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomReplyTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customReplyTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomReplyTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customReplyTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomRolesEnabledForSettingsToBeMerged(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customRolesEnabledForSettingsToBeMerged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomRolesEnabledForSettingsToBeMerged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customRolesEnabledForSettingsToBeMerged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultMessageDenyNotificationText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMessageDenyNotificationText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultMessageDenyNotificationText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMessageDenyNotificationText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableCollaborativeInbox(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCollaborativeInbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableCollaborativeInbox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableCollaborativeInbox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFavoriteRepliesOnTop(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("favoriteRepliesOnTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFavoriteRepliesOnTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("favoriteRepliesOnTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeCustomFooter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCustomFooter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeCustomFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeCustomFooter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeInGlobalAddressList(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInGlobalAddressList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeInGlobalAddressList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeInGlobalAddressList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsArchived(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isArchived")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsArchived: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isArchived")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxMessageBytes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessageBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxMessageBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessageBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMembersCanPostAsTheGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("membersCanPostAsTheGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMembersCanPostAsTheGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("membersCanPostAsTheGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageDisplayFont(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageDisplayFont")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageDisplayFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageDisplayFont")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessageModerationLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageModerationLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessageModerationLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageModerationLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryLanguage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReplyTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replyTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReplyTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replyTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSendMessageDenyNotification(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMessageDenyNotification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSendMessageDenyNotification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMessageDenyNotification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowInGroupDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInGroupDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowInGroupDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showInGroupDirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpamModerationLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spamModerationLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpamModerationLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spamModerationLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanAdd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanAdd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanAdd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanAddReferences(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanAddReferences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanAddReferences: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanAddReferences")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanApproveMembers(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanApproveMembers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanApproveMembers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanApproveMembers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanApproveMessages(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanApproveMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanApproveMessages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanApproveMessages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanAssignTopics(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanAssignTopics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanAssignTopics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanAssignTopics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanAssistContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanAssistContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanAssistContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanAssistContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanBanUsers(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanBanUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanBanUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanBanUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanContactOwner(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanContactOwner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanContactOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanContactOwner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanDeleteAnyPost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanDeleteAnyPost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanDeleteAnyPost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanDeleteAnyPost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanDeleteTopics(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanDeleteTopics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanDeleteTopics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanDeleteTopics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanDiscoverGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanDiscoverGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanDiscoverGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanDiscoverGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanEnterFreeFormTags(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanEnterFreeFormTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanEnterFreeFormTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanEnterFreeFormTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanHideAbuse(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanHideAbuse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanHideAbuse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanHideAbuse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanInvite(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanInvite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanInvite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanInvite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanJoin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanJoin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanJoin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanJoin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanLeaveGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanLeaveGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanLeaveGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanLeaveGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanLockTopics(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanLockTopics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanLockTopics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanLockTopics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanMakeTopicsSticky(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMakeTopicsSticky")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanMakeTopicsSticky: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMakeTopicsSticky")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanMarkDuplicate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMarkDuplicate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanMarkDuplicate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMarkDuplicate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanMarkFavoriteReplyOnAnyTopic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMarkFavoriteReplyOnAnyTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanMarkFavoriteReplyOnAnyTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMarkFavoriteReplyOnAnyTopic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanMarkFavoriteReplyOnOwnTopic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMarkFavoriteReplyOnOwnTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanMarkFavoriteReplyOnOwnTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMarkFavoriteReplyOnOwnTopic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanMarkNoResponseNeeded(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMarkNoResponseNeeded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanMarkNoResponseNeeded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMarkNoResponseNeeded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanModerateContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanModerateContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanModerateContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanModerateContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanModerateMembers(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanModerateMembers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanModerateMembers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanModerateMembers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanModifyMembers(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanModifyMembers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanModifyMembers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanModifyMembers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanModifyTagsAndCategories(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanModifyTagsAndCategories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanModifyTagsAndCategories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanModifyTagsAndCategories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanMoveTopicsIn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMoveTopicsIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanMoveTopicsIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMoveTopicsIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanMoveTopicsOut(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMoveTopicsOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanMoveTopicsOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanMoveTopicsOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanPostAnnouncements(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanPostAnnouncements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanPostAnnouncements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanPostAnnouncements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanPostMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanPostMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanPostMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanPostMessage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanTakeTopics(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanTakeTopics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanTakeTopics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanTakeTopics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanUnassignTopic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanUnassignTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanUnassignTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanUnassignTopic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanUnmarkFavoriteReplyOnAnyTopic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanUnmarkFavoriteReplyOnAnyTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanUnmarkFavoriteReplyOnAnyTopic: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanUnmarkFavoriteReplyOnAnyTopic")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanViewGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanViewGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanViewGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanViewGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWhoCanViewMembership(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanViewMembership")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWhoCanViewMembership: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("whoCanViewMembership")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

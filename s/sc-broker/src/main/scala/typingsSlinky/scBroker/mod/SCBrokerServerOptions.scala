@@ -5,54 +5,192 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SCBrokerServerOptions extends js.Object {
-  var brokerControllerPath: js.UndefOr[String] = js.undefined
-  var brokerOptions: js.UndefOr[SCBrokerOptions] = js.undefined
-  var debug: js.UndefOr[Boolean] = js.undefined
-  var downgradeToUser: js.UndefOr[Double | String] = js.undefined
-  var expiryAccuracy: js.UndefOr[Double] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var inspect: js.UndefOr[Boolean] = js.undefined
-  var instanceId: js.UndefOr[String] = js.undefined
-  var ipcAckTimeout: js.UndefOr[Double] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
-  var processTermTimeout: js.UndefOr[Double] = js.undefined
-  var secretKey: js.UndefOr[String] = js.undefined
-  var socketPath: js.UndefOr[String] = js.undefined
+  var brokerControllerPath: js.UndefOr[String] = js.native
+  var brokerOptions: js.UndefOr[SCBrokerOptions] = js.native
+  var debug: js.UndefOr[Boolean] = js.native
+  var downgradeToUser: js.UndefOr[Double | String] = js.native
+  var expiryAccuracy: js.UndefOr[Double] = js.native
+  var id: js.UndefOr[String] = js.native
+  var inspect: js.UndefOr[Boolean] = js.native
+  var instanceId: js.UndefOr[String] = js.native
+  var ipcAckTimeout: js.UndefOr[Double] = js.native
+  var port: js.UndefOr[Double] = js.native
+  var processTermTimeout: js.UndefOr[Double] = js.native
+  var secretKey: js.UndefOr[String] = js.native
+  var socketPath: js.UndefOr[String] = js.native
 }
 
 object SCBrokerServerOptions {
   @scala.inline
-  def apply(
-    brokerControllerPath: String = null,
-    brokerOptions: SCBrokerOptions = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    downgradeToUser: Double | String = null,
-    expiryAccuracy: Int | Double = null,
-    id: String = null,
-    inspect: js.UndefOr[Boolean] = js.undefined,
-    instanceId: String = null,
-    ipcAckTimeout: Int | Double = null,
-    port: Int | Double = null,
-    processTermTimeout: Int | Double = null,
-    secretKey: String = null,
-    socketPath: String = null
-  ): SCBrokerServerOptions = {
+  def apply(): SCBrokerServerOptions = {
     val __obj = js.Dynamic.literal()
-    if (brokerControllerPath != null) __obj.updateDynamic("brokerControllerPath")(brokerControllerPath.asInstanceOf[js.Any])
-    if (brokerOptions != null) __obj.updateDynamic("brokerOptions")(brokerOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (downgradeToUser != null) __obj.updateDynamic("downgradeToUser")(downgradeToUser.asInstanceOf[js.Any])
-    if (expiryAccuracy != null) __obj.updateDynamic("expiryAccuracy")(expiryAccuracy.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(inspect)) __obj.updateDynamic("inspect")(inspect.asInstanceOf[js.Any])
-    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
-    if (ipcAckTimeout != null) __obj.updateDynamic("ipcAckTimeout")(ipcAckTimeout.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
-    if (processTermTimeout != null) __obj.updateDynamic("processTermTimeout")(processTermTimeout.asInstanceOf[js.Any])
-    if (secretKey != null) __obj.updateDynamic("secretKey")(secretKey.asInstanceOf[js.Any])
-    if (socketPath != null) __obj.updateDynamic("socketPath")(socketPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[SCBrokerServerOptions]
   }
+  @scala.inline
+  implicit class SCBrokerServerOptionsOps[Self <: SCBrokerServerOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrokerControllerPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brokerControllerPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrokerControllerPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brokerControllerPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrokerOptions(value: SCBrokerOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brokerOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrokerOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brokerOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebug: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDowngradeToUser(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downgradeToUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDowngradeToUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downgradeToUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpiryAccuracy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiryAccuracy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpiryAccuracy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiryAccuracy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInspect(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInspect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inspect")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpcAckTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipcAckTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpcAckTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipcAckTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessTermTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processTermTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessTermTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processTermTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecretKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secretKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSocketPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSocketPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketPath")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.notifications.onClicked")
 @js.native
 object onClicked
-  extends TopLevel[Event[js.Function1[/* notificationId */ String, Unit]]]
+  extends TopLevel[Event[js.Function1[/* id */ String, Unit]]]
 

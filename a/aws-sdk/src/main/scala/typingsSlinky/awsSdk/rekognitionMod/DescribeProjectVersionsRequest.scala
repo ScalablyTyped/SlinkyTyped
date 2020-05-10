@@ -26,17 +26,59 @@ trait DescribeProjectVersionsRequest extends js.Object {
 
 object DescribeProjectVersionsRequest {
   @scala.inline
-  def apply(
-    ProjectArn: ProjectArn,
-    MaxResults: Int | Double = null,
-    NextToken: ExtendedPaginationToken = null,
-    VersionNames: VersionNames = null
-  ): DescribeProjectVersionsRequest = {
+  def apply(ProjectArn: ProjectArn): DescribeProjectVersionsRequest = {
     val __obj = js.Dynamic.literal(ProjectArn = ProjectArn.asInstanceOf[js.Any])
-    if (MaxResults != null) __obj.updateDynamic("MaxResults")(MaxResults.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (VersionNames != null) __obj.updateDynamic("VersionNames")(VersionNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeProjectVersionsRequest]
   }
+  @scala.inline
+  implicit class DescribeProjectVersionsRequestOps[Self <: DescribeProjectVersionsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjectArn(value: ProjectArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxResults(value: ProjectVersionsPageSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: ExtendedPaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionNames(value: VersionNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

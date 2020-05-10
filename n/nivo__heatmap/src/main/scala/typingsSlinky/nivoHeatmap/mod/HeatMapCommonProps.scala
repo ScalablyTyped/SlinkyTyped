@@ -18,87 +18,365 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined @nivo/core.@nivo/core.ColorProps<@nivo/heatmap.@nivo/heatmap.HeatMapDatum> & std.Partial<{  forceSquare  :boolean,   sizeVariation  :number,   margin  :@nivo/core.@nivo/core.Box,   padding  :number,   cellShape  :'rect' | 'circle' | react.react.StatelessComponent<any>,   cellOpacity  :number,   cellBorderWidth  :number,   cellBorderColor  :@nivo/colors.@nivo/colors.InheritedColorProp<@nivo/heatmap.@nivo/heatmap.HeatMapDatumWithColor>,   axisTop  :@nivo/axes.@nivo/axes.Axis,   axisRight  :@nivo/axes.@nivo/axes.Axis,   axisBottom  :@nivo/axes.@nivo/axes.Axis,   axisLeft  :@nivo/axes.@nivo/axes.Axis,   enableGridX  :boolean,   enableGridY  :boolean,   enableLabels  :boolean,   labelTextColor  :@nivo/colors.@nivo/colors.InheritedColorProp<@nivo/heatmap.@nivo/heatmap.HeatMapDatumWithColor>,   isInteractive  :boolean,   hoverTarget  :'cell' | 'row' | 'column' | 'rowColumn',   cellHoverOpacity  :number,   cellHoverOthersOpacity  :number,   tooltipFormat  :string | @nivo/heatmap.@nivo/heatmap.ValueFormatter,   theme  :@nivo/core.@nivo/core.Theme}> */
+@js.native
 trait HeatMapCommonProps extends js.Object {
-  var axisBottom: js.UndefOr[Axis] = js.undefined
-  var axisLeft: js.UndefOr[Axis] = js.undefined
-  var axisRight: js.UndefOr[Axis] = js.undefined
-  var axisTop: js.UndefOr[Axis] = js.undefined
-  var cellBorderColor: js.UndefOr[InheritedColorProp[HeatMapDatumWithColor]] = js.undefined
-  var cellBorderWidth: js.UndefOr[Double] = js.undefined
-  var cellHoverOpacity: js.UndefOr[Double] = js.undefined
-  var cellHoverOthersOpacity: js.UndefOr[Double] = js.undefined
-  var cellOpacity: js.UndefOr[Double] = js.undefined
-  var cellShape: js.UndefOr[rect | circle | ReactComponentClass[_]] = js.undefined
-  var colorBy: js.UndefOr[String | GetColor[HeatMapDatum]] = js.undefined
-  var colors: js.UndefOr[Colors] = js.undefined
-  var enableGridX: js.UndefOr[Boolean] = js.undefined
-  var enableGridY: js.UndefOr[Boolean] = js.undefined
-  var enableLabels: js.UndefOr[Boolean] = js.undefined
-  var forceSquare: js.UndefOr[Boolean] = js.undefined
-  var hoverTarget: js.UndefOr[cell | row | column | rowColumn] = js.undefined
-  var isInteractive: js.UndefOr[Boolean] = js.undefined
-  var labelTextColor: js.UndefOr[InheritedColorProp[HeatMapDatumWithColor]] = js.undefined
-  var margin: js.UndefOr[Box] = js.undefined
-  var padding: js.UndefOr[Double] = js.undefined
-  var sizeVariation: js.UndefOr[Double] = js.undefined
-  var theme: js.UndefOr[Theme] = js.undefined
-  var tooltipFormat: js.UndefOr[String | ValueFormatter] = js.undefined
+  var axisBottom: js.UndefOr[Axis] = js.native
+  var axisLeft: js.UndefOr[Axis] = js.native
+  var axisRight: js.UndefOr[Axis] = js.native
+  var axisTop: js.UndefOr[Axis] = js.native
+  var cellBorderColor: js.UndefOr[InheritedColorProp[HeatMapDatumWithColor]] = js.native
+  var cellBorderWidth: js.UndefOr[Double] = js.native
+  var cellHoverOpacity: js.UndefOr[Double] = js.native
+  var cellHoverOthersOpacity: js.UndefOr[Double] = js.native
+  var cellOpacity: js.UndefOr[Double] = js.native
+  var cellShape: js.UndefOr[rect | circle | ReactComponentClass[_]] = js.native
+  var colorBy: js.UndefOr[String | GetColor[HeatMapDatum]] = js.native
+  var colors: js.UndefOr[Colors] = js.native
+  var enableGridX: js.UndefOr[Boolean] = js.native
+  var enableGridY: js.UndefOr[Boolean] = js.native
+  var enableLabels: js.UndefOr[Boolean] = js.native
+  var forceSquare: js.UndefOr[Boolean] = js.native
+  var hoverTarget: js.UndefOr[cell | row | column | rowColumn] = js.native
+  var isInteractive: js.UndefOr[Boolean] = js.native
+  var labelTextColor: js.UndefOr[InheritedColorProp[HeatMapDatumWithColor]] = js.native
+  var margin: js.UndefOr[Box] = js.native
+  var padding: js.UndefOr[Double] = js.native
+  var sizeVariation: js.UndefOr[Double] = js.native
+  var theme: js.UndefOr[Theme] = js.native
+  var tooltipFormat: js.UndefOr[String | ValueFormatter] = js.native
 }
 
 object HeatMapCommonProps {
   @scala.inline
-  def apply(
-    axisBottom: Axis = null,
-    axisLeft: Axis = null,
-    axisRight: Axis = null,
-    axisTop: Axis = null,
-    cellBorderColor: InheritedColorProp[HeatMapDatumWithColor] = null,
-    cellBorderWidth: Int | Double = null,
-    cellHoverOpacity: Int | Double = null,
-    cellHoverOthersOpacity: Int | Double = null,
-    cellOpacity: Int | Double = null,
-    cellShape: rect | circle | ReactComponentClass[_] = null,
-    colorBy: String | GetColor[HeatMapDatum] = null,
-    colors: Colors = null,
-    enableGridX: js.UndefOr[Boolean] = js.undefined,
-    enableGridY: js.UndefOr[Boolean] = js.undefined,
-    enableLabels: js.UndefOr[Boolean] = js.undefined,
-    forceSquare: js.UndefOr[Boolean] = js.undefined,
-    hoverTarget: cell | row | column | rowColumn = null,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    labelTextColor: InheritedColorProp[HeatMapDatumWithColor] = null,
-    margin: Box = null,
-    padding: Int | Double = null,
-    sizeVariation: Int | Double = null,
-    theme: Theme = null,
-    tooltipFormat: String | ValueFormatter = null
-  ): HeatMapCommonProps = {
+  def apply(): HeatMapCommonProps = {
     val __obj = js.Dynamic.literal()
-    if (axisBottom != null) __obj.updateDynamic("axisBottom")(axisBottom.asInstanceOf[js.Any])
-    if (axisLeft != null) __obj.updateDynamic("axisLeft")(axisLeft.asInstanceOf[js.Any])
-    if (axisRight != null) __obj.updateDynamic("axisRight")(axisRight.asInstanceOf[js.Any])
-    if (axisTop != null) __obj.updateDynamic("axisTop")(axisTop.asInstanceOf[js.Any])
-    if (cellBorderColor != null) __obj.updateDynamic("cellBorderColor")(cellBorderColor.asInstanceOf[js.Any])
-    if (cellBorderWidth != null) __obj.updateDynamic("cellBorderWidth")(cellBorderWidth.asInstanceOf[js.Any])
-    if (cellHoverOpacity != null) __obj.updateDynamic("cellHoverOpacity")(cellHoverOpacity.asInstanceOf[js.Any])
-    if (cellHoverOthersOpacity != null) __obj.updateDynamic("cellHoverOthersOpacity")(cellHoverOthersOpacity.asInstanceOf[js.Any])
-    if (cellOpacity != null) __obj.updateDynamic("cellOpacity")(cellOpacity.asInstanceOf[js.Any])
-    if (cellShape != null) __obj.updateDynamic("cellShape")(cellShape.asInstanceOf[js.Any])
-    if (colorBy != null) __obj.updateDynamic("colorBy")(colorBy.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridX)) __obj.updateDynamic("enableGridX")(enableGridX.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridY)) __obj.updateDynamic("enableGridY")(enableGridY.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableLabels)) __obj.updateDynamic("enableLabels")(enableLabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceSquare)) __obj.updateDynamic("forceSquare")(forceSquare.asInstanceOf[js.Any])
-    if (hoverTarget != null) __obj.updateDynamic("hoverTarget")(hoverTarget.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (labelTextColor != null) __obj.updateDynamic("labelTextColor")(labelTextColor.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (sizeVariation != null) __obj.updateDynamic("sizeVariation")(sizeVariation.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(tooltipFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeatMapCommonProps]
   }
+  @scala.inline
+  implicit class HeatMapCommonPropsOps[Self <: HeatMapCommonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAxisBottom(value: Axis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisLeft(value: Axis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisRight(value: Axis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAxisTop(value: Axis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAxisTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellBorderColorFunction1(value: HeatMapDatumWithColor => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellBorderColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCellBorderColor(value: InheritedColorProp[HeatMapDatumWithColor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellBorderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellBorderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellBorderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellBorderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellHoverOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHoverOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellHoverOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHoverOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellHoverOthersOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHoverOthersOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellHoverOthersOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHoverOthersOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellShapeFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellShape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCellShape(value: rect | circle | ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellShape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellShape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellShape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorByFunction1(value: HeatMapDatum => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorBy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withColorBy(value: String | GetColor[HeatMapDatum]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColors(value: Colors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableGridX(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableGridX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableGridY(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableGridY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableGridY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableLabels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceSquare(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSquare")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceSquare: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSquare")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverTarget(value: cell | row | column | rowColumn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsInteractive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsInteractive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInteractive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelTextColorFunction1(value: HeatMapDatumWithColor => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLabelTextColor(value: InheritedColorProp[HeatMapDatumWithColor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelTextColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Box): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeVariation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeVariation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeVariation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeVariation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: Theme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipFormatFunction1(value: /* value */ Double => String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTooltipFormat(value: String | ValueFormatter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

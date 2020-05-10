@@ -14,10 +14,29 @@ trait PutRetentionConfigurationResponse extends js.Object {
 
 object PutRetentionConfigurationResponse {
   @scala.inline
-  def apply(RetentionConfiguration: RetentionConfiguration = null): PutRetentionConfigurationResponse = {
+  def apply(): PutRetentionConfigurationResponse = {
     val __obj = js.Dynamic.literal()
-    if (RetentionConfiguration != null) __obj.updateDynamic("RetentionConfiguration")(RetentionConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutRetentionConfigurationResponse]
   }
+  @scala.inline
+  implicit class PutRetentionConfigurationResponseOps[Self <: PutRetentionConfigurationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRetentionConfiguration(value: RetentionConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetentionConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetentionConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetentionConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

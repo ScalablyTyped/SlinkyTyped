@@ -6,17 +6,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonUnit extends js.Object {
-  var path: js.Array[Pixel | (js.Tuple2[Double, Double])]
-  var unit: px
+  var path: js.Array[Pixel | (js.Tuple2[Double, Double])] = js.native
+  var unit: px = js.native
 }
 
 object AnonUnit {
   @scala.inline
   def apply(path: js.Array[Pixel | (js.Tuple2[Double, Double])], unit: px): AnonUnit = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any], unit = unit.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonUnit]
   }
+  @scala.inline
+  implicit class AnonUnitOps[Self <: AnonUnit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPath(value: js.Array[Pixel | (js.Tuple2[Double, Double])]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnit(value: px): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

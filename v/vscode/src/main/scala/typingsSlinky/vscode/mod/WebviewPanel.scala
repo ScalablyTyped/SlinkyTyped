@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonLight
+import typingsSlinky.vscode.AnonDark
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait WebviewPanel extends js.Object {
   /**
   		 * Icon for the panel shown in UI.
   		 */
-  var iconPath: js.UndefOr[Uri | AnonLight] = js.native
+  var iconPath: js.UndefOr[Uri | AnonDark] = js.native
   /**
   		 * Content settings for the webview panel.
   		 */
@@ -40,7 +40,7 @@ trait WebviewPanel extends js.Object {
   		 */
   val visible: Boolean = js.native
   /**
-  		 * Webview belonging to the panel.
+  		 * [`Webview`](#Webview) belonging to the panel.
   		 */
   val webview: Webview = js.native
   /**

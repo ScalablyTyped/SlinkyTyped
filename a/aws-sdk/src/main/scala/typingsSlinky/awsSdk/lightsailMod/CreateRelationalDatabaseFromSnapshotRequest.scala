@@ -46,27 +46,119 @@ trait CreateRelationalDatabaseFromSnapshotRequest extends js.Object {
 
 object CreateRelationalDatabaseFromSnapshotRequest {
   @scala.inline
-  def apply(
-    relationalDatabaseName: ResourceName,
-    availabilityZone: String = null,
-    publiclyAccessible: js.UndefOr[Boolean] = js.undefined,
-    relationalDatabaseBundleId: String = null,
-    relationalDatabaseSnapshotName: ResourceName = null,
-    restoreTime: js.Date = null,
-    sourceRelationalDatabaseName: ResourceName = null,
-    tags: TagList = null,
-    useLatestRestorableTime: js.UndefOr[Boolean] = js.undefined
-  ): CreateRelationalDatabaseFromSnapshotRequest = {
+  def apply(relationalDatabaseName: ResourceName): CreateRelationalDatabaseFromSnapshotRequest = {
     val __obj = js.Dynamic.literal(relationalDatabaseName = relationalDatabaseName.asInstanceOf[js.Any])
-    if (availabilityZone != null) __obj.updateDynamic("availabilityZone")(availabilityZone.asInstanceOf[js.Any])
-    if (!js.isUndefined(publiclyAccessible)) __obj.updateDynamic("publiclyAccessible")(publiclyAccessible.asInstanceOf[js.Any])
-    if (relationalDatabaseBundleId != null) __obj.updateDynamic("relationalDatabaseBundleId")(relationalDatabaseBundleId.asInstanceOf[js.Any])
-    if (relationalDatabaseSnapshotName != null) __obj.updateDynamic("relationalDatabaseSnapshotName")(relationalDatabaseSnapshotName.asInstanceOf[js.Any])
-    if (restoreTime != null) __obj.updateDynamic("restoreTime")(restoreTime.asInstanceOf[js.Any])
-    if (sourceRelationalDatabaseName != null) __obj.updateDynamic("sourceRelationalDatabaseName")(sourceRelationalDatabaseName.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (!js.isUndefined(useLatestRestorableTime)) __obj.updateDynamic("useLatestRestorableTime")(useLatestRestorableTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateRelationalDatabaseFromSnapshotRequest]
   }
+  @scala.inline
+  implicit class CreateRelationalDatabaseFromSnapshotRequestOps[Self <: CreateRelationalDatabaseFromSnapshotRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRelationalDatabaseName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationalDatabaseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvailabilityZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availabilityZone")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPubliclyAccessible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publiclyAccessible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPubliclyAccessible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publiclyAccessible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelationalDatabaseBundleId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationalDatabaseBundleId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelationalDatabaseBundleId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationalDatabaseBundleId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelationalDatabaseSnapshotName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationalDatabaseSnapshotName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelationalDatabaseSnapshotName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relationalDatabaseSnapshotName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestoreTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestoreTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceRelationalDatabaseName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceRelationalDatabaseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceRelationalDatabaseName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceRelationalDatabaseName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseLatestRestorableTime(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useLatestRestorableTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseLatestRestorableTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useLatestRestorableTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

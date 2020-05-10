@@ -1,15 +1,17 @@
 package typingsSlinky.reactScrollbar.components
 
+import typingsSlinky.reactScrollbar.ScrollAreaProps
 import typingsSlinky.reactScrollbar.noCssMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NoCss extends SharedApply_ScrollAreaProps_7566602[^] {
+object NoCss {
   @JSImport("react-scrollbar/dist/no-css", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ScrollAreaProps): SharedBuilder_ScrollAreaProps_622662951[^] = new SharedBuilder_ScrollAreaProps_622662951[^](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: NoCss.type): SharedBuilder_ScrollAreaProps_622662951[^] = new SharedBuilder_ScrollAreaProps_622662951[^](js.Array(this.component, js.Dictionary.empty))()
 }
 

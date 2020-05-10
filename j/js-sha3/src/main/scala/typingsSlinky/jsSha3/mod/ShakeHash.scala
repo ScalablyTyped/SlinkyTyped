@@ -26,7 +26,7 @@ trait ShakeHash extends js.Object {
     * @param message The message you want to hash.
     * @param outputBits The length of output.
     */
-  def arrayBuffer(message: Message, outputBits: Double): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def arrayBuffer(message: Message, outputBits: Double): js.typedarray.ArrayBuffer = js.native
   /**
     * Create a hash object.
     *

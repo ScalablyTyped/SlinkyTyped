@@ -17,10 +17,29 @@ trait SchemaAncestor extends js.Object {
 
 object SchemaAncestor {
   @scala.inline
-  def apply(resourceId: SchemaResourceId = null): SchemaAncestor = {
+  def apply(): SchemaAncestor = {
     val __obj = js.Dynamic.literal()
-    if (resourceId != null) __obj.updateDynamic("resourceId")(resourceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAncestor]
   }
+  @scala.inline
+  implicit class SchemaAncestorOps[Self <: SchemaAncestor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceId(value: SchemaResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

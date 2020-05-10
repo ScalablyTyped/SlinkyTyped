@@ -6,16 +6,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgPopover
   extends /**
-	 * Option for igPopover
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Sets the time popover fades in and out when showing/hiding
   	 *
   	 */
-  var animationDuration: js.UndefOr[Double] = js.undefined
+  var animationDuration: js.UndefOr[Double] = js.native
   /**
   	 * Controls where the popover DOM should be attached to.
   	 *
@@ -24,17 +25,17 @@ trait IgPopover
   	 * "string" A valid jQuery selector for the element
   	 * "object" A reference to the parent jQuery object
   	 */
-  var appendTo: js.UndefOr[String | js.Object] = js.undefined
+  var appendTo: js.UndefOr[String | js.Object] = js.native
   /**
   	 * Controls whether the popover will close on blur or not
   	 *
   	 */
-  var closeOnBlur: js.UndefOr[Boolean] = js.undefined
+  var closeOnBlur: js.UndefOr[Boolean] = js.native
   /**
   	 * Sets the containment for the popover. Accepts a jQuery object
   	 *
   	 */
-  var containment: js.UndefOr[js.Any] = js.undefined
+  var containment: js.UndefOr[js.Any] = js.native
   /**
   	 * sets the content for the popover container. If left null the content will be get from the target.
   	 *
@@ -43,7 +44,7 @@ trait IgPopover
   	 * "string" String content of the popover container
   	 * "function" Function which is a callback that should return the content. Use the 'this' value to access the target DOM element.
   	 */
-  var contentTemplate: js.UndefOr[String | js.Function] = js.undefined
+  var contentTemplate: js.UndefOr[String | js.Function] = js.native
   /**
   	 * controls the direction in which the control shows relative to the target element
   	 *
@@ -55,56 +56,56 @@ trait IgPopover
   	 * "top" shows popover on the top of the target element
   	 * "bottom" shows popover on the bottom of the target element
   	 */
-  var direction: js.UndefOr[String] = js.undefined
+  var direction: js.UndefOr[String] = js.native
   /**
   	 * Controls the priority in which the control searches for space to show relative to the target element.
   	 * This property has effect only if the [direction](ui.%%WidgetNameLowered%%#options:direction) property value is "auto" or unset.
   	 *
   	 */
-  var directionPriority: js.UndefOr[js.Array[_]] = js.undefined
+  var directionPriority: js.UndefOr[js.Array[_]] = js.native
   /**
   	 * Sets the content for the popover header
   	 *
   	 */
-  var headerTemplate: js.UndefOr[IgPopoverHeaderTemplate] = js.undefined
+  var headerTemplate: js.UndefOr[IgPopoverHeaderTemplate] = js.native
   /**
   	 * defines height for the popover. leave null for auto
   	 *
   	 */
-  var height: js.UndefOr[Double | String] = js.undefined
+  var height: js.UndefOr[Double | String] = js.native
   /**
   	 * Event fired after popover is hidden.
   	 */
-  var hidden: js.UndefOr[HiddenEvent] = js.undefined
+  var hidden: js.UndefOr[HiddenEvent] = js.native
   /**
   	 * Event fired before popover is hidden.
   	 */
-  var hiding: js.UndefOr[HidingEvent] = js.undefined
+  var hiding: js.UndefOr[HidingEvent] = js.native
   /**
   	 * Set/Get the locale language setting for the widget.
   	 *
   	 */
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
   /**
   	 * Set/Get the locale setting for the widget.
   	 *
   	 */
-  var locale: js.UndefOr[js.Any] = js.undefined
+  var locale: js.UndefOr[js.Any] = js.native
   /**
   	 * defines height the popover won't exceed even if no specific one is set.
   	 *
   	 */
-  var maxHeight: js.UndefOr[Double | String] = js.undefined
+  var maxHeight: js.UndefOr[Double | String] = js.native
   /**
   	 * defines width the popover won't exceed even if no specific one is set.
   	 *
   	 */
-  var maxWidth: js.UndefOr[Double | String] = js.undefined
+  var maxWidth: js.UndefOr[Double | String] = js.native
   /**
   	 * defines width the popover won't go under the value even if no specific one is set.
   	 *
   	 */
-  var minWidth: js.UndefOr[Double | String] = js.undefined
+  var minWidth: js.UndefOr[Double | String] = js.native
   /**
   	 * controls the position of the popover according to the target element in case the popover is larger than the target on the side we want to position, if the popover is smaller it should always be in the middle of the visible area
   	 *
@@ -115,17 +116,17 @@ trait IgPopover
   	 * "start" the popover is positioned at the beginning of the target element
   	 * "end" the popover is positioned at the end of the target element
   	 */
-  var position: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[String] = js.native
   /**
   	 * Set/Get the regional setting for the widget.
   	 *
   	 */
-  var regional: js.UndefOr[String | js.Object] = js.undefined
+  var regional: js.UndefOr[String | js.Object] = js.native
   /**
   	 * Selectors indicating which items should show popovers. The predefined value is [title]. Customize if you're using something other then the title attribute for the popover content, or if you need a different selector for event delegation. When changing this option, you likely need to also change the contentTemplate option
   	 *
   	 */
-  var selectors: js.UndefOr[String] = js.undefined
+  var selectors: js.UndefOr[String] = js.native
   /**
   	 * sets the event on which the popover will be shown. Predefined values are "mouseenter", "click" and "focus"
   	 *
@@ -135,79 +136,311 @@ trait IgPopover
   	 * "click" the popover is shown on click on the target element
   	 * "focus" the popover is shown on focusing the target element
   	 */
-  var showOn: js.UndefOr[String] = js.undefined
+  var showOn: js.UndefOr[String] = js.native
   /**
   	 * Event fired before popover is shown.
   	 */
-  var showing: js.UndefOr[ShowingEvent] = js.undefined
+  var showing: js.UndefOr[ShowingEvent] = js.native
   /**
   	 * Event fired after popover is shown.
   	 */
-  var shown: js.UndefOr[ShownEvent] = js.undefined
+  var shown: js.UndefOr[ShownEvent] = js.native
   /**
   	 * defines width for the popover. leave null for auto.
   	 *
   	 */
-  var width: js.UndefOr[Double | String] = js.undefined
+  var width: js.UndefOr[Double | String] = js.native
 }
 
 object IgPopover {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for igPopover
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    animationDuration: Int | Double = null,
-    appendTo: String | js.Object = null,
-    closeOnBlur: js.UndefOr[Boolean] = js.undefined,
-    containment: js.Any = null,
-    contentTemplate: String | js.Function = null,
-    direction: String = null,
-    directionPriority: js.Array[_] = null,
-    headerTemplate: IgPopoverHeaderTemplate = null,
-    height: Double | String = null,
-    hidden: (/* event */ Event_, /* ui */ HiddenEventUIParam) => Unit = null,
-    hiding: (/* event */ Event_, /* ui */ HidingEventUIParam) => Unit = null,
-    language: String = null,
-    locale: js.Any = null,
-    maxHeight: Double | String = null,
-    maxWidth: Double | String = null,
-    minWidth: Double | String = null,
-    position: String = null,
-    regional: String | js.Object = null,
-    selectors: String = null,
-    showOn: String = null,
-    showing: (/* event */ Event_, /* ui */ ShowingEventUIParam) => Unit = null,
-    shown: (/* event */ Event_, /* ui */ ShownEventUIParam) => Unit = null,
-    width: Double | String = null
-  ): IgPopover = {
+  def apply(): IgPopover = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnBlur)) __obj.updateDynamic("closeOnBlur")(closeOnBlur.asInstanceOf[js.Any])
-    if (containment != null) __obj.updateDynamic("containment")(containment.asInstanceOf[js.Any])
-    if (contentTemplate != null) __obj.updateDynamic("contentTemplate")(contentTemplate.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (directionPriority != null) __obj.updateDynamic("directionPriority")(directionPriority.asInstanceOf[js.Any])
-    if (headerTemplate != null) __obj.updateDynamic("headerTemplate")(headerTemplate.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (hidden != null) __obj.updateDynamic("hidden")(js.Any.fromFunction2(hidden))
-    if (hiding != null) __obj.updateDynamic("hiding")(js.Any.fromFunction2(hiding))
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (regional != null) __obj.updateDynamic("regional")(regional.asInstanceOf[js.Any])
-    if (selectors != null) __obj.updateDynamic("selectors")(selectors.asInstanceOf[js.Any])
-    if (showOn != null) __obj.updateDynamic("showOn")(showOn.asInstanceOf[js.Any])
-    if (showing != null) __obj.updateDynamic("showing")(js.Any.fromFunction2(showing))
-    if (shown != null) __obj.updateDynamic("shown")(js.Any.fromFunction2(shown))
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgPopover]
   }
+  @scala.inline
+  implicit class IgPopoverOps[Self <: IgPopover] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimationDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppendTo(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppendTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseOnBlur(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnBlur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseOnBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainment(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentTemplate(value: String | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectionPriority(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directionPriority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectionPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directionPriority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderTemplate(value: IgPopoverHeaderTemplate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: (/* event */ Event_, /* ui */ HiddenEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHiding(value: (/* event */ Event_, /* ui */ HidingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiding")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutHiding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinWidth(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegional(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectors(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowOn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowOn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showOn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowing(value: (/* event */ Event_, /* ui */ ShowingEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showing")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutShowing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShown(value: (/* event */ Event_, /* ui */ ShownEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shown")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutShown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

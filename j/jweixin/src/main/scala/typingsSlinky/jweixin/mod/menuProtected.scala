@@ -20,24 +20,22 @@ trait menuProtected extends js.Object
 
 object menuProtected {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def menuItemColoncopyUrl: typingsSlinky.jweixin.jweixinStrings.menuItemColoncopyUrl = "menuItem:copyUrl".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColoncopyUrl]
   @scala.inline
-  def menuItemColoncopyUrl: typingsSlinky.jweixin.jweixinStrings.menuItemColoncopyUrl = this.cast("menuItem:copyUrl")
+  def menuItemColondelete: typingsSlinky.jweixin.jweixinStrings.menuItemColondelete = "menuItem:delete".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColondelete]
   @scala.inline
-  def menuItemColondelete: typingsSlinky.jweixin.jweixinStrings.menuItemColondelete = this.cast("menuItem:delete")
+  def menuItemColoneditTag: typingsSlinky.jweixin.jweixinStrings.menuItemColoneditTag = "menuItem:editTag".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColoneditTag]
   @scala.inline
-  def menuItemColoneditTag: typingsSlinky.jweixin.jweixinStrings.menuItemColoneditTag = this.cast("menuItem:editTag")
+  def menuItemColonopenWithQQBrowser: typingsSlinky.jweixin.jweixinStrings.menuItemColonopenWithQQBrowser = "menuItem:openWithQQBrowser".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonopenWithQQBrowser]
   @scala.inline
-  def menuItemColonopenWithQQBrowser: typingsSlinky.jweixin.jweixinStrings.menuItemColonopenWithQQBrowser = this.cast("menuItem:openWithQQBrowser")
+  def menuItemColonopenWithSafari: typingsSlinky.jweixin.jweixinStrings.menuItemColonopenWithSafari = "menuItem:openWithSafari".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonopenWithSafari]
   @scala.inline
-  def menuItemColonopenWithSafari: typingsSlinky.jweixin.jweixinStrings.menuItemColonopenWithSafari = this.cast("menuItem:openWithSafari")
+  def menuItemColonoriginPage: typingsSlinky.jweixin.jweixinStrings.menuItemColonoriginPage = "menuItem:originPage".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonoriginPage]
   @scala.inline
-  def menuItemColonoriginPage: typingsSlinky.jweixin.jweixinStrings.menuItemColonoriginPage = this.cast("menuItem:originPage")
+  def menuItemColonreadMode: typingsSlinky.jweixin.jweixinStrings.menuItemColonreadMode = "menuItem:readMode".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonreadMode]
   @scala.inline
-  def menuItemColonreadMode: typingsSlinky.jweixin.jweixinStrings.menuItemColonreadMode = this.cast("menuItem:readMode")
+  def menuItemColonshareColonbrand: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonbrand = "menuItem:share:brand".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonbrand]
   @scala.inline
-  def menuItemColonshareColonbrand: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonbrand = this.cast("menuItem:share:brand")
-  @scala.inline
-  def menuItemColonshareColonemail: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonemail = this.cast("menuItem:share:email")
+  def menuItemColonshareColonemail: typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonemail = "menuItem:share:email".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.menuItemColonshareColonemail]
 }
 

@@ -1,41 +1,31 @@
 package typingsSlinky.reactCalendarTimeline.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactCalendarTimeline.mod.CustomHeaderProps
 import typingsSlinky.reactCalendarTimeline.mod.Unit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CustomHeader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactCalendarTimeline.mod.CustomHeader[js.Any]] {
+object CustomHeader {
   @JSImport("react-calendar-timeline", "CustomHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[Data](
-    headerData: Data = null,
-    height: Int | Double = null,
-    unit: Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.CustomHeader[js.Any]] = {
-    val __obj = js.Dynamic.literal()
-    if (headerData != null) __obj.updateDynamic("headerData")(headerData.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactCalendarTimeline.mod.CustomHeader[js.Any]]]
+  @scala.inline
+  class Builder[Data] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.CustomHeader[js.Any]] {
+    @scala.inline
+    def headerData(value: Data): this.type = set("headerData", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unit(value: Unit): this.type = set("unit", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactCalendarTimeline.mod.CustomHeader[js.Any]] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactCalendarTimeline.mod.CustomHeader[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CustomHeaderProps[js.Any]
+  
+  def withProps[Data](p: CustomHeaderProps[Data]): Builder[Data] = new Builder[Data](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[Data](companion: CustomHeader.type): Builder[Data] = new Builder[Data](js.Array(this.component, js.Dictionary.empty))()
 }
 

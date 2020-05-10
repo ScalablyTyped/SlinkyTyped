@@ -6,54 +6,175 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OperationObject
   extends /* index */ StringDictionary[js.Any]
      with Operation {
-  var consumes: js.UndefOr[MimeTypes] = js.undefined
-  var deprecated: js.UndefOr[Boolean] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var externalDocs: js.UndefOr[ExternalDocumentationObject] = js.undefined
-  var operationId: js.UndefOr[String] = js.undefined
-  var parameters: js.UndefOr[Parameters] = js.undefined
-  var produces: js.UndefOr[MimeTypes] = js.undefined
-  var responses: ResponsesObject
-  var schemes: js.UndefOr[js.Array[String]] = js.undefined
-  var security: js.UndefOr[js.Array[SecurityRequirementObject]] = js.undefined
-  var summary: js.UndefOr[String] = js.undefined
-  var tags: js.UndefOr[js.Array[String]] = js.undefined
+  var consumes: js.UndefOr[MimeTypes] = js.native
+  var deprecated: js.UndefOr[Boolean] = js.native
+  var description: js.UndefOr[String] = js.native
+  var externalDocs: js.UndefOr[ExternalDocumentationObject] = js.native
+  var operationId: js.UndefOr[String] = js.native
+  var parameters: js.UndefOr[Parameters] = js.native
+  var produces: js.UndefOr[MimeTypes] = js.native
+  var responses: ResponsesObject = js.native
+  var schemes: js.UndefOr[js.Array[String]] = js.native
+  var security: js.UndefOr[js.Array[SecurityRequirementObject]] = js.native
+  var summary: js.UndefOr[String] = js.native
+  var tags: js.UndefOr[js.Array[String]] = js.native
 }
 
 object OperationObject {
   @scala.inline
-  def apply(
-    responses: ResponsesObject,
-    StringDictionary: /* index */ StringDictionary[js.Any] = null,
-    consumes: MimeTypes = null,
-    deprecated: js.UndefOr[Boolean] = js.undefined,
-    description: String = null,
-    externalDocs: ExternalDocumentationObject = null,
-    operationId: String = null,
-    parameters: Parameters = null,
-    produces: MimeTypes = null,
-    schemes: js.Array[String] = null,
-    security: js.Array[SecurityRequirementObject] = null,
-    summary: String = null,
-    tags: js.Array[String] = null
-  ): OperationObject = {
+  def apply(responses: ResponsesObject): OperationObject = {
     val __obj = js.Dynamic.literal(responses = responses.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (consumes != null) __obj.updateDynamic("consumes")(consumes.asInstanceOf[js.Any])
-    if (!js.isUndefined(deprecated)) __obj.updateDynamic("deprecated")(deprecated.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (externalDocs != null) __obj.updateDynamic("externalDocs")(externalDocs.asInstanceOf[js.Any])
-    if (operationId != null) __obj.updateDynamic("operationId")(operationId.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
-    if (produces != null) __obj.updateDynamic("produces")(produces.asInstanceOf[js.Any])
-    if (schemes != null) __obj.updateDynamic("schemes")(schemes.asInstanceOf[js.Any])
-    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
-    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[OperationObject]
   }
+  @scala.inline
+  implicit class OperationObjectOps[Self <: OperationObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponses(value: ResponsesObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConsumes(value: MimeTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsumes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeprecated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeprecated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deprecated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalDocs(value: ExternalDocumentationObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalDocs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalDocs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalDocs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOperationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOperationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: Parameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProduces(value: MimeTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("produces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProduces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("produces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurity(value: js.Array[SecurityRequirementObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

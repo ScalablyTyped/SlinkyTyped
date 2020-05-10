@@ -1,8 +1,7 @@
 package typingsSlinky.reactContentLoader.holderMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
+import slinky.core.ReactComponentClass
 import typingsSlinky.reactNativeSvg.mod.RectProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,5 +17,5 @@ class Rect protected ()
 
 @JSImport("react-content-loader/dist/native/Holder", "Rect")
 @js.native
-object Rect extends TopLevel[ComponentClass[RectProps, ComponentState]]
+object Rect extends TopLevel[ReactComponentClass[RectProps]]
 

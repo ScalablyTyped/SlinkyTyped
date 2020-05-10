@@ -22,16 +22,53 @@ trait GetApplicationRevisionOutput extends js.Object {
 
 object GetApplicationRevisionOutput {
   @scala.inline
-  def apply(
-    applicationName: ApplicationName = null,
-    revision: RevisionLocation = null,
-    revisionInfo: GenericRevisionInfo = null
-  ): GetApplicationRevisionOutput = {
+  def apply(): GetApplicationRevisionOutput = {
     val __obj = js.Dynamic.literal()
-    if (applicationName != null) __obj.updateDynamic("applicationName")(applicationName.asInstanceOf[js.Any])
-    if (revision != null) __obj.updateDynamic("revision")(revision.asInstanceOf[js.Any])
-    if (revisionInfo != null) __obj.updateDynamic("revisionInfo")(revisionInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetApplicationRevisionOutput]
   }
+  @scala.inline
+  implicit class GetApplicationRevisionOutputOps[Self <: GetApplicationRevisionOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationName(value: ApplicationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevision(value: RevisionLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevision: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revision")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionInfo(value: GenericRevisionInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

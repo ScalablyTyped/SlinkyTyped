@@ -29,18 +29,65 @@ trait SchemaConfigurableService extends js.Object {
 
 object SchemaConfigurableService {
   @scala.inline
-  def apply(
-    collectionOverrides: js.Array[SchemaCollectionOverride] = null,
-    credential: SchemaCredential = null,
-    descriptorUrl: String = null,
-    options: SchemaOptions = null
-  ): SchemaConfigurableService = {
+  def apply(): SchemaConfigurableService = {
     val __obj = js.Dynamic.literal()
-    if (collectionOverrides != null) __obj.updateDynamic("collectionOverrides")(collectionOverrides.asInstanceOf[js.Any])
-    if (credential != null) __obj.updateDynamic("credential")(credential.asInstanceOf[js.Any])
-    if (descriptorUrl != null) __obj.updateDynamic("descriptorUrl")(descriptorUrl.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaConfigurableService]
   }
+  @scala.inline
+  implicit class SchemaConfigurableServiceOps[Self <: SchemaConfigurableService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCollectionOverrides(value: js.Array[SchemaCollectionOverride]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionOverrides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCollectionOverrides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collectionOverrides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCredential(value: SchemaCredential): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credential")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCredential: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credential")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescriptorUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptorUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescriptorUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptorUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: SchemaOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

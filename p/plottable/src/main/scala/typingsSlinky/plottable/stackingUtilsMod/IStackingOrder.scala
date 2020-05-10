@@ -4,6 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* keyof plottable.AnonBottomup */ /* Rewritten from type alias, can be one of: 
+  - typingsSlinky.plottable.plottableStrings.topdown
+  - typingsSlinky.plottable.plottableStrings.bottomup
+*/
+trait IStackingOrder extends js.Object
+
 @JSImport("plottable/build/src/utils/stackingUtils", "IStackingOrder")
 @js.native
 object IStackingOrder extends js.Object {

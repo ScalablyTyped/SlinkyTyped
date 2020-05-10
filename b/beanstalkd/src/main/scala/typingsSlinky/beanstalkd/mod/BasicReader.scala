@@ -5,14 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BasicReader extends js.Object {
   def handle(
     protocol: BeanstalkdProtocol,
     data: js.Any,
     resolve: js.Function1[/* data */ js.UndefOr[js.Any], Unit],
     reject: js.Function1[/* err */ js.UndefOr[js.Any], _]
-  ): Buffer
-  def parseData(data: String): js.Any
+  ): Buffer = js.native
+  def parseData(data: String): js.Any = js.native
 }
 
 object BasicReader {
@@ -22,8 +23,29 @@ object BasicReader {
     parseData: String => js.Any
   ): BasicReader = {
     val __obj = js.Dynamic.literal(handle = js.Any.fromFunction4(handle), parseData = js.Any.fromFunction1(parseData))
-  
     __obj.asInstanceOf[BasicReader]
   }
+  @scala.inline
+  implicit class BasicReaderOps[Self <: BasicReader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHandle(
+      value: (BeanstalkdProtocol, js.Any, js.Function1[/* data */ js.UndefOr[js.Any], Unit], js.Function1[/* err */ js.UndefOr[js.Any], _]) => Buffer
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withParseData(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseData")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

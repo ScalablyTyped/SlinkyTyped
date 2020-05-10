@@ -24,6 +24,10 @@ trait PointerEvent extends MouseEvent {
 @JSGlobal("PointerEvent")
 @js.native
 object PointerEvent
-  extends Instantiable1[/* type */ java.lang.String, PointerEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ PointerEventInit, PointerEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.PointerEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ org.scalajs.dom.raw.PointerEventInit, 
+      org.scalajs.dom.raw.PointerEvent
+    ]
 

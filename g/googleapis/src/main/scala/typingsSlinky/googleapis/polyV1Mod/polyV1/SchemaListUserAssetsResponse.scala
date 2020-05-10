@@ -27,16 +27,53 @@ trait SchemaListUserAssetsResponse extends js.Object {
 
 object SchemaListUserAssetsResponse {
   @scala.inline
-  def apply(
-    nextPageToken: String = null,
-    totalSize: Int | Double = null,
-    userAssets: js.Array[SchemaUserAsset] = null
-  ): SchemaListUserAssetsResponse = {
+  def apply(): SchemaListUserAssetsResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (totalSize != null) __obj.updateDynamic("totalSize")(totalSize.asInstanceOf[js.Any])
-    if (userAssets != null) __obj.updateDynamic("userAssets")(userAssets.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListUserAssetsResponse]
   }
+  @scala.inline
+  implicit class SchemaListUserAssetsResponseOps[Self <: SchemaListUserAssetsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserAssets(value: js.Array[SchemaUserAsset]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAssets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserAssets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userAssets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

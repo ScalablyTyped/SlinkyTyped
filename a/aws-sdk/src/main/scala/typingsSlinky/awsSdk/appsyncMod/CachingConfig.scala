@@ -18,11 +18,41 @@ trait CachingConfig extends js.Object {
 
 object CachingConfig {
   @scala.inline
-  def apply(cachingKeys: CachingKeys = null, ttl: Int | Double = null): CachingConfig = {
+  def apply(): CachingConfig = {
     val __obj = js.Dynamic.literal()
-    if (cachingKeys != null) __obj.updateDynamic("cachingKeys")(cachingKeys.asInstanceOf[js.Any])
-    if (ttl != null) __obj.updateDynamic("ttl")(ttl.asInstanceOf[js.Any])
     __obj.asInstanceOf[CachingConfig]
   }
+  @scala.inline
+  implicit class CachingConfigOps[Self <: CachingConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCachingKeys(value: CachingKeys): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cachingKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCachingKeys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cachingKeys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTtl(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTtl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ttl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

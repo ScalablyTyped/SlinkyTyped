@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PluginRemoveXMLProcInst extends PluginConfig {
-  var removeXMLProcInst: Boolean | js.Object
+  var removeXMLProcInst: Boolean | js.Object = js.native
 }
 
 object PluginRemoveXMLProcInst {
   @scala.inline
   def apply(removeXMLProcInst: Boolean | js.Object): PluginRemoveXMLProcInst = {
     val __obj = js.Dynamic.literal(removeXMLProcInst = removeXMLProcInst.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PluginRemoveXMLProcInst]
   }
+  @scala.inline
+  implicit class PluginRemoveXMLProcInstOps[Self <: PluginRemoveXMLProcInst] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRemoveXMLProcInst(value: Boolean | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeXMLProcInst")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

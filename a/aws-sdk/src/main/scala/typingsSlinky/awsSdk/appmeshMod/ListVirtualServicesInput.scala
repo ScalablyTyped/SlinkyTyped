@@ -22,6 +22,11 @@ trait ListVirtualServicesInput extends js.Object {
     */
   var meshName: ResourceName = js.native
   /**
+    * The AWS IAM account ID of the service mesh owner. If the account ID is not your own, then it's
+    the ID of the account that shared the mesh with your account. For more information about mesh sharing, see Working with Shared Meshes.
+    */
+  var meshOwner: js.UndefOr[AccountId] = js.native
+  /**
     * The nextToken value returned from a previous paginated
     ListVirtualServices request where limit was used and the
     results exceeded the value of that parameter. Pagination continues from the end of the
@@ -32,11 +37,59 @@ trait ListVirtualServicesInput extends js.Object {
 
 object ListVirtualServicesInput {
   @scala.inline
-  def apply(meshName: ResourceName, limit: Int | Double = null, nextToken: String = null): ListVirtualServicesInput = {
+  def apply(meshName: ResourceName): ListVirtualServicesInput = {
     val __obj = js.Dynamic.literal(meshName = meshName.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (nextToken != null) __obj.updateDynamic("nextToken")(nextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListVirtualServicesInput]
   }
+  @scala.inline
+  implicit class ListVirtualServicesInputOps[Self <: ListVirtualServicesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMeshName(value: ResourceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meshName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLimit(value: ListVirtualServicesLimit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeshOwner(value: AccountId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meshOwner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeshOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meshOwner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

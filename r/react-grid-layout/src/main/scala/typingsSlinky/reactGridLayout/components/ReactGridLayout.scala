@@ -1,12 +1,10 @@
 package typingsSlinky.reactGridLayout.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactGridLayout.AnonE
 import typingsSlinky.reactGridLayout.AnonH
 import typingsSlinky.reactGridLayout.mod.Layout
@@ -18,74 +16,90 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactGridLayout
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactGridLayout {
   @JSImport("react-grid-layout", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, cols, style */
-  def apply(
-    autoSize: js.UndefOr[Boolean] = js.undefined,
-    compactType: vertical | horizontal = null,
-    containerPadding: js.Tuple2[Double, Double] = null,
-    draggableCancel: String = null,
-    draggableHandle: String = null,
-    droppingItem: AnonH = null,
-    isDraggable: js.UndefOr[Boolean] = js.undefined,
-    isDroppable: js.UndefOr[Boolean] = js.undefined,
-    isResizable: js.UndefOr[Boolean] = js.undefined,
-    layout: js.Array[Layout] = null,
-    margin: js.Tuple2[Double, Double] = null,
-    maxRows: Int | Double = null,
-    onDrag: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit = null,
-    onDragStart: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit = null,
-    onDragStop: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit = null,
-    onDrop: /* elemParams */ AnonE => Unit = null,
-    onLayoutChange: /* layout */ js.Array[Layout] => Unit = null,
-    onResize: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit = null,
-    onResizeStart: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit = null,
-    onResizeStop: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit = null,
-    preventCollision: js.UndefOr[Boolean] = js.undefined,
-    rowHeight: Int | Double = null,
-    transformScale: Int | Double = null,
-    useCSSTransforms: js.UndefOr[Boolean] = js.undefined,
-    verticalCompact: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoSize)) __obj.updateDynamic("autoSize")(autoSize.asInstanceOf[js.Any])
-    if (compactType != null) __obj.updateDynamic("compactType")(compactType.asInstanceOf[js.Any])
-    if (containerPadding != null) __obj.updateDynamic("containerPadding")(containerPadding.asInstanceOf[js.Any])
-    if (draggableCancel != null) __obj.updateDynamic("draggableCancel")(draggableCancel.asInstanceOf[js.Any])
-    if (draggableHandle != null) __obj.updateDynamic("draggableHandle")(draggableHandle.asInstanceOf[js.Any])
-    if (droppingItem != null) __obj.updateDynamic("droppingItem")(droppingItem.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDraggable)) __obj.updateDynamic("isDraggable")(isDraggable.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDroppable)) __obj.updateDynamic("isDroppable")(isDroppable.asInstanceOf[js.Any])
-    if (!js.isUndefined(isResizable)) __obj.updateDynamic("isResizable")(isResizable.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (maxRows != null) __obj.updateDynamic("maxRows")(maxRows.asInstanceOf[js.Any])
-    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction6(onDrag))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction6(onDragStart))
-    if (onDragStop != null) __obj.updateDynamic("onDragStop")(js.Any.fromFunction6(onDragStop))
-    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
-    if (onLayoutChange != null) __obj.updateDynamic("onLayoutChange")(js.Any.fromFunction1(onLayoutChange))
-    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction6(onResize))
-    if (onResizeStart != null) __obj.updateDynamic("onResizeStart")(js.Any.fromFunction6(onResizeStart))
-    if (onResizeStop != null) __obj.updateDynamic("onResizeStop")(js.Any.fromFunction6(onResizeStop))
-    if (!js.isUndefined(preventCollision)) __obj.updateDynamic("preventCollision")(preventCollision.asInstanceOf[js.Any])
-    if (rowHeight != null) __obj.updateDynamic("rowHeight")(rowHeight.asInstanceOf[js.Any])
-    if (transformScale != null) __obj.updateDynamic("transformScale")(transformScale.asInstanceOf[js.Any])
-    if (!js.isUndefined(useCSSTransforms)) __obj.updateDynamic("useCSSTransforms")(useCSSTransforms.asInstanceOf[js.Any])
-    if (!js.isUndefined(verticalCompact)) __obj.updateDynamic("verticalCompact")(verticalCompact.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def autoSize(value: Boolean): this.type = set("autoSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compactType(value: vertical | horizontal): this.type = set("compactType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compactTypeNull: this.type = set("compactType", null)
+    @scala.inline
+    def containerPadding(value: js.Tuple2[Double, Double]): this.type = set("containerPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggableCancel(value: String): this.type = set("draggableCancel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def draggableHandle(value: String): this.type = set("draggableHandle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def droppingItem(value: AnonH): this.type = set("droppingItem", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDraggable(value: Boolean): this.type = set("isDraggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDroppable(value: Boolean): this.type = set("isDroppable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isResizable(value: Boolean): this.type = set("isResizable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layout(value: js.Array[Layout]): this.type = set("layout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: js.Tuple2[Double, Double]): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxRows(value: Double): this.type = set("maxRows", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDrag(
+      value: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit
+    ): this.type = set("onDrag", js.Any.fromFunction6(value))
+    @scala.inline
+    def onDragStart(
+      value: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit
+    ): this.type = set("onDragStart", js.Any.fromFunction6(value))
+    @scala.inline
+    def onDragStop(
+      value: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit
+    ): this.type = set("onDragStop", js.Any.fromFunction6(value))
+    @scala.inline
+    def onDrop(value: /* elemParams */ AnonE => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLayoutChange(value: /* layout */ js.Array[Layout] => Unit): this.type = set("onLayoutChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResize(
+      value: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit
+    ): this.type = set("onResize", js.Any.fromFunction6(value))
+    @scala.inline
+    def onResizeStart(
+      value: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit
+    ): this.type = set("onResizeStart", js.Any.fromFunction6(value))
+    @scala.inline
+    def onResizeStop(
+      value: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit
+    ): this.type = set("onResizeStop", js.Any.fromFunction6(value))
+    @scala.inline
+    def preventCollision(value: Boolean): this.type = set("preventCollision", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowHeight(value: Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transformScale(value: Double): this.type = set("transformScale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useCSSTransforms(value: Boolean): this.type = set("useCSSTransforms", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalCompact(value: Boolean): this.type = set("verticalCompact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, ^] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactGridLayout.mod.^](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ReactGridLayoutProps
+  
+  def withProps(p: ReactGridLayoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactGridLayout.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

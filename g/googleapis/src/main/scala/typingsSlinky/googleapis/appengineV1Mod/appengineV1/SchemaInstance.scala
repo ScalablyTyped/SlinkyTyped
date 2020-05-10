@@ -86,42 +86,209 @@ trait SchemaInstance extends js.Object {
 
 object SchemaInstance {
   @scala.inline
-  def apply(
-    appEngineRelease: String = null,
-    availability: String = null,
-    averageLatency: Int | Double = null,
-    errors: Int | Double = null,
-    id: String = null,
-    memoryUsage: String = null,
-    name: String = null,
-    qps: Int | Double = null,
-    requests: Int | Double = null,
-    startTime: String = null,
-    vmDebugEnabled: js.UndefOr[Boolean] = js.undefined,
-    vmId: String = null,
-    vmIp: String = null,
-    vmName: String = null,
-    vmStatus: String = null,
-    vmZoneName: String = null
-  ): SchemaInstance = {
+  def apply(): SchemaInstance = {
     val __obj = js.Dynamic.literal()
-    if (appEngineRelease != null) __obj.updateDynamic("appEngineRelease")(appEngineRelease.asInstanceOf[js.Any])
-    if (availability != null) __obj.updateDynamic("availability")(availability.asInstanceOf[js.Any])
-    if (averageLatency != null) __obj.updateDynamic("averageLatency")(averageLatency.asInstanceOf[js.Any])
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (memoryUsage != null) __obj.updateDynamic("memoryUsage")(memoryUsage.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (qps != null) __obj.updateDynamic("qps")(qps.asInstanceOf[js.Any])
-    if (requests != null) __obj.updateDynamic("requests")(requests.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
-    if (!js.isUndefined(vmDebugEnabled)) __obj.updateDynamic("vmDebugEnabled")(vmDebugEnabled.asInstanceOf[js.Any])
-    if (vmId != null) __obj.updateDynamic("vmId")(vmId.asInstanceOf[js.Any])
-    if (vmIp != null) __obj.updateDynamic("vmIp")(vmIp.asInstanceOf[js.Any])
-    if (vmName != null) __obj.updateDynamic("vmName")(vmName.asInstanceOf[js.Any])
-    if (vmStatus != null) __obj.updateDynamic("vmStatus")(vmStatus.asInstanceOf[js.Any])
-    if (vmZoneName != null) __obj.updateDynamic("vmZoneName")(vmZoneName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstance]
   }
+  @scala.inline
+  implicit class SchemaInstanceOps[Self <: SchemaInstance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppEngineRelease(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRelease")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppEngineRelease: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineRelease")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvailability(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailability: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availability")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAverageLatency(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("averageLatency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAverageLatency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("averageLatency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrors(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMemoryUsage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryUsage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMemoryUsage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memoryUsage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequests(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmDebugEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmDebugEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmDebugEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmDebugEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmStatus(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmZoneName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmZoneName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmZoneName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmZoneName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

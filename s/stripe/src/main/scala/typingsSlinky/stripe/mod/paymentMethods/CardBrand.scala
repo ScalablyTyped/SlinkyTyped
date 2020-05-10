@@ -23,22 +23,20 @@ trait CardBrand extends js.Object
 
 object CardBrand {
   @scala.inline
-  def amex: typingsSlinky.stripe.stripeStrings.amex = this.cast("amex")
+  def amex: typingsSlinky.stripe.stripeStrings.amex = "amex".asInstanceOf[typingsSlinky.stripe.stripeStrings.amex]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def diners: typingsSlinky.stripe.stripeStrings.diners = "diners".asInstanceOf[typingsSlinky.stripe.stripeStrings.diners]
   @scala.inline
-  def diners: typingsSlinky.stripe.stripeStrings.diners = this.cast("diners")
+  def discover: discover_ = "discover".asInstanceOf[discover_]
   @scala.inline
-  def discover: discover_ = this.cast("discover")
+  def jcb: jcb_ = "jcb".asInstanceOf[jcb_]
   @scala.inline
-  def jcb: jcb_ = this.cast("jcb")
+  def mastercard: mastercard_ = "mastercard".asInstanceOf[mastercard_]
   @scala.inline
-  def mastercard: mastercard_ = this.cast("mastercard")
+  def unionpay: typingsSlinky.stripe.stripeStrings.unionpay = "unionpay".asInstanceOf[typingsSlinky.stripe.stripeStrings.unionpay]
   @scala.inline
-  def unionpay: typingsSlinky.stripe.stripeStrings.unionpay = this.cast("unionpay")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
-  @scala.inline
-  def visa: visa_ = this.cast("visa")
+  def visa: visa_ = "visa".asInstanceOf[visa_]
 }
 

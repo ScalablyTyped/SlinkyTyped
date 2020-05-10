@@ -23,24 +23,22 @@ trait curve extends js.Object
 
 object curve {
   @scala.inline
-  def brainpoolP256r1: typingsSlinky.openpgp.openpgpStrings.brainpoolP256r1 = this.cast("brainpoolP256r1")
+  def brainpoolP256r1: typingsSlinky.openpgp.openpgpStrings.brainpoolP256r1 = "brainpoolP256r1".asInstanceOf[typingsSlinky.openpgp.openpgpStrings.brainpoolP256r1]
   @scala.inline
-  def brainpoolP384r1: typingsSlinky.openpgp.openpgpStrings.brainpoolP384r1 = this.cast("brainpoolP384r1")
+  def brainpoolP384r1: typingsSlinky.openpgp.openpgpStrings.brainpoolP384r1 = "brainpoolP384r1".asInstanceOf[typingsSlinky.openpgp.openpgpStrings.brainpoolP384r1]
   @scala.inline
-  def brainpoolP512r1: typingsSlinky.openpgp.openpgpStrings.brainpoolP512r1 = this.cast("brainpoolP512r1")
+  def brainpoolP512r1: typingsSlinky.openpgp.openpgpStrings.brainpoolP512r1 = "brainpoolP512r1".asInstanceOf[typingsSlinky.openpgp.openpgpStrings.brainpoolP512r1]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def curve25519: typingsSlinky.openpgp.openpgpStrings.curve25519 = "curve25519".asInstanceOf[typingsSlinky.openpgp.openpgpStrings.curve25519]
   @scala.inline
-  def curve25519: typingsSlinky.openpgp.openpgpStrings.curve25519 = this.cast("curve25519")
+  def ed25519: typingsSlinky.openpgp.openpgpStrings.ed25519 = "ed25519".asInstanceOf[typingsSlinky.openpgp.openpgpStrings.ed25519]
   @scala.inline
-  def ed25519: typingsSlinky.openpgp.openpgpStrings.ed25519 = this.cast("ed25519")
+  def p251: typingsSlinky.openpgp.openpgpStrings.p251 = "p251".asInstanceOf[typingsSlinky.openpgp.openpgpStrings.p251]
   @scala.inline
-  def p251: typingsSlinky.openpgp.openpgpStrings.p251 = this.cast("p251")
+  def p256: typingsSlinky.openpgp.openpgpStrings.p256 = "p256".asInstanceOf[typingsSlinky.openpgp.openpgpStrings.p256]
   @scala.inline
-  def p256: typingsSlinky.openpgp.openpgpStrings.p256 = this.cast("p256")
+  def p384: typingsSlinky.openpgp.openpgpStrings.p384 = "p384".asInstanceOf[typingsSlinky.openpgp.openpgpStrings.p384]
   @scala.inline
-  def p384: typingsSlinky.openpgp.openpgpStrings.p384 = this.cast("p384")
-  @scala.inline
-  def secp256k1: typingsSlinky.openpgp.openpgpStrings.secp256k1 = this.cast("secp256k1")
+  def secp256k1: typingsSlinky.openpgp.openpgpStrings.secp256k1 = "secp256k1".asInstanceOf[typingsSlinky.openpgp.openpgpStrings.secp256k1]
 }
 

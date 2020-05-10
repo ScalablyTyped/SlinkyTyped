@@ -1,7 +1,7 @@
 package typingsSlinky.twilioChat.messagesMod
 
+import org.scalajs.dom.raw.FormData
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.FormData
 import typingsSlinky.twilioChat.channelMod.Channel
 import typingsSlinky.twilioChat.channelMod.Channel.SendMediaOptions
 import typingsSlinky.twilioChat.messageMod.Message

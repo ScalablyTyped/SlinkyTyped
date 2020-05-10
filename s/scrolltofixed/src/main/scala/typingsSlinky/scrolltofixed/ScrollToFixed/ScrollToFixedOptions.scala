@@ -4,78 +4,308 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ScrollToFixedOptions extends js.Object {
-  var baseClassName: js.UndefOr[String] = js.undefined
-  var bottom: js.UndefOr[Double] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var dontCheckForPositionFixedSupport: js.UndefOr[Boolean] = js.undefined
-  var dontSetWidth: js.UndefOr[Boolean] = js.undefined
-  var fixed: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var limit: js.UndefOr[Double | js.Function0[Double]] = js.undefined
-  var marginTop: js.UndefOr[Double | js.Function0[Double]] = js.undefined
-  var maxWidth: js.UndefOr[Double] = js.undefined
-  var minWidth: js.UndefOr[Double] = js.undefined
-  var offsets: js.UndefOr[Boolean] = js.undefined
-  var postAbsolute: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var postFixed: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var postUnfixed: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var preAbsolute: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var preFixed: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var preUnfixed: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var removeOffsets: js.UndefOr[Boolean] = js.undefined
-  var spacerClass: js.UndefOr[String] = js.undefined
-  var unfixed: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var baseClassName: js.UndefOr[String] = js.native
+  var bottom: js.UndefOr[Double] = js.native
+  var className: js.UndefOr[String] = js.native
+  var dontCheckForPositionFixedSupport: js.UndefOr[Boolean] = js.native
+  var dontSetWidth: js.UndefOr[Boolean] = js.native
+  var fixed: js.UndefOr[js.Function0[Unit]] = js.native
+  var limit: js.UndefOr[Double | js.Function0[Double]] = js.native
+  var marginTop: js.UndefOr[Double | js.Function0[Double]] = js.native
+  var maxWidth: js.UndefOr[Double] = js.native
+  var minWidth: js.UndefOr[Double] = js.native
+  var offsets: js.UndefOr[Boolean] = js.native
+  var postAbsolute: js.UndefOr[js.Function0[Unit]] = js.native
+  var postFixed: js.UndefOr[js.Function0[Unit]] = js.native
+  var postUnfixed: js.UndefOr[js.Function0[Unit]] = js.native
+  var preAbsolute: js.UndefOr[js.Function0[Unit]] = js.native
+  var preFixed: js.UndefOr[js.Function0[Unit]] = js.native
+  var preUnfixed: js.UndefOr[js.Function0[Unit]] = js.native
+  var removeOffsets: js.UndefOr[Boolean] = js.native
+  var spacerClass: js.UndefOr[String] = js.native
+  var unfixed: js.UndefOr[js.Function0[Unit]] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object ScrollToFixedOptions {
   @scala.inline
-  def apply(
-    baseClassName: String = null,
-    bottom: Int | Double = null,
-    className: String = null,
-    dontCheckForPositionFixedSupport: js.UndefOr[Boolean] = js.undefined,
-    dontSetWidth: js.UndefOr[Boolean] = js.undefined,
-    fixed: () => Unit = null,
-    limit: Double | js.Function0[Double] = null,
-    marginTop: Double | js.Function0[Double] = null,
-    maxWidth: Int | Double = null,
-    minWidth: Int | Double = null,
-    offsets: js.UndefOr[Boolean] = js.undefined,
-    postAbsolute: () => Unit = null,
-    postFixed: () => Unit = null,
-    postUnfixed: () => Unit = null,
-    preAbsolute: () => Unit = null,
-    preFixed: () => Unit = null,
-    preUnfixed: () => Unit = null,
-    removeOffsets: js.UndefOr[Boolean] = js.undefined,
-    spacerClass: String = null,
-    unfixed: () => Unit = null,
-    zIndex: Int | Double = null
-  ): ScrollToFixedOptions = {
+  def apply(): ScrollToFixedOptions = {
     val __obj = js.Dynamic.literal()
-    if (baseClassName != null) __obj.updateDynamic("baseClassName")(baseClassName.asInstanceOf[js.Any])
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(dontCheckForPositionFixedSupport)) __obj.updateDynamic("dontCheckForPositionFixedSupport")(dontCheckForPositionFixedSupport.asInstanceOf[js.Any])
-    if (!js.isUndefined(dontSetWidth)) __obj.updateDynamic("dontSetWidth")(dontSetWidth.asInstanceOf[js.Any])
-    if (fixed != null) __obj.updateDynamic("fixed")(js.Any.fromFunction0(fixed))
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (marginTop != null) __obj.updateDynamic("marginTop")(marginTop.asInstanceOf[js.Any])
-    if (maxWidth != null) __obj.updateDynamic("maxWidth")(maxWidth.asInstanceOf[js.Any])
-    if (minWidth != null) __obj.updateDynamic("minWidth")(minWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(offsets)) __obj.updateDynamic("offsets")(offsets.asInstanceOf[js.Any])
-    if (postAbsolute != null) __obj.updateDynamic("postAbsolute")(js.Any.fromFunction0(postAbsolute))
-    if (postFixed != null) __obj.updateDynamic("postFixed")(js.Any.fromFunction0(postFixed))
-    if (postUnfixed != null) __obj.updateDynamic("postUnfixed")(js.Any.fromFunction0(postUnfixed))
-    if (preAbsolute != null) __obj.updateDynamic("preAbsolute")(js.Any.fromFunction0(preAbsolute))
-    if (preFixed != null) __obj.updateDynamic("preFixed")(js.Any.fromFunction0(preFixed))
-    if (preUnfixed != null) __obj.updateDynamic("preUnfixed")(js.Any.fromFunction0(preUnfixed))
-    if (!js.isUndefined(removeOffsets)) __obj.updateDynamic("removeOffsets")(removeOffsets.asInstanceOf[js.Any])
-    if (spacerClass != null) __obj.updateDynamic("spacerClass")(spacerClass.asInstanceOf[js.Any])
-    if (unfixed != null) __obj.updateDynamic("unfixed")(js.Any.fromFunction0(unfixed))
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScrollToFixedOptions]
   }
+  @scala.inline
+  implicit class ScrollToFixedOptionsOps[Self <: ScrollToFixedOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBaseClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBottom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDontCheckForPositionFixedSupport(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dontCheckForPositionFixedSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDontCheckForPositionFixedSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dontCheckForPositionFixedSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDontSetWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dontSetWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDontSetWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dontSetWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutFixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimitFunction0(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Double | js.Function0[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarginTopFunction0(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMarginTop(value: Double | js.Function0[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarginTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffsets(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffsets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostAbsolute(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postAbsolute")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPostAbsolute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postAbsolute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostFixed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postFixed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPostFixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postFixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostUnfixed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postUnfixed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPostUnfixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postUnfixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreAbsolute(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preAbsolute")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPreAbsolute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preAbsolute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreFixed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preFixed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPreFixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preFixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreUnfixed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preUnfixed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutPreUnfixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preUnfixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveOffsets(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOffsets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveOffsets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeOffsets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpacerClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacerClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpacerClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacerClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnfixed(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unfixed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutUnfixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unfixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

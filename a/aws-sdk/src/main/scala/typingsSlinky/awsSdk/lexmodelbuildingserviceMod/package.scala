@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 package object lexmodelbuildingserviceMod {
   type AliasName = java.lang.String
   type AliasNameOrListAll = java.lang.String
+  type AmazonResourceName = java.lang.String
   type Boolean = scala.Boolean
   type BotAliasMetadataList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.BotAliasMetadata]
   type BotChannelAssociationList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.BotChannelAssociation]
@@ -180,13 +181,17 @@ package object lexmodelbuildingserviceMod {
   type String = java.lang.String
   type StringList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.String]
   type SynonymList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.Value]
+  type TagKey = java.lang.String
+  type TagKeyList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.TagKey]
+  type TagList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.Tag]
+  type TagValue = java.lang.String
   type Timestamp = js.Date
   type UserId = java.lang.String
   type Utterance = java.lang.String
   type UtteranceString = java.lang.String
   type Value = java.lang.String
   type Version = java.lang.String
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.lexmodelbuildingserviceMod.Blob | java.lang.String
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.lexmodelbuildingserviceMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2017-04-19`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

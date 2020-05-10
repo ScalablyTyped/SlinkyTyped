@@ -1,37 +1,40 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.antDesignProStrings.down
 import typingsSlinky.antDesignPro.antDesignProStrings.up
 import typingsSlinky.antDesignPro.trendMod.ITrendProps
 import typingsSlinky.antDesignPro.trendMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Trend
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Trend {
   @JSImport("ant-design-pro/lib/Trend", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    flag: up | down,
-    colorful: js.UndefOr[Boolean] = js.undefined,
-    reverseColor: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(flag = flag.asInstanceOf[js.Any])
-    if (!js.isUndefined(colorful)) __obj.updateDynamic("colorful")(colorful.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverseColor)) __obj.updateDynamic("reverseColor")(reverseColor.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorful(value: Boolean): this.type = set("colorful", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reverseColor(value: Boolean): this.type = set("reverseColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = ITrendProps
+  
+  def withProps(p: ITrendProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(flag: up | down): Builder = {
+    val __props = js.Dynamic.literal(flag = flag.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ITrendProps]))
+  }
 }
 

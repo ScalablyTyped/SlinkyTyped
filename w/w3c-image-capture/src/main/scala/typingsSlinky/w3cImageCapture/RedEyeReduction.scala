@@ -13,12 +13,10 @@ trait RedEyeReduction extends js.Object
 
 object RedEyeReduction {
   @scala.inline
-  def always: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.always = this.cast("always")
+  def always: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.always = "always".asInstanceOf[typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def controllable: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.controllable = "controllable".asInstanceOf[typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.controllable]
   @scala.inline
-  def controllable: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.controllable = this.cast("controllable")
-  @scala.inline
-  def never: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.never = this.cast("never")
+  def never: typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.never = "never".asInstanceOf[typingsSlinky.w3cImageCapture.w3cImageCaptureStrings.never]
 }
 

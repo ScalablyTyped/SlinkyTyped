@@ -5,20 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait XummPayloadBodyBase extends js.Object {
-  var custom_meta: js.UndefOr[XummCustomMeta] = js.undefined
-  var options: js.UndefOr[AnonExpire] = js.undefined
-  var user_token: js.UndefOr[String] = js.undefined
+  var custom_meta: js.UndefOr[XummCustomMeta] = js.native
+  var options: js.UndefOr[AnonExpire] = js.native
+  var user_token: js.UndefOr[String] = js.native
 }
 
 object XummPayloadBodyBase {
   @scala.inline
-  def apply(custom_meta: XummCustomMeta = null, options: AnonExpire = null, user_token: String = null): XummPayloadBodyBase = {
+  def apply(): XummPayloadBodyBase = {
     val __obj = js.Dynamic.literal()
-    if (custom_meta != null) __obj.updateDynamic("custom_meta")(custom_meta.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (user_token != null) __obj.updateDynamic("user_token")(user_token.asInstanceOf[js.Any])
     __obj.asInstanceOf[XummPayloadBodyBase]
   }
+  @scala.inline
+  implicit class XummPayloadBodyBaseOps[Self <: XummPayloadBodyBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustom_meta(value: XummCustomMeta): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustom_meta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom_meta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: AnonExpire): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser_token(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user_token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser_token: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user_token")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

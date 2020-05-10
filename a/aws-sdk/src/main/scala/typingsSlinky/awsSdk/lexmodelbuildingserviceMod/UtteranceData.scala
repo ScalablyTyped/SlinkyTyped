@@ -30,20 +30,77 @@ trait UtteranceData extends js.Object {
 
 object UtteranceData {
   @scala.inline
-  def apply(
-    count: Int | Double = null,
-    distinctUsers: Int | Double = null,
-    firstUtteredDate: js.Date = null,
-    lastUtteredDate: js.Date = null,
-    utteranceString: UtteranceString = null
-  ): UtteranceData = {
+  def apply(): UtteranceData = {
     val __obj = js.Dynamic.literal()
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (distinctUsers != null) __obj.updateDynamic("distinctUsers")(distinctUsers.asInstanceOf[js.Any])
-    if (firstUtteredDate != null) __obj.updateDynamic("firstUtteredDate")(firstUtteredDate.asInstanceOf[js.Any])
-    if (lastUtteredDate != null) __obj.updateDynamic("lastUtteredDate")(lastUtteredDate.asInstanceOf[js.Any])
-    if (utteranceString != null) __obj.updateDynamic("utteranceString")(utteranceString.asInstanceOf[js.Any])
     __obj.asInstanceOf[UtteranceData]
   }
+  @scala.inline
+  implicit class UtteranceDataOps[Self <: UtteranceData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCount(value: Count): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistinctUsers(value: Count): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distinctUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistinctUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distinctUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstUtteredDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstUtteredDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstUtteredDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstUtteredDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUtteredDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUtteredDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUtteredDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUtteredDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtteranceString(value: UtteranceString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utteranceString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtteranceString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utteranceString")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

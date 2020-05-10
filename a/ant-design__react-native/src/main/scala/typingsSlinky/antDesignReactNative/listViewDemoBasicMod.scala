@@ -1,8 +1,6 @@
 package typingsSlinky.antDesignReactNative
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.ListView
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.`ListView Example`
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,7 +31,7 @@ object listViewDemoBasicMod extends js.Object {
   @js.native
   class default () extends BasicListExample
   
-  val description: `ListView Example` = js.native
-  val title: ListView = js.native
+  val description: /* "ListView Example" */ String = js.native
+  val title: /* "ListView" */ String = js.native
 }
 

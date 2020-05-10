@@ -13,12 +13,10 @@ trait CardValidity extends js.Object
 
 object CardValidity {
   @scala.inline
-  def INVALID: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.INVALID = this.cast("INVALID")
+  def INVALID: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.INVALID = "INVALID".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.INVALID]
   @scala.inline
-  def UNKNOWN: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.UNKNOWN = this.cast("UNKNOWN")
+  def UNKNOWN: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.UNKNOWN = "UNKNOWN".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.UNKNOWN]
   @scala.inline
-  def VALID: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.VALID = this.cast("VALID")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def VALID: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.VALID = "VALID".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.VALID]
 }
 

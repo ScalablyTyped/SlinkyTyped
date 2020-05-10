@@ -4,24 +4,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClipboardEventInit extends EventInit {
-  var clipboardData: js.UndefOr[org.scalajs.dom.raw.DataTransfer | Null] = js.undefined
+  var clipboardData: js.UndefOr[org.scalajs.dom.raw.DataTransfer | Null] = js.native
 }
 
 object ClipboardEventInit {
   @scala.inline
-  def apply(
-    bubbles: js.UndefOr[scala.Boolean] = js.undefined,
-    cancelable: js.UndefOr[scala.Boolean] = js.undefined,
-    clipboardData: org.scalajs.dom.raw.DataTransfer = null,
-    composed: js.UndefOr[scala.Boolean] = js.undefined
-  ): ClipboardEventInit = {
+  def apply(): ClipboardEventInit = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.asInstanceOf[js.Any])
-    if (!js.isUndefined(cancelable)) __obj.updateDynamic("cancelable")(cancelable.asInstanceOf[js.Any])
-    if (clipboardData != null) __obj.updateDynamic("clipboardData")(clipboardData.asInstanceOf[js.Any])
-    if (!js.isUndefined(composed)) __obj.updateDynamic("composed")(composed.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClipboardEventInit]
   }
+  @scala.inline
+  implicit class ClipboardEventInitOps[Self <: org.scalajs.dom.raw.ClipboardEventInit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClipboardData(value: org.scalajs.dom.raw.DataTransfer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClipboardData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClipboardDataNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardData")(null)
+        ret
+    }
+  }
+  
 }
 

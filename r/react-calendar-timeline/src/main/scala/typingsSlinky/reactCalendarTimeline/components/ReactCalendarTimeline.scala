@@ -1,11 +1,12 @@
 package typingsSlinky.reactCalendarTimeline.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.Element
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactCalendarTimeline.mod.Id
@@ -32,118 +33,144 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactCalendarTimeline
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any, js.Any]] {
+object ReactCalendarTimeline {
   @JSImport("react-calendar-timeline", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[CustomItem /* <: TimelineItemBase[js.Any] */, CustomGroup /* <: TimelineGroupBase */](
-    groups: js.Array[CustomGroup],
-    items: js.Array[CustomItem],
-    canChangeGroup: js.UndefOr[Boolean] = js.undefined,
-    canMove: js.UndefOr[Boolean] = js.undefined,
-    canResize: `false` | `true` | left | right | both = null,
-    clickTolerance: Int | Double = null,
-    defaultTimeEnd: js.Date | Moment = null,
-    defaultTimeStart: js.Date | Moment = null,
-    dragSnap: Int | Double = null,
-    groupRenderer: /* props */ ReactCalendarGroupRendererProps[CustomGroup] => TagMod[Any] = null,
-    headerRef: Ref[_] = null,
-    horizontalLineClassNamesForGroup: CustomGroup => js.Array[String] = null,
-    itemHeightRatio: Int | Double = null,
-    itemRenderer: /* props */ ReactCalendarItemRendererProps[CustomItem] => TagMod[Any] = null,
-    itemTouchSendsClick: js.UndefOr[Boolean] = js.undefined,
-    keys: TimelineKeys = null,
-    lineHeight: Int | Double = null,
-    maxZoom: Int | Double = null,
-    minResizeWidth: Int | Double = null,
-    minZoom: Int | Double = null,
-    moveResizeValidator: (/* action */ move | resize, /* itemId */ Id, /* time */ Double, /* resizeEdge */ left | right) => Double = null,
-    onBoundsChange: (/* canvasTimeStart */ Double, /* canvasTimeEnd */ Double) => _ = null,
-    onCanvasClick: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, org.scalajs.dom.raw.Element]) => Unit = null,
-    onCanvasContextMenu: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, org.scalajs.dom.raw.Element]) => Unit = null,
-    onCanvasDoubleClick: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, org.scalajs.dom.raw.Element]) => Unit = null,
-    onItemClick: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, org.scalajs.dom.raw.Element], /* time */ Double) => Unit = null,
-    onItemContextMenu: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, org.scalajs.dom.raw.Element], /* time */ Double) => Unit = null,
-    onItemDeselect: /* e */ SyntheticEvent[Event_, org.scalajs.dom.raw.Element] => Unit = null,
-    onItemDoubleClick: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, org.scalajs.dom.raw.Element], /* time */ Double) => Unit = null,
-    onItemDrag: /* itemDragObject */ OnItemDragObjectMove | OnItemDragObjectResize => Unit = null,
-    onItemMove: (/* itemId */ Id, /* dragTime */ Double, /* newGroupOrder */ Double) => Unit = null,
-    onItemResize: (/* itemId */ Id, /* endTimeOrStartTime */ Double, /* edge */ left | right) => Unit = null,
-    onItemSelect: (/* itemId */ Id, /* e */ js.Any, /* time */ Double) => Unit = null,
-    onTimeChange: (/* visibleTimeStart */ Double, /* visibleTimeEnd */ Double, /* updateScrollCanvas */ js.Function2[/* start */ Double, /* end */ Double, Unit]) => _ = null,
-    onZoom: /* timelineContext */ TimelineContext => Unit = null,
-    resizeDetector: /* containerResizeDetector */ js.Any => Unit = null,
-    rightSidebarContent: TagMod[Any] = null,
-    rightSidebarWidth: Int | Double = null,
-    scrollRef: Ref[_] = null,
-    selected: js.Array[Double] = null,
-    sidebarContent: TagMod[Any] = null,
-    sidebarWidth: Int | Double = null,
-    stackItems: js.UndefOr[Boolean] = js.undefined,
-    timeSteps: TimelineTimeSteps = null,
-    traditionalZoom: js.UndefOr[Boolean] = js.undefined,
-    useResizeHandle: js.UndefOr[Boolean] = js.undefined,
-    verticalLineClassNamesForTime: (/* start */ Double, /* end */ Double) => js.UndefOr[js.Array[String]] = null,
-    visibleTimeEnd: js.Date | Moment | Double = null,
-    visibleTimeStart: js.Date | Moment | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any, js.Any]] = {
-    val __obj = js.Dynamic.literal(groups = groups.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
-    if (!js.isUndefined(canChangeGroup)) __obj.updateDynamic("canChangeGroup")(canChangeGroup.asInstanceOf[js.Any])
-    if (!js.isUndefined(canMove)) __obj.updateDynamic("canMove")(canMove.asInstanceOf[js.Any])
-    if (canResize != null) __obj.updateDynamic("canResize")(canResize.asInstanceOf[js.Any])
-    if (clickTolerance != null) __obj.updateDynamic("clickTolerance")(clickTolerance.asInstanceOf[js.Any])
-    if (defaultTimeEnd != null) __obj.updateDynamic("defaultTimeEnd")(defaultTimeEnd.asInstanceOf[js.Any])
-    if (defaultTimeStart != null) __obj.updateDynamic("defaultTimeStart")(defaultTimeStart.asInstanceOf[js.Any])
-    if (dragSnap != null) __obj.updateDynamic("dragSnap")(dragSnap.asInstanceOf[js.Any])
-    if (groupRenderer != null) __obj.updateDynamic("groupRenderer")(js.Any.fromFunction1(groupRenderer))
-    if (headerRef != null) __obj.updateDynamic("headerRef")(headerRef.asInstanceOf[js.Any])
-    if (horizontalLineClassNamesForGroup != null) __obj.updateDynamic("horizontalLineClassNamesForGroup")(js.Any.fromFunction1(horizontalLineClassNamesForGroup))
-    if (itemHeightRatio != null) __obj.updateDynamic("itemHeightRatio")(itemHeightRatio.asInstanceOf[js.Any])
-    if (itemRenderer != null) __obj.updateDynamic("itemRenderer")(js.Any.fromFunction1(itemRenderer))
-    if (!js.isUndefined(itemTouchSendsClick)) __obj.updateDynamic("itemTouchSendsClick")(itemTouchSendsClick.asInstanceOf[js.Any])
-    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
-    if (lineHeight != null) __obj.updateDynamic("lineHeight")(lineHeight.asInstanceOf[js.Any])
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minResizeWidth != null) __obj.updateDynamic("minResizeWidth")(minResizeWidth.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
-    if (moveResizeValidator != null) __obj.updateDynamic("moveResizeValidator")(js.Any.fromFunction4(moveResizeValidator))
-    if (onBoundsChange != null) __obj.updateDynamic("onBoundsChange")(js.Any.fromFunction2(onBoundsChange))
-    if (onCanvasClick != null) __obj.updateDynamic("onCanvasClick")(js.Any.fromFunction3(onCanvasClick))
-    if (onCanvasContextMenu != null) __obj.updateDynamic("onCanvasContextMenu")(js.Any.fromFunction3(onCanvasContextMenu))
-    if (onCanvasDoubleClick != null) __obj.updateDynamic("onCanvasDoubleClick")(js.Any.fromFunction3(onCanvasDoubleClick))
-    if (onItemClick != null) __obj.updateDynamic("onItemClick")(js.Any.fromFunction3(onItemClick))
-    if (onItemContextMenu != null) __obj.updateDynamic("onItemContextMenu")(js.Any.fromFunction3(onItemContextMenu))
-    if (onItemDeselect != null) __obj.updateDynamic("onItemDeselect")(js.Any.fromFunction1(onItemDeselect))
-    if (onItemDoubleClick != null) __obj.updateDynamic("onItemDoubleClick")(js.Any.fromFunction3(onItemDoubleClick))
-    if (onItemDrag != null) __obj.updateDynamic("onItemDrag")(js.Any.fromFunction1(onItemDrag))
-    if (onItemMove != null) __obj.updateDynamic("onItemMove")(js.Any.fromFunction3(onItemMove))
-    if (onItemResize != null) __obj.updateDynamic("onItemResize")(js.Any.fromFunction3(onItemResize))
-    if (onItemSelect != null) __obj.updateDynamic("onItemSelect")(js.Any.fromFunction3(onItemSelect))
-    if (onTimeChange != null) __obj.updateDynamic("onTimeChange")(js.Any.fromFunction3(onTimeChange))
-    if (onZoom != null) __obj.updateDynamic("onZoom")(js.Any.fromFunction1(onZoom))
-    if (resizeDetector != null) __obj.updateDynamic("resizeDetector")(js.Any.fromFunction1(resizeDetector))
-    if (rightSidebarContent != null) __obj.updateDynamic("rightSidebarContent")(rightSidebarContent.asInstanceOf[js.Any])
-    if (rightSidebarWidth != null) __obj.updateDynamic("rightSidebarWidth")(rightSidebarWidth.asInstanceOf[js.Any])
-    if (scrollRef != null) __obj.updateDynamic("scrollRef")(scrollRef.asInstanceOf[js.Any])
-    if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
-    if (sidebarContent != null) __obj.updateDynamic("sidebarContent")(sidebarContent.asInstanceOf[js.Any])
-    if (sidebarWidth != null) __obj.updateDynamic("sidebarWidth")(sidebarWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(stackItems)) __obj.updateDynamic("stackItems")(stackItems.asInstanceOf[js.Any])
-    if (timeSteps != null) __obj.updateDynamic("timeSteps")(timeSteps.asInstanceOf[js.Any])
-    if (!js.isUndefined(traditionalZoom)) __obj.updateDynamic("traditionalZoom")(traditionalZoom.asInstanceOf[js.Any])
-    if (!js.isUndefined(useResizeHandle)) __obj.updateDynamic("useResizeHandle")(useResizeHandle.asInstanceOf[js.Any])
-    if (verticalLineClassNamesForTime != null) __obj.updateDynamic("verticalLineClassNamesForTime")(js.Any.fromFunction2(verticalLineClassNamesForTime))
-    if (visibleTimeEnd != null) __obj.updateDynamic("visibleTimeEnd")(visibleTimeEnd.asInstanceOf[js.Any])
-    if (visibleTimeStart != null) __obj.updateDynamic("visibleTimeStart")(visibleTimeStart.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactCalendarTimeline.mod.default[js.Any, js.Any]]]
+  @scala.inline
+  class Builder[CustomItem <: TimelineItemBase[js.Any], CustomGroup <: TimelineGroupBase] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any, js.Any]] {
+    @scala.inline
+    def canChangeGroup(value: Boolean): this.type = set("canChangeGroup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def canMove(value: Boolean): this.type = set("canMove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def canResize(value: `false` | `true` | left | right | both): this.type = set("canResize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clickTolerance(value: Double): this.type = set("clickTolerance", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultTimeEndDate(value: js.Date): this.type = set("defaultTimeEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultTimeEnd(value: js.Date | Moment): this.type = set("defaultTimeEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultTimeStartDate(value: js.Date): this.type = set("defaultTimeStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultTimeStart(value: js.Date | Moment): this.type = set("defaultTimeStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragSnap(value: Double): this.type = set("dragSnap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupRenderer(value: /* props */ ReactCalendarGroupRendererProps[CustomGroup] => TagMod[Any]): this.type = set("groupRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def headerRefRefObject(value: ReactRef[_]): this.type = set("headerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("headerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def headerRef(value: Ref[_]): this.type = set("headerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerRefNull: this.type = set("headerRef", null)
+    @scala.inline
+    def horizontalLineClassNamesForGroup(value: CustomGroup => js.Array[String]): this.type = set("horizontalLineClassNamesForGroup", js.Any.fromFunction1(value))
+    @scala.inline
+    def itemHeightRatio(value: Double): this.type = set("itemHeightRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemRenderer(value: /* props */ ReactCalendarItemRendererProps[CustomItem] => TagMod[Any]): this.type = set("itemRenderer", js.Any.fromFunction1(value))
+    @scala.inline
+    def itemTouchSendsClick(value: Boolean): this.type = set("itemTouchSendsClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keys(value: TimelineKeys): this.type = set("keys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def lineHeight(value: Double): this.type = set("lineHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxZoom(value: Double): this.type = set("maxZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minResizeWidth(value: Double): this.type = set("minResizeWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minZoom(value: Double): this.type = set("minZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def moveResizeValidator(
+      value: (/* action */ move | resize, /* itemId */ Id, /* time */ Double, /* resizeEdge */ left | right) => Double
+    ): this.type = set("moveResizeValidator", js.Any.fromFunction4(value))
+    @scala.inline
+    def onBoundsChange(value: (/* canvasTimeStart */ Double, /* canvasTimeEnd */ Double) => _): this.type = set("onBoundsChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onCanvasClick(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, Element]) => Unit): this.type = set("onCanvasClick", js.Any.fromFunction3(value))
+    @scala.inline
+    def onCanvasContextMenu(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, Element]) => Unit): this.type = set("onCanvasContextMenu", js.Any.fromFunction3(value))
+    @scala.inline
+    def onCanvasDoubleClick(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, Element]) => Unit): this.type = set("onCanvasDoubleClick", js.Any.fromFunction3(value))
+    @scala.inline
+    def onItemClick(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, Element], /* time */ Double) => Unit): this.type = set("onItemClick", js.Any.fromFunction3(value))
+    @scala.inline
+    def onItemContextMenu(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, Element], /* time */ Double) => Unit): this.type = set("onItemContextMenu", js.Any.fromFunction3(value))
+    @scala.inline
+    def onItemDeselect(value: /* e */ SyntheticEvent[Event_, Element] => Unit): this.type = set("onItemDeselect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onItemDoubleClick(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, Element], /* time */ Double) => Unit): this.type = set("onItemDoubleClick", js.Any.fromFunction3(value))
+    @scala.inline
+    def onItemDrag(value: /* itemDragObject */ OnItemDragObjectMove | OnItemDragObjectResize => Unit): this.type = set("onItemDrag", js.Any.fromFunction1(value))
+    @scala.inline
+    def onItemMove(value: (/* itemId */ Id, /* dragTime */ Double, /* newGroupOrder */ Double) => Unit): this.type = set("onItemMove", js.Any.fromFunction3(value))
+    @scala.inline
+    def onItemResize(value: (/* itemId */ Id, /* endTimeOrStartTime */ Double, /* edge */ left | right) => Unit): this.type = set("onItemResize", js.Any.fromFunction3(value))
+    @scala.inline
+    def onItemSelect(value: (/* itemId */ Id, /* e */ js.Any, /* time */ Double) => Unit): this.type = set("onItemSelect", js.Any.fromFunction3(value))
+    @scala.inline
+    def onTimeChange(
+      value: (/* visibleTimeStart */ Double, /* visibleTimeEnd */ Double, /* updateScrollCanvas */ js.Function2[/* start */ Double, /* end */ Double, Unit]) => _
+    ): this.type = set("onTimeChange", js.Any.fromFunction3(value))
+    @scala.inline
+    def onZoom(value: /* timelineContext */ TimelineContext => Unit): this.type = set("onZoom", js.Any.fromFunction1(value))
+    @scala.inline
+    def resizeDetector(value: /* containerResizeDetector */ js.Any => Unit): this.type = set("resizeDetector", js.Any.fromFunction1(value))
+    @scala.inline
+    def rightSidebarContentReactElement(value: ReactElement): this.type = set("rightSidebarContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightSidebarContent(value: TagMod[Any]): this.type = set("rightSidebarContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rightSidebarWidth(value: Double): this.type = set("rightSidebarWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollRefRefObject(value: ReactRef[_]): this.type = set("scrollRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("scrollRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def scrollRef(value: Ref[_]): this.type = set("scrollRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollRefNull: this.type = set("scrollRef", null)
+    @scala.inline
+    def selected(value: js.Array[Double]): this.type = set("selected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sidebarContentReactElement(value: ReactElement): this.type = set("sidebarContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sidebarContent(value: TagMod[Any]): this.type = set("sidebarContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sidebarWidth(value: Double): this.type = set("sidebarWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stackItems(value: Boolean): this.type = set("stackItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def timeSteps(value: TimelineTimeSteps): this.type = set("timeSteps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def traditionalZoom(value: Boolean): this.type = set("traditionalZoom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useResizeHandle(value: Boolean): this.type = set("useResizeHandle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalLineClassNamesForTime(value: (/* start */ Double, /* end */ Double) => js.UndefOr[js.Array[String]]): this.type = set("verticalLineClassNamesForTime", js.Any.fromFunction2(value))
+    @scala.inline
+    def visibleTimeEndDate(value: js.Date): this.type = set("visibleTimeEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visibleTimeEnd(value: js.Date | Moment | Double): this.type = set("visibleTimeEnd", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visibleTimeStartDate(value: js.Date): this.type = set("visibleTimeStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visibleTimeStart(value: js.Date | Moment | Double): this.type = set("visibleTimeStart", value.asInstanceOf[js.Any])
   }
-  type Props = ReactCalendarTimelineProps[js.Any, js.Any]
+  
+  def withProps[CustomItem <: TimelineItemBase[js.Any], CustomGroup <: TimelineGroupBase](p: ReactCalendarTimelineProps[CustomItem, CustomGroup]): Builder[CustomItem, CustomGroup] = new Builder[CustomItem, CustomGroup](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[CustomItem <: TimelineItemBase[js.Any], CustomGroup <: TimelineGroupBase](groups: js.Array[CustomGroup], items: js.Array[CustomItem]): Builder[CustomItem, CustomGroup] = {
+    val __props = js.Dynamic.literal(groups = groups.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
+    new Builder[CustomItem, CustomGroup](js.Array(this.component, __props.asInstanceOf[ReactCalendarTimelineProps[CustomItem, CustomGroup]]))
+  }
 }
 

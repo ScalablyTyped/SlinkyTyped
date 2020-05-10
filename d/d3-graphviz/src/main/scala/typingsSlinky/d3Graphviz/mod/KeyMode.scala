@@ -14,14 +14,12 @@ trait KeyMode extends js.Object
 
 object KeyMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def id: typingsSlinky.d3Graphviz.d3GraphvizStrings.id = "id".asInstanceOf[typingsSlinky.d3Graphviz.d3GraphvizStrings.id]
   @scala.inline
-  def id: typingsSlinky.d3Graphviz.d3GraphvizStrings.id = this.cast("id")
+  def index: typingsSlinky.d3Graphviz.d3GraphvizStrings.index = "index".asInstanceOf[typingsSlinky.d3Graphviz.d3GraphvizStrings.index]
   @scala.inline
-  def index: typingsSlinky.d3Graphviz.d3GraphvizStrings.index = this.cast("index")
+  def `tag-index`: typingsSlinky.d3Graphviz.d3GraphvizStrings.`tag-index` = "tag-index".asInstanceOf[typingsSlinky.d3Graphviz.d3GraphvizStrings.`tag-index`]
   @scala.inline
-  def `tag-index`: typingsSlinky.d3Graphviz.d3GraphvizStrings.`tag-index` = this.cast("tag-index")
-  @scala.inline
-  def title: typingsSlinky.d3Graphviz.d3GraphvizStrings.title = this.cast("title")
+  def title: typingsSlinky.d3Graphviz.d3GraphvizStrings.title = "title".asInstanceOf[typingsSlinky.d3Graphviz.d3GraphvizStrings.title]
 }
 

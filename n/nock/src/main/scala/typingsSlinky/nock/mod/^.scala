@@ -2,7 +2,6 @@ package typingsSlinky.nock.mod
 
 import typingsSlinky.node.NodeJS.EventEmitter
 import typingsSlinky.node.urlMod.Url
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,7 @@ object ^ extends js.Object {
   def apply(basePath: String, options: Options): Scope = js.native
   def apply(basePath: Url): Scope = js.native
   def apply(basePath: Url, options: Options): Scope = js.native
-  def apply(basePath: RegExp): Scope = js.native
-  def apply(basePath: RegExp, options: Options): Scope = js.native
+  def apply(basePath: js.RegExp): Scope = js.native
+  def apply(basePath: js.RegExp, options: Options): Scope = js.native
 }
 

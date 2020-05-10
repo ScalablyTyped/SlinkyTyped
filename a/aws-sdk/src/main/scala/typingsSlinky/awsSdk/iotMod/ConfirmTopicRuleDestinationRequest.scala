@@ -16,8 +16,21 @@ object ConfirmTopicRuleDestinationRequest {
   @scala.inline
   def apply(confirmationToken: ConfirmationToken): ConfirmTopicRuleDestinationRequest = {
     val __obj = js.Dynamic.literal(confirmationToken = confirmationToken.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ConfirmTopicRuleDestinationRequest]
   }
+  @scala.inline
+  implicit class ConfirmTopicRuleDestinationRequestOps[Self <: ConfirmTopicRuleDestinationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfirmationToken(value: ConfirmationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confirmationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

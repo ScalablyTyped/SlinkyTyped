@@ -22,16 +22,53 @@ trait CatalogImportStatus extends js.Object {
 
 object CatalogImportStatus {
   @scala.inline
-  def apply(
-    ImportCompleted: js.UndefOr[scala.Boolean] = js.undefined,
-    ImportTime: js.Date = null,
-    ImportedBy: NameString = null
-  ): CatalogImportStatus = {
+  def apply(): CatalogImportStatus = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ImportCompleted)) __obj.updateDynamic("ImportCompleted")(ImportCompleted.asInstanceOf[js.Any])
-    if (ImportTime != null) __obj.updateDynamic("ImportTime")(ImportTime.asInstanceOf[js.Any])
-    if (ImportedBy != null) __obj.updateDynamic("ImportedBy")(ImportedBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[CatalogImportStatus]
   }
+  @scala.inline
+  implicit class CatalogImportStatusOps[Self <: CatalogImportStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImportCompleted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportCompleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportCompleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportCompleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportedBy(value: NameString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImportedBy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

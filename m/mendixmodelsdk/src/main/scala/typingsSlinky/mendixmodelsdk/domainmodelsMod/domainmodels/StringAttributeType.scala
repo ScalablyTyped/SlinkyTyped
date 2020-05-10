@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -28,8 +28,8 @@ class StringAttributeType protected () extends AttributeType {
   @JSName("model")
   var model_FStringAttributeType: IModel = js.native
   @JSName("containerAsAttribute")
-  def containerAsAttribute_MStringAttributeType(): Attribute = js.native
-  def length(): Double = js.native
+  def containerAsAttribute_MStringAttributeType: Attribute = js.native
+  def length: Double = js.native
   def length(newValue: Double): js.Any = js.native
 }
 

@@ -13,12 +13,10 @@ trait ChangeType extends js.Object
 
 object ChangeType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def created: typingsSlinky.microsoftGraph.microsoftGraphStrings.created = "created".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.created]
   @scala.inline
-  def created: typingsSlinky.microsoftGraph.microsoftGraphStrings.created = this.cast("created")
+  def deleted: typingsSlinky.microsoftGraph.microsoftGraphStrings.deleted = "deleted".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deleted]
   @scala.inline
-  def deleted: typingsSlinky.microsoftGraph.microsoftGraphStrings.deleted = this.cast("deleted")
-  @scala.inline
-  def updated: typingsSlinky.microsoftGraph.microsoftGraphStrings.updated = this.cast("updated")
+  def updated: typingsSlinky.microsoftGraph.microsoftGraphStrings.updated = "updated".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.updated]
 }
 

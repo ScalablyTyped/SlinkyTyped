@@ -4,57 +4,205 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IRevealOptions extends js.Object {
-  var animationIn: js.UndefOr[String] = js.undefined
-  var animationOut: js.UndefOr[String] = js.undefined
-  var btmOffsetPct: js.UndefOr[Double] = js.undefined
-  var closeOnClick: js.UndefOr[Boolean] = js.undefined
-  var closeOnEsc: js.UndefOr[Boolean] = js.undefined
-  var deepLink: js.UndefOr[Boolean] = js.undefined
-  var fullScreen: js.UndefOr[Boolean] = js.undefined
-  var hOffset: js.UndefOr[Double] = js.undefined
-  var hideDelay: js.UndefOr[Double] = js.undefined
-  var multipleOpened: js.UndefOr[Boolean] = js.undefined
-  var overlay: js.UndefOr[Boolean] = js.undefined
-  var resetOnClose: js.UndefOr[Boolean] = js.undefined
-  var showDelay: js.UndefOr[Double] = js.undefined
-  var vOffset: js.UndefOr[Double] = js.undefined
+  var animationIn: js.UndefOr[String] = js.native
+  var animationOut: js.UndefOr[String] = js.native
+  var btmOffsetPct: js.UndefOr[Double] = js.native
+  var closeOnClick: js.UndefOr[Boolean] = js.native
+  var closeOnEsc: js.UndefOr[Boolean] = js.native
+  var deepLink: js.UndefOr[Boolean] = js.native
+  var fullScreen: js.UndefOr[Boolean] = js.native
+  var hOffset: js.UndefOr[Double] = js.native
+  var hideDelay: js.UndefOr[Double] = js.native
+  var multipleOpened: js.UndefOr[Boolean] = js.native
+  var overlay: js.UndefOr[Boolean] = js.native
+  var resetOnClose: js.UndefOr[Boolean] = js.native
+  var showDelay: js.UndefOr[Double] = js.native
+  var vOffset: js.UndefOr[Double] = js.native
 }
 
 object IRevealOptions {
   @scala.inline
-  def apply(
-    animationIn: String = null,
-    animationOut: String = null,
-    btmOffsetPct: Int | Double = null,
-    closeOnClick: js.UndefOr[Boolean] = js.undefined,
-    closeOnEsc: js.UndefOr[Boolean] = js.undefined,
-    deepLink: js.UndefOr[Boolean] = js.undefined,
-    fullScreen: js.UndefOr[Boolean] = js.undefined,
-    hOffset: Int | Double = null,
-    hideDelay: Int | Double = null,
-    multipleOpened: js.UndefOr[Boolean] = js.undefined,
-    overlay: js.UndefOr[Boolean] = js.undefined,
-    resetOnClose: js.UndefOr[Boolean] = js.undefined,
-    showDelay: Int | Double = null,
-    vOffset: Int | Double = null
-  ): IRevealOptions = {
+  def apply(): IRevealOptions = {
     val __obj = js.Dynamic.literal()
-    if (animationIn != null) __obj.updateDynamic("animationIn")(animationIn.asInstanceOf[js.Any])
-    if (animationOut != null) __obj.updateDynamic("animationOut")(animationOut.asInstanceOf[js.Any])
-    if (btmOffsetPct != null) __obj.updateDynamic("btmOffsetPct")(btmOffsetPct.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnClick)) __obj.updateDynamic("closeOnClick")(closeOnClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeOnEsc)) __obj.updateDynamic("closeOnEsc")(closeOnEsc.asInstanceOf[js.Any])
-    if (!js.isUndefined(deepLink)) __obj.updateDynamic("deepLink")(deepLink.asInstanceOf[js.Any])
-    if (!js.isUndefined(fullScreen)) __obj.updateDynamic("fullScreen")(fullScreen.asInstanceOf[js.Any])
-    if (hOffset != null) __obj.updateDynamic("hOffset")(hOffset.asInstanceOf[js.Any])
-    if (hideDelay != null) __obj.updateDynamic("hideDelay")(hideDelay.asInstanceOf[js.Any])
-    if (!js.isUndefined(multipleOpened)) __obj.updateDynamic("multipleOpened")(multipleOpened.asInstanceOf[js.Any])
-    if (!js.isUndefined(overlay)) __obj.updateDynamic("overlay")(overlay.asInstanceOf[js.Any])
-    if (!js.isUndefined(resetOnClose)) __obj.updateDynamic("resetOnClose")(resetOnClose.asInstanceOf[js.Any])
-    if (showDelay != null) __obj.updateDynamic("showDelay")(showDelay.asInstanceOf[js.Any])
-    if (vOffset != null) __obj.updateDynamic("vOffset")(vOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRevealOptions]
   }
+  @scala.inline
+  implicit class IRevealOptionsOps[Self <: IRevealOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimationIn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationOut(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBtmOffsetPct(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("btmOffsetPct")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBtmOffsetPct: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("btmOffsetPct")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseOnClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseOnEsc(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEsc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseOnEsc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeOnEsc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeepLink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deepLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeepLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deepLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFullScreen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullScreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullScreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultipleOpened(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleOpened")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultipleOpened: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multipleOpened")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResetOnClose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetOnClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResetOnClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetOnClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vOffset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

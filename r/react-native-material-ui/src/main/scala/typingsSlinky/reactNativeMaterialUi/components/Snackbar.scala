@@ -1,9 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNativeMaterialUi.AnonMessage
 import typingsSlinky.reactNativeMaterialUi.mod.ButtonProps
 import typingsSlinky.reactNativeMaterialUi.mod.SnackbarProps
@@ -11,33 +9,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Snackbar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Snackbar] {
+object Snackbar {
   @JSImport("react-native-material-ui", "Snackbar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Snackbar] {
+    @scala.inline
+    def actionText(value: String): this.type = set("actionText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def button(value: ButtonProps): this.type = set("button", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onActionPress(value: () => Unit): this.type = set("onActionPress", js.Any.fromFunction0(value))
+    @scala.inline
+    def style(value: AnonMessage): this.type = set("style", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: SnackbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     bottomNavigation: Boolean,
     message: String,
     onRequestClose: () => Unit,
     timeout: Double,
-    visible: Boolean,
-    actionText: String = null,
-    button: ButtonProps = null,
-    onActionPress: () => Unit = null,
-    style: AnonMessage = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Snackbar] = {
-    val __obj = js.Dynamic.literal(bottomNavigation = bottomNavigation.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), timeout = timeout.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
-    if (actionText != null) __obj.updateDynamic("actionText")(actionText.asInstanceOf[js.Any])
-    if (button != null) __obj.updateDynamic("button")(button.asInstanceOf[js.Any])
-    if (onActionPress != null) __obj.updateDynamic("onActionPress")(js.Any.fromFunction0(onActionPress))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    visible: Boolean
+  ): Builder = {
+    val __props = js.Dynamic.literal(bottomNavigation = bottomNavigation.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), timeout = timeout.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[SnackbarProps]))
   }
-  type Props = SnackbarProps
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.testingLibraryVue.mod
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLDocument
 import typingsSlinky.prettyFormat.mod.OptionsReceived
-import typingsSlinky.std.Element
-import typingsSlinky.std.HTMLDocument
 import typingsSlinky.testingLibraryVue.testingLibraryVueBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

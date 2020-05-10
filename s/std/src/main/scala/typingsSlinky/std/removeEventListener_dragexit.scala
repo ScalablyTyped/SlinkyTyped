@@ -17,7 +17,7 @@ object removeEventListener_dragexit extends js.Object {
   def apply(
     `type`: dragexit,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

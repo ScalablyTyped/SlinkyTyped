@@ -4,14 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonInline extends js.Object {
-  var __type: String
-  var column: Double
-  var filename: String
-  var `inline`: Boolean
-  var lineno: Double
-  var str: String
-  var suppress: Boolean
+  var __type: String = js.native
+  var column: Double = js.native
+  var filename: String = js.native
+  var `inline`: Boolean = js.native
+  var lineno: Double = js.native
+  var str: String = js.native
+  var suppress: Boolean = js.native
 }
 
 object AnonInline {
@@ -29,5 +30,55 @@ object AnonInline {
     __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonInline]
   }
+  @scala.inline
+  implicit class AnonInlineOps[Self <: AnonInline] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with__type(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("__type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColumn(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilename(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLineno(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineno")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("str")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuppress(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppress")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

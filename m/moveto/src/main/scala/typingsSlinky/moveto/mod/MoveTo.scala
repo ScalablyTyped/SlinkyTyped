@@ -1,6 +1,6 @@
 package typingsSlinky.moveto.mod
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ trait MoveTo extends js.Object {
     * @param callback Callback function to be run after the scroll complete. This will overwrite the callback option
     * @return Unregister function
     */
-  def registerTrigger(dom: org.scalajs.dom.raw.HTMLElement): unregisterTriggerType = js.native
-  def registerTrigger(dom: org.scalajs.dom.raw.HTMLElement, callback: callbackType): unregisterTriggerType = js.native
+  def registerTrigger(dom: HTMLElement): unregisterTriggerType = js.native
+  def registerTrigger(dom: HTMLElement, callback: callbackType): unregisterTriggerType = js.native
 }
 

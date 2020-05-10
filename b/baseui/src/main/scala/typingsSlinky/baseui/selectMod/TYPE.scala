@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TYPE extends js.Object {
-  var search: typingsSlinky.baseui.baseuiStrings.search
-  var select: typingsSlinky.baseui.baseuiStrings.select
+  var search: typingsSlinky.baseui.baseuiStrings.search = js.native
+  var select: typingsSlinky.baseui.baseuiStrings.select = js.native
 }
 
 @JSImport("baseui/select", "TYPE")

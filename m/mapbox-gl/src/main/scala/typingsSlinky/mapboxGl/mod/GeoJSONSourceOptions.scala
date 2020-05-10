@@ -8,50 +8,170 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GeoJSONSourceOptions extends js.Object {
-  var attribution: js.UndefOr[String] = js.undefined
-  var buffer: js.UndefOr[Double] = js.undefined
-  var cluster: js.UndefOr[Double | Boolean] = js.undefined
-  var clusterMaxZoom: js.UndefOr[Double] = js.undefined
-  var clusterRadius: js.UndefOr[Double] = js.undefined
+  var attribution: js.UndefOr[String] = js.native
+  var buffer: js.UndefOr[Double] = js.native
+  var cluster: js.UndefOr[Double | Boolean] = js.native
+  var clusterMaxZoom: js.UndefOr[Double] = js.native
+  var clusterRadius: js.UndefOr[Double] = js.native
   var data: js.UndefOr[
     (Feature[Geometry, GeoJsonProperties]) | (FeatureCollection[Geometry, GeoJsonProperties]) | String
-  ] = js.undefined
-  var generateId: js.UndefOr[Boolean] = js.undefined
-  var lineMetrics: js.UndefOr[Boolean] = js.undefined
-  var maxzoom: js.UndefOr[Double] = js.undefined
-  var promoteId: js.UndefOr[PromoteIdSpecification] = js.undefined
-  var tolerance: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var generateId: js.UndefOr[Boolean] = js.native
+  var lineMetrics: js.UndefOr[Boolean] = js.native
+  var maxzoom: js.UndefOr[Double] = js.native
+  var promoteId: js.UndefOr[PromoteIdSpecification] = js.native
+  var tolerance: js.UndefOr[Double] = js.native
 }
 
 object GeoJSONSourceOptions {
   @scala.inline
-  def apply(
-    attribution: String = null,
-    buffer: Int | Double = null,
-    cluster: Double | Boolean = null,
-    clusterMaxZoom: Int | Double = null,
-    clusterRadius: Int | Double = null,
-    data: (Feature[Geometry, GeoJsonProperties]) | (FeatureCollection[Geometry, GeoJsonProperties]) | String = null,
-    generateId: js.UndefOr[Boolean] = js.undefined,
-    lineMetrics: js.UndefOr[Boolean] = js.undefined,
-    maxzoom: Int | Double = null,
-    promoteId: PromoteIdSpecification = null,
-    tolerance: Int | Double = null
-  ): GeoJSONSourceOptions = {
+  def apply(): GeoJSONSourceOptions = {
     val __obj = js.Dynamic.literal()
-    if (attribution != null) __obj.updateDynamic("attribution")(attribution.asInstanceOf[js.Any])
-    if (buffer != null) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
-    if (cluster != null) __obj.updateDynamic("cluster")(cluster.asInstanceOf[js.Any])
-    if (clusterMaxZoom != null) __obj.updateDynamic("clusterMaxZoom")(clusterMaxZoom.asInstanceOf[js.Any])
-    if (clusterRadius != null) __obj.updateDynamic("clusterRadius")(clusterRadius.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(generateId)) __obj.updateDynamic("generateId")(generateId.asInstanceOf[js.Any])
-    if (!js.isUndefined(lineMetrics)) __obj.updateDynamic("lineMetrics")(lineMetrics.asInstanceOf[js.Any])
-    if (maxzoom != null) __obj.updateDynamic("maxzoom")(maxzoom.asInstanceOf[js.Any])
-    if (promoteId != null) __obj.updateDynamic("promoteId")(promoteId.asInstanceOf[js.Any])
-    if (tolerance != null) __obj.updateDynamic("tolerance")(tolerance.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeoJSONSourceOptions]
   }
+  @scala.inline
+  implicit class GeoJSONSourceOptionsOps[Self <: GeoJSONSourceOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttribution(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attribution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttribution: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attribution")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuffer(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuffer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCluster(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCluster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterMaxZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterMaxZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterMaxZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterMaxZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(
+      value: (Feature[Geometry, GeoJsonProperties]) | (FeatureCollection[Geometry, GeoJsonProperties]) | String
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGenerateId(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGenerateId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLineMetrics(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLineMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineMetrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxzoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxzoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxzoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxzoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPromoteId(value: PromoteIdSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promoteId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromoteId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promoteId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTolerance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTolerance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tolerance")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

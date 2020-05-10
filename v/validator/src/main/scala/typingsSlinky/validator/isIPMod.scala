@@ -1,7 +1,5 @@
 package typingsSlinky.validator
 
-import typingsSlinky.validator.validatorStrings.`4`
-import typingsSlinky.validator.validatorStrings.`6`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +13,7 @@ object isIPMod extends js.Object {
     * @param [version] - IP Version
     */
   def default(str: String): Boolean = js.native
-  @JSName("default")
-  def default_4(str: String, version: `4`): Boolean = js.native
-  @JSName("default")
-  def default_6(str: String, version: `6`): Boolean = js.native
+  def default(str: String, version: typingsSlinky.validator.mod.validator.IPVersion): Boolean = js.native
+  type IPVersion = typingsSlinky.validator.mod.validator.IPVersion
 }
 

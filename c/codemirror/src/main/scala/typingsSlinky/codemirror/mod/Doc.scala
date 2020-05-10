@@ -7,7 +7,6 @@ import typingsSlinky.codemirror.AnonHead
 import typingsSlinky.codemirror.AnonInsertLeft
 import typingsSlinky.codemirror.AnonRedo
 import typingsSlinky.codemirror.AnonSharedHist
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,9 +84,9 @@ trait Doc extends js.Object {
   def getSearchCursor(query: String): SearchCursor = js.native
   def getSearchCursor(query: String, start: Position): SearchCursor = js.native
   def getSearchCursor(query: String, start: Position, caseFold: Boolean): SearchCursor = js.native
-  def getSearchCursor(query: RegExp): SearchCursor = js.native
-  def getSearchCursor(query: RegExp, start: Position): SearchCursor = js.native
-  def getSearchCursor(query: RegExp, start: Position, caseFold: Boolean): SearchCursor = js.native
+  def getSearchCursor(query: js.RegExp): SearchCursor = js.native
+  def getSearchCursor(query: js.RegExp, start: Position): SearchCursor = js.native
+  def getSearchCursor(query: js.RegExp, start: Position, caseFold: Boolean): SearchCursor = js.native
   /** Get the currently selected code. */
   def getSelection(): String = js.native
   /** Returns an array containing a string for each selection, representing the content of the selections. */

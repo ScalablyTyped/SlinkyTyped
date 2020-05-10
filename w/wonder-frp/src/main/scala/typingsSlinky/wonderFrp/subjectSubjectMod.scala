@@ -16,14 +16,6 @@ object subjectSubjectMod extends js.Object {
     var _observer: js.Any = js.native
     var _source: js.Any = js.native
     var source: Stream = js.native
-    /* CompleteClass */
-    override def completed(): js.Any = js.native
-    /* CompleteClass */
-    override def dispose(): Unit = js.native
-    /* CompleteClass */
-    override def error(error: js.Any): js.Any = js.native
-    /* CompleteClass */
-    override def next(value: js.Any): js.Any = js.native
     def remove(observer: Observer): Unit = js.native
     def start(): Unit = js.native
     def subscribe(): IDisposable = js.native

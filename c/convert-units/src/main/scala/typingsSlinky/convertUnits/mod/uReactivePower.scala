@@ -16,16 +16,14 @@ trait uReactivePower extends js.Object
 
 object uReactivePower {
   @scala.inline
-  def GVAR: typingsSlinky.convertUnits.convertUnitsStrings.GVAR = this.cast("GVAR")
+  def GVAR: typingsSlinky.convertUnits.convertUnitsStrings.GVAR = "GVAR".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.GVAR]
   @scala.inline
-  def MVAR: typingsSlinky.convertUnits.convertUnitsStrings.MVAR = this.cast("MVAR")
+  def MVAR: typingsSlinky.convertUnits.convertUnitsStrings.MVAR = "MVAR".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.MVAR]
   @scala.inline
-  def VAR: typingsSlinky.convertUnits.convertUnitsStrings.VAR = this.cast("VAR")
+  def VAR: typingsSlinky.convertUnits.convertUnitsStrings.VAR = "VAR".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.VAR]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def kVAR: typingsSlinky.convertUnits.convertUnitsStrings.kVAR = "kVAR".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kVAR]
   @scala.inline
-  def kVAR: typingsSlinky.convertUnits.convertUnitsStrings.kVAR = this.cast("kVAR")
-  @scala.inline
-  def mVAR: mVAR_ = this.cast("mVAR")
+  def mVAR: mVAR_ = "mVAR".asInstanceOf[mVAR_]
 }
 

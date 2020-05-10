@@ -1,14 +1,16 @@
 package typingsSlinky.reactShare.components
 
+import typingsSlinky.reactShare.mod.IconComponentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object VKIcon extends SharedApply_IconComponentProps1308615563 {
+object VKIcon {
   @JSImport("react-share", "VKIcon")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IconComponentProps): SharedBuilder_IconComponentProps_1792398978 = new SharedBuilder_IconComponentProps_1792398978(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: VKIcon.type): SharedBuilder_IconComponentProps_1792398978 = new SharedBuilder_IconComponentProps_1792398978(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -5,14 +5,9 @@ import typingsSlinky.pulumiPulumi.assetMod.Archive
 import typingsSlinky.pulumiPulumi.assetMod.Asset
 import typingsSlinky.pulumiPulumi.codePathsMod.CodePathOptions
 import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
+import typingsSlinky.pulumiPulumi.mocksMod.Mocks
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Inputs
-import typingsSlinky.pulumiPulumi.pulumiPulumiStrings.`04da6b54-80e4-46f7-96ec-b56ff0331ba9`
-import typingsSlinky.pulumiPulumi.pulumiPulumiStrings.`0def7320c3a5731c473e5ecbe6d01bc7`
-import typingsSlinky.pulumiPulumi.pulumiPulumiStrings.`1b47061264138c4ac30d75fd1eb44270`
-import typingsSlinky.pulumiPulumi.pulumiPulumiStrings.`4dabf18193072939515e22adb298388d`
-import typingsSlinky.pulumiPulumi.pulumiPulumiStrings.c44067f5952c0a294b673a41bacd8c17
-import typingsSlinky.pulumiPulumi.pulumiPulumiStrings.pulumiColonpulumiColonStack
 import typingsSlinky.pulumiPulumi.queryableMod.ResolvedResource
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceTransformation
@@ -40,12 +35,12 @@ object runtime extends js.Object {
   }
   
   var excessiveDebugOutput: Boolean = js.native
-  val rootPulumiStackTypeName: pulumiColonpulumiColonStack = js.native
-  val specialArchiveSig: `0def7320c3a5731c473e5ecbe6d01bc7` = js.native
-  val specialAssetSig: c44067f5952c0a294b673a41bacd8c17 = js.native
-  val specialSecretSig: `1b47061264138c4ac30d75fd1eb44270` = js.native
-  val specialSigKey: `4dabf18193072939515e22adb298388d` = js.native
-  val unknownValue: `04da6b54-80e4-46f7-96ec-b56ff0331ba9` = js.native
+  val rootPulumiStackTypeName: /* "pulumi:pulumi:Stack" */ String = js.native
+  val specialArchiveSig: /* "0def7320c3a5731c473e5ecbe6d01bc7" */ String = js.native
+  val specialAssetSig: /* "c44067f5952c0a294b673a41bacd8c17" */ String = js.native
+  val specialSecretSig: /* "1b47061264138c4ac30d75fd1eb44270" */ String = js.native
+  val specialSigKey: /* "4dabf18193072939515e22adb298388d" */ String = js.native
+  val unknownValue: /* "04da6b54-80e4-46f7-96ec-b56ff0331ba9" */ String = js.native
   def allConfig(): StringDictionary[String] = js.native
   def computeCodePaths(): js.Promise[Map[String, Asset | Archive]] = js.native
   def computeCodePaths(extraIncludePaths: js.Array[String]): js.Promise[Map[String, Asset | Archive]] = js.native
@@ -131,6 +126,14 @@ object runtime extends js.Object {
     ]
   ] = js.native
   def setConfig(k: String, v: String): Unit = js.native
+  def setMockOptions(mockMonitor: js.Any): Unit = js.native
+  def setMockOptions(mockMonitor: js.Any, project: String): Unit = js.native
+  def setMockOptions(mockMonitor: js.Any, project: String, stack: String): Unit = js.native
+  def setMockOptions(mockMonitor: js.Any, project: String, stack: String, preview: Boolean): Unit = js.native
+  def setMocks(mocks: Mocks): Unit = js.native
+  def setMocks(mocks: Mocks, project: String): Unit = js.native
+  def setMocks(mocks: Mocks, project: String, stack: String): Unit = js.native
+  def setMocks(mocks: Mocks, project: String, stack: String, preview: Boolean): Unit = js.native
   def setRootResource(res: typingsSlinky.pulumiPulumi.resourceMod.ComponentResource[_]): js.Promise[Unit] = js.native
   def streamInvoke(tok: String, props: Inputs): js.Promise[typingsSlinky.pulumiPulumi.runtimeInvokeMod.StreamInvokeResponse[_]] = js.native
   def streamInvoke(tok: String, props: Inputs, opts: InvokeOptions): js.Promise[typingsSlinky.pulumiPulumi.runtimeInvokeMod.StreamInvokeResponse[_]] = js.native

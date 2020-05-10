@@ -3,7 +3,6 @@ package typingsSlinky.apolloProtobufjs.minimalMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Properties
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +38,14 @@ object Message extends js.Object {
     * @returns Decoded message
     */
   def decode[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](reader: typingsSlinky.apolloProtobufjs.mod.Reader): T = js.native
-  def decode[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](reader: Uint8Array): T = js.native
+  def decode[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](reader: js.typedarray.Uint8Array): T = js.native
   /**
     * Decodes a message of this type preceeded by its length as a varint.
     * @param reader Reader or buffer to decode
     * @returns Decoded message
     */
   def decodeDelimited[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](reader: typingsSlinky.apolloProtobufjs.mod.Reader): T = js.native
-  def decodeDelimited[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](reader: Uint8Array): T = js.native
+  def decodeDelimited[T /* <: typingsSlinky.apolloProtobufjs.mod.Message[T] */](reader: js.typedarray.Uint8Array): T = js.native
   /**
     * Encodes a message of this type.
     * @param message Message to encode

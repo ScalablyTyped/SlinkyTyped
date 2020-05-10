@@ -16,13 +16,10 @@ trait sign extends js.Object {
   val secretKeyLength: Double = js.native
   val seedLength: Double = js.native
   val signatureLength: Double = js.native
-  def apply(msg: scala.scalajs.js.typedarray.Uint8Array, secretKey: scala.scalajs.js.typedarray.Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
-  def detached(msg: scala.scalajs.js.typedarray.Uint8Array, secretKey: scala.scalajs.js.typedarray.Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def apply(msg: js.typedarray.Uint8Array, secretKey: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
+  def detached(msg: js.typedarray.Uint8Array, secretKey: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
   def keyPair(): SignKeyPair = js.native
-  def open(
-    signedMsg: scala.scalajs.js.typedarray.Uint8Array,
-    publicKey: scala.scalajs.js.typedarray.Uint8Array
-  ): scala.scalajs.js.typedarray.Uint8Array | Null = js.native
+  def open(signedMsg: js.typedarray.Uint8Array, publicKey: js.typedarray.Uint8Array): js.typedarray.Uint8Array | Null = js.native
 }
 
 @JSImport("tweetnacl", "sign")
@@ -30,19 +27,15 @@ trait sign extends js.Object {
 object sign extends js.Object {
   @js.native
   trait detached extends js.Object {
-    def apply(msg: scala.scalajs.js.typedarray.Uint8Array, secretKey: scala.scalajs.js.typedarray.Uint8Array): scala.scalajs.js.typedarray.Uint8Array = js.native
-    def verify(
-      msg: scala.scalajs.js.typedarray.Uint8Array,
-      sig: scala.scalajs.js.typedarray.Uint8Array,
-      publicKey: scala.scalajs.js.typedarray.Uint8Array
-    ): Boolean = js.native
+    def apply(msg: js.typedarray.Uint8Array, secretKey: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
+    def verify(msg: js.typedarray.Uint8Array, sig: js.typedarray.Uint8Array, publicKey: js.typedarray.Uint8Array): Boolean = js.native
   }
   
   @js.native
   trait keyPair extends js.Object {
     def apply(): SignKeyPair = js.native
-    def fromSecretKey(secretKey: scala.scalajs.js.typedarray.Uint8Array): SignKeyPair = js.native
-    def fromSeed(secretKey: scala.scalajs.js.typedarray.Uint8Array): SignKeyPair = js.native
+    def fromSecretKey(secretKey: js.typedarray.Uint8Array): SignKeyPair = js.native
+    def fromSeed(secretKey: js.typedarray.Uint8Array): SignKeyPair = js.native
   }
   
 }

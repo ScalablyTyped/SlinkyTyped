@@ -57,32 +57,149 @@ trait SchemaActionDetail extends js.Object {
 
 object SchemaActionDetail {
   @scala.inline
-  def apply(
-    comment: SchemaComment = null,
-    create: SchemaCreate = null,
-    delete: SchemaDelete = null,
-    dlpChange: SchemaDataLeakPreventionChange = null,
-    edit: SchemaEdit = null,
-    move: SchemaMove = null,
-    permissionChange: SchemaPermissionChange = null,
-    reference: SchemaApplicationReference = null,
-    rename: SchemaRename = null,
-    restore: SchemaRestore = null,
-    settingsChange: SchemaSettingsChange = null
-  ): SchemaActionDetail = {
+  def apply(): SchemaActionDetail = {
     val __obj = js.Dynamic.literal()
-    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
-    if (create != null) __obj.updateDynamic("create")(create.asInstanceOf[js.Any])
-    if (delete != null) __obj.updateDynamic("delete")(delete.asInstanceOf[js.Any])
-    if (dlpChange != null) __obj.updateDynamic("dlpChange")(dlpChange.asInstanceOf[js.Any])
-    if (edit != null) __obj.updateDynamic("edit")(edit.asInstanceOf[js.Any])
-    if (move != null) __obj.updateDynamic("move")(move.asInstanceOf[js.Any])
-    if (permissionChange != null) __obj.updateDynamic("permissionChange")(permissionChange.asInstanceOf[js.Any])
-    if (reference != null) __obj.updateDynamic("reference")(reference.asInstanceOf[js.Any])
-    if (rename != null) __obj.updateDynamic("rename")(rename.asInstanceOf[js.Any])
-    if (restore != null) __obj.updateDynamic("restore")(restore.asInstanceOf[js.Any])
-    if (settingsChange != null) __obj.updateDynamic("settingsChange")(settingsChange.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaActionDetail]
   }
+  @scala.inline
+  implicit class SchemaActionDetailOps[Self <: SchemaActionDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComment(value: SchemaComment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreate(value: SchemaCreate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelete(value: SchemaDelete): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDlpChange(value: SchemaDataLeakPreventionChange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dlpChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDlpChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dlpChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdit(value: SchemaEdit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMove(value: SchemaMove): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissionChange(value: SchemaPermissionChange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissionChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReference(value: SchemaApplicationReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRename(value: SchemaRename): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRename: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestore(value: SchemaRestore): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSettingsChange(value: SchemaSettingsChange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSettingsChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsChange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

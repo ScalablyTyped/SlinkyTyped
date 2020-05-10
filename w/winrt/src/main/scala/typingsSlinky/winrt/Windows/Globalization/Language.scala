@@ -8,14 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Language protected () extends ILanguage {
   def this(languageTag: String) = this()
-  /* CompleteClass */
-  override var displayName: String = js.native
-  /* CompleteClass */
-  override var languageTag: String = js.native
-  /* CompleteClass */
-  override var nativeName: String = js.native
-  /* CompleteClass */
-  override var script: String = js.native
 }
 
 /* static members */

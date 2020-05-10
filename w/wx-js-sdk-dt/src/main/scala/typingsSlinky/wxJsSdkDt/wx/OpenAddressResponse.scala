@@ -7,23 +7,24 @@ import scala.scalajs.js.annotation._
 /**
   * openAddress的返回数据
   */
+@js.native
 trait OpenAddressResponse extends js.Object {
    // 国标收货地址第一级地址（省）
-  var cityName: String
+  var cityName: String = js.native
    // 国标收货地址第二级地址（市）
-  var countryName: String
+  var countryName: String = js.native
    // 国标收货地址第三级地址（国家）
-  var detailInfo: String
-  var errMsg: String
+  var detailInfo: String = js.native
+  var errMsg: String = js.native
    // 详细收货地址信息
-  var nationalCode: String
+  var nationalCode: String = js.native
    // 收货人姓名
-  var postalCode: String
+  var postalCode: String = js.native
    // 邮编
-  var provinceName: String
+  var provinceName: String = js.native
    // 收货地址国家码
-  var telNumber: String
-  var userName: String
+  var telNumber: String = js.native
+  var userName: String = js.native
 }
 
 object OpenAddressResponse {
@@ -40,8 +41,69 @@ object OpenAddressResponse {
     userName: String
   ): OpenAddressResponse = {
     val __obj = js.Dynamic.literal(cityName = cityName.asInstanceOf[js.Any], countryName = countryName.asInstanceOf[js.Any], detailInfo = detailInfo.asInstanceOf[js.Any], errMsg = errMsg.asInstanceOf[js.Any], nationalCode = nationalCode.asInstanceOf[js.Any], postalCode = postalCode.asInstanceOf[js.Any], provinceName = provinceName.asInstanceOf[js.Any], telNumber = telNumber.asInstanceOf[js.Any], userName = userName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[OpenAddressResponse]
   }
+  @scala.inline
+  implicit class OpenAddressResponseOps[Self <: OpenAddressResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCityName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cityName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCountryName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("countryName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetailInfo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detailInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrMsg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errMsg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNationalCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nationalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPostalCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvinceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("provinceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTelNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

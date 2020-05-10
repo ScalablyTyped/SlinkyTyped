@@ -1,12 +1,12 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
 import typingsSlinky.echarts.AnonAnimationAnimationDelay
-import typingsSlinky.echarts.AnonAnimationDelayAnimationDelayUpdate
 import typingsSlinky.echarts.AnonAreaColorEmphasis
 import typingsSlinky.echarts.AnonBorderWidth
 import typingsSlinky.echarts.AnonExtraCssText
 import typingsSlinky.echarts.AnonMin
 import typingsSlinky.echarts.AnonPrecision
+import typingsSlinky.echarts.AnonSymbolSize
 import typingsSlinky.echarts.echarts.EChartOption.SeriesMap.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,6 +34,7 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-map
   */
+@js.native
 trait SeriesMap_ extends js.Object {
   /**
     * Used to scale aspect of geo.
@@ -46,7 +47,7 @@ trait SeriesMap_ extends js.Object {
     * 0.75
     * @see https://echarts.apache.org/en/option.html#series-map.aspectScale
     */
-  var aspectScale: js.UndefOr[Double] = js.undefined
+  var aspectScale: js.UndefOr[Double] = js.native
   /**
     * Distance between component and the bottom side of the container.
     *
@@ -60,7 +61,7 @@ trait SeriesMap_ extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-map.bottom
     */
-  var bottom: js.UndefOr[Double | String] = js.undefined
+  var bottom: js.UndefOr[Double | String] = js.native
   /**
     * Two dimension array.
     * Define coord of left-top, right-bottom in layout box.
@@ -70,7 +71,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.boundingCoords
     */
-  var boundingCoords: js.UndefOr[js.Array[_]] = js.undefined
+  var boundingCoords: js.UndefOr[js.Array[_]] = js.native
   /**
     * Center of current view-port, in longitude and latitude.
     *
@@ -84,7 +85,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.center
     */
-  var center: js.UndefOr[js.Array[_]] = js.undefined
+  var center: js.UndefOr[js.Array[_]] = js.native
   /**
     * Data array of map series, which can be a single data value, like:
     *
@@ -120,7 +121,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.data
     */
-  var data: js.UndefOr[js.Array[Double | DataObject]] = js.undefined
+  var data: js.UndefOr[js.Array[Double | DataObject]] = js.native
   /**
     * If
     * [series.data](https://echarts.apache.org/en/option.html#series.data)
@@ -132,7 +133,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.datasetIndex
     */
-  var datasetIndex: js.UndefOr[Double] = js.undefined
+  var datasetIndex: js.UndefOr[Double] = js.native
   /**
     * In default case, map series create exclusive `geo` component
     * for themselves.
@@ -161,7 +162,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.geoIndex
     */
-  var geoIndex: js.UndefOr[Double] = js.undefined
+  var geoIndex: js.UndefOr[Double] = js.native
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -170,7 +171,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.id
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * Graphic style of Map Area Border, `emphasis` is the style when
     * it is highlighted, like being hovered by mouse, or highlighted
@@ -179,7 +180,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonAreaColorEmphasis] = js.undefined
+  var itemStyle: js.UndefOr[AnonAreaColorEmphasis] = js.native
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -191,7 +192,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.label
     */
-  var label: js.UndefOr[AnonBorderWidth] = js.undefined
+  var label: js.UndefOr[AnonBorderWidth] = js.native
   /**
     * `layoutCenter` and `layoutSize` provides layout strategy other
     * than `left/right/top/bottom/width/height`.
@@ -210,7 +211,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.layoutCenter
     */
-  var layoutCenter: js.UndefOr[js.Array[_]] = js.undefined
+  var layoutCenter: js.UndefOr[js.Array[_]] = js.native
   /**
     * Size of map, see `layoutCenter` for more information.
     * Percentage relative to screen width, and absolute pixel values
@@ -219,7 +220,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.layoutSize
     */
-  var layoutSize: js.UndefOr[Double | String] = js.undefined
+  var layoutSize: js.UndefOr[Double | String] = js.native
   /**
     * Distance between component and the left side of the container.
     *
@@ -235,7 +236,7 @@ trait SeriesMap_ extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-map.left
     */
-  var left: js.UndefOr[Double | String] = js.undefined
+  var left: js.UndefOr[Double | String] = js.native
   /**
     * Map charts.
     *
@@ -278,7 +279,7 @@ trait SeriesMap_ extends js.Object {
     * ''
     * @see https://echarts.apache.org/en/option.html#series-map.map
     */
-  var map: js.UndefOr[String] = js.undefined
+  var map: js.UndefOr[String] = js.native
   /**
     * Value of multiple series with the same
     * [map type](https://echarts.apache.org/en/option.html#series-map.map)
@@ -296,7 +297,7 @@ trait SeriesMap_ extends js.Object {
     * "sum"
     * @see https://echarts.apache.org/en/option.html#series-map.mapValueCalculation
     */
-  var mapValueCalculation: js.UndefOr[String] = js.undefined
+  var mapValueCalculation: js.UndefOr[String] = js.native
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -304,21 +305,21 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationDelayAnimationDelayUpdate] = js.undefined
+  var markArea: js.UndefOr[AnonAnimationAnimationDelay] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-map.markLine
     */
-  var markLine: js.UndefOr[AnonPrecision] = js.undefined
+  var markLine: js.UndefOr[AnonPrecision] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationAnimationDelay] = js.undefined
+  var markPoint: js.UndefOr[AnonSymbolSize] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -329,7 +330,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.name
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Name mapping for customized areas. For example:
     *
@@ -343,7 +344,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.nameMap
     */
-  var nameMap: js.UndefOr[js.Object] = js.undefined
+  var nameMap: js.UndefOr[js.Object] = js.native
   /**
     * Distance between component and the right side of the container.
     *
@@ -357,7 +358,7 @@ trait SeriesMap_ extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-map.right
     */
-  var right: js.UndefOr[Double | String] = js.undefined
+  var right: js.UndefOr[Double | String] = js.native
   /**
     * Whether to enable mouse zooming and translating.
     * `false` by default.
@@ -368,14 +369,14 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.roam
     */
-  var roam: js.UndefOr[Boolean | String] = js.undefined
+  var roam: js.UndefOr[Boolean | String] = js.native
   /**
     * Limit of scaling, with `min` and `max`. `1` by default.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-map.scaleLimit
     */
-  var scaleLimit: js.UndefOr[AnonMin] = js.undefined
+  var scaleLimit: js.UndefOr[AnonMin] = js.native
   /**
     * Selected mode decides whether multiple selecting is supported.
     * By default, `false` is used for disabling selection.
@@ -385,7 +386,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.selectedMode
     */
-  var selectedMode: js.UndefOr[Boolean | String] = js.undefined
+  var selectedMode: js.UndefOr[Boolean | String] = js.native
   /**
     * When
     * [dataset](https://echarts.apache.org/en/option.html#dataset)
@@ -407,7 +408,7 @@ trait SeriesMap_ extends js.Object {
     * "column"
     * @see https://echarts.apache.org/en/option.html#series-map.seriesLayoutBy
     */
-  var seriesLayoutBy: js.UndefOr[String] = js.undefined
+  var seriesLayoutBy: js.UndefOr[String] = js.native
   /**
     * Show the symbol in related area (dot of series symbol).
     * Available when
@@ -417,7 +418,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.showLegendSymbol
     */
-  var showLegendSymbol: js.UndefOr[Boolean] = js.undefined
+  var showLegendSymbol: js.UndefOr[Boolean] = js.native
   /**
     * Whether to ignore mouse events.
     * Default value is false, for triggering and responding to mouse
@@ -426,14 +427,14 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.silent
     */
-  var silent: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.native
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-map.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
   /**
     * Distance between component and the top side of the container.
     *
@@ -449,13 +450,13 @@ trait SeriesMap_ extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-map.top
     */
-  var top: js.UndefOr[Double | String] = js.undefined
+  var top: js.UndefOr[Double | String] = js.native
   /**
     * @default
     * "map"
     * @see https://echarts.apache.org/en/option.html#series-map.type
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * `z` value of all graghical elements in , which controls order
     * of drawing graphical components.
@@ -470,7 +471,7 @@ trait SeriesMap_ extends js.Object {
     * 2
     * @see https://echarts.apache.org/en/option.html#series-map.z
     */
-  var z: js.UndefOr[Double] = js.undefined
+  var z: js.UndefOr[Double] = js.native
   /**
     * `zlevel` value of all graghical elements in .
     *
@@ -488,7 +489,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.zlevel
     */
-  var zlevel: js.UndefOr[Double] = js.undefined
+  var zlevel: js.UndefOr[Double] = js.native
   /**
     * Zoom rate of current view-port.
     *
@@ -497,81 +498,418 @@ trait SeriesMap_ extends js.Object {
     * 1
     * @see https://echarts.apache.org/en/option.html#series-map.zoom
     */
-  var zoom: js.UndefOr[Double] = js.undefined
+  var zoom: js.UndefOr[Double] = js.native
 }
 
 object SeriesMap_ {
   @scala.inline
-  def apply(
-    aspectScale: Int | Double = null,
-    bottom: Double | String = null,
-    boundingCoords: js.Array[_] = null,
-    center: js.Array[_] = null,
-    data: js.Array[Double | DataObject] = null,
-    datasetIndex: Int | Double = null,
-    geoIndex: Int | Double = null,
-    id: String = null,
-    itemStyle: AnonAreaColorEmphasis = null,
-    label: AnonBorderWidth = null,
-    layoutCenter: js.Array[_] = null,
-    layoutSize: Double | String = null,
-    left: Double | String = null,
-    map: String = null,
-    mapValueCalculation: String = null,
-    markArea: AnonAnimationDelayAnimationDelayUpdate = null,
-    markLine: AnonPrecision = null,
-    markPoint: AnonAnimationAnimationDelay = null,
-    name: String = null,
-    nameMap: js.Object = null,
-    right: Double | String = null,
-    roam: Boolean | String = null,
-    scaleLimit: AnonMin = null,
-    selectedMode: Boolean | String = null,
-    seriesLayoutBy: String = null,
-    showLegendSymbol: js.UndefOr[Boolean] = js.undefined,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    tooltip: AnonExtraCssText = null,
-    top: Double | String = null,
-    `type`: String = null,
-    z: Int | Double = null,
-    zlevel: Int | Double = null,
-    zoom: Int | Double = null
-  ): SeriesMap_ = {
+  def apply(): SeriesMap_ = {
     val __obj = js.Dynamic.literal()
-    if (aspectScale != null) __obj.updateDynamic("aspectScale")(aspectScale.asInstanceOf[js.Any])
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (boundingCoords != null) __obj.updateDynamic("boundingCoords")(boundingCoords.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (datasetIndex != null) __obj.updateDynamic("datasetIndex")(datasetIndex.asInstanceOf[js.Any])
-    if (geoIndex != null) __obj.updateDynamic("geoIndex")(geoIndex.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (layoutCenter != null) __obj.updateDynamic("layoutCenter")(layoutCenter.asInstanceOf[js.Any])
-    if (layoutSize != null) __obj.updateDynamic("layoutSize")(layoutSize.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (map != null) __obj.updateDynamic("map")(map.asInstanceOf[js.Any])
-    if (mapValueCalculation != null) __obj.updateDynamic("mapValueCalculation")(mapValueCalculation.asInstanceOf[js.Any])
-    if (markArea != null) __obj.updateDynamic("markArea")(markArea.asInstanceOf[js.Any])
-    if (markLine != null) __obj.updateDynamic("markLine")(markLine.asInstanceOf[js.Any])
-    if (markPoint != null) __obj.updateDynamic("markPoint")(markPoint.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (nameMap != null) __obj.updateDynamic("nameMap")(nameMap.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (roam != null) __obj.updateDynamic("roam")(roam.asInstanceOf[js.Any])
-    if (scaleLimit != null) __obj.updateDynamic("scaleLimit")(scaleLimit.asInstanceOf[js.Any])
-    if (selectedMode != null) __obj.updateDynamic("selectedMode")(selectedMode.asInstanceOf[js.Any])
-    if (seriesLayoutBy != null) __obj.updateDynamic("seriesLayoutBy")(seriesLayoutBy.asInstanceOf[js.Any])
-    if (!js.isUndefined(showLegendSymbol)) __obj.updateDynamic("showLegendSymbol")(showLegendSymbol.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (z != null) __obj.updateDynamic("z")(z.asInstanceOf[js.Any])
-    if (zlevel != null) __obj.updateDynamic("zlevel")(zlevel.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesMap_]
   }
+  @scala.inline
+  implicit class SeriesMap_Ops[Self <: SeriesMap_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAspectScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAspectScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBottom(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoundingCoords(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingCoords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundingCoords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingCoords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCenter(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Array[Double | DataObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatasetIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatasetIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datasetIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeoIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geoIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeoIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geoIndex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemStyle(value: AnonAreaColorEmphasis): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: AnonBorderWidth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayoutCenter(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutCenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutCenter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayoutSize(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMap(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapValueCalculation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapValueCalculation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapValueCalculation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapValueCalculation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkArea(value: AnonAnimationAnimationDelay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkArea: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkLine(value: AnonPrecision): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkPoint(value: AnonSymbolSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameMap(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nameMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoam(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roam")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roam")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleLimit(value: AnonMin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleLimit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedMode(value: Boolean | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeriesLayoutBy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesLayoutBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeriesLayoutBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seriesLayoutBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowLegendSymbol(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegendSymbol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowLegendSymbol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showLegendSymbol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: AnonExtraCssText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZ: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZlevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZlevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zlevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,7 @@
 package typingsSlinky.reactSelect.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactSelect.componentsInputMod.InputProps
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
@@ -11,27 +9,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ComponentsInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ComponentsInput {
   @JSImport("react-select", "components.Input")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDisabled(value: Boolean): this.type = set("isDisabled", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     cx: (Null | String, ClassNamesState, String) => String | Unit,
     getStyles: (String, js.Any) => js.Object,
     innerRef: Ref[_] => Unit,
-    isHidden: Boolean,
-    isDisabled: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(cx = js.Any.fromFunction3(cx), getStyles = js.Any.fromFunction2(getStyles), innerRef = js.Any.fromFunction1(innerRef), isHidden = isHidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    isHidden: Boolean
+  ): Builder = {
+    val __props = js.Dynamic.literal(cx = js.Any.fromFunction3(cx), getStyles = js.Any.fromFunction2(getStyles), innerRef = js.Any.fromFunction1(innerRef), isHidden = isHidden.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[InputProps]))
   }
-  type Props = InputProps
 }
 

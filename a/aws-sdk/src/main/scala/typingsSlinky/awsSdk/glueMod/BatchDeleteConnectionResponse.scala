@@ -18,11 +18,41 @@ trait BatchDeleteConnectionResponse extends js.Object {
 
 object BatchDeleteConnectionResponse {
   @scala.inline
-  def apply(Errors: ErrorByName = null, Succeeded: NameStringList = null): BatchDeleteConnectionResponse = {
+  def apply(): BatchDeleteConnectionResponse = {
     val __obj = js.Dynamic.literal()
-    if (Errors != null) __obj.updateDynamic("Errors")(Errors.asInstanceOf[js.Any])
-    if (Succeeded != null) __obj.updateDynamic("Succeeded")(Succeeded.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDeleteConnectionResponse]
   }
+  @scala.inline
+  implicit class BatchDeleteConnectionResponseOps[Self <: BatchDeleteConnectionResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrors(value: ErrorByName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Errors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSucceeded(value: NameStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Succeeded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSucceeded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Succeeded")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

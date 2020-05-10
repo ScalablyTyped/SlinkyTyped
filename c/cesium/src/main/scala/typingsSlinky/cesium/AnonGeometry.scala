@@ -7,26 +7,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonGeometry extends js.Object {
-  var attributes: js.UndefOr[js.Any] = js.undefined
-  var geometry: Geometry | PolygonGeometry
-  var id: js.UndefOr[js.Any] = js.undefined
-  var modelMatrix: js.UndefOr[Matrix4] = js.undefined
+  var attributes: js.UndefOr[js.Any] = js.native
+  var geometry: Geometry | PolygonGeometry = js.native
+  var id: js.UndefOr[js.Any] = js.native
+  var modelMatrix: js.UndefOr[Matrix4] = js.native
 }
 
 object AnonGeometry {
   @scala.inline
-  def apply(
-    geometry: Geometry | PolygonGeometry,
-    attributes: js.Any = null,
-    id: js.Any = null,
-    modelMatrix: Matrix4 = null
-  ): AnonGeometry = {
+  def apply(geometry: Geometry | PolygonGeometry): AnonGeometry = {
     val __obj = js.Dynamic.literal(geometry = geometry.asInstanceOf[js.Any])
-    if (attributes != null) __obj.updateDynamic("attributes")(attributes.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modelMatrix != null) __obj.updateDynamic("modelMatrix")(modelMatrix.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonGeometry]
   }
+  @scala.inline
+  implicit class AnonGeometryOps[Self <: AnonGeometry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGeometry(value: Geometry | PolygonGeometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelMatrix(value: Matrix4): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelMatrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelMatrix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelMatrix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

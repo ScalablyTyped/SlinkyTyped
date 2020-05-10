@@ -5,27 +5,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConfigOptions extends js.Object {
-  var acceptedType: js.UndefOr[String] = js.undefined
-  var headers: js.UndefOr[AnonContentType] = js.undefined
-  var host: js.UndefOr[String] = js.undefined
-  var port: js.UndefOr[Double] = js.undefined
+  var acceptedType: js.UndefOr[String] = js.native
+  var headers: js.UndefOr[AnonContentType] = js.native
+  var host: js.UndefOr[String] = js.native
+  var port: js.UndefOr[Double] = js.native
 }
 
 object ConfigOptions {
   @scala.inline
-  def apply(
-    acceptedType: String = null,
-    headers: AnonContentType = null,
-    host: String = null,
-    port: Int | Double = null
-  ): ConfigOptions = {
+  def apply(): ConfigOptions = {
     val __obj = js.Dynamic.literal()
-    if (acceptedType != null) __obj.updateDynamic("acceptedType")(acceptedType.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConfigOptions]
   }
+  @scala.inline
+  implicit class ConfigOptionsOps[Self <: ConfigOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceptedType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptedType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAcceptedType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptedType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: AnonContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

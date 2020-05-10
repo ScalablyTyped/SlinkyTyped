@@ -1,40 +1,55 @@
 package typingsSlinky.glReactNative.mod
 
 import org.scalajs.dom.raw.WebGLRenderingContext
-import typingsSlinky.glReact.mod.Visitor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.glReactNative.glviewnativeMod.GLViewNativeProps because var conflicts: children, style. Inlined onContextCreate, onContextFailure */ trait SurfaceProps
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.glReactNative.glviewnativeMod.GLViewNativeProps because var conflicts: children, style. Inlined onContextCreate, onContextFailure */ @js.native
+trait SurfaceProps
   extends typingsSlinky.glReact.mod.SurfaceProps {
-  var onContextCreate: js.UndefOr[js.Function1[/* gl */ WebGLRenderingContext, Unit]] = js.undefined
-  var onContextFailure: js.UndefOr[js.Function1[/* e */ js.Error, Unit]] = js.undefined
+  var onContextCreate: js.UndefOr[js.Function1[/* gl */ WebGLRenderingContext, Unit]] = js.native
+  var onContextFailure: js.UndefOr[js.Function1[/* e */ js.Error, Unit]] = js.native
 }
 
 object SurfaceProps {
   @scala.inline
-  def apply(
-    children: js.Any = null,
-    onContextCreate: /* gl */ WebGLRenderingContext => Unit = null,
-    onContextFailure: /* e */ js.Error => Unit = null,
-    onLoad: () => Unit = null,
-    onLoadError: /* e */ js.Error => Unit = null,
-    preload: js.Array[_] = null,
-    style: js.Any = null,
-    visitor: Visitor = null
-  ): SurfaceProps = {
+  def apply(): SurfaceProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (onContextCreate != null) __obj.updateDynamic("onContextCreate")(js.Any.fromFunction1(onContextCreate))
-    if (onContextFailure != null) __obj.updateDynamic("onContextFailure")(js.Any.fromFunction1(onContextFailure))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction0(onLoad))
-    if (onLoadError != null) __obj.updateDynamic("onLoadError")(js.Any.fromFunction1(onLoadError))
-    if (preload != null) __obj.updateDynamic("preload")(preload.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (visitor != null) __obj.updateDynamic("visitor")(visitor.asInstanceOf[js.Any])
     __obj.asInstanceOf[SurfaceProps]
   }
+  @scala.inline
+  implicit class SurfacePropsOps[Self <: SurfaceProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnContextCreate(value: /* gl */ WebGLRenderingContext => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextCreate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnContextCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextCreate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnContextFailure(value: /* e */ js.Error => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextFailure")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnContextFailure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContextFailure")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

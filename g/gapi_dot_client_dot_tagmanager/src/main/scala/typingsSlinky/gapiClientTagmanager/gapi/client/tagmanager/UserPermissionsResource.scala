@@ -8,17 +8,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UserPermissionsResource extends js.Object {
   /** Creates a user's Account & Container access. */
-  def create(request: AnonAlt): Request_[UserPermission]
+  def create(request: AnonAlt): Request_[UserPermission] = js.native
   /** Removes a user from the account, revoking access to it and all of its containers. */
-  def delete(request: AnonFields): Request_[Unit]
+  def delete(request: AnonFields): Request_[Unit] = js.native
   /** Gets a user's Account & Container access. */
-  def get(request: AnonFields): Request_[UserPermission]
+  def get(request: AnonFields): Request_[UserPermission] = js.native
   /** List all users that have access to the account along with Account and Container user access granted to each of them. */
-  def list(request: AnonKey): Request_[ListUserPermissionsResponse]
+  def list(request: AnonKey): Request_[ListUserPermissionsResponse] = js.native
   /** Updates a user's Account & Container access. */
-  def update(request: AnonFields): Request_[UserPermission]
+  def update(request: AnonFields): Request_[UserPermission] = js.native
 }
 
 object UserPermissionsResource {
@@ -31,8 +32,45 @@ object UserPermissionsResource {
     update: AnonFields => Request_[UserPermission]
   ): UserPermissionsResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update))
-  
     __obj.asInstanceOf[UserPermissionsResource]
   }
+  @scala.inline
+  implicit class UserPermissionsResourceOps[Self <: UserPermissionsResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: AnonAlt => Request_[UserPermission]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: AnonFields => Request_[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: AnonFields => Request_[UserPermission]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: AnonKey => Request_[ListUserPermissionsResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: AnonFields => Request_[UserPermission]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

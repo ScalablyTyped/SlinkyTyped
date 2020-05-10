@@ -13,12 +13,10 @@ trait PaymentShippingType extends js.Object
 
 object PaymentShippingType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def delivery: typingsSlinky.std.stdStrings.delivery = "delivery".asInstanceOf[typingsSlinky.std.stdStrings.delivery]
   @scala.inline
-  def delivery: typingsSlinky.std.stdStrings.delivery = this.cast("delivery")
+  def pickup: typingsSlinky.std.stdStrings.pickup = "pickup".asInstanceOf[typingsSlinky.std.stdStrings.pickup]
   @scala.inline
-  def pickup: typingsSlinky.std.stdStrings.pickup = this.cast("pickup")
-  @scala.inline
-  def shipping: typingsSlinky.std.stdStrings.shipping = this.cast("shipping")
+  def shipping: typingsSlinky.std.stdStrings.shipping = "shipping".asInstanceOf[typingsSlinky.std.stdStrings.shipping]
 }
 

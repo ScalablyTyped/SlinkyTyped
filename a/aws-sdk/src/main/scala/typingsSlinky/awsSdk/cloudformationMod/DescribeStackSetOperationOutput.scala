@@ -14,10 +14,29 @@ trait DescribeStackSetOperationOutput extends js.Object {
 
 object DescribeStackSetOperationOutput {
   @scala.inline
-  def apply(StackSetOperation: StackSetOperation = null): DescribeStackSetOperationOutput = {
+  def apply(): DescribeStackSetOperationOutput = {
     val __obj = js.Dynamic.literal()
-    if (StackSetOperation != null) __obj.updateDynamic("StackSetOperation")(StackSetOperation.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeStackSetOperationOutput]
   }
+  @scala.inline
+  implicit class DescribeStackSetOperationOutputOps[Self <: DescribeStackSetOperationOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStackSetOperation(value: StackSetOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStackSetOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StackSetOperation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

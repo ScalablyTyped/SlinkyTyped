@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEncryptedData extends js.Object {
-  var encryptedData: String
-  var errMsg: String
-  var iv: String
+  var encryptedData: String = js.native
+  var errMsg: String = js.native
+  var iv: String = js.native
 }
 
 object AnonEncryptedData {
   @scala.inline
   def apply(encryptedData: String, errMsg: String, iv: String): AnonEncryptedData = {
     val __obj = js.Dynamic.literal(encryptedData = encryptedData.asInstanceOf[js.Any], errMsg = errMsg.asInstanceOf[js.Any], iv = iv.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonEncryptedData]
   }
+  @scala.inline
+  implicit class AnonEncryptedDataOps[Self <: AnonEncryptedData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncryptedData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrMsg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errMsg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIv(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iv")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

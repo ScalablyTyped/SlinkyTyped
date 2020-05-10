@@ -14,10 +14,29 @@ trait CreateDirectoryConfigResult extends js.Object {
 
 object CreateDirectoryConfigResult {
   @scala.inline
-  def apply(DirectoryConfig: DirectoryConfig = null): CreateDirectoryConfigResult = {
+  def apply(): CreateDirectoryConfigResult = {
     val __obj = js.Dynamic.literal()
-    if (DirectoryConfig != null) __obj.updateDynamic("DirectoryConfig")(DirectoryConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDirectoryConfigResult]
   }
+  @scala.inline
+  implicit class CreateDirectoryConfigResultOps[Self <: CreateDirectoryConfigResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirectoryConfig(value: DirectoryConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoryConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

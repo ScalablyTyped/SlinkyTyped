@@ -22,11 +22,47 @@ trait SetSubnetsInput extends js.Object {
 
 object SetSubnetsInput {
   @scala.inline
-  def apply(LoadBalancerArn: LoadBalancerArn, SubnetMappings: SubnetMappings = null, Subnets: Subnets = null): SetSubnetsInput = {
+  def apply(LoadBalancerArn: LoadBalancerArn): SetSubnetsInput = {
     val __obj = js.Dynamic.literal(LoadBalancerArn = LoadBalancerArn.asInstanceOf[js.Any])
-    if (SubnetMappings != null) __obj.updateDynamic("SubnetMappings")(SubnetMappings.asInstanceOf[js.Any])
-    if (Subnets != null) __obj.updateDynamic("Subnets")(Subnets.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetSubnetsInput]
   }
+  @scala.inline
+  implicit class SetSubnetsInputOps[Self <: SetSubnetsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadBalancerArn(value: LoadBalancerArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadBalancerArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubnetMappings(value: SubnetMappings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetMappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnets(value: Subnets): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subnets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subnets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

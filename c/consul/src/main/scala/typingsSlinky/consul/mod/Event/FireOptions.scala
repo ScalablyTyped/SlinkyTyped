@@ -2,49 +2,80 @@ package typingsSlinky.consul.mod.Event
 
 import typingsSlinky.consul.mod.CommonOptions
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FireOptions extends CommonOptions {
-  var name: String
-  var node: js.UndefOr[String] = js.undefined
-  var payload: String | Buffer
-  var service: js.UndefOr[String] = js.undefined
-  var tag: js.UndefOr[String] = js.undefined
+  var name: String = js.native
+  var node: js.UndefOr[String] = js.native
+  var payload: String | Buffer = js.native
+  var service: js.UndefOr[String] = js.native
+  var tag: js.UndefOr[String] = js.native
 }
 
 object FireOptions {
   @scala.inline
-  def apply(
-    name: String,
-    payload: String | Buffer,
-    consistent: js.UndefOr[Boolean] = js.undefined,
-    ctx: EventEmitter = null,
-    dc: String = null,
-    node: String = null,
-    service: String = null,
-    stale: js.UndefOr[Boolean] = js.undefined,
-    tag: String = null,
-    timeout: Int | Double = null,
-    token: String = null,
-    wait: String = null,
-    wan: js.UndefOr[Boolean] = js.undefined
-  ): FireOptions = {
+  def apply(name: String, payload: String | Buffer): FireOptions = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
-    if (!js.isUndefined(consistent)) __obj.updateDynamic("consistent")(consistent.asInstanceOf[js.Any])
-    if (ctx != null) __obj.updateDynamic("ctx")(ctx.asInstanceOf[js.Any])
-    if (dc != null) __obj.updateDynamic("dc")(dc.asInstanceOf[js.Any])
-    if (node != null) __obj.updateDynamic("node")(node.asInstanceOf[js.Any])
-    if (service != null) __obj.updateDynamic("service")(service.asInstanceOf[js.Any])
-    if (!js.isUndefined(stale)) __obj.updateDynamic("stale")(stale.asInstanceOf[js.Any])
-    if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (token != null) __obj.updateDynamic("token")(token.asInstanceOf[js.Any])
-    if (wait != null) __obj.updateDynamic("wait")(wait.asInstanceOf[js.Any])
-    if (!js.isUndefined(wan)) __obj.updateDynamic("wan")(wan.asInstanceOf[js.Any])
     __obj.asInstanceOf[FireOptions]
   }
+  @scala.inline
+  implicit class FireOptionsOps[Self <: FireOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPayload(value: String | Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("service")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,115 +1,91 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorLevel
-import typingsSlinky.devextreme.AnonDisplayMode
 import typingsSlinky.devextreme.devextremeStrings.allArgumentPoints
 import typingsSlinky.devextreme.devextremeStrings.allSeriesPoints
-import typingsSlinky.devextreme.devextremeStrings.dash
-import typingsSlinky.devextreme.devextremeStrings.dot
-import typingsSlinky.devextreme.devextremeStrings.longDash
 import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.devextremeStrings.onlyPoint
-import typingsSlinky.devextreme.devextremeStrings.solid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Describes settings supported by a series of the range bar type. */
+@js.native
 trait dxChartSeriesTypesRangeBarSeries extends dxChartSeriesTypesCommonSeries {
   /** Configures data aggregation for the series. */
   @JSName("aggregation")
-  var aggregation_dxChartSeriesTypesRangeBarSeries: js.UndefOr[dxChartSeriesTypesRangeBarSeriesAggregation] = js.undefined
+  var aggregation_dxChartSeriesTypesRangeBarSeries: js.UndefOr[dxChartSeriesTypesRangeBarSeriesAggregation] = js.native
   /** Specifies series elements to be highlighted when a user points to a series. */
   @JSName("hoverMode")
-  var hoverMode_dxChartSeriesTypesRangeBarSeries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.undefined
+  var hoverMode_dxChartSeriesTypesRangeBarSeries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.native
   /** Configures point labels. */
   @JSName("label")
-  var label_dxChartSeriesTypesRangeBarSeries: js.UndefOr[dxChartSeriesTypesRangeBarSeriesLabel] = js.undefined
+  var label_dxChartSeriesTypesRangeBarSeries: js.UndefOr[dxChartSeriesTypesRangeBarSeriesLabel] = js.native
   /** Specifies series elements to be highlighted when a user selects a range bar. */
   @JSName("selectionMode")
-  var selectionMode_dxChartSeriesTypesRangeBarSeries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.undefined
+  var selectionMode_dxChartSeriesTypesRangeBarSeries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.native
 }
 
 object dxChartSeriesTypesRangeBarSeries {
   @scala.inline
-  def apply(
-    aggregation: dxChartSeriesTypesRangeBarSeriesAggregation = null,
-    argumentField: String = null,
-    axis: String = null,
-    barOverlapGroup: String = null,
-    barPadding: Int | Double = null,
-    barWidth: Int | Double = null,
-    border: dxChartSeriesTypesCommonSeriesBorder = null,
-    closeValueField: String = null,
-    color: String = null,
-    cornerRadius: Int | Double = null,
-    dashStyle: dash | dot | longDash | solid = null,
-    highValueField: String = null,
-    hoverMode: onlyPoint | allSeriesPoints | allArgumentPoints | none = null,
-    hoverStyle: dxChartSeriesTypesCommonSeriesHoverStyle = null,
-    ignoreEmptyPoints: js.UndefOr[Boolean] = js.undefined,
-    innerColor: String = null,
-    label: dxChartSeriesTypesRangeBarSeriesLabel = null,
-    lowValueField: String = null,
-    maxLabelCount: Int | Double = null,
-    minBarSize: Int | Double = null,
-    opacity: Int | Double = null,
-    openValueField: String = null,
-    pane: String = null,
-    point: dxChartSeriesTypesCommonSeriesPoint = null,
-    rangeValue1Field: String = null,
-    rangeValue2Field: String = null,
-    reduction: AnonColorLevel = null,
-    selectionMode: onlyPoint | allSeriesPoints | allArgumentPoints | none = null,
-    selectionStyle: dxChartSeriesTypesCommonSeriesSelectionStyle = null,
-    showInLegend: js.UndefOr[Boolean] = js.undefined,
-    sizeField: String = null,
-    stack: String = null,
-    tagField: String = null,
-    valueErrorBar: AnonDisplayMode = null,
-    valueField: String = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): dxChartSeriesTypesRangeBarSeries = {
+  def apply(): dxChartSeriesTypesRangeBarSeries = {
     val __obj = js.Dynamic.literal()
-    if (aggregation != null) __obj.updateDynamic("aggregation")(aggregation.asInstanceOf[js.Any])
-    if (argumentField != null) __obj.updateDynamic("argumentField")(argumentField.asInstanceOf[js.Any])
-    if (axis != null) __obj.updateDynamic("axis")(axis.asInstanceOf[js.Any])
-    if (barOverlapGroup != null) __obj.updateDynamic("barOverlapGroup")(barOverlapGroup.asInstanceOf[js.Any])
-    if (barPadding != null) __obj.updateDynamic("barPadding")(barPadding.asInstanceOf[js.Any])
-    if (barWidth != null) __obj.updateDynamic("barWidth")(barWidth.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (closeValueField != null) __obj.updateDynamic("closeValueField")(closeValueField.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (cornerRadius != null) __obj.updateDynamic("cornerRadius")(cornerRadius.asInstanceOf[js.Any])
-    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
-    if (highValueField != null) __obj.updateDynamic("highValueField")(highValueField.asInstanceOf[js.Any])
-    if (hoverMode != null) __obj.updateDynamic("hoverMode")(hoverMode.asInstanceOf[js.Any])
-    if (hoverStyle != null) __obj.updateDynamic("hoverStyle")(hoverStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreEmptyPoints)) __obj.updateDynamic("ignoreEmptyPoints")(ignoreEmptyPoints.asInstanceOf[js.Any])
-    if (innerColor != null) __obj.updateDynamic("innerColor")(innerColor.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (lowValueField != null) __obj.updateDynamic("lowValueField")(lowValueField.asInstanceOf[js.Any])
-    if (maxLabelCount != null) __obj.updateDynamic("maxLabelCount")(maxLabelCount.asInstanceOf[js.Any])
-    if (minBarSize != null) __obj.updateDynamic("minBarSize")(minBarSize.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (openValueField != null) __obj.updateDynamic("openValueField")(openValueField.asInstanceOf[js.Any])
-    if (pane != null) __obj.updateDynamic("pane")(pane.asInstanceOf[js.Any])
-    if (point != null) __obj.updateDynamic("point")(point.asInstanceOf[js.Any])
-    if (rangeValue1Field != null) __obj.updateDynamic("rangeValue1Field")(rangeValue1Field.asInstanceOf[js.Any])
-    if (rangeValue2Field != null) __obj.updateDynamic("rangeValue2Field")(rangeValue2Field.asInstanceOf[js.Any])
-    if (reduction != null) __obj.updateDynamic("reduction")(reduction.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (selectionStyle != null) __obj.updateDynamic("selectionStyle")(selectionStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(showInLegend)) __obj.updateDynamic("showInLegend")(showInLegend.asInstanceOf[js.Any])
-    if (sizeField != null) __obj.updateDynamic("sizeField")(sizeField.asInstanceOf[js.Any])
-    if (stack != null) __obj.updateDynamic("stack")(stack.asInstanceOf[js.Any])
-    if (tagField != null) __obj.updateDynamic("tagField")(tagField.asInstanceOf[js.Any])
-    if (valueErrorBar != null) __obj.updateDynamic("valueErrorBar")(valueErrorBar.asInstanceOf[js.Any])
-    if (valueField != null) __obj.updateDynamic("valueField")(valueField.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartSeriesTypesRangeBarSeries]
   }
+  @scala.inline
+  implicit class dxChartSeriesTypesRangeBarSeriesOps[Self <: dxChartSeriesTypesRangeBarSeries] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregation(value: dxChartSeriesTypesRangeBarSeriesAggregation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverMode(value: onlyPoint | allSeriesPoints | allArgumentPoints | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: dxChartSeriesTypesRangeBarSeriesLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionMode(value: onlyPoint | allSeriesPoints | allArgumentPoints | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

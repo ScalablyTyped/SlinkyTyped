@@ -18,11 +18,41 @@ trait GetMetricStatisticsOutput extends js.Object {
 
 object GetMetricStatisticsOutput {
   @scala.inline
-  def apply(Datapoints: Datapoints = null, Label: MetricLabel = null): GetMetricStatisticsOutput = {
+  def apply(): GetMetricStatisticsOutput = {
     val __obj = js.Dynamic.literal()
-    if (Datapoints != null) __obj.updateDynamic("Datapoints")(Datapoints.asInstanceOf[js.Any])
-    if (Label != null) __obj.updateDynamic("Label")(Label.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMetricStatisticsOutput]
   }
+  @scala.inline
+  implicit class GetMetricStatisticsOutputOps[Self <: GetMetricStatisticsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatapoints(value: Datapoints): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Datapoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatapoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Datapoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: MetricLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

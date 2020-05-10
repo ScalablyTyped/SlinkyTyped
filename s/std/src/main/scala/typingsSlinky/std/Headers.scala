@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 /** This Fetch API interface allows you to perform various actions on HTTP request and response headers. These actions include retrieving, setting, adding to, and removing. A Headers object has an associated header list, which is initially empty and consists of zero or more name and value pairs.  You can add to this using methods like append() (see Examples.) In all methods of this interface, header names are matched by case-insensitive byte sequence. */
 @js.native
 trait Headers extends js.Object {
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[js.Tuple2[java.lang.String, java.lang.String]]] = js.native
   def append(name: java.lang.String, value: java.lang.String): Unit = js.native
   def delete(name: java.lang.String): Unit = js.native
@@ -40,6 +40,6 @@ trait Headers extends js.Object {
 @JSGlobal("Headers")
 @js.native
 object Headers
-  extends Instantiable0[Headers]
-     with Instantiable1[/* init */ HeadersInit, Headers]
+  extends Instantiable0[org.scalajs.dom.experimental.Headers]
+     with Instantiable1[/* init */ HeadersInit, org.scalajs.dom.experimental.Headers]
 

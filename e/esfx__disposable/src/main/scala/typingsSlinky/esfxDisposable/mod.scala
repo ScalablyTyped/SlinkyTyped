@@ -14,7 +14,7 @@ object mod extends js.Object {
       * A well-known symbol used to define an async explicit resource disposal method on an object.
       */
     val asyncDispose: js.Symbol = js.native
-    val name: typingsSlinky.esfxDisposable.esfxDisposableStrings.AsyncDisposable = js.native
+    val name: /* "AsyncDisposable" */ String = js.native
     /**
       * Creates an `AsyncDisposable` wrapper around a callback used to dispose resources.
       */
@@ -61,7 +61,7 @@ object mod extends js.Object {
       * A well-known symbol used to define an explicit resource disposal method on an object.
       */
     val dispose: js.Symbol = js.native
-    val name: typingsSlinky.esfxDisposable.esfxDisposableStrings.Disposable = js.native
+    val name: /* "Disposable" */ String = js.native
     /**
       * Creates a `Disposable` wrapper around a callback used to dispose of a resource.
       */

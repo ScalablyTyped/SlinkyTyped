@@ -32,18 +32,65 @@ trait SchemaCreativeOptimizationConfiguration extends js.Object {
 
 object SchemaCreativeOptimizationConfiguration {
   @scala.inline
-  def apply(
-    id: String = null,
-    name: String = null,
-    optimizationActivitys: js.Array[SchemaOptimizationActivity] = null,
-    optimizationModel: String = null
-  ): SchemaCreativeOptimizationConfiguration = {
+  def apply(): SchemaCreativeOptimizationConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (optimizationActivitys != null) __obj.updateDynamic("optimizationActivitys")(optimizationActivitys.asInstanceOf[js.Any])
-    if (optimizationModel != null) __obj.updateDynamic("optimizationModel")(optimizationModel.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCreativeOptimizationConfiguration]
   }
+  @scala.inline
+  implicit class SchemaCreativeOptimizationConfigurationOps[Self <: SchemaCreativeOptimizationConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptimizationActivitys(value: js.Array[SchemaOptimizationActivity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optimizationActivitys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptimizationActivitys: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optimizationActivitys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptimizationModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optimizationModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptimizationModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optimizationModel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

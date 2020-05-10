@@ -1,9 +1,9 @@
 package typingsSlinky.fabric.fabricImplMod
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLTexture
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,21 +14,19 @@ class WebglFilterBackend ()
   extends FilterBackend_
      with WebglFilterBackendOptions {
   def this(options: WebglFilterBackendOptions) = this()
-  /* CompleteClass */
-  override var tileSize: Double = js.native
   def applyFiltersDebug(
     filters: js.Array[IBaseFilter],
     sourceElement: HTMLCanvasElement,
     sourceWidth: Double,
     sourceHeight: Double,
-    targetCanvas: org.scalajs.dom.raw.HTMLCanvasElement
+    targetCanvas: HTMLCanvasElement
   ): js.Any = js.native
   def applyFiltersDebug(
     filters: js.Array[IBaseFilter],
     sourceElement: HTMLCanvasElement,
     sourceWidth: Double,
     sourceHeight: Double,
-    targetCanvas: org.scalajs.dom.raw.HTMLCanvasElement,
+    targetCanvas: HTMLCanvasElement,
     cacheKey: String
   ): js.Any = js.native
   def applyFiltersDebug(
@@ -36,14 +34,14 @@ class WebglFilterBackend ()
     sourceElement: HTMLImageElement,
     sourceWidth: Double,
     sourceHeight: Double,
-    targetCanvas: org.scalajs.dom.raw.HTMLCanvasElement
+    targetCanvas: HTMLCanvasElement
   ): js.Any = js.native
   def applyFiltersDebug(
     filters: js.Array[IBaseFilter],
     sourceElement: HTMLImageElement,
     sourceWidth: Double,
     sourceHeight: Double,
-    targetCanvas: org.scalajs.dom.raw.HTMLCanvasElement,
+    targetCanvas: HTMLCanvasElement,
     cacheKey: String
   ): js.Any = js.native
   def captureGPUInfo(): GPUInfo = js.native

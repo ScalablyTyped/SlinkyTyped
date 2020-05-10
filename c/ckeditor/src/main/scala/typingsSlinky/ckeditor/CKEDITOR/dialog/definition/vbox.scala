@@ -1,65 +1,104 @@
 package typingsSlinky.ckeditor.CKEDITOR.dialog.definition
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ckeditor.CKEDITOR.plugins.widget
-import typingsSlinky.ckeditor.CKEDITOR.style
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait vbox extends uiElement {
-  var children: js.UndefOr[js.Array[typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement]] = js.undefined
-  var expand: js.UndefOr[Boolean] = js.undefined
-  var heights: js.UndefOr[js.Array[Double]] = js.undefined
-  var padding: js.UndefOr[Double] = js.undefined
-  var styles: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[js.Array[Double]] = js.undefined
+  var children: js.UndefOr[js.Array[typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement]] = js.native
+  var expand: js.UndefOr[Boolean] = js.native
+  var heights: js.UndefOr[js.Array[Double]] = js.native
+  var padding: js.UndefOr[Double] = js.native
+  var styles: js.UndefOr[String] = js.native
+  var width: js.UndefOr[js.Array[Double]] = js.native
 }
 
 object vbox {
   @scala.inline
-  def apply(
-    align: String = null,
-    children: js.Array[typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement] = null,
-    className: String = null,
-    commit: /* widget */ widget => Unit = null,
-    expand: js.UndefOr[Boolean] = js.undefined,
-    heights: js.Array[Double] = null,
-    id: String = null,
-    label: String = null,
-    onHide: /* elem */ typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement => Unit = null,
-    onLoad: /* elem */ typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement => Unit = null,
-    onShow: /* elem */ typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement => Unit = null,
-    padding: Int | Double = null,
-    requiredContent: String | StringDictionary[js.Any] | style = null,
-    setup: /* widget */ widget => Unit = null,
-    style: String = null,
-    styles: String = null,
-    title: String = null,
-    `type`: String = null,
-    width: js.Array[Double] = null
-  ): vbox = {
+  def apply(): vbox = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (commit != null) __obj.updateDynamic("commit")(js.Any.fromFunction1(commit))
-    if (!js.isUndefined(expand)) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (heights != null) __obj.updateDynamic("heights")(heights.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction1(onHide))
-    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction1(onShow))
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (requiredContent != null) __obj.updateDynamic("requiredContent")(requiredContent.asInstanceOf[js.Any])
-    if (setup != null) __obj.updateDynamic("setup")(js.Any.fromFunction1(setup))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[vbox]
   }
+  @scala.inline
+  implicit class vboxOps[Self <: vbox] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: js.Array[typingsSlinky.ckeditor.CKEDITOR.ui.dialog.uiElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeights(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeights: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heights")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

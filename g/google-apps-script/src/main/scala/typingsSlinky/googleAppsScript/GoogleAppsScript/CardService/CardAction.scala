@@ -14,13 +14,14 @@ import scala.scalajs.js.annotation._
   *         .setText("Card action")
   *         .setOnClickAction(action);
   */
+@js.native
 trait CardAction extends js.Object {
-  def setAuthorizationAction(action: AuthorizationAction): CardAction
-  def setComposeAction(action: Action, composedEmailType: ComposedEmailType): CardAction
-  def setOnClickAction(action: Action): CardAction
-  def setOnClickOpenLinkAction(action: Action): CardAction
-  def setOpenLink(openLink: OpenLink): CardAction
-  def setText(text: String): CardAction
+  def setAuthorizationAction(action: AuthorizationAction): CardAction = js.native
+  def setComposeAction(action: Action, composedEmailType: ComposedEmailType): CardAction = js.native
+  def setOnClickAction(action: Action): CardAction = js.native
+  def setOnClickOpenLinkAction(action: Action): CardAction = js.native
+  def setOpenLink(openLink: OpenLink): CardAction = js.native
+  def setText(text: String): CardAction = js.native
 }
 
 object CardAction {
@@ -34,8 +35,51 @@ object CardAction {
     setText: String => CardAction
   ): CardAction = {
     val __obj = js.Dynamic.literal(setAuthorizationAction = js.Any.fromFunction1(setAuthorizationAction), setComposeAction = js.Any.fromFunction2(setComposeAction), setOnClickAction = js.Any.fromFunction1(setOnClickAction), setOnClickOpenLinkAction = js.Any.fromFunction1(setOnClickOpenLinkAction), setOpenLink = js.Any.fromFunction1(setOpenLink), setText = js.Any.fromFunction1(setText))
-  
     __obj.asInstanceOf[CardAction]
   }
+  @scala.inline
+  implicit class CardActionOps[Self <: CardAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetAuthorizationAction(value: AuthorizationAction => CardAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAuthorizationAction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetComposeAction(value: (Action, ComposedEmailType) => CardAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setComposeAction")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetOnClickAction(value: Action => CardAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOnClickAction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOnClickOpenLinkAction(value: Action => CardAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOnClickOpenLinkAction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOpenLink(value: OpenLink => CardAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOpenLink")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetText(value: String => CardAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setText")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

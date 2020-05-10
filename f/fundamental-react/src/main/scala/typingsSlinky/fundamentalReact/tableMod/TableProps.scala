@@ -7,72 +7,197 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TableProps
   extends /* x */ StringDictionary[js.Any] {
-  var className: js.UndefOr[String] = js.undefined
-  var customStyles: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var disableStyles: js.UndefOr[Boolean] = js.undefined
-  /* Array of localized text strings for the column headers. */
-  var headers: js.Array[String | TagMod[Any]]
-  /* Additional classes to be added to the `<tbody>` element. */
-  var tableBodyClassName: js.UndefOr[String] = js.undefined
-  /* Additional props to be spread to the `<tbody>` element. */
-  var tableBodyProps: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  /* Additional props to be spread to the `<tr>` elements within `<tbody>`. If using a function, the parameters passed will be an object representing the row (from `tableData`) and the row index. */
+  var className: js.UndefOr[String] = js.native
+  var disableStyles: js.UndefOr[Boolean] = js.native
+  var headers: js.Array[String | TagMod[Any]] = js.native
+  var tableBodyClassName: js.UndefOr[String] = js.native
+  var tableBodyProps: js.UndefOr[js.Any] = js.native
   var tableBodyRowProps: js.UndefOr[
     StringDictionary[js.Any] | (js.Function2[/* rowData */ js.Array[String], /* index */ Double, Unit])
-  ] = js.undefined
-  /* Additional classes to be added to the `<td>` elements. */
-  var tableCellClassName: js.UndefOr[String] = js.undefined
-  /* Array of objects that contain one property: `rowData` (an array of strings containing data for each column in the row). */
-  var tableData: js.UndefOr[js.Array[AnonRowData]] = js.undefined
-  /* Additional classes to be added to the `<thead>` elements. */
-  var tableHeaderClassName: js.UndefOr[String] = js.undefined
-  /* Additional props to be spread to the `<thead>` element. */
-  var tableHeaderProps: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  /* Additional classes to the `<tr>` element within `<thead>`. */
-  var tableHeaderRowClassName: js.UndefOr[String] = js.undefined
-  /* Additional props to be spread to the `<tr>` element within `<thead>`. */
-  var tableHeaderRowProps: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  /* Additional classes to be added to the `<tr>` elements. */
-  var tableRowClassName: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var tableCellClassName: js.UndefOr[String] = js.native
+  var tableData: js.UndefOr[js.Array[AnonRowData]] = js.native
+  var tableHeaderClassName: js.UndefOr[String] = js.native
+  var tableHeaderProps: js.UndefOr[js.Any] = js.native
+  var tableHeaderRowClassName: js.UndefOr[String] = js.native
+  var tableHeaderRowProps: js.UndefOr[js.Any] = js.native
+  var tableRowClassName: js.UndefOr[String] = js.native
 }
 
 object TableProps {
   @scala.inline
-  def apply(
-    headers: js.Array[String | TagMod[Any]],
-    StringDictionary: /* x */ StringDictionary[js.Any] = null,
-    className: String = null,
-    customStyles: StringDictionary[js.Any] = null,
-    disableStyles: js.UndefOr[Boolean] = js.undefined,
-    tableBodyClassName: String = null,
-    tableBodyProps: StringDictionary[js.Any] = null,
-    tableBodyRowProps: StringDictionary[js.Any] | (js.Function2[/* rowData */ js.Array[String], /* index */ Double, Unit]) = null,
-    tableCellClassName: String = null,
-    tableData: js.Array[AnonRowData] = null,
-    tableHeaderClassName: String = null,
-    tableHeaderProps: StringDictionary[js.Any] = null,
-    tableHeaderRowClassName: String = null,
-    tableHeaderRowProps: StringDictionary[js.Any] = null,
-    tableRowClassName: String = null
-  ): TableProps = {
+  def apply(headers: js.Array[String | TagMod[Any]]): TableProps = {
     val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (customStyles != null) __obj.updateDynamic("customStyles")(customStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
-    if (tableBodyClassName != null) __obj.updateDynamic("tableBodyClassName")(tableBodyClassName.asInstanceOf[js.Any])
-    if (tableBodyProps != null) __obj.updateDynamic("tableBodyProps")(tableBodyProps.asInstanceOf[js.Any])
-    if (tableBodyRowProps != null) __obj.updateDynamic("tableBodyRowProps")(tableBodyRowProps.asInstanceOf[js.Any])
-    if (tableCellClassName != null) __obj.updateDynamic("tableCellClassName")(tableCellClassName.asInstanceOf[js.Any])
-    if (tableData != null) __obj.updateDynamic("tableData")(tableData.asInstanceOf[js.Any])
-    if (tableHeaderClassName != null) __obj.updateDynamic("tableHeaderClassName")(tableHeaderClassName.asInstanceOf[js.Any])
-    if (tableHeaderProps != null) __obj.updateDynamic("tableHeaderProps")(tableHeaderProps.asInstanceOf[js.Any])
-    if (tableHeaderRowClassName != null) __obj.updateDynamic("tableHeaderRowClassName")(tableHeaderRowClassName.asInstanceOf[js.Any])
-    if (tableHeaderRowProps != null) __obj.updateDynamic("tableHeaderRowProps")(tableHeaderRowProps.asInstanceOf[js.Any])
-    if (tableRowClassName != null) __obj.updateDynamic("tableRowClassName")(tableRowClassName.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableProps]
   }
+  @scala.inline
+  implicit class TablePropsOps[Self <: TableProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaders(value: js.Array[String | TagMod[Any]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableBodyClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableBodyClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableBodyProps(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableBodyProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableBodyRowPropsFunction2(value: (/* rowData */ js.Array[String], /* index */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyRowProps")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withTableBodyRowProps(
+      value: StringDictionary[js.Any] | (js.Function2[/* rowData */ js.Array[String], /* index */ Double, Unit])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyRowProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableBodyRowProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableBodyRowProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableCellClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableCellClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableCellClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableData(value: js.Array[AnonRowData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableHeaderClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableHeaderClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableHeaderProps(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableHeaderProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableHeaderRowClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderRowClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableHeaderRowClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderRowClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableHeaderRowProps(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderRowProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableHeaderRowProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableHeaderRowProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableRowClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRowClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableRowClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tableRowClassName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -23,11 +23,41 @@ trait SchemaUpdateNamedRangeRequest extends js.Object {
 
 object SchemaUpdateNamedRangeRequest {
   @scala.inline
-  def apply(fields: String = null, namedRange: SchemaNamedRange = null): SchemaUpdateNamedRangeRequest = {
+  def apply(): SchemaUpdateNamedRangeRequest = {
     val __obj = js.Dynamic.literal()
-    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
-    if (namedRange != null) __obj.updateDynamic("namedRange")(namedRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUpdateNamedRangeRequest]
   }
+  @scala.inline
+  implicit class SchemaUpdateNamedRangeRequestOps[Self <: SchemaUpdateNamedRangeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFields(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamedRange(value: SchemaNamedRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

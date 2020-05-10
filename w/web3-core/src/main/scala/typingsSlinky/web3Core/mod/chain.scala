@@ -15,16 +15,14 @@ trait chain extends js.Object
 
 object chain {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def goerli: typingsSlinky.web3Core.web3CoreStrings.goerli = "goerli".asInstanceOf[typingsSlinky.web3Core.web3CoreStrings.goerli]
   @scala.inline
-  def goerli: typingsSlinky.web3Core.web3CoreStrings.goerli = this.cast("goerli")
+  def kovan: typingsSlinky.web3Core.web3CoreStrings.kovan = "kovan".asInstanceOf[typingsSlinky.web3Core.web3CoreStrings.kovan]
   @scala.inline
-  def kovan: typingsSlinky.web3Core.web3CoreStrings.kovan = this.cast("kovan")
+  def mainnet: typingsSlinky.web3Core.web3CoreStrings.mainnet = "mainnet".asInstanceOf[typingsSlinky.web3Core.web3CoreStrings.mainnet]
   @scala.inline
-  def mainnet: typingsSlinky.web3Core.web3CoreStrings.mainnet = this.cast("mainnet")
+  def rinkeby: typingsSlinky.web3Core.web3CoreStrings.rinkeby = "rinkeby".asInstanceOf[typingsSlinky.web3Core.web3CoreStrings.rinkeby]
   @scala.inline
-  def rinkeby: typingsSlinky.web3Core.web3CoreStrings.rinkeby = this.cast("rinkeby")
-  @scala.inline
-  def ropsten: typingsSlinky.web3Core.web3CoreStrings.ropsten = this.cast("ropsten")
+  def ropsten: typingsSlinky.web3Core.web3CoreStrings.ropsten = "ropsten".asInstanceOf[typingsSlinky.web3Core.web3CoreStrings.ropsten]
 }
 

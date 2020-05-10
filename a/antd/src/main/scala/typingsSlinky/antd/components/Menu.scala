@@ -1,86 +1,92 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.menuContextMod.MenuTheme
 import typingsSlinky.antd.menuMod.ClickParam
 import typingsSlinky.antd.menuMod.MenuMode
 import typingsSlinky.antd.menuMod.MenuProps
 import typingsSlinky.antd.menuMod.SelectParam
 import typingsSlinky.antd.menuMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Menu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Menu {
   @JSImport("antd/lib/menu", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, multiple, style */
-  def apply(
-    defaultOpenKeys: js.Array[String] = null,
-    defaultSelectedKeys: js.Array[String] = null,
-    focusable: js.UndefOr[Boolean] = js.undefined,
-    forceSubMenuRender: js.UndefOr[Boolean] = js.undefined,
-    getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
-    inlineCollapsed: js.UndefOr[Boolean] = js.undefined,
-    inlineIndent: Int | Double = null,
-    mode: MenuMode = null,
-    motion: js.Object = null,
-    onClick: /* param */ ClickParam => Unit = null,
-    onDeselect: /* param */ SelectParam => Unit = null,
-    onMouseEnter: /* e */ MouseEvent => Unit = null,
-    onOpenChange: /* openKeys */ js.Array[String] => Unit = null,
-    onSelect: /* param */ SelectParam => Unit = null,
-    openAnimation: String = null,
-    openKeys: js.Array[String] = null,
-    openTransitionName: String = null,
-    overflowedIndicator: TagMod[Any] = null,
-    prefixCls: String = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    selectedKeys: js.Array[String] = null,
-    subMenuCloseDelay: Int | Double = null,
-    subMenuOpenDelay: Int | Double = null,
-    theme: MenuTheme = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (defaultOpenKeys != null) __obj.updateDynamic("defaultOpenKeys")(defaultOpenKeys.asInstanceOf[js.Any])
-    if (defaultSelectedKeys != null) __obj.updateDynamic("defaultSelectedKeys")(defaultSelectedKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusable)) __obj.updateDynamic("focusable")(focusable.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceSubMenuRender)) __obj.updateDynamic("forceSubMenuRender")(forceSubMenuRender.asInstanceOf[js.Any])
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (!js.isUndefined(inlineCollapsed)) __obj.updateDynamic("inlineCollapsed")(inlineCollapsed.asInstanceOf[js.Any])
-    if (inlineIndent != null) __obj.updateDynamic("inlineIndent")(inlineIndent.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (motion != null) __obj.updateDynamic("motion")(motion.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onDeselect != null) __obj.updateDynamic("onDeselect")(js.Any.fromFunction1(onDeselect))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onOpenChange != null) __obj.updateDynamic("onOpenChange")(js.Any.fromFunction1(onOpenChange))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (openAnimation != null) __obj.updateDynamic("openAnimation")(openAnimation.asInstanceOf[js.Any])
-    if (openKeys != null) __obj.updateDynamic("openKeys")(openKeys.asInstanceOf[js.Any])
-    if (openTransitionName != null) __obj.updateDynamic("openTransitionName")(openTransitionName.asInstanceOf[js.Any])
-    if (overflowedIndicator != null) __obj.updateDynamic("overflowedIndicator")(overflowedIndicator.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
-    if (subMenuCloseDelay != null) __obj.updateDynamic("subMenuCloseDelay")(subMenuCloseDelay.asInstanceOf[js.Any])
-    if (subMenuOpenDelay != null) __obj.updateDynamic("subMenuOpenDelay")(subMenuOpenDelay.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultOpenKeys(value: js.Array[String]): this.type = set("defaultOpenKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSelectedKeys(value: js.Array[String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def forceSubMenuRender(value: Boolean): this.type = set("forceSubMenuRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inlineCollapsed(value: Boolean): this.type = set("inlineCollapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inlineIndent(value: Double): this.type = set("inlineIndent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motion(value: js.Object): this.type = set("motion", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* param */ ClickParam => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDeselect(value: /* param */ SelectParam => Unit): this.type = set("onDeselect", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: /* e */ MouseEvent => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onOpenChange(value: /* openKeys */ js.Array[String] => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSelect(value: /* param */ SelectParam => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def openAnimation(value: String): this.type = set("openAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def openTransitionName(value: String): this.type = set("openTransitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowedIndicatorReactElement(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overflowedIndicator(value: TagMod[Any]): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subMenuCloseDelay(value: Double): this.type = set("subMenuCloseDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def subMenuOpenDelay(value: Double): this.type = set("subMenuOpenDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: MenuTheme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.menuMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MenuProps
+  
+  def withProps(p: MenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Menu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

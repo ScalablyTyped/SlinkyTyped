@@ -12,10 +12,8 @@ trait OptionsDataClassColorValue extends js.Object
 
 object OptionsDataClassColorValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def category: typingsSlinky.highcharts.highchartsStrings.category = "category".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.category]
   @scala.inline
-  def category: typingsSlinky.highcharts.highchartsStrings.category = this.cast("category")
-  @scala.inline
-  def tween: typingsSlinky.highcharts.highchartsStrings.tween = this.cast("tween")
+  def tween: typingsSlinky.highcharts.highchartsStrings.tween = "tween".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.tween]
 }
 

@@ -18,10 +18,35 @@ trait UpdateAgentRequest extends js.Object {
 
 object UpdateAgentRequest {
   @scala.inline
-  def apply(AgentArn: AgentArn, Name: TagValue = null): UpdateAgentRequest = {
+  def apply(AgentArn: AgentArn): UpdateAgentRequest = {
     val __obj = js.Dynamic.literal(AgentArn = AgentArn.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateAgentRequest]
   }
+  @scala.inline
+  implicit class UpdateAgentRequestOps[Self <: UpdateAgentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgentArn(value: AgentArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AgentArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: TagValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait text extends js.Object {
   /**
     * Split a block of text into words or letters and backspace them in sequence
@@ -17,12 +18,12 @@ trait text extends js.Object {
     *
     * @param args args.interval: Float - The number of milliseconds between each piece's animation(default is determined by text length and args.duration);args.wordDelay: Integer - The number of milliseconds between each word(only effective when args.unhide = true)args.fixed: Boolean - If true, only style.opacity changes; otherwise, style.displaychanges between none and inline, adding realism (default = false)args.random: Float - If true, pieces have a random delay. The value defines how muchrandomness is introduced (only effective when args.unhide = true)args.unhide: Boolean - If true, the animation is reversed
     */
-  def backspace(args: js.Object): Unit
+  def backspace(args: js.Object): Unit = js.native
   /**
     *
     * @param args
     */
-  def blockFadeIn(args: js.Object): Unit
+  def blockFadeIn(args: js.Object): Unit = js.native
   /**
     * Split a block of text into words or letters and fade them
     * Returns an animation that will split the text into spans of words
@@ -30,17 +31,17 @@ trait text extends js.Object {
     *
     * @param args args.words: Boolean - If true, text will be split into words rather than charactersargs.interval: Float - The number of milliseconds between each piece's animation (default is 0)args.random: Float - If true, pieces have a random delay. The value defines how much                 randomness is introducedargs.reverseOrder: Boolean - If true, pieces animate in reversed orderargs.unhide: Boolean - If true, the animation is reversed
     */
-  def blockFadeOut(args: js.Object): Unit
+  def blockFadeOut(args: js.Object): Unit = js.native
   /**
     *
     * @param args
     */
-  def build(args: js.Object): Unit
+  def build(args: js.Object): Unit = js.native
   /**
     *
     * @param args
     */
-  def converge(args: js.Object): Unit
+  def converge(args: js.Object): Unit = js.native
   /**
     * Split a block of text into words or letters and let them fall
     * Returns an animation that will split the text into spans of words
@@ -48,7 +49,7 @@ trait text extends js.Object {
     *
     * @param args args.crop: Boolean - If true, pieces will be positioned relatively rather than absolutelyargs.words: Boolean - If true, text will be split into words rather than charactersargs.interval: Float - The number of milliseconds between each piece's animationargs.distance: Float - The number of the node's heights to drop (default is 1.5)args.fade: Boolean - If true, pieces fade out while in motion (default is true)args.random: Float - If set, pieces fall in random order. The value defines how much                 randomness is introducedargs.reverseOrder: Boolean - If true, pieces animate in reversed orderargs.unhide: Boolean - If true, the peices fall from above and land in place
     */
-  def disintegrate(args: js.Object): Unit
+  def disintegrate(args: js.Object): Unit = js.native
   /**
     * Explode a block of text into words or letters
     * Returns an animation that will split the text into a spans
@@ -56,12 +57,12 @@ trait text extends js.Object {
     *
     * @param args args.crop: Boolean - If true, pieces will be positioned relatively rather than absolutelyargs.words: Boolean - If true, text will be split into words rather than charactersargs.random: Float - If set, pieces fly to random distances, for random durations,                 and in slightly random directions. The value defines how much                 randomness is introduced.args.distance: Float - Multiplier for the distance the pieces fly (even when random)args.fade: Boolean - If true, pieces fade out while in motion (default is true)args.fadeEasing: Function - If args.fade is true, the fade animations use this easing functionargs.unhide: Boolean - If true, the animation is reversedargs.sync: Boolean - If args.unhide is true, all the pieces converge at the same time                 (default is true)
     */
-  def explode(args: js.Object): Unit
+  def explode(args: js.Object): Unit = js.native
   /**
     *
     * @param args
     */
-  def `type`(args: js.Object): Unit
+  def `type`(args: js.Object): Unit = js.native
 }
 
 object text {
@@ -80,5 +81,61 @@ object text {
     __obj.updateDynamic("type")(js.Any.fromFunction1(`type`))
     __obj.asInstanceOf[text]
   }
+  @scala.inline
+  implicit class textOps[Self <: text] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackspace(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backspace")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBlockFadeIn(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockFadeIn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBlockFadeOut(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockFadeOut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBuild(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withConverge(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("converge")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDisintegrate(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disintegrate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withExplode(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("explode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withType(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

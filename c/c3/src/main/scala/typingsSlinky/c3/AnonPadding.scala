@@ -8,29 +8,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonPadding extends js.Object {
   /**
     * Spacing around the title.
     */
-  var padding: js.UndefOr[Padding] = js.undefined
+  var padding: js.UndefOr[Padding] = js.native
   /**
     * Chart title text.
     */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
   /**
     * Position the title relative to the chart.
     */
-  var title_position: js.UndefOr[right | center | left] = js.undefined
+  var title_position: js.UndefOr[right | center | left] = js.native
 }
 
 object AnonPadding {
   @scala.inline
-  def apply(padding: Padding = null, text: String = null, title_position: right | center | left = null): AnonPadding = {
+  def apply(): AnonPadding = {
     val __obj = js.Dynamic.literal()
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (title_position != null) __obj.updateDynamic("title_position")(title_position.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonPadding]
   }
+  @scala.inline
+  implicit class AnonPaddingOps[Self <: AnonPadding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPadding(value: Padding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle_position(value: right | center | left): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title_position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle_position: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title_position")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

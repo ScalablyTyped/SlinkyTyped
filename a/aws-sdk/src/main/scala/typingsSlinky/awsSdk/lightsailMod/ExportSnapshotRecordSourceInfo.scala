@@ -42,26 +42,113 @@ trait ExportSnapshotRecordSourceInfo extends js.Object {
 
 object ExportSnapshotRecordSourceInfo {
   @scala.inline
-  def apply(
-    arn: NonEmptyString = null,
-    createdAt: js.Date = null,
-    diskSnapshotInfo: DiskSnapshotInfo = null,
-    fromResourceArn: NonEmptyString = null,
-    fromResourceName: NonEmptyString = null,
-    instanceSnapshotInfo: InstanceSnapshotInfo = null,
-    name: NonEmptyString = null,
-    resourceType: ExportSnapshotRecordSourceType = null
-  ): ExportSnapshotRecordSourceInfo = {
+  def apply(): ExportSnapshotRecordSourceInfo = {
     val __obj = js.Dynamic.literal()
-    if (arn != null) __obj.updateDynamic("arn")(arn.asInstanceOf[js.Any])
-    if (createdAt != null) __obj.updateDynamic("createdAt")(createdAt.asInstanceOf[js.Any])
-    if (diskSnapshotInfo != null) __obj.updateDynamic("diskSnapshotInfo")(diskSnapshotInfo.asInstanceOf[js.Any])
-    if (fromResourceArn != null) __obj.updateDynamic("fromResourceArn")(fromResourceArn.asInstanceOf[js.Any])
-    if (fromResourceName != null) __obj.updateDynamic("fromResourceName")(fromResourceName.asInstanceOf[js.Any])
-    if (instanceSnapshotInfo != null) __obj.updateDynamic("instanceSnapshotInfo")(instanceSnapshotInfo.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExportSnapshotRecordSourceInfo]
   }
+  @scala.inline
+  implicit class ExportSnapshotRecordSourceInfoOps[Self <: ExportSnapshotRecordSourceInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArn(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDiskSnapshotInfo(value: DiskSnapshotInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSnapshotInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskSnapshotInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskSnapshotInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromResourceArn(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromResourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromResourceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromResourceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromResourceName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromResourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromResourceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromResourceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceSnapshotInfo(value: InstanceSnapshotInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceSnapshotInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceSnapshotInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceSnapshotInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: ExportSnapshotRecordSourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

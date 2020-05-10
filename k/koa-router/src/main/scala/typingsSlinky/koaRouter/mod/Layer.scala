@@ -1,6 +1,5 @@
 package typingsSlinky.koaRouter.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,8 +59,8 @@ class Layer protected () extends js.Object {
     */
   def params(path: String, captures: js.Array[String]): js.Object = js.native
   def params(path: String, captures: js.Array[String], existingParams: js.Object): js.Object = js.native
-  def params(path: RegExp, captures: js.Array[String]): js.Object = js.native
-  def params(path: RegExp, captures: js.Array[String], existingParams: js.Object): js.Object = js.native
+  def params(path: js.RegExp, captures: js.Array[String]): js.Object = js.native
+  def params(path: js.RegExp, captures: js.Array[String], existingParams: js.Object): js.Object = js.native
   /**
     * Prefix route path.
     */

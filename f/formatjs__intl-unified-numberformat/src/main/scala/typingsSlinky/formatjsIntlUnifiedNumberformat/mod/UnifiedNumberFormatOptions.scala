@@ -13,63 +13,231 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Intl.NumberFormatOptions & @formatjs/intl-utils.@formatjs/intl-utils.NumberFormatDigitOptions & {  localeMatcher ? :@formatjs/intl-utils.@formatjs/intl-utils.UnifiedNumberFormatOptionsLocaleMatcher,   style ? :@formatjs/intl-utils.@formatjs/intl-utils.UnifiedNumberFormatOptionsStyle,   compactDisplay ? :@formatjs/intl-utils.@formatjs/intl-utils.UnifiedNumberFormatOptionsCompactDisplay,   currencyDisplay ? :@formatjs/intl-utils.@formatjs/intl-utils.UnifiedNumberFormatOptionsCurrencyDisplay,   currencySign ? :@formatjs/intl-utils.@formatjs/intl-utils.UnifiedNumberFormatOptionsCurrencySign,   notation ? :@formatjs/intl-utils.@formatjs/intl-utils.UnifiedNumberFormatOptionsNotation,   signDisplay ? :@formatjs/intl-utils.@formatjs/intl-utils.UnifiedNumberFormatOptionsSignDisplay,   unit ? :@formatjs/intl-unified-numberformat.@formatjs/intl-unified-numberformat.Unit,   unitDisplay ? :@formatjs/intl-utils.@formatjs/intl-utils.UnifiedNumberFormatOptionsUnitDisplay} */
+@js.native
 trait UnifiedNumberFormatOptions extends js.Object {
-  var compactDisplay: js.UndefOr[UnifiedNumberFormatOptionsCompactDisplay] = js.undefined
-  var currency: js.UndefOr[String] = js.undefined
-  var currencyDisplay: js.UndefOr[String with UnifiedNumberFormatOptionsCurrencyDisplay] = js.undefined
-  var currencySign: js.UndefOr[UnifiedNumberFormatOptionsCurrencySign] = js.undefined
-  var localeMatcher: js.UndefOr[String with UnifiedNumberFormatOptionsLocaleMatcher] = js.undefined
-  var maximumFractionDigits: js.UndefOr[Double] = js.undefined
-  var maximumSignificantDigits: js.UndefOr[Double] = js.undefined
-  var minimumFractionDigits: js.UndefOr[Double] = js.undefined
-  var minimumIntegerDigits: js.UndefOr[Double] = js.undefined
-  var minimumSignificantDigits: js.UndefOr[Double] = js.undefined
-  var notation: js.UndefOr[UnifiedNumberFormatOptionsNotation] = js.undefined
-  var signDisplay: js.UndefOr[UnifiedNumberFormatOptionsSignDisplay] = js.undefined
-  var style: js.UndefOr[String with UnifiedNumberFormatOptionsStyle] = js.undefined
-  var unit: js.UndefOr[Unit] = js.undefined
-  var unitDisplay: js.UndefOr[UnifiedNumberFormatOptionsUnitDisplay] = js.undefined
-  var useGrouping: js.UndefOr[Boolean] = js.undefined
+  var compactDisplay: js.UndefOr[UnifiedNumberFormatOptionsCompactDisplay] = js.native
+  var currency: js.UndefOr[String] = js.native
+  var currencyDisplay: js.UndefOr[String with UnifiedNumberFormatOptionsCurrencyDisplay] = js.native
+  var currencySign: js.UndefOr[UnifiedNumberFormatOptionsCurrencySign] = js.native
+  var localeMatcher: js.UndefOr[String with UnifiedNumberFormatOptionsLocaleMatcher] = js.native
+  var maximumFractionDigits: js.UndefOr[Double] = js.native
+  var maximumSignificantDigits: js.UndefOr[Double] = js.native
+  var minimumFractionDigits: js.UndefOr[Double] = js.native
+  var minimumIntegerDigits: js.UndefOr[Double] = js.native
+  var minimumSignificantDigits: js.UndefOr[Double] = js.native
+  var notation: js.UndefOr[UnifiedNumberFormatOptionsNotation] = js.native
+  var signDisplay: js.UndefOr[UnifiedNumberFormatOptionsSignDisplay] = js.native
+  var style: js.UndefOr[String with UnifiedNumberFormatOptionsStyle] = js.native
+  var unit: js.UndefOr[Unit] = js.native
+  var unitDisplay: js.UndefOr[UnifiedNumberFormatOptionsUnitDisplay] = js.native
+  var useGrouping: js.UndefOr[Boolean] = js.native
 }
 
 object UnifiedNumberFormatOptions {
   @scala.inline
-  def apply(
-    compactDisplay: UnifiedNumberFormatOptionsCompactDisplay = null,
-    currency: String = null,
-    currencyDisplay: String with UnifiedNumberFormatOptionsCurrencyDisplay = null,
-    currencySign: UnifiedNumberFormatOptionsCurrencySign = null,
-    localeMatcher: String with UnifiedNumberFormatOptionsLocaleMatcher = null,
-    maximumFractionDigits: Int | Double = null,
-    maximumSignificantDigits: Int | Double = null,
-    minimumFractionDigits: Int | Double = null,
-    minimumIntegerDigits: Int | Double = null,
-    minimumSignificantDigits: Int | Double = null,
-    notation: UnifiedNumberFormatOptionsNotation = null,
-    signDisplay: UnifiedNumberFormatOptionsSignDisplay = null,
-    style: String with UnifiedNumberFormatOptionsStyle = null,
-    unit: Unit = null,
-    unitDisplay: UnifiedNumberFormatOptionsUnitDisplay = null,
-    useGrouping: js.UndefOr[Boolean] = js.undefined
-  ): UnifiedNumberFormatOptions = {
+  def apply(): UnifiedNumberFormatOptions = {
     val __obj = js.Dynamic.literal()
-    if (compactDisplay != null) __obj.updateDynamic("compactDisplay")(compactDisplay.asInstanceOf[js.Any])
-    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
-    if (currencyDisplay != null) __obj.updateDynamic("currencyDisplay")(currencyDisplay.asInstanceOf[js.Any])
-    if (currencySign != null) __obj.updateDynamic("currencySign")(currencySign.asInstanceOf[js.Any])
-    if (localeMatcher != null) __obj.updateDynamic("localeMatcher")(localeMatcher.asInstanceOf[js.Any])
-    if (maximumFractionDigits != null) __obj.updateDynamic("maximumFractionDigits")(maximumFractionDigits.asInstanceOf[js.Any])
-    if (maximumSignificantDigits != null) __obj.updateDynamic("maximumSignificantDigits")(maximumSignificantDigits.asInstanceOf[js.Any])
-    if (minimumFractionDigits != null) __obj.updateDynamic("minimumFractionDigits")(minimumFractionDigits.asInstanceOf[js.Any])
-    if (minimumIntegerDigits != null) __obj.updateDynamic("minimumIntegerDigits")(minimumIntegerDigits.asInstanceOf[js.Any])
-    if (minimumSignificantDigits != null) __obj.updateDynamic("minimumSignificantDigits")(minimumSignificantDigits.asInstanceOf[js.Any])
-    if (notation != null) __obj.updateDynamic("notation")(notation.asInstanceOf[js.Any])
-    if (signDisplay != null) __obj.updateDynamic("signDisplay")(signDisplay.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (unitDisplay != null) __obj.updateDynamic("unitDisplay")(unitDisplay.asInstanceOf[js.Any])
-    if (!js.isUndefined(useGrouping)) __obj.updateDynamic("useGrouping")(useGrouping.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnifiedNumberFormatOptions]
   }
+  @scala.inline
+  implicit class UnifiedNumberFormatOptionsOps[Self <: UnifiedNumberFormatOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompactDisplay(value: UnifiedNumberFormatOptionsCompactDisplay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compactDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompactDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compactDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencyDisplay(value: String with UnifiedNumberFormatOptionsCurrencyDisplay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencyDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencyDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrencySign(value: UnifiedNumberFormatOptionsCurrencySign): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencySign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrencySign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currencySign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocaleMatcher(value: String with UnifiedNumberFormatOptionsLocaleMatcher): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localeMatcher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocaleMatcher: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localeMatcher")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumFractionDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumFractionDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumFractionDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumFractionDigits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumSignificantDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumSignificantDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumSignificantDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumSignificantDigits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumFractionDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFractionDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumFractionDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumFractionDigits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumIntegerDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumIntegerDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumIntegerDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumIntegerDigits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumSignificantDigits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumSignificantDigits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumSignificantDigits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumSignificantDigits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotation(value: UnifiedNumberFormatOptionsNotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignDisplay(value: UnifiedNumberFormatOptionsSignDisplay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: String with UnifiedNumberFormatOptionsStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnit(value: Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnitDisplay(value: UnifiedNumberFormatOptionsUnitDisplay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnitDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseGrouping(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useGrouping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseGrouping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useGrouping")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,56 +1,131 @@
 package typingsSlinky.fundamentalReact
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`1`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`2`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`3`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`4`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`5`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`6`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`7`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`8`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<fundamental-react.fundamental-react/lib/Tile/Tile.TileProps> */
+@js.native
 trait PartialTileProps extends js.Object {
-  var backgroundColor: js.UndefOr[Double] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var colorAccent: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9`] = js.undefined
-  var columnSpan: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6`] = js.undefined
-  var customStyles: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var disableStyles: js.UndefOr[Boolean] = js.undefined
-  var disabled: js.UndefOr[Boolean] = js.undefined
-  var productTile: js.UndefOr[Boolean] = js.undefined
-  var rowSpan: js.UndefOr[Double] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
+  var backgroundImage: js.UndefOr[String] = js.native
+  var className: js.UndefOr[String] = js.native
+  var disableStyles: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
+  var onClick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var productTile: js.UndefOr[Boolean] = js.native
+  var tabIndex: js.UndefOr[Double] = js.native
 }
 
 object PartialTileProps {
   @scala.inline
-  def apply(
-    backgroundColor: Int | Double = null,
-    className: String = null,
-    colorAccent: `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` = null,
-    columnSpan: `1` | `2` | `3` | `4` | `5` | `6` = null,
-    customStyles: StringDictionary[js.Any] = null,
-    disableStyles: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    productTile: js.UndefOr[Boolean] = js.undefined,
-    rowSpan: Int | Double = null
-  ): PartialTileProps = {
+  def apply(): PartialTileProps = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (colorAccent != null) __obj.updateDynamic("colorAccent")(colorAccent.asInstanceOf[js.Any])
-    if (columnSpan != null) __obj.updateDynamic("columnSpan")(columnSpan.asInstanceOf[js.Any])
-    if (customStyles != null) __obj.updateDynamic("customStyles")(customStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(productTile)) __obj.updateDynamic("productTile")(productTile.asInstanceOf[js.Any])
-    if (rowSpan != null) __obj.updateDynamic("rowSpan")(rowSpan.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialTileProps]
   }
+  @scala.inline
+  implicit class PartialTilePropsOps[Self <: PartialTileProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClick(value: /* repeated */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProductTile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productTile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProductTile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productTile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTabIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTabIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

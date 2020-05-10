@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojo
 
 import org.scalajs.dom.raw.HTMLDocument
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -97,9 +97,9 @@ trait domConstruct extends js.Object {
     * @param refNode id or node reference to use as basis for placement
     * @param position               Optionalstring noting the position of node relative to refNode or anumber indicating the location in the childNodes collection of refNode.Accepted string values are:beforeafterreplaceonlyfirstlast"first" and "last" indicate positions as children of refNode, "replace" replaces refNode,"only" replaces all children.  position defaults to "last" if not specified
     */
-  def place(node: String, refNode: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: String, refNode: String, position: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: String, refNode: String, position: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def place(node: String, refNode: String): HTMLElement = js.native
+  def place(node: String, refNode: String, position: String): HTMLElement = js.native
+  def place(node: String, refNode: String, position: Double): HTMLElement = js.native
   /**
     * Attempt to insert node into the DOM, choosing from various positioning options.
     * Returns the first argument resolved to a DOM node.
@@ -108,9 +108,9 @@ trait domConstruct extends js.Object {
     * @param refNode id or node reference to use as basis for placement
     * @param position               Optionalstring noting the position of node relative to refNode or anumber indicating the location in the childNodes collection of refNode.Accepted string values are:beforeafterreplaceonlyfirstlast"first" and "last" indicate positions as children of refNode, "replace" replaces refNode,"only" replaces all children.  position defaults to "last" if not specified
     */
-  def place(node: String, refNode: HTMLElement): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: String, refNode: HTMLElement, position: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: String, refNode: HTMLElement, position: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def place(node: String, refNode: HTMLElement): HTMLElement = js.native
+  def place(node: String, refNode: HTMLElement, position: String): HTMLElement = js.native
+  def place(node: String, refNode: HTMLElement, position: Double): HTMLElement = js.native
   /**
     * Attempt to insert node into the DOM, choosing from various positioning options.
     * Returns the first argument resolved to a DOM node.
@@ -119,9 +119,9 @@ trait domConstruct extends js.Object {
     * @param refNode id or node reference to use as basis for placement
     * @param position               Optionalstring noting the position of node relative to refNode or anumber indicating the location in the childNodes collection of refNode.Accepted string values are:beforeafterreplaceonlyfirstlast"first" and "last" indicate positions as children of refNode, "replace" replaces refNode,"only" replaces all children.  position defaults to "last" if not specified
     */
-  def place(node: HTMLElement, refNode: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: HTMLElement, refNode: String, position: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: HTMLElement, refNode: String, position: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def place(node: HTMLElement, refNode: String): HTMLElement = js.native
+  def place(node: HTMLElement, refNode: String, position: String): HTMLElement = js.native
+  def place(node: HTMLElement, refNode: String, position: Double): HTMLElement = js.native
   /**
     * Attempt to insert node into the DOM, choosing from various positioning options.
     * Returns the first argument resolved to a DOM node.
@@ -130,9 +130,9 @@ trait domConstruct extends js.Object {
     * @param refNode id or node reference to use as basis for placement
     * @param position               Optionalstring noting the position of node relative to refNode or anumber indicating the location in the childNodes collection of refNode.Accepted string values are:beforeafterreplaceonlyfirstlast"first" and "last" indicate positions as children of refNode, "replace" replaces refNode,"only" replaces all children.  position defaults to "last" if not specified
     */
-  def place(node: HTMLElement, refNode: HTMLElement): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: HTMLElement, refNode: HTMLElement, position: String): org.scalajs.dom.raw.HTMLElement = js.native
-  def place(node: HTMLElement, refNode: HTMLElement, position: Double): org.scalajs.dom.raw.HTMLElement = js.native
+  def place(node: HTMLElement, refNode: HTMLElement): HTMLElement = js.native
+  def place(node: HTMLElement, refNode: HTMLElement, position: String): HTMLElement = js.native
+  def place(node: HTMLElement, refNode: HTMLElement, position: Double): HTMLElement = js.native
   /**
     * instantiates an HTML fragment returning the corresponding DOM.
     *

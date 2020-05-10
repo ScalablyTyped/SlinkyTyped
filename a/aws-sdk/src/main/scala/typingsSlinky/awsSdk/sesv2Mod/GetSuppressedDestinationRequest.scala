@@ -16,8 +16,21 @@ object GetSuppressedDestinationRequest {
   @scala.inline
   def apply(EmailAddress: EmailAddress): GetSuppressedDestinationRequest = {
     val __obj = js.Dynamic.literal(EmailAddress = EmailAddress.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetSuppressedDestinationRequest]
   }
+  @scala.inline
+  implicit class GetSuppressedDestinationRequestOps[Self <: GetSuppressedDestinationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmailAddress(value: EmailAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmailAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

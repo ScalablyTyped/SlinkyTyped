@@ -1,15 +1,16 @@
 package typingsSlinky.materialUi.components
 
+import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ActionHttp
-  extends SharedApply_SvgIconProps1666625642[typingsSlinky.materialUi.svgIconsMod.ActionHttp] {
+object ActionHttp {
   @JSImport("material-ui/svg-icons", "ActionHttp")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.ActionHttp] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.ActionHttp](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ActionHttp.type): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.ActionHttp] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.ActionHttp](js.Array(this.component, js.Dictionary.empty))()
 }
 

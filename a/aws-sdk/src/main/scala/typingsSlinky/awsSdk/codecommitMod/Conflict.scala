@@ -18,11 +18,41 @@ trait Conflict extends js.Object {
 
 object Conflict {
   @scala.inline
-  def apply(conflictMetadata: ConflictMetadata = null, mergeHunks: MergeHunks = null): Conflict = {
+  def apply(): Conflict = {
     val __obj = js.Dynamic.literal()
-    if (conflictMetadata != null) __obj.updateDynamic("conflictMetadata")(conflictMetadata.asInstanceOf[js.Any])
-    if (mergeHunks != null) __obj.updateDynamic("mergeHunks")(mergeHunks.asInstanceOf[js.Any])
     __obj.asInstanceOf[Conflict]
   }
+  @scala.inline
+  implicit class ConflictOps[Self <: Conflict] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConflictMetadata(value: ConflictMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConflictMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conflictMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMergeHunks(value: MergeHunks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeHunks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMergeHunks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeHunks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

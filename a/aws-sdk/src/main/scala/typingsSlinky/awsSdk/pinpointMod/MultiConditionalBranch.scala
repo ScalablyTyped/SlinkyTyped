@@ -18,11 +18,41 @@ trait MultiConditionalBranch extends js.Object {
 
 object MultiConditionalBranch {
   @scala.inline
-  def apply(Condition: SimpleCondition = null, NextActivity: string = null): MultiConditionalBranch = {
+  def apply(): MultiConditionalBranch = {
     val __obj = js.Dynamic.literal()
-    if (Condition != null) __obj.updateDynamic("Condition")(Condition.asInstanceOf[js.Any])
-    if (NextActivity != null) __obj.updateDynamic("NextActivity")(NextActivity.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiConditionalBranch]
   }
+  @scala.inline
+  implicit class MultiConditionalBranchOps[Self <: MultiConditionalBranch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCondition(value: SimpleCondition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextActivity(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextActivity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextActivity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

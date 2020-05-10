@@ -10,12 +10,6 @@ import scala.scalajs.js.annotation._
 
 object angularCoreStrings {
   @js.native
-  sealed trait `@angularSlashcommon` extends js.Object
-  
-  @js.native
-  sealed trait `@angularSlashplatform-browser` extends js.Object
-  
-  @js.native
   sealed trait AnonChangeDetection extends js.Object
   
   @js.native
@@ -35,9 +29,6 @@ object angularCoreStrings {
   
   @js.native
   sealed trait `Brand for PlayerFactory that nothing will match` extends js.Object
-  
-  @js.native
-  sealed trait DOCUMENT extends js.Object
   
   @js.native
   sealed trait Html extends BypassType
@@ -88,9 +79,6 @@ object angularCoreStrings {
   sealed trait __ngRendererSplitNamespaceHelper extends HelperFunction
   
   @js.native
-  sealed trait _empty extends js.Object
-  
-  @js.native
   sealed trait any extends js.Object
   
   @js.native
@@ -103,13 +91,10 @@ object angularCoreStrings {
   sealed trait component extends js.Object
   
   @js.native
-  sealed trait document_ extends GlobalTargetName
+  sealed trait document extends GlobalTargetName
   
   @js.native
   sealed trait element extends js.Object
-  
-  @js.native
-  sealed trait `en-US` extends js.Object
   
   @js.native
   sealed trait escapedText extends PropertyNameWithText
@@ -139,10 +124,6 @@ object angularCoreStrings {
   sealed trait ɵɵBaseDef extends js.Object
   
   @scala.inline
-  def `@angularSlashcommon`: `@angularSlashcommon` = "@angular/common".asInstanceOf[`@angularSlashcommon`]
-  @scala.inline
-  def `@angularSlashplatform-browser`: `@angularSlashplatform-browser` = "@angular/platform-browser".asInstanceOf[`@angularSlashplatform-browser`]
-  @scala.inline
   def AnonChangeDetection: AnonChangeDetection = "AnonChangeDetection".asInstanceOf[AnonChangeDetection]
   @scala.inline
   def AnonContentQueries: AnonContentQueries = "AnonContentQueries".asInstanceOf[AnonContentQueries]
@@ -153,11 +134,9 @@ object angularCoreStrings {
   @scala.inline
   def Asterisk: Asterisk = "*".asInstanceOf[Asterisk]
   @scala.inline
-  def `Brand for OpaqueViewState that nothing will match`: `Brand for OpaqueViewState that nothing will match` = "Brand for OpaqueViewState that nothing will match".asInstanceOf[`Brand for OpaqueViewState that nothing will match`]
+  def `Brand for OpaqueViewState that nothing will match`: `Brand for OpaqueViewState that nothing will match` = ("Brand for OpaqueViewState that nothing will match").asInstanceOf[`Brand for OpaqueViewState that nothing will match`]
   @scala.inline
-  def `Brand for PlayerFactory that nothing will match`: `Brand for PlayerFactory that nothing will match` = "Brand for PlayerFactory that nothing will match".asInstanceOf[`Brand for PlayerFactory that nothing will match`]
-  @scala.inline
-  def DOCUMENT: DOCUMENT = "DOCUMENT".asInstanceOf[DOCUMENT]
+  def `Brand for PlayerFactory that nothing will match`: `Brand for PlayerFactory that nothing will match` = ("Brand for PlayerFactory that nothing will match").asInstanceOf[`Brand for PlayerFactory that nothing will match`]
   @scala.inline
   def Html: Html = "Html".asInstanceOf[Html]
   @scala.inline
@@ -191,8 +170,6 @@ object angularCoreStrings {
   @scala.inline
   def __ngRendererSplitNamespaceHelper: __ngRendererSplitNamespaceHelper = "__ngRendererSplitNamespaceHelper".asInstanceOf[__ngRendererSplitNamespaceHelper]
   @scala.inline
-  def _empty: _empty = "".asInstanceOf[_empty]
-  @scala.inline
   def any: any = "any".asInstanceOf[any]
   @scala.inline
   def body: body = "body".asInstanceOf[body]
@@ -201,11 +178,9 @@ object angularCoreStrings {
   @scala.inline
   def component: component = "component".asInstanceOf[component]
   @scala.inline
-  def document_ : document_ = "document".asInstanceOf[document_]
+  def document: document = "document".asInstanceOf[document]
   @scala.inline
   def element: element = "element".asInstanceOf[element]
-  @scala.inline
-  def `en-US`: `en-US` = "en-US".asInstanceOf[`en-US`]
   @scala.inline
   def escapedText: escapedText = "escapedText".asInstanceOf[escapedText]
   @scala.inline

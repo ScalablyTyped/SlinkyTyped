@@ -22,16 +22,53 @@ trait TimecodeBurnin extends js.Object {
 
 object TimecodeBurnin {
   @scala.inline
-  def apply(
-    FontSize: Int | Double = null,
-    Position: TimecodeBurninPosition = null,
-    Prefix: stringPattern = null
-  ): TimecodeBurnin = {
+  def apply(): TimecodeBurnin = {
     val __obj = js.Dynamic.literal()
-    if (FontSize != null) __obj.updateDynamic("FontSize")(FontSize.asInstanceOf[js.Any])
-    if (Position != null) __obj.updateDynamic("Position")(Position.asInstanceOf[js.Any])
-    if (Prefix != null) __obj.updateDynamic("Prefix")(Prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimecodeBurnin]
   }
+  @scala.inline
+  implicit class TimecodeBurninOps[Self <: TimecodeBurnin] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFontSize(value: integerMin10Max48): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: TimecodeBurninPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: stringPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

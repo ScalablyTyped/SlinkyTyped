@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FancyBoxVideoOptions extends js.Object {
-  var autoStart: js.UndefOr[Boolean] = js.undefined
-  var format: js.UndefOr[String] = js.undefined
-  var tpl: js.UndefOr[String] = js.undefined
+  var autoStart: js.UndefOr[Boolean] = js.native
+  var format: js.UndefOr[String] = js.native
+  var tpl: js.UndefOr[String] = js.native
 }
 
 object FancyBoxVideoOptions {
   @scala.inline
-  def apply(autoStart: js.UndefOr[Boolean] = js.undefined, format: String = null, tpl: String = null): FancyBoxVideoOptions = {
+  def apply(): FancyBoxVideoOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoStart)) __obj.updateDynamic("autoStart")(autoStart.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (tpl != null) __obj.updateDynamic("tpl")(tpl.asInstanceOf[js.Any])
     __obj.asInstanceOf[FancyBoxVideoOptions]
   }
+  @scala.inline
+  implicit class FancyBoxVideoOptionsOps[Self <: FancyBoxVideoOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoStart(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTpl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTpl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -2,7 +2,6 @@ package typingsSlinky.theming.mod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("theming", "ThemeProvider")
 @js.native
 class ThemeProvider protected ()
-  extends Component[ThemeProviderProps[DefaultTheme], ComponentState, js.Any] {
+  extends Component[ThemeProviderProps[DefaultTheme], js.Object, js.Any] {
   def this(props: ThemeProviderProps[DefaultTheme]) = this()
   def this(props: ThemeProviderProps[DefaultTheme], context: js.Any) = this()
 }

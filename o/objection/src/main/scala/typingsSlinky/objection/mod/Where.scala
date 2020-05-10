@@ -22,7 +22,7 @@ trait Where[QM /* <: Model */, RM, RV] extends WhereRaw[QM, RM, RV] {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def apply(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -30,18 +30,18 @@ trait Where[QM /* <: Model */, RM, RV] extends WhereRaw[QM, RM, RV] {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def apply(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def apply(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def apply(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def apply(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def apply(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def apply(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def apply(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def apply(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def apply(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def apply(
     column: ColumnRef,
     callback: js.ThisFunction1[

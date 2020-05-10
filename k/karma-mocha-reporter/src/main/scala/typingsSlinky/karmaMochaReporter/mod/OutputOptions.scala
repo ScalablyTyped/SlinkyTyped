@@ -14,14 +14,12 @@ trait OutputOptions extends js.Object
 
 object OutputOptions {
   @scala.inline
-  def autowatch: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.autowatch = this.cast("autowatch")
+  def autowatch: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.autowatch = "autowatch".asInstanceOf[typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.autowatch]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def full: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.full = "full".asInstanceOf[typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.full]
   @scala.inline
-  def full: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.full = this.cast("full")
+  def minimal: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.minimal = "minimal".asInstanceOf[typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.minimal]
   @scala.inline
-  def minimal: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.minimal = this.cast("minimal")
-  @scala.inline
-  def noFailures: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.noFailures = this.cast("noFailures")
+  def noFailures: typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.noFailures = "noFailures".asInstanceOf[typingsSlinky.karmaMochaReporter.karmaMochaReporterStrings.noFailures]
 }
 

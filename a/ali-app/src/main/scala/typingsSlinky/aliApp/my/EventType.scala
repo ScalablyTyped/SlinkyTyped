@@ -25,36 +25,34 @@ trait EventType extends js.Object
 
 object EventType {
   @scala.inline
-  def animationend: typingsSlinky.aliApp.aliAppStrings.animationend = this.cast("animationend")
+  def animationend: typingsSlinky.aliApp.aliAppStrings.animationend = "animationend".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.animationend]
   @scala.inline
-  def animationiteration: typingsSlinky.aliApp.aliAppStrings.animationiteration = this.cast("animationiteration")
+  def animationiteration: typingsSlinky.aliApp.aliAppStrings.animationiteration = "animationiteration".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.animationiteration]
   @scala.inline
-  def animationstart: typingsSlinky.aliApp.aliAppStrings.animationstart = this.cast("animationstart")
+  def animationstart: typingsSlinky.aliApp.aliAppStrings.animationstart = "animationstart".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.animationstart]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def form: typingsSlinky.aliApp.aliAppStrings.form = "form".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.form]
   @scala.inline
-  def form: typingsSlinky.aliApp.aliAppStrings.form = this.cast("form")
+  def input: typingsSlinky.aliApp.aliAppStrings.input = "input".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.input]
   @scala.inline
-  def input: typingsSlinky.aliApp.aliAppStrings.input = this.cast("input")
+  def longpress: typingsSlinky.aliApp.aliAppStrings.longpress = "longpress".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.longpress]
   @scala.inline
-  def longpress: typingsSlinky.aliApp.aliAppStrings.longpress = this.cast("longpress")
+  def scroll: typingsSlinky.aliApp.aliAppStrings.scroll = "scroll".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.scroll]
   @scala.inline
-  def scroll: typingsSlinky.aliApp.aliAppStrings.scroll = this.cast("scroll")
+  def submit: typingsSlinky.aliApp.aliAppStrings.submit = "submit".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.submit]
   @scala.inline
-  def submit: typingsSlinky.aliApp.aliAppStrings.submit = this.cast("submit")
+  def tap: typingsSlinky.aliApp.aliAppStrings.tap = "tap".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.tap]
   @scala.inline
-  def tap: typingsSlinky.aliApp.aliAppStrings.tap = this.cast("tap")
+  def touchcancel: typingsSlinky.aliApp.aliAppStrings.touchcancel = "touchcancel".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.touchcancel]
   @scala.inline
-  def touchcancel: typingsSlinky.aliApp.aliAppStrings.touchcancel = this.cast("touchcancel")
+  def touchend: typingsSlinky.aliApp.aliAppStrings.touchend = "touchend".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.touchend]
   @scala.inline
-  def touchend: typingsSlinky.aliApp.aliAppStrings.touchend = this.cast("touchend")
+  def touchforcechange: typingsSlinky.aliApp.aliAppStrings.touchforcechange = "touchforcechange".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.touchforcechange]
   @scala.inline
-  def touchforcechange: typingsSlinky.aliApp.aliAppStrings.touchforcechange = this.cast("touchforcechange")
+  def touchmove: typingsSlinky.aliApp.aliAppStrings.touchmove = "touchmove".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.touchmove]
   @scala.inline
-  def touchmove: typingsSlinky.aliApp.aliAppStrings.touchmove = this.cast("touchmove")
+  def touchstart: typingsSlinky.aliApp.aliAppStrings.touchstart = "touchstart".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.touchstart]
   @scala.inline
-  def touchstart: typingsSlinky.aliApp.aliAppStrings.touchstart = this.cast("touchstart")
-  @scala.inline
-  def transitionend: typingsSlinky.aliApp.aliAppStrings.transitionend = this.cast("transitionend")
+  def transitionend: typingsSlinky.aliApp.aliAppStrings.transitionend = "transitionend".asInstanceOf[typingsSlinky.aliApp.aliAppStrings.transitionend]
 }
 

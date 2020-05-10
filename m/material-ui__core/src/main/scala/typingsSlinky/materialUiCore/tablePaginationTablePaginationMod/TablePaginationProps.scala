@@ -1,10 +1,12 @@
 package typingsSlinky.materialUiCore.tablePaginationTablePaginationMod
 
+import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.materialUiCore.PartialClassNameMapTableP
 import typingsSlinky.materialUiCore.PartialIconButtonProps
 import typingsSlinky.materialUiCore.PartialSelectProps
@@ -78,9 +80,7 @@ import typingsSlinky.react.mod.DragEventHandler
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.FormEventHandler
 import typingsSlinky.react.mod.KeyboardEventHandler
-import typingsSlinky.react.mod.MouseEvent
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.react.mod.NativeMouseEvent
 import typingsSlinky.react.mod.PointerEventHandler
 import typingsSlinky.react.mod.ReactEventHandler
 import typingsSlinky.react.mod.Ref
@@ -88,7 +88,6 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
-import typingsSlinky.std.HTMLButtonElement
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -296,6 +295,6 @@ trait TablePaginationProps extends js.Object {
   var variant: js.UndefOr[head | body | footer] = js.native
   var vocab: js.UndefOr[String] = js.native
   def onChangePage(event: Null, page: Double): Unit = js.native
-  def onChangePage(event: MouseEvent[HTMLButtonElement, NativeMouseEvent], page: Double): Unit = js.native
+  def onChangePage(event: SyntheticMouseEvent[HTMLButtonElement], page: Double): Unit = js.native
 }
 

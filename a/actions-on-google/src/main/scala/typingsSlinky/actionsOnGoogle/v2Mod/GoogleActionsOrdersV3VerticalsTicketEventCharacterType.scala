@@ -15,16 +15,14 @@ trait GoogleActionsOrdersV3VerticalsTicketEventCharacterType extends js.Object
 
 object GoogleActionsOrdersV3VerticalsTicketEventCharacterType {
   @scala.inline
-  def ACTOR: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTOR = this.cast("ACTOR")
+  def ACTOR: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTOR = "ACTOR".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ACTOR]
   @scala.inline
-  def DIRECTOR: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DIRECTOR = this.cast("DIRECTOR")
+  def DIRECTOR: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DIRECTOR = "DIRECTOR".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.DIRECTOR]
   @scala.inline
-  def ORGANIZER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORGANIZER = this.cast("ORGANIZER")
+  def ORGANIZER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORGANIZER = "ORGANIZER".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.ORGANIZER]
   @scala.inline
-  def PERFORMER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PERFORMER = this.cast("PERFORMER")
+  def PERFORMER: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PERFORMER = "PERFORMER".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PERFORMER]
   @scala.inline
-  def TYPE_UNKNOWN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNKNOWN = this.cast("TYPE_UNKNOWN")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TYPE_UNKNOWN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNKNOWN = "TYPE_UNKNOWN".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.TYPE_UNKNOWN]
 }
 

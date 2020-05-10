@@ -24,20 +24,77 @@ trait CloudFunctionConfiguration extends js.Object {
 
 object CloudFunctionConfiguration {
   @scala.inline
-  def apply(
-    CloudFunction: CloudFunction = null,
-    Event: Event = null,
-    Events: EventList = null,
-    Id: NotificationId = null,
-    InvocationRole: CloudFunctionInvocationRole = null
-  ): CloudFunctionConfiguration = {
+  def apply(): CloudFunctionConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (CloudFunction != null) __obj.updateDynamic("CloudFunction")(CloudFunction.asInstanceOf[js.Any])
-    if (Event != null) __obj.updateDynamic("Event")(Event.asInstanceOf[js.Any])
-    if (Events != null) __obj.updateDynamic("Events")(Events.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (InvocationRole != null) __obj.updateDynamic("InvocationRole")(InvocationRole.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudFunctionConfiguration]
   }
+  @scala.inline
+  implicit class CloudFunctionConfigurationOps[Self <: CloudFunctionConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudFunction(value: CloudFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudFunction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: Event): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvents(value: EventList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Events")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Events")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: NotificationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvocationRole(value: CloudFunctionInvocationRole): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationRole")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvocationRole: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvocationRole")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

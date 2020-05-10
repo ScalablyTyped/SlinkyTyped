@@ -1,6 +1,5 @@
 package typingsSlinky.utility.mod
 
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ object YYYYMMDD extends js.Object {
     */
   def apply(d: String): String = js.native
   def apply(d: String, sep: String): String = js.native
-  def apply(d: Date): String = js.native
-  def apply(d: Date, sep: String): String = js.native
+  def apply(d: js.Date): String = js.native
+  def apply(d: js.Date, sep: String): String = js.native
 }
 

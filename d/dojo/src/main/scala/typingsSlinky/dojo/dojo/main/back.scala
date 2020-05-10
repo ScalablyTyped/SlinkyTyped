@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   * Browser history management resources
   *
   */
+@js.native
 trait back extends js.Object {
   /**
     * adds a state object (args) to the history list.
@@ -38,21 +39,21 @@ trait back extends js.Object {
     *
     * @param args The state object that will be added to the history list.
     */
-  def addToHistory(args: js.Object): Unit
+  def addToHistory(args: js.Object): Unit = js.native
   /**
     *
     */
-  def getHash(): js.Any
-  /**
-    * private method. Do not call this directly.
-    *
-    */
-  def goBack(): Unit
+  def getHash(): js.Any = js.native
   /**
     * private method. Do not call this directly.
     *
     */
-  def goForward(): Unit
+  def goBack(): Unit = js.native
+  /**
+    * private method. Do not call this directly.
+    *
+    */
+  def goForward(): Unit = js.native
   /**
     * Initializes the undo stack. This must be called from a
     * block that lives inside the <code>&lt;body&gt;</code> tag to prevent bugs on IE.
@@ -112,7 +113,7 @@ trait back extends js.Object {
     *   </div>
     * </div><a href="https://docs.google.com/spreadsheet/viewform?hl=en_US&amp;formkey=dFlDcHEyaHMwbEd4MFBObkNrX0E1MFE6MQ&amp;entry_0=/api/1.9/dojo/main.back" class="feedback">Error in the documentation? Can't find what you are looking for? Let us know!</a>
     */
-  def init(): Unit
+  def init(): Unit = js.native
 }
 
 object back {
@@ -125,8 +126,45 @@ object back {
     init: () => Unit
   ): back = {
     val __obj = js.Dynamic.literal(addToHistory = js.Any.fromFunction1(addToHistory), getHash = js.Any.fromFunction0(getHash), goBack = js.Any.fromFunction0(goBack), goForward = js.Any.fromFunction0(goForward), init = js.Any.fromFunction0(init))
-  
     __obj.asInstanceOf[back]
   }
+  @scala.inline
+  implicit class backOps[Self <: back] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddToHistory(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addToHistory")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetHash(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHash")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGoBack(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goBack")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGoForward(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goForward")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInit(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

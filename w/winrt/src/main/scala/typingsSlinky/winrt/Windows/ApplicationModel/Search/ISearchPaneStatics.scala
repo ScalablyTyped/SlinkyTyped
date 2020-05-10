@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ISearchPaneStatics extends js.Object {
-  def getForCurrentView(): SearchPane
+  def getForCurrentView(): SearchPane = js.native
 }
 
 object ISearchPaneStatics {
   @scala.inline
   def apply(getForCurrentView: () => SearchPane): ISearchPaneStatics = {
     val __obj = js.Dynamic.literal(getForCurrentView = js.Any.fromFunction0(getForCurrentView))
-  
     __obj.asInstanceOf[ISearchPaneStatics]
   }
+  @scala.inline
+  implicit class ISearchPaneStaticsOps[Self <: ISearchPaneStatics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetForCurrentView(value: () => SearchPane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getForCurrentView")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

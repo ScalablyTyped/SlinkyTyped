@@ -15,11 +15,13 @@ import scala.scalajs.js.annotation._
 object ^ extends TopLevel[
       Instantiable0[URI] with (Instantiable1[/* value */ String, URI]) with (Instantiable1[/* value */ HTMLElement, URI]) with (Instantiable1[/* value */ URIOptions, URI])
     ] {
+  var duplicateQueryParameters: Boolean = js.native
+  var escapeQuerySpace: Boolean = js.native
   /**
     * @description Wrapper for `URITemplate#expand`. Only present after
     *              importing `urijs/src/URITemplate` explicitly.
     */
-  var expand: js.UndefOr[js.Function2[/* template */ String, /* vals */ js.Object, URI]] = js.native
+  var expand: js.UndefOr[js.Function2[/* template */ String, /* vals */ js.Object, String]] = js.native
   var preventInvalidHostname: Boolean = js.native
   def apply(): URI = js.native
   def apply(value: String): URI = js.native

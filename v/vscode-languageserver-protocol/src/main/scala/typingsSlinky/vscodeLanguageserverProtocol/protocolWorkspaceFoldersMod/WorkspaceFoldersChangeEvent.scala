@@ -4,23 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkspaceFoldersChangeEvent extends js.Object {
   /**
     * The array of added workspace folders
     */
-  var added: js.Array[WorkspaceFolder]
+  var added: js.Array[WorkspaceFolder] = js.native
   /**
     * The array of the removed workspace folders
     */
-  var removed: js.Array[WorkspaceFolder]
+  var removed: js.Array[WorkspaceFolder] = js.native
 }
 
 object WorkspaceFoldersChangeEvent {
   @scala.inline
   def apply(added: js.Array[WorkspaceFolder], removed: js.Array[WorkspaceFolder]): WorkspaceFoldersChangeEvent = {
     val __obj = js.Dynamic.literal(added = added.asInstanceOf[js.Any], removed = removed.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[WorkspaceFoldersChangeEvent]
   }
+  @scala.inline
+  implicit class WorkspaceFoldersChangeEventOps[Self <: WorkspaceFoldersChangeEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdded(value: js.Array[WorkspaceFolder]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("added")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoved(value: js.Array[WorkspaceFolder]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

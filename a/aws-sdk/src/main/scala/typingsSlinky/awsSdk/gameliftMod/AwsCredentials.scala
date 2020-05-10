@@ -22,16 +22,53 @@ trait AwsCredentials extends js.Object {
 
 object AwsCredentials {
   @scala.inline
-  def apply(
-    AccessKeyId: NonEmptyString = null,
-    SecretAccessKey: NonEmptyString = null,
-    SessionToken: NonEmptyString = null
-  ): AwsCredentials = {
+  def apply(): AwsCredentials = {
     val __obj = js.Dynamic.literal()
-    if (AccessKeyId != null) __obj.updateDynamic("AccessKeyId")(AccessKeyId.asInstanceOf[js.Any])
-    if (SecretAccessKey != null) __obj.updateDynamic("SecretAccessKey")(SecretAccessKey.asInstanceOf[js.Any])
-    if (SessionToken != null) __obj.updateDynamic("SessionToken")(SessionToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsCredentials]
   }
+  @scala.inline
+  implicit class AwsCredentialsOps[Self <: AwsCredentials] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessKeyId(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecretAccessKey(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretAccessKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecretAccessKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecretAccessKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionToken(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

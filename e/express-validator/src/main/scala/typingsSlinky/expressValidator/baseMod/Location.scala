@@ -15,16 +15,14 @@ trait Location extends js.Object
 
 object Location {
   @scala.inline
-  def body: typingsSlinky.expressValidator.expressValidatorStrings.body = this.cast("body")
+  def body: typingsSlinky.expressValidator.expressValidatorStrings.body = "body".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.body]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cookies: typingsSlinky.expressValidator.expressValidatorStrings.cookies = "cookies".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.cookies]
   @scala.inline
-  def cookies: typingsSlinky.expressValidator.expressValidatorStrings.cookies = this.cast("cookies")
+  def headers: typingsSlinky.expressValidator.expressValidatorStrings.headers = "headers".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.headers]
   @scala.inline
-  def headers: typingsSlinky.expressValidator.expressValidatorStrings.headers = this.cast("headers")
+  def params: typingsSlinky.expressValidator.expressValidatorStrings.params = "params".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.params]
   @scala.inline
-  def params: typingsSlinky.expressValidator.expressValidatorStrings.params = this.cast("params")
-  @scala.inline
-  def query: typingsSlinky.expressValidator.expressValidatorStrings.query = this.cast("query")
+  def query: typingsSlinky.expressValidator.expressValidatorStrings.query = "query".asInstanceOf[typingsSlinky.expressValidator.expressValidatorStrings.query]
 }
 

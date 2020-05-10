@@ -16,10 +16,29 @@ trait SchemaRow extends js.Object {
 
 object SchemaRow {
   @scala.inline
-  def apply(cells: js.Array[SchemaValue] = null): SchemaRow = {
+  def apply(): SchemaRow = {
     val __obj = js.Dynamic.literal()
-    if (cells != null) __obj.updateDynamic("cells")(cells.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRow]
   }
+  @scala.inline
+  implicit class SchemaRowOps[Self <: SchemaRow] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCells(value: js.Array[SchemaValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cells")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCells: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cells")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

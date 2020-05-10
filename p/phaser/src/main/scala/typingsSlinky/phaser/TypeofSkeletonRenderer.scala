@@ -1,8 +1,8 @@
 package typingsSlinky.phaser
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalajs.dom.raw.CanvasRenderingContext2D
 import typingsSlinky.phaser.spine.canvas.SkeletonRenderer
-import typingsSlinky.std.CanvasRenderingContext2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

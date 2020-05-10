@@ -20,7 +20,7 @@ object removeEventListener_focusin extends js.Object {
   def apply(
     `type`: focusin,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

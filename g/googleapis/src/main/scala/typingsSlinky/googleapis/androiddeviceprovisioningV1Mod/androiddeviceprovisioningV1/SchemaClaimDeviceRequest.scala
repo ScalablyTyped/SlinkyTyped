@@ -29,18 +29,65 @@ trait SchemaClaimDeviceRequest extends js.Object {
 
 object SchemaClaimDeviceRequest {
   @scala.inline
-  def apply(
-    customerId: String = null,
-    deviceIdentifier: SchemaDeviceIdentifier = null,
-    deviceMetadata: SchemaDeviceMetadata = null,
-    sectionType: String = null
-  ): SchemaClaimDeviceRequest = {
+  def apply(): SchemaClaimDeviceRequest = {
     val __obj = js.Dynamic.literal()
-    if (customerId != null) __obj.updateDynamic("customerId")(customerId.asInstanceOf[js.Any])
-    if (deviceIdentifier != null) __obj.updateDynamic("deviceIdentifier")(deviceIdentifier.asInstanceOf[js.Any])
-    if (deviceMetadata != null) __obj.updateDynamic("deviceMetadata")(deviceMetadata.asInstanceOf[js.Any])
-    if (sectionType != null) __obj.updateDynamic("sectionType")(sectionType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaClaimDeviceRequest]
   }
+  @scala.inline
+  implicit class SchemaClaimDeviceRequestOps[Self <: SchemaClaimDeviceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomerId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customerId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceIdentifier(value: SchemaDeviceIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeviceMetadata(value: SchemaDeviceMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceMetadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSectionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSectionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Instance extends js.Object {
   /**
     * Required. The name of the instance's configuration. Values are of the form
@@ -12,12 +13,12 @@ trait Instance extends js.Object {
     * also InstanceConfig and
     * ListInstanceConfigs.
     */
-  var config: js.UndefOr[String] = js.undefined
+  var config: js.UndefOr[String] = js.native
   /**
     * Required. The descriptive name for this instance as it appears in UIs.
     * Must be unique per project and between 4 and 30 characters in length.
     */
-  var displayName: js.UndefOr[String] = js.undefined
+  var displayName: js.UndefOr[String] = js.native
   /**
     * Cloud Labels are a flexible and lightweight mechanism for organizing cloud
     * resources into groups that reflect a customer's organizational needs and
@@ -41,14 +42,14 @@ trait Instance extends js.Object {
     * as the string:  name + "_" + value  would prove problematic if we were to
     * allow "_" in a future release.
     */
-  var labels: js.UndefOr[Record[String, String]] = js.undefined
+  var labels: js.UndefOr[Record[String, String]] = js.native
   /**
     * Required. A unique identifier for the instance, which cannot be changed
     * after the instance is created. Values are of the form
     * `projects/<project>/instances/a-z&#42;[a-z0-9]`. The final
     * segment of the name must be between 6 and 30 characters in length.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * Required. The number of nodes allocated to this instance. This may be zero
     * in API responses for instances that are not yet in state `READY`.
@@ -67,7 +68,7 @@ trait Instance extends js.Object {
     * estimates, and assume [best practices](https://cloud.google.com/spanner/docs/bulk-loading)
     * are followed.
     */
-  var nodeCount: js.UndefOr[Double] = js.undefined
+  var nodeCount: js.UndefOr[Double] = js.native
   /**
     * Output only. The current instance state. For
     * CreateInstance, the state must be
@@ -75,27 +76,94 @@ trait Instance extends js.Object {
     * UpdateInstance, the state must be
     * either omitted or set to `READY`.
     */
-  var state: js.UndefOr[String] = js.undefined
+  var state: js.UndefOr[String] = js.native
 }
 
 object Instance {
   @scala.inline
-  def apply(
-    config: String = null,
-    displayName: String = null,
-    labels: Record[String, String] = null,
-    name: String = null,
-    nodeCount: Int | Double = null,
-    state: String = null
-  ): Instance = {
+  def apply(): Instance = {
     val __obj = js.Dynamic.literal()
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (nodeCount != null) __obj.updateDynamic("nodeCount")(nodeCount.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[Instance]
   }
+  @scala.inline
+  implicit class InstanceOps[Self <: Instance] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfig(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: Record[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

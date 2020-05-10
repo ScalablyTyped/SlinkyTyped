@@ -1,9 +1,9 @@
 package typingsSlinky.ol
 
+import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
-import typingsSlinky.std.HTMLVideoElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

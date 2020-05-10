@@ -30,16 +30,53 @@ trait SchemaSpeakerDiarizationConfig extends js.Object {
 
 object SchemaSpeakerDiarizationConfig {
   @scala.inline
-  def apply(
-    enableSpeakerDiarization: js.UndefOr[Boolean] = js.undefined,
-    maxSpeakerCount: Int | Double = null,
-    minSpeakerCount: Int | Double = null
-  ): SchemaSpeakerDiarizationConfig = {
+  def apply(): SchemaSpeakerDiarizationConfig = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(enableSpeakerDiarization)) __obj.updateDynamic("enableSpeakerDiarization")(enableSpeakerDiarization.asInstanceOf[js.Any])
-    if (maxSpeakerCount != null) __obj.updateDynamic("maxSpeakerCount")(maxSpeakerCount.asInstanceOf[js.Any])
-    if (minSpeakerCount != null) __obj.updateDynamic("minSpeakerCount")(minSpeakerCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSpeakerDiarizationConfig]
   }
+  @scala.inline
+  implicit class SchemaSpeakerDiarizationConfigOps[Self <: SchemaSpeakerDiarizationConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnableSpeakerDiarization(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSpeakerDiarization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableSpeakerDiarization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableSpeakerDiarization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSpeakerCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpeakerCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSpeakerCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpeakerCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSpeakerCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSpeakerCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSpeakerCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSpeakerCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,43 +1,49 @@
 package typingsSlinky.reactScrollspy.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactScrollspy.mod.ScrollspyProps
 import typingsSlinky.reactScrollspy.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactScrollspy
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactScrollspy {
   @JSImport("react-scrollspy", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    currentClassName: String,
-    items: js.Array[String],
-    componentTag: String | ReactComponentClass[js.Object] = null,
-    offset: Int | Double = null,
-    onUpdate: /* item */ String => Unit = null,
-    rootEl: String = null,
-    scrolledPastClassName: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(currentClassName = currentClassName.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
-    if (componentTag != null) __obj.updateDynamic("componentTag")(componentTag.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (onUpdate != null) __obj.updateDynamic("onUpdate")(js.Any.fromFunction1(onUpdate))
-    if (rootEl != null) __obj.updateDynamic("rootEl")(rootEl.asInstanceOf[js.Any])
-    if (scrolledPastClassName != null) __obj.updateDynamic("scrolledPastClassName")(scrolledPastClassName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentTagFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("componentTag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentTagComponentClass(value: ReactComponentClass[js.Object]): this.type = set("componentTag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentTag(value: String | ReactComponentClass[js.Object]): this.type = set("componentTag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onUpdate(value: /* item */ String => Unit): this.type = set("onUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def rootEl(value: String): this.type = set("rootEl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrolledPastClassName(value: String): this.type = set("scrolledPastClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = ScrollspyProps
+  
+  def withProps(p: ScrollspyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(currentClassName: String, items: js.Array[String]): Builder = {
+    val __props = js.Dynamic.literal(currentClassName = currentClassName.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ScrollspyProps]))
+  }
 }
 

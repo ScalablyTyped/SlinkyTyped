@@ -1,56 +1,66 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.MouseEvent
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.loginItemMod.LoginItemProps
 import typingsSlinky.antDesignPro.loginItemMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LoginItem
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object LoginItem {
   @JSImport("ant-design-pro/lib/Login/LoginItem", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name, placeholder, style */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def buttonTextReactElement(value: ReactElement): this.type = set("buttonText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def buttonText(value: TagMod[Any]): this.type = set("buttonText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def countDown(value: Double): this.type = set("countDown", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customprops(value: js.Any): this.type = set("customprops", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getCaptchaButtonText(value: String): this.type = set("getCaptchaButtonText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getCaptchaSecondText(value: String): this.type = set("getCaptchaSecondText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* e */ js.Any => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onGetCaptcha(value: /* event */ js.UndefOr[MouseEvent] => Unit): this.type = set("onGetCaptcha", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPressEnter(value: /* e */ js.Any => Unit): this.type = set("onPressEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rules(value: js.Array[_]): this.type = set("rules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: LoginItemProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     form: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify WrappedFormUtils */ js.Any,
-    updateActive: js.Any => Unit,
     `type`: String,
-    buttonText: TagMod[Any] = null,
-    countDown: Int | Double = null,
-    customprops: js.Any = null,
-    defaultValue: String = null,
-    getCaptchaButtonText: String = null,
-    getCaptchaSecondText: String = null,
-    onChange: /* e */ js.Any => Unit = null,
-    onGetCaptcha: /* event */ js.UndefOr[MouseEvent] => Unit = null,
-    onPressEnter: /* e */ js.Any => Unit = null,
-    rules: js.Array[_] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(form = form.asInstanceOf[js.Any], updateActive = js.Any.fromFunction1(updateActive))
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (buttonText != null) __obj.updateDynamic("buttonText")(buttonText.asInstanceOf[js.Any])
-    if (countDown != null) __obj.updateDynamic("countDown")(countDown.asInstanceOf[js.Any])
-    if (customprops != null) __obj.updateDynamic("customprops")(customprops.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (getCaptchaButtonText != null) __obj.updateDynamic("getCaptchaButtonText")(getCaptchaButtonText.asInstanceOf[js.Any])
-    if (getCaptchaSecondText != null) __obj.updateDynamic("getCaptchaSecondText")(getCaptchaSecondText.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onGetCaptcha != null) __obj.updateDynamic("onGetCaptcha")(js.Any.fromFunction1(onGetCaptcha))
-    if (onPressEnter != null) __obj.updateDynamic("onPressEnter")(js.Any.fromFunction1(onPressEnter))
-    if (rules != null) __obj.updateDynamic("rules")(rules.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    updateActive: js.Any => Unit
+  ): Builder = {
+    val __props = js.Dynamic.literal(form = form.asInstanceOf[js.Any], updateActive = js.Any.fromFunction1(updateActive))
+    __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[LoginItemProps]))
   }
-  type Props = LoginItemProps
 }
 

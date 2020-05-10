@@ -14,12 +14,10 @@ trait NetworkLinkInfoStatus extends js.Object
 
 object NetworkLinkInfoStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def down: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.down = "down".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.down]
   @scala.inline
-  def down: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.down = this.cast("down")
+  def unknown: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unknown = "unknown".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unknown]
   @scala.inline
-  def unknown: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unknown = this.cast("unknown")
-  @scala.inline
-  def up: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.up = this.cast("up")
+  def up: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.up = "up".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.up]
 }
 

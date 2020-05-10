@@ -43,6 +43,7 @@ package object mod {
   ]
   /** @deprecated use webpack.Options.Performance */
   type PerformanceOptions = typingsSlinky.webpack.mod.Options.Performance
+  type ProgressPlugin = typingsSlinky.webpack.mod.ProgressPlugin_
   /**
     * @deprecated Use RuleSetRule instead
     */

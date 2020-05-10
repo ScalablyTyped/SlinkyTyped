@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object ^ extends js.Object {
   def apply(fromNode: Node, toNode: String): Unit = js.native
   def apply(fromNode: Node, toNode: String, options: MorphDomOptions): Unit = js.native
-  def apply(fromNode: Node, toNode: typingsSlinky.std.Node): Unit = js.native
-  def apply(fromNode: Node, toNode: typingsSlinky.std.Node, options: MorphDomOptions): Unit = js.native
+  def apply(fromNode: Node, toNode: Node): Unit = js.native
+  def apply(fromNode: Node, toNode: Node, options: MorphDomOptions): Unit = js.native
 }
 

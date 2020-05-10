@@ -16,20 +16,77 @@ trait ClusterClusterCertificates extends js.Object {
 
 object ClusterClusterCertificates {
   @scala.inline
-  def apply(
-    awsHardwareCertificate: Input[String] = null,
-    clusterCertificate: Input[String] = null,
-    clusterCsr: Input[String] = null,
-    hsmCertificate: Input[String] = null,
-    manufacturerHardwareCertificate: Input[String] = null
-  ): ClusterClusterCertificates = {
+  def apply(): ClusterClusterCertificates = {
     val __obj = js.Dynamic.literal()
-    if (awsHardwareCertificate != null) __obj.updateDynamic("awsHardwareCertificate")(awsHardwareCertificate.asInstanceOf[js.Any])
-    if (clusterCertificate != null) __obj.updateDynamic("clusterCertificate")(clusterCertificate.asInstanceOf[js.Any])
-    if (clusterCsr != null) __obj.updateDynamic("clusterCsr")(clusterCsr.asInstanceOf[js.Any])
-    if (hsmCertificate != null) __obj.updateDynamic("hsmCertificate")(hsmCertificate.asInstanceOf[js.Any])
-    if (manufacturerHardwareCertificate != null) __obj.updateDynamic("manufacturerHardwareCertificate")(manufacturerHardwareCertificate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterClusterCertificates]
   }
+  @scala.inline
+  implicit class ClusterClusterCertificatesOps[Self <: ClusterClusterCertificates] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwsHardwareCertificate(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsHardwareCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsHardwareCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsHardwareCertificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterCertificate(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterCertificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterCsr(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterCsr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterCsr: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterCsr")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsmCertificate(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hsmCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsmCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hsmCertificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManufacturerHardwareCertificate(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturerHardwareCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManufacturerHardwareCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturerHardwareCertificate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

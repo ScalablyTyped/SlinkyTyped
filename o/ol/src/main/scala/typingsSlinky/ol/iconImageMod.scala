@@ -60,7 +60,7 @@ object iconImageMod extends js.Object {
   }
   
   def get(
-    image: typingsSlinky.std.HTMLCanvasElement,
+    image: HTMLCanvasElement,
     src: String,
     size: Size,
     crossOrigin: String,
@@ -68,7 +68,7 @@ object iconImageMod extends js.Object {
     color: Color
   ): IconImage = js.native
   def get(
-    image: typingsSlinky.std.HTMLImageElement,
+    image: HTMLImageElement,
     src: String,
     size: Size,
     crossOrigin: String,

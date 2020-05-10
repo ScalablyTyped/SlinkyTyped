@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.azdata.mod.ComponentProperties because Already inherited
 - typingsSlinky.azdata.mod.InputBoxProperties because var conflicts: CSSStyles, ariaLabel, ariaRole, ariaSelected, display, enabled, height, position, width. Inlined value, ariaLive, placeHolder, inputType, required, multiline, rows, columns, min, max, stopEnterPropagation */ @js.native
 trait InputBoxComponent extends Component {

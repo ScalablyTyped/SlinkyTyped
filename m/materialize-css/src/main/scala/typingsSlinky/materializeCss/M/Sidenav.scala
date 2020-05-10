@@ -20,12 +20,6 @@ class Sidenav ()
     * Describes if sidenav is fixed
     */
   var isFixed: Boolean = js.native
-  /* CompleteClass */
-  override var isOpen: Boolean = js.native
-  /* CompleteClass */
-  override def close(): Unit = js.native
-  /* CompleteClass */
-  override def open(): Unit = js.native
 }
 
 /* static members */
@@ -44,7 +38,7 @@ object Sidenav extends js.Object {
   /**
     * Init Sidenav
     */
-  def init(els: typingsSlinky.std.Element): Sidenav = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialSidenavOptions): Sidenav = js.native
+  def init(els: Element): Sidenav = js.native
+  def init(els: Element, options: PartialSidenavOptions): Sidenav = js.native
 }
 

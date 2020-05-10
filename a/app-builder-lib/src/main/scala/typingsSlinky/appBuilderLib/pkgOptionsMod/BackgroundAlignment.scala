@@ -19,24 +19,22 @@ trait BackgroundAlignment extends js.Object
 
 object BackgroundAlignment {
   @scala.inline
-  def bottom: typingsSlinky.appBuilderLib.appBuilderLibStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.appBuilderLib.appBuilderLibStrings.bottom = "bottom".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.bottom]
   @scala.inline
-  def bottomleft: typingsSlinky.appBuilderLib.appBuilderLibStrings.bottomleft = this.cast("bottomleft")
+  def bottomleft: typingsSlinky.appBuilderLib.appBuilderLibStrings.bottomleft = "bottomleft".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.bottomleft]
   @scala.inline
-  def bottomright: typingsSlinky.appBuilderLib.appBuilderLibStrings.bottomright = this.cast("bottomright")
+  def bottomright: typingsSlinky.appBuilderLib.appBuilderLibStrings.bottomright = "bottomright".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.bottomright]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.appBuilderLib.appBuilderLibStrings.center = "center".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.center]
   @scala.inline
-  def center: typingsSlinky.appBuilderLib.appBuilderLibStrings.center = this.cast("center")
+  def left: typingsSlinky.appBuilderLib.appBuilderLibStrings.left = "left".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.left]
   @scala.inline
-  def left: typingsSlinky.appBuilderLib.appBuilderLibStrings.left = this.cast("left")
+  def right: typingsSlinky.appBuilderLib.appBuilderLibStrings.right = "right".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.right]
   @scala.inline
-  def right: typingsSlinky.appBuilderLib.appBuilderLibStrings.right = this.cast("right")
+  def top: typingsSlinky.appBuilderLib.appBuilderLibStrings.top = "top".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.top]
   @scala.inline
-  def top: typingsSlinky.appBuilderLib.appBuilderLibStrings.top = this.cast("top")
+  def topleft: typingsSlinky.appBuilderLib.appBuilderLibStrings.topleft = "topleft".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.topleft]
   @scala.inline
-  def topleft: typingsSlinky.appBuilderLib.appBuilderLibStrings.topleft = this.cast("topleft")
-  @scala.inline
-  def topright: typingsSlinky.appBuilderLib.appBuilderLibStrings.topright = this.cast("topright")
+  def topright: typingsSlinky.appBuilderLib.appBuilderLibStrings.topright = "topright".asInstanceOf[typingsSlinky.appBuilderLib.appBuilderLibStrings.topright]
 }
 

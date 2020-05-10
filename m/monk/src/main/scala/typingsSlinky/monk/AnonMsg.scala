@@ -6,18 +6,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonMsg extends js.Object {
-  var msg: js.UndefOr[String] = js.undefined
-  var nIndexesWas: Double
-  var ok: `1` | `0`
+  var msg: js.UndefOr[String] = js.native
+  var nIndexesWas: Double = js.native
+  var ok: `1` | `0` = js.native
 }
 
 object AnonMsg {
   @scala.inline
-  def apply(nIndexesWas: Double, ok: `1` | `0`, msg: String = null): AnonMsg = {
+  def apply(nIndexesWas: Double, ok: `1` | `0`): AnonMsg = {
     val __obj = js.Dynamic.literal(nIndexesWas = nIndexesWas.asInstanceOf[js.Any], ok = ok.asInstanceOf[js.Any])
-    if (msg != null) __obj.updateDynamic("msg")(msg.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonMsg]
   }
+  @scala.inline
+  implicit class AnonMsgOps[Self <: AnonMsg] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNIndexesWas(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nIndexesWas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOk(value: `1` | `0`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ok")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMsg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMsg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msg")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

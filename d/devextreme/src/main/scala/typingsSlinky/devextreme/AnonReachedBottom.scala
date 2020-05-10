@@ -8,45 +8,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonReachedBottom extends js.Object {
-  var component: js.UndefOr[dxList] = js.undefined
-  var element: js.UndefOr[dxElement] = js.undefined
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.undefined
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.undefined
-  var model: js.UndefOr[js.Any] = js.undefined
-  var reachedBottom: js.UndefOr[Boolean] = js.undefined
-  var reachedLeft: js.UndefOr[Boolean] = js.undefined
-  var reachedRight: js.UndefOr[Boolean] = js.undefined
-  var reachedTop: js.UndefOr[Boolean] = js.undefined
-  var scrollOffset: js.UndefOr[js.Any] = js.undefined
+  var component: js.UndefOr[dxList] = js.native
+  var element: js.UndefOr[dxElement] = js.native
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.event] = js.native
+  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
+  var model: js.UndefOr[js.Any] = js.native
+  var reachedBottom: js.UndefOr[Boolean] = js.native
+  var reachedLeft: js.UndefOr[Boolean] = js.native
+  var reachedRight: js.UndefOr[Boolean] = js.native
+  var reachedTop: js.UndefOr[Boolean] = js.native
+  var scrollOffset: js.UndefOr[js.Any] = js.native
 }
 
 object AnonReachedBottom {
   @scala.inline
-  def apply(
-    component: dxList = null,
-    element: dxElement = null,
-    event: event = null,
-    jQueryEvent: JQueryEventObject = null,
-    model: js.Any = null,
-    reachedBottom: js.UndefOr[Boolean] = js.undefined,
-    reachedLeft: js.UndefOr[Boolean] = js.undefined,
-    reachedRight: js.UndefOr[Boolean] = js.undefined,
-    reachedTop: js.UndefOr[Boolean] = js.undefined,
-    scrollOffset: js.Any = null
-  ): AnonReachedBottom = {
+  def apply(): AnonReachedBottom = {
     val __obj = js.Dynamic.literal()
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (jQueryEvent != null) __obj.updateDynamic("jQueryEvent")(jQueryEvent.asInstanceOf[js.Any])
-    if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
-    if (!js.isUndefined(reachedBottom)) __obj.updateDynamic("reachedBottom")(reachedBottom.asInstanceOf[js.Any])
-    if (!js.isUndefined(reachedLeft)) __obj.updateDynamic("reachedLeft")(reachedLeft.asInstanceOf[js.Any])
-    if (!js.isUndefined(reachedRight)) __obj.updateDynamic("reachedRight")(reachedRight.asInstanceOf[js.Any])
-    if (!js.isUndefined(reachedTop)) __obj.updateDynamic("reachedTop")(reachedTop.asInstanceOf[js.Any])
-    if (scrollOffset != null) __obj.updateDynamic("scrollOffset")(scrollOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonReachedBottom]
   }
+  @scala.inline
+  implicit class AnonReachedBottomOps[Self <: AnonReachedBottom] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponent(value: dxList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElement(value: dxElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: event): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJQueryEvent(value: JQueryEventObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jQueryEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJQueryEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jQueryEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReachedBottom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachedBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReachedBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachedBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReachedLeft(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachedLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReachedLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachedLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReachedRight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachedRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReachedRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachedRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReachedTop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachedTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReachedTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reachedTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScrollOffset(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScrollOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollOffset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

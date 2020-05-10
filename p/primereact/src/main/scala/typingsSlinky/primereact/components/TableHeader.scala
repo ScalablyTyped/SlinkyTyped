@@ -1,17 +1,18 @@
 package typingsSlinky.primereact.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.primereact.tableHeaderMod.TableHeaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableHeader
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.primereact.tableHeaderMod.TableHeader] {
+object TableHeader {
   @JSImport("primereact/components/datatable/TableHeader", "TableHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TableHeaderProps): Default[tag.type, typingsSlinky.primereact.tableHeaderMod.TableHeader] = new Default[tag.type, typingsSlinky.primereact.tableHeaderMod.TableHeader](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableHeader.type): Default[tag.type, typingsSlinky.primereact.tableHeaderMod.TableHeader] = new Default[tag.type, typingsSlinky.primereact.tableHeaderMod.TableHeader](js.Array(this.component, js.Dictionary.empty))()
 }
 

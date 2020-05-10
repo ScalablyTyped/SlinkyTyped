@@ -13,7 +13,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.ionicCore.componentsMod.Components.IonTextarea because var conflicts: autocapitalize, autofocus, spellcheck. Inlined autoGrow, clearOnEdit, color, cols, debounce, disabled, getInputElement, maxlength, minlength, mode, name, placeholder, readonly, required, rows, setFocus, value, wrap */ @js.native
 trait HTMLIonTextareaElement extends HTMLStencilElement {
   /**

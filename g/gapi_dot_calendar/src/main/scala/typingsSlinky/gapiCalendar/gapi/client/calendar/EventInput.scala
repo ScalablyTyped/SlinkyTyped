@@ -12,81 +12,299 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EventInput extends js.Object {
   // Optional Properties
-  var anyoneCanAddSelf: js.UndefOr[Boolean] = js.undefined
+  var anyoneCanAddSelf: js.UndefOr[Boolean] = js.native
   // Required Properties
-  var attachments: js.UndefOr[js.Array[AnonFileUrl]] = js.undefined
-  var attendees: js.UndefOr[js.Array[AnonAdditionalGuests]] = js.undefined
-  var colorId: js.UndefOr[String] = js.undefined
-  var description: js.UndefOr[String] = js.undefined
-  var end: AnonDate
-  var extendedProperties: js.UndefOr[AnonPrivate] = js.undefined
-  var gadget: js.UndefOr[AnonDisplay] = js.undefined
-  var guestsCanInviteOthers: js.UndefOr[Boolean] = js.undefined
-  var guestsCanSeeOtherGuests: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var location: js.UndefOr[String] = js.undefined
-  var originalStartTime: js.UndefOr[AnonDateTime] = js.undefined
-  var recurrence: js.UndefOr[js.Array[String]] = js.undefined
-  var reminders: js.UndefOr[AnonOverrides] = js.undefined
-  var sequence: js.UndefOr[integer] = js.undefined
-  var source: js.UndefOr[AnonTitle] = js.undefined
-  var start: AnonDate
-  var status: js.UndefOr[EventStatus] = js.undefined
-  var summary: js.UndefOr[String] = js.undefined
-  var transparency: js.UndefOr[EventTransparency] = js.undefined
-  var visibility: js.UndefOr[EventVisibility] = js.undefined
+  var attachments: js.UndefOr[js.Array[AnonFileUrl]] = js.native
+  var attendees: js.UndefOr[js.Array[AnonAdditionalGuests]] = js.native
+  var colorId: js.UndefOr[String] = js.native
+  var description: js.UndefOr[String] = js.native
+  var end: AnonDate = js.native
+  var extendedProperties: js.UndefOr[AnonPrivate] = js.native
+  var gadget: js.UndefOr[AnonDisplay] = js.native
+  var guestsCanInviteOthers: js.UndefOr[Boolean] = js.native
+  var guestsCanSeeOtherGuests: js.UndefOr[Boolean] = js.native
+  var id: js.UndefOr[String] = js.native
+  var location: js.UndefOr[String] = js.native
+  var originalStartTime: js.UndefOr[AnonDateTime] = js.native
+  var recurrence: js.UndefOr[js.Array[String]] = js.native
+  var reminders: js.UndefOr[AnonOverrides] = js.native
+  var sequence: js.UndefOr[integer] = js.native
+  var source: js.UndefOr[AnonTitle] = js.native
+  var start: AnonDate = js.native
+  var status: js.UndefOr[EventStatus] = js.native
+  var summary: js.UndefOr[String] = js.native
+  var transparency: js.UndefOr[EventTransparency] = js.native
+  var visibility: js.UndefOr[EventVisibility] = js.native
 }
 
 object EventInput {
   @scala.inline
-  def apply(
-    end: AnonDate,
-    start: AnonDate,
-    anyoneCanAddSelf: js.UndefOr[Boolean] = js.undefined,
-    attachments: js.Array[AnonFileUrl] = null,
-    attendees: js.Array[AnonAdditionalGuests] = null,
-    colorId: String = null,
-    description: String = null,
-    extendedProperties: AnonPrivate = null,
-    gadget: AnonDisplay = null,
-    guestsCanInviteOthers: js.UndefOr[Boolean] = js.undefined,
-    guestsCanSeeOtherGuests: js.UndefOr[Boolean] = js.undefined,
-    id: String = null,
-    location: String = null,
-    originalStartTime: AnonDateTime = null,
-    recurrence: js.Array[String] = null,
-    reminders: AnonOverrides = null,
-    sequence: Int | Double = null,
-    source: AnonTitle = null,
-    status: EventStatus = null,
-    summary: String = null,
-    transparency: EventTransparency = null,
-    visibility: EventVisibility = null
-  ): EventInput = {
+  def apply(end: AnonDate, start: AnonDate): EventInput = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    if (!js.isUndefined(anyoneCanAddSelf)) __obj.updateDynamic("anyoneCanAddSelf")(anyoneCanAddSelf.asInstanceOf[js.Any])
-    if (attachments != null) __obj.updateDynamic("attachments")(attachments.asInstanceOf[js.Any])
-    if (attendees != null) __obj.updateDynamic("attendees")(attendees.asInstanceOf[js.Any])
-    if (colorId != null) __obj.updateDynamic("colorId")(colorId.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (extendedProperties != null) __obj.updateDynamic("extendedProperties")(extendedProperties.asInstanceOf[js.Any])
-    if (gadget != null) __obj.updateDynamic("gadget")(gadget.asInstanceOf[js.Any])
-    if (!js.isUndefined(guestsCanInviteOthers)) __obj.updateDynamic("guestsCanInviteOthers")(guestsCanInviteOthers.asInstanceOf[js.Any])
-    if (!js.isUndefined(guestsCanSeeOtherGuests)) __obj.updateDynamic("guestsCanSeeOtherGuests")(guestsCanSeeOtherGuests.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (originalStartTime != null) __obj.updateDynamic("originalStartTime")(originalStartTime.asInstanceOf[js.Any])
-    if (recurrence != null) __obj.updateDynamic("recurrence")(recurrence.asInstanceOf[js.Any])
-    if (reminders != null) __obj.updateDynamic("reminders")(reminders.asInstanceOf[js.Any])
-    if (sequence != null) __obj.updateDynamic("sequence")(sequence.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (summary != null) __obj.updateDynamic("summary")(summary.asInstanceOf[js.Any])
-    if (transparency != null) __obj.updateDynamic("transparency")(transparency.asInstanceOf[js.Any])
-    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventInput]
   }
+  @scala.inline
+  implicit class EventInputOps[Self <: EventInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: AnonDate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStart(value: AnonDate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnyoneCanAddSelf(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anyoneCanAddSelf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnyoneCanAddSelf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("anyoneCanAddSelf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttachments(value: js.Array[AnonFileUrl]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttendees(value: js.Array[AnonAdditionalGuests]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attendees")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttendees: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attendees")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtendedProperties(value: AnonPrivate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendedProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGadget(value: AnonDisplay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gadget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGadget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gadget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuestsCanInviteOthers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guestsCanInviteOthers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuestsCanInviteOthers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guestsCanInviteOthers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuestsCanSeeOtherGuests(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guestsCanSeeOtherGuests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuestsCanSeeOtherGuests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guestsCanSeeOtherGuests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalStartTime(value: AnonDateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalStartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecurrence(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecurrence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReminders(value: AnonOverrides): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reminders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReminders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reminders")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSequence(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSequence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sequence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: AnonTitle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: EventStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSummary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransparency(value: EventTransparency): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transparency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransparency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transparency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisibility(value: EventVisibility): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisibility: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

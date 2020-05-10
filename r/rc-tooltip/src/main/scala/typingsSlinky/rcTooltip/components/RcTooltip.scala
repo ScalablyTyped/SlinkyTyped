@@ -1,11 +1,12 @@
 package typingsSlinky.rcTooltip.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.Element
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcTooltip.mod.RCTooltip.Placement
+import typingsSlinky.rcTooltip.mod.RCTooltip.Props
 import typingsSlinky.rcTooltip.mod.RCTooltip.Trigger
 import typingsSlinky.rcTooltip.mod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -16,56 +17,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RcTooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object RcTooltip {
   @JSImport("rc-tooltip", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id */
-  def apply(
-    overlay: js.Function0[ReactChild] | ReactChild | ReactFragment | ReactPortal,
-    afterVisibleChange: /* visible */ js.UndefOr[Boolean] => Unit = null,
-    align: js.Object = null,
-    arrowContent: TagMod[Any] = null,
-    defaultVisible: js.UndefOr[Boolean] = js.undefined,
-    destroyTooltipOnHide: js.UndefOr[Boolean] = js.undefined,
-    getTooltipContainer: () => org.scalajs.dom.raw.Element = null,
-    mouseEnterDelay: Int | Double = null,
-    mouseLeaveDelay: Int | Double = null,
-    onPopupAlign: (/* popupDomNode */ org.scalajs.dom.raw.Element, /* align */ js.Object) => Unit = null,
-    onVisibleChange: /* visible */ js.UndefOr[Boolean] => Unit = null,
-    overlayClassName: String = null,
-    overlayStyle: CSSProperties = null,
-    placement: Placement | js.Object = null,
-    prefixCls: String = null,
-    transitionName: String = null,
-    trigger: js.Array[Trigger] = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(overlay = overlay.asInstanceOf[js.Any])
-    if (afterVisibleChange != null) __obj.updateDynamic("afterVisibleChange")(js.Any.fromFunction1(afterVisibleChange))
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (arrowContent != null) __obj.updateDynamic("arrowContent")(arrowContent.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultVisible)) __obj.updateDynamic("defaultVisible")(defaultVisible.asInstanceOf[js.Any])
-    if (!js.isUndefined(destroyTooltipOnHide)) __obj.updateDynamic("destroyTooltipOnHide")(destroyTooltipOnHide.asInstanceOf[js.Any])
-    if (getTooltipContainer != null) __obj.updateDynamic("getTooltipContainer")(js.Any.fromFunction0(getTooltipContainer))
-    if (mouseEnterDelay != null) __obj.updateDynamic("mouseEnterDelay")(mouseEnterDelay.asInstanceOf[js.Any])
-    if (mouseLeaveDelay != null) __obj.updateDynamic("mouseLeaveDelay")(mouseLeaveDelay.asInstanceOf[js.Any])
-    if (onPopupAlign != null) __obj.updateDynamic("onPopupAlign")(js.Any.fromFunction2(onPopupAlign))
-    if (onVisibleChange != null) __obj.updateDynamic("onVisibleChange")(js.Any.fromFunction1(onVisibleChange))
-    if (overlayClassName != null) __obj.updateDynamic("overlayClassName")(overlayClassName.asInstanceOf[js.Any])
-    if (overlayStyle != null) __obj.updateDynamic("overlayStyle")(overlayStyle.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def afterVisibleChange(value: /* visible */ js.UndefOr[Boolean] => Unit): this.type = set("afterVisibleChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def align(value: js.Object): this.type = set("align", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowContentReactElement(value: ReactElement): this.type = set("arrowContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def arrowContent(value: TagMod[Any]): this.type = set("arrowContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultVisible(value: Boolean): this.type = set("defaultVisible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def destroyTooltipOnHide(value: Boolean): this.type = set("destroyTooltipOnHide", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getTooltipContainer(value: () => Element): this.type = set("getTooltipContainer", js.Any.fromFunction0(value))
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mouseEnterDelay(value: Double): this.type = set("mouseEnterDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mouseLeaveDelay(value: Double): this.type = set("mouseLeaveDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPopupAlign(value: (/* popupDomNode */ Element, /* align */ js.Object) => Unit): this.type = set("onPopupAlign", js.Any.fromFunction2(value))
+    @scala.inline
+    def onVisibleChange(value: /* visible */ js.UndefOr[Boolean] => Unit): this.type = set("onVisibleChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def overlayClassName(value: String): this.type = set("overlayClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overlayStyle(value: CSSProperties): this.type = set("overlayStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placement(value: Placement | js.Object): this.type = set("placement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trigger(value: js.Array[Trigger]): this.type = set("trigger", value.asInstanceOf[js.Any])
+    @scala.inline
+    def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }
-  type Props = typingsSlinky.rcTooltip.mod.RCTooltip.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(overlay: js.Function0[ReactChild] | ReactChild | ReactFragment | ReactPortal): Builder = {
+    val __props = js.Dynamic.literal(overlay = overlay.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
 }
 

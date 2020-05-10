@@ -1,15 +1,17 @@
 package typingsSlinky.rmcInputNumber.components
 
+import typingsSlinky.rmcInputNumber.indexIosMod.PropsType
 import typingsSlinky.rmcInputNumber.indexIosMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IndexDotios extends SharedApply_PropsType_1204788010[default] {
+object IndexDotios {
   @JSImport("rmc-input-number/lib/index.ios", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: PropsType): SharedBuilder_PropsType_990310604[default] = new SharedBuilder_PropsType_990310604[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: IndexDotios.type): SharedBuilder_PropsType_990310604[default] = new SharedBuilder_PropsType_990310604[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

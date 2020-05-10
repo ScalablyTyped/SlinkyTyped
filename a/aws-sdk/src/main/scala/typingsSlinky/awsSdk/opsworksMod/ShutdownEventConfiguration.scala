@@ -18,14 +18,41 @@ trait ShutdownEventConfiguration extends js.Object {
 
 object ShutdownEventConfiguration {
   @scala.inline
-  def apply(
-    DelayUntilElbConnectionsDrained: js.UndefOr[scala.Boolean] = js.undefined,
-    ExecutionTimeout: Int | scala.Double = null
-  ): ShutdownEventConfiguration = {
+  def apply(): ShutdownEventConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(DelayUntilElbConnectionsDrained)) __obj.updateDynamic("DelayUntilElbConnectionsDrained")(DelayUntilElbConnectionsDrained.asInstanceOf[js.Any])
-    if (ExecutionTimeout != null) __obj.updateDynamic("ExecutionTimeout")(ExecutionTimeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShutdownEventConfiguration]
   }
+  @scala.inline
+  implicit class ShutdownEventConfigurationOps[Self <: ShutdownEventConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDelayUntilElbConnectionsDrained(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DelayUntilElbConnectionsDrained")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelayUntilElbConnectionsDrained: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DelayUntilElbConnectionsDrained")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionTimeout(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionTimeout")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

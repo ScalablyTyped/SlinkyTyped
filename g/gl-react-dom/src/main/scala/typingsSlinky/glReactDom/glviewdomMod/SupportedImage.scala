@@ -15,16 +15,14 @@ trait SupportedImage extends js.Object
 
 object SupportedImage {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def imageSlashbmp: typingsSlinky.glReactDom.glReactDomStrings.imageSlashbmp = "image/bmp".asInstanceOf[typingsSlinky.glReactDom.glReactDomStrings.imageSlashbmp]
   @scala.inline
-  def imageSlashbmp: typingsSlinky.glReactDom.glReactDomStrings.imageSlashbmp = this.cast("image/bmp")
+  def imageSlashico: typingsSlinky.glReactDom.glReactDomStrings.imageSlashico = "image/ico".asInstanceOf[typingsSlinky.glReactDom.glReactDomStrings.imageSlashico]
   @scala.inline
-  def imageSlashico: typingsSlinky.glReactDom.glReactDomStrings.imageSlashico = this.cast("image/ico")
+  def imageSlashjpeg: typingsSlinky.glReactDom.glReactDomStrings.imageSlashjpeg = "image/jpeg".asInstanceOf[typingsSlinky.glReactDom.glReactDomStrings.imageSlashjpeg]
   @scala.inline
-  def imageSlashjpeg: typingsSlinky.glReactDom.glReactDomStrings.imageSlashjpeg = this.cast("image/jpeg")
+  def imageSlashpng: typingsSlinky.glReactDom.glReactDomStrings.imageSlashpng = "image/png".asInstanceOf[typingsSlinky.glReactDom.glReactDomStrings.imageSlashpng]
   @scala.inline
-  def imageSlashpng: typingsSlinky.glReactDom.glReactDomStrings.imageSlashpng = this.cast("image/png")
-  @scala.inline
-  def imageSlashwebp: typingsSlinky.glReactDom.glReactDomStrings.imageSlashwebp = this.cast("image/webp")
+  def imageSlashwebp: typingsSlinky.glReactDom.glReactDomStrings.imageSlashwebp = "image/webp".asInstanceOf[typingsSlinky.glReactDom.glReactDomStrings.imageSlashwebp]
 }
 

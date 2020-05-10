@@ -21,11 +21,41 @@ trait SchemaAnalyzeEntitiesRequest extends js.Object {
 
 object SchemaAnalyzeEntitiesRequest {
   @scala.inline
-  def apply(document: SchemaDocument = null, encodingType: String = null): SchemaAnalyzeEntitiesRequest = {
+  def apply(): SchemaAnalyzeEntitiesRequest = {
     val __obj = js.Dynamic.literal()
-    if (document != null) __obj.updateDynamic("document")(document.asInstanceOf[js.Any])
-    if (encodingType != null) __obj.updateDynamic("encodingType")(encodingType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnalyzeEntitiesRequest]
   }
+  @scala.inline
+  implicit class SchemaAnalyzeEntitiesRequestOps[Self <: SchemaAnalyzeEntitiesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocument(value: SchemaDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncodingType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncodingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodingType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

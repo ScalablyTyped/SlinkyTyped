@@ -21,7 +21,7 @@ class ^ () extends Tooltip {
 @js.native
 object ^
   extends TopLevel[
-      Instantiable0[Tooltip] with (Instantiable1[/* params */ js.Object, Tooltip]) with (Instantiable2[/* params */ js.Object, /* srcNodeRef */ typingsSlinky.std.HTMLElement, Tooltip])
+      Instantiable0[Tooltip] with (Instantiable1[/* params */ js.Object, Tooltip]) with (Instantiable2[/* params */ js.Object, /* srcNodeRef */ HTMLElement, Tooltip])
     ] {
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/Tooltip._MasterTooltip.html

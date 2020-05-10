@@ -30,20 +30,77 @@ trait PolicyAttributeTypeDescription extends js.Object {
 
 object PolicyAttributeTypeDescription {
   @scala.inline
-  def apply(
-    AttributeName: AttributeName = null,
-    AttributeType: AttributeType = null,
-    Cardinality: Cardinality = null,
-    DefaultValue: DefaultValue = null,
-    Description: Description = null
-  ): PolicyAttributeTypeDescription = {
+  def apply(): PolicyAttributeTypeDescription = {
     val __obj = js.Dynamic.literal()
-    if (AttributeName != null) __obj.updateDynamic("AttributeName")(AttributeName.asInstanceOf[js.Any])
-    if (AttributeType != null) __obj.updateDynamic("AttributeType")(AttributeType.asInstanceOf[js.Any])
-    if (Cardinality != null) __obj.updateDynamic("Cardinality")(Cardinality.asInstanceOf[js.Any])
-    if (DefaultValue != null) __obj.updateDynamic("DefaultValue")(DefaultValue.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyAttributeTypeDescription]
   }
+  @scala.inline
+  implicit class PolicyAttributeTypeDescriptionOps[Self <: PolicyAttributeTypeDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributeName(value: AttributeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttributeType(value: AttributeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCardinality(value: Cardinality): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cardinality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCardinality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cardinality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: DefaultValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

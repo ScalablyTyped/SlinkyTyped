@@ -18,11 +18,41 @@ trait DeletionTaskFailureReasonType extends js.Object {
 
 object DeletionTaskFailureReasonType {
   @scala.inline
-  def apply(Reason: ReasonType = null, RoleUsageList: RoleUsageListType = null): DeletionTaskFailureReasonType = {
+  def apply(): DeletionTaskFailureReasonType = {
     val __obj = js.Dynamic.literal()
-    if (Reason != null) __obj.updateDynamic("Reason")(Reason.asInstanceOf[js.Any])
-    if (RoleUsageList != null) __obj.updateDynamic("RoleUsageList")(RoleUsageList.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeletionTaskFailureReasonType]
   }
+  @scala.inline
+  implicit class DeletionTaskFailureReasonTypeOps[Self <: DeletionTaskFailureReasonType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReason(value: ReasonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleUsageList(value: RoleUsageListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleUsageList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleUsageList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleUsageList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

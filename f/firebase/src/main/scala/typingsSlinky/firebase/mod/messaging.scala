@@ -2,7 +2,6 @@ package typingsSlinky.firebase.mod
 
 import org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration
 import typingsSlinky.firebase.mod.app.App
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,9 +64,9 @@ object messaging extends js.Object {
     def onMessage(nextOrObserver: NextFn[_]): Unsubscribe = js.native
     def onMessage(nextOrObserver: NextFn[_], error: ErrorFn[js.Error]): Unsubscribe = js.native
     def onMessage(nextOrObserver: NextFn[_], error: ErrorFn[js.Error], completed: CompleteFn): Unsubscribe = js.native
-    def onMessage(nextOrObserver: Observer[_, Error]): Unsubscribe = js.native
-    def onMessage(nextOrObserver: Observer[_, Error], error: ErrorFn[js.Error]): Unsubscribe = js.native
-    def onMessage(nextOrObserver: Observer[_, Error], error: ErrorFn[js.Error], completed: CompleteFn): Unsubscribe = js.native
+    def onMessage(nextOrObserver: Observer[_, js.Error]): Unsubscribe = js.native
+    def onMessage(nextOrObserver: Observer[_, js.Error], error: ErrorFn[js.Error]): Unsubscribe = js.native
+    def onMessage(nextOrObserver: Observer[_, js.Error], error: ErrorFn[js.Error], completed: CompleteFn): Unsubscribe = js.native
     /**
       * You should listen for token refreshes so your web app knows when FCM
       * has invalidated your existing token and you need to call `getToken()`
@@ -82,9 +81,9 @@ object messaging extends js.Object {
     def onTokenRefresh(nextOrObserver: NextFn[_]): Unsubscribe = js.native
     def onTokenRefresh(nextOrObserver: NextFn[_], error: ErrorFn[js.Error]): Unsubscribe = js.native
     def onTokenRefresh(nextOrObserver: NextFn[_], error: ErrorFn[js.Error], completed: CompleteFn): Unsubscribe = js.native
-    def onTokenRefresh(nextOrObserver: Observer[_, Error]): Unsubscribe = js.native
-    def onTokenRefresh(nextOrObserver: Observer[_, Error], error: ErrorFn[js.Error]): Unsubscribe = js.native
-    def onTokenRefresh(nextOrObserver: Observer[_, Error], error: ErrorFn[js.Error], completed: CompleteFn): Unsubscribe = js.native
+    def onTokenRefresh(nextOrObserver: Observer[_, js.Error]): Unsubscribe = js.native
+    def onTokenRefresh(nextOrObserver: Observer[_, js.Error], error: ErrorFn[js.Error]): Unsubscribe = js.native
+    def onTokenRefresh(nextOrObserver: Observer[_, js.Error], error: ErrorFn[js.Error], completed: CompleteFn): Unsubscribe = js.native
     /**
       * Notification permissions are required to send a user push messages.
       * Calling this method displays the permission dialog to the user and

@@ -4,14 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Beacon extends js.Object {
-  var accuracy: Double
-  var major: String
-  var minor: String
-  var proximity: String
-  var rssi: Double
-  var tx: Double
-  var uuid: String
+  var accuracy: Double = js.native
+  var major: String = js.native
+  var minor: String = js.native
+  var proximity: String = js.native
+  var rssi: Double = js.native
+  var tx: Double = js.native
+  var uuid: String = js.native
 }
 
 object Beacon {
@@ -26,8 +27,57 @@ object Beacon {
     uuid: String
   ): Beacon = {
     val __obj = js.Dynamic.literal(accuracy = accuracy.asInstanceOf[js.Any], major = major.asInstanceOf[js.Any], minor = minor.asInstanceOf[js.Any], proximity = proximity.asInstanceOf[js.Any], rssi = rssi.asInstanceOf[js.Any], tx = tx.asInstanceOf[js.Any], uuid = uuid.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Beacon]
   }
+  @scala.inline
+  implicit class BeaconOps[Self <: Beacon] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccuracy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMajor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("major")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProximity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proximity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRssi(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rssi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

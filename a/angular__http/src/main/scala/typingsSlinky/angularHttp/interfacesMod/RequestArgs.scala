@@ -1,41 +1,40 @@
 package typingsSlinky.angularHttp.interfacesMod
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angularHttp.enumsMod.RequestMethod
-import typingsSlinky.angularHttp.enumsMod.ResponseContentType
-import typingsSlinky.angularHttp.headersMod.Headers
-import typingsSlinky.angularHttp.urlSearchParamsMod.URLSearchParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RequestArgs extends RequestOptionsArgs {
   @JSName("url")
-  var url_RequestArgs: String | Null
+  var url_RequestArgs: String | Null = js.native
 }
 
 object RequestArgs {
   @scala.inline
-  def apply(
-    body: js.Any = null,
-    headers: Headers = null,
-    method: String | RequestMethod = null,
-    params: String | URLSearchParams | (StringDictionary[js.Any | js.Array[_]]) = null,
-    responseType: ResponseContentType = null,
-    search: String | URLSearchParams | (StringDictionary[js.Any | js.Array[_]]) = null,
-    url: String = null,
-    withCredentials: js.UndefOr[Boolean] = js.undefined
-  ): RequestArgs = {
+  def apply(): RequestArgs = {
     val __obj = js.Dynamic.literal()
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (params != null) __obj.updateDynamic("params")(params.asInstanceOf[js.Any])
-    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
-    if (search != null) __obj.updateDynamic("search")(search.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (!js.isUndefined(withCredentials)) __obj.updateDynamic("withCredentials")(withCredentials.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestArgs]
   }
+  @scala.inline
+  implicit class RequestArgsOps[Self <: RequestArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrlNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(null)
+        ret
+    }
+  }
+  
 }
 

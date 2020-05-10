@@ -16,18 +16,16 @@ trait IdentityType extends js.Object
 
 object IdentityType {
   @scala.inline
-  def agent_forwarding: typingsSlinky.nodeZendesk.nodeZendeskStrings.agent_forwarding = this.cast("agent_forwarding")
+  def agent_forwarding: typingsSlinky.nodeZendesk.nodeZendeskStrings.agent_forwarding = "agent_forwarding".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.agent_forwarding]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def email: typingsSlinky.nodeZendesk.nodeZendeskStrings.email = "email".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.email]
   @scala.inline
-  def email: typingsSlinky.nodeZendesk.nodeZendeskStrings.email = this.cast("email")
+  def facebook: typingsSlinky.nodeZendesk.nodeZendeskStrings.facebook = "facebook".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.facebook]
   @scala.inline
-  def facebook: typingsSlinky.nodeZendesk.nodeZendeskStrings.facebook = this.cast("facebook")
+  def google: typingsSlinky.nodeZendesk.nodeZendeskStrings.google = "google".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.google]
   @scala.inline
-  def google: typingsSlinky.nodeZendesk.nodeZendeskStrings.google = this.cast("google")
+  def phone_number: typingsSlinky.nodeZendesk.nodeZendeskStrings.phone_number = "phone_number".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.phone_number]
   @scala.inline
-  def phone_number: typingsSlinky.nodeZendesk.nodeZendeskStrings.phone_number = this.cast("phone_number")
-  @scala.inline
-  def sdk: typingsSlinky.nodeZendesk.nodeZendeskStrings.sdk = this.cast("sdk")
+  def sdk: typingsSlinky.nodeZendesk.nodeZendeskStrings.sdk = "sdk".asInstanceOf[typingsSlinky.nodeZendesk.nodeZendeskStrings.sdk]
 }
 

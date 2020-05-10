@@ -14,14 +14,12 @@ trait ControlSetKey extends js.Object
 
 object ControlSetKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.yandexMaps.yandexMapsStrings.default = "default".asInstanceOf[typingsSlinky.yandexMaps.yandexMapsStrings.default]
   @scala.inline
-  def default: typingsSlinky.yandexMaps.yandexMapsStrings.default = this.cast("default")
+  def largeMapDefaultSet: typingsSlinky.yandexMaps.yandexMapsStrings.largeMapDefaultSet = "largeMapDefaultSet".asInstanceOf[typingsSlinky.yandexMaps.yandexMapsStrings.largeMapDefaultSet]
   @scala.inline
-  def largeMapDefaultSet: typingsSlinky.yandexMaps.yandexMapsStrings.largeMapDefaultSet = this.cast("largeMapDefaultSet")
+  def mediumMapDefaultSet: typingsSlinky.yandexMaps.yandexMapsStrings.mediumMapDefaultSet = "mediumMapDefaultSet".asInstanceOf[typingsSlinky.yandexMaps.yandexMapsStrings.mediumMapDefaultSet]
   @scala.inline
-  def mediumMapDefaultSet: typingsSlinky.yandexMaps.yandexMapsStrings.mediumMapDefaultSet = this.cast("mediumMapDefaultSet")
-  @scala.inline
-  def smallMapDefaultSet: typingsSlinky.yandexMaps.yandexMapsStrings.smallMapDefaultSet = this.cast("smallMapDefaultSet")
+  def smallMapDefaultSet: typingsSlinky.yandexMaps.yandexMapsStrings.smallMapDefaultSet = "smallMapDefaultSet".asInstanceOf[typingsSlinky.yandexMaps.yandexMapsStrings.smallMapDefaultSet]
 }
 

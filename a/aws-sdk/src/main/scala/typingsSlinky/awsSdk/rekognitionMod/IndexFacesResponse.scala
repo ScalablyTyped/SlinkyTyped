@@ -26,18 +26,65 @@ trait IndexFacesResponse extends js.Object {
 
 object IndexFacesResponse {
   @scala.inline
-  def apply(
-    FaceModelVersion: String = null,
-    FaceRecords: FaceRecordList = null,
-    OrientationCorrection: OrientationCorrection = null,
-    UnindexedFaces: UnindexedFaces = null
-  ): IndexFacesResponse = {
+  def apply(): IndexFacesResponse = {
     val __obj = js.Dynamic.literal()
-    if (FaceModelVersion != null) __obj.updateDynamic("FaceModelVersion")(FaceModelVersion.asInstanceOf[js.Any])
-    if (FaceRecords != null) __obj.updateDynamic("FaceRecords")(FaceRecords.asInstanceOf[js.Any])
-    if (OrientationCorrection != null) __obj.updateDynamic("OrientationCorrection")(OrientationCorrection.asInstanceOf[js.Any])
-    if (UnindexedFaces != null) __obj.updateDynamic("UnindexedFaces")(UnindexedFaces.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndexFacesResponse]
   }
+  @scala.inline
+  implicit class IndexFacesResponseOps[Self <: IndexFacesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFaceModelVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceModelVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFaceModelVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceModelVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFaceRecords(value: FaceRecordList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFaceRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaceRecords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientationCorrection(value: OrientationCorrection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrientationCorrection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientationCorrection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrientationCorrection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnindexedFaces(value: UnindexedFaces): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnindexedFaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnindexedFaces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UnindexedFaces")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

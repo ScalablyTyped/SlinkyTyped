@@ -1,6 +1,6 @@
 package typingsSlinky.ngFileUpload.mod.angularAugmentingMod.angularFileUpload
 
-import typingsSlinky.std.EventTarget
+import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.std.ProgressEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`

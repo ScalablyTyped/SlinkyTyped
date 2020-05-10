@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ImagePickerPropTypes extends js.Object {
-  var files: js.UndefOr[js.Array[js.Object]] = js.undefined
-  var onAddImageClick: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var files: js.UndefOr[js.Array[js.Object]] = js.native
+  var onAddImageClick: js.UndefOr[js.Function0[Unit]] = js.native
   var onChange: js.UndefOr[
     js.Function3[
       /* files */ js.Array[js.Object], 
@@ -14,35 +15,114 @@ trait ImagePickerPropTypes extends js.Object {
       /* index */ js.UndefOr[Double], 
       Unit
     ]
-  ] = js.undefined
-  var onFail: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.undefined
+  ] = js.native
+  var onFail: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
   var onImageClick: js.UndefOr[
     js.Function2[/* index */ js.UndefOr[Double], /* files */ js.UndefOr[js.Array[js.Object]], Unit]
-  ] = js.undefined
-  var selectable: js.UndefOr[Boolean] = js.undefined
-  var styles: js.UndefOr[js.Object] = js.undefined
+  ] = js.native
+  var selectable: js.UndefOr[Boolean] = js.native
+  var styles: js.UndefOr[js.Object] = js.native
 }
 
 object ImagePickerPropTypes {
   @scala.inline
-  def apply(
-    files: js.Array[js.Object] = null,
-    onAddImageClick: () => Unit = null,
-    onChange: (/* files */ js.Array[js.Object], /* operationType */ String, /* index */ js.UndefOr[Double]) => Unit = null,
-    onFail: /* msg */ String => Unit = null,
-    onImageClick: (/* index */ js.UndefOr[Double], /* files */ js.UndefOr[js.Array[js.Object]]) => Unit = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    styles: js.Object = null
-  ): ImagePickerPropTypes = {
+  def apply(): ImagePickerPropTypes = {
     val __obj = js.Dynamic.literal()
-    if (files != null) __obj.updateDynamic("files")(files.asInstanceOf[js.Any])
-    if (onAddImageClick != null) __obj.updateDynamic("onAddImageClick")(js.Any.fromFunction0(onAddImageClick))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction3(onChange))
-    if (onFail != null) __obj.updateDynamic("onFail")(js.Any.fromFunction1(onFail))
-    if (onImageClick != null) __obj.updateDynamic("onImageClick")(js.Any.fromFunction2(onImageClick))
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImagePickerPropTypes]
   }
+  @scala.inline
+  implicit class ImagePickerPropTypesOps[Self <: ImagePickerPropTypes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFiles(value: js.Array[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAddImageClick(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAddImageClick")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAddImageClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAddImageClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(
+      value: (/* files */ js.Array[js.Object], /* operationType */ String, /* index */ js.UndefOr[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFail(value: /* msg */ String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFail")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnImageClick(value: (/* index */ js.UndefOr[Double], /* files */ js.UndefOr[js.Array[js.Object]]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onImageClick")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnImageClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onImageClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyles(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

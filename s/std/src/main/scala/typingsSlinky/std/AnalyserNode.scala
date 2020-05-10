@@ -14,15 +14,19 @@ trait AnalyserNode extends AudioNode {
   var maxDecibels: Double = js.native
   var minDecibels: Double = js.native
   var smoothingTimeConstant: Double = js.native
-  def getByteFrequencyData(array: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
-  def getByteTimeDomainData(array: scala.scalajs.js.typedarray.Uint8Array): Unit = js.native
-  def getFloatFrequencyData(array: scala.scalajs.js.typedarray.Float32Array): Unit = js.native
-  def getFloatTimeDomainData(array: scala.scalajs.js.typedarray.Float32Array): Unit = js.native
+  def getByteFrequencyData(array: js.typedarray.Uint8Array): Unit = js.native
+  def getByteTimeDomainData(array: js.typedarray.Uint8Array): Unit = js.native
+  def getFloatFrequencyData(array: js.typedarray.Float32Array): Unit = js.native
+  def getFloatTimeDomainData(array: js.typedarray.Float32Array): Unit = js.native
 }
 
 @JSGlobal("AnalyserNode")
 @js.native
 object AnalyserNode
-  extends Instantiable1[/* context */ BaseAudioContext, AnalyserNode]
-     with Instantiable2[/* context */ BaseAudioContext, /* options */ AnalyserOptions, AnalyserNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.AnalyserNode]
+     with Instantiable2[
+      /* context */ BaseAudioContext, 
+      /* options */ AnalyserOptions, 
+      org.scalajs.dom.raw.AnalyserNode
+    ]
 

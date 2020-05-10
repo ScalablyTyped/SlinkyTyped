@@ -26,11 +26,41 @@ trait SchemaDataDiskAssignment extends js.Object {
 
 object SchemaDataDiskAssignment {
   @scala.inline
-  def apply(dataDisks: js.Array[String] = null, vmInstance: String = null): SchemaDataDiskAssignment = {
+  def apply(): SchemaDataDiskAssignment = {
     val __obj = js.Dynamic.literal()
-    if (dataDisks != null) __obj.updateDynamic("dataDisks")(dataDisks.asInstanceOf[js.Any])
-    if (vmInstance != null) __obj.updateDynamic("vmInstance")(vmInstance.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDataDiskAssignment]
   }
+  @scala.inline
+  implicit class SchemaDataDiskAssignmentOps[Self <: SchemaDataDiskAssignment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataDisks(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDisks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataDisks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataDisks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVmInstance(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmInstance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVmInstance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vmInstance")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

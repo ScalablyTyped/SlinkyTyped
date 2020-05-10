@@ -14,10 +14,29 @@ trait Fmp4HlsSettings extends js.Object {
 
 object Fmp4HlsSettings {
   @scala.inline
-  def apply(AudioRenditionSets: string = null): Fmp4HlsSettings = {
+  def apply(): Fmp4HlsSettings = {
     val __obj = js.Dynamic.literal()
-    if (AudioRenditionSets != null) __obj.updateDynamic("AudioRenditionSets")(AudioRenditionSets.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fmp4HlsSettings]
   }
+  @scala.inline
+  implicit class Fmp4HlsSettingsOps[Self <: Fmp4HlsSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudioRenditionSets(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioRenditionSets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAudioRenditionSets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AudioRenditionSets")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

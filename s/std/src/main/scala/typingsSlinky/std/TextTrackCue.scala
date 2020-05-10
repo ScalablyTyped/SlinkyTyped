@@ -59,7 +59,7 @@ trait TextTrackCue extends EventTarget {
   def removeEventListener_enter(
     `type`: enter,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_exit(`type`: exit, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -73,7 +73,7 @@ trait TextTrackCue extends EventTarget {
   def removeEventListener_exit(
     `type`: exit,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
@@ -84,6 +84,6 @@ object TextTrackCue
       /* startTime */ Double, 
       /* endTime */ Double, 
       /* text */ java.lang.String, 
-      TextTrackCue
+      org.scalajs.dom.raw.TextTrackCue
     ]
 

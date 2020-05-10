@@ -34,10 +34,6 @@ class DataPoint protected () extends IPoint {
   @JSName("ctx")
   var ctx_DataPoint: AltitudeContext = js.native
   var data: js.Any = js.native
-  /* CompleteClass */
-  override var lat: Latitude = js.native
-  /* CompleteClass */
-  override var lng: Longitude = js.native
   var wt: Double = js.native
 }
 

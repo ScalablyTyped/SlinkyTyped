@@ -7,11 +7,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IObservableJSON extends IObservableMap[JSONValue] {
   /**
     * Serialize the model to JSON.
     */
-  def toJSON(): JSONObject
+  def toJSON(): JSONObject = js.native
 }
 
 @JSImport("@jupyterlab/observables/lib/observablejson", "IObservableJSON")

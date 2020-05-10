@@ -13,33 +13,34 @@ import scala.scalajs.js.annotation._
   * allows foreign AMD loaders to be used without their plugins.
   *
   */
+@js.native
 trait i18n_ extends js.Object {
   /**
     *
     */
-  var cache: js.Object
+  var cache: js.Object = js.native
   /**
     *
     */
-  var dynamic: Boolean
+  var dynamic: Boolean = js.native
   /**
     *
     */
-  var unitTests: js.Array[_]
-  /**
-    *
-    * @param moduleName
-    * @param bundleName
-    * @param locale
-    */
-  def getL10nName(moduleName: js.Any, bundleName: js.Any, locale: js.Any): String
+  var unitTests: js.Array[_] = js.native
   /**
     *
     * @param moduleName
     * @param bundleName
     * @param locale
     */
-  def getLocalization(moduleName: js.Any, bundleName: js.Any, locale: js.Any): js.Any
+  def getL10nName(moduleName: js.Any, bundleName: js.Any, locale: js.Any): String = js.native
+  /**
+    *
+    * @param moduleName
+    * @param bundleName
+    * @param locale
+    */
+  def getLocalization(moduleName: js.Any, bundleName: js.Any, locale: js.Any): js.Any = js.native
   /**
     * id is in one of the following formats
     *
@@ -152,7 +153,7 @@ trait i18n_ extends js.Object {
     * @param require
     * @param load
     */
-  def load(id: js.Any, require: js.Any, load: js.Any): Unit
+  def load(id: js.Any, require: js.Any, load: js.Any): Unit = js.native
   /**
     * id may be relative.
     * preload has form *preload*<path>/nls/<module>*<flattened locales> and
@@ -161,12 +162,12 @@ trait i18n_ extends js.Object {
     * @param id
     * @param toAbsMid
     */
-  def normalize(id: js.Any, toAbsMid: js.Any): js.Any
+  def normalize(id: js.Any, toAbsMid: js.Any): js.Any = js.native
   /**
     *
     * @param locale
     */
-  def normalizeLocale(locale: js.Any): js.Any
+  def normalizeLocale(locale: js.Any): js.Any = js.native
 }
 
 object i18n_ {
@@ -182,8 +183,63 @@ object i18n_ {
     unitTests: js.Array[_]
   ): i18n_ = {
     val __obj = js.Dynamic.literal(cache = cache.asInstanceOf[js.Any], dynamic = dynamic.asInstanceOf[js.Any], getL10nName = js.Any.fromFunction3(getL10nName), getLocalization = js.Any.fromFunction3(getLocalization), load = js.Any.fromFunction3(load), normalize = js.Any.fromFunction2(normalize), normalizeLocale = js.Any.fromFunction1(normalizeLocale), unitTests = unitTests.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[i18n_]
   }
+  @scala.inline
+  implicit class i18n_Ops[Self <: i18n_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCache(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDynamic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetL10nName(value: (js.Any, js.Any, js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getL10nName")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withGetLocalization(value: (js.Any, js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocalization")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withLoad(value: (js.Any, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withNormalize(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withNormalizeLocale(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalizeLocale")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUnitTests(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitTests")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

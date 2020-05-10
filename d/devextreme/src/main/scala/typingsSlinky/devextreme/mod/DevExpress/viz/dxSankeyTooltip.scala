@@ -1,74 +1,121 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonBlur
-import typingsSlinky.devextreme.AnonDashStyleOpacity
 import typingsSlinky.devextreme.AnonSource
 import typingsSlinky.devextreme.AnonTitle
 import typingsSlinky.devextreme.AnonWeightIn
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
-import typingsSlinky.devextreme.mod.DevExpress.ui.format
 import typingsSlinky.devextreme.mod._Global_.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxSankeyTooltip extends BaseWidgetTooltip {
   /** Customizes link tooltips' appearance. */
-  var customizeLinkTooltip: js.UndefOr[js.Function1[/* info */ AnonSource, _]] = js.undefined
+  var customizeLinkTooltip: js.UndefOr[js.Function1[/* info */ AnonSource, _]] = js.native
   /** Customizes node tooltips' appearance. */
-  var customizeNodeTooltip: js.UndefOr[js.Function1[/* info */ AnonTitle, _]] = js.undefined
+  var customizeNodeTooltip: js.UndefOr[js.Function1[/* info */ AnonTitle, _]] = js.native
   /** Specifies a custom template for a link's tooltip. */
   var linkTooltipTemplate: js.UndefOr[
     template | (js.Function2[/* info */ AnonSource, /* element */ dxElement, String | Element | JQuery])
-  ] = js.undefined
+  ] = js.native
   /** Specifies a custom template for a node's tooltip. */
   var nodeTooltipTemplate: js.UndefOr[
     template | (js.Function2[/* info */ AnonWeightIn, /* element */ dxElement, String | Element | JQuery])
-  ] = js.undefined
+  ] = js.native
 }
 
 object dxSankeyTooltip {
   @scala.inline
-  def apply(
-    arrowLength: Int | Double = null,
-    border: AnonDashStyleOpacity = null,
-    color: String = null,
-    container: String | Element | JQuery = null,
-    cornerRadius: Int | Double = null,
-    customizeLinkTooltip: /* info */ AnonSource => _ = null,
-    customizeNodeTooltip: /* info */ AnonTitle => _ = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    font: Font = null,
-    format: format = null,
-    linkTooltipTemplate: template | (js.Function2[/* info */ AnonSource, /* element */ dxElement, String | Element | JQuery]) = null,
-    nodeTooltipTemplate: template | (js.Function2[/* info */ AnonWeightIn, /* element */ dxElement, String | Element | JQuery]) = null,
-    opacity: Int | Double = null,
-    paddingLeftRight: Int | Double = null,
-    paddingTopBottom: Int | Double = null,
-    shadow: AnonBlur = null,
-    zIndex: Int | Double = null
-  ): dxSankeyTooltip = {
+  def apply(): dxSankeyTooltip = {
     val __obj = js.Dynamic.literal()
-    if (arrowLength != null) __obj.updateDynamic("arrowLength")(arrowLength.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (cornerRadius != null) __obj.updateDynamic("cornerRadius")(cornerRadius.asInstanceOf[js.Any])
-    if (customizeLinkTooltip != null) __obj.updateDynamic("customizeLinkTooltip")(js.Any.fromFunction1(customizeLinkTooltip))
-    if (customizeNodeTooltip != null) __obj.updateDynamic("customizeNodeTooltip")(js.Any.fromFunction1(customizeNodeTooltip))
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (linkTooltipTemplate != null) __obj.updateDynamic("linkTooltipTemplate")(linkTooltipTemplate.asInstanceOf[js.Any])
-    if (nodeTooltipTemplate != null) __obj.updateDynamic("nodeTooltipTemplate")(nodeTooltipTemplate.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (paddingLeftRight != null) __obj.updateDynamic("paddingLeftRight")(paddingLeftRight.asInstanceOf[js.Any])
-    if (paddingTopBottom != null) __obj.updateDynamic("paddingTopBottom")(paddingTopBottom.asInstanceOf[js.Any])
-    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxSankeyTooltip]
   }
+  @scala.inline
+  implicit class dxSankeyTooltipOps[Self <: dxSankeyTooltip] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomizeLinkTooltip(value: /* info */ AnonSource => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeLinkTooltip")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomizeLinkTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeLinkTooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomizeNodeTooltip(value: /* info */ AnonTitle => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeNodeTooltip")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCustomizeNodeTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customizeNodeTooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkTooltipTemplateFunction2(value: (/* info */ AnonSource, /* element */ dxElement) => String | Element | JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkTooltipTemplate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLinkTooltipTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkTooltipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkTooltipTemplate(
+      value: template | (js.Function2[/* info */ AnonSource, /* element */ dxElement, String | Element | JQuery])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkTooltipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkTooltipTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkTooltipTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeTooltipTemplateFunction2(value: (/* info */ AnonWeightIn, /* element */ dxElement) => String | Element | JQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTooltipTemplate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withNodeTooltipTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTooltipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeTooltipTemplate(
+      value: template | (js.Function2[/* info */ AnonWeightIn, /* element */ dxElement, String | Element | JQuery])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTooltipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeTooltipTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTooltipTemplate")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

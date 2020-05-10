@@ -5,31 +5,83 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetMotionProps extends js.Object {
   var motion: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ] = js.undefined
-  var openAnimation: js.UndefOr[OpenAnimation] = js.undefined
+  ] = js.native
+  var openAnimation: js.UndefOr[OpenAnimation] = js.native
   var openTransitionName: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionNameType */ js.Any
-  ] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
 }
 
 object GetMotionProps {
   @scala.inline
-  def apply(
-    motion: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any = null,
-    openAnimation: OpenAnimation = null,
-    openTransitionName: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionNameType */ js.Any = null,
-    prefixCls: String = null
-  ): GetMotionProps = {
+  def apply(): GetMotionProps = {
     val __obj = js.Dynamic.literal()
-    if (motion != null) __obj.updateDynamic("motion")(motion.asInstanceOf[js.Any])
-    if (openAnimation != null) __obj.updateDynamic("openAnimation")(openAnimation.asInstanceOf[js.Any])
-    if (openTransitionName != null) __obj.updateDynamic("openTransitionName")(openTransitionName.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMotionProps]
   }
+  @scala.inline
+  implicit class GetMotionPropsOps[Self <: GetMotionProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMotion(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMotion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenAnimation(value: OpenAnimation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openAnimation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenTransitionName(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionNameType */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openTransitionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenTransitionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openTransitionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

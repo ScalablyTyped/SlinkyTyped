@@ -18,11 +18,41 @@ trait TableToReload extends js.Object {
 
 object TableToReload {
   @scala.inline
-  def apply(SchemaName: String = null, TableName: String = null): TableToReload = {
+  def apply(): TableToReload = {
     val __obj = js.Dynamic.literal()
-    if (SchemaName != null) __obj.updateDynamic("SchemaName")(SchemaName.asInstanceOf[js.Any])
-    if (TableName != null) __obj.updateDynamic("TableName")(TableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableToReload]
   }
+  @scala.inline
+  implicit class TableToReloadOps[Self <: TableToReload] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSchemaName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SchemaName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -19,24 +19,22 @@ trait ShortcutNameType extends js.Object
 
 object ShortcutNameType {
   @scala.inline
-  def album: typingsSlinky.jsmediatags.jsmediatagsStrings.album = this.cast("album")
+  def album: typingsSlinky.jsmediatags.jsmediatagsStrings.album = "album".asInstanceOf[typingsSlinky.jsmediatags.jsmediatagsStrings.album]
   @scala.inline
-  def artist: typingsSlinky.jsmediatags.jsmediatagsStrings.artist = this.cast("artist")
+  def artist: typingsSlinky.jsmediatags.jsmediatagsStrings.artist = "artist".asInstanceOf[typingsSlinky.jsmediatags.jsmediatagsStrings.artist]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def comment: typingsSlinky.jsmediatags.jsmediatagsStrings.comment = "comment".asInstanceOf[typingsSlinky.jsmediatags.jsmediatagsStrings.comment]
   @scala.inline
-  def comment: typingsSlinky.jsmediatags.jsmediatagsStrings.comment = this.cast("comment")
+  def genre: typingsSlinky.jsmediatags.jsmediatagsStrings.genre = "genre".asInstanceOf[typingsSlinky.jsmediatags.jsmediatagsStrings.genre]
   @scala.inline
-  def genre: typingsSlinky.jsmediatags.jsmediatagsStrings.genre = this.cast("genre")
+  def lyrics: typingsSlinky.jsmediatags.jsmediatagsStrings.lyrics = "lyrics".asInstanceOf[typingsSlinky.jsmediatags.jsmediatagsStrings.lyrics]
   @scala.inline
-  def lyrics: typingsSlinky.jsmediatags.jsmediatagsStrings.lyrics = this.cast("lyrics")
+  def picture: typingsSlinky.jsmediatags.jsmediatagsStrings.picture = "picture".asInstanceOf[typingsSlinky.jsmediatags.jsmediatagsStrings.picture]
   @scala.inline
-  def picture: typingsSlinky.jsmediatags.jsmediatagsStrings.picture = this.cast("picture")
+  def title: typingsSlinky.jsmediatags.jsmediatagsStrings.title = "title".asInstanceOf[typingsSlinky.jsmediatags.jsmediatagsStrings.title]
   @scala.inline
-  def title: typingsSlinky.jsmediatags.jsmediatagsStrings.title = this.cast("title")
+  def track: typingsSlinky.jsmediatags.jsmediatagsStrings.track = "track".asInstanceOf[typingsSlinky.jsmediatags.jsmediatagsStrings.track]
   @scala.inline
-  def track: typingsSlinky.jsmediatags.jsmediatagsStrings.track = this.cast("track")
-  @scala.inline
-  def year: typingsSlinky.jsmediatags.jsmediatagsStrings.year = this.cast("year")
+  def year: typingsSlinky.jsmediatags.jsmediatagsStrings.year = "year".asInstanceOf[typingsSlinky.jsmediatags.jsmediatagsStrings.year]
 }
 

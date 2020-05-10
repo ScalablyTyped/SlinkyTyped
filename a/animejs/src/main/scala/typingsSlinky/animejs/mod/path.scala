@@ -1,8 +1,8 @@
 package typingsSlinky.animejs.mod
 
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.animejs.AnonEl
-import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.SVGElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

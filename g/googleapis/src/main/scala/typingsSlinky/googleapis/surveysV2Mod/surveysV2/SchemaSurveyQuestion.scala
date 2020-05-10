@@ -99,46 +99,233 @@ trait SchemaSurveyQuestion extends js.Object {
 
 object SchemaSurveyQuestion {
   @scala.inline
-  def apply(
-    answerOrder: String = null,
-    answers: js.Array[String] = null,
-    hasOther: js.UndefOr[Boolean] = js.undefined,
-    highValueLabel: String = null,
-    images: js.Array[SchemaSurveyQuestionImage] = null,
-    lastAnswerPositionPinned: js.UndefOr[Boolean] = js.undefined,
-    lowValueLabel: String = null,
-    mustPickSuggestion: js.UndefOr[Boolean] = js.undefined,
-    numStars: String = null,
-    openTextPlaceholder: String = null,
-    openTextSuggestions: js.Array[String] = null,
-    question: String = null,
-    sentimentText: String = null,
-    singleLineResponse: js.UndefOr[Boolean] = js.undefined,
-    thresholdAnswers: js.Array[String] = null,
-    `type`: String = null,
-    unitOfMeasurementLabel: String = null,
-    videoId: String = null
-  ): SchemaSurveyQuestion = {
+  def apply(): SchemaSurveyQuestion = {
     val __obj = js.Dynamic.literal()
-    if (answerOrder != null) __obj.updateDynamic("answerOrder")(answerOrder.asInstanceOf[js.Any])
-    if (answers != null) __obj.updateDynamic("answers")(answers.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasOther)) __obj.updateDynamic("hasOther")(hasOther.asInstanceOf[js.Any])
-    if (highValueLabel != null) __obj.updateDynamic("highValueLabel")(highValueLabel.asInstanceOf[js.Any])
-    if (images != null) __obj.updateDynamic("images")(images.asInstanceOf[js.Any])
-    if (!js.isUndefined(lastAnswerPositionPinned)) __obj.updateDynamic("lastAnswerPositionPinned")(lastAnswerPositionPinned.asInstanceOf[js.Any])
-    if (lowValueLabel != null) __obj.updateDynamic("lowValueLabel")(lowValueLabel.asInstanceOf[js.Any])
-    if (!js.isUndefined(mustPickSuggestion)) __obj.updateDynamic("mustPickSuggestion")(mustPickSuggestion.asInstanceOf[js.Any])
-    if (numStars != null) __obj.updateDynamic("numStars")(numStars.asInstanceOf[js.Any])
-    if (openTextPlaceholder != null) __obj.updateDynamic("openTextPlaceholder")(openTextPlaceholder.asInstanceOf[js.Any])
-    if (openTextSuggestions != null) __obj.updateDynamic("openTextSuggestions")(openTextSuggestions.asInstanceOf[js.Any])
-    if (question != null) __obj.updateDynamic("question")(question.asInstanceOf[js.Any])
-    if (sentimentText != null) __obj.updateDynamic("sentimentText")(sentimentText.asInstanceOf[js.Any])
-    if (!js.isUndefined(singleLineResponse)) __obj.updateDynamic("singleLineResponse")(singleLineResponse.asInstanceOf[js.Any])
-    if (thresholdAnswers != null) __obj.updateDynamic("thresholdAnswers")(thresholdAnswers.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (unitOfMeasurementLabel != null) __obj.updateDynamic("unitOfMeasurementLabel")(unitOfMeasurementLabel.asInstanceOf[js.Any])
-    if (videoId != null) __obj.updateDynamic("videoId")(videoId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSurveyQuestion]
   }
+  @scala.inline
+  implicit class SchemaSurveyQuestionOps[Self <: SchemaSurveyQuestion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnswerOrder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("answerOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnswerOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("answerOrder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnswers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("answers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnswers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("answers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasOther(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasOther")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasOther: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasOther")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighValueLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highValueLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighValueLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highValueLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImages(value: js.Array[SchemaSurveyQuestionImage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastAnswerPositionPinned(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAnswerPositionPinned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastAnswerPositionPinned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAnswerPositionPinned")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLowValueLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowValueLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowValueLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowValueLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMustPickSuggestion(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mustPickSuggestion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMustPickSuggestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mustPickSuggestion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumStars(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numStars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumStars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numStars")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenTextPlaceholder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openTextPlaceholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenTextPlaceholder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openTextPlaceholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpenTextSuggestions(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openTextSuggestions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpenTextSuggestions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openTextSuggestions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuestion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("question")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("question")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSentimentText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sentimentText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSentimentText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sentimentText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSingleLineResponse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleLineResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSingleLineResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleLineResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThresholdAnswers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdAnswers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThresholdAnswers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdAnswers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnitOfMeasurementLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitOfMeasurementLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnitOfMeasurementLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitOfMeasurementLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVideoId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVideoId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

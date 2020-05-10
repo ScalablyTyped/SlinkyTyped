@@ -6,18 +6,49 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react-native-elements.react-native-elements.RecursivePartial<{  ios  :{  primary  :string,   secondary  :string,   success  :string,   error  :string,   warning  :string},   android  :{  primary  :string,   secondary  :string,   success  :string,   error  :string,   warning  :string}}> */
+@js.native
 trait RecursivePartialiosprimarAndroid extends js.Object {
-  var android: js.UndefOr[RecursivePartial[AnonError]] = js.undefined
-  var ios: js.UndefOr[RecursivePartial[AnonError]] = js.undefined
+  var android: js.UndefOr[RecursivePartial[AnonError]] = js.native
+  var ios: js.UndefOr[RecursivePartial[AnonError]] = js.native
 }
 
 object RecursivePartialiosprimarAndroid {
   @scala.inline
-  def apply(android: RecursivePartial[AnonError] = null, ios: RecursivePartial[AnonError] = null): RecursivePartialiosprimarAndroid = {
+  def apply(): RecursivePartialiosprimarAndroid = {
     val __obj = js.Dynamic.literal()
-    if (android != null) __obj.updateDynamic("android")(android.asInstanceOf[js.Any])
-    if (ios != null) __obj.updateDynamic("ios")(ios.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecursivePartialiosprimarAndroid]
   }
+  @scala.inline
+  implicit class RecursivePartialiosprimarAndroidOps[Self <: RecursivePartialiosprimarAndroid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndroid(value: RecursivePartial[AnonError]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndroid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIos(value: RecursivePartial[AnonError]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

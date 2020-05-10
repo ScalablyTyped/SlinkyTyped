@@ -751,7 +751,7 @@ trait JSTree extends JQuery {
     * @param {Object} options options for this instance
     * @trigger init.jstree, loading.jstree, loaded.jstree, ready.jstree, changed.jstree
     */
-  def init(el: typingsSlinky.std.HTMLElement, options: js.Any): Unit = js.native
+  def init(el: HTMLElement, options: js.Any): Unit = js.native
   /**
     * checks if a node is checked (if tie_selection is on in the settings this function will return the same as is_selected)
     * @name is_checked(obj)

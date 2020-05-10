@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "serverless-jest-plugin"
-version := "0.3-dt-20200219Z-9915f2"
+version := "0.3-dt-20200219Z-d81bef"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "aws-lambda" % "8.10-dt-20200302Z-424172",
-  "org.scalablytyped.slinky" %%% "lambda-wrapper" % "0.3-dt-20200219Z-4bb1ec",
-  "org.scalablytyped.slinky" %%% "serverless" % "1.18-dt-20200227Z-e2a19b",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "aws-lambda" % "8.10-dt-20200423Z-ef58e3",
+  "org.scalablytyped.slinky" %%% "lambda-wrapper" % "0.3-dt-20200219Z-d9fdb8",
+  "org.scalablytyped.slinky" %%% "serverless" % "1.67-dt-20200413Z-e4ae11",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

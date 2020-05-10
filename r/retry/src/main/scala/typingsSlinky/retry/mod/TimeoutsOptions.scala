@@ -4,30 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimeoutsOptions extends CreateTimeoutOptions {
   /**
     * The maximum amount of times to retry the operation.
     * @default 10
     */
-  var retries: js.UndefOr[Double] = js.undefined
+  var retries: js.UndefOr[Double] = js.native
 }
 
 object TimeoutsOptions {
   @scala.inline
-  def apply(
-    factor: Int | Double = null,
-    maxTimeout: Int | Double = null,
-    minTimeout: Int | Double = null,
-    randomize: js.UndefOr[Boolean] = js.undefined,
-    retries: Int | Double = null
-  ): TimeoutsOptions = {
+  def apply(): TimeoutsOptions = {
     val __obj = js.Dynamic.literal()
-    if (factor != null) __obj.updateDynamic("factor")(factor.asInstanceOf[js.Any])
-    if (maxTimeout != null) __obj.updateDynamic("maxTimeout")(maxTimeout.asInstanceOf[js.Any])
-    if (minTimeout != null) __obj.updateDynamic("minTimeout")(minTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(randomize)) __obj.updateDynamic("randomize")(randomize.asInstanceOf[js.Any])
-    if (retries != null) __obj.updateDynamic("retries")(retries.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeoutsOptions]
   }
+  @scala.inline
+  implicit class TimeoutsOptionsOps[Self <: TimeoutsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRetries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

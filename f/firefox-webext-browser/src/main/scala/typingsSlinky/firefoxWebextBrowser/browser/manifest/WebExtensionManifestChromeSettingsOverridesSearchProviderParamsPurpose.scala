@@ -16,16 +16,14 @@ trait WebExtensionManifestChromeSettingsOverridesSearchProviderParamsPurpose ext
 
 object WebExtensionManifestChromeSettingsOverridesSearchProviderParamsPurpose {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def contextmenu: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.contextmenu = "contextmenu".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.contextmenu]
   @scala.inline
-  def contextmenu: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.contextmenu = this.cast("contextmenu")
+  def homepage: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.homepage = "homepage".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.homepage]
   @scala.inline
-  def homepage: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.homepage = this.cast("homepage")
+  def keyword: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.keyword = "keyword".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.keyword]
   @scala.inline
-  def keyword: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.keyword = this.cast("keyword")
+  def newtab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.newtab = "newtab".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.newtab]
   @scala.inline
-  def newtab: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.newtab = this.cast("newtab")
-  @scala.inline
-  def searchbar: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.searchbar = this.cast("searchbar")
+  def searchbar: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.searchbar = "searchbar".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.searchbar]
 }
 

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait relative extends js.Object {
   /**
     * Format a Date object as a String, using locale-specific settings,
@@ -37,15 +38,28 @@ trait relative extends js.Object {
     * @param dateObject the date and time to be formatted.
     * @param options               OptionalAn object with the following properties:locale (String): override the locale used to determine formatting rulesrelativeDate (Date): Date to calculate relation to (defaults to new Date())weekCheck (boolean): Whether or not to display the day of week (defaults true)
     */
-  def format(dateObject: js.Date, options: js.Object): Unit
+  def format(dateObject: js.Date, options: js.Object): Unit = js.native
 }
 
 object relative {
   @scala.inline
   def apply(format: (js.Date, js.Object) => Unit): relative = {
     val __obj = js.Dynamic.literal(format = js.Any.fromFunction2(format))
-  
     __obj.asInstanceOf[relative]
   }
+  @scala.inline
+  implicit class relativeOps[Self <: relative] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: (js.Date, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

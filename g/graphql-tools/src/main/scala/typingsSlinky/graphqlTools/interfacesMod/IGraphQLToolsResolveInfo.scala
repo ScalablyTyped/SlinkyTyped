@@ -13,8 +13,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IGraphQLToolsResolveInfo extends GraphQLResolveInfo {
-  var mergeInfo: js.UndefOr[MergeInfo] = js.undefined
+  var mergeInfo: js.UndefOr[MergeInfo] = js.native
 }
 
 object IGraphQLToolsResolveInfo {
@@ -29,12 +30,30 @@ object IGraphQLToolsResolveInfo {
     returnType: GraphQLOutputType,
     rootValue: js.Any,
     schema: GraphQLSchema,
-    variableValues: StringDictionary[js.Any],
-    mergeInfo: MergeInfo = null
+    variableValues: StringDictionary[js.Any]
   ): IGraphQLToolsResolveInfo = {
     val __obj = js.Dynamic.literal(fieldName = fieldName.asInstanceOf[js.Any], fieldNodes = fieldNodes.asInstanceOf[js.Any], fragments = fragments.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any], parentType = parentType.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any], rootValue = rootValue.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], variableValues = variableValues.asInstanceOf[js.Any])
-    if (mergeInfo != null) __obj.updateDynamic("mergeInfo")(mergeInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGraphQLToolsResolveInfo]
   }
+  @scala.inline
+  implicit class IGraphQLToolsResolveInfoOps[Self <: IGraphQLToolsResolveInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMergeInfo(value: MergeInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMergeInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

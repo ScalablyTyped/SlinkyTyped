@@ -1,5 +1,6 @@
 package typingsSlinky.jsforce.salesforceObjectMod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.jsforce.AnonCallCallback
 import typingsSlinky.jsforce.AnonCallCallbackClear
 import typingsSlinky.jsforce.AnonCallClear
@@ -17,7 +18,6 @@ import typingsSlinky.jsforce.recordMod.RecordReference
 import typingsSlinky.jsforce.recordResultMod.RecordResult
 import typingsSlinky.jsforce.salesforceIdMod.SalesforceId
 import typingsSlinky.node.streamMod.Stream
-import typingsSlinky.std.Date
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -116,12 +116,12 @@ class SObject[T] () extends js.Object {
   def deleteHardBulk(input: Stream, callback: Callback[js.Array[RecordResult]]): Batch = js.native
   def deleted(start: String, end: String): js.Promise[DeletedRecordsInfo] = js.native
   def deleted(start: String, end: String, callback: Callback[DeletedRecordsInfo]): js.Promise[DeletedRecordsInfo] = js.native
-  def deleted(start: String, end: Date): js.Promise[DeletedRecordsInfo] = js.native
-  def deleted(start: String, end: Date, callback: Callback[DeletedRecordsInfo]): js.Promise[DeletedRecordsInfo] = js.native
-  def deleted(start: Date, end: String): js.Promise[DeletedRecordsInfo] = js.native
-  def deleted(start: Date, end: String, callback: Callback[DeletedRecordsInfo]): js.Promise[DeletedRecordsInfo] = js.native
-  def deleted(start: Date, end: Date): js.Promise[DeletedRecordsInfo] = js.native
-  def deleted(start: Date, end: Date, callback: Callback[DeletedRecordsInfo]): js.Promise[DeletedRecordsInfo] = js.native
+  def deleted(start: String, end: js.Date): js.Promise[DeletedRecordsInfo] = js.native
+  def deleted(start: String, end: js.Date, callback: Callback[DeletedRecordsInfo]): js.Promise[DeletedRecordsInfo] = js.native
+  def deleted(start: js.Date, end: String): js.Promise[DeletedRecordsInfo] = js.native
+  def deleted(start: js.Date, end: String, callback: Callback[DeletedRecordsInfo]): js.Promise[DeletedRecordsInfo] = js.native
+  def deleted(start: js.Date, end: js.Date): js.Promise[DeletedRecordsInfo] = js.native
+  def deleted(start: js.Date, end: js.Date, callback: Callback[DeletedRecordsInfo]): js.Promise[DeletedRecordsInfo] = js.native
   def describe(): js.Promise[DescribeSObjectResult] = js.native
   def describe(callback: Callback[DescribeSObjectResult]): js.Promise[DescribeSObjectResult] = js.native
   /** Returns a value from the cache if it exists, otherwise calls SObject.describe */
@@ -259,18 +259,18 @@ class SObject[T] () extends js.Object {
   def select(
     fields: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: boolean}
-    */ typingsSlinky.jsforce.jsforceStrings.SObject with js.Any
+    */ typingsSlinky.jsforce.jsforceStrings.SObject with TopLevel[js.Any]
   ): Query[js.Array[Partial[T]]] = js.native
   def select(
     fields: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: boolean}
-    */ typingsSlinky.jsforce.jsforceStrings.SObject with js.Any,
+    */ typingsSlinky.jsforce.jsforceStrings.SObject with TopLevel[js.Any],
     callback: Callback[js.Array[Partial[T]]]
   ): Query[js.Array[Partial[T]]] = js.native
-  def select(fields: String): Query[js.Array[Partial[T]]] = js.native
-  def select(fields: String, callback: Callback[js.Array[Partial[T]]]): Query[js.Array[Partial[T]]] = js.native
-  def select(fields: js.Array[String]): Query[js.Array[Partial[T]]] = js.native
-  def select(fields: js.Array[String], callback: Callback[js.Array[Partial[T]]]): Query[js.Array[Partial[T]]] = js.native
+  def select(fields: /* keyof T */ String): Query[js.Array[Partial[T]]] = js.native
+  def select(fields: /* keyof T */ String, callback: Callback[js.Array[Partial[T]]]): Query[js.Array[Partial[T]]] = js.native
+  def select(fields: js.Array[/* keyof T */ String]): Query[js.Array[Partial[T]]] = js.native
+  def select(fields: js.Array[/* keyof T */ String], callback: Callback[js.Array[Partial[T]]]): Query[js.Array[Partial[T]]] = js.native
   def update(records: js.Array[Partial[T]]): js.Promise[js.Array[RecordResult]] = js.native
   def update(records: js.Array[Partial[T]], callback: Callback[js.Array[RecordResult]]): js.Promise[js.Array[RecordResult]] = js.native
   def update(records: js.Array[Partial[T]], options: RestApiOptions): js.Promise[js.Array[RecordResult]] = js.native
@@ -290,12 +290,12 @@ class SObject[T] () extends js.Object {
   def updateBulk(input: Stream, callback: Callback[js.Array[RecordResult]]): Batch = js.native
   def updated(start: String, end: String): js.Promise[UpdatedRecordsInfo] = js.native
   def updated(start: String, end: String, callback: Callback[UpdatedRecordsInfo]): js.Promise[UpdatedRecordsInfo] = js.native
-  def updated(start: String, end: Date): js.Promise[UpdatedRecordsInfo] = js.native
-  def updated(start: String, end: Date, callback: Callback[UpdatedRecordsInfo]): js.Promise[UpdatedRecordsInfo] = js.native
-  def updated(start: Date, end: String): js.Promise[UpdatedRecordsInfo] = js.native
-  def updated(start: Date, end: String, callback: Callback[UpdatedRecordsInfo]): js.Promise[UpdatedRecordsInfo] = js.native
-  def updated(start: Date, end: Date): js.Promise[UpdatedRecordsInfo] = js.native
-  def updated(start: Date, end: Date, callback: Callback[UpdatedRecordsInfo]): js.Promise[UpdatedRecordsInfo] = js.native
+  def updated(start: String, end: js.Date): js.Promise[UpdatedRecordsInfo] = js.native
+  def updated(start: String, end: js.Date, callback: Callback[UpdatedRecordsInfo]): js.Promise[UpdatedRecordsInfo] = js.native
+  def updated(start: js.Date, end: String): js.Promise[UpdatedRecordsInfo] = js.native
+  def updated(start: js.Date, end: String, callback: Callback[UpdatedRecordsInfo]): js.Promise[UpdatedRecordsInfo] = js.native
+  def updated(start: js.Date, end: js.Date): js.Promise[UpdatedRecordsInfo] = js.native
+  def updated(start: js.Date, end: js.Date, callback: Callback[UpdatedRecordsInfo]): js.Promise[UpdatedRecordsInfo] = js.native
   def upsert(records: js.Array[Record[T]], extIdField: String): js.Promise[js.Array[RecordResult]] = js.native
   def upsert(records: js.Array[Record[T]], extIdField: String, callback: Callback[js.Array[RecordResult]]): js.Promise[js.Array[RecordResult]] = js.native
   def upsert(records: js.Array[Record[T]], extIdField: String, options: RestApiOptions): js.Promise[js.Array[RecordResult]] = js.native

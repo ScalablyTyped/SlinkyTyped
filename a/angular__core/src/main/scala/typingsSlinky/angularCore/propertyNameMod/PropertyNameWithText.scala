@@ -16,14 +16,12 @@ trait PropertyNameWithText extends js.Object
 
 object PropertyNameWithText {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def escapedText: typingsSlinky.angularCore.angularCoreStrings.escapedText = "escapedText".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.escapedText]
   @scala.inline
-  def escapedText: typingsSlinky.angularCore.angularCoreStrings.escapedText = this.cast("escapedText")
+  def isInJSDocNamespace: typingsSlinky.angularCore.angularCoreStrings.isInJSDocNamespace = "isInJSDocNamespace".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.isInJSDocNamespace]
   @scala.inline
-  def isInJSDocNamespace: typingsSlinky.angularCore.angularCoreStrings.isInJSDocNamespace = this.cast("isInJSDocNamespace")
+  def originalKeywordKind: typingsSlinky.angularCore.angularCoreStrings.originalKeywordKind = "originalKeywordKind".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.originalKeywordKind]
   @scala.inline
-  def originalKeywordKind: typingsSlinky.angularCore.angularCoreStrings.originalKeywordKind = this.cast("originalKeywordKind")
-  @scala.inline
-  def text: typingsSlinky.angularCore.angularCoreStrings.text = this.cast("text")
+  def text: typingsSlinky.angularCore.angularCoreStrings.text = "text".asInstanceOf[typingsSlinky.angularCore.angularCoreStrings.text]
 }
 

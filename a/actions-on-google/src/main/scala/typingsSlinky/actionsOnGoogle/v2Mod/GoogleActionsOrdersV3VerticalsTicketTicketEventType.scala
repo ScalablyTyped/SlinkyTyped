@@ -14,14 +14,12 @@ trait GoogleActionsOrdersV3VerticalsTicketTicketEventType extends js.Object
 
 object GoogleActionsOrdersV3VerticalsTicketTicketEventType {
   @scala.inline
-  def CONCERT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CONCERT = this.cast("CONCERT")
+  def CONCERT: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CONCERT = "CONCERT".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CONCERT]
   @scala.inline
-  def EVENT_TYPE_UNKNOWN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EVENT_TYPE_UNKNOWN = this.cast("EVENT_TYPE_UNKNOWN")
+  def EVENT_TYPE_UNKNOWN: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EVENT_TYPE_UNKNOWN = "EVENT_TYPE_UNKNOWN".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.EVENT_TYPE_UNKNOWN]
   @scala.inline
-  def MOVIE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.MOVIE = this.cast("MOVIE")
+  def MOVIE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.MOVIE = "MOVIE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.MOVIE]
   @scala.inline
-  def SPORTS: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SPORTS = this.cast("SPORTS")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SPORTS: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SPORTS = "SPORTS".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.SPORTS]
 }
 

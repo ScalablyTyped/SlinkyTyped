@@ -16,8 +16,21 @@ object ClusterIdentityOidc {
   @scala.inline
   def apply(issuer: String): ClusterIdentityOidc = {
     val __obj = js.Dynamic.literal(issuer = issuer.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ClusterIdentityOidc]
   }
+  @scala.inline
+  implicit class ClusterIdentityOidcOps[Self <: ClusterIdentityOidc] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIssuer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

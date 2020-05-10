@@ -4,34 +4,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FindFullHashesRequest extends js.Object {
   /**
     * Client metadata associated with callers of higher-level APIs built on top
     * of the client's implementation.
     */
-  var apiClient: js.UndefOr[ClientInfo] = js.undefined
+  var apiClient: js.UndefOr[ClientInfo] = js.native
   /** The client metadata. */
-  var client: js.UndefOr[ClientInfo] = js.undefined
+  var client: js.UndefOr[ClientInfo] = js.native
   /** The current client states for each of the client's local threat lists. */
-  var clientStates: js.UndefOr[js.Array[String]] = js.undefined
+  var clientStates: js.UndefOr[js.Array[String]] = js.native
   /** The lists and hashes to be checked. */
-  var threatInfo: js.UndefOr[ThreatInfo] = js.undefined
+  var threatInfo: js.UndefOr[ThreatInfo] = js.native
 }
 
 object FindFullHashesRequest {
   @scala.inline
-  def apply(
-    apiClient: ClientInfo = null,
-    client: ClientInfo = null,
-    clientStates: js.Array[String] = null,
-    threatInfo: ThreatInfo = null
-  ): FindFullHashesRequest = {
+  def apply(): FindFullHashesRequest = {
     val __obj = js.Dynamic.literal()
-    if (apiClient != null) __obj.updateDynamic("apiClient")(apiClient.asInstanceOf[js.Any])
-    if (client != null) __obj.updateDynamic("client")(client.asInstanceOf[js.Any])
-    if (clientStates != null) __obj.updateDynamic("clientStates")(clientStates.asInstanceOf[js.Any])
-    if (threatInfo != null) __obj.updateDynamic("threatInfo")(threatInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[FindFullHashesRequest]
   }
+  @scala.inline
+  implicit class FindFullHashesRequestOps[Self <: FindFullHashesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApiClient(value: ClientInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiClient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApiClient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apiClient")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClient(value: ClientInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("client")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientStates(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientStates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientStates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientStates")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreatInfo(value: ThreatInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreatInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -30,45 +30,153 @@ import scala.scalajs.js.annotation._
   * @property {Resource.OnCompleteSignal} [callback] - Alias for `onComplete`.
   * @property {Resource.IMetadata} [metadata] - Extra configuration for middleware and the Resource object.
   */
+@js.native
 trait IAddOptions extends js.Object {
-  var callback: js.UndefOr[OnCompleteSignal] = js.undefined
-  var crossOrigin: js.UndefOr[String | Boolean] = js.undefined
-  var key: js.UndefOr[String] = js.undefined
-  var loadType: js.UndefOr[LOAD_TYPE] = js.undefined
-  var metadata: js.UndefOr[IMetadata] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var onComplete: js.UndefOr[OnCompleteSignal] = js.undefined
-  var timeout: js.UndefOr[Double] = js.undefined
-  var url: js.UndefOr[String] = js.undefined
-  var xhrType: js.UndefOr[XHR_RESPONSE_TYPE] = js.undefined
+  var callback: js.UndefOr[OnCompleteSignal] = js.native
+  var crossOrigin: js.UndefOr[String | Boolean] = js.native
+  var key: js.UndefOr[String] = js.native
+  var loadType: js.UndefOr[LOAD_TYPE] = js.native
+  var metadata: js.UndefOr[IMetadata] = js.native
+  var name: js.UndefOr[String] = js.native
+  var onComplete: js.UndefOr[OnCompleteSignal] = js.native
+  var timeout: js.UndefOr[Double] = js.native
+  var url: js.UndefOr[String] = js.native
+  var xhrType: js.UndefOr[XHR_RESPONSE_TYPE] = js.native
 }
 
 object IAddOptions {
   @scala.inline
-  def apply(
-    callback: /* resource */ Resource => Unit = null,
-    crossOrigin: String | Boolean = null,
-    key: String = null,
-    loadType: LOAD_TYPE = null,
-    metadata: IMetadata = null,
-    name: String = null,
-    onComplete: /* resource */ Resource => Unit = null,
-    timeout: Int | Double = null,
-    url: String = null,
-    xhrType: XHR_RESPONSE_TYPE = null
-  ): IAddOptions = {
+  def apply(): IAddOptions = {
     val __obj = js.Dynamic.literal()
-    if (callback != null) __obj.updateDynamic("callback")(js.Any.fromFunction1(callback))
-    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (loadType != null) __obj.updateDynamic("loadType")(loadType.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction1(onComplete))
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (xhrType != null) __obj.updateDynamic("xhrType")(xhrType.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAddOptions]
   }
+  @scala.inline
+  implicit class IAddOptionsOps[Self <: IAddOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallback(value: /* resource */ Resource => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCallback: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCrossOrigin(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadType(value: LOAD_TYPE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: IMetadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnComplete(value: /* resource */ Resource => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXhrType(value: XHR_RESPONSE_TYPE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXhrType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait DescribeCoipPoolsResult extends js.Object {
 
 object DescribeCoipPoolsResult {
   @scala.inline
-  def apply(CoipPools: CoipPoolSet = null, NextToken: String = null): DescribeCoipPoolsResult = {
+  def apply(): DescribeCoipPoolsResult = {
     val __obj = js.Dynamic.literal()
-    if (CoipPools != null) __obj.updateDynamic("CoipPools")(CoipPools.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCoipPoolsResult]
   }
+  @scala.inline
+  implicit class DescribeCoipPoolsResultOps[Self <: DescribeCoipPoolsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoipPools(value: CoipPoolSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoipPools")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoipPools: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoipPools")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

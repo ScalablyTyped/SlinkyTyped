@@ -15,16 +15,14 @@ trait SortInitiator extends js.Object
 
 object SortInitiator {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def sort: typingsSlinky.tablesorter.tablesorterStrings.sort = "sort".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.sort]
   @scala.inline
-  def sort: typingsSlinky.tablesorter.tablesorterStrings.sort = this.cast("sort")
+  def sortAppend: typingsSlinky.tablesorter.tablesorterStrings.sortAppend = "sortAppend".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.sortAppend]
   @scala.inline
-  def sortAppend: typingsSlinky.tablesorter.tablesorterStrings.sortAppend = this.cast("sortAppend")
+  def sortForce: typingsSlinky.tablesorter.tablesorterStrings.sortForce = "sortForce".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.sortForce]
   @scala.inline
-  def sortForce: typingsSlinky.tablesorter.tablesorterStrings.sortForce = this.cast("sortForce")
+  def sorton: typingsSlinky.tablesorter.tablesorterStrings.sorton = "sorton".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.sorton]
   @scala.inline
-  def sorton: typingsSlinky.tablesorter.tablesorterStrings.sorton = this.cast("sorton")
-  @scala.inline
-  def user: typingsSlinky.tablesorter.tablesorterStrings.user = this.cast("user")
+  def user: typingsSlinky.tablesorter.tablesorterStrings.user = "user".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.user]
 }
 

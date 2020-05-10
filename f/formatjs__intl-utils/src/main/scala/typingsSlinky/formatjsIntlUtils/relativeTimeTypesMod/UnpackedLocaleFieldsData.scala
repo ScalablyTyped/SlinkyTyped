@@ -5,89 +5,342 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined {[ f in @formatjs/intl-utils.@formatjs/intl-utils/dist/relative-time-types.RelativeTimeField ]:? @formatjs/intl-utils.@formatjs/intl-utils/dist/relative-time-types.FieldData} & {  nu  :std.Array<string | null>} */
+@js.native
 trait UnpackedLocaleFieldsData extends js.Object {
-  var day: js.UndefOr[FieldData] = js.undefined
-  var `day-narrow`: js.UndefOr[FieldData] = js.undefined
-  var `day-short`: js.UndefOr[FieldData] = js.undefined
-  var hour: js.UndefOr[FieldData] = js.undefined
-  var `hour-narrow`: js.UndefOr[FieldData] = js.undefined
-  var `hour-short`: js.UndefOr[FieldData] = js.undefined
-  var minute: js.UndefOr[FieldData] = js.undefined
-  var `minute-narrow`: js.UndefOr[FieldData] = js.undefined
-  var `minute-short`: js.UndefOr[FieldData] = js.undefined
-  var month: js.UndefOr[FieldData] = js.undefined
-  var `month-narrow`: js.UndefOr[FieldData] = js.undefined
-  var `month-short`: js.UndefOr[FieldData] = js.undefined
-  var nu: js.Array[String | Null]
-  var quarter: js.UndefOr[FieldData] = js.undefined
-  var `quarter-narrow`: js.UndefOr[FieldData] = js.undefined
-  var `quarter-short`: js.UndefOr[FieldData] = js.undefined
-  var second: js.UndefOr[FieldData] = js.undefined
-  var `second-narrow`: js.UndefOr[FieldData] = js.undefined
-  var `second-short`: js.UndefOr[FieldData] = js.undefined
-  var week: js.UndefOr[FieldData] = js.undefined
-  var `week-narrow`: js.UndefOr[FieldData] = js.undefined
-  var `week-short`: js.UndefOr[FieldData] = js.undefined
-  var year: js.UndefOr[FieldData] = js.undefined
-  var `year-narrow`: js.UndefOr[FieldData] = js.undefined
-  var `year-short`: js.UndefOr[FieldData] = js.undefined
+  var day: js.UndefOr[FieldData] = js.native
+  var `day-narrow`: js.UndefOr[FieldData] = js.native
+  var `day-short`: js.UndefOr[FieldData] = js.native
+  var hour: js.UndefOr[FieldData] = js.native
+  var `hour-narrow`: js.UndefOr[FieldData] = js.native
+  var `hour-short`: js.UndefOr[FieldData] = js.native
+  var minute: js.UndefOr[FieldData] = js.native
+  var `minute-narrow`: js.UndefOr[FieldData] = js.native
+  var `minute-short`: js.UndefOr[FieldData] = js.native
+  var month: js.UndefOr[FieldData] = js.native
+  var `month-narrow`: js.UndefOr[FieldData] = js.native
+  var `month-short`: js.UndefOr[FieldData] = js.native
+  var nu: js.Array[String | Null] = js.native
+  var quarter: js.UndefOr[FieldData] = js.native
+  var `quarter-narrow`: js.UndefOr[FieldData] = js.native
+  var `quarter-short`: js.UndefOr[FieldData] = js.native
+  var second: js.UndefOr[FieldData] = js.native
+  var `second-narrow`: js.UndefOr[FieldData] = js.native
+  var `second-short`: js.UndefOr[FieldData] = js.native
+  var week: js.UndefOr[FieldData] = js.native
+  var `week-narrow`: js.UndefOr[FieldData] = js.native
+  var `week-short`: js.UndefOr[FieldData] = js.native
+  var year: js.UndefOr[FieldData] = js.native
+  var `year-narrow`: js.UndefOr[FieldData] = js.native
+  var `year-short`: js.UndefOr[FieldData] = js.native
 }
 
 object UnpackedLocaleFieldsData {
   @scala.inline
-  def apply(
-    nu: js.Array[String | Null],
-    day: FieldData = null,
-    `day-narrow`: FieldData = null,
-    `day-short`: FieldData = null,
-    hour: FieldData = null,
-    `hour-narrow`: FieldData = null,
-    `hour-short`: FieldData = null,
-    minute: FieldData = null,
-    `minute-narrow`: FieldData = null,
-    `minute-short`: FieldData = null,
-    month: FieldData = null,
-    `month-narrow`: FieldData = null,
-    `month-short`: FieldData = null,
-    quarter: FieldData = null,
-    `quarter-narrow`: FieldData = null,
-    `quarter-short`: FieldData = null,
-    second: FieldData = null,
-    `second-narrow`: FieldData = null,
-    `second-short`: FieldData = null,
-    week: FieldData = null,
-    `week-narrow`: FieldData = null,
-    `week-short`: FieldData = null,
-    year: FieldData = null,
-    `year-narrow`: FieldData = null,
-    `year-short`: FieldData = null
-  ): UnpackedLocaleFieldsData = {
+  def apply(nu: js.Array[String | Null]): UnpackedLocaleFieldsData = {
     val __obj = js.Dynamic.literal(nu = nu.asInstanceOf[js.Any])
-    if (day != null) __obj.updateDynamic("day")(day.asInstanceOf[js.Any])
-    if (`day-narrow` != null) __obj.updateDynamic("day-narrow")(`day-narrow`.asInstanceOf[js.Any])
-    if (`day-short` != null) __obj.updateDynamic("day-short")(`day-short`.asInstanceOf[js.Any])
-    if (hour != null) __obj.updateDynamic("hour")(hour.asInstanceOf[js.Any])
-    if (`hour-narrow` != null) __obj.updateDynamic("hour-narrow")(`hour-narrow`.asInstanceOf[js.Any])
-    if (`hour-short` != null) __obj.updateDynamic("hour-short")(`hour-short`.asInstanceOf[js.Any])
-    if (minute != null) __obj.updateDynamic("minute")(minute.asInstanceOf[js.Any])
-    if (`minute-narrow` != null) __obj.updateDynamic("minute-narrow")(`minute-narrow`.asInstanceOf[js.Any])
-    if (`minute-short` != null) __obj.updateDynamic("minute-short")(`minute-short`.asInstanceOf[js.Any])
-    if (month != null) __obj.updateDynamic("month")(month.asInstanceOf[js.Any])
-    if (`month-narrow` != null) __obj.updateDynamic("month-narrow")(`month-narrow`.asInstanceOf[js.Any])
-    if (`month-short` != null) __obj.updateDynamic("month-short")(`month-short`.asInstanceOf[js.Any])
-    if (quarter != null) __obj.updateDynamic("quarter")(quarter.asInstanceOf[js.Any])
-    if (`quarter-narrow` != null) __obj.updateDynamic("quarter-narrow")(`quarter-narrow`.asInstanceOf[js.Any])
-    if (`quarter-short` != null) __obj.updateDynamic("quarter-short")(`quarter-short`.asInstanceOf[js.Any])
-    if (second != null) __obj.updateDynamic("second")(second.asInstanceOf[js.Any])
-    if (`second-narrow` != null) __obj.updateDynamic("second-narrow")(`second-narrow`.asInstanceOf[js.Any])
-    if (`second-short` != null) __obj.updateDynamic("second-short")(`second-short`.asInstanceOf[js.Any])
-    if (week != null) __obj.updateDynamic("week")(week.asInstanceOf[js.Any])
-    if (`week-narrow` != null) __obj.updateDynamic("week-narrow")(`week-narrow`.asInstanceOf[js.Any])
-    if (`week-short` != null) __obj.updateDynamic("week-short")(`week-short`.asInstanceOf[js.Any])
-    if (year != null) __obj.updateDynamic("year")(year.asInstanceOf[js.Any])
-    if (`year-narrow` != null) __obj.updateDynamic("year-narrow")(`year-narrow`.asInstanceOf[js.Any])
-    if (`year-short` != null) __obj.updateDynamic("year-short")(`year-short`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnpackedLocaleFieldsData]
   }
+  @scala.inline
+  implicit class UnpackedLocaleFieldsDataOps[Self <: UnpackedLocaleFieldsData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNu(value: js.Array[String | Null]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDay(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("day")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withDay-narrow`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("day-narrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutDay-narrow`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("day-narrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withDay-short`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("day-short")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutDay-short`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("day-short")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHour(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withHour-narrow`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hour-narrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutHour-narrow`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hour-narrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withHour-short`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hour-short")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutHour-short`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hour-short")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinute(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMinute-narrow`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minute-narrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMinute-narrow`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minute-narrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMinute-short`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minute-short")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMinute-short`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minute-short")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMonth(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("month")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMonth-narrow`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("month-narrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMonth-narrow`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("month-narrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withMonth-short`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("month-short")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutMonth-short`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("month-short")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuarter(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quarter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuarter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quarter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withQuarter-narrow`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quarter-narrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutQuarter-narrow`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quarter-narrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withQuarter-short`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quarter-short")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutQuarter-short`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quarter-short")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecond(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("second")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("second")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSecond-narrow`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("second-narrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSecond-narrow`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("second-narrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withSecond-short`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("second-short")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutSecond-short`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("second-short")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeek(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("week")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withWeek-narrow`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("week-narrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutWeek-narrow`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("week-narrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withWeek-short`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("week-short")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutWeek-short`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("week-short")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYear(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("year")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withYear-narrow`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("year-narrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutYear-narrow`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("year-narrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withYear-short`(value: FieldData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("year-short")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutYear-short`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("year-short")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

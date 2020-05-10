@@ -5,24 +5,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait AnonInject[TArgs /* <: Args[TBase] */] extends js.Object {
+@js.native
+trait AnonInject[TArgs /* <: Args[TBase] */, TBase] extends js.Object {
   var inject: js.UndefOr[
     js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: TArgs[number] */ js.Any
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object AnonInject {
   @scala.inline
-  def apply[TArgs /* <: Args[TBase] */](
-    inject: js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: TArgs[number] */ js.Any
-    ] = null
-  ): AnonInject[TArgs] = {
+  def apply[TArgs, TBase](): AnonInject[TArgs, TBase] = {
     val __obj = js.Dynamic.literal()
-    if (inject != null) __obj.updateDynamic("inject")(inject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnonInject[TArgs]]
+    __obj.asInstanceOf[AnonInject[TArgs, TBase]]
   }
+  @scala.inline
+  implicit class AnonInjectOps[Self[targs, tbase] <: AnonInject[targs, tbase], TArgs, TBase] (val x: Self[TArgs, TBase]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TArgs, TBase] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TArgs, TBase]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[TArgs, TBase]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TArgs, TBase]) with Other]
+    @scala.inline
+    def withInject(
+      value: js.Array[
+          /* import warning: importer.ImportType#apply Failed type conversion: TArgs[number] */ js.Any
+        ]
+    ): Self[TArgs, TBase] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInject: Self[TArgs, TBase] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inject")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

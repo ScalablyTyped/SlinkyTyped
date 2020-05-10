@@ -21,28 +21,26 @@ trait FontWeight extends js.Object
 
 object FontWeight {
   @scala.inline
-  def `100`: typingsSlinky.xterm.xtermStrings.`100` = this.cast("100")
+  def `100`: typingsSlinky.xterm.xtermStrings.`100` = "100".asInstanceOf[typingsSlinky.xterm.xtermStrings.`100`]
   @scala.inline
-  def `200`: typingsSlinky.xterm.xtermStrings.`200` = this.cast("200")
+  def `200`: typingsSlinky.xterm.xtermStrings.`200` = "200".asInstanceOf[typingsSlinky.xterm.xtermStrings.`200`]
   @scala.inline
-  def `300`: typingsSlinky.xterm.xtermStrings.`300` = this.cast("300")
+  def `300`: typingsSlinky.xterm.xtermStrings.`300` = "300".asInstanceOf[typingsSlinky.xterm.xtermStrings.`300`]
   @scala.inline
-  def `400`: typingsSlinky.xterm.xtermStrings.`400` = this.cast("400")
+  def `400`: typingsSlinky.xterm.xtermStrings.`400` = "400".asInstanceOf[typingsSlinky.xterm.xtermStrings.`400`]
   @scala.inline
-  def `500`: typingsSlinky.xterm.xtermStrings.`500` = this.cast("500")
+  def `500`: typingsSlinky.xterm.xtermStrings.`500` = "500".asInstanceOf[typingsSlinky.xterm.xtermStrings.`500`]
   @scala.inline
-  def `600`: typingsSlinky.xterm.xtermStrings.`600` = this.cast("600")
+  def `600`: typingsSlinky.xterm.xtermStrings.`600` = "600".asInstanceOf[typingsSlinky.xterm.xtermStrings.`600`]
   @scala.inline
-  def `700`: typingsSlinky.xterm.xtermStrings.`700` = this.cast("700")
+  def `700`: typingsSlinky.xterm.xtermStrings.`700` = "700".asInstanceOf[typingsSlinky.xterm.xtermStrings.`700`]
   @scala.inline
-  def `800`: typingsSlinky.xterm.xtermStrings.`800` = this.cast("800")
+  def `800`: typingsSlinky.xterm.xtermStrings.`800` = "800".asInstanceOf[typingsSlinky.xterm.xtermStrings.`800`]
   @scala.inline
-  def `900`: typingsSlinky.xterm.xtermStrings.`900` = this.cast("900")
+  def `900`: typingsSlinky.xterm.xtermStrings.`900` = "900".asInstanceOf[typingsSlinky.xterm.xtermStrings.`900`]
   @scala.inline
-  def bold: typingsSlinky.xterm.xtermStrings.bold = this.cast("bold")
+  def bold: typingsSlinky.xterm.xtermStrings.bold = "bold".asInstanceOf[typingsSlinky.xterm.xtermStrings.bold]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def normal: typingsSlinky.xterm.xtermStrings.normal = this.cast("normal")
+  def normal: typingsSlinky.xterm.xtermStrings.normal = "normal".asInstanceOf[typingsSlinky.xterm.xtermStrings.normal]
 }
 

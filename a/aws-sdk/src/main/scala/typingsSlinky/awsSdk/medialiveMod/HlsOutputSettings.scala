@@ -27,17 +27,59 @@ trait HlsOutputSettings extends js.Object {
 
 object HlsOutputSettings {
   @scala.inline
-  def apply(
-    HlsSettings: HlsSettings,
-    H265PackagingType: HlsH265PackagingType = null,
-    NameModifier: stringMin1 = null,
-    SegmentModifier: string = null
-  ): HlsOutputSettings = {
+  def apply(HlsSettings: HlsSettings): HlsOutputSettings = {
     val __obj = js.Dynamic.literal(HlsSettings = HlsSettings.asInstanceOf[js.Any])
-    if (H265PackagingType != null) __obj.updateDynamic("H265PackagingType")(H265PackagingType.asInstanceOf[js.Any])
-    if (NameModifier != null) __obj.updateDynamic("NameModifier")(NameModifier.asInstanceOf[js.Any])
-    if (SegmentModifier != null) __obj.updateDynamic("SegmentModifier")(SegmentModifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[HlsOutputSettings]
   }
+  @scala.inline
+  implicit class HlsOutputSettingsOps[Self <: HlsOutputSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHlsSettings(value: HlsSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HlsSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH265PackagingType(value: HlsH265PackagingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("H265PackagingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH265PackagingType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("H265PackagingType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNameModifier(value: stringMin1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NameModifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNameModifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NameModifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentModifier(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentModifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentModifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SegmentModifier")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

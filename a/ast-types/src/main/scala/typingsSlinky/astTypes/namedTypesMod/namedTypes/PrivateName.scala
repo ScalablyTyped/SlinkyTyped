@@ -15,16 +15,17 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Pattern, 'type'> */
+@js.native
 trait PrivateName
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PatternKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var id: IdentifierKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.PrivateName
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var id: IdentifierKind = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.PrivateName = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.PrivateName")

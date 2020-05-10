@@ -5,39 +5,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GridsterDraggable extends js.Object {
-  var distance: js.UndefOr[Double] = js.undefined
-  var drag: js.UndefOr[js.Function2[/* event */ Event_, /* ui */ GridsterUi, Unit]] = js.undefined
-  var handle: js.UndefOr[String] = js.undefined
-  var items: js.UndefOr[js.Any] = js.undefined
-  var limit: js.UndefOr[Boolean] = js.undefined
-  var offset_left: js.UndefOr[Double] = js.undefined
-  var start: js.UndefOr[js.Function2[/* event */ Event_, /* ui */ AnonHelper, Unit]] = js.undefined
-  var stop: js.UndefOr[js.Function2[/* event */ Event_, /* ui */ AnonHelper, Unit]] = js.undefined
+  var distance: js.UndefOr[Double] = js.native
+  var drag: js.UndefOr[js.Function2[/* event */ Event_, /* ui */ GridsterUi, Unit]] = js.native
+  var handle: js.UndefOr[String] = js.native
+  var items: js.UndefOr[js.Any] = js.native
+  var limit: js.UndefOr[Boolean] = js.native
+  var offset_left: js.UndefOr[Double] = js.native
+  var start: js.UndefOr[js.Function2[/* event */ Event_, /* ui */ AnonHelper, Unit]] = js.native
+  var stop: js.UndefOr[js.Function2[/* event */ Event_, /* ui */ AnonHelper, Unit]] = js.native
 }
 
 object GridsterDraggable {
   @scala.inline
-  def apply(
-    distance: Int | Double = null,
-    drag: (/* event */ Event_, /* ui */ GridsterUi) => Unit = null,
-    handle: String = null,
-    items: js.Any = null,
-    limit: js.UndefOr[Boolean] = js.undefined,
-    offset_left: Int | Double = null,
-    start: (/* event */ Event_, /* ui */ AnonHelper) => Unit = null,
-    stop: (/* event */ Event_, /* ui */ AnonHelper) => Unit = null
-  ): GridsterDraggable = {
+  def apply(): GridsterDraggable = {
     val __obj = js.Dynamic.literal()
-    if (distance != null) __obj.updateDynamic("distance")(distance.asInstanceOf[js.Any])
-    if (drag != null) __obj.updateDynamic("drag")(js.Any.fromFunction2(drag))
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
-    if (!js.isUndefined(limit)) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (offset_left != null) __obj.updateDynamic("offset_left")(offset_left.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(js.Any.fromFunction2(start))
-    if (stop != null) __obj.updateDynamic("stop")(js.Any.fromFunction2(stop))
     __obj.asInstanceOf[GridsterDraggable]
   }
+  @scala.inline
+  implicit class GridsterDraggableOps[Self <: GridsterDraggable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDrag(value: (/* event */ Event_, /* ui */ GridsterUi) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDrag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset_left(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset_left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset_left: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset_left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: (/* event */ Event_, /* ui */ AnonHelper) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStop(value: (/* event */ Event_, /* ui */ AnonHelper) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

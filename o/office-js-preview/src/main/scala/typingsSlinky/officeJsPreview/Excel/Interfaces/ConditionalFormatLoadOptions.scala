@@ -171,3 +171,271 @@ trait ConditionalFormatLoadOptions extends js.Object {
   var `type`: js.UndefOr[Boolean] = js.native
 }
 
+object ConditionalFormatLoadOptions {
+  @scala.inline
+  def apply(): ConditionalFormatLoadOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ConditionalFormatLoadOptions]
+  }
+  @scala.inline
+  implicit class ConditionalFormatLoadOptionsOps[Self <: ConditionalFormatLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$all(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without$all: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellValue(value: CellValueConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellValueOrNullObject(value: CellValueConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellValueOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellValueOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellValueOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorScale(value: ColorScaleConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorScaleOrNullObject(value: ColorScaleConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScaleOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorScaleOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorScaleOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustom(value: CustomConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustomOrNullObject(value: CustomConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustomOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBar(value: DataBarConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataBar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataBarOrNullObject(value: DataBarConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBarOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataBarOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataBarOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconSet(value: IconSetConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconSetOrNullObject(value: IconSetConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSetOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconSetOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconSetOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreset(value: PresetCriteriaConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPresetOrNullObject(value: PresetCriteriaConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presetOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPresetOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presetOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPriority(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPriority: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopIfTrue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopIfTrue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopIfTrue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopIfTrue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextComparison(value: TextConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textComparison")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextComparison: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textComparison")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextComparisonOrNullObject(value: TextConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textComparisonOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextComparisonOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textComparisonOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopBottom(value: TopBottomConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopBottomOrNullObject(value: TopBottomConditionalFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topBottomOrNullObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopBottomOrNullObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topBottomOrNullObject")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

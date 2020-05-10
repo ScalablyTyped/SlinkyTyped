@@ -1,72 +1,107 @@
 package typingsSlinky.fetchIo.mod
 
-import org.scalajs.dom.experimental.AbortSignal
-import org.scalajs.dom.experimental.ReferrerPolicy
-import org.scalajs.dom.experimental.RequestCache
-import org.scalajs.dom.experimental.RequestCredentials
-import org.scalajs.dom.experimental.RequestMode
-import org.scalajs.dom.experimental.RequestRedirect
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.std.BodyInit
-import typingsSlinky.std.HeadersInit
 import typingsSlinky.std.RequestInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends RequestInit {
-  var afterJSON: js.UndefOr[js.Function1[/* body */ js.Any, Unit]] = js.undefined
-  var afterResponse: js.UndefOr[js.Function1[/* res */ Response, Unit]] = js.undefined
-  var beforeRequest: js.UndefOr[js.Function2[/* url */ TUrl, /* body */ BodyInit, Boolean | Unit]] = js.undefined
-  var header: js.UndefOr[Header] = js.undefined
-  var prefix: js.UndefOr[String] = js.undefined
-  var query: js.UndefOr[Query] = js.undefined
+  var afterJSON: js.UndefOr[js.Function1[/* body */ js.Any, Unit]] = js.native
+  var afterResponse: js.UndefOr[js.Function1[/* res */ Response, Unit]] = js.native
+  var beforeRequest: js.UndefOr[js.Function2[/* url */ TUrl, /* body */ BodyInit, Boolean | Unit]] = js.native
+  var header: js.UndefOr[Header] = js.native
+  var prefix: js.UndefOr[String] = js.native
+  var query: js.UndefOr[Query] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    afterJSON: /* body */ js.Any => Unit = null,
-    afterResponse: /* res */ Response => Unit = null,
-    beforeRequest: (/* url */ TUrl, /* body */ BodyInit) => Boolean | Unit = null,
-    body: BodyInit = null,
-    cache: RequestCache = null,
-    credentials: RequestCredentials = null,
-    header: Header = null,
-    headers: HeadersInit = null,
-    integrity: String = null,
-    keepalive: js.UndefOr[Boolean] = js.undefined,
-    method: String = null,
-    mode: RequestMode = null,
-    prefix: String = null,
-    query: Query = null,
-    redirect: RequestRedirect = null,
-    referrer: String = null,
-    referrerPolicy: ReferrerPolicy = null,
-    signal: AbortSignal = null,
-    window: js.Any = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (afterJSON != null) __obj.updateDynamic("afterJSON")(js.Any.fromFunction1(afterJSON))
-    if (afterResponse != null) __obj.updateDynamic("afterResponse")(js.Any.fromFunction1(afterResponse))
-    if (beforeRequest != null) __obj.updateDynamic("beforeRequest")(js.Any.fromFunction2(beforeRequest))
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (cache != null) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (credentials != null) __obj.updateDynamic("credentials")(credentials.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (integrity != null) __obj.updateDynamic("integrity")(integrity.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepalive)) __obj.updateDynamic("keepalive")(keepalive.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (redirect != null) __obj.updateDynamic("redirect")(redirect.asInstanceOf[js.Any])
-    if (referrer != null) __obj.updateDynamic("referrer")(referrer.asInstanceOf[js.Any])
-    if (referrerPolicy != null) __obj.updateDynamic("referrerPolicy")(referrerPolicy.asInstanceOf[js.Any])
-    if (signal != null) __obj.updateDynamic("signal")(signal.asInstanceOf[js.Any])
-    if (window != null) __obj.updateDynamic("window")(window.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterJSON(value: /* body */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterJSON")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterJSON: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterJSON")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterResponse(value: /* res */ Response => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterResponse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeRequest(value: (/* url */ TUrl, /* body */ BodyInit) => Boolean | Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeRequest")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeRequest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeader(value: Header): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: Query): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

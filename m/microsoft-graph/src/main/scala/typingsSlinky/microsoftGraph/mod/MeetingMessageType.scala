@@ -17,18 +17,16 @@ trait MeetingMessageType extends js.Object
 
 object MeetingMessageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def meetingAccepted: typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingAccepted = "meetingAccepted".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingAccepted]
   @scala.inline
-  def meetingAccepted: typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingAccepted = this.cast("meetingAccepted")
+  def meetingCancelled: typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingCancelled = "meetingCancelled".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingCancelled]
   @scala.inline
-  def meetingCancelled: typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingCancelled = this.cast("meetingCancelled")
+  def meetingDeclined: typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingDeclined = "meetingDeclined".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingDeclined]
   @scala.inline
-  def meetingDeclined: typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingDeclined = this.cast("meetingDeclined")
+  def meetingRequest: typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingRequest = "meetingRequest".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingRequest]
   @scala.inline
-  def meetingRequest: typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingRequest = this.cast("meetingRequest")
+  def meetingTenativelyAccepted: typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingTenativelyAccepted = "meetingTenativelyAccepted".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingTenativelyAccepted]
   @scala.inline
-  def meetingTenativelyAccepted: typingsSlinky.microsoftGraph.microsoftGraphStrings.meetingTenativelyAccepted = this.cast("meetingTenativelyAccepted")
-  @scala.inline
-  def none: none_ = this.cast("none")
+  def none: none_ = "none".asInstanceOf[none_]
 }
 

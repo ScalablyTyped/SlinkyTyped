@@ -13,6 +13,7 @@ package object esGridMod {
     /* props */ typingsSlinky.reactVirtualized.esGridMod.GridCellProps, 
     slinky.core.TagMod[scala.Any]
   ]
+  type OverscanIndices = typingsSlinky.reactVirtualized.mod.OverscanIndexRange
   type OverscanIndicesGetter = js.Function1[
     /* params */ typingsSlinky.reactVirtualized.esGridMod.OverscanIndicesGetterParams, 
     typingsSlinky.reactVirtualized.esGridMod.OverscanIndices

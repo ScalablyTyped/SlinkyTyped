@@ -1,11 +1,8 @@
 package typingsSlinky.reactNativeScrollableTabView.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ScrollViewProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
@@ -23,55 +20,58 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeScrollableTabView
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeScrollableTabView {
   @JSImport("react-native-scrollable-tab-view", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    contentProps: ScrollViewProps = null,
-    initialPage: Int | Double = null,
-    locked: js.UndefOr[Boolean] = js.undefined,
-    onChangeTab: /* value */ ChangeTabProperties => Unit = null,
-    onScroll: /* value */ Double => Unit = null,
-    page: Int | Double = null,
-    prerenderingSiblingsNumber: Int | Double = null,
-    renderTabBar: (js.Function1[/* props */ TabBarProps, ReactElement]) | `false` = null,
-    scrollWithoutAnimation: js.UndefOr[Boolean] = js.undefined,
-    style: StyleProp[ViewStyle] = null,
-    tabBarActiveTextColor: String = null,
-    tabBarBackgroundColor: String = null,
-    tabBarInactiveTextColor: String = null,
-    tabBarPosition: top | bottom | overlayTop | overlayBottom = null,
-    tabBarTextStyle: StyleProp[TextStyle] = null,
-    tabBarUnderlineStyle: StyleProp[ViewStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (contentProps != null) __obj.updateDynamic("contentProps")(contentProps.asInstanceOf[js.Any])
-    if (initialPage != null) __obj.updateDynamic("initialPage")(initialPage.asInstanceOf[js.Any])
-    if (!js.isUndefined(locked)) __obj.updateDynamic("locked")(locked.asInstanceOf[js.Any])
-    if (onChangeTab != null) __obj.updateDynamic("onChangeTab")(js.Any.fromFunction1(onChangeTab))
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (prerenderingSiblingsNumber != null) __obj.updateDynamic("prerenderingSiblingsNumber")(prerenderingSiblingsNumber.asInstanceOf[js.Any])
-    if (renderTabBar != null) __obj.updateDynamic("renderTabBar")(renderTabBar.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollWithoutAnimation)) __obj.updateDynamic("scrollWithoutAnimation")(scrollWithoutAnimation.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tabBarActiveTextColor != null) __obj.updateDynamic("tabBarActiveTextColor")(tabBarActiveTextColor.asInstanceOf[js.Any])
-    if (tabBarBackgroundColor != null) __obj.updateDynamic("tabBarBackgroundColor")(tabBarBackgroundColor.asInstanceOf[js.Any])
-    if (tabBarInactiveTextColor != null) __obj.updateDynamic("tabBarInactiveTextColor")(tabBarInactiveTextColor.asInstanceOf[js.Any])
-    if (tabBarPosition != null) __obj.updateDynamic("tabBarPosition")(tabBarPosition.asInstanceOf[js.Any])
-    if (tabBarTextStyle != null) __obj.updateDynamic("tabBarTextStyle")(tabBarTextStyle.asInstanceOf[js.Any])
-    if (tabBarUnderlineStyle != null) __obj.updateDynamic("tabBarUnderlineStyle")(tabBarUnderlineStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def contentProps(value: ScrollViewProps): this.type = set("contentProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialPage(value: Double): this.type = set("initialPage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locked(value: Boolean): this.type = set("locked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChangeTab(value: /* value */ ChangeTabProperties => Unit): this.type = set("onChangeTab", js.Any.fromFunction1(value))
+    @scala.inline
+    def onScroll(value: /* value */ Double => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def page(value: Double): this.type = set("page", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prerenderingSiblingsNumber(value: Double): this.type = set("prerenderingSiblingsNumber", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderTabBarFunction1(value: /* props */ TabBarProps => ReactElement): this.type = set("renderTabBar", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderTabBar(value: (js.Function1[/* props */ TabBarProps, ReactElement]) | `false`): this.type = set("renderTabBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollWithoutAnimation(value: Boolean): this.type = set("scrollWithoutAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def tabBarActiveTextColor(value: String): this.type = set("tabBarActiveTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarBackgroundColor(value: String): this.type = set("tabBarBackgroundColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarInactiveTextColor(value: String): this.type = set("tabBarInactiveTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarPosition(value: top | bottom | overlayTop | overlayBottom): this.type = set("tabBarPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarTextStyle(value: StyleProp[TextStyle]): this.type = set("tabBarTextStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarTextStyleNull: this.type = set("tabBarTextStyle", null)
+    @scala.inline
+    def tabBarUnderlineStyle(value: StyleProp[ViewStyle]): this.type = set("tabBarUnderlineStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarUnderlineStyleNull: this.type = set("tabBarUnderlineStyle", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeScrollableTabView.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ScrollableTabViewProperties
+  
+  def withProps(p: ScrollableTabViewProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativeScrollableTabView.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

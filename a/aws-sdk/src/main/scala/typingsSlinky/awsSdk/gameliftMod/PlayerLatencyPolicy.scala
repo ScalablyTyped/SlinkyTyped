@@ -18,14 +18,41 @@ trait PlayerLatencyPolicy extends js.Object {
 
 object PlayerLatencyPolicy {
   @scala.inline
-  def apply(
-    MaximumIndividualPlayerLatencyMilliseconds: Int | scala.Double = null,
-    PolicyDurationSeconds: Int | scala.Double = null
-  ): PlayerLatencyPolicy = {
+  def apply(): PlayerLatencyPolicy = {
     val __obj = js.Dynamic.literal()
-    if (MaximumIndividualPlayerLatencyMilliseconds != null) __obj.updateDynamic("MaximumIndividualPlayerLatencyMilliseconds")(MaximumIndividualPlayerLatencyMilliseconds.asInstanceOf[js.Any])
-    if (PolicyDurationSeconds != null) __obj.updateDynamic("PolicyDurationSeconds")(PolicyDurationSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlayerLatencyPolicy]
   }
+  @scala.inline
+  implicit class PlayerLatencyPolicyOps[Self <: PlayerLatencyPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaximumIndividualPlayerLatencyMilliseconds(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumIndividualPlayerLatencyMilliseconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumIndividualPlayerLatencyMilliseconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumIndividualPlayerLatencyMilliseconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyDurationSeconds(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyDurationSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyDurationSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PolicyDurationSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,11 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IEndpointPair extends js.Object {
-  var localHostName: HostName
-  var localServiceName: String
-  var remoteHostName: HostName
-  var remoteServiceName: String
+  var localHostName: HostName = js.native
+  var localServiceName: String = js.native
+  var remoteHostName: HostName = js.native
+  var remoteServiceName: String = js.native
 }
 
 object IEndpointPair {
@@ -20,8 +21,39 @@ object IEndpointPair {
     remoteServiceName: String
   ): IEndpointPair = {
     val __obj = js.Dynamic.literal(localHostName = localHostName.asInstanceOf[js.Any], localServiceName = localServiceName.asInstanceOf[js.Any], remoteHostName = remoteHostName.asInstanceOf[js.Any], remoteServiceName = remoteServiceName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IEndpointPair]
   }
+  @scala.inline
+  implicit class IEndpointPairOps[Self <: IEndpointPair] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocalHostName(value: HostName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localHostName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalServiceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localServiceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteHostName(value: HostName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteHostName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteServiceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteServiceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

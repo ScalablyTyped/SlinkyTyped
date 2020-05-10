@@ -13,12 +13,10 @@ trait ParseMode extends js.Object
 
 object ParseMode {
   @scala.inline
-  def HTML: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.HTML = this.cast("HTML")
+  def HTML: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.HTML = "HTML".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.HTML]
   @scala.inline
-  def Markdown: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.Markdown = this.cast("Markdown")
+  def Markdown: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.Markdown = "Markdown".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.Markdown]
   @scala.inline
-  def MarkdownV2: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.MarkdownV2 = this.cast("MarkdownV2")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def MarkdownV2: typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.MarkdownV2 = "MarkdownV2".asInstanceOf[typingsSlinky.nodeTelegramBotApi.nodeTelegramBotApiStrings.MarkdownV2]
 }
 

@@ -16,16 +16,14 @@ trait SecurityInfoProtocolVersion extends js.Object
 
 object SecurityInfoProtocolVersion {
   @scala.inline
-  def TLSv1: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1 = this.cast("TLSv1")
+  def TLSv1: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1 = "TLSv1".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1]
   @scala.inline
-  def TLSv1Dot1: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1Dot1 = this.cast("TLSv1.1")
+  def TLSv1Dot1: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1Dot1 = "TLSv1.1".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1Dot1]
   @scala.inline
-  def TLSv1Dot2: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1Dot2 = this.cast("TLSv1.2")
+  def TLSv1Dot2: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1Dot2 = "TLSv1.2".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1Dot2]
   @scala.inline
-  def TLSv1Dot3: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1Dot3 = this.cast("TLSv1.3")
+  def TLSv1Dot3: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1Dot3 = "TLSv1.3".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.TLSv1Dot3]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def unknown: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unknown = this.cast("unknown")
+  def unknown: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unknown = "unknown".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.unknown]
 }
 

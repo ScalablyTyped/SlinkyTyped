@@ -1,6 +1,7 @@
 package typingsSlinky.serviceWorkerMock.mod
 
 import org.scalajs.dom.experimental.Notification
+import org.scalajs.dom.experimental.Request
 import typingsSlinky.serviceWorkerMock.FnCall
 import typingsSlinky.serviceWorkerMock.PartialMessageEvent
 import typingsSlinky.serviceWorkerMock.serviceWorkerMockStrings.fetch
@@ -9,7 +10,6 @@ import typingsSlinky.serviceWorkerMock.serviceWorkerMockStrings.notificationclic
 import typingsSlinky.serviceWorkerMock.serviceWorkerMockStrings.notificationclose
 import typingsSlinky.serviceWorkerMock.serviceWorkerMockStrings.push
 import typingsSlinky.std.Partial
-import typingsSlinky.std.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,9 @@ object _Global_ extends js.Object {
     @JSName("trigger")
     var trigger_Original: FnCall = js.native
     def snapshot(): Snapshot = js.native
-    def trigger(`type`: String): js.Promise[Unit] = js.native
+    def trigger(
+      `type`: /* keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceWorkerGlobalScopeEventMap * / any */ String
+    ): js.Promise[Unit] = js.native
     @JSName("trigger")
     def trigger_fetch(name: fetch, request: String): js.Promise[Unit] = js.native
     @JSName("trigger")
@@ -56,7 +58,9 @@ object _Global_ extends js.Object {
   /**
     * Used to trigger active listeners.
     */
-  def trigger(`type`: String): js.Promise[Unit] = js.native
+  def trigger(
+    `type`: /* keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceWorkerGlobalScopeEventMap * / any */ String
+  ): js.Promise[Unit] = js.native
   @JSName("trigger")
   def trigger_fetch(name: fetch, request: String): js.Promise[Unit] = js.native
   @JSName("trigger")

@@ -20,8 +20,27 @@ object SetEndpointAttributesInput {
   @scala.inline
   def apply(Attributes: MapStringToString, EndpointArn: String): SetEndpointAttributesInput = {
     val __obj = js.Dynamic.literal(Attributes = Attributes.asInstanceOf[js.Any], EndpointArn = EndpointArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SetEndpointAttributesInput]
   }
+  @scala.inline
+  implicit class SetEndpointAttributesInputOps[Self <: SetEndpointAttributesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: MapStringToString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

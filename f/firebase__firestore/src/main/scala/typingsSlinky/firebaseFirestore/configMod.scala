@@ -1,7 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebaseAppTypes.mod.FirebaseNamespace
+import typingsSlinky.firebaseFirestore.mod.FirebaseNamespace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 object configMod extends js.Object {
   def configureForFirebase(firebase: FirebaseNamespace): Unit = js.native
-  def configureForStandalone(exportObject: StringDictionary[js.Object]): Unit = js.native
 }
 

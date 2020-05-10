@@ -20,6 +20,8 @@ import typingsSlinky.node.AnonRecursive
 import typingsSlinky.node.AnonWithFileTypes
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
+import typingsSlinky.node.MakeDirectoryOptionsrecur
+import typingsSlinky.node.MakeDirectoryOptionsrecurMode
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.fsMod.Dir
 import typingsSlinky.node.fsMod.Dirent
@@ -28,12 +30,12 @@ import typingsSlinky.node.fsMod.MakeDirectoryOptions
 import typingsSlinky.node.fsMod.OpenDirOptions
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.ReadStream
+import typingsSlinky.node.fsMod.ReadSyncOptions
 import typingsSlinky.node.fsMod.RmDirOptions
 import typingsSlinky.node.fsMod.Stats
 import typingsSlinky.node.fsMod.WriteFileOptions
 import typingsSlinky.node.fsMod.WriteStream
 import typingsSlinky.node.fsMod.symlink.Type
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -101,6 +103,7 @@ trait Typeoffs extends js.Object {
   val readdir: Typeofreaddir = js.native
   // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   val readlink: Typeofreadlink = js.native
+  val readv: Typeofreadv = js.native
   // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   val realpath: Typeofrealpath = js.native
   val realpathSync: TypeofrealpathSync = js.native
@@ -239,13 +242,13 @@ trait Typeoffs extends js.Object {
     */
   def futimesSync(fd: Double, atime: String, mtime: String): Unit = js.native
   def futimesSync(fd: Double, atime: String, mtime: Double): Unit = js.native
-  def futimesSync(fd: Double, atime: String, mtime: Date): Unit = js.native
+  def futimesSync(fd: Double, atime: String, mtime: js.Date): Unit = js.native
   def futimesSync(fd: Double, atime: Double, mtime: String): Unit = js.native
   def futimesSync(fd: Double, atime: Double, mtime: Double): Unit = js.native
-  def futimesSync(fd: Double, atime: Double, mtime: Date): Unit = js.native
-  def futimesSync(fd: Double, atime: Date, mtime: String): Unit = js.native
-  def futimesSync(fd: Double, atime: Date, mtime: Double): Unit = js.native
-  def futimesSync(fd: Double, atime: Date, mtime: Date): Unit = js.native
+  def futimesSync(fd: Double, atime: Double, mtime: js.Date): Unit = js.native
+  def futimesSync(fd: Double, atime: js.Date, mtime: String): Unit = js.native
+  def futimesSync(fd: Double, atime: js.Date, mtime: Double): Unit = js.native
+  def futimesSync(fd: Double, atime: js.Date, mtime: js.Date): Unit = js.native
   /**
     * Synchronous lchmod(2) - Change permissions of a file. Does not dereference symbolic links.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -275,10 +278,30 @@ trait Typeoffs extends js.Object {
     * @param options Either the file mode, or an object optionally specifying the file mode and whether parent folders
     * should be created. If a string is passed, it is parsed as an octal integer. If not specified, defaults to `0o777`.
     */
-  def mkdirSync(path: PathLike): Unit = js.native
-  def mkdirSync(path: PathLike, options: String): Unit = js.native
-  def mkdirSync(path: PathLike, options: Double): Unit = js.native
-  def mkdirSync(path: PathLike, options: MakeDirectoryOptions): Unit = js.native
+  def mkdirSync(path: PathLike): js.UndefOr[String] = js.native
+  def mkdirSync(path: PathLike, options: String): js.UndefOr[String] = js.native
+  def mkdirSync(path: PathLike, options: Double): js.UndefOr[String] = js.native
+  /**
+    * Synchronous mkdir(2) - create a directory.
+    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * @param options Either the file mode, or an object optionally specifying the file mode and whether parent folders
+    * should be created. If a string is passed, it is parsed as an octal integer. If not specified, defaults to `0o777`.
+    */
+  def mkdirSync(path: PathLike, options: MakeDirectoryOptionsrecur): String = js.native
+  def mkdirSync(path: PathLike, options: MakeDirectoryOptionsrecurMode): Unit = js.native
+  def mkdirSync(path: PathLike, options: MakeDirectoryOptions): js.UndefOr[String] = js.native
+  /**
+    * Synchronous mkdir(2) - create a directory.
+    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * @param options Either the file mode, or an object optionally specifying the file mode and whether parent folders
+    * should be created. If a string is passed, it is parsed as an octal integer. If not specified, defaults to `0o777`.
+    */
+  @JSName("mkdirSync")
+  def mkdirSync_Unit(path: PathLike): Unit = js.native
+  @JSName("mkdirSync")
+  def mkdirSync_Unit(path: PathLike, options: String): Unit = js.native
+  @JSName("mkdirSync")
+  def mkdirSync_Unit(path: PathLike, options: Double): Unit = js.native
   /**
     * Synchronously creates a unique temporary directory.
     * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
@@ -358,6 +381,11 @@ trait Typeoffs extends js.Object {
   def readFileSync_Union(path: Double, options: String): String | Buffer = js.native
   @JSName("readFileSync")
   def readFileSync_Union(path: PathLike, options: String): String | Buffer = js.native
+  /**
+    * Similar to the above `fs.readSync` function, this version takes an optional `options` object.
+    * If no `options` object is specified, it will default with the above values.
+    */
+  def readSync(fd: Double, buffer: ArrayBufferView): Double = js.native
   def readSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double): Double = js.native
   /**
     * Synchronously reads data from the file referenced by the supplied file descriptor, returning the number of bytes read.
@@ -368,6 +396,7 @@ trait Typeoffs extends js.Object {
     * @param position The offset from the beginning of the file from which data should be read. If `null`, data will be read from the current position.
     */
   def readSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double, position: Double): Double = js.native
+  def readSync(fd: Double, buffer: ArrayBufferView, opts: ReadSyncOptions): Double = js.native
   /**
     * Synchronous readdir(3) - read a directory.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -417,6 +446,11 @@ trait Typeoffs extends js.Object {
   def readlinkSync_Union(path: PathLike): String | Buffer = js.native
   @JSName("readlinkSync")
   def readlinkSync_buffer(path: PathLike, options: buffer): Buffer = js.native
+  /**
+    * See `readv`.
+    */
+  def readvSync(fd: Double, buffers: js.Array[ArrayBufferView]): Double = js.native
+  def readvSync(fd: Double, buffers: js.Array[ArrayBufferView], position: Double): Double = js.native
   /**
     * Synchronous rename(2) - Change the name or location of a file or directory.
     * @param oldPath A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -472,13 +506,13 @@ trait Typeoffs extends js.Object {
     */
   def utimesSync(path: PathLike, atime: String, mtime: String): Unit = js.native
   def utimesSync(path: PathLike, atime: String, mtime: Double): Unit = js.native
-  def utimesSync(path: PathLike, atime: String, mtime: Date): Unit = js.native
+  def utimesSync(path: PathLike, atime: String, mtime: js.Date): Unit = js.native
   def utimesSync(path: PathLike, atime: Double, mtime: String): Unit = js.native
   def utimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
-  def utimesSync(path: PathLike, atime: Double, mtime: Date): Unit = js.native
-  def utimesSync(path: PathLike, atime: Date, mtime: String): Unit = js.native
-  def utimesSync(path: PathLike, atime: Date, mtime: Double): Unit = js.native
-  def utimesSync(path: PathLike, atime: Date, mtime: Date): Unit = js.native
+  def utimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
+  def utimesSync(path: PathLike, atime: js.Date, mtime: String): Unit = js.native
+  def utimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
+  def utimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
   def watch(filename: PathLike): FSWatcher = js.native
   def watch(filename: PathLike, listener: js.Function2[/* event */ String, /* filename */ String, _]): FSWatcher = js.native
   def watch(

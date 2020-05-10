@@ -1,7 +1,6 @@
 package typingsSlinky.commonTags.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +13,9 @@ object replaceStringTransformer extends js.Object {
     replaceWhat: String,
     replaceWith: js.Function2[/* substring */ String, /* repeated */ js.Any, String]
   ): TemplateTransformer[StringDictionary[_]] = js.native
-  def apply(replaceWhat: RegExp, replaceWith: String): TemplateTransformer[StringDictionary[_]] = js.native
+  def apply(replaceWhat: js.RegExp, replaceWith: String): TemplateTransformer[StringDictionary[_]] = js.native
   def apply(
-    replaceWhat: RegExp,
+    replaceWhat: js.RegExp,
     replaceWith: js.Function2[/* substring */ String, /* repeated */ js.Any, String]
   ): TemplateTransformer[StringDictionary[_]] = js.native
 }

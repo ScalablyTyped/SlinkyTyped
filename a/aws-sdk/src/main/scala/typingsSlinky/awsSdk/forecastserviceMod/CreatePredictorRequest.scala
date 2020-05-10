@@ -58,24 +58,126 @@ object CreatePredictorRequest {
     FeaturizationConfig: FeaturizationConfig,
     ForecastHorizon: Integer,
     InputDataConfig: InputDataConfig,
-    PredictorName: Name,
-    AlgorithmArn: Arn = null,
-    EncryptionConfig: EncryptionConfig = null,
-    EvaluationParameters: EvaluationParameters = null,
-    HPOConfig: HyperParameterTuningJobConfig = null,
-    PerformAutoML: js.UndefOr[scala.Boolean] = js.undefined,
-    PerformHPO: js.UndefOr[scala.Boolean] = js.undefined,
-    TrainingParameters: TrainingParameters = null
+    PredictorName: Name
   ): CreatePredictorRequest = {
     val __obj = js.Dynamic.literal(FeaturizationConfig = FeaturizationConfig.asInstanceOf[js.Any], ForecastHorizon = ForecastHorizon.asInstanceOf[js.Any], InputDataConfig = InputDataConfig.asInstanceOf[js.Any], PredictorName = PredictorName.asInstanceOf[js.Any])
-    if (AlgorithmArn != null) __obj.updateDynamic("AlgorithmArn")(AlgorithmArn.asInstanceOf[js.Any])
-    if (EncryptionConfig != null) __obj.updateDynamic("EncryptionConfig")(EncryptionConfig.asInstanceOf[js.Any])
-    if (EvaluationParameters != null) __obj.updateDynamic("EvaluationParameters")(EvaluationParameters.asInstanceOf[js.Any])
-    if (HPOConfig != null) __obj.updateDynamic("HPOConfig")(HPOConfig.asInstanceOf[js.Any])
-    if (!js.isUndefined(PerformAutoML)) __obj.updateDynamic("PerformAutoML")(PerformAutoML.asInstanceOf[js.Any])
-    if (!js.isUndefined(PerformHPO)) __obj.updateDynamic("PerformHPO")(PerformHPO.asInstanceOf[js.Any])
-    if (TrainingParameters != null) __obj.updateDynamic("TrainingParameters")(TrainingParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePredictorRequest]
   }
+  @scala.inline
+  implicit class CreatePredictorRequestOps[Self <: CreatePredictorRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFeaturizationConfig(value: FeaturizationConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FeaturizationConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForecastHorizon(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForecastHorizon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputDataConfig(value: InputDataConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InputDataConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPredictorName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PredictorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAlgorithmArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlgorithmArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AlgorithmArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionConfig(value: EncryptionConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvaluationParameters(value: EvaluationParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluationParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHPOConfig(value: HyperParameterTuningJobConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HPOConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHPOConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HPOConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerformAutoML(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformAutoML")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerformAutoML: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformAutoML")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerformHPO(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformHPO")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerformHPO: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformHPO")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrainingParameters(value: TrainingParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrainingParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrainingParameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

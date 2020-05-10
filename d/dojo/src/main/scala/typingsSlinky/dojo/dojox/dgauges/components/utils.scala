@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait utils extends js.Object {
   /**
     * Adjusts the brightness of a color.
@@ -17,13 +18,13 @@ trait utils extends js.Object {
     * @param col The base color
     * @param b A positive or negative value to adjust the brightness
     */
-  def brightness(col: Double, b: Double): Double
+  def brightness(col: Double, b: Double): Double = js.native
   /**
     * Creates a gradient object
     *
     * @param entries An array of numbers representing colors
     */
-  def createGradient(entries: js.Array[_]): Double
+  def createGradient(entries: js.Array[_]): Double = js.native
   /**
     * A helper method for configuring a circular gauge.
     *
@@ -51,7 +52,7 @@ trait utils extends js.Object {
     font: js.Object,
     labelPosition: String,
     tickShapeFunc: js.Object
-  ): Double
+  ): Double = js.native
 }
 
 object utils {
@@ -62,8 +63,35 @@ object utils {
     genericCircularGauge: (Double, IndicatorBase, Double, Double, Double, Double, Double, String, js.Object, String, js.Object) => Double
   ): utils = {
     val __obj = js.Dynamic.literal(brightness = js.Any.fromFunction2(brightness), createGradient = js.Any.fromFunction1(createGradient), genericCircularGauge = js.Any.fromFunction11(genericCircularGauge))
-  
     __obj.asInstanceOf[utils]
   }
+  @scala.inline
+  implicit class utilsOps[Self <: utils] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBrightness(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brightness")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCreateGradient(value: js.Array[_] => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createGradient")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGenericCircularGauge(
+      value: (Double, IndicatorBase, Double, Double, Double, Double, Double, String, js.Object, String, js.Object) => Double
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("genericCircularGauge")(js.Any.fromFunction11(value))
+        ret
+    }
+  }
+  
 }
 

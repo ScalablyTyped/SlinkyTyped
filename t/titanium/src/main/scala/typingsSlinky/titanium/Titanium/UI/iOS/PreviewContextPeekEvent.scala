@@ -1,0 +1,72 @@
+package typingsSlinky.titanium.Titanium.UI.iOS
+
+import typingsSlinky.titanium.Titanium.UI.View
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+			 * Fired when the user peeks the preview. You can configure the preview
+			 */
+@js.native
+trait PreviewContextPeekEvent extends PreviewContextBaseEvent {
+  /**
+  				 * The item ID bound to the list item that generated the event.
+  				 */
+  var itemId: String = js.native
+  /**
+  				 * The item index of the ListView to identify the selected item.
+  				 * Note: This property is only available if the preview context is assigned to a <Titanium.UI.ListView>.
+  				 */
+  var itemIndex: Double = js.native
+  /**
+  				 * The view to be previewed.
+  				 */
+  var preview: View = js.native
+  /**
+  				 * The section index of the ListView to identify the selected section.
+  				 * Note: This property is only available if the preview context is assigned to a <Titanium.UI.ListView>.
+  				 */
+  var sectionIndex: Double = js.native
+}
+
+object PreviewContextPeekEvent {
+  @scala.inline
+  def apply(itemId: String, itemIndex: Double, preview: View, sectionIndex: Double, source: PreviewContext): PreviewContextPeekEvent = {
+    val __obj = js.Dynamic.literal(itemId = itemId.asInstanceOf[js.Any], itemIndex = itemIndex.asInstanceOf[js.Any], preview = preview.asInstanceOf[js.Any], sectionIndex = sectionIndex.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PreviewContextPeekEvent]
+  }
+  @scala.inline
+  implicit class PreviewContextPeekEventOps[Self <: PreviewContextPeekEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItemId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreview(value: View): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSectionIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sectionIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

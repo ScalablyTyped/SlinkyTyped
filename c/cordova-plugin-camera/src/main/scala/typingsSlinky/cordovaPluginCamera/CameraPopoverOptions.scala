@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation._
   * iOS-only parameters that specify the anchor element location and arrow direction
   * of the popover when selecting images from an iPad's library or album.
   */
-@JSGlobal("CameraPopoverOptions")
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CameraPopoverOptions * / any */ @JSGlobal("CameraPopoverOptions")
 @js.native
 class CameraPopoverOptions () extends js.Object {
   def this(x: Double) = this()

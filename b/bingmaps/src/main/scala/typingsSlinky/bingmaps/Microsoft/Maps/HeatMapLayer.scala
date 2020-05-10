@@ -15,9 +15,6 @@ class HeatMapLayer protected () extends IDataLayer {
     */
   def this(locations: js.Array[Location | Pushpin]) = this()
   def this(locations: js.Array[Location | Pushpin], options: IHeatMapLayerOptions) = this()
-  /** Clears all data in the layer. */
-  /* CompleteClass */
-  override def clear(): Unit = js.native
   /** Disposes the heat map layer. */
   def dispose(): Unit = js.native
   /**

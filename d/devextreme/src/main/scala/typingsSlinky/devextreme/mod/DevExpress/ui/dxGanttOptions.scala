@@ -1,12 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import typingsSlinky.devextreme.AnonAllowDependencyAdding
-import typingsSlinky.devextreme.AnonComponentElement
-import typingsSlinky.devextreme.AnonElement
 import typingsSlinky.devextreme.AnonEndExpr
 import typingsSlinky.devextreme.AnonKeyExpr
-import typingsSlinky.devextreme.AnonModel
-import typingsSlinky.devextreme.AnonName
 import typingsSlinky.devextreme.AnonResourceIdExpr
 import typingsSlinky.devextreme.AnonSelectedRowKey
 import typingsSlinky.devextreme.AnonTextExpr
@@ -25,105 +21,219 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxGanttOptions extends WidgetOptions[dxGantt] {
   /** Specifies whether users can select tasks in the Gantt. */
-  var allowSelection: js.UndefOr[Boolean] = js.undefined
+  var allowSelection: js.UndefOr[Boolean] = js.native
   /** An array of columns in the Gantt. */
-  var columns: js.UndefOr[js.Array[dxTreeListColumn | String]] = js.undefined
+  var columns: js.UndefOr[js.Array[dxTreeListColumn | String]] = js.native
   /** Configures dependencies. */
-  var dependencies: js.UndefOr[AnonKeyExpr] = js.undefined
+  var dependencies: js.UndefOr[AnonKeyExpr] = js.native
   /** Configures edit options. */
-  var editing: js.UndefOr[AnonAllowDependencyAdding] = js.undefined
+  var editing: js.UndefOr[AnonAllowDependencyAdding] = js.native
   /** A function that is executed after users select a task or clear its selection. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonSelectedRowKey, _]] = js.undefined
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonSelectedRowKey, _]] = js.native
   /** Configures resource assignments. */
-  var resourceAssignments: js.UndefOr[AnonResourceIdExpr] = js.undefined
+  var resourceAssignments: js.UndefOr[AnonResourceIdExpr] = js.native
   /** Configures task resources. */
-  var resources: js.UndefOr[AnonTextExpr] = js.undefined
+  var resources: js.UndefOr[AnonTextExpr] = js.native
   /** Specifies the zoom level of tasks in the Gantt chart. */
-  var scaleType: js.UndefOr[auto | minutes | hours | days | weeks | months | quarters | years] = js.undefined
+  var scaleType: js.UndefOr[auto | minutes | hours | days | weeks | months | quarters | years] = js.native
   /** Allows you to select a row or determine which row is selected. */
-  var selectedRowKey: js.UndefOr[js.Any] = js.undefined
+  var selectedRowKey: js.UndefOr[js.Any] = js.native
   /** Specifies whether to display task resources. */
-  var showResources: js.UndefOr[Boolean] = js.undefined
+  var showResources: js.UndefOr[Boolean] = js.native
   /** Specifies whether to show/hide horizontal faint lines that separate tasks. */
-  var showRowLines: js.UndefOr[Boolean] = js.undefined
+  var showRowLines: js.UndefOr[Boolean] = js.native
   /** Specifies the width of the task list in pixels. */
-  var taskListWidth: js.UndefOr[Double] = js.undefined
+  var taskListWidth: js.UndefOr[Double] = js.native
   /** Specifies a task's title position. */
-  var taskTitlePosition: js.UndefOr[inside | outside | none] = js.undefined
+  var taskTitlePosition: js.UndefOr[inside | outside | none] = js.native
   /** Configures tasks. */
-  var tasks: js.UndefOr[AnonEndExpr] = js.undefined
+  var tasks: js.UndefOr[AnonEndExpr] = js.native
 }
 
 object dxGanttOptions {
   @scala.inline
-  def apply(
-    accessKey: String = null,
-    activeStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    allowSelection: js.UndefOr[Boolean] = js.undefined,
-    bindingOptions: js.Any = null,
-    columns: js.Array[dxTreeListColumn | String] = null,
-    dependencies: AnonKeyExpr = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    editing: AnonAllowDependencyAdding = null,
-    elementAttr: js.Any = null,
-    focusStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    height: Double | String | (js.Function0[Double | String]) = null,
-    hint: String = null,
-    hoverStateEnabled: js.UndefOr[Boolean] = js.undefined,
-    onContentReady: /* e */ AnonComponentElement[dxGantt] => _ = null,
-    onDisposing: /* e */ AnonModel[dxGantt] => _ = null,
-    onInitialized: /* e */ AnonElement[dxGantt] => _ = null,
-    onOptionChanged: /* e */ AnonName[dxGantt] => _ = null,
-    onSelectionChanged: /* e */ AnonSelectedRowKey => _ = null,
-    resourceAssignments: AnonResourceIdExpr = null,
-    resources: AnonTextExpr = null,
-    rtlEnabled: js.UndefOr[Boolean] = js.undefined,
-    scaleType: auto | minutes | hours | days | weeks | months | quarters | years = null,
-    selectedRowKey: js.Any = null,
-    showResources: js.UndefOr[Boolean] = js.undefined,
-    showRowLines: js.UndefOr[Boolean] = js.undefined,
-    tabIndex: Int | Double = null,
-    taskListWidth: Int | Double = null,
-    taskTitlePosition: inside | outside | none = null,
-    tasks: AnonEndExpr = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    width: Double | String | (js.Function0[Double | String]) = null
-  ): dxGanttOptions = {
+  def apply(): dxGanttOptions = {
     val __obj = js.Dynamic.literal()
-    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(activeStateEnabled)) __obj.updateDynamic("activeStateEnabled")(activeStateEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowSelection)) __obj.updateDynamic("allowSelection")(allowSelection.asInstanceOf[js.Any])
-    if (bindingOptions != null) __obj.updateDynamic("bindingOptions")(bindingOptions.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (dependencies != null) __obj.updateDynamic("dependencies")(dependencies.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (editing != null) __obj.updateDynamic("editing")(editing.asInstanceOf[js.Any])
-    if (elementAttr != null) __obj.updateDynamic("elementAttr")(elementAttr.asInstanceOf[js.Any])
-    if (!js.isUndefined(focusStateEnabled)) __obj.updateDynamic("focusStateEnabled")(focusStateEnabled.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverStateEnabled)) __obj.updateDynamic("hoverStateEnabled")(hoverStateEnabled.asInstanceOf[js.Any])
-    if (onContentReady != null) __obj.updateDynamic("onContentReady")(js.Any.fromFunction1(onContentReady))
-    if (onDisposing != null) __obj.updateDynamic("onDisposing")(js.Any.fromFunction1(onDisposing))
-    if (onInitialized != null) __obj.updateDynamic("onInitialized")(js.Any.fromFunction1(onInitialized))
-    if (onOptionChanged != null) __obj.updateDynamic("onOptionChanged")(js.Any.fromFunction1(onOptionChanged))
-    if (onSelectionChanged != null) __obj.updateDynamic("onSelectionChanged")(js.Any.fromFunction1(onSelectionChanged))
-    if (resourceAssignments != null) __obj.updateDynamic("resourceAssignments")(resourceAssignments.asInstanceOf[js.Any])
-    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
-    if (!js.isUndefined(rtlEnabled)) __obj.updateDynamic("rtlEnabled")(rtlEnabled.asInstanceOf[js.Any])
-    if (scaleType != null) __obj.updateDynamic("scaleType")(scaleType.asInstanceOf[js.Any])
-    if (selectedRowKey != null) __obj.updateDynamic("selectedRowKey")(selectedRowKey.asInstanceOf[js.Any])
-    if (!js.isUndefined(showResources)) __obj.updateDynamic("showResources")(showResources.asInstanceOf[js.Any])
-    if (!js.isUndefined(showRowLines)) __obj.updateDynamic("showRowLines")(showRowLines.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (taskListWidth != null) __obj.updateDynamic("taskListWidth")(taskListWidth.asInstanceOf[js.Any])
-    if (taskTitlePosition != null) __obj.updateDynamic("taskTitlePosition")(taskTitlePosition.asInstanceOf[js.Any])
-    if (tasks != null) __obj.updateDynamic("tasks")(tasks.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxGanttOptions]
   }
+  @scala.inline
+  implicit class dxGanttOptionsOps[Self <: dxGanttOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowSelection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowSelection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSelection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumns(value: js.Array[dxTreeListColumn | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDependencies(value: AnonKeyExpr): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDependencies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEditing(value: AnonAllowDependencyAdding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEditing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSelectionChanged(value: /* e */ AnonSelectedRowKey => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSelectionChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceAssignments(value: AnonResourceIdExpr): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAssignments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceAssignments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAssignments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: AnonTextExpr): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleType(value: auto | minutes | hours | days | weeks | months | quarters | years): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectedRowKey(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRowKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectedRowKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedRowKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowResources(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showResources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showResources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowRowLines(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showRowLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowRowLines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showRowLines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskListWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskListWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskListWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskListWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskTitlePosition(value: inside | outside | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskTitlePosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskTitlePosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskTitlePosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTasks(value: AnonEndExpr): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tasks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTasks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tasks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

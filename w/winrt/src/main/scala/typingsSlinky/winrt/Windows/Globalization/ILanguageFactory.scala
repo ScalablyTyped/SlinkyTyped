@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ILanguageFactory extends js.Object {
-  def createLanguage(languageTag: String): Language
+  def createLanguage(languageTag: String): Language = js.native
 }
 
 object ILanguageFactory {
   @scala.inline
   def apply(createLanguage: String => Language): ILanguageFactory = {
     val __obj = js.Dynamic.literal(createLanguage = js.Any.fromFunction1(createLanguage))
-  
     __obj.asInstanceOf[ILanguageFactory]
   }
+  @scala.inline
+  implicit class ILanguageFactoryOps[Self <: ILanguageFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateLanguage(value: String => Language): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLanguage")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

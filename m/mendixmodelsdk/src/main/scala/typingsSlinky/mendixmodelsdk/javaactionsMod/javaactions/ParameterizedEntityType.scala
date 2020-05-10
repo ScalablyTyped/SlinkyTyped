@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   * In version 7.21.0: deleted
   * In version 6.6.0: introduced
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -38,14 +38,14 @@ class ParameterizedEntityType protected () extends EntityType {
   @JSName("typeParameter")
   val typeParameter_FParameterizedEntityType: ITypeParameter = js.native
   @JSName("containerAsBasicParameterType")
-  def containerAsBasicParameterType_MParameterizedEntityType(): BasicParameterType = js.native
+  def containerAsBasicParameterType_MParameterizedEntityType: BasicParameterType = js.native
   @JSName("containerAsJavaActionParameter")
-  def containerAsJavaActionParameter_MParameterizedEntityType(): JavaActionParameter = js.native
+  def containerAsJavaActionParameter_MParameterizedEntityType: JavaActionParameter = js.native
   @JSName("containerAsJavaAction")
-  def containerAsJavaAction_MParameterizedEntityType(): JavaAction = js.native
+  def containerAsJavaAction_MParameterizedEntityType: JavaAction = js.native
   @JSName("containerAsListType")
-  def containerAsListType_MParameterizedEntityType(): ListType = js.native
-  def typeParameter(): TypeParameter = js.native
+  def containerAsListType_MParameterizedEntityType: ListType = js.native
+  def typeParameter: TypeParameter = js.native
   def typeParameter(newValue: TypeParameter): js.Any = js.native
 }
 

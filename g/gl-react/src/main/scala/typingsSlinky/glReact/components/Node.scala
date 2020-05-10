@@ -1,9 +1,7 @@
 package typingsSlinky.glReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.glReact.AnonColor
 import typingsSlinky.glReact.AnonDst
 import typingsSlinky.glReact.mod.NodeProps
@@ -13,39 +11,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Node
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.glReact.mod.Node] {
+object Node {
   @JSImport("gl-react", "Node")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    shader: ShaderIdentifier | ShaderDefinition,
-    backbuffering: js.UndefOr[Boolean] = js.undefined,
-    blendFunc: AnonDst = null,
-    clear: AnonColor = null,
-    height: Int | Double = null,
-    ignoreUnusedUniforms: js.Array[String] | Boolean = null,
-    onDraw: () => Unit = null,
-    sync: js.UndefOr[Boolean] = js.undefined,
-    uniformsOptions: js.Any = null,
-    width: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.glReact.mod.Node] = {
-    val __obj = js.Dynamic.literal(shader = shader.asInstanceOf[js.Any])
-    if (!js.isUndefined(backbuffering)) __obj.updateDynamic("backbuffering")(backbuffering.asInstanceOf[js.Any])
-    if (blendFunc != null) __obj.updateDynamic("blendFunc")(blendFunc.asInstanceOf[js.Any])
-    if (clear != null) __obj.updateDynamic("clear")(clear.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (ignoreUnusedUniforms != null) __obj.updateDynamic("ignoreUnusedUniforms")(ignoreUnusedUniforms.asInstanceOf[js.Any])
-    if (onDraw != null) __obj.updateDynamic("onDraw")(js.Any.fromFunction0(onDraw))
-    if (!js.isUndefined(sync)) __obj.updateDynamic("sync")(sync.asInstanceOf[js.Any])
-    if (uniformsOptions != null) __obj.updateDynamic("uniformsOptions")(uniformsOptions.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.glReact.mod.Node] {
+    @scala.inline
+    def backbuffering(value: Boolean): this.type = set("backbuffering", value.asInstanceOf[js.Any])
+    @scala.inline
+    def blendFunc(value: AnonDst): this.type = set("blendFunc", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clear(value: AnonColor): this.type = set("clear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ignoreUnusedUniforms(value: js.Array[String] | Boolean): this.type = set("ignoreUnusedUniforms", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDraw(value: () => Unit): this.type = set("onDraw", js.Any.fromFunction0(value))
+    @scala.inline
+    def sync(value: Boolean): this.type = set("sync", value.asInstanceOf[js.Any])
+    @scala.inline
+    def uniformsOptions(value: js.Any): this.type = set("uniformsOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }
-  type Props = NodeProps
+  
+  def withProps(p: NodeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(shader: ShaderIdentifier | ShaderDefinition): Builder = {
+    val __props = js.Dynamic.literal(shader = shader.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[NodeProps]))
+  }
 }
 

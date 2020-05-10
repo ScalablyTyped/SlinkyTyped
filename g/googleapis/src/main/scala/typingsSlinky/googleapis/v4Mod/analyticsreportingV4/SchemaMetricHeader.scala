@@ -21,14 +21,41 @@ trait SchemaMetricHeader extends js.Object {
 
 object SchemaMetricHeader {
   @scala.inline
-  def apply(
-    metricHeaderEntries: js.Array[SchemaMetricHeaderEntry] = null,
-    pivotHeaders: js.Array[SchemaPivotHeader] = null
-  ): SchemaMetricHeader = {
+  def apply(): SchemaMetricHeader = {
     val __obj = js.Dynamic.literal()
-    if (metricHeaderEntries != null) __obj.updateDynamic("metricHeaderEntries")(metricHeaderEntries.asInstanceOf[js.Any])
-    if (pivotHeaders != null) __obj.updateDynamic("pivotHeaders")(pivotHeaders.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMetricHeader]
   }
+  @scala.inline
+  implicit class SchemaMetricHeaderOps[Self <: SchemaMetricHeader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMetricHeaderEntries(value: js.Array[SchemaMetricHeaderEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricHeaderEntries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricHeaderEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricHeaderEntries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPivotHeaders(value: js.Array[SchemaPivotHeader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotHeaders")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPivotHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivotHeaders")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

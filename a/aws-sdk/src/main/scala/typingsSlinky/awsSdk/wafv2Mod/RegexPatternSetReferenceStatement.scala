@@ -24,8 +24,33 @@ object RegexPatternSetReferenceStatement {
   @scala.inline
   def apply(ARN: ResourceArn, FieldToMatch: FieldToMatch, TextTransformations: TextTransformations): RegexPatternSetReferenceStatement = {
     val __obj = js.Dynamic.literal(ARN = ARN.asInstanceOf[js.Any], FieldToMatch = FieldToMatch.asInstanceOf[js.Any], TextTransformations = TextTransformations.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[RegexPatternSetReferenceStatement]
   }
+  @scala.inline
+  implicit class RegexPatternSetReferenceStatementOps[Self <: RegexPatternSetReferenceStatement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withARN(value: ResourceArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFieldToMatch(value: FieldToMatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldToMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextTransformations(value: TextTransformations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextTransformations")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

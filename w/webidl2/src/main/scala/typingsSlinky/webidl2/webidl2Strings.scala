@@ -12,6 +12,9 @@ object webidl2Strings {
   sealed trait NaN extends js.Object
   
   @js.native
+  sealed trait WebIDLParseError extends js.Object
+  
+  @js.native
   sealed trait attribute extends js.Object
   
   @js.native
@@ -30,6 +33,12 @@ object webidl2Strings {
   sealed trait constructor extends js.Object
   
   @js.native
+  sealed trait decimal extends js.Object
+  
+  @js.native
+  sealed trait `decimal-list` extends js.Object
+  
+  @js.native
   sealed trait deleter extends js.Object
   
   @js.native
@@ -40,9 +49,6 @@ object webidl2Strings {
   
   @js.native
   sealed trait field extends js.Object
-  
-  @js.native
-  sealed trait float extends js.Object
   
   @js.native
   sealed trait getter extends js.Object
@@ -58,6 +64,9 @@ object webidl2Strings {
   
   @js.native
   sealed trait integer extends js.Object
+  
+  @js.native
+  sealed trait `integer-list` extends js.Object
   
   @js.native
   sealed trait interface extends js.Object
@@ -102,6 +111,9 @@ object webidl2Strings {
   sealed trait string extends js.Object
   
   @js.native
+  sealed trait `string-list` extends js.Object
+  
+  @js.native
   sealed trait stringifier extends js.Object
   
   @js.native
@@ -115,17 +127,23 @@ object webidl2Strings {
   @scala.inline
   def NaN: NaN = "NaN".asInstanceOf[NaN]
   @scala.inline
+  def WebIDLParseError: WebIDLParseError = "WebIDLParseError".asInstanceOf[WebIDLParseError]
+  @scala.inline
   def attribute: attribute = "attribute".asInstanceOf[attribute]
   @scala.inline
   def boolean: boolean = "boolean".asInstanceOf[boolean]
   @scala.inline
   def callback: callback = "callback".asInstanceOf[callback]
   @scala.inline
-  def `callback interface`: `callback interface` = "callback interface".asInstanceOf[`callback interface`]
+  def `callback interface`: `callback interface` = ("callback interface").asInstanceOf[`callback interface`]
   @scala.inline
   def const: const = "const".asInstanceOf[const]
   @scala.inline
   def constructor: constructor = "constructor".asInstanceOf[constructor]
+  @scala.inline
+  def decimal: decimal = "decimal".asInstanceOf[decimal]
+  @scala.inline
+  def `decimal-list`: `decimal-list` = "decimal-list".asInstanceOf[`decimal-list`]
   @scala.inline
   def deleter: deleter = "deleter".asInstanceOf[deleter]
   @scala.inline
@@ -134,8 +152,6 @@ object webidl2Strings {
   def enum: enum = "enum".asInstanceOf[enum]
   @scala.inline
   def field: field = "field".asInstanceOf[field]
-  @scala.inline
-  def float: float = "float".asInstanceOf[float]
   @scala.inline
   def getter: getter = "getter".asInstanceOf[getter]
   @scala.inline
@@ -147,9 +163,11 @@ object webidl2Strings {
   @scala.inline
   def integer: integer = "integer".asInstanceOf[integer]
   @scala.inline
+  def `integer-list`: `integer-list` = "integer-list".asInstanceOf[`integer-list`]
+  @scala.inline
   def interface: interface = "interface".asInstanceOf[interface]
   @scala.inline
-  def `interface mixin`: `interface mixin` = "interface mixin".asInstanceOf[`interface mixin`]
+  def `interface mixin`: `interface mixin` = ("interface mixin").asInstanceOf[`interface mixin`]
   @scala.inline
   def iterable: iterable = "iterable".asInstanceOf[iterable]
   @scala.inline
@@ -174,6 +192,8 @@ object webidl2Strings {
   def static: static = "static".asInstanceOf[static]
   @scala.inline
   def string: string = "string".asInstanceOf[string]
+  @scala.inline
+  def `string-list`: `string-list` = "string-list".asInstanceOf[`string-list`]
   @scala.inline
   def stringifier: stringifier = "stringifier".asInstanceOf[stringifier]
   @scala.inline

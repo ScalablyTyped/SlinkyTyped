@@ -27,9 +27,6 @@ object octokitPluginRestEndpointMethodsStrings {
   sealed trait `160000` extends js.Object
   
   @js.native
-  sealed trait `2Dot4Dot0` extends js.Object
-  
-  @js.native
   sealed trait `2fa_disabled` extends js.Object
   
   @js.native
@@ -419,8 +416,6 @@ object octokitPluginRestEndpointMethodsStrings {
   @scala.inline
   def `160000`: `160000` = "160000".asInstanceOf[`160000`]
   @scala.inline
-  def `2Dot4Dot0`: `2Dot4Dot0` = "2.4.0".asInstanceOf[`2Dot4Dot0`]
-  @scala.inline
   def `2fa_disabled`: `2fa_disabled` = "2fa_disabled".asInstanceOf[`2fa_disabled`]
   @scala.inline
   def APPROVE: APPROVE = "APPROVE".asInstanceOf[APPROVE]
@@ -433,7 +428,7 @@ object octokitPluginRestEndpointMethodsStrings {
   @scala.inline
   def `Quotationmarkgh-pagesQuotationmark`: `Quotationmarkgh-pagesQuotationmark` = "\"gh-pages\"".asInstanceOf[`Quotationmarkgh-pagesQuotationmark`]
   @scala.inline
-  def `Quotationmarkmaster SlashdocsQuotationmark`: `Quotationmarkmaster SlashdocsQuotationmark` = "\"master /docs\"".asInstanceOf[`Quotationmarkmaster SlashdocsQuotationmark`]
+  def `Quotationmarkmaster SlashdocsQuotationmark`: `Quotationmarkmaster SlashdocsQuotationmark` = ("\"master /docs\"").asInstanceOf[`Quotationmarkmaster SlashdocsQuotationmark`]
   @scala.inline
   def QuotationmarkmasterQuotationmark: QuotationmarkmasterQuotationmark = "\"master\"".asInstanceOf[QuotationmarkmasterQuotationmark]
   @scala.inline
@@ -657,7 +652,7 @@ object octokitPluginRestEndpointMethodsStrings {
   @scala.inline
   def timed_out: timed_out = "timed_out".asInstanceOf[timed_out]
   @scala.inline
-  def `too heated`: `too heated` = "too heated".asInstanceOf[`too heated`]
+  def `too heated`: `too heated` = ("too heated").asInstanceOf[`too heated`]
   @scala.inline
   def tree: tree = "tree".asInstanceOf[tree]
   @scala.inline

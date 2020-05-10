@@ -10,47 +10,170 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Omit<@ionic/core.@ionic/core.ModalOptions<@ionic/core.@ionic/core.ComponentRef>, 'component' | 'componentProps'> & {  children  :react.react.ReactNode} */
+@js.native
 trait ReactModalOptions extends js.Object {
-  var animated: js.UndefOr[Boolean] = js.undefined
-  var backdropDismiss: js.UndefOr[Boolean] = js.undefined
-  var children: TagMod[Any]
-  var cssClass: js.UndefOr[String | js.Array[String]] = js.undefined
-  var delegate: js.UndefOr[FrameworkDelegate] = js.undefined
-  var enterAnimation: js.UndefOr[AnimationBuilder] = js.undefined
-  var id: js.UndefOr[String] = js.undefined
-  var keyboardClose: js.UndefOr[Boolean] = js.undefined
-  var leaveAnimation: js.UndefOr[AnimationBuilder] = js.undefined
-  var mode: js.UndefOr[Mode] = js.undefined
-  var showBackdrop: js.UndefOr[Boolean] = js.undefined
+  var animated: js.UndefOr[Boolean] = js.native
+  var backdropDismiss: js.UndefOr[Boolean] = js.native
+  var children: TagMod[Any] = js.native
+  var cssClass: js.UndefOr[String | js.Array[String]] = js.native
+  var delegate: js.UndefOr[FrameworkDelegate] = js.native
+  var enterAnimation: js.UndefOr[AnimationBuilder] = js.native
+  var id: js.UndefOr[String] = js.native
+  var keyboardClose: js.UndefOr[Boolean] = js.native
+  var leaveAnimation: js.UndefOr[AnimationBuilder] = js.native
+  var mode: js.UndefOr[Mode] = js.native
+  var showBackdrop: js.UndefOr[Boolean] = js.native
 }
 
 object ReactModalOptions {
   @scala.inline
-  def apply(
-    children: TagMod[Any],
-    animated: js.UndefOr[Boolean] = js.undefined,
-    backdropDismiss: js.UndefOr[Boolean] = js.undefined,
-    cssClass: String | js.Array[String] = null,
-    delegate: FrameworkDelegate = null,
-    enterAnimation: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation] = null,
-    id: String = null,
-    keyboardClose: js.UndefOr[Boolean] = js.undefined,
-    leaveAnimation: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation] = null,
-    mode: Mode = null,
-    showBackdrop: js.UndefOr[Boolean] = js.undefined
-  ): ReactModalOptions = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (!js.isUndefined(backdropDismiss)) __obj.updateDynamic("backdropDismiss")(backdropDismiss.asInstanceOf[js.Any])
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (delegate != null) __obj.updateDynamic("delegate")(delegate.asInstanceOf[js.Any])
-    if (enterAnimation != null) __obj.updateDynamic("enterAnimation")(js.Any.fromFunction3(enterAnimation))
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(keyboardClose)) __obj.updateDynamic("keyboardClose")(keyboardClose.asInstanceOf[js.Any])
-    if (leaveAnimation != null) __obj.updateDynamic("leaveAnimation")(js.Any.fromFunction3(leaveAnimation))
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (!js.isUndefined(showBackdrop)) __obj.updateDynamic("showBackdrop")(showBackdrop.asInstanceOf[js.Any])
+  def apply(): ReactModalOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ReactModalOptions]
   }
+  @scala.inline
+  implicit class ReactModalOptionsOps[Self <: ReactModalOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackdropDismiss(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropDismiss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackdropDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildren(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCssClass(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCssClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDelegate(value: FrameworkDelegate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDelegate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delegate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnterAnimation(
+      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterAnimation")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutEnterAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyboardClose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyboardClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeaveAnimation(
+      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveAnimation")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutLeaveAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: Mode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowBackdrop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showBackdrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowBackdrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showBackdrop")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

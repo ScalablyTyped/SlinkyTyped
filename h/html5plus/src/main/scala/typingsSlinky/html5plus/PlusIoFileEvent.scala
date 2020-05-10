@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/io.html](http://www.html5plus.org/doc/zh_cn/io.html)
   */
+@js.native
 trait PlusIoFileEvent extends js.Object {
   /**
     * 文件或目录操作对象
@@ -18,15 +19,34 @@ trait PlusIoFileEvent extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/io.html](http://www.html5plus.org/doc/zh_cn/io.html)
     */
-  var target: js.UndefOr[PlusIoDirectoryEntry] = js.undefined
+  var target: js.UndefOr[PlusIoDirectoryEntry] = js.native
 }
 
 object PlusIoFileEvent {
   @scala.inline
-  def apply(target: PlusIoDirectoryEntry = null): PlusIoFileEvent = {
+  def apply(): PlusIoFileEvent = {
     val __obj = js.Dynamic.literal()
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusIoFileEvent]
   }
+  @scala.inline
+  implicit class PlusIoFileEventOps[Self <: PlusIoFileEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTarget(value: PlusIoDirectoryEntry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

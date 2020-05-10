@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   * NOTE - If this class is used with a widget by data-dojo-mixins, make sure putting the widget in data-dojo-type and putting this class to data-dojo-mixins.
   *
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.mvc.atBindingMixin because Already inherited
 - typingsSlinky.dojo.dojo.Stateful because Already inherited
 - typingsSlinky.dojo.dojox.mvc.Controller because Already inherited

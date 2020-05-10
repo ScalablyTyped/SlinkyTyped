@@ -8,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PointCloudReturnFilterProperties extends PointCloudFilterProperties {
   /**
     * An array of return types used to filter points. Possible values for the return types are:
@@ -22,16 +23,34 @@ trait PointCloudReturnFilterProperties extends PointCloudFilterProperties {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-pointCloudFilters-PointCloudReturnFilter.html#includedReturns)
     */
-  var includedReturns: js.UndefOr[js.Array[firstOfMany | last | lastOfMany | single]] = js.undefined
+  var includedReturns: js.UndefOr[js.Array[firstOfMany | last | lastOfMany | single]] = js.native
 }
 
 object PointCloudReturnFilterProperties {
   @scala.inline
-  def apply(field: String = null, includedReturns: js.Array[firstOfMany | last | lastOfMany | single] = null): PointCloudReturnFilterProperties = {
+  def apply(): PointCloudReturnFilterProperties = {
     val __obj = js.Dynamic.literal()
-    if (field != null) __obj.updateDynamic("field")(field.asInstanceOf[js.Any])
-    if (includedReturns != null) __obj.updateDynamic("includedReturns")(includedReturns.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointCloudReturnFilterProperties]
   }
+  @scala.inline
+  implicit class PointCloudReturnFilterPropertiesOps[Self <: PointCloudReturnFilterProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIncludedReturns(value: js.Array[firstOfMany | last | lastOfMany | single]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includedReturns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludedReturns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includedReturns")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

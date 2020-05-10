@@ -3,10 +3,7 @@ package typingsSlinky.chaiAsPromised
 import typingsSlinky.chai.Chai_.LanguageChains
 import typingsSlinky.chai.Chai_.NumericComparison
 import typingsSlinky.chai.Chai_.TypeComparison
-import typingsSlinky.std.Error
 import typingsSlinky.std.PromiseLike
-import typingsSlinky.std.PropertyDescriptor
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,8 +24,8 @@ object Chai extends js.Object {
     def isRejected(promise: js.Thenable[_]): js.Thenable[Unit] = js.native
     def isRejected(promise: js.Thenable[_], expected: js.Any): js.Thenable[Unit] = js.native
     def isRejected(promise: js.Thenable[_], expected: js.Any, message: String): js.Thenable[Unit] = js.native
-    def isRejected(promise: js.Thenable[_], `match`: RegExp): js.Thenable[Unit] = js.native
-    def isRejected(promise: js.Thenable[_], `match`: RegExp, message: String): js.Thenable[Unit] = js.native
+    def isRejected(promise: js.Thenable[_], `match`: js.RegExp): js.Thenable[Unit] = js.native
+    def isRejected(promise: js.Thenable[_], `match`: js.RegExp, message: String): js.Thenable[Unit] = js.native
     def isRejected(promise: js.Thenable[_], message: String): js.Thenable[Unit] = js.native
     def notify(fn: js.Function): js.Thenable[Unit] = js.native
   }
@@ -59,17 +56,17 @@ object Chai extends js.Object {
     def rejectedWith(constructor: js.Function): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
-    def rejectedWith(constructor: js.Function, expected: RegExp): PromisedAssertion = js.native
-    def rejectedWith(constructor: js.Function, expected: RegExp, message: String): PromisedAssertion = js.native
-    def rejectedWith(constructor: Error): PromisedAssertion = js.native
-    def rejectedWith(constructor: Error, expected: String): PromisedAssertion = js.native
-    def rejectedWith(constructor: Error, expected: String, message: String): PromisedAssertion = js.native
-    def rejectedWith(constructor: Error, expected: RegExp): PromisedAssertion = js.native
-    def rejectedWith(constructor: Error, expected: RegExp, message: String): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error, expected: String): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def rejectedWith(expected: String): PromisedAssertion = js.native
     def rejectedWith(expected: String, message: String): PromisedAssertion = js.native
-    def rejectedWith(expected: RegExp): PromisedAssertion = js.native
-    def rejectedWith(expected: RegExp, message: String): PromisedAssertion = js.native
+    def rejectedWith(expected: js.RegExp): PromisedAssertion = js.native
+    def rejectedWith(expected: js.RegExp, message: String): PromisedAssertion = js.native
   }
   
   // Eventually does not have .then(), but PromisedAssertion have.
@@ -198,17 +195,17 @@ object Chai extends js.Object {
     def Throw(constructor: js.Function): PromisedAssertion = js.native
     def Throw(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def Throw(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
-    def Throw(constructor: js.Function, expected: RegExp): PromisedAssertion = js.native
-    def Throw(constructor: js.Function, expected: RegExp, message: String): PromisedAssertion = js.native
-    def Throw(constructor: Error): PromisedAssertion = js.native
-    def Throw(constructor: Error, expected: String): PromisedAssertion = js.native
-    def Throw(constructor: Error, expected: String, message: String): PromisedAssertion = js.native
-    def Throw(constructor: Error, expected: RegExp): PromisedAssertion = js.native
-    def Throw(constructor: Error, expected: RegExp, message: String): PromisedAssertion = js.native
+    def Throw(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
+    def Throw(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
+    def Throw(constructor: js.Error): PromisedAssertion = js.native
+    def Throw(constructor: js.Error, expected: String): PromisedAssertion = js.native
+    def Throw(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
+    def Throw(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
+    def Throw(constructor: js.Error, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def Throw(expected: String): PromisedAssertion = js.native
     def Throw(expected: String, message: String): PromisedAssertion = js.native
-    def Throw(expected: RegExp): PromisedAssertion = js.native
-    def Throw(expected: RegExp, message: String): PromisedAssertion = js.native
+    def Throw(expected: js.RegExp): PromisedAssertion = js.native
+    def Throw(expected: js.RegExp, message: String): PromisedAssertion = js.native
     def a(`type`: String): PromisedAssertion = js.native
     def a(`type`: String, message: String): PromisedAssertion = js.native
     def an(`type`: String): PromisedAssertion = js.native
@@ -260,8 +257,8 @@ object Chai extends js.Object {
     def haveOwnProperty(name: String): PromisedAssertion = js.native
     def haveOwnProperty(name: String, message: String): PromisedAssertion = js.native
     def haveOwnPropertyDescriptor(name: String): PromisedAssertion = js.native
-    def haveOwnPropertyDescriptor(name: String, descriptor: PropertyDescriptor): PromisedAssertion = js.native
-    def haveOwnPropertyDescriptor(name: String, descriptor: PropertyDescriptor, message: String): PromisedAssertion = js.native
+    def haveOwnPropertyDescriptor(name: String, descriptor: js.PropertyDescriptor): PromisedAssertion = js.native
+    def haveOwnPropertyDescriptor(name: String, descriptor: js.PropertyDescriptor, message: String): PromisedAssertion = js.native
     def haveOwnPropertyDescriptor(name: String, message: String): PromisedAssertion = js.native
     def include(value: String): PromisedAssertion = js.native
     def include(value: String, message: String): PromisedAssertion = js.native
@@ -285,12 +282,12 @@ object Chai extends js.Object {
     def lengthOf(length: Double, message: String): PromisedAssertion = js.native
     def `match`(regexp: String): PromisedAssertion = js.native
     def `match`(regexp: String, message: String): PromisedAssertion = js.native
-    def `match`(regexp: RegExp): PromisedAssertion = js.native
-    def `match`(regexp: RegExp, message: String): PromisedAssertion = js.native
+    def `match`(regexp: js.RegExp): PromisedAssertion = js.native
+    def `match`(regexp: js.RegExp, message: String): PromisedAssertion = js.native
     def matches(regexp: String): PromisedAssertion = js.native
     def matches(regexp: String, message: String): PromisedAssertion = js.native
-    def matches(regexp: RegExp): PromisedAssertion = js.native
-    def matches(regexp: RegExp, message: String): PromisedAssertion = js.native
+    def matches(regexp: js.RegExp): PromisedAssertion = js.native
+    def matches(regexp: js.RegExp, message: String): PromisedAssertion = js.native
     def members(set: js.Array[_]): PromisedAssertion = js.native
     def members(set: js.Array[_], message: String): PromisedAssertion = js.native
     // From chai
@@ -306,8 +303,8 @@ object Chai extends js.Object {
     def ownProperty(name: String): PromisedAssertion = js.native
     def ownProperty(name: String, message: String): PromisedAssertion = js.native
     def ownPropertyDescriptor(name: String): PromisedAssertion = js.native
-    def ownPropertyDescriptor(name: String, descriptor: PropertyDescriptor): PromisedAssertion = js.native
-    def ownPropertyDescriptor(name: String, descriptor: PropertyDescriptor, message: String): PromisedAssertion = js.native
+    def ownPropertyDescriptor(name: String, descriptor: js.PropertyDescriptor): PromisedAssertion = js.native
+    def ownPropertyDescriptor(name: String, descriptor: js.PropertyDescriptor, message: String): PromisedAssertion = js.native
     def ownPropertyDescriptor(name: String, message: String): PromisedAssertion = js.native
     def property(name: String): PromisedAssertion = js.native
     def property(name: String, value: js.Any): PromisedAssertion = js.native
@@ -318,17 +315,17 @@ object Chai extends js.Object {
     def rejectedWith(constructor: js.Function): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def rejectedWith(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
-    def rejectedWith(constructor: js.Function, expected: RegExp): PromisedAssertion = js.native
-    def rejectedWith(constructor: js.Function, expected: RegExp, message: String): PromisedAssertion = js.native
-    def rejectedWith(constructor: Error): PromisedAssertion = js.native
-    def rejectedWith(constructor: Error, expected: String): PromisedAssertion = js.native
-    def rejectedWith(constructor: Error, expected: String, message: String): PromisedAssertion = js.native
-    def rejectedWith(constructor: Error, expected: RegExp): PromisedAssertion = js.native
-    def rejectedWith(constructor: Error, expected: RegExp, message: String): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error, expected: String): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
+    def rejectedWith(constructor: js.Error, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def rejectedWith(expected: String): PromisedAssertion = js.native
     def rejectedWith(expected: String, message: String): PromisedAssertion = js.native
-    def rejectedWith(expected: RegExp): PromisedAssertion = js.native
-    def rejectedWith(expected: RegExp, message: String): PromisedAssertion = js.native
+    def rejectedWith(expected: js.RegExp): PromisedAssertion = js.native
+    def rejectedWith(expected: js.RegExp, message: String): PromisedAssertion = js.native
     def respondTo(method: String): PromisedAssertion = js.native
     def respondTo(method: String, message: String): PromisedAssertion = js.native
     def respondsTo(method: String): PromisedAssertion = js.native
@@ -345,32 +342,32 @@ object Chai extends js.Object {
     def `throw`(constructor: js.Function): PromisedAssertion = js.native
     def `throw`(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def `throw`(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
-    def `throw`(constructor: js.Function, expected: RegExp): PromisedAssertion = js.native
-    def `throw`(constructor: js.Function, expected: RegExp, message: String): PromisedAssertion = js.native
-    def `throw`(constructor: Error): PromisedAssertion = js.native
-    def `throw`(constructor: Error, expected: String): PromisedAssertion = js.native
-    def `throw`(constructor: Error, expected: String, message: String): PromisedAssertion = js.native
-    def `throw`(constructor: Error, expected: RegExp): PromisedAssertion = js.native
-    def `throw`(constructor: Error, expected: RegExp, message: String): PromisedAssertion = js.native
+    def `throw`(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
+    def `throw`(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
+    def `throw`(constructor: js.Error): PromisedAssertion = js.native
+    def `throw`(constructor: js.Error, expected: String): PromisedAssertion = js.native
+    def `throw`(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
+    def `throw`(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
+    def `throw`(constructor: js.Error, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def `throw`(expected: String): PromisedAssertion = js.native
     def `throw`(expected: String, message: String): PromisedAssertion = js.native
-    def `throw`(expected: RegExp): PromisedAssertion = js.native
-    def `throw`(expected: RegExp, message: String): PromisedAssertion = js.native
+    def `throw`(expected: js.RegExp): PromisedAssertion = js.native
+    def `throw`(expected: js.RegExp, message: String): PromisedAssertion = js.native
     def throws(): PromisedAssertion = js.native
     def throws(constructor: js.Function): PromisedAssertion = js.native
     def throws(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def throws(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
-    def throws(constructor: js.Function, expected: RegExp): PromisedAssertion = js.native
-    def throws(constructor: js.Function, expected: RegExp, message: String): PromisedAssertion = js.native
-    def throws(constructor: Error): PromisedAssertion = js.native
-    def throws(constructor: Error, expected: String): PromisedAssertion = js.native
-    def throws(constructor: Error, expected: String, message: String): PromisedAssertion = js.native
-    def throws(constructor: Error, expected: RegExp): PromisedAssertion = js.native
-    def throws(constructor: Error, expected: RegExp, message: String): PromisedAssertion = js.native
+    def throws(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
+    def throws(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
+    def throws(constructor: js.Error): PromisedAssertion = js.native
+    def throws(constructor: js.Error, expected: String): PromisedAssertion = js.native
+    def throws(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
+    def throws(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
+    def throws(constructor: js.Error, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def throws(expected: String): PromisedAssertion = js.native
     def throws(expected: String, message: String): PromisedAssertion = js.native
-    def throws(expected: RegExp): PromisedAssertion = js.native
-    def throws(expected: RegExp, message: String): PromisedAssertion = js.native
+    def throws(expected: js.RegExp): PromisedAssertion = js.native
+    def throws(expected: js.RegExp, message: String): PromisedAssertion = js.native
     def `true`(`type`: String): PromisedAssertion = js.native
     def `true`(`type`: String, message: String): PromisedAssertion = js.native
     def undefined(`type`: String): PromisedAssertion = js.native
@@ -382,9 +379,9 @@ object Chai extends js.Object {
     def Throw(fn: js.Function): js.Thenable[Unit] = js.native
     def Throw(fn: js.Function, errType: js.Function): js.Thenable[Unit] = js.native
     def Throw(fn: js.Function, errType: js.Function, msg: String): js.Thenable[Unit] = js.native
-    def Throw(fn: js.Function, errType: js.Function, regExp: RegExp): js.Thenable[Unit] = js.native
+    def Throw(fn: js.Function, errType: js.Function, regExp: js.RegExp): js.Thenable[Unit] = js.native
     def Throw(fn: js.Function, msg: String): js.Thenable[Unit] = js.native
-    def Throw(fn: js.Function, regExp: RegExp): js.Thenable[Unit] = js.native
+    def Throw(fn: js.Function, regExp: js.RegExp): js.Thenable[Unit] = js.native
     def approximately(act: Double, exp: Double, delta: Double): js.Thenable[Unit] = js.native
     def approximately(act: Double, exp: Double, delta: Double, msg: String): js.Thenable[Unit] = js.native
     def changes(modifier: js.Function, obj: js.Object, property: String): js.Thenable[Unit] = js.native
@@ -410,9 +407,9 @@ object Chai extends js.Object {
     def doesNotThrow(fn: js.Function): js.Thenable[Unit] = js.native
     def doesNotThrow(fn: js.Function, errType: js.Function): js.Thenable[Unit] = js.native
     def doesNotThrow(fn: js.Function, errType: js.Function, msg: String): js.Thenable[Unit] = js.native
-    def doesNotThrow(fn: js.Function, errType: js.Function, regExp: RegExp): js.Thenable[Unit] = js.native
+    def doesNotThrow(fn: js.Function, errType: js.Function, regExp: js.RegExp): js.Thenable[Unit] = js.native
     def doesNotThrow(fn: js.Function, msg: String): js.Thenable[Unit] = js.native
-    def doesNotThrow(fn: js.Function, regExp: RegExp): js.Thenable[Unit] = js.native
+    def doesNotThrow(fn: js.Function, regExp: js.RegExp): js.Thenable[Unit] = js.native
     def equal(act: js.Any, exp: js.Any): js.Thenable[Unit] = js.native
     def equal(act: js.Any, exp: js.Any, msg: String): js.Thenable[Unit] = js.native
     def exists(`val`: js.Any): js.Thenable[Unit] = js.native
@@ -582,15 +579,15 @@ object Chai extends js.Object {
     def `throw`(fn: js.Function): js.Thenable[Unit] = js.native
     def `throw`(fn: js.Function, errType: js.Function): js.Thenable[Unit] = js.native
     def `throw`(fn: js.Function, errType: js.Function, msg: String): js.Thenable[Unit] = js.native
-    def `throw`(fn: js.Function, errType: js.Function, regExp: RegExp): js.Thenable[Unit] = js.native
+    def `throw`(fn: js.Function, errType: js.Function, regExp: js.RegExp): js.Thenable[Unit] = js.native
     def `throw`(fn: js.Function, msg: String): js.Thenable[Unit] = js.native
-    def `throw`(fn: js.Function, regExp: RegExp): js.Thenable[Unit] = js.native
+    def `throw`(fn: js.Function, regExp: js.RegExp): js.Thenable[Unit] = js.native
     def throws(fn: js.Function): js.Thenable[Unit] = js.native
     def throws(fn: js.Function, errType: js.Function): js.Thenable[Unit] = js.native
     def throws(fn: js.Function, errType: js.Function, msg: String): js.Thenable[Unit] = js.native
-    def throws(fn: js.Function, errType: js.Function, regExp: RegExp): js.Thenable[Unit] = js.native
+    def throws(fn: js.Function, errType: js.Function, regExp: js.RegExp): js.Thenable[Unit] = js.native
     def throws(fn: js.Function, msg: String): js.Thenable[Unit] = js.native
-    def throws(fn: js.Function, regExp: RegExp): js.Thenable[Unit] = js.native
+    def throws(fn: js.Function, regExp: js.RegExp): js.Thenable[Unit] = js.native
     def typeOf(`val`: js.Any, `type`: String): js.Thenable[Unit] = js.native
     def typeOf(`val`: js.Any, `type`: String, msg: String): js.Thenable[Unit] = js.native
   }
@@ -829,8 +826,8 @@ object Chai extends js.Object {
   @js.native
   trait PromisedOwnPropertyDescriptor extends js.Object {
     def apply(name: String): PromisedAssertion = js.native
-    def apply(name: String, descriptor: PropertyDescriptor): PromisedAssertion = js.native
-    def apply(name: String, descriptor: PropertyDescriptor, message: String): PromisedAssertion = js.native
+    def apply(name: String, descriptor: js.PropertyDescriptor): PromisedAssertion = js.native
+    def apply(name: String, descriptor: js.PropertyDescriptor, message: String): PromisedAssertion = js.native
     def apply(name: String, message: String): PromisedAssertion = js.native
   }
   
@@ -840,17 +837,17 @@ object Chai extends js.Object {
     def apply(constructor: js.Function): PromisedAssertion = js.native
     def apply(constructor: js.Function, expected: String): PromisedAssertion = js.native
     def apply(constructor: js.Function, expected: String, message: String): PromisedAssertion = js.native
-    def apply(constructor: js.Function, expected: RegExp): PromisedAssertion = js.native
-    def apply(constructor: js.Function, expected: RegExp, message: String): PromisedAssertion = js.native
-    def apply(constructor: Error): PromisedAssertion = js.native
-    def apply(constructor: Error, expected: String): PromisedAssertion = js.native
-    def apply(constructor: Error, expected: String, message: String): PromisedAssertion = js.native
-    def apply(constructor: Error, expected: RegExp): PromisedAssertion = js.native
-    def apply(constructor: Error, expected: RegExp, message: String): PromisedAssertion = js.native
+    def apply(constructor: js.Function, expected: js.RegExp): PromisedAssertion = js.native
+    def apply(constructor: js.Function, expected: js.RegExp, message: String): PromisedAssertion = js.native
+    def apply(constructor: js.Error): PromisedAssertion = js.native
+    def apply(constructor: js.Error, expected: String): PromisedAssertion = js.native
+    def apply(constructor: js.Error, expected: String, message: String): PromisedAssertion = js.native
+    def apply(constructor: js.Error, expected: js.RegExp): PromisedAssertion = js.native
+    def apply(constructor: js.Error, expected: js.RegExp, message: String): PromisedAssertion = js.native
     def apply(expected: String): PromisedAssertion = js.native
     def apply(expected: String, message: String): PromisedAssertion = js.native
-    def apply(expected: RegExp): PromisedAssertion = js.native
-    def apply(expected: RegExp, message: String): PromisedAssertion = js.native
+    def apply(expected: js.RegExp): PromisedAssertion = js.native
+    def apply(expected: js.RegExp, message: String): PromisedAssertion = js.native
   }
   
   @js.native

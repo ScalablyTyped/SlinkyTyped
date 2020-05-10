@@ -10,19 +10,20 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait Zoom extends js.Object {
   /**
     *
     */
-  def Zoom100(): Unit
+  def Zoom100(): Unit = js.native
   /**
     *
     */
-  def ZoomIn(): Unit
+  def ZoomIn(): Unit = js.native
   /**
     *
     */
-  def ZoomOut(): Unit
+  def ZoomOut(): Unit = js.native
 }
 
 @JSGlobal("dojox.drawing.plugins.tools.Zoom")

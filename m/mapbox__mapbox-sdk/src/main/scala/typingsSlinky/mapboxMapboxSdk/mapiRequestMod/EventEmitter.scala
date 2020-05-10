@@ -7,11 +7,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EventEmitter extends js.Object {
-  var downloadProgress: ProgressEvent
-  var error: MapiError
-  var response: MapiResponse
-  var uploadProgress: ProgressEvent
+  var downloadProgress: ProgressEvent = js.native
+  var error: MapiError = js.native
+  var response: MapiResponse = js.native
+  var uploadProgress: ProgressEvent = js.native
 }
 
 object EventEmitter {
@@ -23,8 +24,39 @@ object EventEmitter {
     uploadProgress: ProgressEvent
   ): EventEmitter = {
     val __obj = js.Dynamic.literal(downloadProgress = downloadProgress.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any], uploadProgress = uploadProgress.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[EventEmitter]
   }
+  @scala.inline
+  implicit class EventEmitterOps[Self <: EventEmitter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDownloadProgress(value: ProgressEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withError(value: MapiError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResponse(value: MapiResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUploadProgress(value: ProgressEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,32 +1,40 @@
 package typingsSlinky.firebaseFirestore.remotePersistentStreamMod
 
-import typingsSlinky.firebaseFirestore.firestoreProtoApiMod.ApiClientObjectMap
-import typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.Write
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WriteRequest
   extends typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.WriteRequest {
-  var database: js.UndefOr[String] = js.undefined
+  var database: js.UndefOr[String] = js.native
 }
 
 object WriteRequest {
   @scala.inline
-  def apply(
-    database: String = null,
-    labels: ApiClientObjectMap[String] = null,
-    streamId: String = null,
-    streamToken: String = null,
-    writes: js.Array[Write] = null
-  ): WriteRequest = {
+  def apply(): WriteRequest = {
     val __obj = js.Dynamic.literal()
-    if (database != null) __obj.updateDynamic("database")(database.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (streamId != null) __obj.updateDynamic("streamId")(streamId.asInstanceOf[js.Any])
-    if (streamToken != null) __obj.updateDynamic("streamToken")(streamToken.asInstanceOf[js.Any])
-    if (writes != null) __obj.updateDynamic("writes")(writes.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteRequest]
   }
+  @scala.inline
+  implicit class WriteRequestOps[Self <: WriteRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDatabase(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("database")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

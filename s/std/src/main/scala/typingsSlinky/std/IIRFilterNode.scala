@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IIRFilterNode extends AudioNode {
   def getFrequencyResponse(
-    frequencyHz: scala.scalajs.js.typedarray.Float32Array,
-    magResponse: scala.scalajs.js.typedarray.Float32Array,
-    phaseResponse: scala.scalajs.js.typedarray.Float32Array
+    frequencyHz: js.typedarray.Float32Array,
+    magResponse: js.typedarray.Float32Array,
+    phaseResponse: js.typedarray.Float32Array
   ): Unit = js.native
 }
 

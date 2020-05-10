@@ -16,18 +16,16 @@ trait kind extends js.Object
 
 object kind {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fail: typingsSlinky.sarif.sarifStrings.fail = "fail".asInstanceOf[typingsSlinky.sarif.sarifStrings.fail]
   @scala.inline
-  def fail: typingsSlinky.sarif.sarifStrings.fail = this.cast("fail")
+  def informational: typingsSlinky.sarif.sarifStrings.informational = "informational".asInstanceOf[typingsSlinky.sarif.sarifStrings.informational]
   @scala.inline
-  def informational: typingsSlinky.sarif.sarifStrings.informational = this.cast("informational")
+  def notApplicable: typingsSlinky.sarif.sarifStrings.notApplicable = "notApplicable".asInstanceOf[typingsSlinky.sarif.sarifStrings.notApplicable]
   @scala.inline
-  def notApplicable: typingsSlinky.sarif.sarifStrings.notApplicable = this.cast("notApplicable")
+  def open: typingsSlinky.sarif.sarifStrings.open = "open".asInstanceOf[typingsSlinky.sarif.sarifStrings.open]
   @scala.inline
-  def open: typingsSlinky.sarif.sarifStrings.open = this.cast("open")
+  def pass: typingsSlinky.sarif.sarifStrings.pass = "pass".asInstanceOf[typingsSlinky.sarif.sarifStrings.pass]
   @scala.inline
-  def pass: typingsSlinky.sarif.sarifStrings.pass = this.cast("pass")
-  @scala.inline
-  def review: typingsSlinky.sarif.sarifStrings.review = this.cast("review")
+  def review: typingsSlinky.sarif.sarifStrings.review = "review".asInstanceOf[typingsSlinky.sarif.sarifStrings.review]
 }
 

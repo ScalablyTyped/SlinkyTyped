@@ -1,7 +1,5 @@
 package typingsSlinky.fridaGum
 
-import typingsSlinky.fridaGum.fridaGumStrings.ipv4
-import typingsSlinky.fridaGum.fridaGumStrings.ipv6
 import typingsSlinky.fridaGum.fridaGumStrings.unix
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,24 +13,13 @@ trait SocketListenOptions extends js.Object
 
 object SocketListenOptions {
   @scala.inline
-  def TcpListenOptions(
-    backlog: Int | Double = null,
-    family: ipv4 | ipv6 = null,
-    host: String = null,
-    port: Int | Double = null
-  ): SocketListenOptions = {
+  def TcpListenOptions(): SocketListenOptions = {
     val __obj = js.Dynamic.literal()
-    if (backlog != null) __obj.updateDynamic("backlog")(backlog.asInstanceOf[js.Any])
-    if (family != null) __obj.updateDynamic("family")(family.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
     __obj.asInstanceOf[SocketListenOptions]
   }
   @scala.inline
-  def UnixListenOptions(family: unix, path: String, backlog: Int | Double = null, `type`: UnixSocketType = null): SocketListenOptions = {
+  def UnixListenOptions(family: unix, path: String): SocketListenOptions = {
     val __obj = js.Dynamic.literal(family = family.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
-    if (backlog != null) __obj.updateDynamic("backlog")(backlog.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SocketListenOptions]
   }
 }

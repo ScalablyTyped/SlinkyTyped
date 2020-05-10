@@ -1,12 +1,12 @@
 package typingsSlinky.openlayers.mod.format
 
+import org.scalajs.dom.raw.Node
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.olx.format.GPXOptions
 import typingsSlinky.openlayers.mod.olx.format.ReadOptions
 import typingsSlinky.openlayers.mod.olx.format.WriteOptions
 import typingsSlinky.openlayers.mod.proj.Projection
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -98,7 +98,7 @@ class GPX () extends XMLFeature {
     * @return Node.
     * @api
     */
-  def writeFeaturesNode(features: js.Array[typingsSlinky.openlayers.mod.Feature]): org.scalajs.dom.raw.Node = js.native
-  def writeFeaturesNode(features: js.Array[typingsSlinky.openlayers.mod.Feature], opt_options: WriteOptions): org.scalajs.dom.raw.Node = js.native
+  def writeFeaturesNode(features: js.Array[typingsSlinky.openlayers.mod.Feature]): Node = js.native
+  def writeFeaturesNode(features: js.Array[typingsSlinky.openlayers.mod.Feature], opt_options: WriteOptions): Node = js.native
 }
 

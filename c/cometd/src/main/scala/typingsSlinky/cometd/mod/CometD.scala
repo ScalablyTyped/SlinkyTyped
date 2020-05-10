@@ -4,11 +4,6 @@ import typingsSlinky.cometd.cometdStrings.debug
 import typingsSlinky.cometd.cometdStrings.error
 import typingsSlinky.cometd.cometdStrings.info
 import typingsSlinky.cometd.cometdStrings.warn
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.DataView
-import typingsSlinky.std.Uint16Array
-import typingsSlinky.std.Uint32Array
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -119,7 +114,7 @@ class CometD () extends js.Object {
     *
     * @return the status of the Bayeux communication
     */
-  def getStatus(): String = js.native
+  def getStatus(): Status = js.native
   /**
     * Returns the URL of the Bayeux server.
     *
@@ -159,9 +154,9 @@ class CometD () extends js.Object {
   def init(configuration: Configuration): Unit = js.native
   def init(configuration: Configuration, handshakeProps: js.Object): Unit = js.native
   /**
-    * Returns whether this instance has been disconnected.
+    * Returns true if this instance is disconnected or disconnecting.
     *
-    * @return whether this instance has been disconnected.
+    * @return whether this instance disconnected or disconnecting.
     */
   def isDisconnected(): Boolean = js.native
   /**
@@ -209,21 +204,45 @@ class CometD () extends js.Object {
     * @param meta an object containing meta data associated to the binary chunk
     * @param callback a function to be invoked when the publish is acknowledged by the server
     */
-  def publishBinary(channel: String, data: ArrayBuffer, last: Boolean): Unit = js.native
-  def publishBinary(channel: String, data: ArrayBuffer, last: Boolean, meta: js.Object): Unit = js.native
-  def publishBinary(channel: String, data: ArrayBuffer, last: Boolean, meta: js.Object, callback: Listener): Unit = js.native
-  def publishBinary(channel: String, data: DataView, last: Boolean): Unit = js.native
-  def publishBinary(channel: String, data: DataView, last: Boolean, meta: js.Object): Unit = js.native
-  def publishBinary(channel: String, data: DataView, last: Boolean, meta: js.Object, callback: Listener): Unit = js.native
-  def publishBinary(channel: String, data: Uint16Array, last: Boolean): Unit = js.native
-  def publishBinary(channel: String, data: Uint16Array, last: Boolean, meta: js.Object): Unit = js.native
-  def publishBinary(channel: String, data: Uint16Array, last: Boolean, meta: js.Object, callback: Listener): Unit = js.native
-  def publishBinary(channel: String, data: Uint32Array, last: Boolean): Unit = js.native
-  def publishBinary(channel: String, data: Uint32Array, last: Boolean, meta: js.Object): Unit = js.native
-  def publishBinary(channel: String, data: Uint32Array, last: Boolean, meta: js.Object, callback: Listener): Unit = js.native
-  def publishBinary(channel: String, data: Uint8Array, last: Boolean): Unit = js.native
-  def publishBinary(channel: String, data: Uint8Array, last: Boolean, meta: js.Object): Unit = js.native
-  def publishBinary(channel: String, data: Uint8Array, last: Boolean, meta: js.Object, callback: Listener): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.ArrayBuffer, last: Boolean): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.ArrayBuffer, last: Boolean, meta: js.Object): Unit = js.native
+  def publishBinary(
+    channel: String,
+    data: js.typedarray.ArrayBuffer,
+    last: Boolean,
+    meta: js.Object,
+    callback: Listener
+  ): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.DataView, last: Boolean): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.DataView, last: Boolean, meta: js.Object): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.DataView, last: Boolean, meta: js.Object, callback: Listener): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.Uint16Array, last: Boolean): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.Uint16Array, last: Boolean, meta: js.Object): Unit = js.native
+  def publishBinary(
+    channel: String,
+    data: js.typedarray.Uint16Array,
+    last: Boolean,
+    meta: js.Object,
+    callback: Listener
+  ): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.Uint32Array, last: Boolean): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.Uint32Array, last: Boolean, meta: js.Object): Unit = js.native
+  def publishBinary(
+    channel: String,
+    data: js.typedarray.Uint32Array,
+    last: Boolean,
+    meta: js.Object,
+    callback: Listener
+  ): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.Uint8Array, last: Boolean): Unit = js.native
+  def publishBinary(channel: String, data: js.typedarray.Uint8Array, last: Boolean, meta: js.Object): Unit = js.native
+  def publishBinary(
+    channel: String,
+    data: js.typedarray.Uint8Array,
+    last: Boolean,
+    meta: js.Object,
+    callback: Listener
+  ): Unit = js.native
   /**
     * Registers an extension whose callbacks are called for every incoming message (that comes from
     * the server to this client implementation) and for every outgoing message (that originates

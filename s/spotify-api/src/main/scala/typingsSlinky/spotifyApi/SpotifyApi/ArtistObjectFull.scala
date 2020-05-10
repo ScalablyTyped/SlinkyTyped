@@ -9,11 +9,27 @@ import scala.scalajs.js.annotation._
   * Full Artist Object
   * [artist object (full)](https://developer.spotify.com/web-api/object-model/)
   */
+@js.native
 trait ArtistObjectFull extends ArtistObjectSimplified {
-  var followers: FollowersObject
-  var genres: js.Array[String]
-  var images: js.Array[ImageObject]
-  var popularity: Double
+  /**
+    * Information about the followers of the artist.
+    */
+  var followers: FollowersObject = js.native
+  /**
+    * A list of the genres the artist is associated with.
+    * For example: `"Prog Rock"` , `"Post-Grunge"`.
+    * (If not yet classified, the array is empty.)
+    */
+  var genres: js.Array[String] = js.native
+  /**
+    * Images of the artist in various sizes, widest first.
+    */
+  var images: js.Array[ImageObject] = js.native
+  /**
+    * The popularity of the artist. The value will be between `0` and `100`, with `100` being the most popular.
+    * The artist’s popularity is calculated from the popularity of all the artist’s tracks.
+    */
+  var popularity: Double = js.native
 }
 
 object ArtistObjectFull {
@@ -34,5 +50,37 @@ object ArtistObjectFull {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArtistObjectFull]
   }
+  @scala.inline
+  implicit class ArtistObjectFullOps[Self <: ArtistObjectFull] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFollowers(value: FollowersObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGenres(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("genres")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImages(value: js.Array[ImageObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPopularity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popularity")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

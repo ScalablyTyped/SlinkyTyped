@@ -1,45 +1,43 @@
 package typingsSlinky.inert.mod
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.inert.inertBooleans.`false`
-import typingsSlinky.inert.inertStrings.`inline`
-import typingsSlinky.inert.inertStrings.attachment
-import typingsSlinky.inert.inertStrings.hash
-import typingsSlinky.inert.inertStrings.simple
+import typingsSlinky.hapi.mod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FileHandlerRouteObject extends ReplyFileHandlerOptions {
   /**
     * path - a path string or function as described above (required).
     */
-  var path: String | RequestHandler[String]
+  var path: String | RequestHandler[String] = js.native
 }
 
 object FileHandlerRouteObject {
   @scala.inline
-  def apply(
-    path: String | RequestHandler[String],
-    confine: js.UndefOr[Boolean] = js.undefined,
-    end: Int | Double = null,
-    etagMethod: hash | simple | `false` = null,
-    filename: String = null,
-    lookupCompressed: js.UndefOr[Boolean] = js.undefined,
-    lookupMap: StringDictionary[String] = null,
-    mode: `false` | attachment | `inline` = null,
-    start: Int | Double = null
-  ): FileHandlerRouteObject = {
+  def apply(path: String | RequestHandler[String]): FileHandlerRouteObject = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    if (!js.isUndefined(confine)) __obj.updateDynamic("confine")(confine.asInstanceOf[js.Any])
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (etagMethod != null) __obj.updateDynamic("etagMethod")(etagMethod.asInstanceOf[js.Any])
-    if (filename != null) __obj.updateDynamic("filename")(filename.asInstanceOf[js.Any])
-    if (!js.isUndefined(lookupCompressed)) __obj.updateDynamic("lookupCompressed")(lookupCompressed.asInstanceOf[js.Any])
-    if (lookupMap != null) __obj.updateDynamic("lookupMap")(lookupMap.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileHandlerRouteObject]
   }
+  @scala.inline
+  implicit class FileHandlerRouteObjectOps[Self <: FileHandlerRouteObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPathFunction1(value: /* request */ Request => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPath(value: String | RequestHandler[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

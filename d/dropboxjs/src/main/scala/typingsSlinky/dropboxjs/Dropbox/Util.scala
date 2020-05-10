@@ -1,9 +1,8 @@
 package typingsSlinky.dropboxjs.Dropbox
 
+import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.dropboxjs.AnonCancelable
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,7 +39,7 @@ object Util extends js.Object {
       callback: js.Function3[/* err */ ApiError, /* responseType */ String, /* metadataHeader */ js.Object, Unit]
     ): Xhr = js.native
     def setBody(body: String): Xhr = js.native
-    def setBody(body: ArrayBuffer): Xhr = js.native
+    def setBody(body: js.typedarray.ArrayBuffer): Xhr = js.native
     def setBody(body: Blob): Xhr = js.native
     def setCallback(
       callback: js.Function4[
@@ -55,8 +54,8 @@ object Util extends js.Object {
     def setFileField(fieldName: String, fileName: String, fileData: String, contentType: String): Unit = js.native
     def setFileField(fieldName: String, fileName: String, fileData: Blob): Unit = js.native
     def setFileField(fieldName: String, fileName: String, fileData: Blob, contentType: String): Unit = js.native
-    def setFileField(fieldName: String, fileName: String, fileData: typingsSlinky.std.File): Unit = js.native
-    def setFileField(fieldName: String, fileName: String, fileData: typingsSlinky.std.File, contentType: String): Unit = js.native
+    def setFileField(fieldName: String, fileName: String, fileData: org.scalajs.dom.raw.File): Unit = js.native
+    def setFileField(fieldName: String, fileName: String, fileData: org.scalajs.dom.raw.File, contentType: String): Unit = js.native
     def setHeader(headerName: String, value: String): Xhr = js.native
     def setParams(params: QueryParams): Xhr = js.native
     def setResponseType(responseType: String): Xhr = js.native

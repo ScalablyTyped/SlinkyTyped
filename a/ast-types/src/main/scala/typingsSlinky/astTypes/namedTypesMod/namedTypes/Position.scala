@@ -6,9 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Position extends js.Object {
-  var column: Double
-  var line: Double
+  var column: Double = js.native
+  var line: Double = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.Position")

@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AdWordsUrls extends js.Object {
-  def getCustomParameters(): js.Object
-  def getTrackingTemplate(): String
+  def getCustomParameters(): js.Object = js.native
+  def getTrackingTemplate(): String = js.native
 }
 
 object AdWordsUrls {
   @scala.inline
   def apply(getCustomParameters: () => js.Object, getTrackingTemplate: () => String): AdWordsUrls = {
     val __obj = js.Dynamic.literal(getCustomParameters = js.Any.fromFunction0(getCustomParameters), getTrackingTemplate = js.Any.fromFunction0(getTrackingTemplate))
-  
     __obj.asInstanceOf[AdWordsUrls]
   }
+  @scala.inline
+  implicit class AdWordsUrlsOps[Self <: AdWordsUrls] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetCustomParameters(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCustomParameters")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTrackingTemplate(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTrackingTemplate")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

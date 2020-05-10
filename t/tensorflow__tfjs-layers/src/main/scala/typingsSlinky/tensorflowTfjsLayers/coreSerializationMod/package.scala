@@ -9,7 +9,6 @@ package object coreSerializationMod {
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Activation, 
     typingsSlinky.tensorflowTfjsLayers.coreSerializationMod.ActivationLayerConfig
   ]
-  type CoreLayerClassName = /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-layers.@tensorflow/tfjs-layers/dist/keras_format/layers/core_serialization.CoreLayerSerialization['class_name'] */ js.Any
   type CoreLayerSerialization = typingsSlinky.tensorflowTfjsLayers.coreSerializationMod.DropoutLayerSerialization | typingsSlinky.tensorflowTfjsLayers.coreSerializationMod.DenseLayerSerialization | typingsSlinky.tensorflowTfjsLayers.coreSerializationMod.FlattenLayerSerialization | typingsSlinky.tensorflowTfjsLayers.coreSerializationMod.ActivationLayerSerialization | typingsSlinky.tensorflowTfjsLayers.coreSerializationMod.RepeatVectorLayerSerialization | typingsSlinky.tensorflowTfjsLayers.coreSerializationMod.ReshapeLayerSerialization | typingsSlinky.tensorflowTfjsLayers.coreSerializationMod.PermuteLayerSerialization | typingsSlinky.tensorflowTfjsLayers.coreSerializationMod.MaskingLayerSerialization
   type DenseLayerSerialization = typingsSlinky.tensorflowTfjsLayers.topologyConfigMod.BaseLayerSerialization[
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Dense, 

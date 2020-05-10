@@ -41,20 +41,77 @@ trait SchemaSecurityPolicyRuleRateLimitOptions extends js.Object {
 
 object SchemaSecurityPolicyRuleRateLimitOptions {
   @scala.inline
-  def apply(
-    blockDuration: Int | Double = null,
-    conformAction: String = null,
-    enforceOnKey: String = null,
-    exceedAction: String = null,
-    thresholdRps: Int | Double = null
-  ): SchemaSecurityPolicyRuleRateLimitOptions = {
+  def apply(): SchemaSecurityPolicyRuleRateLimitOptions = {
     val __obj = js.Dynamic.literal()
-    if (blockDuration != null) __obj.updateDynamic("blockDuration")(blockDuration.asInstanceOf[js.Any])
-    if (conformAction != null) __obj.updateDynamic("conformAction")(conformAction.asInstanceOf[js.Any])
-    if (enforceOnKey != null) __obj.updateDynamic("enforceOnKey")(enforceOnKey.asInstanceOf[js.Any])
-    if (exceedAction != null) __obj.updateDynamic("exceedAction")(exceedAction.asInstanceOf[js.Any])
-    if (thresholdRps != null) __obj.updateDynamic("thresholdRps")(thresholdRps.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecurityPolicyRuleRateLimitOptions]
   }
+  @scala.inline
+  implicit class SchemaSecurityPolicyRuleRateLimitOptionsOps[Self <: SchemaSecurityPolicyRuleRateLimitOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlockDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlockDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConformAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conformAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConformAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conformAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnforceOnKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceOnKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnforceOnKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceOnKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExceedAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exceedAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExceedAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exceedAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThresholdRps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdRps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThresholdRps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdRps")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

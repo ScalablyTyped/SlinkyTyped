@@ -1,11 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.mod.DevExpress.DOMComponent
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod._Global_.JQuery
 import typingsSlinky.devextreme.mod._Global_.JQueryPromise
 import typingsSlinky.devextreme.mod._Global_.Promise
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -23,7 +23,7 @@ trait MetricDataQuery extends js.Object {
     */
   var MetricStat: js.UndefOr[typingsSlinky.awsSdk.cloudwatchMod.MetricStat] = js.native
   /**
-    * The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution metrics are those metrics stored by a PutMetricData operation that includes a StorageResolution of 1 second. If you are performing a GetMetricData operation, use this field only if you are specifying an Expression. Do not use this field when you are specifying a MetricStat in a GetMetricData operation.
+    * The granularity, in seconds, of the returned data points. For metrics with regular resolution, a period can be as short as one minute (60 seconds) and must be a multiple of 60. For high-resolution metrics that are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60. High-resolution metrics are those metrics stored by a PutMetricData operation that includes a StorageResolution of 1 second.
     */
   var Period: js.UndefOr[typingsSlinky.awsSdk.cloudwatchMod.Period] = js.native
   /**
@@ -34,21 +34,83 @@ trait MetricDataQuery extends js.Object {
 
 object MetricDataQuery {
   @scala.inline
-  def apply(
-    Id: MetricId,
-    Expression: MetricExpression = null,
-    Label: MetricLabel = null,
-    MetricStat: MetricStat = null,
-    Period: Int | Double = null,
-    ReturnData: js.UndefOr[Boolean] = js.undefined
-  ): MetricDataQuery = {
+  def apply(Id: MetricId): MetricDataQuery = {
     val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any])
-    if (Expression != null) __obj.updateDynamic("Expression")(Expression.asInstanceOf[js.Any])
-    if (Label != null) __obj.updateDynamic("Label")(Label.asInstanceOf[js.Any])
-    if (MetricStat != null) __obj.updateDynamic("MetricStat")(MetricStat.asInstanceOf[js.Any])
-    if (Period != null) __obj.updateDynamic("Period")(Period.asInstanceOf[js.Any])
-    if (!js.isUndefined(ReturnData)) __obj.updateDynamic("ReturnData")(ReturnData.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetricDataQuery]
   }
+  @scala.inline
+  implicit class MetricDataQueryOps[Self <: MetricDataQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: MetricId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpression(value: MetricExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Expression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: MetricLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricStat(value: MetricStat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricStat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricStat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricStat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Period")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnData(value: ReturnData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryFancytree.Fancytree
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.jqueryFancytree.JQuery
-import typingsSlinky.std.Element
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

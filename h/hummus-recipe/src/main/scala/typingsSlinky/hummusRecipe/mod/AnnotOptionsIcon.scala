@@ -17,20 +17,18 @@ trait AnnotOptionsIcon extends js.Object
 
 object AnnotOptionsIcon {
   @scala.inline
-  def Comment: typingsSlinky.hummusRecipe.hummusRecipeStrings.Comment = this.cast("Comment")
+  def Comment: typingsSlinky.hummusRecipe.hummusRecipeStrings.Comment = "Comment".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Comment]
   @scala.inline
-  def Help: typingsSlinky.hummusRecipe.hummusRecipeStrings.Help = this.cast("Help")
+  def Help: typingsSlinky.hummusRecipe.hummusRecipeStrings.Help = "Help".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Help]
   @scala.inline
-  def Insert: typingsSlinky.hummusRecipe.hummusRecipeStrings.Insert = this.cast("Insert")
+  def Insert: typingsSlinky.hummusRecipe.hummusRecipeStrings.Insert = "Insert".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Insert]
   @scala.inline
-  def Key: typingsSlinky.hummusRecipe.hummusRecipeStrings.Key = this.cast("Key")
+  def Key: typingsSlinky.hummusRecipe.hummusRecipeStrings.Key = "Key".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Key]
   @scala.inline
-  def NewParagraph: typingsSlinky.hummusRecipe.hummusRecipeStrings.NewParagraph = this.cast("NewParagraph")
+  def NewParagraph: typingsSlinky.hummusRecipe.hummusRecipeStrings.NewParagraph = "NewParagraph".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.NewParagraph]
   @scala.inline
-  def Note: typingsSlinky.hummusRecipe.hummusRecipeStrings.Note = this.cast("Note")
+  def Note: typingsSlinky.hummusRecipe.hummusRecipeStrings.Note = "Note".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Note]
   @scala.inline
-  def Paragraph: typingsSlinky.hummusRecipe.hummusRecipeStrings.Paragraph = this.cast("Paragraph")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Paragraph: typingsSlinky.hummusRecipe.hummusRecipeStrings.Paragraph = "Paragraph".asInstanceOf[typingsSlinky.hummusRecipe.hummusRecipeStrings.Paragraph]
 }
 

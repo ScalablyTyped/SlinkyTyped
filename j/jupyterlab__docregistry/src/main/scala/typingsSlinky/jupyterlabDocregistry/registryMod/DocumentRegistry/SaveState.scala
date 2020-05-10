@@ -13,12 +13,10 @@ trait SaveState extends js.Object
 
 object SaveState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def completed: typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.completed = "completed".asInstanceOf[typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.completed]
   @scala.inline
-  def completed: typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.completed = this.cast("completed")
+  def failed: typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.failed = "failed".asInstanceOf[typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.failed]
   @scala.inline
-  def failed: typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.failed = this.cast("failed")
-  @scala.inline
-  def started: typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.started = this.cast("started")
+  def started: typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.started = "started".asInstanceOf[typingsSlinky.jupyterlabDocregistry.jupyterlabDocregistryStrings.started]
 }
 

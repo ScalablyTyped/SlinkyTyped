@@ -18,11 +18,41 @@ trait ListWorkGroupsOutput extends js.Object {
 
 object ListWorkGroupsOutput {
   @scala.inline
-  def apply(NextToken: Token = null, WorkGroups: WorkGroupsList = null): ListWorkGroupsOutput = {
+  def apply(): ListWorkGroupsOutput = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (WorkGroups != null) __obj.updateDynamic("WorkGroups")(WorkGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListWorkGroupsOutput]
   }
+  @scala.inline
+  implicit class ListWorkGroupsOutputOps[Self <: ListWorkGroupsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: Token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkGroups(value: WorkGroupsList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkGroups")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,19 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // Labels
+@js.native
 trait Label extends AdWordsEntity {
-  def adGroups(): AdWordsSelector[AdGroup]
-  def ads(): AdWordsSelector[Ad]
-  def campaigns(): AdWordsSelector[Campaign]
-  def getColor(): String
-  def getDescription(): String
-  def getId(): String
-  def getName(): String
-  def keywords(): AdWordsSelector[Keyword]
-  def remove(): Unit
-  def setColor(color: String): Unit
-  def setDescription(description: String): Unit
-  def setName(name: String): Unit
+  def adGroups(): AdWordsSelector[AdGroup] = js.native
+  def ads(): AdWordsSelector[Ad] = js.native
+  def campaigns(): AdWordsSelector[Campaign] = js.native
+  def getColor(): String = js.native
+  def getDescription(): String = js.native
+  def getId(): String = js.native
+  def getName(): String = js.native
+  def keywords(): AdWordsSelector[Keyword] = js.native
+  def remove(): Unit = js.native
+  def setColor(color: String): Unit = js.native
+  def setDescription(description: String): Unit = js.native
+  def setName(name: String): Unit = js.native
 }
 
 object Label {
@@ -34,12 +35,90 @@ object Label {
     remove: () => Unit,
     setColor: String => Unit,
     setDescription: String => Unit,
-    setName: String => Unit,
-    getEntityType: () => String = null
+    setName: String => Unit
   ): Label = {
     val __obj = js.Dynamic.literal(adGroups = js.Any.fromFunction0(adGroups), ads = js.Any.fromFunction0(ads), campaigns = js.Any.fromFunction0(campaigns), getColor = js.Any.fromFunction0(getColor), getDescription = js.Any.fromFunction0(getDescription), getId = js.Any.fromFunction0(getId), getName = js.Any.fromFunction0(getName), keywords = js.Any.fromFunction0(keywords), remove = js.Any.fromFunction0(remove), setColor = js.Any.fromFunction1(setColor), setDescription = js.Any.fromFunction1(setDescription), setName = js.Any.fromFunction1(setName))
-    if (getEntityType != null) __obj.updateDynamic("getEntityType")(js.Any.fromFunction0(getEntityType))
     __obj.asInstanceOf[Label]
   }
+  @scala.inline
+  implicit class LabelOps[Self <: Label] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdGroups(value: () => AdWordsSelector[AdGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adGroups")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withAds(value: () => AdWordsSelector[Ad]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ads")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCampaigns(value: () => AdWordsSelector[Campaign]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("campaigns")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetColor(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getColor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDescription(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDescription")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetId(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withKeywords(value: () => AdWordsSelector[Keyword]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keywords")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetColor(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetDescription(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDescription")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetName(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setName")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

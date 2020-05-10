@@ -1,5 +1,6 @@
 package typingsSlinky.formatjsIntlUtils
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.boolean
 import typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.string
 import typingsSlinky.formatjsIntlUtils.numberTypesMod.NumberFormatDigitInternalSlots
@@ -7,7 +8,6 @@ import typingsSlinky.formatjsIntlUtils.numberTypesMod.NumberFormatDigitOptions
 import typingsSlinky.formatjsIntlUtils.polyfillUtilsMod.LiteralPart
 import typingsSlinky.formatjsIntlUtils.resolveLocaleMod.ResolveLocaleResult
 import typingsSlinky.formatjsIntlUtils.typesMod.LocaleData
-import typingsSlinky.std.Date
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.NonNullable
 import typingsSlinky.std.Pick
@@ -23,7 +23,7 @@ object mod extends js.Object {
   val SANCTIONED_UNITS: js.Array[String] = js.native
   def createResolveLocale[K /* <: String */, D /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in K ]: any}
-    */ typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.createResolveLocale with js.Any */](getDefaultLocale: js.Function0[String]): js.Function5[
+    */ typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.createResolveLocale with TopLevel[js.Any] */](getDefaultLocale: js.Function0[String]): js.Function5[
     /* availableLocales */ js.Array[String], 
     /* requestedLocales */ js.Array[String], 
     /* options */ AnonDictk, 
@@ -36,17 +36,17 @@ object mod extends js.Object {
   def getCanonicalLocales(): js.Array[String] = js.native
   def getCanonicalLocales(locales: String): js.Array[String] = js.native
   def getCanonicalLocales(locales: js.Array[String]): js.Array[String] = js.native
-  def getInternalSlot[Instance /* <: js.Object */, Internal /* <: js.Object */, Field /* <: String */](map: WeakMap[Instance, Internal], pl: Instance, field: Field): /* import warning: importer.ImportType#apply Failed type conversion: Internal[Field] */ js.Any = js.native
+  def getInternalSlot[Instance /* <: js.Object */, Internal /* <: js.Object */, Field /* <: /* keyof Internal */ String */](map: WeakMap[Instance, Internal], pl: Instance, field: Field): /* import warning: importer.ImportType#apply Failed type conversion: Internal[Field] */ js.Any = js.native
   def getLocaleHierarchy(locale: String, aliases: Record[String, String], parentLocales: Record[String, String]): js.Array[String] = js.native
-  def getMultiInternalSlots[Instance /* <: js.Object */, Internal /* <: js.Object */, Field /* <: String */](map: WeakMap[Instance, Internal], pl: Instance, fields: Field*): Pick[Internal, Field] = js.native
-  def getNumberOption[T /* <: js.Object */, K /* <: String */](options: T, property: K, minimum: Double, maximum: Double, fallback: Double): Double = js.native
+  def getMultiInternalSlots[Instance /* <: js.Object */, Internal /* <: js.Object */, Field /* <: /* keyof Internal */ String */](map: WeakMap[Instance, Internal], pl: Instance, fields: Field*): Pick[Internal, Field] = js.native
+  def getNumberOption[T /* <: js.Object */, K /* <: /* keyof T */ String */](options: T, property: K, minimum: Double, maximum: Double, fallback: Double): Double = js.native
   @JSName("getOption")
-  def getOption_boolean[T /* <: js.Object */, K /* <: String */, F](opts: T, prop: K, `type`: boolean, values: js.UndefOr[scala.Nothing], fallback: F): (Exclude[
+  def getOption_boolean[T /* <: js.Object */, K /* <: /* keyof T */ String */, F](opts: T, prop: K, `type`: boolean, values: js.UndefOr[scala.Nothing], fallback: F): (Exclude[
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any, 
     js.UndefOr[scala.Nothing]
   ]) | F = js.native
   @JSName("getOption")
-  def getOption_boolean[T /* <: js.Object */, K /* <: String */, F](
+  def getOption_boolean[T /* <: js.Object */, K /* <: /* keyof T */ String */, F](
     opts: T,
     prop: K,
     `type`: boolean,
@@ -59,12 +59,12 @@ object mod extends js.Object {
     js.UndefOr[scala.Nothing]
   ]) | F = js.native
   @JSName("getOption")
-  def getOption_string[T /* <: js.Object */, K /* <: String */, F](opts: T, prop: K, `type`: string, values: js.UndefOr[scala.Nothing], fallback: F): (Exclude[
+  def getOption_string[T /* <: js.Object */, K /* <: /* keyof T */ String */, F](opts: T, prop: K, `type`: string, values: js.UndefOr[scala.Nothing], fallback: F): (Exclude[
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any, 
     js.UndefOr[scala.Nothing]
   ]) | F = js.native
   @JSName("getOption")
-  def getOption_string[T /* <: js.Object */, K /* <: String */, F](
+  def getOption_string[T /* <: js.Object */, K /* <: /* keyof T */ String */, F](
     opts: T,
     prop: K,
     `type`: string,
@@ -89,20 +89,20 @@ object mod extends js.Object {
   def selectUnit(from: Double): AnonUnit = js.native
   def selectUnit(from: Double, to: Double): AnonUnit = js.native
   def selectUnit(from: Double, to: Double, thresholds: PartialThresholds): AnonUnit = js.native
-  def selectUnit(from: Double, to: Date): AnonUnit = js.native
-  def selectUnit(from: Double, to: Date, thresholds: PartialThresholds): AnonUnit = js.native
-  def selectUnit(from: Date): AnonUnit = js.native
-  def selectUnit(from: Date, to: Double): AnonUnit = js.native
-  def selectUnit(from: Date, to: Double, thresholds: PartialThresholds): AnonUnit = js.native
-  def selectUnit(from: Date, to: Date): AnonUnit = js.native
-  def selectUnit(from: Date, to: Date, thresholds: PartialThresholds): AnonUnit = js.native
-  def setInternalSlot[Instance /* <: js.Object */, Internal /* <: js.Object */, Field /* <: String */](
+  def selectUnit(from: Double, to: js.Date): AnonUnit = js.native
+  def selectUnit(from: Double, to: js.Date, thresholds: PartialThresholds): AnonUnit = js.native
+  def selectUnit(from: js.Date): AnonUnit = js.native
+  def selectUnit(from: js.Date, to: Double): AnonUnit = js.native
+  def selectUnit(from: js.Date, to: Double, thresholds: PartialThresholds): AnonUnit = js.native
+  def selectUnit(from: js.Date, to: js.Date): AnonUnit = js.native
+  def selectUnit(from: js.Date, to: js.Date, thresholds: PartialThresholds): AnonUnit = js.native
+  def setInternalSlot[Instance /* <: js.Object */, Internal /* <: js.Object */, Field /* <: /* keyof Internal */ String */](
     map: WeakMap[Instance, Internal],
     pl: Instance,
     field: Field,
     value: /* import warning: importer.ImportType#apply Failed type conversion: std.NonNullable<Internal>[Field] */ js.Any
   ): Unit = js.native
-  def setMultiInternalSlots[Instance /* <: js.Object */, Internal /* <: js.Object */, K /* <: String */](map: WeakMap[Instance, Internal], pl: Instance, props: Pick[NonNullable[Internal], K]): Unit = js.native
+  def setMultiInternalSlots[Instance /* <: js.Object */, Internal /* <: js.Object */, K /* <: /* keyof Internal */ String */](map: WeakMap[Instance, Internal], pl: Instance, props: Pick[NonNullable[Internal], K]): Unit = js.native
   def setNumberFormatDigitOptions[TObject /* <: js.Object */, TInternalSlots /* <: NumberFormatDigitInternalSlots */](
     internalSlotMap: WeakMap[TObject, TInternalSlots],
     intlObj: TObject,

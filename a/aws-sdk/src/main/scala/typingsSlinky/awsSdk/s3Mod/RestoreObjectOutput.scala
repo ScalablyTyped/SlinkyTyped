@@ -15,11 +15,41 @@ trait RestoreObjectOutput extends js.Object {
 
 object RestoreObjectOutput {
   @scala.inline
-  def apply(RequestCharged: RequestCharged = null, RestoreOutputPath: RestoreOutputPath = null): RestoreObjectOutput = {
+  def apply(): RestoreObjectOutput = {
     val __obj = js.Dynamic.literal()
-    if (RequestCharged != null) __obj.updateDynamic("RequestCharged")(RequestCharged.asInstanceOf[js.Any])
-    if (RestoreOutputPath != null) __obj.updateDynamic("RestoreOutputPath")(RestoreOutputPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestoreObjectOutput]
   }
+  @scala.inline
+  implicit class RestoreObjectOutputOps[Self <: RestoreObjectOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequestCharged(value: RequestCharged): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestCharged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestCharged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestoreOutputPath(value: RestoreOutputPath): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreOutputPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestoreOutputPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RestoreOutputPath")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

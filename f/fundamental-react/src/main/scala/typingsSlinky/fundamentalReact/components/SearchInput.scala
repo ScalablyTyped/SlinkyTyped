@@ -1,12 +1,10 @@
 package typingsSlinky.fundamentalReact.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.input.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.fundamentalReact.AnonCallback
+import typingsSlinky.fundamentalReact.AnonText
 import typingsSlinky.fundamentalReact.searchInputMod.SearchInputProps
 import typingsSlinky.fundamentalReact.searchInputMod.default
 import typingsSlinky.react.mod.ChangeEvent
@@ -14,38 +12,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SearchInput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object SearchInput {
   @JSImport("fundamental-react/lib/SearchInput/SearchInput", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, placeholder */
-  def apply(
-    compact: js.UndefOr[Boolean] = js.undefined,
-    disableStyles: js.UndefOr[Boolean] = js.undefined,
-    inShellbar: js.UndefOr[Boolean] = js.undefined,
-    noSearchBtn: js.UndefOr[Boolean] = js.undefined,
-    onChange: /* event */ ChangeEvent[HTMLInputElement] => Unit = null,
-    onEnter: /* value */ js.UndefOr[String | Double | js.Array[String]] => Unit = null,
-    searchList: js.Array[AnonCallback] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(compact)) __obj.updateDynamic("compact")(compact.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableStyles)) __obj.updateDynamic("disableStyles")(disableStyles.asInstanceOf[js.Any])
-    if (!js.isUndefined(inShellbar)) __obj.updateDynamic("inShellbar")(inShellbar.asInstanceOf[js.Any])
-    if (!js.isUndefined(noSearchBtn)) __obj.updateDynamic("noSearchBtn")(noSearchBtn.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onEnter != null) __obj.updateDynamic("onEnter")(js.Any.fromFunction1(onEnter))
-    if (searchList != null) __obj.updateDynamic("searchList")(searchList.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableStyles(value: Boolean): this.type = set("disableStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inShellbar(value: Boolean): this.type = set("inShellbar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputGroupAddonProps(value: js.Any): this.type = set("inputGroupAddonProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputGroupProps(value: js.Any): this.type = set("inputGroupProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputProps(value: js.Any): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listProps(value: js.Any): this.type = set("listProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noSearchBtn(value: Boolean): this.type = set("noSearchBtn", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* event */ ChangeEvent[HTMLInputElement] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEnter(value: /* value */ js.UndefOr[String | Double | js.Array[String]] => Unit): this.type = set("onEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popoverProps(value: js.Any): this.type = set("popoverProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def searchBtnProps(value: js.Any): this.type = set("searchBtnProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def searchList(value: js.Array[AnonCallback]): this.type = set("searchList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validationState(value: AnonText): this.type = set("validationState", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.input.tag.type, 
-  typingsSlinky.fundamentalReact.searchInputMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SearchInputProps
+  
+  def withProps(p: SearchInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SearchInput.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

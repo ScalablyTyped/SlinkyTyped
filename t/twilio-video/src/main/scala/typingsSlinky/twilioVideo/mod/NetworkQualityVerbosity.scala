@@ -14,14 +14,12 @@ trait NetworkQualityVerbosity extends js.Object
 
 object NetworkQualityVerbosity {
   @scala.inline
-  def `0`: typingsSlinky.twilioVideo.twilioVideoNumbers.`0` = this.cast(0)
+  def `0`: typingsSlinky.twilioVideo.twilioVideoNumbers.`0` = 0.asInstanceOf[typingsSlinky.twilioVideo.twilioVideoNumbers.`0`]
   @scala.inline
-  def `1`: typingsSlinky.twilioVideo.twilioVideoNumbers.`1` = this.cast(1)
+  def `1`: typingsSlinky.twilioVideo.twilioVideoNumbers.`1` = 1.asInstanceOf[typingsSlinky.twilioVideo.twilioVideoNumbers.`1`]
   @scala.inline
-  def `2`: typingsSlinky.twilioVideo.twilioVideoNumbers.`2` = this.cast(2)
+  def `2`: typingsSlinky.twilioVideo.twilioVideoNumbers.`2` = 2.asInstanceOf[typingsSlinky.twilioVideo.twilioVideoNumbers.`2`]
   @scala.inline
-  def `3`: typingsSlinky.twilioVideo.twilioVideoNumbers.`3` = this.cast(3)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `3`: typingsSlinky.twilioVideo.twilioVideoNumbers.`3` = 3.asInstanceOf[typingsSlinky.twilioVideo.twilioVideoNumbers.`3`]
 }
 

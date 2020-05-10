@@ -33,7 +33,7 @@ import scala.scalajs.js.annotation._
   * @param args
   * @param node
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojo.Stateful because Already inherited
 - typingsSlinky.dojo.dojox.widget.Invalidating because Inheritance from two classes. Inlined invalidatingProperties, set_invalidatingProperties, get_invalidatingProperties, watch_invalidatingProperties, invalidRendering, set_invalidRendering, get_invalidRendering, watch_invalidRendering, addInvalidatingProperties, get, invalidateRendering, postscript, refreshRendering, set, validateRendering, watch */ @JSGlobal("dojox.dgauges.GaugeBase")
 @js.native

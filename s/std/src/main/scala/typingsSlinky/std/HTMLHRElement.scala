@@ -31,5 +31,6 @@ trait HTMLHRElement extends HTMLElement {
 
 @JSGlobal("HTMLHRElement")
 @js.native
-object HTMLHRElement extends Instantiable0[HTMLHRElement]
+object HTMLHRElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLHRElement]
 

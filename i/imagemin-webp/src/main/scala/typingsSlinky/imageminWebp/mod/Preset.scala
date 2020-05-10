@@ -16,18 +16,16 @@ trait Preset extends js.Object
 
 object Preset {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def default: typingsSlinky.imageminWebp.imageminWebpStrings.default = "default".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.default]
   @scala.inline
-  def default: typingsSlinky.imageminWebp.imageminWebpStrings.default = this.cast("default")
+  def drawing: typingsSlinky.imageminWebp.imageminWebpStrings.drawing = "drawing".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.drawing]
   @scala.inline
-  def drawing: typingsSlinky.imageminWebp.imageminWebpStrings.drawing = this.cast("drawing")
+  def icon: typingsSlinky.imageminWebp.imageminWebpStrings.icon = "icon".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.icon]
   @scala.inline
-  def icon: typingsSlinky.imageminWebp.imageminWebpStrings.icon = this.cast("icon")
+  def photo: typingsSlinky.imageminWebp.imageminWebpStrings.photo = "photo".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.photo]
   @scala.inline
-  def photo: typingsSlinky.imageminWebp.imageminWebpStrings.photo = this.cast("photo")
+  def picture: typingsSlinky.imageminWebp.imageminWebpStrings.picture = "picture".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.picture]
   @scala.inline
-  def picture: typingsSlinky.imageminWebp.imageminWebpStrings.picture = this.cast("picture")
-  @scala.inline
-  def text: typingsSlinky.imageminWebp.imageminWebpStrings.text = this.cast("text")
+  def text: typingsSlinky.imageminWebp.imageminWebpStrings.text = "text".asInstanceOf[typingsSlinky.imageminWebp.imageminWebpStrings.text]
 }
 

@@ -13,16 +13,53 @@ trait VideoCodecSettings extends js.Object {
 
 object VideoCodecSettings {
   @scala.inline
-  def apply(
-    FrameCaptureSettings: FrameCaptureSettings = null,
-    H264Settings: H264Settings = null,
-    H265Settings: H265Settings = null
-  ): VideoCodecSettings = {
+  def apply(): VideoCodecSettings = {
     val __obj = js.Dynamic.literal()
-    if (FrameCaptureSettings != null) __obj.updateDynamic("FrameCaptureSettings")(FrameCaptureSettings.asInstanceOf[js.Any])
-    if (H264Settings != null) __obj.updateDynamic("H264Settings")(H264Settings.asInstanceOf[js.Any])
-    if (H265Settings != null) __obj.updateDynamic("H265Settings")(H265Settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoCodecSettings]
   }
+  @scala.inline
+  implicit class VideoCodecSettingsOps[Self <: VideoCodecSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFrameCaptureSettings(value: FrameCaptureSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameCaptureSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrameCaptureSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FrameCaptureSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH264Settings(value: H264Settings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("H264Settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH264Settings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("H264Settings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withH265Settings(value: H265Settings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("H265Settings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH265Settings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("H265Settings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

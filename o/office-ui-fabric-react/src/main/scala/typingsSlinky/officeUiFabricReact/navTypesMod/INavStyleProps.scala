@@ -5,105 +5,258 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait INavStyleProps extends js.Object {
   /**
     * Accept custom classNames
     */
-  var className: js.UndefOr[String] = js.undefined
+  var className: js.UndefOr[String] = js.native
   /**
     * Inherited from INavProps
     * A collection of link groups to display in the navigation bar
     */
-  var groups: js.Array[INavLinkGroup] | Null
+  var groups: js.Array[INavLinkGroup] | Null = js.native
   /**
     * is button
     */
-  var isButtonEntry: js.UndefOr[Boolean] = js.undefined
+  var isButtonEntry: js.UndefOr[Boolean] = js.native
   /**
     * is element disabled
     */
-  var isDisabled: js.UndefOr[Boolean] = js.undefined
+  var isDisabled: js.UndefOr[Boolean] = js.native
   /**
     * is element expanded boolean
     */
-  var isExpanded: js.UndefOr[Boolean] = js.undefined
+  var isExpanded: js.UndefOr[Boolean] = js.native
   /**
     * is element a group boolean
     */
-  var isGroup: js.UndefOr[Boolean] = js.undefined
+  var isGroup: js.UndefOr[Boolean] = js.native
   /**
     * is element a link boolean
     */
-  var isLink: js.UndefOr[Boolean] = js.undefined
+  var isLink: js.UndefOr[Boolean] = js.native
   /**
     * is element on top boolean
     */
-  var isOnTop: js.UndefOr[Boolean] = js.undefined
+  var isOnTop: js.UndefOr[Boolean] = js.native
   /**
     * is element selected boolean
     */
-  var isSelected: js.UndefOr[Boolean] = js.undefined
+  var isSelected: js.UndefOr[Boolean] = js.native
   /**
     * left padding value
     */
-  var leftPadding: js.UndefOr[Double] = js.undefined
+  var leftPadding: js.UndefOr[Double] = js.native
   /**
     * left padding when expanded value
     */
-  var leftPaddingExpanded: js.UndefOr[Double] = js.undefined
+  var leftPaddingExpanded: js.UndefOr[Double] = js.native
   /**
     * Nav height value
     */
-  var navHeight: js.UndefOr[Double] = js.undefined
+  var navHeight: js.UndefOr[Double] = js.native
   /**
     * position value
     */
-  var position: js.UndefOr[Double] = js.undefined
+  var position: js.UndefOr[Double] = js.native
   /**
     * right padding value
     */
-  var rightPadding: js.UndefOr[Double] = js.undefined
+  var rightPadding: js.UndefOr[Double] = js.native
   /**
     * Accept theme prop.
     */
-  var theme: ITheme
+  var theme: ITheme = js.native
 }
 
 object INavStyleProps {
   @scala.inline
-  def apply(
-    theme: ITheme,
-    className: String = null,
-    groups: js.Array[INavLinkGroup] = null,
-    isButtonEntry: js.UndefOr[Boolean] = js.undefined,
-    isDisabled: js.UndefOr[Boolean] = js.undefined,
-    isExpanded: js.UndefOr[Boolean] = js.undefined,
-    isGroup: js.UndefOr[Boolean] = js.undefined,
-    isLink: js.UndefOr[Boolean] = js.undefined,
-    isOnTop: js.UndefOr[Boolean] = js.undefined,
-    isSelected: js.UndefOr[Boolean] = js.undefined,
-    leftPadding: Int | Double = null,
-    leftPaddingExpanded: Int | Double = null,
-    navHeight: Int | Double = null,
-    position: Int | Double = null,
-    rightPadding: Int | Double = null
-  ): INavStyleProps = {
+  def apply(theme: ITheme): INavStyleProps = {
     val __obj = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
-    if (!js.isUndefined(isButtonEntry)) __obj.updateDynamic("isButtonEntry")(isButtonEntry.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isExpanded)) __obj.updateDynamic("isExpanded")(isExpanded.asInstanceOf[js.Any])
-    if (!js.isUndefined(isGroup)) __obj.updateDynamic("isGroup")(isGroup.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLink)) __obj.updateDynamic("isLink")(isLink.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOnTop)) __obj.updateDynamic("isOnTop")(isOnTop.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSelected)) __obj.updateDynamic("isSelected")(isSelected.asInstanceOf[js.Any])
-    if (leftPadding != null) __obj.updateDynamic("leftPadding")(leftPadding.asInstanceOf[js.Any])
-    if (leftPaddingExpanded != null) __obj.updateDynamic("leftPaddingExpanded")(leftPaddingExpanded.asInstanceOf[js.Any])
-    if (navHeight != null) __obj.updateDynamic("navHeight")(navHeight.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (rightPadding != null) __obj.updateDynamic("rightPadding")(rightPadding.asInstanceOf[js.Any])
     __obj.asInstanceOf[INavStyleProps]
   }
+  @scala.inline
+  implicit class INavStylePropsOps[Self <: INavStyleProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTheme(value: ITheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroups(value: js.Array[INavLinkGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(null)
+        ret
+    }
+    @scala.inline
+    def withIsButtonEntry(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isButtonEntry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsButtonEntry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isButtonEntry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsDisabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsExpanded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsExpanded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsGroup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsLink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsOnTop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOnTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsOnTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOnTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsSelected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeftPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftPadding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeftPaddingExpanded(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftPaddingExpanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeftPaddingExpanded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftPaddingExpanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNavHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNavHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRightPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRightPadding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightPadding")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

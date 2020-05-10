@@ -18,11 +18,41 @@ trait GetBucketAclOutput extends js.Object {
 
 object GetBucketAclOutput {
   @scala.inline
-  def apply(Grants: Grants = null, Owner: Owner = null): GetBucketAclOutput = {
+  def apply(): GetBucketAclOutput = {
     val __obj = js.Dynamic.literal()
-    if (Grants != null) __obj.updateDynamic("Grants")(Grants.asInstanceOf[js.Any])
-    if (Owner != null) __obj.updateDynamic("Owner")(Owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetBucketAclOutput]
   }
+  @scala.inline
+  implicit class GetBucketAclOutputOps[Self <: GetBucketAclOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGrants(value: Grants): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Grants")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrants: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Grants")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwner(value: Owner): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Owner")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

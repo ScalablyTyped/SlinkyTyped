@@ -14,14 +14,12 @@ trait MultiInstanceBehaviour extends js.Object
 
 object MultiInstanceBehaviour {
   @scala.inline
-  def All: typingsSlinky.bpmnModdle.bpmnModdleStrings.All = this.cast("All")
+  def All: typingsSlinky.bpmnModdle.bpmnModdleStrings.All = "All".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.All]
   @scala.inline
-  def Complex: typingsSlinky.bpmnModdle.bpmnModdleStrings.Complex = this.cast("Complex")
+  def Complex: typingsSlinky.bpmnModdle.bpmnModdleStrings.Complex = "Complex".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.Complex]
   @scala.inline
-  def None: typingsSlinky.bpmnModdle.bpmnModdleStrings.None = this.cast("None")
+  def None: typingsSlinky.bpmnModdle.bpmnModdleStrings.None = "None".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.None]
   @scala.inline
-  def One: typingsSlinky.bpmnModdle.bpmnModdleStrings.One = this.cast("One")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def One: typingsSlinky.bpmnModdle.bpmnModdleStrings.One = "One".asInstanceOf[typingsSlinky.bpmnModdle.bpmnModdleStrings.One]
 }
 

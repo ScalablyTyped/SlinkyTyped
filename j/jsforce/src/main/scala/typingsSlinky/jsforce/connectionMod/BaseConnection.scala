@@ -12,7 +12,6 @@ import typingsSlinky.jsforce.recordMod.Record
 import typingsSlinky.jsforce.recordResultMod.RecordResult
 import typingsSlinky.jsforce.salesforceObjectMod.SObject
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,14 +29,14 @@ abstract class BaseConnection () extends EventEmitter {
   def create[T](
     records: js.Array[Record[T]],
     options: RestApiOptions,
-    callback: js.Function2[/* err */ Error, /* result */ RecordResult | js.Array[RecordResult], Unit]
+    callback: js.Function2[/* err */ js.Error, /* result */ RecordResult | js.Array[RecordResult], Unit]
   ): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def create[T](records: Record[T]): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def create[T](records: Record[T], options: RestApiOptions): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def create[T](
     records: Record[T],
     options: RestApiOptions,
-    callback: js.Function2[/* err */ Error, /* result */ RecordResult | js.Array[RecordResult], Unit]
+    callback: js.Function2[/* err */ js.Error, /* result */ RecordResult | js.Array[RecordResult], Unit]
   ): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def create[T](`type`: String, records: js.Array[Record[T]]): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def create[T](`type`: String, records: js.Array[Record[T]], options: RestApiOptions): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
@@ -154,11 +153,17 @@ abstract class BaseConnection () extends EventEmitter {
     callback: js.Function2[/* err */ js.Error, /* result */ QueryResult[T], Unit]
   ): js.Promise[QueryResult[T]] = js.native
   def recent(): js.Promise[js.Array[RecordResult]] = js.native
-  def recent(callback: js.Function2[/* err */ Error, /* result */ js.Array[RecordResult], Unit]): js.Promise[js.Array[RecordResult]] = js.native
+  def recent(callback: js.Function2[/* err */ js.Error, /* result */ js.Array[RecordResult], Unit]): js.Promise[js.Array[RecordResult]] = js.native
   def recent(param: String): js.Promise[js.Array[RecordResult]] = js.native
-  def recent(param: String, callback: js.Function2[/* err */ Error, /* result */ js.Array[RecordResult], Unit]): js.Promise[js.Array[RecordResult]] = js.native
+  def recent(
+    param: String,
+    callback: js.Function2[/* err */ js.Error, /* result */ js.Array[RecordResult], Unit]
+  ): js.Promise[js.Array[RecordResult]] = js.native
   def recent(param: Double): js.Promise[js.Array[RecordResult]] = js.native
-  def recent(param: Double, callback: js.Function2[/* err */ Error, /* result */ js.Array[RecordResult], Unit]): js.Promise[js.Array[RecordResult]] = js.native
+  def recent(
+    param: Double,
+    callback: js.Function2[/* err */ js.Error, /* result */ js.Array[RecordResult], Unit]
+  ): js.Promise[js.Array[RecordResult]] = js.native
   def recent(`type`: String, limit: Double): js.Promise[js.Array[RecordResult]] = js.native
   def recent(
     `type`: String,
@@ -202,14 +207,14 @@ abstract class BaseConnection () extends EventEmitter {
   def update[T](
     records: js.Array[Record[T]],
     options: RestApiOptions,
-    callback: js.Function2[/* err */ Error, /* result */ RecordResult | js.Array[Record[T]], Unit]
+    callback: js.Function2[/* err */ js.Error, /* result */ RecordResult | js.Array[Record[T]], Unit]
   ): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def update[T](records: Record[T]): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def update[T](records: Record[T], options: RestApiOptions): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def update[T](
     records: Record[T],
     options: RestApiOptions,
-    callback: js.Function2[/* err */ Error, /* result */ RecordResult | js.Array[Record[T]], Unit]
+    callback: js.Function2[/* err */ js.Error, /* result */ RecordResult | js.Array[Record[T]], Unit]
   ): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def update[T](`type`: String, records: js.Array[Record[T]]): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def update[T](`type`: String, records: js.Array[Record[T]], options: RestApiOptions): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
@@ -233,7 +238,7 @@ abstract class BaseConnection () extends EventEmitter {
     records: js.Array[Record[T]],
     extIdField: String,
     options: RestApiOptions,
-    callback: js.Function2[/* err */ Error, /* result */ RecordResult | js.Array[RecordResult], Unit]
+    callback: js.Function2[/* err */ js.Error, /* result */ RecordResult | js.Array[RecordResult], Unit]
   ): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def upsert[T](records: Record[T], extIdField: String): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def upsert[T](records: Record[T], extIdField: String, options: RestApiOptions): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
@@ -241,7 +246,7 @@ abstract class BaseConnection () extends EventEmitter {
     records: Record[T],
     extIdField: String,
     options: RestApiOptions,
-    callback: js.Function2[/* err */ Error, /* result */ RecordResult | js.Array[RecordResult], Unit]
+    callback: js.Function2[/* err */ js.Error, /* result */ RecordResult | js.Array[RecordResult], Unit]
   ): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def upsert[T](`type`: String, records: js.Array[Record[T]], extIdField: String): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def upsert[T](`type`: String, records: js.Array[Record[T]], extIdField: String, options: RestApiOptions): js.Promise[RecordResult | js.Array[RecordResult]] = js.native

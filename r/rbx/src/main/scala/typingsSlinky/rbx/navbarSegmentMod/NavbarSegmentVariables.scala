@@ -1,0 +1,36 @@
+package typingsSlinky.rbx.navbarSegmentMod
+
+import typingsSlinky.rbx.rbxStrings.end
+import typingsSlinky.rbx.rbxStrings.start
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Inlined rbx.rbx/types.Prefer<rbx.rbx/components/navbar/navbar-segment.NavbarSegmentVariablesOverrides, rbx.rbx/components/navbar/navbar-segment.NavbarSegmentVariablesDefaults> */
+@js.native
+trait NavbarSegmentVariables extends js.Object {
+  var alignments: start | end = js.native
+}
+
+object NavbarSegmentVariables {
+  @scala.inline
+  def apply(alignments: start | end): NavbarSegmentVariables = {
+    val __obj = js.Dynamic.literal(alignments = alignments.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NavbarSegmentVariables]
+  }
+  @scala.inline
+  implicit class NavbarSegmentVariablesOps[Self <: NavbarSegmentVariables] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignments(value: start | end): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignments")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

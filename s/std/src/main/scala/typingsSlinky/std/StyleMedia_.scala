@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StyleMedia_ extends js.Object {
-  val `type`: java.lang.String
-  def matchMedium(mediaquery: java.lang.String): scala.Boolean
+  val `type`: java.lang.String = js.native
+  def matchMedium(mediaquery: java.lang.String): scala.Boolean = js.native
 }
 
 @JSGlobal("StyleMedia")

@@ -40,7 +40,7 @@ object TapTarget extends js.Object {
   /**
     * Init TapTarget
     */
-  def init(els: typingsSlinky.std.Element): TapTarget = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialTapTargetOptions): TapTarget = js.native
+  def init(els: Element): TapTarget = js.native
+  def init(els: Element, options: PartialTapTargetOptions): TapTarget = js.native
 }
 

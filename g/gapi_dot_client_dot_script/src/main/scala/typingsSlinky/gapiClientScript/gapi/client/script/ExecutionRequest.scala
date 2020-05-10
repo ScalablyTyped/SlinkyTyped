@@ -4,18 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExecutionRequest extends js.Object {
   /**
     * If `true` and the user is an owner of the script, the script runs at the
     * most recently saved version rather than the version deployed for use with
     * the Execution API. Optional; default is `false`.
     */
-  var devMode: js.UndefOr[Boolean] = js.undefined
+  var devMode: js.UndefOr[Boolean] = js.native
   /**
     * The name of the function to execute in the given script. The name does not
     * include parentheses or parameters.
     */
-  var function: js.UndefOr[String] = js.undefined
+  var function: js.UndefOr[String] = js.native
   /**
     * The parameters to be passed to the function being executed. The object type
     * for each parameter should match the expected type in Apps Script.
@@ -23,7 +24,7 @@ trait ExecutionRequest extends js.Object {
     * `Document` or a `Calendar`); they can only be primitive types such as
     * `string`, `number`, `array`, `object`, or `boolean`. Optional.
     */
-  var parameters: js.UndefOr[js.Array[_]] = js.undefined
+  var parameters: js.UndefOr[js.Array[_]] = js.native
   /**
     * For Android add-ons only. An ID that represents the user's current session
     * in the Android app for Google Docs or Sheets, included as extra data in the
@@ -36,23 +37,70 @@ trait ExecutionRequest extends js.Object {
     * `Intent.getStringExtra("com.google.android.apps.docs.addons.SessionState")`.
     * Optional.
     */
-  var sessionState: js.UndefOr[String] = js.undefined
+  var sessionState: js.UndefOr[String] = js.native
 }
 
 object ExecutionRequest {
   @scala.inline
-  def apply(
-    devMode: js.UndefOr[Boolean] = js.undefined,
-    function: String = null,
-    parameters: js.Array[_] = null,
-    sessionState: String = null
-  ): ExecutionRequest = {
+  def apply(): ExecutionRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(devMode)) __obj.updateDynamic("devMode")(devMode.asInstanceOf[js.Any])
-    if (function != null) __obj.updateDynamic("function")(function.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
-    if (sessionState != null) __obj.updateDynamic("sessionState")(sessionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutionRequest]
   }
+  @scala.inline
+  implicit class ExecutionRequestOps[Self <: ExecutionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFunction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFunction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("function")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSessionState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

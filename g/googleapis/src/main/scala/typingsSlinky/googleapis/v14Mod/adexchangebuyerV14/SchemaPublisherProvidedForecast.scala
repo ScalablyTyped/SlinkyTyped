@@ -25,16 +25,53 @@ trait SchemaPublisherProvidedForecast extends js.Object {
 
 object SchemaPublisherProvidedForecast {
   @scala.inline
-  def apply(
-    dimensions: js.Array[SchemaDimension] = null,
-    weeklyImpressions: String = null,
-    weeklyUniques: String = null
-  ): SchemaPublisherProvidedForecast = {
+  def apply(): SchemaPublisherProvidedForecast = {
     val __obj = js.Dynamic.literal()
-    if (dimensions != null) __obj.updateDynamic("dimensions")(dimensions.asInstanceOf[js.Any])
-    if (weeklyImpressions != null) __obj.updateDynamic("weeklyImpressions")(weeklyImpressions.asInstanceOf[js.Any])
-    if (weeklyUniques != null) __obj.updateDynamic("weeklyUniques")(weeklyUniques.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPublisherProvidedForecast]
   }
+  @scala.inline
+  implicit class SchemaPublisherProvidedForecastOps[Self <: SchemaPublisherProvidedForecast] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDimensions(value: js.Array[SchemaDimension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDimensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeeklyImpressions(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weeklyImpressions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeeklyImpressions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weeklyImpressions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeeklyUniques(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weeklyUniques")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeeklyUniques: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weeklyUniques")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

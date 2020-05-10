@@ -4,59 +4,54 @@ import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Text
-import typingsSlinky.bootbox.bootboxStrings.`extra-large`
-import typingsSlinky.bootbox.bootboxStrings.large
-import typingsSlinky.bootbox.bootboxStrings.lg
-import typingsSlinky.bootbox.bootboxStrings.sm
-import typingsSlinky.bootbox.bootboxStrings.small
-import typingsSlinky.bootbox.bootboxStrings.xl
 import typingsSlinky.jquery.JQuery_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Bootbox options available for confirm modals */
+@js.native
 trait BootboxConfirmOptions extends BootboxDialogOptions[Boolean] {
   @JSName("buttons")
-  var buttons_BootboxConfirmOptions: js.UndefOr[BootboxConfirmPromptButtonMap] = js.undefined
+  var buttons_BootboxConfirmOptions: js.UndefOr[BootboxConfirmPromptButtonMap] = js.native
   @JSName("callback")
-  def callback_MBootboxConfirmOptions(result: Boolean): js.Any
+  def callback_MBootboxConfirmOptions(result: Boolean): js.Any = js.native
 }
 
 object BootboxConfirmOptions {
   @scala.inline
   def apply(
     callback: Boolean => js.Any,
-    message: JQuery_[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery_[HTMLElement]]),
-    animate: js.UndefOr[Boolean] = js.undefined,
-    backdrop: js.UndefOr[Boolean] = js.undefined,
-    buttons: BootboxConfirmPromptButtonMap = null,
-    centerVertical: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    closeButton: js.UndefOr[Boolean] = js.undefined,
-    locale: String = null,
-    onEscape: js.Function0[_] | Boolean = null,
-    scrollable: js.UndefOr[Boolean] = js.undefined,
-    show: js.UndefOr[Boolean] = js.undefined,
-    size: small | sm | large | lg | `extra-large` | xl = null,
-    swapButtonOrder: js.UndefOr[Boolean] = js.undefined,
-    title: String | Element = null
+    message: JQuery_[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery_[HTMLElement]])
   ): BootboxConfirmOptions = {
     val __obj = js.Dynamic.literal(callback = js.Any.fromFunction1(callback), message = message.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (!js.isUndefined(backdrop)) __obj.updateDynamic("backdrop")(backdrop.asInstanceOf[js.Any])
-    if (buttons != null) __obj.updateDynamic("buttons")(buttons.asInstanceOf[js.Any])
-    if (!js.isUndefined(centerVertical)) __obj.updateDynamic("centerVertical")(centerVertical.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeButton)) __obj.updateDynamic("closeButton")(closeButton.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (onEscape != null) __obj.updateDynamic("onEscape")(onEscape.asInstanceOf[js.Any])
-    if (!js.isUndefined(scrollable)) __obj.updateDynamic("scrollable")(scrollable.asInstanceOf[js.Any])
-    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(swapButtonOrder)) __obj.updateDynamic("swapButtonOrder")(swapButtonOrder.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootboxConfirmOptions]
   }
+  @scala.inline
+  implicit class BootboxConfirmOptionsOps[Self <: BootboxConfirmOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallback(value: Boolean => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withButtons(value: BootboxConfirmPromptButtonMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtons: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

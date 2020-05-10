@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GlobalErrorHandlers extends js.Object {
-  var uncaughtException: js.Array[js.Function1[/* exception */ Exception, Unit]]
-  var unhandledRejection: js.Array[js.Function2[/* exception */ Exception, /* promise */ js.Promise[_], Unit]]
+  var uncaughtException: js.Array[js.Function1[/* exception */ Exception, Unit]] = js.native
+  var unhandledRejection: js.Array[js.Function2[/* exception */ Exception, /* promise */ js.Promise[_], Unit]] = js.native
 }
 
 object GlobalErrorHandlers {
@@ -16,8 +17,27 @@ object GlobalErrorHandlers {
     unhandledRejection: js.Array[js.Function2[/* exception */ Exception, /* promise */ js.Promise[_], Unit]]
   ): GlobalErrorHandlers = {
     val __obj = js.Dynamic.literal(uncaughtException = uncaughtException.asInstanceOf[js.Any], unhandledRejection = unhandledRejection.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GlobalErrorHandlers]
   }
+  @scala.inline
+  implicit class GlobalErrorHandlersOps[Self <: GlobalErrorHandlers] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUncaughtException(value: js.Array[js.Function1[/* exception */ Exception, Unit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncaughtException")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnhandledRejection(value: js.Array[js.Function2[/* exception */ Exception, /* promise */ js.Promise[_], Unit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unhandledRejection")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

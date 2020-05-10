@@ -30,20 +30,77 @@ trait DescribePortfolioShareStatusOutput extends js.Object {
 
 object DescribePortfolioShareStatusOutput {
   @scala.inline
-  def apply(
-    OrganizationNodeValue: OrganizationNodeValue = null,
-    PortfolioId: Id = null,
-    PortfolioShareToken: Id = null,
-    ShareDetails: ShareDetails = null,
-    Status: ShareStatus = null
-  ): DescribePortfolioShareStatusOutput = {
+  def apply(): DescribePortfolioShareStatusOutput = {
     val __obj = js.Dynamic.literal()
-    if (OrganizationNodeValue != null) __obj.updateDynamic("OrganizationNodeValue")(OrganizationNodeValue.asInstanceOf[js.Any])
-    if (PortfolioId != null) __obj.updateDynamic("PortfolioId")(PortfolioId.asInstanceOf[js.Any])
-    if (PortfolioShareToken != null) __obj.updateDynamic("PortfolioShareToken")(PortfolioShareToken.asInstanceOf[js.Any])
-    if (ShareDetails != null) __obj.updateDynamic("ShareDetails")(ShareDetails.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribePortfolioShareStatusOutput]
   }
+  @scala.inline
+  implicit class DescribePortfolioShareStatusOutputOps[Self <: DescribePortfolioShareStatusOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrganizationNodeValue(value: OrganizationNodeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationNodeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationNodeValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationNodeValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortfolioId(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortfolioId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortfolioShareToken(value: Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioShareToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortfolioShareToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PortfolioShareToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShareDetails(value: ShareDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShareDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ShareStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,12 +22,53 @@ trait PrefixList extends js.Object {
 
 object PrefixList {
   @scala.inline
-  def apply(Cidrs: ValueStringList = null, PrefixListId: String = null, PrefixListName: String = null): PrefixList = {
+  def apply(): PrefixList = {
     val __obj = js.Dynamic.literal()
-    if (Cidrs != null) __obj.updateDynamic("Cidrs")(Cidrs.asInstanceOf[js.Any])
-    if (PrefixListId != null) __obj.updateDynamic("PrefixListId")(PrefixListId.asInstanceOf[js.Any])
-    if (PrefixListName != null) __obj.updateDynamic("PrefixListName")(PrefixListName.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrefixList]
   }
+  @scala.inline
+  implicit class PrefixListOps[Self <: PrefixList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCidrs(value: ValueStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cidrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCidrs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cidrs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixListId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixListId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixListId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixListId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixListName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixListName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixListName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrefixListName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

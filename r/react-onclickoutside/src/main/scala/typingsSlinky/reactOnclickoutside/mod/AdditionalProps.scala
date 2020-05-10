@@ -1,38 +1,91 @@
 package typingsSlinky.reactOnclickoutside.mod
 
-import slinky.web.SyntheticMouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AdditionalProps extends ConfigObject {
-  var disableOnClickOutside: js.UndefOr[Boolean] = js.undefined
-  var eventTypes: js.UndefOr[String | js.Array[String]] = js.undefined
-  var outsideClickIgnoreClass: js.UndefOr[String] = js.undefined
-  var preventDefault: js.UndefOr[Boolean] = js.undefined
-  var stopPropagation: js.UndefOr[Boolean] = js.undefined
+  var disableOnClickOutside: js.UndefOr[Boolean] = js.native
+  var eventTypes: js.UndefOr[String | js.Array[String]] = js.native
+  var outsideClickIgnoreClass: js.UndefOr[String] = js.native
+  var preventDefault: js.UndefOr[Boolean] = js.native
+  var stopPropagation: js.UndefOr[Boolean] = js.native
 }
 
 object AdditionalProps {
   @scala.inline
-  def apply(
-    disableOnClickOutside: js.UndefOr[Boolean] = js.undefined,
-    eventTypes: String | js.Array[String] = null,
-    excludeScrollbar: js.UndefOr[Boolean] = js.undefined,
-    handleClickOutside: SyntheticMouseEvent[_] => Unit = null,
-    outsideClickIgnoreClass: String = null,
-    preventDefault: js.UndefOr[Boolean] = js.undefined,
-    stopPropagation: js.UndefOr[Boolean] = js.undefined
-  ): AdditionalProps = {
+  def apply(): AdditionalProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(disableOnClickOutside)) __obj.updateDynamic("disableOnClickOutside")(disableOnClickOutside.asInstanceOf[js.Any])
-    if (eventTypes != null) __obj.updateDynamic("eventTypes")(eventTypes.asInstanceOf[js.Any])
-    if (!js.isUndefined(excludeScrollbar)) __obj.updateDynamic("excludeScrollbar")(excludeScrollbar.asInstanceOf[js.Any])
-    if (handleClickOutside != null) __obj.updateDynamic("handleClickOutside")(js.Any.fromFunction1(handleClickOutside))
-    if (outsideClickIgnoreClass != null) __obj.updateDynamic("outsideClickIgnoreClass")(outsideClickIgnoreClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventDefault)) __obj.updateDynamic("preventDefault")(preventDefault.asInstanceOf[js.Any])
-    if (!js.isUndefined(stopPropagation)) __obj.updateDynamic("stopPropagation")(stopPropagation.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdditionalProps]
   }
+  @scala.inline
+  implicit class AdditionalPropsOps[Self <: AdditionalProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisableOnClickOutside(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOnClickOutside")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableOnClickOutside: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableOnClickOutside")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEventTypes(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEventTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutsideClickIgnoreClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outsideClickIgnoreClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutsideClickIgnoreClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outsideClickIgnoreClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreventDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreventDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopPropagation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopPropagation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

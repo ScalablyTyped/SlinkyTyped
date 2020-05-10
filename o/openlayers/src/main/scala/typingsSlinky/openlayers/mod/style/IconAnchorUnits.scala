@@ -15,10 +15,8 @@ trait IconAnchorUnits extends js.Object
 
 object IconAnchorUnits {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fraction: typingsSlinky.openlayers.openlayersStrings.fraction = "fraction".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.fraction]
   @scala.inline
-  def fraction: typingsSlinky.openlayers.openlayersStrings.fraction = this.cast("fraction")
-  @scala.inline
-  def pixels: typingsSlinky.openlayers.openlayersStrings.pixels = this.cast("pixels")
+  def pixels: typingsSlinky.openlayers.openlayersStrings.pixels = "pixels".asInstanceOf[typingsSlinky.openlayers.openlayersStrings.pixels]
 }
 

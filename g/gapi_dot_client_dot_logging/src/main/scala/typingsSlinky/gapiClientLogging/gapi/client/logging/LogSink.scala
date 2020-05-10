@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LogSink extends js.Object {
   /**
     * Required. The export destination:
@@ -13,15 +14,15 @@ trait LogSink extends js.Object {
     * The sink's writer_identity, set when the sink is created, must have permission to write to the destination or else the log entries are not exported.
     * For more information, see Exporting Logs With Sinks.
     */
-  var destination: js.UndefOr[String] = js.undefined
+  var destination: js.UndefOr[String] = js.native
   /** Deprecated. This field is ignored when creating or updating sinks. */
-  var endTime: js.UndefOr[String] = js.undefined
+  var endTime: js.UndefOr[String] = js.native
   /**
     * Optional. An advanced logs filter. The only exported log entries are those that are in the resource owning the sink and that match the filter. For
     * example:
     * logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
     */
-  var filter: js.UndefOr[String] = js.undefined
+  var filter: js.UndefOr[String] = js.native
   /**
     * Optional. This field applies only to sinks owned by organizations and folders. If the field is false, the default, only the logs owned by the sink's
     * parent resource are available for export. If the field is true, then logs from all the projects, folders, and billing accounts contained in the sink's
@@ -31,47 +32,134 @@ trait LogSink extends js.Object {
     * logName:("projects/test-project1/" OR "projects/test-project2/") AND
     * resource.type=gce_instance
     */
-  var includeChildren: js.UndefOr[Boolean] = js.undefined
+  var includeChildren: js.UndefOr[Boolean] = js.native
   /**
     * Required. The client-assigned sink identifier, unique within the project. Example: "my-syslog-errors-to-pubsub". Sink identifiers are limited to 100
     * characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** Deprecated. The log entry format to use for this sink's exported log entries. The v2 format is used by default and cannot be changed. */
-  var outputVersionFormat: js.UndefOr[String] = js.undefined
+  var outputVersionFormat: js.UndefOr[String] = js.native
   /** Deprecated. This field is ignored when creating or updating sinks. */
-  var startTime: js.UndefOr[String] = js.undefined
+  var startTime: js.UndefOr[String] = js.native
   /**
     * Output only. An IAM identity&mdash;a service account or group&mdash;under which Stackdriver Logging writes the exported log entries to the sink's
     * destination. This field is set by sinks.create and sinks.update, based on the setting of unique_writer_identity in those methods.Until you grant this
     * identity write-access to the destination, log entry exports from this sink will fail. For more information, see Granting access for a resource. Consult
     * the destination service's documentation to determine the appropriate IAM roles to assign to the identity.
     */
-  var writerIdentity: js.UndefOr[String] = js.undefined
+  var writerIdentity: js.UndefOr[String] = js.native
 }
 
 object LogSink {
   @scala.inline
-  def apply(
-    destination: String = null,
-    endTime: String = null,
-    filter: String = null,
-    includeChildren: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    outputVersionFormat: String = null,
-    startTime: String = null,
-    writerIdentity: String = null
-  ): LogSink = {
+  def apply(): LogSink = {
     val __obj = js.Dynamic.literal()
-    if (destination != null) __obj.updateDynamic("destination")(destination.asInstanceOf[js.Any])
-    if (endTime != null) __obj.updateDynamic("endTime")(endTime.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeChildren)) __obj.updateDynamic("includeChildren")(includeChildren.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (outputVersionFormat != null) __obj.updateDynamic("outputVersionFormat")(outputVersionFormat.asInstanceOf[js.Any])
-    if (startTime != null) __obj.updateDynamic("startTime")(startTime.asInstanceOf[js.Any])
-    if (writerIdentity != null) __obj.updateDynamic("writerIdentity")(writerIdentity.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogSink]
   }
+  @scala.inline
+  implicit class LogSinkOps[Self <: LogSink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestination(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestination: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeChildren(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeChildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeChildren")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputVersionFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputVersionFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputVersionFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputVersionFormat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriterIdentity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writerIdentity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWriterIdentity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writerIdentity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

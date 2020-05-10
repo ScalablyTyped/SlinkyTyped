@@ -7,1476 +7,3889 @@ import scala.scalajs.js.annotation._
 /**
   * Definition of an element in a resource or extension
   */
+@js.native
 trait ElementDefinition extends Element {
   /**
     * Contains extended information for property 'alias'.
     */
-  var _alias: js.UndefOr[js.Array[Element]] = js.undefined
+  var _alias: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'comment'.
     */
-  var _comment: js.UndefOr[Element] = js.undefined
+  var _comment: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'condition'.
     */
-  var _condition: js.UndefOr[js.Array[Element]] = js.undefined
+  var _condition: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'contentReference'.
     */
-  var _contentReference: js.UndefOr[Element] = js.undefined
+  var _contentReference: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueBase64Binary'.
     */
-  var _defaultValueBase64Binary: js.UndefOr[Element] = js.undefined
+  var _defaultValueBase64Binary: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueBoolean'.
     */
-  var _defaultValueBoolean: js.UndefOr[Element] = js.undefined
+  var _defaultValueBoolean: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueCode'.
     */
-  var _defaultValueCode: js.UndefOr[Element] = js.undefined
+  var _defaultValueCode: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueDate'.
     */
-  var _defaultValueDate: js.UndefOr[Element] = js.undefined
+  var _defaultValueDate: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueDateTime'.
     */
-  var _defaultValueDateTime: js.UndefOr[Element] = js.undefined
+  var _defaultValueDateTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueDecimal'.
     */
-  var _defaultValueDecimal: js.UndefOr[Element] = js.undefined
+  var _defaultValueDecimal: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueId'.
     */
-  var _defaultValueId: js.UndefOr[Element] = js.undefined
+  var _defaultValueId: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueInstant'.
     */
-  var _defaultValueInstant: js.UndefOr[Element] = js.undefined
+  var _defaultValueInstant: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueInteger'.
     */
-  var _defaultValueInteger: js.UndefOr[Element] = js.undefined
+  var _defaultValueInteger: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueMarkdown'.
     */
-  var _defaultValueMarkdown: js.UndefOr[Element] = js.undefined
+  var _defaultValueMarkdown: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueOid'.
     */
-  var _defaultValueOid: js.UndefOr[Element] = js.undefined
+  var _defaultValueOid: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValuePositiveInt'.
     */
-  var _defaultValuePositiveInt: js.UndefOr[Element] = js.undefined
+  var _defaultValuePositiveInt: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueString'.
     */
-  var _defaultValueString: js.UndefOr[Element] = js.undefined
+  var _defaultValueString: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueTime'.
     */
-  var _defaultValueTime: js.UndefOr[Element] = js.undefined
+  var _defaultValueTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueUnsignedInt'.
     */
-  var _defaultValueUnsignedInt: js.UndefOr[Element] = js.undefined
+  var _defaultValueUnsignedInt: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'defaultValueUri'.
     */
-  var _defaultValueUri: js.UndefOr[Element] = js.undefined
+  var _defaultValueUri: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'definition'.
     */
-  var _definition: js.UndefOr[Element] = js.undefined
+  var _definition: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedBase64Binary'.
     */
-  var _fixedBase64Binary: js.UndefOr[Element] = js.undefined
+  var _fixedBase64Binary: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedBoolean'.
     */
-  var _fixedBoolean: js.UndefOr[Element] = js.undefined
+  var _fixedBoolean: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedCode'.
     */
-  var _fixedCode: js.UndefOr[Element] = js.undefined
+  var _fixedCode: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedDate'.
     */
-  var _fixedDate: js.UndefOr[Element] = js.undefined
+  var _fixedDate: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedDateTime'.
     */
-  var _fixedDateTime: js.UndefOr[Element] = js.undefined
+  var _fixedDateTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedDecimal'.
     */
-  var _fixedDecimal: js.UndefOr[Element] = js.undefined
+  var _fixedDecimal: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedId'.
     */
-  var _fixedId: js.UndefOr[Element] = js.undefined
+  var _fixedId: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedInstant'.
     */
-  var _fixedInstant: js.UndefOr[Element] = js.undefined
+  var _fixedInstant: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedInteger'.
     */
-  var _fixedInteger: js.UndefOr[Element] = js.undefined
+  var _fixedInteger: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedMarkdown'.
     */
-  var _fixedMarkdown: js.UndefOr[Element] = js.undefined
+  var _fixedMarkdown: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedOid'.
     */
-  var _fixedOid: js.UndefOr[Element] = js.undefined
+  var _fixedOid: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedPositiveInt'.
     */
-  var _fixedPositiveInt: js.UndefOr[Element] = js.undefined
+  var _fixedPositiveInt: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedString'.
     */
-  var _fixedString: js.UndefOr[Element] = js.undefined
+  var _fixedString: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedTime'.
     */
-  var _fixedTime: js.UndefOr[Element] = js.undefined
+  var _fixedTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedUnsignedInt'.
     */
-  var _fixedUnsignedInt: js.UndefOr[Element] = js.undefined
+  var _fixedUnsignedInt: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'fixedUri'.
     */
-  var _fixedUri: js.UndefOr[Element] = js.undefined
+  var _fixedUri: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'isModifier'.
     */
-  var _isModifier: js.UndefOr[Element] = js.undefined
+  var _isModifier: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'isSummary'.
     */
-  var _isSummary: js.UndefOr[Element] = js.undefined
+  var _isSummary: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'label'.
     */
-  var _label: js.UndefOr[Element] = js.undefined
+  var _label: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'max'.
     */
-  var _max: js.UndefOr[Element] = js.undefined
+  var _max: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'maxLength'.
     */
-  var _maxLength: js.UndefOr[Element] = js.undefined
+  var _maxLength: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'maxValueDate'.
     */
-  var _maxValueDate: js.UndefOr[Element] = js.undefined
+  var _maxValueDate: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'maxValueDateTime'.
     */
-  var _maxValueDateTime: js.UndefOr[Element] = js.undefined
+  var _maxValueDateTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'maxValueDecimal'.
     */
-  var _maxValueDecimal: js.UndefOr[Element] = js.undefined
+  var _maxValueDecimal: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'maxValueInstant'.
     */
-  var _maxValueInstant: js.UndefOr[Element] = js.undefined
+  var _maxValueInstant: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'maxValueInteger'.
     */
-  var _maxValueInteger: js.UndefOr[Element] = js.undefined
+  var _maxValueInteger: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'maxValuePositiveInt'.
     */
-  var _maxValuePositiveInt: js.UndefOr[Element] = js.undefined
+  var _maxValuePositiveInt: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'maxValueTime'.
     */
-  var _maxValueTime: js.UndefOr[Element] = js.undefined
+  var _maxValueTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'maxValueUnsignedInt'.
     */
-  var _maxValueUnsignedInt: js.UndefOr[Element] = js.undefined
+  var _maxValueUnsignedInt: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'meaningWhenMissing'.
     */
-  var _meaningWhenMissing: js.UndefOr[Element] = js.undefined
+  var _meaningWhenMissing: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'min'.
     */
-  var _min: js.UndefOr[Element] = js.undefined
+  var _min: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'minValueDate'.
     */
-  var _minValueDate: js.UndefOr[Element] = js.undefined
+  var _minValueDate: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'minValueDateTime'.
     */
-  var _minValueDateTime: js.UndefOr[Element] = js.undefined
+  var _minValueDateTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'minValueDecimal'.
     */
-  var _minValueDecimal: js.UndefOr[Element] = js.undefined
+  var _minValueDecimal: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'minValueInstant'.
     */
-  var _minValueInstant: js.UndefOr[Element] = js.undefined
+  var _minValueInstant: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'minValueInteger'.
     */
-  var _minValueInteger: js.UndefOr[Element] = js.undefined
+  var _minValueInteger: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'minValuePositiveInt'.
     */
-  var _minValuePositiveInt: js.UndefOr[Element] = js.undefined
+  var _minValuePositiveInt: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'minValueTime'.
     */
-  var _minValueTime: js.UndefOr[Element] = js.undefined
+  var _minValueTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'minValueUnsignedInt'.
     */
-  var _minValueUnsignedInt: js.UndefOr[Element] = js.undefined
+  var _minValueUnsignedInt: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'mustSupport'.
     */
-  var _mustSupport: js.UndefOr[Element] = js.undefined
+  var _mustSupport: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'orderMeaning'.
     */
-  var _orderMeaning: js.UndefOr[Element] = js.undefined
+  var _orderMeaning: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'path'.
     */
-  var _path: js.UndefOr[Element] = js.undefined
+  var _path: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternBase64Binary'.
     */
-  var _patternBase64Binary: js.UndefOr[Element] = js.undefined
+  var _patternBase64Binary: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternBoolean'.
     */
-  var _patternBoolean: js.UndefOr[Element] = js.undefined
+  var _patternBoolean: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternCode'.
     */
-  var _patternCode: js.UndefOr[Element] = js.undefined
+  var _patternCode: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternDate'.
     */
-  var _patternDate: js.UndefOr[Element] = js.undefined
+  var _patternDate: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternDateTime'.
     */
-  var _patternDateTime: js.UndefOr[Element] = js.undefined
+  var _patternDateTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternDecimal'.
     */
-  var _patternDecimal: js.UndefOr[Element] = js.undefined
+  var _patternDecimal: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternId'.
     */
-  var _patternId: js.UndefOr[Element] = js.undefined
+  var _patternId: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternInstant'.
     */
-  var _patternInstant: js.UndefOr[Element] = js.undefined
+  var _patternInstant: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternInteger'.
     */
-  var _patternInteger: js.UndefOr[Element] = js.undefined
+  var _patternInteger: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternMarkdown'.
     */
-  var _patternMarkdown: js.UndefOr[Element] = js.undefined
+  var _patternMarkdown: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternOid'.
     */
-  var _patternOid: js.UndefOr[Element] = js.undefined
+  var _patternOid: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternPositiveInt'.
     */
-  var _patternPositiveInt: js.UndefOr[Element] = js.undefined
+  var _patternPositiveInt: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternString'.
     */
-  var _patternString: js.UndefOr[Element] = js.undefined
+  var _patternString: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternTime'.
     */
-  var _patternTime: js.UndefOr[Element] = js.undefined
+  var _patternTime: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternUnsignedInt'.
     */
-  var _patternUnsignedInt: js.UndefOr[Element] = js.undefined
+  var _patternUnsignedInt: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'patternUri'.
     */
-  var _patternUri: js.UndefOr[Element] = js.undefined
+  var _patternUri: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'representation'.
     */
-  var _representation: js.UndefOr[js.Array[Element]] = js.undefined
+  var _representation: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Contains extended information for property 'requirements'.
     */
-  var _requirements: js.UndefOr[Element] = js.undefined
+  var _requirements: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'short'.
     */
-  var _short: js.UndefOr[Element] = js.undefined
+  var _short: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'sliceName'.
     */
-  var _sliceName: js.UndefOr[Element] = js.undefined
+  var _sliceName: js.UndefOr[Element] = js.native
   /**
     * Other names
     */
-  var alias: js.UndefOr[js.Array[String]] = js.undefined
+  var alias: js.UndefOr[js.Array[String]] = js.native
   /**
     * Base definition information for tools
     */
-  var base: js.UndefOr[ElementDefinitionBase] = js.undefined
+  var base: js.UndefOr[ElementDefinitionBase] = js.native
   /**
     * ValueSet details if this is coded
     */
-  var binding: js.UndefOr[ElementDefinitionBinding] = js.undefined
+  var binding: js.UndefOr[ElementDefinitionBinding] = js.native
   /**
     * Corresponding codes in terminologies
     */
-  var code: js.UndefOr[js.Array[Coding]] = js.undefined
+  var code: js.UndefOr[js.Array[Coding]] = js.native
   /**
     * Comments about the use of this element
     */
-  var comment: js.UndefOr[markdown] = js.undefined
+  var comment: js.UndefOr[markdown] = js.native
   /**
     * Reference to invariant about presence
     */
-  var condition: js.UndefOr[js.Array[id]] = js.undefined
+  var condition: js.UndefOr[js.Array[id]] = js.native
   /**
     * Condition that must evaluate to true
     */
-  var constraint: js.UndefOr[js.Array[ElementDefinitionConstraint]] = js.undefined
+  var constraint: js.UndefOr[js.Array[ElementDefinitionConstraint]] = js.native
   /**
     * Reference to definition of content for the element
     */
-  var contentReference: js.UndefOr[uri] = js.undefined
+  var contentReference: js.UndefOr[uri] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueAddress: js.UndefOr[Address] = js.undefined
+  var defaultValueAddress: js.UndefOr[Address] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueAge: js.UndefOr[Age] = js.undefined
+  var defaultValueAge: js.UndefOr[Age] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueAnnotation: js.UndefOr[Annotation] = js.undefined
+  var defaultValueAnnotation: js.UndefOr[Annotation] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueAttachment: js.UndefOr[Attachment] = js.undefined
+  var defaultValueAttachment: js.UndefOr[Attachment] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueBase64Binary: js.UndefOr[base64Binary] = js.undefined
+  var defaultValueBase64Binary: js.UndefOr[base64Binary] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueBoolean: js.UndefOr[Boolean] = js.undefined
+  var defaultValueBoolean: js.UndefOr[Boolean] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueCode: js.UndefOr[code] = js.undefined
+  var defaultValueCode: js.UndefOr[code] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
+  var defaultValueCodeableConcept: js.UndefOr[CodeableConcept] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueCoding: js.UndefOr[Coding] = js.undefined
+  var defaultValueCoding: js.UndefOr[Coding] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueContactPoint: js.UndefOr[ContactPoint] = js.undefined
+  var defaultValueContactPoint: js.UndefOr[ContactPoint] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueCount: js.UndefOr[Count] = js.undefined
+  var defaultValueCount: js.UndefOr[Count] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueDate: js.UndefOr[date] = js.undefined
+  var defaultValueDate: js.UndefOr[date] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueDateTime: js.UndefOr[dateTime] = js.undefined
+  var defaultValueDateTime: js.UndefOr[dateTime] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueDecimal: js.UndefOr[decimal] = js.undefined
+  var defaultValueDecimal: js.UndefOr[decimal] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueDistance: js.UndefOr[Distance] = js.undefined
+  var defaultValueDistance: js.UndefOr[Distance] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueDuration: js.UndefOr[Duration] = js.undefined
+  var defaultValueDuration: js.UndefOr[Duration] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueHumanName: js.UndefOr[HumanName] = js.undefined
+  var defaultValueHumanName: js.UndefOr[HumanName] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueId: js.UndefOr[id] = js.undefined
+  var defaultValueId: js.UndefOr[id] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueIdentifier: js.UndefOr[Identifier] = js.undefined
+  var defaultValueIdentifier: js.UndefOr[Identifier] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueInstant: js.UndefOr[instant] = js.undefined
+  var defaultValueInstant: js.UndefOr[instant] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueInteger: js.UndefOr[integer] = js.undefined
+  var defaultValueInteger: js.UndefOr[integer] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueMarkdown: js.UndefOr[markdown] = js.undefined
+  var defaultValueMarkdown: js.UndefOr[markdown] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueMeta: js.UndefOr[Meta] = js.undefined
+  var defaultValueMeta: js.UndefOr[Meta] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueMoney: js.UndefOr[Money] = js.undefined
+  var defaultValueMoney: js.UndefOr[Money] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueOid: js.UndefOr[oid] = js.undefined
+  var defaultValueOid: js.UndefOr[oid] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValuePeriod: js.UndefOr[Period] = js.undefined
+  var defaultValuePeriod: js.UndefOr[Period] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValuePositiveInt: js.UndefOr[positiveInt] = js.undefined
+  var defaultValuePositiveInt: js.UndefOr[positiveInt] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueQuantity: js.UndefOr[Quantity] = js.undefined
+  var defaultValueQuantity: js.UndefOr[Quantity] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueRange: js.UndefOr[Range] = js.undefined
+  var defaultValueRange: js.UndefOr[Range] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueRatio: js.UndefOr[Ratio] = js.undefined
+  var defaultValueRatio: js.UndefOr[Ratio] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueReference: js.UndefOr[Reference] = js.undefined
+  var defaultValueReference: js.UndefOr[Reference] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueSampledData: js.UndefOr[SampledData] = js.undefined
+  var defaultValueSampledData: js.UndefOr[SampledData] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueSignature: js.UndefOr[Signature] = js.undefined
+  var defaultValueSignature: js.UndefOr[Signature] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueString: js.UndefOr[String] = js.undefined
+  var defaultValueString: js.UndefOr[String] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueTime: js.UndefOr[time] = js.undefined
+  var defaultValueTime: js.UndefOr[time] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueTiming: js.UndefOr[Timing] = js.undefined
+  var defaultValueTiming: js.UndefOr[Timing] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueUnsignedInt: js.UndefOr[unsignedInt] = js.undefined
+  var defaultValueUnsignedInt: js.UndefOr[unsignedInt] = js.native
   /**
     * Specified value if missing from instance
     */
-  var defaultValueUri: js.UndefOr[uri] = js.undefined
+  var defaultValueUri: js.UndefOr[uri] = js.native
   /**
     * Full formal definition as narrative text
     */
-  var definition: js.UndefOr[markdown] = js.undefined
+  var definition: js.UndefOr[markdown] = js.native
   /**
     * Example value (as defined for type)
     */
-  var example: js.UndefOr[js.Array[ElementDefinitionExample]] = js.undefined
+  var example: js.UndefOr[js.Array[ElementDefinitionExample]] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedAddress: js.UndefOr[Address] = js.undefined
+  var fixedAddress: js.UndefOr[Address] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedAge: js.UndefOr[Age] = js.undefined
+  var fixedAge: js.UndefOr[Age] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedAnnotation: js.UndefOr[Annotation] = js.undefined
+  var fixedAnnotation: js.UndefOr[Annotation] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedAttachment: js.UndefOr[Attachment] = js.undefined
+  var fixedAttachment: js.UndefOr[Attachment] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedBase64Binary: js.UndefOr[base64Binary] = js.undefined
+  var fixedBase64Binary: js.UndefOr[base64Binary] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedBoolean: js.UndefOr[Boolean] = js.undefined
+  var fixedBoolean: js.UndefOr[Boolean] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedCode: js.UndefOr[code] = js.undefined
+  var fixedCode: js.UndefOr[code] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
+  var fixedCodeableConcept: js.UndefOr[CodeableConcept] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedCoding: js.UndefOr[Coding] = js.undefined
+  var fixedCoding: js.UndefOr[Coding] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedContactPoint: js.UndefOr[ContactPoint] = js.undefined
+  var fixedContactPoint: js.UndefOr[ContactPoint] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedCount: js.UndefOr[Count] = js.undefined
+  var fixedCount: js.UndefOr[Count] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedDate: js.UndefOr[date] = js.undefined
+  var fixedDate: js.UndefOr[date] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedDateTime: js.UndefOr[dateTime] = js.undefined
+  var fixedDateTime: js.UndefOr[dateTime] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedDecimal: js.UndefOr[decimal] = js.undefined
+  var fixedDecimal: js.UndefOr[decimal] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedDistance: js.UndefOr[Distance] = js.undefined
+  var fixedDistance: js.UndefOr[Distance] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedDuration: js.UndefOr[Duration] = js.undefined
+  var fixedDuration: js.UndefOr[Duration] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedHumanName: js.UndefOr[HumanName] = js.undefined
+  var fixedHumanName: js.UndefOr[HumanName] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedId: js.UndefOr[id] = js.undefined
+  var fixedId: js.UndefOr[id] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedIdentifier: js.UndefOr[Identifier] = js.undefined
+  var fixedIdentifier: js.UndefOr[Identifier] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedInstant: js.UndefOr[instant] = js.undefined
+  var fixedInstant: js.UndefOr[instant] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedInteger: js.UndefOr[integer] = js.undefined
+  var fixedInteger: js.UndefOr[integer] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedMarkdown: js.UndefOr[markdown] = js.undefined
+  var fixedMarkdown: js.UndefOr[markdown] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedMeta: js.UndefOr[Meta] = js.undefined
+  var fixedMeta: js.UndefOr[Meta] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedMoney: js.UndefOr[Money] = js.undefined
+  var fixedMoney: js.UndefOr[Money] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedOid: js.UndefOr[oid] = js.undefined
+  var fixedOid: js.UndefOr[oid] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedPeriod: js.UndefOr[Period] = js.undefined
+  var fixedPeriod: js.UndefOr[Period] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedPositiveInt: js.UndefOr[positiveInt] = js.undefined
+  var fixedPositiveInt: js.UndefOr[positiveInt] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedQuantity: js.UndefOr[Quantity] = js.undefined
+  var fixedQuantity: js.UndefOr[Quantity] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedRange: js.UndefOr[Range] = js.undefined
+  var fixedRange: js.UndefOr[Range] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedRatio: js.UndefOr[Ratio] = js.undefined
+  var fixedRatio: js.UndefOr[Ratio] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedReference: js.UndefOr[Reference] = js.undefined
+  var fixedReference: js.UndefOr[Reference] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedSampledData: js.UndefOr[SampledData] = js.undefined
+  var fixedSampledData: js.UndefOr[SampledData] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedSignature: js.UndefOr[Signature] = js.undefined
+  var fixedSignature: js.UndefOr[Signature] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedString: js.UndefOr[String] = js.undefined
+  var fixedString: js.UndefOr[String] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedTime: js.UndefOr[time] = js.undefined
+  var fixedTime: js.UndefOr[time] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedTiming: js.UndefOr[Timing] = js.undefined
+  var fixedTiming: js.UndefOr[Timing] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedUnsignedInt: js.UndefOr[unsignedInt] = js.undefined
+  var fixedUnsignedInt: js.UndefOr[unsignedInt] = js.native
   /**
     * Value must be exactly this
     */
-  var fixedUri: js.UndefOr[uri] = js.undefined
+  var fixedUri: js.UndefOr[uri] = js.native
   /**
     * If this modifies the meaning of other elements
     */
-  var isModifier: js.UndefOr[Boolean] = js.undefined
+  var isModifier: js.UndefOr[Boolean] = js.native
   /**
     * Include when _summary = true?
     */
-  var isSummary: js.UndefOr[Boolean] = js.undefined
+  var isSummary: js.UndefOr[Boolean] = js.native
   /**
     * Name for element to display with or prompt for element
     */
-  var label: js.UndefOr[String] = js.undefined
+  var label: js.UndefOr[String] = js.native
   /**
     * Map element to another set of definitions
     */
-  var mapping: js.UndefOr[js.Array[ElementDefinitionMapping]] = js.undefined
+  var mapping: js.UndefOr[js.Array[ElementDefinitionMapping]] = js.native
   /**
     * Maximum Cardinality (a number or *)
     */
-  var max: js.UndefOr[String] = js.undefined
+  var max: js.UndefOr[String] = js.native
   /**
     * Max length for strings
     */
-  var maxLength: js.UndefOr[integer] = js.undefined
+  var maxLength: js.UndefOr[integer] = js.native
   /**
     * Maximum Allowed Value (for some types)
     */
-  var maxValueDate: js.UndefOr[date] = js.undefined
+  var maxValueDate: js.UndefOr[date] = js.native
   /**
     * Maximum Allowed Value (for some types)
     */
-  var maxValueDateTime: js.UndefOr[dateTime] = js.undefined
+  var maxValueDateTime: js.UndefOr[dateTime] = js.native
   /**
     * Maximum Allowed Value (for some types)
     */
-  var maxValueDecimal: js.UndefOr[decimal] = js.undefined
+  var maxValueDecimal: js.UndefOr[decimal] = js.native
   /**
     * Maximum Allowed Value (for some types)
     */
-  var maxValueInstant: js.UndefOr[instant] = js.undefined
+  var maxValueInstant: js.UndefOr[instant] = js.native
   /**
     * Maximum Allowed Value (for some types)
     */
-  var maxValueInteger: js.UndefOr[integer] = js.undefined
+  var maxValueInteger: js.UndefOr[integer] = js.native
   /**
     * Maximum Allowed Value (for some types)
     */
-  var maxValuePositiveInt: js.UndefOr[positiveInt] = js.undefined
+  var maxValuePositiveInt: js.UndefOr[positiveInt] = js.native
   /**
     * Maximum Allowed Value (for some types)
     */
-  var maxValueQuantity: js.UndefOr[Quantity] = js.undefined
+  var maxValueQuantity: js.UndefOr[Quantity] = js.native
   /**
     * Maximum Allowed Value (for some types)
     */
-  var maxValueTime: js.UndefOr[time] = js.undefined
+  var maxValueTime: js.UndefOr[time] = js.native
   /**
     * Maximum Allowed Value (for some types)
     */
-  var maxValueUnsignedInt: js.UndefOr[unsignedInt] = js.undefined
+  var maxValueUnsignedInt: js.UndefOr[unsignedInt] = js.native
   /**
     * Implicit meaning when this element is missing
     */
-  var meaningWhenMissing: js.UndefOr[markdown] = js.undefined
+  var meaningWhenMissing: js.UndefOr[markdown] = js.native
   /**
     * Minimum Cardinality
     */
-  var min: js.UndefOr[unsignedInt] = js.undefined
+  var min: js.UndefOr[unsignedInt] = js.native
   /**
     * Minimum Allowed Value (for some types)
     */
-  var minValueDate: js.UndefOr[date] = js.undefined
+  var minValueDate: js.UndefOr[date] = js.native
   /**
     * Minimum Allowed Value (for some types)
     */
-  var minValueDateTime: js.UndefOr[dateTime] = js.undefined
+  var minValueDateTime: js.UndefOr[dateTime] = js.native
   /**
     * Minimum Allowed Value (for some types)
     */
-  var minValueDecimal: js.UndefOr[decimal] = js.undefined
+  var minValueDecimal: js.UndefOr[decimal] = js.native
   /**
     * Minimum Allowed Value (for some types)
     */
-  var minValueInstant: js.UndefOr[instant] = js.undefined
+  var minValueInstant: js.UndefOr[instant] = js.native
   /**
     * Minimum Allowed Value (for some types)
     */
-  var minValueInteger: js.UndefOr[integer] = js.undefined
+  var minValueInteger: js.UndefOr[integer] = js.native
   /**
     * Minimum Allowed Value (for some types)
     */
-  var minValuePositiveInt: js.UndefOr[positiveInt] = js.undefined
+  var minValuePositiveInt: js.UndefOr[positiveInt] = js.native
   /**
     * Minimum Allowed Value (for some types)
     */
-  var minValueQuantity: js.UndefOr[Quantity] = js.undefined
+  var minValueQuantity: js.UndefOr[Quantity] = js.native
   /**
     * Minimum Allowed Value (for some types)
     */
-  var minValueTime: js.UndefOr[time] = js.undefined
+  var minValueTime: js.UndefOr[time] = js.native
   /**
     * Minimum Allowed Value (for some types)
     */
-  var minValueUnsignedInt: js.UndefOr[unsignedInt] = js.undefined
+  var minValueUnsignedInt: js.UndefOr[unsignedInt] = js.native
   /**
     * If the element must supported
     */
-  var mustSupport: js.UndefOr[Boolean] = js.undefined
+  var mustSupport: js.UndefOr[Boolean] = js.native
   /**
     * What the order of the elements means
     */
-  var orderMeaning: js.UndefOr[String] = js.undefined
+  var orderMeaning: js.UndefOr[String] = js.native
   /**
     * Path of the element in the hierarchy of elements
     */
-  var path: String
+  var path: String = js.native
   /**
     * Value must have at least these property values
     */
-  var patternAddress: js.UndefOr[Address] = js.undefined
+  var patternAddress: js.UndefOr[Address] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternAge: js.UndefOr[Age] = js.undefined
+  var patternAge: js.UndefOr[Age] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternAnnotation: js.UndefOr[Annotation] = js.undefined
+  var patternAnnotation: js.UndefOr[Annotation] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternAttachment: js.UndefOr[Attachment] = js.undefined
+  var patternAttachment: js.UndefOr[Attachment] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternBase64Binary: js.UndefOr[base64Binary] = js.undefined
+  var patternBase64Binary: js.UndefOr[base64Binary] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternBoolean: js.UndefOr[Boolean] = js.undefined
+  var patternBoolean: js.UndefOr[Boolean] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternCode: js.UndefOr[code] = js.undefined
+  var patternCode: js.UndefOr[code] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternCodeableConcept: js.UndefOr[CodeableConcept] = js.undefined
+  var patternCodeableConcept: js.UndefOr[CodeableConcept] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternCoding: js.UndefOr[Coding] = js.undefined
+  var patternCoding: js.UndefOr[Coding] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternContactPoint: js.UndefOr[ContactPoint] = js.undefined
+  var patternContactPoint: js.UndefOr[ContactPoint] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternCount: js.UndefOr[Count] = js.undefined
+  var patternCount: js.UndefOr[Count] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternDate: js.UndefOr[date] = js.undefined
+  var patternDate: js.UndefOr[date] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternDateTime: js.UndefOr[dateTime] = js.undefined
+  var patternDateTime: js.UndefOr[dateTime] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternDecimal: js.UndefOr[decimal] = js.undefined
+  var patternDecimal: js.UndefOr[decimal] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternDistance: js.UndefOr[Distance] = js.undefined
+  var patternDistance: js.UndefOr[Distance] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternDuration: js.UndefOr[Duration] = js.undefined
+  var patternDuration: js.UndefOr[Duration] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternHumanName: js.UndefOr[HumanName] = js.undefined
+  var patternHumanName: js.UndefOr[HumanName] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternId: js.UndefOr[id] = js.undefined
+  var patternId: js.UndefOr[id] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternIdentifier: js.UndefOr[Identifier] = js.undefined
+  var patternIdentifier: js.UndefOr[Identifier] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternInstant: js.UndefOr[instant] = js.undefined
+  var patternInstant: js.UndefOr[instant] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternInteger: js.UndefOr[integer] = js.undefined
+  var patternInteger: js.UndefOr[integer] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternMarkdown: js.UndefOr[markdown] = js.undefined
+  var patternMarkdown: js.UndefOr[markdown] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternMeta: js.UndefOr[Meta] = js.undefined
+  var patternMeta: js.UndefOr[Meta] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternMoney: js.UndefOr[Money] = js.undefined
+  var patternMoney: js.UndefOr[Money] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternOid: js.UndefOr[oid] = js.undefined
+  var patternOid: js.UndefOr[oid] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternPeriod: js.UndefOr[Period] = js.undefined
+  var patternPeriod: js.UndefOr[Period] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternPositiveInt: js.UndefOr[positiveInt] = js.undefined
+  var patternPositiveInt: js.UndefOr[positiveInt] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternQuantity: js.UndefOr[Quantity] = js.undefined
+  var patternQuantity: js.UndefOr[Quantity] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternRange: js.UndefOr[Range] = js.undefined
+  var patternRange: js.UndefOr[Range] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternRatio: js.UndefOr[Ratio] = js.undefined
+  var patternRatio: js.UndefOr[Ratio] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternReference: js.UndefOr[Reference] = js.undefined
+  var patternReference: js.UndefOr[Reference] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternSampledData: js.UndefOr[SampledData] = js.undefined
+  var patternSampledData: js.UndefOr[SampledData] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternSignature: js.UndefOr[Signature] = js.undefined
+  var patternSignature: js.UndefOr[Signature] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternString: js.UndefOr[String] = js.undefined
+  var patternString: js.UndefOr[String] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternTime: js.UndefOr[time] = js.undefined
+  var patternTime: js.UndefOr[time] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternTiming: js.UndefOr[Timing] = js.undefined
+  var patternTiming: js.UndefOr[Timing] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternUnsignedInt: js.UndefOr[unsignedInt] = js.undefined
+  var patternUnsignedInt: js.UndefOr[unsignedInt] = js.native
   /**
     * Value must have at least these property values
     */
-  var patternUri: js.UndefOr[uri] = js.undefined
+  var patternUri: js.UndefOr[uri] = js.native
   /**
     * xmlAttr | xmlText | typeAttr | cdaText | xhtml
     */
-  var representation: js.UndefOr[js.Array[code]] = js.undefined
+  var representation: js.UndefOr[js.Array[code]] = js.native
   /**
     * Why this resource has been created
     */
-  var requirements: js.UndefOr[markdown] = js.undefined
+  var requirements: js.UndefOr[markdown] = js.native
   /**
     * Concise definition for space-constrained presentation
     */
-  var short: js.UndefOr[String] = js.undefined
+  var short: js.UndefOr[String] = js.native
   /**
     * Name for this particular element (in a set of slices)
     */
-  var sliceName: js.UndefOr[String] = js.undefined
+  var sliceName: js.UndefOr[String] = js.native
   /**
     * This element is sliced - slices follow
     */
-  var slicing: js.UndefOr[ElementDefinitionSlicing] = js.undefined
+  var slicing: js.UndefOr[ElementDefinitionSlicing] = js.native
   /**
     * Data type and Profile for this element
     */
-  var `type`: js.UndefOr[js.Array[ElementDefinitionType]] = js.undefined
+  var `type`: js.UndefOr[js.Array[ElementDefinitionType]] = js.native
 }
 
 object ElementDefinition {
   @scala.inline
-  def apply(
-    path: String,
-    _alias: js.Array[Element] = null,
-    _comment: Element = null,
-    _condition: js.Array[Element] = null,
-    _contentReference: Element = null,
-    _defaultValueBase64Binary: Element = null,
-    _defaultValueBoolean: Element = null,
-    _defaultValueCode: Element = null,
-    _defaultValueDate: Element = null,
-    _defaultValueDateTime: Element = null,
-    _defaultValueDecimal: Element = null,
-    _defaultValueId: Element = null,
-    _defaultValueInstant: Element = null,
-    _defaultValueInteger: Element = null,
-    _defaultValueMarkdown: Element = null,
-    _defaultValueOid: Element = null,
-    _defaultValuePositiveInt: Element = null,
-    _defaultValueString: Element = null,
-    _defaultValueTime: Element = null,
-    _defaultValueUnsignedInt: Element = null,
-    _defaultValueUri: Element = null,
-    _definition: Element = null,
-    _fhir_comments: js.Array[Element] = null,
-    _fixedBase64Binary: Element = null,
-    _fixedBoolean: Element = null,
-    _fixedCode: Element = null,
-    _fixedDate: Element = null,
-    _fixedDateTime: Element = null,
-    _fixedDecimal: Element = null,
-    _fixedId: Element = null,
-    _fixedInstant: Element = null,
-    _fixedInteger: Element = null,
-    _fixedMarkdown: Element = null,
-    _fixedOid: Element = null,
-    _fixedPositiveInt: Element = null,
-    _fixedString: Element = null,
-    _fixedTime: Element = null,
-    _fixedUnsignedInt: Element = null,
-    _fixedUri: Element = null,
-    _id: Element = null,
-    _isModifier: Element = null,
-    _isSummary: Element = null,
-    _label: Element = null,
-    _max: Element = null,
-    _maxLength: Element = null,
-    _maxValueDate: Element = null,
-    _maxValueDateTime: Element = null,
-    _maxValueDecimal: Element = null,
-    _maxValueInstant: Element = null,
-    _maxValueInteger: Element = null,
-    _maxValuePositiveInt: Element = null,
-    _maxValueTime: Element = null,
-    _maxValueUnsignedInt: Element = null,
-    _meaningWhenMissing: Element = null,
-    _min: Element = null,
-    _minValueDate: Element = null,
-    _minValueDateTime: Element = null,
-    _minValueDecimal: Element = null,
-    _minValueInstant: Element = null,
-    _minValueInteger: Element = null,
-    _minValuePositiveInt: Element = null,
-    _minValueTime: Element = null,
-    _minValueUnsignedInt: Element = null,
-    _mustSupport: Element = null,
-    _orderMeaning: Element = null,
-    _path: Element = null,
-    _patternBase64Binary: Element = null,
-    _patternBoolean: Element = null,
-    _patternCode: Element = null,
-    _patternDate: Element = null,
-    _patternDateTime: Element = null,
-    _patternDecimal: Element = null,
-    _patternId: Element = null,
-    _patternInstant: Element = null,
-    _patternInteger: Element = null,
-    _patternMarkdown: Element = null,
-    _patternOid: Element = null,
-    _patternPositiveInt: Element = null,
-    _patternString: Element = null,
-    _patternTime: Element = null,
-    _patternUnsignedInt: Element = null,
-    _patternUri: Element = null,
-    _representation: js.Array[Element] = null,
-    _requirements: Element = null,
-    _short: Element = null,
-    _sliceName: Element = null,
-    alias: js.Array[String] = null,
-    base: ElementDefinitionBase = null,
-    binding: ElementDefinitionBinding = null,
-    code: js.Array[Coding] = null,
-    comment: markdown = null,
-    condition: js.Array[id] = null,
-    constraint: js.Array[ElementDefinitionConstraint] = null,
-    contentReference: uri = null,
-    defaultValueAddress: Address = null,
-    defaultValueAge: Age = null,
-    defaultValueAnnotation: Annotation = null,
-    defaultValueAttachment: Attachment = null,
-    defaultValueBase64Binary: base64Binary = null,
-    defaultValueBoolean: js.UndefOr[Boolean] = js.undefined,
-    defaultValueCode: code = null,
-    defaultValueCodeableConcept: CodeableConcept = null,
-    defaultValueCoding: Coding = null,
-    defaultValueContactPoint: ContactPoint = null,
-    defaultValueCount: Count = null,
-    defaultValueDate: date = null,
-    defaultValueDateTime: dateTime = null,
-    defaultValueDecimal: Int | Double = null,
-    defaultValueDistance: Distance = null,
-    defaultValueDuration: Duration = null,
-    defaultValueHumanName: HumanName = null,
-    defaultValueId: id = null,
-    defaultValueIdentifier: Identifier = null,
-    defaultValueInstant: instant = null,
-    defaultValueInteger: Int | Double = null,
-    defaultValueMarkdown: markdown = null,
-    defaultValueMeta: Meta = null,
-    defaultValueMoney: Money = null,
-    defaultValueOid: oid = null,
-    defaultValuePeriod: Period = null,
-    defaultValuePositiveInt: Int | Double = null,
-    defaultValueQuantity: Quantity = null,
-    defaultValueRange: Range = null,
-    defaultValueRatio: Ratio = null,
-    defaultValueReference: Reference = null,
-    defaultValueSampledData: SampledData = null,
-    defaultValueSignature: Signature = null,
-    defaultValueString: String = null,
-    defaultValueTime: time = null,
-    defaultValueTiming: Timing = null,
-    defaultValueUnsignedInt: Int | Double = null,
-    defaultValueUri: uri = null,
-    definition: markdown = null,
-    example: js.Array[ElementDefinitionExample] = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    fixedAddress: Address = null,
-    fixedAge: Age = null,
-    fixedAnnotation: Annotation = null,
-    fixedAttachment: Attachment = null,
-    fixedBase64Binary: base64Binary = null,
-    fixedBoolean: js.UndefOr[Boolean] = js.undefined,
-    fixedCode: code = null,
-    fixedCodeableConcept: CodeableConcept = null,
-    fixedCoding: Coding = null,
-    fixedContactPoint: ContactPoint = null,
-    fixedCount: Count = null,
-    fixedDate: date = null,
-    fixedDateTime: dateTime = null,
-    fixedDecimal: Int | Double = null,
-    fixedDistance: Distance = null,
-    fixedDuration: Duration = null,
-    fixedHumanName: HumanName = null,
-    fixedId: id = null,
-    fixedIdentifier: Identifier = null,
-    fixedInstant: instant = null,
-    fixedInteger: Int | Double = null,
-    fixedMarkdown: markdown = null,
-    fixedMeta: Meta = null,
-    fixedMoney: Money = null,
-    fixedOid: oid = null,
-    fixedPeriod: Period = null,
-    fixedPositiveInt: Int | Double = null,
-    fixedQuantity: Quantity = null,
-    fixedRange: Range = null,
-    fixedRatio: Ratio = null,
-    fixedReference: Reference = null,
-    fixedSampledData: SampledData = null,
-    fixedSignature: Signature = null,
-    fixedString: String = null,
-    fixedTime: time = null,
-    fixedTiming: Timing = null,
-    fixedUnsignedInt: Int | Double = null,
-    fixedUri: uri = null,
-    id: String = null,
-    isModifier: js.UndefOr[Boolean] = js.undefined,
-    isSummary: js.UndefOr[Boolean] = js.undefined,
-    label: String = null,
-    mapping: js.Array[ElementDefinitionMapping] = null,
-    max: String = null,
-    maxLength: Int | Double = null,
-    maxValueDate: date = null,
-    maxValueDateTime: dateTime = null,
-    maxValueDecimal: Int | Double = null,
-    maxValueInstant: instant = null,
-    maxValueInteger: Int | Double = null,
-    maxValuePositiveInt: Int | Double = null,
-    maxValueQuantity: Quantity = null,
-    maxValueTime: time = null,
-    maxValueUnsignedInt: Int | Double = null,
-    meaningWhenMissing: markdown = null,
-    min: Int | Double = null,
-    minValueDate: date = null,
-    minValueDateTime: dateTime = null,
-    minValueDecimal: Int | Double = null,
-    minValueInstant: instant = null,
-    minValueInteger: Int | Double = null,
-    minValuePositiveInt: Int | Double = null,
-    minValueQuantity: Quantity = null,
-    minValueTime: time = null,
-    minValueUnsignedInt: Int | Double = null,
-    mustSupport: js.UndefOr[Boolean] = js.undefined,
-    orderMeaning: String = null,
-    patternAddress: Address = null,
-    patternAge: Age = null,
-    patternAnnotation: Annotation = null,
-    patternAttachment: Attachment = null,
-    patternBase64Binary: base64Binary = null,
-    patternBoolean: js.UndefOr[Boolean] = js.undefined,
-    patternCode: code = null,
-    patternCodeableConcept: CodeableConcept = null,
-    patternCoding: Coding = null,
-    patternContactPoint: ContactPoint = null,
-    patternCount: Count = null,
-    patternDate: date = null,
-    patternDateTime: dateTime = null,
-    patternDecimal: Int | Double = null,
-    patternDistance: Distance = null,
-    patternDuration: Duration = null,
-    patternHumanName: HumanName = null,
-    patternId: id = null,
-    patternIdentifier: Identifier = null,
-    patternInstant: instant = null,
-    patternInteger: Int | Double = null,
-    patternMarkdown: markdown = null,
-    patternMeta: Meta = null,
-    patternMoney: Money = null,
-    patternOid: oid = null,
-    patternPeriod: Period = null,
-    patternPositiveInt: Int | Double = null,
-    patternQuantity: Quantity = null,
-    patternRange: Range = null,
-    patternRatio: Ratio = null,
-    patternReference: Reference = null,
-    patternSampledData: SampledData = null,
-    patternSignature: Signature = null,
-    patternString: String = null,
-    patternTime: time = null,
-    patternTiming: Timing = null,
-    patternUnsignedInt: Int | Double = null,
-    patternUri: uri = null,
-    representation: js.Array[code] = null,
-    requirements: markdown = null,
-    short: String = null,
-    sliceName: String = null,
-    slicing: ElementDefinitionSlicing = null,
-    `type`: js.Array[ElementDefinitionType] = null
-  ): ElementDefinition = {
+  def apply(path: String): ElementDefinition = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    if (_alias != null) __obj.updateDynamic("_alias")(_alias.asInstanceOf[js.Any])
-    if (_comment != null) __obj.updateDynamic("_comment")(_comment.asInstanceOf[js.Any])
-    if (_condition != null) __obj.updateDynamic("_condition")(_condition.asInstanceOf[js.Any])
-    if (_contentReference != null) __obj.updateDynamic("_contentReference")(_contentReference.asInstanceOf[js.Any])
-    if (_defaultValueBase64Binary != null) __obj.updateDynamic("_defaultValueBase64Binary")(_defaultValueBase64Binary.asInstanceOf[js.Any])
-    if (_defaultValueBoolean != null) __obj.updateDynamic("_defaultValueBoolean")(_defaultValueBoolean.asInstanceOf[js.Any])
-    if (_defaultValueCode != null) __obj.updateDynamic("_defaultValueCode")(_defaultValueCode.asInstanceOf[js.Any])
-    if (_defaultValueDate != null) __obj.updateDynamic("_defaultValueDate")(_defaultValueDate.asInstanceOf[js.Any])
-    if (_defaultValueDateTime != null) __obj.updateDynamic("_defaultValueDateTime")(_defaultValueDateTime.asInstanceOf[js.Any])
-    if (_defaultValueDecimal != null) __obj.updateDynamic("_defaultValueDecimal")(_defaultValueDecimal.asInstanceOf[js.Any])
-    if (_defaultValueId != null) __obj.updateDynamic("_defaultValueId")(_defaultValueId.asInstanceOf[js.Any])
-    if (_defaultValueInstant != null) __obj.updateDynamic("_defaultValueInstant")(_defaultValueInstant.asInstanceOf[js.Any])
-    if (_defaultValueInteger != null) __obj.updateDynamic("_defaultValueInteger")(_defaultValueInteger.asInstanceOf[js.Any])
-    if (_defaultValueMarkdown != null) __obj.updateDynamic("_defaultValueMarkdown")(_defaultValueMarkdown.asInstanceOf[js.Any])
-    if (_defaultValueOid != null) __obj.updateDynamic("_defaultValueOid")(_defaultValueOid.asInstanceOf[js.Any])
-    if (_defaultValuePositiveInt != null) __obj.updateDynamic("_defaultValuePositiveInt")(_defaultValuePositiveInt.asInstanceOf[js.Any])
-    if (_defaultValueString != null) __obj.updateDynamic("_defaultValueString")(_defaultValueString.asInstanceOf[js.Any])
-    if (_defaultValueTime != null) __obj.updateDynamic("_defaultValueTime")(_defaultValueTime.asInstanceOf[js.Any])
-    if (_defaultValueUnsignedInt != null) __obj.updateDynamic("_defaultValueUnsignedInt")(_defaultValueUnsignedInt.asInstanceOf[js.Any])
-    if (_defaultValueUri != null) __obj.updateDynamic("_defaultValueUri")(_defaultValueUri.asInstanceOf[js.Any])
-    if (_definition != null) __obj.updateDynamic("_definition")(_definition.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_fixedBase64Binary != null) __obj.updateDynamic("_fixedBase64Binary")(_fixedBase64Binary.asInstanceOf[js.Any])
-    if (_fixedBoolean != null) __obj.updateDynamic("_fixedBoolean")(_fixedBoolean.asInstanceOf[js.Any])
-    if (_fixedCode != null) __obj.updateDynamic("_fixedCode")(_fixedCode.asInstanceOf[js.Any])
-    if (_fixedDate != null) __obj.updateDynamic("_fixedDate")(_fixedDate.asInstanceOf[js.Any])
-    if (_fixedDateTime != null) __obj.updateDynamic("_fixedDateTime")(_fixedDateTime.asInstanceOf[js.Any])
-    if (_fixedDecimal != null) __obj.updateDynamic("_fixedDecimal")(_fixedDecimal.asInstanceOf[js.Any])
-    if (_fixedId != null) __obj.updateDynamic("_fixedId")(_fixedId.asInstanceOf[js.Any])
-    if (_fixedInstant != null) __obj.updateDynamic("_fixedInstant")(_fixedInstant.asInstanceOf[js.Any])
-    if (_fixedInteger != null) __obj.updateDynamic("_fixedInteger")(_fixedInteger.asInstanceOf[js.Any])
-    if (_fixedMarkdown != null) __obj.updateDynamic("_fixedMarkdown")(_fixedMarkdown.asInstanceOf[js.Any])
-    if (_fixedOid != null) __obj.updateDynamic("_fixedOid")(_fixedOid.asInstanceOf[js.Any])
-    if (_fixedPositiveInt != null) __obj.updateDynamic("_fixedPositiveInt")(_fixedPositiveInt.asInstanceOf[js.Any])
-    if (_fixedString != null) __obj.updateDynamic("_fixedString")(_fixedString.asInstanceOf[js.Any])
-    if (_fixedTime != null) __obj.updateDynamic("_fixedTime")(_fixedTime.asInstanceOf[js.Any])
-    if (_fixedUnsignedInt != null) __obj.updateDynamic("_fixedUnsignedInt")(_fixedUnsignedInt.asInstanceOf[js.Any])
-    if (_fixedUri != null) __obj.updateDynamic("_fixedUri")(_fixedUri.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_isModifier != null) __obj.updateDynamic("_isModifier")(_isModifier.asInstanceOf[js.Any])
-    if (_isSummary != null) __obj.updateDynamic("_isSummary")(_isSummary.asInstanceOf[js.Any])
-    if (_label != null) __obj.updateDynamic("_label")(_label.asInstanceOf[js.Any])
-    if (_max != null) __obj.updateDynamic("_max")(_max.asInstanceOf[js.Any])
-    if (_maxLength != null) __obj.updateDynamic("_maxLength")(_maxLength.asInstanceOf[js.Any])
-    if (_maxValueDate != null) __obj.updateDynamic("_maxValueDate")(_maxValueDate.asInstanceOf[js.Any])
-    if (_maxValueDateTime != null) __obj.updateDynamic("_maxValueDateTime")(_maxValueDateTime.asInstanceOf[js.Any])
-    if (_maxValueDecimal != null) __obj.updateDynamic("_maxValueDecimal")(_maxValueDecimal.asInstanceOf[js.Any])
-    if (_maxValueInstant != null) __obj.updateDynamic("_maxValueInstant")(_maxValueInstant.asInstanceOf[js.Any])
-    if (_maxValueInteger != null) __obj.updateDynamic("_maxValueInteger")(_maxValueInteger.asInstanceOf[js.Any])
-    if (_maxValuePositiveInt != null) __obj.updateDynamic("_maxValuePositiveInt")(_maxValuePositiveInt.asInstanceOf[js.Any])
-    if (_maxValueTime != null) __obj.updateDynamic("_maxValueTime")(_maxValueTime.asInstanceOf[js.Any])
-    if (_maxValueUnsignedInt != null) __obj.updateDynamic("_maxValueUnsignedInt")(_maxValueUnsignedInt.asInstanceOf[js.Any])
-    if (_meaningWhenMissing != null) __obj.updateDynamic("_meaningWhenMissing")(_meaningWhenMissing.asInstanceOf[js.Any])
-    if (_min != null) __obj.updateDynamic("_min")(_min.asInstanceOf[js.Any])
-    if (_minValueDate != null) __obj.updateDynamic("_minValueDate")(_minValueDate.asInstanceOf[js.Any])
-    if (_minValueDateTime != null) __obj.updateDynamic("_minValueDateTime")(_minValueDateTime.asInstanceOf[js.Any])
-    if (_minValueDecimal != null) __obj.updateDynamic("_minValueDecimal")(_minValueDecimal.asInstanceOf[js.Any])
-    if (_minValueInstant != null) __obj.updateDynamic("_minValueInstant")(_minValueInstant.asInstanceOf[js.Any])
-    if (_minValueInteger != null) __obj.updateDynamic("_minValueInteger")(_minValueInteger.asInstanceOf[js.Any])
-    if (_minValuePositiveInt != null) __obj.updateDynamic("_minValuePositiveInt")(_minValuePositiveInt.asInstanceOf[js.Any])
-    if (_minValueTime != null) __obj.updateDynamic("_minValueTime")(_minValueTime.asInstanceOf[js.Any])
-    if (_minValueUnsignedInt != null) __obj.updateDynamic("_minValueUnsignedInt")(_minValueUnsignedInt.asInstanceOf[js.Any])
-    if (_mustSupport != null) __obj.updateDynamic("_mustSupport")(_mustSupport.asInstanceOf[js.Any])
-    if (_orderMeaning != null) __obj.updateDynamic("_orderMeaning")(_orderMeaning.asInstanceOf[js.Any])
-    if (_path != null) __obj.updateDynamic("_path")(_path.asInstanceOf[js.Any])
-    if (_patternBase64Binary != null) __obj.updateDynamic("_patternBase64Binary")(_patternBase64Binary.asInstanceOf[js.Any])
-    if (_patternBoolean != null) __obj.updateDynamic("_patternBoolean")(_patternBoolean.asInstanceOf[js.Any])
-    if (_patternCode != null) __obj.updateDynamic("_patternCode")(_patternCode.asInstanceOf[js.Any])
-    if (_patternDate != null) __obj.updateDynamic("_patternDate")(_patternDate.asInstanceOf[js.Any])
-    if (_patternDateTime != null) __obj.updateDynamic("_patternDateTime")(_patternDateTime.asInstanceOf[js.Any])
-    if (_patternDecimal != null) __obj.updateDynamic("_patternDecimal")(_patternDecimal.asInstanceOf[js.Any])
-    if (_patternId != null) __obj.updateDynamic("_patternId")(_patternId.asInstanceOf[js.Any])
-    if (_patternInstant != null) __obj.updateDynamic("_patternInstant")(_patternInstant.asInstanceOf[js.Any])
-    if (_patternInteger != null) __obj.updateDynamic("_patternInteger")(_patternInteger.asInstanceOf[js.Any])
-    if (_patternMarkdown != null) __obj.updateDynamic("_patternMarkdown")(_patternMarkdown.asInstanceOf[js.Any])
-    if (_patternOid != null) __obj.updateDynamic("_patternOid")(_patternOid.asInstanceOf[js.Any])
-    if (_patternPositiveInt != null) __obj.updateDynamic("_patternPositiveInt")(_patternPositiveInt.asInstanceOf[js.Any])
-    if (_patternString != null) __obj.updateDynamic("_patternString")(_patternString.asInstanceOf[js.Any])
-    if (_patternTime != null) __obj.updateDynamic("_patternTime")(_patternTime.asInstanceOf[js.Any])
-    if (_patternUnsignedInt != null) __obj.updateDynamic("_patternUnsignedInt")(_patternUnsignedInt.asInstanceOf[js.Any])
-    if (_patternUri != null) __obj.updateDynamic("_patternUri")(_patternUri.asInstanceOf[js.Any])
-    if (_representation != null) __obj.updateDynamic("_representation")(_representation.asInstanceOf[js.Any])
-    if (_requirements != null) __obj.updateDynamic("_requirements")(_requirements.asInstanceOf[js.Any])
-    if (_short != null) __obj.updateDynamic("_short")(_short.asInstanceOf[js.Any])
-    if (_sliceName != null) __obj.updateDynamic("_sliceName")(_sliceName.asInstanceOf[js.Any])
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (base != null) __obj.updateDynamic("base")(base.asInstanceOf[js.Any])
-    if (binding != null) __obj.updateDynamic("binding")(binding.asInstanceOf[js.Any])
-    if (code != null) __obj.updateDynamic("code")(code.asInstanceOf[js.Any])
-    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
-    if (condition != null) __obj.updateDynamic("condition")(condition.asInstanceOf[js.Any])
-    if (constraint != null) __obj.updateDynamic("constraint")(constraint.asInstanceOf[js.Any])
-    if (contentReference != null) __obj.updateDynamic("contentReference")(contentReference.asInstanceOf[js.Any])
-    if (defaultValueAddress != null) __obj.updateDynamic("defaultValueAddress")(defaultValueAddress.asInstanceOf[js.Any])
-    if (defaultValueAge != null) __obj.updateDynamic("defaultValueAge")(defaultValueAge.asInstanceOf[js.Any])
-    if (defaultValueAnnotation != null) __obj.updateDynamic("defaultValueAnnotation")(defaultValueAnnotation.asInstanceOf[js.Any])
-    if (defaultValueAttachment != null) __obj.updateDynamic("defaultValueAttachment")(defaultValueAttachment.asInstanceOf[js.Any])
-    if (defaultValueBase64Binary != null) __obj.updateDynamic("defaultValueBase64Binary")(defaultValueBase64Binary.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultValueBoolean)) __obj.updateDynamic("defaultValueBoolean")(defaultValueBoolean.asInstanceOf[js.Any])
-    if (defaultValueCode != null) __obj.updateDynamic("defaultValueCode")(defaultValueCode.asInstanceOf[js.Any])
-    if (defaultValueCodeableConcept != null) __obj.updateDynamic("defaultValueCodeableConcept")(defaultValueCodeableConcept.asInstanceOf[js.Any])
-    if (defaultValueCoding != null) __obj.updateDynamic("defaultValueCoding")(defaultValueCoding.asInstanceOf[js.Any])
-    if (defaultValueContactPoint != null) __obj.updateDynamic("defaultValueContactPoint")(defaultValueContactPoint.asInstanceOf[js.Any])
-    if (defaultValueCount != null) __obj.updateDynamic("defaultValueCount")(defaultValueCount.asInstanceOf[js.Any])
-    if (defaultValueDate != null) __obj.updateDynamic("defaultValueDate")(defaultValueDate.asInstanceOf[js.Any])
-    if (defaultValueDateTime != null) __obj.updateDynamic("defaultValueDateTime")(defaultValueDateTime.asInstanceOf[js.Any])
-    if (defaultValueDecimal != null) __obj.updateDynamic("defaultValueDecimal")(defaultValueDecimal.asInstanceOf[js.Any])
-    if (defaultValueDistance != null) __obj.updateDynamic("defaultValueDistance")(defaultValueDistance.asInstanceOf[js.Any])
-    if (defaultValueDuration != null) __obj.updateDynamic("defaultValueDuration")(defaultValueDuration.asInstanceOf[js.Any])
-    if (defaultValueHumanName != null) __obj.updateDynamic("defaultValueHumanName")(defaultValueHumanName.asInstanceOf[js.Any])
-    if (defaultValueId != null) __obj.updateDynamic("defaultValueId")(defaultValueId.asInstanceOf[js.Any])
-    if (defaultValueIdentifier != null) __obj.updateDynamic("defaultValueIdentifier")(defaultValueIdentifier.asInstanceOf[js.Any])
-    if (defaultValueInstant != null) __obj.updateDynamic("defaultValueInstant")(defaultValueInstant.asInstanceOf[js.Any])
-    if (defaultValueInteger != null) __obj.updateDynamic("defaultValueInteger")(defaultValueInteger.asInstanceOf[js.Any])
-    if (defaultValueMarkdown != null) __obj.updateDynamic("defaultValueMarkdown")(defaultValueMarkdown.asInstanceOf[js.Any])
-    if (defaultValueMeta != null) __obj.updateDynamic("defaultValueMeta")(defaultValueMeta.asInstanceOf[js.Any])
-    if (defaultValueMoney != null) __obj.updateDynamic("defaultValueMoney")(defaultValueMoney.asInstanceOf[js.Any])
-    if (defaultValueOid != null) __obj.updateDynamic("defaultValueOid")(defaultValueOid.asInstanceOf[js.Any])
-    if (defaultValuePeriod != null) __obj.updateDynamic("defaultValuePeriod")(defaultValuePeriod.asInstanceOf[js.Any])
-    if (defaultValuePositiveInt != null) __obj.updateDynamic("defaultValuePositiveInt")(defaultValuePositiveInt.asInstanceOf[js.Any])
-    if (defaultValueQuantity != null) __obj.updateDynamic("defaultValueQuantity")(defaultValueQuantity.asInstanceOf[js.Any])
-    if (defaultValueRange != null) __obj.updateDynamic("defaultValueRange")(defaultValueRange.asInstanceOf[js.Any])
-    if (defaultValueRatio != null) __obj.updateDynamic("defaultValueRatio")(defaultValueRatio.asInstanceOf[js.Any])
-    if (defaultValueReference != null) __obj.updateDynamic("defaultValueReference")(defaultValueReference.asInstanceOf[js.Any])
-    if (defaultValueSampledData != null) __obj.updateDynamic("defaultValueSampledData")(defaultValueSampledData.asInstanceOf[js.Any])
-    if (defaultValueSignature != null) __obj.updateDynamic("defaultValueSignature")(defaultValueSignature.asInstanceOf[js.Any])
-    if (defaultValueString != null) __obj.updateDynamic("defaultValueString")(defaultValueString.asInstanceOf[js.Any])
-    if (defaultValueTime != null) __obj.updateDynamic("defaultValueTime")(defaultValueTime.asInstanceOf[js.Any])
-    if (defaultValueTiming != null) __obj.updateDynamic("defaultValueTiming")(defaultValueTiming.asInstanceOf[js.Any])
-    if (defaultValueUnsignedInt != null) __obj.updateDynamic("defaultValueUnsignedInt")(defaultValueUnsignedInt.asInstanceOf[js.Any])
-    if (defaultValueUri != null) __obj.updateDynamic("defaultValueUri")(defaultValueUri.asInstanceOf[js.Any])
-    if (definition != null) __obj.updateDynamic("definition")(definition.asInstanceOf[js.Any])
-    if (example != null) __obj.updateDynamic("example")(example.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (fixedAddress != null) __obj.updateDynamic("fixedAddress")(fixedAddress.asInstanceOf[js.Any])
-    if (fixedAge != null) __obj.updateDynamic("fixedAge")(fixedAge.asInstanceOf[js.Any])
-    if (fixedAnnotation != null) __obj.updateDynamic("fixedAnnotation")(fixedAnnotation.asInstanceOf[js.Any])
-    if (fixedAttachment != null) __obj.updateDynamic("fixedAttachment")(fixedAttachment.asInstanceOf[js.Any])
-    if (fixedBase64Binary != null) __obj.updateDynamic("fixedBase64Binary")(fixedBase64Binary.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedBoolean)) __obj.updateDynamic("fixedBoolean")(fixedBoolean.asInstanceOf[js.Any])
-    if (fixedCode != null) __obj.updateDynamic("fixedCode")(fixedCode.asInstanceOf[js.Any])
-    if (fixedCodeableConcept != null) __obj.updateDynamic("fixedCodeableConcept")(fixedCodeableConcept.asInstanceOf[js.Any])
-    if (fixedCoding != null) __obj.updateDynamic("fixedCoding")(fixedCoding.asInstanceOf[js.Any])
-    if (fixedContactPoint != null) __obj.updateDynamic("fixedContactPoint")(fixedContactPoint.asInstanceOf[js.Any])
-    if (fixedCount != null) __obj.updateDynamic("fixedCount")(fixedCount.asInstanceOf[js.Any])
-    if (fixedDate != null) __obj.updateDynamic("fixedDate")(fixedDate.asInstanceOf[js.Any])
-    if (fixedDateTime != null) __obj.updateDynamic("fixedDateTime")(fixedDateTime.asInstanceOf[js.Any])
-    if (fixedDecimal != null) __obj.updateDynamic("fixedDecimal")(fixedDecimal.asInstanceOf[js.Any])
-    if (fixedDistance != null) __obj.updateDynamic("fixedDistance")(fixedDistance.asInstanceOf[js.Any])
-    if (fixedDuration != null) __obj.updateDynamic("fixedDuration")(fixedDuration.asInstanceOf[js.Any])
-    if (fixedHumanName != null) __obj.updateDynamic("fixedHumanName")(fixedHumanName.asInstanceOf[js.Any])
-    if (fixedId != null) __obj.updateDynamic("fixedId")(fixedId.asInstanceOf[js.Any])
-    if (fixedIdentifier != null) __obj.updateDynamic("fixedIdentifier")(fixedIdentifier.asInstanceOf[js.Any])
-    if (fixedInstant != null) __obj.updateDynamic("fixedInstant")(fixedInstant.asInstanceOf[js.Any])
-    if (fixedInteger != null) __obj.updateDynamic("fixedInteger")(fixedInteger.asInstanceOf[js.Any])
-    if (fixedMarkdown != null) __obj.updateDynamic("fixedMarkdown")(fixedMarkdown.asInstanceOf[js.Any])
-    if (fixedMeta != null) __obj.updateDynamic("fixedMeta")(fixedMeta.asInstanceOf[js.Any])
-    if (fixedMoney != null) __obj.updateDynamic("fixedMoney")(fixedMoney.asInstanceOf[js.Any])
-    if (fixedOid != null) __obj.updateDynamic("fixedOid")(fixedOid.asInstanceOf[js.Any])
-    if (fixedPeriod != null) __obj.updateDynamic("fixedPeriod")(fixedPeriod.asInstanceOf[js.Any])
-    if (fixedPositiveInt != null) __obj.updateDynamic("fixedPositiveInt")(fixedPositiveInt.asInstanceOf[js.Any])
-    if (fixedQuantity != null) __obj.updateDynamic("fixedQuantity")(fixedQuantity.asInstanceOf[js.Any])
-    if (fixedRange != null) __obj.updateDynamic("fixedRange")(fixedRange.asInstanceOf[js.Any])
-    if (fixedRatio != null) __obj.updateDynamic("fixedRatio")(fixedRatio.asInstanceOf[js.Any])
-    if (fixedReference != null) __obj.updateDynamic("fixedReference")(fixedReference.asInstanceOf[js.Any])
-    if (fixedSampledData != null) __obj.updateDynamic("fixedSampledData")(fixedSampledData.asInstanceOf[js.Any])
-    if (fixedSignature != null) __obj.updateDynamic("fixedSignature")(fixedSignature.asInstanceOf[js.Any])
-    if (fixedString != null) __obj.updateDynamic("fixedString")(fixedString.asInstanceOf[js.Any])
-    if (fixedTime != null) __obj.updateDynamic("fixedTime")(fixedTime.asInstanceOf[js.Any])
-    if (fixedTiming != null) __obj.updateDynamic("fixedTiming")(fixedTiming.asInstanceOf[js.Any])
-    if (fixedUnsignedInt != null) __obj.updateDynamic("fixedUnsignedInt")(fixedUnsignedInt.asInstanceOf[js.Any])
-    if (fixedUri != null) __obj.updateDynamic("fixedUri")(fixedUri.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(isModifier)) __obj.updateDynamic("isModifier")(isModifier.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSummary)) __obj.updateDynamic("isSummary")(isSummary.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (mapping != null) __obj.updateDynamic("mapping")(mapping.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (maxValueDate != null) __obj.updateDynamic("maxValueDate")(maxValueDate.asInstanceOf[js.Any])
-    if (maxValueDateTime != null) __obj.updateDynamic("maxValueDateTime")(maxValueDateTime.asInstanceOf[js.Any])
-    if (maxValueDecimal != null) __obj.updateDynamic("maxValueDecimal")(maxValueDecimal.asInstanceOf[js.Any])
-    if (maxValueInstant != null) __obj.updateDynamic("maxValueInstant")(maxValueInstant.asInstanceOf[js.Any])
-    if (maxValueInteger != null) __obj.updateDynamic("maxValueInteger")(maxValueInteger.asInstanceOf[js.Any])
-    if (maxValuePositiveInt != null) __obj.updateDynamic("maxValuePositiveInt")(maxValuePositiveInt.asInstanceOf[js.Any])
-    if (maxValueQuantity != null) __obj.updateDynamic("maxValueQuantity")(maxValueQuantity.asInstanceOf[js.Any])
-    if (maxValueTime != null) __obj.updateDynamic("maxValueTime")(maxValueTime.asInstanceOf[js.Any])
-    if (maxValueUnsignedInt != null) __obj.updateDynamic("maxValueUnsignedInt")(maxValueUnsignedInt.asInstanceOf[js.Any])
-    if (meaningWhenMissing != null) __obj.updateDynamic("meaningWhenMissing")(meaningWhenMissing.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minValueDate != null) __obj.updateDynamic("minValueDate")(minValueDate.asInstanceOf[js.Any])
-    if (minValueDateTime != null) __obj.updateDynamic("minValueDateTime")(minValueDateTime.asInstanceOf[js.Any])
-    if (minValueDecimal != null) __obj.updateDynamic("minValueDecimal")(minValueDecimal.asInstanceOf[js.Any])
-    if (minValueInstant != null) __obj.updateDynamic("minValueInstant")(minValueInstant.asInstanceOf[js.Any])
-    if (minValueInteger != null) __obj.updateDynamic("minValueInteger")(minValueInteger.asInstanceOf[js.Any])
-    if (minValuePositiveInt != null) __obj.updateDynamic("minValuePositiveInt")(minValuePositiveInt.asInstanceOf[js.Any])
-    if (minValueQuantity != null) __obj.updateDynamic("minValueQuantity")(minValueQuantity.asInstanceOf[js.Any])
-    if (minValueTime != null) __obj.updateDynamic("minValueTime")(minValueTime.asInstanceOf[js.Any])
-    if (minValueUnsignedInt != null) __obj.updateDynamic("minValueUnsignedInt")(minValueUnsignedInt.asInstanceOf[js.Any])
-    if (!js.isUndefined(mustSupport)) __obj.updateDynamic("mustSupport")(mustSupport.asInstanceOf[js.Any])
-    if (orderMeaning != null) __obj.updateDynamic("orderMeaning")(orderMeaning.asInstanceOf[js.Any])
-    if (patternAddress != null) __obj.updateDynamic("patternAddress")(patternAddress.asInstanceOf[js.Any])
-    if (patternAge != null) __obj.updateDynamic("patternAge")(patternAge.asInstanceOf[js.Any])
-    if (patternAnnotation != null) __obj.updateDynamic("patternAnnotation")(patternAnnotation.asInstanceOf[js.Any])
-    if (patternAttachment != null) __obj.updateDynamic("patternAttachment")(patternAttachment.asInstanceOf[js.Any])
-    if (patternBase64Binary != null) __obj.updateDynamic("patternBase64Binary")(patternBase64Binary.asInstanceOf[js.Any])
-    if (!js.isUndefined(patternBoolean)) __obj.updateDynamic("patternBoolean")(patternBoolean.asInstanceOf[js.Any])
-    if (patternCode != null) __obj.updateDynamic("patternCode")(patternCode.asInstanceOf[js.Any])
-    if (patternCodeableConcept != null) __obj.updateDynamic("patternCodeableConcept")(patternCodeableConcept.asInstanceOf[js.Any])
-    if (patternCoding != null) __obj.updateDynamic("patternCoding")(patternCoding.asInstanceOf[js.Any])
-    if (patternContactPoint != null) __obj.updateDynamic("patternContactPoint")(patternContactPoint.asInstanceOf[js.Any])
-    if (patternCount != null) __obj.updateDynamic("patternCount")(patternCount.asInstanceOf[js.Any])
-    if (patternDate != null) __obj.updateDynamic("patternDate")(patternDate.asInstanceOf[js.Any])
-    if (patternDateTime != null) __obj.updateDynamic("patternDateTime")(patternDateTime.asInstanceOf[js.Any])
-    if (patternDecimal != null) __obj.updateDynamic("patternDecimal")(patternDecimal.asInstanceOf[js.Any])
-    if (patternDistance != null) __obj.updateDynamic("patternDistance")(patternDistance.asInstanceOf[js.Any])
-    if (patternDuration != null) __obj.updateDynamic("patternDuration")(patternDuration.asInstanceOf[js.Any])
-    if (patternHumanName != null) __obj.updateDynamic("patternHumanName")(patternHumanName.asInstanceOf[js.Any])
-    if (patternId != null) __obj.updateDynamic("patternId")(patternId.asInstanceOf[js.Any])
-    if (patternIdentifier != null) __obj.updateDynamic("patternIdentifier")(patternIdentifier.asInstanceOf[js.Any])
-    if (patternInstant != null) __obj.updateDynamic("patternInstant")(patternInstant.asInstanceOf[js.Any])
-    if (patternInteger != null) __obj.updateDynamic("patternInteger")(patternInteger.asInstanceOf[js.Any])
-    if (patternMarkdown != null) __obj.updateDynamic("patternMarkdown")(patternMarkdown.asInstanceOf[js.Any])
-    if (patternMeta != null) __obj.updateDynamic("patternMeta")(patternMeta.asInstanceOf[js.Any])
-    if (patternMoney != null) __obj.updateDynamic("patternMoney")(patternMoney.asInstanceOf[js.Any])
-    if (patternOid != null) __obj.updateDynamic("patternOid")(patternOid.asInstanceOf[js.Any])
-    if (patternPeriod != null) __obj.updateDynamic("patternPeriod")(patternPeriod.asInstanceOf[js.Any])
-    if (patternPositiveInt != null) __obj.updateDynamic("patternPositiveInt")(patternPositiveInt.asInstanceOf[js.Any])
-    if (patternQuantity != null) __obj.updateDynamic("patternQuantity")(patternQuantity.asInstanceOf[js.Any])
-    if (patternRange != null) __obj.updateDynamic("patternRange")(patternRange.asInstanceOf[js.Any])
-    if (patternRatio != null) __obj.updateDynamic("patternRatio")(patternRatio.asInstanceOf[js.Any])
-    if (patternReference != null) __obj.updateDynamic("patternReference")(patternReference.asInstanceOf[js.Any])
-    if (patternSampledData != null) __obj.updateDynamic("patternSampledData")(patternSampledData.asInstanceOf[js.Any])
-    if (patternSignature != null) __obj.updateDynamic("patternSignature")(patternSignature.asInstanceOf[js.Any])
-    if (patternString != null) __obj.updateDynamic("patternString")(patternString.asInstanceOf[js.Any])
-    if (patternTime != null) __obj.updateDynamic("patternTime")(patternTime.asInstanceOf[js.Any])
-    if (patternTiming != null) __obj.updateDynamic("patternTiming")(patternTiming.asInstanceOf[js.Any])
-    if (patternUnsignedInt != null) __obj.updateDynamic("patternUnsignedInt")(patternUnsignedInt.asInstanceOf[js.Any])
-    if (patternUri != null) __obj.updateDynamic("patternUri")(patternUri.asInstanceOf[js.Any])
-    if (representation != null) __obj.updateDynamic("representation")(representation.asInstanceOf[js.Any])
-    if (requirements != null) __obj.updateDynamic("requirements")(requirements.asInstanceOf[js.Any])
-    if (short != null) __obj.updateDynamic("short")(short.asInstanceOf[js.Any])
-    if (sliceName != null) __obj.updateDynamic("sliceName")(sliceName.asInstanceOf[js.Any])
-    if (slicing != null) __obj.updateDynamic("slicing")(slicing.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementDefinition]
   }
+  @scala.inline
+  implicit class ElementDefinitionOps[Self <: ElementDefinition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_alias(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_alias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_comment(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_comment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_condition(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_condition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_condition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_contentReference(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_contentReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_contentReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_contentReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueBase64Binary(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueBase64Binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueBase64Binary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueBase64Binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueBoolean(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueBoolean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueBoolean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueBoolean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueCode(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueDate(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueDateTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueDecimal(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueId(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueInstant(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueInstant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueInstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueInstant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueInteger(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueMarkdown(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueMarkdown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueMarkdown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueMarkdown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueOid(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueOid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueOid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueOid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValuePositiveInt(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValuePositiveInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValuePositiveInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValuePositiveInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueString(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueUnsignedInt(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueUnsignedInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueUnsignedInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueUnsignedInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_defaultValueUri(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_defaultValueUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_defaultValueUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_definition(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_definition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_definition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_definition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedBase64Binary(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedBase64Binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedBase64Binary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedBase64Binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedBoolean(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedBoolean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedBoolean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedBoolean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedCode(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedDate(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedDateTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedDecimal(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedId(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedInstant(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedInstant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedInstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedInstant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedInteger(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedMarkdown(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedMarkdown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedMarkdown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedMarkdown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedOid(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedOid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedOid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedOid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedPositiveInt(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedPositiveInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedPositiveInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedPositiveInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedString(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedUnsignedInt(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedUnsignedInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedUnsignedInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedUnsignedInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_fixedUri(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_fixedUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fixedUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_isModifier(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_isModifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_isModifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_isModifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_isSummary(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_isSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_isSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_isSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_label(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_label: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_max(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_max: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_maxLength(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_maxLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_maxValueDate(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_maxValueDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_maxValueDateTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_maxValueDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_maxValueDecimal(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_maxValueDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_maxValueInstant(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueInstant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_maxValueInstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueInstant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_maxValueInteger(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_maxValueInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_maxValuePositiveInt(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValuePositiveInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_maxValuePositiveInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValuePositiveInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_maxValueTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_maxValueTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_maxValueUnsignedInt(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueUnsignedInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_maxValueUnsignedInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_maxValueUnsignedInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_meaningWhenMissing(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_meaningWhenMissing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_meaningWhenMissing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_meaningWhenMissing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_min(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_min: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_minValueDate(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_minValueDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_minValueDateTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_minValueDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_minValueDecimal(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_minValueDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_minValueInstant(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueInstant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_minValueInstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueInstant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_minValueInteger(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_minValueInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_minValuePositiveInt(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValuePositiveInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_minValuePositiveInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValuePositiveInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_minValueTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_minValueTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_minValueUnsignedInt(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueUnsignedInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_minValueUnsignedInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_minValueUnsignedInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_mustSupport(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_mustSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_mustSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_mustSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_orderMeaning(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_orderMeaning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_orderMeaning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_orderMeaning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_path(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_path: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternBase64Binary(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternBase64Binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternBase64Binary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternBase64Binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternBoolean(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternBoolean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternBoolean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternBoolean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternCode(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternDate(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternDateTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternDecimal(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternId(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternInstant(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternInstant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternInstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternInstant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternInteger(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternMarkdown(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternMarkdown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternMarkdown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternMarkdown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternOid(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternOid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternOid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternOid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternPositiveInt(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternPositiveInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternPositiveInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternPositiveInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternString(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternTime(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternUnsignedInt(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternUnsignedInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternUnsignedInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternUnsignedInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_patternUri(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_patternUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_patternUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_representation(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_representation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_representation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_representation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_requirements(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_requirements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_requirements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_requirements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_short(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_short")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_short: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_short")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_sliceName(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sliceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_sliceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sliceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlias(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBase(value: ElementDefinitionBase): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBinding(value: ElementDefinitionBinding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBinding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCode(value: js.Array[Coding]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComment(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCondition(value: js.Array[id]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConstraint(value: js.Array[ElementDefinitionConstraint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstraint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentReference(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueAddress(value: Address): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueAge(value: Age): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueAnnotation(value: Annotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueAnnotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueAttachment(value: Attachment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueAttachment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueAttachment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueAttachment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueBase64Binary(value: base64Binary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueBase64Binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueBase64Binary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueBase64Binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueBoolean(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueBoolean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueBoolean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueBoolean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueCode(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueCodeableConcept(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueCodeableConcept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueCodeableConcept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueCodeableConcept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueCoding(value: Coding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueCoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueCoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueCoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueContactPoint(value: ContactPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueContactPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueContactPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueContactPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueCount(value: Count): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueDate(value: date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueDateTime(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueDecimal(value: decimal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueDistance(value: Distance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueDuration(value: Duration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueHumanName(value: HumanName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueHumanName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueHumanName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueHumanName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueId(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueIdentifier(value: Identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueInstant(value: instant): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueInstant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueInstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueInstant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueInteger(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueMarkdown(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueMarkdown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueMarkdown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueMarkdown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueMeta(value: Meta): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueMeta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueMeta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueMeta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueMoney(value: Money): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueMoney")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueMoney: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueMoney")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueOid(value: oid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueOid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueOid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueOid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValuePeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValuePeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValuePeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValuePeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValuePositiveInt(value: positiveInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValuePositiveInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValuePositiveInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValuePositiveInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueQuantity(value: Quantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueQuantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueRange(value: Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueRatio(value: Ratio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueSampledData(value: SampledData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueSampledData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueSampledData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueSampledData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueSignature(value: Signature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueSignature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueTime(value: time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueTiming(value: Timing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueTiming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueTiming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueTiming")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueUnsignedInt(value: unsignedInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueUnsignedInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueUnsignedInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueUnsignedInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueUri(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValueUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValueUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefinition(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefinition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExample(value: js.Array[ElementDefinitionExample]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("example")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExample: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("example")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedAddress(value: Address): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedAge(value: Age): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedAnnotation(value: Annotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedAnnotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedAttachment(value: Attachment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedAttachment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedAttachment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedAttachment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedBase64Binary(value: base64Binary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedBase64Binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedBase64Binary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedBase64Binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedBoolean(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedBoolean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedBoolean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedBoolean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedCode(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedCodeableConcept(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedCodeableConcept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedCodeableConcept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedCodeableConcept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedCoding(value: Coding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedCoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedCoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedCoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedContactPoint(value: ContactPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedContactPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedContactPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedContactPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedCount(value: Count): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedDate(value: date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedDateTime(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedDecimal(value: decimal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedDistance(value: Distance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedDuration(value: Duration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedHumanName(value: HumanName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHumanName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedHumanName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHumanName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedId(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedIdentifier(value: Identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedInstant(value: instant): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedInstant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedInstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedInstant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedInteger(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedMarkdown(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedMarkdown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedMarkdown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedMarkdown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedMeta(value: Meta): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedMeta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedMeta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedMeta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedMoney(value: Money): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedMoney")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedMoney: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedMoney")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedOid(value: oid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedOid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedOid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedOid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedPeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedPositiveInt(value: positiveInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedPositiveInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedPositiveInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedPositiveInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedQuantity(value: Quantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedQuantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedRange(value: Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedRatio(value: Ratio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedSampledData(value: SampledData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedSampledData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedSampledData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedSampledData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedSignature(value: Signature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedSignature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedTime(value: time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedTiming(value: Timing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedTiming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedTiming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedTiming")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedUnsignedInt(value: unsignedInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedUnsignedInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedUnsignedInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedUnsignedInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixedUri(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixedUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsModifier(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isModifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsModifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isModifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsSummary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapping(value: js.Array[ElementDefinitionMapping]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxLength(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValueDate(value: date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValueDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValueDateTime(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValueDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValueDecimal(value: decimal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValueDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValueInstant(value: instant): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueInstant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValueInstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueInstant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValueInteger(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValueInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValuePositiveInt(value: positiveInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValuePositiveInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValuePositiveInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValuePositiveInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValueQuantity(value: Quantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValueQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueQuantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValueTime(value: time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValueTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxValueUnsignedInt(value: unsignedInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueUnsignedInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxValueUnsignedInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValueUnsignedInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMeaningWhenMissing(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meaningWhenMissing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMeaningWhenMissing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meaningWhenMissing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: unsignedInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValueDate(value: date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValueDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValueDateTime(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValueDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValueDecimal(value: decimal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValueDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValueInstant(value: instant): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueInstant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValueInstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueInstant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValueInteger(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValueInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValuePositiveInt(value: positiveInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValuePositiveInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValuePositiveInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValuePositiveInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValueQuantity(value: Quantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValueQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueQuantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValueTime(value: time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValueTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinValueUnsignedInt(value: unsignedInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueUnsignedInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinValueUnsignedInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValueUnsignedInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMustSupport(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mustSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMustSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mustSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderMeaning(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderMeaning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderMeaning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orderMeaning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternAddress(value: Address): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternAge(value: Age): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternAnnotation(value: Annotation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternAnnotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternAnnotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternAnnotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternAttachment(value: Attachment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternAttachment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternAttachment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternAttachment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternBase64Binary(value: base64Binary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternBase64Binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternBase64Binary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternBase64Binary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternBoolean(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternBoolean")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternBoolean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternBoolean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternCode(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternCodeableConcept(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternCodeableConcept")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternCodeableConcept: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternCodeableConcept")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternCoding(value: Coding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternCoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternCoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternCoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternContactPoint(value: ContactPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternContactPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternContactPoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternContactPoint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternCount(value: Count): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternDate(value: date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternDateTime(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternDecimal(value: decimal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternDecimal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternDecimal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternDecimal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternDistance(value: Distance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternDistance: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternDistance")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternDuration(value: Duration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternHumanName(value: HumanName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternHumanName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternHumanName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternHumanName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternId(value: id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternIdentifier(value: Identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternIdentifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternInstant(value: instant): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternInstant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternInstant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternInstant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternInteger(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternInteger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternInteger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternInteger")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternMarkdown(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternMarkdown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternMarkdown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternMarkdown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternMeta(value: Meta): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternMeta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternMeta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternMeta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternMoney(value: Money): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternMoney")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternMoney: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternMoney")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternOid(value: oid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternOid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternOid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternOid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternPeriod(value: Period): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternPeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternPeriod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternPositiveInt(value: positiveInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternPositiveInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternPositiveInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternPositiveInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternQuantity(value: Quantity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternQuantity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternQuantity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternQuantity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternRange(value: Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternRatio(value: Ratio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternReference(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternSampledData(value: SampledData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternSampledData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternSampledData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternSampledData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternSignature(value: Signature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternSignature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternSignature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternString")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternTime(value: time): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternTiming(value: Timing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternTiming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternTiming: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternTiming")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternUnsignedInt(value: unsignedInt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternUnsignedInt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternUnsignedInt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternUnsignedInt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatternUri(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatternUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patternUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepresentation(value: js.Array[code]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("representation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepresentation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("representation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequirements(value: markdown): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequirements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("short")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("short")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSliceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sliceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSliceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sliceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlicing(value: ElementDefinitionSlicing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slicing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlicing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slicing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: js.Array[ElementDefinitionType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,16 +22,53 @@ trait AdvancedSecurityOptionsInput extends js.Object {
 
 object AdvancedSecurityOptionsInput {
   @scala.inline
-  def apply(
-    Enabled: js.UndefOr[scala.Boolean] = js.undefined,
-    InternalUserDatabaseEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    MasterUserOptions: MasterUserOptions = null
-  ): AdvancedSecurityOptionsInput = {
+  def apply(): AdvancedSecurityOptionsInput = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(Enabled)) __obj.updateDynamic("Enabled")(Enabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(InternalUserDatabaseEnabled)) __obj.updateDynamic("InternalUserDatabaseEnabled")(InternalUserDatabaseEnabled.asInstanceOf[js.Any])
-    if (MasterUserOptions != null) __obj.updateDynamic("MasterUserOptions")(MasterUserOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[AdvancedSecurityOptionsInput]
   }
+  @scala.inline
+  implicit class AdvancedSecurityOptionsInputOps[Self <: AdvancedSecurityOptionsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInternalUserDatabaseEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InternalUserDatabaseEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInternalUserDatabaseEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InternalUserDatabaseEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterUserOptions(value: MasterUserOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUserOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterUserOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MasterUserOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

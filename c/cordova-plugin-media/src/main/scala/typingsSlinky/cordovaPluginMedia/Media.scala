@@ -74,13 +74,13 @@ object Media
      with Instantiable3[
       /* src */ String, 
       /* mediaSuccess */ js.Function0[Unit], 
-      /* mediaError */ js.Function1[/* error */ typingsSlinky.std.MediaError, js.Any], 
+      /* mediaError */ js.Function1[/* error */ MediaError, js.Any], 
       Media
     ]
      with Instantiable4[
       /* src */ String, 
       /* mediaSuccess */ js.Function0[Unit], 
-      /* mediaError */ js.Function1[/* error */ typingsSlinky.std.MediaError, js.Any], 
+      /* mediaError */ js.Function1[/* error */ MediaError, js.Any], 
       /* mediaStatus */ js.Function1[/* status */ Double, Unit], 
       Media
     ] {

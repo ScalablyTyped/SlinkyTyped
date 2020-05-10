@@ -14,14 +14,12 @@ trait LineJoinShape extends js.Object
 
 object LineJoinShape {
   @scala.inline
-  def bevel: typingsSlinky.leaflet.leafletStrings.bevel = this.cast("bevel")
+  def bevel: typingsSlinky.leaflet.leafletStrings.bevel = "bevel".asInstanceOf[typingsSlinky.leaflet.leafletStrings.bevel]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inherit: typingsSlinky.leaflet.leafletStrings.inherit = "inherit".asInstanceOf[typingsSlinky.leaflet.leafletStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.leaflet.leafletStrings.inherit = this.cast("inherit")
+  def miter: typingsSlinky.leaflet.leafletStrings.miter = "miter".asInstanceOf[typingsSlinky.leaflet.leafletStrings.miter]
   @scala.inline
-  def miter: typingsSlinky.leaflet.leafletStrings.miter = this.cast("miter")
-  @scala.inline
-  def round: typingsSlinky.leaflet.leafletStrings.round = this.cast("round")
+  def round: typingsSlinky.leaflet.leafletStrings.round = "round".asInstanceOf[typingsSlinky.leaflet.leafletStrings.round]
 }
 

@@ -75,43 +75,215 @@ trait QueryInput extends js.Object {
 
 object QueryInput {
   @scala.inline
-  def apply(
-    TableName: TableName,
-    AttributesToGet: AttributeNameList = null,
-    ConditionalOperator: ConditionalOperator = null,
-    ConsistentRead: js.UndefOr[Boolean] = js.undefined,
-    ExclusiveStartKey: Key = null,
-    ExpressionAttributeNames: ExpressionAttributeNameMap = null,
-    ExpressionAttributeValues: ExpressionAttributeValueMap = null,
-    FilterExpression: ConditionExpression = null,
-    IndexName: IndexName = null,
-    KeyConditionExpression: KeyExpression = null,
-    KeyConditions: KeyConditions = null,
-    Limit: Int | scala.Double = null,
-    ProjectionExpression: ProjectionExpression = null,
-    QueryFilter: FilterConditionMap = null,
-    ReturnConsumedCapacity: ReturnConsumedCapacity = null,
-    ScanIndexForward: js.UndefOr[Boolean] = js.undefined,
-    Select: Select = null
-  ): QueryInput = {
+  def apply(TableName: TableName): QueryInput = {
     val __obj = js.Dynamic.literal(TableName = TableName.asInstanceOf[js.Any])
-    if (AttributesToGet != null) __obj.updateDynamic("AttributesToGet")(AttributesToGet.asInstanceOf[js.Any])
-    if (ConditionalOperator != null) __obj.updateDynamic("ConditionalOperator")(ConditionalOperator.asInstanceOf[js.Any])
-    if (!js.isUndefined(ConsistentRead)) __obj.updateDynamic("ConsistentRead")(ConsistentRead.asInstanceOf[js.Any])
-    if (ExclusiveStartKey != null) __obj.updateDynamic("ExclusiveStartKey")(ExclusiveStartKey.asInstanceOf[js.Any])
-    if (ExpressionAttributeNames != null) __obj.updateDynamic("ExpressionAttributeNames")(ExpressionAttributeNames.asInstanceOf[js.Any])
-    if (ExpressionAttributeValues != null) __obj.updateDynamic("ExpressionAttributeValues")(ExpressionAttributeValues.asInstanceOf[js.Any])
-    if (FilterExpression != null) __obj.updateDynamic("FilterExpression")(FilterExpression.asInstanceOf[js.Any])
-    if (IndexName != null) __obj.updateDynamic("IndexName")(IndexName.asInstanceOf[js.Any])
-    if (KeyConditionExpression != null) __obj.updateDynamic("KeyConditionExpression")(KeyConditionExpression.asInstanceOf[js.Any])
-    if (KeyConditions != null) __obj.updateDynamic("KeyConditions")(KeyConditions.asInstanceOf[js.Any])
-    if (Limit != null) __obj.updateDynamic("Limit")(Limit.asInstanceOf[js.Any])
-    if (ProjectionExpression != null) __obj.updateDynamic("ProjectionExpression")(ProjectionExpression.asInstanceOf[js.Any])
-    if (QueryFilter != null) __obj.updateDynamic("QueryFilter")(QueryFilter.asInstanceOf[js.Any])
-    if (ReturnConsumedCapacity != null) __obj.updateDynamic("ReturnConsumedCapacity")(ReturnConsumedCapacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(ScanIndexForward)) __obj.updateDynamic("ScanIndexForward")(ScanIndexForward.asInstanceOf[js.Any])
-    if (Select != null) __obj.updateDynamic("Select")(Select.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryInput]
   }
+  @scala.inline
+  implicit class QueryInputOps[Self <: QueryInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTableName(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributesToGet(value: AttributeNameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributesToGet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributesToGet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AttributesToGet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditionalOperator(value: ConditionalOperator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionalOperator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditionalOperator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionalOperator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConsistentRead(value: ConsistentRead): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsistentRead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsistentRead: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConsistentRead")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclusiveStartKey(value: Key): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusiveStartKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusiveStartKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusiveStartKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpressionAttributeNames(value: ExpressionAttributeNameMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionAttributeNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpressionAttributeNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionAttributeNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpressionAttributeValues(value: ExpressionAttributeValueMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionAttributeValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpressionAttributeValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionAttributeValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterExpression(value: ConditionExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexName(value: IndexName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyConditionExpression(value: KeyExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyConditionExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyConditionExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyConditionExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyConditions(value: KeyConditions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyConditions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyConditions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyConditions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLimit(value: PositiveIntegerObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectionExpression(value: ProjectionExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectionExpression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectionExpression: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectionExpression")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryFilter(value: FilterConditionMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QueryFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnConsumedCapacity(value: ReturnConsumedCapacity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnConsumedCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnConsumedCapacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnConsumedCapacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScanIndexForward(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScanIndexForward")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScanIndexForward: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScanIndexForward")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelect(value: Select): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelect: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Select")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

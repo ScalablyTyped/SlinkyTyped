@@ -5,20 +5,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var columnLayout: js.UndefOr[Double] = js.undefined
-  var ignoreBadJsonFile: js.UndefOr[Boolean] = js.undefined
-  var jsonDir: js.UndefOr[String] = js.undefined
-  var jsonFile: String
-  var launchReport: Boolean
-  var metadata: js.UndefOr[StringDictionary[String]] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var noInlineScreenshots: js.UndefOr[Boolean] = js.undefined
-  var output: String
-  var reportSuiteAsScenarios: Boolean
-  var screenshotsDirectory: js.UndefOr[String] = js.undefined
-  var storeScreenshots: js.UndefOr[Boolean] = js.undefined
-  var theme: String
+  var columnLayout: js.UndefOr[Double] = js.native
+  var ignoreBadJsonFile: js.UndefOr[Boolean] = js.native
+  var jsonDir: js.UndefOr[String] = js.native
+  var jsonFile: String = js.native
+  var launchReport: Boolean = js.native
+  var metadata: js.UndefOr[StringDictionary[String]] = js.native
+  var name: js.UndefOr[String] = js.native
+  var noInlineScreenshots: js.UndefOr[Boolean] = js.native
+  var output: String = js.native
+  var reportSuiteAsScenarios: Boolean = js.native
+  var screenshotsDirectory: js.UndefOr[String] = js.native
+  var storeScreenshots: js.UndefOr[Boolean] = js.native
+  var theme: String = js.native
 }
 
 object Options {
@@ -28,26 +29,144 @@ object Options {
     launchReport: Boolean,
     output: String,
     reportSuiteAsScenarios: Boolean,
-    theme: String,
-    columnLayout: Int | Double = null,
-    ignoreBadJsonFile: js.UndefOr[Boolean] = js.undefined,
-    jsonDir: String = null,
-    metadata: StringDictionary[String] = null,
-    name: String = null,
-    noInlineScreenshots: js.UndefOr[Boolean] = js.undefined,
-    screenshotsDirectory: String = null,
-    storeScreenshots: js.UndefOr[Boolean] = js.undefined
+    theme: String
   ): Options = {
     val __obj = js.Dynamic.literal(jsonFile = jsonFile.asInstanceOf[js.Any], launchReport = launchReport.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any], reportSuiteAsScenarios = reportSuiteAsScenarios.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
-    if (columnLayout != null) __obj.updateDynamic("columnLayout")(columnLayout.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreBadJsonFile)) __obj.updateDynamic("ignoreBadJsonFile")(ignoreBadJsonFile.asInstanceOf[js.Any])
-    if (jsonDir != null) __obj.updateDynamic("jsonDir")(jsonDir.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(noInlineScreenshots)) __obj.updateDynamic("noInlineScreenshots")(noInlineScreenshots.asInstanceOf[js.Any])
-    if (screenshotsDirectory != null) __obj.updateDynamic("screenshotsDirectory")(screenshotsDirectory.asInstanceOf[js.Any])
-    if (!js.isUndefined(storeScreenshots)) __obj.updateDynamic("storeScreenshots")(storeScreenshots.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJsonFile(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLaunchReport(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchReport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutput(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReportSuiteAsScenarios(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportSuiteAsScenarios")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTheme(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColumnLayout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreBadJsonFile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreBadJsonFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreBadJsonFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreBadJsonFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJsonDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJsonDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonDir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNoInlineScreenshots(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noInlineScreenshots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoInlineScreenshots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noInlineScreenshots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenshotsDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshotsDirectory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenshotsDirectory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshotsDirectory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoreScreenshots(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeScreenshots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoreScreenshots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storeScreenshots")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

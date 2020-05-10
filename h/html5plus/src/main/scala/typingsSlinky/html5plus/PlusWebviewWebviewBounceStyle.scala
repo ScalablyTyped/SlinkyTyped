@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
   */
+@js.native
 trait PlusWebviewWebviewBounceStyle extends js.Object {
   /**
     * Webview窗口回弹时停靠的位置
@@ -19,7 +20,7 @@ trait PlusWebviewWebviewBounceStyle extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var changeoffset: js.UndefOr[js.Any] = js.undefined
+  var changeoffset: js.UndefOr[js.Any] = js.native
   /**
     * Webview窗口拖拽偏移的位置
     * 开启窗口回弹效果后，可以通过此属性值来主动设置拖拽的偏移位置，与手动操作拖拽至此偏移位置松开后的逻辑一致。
@@ -32,7 +33,7 @@ trait PlusWebviewWebviewBounceStyle extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var offset: js.UndefOr[js.Any] = js.undefined
+  var offset: js.UndefOr[js.Any] = js.native
   /**
     * Webview窗口支持回弹效果的方向
     * 可通过此参数设置开启Webview哪个方向支持回弹效果。
@@ -46,14 +47,14 @@ trait PlusWebviewWebviewBounceStyle extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var position: js.UndefOr[js.Any] = js.undefined
+  var position: js.UndefOr[js.Any] = js.native
   /**
     * Webview窗口是否阻止touch事件传递给DOM元素
     * 设置为true表示阻止touch事件，设置为false表示不阻止touch事件。当开启侧滑功能（左侧滑和右侧滑）时默认值为true，否则为false。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var preventTouchEvent: js.UndefOr[Boolean] = js.undefined
+  var preventTouchEvent: js.UndefOr[Boolean] = js.native
   /**
     * Webview窗口侧滑时停靠的位置
     * 开启窗口回弹效果后，当窗口中展现的内容滚动到头（左侧或右侧）时，在拖拽时窗口整体内容将跟随移动，松开后自动停靠的侧滑位置，并触发"slideBounce"事件。
@@ -64,25 +65,82 @@ trait PlusWebviewWebviewBounceStyle extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/webview.html](http://www.html5plus.org/doc/zh_cn/webview.html)
     */
-  var slideoffset: js.UndefOr[js.Any] = js.undefined
+  var slideoffset: js.UndefOr[js.Any] = js.native
 }
 
 object PlusWebviewWebviewBounceStyle {
   @scala.inline
-  def apply(
-    changeoffset: js.Any = null,
-    offset: js.Any = null,
-    position: js.Any = null,
-    preventTouchEvent: js.UndefOr[Boolean] = js.undefined,
-    slideoffset: js.Any = null
-  ): PlusWebviewWebviewBounceStyle = {
+  def apply(): PlusWebviewWebviewBounceStyle = {
     val __obj = js.Dynamic.literal()
-    if (changeoffset != null) __obj.updateDynamic("changeoffset")(changeoffset.asInstanceOf[js.Any])
-    if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (!js.isUndefined(preventTouchEvent)) __obj.updateDynamic("preventTouchEvent")(preventTouchEvent.asInstanceOf[js.Any])
-    if (slideoffset != null) __obj.updateDynamic("slideoffset")(slideoffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusWebviewWebviewBounceStyle]
   }
+  @scala.inline
+  implicit class PlusWebviewWebviewBounceStyleOps[Self <: PlusWebviewWebviewBounceStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeoffset(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeoffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChangeoffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeoffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOffset(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreventTouchEvent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventTouchEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreventTouchEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventTouchEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlideoffset(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideoffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlideoffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slideoffset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

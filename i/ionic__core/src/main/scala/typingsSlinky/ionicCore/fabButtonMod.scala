@@ -4,10 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.elementInterfaceMod.AnchorInterface
 import typingsSlinky.ionicCore.elementInterfaceMod.ButtonInterface
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection
-import typingsSlinky.ionicCore.ionicCoreStrings.button
-import typingsSlinky.ionicCore.ionicCoreStrings.reset
 import typingsSlinky.ionicCore.ionicCoreStrings.small
-import typingsSlinky.ionicCore.ionicCoreStrings.submit
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
@@ -33,8 +30,6 @@ object fabButtonMod extends js.Object {
       * For more information on colors, see [theming](/docs/theming/basics).
       */
     var color: js.UndefOr[Color] = js.native
-    /* CompleteClass */
-    override var disabled: Boolean = js.native
     var el: HTMLElement = js.native
     /**
       * Emitted when the button loses focus.
@@ -65,8 +60,6 @@ object fabButtonMod extends js.Object {
       * [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).
       */
     var translucent: Boolean = js.native
-    /* CompleteClass */
-    override var `type`: submit | reset | button = js.native
     @JSName("render")
     def render_MFabButton(): js.Any = js.native
   }

@@ -4,30 +4,74 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AvatarOverrides[T] extends js.Object {
   var Avatar: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var Initials: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
-  ] = js.undefined
+  ] = js.native
   var Root: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
-  ] = js.undefined
+  ] = js.native
 }
 
 object AvatarOverrides {
   @scala.inline
-  def apply[T](
-    Avatar: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any = null,
-    Initials: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any = null,
-    Root: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any = null
-  ): AvatarOverrides[T] = {
+  def apply[T](): AvatarOverrides[T] = {
     val __obj = js.Dynamic.literal()
-    if (Avatar != null) __obj.updateDynamic("Avatar")(Avatar.asInstanceOf[js.Any])
-    if (Initials != null) __obj.updateDynamic("Initials")(Initials.asInstanceOf[js.Any])
-    if (Root != null) __obj.updateDynamic("Root")(Root.asInstanceOf[js.Any])
     __obj.asInstanceOf[AvatarOverrides[T]]
   }
+  @scala.inline
+  implicit class AvatarOverridesOps[Self[t] <: AvatarOverrides[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withAvatar(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
+    ): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Avatar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvatar: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Avatar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitials(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
+    ): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Initials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitials: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Initials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
+    ): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

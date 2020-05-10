@@ -13,12 +13,10 @@ trait ConnectionMethod extends js.Object
 
 object ConnectionMethod {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def in_band: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.in_band = "in_band".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.in_band]
   @scala.inline
-  def in_band: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.in_band = this.cast("in_band")
+  def invitation: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.invitation = "invitation".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.invitation]
   @scala.inline
-  def invitation: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.invitation = this.cast("invitation")
-  @scala.inline
-  def out_of_band: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.out_of_band = this.cast("out_of_band")
+  def out_of_band: typingsSlinky.openssiWebsdk.openssiWebsdkStrings.out_of_band = "out_of_band".asInstanceOf[typingsSlinky.openssiWebsdk.openssiWebsdkStrings.out_of_band]
 }
 

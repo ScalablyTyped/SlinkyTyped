@@ -60,7 +60,7 @@ package object dynamodbMod {
     - java.lang.String
   */
   type BillingMode = typingsSlinky.awsSdk.dynamodbMod._BillingMode | java.lang.String
-  type BinaryAttributeValue = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.dynamodbMod.Blob | java.lang.String
+  type BinaryAttributeValue = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.dynamodbMod.Blob | java.lang.String
   type BinarySetAttributeValue = js.Array[typingsSlinky.awsSdk.dynamodbMod.BinaryAttributeValue]
   type BooleanAttributeValue = scala.Boolean
   type BooleanObject = scala.Boolean

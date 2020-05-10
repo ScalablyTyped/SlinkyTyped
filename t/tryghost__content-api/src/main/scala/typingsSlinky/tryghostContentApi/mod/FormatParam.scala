@@ -12,10 +12,8 @@ trait FormatParam extends js.Object
 
 object FormatParam {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def html: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.html = "html".asInstanceOf[typingsSlinky.tryghostContentApi.tryghostContentApiStrings.html]
   @scala.inline
-  def html: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.html = this.cast("html")
-  @scala.inline
-  def plaintext: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.plaintext = this.cast("plaintext")
+  def plaintext: typingsSlinky.tryghostContentApi.tryghostContentApiStrings.plaintext = "plaintext".asInstanceOf[typingsSlinky.tryghostContentApi.tryghostContentApiStrings.plaintext]
 }
 

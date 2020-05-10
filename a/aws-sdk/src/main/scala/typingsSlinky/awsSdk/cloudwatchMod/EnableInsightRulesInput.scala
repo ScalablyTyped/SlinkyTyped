@@ -16,8 +16,21 @@ object EnableInsightRulesInput {
   @scala.inline
   def apply(RuleNames: InsightRuleNames): EnableInsightRulesInput = {
     val __obj = js.Dynamic.literal(RuleNames = RuleNames.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[EnableInsightRulesInput]
   }
+  @scala.inline
+  implicit class EnableInsightRulesInputOps[Self <: EnableInsightRulesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRuleNames(value: InsightRuleNames): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

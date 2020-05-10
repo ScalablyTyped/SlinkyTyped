@@ -18,11 +18,41 @@ trait GetUpgradeHistoryResponse extends js.Object {
 
 object GetUpgradeHistoryResponse {
   @scala.inline
-  def apply(NextToken: String = null, UpgradeHistories: UpgradeHistoryList = null): GetUpgradeHistoryResponse = {
+  def apply(): GetUpgradeHistoryResponse = {
     val __obj = js.Dynamic.literal()
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (UpgradeHistories != null) __obj.updateDynamic("UpgradeHistories")(UpgradeHistories.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetUpgradeHistoryResponse]
   }
+  @scala.inline
+  implicit class GetUpgradeHistoryResponseOps[Self <: GetUpgradeHistoryResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpgradeHistories(value: UpgradeHistoryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeHistories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpgradeHistories: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpgradeHistories")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

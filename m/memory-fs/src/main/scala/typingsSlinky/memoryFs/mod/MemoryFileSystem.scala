@@ -3,7 +3,6 @@ package typingsSlinky.memoryFs.mod
 import typingsSlinky.memoryFs.AnonEnd
 import typingsSlinky.memoryFs.AnonIsBlockDevice
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +19,7 @@ trait MemoryFileSystem extends js.Object {
   def existsSync(_path: String): Boolean = js.native
   def join(path: String, request: String): String = js.native
   def meta(_path: String): js.Any = js.native
-  def mkdir(path: String, callback: js.Function1[/* err */ Error | Null, Unit]): Unit = js.native
+  def mkdir(path: String, callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   def mkdir(
     path: String,
     optArg: js.Object,
@@ -36,7 +35,7 @@ trait MemoryFileSystem extends js.Object {
   def pathToArray(path: String): js.Array[String] = js.native
   def readFile(
     path: String,
-    callback: js.Function2[/* err */ Error | Null, /* result */ js.UndefOr[js.Any], Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* result */ js.UndefOr[js.Any], Unit]
   ): Unit = js.native
   def readFile(
     path: String,
@@ -70,14 +69,14 @@ trait MemoryFileSystem extends js.Object {
     callback: js.Function2[/* err */ js.Error | Null, /* result */ js.UndefOr[js.Any], Unit]
   ): Unit = js.native
   def unlinkSync(_path: String): Unit = js.native
-  def writeFile(path: String, content: String, callback: js.Function1[/* err */ js.UndefOr[Error], Unit]): Unit = js.native
+  def writeFile(path: String, content: String, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def writeFile(
     path: String,
     content: String,
     encoding: String,
     callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
   ): Unit = js.native
-  def writeFile(path: String, content: Buffer, callback: js.Function1[/* err */ js.UndefOr[Error], Unit]): Unit = js.native
+  def writeFile(path: String, content: Buffer, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def writeFile(
     path: String,
     content: Buffer,

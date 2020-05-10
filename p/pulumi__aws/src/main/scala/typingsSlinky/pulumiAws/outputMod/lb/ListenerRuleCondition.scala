@@ -46,18 +46,90 @@ object ListenerRuleCondition {
     field: String,
     hostHeader: ListenerRuleConditionHostHeader,
     pathPattern: ListenerRuleConditionPathPattern,
-    values: String,
-    httpHeader: ListenerRuleConditionHttpHeader = null,
-    httpRequestMethod: ListenerRuleConditionHttpRequestMethod = null,
-    queryStrings: js.Array[ListenerRuleConditionQueryString] = null,
-    sourceIp: ListenerRuleConditionSourceIp = null
+    values: String
   ): ListenerRuleCondition = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], hostHeader = hostHeader.asInstanceOf[js.Any], pathPattern = pathPattern.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
-    if (httpHeader != null) __obj.updateDynamic("httpHeader")(httpHeader.asInstanceOf[js.Any])
-    if (httpRequestMethod != null) __obj.updateDynamic("httpRequestMethod")(httpRequestMethod.asInstanceOf[js.Any])
-    if (queryStrings != null) __obj.updateDynamic("queryStrings")(queryStrings.asInstanceOf[js.Any])
-    if (sourceIp != null) __obj.updateDynamic("sourceIp")(sourceIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListenerRuleCondition]
   }
+  @scala.inline
+  implicit class ListenerRuleConditionOps[Self <: ListenerRuleCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withField(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHostHeader(value: ListenerRuleConditionHostHeader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hostHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPathPattern(value: ListenerRuleConditionPathPattern): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pathPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValues(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHttpHeader(value: ListenerRuleConditionHttpHeader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpHeader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHttpRequestMethod(value: ListenerRuleConditionHttpRequestMethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRequestMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpRequestMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpRequestMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryStrings(value: js.Array[ListenerRuleConditionQueryString]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryStrings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryStrings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryStrings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceIp(value: ListenerRuleConditionSourceIp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceIp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

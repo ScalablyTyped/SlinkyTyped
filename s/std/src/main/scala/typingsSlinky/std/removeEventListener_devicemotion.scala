@@ -32,7 +32,7 @@ object removeEventListener_devicemotion extends js.Object {
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent, 
       _
     ],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

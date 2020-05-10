@@ -18,20 +18,18 @@ trait UnitTypeShort extends js.Object
 
 object UnitTypeShort {
   @scala.inline
-  def M: typingsSlinky.dayjs.dayjsStrings.M = this.cast("M")
+  def M: typingsSlinky.dayjs.dayjsStrings.M = "M".asInstanceOf[typingsSlinky.dayjs.dayjsStrings.M]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def d: typingsSlinky.dayjs.dayjsStrings.d = "d".asInstanceOf[typingsSlinky.dayjs.dayjsStrings.d]
   @scala.inline
-  def d: typingsSlinky.dayjs.dayjsStrings.d = this.cast("d")
+  def h: typingsSlinky.dayjs.dayjsStrings.h = "h".asInstanceOf[typingsSlinky.dayjs.dayjsStrings.h]
   @scala.inline
-  def h: typingsSlinky.dayjs.dayjsStrings.h = this.cast("h")
+  def m: m_ = "m".asInstanceOf[m_]
   @scala.inline
-  def m: m_ = this.cast("m")
+  def ms: typingsSlinky.dayjs.dayjsStrings.ms = "ms".asInstanceOf[typingsSlinky.dayjs.dayjsStrings.ms]
   @scala.inline
-  def ms: typingsSlinky.dayjs.dayjsStrings.ms = this.cast("ms")
+  def s: typingsSlinky.dayjs.dayjsStrings.s = "s".asInstanceOf[typingsSlinky.dayjs.dayjsStrings.s]
   @scala.inline
-  def s: typingsSlinky.dayjs.dayjsStrings.s = this.cast("s")
-  @scala.inline
-  def y: typingsSlinky.dayjs.dayjsStrings.y = this.cast("y")
+  def y: typingsSlinky.dayjs.dayjsStrings.y = "y".asInstanceOf[typingsSlinky.dayjs.dayjsStrings.y]
 }
 

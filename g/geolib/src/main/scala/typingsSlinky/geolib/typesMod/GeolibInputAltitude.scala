@@ -14,27 +14,23 @@ trait GeolibInputAltitude extends js.Object
 
 object GeolibInputAltitude {
   @scala.inline
-  def AnonAlt(alt: Int | Double = null): GeolibInputAltitude = {
+  def AnonAlt(): GeolibInputAltitude = {
     val __obj = js.Dynamic.literal()
-    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeolibInputAltitude]
   }
   @scala.inline
-  def AnonAltitudeGeolibAltitudeInputValue(altitude: Int | Double = null): GeolibInputAltitude = {
+  def AnonAltitudeGeolibAltitudeInputValue(): GeolibInputAltitude = {
     val __obj = js.Dynamic.literal()
-    if (altitude != null) __obj.updateDynamic("altitude")(altitude.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeolibInputAltitude]
   }
   @scala.inline
-  def AnonElevation(elevation: Int | Double = null): GeolibInputAltitude = {
+  def AnonElevation(): GeolibInputAltitude = {
     val __obj = js.Dynamic.literal()
-    if (elevation != null) __obj.updateDynamic("elevation")(elevation.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeolibInputAltitude]
   }
   @scala.inline
-  def AnonElev(elev: Int | Double = null): GeolibInputAltitude = {
+  def AnonElev(): GeolibInputAltitude = {
     val __obj = js.Dynamic.literal()
-    if (elev != null) __obj.updateDynamic("elev")(elev.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeolibInputAltitude]
   }
 }

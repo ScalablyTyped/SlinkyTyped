@@ -52,26 +52,113 @@ trait SchemaListUpdateResponse extends js.Object {
 
 object SchemaListUpdateResponse {
   @scala.inline
-  def apply(
-    additions: js.Array[SchemaThreatEntrySet] = null,
-    checksum: SchemaChecksum = null,
-    newClientState: String = null,
-    platformType: String = null,
-    removals: js.Array[SchemaThreatEntrySet] = null,
-    responseType: String = null,
-    threatEntryType: String = null,
-    threatType: String = null
-  ): SchemaListUpdateResponse = {
+  def apply(): SchemaListUpdateResponse = {
     val __obj = js.Dynamic.literal()
-    if (additions != null) __obj.updateDynamic("additions")(additions.asInstanceOf[js.Any])
-    if (checksum != null) __obj.updateDynamic("checksum")(checksum.asInstanceOf[js.Any])
-    if (newClientState != null) __obj.updateDynamic("newClientState")(newClientState.asInstanceOf[js.Any])
-    if (platformType != null) __obj.updateDynamic("platformType")(platformType.asInstanceOf[js.Any])
-    if (removals != null) __obj.updateDynamic("removals")(removals.asInstanceOf[js.Any])
-    if (responseType != null) __obj.updateDynamic("responseType")(responseType.asInstanceOf[js.Any])
-    if (threatEntryType != null) __obj.updateDynamic("threatEntryType")(threatEntryType.asInstanceOf[js.Any])
-    if (threatType != null) __obj.updateDynamic("threatType")(threatType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListUpdateResponse]
   }
+  @scala.inline
+  implicit class SchemaListUpdateResponseOps[Self <: SchemaListUpdateResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdditions(value: js.Array[SchemaThreatEntrySet]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChecksum(value: SchemaChecksum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecksum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNewClientState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newClientState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewClientState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newClientState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemovals(value: js.Array[SchemaThreatEntrySet]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemovals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreatEntryType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatEntryType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreatEntryType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatEntryType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreatType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreatType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

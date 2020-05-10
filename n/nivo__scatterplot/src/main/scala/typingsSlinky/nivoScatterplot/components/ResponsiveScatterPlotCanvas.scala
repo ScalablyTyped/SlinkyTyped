@@ -1,12 +1,10 @@
 package typingsSlinky.nivoScatterplot.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoAxes.mod.AxisProps
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
 import typingsSlinky.nivoCore.mod.Box
@@ -15,6 +13,7 @@ import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
 import typingsSlinky.nivoScatterplot.mod.CustomCanvasLayer
 import typingsSlinky.nivoScatterplot.mod.CustomLayerId
+import typingsSlinky.nivoScatterplot.mod.Datum
 import typingsSlinky.nivoScatterplot.mod.DerivedDatumProp
 import typingsSlinky.nivoScatterplot.mod.DynamicSizeSpec
 import typingsSlinky.nivoScatterplot.mod.Node
@@ -27,75 +26,92 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ResponsiveScatterPlotCanvas
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoScatterplot.mod.ResponsiveScatterPlotCanvas] {
+object ResponsiveScatterPlotCanvas {
   @JSImport("@nivo/scatterplot", "ResponsiveScatterPlotCanvas")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    data: js.Array[Serie],
-    axisBottom: AxisProps = null,
-    axisLeft: AxisProps = null,
-    axisRight: AxisProps = null,
-    axisTop: AxisProps = null,
-    blendMode: CssMixBlendMode = null,
-    colors: OrdinalColorsInstruction[_] = null,
-    debugMesh: js.UndefOr[Boolean] = js.undefined,
-    enableGridX: js.UndefOr[Boolean] = js.undefined,
-    enableGridY: js.UndefOr[Boolean] = js.undefined,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    layers: js.Array[CustomLayerId | CustomCanvasLayer] = null,
-    legends: js.Array[LegendProps] = null,
-    margin: Box = null,
-    nodeSize: Double | DerivedDatumProp[Double] | DynamicSizeSpec = null,
-    onClick: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
-    onMouseEnter: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
-    onMouseLeave: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
-    onMouseMove: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit = null,
-    pixelRatio: Int | Double = null,
-    renderNode: (/* ctx */ CanvasRenderingContext2D, /* props */ NodeProps) => Unit = null,
-    theme: Theme = null,
-    tooltip: /* hasNode */ js.Any => TagMod[Any] = null,
-    useMesh: js.UndefOr[Boolean] = js.undefined,
-    xFormat: String | ValueFormatter = null,
-    xScale: /* value */ Value => Double = null,
-    yFormat: String | ValueFormatter = null,
-    yScale: /* value */ Value => Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoScatterplot.mod.ResponsiveScatterPlotCanvas] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (axisBottom != null) __obj.updateDynamic("axisBottom")(axisBottom.asInstanceOf[js.Any])
-    if (axisLeft != null) __obj.updateDynamic("axisLeft")(axisLeft.asInstanceOf[js.Any])
-    if (axisRight != null) __obj.updateDynamic("axisRight")(axisRight.asInstanceOf[js.Any])
-    if (axisTop != null) __obj.updateDynamic("axisTop")(axisTop.asInstanceOf[js.Any])
-    if (blendMode != null) __obj.updateDynamic("blendMode")(blendMode.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (!js.isUndefined(debugMesh)) __obj.updateDynamic("debugMesh")(debugMesh.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridX)) __obj.updateDynamic("enableGridX")(enableGridX.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridY)) __obj.updateDynamic("enableGridY")(enableGridY.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
-    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (nodeSize != null) __obj.updateDynamic("nodeSize")(nodeSize.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction2(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction2(onMouseLeave))
-    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction2(onMouseMove))
-    if (pixelRatio != null) __obj.updateDynamic("pixelRatio")(pixelRatio.asInstanceOf[js.Any])
-    if (renderNode != null) __obj.updateDynamic("renderNode")(js.Any.fromFunction2(renderNode))
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(js.Any.fromFunction1(tooltip))
-    if (!js.isUndefined(useMesh)) __obj.updateDynamic("useMesh")(useMesh.asInstanceOf[js.Any])
-    if (xFormat != null) __obj.updateDynamic("xFormat")(xFormat.asInstanceOf[js.Any])
-    if (xScale != null) __obj.updateDynamic("xScale")(js.Any.fromFunction1(xScale))
-    if (yFormat != null) __obj.updateDynamic("yFormat")(yFormat.asInstanceOf[js.Any])
-    if (yScale != null) __obj.updateDynamic("yScale")(js.Any.fromFunction1(yScale))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.nivoScatterplot.mod.ResponsiveScatterPlotCanvas] {
+    @scala.inline
+    def axisBottom(value: AxisProps): this.type = set("axisBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisBottomNull: this.type = set("axisBottom", null)
+    @scala.inline
+    def axisLeft(value: AxisProps): this.type = set("axisLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisLeftNull: this.type = set("axisLeft", null)
+    @scala.inline
+    def axisRight(value: AxisProps): this.type = set("axisRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisRightNull: this.type = set("axisRight", null)
+    @scala.inline
+    def axisTop(value: AxisProps): this.type = set("axisTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisTopNull: this.type = set("axisTop", null)
+    @scala.inline
+    def blendMode(value: CssMixBlendMode): this.type = set("blendMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
+    @scala.inline
+    def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def debugMesh(value: Boolean): this.type = set("debugMesh", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableGridX(value: Boolean): this.type = set("enableGridX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableGridY(value: Boolean): this.type = set("enableGridY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layers(value: js.Array[CustomLayerId | CustomCanvasLayer]): this.type = set("layers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def legends(value: js.Array[LegendProps]): this.type = set("legends", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nodeSizeFunction1(value: /* node */ Datum => Double): this.type = set("nodeSize", js.Any.fromFunction1(value))
+    @scala.inline
+    def nodeSize(value: Double | DerivedDatumProp[Double] | DynamicSizeSpec): this.type = set("nodeSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseEnter(value: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit): this.type = set("onMouseEnter", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseLeave(value: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit): this.type = set("onMouseLeave", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseMove(value: (/* node */ Node, /* event */ SyntheticMouseEvent[js.Any]) => Unit): this.type = set("onMouseMove", js.Any.fromFunction2(value))
+    @scala.inline
+    def pixelRatio(value: Double): this.type = set("pixelRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderNode(value: (/* ctx */ CanvasRenderingContext2D, /* props */ NodeProps) => Unit): this.type = set("renderNode", js.Any.fromFunction2(value))
+    @scala.inline
+    def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: /* hasNode */ js.Any => TagMod[Any]): this.type = set("tooltip", js.Any.fromFunction1(value))
+    @scala.inline
+    def useMesh(value: Boolean): this.type = set("useMesh", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xFormatFunction1(value: /* value */ Value => String | Double): this.type = set("xFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def xFormat(value: String | ValueFormatter): this.type = set("xFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def xScale(value: /* value */ Value => Double): this.type = set("xScale", js.Any.fromFunction1(value))
+    @scala.inline
+    def yFormatFunction1(value: /* value */ Value => String | Double): this.type = set("yFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def yFormat(value: String | ValueFormatter): this.type = set("yFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yScale(value: /* value */ Value => Double): this.type = set("yScale", js.Any.fromFunction1(value))
   }
-  type Props = ScatterPlotCanvasProps
+  
+  def withProps(p: ScatterPlotCanvasProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[Serie]): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ScatterPlotCanvasProps]))
+  }
 }
 

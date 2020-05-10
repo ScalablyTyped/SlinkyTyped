@@ -29,18 +29,65 @@ trait SchemaScreenshotCluster extends js.Object {
 
 object SchemaScreenshotCluster {
   @scala.inline
-  def apply(
-    activity: String = null,
-    clusterId: String = null,
-    keyScreen: SchemaScreen = null,
-    screens: js.Array[SchemaScreen] = null
-  ): SchemaScreenshotCluster = {
+  def apply(): SchemaScreenshotCluster = {
     val __obj = js.Dynamic.literal()
-    if (activity != null) __obj.updateDynamic("activity")(activity.asInstanceOf[js.Any])
-    if (clusterId != null) __obj.updateDynamic("clusterId")(clusterId.asInstanceOf[js.Any])
-    if (keyScreen != null) __obj.updateDynamic("keyScreen")(keyScreen.asInstanceOf[js.Any])
-    if (screens != null) __obj.updateDynamic("screens")(screens.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaScreenshotCluster]
   }
+  @scala.inline
+  implicit class SchemaScreenshotClusterOps[Self <: SchemaScreenshotCluster] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActivity(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClusterId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClusterId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clusterId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyScreen(value: SchemaScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyScreen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyScreen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreens(value: js.Array[SchemaScreen]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreens: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screens")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

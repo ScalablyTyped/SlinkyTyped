@@ -24,14 +24,41 @@ trait SchemaSuggestedNamedStyles extends js.Object {
 
 object SchemaSuggestedNamedStyles {
   @scala.inline
-  def apply(
-    namedStyles: SchemaNamedStyles = null,
-    namedStylesSuggestionState: SchemaNamedStylesSuggestionState = null
-  ): SchemaSuggestedNamedStyles = {
+  def apply(): SchemaSuggestedNamedStyles = {
     val __obj = js.Dynamic.literal()
-    if (namedStyles != null) __obj.updateDynamic("namedStyles")(namedStyles.asInstanceOf[js.Any])
-    if (namedStylesSuggestionState != null) __obj.updateDynamic("namedStylesSuggestionState")(namedStylesSuggestionState.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSuggestedNamedStyles]
   }
+  @scala.inline
+  implicit class SchemaSuggestedNamedStylesOps[Self <: SchemaSuggestedNamedStyles] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNamedStyles(value: SchemaNamedStyles): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamedStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNamedStylesSuggestionState(value: SchemaNamedStylesSuggestionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedStylesSuggestionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNamedStylesSuggestionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namedStylesSuggestionState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

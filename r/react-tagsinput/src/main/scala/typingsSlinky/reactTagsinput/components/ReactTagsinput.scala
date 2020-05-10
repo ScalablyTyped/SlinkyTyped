@@ -1,80 +1,82 @@
 package typingsSlinky.reactTagsinput.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactChild
 import typingsSlinky.reactTagsinput.mod.InputProps
 import typingsSlinky.reactTagsinput.mod.ReactTagsInputProps
 import typingsSlinky.reactTagsinput.mod.RenderInputProps
 import typingsSlinky.reactTagsinput.mod.RenderTagProps
-import typingsSlinky.reactTagsinput.mod.Tag
 import typingsSlinky.reactTagsinput.mod.TagProps
 import typingsSlinky.reactTagsinput.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactTagsinput
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactTagsinput {
   @JSImport("react-tagsinput", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
-  def apply(
-    onChange: (js.Array[Tag], js.Array[Tag], js.Array[Double]) => Unit,
-    value: js.Array[Tag],
-    addKeys: js.Array[Double | String] = null,
-    addOnBlur: js.UndefOr[Boolean] = js.undefined,
-    addOnPaste: js.UndefOr[Boolean] = js.undefined,
-    currentValue: String = null,
-    focusedClassName: String = null,
-    inputProps: InputProps = null,
-    inputValue: String = null,
-    maxTags: Int | Double = null,
-    onChangeInput: /* value */ String => Unit = null,
-    onValidationReject: /* tags */ js.Array[String] => Unit = null,
-    onlyUnique: js.UndefOr[Boolean] = js.undefined,
-    pasteSplit: /* data */ String => js.Array[String] = null,
-    preventSubmit: js.UndefOr[Boolean] = js.undefined,
-    removeKeys: js.Array[Double] = null,
-    renderInput: /* props */ RenderInputProps => TagMod[Any] = null,
-    renderLayout: (/* tagElements */ js.Array[ReactElement], /* inputElement */ ReactElement) => ReactChild = null,
-    renderTag: /* props */ RenderTagProps => TagMod[Any] = null,
-    tagDisplayProp: String = null,
-    tagProps: TagProps = null,
-    validationRegex: js.RegExp = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction3(onChange), value = value.asInstanceOf[js.Any])
-    if (addKeys != null) __obj.updateDynamic("addKeys")(addKeys.asInstanceOf[js.Any])
-    if (!js.isUndefined(addOnBlur)) __obj.updateDynamic("addOnBlur")(addOnBlur.asInstanceOf[js.Any])
-    if (!js.isUndefined(addOnPaste)) __obj.updateDynamic("addOnPaste")(addOnPaste.asInstanceOf[js.Any])
-    if (currentValue != null) __obj.updateDynamic("currentValue")(currentValue.asInstanceOf[js.Any])
-    if (focusedClassName != null) __obj.updateDynamic("focusedClassName")(focusedClassName.asInstanceOf[js.Any])
-    if (inputProps != null) __obj.updateDynamic("inputProps")(inputProps.asInstanceOf[js.Any])
-    if (inputValue != null) __obj.updateDynamic("inputValue")(inputValue.asInstanceOf[js.Any])
-    if (maxTags != null) __obj.updateDynamic("maxTags")(maxTags.asInstanceOf[js.Any])
-    if (onChangeInput != null) __obj.updateDynamic("onChangeInput")(js.Any.fromFunction1(onChangeInput))
-    if (onValidationReject != null) __obj.updateDynamic("onValidationReject")(js.Any.fromFunction1(onValidationReject))
-    if (!js.isUndefined(onlyUnique)) __obj.updateDynamic("onlyUnique")(onlyUnique.asInstanceOf[js.Any])
-    if (pasteSplit != null) __obj.updateDynamic("pasteSplit")(js.Any.fromFunction1(pasteSplit))
-    if (!js.isUndefined(preventSubmit)) __obj.updateDynamic("preventSubmit")(preventSubmit.asInstanceOf[js.Any])
-    if (removeKeys != null) __obj.updateDynamic("removeKeys")(removeKeys.asInstanceOf[js.Any])
-    if (renderInput != null) __obj.updateDynamic("renderInput")(js.Any.fromFunction1(renderInput))
-    if (renderLayout != null) __obj.updateDynamic("renderLayout")(js.Any.fromFunction2(renderLayout))
-    if (renderTag != null) __obj.updateDynamic("renderTag")(js.Any.fromFunction1(renderTag))
-    if (tagDisplayProp != null) __obj.updateDynamic("tagDisplayProp")(tagDisplayProp.asInstanceOf[js.Any])
-    if (tagProps != null) __obj.updateDynamic("tagProps")(tagProps.asInstanceOf[js.Any])
-    if (validationRegex != null) __obj.updateDynamic("validationRegex")(validationRegex.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder[Tag] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^[js.Any]] {
+    @scala.inline
+    def addKeys(value: js.Array[Double | String]): this.type = set("addKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def addOnBlur(value: Boolean): this.type = set("addOnBlur", value.asInstanceOf[js.Any])
+    @scala.inline
+    def addOnPaste(value: Boolean): this.type = set("addOnPaste", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def currentValue(value: String): this.type = set("currentValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusedClassName(value: String): this.type = set("focusedClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputProps(value: InputProps): this.type = set("inputProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputValue(value: String): this.type = set("inputValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxTags(value: Double): this.type = set("maxTags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChangeInput(value: /* value */ String => Unit): this.type = set("onChangeInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def onValidationReject(value: /* tags */ js.Array[String] => Unit): this.type = set("onValidationReject", js.Any.fromFunction1(value))
+    @scala.inline
+    def onlyUnique(value: Boolean): this.type = set("onlyUnique", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pasteSplit(value: /* data */ String => js.Array[String]): this.type = set("pasteSplit", js.Any.fromFunction1(value))
+    @scala.inline
+    def preventSubmit(value: Boolean): this.type = set("preventSubmit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def removeKeys(value: js.Array[Double]): this.type = set("removeKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderInput(value: /* props */ RenderInputProps[Tag] => TagMod[Any]): this.type = set("renderInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderLayout(value: (/* tagElements */ js.Array[ReactElement], /* inputElement */ ReactElement) => ReactChild): this.type = set("renderLayout", js.Any.fromFunction2(value))
+    @scala.inline
+    def renderTag(value: /* props */ RenderTagProps[Tag] => TagMod[Any]): this.type = set("renderTag", js.Any.fromFunction1(value))
+    @scala.inline
+    def tagDisplayProp(value: /* keyof Tag */ String): this.type = set("tagDisplayProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tagDisplayPropNull: this.type = set("tagDisplayProp", null)
+    @scala.inline
+    def tagProps(value: TagProps): this.type = set("tagProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validationRegex(value: js.RegExp): this.type = set("validationRegex", value.asInstanceOf[js.Any])
   }
-  type Props = ReactTagsInputProps
+  
+  def withProps[Tag](p: ReactTagsInputProps[Tag]): Builder[Tag] = new Builder[Tag](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[Tag](onChange: (js.Array[Tag], js.Array[Tag], js.Array[Double]) => Unit, value: js.Array[Tag]): Builder[Tag] = {
+    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction3(onChange), value = value.asInstanceOf[js.Any])
+    new Builder[Tag](js.Array(this.component, __props.asInstanceOf[ReactTagsInputProps[Tag]]))
+  }
 }
 

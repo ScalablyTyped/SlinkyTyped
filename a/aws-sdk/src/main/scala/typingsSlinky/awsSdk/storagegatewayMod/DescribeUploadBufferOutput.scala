@@ -23,18 +23,65 @@ trait DescribeUploadBufferOutput extends js.Object {
 
 object DescribeUploadBufferOutput {
   @scala.inline
-  def apply(
-    DiskIds: DiskIds = null,
-    GatewayARN: GatewayARN = null,
-    UploadBufferAllocatedInBytes: Int | Double = null,
-    UploadBufferUsedInBytes: Int | Double = null
-  ): DescribeUploadBufferOutput = {
+  def apply(): DescribeUploadBufferOutput = {
     val __obj = js.Dynamic.literal()
-    if (DiskIds != null) __obj.updateDynamic("DiskIds")(DiskIds.asInstanceOf[js.Any])
-    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
-    if (UploadBufferAllocatedInBytes != null) __obj.updateDynamic("UploadBufferAllocatedInBytes")(UploadBufferAllocatedInBytes.asInstanceOf[js.Any])
-    if (UploadBufferUsedInBytes != null) __obj.updateDynamic("UploadBufferUsedInBytes")(UploadBufferUsedInBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeUploadBufferOutput]
   }
+  @scala.inline
+  implicit class DescribeUploadBufferOutputOps[Self <: DescribeUploadBufferOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiskIds(value: DiskIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadBufferAllocatedInBytes(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadBufferAllocatedInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadBufferAllocatedInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadBufferAllocatedInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUploadBufferUsedInBytes(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadBufferUsedInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUploadBufferUsedInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UploadBufferUsedInBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

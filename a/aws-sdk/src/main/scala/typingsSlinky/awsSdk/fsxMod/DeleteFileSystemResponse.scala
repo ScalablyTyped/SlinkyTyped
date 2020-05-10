@@ -19,16 +19,53 @@ trait DeleteFileSystemResponse extends js.Object {
 
 object DeleteFileSystemResponse {
   @scala.inline
-  def apply(
-    FileSystemId: FileSystemId = null,
-    Lifecycle: FileSystemLifecycle = null,
-    WindowsResponse: DeleteFileSystemWindowsResponse = null
-  ): DeleteFileSystemResponse = {
+  def apply(): DeleteFileSystemResponse = {
     val __obj = js.Dynamic.literal()
-    if (FileSystemId != null) __obj.updateDynamic("FileSystemId")(FileSystemId.asInstanceOf[js.Any])
-    if (Lifecycle != null) __obj.updateDynamic("Lifecycle")(Lifecycle.asInstanceOf[js.Any])
-    if (WindowsResponse != null) __obj.updateDynamic("WindowsResponse")(WindowsResponse.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteFileSystemResponse]
   }
+  @scala.inline
+  implicit class DeleteFileSystemResponseOps[Self <: DeleteFileSystemResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileSystemId(value: FileSystemId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileSystemId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSystemId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecycle(value: FileSystemLifecycle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Lifecycle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Lifecycle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWindowsResponse(value: DeleteFileSystemWindowsResponse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowsResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWindowsResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WindowsResponse")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

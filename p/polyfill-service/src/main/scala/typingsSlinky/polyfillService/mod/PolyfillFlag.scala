@@ -12,10 +12,8 @@ trait PolyfillFlag extends js.Object
 
 object PolyfillFlag {
   @scala.inline
-  def always: typingsSlinky.polyfillService.polyfillServiceStrings.always = this.cast("always")
+  def always: typingsSlinky.polyfillService.polyfillServiceStrings.always = "always".asInstanceOf[typingsSlinky.polyfillService.polyfillServiceStrings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def gated: typingsSlinky.polyfillService.polyfillServiceStrings.gated = this.cast("gated")
+  def gated: typingsSlinky.polyfillService.polyfillServiceStrings.gated = "gated".asInstanceOf[typingsSlinky.polyfillService.polyfillServiceStrings.gated]
 }
 

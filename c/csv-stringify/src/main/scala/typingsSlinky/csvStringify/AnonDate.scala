@@ -7,33 +7,91 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDate extends js.Object {
-  var boolean: js.UndefOr[Cast[Boolean]] = js.undefined
-  var date: js.UndefOr[Cast[js.Date]] = js.undefined
-  var number: js.UndefOr[Cast[Double]] = js.undefined
+  var boolean: js.UndefOr[Cast[Boolean]] = js.native
+  var date: js.UndefOr[Cast[js.Date]] = js.native
+  var number: js.UndefOr[Cast[Double]] = js.native
   /**
     * Custom formatter for generic object values
     */
-  var `object`: js.UndefOr[Cast[Record[String, _]]] = js.undefined
-  var string: js.UndefOr[Cast[String]] = js.undefined
+  var `object`: js.UndefOr[Cast[Record[String, _]]] = js.native
+  var string: js.UndefOr[Cast[String]] = js.native
 }
 
 object AnonDate {
   @scala.inline
-  def apply(
-    boolean: (Boolean, /* context */ CastingContext) => String = null,
-    date: (js.Date, /* context */ CastingContext) => String = null,
-    number: (Double, /* context */ CastingContext) => String = null,
-    `object`: (Record[String, _], /* context */ CastingContext) => String = null,
-    string: (String, /* context */ CastingContext) => String = null
-  ): AnonDate = {
+  def apply(): AnonDate = {
     val __obj = js.Dynamic.literal()
-    if (boolean != null) __obj.updateDynamic("boolean")(js.Any.fromFunction2(boolean))
-    if (date != null) __obj.updateDynamic("date")(js.Any.fromFunction2(date))
-    if (number != null) __obj.updateDynamic("number")(js.Any.fromFunction2(number))
-    if (`object` != null) __obj.updateDynamic("object")(js.Any.fromFunction2(`object`))
-    if (string != null) __obj.updateDynamic("string")(js.Any.fromFunction2(string))
     __obj.asInstanceOf[AnonDate]
   }
+  @scala.inline
+  implicit class AnonDateOps[Self <: AnonDate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBoolean(value: (Boolean, /* context */ CastingContext) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boolean")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBoolean: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boolean")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDate(value: (js.Date, /* context */ CastingContext) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumber(value: (Double, /* context */ CastingContext) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObject(value: (Record[String, _], /* context */ CastingContext) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutObject: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withString(value: (String, /* context */ CastingContext) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutString: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

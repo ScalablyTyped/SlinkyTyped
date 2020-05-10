@@ -26,18 +26,65 @@ trait ListBucketMetricsConfigurationsOutput extends js.Object {
 
 object ListBucketMetricsConfigurationsOutput {
   @scala.inline
-  def apply(
-    ContinuationToken: Token = null,
-    IsTruncated: js.UndefOr[Boolean] = js.undefined,
-    MetricsConfigurationList: MetricsConfigurationList = null,
-    NextContinuationToken: NextToken = null
-  ): ListBucketMetricsConfigurationsOutput = {
+  def apply(): ListBucketMetricsConfigurationsOutput = {
     val __obj = js.Dynamic.literal()
-    if (ContinuationToken != null) __obj.updateDynamic("ContinuationToken")(ContinuationToken.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsTruncated)) __obj.updateDynamic("IsTruncated")(IsTruncated.asInstanceOf[js.Any])
-    if (MetricsConfigurationList != null) __obj.updateDynamic("MetricsConfigurationList")(MetricsConfigurationList.asInstanceOf[js.Any])
-    if (NextContinuationToken != null) __obj.updateDynamic("NextContinuationToken")(NextContinuationToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListBucketMetricsConfigurationsOutput]
   }
+  @scala.inline
+  implicit class ListBucketMetricsConfigurationsOutputOps[Self <: ListBucketMetricsConfigurationsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContinuationToken(value: Token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinuationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinuationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContinuationToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTruncated(value: IsTruncated): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTruncated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetricsConfigurationList(value: MetricsConfigurationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricsConfigurationList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetricsConfigurationList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricsConfigurationList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextContinuationToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextContinuationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextContinuationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextContinuationToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonInfo extends js.Object {
   /**
     * id is used to specifying element when willing to update
@@ -14,7 +15,7 @@ trait AnonInfo extends js.Object {
     * "undefined"
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.id
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * Whether the element is totally ignored (neither render
     * nor listen events).
@@ -22,7 +23,7 @@ trait AnonInfo extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.ignore
     */
-  var ignore: js.UndefOr[Boolean] = js.undefined
+  var ignore: js.UndefOr[Boolean] = js.native
   /**
     * User defined data, can be visited in event listeners.
     *
@@ -31,14 +32,14 @@ trait AnonInfo extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.info
     */
-  var info: js.UndefOr[js.Any] = js.undefined
+  var info: js.UndefOr[js.Any] = js.native
   /**
     * Whether the element is visible.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.invisible
     */
-  var invisible: js.UndefOr[Boolean] = js.undefined
+  var invisible: js.UndefOr[Boolean] = js.native
   /**
     * See
     * [diffChildrenByName](https://echarts.apache.org/en/option.html#series-custom.renderItem.return_polygon.diffChildrenByName)
@@ -49,7 +50,7 @@ trait AnonInfo extends js.Object {
     * "undefined"
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.name
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /**
     * `2D transform` can be applied to graphic elements, including:
     *
@@ -88,7 +89,7 @@ trait AnonInfo extends js.Object {
     * [0, 0]
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.origin
     */
-  var origin: js.UndefOr[Double] = js.undefined
+  var origin: js.UndefOr[Double] = js.native
   /**
     * `2D transform` can be applied to graphic elements, including:
     *
@@ -127,7 +128,7 @@ trait AnonInfo extends js.Object {
     * [0, 0]
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.position
     */
-  var position: js.UndefOr[js.Array[_]] = js.undefined
+  var position: js.UndefOr[js.Array[_]] = js.native
   /**
     * `2D transform` can be applied to graphic elements, including:
     *
@@ -164,7 +165,7 @@ trait AnonInfo extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.rotation
     */
-  var rotation: js.UndefOr[Double] = js.undefined
+  var rotation: js.UndefOr[Double] = js.native
   /**
     * `2D transform` can be applied to graphic elements, including:
     *
@@ -203,18 +204,18 @@ trait AnonInfo extends js.Object {
     * [1, 1]
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.scale
     */
-  var scale: js.UndefOr[js.Array[_]] = js.undefined
+  var scale: js.UndefOr[js.Array[_]] = js.native
   /**
     * Whether response to mouse events / touch events.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.silent
     */
-  var silent: js.UndefOr[Boolean] = js.undefined
+  var silent: js.UndefOr[Boolean] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.style
     */
-  var style: js.UndefOr[AnonFont] = js.undefined
+  var style: js.UndefOr[AnonFont] = js.native
   /**
     * Empahsis style of the graphic element, whose structure
     * is the same as
@@ -224,7 +225,7 @@ trait AnonInfo extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.styleEmphasis
     */
-  var styleEmphasis: js.UndefOr[js.Object] = js.undefined
+  var styleEmphasis: js.UndefOr[js.Object] = js.native
   /**
     * Must be specified when define a graphic element at the
     * first time.
@@ -261,7 +262,7 @@ trait AnonInfo extends js.Object {
     * "text"
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.type
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
   /**
     * Define the overlap relationship between graphic elements.
     *
@@ -270,43 +271,190 @@ trait AnonInfo extends js.Object {
     * "undefined"
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return_text.z2
     */
-  var z2: js.UndefOr[Double] = js.undefined
+  var z2: js.UndefOr[Double] = js.native
 }
 
 object AnonInfo {
   @scala.inline
-  def apply(
-    id: String = null,
-    ignore: js.UndefOr[Boolean] = js.undefined,
-    info: js.Any = null,
-    invisible: js.UndefOr[Boolean] = js.undefined,
-    name: String = null,
-    origin: Int | Double = null,
-    position: js.Array[_] = null,
-    rotation: Int | Double = null,
-    scale: js.Array[_] = null,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    style: AnonFont = null,
-    styleEmphasis: js.Object = null,
-    `type`: String = null,
-    z2: Int | Double = null
-  ): AnonInfo = {
+  def apply(): AnonInfo = {
     val __obj = js.Dynamic.literal()
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignore)) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (info != null) __obj.updateDynamic("info")(info.asInstanceOf[js.Any])
-    if (!js.isUndefined(invisible)) __obj.updateDynamic("invisible")(invisible.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (origin != null) __obj.updateDynamic("origin")(origin.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (rotation != null) __obj.updateDynamic("rotation")(rotation.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styleEmphasis != null) __obj.updateDynamic("styleEmphasis")(styleEmphasis.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (z2 != null) __obj.updateDynamic("z2")(z2.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonInfo]
   }
+  @scala.inline
+  implicit class AnonInfoOps[Self <: AnonInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnore(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfo(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInvisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInvisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invisible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScale(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSilent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSilent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: AnonFont): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleEmphasis(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleEmphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleEmphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZ2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZ2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z2")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

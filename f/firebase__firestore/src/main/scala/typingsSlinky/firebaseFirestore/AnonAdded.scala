@@ -6,36 +6,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAdded extends js.Object {
-  var added: js.UndefOr[js.Array[Document]] = js.undefined
-  var errorCode: js.UndefOr[Code] = js.undefined
-  var fromCache: js.UndefOr[Boolean] = js.undefined
-  var hasPendingWrites: js.UndefOr[Boolean] = js.undefined
-  var metadata: js.UndefOr[js.Array[Document]] = js.undefined
-  var modified: js.UndefOr[js.Array[Document]] = js.undefined
-  var removed: js.UndefOr[js.Array[Document]] = js.undefined
+  var added: js.UndefOr[js.Array[Document]] = js.native
+  var errorCode: js.UndefOr[Code] = js.native
+  var fromCache: js.UndefOr[Boolean] = js.native
+  var hasPendingWrites: js.UndefOr[Boolean] = js.native
+  var metadata: js.UndefOr[js.Array[Document]] = js.native
+  var modified: js.UndefOr[js.Array[Document]] = js.native
+  var removed: js.UndefOr[js.Array[Document]] = js.native
 }
 
 object AnonAdded {
   @scala.inline
-  def apply(
-    added: js.Array[Document] = null,
-    errorCode: Code = null,
-    fromCache: js.UndefOr[Boolean] = js.undefined,
-    hasPendingWrites: js.UndefOr[Boolean] = js.undefined,
-    metadata: js.Array[Document] = null,
-    modified: js.Array[Document] = null,
-    removed: js.Array[Document] = null
-  ): AnonAdded = {
+  def apply(): AnonAdded = {
     val __obj = js.Dynamic.literal()
-    if (added != null) __obj.updateDynamic("added")(added.asInstanceOf[js.Any])
-    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
-    if (!js.isUndefined(fromCache)) __obj.updateDynamic("fromCache")(fromCache.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasPendingWrites)) __obj.updateDynamic("hasPendingWrites")(hasPendingWrites.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (modified != null) __obj.updateDynamic("modified")(modified.asInstanceOf[js.Any])
-    if (removed != null) __obj.updateDynamic("removed")(removed.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAdded]
   }
+  @scala.inline
+  implicit class AnonAddedOps[Self <: AnonAdded] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdded(value: js.Array[Document]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("added")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("added")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorCode(value: Code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFromCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFromCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromCache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasPendingWrites(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasPendingWrites")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasPendingWrites: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasPendingWrites")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: js.Array[Document]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModified(value: js.Array[Document]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modified")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModified: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modified")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoved(value: js.Array[Document]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoved: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

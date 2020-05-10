@@ -20,26 +20,24 @@ trait MailTipsType extends js.Object
 
 object MailTipsType {
   @scala.inline
-  def automaticReplies: typingsSlinky.microsoftGraph.microsoftGraphStrings.automaticReplies = this.cast("automaticReplies")
+  def automaticReplies: typingsSlinky.microsoftGraph.microsoftGraphStrings.automaticReplies = "automaticReplies".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.automaticReplies]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def customMailTip: typingsSlinky.microsoftGraph.microsoftGraphStrings.customMailTip = "customMailTip".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.customMailTip]
   @scala.inline
-  def customMailTip: typingsSlinky.microsoftGraph.microsoftGraphStrings.customMailTip = this.cast("customMailTip")
+  def deliveryRestriction: typingsSlinky.microsoftGraph.microsoftGraphStrings.deliveryRestriction = "deliveryRestriction".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deliveryRestriction]
   @scala.inline
-  def deliveryRestriction: typingsSlinky.microsoftGraph.microsoftGraphStrings.deliveryRestriction = this.cast("deliveryRestriction")
+  def externalMemberCount: typingsSlinky.microsoftGraph.microsoftGraphStrings.externalMemberCount = "externalMemberCount".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.externalMemberCount]
   @scala.inline
-  def externalMemberCount: typingsSlinky.microsoftGraph.microsoftGraphStrings.externalMemberCount = this.cast("externalMemberCount")
+  def mailboxFullStatus: typingsSlinky.microsoftGraph.microsoftGraphStrings.mailboxFullStatus = "mailboxFullStatus".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.mailboxFullStatus]
   @scala.inline
-  def mailboxFullStatus: typingsSlinky.microsoftGraph.microsoftGraphStrings.mailboxFullStatus = this.cast("mailboxFullStatus")
+  def maxMessageSize: typingsSlinky.microsoftGraph.microsoftGraphStrings.maxMessageSize = "maxMessageSize".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.maxMessageSize]
   @scala.inline
-  def maxMessageSize: typingsSlinky.microsoftGraph.microsoftGraphStrings.maxMessageSize = this.cast("maxMessageSize")
+  def moderationStatus: typingsSlinky.microsoftGraph.microsoftGraphStrings.moderationStatus = "moderationStatus".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.moderationStatus]
   @scala.inline
-  def moderationStatus: typingsSlinky.microsoftGraph.microsoftGraphStrings.moderationStatus = this.cast("moderationStatus")
+  def recipientScope: typingsSlinky.microsoftGraph.microsoftGraphStrings.recipientScope = "recipientScope".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.recipientScope]
   @scala.inline
-  def recipientScope: typingsSlinky.microsoftGraph.microsoftGraphStrings.recipientScope = this.cast("recipientScope")
+  def recipientSuggestions: typingsSlinky.microsoftGraph.microsoftGraphStrings.recipientSuggestions = "recipientSuggestions".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.recipientSuggestions]
   @scala.inline
-  def recipientSuggestions: typingsSlinky.microsoftGraph.microsoftGraphStrings.recipientSuggestions = this.cast("recipientSuggestions")
-  @scala.inline
-  def totalMemberCount: typingsSlinky.microsoftGraph.microsoftGraphStrings.totalMemberCount = this.cast("totalMemberCount")
+  def totalMemberCount: typingsSlinky.microsoftGraph.microsoftGraphStrings.totalMemberCount = "totalMemberCount".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.totalMemberCount]
 }
 

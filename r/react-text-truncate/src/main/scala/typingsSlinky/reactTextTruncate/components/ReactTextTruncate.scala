@@ -1,53 +1,53 @@
 package typingsSlinky.reactTextTruncate.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTextTruncate.mod.TextTruncateProps
 import typingsSlinky.reactTextTruncate.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactTextTruncate
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactTextTruncate {
   @JSImport("react-text-truncate", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    containerClassName: String = null,
-    element: String = null,
-    line: Double | Boolean = null,
-    maxCalculateTimes: Int | Double = null,
-    onCalculated: () => Unit = null,
-    onToggled: /* truncated */ Boolean => Unit = null,
-    onTruncated: () => Unit = null,
-    text: String = null,
-    textElement: TagMod[Any] = null,
-    textTruncateChild: TagMod[Any] = null,
-    truncateText: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (containerClassName != null) __obj.updateDynamic("containerClassName")(containerClassName.asInstanceOf[js.Any])
-    if (element != null) __obj.updateDynamic("element")(element.asInstanceOf[js.Any])
-    if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
-    if (maxCalculateTimes != null) __obj.updateDynamic("maxCalculateTimes")(maxCalculateTimes.asInstanceOf[js.Any])
-    if (onCalculated != null) __obj.updateDynamic("onCalculated")(js.Any.fromFunction0(onCalculated))
-    if (onToggled != null) __obj.updateDynamic("onToggled")(js.Any.fromFunction1(onToggled))
-    if (onTruncated != null) __obj.updateDynamic("onTruncated")(js.Any.fromFunction0(onTruncated))
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (textElement != null) __obj.updateDynamic("textElement")(textElement.asInstanceOf[js.Any])
-    if (textTruncateChild != null) __obj.updateDynamic("textTruncateChild")(textTruncateChild.asInstanceOf[js.Any])
-    if (truncateText != null) __obj.updateDynamic("truncateText")(truncateText.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def containerClassName(value: String): this.type = set("containerClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def element(value: String): this.type = set("element", value.asInstanceOf[js.Any])
+    @scala.inline
+    def line(value: Double | Boolean): this.type = set("line", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxCalculateTimes(value: Double): this.type = set("maxCalculateTimes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCalculated(value: () => Unit): this.type = set("onCalculated", js.Any.fromFunction0(value))
+    @scala.inline
+    def onToggled(value: /* truncated */ Boolean => Unit): this.type = set("onToggled", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTruncated(value: () => Unit): this.type = set("onTruncated", js.Any.fromFunction0(value))
+    @scala.inline
+    def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textElementReactElement(value: ReactElement): this.type = set("textElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textElement(value: TagMod[Any]): this.type = set("textElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textTruncateChildReactElement(value: ReactElement): this.type = set("textTruncateChild", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textTruncateChild(value: TagMod[Any]): this.type = set("textTruncateChild", value.asInstanceOf[js.Any])
+    @scala.inline
+    def truncateText(value: String): this.type = set("truncateText", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactTextTruncate.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TextTruncateProps
+  
+  def withProps(p: TextTruncateProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactTextTruncate.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

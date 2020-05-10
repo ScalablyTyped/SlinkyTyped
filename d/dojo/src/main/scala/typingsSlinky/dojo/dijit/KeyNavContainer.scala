@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
   * Also, child widgets must implement a focus() method.
   * 
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dijit.Container because Inheritance from two classes. Inlined addChild, addChild, buildRendering, getIndexOfChild, hasChildren, removeChild, removeChild */ @JSGlobal("dijit._KeyNavContainer")
 @js.native
 class KeyNavContainer () extends KeyNavMixin {

@@ -11,9 +11,6 @@ import scala.scalajs.js.annotation._
 
 object rcTableStrings {
   @js.native
-  sealed trait RC_TABLE_INTERNAL_COL_DEFINE extends js.Object
-  
-  @js.native
   sealed trait a
     extends _Component[js.Any]
   
@@ -272,6 +269,9 @@ object rcTableStrings {
     extends _Component[js.Any]
   
   @js.native
+  sealed trait ltr extends js.Object
+  
+  @js.native
   sealed trait main
     extends _Component[js.Any]
   
@@ -355,9 +355,6 @@ object rcTableStrings {
     extends _Component[js.Any]
   
   @js.native
-  sealed trait `rc-table-internal-hook` extends js.Object
-  
-  @js.native
   sealed trait right
     extends AlignType
        with _FixedType
@@ -372,6 +369,9 @@ object rcTableStrings {
   @js.native
   sealed trait rt
     extends _Component[js.Any]
+  
+  @js.native
+  sealed trait rtl extends js.Object
   
   @js.native
   sealed trait ruby
@@ -395,6 +395,10 @@ object rcTableStrings {
   
   @js.native
   sealed trait select
+    extends _Component[js.Any]
+  
+  @js.native
+  sealed trait slot
     extends _Component[js.Any]
   
   @js.native
@@ -501,8 +505,6 @@ object rcTableStrings {
   sealed trait webview
     extends _Component[js.Any]
   
-  @scala.inline
-  def RC_TABLE_INTERNAL_COL_DEFINE: RC_TABLE_INTERNAL_COL_DEFINE = "RC_TABLE_INTERNAL_COL_DEFINE".asInstanceOf[RC_TABLE_INTERNAL_COL_DEFINE]
   @scala.inline
   def a: a = "a".asInstanceOf[a]
   @scala.inline
@@ -634,6 +636,8 @@ object rcTableStrings {
   @scala.inline
   def link: link = "link".asInstanceOf[link]
   @scala.inline
+  def ltr: ltr = "ltr".asInstanceOf[ltr]
+  @scala.inline
   def main: main = "main".asInstanceOf[main]
   @scala.inline
   def map: map = "map".asInstanceOf[map]
@@ -676,8 +680,6 @@ object rcTableStrings {
   @scala.inline
   def q: q = "q".asInstanceOf[q]
   @scala.inline
-  def `rc-table-internal-hook`: `rc-table-internal-hook` = "rc-table-internal-hook".asInstanceOf[`rc-table-internal-hook`]
-  @scala.inline
   def right: right = "right".asInstanceOf[right]
   @scala.inline
   def row: row = "row".asInstanceOf[row]
@@ -685,6 +687,8 @@ object rcTableStrings {
   def rp: rp = "rp".asInstanceOf[rp]
   @scala.inline
   def rt: rt = "rt".asInstanceOf[rt]
+  @scala.inline
+  def rtl: rtl = "rtl".asInstanceOf[rtl]
   @scala.inline
   def ruby: ruby = "ruby".asInstanceOf[ruby]
   @scala.inline
@@ -697,6 +701,8 @@ object rcTableStrings {
   def section: section = "section".asInstanceOf[section]
   @scala.inline
   def select: select = "select".asInstanceOf[select]
+  @scala.inline
+  def slot: slot = "slot".asInstanceOf[slot]
   @scala.inline
   def small: small = "small".asInstanceOf[small]
   @scala.inline

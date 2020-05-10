@@ -21,28 +21,26 @@ trait VerticalAlign extends js.Object
 
 object VerticalAlign {
   @scala.inline
-  def baseline: typingsSlinky.halogenium.halogeniumStrings.baseline = this.cast("baseline")
+  def baseline: typingsSlinky.halogenium.halogeniumStrings.baseline = "baseline".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.baseline]
   @scala.inline
-  def bottom: typingsSlinky.halogenium.halogeniumStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.halogenium.halogeniumStrings.bottom = "bottom".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inherit: typingsSlinky.halogenium.halogeniumStrings.inherit = "inherit".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.halogenium.halogeniumStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.halogenium.halogeniumStrings.initial = "initial".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.halogenium.halogeniumStrings.initial = this.cast("initial")
+  def length: typingsSlinky.halogenium.halogeniumStrings.length = "length".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.length]
   @scala.inline
-  def length: typingsSlinky.halogenium.halogeniumStrings.length = this.cast("length")
+  def middle: typingsSlinky.halogenium.halogeniumStrings.middle = "middle".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.middle]
   @scala.inline
-  def middle: typingsSlinky.halogenium.halogeniumStrings.middle = this.cast("middle")
+  def sub: typingsSlinky.halogenium.halogeniumStrings.sub = "sub".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.sub]
   @scala.inline
-  def sub: typingsSlinky.halogenium.halogeniumStrings.sub = this.cast("sub")
+  def `super`: typingsSlinky.halogenium.halogeniumStrings.`super` = "super".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.`super`]
   @scala.inline
-  def `super`: typingsSlinky.halogenium.halogeniumStrings.`super` = this.cast("super")
+  def `text-bottom`: typingsSlinky.halogenium.halogeniumStrings.`text-bottom` = "text-bottom".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.`text-bottom`]
   @scala.inline
-  def `text-bottom`: typingsSlinky.halogenium.halogeniumStrings.`text-bottom` = this.cast("text-bottom")
+  def `text-top`: typingsSlinky.halogenium.halogeniumStrings.`text-top` = "text-top".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.`text-top`]
   @scala.inline
-  def `text-top`: typingsSlinky.halogenium.halogeniumStrings.`text-top` = this.cast("text-top")
-  @scala.inline
-  def top: typingsSlinky.halogenium.halogeniumStrings.top = this.cast("top")
+  def top: typingsSlinky.halogenium.halogeniumStrings.top = "top".asInstanceOf[typingsSlinky.halogenium.halogeniumStrings.top]
 }
 

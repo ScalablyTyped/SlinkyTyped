@@ -18,7 +18,7 @@ object flatbuffers extends js.Object {
   @js.native
   class ByteBuffer protected ()
     extends typingsSlinky.flatbuffers.mod._Global_.flatbuffers.ByteBuffer {
-    def this(bytes: scala.scalajs.js.typedarray.Uint8Array) = this()
+    def this(bytes: js.typedarray.Uint8Array) = this()
   }
   
   ////////////////////////////////////////////////////////////////////////////////
@@ -32,9 +32,9 @@ object flatbuffers extends js.Object {
   val SIZEOF_INT: Double = js.native
   val SIZEOF_SHORT: Double = js.native
   val SIZE_PREFIX_LENGTH: Double = js.native
-  val float32: scala.scalajs.js.typedarray.Float32Array = js.native
-  val float64: scala.scalajs.js.typedarray.Float64Array = js.native
-  val int32: scala.scalajs.js.typedarray.Int32Array = js.native
+  val float32: js.typedarray.Float32Array = js.native
+  val float64: js.typedarray.Float64Array = js.native
+  val int32: js.typedarray.Int32Array = js.native
   val isLittleEndian: Boolean = js.native
   /* static members */
   @js.native

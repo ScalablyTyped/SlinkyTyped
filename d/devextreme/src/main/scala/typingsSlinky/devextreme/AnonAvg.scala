@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAvg extends js.Object {
-  var avg: js.UndefOr[String] = js.undefined
-  var avgOtherColumn: js.UndefOr[String] = js.undefined
-  var count: js.UndefOr[String] = js.undefined
-  var max: js.UndefOr[String] = js.undefined
-  var maxOtherColumn: js.UndefOr[String] = js.undefined
-  var min: js.UndefOr[String] = js.undefined
-  var minOtherColumn: js.UndefOr[String] = js.undefined
-  var sum: js.UndefOr[String] = js.undefined
-  var sumOtherColumn: js.UndefOr[String] = js.undefined
+  var avg: js.UndefOr[String] = js.native
+  var avgOtherColumn: js.UndefOr[String] = js.native
+  var count: js.UndefOr[String] = js.native
+  var max: js.UndefOr[String] = js.native
+  var maxOtherColumn: js.UndefOr[String] = js.native
+  var min: js.UndefOr[String] = js.native
+  var minOtherColumn: js.UndefOr[String] = js.native
+  var sum: js.UndefOr[String] = js.native
+  var sumOtherColumn: js.UndefOr[String] = js.native
 }
 
 object AnonAvg {
   @scala.inline
-  def apply(
-    avg: String = null,
-    avgOtherColumn: String = null,
-    count: String = null,
-    max: String = null,
-    maxOtherColumn: String = null,
-    min: String = null,
-    minOtherColumn: String = null,
-    sum: String = null,
-    sumOtherColumn: String = null
-  ): AnonAvg = {
+  def apply(): AnonAvg = {
     val __obj = js.Dynamic.literal()
-    if (avg != null) __obj.updateDynamic("avg")(avg.asInstanceOf[js.Any])
-    if (avgOtherColumn != null) __obj.updateDynamic("avgOtherColumn")(avgOtherColumn.asInstanceOf[js.Any])
-    if (count != null) __obj.updateDynamic("count")(count.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxOtherColumn != null) __obj.updateDynamic("maxOtherColumn")(maxOtherColumn.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minOtherColumn != null) __obj.updateDynamic("minOtherColumn")(minOtherColumn.asInstanceOf[js.Any])
-    if (sum != null) __obj.updateDynamic("sum")(sum.asInstanceOf[js.Any])
-    if (sumOtherColumn != null) __obj.updateDynamic("sumOtherColumn")(sumOtherColumn.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAvg]
   }
+  @scala.inline
+  implicit class AnonAvgOps[Self <: AnonAvg] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAvgOtherColumn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avgOtherColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvgOtherColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avgOtherColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxOtherColumn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOtherColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxOtherColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxOtherColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinOtherColumn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minOtherColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinOtherColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minOtherColumn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSum(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSum: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sum")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSumOtherColumn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sumOtherColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSumOtherColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sumOtherColumn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

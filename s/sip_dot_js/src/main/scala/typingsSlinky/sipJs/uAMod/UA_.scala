@@ -18,14 +18,14 @@ import typingsSlinky.sipJs.libSubscriptionMod.Subscription
 import typingsSlinky.sipJs.libTransportMod.Transport
 import typingsSlinky.sipJs.publishContextMod.PublishContext
 import typingsSlinky.sipJs.referContextMod.ReferServerContext
+import typingsSlinky.sipJs.sipJsStrings.invite
 import typingsSlinky.sipJs.sipJsStrings.inviteSent
-import typingsSlinky.sipJs.sipJsStrings.invite_
-import typingsSlinky.sipJs.sipJsStrings.message_
-import typingsSlinky.sipJs.sipJsStrings.notify_
+import typingsSlinky.sipJs.sipJsStrings.message
+import typingsSlinky.sipJs.sipJsStrings.notify
 import typingsSlinky.sipJs.sipJsStrings.outOfDialogReferRequested
 import typingsSlinky.sipJs.sipJsStrings.registered
 import typingsSlinky.sipJs.sipJsStrings.registrationFailed
-import typingsSlinky.sipJs.sipJsStrings.subscribe_
+import typingsSlinky.sipJs.sipJsStrings.subscribe
 import typingsSlinky.sipJs.sipJsStrings.transportCreated
 import typingsSlinky.sipJs.sipJsStrings.unregistered
 import typingsSlinky.sipJs.subscribeMod.IncomingSubscribeRequest
@@ -140,13 +140,13 @@ class UA_ () extends EventEmitter {
   def normalizeTarget(target: String): js.UndefOr[URI] = js.native
   def normalizeTarget(target: URI): js.UndefOr[URI] = js.native
   @JSName("on")
-  def on_invite(name: invite_, callback: js.Function1[/* session */ InviteServerContext, Unit]): this.type = js.native
+  def on_invite(name: invite, callback: js.Function1[/* session */ InviteServerContext, Unit]): this.type = js.native
   @JSName("on")
   def on_inviteSent(name: inviteSent, callback: js.Function1[/* session */ InviteClientContext, Unit]): this.type = js.native
   @JSName("on")
-  def on_message(name: message_, callback: js.Function1[/* message */ js.Any, Unit]): this.type = js.native
+  def on_message(name: message, callback: js.Function1[/* message */ js.Any, Unit]): this.type = js.native
   @JSName("on")
-  def on_notify(name: notify_, callback: js.Function1[/* request */ js.Any, Unit]): this.type = js.native
+  def on_notify(name: notify, callback: js.Function1[/* request */ js.Any, Unit]): this.type = js.native
   @JSName("on")
   def on_outOfDialogReferRequested(name: outOfDialogReferRequested, callback: js.Function1[/* context */ ReferServerContext, Unit]): this.type = js.native
   @JSName("on")
@@ -157,7 +157,7 @@ class UA_ () extends EventEmitter {
     callback: js.Function2[/* response */ js.UndefOr[js.Any], /* cause */ js.UndefOr[js.Any], Unit]
   ): this.type = js.native
   @JSName("on")
-  def on_subscribe(name: subscribe_, callback: js.Function1[/* subscribe */ IncomingSubscribeRequest, Unit]): this.type = js.native
+  def on_subscribe(name: subscribe, callback: js.Function1[/* subscribe */ IncomingSubscribeRequest, Unit]): this.type = js.native
   @JSName("on")
   def on_transportCreated(name: transportCreated, callback: js.Function1[/* transport */ Transport, Unit]): this.type = js.native
   @JSName("on")

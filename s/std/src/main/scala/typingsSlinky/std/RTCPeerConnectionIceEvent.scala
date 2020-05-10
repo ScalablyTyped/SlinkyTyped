@@ -16,10 +16,13 @@ trait RTCPeerConnectionIceEvent extends Event_ {
 @JSGlobal("RTCPeerConnectionIceEvent")
 @js.native
 object RTCPeerConnectionIceEvent
-  extends Instantiable1[/* type */ java.lang.String, RTCPeerConnectionIceEvent]
+  extends Instantiable1[
+      /* type */ java.lang.String, 
+      org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEvent
+    ]
      with Instantiable2[
       /* type */ java.lang.String, 
-      /* eventInitDict */ RTCPeerConnectionIceEventInit, 
-      RTCPeerConnectionIceEvent
+      /* eventInitDict */ org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEventInit, 
+      org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEvent
     ]
 

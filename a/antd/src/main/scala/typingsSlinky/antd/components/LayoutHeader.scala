@@ -1,14 +1,16 @@
 package typingsSlinky.antd.components
 
+import typingsSlinky.antd.layoutLayoutMod.BasicProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LayoutHeader extends SharedApply_BasicProps_295772230 {
+object LayoutHeader {
   @JSImport("antd", "Layout.Header")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: BasicProps): SharedBuilder_BasicProps_202839332 = new SharedBuilder_BasicProps_202839332(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: LayoutHeader.type): SharedBuilder_BasicProps_202839332 = new SharedBuilder_BasicProps_202839332(js.Array(this.component, js.Dictionary.empty))()
 }
 

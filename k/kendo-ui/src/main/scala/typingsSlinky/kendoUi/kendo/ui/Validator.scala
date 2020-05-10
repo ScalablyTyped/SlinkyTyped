@@ -18,7 +18,7 @@ class Validator protected () extends Widget {
   def hideMessages(): Unit = js.native
   def validate(): Boolean = js.native
   def validateInput(input: JQuery): Boolean = js.native
-  def validateInput(input: typingsSlinky.std.Element): Boolean = js.native
+  def validateInput(input: Element): Boolean = js.native
 }
 
 /* static members */

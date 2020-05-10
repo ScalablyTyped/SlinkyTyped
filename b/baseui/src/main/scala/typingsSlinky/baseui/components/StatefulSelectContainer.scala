@@ -1,10 +1,7 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.selectMod.OnChangeParams
 import typingsSlinky.baseui.selectMod.SelectOverrides
 import typingsSlinky.baseui.selectMod.State
@@ -13,31 +10,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StatefulSelectContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.selectMod.StatefulSelectContainer] {
+object StatefulSelectContainer {
   @JSImport("baseui/select", "StatefulSelectContainer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    initialState: State = null,
-    onChange: /* params */ OnChangeParams => _ = null,
-    overrides: SelectOverrides = null,
-    stateReducer: (/* stateType */ String, /* nextState */ State, /* currentState */ State) => State = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.selectMod.StatefulSelectContainer] = {
-    val __obj = js.Dynamic.literal()
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (stateReducer != null) __obj.updateDynamic("stateReducer")(js.Any.fromFunction3(stateReducer))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.selectMod.StatefulSelectContainer] {
+    @scala.inline
+    def initialState(value: State): this.type = set("initialState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* params */ OnChangeParams => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: SelectOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stateReducer(value: (/* stateType */ String, /* nextState */ State, /* currentState */ State) => State): this.type = set("stateReducer", js.Any.fromFunction3(value))
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.selectMod.StatefulSelectContainer] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.baseui.selectMod.StatefulSelectContainer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = StatefulContainerProps
+  
+  def withProps(p: StatefulContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StatefulSelectContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

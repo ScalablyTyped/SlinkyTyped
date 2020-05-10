@@ -18,11 +18,41 @@ trait GetConnectionsFilter extends js.Object {
 
 object GetConnectionsFilter {
   @scala.inline
-  def apply(ConnectionType: ConnectionType = null, MatchCriteria: MatchCriteria = null): GetConnectionsFilter = {
+  def apply(): GetConnectionsFilter = {
     val __obj = js.Dynamic.literal()
-    if (ConnectionType != null) __obj.updateDynamic("ConnectionType")(ConnectionType.asInstanceOf[js.Any])
-    if (MatchCriteria != null) __obj.updateDynamic("MatchCriteria")(MatchCriteria.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetConnectionsFilter]
   }
+  @scala.inline
+  implicit class GetConnectionsFilterOps[Self <: GetConnectionsFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConnectionType(value: ConnectionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchCriteria(value: MatchCriteria): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchCriteria")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchCriteria: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MatchCriteria")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

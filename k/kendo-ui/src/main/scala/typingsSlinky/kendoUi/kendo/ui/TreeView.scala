@@ -26,24 +26,24 @@ class TreeView protected () extends Widget {
   def append(nodeData: JQuery, parentNode: JQuery, success: js.Function): JQuery = js.native
   def collapse(nodes: String): Unit = js.native
   def collapse(nodes: JQuery): Unit = js.native
-  def collapse(nodes: typingsSlinky.std.Element): Unit = js.native
+  def collapse(nodes: Element): Unit = js.native
   def dataItem(node: String): Node = js.native
   def dataItem(node: JQuery): Node = js.native
-  def dataItem(node: typingsSlinky.std.Element): Node = js.native
+  def dataItem(node: Element): Node = js.native
   def detach(node: String): JQuery = js.native
   def detach(node: JQuery): JQuery = js.native
-  def detach(node: typingsSlinky.std.Element): JQuery = js.native
+  def detach(node: Element): JQuery = js.native
   def enable(nodes: String): Unit = js.native
   def enable(nodes: String, enable: Boolean): Unit = js.native
   def enable(nodes: Boolean): Unit = js.native
   def enable(nodes: Boolean, enable: Boolean): Unit = js.native
   def enable(nodes: JQuery): Unit = js.native
   def enable(nodes: JQuery, enable: Boolean): Unit = js.native
-  def enable(nodes: typingsSlinky.std.Element): Unit = js.native
-  def enable(nodes: typingsSlinky.std.Element, enable: Boolean): Unit = js.native
+  def enable(nodes: Element): Unit = js.native
+  def enable(nodes: Element, enable: Boolean): Unit = js.native
   def expand(nodes: String): Unit = js.native
   def expand(nodes: JQuery): Unit = js.native
-  def expand(nodes: typingsSlinky.std.Element): Unit = js.native
+  def expand(nodes: Element): Unit = js.native
   def expandPath(path: js.Any, complete: js.Function): Unit = js.native
   def expandTo(targetNode: js.Any): Unit = js.native
   def expandTo(targetNode: Node): Unit = js.native
@@ -55,14 +55,14 @@ class TreeView protected () extends Widget {
   def items(): js.Any = js.native
   def parent(node: String): JQuery = js.native
   def parent(node: JQuery): JQuery = js.native
-  def parent(node: typingsSlinky.std.Element): JQuery = js.native
+  def parent(node: Element): JQuery = js.native
   def remove(node: String): Unit = js.native
   def remove(node: JQuery): Unit = js.native
-  def remove(node: typingsSlinky.std.Element): Unit = js.native
+  def remove(node: Element): Unit = js.native
   def select(): JQuery = js.native
   def select(node: String): Unit = js.native
   def select(node: JQuery): Unit = js.native
-  def select(node: typingsSlinky.std.Element): Unit = js.native
+  def select(node: Element): Unit = js.native
   @JSName("select")
   def select_Unit(): Unit = js.native
   def setDataSource(dataSource: HierarchicalDataSource): Unit = js.native
@@ -70,11 +70,11 @@ class TreeView protected () extends Widget {
   def text(node: String, newText: String): Unit = js.native
   def text(node: JQuery): String = js.native
   def text(node: JQuery, newText: String): Unit = js.native
-  def text(node: typingsSlinky.std.Element): String = js.native
-  def text(node: typingsSlinky.std.Element, newText: String): Unit = js.native
+  def text(node: Element): String = js.native
+  def text(node: Element, newText: String): Unit = js.native
   def toggle(node: String): Unit = js.native
   def toggle(node: JQuery): Unit = js.native
-  def toggle(node: typingsSlinky.std.Element): Unit = js.native
+  def toggle(node: Element): Unit = js.native
   def updateIndeterminate(node: JQuery): Unit = js.native
 }
 

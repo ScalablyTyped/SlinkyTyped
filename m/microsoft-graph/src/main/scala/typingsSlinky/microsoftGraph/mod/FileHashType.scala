@@ -19,22 +19,20 @@ trait FileHashType extends js.Object
 
 object FileHashType {
   @scala.inline
-  def authenticodeHash256: typingsSlinky.microsoftGraph.microsoftGraphStrings.authenticodeHash256 = this.cast("authenticodeHash256")
+  def authenticodeHash256: typingsSlinky.microsoftGraph.microsoftGraphStrings.authenticodeHash256 = "authenticodeHash256".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.authenticodeHash256]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ctph: typingsSlinky.microsoftGraph.microsoftGraphStrings.ctph = "ctph".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.ctph]
   @scala.inline
-  def ctph: typingsSlinky.microsoftGraph.microsoftGraphStrings.ctph = this.cast("ctph")
+  def lsHash: typingsSlinky.microsoftGraph.microsoftGraphStrings.lsHash = "lsHash".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lsHash]
   @scala.inline
-  def lsHash: typingsSlinky.microsoftGraph.microsoftGraphStrings.lsHash = this.cast("lsHash")
+  def md5: typingsSlinky.microsoftGraph.microsoftGraphStrings.md5 = "md5".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.md5]
   @scala.inline
-  def md5: typingsSlinky.microsoftGraph.microsoftGraphStrings.md5 = this.cast("md5")
+  def sha1: typingsSlinky.microsoftGraph.microsoftGraphStrings.sha1 = "sha1".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sha1]
   @scala.inline
-  def sha1: typingsSlinky.microsoftGraph.microsoftGraphStrings.sha1 = this.cast("sha1")
+  def sha256: typingsSlinky.microsoftGraph.microsoftGraphStrings.sha256 = "sha256".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.sha256]
   @scala.inline
-  def sha256: typingsSlinky.microsoftGraph.microsoftGraphStrings.sha256 = this.cast("sha256")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

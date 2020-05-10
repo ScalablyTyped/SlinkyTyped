@@ -39,22 +39,89 @@ trait SchemaSeqMapTask extends js.Object {
 
 object SchemaSeqMapTask {
   @scala.inline
-  def apply(
-    inputs: js.Array[SchemaSideInputInfo] = null,
-    name: String = null,
-    outputInfos: js.Array[SchemaSeqMapTaskOutputInfo] = null,
-    stageName: String = null,
-    systemName: String = null,
-    userFn: StringDictionary[js.Any] = null
-  ): SchemaSeqMapTask = {
+  def apply(): SchemaSeqMapTask = {
     val __obj = js.Dynamic.literal()
-    if (inputs != null) __obj.updateDynamic("inputs")(inputs.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (outputInfos != null) __obj.updateDynamic("outputInfos")(outputInfos.asInstanceOf[js.Any])
-    if (stageName != null) __obj.updateDynamic("stageName")(stageName.asInstanceOf[js.Any])
-    if (systemName != null) __obj.updateDynamic("systemName")(systemName.asInstanceOf[js.Any])
-    if (userFn != null) __obj.updateDynamic("userFn")(userFn.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSeqMapTask]
   }
+  @scala.inline
+  implicit class SchemaSeqMapTaskOps[Self <: SchemaSeqMapTask] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputs(value: js.Array[SchemaSideInputInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputInfos(value: js.Array[SchemaSeqMapTaskOutputInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputInfos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputInfos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStageName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStageName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stageName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSystemName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSystemName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserFn(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userFn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserFn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userFn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

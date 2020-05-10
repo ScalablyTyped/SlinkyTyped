@@ -24,34 +24,32 @@ trait QueryOperator extends js.Object
 
 object QueryOperator {
   @scala.inline
-  def CONTAINS: typingsSlinky.servicenowLondon.servicenowLondonStrings.CONTAINS = this.cast("CONTAINS")
+  def CONTAINS: typingsSlinky.servicenowLondon.servicenowLondonStrings.CONTAINS = "CONTAINS".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.CONTAINS]
   @scala.inline
-  def `DOES NOT CONTAIN`: typingsSlinky.servicenowLondon.servicenowLondonStrings.`DOES NOT CONTAIN` = this.cast("DOES NOT CONTAIN")
+  def `DOES NOT CONTAIN`: typingsSlinky.servicenowLondon.servicenowLondonStrings.`DOES NOT CONTAIN` = ("DOES NOT CONTAIN").asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.`DOES NOT CONTAIN`]
   @scala.inline
-  def ENDSWITH: typingsSlinky.servicenowLondon.servicenowLondonStrings.ENDSWITH = this.cast("ENDSWITH")
+  def ENDSWITH: typingsSlinky.servicenowLondon.servicenowLondonStrings.ENDSWITH = "ENDSWITH".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.ENDSWITH]
   @scala.inline
-  def Equalssign: typingsSlinky.servicenowLondon.servicenowLondonStrings.Equalssign = this.cast("=")
+  def Equalssign: typingsSlinky.servicenowLondon.servicenowLondonStrings.Equalssign = "=".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.Equalssign]
   @scala.inline
-  def ExclamationmarkEqualssign: typingsSlinky.servicenowLondon.servicenowLondonStrings.ExclamationmarkEqualssign = this.cast("!=")
+  def ExclamationmarkEqualssign: typingsSlinky.servicenowLondon.servicenowLondonStrings.ExclamationmarkEqualssign = "!=".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.ExclamationmarkEqualssign]
   @scala.inline
-  def Greaterthansign: typingsSlinky.servicenowLondon.servicenowLondonStrings.Greaterthansign = this.cast(">")
+  def Greaterthansign: typingsSlinky.servicenowLondon.servicenowLondonStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.Greaterthansign]
   @scala.inline
-  def GreaterthansignEqualssign: typingsSlinky.servicenowLondon.servicenowLondonStrings.GreaterthansignEqualssign = this.cast(">=")
+  def GreaterthansignEqualssign: typingsSlinky.servicenowLondon.servicenowLondonStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.GreaterthansignEqualssign]
   @scala.inline
-  def IN: typingsSlinky.servicenowLondon.servicenowLondonStrings.IN = this.cast("IN")
+  def IN: typingsSlinky.servicenowLondon.servicenowLondonStrings.IN = "IN".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.IN]
   @scala.inline
-  def INSTANCEOF: typingsSlinky.servicenowLondon.servicenowLondonStrings.INSTANCEOF = this.cast("INSTANCEOF")
+  def INSTANCEOF: typingsSlinky.servicenowLondon.servicenowLondonStrings.INSTANCEOF = "INSTANCEOF".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.INSTANCEOF]
   @scala.inline
-  def Lessthansign: typingsSlinky.servicenowLondon.servicenowLondonStrings.Lessthansign = this.cast("<")
+  def Lessthansign: typingsSlinky.servicenowLondon.servicenowLondonStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.Lessthansign]
   @scala.inline
-  def LessthansignEqualssign: typingsSlinky.servicenowLondon.servicenowLondonStrings.LessthansignEqualssign = this.cast("<=")
+  def LessthansignEqualssign: typingsSlinky.servicenowLondon.servicenowLondonStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.LessthansignEqualssign]
   @scala.inline
-  def `NOT IN`: typingsSlinky.servicenowLondon.servicenowLondonStrings.`NOT IN` = this.cast("NOT IN")
+  def `NOT IN`: typingsSlinky.servicenowLondon.servicenowLondonStrings.`NOT IN` = ("NOT IN").asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.`NOT IN`]
   @scala.inline
-  def SAMEAS: typingsSlinky.servicenowLondon.servicenowLondonStrings.SAMEAS = this.cast("SAMEAS")
+  def SAMEAS: typingsSlinky.servicenowLondon.servicenowLondonStrings.SAMEAS = "SAMEAS".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.SAMEAS]
   @scala.inline
-  def STARTSWITH: typingsSlinky.servicenowLondon.servicenowLondonStrings.STARTSWITH = this.cast("STARTSWITH")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def STARTSWITH: typingsSlinky.servicenowLondon.servicenowLondonStrings.STARTSWITH = "STARTSWITH".asInstanceOf[typingsSlinky.servicenowLondon.servicenowLondonStrings.STARTSWITH]
 }
 

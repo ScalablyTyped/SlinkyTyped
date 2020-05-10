@@ -23,7 +23,7 @@ object signatureMod extends js.Object {
     /**
       * Gets or sets the value of the digital signature.
       */
-    var SignatureValue: scala.scalajs.js.typedarray.Uint8Array | Null = js.native
+    var SignatureValue: js.typedarray.Uint8Array | Null = js.native
     /**
       * Gets or sets the SignedInfo of the current Signature.
       */

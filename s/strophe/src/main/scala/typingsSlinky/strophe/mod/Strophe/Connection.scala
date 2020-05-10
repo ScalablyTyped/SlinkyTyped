@@ -434,7 +434,7 @@ class Connection protected () extends js.Object {
     *  This resumes after pause() has been called.
     */
   def resume(): Unit = js.native
-  def send(elem: js.Array[typingsSlinky.std.Element]): Unit = js.native
+  def send(elem: js.Array[Element]): Unit = js.native
   /** Function: send
     *  Send a stanza.
     *
@@ -447,7 +447,7 @@ class Connection protected () extends js.Object {
     *     [XMLElement] |
     *     Strophe.Builder) elem - The stanza to send.
     */
-  def send(elem: typingsSlinky.std.Element): Unit = js.native
+  def send(elem: Element): Unit = js.native
   def send(elem: Builder): Unit = js.native
   /** Function: sendIQ
     *  Helper function to send IQ stanzas.
@@ -463,15 +463,15 @@ class Connection protected () extends js.Object {
     *  Returns:
     *    The id used to send the IQ.
     */
-  def sendIQ(elem: typingsSlinky.std.Element): String = js.native
-  def sendIQ(elem: typingsSlinky.std.Element, callback: js.Function1[/* stanza */ Element, _]): String = js.native
+  def sendIQ(elem: Element): String = js.native
+  def sendIQ(elem: Element, callback: js.Function1[/* stanza */ Element, _]): String = js.native
   def sendIQ(
-    elem: typingsSlinky.std.Element,
+    elem: Element,
     callback: js.Function1[/* stanza */ Element, _],
     errback: js.Function1[/* stanza */ Element, _]
   ): String = js.native
   def sendIQ(
-    elem: typingsSlinky.std.Element,
+    elem: Element,
     callback: js.Function1[/* stanza */ Element, _],
     errback: js.Function1[/* stanza */ Element, _],
     timeout: Double

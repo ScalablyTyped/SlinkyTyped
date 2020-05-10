@@ -17,20 +17,18 @@ trait DayOfWeekType extends js.Object
 
 object DayOfWeekType {
   @scala.inline
-  def FRI: typingsSlinky.squareConnect.squareConnectStrings.FRI = this.cast("FRI")
+  def FRI: typingsSlinky.squareConnect.squareConnectStrings.FRI = "FRI".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.FRI]
   @scala.inline
-  def MON: typingsSlinky.squareConnect.squareConnectStrings.MON = this.cast("MON")
+  def MON: typingsSlinky.squareConnect.squareConnectStrings.MON = "MON".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.MON]
   @scala.inline
-  def SAT: typingsSlinky.squareConnect.squareConnectStrings.SAT = this.cast("SAT")
+  def SAT: typingsSlinky.squareConnect.squareConnectStrings.SAT = "SAT".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SAT]
   @scala.inline
-  def SUN: typingsSlinky.squareConnect.squareConnectStrings.SUN = this.cast("SUN")
+  def SUN: typingsSlinky.squareConnect.squareConnectStrings.SUN = "SUN".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.SUN]
   @scala.inline
-  def THU: typingsSlinky.squareConnect.squareConnectStrings.THU = this.cast("THU")
+  def THU: typingsSlinky.squareConnect.squareConnectStrings.THU = "THU".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.THU]
   @scala.inline
-  def TUE: typingsSlinky.squareConnect.squareConnectStrings.TUE = this.cast("TUE")
+  def TUE: typingsSlinky.squareConnect.squareConnectStrings.TUE = "TUE".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.TUE]
   @scala.inline
-  def WED: typingsSlinky.squareConnect.squareConnectStrings.WED = this.cast("WED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WED: typingsSlinky.squareConnect.squareConnectStrings.WED = "WED".asInstanceOf[typingsSlinky.squareConnect.squareConnectStrings.WED]
 }
 

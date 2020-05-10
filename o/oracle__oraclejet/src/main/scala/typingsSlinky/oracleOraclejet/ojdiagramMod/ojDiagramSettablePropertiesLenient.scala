@@ -35,117 +35,453 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Partial<@oracle/oraclejet.@oracle/oraclejet/ojdiagram.ojDiagramSettableProperties<K1, K2, D1, D2>> */
+@js.native
 trait ojDiagramSettablePropertiesLenient[K1, K2, D1, D2]
   extends /* key */ StringDictionary[js.Any] {
-  var animationOnDataChange: js.UndefOr[auto | none] = js.undefined
-  var animationOnDisplay: js.UndefOr[auto | none] = js.undefined
-  var as: js.UndefOr[String] = js.undefined
-  var dnd: js.UndefOr[AnonDrop] = js.undefined
-  var expanded: js.UndefOr[KeySet[K1]] = js.undefined
-  var focusRenderer: js.UndefOr[js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]] = js.undefined
-  var hiddenCategories: js.UndefOr[js.Array[String]] = js.undefined
-  var highlightMatch: js.UndefOr[any | all] = js.undefined
-  var highlightedCategories: js.UndefOr[js.Array[String]] = js.undefined
-  var hoverBehavior: js.UndefOr[dim | none] = js.undefined
-  var hoverRenderer: js.UndefOr[js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]] = js.undefined
-  var layout: js.UndefOr[js.Function1[/* param0 */ DvtDiagramLayoutContext, Unit]] = js.undefined
-  var linkData: js.UndefOr[DataProvider[K2, D2]] = js.undefined
-  var linkHighlightMode: js.UndefOr[linkAndNodes | link] = js.undefined
-  var maxZoom: js.UndefOr[Double] = js.undefined
-  var minZoom: js.UndefOr[Double] = js.undefined
-  var nodeData: js.UndefOr[DataProvider[K1, D1]] = js.undefined
-  var nodeHighlightMode: js.UndefOr[nodeAndIncomingLinks | nodeAndOutgoingLinks | nodeAndLinks | node] = js.undefined
-  var overview: js.UndefOr[AnonHalign] = js.undefined
-  var panDirection: js.UndefOr[x | y | auto] = js.undefined
-  var panning: js.UndefOr[auto | none] = js.undefined
-  var promotedLinkBehavior: js.UndefOr[none | full | `lazy`] = js.undefined
-  var renderer: js.UndefOr[js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement]] = js.undefined
-  var selection: js.UndefOr[js.Array[K1 | K2]] = js.undefined
-  var selectionMode: js.UndefOr[single | multiple | none] = js.undefined
-  var selectionRenderer: js.UndefOr[js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]] = js.undefined
-  var styleDefaults: js.UndefOr[AnonAnimationDuration] = js.undefined
-  var tooltip: js.UndefOr[Anon5[K1, K2, D1, D2]] = js.undefined
-  var touchResponse: js.UndefOr[touchStart | auto] = js.undefined
-  var trackResize: js.UndefOr[on | off] = js.undefined
-  var translations: js.UndefOr[AnonLabelClearSelection] = js.undefined
-  var zoomRenderer: js.UndefOr[js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]] = js.undefined
-  var zooming: js.UndefOr[auto | none] = js.undefined
+  var animationOnDataChange: js.UndefOr[auto | none] = js.native
+  var animationOnDisplay: js.UndefOr[auto | none] = js.native
+  var as: js.UndefOr[String] = js.native
+  var dnd: js.UndefOr[AnonDrop] = js.native
+  var expanded: js.UndefOr[KeySet[K1]] = js.native
+  var focusRenderer: js.UndefOr[js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]] = js.native
+  var hiddenCategories: js.UndefOr[js.Array[String]] = js.native
+  var highlightMatch: js.UndefOr[any | all] = js.native
+  var highlightedCategories: js.UndefOr[js.Array[String]] = js.native
+  var hoverBehavior: js.UndefOr[dim | none] = js.native
+  var hoverRenderer: js.UndefOr[js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]] = js.native
+  var layout: js.UndefOr[js.Function1[/* param0 */ DvtDiagramLayoutContext, Unit]] = js.native
+  var linkData: js.UndefOr[DataProvider[K2, D2]] = js.native
+  var linkHighlightMode: js.UndefOr[linkAndNodes | link] = js.native
+  var maxZoom: js.UndefOr[Double] = js.native
+  var minZoom: js.UndefOr[Double] = js.native
+  var nodeData: js.UndefOr[DataProvider[K1, D1]] = js.native
+  var nodeHighlightMode: js.UndefOr[nodeAndIncomingLinks | nodeAndOutgoingLinks | nodeAndLinks | node] = js.native
+  var overview: js.UndefOr[AnonHalign] = js.native
+  var panDirection: js.UndefOr[x | y | auto] = js.native
+  var panning: js.UndefOr[auto | none] = js.native
+  var promotedLinkBehavior: js.UndefOr[none | full | `lazy`] = js.native
+  var renderer: js.UndefOr[js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement]] = js.native
+  var selection: js.UndefOr[js.Array[K1 | K2]] = js.native
+  var selectionMode: js.UndefOr[single | multiple | none] = js.native
+  var selectionRenderer: js.UndefOr[js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]] = js.native
+  var styleDefaults: js.UndefOr[AnonAnimationDuration] = js.native
+  var tooltip: js.UndefOr[Anon5[K1, K2, D1, D2]] = js.native
+  var touchResponse: js.UndefOr[touchStart | auto] = js.native
+  var trackResize: js.UndefOr[on | off] = js.native
+  var translations: js.UndefOr[AnonLabelClearSelection] = js.native
+  var zoomRenderer: js.UndefOr[js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]] = js.native
+  var zooming: js.UndefOr[auto | none] = js.native
 }
 
 object ojDiagramSettablePropertiesLenient {
   @scala.inline
-  def apply[K1, K2, D1, D2](
-    StringDictionary: /* key */ StringDictionary[js.Any] = null,
-    animationOnDataChange: auto | none = null,
-    animationOnDisplay: auto | none = null,
-    as: String = null,
-    dnd: AnonDrop = null,
-    expanded: KeySet[K1] = null,
-    focusRenderer: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit = null,
-    hiddenCategories: js.Array[String] = null,
-    highlightMatch: any | all = null,
-    highlightedCategories: js.Array[String] = null,
-    hoverBehavior: dim | none = null,
-    hoverRenderer: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit = null,
-    layout: /* param0 */ DvtDiagramLayoutContext => Unit = null,
-    linkData: DataProvider[K2, D2] = null,
-    linkHighlightMode: linkAndNodes | link = null,
-    maxZoom: Int | Double = null,
-    minZoom: Int | Double = null,
-    nodeData: DataProvider[K1, D1] = null,
-    nodeHighlightMode: nodeAndIncomingLinks | nodeAndOutgoingLinks | nodeAndLinks | node = null,
-    overview: AnonHalign = null,
-    panDirection: x | y | auto = null,
-    panning: auto | none = null,
-    promotedLinkBehavior: none | full | `lazy` = null,
-    renderer: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement = null,
-    selection: js.Array[K1 | K2] = null,
-    selectionMode: single | multiple | none = null,
-    selectionRenderer: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit = null,
-    styleDefaults: AnonAnimationDuration = null,
-    tooltip: Anon5[K1, K2, D1, D2] = null,
-    touchResponse: touchStart | auto = null,
-    trackResize: on | off = null,
-    translations: AnonLabelClearSelection = null,
-    zoomRenderer: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit = null,
-    zooming: auto | none = null
-  ): ojDiagramSettablePropertiesLenient[K1, K2, D1, D2] = {
+  def apply[K1, K2, D1, D2](): ojDiagramSettablePropertiesLenient[K1, K2, D1, D2] = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (animationOnDataChange != null) __obj.updateDynamic("animationOnDataChange")(animationOnDataChange.asInstanceOf[js.Any])
-    if (animationOnDisplay != null) __obj.updateDynamic("animationOnDisplay")(animationOnDisplay.asInstanceOf[js.Any])
-    if (as != null) __obj.updateDynamic("as")(as.asInstanceOf[js.Any])
-    if (dnd != null) __obj.updateDynamic("dnd")(dnd.asInstanceOf[js.Any])
-    if (expanded != null) __obj.updateDynamic("expanded")(expanded.asInstanceOf[js.Any])
-    if (focusRenderer != null) __obj.updateDynamic("focusRenderer")(js.Any.fromFunction1(focusRenderer))
-    if (hiddenCategories != null) __obj.updateDynamic("hiddenCategories")(hiddenCategories.asInstanceOf[js.Any])
-    if (highlightMatch != null) __obj.updateDynamic("highlightMatch")(highlightMatch.asInstanceOf[js.Any])
-    if (highlightedCategories != null) __obj.updateDynamic("highlightedCategories")(highlightedCategories.asInstanceOf[js.Any])
-    if (hoverBehavior != null) __obj.updateDynamic("hoverBehavior")(hoverBehavior.asInstanceOf[js.Any])
-    if (hoverRenderer != null) __obj.updateDynamic("hoverRenderer")(js.Any.fromFunction1(hoverRenderer))
-    if (layout != null) __obj.updateDynamic("layout")(js.Any.fromFunction1(layout))
-    if (linkData != null) __obj.updateDynamic("linkData")(linkData.asInstanceOf[js.Any])
-    if (linkHighlightMode != null) __obj.updateDynamic("linkHighlightMode")(linkHighlightMode.asInstanceOf[js.Any])
-    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
-    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
-    if (nodeData != null) __obj.updateDynamic("nodeData")(nodeData.asInstanceOf[js.Any])
-    if (nodeHighlightMode != null) __obj.updateDynamic("nodeHighlightMode")(nodeHighlightMode.asInstanceOf[js.Any])
-    if (overview != null) __obj.updateDynamic("overview")(overview.asInstanceOf[js.Any])
-    if (panDirection != null) __obj.updateDynamic("panDirection")(panDirection.asInstanceOf[js.Any])
-    if (panning != null) __obj.updateDynamic("panning")(panning.asInstanceOf[js.Any])
-    if (promotedLinkBehavior != null) __obj.updateDynamic("promotedLinkBehavior")(promotedLinkBehavior.asInstanceOf[js.Any])
-    if (renderer != null) __obj.updateDynamic("renderer")(js.Any.fromFunction1(renderer))
-    if (selection != null) __obj.updateDynamic("selection")(selection.asInstanceOf[js.Any])
-    if (selectionMode != null) __obj.updateDynamic("selectionMode")(selectionMode.asInstanceOf[js.Any])
-    if (selectionRenderer != null) __obj.updateDynamic("selectionRenderer")(js.Any.fromFunction1(selectionRenderer))
-    if (styleDefaults != null) __obj.updateDynamic("styleDefaults")(styleDefaults.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (touchResponse != null) __obj.updateDynamic("touchResponse")(touchResponse.asInstanceOf[js.Any])
-    if (trackResize != null) __obj.updateDynamic("trackResize")(trackResize.asInstanceOf[js.Any])
-    if (translations != null) __obj.updateDynamic("translations")(translations.asInstanceOf[js.Any])
-    if (zoomRenderer != null) __obj.updateDynamic("zoomRenderer")(js.Any.fromFunction1(zoomRenderer))
-    if (zooming != null) __obj.updateDynamic("zooming")(zooming.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojDiagramSettablePropertiesLenient[K1, K2, D1, D2]]
   }
+  @scala.inline
+  implicit class ojDiagramSettablePropertiesLenientOps[Self[k1, k2, d1, d2] <: ojDiagramSettablePropertiesLenient[k1, k2, d1, d2], K1, K2, D1, D2] (val x: Self[K1, K2, D1, D2]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[K1, K2, D1, D2] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[K1, K2, D1, D2]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): (Self[K1, K2, D1, D2]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K1, K2, D1, D2]) with Other]
+    @scala.inline
+    def withAnimationOnDataChange(value: auto | none): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDataChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationOnDataChange: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDataChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationOnDisplay(value: auto | none): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationOnDisplay: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationOnDisplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAs(value: String): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAs: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("as")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnd(value: AnonDrop): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnd: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpanded(value: KeySet[K1]): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpanded: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFocusRenderer(value: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFocusRenderer: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHiddenCategories(value: js.Array[String]): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenCategories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHiddenCategories: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenCategories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightMatch(value: any | all): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightMatch: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightedCategories(value: js.Array[String]): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightedCategories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightedCategories: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightedCategories")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverBehavior(value: dim | none): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverBehavior: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverRenderer(value: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutHoverRenderer: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: /* param0 */ DvtDiagramLayoutContext => Unit): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkData(value: DataProvider[K2, D2]): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkData: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkHighlightMode(value: linkAndNodes | link): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkHighlightMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkHighlightMode: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkHighlightMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxZoom(value: Double): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxZoom: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinZoom(value: Double): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinZoom: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minZoom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeData(value: DataProvider[K1, D1]): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeData: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNodeHighlightMode(value: nodeAndIncomingLinks | nodeAndOutgoingLinks | nodeAndLinks | node): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeHighlightMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodeHighlightMode: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeHighlightMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverview(value: AnonHalign): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverview: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPanDirection(value: x | y | auto): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPanDirection: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panDirection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPanning(value: auto | none): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPanning: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPromotedLinkBehavior(value: none | full | `lazy`): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promotedLinkBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromotedLinkBehavior: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promotedLinkBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderer(value: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutRenderer: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelection(value: js.Array[K1 | K2]): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelection: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionMode(value: single | multiple | none): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectionMode: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectionRenderer(value: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSelectionRenderer: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleDefaults(value: AnonAnimationDuration): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyleDefaults: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: Anon5[K1, K2, D1, D2]): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTouchResponse(value: touchStart | auto): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTouchResponse: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackResize(value: on | off): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackResize: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackResize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranslations(value: AnonLabelClearSelection): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslations: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoomRenderer(value: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutZoomRenderer: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomRenderer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZooming(value: auto | none): Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zooming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZooming: Self[K1, K2, D1, D2] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zooming")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -18,11 +18,41 @@ trait DeleteFileSystemWindowsResponse extends js.Object {
 
 object DeleteFileSystemWindowsResponse {
   @scala.inline
-  def apply(FinalBackupId: BackupId = null, FinalBackupTags: Tags = null): DeleteFileSystemWindowsResponse = {
+  def apply(): DeleteFileSystemWindowsResponse = {
     val __obj = js.Dynamic.literal()
-    if (FinalBackupId != null) __obj.updateDynamic("FinalBackupId")(FinalBackupId.asInstanceOf[js.Any])
-    if (FinalBackupTags != null) __obj.updateDynamic("FinalBackupTags")(FinalBackupTags.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteFileSystemWindowsResponse]
   }
+  @scala.inline
+  implicit class DeleteFileSystemWindowsResponseOps[Self <: DeleteFileSystemWindowsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFinalBackupId(value: BackupId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalBackupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalBackupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalBackupId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinalBackupTags(value: Tags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalBackupTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalBackupTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FinalBackupTags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

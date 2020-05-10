@@ -1,9 +1,9 @@
 package typingsSlinky.angularMocks.mod
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.angular.JQuery
 import typingsSlinky.angularMocks.mod.angularAugmentingMod.IInjectStatic
 import typingsSlinky.angularMocks.mod.angularAugmentingMod.mock.IBrowserTriggerEventData
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

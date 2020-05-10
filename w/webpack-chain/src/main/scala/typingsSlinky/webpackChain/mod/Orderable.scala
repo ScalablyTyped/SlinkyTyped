@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Orderable extends js.Object {
-  def after(name: String): this.type
-  def before(name: String): this.type
+  def after(name: String): this.type = js.native
+  def before(name: String): this.type = js.native
 }
 
 object Orderable {
   @scala.inline
   def apply(after: String => Orderable, before: String => Orderable): Orderable = {
     val __obj = js.Dynamic.literal(after = js.Any.fromFunction1(after), before = js.Any.fromFunction1(before))
-  
     __obj.asInstanceOf[Orderable]
   }
+  @scala.inline
+  implicit class OrderableOps[Self <: Orderable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfter(value: String => Orderable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("after")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBefore(value: String => Orderable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("before")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

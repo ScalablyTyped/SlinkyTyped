@@ -4,57 +4,135 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RulerSettingsHorizontalRuler extends js.Object {
   /** Defines the method which used to position and arrange the tick elements of the horizontal ruler.
     * @Default {null}
     */
-  var arrangeTick: js.UndefOr[js.Any] = js.undefined
+  var arrangeTick: js.UndefOr[js.Any] = js.native
   /** Defines the number of intervals to be present on the each segment of the horizontal ruler.
     * @Default {5}
     */
-  var interval: js.UndefOr[Double] = js.undefined
+  var interval: js.UndefOr[Double] = js.native
   /** Defines the width of the horizontal ruler.
     * @Default {null}
     */
-  var length: js.UndefOr[Double] = js.undefined
+  var length: js.UndefOr[Double] = js.native
   /** Defines the color of the horizontal marker brush.
     * @Default {red}
     */
-  var markerColor: js.UndefOr[String] = js.undefined
+  var markerColor: js.UndefOr[String] = js.native
   /** Defines the textual description of the ruler segment, and the appearance of the ruler ticks of the horizontal ruler.
     * @Default {100}
     */
-  var segmentWidth: js.UndefOr[Double] = js.undefined
+  var segmentWidth: js.UndefOr[Double] = js.native
   /** Defines the height of the horizontal ruler.
     * @Default {25}
     */
-  var thickness: js.UndefOr[Double] = js.undefined
+  var thickness: js.UndefOr[Double] = js.native
   /** Defines and sets the tick alignment of the ruler scale.
     * @Default {ej.datavisualization.Diagram.TickAlignment.RightOrBottom}
     */
-  var tickAlignment: js.UndefOr[TickAlignment | String] = js.undefined
+  var tickAlignment: js.UndefOr[TickAlignment | String] = js.native
 }
 
 object RulerSettingsHorizontalRuler {
   @scala.inline
-  def apply(
-    arrangeTick: js.Any = null,
-    interval: Int | Double = null,
-    length: Int | Double = null,
-    markerColor: String = null,
-    segmentWidth: Int | Double = null,
-    thickness: Int | Double = null,
-    tickAlignment: TickAlignment | String = null
-  ): RulerSettingsHorizontalRuler = {
+  def apply(): RulerSettingsHorizontalRuler = {
     val __obj = js.Dynamic.literal()
-    if (arrangeTick != null) __obj.updateDynamic("arrangeTick")(arrangeTick.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (length != null) __obj.updateDynamic("length")(length.asInstanceOf[js.Any])
-    if (markerColor != null) __obj.updateDynamic("markerColor")(markerColor.asInstanceOf[js.Any])
-    if (segmentWidth != null) __obj.updateDynamic("segmentWidth")(segmentWidth.asInstanceOf[js.Any])
-    if (thickness != null) __obj.updateDynamic("thickness")(thickness.asInstanceOf[js.Any])
-    if (tickAlignment != null) __obj.updateDynamic("tickAlignment")(tickAlignment.asInstanceOf[js.Any])
     __obj.asInstanceOf[RulerSettingsHorizontalRuler]
   }
+  @scala.inline
+  implicit class RulerSettingsHorizontalRulerOps[Self <: RulerSettingsHorizontalRuler] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrangeTick(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrangeTick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrangeTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrangeTick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegmentWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegmentWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickAlignment(value: TickAlignment | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickAlignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickAlignment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

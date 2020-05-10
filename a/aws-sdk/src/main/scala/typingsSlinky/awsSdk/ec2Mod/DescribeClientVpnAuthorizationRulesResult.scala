@@ -18,11 +18,41 @@ trait DescribeClientVpnAuthorizationRulesResult extends js.Object {
 
 object DescribeClientVpnAuthorizationRulesResult {
   @scala.inline
-  def apply(AuthorizationRules: AuthorizationRuleSet = null, NextToken: NextToken = null): DescribeClientVpnAuthorizationRulesResult = {
+  def apply(): DescribeClientVpnAuthorizationRulesResult = {
     val __obj = js.Dynamic.literal()
-    if (AuthorizationRules != null) __obj.updateDynamic("AuthorizationRules")(AuthorizationRules.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeClientVpnAuthorizationRulesResult]
   }
+  @scala.inline
+  implicit class DescribeClientVpnAuthorizationRulesResultOps[Self <: DescribeClientVpnAuthorizationRulesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizationRules(value: AuthorizationRuleSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizationRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthorizationRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

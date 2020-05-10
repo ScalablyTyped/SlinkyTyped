@@ -34,22 +34,89 @@ trait TransformOperation extends js.Object {
 
 object TransformOperation {
   @scala.inline
-  def apply(
-    CastColumnTypeOperation: CastColumnTypeOperation = null,
-    CreateColumnsOperation: CreateColumnsOperation = null,
-    FilterOperation: FilterOperation = null,
-    ProjectOperation: ProjectOperation = null,
-    RenameColumnOperation: RenameColumnOperation = null,
-    TagColumnOperation: TagColumnOperation = null
-  ): TransformOperation = {
+  def apply(): TransformOperation = {
     val __obj = js.Dynamic.literal()
-    if (CastColumnTypeOperation != null) __obj.updateDynamic("CastColumnTypeOperation")(CastColumnTypeOperation.asInstanceOf[js.Any])
-    if (CreateColumnsOperation != null) __obj.updateDynamic("CreateColumnsOperation")(CreateColumnsOperation.asInstanceOf[js.Any])
-    if (FilterOperation != null) __obj.updateDynamic("FilterOperation")(FilterOperation.asInstanceOf[js.Any])
-    if (ProjectOperation != null) __obj.updateDynamic("ProjectOperation")(ProjectOperation.asInstanceOf[js.Any])
-    if (RenameColumnOperation != null) __obj.updateDynamic("RenameColumnOperation")(RenameColumnOperation.asInstanceOf[js.Any])
-    if (TagColumnOperation != null) __obj.updateDynamic("TagColumnOperation")(TagColumnOperation.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformOperation]
   }
+  @scala.inline
+  implicit class TransformOperationOps[Self <: TransformOperation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCastColumnTypeOperation(value: CastColumnTypeOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CastColumnTypeOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCastColumnTypeOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CastColumnTypeOperation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateColumnsOperation(value: CreateColumnsOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateColumnsOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateColumnsOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateColumnsOperation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterOperation(value: FilterOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterOperation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProjectOperation(value: ProjectOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProjectOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProjectOperation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenameColumnOperation(value: RenameColumnOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenameColumnOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenameColumnOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenameColumnOperation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagColumnOperation(value: TagColumnOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagColumnOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagColumnOperation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagColumnOperation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

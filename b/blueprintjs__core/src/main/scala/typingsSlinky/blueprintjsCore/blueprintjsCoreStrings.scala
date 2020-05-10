@@ -16,18 +16,6 @@ import scala.scalajs.js.annotation._
 
 object blueprintjsCoreStrings {
   @js.native
-  sealed trait `360px` extends js.Object
-  
-  @js.native
-  sealed trait `50Percentsign` extends js.Object
-  
-  @js.native
-  sealed trait `90Percentsign` extends js.Object
-  
-  @js.native
-  sealed trait Blueprint3 extends js.Object
-  
-  @js.native
   sealed trait a extends js.Object
   
   @js.native
@@ -658,6 +646,9 @@ object blueprintjsCoreStrings {
   sealed trait select extends js.Object
   
   @js.native
+  sealed trait slot extends js.Object
+  
+  @js.native
   sealed trait small extends js.Object
   
   @js.native
@@ -816,21 +807,13 @@ object blueprintjsCoreStrings {
   sealed trait yes extends js.Object
   
   @scala.inline
-  def `360px`: `360px` = "360px".asInstanceOf[`360px`]
-  @scala.inline
-  def `50Percentsign`: `50Percentsign` = "50%".asInstanceOf[`50Percentsign`]
-  @scala.inline
-  def `90Percentsign`: `90Percentsign` = "90%".asInstanceOf[`90Percentsign`]
-  @scala.inline
-  def Blueprint3: Blueprint3 = "Blueprint3".asInstanceOf[Blueprint3]
-  @scala.inline
   def a: a = "a".asInstanceOf[a]
   @scala.inline
   def abbr: abbr = "abbr".asInstanceOf[abbr]
   @scala.inline
   def additions: additions = "additions".asInstanceOf[additions]
   @scala.inline
-  def `additions text`: `additions text` = "additions text".asInstanceOf[`additions text`]
+  def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   @scala.inline
   def address: address = "address".asInstanceOf[address]
   @scala.inline
@@ -1225,6 +1208,8 @@ object blueprintjsCoreStrings {
   def section: section = "section".asInstanceOf[section]
   @scala.inline
   def select: select = "select".asInstanceOf[select]
+  @scala.inline
+  def slot: slot = "slot".asInstanceOf[slot]
   @scala.inline
   def small: small = "small".asInstanceOf[small]
   @scala.inline

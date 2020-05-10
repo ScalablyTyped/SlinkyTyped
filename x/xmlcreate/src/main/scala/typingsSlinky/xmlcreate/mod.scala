@@ -1,7 +1,23 @@
 package typingsSlinky.xmlcreate
 
-import typingsSlinky.xmlcreate.optionsMod.IDeclarationOptions
+import typingsSlinky.xmlcreate.xmlAttributeMod.IXmlAttributeOptions
 import typingsSlinky.xmlcreate.xmlAttributeMod.default
+import typingsSlinky.xmlcreate.xmlAttributeTextMod.IXmlAttributeTextOptions
+import typingsSlinky.xmlcreate.xmlCdataMod.IXmlCdataOptions
+import typingsSlinky.xmlcreate.xmlCharDataMod.IXmlCharDataOptions
+import typingsSlinky.xmlcreate.xmlCharRefMod.IXmlCharRefOptions
+import typingsSlinky.xmlcreate.xmlCommentMod.IXmlCommentOptions
+import typingsSlinky.xmlcreate.xmlDeclMod.IXmlDeclOptions
+import typingsSlinky.xmlcreate.xmlDocumentMod.IXmlDocumentOptions
+import typingsSlinky.xmlcreate.xmlDtdAttlistMod.IXmlDtdAttlistOptions
+import typingsSlinky.xmlcreate.xmlDtdElementMod.IXmlDtdElementOptions
+import typingsSlinky.xmlcreate.xmlDtdEntityMod.IXmlDtdEntityOptions
+import typingsSlinky.xmlcreate.xmlDtdMod.IXmlDtdOptions
+import typingsSlinky.xmlcreate.xmlDtdNotationMod.IXmlDtdNotationOptions
+import typingsSlinky.xmlcreate.xmlDtdParamEntityRefMod.IXmlDtdParamEntityRefOptions
+import typingsSlinky.xmlcreate.xmlElementMod.IXmlElementOptions
+import typingsSlinky.xmlcreate.xmlEntityRefMod.IXmlEntityRefOptions
+import typingsSlinky.xmlcreate.xmlProcInstMod.IXmlProcInstOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,215 +26,107 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  class XmlAttribute protected () extends default {
-    def this(name: String, value: js.Array[typingsSlinky.xmlcreate.xmlNodeMod.default]) = this()
-    /**
-      * Initializes a new instance of the {@link XmlAttribute} class.
-      *
-      * @param name The name of the XML attribute.
-      * @param value The initial value of the XML attribute. Additional children
-      *              can be added later. Only {@link XmlAttributeText},
-      *              {@link XmlCharRef}, and {@link XmlEntityRef} nodes are
-      *              permitted.
-      */
-    def this(name: String, value: typingsSlinky.xmlcreate.xmlNodeMod.default) = this()
+  class XmlAttribute[Parent] protected () extends default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlAttributeOptions) = this()
   }
   
   @js.native
-  class XmlAttributeText protected ()
-    extends typingsSlinky.xmlcreate.xmlAttributeTextMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlAttributeText} class.
-      *
-      * @param text Text.
-      */
-    def this(text: String) = this()
+  class XmlAttributeText[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlAttributeTextMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlAttributeTextOptions) = this()
   }
   
   @js.native
-  class XmlCdata protected ()
-    extends typingsSlinky.xmlcreate.xmlCdataMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlCdata} class.
-      *
-      * @param data The character data of the CDATA section.
-      */
-    def this(data: String) = this()
+  class XmlCdata[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlCdataMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlCdataOptions) = this()
   }
   
   @js.native
-  class XmlCharData protected ()
-    extends typingsSlinky.xmlcreate.xmlCharDataMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlCharData} class.
-      *
-      * @param charData Character data.
-      */
-    def this(charData: String) = this()
+  class XmlCharData[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlCharDataMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlCharDataOptions) = this()
   }
   
   @js.native
-  class XmlCharRef protected ()
-    extends typingsSlinky.xmlcreate.xmlCharRefMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlCharRef} class.
-      *
-      * @param char The character to represent using the reference.
-      * @param hex Whether to use the hexadecimal or decimal representation for
-      *            the reference. If left undefined, decimal is the default.
-      */
-    def this(char: String) = this()
-    def this(char: String, hex: Boolean) = this()
+  class XmlCharRef[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlCharRefMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlCharRefOptions) = this()
   }
   
   @js.native
-  class XmlComment protected ()
-    extends typingsSlinky.xmlcreate.xmlCommentMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlComment} class.
-      *
-      * @param content The content of the comment.
-      */
-    def this(content: String) = this()
+  class XmlComment[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlCommentMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlCommentOptions) = this()
   }
   
   @js.native
-  /**
-    * Initializes a new instance of the {@link XmlDecl} class.
-    *
-    * @param options The options associated with the XML declaration.
-    */
-  class XmlDecl ()
-    extends typingsSlinky.xmlcreate.xmlDeclMod.default {
-    def this(options: IDeclarationOptions) = this()
+  class XmlDecl[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlDeclMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlDeclOptions) = this()
   }
   
   @js.native
   class XmlDocument protected ()
     extends typingsSlinky.xmlcreate.xmlDocumentMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlDocument} class.
-      *
-      * @param root The name of the root element.
-      */
-    def this(root: String) = this()
+    def this(options: IXmlDocumentOptions) = this()
   }
   
   @js.native
-  class XmlDtd protected ()
-    extends typingsSlinky.xmlcreate.xmlDtdMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlDtd} class.
-      *
-      * @param name The name of the DTD.
-      * @param sysId The system identifier of the DTD, excluding quotation marks.
-      * @param pubId The public identifier of the DTD, excluding quotation marks.
-      *              If a public identifier is provided, a system identifier
-      *              must be provided as well.
-      */
-    def this(name: String) = this()
-    def this(name: String, sysId: String) = this()
-    def this(name: String, sysId: String, pubId: String) = this()
+  class XmlDtd[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlDtdMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlDtdOptions) = this()
   }
   
   @js.native
-  class XmlDtdAttlist protected ()
-    extends typingsSlinky.xmlcreate.xmlDtdAttlistMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlDtdAttlist} class.
-      *
-      * @param text The text associated with the XML attribute-list declaration.
-      */
-    def this(text: String) = this()
+  class XmlDtdAttlist[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlDtdAttlistMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlDtdAttlistOptions) = this()
   }
   
   @js.native
-  class XmlDtdElement protected ()
-    extends typingsSlinky.xmlcreate.xmlDtdElementMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlDtdElement} class.
-      *
-      * @param text The text associated with the XML element declaration.
-      */
-    def this(text: String) = this()
+  class XmlDtdElement[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlDtdElementMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlDtdElementOptions) = this()
   }
   
   @js.native
-  class XmlDtdEntity protected ()
-    extends typingsSlinky.xmlcreate.xmlDtdEntityMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlDtdEntity} class.
-      *
-      * @param text The text associated with the XML entity declaration.
-      */
-    def this(text: String) = this()
+  class XmlDtdEntity[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlDtdEntityMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlDtdEntityOptions) = this()
   }
   
   @js.native
-  class XmlDtdNotation protected ()
-    extends typingsSlinky.xmlcreate.xmlDtdNotationMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlDtdNotation} class.
-      *
-      * @param text The text associated with the XML notation declaration.
-      */
-    def this(text: String) = this()
+  class XmlDtdNotation[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlDtdNotationMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlDtdNotationOptions) = this()
   }
   
   @js.native
-  class XmlDtdParamEntityRef protected ()
-    extends typingsSlinky.xmlcreate.xmlDtdParamEntityRefMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlDtdParamEntityRef} class.
-      *
-      * @param entity The entity to be referenced.
-      */
-    def this(entity: String) = this()
+  class XmlDtdParamEntityRef[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlDtdParamEntityRefMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlDtdParamEntityRefOptions) = this()
   }
   
   @js.native
-  class XmlElement protected ()
-    extends typingsSlinky.xmlcreate.xmlElementMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlElement} class.
-      *
-      * @param name The name of the element.
-      */
-    def this(name: String) = this()
+  class XmlElement[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlElementMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlElementOptions) = this()
   }
   
   @js.native
-  class XmlEntityRef protected ()
-    extends typingsSlinky.xmlcreate.xmlEntityRefMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlEntityRef} class.
-      *
-      * @param entity The entity to be referenced.
-      */
-    def this(entity: String) = this()
+  class XmlEntityRef[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlEntityRefMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlEntityRefOptions) = this()
   }
   
   @js.native
-  /**
-    * Initializes a new instance of the {@link XmlNode} class.
-    */
-  class XmlNode ()
-    extends typingsSlinky.xmlcreate.xmlNodeMod.default
-  
-  @js.native
-  class XmlProcInst protected ()
-    extends typingsSlinky.xmlcreate.xmlProcInstMod.default {
-    /**
-      * Initializes a new instance of the {@link XmlProcInst} class.
-      *
-      * @param target The target of the processing instruction.
-      * @param content The data of the processing instruction, or undefined if
-      *                there is no target.
-      */
-    def this(target: String) = this()
-    def this(target: String, content: String) = this()
+  class XmlProcInst[Parent] protected ()
+    extends typingsSlinky.xmlcreate.xmlProcInstMod.default[Parent] {
+    def this(parent: Parent, validation: Boolean, options: IXmlProcInstOptions) = this()
   }
   
-  def document(root: String): typingsSlinky.xmlcreate.xmlDocumentMod.default = js.native
+  def document(): typingsSlinky.xmlcreate.xmlDocumentMod.default = js.native
+  def document(options: IXmlDocumentOptions): typingsSlinky.xmlcreate.xmlDocumentMod.default = js.native
 }
 

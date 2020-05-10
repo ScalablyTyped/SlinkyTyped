@@ -19,24 +19,22 @@ trait LanguageType extends js.Object
 
 object LanguageType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cn: typingsSlinky.reactDateRange.reactDateRangeStrings.cn = "cn".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.cn]
   @scala.inline
-  def cn: typingsSlinky.reactDateRange.reactDateRangeStrings.cn = this.cast("cn")
+  def de: typingsSlinky.reactDateRange.reactDateRangeStrings.de = "de".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.de]
   @scala.inline
-  def de: typingsSlinky.reactDateRange.reactDateRangeStrings.de = this.cast("de")
+  def es: typingsSlinky.reactDateRange.reactDateRangeStrings.es = "es".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.es]
   @scala.inline
-  def es: typingsSlinky.reactDateRange.reactDateRangeStrings.es = this.cast("es")
+  def fr: typingsSlinky.reactDateRange.reactDateRangeStrings.fr = "fr".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.fr]
   @scala.inline
-  def fr: typingsSlinky.reactDateRange.reactDateRangeStrings.fr = this.cast("fr")
+  def it: typingsSlinky.reactDateRange.reactDateRangeStrings.it = "it".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.it]
   @scala.inline
-  def it: typingsSlinky.reactDateRange.reactDateRangeStrings.it = this.cast("it")
+  def jp: typingsSlinky.reactDateRange.reactDateRangeStrings.jp = "jp".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.jp]
   @scala.inline
-  def jp: typingsSlinky.reactDateRange.reactDateRangeStrings.jp = this.cast("jp")
+  def ko: typingsSlinky.reactDateRange.reactDateRangeStrings.ko = "ko".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.ko]
   @scala.inline
-  def ko: typingsSlinky.reactDateRange.reactDateRangeStrings.ko = this.cast("ko")
+  def ru: typingsSlinky.reactDateRange.reactDateRangeStrings.ru = "ru".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.ru]
   @scala.inline
-  def ru: typingsSlinky.reactDateRange.reactDateRangeStrings.ru = this.cast("ru")
-  @scala.inline
-  def tr: typingsSlinky.reactDateRange.reactDateRangeStrings.tr = this.cast("tr")
+  def tr: typingsSlinky.reactDateRange.reactDateRangeStrings.tr = "tr".asInstanceOf[typingsSlinky.reactDateRange.reactDateRangeStrings.tr]
 }
 

@@ -3,7 +3,6 @@ package typingsSlinky.reactNativeDialogflow.mod
 import typingsSlinky.reactNativeDialogflow.reactNativeDialogflowStrings.`en-GB`
 import typingsSlinky.reactNativeDialogflow.reactNativeDialogflowStrings.`en-US`
 import typingsSlinky.reactNativeDialogflow.reactNativeDialogflowStrings.`pt-BR`
-import typingsSlinky.reactNativeDialogflow.reactNativeDialogflowStrings.`zh-CN`
 import typingsSlinky.reactNativeDialogflow.reactNativeDialogflowStrings.`zh-HK`
 import typingsSlinky.reactNativeDialogflow.reactNativeDialogflowStrings.`zh-TW`
 import typingsSlinky.reactNativeDialogflow.reactNativeDialogflowStrings.de
@@ -24,7 +23,7 @@ import scala.scalajs.js.annotation._
 @JSImport("react-native-dialogflow", "Dialogflow_V2")
 @js.native
 object DialogflowV2 extends js.Object {
-  val LANG_CHINESE_CHINA: `zh-CN` = js.native
+  val LANG_CHINESE_CHINA: /* "zh-CN" */ String = js.native
   val LANG_CHINESE_HONGKONG: `zh-HK` = js.native
   val LANG_CHINESE_TAIWAN: `zh-TW` = js.native
   val LANG_DUTCH: nl = js.native

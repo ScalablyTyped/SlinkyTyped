@@ -22,16 +22,53 @@ trait IdFormat extends js.Object {
 
 object IdFormat {
   @scala.inline
-  def apply(
-    Deadline: js.Date = null,
-    Resource: String = null,
-    UseLongIds: js.UndefOr[scala.Boolean] = js.undefined
-  ): IdFormat = {
+  def apply(): IdFormat = {
     val __obj = js.Dynamic.literal()
-    if (Deadline != null) __obj.updateDynamic("Deadline")(Deadline.asInstanceOf[js.Any])
-    if (Resource != null) __obj.updateDynamic("Resource")(Resource.asInstanceOf[js.Any])
-    if (!js.isUndefined(UseLongIds)) __obj.updateDynamic("UseLongIds")(UseLongIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdFormat]
   }
+  @scala.inline
+  implicit class IdFormatOps[Self <: IdFormat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeadline(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Deadline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeadline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Deadline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseLongIds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseLongIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseLongIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseLongIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

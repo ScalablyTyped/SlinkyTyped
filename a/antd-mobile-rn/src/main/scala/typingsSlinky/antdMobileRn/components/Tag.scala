@@ -1,15 +1,16 @@
 package typingsSlinky.antdMobileRn.components
 
+import typingsSlinky.antdMobileRn.tagIndexNativeMod.TagNativeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tag
-  extends SharedApply_TagNativeProps_1881735563[typingsSlinky.antdMobileRn.mod.Tag] {
+object Tag {
   @JSImport("antd-mobile-rn", "Tag")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TagNativeProps): SharedBuilder_TagNativeProps1198250225[typingsSlinky.antdMobileRn.mod.Tag] = new SharedBuilder_TagNativeProps1198250225[typingsSlinky.antdMobileRn.mod.Tag](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tag.type): SharedBuilder_TagNativeProps1198250225[typingsSlinky.antdMobileRn.mod.Tag] = new SharedBuilder_TagNativeProps1198250225[typingsSlinky.antdMobileRn.mod.Tag](js.Array(this.component, js.Dictionary.empty))()
 }
 

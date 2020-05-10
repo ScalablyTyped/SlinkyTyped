@@ -1,11 +1,10 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`picture-fill`
-import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`simple-fill`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PictureFillSymbolProperties extends FillSymbolProperties {
   /**
     * The height of the image in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
@@ -14,13 +13,13 @@ trait PictureFillSymbolProperties extends FillSymbolProperties {
     *
     * @default 12
     */
-  var height: js.UndefOr[Double | String] = js.undefined
+  var height: js.UndefOr[Double | String] = js.native
   /**
     * The URL to the image.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PictureFillSymbol.html#url)
     */
-  var url: js.UndefOr[String] = js.undefined
+  var url: js.UndefOr[String] = js.native
   /**
     * The width of the image in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
@@ -28,7 +27,7 @@ trait PictureFillSymbolProperties extends FillSymbolProperties {
     *
     * @default 12
     */
-  var width: js.UndefOr[Double | String] = js.undefined
+  var width: js.UndefOr[Double | String] = js.native
   /**
     * The offset on the x-axis in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
@@ -36,7 +35,7 @@ trait PictureFillSymbolProperties extends FillSymbolProperties {
     *
     * @default 0
     */
-  var xoffset: js.UndefOr[Double | String] = js.undefined
+  var xoffset: js.UndefOr[Double | String] = js.native
   /**
     * The scale factor on the x axis of the symbol.
     *
@@ -44,7 +43,7 @@ trait PictureFillSymbolProperties extends FillSymbolProperties {
     *
     * @default 1
     */
-  var xscale: js.UndefOr[Double] = js.undefined
+  var xscale: js.UndefOr[Double] = js.native
   /**
     * The offset on the y-axis in pixels or points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
     *
@@ -52,7 +51,7 @@ trait PictureFillSymbolProperties extends FillSymbolProperties {
     *
     * @default 0
     */
-  var yoffset: js.UndefOr[Double | String] = js.undefined
+  var yoffset: js.UndefOr[Double | String] = js.native
   /**
     * The scale factor on the y axis of the symbol.
     *
@@ -60,35 +59,106 @@ trait PictureFillSymbolProperties extends FillSymbolProperties {
     *
     * @default 1
     */
-  var yscale: js.UndefOr[Double] = js.undefined
+  var yscale: js.UndefOr[Double] = js.native
 }
 
 object PictureFillSymbolProperties {
   @scala.inline
-  def apply(
-    color: Color_ | js.Array[Double] | String = null,
-    height: Double | String = null,
-    outline: SimpleLineSymbolProperties = null,
-    `type`: `simple-fill` | `picture-fill` = null,
-    url: String = null,
-    width: Double | String = null,
-    xoffset: Double | String = null,
-    xscale: Int | Double = null,
-    yoffset: Double | String = null,
-    yscale: Int | Double = null
-  ): PictureFillSymbolProperties = {
+  def apply(): PictureFillSymbolProperties = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (outline != null) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (xoffset != null) __obj.updateDynamic("xoffset")(xoffset.asInstanceOf[js.Any])
-    if (xscale != null) __obj.updateDynamic("xscale")(xscale.asInstanceOf[js.Any])
-    if (yoffset != null) __obj.updateDynamic("yoffset")(yoffset.asInstanceOf[js.Any])
-    if (yscale != null) __obj.updateDynamic("yscale")(yscale.asInstanceOf[js.Any])
     __obj.asInstanceOf[PictureFillSymbolProperties]
   }
+  @scala.inline
+  implicit class PictureFillSymbolPropertiesOps[Self <: PictureFillSymbolProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeight(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXoffset(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xoffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXoffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xoffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXscale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xscale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXscale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xscale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYoffset(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yoffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYoffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yoffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withYscale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yscale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYscale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yscale")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

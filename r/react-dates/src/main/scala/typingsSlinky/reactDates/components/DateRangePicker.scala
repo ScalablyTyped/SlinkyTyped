@@ -1,10 +1,8 @@
 package typingsSlinky.reactDates.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactDates.AnonEndDate
 import typingsSlinky.reactDates.AnonIsVisible
 import typingsSlinky.reactDates.AnonStartDate
@@ -24,147 +22,171 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DateRangePicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, DateRangePickerCls] {
+object DateRangePicker {
   @JSImport("react-dates", "DateRangePicker")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: readOnly, required */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, DateRangePickerCls] {
+    @scala.inline
+    def anchorDirection(value: AnchorDirectionShape): this.type = set("anchorDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def appendToBody(value: Boolean): this.type = set("appendToBody", value.asInstanceOf[js.Any])
+    @scala.inline
+    def block(value: Boolean): this.type = set("block", value.asInstanceOf[js.Any])
+    @scala.inline
+    def calendarInfoPosition(value: CalendarInfoPositionShape): this.type = set("calendarInfoPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customArrowIconReactElement(value: ReactElement): this.type = set("customArrowIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customArrowIcon(value: String | ReactElement): this.type = set("customArrowIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customCloseIconReactElement(value: ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customCloseIcon(value: String | ReactElement): this.type = set("customCloseIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customInputIconReactElement(value: ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customInputIcon(value: String | ReactElement): this.type = set("customInputIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dayAriaLabelFormat(value: String): this.type = set("dayAriaLabelFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def daySize(value: Double): this.type = set("daySize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableScroll(value: Boolean): this.type = set("disableScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: DisabledShape): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def displayFormatFunction0(value: () => String): this.type = set("displayFormat", js.Any.fromFunction0(value))
+    @scala.inline
+    def displayFormat(value: String | js.Function0[String]): this.type = set("displayFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableOutsideDays(value: Boolean): this.type = set("enableOutsideDays", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endDate(value: momentObj): this.type = set("endDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endDateNull: this.type = set("endDate", null)
+    @scala.inline
+    def endDatePlaceholderText(value: String): this.type = set("endDatePlaceholderText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def firstDayOfWeek(value: DayOfWeekShape): this.type = set("firstDayOfWeek", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusedInput(value: FocusedInputShape): this.type = set("focusedInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def focusedInputNull: this.type = set("focusedInput", null)
+    @scala.inline
+    def hideKeyboardShortcutsPanel(value: Boolean): this.type = set("hideKeyboardShortcutsPanel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontalMargin(value: Double): this.type = set("horizontalMargin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def horizontalMonthPadding(value: Double): this.type = set("horizontalMonthPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialVisibleMonth(value: () => momentObj): this.type = set("initialVisibleMonth", js.Any.fromFunction0(value))
+    @scala.inline
+    def inputIconPosition(value: IconPositionShape): this.type = set("inputIconPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDayBlocked(value: /* day */ js.Any => Boolean): this.type = set("isDayBlocked", js.Any.fromFunction1(value))
+    @scala.inline
+    def isDayHighlighted(value: /* day */ js.Any => Boolean): this.type = set("isDayHighlighted", js.Any.fromFunction1(value))
+    @scala.inline
+    def isOutsideRange(value: /* day */ js.Any => Boolean): this.type = set("isOutsideRange", js.Any.fromFunction1(value))
+    @scala.inline
+    def isRTL(value: Boolean): this.type = set("isRTL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keepFocusOnInput(value: Boolean): this.type = set("keepFocusOnInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keepOpenOnDateSelect(value: Boolean): this.type = set("keepOpenOnDateSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: momentObj): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: momentObj): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minimumNights(value: Double): this.type = set("minimumNights", value.asInstanceOf[js.Any])
+    @scala.inline
+    def monthFormat(value: String): this.type = set("monthFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def navNextReactElement(value: ReactElement): this.type = set("navNext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def navNext(value: String | ReactElement): this.type = set("navNext", value.asInstanceOf[js.Any])
+    @scala.inline
+    def navPrevReactElement(value: ReactElement): this.type = set("navPrev", value.asInstanceOf[js.Any])
+    @scala.inline
+    def navPrev(value: String | ReactElement): this.type = set("navPrev", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noBorder(value: Boolean): this.type = set("noBorder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def numberOfMonths(value: Double): this.type = set("numberOfMonths", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClose(value: /* final */ AnonStartDate => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    @scala.inline
+    def onNextMonthClick(value: /* newCurrentMonth */ momentObj => Unit): this.type = set("onNextMonthClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPrevMonthClick(value: /* newCurrentMonth */ momentObj => Unit): this.type = set("onPrevMonthClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def openDirection(value: OpenDirectionShape): this.type = set("openDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def orientation(value: OrientationShape): this.type = set("orientation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def phrases(value: DateRangePickerPhrases): this.type = set("phrases", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def regular(value: Boolean): this.type = set("regular", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderCalendarDay(value: /* day */ momentObj => String | ReactElement): this.type = set("renderCalendarDay", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderCalendarInfo(value: () => String | ReactElement): this.type = set("renderCalendarInfo", js.Any.fromFunction0(value))
+    @scala.inline
+    def renderDayContents(value: /* day */ momentObj => String | ReactElement): this.type = set("renderDayContents", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderMonthElement(value: /* props */ AnonIsVisible => String | ReactElement): this.type = set("renderMonthElement", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderMonthText(value: /* day */ momentObj => String | ReactElement): this.type = set("renderMonthText", js.Any.fromFunction1(value))
+    @scala.inline
+    def reopenPickerOnClearDates(value: Boolean): this.type = set("reopenPickerOnClearDates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def screenReaderInputMessage(value: String): this.type = set("screenReaderInputMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showClearDates(value: Boolean): this.type = set("showClearDates", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showDefaultInputIcon(value: Boolean): this.type = set("showDefaultInputIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def small(value: Boolean): this.type = set("small", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startDate(value: momentObj): this.type = set("startDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def startDateNull: this.type = set("startDate", null)
+    @scala.inline
+    def startDatePlaceholderText(value: String): this.type = set("startDatePlaceholderText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionDuration(value: Double): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalHeight(value: Double): this.type = set("verticalHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def verticalSpacing(value: Double): this.type = set("verticalSpacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def weekDayFormat(value: String): this.type = set("weekDayFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def withFullScreenPortal(value: Boolean): this.type = set("withFullScreenPortal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def withPortal(value: Boolean): this.type = set("withPortal", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: DateRangePickerShape): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     endDateId: String,
     onDatesChange: AnonEndDate => Unit,
     onFocusChange: js.UndefOr[FocusedInputShape] => Unit,
-    startDateId: String,
-    anchorDirection: AnchorDirectionShape = null,
-    appendToBody: js.UndefOr[Boolean] = js.undefined,
-    block: js.UndefOr[Boolean] = js.undefined,
-    calendarInfoPosition: CalendarInfoPositionShape = null,
-    customArrowIcon: String | ReactElement = null,
-    customCloseIcon: String | ReactElement = null,
-    customInputIcon: String | ReactElement = null,
-    dayAriaLabelFormat: String = null,
-    daySize: Int | Double = null,
-    disableScroll: js.UndefOr[Boolean] = js.undefined,
-    disabled: DisabledShape = null,
-    displayFormat: String | js.Function0[String] = null,
-    enableOutsideDays: js.UndefOr[Boolean] = js.undefined,
-    endDate: momentObj = null,
-    endDatePlaceholderText: String = null,
-    firstDayOfWeek: DayOfWeekShape = null,
-    focusedInput: FocusedInputShape = null,
-    hideKeyboardShortcutsPanel: js.UndefOr[Boolean] = js.undefined,
-    horizontalMargin: Int | Double = null,
-    horizontalMonthPadding: Int | Double = null,
-    initialVisibleMonth: () => momentObj = null,
-    inputIconPosition: IconPositionShape = null,
-    isDayBlocked: /* day */ js.Any => Boolean = null,
-    isDayHighlighted: /* day */ js.Any => Boolean = null,
-    isOutsideRange: /* day */ js.Any => Boolean = null,
-    isRTL: js.UndefOr[Boolean] = js.undefined,
-    keepFocusOnInput: js.UndefOr[Boolean] = js.undefined,
-    keepOpenOnDateSelect: js.UndefOr[Boolean] = js.undefined,
-    maxDate: momentObj = null,
-    minDate: momentObj = null,
-    minimumNights: Int | Double = null,
-    monthFormat: String = null,
-    navNext: String | ReactElement = null,
-    navPrev: String | ReactElement = null,
-    noBorder: js.UndefOr[Boolean] = js.undefined,
-    numberOfMonths: Int | Double = null,
-    onClose: /* final */ AnonStartDate => Unit = null,
-    onNextMonthClick: /* newCurrentMonth */ momentObj => Unit = null,
-    onPrevMonthClick: /* newCurrentMonth */ momentObj => Unit = null,
-    openDirection: OpenDirectionShape = null,
-    orientation: OrientationShape = null,
-    phrases: DateRangePickerPhrases = null,
-    regular: js.UndefOr[Boolean] = js.undefined,
-    renderCalendarDay: /* day */ momentObj => String | ReactElement = null,
-    renderCalendarInfo: () => String | ReactElement = null,
-    renderDayContents: /* day */ momentObj => String | ReactElement = null,
-    renderMonthElement: /* props */ AnonIsVisible => String | ReactElement = null,
-    renderMonthText: /* day */ momentObj => String | ReactElement = null,
-    reopenPickerOnClearDates: js.UndefOr[Boolean] = js.undefined,
-    screenReaderInputMessage: String = null,
-    showClearDates: js.UndefOr[Boolean] = js.undefined,
-    showDefaultInputIcon: js.UndefOr[Boolean] = js.undefined,
-    small: js.UndefOr[Boolean] = js.undefined,
-    startDate: momentObj = null,
-    startDatePlaceholderText: String = null,
-    transitionDuration: Int | Double = null,
-    verticalHeight: Int | Double = null,
-    verticalSpacing: Int | Double = null,
-    weekDayFormat: String = null,
-    withFullScreenPortal: js.UndefOr[Boolean] = js.undefined,
-    withPortal: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, DateRangePickerCls] = {
-    val __obj = js.Dynamic.literal(endDateId = endDateId.asInstanceOf[js.Any], onDatesChange = js.Any.fromFunction1(onDatesChange), onFocusChange = js.Any.fromFunction1(onFocusChange), startDateId = startDateId.asInstanceOf[js.Any])
-    if (anchorDirection != null) __obj.updateDynamic("anchorDirection")(anchorDirection.asInstanceOf[js.Any])
-    if (!js.isUndefined(appendToBody)) __obj.updateDynamic("appendToBody")(appendToBody.asInstanceOf[js.Any])
-    if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])
-    if (calendarInfoPosition != null) __obj.updateDynamic("calendarInfoPosition")(calendarInfoPosition.asInstanceOf[js.Any])
-    if (customArrowIcon != null) __obj.updateDynamic("customArrowIcon")(customArrowIcon.asInstanceOf[js.Any])
-    if (customCloseIcon != null) __obj.updateDynamic("customCloseIcon")(customCloseIcon.asInstanceOf[js.Any])
-    if (customInputIcon != null) __obj.updateDynamic("customInputIcon")(customInputIcon.asInstanceOf[js.Any])
-    if (dayAriaLabelFormat != null) __obj.updateDynamic("dayAriaLabelFormat")(dayAriaLabelFormat.asInstanceOf[js.Any])
-    if (daySize != null) __obj.updateDynamic("daySize")(daySize.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableScroll)) __obj.updateDynamic("disableScroll")(disableScroll.asInstanceOf[js.Any])
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (displayFormat != null) __obj.updateDynamic("displayFormat")(displayFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableOutsideDays)) __obj.updateDynamic("enableOutsideDays")(enableOutsideDays.asInstanceOf[js.Any])
-    if (endDate != null) __obj.updateDynamic("endDate")(endDate.asInstanceOf[js.Any])
-    if (endDatePlaceholderText != null) __obj.updateDynamic("endDatePlaceholderText")(endDatePlaceholderText.asInstanceOf[js.Any])
-    if (firstDayOfWeek != null) __obj.updateDynamic("firstDayOfWeek")(firstDayOfWeek.asInstanceOf[js.Any])
-    if (focusedInput != null) __obj.updateDynamic("focusedInput")(focusedInput.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideKeyboardShortcutsPanel)) __obj.updateDynamic("hideKeyboardShortcutsPanel")(hideKeyboardShortcutsPanel.asInstanceOf[js.Any])
-    if (horizontalMargin != null) __obj.updateDynamic("horizontalMargin")(horizontalMargin.asInstanceOf[js.Any])
-    if (horizontalMonthPadding != null) __obj.updateDynamic("horizontalMonthPadding")(horizontalMonthPadding.asInstanceOf[js.Any])
-    if (initialVisibleMonth != null) __obj.updateDynamic("initialVisibleMonth")(js.Any.fromFunction0(initialVisibleMonth))
-    if (inputIconPosition != null) __obj.updateDynamic("inputIconPosition")(inputIconPosition.asInstanceOf[js.Any])
-    if (isDayBlocked != null) __obj.updateDynamic("isDayBlocked")(js.Any.fromFunction1(isDayBlocked))
-    if (isDayHighlighted != null) __obj.updateDynamic("isDayHighlighted")(js.Any.fromFunction1(isDayHighlighted))
-    if (isOutsideRange != null) __obj.updateDynamic("isOutsideRange")(js.Any.fromFunction1(isOutsideRange))
-    if (!js.isUndefined(isRTL)) __obj.updateDynamic("isRTL")(isRTL.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepFocusOnInput)) __obj.updateDynamic("keepFocusOnInput")(keepFocusOnInput.asInstanceOf[js.Any])
-    if (!js.isUndefined(keepOpenOnDateSelect)) __obj.updateDynamic("keepOpenOnDateSelect")(keepOpenOnDateSelect.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (minimumNights != null) __obj.updateDynamic("minimumNights")(minimumNights.asInstanceOf[js.Any])
-    if (monthFormat != null) __obj.updateDynamic("monthFormat")(monthFormat.asInstanceOf[js.Any])
-    if (navNext != null) __obj.updateDynamic("navNext")(navNext.asInstanceOf[js.Any])
-    if (navPrev != null) __obj.updateDynamic("navPrev")(navPrev.asInstanceOf[js.Any])
-    if (!js.isUndefined(noBorder)) __obj.updateDynamic("noBorder")(noBorder.asInstanceOf[js.Any])
-    if (numberOfMonths != null) __obj.updateDynamic("numberOfMonths")(numberOfMonths.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
-    if (onNextMonthClick != null) __obj.updateDynamic("onNextMonthClick")(js.Any.fromFunction1(onNextMonthClick))
-    if (onPrevMonthClick != null) __obj.updateDynamic("onPrevMonthClick")(js.Any.fromFunction1(onPrevMonthClick))
-    if (openDirection != null) __obj.updateDynamic("openDirection")(openDirection.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (phrases != null) __obj.updateDynamic("phrases")(phrases.asInstanceOf[js.Any])
-    if (!js.isUndefined(regular)) __obj.updateDynamic("regular")(regular.asInstanceOf[js.Any])
-    if (renderCalendarDay != null) __obj.updateDynamic("renderCalendarDay")(js.Any.fromFunction1(renderCalendarDay))
-    if (renderCalendarInfo != null) __obj.updateDynamic("renderCalendarInfo")(js.Any.fromFunction0(renderCalendarInfo))
-    if (renderDayContents != null) __obj.updateDynamic("renderDayContents")(js.Any.fromFunction1(renderDayContents))
-    if (renderMonthElement != null) __obj.updateDynamic("renderMonthElement")(js.Any.fromFunction1(renderMonthElement))
-    if (renderMonthText != null) __obj.updateDynamic("renderMonthText")(js.Any.fromFunction1(renderMonthText))
-    if (!js.isUndefined(reopenPickerOnClearDates)) __obj.updateDynamic("reopenPickerOnClearDates")(reopenPickerOnClearDates.asInstanceOf[js.Any])
-    if (screenReaderInputMessage != null) __obj.updateDynamic("screenReaderInputMessage")(screenReaderInputMessage.asInstanceOf[js.Any])
-    if (!js.isUndefined(showClearDates)) __obj.updateDynamic("showClearDates")(showClearDates.asInstanceOf[js.Any])
-    if (!js.isUndefined(showDefaultInputIcon)) __obj.updateDynamic("showDefaultInputIcon")(showDefaultInputIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(small)) __obj.updateDynamic("small")(small.asInstanceOf[js.Any])
-    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
-    if (startDatePlaceholderText != null) __obj.updateDynamic("startDatePlaceholderText")(startDatePlaceholderText.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (verticalHeight != null) __obj.updateDynamic("verticalHeight")(verticalHeight.asInstanceOf[js.Any])
-    if (verticalSpacing != null) __obj.updateDynamic("verticalSpacing")(verticalSpacing.asInstanceOf[js.Any])
-    if (weekDayFormat != null) __obj.updateDynamic("weekDayFormat")(weekDayFormat.asInstanceOf[js.Any])
-    if (!js.isUndefined(withFullScreenPortal)) __obj.updateDynamic("withFullScreenPortal")(withFullScreenPortal.asInstanceOf[js.Any])
-    if (!js.isUndefined(withPortal)) __obj.updateDynamic("withPortal")(withPortal.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    startDateId: String
+  ): Builder = {
+    val __props = js.Dynamic.literal(endDateId = endDateId.asInstanceOf[js.Any], onDatesChange = js.Any.fromFunction1(onDatesChange), onFocusChange = js.Any.fromFunction1(onFocusChange), startDateId = startDateId.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DateRangePickerShape]))
   }
-  type Props = DateRangePickerShape
 }
 

@@ -13,12 +13,10 @@ trait GoogleActionsOrdersV3VerticalsPurchasePickupInfoPickupType extends js.Obje
 
 object GoogleActionsOrdersV3VerticalsPurchasePickupInfoPickupType {
   @scala.inline
-  def CURBSIDE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CURBSIDE = this.cast("CURBSIDE")
+  def CURBSIDE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CURBSIDE = "CURBSIDE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CURBSIDE]
   @scala.inline
-  def INSTORE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.INSTORE = this.cast("INSTORE")
+  def INSTORE: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.INSTORE = "INSTORE".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.INSTORE]
   @scala.inline
-  def UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNSPECIFIED = this.cast("UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNSPECIFIED = "UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.UNSPECIFIED]
 }
 

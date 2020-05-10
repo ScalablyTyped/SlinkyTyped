@@ -23,10 +23,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EventMap[I]
   extends typingsSlinky.amapJsApi.AMap.ShapeOverlay.EventMap[I] {
-  var setCenter: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.setCenter, js.UndefOr[scala.Nothing]]
-  var setRadius: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.setRadius, js.UndefOr[scala.Nothing]]
+  var setCenter: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.setCenter, js.UndefOr[scala.Nothing]] = js.native
+  var setRadius: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.setRadius, js.UndefOr[scala.Nothing]] = js.native
 }
 
 object EventMap {
@@ -50,8 +51,27 @@ object EventMap {
     touchstart: MapsEvent[touchstart, I]
   ): EventMap[I] = {
     val __obj = js.Dynamic.literal(change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], hide = hide.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], rightclick = rightclick.asInstanceOf[js.Any], setCenter = setCenter.asInstanceOf[js.Any], setRadius = setRadius.asInstanceOf[js.Any], show = show.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[EventMap[I]]
   }
+  @scala.inline
+  implicit class EventMapOps[Self[i] <: EventMap[i], I] (val x: Self[I]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[I] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[I]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[I] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[I] with Other]
+    @scala.inline
+    def withSetCenter(value: Event_[setCenter, js.UndefOr[scala.Nothing]]): Self[I] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetRadius(value: Event_[setRadius, js.UndefOr[scala.Nothing]]): Self[I] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

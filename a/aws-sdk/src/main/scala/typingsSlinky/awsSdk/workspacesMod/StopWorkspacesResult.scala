@@ -14,10 +14,29 @@ trait StopWorkspacesResult extends js.Object {
 
 object StopWorkspacesResult {
   @scala.inline
-  def apply(FailedRequests: FailedStopWorkspaceRequests = null): StopWorkspacesResult = {
+  def apply(): StopWorkspacesResult = {
     val __obj = js.Dynamic.literal()
-    if (FailedRequests != null) __obj.updateDynamic("FailedRequests")(FailedRequests.asInstanceOf[js.Any])
     __obj.asInstanceOf[StopWorkspacesResult]
   }
+  @scala.inline
+  implicit class StopWorkspacesResultOps[Self <: StopWorkspacesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailedRequests(value: FailedStopWorkspaceRequests): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedRequests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailedRequests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailedRequests")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

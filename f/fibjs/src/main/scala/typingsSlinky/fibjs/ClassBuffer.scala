@@ -1,7 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.std.ArrayBuffer
-import typingsSlinky.std.ArrayBufferView
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -49,7 +47,7 @@ class ClassBuffer () extends ClassObject {
   	 * 
   	 * 
   	 */
-  def this(datas: scala.scalajs.js.typedarray.ArrayBuffer) = this()
+  def this(datas: js.typedarray.ArrayBuffer) = this()
   /**
   	 * 
   	 * @brief 缓存对象构造函数
@@ -58,7 +56,7 @@ class ClassBuffer () extends ClassObject {
   	 * 
   	 * 
   	 */
-  def this(datas: scala.scalajs.js.typedarray.ArrayBufferView) = this()
+  def this(datas: js.typedarray.ArrayBufferView) = this()
   /**
   	 * 
   	 * @brief 缓存对象构造函数
@@ -1000,7 +998,7 @@ object ClassBuffer extends js.Object {
   	 * 
   	 * 
   	 */
-  def byteLength(str: ArrayBuffer): Double = js.native
+  def byteLength(str: js.typedarray.ArrayBuffer): Double = js.native
   /**
   	 * 
   	 * @brief 返回字符串的实际字节长度
@@ -1011,9 +1009,9 @@ object ClassBuffer extends js.Object {
   	 * 
   	 * 
   	 */
-  def byteLength(str: ArrayBufferView): Double = js.native
-  def byteLength(str: ArrayBufferView, codec: String): Double = js.native
-  def byteLength(str: ArrayBuffer, codec: String): Double = js.native
+  def byteLength(str: js.typedarray.ArrayBufferView): Double = js.native
+  def byteLength(str: js.typedarray.ArrayBufferView, codec: String): Double = js.native
+  def byteLength(str: js.typedarray.ArrayBuffer, codec: String): Double = js.native
   /**
   	 * 
   	 * @brief 拼接多个缓存区中的数据

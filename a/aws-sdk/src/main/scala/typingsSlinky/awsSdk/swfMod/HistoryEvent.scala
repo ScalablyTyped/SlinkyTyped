@@ -238,121 +238,683 @@ trait HistoryEvent extends js.Object {
 
 object HistoryEvent {
   @scala.inline
-  def apply(
-    eventId: EventId,
-    eventTimestamp: js.Date,
-    eventType: EventType,
-    activityTaskCancelRequestedEventAttributes: ActivityTaskCancelRequestedEventAttributes = null,
-    activityTaskCanceledEventAttributes: ActivityTaskCanceledEventAttributes = null,
-    activityTaskCompletedEventAttributes: ActivityTaskCompletedEventAttributes = null,
-    activityTaskFailedEventAttributes: ActivityTaskFailedEventAttributes = null,
-    activityTaskScheduledEventAttributes: ActivityTaskScheduledEventAttributes = null,
-    activityTaskStartedEventAttributes: ActivityTaskStartedEventAttributes = null,
-    activityTaskTimedOutEventAttributes: ActivityTaskTimedOutEventAttributes = null,
-    cancelTimerFailedEventAttributes: CancelTimerFailedEventAttributes = null,
-    cancelWorkflowExecutionFailedEventAttributes: CancelWorkflowExecutionFailedEventAttributes = null,
-    childWorkflowExecutionCanceledEventAttributes: ChildWorkflowExecutionCanceledEventAttributes = null,
-    childWorkflowExecutionCompletedEventAttributes: ChildWorkflowExecutionCompletedEventAttributes = null,
-    childWorkflowExecutionFailedEventAttributes: ChildWorkflowExecutionFailedEventAttributes = null,
-    childWorkflowExecutionStartedEventAttributes: ChildWorkflowExecutionStartedEventAttributes = null,
-    childWorkflowExecutionTerminatedEventAttributes: ChildWorkflowExecutionTerminatedEventAttributes = null,
-    childWorkflowExecutionTimedOutEventAttributes: ChildWorkflowExecutionTimedOutEventAttributes = null,
-    completeWorkflowExecutionFailedEventAttributes: CompleteWorkflowExecutionFailedEventAttributes = null,
-    continueAsNewWorkflowExecutionFailedEventAttributes: ContinueAsNewWorkflowExecutionFailedEventAttributes = null,
-    decisionTaskCompletedEventAttributes: DecisionTaskCompletedEventAttributes = null,
-    decisionTaskScheduledEventAttributes: DecisionTaskScheduledEventAttributes = null,
-    decisionTaskStartedEventAttributes: DecisionTaskStartedEventAttributes = null,
-    decisionTaskTimedOutEventAttributes: DecisionTaskTimedOutEventAttributes = null,
-    externalWorkflowExecutionCancelRequestedEventAttributes: ExternalWorkflowExecutionCancelRequestedEventAttributes = null,
-    externalWorkflowExecutionSignaledEventAttributes: ExternalWorkflowExecutionSignaledEventAttributes = null,
-    failWorkflowExecutionFailedEventAttributes: FailWorkflowExecutionFailedEventAttributes = null,
-    lambdaFunctionCompletedEventAttributes: LambdaFunctionCompletedEventAttributes = null,
-    lambdaFunctionFailedEventAttributes: LambdaFunctionFailedEventAttributes = null,
-    lambdaFunctionScheduledEventAttributes: LambdaFunctionScheduledEventAttributes = null,
-    lambdaFunctionStartedEventAttributes: LambdaFunctionStartedEventAttributes = null,
-    lambdaFunctionTimedOutEventAttributes: LambdaFunctionTimedOutEventAttributes = null,
-    markerRecordedEventAttributes: MarkerRecordedEventAttributes = null,
-    recordMarkerFailedEventAttributes: RecordMarkerFailedEventAttributes = null,
-    requestCancelActivityTaskFailedEventAttributes: RequestCancelActivityTaskFailedEventAttributes = null,
-    requestCancelExternalWorkflowExecutionFailedEventAttributes: RequestCancelExternalWorkflowExecutionFailedEventAttributes = null,
-    requestCancelExternalWorkflowExecutionInitiatedEventAttributes: RequestCancelExternalWorkflowExecutionInitiatedEventAttributes = null,
-    scheduleActivityTaskFailedEventAttributes: ScheduleActivityTaskFailedEventAttributes = null,
-    scheduleLambdaFunctionFailedEventAttributes: ScheduleLambdaFunctionFailedEventAttributes = null,
-    signalExternalWorkflowExecutionFailedEventAttributes: SignalExternalWorkflowExecutionFailedEventAttributes = null,
-    signalExternalWorkflowExecutionInitiatedEventAttributes: SignalExternalWorkflowExecutionInitiatedEventAttributes = null,
-    startChildWorkflowExecutionFailedEventAttributes: StartChildWorkflowExecutionFailedEventAttributes = null,
-    startChildWorkflowExecutionInitiatedEventAttributes: StartChildWorkflowExecutionInitiatedEventAttributes = null,
-    startLambdaFunctionFailedEventAttributes: StartLambdaFunctionFailedEventAttributes = null,
-    startTimerFailedEventAttributes: StartTimerFailedEventAttributes = null,
-    timerCanceledEventAttributes: TimerCanceledEventAttributes = null,
-    timerFiredEventAttributes: TimerFiredEventAttributes = null,
-    timerStartedEventAttributes: TimerStartedEventAttributes = null,
-    workflowExecutionCancelRequestedEventAttributes: WorkflowExecutionCancelRequestedEventAttributes = null,
-    workflowExecutionCanceledEventAttributes: WorkflowExecutionCanceledEventAttributes = null,
-    workflowExecutionCompletedEventAttributes: WorkflowExecutionCompletedEventAttributes = null,
-    workflowExecutionContinuedAsNewEventAttributes: WorkflowExecutionContinuedAsNewEventAttributes = null,
-    workflowExecutionFailedEventAttributes: WorkflowExecutionFailedEventAttributes = null,
-    workflowExecutionSignaledEventAttributes: WorkflowExecutionSignaledEventAttributes = null,
-    workflowExecutionStartedEventAttributes: WorkflowExecutionStartedEventAttributes = null,
-    workflowExecutionTerminatedEventAttributes: WorkflowExecutionTerminatedEventAttributes = null,
-    workflowExecutionTimedOutEventAttributes: WorkflowExecutionTimedOutEventAttributes = null
-  ): HistoryEvent = {
+  def apply(eventId: EventId, eventTimestamp: js.Date, eventType: EventType): HistoryEvent = {
     val __obj = js.Dynamic.literal(eventId = eventId.asInstanceOf[js.Any], eventTimestamp = eventTimestamp.asInstanceOf[js.Any], eventType = eventType.asInstanceOf[js.Any])
-    if (activityTaskCancelRequestedEventAttributes != null) __obj.updateDynamic("activityTaskCancelRequestedEventAttributes")(activityTaskCancelRequestedEventAttributes.asInstanceOf[js.Any])
-    if (activityTaskCanceledEventAttributes != null) __obj.updateDynamic("activityTaskCanceledEventAttributes")(activityTaskCanceledEventAttributes.asInstanceOf[js.Any])
-    if (activityTaskCompletedEventAttributes != null) __obj.updateDynamic("activityTaskCompletedEventAttributes")(activityTaskCompletedEventAttributes.asInstanceOf[js.Any])
-    if (activityTaskFailedEventAttributes != null) __obj.updateDynamic("activityTaskFailedEventAttributes")(activityTaskFailedEventAttributes.asInstanceOf[js.Any])
-    if (activityTaskScheduledEventAttributes != null) __obj.updateDynamic("activityTaskScheduledEventAttributes")(activityTaskScheduledEventAttributes.asInstanceOf[js.Any])
-    if (activityTaskStartedEventAttributes != null) __obj.updateDynamic("activityTaskStartedEventAttributes")(activityTaskStartedEventAttributes.asInstanceOf[js.Any])
-    if (activityTaskTimedOutEventAttributes != null) __obj.updateDynamic("activityTaskTimedOutEventAttributes")(activityTaskTimedOutEventAttributes.asInstanceOf[js.Any])
-    if (cancelTimerFailedEventAttributes != null) __obj.updateDynamic("cancelTimerFailedEventAttributes")(cancelTimerFailedEventAttributes.asInstanceOf[js.Any])
-    if (cancelWorkflowExecutionFailedEventAttributes != null) __obj.updateDynamic("cancelWorkflowExecutionFailedEventAttributes")(cancelWorkflowExecutionFailedEventAttributes.asInstanceOf[js.Any])
-    if (childWorkflowExecutionCanceledEventAttributes != null) __obj.updateDynamic("childWorkflowExecutionCanceledEventAttributes")(childWorkflowExecutionCanceledEventAttributes.asInstanceOf[js.Any])
-    if (childWorkflowExecutionCompletedEventAttributes != null) __obj.updateDynamic("childWorkflowExecutionCompletedEventAttributes")(childWorkflowExecutionCompletedEventAttributes.asInstanceOf[js.Any])
-    if (childWorkflowExecutionFailedEventAttributes != null) __obj.updateDynamic("childWorkflowExecutionFailedEventAttributes")(childWorkflowExecutionFailedEventAttributes.asInstanceOf[js.Any])
-    if (childWorkflowExecutionStartedEventAttributes != null) __obj.updateDynamic("childWorkflowExecutionStartedEventAttributes")(childWorkflowExecutionStartedEventAttributes.asInstanceOf[js.Any])
-    if (childWorkflowExecutionTerminatedEventAttributes != null) __obj.updateDynamic("childWorkflowExecutionTerminatedEventAttributes")(childWorkflowExecutionTerminatedEventAttributes.asInstanceOf[js.Any])
-    if (childWorkflowExecutionTimedOutEventAttributes != null) __obj.updateDynamic("childWorkflowExecutionTimedOutEventAttributes")(childWorkflowExecutionTimedOutEventAttributes.asInstanceOf[js.Any])
-    if (completeWorkflowExecutionFailedEventAttributes != null) __obj.updateDynamic("completeWorkflowExecutionFailedEventAttributes")(completeWorkflowExecutionFailedEventAttributes.asInstanceOf[js.Any])
-    if (continueAsNewWorkflowExecutionFailedEventAttributes != null) __obj.updateDynamic("continueAsNewWorkflowExecutionFailedEventAttributes")(continueAsNewWorkflowExecutionFailedEventAttributes.asInstanceOf[js.Any])
-    if (decisionTaskCompletedEventAttributes != null) __obj.updateDynamic("decisionTaskCompletedEventAttributes")(decisionTaskCompletedEventAttributes.asInstanceOf[js.Any])
-    if (decisionTaskScheduledEventAttributes != null) __obj.updateDynamic("decisionTaskScheduledEventAttributes")(decisionTaskScheduledEventAttributes.asInstanceOf[js.Any])
-    if (decisionTaskStartedEventAttributes != null) __obj.updateDynamic("decisionTaskStartedEventAttributes")(decisionTaskStartedEventAttributes.asInstanceOf[js.Any])
-    if (decisionTaskTimedOutEventAttributes != null) __obj.updateDynamic("decisionTaskTimedOutEventAttributes")(decisionTaskTimedOutEventAttributes.asInstanceOf[js.Any])
-    if (externalWorkflowExecutionCancelRequestedEventAttributes != null) __obj.updateDynamic("externalWorkflowExecutionCancelRequestedEventAttributes")(externalWorkflowExecutionCancelRequestedEventAttributes.asInstanceOf[js.Any])
-    if (externalWorkflowExecutionSignaledEventAttributes != null) __obj.updateDynamic("externalWorkflowExecutionSignaledEventAttributes")(externalWorkflowExecutionSignaledEventAttributes.asInstanceOf[js.Any])
-    if (failWorkflowExecutionFailedEventAttributes != null) __obj.updateDynamic("failWorkflowExecutionFailedEventAttributes")(failWorkflowExecutionFailedEventAttributes.asInstanceOf[js.Any])
-    if (lambdaFunctionCompletedEventAttributes != null) __obj.updateDynamic("lambdaFunctionCompletedEventAttributes")(lambdaFunctionCompletedEventAttributes.asInstanceOf[js.Any])
-    if (lambdaFunctionFailedEventAttributes != null) __obj.updateDynamic("lambdaFunctionFailedEventAttributes")(lambdaFunctionFailedEventAttributes.asInstanceOf[js.Any])
-    if (lambdaFunctionScheduledEventAttributes != null) __obj.updateDynamic("lambdaFunctionScheduledEventAttributes")(lambdaFunctionScheduledEventAttributes.asInstanceOf[js.Any])
-    if (lambdaFunctionStartedEventAttributes != null) __obj.updateDynamic("lambdaFunctionStartedEventAttributes")(lambdaFunctionStartedEventAttributes.asInstanceOf[js.Any])
-    if (lambdaFunctionTimedOutEventAttributes != null) __obj.updateDynamic("lambdaFunctionTimedOutEventAttributes")(lambdaFunctionTimedOutEventAttributes.asInstanceOf[js.Any])
-    if (markerRecordedEventAttributes != null) __obj.updateDynamic("markerRecordedEventAttributes")(markerRecordedEventAttributes.asInstanceOf[js.Any])
-    if (recordMarkerFailedEventAttributes != null) __obj.updateDynamic("recordMarkerFailedEventAttributes")(recordMarkerFailedEventAttributes.asInstanceOf[js.Any])
-    if (requestCancelActivityTaskFailedEventAttributes != null) __obj.updateDynamic("requestCancelActivityTaskFailedEventAttributes")(requestCancelActivityTaskFailedEventAttributes.asInstanceOf[js.Any])
-    if (requestCancelExternalWorkflowExecutionFailedEventAttributes != null) __obj.updateDynamic("requestCancelExternalWorkflowExecutionFailedEventAttributes")(requestCancelExternalWorkflowExecutionFailedEventAttributes.asInstanceOf[js.Any])
-    if (requestCancelExternalWorkflowExecutionInitiatedEventAttributes != null) __obj.updateDynamic("requestCancelExternalWorkflowExecutionInitiatedEventAttributes")(requestCancelExternalWorkflowExecutionInitiatedEventAttributes.asInstanceOf[js.Any])
-    if (scheduleActivityTaskFailedEventAttributes != null) __obj.updateDynamic("scheduleActivityTaskFailedEventAttributes")(scheduleActivityTaskFailedEventAttributes.asInstanceOf[js.Any])
-    if (scheduleLambdaFunctionFailedEventAttributes != null) __obj.updateDynamic("scheduleLambdaFunctionFailedEventAttributes")(scheduleLambdaFunctionFailedEventAttributes.asInstanceOf[js.Any])
-    if (signalExternalWorkflowExecutionFailedEventAttributes != null) __obj.updateDynamic("signalExternalWorkflowExecutionFailedEventAttributes")(signalExternalWorkflowExecutionFailedEventAttributes.asInstanceOf[js.Any])
-    if (signalExternalWorkflowExecutionInitiatedEventAttributes != null) __obj.updateDynamic("signalExternalWorkflowExecutionInitiatedEventAttributes")(signalExternalWorkflowExecutionInitiatedEventAttributes.asInstanceOf[js.Any])
-    if (startChildWorkflowExecutionFailedEventAttributes != null) __obj.updateDynamic("startChildWorkflowExecutionFailedEventAttributes")(startChildWorkflowExecutionFailedEventAttributes.asInstanceOf[js.Any])
-    if (startChildWorkflowExecutionInitiatedEventAttributes != null) __obj.updateDynamic("startChildWorkflowExecutionInitiatedEventAttributes")(startChildWorkflowExecutionInitiatedEventAttributes.asInstanceOf[js.Any])
-    if (startLambdaFunctionFailedEventAttributes != null) __obj.updateDynamic("startLambdaFunctionFailedEventAttributes")(startLambdaFunctionFailedEventAttributes.asInstanceOf[js.Any])
-    if (startTimerFailedEventAttributes != null) __obj.updateDynamic("startTimerFailedEventAttributes")(startTimerFailedEventAttributes.asInstanceOf[js.Any])
-    if (timerCanceledEventAttributes != null) __obj.updateDynamic("timerCanceledEventAttributes")(timerCanceledEventAttributes.asInstanceOf[js.Any])
-    if (timerFiredEventAttributes != null) __obj.updateDynamic("timerFiredEventAttributes")(timerFiredEventAttributes.asInstanceOf[js.Any])
-    if (timerStartedEventAttributes != null) __obj.updateDynamic("timerStartedEventAttributes")(timerStartedEventAttributes.asInstanceOf[js.Any])
-    if (workflowExecutionCancelRequestedEventAttributes != null) __obj.updateDynamic("workflowExecutionCancelRequestedEventAttributes")(workflowExecutionCancelRequestedEventAttributes.asInstanceOf[js.Any])
-    if (workflowExecutionCanceledEventAttributes != null) __obj.updateDynamic("workflowExecutionCanceledEventAttributes")(workflowExecutionCanceledEventAttributes.asInstanceOf[js.Any])
-    if (workflowExecutionCompletedEventAttributes != null) __obj.updateDynamic("workflowExecutionCompletedEventAttributes")(workflowExecutionCompletedEventAttributes.asInstanceOf[js.Any])
-    if (workflowExecutionContinuedAsNewEventAttributes != null) __obj.updateDynamic("workflowExecutionContinuedAsNewEventAttributes")(workflowExecutionContinuedAsNewEventAttributes.asInstanceOf[js.Any])
-    if (workflowExecutionFailedEventAttributes != null) __obj.updateDynamic("workflowExecutionFailedEventAttributes")(workflowExecutionFailedEventAttributes.asInstanceOf[js.Any])
-    if (workflowExecutionSignaledEventAttributes != null) __obj.updateDynamic("workflowExecutionSignaledEventAttributes")(workflowExecutionSignaledEventAttributes.asInstanceOf[js.Any])
-    if (workflowExecutionStartedEventAttributes != null) __obj.updateDynamic("workflowExecutionStartedEventAttributes")(workflowExecutionStartedEventAttributes.asInstanceOf[js.Any])
-    if (workflowExecutionTerminatedEventAttributes != null) __obj.updateDynamic("workflowExecutionTerminatedEventAttributes")(workflowExecutionTerminatedEventAttributes.asInstanceOf[js.Any])
-    if (workflowExecutionTimedOutEventAttributes != null) __obj.updateDynamic("workflowExecutionTimedOutEventAttributes")(workflowExecutionTimedOutEventAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[HistoryEvent]
   }
+  @scala.inline
+  implicit class HistoryEventOps[Self <: HistoryEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEventTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEventType(value: EventType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActivityTaskCancelRequestedEventAttributes(value: ActivityTaskCancelRequestedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskCancelRequestedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityTaskCancelRequestedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskCancelRequestedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityTaskCanceledEventAttributes(value: ActivityTaskCanceledEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskCanceledEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityTaskCanceledEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskCanceledEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityTaskCompletedEventAttributes(value: ActivityTaskCompletedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskCompletedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityTaskCompletedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskCompletedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityTaskFailedEventAttributes(value: ActivityTaskFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityTaskFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityTaskScheduledEventAttributes(value: ActivityTaskScheduledEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskScheduledEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityTaskScheduledEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskScheduledEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityTaskStartedEventAttributes(value: ActivityTaskStartedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskStartedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityTaskStartedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskStartedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityTaskTimedOutEventAttributes(value: ActivityTaskTimedOutEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskTimedOutEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityTaskTimedOutEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTaskTimedOutEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelTimerFailedEventAttributes(value: CancelTimerFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelTimerFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelTimerFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelTimerFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCancelWorkflowExecutionFailedEventAttributes(value: CancelWorkflowExecutionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelWorkflowExecutionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCancelWorkflowExecutionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelWorkflowExecutionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildWorkflowExecutionCanceledEventAttributes(value: ChildWorkflowExecutionCanceledEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionCanceledEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildWorkflowExecutionCanceledEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionCanceledEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildWorkflowExecutionCompletedEventAttributes(value: ChildWorkflowExecutionCompletedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionCompletedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildWorkflowExecutionCompletedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionCompletedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildWorkflowExecutionFailedEventAttributes(value: ChildWorkflowExecutionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildWorkflowExecutionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildWorkflowExecutionStartedEventAttributes(value: ChildWorkflowExecutionStartedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionStartedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildWorkflowExecutionStartedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionStartedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildWorkflowExecutionTerminatedEventAttributes(value: ChildWorkflowExecutionTerminatedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionTerminatedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildWorkflowExecutionTerminatedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionTerminatedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildWorkflowExecutionTimedOutEventAttributes(value: ChildWorkflowExecutionTimedOutEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionTimedOutEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildWorkflowExecutionTimedOutEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childWorkflowExecutionTimedOutEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompleteWorkflowExecutionFailedEventAttributes(value: CompleteWorkflowExecutionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completeWorkflowExecutionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompleteWorkflowExecutionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("completeWorkflowExecutionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContinueAsNewWorkflowExecutionFailedEventAttributes(value: ContinueAsNewWorkflowExecutionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueAsNewWorkflowExecutionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContinueAsNewWorkflowExecutionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continueAsNewWorkflowExecutionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecisionTaskCompletedEventAttributes(value: DecisionTaskCompletedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskCompletedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecisionTaskCompletedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskCompletedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecisionTaskScheduledEventAttributes(value: DecisionTaskScheduledEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskScheduledEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecisionTaskScheduledEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskScheduledEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecisionTaskStartedEventAttributes(value: DecisionTaskStartedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskStartedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecisionTaskStartedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskStartedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecisionTaskTimedOutEventAttributes(value: DecisionTaskTimedOutEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskTimedOutEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecisionTaskTimedOutEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskTimedOutEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalWorkflowExecutionCancelRequestedEventAttributes(value: ExternalWorkflowExecutionCancelRequestedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalWorkflowExecutionCancelRequestedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalWorkflowExecutionCancelRequestedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalWorkflowExecutionCancelRequestedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalWorkflowExecutionSignaledEventAttributes(value: ExternalWorkflowExecutionSignaledEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalWorkflowExecutionSignaledEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalWorkflowExecutionSignaledEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalWorkflowExecutionSignaledEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailWorkflowExecutionFailedEventAttributes(value: FailWorkflowExecutionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failWorkflowExecutionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailWorkflowExecutionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failWorkflowExecutionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionCompletedEventAttributes(value: LambdaFunctionCompletedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionCompletedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionCompletedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionCompletedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionFailedEventAttributes(value: LambdaFunctionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionScheduledEventAttributes(value: LambdaFunctionScheduledEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionScheduledEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionScheduledEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionScheduledEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionStartedEventAttributes(value: LambdaFunctionStartedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionStartedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionStartedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionStartedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionTimedOutEventAttributes(value: LambdaFunctionTimedOutEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionTimedOutEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionTimedOutEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionTimedOutEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarkerRecordedEventAttributes(value: MarkerRecordedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerRecordedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarkerRecordedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("markerRecordedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecordMarkerFailedEventAttributes(value: RecordMarkerFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordMarkerFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordMarkerFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordMarkerFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestCancelActivityTaskFailedEventAttributes(value: RequestCancelActivityTaskFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestCancelActivityTaskFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestCancelActivityTaskFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestCancelActivityTaskFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestCancelExternalWorkflowExecutionFailedEventAttributes(value: RequestCancelExternalWorkflowExecutionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestCancelExternalWorkflowExecutionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestCancelExternalWorkflowExecutionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestCancelExternalWorkflowExecutionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequestCancelExternalWorkflowExecutionInitiatedEventAttributes(value: RequestCancelExternalWorkflowExecutionInitiatedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestCancelExternalWorkflowExecutionInitiatedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequestCancelExternalWorkflowExecutionInitiatedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestCancelExternalWorkflowExecutionInitiatedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleActivityTaskFailedEventAttributes(value: ScheduleActivityTaskFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleActivityTaskFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleActivityTaskFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleActivityTaskFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScheduleLambdaFunctionFailedEventAttributes(value: ScheduleLambdaFunctionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleLambdaFunctionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScheduleLambdaFunctionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheduleLambdaFunctionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignalExternalWorkflowExecutionFailedEventAttributes(value: SignalExternalWorkflowExecutionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signalExternalWorkflowExecutionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignalExternalWorkflowExecutionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signalExternalWorkflowExecutionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignalExternalWorkflowExecutionInitiatedEventAttributes(value: SignalExternalWorkflowExecutionInitiatedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signalExternalWorkflowExecutionInitiatedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignalExternalWorkflowExecutionInitiatedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signalExternalWorkflowExecutionInitiatedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartChildWorkflowExecutionFailedEventAttributes(value: StartChildWorkflowExecutionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startChildWorkflowExecutionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartChildWorkflowExecutionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startChildWorkflowExecutionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartChildWorkflowExecutionInitiatedEventAttributes(value: StartChildWorkflowExecutionInitiatedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startChildWorkflowExecutionInitiatedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartChildWorkflowExecutionInitiatedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startChildWorkflowExecutionInitiatedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartLambdaFunctionFailedEventAttributes(value: StartLambdaFunctionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startLambdaFunctionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartLambdaFunctionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startLambdaFunctionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartTimerFailedEventAttributes(value: StartTimerFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimerFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartTimerFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTimerFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimerCanceledEventAttributes(value: TimerCanceledEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timerCanceledEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimerCanceledEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timerCanceledEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimerFiredEventAttributes(value: TimerFiredEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timerFiredEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimerFiredEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timerFiredEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimerStartedEventAttributes(value: TimerStartedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timerStartedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimerStartedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timerStartedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowExecutionCancelRequestedEventAttributes(value: WorkflowExecutionCancelRequestedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionCancelRequestedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowExecutionCancelRequestedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionCancelRequestedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowExecutionCanceledEventAttributes(value: WorkflowExecutionCanceledEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionCanceledEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowExecutionCanceledEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionCanceledEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowExecutionCompletedEventAttributes(value: WorkflowExecutionCompletedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionCompletedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowExecutionCompletedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionCompletedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowExecutionContinuedAsNewEventAttributes(value: WorkflowExecutionContinuedAsNewEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionContinuedAsNewEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowExecutionContinuedAsNewEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionContinuedAsNewEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowExecutionFailedEventAttributes(value: WorkflowExecutionFailedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionFailedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowExecutionFailedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionFailedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowExecutionSignaledEventAttributes(value: WorkflowExecutionSignaledEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionSignaledEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowExecutionSignaledEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionSignaledEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowExecutionStartedEventAttributes(value: WorkflowExecutionStartedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionStartedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowExecutionStartedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionStartedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowExecutionTerminatedEventAttributes(value: WorkflowExecutionTerminatedEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionTerminatedEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowExecutionTerminatedEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionTerminatedEventAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkflowExecutionTimedOutEventAttributes(value: WorkflowExecutionTimedOutEventAttributes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionTimedOutEventAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkflowExecutionTimedOutEventAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflowExecutionTimedOutEventAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.officeUiFabricReact.indexMod
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
 import typingsSlinky.officeUiFabricReact.positioningTypesMod.IPoint
-import typingsSlinky.std.Element
-import typingsSlinky.std.MouseEvent
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import scala.scalajs.js
 import scala.scalajs.js.`|`

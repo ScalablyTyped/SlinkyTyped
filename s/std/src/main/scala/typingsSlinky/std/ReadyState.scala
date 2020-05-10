@@ -13,12 +13,10 @@ trait ReadyState extends js.Object
 
 object ReadyState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def closed: typingsSlinky.std.stdStrings.closed = "closed".asInstanceOf[typingsSlinky.std.stdStrings.closed]
   @scala.inline
-  def closed: typingsSlinky.std.stdStrings.closed = this.cast("closed")
+  def ended: typingsSlinky.std.stdStrings.ended = "ended".asInstanceOf[typingsSlinky.std.stdStrings.ended]
   @scala.inline
-  def ended: typingsSlinky.std.stdStrings.ended = this.cast("ended")
-  @scala.inline
-  def open: typingsSlinky.std.stdStrings.open = this.cast("open")
+  def open: typingsSlinky.std.stdStrings.open = "open".asInstanceOf[typingsSlinky.std.stdStrings.open]
 }
 

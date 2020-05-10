@@ -4,21 +4,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GameQuery extends js.Object {
-  var ANIMATION_CALLBACK: Double
-  var ANIMATION_HORIZONTAL: Double
-  var ANIMATION_MULTI: Double
-  var ANIMATION_ONCE: Double
-  var ANIMATION_PINGPONG: Double
-  var ANIMATION_VERTICAL: Double
-  var Animation: typingsSlinky.gamequery.Animation
-  var groupCssClass: String
-  var keyTracker: js.Array[Boolean]
-  var spriteCssClass: String
-  var tileCssClass: String
-  var tileIdPrefix: String
-  var tileTypePrefix: String
-  var tilemapCssClass: String
+  var ANIMATION_CALLBACK: Double = js.native
+  var ANIMATION_HORIZONTAL: Double = js.native
+  var ANIMATION_MULTI: Double = js.native
+  var ANIMATION_ONCE: Double = js.native
+  var ANIMATION_PINGPONG: Double = js.native
+  var ANIMATION_VERTICAL: Double = js.native
+  var Animation: typingsSlinky.gamequery.Animation = js.native
+  var groupCssClass: String = js.native
+  var keyTracker: js.Array[Boolean] = js.native
+  var spriteCssClass: String = js.native
+  var tileCssClass: String = js.native
+  var tileIdPrefix: String = js.native
+  var tileTypePrefix: String = js.native
+  var tilemapCssClass: String = js.native
 }
 
 object GameQuery {
@@ -40,8 +41,99 @@ object GameQuery {
     tilemapCssClass: String
   ): GameQuery = {
     val __obj = js.Dynamic.literal(ANIMATION_CALLBACK = ANIMATION_CALLBACK.asInstanceOf[js.Any], ANIMATION_HORIZONTAL = ANIMATION_HORIZONTAL.asInstanceOf[js.Any], ANIMATION_MULTI = ANIMATION_MULTI.asInstanceOf[js.Any], ANIMATION_ONCE = ANIMATION_ONCE.asInstanceOf[js.Any], ANIMATION_PINGPONG = ANIMATION_PINGPONG.asInstanceOf[js.Any], ANIMATION_VERTICAL = ANIMATION_VERTICAL.asInstanceOf[js.Any], Animation = Animation.asInstanceOf[js.Any], groupCssClass = groupCssClass.asInstanceOf[js.Any], keyTracker = keyTracker.asInstanceOf[js.Any], spriteCssClass = spriteCssClass.asInstanceOf[js.Any], tileCssClass = tileCssClass.asInstanceOf[js.Any], tileIdPrefix = tileIdPrefix.asInstanceOf[js.Any], tileTypePrefix = tileTypePrefix.asInstanceOf[js.Any], tilemapCssClass = tilemapCssClass.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GameQuery]
   }
+  @scala.inline
+  implicit class GameQueryOps[Self <: GameQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withANIMATION_CALLBACK(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ANIMATION_CALLBACK")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withANIMATION_HORIZONTAL(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ANIMATION_HORIZONTAL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withANIMATION_MULTI(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ANIMATION_MULTI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withANIMATION_ONCE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ANIMATION_ONCE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withANIMATION_PINGPONG(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ANIMATION_PINGPONG")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withANIMATION_VERTICAL(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ANIMATION_VERTICAL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnimation(value: Animation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupCssClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupCssClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyTracker(value: js.Array[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyTracker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpriteCssClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spriteCssClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTileCssClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileCssClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTileIdPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileIdPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTileTypePrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileTypePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTilemapCssClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilemapCssClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

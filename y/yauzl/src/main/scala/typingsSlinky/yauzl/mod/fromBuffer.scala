@@ -1,7 +1,6 @@
 package typingsSlinky.yauzl.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ object fromBuffer extends js.Object {
   def apply(buffer: Buffer): Unit = js.native
   def apply(
     buffer: Buffer,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* zipfile */ js.UndefOr[ZipFile], Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* zipfile */ js.UndefOr[ZipFile], Unit]
   ): Unit = js.native
   def apply(buffer: Buffer, options: Options): Unit = js.native
   def apply(

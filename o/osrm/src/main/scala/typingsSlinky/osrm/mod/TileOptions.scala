@@ -12,32 +12,40 @@ import scala.scalajs.js.annotation._
   *
   * https://github.com/Project-OSRM/node-osrm/blob/master/docs/api.md#tile
   */
+@js.native
 trait TileOptions extends Options {
   /**
     * Array an array consisting of x, y, and z values representing tile coordinates like wiki.openstreetmap.org/wiki/Slippy_map_tilenames
     * and are supported by vector tile viewers like Mapbox GL JS.
     */
-  var ZXY: js.UndefOr[Tile] = js.undefined
+  var ZXY: js.UndefOr[Tile] = js.native
 }
 
 object TileOptions {
   @scala.inline
-  def apply(
-    ZXY: Tile = null,
-    bearings: js.Array[Bearing] = null,
-    coordinates: js.Array[Coordinate] = null,
-    generate_hints: js.UndefOr[Boolean] = js.undefined,
-    hints: js.Array[Hint] = null,
-    radiuses: js.Array[Radius] = null
-  ): TileOptions = {
+  def apply(): TileOptions = {
     val __obj = js.Dynamic.literal()
-    if (ZXY != null) __obj.updateDynamic("ZXY")(ZXY.asInstanceOf[js.Any])
-    if (bearings != null) __obj.updateDynamic("bearings")(bearings.asInstanceOf[js.Any])
-    if (coordinates != null) __obj.updateDynamic("coordinates")(coordinates.asInstanceOf[js.Any])
-    if (!js.isUndefined(generate_hints)) __obj.updateDynamic("generate_hints")(generate_hints.asInstanceOf[js.Any])
-    if (hints != null) __obj.updateDynamic("hints")(hints.asInstanceOf[js.Any])
-    if (radiuses != null) __obj.updateDynamic("radiuses")(radiuses.asInstanceOf[js.Any])
     __obj.asInstanceOf[TileOptions]
   }
+  @scala.inline
+  implicit class TileOptionsOps[Self <: TileOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withZXY(value: Tile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZXY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZXY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZXY")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

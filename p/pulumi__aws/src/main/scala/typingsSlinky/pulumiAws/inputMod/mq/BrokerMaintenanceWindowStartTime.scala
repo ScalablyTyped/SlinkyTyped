@@ -25,8 +25,33 @@ object BrokerMaintenanceWindowStartTime {
   @scala.inline
   def apply(dayOfWeek: Input[String], timeOfDay: Input[String], timeZone: Input[String]): BrokerMaintenanceWindowStartTime = {
     val __obj = js.Dynamic.literal(dayOfWeek = dayOfWeek.asInstanceOf[js.Any], timeOfDay = timeOfDay.asInstanceOf[js.Any], timeZone = timeZone.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[BrokerMaintenanceWindowStartTime]
   }
+  @scala.inline
+  implicit class BrokerMaintenanceWindowStartTimeOps[Self <: BrokerMaintenanceWindowStartTime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDayOfWeek(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeOfDay(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOfDay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeZone(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

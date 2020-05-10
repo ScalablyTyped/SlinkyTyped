@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAnimationDelayAnimationDelayUpdate extends js.Object {
   /**
     * Whether to enable animation.
@@ -11,66 +12,67 @@ trait AnonAnimationDelayAnimationDelayUpdate extends js.Object {
     *
     * @default
     * "true"
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.animation
+    * @see https://echarts.apache.org/en/option.html#series-pictorialBar.hoverAnimation.animation
     */
-  var animation: js.UndefOr[Boolean] = js.undefined
+  var animation: js.UndefOr[Boolean] = js.native
   /**
-    * Delay before updating the first animation, which supports
-    * callback function for different data to have different animation
-    * effect.
+    * Specify the delay time before animation start.
+    * Callback function can be used, where different delay time
+    * can be used on different element.
     *
     * For example:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-map.map.markArea)
-    *
-    * See
-    * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
-    * for more information.
-    *
-    *
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.animationDelay
-    */
-  var animationDelay: js.UndefOr[js.Function | Double] = js.undefined
-  /**
-    * Delay before updating animation, which supports callback
-    * function for different data to have different animation effect.
+    * [see doc](https://echarts.apache.org/en/option.html#series-pictorialBar.pictorialBar.hoverAnimation)
     *
     * For example:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-map.map.markArea)
-    *
-    * See
-    * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
-    * for more information.
+    * [see doc](https://echarts.apache.org/en/option.html#series-pictorialBar.pictorialBar.hoverAnimation)
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.animationDelayUpdate
+    * @see https://echarts.apache.org/en/option.html#series-pictorialBar.hoverAnimation.animationDelay
     */
-  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDelay: js.UndefOr[js.Function | Double] = js.native
+  /**
+    * Specify the delay time before update animation.
+    * Callback function can be used, where different delay time
+    * can be used on different element.
+    *
+    * For example:
+    *
+    * [see doc](https://echarts.apache.org/en/option.html#series-pictorialBar.pictorialBar.hoverAnimation)
+    *
+    * For example:
+    *
+    * [see doc](https://echarts.apache.org/en/option.html#series-pictorialBar.pictorialBar.hoverAnimation)
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-pictorialBar.hoverAnimation.animationDelayUpdate
+    */
+  var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Duration of the first animation, which supports callback
     * function for different data to have different animation effect:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-map.map.markArea)
+    * [see doc](https://echarts.apache.org/en/option.html#series-pictorialBar.pictorialBar.hoverAnimation)
     *
     *
     * @default
     * 1000
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.animationDuration
+    * @see https://echarts.apache.org/en/option.html#series-pictorialBar.hoverAnimation.animationDuration
     */
-  var animationDuration: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDuration: js.UndefOr[js.Function | Double] = js.native
   /**
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-map.map.markArea)
+    * [see doc](https://echarts.apache.org/en/option.html#series-pictorialBar.pictorialBar.hoverAnimation)
     *
     *
     * @default
     * 300
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.animationDurationUpdate
+    * @see https://echarts.apache.org/en/option.html#series-pictorialBar.hoverAnimation.animationDurationUpdate
     */
-  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.undefined
+  var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
   /**
     * Easing method used for the first animation.
     * Varied easing effects can be found at
@@ -80,18 +82,18 @@ trait AnonAnimationDelayAnimationDelayUpdate extends js.Object {
     *
     * @default
     * "cubicOut"
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.animationEasing
+    * @see https://echarts.apache.org/en/option.html#series-pictorialBar.hoverAnimation.animationEasing
     */
-  var animationEasing: js.UndefOr[String] = js.undefined
+  var animationEasing: js.UndefOr[String] = js.native
   /**
     * Easing method used for animation.
     *
     *
     * @default
     * "cubicOut"
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.animationEasingUpdate
+    * @see https://echarts.apache.org/en/option.html#series-pictorialBar.hoverAnimation.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[String] = js.undefined
+  var animationEasingUpdate: js.UndefOr[String] = js.native
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger
@@ -100,96 +102,120 @@ trait AnonAnimationDelayAnimationDelayUpdate extends js.Object {
     *
     * @default
     * 2000
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.animationThreshold
+    * @see https://echarts.apache.org/en/option.html#series-pictorialBar.hoverAnimation.animationThreshold
     */
-  var animationThreshold: js.UndefOr[Double] = js.undefined
-  /**
-    * The scope of the area is defined by `data`, which is an array
-    * with two item, representing the left-top point and the right-bottom
-    * point of rectangle area.
-    * Each item can be defined as follows:
-    *
-    * 1.
-    * Specify the coordinate in screen coordinate system using
-    * [x](https://echarts.apache.org/en/option.html#series-map.markArea.data.0.x)
-    * ,
-    * [y](https://echarts.apache.org/en/option.html#series-map.markArea.data.0.y)
-    * , where the unit is pixel (e.g.,
-    * the value is `5`), or percent (e.g.,
-    * the value is `'35%'`).
-    *
-    * 2.
-    * Specify the coordinate in data coordinate system (i.e.,
-    * cartesian) using
-    * [coord](https://echarts.apache.org/en/option.html#series-map.markArea.data.0.coord)
-    * , which can be also set as `'min'`, `'max'`, `'average'`
-    * (e.g,
-    * `coord: [23, 'min']`, or `coord: ['average', 'max']`)。
-    *
-    * The priority follows as above if more than one above definition
-    * used.
-    *
-    * [see doc](https://echarts.apache.org/en/option.html#series-map.map.markArea)
-    *
-    *
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.data
-    */
-  var data: js.UndefOr[Anon0AnonValueIndex] = js.undefined
-  /**
-    * Style of the mark area.
-    *
-    *
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.itemStyle
-    */
-  var itemStyle: js.UndefOr[AnonEmphasis] = js.undefined
-  /**
-    * Label in mark area.
-    *
-    *
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.label
-    */
-  var label: js.UndefOr[AnonFontFamily] = js.undefined
-  /**
-    * Whether to ignore mouse events.
-    * Default value is false, for triggering and responding to
-    * mouse events.
-    *
-    *
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.silent
-    */
-  var silent: js.UndefOr[Boolean] = js.undefined
+  var animationThreshold: js.UndefOr[Double] = js.native
 }
 
 object AnonAnimationDelayAnimationDelayUpdate {
   @scala.inline
-  def apply(
-    animation: js.UndefOr[Boolean] = js.undefined,
-    animationDelay: js.Function | Double = null,
-    animationDelayUpdate: js.Function | Double = null,
-    animationDuration: js.Function | Double = null,
-    animationDurationUpdate: js.Function | Double = null,
-    animationEasing: String = null,
-    animationEasingUpdate: String = null,
-    animationThreshold: Int | Double = null,
-    data: Anon0AnonValueIndex = null,
-    itemStyle: AnonEmphasis = null,
-    label: AnonFontFamily = null,
-    silent: js.UndefOr[Boolean] = js.undefined
-  ): AnonAnimationDelayAnimationDelayUpdate = {
+  def apply(): AnonAnimationDelayAnimationDelayUpdate = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animation)) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (animationDelay != null) __obj.updateDynamic("animationDelay")(animationDelay.asInstanceOf[js.Any])
-    if (animationDelayUpdate != null) __obj.updateDynamic("animationDelayUpdate")(animationDelayUpdate.asInstanceOf[js.Any])
-    if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
-    if (animationDurationUpdate != null) __obj.updateDynamic("animationDurationUpdate")(animationDurationUpdate.asInstanceOf[js.Any])
-    if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
-    if (animationEasingUpdate != null) __obj.updateDynamic("animationEasingUpdate")(animationEasingUpdate.asInstanceOf[js.Any])
-    if (animationThreshold != null) __obj.updateDynamic("animationThreshold")(animationThreshold.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAnimationDelayAnimationDelayUpdate]
   }
+  @scala.inline
+  implicit class AnonAnimationDelayAnimationDelayUpdateOps[Self <: AnonAnimationDelayAnimationDelayUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelay(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDelayUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDelayUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDelayUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDuration(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationDurationUpdate(value: js.Function | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationDurationUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationDurationUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasing(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEasingUpdate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEasingUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationThreshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

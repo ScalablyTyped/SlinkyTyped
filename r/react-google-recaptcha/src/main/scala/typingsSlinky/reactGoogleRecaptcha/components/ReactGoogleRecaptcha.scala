@@ -1,15 +1,21 @@
 package typingsSlinky.reactGoogleRecaptcha.components
 
+import typingsSlinky.reactGoogleRecaptcha.mod.ReCAPTCHAProps
 import typingsSlinky.reactGoogleRecaptcha.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactGoogleRecaptcha extends SharedApply_ReCAPTCHAProps_1905784267[default] {
+object ReactGoogleRecaptcha {
   @JSImport("react-google-recaptcha", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ReCAPTCHAProps): SharedBuilder_ReCAPTCHAProps_334768010[default] = new SharedBuilder_ReCAPTCHAProps_334768010[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(sitekey: String): SharedBuilder_ReCAPTCHAProps_334768010[default] = {
+    val __props = js.Dynamic.literal(sitekey = sitekey.asInstanceOf[js.Any])
+    new SharedBuilder_ReCAPTCHAProps_334768010[default](js.Array(this.component, __props.asInstanceOf[ReCAPTCHAProps]))
+  }
 }
 

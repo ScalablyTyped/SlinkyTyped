@@ -7,17 +7,18 @@ import scala.scalajs.js.annotation._
 /**
   * CSINodeDriver holds information about the specification of one CSI driver installed on a node
   */
+@js.native
 trait CSINodeDriver extends js.Object {
   /**
     * allocatable represents the volume resources of a node that are available for scheduling.
     * This field is beta.
     */
-  val allocatable: VolumeNodeResources
+  val allocatable: VolumeNodeResources = js.native
   /**
     * This is the name of the CSI driver that this object refers to. This MUST be the same name
     * returned by the CSI GetPluginName() call for that driver.
     */
-  val name: String
+  val name: String = js.native
   /**
     * nodeID of the node from the driver point of view. This field enables Kubernetes to
     * communicate with storage systems that do not share the same nomenclature for nodes. For
@@ -27,7 +28,7 @@ trait CSINodeDriver extends js.Object {
     * the ID that the storage system will understand, e.g. "nodeA" instead of "node1". This field
     * is required.
     */
-  val nodeID: String
+  val nodeID: String = js.native
   /**
     * topologyKeys is the list of keys supported by the driver. When a driver is initialized on a
     * cluster, it provides a set of topology keys that it understands (e.g. "company.com/zone",
@@ -38,15 +39,46 @@ trait CSINodeDriver extends js.Object {
     * It is possible for different nodes to use different topology keys. This can be empty if
     * driver does not support topology.
     */
-  val topologyKeys: js.Array[String]
+  val topologyKeys: js.Array[String] = js.native
 }
 
 object CSINodeDriver {
   @scala.inline
   def apply(allocatable: VolumeNodeResources, name: String, nodeID: String, topologyKeys: js.Array[String]): CSINodeDriver = {
     val __obj = js.Dynamic.literal(allocatable = allocatable.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nodeID = nodeID.asInstanceOf[js.Any], topologyKeys = topologyKeys.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CSINodeDriver]
   }
+  @scala.inline
+  implicit class CSINodeDriverOps[Self <: CSINodeDriver] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllocatable(value: VolumeNodeResources): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allocatable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTopologyKeys(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topologyKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

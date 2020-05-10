@@ -1,9 +1,9 @@
 package typingsSlinky.jqueryUiLayout.JQueryUILayout
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jqueryUiLayout.AnonEast
 import typingsSlinky.jqueryUiLayout.AnonNorth
 import typingsSlinky.jqueryUiLayout.JQuery
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

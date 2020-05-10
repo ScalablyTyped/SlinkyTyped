@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Schema extends js.Object {
-  var extendedLanguageSubtags: js.UndefOr[js.Array[String]] = js.undefined
-  var extensions: js.UndefOr[js.Array[LocaleExtension]] = js.undefined
-  var irregular: js.UndefOr[String] = js.undefined
-  var language: js.UndefOr[String] = js.undefined
-  var privateuse: js.UndefOr[js.Array[String]] = js.undefined
-  var region: js.UndefOr[String] = js.undefined
-  var regular: js.UndefOr[String] = js.undefined
-  var script: js.UndefOr[String] = js.undefined
-  var variants: js.UndefOr[js.Array[String]] = js.undefined
+  var extendedLanguageSubtags: js.UndefOr[js.Array[String]] = js.native
+  var extensions: js.UndefOr[js.Array[LocaleExtension]] = js.native
+  var irregular: js.UndefOr[String] = js.native
+  var language: js.UndefOr[String] = js.native
+  var privateuse: js.UndefOr[js.Array[String]] = js.native
+  var region: js.UndefOr[String] = js.native
+  var regular: js.UndefOr[String] = js.native
+  var script: js.UndefOr[String] = js.native
+  var variants: js.UndefOr[js.Array[String]] = js.native
 }
 
 object Schema {
   @scala.inline
-  def apply(
-    extendedLanguageSubtags: js.Array[String] = null,
-    extensions: js.Array[LocaleExtension] = null,
-    irregular: String = null,
-    language: String = null,
-    privateuse: js.Array[String] = null,
-    region: String = null,
-    regular: String = null,
-    script: String = null,
-    variants: js.Array[String] = null
-  ): Schema = {
+  def apply(): Schema = {
     val __obj = js.Dynamic.literal()
-    if (extendedLanguageSubtags != null) __obj.updateDynamic("extendedLanguageSubtags")(extendedLanguageSubtags.asInstanceOf[js.Any])
-    if (extensions != null) __obj.updateDynamic("extensions")(extensions.asInstanceOf[js.Any])
-    if (irregular != null) __obj.updateDynamic("irregular")(irregular.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (privateuse != null) __obj.updateDynamic("privateuse")(privateuse.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (regular != null) __obj.updateDynamic("regular")(regular.asInstanceOf[js.Any])
-    if (script != null) __obj.updateDynamic("script")(script.asInstanceOf[js.Any])
-    if (variants != null) __obj.updateDynamic("variants")(variants.asInstanceOf[js.Any])
     __obj.asInstanceOf[Schema]
   }
+  @scala.inline
+  implicit class SchemaOps[Self <: Schema] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExtendedLanguageSubtags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedLanguageSubtags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendedLanguageSubtags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedLanguageSubtags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtensions(value: js.Array[LocaleExtension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIrregular(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("irregular")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIrregular: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("irregular")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivateuse(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateuse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivateuse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privateuse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegular(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regular")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegular: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regular")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScript(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScript: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVariants(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variants")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVariants: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variants")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

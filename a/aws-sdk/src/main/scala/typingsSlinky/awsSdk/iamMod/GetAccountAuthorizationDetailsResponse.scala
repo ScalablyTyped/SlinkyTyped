@@ -34,22 +34,89 @@ trait GetAccountAuthorizationDetailsResponse extends js.Object {
 
 object GetAccountAuthorizationDetailsResponse {
   @scala.inline
-  def apply(
-    GroupDetailList: groupDetailListType = null,
-    IsTruncated: js.UndefOr[Boolean] = js.undefined,
-    Marker: responseMarkerType = null,
-    Policies: ManagedPolicyDetailListType = null,
-    RoleDetailList: roleDetailListType = null,
-    UserDetailList: userDetailListType = null
-  ): GetAccountAuthorizationDetailsResponse = {
+  def apply(): GetAccountAuthorizationDetailsResponse = {
     val __obj = js.Dynamic.literal()
-    if (GroupDetailList != null) __obj.updateDynamic("GroupDetailList")(GroupDetailList.asInstanceOf[js.Any])
-    if (!js.isUndefined(IsTruncated)) __obj.updateDynamic("IsTruncated")(IsTruncated.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (Policies != null) __obj.updateDynamic("Policies")(Policies.asInstanceOf[js.Any])
-    if (RoleDetailList != null) __obj.updateDynamic("RoleDetailList")(RoleDetailList.asInstanceOf[js.Any])
-    if (UserDetailList != null) __obj.updateDynamic("UserDetailList")(UserDetailList.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAccountAuthorizationDetailsResponse]
   }
+  @scala.inline
+  implicit class GetAccountAuthorizationDetailsResponseOps[Self <: GetAccountAuthorizationDetailsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupDetailList(value: groupDetailListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupDetailList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupDetailList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GroupDetailList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsTruncated(value: booleanType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsTruncated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsTruncated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: responseMarkerType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicies(value: ManagedPolicyDetailListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Policies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoleDetailList(value: roleDetailListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleDetailList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoleDetailList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoleDetailList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserDetailList(value: userDetailListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDetailList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserDetailList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserDetailList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

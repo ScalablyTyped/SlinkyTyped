@@ -17,10 +17,29 @@ trait SchemaObjectReferences extends js.Object {
 
 object SchemaObjectReferences {
   @scala.inline
-  def apply(objectIds: js.Array[String] = null): SchemaObjectReferences = {
+  def apply(): SchemaObjectReferences = {
     val __obj = js.Dynamic.literal()
-    if (objectIds != null) __obj.updateDynamic("objectIds")(objectIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaObjectReferences]
   }
+  @scala.inline
+  implicit class SchemaObjectReferencesOps[Self <: SchemaObjectReferences] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withObjectIds(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

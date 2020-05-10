@@ -18,11 +18,41 @@ trait EvaluationResultIdentifier extends js.Object {
 
 object EvaluationResultIdentifier {
   @scala.inline
-  def apply(EvaluationResultQualifier: EvaluationResultQualifier = null, OrderingTimestamp: js.Date = null): EvaluationResultIdentifier = {
+  def apply(): EvaluationResultIdentifier = {
     val __obj = js.Dynamic.literal()
-    if (EvaluationResultQualifier != null) __obj.updateDynamic("EvaluationResultQualifier")(EvaluationResultQualifier.asInstanceOf[js.Any])
-    if (OrderingTimestamp != null) __obj.updateDynamic("OrderingTimestamp")(OrderingTimestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[EvaluationResultIdentifier]
   }
+  @scala.inline
+  implicit class EvaluationResultIdentifierOps[Self <: EvaluationResultIdentifier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvaluationResultQualifier(value: EvaluationResultQualifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationResultQualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvaluationResultQualifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EvaluationResultQualifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrderingTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderingTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrderingTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrderingTimestamp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

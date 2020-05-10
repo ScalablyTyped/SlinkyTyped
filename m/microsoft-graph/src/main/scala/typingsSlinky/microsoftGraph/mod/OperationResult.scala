@@ -14,14 +14,12 @@ trait OperationResult extends js.Object
 
 object OperationResult {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def failure: typingsSlinky.microsoftGraph.microsoftGraphStrings.failure = "failure".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.failure]
   @scala.inline
-  def failure: typingsSlinky.microsoftGraph.microsoftGraphStrings.failure = this.cast("failure")
+  def success: typingsSlinky.microsoftGraph.microsoftGraphStrings.success = "success".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.success]
   @scala.inline
-  def success: typingsSlinky.microsoftGraph.microsoftGraphStrings.success = this.cast("success")
+  def timeout: typingsSlinky.microsoftGraph.microsoftGraphStrings.timeout = "timeout".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.timeout]
   @scala.inline
-  def timeout: typingsSlinky.microsoftGraph.microsoftGraphStrings.timeout = this.cast("timeout")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

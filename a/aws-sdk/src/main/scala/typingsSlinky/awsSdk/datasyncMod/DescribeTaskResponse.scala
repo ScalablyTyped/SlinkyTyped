@@ -70,40 +70,197 @@ trait DescribeTaskResponse extends js.Object {
 
 object DescribeTaskResponse {
   @scala.inline
-  def apply(
-    CloudWatchLogGroupArn: LogGroupArn = null,
-    CreationTime: js.Date = null,
-    CurrentTaskExecutionArn: TaskExecutionArn = null,
-    DestinationLocationArn: LocationArn = null,
-    DestinationNetworkInterfaceArns: DestinationNetworkInterfaceArns = null,
-    ErrorCode: String = null,
-    ErrorDetail: String = null,
-    Excludes: FilterList = null,
-    Name: TagValue = null,
-    Options: Options = null,
-    Schedule: TaskSchedule = null,
-    SourceLocationArn: LocationArn = null,
-    SourceNetworkInterfaceArns: SourceNetworkInterfaceArns = null,
-    Status: TaskStatus = null,
-    TaskArn: TaskArn = null
-  ): DescribeTaskResponse = {
+  def apply(): DescribeTaskResponse = {
     val __obj = js.Dynamic.literal()
-    if (CloudWatchLogGroupArn != null) __obj.updateDynamic("CloudWatchLogGroupArn")(CloudWatchLogGroupArn.asInstanceOf[js.Any])
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (CurrentTaskExecutionArn != null) __obj.updateDynamic("CurrentTaskExecutionArn")(CurrentTaskExecutionArn.asInstanceOf[js.Any])
-    if (DestinationLocationArn != null) __obj.updateDynamic("DestinationLocationArn")(DestinationLocationArn.asInstanceOf[js.Any])
-    if (DestinationNetworkInterfaceArns != null) __obj.updateDynamic("DestinationNetworkInterfaceArns")(DestinationNetworkInterfaceArns.asInstanceOf[js.Any])
-    if (ErrorCode != null) __obj.updateDynamic("ErrorCode")(ErrorCode.asInstanceOf[js.Any])
-    if (ErrorDetail != null) __obj.updateDynamic("ErrorDetail")(ErrorDetail.asInstanceOf[js.Any])
-    if (Excludes != null) __obj.updateDynamic("Excludes")(Excludes.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (Options != null) __obj.updateDynamic("Options")(Options.asInstanceOf[js.Any])
-    if (Schedule != null) __obj.updateDynamic("Schedule")(Schedule.asInstanceOf[js.Any])
-    if (SourceLocationArn != null) __obj.updateDynamic("SourceLocationArn")(SourceLocationArn.asInstanceOf[js.Any])
-    if (SourceNetworkInterfaceArns != null) __obj.updateDynamic("SourceNetworkInterfaceArns")(SourceNetworkInterfaceArns.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (TaskArn != null) __obj.updateDynamic("TaskArn")(TaskArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeTaskResponse]
   }
+  @scala.inline
+  implicit class DescribeTaskResponseOps[Self <: DescribeTaskResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudWatchLogGroupArn(value: LogGroupArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudWatchLogGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloudWatchLogGroupArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrentTaskExecutionArn(value: TaskExecutionArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentTaskExecutionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentTaskExecutionArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentTaskExecutionArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationLocationArn(value: LocationArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationLocationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationLocationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationLocationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestinationNetworkInterfaceArns(value: DestinationNetworkInterfaceArns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationNetworkInterfaceArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinationNetworkInterfaceArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestinationNetworkInterfaceArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorDetail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDetail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludes(value: FilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Excludes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExcludes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Excludes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: TagValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchedule(value: TaskSchedule): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchedule: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Schedule")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceLocationArn(value: LocationArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceLocationArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceLocationArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceLocationArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceNetworkInterfaceArns(value: SourceNetworkInterfaceArns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceNetworkInterfaceArns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceNetworkInterfaceArns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceNetworkInterfaceArns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: TaskStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskArn(value: TaskArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

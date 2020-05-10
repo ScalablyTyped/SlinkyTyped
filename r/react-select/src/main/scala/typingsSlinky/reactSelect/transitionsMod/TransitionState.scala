@@ -12,10 +12,8 @@ trait TransitionState extends js.Object
 
 object TransitionState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def exited: typingsSlinky.reactSelect.reactSelectStrings.exited = "exited".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.exited]
   @scala.inline
-  def exited: typingsSlinky.reactSelect.reactSelectStrings.exited = this.cast("exited")
-  @scala.inline
-  def exiting: typingsSlinky.reactSelect.reactSelectStrings.exiting = this.cast("exiting")
+  def exiting: typingsSlinky.reactSelect.reactSelectStrings.exiting = "exiting".asInstanceOf[typingsSlinky.reactSelect.reactSelectStrings.exiting]
 }
 

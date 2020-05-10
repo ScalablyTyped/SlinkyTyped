@@ -18,10 +18,35 @@ trait RejectQualificationRequestRequest extends js.Object {
 
 object RejectQualificationRequestRequest {
   @scala.inline
-  def apply(QualificationRequestId: String, Reason: String = null): RejectQualificationRequestRequest = {
+  def apply(QualificationRequestId: String): RejectQualificationRequestRequest = {
     val __obj = js.Dynamic.literal(QualificationRequestId = QualificationRequestId.asInstanceOf[js.Any])
-    if (Reason != null) __obj.updateDynamic("Reason")(Reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[RejectQualificationRequestRequest]
   }
+  @scala.inline
+  implicit class RejectQualificationRequestRequestOps[Self <: RejectQualificationRequestRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQualificationRequestId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationRequestId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReason(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

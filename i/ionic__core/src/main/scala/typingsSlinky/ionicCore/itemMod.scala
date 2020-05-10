@@ -5,12 +5,9 @@ import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonItemElement
 import typingsSlinky.ionicCore.elementInterfaceMod.AnchorInterface
 import typingsSlinky.ionicCore.elementInterfaceMod.ButtonInterface
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection
-import typingsSlinky.ionicCore.ionicCoreStrings.button
 import typingsSlinky.ionicCore.ionicCoreStrings.full
 import typingsSlinky.ionicCore.ionicCoreStrings.inset
 import typingsSlinky.ionicCore.ionicCoreStrings.none
-import typingsSlinky.ionicCore.ionicCoreStrings.reset
-import typingsSlinky.ionicCore.ionicCoreStrings.submit
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import scala.scalajs.js
@@ -45,8 +42,6 @@ object itemMod extends js.Object {
       * The icon to use when `detail` is set to `true`.
       */
     var detailIcon: String = js.native
-    /* CompleteClass */
-    override var disabled: Boolean = js.native
     var el: HTMLIonItemElement = js.native
     var hasCover: js.Any = js.native
     var isClickable: js.Any = js.native
@@ -61,8 +56,6 @@ object itemMod extends js.Object {
       * another page using `href`.
       */
     var routerDirection: RouterDirection = js.native
-    /* CompleteClass */
-    override var `type`: submit | reset | button = js.native
     @JSName("componentDidLoad")
     def componentDidLoad_MItem(): Unit = js.native
     def itemStyle(ev: CustomEvent): Unit = js.native

@@ -20,7 +20,7 @@ object removeEventListener_keyup extends js.Object {
   def apply(
     `type`: keyup,
     listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

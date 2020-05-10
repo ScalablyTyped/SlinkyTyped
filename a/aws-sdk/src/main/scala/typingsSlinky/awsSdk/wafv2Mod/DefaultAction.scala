@@ -18,11 +18,41 @@ trait DefaultAction extends js.Object {
 
 object DefaultAction {
   @scala.inline
-  def apply(Allow: AllowAction = null, Block: BlockAction = null): DefaultAction = {
+  def apply(): DefaultAction = {
     val __obj = js.Dynamic.literal()
-    if (Allow != null) __obj.updateDynamic("Allow")(Allow.asInstanceOf[js.Any])
-    if (Block != null) __obj.updateDynamic("Block")(Block.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultAction]
   }
+  @scala.inline
+  implicit class DefaultActionOps[Self <: DefaultAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllow(value: AllowAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Allow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Allow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlock(value: BlockAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Block")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Block")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

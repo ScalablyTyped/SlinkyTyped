@@ -7,84 +7,85 @@ import scala.scalajs.js.annotation._
 /**
   * A set of resources composed into a single coherent clinical statement with clinical attestation
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Composition extends DomainResource {
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ @js.native
+trait Composition extends DomainResource {
   /**
     * Contains extended information for property 'confidentiality'.
     */
-  var _confidentiality: js.UndefOr[Element] = js.undefined
+  var _confidentiality: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'date'.
     */
-  var _date: js.UndefOr[Element] = js.undefined
+  var _date: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'status'.
     */
-  var _status: js.UndefOr[Element] = js.undefined
+  var _status: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'title'.
     */
-  var _title: js.UndefOr[Element] = js.undefined
+  var _title: js.UndefOr[Element] = js.native
   /**
     * Attests to accuracy of composition
     */
-  var attester: js.UndefOr[js.Array[CompositionAttester]] = js.undefined
+  var attester: js.UndefOr[js.Array[CompositionAttester]] = js.native
   /**
     * Who and/or what authored the composition
     */
-  var author: js.Array[Reference]
+  var author: js.Array[Reference] = js.native
   /**
     * Categorization of Composition
     */
-  var `class`: js.UndefOr[CodeableConcept] = js.undefined
+  var `class`: js.UndefOr[CodeableConcept] = js.native
   /**
     * As defined by affinity domain
     */
-  var confidentiality: js.UndefOr[code] = js.undefined
+  var confidentiality: js.UndefOr[code] = js.native
   /**
     * Organization which maintains the composition
     */
-  var custodian: js.UndefOr[Reference] = js.undefined
+  var custodian: js.UndefOr[Reference] = js.native
   /**
     * Composition editing time
     */
-  var date: dateTime
+  var date: dateTime = js.native
   /**
     * Context of the Composition
     */
-  var encounter: js.UndefOr[Reference] = js.undefined
+  var encounter: js.UndefOr[Reference] = js.native
   /**
     * The clinical service(s) being documented
     */
-  var event: js.UndefOr[js.Array[CompositionEvent]] = js.undefined
+  var event: js.UndefOr[js.Array[CompositionEvent]] = js.native
   /**
     * Logical identifier of composition (version-independent)
     */
-  var identifier: js.UndefOr[Identifier] = js.undefined
+  var identifier: js.UndefOr[Identifier] = js.native
   /**
     * Relationships to other compositions/documents
     */
-  var relatesTo: js.UndefOr[js.Array[CompositionRelatesTo]] = js.undefined
+  var relatesTo: js.UndefOr[js.Array[CompositionRelatesTo]] = js.native
   /**
     * Composition is broken into sections
     */
-  var section: js.UndefOr[js.Array[CompositionSection]] = js.undefined
+  var section: js.UndefOr[js.Array[CompositionSection]] = js.native
   /**
     * preliminary | final | amended | entered-in-error
     */
-  var status: code
+  var status: code = js.native
   /**
     * Who and/or what the composition is about
     */
-  var subject: Reference
+  var subject: Reference = js.native
   /**
     * Human Readable name/title
     */
-  var title: String
+  var title: String = js.native
   /**
     * Kind of composition (LOINC if possible)
     */
-  var `type`: CodeableConcept
+  var `type`: CodeableConcept = js.native
 }
 
 object Composition {
@@ -95,63 +96,211 @@ object Composition {
     status: code,
     subject: Reference,
     title: String,
-    `type`: CodeableConcept,
-    _confidentiality: Element = null,
-    _date: Element = null,
-    _id: Element = null,
-    _implicitRules: Element = null,
-    _language: Element = null,
-    _resourceType: Element = null,
-    _status: Element = null,
-    _title: Element = null,
-    attester: js.Array[CompositionAttester] = null,
-    `class`: CodeableConcept = null,
-    confidentiality: code = null,
-    contained: js.Array[Resource] = null,
-    custodian: Reference = null,
-    encounter: Reference = null,
-    event: js.Array[CompositionEvent] = null,
-    extension: js.Array[Extension] = null,
-    id: id = null,
-    identifier: Identifier = null,
-    implicitRules: uri = null,
-    language: code = null,
-    meta: Meta = null,
-    modifierExtension: js.Array[Extension] = null,
-    relatesTo: js.Array[CompositionRelatesTo] = null,
-    resourceType: code = null,
-    section: js.Array[CompositionSection] = null,
-    text: Narrative = null
+    `type`: CodeableConcept
   ): Composition = {
     val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (_confidentiality != null) __obj.updateDynamic("_confidentiality")(_confidentiality.asInstanceOf[js.Any])
-    if (_date != null) __obj.updateDynamic("_date")(_date.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_implicitRules != null) __obj.updateDynamic("_implicitRules")(_implicitRules.asInstanceOf[js.Any])
-    if (_language != null) __obj.updateDynamic("_language")(_language.asInstanceOf[js.Any])
-    if (_resourceType != null) __obj.updateDynamic("_resourceType")(_resourceType.asInstanceOf[js.Any])
-    if (_status != null) __obj.updateDynamic("_status")(_status.asInstanceOf[js.Any])
-    if (_title != null) __obj.updateDynamic("_title")(_title.asInstanceOf[js.Any])
-    if (attester != null) __obj.updateDynamic("attester")(attester.asInstanceOf[js.Any])
-    if (`class` != null) __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
-    if (confidentiality != null) __obj.updateDynamic("confidentiality")(confidentiality.asInstanceOf[js.Any])
-    if (contained != null) __obj.updateDynamic("contained")(contained.asInstanceOf[js.Any])
-    if (custodian != null) __obj.updateDynamic("custodian")(custodian.asInstanceOf[js.Any])
-    if (encounter != null) __obj.updateDynamic("encounter")(encounter.asInstanceOf[js.Any])
-    if (event != null) __obj.updateDynamic("event")(event.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (identifier != null) __obj.updateDynamic("identifier")(identifier.asInstanceOf[js.Any])
-    if (implicitRules != null) __obj.updateDynamic("implicitRules")(implicitRules.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (meta != null) __obj.updateDynamic("meta")(meta.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (relatesTo != null) __obj.updateDynamic("relatesTo")(relatesTo.asInstanceOf[js.Any])
-    if (resourceType != null) __obj.updateDynamic("resourceType")(resourceType.asInstanceOf[js.Any])
-    if (section != null) __obj.updateDynamic("section")(section.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Composition]
   }
+  @scala.inline
+  implicit class CompositionOps[Self <: Composition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthor(value: js.Array[Reference]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDate(value: dateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubject(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_confidentiality(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_confidentiality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_confidentiality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_confidentiality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_date(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_date: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_date")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_status(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_status: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_title(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_title: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAttester(value: js.Array[CompositionAttester]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attester")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttester: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attester")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClass(value: CodeableConcept): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("class")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfidentiality(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidentiality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfidentiality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidentiality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCustodian(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custodian")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCustodian: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custodian")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncounter(value: Reference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encounter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncounter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encounter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvent(value: js.Array[CompositionEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: Identifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdentifier: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelatesTo(value: js.Array[CompositionRelatesTo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatesTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelatesTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relatesTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSection(value: js.Array[CompositionSection]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

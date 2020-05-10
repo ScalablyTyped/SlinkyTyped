@@ -16,11 +16,41 @@ trait SchemaListUnmappedIdentitiesResponse extends js.Object {
 
 object SchemaListUnmappedIdentitiesResponse {
   @scala.inline
-  def apply(nextPageToken: String = null, unmappedIdentities: js.Array[SchemaUnmappedIdentity] = null): SchemaListUnmappedIdentitiesResponse = {
+  def apply(): SchemaListUnmappedIdentitiesResponse = {
     val __obj = js.Dynamic.literal()
-    if (nextPageToken != null) __obj.updateDynamic("nextPageToken")(nextPageToken.asInstanceOf[js.Any])
-    if (unmappedIdentities != null) __obj.updateDynamic("unmappedIdentities")(unmappedIdentities.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListUnmappedIdentitiesResponse]
   }
+  @scala.inline
+  implicit class SchemaListUnmappedIdentitiesResponseOps[Self <: SchemaListUnmappedIdentitiesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNextPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextPageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnmappedIdentities(value: js.Array[SchemaUnmappedIdentity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unmappedIdentities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnmappedIdentities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unmappedIdentities")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

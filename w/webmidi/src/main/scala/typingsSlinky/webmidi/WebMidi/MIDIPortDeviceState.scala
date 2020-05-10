@@ -12,10 +12,8 @@ trait MIDIPortDeviceState extends js.Object
 
 object MIDIPortDeviceState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connected: typingsSlinky.webmidi.webmidiStrings.connected = "connected".asInstanceOf[typingsSlinky.webmidi.webmidiStrings.connected]
   @scala.inline
-  def connected: typingsSlinky.webmidi.webmidiStrings.connected = this.cast("connected")
-  @scala.inline
-  def disconnected: typingsSlinky.webmidi.webmidiStrings.disconnected = this.cast("disconnected")
+  def disconnected: typingsSlinky.webmidi.webmidiStrings.disconnected = "disconnected".asInstanceOf[typingsSlinky.webmidi.webmidiStrings.disconnected]
 }
 

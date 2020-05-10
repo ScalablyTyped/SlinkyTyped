@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DecodedLogEntryEvent[A] extends DecodedLogEntry[A] {
-  var removed: Boolean
+  var removed: Boolean = js.native
 }
 
 object DecodedLogEntryEvent {
@@ -17,18 +18,24 @@ object DecodedLogEntryEvent {
     event: String,
     removed: Boolean,
     topics: js.Array[String],
-    transactionHash: String,
-    blockHash: String = null,
-    blockNumber: Int | Double = null,
-    logIndex: Int | Double = null,
-    transactionIndex: Int | Double = null
+    transactionHash: String
   ): DecodedLogEntryEvent[A] = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], args = args.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], removed = removed.asInstanceOf[js.Any], topics = topics.asInstanceOf[js.Any], transactionHash = transactionHash.asInstanceOf[js.Any])
-    if (blockHash != null) __obj.updateDynamic("blockHash")(blockHash.asInstanceOf[js.Any])
-    if (blockNumber != null) __obj.updateDynamic("blockNumber")(blockNumber.asInstanceOf[js.Any])
-    if (logIndex != null) __obj.updateDynamic("logIndex")(logIndex.asInstanceOf[js.Any])
-    if (transactionIndex != null) __obj.updateDynamic("transactionIndex")(transactionIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecodedLogEntryEvent[A]]
   }
+  @scala.inline
+  implicit class DecodedLogEntryEventOps[Self[a] <: DecodedLogEntryEvent[a], A] (val x: Self[A]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[A] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[A]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[A] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[A] with Other]
+    @scala.inline
+    def withRemoved(value: Boolean): Self[A] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

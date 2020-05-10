@@ -15,14 +15,12 @@ trait FirewallCertificateRevocationListCheckMethodType extends js.Object
 
 object FirewallCertificateRevocationListCheckMethodType {
   @scala.inline
-  def attempt: typingsSlinky.microsoftGraph.microsoftGraphStrings.attempt = this.cast("attempt")
+  def attempt: typingsSlinky.microsoftGraph.microsoftGraphStrings.attempt = "attempt".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.attempt]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = "deviceDefault".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault]
   @scala.inline
-  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = this.cast("deviceDefault")
+  def none: none_ = "none".asInstanceOf[none_]
   @scala.inline
-  def none: none_ = this.cast("none")
-  @scala.inline
-  def require: typingsSlinky.microsoftGraph.microsoftGraphStrings.require = this.cast("require")
+  def require: typingsSlinky.microsoftGraph.microsoftGraphStrings.require = "require".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.require]
 }
 

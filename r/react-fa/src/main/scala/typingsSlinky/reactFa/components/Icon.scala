@@ -1,15 +1,21 @@
 package typingsSlinky.reactFa.components
 
 import typingsSlinky.reactFa.mod.IconCls
+import typingsSlinky.reactFa.mod.IconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Icon extends SharedApply_IconProps1060106913[IconCls] {
+object Icon {
   @JSImport("react-fa", "Icon")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: IconProps): SharedBuilder_IconProps1331641792[IconCls] = new SharedBuilder_IconProps1331641792[IconCls](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(name: String): SharedBuilder_IconProps1331641792[IconCls] = {
+    val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    new SharedBuilder_IconProps1331641792[IconCls](js.Array(this.component, __props.asInstanceOf[IconProps]))
+  }
 }
 

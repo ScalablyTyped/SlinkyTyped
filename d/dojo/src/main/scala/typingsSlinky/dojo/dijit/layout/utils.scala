@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
   * Utility functions for doing layout
   * 
   */
+@js.native
 trait utils extends js.Object {
   /**
     * Layout a bunch of child dom nodes within a parent dom node
@@ -28,7 +29,7 @@ trait utils extends js.Object {
     children: js.Array[WidgetBase],
     changedRegionId: String,
     changedRegionSize: Double
-  ): Unit
+  ): Unit = js.native
   /**
     * Given the margin-box size of a node, return its content box size.
     * Functions like domGeometry.contentBox() but is more reliable since it doesn't have
@@ -37,7 +38,7 @@ trait utils extends js.Object {
     * @param node             
     * @param mb             
     */
-  def marginBox2contentBox(node: HTMLElement, mb: js.Object): js.Object
+  def marginBox2contentBox(node: HTMLElement, mb: js.Object): js.Object = js.native
 }
 
 object utils {
@@ -47,8 +48,27 @@ object utils {
     marginBox2contentBox: (HTMLElement, js.Object) => js.Object
   ): utils = {
     val __obj = js.Dynamic.literal(layoutChildren = js.Any.fromFunction5(layoutChildren), marginBox2contentBox = js.Any.fromFunction2(marginBox2contentBox))
-  
     __obj.asInstanceOf[utils]
   }
+  @scala.inline
+  implicit class utilsOps[Self <: utils] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayoutChildren(value: (HTMLElement, js.Object, js.Array[WidgetBase], String, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutChildren")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withMarginBox2contentBox(value: (HTMLElement, js.Object) => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marginBox2contentBox")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

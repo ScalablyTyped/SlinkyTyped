@@ -15,16 +15,14 @@ trait AutoSizeType extends AutoSize
 
 object AutoSizeType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def fit: typingsSlinky.vegaTypings.vegaTypingsStrings.fit = "fit".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.fit]
   @scala.inline
-  def fit: typingsSlinky.vegaTypings.vegaTypingsStrings.fit = this.cast("fit")
+  def `fit-x`: typingsSlinky.vegaTypings.vegaTypingsStrings.`fit-x` = "fit-x".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`fit-x`]
   @scala.inline
-  def `fit-x`: typingsSlinky.vegaTypings.vegaTypingsStrings.`fit-x` = this.cast("fit-x")
+  def `fit-y`: typingsSlinky.vegaTypings.vegaTypingsStrings.`fit-y` = "fit-y".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`fit-y`]
   @scala.inline
-  def `fit-y`: typingsSlinky.vegaTypings.vegaTypingsStrings.`fit-y` = this.cast("fit-y")
+  def none: typingsSlinky.vegaTypings.vegaTypingsStrings.none = "none".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.none]
   @scala.inline
-  def none: typingsSlinky.vegaTypings.vegaTypingsStrings.none = this.cast("none")
-  @scala.inline
-  def pad: typingsSlinky.vegaTypings.vegaTypingsStrings.pad = this.cast("pad")
+  def pad: typingsSlinky.vegaTypings.vegaTypingsStrings.pad = "pad".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.pad]
 }
 

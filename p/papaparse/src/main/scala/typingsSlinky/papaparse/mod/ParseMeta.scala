@@ -4,18 +4,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ParseMeta extends js.Object {
    // Line break sequence used
-  var aborted: Boolean
+  var aborted: Boolean = js.native
    // Whether preview consumed all input
-  var cursor: Double
-  var delimiter: String
+  var cursor: Double = js.native
+  var delimiter: String = js.native
    // Whether process was aborted
-  var fields: js.Array[String]
+  var fields: js.Array[String] = js.native
    // Delimiter used
-  var linebreak: String
+  var linebreak: String = js.native
    // Array of field names
-  var truncated: Boolean
+  var truncated: Boolean = js.native
 }
 
 object ParseMeta {
@@ -29,8 +30,51 @@ object ParseMeta {
     truncated: Boolean
   ): ParseMeta = {
     val __obj = js.Dynamic.literal(aborted = aborted.asInstanceOf[js.Any], cursor = cursor.asInstanceOf[js.Any], delimiter = delimiter.asInstanceOf[js.Any], fields = fields.asInstanceOf[js.Any], linebreak = linebreak.asInstanceOf[js.Any], truncated = truncated.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ParseMeta]
   }
+  @scala.inline
+  implicit class ParseMetaOps[Self <: ParseMeta] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAborted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aborted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCursor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelimiter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFields(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinebreak(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linebreak")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTruncated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("truncated")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

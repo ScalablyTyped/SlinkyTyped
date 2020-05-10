@@ -1,7 +1,7 @@
 package typingsSlinky.antd
 
+import slinky.core.TagMod
 import typingsSlinky.antd.treeTreeMod.AntTreeNodeProps
-import typingsSlinky.react.mod.ReactNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ import scala.scalajs.js.annotation._
 object utilsIconUtilMod extends js.Object {
   def default(
     prefixCls: String,
-    switcherIcon: js.UndefOr[ReactNode],
+    switcherIcon: js.UndefOr[TagMod[Any]],
     showLine: js.UndefOr[scala.Nothing],
     hasIsLeafExpandedLoading: AntTreeNodeProps
   ): js.Object | Null = js.native
   def default(
     prefixCls: String,
-    switcherIcon: js.UndefOr[ReactNode],
+    switcherIcon: js.UndefOr[TagMod[Any]],
     showLine: Boolean,
     hasIsLeafExpandedLoading: AntTreeNodeProps
   ): js.Object | Null = js.native

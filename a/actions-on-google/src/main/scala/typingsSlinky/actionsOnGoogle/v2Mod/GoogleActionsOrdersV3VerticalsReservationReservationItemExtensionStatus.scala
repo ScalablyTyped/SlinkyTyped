@@ -17,20 +17,18 @@ trait GoogleActionsOrdersV3VerticalsReservationReservationItemExtensionStatus ex
 
 object GoogleActionsOrdersV3VerticalsReservationReservationItemExtensionStatus {
   @scala.inline
-  def CANCELLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED = this.cast("CANCELLED")
+  def CANCELLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED = "CANCELLED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CANCELLED]
   @scala.inline
-  def CHANGE_REQUESTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CHANGE_REQUESTED = this.cast("CHANGE_REQUESTED")
+  def CHANGE_REQUESTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CHANGE_REQUESTED = "CHANGE_REQUESTED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CHANGE_REQUESTED]
   @scala.inline
-  def CONFIRMED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CONFIRMED = this.cast("CONFIRMED")
+  def CONFIRMED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CONFIRMED = "CONFIRMED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.CONFIRMED]
   @scala.inline
-  def FULFILLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FULFILLED = this.cast("FULFILLED")
+  def FULFILLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FULFILLED = "FULFILLED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.FULFILLED]
   @scala.inline
-  def PENDING: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PENDING = this.cast("PENDING")
+  def PENDING: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PENDING = "PENDING".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.PENDING]
   @scala.inline
-  def REJECTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REJECTED = this.cast("REJECTED")
+  def REJECTED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REJECTED = "REJECTED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.REJECTED]
   @scala.inline
-  def RESERVATION_STATUS_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RESERVATION_STATUS_UNSPECIFIED = this.cast("RESERVATION_STATUS_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def RESERVATION_STATUS_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RESERVATION_STATUS_UNSPECIFIED = "RESERVATION_STATUS_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.RESERVATION_STATUS_UNSPECIFIED]
 }
 

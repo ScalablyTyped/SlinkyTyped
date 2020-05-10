@@ -18,11 +18,41 @@ trait DescribeJobResponse extends js.Object {
 
 object DescribeJobResponse {
   @scala.inline
-  def apply(documentSource: JobDocumentSource = null, job: Job = null): DescribeJobResponse = {
+  def apply(): DescribeJobResponse = {
     val __obj = js.Dynamic.literal()
-    if (documentSource != null) __obj.updateDynamic("documentSource")(documentSource.asInstanceOf[js.Any])
-    if (job != null) __obj.updateDynamic("job")(job.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeJobResponse]
   }
+  @scala.inline
+  implicit class DescribeJobResponseOps[Self <: DescribeJobResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentSource(value: JobDocumentSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("documentSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJob(value: Job): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJob: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("job")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

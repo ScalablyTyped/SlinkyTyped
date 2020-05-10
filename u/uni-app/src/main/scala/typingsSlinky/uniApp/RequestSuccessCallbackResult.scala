@@ -4,29 +4,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RequestSuccessCallbackResult extends js.Object {
   /**
     * 开发者服务器返回的数据
     */
-  var data: js.UndefOr[String] = js.undefined
+  var data: js.UndefOr[String] = js.native
   /**
     * 开发者服务器返回的 HTTP Response Header
     */
-  var header: js.UndefOr[js.Any] = js.undefined
+  var header: js.UndefOr[js.Any] = js.native
   /**
     * 开发者服务器返回的 HTTP 状态码
     */
-  var statusCode: js.UndefOr[Double] = js.undefined
+  var statusCode: js.UndefOr[Double] = js.native
 }
 
 object RequestSuccessCallbackResult {
   @scala.inline
-  def apply(data: String = null, header: js.Any = null, statusCode: Int | Double = null): RequestSuccessCallbackResult = {
+  def apply(): RequestSuccessCallbackResult = {
     val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
-    if (statusCode != null) __obj.updateDynamic("statusCode")(statusCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestSuccessCallbackResult]
   }
+  @scala.inline
+  implicit class RequestSuccessCallbackResultOps[Self <: RequestSuccessCallbackResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeader(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

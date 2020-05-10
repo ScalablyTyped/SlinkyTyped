@@ -1,31 +1,31 @@
 package typingsSlinky.reactBroadcast.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactBroadcast.mod.Subscriber.Props
 import typingsSlinky.reactBroadcast.mod.Subscriber_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Subscriber
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Subscriber_[js.Any]] {
+object Subscriber {
   @JSImport("react-broadcast", "Subscriber")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T](
-    channel: String,
-    quiet: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, Subscriber_[js.Any]] = {
-    val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any])
-    if (!js.isUndefined(quiet)) __obj.updateDynamic("quiet")(quiet.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactBroadcast.mod.Subscriber_[js.Any]]]
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Subscriber_[js.Any]] {
+    @scala.inline
+    def quiet(value: Boolean): this.type = set("quiet", value.asInstanceOf[js.Any])
   }
-  type Props = typingsSlinky.reactBroadcast.mod.Subscriber.Props[js.Any]
+  
+  def withProps[T](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T](channel: String): Builder[T] = {
+    val __props = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T]]))
+  }
 }
 

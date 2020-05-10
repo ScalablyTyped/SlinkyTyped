@@ -66,38 +66,185 @@ trait ContactDetail extends js.Object {
 
 object ContactDetail {
   @scala.inline
-  def apply(
-    AddressLine1: AddressLine = null,
-    AddressLine2: AddressLine = null,
-    City: City = null,
-    ContactType: ContactType = null,
-    CountryCode: CountryCode = null,
-    Email: Email = null,
-    ExtraParams: ExtraParamList = null,
-    Fax: ContactNumber = null,
-    FirstName: ContactName = null,
-    LastName: ContactName = null,
-    OrganizationName: ContactName = null,
-    PhoneNumber: ContactNumber = null,
-    State: State = null,
-    ZipCode: ZipCode = null
-  ): ContactDetail = {
+  def apply(): ContactDetail = {
     val __obj = js.Dynamic.literal()
-    if (AddressLine1 != null) __obj.updateDynamic("AddressLine1")(AddressLine1.asInstanceOf[js.Any])
-    if (AddressLine2 != null) __obj.updateDynamic("AddressLine2")(AddressLine2.asInstanceOf[js.Any])
-    if (City != null) __obj.updateDynamic("City")(City.asInstanceOf[js.Any])
-    if (ContactType != null) __obj.updateDynamic("ContactType")(ContactType.asInstanceOf[js.Any])
-    if (CountryCode != null) __obj.updateDynamic("CountryCode")(CountryCode.asInstanceOf[js.Any])
-    if (Email != null) __obj.updateDynamic("Email")(Email.asInstanceOf[js.Any])
-    if (ExtraParams != null) __obj.updateDynamic("ExtraParams")(ExtraParams.asInstanceOf[js.Any])
-    if (Fax != null) __obj.updateDynamic("Fax")(Fax.asInstanceOf[js.Any])
-    if (FirstName != null) __obj.updateDynamic("FirstName")(FirstName.asInstanceOf[js.Any])
-    if (LastName != null) __obj.updateDynamic("LastName")(LastName.asInstanceOf[js.Any])
-    if (OrganizationName != null) __obj.updateDynamic("OrganizationName")(OrganizationName.asInstanceOf[js.Any])
-    if (PhoneNumber != null) __obj.updateDynamic("PhoneNumber")(PhoneNumber.asInstanceOf[js.Any])
-    if (State != null) __obj.updateDynamic("State")(State.asInstanceOf[js.Any])
-    if (ZipCode != null) __obj.updateDynamic("ZipCode")(ZipCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContactDetail]
   }
+  @scala.inline
+  implicit class ContactDetailOps[Self <: ContactDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddressLine1(value: AddressLine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressLine1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressLine1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressLine1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddressLine2(value: AddressLine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressLine2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressLine2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddressLine2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCity(value: City): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("City")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("City")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContactType(value: ContactType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContactType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContactType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContactType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCountryCode(value: CountryCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CountryCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountryCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CountryCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmail(value: Email): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Email")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtraParams(value: ExtraParamList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtraParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtraParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtraParams")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFax(value: ContactNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstName(value: ContactName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FirstName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastName(value: ContactName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationName(value: ContactName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhoneNumber(value: ContactNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhoneNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneNumber")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: State): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("State")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZipCode(value: ZipCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZipCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZipCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZipCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
+@js.native
 trait CellPropertiesLoadOptions extends js.Object {
   /**
     *
@@ -17,62 +18,129 @@ trait CellPropertiesLoadOptions extends js.Object {
     *
     * [Api set: ExcelApi 1.9]
     */
-  var address: js.UndefOr[Boolean] = js.undefined
+  var address: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether to load on the `addressLocal` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var addressLocal: js.UndefOr[Boolean] = js.undefined
+  var addressLocal: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether to load on the `format` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var format: js.UndefOr[CellPropertiesFormatLoadOptions] = js.undefined
+  var format: js.UndefOr[CellPropertiesFormatLoadOptions] = js.native
   /**
     *
     * Specifies whether to load on the `hidden` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var hidden: js.UndefOr[Boolean] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether to load on the `hyperlink` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var hyperlink: js.UndefOr[Boolean] = js.undefined
+  var hyperlink: js.UndefOr[Boolean] = js.native
   /**
     *
     * Specifies whether to load on the `style` property.
     *
     * [Api set: ExcelApi 1.9]
     */
-  var style: js.UndefOr[Boolean] = js.undefined
+  var style: js.UndefOr[Boolean] = js.native
 }
 
 object CellPropertiesLoadOptions {
   @scala.inline
-  def apply(
-    address: js.UndefOr[Boolean] = js.undefined,
-    addressLocal: js.UndefOr[Boolean] = js.undefined,
-    format: CellPropertiesFormatLoadOptions = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    hyperlink: js.UndefOr[Boolean] = js.undefined,
-    style: js.UndefOr[Boolean] = js.undefined
-  ): CellPropertiesLoadOptions = {
+  def apply(): CellPropertiesLoadOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(address)) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (!js.isUndefined(addressLocal)) __obj.updateDynamic("addressLocal")(addressLocal.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(hyperlink)) __obj.updateDynamic("hyperlink")(hyperlink.asInstanceOf[js.Any])
-    if (!js.isUndefined(style)) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellPropertiesLoadOptions]
   }
+  @scala.inline
+  implicit class CellPropertiesLoadOptionsOps[Self <: CellPropertiesLoadOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddressLocal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLocal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddressLocal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addressLocal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: CellPropertiesFormatLoadOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHyperlink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHyperlink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlink")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

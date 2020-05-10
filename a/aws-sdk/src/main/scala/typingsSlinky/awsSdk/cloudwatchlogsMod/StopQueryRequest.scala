@@ -16,8 +16,21 @@ object StopQueryRequest {
   @scala.inline
   def apply(queryId: QueryId): StopQueryRequest = {
     val __obj = js.Dynamic.literal(queryId = queryId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StopQueryRequest]
   }
+  @scala.inline
+  implicit class StopQueryRequestOps[Self <: StopQueryRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQueryId(value: QueryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

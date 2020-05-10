@@ -2,6 +2,7 @@ package typingsSlinky.rcPicker.rangePickerMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.EventValue
@@ -18,90 +19,288 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RangePickerSharedProps[DateType] extends js.Object {
-  var allowEmpty: js.UndefOr[js.Tuple2[Boolean, Boolean]] = js.undefined
-  var defaultPickerValue: js.UndefOr[js.Tuple2[DateType, DateType]] = js.undefined
-  var defaultValue: js.UndefOr[RangeValue[DateType]] = js.undefined
-  var direction: js.UndefOr[ltr | rtl] = js.undefined
-  var disabled: js.UndefOr[Boolean | (js.Tuple2[Boolean, Boolean])] = js.undefined
+  var allowEmpty: js.UndefOr[js.Tuple2[Boolean, Boolean]] = js.native
+  var defaultPickerValue: js.UndefOr[js.Tuple2[DateType, DateType]] = js.native
+  var defaultValue: js.UndefOr[RangeValue[DateType]] = js.native
+  var direction: js.UndefOr[ltr | rtl] = js.native
+  var disabled: js.UndefOr[Boolean | (js.Tuple2[Boolean, Boolean])] = js.native
   var disabledTime: js.UndefOr[
     js.Function2[/* date */ EventValue[DateType], /* type */ start | end, DisabledTimes]
-  ] = js.undefined
-  var mode: js.UndefOr[js.Tuple2[PanelMode, PanelMode]] = js.undefined
-  var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
+  ] = js.native
+  var mode: js.UndefOr[js.Tuple2[PanelMode, PanelMode]] = js.native
+  var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.native
   var onCalendarChange: js.UndefOr[
     js.Function2[
       /* values */ RangeValue[DateType], 
       /* formatString */ js.Tuple2[String, String], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   var onChange: js.UndefOr[
     js.Function2[
       /* values */ RangeValue[DateType], 
       /* formatString */ js.Tuple2[String, String], 
       Unit
     ]
-  ] = js.undefined
-  var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
-  var onOk: js.UndefOr[js.Function1[/* dates */ RangeValue[DateType], Unit]] = js.undefined
+  ] = js.native
+  var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.native
+  var onOk: js.UndefOr[js.Function1[/* dates */ RangeValue[DateType], Unit]] = js.native
   var onPanelChange: js.UndefOr[
     js.Function2[/* values */ RangeValue[DateType], /* modes */ js.Tuple2[PanelMode, PanelMode], Unit]
-  ] = js.undefined
-  var placeholder: js.UndefOr[js.Tuple2[String, String]] = js.undefined
+  ] = js.native
+  var placeholder: js.UndefOr[js.Tuple2[String, String]] = js.native
   var ranges: js.UndefOr[
     Record[
       String, 
       (Exclude[RangeValue[DateType], Null]) | (js.Function0[Exclude[RangeValue[DateType], Null]])
     ]
-  ] = js.undefined
-  var separator: js.UndefOr[TagMod[Any]] = js.undefined
-  var value: js.UndefOr[RangeValue[DateType]] = js.undefined
+  ] = js.native
+  var separator: js.UndefOr[TagMod[Any]] = js.native
+  var value: js.UndefOr[RangeValue[DateType]] = js.native
 }
 
 object RangePickerSharedProps {
   @scala.inline
-  def apply[DateType](
-    allowEmpty: js.Tuple2[Boolean, Boolean] = null,
-    defaultPickerValue: js.Tuple2[DateType, DateType] = null,
-    defaultValue: RangeValue[DateType] = null,
-    direction: ltr | rtl = null,
-    disabled: Boolean | (js.Tuple2[Boolean, Boolean]) = null,
-    disabledTime: (/* date */ EventValue[DateType], /* type */ start | end) => DisabledTimes = null,
-    mode: js.Tuple2[PanelMode, PanelMode] = null,
-    onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onCalendarChange: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit = null,
-    onChange: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit = null,
-    onFocus: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onOk: /* dates */ RangeValue[DateType] => Unit = null,
-    onPanelChange: (/* values */ RangeValue[DateType], /* modes */ js.Tuple2[PanelMode, PanelMode]) => Unit = null,
-    placeholder: js.Tuple2[String, String] = null,
-    ranges: Record[
-      String, 
-      (Exclude[RangeValue[DateType], Null]) | (js.Function0[Exclude[RangeValue[DateType], Null]])
-    ] = null,
-    separator: TagMod[Any] = null,
-    value: RangeValue[DateType] = null
-  ): RangePickerSharedProps[DateType] = {
+  def apply[DateType](): RangePickerSharedProps[DateType] = {
     val __obj = js.Dynamic.literal()
-    if (allowEmpty != null) __obj.updateDynamic("allowEmpty")(allowEmpty.asInstanceOf[js.Any])
-    if (defaultPickerValue != null) __obj.updateDynamic("defaultPickerValue")(defaultPickerValue.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (disabled != null) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (disabledTime != null) __obj.updateDynamic("disabledTime")(js.Any.fromFunction2(disabledTime))
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onCalendarChange != null) __obj.updateDynamic("onCalendarChange")(js.Any.fromFunction2(onCalendarChange))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onOk != null) __obj.updateDynamic("onOk")(js.Any.fromFunction1(onOk))
-    if (onPanelChange != null) __obj.updateDynamic("onPanelChange")(js.Any.fromFunction2(onPanelChange))
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (ranges != null) __obj.updateDynamic("ranges")(ranges.asInstanceOf[js.Any])
-    if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[RangePickerSharedProps[DateType]]
   }
+  @scala.inline
+  implicit class RangePickerSharedPropsOps[Self[datetype] <: RangePickerSharedProps[datetype], DateType] (val x: Self[DateType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[DateType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[DateType]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[DateType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[DateType] with Other]
+    @scala.inline
+    def withAllowEmpty(value: js.Tuple2[Boolean, Boolean]): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEmpty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowEmpty: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowEmpty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultPickerValue(value: js.Tuple2[DateType, DateType]): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPickerValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultPickerValue: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPickerValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValue(value: RangeValue[DateType]): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefaultValueNull: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(null)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: ltr | rtl): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean | (js.Tuple2[Boolean, Boolean])): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisabled: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisabledTime(value: (/* date */ EventValue[DateType], /* type */ start | end) => DisabledTimes): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledTime")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutDisabledTime: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabledTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: js.Tuple2[PanelMode, PanelMode]): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnBlur: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCalendarChange(value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCalendarChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCalendarChange: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCalendarChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnFocus(value: SyntheticFocusEvent[HTMLInputElement] => Unit): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnFocus: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOk(value: /* dates */ RangeValue[DateType] => Unit): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOk")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnOk: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPanelChange(value: (/* values */ RangeValue[DateType], /* modes */ js.Tuple2[PanelMode, PanelMode]) => Unit): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanelChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPanelChange: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanelChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlaceholder(value: js.Tuple2[String, String]): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlaceholder: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeholder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRanges(
+      value: Record[
+          String, 
+          (Exclude[RangeValue[DateType], Null]) | (js.Function0[Exclude[RangeValue[DateType], Null]])
+        ]
+    ): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRanges: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeparatorReactElement(value: ReactElement): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSeparator(value: TagMod[Any]): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeparator: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: RangeValue[DateType]): Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueNull: Self[DateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(null)
+        ret
+    }
+  }
+  
 }
 

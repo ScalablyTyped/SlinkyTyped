@@ -1,10 +1,7 @@
 package typingsSlinky.recharts.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.recharts.mod.DataKey
 import typingsSlinky.recharts.mod.RechartsFunction
 import typingsSlinky.recharts.mod.ScaleType
@@ -15,35 +12,36 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ZAxis
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.ZAxis] {
+object ZAxis {
   @JSImport("recharts", "ZAxis")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    dataKey: DataKey = null,
-    name: String | Double = null,
-    range: js.Array[Double] = null,
-    scale: ScaleType | RechartsFunction = null,
-    `type`: number | category = null,
-    unit: String | Double = null,
-    zAxisId: String | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.ZAxis] = {
-    val __obj = js.Dynamic.literal()
-    if (dataKey != null) __obj.updateDynamic("dataKey")(dataKey.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (zAxisId != null) __obj.updateDynamic("zAxisId")(zAxisId.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.recharts.mod.ZAxis] {
+    @scala.inline
+    def dataKeyFunction1(value: /* dataObject */ js.Any => String | Double | (js.Tuple2[Double, Double]) | Null): this.type = set("dataKey", js.Any.fromFunction1(value))
+    @scala.inline
+    def dataKey(value: DataKey): this.type = set("dataKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String | Double): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def range(value: js.Array[Double]): this.type = set("range", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scaleFunction1(value: /* repeated */ js.Any => Unit): this.type = set("scale", js.Any.fromFunction1(value))
+    @scala.inline
+    def scale(value: ScaleType | RechartsFunction): this.type = set("scale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: number | category): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unit(value: String | Double): this.type = set("unit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zAxisId(value: String | Double): this.type = set("zAxisId", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.ZAxis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.ZAxis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ZAxisProps
+  
+  def withProps(p: ZAxisProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ZAxis.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

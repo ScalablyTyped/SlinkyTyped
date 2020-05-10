@@ -8,45 +8,103 @@ import scala.scalajs.js.annotation._
 /**
   * Possible options for the position of the counter. (passed to $.fn.css)
   */
+@js.native
 trait PlacementOptions extends js.Object {
   /**
     * The bottom position of the counter (Number of pixels, or a px or percent string)
     */
-  var bottom: js.UndefOr[Number | String] = js.undefined
+  var bottom: js.UndefOr[Number | String] = js.native
   /**
     * The left position of the counter (Number of pixels, or a px or percent string)
     */
-  var left: js.UndefOr[Number | String] = js.undefined
+  var left: js.UndefOr[Number | String] = js.native
   /**
     * The positioning to use. For example 'relative', 'absolute'
     */
-  var position: js.UndefOr[String] = js.undefined
+  var position: js.UndefOr[String] = js.native
   /**
     * The right position of the counter (Number of pixels, or a px or percent string)
     */
-  var right: js.UndefOr[Number | String] = js.undefined
+  var right: js.UndefOr[Number | String] = js.native
   /**
     * The top position of the counter (Number of pixels, or a px or percent string)
     */
-  var top: js.UndefOr[Number | String] = js.undefined
+  var top: js.UndefOr[Number | String] = js.native
 }
 
 object PlacementOptions {
   @scala.inline
-  def apply(
-    bottom: Number | String = null,
-    left: Number | String = null,
-    position: String = null,
-    right: Number | String = null,
-    top: Number | String = null
-  ): PlacementOptions = {
+  def apply(): PlacementOptions = {
     val __obj = js.Dynamic.literal()
-    if (bottom != null) __obj.updateDynamic("bottom")(bottom.asInstanceOf[js.Any])
-    if (left != null) __obj.updateDynamic("left")(left.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlacementOptions]
   }
+  @scala.inline
+  implicit class PlacementOptionsOps[Self <: PlacementOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBottom(value: Number | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Number | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRight(value: Number | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTop(value: Number | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

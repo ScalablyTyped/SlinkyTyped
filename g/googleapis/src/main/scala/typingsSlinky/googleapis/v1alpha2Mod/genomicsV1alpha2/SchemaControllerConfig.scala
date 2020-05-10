@@ -24,26 +24,113 @@ trait SchemaControllerConfig extends js.Object {
 
 object SchemaControllerConfig {
   @scala.inline
-  def apply(
-    cmd: String = null,
-    disks: StringDictionary[String] = null,
-    gcsLogPath: String = null,
-    gcsSinks: StringDictionary[SchemaRepeatedString] = null,
-    gcsSources: StringDictionary[SchemaRepeatedString] = null,
-    image: String = null,
-    machineType: String = null,
-    vars: StringDictionary[String] = null
-  ): SchemaControllerConfig = {
+  def apply(): SchemaControllerConfig = {
     val __obj = js.Dynamic.literal()
-    if (cmd != null) __obj.updateDynamic("cmd")(cmd.asInstanceOf[js.Any])
-    if (disks != null) __obj.updateDynamic("disks")(disks.asInstanceOf[js.Any])
-    if (gcsLogPath != null) __obj.updateDynamic("gcsLogPath")(gcsLogPath.asInstanceOf[js.Any])
-    if (gcsSinks != null) __obj.updateDynamic("gcsSinks")(gcsSinks.asInstanceOf[js.Any])
-    if (gcsSources != null) __obj.updateDynamic("gcsSources")(gcsSources.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (machineType != null) __obj.updateDynamic("machineType")(machineType.asInstanceOf[js.Any])
-    if (vars != null) __obj.updateDynamic("vars")(vars.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaControllerConfig]
   }
+  @scala.inline
+  implicit class SchemaControllerConfigOps[Self <: SchemaControllerConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCmd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCmd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisks(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGcsLogPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsLogPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGcsLogPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsLogPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGcsSinks(value: StringDictionary[SchemaRepeatedString]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGcsSinks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSinks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGcsSources(value: StringDictionary[SchemaRepeatedString]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGcsSources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gcsSources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMachineType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMachineType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("machineType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVars(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVars: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vars")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.multer.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +12,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FileFilterCallback extends js.Object {
   def apply(error: Null, acceptFile: Boolean): Unit = js.native
-  def apply(error: Error): Unit = js.native
+  def apply(error: js.Error): Unit = js.native
 }
 

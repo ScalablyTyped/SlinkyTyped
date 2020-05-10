@@ -21,12 +21,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Hooks extends CompilationHooks {
-  var htmlWebpackPluginAfterEmit: AsyncSeriesWaterfallHook[AnonOutputName, _, _]
-  var htmlWebpackPluginAfterHtmlProcessing: AsyncSeriesWaterfallHook[AnonHtml, _, _]
-  var htmlWebpackPluginAlterAssetTags: AsyncSeriesWaterfallHook[AnonBody, _, _]
-  var htmlWebpackPluginBeforeHtmlGeneration: AsyncSeriesWaterfallHook[AnonAssets, _, _]
-  var htmlWebpackPluginBeforeHtmlProcessing: AsyncSeriesWaterfallHook[AnonHtml, _, _]
+  var htmlWebpackPluginAfterEmit: AsyncSeriesWaterfallHook[AnonOutputName, _, _] = js.native
+  var htmlWebpackPluginAfterHtmlProcessing: AsyncSeriesWaterfallHook[AnonHtml, _, _] = js.native
+  var htmlWebpackPluginAlterAssetTags: AsyncSeriesWaterfallHook[AnonBody, _, _] = js.native
+  var htmlWebpackPluginBeforeHtmlGeneration: AsyncSeriesWaterfallHook[AnonAssets, _, _] = js.native
+  var htmlWebpackPluginBeforeHtmlProcessing: AsyncSeriesWaterfallHook[AnonHtml, _, _] = js.native
 }
 
 object Hooks {
@@ -108,8 +109,45 @@ object Hooks {
     unseal: SyncHook[_, _, _]
   ): Hooks = {
     val __obj = js.Dynamic.literal(additionalAssets = additionalAssets.asInstanceOf[js.Any], additionalChunkAssets = additionalChunkAssets.asInstanceOf[js.Any], advancedOptimizeModuleOrder = advancedOptimizeModuleOrder.asInstanceOf[js.Any], afterHash = afterHash.asInstanceOf[js.Any], afterOptimizeAssets = afterOptimizeAssets.asInstanceOf[js.Any], afterOptimizeChunkAssets = afterOptimizeChunkAssets.asInstanceOf[js.Any], afterOptimizeChunkIds = afterOptimizeChunkIds.asInstanceOf[js.Any], afterOptimizeChunkModules = afterOptimizeChunkModules.asInstanceOf[js.Any], afterOptimizeChunks = afterOptimizeChunks.asInstanceOf[js.Any], afterOptimizeDependencies = afterOptimizeDependencies.asInstanceOf[js.Any], afterOptimizeExtractedChunks = afterOptimizeExtractedChunks.asInstanceOf[js.Any], afterOptimizeModuleIds = afterOptimizeModuleIds.asInstanceOf[js.Any], afterOptimizeModules = afterOptimizeModules.asInstanceOf[js.Any], afterOptimizeTree = afterOptimizeTree.asInstanceOf[js.Any], afterSeal = afterSeal.asInstanceOf[js.Any], assetPath = assetPath.asInstanceOf[js.Any], beforeChunkAssets = beforeChunkAssets.asInstanceOf[js.Any], beforeChunkIds = beforeChunkIds.asInstanceOf[js.Any], beforeHash = beforeHash.asInstanceOf[js.Any], beforeModuleAssets = beforeModuleAssets.asInstanceOf[js.Any], beforeModuleIds = beforeModuleIds.asInstanceOf[js.Any], buildModule = buildModule.asInstanceOf[js.Any], childCompiler = childCompiler.asInstanceOf[js.Any], chunkAsset = chunkAsset.asInstanceOf[js.Any], chunkHash = chunkHash.asInstanceOf[js.Any], failedModule = failedModule.asInstanceOf[js.Any], finishModules = finishModules.asInstanceOf[js.Any], finishRebuildingModule = finishRebuildingModule.asInstanceOf[js.Any], htmlWebpackPluginAfterEmit = htmlWebpackPluginAfterEmit.asInstanceOf[js.Any], htmlWebpackPluginAfterHtmlProcessing = htmlWebpackPluginAfterHtmlProcessing.asInstanceOf[js.Any], htmlWebpackPluginAlterAssetTags = htmlWebpackPluginAlterAssetTags.asInstanceOf[js.Any], htmlWebpackPluginBeforeHtmlGeneration = htmlWebpackPluginBeforeHtmlGeneration.asInstanceOf[js.Any], htmlWebpackPluginBeforeHtmlProcessing = htmlWebpackPluginBeforeHtmlProcessing.asInstanceOf[js.Any], moduleAsset = moduleAsset.asInstanceOf[js.Any], moduleIds = moduleIds.asInstanceOf[js.Any], needAdditionalPass = needAdditionalPass.asInstanceOf[js.Any], needAdditionalSeal = needAdditionalSeal.asInstanceOf[js.Any], normalModuleLoader = normalModuleLoader.asInstanceOf[js.Any], optimize = optimize.asInstanceOf[js.Any], optimizeAssets = optimizeAssets.asInstanceOf[js.Any], optimizeChunkAssets = optimizeChunkAssets.asInstanceOf[js.Any], optimizeChunkIds = optimizeChunkIds.asInstanceOf[js.Any], optimizeChunkModules = optimizeChunkModules.asInstanceOf[js.Any], optimizeChunkModulesAdvanced = optimizeChunkModulesAdvanced.asInstanceOf[js.Any], optimizeChunkModulesBasic = optimizeChunkModulesBasic.asInstanceOf[js.Any], optimizeChunkOrder = optimizeChunkOrder.asInstanceOf[js.Any], optimizeChunks = optimizeChunks.asInstanceOf[js.Any], optimizeChunksAdvanced = optimizeChunksAdvanced.asInstanceOf[js.Any], optimizeChunksBasic = optimizeChunksBasic.asInstanceOf[js.Any], optimizeDependencies = optimizeDependencies.asInstanceOf[js.Any], optimizeDependenciesAdvanced = optimizeDependenciesAdvanced.asInstanceOf[js.Any], optimizeDependenciesBasic = optimizeDependenciesBasic.asInstanceOf[js.Any], optimizeExtractedChunks = optimizeExtractedChunks.asInstanceOf[js.Any], optimizeExtractedChunksAdvanced = optimizeExtractedChunksAdvanced.asInstanceOf[js.Any], optimizeExtractedChunksBasic = optimizeExtractedChunksBasic.asInstanceOf[js.Any], optimizeModuleIds = optimizeModuleIds.asInstanceOf[js.Any], optimizeModuleOrder = optimizeModuleOrder.asInstanceOf[js.Any], optimizeModules = optimizeModules.asInstanceOf[js.Any], optimizeModulesAdvanced = optimizeModulesAdvanced.asInstanceOf[js.Any], optimizeModulesBasic = optimizeModulesBasic.asInstanceOf[js.Any], optimizeTree = optimizeTree.asInstanceOf[js.Any], rebuildModule = rebuildModule.asInstanceOf[js.Any], record = record.asInstanceOf[js.Any], recordChunks = recordChunks.asInstanceOf[js.Any], recordHash = recordHash.asInstanceOf[js.Any], recordModules = recordModules.asInstanceOf[js.Any], records = records.asInstanceOf[js.Any], reviveChunks = reviveChunks.asInstanceOf[js.Any], reviveModules = reviveModules.asInstanceOf[js.Any], seal = seal.asInstanceOf[js.Any], shouldGenerateChunkAssets = shouldGenerateChunkAssets.asInstanceOf[js.Any], shouldRecord = shouldRecord.asInstanceOf[js.Any], succeedModule = succeedModule.asInstanceOf[js.Any], unseal = unseal.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Hooks]
   }
+  @scala.inline
+  implicit class HooksOps[Self <: Hooks] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHtmlWebpackPluginAfterEmit(value: AsyncSeriesWaterfallHook[AnonOutputName, _, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWebpackPluginAfterEmit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlWebpackPluginAfterHtmlProcessing(value: AsyncSeriesWaterfallHook[AnonHtml, _, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWebpackPluginAfterHtmlProcessing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlWebpackPluginAlterAssetTags(value: AsyncSeriesWaterfallHook[AnonBody, _, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWebpackPluginAlterAssetTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlWebpackPluginBeforeHtmlGeneration(value: AsyncSeriesWaterfallHook[AnonAssets, _, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWebpackPluginBeforeHtmlGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlWebpackPluginBeforeHtmlProcessing(value: AsyncSeriesWaterfallHook[AnonHtml, _, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWebpackPluginBeforeHtmlProcessing")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

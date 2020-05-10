@@ -10,98 +10,366 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NodeOptions extends js.Object {
-  var borderWidth: js.UndefOr[Double] = js.undefined
-  var borderWidthSelected: js.UndefOr[Double] = js.undefined
-  var brokenImage: js.UndefOr[String] = js.undefined
-  var color: js.UndefOr[String | Color] = js.undefined
-  var fixed: js.UndefOr[Boolean | AnonX] = js.undefined
-  var font: js.UndefOr[String | AnonAlign] = js.undefined
-  var group: js.UndefOr[String] = js.undefined
-  var hidden: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[AnonCode] = js.undefined
-  var image: js.UndefOr[String | Image] = js.undefined
-  var label: js.UndefOr[String] = js.undefined
-  var labelHighlightBold: js.UndefOr[Boolean] = js.undefined
-  var level: js.UndefOr[Double] = js.undefined
-  var margin: js.UndefOr[AnonBottom] = js.undefined
-  var mass: js.UndefOr[Double] = js.undefined
-  var physics: js.UndefOr[Boolean] = js.undefined
-  var scaling: js.UndefOr[OptionsScaling] = js.undefined
-  var shadow: js.UndefOr[Boolean | OptionsShadow] = js.undefined
-  var shape: js.UndefOr[String] = js.undefined
-  var shapeProperties: js.UndefOr[AnonBorderDashes] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var value: js.UndefOr[Double] = js.undefined
+  var borderWidth: js.UndefOr[Double] = js.native
+  var borderWidthSelected: js.UndefOr[Double] = js.native
+  var brokenImage: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String | Color] = js.native
+  var fixed: js.UndefOr[Boolean | AnonX] = js.native
+  var font: js.UndefOr[String | AnonAlign] = js.native
+  var group: js.UndefOr[String] = js.native
+  var hidden: js.UndefOr[Boolean] = js.native
+  var icon: js.UndefOr[AnonCode] = js.native
+  var image: js.UndefOr[String | Image] = js.native
+  var label: js.UndefOr[String] = js.native
+  var labelHighlightBold: js.UndefOr[Boolean] = js.native
+  var level: js.UndefOr[Double] = js.native
+  var margin: js.UndefOr[AnonBottom] = js.native
+  var mass: js.UndefOr[Double] = js.native
+  var physics: js.UndefOr[Boolean] = js.native
+  var scaling: js.UndefOr[OptionsScaling] = js.native
+  var shadow: js.UndefOr[Boolean | OptionsShadow] = js.native
+  var shape: js.UndefOr[String] = js.native
+  var shapeProperties: js.UndefOr[AnonBorderDashes] = js.native
+  var size: js.UndefOr[Double] = js.native
+  var title: js.UndefOr[String] = js.native
+  var value: js.UndefOr[Double] = js.native
   /**
     * If false, no widthConstraint is applied. If a number is specified, the minimum and maximum widths of the node are set to the value.
     * The node's label's lines will be broken on spaces to stay below the maximum and the node's width
     * will be set to the minimum if less than the value.
     */
-  var widthConstraint: js.UndefOr[Double | Boolean | AnonMaximum] = js.undefined
-  var x: js.UndefOr[Double] = js.undefined
-  var y: js.UndefOr[Double] = js.undefined
+  var widthConstraint: js.UndefOr[Double | Boolean | AnonMaximum] = js.native
+  var x: js.UndefOr[Double] = js.native
+  var y: js.UndefOr[Double] = js.native
 }
 
 object NodeOptions {
   @scala.inline
-  def apply(
-    borderWidth: Int | Double = null,
-    borderWidthSelected: Int | Double = null,
-    brokenImage: String = null,
-    color: String | Color = null,
-    fixed: Boolean | AnonX = null,
-    font: String | AnonAlign = null,
-    group: String = null,
-    hidden: js.UndefOr[Boolean] = js.undefined,
-    icon: AnonCode = null,
-    image: String | Image = null,
-    label: String = null,
-    labelHighlightBold: js.UndefOr[Boolean] = js.undefined,
-    level: Int | Double = null,
-    margin: AnonBottom = null,
-    mass: Int | Double = null,
-    physics: js.UndefOr[Boolean] = js.undefined,
-    scaling: OptionsScaling = null,
-    shadow: Boolean | OptionsShadow = null,
-    shape: String = null,
-    shapeProperties: AnonBorderDashes = null,
-    size: Int | Double = null,
-    title: String = null,
-    value: Int | Double = null,
-    widthConstraint: Double | Boolean | AnonMaximum = null,
-    x: Int | Double = null,
-    y: Int | Double = null
-  ): NodeOptions = {
+  def apply(): NodeOptions = {
     val __obj = js.Dynamic.literal()
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (borderWidthSelected != null) __obj.updateDynamic("borderWidthSelected")(borderWidthSelected.asInstanceOf[js.Any])
-    if (brokenImage != null) __obj.updateDynamic("brokenImage")(brokenImage.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (fixed != null) __obj.updateDynamic("fixed")(fixed.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (group != null) __obj.updateDynamic("group")(group.asInstanceOf[js.Any])
-    if (!js.isUndefined(hidden)) __obj.updateDynamic("hidden")(hidden.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (!js.isUndefined(labelHighlightBold)) __obj.updateDynamic("labelHighlightBold")(labelHighlightBold.asInstanceOf[js.Any])
-    if (level != null) __obj.updateDynamic("level")(level.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (mass != null) __obj.updateDynamic("mass")(mass.asInstanceOf[js.Any])
-    if (!js.isUndefined(physics)) __obj.updateDynamic("physics")(physics.asInstanceOf[js.Any])
-    if (scaling != null) __obj.updateDynamic("scaling")(scaling.asInstanceOf[js.Any])
-    if (shadow != null) __obj.updateDynamic("shadow")(shadow.asInstanceOf[js.Any])
-    if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
-    if (shapeProperties != null) __obj.updateDynamic("shapeProperties")(shapeProperties.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (widthConstraint != null) __obj.updateDynamic("widthConstraint")(widthConstraint.asInstanceOf[js.Any])
-    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
-    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeOptions]
   }
+  @scala.inline
+  implicit class NodeOptionsOps[Self <: NodeOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorderWidthSelected(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidthSelected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorderWidthSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidthSelected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBrokenImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brokenImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrokenImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("brokenImage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String | Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFixed(value: Boolean | AnonX): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: String | AnonAlign): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHidden: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: AnonCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: String | Image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelHighlightBold(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHighlightBold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelHighlightBold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelHighlightBold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMargin(value: AnonBottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMargin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMass(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPhysics(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("physics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhysics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("physics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaling(value: OptionsScaling): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaling: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaling")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadow(value: Boolean | OptionsShadow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShape(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShapeProperties(value: AnonBorderDashes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShapeProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shapeProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidthConstraint(value: Double | Boolean | AnonMaximum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthConstraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidthConstraint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthConstraint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

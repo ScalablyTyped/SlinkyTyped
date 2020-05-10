@@ -12,8 +12,6 @@ object services extends js.Object {
     def this($publish: AsyncMacroServicePublisher) = this()
     @JSName("$publish")
     var $publish_Original: AsyncMacroServicePublisher = js.native
-    /* CompleteClass */
-    override var DEFAULT_DEPLOYMENT_ID: String = js.native
     @JSName("$publish")
     def $publish(method: String): js.Promise[_] = js.native
     @JSName("$publish")

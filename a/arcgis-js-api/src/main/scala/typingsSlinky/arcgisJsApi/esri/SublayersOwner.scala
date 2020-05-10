@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SublayersOwner extends js.Object {
   /**
     * Returns a deep clone of a map service's [sublayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html) as defined by the service. This is useful for scenarios when the developer is unfamiliar with the service sublayers and needs to "reset" the layer's sublayers to match those defined by the service.
@@ -13,7 +14,7 @@ trait SublayersOwner extends js.Object {
     *
     *
     */
-  def createServiceSublayers(): Collection[Sublayer]
+  def createServiceSublayers(): Collection[Sublayer] = js.native
   /**
     * Returns the sublayer with the given layerId.
     *
@@ -22,7 +23,7 @@ trait SublayersOwner extends js.Object {
     * @param id The [id](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#id) of the sublayer.
     *
     */
-  def findSublayerById(id: Double): Sublayer
+  def findSublayerById(id: Double): Sublayer = js.native
 }
 
 @JSGlobal("__esri.SublayersOwner")

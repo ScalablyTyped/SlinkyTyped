@@ -16,16 +16,14 @@ trait ReadConcernLevel extends js.Object
 
 object ReadConcernLevel {
   @scala.inline
-  def available: typingsSlinky.mongodb.mongodbStrings.available = this.cast("available")
+  def available: typingsSlinky.mongodb.mongodbStrings.available = "available".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.available]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def linearizable: typingsSlinky.mongodb.mongodbStrings.linearizable = "linearizable".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.linearizable]
   @scala.inline
-  def linearizable: typingsSlinky.mongodb.mongodbStrings.linearizable = this.cast("linearizable")
+  def local: typingsSlinky.mongodb.mongodbStrings.local = "local".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.local]
   @scala.inline
-  def local: typingsSlinky.mongodb.mongodbStrings.local = this.cast("local")
+  def majority: typingsSlinky.mongodb.mongodbStrings.majority = "majority".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.majority]
   @scala.inline
-  def majority: typingsSlinky.mongodb.mongodbStrings.majority = this.cast("majority")
-  @scala.inline
-  def snapshot: typingsSlinky.mongodb.mongodbStrings.snapshot = this.cast("snapshot")
+  def snapshot: typingsSlinky.mongodb.mongodbStrings.snapshot = "snapshot".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.snapshot]
 }
 

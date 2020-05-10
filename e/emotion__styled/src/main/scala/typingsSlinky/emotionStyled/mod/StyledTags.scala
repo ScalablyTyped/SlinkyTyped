@@ -138,158 +138,159 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StyledTags[Theme /* <: js.Object */] extends js.Object {
   /**
     * @desc
     * HTML tags
     */
-  var a: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.a, js.Object, Theme]
-  var abbr: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.abbr, js.Object, Theme]
-  var address: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.address, js.Object, Theme]
-  var area: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.area, js.Object, Theme]
-  var article: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.article, js.Object, Theme]
-  var aside: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.aside, js.Object, Theme]
-  var audio: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.audio, js.Object, Theme]
-  var b: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.b, js.Object, Theme]
-  var base: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.base, js.Object, Theme]
-  var bdi: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.bdi, js.Object, Theme]
-  var bdo: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.bdo, js.Object, Theme]
-  var big: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.big, js.Object, Theme]
-  var blockquote: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.blockquote, js.Object, Theme]
-  var body: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.body, js.Object, Theme]
-  var br: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.br, js.Object, Theme]
-  var button: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.button, js.Object, Theme]
-  var canvas: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.canvas, js.Object, Theme]
-  var caption: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.caption, js.Object, Theme]
+  var a: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.a, js.Object, Theme] = js.native
+  var abbr: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.abbr, js.Object, Theme] = js.native
+  var address: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.address, js.Object, Theme] = js.native
+  var area: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.area, js.Object, Theme] = js.native
+  var article: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.article, js.Object, Theme] = js.native
+  var aside: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.aside, js.Object, Theme] = js.native
+  var audio: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.audio, js.Object, Theme] = js.native
+  var b: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.b, js.Object, Theme] = js.native
+  var base: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.base, js.Object, Theme] = js.native
+  var bdi: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.bdi, js.Object, Theme] = js.native
+  var bdo: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.bdo, js.Object, Theme] = js.native
+  var big: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.big, js.Object, Theme] = js.native
+  var blockquote: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.blockquote, js.Object, Theme] = js.native
+  var body: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.body, js.Object, Theme] = js.native
+  var br: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.br, js.Object, Theme] = js.native
+  var button: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.button, js.Object, Theme] = js.native
+  var canvas: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.canvas, js.Object, Theme] = js.native
+  var caption: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.caption, js.Object, Theme] = js.native
   /**
     * @desc
     * SVG tags
     */
-  var circle: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.circle, js.Object, Theme]
-  var cite: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.cite, js.Object, Theme]
-  var clipPath: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.clipPath, js.Object, Theme]
-  var code: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.code, js.Object, Theme]
-  var col: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.col, js.Object, Theme]
-  var colgroup: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.colgroup, js.Object, Theme]
-  var data: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.data, js.Object, Theme]
-  var datalist: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.datalist, js.Object, Theme]
-  var dd: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.dd, js.Object, Theme]
-  var defs: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.defs, js.Object, Theme]
-  var del: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.del, js.Object, Theme]
-  var details: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.details, js.Object, Theme]
-  var dfn: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.dfn, js.Object, Theme]
-  var dialog: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.dialog, js.Object, Theme]
-  var div: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.div, js.Object, Theme]
-  var dl: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.dl, js.Object, Theme]
-  var dt: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.dt, js.Object, Theme]
-  var ellipse: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.ellipse, js.Object, Theme]
-  var em: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.em, js.Object, Theme]
-  var embed: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.embed, js.Object, Theme]
-  var fieldset: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.fieldset, js.Object, Theme]
-  var figcaption: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.figcaption, js.Object, Theme]
-  var figure: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.figure, js.Object, Theme]
-  var footer: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.footer, js.Object, Theme]
-  var foreignObject: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.foreignObject, js.Object, Theme]
-  var form: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.form, js.Object, Theme]
-  var g: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.g, js.Object, Theme]
-  var h1: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h1, js.Object, Theme]
-  var h2: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h2, js.Object, Theme]
-  var h3: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h3, js.Object, Theme]
-  var h4: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h4, js.Object, Theme]
-  var h5: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h5, js.Object, Theme]
-  var h6: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h6, js.Object, Theme]
-  var head: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.head, js.Object, Theme]
-  var header: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.header, js.Object, Theme]
-  var hgroup: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.hgroup, js.Object, Theme]
-  var hr: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.hr, js.Object, Theme]
-  var html: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.html, js.Object, Theme]
-  var i: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.i, js.Object, Theme]
-  var iframe: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.iframe, js.Object, Theme]
-  var image: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.image, js.Object, Theme]
-  var img: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.img, js.Object, Theme]
-  var input: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.input, js.Object, Theme]
-  var ins: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.ins, js.Object, Theme]
-  var kbd: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.kbd, js.Object, Theme]
-  var keygen: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.keygen, js.Object, Theme]
-  var label: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.label, js.Object, Theme]
-  var legend: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.legend, js.Object, Theme]
-  var li: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.li, js.Object, Theme]
-  var line: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.line, js.Object, Theme]
-  var linearGradient: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.linearGradient, js.Object, Theme]
-  var link: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.link, js.Object, Theme]
-  var main: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.main, js.Object, Theme]
-  var map: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.map, js.Object, Theme]
-  var mark: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.mark, js.Object, Theme]
-  var mask: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.mask, js.Object, Theme]
+  var circle: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.circle, js.Object, Theme] = js.native
+  var cite: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.cite, js.Object, Theme] = js.native
+  var clipPath: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.clipPath, js.Object, Theme] = js.native
+  var code: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.code, js.Object, Theme] = js.native
+  var col: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.col, js.Object, Theme] = js.native
+  var colgroup: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.colgroup, js.Object, Theme] = js.native
+  var data: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.data, js.Object, Theme] = js.native
+  var datalist: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.datalist, js.Object, Theme] = js.native
+  var dd: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.dd, js.Object, Theme] = js.native
+  var defs: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.defs, js.Object, Theme] = js.native
+  var del: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.del, js.Object, Theme] = js.native
+  var details: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.details, js.Object, Theme] = js.native
+  var dfn: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.dfn, js.Object, Theme] = js.native
+  var dialog: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.dialog, js.Object, Theme] = js.native
+  var div: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.div, js.Object, Theme] = js.native
+  var dl: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.dl, js.Object, Theme] = js.native
+  var dt: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.dt, js.Object, Theme] = js.native
+  var ellipse: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.ellipse, js.Object, Theme] = js.native
+  var em: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.em, js.Object, Theme] = js.native
+  var embed: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.embed, js.Object, Theme] = js.native
+  var fieldset: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.fieldset, js.Object, Theme] = js.native
+  var figcaption: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.figcaption, js.Object, Theme] = js.native
+  var figure: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.figure, js.Object, Theme] = js.native
+  var footer: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.footer, js.Object, Theme] = js.native
+  var foreignObject: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.foreignObject, js.Object, Theme] = js.native
+  var form: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.form, js.Object, Theme] = js.native
+  var g: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.g, js.Object, Theme] = js.native
+  var h1: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h1, js.Object, Theme] = js.native
+  var h2: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h2, js.Object, Theme] = js.native
+  var h3: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h3, js.Object, Theme] = js.native
+  var h4: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h4, js.Object, Theme] = js.native
+  var h5: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h5, js.Object, Theme] = js.native
+  var h6: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.h6, js.Object, Theme] = js.native
+  var head: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.head, js.Object, Theme] = js.native
+  var header: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.header, js.Object, Theme] = js.native
+  var hgroup: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.hgroup, js.Object, Theme] = js.native
+  var hr: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.hr, js.Object, Theme] = js.native
+  var html: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.html, js.Object, Theme] = js.native
+  var i: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.i, js.Object, Theme] = js.native
+  var iframe: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.iframe, js.Object, Theme] = js.native
+  var image: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.image, js.Object, Theme] = js.native
+  var img: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.img, js.Object, Theme] = js.native
+  var input: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.input, js.Object, Theme] = js.native
+  var ins: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.ins, js.Object, Theme] = js.native
+  var kbd: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.kbd, js.Object, Theme] = js.native
+  var keygen: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.keygen, js.Object, Theme] = js.native
+  var label: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.label, js.Object, Theme] = js.native
+  var legend: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.legend, js.Object, Theme] = js.native
+  var li: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.li, js.Object, Theme] = js.native
+  var line: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.line, js.Object, Theme] = js.native
+  var linearGradient: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.linearGradient, js.Object, Theme] = js.native
+  var link: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.link, js.Object, Theme] = js.native
+  var main: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.main, js.Object, Theme] = js.native
+  var map: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.map, js.Object, Theme] = js.native
+  var mark: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.mark, js.Object, Theme] = js.native
+  var mask: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.mask, js.Object, Theme] = js.native
   /**
     * @desc
     * marquee tag is not supported by @types/react
     */
   // 'marquee': CreateStyledComponentIntrinsic<'marquee', {}, Theme>;
-  var menu: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.menu, js.Object, Theme]
-  var menuitem: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.menuitem, js.Object, Theme]
-  var meta: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.meta, js.Object, Theme]
-  var meter: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.meter, js.Object, Theme]
-  var nav: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.nav, js.Object, Theme]
-  var noscript: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.noscript, js.Object, Theme]
-  var `object`: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.`object`, js.Object, Theme]
-  var ol: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.ol, js.Object, Theme]
-  var optgroup: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.optgroup, js.Object, Theme]
-  var option: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.option, js.Object, Theme]
-  var output: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.output, js.Object, Theme]
-  var p: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.p, js.Object, Theme]
-  var param: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.param, js.Object, Theme]
-  var path: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.path, js.Object, Theme]
-  var pattern: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.pattern, js.Object, Theme]
-  var picture: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.picture, js.Object, Theme]
-  var polygon: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.polygon, js.Object, Theme]
-  var polyline: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.polyline, js.Object, Theme]
-  var pre: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.pre, js.Object, Theme]
-  var progress: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.progress, js.Object, Theme]
-  var q: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.q, js.Object, Theme]
-  var radialGradient: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.radialGradient, js.Object, Theme]
-  var rect: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.rect, js.Object, Theme]
-  var rp: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.rp, js.Object, Theme]
-  var rt: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.rt, js.Object, Theme]
-  var ruby: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.ruby, js.Object, Theme]
-  var s: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.s, js.Object, Theme]
-  var samp: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.samp, js.Object, Theme]
-  var script: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.script, js.Object, Theme]
-  var section: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.section, js.Object, Theme]
-  var select: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.select, js.Object, Theme]
-  var small: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.small, js.Object, Theme]
-  var source: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.source, js.Object, Theme]
-  var span: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.span, js.Object, Theme]
-  var stop: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.stop, js.Object, Theme]
-  var strong: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.strong, js.Object, Theme]
-  var style: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.style, js.Object, Theme]
-  var sub: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.sub, js.Object, Theme]
-  var summary: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.summary, js.Object, Theme]
-  var sup: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.sup, js.Object, Theme]
-  var svg: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.svg, js.Object, Theme]
-  var table: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.table, js.Object, Theme]
-  var tbody: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.tbody, js.Object, Theme]
-  var td: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.td, js.Object, Theme]
-  var text: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.text, js.Object, Theme]
-  var textarea: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.textarea, js.Object, Theme]
-  var tfoot: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.tfoot, js.Object, Theme]
-  var th: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.th, js.Object, Theme]
-  var thead: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.thead, js.Object, Theme]
-  var time: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.time, js.Object, Theme]
-  var title: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.title, js.Object, Theme]
-  var tr: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.tr, js.Object, Theme]
-  var track: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.track, js.Object, Theme]
-  var tspan: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.tspan, js.Object, Theme]
-  var u: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.u, js.Object, Theme]
-  var ul: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.ul, js.Object, Theme]
-  var `var`: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.`var`, js.Object, Theme]
-  var video: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.video, js.Object, Theme]
-  var wbr: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.wbr, js.Object, Theme]
+  var menu: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.menu, js.Object, Theme] = js.native
+  var menuitem: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.menuitem, js.Object, Theme] = js.native
+  var meta: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.meta, js.Object, Theme] = js.native
+  var meter: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.meter, js.Object, Theme] = js.native
+  var nav: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.nav, js.Object, Theme] = js.native
+  var noscript: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.noscript, js.Object, Theme] = js.native
+  var `object`: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.`object`, js.Object, Theme] = js.native
+  var ol: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.ol, js.Object, Theme] = js.native
+  var optgroup: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.optgroup, js.Object, Theme] = js.native
+  var option: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.option, js.Object, Theme] = js.native
+  var output: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.output, js.Object, Theme] = js.native
+  var p: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.p, js.Object, Theme] = js.native
+  var param: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.param, js.Object, Theme] = js.native
+  var path: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.path, js.Object, Theme] = js.native
+  var pattern: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.pattern, js.Object, Theme] = js.native
+  var picture: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.picture, js.Object, Theme] = js.native
+  var polygon: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.polygon, js.Object, Theme] = js.native
+  var polyline: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.polyline, js.Object, Theme] = js.native
+  var pre: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.pre, js.Object, Theme] = js.native
+  var progress: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.progress, js.Object, Theme] = js.native
+  var q: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.q, js.Object, Theme] = js.native
+  var radialGradient: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.radialGradient, js.Object, Theme] = js.native
+  var rect: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.rect, js.Object, Theme] = js.native
+  var rp: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.rp, js.Object, Theme] = js.native
+  var rt: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.rt, js.Object, Theme] = js.native
+  var ruby: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.ruby, js.Object, Theme] = js.native
+  var s: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.s, js.Object, Theme] = js.native
+  var samp: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.samp, js.Object, Theme] = js.native
+  var script: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.script, js.Object, Theme] = js.native
+  var section: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.section, js.Object, Theme] = js.native
+  var select: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.select, js.Object, Theme] = js.native
+  var small: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.small, js.Object, Theme] = js.native
+  var source: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.source, js.Object, Theme] = js.native
+  var span: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.span, js.Object, Theme] = js.native
+  var stop: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.stop, js.Object, Theme] = js.native
+  var strong: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.strong, js.Object, Theme] = js.native
+  var style: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.style, js.Object, Theme] = js.native
+  var sub: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.sub, js.Object, Theme] = js.native
+  var summary: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.summary, js.Object, Theme] = js.native
+  var sup: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.sup, js.Object, Theme] = js.native
+  var svg: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.svg, js.Object, Theme] = js.native
+  var table: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.table, js.Object, Theme] = js.native
+  var tbody: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.tbody, js.Object, Theme] = js.native
+  var td: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.td, js.Object, Theme] = js.native
+  var text: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.text, js.Object, Theme] = js.native
+  var textarea: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.textarea, js.Object, Theme] = js.native
+  var tfoot: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.tfoot, js.Object, Theme] = js.native
+  var th: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.th, js.Object, Theme] = js.native
+  var thead: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.thead, js.Object, Theme] = js.native
+  var time: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.time, js.Object, Theme] = js.native
+  var title: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.title, js.Object, Theme] = js.native
+  var tr: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.tr, js.Object, Theme] = js.native
+  var track: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.track, js.Object, Theme] = js.native
+  var tspan: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.tspan, js.Object, Theme] = js.native
+  var u: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.u, js.Object, Theme] = js.native
+  var ul: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.ul, js.Object, Theme] = js.native
+  var `var`: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.`var`, js.Object, Theme] = js.native
+  var video: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.video, js.Object, Theme] = js.native
+  var wbr: CreateStyledComponentIntrinsic[typingsSlinky.emotionStyled.emotionStyledStrings.wbr, js.Object, Theme] = js.native
 }
 
 object StyledTags {
   @scala.inline
-  def apply[Theme /* <: js.Object */](
+  def apply[Theme](
     a: CreateStyledComponentIntrinsic[a, js.Object, Theme],
     abbr: CreateStyledComponentIntrinsic[abbr, js.Object, Theme],
     address: CreateStyledComponentIntrinsic[address, js.Object, Theme],
@@ -429,5 +430,811 @@ object StyledTags {
     __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyledTags[Theme]]
   }
+  @scala.inline
+  implicit class StyledTagsOps[Self[theme] <: StyledTags[theme], Theme] (val x: Self[Theme]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Theme] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Theme]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[Theme] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Theme] with Other]
+    @scala.inline
+    def withA(value: CreateStyledComponentIntrinsic[a, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbbr(value: CreateStyledComponentIntrinsic[abbr, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abbr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddress(value: CreateStyledComponentIntrinsic[address, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArea(value: CreateStyledComponentIntrinsic[area, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArticle(value: CreateStyledComponentIntrinsic[article, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("article")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAside(value: CreateStyledComponentIntrinsic[aside, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aside")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAudio(value: CreateStyledComponentIntrinsic[audio, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withB(value: CreateStyledComponentIntrinsic[b, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBase(value: CreateStyledComponentIntrinsic[base, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBdi(value: CreateStyledComponentIntrinsic[bdi, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bdi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBdo(value: CreateStyledComponentIntrinsic[bdo, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bdo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBig(value: CreateStyledComponentIntrinsic[big, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("big")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockquote(value: CreateStyledComponentIntrinsic[blockquote, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockquote")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: CreateStyledComponentIntrinsic[body, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBr(value: CreateStyledComponentIntrinsic[br, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("br")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButton(value: CreateStyledComponentIntrinsic[button, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCanvas(value: CreateStyledComponentIntrinsic[canvas, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaption(value: CreateStyledComponentIntrinsic[caption, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCircle(value: CreateStyledComponentIntrinsic[circle, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("circle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCite(value: CreateStyledComponentIntrinsic[cite, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClipPath(value: CreateStyledComponentIntrinsic[clipPath, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCode(value: CreateStyledComponentIntrinsic[code, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCol(value: CreateStyledComponentIntrinsic[col, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("col")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColgroup(value: CreateStyledComponentIntrinsic[colgroup, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: CreateStyledComponentIntrinsic[data, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDatalist(value: CreateStyledComponentIntrinsic[datalist, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datalist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDd(value: CreateStyledComponentIntrinsic[dd, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefs(value: CreateStyledComponentIntrinsic[defs, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDel(value: CreateStyledComponentIntrinsic[del, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("del")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetails(value: CreateStyledComponentIntrinsic[details, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDfn(value: CreateStyledComponentIntrinsic[dfn, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dfn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDialog(value: CreateStyledComponentIntrinsic[dialog, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDiv(value: CreateStyledComponentIntrinsic[div, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("div")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDl(value: CreateStyledComponentIntrinsic[dl, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDt(value: CreateStyledComponentIntrinsic[dt, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEllipse(value: CreateStyledComponentIntrinsic[ellipse, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEm(value: CreateStyledComponentIntrinsic[em, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("em")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEmbed(value: CreateStyledComponentIntrinsic[embed, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("embed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFieldset(value: CreateStyledComponentIntrinsic[fieldset, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFigcaption(value: CreateStyledComponentIntrinsic[figcaption, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("figcaption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFigure(value: CreateStyledComponentIntrinsic[figure, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("figure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFooter(value: CreateStyledComponentIntrinsic[footer, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForeignObject(value: CreateStyledComponentIntrinsic[foreignObject, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foreignObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForm(value: CreateStyledComponentIntrinsic[form, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withG(value: CreateStyledComponentIntrinsic[g, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH1(value: CreateStyledComponentIntrinsic[h1, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH2(value: CreateStyledComponentIntrinsic[h2, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH3(value: CreateStyledComponentIntrinsic[h3, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH4(value: CreateStyledComponentIntrinsic[h4, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH5(value: CreateStyledComponentIntrinsic[h5, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH6(value: CreateStyledComponentIntrinsic[h6, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHead(value: CreateStyledComponentIntrinsic[head, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("head")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeader(value: CreateStyledComponentIntrinsic[header, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHgroup(value: CreateStyledComponentIntrinsic[hgroup, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHr(value: CreateStyledComponentIntrinsic[hr, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml(value: CreateStyledComponentIntrinsic[html, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withI(value: CreateStyledComponentIntrinsic[i, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("i")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIframe(value: CreateStyledComponentIntrinsic[iframe, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iframe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage(value: CreateStyledComponentIntrinsic[image, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImg(value: CreateStyledComponentIntrinsic[img, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("img")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInput(value: CreateStyledComponentIntrinsic[input, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIns(value: CreateStyledComponentIntrinsic[ins, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKbd(value: CreateStyledComponentIntrinsic[kbd, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kbd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeygen(value: CreateStyledComponentIntrinsic[keygen, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keygen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: CreateStyledComponentIntrinsic[label, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLegend(value: CreateStyledComponentIntrinsic[legend, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLi(value: CreateStyledComponentIntrinsic[li, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("li")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLine(value: CreateStyledComponentIntrinsic[line, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinearGradient(value: CreateStyledComponentIntrinsic[linearGradient, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearGradient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLink(value: CreateStyledComponentIntrinsic[link, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMain(value: CreateStyledComponentIntrinsic[main, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMap(value: CreateStyledComponentIntrinsic[map, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMark(value: CreateStyledComponentIntrinsic[mark, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMask(value: CreateStyledComponentIntrinsic[mask, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMenu(value: CreateStyledComponentIntrinsic[menu, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMenuitem(value: CreateStyledComponentIntrinsic[menuitem, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuitem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeta(value: CreateStyledComponentIntrinsic[meta, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeter(value: CreateStyledComponentIntrinsic[meter, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNav(value: CreateStyledComponentIntrinsic[nav, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nav")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNoscript(value: CreateStyledComponentIntrinsic[noscript, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noscript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObject(value: CreateStyledComponentIntrinsic[`object`, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOl(value: CreateStyledComponentIntrinsic[ol, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptgroup(value: CreateStyledComponentIntrinsic[optgroup, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optgroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOption(value: CreateStyledComponentIntrinsic[option, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("option")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutput(value: CreateStyledComponentIntrinsic[output, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withP(value: CreateStyledComponentIntrinsic[p, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParam(value: CreateStyledComponentIntrinsic[param, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("param")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: CreateStyledComponentIntrinsic[path, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPattern(value: CreateStyledComponentIntrinsic[pattern, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPicture(value: CreateStyledComponentIntrinsic[picture, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("picture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolygon(value: CreateStyledComponentIntrinsic[polygon, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolyline(value: CreateStyledComponentIntrinsic[polyline, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polyline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPre(value: CreateStyledComponentIntrinsic[pre, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pre")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProgress(value: CreateStyledComponentIntrinsic[progress, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQ(value: CreateStyledComponentIntrinsic[q, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRadialGradient(value: CreateStyledComponentIntrinsic[radialGradient, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radialGradient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRect(value: CreateStyledComponentIntrinsic[rect, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRp(value: CreateStyledComponentIntrinsic[rp, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRt(value: CreateStyledComponentIntrinsic[rt, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuby(value: CreateStyledComponentIntrinsic[ruby, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruby")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS(value: CreateStyledComponentIntrinsic[s, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSamp(value: CreateStyledComponentIntrinsic[samp, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("samp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScript(value: CreateStyledComponentIntrinsic[script, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("script")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSection(value: CreateStyledComponentIntrinsic[section, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("section")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelect(value: CreateStyledComponentIntrinsic[select, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSmall(value: CreateStyledComponentIntrinsic[small, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("small")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSource(value: CreateStyledComponentIntrinsic[source, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpan(value: CreateStyledComponentIntrinsic[span, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStop(value: CreateStyledComponentIntrinsic[stop, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrong(value: CreateStyledComponentIntrinsic[strong, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strong")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CreateStyledComponentIntrinsic[style, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSub(value: CreateStyledComponentIntrinsic[sub, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sub")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSummary(value: CreateStyledComponentIntrinsic[summary, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSup(value: CreateStyledComponentIntrinsic[sup, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSvg(value: CreateStyledComponentIntrinsic[svg, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTable(value: CreateStyledComponentIntrinsic[table, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("table")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTbody(value: CreateStyledComponentIntrinsic[tbody, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tbody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTd(value: CreateStyledComponentIntrinsic[td, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("td")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: CreateStyledComponentIntrinsic[text, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextarea(value: CreateStyledComponentIntrinsic[textarea, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTfoot(value: CreateStyledComponentIntrinsic[tfoot, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tfoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTh(value: CreateStyledComponentIntrinsic[th, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("th")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThead(value: CreateStyledComponentIntrinsic[thead, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTime(value: CreateStyledComponentIntrinsic[time, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: CreateStyledComponentIntrinsic[title, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTr(value: CreateStyledComponentIntrinsic[tr, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack(value: CreateStyledComponentIntrinsic[track, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTspan(value: CreateStyledComponentIntrinsic[tspan, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tspan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withU(value: CreateStyledComponentIntrinsic[u, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("u")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUl(value: CreateStyledComponentIntrinsic[ul, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ul")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVar(value: CreateStyledComponentIntrinsic[`var`, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("var")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideo(value: CreateStyledComponentIntrinsic[video, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWbr(value: CreateStyledComponentIntrinsic[wbr, js.Object, Theme]): Self[Theme] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wbr")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

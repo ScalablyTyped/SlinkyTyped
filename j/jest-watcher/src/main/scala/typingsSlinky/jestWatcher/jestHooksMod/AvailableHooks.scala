@@ -13,12 +13,10 @@ trait AvailableHooks extends js.Object
 
 object AvailableHooks {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onFileChange: typingsSlinky.jestWatcher.jestWatcherStrings.onFileChange = "onFileChange".asInstanceOf[typingsSlinky.jestWatcher.jestWatcherStrings.onFileChange]
   @scala.inline
-  def onFileChange: typingsSlinky.jestWatcher.jestWatcherStrings.onFileChange = this.cast("onFileChange")
+  def onTestRunComplete: typingsSlinky.jestWatcher.jestWatcherStrings.onTestRunComplete = "onTestRunComplete".asInstanceOf[typingsSlinky.jestWatcher.jestWatcherStrings.onTestRunComplete]
   @scala.inline
-  def onTestRunComplete: typingsSlinky.jestWatcher.jestWatcherStrings.onTestRunComplete = this.cast("onTestRunComplete")
-  @scala.inline
-  def shouldRunTestSuite: typingsSlinky.jestWatcher.jestWatcherStrings.shouldRunTestSuite = this.cast("shouldRunTestSuite")
+  def shouldRunTestSuite: typingsSlinky.jestWatcher.jestWatcherStrings.shouldRunTestSuite = "shouldRunTestSuite".asInstanceOf[typingsSlinky.jestWatcher.jestWatcherStrings.shouldRunTestSuite]
 }
 

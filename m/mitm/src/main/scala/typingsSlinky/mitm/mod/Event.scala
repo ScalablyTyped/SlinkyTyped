@@ -13,12 +13,10 @@ trait Event extends js.Object
 
 object Event {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connect: typingsSlinky.mitm.mitmStrings.connect = "connect".asInstanceOf[typingsSlinky.mitm.mitmStrings.connect]
   @scala.inline
-  def connect: typingsSlinky.mitm.mitmStrings.connect = this.cast("connect")
+  def connection: typingsSlinky.mitm.mitmStrings.connection = "connection".asInstanceOf[typingsSlinky.mitm.mitmStrings.connection]
   @scala.inline
-  def connection: typingsSlinky.mitm.mitmStrings.connection = this.cast("connection")
-  @scala.inline
-  def request: typingsSlinky.mitm.mitmStrings.request = this.cast("request")
+  def request: typingsSlinky.mitm.mitmStrings.request = "request".asInstanceOf[typingsSlinky.mitm.mitmStrings.request]
 }
 

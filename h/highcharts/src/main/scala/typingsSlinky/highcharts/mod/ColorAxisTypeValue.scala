@@ -12,10 +12,8 @@ trait ColorAxisTypeValue extends js.Object
 
 object ColorAxisTypeValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def linear: typingsSlinky.highcharts.highchartsStrings.linear = "linear".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.linear]
   @scala.inline
-  def linear: typingsSlinky.highcharts.highchartsStrings.linear = this.cast("linear")
-  @scala.inline
-  def logarithmic: typingsSlinky.highcharts.highchartsStrings.logarithmic = this.cast("logarithmic")
+  def logarithmic: typingsSlinky.highcharts.highchartsStrings.logarithmic = "logarithmic".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.logarithmic]
 }
 

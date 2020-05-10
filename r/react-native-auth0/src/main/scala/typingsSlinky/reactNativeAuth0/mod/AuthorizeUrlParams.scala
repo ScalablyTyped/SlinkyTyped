@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AuthorizeUrlParams extends js.Object {
-  var redirectUri: String
-  var responseType: String
-  var state: String
+  var redirectUri: String = js.native
+  var responseType: String = js.native
+  var state: String = js.native
 }
 
 object AuthorizeUrlParams {
   @scala.inline
   def apply(redirectUri: String, responseType: String, state: String): AuthorizeUrlParams = {
     val __obj = js.Dynamic.literal(redirectUri = redirectUri.asInstanceOf[js.Any], responseType = responseType.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AuthorizeUrlParams]
   }
+  @scala.inline
+  implicit class AuthorizeUrlParamsOps[Self <: AuthorizeUrlParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRedirectUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResponseType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

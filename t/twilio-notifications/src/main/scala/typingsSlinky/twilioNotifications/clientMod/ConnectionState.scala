@@ -15,16 +15,14 @@ trait ConnectionState extends js.Object
 
 object ConnectionState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def connected: typingsSlinky.twilioNotifications.twilioNotificationsStrings.connected = "connected".asInstanceOf[typingsSlinky.twilioNotifications.twilioNotificationsStrings.connected]
   @scala.inline
-  def connected: typingsSlinky.twilioNotifications.twilioNotificationsStrings.connected = this.cast("connected")
+  def connecting: typingsSlinky.twilioNotifications.twilioNotificationsStrings.connecting = "connecting".asInstanceOf[typingsSlinky.twilioNotifications.twilioNotificationsStrings.connecting]
   @scala.inline
-  def connecting: typingsSlinky.twilioNotifications.twilioNotificationsStrings.connecting = this.cast("connecting")
+  def denied: typingsSlinky.twilioNotifications.twilioNotificationsStrings.denied = "denied".asInstanceOf[typingsSlinky.twilioNotifications.twilioNotificationsStrings.denied]
   @scala.inline
-  def denied: typingsSlinky.twilioNotifications.twilioNotificationsStrings.denied = this.cast("denied")
+  def disconnected: typingsSlinky.twilioNotifications.twilioNotificationsStrings.disconnected = "disconnected".asInstanceOf[typingsSlinky.twilioNotifications.twilioNotificationsStrings.disconnected]
   @scala.inline
-  def disconnected: typingsSlinky.twilioNotifications.twilioNotificationsStrings.disconnected = this.cast("disconnected")
-  @scala.inline
-  def disconnecting: typingsSlinky.twilioNotifications.twilioNotificationsStrings.disconnecting = this.cast("disconnecting")
+  def disconnecting: typingsSlinky.twilioNotifications.twilioNotificationsStrings.disconnecting = "disconnecting".asInstanceOf[typingsSlinky.twilioNotifications.twilioNotificationsStrings.disconnecting]
 }
 

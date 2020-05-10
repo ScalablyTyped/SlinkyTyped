@@ -16,8 +16,21 @@ object DescribeTrustedAdvisorChecksResponse {
   @scala.inline
   def apply(checks: TrustedAdvisorCheckList): DescribeTrustedAdvisorChecksResponse = {
     val __obj = js.Dynamic.literal(checks = checks.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DescribeTrustedAdvisorChecksResponse]
   }
+  @scala.inline
+  implicit class DescribeTrustedAdvisorChecksResponseOps[Self <: DescribeTrustedAdvisorChecksResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChecks(value: TrustedAdvisorCheckList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checks")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

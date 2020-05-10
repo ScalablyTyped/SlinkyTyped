@@ -1,32 +1,41 @@
 package typingsSlinky.materialUi.clearFixMod
 
-import slinky.core.TagMod
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClearFixProps extends Props[ClearFix] {
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.native
 }
 
 object ClearFixProps {
   @scala.inline
-  def apply(
-    children: TagMod[Any] = null,
-    key: Key = null,
-    ref: LegacyRef[ClearFix] = null,
-    style: CSSProperties = null
-  ): ClearFixProps = {
+  def apply(): ClearFixProps = {
     val __obj = js.Dynamic.literal()
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClearFixProps]
   }
+  @scala.inline
+  implicit class ClearFixPropsOps[Self <: ClearFixProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

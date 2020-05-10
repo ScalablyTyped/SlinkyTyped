@@ -14,9 +14,5 @@ class TransformStreamCls[I, O] () extends TransformStream[I, O] {
     writableStrategy: QueuingStrategy[I],
     readableStrategy: QueuingStrategy[O]
   ) = this()
-  /* CompleteClass */
-  override val readable: org.scalajs.dom.experimental.ReadableStream[O] = js.native
-  /* CompleteClass */
-  override val writable: WritableStream[I] = js.native
 }
 

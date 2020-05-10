@@ -5,60 +5,218 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<screeps.AllLookAtTypes> */
+@js.native
 trait LookAtTypes extends js.Object {
-  var constructionSite: js.UndefOr[ConstructionSite[BuildableStructureConstant]] = js.undefined
-  var creep: js.UndefOr[Creep] = js.undefined
-  var deposit: js.UndefOr[Deposit] = js.undefined
-  var energy: js.UndefOr[Resource[RESOURCE_ENERGY]] = js.undefined
-  var exit: js.UndefOr[js.Any] = js.undefined
-  var flag: js.UndefOr[Flag] = js.undefined
-  var mineral: js.UndefOr[Mineral[MineralConstant]] = js.undefined
-  var nuke: js.UndefOr[Nuke] = js.undefined
-  var powerCreep: js.UndefOr[PowerCreep] = js.undefined
-  var resource: js.UndefOr[Resource[ResourceConstant]] = js.undefined
-  var ruin: js.UndefOr[Ruin] = js.undefined
-  var source: js.UndefOr[Source] = js.undefined
-  var structure: js.UndefOr[Structure[StructureConstant]] = js.undefined
-  var terrain: js.UndefOr[Terrain] = js.undefined
-  var tombstone: js.UndefOr[Tombstone] = js.undefined
+  var constructionSite: js.UndefOr[ConstructionSite[BuildableStructureConstant]] = js.native
+  var creep: js.UndefOr[Creep] = js.native
+  var deposit: js.UndefOr[Deposit] = js.native
+  var energy: js.UndefOr[Resource[RESOURCE_ENERGY]] = js.native
+  var exit: js.UndefOr[js.Any] = js.native
+  var flag: js.UndefOr[Flag] = js.native
+  var mineral: js.UndefOr[Mineral[MineralConstant]] = js.native
+  var nuke: js.UndefOr[Nuke] = js.native
+  var powerCreep: js.UndefOr[PowerCreep] = js.native
+  var resource: js.UndefOr[Resource[ResourceConstant]] = js.native
+  var ruin: js.UndefOr[Ruin] = js.native
+  var source: js.UndefOr[Source] = js.native
+  var structure: js.UndefOr[Structure[StructureConstant]] = js.native
+  var terrain: js.UndefOr[Terrain] = js.native
+  var tombstone: js.UndefOr[Tombstone] = js.native
 }
 
 object LookAtTypes {
   @scala.inline
-  def apply(
-    constructionSite: ConstructionSite[BuildableStructureConstant] = null,
-    creep: Creep = null,
-    deposit: Deposit = null,
-    energy: Resource[RESOURCE_ENERGY] = null,
-    exit: js.Any = null,
-    flag: Flag = null,
-    mineral: Mineral[MineralConstant] = null,
-    nuke: Nuke = null,
-    powerCreep: PowerCreep = null,
-    resource: Resource[ResourceConstant] = null,
-    ruin: Ruin = null,
-    source: Source = null,
-    structure: Structure[StructureConstant] = null,
-    terrain: Terrain = null,
-    tombstone: Tombstone = null
-  ): LookAtTypes = {
+  def apply(): LookAtTypes = {
     val __obj = js.Dynamic.literal()
-    if (constructionSite != null) __obj.updateDynamic("constructionSite")(constructionSite.asInstanceOf[js.Any])
-    if (creep != null) __obj.updateDynamic("creep")(creep.asInstanceOf[js.Any])
-    if (deposit != null) __obj.updateDynamic("deposit")(deposit.asInstanceOf[js.Any])
-    if (energy != null) __obj.updateDynamic("energy")(energy.asInstanceOf[js.Any])
-    if (exit != null) __obj.updateDynamic("exit")(exit.asInstanceOf[js.Any])
-    if (flag != null) __obj.updateDynamic("flag")(flag.asInstanceOf[js.Any])
-    if (mineral != null) __obj.updateDynamic("mineral")(mineral.asInstanceOf[js.Any])
-    if (nuke != null) __obj.updateDynamic("nuke")(nuke.asInstanceOf[js.Any])
-    if (powerCreep != null) __obj.updateDynamic("powerCreep")(powerCreep.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
-    if (ruin != null) __obj.updateDynamic("ruin")(ruin.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (structure != null) __obj.updateDynamic("structure")(structure.asInstanceOf[js.Any])
-    if (terrain != null) __obj.updateDynamic("terrain")(terrain.asInstanceOf[js.Any])
-    if (tombstone != null) __obj.updateDynamic("tombstone")(tombstone.asInstanceOf[js.Any])
     __obj.asInstanceOf[LookAtTypes]
   }
+  @scala.inline
+  implicit class LookAtTypesOps[Self <: LookAtTypes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstructionSite(value: ConstructionSite[BuildableStructureConstant]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constructionSite")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConstructionSite: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constructionSite")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreep(value: Creep): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeposit(value: Deposit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deposit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeposit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deposit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnergy(value: Resource[RESOURCE_ENERGY]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("energy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnergy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("energy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExit(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlag(value: Flag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMineral(value: Mineral[MineralConstant]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mineral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMineral: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mineral")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNuke(value: Nuke): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nuke")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNuke: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nuke")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPowerCreep(value: PowerCreep): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("powerCreep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPowerCreep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("powerCreep")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResource(value: Resource[ResourceConstant]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuin(value: Ruin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ruin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: Source): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStructure(value: Structure[StructureConstant]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStructure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerrain(value: Terrain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terrain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerrain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terrain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTombstone(value: Tombstone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tombstone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTombstone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tombstone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

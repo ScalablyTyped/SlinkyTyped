@@ -4,87 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TeamsCheckManagesRepoResponse extends js.Object {
-  var allow_merge_commit: Boolean
-  var allow_rebase_merge: Boolean
-  var allow_squash_merge: Boolean
-  var archive_url: String
-  var archived: Boolean
-  var assignees_url: String
-  var blobs_url: String
-  var branches_url: String
-  var clone_url: String
-  var collaborators_url: String
-  var comments_url: String
-  var commits_url: String
-  var compare_url: String
-  var contents_url: String
-  var contributors_url: String
-  var created_at: String
-  var default_branch: String
-  var deployments_url: String
-  var description: String
-  var disabled: Boolean
-  var downloads_url: String
-  var events_url: String
-  var fork: Boolean
-  var forks_count: Double
-  var forks_url: String
-  var full_name: String
-  var git_commits_url: String
-  var git_refs_url: String
-  var git_tags_url: String
-  var git_url: String
-  var has_downloads: Boolean
-  var has_issues: Boolean
-  var has_pages: Boolean
-  var has_projects: Boolean
-  var has_wiki: Boolean
-  var homepage: String
-  var hooks_url: String
-  var html_url: String
-  var id: Double
-  var is_template: Boolean
-  var issue_comment_url: String
-  var issue_events_url: String
-  var issues_url: String
-  var keys_url: String
-  var labels_url: String
-  var language: Null
-  var languages_url: String
-  var merges_url: String
-  var milestones_url: String
-  var mirror_url: String
-  var name: String
-  var network_count: Double
-  var node_id: String
-  var notifications_url: String
-  var open_issues_count: Double
-  var owner: TeamsCheckManagesRepoResponseOwner
-  var permissions: TeamsCheckManagesRepoResponsePermissions
-  var `private`: Boolean
-  var pulls_url: String
-  var pushed_at: String
-  var releases_url: String
-  var size: Double
-  var ssh_url: String
-  var stargazers_count: Double
-  var stargazers_url: String
-  var statuses_url: String
-  var subscribers_count: Double
-  var subscribers_url: String
-  var subscription_url: String
-  var svn_url: String
-  var tags_url: String
-  var teams_url: String
-  var temp_clone_token: String
-  var template_repository: Null
-  var topics: js.Array[String]
-  var trees_url: String
-  var updated_at: String
-  var url: String
-  var visibility: String
-  var watchers_count: Double
+  var allow_merge_commit: Boolean = js.native
+  var allow_rebase_merge: Boolean = js.native
+  var allow_squash_merge: Boolean = js.native
+  var archive_url: String = js.native
+  var archived: Boolean = js.native
+  var assignees_url: String = js.native
+  var blobs_url: String = js.native
+  var branches_url: String = js.native
+  var clone_url: String = js.native
+  var collaborators_url: String = js.native
+  var comments_url: String = js.native
+  var commits_url: String = js.native
+  var compare_url: String = js.native
+  var contents_url: String = js.native
+  var contributors_url: String = js.native
+  var created_at: String = js.native
+  var default_branch: String = js.native
+  var deployments_url: String = js.native
+  var description: String = js.native
+  var disabled: Boolean = js.native
+  var downloads_url: String = js.native
+  var events_url: String = js.native
+  var fork: Boolean = js.native
+  var forks_count: Double = js.native
+  var forks_url: String = js.native
+  var full_name: String = js.native
+  var git_commits_url: String = js.native
+  var git_refs_url: String = js.native
+  var git_tags_url: String = js.native
+  var git_url: String = js.native
+  var has_downloads: Boolean = js.native
+  var has_issues: Boolean = js.native
+  var has_pages: Boolean = js.native
+  var has_projects: Boolean = js.native
+  var has_wiki: Boolean = js.native
+  var homepage: String = js.native
+  var hooks_url: String = js.native
+  var html_url: String = js.native
+  var id: Double = js.native
+  var is_template: Boolean = js.native
+  var issue_comment_url: String = js.native
+  var issue_events_url: String = js.native
+  var issues_url: String = js.native
+  var keys_url: String = js.native
+  var labels_url: String = js.native
+  var language: Null = js.native
+  var languages_url: String = js.native
+  var merges_url: String = js.native
+  var milestones_url: String = js.native
+  var mirror_url: String = js.native
+  var name: String = js.native
+  var network_count: Double = js.native
+  var node_id: String = js.native
+  var notifications_url: String = js.native
+  var open_issues_count: Double = js.native
+  var owner: TeamsCheckManagesRepoResponseOwner = js.native
+  var permissions: TeamsCheckManagesRepoResponsePermissions = js.native
+  var `private`: Boolean = js.native
+  var pulls_url: String = js.native
+  var pushed_at: String = js.native
+  var releases_url: String = js.native
+  var size: Double = js.native
+  var ssh_url: String = js.native
+  var stargazers_count: Double = js.native
+  var stargazers_url: String = js.native
+  var statuses_url: String = js.native
+  var subscribers_count: Double = js.native
+  var subscribers_url: String = js.native
+  var subscription_url: String = js.native
+  var svn_url: String = js.native
+  var tags_url: String = js.native
+  var teams_url: String = js.native
+  var temp_clone_token: String = js.native
+  var template_repository: Null = js.native
+  var topics: js.Array[String] = js.native
+  var trees_url: String = js.native
+  var updated_at: String = js.native
+  var url: String = js.native
+  var visibility: String = js.native
+  var watchers_count: Double = js.native
 }
 
 object TeamsCheckManagesRepoResponse {
@@ -175,5 +176,493 @@ object TeamsCheckManagesRepoResponse {
     __obj.updateDynamic("private")(`private`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsCheckManagesRepoResponse]
   }
+  @scala.inline
+  implicit class TeamsCheckManagesRepoResponseOps[Self <: TeamsCheckManagesRepoResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllow_merge_commit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_merge_commit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllow_rebase_merge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_rebase_merge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllow_squash_merge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_squash_merge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArchive_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archive_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArchived(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archived")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAssignees_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignees_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlobs_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blobs_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBranches_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branches_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClone_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clone_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCollaborators_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collaborators_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommits_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commits_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompare_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compare_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContents_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contents_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContributors_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contributors_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreated_at(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefault_branch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default_branch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeployments_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deployments_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDownloads_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloads_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvents_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("events_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFork(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fork")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForks_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forks_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForks_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forks_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFull_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("full_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGit_commits_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("git_commits_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGit_refs_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("git_refs_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGit_tags_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("git_tags_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGit_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("git_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHas_downloads(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_downloads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHas_issues(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_issues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHas_pages(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_pages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHas_projects(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_projects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHas_wiki(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has_wiki")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHomepage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homepage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHooks_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hooks_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_template(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIssue_comment_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issue_comment_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIssue_events_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issue_events_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIssues_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issues_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeys_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabels_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLanguages_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languages_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMerges_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merges_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMilestones_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("milestones_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMirror_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mirror_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetwork_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("network_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNode_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotifications_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpen_issues_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open_issues_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOwner(value: TeamsCheckManagesRepoResponseOwner): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: TeamsCheckManagesRepoResponsePermissions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPulls_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pulls_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPushed_at(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pushed_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReleases_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("releases_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSsh_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ssh_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStargazers_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stargazers_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStargazers_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stargazers_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatuses_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statuses_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubscribers_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscribers_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubscribers_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscribers_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubscription_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSvn_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svn_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTags_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTeams_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teams_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemp_clone_token(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("temp_clone_token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplate_repository(value: Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template_repository")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTopics(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrees_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trees_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdated_at(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisibility(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWatchers_count(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watchers_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

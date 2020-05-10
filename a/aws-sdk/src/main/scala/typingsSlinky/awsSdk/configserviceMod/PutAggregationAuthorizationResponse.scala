@@ -14,10 +14,29 @@ trait PutAggregationAuthorizationResponse extends js.Object {
 
 object PutAggregationAuthorizationResponse {
   @scala.inline
-  def apply(AggregationAuthorization: AggregationAuthorization = null): PutAggregationAuthorizationResponse = {
+  def apply(): PutAggregationAuthorizationResponse = {
     val __obj = js.Dynamic.literal()
-    if (AggregationAuthorization != null) __obj.updateDynamic("AggregationAuthorization")(AggregationAuthorization.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutAggregationAuthorizationResponse]
   }
+  @scala.inline
+  implicit class PutAggregationAuthorizationResponseOps[Self <: PutAggregationAuthorizationResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregationAuthorization(value: AggregationAuthorization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregationAuthorization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregationAuthorization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AggregationAuthorization")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

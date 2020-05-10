@@ -19,12 +19,53 @@ trait DescribeVTLDevicesOutput extends js.Object {
 
 object DescribeVTLDevicesOutput {
   @scala.inline
-  def apply(GatewayARN: GatewayARN = null, Marker: Marker = null, VTLDevices: VTLDevices = null): DescribeVTLDevicesOutput = {
+  def apply(): DescribeVTLDevicesOutput = {
     val __obj = js.Dynamic.literal()
-    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (VTLDevices != null) __obj.updateDynamic("VTLDevices")(VTLDevices.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeVTLDevicesOutput]
   }
+  @scala.inline
+  implicit class DescribeVTLDevicesOutputOps[Self <: DescribeVTLDevicesOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarker(value: Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVTLDevices(value: VTLDevices): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VTLDevices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVTLDevices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VTLDevices")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

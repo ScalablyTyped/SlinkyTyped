@@ -13,12 +13,10 @@ trait ACLType extends js.Object
 
 object ACLType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `private`: typingsSlinky.aliOss.aliOssStrings.`private` = "private".asInstanceOf[typingsSlinky.aliOss.aliOssStrings.`private`]
   @scala.inline
-  def `private`: typingsSlinky.aliOss.aliOssStrings.`private` = this.cast("private")
+  def `public-read`: typingsSlinky.aliOss.aliOssStrings.`public-read` = "public-read".asInstanceOf[typingsSlinky.aliOss.aliOssStrings.`public-read`]
   @scala.inline
-  def `public-read`: typingsSlinky.aliOss.aliOssStrings.`public-read` = this.cast("public-read")
-  @scala.inline
-  def `public-read-write`: typingsSlinky.aliOss.aliOssStrings.`public-read-write` = this.cast("public-read-write")
+  def `public-read-write`: typingsSlinky.aliOss.aliOssStrings.`public-read-write` = "public-read-write".asInstanceOf[typingsSlinky.aliOss.aliOssStrings.`public-read-write`]
 }
 

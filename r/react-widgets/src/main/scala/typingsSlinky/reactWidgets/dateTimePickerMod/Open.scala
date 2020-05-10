@@ -13,12 +13,10 @@ trait Open extends js.Object
 
 object Open {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.reactWidgets.reactWidgetsStrings.date = "date".asInstanceOf[typingsSlinky.reactWidgets.reactWidgetsStrings.date]
   @scala.inline
-  def date: typingsSlinky.reactWidgets.reactWidgetsStrings.date = this.cast("date")
+  def `false`: typingsSlinky.reactWidgets.reactWidgetsBooleans.`false` = false.asInstanceOf[typingsSlinky.reactWidgets.reactWidgetsBooleans.`false`]
   @scala.inline
-  def `false`: typingsSlinky.reactWidgets.reactWidgetsBooleans.`false` = this.cast(false)
-  @scala.inline
-  def time: typingsSlinky.reactWidgets.reactWidgetsStrings.time = this.cast("time")
+  def time: typingsSlinky.reactWidgets.reactWidgetsStrings.time = "time".asInstanceOf[typingsSlinky.reactWidgets.reactWidgetsStrings.time]
 }
 

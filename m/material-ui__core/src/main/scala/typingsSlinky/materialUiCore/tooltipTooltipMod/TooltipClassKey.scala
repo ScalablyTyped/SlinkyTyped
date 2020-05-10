@@ -18,22 +18,20 @@ trait TooltipClassKey extends js.Object
 
 object TooltipClassKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def popper: typingsSlinky.materialUiCore.materialUiCoreStrings.popper = "popper".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.popper]
   @scala.inline
-  def popper: typingsSlinky.materialUiCore.materialUiCoreStrings.popper = this.cast("popper")
+  def popperInteractive: typingsSlinky.materialUiCore.materialUiCoreStrings.popperInteractive = "popperInteractive".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.popperInteractive]
   @scala.inline
-  def popperInteractive: typingsSlinky.materialUiCore.materialUiCoreStrings.popperInteractive = this.cast("popperInteractive")
+  def tooltip: typingsSlinky.materialUiCore.materialUiCoreStrings.tooltip = "tooltip".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.tooltip]
   @scala.inline
-  def tooltip: typingsSlinky.materialUiCore.materialUiCoreStrings.tooltip = this.cast("tooltip")
+  def tooltipPlacementBottom: typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementBottom = "tooltipPlacementBottom".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementBottom]
   @scala.inline
-  def tooltipPlacementBottom: typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementBottom = this.cast("tooltipPlacementBottom")
+  def tooltipPlacementLeft: typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementLeft = "tooltipPlacementLeft".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementLeft]
   @scala.inline
-  def tooltipPlacementLeft: typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementLeft = this.cast("tooltipPlacementLeft")
+  def tooltipPlacementRight: typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementRight = "tooltipPlacementRight".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementRight]
   @scala.inline
-  def tooltipPlacementRight: typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementRight = this.cast("tooltipPlacementRight")
+  def tooltipPlacementTop: typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementTop = "tooltipPlacementTop".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementTop]
   @scala.inline
-  def tooltipPlacementTop: typingsSlinky.materialUiCore.materialUiCoreStrings.tooltipPlacementTop = this.cast("tooltipPlacementTop")
-  @scala.inline
-  def touch: typingsSlinky.materialUiCore.materialUiCoreStrings.touch = this.cast("touch")
+  def touch: typingsSlinky.materialUiCore.materialUiCoreStrings.touch = "touch".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.touch]
 }
 

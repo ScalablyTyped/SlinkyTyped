@@ -33,14 +33,60 @@ object UploadServerCertificateRequest {
   def apply(
     CertificateBody: certificateBodyType,
     PrivateKey: privateKeyType,
-    ServerCertificateName: serverCertificateNameType,
-    CertificateChain: certificateChainType = null,
-    Path: pathType = null
+    ServerCertificateName: serverCertificateNameType
   ): UploadServerCertificateRequest = {
     val __obj = js.Dynamic.literal(CertificateBody = CertificateBody.asInstanceOf[js.Any], PrivateKey = PrivateKey.asInstanceOf[js.Any], ServerCertificateName = ServerCertificateName.asInstanceOf[js.Any])
-    if (CertificateChain != null) __obj.updateDynamic("CertificateChain")(CertificateChain.asInstanceOf[js.Any])
-    if (Path != null) __obj.updateDynamic("Path")(Path.asInstanceOf[js.Any])
     __obj.asInstanceOf[UploadServerCertificateRequest]
   }
+  @scala.inline
+  implicit class UploadServerCertificateRequestOps[Self <: UploadServerCertificateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateBody(value: certificateBodyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivateKey(value: privateKeyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerCertificateName(value: serverCertificateNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertificateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificateChain(value: certificateChainType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateChain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateChain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertificateChain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: pathType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

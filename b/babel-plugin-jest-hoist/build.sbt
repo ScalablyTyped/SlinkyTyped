@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "babel-plugin-jest-hoist"
-version := "24.9.0-7e1851"
+version := "24.9.0-db5940"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "babel__traverse" % "7.0-dt-20200225Z-0594cb",
-  "org.scalablytyped.slinky" %%% "babel__types" % "7.8.3-f46cb3",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "babel__traverse" % "7.0-dt-20200406Z-6d18eb",
+  "org.scalablytyped.slinky" %%% "babel__types" % "7.9.0-911385",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

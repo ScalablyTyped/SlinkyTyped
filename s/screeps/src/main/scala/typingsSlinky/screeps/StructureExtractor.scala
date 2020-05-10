@@ -8,13 +8,15 @@ import scala.scalajs.js.annotation._
 /**
   * Allows to harvest mineral deposits.
   */
+@js.native
 trait StructureExtractor
   extends OwnedStructure[STRUCTURE_EXTRACTOR]
-     with AnyOwnedStructure {
+     with AnyOwnedStructure
+     with ConcreteStructure[js.Any] {
   /**
     * The amount of game ticks until the next harvest action is possible.
     */
-  var cooldown: Double
+  var cooldown: Double = js.native
 }
 
 @JSGlobal("StructureExtractor")

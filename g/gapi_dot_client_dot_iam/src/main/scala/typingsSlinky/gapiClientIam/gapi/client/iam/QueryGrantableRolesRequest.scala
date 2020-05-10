@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait QueryGrantableRolesRequest extends js.Object {
   /**
     * Required. The full resource name to query from the list of grantable roles.
@@ -12,31 +13,78 @@ trait QueryGrantableRolesRequest extends js.Object {
     * For example, a Cloud Platform project with id `my-project` will be named
     * `//cloudresourcemanager.googleapis.com/projects/my-project`.
     */
-  var fullResourceName: js.UndefOr[String] = js.undefined
+  var fullResourceName: js.UndefOr[String] = js.native
   /** Optional limit on the number of roles to include in the response. */
-  var pageSize: js.UndefOr[Double] = js.undefined
+  var pageSize: js.UndefOr[Double] = js.native
   /**
     * Optional pagination token returned in an earlier
     * QueryGrantableRolesResponse.
     */
-  var pageToken: js.UndefOr[String] = js.undefined
-  var view: js.UndefOr[String] = js.undefined
+  var pageToken: js.UndefOr[String] = js.native
+  var view: js.UndefOr[String] = js.native
 }
 
 object QueryGrantableRolesRequest {
   @scala.inline
-  def apply(
-    fullResourceName: String = null,
-    pageSize: Int | Double = null,
-    pageToken: String = null,
-    view: String = null
-  ): QueryGrantableRolesRequest = {
+  def apply(): QueryGrantableRolesRequest = {
     val __obj = js.Dynamic.literal()
-    if (fullResourceName != null) __obj.updateDynamic("fullResourceName")(fullResourceName.asInstanceOf[js.Any])
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (pageToken != null) __obj.updateDynamic("pageToken")(pageToken.asInstanceOf[js.Any])
-    if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     __obj.asInstanceOf[QueryGrantableRolesRequest]
   }
+  @scala.inline
+  implicit class QueryGrantableRolesRequestOps[Self <: QueryGrantableRolesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFullResourceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullResourceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullResourceName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullResourceName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withView(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

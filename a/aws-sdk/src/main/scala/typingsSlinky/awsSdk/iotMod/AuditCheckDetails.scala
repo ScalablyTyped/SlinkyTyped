@@ -34,22 +34,89 @@ trait AuditCheckDetails extends js.Object {
 
 object AuditCheckDetails {
   @scala.inline
-  def apply(
-    checkCompliant: js.UndefOr[scala.Boolean] = js.undefined,
-    checkRunStatus: AuditCheckRunStatus = null,
-    errorCode: ErrorCode = null,
-    message: ErrorMessage = null,
-    nonCompliantResourcesCount: Int | Double = null,
-    totalResourcesCount: Int | Double = null
-  ): AuditCheckDetails = {
+  def apply(): AuditCheckDetails = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(checkCompliant)) __obj.updateDynamic("checkCompliant")(checkCompliant.asInstanceOf[js.Any])
-    if (checkRunStatus != null) __obj.updateDynamic("checkRunStatus")(checkRunStatus.asInstanceOf[js.Any])
-    if (errorCode != null) __obj.updateDynamic("errorCode")(errorCode.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (nonCompliantResourcesCount != null) __obj.updateDynamic("nonCompliantResourcesCount")(nonCompliantResourcesCount.asInstanceOf[js.Any])
-    if (totalResourcesCount != null) __obj.updateDynamic("totalResourcesCount")(totalResourcesCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuditCheckDetails]
   }
+  @scala.inline
+  implicit class AuditCheckDetailsOps[Self <: AuditCheckDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCheckCompliant(value: CheckCompliant): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkCompliant")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckCompliant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkCompliant")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckRunStatus(value: AuditCheckRunStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkRunStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckRunStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkRunStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorCode(value: ErrorCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: ErrorMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonCompliantResourcesCount(value: NonCompliantResourcesCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonCompliantResourcesCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonCompliantResourcesCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nonCompliantResourcesCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalResourcesCount(value: TotalResourcesCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResourcesCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalResourcesCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalResourcesCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

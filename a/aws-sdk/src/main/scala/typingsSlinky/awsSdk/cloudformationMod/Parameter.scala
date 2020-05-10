@@ -26,18 +26,65 @@ trait Parameter extends js.Object {
 
 object Parameter {
   @scala.inline
-  def apply(
-    ParameterKey: ParameterKey = null,
-    ParameterValue: ParameterValue = null,
-    ResolvedValue: ParameterValue = null,
-    UsePreviousValue: js.UndefOr[Boolean] = js.undefined
-  ): Parameter = {
+  def apply(): Parameter = {
     val __obj = js.Dynamic.literal()
-    if (ParameterKey != null) __obj.updateDynamic("ParameterKey")(ParameterKey.asInstanceOf[js.Any])
-    if (ParameterValue != null) __obj.updateDynamic("ParameterValue")(ParameterValue.asInstanceOf[js.Any])
-    if (ResolvedValue != null) __obj.updateDynamic("ResolvedValue")(ResolvedValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(UsePreviousValue)) __obj.updateDynamic("UsePreviousValue")(UsePreviousValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[Parameter]
   }
+  @scala.inline
+  implicit class ParameterOps[Self <: Parameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParameterKey(value: ParameterKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameterValue(value: ParameterValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameterValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ParameterValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvedValue(value: ParameterValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolvedValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolvedValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolvedValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsePreviousValue(value: UsePreviousValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsePreviousValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsePreviousValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UsePreviousValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

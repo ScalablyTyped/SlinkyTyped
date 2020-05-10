@@ -4,23 +4,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TeamsReviewProjectLegacyResponse extends js.Object {
-  var body: String
-  var columns_url: String
-  var created_at: String
-  var creator: TeamsReviewProjectLegacyResponseCreator
-  var html_url: String
-  var id: Double
-  var name: String
-  var node_id: String
-  var number: Double
-  var organization_permission: String
-  var owner_url: String
-  var permissions: TeamsReviewProjectLegacyResponsePermissions
-  var `private`: Boolean
-  var state: String
-  var updated_at: String
-  var url: String
+  var body: String = js.native
+  var columns_url: String = js.native
+  var created_at: String = js.native
+  var creator: TeamsReviewProjectLegacyResponseCreator = js.native
+  var html_url: String = js.native
+  var id: Double = js.native
+  var name: String = js.native
+  var node_id: String = js.native
+  var number: Double = js.native
+  var organization_permission: String = js.native
+  var owner_url: String = js.native
+  var permissions: TeamsReviewProjectLegacyResponsePermissions = js.native
+  var `private`: Boolean = js.native
+  var state: String = js.native
+  var updated_at: String = js.native
+  var url: String = js.native
 }
 
 object TeamsReviewProjectLegacyResponse {
@@ -47,5 +48,109 @@ object TeamsReviewProjectLegacyResponse {
     __obj.updateDynamic("private")(`private`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsReviewProjectLegacyResponse]
   }
+  @scala.inline
+  implicit class TeamsReviewProjectLegacyResponseOps[Self <: TeamsReviewProjectLegacyResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColumns_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columns_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreated_at(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreator(value: TeamsReviewProjectLegacyResponseCreator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNode_id(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrganization_permission(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("organization_permission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOwner_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: TeamsReviewProjectLegacyResponsePermissions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("private")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdated_at(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated_at")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -6,7 +6,7 @@ import typingsSlinky.androiduix.android.graphics.Canvas
 import typingsSlinky.androiduix.android.graphics.Rect
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable.Callback
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable.ConstantState
-import typingsSlinky.androiduix.java.lang.ref.WeakReference
+import typingsSlinky.androiduix.java_.lang.ref.WeakReference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

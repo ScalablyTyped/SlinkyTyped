@@ -1,11 +1,9 @@
 package typingsSlinky.rcPicker.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcPicker.pickerTriggerMod.PickerTriggerProps
 import typingsSlinky.rcPicker.pickerTriggerMod.Placement
 import typingsSlinky.rcPicker.rcPickerStrings.ltr
@@ -15,39 +13,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PickerTrigger
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object PickerTrigger {
   @JSImport("rc-picker/lib/PickerTrigger", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    popupElement: ReactElement,
-    prefixCls: String,
-    visible: Boolean,
-    direction: ltr | rtl = null,
-    dropdownAlign: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any = null,
-    dropdownClassName: String = null,
-    getPopupContainer: /* node */ HTMLElement => HTMLElement = null,
-    popupPlacement: Placement = null,
-    popupStyle: CSSProperties = null,
-    range: js.UndefOr[Boolean] = js.undefined,
-    transitionName: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(popupElement = popupElement.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (dropdownAlign != null) __obj.updateDynamic("dropdownAlign")(dropdownAlign.asInstanceOf[js.Any])
-    if (dropdownClassName != null) __obj.updateDynamic("dropdownClassName")(dropdownClassName.asInstanceOf[js.Any])
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (popupPlacement != null) __obj.updateDynamic("popupPlacement")(popupPlacement.asInstanceOf[js.Any])
-    if (popupStyle != null) __obj.updateDynamic("popupStyle")(popupStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(range)) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownAlign(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
+    ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
+    @scala.inline
+    def popupPlacement(value: Placement): this.type = set("popupPlacement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popupStyle(value: CSSProperties): this.type = set("popupStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def range(value: Boolean): this.type = set("range", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
   }
-  type Props = PickerTriggerProps
+  
+  def withProps(p: PickerTriggerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(popupElement: ReactElement, prefixCls: String, visible: Boolean): Builder = {
+    val __props = js.Dynamic.literal(popupElement = popupElement.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[PickerTriggerProps]))
+  }
 }
 

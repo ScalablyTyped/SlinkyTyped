@@ -14,10 +14,29 @@ trait AwsCloudFrontDistributionOrigins extends js.Object {
 
 object AwsCloudFrontDistributionOrigins {
   @scala.inline
-  def apply(Items: AwsCloudFrontDistributionOriginItemList = null): AwsCloudFrontDistributionOrigins = {
+  def apply(): AwsCloudFrontDistributionOrigins = {
     val __obj = js.Dynamic.literal()
-    if (Items != null) __obj.updateDynamic("Items")(Items.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsCloudFrontDistributionOrigins]
   }
+  @scala.inline
+  implicit class AwsCloudFrontDistributionOriginsOps[Self <: AwsCloudFrontDistributionOrigins] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: AwsCloudFrontDistributionOriginItemList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItems: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Items")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

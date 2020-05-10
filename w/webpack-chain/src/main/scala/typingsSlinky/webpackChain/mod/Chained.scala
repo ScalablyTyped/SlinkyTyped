@@ -7,8 +7,5 @@ import scala.scalajs.js.annotation._
 @JSImport("webpack-chain", "Chained")
 @js.native
 class Chained[Parent] ()
-  extends typingsSlinky.webpackChain.mod._Config.Chained[Parent] {
-  /* CompleteClass */
-  override def end(): Parent = js.native
-}
+  extends typingsSlinky.webpackChain.mod._Config.Chained[Parent]
 

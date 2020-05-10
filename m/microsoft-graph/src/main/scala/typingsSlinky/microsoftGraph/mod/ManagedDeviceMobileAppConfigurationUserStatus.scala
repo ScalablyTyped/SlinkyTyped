@@ -4,40 +4,96 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ManagedDeviceMobileAppConfigurationUserStatus extends Entity {
   // Devices count for that user.
-  var devicesCount: js.UndefOr[Double] = js.undefined
+  var devicesCount: js.UndefOr[Double] = js.native
   // Last modified date time of the policy report.
-  var lastReportedDateTime: js.UndefOr[String] = js.undefined
+  var lastReportedDateTime: js.UndefOr[String] = js.native
   /**
     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated,
     * nonCompliant, error, conflict, notAssigned.
     */
-  var status: js.UndefOr[ComplianceStatus] = js.undefined
+  var status: js.UndefOr[ComplianceStatus] = js.native
   // User name of the DevicePolicyStatus.
-  var userDisplayName: js.UndefOr[String] = js.undefined
+  var userDisplayName: js.UndefOr[String] = js.native
   // UserPrincipalName.
-  var userPrincipalName: js.UndefOr[String] = js.undefined
+  var userPrincipalName: js.UndefOr[String] = js.native
 }
 
 object ManagedDeviceMobileAppConfigurationUserStatus {
   @scala.inline
-  def apply(
-    devicesCount: Int | Double = null,
-    id: String = null,
-    lastReportedDateTime: String = null,
-    status: ComplianceStatus = null,
-    userDisplayName: String = null,
-    userPrincipalName: String = null
-  ): ManagedDeviceMobileAppConfigurationUserStatus = {
+  def apply(): ManagedDeviceMobileAppConfigurationUserStatus = {
     val __obj = js.Dynamic.literal()
-    if (devicesCount != null) __obj.updateDynamic("devicesCount")(devicesCount.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (lastReportedDateTime != null) __obj.updateDynamic("lastReportedDateTime")(lastReportedDateTime.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (userDisplayName != null) __obj.updateDynamic("userDisplayName")(userDisplayName.asInstanceOf[js.Any])
-    if (userPrincipalName != null) __obj.updateDynamic("userPrincipalName")(userPrincipalName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ManagedDeviceMobileAppConfigurationUserStatus]
   }
+  @scala.inline
+  implicit class ManagedDeviceMobileAppConfigurationUserStatusOps[Self <: ManagedDeviceMobileAppConfigurationUserStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevicesCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicesCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevicesCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devicesCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastReportedDateTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastReportedDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastReportedDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastReportedDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ComplianceStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userDisplayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userDisplayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserPrincipalName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPrincipalName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserPrincipalName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userPrincipalName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

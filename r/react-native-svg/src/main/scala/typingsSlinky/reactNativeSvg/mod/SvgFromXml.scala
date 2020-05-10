@@ -1,8 +1,8 @@
 package typingsSlinky.reactNativeSvg.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,5 +17,5 @@ class SvgFromXml protected ()
 
 @JSImport("react-native-svg", "SvgFromXml")
 @js.native
-object SvgFromXml extends TopLevel[ComponentClass[XmlProps, XmlState]]
+object SvgFromXml extends TopLevel[ReactComponentClass[XmlProps]]
 

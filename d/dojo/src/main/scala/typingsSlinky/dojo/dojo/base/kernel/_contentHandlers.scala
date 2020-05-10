@@ -16,24 +16,25 @@ import scala.scalajs.js.annotation._
   * functions defined in the original xhr call.
   *
   */
+@js.native
 trait _contentHandlers extends js.Object {
   /**
     *
     * @param xhr
     */
-  def auto(xhr: js.Any): Unit
+  def auto(xhr: js.Any): Unit = js.native
   /**
     * A contentHandler which evaluates the response data, expecting it to be valid JavaScript
     *
     * @param xhr
     */
-  def javascript(xhr: js.Any): js.Any
+  def javascript(xhr: js.Any): js.Any = js.native
   /**
     * A contentHandler which returns a JavaScript object created from the response data
     *
     * @param xhr
     */
-  def json(xhr: js.Any): js.Any
+  def json(xhr: js.Any): js.Any = js.native
   /**
     * A contentHandler which expects comment-filtered JSON.
     * A contentHandler which expects comment-filtered JSON.
@@ -49,31 +50,31 @@ trait _contentHandlers extends js.Object {
     *
     * @param xhr
     */
-  def json_comment_filtered(xhr: js.Any): js.Any
+  def json_comment_filtered(xhr: js.Any): js.Any = js.native
   /**
     * A contentHandler which checks the presence of comment-filtered JSON and
     * alternates between the json and json-comment-filtered contentHandlers.
     *
     * @param xhr
     */
-  def json_comment_optional(xhr: js.Any): js.Any
+  def json_comment_optional(xhr: js.Any): js.Any = js.native
   /**
     *
     * @param xhr
     */
-  def olson_zoneinfo(xhr: js.Any): Unit
+  def olson_zoneinfo(xhr: js.Any): Unit = js.native
   /**
     * A contentHandler which simply returns the plaintext response data
     *
     * @param xhr
     */
-  def text(xhr: js.Any): js.Any
+  def text(xhr: js.Any): js.Any = js.native
   /**
     * A contentHandler returning an XML Document parsed from the response data
     *
     * @param xhr
     */
-  def xml(xhr: js.Any): js.Any
+  def xml(xhr: js.Any): js.Any = js.native
 }
 
 object _contentHandlers {
@@ -89,8 +90,63 @@ object _contentHandlers {
     xml: js.Any => js.Any
   ): _contentHandlers = {
     val __obj = js.Dynamic.literal(auto = js.Any.fromFunction1(auto), javascript = js.Any.fromFunction1(javascript), json = js.Any.fromFunction1(json), json_comment_filtered = js.Any.fromFunction1(json_comment_filtered), json_comment_optional = js.Any.fromFunction1(json_comment_optional), olson_zoneinfo = js.Any.fromFunction1(olson_zoneinfo), text = js.Any.fromFunction1(text), xml = js.Any.fromFunction1(xml))
-  
     __obj.asInstanceOf[_contentHandlers]
   }
+  @scala.inline
+  implicit class _contentHandlersOps[Self <: _contentHandlers] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuto(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auto")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withJavascript(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("javascript")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withJson(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withJson_comment_filtered(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json_comment_filtered")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withJson_comment_optional(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("json_comment_optional")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOlson_zoneinfo(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("olson_zoneinfo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withText(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withXml(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xml")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

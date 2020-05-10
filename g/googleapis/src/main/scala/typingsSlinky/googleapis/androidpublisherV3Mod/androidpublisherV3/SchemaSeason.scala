@@ -25,16 +25,53 @@ trait SchemaSeason extends js.Object {
 
 object SchemaSeason {
   @scala.inline
-  def apply(
-    end: SchemaMonthDay = null,
-    prorations: js.Array[SchemaProrate] = null,
-    start: SchemaMonthDay = null
-  ): SchemaSeason = {
+  def apply(): SchemaSeason = {
     val __obj = js.Dynamic.literal()
-    if (end != null) __obj.updateDynamic("end")(end.asInstanceOf[js.Any])
-    if (prorations != null) __obj.updateDynamic("prorations")(prorations.asInstanceOf[js.Any])
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSeason]
   }
+  @scala.inline
+  implicit class SchemaSeasonOps[Self <: SchemaSeason] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: SchemaMonthDay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProrations(value: js.Array[SchemaProrate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prorations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProrations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prorations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart(value: SchemaMonthDay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

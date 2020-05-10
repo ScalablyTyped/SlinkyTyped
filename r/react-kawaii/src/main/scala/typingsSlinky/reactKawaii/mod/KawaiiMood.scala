@@ -17,20 +17,18 @@ trait KawaiiMood extends js.Object
 
 object KawaiiMood {
   @scala.inline
-  def blissful: typingsSlinky.reactKawaii.reactKawaiiStrings.blissful = this.cast("blissful")
+  def blissful: typingsSlinky.reactKawaii.reactKawaiiStrings.blissful = "blissful".asInstanceOf[typingsSlinky.reactKawaii.reactKawaiiStrings.blissful]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def excited: typingsSlinky.reactKawaii.reactKawaiiStrings.excited = "excited".asInstanceOf[typingsSlinky.reactKawaii.reactKawaiiStrings.excited]
   @scala.inline
-  def excited: typingsSlinky.reactKawaii.reactKawaiiStrings.excited = this.cast("excited")
+  def happy: typingsSlinky.reactKawaii.reactKawaiiStrings.happy = "happy".asInstanceOf[typingsSlinky.reactKawaii.reactKawaiiStrings.happy]
   @scala.inline
-  def happy: typingsSlinky.reactKawaii.reactKawaiiStrings.happy = this.cast("happy")
+  def ko: typingsSlinky.reactKawaii.reactKawaiiStrings.ko = "ko".asInstanceOf[typingsSlinky.reactKawaii.reactKawaiiStrings.ko]
   @scala.inline
-  def ko: typingsSlinky.reactKawaii.reactKawaiiStrings.ko = this.cast("ko")
+  def lovestruck: typingsSlinky.reactKawaii.reactKawaiiStrings.lovestruck = "lovestruck".asInstanceOf[typingsSlinky.reactKawaii.reactKawaiiStrings.lovestruck]
   @scala.inline
-  def lovestruck: typingsSlinky.reactKawaii.reactKawaiiStrings.lovestruck = this.cast("lovestruck")
+  def sad: typingsSlinky.reactKawaii.reactKawaiiStrings.sad = "sad".asInstanceOf[typingsSlinky.reactKawaii.reactKawaiiStrings.sad]
   @scala.inline
-  def sad: typingsSlinky.reactKawaii.reactKawaiiStrings.sad = this.cast("sad")
-  @scala.inline
-  def shocked: typingsSlinky.reactKawaii.reactKawaiiStrings.shocked = this.cast("shocked")
+  def shocked: typingsSlinky.reactKawaii.reactKawaiiStrings.shocked = "shocked".asInstanceOf[typingsSlinky.reactKawaii.reactKawaiiStrings.shocked]
 }
 

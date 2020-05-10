@@ -11,7 +11,7 @@ package object languages {
   type django = typingsSlinky.dojo.dojox.highlight.languages.django_
   type groovy = typingsSlinky.dojo.dojox.highlight.languages.groovy_
   type html = typingsSlinky.dojo.dojox.highlight.languages.html_
-  type java = typingsSlinky.dojo.dojox.highlight.languages.java_
+  type java_ = typingsSlinky.dojo.dojox.highlight.languages.java__
   type javascript = typingsSlinky.dojo.dojox.highlight.languages.javascript_
   type python = typingsSlinky.dojo.dojox.highlight.languages.python_
   type sql = typingsSlinky.dojo.dojox.highlight.languages.sql_

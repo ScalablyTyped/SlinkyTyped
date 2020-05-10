@@ -7,19 +7,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VerticalLineToCommand extends js.Object {
-  var code: v_ | V
-  var command: `vertical lineto`
-  var relative: js.UndefOr[Boolean] = js.undefined
-  var y: Double
+  var code: v_ | V = js.native
+  var command: `vertical lineto` = js.native
+  var relative: js.UndefOr[Boolean] = js.native
+  var y: Double = js.native
 }
 
 object VerticalLineToCommand {
   @scala.inline
-  def apply(code: v_ | V, command: `vertical lineto`, y: Double, relative: js.UndefOr[Boolean] = js.undefined): VerticalLineToCommand = {
+  def apply(code: v_ | V, command: `vertical lineto`, y: Double): VerticalLineToCommand = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], command = command.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    if (!js.isUndefined(relative)) __obj.updateDynamic("relative")(relative.asInstanceOf[js.Any])
     __obj.asInstanceOf[VerticalLineToCommand]
   }
+  @scala.inline
+  implicit class VerticalLineToCommandOps[Self <: VerticalLineToCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: v_ | V): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommand(value: `vertical lineto`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRelative(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

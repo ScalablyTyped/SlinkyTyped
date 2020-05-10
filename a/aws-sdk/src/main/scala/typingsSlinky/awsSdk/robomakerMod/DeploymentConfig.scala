@@ -26,18 +26,65 @@ trait DeploymentConfig extends js.Object {
 
 object DeploymentConfig {
   @scala.inline
-  def apply(
-    concurrentDeploymentPercentage: Int | Double = null,
-    downloadConditionFile: S3Object = null,
-    failureThresholdPercentage: Int | Double = null,
-    robotDeploymentTimeoutInSeconds: Int | Double = null
-  ): DeploymentConfig = {
+  def apply(): DeploymentConfig = {
     val __obj = js.Dynamic.literal()
-    if (concurrentDeploymentPercentage != null) __obj.updateDynamic("concurrentDeploymentPercentage")(concurrentDeploymentPercentage.asInstanceOf[js.Any])
-    if (downloadConditionFile != null) __obj.updateDynamic("downloadConditionFile")(downloadConditionFile.asInstanceOf[js.Any])
-    if (failureThresholdPercentage != null) __obj.updateDynamic("failureThresholdPercentage")(failureThresholdPercentage.asInstanceOf[js.Any])
-    if (robotDeploymentTimeoutInSeconds != null) __obj.updateDynamic("robotDeploymentTimeoutInSeconds")(robotDeploymentTimeoutInSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentConfig]
   }
+  @scala.inline
+  implicit class DeploymentConfigOps[Self <: DeploymentConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConcurrentDeploymentPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrentDeploymentPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConcurrentDeploymentPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concurrentDeploymentPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDownloadConditionFile(value: S3Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadConditionFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDownloadConditionFile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadConditionFile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureThresholdPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureThresholdPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureThresholdPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureThresholdPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRobotDeploymentTimeoutInSeconds(value: DeploymentTimeout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robotDeploymentTimeoutInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRobotDeploymentTimeoutInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("robotDeploymentTimeoutInSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -30,20 +30,77 @@ trait SchemaDatafeedsCustomBatchRequestEntry extends js.Object {
 
 object SchemaDatafeedsCustomBatchRequestEntry {
   @scala.inline
-  def apply(
-    batchId: Int | Double = null,
-    datafeed: SchemaDatafeed = null,
-    datafeedId: String = null,
-    merchantId: String = null,
-    method: String = null
-  ): SchemaDatafeedsCustomBatchRequestEntry = {
+  def apply(): SchemaDatafeedsCustomBatchRequestEntry = {
     val __obj = js.Dynamic.literal()
-    if (batchId != null) __obj.updateDynamic("batchId")(batchId.asInstanceOf[js.Any])
-    if (datafeed != null) __obj.updateDynamic("datafeed")(datafeed.asInstanceOf[js.Any])
-    if (datafeedId != null) __obj.updateDynamic("datafeedId")(datafeedId.asInstanceOf[js.Any])
-    if (merchantId != null) __obj.updateDynamic("merchantId")(merchantId.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDatafeedsCustomBatchRequestEntry]
   }
+  @scala.inline
+  implicit class SchemaDatafeedsCustomBatchRequestEntryOps[Self <: SchemaDatafeedsCustomBatchRequestEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatafeed(value: SchemaDatafeed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datafeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatafeed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datafeed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatafeedId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datafeedId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatafeedId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datafeedId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMerchantId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMerchantId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

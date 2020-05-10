@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NameFormFields extends EmailFormFields {
-  var FNAME: String
-  var LNAME: String
+  var FNAME: String = js.native
+  var LNAME: String = js.native
 }
 
 object NameFormFields {
   @scala.inline
   def apply(EMAIL: String, FNAME: String, LNAME: String): NameFormFields = {
     val __obj = js.Dynamic.literal(EMAIL = EMAIL.asInstanceOf[js.Any], FNAME = FNAME.asInstanceOf[js.Any], LNAME = LNAME.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[NameFormFields]
   }
+  @scala.inline
+  implicit class NameFormFieldsOps[Self <: NameFormFields] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFNAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FNAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLNAME(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LNAME")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

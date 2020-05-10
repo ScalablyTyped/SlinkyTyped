@@ -106,80 +106,432 @@ trait HistoryEvent extends js.Object {
 
 object HistoryEvent {
   @scala.inline
-  def apply(
-    id: EventId,
-    timestamp: js.Date,
-    `type`: HistoryEventType,
-    activityFailedEventDetails: ActivityFailedEventDetails = null,
-    activityScheduleFailedEventDetails: ActivityScheduleFailedEventDetails = null,
-    activityScheduledEventDetails: ActivityScheduledEventDetails = null,
-    activityStartedEventDetails: ActivityStartedEventDetails = null,
-    activitySucceededEventDetails: ActivitySucceededEventDetails = null,
-    activityTimedOutEventDetails: ActivityTimedOutEventDetails = null,
-    executionAbortedEventDetails: ExecutionAbortedEventDetails = null,
-    executionFailedEventDetails: ExecutionFailedEventDetails = null,
-    executionStartedEventDetails: ExecutionStartedEventDetails = null,
-    executionSucceededEventDetails: ExecutionSucceededEventDetails = null,
-    executionTimedOutEventDetails: ExecutionTimedOutEventDetails = null,
-    lambdaFunctionFailedEventDetails: LambdaFunctionFailedEventDetails = null,
-    lambdaFunctionScheduleFailedEventDetails: LambdaFunctionScheduleFailedEventDetails = null,
-    lambdaFunctionScheduledEventDetails: LambdaFunctionScheduledEventDetails = null,
-    lambdaFunctionStartFailedEventDetails: LambdaFunctionStartFailedEventDetails = null,
-    lambdaFunctionSucceededEventDetails: LambdaFunctionSucceededEventDetails = null,
-    lambdaFunctionTimedOutEventDetails: LambdaFunctionTimedOutEventDetails = null,
-    mapIterationAbortedEventDetails: MapIterationEventDetails = null,
-    mapIterationFailedEventDetails: MapIterationEventDetails = null,
-    mapIterationStartedEventDetails: MapIterationEventDetails = null,
-    mapIterationSucceededEventDetails: MapIterationEventDetails = null,
-    mapStateStartedEventDetails: MapStateStartedEventDetails = null,
-    previousEventId: Int | Double = null,
-    stateEnteredEventDetails: StateEnteredEventDetails = null,
-    stateExitedEventDetails: StateExitedEventDetails = null,
-    taskFailedEventDetails: TaskFailedEventDetails = null,
-    taskScheduledEventDetails: TaskScheduledEventDetails = null,
-    taskStartFailedEventDetails: TaskStartFailedEventDetails = null,
-    taskStartedEventDetails: TaskStartedEventDetails = null,
-    taskSubmitFailedEventDetails: TaskSubmitFailedEventDetails = null,
-    taskSubmittedEventDetails: TaskSubmittedEventDetails = null,
-    taskSucceededEventDetails: TaskSucceededEventDetails = null,
-    taskTimedOutEventDetails: TaskTimedOutEventDetails = null
-  ): HistoryEvent = {
+  def apply(id: EventId, timestamp: js.Date, `type`: HistoryEventType): HistoryEvent = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (activityFailedEventDetails != null) __obj.updateDynamic("activityFailedEventDetails")(activityFailedEventDetails.asInstanceOf[js.Any])
-    if (activityScheduleFailedEventDetails != null) __obj.updateDynamic("activityScheduleFailedEventDetails")(activityScheduleFailedEventDetails.asInstanceOf[js.Any])
-    if (activityScheduledEventDetails != null) __obj.updateDynamic("activityScheduledEventDetails")(activityScheduledEventDetails.asInstanceOf[js.Any])
-    if (activityStartedEventDetails != null) __obj.updateDynamic("activityStartedEventDetails")(activityStartedEventDetails.asInstanceOf[js.Any])
-    if (activitySucceededEventDetails != null) __obj.updateDynamic("activitySucceededEventDetails")(activitySucceededEventDetails.asInstanceOf[js.Any])
-    if (activityTimedOutEventDetails != null) __obj.updateDynamic("activityTimedOutEventDetails")(activityTimedOutEventDetails.asInstanceOf[js.Any])
-    if (executionAbortedEventDetails != null) __obj.updateDynamic("executionAbortedEventDetails")(executionAbortedEventDetails.asInstanceOf[js.Any])
-    if (executionFailedEventDetails != null) __obj.updateDynamic("executionFailedEventDetails")(executionFailedEventDetails.asInstanceOf[js.Any])
-    if (executionStartedEventDetails != null) __obj.updateDynamic("executionStartedEventDetails")(executionStartedEventDetails.asInstanceOf[js.Any])
-    if (executionSucceededEventDetails != null) __obj.updateDynamic("executionSucceededEventDetails")(executionSucceededEventDetails.asInstanceOf[js.Any])
-    if (executionTimedOutEventDetails != null) __obj.updateDynamic("executionTimedOutEventDetails")(executionTimedOutEventDetails.asInstanceOf[js.Any])
-    if (lambdaFunctionFailedEventDetails != null) __obj.updateDynamic("lambdaFunctionFailedEventDetails")(lambdaFunctionFailedEventDetails.asInstanceOf[js.Any])
-    if (lambdaFunctionScheduleFailedEventDetails != null) __obj.updateDynamic("lambdaFunctionScheduleFailedEventDetails")(lambdaFunctionScheduleFailedEventDetails.asInstanceOf[js.Any])
-    if (lambdaFunctionScheduledEventDetails != null) __obj.updateDynamic("lambdaFunctionScheduledEventDetails")(lambdaFunctionScheduledEventDetails.asInstanceOf[js.Any])
-    if (lambdaFunctionStartFailedEventDetails != null) __obj.updateDynamic("lambdaFunctionStartFailedEventDetails")(lambdaFunctionStartFailedEventDetails.asInstanceOf[js.Any])
-    if (lambdaFunctionSucceededEventDetails != null) __obj.updateDynamic("lambdaFunctionSucceededEventDetails")(lambdaFunctionSucceededEventDetails.asInstanceOf[js.Any])
-    if (lambdaFunctionTimedOutEventDetails != null) __obj.updateDynamic("lambdaFunctionTimedOutEventDetails")(lambdaFunctionTimedOutEventDetails.asInstanceOf[js.Any])
-    if (mapIterationAbortedEventDetails != null) __obj.updateDynamic("mapIterationAbortedEventDetails")(mapIterationAbortedEventDetails.asInstanceOf[js.Any])
-    if (mapIterationFailedEventDetails != null) __obj.updateDynamic("mapIterationFailedEventDetails")(mapIterationFailedEventDetails.asInstanceOf[js.Any])
-    if (mapIterationStartedEventDetails != null) __obj.updateDynamic("mapIterationStartedEventDetails")(mapIterationStartedEventDetails.asInstanceOf[js.Any])
-    if (mapIterationSucceededEventDetails != null) __obj.updateDynamic("mapIterationSucceededEventDetails")(mapIterationSucceededEventDetails.asInstanceOf[js.Any])
-    if (mapStateStartedEventDetails != null) __obj.updateDynamic("mapStateStartedEventDetails")(mapStateStartedEventDetails.asInstanceOf[js.Any])
-    if (previousEventId != null) __obj.updateDynamic("previousEventId")(previousEventId.asInstanceOf[js.Any])
-    if (stateEnteredEventDetails != null) __obj.updateDynamic("stateEnteredEventDetails")(stateEnteredEventDetails.asInstanceOf[js.Any])
-    if (stateExitedEventDetails != null) __obj.updateDynamic("stateExitedEventDetails")(stateExitedEventDetails.asInstanceOf[js.Any])
-    if (taskFailedEventDetails != null) __obj.updateDynamic("taskFailedEventDetails")(taskFailedEventDetails.asInstanceOf[js.Any])
-    if (taskScheduledEventDetails != null) __obj.updateDynamic("taskScheduledEventDetails")(taskScheduledEventDetails.asInstanceOf[js.Any])
-    if (taskStartFailedEventDetails != null) __obj.updateDynamic("taskStartFailedEventDetails")(taskStartFailedEventDetails.asInstanceOf[js.Any])
-    if (taskStartedEventDetails != null) __obj.updateDynamic("taskStartedEventDetails")(taskStartedEventDetails.asInstanceOf[js.Any])
-    if (taskSubmitFailedEventDetails != null) __obj.updateDynamic("taskSubmitFailedEventDetails")(taskSubmitFailedEventDetails.asInstanceOf[js.Any])
-    if (taskSubmittedEventDetails != null) __obj.updateDynamic("taskSubmittedEventDetails")(taskSubmittedEventDetails.asInstanceOf[js.Any])
-    if (taskSucceededEventDetails != null) __obj.updateDynamic("taskSucceededEventDetails")(taskSucceededEventDetails.asInstanceOf[js.Any])
-    if (taskTimedOutEventDetails != null) __obj.updateDynamic("taskTimedOutEventDetails")(taskTimedOutEventDetails.asInstanceOf[js.Any])
     __obj.asInstanceOf[HistoryEvent]
   }
+  @scala.inline
+  implicit class HistoryEventOps[Self <: HistoryEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: HistoryEventType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActivityFailedEventDetails(value: ActivityFailedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityFailedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityFailedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityFailedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityScheduleFailedEventDetails(value: ActivityScheduleFailedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityScheduleFailedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityScheduleFailedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityScheduleFailedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityScheduledEventDetails(value: ActivityScheduledEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityScheduledEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityScheduledEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityScheduledEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityStartedEventDetails(value: ActivityStartedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityStartedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityStartedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityStartedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivitySucceededEventDetails(value: ActivitySucceededEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activitySucceededEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivitySucceededEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activitySucceededEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withActivityTimedOutEventDetails(value: ActivityTimedOutEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTimedOutEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivityTimedOutEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activityTimedOutEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionAbortedEventDetails(value: ExecutionAbortedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionAbortedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionAbortedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionAbortedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionFailedEventDetails(value: ExecutionFailedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionFailedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionFailedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionFailedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionStartedEventDetails(value: ExecutionStartedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStartedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionStartedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionStartedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionSucceededEventDetails(value: ExecutionSucceededEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionSucceededEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionSucceededEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionSucceededEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExecutionTimedOutEventDetails(value: ExecutionTimedOutEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionTimedOutEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionTimedOutEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionTimedOutEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionFailedEventDetails(value: LambdaFunctionFailedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionFailedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionFailedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionFailedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionScheduleFailedEventDetails(value: LambdaFunctionScheduleFailedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionScheduleFailedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionScheduleFailedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionScheduleFailedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionScheduledEventDetails(value: LambdaFunctionScheduledEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionScheduledEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionScheduledEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionScheduledEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionStartFailedEventDetails(value: LambdaFunctionStartFailedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionStartFailedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionStartFailedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionStartFailedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionSucceededEventDetails(value: LambdaFunctionSucceededEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionSucceededEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionSucceededEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionSucceededEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLambdaFunctionTimedOutEventDetails(value: LambdaFunctionTimedOutEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionTimedOutEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLambdaFunctionTimedOutEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lambdaFunctionTimedOutEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapIterationAbortedEventDetails(value: MapIterationEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapIterationAbortedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapIterationAbortedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapIterationAbortedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapIterationFailedEventDetails(value: MapIterationEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapIterationFailedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapIterationFailedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapIterationFailedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapIterationStartedEventDetails(value: MapIterationEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapIterationStartedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapIterationStartedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapIterationStartedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapIterationSucceededEventDetails(value: MapIterationEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapIterationSucceededEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapIterationSucceededEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapIterationSucceededEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMapStateStartedEventDetails(value: MapStateStartedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapStateStartedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMapStateStartedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mapStateStartedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousEventId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousEventId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateEnteredEventDetails(value: StateEnteredEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateEnteredEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateEnteredEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateEnteredEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateExitedEventDetails(value: StateExitedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateExitedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateExitedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateExitedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskFailedEventDetails(value: TaskFailedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskFailedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskFailedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskFailedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskScheduledEventDetails(value: TaskScheduledEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskScheduledEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskScheduledEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskScheduledEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskStartFailedEventDetails(value: TaskStartFailedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStartFailedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskStartFailedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStartFailedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskStartedEventDetails(value: TaskStartedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStartedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskStartedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskStartedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskSubmitFailedEventDetails(value: TaskSubmitFailedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskSubmitFailedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskSubmitFailedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskSubmitFailedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskSubmittedEventDetails(value: TaskSubmittedEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskSubmittedEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskSubmittedEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskSubmittedEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskSucceededEventDetails(value: TaskSucceededEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskSucceededEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskSucceededEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskSucceededEventDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskTimedOutEventDetails(value: TaskTimedOutEventDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskTimedOutEventDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskTimedOutEventDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskTimedOutEventDetails")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

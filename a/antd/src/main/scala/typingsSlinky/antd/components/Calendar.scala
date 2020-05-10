@@ -1,67 +1,66 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.AnonLang
 import typingsSlinky.antd.AnonOnChange
 import typingsSlinky.antd.generateCalendarMod.CalendarMode
 import typingsSlinky.antd.generateCalendarMod.CalendarProps
 import typingsSlinky.moment.mod.Moment
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Calendar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Calendar {
   @JSImport("antd", "Calendar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    dateCellRender: Moment => TagMod[Any] = null,
-    dateFullCellRender: Moment => TagMod[Any] = null,
-    defaultValue: Moment = null,
-    disabledDate: Moment => Boolean = null,
-    fullscreen: js.UndefOr[Boolean] = js.undefined,
-    headerRender: /* config */ AnonOnChange[Moment] => TagMod[Any] = null,
-    locale: AnonLang = null,
-    mode: CalendarMode = null,
-    monthCellRender: Moment => TagMod[Any] = null,
-    monthFullCellRender: Moment => TagMod[Any] = null,
-    onChange: Moment => Unit = null,
-    onPanelChange: (Moment, /* mode */ CalendarMode) => Unit = null,
-    onSelect: Moment => Unit = null,
-    prefixCls: String = null,
-    validRange: js.Tuple2[Moment, Moment] = null,
-    value: Moment = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (dateCellRender != null) __obj.updateDynamic("dateCellRender")(js.Any.fromFunction1(dateCellRender))
-    if (dateFullCellRender != null) __obj.updateDynamic("dateFullCellRender")(js.Any.fromFunction1(dateFullCellRender))
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (disabledDate != null) __obj.updateDynamic("disabledDate")(js.Any.fromFunction1(disabledDate))
-    if (!js.isUndefined(fullscreen)) __obj.updateDynamic("fullscreen")(fullscreen.asInstanceOf[js.Any])
-    if (headerRender != null) __obj.updateDynamic("headerRender")(js.Any.fromFunction1(headerRender))
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (monthCellRender != null) __obj.updateDynamic("monthCellRender")(js.Any.fromFunction1(monthCellRender))
-    if (monthFullCellRender != null) __obj.updateDynamic("monthFullCellRender")(js.Any.fromFunction1(monthFullCellRender))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onPanelChange != null) __obj.updateDynamic("onPanelChange")(js.Any.fromFunction2(onPanelChange))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (validRange != null) __obj.updateDynamic("validRange")(validRange.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dateCellRender(value: Moment => TagMod[Any]): this.type = set("dateCellRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def dateFullCellRender(value: Moment => TagMod[Any]): this.type = set("dateFullCellRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def defaultValue(value: Moment): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabledDate(value: Moment => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def fullscreen(value: Boolean): this.type = set("fullscreen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerRender(value: /* config */ AnonOnChange[Moment] => TagMod[Any]): this.type = set("headerRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def locale(value: AnonLang): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: CalendarMode): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def monthCellRender(value: Moment => TagMod[Any]): this.type = set("monthCellRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def monthFullCellRender(value: Moment => TagMod[Any]): this.type = set("monthFullCellRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: Moment => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPanelChange(value: (Moment, /* mode */ CalendarMode) => Unit): this.type = set("onPanelChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onSelect(value: Moment => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validRange(value: js.Tuple2[Moment, Moment]): this.type = set("validRange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: Moment): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CalendarProps[Moment]
+  
+  def withProps(p: CalendarProps[Moment]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Calendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

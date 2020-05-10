@@ -13,11 +13,41 @@ trait PartialTypeBackground extends js.Object {
 
 object PartialTypeBackground {
   @scala.inline
-  def apply(default: String = null, paper: String = null): PartialTypeBackground = {
+  def apply(): PartialTypeBackground = {
     val __obj = js.Dynamic.literal()
-    if (default != null) __obj.updateDynamic("default")(default.asInstanceOf[js.Any])
-    if (paper != null) __obj.updateDynamic("paper")(paper.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialTypeBackground]
   }
+  @scala.inline
+  implicit class PartialTypeBackgroundOps[Self <: PartialTypeBackground] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefault(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPaper(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaper: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paper")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

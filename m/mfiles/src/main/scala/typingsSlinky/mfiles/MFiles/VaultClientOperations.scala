@@ -8,20 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.VaultClientOperations")
 @js.native
-class VaultClientOperations () extends IVaultClientOperations {
-  /* CompleteClass */
-  override def DisableCheckInReminderForCallingProcess(): Unit = js.native
-  /* CompleteClass */
-  override def EnableCheckInReminderForCallingProcess(): Unit = js.native
-  /* CompleteClass */
-  override def IsOffline(): Boolean = js.native
-  /* CompleteClass */
-  override def IsOnline(): Boolean = js.native
-  /* CompleteClass */
-  override def SetVaultToOffline(ParentWindow: Double): MFOfflineTransitionResultFlags = js.native
-  /* CompleteClass */
-  override def SetVaultToOnline(ParentWindow: Double): MFOnlineTransitionResultFlags = js.native
-}
+class VaultClientOperations () extends IVaultClientOperations
 
 @JSGlobal("MFiles.VaultClientOperations")
 @js.native

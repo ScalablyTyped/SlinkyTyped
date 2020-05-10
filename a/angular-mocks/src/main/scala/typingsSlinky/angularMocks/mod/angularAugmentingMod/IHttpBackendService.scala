@@ -2,7 +2,6 @@ package typingsSlinky.angularMocks.mod.angularAugmentingMod
 
 import typingsSlinky.angularMocks.mod.angularAugmentingMod.mock.IHttpHeaders
 import typingsSlinky.angularMocks.mod.angularAugmentingMod.mock.IRequestHandler
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,11 +66,11 @@ trait IHttpBackendService extends js.Object {
   ): IRequestHandler = js.native
   def expectDELETE(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders): IRequestHandler = js.native
   def expectDELETE(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
-  def expectDELETE(url: RegExp): IRequestHandler = js.native
-  def expectDELETE(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
-  def expectDELETE(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
-  def expectDELETE(url: RegExp, headers: IHttpHeaders): IRequestHandler = js.native
-  def expectDELETE(url: RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
+  def expectDELETE(url: js.RegExp): IRequestHandler = js.native
+  def expectDELETE(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
+  def expectDELETE(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
+  def expectDELETE(url: js.RegExp, headers: IHttpHeaders): IRequestHandler = js.native
+  def expectDELETE(url: js.RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
   /**
     * Creates a new request expectation for GET requests.
     * Throws a preformatted error if expectation(s) don't match supplied string, regular expression, object, or if function returns false.
@@ -97,11 +96,11 @@ trait IHttpBackendService extends js.Object {
   ): IRequestHandler = js.native
   def expectGET(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders): IRequestHandler = js.native
   def expectGET(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
-  def expectGET(url: RegExp): IRequestHandler = js.native
-  def expectGET(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
-  def expectGET(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
-  def expectGET(url: RegExp, headers: IHttpHeaders): IRequestHandler = js.native
-  def expectGET(url: RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
+  def expectGET(url: js.RegExp): IRequestHandler = js.native
+  def expectGET(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
+  def expectGET(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
+  def expectGET(url: js.RegExp, headers: IHttpHeaders): IRequestHandler = js.native
+  def expectGET(url: js.RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
   /**
     * Creates a new request expectation for HEAD requests.
     * Throws a preformatted error if expectation(s) don't match supplied string, regular expression, object, or if function returns false.
@@ -127,11 +126,11 @@ trait IHttpBackendService extends js.Object {
   ): IRequestHandler = js.native
   def expectHEAD(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders): IRequestHandler = js.native
   def expectHEAD(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
-  def expectHEAD(url: RegExp): IRequestHandler = js.native
-  def expectHEAD(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
-  def expectHEAD(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
-  def expectHEAD(url: RegExp, headers: IHttpHeaders): IRequestHandler = js.native
-  def expectHEAD(url: RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
+  def expectHEAD(url: js.RegExp): IRequestHandler = js.native
+  def expectHEAD(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
+  def expectHEAD(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
+  def expectHEAD(url: js.RegExp, headers: IHttpHeaders): IRequestHandler = js.native
+  def expectHEAD(url: js.RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
   /**
     * Creates a new request expectation for JSONP requests.
     * Throws a preformatted error if expectation(s) don't match supplied string, regular expression, or if function returns false.
@@ -143,8 +142,8 @@ trait IHttpBackendService extends js.Object {
   def expectJSONP(url: String, keys: js.Array[String]): IRequestHandler = js.native
   def expectJSONP(url: js.Function1[/* url */ String, Boolean]): IRequestHandler = js.native
   def expectJSONP(url: js.Function1[/* url */ String, Boolean], keys: js.Array[String]): IRequestHandler = js.native
-  def expectJSONP(url: RegExp): IRequestHandler = js.native
-  def expectJSONP(url: RegExp, keys: js.Array[String]): IRequestHandler = js.native
+  def expectJSONP(url: js.RegExp): IRequestHandler = js.native
+  def expectJSONP(url: js.RegExp, keys: js.Array[String]): IRequestHandler = js.native
   /**
     * Creates a new request expectation for PATCH requests.
     * Throws a preformatted error if expectation(s) don't match supplied string, regular expression, object, or if function returns false.
@@ -313,11 +312,11 @@ trait IHttpBackendService extends js.Object {
   ): IRequestHandler = js.native
   def whenDELETE(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders): IRequestHandler = js.native
   def whenDELETE(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
-  def whenDELETE(url: RegExp): IRequestHandler = js.native
-  def whenDELETE(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
-  def whenDELETE(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
-  def whenDELETE(url: RegExp, headers: IHttpHeaders): IRequestHandler = js.native
-  def whenDELETE(url: RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
+  def whenDELETE(url: js.RegExp): IRequestHandler = js.native
+  def whenDELETE(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
+  def whenDELETE(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
+  def whenDELETE(url: js.RegExp, headers: IHttpHeaders): IRequestHandler = js.native
+  def whenDELETE(url: js.RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
   /**
     * Creates a new backend definition for GET requests.
     * Returns an object with respond method that controls how a matched request is handled.
@@ -343,11 +342,11 @@ trait IHttpBackendService extends js.Object {
   ): IRequestHandler = js.native
   def whenGET(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders): IRequestHandler = js.native
   def whenGET(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
-  def whenGET(url: RegExp): IRequestHandler = js.native
-  def whenGET(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
-  def whenGET(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
-  def whenGET(url: RegExp, headers: IHttpHeaders): IRequestHandler = js.native
-  def whenGET(url: RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
+  def whenGET(url: js.RegExp): IRequestHandler = js.native
+  def whenGET(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
+  def whenGET(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
+  def whenGET(url: js.RegExp, headers: IHttpHeaders): IRequestHandler = js.native
+  def whenGET(url: js.RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
   /**
     * Creates a new backend definition for HEAD requests.
     * Returns an object with respond method that controls how a matched request is handled.
@@ -372,11 +371,11 @@ trait IHttpBackendService extends js.Object {
   ): IRequestHandler = js.native
   def whenHEAD(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders): IRequestHandler = js.native
   def whenHEAD(url: js.Function1[/* url */ String, Boolean], headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
-  def whenHEAD(url: RegExp): IRequestHandler = js.native
-  def whenHEAD(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
-  def whenHEAD(url: RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
-  def whenHEAD(url: RegExp, headers: IHttpHeaders): IRequestHandler = js.native
-  def whenHEAD(url: RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
+  def whenHEAD(url: js.RegExp): IRequestHandler = js.native
+  def whenHEAD(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean]): IRequestHandler = js.native
+  def whenHEAD(url: js.RegExp, headers: js.Function1[/* headers */ IHttpHeaders, Boolean], keys: js.Array[String]): IRequestHandler = js.native
+  def whenHEAD(url: js.RegExp, headers: IHttpHeaders): IRequestHandler = js.native
+  def whenHEAD(url: js.RegExp, headers: IHttpHeaders, keys: js.Array[String]): IRequestHandler = js.native
   /**
     * Creates a new backend definition for JSONP requests.
     * Returns an object with respond method that controls how a matched request is handled.
@@ -388,8 +387,8 @@ trait IHttpBackendService extends js.Object {
   def whenJSONP(url: String, keys: js.Array[String]): IRequestHandler = js.native
   def whenJSONP(url: js.Function1[/* url */ String, Boolean]): IRequestHandler = js.native
   def whenJSONP(url: js.Function1[/* url */ String, Boolean], keys: js.Array[String]): IRequestHandler = js.native
-  def whenJSONP(url: RegExp): IRequestHandler = js.native
-  def whenJSONP(url: RegExp, keys: js.Array[String]): IRequestHandler = js.native
+  def whenJSONP(url: js.RegExp): IRequestHandler = js.native
+  def whenJSONP(url: js.RegExp, keys: js.Array[String]): IRequestHandler = js.native
   /**
     * Creates a new backend definition for PATCH requests.
     * Returns an object with respond method that controls how a matched request is handled.

@@ -24,8 +24,33 @@ object StartDeviceAuthorizationRequest {
   @scala.inline
   def apply(clientId: ClientId, clientSecret: ClientSecret, startUrl: URI): StartDeviceAuthorizationRequest = {
     val __obj = js.Dynamic.literal(clientId = clientId.asInstanceOf[js.Any], clientSecret = clientSecret.asInstanceOf[js.Any], startUrl = startUrl.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[StartDeviceAuthorizationRequest]
   }
+  @scala.inline
+  implicit class StartDeviceAuthorizationRequestOps[Self <: StartDeviceAuthorizationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientId(value: ClientId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientSecret(value: ClientSecret): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientSecret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartUrl(value: URI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

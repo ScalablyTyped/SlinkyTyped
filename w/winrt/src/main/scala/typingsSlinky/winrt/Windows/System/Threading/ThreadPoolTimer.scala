@@ -6,14 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.System.Threading.ThreadPoolTimer")
 @js.native
-class ThreadPoolTimer () extends IThreadPoolTimer {
-  /* CompleteClass */
-  override var delay: Double = js.native
-  /* CompleteClass */
-  override var period: Double = js.native
-  /* CompleteClass */
-  override def cancel(): Unit = js.native
-}
+class ThreadPoolTimer () extends IThreadPoolTimer
 
 /* static members */
 @JSGlobal("Windows.System.Threading.ThreadPoolTimer")

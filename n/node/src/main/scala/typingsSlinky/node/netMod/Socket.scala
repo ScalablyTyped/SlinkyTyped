@@ -9,8 +9,6 @@ import typingsSlinky.node.nodeStrings.data
 import typingsSlinky.node.nodeStrings.lookup
 import typingsSlinky.node.nodeStrings.timeout
 import typingsSlinky.node.streamMod.Duplex
-import typingsSlinky.std.Error
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,12 +68,12 @@ class Socket ()
   def emit_timeout(event: timeout): Boolean = js.native
   def end(buffer: String): Unit = js.native
   def end(buffer: String, cb: js.Function0[Unit]): Unit = js.native
-  def end(buffer: Uint8Array): Unit = js.native
-  def end(buffer: Uint8Array, cb: js.Function0[Unit]): Unit = js.native
+  def end(buffer: js.typedarray.Uint8Array): Unit = js.native
+  def end(buffer: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
   def end(str: String, encoding: String): Unit = js.native
   def end(str: String, encoding: String, cb: js.Function0[Unit]): Unit = js.native
-  def end(str: Uint8Array, encoding: String): Unit = js.native
-  def end(str: Uint8Array, encoding: String, cb: js.Function0[Unit]): Unit = js.native
+  def end(str: js.typedarray.Uint8Array, encoding: String): Unit = js.native
+  def end(str: js.typedarray.Uint8Array, encoding: String, cb: js.Function0[Unit]): Unit = js.native
   @JSName("on")
   def on_close(event: close, listener: js.Function1[/* had_error */ Boolean, Unit]): this.type = js.native
   @JSName("on")
@@ -159,13 +157,17 @@ class Socket ()
   def setTimeout(timeout: Double, callback: js.Function0[Unit]): this.type = js.native
   def unref(): this.type = js.native
   def write(buffer: String): Boolean = js.native
-  def write(buffer: String, cb: js.Function1[/* err */ js.UndefOr[Error], Unit]): Boolean = js.native
+  def write(buffer: String, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
   // Extended base methods
-  def write(buffer: Uint8Array): Boolean = js.native
-  def write(buffer: Uint8Array, cb: js.Function1[/* err */ js.UndefOr[Error], Unit]): Boolean = js.native
+  def write(buffer: js.typedarray.Uint8Array): Boolean = js.native
+  def write(buffer: js.typedarray.Uint8Array, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
   def write(str: String, encoding: String): Boolean = js.native
   def write(str: String, encoding: String, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
-  def write(str: Uint8Array, encoding: String): Boolean = js.native
-  def write(str: Uint8Array, encoding: String, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native
+  def write(str: js.typedarray.Uint8Array, encoding: String): Boolean = js.native
+  def write(
+    str: js.typedarray.Uint8Array,
+    encoding: String,
+    cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Boolean = js.native
 }
 

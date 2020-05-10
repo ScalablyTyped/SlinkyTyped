@@ -1,33 +1,32 @@
 package typingsSlinky.reactable.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactable.mod.TdProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Td
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactable.mod.Td] {
+object Td {
   @JSImport("reactable", "Td")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    column: String,
-    data: js.Any = null,
-    value: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactable.mod.Td] = {
-    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactable.mod.Td] {
+    @scala.inline
+    def data(value: js.Any): this.type = set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = TdProperties
+  
+  def withProps(p: TdProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(column: String): Builder = {
+    val __props = js.Dynamic.literal(column = column.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[TdProperties]))
+  }
 }
 

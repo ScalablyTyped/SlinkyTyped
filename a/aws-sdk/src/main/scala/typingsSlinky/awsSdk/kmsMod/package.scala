@@ -17,7 +17,7 @@ package object kmsMod {
   type AliasNameType = java.lang.String
   type ArnType = java.lang.String
   type BooleanType = scala.Boolean
-  type CiphertextType = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.kmsMod.Blob | java.lang.String
+  type CiphertextType = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kmsMod.Blob | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.kmsMod.ClientApiVersions
   type CloudHsmClusterIdType = java.lang.String
   /* Rewritten from type alias, can be one of: 
@@ -158,12 +158,12 @@ package object kmsMod {
   */
   type OriginType = typingsSlinky.awsSdk.kmsMod._OriginType | java.lang.String
   type PendingWindowInDaysType = scala.Double
-  type PlaintextType = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.kmsMod.Blob | java.lang.String
+  type PlaintextType = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kmsMod.Blob | java.lang.String
   type PolicyNameList = js.Array[typingsSlinky.awsSdk.kmsMod.PolicyNameType]
   type PolicyNameType = java.lang.String
   type PolicyType = java.lang.String
   type PrincipalIdType = java.lang.String
-  type PublicKeyType = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.kmsMod.Blob | java.lang.String
+  type PublicKeyType = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kmsMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.RSASSA_PSS_SHA_256
     - typingsSlinky.awsSdk.awsSdkStrings.RSASSA_PSS_SHA_384

@@ -1,15 +1,16 @@
 package typingsSlinky.reactOnsenui.components
 
+import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ListHeader
-  extends SharedApply_HTMLAttributesidclassNameClassName813172105[typingsSlinky.reactOnsenui.mod.ListHeader] {
+object ListHeader {
   @JSImport("react-onsenui", "ListHeader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: HTMLAttributesidclassNameClassName): SharedBuilder_HTMLAttributesidclassNameClassName_515396592[typingsSlinky.reactOnsenui.mod.ListHeader] = new SharedBuilder_HTMLAttributesidclassNameClassName_515396592[typingsSlinky.reactOnsenui.mod.ListHeader](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ListHeader.type): SharedBuilder_HTMLAttributesidclassNameClassName_515396592[typingsSlinky.reactOnsenui.mod.ListHeader] = new SharedBuilder_HTMLAttributesidclassNameClassName_515396592[typingsSlinky.reactOnsenui.mod.ListHeader](js.Array(this.component, js.Dictionary.empty))()
 }
 

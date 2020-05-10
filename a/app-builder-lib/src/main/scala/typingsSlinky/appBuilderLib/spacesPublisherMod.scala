@@ -1,6 +1,5 @@
 package typingsSlinky.appBuilderLib
 
-import typingsSlinky.appBuilderLib.appBuilderLibStrings.Spaces
 import typingsSlinky.appBuilderLib.baseS3PublisherMod.BaseS3Publisher
 import typingsSlinky.builderUtilRuntime.publishOptionsMod.SpacesOptions
 import typingsSlinky.electronPublish.mod.PublishContext
@@ -14,8 +13,6 @@ object spacesPublisherMod extends js.Object {
   @js.native
   trait SpacesPublisher extends BaseS3Publisher {
     val info: js.Any = js.native
-    @JSName("providerName")
-    val providerName_SpacesPublisher: Spaces = js.native
   }
   
   @js.native

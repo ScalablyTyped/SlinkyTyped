@@ -14,14 +14,12 @@ trait QRCODE_LEVEL extends js.Object
 
 object QRCODE_LEVEL {
   @scala.inline
-  def H: typingsSlinky.escpos.escposStrings.H = this.cast("H")
+  def H: typingsSlinky.escpos.escposStrings.H = "H".asInstanceOf[typingsSlinky.escpos.escposStrings.H]
   @scala.inline
-  def L: typingsSlinky.escpos.escposStrings.L = this.cast("L")
+  def L: typingsSlinky.escpos.escposStrings.L = "L".asInstanceOf[typingsSlinky.escpos.escposStrings.L]
   @scala.inline
-  def M: typingsSlinky.escpos.escposStrings.M = this.cast("M")
+  def M: typingsSlinky.escpos.escposStrings.M = "M".asInstanceOf[typingsSlinky.escpos.escposStrings.M]
   @scala.inline
-  def Q: typingsSlinky.escpos.escposStrings.Q = this.cast("Q")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Q: typingsSlinky.escpos.escposStrings.Q = "Q".asInstanceOf[typingsSlinky.escpos.escposStrings.Q]
 }
 

@@ -6,7 +6,6 @@ import typingsSlinky.mocha.Mocha_.MochaOptions
 import typingsSlinky.mocha.Mocha_.Reporter
 import typingsSlinky.mocha.Mocha_.Runner
 import typingsSlinky.mocha.Mocha_.Suite_
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -102,7 +101,7 @@ class Mocha__ () extends js.Object {
     * @see https://mochajs.org/api/mocha#grep
     */
   def grep(re: String): this.type = js.native
-  def grep(re: RegExp): this.type = js.native
+  def grep(re: js.RegExp): this.type = js.native
   /**
     * Enable growl support.
     *
@@ -134,6 +133,12 @@ class Mocha__ () extends js.Object {
     */
   /* protected */ def loadFiles(): Unit = js.native
   /* protected */ def loadFiles(fn: js.Function0[Unit]): Unit = js.native
+  /**
+    * Loads ESM (and CJS) test files asynchronously.
+    *
+    * @see https://mochajs.org/api/mocha#loadFilesAsync
+    */
+  def loadFilesAsync(): js.Promise[Unit] = js.native
   /**
     * Disable syntax highlighting (in browser).
     *

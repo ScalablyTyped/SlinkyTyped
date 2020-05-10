@@ -5,67 +5,155 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LoginButtonProps extends js.Object {
   /**
     * The default audience to target when attempting a login.
     */
-  var defaultAudience: js.UndefOr[DefaultAudience] = js.undefined
+  var defaultAudience: js.UndefOr[DefaultAudience] = js.native
   /**
     * The behavior to use when attempting a login.
     * @platform android
     */
-  var loginBehaviorAndroid: js.UndefOr[LoginBehaviorAndroid] = js.undefined
+  var loginBehaviorAndroid: js.UndefOr[LoginBehaviorAndroid] = js.native
   /**
     * The behavior to use when attempting a login.
     * @platform ios
     */
-  var loginBehaviorIOS: js.UndefOr[LoginBehaviorIOS] = js.undefined
+  var loginBehaviorIOS: js.UndefOr[LoginBehaviorIOS] = js.native
   /**
     * The callback invoked upon error/completion of a login request.
     */
-  var onLoginFinished: js.UndefOr[js.Function2[/* error */ js.Object, /* result */ LoginResult, Unit]] = js.undefined
+  var onLoginFinished: js.UndefOr[js.Function2[/* error */ js.Object, /* result */ LoginResult, Unit]] = js.native
   /**
     * The callback invoked upon completion of a logout request.
     */
-  var onLogoutFinished: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onLogoutFinished: js.UndefOr[js.Function0[Unit]] = js.native
   /**
     * Represents the permissions to request when the login button
     * is pressed.
     */
-  var permissions: js.UndefOr[js.Array[Permissions]] = js.undefined
+  var permissions: js.UndefOr[js.Array[Permissions]] = js.native
   /**
     * View style, if any.
     */
-  var style: js.UndefOr[ViewStyle] = js.undefined
+  var style: js.UndefOr[ViewStyle] = js.native
   /**
     * For iOS only, the desired tooltip behavior.
     * @platform ios
     */
-  var tooltipBehaviorIOS: js.UndefOr[TooltipBehaviorIOS] = js.undefined
+  var tooltipBehaviorIOS: js.UndefOr[TooltipBehaviorIOS] = js.native
 }
 
 object LoginButtonProps {
   @scala.inline
-  def apply(
-    defaultAudience: DefaultAudience = null,
-    loginBehaviorAndroid: LoginBehaviorAndroid = null,
-    loginBehaviorIOS: LoginBehaviorIOS = null,
-    onLoginFinished: (/* error */ js.Object, /* result */ LoginResult) => Unit = null,
-    onLogoutFinished: () => Unit = null,
-    permissions: js.Array[Permissions] = null,
-    style: ViewStyle = null,
-    tooltipBehaviorIOS: TooltipBehaviorIOS = null
-  ): LoginButtonProps = {
+  def apply(): LoginButtonProps = {
     val __obj = js.Dynamic.literal()
-    if (defaultAudience != null) __obj.updateDynamic("defaultAudience")(defaultAudience.asInstanceOf[js.Any])
-    if (loginBehaviorAndroid != null) __obj.updateDynamic("loginBehaviorAndroid")(loginBehaviorAndroid.asInstanceOf[js.Any])
-    if (loginBehaviorIOS != null) __obj.updateDynamic("loginBehaviorIOS")(loginBehaviorIOS.asInstanceOf[js.Any])
-    if (onLoginFinished != null) __obj.updateDynamic("onLoginFinished")(js.Any.fromFunction2(onLoginFinished))
-    if (onLogoutFinished != null) __obj.updateDynamic("onLogoutFinished")(js.Any.fromFunction0(onLogoutFinished))
-    if (permissions != null) __obj.updateDynamic("permissions")(permissions.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (tooltipBehaviorIOS != null) __obj.updateDynamic("tooltipBehaviorIOS")(tooltipBehaviorIOS.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoginButtonProps]
   }
+  @scala.inline
+  implicit class LoginButtonPropsOps[Self <: LoginButtonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultAudience(value: DefaultAudience): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAudience")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultAudience: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAudience")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoginBehaviorAndroid(value: LoginBehaviorAndroid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loginBehaviorAndroid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoginBehaviorAndroid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loginBehaviorAndroid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoginBehaviorIOS(value: LoginBehaviorIOS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loginBehaviorIOS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoginBehaviorIOS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loginBehaviorIOS")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLoginFinished(value: (/* error */ js.Object, /* result */ LoginResult) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoginFinished")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLoginFinished: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoginFinished")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLogoutFinished(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLogoutFinished")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLogoutFinished: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLogoutFinished")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermissions(value: js.Array[Permissions]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermissions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: ViewStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltipBehaviorIOS(value: TooltipBehaviorIOS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipBehaviorIOS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltipBehaviorIOS: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipBehaviorIOS")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

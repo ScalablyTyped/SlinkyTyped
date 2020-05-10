@@ -21,8 +21,27 @@ object LogResourcePolicyArgs {
   @scala.inline
   def apply(policyDocument: Input[String], policyName: Input[String]): LogResourcePolicyArgs = {
     val __obj = js.Dynamic.literal(policyDocument = policyDocument.asInstanceOf[js.Any], policyName = policyName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[LogResourcePolicyArgs]
   }
+  @scala.inline
+  implicit class LogResourcePolicyArgsOps[Self <: LogResourcePolicyArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPolicyDocument(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolicyName(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

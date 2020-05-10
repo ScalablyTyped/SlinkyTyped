@@ -5,20 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
-  var dataProjection: js.UndefOr[ProjectionLike] = js.undefined
-  var layerName: js.UndefOr[String] = js.undefined
-  var layers: js.UndefOr[js.Array[String]] = js.undefined
+  var dataProjection: js.UndefOr[ProjectionLike] = js.native
+  var layerName: js.UndefOr[String] = js.native
+  var layers: js.UndefOr[js.Array[String]] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(dataProjection: ProjectionLike = null, layerName: String = null, layers: js.Array[String] = null): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (dataProjection != null) __obj.updateDynamic("dataProjection")(dataProjection.asInstanceOf[js.Any])
-    if (layerName != null) __obj.updateDynamic("layerName")(layerName.asInstanceOf[js.Any])
-    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataProjection(value: ProjectionLike): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataProjection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataProjection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataProjection")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayerName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayers(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,69 +1,146 @@
 package typingsSlinky.antdMobile.sliderMod
 
 import org.scalablytyped.runtime.NumberDictionary
-import slinky.core.TagMod
 import typingsSlinky.antdMobile.sliderPropsTypeMod.SliderPropsType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SliderProps extends SliderPropsType {
-  var dots: js.UndefOr[Boolean] = js.undefined
-  var handleStyle: js.UndefOr[CSSProperties] = js.undefined
-  var included: js.UndefOr[Boolean] = js.undefined
-  var marks: js.UndefOr[NumberDictionary[String]] = js.undefined
-  var maximumTrackStyle: js.UndefOr[CSSProperties] = js.undefined
-  var minimumTrackStyle: js.UndefOr[CSSProperties] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var railStyle: js.UndefOr[CSSProperties] = js.undefined
-  var trackStyle: js.UndefOr[CSSProperties] = js.undefined
+  var dots: js.UndefOr[Boolean] = js.native
+  var handleStyle: js.UndefOr[CSSProperties] = js.native
+  var included: js.UndefOr[Boolean] = js.native
+  var marks: js.UndefOr[NumberDictionary[String]] = js.native
+  var maximumTrackStyle: js.UndefOr[CSSProperties] = js.native
+  var minimumTrackStyle: js.UndefOr[CSSProperties] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var railStyle: js.UndefOr[CSSProperties] = js.native
+  var trackStyle: js.UndefOr[CSSProperties] = js.native
 }
 
 object SliderProps {
   @scala.inline
-  def apply(
-    defaultValue: Int | Double = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    dots: js.UndefOr[Boolean] = js.undefined,
-    handle: js.Any = null,
-    handleStyle: CSSProperties = null,
-    included: js.UndefOr[Boolean] = js.undefined,
-    marks: NumberDictionary[String] = null,
-    max: Int | Double = null,
-    maximumTrackStyle: CSSProperties = null,
-    min: Int | Double = null,
-    minimumTrackStyle: CSSProperties = null,
-    onAfterChange: /* value */ js.UndefOr[Double] => Unit = null,
-    onChange: /* value */ js.UndefOr[Double] => Unit = null,
-    prefixCls: String = null,
-    railStyle: CSSProperties = null,
-    step: Int | Double = null,
-    tipFormatter: /* value */ js.UndefOr[String] => TagMod[Any] = null,
-    trackStyle: CSSProperties = null,
-    value: Int | Double = null
-  ): SliderProps = {
+  def apply(): SliderProps = {
     val __obj = js.Dynamic.literal()
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(dots)) __obj.updateDynamic("dots")(dots.asInstanceOf[js.Any])
-    if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
-    if (handleStyle != null) __obj.updateDynamic("handleStyle")(handleStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(included)) __obj.updateDynamic("included")(included.asInstanceOf[js.Any])
-    if (marks != null) __obj.updateDynamic("marks")(marks.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maximumTrackStyle != null) __obj.updateDynamic("maximumTrackStyle")(maximumTrackStyle.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minimumTrackStyle != null) __obj.updateDynamic("minimumTrackStyle")(minimumTrackStyle.asInstanceOf[js.Any])
-    if (onAfterChange != null) __obj.updateDynamic("onAfterChange")(js.Any.fromFunction1(onAfterChange))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (railStyle != null) __obj.updateDynamic("railStyle")(railStyle.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (tipFormatter != null) __obj.updateDynamic("tipFormatter")(js.Any.fromFunction1(tipFormatter))
-    if (trackStyle != null) __obj.updateDynamic("trackStyle")(trackStyle.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SliderProps]
   }
+  @scala.inline
+  implicit class SliderPropsOps[Self <: SliderProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDots(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDots: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dots")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandleStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandleStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncluded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("included")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncluded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("included")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMarks(value: NumberDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumTrackStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumTrackStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumTrackStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumTrackStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumTrackStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumTrackStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumTrackStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumTrackStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRailStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRailStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("railStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

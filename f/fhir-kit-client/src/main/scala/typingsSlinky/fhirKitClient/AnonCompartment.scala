@@ -9,29 +9,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCompartment extends js.Object {
-  var compartment: js.UndefOr[Compartment] = js.undefined
-  var headers: js.UndefOr[Headers] = js.undefined
-  var options: js.UndefOr[Options] = js.undefined
-  var resourceType: ResourceType
-  var searchParams: js.UndefOr[SearchParams] = js.undefined
+  var compartment: js.UndefOr[Compartment] = js.native
+  var headers: js.UndefOr[Headers] = js.native
+  var options: js.UndefOr[Options] = js.native
+  var resourceType: ResourceType = js.native
+  var searchParams: js.UndefOr[SearchParams] = js.native
 }
 
 object AnonCompartment {
   @scala.inline
-  def apply(
-    resourceType: ResourceType,
-    compartment: Compartment = null,
-    headers: Headers = null,
-    options: Options = null,
-    searchParams: SearchParams = null
-  ): AnonCompartment = {
+  def apply(resourceType: ResourceType): AnonCompartment = {
     val __obj = js.Dynamic.literal(resourceType = resourceType.asInstanceOf[js.Any])
-    if (compartment != null) __obj.updateDynamic("compartment")(compartment.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (searchParams != null) __obj.updateDynamic("searchParams")(searchParams.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCompartment]
   }
+  @scala.inline
+  implicit class AnonCompartmentOps[Self <: AnonCompartment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResourceType(value: ResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompartment(value: Compartment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compartment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompartment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compartment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: Headers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSearchParams(value: SearchParams): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchParams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSearchParams: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchParams")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

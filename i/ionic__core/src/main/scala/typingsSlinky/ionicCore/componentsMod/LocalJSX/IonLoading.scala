@@ -10,111 +10,289 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IonLoading extends js.Object {
   /**
     * If `true`, the loading indicator will animate.
     */
-  var animated: js.UndefOr[Boolean] = js.undefined
+  var animated: js.UndefOr[Boolean] = js.native
   /**
     * If `true`, the loading indicator will be dismissed when the backdrop is clicked.
     */
-  var backdropDismiss: js.UndefOr[Boolean] = js.undefined
+  var backdropDismiss: js.UndefOr[Boolean] = js.native
   /**
     * Additional classes to apply for custom CSS. If multiple classes are provided they should be separated by spaces.
     */
-  var cssClass: js.UndefOr[String | js.Array[String]] = js.undefined
+  var cssClass: js.UndefOr[String | js.Array[String]] = js.native
   /**
     * Number of milliseconds to wait before dismissing the loading indicator.
     */
-  var duration: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double] = js.native
   /**
     * Animation to use when the loading indicator is presented.
     */
-  var enterAnimation: js.UndefOr[AnimationBuilder] = js.undefined
+  var enterAnimation: js.UndefOr[AnimationBuilder] = js.native
   /**
     * If `true`, the keyboard will be automatically dismissed when the overlay is presented.
     */
-  var keyboardClose: js.UndefOr[Boolean] = js.undefined
+  var keyboardClose: js.UndefOr[Boolean] = js.native
   /**
     * Animation to use when the loading indicator is dismissed.
     */
-  var leaveAnimation: js.UndefOr[AnimationBuilder] = js.undefined
+  var leaveAnimation: js.UndefOr[AnimationBuilder] = js.native
   /**
     * Optional text content to display in the loading indicator.
     */
-  var message: js.UndefOr[String] = js.undefined
+  var message: js.UndefOr[String] = js.native
   /**
     * The mode determines which platform styles to use.
     */
-  var mode: js.UndefOr[ios | md] = js.undefined
+  var mode: js.UndefOr[ios | md] = js.native
   /**
     * Emitted after the loading has dismissed.
     */
-  var onIonLoadingDidDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var onIonLoadingDidDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   /**
     * Emitted after the loading has presented.
     */
-  var onIonLoadingDidPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var onIonLoadingDidPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   /**
     * Emitted before the loading has dismissed.
     */
-  var onIonLoadingWillDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var onIonLoadingWillDismiss: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   /**
     * Emitted before the loading has presented.
     */
-  var onIonLoadingWillPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.undefined
+  var onIonLoadingWillPresent: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   /**
     * If `true`, a backdrop will be displayed behind the loading indicator.
     */
-  var showBackdrop: js.UndefOr[Boolean] = js.undefined
+  var showBackdrop: js.UndefOr[Boolean] = js.native
   /**
     * The name of the spinner to display.
     */
-  var spinner: js.UndefOr[SpinnerTypes | Null] = js.undefined
+  var spinner: js.UndefOr[SpinnerTypes | Null] = js.native
   /**
     * If `true`, the loading indicator will be translucent. Only applies when the mode is `"ios"` and the device supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).
     */
-  var translucent: js.UndefOr[Boolean] = js.undefined
+  var translucent: js.UndefOr[Boolean] = js.native
 }
 
 object IonLoading {
   @scala.inline
-  def apply(
-    animated: js.UndefOr[Boolean] = js.undefined,
-    backdropDismiss: js.UndefOr[Boolean] = js.undefined,
-    cssClass: String | js.Array[String] = null,
-    duration: Int | Double = null,
-    enterAnimation: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation] = null,
-    keyboardClose: js.UndefOr[Boolean] = js.undefined,
-    leaveAnimation: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation] = null,
-    message: String = null,
-    mode: ios | md = null,
-    onIonLoadingDidDismiss: /* event */ CustomEvent => Unit = null,
-    onIonLoadingDidPresent: /* event */ CustomEvent => Unit = null,
-    onIonLoadingWillDismiss: /* event */ CustomEvent => Unit = null,
-    onIonLoadingWillPresent: /* event */ CustomEvent => Unit = null,
-    showBackdrop: js.UndefOr[Boolean] = js.undefined,
-    spinner: SpinnerTypes = null,
-    translucent: js.UndefOr[Boolean] = js.undefined
-  ): IonLoading = {
+  def apply(): IonLoading = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (!js.isUndefined(backdropDismiss)) __obj.updateDynamic("backdropDismiss")(backdropDismiss.asInstanceOf[js.Any])
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (enterAnimation != null) __obj.updateDynamic("enterAnimation")(js.Any.fromFunction3(enterAnimation))
-    if (!js.isUndefined(keyboardClose)) __obj.updateDynamic("keyboardClose")(keyboardClose.asInstanceOf[js.Any])
-    if (leaveAnimation != null) __obj.updateDynamic("leaveAnimation")(js.Any.fromFunction3(leaveAnimation))
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (onIonLoadingDidDismiss != null) __obj.updateDynamic("onIonLoadingDidDismiss")(js.Any.fromFunction1(onIonLoadingDidDismiss))
-    if (onIonLoadingDidPresent != null) __obj.updateDynamic("onIonLoadingDidPresent")(js.Any.fromFunction1(onIonLoadingDidPresent))
-    if (onIonLoadingWillDismiss != null) __obj.updateDynamic("onIonLoadingWillDismiss")(js.Any.fromFunction1(onIonLoadingWillDismiss))
-    if (onIonLoadingWillPresent != null) __obj.updateDynamic("onIonLoadingWillPresent")(js.Any.fromFunction1(onIonLoadingWillPresent))
-    if (!js.isUndefined(showBackdrop)) __obj.updateDynamic("showBackdrop")(showBackdrop.asInstanceOf[js.Any])
-    if (spinner != null) __obj.updateDynamic("spinner")(spinner.asInstanceOf[js.Any])
-    if (!js.isUndefined(translucent)) __obj.updateDynamic("translucent")(translucent.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonLoading]
   }
+  @scala.inline
+  implicit class IonLoadingOps[Self <: IonLoading] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackdropDismiss(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropDismiss")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackdropDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCssClass(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCssClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnterAnimation(
+      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterAnimation")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutEnterAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyboardClose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyboardClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLeaveAnimation(
+      value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveAnimation")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutLeaveAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leaveAnimation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: ios | md): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnIonLoadingDidDismiss(value: /* event */ CustomEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonLoadingDidDismiss")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnIonLoadingDidDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonLoadingDidDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnIonLoadingDidPresent(value: /* event */ CustomEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonLoadingDidPresent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnIonLoadingDidPresent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonLoadingDidPresent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnIonLoadingWillDismiss(value: /* event */ CustomEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonLoadingWillDismiss")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnIonLoadingWillDismiss: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonLoadingWillDismiss")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnIonLoadingWillPresent(value: /* event */ CustomEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonLoadingWillPresent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnIonLoadingWillPresent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onIonLoadingWillPresent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowBackdrop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showBackdrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowBackdrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showBackdrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpinner(value: SpinnerTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spinner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpinner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spinner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpinnerNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spinner")(null)
+        ret
+    }
+    @scala.inline
+    def withTranslucent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translucent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranslucent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translucent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

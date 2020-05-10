@@ -7,17 +7,31 @@ import scala.scalajs.js.annotation._
 /**
   * http://js.cytoscape.org/#collection/layout
   */
+@js.native
 trait LayoutDimensionOptions extends js.Object {
   // Boolean which changes whether label dimensions are included when calculating node dimensions
-  var nodeDimensionsIncludeLabels: Boolean
+  var nodeDimensionsIncludeLabels: Boolean = js.native
 }
 
 object LayoutDimensionOptions {
   @scala.inline
   def apply(nodeDimensionsIncludeLabels: Boolean): LayoutDimensionOptions = {
     val __obj = js.Dynamic.literal(nodeDimensionsIncludeLabels = nodeDimensionsIncludeLabels.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[LayoutDimensionOptions]
   }
+  @scala.inline
+  implicit class LayoutDimensionOptionsOps[Self <: LayoutDimensionOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNodeDimensionsIncludeLabels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDimensionsIncludeLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

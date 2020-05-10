@@ -3,15 +3,19 @@ package typingsSlinky.simonwepSelectionJs.mod
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.`class`
+import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.beforestart
 import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.boundaries
 import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.disableTouch
 import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.mode
+import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.move
 import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.scrollSpeedDivider
 import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.selectables
 import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.selectionAreaContainer
 import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.singleClick
+import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.start
 import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.startThreshold
 import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.startareas
+import typingsSlinky.simonwepSelectionJs.simonwepSelectionJsStrings.stop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +30,11 @@ trait Selection extends js.Object {
   def enable(): Unit = js.native
   def getSelection(): js.Array[Element] = js.native
   def keepSelection(): Unit = js.native
-  def off[E /* <: String */](
+  def off[E /* <: /* keyof @simonwep/selection-js.@simonwep/selection-js.SelectionEvents */ beforestart | start | move | stop */](
     ev: E,
     cb: /* import warning: importer.ImportType#apply Failed type conversion: @simonwep/selection-js.@simonwep/selection-js.SelectionEvents[E] */ js.Any
   ): this.type = js.native
-  def on[E /* <: String */](
+  def on[E /* <: /* keyof @simonwep/selection-js.@simonwep/selection-js.SelectionEvents */ beforestart | start | move | stop */](
     ev: E,
     cb: /* import warning: importer.ImportType#apply Failed type conversion: @simonwep/selection-js.@simonwep/selection-js.SelectionEvents[E] */ js.Any
   ): this.type = js.native

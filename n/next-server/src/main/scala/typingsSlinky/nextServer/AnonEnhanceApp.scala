@@ -8,21 +8,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEnhanceApp extends js.Object {
-  var enhanceApp: js.UndefOr[Enhancer[AppType]] = js.undefined
-  var enhanceComponent: js.UndefOr[Enhancer[NextComponentType[NextPageContext, js.Object, js.Object]]] = js.undefined
+  var enhanceApp: js.UndefOr[Enhancer[AppType]] = js.native
+  var enhanceComponent: js.UndefOr[Enhancer[NextComponentType[NextPageContext, js.Object, js.Object]]] = js.native
 }
 
 object AnonEnhanceApp {
   @scala.inline
-  def apply(
-    enhanceApp: AppType => AppType = null,
-    enhanceComponent: NextComponentType[NextPageContext, js.Object, js.Object] => NextComponentType[NextPageContext, js.Object, js.Object] = null
-  ): AnonEnhanceApp = {
+  def apply(): AnonEnhanceApp = {
     val __obj = js.Dynamic.literal()
-    if (enhanceApp != null) __obj.updateDynamic("enhanceApp")(js.Any.fromFunction1(enhanceApp))
-    if (enhanceComponent != null) __obj.updateDynamic("enhanceComponent")(js.Any.fromFunction1(enhanceComponent))
     __obj.asInstanceOf[AnonEnhanceApp]
   }
+  @scala.inline
+  implicit class AnonEnhanceAppOps[Self <: AnonEnhanceApp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnhanceApp(value: AppType => AppType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enhanceApp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutEnhanceApp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enhanceApp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnhanceComponent(
+      value: NextComponentType[NextPageContext, js.Object, js.Object] => NextComponentType[NextPageContext, js.Object, js.Object]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enhanceComponent")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutEnhanceComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enhanceComponent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

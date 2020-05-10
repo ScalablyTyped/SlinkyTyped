@@ -55,26 +55,113 @@ trait SchemaAppRestrictionsSchemaRestriction extends js.Object {
 
 object SchemaAppRestrictionsSchemaRestriction {
   @scala.inline
-  def apply(
-    defaultValue: SchemaAppRestrictionsSchemaRestrictionRestrictionValue = null,
-    description: String = null,
-    entry: js.Array[String] = null,
-    entryValue: js.Array[String] = null,
-    key: String = null,
-    nestedRestriction: js.Array[SchemaAppRestrictionsSchemaRestriction] = null,
-    restrictionType: String = null,
-    title: String = null
-  ): SchemaAppRestrictionsSchemaRestriction = {
+  def apply(): SchemaAppRestrictionsSchemaRestriction = {
     val __obj = js.Dynamic.literal()
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (entry != null) __obj.updateDynamic("entry")(entry.asInstanceOf[js.Any])
-    if (entryValue != null) __obj.updateDynamic("entryValue")(entryValue.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (nestedRestriction != null) __obj.updateDynamic("nestedRestriction")(nestedRestriction.asInstanceOf[js.Any])
-    if (restrictionType != null) __obj.updateDynamic("restrictionType")(restrictionType.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAppRestrictionsSchemaRestriction]
   }
+  @scala.inline
+  implicit class SchemaAppRestrictionsSchemaRestrictionOps[Self <: SchemaAppRestrictionsSchemaRestriction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultValue(value: SchemaAppRestrictionsSchemaRestrictionRestrictionValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntry(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entry")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntryValue(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entryValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntryValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entryValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNestedRestriction(value: js.Array[SchemaAppRestrictionsSchemaRestriction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedRestriction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNestedRestriction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nestedRestriction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestrictionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestrictionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restrictionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

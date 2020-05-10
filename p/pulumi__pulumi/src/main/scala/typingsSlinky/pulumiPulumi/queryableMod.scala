@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiPulumi
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.pulumiPulumi.pulumiPulumiStrings.getProvider
 import typingsSlinky.pulumiPulumi.pulumiPulumiStrings.urn
 import typingsSlinky.pulumiPulumi.resourceMod.Resource
@@ -24,7 +25,7 @@ object queryableMod extends js.Object {
   type ResolvedObject[T] = ModifyOptionalProperties[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: @pulumi/pulumi.@pulumi/pulumi/queryable.Resolved<T[P]>}
-    */ typingsSlinky.pulumiPulumi.pulumiPulumiStrings.ResolvedObject with T
+    */ typingsSlinky.pulumiPulumi.pulumiPulumiStrings.ResolvedObject with TopLevel[T]
   ]
   type ResolvedResource[T /* <: Resource */] = Omit[Resolved[T], urn | getProvider]
   type ResolvedSimple[T] = ResolvedObject[T] | ResolvedArray[js.Any] | T

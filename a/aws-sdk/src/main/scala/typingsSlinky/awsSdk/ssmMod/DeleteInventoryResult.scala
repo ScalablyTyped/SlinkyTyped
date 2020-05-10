@@ -22,16 +22,53 @@ trait DeleteInventoryResult extends js.Object {
 
 object DeleteInventoryResult {
   @scala.inline
-  def apply(
-    DeletionId: InventoryDeletionId = null,
-    DeletionSummary: InventoryDeletionSummary = null,
-    TypeName: InventoryItemTypeName = null
-  ): DeleteInventoryResult = {
+  def apply(): DeleteInventoryResult = {
     val __obj = js.Dynamic.literal()
-    if (DeletionId != null) __obj.updateDynamic("DeletionId")(DeletionId.asInstanceOf[js.Any])
-    if (DeletionSummary != null) __obj.updateDynamic("DeletionSummary")(DeletionSummary.asInstanceOf[js.Any])
-    if (TypeName != null) __obj.updateDynamic("TypeName")(TypeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteInventoryResult]
   }
+  @scala.inline
+  implicit class DeleteInventoryResultOps[Self <: DeleteInventoryResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeletionId(value: InventoryDeletionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeletionSummary(value: InventoryDeletionSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTypeName(value: InventoryItemTypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTypeName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TypeName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

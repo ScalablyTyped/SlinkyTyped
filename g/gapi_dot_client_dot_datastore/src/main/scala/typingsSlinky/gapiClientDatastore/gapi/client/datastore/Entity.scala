@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Entity extends js.Object {
   /**
     * The entity's key.
@@ -14,7 +15,7 @@ trait Entity extends js.Object {
     * An entity's kind is its key path's last element's kind,
     * or null if it has no key.
     */
-  var key: js.UndefOr[Key] = js.undefined
+  var key: js.UndefOr[Key] = js.native
   /**
     * The entity's properties.
     * The map's keys are property names.
@@ -23,16 +24,46 @@ trait Entity extends js.Object {
     * The name must not contain more than 500 characters.
     * The name cannot be `""`.
     */
-  var properties: js.UndefOr[Record[String, Value]] = js.undefined
+  var properties: js.UndefOr[Record[String, Value]] = js.native
 }
 
 object Entity {
   @scala.inline
-  def apply(key: Key = null, properties: Record[String, Value] = null): Entity = {
+  def apply(): Entity = {
     val __obj = js.Dynamic.literal()
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[Entity]
   }
+  @scala.inline
+  implicit class EntityOps[Self <: Entity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKey(value: Key): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: Record[String, Value]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

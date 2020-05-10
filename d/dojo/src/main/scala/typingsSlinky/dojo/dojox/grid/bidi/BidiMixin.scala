@@ -17,5 +17,6 @@ import scala.scalajs.js.annotation._
   * By default the same as the page direction.
   *
   */
+@js.native
 trait BidiMixin extends js.Object
 

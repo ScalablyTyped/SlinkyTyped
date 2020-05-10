@@ -6,32 +6,95 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAdditionalGuests extends js.Object {
-  var additionalGuests: js.UndefOr[integer] = js.undefined
-  var comment: js.UndefOr[String] = js.undefined
-  var displayName: js.UndefOr[String] = js.undefined
-  var email: String
-  var optional: js.UndefOr[Boolean] = js.undefined
-  var responseStatus: js.UndefOr[AttendeeResponseStatus] = js.undefined
+  var additionalGuests: js.UndefOr[integer] = js.native
+  var comment: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[String] = js.native
+  var email: String = js.native
+  var optional: js.UndefOr[Boolean] = js.native
+  var responseStatus: js.UndefOr[AttendeeResponseStatus] = js.native
 }
 
 object AnonAdditionalGuests {
   @scala.inline
-  def apply(
-    email: String,
-    additionalGuests: Int | Double = null,
-    comment: String = null,
-    displayName: String = null,
-    optional: js.UndefOr[Boolean] = js.undefined,
-    responseStatus: AttendeeResponseStatus = null
-  ): AnonAdditionalGuests = {
+  def apply(email: String): AnonAdditionalGuests = {
     val __obj = js.Dynamic.literal(email = email.asInstanceOf[js.Any])
-    if (additionalGuests != null) __obj.updateDynamic("additionalGuests")(additionalGuests.asInstanceOf[js.Any])
-    if (comment != null) __obj.updateDynamic("comment")(comment.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (!js.isUndefined(optional)) __obj.updateDynamic("optional")(optional.asInstanceOf[js.Any])
-    if (responseStatus != null) __obj.updateDynamic("responseStatus")(responseStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAdditionalGuests]
   }
+  @scala.inline
+  implicit class AnonAdditionalGuestsOps[Self <: AnonAdditionalGuests] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdditionalGuests(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalGuests")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdditionalGuests: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalGuests")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptional(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseStatus(value: AttendeeResponseStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

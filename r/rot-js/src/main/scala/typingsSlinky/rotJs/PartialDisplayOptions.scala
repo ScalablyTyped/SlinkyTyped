@@ -11,66 +11,262 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<rot-js.rot-js/lib/display/types.DisplayOptions> */
+@js.native
 trait PartialDisplayOptions extends js.Object {
-  var bg: js.UndefOr[String] = js.undefined
-  var border: js.UndefOr[Double] = js.undefined
-  var fg: js.UndefOr[String] = js.undefined
-  var fontFamily: js.UndefOr[String] = js.undefined
-  var fontSize: js.UndefOr[Double] = js.undefined
-  var fontStyle: js.UndefOr[String] = js.undefined
-  var forceSquareRatio: js.UndefOr[Boolean] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var layout: js.UndefOr[LayoutType] = js.undefined
-  var spacing: js.UndefOr[Double] = js.undefined
-  var tileColorize: js.UndefOr[Boolean] = js.undefined
-  var tileHeight: js.UndefOr[Double] = js.undefined
-  var tileMap: js.UndefOr[StringDictionary[js.Tuple2[Double, Double]]] = js.undefined
-  var tileSet: js.UndefOr[HTMLCanvasElement | HTMLImageElement | HTMLVideoElement | ImageBitmap] = js.undefined
-  var tileWidth: js.UndefOr[Double] = js.undefined
-  var transpose: js.UndefOr[Boolean] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var bg: js.UndefOr[String] = js.native
+  var border: js.UndefOr[Double] = js.native
+  var fg: js.UndefOr[String] = js.native
+  var fontFamily: js.UndefOr[String] = js.native
+  var fontSize: js.UndefOr[Double] = js.native
+  var fontStyle: js.UndefOr[String] = js.native
+  var forceSquareRatio: js.UndefOr[Boolean] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var layout: js.UndefOr[LayoutType] = js.native
+  var spacing: js.UndefOr[Double] = js.native
+  var tileColorize: js.UndefOr[Boolean] = js.native
+  var tileHeight: js.UndefOr[Double] = js.native
+  var tileMap: js.UndefOr[StringDictionary[js.Tuple2[Double, Double]]] = js.native
+  var tileSet: js.UndefOr[HTMLCanvasElement | HTMLImageElement | HTMLVideoElement | ImageBitmap] = js.native
+  var tileWidth: js.UndefOr[Double] = js.native
+  var transpose: js.UndefOr[Boolean] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object PartialDisplayOptions {
   @scala.inline
-  def apply(
-    bg: String = null,
-    border: Int | Double = null,
-    fg: String = null,
-    fontFamily: String = null,
-    fontSize: Int | Double = null,
-    fontStyle: String = null,
-    forceSquareRatio: js.UndefOr[Boolean] = js.undefined,
-    height: Int | Double = null,
-    layout: LayoutType = null,
-    spacing: Int | Double = null,
-    tileColorize: js.UndefOr[Boolean] = js.undefined,
-    tileHeight: Int | Double = null,
-    tileMap: StringDictionary[js.Tuple2[Double, Double]] = null,
-    tileSet: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement | ImageBitmap = null,
-    tileWidth: Int | Double = null,
-    transpose: js.UndefOr[Boolean] = js.undefined,
-    width: Int | Double = null
-  ): PartialDisplayOptions = {
+  def apply(): PartialDisplayOptions = {
     val __obj = js.Dynamic.literal()
-    if (bg != null) __obj.updateDynamic("bg")(bg.asInstanceOf[js.Any])
-    if (border != null) __obj.updateDynamic("border")(border.asInstanceOf[js.Any])
-    if (fg != null) __obj.updateDynamic("fg")(fg.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
-    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(forceSquareRatio)) __obj.updateDynamic("forceSquareRatio")(forceSquareRatio.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (spacing != null) __obj.updateDynamic("spacing")(spacing.asInstanceOf[js.Any])
-    if (!js.isUndefined(tileColorize)) __obj.updateDynamic("tileColorize")(tileColorize.asInstanceOf[js.Any])
-    if (tileHeight != null) __obj.updateDynamic("tileHeight")(tileHeight.asInstanceOf[js.Any])
-    if (tileMap != null) __obj.updateDynamic("tileMap")(tileMap.asInstanceOf[js.Any])
-    if (tileSet != null) __obj.updateDynamic("tileSet")(tileSet.asInstanceOf[js.Any])
-    if (tileWidth != null) __obj.updateDynamic("tileWidth")(tileWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(transpose)) __obj.updateDynamic("transpose")(transpose.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialDisplayOptions]
   }
+  @scala.inline
+  implicit class PartialDisplayOptionsOps[Self <: PartialDisplayOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBorder(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("border")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fg")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForceSquareRatio(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSquareRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForceSquareRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceSquareRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLayout(value: LayoutType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpacing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileColorize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileColorize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileColorize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileColorize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileMap(value: StringDictionary[js.Tuple2[Double, Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileSetHTMLVideoElement(value: HTMLVideoElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTileSetHTMLImageElement(value: HTMLImageElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTileSetHTMLCanvasElement(value: HTMLCanvasElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTileSet(value: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement | ImageBitmap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileSet: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSet")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranspose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transpose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranspose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transpose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,10 +14,29 @@ trait ClusterClientAuthentication extends js.Object {
 
 object ClusterClientAuthentication {
   @scala.inline
-  def apply(tls: ClusterClientAuthenticationTls = null): ClusterClientAuthentication = {
+  def apply(): ClusterClientAuthentication = {
     val __obj = js.Dynamic.literal()
-    if (tls != null) __obj.updateDynamic("tls")(tls.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterClientAuthentication]
   }
+  @scala.inline
+  implicit class ClusterClientAuthenticationOps[Self <: ClusterClientAuthentication] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTls(value: ClusterClientAuthenticationTls): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

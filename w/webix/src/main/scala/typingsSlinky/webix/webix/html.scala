@@ -28,13 +28,13 @@ trait html extends js.Object {
   def insertBefore(node: HTMLElement, before: HTMLElement): Unit = js.native
   def insertBefore(node: HTMLElement, before: HTMLElement, rescue: HTMLElement): Unit = js.native
   def locate(ev: Event_, name: String): String = js.native
-  def locate(ev: typingsSlinky.std.HTMLElement, name: String): String = js.native
+  def locate(ev: HTMLElement, name: String): String = js.native
   def offset(node: HTMLElement): js.Any = js.native
   def pos(ev: Event_): js.Any = js.native
   def posRelative(ev: Event_): js.Any = js.native
   def preventEvent(ev: Event_): Boolean = js.native
-  def remove(node: js.Array[typingsSlinky.std.HTMLElement]): Unit = js.native
-  def remove(node: typingsSlinky.std.HTMLElement): Unit = js.native
+  def remove(node: js.Array[HTMLElement]): Unit = js.native
+  def remove(node: HTMLElement): Unit = js.native
   def removeCss(node: HTMLElement, name: String): Unit = js.native
   def stopEvent(ev: Event_): Boolean = js.native
 }

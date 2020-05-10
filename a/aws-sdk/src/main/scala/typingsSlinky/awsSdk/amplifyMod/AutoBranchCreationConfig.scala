@@ -46,28 +46,125 @@ trait AutoBranchCreationConfig extends js.Object {
 
 object AutoBranchCreationConfig {
   @scala.inline
-  def apply(
-    basicAuthCredentials: BasicAuthCredentials = null,
-    buildSpec: BuildSpec = null,
-    enableAutoBuild: js.UndefOr[Boolean] = js.undefined,
-    enableBasicAuth: js.UndefOr[Boolean] = js.undefined,
-    enablePullRequestPreview: js.UndefOr[Boolean] = js.undefined,
-    environmentVariables: EnvironmentVariables = null,
-    framework: Framework = null,
-    pullRequestEnvironmentName: PullRequestEnvironmentName = null,
-    stage: Stage = null
-  ): AutoBranchCreationConfig = {
+  def apply(): AutoBranchCreationConfig = {
     val __obj = js.Dynamic.literal()
-    if (basicAuthCredentials != null) __obj.updateDynamic("basicAuthCredentials")(basicAuthCredentials.asInstanceOf[js.Any])
-    if (buildSpec != null) __obj.updateDynamic("buildSpec")(buildSpec.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableAutoBuild)) __obj.updateDynamic("enableAutoBuild")(enableAutoBuild.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableBasicAuth)) __obj.updateDynamic("enableBasicAuth")(enableBasicAuth.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablePullRequestPreview)) __obj.updateDynamic("enablePullRequestPreview")(enablePullRequestPreview.asInstanceOf[js.Any])
-    if (environmentVariables != null) __obj.updateDynamic("environmentVariables")(environmentVariables.asInstanceOf[js.Any])
-    if (framework != null) __obj.updateDynamic("framework")(framework.asInstanceOf[js.Any])
-    if (pullRequestEnvironmentName != null) __obj.updateDynamic("pullRequestEnvironmentName")(pullRequestEnvironmentName.asInstanceOf[js.Any])
-    if (stage != null) __obj.updateDynamic("stage")(stage.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutoBranchCreationConfig]
   }
+  @scala.inline
+  implicit class AutoBranchCreationConfigOps[Self <: AutoBranchCreationConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBasicAuthCredentials(value: BasicAuthCredentials): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuthCredentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasicAuthCredentials: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuthCredentials")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBuildSpec(value: BuildSpec): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildSpec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBuildSpec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildSpec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableAutoBuild(value: EnableAutoBuild): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutoBuild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableAutoBuild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutoBuild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableBasicAuth(value: EnableBasicAuth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBasicAuth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableBasicAuth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableBasicAuth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnablePullRequestPreview(value: EnablePullRequestPreview): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePullRequestPreview")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablePullRequestPreview: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePullRequestPreview")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentVariables(value: EnvironmentVariables): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentVariables: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFramework(value: Framework): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framework")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFramework: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("framework")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPullRequestEnvironmentName(value: PullRequestEnvironmentName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestEnvironmentName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPullRequestEnvironmentName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullRequestEnvironmentName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStage(value: Stage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

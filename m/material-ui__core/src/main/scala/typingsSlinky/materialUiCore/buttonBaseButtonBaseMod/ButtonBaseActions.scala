@@ -13,8 +13,21 @@ object ButtonBaseActions {
   @scala.inline
   def apply(focusVisible: () => Unit): ButtonBaseActions = {
     val __obj = js.Dynamic.literal(focusVisible = js.Any.fromFunction0(focusVisible))
-  
     __obj.asInstanceOf[ButtonBaseActions]
   }
+  @scala.inline
+  implicit class ButtonBaseActionsOps[Self <: ButtonBaseActions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFocusVisible(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

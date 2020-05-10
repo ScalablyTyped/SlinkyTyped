@@ -1,6 +1,5 @@
 package typingsSlinky.sinon.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +38,7 @@ trait SinonFake extends js.Object {
     * If an Error is passed as the val argument, then that will be the thrown value. If any other value is passed, then that will be used for the message property of the thrown Error.
     * @param val Returned value or throw value if an Error
     */
-  def throws(`val`: Error): SinonSpy = js.native
+  def throws(`val`: js.Error): SinonSpy = js.native
   /**
     * fake expects the last argument to be a callback and will invoke it with the given arguments.
     */

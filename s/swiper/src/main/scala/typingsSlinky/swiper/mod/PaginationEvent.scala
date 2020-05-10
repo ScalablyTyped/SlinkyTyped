@@ -12,10 +12,8 @@ trait PaginationEvent extends js.Object
 
 object PaginationEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def paginationRender: typingsSlinky.swiper.swiperStrings.paginationRender = "paginationRender".asInstanceOf[typingsSlinky.swiper.swiperStrings.paginationRender]
   @scala.inline
-  def paginationRender: typingsSlinky.swiper.swiperStrings.paginationRender = this.cast("paginationRender")
-  @scala.inline
-  def paginationUpdate: typingsSlinky.swiper.swiperStrings.paginationUpdate = this.cast("paginationUpdate")
+  def paginationUpdate: typingsSlinky.swiper.swiperStrings.paginationUpdate = "paginationUpdate".asInstanceOf[typingsSlinky.swiper.swiperStrings.paginationUpdate]
 }
 

@@ -8,27 +8,65 @@ import scala.scalajs.js.annotation._
 /**
   * Currently supported options for the $resource factory options argument.
   */
+@js.native
 trait IResourceOptions extends js.Object {
-  var isodatav4: js.UndefOr[Boolean] = js.undefined
-  var odata: js.UndefOr[AnonMethod] = js.undefined
+  var isodatav4: js.UndefOr[Boolean] = js.native
+  var odata: js.UndefOr[AnonMethod] = js.native
   /**
     * If true then the trailing slashes from any calculated URL will be stripped (defaults to true)
     */
-  var stripTrailingSlashes: js.UndefOr[Boolean] = js.undefined
+  var stripTrailingSlashes: js.UndefOr[Boolean] = js.native
 }
 
 object IResourceOptions {
   @scala.inline
-  def apply(
-    isodatav4: js.UndefOr[Boolean] = js.undefined,
-    odata: AnonMethod = null,
-    stripTrailingSlashes: js.UndefOr[Boolean] = js.undefined
-  ): IResourceOptions = {
+  def apply(): IResourceOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(isodatav4)) __obj.updateDynamic("isodatav4")(isodatav4.asInstanceOf[js.Any])
-    if (odata != null) __obj.updateDynamic("odata")(odata.asInstanceOf[js.Any])
-    if (!js.isUndefined(stripTrailingSlashes)) __obj.updateDynamic("stripTrailingSlashes")(stripTrailingSlashes.asInstanceOf[js.Any])
     __obj.asInstanceOf[IResourceOptions]
   }
+  @scala.inline
+  implicit class IResourceOptionsOps[Self <: IResourceOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsodatav4(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isodatav4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsodatav4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isodatav4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOdata(value: AnonMethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("odata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOdata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("odata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStripTrailingSlashes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripTrailingSlashes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStripTrailingSlashes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stripTrailingSlashes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -16,7 +16,7 @@ object listMod extends js.Object {
     var _insertNode: js.Any = js.native
     var _size: js.Any = js.native
     val first: js.UndefOr[LinkedListNode[T]] = js.native
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator: js.Function0[js.Iterator[T]] = js.native
     val last: js.UndefOr[LinkedListNode[T]] = js.native
     val size: Double = js.native

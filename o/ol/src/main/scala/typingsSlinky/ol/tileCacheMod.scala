@@ -11,14 +11,12 @@ object tileCacheMod extends js.Object {
   @js.native
   trait TileCache
     extends typingsSlinky.ol.lrucacheMod.default[js.Any] {
-    def expireCache(usedTiles: StringDictionary[typingsSlinky.ol.tileRangeMod.default]): Unit = js.native
+    def expireCache(usedTiles: StringDictionary[Boolean]): Unit = js.native
     def pruneExceptNewestZ(): Unit = js.native
   }
   
   @js.native
-  class default () extends TileCache {
-    def this(opt_highWaterMark: Double) = this()
-  }
+  class default () extends TileCache
   
 }
 

@@ -1,15 +1,16 @@
 package typingsSlinky.materialUi.components
 
+import typingsSlinky.materialUi.MaterialUI.SvgIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MapsLocalLaundryService
-  extends SharedApply_SvgIconProps1666625642[typingsSlinky.materialUi.svgIconsMod.MapsLocalLaundryService] {
+object MapsLocalLaundryService {
   @JSImport("material-ui/svg-icons", "MapsLocalLaundryService")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SvgIconProps): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.MapsLocalLaundryService] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.MapsLocalLaundryService](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MapsLocalLaundryService.type): SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.MapsLocalLaundryService] = new SharedBuilder_SvgIconProps_1073724525[typingsSlinky.materialUi.svgIconsMod.MapsLocalLaundryService](js.Array(this.component, js.Dictionary.empty))()
 }
 

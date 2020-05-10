@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonBarBorderRadius extends js.Object {
   /**
     * The bodrder color of bar.
@@ -13,7 +14,7 @@ trait AnonBarBorderRadius extends js.Object {
     * '#000'
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle.barBorderColor
     */
-  var barBorderColor: js.UndefOr[String] = js.undefined
+  var barBorderColor: js.UndefOr[String] = js.native
   /**
     * The radius of rounded corner.
     * Its unit is px.
@@ -27,14 +28,14 @@ trait AnonBarBorderRadius extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle.barBorderRadius
     */
-  var barBorderRadius: js.UndefOr[js.Array[_] | Double] = js.undefined
+  var barBorderRadius: js.UndefOr[js.Array[_] | Double] = js.native
   /**
     * The bodrder width of bar. defaults to have no border.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle.barBorderWidth
     */
-  var barBorderWidth: js.UndefOr[Double] = js.undefined
+  var barBorderWidth: js.UndefOr[Double] = js.native
   /**
     * Bar color..
     *
@@ -43,11 +44,11 @@ trait AnonBarBorderRadius extends js.Object {
     * "auto"
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle.color
     */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[String] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle.emphasis
     */
-  var emphasis: js.UndefOr[AnonBarBorderWidth] = js.undefined
+  var emphasis: js.UndefOr[AnonBarBorderWidth] = js.native
   /**
     * Opacity of the component.
     * Supports value from 0 to 1, and the component will not
@@ -56,7 +57,7 @@ trait AnonBarBorderRadius extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle.opacity
     */
-  var opacity: js.UndefOr[Double] = js.undefined
+  var opacity: js.UndefOr[Double] = js.native
   /**
     * Size of shadow blur.
     * This attribute should be used along with `shadowColor`,`shadowOffsetX`,
@@ -69,56 +70,163 @@ trait AnonBarBorderRadius extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle.shadowBlur
     */
-  var shadowBlur: js.UndefOr[Double] = js.undefined
+  var shadowBlur: js.UndefOr[Double] = js.native
   /**
     * Shadow color. Support same format as `color`.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle.shadowColor
     */
-  var shadowColor: js.UndefOr[String] = js.undefined
+  var shadowColor: js.UndefOr[String] = js.native
   /**
     * Offset distance on the horizontal direction of shadow.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle.shadowOffsetX
     */
-  var shadowOffsetX: js.UndefOr[Double] = js.undefined
+  var shadowOffsetX: js.UndefOr[Double] = js.native
   /**
     * Offset distance on the vertical direction of shadow.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle.shadowOffsetY
     */
-  var shadowOffsetY: js.UndefOr[Double] = js.undefined
+  var shadowOffsetY: js.UndefOr[Double] = js.native
 }
 
 object AnonBarBorderRadius {
   @scala.inline
-  def apply(
-    barBorderColor: String = null,
-    barBorderRadius: js.Array[_] | Double = null,
-    barBorderWidth: Int | Double = null,
-    color: String = null,
-    emphasis: AnonBarBorderWidth = null,
-    opacity: Int | Double = null,
-    shadowBlur: Int | Double = null,
-    shadowColor: String = null,
-    shadowOffsetX: Int | Double = null,
-    shadowOffsetY: Int | Double = null
-  ): AnonBarBorderRadius = {
+  def apply(): AnonBarBorderRadius = {
     val __obj = js.Dynamic.literal()
-    if (barBorderColor != null) __obj.updateDynamic("barBorderColor")(barBorderColor.asInstanceOf[js.Any])
-    if (barBorderRadius != null) __obj.updateDynamic("barBorderRadius")(barBorderRadius.asInstanceOf[js.Any])
-    if (barBorderWidth != null) __obj.updateDynamic("barBorderWidth")(barBorderWidth.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
-    if (shadowBlur != null) __obj.updateDynamic("shadowBlur")(shadowBlur.asInstanceOf[js.Any])
-    if (shadowColor != null) __obj.updateDynamic("shadowColor")(shadowColor.asInstanceOf[js.Any])
-    if (shadowOffsetX != null) __obj.updateDynamic("shadowOffsetX")(shadowOffsetX.asInstanceOf[js.Any])
-    if (shadowOffsetY != null) __obj.updateDynamic("shadowOffsetY")(shadowOffsetY.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonBarBorderRadius]
   }
+  @scala.inline
+  implicit class AnonBarBorderRadiusOps[Self <: AnonBarBorderRadius] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBarBorderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barBorderColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarBorderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barBorderColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarBorderRadius(value: js.Array[_] | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barBorderRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarBorderRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barBorderRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBarBorderWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barBorderWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBarBorderWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("barBorderWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmphasis(value: AnonBarBorderWidth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmphasis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowBlur(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowBlur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowBlur: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowBlur")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowOffsetX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowOffsetX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShadowOffsetY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShadowOffsetY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffsetY")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

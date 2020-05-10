@@ -10,21 +10,22 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jsoneditor.jsoneditorStrings.form
   - typingsSlinky.jsoneditor.jsoneditorStrings.code
   - typingsSlinky.jsoneditor.jsoneditorStrings.text
+  - typingsSlinky.jsoneditor.jsoneditorStrings.preview
 */
 trait JSONEditorMode extends js.Object
 
 object JSONEditorMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def code: typingsSlinky.jsoneditor.jsoneditorStrings.code = "code".asInstanceOf[typingsSlinky.jsoneditor.jsoneditorStrings.code]
   @scala.inline
-  def code: typingsSlinky.jsoneditor.jsoneditorStrings.code = this.cast("code")
+  def form: typingsSlinky.jsoneditor.jsoneditorStrings.form = "form".asInstanceOf[typingsSlinky.jsoneditor.jsoneditorStrings.form]
   @scala.inline
-  def form: typingsSlinky.jsoneditor.jsoneditorStrings.form = this.cast("form")
+  def preview: typingsSlinky.jsoneditor.jsoneditorStrings.preview = "preview".asInstanceOf[typingsSlinky.jsoneditor.jsoneditorStrings.preview]
   @scala.inline
-  def text: typingsSlinky.jsoneditor.jsoneditorStrings.text = this.cast("text")
+  def text: typingsSlinky.jsoneditor.jsoneditorStrings.text = "text".asInstanceOf[typingsSlinky.jsoneditor.jsoneditorStrings.text]
   @scala.inline
-  def tree: typingsSlinky.jsoneditor.jsoneditorStrings.tree = this.cast("tree")
+  def tree: typingsSlinky.jsoneditor.jsoneditorStrings.tree = "tree".asInstanceOf[typingsSlinky.jsoneditor.jsoneditorStrings.tree]
   @scala.inline
-  def view: typingsSlinky.jsoneditor.jsoneditorStrings.view = this.cast("view")
+  def view: typingsSlinky.jsoneditor.jsoneditorStrings.view = "view".asInstanceOf[typingsSlinky.jsoneditor.jsoneditorStrings.view]
 }
 

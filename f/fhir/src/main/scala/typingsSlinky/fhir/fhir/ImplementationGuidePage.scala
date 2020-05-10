@@ -7,97 +7,198 @@ import scala.scalajs.js.annotation._
 /**
   * Page/Section in the Guide
   */
+@js.native
 trait ImplementationGuidePage extends BackboneElement {
   /**
     * Contains extended information for property 'format'.
     */
-  var _format: js.UndefOr[Element] = js.undefined
+  var _format: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'kind'.
     */
-  var _kind: js.UndefOr[Element] = js.undefined
+  var _kind: js.UndefOr[Element] = js.native
   /**
     * Name of package to include
     */
   @JSName("package")
-  var _package: js.UndefOr[js.Array[Element | String]] = js.undefined
+  var _package: js.UndefOr[js.Array[Element | String]] = js.native
   /**
     * Contains extended information for property 'source'.
     */
-  var _source: js.UndefOr[Element] = js.undefined
+  var _source: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'title'.
     */
-  var _title: js.UndefOr[Element] = js.undefined
+  var _title: js.UndefOr[Element] = js.native
   /**
     * Contains extended information for property 'type'.
     */
-  var _type: js.UndefOr[js.Array[Element]] = js.undefined
+  var _type: js.UndefOr[js.Array[Element]] = js.native
   /**
     * Format of the page (e.g. html, markdown, etc.)
     */
-  var format: js.UndefOr[code] = js.undefined
+  var format: js.UndefOr[code] = js.native
   /**
     * page | example | list | include | directory | dictionary | toc | resource
     */
-  var kind: code
+  var kind: code = js.native
   /**
     * Nested Pages / Sections
     */
-  var page: js.UndefOr[js.Array[ImplementationGuidePage]] = js.undefined
+  var page: js.UndefOr[js.Array[ImplementationGuidePage]] = js.native
   /**
     * Where to find that page
     */
-  var source: uri
+  var source: uri = js.native
   /**
     * Short title shown for navigational assistance
     */
-  var title: String
+  var title: String = js.native
   /**
     * Kind of resource to include in the list
     */
-  var `type`: js.UndefOr[js.Array[code]] = js.undefined
+  var `type`: js.UndefOr[js.Array[code]] = js.native
 }
 
 object ImplementationGuidePage {
   @scala.inline
-  def apply(
-    kind: code,
-    source: uri,
-    title: String,
-    _fhir_comments: js.Array[Element] = null,
-    _format: Element = null,
-    _id: Element = null,
-    _kind: Element = null,
-    _package: js.Array[Element | String] = null,
-    _source: Element = null,
-    _title: Element = null,
-    _type: js.Array[Element] = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    format: code = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null,
-    page: js.Array[ImplementationGuidePage] = null,
-    `type`: js.Array[code] = null
-  ): ImplementationGuidePage = {
+  def apply(kind: code, source: uri, title: String): ImplementationGuidePage = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_format != null) __obj.updateDynamic("_format")(_format.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (_kind != null) __obj.updateDynamic("_kind")(_kind.asInstanceOf[js.Any])
-    if (_package != null) __obj.updateDynamic("package")(_package.asInstanceOf[js.Any])
-    if (_source != null) __obj.updateDynamic("_source")(_source.asInstanceOf[js.Any])
-    if (_title != null) __obj.updateDynamic("_title")(_title.asInstanceOf[js.Any])
-    if (_type != null) __obj.updateDynamic("_type")(_type.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImplementationGuidePage]
   }
+  @scala.inline
+  implicit class ImplementationGuidePageOps[Self <: ImplementationGuidePage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSource(value: uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_format(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_format: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_kind(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_kind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_package(value: js.Array[Element | String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("package")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_package: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("package")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_source(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_source: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_title(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_title: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def with_type(value: js.Array[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def without_type: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormat(value: code): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: js.Array[ImplementationGuidePage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: js.Array[code]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

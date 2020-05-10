@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Comment extends js.Object {
-  var assignment: js.UndefOr[Assignment] = js.undefined
-  var mentionedUsers: js.UndefOr[js.Array[User]] = js.undefined
-  var post: js.UndefOr[Post] = js.undefined
-  var suggestion: js.UndefOr[Suggestion] = js.undefined
+  var assignment: js.UndefOr[Assignment] = js.native
+  var mentionedUsers: js.UndefOr[js.Array[User]] = js.native
+  var post: js.UndefOr[Post] = js.native
+  var suggestion: js.UndefOr[Suggestion] = js.native
 }
 
 object Comment {
   @scala.inline
-  def apply(
-    assignment: Assignment = null,
-    mentionedUsers: js.Array[User] = null,
-    post: Post = null,
-    suggestion: Suggestion = null
-  ): Comment = {
+  def apply(): Comment = {
     val __obj = js.Dynamic.literal()
-    if (assignment != null) __obj.updateDynamic("assignment")(assignment.asInstanceOf[js.Any])
-    if (mentionedUsers != null) __obj.updateDynamic("mentionedUsers")(mentionedUsers.asInstanceOf[js.Any])
-    if (post != null) __obj.updateDynamic("post")(post.asInstanceOf[js.Any])
-    if (suggestion != null) __obj.updateDynamic("suggestion")(suggestion.asInstanceOf[js.Any])
     __obj.asInstanceOf[Comment]
   }
+  @scala.inline
+  implicit class CommentOps[Self <: Comment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssignment(value: Assignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssignment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("assignment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMentionedUsers(value: js.Array[User]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mentionedUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMentionedUsers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mentionedUsers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPost(value: Post): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("post")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestion(value: Suggestion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggestion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

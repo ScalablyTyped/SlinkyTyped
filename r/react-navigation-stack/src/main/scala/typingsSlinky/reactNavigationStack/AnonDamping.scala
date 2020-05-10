@@ -4,16 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonDamping extends js.Object {
-  var damping: Double
-  var duration: js.UndefOr[scala.Nothing] = js.undefined
-  var easing: js.UndefOr[scala.Nothing] = js.undefined
-  var mass: Double
-  var overshootClamping: Boolean
-  var restDisplacementThreshold: Double
-  var restSpeedThreshold: Double
-  var stiffness: Double
-  var timing: FnCallValueConfig
+  var damping: Double = js.native
+  var duration: js.UndefOr[scala.Nothing] = js.native
+  var easing: js.UndefOr[scala.Nothing] = js.native
+  var mass: Double = js.native
+  var overshootClamping: Boolean = js.native
+  var restDisplacementThreshold: Double = js.native
+  var restSpeedThreshold: Double = js.native
+  var stiffness: Double = js.native
+  var timing: FnCallValueConfig = js.native
 }
 
 object AnonDamping {
@@ -25,14 +26,84 @@ object AnonDamping {
     restDisplacementThreshold: Double,
     restSpeedThreshold: Double,
     stiffness: Double,
-    timing: FnCallValueConfig,
-    duration: js.UndefOr[scala.Nothing] = js.undefined,
-    easing: js.UndefOr[scala.Nothing] = js.undefined
+    timing: FnCallValueConfig
   ): AnonDamping = {
     val __obj = js.Dynamic.literal(damping = damping.asInstanceOf[js.Any], mass = mass.asInstanceOf[js.Any], overshootClamping = overshootClamping.asInstanceOf[js.Any], restDisplacementThreshold = restDisplacementThreshold.asInstanceOf[js.Any], restSpeedThreshold = restSpeedThreshold.asInstanceOf[js.Any], stiffness = stiffness.asInstanceOf[js.Any], timing = timing.asInstanceOf[js.Any])
-    if (!js.isUndefined(duration)) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (!js.isUndefined(easing)) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonDamping]
   }
+  @scala.inline
+  implicit class AnonDampingOps[Self <: AnonDamping] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDamping(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("damping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMass(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOvershootClamping(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overshootClamping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestDisplacementThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restDisplacementThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRestSpeedThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restSpeedThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStiffness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stiffness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTiming(value: FnCallValueConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDuration(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEasing(value: scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEasing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easing")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,7 +6,6 @@ import typingsSlinky.dialogflow.dialogflowStrings.text
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,8 +55,8 @@ object TelephonySynthesizeSpeech extends js.Object {
     */
   def decode(reader: Reader): TelephonySynthesizeSpeech = js.native
   def decode(reader: Reader, length: Double): TelephonySynthesizeSpeech = js.native
-  def decode(reader: Uint8Array): TelephonySynthesizeSpeech = js.native
-  def decode(reader: Uint8Array, length: Double): TelephonySynthesizeSpeech = js.native
+  def decode(reader: js.typedarray.Uint8Array): TelephonySynthesizeSpeech = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): TelephonySynthesizeSpeech = js.native
   /**
     * Decodes a TelephonySynthesizeSpeech message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -66,7 +65,7 @@ object TelephonySynthesizeSpeech extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): TelephonySynthesizeSpeech = js.native
-  def decodeDelimited(reader: Uint8Array): TelephonySynthesizeSpeech = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): TelephonySynthesizeSpeech = js.native
   /**
     * Encodes the specified TelephonySynthesizeSpeech message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.Intent.Message.TelephonySynthesizeSpeech.verify|verify} messages.
     * @param message TelephonySynthesizeSpeech message or plain object to encode

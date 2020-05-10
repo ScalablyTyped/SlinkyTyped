@@ -8,9 +8,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TransformStream[I, O] extends js.Object {
-  val readable: org.scalajs.dom.experimental.ReadableStream[O]
-  val writable: WritableStream[I]
+  val readable: org.scalajs.dom.experimental.ReadableStream[O] = js.native
+  val writable: WritableStream[I] = js.native
 }
 
 @JSGlobal("TransformStream")

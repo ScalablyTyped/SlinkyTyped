@@ -22,30 +22,28 @@ trait UserSelectProperty extends js.Object
 
 object UserSelectProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  def `-moz-none`: typingsSlinky.csstype.csstypeStrings.`-moz-none` = this.cast("-moz-none")
+  def `-moz-none`: typingsSlinky.csstype.csstypeStrings.`-moz-none` = "-moz-none".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-none`]
   @scala.inline
-  def all: typingsSlinky.csstype.csstypeStrings.all = this.cast("all")
+  def all: typingsSlinky.csstype.csstypeStrings.all = "all".asInstanceOf[typingsSlinky.csstype.csstypeStrings.all]
   @scala.inline
-  def auto: typingsSlinky.csstype.csstypeStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.csstype.csstypeStrings.auto = "auto".asInstanceOf[typingsSlinky.csstype.csstypeStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def contain: typingsSlinky.csstype.csstypeStrings.contain = "contain".asInstanceOf[typingsSlinky.csstype.csstypeStrings.contain]
   @scala.inline
-  def contain: typingsSlinky.csstype.csstypeStrings.contain = this.cast("contain")
+  def element: typingsSlinky.csstype.csstypeStrings.element = "element".asInstanceOf[typingsSlinky.csstype.csstypeStrings.element]
   @scala.inline
-  def element: typingsSlinky.csstype.csstypeStrings.element = this.cast("element")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def none: typingsSlinky.csstype.csstypeStrings.none = "none".asInstanceOf[typingsSlinky.csstype.csstypeStrings.none]
   @scala.inline
-  def none: typingsSlinky.csstype.csstypeStrings.none = this.cast("none")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def text: typingsSlinky.csstype.csstypeStrings.text = "text".asInstanceOf[typingsSlinky.csstype.csstypeStrings.text]
   @scala.inline
-  def text: typingsSlinky.csstype.csstypeStrings.text = this.cast("text")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

@@ -78,44 +78,221 @@ trait Connection extends js.Object {
 
 object Connection {
   @scala.inline
-  def apply(
-    awsDevice: AwsDevice = null,
-    awsDeviceV2: AwsDeviceV2 = null,
-    bandwidth: Bandwidth = null,
-    connectionId: ConnectionId = null,
-    connectionName: ConnectionName = null,
-    connectionState: ConnectionState = null,
-    hasLogicalRedundancy: HasLogicalRedundancy = null,
-    jumboFrameCapable: js.UndefOr[Boolean] = js.undefined,
-    lagId: LagId = null,
-    loaIssueTime: js.Date = null,
-    location: LocationCode = null,
-    ownerAccount: OwnerAccount = null,
-    partnerName: PartnerName = null,
-    providerName: ProviderName = null,
-    region: Region = null,
-    tags: TagList = null,
-    vlan: Int | Double = null
-  ): Connection = {
+  def apply(): Connection = {
     val __obj = js.Dynamic.literal()
-    if (awsDevice != null) __obj.updateDynamic("awsDevice")(awsDevice.asInstanceOf[js.Any])
-    if (awsDeviceV2 != null) __obj.updateDynamic("awsDeviceV2")(awsDeviceV2.asInstanceOf[js.Any])
-    if (bandwidth != null) __obj.updateDynamic("bandwidth")(bandwidth.asInstanceOf[js.Any])
-    if (connectionId != null) __obj.updateDynamic("connectionId")(connectionId.asInstanceOf[js.Any])
-    if (connectionName != null) __obj.updateDynamic("connectionName")(connectionName.asInstanceOf[js.Any])
-    if (connectionState != null) __obj.updateDynamic("connectionState")(connectionState.asInstanceOf[js.Any])
-    if (hasLogicalRedundancy != null) __obj.updateDynamic("hasLogicalRedundancy")(hasLogicalRedundancy.asInstanceOf[js.Any])
-    if (!js.isUndefined(jumboFrameCapable)) __obj.updateDynamic("jumboFrameCapable")(jumboFrameCapable.asInstanceOf[js.Any])
-    if (lagId != null) __obj.updateDynamic("lagId")(lagId.asInstanceOf[js.Any])
-    if (loaIssueTime != null) __obj.updateDynamic("loaIssueTime")(loaIssueTime.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (ownerAccount != null) __obj.updateDynamic("ownerAccount")(ownerAccount.asInstanceOf[js.Any])
-    if (partnerName != null) __obj.updateDynamic("partnerName")(partnerName.asInstanceOf[js.Any])
-    if (providerName != null) __obj.updateDynamic("providerName")(providerName.asInstanceOf[js.Any])
-    if (region != null) __obj.updateDynamic("region")(region.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (vlan != null) __obj.updateDynamic("vlan")(vlan.asInstanceOf[js.Any])
     __obj.asInstanceOf[Connection]
   }
+  @scala.inline
+  implicit class ConnectionOps[Self <: Connection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAwsDevice(value: AwsDevice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDevice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsDevice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDevice")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsDeviceV2(value: AwsDeviceV2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDeviceV2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsDeviceV2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awsDeviceV2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBandwidth(value: Bandwidth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBandwidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionId(value: ConnectionId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionName(value: ConnectionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionState(value: ConnectionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasLogicalRedundancy(value: HasLogicalRedundancy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasLogicalRedundancy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasLogicalRedundancy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasLogicalRedundancy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJumboFrameCapable(value: JumboFrameCapable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumboFrameCapable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJumboFrameCapable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jumboFrameCapable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLagId(value: LagId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lagId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLagId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lagId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoaIssueTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loaIssueTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoaIssueTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loaIssueTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: LocationCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerAccount(value: OwnerAccount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerAccount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerAccount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerAccount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartnerName(value: PartnerName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partnerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartnerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partnerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProviderName(value: ProviderName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProviderName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: Region): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVlan(value: VLAN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vlan")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVlan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vlan")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

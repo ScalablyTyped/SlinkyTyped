@@ -14,12 +14,10 @@ trait PaymentIntentPaymentMethodType extends js.Object
 
 object PaymentIntentPaymentMethodType {
   @scala.inline
-  def card: typingsSlinky.stripe.stripeStrings.card = this.cast("card")
+  def card: typingsSlinky.stripe.stripeStrings.card = "card".asInstanceOf[typingsSlinky.stripe.stripeStrings.card]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ideal: typingsSlinky.stripe.stripeStrings.ideal = "ideal".asInstanceOf[typingsSlinky.stripe.stripeStrings.ideal]
   @scala.inline
-  def ideal: typingsSlinky.stripe.stripeStrings.ideal = this.cast("ideal")
-  @scala.inline
-  def sepa_debit: typingsSlinky.stripe.stripeStrings.sepa_debit = this.cast("sepa_debit")
+  def sepa_debit: typingsSlinky.stripe.stripeStrings.sepa_debit = "sepa_debit".asInstanceOf[typingsSlinky.stripe.stripeStrings.sepa_debit]
 }
 

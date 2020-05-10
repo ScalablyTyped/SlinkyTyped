@@ -4,31 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RevoluteConstraintOptions extends ConstraintOptions {
-  var localPivotA: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
-  var localPivotB: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
-  var maxForce: js.UndefOr[Double] = js.undefined
-  var worldPivot: js.UndefOr[js.Tuple2[Double, Double]] = js.undefined
+  var localPivotA: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  var localPivotB: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  var maxForce: js.UndefOr[Double] = js.native
+  var worldPivot: js.UndefOr[js.Tuple2[Double, Double]] = js.native
 }
 
 object RevoluteConstraintOptions {
   @scala.inline
-  def apply(
-    collideConnected: js.UndefOr[Boolean] = js.undefined,
-    localPivotA: js.Tuple2[Double, Double] = null,
-    localPivotB: js.Tuple2[Double, Double] = null,
-    maxForce: Int | Double = null,
-    wakeUpBodies: js.UndefOr[Boolean] = js.undefined,
-    worldPivot: js.Tuple2[Double, Double] = null
-  ): RevoluteConstraintOptions = {
+  def apply(): RevoluteConstraintOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(collideConnected)) __obj.updateDynamic("collideConnected")(collideConnected.asInstanceOf[js.Any])
-    if (localPivotA != null) __obj.updateDynamic("localPivotA")(localPivotA.asInstanceOf[js.Any])
-    if (localPivotB != null) __obj.updateDynamic("localPivotB")(localPivotB.asInstanceOf[js.Any])
-    if (maxForce != null) __obj.updateDynamic("maxForce")(maxForce.asInstanceOf[js.Any])
-    if (!js.isUndefined(wakeUpBodies)) __obj.updateDynamic("wakeUpBodies")(wakeUpBodies.asInstanceOf[js.Any])
-    if (worldPivot != null) __obj.updateDynamic("worldPivot")(worldPivot.asInstanceOf[js.Any])
     __obj.asInstanceOf[RevoluteConstraintOptions]
   }
+  @scala.inline
+  implicit class RevoluteConstraintOptionsOps[Self <: RevoluteConstraintOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocalPivotA(value: js.Tuple2[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localPivotA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalPivotA: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localPivotA")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocalPivotB(value: js.Tuple2[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localPivotB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocalPivotB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localPivotB")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxForce(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxForce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxForce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxForce")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorldPivot(value: js.Tuple2[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worldPivot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorldPivot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worldPivot")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 /**
   * The options for the `slice` function.
   */
+@js.native
 trait IOptions extends js.Object {
   /**
     * The starting index of the slice, inclusive.
@@ -16,7 +17,7 @@ trait IOptions extends js.Object {
     *
     * The default is `0` if `step > 0` else `n - 1`.
     */
-  var start: js.UndefOr[Double] = js.undefined
+  var start: js.UndefOr[Double] = js.native
   /**
     * The step value for the slice.
     *
@@ -24,7 +25,7 @@ trait IOptions extends js.Object {
     *
     * The default is `1`.
     */
-  var step: js.UndefOr[Double] = js.undefined
+  var step: js.UndefOr[Double] = js.native
   /**
     * The stopping index of the slice, exclusive.
     *
@@ -33,17 +34,58 @@ trait IOptions extends js.Object {
     *
     * The default is `n` if `step > 0` else `-n - 1`.
     */
-  var stop: js.UndefOr[Double] = js.undefined
+  var stop: js.UndefOr[Double] = js.native
 }
 
 object IOptions {
   @scala.inline
-  def apply(start: Int | Double = null, step: Int | Double = null, stop: Int | Double = null): IOptions = {
+  def apply(): IOptions = {
     val __obj = js.Dynamic.literal()
-    if (start != null) __obj.updateDynamic("start")(start.asInstanceOf[js.Any])
-    if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
-    if (stop != null) __obj.updateDynamic("stop")(stop.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }
+  @scala.inline
+  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStep(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStep: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("step")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.treeKill
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def apply(pid: Double): Unit = js.native
-  def apply(pid: Double, callback: js.Function1[/* error */ js.UndefOr[Error], Unit]): Unit = js.native
+  def apply(pid: Double, callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def apply(pid: Double, signal: String): Unit = js.native
   def apply(pid: Double, signal: String, callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def apply(pid: Double, signal: Double): Unit = js.native

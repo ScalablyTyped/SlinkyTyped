@@ -39,6 +39,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TypeofwebViewRequest extends js.Object {
   /**
     * Adds a cookie to the request or overrides a cookie, in case another cookie of the same name exists already.
@@ -47,7 +48,7 @@ trait TypeofwebViewRequest extends js.Object {
   var AddRequestCookie: Instantiable1[
     /* parameters */ AddCookie[RequestCookie], 
     typingsSlinky.chromeApps.chrome.webViewRequest.AddRequestCookie
-  ]
+  ] = js.native
   /**
     * Adds a cookie to the response or overrides a cookie, in case another cookie of the same name exists already.
     * Note that it is preferred to use the Cookies API because this is computationally less expensive.
@@ -55,7 +56,7 @@ trait TypeofwebViewRequest extends js.Object {
   var AddResponseCookie: Instantiable1[
     /* parameters */ AddCookie[ResponseCookie], 
     typingsSlinky.chromeApps.chrome.webViewRequest.AddResponseCookie
-  ]
+  ] = js.native
   /**
     * Adds the response header to the response of this web request.
     * As multiple response headers may share the same name,
@@ -65,9 +66,9 @@ trait TypeofwebViewRequest extends js.Object {
   var AddResponseHeader: Instantiable1[
     /* parameters */ AddResponseHeaderParams, 
     typingsSlinky.chromeApps.chrome.webViewRequest.AddResponseHeader
-  ]
+  ] = js.native
   /** Declarative event action that cancels a network request. */
-  var CancelRequest: Instantiable0[typingsSlinky.chromeApps.chrome.webViewRequest.CancelRequest]
+  var CancelRequest: Instantiable0[typingsSlinky.chromeApps.chrome.webViewRequest.CancelRequest] = js.native
   /**
     * Edits one or more cookies of request.
     * Note that it is preferred to use the Cookies API because this is computationally less expensive.
@@ -75,7 +76,7 @@ trait TypeofwebViewRequest extends js.Object {
   var EditRequestCookie: Instantiable1[
     /* parameters */ EditCookieParams[RequestCookie, RequestCookie], 
     typingsSlinky.chromeApps.chrome.webViewRequest.EditRequestCookie
-  ]
+  ] = js.native
   /**
     * Edits one or more cookies of response.
     * Note that it is preferred to use the Cookies API because this is computationally less expensive.
@@ -83,14 +84,14 @@ trait TypeofwebViewRequest extends js.Object {
   var EditResponseCookie: Instantiable1[
     /* parameter */ EditCookieParams[FilterResponseCookie, ResponseCookie], 
     typingsSlinky.chromeApps.chrome.webViewRequest.EditResponseCookie
-  ]
+  ] = js.native
   /**
     * Masks all rules that match the specified criteria.
     */
   var IgnoreRules: Instantiable1[
     /* parameters */ IgnoreRulesParams, 
     typingsSlinky.chromeApps.chrome.webViewRequest.IgnoreRules
-  ]
+  ] = js.native
   /**
     * Redirects a request by applying a regular expression on the URL.
     * The regular expressions use the RE2 syntax.
@@ -99,16 +100,16 @@ trait TypeofwebViewRequest extends js.Object {
   var RedirectByRegEx: Instantiable1[
     /* parameters */ RedirectByRegExParams, 
     typingsSlinky.chromeApps.chrome.webViewRequest.RedirectByRegEx
-  ]
+  ] = js.native
   /** Declarative event action that redirects a network request.  */
   var RedirectRequest: Instantiable1[
     /* parameters */ RedirectRequestParams, 
     typingsSlinky.chromeApps.chrome.webViewRequest.RedirectRequest
-  ]
+  ] = js.native
   /** Declarative event action that redirects a network request to an empty document. */
-  var RedirectToEmptyDocument: Instantiable0[typingsSlinky.chromeApps.chrome.webViewRequest.RedirectToEmptyDocument]
+  var RedirectToEmptyDocument: Instantiable0[typingsSlinky.chromeApps.chrome.webViewRequest.RedirectToEmptyDocument] = js.native
   /** Declarative event action that redirects a network request to a transparent image. */
-  var RedirectToTransparentImage: Instantiable0[typingsSlinky.chromeApps.chrome.webViewRequest.RedirectToTransparentImage]
+  var RedirectToTransparentImage: Instantiable0[typingsSlinky.chromeApps.chrome.webViewRequest.RedirectToTransparentImage] = js.native
   /**
     * Removes one or more cookies of request.
     * Note that it is preferred to use the Cookies API because this is computationally less expensive.
@@ -116,7 +117,7 @@ trait TypeofwebViewRequest extends js.Object {
   var RemoveRequestCookie: Instantiable1[
     /* parameters */ RemoveCookieParams[RequestCookie], 
     typingsSlinky.chromeApps.chrome.webViewRequest.RemoveRequestCookie
-  ]
+  ] = js.native
   /**
     * Removes the request header of the specified name.
     * Do not use SetRequestHeader and RemoveRequestHeader with
@@ -126,7 +127,7 @@ trait TypeofwebViewRequest extends js.Object {
   var RemoveRequestHeader: Instantiable1[
     /* parameters */ RemoveRequestHeaderParams, 
     typingsSlinky.chromeApps.chrome.webViewRequest.RemoveRequestHeader
-  ]
+  ] = js.native
   /**
     * Removes one or more cookies of response.
     * Note that it is preferred to use the Cookies API because this is computationally less expensive.
@@ -134,28 +135,28 @@ trait TypeofwebViewRequest extends js.Object {
   var RemoveResponseCookie: Instantiable1[
     /* parameters */ RemoveCookieParams[FilterResponseCookie], 
     typingsSlinky.chromeApps.chrome.webViewRequest.RemoveResponseCookie
-  ]
+  ] = js.native
   /**
     * Removes all response headers of the specified names and values.
     */
   var RemoveResponseHeader: Instantiable1[
     /* parameters */ RemoveResponseHeaderParams, 
     typingsSlinky.chromeApps.chrome.webViewRequest.RemoveResponseHeader
-  ]
+  ] = js.native
   /**
     * @description Matches network events by various criteria.
     */
   var RequestMatcher: Instantiable1[
     js.UndefOr[/* parameters */ RequestMatcherFields], 
     typingsSlinky.chromeApps.chrome.webViewRequest.RequestMatcher
-  ]
+  ] = js.native
   /**
     * Triggers the webviewWebRequest.*OnMessageEvent* event which are used in webviews.
     */
   var SendMessageToExtension: Instantiable1[
     /* parameters */ SendMessageParams, 
     typingsSlinky.chromeApps.chrome.webViewRequest.SendMessageToExtension
-  ]
+  ] = js.native
   /**
     * Sets the request header of the specified name to the specified value.
     * If a header with the specified name did not exist before, a new one is created.
@@ -165,7 +166,7 @@ trait TypeofwebViewRequest extends js.Object {
   var SetRequestHeader: Instantiable1[
     /* parameters */ SetRequestHeaderParams, 
     typingsSlinky.chromeApps.chrome.webViewRequest.SetRequestHeader
-  ]
+  ] = js.native
 }
 
 object TypeofwebViewRequest {
@@ -194,8 +195,132 @@ object TypeofwebViewRequest {
     SetRequestHeader: Instantiable1[/* parameters */ SetRequestHeaderParams, SetRequestHeader]
   ): TypeofwebViewRequest = {
     val __obj = js.Dynamic.literal(AddRequestCookie = AddRequestCookie.asInstanceOf[js.Any], AddResponseCookie = AddResponseCookie.asInstanceOf[js.Any], AddResponseHeader = AddResponseHeader.asInstanceOf[js.Any], CancelRequest = CancelRequest.asInstanceOf[js.Any], EditRequestCookie = EditRequestCookie.asInstanceOf[js.Any], EditResponseCookie = EditResponseCookie.asInstanceOf[js.Any], IgnoreRules = IgnoreRules.asInstanceOf[js.Any], RedirectByRegEx = RedirectByRegEx.asInstanceOf[js.Any], RedirectRequest = RedirectRequest.asInstanceOf[js.Any], RedirectToEmptyDocument = RedirectToEmptyDocument.asInstanceOf[js.Any], RedirectToTransparentImage = RedirectToTransparentImage.asInstanceOf[js.Any], RemoveRequestCookie = RemoveRequestCookie.asInstanceOf[js.Any], RemoveRequestHeader = RemoveRequestHeader.asInstanceOf[js.Any], RemoveResponseCookie = RemoveResponseCookie.asInstanceOf[js.Any], RemoveResponseHeader = RemoveResponseHeader.asInstanceOf[js.Any], RequestMatcher = RequestMatcher.asInstanceOf[js.Any], SendMessageToExtension = SendMessageToExtension.asInstanceOf[js.Any], SetRequestHeader = SetRequestHeader.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypeofwebViewRequest]
   }
+  @scala.inline
+  implicit class TypeofwebViewRequestOps[Self <: TypeofwebViewRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddRequestCookie(value: Instantiable1[/* parameters */ AddCookie[RequestCookie], AddRequestCookie]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddRequestCookie")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddResponseCookie(value: Instantiable1[/* parameters */ AddCookie[ResponseCookie], AddResponseCookie]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddResponseCookie")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddResponseHeader(value: Instantiable1[/* parameters */ AddResponseHeaderParams, AddResponseHeader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddResponseHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCancelRequest(value: Instantiable0[CancelRequest]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CancelRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEditRequestCookie(
+      value: Instantiable1[/* parameters */ EditCookieParams[RequestCookie, RequestCookie], EditRequestCookie]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EditRequestCookie")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEditResponseCookie(
+      value: Instantiable1[
+          /* parameter */ EditCookieParams[FilterResponseCookie, ResponseCookie], 
+          EditResponseCookie
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EditResponseCookie")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIgnoreRules(value: Instantiable1[/* parameters */ IgnoreRulesParams, IgnoreRules]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IgnoreRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRedirectByRegEx(value: Instantiable1[/* parameters */ RedirectByRegExParams, RedirectByRegEx]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectByRegEx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRedirectRequest(value: Instantiable1[/* parameters */ RedirectRequestParams, RedirectRequest]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRedirectToEmptyDocument(value: Instantiable0[RedirectToEmptyDocument]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectToEmptyDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRedirectToTransparentImage(value: Instantiable0[RedirectToTransparentImage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RedirectToTransparentImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveRequestCookie(value: Instantiable1[/* parameters */ RemoveCookieParams[RequestCookie], RemoveRequestCookie]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveRequestCookie")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveRequestHeader(value: Instantiable1[/* parameters */ RemoveRequestHeaderParams, RemoveRequestHeader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveRequestHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveResponseCookie(
+      value: Instantiable1[/* parameters */ RemoveCookieParams[FilterResponseCookie], RemoveResponseCookie]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveResponseCookie")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveResponseHeader(value: Instantiable1[/* parameters */ RemoveResponseHeaderParams, RemoveResponseHeader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveResponseHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequestMatcher(value: Instantiable1[js.UndefOr[/* parameters */ RequestMatcherFields], RequestMatcher]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestMatcher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSendMessageToExtension(value: Instantiable1[/* parameters */ SendMessageParams, SendMessageToExtension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SendMessageToExtension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetRequestHeader(value: Instantiable1[/* parameters */ SetRequestHeaderParams, SetRequestHeader]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetRequestHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

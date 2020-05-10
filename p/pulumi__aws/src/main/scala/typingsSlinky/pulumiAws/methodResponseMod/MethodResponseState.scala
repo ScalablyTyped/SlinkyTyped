@@ -30,7 +30,7 @@ trait MethodResponseState extends js.Object {
   /**
     * The ID of the associated REST API
     */
-  val restApi: js.UndefOr[Input[RestApi]] = js.native
+  val restApi: js.UndefOr[Input[String | RestApi]] = js.native
   /**
     * The HTTP status code
     */
@@ -39,22 +39,89 @@ trait MethodResponseState extends js.Object {
 
 object MethodResponseState {
   @scala.inline
-  def apply(
-    httpMethod: Input[String] = null,
-    resourceId: Input[String] = null,
-    responseModels: Input[StringDictionary[Input[String]]] = null,
-    responseParameters: Input[StringDictionary[Input[Boolean]]] = null,
-    restApi: Input[RestApi] = null,
-    statusCode: Input[String] = null
-  ): MethodResponseState = {
+  def apply(): MethodResponseState = {
     val __obj = js.Dynamic.literal()
-    if (httpMethod != null) __obj.updateDynamic("httpMethod")(httpMethod.asInstanceOf[js.Any])
-    if (resourceId != null) __obj.updateDynamic("resourceId")(resourceId.asInstanceOf[js.Any])
-    if (responseModels != null) __obj.updateDynamic("responseModels")(responseModels.asInstanceOf[js.Any])
-    if (responseParameters != null) __obj.updateDynamic("responseParameters")(responseParameters.asInstanceOf[js.Any])
-    if (restApi != null) __obj.updateDynamic("restApi")(restApi.asInstanceOf[js.Any])
-    if (statusCode != null) __obj.updateDynamic("statusCode")(statusCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[MethodResponseState]
   }
+  @scala.inline
+  implicit class MethodResponseStateOps[Self <: MethodResponseState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHttpMethod(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHttpMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("httpMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseModels(value: Input[StringDictionary[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseModels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseModels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseModels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseParameters(value: Input[StringDictionary[Input[Boolean]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseParameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestApi(value: Input[String | RestApi]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestApi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restApi")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatusCode(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatusCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.antd.utilsMod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.antd.affixMod.default
-import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

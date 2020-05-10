@@ -1,14 +1,11 @@
 package typingsSlinky.reactDraftWysiwyg.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactDraftWysiwyg.mod.ContentBlock
 import typingsSlinky.reactDraftWysiwyg.mod.EditorProps
@@ -19,104 +16,110 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Editor
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDraftWysiwyg.mod.Editor] {
+object Editor {
   @JSImport("react-draft-wysiwyg", "Editor")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: placeholder, readOnly, spellCheck, tabIndex */
-  def apply(
-    ariaActiveDescendantID: String = null,
-    ariaAutoComplete: String = null,
-    ariaDescribedBy: String = null,
-    ariaExpanded: String = null,
-    ariaHasPopup: String = null,
-    ariaLabel: String = null,
-    ariaOwneeID: String = null,
-    contentState: RawDraftContentState = null,
-    customBlockRenderFunc: /* block */ ContentBlock => _ = null,
-    customDecorators: js.Array[js.Object] = null,
-    customStyleMap: js.Object = null,
-    defaultContentState: RawDraftContentState = null,
-    defaultEditorState: EditorState = null,
-    editorClassName: String = null,
-    editorRef: /* ref */ js.Object => Unit = null,
-    editorState: EditorState = null,
-    editorStyle: CSSProperties = null,
-    handlePastedText: (/* text */ String, /* html */ String, /* editorState */ EditorState, /* onChange */ js.Function1[/* editorState */ EditorState, Unit]) => Boolean = null,
-    hashtag: js.Object = null,
-    initialContentState: RawDraftContentState = null,
-    locale: String = null,
-    localization: js.Object = null,
-    mention: js.Object = null,
-    onBlur: SyntheticEvent[EventTarget with js.Object, Event_] => Unit = null,
-    onChange: /* contentState */ RawDraftContentState => Unit = null,
-    onContentStateChange: /* contentState */ RawDraftContentState => Unit = null,
-    onEditorStateChange: /* editorState */ EditorState => Unit = null,
-    onFocus: SyntheticEvent[EventTarget with js.Object, Event_] => Unit = null,
-    onTab: SyntheticKeyboardEvent[js.Object] => Unit = null,
-    stripPastedStyles: js.UndefOr[Boolean] = js.undefined,
-    textAlignment: String = null,
-    toolbar: js.Object = null,
-    toolbarClassName: String = null,
-    toolbarCustomButtons: js.Array[ReactElement] = null,
-    toolbarHidden: js.UndefOr[Boolean] = js.undefined,
-    toolbarOnFocus: js.UndefOr[Boolean] = js.undefined,
-    toolbarStyle: js.Object = null,
-    uploadCallback: /* file */ js.Object => js.Promise[js.Object] = null,
-    wrapperClassName: String = null,
-    wrapperId: Int | Double = null,
-    wrapperStyle: CSSProperties = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactDraftWysiwyg.mod.Editor] = {
-    val __obj = js.Dynamic.literal()
-    if (ariaActiveDescendantID != null) __obj.updateDynamic("ariaActiveDescendantID")(ariaActiveDescendantID.asInstanceOf[js.Any])
-    if (ariaAutoComplete != null) __obj.updateDynamic("ariaAutoComplete")(ariaAutoComplete.asInstanceOf[js.Any])
-    if (ariaDescribedBy != null) __obj.updateDynamic("ariaDescribedBy")(ariaDescribedBy.asInstanceOf[js.Any])
-    if (ariaExpanded != null) __obj.updateDynamic("ariaExpanded")(ariaExpanded.asInstanceOf[js.Any])
-    if (ariaHasPopup != null) __obj.updateDynamic("ariaHasPopup")(ariaHasPopup.asInstanceOf[js.Any])
-    if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
-    if (ariaOwneeID != null) __obj.updateDynamic("ariaOwneeID")(ariaOwneeID.asInstanceOf[js.Any])
-    if (contentState != null) __obj.updateDynamic("contentState")(contentState.asInstanceOf[js.Any])
-    if (customBlockRenderFunc != null) __obj.updateDynamic("customBlockRenderFunc")(js.Any.fromFunction1(customBlockRenderFunc))
-    if (customDecorators != null) __obj.updateDynamic("customDecorators")(customDecorators.asInstanceOf[js.Any])
-    if (customStyleMap != null) __obj.updateDynamic("customStyleMap")(customStyleMap.asInstanceOf[js.Any])
-    if (defaultContentState != null) __obj.updateDynamic("defaultContentState")(defaultContentState.asInstanceOf[js.Any])
-    if (defaultEditorState != null) __obj.updateDynamic("defaultEditorState")(defaultEditorState.asInstanceOf[js.Any])
-    if (editorClassName != null) __obj.updateDynamic("editorClassName")(editorClassName.asInstanceOf[js.Any])
-    if (editorRef != null) __obj.updateDynamic("editorRef")(js.Any.fromFunction1(editorRef))
-    if (editorState != null) __obj.updateDynamic("editorState")(editorState.asInstanceOf[js.Any])
-    if (editorStyle != null) __obj.updateDynamic("editorStyle")(editorStyle.asInstanceOf[js.Any])
-    if (handlePastedText != null) __obj.updateDynamic("handlePastedText")(js.Any.fromFunction4(handlePastedText))
-    if (hashtag != null) __obj.updateDynamic("hashtag")(hashtag.asInstanceOf[js.Any])
-    if (initialContentState != null) __obj.updateDynamic("initialContentState")(initialContentState.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (localization != null) __obj.updateDynamic("localization")(localization.asInstanceOf[js.Any])
-    if (mention != null) __obj.updateDynamic("mention")(mention.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onContentStateChange != null) __obj.updateDynamic("onContentStateChange")(js.Any.fromFunction1(onContentStateChange))
-    if (onEditorStateChange != null) __obj.updateDynamic("onEditorStateChange")(js.Any.fromFunction1(onEditorStateChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onTab != null) __obj.updateDynamic("onTab")(js.Any.fromFunction1(onTab))
-    if (!js.isUndefined(stripPastedStyles)) __obj.updateDynamic("stripPastedStyles")(stripPastedStyles.asInstanceOf[js.Any])
-    if (textAlignment != null) __obj.updateDynamic("textAlignment")(textAlignment.asInstanceOf[js.Any])
-    if (toolbar != null) __obj.updateDynamic("toolbar")(toolbar.asInstanceOf[js.Any])
-    if (toolbarClassName != null) __obj.updateDynamic("toolbarClassName")(toolbarClassName.asInstanceOf[js.Any])
-    if (toolbarCustomButtons != null) __obj.updateDynamic("toolbarCustomButtons")(toolbarCustomButtons.asInstanceOf[js.Any])
-    if (!js.isUndefined(toolbarHidden)) __obj.updateDynamic("toolbarHidden")(toolbarHidden.asInstanceOf[js.Any])
-    if (!js.isUndefined(toolbarOnFocus)) __obj.updateDynamic("toolbarOnFocus")(toolbarOnFocus.asInstanceOf[js.Any])
-    if (toolbarStyle != null) __obj.updateDynamic("toolbarStyle")(toolbarStyle.asInstanceOf[js.Any])
-    if (uploadCallback != null) __obj.updateDynamic("uploadCallback")(js.Any.fromFunction1(uploadCallback))
-    if (wrapperClassName != null) __obj.updateDynamic("wrapperClassName")(wrapperClassName.asInstanceOf[js.Any])
-    if (wrapperId != null) __obj.updateDynamic("wrapperId")(wrapperId.asInstanceOf[js.Any])
-    if (wrapperStyle != null) __obj.updateDynamic("wrapperStyle")(wrapperStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactDraftWysiwyg.mod.Editor] {
+    @scala.inline
+    def ariaActiveDescendantID(value: String): this.type = set("ariaActiveDescendantID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaAutoComplete(value: String): this.type = set("ariaAutoComplete", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaDescribedBy(value: String): this.type = set("ariaDescribedBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaExpanded(value: String): this.type = set("ariaExpanded", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaHasPopup(value: String): this.type = set("ariaHasPopup", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaLabel(value: String): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def ariaOwneeID(value: String): this.type = set("ariaOwneeID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def contentState(value: RawDraftContentState): this.type = set("contentState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customBlockRenderFunc(value: /* block */ ContentBlock => _): this.type = set("customBlockRenderFunc", js.Any.fromFunction1(value))
+    @scala.inline
+    def customDecorators(value: js.Array[js.Object]): this.type = set("customDecorators", value.asInstanceOf[js.Any])
+    @scala.inline
+    def customStyleMap(value: js.Object): this.type = set("customStyleMap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultContentState(value: RawDraftContentState): this.type = set("defaultContentState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultEditorState(value: EditorState): this.type = set("defaultEditorState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editorClassName(value: String): this.type = set("editorClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editorRef(value: /* ref */ js.Object => Unit): this.type = set("editorRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def editorState(value: EditorState): this.type = set("editorState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def editorStyle(value: CSSProperties): this.type = set("editorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def handlePastedText(
+      value: (/* text */ String, /* html */ String, /* editorState */ EditorState, /* onChange */ js.Function1[/* editorState */ EditorState, Unit]) => Boolean
+    ): this.type = set("handlePastedText", js.Any.fromFunction4(value))
+    @scala.inline
+    def hashtag(value: js.Object): this.type = set("hashtag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialContentState(value: RawDraftContentState): this.type = set("initialContentState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def localization(value: js.Object): this.type = set("localization", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mention(value: js.Object): this.type = set("mention", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: SyntheticEvent[EventTarget with js.Object, Event_] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: /* contentState */ RawDraftContentState => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onContentStateChange(value: /* contentState */ RawDraftContentState => Unit): this.type = set("onContentStateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEditorStateChange(value: /* editorState */ EditorState => Unit): this.type = set("onEditorStateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(value: SyntheticEvent[EventTarget with js.Object, Event_] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTab(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onTab", js.Any.fromFunction1(value))
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def spellCheck(value: Boolean): this.type = set("spellCheck", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stripPastedStyles(value: Boolean): this.type = set("stripPastedStyles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def textAlignment(value: String): this.type = set("textAlignment", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbar(value: js.Object): this.type = set("toolbar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbarClassName(value: String): this.type = set("toolbarClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbarCustomButtons(value: js.Array[ReactElement]): this.type = set("toolbarCustomButtons", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbarHidden(value: Boolean): this.type = set("toolbarHidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbarOnFocus(value: Boolean): this.type = set("toolbarOnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def toolbarStyle(value: js.Object): this.type = set("toolbarStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def uploadCallback(value: /* file */ js.Object => js.Promise[js.Object]): this.type = set("uploadCallback", js.Any.fromFunction1(value))
+    @scala.inline
+    def wrapperClassName(value: String): this.type = set("wrapperClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperId(value: Double): this.type = set("wrapperId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperStyle(value: CSSProperties): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDraftWysiwyg.mod.Editor] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDraftWysiwyg.mod.Editor](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = EditorProps
+  
+  def withProps(p: EditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Editor.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -14,10 +14,29 @@ trait SkipWaitTimeForInstanceTerminationInput extends js.Object {
 
 object SkipWaitTimeForInstanceTerminationInput {
   @scala.inline
-  def apply(deploymentId: DeploymentId = null): SkipWaitTimeForInstanceTerminationInput = {
+  def apply(): SkipWaitTimeForInstanceTerminationInput = {
     val __obj = js.Dynamic.literal()
-    if (deploymentId != null) __obj.updateDynamic("deploymentId")(deploymentId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkipWaitTimeForInstanceTerminationInput]
   }
+  @scala.inline
+  implicit class SkipWaitTimeForInstanceTerminationInputOps[Self <: SkipWaitTimeForInstanceTerminationInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeploymentId(value: DeploymentId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deploymentId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

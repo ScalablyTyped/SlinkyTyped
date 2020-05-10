@@ -12,10 +12,8 @@ trait FileBrowserHandleExecuteId extends js.Object
 
 object FileBrowserHandleExecuteId {
   @scala.inline
-  def ReadOnly: typingsSlinky.chromeApps.chromeAppsStrings.ReadOnly = this.cast("ReadOnly")
+  def ReadOnly: typingsSlinky.chromeApps.chromeAppsStrings.ReadOnly = "ReadOnly".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.ReadOnly]
   @scala.inline
-  def ReadWrite: typingsSlinky.chromeApps.chromeAppsStrings.ReadWrite = this.cast("ReadWrite")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ReadWrite: typingsSlinky.chromeApps.chromeAppsStrings.ReadWrite = "ReadWrite".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.ReadWrite]
 }
 

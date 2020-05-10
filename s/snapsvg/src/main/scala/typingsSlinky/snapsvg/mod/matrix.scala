@@ -1,6 +1,6 @@
 package typingsSlinky.snapsvg.mod
 
-import typingsSlinky.std.SVGMatrix
+import org.scalajs.dom.raw.SVGMatrix
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AudioTracksParam extends js.Object {
-  var levels: js.Array[_]
+  var levels: js.Array[_] = js.native
 }
 
 object AudioTracksParam {
   @scala.inline
   def apply(levels: js.Array[_]): AudioTracksParam = {
     val __obj = js.Dynamic.literal(levels = levels.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AudioTracksParam]
   }
+  @scala.inline
+  implicit class AudioTracksParamOps[Self <: AudioTracksParam] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLevels(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

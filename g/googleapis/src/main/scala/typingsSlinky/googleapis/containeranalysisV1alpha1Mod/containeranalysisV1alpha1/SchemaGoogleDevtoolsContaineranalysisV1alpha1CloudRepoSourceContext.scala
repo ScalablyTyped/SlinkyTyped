@@ -26,16 +26,53 @@ trait SchemaGoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext extend
 
 object SchemaGoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext {
   @scala.inline
-  def apply(
-    aliasContext: SchemaGoogleDevtoolsContaineranalysisV1alpha1AliasContext = null,
-    repoId: SchemaGoogleDevtoolsContaineranalysisV1alpha1RepoId = null,
-    revisionId: String = null
-  ): SchemaGoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext = {
+  def apply(): SchemaGoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext = {
     val __obj = js.Dynamic.literal()
-    if (aliasContext != null) __obj.updateDynamic("aliasContext")(aliasContext.asInstanceOf[js.Any])
-    if (repoId != null) __obj.updateDynamic("repoId")(repoId.asInstanceOf[js.Any])
-    if (revisionId != null) __obj.updateDynamic("revisionId")(revisionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext]
   }
+  @scala.inline
+  implicit class SchemaGoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextOps[Self <: SchemaGoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAliasContext(value: SchemaGoogleDevtoolsContaineranalysisV1alpha1AliasContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliasContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAliasContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aliasContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepoId(value: SchemaGoogleDevtoolsContaineranalysisV1alpha1RepoId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repoId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepoId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repoId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

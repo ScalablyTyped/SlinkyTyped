@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("tstl/internal/iterator/ArrayReverseIteratorBase", JSImport.Namespace)
 @js.native
 object arrayReverseIteratorBaseMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator because var conflicts: value. Inlined equals_Original
   - typingsSlinky.tstl.ibidirectionaliteratorMod.IBidirectionalIterator because var conflicts: value. Inlined 
   - typingsSlinky.tstl.irandomaccessiteratorMod.IRandomAccessIterator because var conflicts: value. Inlined index, advance */ @js.native
@@ -41,7 +41,7 @@ object arrayReverseIteratorBaseMod extends js.Object {
       * @inheritDoc
       */
     @JSName("value")
-    def value_MArrayReverseIteratorBase(): T = js.native
+    def value_MArrayReverseIteratorBase: T = js.native
     /**
       * @inheritDoc
       */

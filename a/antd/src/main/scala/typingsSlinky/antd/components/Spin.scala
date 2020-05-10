@@ -1,48 +1,46 @@
 package typingsSlinky.antd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.spinMod.SpinProps
 import typingsSlinky.antd.spinMod.SpinSize
 import typingsSlinky.antd.spinMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Spin
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Spin {
   @JSImport("antd/lib/spin", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    delay: Int | Double = null,
-    indicator: ReactElement = null,
-    prefixCls: String = null,
-    size: SpinSize = null,
-    spinning: js.UndefOr[Boolean] = js.undefined,
-    tip: String = null,
-    wrapperClassName: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
-    if (indicator != null) __obj.updateDynamic("indicator")(indicator.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (!js.isUndefined(spinning)) __obj.updateDynamic("spinning")(spinning.asInstanceOf[js.Any])
-    if (tip != null) __obj.updateDynamic("tip")(tip.asInstanceOf[js.Any])
-    if (wrapperClassName != null) __obj.updateDynamic("wrapperClassName")(wrapperClassName.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicator(value: ReactElement): this.type = set("indicator", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: SpinSize): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def spinning(value: Boolean): this.type = set("spinning", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tip(value: String): this.type = set("tip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperClassName(value: String): this.type = set("wrapperClassName", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.spinMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SpinProps
+  
+  def withProps(p: SpinProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Spin.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

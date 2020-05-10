@@ -1,19 +1,19 @@
 package typingsSlinky.reactSelect.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSelect.AnonCount
 import typingsSlinky.reactSelect.AnonInputValue
 import typingsSlinky.reactSelect.asyncMod.default
 import typingsSlinky.reactSelect.componentsMod.SelectComponentsConfig
 import typingsSlinky.reactSelect.selectMod.FormatOptionLabelMeta
+import typingsSlinky.reactSelect.srcAsyncMod.Props
 import typingsSlinky.reactSelect.stylesMod.StylesConfig
 import typingsSlinky.reactSelect.themeMod.ThemeConfig
 import typingsSlinky.reactSelect.typesMod.ActionMeta
@@ -24,6 +24,7 @@ import typingsSlinky.reactSelect.typesMod.MenuPlacement
 import typingsSlinky.reactSelect.typesMod.MenuPosition
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.reactSelect.typesMod.OptionsType
+import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.reactSelect.typesMod.ValueType
 import typingsSlinky.std.EventListener
 import typingsSlinky.std.Event_
@@ -31,150 +32,180 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Async
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+object Async {
   @JSImport("react-select/async", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, className, id, name */
-  def apply[OptionType /* <: OptionTypeBase */](
-    loadOptions: (String, js.Function1[/* options */ OptionsType[OptionType], Unit]) => js.Promise[_] | Unit,
-    `aria-label`: String = null,
-    `aria-labelledby`: String = null,
-    backspaceRemovesValue: js.UndefOr[Boolean] = js.undefined,
-    blurInputOnSelect: js.UndefOr[Boolean] = js.undefined,
-    cacheOptions: js.Any = null,
-    captureMenuScroll: js.UndefOr[Boolean] = js.undefined,
-    classNamePrefix: String = null,
-    closeMenuOnScroll: Boolean | EventListener = null,
-    closeMenuOnSelect: js.UndefOr[Boolean] = js.undefined,
-    components: SelectComponentsConfig[OptionType] = null,
-    controlShouldRenderValue: js.UndefOr[Boolean] = js.undefined,
-    defaultInputValue: String = null,
-    defaultMenuIsOpen: js.UndefOr[Boolean] = js.undefined,
-    defaultOptions: OptionsType[OptionType] | Boolean = null,
-    defaultValue: ValueType[OptionType] = null,
-    delimiter: String = null,
-    escapeClearsValue: js.UndefOr[Boolean] = js.undefined,
-    filterOption: (/* option */ typingsSlinky.reactSelect.filtersMod.Option, /* rawInput */ String) => Boolean = null,
-    formatGroupLabel: /* group */ GroupType[OptionType] => TagMod[Any] = null,
-    formatOptionLabel: (OptionType, /* labelMeta */ FormatOptionLabelMeta[OptionType]) => TagMod[Any] = null,
-    getOptionLabel: OptionType => String = null,
-    getOptionValue: OptionType => String = null,
-    hideSelectedOptions: js.UndefOr[Boolean] = js.undefined,
-    inputId: String = null,
-    inputValue: String = null,
-    instanceId: Double | String = null,
-    isClearable: js.UndefOr[Boolean] = js.undefined,
-    isDisabled: js.UndefOr[Boolean] = js.undefined,
-    isLoading: js.UndefOr[Boolean] = js.undefined,
-    isMulti: js.UndefOr[Boolean] = js.undefined,
-    isOptionDisabled: (OptionType, /* options */ OptionsType[OptionType]) => Boolean = null,
-    isOptionSelected: (OptionType, /* options */ OptionsType[OptionType]) => Boolean = null,
-    isRtl: js.UndefOr[Boolean] = js.undefined,
-    isSearchable: js.UndefOr[Boolean] = js.undefined,
-    loadingMessage: /* obj */ AnonInputValue => String | Null = null,
-    maxMenuHeight: Int | Double = null,
-    menuIsOpen: js.UndefOr[Boolean] = js.undefined,
-    menuPlacement: MenuPlacement = null,
-    menuPortalTarget: HTMLElement = null,
-    menuPosition: MenuPosition = null,
-    menuShouldBlockScroll: js.UndefOr[Boolean] = js.undefined,
-    menuShouldScrollIntoView: js.UndefOr[Boolean] = js.undefined,
-    minMenuHeight: Int | Double = null,
-    noOptionsMessage: /* obj */ AnonInputValue => String | Null = null,
-    onBlur: /* event */ SyntheticFocusEvent[HTMLElement] => Unit = null,
-    onChange: (/* value */ ValueType[OptionType], /* action */ ActionMeta) => Unit = null,
-    onFocus: /* event */ SyntheticFocusEvent[HTMLElement] => Unit = null,
-    onInputChange: (/* newValue */ String, /* actionMeta */ InputActionMeta) => Unit = null,
-    onKeyDown: /* event */ SyntheticKeyboardEvent[HTMLElement] => Unit = null,
-    onMenuClose: () => Unit = null,
-    onMenuOpen: () => Unit = null,
-    onMenuScrollToBottom: /* event */ SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    onMenuScrollToTop: /* event */ SyntheticEvent[Event_, HTMLElement] => Unit = null,
-    openMenuOnClick: js.UndefOr[Boolean] = js.undefined,
-    openMenuOnFocus: js.UndefOr[Boolean] = js.undefined,
-    options: GroupedOptionsType[OptionType] | OptionsType[OptionType] = null,
-    pageSize: Int | Double = null,
-    placeholder: TagMod[Any] = null,
-    screenReaderStatus: /* obj */ AnonCount => String = null,
-    styles: StylesConfig = null,
-    tabIndex: String = null,
-    tabSelectsValue: js.UndefOr[Boolean] = js.undefined,
-    theme: ThemeConfig = null,
-    value: ValueType[OptionType] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any]] = {
-    val __obj = js.Dynamic.literal(loadOptions = js.Any.fromFunction2(loadOptions))
-    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
-    if (!js.isUndefined(backspaceRemovesValue)) __obj.updateDynamic("backspaceRemovesValue")(backspaceRemovesValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(blurInputOnSelect)) __obj.updateDynamic("blurInputOnSelect")(blurInputOnSelect.asInstanceOf[js.Any])
-    if (cacheOptions != null) __obj.updateDynamic("cacheOptions")(cacheOptions.asInstanceOf[js.Any])
-    if (!js.isUndefined(captureMenuScroll)) __obj.updateDynamic("captureMenuScroll")(captureMenuScroll.asInstanceOf[js.Any])
-    if (classNamePrefix != null) __obj.updateDynamic("classNamePrefix")(classNamePrefix.asInstanceOf[js.Any])
-    if (closeMenuOnScroll != null) __obj.updateDynamic("closeMenuOnScroll")(closeMenuOnScroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(closeMenuOnSelect)) __obj.updateDynamic("closeMenuOnSelect")(closeMenuOnSelect.asInstanceOf[js.Any])
-    if (components != null) __obj.updateDynamic("components")(components.asInstanceOf[js.Any])
-    if (!js.isUndefined(controlShouldRenderValue)) __obj.updateDynamic("controlShouldRenderValue")(controlShouldRenderValue.asInstanceOf[js.Any])
-    if (defaultInputValue != null) __obj.updateDynamic("defaultInputValue")(defaultInputValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultMenuIsOpen)) __obj.updateDynamic("defaultMenuIsOpen")(defaultMenuIsOpen.asInstanceOf[js.Any])
-    if (defaultOptions != null) __obj.updateDynamic("defaultOptions")(defaultOptions.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (delimiter != null) __obj.updateDynamic("delimiter")(delimiter.asInstanceOf[js.Any])
-    if (!js.isUndefined(escapeClearsValue)) __obj.updateDynamic("escapeClearsValue")(escapeClearsValue.asInstanceOf[js.Any])
-    if (filterOption != null) __obj.updateDynamic("filterOption")(js.Any.fromFunction2(filterOption))
-    if (formatGroupLabel != null) __obj.updateDynamic("formatGroupLabel")(js.Any.fromFunction1(formatGroupLabel))
-    if (formatOptionLabel != null) __obj.updateDynamic("formatOptionLabel")(js.Any.fromFunction2(formatOptionLabel))
-    if (getOptionLabel != null) __obj.updateDynamic("getOptionLabel")(js.Any.fromFunction1(getOptionLabel))
-    if (getOptionValue != null) __obj.updateDynamic("getOptionValue")(js.Any.fromFunction1(getOptionValue))
-    if (!js.isUndefined(hideSelectedOptions)) __obj.updateDynamic("hideSelectedOptions")(hideSelectedOptions.asInstanceOf[js.Any])
-    if (inputId != null) __obj.updateDynamic("inputId")(inputId.asInstanceOf[js.Any])
-    if (inputValue != null) __obj.updateDynamic("inputValue")(inputValue.asInstanceOf[js.Any])
-    if (instanceId != null) __obj.updateDynamic("instanceId")(instanceId.asInstanceOf[js.Any])
-    if (!js.isUndefined(isClearable)) __obj.updateDynamic("isClearable")(isClearable.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDisabled)) __obj.updateDynamic("isDisabled")(isDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isLoading)) __obj.updateDynamic("isLoading")(isLoading.asInstanceOf[js.Any])
-    if (!js.isUndefined(isMulti)) __obj.updateDynamic("isMulti")(isMulti.asInstanceOf[js.Any])
-    if (isOptionDisabled != null) __obj.updateDynamic("isOptionDisabled")(js.Any.fromFunction2(isOptionDisabled))
-    if (isOptionSelected != null) __obj.updateDynamic("isOptionSelected")(js.Any.fromFunction2(isOptionSelected))
-    if (!js.isUndefined(isRtl)) __obj.updateDynamic("isRtl")(isRtl.asInstanceOf[js.Any])
-    if (!js.isUndefined(isSearchable)) __obj.updateDynamic("isSearchable")(isSearchable.asInstanceOf[js.Any])
-    if (loadingMessage != null) __obj.updateDynamic("loadingMessage")(js.Any.fromFunction1(loadingMessage))
-    if (maxMenuHeight != null) __obj.updateDynamic("maxMenuHeight")(maxMenuHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(menuIsOpen)) __obj.updateDynamic("menuIsOpen")(menuIsOpen.asInstanceOf[js.Any])
-    if (menuPlacement != null) __obj.updateDynamic("menuPlacement")(menuPlacement.asInstanceOf[js.Any])
-    if (menuPortalTarget != null) __obj.updateDynamic("menuPortalTarget")(menuPortalTarget.asInstanceOf[js.Any])
-    if (menuPosition != null) __obj.updateDynamic("menuPosition")(menuPosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(menuShouldBlockScroll)) __obj.updateDynamic("menuShouldBlockScroll")(menuShouldBlockScroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(menuShouldScrollIntoView)) __obj.updateDynamic("menuShouldScrollIntoView")(menuShouldScrollIntoView.asInstanceOf[js.Any])
-    if (minMenuHeight != null) __obj.updateDynamic("minMenuHeight")(minMenuHeight.asInstanceOf[js.Any])
-    if (noOptionsMessage != null) __obj.updateDynamic("noOptionsMessage")(js.Any.fromFunction1(noOptionsMessage))
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (onInputChange != null) __obj.updateDynamic("onInputChange")(js.Any.fromFunction2(onInputChange))
-    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
-    if (onMenuClose != null) __obj.updateDynamic("onMenuClose")(js.Any.fromFunction0(onMenuClose))
-    if (onMenuOpen != null) __obj.updateDynamic("onMenuOpen")(js.Any.fromFunction0(onMenuOpen))
-    if (onMenuScrollToBottom != null) __obj.updateDynamic("onMenuScrollToBottom")(js.Any.fromFunction1(onMenuScrollToBottom))
-    if (onMenuScrollToTop != null) __obj.updateDynamic("onMenuScrollToTop")(js.Any.fromFunction1(onMenuScrollToTop))
-    if (!js.isUndefined(openMenuOnClick)) __obj.updateDynamic("openMenuOnClick")(openMenuOnClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(openMenuOnFocus)) __obj.updateDynamic("openMenuOnFocus")(openMenuOnFocus.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (screenReaderStatus != null) __obj.updateDynamic("screenReaderStatus")(js.Any.fromFunction1(screenReaderStatus))
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
-    if (!js.isUndefined(tabSelectsValue)) __obj.updateDynamic("tabSelectsValue")(tabSelectsValue.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSelect.asyncMod.default[js.Any]]]
+  @scala.inline
+  class Builder[OptionType <: OptionTypeBase] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]] {
+    @scala.inline
+    def `aria-label`(value: String): this.type = set("aria-label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `aria-labelledby`(value: String): this.type = set("aria-labelledby", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def backspaceRemovesValue(value: Boolean): this.type = set("backspaceRemovesValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def blurInputOnSelect(value: Boolean): this.type = set("blurInputOnSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cacheOptions(value: js.Any): this.type = set("cacheOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def captureMenuScroll(value: Boolean): this.type = set("captureMenuScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def classNamePrefix(value: String): this.type = set("classNamePrefix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def classNamePrefixNull: this.type = set("classNamePrefix", null)
+    @scala.inline
+    def closeMenuOnScrollFunction1(value: /* evt */ Event_ => Unit): this.type = set("closeMenuOnScroll", js.Any.fromFunction1(value))
+    @scala.inline
+    def closeMenuOnScroll(value: Boolean | EventListener): this.type = set("closeMenuOnScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeMenuOnSelect(value: Boolean): this.type = set("closeMenuOnSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def components(value: SelectComponentsConfig[OptionType]): this.type = set("components", value.asInstanceOf[js.Any])
+    @scala.inline
+    def controlShouldRenderValue(value: Boolean): this.type = set("controlShouldRenderValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultInputValue(value: String): this.type = set("defaultInputValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultMenuIsOpen(value: Boolean): this.type = set("defaultMenuIsOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultOptions(value: OptionsType[OptionType] | Boolean): this.type = set("defaultOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: ValueType[OptionType]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueNull: this.type = set("defaultValue", null)
+    @scala.inline
+    def delimiter(value: String): this.type = set("delimiter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def escapeClearsValue(value: Boolean): this.type = set("escapeClearsValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterOption(
+      value: (/* option */ typingsSlinky.reactSelect.filtersMod.Option, /* rawInput */ String) => Boolean
+    ): this.type = set("filterOption", js.Any.fromFunction2(value))
+    @scala.inline
+    def filterOptionNull: this.type = set("filterOption", null)
+    @scala.inline
+    def formatGroupLabel(value: /* group */ GroupType[OptionType] => TagMod[Any]): this.type = set("formatGroupLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def formatOptionLabel(value: (OptionType, /* labelMeta */ FormatOptionLabelMeta[OptionType]) => TagMod[Any]): this.type = set("formatOptionLabel", js.Any.fromFunction2(value))
+    @scala.inline
+    def getOptionLabel(value: OptionType => String): this.type = set("getOptionLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def getOptionValue(value: OptionType => String): this.type = set("getOptionValue", js.Any.fromFunction1(value))
+    @scala.inline
+    def hideSelectedOptions(value: Boolean): this.type = set("hideSelectedOptions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputId(value: String): this.type = set("inputId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputValue(value: String): this.type = set("inputValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def instanceId(value: Double | String): this.type = set("instanceId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isClearable(value: Boolean): this.type = set("isClearable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDisabled(value: Boolean): this.type = set("isDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isLoading(value: Boolean): this.type = set("isLoading", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isMulti(value: Boolean): this.type = set("isMulti", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isOptionDisabled(value: (OptionType, /* options */ OptionsType[OptionType]) => Boolean): this.type = set("isOptionDisabled", js.Any.fromFunction2(value))
+    @scala.inline
+    def isOptionSelected(value: (OptionType, /* options */ OptionsType[OptionType]) => Boolean): this.type = set("isOptionSelected", js.Any.fromFunction2(value))
+    @scala.inline
+    def isRtl(value: Boolean): this.type = set("isRtl", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isSearchable(value: Boolean): this.type = set("isSearchable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loadingMessage(value: /* obj */ AnonInputValue => String | Null): this.type = set("loadingMessage", js.Any.fromFunction1(value))
+    @scala.inline
+    def maxMenuHeight(value: Double): this.type = set("maxMenuHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuIsOpen(value: Boolean): this.type = set("menuIsOpen", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuPlacement(value: MenuPlacement): this.type = set("menuPlacement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuPortalTarget(value: HTMLElement): this.type = set("menuPortalTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuPortalTargetNull: this.type = set("menuPortalTarget", null)
+    @scala.inline
+    def menuPosition(value: MenuPosition): this.type = set("menuPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuShouldBlockScroll(value: Boolean): this.type = set("menuShouldBlockScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuShouldScrollIntoView(value: Boolean): this.type = set("menuShouldScrollIntoView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minMenuHeight(value: Double): this.type = set("minMenuHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noOptionsMessage(value: /* obj */ AnonInputValue => String | Null): this.type = set("noOptionsMessage", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBlur(value: /* event */ SyntheticFocusEvent[HTMLElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChange(value: (/* value */ ValueType[OptionType], /* action */ ActionMeta[OptionType]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onFocus(value: /* event */ SyntheticFocusEvent[HTMLElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def onInputChange(value: (/* newValue */ String, /* actionMeta */ InputActionMeta) => Unit): this.type = set("onInputChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onKeyDown(value: /* event */ SyntheticKeyboardEvent[HTMLElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMenuClose(value: () => Unit): this.type = set("onMenuClose", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMenuOpen(value: () => Unit): this.type = set("onMenuOpen", js.Any.fromFunction0(value))
+    @scala.inline
+    def onMenuScrollToBottom(value: /* event */ SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onMenuScrollToBottom", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMenuScrollToTop(value: /* event */ SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onMenuScrollToTop", js.Any.fromFunction1(value))
+    @scala.inline
+    def openMenuOnClick(value: Boolean): this.type = set("openMenuOnClick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def openMenuOnFocus(value: Boolean): this.type = set("openMenuOnFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def options(value: GroupedOptionsType[OptionType] | OptionsType[OptionType]): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pageSize(value: Double): this.type = set("pageSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: TagMod[Any]): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def screenReaderStatus(value: /* obj */ AnonCount => String): this.type = set("screenReaderStatus", js.Any.fromFunction1(value))
+    @scala.inline
+    def styles(value: StylesConfig): this.type = set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: String): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndexNull: this.type = set("tabIndex", null)
+    @scala.inline
+    def tabSelectsValue(value: Boolean): this.type = set("tabSelectsValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def themeFunction1(value: /* theme */ Theme => Theme): this.type = set("theme", js.Any.fromFunction1(value))
+    @scala.inline
+    def theme(value: ThemeConfig): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: ValueType[OptionType]): this.type = set("value", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueNull: this.type = set("value", null)
   }
-  type Props = typingsSlinky.reactSelect.srcAsyncMod.Props[js.Any]
+  
+  def withProps[OptionType <: OptionTypeBase](p: Props[OptionType]): Builder[OptionType] = new Builder[OptionType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[OptionType <: OptionTypeBase](
+    loadOptions: (String, js.Function1[/* options */ OptionsType[OptionType], Unit]) => js.Promise[_] | Unit
+  ): Builder[OptionType] = {
+    val __props = js.Dynamic.literal(loadOptions = js.Any.fromFunction2(loadOptions))
+    new Builder[OptionType](js.Array(this.component, __props.asInstanceOf[Props[OptionType]]))
+  }
 }
 

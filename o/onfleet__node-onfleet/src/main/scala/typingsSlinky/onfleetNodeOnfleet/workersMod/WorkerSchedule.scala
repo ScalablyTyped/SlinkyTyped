@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkerSchedule extends js.Object {
-  var date: String
-  var shifts: js.Array[js.Tuple2[Double, Double]]
-  var timezone: String
+  var date: String = js.native
+  var shifts: js.Array[js.Tuple2[Double, Double]] = js.native
+  var timezone: String = js.native
 }
 
 object WorkerSchedule {
   @scala.inline
   def apply(date: String, shifts: js.Array[js.Tuple2[Double, Double]], timezone: String): WorkerSchedule = {
     val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], shifts = shifts.asInstanceOf[js.Any], timezone = timezone.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[WorkerSchedule]
   }
+  @scala.inline
+  implicit class WorkerScheduleOps[Self <: WorkerSchedule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShifts(value: js.Array[js.Tuple2[Double, Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shifts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimezone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

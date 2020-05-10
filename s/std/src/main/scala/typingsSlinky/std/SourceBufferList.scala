@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait SourceBufferList
   extends EventTarget
      with /* index */ NumberDictionary[SourceBuffer] {
-  @JSName(scala.scalajs.js.Symbol.iterator)
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[SourceBuffer]] = js.native
   val length: Double = js.native
   var onaddsourcebuffer: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
@@ -58,7 +58,7 @@ trait SourceBufferList
   def removeEventListener_addsourcebuffer(
     `type`: addsourcebuffer,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_removesourcebuffer(`type`: removesourcebuffer, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
@@ -72,7 +72,7 @@ trait SourceBufferList
   def removeEventListener_removesourcebuffer(
     `type`: removesourcebuffer,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

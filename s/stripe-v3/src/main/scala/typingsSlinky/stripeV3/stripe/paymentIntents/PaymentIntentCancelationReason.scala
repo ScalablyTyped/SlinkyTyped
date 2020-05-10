@@ -17,20 +17,18 @@ trait PaymentIntentCancelationReason extends js.Object
 
 object PaymentIntentCancelationReason {
   @scala.inline
-  def abandoned: typingsSlinky.stripeV3.stripeV3Strings.abandoned = this.cast("abandoned")
+  def abandoned: typingsSlinky.stripeV3.stripeV3Strings.abandoned = "abandoned".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.abandoned]
   @scala.inline
-  def automatic: typingsSlinky.stripeV3.stripeV3Strings.automatic = this.cast("automatic")
+  def automatic: typingsSlinky.stripeV3.stripeV3Strings.automatic = "automatic".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.automatic]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def duplicate: typingsSlinky.stripeV3.stripeV3Strings.duplicate = "duplicate".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.duplicate]
   @scala.inline
-  def duplicate: typingsSlinky.stripeV3.stripeV3Strings.duplicate = this.cast("duplicate")
+  def failed_invoice: typingsSlinky.stripeV3.stripeV3Strings.failed_invoice = "failed_invoice".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.failed_invoice]
   @scala.inline
-  def failed_invoice: typingsSlinky.stripeV3.stripeV3Strings.failed_invoice = this.cast("failed_invoice")
+  def fraudulent: typingsSlinky.stripeV3.stripeV3Strings.fraudulent = "fraudulent".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.fraudulent]
   @scala.inline
-  def fraudulent: typingsSlinky.stripeV3.stripeV3Strings.fraudulent = this.cast("fraudulent")
+  def requested_by_customer: typingsSlinky.stripeV3.stripeV3Strings.requested_by_customer = "requested_by_customer".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.requested_by_customer]
   @scala.inline
-  def requested_by_customer: typingsSlinky.stripeV3.stripeV3Strings.requested_by_customer = this.cast("requested_by_customer")
-  @scala.inline
-  def void_invoice: typingsSlinky.stripeV3.stripeV3Strings.void_invoice = this.cast("void_invoice")
+  def void_invoice: typingsSlinky.stripeV3.stripeV3Strings.void_invoice = "void_invoice".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.void_invoice]
 }
 

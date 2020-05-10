@@ -1,0 +1,35 @@
+package typingsSlinky.ipp.mod
+
+import typingsSlinky.ipp.AnonPrinteruri
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait GetPrinterAttributesRequest extends js.Object {
+  var `operation-attributes-tag`: AnonPrinteruri = js.native
+}
+
+object GetPrinterAttributesRequest {
+  @scala.inline
+  def apply(`operation-attributes-tag`: AnonPrinteruri): GetPrinterAttributesRequest = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("operation-attributes-tag")(`operation-attributes-tag`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GetPrinterAttributesRequest]
+  }
+  @scala.inline
+  implicit class GetPrinterAttributesRequestOps[Self <: GetPrinterAttributesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def `withOperation-attributes-tag`(value: AnonPrinteruri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation-attributes-tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

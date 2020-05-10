@@ -6,6 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonTeardown[TTarget]
   extends _SpecialEventHook[TTarget, js.Any] {
   /**
@@ -14,15 +15,28 @@ trait AnonTeardown[TTarget]
     * If the setup hook attached event handlers or added data to an element through a mechanism such as `jQuery.data()`, the teardown hook should reverse the process and remove them. jQuery will generally remove the data and events when an element is totally removed from the document, but failing to remove data or events on teardown will cause a memory leak if the element stays in the document.
     * @see \`{@link https://learn.jquery.com/events/event-extensions/#teardown-function }\`
     */
-  def teardown(): Unit | `false`
+  def teardown(): Unit | `false` = js.native
 }
 
 object AnonTeardown {
   @scala.inline
   def apply[TTarget](teardown: () => Unit | `false`): AnonTeardown[TTarget] = {
     val __obj = js.Dynamic.literal(teardown = js.Any.fromFunction0(teardown))
-  
     __obj.asInstanceOf[AnonTeardown[TTarget]]
   }
+  @scala.inline
+  implicit class AnonTeardownOps[Self[ttarget] <: AnonTeardown[ttarget], TTarget] (val x: Self[TTarget]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TTarget] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TTarget]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TTarget] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TTarget] with Other]
+    @scala.inline
+    def withTeardown(value: () => Unit | `false`): Self[TTarget] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teardown")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

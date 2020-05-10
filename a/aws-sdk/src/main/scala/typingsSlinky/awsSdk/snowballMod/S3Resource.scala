@@ -18,11 +18,41 @@ trait S3Resource extends js.Object {
 
 object S3Resource {
   @scala.inline
-  def apply(BucketArn: ResourceARN = null, KeyRange: KeyRange = null): S3Resource = {
+  def apply(): S3Resource = {
     val __obj = js.Dynamic.literal()
-    if (BucketArn != null) __obj.updateDynamic("BucketArn")(BucketArn.asInstanceOf[js.Any])
-    if (KeyRange != null) __obj.updateDynamic("KeyRange")(KeyRange.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3Resource]
   }
+  @scala.inline
+  implicit class S3ResourceOps[Self <: S3Resource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucketArn(value: ResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyRange(value: KeyRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyRange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -44,20 +44,77 @@ trait SchemaRouterInterface extends js.Object {
 
 object SchemaRouterInterface {
   @scala.inline
-  def apply(
-    ipRange: String = null,
-    linkedInterconnectAttachment: String = null,
-    linkedVpnTunnel: String = null,
-    managementType: String = null,
-    name: String = null
-  ): SchemaRouterInterface = {
+  def apply(): SchemaRouterInterface = {
     val __obj = js.Dynamic.literal()
-    if (ipRange != null) __obj.updateDynamic("ipRange")(ipRange.asInstanceOf[js.Any])
-    if (linkedInterconnectAttachment != null) __obj.updateDynamic("linkedInterconnectAttachment")(linkedInterconnectAttachment.asInstanceOf[js.Any])
-    if (linkedVpnTunnel != null) __obj.updateDynamic("linkedVpnTunnel")(linkedVpnTunnel.asInstanceOf[js.Any])
-    if (managementType != null) __obj.updateDynamic("managementType")(managementType.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRouterInterface]
   }
+  @scala.inline
+  implicit class SchemaRouterInterfaceOps[Self <: SchemaRouterInterface] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIpRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkedInterconnectAttachment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedInterconnectAttachment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkedInterconnectAttachment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedInterconnectAttachment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkedVpnTunnel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedVpnTunnel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkedVpnTunnel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkedVpnTunnel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagementType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managementType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagementType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("managementType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

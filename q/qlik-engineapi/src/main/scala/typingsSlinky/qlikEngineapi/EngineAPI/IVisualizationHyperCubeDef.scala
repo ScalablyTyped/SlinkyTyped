@@ -7,13 +7,14 @@ import scala.scalajs.js.annotation._
 /**
   * HyperCubeDef...
   */
+@js.native
 trait IVisualizationHyperCubeDef extends IHyperCubeDef {
-  var customErrorMessage: ICustomErrorMessage
+  var customErrorMessage: ICustomErrorMessage = js.native
   @JSName("qDimensions")
-  var qDimensions_IVisualizationHyperCubeDef: js.Array[IHyperCubeDimensionDef]
-  var qLayoutExclude: js.Any
+  var qDimensions_IVisualizationHyperCubeDef: js.Array[IHyperCubeDimensionDef] = js.native
+  var qLayoutExclude: js.Any = js.native
   @JSName("qMeasures")
-  var qMeasures_IVisualizationHyperCubeDef: js.Array[IHyperCubeMeasureDef]
+  var qMeasures_IVisualizationHyperCubeDef: js.Array[IHyperCubeMeasureDef] = js.native
 }
 
 object IVisualizationHyperCubeDef {
@@ -37,12 +38,42 @@ object IVisualizationHyperCubeDef {
     qSortbyYValue: String,
     qStateName: String,
     qSuppressMissing: Boolean,
-    qSuppressZero: Boolean,
-    qCalcCond: IValueExpr = null
+    qSuppressZero: Boolean
   ): IVisualizationHyperCubeDef = {
     val __obj = js.Dynamic.literal(customErrorMessage = customErrorMessage.asInstanceOf[js.Any], qAlwaysFullyExpanded = qAlwaysFullyExpanded.asInstanceOf[js.Any], qDimensions = qDimensions.asInstanceOf[js.Any], qIndentMode = qIndentMode.asInstanceOf[js.Any], qInitialDataFetch = qInitialDataFetch.asInstanceOf[js.Any], qInterColumnSortOrder = qInterColumnSortOrder.asInstanceOf[js.Any], qLayoutExclude = qLayoutExclude.asInstanceOf[js.Any], qMaxStackedCells = qMaxStackedCells.asInstanceOf[js.Any], qMeasures = qMeasures.asInstanceOf[js.Any], qMode = qMode.asInstanceOf[js.Any], qNoOfLeftDims = qNoOfLeftDims.asInstanceOf[js.Any], qPopulateMissing = qPopulateMissing.asInstanceOf[js.Any], qPseudoDimPos = qPseudoDimPos.asInstanceOf[js.Any], qReductionMode = qReductionMode.asInstanceOf[js.Any], qShowTotalsAbove = qShowTotalsAbove.asInstanceOf[js.Any], qSortbyYValue = qSortbyYValue.asInstanceOf[js.Any], qStateName = qStateName.asInstanceOf[js.Any], qSuppressMissing = qSuppressMissing.asInstanceOf[js.Any], qSuppressZero = qSuppressZero.asInstanceOf[js.Any])
-    if (qCalcCond != null) __obj.updateDynamic("qCalcCond")(qCalcCond.asInstanceOf[js.Any])
     __obj.asInstanceOf[IVisualizationHyperCubeDef]
   }
+  @scala.inline
+  implicit class IVisualizationHyperCubeDefOps[Self <: IVisualizationHyperCubeDef] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomErrorMessage(value: ICustomErrorMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customErrorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQDimensions(value: js.Array[IHyperCubeDimensionDef]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qDimensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQLayoutExclude(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qLayoutExclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQMeasures(value: js.Array[IHyperCubeMeasureDef]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qMeasures")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

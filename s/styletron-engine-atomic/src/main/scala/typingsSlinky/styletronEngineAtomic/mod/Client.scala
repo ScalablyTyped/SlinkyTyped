@@ -6,7 +6,6 @@ import typingsSlinky.styletronEngineAtomic.AnonBlock
 import typingsSlinky.styletronStandard.mod.FontFace
 import typingsSlinky.styletronStandard.mod.KeyframesObject
 import typingsSlinky.styletronStandard.mod.StandardEngine
-import typingsSlinky.styletronStandard.mod.StyleObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,11 +20,5 @@ class Client () extends StandardEngine {
   var keyframesSheet: HTMLStyleElement = js.native
   var styleCache: MultiCache[AnonBlock] = js.native
   var styleElements: StringDictionary[HTMLStyleElement] = js.native
-  /* CompleteClass */
-  override def renderFontFace(fontFace: FontFace): String = js.native
-  /* CompleteClass */
-  override def renderKeyframes(keyframes: KeyframesObject): String = js.native
-  /* CompleteClass */
-  override def renderStyle(style: StyleObject): String = js.native
 }
 

@@ -22,16 +22,53 @@ trait Coverage extends js.Object {
 
 object Coverage {
   @scala.inline
-  def apply(
-    CoverageCost: CoverageCost = null,
-    CoverageHours: CoverageHours = null,
-    CoverageNormalizedUnits: CoverageNormalizedUnits = null
-  ): Coverage = {
+  def apply(): Coverage = {
     val __obj = js.Dynamic.literal()
-    if (CoverageCost != null) __obj.updateDynamic("CoverageCost")(CoverageCost.asInstanceOf[js.Any])
-    if (CoverageHours != null) __obj.updateDynamic("CoverageHours")(CoverageHours.asInstanceOf[js.Any])
-    if (CoverageNormalizedUnits != null) __obj.updateDynamic("CoverageNormalizedUnits")(CoverageNormalizedUnits.asInstanceOf[js.Any])
     __obj.asInstanceOf[Coverage]
   }
+  @scala.inline
+  implicit class CoverageOps[Self <: Coverage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCoverageCost(value: CoverageCost): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoverageCost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoverageCost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoverageCost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoverageHours(value: CoverageHours): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoverageHours")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoverageHours: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoverageHours")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoverageNormalizedUnits(value: CoverageNormalizedUnits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoverageNormalizedUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoverageNormalizedUnits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoverageNormalizedUnits")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

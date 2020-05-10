@@ -200,7 +200,7 @@ class Matrix protected () extends js.Object {
     * @return {number[]} the newly created array which contains the matrix
     */
   def toArray(transpose: Boolean): js.Array[Double] = js.native
-  def toArray(transpose: Boolean, out: scala.scalajs.js.typedarray.Float32Array): js.Array[Double] = js.native
+  def toArray(transpose: Boolean, out: js.typedarray.Float32Array): js.Array[Double] = js.native
   /**
     * Translates the matrix on the x and y.
     *

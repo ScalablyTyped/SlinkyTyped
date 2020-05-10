@@ -23,7 +23,7 @@ class Voronoi[P] protected () extends js.Object {
     * Each contiguous pair of coordinates cx, cy is the circumcenter for the corresponding triangle.
     * These circumcenters form the coordinates of the Voronoi cell polygons.
     */
-  var circumcenters: scala.scalajs.js.typedarray.Float64Array = js.native
+  var circumcenters: js.typedarray.Float64Array = js.native
   /**
     * The Voronoi diagram’s associated Delaunay triangulation.
     */
@@ -32,7 +32,7 @@ class Voronoi[P] protected () extends js.Object {
     * An array [vx0, vy0, wx0, wy0, ...] where each non-zero quadruple describes an open (infinite) cell
     * on the outer hull, giving the directions of two open half-lines.
     */
-  var vectors: scala.scalajs.js.typedarray.Float64Array = js.native
+  var vectors: js.typedarray.Float64Array = js.native
   var xmax: Double = js.native
   /**
     * The bounds of the viewport [xmin, ymin, xmax, ymax] for rendering the Voronoi diagram.

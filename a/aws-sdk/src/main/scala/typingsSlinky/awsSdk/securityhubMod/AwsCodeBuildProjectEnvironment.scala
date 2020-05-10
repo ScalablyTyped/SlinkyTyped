@@ -26,18 +26,65 @@ trait AwsCodeBuildProjectEnvironment extends js.Object {
 
 object AwsCodeBuildProjectEnvironment {
   @scala.inline
-  def apply(
-    Certificate: NonEmptyString = null,
-    ImagePullCredentialsType: NonEmptyString = null,
-    RegistryCredential: AwsCodeBuildProjectEnvironmentRegistryCredential = null,
-    Type: NonEmptyString = null
-  ): AwsCodeBuildProjectEnvironment = {
+  def apply(): AwsCodeBuildProjectEnvironment = {
     val __obj = js.Dynamic.literal()
-    if (Certificate != null) __obj.updateDynamic("Certificate")(Certificate.asInstanceOf[js.Any])
-    if (ImagePullCredentialsType != null) __obj.updateDynamic("ImagePullCredentialsType")(ImagePullCredentialsType.asInstanceOf[js.Any])
-    if (RegistryCredential != null) __obj.updateDynamic("RegistryCredential")(RegistryCredential.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[AwsCodeBuildProjectEnvironment]
   }
+  @scala.inline
+  implicit class AwsCodeBuildProjectEnvironmentOps[Self <: AwsCodeBuildProjectEnvironment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificate(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Certificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImagePullCredentialsType(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImagePullCredentialsType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImagePullCredentialsType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImagePullCredentialsType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistryCredential(value: AwsCodeBuildProjectEnvironmentRegistryCredential): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistryCredential")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistryCredential: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegistryCredential")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

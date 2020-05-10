@@ -18,10 +18,35 @@ trait Nameserver extends js.Object {
 
 object Nameserver {
   @scala.inline
-  def apply(Name: HostName, GlueIps: GlueIpList = null): Nameserver = {
+  def apply(Name: HostName): Nameserver = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (GlueIps != null) __obj.updateDynamic("GlueIps")(GlueIps.asInstanceOf[js.Any])
     __obj.asInstanceOf[Nameserver]
   }
+  @scala.inline
+  implicit class NameserverOps[Self <: Nameserver] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: HostName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGlueIps(value: GlueIpList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlueIps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlueIps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlueIps")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

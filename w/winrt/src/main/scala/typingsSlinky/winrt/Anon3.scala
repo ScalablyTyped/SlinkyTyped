@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Anon3 extends js.Object {
-  var items: js.Array[DeviceInformation]
-  var returnValue: Double
+  var items: js.Array[DeviceInformation] = js.native
+  var returnValue: Double = js.native
 }
 
 object Anon3 {
   @scala.inline
   def apply(items: js.Array[DeviceInformation], returnValue: Double): Anon3 = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], returnValue = returnValue.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Anon3]
   }
+  @scala.inline
+  implicit class Anon3Ops[Self <: Anon3] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItems(value: js.Array[DeviceInformation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReturnValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

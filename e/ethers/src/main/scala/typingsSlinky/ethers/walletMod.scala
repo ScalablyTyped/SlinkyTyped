@@ -1,6 +1,5 @@
 package typingsSlinky.ethers
 
-import typingsSlinky.ethers.ethersStrings.mSlash44ApostropheSlash60ApostropheSlash0ApostropheSlash0Slash0
 import typingsSlinky.ethers.typesMod.Arrayish
 import typingsSlinky.ethers.typesMod.HDNode
 import typingsSlinky.ethers.typesMod.MinimalProvider
@@ -33,7 +32,7 @@ object walletMod extends js.Object {
   
   @js.native
   object HDNode extends js.Object {
-    val defaultPath: mSlash44ApostropheSlash60ApostropheSlash0ApostropheSlash0Slash0 = js.native
+    val defaultPath: /* "m/44'/60'/0'/0/0" */ String = js.native
     def entropyToMnemonic(entropy: Arrayish): String = js.native
     def entropyToMnemonic(entropy: Arrayish, wordlist: Wordlist): String = js.native
     def fromMnemonic(mnemonic: String): typingsSlinky.ethers.typesMod.HDNode = js.native

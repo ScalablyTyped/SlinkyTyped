@@ -1,12 +1,10 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.AppBarProps
 import typingsSlinky.materialUi.appBarMod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -14,48 +12,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AppBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object AppBar {
   @JSImport("material-ui/AppBar", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    iconClassNameLeft: String = null,
-    iconClassNameRight: String = null,
-    iconElementLeft: ReactElement = null,
-    iconElementRight: ReactElement = null,
-    iconStyleLeft: CSSProperties = null,
-    iconStyleRight: CSSProperties = null,
-    onLeftIconButtonClick: SyntheticMouseEvent[js.Object] => Unit = null,
-    onRightIconButtonClick: SyntheticMouseEvent[js.Object] => Unit = null,
-    onTitleClick: SyntheticMouseEvent[js.Object] => Unit = null,
-    showMenuIconButton: js.UndefOr[Boolean] = js.undefined,
-    title: TagMod[Any] = null,
-    titleStyle: CSSProperties = null,
-    zDepth: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (iconClassNameLeft != null) __obj.updateDynamic("iconClassNameLeft")(iconClassNameLeft.asInstanceOf[js.Any])
-    if (iconClassNameRight != null) __obj.updateDynamic("iconClassNameRight")(iconClassNameRight.asInstanceOf[js.Any])
-    if (iconElementLeft != null) __obj.updateDynamic("iconElementLeft")(iconElementLeft.asInstanceOf[js.Any])
-    if (iconElementRight != null) __obj.updateDynamic("iconElementRight")(iconElementRight.asInstanceOf[js.Any])
-    if (iconStyleLeft != null) __obj.updateDynamic("iconStyleLeft")(iconStyleLeft.asInstanceOf[js.Any])
-    if (iconStyleRight != null) __obj.updateDynamic("iconStyleRight")(iconStyleRight.asInstanceOf[js.Any])
-    if (onLeftIconButtonClick != null) __obj.updateDynamic("onLeftIconButtonClick")(js.Any.fromFunction1(onLeftIconButtonClick))
-    if (onRightIconButtonClick != null) __obj.updateDynamic("onRightIconButtonClick")(js.Any.fromFunction1(onRightIconButtonClick))
-    if (onTitleClick != null) __obj.updateDynamic("onTitleClick")(js.Any.fromFunction1(onTitleClick))
-    if (!js.isUndefined(showMenuIconButton)) __obj.updateDynamic("showMenuIconButton")(showMenuIconButton.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleStyle != null) __obj.updateDynamic("titleStyle")(titleStyle.asInstanceOf[js.Any])
-    if (zDepth != null) __obj.updateDynamic("zDepth")(zDepth.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconClassNameLeft(value: String): this.type = set("iconClassNameLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconClassNameRight(value: String): this.type = set("iconClassNameRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconElementLeft(value: ReactElement): this.type = set("iconElementLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconElementRight(value: ReactElement): this.type = set("iconElementRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconStyleLeft(value: CSSProperties): this.type = set("iconStyleLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconStyleRight(value: CSSProperties): this.type = set("iconStyleRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLeftIconButtonClick(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onLeftIconButtonClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRightIconButtonClick(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onRightIconButtonClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTitleClick(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onTitleClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def showMenuIconButton(value: Boolean): this.type = set("showMenuIconButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titleStyle(value: CSSProperties): this.type = set("titleStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def zDepth(value: Double): this.type = set("zDepth", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.appBarMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AppBarProps
+  
+  def withProps(p: AppBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AppBar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

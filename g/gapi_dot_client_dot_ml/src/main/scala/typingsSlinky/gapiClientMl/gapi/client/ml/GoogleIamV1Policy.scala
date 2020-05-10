@@ -4,14 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleIamV1Policy extends js.Object {
   /** Specifies cloud audit logging configuration for this policy. */
-  var auditConfigs: js.UndefOr[js.Array[GoogleIamV1AuditConfig]] = js.undefined
+  var auditConfigs: js.UndefOr[js.Array[GoogleIamV1AuditConfig]] = js.native
   /**
     * Associates a list of `members` to a `role`.
     * `bindings` with no members will result in an error.
     */
-  var bindings: js.UndefOr[js.Array[GoogleIamV1Binding]] = js.undefined
+  var bindings: js.UndefOr[js.Array[GoogleIamV1Binding]] = js.native
   /**
     * `etag` is used for optimistic concurrency control as a way to help
     * prevent simultaneous updates of a policy from overwriting each other.
@@ -24,28 +25,85 @@ trait GoogleIamV1Policy extends js.Object {
     * If no `etag` is provided in the call to `setIamPolicy`, then the existing
     * policy is overwritten blindly.
     */
-  var etag: js.UndefOr[String] = js.undefined
-  var iamOwned: js.UndefOr[Boolean] = js.undefined
+  var etag: js.UndefOr[String] = js.native
+  var iamOwned: js.UndefOr[Boolean] = js.native
   /** Version of the `Policy`. The default version is 0. */
-  var version: js.UndefOr[Double] = js.undefined
+  var version: js.UndefOr[Double] = js.native
 }
 
 object GoogleIamV1Policy {
   @scala.inline
-  def apply(
-    auditConfigs: js.Array[GoogleIamV1AuditConfig] = null,
-    bindings: js.Array[GoogleIamV1Binding] = null,
-    etag: String = null,
-    iamOwned: js.UndefOr[Boolean] = js.undefined,
-    version: Int | Double = null
-  ): GoogleIamV1Policy = {
+  def apply(): GoogleIamV1Policy = {
     val __obj = js.Dynamic.literal()
-    if (auditConfigs != null) __obj.updateDynamic("auditConfigs")(auditConfigs.asInstanceOf[js.Any])
-    if (bindings != null) __obj.updateDynamic("bindings")(bindings.asInstanceOf[js.Any])
-    if (etag != null) __obj.updateDynamic("etag")(etag.asInstanceOf[js.Any])
-    if (!js.isUndefined(iamOwned)) __obj.updateDynamic("iamOwned")(iamOwned.asInstanceOf[js.Any])
-    if (version != null) __obj.updateDynamic("version")(version.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleIamV1Policy]
   }
+  @scala.inline
+  implicit class GoogleIamV1PolicyOps[Self <: GoogleIamV1Policy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuditConfigs(value: js.Array[GoogleIamV1AuditConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auditConfigs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuditConfigs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auditConfigs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBindings(value: js.Array[GoogleIamV1Binding]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBindings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEtag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("etag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIamOwned(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamOwned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIamOwned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iamOwned")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait XummCancelReason extends js.Object
 
 object XummCancelReason {
   @scala.inline
-  def ALREADY_CANCELLED: typingsSlinky.xummApi.xummApiStrings.ALREADY_CANCELLED = this.cast("ALREADY_CANCELLED")
+  def ALREADY_CANCELLED: typingsSlinky.xummApi.xummApiStrings.ALREADY_CANCELLED = "ALREADY_CANCELLED".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.ALREADY_CANCELLED]
   @scala.inline
-  def ALREADY_EXPIRED: typingsSlinky.xummApi.xummApiStrings.ALREADY_EXPIRED = this.cast("ALREADY_EXPIRED")
+  def ALREADY_EXPIRED: typingsSlinky.xummApi.xummApiStrings.ALREADY_EXPIRED = "ALREADY_EXPIRED".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.ALREADY_EXPIRED]
   @scala.inline
-  def ALREADY_OPENED: typingsSlinky.xummApi.xummApiStrings.ALREADY_OPENED = this.cast("ALREADY_OPENED")
+  def ALREADY_OPENED: typingsSlinky.xummApi.xummApiStrings.ALREADY_OPENED = "ALREADY_OPENED".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.ALREADY_OPENED]
   @scala.inline
-  def ALREADY_RESOLVED: typingsSlinky.xummApi.xummApiStrings.ALREADY_RESOLVED = this.cast("ALREADY_RESOLVED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ALREADY_RESOLVED: typingsSlinky.xummApi.xummApiStrings.ALREADY_RESOLVED = "ALREADY_RESOLVED".asInstanceOf[typingsSlinky.xummApi.xummApiStrings.ALREADY_RESOLVED]
 }
 

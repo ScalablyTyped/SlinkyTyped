@@ -1,11 +1,11 @@
 package typingsSlinky.angular
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.DocumentFragment
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Text
 import typingsSlinky.angular.mod.IScope
 import typingsSlinky.angular.mod.auto.IInjectorService
-import typingsSlinky.std.DocumentFragment
-import typingsSlinky.std.Element
-import typingsSlinky.std.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

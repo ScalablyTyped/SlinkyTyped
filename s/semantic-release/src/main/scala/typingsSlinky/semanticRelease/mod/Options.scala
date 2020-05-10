@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
 	 * Each option will take precedence over options configured in the
 	 * configuration file and shareable configurations.
 	 */
+@js.native
 trait Options
   extends /**
 		 * Any other options supported by plugins.
@@ -20,16 +21,16 @@ trait Options
   /**
   		 * The branch on which releases should happen.
   		 */
-  var branch: js.UndefOr[String] = js.undefined
+  var branch: js.UndefOr[String] = js.native
   /**
   		 * Set to false to skip Continuous Integration environment verifications.
   		 * This allows for making releases from a local machine.
   		 */
-  var ci: js.UndefOr[Boolean] = js.undefined
+  var ci: js.UndefOr[Boolean] = js.native
   /**
   		 * Dry-run mode, skip publishing, print next version and release notes.
   		 */
-  var dryRun: js.UndefOr[Boolean] = js.undefined
+  var dryRun: js.UndefOr[Boolean] = js.native
   /**
   		 * Specifies the list of plugins to use. Plugins will run in series, in
   		 * the order specified.
@@ -40,40 +41,102 @@ trait Options
   		 * Configuration options for each plugin can be defined by wrapping the
   		 * name and an options object in an array.
   		 */
-  var plugins: js.UndefOr[js.Array[PluginSpec]] = js.undefined
+  var plugins: js.UndefOr[js.Array[PluginSpec]] = js.native
   /**
   		 * The Git repository URL, in any supported format.
   		 */
-  var repositoryUrl: js.UndefOr[String] = js.undefined
+  var repositoryUrl: js.UndefOr[String] = js.native
   /**
   		 * The Git tag format used by semantic-release to identify releases.
   		 */
-  var tagFormat: js.UndefOr[String] = js.undefined
+  var tagFormat: js.UndefOr[String] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  		 * Any other options supported by plugins.
-  		 */
-  /* name */ StringDictionary[js.Any] = null,
-    branch: String = null,
-    ci: js.UndefOr[Boolean] = js.undefined,
-    dryRun: js.UndefOr[Boolean] = js.undefined,
-    plugins: js.Array[PluginSpec] = null,
-    repositoryUrl: String = null,
-    tagFormat: String = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (branch != null) __obj.updateDynamic("branch")(branch.asInstanceOf[js.Any])
-    if (!js.isUndefined(ci)) __obj.updateDynamic("ci")(ci.asInstanceOf[js.Any])
-    if (!js.isUndefined(dryRun)) __obj.updateDynamic("dryRun")(dryRun.asInstanceOf[js.Any])
-    if (plugins != null) __obj.updateDynamic("plugins")(plugins.asInstanceOf[js.Any])
-    if (repositoryUrl != null) __obj.updateDynamic("repositoryUrl")(repositoryUrl.asInstanceOf[js.Any])
-    if (tagFormat != null) __obj.updateDynamic("tagFormat")(tagFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBranch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBranch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCi(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ci")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCi: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ci")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlugins(value: js.Array[PluginSpec]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlugins: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRepositoryUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRepositoryUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repositoryUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

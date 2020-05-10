@@ -70,40 +70,197 @@ trait FaceDetail extends js.Object {
 
 object FaceDetail {
   @scala.inline
-  def apply(
-    AgeRange: AgeRange = null,
-    Beard: Beard = null,
-    BoundingBox: BoundingBox = null,
-    Confidence: Int | Double = null,
-    Emotions: Emotions = null,
-    Eyeglasses: Eyeglasses = null,
-    EyesOpen: EyeOpen = null,
-    Gender: Gender = null,
-    Landmarks: Landmarks = null,
-    MouthOpen: MouthOpen = null,
-    Mustache: Mustache = null,
-    Pose: Pose = null,
-    Quality: ImageQuality = null,
-    Smile: Smile = null,
-    Sunglasses: Sunglasses = null
-  ): FaceDetail = {
+  def apply(): FaceDetail = {
     val __obj = js.Dynamic.literal()
-    if (AgeRange != null) __obj.updateDynamic("AgeRange")(AgeRange.asInstanceOf[js.Any])
-    if (Beard != null) __obj.updateDynamic("Beard")(Beard.asInstanceOf[js.Any])
-    if (BoundingBox != null) __obj.updateDynamic("BoundingBox")(BoundingBox.asInstanceOf[js.Any])
-    if (Confidence != null) __obj.updateDynamic("Confidence")(Confidence.asInstanceOf[js.Any])
-    if (Emotions != null) __obj.updateDynamic("Emotions")(Emotions.asInstanceOf[js.Any])
-    if (Eyeglasses != null) __obj.updateDynamic("Eyeglasses")(Eyeglasses.asInstanceOf[js.Any])
-    if (EyesOpen != null) __obj.updateDynamic("EyesOpen")(EyesOpen.asInstanceOf[js.Any])
-    if (Gender != null) __obj.updateDynamic("Gender")(Gender.asInstanceOf[js.Any])
-    if (Landmarks != null) __obj.updateDynamic("Landmarks")(Landmarks.asInstanceOf[js.Any])
-    if (MouthOpen != null) __obj.updateDynamic("MouthOpen")(MouthOpen.asInstanceOf[js.Any])
-    if (Mustache != null) __obj.updateDynamic("Mustache")(Mustache.asInstanceOf[js.Any])
-    if (Pose != null) __obj.updateDynamic("Pose")(Pose.asInstanceOf[js.Any])
-    if (Quality != null) __obj.updateDynamic("Quality")(Quality.asInstanceOf[js.Any])
-    if (Smile != null) __obj.updateDynamic("Smile")(Smile.asInstanceOf[js.Any])
-    if (Sunglasses != null) __obj.updateDynamic("Sunglasses")(Sunglasses.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaceDetail]
   }
+  @scala.inline
+  implicit class FaceDetailOps[Self <: FaceDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgeRange(value: AgeRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AgeRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgeRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AgeRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeard(value: Beard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Beard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeard: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Beard")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBoundingBox(value: BoundingBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundingBox: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BoundingBox")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConfidence(value: Percent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Confidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmotions(value: Emotions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Emotions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmotions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Emotions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEyeglasses(value: Eyeglasses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Eyeglasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEyeglasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Eyeglasses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEyesOpen(value: EyeOpen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EyesOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEyesOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EyesOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGender(value: Gender): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Gender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLandmarks(value: Landmarks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Landmarks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLandmarks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Landmarks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMouthOpen(value: MouthOpen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MouthOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMouthOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MouthOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMustache(value: Mustache): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mustache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMustache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mustache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPose(value: Pose): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuality(value: ImageQuality): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Quality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Quality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSmile(value: Smile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Smile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSmile: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Smile")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSunglasses(value: Sunglasses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sunglasses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSunglasses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sunglasses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,20 +7,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RTCPeerConnectionConfiguration extends js.Object {
-  var iceServers: js.Array[ConfigurationParamWithUrl | ConfigurationParamWithUrls]
-  var iceTransportPolicy: js.UndefOr[all | public | relay] = js.undefined
+  var iceServers: js.Array[ConfigurationParamWithUrl | ConfigurationParamWithUrls] = js.native
+  var iceTransportPolicy: js.UndefOr[all | public | relay] = js.native
 }
 
 object RTCPeerConnectionConfiguration {
   @scala.inline
-  def apply(
-    iceServers: js.Array[ConfigurationParamWithUrl | ConfigurationParamWithUrls],
-    iceTransportPolicy: all | public | relay = null
-  ): RTCPeerConnectionConfiguration = {
+  def apply(iceServers: js.Array[ConfigurationParamWithUrl | ConfigurationParamWithUrls]): RTCPeerConnectionConfiguration = {
     val __obj = js.Dynamic.literal(iceServers = iceServers.asInstanceOf[js.Any])
-    if (iceTransportPolicy != null) __obj.updateDynamic("iceTransportPolicy")(iceTransportPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCPeerConnectionConfiguration]
   }
+  @scala.inline
+  implicit class RTCPeerConnectionConfigurationOps[Self <: RTCPeerConnectionConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIceServers(value: js.Array[ConfigurationParamWithUrl | ConfigurationParamWithUrls]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iceServers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIceTransportPolicy(value: all | public | relay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iceTransportPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIceTransportPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iceTransportPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.nodeSqlParser.mod
 
 import typingsSlinky.nodeSqlParser.nodeSqlParserStrings.Asterisk
-import typingsSlinky.nodeSqlParser.nodeSqlParserStrings.DISTINCT
 import typingsSlinky.nodeSqlParser.nodeSqlParserStrings.alter
 import typingsSlinky.nodeSqlParser.nodeSqlParserStrings.delete
 import typingsSlinky.nodeSqlParser.nodeSqlParserStrings.insert
@@ -37,17 +36,9 @@ object AST {
     __obj.asInstanceOf[AST]
   }
   @scala.inline
-  def InsertReplace(
-    table: js.Any,
-    `type`: replace | insert,
-    values: js.Array[InsertReplaceValue],
-    columns: js.Array[String] = null,
-    db: String = null
-  ): AST = {
+  def InsertReplace(table: js.Any, `type`: replace | insert, values: js.Array[InsertReplaceValue]): AST = {
     val __obj = js.Dynamic.literal(table = table.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
-    if (db != null) __obj.updateDynamic("db")(db.asInstanceOf[js.Any])
     __obj.asInstanceOf[AST]
   }
   @scala.inline
@@ -57,43 +48,15 @@ object AST {
     __obj.asInstanceOf[AST]
   }
   @scala.inline
-  def Update(
-    set: js.Array[SetList],
-    `type`: update,
-    where: js.Any,
-    db: String = null,
-    table: js.Array[From | Dual] = null
-  ): AST = {
+  def Update(set: js.Array[SetList], `type`: update, where: js.Any): AST = {
     val __obj = js.Dynamic.literal(set = set.asInstanceOf[js.Any], where = where.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (db != null) __obj.updateDynamic("db")(db.asInstanceOf[js.Any])
-    if (table != null) __obj.updateDynamic("table")(table.asInstanceOf[js.Any])
     __obj.asInstanceOf[AST]
   }
   @scala.inline
-  def Select(
-    columns: js.Array[_] | Asterisk,
-    `type`: select,
-    where: js.Any,
-    distinct: DISTINCT = null,
-    from: js.Array[From | Dual] = null,
-    groupby: js.Array[ColumnRef] = null,
-    having: js.Array[_] = null,
-    limit: js.Array[Limit] = null,
-    options: js.Array[_] = null,
-    orderby: js.Array[OrderBy] = null,
-    `with`: With = null
-  ): AST = {
+  def Select(columns: js.Array[_] | Asterisk, `type`: select, where: js.Any): AST = {
     val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], where = where.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (distinct != null) __obj.updateDynamic("distinct")(distinct.asInstanceOf[js.Any])
-    if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])
-    if (groupby != null) __obj.updateDynamic("groupby")(groupby.asInstanceOf[js.Any])
-    if (having != null) __obj.updateDynamic("having")(having.asInstanceOf[js.Any])
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (orderby != null) __obj.updateDynamic("orderby")(orderby.asInstanceOf[js.Any])
-    if (`with` != null) __obj.updateDynamic("with")(`with`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AST]
   }
 }

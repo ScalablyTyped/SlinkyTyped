@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeViewShot.mod
 
+import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.ReactInstance
-import typingsSlinky.react.mod.RefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 object captureRef extends js.Object {
   def apply[T](viewRef: ReactInstance): js.Promise[String] = js.native
   def apply[T](viewRef: ReactInstance, options: CaptureOptions): js.Promise[String] = js.native
-  def apply[T](viewRef: RefObject[T]): js.Promise[String] = js.native
-  def apply[T](viewRef: RefObject[T], options: CaptureOptions): js.Promise[String] = js.native
+  def apply[T](viewRef: ReactRef[T]): js.Promise[String] = js.native
+  def apply[T](viewRef: ReactRef[T], options: CaptureOptions): js.Promise[String] = js.native
 }
 

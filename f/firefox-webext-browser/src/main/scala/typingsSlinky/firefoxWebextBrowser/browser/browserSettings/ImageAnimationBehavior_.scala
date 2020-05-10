@@ -15,12 +15,10 @@ trait ImageAnimationBehavior_ extends js.Object
 
 object ImageAnimationBehavior_ {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.none = "none".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.none]
   @scala.inline
-  def none: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.none = this.cast("none")
+  def normal: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal = "normal".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal = this.cast("normal")
-  @scala.inline
-  def once: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.once = this.cast("once")
+  def once: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.once = "once".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.once]
 }
 

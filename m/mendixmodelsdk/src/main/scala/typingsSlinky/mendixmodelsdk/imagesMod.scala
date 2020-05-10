@@ -50,7 +50,7 @@ object imagesMod extends js.Object {
       val images: IList[IImage] = js.native
     }
     
-    /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+    /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
     - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
     - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -72,29 +72,21 @@ object imagesMod extends js.Object {
       var model_FImage: IModel = js.native
       @JSName("name")
       val name_FImage: String = js.native
-      /**
-        * Returns the qualified name of this element, or
-        * null if this element is not a part of the model,
-        * or if it or one of its namespace containers does not have a
-        * valid name.
-        */
-      /* CompleteClass */
-      override val qualifiedName: String | Null = js.native
-      def containerAsImageCollection(): ImageCollection = js.native
+      def containerAsImageCollection: ImageCollection = js.native
       def imageData(): js.Any = js.native
       def imageData(newValue: String): js.Any = js.native
       @JSName("imageData")
-      def imageData_Union(): String | Null = js.native
-      def name(): String = js.native
+      def imageData_Union: String | Null = js.native
+      def name: String = js.native
       def name(newValue: String): js.Any = js.native
       @JSName("qualifiedName")
-      def qualifiedName_MImage(): String | Null = js.native
+      def qualifiedName_MImage: String | Null = js.native
     }
     
     /**
       * See: {@link https://docs.mendix.com/refguide7/images relevant section in reference guide}
       */
-    /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+    /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
     - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
     - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
@@ -116,8 +108,8 @@ object imagesMod extends js.Object {
       @JSName("model")
       var model_FImageCollection: IModel = js.native
       @JSName("containerAsFolderBase")
-      def containerAsFolderBase_MImageCollection(): FolderBase = js.native
-      def images(): IList[Image] = js.native
+      def containerAsFolderBase_MImageCollection: FolderBase = js.native
+      def images: IList[Image] = js.native
     }
     
     /* static members */

@@ -19,24 +19,22 @@ trait DataType extends js.Object
 
 object DataType {
   @scala.inline
-  def boolean: typingsSlinky.nodal.nodalStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.nodal.nodalStrings.boolean = "boolean".asInstanceOf[typingsSlinky.nodal.nodalStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def currency: typingsSlinky.nodal.nodalStrings.currency = "currency".asInstanceOf[typingsSlinky.nodal.nodalStrings.currency]
   @scala.inline
-  def currency: typingsSlinky.nodal.nodalStrings.currency = this.cast("currency")
+  def datetime: typingsSlinky.nodal.nodalStrings.datetime = "datetime".asInstanceOf[typingsSlinky.nodal.nodalStrings.datetime]
   @scala.inline
-  def datetime: typingsSlinky.nodal.nodalStrings.datetime = this.cast("datetime")
+  def float: typingsSlinky.nodal.nodalStrings.float = "float".asInstanceOf[typingsSlinky.nodal.nodalStrings.float]
   @scala.inline
-  def float: typingsSlinky.nodal.nodalStrings.float = this.cast("float")
+  def int: typingsSlinky.nodal.nodalStrings.int = "int".asInstanceOf[typingsSlinky.nodal.nodalStrings.int]
   @scala.inline
-  def int: typingsSlinky.nodal.nodalStrings.int = this.cast("int")
+  def json: typingsSlinky.nodal.nodalStrings.json = "json".asInstanceOf[typingsSlinky.nodal.nodalStrings.json]
   @scala.inline
-  def json: typingsSlinky.nodal.nodalStrings.json = this.cast("json")
+  def serial: typingsSlinky.nodal.nodalStrings.serial = "serial".asInstanceOf[typingsSlinky.nodal.nodalStrings.serial]
   @scala.inline
-  def serial: typingsSlinky.nodal.nodalStrings.serial = this.cast("serial")
+  def string: typingsSlinky.nodal.nodalStrings.string = "string".asInstanceOf[typingsSlinky.nodal.nodalStrings.string]
   @scala.inline
-  def string: typingsSlinky.nodal.nodalStrings.string = this.cast("string")
-  @scala.inline
-  def text: typingsSlinky.nodal.nodalStrings.text = this.cast("text")
+  def text: typingsSlinky.nodal.nodalStrings.text = "text".asInstanceOf[typingsSlinky.nodal.nodalStrings.text]
 }
 

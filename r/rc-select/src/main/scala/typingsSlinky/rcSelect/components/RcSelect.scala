@@ -1,12 +1,11 @@
 package typingsSlinky.rcSelect.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Node
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcSelect.mod.RcSelect.OptionProps
 import typingsSlinky.rcSelect.mod.RcSelect.SelectProps
 import typingsSlinky.rcSelect.mod.default
@@ -15,94 +14,102 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RcSelect
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object RcSelect {
   @JSImport("rc-select", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, multiple */
-  def apply(
-    allowClear: js.UndefOr[Boolean] = js.undefined,
-    animation: String = null,
-    choiceTransitionName: String = null,
-    combobox: js.UndefOr[Boolean] = js.undefined,
-    defaultActiveFirstOption: js.UndefOr[Boolean] = js.undefined,
-    defaultLabel: String | js.Array[String] = null,
-    defaultValue: String | js.Array[String] = null,
-    dropdownClassName: String = null,
-    dropdownMatchSelectWidth: js.UndefOr[Boolean] = js.undefined,
-    filterOption: js.UndefOr[Boolean] = js.undefined,
-    getInputElement: () => Node = null,
-    getPopupContainer: /* trigger */ Node => Node = null,
-    labelInValue: js.UndefOr[Boolean] = js.undefined,
-    maxTagCount: Int | Double = null,
-    maxTagPlaceholder: TagMod[Any] | js.Function = null,
-    maxTagTextLength: Int | Double = null,
-    notFoundContent: String = null,
-    onBlur: () => Unit = null,
-    onChange: (/* value */ String, /* label */ String) => Unit = null,
-    onDeselect: (/* value */ String, ReactComponentClass[OptionProps]) => Unit = null,
-    onFocus: () => Unit = null,
-    onInputKeyDown: /* e */ Event_ => Unit = null,
-    onPopupScroll: () => Unit = null,
-    onSearch: () => Unit = null,
-    onSelect: (/* value */ String, ReactComponentClass[OptionProps]) => Unit = null,
-    optionFilterProp: String = null,
-    optionLabelProp: String = null,
-    placeholder: TagMod[Any] = null,
-    prefixCls: String = null,
-    showAction: js.Array[String] = null,
-    showArrow: js.UndefOr[Boolean] = js.undefined,
-    showSearch: js.UndefOr[Boolean] = js.undefined,
-    tags: js.UndefOr[Boolean] = js.undefined,
-    tokenSeparators: js.Array[String] = null,
-    transitionName: String = null,
-    value: String | js.Array[String] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (choiceTransitionName != null) __obj.updateDynamic("choiceTransitionName")(choiceTransitionName.asInstanceOf[js.Any])
-    if (!js.isUndefined(combobox)) __obj.updateDynamic("combobox")(combobox.asInstanceOf[js.Any])
-    if (!js.isUndefined(defaultActiveFirstOption)) __obj.updateDynamic("defaultActiveFirstOption")(defaultActiveFirstOption.asInstanceOf[js.Any])
-    if (defaultLabel != null) __obj.updateDynamic("defaultLabel")(defaultLabel.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
-    if (dropdownClassName != null) __obj.updateDynamic("dropdownClassName")(dropdownClassName.asInstanceOf[js.Any])
-    if (!js.isUndefined(dropdownMatchSelectWidth)) __obj.updateDynamic("dropdownMatchSelectWidth")(dropdownMatchSelectWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(filterOption)) __obj.updateDynamic("filterOption")(filterOption.asInstanceOf[js.Any])
-    if (getInputElement != null) __obj.updateDynamic("getInputElement")(js.Any.fromFunction0(getInputElement))
-    if (getPopupContainer != null) __obj.updateDynamic("getPopupContainer")(js.Any.fromFunction1(getPopupContainer))
-    if (!js.isUndefined(labelInValue)) __obj.updateDynamic("labelInValue")(labelInValue.asInstanceOf[js.Any])
-    if (maxTagCount != null) __obj.updateDynamic("maxTagCount")(maxTagCount.asInstanceOf[js.Any])
-    if (maxTagPlaceholder != null) __obj.updateDynamic("maxTagPlaceholder")(maxTagPlaceholder.asInstanceOf[js.Any])
-    if (maxTagTextLength != null) __obj.updateDynamic("maxTagTextLength")(maxTagTextLength.asInstanceOf[js.Any])
-    if (notFoundContent != null) __obj.updateDynamic("notFoundContent")(notFoundContent.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction0(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onDeselect != null) __obj.updateDynamic("onDeselect")(js.Any.fromFunction2(onDeselect))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction0(onFocus))
-    if (onInputKeyDown != null) __obj.updateDynamic("onInputKeyDown")(js.Any.fromFunction1(onInputKeyDown))
-    if (onPopupScroll != null) __obj.updateDynamic("onPopupScroll")(js.Any.fromFunction0(onPopupScroll))
-    if (onSearch != null) __obj.updateDynamic("onSearch")(js.Any.fromFunction0(onSearch))
-    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction2(onSelect))
-    if (optionFilterProp != null) __obj.updateDynamic("optionFilterProp")(optionFilterProp.asInstanceOf[js.Any])
-    if (optionLabelProp != null) __obj.updateDynamic("optionLabelProp")(optionLabelProp.asInstanceOf[js.Any])
-    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (showAction != null) __obj.updateDynamic("showAction")(showAction.asInstanceOf[js.Any])
-    if (!js.isUndefined(showArrow)) __obj.updateDynamic("showArrow")(showArrow.asInstanceOf[js.Any])
-    if (!js.isUndefined(showSearch)) __obj.updateDynamic("showSearch")(showSearch.asInstanceOf[js.Any])
-    if (!js.isUndefined(tags)) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
-    if (tokenSeparators != null) __obj.updateDynamic("tokenSeparators")(tokenSeparators.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animation(value: String): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def choiceTransitionName(value: String): this.type = set("choiceTransitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def combobox(value: Boolean): this.type = set("combobox", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultActiveFirstOption(value: Boolean): this.type = set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultLabel(value: String | js.Array[String]): this.type = set("defaultLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValue(value: String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dropdownMatchSelectWidth(value: Boolean): this.type = set("dropdownMatchSelectWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def filterOption(value: Boolean): this.type = set("filterOption", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getInputElement(value: () => Node): this.type = set("getInputElement", js.Any.fromFunction0(value))
+    @scala.inline
+    def getPopupContainer(value: /* trigger */ Node => Node): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelInValue(value: Boolean): this.type = set("labelInValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxTagCount(value: Double): this.type = set("maxTagCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxTagPlaceholderReactElement(value: ReactElement): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxTagPlaceholder(value: TagMod[Any] | js.Function): this.type = set("maxTagPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxTagTextLength(value: Double): this.type = set("maxTagTextLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def notFoundContent(value: String): this.type = set("notFoundContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(value: () => Unit): this.type = set("onBlur", js.Any.fromFunction0(value))
+    @scala.inline
+    def onChange(value: (/* value */ String, /* label */ String) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onDeselect(value: (/* value */ String, ReactComponentClass[OptionProps]) => Unit): this.type = set("onDeselect", js.Any.fromFunction2(value))
+    @scala.inline
+    def onFocus(value: () => Unit): this.type = set("onFocus", js.Any.fromFunction0(value))
+    @scala.inline
+    def onInputKeyDown(value: /* e */ Event_ => Unit): this.type = set("onInputKeyDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPopupScroll(value: () => Unit): this.type = set("onPopupScroll", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSearch(value: () => Unit): this.type = set("onSearch", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSelect(value: (/* value */ String, ReactComponentClass[OptionProps]) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
+    @scala.inline
+    def optionFilterProp(value: String): this.type = set("optionFilterProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def optionLabelProp(value: String): this.type = set("optionLabelProp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholderReactElement(value: ReactElement): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: TagMod[Any]): this.type = set("placeholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showAction(value: js.Array[String]): this.type = set("showAction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showArrow(value: Boolean): this.type = set("showArrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showSearch(value: Boolean): this.type = set("showSearch", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tags(value: Boolean): this.type = set("tags", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tokenSeparators(value: js.Array[String]): this.type = set("tokenSeparators", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: String | js.Array[String]): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rcSelect.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SelectProps
+  
+  def withProps(p: SelectProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RcSelect.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

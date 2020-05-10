@@ -31,22 +31,89 @@ trait Qualification extends js.Object {
 
 object Qualification {
   @scala.inline
-  def apply(
-    GrantTime: js.Date = null,
-    IntegerValue: Int | Double = null,
-    LocaleValue: Locale = null,
-    QualificationTypeId: EntityId = null,
-    Status: QualificationStatus = null,
-    WorkerId: CustomerId = null
-  ): Qualification = {
+  def apply(): Qualification = {
     val __obj = js.Dynamic.literal()
-    if (GrantTime != null) __obj.updateDynamic("GrantTime")(GrantTime.asInstanceOf[js.Any])
-    if (IntegerValue != null) __obj.updateDynamic("IntegerValue")(IntegerValue.asInstanceOf[js.Any])
-    if (LocaleValue != null) __obj.updateDynamic("LocaleValue")(LocaleValue.asInstanceOf[js.Any])
-    if (QualificationTypeId != null) __obj.updateDynamic("QualificationTypeId")(QualificationTypeId.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (WorkerId != null) __obj.updateDynamic("WorkerId")(WorkerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Qualification]
   }
+  @scala.inline
+  implicit class QualificationOps[Self <: Qualification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGrantTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntegerValue(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntegerValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntegerValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocaleValue(value: Locale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocaleValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocaleValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LocaleValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQualificationTypeId(value: EntityId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationTypeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQualificationTypeId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QualificationTypeId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: QualificationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerId(value: CustomerId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkerId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

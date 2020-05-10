@@ -4,58 +4,201 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Document
   extends typingsSlinky.openapiTypes.mod.OpenAPI.Document {
-  var basePath: js.UndefOr[String] = js.undefined
-  var consumes: js.UndefOr[MimeTypes] = js.undefined
-  var definitions: js.UndefOr[DefinitionsObject] = js.undefined
-  var externalDocs: js.UndefOr[ExternalDocumentationObject] = js.undefined
-  var host: js.UndefOr[String] = js.undefined
-  var info: InfoObject
-  var parameters: js.UndefOr[ParametersDefinitionsObject] = js.undefined
-  var paths: PathsObject
-  var produces: js.UndefOr[MimeTypes] = js.undefined
-  var responses: js.UndefOr[ResponsesDefinitionsObject] = js.undefined
-  var schemes: js.UndefOr[js.Array[String]] = js.undefined
-  var security: js.UndefOr[js.Array[SecurityRequirementObject]] = js.undefined
-  var securityDefinitions: js.UndefOr[SecurityDefinitionsObject] = js.undefined
-  var swagger: String
-  var tags: js.UndefOr[js.Array[TagObject]] = js.undefined
+  var basePath: js.UndefOr[String] = js.native
+  var consumes: js.UndefOr[MimeTypes] = js.native
+  var definitions: js.UndefOr[DefinitionsObject] = js.native
+  var externalDocs: js.UndefOr[ExternalDocumentationObject] = js.native
+  var host: js.UndefOr[String] = js.native
+  var info: InfoObject = js.native
+  var parameters: js.UndefOr[ParametersDefinitionsObject] = js.native
+  var paths: PathsObject = js.native
+  var produces: js.UndefOr[MimeTypes] = js.native
+  var responses: js.UndefOr[ResponsesDefinitionsObject] = js.native
+  var schemes: js.UndefOr[js.Array[String]] = js.native
+  var security: js.UndefOr[js.Array[SecurityRequirementObject]] = js.native
+  var securityDefinitions: js.UndefOr[SecurityDefinitionsObject] = js.native
+  var swagger: String = js.native
+  var tags: js.UndefOr[js.Array[TagObject]] = js.native
 }
 
 object Document {
   @scala.inline
-  def apply(
-    info: InfoObject,
-    paths: PathsObject,
-    swagger: String,
-    basePath: String = null,
-    consumes: MimeTypes = null,
-    definitions: DefinitionsObject = null,
-    externalDocs: ExternalDocumentationObject = null,
-    host: String = null,
-    parameters: ParametersDefinitionsObject = null,
-    produces: MimeTypes = null,
-    responses: ResponsesDefinitionsObject = null,
-    schemes: js.Array[String] = null,
-    security: js.Array[SecurityRequirementObject] = null,
-    securityDefinitions: SecurityDefinitionsObject = null,
-    tags: js.Array[TagObject] = null
-  ): Document = {
+  def apply(info: InfoObject, paths: PathsObject, swagger: String): Document = {
     val __obj = js.Dynamic.literal(info = info.asInstanceOf[js.Any], paths = paths.asInstanceOf[js.Any], swagger = swagger.asInstanceOf[js.Any])
-    if (basePath != null) __obj.updateDynamic("basePath")(basePath.asInstanceOf[js.Any])
-    if (consumes != null) __obj.updateDynamic("consumes")(consumes.asInstanceOf[js.Any])
-    if (definitions != null) __obj.updateDynamic("definitions")(definitions.asInstanceOf[js.Any])
-    if (externalDocs != null) __obj.updateDynamic("externalDocs")(externalDocs.asInstanceOf[js.Any])
-    if (host != null) __obj.updateDynamic("host")(host.asInstanceOf[js.Any])
-    if (parameters != null) __obj.updateDynamic("parameters")(parameters.asInstanceOf[js.Any])
-    if (produces != null) __obj.updateDynamic("produces")(produces.asInstanceOf[js.Any])
-    if (responses != null) __obj.updateDynamic("responses")(responses.asInstanceOf[js.Any])
-    if (schemes != null) __obj.updateDynamic("schemes")(schemes.asInstanceOf[js.Any])
-    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
-    if (securityDefinitions != null) __obj.updateDynamic("securityDefinitions")(securityDefinitions.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[Document]
   }
+  @scala.inline
+  implicit class DocumentOps[Self <: Document] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInfo(value: InfoObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaths(value: PathsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSwagger(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swagger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBasePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBasePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("basePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConsumes(value: MimeTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConsumes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDefinitions(value: DefinitionsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefinitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("definitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExternalDocs(value: ExternalDocumentationObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalDocs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExternalDocs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("externalDocs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParameters(value: ParametersDefinitionsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProduces(value: MimeTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("produces")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProduces: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("produces")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponses(value: ResponsesDefinitionsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurity(value: js.Array[SecurityRequirementObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("security")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityDefinitions(value: SecurityDefinitionsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityDefinitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityDefinitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityDefinitions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[TagObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

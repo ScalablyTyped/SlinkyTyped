@@ -33,28 +33,100 @@ trait CreateVpcRequest extends js.Object {
   /**
     * The ID of an IPv6 address pool from which to allocate the IPv6 CIDR block.
     */
-  var Ipv6Pool: js.UndefOr[String] = js.native
+  var Ipv6Pool: js.UndefOr[Ipv6PoolEc2Id] = js.native
 }
 
 object CreateVpcRequest {
   @scala.inline
-  def apply(
-    CidrBlock: String,
-    AmazonProvidedIpv6CidrBlock: js.UndefOr[scala.Boolean] = js.undefined,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    InstanceTenancy: Tenancy = null,
-    Ipv6CidrBlock: String = null,
-    Ipv6CidrBlockNetworkBorderGroup: String = null,
-    Ipv6Pool: String = null
-  ): CreateVpcRequest = {
+  def apply(CidrBlock: String): CreateVpcRequest = {
     val __obj = js.Dynamic.literal(CidrBlock = CidrBlock.asInstanceOf[js.Any])
-    if (!js.isUndefined(AmazonProvidedIpv6CidrBlock)) __obj.updateDynamic("AmazonProvidedIpv6CidrBlock")(AmazonProvidedIpv6CidrBlock.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (InstanceTenancy != null) __obj.updateDynamic("InstanceTenancy")(InstanceTenancy.asInstanceOf[js.Any])
-    if (Ipv6CidrBlock != null) __obj.updateDynamic("Ipv6CidrBlock")(Ipv6CidrBlock.asInstanceOf[js.Any])
-    if (Ipv6CidrBlockNetworkBorderGroup != null) __obj.updateDynamic("Ipv6CidrBlockNetworkBorderGroup")(Ipv6CidrBlockNetworkBorderGroup.asInstanceOf[js.Any])
-    if (Ipv6Pool != null) __obj.updateDynamic("Ipv6Pool")(Ipv6Pool.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVpcRequest]
   }
+  @scala.inline
+  implicit class CreateVpcRequestOps[Self <: CreateVpcRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAmazonProvidedIpv6CidrBlock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AmazonProvidedIpv6CidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmazonProvidedIpv6CidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AmazonProvidedIpv6CidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceTenancy(value: Tenancy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceTenancy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceTenancy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceTenancy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6CidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6CidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6CidrBlockNetworkBorderGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlockNetworkBorderGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6CidrBlockNetworkBorderGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlockNetworkBorderGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpv6Pool(value: Ipv6PoolEc2Id): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Pool")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6Pool: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6Pool")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

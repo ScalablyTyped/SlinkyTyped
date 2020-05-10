@@ -92,26 +92,113 @@ trait SchemaMetricThreshold extends js.Object {
 
 object SchemaMetricThreshold {
   @scala.inline
-  def apply(
-    aggregations: js.Array[SchemaAggregation] = null,
-    comparison: String = null,
-    denominatorAggregations: js.Array[SchemaAggregation] = null,
-    denominatorFilter: String = null,
-    duration: String = null,
-    filter: String = null,
-    thresholdValue: Int | Double = null,
-    trigger: SchemaTrigger = null
-  ): SchemaMetricThreshold = {
+  def apply(): SchemaMetricThreshold = {
     val __obj = js.Dynamic.literal()
-    if (aggregations != null) __obj.updateDynamic("aggregations")(aggregations.asInstanceOf[js.Any])
-    if (comparison != null) __obj.updateDynamic("comparison")(comparison.asInstanceOf[js.Any])
-    if (denominatorAggregations != null) __obj.updateDynamic("denominatorAggregations")(denominatorAggregations.asInstanceOf[js.Any])
-    if (denominatorFilter != null) __obj.updateDynamic("denominatorFilter")(denominatorFilter.asInstanceOf[js.Any])
-    if (duration != null) __obj.updateDynamic("duration")(duration.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (thresholdValue != null) __obj.updateDynamic("thresholdValue")(thresholdValue.asInstanceOf[js.Any])
-    if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaMetricThreshold]
   }
+  @scala.inline
+  implicit class SchemaMetricThresholdOps[Self <: SchemaMetricThreshold] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregations(value: js.Array[SchemaAggregation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAggregations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComparison(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comparison")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComparison: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comparison")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDenominatorAggregations(value: js.Array[SchemaAggregation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("denominatorAggregations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDenominatorAggregations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("denominatorAggregations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDenominatorFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("denominatorFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDenominatorFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("denominatorFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDuration(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThresholdValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThresholdValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thresholdValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrigger(value: SchemaTrigger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrigger: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trigger")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

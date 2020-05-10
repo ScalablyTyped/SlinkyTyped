@@ -1,27 +1,23 @@
 package typingsSlinky.navigationReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.navigation.mod.StateNavigator
 import typingsSlinky.navigationReact.AnonStateNavigator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NavigationHandler
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.navigationReact.mod.NavigationHandler] {
+object NavigationHandler {
   @JSImport("navigation-react", "NavigationHandler")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(stateNavigator: StateNavigator, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.navigationReact.mod.NavigationHandler] = {
-    val __obj = js.Dynamic.literal(stateNavigator = stateNavigator.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: AnonStateNavigator): Default[tag.type, typingsSlinky.navigationReact.mod.NavigationHandler] = new Default[tag.type, typingsSlinky.navigationReact.mod.NavigationHandler](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(stateNavigator: StateNavigator): Default[tag.type, typingsSlinky.navigationReact.mod.NavigationHandler] = {
+    val __props = js.Dynamic.literal(stateNavigator = stateNavigator.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.navigationReact.mod.NavigationHandler](js.Array(this.component, __props.asInstanceOf[AnonStateNavigator]))
   }
-  type Props = AnonStateNavigator
 }
 

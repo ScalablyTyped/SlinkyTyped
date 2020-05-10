@@ -18,14 +18,41 @@ trait RecommendationSource extends js.Object {
 
 object RecommendationSource {
   @scala.inline
-  def apply(
-    recommendationSourceArn: RecommendationSourceArn = null,
-    recommendationSourceType: RecommendationSourceType = null
-  ): RecommendationSource = {
+  def apply(): RecommendationSource = {
     val __obj = js.Dynamic.literal()
-    if (recommendationSourceArn != null) __obj.updateDynamic("recommendationSourceArn")(recommendationSourceArn.asInstanceOf[js.Any])
-    if (recommendationSourceType != null) __obj.updateDynamic("recommendationSourceType")(recommendationSourceType.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecommendationSource]
   }
+  @scala.inline
+  implicit class RecommendationSourceOps[Self <: RecommendationSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecommendationSourceArn(value: RecommendationSourceArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendationSourceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecommendationSourceArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendationSourceArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecommendationSourceType(value: RecommendationSourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendationSourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecommendationSourceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recommendationSourceType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

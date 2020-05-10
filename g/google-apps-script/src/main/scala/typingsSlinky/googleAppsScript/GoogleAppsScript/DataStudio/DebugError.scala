@@ -13,18 +13,44 @@ import scala.scalajs.js.annotation._
   *       .setText("This is the debug error text.")
   *       .throwException();
   */
+@js.native
 trait DebugError extends js.Object {
-  def printJson(): String
-  def setText(text: String): DebugError
-  def throwException(): Unit
+  def printJson(): String = js.native
+  def setText(text: String): DebugError = js.native
+  def throwException(): scala.Nothing = js.native
 }
 
 object DebugError {
   @scala.inline
-  def apply(printJson: () => String, setText: String => DebugError, throwException: () => Unit): DebugError = {
+  def apply(printJson: () => String, setText: String => DebugError, throwException: () => scala.Nothing): DebugError = {
     val __obj = js.Dynamic.literal(printJson = js.Any.fromFunction0(printJson), setText = js.Any.fromFunction1(setText), throwException = js.Any.fromFunction0(throwException))
-  
     __obj.asInstanceOf[DebugError]
   }
+  @scala.inline
+  implicit class DebugErrorOps[Self <: DebugError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrintJson(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printJson")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetText(value: String => DebugError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withThrowException(value: () => scala.Nothing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("throwException")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

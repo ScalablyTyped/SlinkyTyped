@@ -4,27 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HintSpecimenProps extends js.Object {
-  var directive: js.UndefOr[Boolean] = js.undefined
-  var important: js.UndefOr[Boolean] = js.undefined
-  var neutral: js.UndefOr[Boolean] = js.undefined
-  var warning: js.UndefOr[Boolean] = js.undefined
+  var directive: js.UndefOr[Boolean] = js.native
+  var important: js.UndefOr[Boolean] = js.native
+  var neutral: js.UndefOr[Boolean] = js.native
+  var warning: js.UndefOr[Boolean] = js.native
 }
 
 object HintSpecimenProps {
   @scala.inline
-  def apply(
-    directive: js.UndefOr[Boolean] = js.undefined,
-    important: js.UndefOr[Boolean] = js.undefined,
-    neutral: js.UndefOr[Boolean] = js.undefined,
-    warning: js.UndefOr[Boolean] = js.undefined
-  ): HintSpecimenProps = {
+  def apply(): HintSpecimenProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(directive)) __obj.updateDynamic("directive")(directive.asInstanceOf[js.Any])
-    if (!js.isUndefined(important)) __obj.updateDynamic("important")(important.asInstanceOf[js.Any])
-    if (!js.isUndefined(neutral)) __obj.updateDynamic("neutral")(neutral.asInstanceOf[js.Any])
-    if (!js.isUndefined(warning)) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[HintSpecimenProps]
   }
+  @scala.inline
+  implicit class HintSpecimenPropsOps[Self <: HintSpecimenProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirective(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirective: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImportant(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("important")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImportant: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("important")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeutral(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neutral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeutral: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neutral")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

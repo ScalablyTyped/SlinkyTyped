@@ -12,10 +12,8 @@ trait TouchType extends js.Object
 
 object TouchType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def direct: typingsSlinky.std.stdStrings.direct = "direct".asInstanceOf[typingsSlinky.std.stdStrings.direct]
   @scala.inline
-  def direct: typingsSlinky.std.stdStrings.direct = this.cast("direct")
-  @scala.inline
-  def stylus: typingsSlinky.std.stdStrings.stylus = this.cast("stylus")
+  def stylus: typingsSlinky.std.stdStrings.stylus = "stylus".asInstanceOf[typingsSlinky.std.stdStrings.stylus]
 }
 

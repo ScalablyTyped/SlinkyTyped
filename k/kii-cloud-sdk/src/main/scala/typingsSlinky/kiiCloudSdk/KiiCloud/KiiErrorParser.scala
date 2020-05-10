@@ -1,6 +1,5 @@
 package typingsSlinky.kiiCloudSdk.KiiCloud
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,6 +39,6 @@ object KiiErrorParser extends js.Object {
     *     var errorMessage = err.message;
     */
   def parse(error: String): KiiError = js.native
-  def parse(error: Error): KiiError = js.native
+  def parse(error: js.Error): KiiError = js.native
 }
 

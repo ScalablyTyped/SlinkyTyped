@@ -1,40 +1,50 @@
 package typingsSlinky.reactBootstrapTypeahead.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLUListElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactRef
 import slinky.web.html.ul.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactBootstrapTypeahead.mod.MenuProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Menu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.Menu] {
+object Menu {
   @JSImport("react-bootstrap-typeahead", "Menu")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    id: String,
-    emptyLabel: String = null,
-    innerRef: LegacyRef[HTMLUListElement] = null,
-    maxHeight: String = null,
-    text: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.Menu] = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    if (emptyLabel != null) __obj.updateDynamic("emptyLabel")(emptyLabel.asInstanceOf[js.Any])
-    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTypeahead.mod.Menu] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyLabel(value: String): this.type = set("emptyLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ HTMLUListElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def innerRef(value: LegacyRef[HTMLUListElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
+    @scala.inline
+    def maxHeight(value: String): this.type = set("maxHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
   }
-  type Props = MenuProps
+  
+  def withProps(p: MenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(id: String): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MenuProps]))
+  }
 }
 

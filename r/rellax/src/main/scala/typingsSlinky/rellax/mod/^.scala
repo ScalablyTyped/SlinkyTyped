@@ -2,8 +2,6 @@ package typingsSlinky.rellax.mod
 
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Element
-import org.scalajs.dom.raw.Node
-import org.scalajs.dom.raw.NodeListOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,26 +18,6 @@ class ^ () extends RellaxInstance {
   def this(el: Element) = this()
   def this(el: String, options: RellaxOptions) = this()
   def this(el: Element, options: RellaxOptions) = this()
-  /**
-    * Rellax elements
-    */
-  /* CompleteClass */
-  override var elms: (NodeListOf[Element with Node]) | js.Array[Element] = js.native
-  /**
-    * Options
-    */
-  /* CompleteClass */
-  override var options: RellaxOptions = js.native
-  /**
-    * End Rellax and reset parallax elements to their original positions
-    */
-  /* CompleteClass */
-  override def destroy(): Unit = js.native
-  /**
-    * Destroy and create again parallax with previous settings
-    */
-  /* CompleteClass */
-  override def refresh(): Unit = js.native
 }
 
 @JSImport("rellax", JSImport.Namespace)

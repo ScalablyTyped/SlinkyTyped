@@ -4,19 +4,56 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListKeyRingsRequest extends js.Object {
-  var page_size: js.UndefOr[Double] = js.undefined
-  var page_token: js.UndefOr[String] = js.undefined
-  var parent: String
+  var page_size: js.UndefOr[Double] = js.native
+  var page_token: js.UndefOr[String] = js.native
+  var parent: String = js.native
 }
 
 object ListKeyRingsRequest {
   @scala.inline
-  def apply(parent: String, page_size: Int | Double = null, page_token: String = null): ListKeyRingsRequest = {
+  def apply(parent: String): ListKeyRingsRequest = {
     val __obj = js.Dynamic.literal(parent = parent.asInstanceOf[js.Any])
-    if (page_size != null) __obj.updateDynamic("page_size")(page_size.asInstanceOf[js.Any])
-    if (page_token != null) __obj.updateDynamic("page_token")(page_token.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListKeyRingsRequest]
   }
+  @scala.inline
+  implicit class ListKeyRingsRequestOps[Self <: ListKeyRingsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPage_size(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page_size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage_size: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page_size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage_token(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page_token")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage_token: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page_token")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,17 +26,59 @@ trait StartDocumentTextDetectionRequest extends js.Object {
 
 object StartDocumentTextDetectionRequest {
   @scala.inline
-  def apply(
-    DocumentLocation: DocumentLocation,
-    ClientRequestToken: ClientRequestToken = null,
-    JobTag: JobTag = null,
-    NotificationChannel: NotificationChannel = null
-  ): StartDocumentTextDetectionRequest = {
+  def apply(DocumentLocation: DocumentLocation): StartDocumentTextDetectionRequest = {
     val __obj = js.Dynamic.literal(DocumentLocation = DocumentLocation.asInstanceOf[js.Any])
-    if (ClientRequestToken != null) __obj.updateDynamic("ClientRequestToken")(ClientRequestToken.asInstanceOf[js.Any])
-    if (JobTag != null) __obj.updateDynamic("JobTag")(JobTag.asInstanceOf[js.Any])
-    if (NotificationChannel != null) __obj.updateDynamic("NotificationChannel")(NotificationChannel.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartDocumentTextDetectionRequest]
   }
+  @scala.inline
+  implicit class StartDocumentTextDetectionRequestOps[Self <: StartDocumentTextDetectionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentLocation(value: DocumentLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientRequestToken(value: ClientRequestToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientRequestToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientRequestToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobTag(value: JobTag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("JobTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotificationChannel(value: NotificationChannel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationChannel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotificationChannel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotificationChannel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

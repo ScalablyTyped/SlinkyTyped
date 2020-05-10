@@ -70,11 +70,12 @@ trait HTMLAreaElement
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("HTMLAreaElement")
 @js.native
-object HTMLAreaElement extends Instantiable0[HTMLAreaElement]
+object HTMLAreaElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLAreaElement]
 

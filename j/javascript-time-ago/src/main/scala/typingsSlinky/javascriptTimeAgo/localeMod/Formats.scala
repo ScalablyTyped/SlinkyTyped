@@ -18,22 +18,20 @@ trait Formats extends js.Object
 
 object Formats {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def long: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.long = "long".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.long]
   @scala.inline
-  def long: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.long = this.cast("long")
+  def `long-convenient`: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`long-convenient` = "long-convenient".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`long-convenient`]
   @scala.inline
-  def `long-convenient`: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`long-convenient` = this.cast("long-convenient")
+  def `long-time`: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`long-time` = "long-time".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`long-time`]
   @scala.inline
-  def `long-time`: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`long-time` = this.cast("long-time")
+  def narrow: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.narrow = "narrow".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.narrow]
   @scala.inline
-  def narrow: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.narrow = this.cast("narrow")
+  def short: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.short = "short".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.short]
   @scala.inline
-  def short: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.short = this.cast("short")
+  def `short-convenient`: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`short-convenient` = "short-convenient".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`short-convenient`]
   @scala.inline
-  def `short-convenient`: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`short-convenient` = this.cast("short-convenient")
+  def `short-time`: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`short-time` = "short-time".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`short-time`]
   @scala.inline
-  def `short-time`: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.`short-time` = this.cast("short-time")
-  @scala.inline
-  def tiny: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.tiny = this.cast("tiny")
+  def tiny: typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.tiny = "tiny".asInstanceOf[typingsSlinky.javascriptTimeAgo.javascriptTimeAgoStrings.tiny]
 }
 

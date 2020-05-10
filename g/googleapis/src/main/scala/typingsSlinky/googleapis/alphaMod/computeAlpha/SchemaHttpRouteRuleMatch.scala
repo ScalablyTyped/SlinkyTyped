@@ -70,24 +70,101 @@ trait SchemaHttpRouteRuleMatch extends js.Object {
 
 object SchemaHttpRouteRuleMatch {
   @scala.inline
-  def apply(
-    fullPathMatch: String = null,
-    headerMatches: js.Array[SchemaHttpHeaderMatch] = null,
-    ignoreCase: js.UndefOr[Boolean] = js.undefined,
-    metadataFilters: js.Array[SchemaMetadataFilter] = null,
-    prefixMatch: String = null,
-    queryParameterMatches: js.Array[SchemaHttpQueryParameterMatch] = null,
-    regexMatch: String = null
-  ): SchemaHttpRouteRuleMatch = {
+  def apply(): SchemaHttpRouteRuleMatch = {
     val __obj = js.Dynamic.literal()
-    if (fullPathMatch != null) __obj.updateDynamic("fullPathMatch")(fullPathMatch.asInstanceOf[js.Any])
-    if (headerMatches != null) __obj.updateDynamic("headerMatches")(headerMatches.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignoreCase)) __obj.updateDynamic("ignoreCase")(ignoreCase.asInstanceOf[js.Any])
-    if (metadataFilters != null) __obj.updateDynamic("metadataFilters")(metadataFilters.asInstanceOf[js.Any])
-    if (prefixMatch != null) __obj.updateDynamic("prefixMatch")(prefixMatch.asInstanceOf[js.Any])
-    if (queryParameterMatches != null) __obj.updateDynamic("queryParameterMatches")(queryParameterMatches.asInstanceOf[js.Any])
-    if (regexMatch != null) __obj.updateDynamic("regexMatch")(regexMatch.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHttpRouteRuleMatch]
   }
+  @scala.inline
+  implicit class SchemaHttpRouteRuleMatchOps[Self <: SchemaHttpRouteRuleMatch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFullPathMatch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullPathMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullPathMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullPathMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderMatches(value: js.Array[SchemaHttpHeaderMatch]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerMatches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderMatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerMatches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreCase(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreCase: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreCase")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadataFilters(value: js.Array[SchemaMetadataFilter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadataFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataFilters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixMatch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryParameterMatches(value: js.Array[SchemaHttpQueryParameterMatch]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParameterMatches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryParameterMatches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParameterMatches")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegexMatch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regexMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegexMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regexMatch")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

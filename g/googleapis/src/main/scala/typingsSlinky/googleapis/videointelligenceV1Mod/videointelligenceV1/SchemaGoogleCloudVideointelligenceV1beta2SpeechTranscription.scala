@@ -26,14 +26,41 @@ trait SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscription extends js.Ob
 
 object SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscription {
   @scala.inline
-  def apply(
-    alternatives: js.Array[SchemaGoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternative] = null,
-    languageCode: String = null
-  ): SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscription = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscription = {
     val __obj = js.Dynamic.literal()
-    if (alternatives != null) __obj.updateDynamic("alternatives")(alternatives.asInstanceOf[js.Any])
-    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscription]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscriptionOps[Self <: SchemaGoogleCloudVideointelligenceV1beta2SpeechTranscription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlternatives(value: js.Array[SchemaGoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternative]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlternatives: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternatives")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

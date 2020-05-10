@@ -6,13 +6,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NgModule extends js.Object {
   /**
     * The set of components that are bootstrapped when
     * this module is bootstrapped. The components listed here
     * are automatically added to `entryComponents`.
     */
-  var bootstrap: js.UndefOr[js.Array[Type[_] | js.Array[_]]] = js.undefined
+  var bootstrap: js.UndefOr[js.Array[Type[_] | js.Array[_]]] = js.native
   /**
     * The set of components, directives, and pipes ([declarables](guide/glossary#declarable))
     * that belong to this module.
@@ -39,7 +40,7 @@ trait NgModule extends js.Object {
     * }
     * ```
     */
-  var declarations: js.UndefOr[js.Array[Type[_] | js.Array[_]]] = js.undefined
+  var declarations: js.UndefOr[js.Array[Type[_] | js.Array[_]]] = js.native
   /**
     * The set of components to compile when this NgModule is defined,
     * so that they can be dynamically loaded into the view.
@@ -54,7 +55,7 @@ trait NgModule extends js.Object {
     *
     * @see [Entry Components](guide/entry-components)
     */
-  var entryComponents: js.UndefOr[js.Array[Type[_] | js.Array[_]]] = js.undefined
+  var entryComponents: js.UndefOr[js.Array[Type[_] | js.Array[_]]] = js.native
   /**
     * The set of components, directives, and pipes declared in this
     * NgModule that can be used in the template of any component that is part of an
@@ -85,13 +86,13 @@ trait NgModule extends js.Object {
     * }
     * ```
     */
-  var exports: js.UndefOr[js.Array[Type[_] | js.Array[_]]] = js.undefined
+  var exports: js.UndefOr[js.Array[Type[_] | js.Array[_]]] = js.native
   /**
     * A name or path that uniquely identifies this NgModule in `getModuleFactory`.
     * If left `undefined`, the NgModule is not registered with
     * `getModuleFactory`.
     */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /**
     * The set of NgModules whose exported [declarables](guide/glossary#declarable)
     * are available to templates in this module.
@@ -119,14 +120,14 @@ trait NgModule extends js.Object {
     * ```
     *
     */
-  var imports: js.UndefOr[js.Array[Type[_] | ModuleWithProviders[js.Object] | js.Array[_]]] = js.undefined
+  var imports: js.UndefOr[js.Array[Type[_] | ModuleWithProviders[js.Object] | js.Array[_]]] = js.native
   /**
     * If true, this module will be skipped by the AOT compiler and so will always be compiled
     * using JIT.
     *
     * This exists to support future Ivy work and has no effect currently.
     */
-  var jit: js.UndefOr[`true`] = js.undefined
+  var jit: js.UndefOr[`true`] = js.native
   /**
     * The set of injectable objects that are available in the injector
     * of this module.
@@ -174,7 +175,7 @@ trait NgModule extends js.Object {
     * }
     * ```
     */
-  var providers: js.UndefOr[js.Array[Provider]] = js.undefined
+  var providers: js.UndefOr[js.Array[Provider]] = js.native
   /**
     * The set of schemas that declare elements to be allowed in the NgModule.
     * Elements and properties that are neither Angular components nor directives
@@ -185,7 +186,7 @@ trait NgModule extends js.Object {
     * @security When using one of `NO_ERRORS_SCHEMA` or `CUSTOM_ELEMENTS_SCHEMA`
     * you must ensure that allowed elements and properties securely escape inputs.
     */
-  var schemas: js.UndefOr[js.Array[SchemaMetadata | js.Array[_]]] = js.undefined
+  var schemas: js.UndefOr[js.Array[SchemaMetadata | js.Array[_]]] = js.native
 }
 
 @JSImport("@angular/core", "NgModule")

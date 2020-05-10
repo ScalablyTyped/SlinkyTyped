@@ -59,8 +59,8 @@ class Room protected () extends js.Object {
   def getJoinedMembers(): js.Array[RoomMember] = js.native
   def getLiveTimeline(): EventTimeline = js.native
   def getMember(userId: String): RoomMember = js.native
-  def getMembersWithMembership(membership: String): js.Array[RoomMember] = js.native
-  def getMyMembership(myUserId: String): String = js.native
+  def getMembersWithMembership(membership: MembershipType): js.Array[RoomMember] = js.native
+  def getMyMembership(): MembershipType | Null = js.native
   def getOrCreateFilteredTimelineSet(filter: Filter): EventTimelineSet = js.native
   def getPendingEvents(): js.Array[MatrixEvent] = js.native
   def getReceiptsForEvent(event: MatrixEvent): js.Array[js.Object] = js.native

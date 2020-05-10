@@ -17,21 +17,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ojGanttTaskSettableProperties extends JetSettableProperties {
-  var baseline: AnonEnd
-  var borderRadius: String
-  var end: String
-  var height: Double | Null
-  var label: String
-  var labelPosition: start | innerCenter | innerStart | innerEnd | end | none
-  var labelStyle: js.Object
-  var progress: AnonValue
-  var rowId: js.UndefOr[js.Any] = js.undefined
-  var shortDesc: String | Null
-  var start: String
-  var svgClassName: String
-  var svgStyle: js.Object
-  var `type`: normal | milestone | summary | auto
+  var baseline: AnonEnd = js.native
+  var borderRadius: String = js.native
+  var end: String = js.native
+  var height: Double | Null = js.native
+  var label: String = js.native
+  var labelPosition: start | innerCenter | innerStart | innerEnd | end | none = js.native
+  var labelStyle: js.Object = js.native
+  var progress: AnonValue = js.native
+  var rowId: js.UndefOr[js.Any] = js.native
+  var shortDesc: String | Null = js.native
+  var start: String = js.native
+  var svgClassName: String = js.native
+  var svgStyle: js.Object = js.native
+  var `type`: normal | milestone | summary | auto = js.native
 }
 
 object ojGanttTaskSettableProperties {
@@ -47,17 +48,121 @@ object ojGanttTaskSettableProperties {
     start: String,
     svgClassName: String,
     svgStyle: js.Object,
-    `type`: normal | milestone | summary | auto,
-    height: Int | Double = null,
-    rowId: js.Any = null,
-    shortDesc: String = null
+    `type`: normal | milestone | summary | auto
   ): ojGanttTaskSettableProperties = {
     val __obj = js.Dynamic.literal(baseline = baseline.asInstanceOf[js.Any], borderRadius = borderRadius.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], labelPosition = labelPosition.asInstanceOf[js.Any], labelStyle = labelStyle.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], svgClassName = svgClassName.asInstanceOf[js.Any], svgStyle = svgStyle.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (rowId != null) __obj.updateDynamic("rowId")(rowId.asInstanceOf[js.Any])
-    if (shortDesc != null) __obj.updateDynamic("shortDesc")(shortDesc.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojGanttTaskSettableProperties]
   }
+  @scala.inline
+  implicit class ojGanttTaskSettablePropertiesOps[Self <: ojGanttTaskSettableProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBaseline(value: AnonEnd): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBorderRadius(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabelPosition(value: start | innerCenter | innerStart | innerEnd | end | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabelStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProgress(value: AnonValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStart(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSvgClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSvgStyle(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("svgStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: normal | milestone | summary | auto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeightNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(null)
+        ret
+    }
+    @scala.inline
+    def withRowId(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRowId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortDesc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDesc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShortDescNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDesc")(null)
+        ret
+    }
+  }
+  
 }
 

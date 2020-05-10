@@ -1,37 +1,35 @@
 package typingsSlinky.reactBeautifulDnd.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBeautifulDnd.mod.DraggableId
 import typingsSlinky.reactBeautifulDnd.mod.DraggableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Draggable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactBeautifulDnd.mod.Draggable] {
+object Draggable {
   @JSImport("react-beautiful-dnd", "Draggable")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    draggableId: DraggableId,
-    index: Double,
-    disableInteractiveElementBlocking: js.UndefOr[Boolean] = js.undefined,
-    isDragDisabled: js.UndefOr[Boolean] = js.undefined,
-    shouldRespectForcePress: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactBeautifulDnd.mod.Draggable] = {
-    val __obj = js.Dynamic.literal(draggableId = draggableId.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableInteractiveElementBlocking)) __obj.updateDynamic("disableInteractiveElementBlocking")(disableInteractiveElementBlocking.asInstanceOf[js.Any])
-    if (!js.isUndefined(isDragDisabled)) __obj.updateDynamic("isDragDisabled")(isDragDisabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(shouldRespectForcePress)) __obj.updateDynamic("shouldRespectForcePress")(shouldRespectForcePress.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactBeautifulDnd.mod.Draggable] {
+    @scala.inline
+    def disableInteractiveElementBlocking(value: Boolean): this.type = set("disableInteractiveElementBlocking", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isDragDisabled(value: Boolean): this.type = set("isDragDisabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldRespectForcePress(value: Boolean): this.type = set("shouldRespectForcePress", value.asInstanceOf[js.Any])
   }
-  type Props = DraggableProps
+  
+  def withProps(p: DraggableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(draggableId: DraggableId, index: Double): Builder = {
+    val __props = js.Dynamic.literal(draggableId = draggableId.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[DraggableProps]))
+  }
 }
 

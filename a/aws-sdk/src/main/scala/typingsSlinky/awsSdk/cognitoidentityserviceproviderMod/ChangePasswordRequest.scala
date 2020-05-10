@@ -24,8 +24,33 @@ object ChangePasswordRequest {
   @scala.inline
   def apply(AccessToken: TokenModelType, PreviousPassword: PasswordType, ProposedPassword: PasswordType): ChangePasswordRequest = {
     val __obj = js.Dynamic.literal(AccessToken = AccessToken.asInstanceOf[js.Any], PreviousPassword = PreviousPassword.asInstanceOf[js.Any], ProposedPassword = ProposedPassword.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ChangePasswordRequest]
   }
+  @scala.inline
+  implicit class ChangePasswordRequestOps[Self <: ChangePasswordRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessToken(value: TokenModelType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousPassword(value: PasswordType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProposedPassword(value: PasswordType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProposedPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

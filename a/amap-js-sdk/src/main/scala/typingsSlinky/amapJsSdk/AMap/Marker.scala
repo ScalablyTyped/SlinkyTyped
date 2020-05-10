@@ -1,8 +1,8 @@
 package typingsSlinky.amapJsSdk.AMap
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.amapJsSdk.AnonName
 import typingsSlinky.amapJsSdk.AnonOffset
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

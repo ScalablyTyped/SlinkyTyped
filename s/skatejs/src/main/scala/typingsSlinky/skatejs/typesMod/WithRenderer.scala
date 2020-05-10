@@ -1,13 +1,11 @@
 package typingsSlinky.skatejs.typesMod
 
-import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.EventListenerOptions
+import org.scalajs.dom.raw.Node
 import typingsSlinky.std.AddEventListenerOptions
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import typingsSlinky.std.HTMLElement
-import typingsSlinky.std.HTMLSlotElement
-import typingsSlinky.std.Node
 import typingsSlinky.std.ShadowRoot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,34 +16,12 @@ import scala.scalajs.js.annotation._
 class WithRenderer[O] ()
   extends HTMLElement
      with Renderer[O] {
-  /* CompleteClass */
-  override val assignedSlot: HTMLSlotElement | Null = js.native
-  /* CompleteClass */
-  override var contentEditable: String = js.native
-  /* CompleteClass */
-  override var innerHTML: String = js.native
-  /* CompleteClass */
-  override var inputMode: String = js.native
-  /* CompleteClass */
-  override val isContentEditable: Boolean = js.native
-  /**
-    * Returns the first following sibling that is an element, and null otherwise.
-    */
-  /* CompleteClass */
-  override val nextElementSibling: Element | Null = js.native
-  /**
-    * Returns the first preceding sibling that is an element, and null otherwise.
-    */
-  /* CompleteClass */
-  override val previousElementSibling: Element | Null = js.native
   // getter for turning of ShadowDOM
   val renderRoot: js.UndefOr[this.type | Mixed] = js.native
   // called after render
   var rendered: js.UndefOr[js.Function0[Unit]] = js.native
   // called before render
   var rendering: js.UndefOr[js.Function0[Unit]] = js.native
-  /* CompleteClass */
-  override val style: CSSStyleDeclaration = js.native
   /**
     * Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
     * 
@@ -79,7 +55,7 @@ class WithRenderer[O] ()
   def render(props: Mixed, state: Mixed): O = js.native
   // Default renderer, returns string returned from render and adds it to root via innerHTML
   // -> override to get own renderer
-  def renderer(root: typingsSlinky.std.Element, html: js.Function1[/* props */ js.UndefOr[Mixed], O]): Unit = js.native
+  def renderer(root: Element, html: js.Function1[/* props */ js.UndefOr[Mixed], O]): Unit = js.native
   def renderer(root: Node, html: js.Function1[/* props */ js.UndefOr[Mixed], O]): Unit = js.native
   def renderer(root: ShadowRoot, html: js.Function1[/* props */ js.UndefOr[Mixed], O]): Unit = js.native
   def updated(): Unit = js.native

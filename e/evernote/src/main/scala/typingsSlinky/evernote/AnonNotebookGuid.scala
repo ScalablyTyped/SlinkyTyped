@@ -8,27 +8,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonNotebookGuid extends js.Object {
-  var notebookGuid: js.UndefOr[Guid] = js.undefined
-  var privilege: js.UndefOr[SharedNotebookPrivilegeLevel] = js.undefined
-  var recipientContacts: js.UndefOr[js.Array[Contact]] = js.undefined
-  var recipientThreadId: js.UndefOr[MessageThreadID] = js.undefined
+  var notebookGuid: js.UndefOr[Guid] = js.native
+  var privilege: js.UndefOr[SharedNotebookPrivilegeLevel] = js.native
+  var recipientContacts: js.UndefOr[js.Array[Contact]] = js.native
+  var recipientThreadId: js.UndefOr[MessageThreadID] = js.native
 }
 
 object AnonNotebookGuid {
   @scala.inline
-  def apply(
-    notebookGuid: Guid = null,
-    privilege: SharedNotebookPrivilegeLevel = null,
-    recipientContacts: js.Array[Contact] = null,
-    recipientThreadId: Int | Double = null
-  ): AnonNotebookGuid = {
+  def apply(): AnonNotebookGuid = {
     val __obj = js.Dynamic.literal()
-    if (notebookGuid != null) __obj.updateDynamic("notebookGuid")(notebookGuid.asInstanceOf[js.Any])
-    if (privilege != null) __obj.updateDynamic("privilege")(privilege.asInstanceOf[js.Any])
-    if (recipientContacts != null) __obj.updateDynamic("recipientContacts")(recipientContacts.asInstanceOf[js.Any])
-    if (recipientThreadId != null) __obj.updateDynamic("recipientThreadId")(recipientThreadId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonNotebookGuid]
   }
+  @scala.inline
+  implicit class AnonNotebookGuidOps[Self <: AnonNotebookGuid] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNotebookGuid(value: Guid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebookGuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotebookGuid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notebookGuid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivilege(value: SharedNotebookPrivilegeLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilege")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivilege: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilege")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientContacts(value: js.Array[Contact]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientContacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientContacts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientContacts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecipientThreadId(value: MessageThreadID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientThreadId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecipientThreadId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientThreadId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.popmotion.mod
 
-import typingsSlinky.std.Element
+import org.scalajs.dom.raw.Element
 import typingsSlinky.std.Window_
 import typingsSlinky.stylefire.typesMod.Props
 import typingsSlinky.stylefire.typesMod.Styler

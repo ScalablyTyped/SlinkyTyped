@@ -12,10 +12,8 @@ trait SortOrder extends js.Object
 
 object SortOrder {
   @scala.inline
-  def asc: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.asc = this.cast("asc")
+  def asc: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.asc = "asc".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.asc]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def desc: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.desc = this.cast("desc")
+  def desc: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.desc = "desc".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.desc]
 }
 

@@ -6,33 +6,91 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Parameters for the `getMetricsQuery` operation. */
+@js.native
 trait GetMetricsQueryParams extends js.Object {
   /** Metric is computed from data recorded before this timestamp; must be in `YYYY-MM-DDThh:mm:ssZ` format. */
-  var end_time: js.UndefOr[String] = js.undefined
-  var headers: js.UndefOr[js.Object] = js.undefined
+  var end_time: js.UndefOr[String] = js.native
+  var headers: js.UndefOr[js.Object] = js.native
   /** The type of result to consider when calculating the metric. */
-  var result_type: js.UndefOr[ResultType | String] = js.undefined
-  var return_response: js.UndefOr[Boolean] = js.undefined
+  var result_type: js.UndefOr[ResultType | String] = js.native
+  var return_response: js.UndefOr[Boolean] = js.native
   /** Metric is computed from data recorded after this timestamp; must be in `YYYY-MM-DDThh:mm:ssZ` format. */
-  var start_time: js.UndefOr[String] = js.undefined
+  var start_time: js.UndefOr[String] = js.native
 }
 
 object GetMetricsQueryParams {
   @scala.inline
-  def apply(
-    end_time: String = null,
-    headers: js.Object = null,
-    result_type: ResultType | String = null,
-    return_response: js.UndefOr[Boolean] = js.undefined,
-    start_time: String = null
-  ): GetMetricsQueryParams = {
+  def apply(): GetMetricsQueryParams = {
     val __obj = js.Dynamic.literal()
-    if (end_time != null) __obj.updateDynamic("end_time")(end_time.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (result_type != null) __obj.updateDynamic("result_type")(result_type.asInstanceOf[js.Any])
-    if (!js.isUndefined(return_response)) __obj.updateDynamic("return_response")(return_response.asInstanceOf[js.Any])
-    if (start_time != null) __obj.updateDynamic("start_time")(start_time.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMetricsQueryParams]
   }
+  @scala.inline
+  implicit class GetMetricsQueryParamsOps[Self <: GetMetricsQueryParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd_time(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnd_time: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end_time")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaders: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResult_type(value: ResultType | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResult_type: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result_type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturn_response(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturn_response: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("return_response")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStart_time(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start_time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStart_time: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start_time")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

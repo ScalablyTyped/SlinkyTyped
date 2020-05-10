@@ -14,10 +14,10 @@ import scala.scalajs.js.annotation._
 trait Task
   extends /**
   * 
-  * @param taskName 
+  * @param value 
   * @return  
   */
-Instantiable1[/* taskName */ js.Any, js.Any] {
+Instantiable1[/* value */ js.Any, js.Any] {
   /**
     * <p>returns name of actual task</p>
     * 

@@ -22,12 +22,53 @@ trait AuthorizationData extends js.Object {
 
 object AuthorizationData {
   @scala.inline
-  def apply(authorizationToken: Base64 = null, expiresAt: js.Date = null, proxyEndpoint: ProxyEndpoint = null): AuthorizationData = {
+  def apply(): AuthorizationData = {
     val __obj = js.Dynamic.literal()
-    if (authorizationToken != null) __obj.updateDynamic("authorizationToken")(authorizationToken.asInstanceOf[js.Any])
-    if (expiresAt != null) __obj.updateDynamic("expiresAt")(expiresAt.asInstanceOf[js.Any])
-    if (proxyEndpoint != null) __obj.updateDynamic("proxyEndpoint")(proxyEndpoint.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthorizationData]
   }
+  @scala.inline
+  implicit class AuthorizationDataOps[Self <: AuthorizationData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorizationToken(value: Base64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorizationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorizationToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpiresAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpiresAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expiresAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProxyEndpoint(value: ProxyEndpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyEndpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProxyEndpoint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyEndpoint")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

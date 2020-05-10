@@ -72,34 +72,161 @@ trait SchemaGoogleCloudServicebrokerV1beta1Service extends js.Object {
 
 object SchemaGoogleCloudServicebrokerV1beta1Service {
   @scala.inline
-  def apply(
-    bindable: js.UndefOr[Boolean] = js.undefined,
-    binding_retrievable: js.UndefOr[Boolean] = js.undefined,
-    bindings_retrievable: js.UndefOr[Boolean] = js.undefined,
-    dashboard_client: SchemaGoogleCloudServicebrokerV1beta1DashboardClient = null,
-    description: String = null,
-    id: String = null,
-    instances_retrievable: js.UndefOr[Boolean] = js.undefined,
-    metadata: StringDictionary[js.Any] = null,
-    name: String = null,
-    plan_updateable: js.UndefOr[Boolean] = js.undefined,
-    plans: js.Array[SchemaGoogleCloudServicebrokerV1beta1Plan] = null,
-    tags: js.Array[String] = null
-  ): SchemaGoogleCloudServicebrokerV1beta1Service = {
+  def apply(): SchemaGoogleCloudServicebrokerV1beta1Service = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(bindable)) __obj.updateDynamic("bindable")(bindable.asInstanceOf[js.Any])
-    if (!js.isUndefined(binding_retrievable)) __obj.updateDynamic("binding_retrievable")(binding_retrievable.asInstanceOf[js.Any])
-    if (!js.isUndefined(bindings_retrievable)) __obj.updateDynamic("bindings_retrievable")(bindings_retrievable.asInstanceOf[js.Any])
-    if (dashboard_client != null) __obj.updateDynamic("dashboard_client")(dashboard_client.asInstanceOf[js.Any])
-    if (description != null) __obj.updateDynamic("description")(description.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (!js.isUndefined(instances_retrievable)) __obj.updateDynamic("instances_retrievable")(instances_retrievable.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(plan_updateable)) __obj.updateDynamic("plan_updateable")(plan_updateable.asInstanceOf[js.Any])
-    if (plans != null) __obj.updateDynamic("plans")(plans.asInstanceOf[js.Any])
-    if (tags != null) __obj.updateDynamic("tags")(tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudServicebrokerV1beta1Service]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudServicebrokerV1beta1ServiceOps[Self <: SchemaGoogleCloudServicebrokerV1beta1Service] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBindable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBindable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBinding_retrievable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binding_retrievable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBinding_retrievable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binding_retrievable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBindings_retrievable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings_retrievable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBindings_retrievable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindings_retrievable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDashboard_client(value: SchemaGoogleCloudServicebrokerV1beta1DashboardClient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashboard_client")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDashboard_client: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashboard_client")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstances_retrievable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances_retrievable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstances_retrievable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instances_retrievable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlan_updateable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plan_updateable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlan_updateable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plan_updateable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlans(value: js.Array[SchemaGoogleCloudServicebrokerV1beta1Plan]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlans: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("plans")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

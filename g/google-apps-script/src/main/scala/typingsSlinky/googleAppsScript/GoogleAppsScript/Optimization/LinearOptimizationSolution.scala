@@ -56,11 +56,12 @@ import scala.scalajs.js.annotation._
   *       Logger.log('Value of y: ' + solution.getVariableValue('y'));
   *     }
   */
+@js.native
 trait LinearOptimizationSolution extends js.Object {
-  def getObjectiveValue(): Double
-  def getStatus(): Status
-  def getVariableValue(variableName: String): Double
-  def isValid(): Boolean
+  def getObjectiveValue(): Double = js.native
+  def getStatus(): Status = js.native
+  def getVariableValue(variableName: String): Double = js.native
+  def isValid(): Boolean = js.native
 }
 
 object LinearOptimizationSolution {
@@ -72,8 +73,39 @@ object LinearOptimizationSolution {
     isValid: () => Boolean
   ): LinearOptimizationSolution = {
     val __obj = js.Dynamic.literal(getObjectiveValue = js.Any.fromFunction0(getObjectiveValue), getStatus = js.Any.fromFunction0(getStatus), getVariableValue = js.Any.fromFunction1(getVariableValue), isValid = js.Any.fromFunction0(isValid))
-  
     __obj.asInstanceOf[LinearOptimizationSolution]
   }
+  @scala.inline
+  implicit class LinearOptimizationSolutionOps[Self <: LinearOptimizationSolution] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetObjectiveValue(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getObjectiveValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStatus(value: () => Status): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVariableValue(value: String => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVariableValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsValid(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

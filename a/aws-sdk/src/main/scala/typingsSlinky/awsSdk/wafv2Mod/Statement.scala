@@ -62,36 +62,173 @@ trait Statement extends js.Object {
 
 object Statement {
   @scala.inline
-  def apply(
-    AndStatement: AndStatement = null,
-    ByteMatchStatement: ByteMatchStatement = null,
-    GeoMatchStatement: GeoMatchStatement = null,
-    IPSetReferenceStatement: IPSetReferenceStatement = null,
-    ManagedRuleGroupStatement: ManagedRuleGroupStatement = null,
-    NotStatement: NotStatement = null,
-    OrStatement: OrStatement = null,
-    RateBasedStatement: RateBasedStatement = null,
-    RegexPatternSetReferenceStatement: RegexPatternSetReferenceStatement = null,
-    RuleGroupReferenceStatement: RuleGroupReferenceStatement = null,
-    SizeConstraintStatement: SizeConstraintStatement = null,
-    SqliMatchStatement: SqliMatchStatement = null,
-    XssMatchStatement: XssMatchStatement = null
-  ): Statement = {
+  def apply(): Statement = {
     val __obj = js.Dynamic.literal()
-    if (AndStatement != null) __obj.updateDynamic("AndStatement")(AndStatement.asInstanceOf[js.Any])
-    if (ByteMatchStatement != null) __obj.updateDynamic("ByteMatchStatement")(ByteMatchStatement.asInstanceOf[js.Any])
-    if (GeoMatchStatement != null) __obj.updateDynamic("GeoMatchStatement")(GeoMatchStatement.asInstanceOf[js.Any])
-    if (IPSetReferenceStatement != null) __obj.updateDynamic("IPSetReferenceStatement")(IPSetReferenceStatement.asInstanceOf[js.Any])
-    if (ManagedRuleGroupStatement != null) __obj.updateDynamic("ManagedRuleGroupStatement")(ManagedRuleGroupStatement.asInstanceOf[js.Any])
-    if (NotStatement != null) __obj.updateDynamic("NotStatement")(NotStatement.asInstanceOf[js.Any])
-    if (OrStatement != null) __obj.updateDynamic("OrStatement")(OrStatement.asInstanceOf[js.Any])
-    if (RateBasedStatement != null) __obj.updateDynamic("RateBasedStatement")(RateBasedStatement.asInstanceOf[js.Any])
-    if (RegexPatternSetReferenceStatement != null) __obj.updateDynamic("RegexPatternSetReferenceStatement")(RegexPatternSetReferenceStatement.asInstanceOf[js.Any])
-    if (RuleGroupReferenceStatement != null) __obj.updateDynamic("RuleGroupReferenceStatement")(RuleGroupReferenceStatement.asInstanceOf[js.Any])
-    if (SizeConstraintStatement != null) __obj.updateDynamic("SizeConstraintStatement")(SizeConstraintStatement.asInstanceOf[js.Any])
-    if (SqliMatchStatement != null) __obj.updateDynamic("SqliMatchStatement")(SqliMatchStatement.asInstanceOf[js.Any])
-    if (XssMatchStatement != null) __obj.updateDynamic("XssMatchStatement")(XssMatchStatement.asInstanceOf[js.Any])
     __obj.asInstanceOf[Statement]
   }
+  @scala.inline
+  implicit class StatementOps[Self <: Statement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndStatement(value: AndStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AndStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAndStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AndStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withByteMatchStatement(value: ByteMatchStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByteMatchStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutByteMatchStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByteMatchStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeoMatchStatement(value: GeoMatchStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoMatchStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeoMatchStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GeoMatchStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIPSetReferenceStatement(value: IPSetReferenceStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPSetReferenceStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIPSetReferenceStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IPSetReferenceStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManagedRuleGroupStatement(value: ManagedRuleGroupStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManagedRuleGroupStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedRuleGroupStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManagedRuleGroupStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotStatement(value: NotStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NotStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrStatement(value: OrStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateBasedStatement(value: RateBasedStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RateBasedStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateBasedStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RateBasedStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegexPatternSetReferenceStatement(value: RegexPatternSetReferenceStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegexPatternSetReferenceStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegexPatternSetReferenceStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegexPatternSetReferenceStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRuleGroupReferenceStatement(value: RuleGroupReferenceStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleGroupReferenceStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleGroupReferenceStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleGroupReferenceStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeConstraintStatement(value: SizeConstraintStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeConstraintStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeConstraintStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeConstraintStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSqliMatchStatement(value: SqliMatchStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SqliMatchStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSqliMatchStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SqliMatchStatement")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withXssMatchStatement(value: XssMatchStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("XssMatchStatement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutXssMatchStatement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("XssMatchStatement")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

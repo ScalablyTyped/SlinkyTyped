@@ -7,19 +7,56 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* experiments types */
+@js.native
 trait ExperimentAPI extends js.Object {
-  var child: js.UndefOr[AnonPaths] = js.undefined
-  var parent: js.UndefOr[AnonEvents] = js.undefined
-  var schema: ExperimentURL
+  var child: js.UndefOr[AnonPaths] = js.native
+  var parent: js.UndefOr[AnonEvents] = js.native
+  var schema: ExperimentURL = js.native
 }
 
 object ExperimentAPI {
   @scala.inline
-  def apply(schema: ExperimentURL, child: AnonPaths = null, parent: AnonEvents = null): ExperimentAPI = {
+  def apply(schema: ExperimentURL): ExperimentAPI = {
     val __obj = js.Dynamic.literal(schema = schema.asInstanceOf[js.Any])
-    if (child != null) __obj.updateDynamic("child")(child.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExperimentAPI]
   }
+  @scala.inline
+  implicit class ExperimentAPIOps[Self <: ExperimentAPI] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSchema(value: ExperimentURL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChild(value: AnonPaths): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("child")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("child")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: AnonEvents): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

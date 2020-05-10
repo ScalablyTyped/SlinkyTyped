@@ -16,18 +16,16 @@ trait Status extends js.Object
 
 object Status {
   @scala.inline
-  def aborted: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.aborted = this.cast("aborted")
+  def aborted: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.aborted = "aborted".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.aborted]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def errored: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.errored = "errored".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.errored]
   @scala.inline
-  def errored: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.errored = this.cast("errored")
+  def loaded: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loaded = "loaded".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loaded]
   @scala.inline
-  def loaded: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loaded = this.cast("loaded")
+  def loadstarted: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loadstarted = "loadstarted".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loadstarted]
   @scala.inline
-  def loadstarted: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.loadstarted = this.cast("loadstarted")
+  def queued: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.queued = "queued".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.queued]
   @scala.inline
-  def queued: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.queued = this.cast("queued")
-  @scala.inline
-  def timedout: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.timedout = this.cast("timedout")
+  def timedout: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.timedout = "timedout".asInstanceOf[typingsSlinky.oracleOraclejet.oracleOraclejetStrings.timedout]
 }
 

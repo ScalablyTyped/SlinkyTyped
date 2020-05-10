@@ -12,10 +12,8 @@ trait Severity extends js.Object
 
 object Severity {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.stylelint.stylelintStrings.error = "error".asInstanceOf[typingsSlinky.stylelint.stylelintStrings.error]
   @scala.inline
-  def error: typingsSlinky.stylelint.stylelintStrings.error = this.cast("error")
-  @scala.inline
-  def warning: typingsSlinky.stylelint.stylelintStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.stylelint.stylelintStrings.warning = "warning".asInstanceOf[typingsSlinky.stylelint.stylelintStrings.warning]
 }
 

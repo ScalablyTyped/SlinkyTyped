@@ -17,7 +17,7 @@ trait CreateTransitGatewayVpcAttachmentRequest extends js.Object {
   /**
     * The IDs of one or more subnets. You can specify only one subnet per Availability Zone. You must specify at least one subnet, but we recommend that you specify two subnets for better availability. The transit gateway uses one IP address from each specified subnet.
     */
-  var SubnetIds: ValueStringList = js.native
+  var SubnetIds: TransitGatewaySubnetIdList = js.native
   /**
     * The tags to apply to the VPC attachment.
     */
@@ -25,28 +25,80 @@ trait CreateTransitGatewayVpcAttachmentRequest extends js.Object {
   /**
     * The ID of the transit gateway.
     */
-  var TransitGatewayId: String = js.native
+  var TransitGatewayId: typingsSlinky.awsSdk.ec2Mod.TransitGatewayId = js.native
   /**
     * The ID of the VPC.
     */
-  var VpcId: String = js.native
+  var VpcId: typingsSlinky.awsSdk.ec2Mod.VpcId = js.native
 }
 
 object CreateTransitGatewayVpcAttachmentRequest {
   @scala.inline
-  def apply(
-    SubnetIds: ValueStringList,
-    TransitGatewayId: String,
-    VpcId: String,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    Options: CreateTransitGatewayVpcAttachmentRequestOptions = null,
-    TagSpecifications: TagSpecificationList = null
-  ): CreateTransitGatewayVpcAttachmentRequest = {
+  def apply(SubnetIds: TransitGatewaySubnetIdList, TransitGatewayId: TransitGatewayId, VpcId: VpcId): CreateTransitGatewayVpcAttachmentRequest = {
     val __obj = js.Dynamic.literal(SubnetIds = SubnetIds.asInstanceOf[js.Any], TransitGatewayId = TransitGatewayId.asInstanceOf[js.Any], VpcId = VpcId.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (Options != null) __obj.updateDynamic("Options")(Options.asInstanceOf[js.Any])
-    if (TagSpecifications != null) __obj.updateDynamic("TagSpecifications")(TagSpecifications.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTransitGatewayVpcAttachmentRequest]
   }
+  @scala.inline
+  implicit class CreateTransitGatewayVpcAttachmentRequestOps[Self <: CreateTransitGatewayVpcAttachmentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubnetIds(value: TransitGatewaySubnetIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransitGatewayId(value: TransitGatewayId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransitGatewayId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: VpcId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: CreateTransitGatewayVpcAttachmentRequestOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTagSpecifications(value: TagSpecificationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTagSpecifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TagSpecifications")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

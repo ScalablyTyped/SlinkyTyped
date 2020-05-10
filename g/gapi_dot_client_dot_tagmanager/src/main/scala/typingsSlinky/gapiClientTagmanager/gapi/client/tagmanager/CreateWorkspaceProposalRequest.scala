@@ -4,23 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CreateWorkspaceProposalRequest extends js.Object {
   /** If present, an initial comment to associate with the workspace proposal. */
-  var initialComment: js.UndefOr[WorkspaceProposalHistoryComment] = js.undefined
+  var initialComment: js.UndefOr[WorkspaceProposalHistoryComment] = js.native
   /** List of users to review the workspace proposal. */
-  var reviewers: js.UndefOr[js.Array[WorkspaceProposalUser]] = js.undefined
+  var reviewers: js.UndefOr[js.Array[WorkspaceProposalUser]] = js.native
 }
 
 object CreateWorkspaceProposalRequest {
   @scala.inline
-  def apply(
-    initialComment: WorkspaceProposalHistoryComment = null,
-    reviewers: js.Array[WorkspaceProposalUser] = null
-  ): CreateWorkspaceProposalRequest = {
+  def apply(): CreateWorkspaceProposalRequest = {
     val __obj = js.Dynamic.literal()
-    if (initialComment != null) __obj.updateDynamic("initialComment")(initialComment.asInstanceOf[js.Any])
-    if (reviewers != null) __obj.updateDynamic("reviewers")(reviewers.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateWorkspaceProposalRequest]
   }
+  @scala.inline
+  implicit class CreateWorkspaceProposalRequestOps[Self <: CreateWorkspaceProposalRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInitialComment(value: WorkspaceProposalHistoryComment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialComment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialComment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialComment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReviewers(value: js.Array[WorkspaceProposalUser]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReviewers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

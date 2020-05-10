@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * A rollup that includes every dijit. You probably don't need this.
   * 
   */
+@js.native
 trait dijitAll extends js.Object
 

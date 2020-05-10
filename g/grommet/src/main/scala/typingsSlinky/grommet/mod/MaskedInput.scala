@@ -1,19 +1,20 @@
 package typingsSlinky.grommet.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLInputElement
+import slinky.core.ReactComponentClass
+import typingsSlinky.grommet.grommetStrings.icon
 import typingsSlinky.grommet.grommetStrings.id
 import typingsSlinky.grommet.grommetStrings.mask
 import typingsSlinky.grommet.grommetStrings.name
 import typingsSlinky.grommet.grommetStrings.plain
+import typingsSlinky.grommet.grommetStrings.reverse
 import typingsSlinky.grommet.grommetStrings.size
 import typingsSlinky.grommet.grommetStrings.value
 import typingsSlinky.grommet.maskedInputMod.MaskedInputProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.InputHTMLAttributes
-import typingsSlinky.std.HTMLInputElement
 import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,25 +26,19 @@ class MaskedInput protected ()
   extends Component[
       MaskedInputProps with (Omit[
         DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
-        id | mask | name | plain | size | value
+        icon | id | mask | name | plain | reverse | size | value
       ]), 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
   def this(props: MaskedInputProps with (Omit[
-        DetailedHTMLProps[
-          InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement], 
-          org.scalajs.dom.raw.HTMLInputElement
-        ], 
-        id | mask | name | plain | size | value
+        DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
+        icon | id | mask | name | plain | reverse | size | value
       ])) = this()
   def this(
     props: MaskedInputProps with (Omit[
-        DetailedHTMLProps[
-          InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement], 
-          org.scalajs.dom.raw.HTMLInputElement
-        ], 
-        id | mask | name | plain | size | value
+        DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
+        icon | id | mask | name | plain | reverse | size | value
       ]),
     context: js.Any
   ) = this()
@@ -52,12 +47,11 @@ class MaskedInput protected ()
 @JSImport("grommet", "MaskedInput")
 @js.native
 object MaskedInput extends TopLevel[
-      ComponentClass[
+      ReactComponentClass[
         MaskedInputProps with (Omit[
           DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
-          id | mask | name | plain | size | value
-        ]), 
-        ComponentState
+          icon | id | mask | name | plain | reverse | size | value
+        ])
       ]
     ]
 

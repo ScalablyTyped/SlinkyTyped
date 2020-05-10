@@ -18,22 +18,20 @@ trait HelloJSTokenResponseType extends js.Object
 
 object HelloJSTokenResponseType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def code: typingsSlinky.hellojs.hellojsStrings.code = "code".asInstanceOf[typingsSlinky.hellojs.hellojsStrings.code]
   @scala.inline
-  def code: typingsSlinky.hellojs.hellojsStrings.code = this.cast("code")
+  def `code id_token`: typingsSlinky.hellojs.hellojsStrings.`code id_token` = ("code id_token").asInstanceOf[typingsSlinky.hellojs.hellojsStrings.`code id_token`]
   @scala.inline
-  def `code id_token`: typingsSlinky.hellojs.hellojsStrings.`code id_token` = this.cast("code id_token")
+  def `code id_token token`: typingsSlinky.hellojs.hellojsStrings.`code id_token token` = ("code id_token token").asInstanceOf[typingsSlinky.hellojs.hellojsStrings.`code id_token token`]
   @scala.inline
-  def `code id_token token`: typingsSlinky.hellojs.hellojsStrings.`code id_token token` = this.cast("code id_token token")
+  def `code token`: typingsSlinky.hellojs.hellojsStrings.`code token` = ("code token").asInstanceOf[typingsSlinky.hellojs.hellojsStrings.`code token`]
   @scala.inline
-  def `code token`: typingsSlinky.hellojs.hellojsStrings.`code token` = this.cast("code token")
+  def id_token: typingsSlinky.hellojs.hellojsStrings.id_token = "id_token".asInstanceOf[typingsSlinky.hellojs.hellojsStrings.id_token]
   @scala.inline
-  def id_token: typingsSlinky.hellojs.hellojsStrings.id_token = this.cast("id_token")
+  def `id_token token`: typingsSlinky.hellojs.hellojsStrings.`id_token token` = ("id_token token").asInstanceOf[typingsSlinky.hellojs.hellojsStrings.`id_token token`]
   @scala.inline
-  def `id_token token`: typingsSlinky.hellojs.hellojsStrings.`id_token token` = this.cast("id_token token")
+  def none: typingsSlinky.hellojs.hellojsStrings.none = "none".asInstanceOf[typingsSlinky.hellojs.hellojsStrings.none]
   @scala.inline
-  def none: typingsSlinky.hellojs.hellojsStrings.none = this.cast("none")
-  @scala.inline
-  def token: typingsSlinky.hellojs.hellojsStrings.token = this.cast("token")
+  def token: typingsSlinky.hellojs.hellojsStrings.token = "token".asInstanceOf[typingsSlinky.hellojs.hellojsStrings.token]
 }
 

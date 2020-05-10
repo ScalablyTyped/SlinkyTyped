@@ -7,50 +7,173 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NodeProps extends js.Object {
-  var backbuffering: js.UndefOr[Boolean] = js.undefined
-  var blendFunc: js.UndefOr[AnonDst] = js.undefined
-  var children: js.UndefOr[js.Any] = js.undefined
-  var clear: js.UndefOr[AnonColor] = js.undefined
-  var height: js.UndefOr[Double] = js.undefined
-  var ignoreUnusedUniforms: js.UndefOr[js.Array[String] | Boolean] = js.undefined
-  var onDraw: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var shader: ShaderIdentifier | ShaderDefinition
-  var sync: js.UndefOr[Boolean] = js.undefined
-  var uniforms: js.UndefOr[StringDictionary[js.Any]] = js.undefined
-  var uniformsOptions: js.UndefOr[js.Any] = js.undefined
-  var width: js.UndefOr[Double] = js.undefined
+  var backbuffering: js.UndefOr[Boolean] = js.native
+  var blendFunc: js.UndefOr[AnonDst] = js.native
+  var children: js.UndefOr[js.Any] = js.native
+  var clear: js.UndefOr[AnonColor] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var ignoreUnusedUniforms: js.UndefOr[js.Array[String] | Boolean] = js.native
+  var onDraw: js.UndefOr[js.Function0[Unit]] = js.native
+  var shader: ShaderIdentifier | ShaderDefinition = js.native
+  var sync: js.UndefOr[Boolean] = js.native
+  var uniforms: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var uniformsOptions: js.UndefOr[js.Any] = js.native
+  var width: js.UndefOr[Double] = js.native
 }
 
 object NodeProps {
   @scala.inline
-  def apply(
-    shader: ShaderIdentifier | ShaderDefinition,
-    backbuffering: js.UndefOr[Boolean] = js.undefined,
-    blendFunc: AnonDst = null,
-    children: js.Any = null,
-    clear: AnonColor = null,
-    height: Int | Double = null,
-    ignoreUnusedUniforms: js.Array[String] | Boolean = null,
-    onDraw: () => Unit = null,
-    sync: js.UndefOr[Boolean] = js.undefined,
-    uniforms: StringDictionary[js.Any] = null,
-    uniformsOptions: js.Any = null,
-    width: Int | Double = null
-  ): NodeProps = {
+  def apply(shader: ShaderIdentifier | ShaderDefinition): NodeProps = {
     val __obj = js.Dynamic.literal(shader = shader.asInstanceOf[js.Any])
-    if (!js.isUndefined(backbuffering)) __obj.updateDynamic("backbuffering")(backbuffering.asInstanceOf[js.Any])
-    if (blendFunc != null) __obj.updateDynamic("blendFunc")(blendFunc.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (clear != null) __obj.updateDynamic("clear")(clear.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (ignoreUnusedUniforms != null) __obj.updateDynamic("ignoreUnusedUniforms")(ignoreUnusedUniforms.asInstanceOf[js.Any])
-    if (onDraw != null) __obj.updateDynamic("onDraw")(js.Any.fromFunction0(onDraw))
-    if (!js.isUndefined(sync)) __obj.updateDynamic("sync")(sync.asInstanceOf[js.Any])
-    if (uniforms != null) __obj.updateDynamic("uniforms")(uniforms.asInstanceOf[js.Any])
-    if (uniformsOptions != null) __obj.updateDynamic("uniformsOptions")(uniformsOptions.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeProps]
   }
+  @scala.inline
+  implicit class NodePropsOps[Self <: NodeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShader(value: ShaderIdentifier | ShaderDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackbuffering(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backbuffering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackbuffering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backbuffering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlendFunc(value: AnonDst): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blendFunc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlendFunc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blendFunc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChildren(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClear(value: AnonColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreUnusedUniforms(value: js.Array[String] | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnusedUniforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreUnusedUniforms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreUnusedUniforms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDraw(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDraw")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDraw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDraw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSync(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniforms(value: StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniforms: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniforms")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUniformsOptions(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniformsOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUniformsOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniformsOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

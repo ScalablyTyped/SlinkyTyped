@@ -1,15 +1,16 @@
 package typingsSlinky.reactInfiniteCalendar.components
 
+import typingsSlinky.reactInfiniteCalendar.mod.ReactInfiniteCalendarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Calendar
-  extends SharedApply_ReactInfiniteCalendarProps498068951[typingsSlinky.reactInfiniteCalendar.mod.Calendar] {
+object Calendar {
   @JSImport("react-infinite-calendar", "Calendar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ReactInfiniteCalendarProps): SharedBuilder_ReactInfiniteCalendarProps1567389525[typingsSlinky.reactInfiniteCalendar.mod.Calendar] = new SharedBuilder_ReactInfiniteCalendarProps1567389525[typingsSlinky.reactInfiniteCalendar.mod.Calendar](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Calendar.type): SharedBuilder_ReactInfiniteCalendarProps1567389525[typingsSlinky.reactInfiniteCalendar.mod.Calendar] = new SharedBuilder_ReactInfiniteCalendarProps1567389525[typingsSlinky.reactInfiniteCalendar.mod.Calendar](js.Array(this.component, js.Dictionary.empty))()
 }
 

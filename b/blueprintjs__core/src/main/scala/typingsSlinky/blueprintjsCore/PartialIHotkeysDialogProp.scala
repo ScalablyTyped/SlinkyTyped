@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.react.mod.CSSProperties
@@ -14,90 +15,366 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@blueprintjs/core.@blueprintjs/core/lib/esm/components/hotkeys/hotkeysDialog.IHotkeysDialogProps> */
+@js.native
 trait PartialIHotkeysDialogProp extends js.Object {
-  var autoFocus: js.UndefOr[Boolean] = js.undefined
-  var backdropClassName: js.UndefOr[String] = js.undefined
-  var backdropProps: js.UndefOr[HTMLProps[HTMLDivElement]] = js.undefined
-  var canEscapeKeyClose: js.UndefOr[Boolean] = js.undefined
-  var canOutsideClickClose: js.UndefOr[Boolean] = js.undefined
-  var className: js.UndefOr[String] = js.undefined
-  var enforceFocus: js.UndefOr[Boolean] = js.undefined
-  var globalHotkeysGroup: js.UndefOr[String] = js.undefined
-  var hasBackdrop: js.UndefOr[Boolean] = js.undefined
-  var icon: js.UndefOr[IconName | MaybeElement] = js.undefined
-  var isCloseButtonShown: js.UndefOr[Boolean] = js.undefined
-  var isOpen: js.UndefOr[Boolean] = js.undefined
-  var `lazy`: js.UndefOr[Boolean] = js.undefined
-  var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], Unit]] = js.undefined
-  var onClosed: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.undefined
-  var onClosing: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.undefined
-  var onOpened: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.undefined
-  var onOpening: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.undefined
-  var portalClassName: js.UndefOr[String] = js.undefined
-  var portalContainer: js.UndefOr[HTMLElement] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
-  var transitionDuration: js.UndefOr[Double] = js.undefined
-  var transitionName: js.UndefOr[String] = js.undefined
-  var usePortal: js.UndefOr[Boolean] = js.undefined
+  var autoFocus: js.UndefOr[Boolean] = js.native
+  var backdropClassName: js.UndefOr[String] = js.native
+  var backdropProps: js.UndefOr[HTMLProps[HTMLDivElement]] = js.native
+  var canEscapeKeyClose: js.UndefOr[Boolean] = js.native
+  var canOutsideClickClose: js.UndefOr[Boolean] = js.native
+  var className: js.UndefOr[String] = js.native
+  var enforceFocus: js.UndefOr[Boolean] = js.native
+  var globalHotkeysGroup: js.UndefOr[String] = js.native
+  var hasBackdrop: js.UndefOr[Boolean] = js.native
+  var icon: js.UndefOr[IconName | MaybeElement] = js.native
+  var isCloseButtonShown: js.UndefOr[Boolean] = js.native
+  var isOpen: js.UndefOr[Boolean] = js.native
+  var `lazy`: js.UndefOr[Boolean] = js.native
+  var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], Unit]] = js.native
+  var onClosed: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.native
+  var onClosing: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.native
+  var onOpened: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.native
+  var onOpening: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.native
+  var portalClassName: js.UndefOr[String] = js.native
+  var portalContainer: js.UndefOr[HTMLElement] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  var title: js.UndefOr[TagMod[Any]] = js.native
+  var transitionDuration: js.UndefOr[Double] = js.native
+  var transitionName: js.UndefOr[String] = js.native
+  var usePortal: js.UndefOr[Boolean] = js.native
 }
 
 object PartialIHotkeysDialogProp {
   @scala.inline
-  def apply(
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    backdropClassName: String = null,
-    backdropProps: HTMLProps[HTMLDivElement] = null,
-    canEscapeKeyClose: js.UndefOr[Boolean] = js.undefined,
-    canOutsideClickClose: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    enforceFocus: js.UndefOr[Boolean] = js.undefined,
-    globalHotkeysGroup: String = null,
-    hasBackdrop: js.UndefOr[Boolean] = js.undefined,
-    icon: IconName | MaybeElement = null,
-    isCloseButtonShown: js.UndefOr[Boolean] = js.undefined,
-    isOpen: js.UndefOr[Boolean] = js.undefined,
-    `lazy`: js.UndefOr[Boolean] = js.undefined,
-    onClose: /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit = null,
-    onClosed: /* node */ HTMLElement => Unit = null,
-    onClosing: /* node */ HTMLElement => Unit = null,
-    onOpened: /* node */ HTMLElement => Unit = null,
-    onOpening: /* node */ HTMLElement => Unit = null,
-    portalClassName: String = null,
-    portalContainer: HTMLElement = null,
-    style: CSSProperties = null,
-    title: TagMod[Any] = null,
-    transitionDuration: Int | Double = null,
-    transitionName: String = null,
-    usePortal: js.UndefOr[Boolean] = js.undefined
-  ): PartialIHotkeysDialogProp = {
+  def apply(): PartialIHotkeysDialogProp = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
-    if (backdropClassName != null) __obj.updateDynamic("backdropClassName")(backdropClassName.asInstanceOf[js.Any])
-    if (backdropProps != null) __obj.updateDynamic("backdropProps")(backdropProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(canEscapeKeyClose)) __obj.updateDynamic("canEscapeKeyClose")(canEscapeKeyClose.asInstanceOf[js.Any])
-    if (!js.isUndefined(canOutsideClickClose)) __obj.updateDynamic("canOutsideClickClose")(canOutsideClickClose.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(enforceFocus)) __obj.updateDynamic("enforceFocus")(enforceFocus.asInstanceOf[js.Any])
-    if (globalHotkeysGroup != null) __obj.updateDynamic("globalHotkeysGroup")(globalHotkeysGroup.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasBackdrop)) __obj.updateDynamic("hasBackdrop")(hasBackdrop.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCloseButtonShown)) __obj.updateDynamic("isCloseButtonShown")(isCloseButtonShown.asInstanceOf[js.Any])
-    if (!js.isUndefined(isOpen)) __obj.updateDynamic("isOpen")(isOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
-    if (onClosed != null) __obj.updateDynamic("onClosed")(js.Any.fromFunction1(onClosed))
-    if (onClosing != null) __obj.updateDynamic("onClosing")(js.Any.fromFunction1(onClosing))
-    if (onOpened != null) __obj.updateDynamic("onOpened")(js.Any.fromFunction1(onOpened))
-    if (onOpening != null) __obj.updateDynamic("onOpening")(js.Any.fromFunction1(onOpening))
-    if (portalClassName != null) __obj.updateDynamic("portalClassName")(portalClassName.asInstanceOf[js.Any])
-    if (portalContainer != null) __obj.updateDynamic("portalContainer")(portalContainer.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (!js.isUndefined(usePortal)) __obj.updateDynamic("usePortal")(usePortal.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialIHotkeysDialogProp]
   }
+  @scala.inline
+  implicit class PartialIHotkeysDialogPropOps[Self <: PartialIHotkeysDialogProp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackdropClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackdropClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackdropProps(value: HTMLProps[HTMLDivElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackdropProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backdropProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanEscapeKeyClose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canEscapeKeyClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanEscapeKeyClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canEscapeKeyClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCanOutsideClickClose(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canOutsideClickClose")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCanOutsideClickClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canOutsideClickClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnforceFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnforceFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enforceFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalHotkeysGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalHotkeysGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalHotkeysGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalHotkeysGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHasBackdrop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasBackdrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHasBackdrop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasBackdrop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIcon(value: IconName | MaybeElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(null)
+        ret
+    }
+    @scala.inline
+    def withIsCloseButtonShown(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCloseButtonShown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsCloseButtonShown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCloseButtonShown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLazy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLazy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lazy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClose(value: /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClosed(value: /* node */ HTMLElement => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClosed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClosed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClosed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnClosing(value: /* node */ HTMLElement => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClosing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnClosing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onClosing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpened(value: /* node */ HTMLElement => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpened")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnOpened: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpened")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnOpening(value: /* node */ HTMLElement => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpening")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnOpening: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onOpening")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortalClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portalClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortalClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portalClassName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPortalContainer(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portalContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPortalContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portalContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsePortal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePortal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsePortal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePortal")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

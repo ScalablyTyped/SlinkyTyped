@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DataSetOptions extends DataSetQueueOptions {
   /**
     * The name of the field containing the id of the items.
@@ -11,7 +12,7 @@ trait DataSetOptions extends DataSetQueueOptions {
     * this field name can be specified in the DataSet using the option fieldId.
     * For example CouchDB uses the field "_id" to identify documents.
     */
-  var fieldId: js.UndefOr[String] = js.undefined
+  var fieldId: js.UndefOr[String] = js.native
   /**
     * An object containing field names as key, and data types as value.
     * By default, the type of the properties of items are left unchanged.
@@ -20,17 +21,46 @@ trait DataSetOptions extends DataSetQueueOptions {
     * from a server into JavaScript Date objects.
     * The available data types are listed in section Data Types.
     */
-  var `type`: js.UndefOr[js.Any] = js.undefined
+  var `type`: js.UndefOr[js.Any] = js.native
 }
 
 object DataSetOptions {
   @scala.inline
-  def apply(fieldId: String = null, queue: js.Any | Boolean = null, `type`: js.Any = null): DataSetOptions = {
+  def apply(): DataSetOptions = {
     val __obj = js.Dynamic.literal()
-    if (fieldId != null) __obj.updateDynamic("fieldId")(fieldId.asInstanceOf[js.Any])
-    if (queue != null) __obj.updateDynamic("queue")(queue.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataSetOptions]
   }
+  @scala.inline
+  implicit class DataSetOptionsOps[Self <: DataSetOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFieldId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFieldId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

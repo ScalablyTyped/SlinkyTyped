@@ -21,11 +21,41 @@ trait SchemaExpansionFile extends js.Object {
 
 object SchemaExpansionFile {
   @scala.inline
-  def apply(fileSize: String = null, referencesVersion: Int | Double = null): SchemaExpansionFile = {
+  def apply(): SchemaExpansionFile = {
     val __obj = js.Dynamic.literal()
-    if (fileSize != null) __obj.updateDynamic("fileSize")(fileSize.asInstanceOf[js.Any])
-    if (referencesVersion != null) __obj.updateDynamic("referencesVersion")(referencesVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaExpansionFile]
   }
+  @scala.inline
+  implicit class SchemaExpansionFileOps[Self <: SchemaExpansionFile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReferencesVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referencesVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReferencesVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referencesVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

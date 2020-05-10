@@ -3,8 +3,6 @@ package typingsSlinky.awsSdkClientKinesisBrowser.typesStreamDescriptionMod
 import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ACTIVE
 import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.CREATING
 import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.DELETING
-import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.KMS
-import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.NONE
 import typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.UPDATING
 import typingsSlinky.awsSdkClientKinesisBrowser.typesEnhancedMetricsMod.UnmarshalledEnhancedMetrics
 import typingsSlinky.awsSdkClientKinesisBrowser.typesShardMod.UnmarshalledShard
@@ -12,22 +10,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait UnmarshalledStreamDescription extends StreamDescription {
   /**
     * <p>Represents the current enhanced monitoring settings of the stream.</p>
     */
   @JSName("EnhancedMonitoring")
-  var EnhancedMonitoring_UnmarshalledStreamDescription: js.Array[UnmarshalledEnhancedMetrics]
+  var EnhancedMonitoring_UnmarshalledStreamDescription: js.Array[UnmarshalledEnhancedMetrics] = js.native
   /**
     * <p>The shards that comprise the stream.</p>
     */
   @JSName("Shards")
-  var Shards_UnmarshalledStreamDescription: js.Array[UnmarshalledShard]
+  var Shards_UnmarshalledStreamDescription: js.Array[UnmarshalledShard] = js.native
   /**
     * <p>The approximate time that the stream was created.</p>
     */
   @JSName("StreamCreationTimestamp")
-  var StreamCreationTimestamp_UnmarshalledStreamDescription: js.Date
+  var StreamCreationTimestamp_UnmarshalledStreamDescription: js.Date = js.native
 }
 
 object UnmarshalledStreamDescription {
@@ -40,14 +39,36 @@ object UnmarshalledStreamDescription {
     StreamARN: String,
     StreamCreationTimestamp: js.Date,
     StreamName: String,
-    StreamStatus: CREATING | DELETING | ACTIVE | UPDATING | String,
-    EncryptionType: NONE | KMS | String = null,
-    KeyId: String = null
+    StreamStatus: CREATING | DELETING | ACTIVE | UPDATING | String
   ): UnmarshalledStreamDescription = {
     val __obj = js.Dynamic.literal(EnhancedMonitoring = EnhancedMonitoring.asInstanceOf[js.Any], HasMoreShards = HasMoreShards.asInstanceOf[js.Any], RetentionPeriodHours = RetentionPeriodHours.asInstanceOf[js.Any], Shards = Shards.asInstanceOf[js.Any], StreamARN = StreamARN.asInstanceOf[js.Any], StreamCreationTimestamp = StreamCreationTimestamp.asInstanceOf[js.Any], StreamName = StreamName.asInstanceOf[js.Any], StreamStatus = StreamStatus.asInstanceOf[js.Any])
-    if (EncryptionType != null) __obj.updateDynamic("EncryptionType")(EncryptionType.asInstanceOf[js.Any])
-    if (KeyId != null) __obj.updateDynamic("KeyId")(KeyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnmarshalledStreamDescription]
   }
+  @scala.inline
+  implicit class UnmarshalledStreamDescriptionOps[Self <: UnmarshalledStreamDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnhancedMonitoring(value: js.Array[UnmarshalledEnhancedMetrics]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnhancedMonitoring")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShards(value: js.Array[UnmarshalledShard]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Shards")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStreamCreationTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamCreationTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

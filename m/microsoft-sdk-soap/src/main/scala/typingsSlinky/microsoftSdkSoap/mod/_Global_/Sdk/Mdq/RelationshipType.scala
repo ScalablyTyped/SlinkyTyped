@@ -13,12 +13,10 @@ trait RelationshipType extends js.Object
 
 object RelationshipType {
   @scala.inline
-  def Default: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Default = this.cast("Default")
+  def Default: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Default = "Default".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.Default]
   @scala.inline
-  def ManyToManyRelationship: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.ManyToManyRelationship = this.cast("ManyToManyRelationship")
+  def ManyToManyRelationship: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.ManyToManyRelationship = "ManyToManyRelationship".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.ManyToManyRelationship]
   @scala.inline
-  def OneToManyRelationship: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.OneToManyRelationship = this.cast("OneToManyRelationship")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def OneToManyRelationship: typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.OneToManyRelationship = "OneToManyRelationship".asInstanceOf[typingsSlinky.microsoftSdkSoap.microsoftSdkSoapStrings.OneToManyRelationship]
 }
 

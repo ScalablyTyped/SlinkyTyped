@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class USBInTransferResult protected () extends js.Object {
   def this(status: USBTransferStatus) = this()
-  def this(status: USBTransferStatus, data: scala.scalajs.js.typedarray.DataView) = this()
-  val data: js.UndefOr[scala.scalajs.js.typedarray.DataView] = js.native
+  def this(status: USBTransferStatus, data: js.typedarray.DataView) = this()
+  val data: js.UndefOr[js.typedarray.DataView] = js.native
   val status: js.UndefOr[USBTransferStatus] = js.native
 }
 

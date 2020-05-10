@@ -13,12 +13,10 @@ trait ChangeName extends js.Object
 
 object ChangeName {
   @scala.inline
-  def background: typingsSlinky.jimpCore.jimpCoreStrings.background = this.cast("background")
+  def background: typingsSlinky.jimpCore.jimpCoreStrings.background = "background".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.background]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def crop: typingsSlinky.jimpCore.jimpCoreStrings.crop = "crop".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.crop]
   @scala.inline
-  def crop: typingsSlinky.jimpCore.jimpCoreStrings.crop = this.cast("crop")
-  @scala.inline
-  def scan: typingsSlinky.jimpCore.jimpCoreStrings.scan = this.cast("scan")
+  def scan: typingsSlinky.jimpCore.jimpCoreStrings.scan = "scan".asInstanceOf[typingsSlinky.jimpCore.jimpCoreStrings.scan]
 }
 

@@ -16,18 +16,16 @@ trait HTTPArgumentType extends js.Object
 
 object HTTPArgumentType {
   @scala.inline
-  def array: typingsSlinky.wpapi.wpapiStrings.array = this.cast("array")
+  def array: typingsSlinky.wpapi.wpapiStrings.array = "array".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.array]
   @scala.inline
-  def boolean: typingsSlinky.wpapi.wpapiStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.wpapi.wpapiStrings.boolean = "boolean".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def integer: typingsSlinky.wpapi.wpapiStrings.integer = "integer".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.wpapi.wpapiStrings.integer = this.cast("integer")
+  def number: typingsSlinky.wpapi.wpapiStrings.number = "number".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.number]
   @scala.inline
-  def number: typingsSlinky.wpapi.wpapiStrings.number = this.cast("number")
+  def `object`: typingsSlinky.wpapi.wpapiStrings.`object` = "object".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.wpapi.wpapiStrings.`object` = this.cast("object")
-  @scala.inline
-  def string: typingsSlinky.wpapi.wpapiStrings.string = this.cast("string")
+  def string: typingsSlinky.wpapi.wpapiStrings.string = "string".asInstanceOf[typingsSlinky.wpapi.wpapiStrings.string]
 }
 

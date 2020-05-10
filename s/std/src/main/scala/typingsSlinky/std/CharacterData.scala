@@ -21,5 +21,6 @@ trait CharacterData
 
 @JSGlobal("CharacterData")
 @js.native
-object CharacterData extends Instantiable0[CharacterData]
+object CharacterData
+  extends Instantiable0[org.scalajs.dom.raw.CharacterData]
 

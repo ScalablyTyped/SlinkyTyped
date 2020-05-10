@@ -12,10 +12,8 @@ trait Direction extends js.Object
 
 object Direction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def horizontal: typingsSlinky.sortablejs.sortablejsStrings.horizontal = "horizontal".asInstanceOf[typingsSlinky.sortablejs.sortablejsStrings.horizontal]
   @scala.inline
-  def horizontal: typingsSlinky.sortablejs.sortablejsStrings.horizontal = this.cast("horizontal")
-  @scala.inline
-  def vertical: typingsSlinky.sortablejs.sortablejsStrings.vertical = this.cast("vertical")
+  def vertical: typingsSlinky.sortablejs.sortablejsStrings.vertical = "vertical".asInstanceOf[typingsSlinky.sortablejs.sortablejsStrings.vertical]
 }
 

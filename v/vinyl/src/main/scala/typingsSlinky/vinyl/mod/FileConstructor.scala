@@ -11,10 +11,10 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait FileConstructor
-  extends Instantiable0[typingsSlinky.std.File]
+  extends Instantiable0[org.scalajs.dom.raw.File]
      with Instantiable1[
       (/* options */ ConstructorOptions) | (/* options */ ConstructorOptionscontent) | (/* options */ ConstructorOptionscontentBase) | (/* options */ ConstructorOptionscontentDictcustomOption), 
-      BufferFile | typingsSlinky.std.File | NullFile | StreamFile
+      BufferFile | org.scalajs.dom.raw.File | NullFile | StreamFile
     ] {
   /**
     * Checks if a property is not managed internally.

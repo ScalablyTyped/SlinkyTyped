@@ -173,52 +173,269 @@ trait SchemaContainer extends js.Object {
 
 object SchemaContainer {
   @scala.inline
-  def apply(
-    args: js.Array[String] = null,
-    command: js.Array[String] = null,
-    env: js.Array[SchemaEnvVar] = null,
-    envFrom: js.Array[SchemaEnvFromSource] = null,
-    image: String = null,
-    imagePullPolicy: String = null,
-    lifecycle: SchemaLifecycle = null,
-    livenessProbe: SchemaProbe = null,
-    name: String = null,
-    ports: js.Array[SchemaContainerPort] = null,
-    readinessProbe: SchemaProbe = null,
-    resources: SchemaResourceRequirements = null,
-    securityContext: SchemaSecurityContext = null,
-    stdin: js.UndefOr[Boolean] = js.undefined,
-    stdinOnce: js.UndefOr[Boolean] = js.undefined,
-    terminationMessagePath: String = null,
-    terminationMessagePolicy: String = null,
-    tty: js.UndefOr[Boolean] = js.undefined,
-    volumeDevices: js.Array[SchemaVolumeDevice] = null,
-    volumeMounts: js.Array[SchemaVolumeMount] = null,
-    workingDir: String = null
-  ): SchemaContainer = {
+  def apply(): SchemaContainer = {
     val __obj = js.Dynamic.literal()
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (command != null) __obj.updateDynamic("command")(command.asInstanceOf[js.Any])
-    if (env != null) __obj.updateDynamic("env")(env.asInstanceOf[js.Any])
-    if (envFrom != null) __obj.updateDynamic("envFrom")(envFrom.asInstanceOf[js.Any])
-    if (image != null) __obj.updateDynamic("image")(image.asInstanceOf[js.Any])
-    if (imagePullPolicy != null) __obj.updateDynamic("imagePullPolicy")(imagePullPolicy.asInstanceOf[js.Any])
-    if (lifecycle != null) __obj.updateDynamic("lifecycle")(lifecycle.asInstanceOf[js.Any])
-    if (livenessProbe != null) __obj.updateDynamic("livenessProbe")(livenessProbe.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (ports != null) __obj.updateDynamic("ports")(ports.asInstanceOf[js.Any])
-    if (readinessProbe != null) __obj.updateDynamic("readinessProbe")(readinessProbe.asInstanceOf[js.Any])
-    if (resources != null) __obj.updateDynamic("resources")(resources.asInstanceOf[js.Any])
-    if (securityContext != null) __obj.updateDynamic("securityContext")(securityContext.asInstanceOf[js.Any])
-    if (!js.isUndefined(stdin)) __obj.updateDynamic("stdin")(stdin.asInstanceOf[js.Any])
-    if (!js.isUndefined(stdinOnce)) __obj.updateDynamic("stdinOnce")(stdinOnce.asInstanceOf[js.Any])
-    if (terminationMessagePath != null) __obj.updateDynamic("terminationMessagePath")(terminationMessagePath.asInstanceOf[js.Any])
-    if (terminationMessagePolicy != null) __obj.updateDynamic("terminationMessagePolicy")(terminationMessagePolicy.asInstanceOf[js.Any])
-    if (!js.isUndefined(tty)) __obj.updateDynamic("tty")(tty.asInstanceOf[js.Any])
-    if (volumeDevices != null) __obj.updateDynamic("volumeDevices")(volumeDevices.asInstanceOf[js.Any])
-    if (volumeMounts != null) __obj.updateDynamic("volumeMounts")(volumeMounts.asInstanceOf[js.Any])
-    if (workingDir != null) __obj.updateDynamic("workingDir")(workingDir.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaContainer]
   }
+  @scala.inline
+  implicit class SchemaContainerOps[Self <: SchemaContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommand(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnv(value: js.Array[SchemaEnvVar]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnv: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("env")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvFrom(value: js.Array[SchemaEnvFromSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("envFrom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvFrom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("envFrom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImagePullPolicy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePullPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImagePullPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePullPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLifecycle(value: SchemaLifecycle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLifecycle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLivenessProbe(value: SchemaProbe): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("livenessProbe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLivenessProbe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("livenessProbe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPorts(value: js.Array[SchemaContainerPort]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPorts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadinessProbe(value: SchemaProbe): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readinessProbe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadinessProbe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readinessProbe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResources(value: SchemaResourceRequirements): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResources: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityContext(value: SchemaSecurityContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStdin(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stdin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStdin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stdin")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStdinOnce(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stdinOnce")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStdinOnce: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stdinOnce")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminationMessagePath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationMessagePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminationMessagePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationMessagePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminationMessagePolicy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationMessagePolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminationMessagePolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terminationMessagePolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeDevices(value: js.Array[SchemaVolumeDevice]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeDevices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeDevices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeDevices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVolumeMounts(value: js.Array[SchemaVolumeMount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeMounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVolumeMounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volumeMounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkingDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkingDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workingDir")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

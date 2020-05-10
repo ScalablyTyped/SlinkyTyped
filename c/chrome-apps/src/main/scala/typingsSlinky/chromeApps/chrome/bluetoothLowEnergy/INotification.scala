@@ -4,19 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait INotification extends js.Object {
   /** Optional flag for sending an indication instead of a notification. */
-  var shouldIndicate: Boolean
+  var shouldIndicate: Boolean = js.native
   /** New value of the characteristic. */
-  var value: scala.scalajs.js.typedarray.ArrayBuffer
+  var value: js.typedarray.ArrayBuffer = js.native
 }
 
 object INotification {
   @scala.inline
-  def apply(shouldIndicate: Boolean, value: scala.scalajs.js.typedarray.ArrayBuffer): INotification = {
+  def apply(shouldIndicate: Boolean, value: js.typedarray.ArrayBuffer): INotification = {
     val __obj = js.Dynamic.literal(shouldIndicate = shouldIndicate.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[INotification]
   }
+  @scala.inline
+  implicit class INotificationOps[Self <: INotification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withShouldIndicate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldIndicate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

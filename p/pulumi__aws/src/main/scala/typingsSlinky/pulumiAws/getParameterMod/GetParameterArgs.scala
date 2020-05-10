@@ -18,10 +18,35 @@ trait GetParameterArgs extends js.Object {
 
 object GetParameterArgs {
   @scala.inline
-  def apply(name: String, withDecryption: js.UndefOr[Boolean] = js.undefined): GetParameterArgs = {
+  def apply(name: String): GetParameterArgs = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    if (!js.isUndefined(withDecryption)) __obj.updateDynamic("withDecryption")(withDecryption.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetParameterArgs]
   }
+  @scala.inline
+  implicit class GetParameterArgsOps[Self <: GetParameterArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWithDecryption(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withDecryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithDecryption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withDecryption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

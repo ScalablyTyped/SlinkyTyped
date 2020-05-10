@@ -4,20 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BindParameter extends js.Object {
   /**
     * The direction of the bind. One of the Execute Bind Direction Constants.
     *
     * @see https://oracle.github.io/node-oracledb/doc/api.html#oracledbconstantsbinddir
     */
-  var dir: js.UndefOr[Double] = js.undefined
+  var dir: js.UndefOr[Double] = js.native
   /**
     * The number of array elements to be allocated for a PL/SQL Collection INDEX BY associative
     * array OUT or IN OUT array bind variable. For IN binds, the value of maxArraySize is ignored.
     *
     * @see https://oracle.github.io/node-oracledb/doc/api.html#plsqlindexbybinds
     */
-  var maxArraySize: js.UndefOr[Double] = js.undefined
+  var maxArraySize: js.UndefOr[Double] = js.native
   /**
     * The maximum number of bytes that an OUT or IN OUT bind variable of type STRING or BUFFER can use to get data.
     *
@@ -26,36 +27,93 @@ trait BindParameter extends js.Object {
     *
     * @default 200
     */
-  var maxSize: js.UndefOr[Double] = js.undefined
+  var maxSize: js.UndefOr[Double] = js.native
   /**
     * The node-oracledb or JavaScript data type to be bound. One of the Node-oracledb Type Constants.
     *
     * With IN or IN OUT binds the type can be explicitly set with type or it will default to the type
     * of the input data value. With OUT binds, the type defaults to oracledb.STRING whenever type is not specified.
     */
-  var `type`: js.UndefOr[Double | String] = js.undefined
+  var `type`: js.UndefOr[Double | String] = js.native
   /**
     * The input value or variable to be used for an IN or IN OUT bind variable.
     */
-  var `val`: js.UndefOr[js.Any] = js.undefined
+  var `val`: js.UndefOr[js.Any] = js.native
 }
 
 object BindParameter {
   @scala.inline
-  def apply(
-    dir: Int | Double = null,
-    maxArraySize: Int | Double = null,
-    maxSize: Int | Double = null,
-    `type`: Double | String = null,
-    `val`: js.Any = null
-  ): BindParameter = {
+  def apply(): BindParameter = {
     val __obj = js.Dynamic.literal()
-    if (dir != null) __obj.updateDynamic("dir")(dir.asInstanceOf[js.Any])
-    if (maxArraySize != null) __obj.updateDynamic("maxArraySize")(maxArraySize.asInstanceOf[js.Any])
-    if (maxSize != null) __obj.updateDynamic("maxSize")(maxSize.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (`val` != null) __obj.updateDynamic("val")(`val`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BindParameter]
   }
+  @scala.inline
+  implicit class BindParameterOps[Self <: BindParameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDir(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDir: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxArraySize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxArraySize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxArraySize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxArraySize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVal(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("val")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("val")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

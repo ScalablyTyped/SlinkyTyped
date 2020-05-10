@@ -35,11 +35,11 @@ class InfoWindow protected () extends Overlay {
   def removeEventListener(event: String, handler: Callback): Unit = js.native
   def restore(): Unit = js.native
   def setContent(content: String): Unit = js.native
-  def setContent(content: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setContent(content: HTMLElement): Unit = js.native
   def setHeight(height: Double): Unit = js.native
   def setMaxContent(content: String): Unit = js.native
   def setTitle(title: String): Unit = js.native
-  def setTitle(title: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setTitle(title: HTMLElement): Unit = js.native
   def setWidth(width: Double): Unit = js.native
 }
 

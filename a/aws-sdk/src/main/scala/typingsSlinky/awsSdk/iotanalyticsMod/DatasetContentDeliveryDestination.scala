@@ -18,14 +18,41 @@ trait DatasetContentDeliveryDestination extends js.Object {
 
 object DatasetContentDeliveryDestination {
   @scala.inline
-  def apply(
-    iotEventsDestinationConfiguration: IotEventsDestinationConfiguration = null,
-    s3DestinationConfiguration: S3DestinationConfiguration = null
-  ): DatasetContentDeliveryDestination = {
+  def apply(): DatasetContentDeliveryDestination = {
     val __obj = js.Dynamic.literal()
-    if (iotEventsDestinationConfiguration != null) __obj.updateDynamic("iotEventsDestinationConfiguration")(iotEventsDestinationConfiguration.asInstanceOf[js.Any])
-    if (s3DestinationConfiguration != null) __obj.updateDynamic("s3DestinationConfiguration")(s3DestinationConfiguration.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatasetContentDeliveryDestination]
   }
+  @scala.inline
+  implicit class DatasetContentDeliveryDestinationOps[Self <: DatasetContentDeliveryDestination] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIotEventsDestinationConfiguration(value: IotEventsDestinationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotEventsDestinationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIotEventsDestinationConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iotEventsDestinationConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3DestinationConfiguration(value: S3DestinationConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3DestinationConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3DestinationConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("s3DestinationConfiguration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

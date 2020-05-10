@@ -47,10 +47,6 @@ class PathConstraint protected () extends Updatable {
     percentPosition: Boolean,
     percentSpacing: Boolean
   ): js.Array[Double] = js.native
-  /* CompleteClass */
-  override def isActive(): Boolean = js.native
-  /* CompleteClass */
-  override def update(): Unit = js.native
 }
 
 /* static members */

@@ -18,11 +18,41 @@ trait EbsInfo extends js.Object {
 
 object EbsInfo {
   @scala.inline
-  def apply(EbsOptimizedSupport: EbsOptimizedSupport = null, EncryptionSupport: EbsEncryptionSupport = null): EbsInfo = {
+  def apply(): EbsInfo = {
     val __obj = js.Dynamic.literal()
-    if (EbsOptimizedSupport != null) __obj.updateDynamic("EbsOptimizedSupport")(EbsOptimizedSupport.asInstanceOf[js.Any])
-    if (EncryptionSupport != null) __obj.updateDynamic("EncryptionSupport")(EncryptionSupport.asInstanceOf[js.Any])
     __obj.asInstanceOf[EbsInfo]
   }
+  @scala.inline
+  implicit class EbsInfoOps[Self <: EbsInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEbsOptimizedSupport(value: EbsOptimizedSupport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsOptimizedSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEbsOptimizedSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsOptimizedSupport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionSupport(value: EbsEncryptionSupport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionSupport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionSupport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EncryptionSupport")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

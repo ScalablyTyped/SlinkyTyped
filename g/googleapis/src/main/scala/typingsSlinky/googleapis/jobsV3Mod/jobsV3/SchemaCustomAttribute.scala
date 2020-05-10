@@ -35,16 +35,53 @@ trait SchemaCustomAttribute extends js.Object {
 
 object SchemaCustomAttribute {
   @scala.inline
-  def apply(
-    filterable: js.UndefOr[Boolean] = js.undefined,
-    longValues: js.Array[String] = null,
-    stringValues: js.Array[String] = null
-  ): SchemaCustomAttribute = {
+  def apply(): SchemaCustomAttribute = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(filterable)) __obj.updateDynamic("filterable")(filterable.asInstanceOf[js.Any])
-    if (longValues != null) __obj.updateDynamic("longValues")(longValues.asInstanceOf[js.Any])
-    if (stringValues != null) __obj.updateDynamic("stringValues")(stringValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCustomAttribute]
   }
+  @scala.inline
+  implicit class SchemaCustomAttributeOps[Self <: SchemaCustomAttribute] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilterable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLongValues(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLongValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringValues(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValues")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

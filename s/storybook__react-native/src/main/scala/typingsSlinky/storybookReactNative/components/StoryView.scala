@@ -1,32 +1,31 @@
 package typingsSlinky.storybookReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.storybookReactNative.storyViewMod.Props
 import typingsSlinky.storybookReactNative.storyViewMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StoryView
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object StoryView {
   @JSImport("@storybook/react-native/dist/preview/components/StoryView", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    stories: js.Any,
-    url: String,
-    onDevice: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(stories = stories.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    if (!js.isUndefined(onDevice)) __obj.updateDynamic("onDevice")(onDevice.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def onDevice(value: Boolean): this.type = set("onDevice", value.asInstanceOf[js.Any])
   }
-  type Props = typingsSlinky.storybookReactNative.storyViewMod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(stories: js.Any, url: String): Builder = {
+    val __props = js.Dynamic.literal(stories = stories.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
 }
 

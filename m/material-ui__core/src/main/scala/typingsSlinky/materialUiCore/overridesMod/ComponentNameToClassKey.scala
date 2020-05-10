@@ -194,103 +194,564 @@ trait ComponentNameToClassKey extends js.Object {
 
 object ComponentNameToClassKey {
   @scala.inline
-  def apply(
-    MuiAppBar: AppBarClassKey,
-    MuiAvatar: AvatarClassKey,
-    MuiBackdrop: BackdropClassKey,
-    MuiBadge: BadgeClassKey,
-    MuiBottomNavigation: BottomNavigationClassKey,
-    MuiBottomNavigationAction: BottomNavigationActionClassKey,
-    MuiButton: ButtonClassKey,
-    MuiButtonBase: ButtonBaseClassKey,
-    MuiCard: CardClassKey,
-    MuiCardActionArea: CardActionAreaClassKey,
-    MuiCardActions: CardActionsClassKey,
-    MuiCardContent: CardContentClassKey,
-    MuiCardHeader: CardHeaderClassKey,
-    MuiCardMedia: CardMediaClassKey,
-    MuiCheckbox: CheckboxClassKey,
-    MuiChip: ChipClassKey,
-    MuiCircularProgress: CircularProgressClassKey,
-    MuiCollapse: CollapseClassKey,
-    MuiCssBaseline: CssBaselineClassKey,
-    MuiDialog: DialogClassKey,
-    MuiDialogActions: DialogActionsClassKey,
-    MuiDialogContent: DialogContentClassKey,
-    MuiDialogContentText: DialogContentTextClassKey,
-    MuiDialogTitle: DialogTitleClassKey,
-    MuiDivider: DividerClassKey,
-    MuiDrawer: DrawerClassKey,
-    MuiExpansionPanel: ExpansionPanelClassKey,
-    MuiExpansionPanelActions: ExpansionPanelActionsClassKey,
-    MuiExpansionPanelDetails: ExpansionPanelDetailsClassKey,
-    MuiExpansionPanelSummary: ExpansionPanelSummaryClassKey,
-    MuiFab: FabClassKey,
-    MuiFilledInput: FilledInputClassKey,
-    MuiFormControl: FormControlClassKey,
-    MuiFormControlLabel: FormControlLabelClassKey,
-    MuiFormGroup: FormGroupClassKey,
-    MuiFormHelperText: FormHelperTextClassKey,
-    MuiFormLabel: FormLabelClassKey,
-    MuiGrid: GridClassKey,
-    MuiGridList: GridListClassKey,
-    MuiGridListTile: GridListTileClassKey,
-    MuiGridListTileBar: GridListTileBarClassKey,
-    MuiIcon: IconClassKey,
-    MuiIconButton: IconButtonClassKey,
-    MuiInput: InputClassKey,
-    MuiInputAdornment: InputAdornmentClassKey,
-    MuiInputBase: InputBaseClassKey,
-    MuiInputLabel: InputLabelClassKey,
-    MuiLinearProgress: LinearProgressClassKey,
-    MuiLink: LinkClassKey,
-    MuiList: ListClassKey,
-    MuiListItem: ListItemClassKey,
-    MuiListItemAvatar: ListItemAvatarClassKey,
-    MuiListItemIcon: ListItemIconClassKey,
-    MuiListItemSecondaryAction: ListItemSecondaryActionClassKey,
-    MuiListItemText: ListItemTextClassKey,
-    MuiListSubheader: ListSubheaderClassKey,
-    MuiMenu: MenuClassKey,
-    MuiMenuItem: MenuItemClassKey,
-    MuiMobileStepper: MobileStepperClassKey,
-    MuiModal: ModalClassKey,
-    MuiNativeSelect: NativeSelectClassKey,
-    MuiOutlinedInput: OutlinedInputClassKey,
-    MuiPaper: PaperClassKey,
-    MuiPopover: PopoverClassKey,
-    MuiRadio: RadioClassKey,
-    MuiSelect: SelectClassKey,
-    MuiSnackbar: SnackbarClassKey,
-    MuiSnackbarContent: SnackbarContentClassKey,
-    MuiStep: StepClasskey,
-    MuiStepButton: StepButtonClasskey,
-    MuiStepConnector: StepConnectorClasskey,
-    MuiStepContent: StepContentClasskey,
-    MuiStepIcon: StepIconClasskey,
-    MuiStepLabel: StepLabelClasskey,
-    MuiStepper: StepperClasskey,
-    MuiSvgIcon: SvgIconClassKey,
-    MuiSwitch: SwitchClassKey,
-    MuiSwitchBase: SwitchBaseClassKey,
-    MuiTab: TabClassKey,
-    MuiTable: TableClassKey,
-    MuiTableBody: TableBodyClassKey,
-    MuiTableCell: TableCellClassKey,
-    MuiTableFooter: TableFooterClassKey,
-    MuiTableHead: TableHeadClassKey,
-    MuiTablePagination: TablePaginationClassKey,
-    MuiTableRow: TableRowClassKey,
-    MuiTableSortLabel: TableSortLabelClassKey,
-    MuiTabs: TabsClassKey,
-    MuiToolbar: ToolbarClassKey,
-    MuiTooltip: TooltipClassKey,
-    MuiTouchRipple: TouchRippleClassKey,
-    MuiTypography: TypographyClassKey
-  ): ComponentNameToClassKey = {
-    val __obj = js.Dynamic.literal(MuiAppBar = MuiAppBar.asInstanceOf[js.Any], MuiAvatar = MuiAvatar.asInstanceOf[js.Any], MuiBackdrop = MuiBackdrop.asInstanceOf[js.Any], MuiBadge = MuiBadge.asInstanceOf[js.Any], MuiBottomNavigation = MuiBottomNavigation.asInstanceOf[js.Any], MuiBottomNavigationAction = MuiBottomNavigationAction.asInstanceOf[js.Any], MuiButton = MuiButton.asInstanceOf[js.Any], MuiButtonBase = MuiButtonBase.asInstanceOf[js.Any], MuiCard = MuiCard.asInstanceOf[js.Any], MuiCardActionArea = MuiCardActionArea.asInstanceOf[js.Any], MuiCardActions = MuiCardActions.asInstanceOf[js.Any], MuiCardContent = MuiCardContent.asInstanceOf[js.Any], MuiCardHeader = MuiCardHeader.asInstanceOf[js.Any], MuiCardMedia = MuiCardMedia.asInstanceOf[js.Any], MuiCheckbox = MuiCheckbox.asInstanceOf[js.Any], MuiChip = MuiChip.asInstanceOf[js.Any], MuiCircularProgress = MuiCircularProgress.asInstanceOf[js.Any], MuiCollapse = MuiCollapse.asInstanceOf[js.Any], MuiCssBaseline = MuiCssBaseline.asInstanceOf[js.Any], MuiDialog = MuiDialog.asInstanceOf[js.Any], MuiDialogActions = MuiDialogActions.asInstanceOf[js.Any], MuiDialogContent = MuiDialogContent.asInstanceOf[js.Any], MuiDialogContentText = MuiDialogContentText.asInstanceOf[js.Any], MuiDialogTitle = MuiDialogTitle.asInstanceOf[js.Any], MuiDivider = MuiDivider.asInstanceOf[js.Any], MuiDrawer = MuiDrawer.asInstanceOf[js.Any], MuiExpansionPanel = MuiExpansionPanel.asInstanceOf[js.Any], MuiExpansionPanelActions = MuiExpansionPanelActions.asInstanceOf[js.Any], MuiExpansionPanelDetails = MuiExpansionPanelDetails.asInstanceOf[js.Any], MuiExpansionPanelSummary = MuiExpansionPanelSummary.asInstanceOf[js.Any], MuiFab = MuiFab.asInstanceOf[js.Any], MuiFilledInput = MuiFilledInput.asInstanceOf[js.Any], MuiFormControl = MuiFormControl.asInstanceOf[js.Any], MuiFormControlLabel = MuiFormControlLabel.asInstanceOf[js.Any], MuiFormGroup = MuiFormGroup.asInstanceOf[js.Any], MuiFormHelperText = MuiFormHelperText.asInstanceOf[js.Any], MuiFormLabel = MuiFormLabel.asInstanceOf[js.Any], MuiGrid = MuiGrid.asInstanceOf[js.Any], MuiGridList = MuiGridList.asInstanceOf[js.Any], MuiGridListTile = MuiGridListTile.asInstanceOf[js.Any], MuiGridListTileBar = MuiGridListTileBar.asInstanceOf[js.Any], MuiIcon = MuiIcon.asInstanceOf[js.Any], MuiIconButton = MuiIconButton.asInstanceOf[js.Any], MuiInput = MuiInput.asInstanceOf[js.Any], MuiInputAdornment = MuiInputAdornment.asInstanceOf[js.Any], MuiInputBase = MuiInputBase.asInstanceOf[js.Any], MuiInputLabel = MuiInputLabel.asInstanceOf[js.Any], MuiLinearProgress = MuiLinearProgress.asInstanceOf[js.Any], MuiLink = MuiLink.asInstanceOf[js.Any], MuiList = MuiList.asInstanceOf[js.Any], MuiListItem = MuiListItem.asInstanceOf[js.Any], MuiListItemAvatar = MuiListItemAvatar.asInstanceOf[js.Any], MuiListItemIcon = MuiListItemIcon.asInstanceOf[js.Any], MuiListItemSecondaryAction = MuiListItemSecondaryAction.asInstanceOf[js.Any], MuiListItemText = MuiListItemText.asInstanceOf[js.Any], MuiListSubheader = MuiListSubheader.asInstanceOf[js.Any], MuiMenu = MuiMenu.asInstanceOf[js.Any], MuiMenuItem = MuiMenuItem.asInstanceOf[js.Any], MuiMobileStepper = MuiMobileStepper.asInstanceOf[js.Any], MuiModal = MuiModal.asInstanceOf[js.Any], MuiNativeSelect = MuiNativeSelect.asInstanceOf[js.Any], MuiOutlinedInput = MuiOutlinedInput.asInstanceOf[js.Any], MuiPaper = MuiPaper.asInstanceOf[js.Any], MuiPopover = MuiPopover.asInstanceOf[js.Any], MuiRadio = MuiRadio.asInstanceOf[js.Any], MuiSelect = MuiSelect.asInstanceOf[js.Any], MuiSnackbar = MuiSnackbar.asInstanceOf[js.Any], MuiSnackbarContent = MuiSnackbarContent.asInstanceOf[js.Any], MuiStep = MuiStep.asInstanceOf[js.Any], MuiStepButton = MuiStepButton.asInstanceOf[js.Any], MuiStepConnector = MuiStepConnector.asInstanceOf[js.Any], MuiStepContent = MuiStepContent.asInstanceOf[js.Any], MuiStepIcon = MuiStepIcon.asInstanceOf[js.Any], MuiStepLabel = MuiStepLabel.asInstanceOf[js.Any], MuiStepper = MuiStepper.asInstanceOf[js.Any], MuiSvgIcon = MuiSvgIcon.asInstanceOf[js.Any], MuiSwitch = MuiSwitch.asInstanceOf[js.Any], MuiSwitchBase = MuiSwitchBase.asInstanceOf[js.Any], MuiTab = MuiTab.asInstanceOf[js.Any], MuiTable = MuiTable.asInstanceOf[js.Any], MuiTableBody = MuiTableBody.asInstanceOf[js.Any], MuiTableCell = MuiTableCell.asInstanceOf[js.Any], MuiTableFooter = MuiTableFooter.asInstanceOf[js.Any], MuiTableHead = MuiTableHead.asInstanceOf[js.Any], MuiTablePagination = MuiTablePagination.asInstanceOf[js.Any], MuiTableRow = MuiTableRow.asInstanceOf[js.Any], MuiTableSortLabel = MuiTableSortLabel.asInstanceOf[js.Any], MuiTabs = MuiTabs.asInstanceOf[js.Any], MuiToolbar = MuiToolbar.asInstanceOf[js.Any], MuiTooltip = MuiTooltip.asInstanceOf[js.Any], MuiTouchRipple = MuiTouchRipple.asInstanceOf[js.Any], MuiTypography = MuiTypography.asInstanceOf[js.Any])
-  
-    __obj.asInstanceOf[ComponentNameToClassKey]
+  implicit class ComponentNameToClassKeyOps[Self <: ComponentNameToClassKey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMuiAppBar(value: AppBarClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiAppBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiAvatar(value: AvatarClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiAvatar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiBackdrop(value: BackdropClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBackdrop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiBadge(value: BadgeClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBadge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiBottomNavigation(value: BottomNavigationClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBottomNavigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiBottomNavigationAction(value: BottomNavigationActionClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiBottomNavigationAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiButton(value: ButtonClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiButtonBase(value: ButtonBaseClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiButtonBase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiCard(value: CardClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiCardActionArea(value: CardActionAreaClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardActionArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiCardActions(value: CardActionsClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiCardContent(value: CardContentClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiCardHeader(value: CardHeaderClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardHeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiCardMedia(value: CardMediaClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCardMedia")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiCheckbox(value: CheckboxClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCheckbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiChip(value: ChipClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiChip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiCircularProgress(value: CircularProgressClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCircularProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiCollapse(value: CollapseClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCollapse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiCssBaseline(value: CssBaselineClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiCssBaseline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiDialog(value: DialogClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialog")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiDialogActions(value: DialogActionsClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiDialogContent(value: DialogContentClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiDialogContentText(value: DialogContentTextClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogContentText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiDialogTitle(value: DialogTitleClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDialogTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiDivider(value: DividerClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDivider")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiDrawer(value: DrawerClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiDrawer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiExpansionPanel(value: ExpansionPanelClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiExpansionPanelActions(value: ExpansionPanelActionsClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanelActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiExpansionPanelDetails(value: ExpansionPanelDetailsClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanelDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiExpansionPanelSummary(value: ExpansionPanelSummaryClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiExpansionPanelSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiFab(value: FabClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiFilledInput(value: FilledInputClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFilledInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiFormControl(value: FormControlClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiFormControlLabel(value: FormControlLabelClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormControlLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiFormGroup(value: FormGroupClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiFormHelperText(value: FormHelperTextClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormHelperText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiFormLabel(value: FormLabelClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiFormLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiGrid(value: GridClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGrid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiGridList(value: GridListClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGridList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiGridListTile(value: GridListTileClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGridListTile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiGridListTileBar(value: GridListTileBarClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiGridListTileBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiIcon(value: IconClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiIconButton(value: IconButtonClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiIconButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiInput(value: InputClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiInputAdornment(value: InputAdornmentClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInputAdornment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiInputBase(value: InputBaseClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInputBase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiInputLabel(value: InputLabelClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiInputLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiLinearProgress(value: LinearProgressClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiLinearProgress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiLink(value: LinkClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiList(value: ListClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiListItem(value: ListItemClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiListItemAvatar(value: ListItemAvatarClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemAvatar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiListItemIcon(value: ListItemIconClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiListItemSecondaryAction(value: ListItemSecondaryActionClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemSecondaryAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiListItemText(value: ListItemTextClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListItemText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiListSubheader(value: ListSubheaderClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiListSubheader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiMenu(value: MenuClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiMenuItem(value: MenuItemClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiMenuItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiMobileStepper(value: MobileStepperClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiMobileStepper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiModal(value: ModalClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiModal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiNativeSelect(value: NativeSelectClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiNativeSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiOutlinedInput(value: OutlinedInputClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiOutlinedInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiPaper(value: PaperClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiPaper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiPopover(value: PopoverClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiPopover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiRadio(value: RadioClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiRadio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiSelect(value: SelectClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSelect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiSnackbar(value: SnackbarClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSnackbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiSnackbarContent(value: SnackbarContentClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSnackbarContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiStep(value: StepClasskey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiStepButton(value: StepButtonClasskey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiStepConnector(value: StepConnectorClasskey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepConnector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiStepContent(value: StepContentClasskey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiStepIcon(value: StepIconClasskey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiStepLabel(value: StepLabelClasskey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiStepper(value: StepperClasskey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiStepper")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiSvgIcon(value: SvgIconClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSvgIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiSwitch(value: SwitchClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSwitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiSwitchBase(value: SwitchBaseClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiSwitchBase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTab(value: TabClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTab")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTable(value: TableClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTableBody(value: TableBodyClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTableCell(value: TableCellClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTableFooter(value: TableFooterClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableFooter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTableHead(value: TableHeadClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableHead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTablePagination(value: TablePaginationClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTablePagination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTableRow(value: TableRowClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTableSortLabel(value: TableSortLabelClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTableSortLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTabs(value: TabsClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTabs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiToolbar(value: ToolbarClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiToolbar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTooltip(value: TooltipClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTouchRipple(value: TouchRippleClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTouchRipple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMuiTypography(value: TypographyClassKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MuiTypography")(value.asInstanceOf[js.Any])
+        ret
+    }
   }
+  
 }
 

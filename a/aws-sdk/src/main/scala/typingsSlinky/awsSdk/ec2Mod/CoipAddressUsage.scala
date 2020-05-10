@@ -26,18 +26,65 @@ trait CoipAddressUsage extends js.Object {
 
 object CoipAddressUsage {
   @scala.inline
-  def apply(
-    AllocationId: String = null,
-    AwsAccountId: String = null,
-    AwsService: String = null,
-    CoIp: String = null
-  ): CoipAddressUsage = {
+  def apply(): CoipAddressUsage = {
     val __obj = js.Dynamic.literal()
-    if (AllocationId != null) __obj.updateDynamic("AllocationId")(AllocationId.asInstanceOf[js.Any])
-    if (AwsAccountId != null) __obj.updateDynamic("AwsAccountId")(AwsAccountId.asInstanceOf[js.Any])
-    if (AwsService != null) __obj.updateDynamic("AwsService")(AwsService.asInstanceOf[js.Any])
-    if (CoIp != null) __obj.updateDynamic("CoIp")(CoIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoipAddressUsage]
   }
+  @scala.inline
+  implicit class CoipAddressUsageOps[Self <: CoipAddressUsage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllocationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllocationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllocationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsAccountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAwsService(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAwsService: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AwsService")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCoIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCoIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CoIp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

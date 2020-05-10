@@ -38,60 +38,58 @@ trait ContactFieldType extends js.Object
 
 object ContactFieldType {
   @scala.inline
-  def addresses: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.addresses = this.cast("addresses")
+  def addresses: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.addresses = "addresses".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.addresses]
   @scala.inline
-  def birthday: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.birthday = this.cast("birthday")
+  def birthday: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.birthday = "birthday".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.birthday]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def categories: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.categories = "categories".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.categories]
   @scala.inline
-  def categories: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.categories = this.cast("categories")
+  def country: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.country = "country".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.country]
   @scala.inline
-  def country: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.country = this.cast("country")
+  def department: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.department = "department".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.department]
   @scala.inline
-  def department: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.department = this.cast("department")
+  def displayName: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.displayName = "displayName".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.displayName]
   @scala.inline
-  def displayName: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.displayName = this.cast("displayName")
+  def emails: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.emails = "emails".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.emails]
   @scala.inline
-  def emails: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.emails = this.cast("emails")
+  def familyName: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.familyName = "familyName".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.familyName]
   @scala.inline
-  def familyName: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.familyName = this.cast("familyName")
+  def formatted: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.formatted = "formatted".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.formatted]
   @scala.inline
-  def formatted: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.formatted = this.cast("formatted")
+  def givenName: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.givenName = "givenName".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.givenName]
   @scala.inline
-  def givenName: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.givenName = this.cast("givenName")
+  def honorificPrefix: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.honorificPrefix = "honorificPrefix".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.honorificPrefix]
   @scala.inline
-  def honorificPrefix: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.honorificPrefix = this.cast("honorificPrefix")
+  def honorificSuffix: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.honorificSuffix = "honorificSuffix".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.honorificSuffix]
   @scala.inline
-  def honorificSuffix: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.honorificSuffix = this.cast("honorificSuffix")
+  def id: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.id = "id".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.id]
   @scala.inline
-  def id: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.id = this.cast("id")
+  def ims: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.ims = "ims".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.ims]
   @scala.inline
-  def ims: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.ims = this.cast("ims")
+  def locality: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.locality = "locality".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.locality]
   @scala.inline
-  def locality: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.locality = this.cast("locality")
+  def middleName: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.middleName = "middleName".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.middleName]
   @scala.inline
-  def middleName: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.middleName = this.cast("middleName")
+  def name: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.name = "name".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.name]
   @scala.inline
-  def name: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.name = this.cast("name")
+  def nickname: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.nickname = "nickname".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.nickname]
   @scala.inline
-  def nickname: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.nickname = this.cast("nickname")
+  def note: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.note = "note".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.note]
   @scala.inline
-  def note: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.note = this.cast("note")
+  def organizations: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.organizations = "organizations".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.organizations]
   @scala.inline
-  def organizations: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.organizations = this.cast("organizations")
+  def phoneNumbers: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.phoneNumbers = "phoneNumbers".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.phoneNumbers]
   @scala.inline
-  def phoneNumbers: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.phoneNumbers = this.cast("phoneNumbers")
+  def photos: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.photos = "photos".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.photos]
   @scala.inline
-  def photos: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.photos = this.cast("photos")
+  def postalCode: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.postalCode = "postalCode".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.postalCode]
   @scala.inline
-  def postalCode: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.postalCode = this.cast("postalCode")
+  def region: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.region = "region".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.region]
   @scala.inline
-  def region: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.region = this.cast("region")
+  def streetAddress: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.streetAddress = "streetAddress".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.streetAddress]
   @scala.inline
-  def streetAddress: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.streetAddress = this.cast("streetAddress")
+  def title: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.title = "title".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.title]
   @scala.inline
-  def title: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.title = this.cast("title")
-  @scala.inline
-  def urls: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.urls = this.cast("urls")
+  def urls: typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.urls = "urls".asInstanceOf[typingsSlinky.cordovaPluginContacts.cordovaPluginContactsStrings.urls]
 }
 

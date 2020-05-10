@@ -14,12 +14,10 @@ trait RealmListenerEventName extends js.Object
 
 object RealmListenerEventName {
   @scala.inline
-  def available: typingsSlinky.realm.realmStrings.available = this.cast("available")
+  def available: typingsSlinky.realm.realmStrings.available = "available".asInstanceOf[typingsSlinky.realm.realmStrings.available]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def change: typingsSlinky.realm.realmStrings.change = "change".asInstanceOf[typingsSlinky.realm.realmStrings.change]
   @scala.inline
-  def change: typingsSlinky.realm.realmStrings.change = this.cast("change")
-  @scala.inline
-  def delete: delete_ = this.cast("delete")
+  def delete: delete_ = "delete".asInstanceOf[delete_]
 }
 

@@ -8,27 +8,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InjectedColorProps extends js.Object {
-  var hex: js.UndefOr[String] = js.undefined
-  var hsl: js.UndefOr[HSLColor] = js.undefined
-  var onChange: js.UndefOr[ColorWrapChangeHandler] = js.undefined
-  var rgb: js.UndefOr[RGBColor] = js.undefined
+  var hex: js.UndefOr[String] = js.native
+  var hsl: js.UndefOr[HSLColor] = js.native
+  var onChange: js.UndefOr[ColorWrapChangeHandler] = js.native
+  var rgb: js.UndefOr[RGBColor] = js.native
 }
 
 object InjectedColorProps {
   @scala.inline
-  def apply(
-    hex: String = null,
-    hsl: HSLColor = null,
-    onChange: /* color */ Color | ColorResult => Unit = null,
-    rgb: RGBColor = null
-  ): InjectedColorProps = {
+  def apply(): InjectedColorProps = {
     val __obj = js.Dynamic.literal()
-    if (hex != null) __obj.updateDynamic("hex")(hex.asInstanceOf[js.Any])
-    if (hsl != null) __obj.updateDynamic("hsl")(hsl.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (rgb != null) __obj.updateDynamic("rgb")(rgb.asInstanceOf[js.Any])
     __obj.asInstanceOf[InjectedColorProps]
   }
+  @scala.inline
+  implicit class InjectedColorPropsOps[Self <: InjectedColorProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHsl(value: HSLColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hsl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHsl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hsl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: /* color */ Color | ColorResult => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRgb(value: RGBColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rgb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRgb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rgb")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

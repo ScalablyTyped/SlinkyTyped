@@ -7,23 +7,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EventMap extends js.Object {
   var hide: Event_[
     typingsSlinky.amapJsApiControlBar.amapJsApiControlBarStrings.hide, 
     js.UndefOr[scala.Nothing]
-  ]
+  ] = js.native
   var show: Event_[
     typingsSlinky.amapJsApiControlBar.amapJsApiControlBarStrings.show, 
     js.UndefOr[scala.Nothing]
-  ]
+  ] = js.native
 }
 
 object EventMap {
   @scala.inline
   def apply(hide: Event_[hide, js.UndefOr[scala.Nothing]], show: Event_[show, js.UndefOr[scala.Nothing]]): EventMap = {
     val __obj = js.Dynamic.literal(hide = hide.asInstanceOf[js.Any], show = show.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[EventMap]
   }
+  @scala.inline
+  implicit class EventMapOps[Self <: EventMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHide(value: Event_[hide, js.UndefOr[scala.Nothing]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShow(value: Event_[show, js.UndefOr[scala.Nothing]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait billingAddressCollectionType extends js.Object
 
 object billingAddressCollectionType {
   @scala.inline
-  def _empty: typingsSlinky.stripeV3.stripeV3Strings._empty = this.cast("")
+  def _empty: typingsSlinky.stripeV3.stripeV3Strings._empty = "".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings._empty]
   @scala.inline
-  def auto: typingsSlinky.stripeV3.stripeV3Strings.auto = this.cast("auto")
+  def auto: typingsSlinky.stripeV3.stripeV3Strings.auto = "auto".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def required: typingsSlinky.stripeV3.stripeV3Strings.required = this.cast("required")
+  def required: typingsSlinky.stripeV3.stripeV3Strings.required = "required".asInstanceOf[typingsSlinky.stripeV3.stripeV3Strings.required]
 }
 

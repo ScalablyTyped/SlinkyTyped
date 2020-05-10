@@ -12,10 +12,8 @@ trait CompressionType extends js.Object
 
 object CompressionType {
   @scala.inline
-  def LZ4: typingsSlinky.pulsarClient.pulsarClientStrings.LZ4 = this.cast("LZ4")
+  def LZ4: typingsSlinky.pulsarClient.pulsarClientStrings.LZ4 = "LZ4".asInstanceOf[typingsSlinky.pulsarClient.pulsarClientStrings.LZ4]
   @scala.inline
-  def Zlib: typingsSlinky.pulsarClient.pulsarClientStrings.Zlib = this.cast("Zlib")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Zlib: typingsSlinky.pulsarClient.pulsarClientStrings.Zlib = "Zlib".asInstanceOf[typingsSlinky.pulsarClient.pulsarClientStrings.Zlib]
 }
 

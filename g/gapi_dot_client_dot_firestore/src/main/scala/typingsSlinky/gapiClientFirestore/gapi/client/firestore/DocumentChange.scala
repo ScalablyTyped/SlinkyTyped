@@ -4,31 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DocumentChange extends js.Object {
   /**
     * The new state of the Document.
     *
     * If `mask` is set, contains only fields that were updated or added.
     */
-  var document: js.UndefOr[Document] = js.undefined
+  var document: js.UndefOr[Document] = js.native
   /** A set of target IDs for targets that no longer match this document. */
-  var removedTargetIds: js.UndefOr[js.Array[Double]] = js.undefined
+  var removedTargetIds: js.UndefOr[js.Array[Double]] = js.native
   /** A set of target IDs of targets that match this document. */
-  var targetIds: js.UndefOr[js.Array[Double]] = js.undefined
+  var targetIds: js.UndefOr[js.Array[Double]] = js.native
 }
 
 object DocumentChange {
   @scala.inline
-  def apply(
-    document: Document = null,
-    removedTargetIds: js.Array[Double] = null,
-    targetIds: js.Array[Double] = null
-  ): DocumentChange = {
+  def apply(): DocumentChange = {
     val __obj = js.Dynamic.literal()
-    if (document != null) __obj.updateDynamic("document")(document.asInstanceOf[js.Any])
-    if (removedTargetIds != null) __obj.updateDynamic("removedTargetIds")(removedTargetIds.asInstanceOf[js.Any])
-    if (targetIds != null) __obj.updateDynamic("targetIds")(targetIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentChange]
   }
+  @scala.inline
+  implicit class DocumentChangeOps[Self <: DocumentChange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocument(value: Document): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocument: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("document")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemovedTargetIds(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removedTargetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemovedTargetIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removedTargetIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetIds(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

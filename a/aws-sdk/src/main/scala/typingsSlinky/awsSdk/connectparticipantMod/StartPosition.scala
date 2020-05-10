@@ -22,12 +22,53 @@ trait StartPosition extends js.Object {
 
 object StartPosition {
   @scala.inline
-  def apply(AbsoluteTime: Instant = null, Id: ChatItemId = null, MostRecent: Int | Double = null): StartPosition = {
+  def apply(): StartPosition = {
     val __obj = js.Dynamic.literal()
-    if (AbsoluteTime != null) __obj.updateDynamic("AbsoluteTime")(AbsoluteTime.asInstanceOf[js.Any])
-    if (Id != null) __obj.updateDynamic("Id")(Id.asInstanceOf[js.Any])
-    if (MostRecent != null) __obj.updateDynamic("MostRecent")(MostRecent.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartPosition]
   }
+  @scala.inline
+  implicit class StartPositionOps[Self <: StartPosition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbsoluteTime(value: Instant): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AbsoluteTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAbsoluteTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AbsoluteTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: ChatItemId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMostRecent(value: MostRecent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MostRecent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMostRecent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MostRecent")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

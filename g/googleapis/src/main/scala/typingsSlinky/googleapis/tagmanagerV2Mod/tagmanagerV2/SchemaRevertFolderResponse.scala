@@ -19,10 +19,29 @@ trait SchemaRevertFolderResponse extends js.Object {
 
 object SchemaRevertFolderResponse {
   @scala.inline
-  def apply(folder: SchemaFolder = null): SchemaRevertFolderResponse = {
+  def apply(): SchemaRevertFolderResponse = {
     val __obj = js.Dynamic.literal()
-    if (folder != null) __obj.updateDynamic("folder")(folder.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRevertFolderResponse]
   }
+  @scala.inline
+  implicit class SchemaRevertFolderResponseOps[Self <: SchemaRevertFolderResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFolder(value: SchemaFolder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFolder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

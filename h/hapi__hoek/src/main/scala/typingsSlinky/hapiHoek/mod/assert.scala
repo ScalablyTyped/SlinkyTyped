@@ -1,6 +1,5 @@
 package typingsSlinky.hapiHoek.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +11,6 @@ object assert extends js.Object {
     condition: js.Any,
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type any is not an array type */ args: js.Any
   ): Unit = js.native
-  def apply(condition: js.Any, error: Error): Unit = js.native
+  def apply(condition: js.Any, error: js.Error): Unit = js.native
 }
 

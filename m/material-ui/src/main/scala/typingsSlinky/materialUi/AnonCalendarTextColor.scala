@@ -4,36 +4,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCalendarTextColor extends js.Object {
-  var calendarTextColor: js.UndefOr[String] = js.undefined
-  var calendarYearBackgroundColor: js.UndefOr[String] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
-  var headerColor: js.UndefOr[String] = js.undefined
-  var selectColor: js.UndefOr[String] = js.undefined
-  var selectTextColor: js.UndefOr[String] = js.undefined
-  var textColor: js.UndefOr[String] = js.undefined
+  var calendarTextColor: js.UndefOr[String] = js.native
+  var calendarYearBackgroundColor: js.UndefOr[String] = js.native
+  var color: js.UndefOr[String] = js.native
+  var headerColor: js.UndefOr[String] = js.native
+  var selectColor: js.UndefOr[String] = js.native
+  var selectTextColor: js.UndefOr[String] = js.native
+  var textColor: js.UndefOr[String] = js.native
 }
 
 object AnonCalendarTextColor {
   @scala.inline
-  def apply(
-    calendarTextColor: String = null,
-    calendarYearBackgroundColor: String = null,
-    color: String = null,
-    headerColor: String = null,
-    selectColor: String = null,
-    selectTextColor: String = null,
-    textColor: String = null
-  ): AnonCalendarTextColor = {
+  def apply(): AnonCalendarTextColor = {
     val __obj = js.Dynamic.literal()
-    if (calendarTextColor != null) __obj.updateDynamic("calendarTextColor")(calendarTextColor.asInstanceOf[js.Any])
-    if (calendarYearBackgroundColor != null) __obj.updateDynamic("calendarYearBackgroundColor")(calendarYearBackgroundColor.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (headerColor != null) __obj.updateDynamic("headerColor")(headerColor.asInstanceOf[js.Any])
-    if (selectColor != null) __obj.updateDynamic("selectColor")(selectColor.asInstanceOf[js.Any])
-    if (selectTextColor != null) __obj.updateDynamic("selectTextColor")(selectTextColor.asInstanceOf[js.Any])
-    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCalendarTextColor]
   }
+  @scala.inline
+  implicit class AnonCalendarTextColorOps[Self <: AnonCalendarTextColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCalendarTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarTextColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalendarTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarTextColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCalendarYearBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarYearBackgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalendarYearBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendarYearBackgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectTextColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectTextColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

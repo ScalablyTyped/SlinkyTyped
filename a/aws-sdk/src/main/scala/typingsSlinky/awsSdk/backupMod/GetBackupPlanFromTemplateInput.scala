@@ -16,8 +16,21 @@ object GetBackupPlanFromTemplateInput {
   @scala.inline
   def apply(BackupPlanTemplateId: String): GetBackupPlanFromTemplateInput = {
     val __obj = js.Dynamic.literal(BackupPlanTemplateId = BackupPlanTemplateId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetBackupPlanFromTemplateInput]
   }
+  @scala.inline
+  implicit class GetBackupPlanFromTemplateInputOps[Self <: GetBackupPlanFromTemplateInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackupPlanTemplateId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BackupPlanTemplateId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

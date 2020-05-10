@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClassOptions extends js.Object {
-  var appPath: js.UndefOr[String] = js.undefined
-  var imageMagick: js.UndefOr[Boolean] = js.undefined
-  var nativeAutoOrient: js.UndefOr[Boolean] = js.undefined
+  var appPath: js.UndefOr[String] = js.native
+  var imageMagick: js.UndefOr[Boolean] = js.native
+  var nativeAutoOrient: js.UndefOr[Boolean] = js.native
 }
 
 object ClassOptions {
   @scala.inline
-  def apply(
-    appPath: String = null,
-    imageMagick: js.UndefOr[Boolean] = js.undefined,
-    nativeAutoOrient: js.UndefOr[Boolean] = js.undefined
-  ): ClassOptions = {
+  def apply(): ClassOptions = {
     val __obj = js.Dynamic.literal()
-    if (appPath != null) __obj.updateDynamic("appPath")(appPath.asInstanceOf[js.Any])
-    if (!js.isUndefined(imageMagick)) __obj.updateDynamic("imageMagick")(imageMagick.asInstanceOf[js.Any])
-    if (!js.isUndefined(nativeAutoOrient)) __obj.updateDynamic("nativeAutoOrient")(nativeAutoOrient.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassOptions]
   }
+  @scala.inline
+  implicit class ClassOptionsOps[Self <: ClassOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImageMagick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageMagick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImageMagick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageMagick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNativeAutoOrient(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeAutoOrient")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNativeAutoOrient: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nativeAutoOrient")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

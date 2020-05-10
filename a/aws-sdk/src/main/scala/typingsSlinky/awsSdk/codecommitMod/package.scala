@@ -84,7 +84,7 @@ package object codecommitMod {
   type ErrorMessage = java.lang.String
   type EventDate = js.Date
   type ExceptionName = java.lang.String
-  type FileContent = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.codecommitMod.Blob_ | java.lang.String
+  type FileContent = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.codecommitMod.Blob_ | java.lang.String
   type FileList = js.Array[typingsSlinky.awsSdk.codecommitMod.File]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EXECUTABLE
@@ -238,5 +238,5 @@ package object codecommitMod {
     - java.lang.String
   */
   type apiVersion = typingsSlinky.awsSdk.codecommitMod._apiVersion | java.lang.String
-  type blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.codecommitMod.Blob_ | java.lang.String
+  type blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.codecommitMod.Blob_ | java.lang.String
 }

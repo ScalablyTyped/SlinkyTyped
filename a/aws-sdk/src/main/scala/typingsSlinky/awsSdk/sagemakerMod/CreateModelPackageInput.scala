@@ -34,21 +34,83 @@ trait CreateModelPackageInput extends js.Object {
 
 object CreateModelPackageInput {
   @scala.inline
-  def apply(
-    ModelPackageName: EntityName,
-    CertifyForMarketplace: js.UndefOr[scala.Boolean] = js.undefined,
-    InferenceSpecification: InferenceSpecification = null,
-    ModelPackageDescription: EntityDescription = null,
-    SourceAlgorithmSpecification: SourceAlgorithmSpecification = null,
-    ValidationSpecification: ModelPackageValidationSpecification = null
-  ): CreateModelPackageInput = {
+  def apply(ModelPackageName: EntityName): CreateModelPackageInput = {
     val __obj = js.Dynamic.literal(ModelPackageName = ModelPackageName.asInstanceOf[js.Any])
-    if (!js.isUndefined(CertifyForMarketplace)) __obj.updateDynamic("CertifyForMarketplace")(CertifyForMarketplace.asInstanceOf[js.Any])
-    if (InferenceSpecification != null) __obj.updateDynamic("InferenceSpecification")(InferenceSpecification.asInstanceOf[js.Any])
-    if (ModelPackageDescription != null) __obj.updateDynamic("ModelPackageDescription")(ModelPackageDescription.asInstanceOf[js.Any])
-    if (SourceAlgorithmSpecification != null) __obj.updateDynamic("SourceAlgorithmSpecification")(SourceAlgorithmSpecification.asInstanceOf[js.Any])
-    if (ValidationSpecification != null) __obj.updateDynamic("ValidationSpecification")(ValidationSpecification.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateModelPackageInput]
   }
+  @scala.inline
+  implicit class CreateModelPackageInputOps[Self <: CreateModelPackageInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withModelPackageName(value: EntityName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertifyForMarketplace(value: CertifyForMarketplace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertifyForMarketplace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertifyForMarketplace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CertifyForMarketplace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInferenceSpecification(value: InferenceSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InferenceSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInferenceSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InferenceSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withModelPackageDescription(value: EntityDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutModelPackageDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ModelPackageDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceAlgorithmSpecification(value: SourceAlgorithmSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceAlgorithmSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceAlgorithmSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceAlgorithmSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValidationSpecification(value: ModelPackageValidationSpecification): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValidationSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationSpecification")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

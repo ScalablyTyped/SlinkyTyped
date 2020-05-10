@@ -1,9 +1,9 @@
 package typingsSlinky.blueprintjsCore.htmlMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FunctionComponent
+import org.scalajs.dom.raw.HTMLOListElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.HTMLProps
-import typingsSlinky.std.HTMLOListElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@blueprintjs/core/lib/esm/components/html/html", "OL")
 @js.native
 object OL extends TopLevel[
-      FunctionComponent[HTMLProps[HTMLOListElement] with IElementRefProps[HTMLOListElement]]
+      ReactComponentClass[HTMLProps[HTMLOListElement] with IElementRefProps[HTMLOListElement]]
     ]
 

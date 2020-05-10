@@ -4,24 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ExtensionTerminalOptions extends js.Object {
   /**
   		 * A human-readable string which will be used to represent the terminal in the UI.
   		 */
-  var name: String
+  var name: String = js.native
   /**
   		 * An implementation of [Pseudoterminal](#Pseudoterminal) that allows an extension to
   		 * control a terminal.
   		 */
-  var pty: Pseudoterminal
+  var pty: Pseudoterminal = js.native
 }
 
 object ExtensionTerminalOptions {
   @scala.inline
   def apply(name: String, pty: Pseudoterminal): ExtensionTerminalOptions = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], pty = pty.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ExtensionTerminalOptions]
   }
+  @scala.inline
+  implicit class ExtensionTerminalOptionsOps[Self <: ExtensionTerminalOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPty(value: Pseudoterminal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pty")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

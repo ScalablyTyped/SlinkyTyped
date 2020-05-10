@@ -5,8 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CanvasRedrawOptions extends HTMLRedrawOptions {
-  var ctx: CanvasRenderingContext2D
+  var ctx: CanvasRenderingContext2D = js.native
 }
 
 object CanvasRedrawOptions {
@@ -19,8 +20,21 @@ object CanvasRedrawOptions {
     width: Double
   ): CanvasRedrawOptions = {
     val __obj = js.Dynamic.literal(ctx = ctx.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], project = js.Any.fromFunction1(project), unproject = js.Any.fromFunction1(unproject), width = width.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CanvasRedrawOptions]
   }
+  @scala.inline
+  implicit class CanvasRedrawOptionsOps[Self <: CanvasRedrawOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCtx(value: CanvasRenderingContext2D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ctx")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

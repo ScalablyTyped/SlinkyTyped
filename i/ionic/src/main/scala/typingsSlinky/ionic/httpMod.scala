@@ -2,24 +2,18 @@ package typingsSlinky.ionic
 
 import typingsSlinky.ionic.definitionsMod.APIResponse
 import typingsSlinky.ionic.definitionsMod.APIResponseSuccess
-import typingsSlinky.ionic.definitionsMod.HttpMethod
 import typingsSlinky.ionic.definitionsMod.IClient
 import typingsSlinky.ionic.definitionsMod.IConfig
 import typingsSlinky.ionic.definitionsMod.IPaginator
 import typingsSlinky.ionic.definitionsMod.PagePaginatorState
-import typingsSlinky.ionic.definitionsMod.PaginateArgs
 import typingsSlinky.ionic.definitionsMod.PaginatorDeps
 import typingsSlinky.ionic.definitionsMod.PaginatorGuard
 import typingsSlinky.ionic.definitionsMod.PaginatorRequestGenerator
-import typingsSlinky.ionic.definitionsMod.PaginatorState
 import typingsSlinky.ionic.definitionsMod.ResourceClientRequestModifiers
 import typingsSlinky.ionic.definitionsMod.Response
 import typingsSlinky.ionic.definitionsMod.SuperAgentError
 import typingsSlinky.ionic.definitionsMod.TokenPaginatorState
 import typingsSlinky.ionic.errorsMod.FatalException
-import typingsSlinky.ionic.ionicStrings.UNKNOWN_CONTENT_TYPE
-import typingsSlinky.ionic.ionicStrings.UNKNOWN_RESPONSE_FORMAT
-import typingsSlinky.ionic.ionicStrings.applicationSlashjson
 import typingsSlinky.std.IteratorResult
 import typingsSlinky.superagent.mod.Request
 import scala.scalajs.js
@@ -32,14 +26,6 @@ object httpMod extends js.Object {
   @js.native
   class Client protected () extends IClient {
     def this(config: IConfig) = this()
-    /* CompleteClass */
-    override var config: IConfig = js.native
-    /* CompleteClass */
-    override def `do`(req: typingsSlinky.ionic.definitionsMod.SuperAgentRequest): js.Promise[APIResponseSuccess] = js.native
-    /* CompleteClass */
-    override def make(method: HttpMethod, path: String): js.Promise[AnonReq] = js.native
-    /* CompleteClass */
-    override def paginate[T /* <: Response[js.Array[js.Object]] */](args: PaginateArgs[T]): IPaginator[T, PaginatorState] = js.native
   }
   
   @js.native
@@ -48,7 +34,7 @@ object httpMod extends js.Object {
     var client: IClient = js.native
     @JSName("guard")
     var guard_Original: PaginatorGuard[T] = js.native
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator_Paginator: js.Function0[this.type] = js.native
     var max: js.UndefOr[Double] = js.native
     @JSName("reqgen")
@@ -71,7 +57,7 @@ object httpMod extends js.Object {
     var client: IClient = js.native
     @JSName("guard")
     var guard_Original: PaginatorGuard[T] = js.native
-    @JSName(scala.scalajs.js.Symbol.iterator)
+    @JSName(js.Symbol.iterator)
     var iterator_TokenPaginator: js.Function0[this.type] = js.native
     var max: js.UndefOr[Double] = js.native
     @JSName("reqgen")
@@ -82,9 +68,9 @@ object httpMod extends js.Object {
     /* protected */ def reqgen(): js.Promise[AnonReq] = js.native
   }
   
-  val CONTENT_TYPE_JSON: applicationSlashjson = js.native
-  val ERROR_UNKNOWN_CONTENT_TYPE: UNKNOWN_CONTENT_TYPE = js.native
-  val ERROR_UNKNOWN_RESPONSE_FORMAT: UNKNOWN_RESPONSE_FORMAT = js.native
+  val CONTENT_TYPE_JSON: /* "application/json" */ String = js.native
+  val ERROR_UNKNOWN_CONTENT_TYPE: /* "UNKNOWN_CONTENT_TYPE" */ String = js.native
+  val ERROR_UNKNOWN_RESPONSE_FORMAT: /* "UNKNOWN_RESPONSE_FORMAT" */ String = js.native
   def createFatalAPIFormat(req: SuperAgentRequest, res: APIResponse): FatalException = js.native
   def formatResponseError(req: SuperAgentRequest): String = js.native
   def formatResponseError(req: SuperAgentRequest, status: Double): String = js.native

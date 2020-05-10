@@ -22,11 +22,41 @@ trait SchemaCommitResponse extends js.Object {
 
 object SchemaCommitResponse {
   @scala.inline
-  def apply(commitTime: String = null, writeResults: js.Array[SchemaWriteResult] = null): SchemaCommitResponse = {
+  def apply(): SchemaCommitResponse = {
     val __obj = js.Dynamic.literal()
-    if (commitTime != null) __obj.updateDynamic("commitTime")(commitTime.asInstanceOf[js.Any])
-    if (writeResults != null) __obj.updateDynamic("writeResults")(writeResults.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCommitResponse]
   }
+  @scala.inline
+  implicit class SchemaCommitResponseOps[Self <: SchemaCommitResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommitTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommitTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWriteResults(value: js.Array[SchemaWriteResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWriteResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeResults")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

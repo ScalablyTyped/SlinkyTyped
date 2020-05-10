@@ -1,15 +1,17 @@
 package typingsSlinky.reactLatexNext.components
 
+import typingsSlinky.reactLatexNext.latexMod.LatexProps
 import typingsSlinky.reactLatexNext.latexMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Latex extends SharedApply_LatexProps_1173537532[default] {
+object Latex {
   @JSImport("react-latex-next/dist/Latex", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: LatexProps): SharedBuilder_LatexProps_1360194442[default] = new SharedBuilder_LatexProps_1360194442[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Latex.type): SharedBuilder_LatexProps_1360194442[default] = new SharedBuilder_LatexProps_1360194442[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -9,31 +9,84 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonFetchPolicy extends Action {
-  var environment: Environment
-  var fetchPolicy: js.UndefOr[FetchPolicy] = js.undefined
-  var onComplete: js.UndefOr[js.Function1[/* args */ js.Error | Null, Unit]] = js.undefined
-  var refetchVariables: Variables
-  var renderPolicy: js.UndefOr[RenderPolicy] = js.undefined
-  var `type`: String
+  var environment: Environment = js.native
+  var fetchPolicy: js.UndefOr[FetchPolicy] = js.native
+  var onComplete: js.UndefOr[js.Function1[/* args */ js.Error | Null, Unit]] = js.native
+  var refetchVariables: Variables = js.native
+  var renderPolicy: js.UndefOr[RenderPolicy] = js.native
+  var `type`: String = js.native
 }
 
 object AnonFetchPolicy {
   @scala.inline
-  def apply(
-    environment: Environment,
-    refetchVariables: Variables,
-    `type`: String,
-    fetchPolicy: FetchPolicy = null,
-    onComplete: /* args */ js.Error | Null => Unit = null,
-    renderPolicy: RenderPolicy = null
-  ): AnonFetchPolicy = {
+  def apply(environment: Environment, refetchVariables: Variables, `type`: String): AnonFetchPolicy = {
     val __obj = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any], refetchVariables = refetchVariables.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (fetchPolicy != null) __obj.updateDynamic("fetchPolicy")(fetchPolicy.asInstanceOf[js.Any])
-    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction1(onComplete))
-    if (renderPolicy != null) __obj.updateDynamic("renderPolicy")(renderPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonFetchPolicy]
   }
+  @scala.inline
+  implicit class AnonFetchPolicyOps[Self <: AnonFetchPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnvironment(value: Environment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRefetchVariables(value: Variables): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refetchVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFetchPolicy(value: FetchPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFetchPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fetchPolicy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnComplete(value: /* args */ js.Error | Null => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenderPolicy(value: RenderPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenderPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

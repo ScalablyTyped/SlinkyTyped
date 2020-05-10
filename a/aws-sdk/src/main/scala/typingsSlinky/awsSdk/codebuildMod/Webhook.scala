@@ -34,22 +34,89 @@ trait Webhook extends js.Object {
 
 object Webhook {
   @scala.inline
-  def apply(
-    branchFilter: String = null,
-    filterGroups: FilterGroups = null,
-    lastModifiedSecret: js.Date = null,
-    payloadUrl: NonEmptyString = null,
-    secret: NonEmptyString = null,
-    url: NonEmptyString = null
-  ): Webhook = {
+  def apply(): Webhook = {
     val __obj = js.Dynamic.literal()
-    if (branchFilter != null) __obj.updateDynamic("branchFilter")(branchFilter.asInstanceOf[js.Any])
-    if (filterGroups != null) __obj.updateDynamic("filterGroups")(filterGroups.asInstanceOf[js.Any])
-    if (lastModifiedSecret != null) __obj.updateDynamic("lastModifiedSecret")(lastModifiedSecret.asInstanceOf[js.Any])
-    if (payloadUrl != null) __obj.updateDynamic("payloadUrl")(payloadUrl.asInstanceOf[js.Any])
-    if (secret != null) __obj.updateDynamic("secret")(secret.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
     __obj.asInstanceOf[Webhook]
   }
+  @scala.inline
+  implicit class WebhookOps[Self <: Webhook] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBranchFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branchFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBranchFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("branchFilter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilterGroups(value: FilterGroups): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilterGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastModifiedSecret(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedSecret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastModifiedSecret: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedSecret")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPayloadUrl(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPayloadUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payloadUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecret(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecret: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secret")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUrl(value: NonEmptyString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

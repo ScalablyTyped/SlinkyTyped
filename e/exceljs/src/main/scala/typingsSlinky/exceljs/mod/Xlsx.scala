@@ -17,7 +17,7 @@ trait Xlsx extends js.Object {
   	 * load from an array buffer
   	 * @param buffer
   	 */
-  def load(buffer: scala.scalajs.js.typedarray.ArrayBuffer): js.Promise[Workbook] = js.native
+  def load(buffer: js.typedarray.ArrayBuffer): js.Promise[Workbook] = js.native
   /**
   	 * read from a stream
   	 * @param stream
@@ -35,8 +35,8 @@ trait Xlsx extends js.Object {
   /**
   	 * write to a buffer
   	 */
-  def writeBuffer(): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-  def writeBuffer(options: PartialXlsxWriteOptions): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def writeBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def writeBuffer(options: PartialXlsxWriteOptions): js.Promise[js.typedarray.ArrayBuffer] = js.native
   /**
   	 * write to a file
   	 */

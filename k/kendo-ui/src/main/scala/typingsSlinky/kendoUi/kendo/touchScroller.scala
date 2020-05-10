@@ -1,7 +1,7 @@
 package typingsSlinky.kendoUi.kendo
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
-import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

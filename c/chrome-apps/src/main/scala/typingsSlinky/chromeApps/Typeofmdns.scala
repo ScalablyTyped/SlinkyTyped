@@ -8,6 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Typeofmdns extends js.Object {
   /**
     * The maximum number of service instances that will be
@@ -17,7 +18,7 @@ trait Typeofmdns extends js.Object {
     * @default 2048
     * @since Chrome 44.
     */
-  val MAX_SERVICE_INSTANCES_PER_EVENT: integer
+  val MAX_SERVICE_INSTANCES_PER_EVENT: integer = js.native
   /**
     * Event fired to inform clients of the current complete
     * set of known available services. Clients should only
@@ -31,7 +32,7 @@ trait Typeofmdns extends js.Object {
     * chrome.mdns.onServiceList.addListener(() => { },
     *  { 'serviceType': 'definitelyTyped._tcp.local' });
     */
-  val onServiceList: FilteredEvent[js.Function1[/* services */ js.Array[Service], Unit], ServiceTypes]
+  val onServiceList: FilteredEvent[js.Function1[/* services */ js.Array[Service], Unit], ServiceTypes] = js.native
   /**
     * Immediately issues a multicast DNS query for all service types.
     * |callback| is invoked immediately.
@@ -40,7 +41,7 @@ trait Typeofmdns extends js.Object {
     * @since Chrome 45.
     * @param callback Callback invoked after ForceDiscovery() has started.
     */
-  def forceDiscovery(callback: js.Function0[Unit]): Unit
+  def forceDiscovery(callback: js.Function0[Unit]): Unit = js.native
 }
 
 object Typeofmdns {
@@ -51,8 +52,33 @@ object Typeofmdns {
     onServiceList: FilteredEvent[js.Function1[/* services */ js.Array[Service], Unit], ServiceTypes]
   ): Typeofmdns = {
     val __obj = js.Dynamic.literal(MAX_SERVICE_INSTANCES_PER_EVENT = MAX_SERVICE_INSTANCES_PER_EVENT.asInstanceOf[js.Any], forceDiscovery = js.Any.fromFunction1(forceDiscovery), onServiceList = onServiceList.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Typeofmdns]
   }
+  @scala.inline
+  implicit class TypeofmdnsOps[Self <: Typeofmdns] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMAX_SERVICE_INSTANCES_PER_EVENT(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MAX_SERVICE_INSTANCES_PER_EVENT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForceDiscovery(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDiscovery")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnServiceList(value: FilteredEvent[js.Function1[/* services */ js.Array[Service], Unit], ServiceTypes]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onServiceList")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

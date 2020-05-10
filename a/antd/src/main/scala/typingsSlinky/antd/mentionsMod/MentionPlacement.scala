@@ -12,10 +12,8 @@ trait MentionPlacement extends js.Object
 
 object MentionPlacement {
   @scala.inline
-  def bottom: typingsSlinky.antd.antdStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.antd.antdStrings.bottom = "bottom".asInstanceOf[typingsSlinky.antd.antdStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def top: typingsSlinky.antd.antdStrings.top = this.cast("top")
+  def top: typingsSlinky.antd.antdStrings.top = "top".asInstanceOf[typingsSlinky.antd.antdStrings.top]
 }
 

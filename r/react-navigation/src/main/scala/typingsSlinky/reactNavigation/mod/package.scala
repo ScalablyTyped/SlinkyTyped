@@ -52,7 +52,7 @@ package object mod {
   type NavigationView[Options, State, ScreenProps] = slinky.core.ReactComponentClass[
     (typingsSlinky.reactNavigation.AnonDescriptors[Options, ScreenProps]) with typingsSlinky.reactNavigation.mod.NavigationInjectedProps[typingsSlinky.reactNavigation.mod.NavigationParams]
   ]
-  type Omit[T, K /* <: java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
+  type Omit[T, K /* <: /* keyof any */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   // Themed components
   type ThemedStatusBarProps = typingsSlinky.react.mod.ComponentProps[typingsSlinky.reactNavigation.TypeofStatusBar]
   type ThemedTextInputProps = typingsSlinky.react.mod.ComponentProps[typingsSlinky.reactNavigation.TypeofTextInput]

@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Presentation extends js.Object {
-  var layouts: js.UndefOr[js.Array[Page]] = js.undefined
-  var locale: js.UndefOr[String] = js.undefined
-  var masters: js.UndefOr[js.Array[Page]] = js.undefined
-  var notesMaster: js.UndefOr[Page] = js.undefined
-  var pageSize: js.UndefOr[Size] = js.undefined
-  var presentationId: js.UndefOr[String] = js.undefined
-  var revisionId: js.UndefOr[String] = js.undefined
-  var slides: js.UndefOr[js.Array[Page]] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  var layouts: js.UndefOr[js.Array[Page]] = js.native
+  var locale: js.UndefOr[String] = js.native
+  var masters: js.UndefOr[js.Array[Page]] = js.native
+  var notesMaster: js.UndefOr[Page] = js.native
+  var pageSize: js.UndefOr[Size] = js.native
+  var presentationId: js.UndefOr[String] = js.native
+  var revisionId: js.UndefOr[String] = js.native
+  var slides: js.UndefOr[js.Array[Page]] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 
 object Presentation {
   @scala.inline
-  def apply(
-    layouts: js.Array[Page] = null,
-    locale: String = null,
-    masters: js.Array[Page] = null,
-    notesMaster: Page = null,
-    pageSize: Size = null,
-    presentationId: String = null,
-    revisionId: String = null,
-    slides: js.Array[Page] = null,
-    title: String = null
-  ): Presentation = {
+  def apply(): Presentation = {
     val __obj = js.Dynamic.literal()
-    if (layouts != null) __obj.updateDynamic("layouts")(layouts.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (masters != null) __obj.updateDynamic("masters")(masters.asInstanceOf[js.Any])
-    if (notesMaster != null) __obj.updateDynamic("notesMaster")(notesMaster.asInstanceOf[js.Any])
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
-    if (presentationId != null) __obj.updateDynamic("presentationId")(presentationId.asInstanceOf[js.Any])
-    if (revisionId != null) __obj.updateDynamic("revisionId")(revisionId.asInstanceOf[js.Any])
-    if (slides != null) __obj.updateDynamic("slides")(slides.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Presentation]
   }
+  @scala.inline
+  implicit class PresentationOps[Self <: Presentation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayouts(value: js.Array[Page]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layouts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayouts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layouts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasters(value: js.Array[Page]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotesMaster(value: Page): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notesMaster")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotesMaster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notesMaster")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPresentationId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presentationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPresentationId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presentationId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRevisionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRevisionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revisionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSlides(value: js.Array[Page]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSlides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

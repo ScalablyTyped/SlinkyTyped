@@ -1,17 +1,16 @@
 package typingsSlinky.reactRouterNative.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
+import typingsSlinky.reactRouterNative.mod.BackButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AndroidBackButton
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactRouterNative.mod.AndroidBackButton] {
+object AndroidBackButton {
   @JSImport("react-router-native", "AndroidBackButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: BackButtonProps): SharedBuilder_BackButtonProps639958469[typingsSlinky.reactRouterNative.mod.AndroidBackButton] = new SharedBuilder_BackButtonProps639958469[typingsSlinky.reactRouterNative.mod.AndroidBackButton](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AndroidBackButton.type): SharedBuilder_BackButtonProps639958469[typingsSlinky.reactRouterNative.mod.AndroidBackButton] = new SharedBuilder_BackButtonProps639958469[typingsSlinky.reactRouterNative.mod.AndroidBackButton](js.Array(this.component, js.Dictionary.empty))()
 }
 

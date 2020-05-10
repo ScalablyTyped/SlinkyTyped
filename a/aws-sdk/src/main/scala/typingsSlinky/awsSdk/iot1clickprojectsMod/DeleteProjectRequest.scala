@@ -16,8 +16,21 @@ object DeleteProjectRequest {
   @scala.inline
   def apply(projectName: ProjectName): DeleteProjectRequest = {
     val __obj = js.Dynamic.literal(projectName = projectName.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteProjectRequest]
   }
+  @scala.inline
+  implicit class DeleteProjectRequestOps[Self <: DeleteProjectRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProjectName(value: ProjectName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

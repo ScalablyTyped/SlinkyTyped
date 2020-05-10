@@ -1,6 +1,5 @@
 package typingsSlinky.wonderJs
 
-import typingsSlinky.std.Float32Array
 import typingsSlinky.wonderJs.arrayBufferMod.ArrayBuffer
 import typingsSlinky.wonderJs.colorMod.Color
 import typingsSlinky.wonderJs.matrix3Mod.Matrix3
@@ -32,7 +31,7 @@ object glsldatasenderMod extends js.Object {
     def sendMatrix3(name: String, data: Matrix3): Unit = js.native
     def sendMatrix4(name: String, data: Matrix4): Unit = js.native
     def sendMatrix4Array(name: String, data: js.Array[Double]): Unit = js.native
-    def sendMatrix4Array(name: String, data: Float32Array): Unit = js.native
+    def sendMatrix4Array(name: String, data: js.typedarray.Float32Array): Unit = js.native
     def sendNum1(name: String, data: Double): Unit = js.native
     def sendSampleArray(name: String, data: js.Array[Double]): Unit = js.native
     def sendVector2(name: String, data: js.Any): Unit = js.native

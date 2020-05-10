@@ -18,10 +18,35 @@ trait DeliveryStreamEncryptionConfigurationInput extends js.Object {
 
 object DeliveryStreamEncryptionConfigurationInput {
   @scala.inline
-  def apply(KeyType: KeyType, KeyARN: AWSKMSKeyARN = null): DeliveryStreamEncryptionConfigurationInput = {
+  def apply(KeyType: KeyType): DeliveryStreamEncryptionConfigurationInput = {
     val __obj = js.Dynamic.literal(KeyType = KeyType.asInstanceOf[js.Any])
-    if (KeyARN != null) __obj.updateDynamic("KeyARN")(KeyARN.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeliveryStreamEncryptionConfigurationInput]
   }
+  @scala.inline
+  implicit class DeliveryStreamEncryptionConfigurationInputOps[Self <: DeliveryStreamEncryptionConfigurationInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKeyType(value: KeyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyARN(value: AWSKMSKeyARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyARN")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

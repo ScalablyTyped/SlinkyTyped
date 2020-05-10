@@ -1,7 +1,7 @@
 package typingsSlinky.chocolatechipjs
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Document_
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

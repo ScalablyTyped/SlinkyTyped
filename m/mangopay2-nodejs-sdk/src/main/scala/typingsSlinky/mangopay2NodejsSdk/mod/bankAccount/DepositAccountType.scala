@@ -12,10 +12,8 @@ trait DepositAccountType extends js.Object
 
 object DepositAccountType {
   @scala.inline
-  def CHECKING: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CHECKING = this.cast("CHECKING")
+  def CHECKING: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CHECKING = "CHECKING".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.CHECKING]
   @scala.inline
-  def SAVINGS: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SAVINGS = this.cast("SAVINGS")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def SAVINGS: typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SAVINGS = "SAVINGS".asInstanceOf[typingsSlinky.mangopay2NodejsSdk.mangopay2NodejsSdkStrings.SAVINGS]
 }
 

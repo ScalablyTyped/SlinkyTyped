@@ -8,50 +8,114 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IndicesForcemerge extends Generic {
-  var allow_no_indices: js.UndefOr[Boolean] = js.undefined
-  var expand_wildcards: js.UndefOr[open | closed | none | all] = js.undefined
-  var flush: js.UndefOr[Boolean] = js.undefined
-  var ignore_unavailable: js.UndefOr[Boolean] = js.undefined
-  var index: js.UndefOr[String | js.Array[String]] = js.undefined
-  var max_num_segments: js.UndefOr[Double] = js.undefined
-  var only_expunge_deletes: js.UndefOr[Boolean] = js.undefined
+  var allow_no_indices: js.UndefOr[Boolean] = js.native
+  var expand_wildcards: js.UndefOr[open | closed | none | all] = js.native
+  var flush: js.UndefOr[Boolean] = js.native
+  var ignore_unavailable: js.UndefOr[Boolean] = js.native
+  var index: js.UndefOr[String | js.Array[String]] = js.native
+  var max_num_segments: js.UndefOr[Double] = js.native
+  var only_expunge_deletes: js.UndefOr[Boolean] = js.native
 }
 
 object IndicesForcemerge {
   @scala.inline
-  def apply(
-    allow_no_indices: js.UndefOr[Boolean] = js.undefined,
-    error_trace: js.UndefOr[Boolean] = js.undefined,
-    expand_wildcards: open | closed | none | all = null,
-    filter_path: String | js.Array[String] = null,
-    flush: js.UndefOr[Boolean] = js.undefined,
-    human: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    ignore_unavailable: js.UndefOr[Boolean] = js.undefined,
-    index: String | js.Array[String] = null,
-    max_num_segments: Int | Double = null,
-    method: String = null,
-    only_expunge_deletes: js.UndefOr[Boolean] = js.undefined,
-    pretty: js.UndefOr[Boolean] = js.undefined,
-    source: String = null
-  ): IndicesForcemerge = {
+  def apply(): IndicesForcemerge = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allow_no_indices)) __obj.updateDynamic("allow_no_indices")(allow_no_indices.asInstanceOf[js.Any])
-    if (!js.isUndefined(error_trace)) __obj.updateDynamic("error_trace")(error_trace.asInstanceOf[js.Any])
-    if (expand_wildcards != null) __obj.updateDynamic("expand_wildcards")(expand_wildcards.asInstanceOf[js.Any])
-    if (filter_path != null) __obj.updateDynamic("filter_path")(filter_path.asInstanceOf[js.Any])
-    if (!js.isUndefined(flush)) __obj.updateDynamic("flush")(flush.asInstanceOf[js.Any])
-    if (!js.isUndefined(human)) __obj.updateDynamic("human")(human.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (!js.isUndefined(ignore_unavailable)) __obj.updateDynamic("ignore_unavailable")(ignore_unavailable.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (max_num_segments != null) __obj.updateDynamic("max_num_segments")(max_num_segments.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(only_expunge_deletes)) __obj.updateDynamic("only_expunge_deletes")(only_expunge_deletes.asInstanceOf[js.Any])
-    if (!js.isUndefined(pretty)) __obj.updateDynamic("pretty")(pretty.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndicesForcemerge]
   }
+  @scala.inline
+  implicit class IndicesForcemergeOps[Self <: IndicesForcemerge] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllow_no_indices(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_indices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllow_no_indices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allow_no_indices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpand_wildcards(value: open | closed | none | all): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_wildcards")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpand_wildcards: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand_wildcards")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFlush(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFlush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnore_unavailable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_unavailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnore_unavailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignore_unavailable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMax_num_segments(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_num_segments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax_num_segments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max_num_segments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnly_expunge_deletes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("only_expunge_deletes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnly_expunge_deletes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("only_expunge_deletes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

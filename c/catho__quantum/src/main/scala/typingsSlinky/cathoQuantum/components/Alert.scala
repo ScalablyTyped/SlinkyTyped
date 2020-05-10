@@ -1,11 +1,9 @@
 package typingsSlinky.cathoQuantum.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLButtonElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.cathoQuantum.AnonColors
 import typingsSlinky.cathoQuantum.alertMod.AlertProps
 import typingsSlinky.cathoQuantum.alertMod.default
@@ -18,27 +16,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Alert
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Alert {
   @JSImport("@catho/quantum/Alert", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    onClose: SyntheticMouseEvent[HTMLButtonElement] => Unit,
-    icon: String = null,
-    skin: primary | success | error | neutral | warning = null,
-    theme: AnonColors = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(onClose = js.Any.fromFunction1(onClose))
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def icon(value: String): this.type = set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def skin(value: primary | success | error | neutral | warning): this.type = set("skin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: AnonColors): this.type = set("theme", value.asInstanceOf[js.Any])
   }
-  type Props = AlertProps
+  
+  def withProps(p: AlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(onClose: SyntheticMouseEvent[HTMLButtonElement] => Unit): Builder = {
+    val __props = js.Dynamic.literal(onClose = js.Any.fromFunction1(onClose))
+    new Builder(js.Array(this.component, __props.asInstanceOf[AlertProps]))
+  }
 }
 

@@ -32,6 +32,10 @@ trait PannerNode extends AudioNode {
 @JSGlobal("PannerNode")
 @js.native
 object PannerNode
-  extends Instantiable1[/* context */ BaseAudioContext, PannerNode]
-     with Instantiable2[/* context */ BaseAudioContext, /* options */ PannerOptions, PannerNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.PannerNode]
+     with Instantiable2[
+      /* context */ BaseAudioContext, 
+      /* options */ PannerOptions, 
+      org.scalajs.dom.raw.PannerNode
+    ]
 

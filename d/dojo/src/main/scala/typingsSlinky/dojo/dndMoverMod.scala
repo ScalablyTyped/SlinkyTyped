@@ -2,9 +2,9 @@ package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.dojo.dnd.Mover
 import typingsSlinky.std.Event_
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

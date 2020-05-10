@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContextParams extends js.Object {
-  var beans: js.Array[_]
-  var components: js.Array[ComponentMeta]
-  var debug: Boolean
-  var overrideBeans: js.Array[_]
-  var seed: js.Any
+  var beans: js.Array[_] = js.native
+  var components: js.Array[ComponentMeta] = js.native
+  var debug: Boolean = js.native
+  var overrideBeans: js.Array[_] = js.native
+  var seed: js.Any = js.native
 }
 
 object ContextParams {
@@ -22,8 +23,45 @@ object ContextParams {
     seed: js.Any
   ): ContextParams = {
     val __obj = js.Dynamic.literal(beans = beans.asInstanceOf[js.Any], components = components.asInstanceOf[js.Any], debug = debug.asInstanceOf[js.Any], overrideBeans = overrideBeans.asInstanceOf[js.Any], seed = seed.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ContextParams]
   }
+  @scala.inline
+  implicit class ContextParamsOps[Self <: ContextParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeans(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponents(value: js.Array[ComponentMeta]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDebug(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOverrideBeans(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideBeans")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSeed(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait FillRule extends js.Object
 
 object FillRule {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def evenodd: typingsSlinky.leaflet.leafletStrings.evenodd = "evenodd".asInstanceOf[typingsSlinky.leaflet.leafletStrings.evenodd]
   @scala.inline
-  def evenodd: typingsSlinky.leaflet.leafletStrings.evenodd = this.cast("evenodd")
+  def inherit: typingsSlinky.leaflet.leafletStrings.inherit = "inherit".asInstanceOf[typingsSlinky.leaflet.leafletStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.leaflet.leafletStrings.inherit = this.cast("inherit")
-  @scala.inline
-  def nonzero: typingsSlinky.leaflet.leafletStrings.nonzero = this.cast("nonzero")
+  def nonzero: typingsSlinky.leaflet.leafletStrings.nonzero = "nonzero".asInstanceOf[typingsSlinky.leaflet.leafletStrings.nonzero]
 }
 

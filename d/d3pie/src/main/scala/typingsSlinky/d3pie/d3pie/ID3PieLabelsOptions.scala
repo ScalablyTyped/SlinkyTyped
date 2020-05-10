@@ -11,23 +11,53 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ID3PieLabelsOptions extends js.Object {
   var format: js.UndefOr[
     label | value | percentage | `label-value1` | `label-value2` | `label-percentage1` | `label-percentage2`
-  ] = js.undefined
-  var hideWhenLessThanPercentage: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var hideWhenLessThanPercentage: js.UndefOr[Double] = js.native
 }
 
 object ID3PieLabelsOptions {
   @scala.inline
-  def apply(
-    format: label | value | percentage | `label-value1` | `label-value2` | `label-percentage1` | `label-percentage2` = null,
-    hideWhenLessThanPercentage: Int | Double = null
-  ): ID3PieLabelsOptions = {
+  def apply(): ID3PieLabelsOptions = {
     val __obj = js.Dynamic.literal()
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (hideWhenLessThanPercentage != null) __obj.updateDynamic("hideWhenLessThanPercentage")(hideWhenLessThanPercentage.asInstanceOf[js.Any])
     __obj.asInstanceOf[ID3PieLabelsOptions]
   }
+  @scala.inline
+  implicit class ID3PieLabelsOptionsOps[Self <: ID3PieLabelsOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(
+      value: label | value | percentage | `label-value1` | `label-value2` | `label-percentage1` | `label-percentage2`
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHideWhenLessThanPercentage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideWhenLessThanPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHideWhenLessThanPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideWhenLessThanPercentage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

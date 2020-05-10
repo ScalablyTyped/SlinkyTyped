@@ -2,7 +2,6 @@ package typingsSlinky.tensorflowTfjsCore
 
 import org.scalajs.dom.experimental.RequestInit
 import typingsSlinky.tensorflowTfjsCore.routerRegistryMod.IORouter
-import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.POST
 import typingsSlinky.tensorflowTfjsCore.typesMod.IOHandler
 import typingsSlinky.tensorflowTfjsCore.typesMod.LoadOptions
 import typingsSlinky.tensorflowTfjsCore.typesMod.ModelArtifacts
@@ -18,7 +17,7 @@ object httpMod extends js.Object {
   class HTTPRequest protected () extends IOHandler {
     def this(path: String) = this()
     def this(path: String, loadOptions: LoadOptions) = this()
-    val DEFAULT_METHOD: POST = js.native
+    val DEFAULT_METHOD: /* "POST" */ String = js.native
     val fetch: js.Any = js.native
     var loadWeights: js.Any = js.native
     val onProgress: js.Any = js.native

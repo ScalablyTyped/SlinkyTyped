@@ -18,5 +18,6 @@ trait HTMLLIElement extends HTMLElement {
 
 @JSGlobal("HTMLLIElement")
 @js.native
-object HTMLLIElement extends Instantiable0[HTMLLIElement]
+object HTMLLIElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLLIElement]
 

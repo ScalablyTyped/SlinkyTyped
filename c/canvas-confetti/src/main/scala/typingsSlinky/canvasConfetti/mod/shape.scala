@@ -12,10 +12,8 @@ trait shape extends js.Object
 
 object shape {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def circle: typingsSlinky.canvasConfetti.canvasConfettiStrings.circle = "circle".asInstanceOf[typingsSlinky.canvasConfetti.canvasConfettiStrings.circle]
   @scala.inline
-  def circle: typingsSlinky.canvasConfetti.canvasConfettiStrings.circle = this.cast("circle")
-  @scala.inline
-  def square: typingsSlinky.canvasConfetti.canvasConfettiStrings.square = this.cast("square")
+  def square: typingsSlinky.canvasConfetti.canvasConfettiStrings.square = "square".asInstanceOf[typingsSlinky.canvasConfetti.canvasConfettiStrings.square]
 }
 

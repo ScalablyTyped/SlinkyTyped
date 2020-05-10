@@ -7,19 +7,39 @@ import scala.scalajs.js.annotation._
 /**
   * A dock layout configuration object.
   */
+@js.native
 trait ILayoutConfig extends js.Object {
   /**
     * The layout config for the main dock area.
     */
-  var main: AreaConfig | Null
+  var main: AreaConfig | Null = js.native
 }
 
 object ILayoutConfig {
   @scala.inline
-  def apply(main: AreaConfig = null): ILayoutConfig = {
+  def apply(): ILayoutConfig = {
     val __obj = js.Dynamic.literal()
-    if (main != null) __obj.updateDynamic("main")(main.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILayoutConfig]
   }
+  @scala.inline
+  implicit class ILayoutConfigOps[Self <: ILayoutConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMain(value: AreaConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMainNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("main")(null)
+        ret
+    }
+  }
+  
 }
 

@@ -4,8 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TabStopSpan extends ParagraphStyle {
-  def getTabStop(): Double
+  def getTabStop(): Double = js.native
 }
 
 @JSGlobal("android.text.style.TabStopSpan")
@@ -15,8 +16,6 @@ object TabStopSpan extends js.Object {
   class Standard protected () extends TabStopSpan {
     def this(where: Double) = this()
     var mTab: js.Any = js.native
-    /* CompleteClass */
-    override def getTabStop(): Double = js.native
   }
   
   var `type`: js.Symbol = js.native

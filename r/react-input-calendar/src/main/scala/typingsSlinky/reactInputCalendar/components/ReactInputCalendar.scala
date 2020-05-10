@@ -1,61 +1,66 @@
 package typingsSlinky.reactInputCalendar.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendarProps
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactInputCalendar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendar] {
+object ReactInputCalendar {
   @JSGlobal("reactInputCalendar.ReactInputCalendar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, placeholder */
-  def apply(
-    closeOnSelect: js.UndefOr[Boolean] = js.undefined,
-    computableFormat: String = null,
-    date: String | js.Date = null,
-    format: String = null,
-    inputFieldClass: String = null,
-    inputFieldId: String = null,
-    maxDate: String | js.Date = null,
-    minDate: String | js.Date = null,
-    minView: Int | Double = null,
-    onBlur: (/* event */ SyntheticEvent[Event_, typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendar], /* computableDate */ String) => Unit = null,
-    onChange: /* computableDate */ String => Unit = null,
-    onFocus: /* event */ SyntheticEvent[Event_, typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendar] => Unit = null,
-    openOnInputFocus: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendar] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(closeOnSelect)) __obj.updateDynamic("closeOnSelect")(closeOnSelect.asInstanceOf[js.Any])
-    if (computableFormat != null) __obj.updateDynamic("computableFormat")(computableFormat.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (inputFieldClass != null) __obj.updateDynamic("inputFieldClass")(inputFieldClass.asInstanceOf[js.Any])
-    if (inputFieldId != null) __obj.updateDynamic("inputFieldId")(inputFieldId.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (minView != null) __obj.updateDynamic("minView")(minView.asInstanceOf[js.Any])
-    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction2(onBlur))
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
-    if (!js.isUndefined(openOnInputFocus)) __obj.updateDynamic("openOnInputFocus")(openOnInputFocus.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendar] {
+    @scala.inline
+    def closeOnSelect(value: Boolean): this.type = set("closeOnSelect", value.asInstanceOf[js.Any])
+    @scala.inline
+    def computableFormat(value: String): this.type = set("computableFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dateDate(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def date(value: String | js.Date): this.type = set("date", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def format(value: String): this.type = set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputFieldClass(value: String): this.type = set("inputFieldClass", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inputFieldId(value: String): this.type = set("inputFieldId", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: String | js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: String | js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minView(value: Double): this.type = set("minView", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBlur(
+      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendar], /* computableDate */ String) => Unit
+    ): this.type = set("onBlur", js.Any.fromFunction2(value))
+    @scala.inline
+    def onChange(value: /* computableDate */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onFocus(
+      value: /* event */ SyntheticEvent[Event_, typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendar] => Unit
+    ): this.type = set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def openOnInputFocus(value: Boolean): this.type = set("openOnInputFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendar] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = ReactInputCalendarProps
+  
+  def withProps(p: ReactInputCalendarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactInputCalendar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

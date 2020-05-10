@@ -1,27 +1,30 @@
 package typingsSlinky.solidReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.solidReact.mod.AuthButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AuthButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.solidReact.mod.AuthButton] {
+object AuthButton {
   @JSImport("@solid/react", "AuthButton")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(login: String, logout: String, popup: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.solidReact.mod.AuthButton] = {
-    val __obj = js.Dynamic.literal(login = login.asInstanceOf[js.Any], logout = logout.asInstanceOf[js.Any], popup = popup.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.solidReact.mod.AuthButton] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   }
-  type Props = AuthButtonProps
+  
+  def withProps(p: AuthButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(login: String, logout: String, popup: String): Builder = {
+    val __props = js.Dynamic.literal(login = login.asInstanceOf[js.Any], logout = logout.asInstanceOf[js.Any], popup = popup.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[AuthButtonProps]))
+  }
 }
 

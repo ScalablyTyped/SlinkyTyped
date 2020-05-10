@@ -3,7 +3,6 @@ package typingsSlinky.rcPicker
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.interfaceMod.PanelSharedProps
-import typingsSlinky.rcPicker.rcPickerNumbers.`10`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ object yearPanelMod extends js.Object {
     var sourceMode: PanelMode = js.native
   }
   
-  val YEAR_DECADE_COUNT: `10` = js.native
+  val YEAR_DECADE_COUNT: /* 10 */ Double = js.native
   def default[DateType](props: YearPanelProps[DateType]): ReactElement = js.native
 }
 

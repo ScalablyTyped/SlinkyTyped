@@ -15,6 +15,7 @@ import typingsSlinky.awsSdkClientXrayNode.putTelemetryRecordsExceptionsUnionMod.
 import typingsSlinky.awsSdkClientXrayNode.putTraceSegmentsExceptionsUnionMod.PutTraceSegmentsExceptionsUnion
 import typingsSlinky.awsSdkClientXrayNode.updateSamplingRuleExceptionsUnionMod.UpdateSamplingRuleExceptionsUnion
 import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,5 +39,32 @@ trait ThrottledException
      with UpdateSamplingRuleExceptionsUnion {
   @JSName("name")
   var name_ThrottledException: typingsSlinky.awsSdkClientXrayNode.awsSdkClientXrayNodeStrings.ThrottledException = js.native
+}
+
+object ThrottledException {
+  @scala.inline
+  def apply(
+    $metadata: ResponseMetadata,
+    details: ThrottledExceptionDetails,
+    message: String,
+    name: typingsSlinky.awsSdkClientXrayNode.awsSdkClientXrayNodeStrings.ThrottledException
+  ): ThrottledException = {
+    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ThrottledException]
+  }
+  @scala.inline
+  implicit class ThrottledExceptionOps[Self <: ThrottledException] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: typingsSlinky.awsSdkClientXrayNode.awsSdkClientXrayNodeStrings.ThrottledException): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

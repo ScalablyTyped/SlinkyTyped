@@ -18,11 +18,41 @@ trait UtteranceList extends js.Object {
 
 object UtteranceList {
   @scala.inline
-  def apply(botVersion: Version = null, utterances: ListOfUtterance = null): UtteranceList = {
+  def apply(): UtteranceList = {
     val __obj = js.Dynamic.literal()
-    if (botVersion != null) __obj.updateDynamic("botVersion")(botVersion.asInstanceOf[js.Any])
-    if (utterances != null) __obj.updateDynamic("utterances")(utterances.asInstanceOf[js.Any])
     __obj.asInstanceOf[UtteranceList]
   }
+  @scala.inline
+  implicit class UtteranceListOps[Self <: UtteranceList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBotVersion(value: Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("botVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBotVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("botVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUtterances(value: ListOfUtterance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utterances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtterances: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utterances")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,34 +1,31 @@
 package typingsSlinky.muiDatatables.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableViewCol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableViewCol
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TableViewCol {
   @JSImport("mui-datatables", "TableViewCol")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    columns: js.Array[_],
-    onColumnUpdate: js.Any => js.Any,
-    `object`: js.Object,
-    classes: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], onColumnUpdate = js.Any.fromFunction1(onColumnUpdate))
-    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
-    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
   }
-  type Props = MUIDataTableViewCol
+  
+  def withProps(p: MUIDataTableViewCol): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(columns: js.Array[_], `object`: js.Object, onColumnUpdate: js.Any => js.Any): Builder = {
+    val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], onColumnUpdate = js.Any.fromFunction1(onColumnUpdate))
+    __props.updateDynamic("object")(`object`.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableViewCol]))
+  }
 }
 

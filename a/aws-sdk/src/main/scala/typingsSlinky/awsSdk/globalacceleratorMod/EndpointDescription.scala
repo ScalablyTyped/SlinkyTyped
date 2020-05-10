@@ -11,7 +11,7 @@ trait EndpointDescription extends js.Object {
     */
   var ClientIPPreservationEnabled: js.UndefOr[GenericBoolean] = js.native
   /**
-    * An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID. An Application Load Balancer can be either internal or internet-facing.
+    * An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID. For EC2 instances, this is the EC2 instance ID.  An Application Load Balancer can be either internal or internet-facing.
     */
   var EndpointId: js.UndefOr[GenericString] = js.native
   /**
@@ -30,20 +30,77 @@ trait EndpointDescription extends js.Object {
 
 object EndpointDescription {
   @scala.inline
-  def apply(
-    ClientIPPreservationEnabled: js.UndefOr[Boolean] = js.undefined,
-    EndpointId: GenericString = null,
-    HealthReason: GenericString = null,
-    HealthState: HealthState = null,
-    Weight: Int | Double = null
-  ): EndpointDescription = {
+  def apply(): EndpointDescription = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(ClientIPPreservationEnabled)) __obj.updateDynamic("ClientIPPreservationEnabled")(ClientIPPreservationEnabled.asInstanceOf[js.Any])
-    if (EndpointId != null) __obj.updateDynamic("EndpointId")(EndpointId.asInstanceOf[js.Any])
-    if (HealthReason != null) __obj.updateDynamic("HealthReason")(HealthReason.asInstanceOf[js.Any])
-    if (HealthState != null) __obj.updateDynamic("HealthState")(HealthState.asInstanceOf[js.Any])
-    if (Weight != null) __obj.updateDynamic("Weight")(Weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndpointDescription]
   }
+  @scala.inline
+  implicit class EndpointDescriptionOps[Self <: EndpointDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientIPPreservationEnabled(value: GenericBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIPPreservationEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientIPPreservationEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIPPreservationEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndpointId(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndpointId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndpointId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthReason(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHealthState(value: HealthState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHealthState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HealthState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeight(value: EndpointWeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Weight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

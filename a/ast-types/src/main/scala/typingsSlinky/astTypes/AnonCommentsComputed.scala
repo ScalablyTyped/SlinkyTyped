@@ -8,29 +8,89 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCommentsComputed extends js.Object {
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
-  var computed: js.UndefOr[Boolean] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var `object`: JSXIdentifierKind | JSXMemberExpressionKind
-  var property: JSXIdentifierKind
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  var computed: js.UndefOr[Boolean] = js.native
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  var `object`: JSXIdentifierKind | JSXMemberExpressionKind = js.native
+  var property: JSXIdentifierKind = js.native
 }
 
 object AnonCommentsComputed {
   @scala.inline
-  def apply(
-    `object`: JSXIdentifierKind | JSXMemberExpressionKind,
-    property: JSXIdentifierKind,
-    comments: js.Array[CommentKind] = null,
-    computed: js.UndefOr[Boolean] = js.undefined,
-    loc: SourceLocationKind = null
-  ): AnonCommentsComputed = {
+  def apply(`object`: JSXIdentifierKind | JSXMemberExpressionKind, property: JSXIdentifierKind): AnonCommentsComputed = {
     val __obj = js.Dynamic.literal(property = property.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (!js.isUndefined(computed)) __obj.updateDynamic("computed")(computed.asInstanceOf[js.Any])
-    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonCommentsComputed]
   }
+  @scala.inline
+  implicit class AnonCommentsComputedOps[Self <: AnonCommentsComputed] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withObject(value: JSXIdentifierKind | JSXMemberExpressionKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperty(value: JSXIdentifierKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[CommentKind]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommentsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(null)
+        ret
+    }
+    @scala.inline
+    def withComputed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComputed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoc(value: SourceLocationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(null)
+        ret
+    }
+  }
+  
 }
 

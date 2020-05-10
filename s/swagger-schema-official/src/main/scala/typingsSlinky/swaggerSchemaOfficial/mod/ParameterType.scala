@@ -17,20 +17,18 @@ trait ParameterType extends js.Object
 
 object ParameterType {
   @scala.inline
-  def array: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.array = this.cast("array")
+  def array: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.array = "array".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.array]
   @scala.inline
-  def boolean: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.boolean = "boolean".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def file: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.file = "file".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.file]
   @scala.inline
-  def file: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.file = this.cast("file")
+  def integer: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.integer = "integer".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.integer = this.cast("integer")
+  def number: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.number = "number".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.number]
   @scala.inline
-  def number: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.number = this.cast("number")
+  def `object`: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.`object` = "object".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.`object` = this.cast("object")
-  @scala.inline
-  def string: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.string = this.cast("string")
+  def string: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.string = "string".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.string]
 }
 

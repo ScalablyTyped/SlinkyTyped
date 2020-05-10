@@ -12,10 +12,8 @@ trait AutoAlways extends js.Object
 
 object AutoAlways {
   @scala.inline
-  def always: typingsSlinky.morrisJs.morrisJsStrings.always = this.cast("always")
+  def always: typingsSlinky.morrisJs.morrisJsStrings.always = "always".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.always]
   @scala.inline
-  def auto: typingsSlinky.morrisJs.morrisJsStrings.auto = this.cast("auto")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def auto: typingsSlinky.morrisJs.morrisJsStrings.auto = "auto".asInstanceOf[typingsSlinky.morrisJs.morrisJsStrings.auto]
 }
 

@@ -41,20 +41,77 @@ trait SchemaGoogleCloudVideointelligenceV1ObjectTrackingAnnotation extends js.Ob
 
 object SchemaGoogleCloudVideointelligenceV1ObjectTrackingAnnotation {
   @scala.inline
-  def apply(
-    confidence: Int | Double = null,
-    entity: SchemaGoogleCloudVideointelligenceV1Entity = null,
-    frames: js.Array[SchemaGoogleCloudVideointelligenceV1ObjectTrackingFrame] = null,
-    segment: SchemaGoogleCloudVideointelligenceV1VideoSegment = null,
-    trackId: String = null
-  ): SchemaGoogleCloudVideointelligenceV1ObjectTrackingAnnotation = {
+  def apply(): SchemaGoogleCloudVideointelligenceV1ObjectTrackingAnnotation = {
     val __obj = js.Dynamic.literal()
-    if (confidence != null) __obj.updateDynamic("confidence")(confidence.asInstanceOf[js.Any])
-    if (entity != null) __obj.updateDynamic("entity")(entity.asInstanceOf[js.Any])
-    if (frames != null) __obj.updateDynamic("frames")(frames.asInstanceOf[js.Any])
-    if (segment != null) __obj.updateDynamic("segment")(segment.asInstanceOf[js.Any])
-    if (trackId != null) __obj.updateDynamic("trackId")(trackId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudVideointelligenceV1ObjectTrackingAnnotation]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudVideointelligenceV1ObjectTrackingAnnotationOps[Self <: SchemaGoogleCloudVideointelligenceV1ObjectTrackingAnnotation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfidence(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfidence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("confidence")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntity(value: SchemaGoogleCloudVideointelligenceV1Entity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrames(value: js.Array[SchemaGoogleCloudVideointelligenceV1ObjectTrackingFrame]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSegment(value: SchemaGoogleCloudVideointelligenceV1VideoSegment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTrackId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTrackId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trackId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

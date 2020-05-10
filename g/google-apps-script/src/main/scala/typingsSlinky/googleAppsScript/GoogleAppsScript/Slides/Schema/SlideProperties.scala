@@ -4,20 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SlideProperties extends js.Object {
-  var layoutObjectId: js.UndefOr[String] = js.undefined
-  var masterObjectId: js.UndefOr[String] = js.undefined
-  var notesPage: js.UndefOr[Page] = js.undefined
+  var layoutObjectId: js.UndefOr[String] = js.native
+  var masterObjectId: js.UndefOr[String] = js.native
+  var notesPage: js.UndefOr[Page] = js.native
 }
 
 object SlideProperties {
   @scala.inline
-  def apply(layoutObjectId: String = null, masterObjectId: String = null, notesPage: Page = null): SlideProperties = {
+  def apply(): SlideProperties = {
     val __obj = js.Dynamic.literal()
-    if (layoutObjectId != null) __obj.updateDynamic("layoutObjectId")(layoutObjectId.asInstanceOf[js.Any])
-    if (masterObjectId != null) __obj.updateDynamic("masterObjectId")(masterObjectId.asInstanceOf[js.Any])
-    if (notesPage != null) __obj.updateDynamic("notesPage")(notesPage.asInstanceOf[js.Any])
     __obj.asInstanceOf[SlideProperties]
   }
+  @scala.inline
+  implicit class SlidePropertiesOps[Self <: SlideProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLayoutObjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutObjectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLayoutObjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutObjectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMasterObjectId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterObjectId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMasterObjectId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("masterObjectId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotesPage(value: Page): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notesPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotesPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notesPage")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

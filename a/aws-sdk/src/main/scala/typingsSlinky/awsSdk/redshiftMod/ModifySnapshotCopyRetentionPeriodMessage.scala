@@ -22,14 +22,41 @@ trait ModifySnapshotCopyRetentionPeriodMessage extends js.Object {
 
 object ModifySnapshotCopyRetentionPeriodMessage {
   @scala.inline
-  def apply(
-    ClusterIdentifier: String,
-    RetentionPeriod: Integer,
-    Manual: js.UndefOr[scala.Boolean] = js.undefined
-  ): ModifySnapshotCopyRetentionPeriodMessage = {
+  def apply(ClusterIdentifier: String, RetentionPeriod: Integer): ModifySnapshotCopyRetentionPeriodMessage = {
     val __obj = js.Dynamic.literal(ClusterIdentifier = ClusterIdentifier.asInstanceOf[js.Any], RetentionPeriod = RetentionPeriod.asInstanceOf[js.Any])
-    if (!js.isUndefined(Manual)) __obj.updateDynamic("Manual")(Manual.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifySnapshotCopyRetentionPeriodMessage]
   }
+  @scala.inline
+  implicit class ModifySnapshotCopyRetentionPeriodMessageOps[Self <: ModifySnapshotCopyRetentionPeriodMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRetentionPeriod(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RetentionPeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManual(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Manual")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManual: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Manual")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

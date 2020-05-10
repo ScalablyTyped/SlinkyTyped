@@ -56,20 +56,77 @@ trait SchemaLocationFilter extends js.Object {
 
 object SchemaLocationFilter {
   @scala.inline
-  def apply(
-    address: String = null,
-    distanceInMiles: Int | Double = null,
-    latLng: SchemaLatLng = null,
-    regionCode: String = null,
-    telecommutePreference: String = null
-  ): SchemaLocationFilter = {
+  def apply(): SchemaLocationFilter = {
     val __obj = js.Dynamic.literal()
-    if (address != null) __obj.updateDynamic("address")(address.asInstanceOf[js.Any])
-    if (distanceInMiles != null) __obj.updateDynamic("distanceInMiles")(distanceInMiles.asInstanceOf[js.Any])
-    if (latLng != null) __obj.updateDynamic("latLng")(latLng.asInstanceOf[js.Any])
-    if (regionCode != null) __obj.updateDynamic("regionCode")(regionCode.asInstanceOf[js.Any])
-    if (telecommutePreference != null) __obj.updateDynamic("telecommutePreference")(telecommutePreference.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaLocationFilter]
   }
+  @scala.inline
+  implicit class SchemaLocationFilterOps[Self <: SchemaLocationFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistanceInMiles(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceInMiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistanceInMiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distanceInMiles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLatLng(value: SchemaLatLng): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latLng")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatLng: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latLng")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegionCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegionCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regionCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTelecommutePreference(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telecommutePreference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTelecommutePreference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("telecommutePreference")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

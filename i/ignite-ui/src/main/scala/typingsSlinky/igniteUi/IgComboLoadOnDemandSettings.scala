@@ -5,38 +5,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgComboLoadOnDemandSettings
   extends /**
-	 * Option for IgComboLoadOnDemandSettings
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Gets/Sets option to enable load on demand.
   	 *
   	 */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets/Sets number of records loaded on each request.
   	 *
   	 */
-  var pageSize: js.UndefOr[Double] = js.undefined
+  var pageSize: js.UndefOr[Double] = js.native
 }
 
 object IgComboLoadOnDemandSettings {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for IgComboLoadOnDemandSettings
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    pageSize: Int | Double = null
-  ): IgComboLoadOnDemandSettings = {
+  def apply(): IgComboLoadOnDemandSettings = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (pageSize != null) __obj.updateDynamic("pageSize")(pageSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgComboLoadOnDemandSettings]
   }
+  @scala.inline
+  implicit class IgComboLoadOnDemandSettingsOps[Self <: IgComboLoadOnDemandSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPageSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

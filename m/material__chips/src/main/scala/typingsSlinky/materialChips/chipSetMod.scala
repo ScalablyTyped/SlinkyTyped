@@ -19,8 +19,8 @@ object chipSetMod extends js.Object {
       */
     def addChip(text: String): Unit = js.native
     def addChip(text: String, leadingIcon: Null, trailingIcon: Element): Unit = js.native
-    def addChip(text: String, leadingIcon: typingsSlinky.std.Element): Unit = js.native
-    def addChip(text: String, leadingIcon: typingsSlinky.std.Element, trailingIcon: Element): Unit = js.native
+    def addChip(text: String, leadingIcon: Element): Unit = js.native
+    def addChip(text: String, leadingIcon: Element, trailingIcon: Element): Unit = js.native
     def initialize(): Unit = js.native
     def initialize(chipFactory: js.Function1[/* el */ Element, MDCChip]): Unit = js.native
   }

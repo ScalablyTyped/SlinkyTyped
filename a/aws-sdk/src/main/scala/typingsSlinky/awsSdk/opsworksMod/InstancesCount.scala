@@ -90,50 +90,257 @@ trait InstancesCount extends js.Object {
 
 object InstancesCount {
   @scala.inline
-  def apply(
-    Assigning: Int | scala.Double = null,
-    Booting: Int | scala.Double = null,
-    ConnectionLost: Int | scala.Double = null,
-    Deregistering: Int | scala.Double = null,
-    Online: Int | scala.Double = null,
-    Pending: Int | scala.Double = null,
-    Rebooting: Int | scala.Double = null,
-    Registered: Int | scala.Double = null,
-    Registering: Int | scala.Double = null,
-    Requested: Int | scala.Double = null,
-    RunningSetup: Int | scala.Double = null,
-    SetupFailed: Int | scala.Double = null,
-    ShuttingDown: Int | scala.Double = null,
-    StartFailed: Int | scala.Double = null,
-    StopFailed: Int | scala.Double = null,
-    Stopped: Int | scala.Double = null,
-    Stopping: Int | scala.Double = null,
-    Terminated: Int | scala.Double = null,
-    Terminating: Int | scala.Double = null,
-    Unassigning: Int | scala.Double = null
-  ): InstancesCount = {
+  def apply(): InstancesCount = {
     val __obj = js.Dynamic.literal()
-    if (Assigning != null) __obj.updateDynamic("Assigning")(Assigning.asInstanceOf[js.Any])
-    if (Booting != null) __obj.updateDynamic("Booting")(Booting.asInstanceOf[js.Any])
-    if (ConnectionLost != null) __obj.updateDynamic("ConnectionLost")(ConnectionLost.asInstanceOf[js.Any])
-    if (Deregistering != null) __obj.updateDynamic("Deregistering")(Deregistering.asInstanceOf[js.Any])
-    if (Online != null) __obj.updateDynamic("Online")(Online.asInstanceOf[js.Any])
-    if (Pending != null) __obj.updateDynamic("Pending")(Pending.asInstanceOf[js.Any])
-    if (Rebooting != null) __obj.updateDynamic("Rebooting")(Rebooting.asInstanceOf[js.Any])
-    if (Registered != null) __obj.updateDynamic("Registered")(Registered.asInstanceOf[js.Any])
-    if (Registering != null) __obj.updateDynamic("Registering")(Registering.asInstanceOf[js.Any])
-    if (Requested != null) __obj.updateDynamic("Requested")(Requested.asInstanceOf[js.Any])
-    if (RunningSetup != null) __obj.updateDynamic("RunningSetup")(RunningSetup.asInstanceOf[js.Any])
-    if (SetupFailed != null) __obj.updateDynamic("SetupFailed")(SetupFailed.asInstanceOf[js.Any])
-    if (ShuttingDown != null) __obj.updateDynamic("ShuttingDown")(ShuttingDown.asInstanceOf[js.Any])
-    if (StartFailed != null) __obj.updateDynamic("StartFailed")(StartFailed.asInstanceOf[js.Any])
-    if (StopFailed != null) __obj.updateDynamic("StopFailed")(StopFailed.asInstanceOf[js.Any])
-    if (Stopped != null) __obj.updateDynamic("Stopped")(Stopped.asInstanceOf[js.Any])
-    if (Stopping != null) __obj.updateDynamic("Stopping")(Stopping.asInstanceOf[js.Any])
-    if (Terminated != null) __obj.updateDynamic("Terminated")(Terminated.asInstanceOf[js.Any])
-    if (Terminating != null) __obj.updateDynamic("Terminating")(Terminating.asInstanceOf[js.Any])
-    if (Unassigning != null) __obj.updateDynamic("Unassigning")(Unassigning.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstancesCount]
   }
+  @scala.inline
+  implicit class InstancesCountOps[Self <: InstancesCount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssigning(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Assigning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssigning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Assigning")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBooting(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Booting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBooting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Booting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionLost(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionLost")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionLost: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionLost")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeregistering(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Deregistering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeregistering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Deregistering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnline(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Online")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Online")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPending(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPending: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pending")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRebooting(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rebooting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRebooting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rebooting")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistered(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Registered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Registered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistering(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Registering")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Registering")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequested(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Requested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequested: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Requested")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunningSetup(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RunningSetup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunningSetup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RunningSetup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetupFailed(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetupFailed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetupFailed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetupFailed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShuttingDown(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShuttingDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShuttingDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShuttingDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartFailed(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartFailed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartFailed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartFailed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopFailed(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StopFailed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopFailed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StopFailed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopped(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stopped")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopped: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stopped")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStopping(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stopping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStopping: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stopping")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminated(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Terminated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Terminated")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTerminating(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Terminating")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTerminating: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Terminating")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnassigning(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unassigning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnassigning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Unassigning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

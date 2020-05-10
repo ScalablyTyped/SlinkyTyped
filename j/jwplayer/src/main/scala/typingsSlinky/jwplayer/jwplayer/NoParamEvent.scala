@@ -18,22 +18,20 @@ trait NoParamEvent extends js.Object
 
 object NoParamEvent {
   @scala.inline
-  def adBlock: typingsSlinky.jwplayer.jwplayerStrings.adBlock = this.cast("adBlock")
+  def adBlock: typingsSlinky.jwplayer.jwplayerStrings.adBlock = "adBlock".asInstanceOf[typingsSlinky.jwplayer.jwplayerStrings.adBlock]
   @scala.inline
-  def beforeComplete: typingsSlinky.jwplayer.jwplayerStrings.beforeComplete = this.cast("beforeComplete")
+  def beforeComplete: typingsSlinky.jwplayer.jwplayerStrings.beforeComplete = "beforeComplete".asInstanceOf[typingsSlinky.jwplayer.jwplayerStrings.beforeComplete]
   @scala.inline
-  def beforePlay: typingsSlinky.jwplayer.jwplayerStrings.beforePlay = this.cast("beforePlay")
+  def beforePlay: typingsSlinky.jwplayer.jwplayerStrings.beforePlay = "beforePlay".asInstanceOf[typingsSlinky.jwplayer.jwplayerStrings.beforePlay]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def complete: typingsSlinky.jwplayer.jwplayerStrings.complete = "complete".asInstanceOf[typingsSlinky.jwplayer.jwplayerStrings.complete]
   @scala.inline
-  def complete: typingsSlinky.jwplayer.jwplayerStrings.complete = this.cast("complete")
+  def displayClick: typingsSlinky.jwplayer.jwplayerStrings.displayClick = "displayClick".asInstanceOf[typingsSlinky.jwplayer.jwplayerStrings.displayClick]
   @scala.inline
-  def displayClick: typingsSlinky.jwplayer.jwplayerStrings.displayClick = this.cast("displayClick")
+  def playlistComplete: typingsSlinky.jwplayer.jwplayerStrings.playlistComplete = "playlistComplete".asInstanceOf[typingsSlinky.jwplayer.jwplayerStrings.playlistComplete]
   @scala.inline
-  def playlistComplete: typingsSlinky.jwplayer.jwplayerStrings.playlistComplete = this.cast("playlistComplete")
+  def remove: typingsSlinky.jwplayer.jwplayerStrings.remove = "remove".asInstanceOf[typingsSlinky.jwplayer.jwplayerStrings.remove]
   @scala.inline
-  def remove: typingsSlinky.jwplayer.jwplayerStrings.remove = this.cast("remove")
-  @scala.inline
-  def seeked: typingsSlinky.jwplayer.jwplayerStrings.seeked = this.cast("seeked")
+  def seeked: typingsSlinky.jwplayer.jwplayerStrings.seeked = "seeked".asInstanceOf[typingsSlinky.jwplayer.jwplayerStrings.seeked]
 }
 

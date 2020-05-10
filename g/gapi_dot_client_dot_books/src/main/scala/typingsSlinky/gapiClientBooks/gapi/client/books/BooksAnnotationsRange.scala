@@ -4,31 +4,79 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BooksAnnotationsRange extends js.Object {
   /** The offset from the ending position. */
-  var endOffset: js.UndefOr[String] = js.undefined
+  var endOffset: js.UndefOr[String] = js.native
   /** The ending position for the range. */
-  var endPosition: js.UndefOr[String] = js.undefined
+  var endPosition: js.UndefOr[String] = js.native
   /** The offset from the starting position. */
-  var startOffset: js.UndefOr[String] = js.undefined
+  var startOffset: js.UndefOr[String] = js.native
   /** The starting position for the range. */
-  var startPosition: js.UndefOr[String] = js.undefined
+  var startPosition: js.UndefOr[String] = js.native
 }
 
 object BooksAnnotationsRange {
   @scala.inline
-  def apply(
-    endOffset: String = null,
-    endPosition: String = null,
-    startOffset: String = null,
-    startPosition: String = null
-  ): BooksAnnotationsRange = {
+  def apply(): BooksAnnotationsRange = {
     val __obj = js.Dynamic.literal()
-    if (endOffset != null) __obj.updateDynamic("endOffset")(endOffset.asInstanceOf[js.Any])
-    if (endPosition != null) __obj.updateDynamic("endPosition")(endPosition.asInstanceOf[js.Any])
-    if (startOffset != null) __obj.updateDynamic("startOffset")(startOffset.asInstanceOf[js.Any])
-    if (startPosition != null) __obj.updateDynamic("startPosition")(startPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[BooksAnnotationsRange]
   }
+  @scala.inline
+  implicit class BooksAnnotationsRangeOps[Self <: BooksAnnotationsRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndOffset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartOffset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startOffset")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartPosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -13,12 +13,10 @@ trait LoaderStatus extends js.Object
 
 object LoaderStatus {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def error: typingsSlinky.wixStyleReact.wixStyleReactStrings.error = "error".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.error]
   @scala.inline
-  def error: typingsSlinky.wixStyleReact.wixStyleReactStrings.error = this.cast("error")
+  def loading: typingsSlinky.wixStyleReact.wixStyleReactStrings.loading = "loading".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.loading]
   @scala.inline
-  def loading: typingsSlinky.wixStyleReact.wixStyleReactStrings.loading = this.cast("loading")
-  @scala.inline
-  def success: typingsSlinky.wixStyleReact.wixStyleReactStrings.success = this.cast("success")
+  def success: typingsSlinky.wixStyleReact.wixStyleReactStrings.success = "success".asInstanceOf[typingsSlinky.wixStyleReact.wixStyleReactStrings.success]
 }
 

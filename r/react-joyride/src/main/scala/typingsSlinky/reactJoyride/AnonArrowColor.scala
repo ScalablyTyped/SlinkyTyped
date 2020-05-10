@@ -4,42 +4,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonArrowColor extends js.Object {
-  var arrowColor: js.UndefOr[String] = js.undefined
-  var backgroundColor: js.UndefOr[String] = js.undefined
-  var beaconSize: js.UndefOr[Double] = js.undefined
-  var overlayColor: js.UndefOr[String] = js.undefined
-  var primaryColor: js.UndefOr[String] = js.undefined
-  var spotlightShadow: js.UndefOr[String] = js.undefined
-  var textColor: js.UndefOr[String] = js.undefined
-  var width: js.UndefOr[String | Double] = js.undefined
-  var zIndex: js.UndefOr[Double] = js.undefined
+  var arrowColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[String] = js.native
+  var beaconSize: js.UndefOr[Double] = js.native
+  var overlayColor: js.UndefOr[String] = js.native
+  var primaryColor: js.UndefOr[String] = js.native
+  var spotlightShadow: js.UndefOr[String] = js.native
+  var textColor: js.UndefOr[String] = js.native
+  var width: js.UndefOr[String | Double] = js.native
+  var zIndex: js.UndefOr[Double] = js.native
 }
 
 object AnonArrowColor {
   @scala.inline
-  def apply(
-    arrowColor: String = null,
-    backgroundColor: String = null,
-    beaconSize: Int | Double = null,
-    overlayColor: String = null,
-    primaryColor: String = null,
-    spotlightShadow: String = null,
-    textColor: String = null,
-    width: String | Double = null,
-    zIndex: Int | Double = null
-  ): AnonArrowColor = {
+  def apply(): AnonArrowColor = {
     val __obj = js.Dynamic.literal()
-    if (arrowColor != null) __obj.updateDynamic("arrowColor")(arrowColor.asInstanceOf[js.Any])
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (beaconSize != null) __obj.updateDynamic("beaconSize")(beaconSize.asInstanceOf[js.Any])
-    if (overlayColor != null) __obj.updateDynamic("overlayColor")(overlayColor.asInstanceOf[js.Any])
-    if (primaryColor != null) __obj.updateDynamic("primaryColor")(primaryColor.asInstanceOf[js.Any])
-    if (spotlightShadow != null) __obj.updateDynamic("spotlightShadow")(spotlightShadow.asInstanceOf[js.Any])
-    if (textColor != null) __obj.updateDynamic("textColor")(textColor.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonArrowColor]
   }
+  @scala.inline
+  implicit class AnonArrowColorOps[Self <: AnonArrowColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrowColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrowColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeaconSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeaconSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beaconSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOverlayColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverlayColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlayColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrimaryColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrimaryColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primaryColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpotlightShadow(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spotlightShadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpotlightShadow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spotlightShadow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zIndex")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

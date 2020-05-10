@@ -14,10 +14,29 @@ trait GetContactReachabilityStatusRequest extends js.Object {
 
 object GetContactReachabilityStatusRequest {
   @scala.inline
-  def apply(domainName: DomainName = null): GetContactReachabilityStatusRequest = {
+  def apply(): GetContactReachabilityStatusRequest = {
     val __obj = js.Dynamic.literal()
-    if (domainName != null) __obj.updateDynamic("domainName")(domainName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetContactReachabilityStatusRequest]
   }
+  @scala.inline
+  implicit class GetContactReachabilityStatusRequestOps[Self <: GetContactReachabilityStatusRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainName(value: DomainName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDomainName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

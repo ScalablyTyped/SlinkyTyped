@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PopupWindowEventArgs extends EventArgs {
-  val window: BootstrapPopupWindow
+  val window: BootstrapPopupWindow = js.native
 }
 
 object PopupWindowEventArgs {
   @scala.inline
   def apply(sender: Control, window: BootstrapPopupWindow): PopupWindowEventArgs = {
     val __obj = js.Dynamic.literal(sender = sender.asInstanceOf[js.Any], window = window.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PopupWindowEventArgs]
   }
+  @scala.inline
+  implicit class PopupWindowEventArgsOps[Self <: PopupWindowEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWindow(value: BootstrapPopupWindow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

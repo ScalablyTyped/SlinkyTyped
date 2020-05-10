@@ -1,20 +1,12 @@
 package typingsSlinky.winrt.Windows.UI.ViewManagement
 
-import typingsSlinky.winrt.Windows.Foundation.Rect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSGlobal("Windows.UI.ViewManagement.InputPane")
 @js.native
-class InputPane () extends IInputPane {
-  /* CompleteClass */
-  override var occludedRect: Rect = js.native
-  /* CompleteClass */
-  override var onhiding: js.Any = js.native
-  /* CompleteClass */
-  override var onshowing: js.Any = js.native
-}
+class InputPane () extends IInputPane
 
 /* static members */
 @JSGlobal("Windows.UI.ViewManagement.InputPane")

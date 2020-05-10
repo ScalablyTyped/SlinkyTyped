@@ -4,41 +4,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CatSegmentsParams extends GenericParams {
-  var format: String
-  var h: js.UndefOr[NameList] = js.undefined
-  var help: js.UndefOr[Boolean] = js.undefined
-  var index: js.UndefOr[NameList] = js.undefined
-  var v: js.UndefOr[Boolean] = js.undefined
+  var format: String = js.native
+  var h: js.UndefOr[NameList] = js.native
+  var help: js.UndefOr[Boolean] = js.native
+  var index: js.UndefOr[NameList] = js.native
+  var v: js.UndefOr[Boolean] = js.native
 }
 
 object CatSegmentsParams {
   @scala.inline
-  def apply(
-    format: String,
-    body: js.Any = null,
-    filterPath: String | js.Array[String] = null,
-    h: NameList = null,
-    help: js.UndefOr[Boolean] = js.undefined,
-    ignore: Double | js.Array[Double] = null,
-    index: NameList = null,
-    maxRetries: Int | Double = null,
-    method: String = null,
-    requestTimeout: Int | Double = null,
-    v: js.UndefOr[Boolean] = js.undefined
-  ): CatSegmentsParams = {
+  def apply(format: String): CatSegmentsParams = {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any])
-    if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
-    if (filterPath != null) __obj.updateDynamic("filterPath")(filterPath.asInstanceOf[js.Any])
-    if (h != null) __obj.updateDynamic("h")(h.asInstanceOf[js.Any])
-    if (!js.isUndefined(help)) __obj.updateDynamic("help")(help.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(ignore.asInstanceOf[js.Any])
-    if (index != null) __obj.updateDynamic("index")(index.asInstanceOf[js.Any])
-    if (maxRetries != null) __obj.updateDynamic("maxRetries")(maxRetries.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (requestTimeout != null) __obj.updateDynamic("requestTimeout")(requestTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(v)) __obj.updateDynamic("v")(v.asInstanceOf[js.Any])
     __obj.asInstanceOf[CatSegmentsParams]
   }
+  @scala.inline
+  implicit class CatSegmentsParamsOps[Self <: CatSegmentsParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withH(value: NameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutH: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("h")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHelp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHelp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("help")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndex(value: NameList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withV(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("v")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutV: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("v")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

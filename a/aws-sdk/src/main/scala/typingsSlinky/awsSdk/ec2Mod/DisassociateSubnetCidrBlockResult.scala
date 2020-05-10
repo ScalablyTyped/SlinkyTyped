@@ -18,11 +18,41 @@ trait DisassociateSubnetCidrBlockResult extends js.Object {
 
 object DisassociateSubnetCidrBlockResult {
   @scala.inline
-  def apply(Ipv6CidrBlockAssociation: SubnetIpv6CidrBlockAssociation = null, SubnetId: String = null): DisassociateSubnetCidrBlockResult = {
+  def apply(): DisassociateSubnetCidrBlockResult = {
     val __obj = js.Dynamic.literal()
-    if (Ipv6CidrBlockAssociation != null) __obj.updateDynamic("Ipv6CidrBlockAssociation")(Ipv6CidrBlockAssociation.asInstanceOf[js.Any])
-    if (SubnetId != null) __obj.updateDynamic("SubnetId")(SubnetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisassociateSubnetCidrBlockResult]
   }
+  @scala.inline
+  implicit class DisassociateSubnetCidrBlockResultOps[Self <: DisassociateSubnetCidrBlockResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIpv6CidrBlockAssociation(value: SubnetIpv6CidrBlockAssociation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlockAssociation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpv6CidrBlockAssociation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ipv6CidrBlockAssociation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubnetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubnetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubnetId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,7 +7,6 @@ import typingsSlinky.axeCore.mod.RuleMetadata
 import typingsSlinky.axeCore.mod.RunCallback
 import typingsSlinky.axeCore.mod.RunOptions
 import typingsSlinky.axeCore.mod.Spec
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,7 +57,7 @@ trait TypeofAxe extends js.Object {
   	 * @returns {Promise<AxeResults>|void} If the callback was not defined, axe will return a Promise.
   	 */
   def run(): js.Promise[AxeResults] = js.native
-  def run(callback: js.Function2[/* error */ Error, /* results */ AxeResults, Unit]): Unit = js.native
+  def run(callback: js.Function2[/* error */ js.Error, /* results */ AxeResults, Unit]): Unit = js.native
   def run(context: ElementContext): js.Promise[AxeResults] = js.native
   def run(context: ElementContext, callback: RunCallback): Unit = js.native
   def run(context: ElementContext, options: RunOptions): js.Promise[AxeResults] = js.native

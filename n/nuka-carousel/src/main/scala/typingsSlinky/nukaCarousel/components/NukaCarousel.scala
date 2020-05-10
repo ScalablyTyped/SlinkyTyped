@@ -1,16 +1,17 @@
 package typingsSlinky.nukaCarousel.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
-import slinky.web.html.`*`.tag
+import slinky.core.facade.ReactRef
+import slinky.web.html.input.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nukaCarousel.AnonContainerClassName
 import typingsSlinky.nukaCarousel.mod.CSSProperties
 import typingsSlinky.nukaCarousel.mod.CarouselCellAlignProp
 import typingsSlinky.nukaCarousel.mod.CarouselControlContainerProp
 import typingsSlinky.nukaCarousel.mod.CarouselHeightModeProp
 import typingsSlinky.nukaCarousel.mod.CarouselProps
+import typingsSlinky.nukaCarousel.mod.CarouselScrollModeProp
 import typingsSlinky.nukaCarousel.mod.CarouselSlideRenderControlProps
 import typingsSlinky.nukaCarousel.mod.CarouselSlideWidthProp
 import typingsSlinky.nukaCarousel.mod.CarouselSlidesToScrollProp
@@ -22,120 +23,140 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object NukaCarousel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object NukaCarousel {
   @JSImport("nuka-carousel", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    afterSlide: /* prevSlide */ Double => Unit = null,
-    animation: zoom = null,
-    autoGenerateStyleTag: js.UndefOr[Boolean] = js.undefined,
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    autoplayInterval: Int | Double = null,
-    autoplayReverse: js.UndefOr[Boolean] = js.undefined,
-    beforeSlide: (/* currentSlide */ Double, /* endSlide */ Double) => Unit = null,
-    cellAlign: CarouselCellAlignProp = null,
-    cellSpacing: Int | Double = null,
-    defaultControlsConfig: AnonContainerClassName = null,
-    disableAnimation: js.UndefOr[Boolean] = js.undefined,
-    disableEdgeSwiping: js.UndefOr[Boolean] = js.undefined,
-    dragging: js.UndefOr[Boolean] = js.undefined,
-    easing: String = null,
-    edgeEasing: String = null,
-    enableKeyboardControls: js.UndefOr[Boolean] = js.undefined,
-    frameOverflow: String = null,
-    framePadding: String = null,
-    getControlContainerStyle: /* key */ CarouselControlContainerProp => CSSProperties = null,
-    height: String = null,
-    heightMode: CarouselHeightModeProp = null,
-    initialSlideHeight: Int | Double = null,
-    initialSlideWidth: Int | Double = null,
-    keyCodeConfig: slideActioninCarouselSlid = null,
-    onDragStart: () => Unit = null,
-    onResize: () => Unit = null,
-    pauseOnHover: js.UndefOr[Boolean] = js.undefined,
-    renderAnnounceSlideMessage: /* hasCurrentSlideSlideCount */ CarouselSlideRenderControlProps => String = null,
-    renderBottomCenterControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderBottomLeftControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderBottomRightControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderCenterCenterControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderCenterLeftControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderCenterRightControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderTopCenterControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderTopLeftControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    renderTopRightControls: /* props */ CarouselSlideRenderControlProps => TagMod[Any] = null,
-    slideIndex: Int | Double = null,
-    slideWidth: CarouselSlideWidthProp = null,
-    slidesToScroll: CarouselSlidesToScrollProp = null,
-    slidesToShow: Int | Double = null,
-    speed: Int | Double = null,
-    style: CSSProperties = null,
-    swiping: js.UndefOr[Boolean] = js.undefined,
-    transitionMode: CarouselTransitionModeProp = null,
-    vertical: js.UndefOr[Boolean] = js.undefined,
-    width: String = null,
-    withoutControls: js.UndefOr[Boolean] = js.undefined,
-    wrapAround: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (afterSlide != null) __obj.updateDynamic("afterSlide")(js.Any.fromFunction1(afterSlide))
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoGenerateStyleTag)) __obj.updateDynamic("autoGenerateStyleTag")(autoGenerateStyleTag.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (autoplayInterval != null) __obj.updateDynamic("autoplayInterval")(autoplayInterval.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplayReverse)) __obj.updateDynamic("autoplayReverse")(autoplayReverse.asInstanceOf[js.Any])
-    if (beforeSlide != null) __obj.updateDynamic("beforeSlide")(js.Any.fromFunction2(beforeSlide))
-    if (cellAlign != null) __obj.updateDynamic("cellAlign")(cellAlign.asInstanceOf[js.Any])
-    if (cellSpacing != null) __obj.updateDynamic("cellSpacing")(cellSpacing.asInstanceOf[js.Any])
-    if (defaultControlsConfig != null) __obj.updateDynamic("defaultControlsConfig")(defaultControlsConfig.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableAnimation)) __obj.updateDynamic("disableAnimation")(disableAnimation.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableEdgeSwiping)) __obj.updateDynamic("disableEdgeSwiping")(disableEdgeSwiping.asInstanceOf[js.Any])
-    if (!js.isUndefined(dragging)) __obj.updateDynamic("dragging")(dragging.asInstanceOf[js.Any])
-    if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
-    if (edgeEasing != null) __obj.updateDynamic("edgeEasing")(edgeEasing.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableKeyboardControls)) __obj.updateDynamic("enableKeyboardControls")(enableKeyboardControls.asInstanceOf[js.Any])
-    if (frameOverflow != null) __obj.updateDynamic("frameOverflow")(frameOverflow.asInstanceOf[js.Any])
-    if (framePadding != null) __obj.updateDynamic("framePadding")(framePadding.asInstanceOf[js.Any])
-    if (getControlContainerStyle != null) __obj.updateDynamic("getControlContainerStyle")(js.Any.fromFunction1(getControlContainerStyle))
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (heightMode != null) __obj.updateDynamic("heightMode")(heightMode.asInstanceOf[js.Any])
-    if (initialSlideHeight != null) __obj.updateDynamic("initialSlideHeight")(initialSlideHeight.asInstanceOf[js.Any])
-    if (initialSlideWidth != null) __obj.updateDynamic("initialSlideWidth")(initialSlideWidth.asInstanceOf[js.Any])
-    if (keyCodeConfig != null) __obj.updateDynamic("keyCodeConfig")(keyCodeConfig.asInstanceOf[js.Any])
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction0(onDragStart))
-    if (onResize != null) __obj.updateDynamic("onResize")(js.Any.fromFunction0(onResize))
-    if (!js.isUndefined(pauseOnHover)) __obj.updateDynamic("pauseOnHover")(pauseOnHover.asInstanceOf[js.Any])
-    if (renderAnnounceSlideMessage != null) __obj.updateDynamic("renderAnnounceSlideMessage")(js.Any.fromFunction1(renderAnnounceSlideMessage))
-    if (renderBottomCenterControls != null) __obj.updateDynamic("renderBottomCenterControls")(js.Any.fromFunction1(renderBottomCenterControls))
-    if (renderBottomLeftControls != null) __obj.updateDynamic("renderBottomLeftControls")(js.Any.fromFunction1(renderBottomLeftControls))
-    if (renderBottomRightControls != null) __obj.updateDynamic("renderBottomRightControls")(js.Any.fromFunction1(renderBottomRightControls))
-    if (renderCenterCenterControls != null) __obj.updateDynamic("renderCenterCenterControls")(js.Any.fromFunction1(renderCenterCenterControls))
-    if (renderCenterLeftControls != null) __obj.updateDynamic("renderCenterLeftControls")(js.Any.fromFunction1(renderCenterLeftControls))
-    if (renderCenterRightControls != null) __obj.updateDynamic("renderCenterRightControls")(js.Any.fromFunction1(renderCenterRightControls))
-    if (renderTopCenterControls != null) __obj.updateDynamic("renderTopCenterControls")(js.Any.fromFunction1(renderTopCenterControls))
-    if (renderTopLeftControls != null) __obj.updateDynamic("renderTopLeftControls")(js.Any.fromFunction1(renderTopLeftControls))
-    if (renderTopRightControls != null) __obj.updateDynamic("renderTopRightControls")(js.Any.fromFunction1(renderTopRightControls))
-    if (slideIndex != null) __obj.updateDynamic("slideIndex")(slideIndex.asInstanceOf[js.Any])
-    if (slideWidth != null) __obj.updateDynamic("slideWidth")(slideWidth.asInstanceOf[js.Any])
-    if (slidesToScroll != null) __obj.updateDynamic("slidesToScroll")(slidesToScroll.asInstanceOf[js.Any])
-    if (slidesToShow != null) __obj.updateDynamic("slidesToShow")(slidesToShow.asInstanceOf[js.Any])
-    if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(swiping)) __obj.updateDynamic("swiping")(swiping.asInstanceOf[js.Any])
-    if (transitionMode != null) __obj.updateDynamic("transitionMode")(transitionMode.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
-    if (!js.isUndefined(withoutControls)) __obj.updateDynamic("withoutControls")(withoutControls.asInstanceOf[js.Any])
-    if (!js.isUndefined(wrapAround)) __obj.updateDynamic("wrapAround")(wrapAround.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def afterSlide(value: /* prevSlide */ Double => Unit): this.type = set("afterSlide", js.Any.fromFunction1(value))
+    @scala.inline
+    def animation(value: zoom): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoGenerateStyleTag(value: Boolean): this.type = set("autoGenerateStyleTag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplay(value: Boolean): this.type = set("autoplay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplayInterval(value: Double): this.type = set("autoplayInterval", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoplayReverse(value: Boolean): this.type = set("autoplayReverse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beforeSlide(value: (/* currentSlide */ Double, /* endSlide */ Double) => Unit): this.type = set("beforeSlide", js.Any.fromFunction2(value))
+    @scala.inline
+    def cellAlign(value: CarouselCellAlignProp): this.type = set("cellAlign", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellSpacing(value: Double): this.type = set("cellSpacing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultControlsConfig(value: AnonContainerClassName): this.type = set("defaultControlsConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableAnimation(value: Boolean): this.type = set("disableAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableEdgeSwiping(value: Boolean): this.type = set("disableEdgeSwiping", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragging(value: Boolean): this.type = set("dragging", value.asInstanceOf[js.Any])
+    @scala.inline
+    def easing(value: String): this.type = set("easing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def edgeEasing(value: String): this.type = set("edgeEasing", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableKeyboardControls(value: Boolean): this.type = set("enableKeyboardControls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def frameOverflow(value: String): this.type = set("frameOverflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def framePadding(value: String): this.type = set("framePadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def getControlsContainerStyle(value: /* key */ CarouselControlContainerProp => CSSProperties): this.type = set("getControlsContainerStyle", js.Any.fromFunction1(value))
+    @scala.inline
+    def height(value: String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def heightMode(value: CarouselHeightModeProp): this.type = set("heightMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialSlideHeight(value: Double): this.type = set("initialSlideHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialSlideWidth(value: Double): this.type = set("initialSlideWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerRef(value: ReactRef[HTMLInputElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keyCodeConfig(value: slideActioninCarouselSlid): this.type = set("keyCodeConfig", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDragStart(value: () => Unit): this.type = set("onDragStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def onResize(value: () => Unit): this.type = set("onResize", js.Any.fromFunction0(value))
+    @scala.inline
+    def pauseOnHover(value: Boolean): this.type = set("pauseOnHover", value.asInstanceOf[js.Any])
+    @scala.inline
+    def renderAnnounceSlideMessage(value: /* hasCurrentSlideSlideCount */ CarouselSlideRenderControlProps => String): this.type = set("renderAnnounceSlideMessage", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderBottomCenterControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderBottomCenterControls", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderBottomCenterControlsNull: this.type = set("renderBottomCenterControls", null)
+    @scala.inline
+    def renderBottomLeftControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderBottomLeftControls", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderBottomLeftControlsNull: this.type = set("renderBottomLeftControls", null)
+    @scala.inline
+    def renderBottomRightControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderBottomRightControls", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderBottomRightControlsNull: this.type = set("renderBottomRightControls", null)
+    @scala.inline
+    def renderCenterCenterControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderCenterCenterControls", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderCenterCenterControlsNull: this.type = set("renderCenterCenterControls", null)
+    @scala.inline
+    def renderCenterLeftControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderCenterLeftControls", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderCenterLeftControlsNull: this.type = set("renderCenterLeftControls", null)
+    @scala.inline
+    def renderCenterRightControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderCenterRightControls", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderCenterRightControlsNull: this.type = set("renderCenterRightControls", null)
+    @scala.inline
+    def renderTopCenterControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderTopCenterControls", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderTopCenterControlsNull: this.type = set("renderTopCenterControls", null)
+    @scala.inline
+    def renderTopLeftControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderTopLeftControls", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderTopLeftControlsNull: this.type = set("renderTopLeftControls", null)
+    @scala.inline
+    def renderTopRightControls(value: /* props */ CarouselSlideRenderControlProps => TagMod[Any]): this.type = set("renderTopRightControls", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderTopRightControlsNull: this.type = set("renderTopRightControls", null)
+    @scala.inline
+    def scrollMode(value: CarouselScrollModeProp): this.type = set("scrollMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slideIndex(value: Double): this.type = set("slideIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slideWidth(value: CarouselSlideWidthProp): this.type = set("slideWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slidesToScroll(value: CarouselSlidesToScrollProp): this.type = set("slidesToScroll", value.asInstanceOf[js.Any])
+    @scala.inline
+    def slidesToShow(value: Double): this.type = set("slidesToShow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def speed(value: Double): this.type = set("speed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def swiping(value: Boolean): this.type = set("swiping", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionMode(value: CarouselTransitionModeProp): this.type = set("transitionMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
+    @scala.inline
+    def width(value: String): this.type = set("width", value.asInstanceOf[js.Any])
+    @scala.inline
+    def withoutControls(value: Boolean): this.type = set("withoutControls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapAround(value: Boolean): this.type = set("wrapAround", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.nukaCarousel.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CarouselProps
+  
+  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: NukaCarousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

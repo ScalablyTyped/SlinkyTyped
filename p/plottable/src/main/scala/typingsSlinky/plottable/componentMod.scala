@@ -275,8 +275,8 @@ object componentMod extends js.Object {
       * @returns {Component} The calling Component.
       */
     def renderTo(element: String): this.type = js.native
-    def renderTo(element: Selection_[typingsSlinky.std.HTMLElement, _, _, _]): this.type = js.native
-    def renderTo(element: typingsSlinky.std.HTMLElement): this.type = js.native
+    def renderTo(element: Selection_[HTMLElement, _, _, _]): this.type = js.native
+    def renderTo(element: HTMLElement): this.type = js.native
     /**
       * Given available space in pixels, returns the minimum width and height this Component will need.
       *
@@ -342,6 +342,20 @@ object componentMod extends js.Object {
     def yAlignment(yAlignment: YAlignment): this.type = js.native
   }
   
+  /* keyof plottable.AnonCenter */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.left
+    - typingsSlinky.plottable.plottableStrings.right
+    - typingsSlinky.plottable.plottableStrings.center
+  */
+  trait XAlignment extends js.Object
+  
+  /* keyof plottable.AnonBottomCenter */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.center
+    - typingsSlinky.plottable.plottableStrings.top
+    - typingsSlinky.plottable.plottableStrings.bottom
+  */
+  trait YAlignment extends js.Object
+  
   /* static members */
   @js.native
   object Component extends js.Object {
@@ -365,7 +379,5 @@ object componentMod extends js.Object {
   
   type ComponentCallback = js.Function1[/* component */ Component, Unit]
   type IResizeHandler = js.Function1[/* size */ AnonWidth, Unit]
-  type XAlignment = String
-  type YAlignment = String
 }
 

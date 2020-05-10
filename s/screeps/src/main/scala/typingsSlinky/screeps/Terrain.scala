@@ -18,12 +18,10 @@ trait Terrain extends js.Object
 
 object Terrain {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def plain: typingsSlinky.screeps.screepsStrings.plain = "plain".asInstanceOf[typingsSlinky.screeps.screepsStrings.plain]
   @scala.inline
-  def plain: typingsSlinky.screeps.screepsStrings.plain = this.cast("plain")
+  def swamp: typingsSlinky.screeps.screepsStrings.swamp = "swamp".asInstanceOf[typingsSlinky.screeps.screepsStrings.swamp]
   @scala.inline
-  def swamp: typingsSlinky.screeps.screepsStrings.swamp = this.cast("swamp")
-  @scala.inline
-  def wall: typingsSlinky.screeps.screepsStrings.wall = this.cast("wall")
+  def wall: typingsSlinky.screeps.screepsStrings.wall = "wall".asInstanceOf[typingsSlinky.screeps.screepsStrings.wall]
 }
 

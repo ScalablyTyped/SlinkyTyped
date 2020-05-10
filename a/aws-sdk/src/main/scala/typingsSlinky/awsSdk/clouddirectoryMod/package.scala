@@ -34,7 +34,7 @@ package object clouddirectoryMod {
   type BatchReferenceName = java.lang.String
   type BatchWriteOperationList = js.Array[typingsSlinky.awsSdk.clouddirectoryMod.BatchWriteOperation]
   type BatchWriteOperationResponseList = js.Array[typingsSlinky.awsSdk.clouddirectoryMod.BatchWriteOperationResponse]
-  type BinaryAttributeValue = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.clouddirectoryMod.Blob | java.lang.String
+  type BinaryAttributeValue = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.clouddirectoryMod.Blob | java.lang.String
   type Bool = scala.Boolean
   type BooleanAttributeValue = scala.Boolean
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.clouddirectoryMod.ClientApiVersions

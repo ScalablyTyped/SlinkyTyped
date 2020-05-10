@@ -21,7 +21,7 @@ package object firehoseMod {
   */
   type CompressionFormat = typingsSlinky.awsSdk.firehoseMod._CompressionFormat | java.lang.String
   type CopyOptions = java.lang.String
-  type Data = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.firehoseMod.Blob | java.lang.String
+  type Data = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.firehoseMod.Blob | java.lang.String
   type DataTableColumns = java.lang.String
   type DataTableName = java.lang.String
   type DeliveryStartTimestamp = js.Date

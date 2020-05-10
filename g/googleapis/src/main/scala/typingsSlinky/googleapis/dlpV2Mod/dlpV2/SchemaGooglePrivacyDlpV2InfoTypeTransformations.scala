@@ -20,10 +20,29 @@ trait SchemaGooglePrivacyDlpV2InfoTypeTransformations extends js.Object {
 
 object SchemaGooglePrivacyDlpV2InfoTypeTransformations {
   @scala.inline
-  def apply(transformations: js.Array[SchemaGooglePrivacyDlpV2InfoTypeTransformation] = null): SchemaGooglePrivacyDlpV2InfoTypeTransformations = {
+  def apply(): SchemaGooglePrivacyDlpV2InfoTypeTransformations = {
     val __obj = js.Dynamic.literal()
-    if (transformations != null) __obj.updateDynamic("transformations")(transformations.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2InfoTypeTransformations]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2InfoTypeTransformationsOps[Self <: SchemaGooglePrivacyDlpV2InfoTypeTransformations] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransformations(value: js.Array[SchemaGooglePrivacyDlpV2InfoTypeTransformation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransformations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
   * Deprecated back compatibility module, new code should use dijit/place directly instead of using this module.
   * 
   */
+@js.native
 trait place extends js.Object {
   /**
     * Deprecated method, unneeded when using dijit/place directly.
@@ -21,13 +22,13 @@ trait place extends js.Object {
     * @param position This variable controls the position of the drop down.It's an array of strings with the following values:before: places drop down to the left of the target node/widget, or to the right inthe case of RTL scripts like Hebrew and Arabicafter: places drop down to the right of the target node/widget, or to the left inthe case of RTL scripts like Hebrew and Arabicabove: drop down goes above target nodebelow: drop down goes below target nodeThe list is positions is tried, in order, until a position is found where the drop down fitswithin the viewport.             
     * @param leftToRight Whether the popup will be displaying in leftToRight mode.             
     */
-  def getPopupAroundAlignment(position: js.Array[String], leftToRight: Boolean): Unit
+  def getPopupAroundAlignment(position: js.Array[String], leftToRight: Boolean): Unit = js.native
   /**
     * Deprecated method to return the dimensions and scroll position of the viewable area of a browser window.
     * New code should use windowUtils.getBox()
     * 
     */
-  def getViewport(): Unit
+  def getViewport(): Unit = js.native
   /**
     * Positions node kitty-corner to the rectangle centered at (pos.x, pos.y) with width and height of
     * padding.x  2 and padding.y  2, or zero if padding not specified.  Picks first corner in corners[]
@@ -41,7 +42,7 @@ trait place extends js.Object {
     * @param padding               OptionalOptional param to set padding, to put some buffer around the element you want to position.Defaults to zero.             
     * @param layoutNode For things like tooltip, they are displayed differently (and have different dimensions)based on their orientation relative to the parent.  This adjusts the popup based on orientation.             
     */
-  def placeOnScreen(node: HTMLElement, pos: Position, corners: js.Array[String], padding: Position, layoutNode: js.Any): js.Any
+  def placeOnScreen(node: HTMLElement, pos: Position, corners: js.Array[String], padding: Position, layoutNode: js.Any): js.Any = js.native
   /**
     * Like dijit.placeOnScreenAroundNode(), except it accepts an arbitrary object
     * for the "around" argument and finds a proper processor to place a node.
@@ -52,7 +53,7 @@ trait place extends js.Object {
     * @param aroundCorners             
     * @param layoutNode             
     */
-  def placeOnScreenAroundElement(node: js.Any, aroundNode: js.Any, aroundCorners: js.Any, layoutNode: js.Any): Unit
+  def placeOnScreenAroundElement(node: js.Any, aroundNode: js.Any, aroundCorners: js.Any, layoutNode: js.Any): Unit = js.native
   /**
     * Position node adjacent or kitty-corner to aroundNode
     * such that it's fully visible in viewport.
@@ -63,7 +64,7 @@ trait place extends js.Object {
     * @param aroundCorners             
     * @param layoutNode             
     */
-  def placeOnScreenAroundNode(node: js.Any, aroundNode: js.Any, aroundCorners: js.Any, layoutNode: js.Any): Unit
+  def placeOnScreenAroundNode(node: js.Any, aroundNode: js.Any, aroundCorners: js.Any, layoutNode: js.Any): Unit = js.native
   /**
     * Like dijit.placeOnScreenAroundNode(), except that the "around"
     * parameter is an arbitrary rectangle on the screen (x, y, width, height)
@@ -75,7 +76,7 @@ trait place extends js.Object {
     * @param aroundCorners             
     * @param layoutNode             
     */
-  def placeOnScreenAroundRectangle(node: js.Any, aroundRect: js.Any, aroundCorners: js.Any, layoutNode: js.Any): Unit
+  def placeOnScreenAroundRectangle(node: js.Any, aroundRect: js.Any, aroundCorners: js.Any, layoutNode: js.Any): Unit = js.native
 }
 
 object place {
@@ -89,8 +90,51 @@ object place {
     placeOnScreenAroundRectangle: (js.Any, js.Any, js.Any, js.Any) => Unit
   ): place = {
     val __obj = js.Dynamic.literal(getPopupAroundAlignment = js.Any.fromFunction2(getPopupAroundAlignment), getViewport = js.Any.fromFunction0(getViewport), placeOnScreen = js.Any.fromFunction5(placeOnScreen), placeOnScreenAroundElement = js.Any.fromFunction4(placeOnScreenAroundElement), placeOnScreenAroundNode = js.Any.fromFunction4(placeOnScreenAroundNode), placeOnScreenAroundRectangle = js.Any.fromFunction4(placeOnScreenAroundRectangle))
-  
     __obj.asInstanceOf[place]
   }
+  @scala.inline
+  implicit class placeOps[Self <: place] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetPopupAroundAlignment(value: (js.Array[String], Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupAroundAlignment")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetViewport(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewport")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPlaceOnScreen(value: (HTMLElement, Position, js.Array[String], Position, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeOnScreen")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withPlaceOnScreenAroundElement(value: (js.Any, js.Any, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeOnScreenAroundElement")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withPlaceOnScreenAroundNode(value: (js.Any, js.Any, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeOnScreenAroundNode")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withPlaceOnScreenAroundRectangle(value: (js.Any, js.Any, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placeOnScreenAroundRectangle")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

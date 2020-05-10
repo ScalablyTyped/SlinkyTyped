@@ -14,10 +14,29 @@ trait RandomSplitActivity extends js.Object {
 
 object RandomSplitActivity {
   @scala.inline
-  def apply(Branches: ListOfRandomSplitEntry = null): RandomSplitActivity = {
+  def apply(): RandomSplitActivity = {
     val __obj = js.Dynamic.literal()
-    if (Branches != null) __obj.updateDynamic("Branches")(Branches.asInstanceOf[js.Any])
     __obj.asInstanceOf[RandomSplitActivity]
   }
+  @scala.inline
+  implicit class RandomSplitActivityOps[Self <: RandomSplitActivity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBranches(value: ListOfRandomSplitEntry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Branches")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBranches: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Branches")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait AxisOrient extends js.Object
 
 object AxisOrient {
   @scala.inline
-  def bottom: typingsSlinky.vegaTypings.vegaTypingsStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.vegaTypings.vegaTypingsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.vegaTypings.vegaTypingsStrings.left = "left".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.left]
   @scala.inline
-  def left: typingsSlinky.vegaTypings.vegaTypingsStrings.left = this.cast("left")
+  def right: typingsSlinky.vegaTypings.vegaTypingsStrings.right = "right".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.right]
   @scala.inline
-  def right: typingsSlinky.vegaTypings.vegaTypingsStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.vegaTypings.vegaTypingsStrings.top = this.cast("top")
+  def top: typingsSlinky.vegaTypings.vegaTypingsStrings.top = "top".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.top]
 }
 

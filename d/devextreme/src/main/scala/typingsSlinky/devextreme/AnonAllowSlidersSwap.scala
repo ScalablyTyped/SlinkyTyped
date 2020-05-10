@@ -6,33 +6,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAllowSlidersSwap extends js.Object {
-  var allowSlidersSwap: js.UndefOr[Boolean] = js.undefined
-  var animationEnabled: js.UndefOr[Boolean] = js.undefined
-  var callValueChanged: js.UndefOr[onMoving | onMovingComplete] = js.undefined
-  var manualRangeSelectionEnabled: js.UndefOr[Boolean] = js.undefined
-  var moveSelectedRangeByClick: js.UndefOr[Boolean] = js.undefined
-  var snapToTicks: js.UndefOr[Boolean] = js.undefined
+  var allowSlidersSwap: js.UndefOr[Boolean] = js.native
+  var animationEnabled: js.UndefOr[Boolean] = js.native
+  var callValueChanged: js.UndefOr[onMoving | onMovingComplete] = js.native
+  var manualRangeSelectionEnabled: js.UndefOr[Boolean] = js.native
+  var moveSelectedRangeByClick: js.UndefOr[Boolean] = js.native
+  var snapToTicks: js.UndefOr[Boolean] = js.native
 }
 
 object AnonAllowSlidersSwap {
   @scala.inline
-  def apply(
-    allowSlidersSwap: js.UndefOr[Boolean] = js.undefined,
-    animationEnabled: js.UndefOr[Boolean] = js.undefined,
-    callValueChanged: onMoving | onMovingComplete = null,
-    manualRangeSelectionEnabled: js.UndefOr[Boolean] = js.undefined,
-    moveSelectedRangeByClick: js.UndefOr[Boolean] = js.undefined,
-    snapToTicks: js.UndefOr[Boolean] = js.undefined
-  ): AnonAllowSlidersSwap = {
+  def apply(): AnonAllowSlidersSwap = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowSlidersSwap)) __obj.updateDynamic("allowSlidersSwap")(allowSlidersSwap.asInstanceOf[js.Any])
-    if (!js.isUndefined(animationEnabled)) __obj.updateDynamic("animationEnabled")(animationEnabled.asInstanceOf[js.Any])
-    if (callValueChanged != null) __obj.updateDynamic("callValueChanged")(callValueChanged.asInstanceOf[js.Any])
-    if (!js.isUndefined(manualRangeSelectionEnabled)) __obj.updateDynamic("manualRangeSelectionEnabled")(manualRangeSelectionEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(moveSelectedRangeByClick)) __obj.updateDynamic("moveSelectedRangeByClick")(moveSelectedRangeByClick.asInstanceOf[js.Any])
-    if (!js.isUndefined(snapToTicks)) __obj.updateDynamic("snapToTicks")(snapToTicks.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAllowSlidersSwap]
   }
+  @scala.inline
+  implicit class AnonAllowSlidersSwapOps[Self <: AnonAllowSlidersSwap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowSlidersSwap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSlidersSwap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowSlidersSwap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSlidersSwap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAnimationEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimationEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCallValueChanged(value: onMoving | onMovingComplete): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callValueChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCallValueChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callValueChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withManualRangeSelectionEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manualRangeSelectionEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManualRangeSelectionEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manualRangeSelectionEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMoveSelectedRangeByClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveSelectedRangeByClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMoveSelectedRangeByClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveSelectedRangeByClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapToTicks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapToTicks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapToTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapToTicks")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

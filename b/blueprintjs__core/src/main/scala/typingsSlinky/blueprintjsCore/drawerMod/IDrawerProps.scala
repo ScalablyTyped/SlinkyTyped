@@ -1,9 +1,7 @@
 package typingsSlinky.blueprintjsCore.drawerMod
 
-import org.scalajs.dom.raw.HTMLDivElement
-import org.scalajs.dom.raw.HTMLElement
-import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.overlayMod.IBackdropProps
 import typingsSlinky.blueprintjsCore.overlayMod.IOverlayableProps
 import typingsSlinky.blueprintjsCore.positionMod.Position
@@ -11,12 +9,11 @@ import typingsSlinky.blueprintjsCore.propsMod.IProps
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.HTMLProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IDrawerProps
   extends IOverlayableProps
      with IBackdropProps
@@ -26,24 +23,24 @@ trait IDrawerProps
     * drawer's header. Note that the header will only be rendered if `title` is
     * provided.
     */
-  var icon: js.UndefOr[IconName | MaybeElement] = js.undefined
+  var icon: js.UndefOr[IconName | MaybeElement] = js.native
   /**
     * Whether to show the close button in the dialog's header.
     * Note that the header will only be rendered if `title` is provided.
     * @default true
     */
-  var isCloseButtonShown: js.UndefOr[Boolean] = js.undefined
+  var isCloseButtonShown: js.UndefOr[Boolean] = js.native
   /**
     * Toggles the visibility of the overlay and its children.
     * This prop is required because the component is controlled.
     */
-  var isOpen: Boolean
+  var isOpen: Boolean = js.native
   /**
     * Position of a drawer. All angled positions will be casted into pure positions
     * (TOP, BOTTOM, LEFT or RIGHT).
     * @default Position.RIGHT
     */
-  var position: js.UndefOr[Position] = js.undefined
+  var position: js.UndefOr[Position] = js.native
   /**
     * CSS size of the drawer. This sets `width` if `vertical={false}` (default)
     * and `height` otherwise.
@@ -55,90 +52,164 @@ trait IDrawerProps
     *
     * @default Drawer.SIZE_STANDARD = "50%"
     */
-  var size: js.UndefOr[Double | String] = js.undefined
+  var size: js.UndefOr[Double | String] = js.native
   /**
     * CSS styles to apply to the dialog.
     * @default {}
     */
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.native
   /**
     * Title of the dialog. If provided, an element with `Classes.DIALOG_HEADER`
     * will be rendered inside the dialog before any children elements.
     */
-  var title: js.UndefOr[TagMod[Any]] = js.undefined
+  var title: js.UndefOr[TagMod[Any]] = js.native
   /**
     * Name of the transition for internal `CSSTransition`. Providing your own
     * name here will require defining new CSS transition properties.
     */
-  var transitionName: js.UndefOr[String] = js.undefined
+  var transitionName: js.UndefOr[String] = js.native
   /**
     * Whether the drawer should appear with vertical styling.
     * It will be ignored if `position` prop is set
     * @default false
     * @deprecated use `position` instead
     */
-  var vertical: js.UndefOr[Boolean] = js.undefined
+  var vertical: js.UndefOr[Boolean] = js.native
 }
 
 object IDrawerProps {
   @scala.inline
-  def apply(
-    isOpen: Boolean,
-    autoFocus: js.UndefOr[Boolean] = js.undefined,
-    backdropClassName: String = null,
-    backdropProps: HTMLProps[HTMLDivElement] = null,
-    canEscapeKeyClose: js.UndefOr[Boolean] = js.undefined,
-    canOutsideClickClose: js.UndefOr[Boolean] = js.undefined,
-    className: String = null,
-    enforceFocus: js.UndefOr[Boolean] = js.undefined,
-    hasBackdrop: js.UndefOr[Boolean] = js.undefined,
-    icon: IconName | MaybeElement = null,
-    isCloseButtonShown: js.UndefOr[Boolean] = js.undefined,
-    `lazy`: js.UndefOr[Boolean] = js.undefined,
-    onClose: /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit = null,
-    onClosed: /* node */ HTMLElement => Unit = null,
-    onClosing: /* node */ HTMLElement => Unit = null,
-    onOpened: /* node */ HTMLElement => Unit = null,
-    onOpening: /* node */ HTMLElement => Unit = null,
-    portalClassName: String = null,
-    portalContainer: HTMLElement = null,
-    position: Position = null,
-    size: Double | String = null,
-    style: CSSProperties = null,
-    title: TagMod[Any] = null,
-    transitionDuration: Int | Double = null,
-    transitionName: String = null,
-    usePortal: js.UndefOr[Boolean] = js.undefined,
-    vertical: js.UndefOr[Boolean] = js.undefined
-  ): IDrawerProps = {
+  def apply(isOpen: Boolean): IDrawerProps = {
     val __obj = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
-    if (backdropClassName != null) __obj.updateDynamic("backdropClassName")(backdropClassName.asInstanceOf[js.Any])
-    if (backdropProps != null) __obj.updateDynamic("backdropProps")(backdropProps.asInstanceOf[js.Any])
-    if (!js.isUndefined(canEscapeKeyClose)) __obj.updateDynamic("canEscapeKeyClose")(canEscapeKeyClose.asInstanceOf[js.Any])
-    if (!js.isUndefined(canOutsideClickClose)) __obj.updateDynamic("canOutsideClickClose")(canOutsideClickClose.asInstanceOf[js.Any])
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (!js.isUndefined(enforceFocus)) __obj.updateDynamic("enforceFocus")(enforceFocus.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasBackdrop)) __obj.updateDynamic("hasBackdrop")(hasBackdrop.asInstanceOf[js.Any])
-    if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
-    if (!js.isUndefined(isCloseButtonShown)) __obj.updateDynamic("isCloseButtonShown")(isCloseButtonShown.asInstanceOf[js.Any])
-    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
-    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
-    if (onClosed != null) __obj.updateDynamic("onClosed")(js.Any.fromFunction1(onClosed))
-    if (onClosing != null) __obj.updateDynamic("onClosing")(js.Any.fromFunction1(onClosing))
-    if (onOpened != null) __obj.updateDynamic("onOpened")(js.Any.fromFunction1(onOpened))
-    if (onOpening != null) __obj.updateDynamic("onOpening")(js.Any.fromFunction1(onOpening))
-    if (portalClassName != null) __obj.updateDynamic("portalClassName")(portalClassName.asInstanceOf[js.Any])
-    if (portalContainer != null) __obj.updateDynamic("portalContainer")(portalContainer.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
-    if (!js.isUndefined(usePortal)) __obj.updateDynamic("usePortal")(usePortal.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDrawerProps]
   }
+  @scala.inline
+  implicit class IDrawerPropsOps[Self <: IDrawerProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIconReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIcon(value: IconName | MaybeElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(null)
+        ret
+    }
+    @scala.inline
+    def withIsCloseButtonShown(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCloseButtonShown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsCloseButtonShown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCloseButtonShown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Position): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertical(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertical: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertical")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

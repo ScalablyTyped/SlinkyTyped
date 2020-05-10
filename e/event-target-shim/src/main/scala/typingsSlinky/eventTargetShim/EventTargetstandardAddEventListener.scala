@@ -2,6 +2,7 @@ package typingsSlinky.eventTargetShim
 
 import typingsSlinky.eventTargetShim.eventTargetShimStrings.standard
 import typingsSlinky.eventTargetShim.mod.EventTarget.AddOptions
+import typingsSlinky.eventTargetShim.mod.EventTarget.EventDefinition
 import typingsSlinky.eventTargetShim.mod.EventTarget.EventType
 import typingsSlinky.eventTargetShim.mod.EventTarget.Listener
 import typingsSlinky.eventTargetShim.mod.EventTarget.PickEvent
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined event-target-shim.event-target-shim.EventTarget<{}, {}, 'standard'> */
 @js.native
-trait EventTargetstandardAddEventListener extends js.Object {
+trait EventTargetstandardAddEventListener[TEvents /* <: EventDefinition */] extends js.Object {
   def addEventListener[TEventType /* <: EventType[js.Object, standard] */](`type`: TEventType): Unit = js.native
   def addEventListener[TEventType /* <: EventType[js.Object, standard] */](`type`: TEventType, listener: Null, options: Boolean): Unit = js.native
   def addEventListener[TEventType /* <: EventType[js.Object, standard] */](`type`: TEventType, listener: Null, options: AddOptions): Unit = js.native

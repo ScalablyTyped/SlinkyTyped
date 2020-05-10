@@ -1,9 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.beakTypesMod.IBeakProps
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`10`
-import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`18`
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,11 +11,11 @@ import scala.scalajs.js.annotation._
 object beakMod extends js.Object {
   @js.native
   class Beak protected ()
-    extends BaseComponent[IBeakProps, js.Object] {
+    extends Component[IBeakProps, js.Object, js.Any] {
     def this(props: IBeakProps) = this()
   }
   
-  val BEAK_HEIGHT: `10` = js.native
-  val BEAK_WIDTH: `18` = js.native
+  val BEAK_HEIGHT: /* 10 */ Double = js.native
+  val BEAK_WIDTH: /* 18 */ Double = js.native
 }
 

@@ -34,16 +34,53 @@ trait SchemaGoogleCloudDialogflowV2SessionEntityType extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2SessionEntityType {
   @scala.inline
-  def apply(
-    entities: js.Array[SchemaGoogleCloudDialogflowV2EntityTypeEntity] = null,
-    entityOverrideMode: String = null,
-    name: String = null
-  ): SchemaGoogleCloudDialogflowV2SessionEntityType = {
+  def apply(): SchemaGoogleCloudDialogflowV2SessionEntityType = {
     val __obj = js.Dynamic.literal()
-    if (entities != null) __obj.updateDynamic("entities")(entities.asInstanceOf[js.Any])
-    if (entityOverrideMode != null) __obj.updateDynamic("entityOverrideMode")(entityOverrideMode.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2SessionEntityType]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2SessionEntityTypeOps[Self <: SchemaGoogleCloudDialogflowV2SessionEntityType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEntities(value: js.Array[SchemaGoogleCloudDialogflowV2EntityTypeEntity]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntityOverrideMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityOverrideMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntityOverrideMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entityOverrideMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

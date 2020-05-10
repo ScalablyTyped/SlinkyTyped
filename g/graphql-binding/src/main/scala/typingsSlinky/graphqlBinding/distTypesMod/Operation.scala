@@ -13,12 +13,10 @@ trait Operation extends js.Object
 
 object Operation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def mutation: typingsSlinky.graphqlBinding.graphqlBindingStrings.mutation = "mutation".asInstanceOf[typingsSlinky.graphqlBinding.graphqlBindingStrings.mutation]
   @scala.inline
-  def mutation: typingsSlinky.graphqlBinding.graphqlBindingStrings.mutation = this.cast("mutation")
+  def query: typingsSlinky.graphqlBinding.graphqlBindingStrings.query = "query".asInstanceOf[typingsSlinky.graphqlBinding.graphqlBindingStrings.query]
   @scala.inline
-  def query: typingsSlinky.graphqlBinding.graphqlBindingStrings.query = this.cast("query")
-  @scala.inline
-  def subscription: typingsSlinky.graphqlBinding.graphqlBindingStrings.subscription = this.cast("subscription")
+  def subscription: typingsSlinky.graphqlBinding.graphqlBindingStrings.subscription = "subscription".asInstanceOf[typingsSlinky.graphqlBinding.graphqlBindingStrings.subscription]
 }
 

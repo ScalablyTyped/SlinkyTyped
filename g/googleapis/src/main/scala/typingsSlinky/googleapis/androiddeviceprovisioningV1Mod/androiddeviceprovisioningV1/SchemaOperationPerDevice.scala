@@ -30,18 +30,65 @@ trait SchemaOperationPerDevice extends js.Object {
 
 object SchemaOperationPerDevice {
   @scala.inline
-  def apply(
-    claim: SchemaPartnerClaim = null,
-    result: SchemaPerDeviceStatusInBatch = null,
-    unclaim: SchemaPartnerUnclaim = null,
-    updateMetadata: SchemaUpdateMetadataArguments = null
-  ): SchemaOperationPerDevice = {
+  def apply(): SchemaOperationPerDevice = {
     val __obj = js.Dynamic.literal()
-    if (claim != null) __obj.updateDynamic("claim")(claim.asInstanceOf[js.Any])
-    if (result != null) __obj.updateDynamic("result")(result.asInstanceOf[js.Any])
-    if (unclaim != null) __obj.updateDynamic("unclaim")(unclaim.asInstanceOf[js.Any])
-    if (updateMetadata != null) __obj.updateDynamic("updateMetadata")(updateMetadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaOperationPerDevice]
   }
+  @scala.inline
+  implicit class SchemaOperationPerDeviceOps[Self <: SchemaOperationPerDevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClaim(value: SchemaPartnerClaim): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClaim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("claim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResult(value: SchemaPerDeviceStatusInBatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnclaim(value: SchemaPartnerUnclaim): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unclaim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnclaim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unclaim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateMetadata(value: SchemaUpdateMetadataArguments): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMetadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateMetadata")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

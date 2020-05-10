@@ -25,16 +25,53 @@ trait NotificationState extends js.Object {
 
 object NotificationState {
   @scala.inline
-  def apply(
-    groupNames: Input[js.Array[Input[String]]] = null,
-    notifications: Input[js.Array[Input[NotificationType]]] = null,
-    topicArn: Input[String] = null
-  ): NotificationState = {
+  def apply(): NotificationState = {
     val __obj = js.Dynamic.literal()
-    if (groupNames != null) __obj.updateDynamic("groupNames")(groupNames.asInstanceOf[js.Any])
-    if (notifications != null) __obj.updateDynamic("notifications")(notifications.asInstanceOf[js.Any])
-    if (topicArn != null) __obj.updateDynamic("topicArn")(topicArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationState]
   }
+  @scala.inline
+  implicit class NotificationStateOps[Self <: NotificationState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupNames(value: Input[js.Array[Input[String]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNotifications(value: Input[js.Array[Input[NotificationType]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNotifications: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifications")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTopicArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topicArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTopicArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topicArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

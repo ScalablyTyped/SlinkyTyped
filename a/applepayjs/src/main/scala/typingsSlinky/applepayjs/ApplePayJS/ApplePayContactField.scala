@@ -18,16 +18,14 @@ trait ApplePayContactField extends js.Object
 
 object ApplePayContactField {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def email: typingsSlinky.applepayjs.applepayjsStrings.email = "email".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.email]
   @scala.inline
-  def email: typingsSlinky.applepayjs.applepayjsStrings.email = this.cast("email")
+  def name: typingsSlinky.applepayjs.applepayjsStrings.name = "name".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.name]
   @scala.inline
-  def name: typingsSlinky.applepayjs.applepayjsStrings.name = this.cast("name")
+  def phone: typingsSlinky.applepayjs.applepayjsStrings.phone = "phone".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.phone]
   @scala.inline
-  def phone: typingsSlinky.applepayjs.applepayjsStrings.phone = this.cast("phone")
+  def phoneticName: typingsSlinky.applepayjs.applepayjsStrings.phoneticName = "phoneticName".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.phoneticName]
   @scala.inline
-  def phoneticName: typingsSlinky.applepayjs.applepayjsStrings.phoneticName = this.cast("phoneticName")
-  @scala.inline
-  def postalAddress: typingsSlinky.applepayjs.applepayjsStrings.postalAddress = this.cast("postalAddress")
+  def postalAddress: typingsSlinky.applepayjs.applepayjsStrings.postalAddress = "postalAddress".asInstanceOf[typingsSlinky.applepayjs.applepayjsStrings.postalAddress]
 }
 

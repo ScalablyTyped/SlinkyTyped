@@ -7,11 +7,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined zchat-browser.zchat-browser.ChatEvent.BaseChatEventData & {  type  :'chat.request.rating'} */
+@js.native
 trait BaseChatEventDatatypechatTimestamp extends ChatEventData {
-  var display_name: String
-  var nick: String
-  var time_stamp: Double
-  var `type`: chatDotrequestDotrating
+  var display_name: String = js.native
+  var nick: String = js.native
+  var time_stamp: Double = js.native
+  var `type`: chatDotrequestDotrating = js.native
 }
 
 object BaseChatEventDatatypechatTimestamp {
@@ -21,5 +22,37 @@ object BaseChatEventDatatypechatTimestamp {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseChatEventDatatypechatTimestamp]
   }
+  @scala.inline
+  implicit class BaseChatEventDatatypechatTimestampOps[Self <: BaseChatEventDatatypechatTimestamp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplay_name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display_name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNick(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTime_stamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time_stamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: chatDotrequestDotrating): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

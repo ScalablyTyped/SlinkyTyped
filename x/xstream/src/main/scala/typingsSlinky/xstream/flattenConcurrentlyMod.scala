@@ -1,6 +1,5 @@
 package typingsSlinky.xstream
 
-import typingsSlinky.xstream.mod.InternalListener
 import typingsSlinky.xstream.mod.MemoryStream
 import typingsSlinky.xstream.mod.Operator
 import typingsSlinky.xstream.mod.Stream
@@ -15,24 +14,6 @@ object flattenConcurrentlyMod extends js.Object {
   class FlattenConcOperator[T] protected () extends Operator[Stream[T], T] {
     def this(ins: Stream[Stream[T]]) = this()
     var active: js.Any = js.native
-    /* CompleteClass */
-    override var ins: Stream[Stream[T]] = js.native
-    /* CompleteClass */
-    override var out: Stream[T] = js.native
-    /* CompleteClass */
-    override var `type`: String = js.native
-    /* CompleteClass */
-    override def _c(): Unit = js.native
-    /* CompleteClass */
-    override def _e(err: js.Any): Unit = js.native
-    /* CompleteClass */
-    override def _n(v: Stream[T]): Unit = js.native
-    /* CompleteClass */
-    override def _start(listener: InternalListener[T]): Unit = js.native
-    /* CompleteClass */
-    override def _start(out: Stream[T]): Unit = js.native
-    /* CompleteClass */
-    override def _stop(): Unit = js.native
     def less(): Unit = js.native
   }
   

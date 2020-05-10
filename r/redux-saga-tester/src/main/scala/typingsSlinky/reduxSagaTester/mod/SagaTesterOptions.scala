@@ -10,35 +10,109 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SagaTesterOptions[StateType] extends js.Object {
   var combineReducers: js.UndefOr[
     js.Function1[/* map */ ReducersMapObject[_, Action[_]], Reducer[StateType, AnyAction]]
-  ] = js.undefined
-  var ignoreReduxActions: js.UndefOr[Boolean] = js.undefined
-  var initialState: js.UndefOr[StateType] = js.undefined
-  var middlewares: js.UndefOr[js.Array[Middleware[js.Object, _, Dispatch[AnyAction]]]] = js.undefined
-  var options: js.UndefOr[js.Object] = js.undefined
-  var reducers: js.UndefOr[(ReducersMapObject[_, Action[_]]) | (Reducer[StateType, AnyAction])] = js.undefined
+  ] = js.native
+  var ignoreReduxActions: js.UndefOr[Boolean] = js.native
+  var initialState: js.UndefOr[StateType] = js.native
+  var middlewares: js.UndefOr[js.Array[Middleware[js.Object, _, Dispatch[AnyAction]]]] = js.native
+  var options: js.UndefOr[js.Object] = js.native
+  var reducers: js.UndefOr[(ReducersMapObject[_, Action[_]]) | (Reducer[StateType, AnyAction])] = js.native
 }
 
 object SagaTesterOptions {
   @scala.inline
-  def apply[StateType](
-    combineReducers: /* map */ ReducersMapObject[_, Action[_]] => Reducer[StateType, AnyAction] = null,
-    ignoreReduxActions: js.UndefOr[Boolean] = js.undefined,
-    initialState: StateType = null,
-    middlewares: js.Array[Middleware[js.Object, _, Dispatch[AnyAction]]] = null,
-    options: js.Object = null,
-    reducers: (ReducersMapObject[_, Action[_]]) | (Reducer[StateType, AnyAction]) = null
-  ): SagaTesterOptions[StateType] = {
+  def apply[StateType](): SagaTesterOptions[StateType] = {
     val __obj = js.Dynamic.literal()
-    if (combineReducers != null) __obj.updateDynamic("combineReducers")(js.Any.fromFunction1(combineReducers))
-    if (!js.isUndefined(ignoreReduxActions)) __obj.updateDynamic("ignoreReduxActions")(ignoreReduxActions.asInstanceOf[js.Any])
-    if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
-    if (middlewares != null) __obj.updateDynamic("middlewares")(middlewares.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (reducers != null) __obj.updateDynamic("reducers")(reducers.asInstanceOf[js.Any])
     __obj.asInstanceOf[SagaTesterOptions[StateType]]
   }
+  @scala.inline
+  implicit class SagaTesterOptionsOps[Self[statetype] <: SagaTesterOptions[statetype], StateType] (val x: Self[StateType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[StateType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[StateType]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[StateType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[StateType] with Other]
+    @scala.inline
+    def withCombineReducers(value: /* map */ ReducersMapObject[_, Action[_]] => Reducer[StateType, AnyAction]): Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("combineReducers")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCombineReducers: Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("combineReducers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnoreReduxActions(value: Boolean): Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreReduxActions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnoreReduxActions: Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreReduxActions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialState(value: StateType): Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialState: Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMiddlewares(value: js.Array[Middleware[js.Object, _, Dispatch[AnyAction]]]): Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middlewares")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMiddlewares: Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("middlewares")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: js.Object): Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReducersFunction2(value: (/* state */ js.UndefOr[StateType], AnyAction) => StateType): Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reducers")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withReducers(value: (ReducersMapObject[_, Action[_]]) | (Reducer[StateType, AnyAction])): Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reducers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReducers: Self[StateType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reducers")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

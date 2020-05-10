@@ -1,7 +1,6 @@
 package typingsSlinky.reactReconciler.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +41,7 @@ trait Reconciler[Instance, TextInstance, Container, PublicInstance] extends js.O
   def updateContainer(
     element: ReactNodeList,
     container: OpaqueRoot,
-    parentComponent: Component[_, _, _],
+    parentComponent: ReactComponentClass[_],
     callback: js.Function0[js.UndefOr[Unit | Null]]
   ): ExpirationTime = js.native
   def updateContainerAtExpirationTime(
@@ -62,7 +61,7 @@ trait Reconciler[Instance, TextInstance, Container, PublicInstance] extends js.O
   def updateContainerAtExpirationTime(
     element: ReactNodeList,
     container: OpaqueRoot,
-    parentComponent: Component[_, _, _],
+    parentComponent: ReactComponentClass[_],
     expirationTime: ExpirationTime,
     callback: js.Function0[js.UndefOr[Unit | Null]]
   ): ExpirationTime = js.native

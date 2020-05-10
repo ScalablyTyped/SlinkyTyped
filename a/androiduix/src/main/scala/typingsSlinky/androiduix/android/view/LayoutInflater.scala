@@ -1,7 +1,7 @@
 package typingsSlinky.androiduix.android.view
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.androiduix.android.content.Context
-import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

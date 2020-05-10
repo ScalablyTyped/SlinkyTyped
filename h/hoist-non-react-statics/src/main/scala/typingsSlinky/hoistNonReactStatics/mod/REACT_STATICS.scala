@@ -5,18 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait REACT_STATICS extends js.Object {
-  var childContextTypes: `true`
-  var contextType: `true`
-  var contextTypes: `true`
-  var defaultProps: `true`
-  var displayName: `true`
-  var getDefaultProps: `true`
-  var getDerivedStateFromError: `true`
-  var getDerivedStateFromProps: `true`
-  var mixins: `true`
-  var propTypes: `true`
-  var `type`: `true`
+  var childContextTypes: `true` = js.native
+  var contextType: `true` = js.native
+  var contextTypes: `true` = js.native
+  var defaultProps: `true` = js.native
+  var displayName: `true` = js.native
+  var getDefaultProps: `true` = js.native
+  var getDerivedStateFromError: `true` = js.native
+  var getDerivedStateFromProps: `true` = js.native
+  var mixins: `true` = js.native
+  var propTypes: `true` = js.native
+  var `type`: `true` = js.native
 }
 
 object REACT_STATICS {
@@ -38,5 +39,79 @@ object REACT_STATICS {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[REACT_STATICS]
   }
+  @scala.inline
+  implicit class REACT_STATICSOps[Self <: REACT_STATICS] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildContextTypes(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childContextTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContextType(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContextTypes(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultProps(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetDefaultProps(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefaultProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetDerivedStateFromError(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDerivedStateFromError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetDerivedStateFromProps(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDerivedStateFromProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMixins(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mixins")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPropTypes(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

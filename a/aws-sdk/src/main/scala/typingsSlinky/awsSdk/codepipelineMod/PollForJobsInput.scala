@@ -22,11 +22,47 @@ trait PollForJobsInput extends js.Object {
 
 object PollForJobsInput {
   @scala.inline
-  def apply(actionTypeId: ActionTypeId, maxBatchSize: Int | Double = null, queryParam: QueryParamMap = null): PollForJobsInput = {
+  def apply(actionTypeId: ActionTypeId): PollForJobsInput = {
     val __obj = js.Dynamic.literal(actionTypeId = actionTypeId.asInstanceOf[js.Any])
-    if (maxBatchSize != null) __obj.updateDynamic("maxBatchSize")(maxBatchSize.asInstanceOf[js.Any])
-    if (queryParam != null) __obj.updateDynamic("queryParam")(queryParam.asInstanceOf[js.Any])
     __obj.asInstanceOf[PollForJobsInput]
   }
+  @scala.inline
+  implicit class PollForJobsInputOps[Self <: PollForJobsInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionTypeId(value: ActionTypeId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionTypeId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxBatchSize(value: MaxBatchSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBatchSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxBatchSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxBatchSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryParam(value: QueryParamMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParam")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryParam: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParam")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

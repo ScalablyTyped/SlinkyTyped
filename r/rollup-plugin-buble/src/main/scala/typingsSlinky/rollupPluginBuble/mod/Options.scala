@@ -1,44 +1,78 @@
 package typingsSlinky.rollupPluginBuble.mod
 
-import typingsSlinky.buble.AnonArrow
-import typingsSlinky.buble.AnonChrome
 import typingsSlinky.buble.mod.TransformOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends TransformOptions {
-  var exclude: js.UndefOr[(js.Array[String | js.RegExp]) | String | js.RegExp | Null] = js.undefined
+  var exclude: js.UndefOr[(js.Array[String | js.RegExp]) | String | js.RegExp | Null] = js.native
   // Every files will be parsed by default, but you can specify which files to include or exclude
-  var include: js.UndefOr[(js.Array[String | js.RegExp]) | String | js.RegExp | Null] = js.undefined
+  var include: js.UndefOr[(js.Array[String | js.RegExp]) | String | js.RegExp | Null] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    exclude: (js.Array[String | js.RegExp]) | String | js.RegExp = null,
-    file: String = null,
-    include: (js.Array[String | js.RegExp]) | String | js.RegExp = null,
-    includeContent: js.UndefOr[Boolean] = js.undefined,
-    jsx: String = null,
-    namedFunctionExpressions: js.UndefOr[Boolean] = js.undefined,
-    objectAssign: String | Boolean = null,
-    source: String = null,
-    target: AnonChrome = null,
-    transforms: AnonArrow = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (exclude != null) __obj.updateDynamic("exclude")(exclude.asInstanceOf[js.Any])
-    if (file != null) __obj.updateDynamic("file")(file.asInstanceOf[js.Any])
-    if (include != null) __obj.updateDynamic("include")(include.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeContent)) __obj.updateDynamic("includeContent")(includeContent.asInstanceOf[js.Any])
-    if (jsx != null) __obj.updateDynamic("jsx")(jsx.asInstanceOf[js.Any])
-    if (!js.isUndefined(namedFunctionExpressions)) __obj.updateDynamic("namedFunctionExpressions")(namedFunctionExpressions.asInstanceOf[js.Any])
-    if (objectAssign != null) __obj.updateDynamic("objectAssign")(objectAssign.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (transforms != null) __obj.updateDynamic("transforms")(transforms.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExcludeRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExclude(value: (js.Array[String | js.RegExp]) | String | js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExcludeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclude")(null)
+        ret
+    }
+    @scala.inline
+    def withIncludeRegExp(value: js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInclude(value: (js.Array[String | js.RegExp]) | String | js.RegExp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclude: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("include")(null)
+        ret
+    }
+  }
+  
 }
 

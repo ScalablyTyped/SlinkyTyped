@@ -16,7 +16,6 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.recharts.rechartsStrings.direction
   - typingsSlinky.recharts.rechartsStrings.display
   - typingsSlinky.recharts.rechartsStrings.dominantBaseline
-  - typingsSlinky.recharts.rechartsStrings.enableBackground
   - typingsSlinky.recharts.rechartsStrings.fill
   - typingsSlinky.recharts.rechartsStrings.fillRule
   - typingsSlinky.recharts.rechartsStrings.filter
@@ -27,7 +26,6 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.recharts.rechartsStrings.fontStretch
   - typingsSlinky.recharts.rechartsStrings.fontStyle
   - typingsSlinky.recharts.rechartsStrings.fontVariant
-  - typingsSlinky.recharts.rechartsStrings.glyphOrientationHorizontal
   - typingsSlinky.recharts.rechartsStrings.glyphOrientationVertical
   - typingsSlinky.recharts.rechartsStrings.letterSpacing
   - typingsSlinky.recharts.rechartsStrings.lightingColor
@@ -52,90 +50,84 @@ trait PickedCSSStyleDeclarationKeys extends js.Object
 
 object PickedCSSStyleDeclarationKeys {
   @scala.inline
-  def alignmentBaseline: typingsSlinky.recharts.rechartsStrings.alignmentBaseline = this.cast("alignmentBaseline")
+  def alignmentBaseline: typingsSlinky.recharts.rechartsStrings.alignmentBaseline = "alignmentBaseline".asInstanceOf[typingsSlinky.recharts.rechartsStrings.alignmentBaseline]
   @scala.inline
-  def baselineShift: typingsSlinky.recharts.rechartsStrings.baselineShift = this.cast("baselineShift")
+  def baselineShift: typingsSlinky.recharts.rechartsStrings.baselineShift = "baselineShift".asInstanceOf[typingsSlinky.recharts.rechartsStrings.baselineShift]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clip: typingsSlinky.recharts.rechartsStrings.clip = "clip".asInstanceOf[typingsSlinky.recharts.rechartsStrings.clip]
   @scala.inline
-  def clip: typingsSlinky.recharts.rechartsStrings.clip = this.cast("clip")
+  def clipPath: typingsSlinky.recharts.rechartsStrings.clipPath = "clipPath".asInstanceOf[typingsSlinky.recharts.rechartsStrings.clipPath]
   @scala.inline
-  def clipPath: typingsSlinky.recharts.rechartsStrings.clipPath = this.cast("clipPath")
+  def clipRule: typingsSlinky.recharts.rechartsStrings.clipRule = "clipRule".asInstanceOf[typingsSlinky.recharts.rechartsStrings.clipRule]
   @scala.inline
-  def clipRule: typingsSlinky.recharts.rechartsStrings.clipRule = this.cast("clipRule")
+  def color: typingsSlinky.recharts.rechartsStrings.color = "color".asInstanceOf[typingsSlinky.recharts.rechartsStrings.color]
   @scala.inline
-  def color: typingsSlinky.recharts.rechartsStrings.color = this.cast("color")
+  def colorInterpolationFilters: typingsSlinky.recharts.rechartsStrings.colorInterpolationFilters = "colorInterpolationFilters".asInstanceOf[typingsSlinky.recharts.rechartsStrings.colorInterpolationFilters]
   @scala.inline
-  def colorInterpolationFilters: typingsSlinky.recharts.rechartsStrings.colorInterpolationFilters = this.cast("colorInterpolationFilters")
+  def cursor: typingsSlinky.recharts.rechartsStrings.cursor = "cursor".asInstanceOf[typingsSlinky.recharts.rechartsStrings.cursor]
   @scala.inline
-  def cursor: typingsSlinky.recharts.rechartsStrings.cursor = this.cast("cursor")
+  def direction: typingsSlinky.recharts.rechartsStrings.direction = "direction".asInstanceOf[typingsSlinky.recharts.rechartsStrings.direction]
   @scala.inline
-  def direction: typingsSlinky.recharts.rechartsStrings.direction = this.cast("direction")
+  def display: typingsSlinky.recharts.rechartsStrings.display = "display".asInstanceOf[typingsSlinky.recharts.rechartsStrings.display]
   @scala.inline
-  def display: typingsSlinky.recharts.rechartsStrings.display = this.cast("display")
+  def dominantBaseline: typingsSlinky.recharts.rechartsStrings.dominantBaseline = "dominantBaseline".asInstanceOf[typingsSlinky.recharts.rechartsStrings.dominantBaseline]
   @scala.inline
-  def dominantBaseline: typingsSlinky.recharts.rechartsStrings.dominantBaseline = this.cast("dominantBaseline")
+  def fill: typingsSlinky.recharts.rechartsStrings.fill = "fill".asInstanceOf[typingsSlinky.recharts.rechartsStrings.fill]
   @scala.inline
-  def enableBackground: typingsSlinky.recharts.rechartsStrings.enableBackground = this.cast("enableBackground")
+  def fillRule: typingsSlinky.recharts.rechartsStrings.fillRule = "fillRule".asInstanceOf[typingsSlinky.recharts.rechartsStrings.fillRule]
   @scala.inline
-  def fill: typingsSlinky.recharts.rechartsStrings.fill = this.cast("fill")
+  def filter: typingsSlinky.recharts.rechartsStrings.filter = "filter".asInstanceOf[typingsSlinky.recharts.rechartsStrings.filter]
   @scala.inline
-  def fillRule: typingsSlinky.recharts.rechartsStrings.fillRule = this.cast("fillRule")
+  def floodColor: typingsSlinky.recharts.rechartsStrings.floodColor = "floodColor".asInstanceOf[typingsSlinky.recharts.rechartsStrings.floodColor]
   @scala.inline
-  def filter: typingsSlinky.recharts.rechartsStrings.filter = this.cast("filter")
+  def floodOpacity: typingsSlinky.recharts.rechartsStrings.floodOpacity = "floodOpacity".asInstanceOf[typingsSlinky.recharts.rechartsStrings.floodOpacity]
   @scala.inline
-  def floodColor: typingsSlinky.recharts.rechartsStrings.floodColor = this.cast("floodColor")
+  def font: typingsSlinky.recharts.rechartsStrings.font = "font".asInstanceOf[typingsSlinky.recharts.rechartsStrings.font]
   @scala.inline
-  def floodOpacity: typingsSlinky.recharts.rechartsStrings.floodOpacity = this.cast("floodOpacity")
+  def fontFamily: typingsSlinky.recharts.rechartsStrings.fontFamily = "fontFamily".asInstanceOf[typingsSlinky.recharts.rechartsStrings.fontFamily]
   @scala.inline
-  def font: typingsSlinky.recharts.rechartsStrings.font = this.cast("font")
+  def fontStretch: typingsSlinky.recharts.rechartsStrings.fontStretch = "fontStretch".asInstanceOf[typingsSlinky.recharts.rechartsStrings.fontStretch]
   @scala.inline
-  def fontFamily: typingsSlinky.recharts.rechartsStrings.fontFamily = this.cast("fontFamily")
+  def fontStyle: typingsSlinky.recharts.rechartsStrings.fontStyle = "fontStyle".asInstanceOf[typingsSlinky.recharts.rechartsStrings.fontStyle]
   @scala.inline
-  def fontStretch: typingsSlinky.recharts.rechartsStrings.fontStretch = this.cast("fontStretch")
+  def fontVariant: typingsSlinky.recharts.rechartsStrings.fontVariant = "fontVariant".asInstanceOf[typingsSlinky.recharts.rechartsStrings.fontVariant]
   @scala.inline
-  def fontStyle: typingsSlinky.recharts.rechartsStrings.fontStyle = this.cast("fontStyle")
+  def glyphOrientationVertical: typingsSlinky.recharts.rechartsStrings.glyphOrientationVertical = "glyphOrientationVertical".asInstanceOf[typingsSlinky.recharts.rechartsStrings.glyphOrientationVertical]
   @scala.inline
-  def fontVariant: typingsSlinky.recharts.rechartsStrings.fontVariant = this.cast("fontVariant")
+  def letterSpacing: typingsSlinky.recharts.rechartsStrings.letterSpacing = "letterSpacing".asInstanceOf[typingsSlinky.recharts.rechartsStrings.letterSpacing]
   @scala.inline
-  def glyphOrientationHorizontal: typingsSlinky.recharts.rechartsStrings.glyphOrientationHorizontal = this.cast("glyphOrientationHorizontal")
+  def lightingColor: typingsSlinky.recharts.rechartsStrings.lightingColor = "lightingColor".asInstanceOf[typingsSlinky.recharts.rechartsStrings.lightingColor]
   @scala.inline
-  def glyphOrientationVertical: typingsSlinky.recharts.rechartsStrings.glyphOrientationVertical = this.cast("glyphOrientationVertical")
+  def markerEnd: typingsSlinky.recharts.rechartsStrings.markerEnd = "markerEnd".asInstanceOf[typingsSlinky.recharts.rechartsStrings.markerEnd]
   @scala.inline
-  def letterSpacing: typingsSlinky.recharts.rechartsStrings.letterSpacing = this.cast("letterSpacing")
+  def markerMid: typingsSlinky.recharts.rechartsStrings.markerMid = "markerMid".asInstanceOf[typingsSlinky.recharts.rechartsStrings.markerMid]
   @scala.inline
-  def lightingColor: typingsSlinky.recharts.rechartsStrings.lightingColor = this.cast("lightingColor")
+  def markerStart: typingsSlinky.recharts.rechartsStrings.markerStart = "markerStart".asInstanceOf[typingsSlinky.recharts.rechartsStrings.markerStart]
   @scala.inline
-  def markerEnd: typingsSlinky.recharts.rechartsStrings.markerEnd = this.cast("markerEnd")
+  def mask: typingsSlinky.recharts.rechartsStrings.mask = "mask".asInstanceOf[typingsSlinky.recharts.rechartsStrings.mask]
   @scala.inline
-  def markerMid: typingsSlinky.recharts.rechartsStrings.markerMid = this.cast("markerMid")
+  def overflow: typingsSlinky.recharts.rechartsStrings.overflow = "overflow".asInstanceOf[typingsSlinky.recharts.rechartsStrings.overflow]
   @scala.inline
-  def markerStart: typingsSlinky.recharts.rechartsStrings.markerStart = this.cast("markerStart")
+  def pointerEvents: typingsSlinky.recharts.rechartsStrings.pointerEvents = "pointerEvents".asInstanceOf[typingsSlinky.recharts.rechartsStrings.pointerEvents]
   @scala.inline
-  def mask: typingsSlinky.recharts.rechartsStrings.mask = this.cast("mask")
+  def stopColor: typingsSlinky.recharts.rechartsStrings.stopColor = "stopColor".asInstanceOf[typingsSlinky.recharts.rechartsStrings.stopColor]
   @scala.inline
-  def overflow: typingsSlinky.recharts.rechartsStrings.overflow = this.cast("overflow")
+  def strokeDasharray: typingsSlinky.recharts.rechartsStrings.strokeDasharray = "strokeDasharray".asInstanceOf[typingsSlinky.recharts.rechartsStrings.strokeDasharray]
   @scala.inline
-  def pointerEvents: typingsSlinky.recharts.rechartsStrings.pointerEvents = this.cast("pointerEvents")
+  def strokeLinecap: typingsSlinky.recharts.rechartsStrings.strokeLinecap = "strokeLinecap".asInstanceOf[typingsSlinky.recharts.rechartsStrings.strokeLinecap]
   @scala.inline
-  def stopColor: typingsSlinky.recharts.rechartsStrings.stopColor = this.cast("stopColor")
+  def strokeLinejoin: typingsSlinky.recharts.rechartsStrings.strokeLinejoin = "strokeLinejoin".asInstanceOf[typingsSlinky.recharts.rechartsStrings.strokeLinejoin]
   @scala.inline
-  def strokeDasharray: typingsSlinky.recharts.rechartsStrings.strokeDasharray = this.cast("strokeDasharray")
+  def textAnchor: typingsSlinky.recharts.rechartsStrings.textAnchor = "textAnchor".asInstanceOf[typingsSlinky.recharts.rechartsStrings.textAnchor]
   @scala.inline
-  def strokeLinecap: typingsSlinky.recharts.rechartsStrings.strokeLinecap = this.cast("strokeLinecap")
+  def textDecoration: typingsSlinky.recharts.rechartsStrings.textDecoration = "textDecoration".asInstanceOf[typingsSlinky.recharts.rechartsStrings.textDecoration]
   @scala.inline
-  def strokeLinejoin: typingsSlinky.recharts.rechartsStrings.strokeLinejoin = this.cast("strokeLinejoin")
+  def transform: typingsSlinky.recharts.rechartsStrings.transform = "transform".asInstanceOf[typingsSlinky.recharts.rechartsStrings.transform]
   @scala.inline
-  def textAnchor: typingsSlinky.recharts.rechartsStrings.textAnchor = this.cast("textAnchor")
+  def unicodeBidi: typingsSlinky.recharts.rechartsStrings.unicodeBidi = "unicodeBidi".asInstanceOf[typingsSlinky.recharts.rechartsStrings.unicodeBidi]
   @scala.inline
-  def textDecoration: typingsSlinky.recharts.rechartsStrings.textDecoration = this.cast("textDecoration")
+  def visibility: typingsSlinky.recharts.rechartsStrings.visibility = "visibility".asInstanceOf[typingsSlinky.recharts.rechartsStrings.visibility]
   @scala.inline
-  def transform: typingsSlinky.recharts.rechartsStrings.transform = this.cast("transform")
-  @scala.inline
-  def unicodeBidi: typingsSlinky.recharts.rechartsStrings.unicodeBidi = this.cast("unicodeBidi")
-  @scala.inline
-  def visibility: typingsSlinky.recharts.rechartsStrings.visibility = this.cast("visibility")
-  @scala.inline
-  def writingMode: typingsSlinky.recharts.rechartsStrings.writingMode = this.cast("writingMode")
+  def writingMode: typingsSlinky.recharts.rechartsStrings.writingMode = "writingMode".asInstanceOf[typingsSlinky.recharts.rechartsStrings.writingMode]
 }
 

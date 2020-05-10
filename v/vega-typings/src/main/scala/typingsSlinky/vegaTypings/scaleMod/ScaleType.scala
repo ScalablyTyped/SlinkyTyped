@@ -26,38 +26,36 @@ trait ScaleType extends js.Object
 
 object ScaleType {
   @scala.inline
-  def band: typingsSlinky.vegaTypings.vegaTypingsStrings.band = this.cast("band")
+  def band: typingsSlinky.vegaTypings.vegaTypingsStrings.band = "band".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.band]
   @scala.inline
-  def `bin-ordinal`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bin-ordinal` = this.cast("bin-ordinal")
+  def `bin-ordinal`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bin-ordinal` = "bin-ordinal".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bin-ordinal`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def identity: typingsSlinky.vegaTypings.vegaTypingsStrings.identity = "identity".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.identity]
   @scala.inline
-  def identity: typingsSlinky.vegaTypings.vegaTypingsStrings.identity = this.cast("identity")
+  def linear: typingsSlinky.vegaTypings.vegaTypingsStrings.linear = "linear".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.linear]
   @scala.inline
-  def linear: typingsSlinky.vegaTypings.vegaTypingsStrings.linear = this.cast("linear")
+  def log: typingsSlinky.vegaTypings.vegaTypingsStrings.log = "log".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.log]
   @scala.inline
-  def log: typingsSlinky.vegaTypings.vegaTypingsStrings.log = this.cast("log")
+  def ordinal: typingsSlinky.vegaTypings.vegaTypingsStrings.ordinal = "ordinal".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.ordinal]
   @scala.inline
-  def ordinal: typingsSlinky.vegaTypings.vegaTypingsStrings.ordinal = this.cast("ordinal")
+  def point: typingsSlinky.vegaTypings.vegaTypingsStrings.point = "point".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.point]
   @scala.inline
-  def point: typingsSlinky.vegaTypings.vegaTypingsStrings.point = this.cast("point")
+  def pow: typingsSlinky.vegaTypings.vegaTypingsStrings.pow = "pow".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.pow]
   @scala.inline
-  def pow: typingsSlinky.vegaTypings.vegaTypingsStrings.pow = this.cast("pow")
+  def quantile: typingsSlinky.vegaTypings.vegaTypingsStrings.quantile = "quantile".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.quantile]
   @scala.inline
-  def quantile: typingsSlinky.vegaTypings.vegaTypingsStrings.quantile = this.cast("quantile")
+  def quantize: typingsSlinky.vegaTypings.vegaTypingsStrings.quantize = "quantize".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.quantize]
   @scala.inline
-  def quantize: typingsSlinky.vegaTypings.vegaTypingsStrings.quantize = this.cast("quantize")
+  def sequential: typingsSlinky.vegaTypings.vegaTypingsStrings.sequential = "sequential".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.sequential]
   @scala.inline
-  def sequential: typingsSlinky.vegaTypings.vegaTypingsStrings.sequential = this.cast("sequential")
+  def sqrt: typingsSlinky.vegaTypings.vegaTypingsStrings.sqrt = "sqrt".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.sqrt]
   @scala.inline
-  def sqrt: typingsSlinky.vegaTypings.vegaTypingsStrings.sqrt = this.cast("sqrt")
+  def symlog: typingsSlinky.vegaTypings.vegaTypingsStrings.symlog = "symlog".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.symlog]
   @scala.inline
-  def symlog: typingsSlinky.vegaTypings.vegaTypingsStrings.symlog = this.cast("symlog")
+  def threshold: typingsSlinky.vegaTypings.vegaTypingsStrings.threshold = "threshold".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.threshold]
   @scala.inline
-  def threshold: typingsSlinky.vegaTypings.vegaTypingsStrings.threshold = this.cast("threshold")
+  def time: typingsSlinky.vegaTypings.vegaTypingsStrings.time = "time".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.time]
   @scala.inline
-  def time: typingsSlinky.vegaTypings.vegaTypingsStrings.time = this.cast("time")
-  @scala.inline
-  def utc: typingsSlinky.vegaTypings.vegaTypingsStrings.utc = this.cast("utc")
+  def utc: typingsSlinky.vegaTypings.vegaTypingsStrings.utc = "utc".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.utc]
 }
 

@@ -18,10 +18,35 @@ trait ContentTypeProfileConfig extends js.Object {
 
 object ContentTypeProfileConfig {
   @scala.inline
-  def apply(ForwardWhenContentTypeIsUnknown: Boolean, ContentTypeProfiles: ContentTypeProfiles = null): ContentTypeProfileConfig = {
+  def apply(ForwardWhenContentTypeIsUnknown: Boolean): ContentTypeProfileConfig = {
     val __obj = js.Dynamic.literal(ForwardWhenContentTypeIsUnknown = ForwardWhenContentTypeIsUnknown.asInstanceOf[js.Any])
-    if (ContentTypeProfiles != null) __obj.updateDynamic("ContentTypeProfiles")(ContentTypeProfiles.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContentTypeProfileConfig]
   }
+  @scala.inline
+  implicit class ContentTypeProfileConfigOps[Self <: ContentTypeProfileConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForwardWhenContentTypeIsUnknown(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardWhenContentTypeIsUnknown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentTypeProfiles(value: ContentTypeProfiles): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentTypeProfiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentTypeProfiles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentTypeProfiles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

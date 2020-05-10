@@ -1,6 +1,5 @@
 package typingsSlinky.tokenizr.mod
 
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -82,9 +81,9 @@ trait Tokenizr extends js.Object {
   /**
     * Configure a tokenization rule
     */
-  def rule(pattern: RegExp, action: RuleAction): this.type = js.native
-  def rule(pattern: RegExp, action: RuleAction, name: String): this.type = js.native
-  def rule(state: String, pattern: RegExp, action: RuleAction, name: String): this.type = js.native
+  def rule(pattern: js.RegExp, action: RuleAction): this.type = js.native
+  def rule(pattern: js.RegExp, action: RuleAction, name: String): this.type = js.native
+  def rule(state: String, pattern: js.RegExp, action: RuleAction, name: String): this.type = js.native
   /**
     * Skip one or more tokens
     */

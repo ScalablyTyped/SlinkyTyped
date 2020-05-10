@@ -14,10 +14,29 @@ trait GetEbsEncryptionByDefaultResult extends js.Object {
 
 object GetEbsEncryptionByDefaultResult {
   @scala.inline
-  def apply(EbsEncryptionByDefault: js.UndefOr[scala.Boolean] = js.undefined): GetEbsEncryptionByDefaultResult = {
+  def apply(): GetEbsEncryptionByDefaultResult = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(EbsEncryptionByDefault)) __obj.updateDynamic("EbsEncryptionByDefault")(EbsEncryptionByDefault.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetEbsEncryptionByDefaultResult]
   }
+  @scala.inline
+  implicit class GetEbsEncryptionByDefaultResultOps[Self <: GetEbsEncryptionByDefaultResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEbsEncryptionByDefault(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsEncryptionByDefault")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEbsEncryptionByDefault: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EbsEncryptionByDefault")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

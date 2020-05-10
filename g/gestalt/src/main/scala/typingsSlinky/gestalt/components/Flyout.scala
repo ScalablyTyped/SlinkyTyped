@@ -1,10 +1,7 @@
 package typingsSlinky.gestalt.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.down
@@ -24,30 +21,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Flyout
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Flyout] {
+object Flyout {
   @JSImport("gestalt", "Flyout")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    anchor: ReactRef[_],
-    onDismiss: () => Unit,
-    color: blue | orange | red | white | darkGray = null,
-    idealDirection: up | right | down | left = null,
-    positionRelativeToAnchor: js.UndefOr[Boolean] = js.undefined,
-    size: xs | sm | md | lg | xl | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Flyout] = {
-    val __obj = js.Dynamic.literal(anchor = anchor.asInstanceOf[js.Any], onDismiss = js.Any.fromFunction0(onDismiss))
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (idealDirection != null) __obj.updateDynamic("idealDirection")(idealDirection.asInstanceOf[js.Any])
-    if (!js.isUndefined(positionRelativeToAnchor)) __obj.updateDynamic("positionRelativeToAnchor")(positionRelativeToAnchor.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Flyout] {
+    @scala.inline
+    def color(value: blue | orange | red | white | darkGray): this.type = set("color", value.asInstanceOf[js.Any])
+    @scala.inline
+    def idealDirection(value: up | right | down | left): this.type = set("idealDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positionRelativeToAnchor(value: Boolean): this.type = set("positionRelativeToAnchor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def shouldFocus(value: Boolean): this.type = set("shouldFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showCaret(value: Boolean): this.type = set("showCaret", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: xs | sm | md | lg | xl | Double): this.type = set("size", value.asInstanceOf[js.Any])
   }
-  type Props = FlyoutProps
+  
+  def withProps(p: FlyoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(anchor: js.Any, onDismiss: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(anchor = anchor.asInstanceOf[js.Any], onDismiss = js.Any.fromFunction0(onDismiss))
+    new Builder(js.Array(this.component, __props.asInstanceOf[FlyoutProps]))
+  }
 }
 

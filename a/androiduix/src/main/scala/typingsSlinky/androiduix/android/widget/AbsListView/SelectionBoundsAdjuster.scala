@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SelectionBoundsAdjuster extends js.Object {
-  def adjustListItemSelectionBounds(bounds: Rect): Unit
+  def adjustListItemSelectionBounds(bounds: Rect): Unit = js.native
 }
 
 object SelectionBoundsAdjuster {
   @scala.inline
   def apply(adjustListItemSelectionBounds: Rect => Unit): SelectionBoundsAdjuster = {
     val __obj = js.Dynamic.literal(adjustListItemSelectionBounds = js.Any.fromFunction1(adjustListItemSelectionBounds))
-  
     __obj.asInstanceOf[SelectionBoundsAdjuster]
   }
+  @scala.inline
+  implicit class SelectionBoundsAdjusterOps[Self <: SelectionBoundsAdjuster] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdjustListItemSelectionBounds(value: Rect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustListItemSelectionBounds")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait TeamVisibilityType extends js.Object
 
 object TeamVisibilityType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hiddenMembership: typingsSlinky.microsoftGraph.microsoftGraphStrings.hiddenMembership = "hiddenMembership".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.hiddenMembership]
   @scala.inline
-  def hiddenMembership: typingsSlinky.microsoftGraph.microsoftGraphStrings.hiddenMembership = this.cast("hiddenMembership")
+  def `private`: typingsSlinky.microsoftGraph.microsoftGraphStrings.`private` = "private".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.`private`]
   @scala.inline
-  def `private`: typingsSlinky.microsoftGraph.microsoftGraphStrings.`private` = this.cast("private")
+  def public: typingsSlinky.microsoftGraph.microsoftGraphStrings.public = "public".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.public]
   @scala.inline
-  def public: typingsSlinky.microsoftGraph.microsoftGraphStrings.public = this.cast("public")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

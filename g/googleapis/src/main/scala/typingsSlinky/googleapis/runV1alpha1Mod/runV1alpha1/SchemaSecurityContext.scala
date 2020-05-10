@@ -72,26 +72,113 @@ trait SchemaSecurityContext extends js.Object {
 
 object SchemaSecurityContext {
   @scala.inline
-  def apply(
-    allowPrivilegeEscalation: js.UndefOr[Boolean] = js.undefined,
-    capabilities: SchemaCapabilities = null,
-    privileged: js.UndefOr[Boolean] = js.undefined,
-    readOnlyRootFilesystem: js.UndefOr[Boolean] = js.undefined,
-    runAsGroup: String = null,
-    runAsNonRoot: js.UndefOr[Boolean] = js.undefined,
-    runAsUser: String = null,
-    seLinuxOptions: SchemaSELinuxOptions = null
-  ): SchemaSecurityContext = {
+  def apply(): SchemaSecurityContext = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allowPrivilegeEscalation)) __obj.updateDynamic("allowPrivilegeEscalation")(allowPrivilegeEscalation.asInstanceOf[js.Any])
-    if (capabilities != null) __obj.updateDynamic("capabilities")(capabilities.asInstanceOf[js.Any])
-    if (!js.isUndefined(privileged)) __obj.updateDynamic("privileged")(privileged.asInstanceOf[js.Any])
-    if (!js.isUndefined(readOnlyRootFilesystem)) __obj.updateDynamic("readOnlyRootFilesystem")(readOnlyRootFilesystem.asInstanceOf[js.Any])
-    if (runAsGroup != null) __obj.updateDynamic("runAsGroup")(runAsGroup.asInstanceOf[js.Any])
-    if (!js.isUndefined(runAsNonRoot)) __obj.updateDynamic("runAsNonRoot")(runAsNonRoot.asInstanceOf[js.Any])
-    if (runAsUser != null) __obj.updateDynamic("runAsUser")(runAsUser.asInstanceOf[js.Any])
-    if (seLinuxOptions != null) __obj.updateDynamic("seLinuxOptions")(seLinuxOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecurityContext]
   }
+  @scala.inline
+  implicit class SchemaSecurityContextOps[Self <: SchemaSecurityContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowPrivilegeEscalation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPrivilegeEscalation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowPrivilegeEscalation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowPrivilegeEscalation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCapabilities(value: SchemaCapabilities): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapabilities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivileged(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privileged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivileged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privileged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnlyRootFilesystem(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnlyRootFilesystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnlyRootFilesystem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnlyRootFilesystem")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunAsGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runAsGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunAsGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runAsGroup")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunAsNonRoot(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runAsNonRoot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunAsNonRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runAsNonRoot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRunAsUser(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runAsUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRunAsUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("runAsUser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeLinuxOptions(value: SchemaSELinuxOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seLinuxOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeLinuxOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seLinuxOptions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

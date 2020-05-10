@@ -9,19 +9,21 @@ import scala.scalajs.js.annotation._
   * A structure that can store huge amount of resource units. Only one structure
   * per room is allowed that can be addressed by `Room.storage` property.
   */
+@js.native
 trait StructureStorage
   extends OwnedStructure[STRUCTURE_STORAGE]
      with AnyOwnedStructure
-     with AnyStoreStructure {
+     with AnyStoreStructure
+     with ConcreteStructure[js.Any] {
   /**
     * An object with the storage contents.
     */
-  var store: StoreDefinition
+  var store: StoreDefinition = js.native
   /**
     * The total amount of resources the storage can contain.
     * @deprecated An alias for .store.getCapacity().
     */
-  var storeCapacity: Double
+  var storeCapacity: Double = js.native
 }
 
 @JSGlobal("StructureStorage")

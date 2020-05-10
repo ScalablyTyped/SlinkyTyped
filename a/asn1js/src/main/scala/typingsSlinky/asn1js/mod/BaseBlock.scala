@@ -13,8 +13,8 @@ class BaseBlock[T /* <: LocalValueBlock */] () extends LocalBaseBlock {
   var idBlock: LocalIdentificationBlock = js.native
   var lenBlock: LocalLengthBlock = js.native
   var valueBlock: T = js.native
-  def fromBER(inputBuffer: scala.scalajs.js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
-  def toBER(): scala.scalajs.js.typedarray.ArrayBuffer = js.native
-  def toBER(sizeOnly: scala.Boolean): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def fromBER(inputBuffer: js.typedarray.ArrayBuffer, inputOffset: Double, inputLength: Double): Double = js.native
+  def toBER(): js.typedarray.ArrayBuffer = js.native
+  def toBER(sizeOnly: scala.Boolean): js.typedarray.ArrayBuffer = js.native
 }
 

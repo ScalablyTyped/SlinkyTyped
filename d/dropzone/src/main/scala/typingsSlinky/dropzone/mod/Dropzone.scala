@@ -32,7 +32,6 @@ import typingsSlinky.dropzone.dropzoneStrings.successmultiple
 import typingsSlinky.dropzone.dropzoneStrings.thumbnail
 import typingsSlinky.dropzone.dropzoneStrings.totaluploadprogress
 import typingsSlinky.dropzone.dropzoneStrings.uploadprogress
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -100,11 +99,11 @@ trait Dropzone extends js.Object {
   @JSName("emit")
   def emit_error(eventName: error, file: DropzoneFile, message: String): Dropzone = js.native
   @JSName("emit")
-  def emit_error(eventName: error, file: DropzoneFile, message: Error): Dropzone = js.native
+  def emit_error(eventName: error, file: DropzoneFile, message: js.Error): Dropzone = js.native
   @JSName("emit")
   def emit_errormultiple(eventName: errormultiple, files: js.Array[DropzoneFile], message: String): Dropzone = js.native
   @JSName("emit")
-  def emit_errormultiple(eventName: errormultiple, files: js.Array[DropzoneFile], message: Error): Dropzone = js.native
+  def emit_errormultiple(eventName: errormultiple, files: js.Array[DropzoneFile], message: js.Error): Dropzone = js.native
   @JSName("emit")
   def emit_maxfilesexceeded(eventName: maxfilesexceeded, file: DropzoneFile): Dropzone = js.native
   @JSName("emit")

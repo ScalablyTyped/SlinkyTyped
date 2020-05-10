@@ -38,8 +38,45 @@ object GetSampledRequestsRequest {
     WebAclArn: ResourceArn
   ): GetSampledRequestsRequest = {
     val __obj = js.Dynamic.literal(MaxItems = MaxItems.asInstanceOf[js.Any], RuleMetricName = RuleMetricName.asInstanceOf[js.Any], Scope = Scope.asInstanceOf[js.Any], TimeWindow = TimeWindow.asInstanceOf[js.Any], WebAclArn = WebAclArn.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetSampledRequestsRequest]
   }
+  @scala.inline
+  implicit class GetSampledRequestsRequestOps[Self <: GetSampledRequestsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxItems(value: ListMaxItems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuleMetricName(value: MetricName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleMetricName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScope(value: Scope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeWindow(value: TimeWindow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeWindow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWebAclArn(value: ResourceArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebAclArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

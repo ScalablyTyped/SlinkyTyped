@@ -15,16 +15,14 @@ trait RouteConfigMethod extends js.Object
 
 object RouteConfigMethod {
   @scala.inline
-  def DELETE: typingsSlinky.expressRouters.expressRoutersStrings.DELETE = this.cast("DELETE")
+  def DELETE: typingsSlinky.expressRouters.expressRoutersStrings.DELETE = "DELETE".asInstanceOf[typingsSlinky.expressRouters.expressRoutersStrings.DELETE]
   @scala.inline
-  def GET: typingsSlinky.expressRouters.expressRoutersStrings.GET = this.cast("GET")
+  def GET: typingsSlinky.expressRouters.expressRoutersStrings.GET = "GET".asInstanceOf[typingsSlinky.expressRouters.expressRoutersStrings.GET]
   @scala.inline
-  def PATCH: typingsSlinky.expressRouters.expressRoutersStrings.PATCH = this.cast("PATCH")
+  def PATCH: typingsSlinky.expressRouters.expressRoutersStrings.PATCH = "PATCH".asInstanceOf[typingsSlinky.expressRouters.expressRoutersStrings.PATCH]
   @scala.inline
-  def POST: typingsSlinky.expressRouters.expressRoutersStrings.POST = this.cast("POST")
+  def POST: typingsSlinky.expressRouters.expressRoutersStrings.POST = "POST".asInstanceOf[typingsSlinky.expressRouters.expressRoutersStrings.POST]
   @scala.inline
-  def PUT: typingsSlinky.expressRouters.expressRoutersStrings.PUT = this.cast("PUT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def PUT: typingsSlinky.expressRouters.expressRoutersStrings.PUT = "PUT".asInstanceOf[typingsSlinky.expressRouters.expressRoutersStrings.PUT]
 }
 

@@ -13,12 +13,10 @@ trait GoogleCloudDialogflowV2IntentWebhookState extends js.Object
 
 object GoogleCloudDialogflowV2IntentWebhookState {
   @scala.inline
-  def WEBHOOK_STATE_ENABLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WEBHOOK_STATE_ENABLED = this.cast("WEBHOOK_STATE_ENABLED")
+  def WEBHOOK_STATE_ENABLED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WEBHOOK_STATE_ENABLED = "WEBHOOK_STATE_ENABLED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WEBHOOK_STATE_ENABLED]
   @scala.inline
-  def WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING = this.cast("WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING")
+  def WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING = "WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING]
   @scala.inline
-  def WEBHOOK_STATE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WEBHOOK_STATE_UNSPECIFIED = this.cast("WEBHOOK_STATE_UNSPECIFIED")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WEBHOOK_STATE_UNSPECIFIED: typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WEBHOOK_STATE_UNSPECIFIED = "WEBHOOK_STATE_UNSPECIFIED".asInstanceOf[typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.WEBHOOK_STATE_UNSPECIFIED]
 }
 

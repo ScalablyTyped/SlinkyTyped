@@ -20,7 +20,7 @@ object certificateRevocationListMod extends js.Object {
     var signature: AlgorithmIdentifier = js.native
     var signatureAlgorithm: AlgorithmIdentifier = js.native
     var signatureValue: BitString = js.native
-    var tbs: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+    var tbs: js.typedarray.ArrayBuffer = js.native
     var thisUpdate: typingsSlinky.pkijs.timeMod.default = js.native
     var version: js.UndefOr[Double] = js.native
     def encodeTBS(): Sequence = js.native
@@ -31,12 +31,12 @@ object certificateRevocationListMod extends js.Object {
       * @param {CryptoKey} privateKey Private key for "subjectPublicKeyInfo" structure
       * @param {string} [hashAlgorithm] Hashing algorithm. Default SHA-1
       */
-    def sign(privateKey: CryptoKey): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-    def sign(privateKey: CryptoKey, hashAlgorithm: String): js.Thenable[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+    def sign(privateKey: CryptoKey): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+    def sign(privateKey: CryptoKey, hashAlgorithm: String): js.Thenable[js.typedarray.ArrayBuffer] = js.native
     def toJSON(): js.Any = js.native
     /**
       * Convert current object to asn1js object and set correct values
-      * 
+      *
       * @param {boolean} [encodeFlag]
       * @returns {*}
       */

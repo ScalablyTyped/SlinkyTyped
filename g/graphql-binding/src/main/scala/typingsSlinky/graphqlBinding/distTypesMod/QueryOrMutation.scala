@@ -12,10 +12,8 @@ trait QueryOrMutation extends js.Object
 
 object QueryOrMutation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def mutation: typingsSlinky.graphqlBinding.graphqlBindingStrings.mutation = "mutation".asInstanceOf[typingsSlinky.graphqlBinding.graphqlBindingStrings.mutation]
   @scala.inline
-  def mutation: typingsSlinky.graphqlBinding.graphqlBindingStrings.mutation = this.cast("mutation")
-  @scala.inline
-  def query: typingsSlinky.graphqlBinding.graphqlBindingStrings.query = this.cast("query")
+  def query: typingsSlinky.graphqlBinding.graphqlBindingStrings.query = "query".asInstanceOf[typingsSlinky.graphqlBinding.graphqlBindingStrings.query]
 }
 

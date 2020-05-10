@@ -53,6 +53,7 @@ trait CourseWorkResource extends js.Object {
     * deleted.
     * &#42; `NOT_FOUND` if no course exists with the requested ID.
     */
+  def delete(): Request_[js.Object] = js.native
   def delete(request: AnonFields): Request_[js.Object] = js.native
   /**
     * Returns course work.
@@ -64,6 +65,7 @@ trait CourseWorkResource extends js.Object {
     * &#42; `INVALID_ARGUMENT` if the request is malformed.
     * &#42; `NOT_FOUND` if the requested course or course work does not exist.
     */
+  def get(): Request_[CourseWork] = js.native
   def get(request: AnonFields): Request_[CourseWork] = js.native
   /**
     * Returns a list of course work that the requester is permitted to view.
@@ -78,6 +80,7 @@ trait CourseWorkResource extends js.Object {
     * &#42; `INVALID_ARGUMENT` if the request is malformed.
     * &#42; `NOT_FOUND` if the requested course does not exist.
     */
+  def list(): Request_[ListCourseWorkResponse] = js.native
   def list(request: AnonCourseWorkStates): Request_[ListCourseWorkResponse] = js.native
   /**
     * Modifies assignee mode and options of a coursework.

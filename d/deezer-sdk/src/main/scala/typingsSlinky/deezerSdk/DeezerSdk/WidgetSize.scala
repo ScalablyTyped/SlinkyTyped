@@ -16,12 +16,10 @@ trait WidgetSize extends js.Object
 
 object WidgetSize {
   @scala.inline
-  def big: typingsSlinky.deezerSdk.deezerSdkStrings.big = this.cast("big")
+  def big: typingsSlinky.deezerSdk.deezerSdkStrings.big = "big".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.big]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def medium: typingsSlinky.deezerSdk.deezerSdkStrings.medium = "medium".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.medium]
   @scala.inline
-  def medium: typingsSlinky.deezerSdk.deezerSdkStrings.medium = this.cast("medium")
-  @scala.inline
-  def small: typingsSlinky.deezerSdk.deezerSdkStrings.small = this.cast("small")
+  def small: typingsSlinky.deezerSdk.deezerSdkStrings.small = "small".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.small]
 }
 

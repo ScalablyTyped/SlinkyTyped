@@ -21,11 +21,41 @@ trait SchemaListFindingsResult extends js.Object {
 
 object SchemaListFindingsResult {
   @scala.inline
-  def apply(finding: SchemaFinding = null, stateChange: String = null): SchemaListFindingsResult = {
+  def apply(): SchemaListFindingsResult = {
     val __obj = js.Dynamic.literal()
-    if (finding != null) __obj.updateDynamic("finding")(finding.asInstanceOf[js.Any])
-    if (stateChange != null) __obj.updateDynamic("stateChange")(stateChange.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaListFindingsResult]
   }
+  @scala.inline
+  implicit class SchemaListFindingsResultOps[Self <: SchemaListFindingsResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFinding(value: SchemaFinding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStateChange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStateChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stateChange")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,14 +14,12 @@ trait ColorFormat extends js.Object
 
 object ColorFormat {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hsl: typingsSlinky.materialUiCore.materialUiCoreStrings.hsl = "hsl".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.hsl]
   @scala.inline
-  def hsl: typingsSlinky.materialUiCore.materialUiCoreStrings.hsl = this.cast("hsl")
+  def hsla: typingsSlinky.materialUiCore.materialUiCoreStrings.hsla = "hsla".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.hsla]
   @scala.inline
-  def hsla: typingsSlinky.materialUiCore.materialUiCoreStrings.hsla = this.cast("hsla")
+  def rgb: typingsSlinky.materialUiCore.materialUiCoreStrings.rgb = "rgb".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.rgb]
   @scala.inline
-  def rgb: typingsSlinky.materialUiCore.materialUiCoreStrings.rgb = this.cast("rgb")
-  @scala.inline
-  def rgba: typingsSlinky.materialUiCore.materialUiCoreStrings.rgba = this.cast("rgba")
+  def rgba: typingsSlinky.materialUiCore.materialUiCoreStrings.rgba = "rgba".asInstanceOf[typingsSlinky.materialUiCore.materialUiCoreStrings.rgba]
 }
 

@@ -24,34 +24,32 @@ trait ThemeKey extends js.Object
 
 object ThemeKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def container: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.container = "container".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.container]
   @scala.inline
-  def container: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.container = this.cast("container")
+  def containerOpen: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.containerOpen = "containerOpen".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.containerOpen]
   @scala.inline
-  def containerOpen: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.containerOpen = this.cast("containerOpen")
+  def input: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.input = "input".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.input]
   @scala.inline
-  def input: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.input = this.cast("input")
+  def inputFocused: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.inputFocused = "inputFocused".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.inputFocused]
   @scala.inline
-  def inputFocused: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.inputFocused = this.cast("inputFocused")
+  def inputOpen: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.inputOpen = "inputOpen".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.inputOpen]
   @scala.inline
-  def inputOpen: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.inputOpen = this.cast("inputOpen")
+  def sectionContainer: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionContainer = "sectionContainer".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionContainer]
   @scala.inline
-  def sectionContainer: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionContainer = this.cast("sectionContainer")
+  def sectionContainerFirst: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionContainerFirst = "sectionContainerFirst".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionContainerFirst]
   @scala.inline
-  def sectionContainerFirst: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionContainerFirst = this.cast("sectionContainerFirst")
+  def sectionTitle: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionTitle = "sectionTitle".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionTitle]
   @scala.inline
-  def sectionTitle: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.sectionTitle = this.cast("sectionTitle")
+  def suggestion: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestion = "suggestion".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestion]
   @scala.inline
-  def suggestion: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestion = this.cast("suggestion")
+  def suggestionFirst: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionFirst = "suggestionFirst".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionFirst]
   @scala.inline
-  def suggestionFirst: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionFirst = this.cast("suggestionFirst")
+  def suggestionHighlighted: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionHighlighted = "suggestionHighlighted".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionHighlighted]
   @scala.inline
-  def suggestionHighlighted: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionHighlighted = this.cast("suggestionHighlighted")
+  def suggestionsContainer: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionsContainer = "suggestionsContainer".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionsContainer]
   @scala.inline
-  def suggestionsContainer: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionsContainer = this.cast("suggestionsContainer")
+  def suggestionsContainerOpen: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionsContainerOpen = "suggestionsContainerOpen".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionsContainerOpen]
   @scala.inline
-  def suggestionsContainerOpen: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionsContainerOpen = this.cast("suggestionsContainerOpen")
-  @scala.inline
-  def suggestionsList: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionsList = this.cast("suggestionsList")
+  def suggestionsList: typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionsList = "suggestionsList".asInstanceOf[typingsSlinky.reactAutosuggest.reactAutosuggestStrings.suggestionsList]
 }
 

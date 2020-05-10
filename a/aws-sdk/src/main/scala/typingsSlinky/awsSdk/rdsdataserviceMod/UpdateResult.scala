@@ -14,10 +14,29 @@ trait UpdateResult extends js.Object {
 
 object UpdateResult {
   @scala.inline
-  def apply(generatedFields: FieldList = null): UpdateResult = {
+  def apply(): UpdateResult = {
     val __obj = js.Dynamic.literal()
-    if (generatedFields != null) __obj.updateDynamic("generatedFields")(generatedFields.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateResult]
   }
+  @scala.inline
+  implicit class UpdateResultOps[Self <: UpdateResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGeneratedFields(value: FieldList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generatedFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeneratedFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generatedFields")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

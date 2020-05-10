@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GatsbyNode extends js.Object {
   /**
     * Tell plugins to add pages. This extension point is called only after the initial
@@ -22,7 +23,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Like `createPages` but for plugins who want to manage creating and removing
     * pages themselves in response to changes in data *not* managed by Gatsby.
@@ -44,7 +45,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Add custom field resolvers to the GraphQL schema.
     *
@@ -89,7 +90,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ PluginCallback, 
       Unit
     ])
-  ] = js.undefined
+  ] = js.native
   /**
     * Customize Gatsby’s GraphQL schema by creating type definitions, field extensions or adding third-party schemas.
     * The createTypes, createFieldExtension and addThirdPartySchema actions are only available in this API.
@@ -107,7 +108,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ PluginCallback, 
       Unit
     ])
-  ] = js.undefined
+  ] = js.native
   /**
     * Let plugins extend/mutate the site's Babel configuration.
     * This API will change before 2.0 as it needs still to be converted to use
@@ -120,7 +121,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Run when gatsby develop server is started, its useful to add proxy and middleware
     * to the dev server app
@@ -142,7 +143,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Called when a new node is created. Plugins wishing to extend or
     * transform nodes created by other plugins should implement this API.
@@ -163,7 +164,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Called when a new page is created. This extension API is useful
     * for programmatically manipulating pages created by other plugins e.g.
@@ -179,7 +180,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Let plugins extend/mutate the site's webpack configuration.
     * @see https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
@@ -191,7 +192,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** Called at the end of the bootstrap process after all other extension APIs have been called. */
   var onPostBootstrap: js.UndefOr[
     js.Function3[
@@ -200,7 +201,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** The last extension point called after all other parts of the build process are complete. */
   var onPostBuild: js.UndefOr[
     js.Function3[
@@ -209,7 +210,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** Called at the end of the bootstrap process after all other extension APIs have been called. */
   var onPreBootstrap: js.UndefOr[
     js.Function3[
@@ -218,7 +219,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** The first extension point called during the build process. Called after the bootstrap has completed but before the build steps start. */
   var onPreBuild: js.UndefOr[
     js.Function3[
@@ -227,7 +228,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** Called once Gatsby has initialized itself and is ready to bootstrap your site. */
   var onPreExtractQueries: js.UndefOr[
     js.Function3[
@@ -236,7 +237,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /** The first API called during Gatsby execution, runs as soon as plugins are loaded, before cache initialization and bootstrap preparation. */
   var onPreInit: js.UndefOr[
     js.Function3[
@@ -245,7 +246,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Ask compile-to-js plugins to process source to JavaScript so the query
     * runner can extract out GraphQL queries for running.
@@ -257,7 +258,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ js.UndefOr[PluginCallback], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Lets plugins implementing support for other compile-to-js add to the list of "resolvable" file extensions. Gatsby supports `.js` and `.jsx` by default.
     */
@@ -268,7 +269,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ PluginCallback, 
       js.Array[_] | js.Promise[js.Array[_]]
     ]
-  ] = js.undefined
+  ] = js.native
   /**
     * Called during the creation of the GraphQL schema. Allows plugins
     * to add new fields to the types created from data nodes. It will be called
@@ -299,7 +300,7 @@ trait GatsbyNode extends js.Object {
       /* callback */ PluginCallback, 
       Unit
     ])
-  ] = js.undefined
+  ] = js.native
   /**
     * Extension point to tell plugins to source nodes. This API is called during
     * the Gatsby bootstrap sequence. Source plugins use this hook to create nodes.
@@ -317,77 +318,312 @@ trait GatsbyNode extends js.Object {
       /* callback */ PluginCallback, 
       Unit
     ])
-  ] = js.undefined
+  ] = js.native
 }
 
 object GatsbyNode {
   @scala.inline
-  def apply(
-    createPages: (/* args */ CreatePagesArgstraceIdini, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    createPagesStatefully: (/* args */ CreatePagesArgstraceIdiniDictkey, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    createResolvers: (js.Function2[/* args */ CreateResolversArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ CreateResolversArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
-      /* args */ CreateResolversArgs, 
-      /* options */ PluginOptions, 
-      /* callback */ PluginCallback, 
-      Unit
-    ]) = null,
-    createSchemaCustomization: (js.Function2[/* args */ CreateSchemaCustomizationArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ CreateSchemaCustomizationArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
-      /* args */ CreateSchemaCustomizationArgs, 
-      /* options */ PluginOptions, 
-      /* callback */ PluginCallback, 
-      Unit
-    ]) = null,
-    onCreateBabelConfig: (/* args */ CreateBabelConfigArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    onCreateDevServer: (/* args */ CreateDevServerArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    onCreateNode: (/* args */ CreateNodeArgs[js.Object], /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    onCreatePage: (/* args */ CreatePageArgs[Record[String, _]], /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    onCreateWebpackConfig: (/* args */ CreateWebpackConfigArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    onPostBootstrap: (/* args */ ParentSpanPluginArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    onPostBuild: (/* args */ BuildArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    onPreBootstrap: (/* args */ ParentSpanPluginArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    onPreBuild: (/* args */ BuildArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    onPreExtractQueries: (/* args */ ParentSpanPluginArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    onPreInit: (/* args */ ParentSpanPluginArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    preprocessSource: (/* args */ PreprocessSourceArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit = null,
-    resolvableExtensions: (/* args */ ResolvableExtensionsArgs, /* options */ PluginOptions, /* callback */ PluginCallback) => js.Array[_] | js.Promise[js.Array[_]] = null,
-    setFieldsOnGraphQLNodeType: (js.Function2[/* args */ SetFieldsOnGraphQLNodeTypeArgs, /* options */ PluginOptions, _]) with (js.Function2[
-      /* args */ SetFieldsOnGraphQLNodeTypeArgs, 
-      /* options */ PluginOptions, 
-      js.Promise[_]
-    ]) with (js.Function3[
-      /* args */ SetFieldsOnGraphQLNodeTypeArgs, 
-      /* options */ PluginOptions, 
-      /* callback */ PluginCallback, 
-      Unit
-    ]) = null,
-    sourceNodes: (js.Function2[/* args */ SourceNodesArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ SourceNodesArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
-      /* args */ SourceNodesArgs, 
-      /* options */ PluginOptions, 
-      /* callback */ PluginCallback, 
-      Unit
-    ]) = null
-  ): GatsbyNode = {
+  def apply(): GatsbyNode = {
     val __obj = js.Dynamic.literal()
-    if (createPages != null) __obj.updateDynamic("createPages")(js.Any.fromFunction3(createPages))
-    if (createPagesStatefully != null) __obj.updateDynamic("createPagesStatefully")(js.Any.fromFunction3(createPagesStatefully))
-    if (createResolvers != null) __obj.updateDynamic("createResolvers")(createResolvers.asInstanceOf[js.Any])
-    if (createSchemaCustomization != null) __obj.updateDynamic("createSchemaCustomization")(createSchemaCustomization.asInstanceOf[js.Any])
-    if (onCreateBabelConfig != null) __obj.updateDynamic("onCreateBabelConfig")(js.Any.fromFunction3(onCreateBabelConfig))
-    if (onCreateDevServer != null) __obj.updateDynamic("onCreateDevServer")(js.Any.fromFunction3(onCreateDevServer))
-    if (onCreateNode != null) __obj.updateDynamic("onCreateNode")(js.Any.fromFunction3(onCreateNode))
-    if (onCreatePage != null) __obj.updateDynamic("onCreatePage")(js.Any.fromFunction3(onCreatePage))
-    if (onCreateWebpackConfig != null) __obj.updateDynamic("onCreateWebpackConfig")(js.Any.fromFunction3(onCreateWebpackConfig))
-    if (onPostBootstrap != null) __obj.updateDynamic("onPostBootstrap")(js.Any.fromFunction3(onPostBootstrap))
-    if (onPostBuild != null) __obj.updateDynamic("onPostBuild")(js.Any.fromFunction3(onPostBuild))
-    if (onPreBootstrap != null) __obj.updateDynamic("onPreBootstrap")(js.Any.fromFunction3(onPreBootstrap))
-    if (onPreBuild != null) __obj.updateDynamic("onPreBuild")(js.Any.fromFunction3(onPreBuild))
-    if (onPreExtractQueries != null) __obj.updateDynamic("onPreExtractQueries")(js.Any.fromFunction3(onPreExtractQueries))
-    if (onPreInit != null) __obj.updateDynamic("onPreInit")(js.Any.fromFunction3(onPreInit))
-    if (preprocessSource != null) __obj.updateDynamic("preprocessSource")(js.Any.fromFunction3(preprocessSource))
-    if (resolvableExtensions != null) __obj.updateDynamic("resolvableExtensions")(js.Any.fromFunction3(resolvableExtensions))
-    if (setFieldsOnGraphQLNodeType != null) __obj.updateDynamic("setFieldsOnGraphQLNodeType")(setFieldsOnGraphQLNodeType.asInstanceOf[js.Any])
-    if (sourceNodes != null) __obj.updateDynamic("sourceNodes")(sourceNodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GatsbyNode]
   }
+  @scala.inline
+  implicit class GatsbyNodeOps[Self <: GatsbyNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatePages(
+      value: (/* args */ CreatePagesArgstraceIdini, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPages")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreatePages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatePagesStatefully(
+      value: (/* args */ CreatePagesArgstraceIdiniDictkey, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPagesStatefully")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreatePagesStatefully: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPagesStatefully")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateResolvers(
+      value: (js.Function2[/* args */ CreateResolversArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ CreateResolversArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
+          /* args */ CreateResolversArgs, 
+          /* options */ PluginOptions, 
+          /* callback */ PluginCallback, 
+          Unit
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createResolvers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateResolvers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createResolvers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreateSchemaCustomization(
+      value: (js.Function2[/* args */ CreateSchemaCustomizationArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ CreateSchemaCustomizationArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
+          /* args */ CreateSchemaCustomizationArgs, 
+          /* options */ PluginOptions, 
+          /* callback */ PluginCallback, 
+          Unit
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSchemaCustomization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreateSchemaCustomization: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSchemaCustomization")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCreateBabelConfig(
+      value: (/* args */ CreateBabelConfigArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreateBabelConfig")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCreateBabelConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreateBabelConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCreateDevServer(
+      value: (/* args */ CreateDevServerArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreateDevServer")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCreateDevServer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreateDevServer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCreateNode(
+      value: (/* args */ CreateNodeArgs[js.Object], /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreateNode")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCreateNode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreateNode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCreatePage(
+      value: (/* args */ CreatePageArgs[Record[String, _]], /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreatePage")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCreatePage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreatePage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCreateWebpackConfig(
+      value: (/* args */ CreateWebpackConfigArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreateWebpackConfig")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCreateWebpackConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCreateWebpackConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPostBootstrap(
+      value: (/* args */ ParentSpanPluginArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPostBootstrap")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPostBootstrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPostBootstrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPostBuild(
+      value: (/* args */ BuildArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPostBuild")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPostBuild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPostBuild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPreBootstrap(
+      value: (/* args */ ParentSpanPluginArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreBootstrap")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPreBootstrap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreBootstrap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPreBuild(
+      value: (/* args */ BuildArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreBuild")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPreBuild: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreBuild")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPreExtractQueries(
+      value: (/* args */ ParentSpanPluginArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreExtractQueries")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPreExtractQueries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreExtractQueries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPreInit(
+      value: (/* args */ ParentSpanPluginArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreInit")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPreInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreInit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreprocessSource(
+      value: (/* args */ PreprocessSourceArgs, /* options */ js.UndefOr[PluginOptions], /* callback */ js.UndefOr[PluginCallback]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preprocessSource")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutPreprocessSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preprocessSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolvableExtensions(
+      value: (/* args */ ResolvableExtensionsArgs, /* options */ PluginOptions, /* callback */ PluginCallback) => js.Array[_] | js.Promise[js.Array[_]]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvableExtensions")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutResolvableExtensions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvableExtensions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetFieldsOnGraphQLNodeType(
+      value: (js.Function2[/* args */ SetFieldsOnGraphQLNodeTypeArgs, /* options */ PluginOptions, _]) with (js.Function2[
+          /* args */ SetFieldsOnGraphQLNodeTypeArgs, 
+          /* options */ PluginOptions, 
+          js.Promise[_]
+        ]) with (js.Function3[
+          /* args */ SetFieldsOnGraphQLNodeTypeArgs, 
+          /* options */ PluginOptions, 
+          /* callback */ PluginCallback, 
+          Unit
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFieldsOnGraphQLNodeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSetFieldsOnGraphQLNodeType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFieldsOnGraphQLNodeType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceNodes(
+      value: (js.Function2[/* args */ SourceNodesArgs, /* options */ PluginOptions, _]) with (js.Function2[/* args */ SourceNodesArgs, /* options */ PluginOptions, js.Promise[_]]) with (js.Function3[
+          /* args */ SourceNodesArgs, 
+          /* options */ PluginOptions, 
+          /* callback */ PluginCallback, 
+          Unit
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceNodes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceNodes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

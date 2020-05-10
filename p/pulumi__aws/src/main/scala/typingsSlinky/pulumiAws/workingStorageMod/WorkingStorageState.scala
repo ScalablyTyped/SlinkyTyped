@@ -19,11 +19,41 @@ trait WorkingStorageState extends js.Object {
 
 object WorkingStorageState {
   @scala.inline
-  def apply(diskId: Input[String] = null, gatewayArn: Input[String] = null): WorkingStorageState = {
+  def apply(): WorkingStorageState = {
     val __obj = js.Dynamic.literal()
-    if (diskId != null) __obj.updateDynamic("diskId")(diskId.asInstanceOf[js.Any])
-    if (gatewayArn != null) __obj.updateDynamic("gatewayArn")(gatewayArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkingStorageState]
   }
+  @scala.inline
+  implicit class WorkingStorageStateOps[Self <: WorkingStorageState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiskId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("diskId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayArn(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gatewayArn")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

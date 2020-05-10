@@ -14,14 +14,12 @@ trait placementTypes extends js.Object
 
 object placementTypes {
   @scala.inline
-  def bottom: typingsSlinky.hopscotch.hopscotchStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.hopscotch.hopscotchStrings.bottom = "bottom".asInstanceOf[typingsSlinky.hopscotch.hopscotchStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.hopscotch.hopscotchStrings.left = "left".asInstanceOf[typingsSlinky.hopscotch.hopscotchStrings.left]
   @scala.inline
-  def left: typingsSlinky.hopscotch.hopscotchStrings.left = this.cast("left")
+  def right: typingsSlinky.hopscotch.hopscotchStrings.right = "right".asInstanceOf[typingsSlinky.hopscotch.hopscotchStrings.right]
   @scala.inline
-  def right: typingsSlinky.hopscotch.hopscotchStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.hopscotch.hopscotchStrings.top = this.cast("top")
+  def top: typingsSlinky.hopscotch.hopscotchStrings.top = "top".asInstanceOf[typingsSlinky.hopscotch.hopscotchStrings.top]
 }
 

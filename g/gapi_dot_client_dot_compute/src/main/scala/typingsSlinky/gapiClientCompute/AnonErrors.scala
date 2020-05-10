@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonErrors extends js.Object {
   /** [Output Only] The array of errors encountered while processing this operation. */
-  var errors: js.UndefOr[js.Array[AnonLocation]] = js.undefined
+  var errors: js.UndefOr[js.Array[AnonLocation]] = js.native
 }
 
 object AnonErrors {
   @scala.inline
-  def apply(errors: js.Array[AnonLocation] = null): AnonErrors = {
+  def apply(): AnonErrors = {
     val __obj = js.Dynamic.literal()
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonErrors]
   }
+  @scala.inline
+  implicit class AnonErrorsOps[Self <: AnonErrors] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrors(value: js.Array[AnonLocation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

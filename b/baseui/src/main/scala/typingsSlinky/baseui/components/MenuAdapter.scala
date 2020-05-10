@@ -1,12 +1,11 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLLIElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.li.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.listMod.ArtworkSizesT
 import typingsSlinky.baseui.listMod.MenuAdapterPropsT
 import typingsSlinky.baseui.listMod.OverridesT
@@ -14,36 +13,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MenuAdapter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object MenuAdapter {
   @JSImport("baseui/list", "MenuAdapter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def artworkReactElement(value: ReactElement): this.type = set("artwork", value.asInstanceOf[js.Any])
+    @scala.inline
+    def artwork(value: TagMod[Any]): this.type = set("artwork", value.asInstanceOf[js.Any])
+    @scala.inline
+    def artworkSize(value: ArtworkSizesT): this.type = set("artworkSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endEnhancerReactElement(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endEnhancer(value: TagMod[Any]): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
+    @scala.inline
+    def overrides(value: OverridesT): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sublist(value: Boolean): this.type = set("sublist", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: MenuAdapterPropsT): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     $disabled: Boolean,
     $isHighlighted: Boolean,
     $size: String,
     item: js.Any,
     onClick: SyntheticMouseEvent[HTMLLIElement] => js.Any,
-    onMouseEnter: SyntheticMouseEvent[HTMLLIElement] => js.Any,
-    artwork: TagMod[Any] = null,
-    artworkSize: ArtworkSizesT = null,
-    endEnhancer: TagMod[Any] = null,
-    overrides: OverridesT = null,
-    sublist: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal($disabled = $disabled.asInstanceOf[js.Any], $isHighlighted = $isHighlighted.asInstanceOf[js.Any], $size = $size.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], onClick = js.Any.fromFunction1(onClick), onMouseEnter = js.Any.fromFunction1(onMouseEnter))
-    if (artwork != null) __obj.updateDynamic("artwork")(artwork.asInstanceOf[js.Any])
-    if (artworkSize != null) __obj.updateDynamic("artworkSize")(artworkSize.asInstanceOf[js.Any])
-    if (endEnhancer != null) __obj.updateDynamic("endEnhancer")(endEnhancer.asInstanceOf[js.Any])
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (!js.isUndefined(sublist)) __obj.updateDynamic("sublist")(sublist.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    onMouseEnter: SyntheticMouseEvent[HTMLLIElement] => js.Any
+  ): Builder = {
+    val __props = js.Dynamic.literal($disabled = $disabled.asInstanceOf[js.Any], $isHighlighted = $isHighlighted.asInstanceOf[js.Any], $size = $size.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], onClick = js.Any.fromFunction1(onClick), onMouseEnter = js.Any.fromFunction1(onMouseEnter))
+    new Builder(js.Array(this.component, __props.asInstanceOf[MenuAdapterPropsT]))
   }
-  type Props = MenuAdapterPropsT
 }
 

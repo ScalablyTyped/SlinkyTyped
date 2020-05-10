@@ -30,18 +30,65 @@ trait SchemaThreatInfo extends js.Object {
 
 object SchemaThreatInfo {
   @scala.inline
-  def apply(
-    platformTypes: js.Array[String] = null,
-    threatEntries: js.Array[SchemaThreatEntry] = null,
-    threatEntryTypes: js.Array[String] = null,
-    threatTypes: js.Array[String] = null
-  ): SchemaThreatInfo = {
+  def apply(): SchemaThreatInfo = {
     val __obj = js.Dynamic.literal()
-    if (platformTypes != null) __obj.updateDynamic("platformTypes")(platformTypes.asInstanceOf[js.Any])
-    if (threatEntries != null) __obj.updateDynamic("threatEntries")(threatEntries.asInstanceOf[js.Any])
-    if (threatEntryTypes != null) __obj.updateDynamic("threatEntryTypes")(threatEntryTypes.asInstanceOf[js.Any])
-    if (threatTypes != null) __obj.updateDynamic("threatTypes")(threatTypes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaThreatInfo]
   }
+  @scala.inline
+  implicit class SchemaThreatInfoOps[Self <: SchemaThreatInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlatformTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platformTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreatEntries(value: js.Array[SchemaThreatEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatEntries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreatEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatEntries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreatEntryTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatEntryTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreatEntryTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatEntryTypes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreatTypes(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreatTypes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threatTypes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

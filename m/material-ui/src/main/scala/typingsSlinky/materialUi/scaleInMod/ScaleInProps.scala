@@ -1,41 +1,80 @@
 package typingsSlinky.materialUi.scaleInMod
 
-import slinky.core.TagMod
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Key
-import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ScaleInProps extends Props[ScaleIn] {
-  var childStyle: js.UndefOr[CSSProperties] = js.undefined
-  var enterDelay: js.UndefOr[Double] = js.undefined
-  var maxScale: js.UndefOr[Double] = js.undefined
-  var minScale: js.UndefOr[Double] = js.undefined
+  var childStyle: js.UndefOr[CSSProperties] = js.native
+  var enterDelay: js.UndefOr[Double] = js.native
+  var maxScale: js.UndefOr[Double] = js.native
+  var minScale: js.UndefOr[Double] = js.native
 }
 
 object ScaleInProps {
   @scala.inline
-  def apply(
-    childStyle: CSSProperties = null,
-    children: TagMod[Any] = null,
-    enterDelay: Int | Double = null,
-    key: Key = null,
-    maxScale: Int | Double = null,
-    minScale: Int | Double = null,
-    ref: LegacyRef[ScaleIn] = null
-  ): ScaleInProps = {
+  def apply(): ScaleInProps = {
     val __obj = js.Dynamic.literal()
-    if (childStyle != null) __obj.updateDynamic("childStyle")(childStyle.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (enterDelay != null) __obj.updateDynamic("enterDelay")(enterDelay.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (maxScale != null) __obj.updateDynamic("maxScale")(maxScale.asInstanceOf[js.Any])
-    if (minScale != null) __obj.updateDynamic("minScale")(minScale.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScaleInProps]
   }
+  @scala.inline
+  implicit class ScaleInPropsOps[Self <: ScaleInProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnterDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnterDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinScale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minScale")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

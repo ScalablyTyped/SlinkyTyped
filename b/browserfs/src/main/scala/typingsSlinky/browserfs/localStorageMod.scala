@@ -5,7 +5,6 @@ import typingsSlinky.browserfs.fileSystemMod.FileSystemOptions
 import typingsSlinky.browserfs.keyValueFilesystemMod.SimpleSyncStore
 import typingsSlinky.browserfs.keyValueFilesystemMod.SyncKeyValueFileSystem
 import typingsSlinky.browserfs.keyValueFilesystemMod.SyncKeyValueStore
-import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,14 +15,7 @@ object localStorageMod extends js.Object {
   @js.native
   class LocalStorageStore ()
     extends SyncKeyValueStore
-       with SimpleSyncStore {
-    /* CompleteClass */
-    override def del(key: String): Unit = js.native
-    /* CompleteClass */
-    override def get(key: String): js.UndefOr[Buffer] = js.native
-    /* CompleteClass */
-    override def put(key: String, data: Buffer, overwrite: Boolean): Boolean = js.native
-  }
+       with SimpleSyncStore
   
   @js.native
   /**

@@ -13,12 +13,10 @@ trait MemoryOperation extends js.Object
 
 object MemoryOperation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def execute: typingsSlinky.fridaGum.fridaGumStrings.execute = "execute".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.execute]
   @scala.inline
-  def execute: typingsSlinky.fridaGum.fridaGumStrings.execute = this.cast("execute")
+  def read: typingsSlinky.fridaGum.fridaGumStrings.read = "read".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.read]
   @scala.inline
-  def read: typingsSlinky.fridaGum.fridaGumStrings.read = this.cast("read")
-  @scala.inline
-  def write: typingsSlinky.fridaGum.fridaGumStrings.write = this.cast("write")
+  def write: typingsSlinky.fridaGum.fridaGumStrings.write = "write".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.write]
 }
 

@@ -2,17 +2,17 @@ package typingsSlinky.agGrid.componentMod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
+import org.scalajs.dom.raw.Node
 import typingsSlinky.agGrid.beanStubMod.BeanStub
 import typingsSlinky.agGrid.contextMod.Context
 import typingsSlinky.agGrid.iComponentMod.IAfterGuiAttachedParams
 import typingsSlinky.agGrid.iComponentMod.IComponent
 import typingsSlinky.agGrid.utilsMod.Promise
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.agGrid.iComponentMod.IComponent because var conflicts: destroy. Inlined getGui, afterGuiAttached, init */ @JSImport("ag-grid/dist/lib/widgets/component", "Component")
 @js.native
 class Component () extends BeanStub {

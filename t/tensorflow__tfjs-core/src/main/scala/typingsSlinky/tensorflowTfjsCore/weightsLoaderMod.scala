@@ -20,13 +20,10 @@ object weightsLoaderMod extends js.Object {
     weightNames: js.Array[String],
     requestInit: RequestInit
   ): js.Promise[NamedTensorMap] = js.native
-  def loadWeightsAsArrayBuffer(fetchURLs: js.Array[String]): js.Promise[js.Array[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
-  def loadWeightsAsArrayBuffer(fetchURLs: js.Array[String], loadOptions: LoadOptions): js.Promise[js.Array[scala.scalajs.js.typedarray.ArrayBuffer]] = js.native
+  def loadWeightsAsArrayBuffer(fetchURLs: js.Array[String]): js.Promise[js.Array[js.typedarray.ArrayBuffer]] = js.native
+  def loadWeightsAsArrayBuffer(fetchURLs: js.Array[String], loadOptions: LoadOptions): js.Promise[js.Array[js.typedarray.ArrayBuffer]] = js.native
   def weightsLoaderFactory(
-    fetchWeightsFunction: js.Function1[
-      /* fetchUrls */ js.Array[String], 
-      js.Promise[js.Array[scala.scalajs.js.typedarray.ArrayBuffer]]
-    ]
+    fetchWeightsFunction: js.Function1[/* fetchUrls */ js.Array[String], js.Promise[js.Array[js.typedarray.ArrayBuffer]]]
   ): js.Function3[
     /* manifest */ WeightsManifestConfig, 
     /* filePathPrefix */ js.UndefOr[String], 

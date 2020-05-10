@@ -48,22 +48,89 @@ trait SchemaProbe extends js.Object {
 
 object SchemaProbe {
   @scala.inline
-  def apply(
-    failureThreshold: Int | Double = null,
-    handler: SchemaHandler = null,
-    initialDelaySeconds: Int | Double = null,
-    periodSeconds: Int | Double = null,
-    successThreshold: Int | Double = null,
-    timeoutSeconds: Int | Double = null
-  ): SchemaProbe = {
+  def apply(): SchemaProbe = {
     val __obj = js.Dynamic.literal()
-    if (failureThreshold != null) __obj.updateDynamic("failureThreshold")(failureThreshold.asInstanceOf[js.Any])
-    if (handler != null) __obj.updateDynamic("handler")(handler.asInstanceOf[js.Any])
-    if (initialDelaySeconds != null) __obj.updateDynamic("initialDelaySeconds")(initialDelaySeconds.asInstanceOf[js.Any])
-    if (periodSeconds != null) __obj.updateDynamic("periodSeconds")(periodSeconds.asInstanceOf[js.Any])
-    if (successThreshold != null) __obj.updateDynamic("successThreshold")(successThreshold.asInstanceOf[js.Any])
-    if (timeoutSeconds != null) __obj.updateDynamic("timeoutSeconds")(timeoutSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProbe]
   }
+  @scala.inline
+  implicit class SchemaProbeOps[Self <: SchemaProbe] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailureThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failureThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHandler(value: SchemaHandler): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandler: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handler")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitialDelaySeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDelaySeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialDelaySeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialDelaySeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPeriodSeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("periodSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPeriodSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("periodSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutSeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

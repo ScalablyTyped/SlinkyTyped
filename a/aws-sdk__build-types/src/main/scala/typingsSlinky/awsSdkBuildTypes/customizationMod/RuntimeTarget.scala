@@ -13,12 +13,10 @@ trait RuntimeTarget extends js.Object
 
 object RuntimeTarget {
   @scala.inline
-  def browser: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.browser = this.cast("browser")
+  def browser: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.browser = "browser".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.browser]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def node: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.node = "node".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.node]
   @scala.inline
-  def node: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.node = this.cast("node")
-  @scala.inline
-  def universal: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.universal = this.cast("universal")
+  def universal: typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.universal = "universal".asInstanceOf[typingsSlinky.awsSdkBuildTypes.awsSdkBuildTypesStrings.universal]
 }
 

@@ -1,20 +1,17 @@
 package typingsSlinky.tensorflowTfjsLayers.recurrentMod
 
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
 import typingsSlinky.tensorflowTfjsLayers.activationConfigMod.ActivationIdentifier
 import typingsSlinky.tensorflowTfjsLayers.constraintsMod.Constraint
 import typingsSlinky.tensorflowTfjsLayers.constraintsMod.ConstraintIdentifier
 import typingsSlinky.tensorflowTfjsLayers.initializersMod.Initializer
 import typingsSlinky.tensorflowTfjsLayers.initializersMod.InitializerIdentifier
-import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.regularizersMod.Regularizer
 import typingsSlinky.tensorflowTfjsLayers.regularizersMod.RegularizerIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SimpleRNNLayerArgs extends BaseRNNLayerArgs {
   /**
     * Activation function to use.
@@ -23,130 +20,240 @@ trait SimpleRNNLayerArgs extends BaseRNNLayerArgs {
     *
     * If you pass `null`, no activation will be applied.
     */
-  var activation: js.UndefOr[ActivationIdentifier] = js.undefined
+  var activation: js.UndefOr[ActivationIdentifier] = js.native
   /**
     * Constraint function applied to the bias vector.
     */
-  var biasConstraint: js.UndefOr[ConstraintIdentifier | Constraint] = js.undefined
+  var biasConstraint: js.UndefOr[ConstraintIdentifier | Constraint] = js.native
   /**
     * Initializer for the bias vector.
     */
-  var biasInitializer: js.UndefOr[InitializerIdentifier | Initializer] = js.undefined
+  var biasInitializer: js.UndefOr[InitializerIdentifier | Initializer] = js.native
   /**
     * Regularizer function applied to the bias vector.
     */
-  var biasRegularizer: js.UndefOr[RegularizerIdentifier | Regularizer] = js.undefined
+  var biasRegularizer: js.UndefOr[RegularizerIdentifier | Regularizer] = js.native
   /**
     * Number between 0 and 1. Fraction of the units to drop for the linear
     * transformation of the inputs.
     */
-  var dropout: js.UndefOr[Double] = js.undefined
+  var dropout: js.UndefOr[Double] = js.native
   /**
     * Constraint function applied to the kernel weights matrix.
     */
-  var kernelConstraint: js.UndefOr[ConstraintIdentifier | Constraint] = js.undefined
+  var kernelConstraint: js.UndefOr[ConstraintIdentifier | Constraint] = js.native
   /**
     * Initializer for the `kernel` weights matrix, used for the linear
     * transformation of the inputs.
     */
-  var kernelInitializer: js.UndefOr[InitializerIdentifier | Initializer] = js.undefined
+  var kernelInitializer: js.UndefOr[InitializerIdentifier | Initializer] = js.native
   /**
     * Regularizer function applied to the kernel weights matrix.
     */
-  var kernelRegularizer: js.UndefOr[RegularizerIdentifier | Regularizer] = js.undefined
+  var kernelRegularizer: js.UndefOr[RegularizerIdentifier | Regularizer] = js.native
   /**
     * Constraint function applied to the recurrentKernel weights matrix.
     */
-  var recurrentConstraint: js.UndefOr[ConstraintIdentifier | Constraint] = js.undefined
+  var recurrentConstraint: js.UndefOr[ConstraintIdentifier | Constraint] = js.native
   /**
     * Number between 0 and 1. Fraction of the units to drop for the linear
     * transformation of the recurrent state.
     */
-  var recurrentDropout: js.UndefOr[Double] = js.undefined
+  var recurrentDropout: js.UndefOr[Double] = js.native
   /**
     * Initializer for the `recurrentKernel` weights matrix, used for
     * linear transformation of the recurrent state.
     */
-  var recurrentInitializer: js.UndefOr[InitializerIdentifier | Initializer] = js.undefined
+  var recurrentInitializer: js.UndefOr[InitializerIdentifier | Initializer] = js.native
   /**
     * Regularizer function applied to the recurrentKernel weights matrix.
     */
-  var recurrentRegularizer: js.UndefOr[RegularizerIdentifier | Regularizer] = js.undefined
+  var recurrentRegularizer: js.UndefOr[RegularizerIdentifier | Regularizer] = js.native
   /**
     * Positive integer, dimensionality of the output space.
     */
-  var units: Double
+  var units: Double = js.native
   /**
     * Whether the layer uses a bias vector.
     */
-  var useBias: js.UndefOr[Boolean] = js.undefined
+  var useBias: js.UndefOr[Boolean] = js.native
 }
 
 object SimpleRNNLayerArgs {
   @scala.inline
-  def apply(
-    units: Double,
-    activation: ActivationIdentifier = null,
-    batchInputShape: Shape = null,
-    batchSize: Int | Double = null,
-    biasConstraint: ConstraintIdentifier | Constraint = null,
-    biasInitializer: InitializerIdentifier | Initializer = null,
-    biasRegularizer: RegularizerIdentifier | Regularizer = null,
-    cell: RNNCell | js.Array[RNNCell] = null,
-    dropout: Int | Double = null,
-    dtype: DataType = null,
-    goBackwards: js.UndefOr[Boolean] = js.undefined,
-    inputDType: DataType = null,
-    inputDim: Int | Double = null,
-    inputLength: Int | Double = null,
-    inputShape: Shape = null,
-    kernelConstraint: ConstraintIdentifier | Constraint = null,
-    kernelInitializer: InitializerIdentifier | Initializer = null,
-    kernelRegularizer: RegularizerIdentifier | Regularizer = null,
-    name: String = null,
-    recurrentConstraint: ConstraintIdentifier | Constraint = null,
-    recurrentDropout: Int | Double = null,
-    recurrentInitializer: InitializerIdentifier | Initializer = null,
-    recurrentRegularizer: RegularizerIdentifier | Regularizer = null,
-    returnSequences: js.UndefOr[Boolean] = js.undefined,
-    returnState: js.UndefOr[Boolean] = js.undefined,
-    stateful: js.UndefOr[Boolean] = js.undefined,
-    trainable: js.UndefOr[Boolean] = js.undefined,
-    unroll: js.UndefOr[Boolean] = js.undefined,
-    useBias: js.UndefOr[Boolean] = js.undefined,
-    weights: js.Array[Tensor_[Rank]] = null
-  ): SimpleRNNLayerArgs = {
+  def apply(units: Double): SimpleRNNLayerArgs = {
     val __obj = js.Dynamic.literal(units = units.asInstanceOf[js.Any])
-    if (activation != null) __obj.updateDynamic("activation")(activation.asInstanceOf[js.Any])
-    if (batchInputShape != null) __obj.updateDynamic("batchInputShape")(batchInputShape.asInstanceOf[js.Any])
-    if (batchSize != null) __obj.updateDynamic("batchSize")(batchSize.asInstanceOf[js.Any])
-    if (biasConstraint != null) __obj.updateDynamic("biasConstraint")(biasConstraint.asInstanceOf[js.Any])
-    if (biasInitializer != null) __obj.updateDynamic("biasInitializer")(biasInitializer.asInstanceOf[js.Any])
-    if (biasRegularizer != null) __obj.updateDynamic("biasRegularizer")(biasRegularizer.asInstanceOf[js.Any])
-    if (cell != null) __obj.updateDynamic("cell")(cell.asInstanceOf[js.Any])
-    if (dropout != null) __obj.updateDynamic("dropout")(dropout.asInstanceOf[js.Any])
-    if (dtype != null) __obj.updateDynamic("dtype")(dtype.asInstanceOf[js.Any])
-    if (!js.isUndefined(goBackwards)) __obj.updateDynamic("goBackwards")(goBackwards.asInstanceOf[js.Any])
-    if (inputDType != null) __obj.updateDynamic("inputDType")(inputDType.asInstanceOf[js.Any])
-    if (inputDim != null) __obj.updateDynamic("inputDim")(inputDim.asInstanceOf[js.Any])
-    if (inputLength != null) __obj.updateDynamic("inputLength")(inputLength.asInstanceOf[js.Any])
-    if (inputShape != null) __obj.updateDynamic("inputShape")(inputShape.asInstanceOf[js.Any])
-    if (kernelConstraint != null) __obj.updateDynamic("kernelConstraint")(kernelConstraint.asInstanceOf[js.Any])
-    if (kernelInitializer != null) __obj.updateDynamic("kernelInitializer")(kernelInitializer.asInstanceOf[js.Any])
-    if (kernelRegularizer != null) __obj.updateDynamic("kernelRegularizer")(kernelRegularizer.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (recurrentConstraint != null) __obj.updateDynamic("recurrentConstraint")(recurrentConstraint.asInstanceOf[js.Any])
-    if (recurrentDropout != null) __obj.updateDynamic("recurrentDropout")(recurrentDropout.asInstanceOf[js.Any])
-    if (recurrentInitializer != null) __obj.updateDynamic("recurrentInitializer")(recurrentInitializer.asInstanceOf[js.Any])
-    if (recurrentRegularizer != null) __obj.updateDynamic("recurrentRegularizer")(recurrentRegularizer.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnSequences)) __obj.updateDynamic("returnSequences")(returnSequences.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnState)) __obj.updateDynamic("returnState")(returnState.asInstanceOf[js.Any])
-    if (!js.isUndefined(stateful)) __obj.updateDynamic("stateful")(stateful.asInstanceOf[js.Any])
-    if (!js.isUndefined(trainable)) __obj.updateDynamic("trainable")(trainable.asInstanceOf[js.Any])
-    if (!js.isUndefined(unroll)) __obj.updateDynamic("unroll")(unroll.asInstanceOf[js.Any])
-    if (!js.isUndefined(useBias)) __obj.updateDynamic("useBias")(useBias.asInstanceOf[js.Any])
-    if (weights != null) __obj.updateDynamic("weights")(weights.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimpleRNNLayerArgs]
   }
+  @scala.inline
+  implicit class SimpleRNNLayerArgsOps[Self <: SimpleRNNLayerArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUnits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("units")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActivation(value: ActivationIdentifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActivation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBiasConstraint(value: ConstraintIdentifier | Constraint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("biasConstraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBiasConstraint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("biasConstraint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBiasInitializer(value: InitializerIdentifier | Initializer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("biasInitializer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBiasInitializer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("biasInitializer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBiasRegularizer(value: RegularizerIdentifier | Regularizer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("biasRegularizer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBiasRegularizer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("biasRegularizer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDropout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKernelConstraint(value: ConstraintIdentifier | Constraint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelConstraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKernelConstraint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelConstraint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKernelInitializer(value: InitializerIdentifier | Initializer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelInitializer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKernelInitializer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelInitializer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKernelRegularizer(value: RegularizerIdentifier | Regularizer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelRegularizer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKernelRegularizer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kernelRegularizer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecurrentConstraint(value: ConstraintIdentifier | Constraint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrentConstraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecurrentConstraint: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrentConstraint")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecurrentDropout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrentDropout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecurrentDropout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrentDropout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecurrentInitializer(value: InitializerIdentifier | Initializer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrentInitializer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecurrentInitializer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrentInitializer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRecurrentRegularizer(value: RegularizerIdentifier | Regularizer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrentRegularizer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecurrentRegularizer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrentRegularizer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUseBias(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useBias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUseBias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useBias")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

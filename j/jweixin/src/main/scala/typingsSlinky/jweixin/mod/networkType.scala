@@ -16,14 +16,12 @@ trait networkType extends js.Object
 
 object networkType {
   @scala.inline
-  def `2g`: typingsSlinky.jweixin.jweixinStrings.`2g` = this.cast("2g")
+  def `2g`: typingsSlinky.jweixin.jweixinStrings.`2g` = "2g".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.`2g`]
   @scala.inline
-  def `3g`: typingsSlinky.jweixin.jweixinStrings.`3g` = this.cast("3g")
+  def `3g`: typingsSlinky.jweixin.jweixinStrings.`3g` = "3g".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.`3g`]
   @scala.inline
-  def `4g`: typingsSlinky.jweixin.jweixinStrings.`4g` = this.cast("4g")
+  def `4g`: typingsSlinky.jweixin.jweixinStrings.`4g` = "4g".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.`4g`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def wifi: typingsSlinky.jweixin.jweixinStrings.wifi = this.cast("wifi")
+  def wifi: typingsSlinky.jweixin.jweixinStrings.wifi = "wifi".asInstanceOf[typingsSlinky.jweixin.jweixinStrings.wifi]
 }
 

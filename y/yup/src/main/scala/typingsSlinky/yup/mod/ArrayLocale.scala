@@ -2,22 +2,66 @@ package typingsSlinky.yup.mod
 
 import typingsSlinky.yup.AnonMax
 import typingsSlinky.yup.AnonMin
+import typingsSlinky.yup.PartialTestMessageParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ArrayLocale extends js.Object {
-  var max: js.UndefOr[TestOptionsMessage[AnonMax, _]] = js.undefined
-  var min: js.UndefOr[TestOptionsMessage[AnonMin, _]] = js.undefined
+  var max: js.UndefOr[TestOptionsMessage[AnonMax, _]] = js.native
+  var min: js.UndefOr[TestOptionsMessage[AnonMin, _]] = js.native
 }
 
 object ArrayLocale {
   @scala.inline
-  def apply(max: TestOptionsMessage[AnonMax, _] = null, min: TestOptionsMessage[AnonMin, _] = null): ArrayLocale = {
+  def apply(): ArrayLocale = {
     val __obj = js.Dynamic.literal()
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArrayLocale]
   }
+  @scala.inline
+  implicit class ArrayLocaleOps[Self <: ArrayLocale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxFunction1(value: /* params */ AnonMax with PartialTestMessageParams => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMax(value: TestOptionsMessage[AnonMax, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinFunction1(value: /* params */ AnonMin with PartialTestMessageParams => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMin(value: TestOptionsMessage[AnonMin, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

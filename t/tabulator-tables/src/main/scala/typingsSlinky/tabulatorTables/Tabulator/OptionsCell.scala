@@ -4,58 +4,232 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OptionsCell extends js.Object {
   /** The cellClick callback is triggered when a user left clicks on a cell, it can be set on a per column basis using the option in the columns definition object. */
-  var cellClick: js.UndefOr[CellEventCallback] = js.undefined
-  var cellContext: js.UndefOr[CellEventCallback] = js.undefined
-  var cellDblClick: js.UndefOr[CellEventCallback] = js.undefined
-  var cellDblTap: js.UndefOr[CellEventCallback] = js.undefined
-  var cellEditCancelled: js.UndefOr[CellEditEventCallback] = js.undefined
-  var cellEdited: js.UndefOr[CellEditEventCallback] = js.undefined
-  var cellEditing: js.UndefOr[CellEditEventCallback] = js.undefined
-  var cellMouseEnter: js.UndefOr[CellEventCallback] = js.undefined
-  var cellMouseLeave: js.UndefOr[CellEventCallback] = js.undefined
-  var cellMouseMove: js.UndefOr[CellEventCallback] = js.undefined
-  var cellMouseOut: js.UndefOr[CellEventCallback] = js.undefined
-  var cellMouseOver: js.UndefOr[CellEventCallback] = js.undefined
-  var cellTap: js.UndefOr[CellEventCallback] = js.undefined
-  var cellTapHold: js.UndefOr[CellEventCallback] = js.undefined
+  var cellClick: js.UndefOr[CellEventCallback] = js.native
+  var cellContext: js.UndefOr[CellEventCallback] = js.native
+  var cellDblClick: js.UndefOr[CellEventCallback] = js.native
+  var cellDblTap: js.UndefOr[CellEventCallback] = js.native
+  var cellEditCancelled: js.UndefOr[CellEditEventCallback] = js.native
+  var cellEdited: js.UndefOr[CellEditEventCallback] = js.native
+  var cellEditing: js.UndefOr[CellEditEventCallback] = js.native
+  var cellHozAlign: js.UndefOr[ColumnDefinitionAlign] = js.native
+  var cellMouseEnter: js.UndefOr[CellEventCallback] = js.native
+  var cellMouseLeave: js.UndefOr[CellEventCallback] = js.native
+  var cellMouseMove: js.UndefOr[CellEventCallback] = js.native
+  var cellMouseOut: js.UndefOr[CellEventCallback] = js.native
+  var cellMouseOver: js.UndefOr[CellEventCallback] = js.native
+  var cellTap: js.UndefOr[CellEventCallback] = js.native
+  var cellTapHold: js.UndefOr[CellEventCallback] = js.native
+  var cellVertAlign: js.UndefOr[VerticalAlign] = js.native
 }
 
 object OptionsCell {
   @scala.inline
-  def apply(
-    cellClick: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null,
-    cellContext: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null,
-    cellDblClick: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null,
-    cellDblTap: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null,
-    cellEditCancelled: /* cell */ CellComponent => Unit = null,
-    cellEdited: /* cell */ CellComponent => Unit = null,
-    cellEditing: /* cell */ CellComponent => Unit = null,
-    cellMouseEnter: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null,
-    cellMouseLeave: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null,
-    cellMouseMove: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null,
-    cellMouseOut: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null,
-    cellMouseOver: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null,
-    cellTap: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null,
-    cellTapHold: (/* e */ js.Any, /* cell */ CellComponent) => Unit = null
-  ): OptionsCell = {
+  def apply(): OptionsCell = {
     val __obj = js.Dynamic.literal()
-    if (cellClick != null) __obj.updateDynamic("cellClick")(js.Any.fromFunction2(cellClick))
-    if (cellContext != null) __obj.updateDynamic("cellContext")(js.Any.fromFunction2(cellContext))
-    if (cellDblClick != null) __obj.updateDynamic("cellDblClick")(js.Any.fromFunction2(cellDblClick))
-    if (cellDblTap != null) __obj.updateDynamic("cellDblTap")(js.Any.fromFunction2(cellDblTap))
-    if (cellEditCancelled != null) __obj.updateDynamic("cellEditCancelled")(js.Any.fromFunction1(cellEditCancelled))
-    if (cellEdited != null) __obj.updateDynamic("cellEdited")(js.Any.fromFunction1(cellEdited))
-    if (cellEditing != null) __obj.updateDynamic("cellEditing")(js.Any.fromFunction1(cellEditing))
-    if (cellMouseEnter != null) __obj.updateDynamic("cellMouseEnter")(js.Any.fromFunction2(cellMouseEnter))
-    if (cellMouseLeave != null) __obj.updateDynamic("cellMouseLeave")(js.Any.fromFunction2(cellMouseLeave))
-    if (cellMouseMove != null) __obj.updateDynamic("cellMouseMove")(js.Any.fromFunction2(cellMouseMove))
-    if (cellMouseOut != null) __obj.updateDynamic("cellMouseOut")(js.Any.fromFunction2(cellMouseOut))
-    if (cellMouseOver != null) __obj.updateDynamic("cellMouseOver")(js.Any.fromFunction2(cellMouseOver))
-    if (cellTap != null) __obj.updateDynamic("cellTap")(js.Any.fromFunction2(cellTap))
-    if (cellTapHold != null) __obj.updateDynamic("cellTapHold")(js.Any.fromFunction2(cellTapHold))
     __obj.asInstanceOf[OptionsCell]
   }
+  @scala.inline
+  implicit class OptionsCellOps[Self <: OptionsCell] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCellClick(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellClick")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellContext(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellContext")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellContext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellDblClick(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellDblClick")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellDblClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellDblClick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellDblTap(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellDblTap")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellDblTap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellDblTap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellEditCancelled(value: /* cell */ CellComponent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditCancelled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellEditCancelled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditCancelled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellEdited(value: /* cell */ CellComponent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEdited")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellEdited: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEdited")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellEditing(value: /* cell */ CellComponent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellEditing: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditing")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellHozAlign(value: ColumnDefinitionAlign): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHozAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellHozAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellHozAlign")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellMouseEnter(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseEnter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellMouseEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellMouseLeave(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseLeave")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellMouseLeave: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseLeave")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellMouseMove(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseMove")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellMouseMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellMouseOut(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseOut")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellMouseOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellMouseOver(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseOver")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellMouseOver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellMouseOver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellTap(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTap")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellTap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellTapHold(value: (/* e */ js.Any, /* cell */ CellComponent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTapHold")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutCellTapHold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellTapHold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellVertAlign(value: VerticalAlign): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellVertAlign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellVertAlign: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellVertAlign")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

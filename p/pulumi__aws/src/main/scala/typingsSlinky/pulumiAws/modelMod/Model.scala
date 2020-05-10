@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.modelMod
 
-import typingsSlinky.pulumiAws.restApiMod.RestApi
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -37,7 +36,7 @@ class Model protected () extends CustomResource {
   /**
     * The ID of the associated REST API
     */
-  val restApi: Output_[RestApi] = js.native
+  val restApi: Output_[String] = js.native
   /**
     * The schema of the model in a JSON form
     */

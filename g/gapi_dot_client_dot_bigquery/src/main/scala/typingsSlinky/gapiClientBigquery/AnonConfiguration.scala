@@ -9,51 +9,149 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonConfiguration extends js.Object {
   /** [Full-projection-only] Specifies the job configuration. */
-  var configuration: js.UndefOr[JobConfiguration] = js.undefined
+  var configuration: js.UndefOr[JobConfiguration] = js.native
   /** A result object that will be present only if the job has failed. */
-  var errorResult: js.UndefOr[ErrorProto] = js.undefined
+  var errorResult: js.UndefOr[ErrorProto] = js.native
   /** Unique opaque ID of the job. */
-  var id: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.native
   /** Job reference uniquely identifying the job. */
-  var jobReference: js.UndefOr[JobReference] = js.undefined
+  var jobReference: js.UndefOr[JobReference] = js.native
   /** The resource type. */
-  var kind: js.UndefOr[String] = js.undefined
+  var kind: js.UndefOr[String] = js.native
   /** Running state of the job. When the state is DONE, errorResult can be checked to determine whether the job succeeded or failed. */
-  var state: js.UndefOr[String] = js.undefined
+  var state: js.UndefOr[String] = js.native
   /** [Output-only] Information about the job, including starting time and ending time of the job. */
-  var statistics: js.UndefOr[JobStatistics] = js.undefined
+  var statistics: js.UndefOr[JobStatistics] = js.native
   /** [Full-projection-only] Describes the state of the job. */
-  var status: js.UndefOr[JobStatus] = js.undefined
+  var status: js.UndefOr[JobStatus] = js.native
   /** [Full-projection-only] Email address of the user who ran the job. */
-  var user_email: js.UndefOr[String] = js.undefined
+  var user_email: js.UndefOr[String] = js.native
 }
 
 object AnonConfiguration {
   @scala.inline
-  def apply(
-    configuration: JobConfiguration = null,
-    errorResult: ErrorProto = null,
-    id: String = null,
-    jobReference: JobReference = null,
-    kind: String = null,
-    state: String = null,
-    statistics: JobStatistics = null,
-    status: JobStatus = null,
-    user_email: String = null
-  ): AnonConfiguration = {
+  def apply(): AnonConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (configuration != null) __obj.updateDynamic("configuration")(configuration.asInstanceOf[js.Any])
-    if (errorResult != null) __obj.updateDynamic("errorResult")(errorResult.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (jobReference != null) __obj.updateDynamic("jobReference")(jobReference.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
-    if (statistics != null) __obj.updateDynamic("statistics")(statistics.asInstanceOf[js.Any])
-    if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (user_email != null) __obj.updateDynamic("user_email")(user_email.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonConfiguration]
   }
+  @scala.inline
+  implicit class AnonConfigurationOps[Self <: AnonConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfiguration(value: JobConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrorResult(value: ErrorProto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrorResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorResult")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJobReference(value: JobReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJobReference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobReference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatistics(value: JobStatistics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatistics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: JobStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser_email(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user_email")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser_email: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user_email")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

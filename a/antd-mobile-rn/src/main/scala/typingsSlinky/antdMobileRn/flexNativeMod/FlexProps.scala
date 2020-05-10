@@ -1,20 +1,5 @@
 package typingsSlinky.antdMobileRn.flexNativeMod
 
-import slinky.core.TagMod
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.`column-reverse`
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.`row-reverse`
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.`wrap-reverse`
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.around
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.baseline
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.between
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.center
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.column
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.end
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.nowrap
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.row
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.start
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.stretch
-import typingsSlinky.antdMobileRn.antdMobileRnStrings.wrap
 import typingsSlinky.antdMobileRn.flexPropsTypeMod.FlexPropsType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -22,42 +7,94 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FlexProps extends FlexPropsType {
-  var onLongPress: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onPress: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onPressIn: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var onPressOut: js.UndefOr[js.Function0[Unit]] = js.undefined
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var onLongPress: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPressIn: js.UndefOr[js.Function0[Unit]] = js.native
+  var onPressOut: js.UndefOr[js.Function0[Unit]] = js.native
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
 object FlexProps {
   @scala.inline
-  def apply(
-    align: start | center | end | baseline | stretch = null,
-    children: TagMod[Any] = null,
-    direction: row | `row-reverse` | column | `column-reverse` = null,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    justify: start | end | center | between | around = null,
-    onLongPress: () => Unit = null,
-    onPress: () => Unit = null,
-    onPressIn: () => Unit = null,
-    onPressOut: () => Unit = null,
-    style: StyleProp[ViewStyle] = null,
-    wrap: nowrap | wrap | `wrap-reverse` = null
-  ): FlexProps = {
+  def apply(): FlexProps = {
     val __obj = js.Dynamic.literal()
-    if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
-    if (justify != null) __obj.updateDynamic("justify")(justify.asInstanceOf[js.Any])
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(js.Any.fromFunction0(onLongPress))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction0(onPress))
-    if (onPressIn != null) __obj.updateDynamic("onPressIn")(js.Any.fromFunction0(onPressIn))
-    if (onPressOut != null) __obj.updateDynamic("onPressOut")(js.Any.fromFunction0(onPressOut))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (wrap != null) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlexProps]
   }
+  @scala.inline
+  implicit class FlexPropsOps[Self <: FlexProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnLongPress(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnLongPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPress(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPressIn(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressIn")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPressIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPressOut(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressOut")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPressOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+  }
+  
 }
 

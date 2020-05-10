@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WorkerMessage extends js.Object {
   /**
     * Labels are used to group WorkerMessages.
@@ -18,37 +19,104 @@ trait WorkerMessage extends js.Object {
     * of development other strings can be used as tags. LABEL_UNSPECIFIED should
     * not be used here.
     */
-  var labels: js.UndefOr[Record[String, String]] = js.undefined
+  var labels: js.UndefOr[Record[String, String]] = js.native
   /** The timestamp of the worker_message. */
-  var time: js.UndefOr[String] = js.undefined
+  var time: js.UndefOr[String] = js.native
   /** The health of a worker. */
-  var workerHealthReport: js.UndefOr[WorkerHealthReport] = js.undefined
+  var workerHealthReport: js.UndefOr[WorkerHealthReport] = js.native
   /** A worker message code. */
-  var workerMessageCode: js.UndefOr[WorkerMessageCode] = js.undefined
+  var workerMessageCode: js.UndefOr[WorkerMessageCode] = js.native
   /** Resource metrics reported by workers. */
-  var workerMetrics: js.UndefOr[ResourceUtilizationReport] = js.undefined
+  var workerMetrics: js.UndefOr[ResourceUtilizationReport] = js.native
   /** Shutdown notice by workers. */
-  var workerShutdownNotice: js.UndefOr[WorkerShutdownNotice] = js.undefined
+  var workerShutdownNotice: js.UndefOr[WorkerShutdownNotice] = js.native
 }
 
 object WorkerMessage {
   @scala.inline
-  def apply(
-    labels: Record[String, String] = null,
-    time: String = null,
-    workerHealthReport: WorkerHealthReport = null,
-    workerMessageCode: WorkerMessageCode = null,
-    workerMetrics: ResourceUtilizationReport = null,
-    workerShutdownNotice: WorkerShutdownNotice = null
-  ): WorkerMessage = {
+  def apply(): WorkerMessage = {
     val __obj = js.Dynamic.literal()
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (time != null) __obj.updateDynamic("time")(time.asInstanceOf[js.Any])
-    if (workerHealthReport != null) __obj.updateDynamic("workerHealthReport")(workerHealthReport.asInstanceOf[js.Any])
-    if (workerMessageCode != null) __obj.updateDynamic("workerMessageCode")(workerMessageCode.asInstanceOf[js.Any])
-    if (workerMetrics != null) __obj.updateDynamic("workerMetrics")(workerMetrics.asInstanceOf[js.Any])
-    if (workerShutdownNotice != null) __obj.updateDynamic("workerShutdownNotice")(workerShutdownNotice.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkerMessage]
   }
+  @scala.inline
+  implicit class WorkerMessageOps[Self <: WorkerMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLabels(value: Record[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerHealthReport(value: WorkerHealthReport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerHealthReport")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerHealthReport: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerHealthReport")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerMessageCode(value: WorkerMessageCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMessageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerMessageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMessageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerMetrics(value: ResourceUtilizationReport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMetrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerMetrics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMetrics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkerShutdownNotice(value: WorkerShutdownNotice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerShutdownNotice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerShutdownNotice: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerShutdownNotice")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

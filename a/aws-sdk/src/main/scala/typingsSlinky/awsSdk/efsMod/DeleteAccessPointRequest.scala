@@ -16,8 +16,21 @@ object DeleteAccessPointRequest {
   @scala.inline
   def apply(AccessPointId: AccessPointId): DeleteAccessPointRequest = {
     val __obj = js.Dynamic.literal(AccessPointId = AccessPointId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteAccessPointRequest]
   }
+  @scala.inline
+  implicit class DeleteAccessPointRequestOps[Self <: DeleteAccessPointRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessPointId(value: AccessPointId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessPointId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

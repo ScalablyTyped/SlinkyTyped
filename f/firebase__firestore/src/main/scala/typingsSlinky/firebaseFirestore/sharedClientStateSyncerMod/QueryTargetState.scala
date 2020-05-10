@@ -14,12 +14,10 @@ trait QueryTargetState extends js.Object
 
 object QueryTargetState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def current: current_ = "current".asInstanceOf[current_]
   @scala.inline
-  def current: current_ = this.cast("current")
+  def `not-current`: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.`not-current` = "not-current".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.`not-current`]
   @scala.inline
-  def `not-current`: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.`not-current` = this.cast("not-current")
-  @scala.inline
-  def rejected: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.rejected = this.cast("rejected")
+  def rejected: typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.rejected = "rejected".asInstanceOf[typingsSlinky.firebaseFirestore.firebaseFirestoreStrings.rejected]
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.mongoose.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.mongodb.mod.MongoError
 import typingsSlinky.mongoose.AnonAutoIndexId
 import typingsSlinky.mongoose.AnonDictother
@@ -50,7 +51,6 @@ import typingsSlinky.mongoose.mongooseStrings.validateBeforeSave
 import typingsSlinky.mongoose.mongooseStrings.versionKey
 import typingsSlinky.mongoose.mongooseStrings.writeConcern
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,7 +64,7 @@ trait Schema[T] extends EventEmitter {
   /** Object of currently defined methods on this schema. */
   var methods: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ F in keyof T ]: T[F]}
-    */ typingsSlinky.mongoose.mongooseStrings.Schema with T = js.native
+    */ typingsSlinky.mongoose.mongooseStrings.Schema with TopLevel[T] = js.native
   /** The original object passed to the schema constructor */
   var obj: js.Any = js.native
   /**
@@ -107,13 +107,13 @@ trait Schema[T] extends EventEmitter {
   def method(
     methodObj: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ F in keyof T ]: T[F]}
-    */ typingsSlinky.mongoose.mongooseStrings.Schema with T
+    */ typingsSlinky.mongoose.mongooseStrings.Schema with TopLevel[T]
   ): this.type = js.native
   /**
     * Adds an instance method to documents constructed from Models compiled from this schema.
     * If a hash of name/fn pairs is passed as the only argument, each name/fn pair will be added as methods.
     */
-  def method[F /* <: String */](method: F, fn: /* import warning: importer.ImportType#apply Failed type conversion: T[F] */ js.Any): this.type = js.native
+  def method[F /* <: /* keyof T */ String */](method: F, fn: /* import warning: importer.ImportType#apply Failed type conversion: T[F] */ js.Any): this.type = js.native
   /**
     * Gets/sets schema paths.
     * Sets a path (if arity 2)
@@ -146,11 +146,11 @@ trait Schema[T] extends EventEmitter {
     ]
   ): this.type = js.native
   def post[T /* <: Document */](
-    method: RegExp,
+    method: js.RegExp,
     fn: js.Function2[/* doc */ T, /* next */ js.Function1[/* err */ js.UndefOr[NativeError], Unit], Unit]
   ): this.type = js.native
   def post[T /* <: Document */](
-    method: RegExp,
+    method: js.RegExp,
     fn: js.Function3[
       /* error */ MongoError, 
       /* doc */ T, 
@@ -190,10 +190,10 @@ trait Schema[T] extends EventEmitter {
   def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: String, fn: HookSyncCallback[T], errorCb: HookErrorCallback): this.type = js.native
   def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: String, parallel: Boolean, fn: HookAsyncCallback[T]): this.type = js.native
   def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: String, parallel: Boolean, fn: HookAsyncCallback[T], errorCb: HookErrorCallback): this.type = js.native
-  def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: RegExp, fn: HookSyncCallback[T]): this.type = js.native
-  def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: RegExp, fn: HookSyncCallback[T], errorCb: HookErrorCallback): this.type = js.native
-  def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: RegExp, parallel: Boolean, fn: HookAsyncCallback[T]): this.type = js.native
-  def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: RegExp, parallel: Boolean, fn: HookAsyncCallback[T], errorCb: HookErrorCallback): this.type = js.native
+  def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: js.RegExp, fn: HookSyncCallback[T]): this.type = js.native
+  def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: js.RegExp, fn: HookSyncCallback[T], errorCb: HookErrorCallback): this.type = js.native
+  def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: js.RegExp, parallel: Boolean, fn: HookAsyncCallback[T]): this.type = js.native
+  def pre[T /* <: Document | (Model_[Document, js.Object]) | Query[_] | Aggregate[_] */](method: js.RegExp, parallel: Boolean, fn: HookAsyncCallback[T], errorCb: HookErrorCallback): this.type = js.native
   @JSName("pre")
   def pre_aggregate[T /* <: Aggregate[_] */](method: aggregate, fn: HookSyncCallback[T]): this.type = js.native
   @JSName("pre")

@@ -14,14 +14,12 @@ trait PresentationStyle extends js.Object
 
 object PresentationStyle {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def formSheet: typingsSlinky.reactNativeModal.reactNativeModalStrings.formSheet = "formSheet".asInstanceOf[typingsSlinky.reactNativeModal.reactNativeModalStrings.formSheet]
   @scala.inline
-  def formSheet: typingsSlinky.reactNativeModal.reactNativeModalStrings.formSheet = this.cast("formSheet")
+  def fullScreen: typingsSlinky.reactNativeModal.reactNativeModalStrings.fullScreen = "fullScreen".asInstanceOf[typingsSlinky.reactNativeModal.reactNativeModalStrings.fullScreen]
   @scala.inline
-  def fullScreen: typingsSlinky.reactNativeModal.reactNativeModalStrings.fullScreen = this.cast("fullScreen")
+  def overFullScreen: typingsSlinky.reactNativeModal.reactNativeModalStrings.overFullScreen = "overFullScreen".asInstanceOf[typingsSlinky.reactNativeModal.reactNativeModalStrings.overFullScreen]
   @scala.inline
-  def overFullScreen: typingsSlinky.reactNativeModal.reactNativeModalStrings.overFullScreen = this.cast("overFullScreen")
-  @scala.inline
-  def pageSheet: typingsSlinky.reactNativeModal.reactNativeModalStrings.pageSheet = this.cast("pageSheet")
+  def pageSheet: typingsSlinky.reactNativeModal.reactNativeModalStrings.pageSheet = "pageSheet".asInstanceOf[typingsSlinky.reactNativeModal.reactNativeModalStrings.pageSheet]
 }
 

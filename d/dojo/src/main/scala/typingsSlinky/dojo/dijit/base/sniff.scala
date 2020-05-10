@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * Deprecated, back compatibility module, new code should require dojo/uacss directly instead of this module.
   * 
   */
+@js.native
 trait sniff extends js.Object
 

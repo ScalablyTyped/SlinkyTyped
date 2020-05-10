@@ -1,10 +1,7 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.beforeAfterWrapperMod.BeforeAfterWrapperProps
 import typingsSlinky.materialUi.beforeAfterWrapperMod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -12,34 +9,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object BeforeAfterWrapper
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object BeforeAfterWrapper {
   @JSImport("material-ui/internal/BeforeAfterWrapper", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    afterElementType: String = null,
-    afterStyle: CSSProperties = null,
-    beforeElementType: String = null,
-    beforeStyle: CSSProperties = null,
-    elementType: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (afterElementType != null) __obj.updateDynamic("afterElementType")(afterElementType.asInstanceOf[js.Any])
-    if (afterStyle != null) __obj.updateDynamic("afterStyle")(afterStyle.asInstanceOf[js.Any])
-    if (beforeElementType != null) __obj.updateDynamic("beforeElementType")(beforeElementType.asInstanceOf[js.Any])
-    if (beforeStyle != null) __obj.updateDynamic("beforeStyle")(beforeStyle.asInstanceOf[js.Any])
-    if (elementType != null) __obj.updateDynamic("elementType")(elementType.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def afterElementType(value: String): this.type = set("afterElementType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def afterStyle(value: CSSProperties): this.type = set("afterStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beforeElementType(value: String): this.type = set("beforeElementType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def beforeStyle(value: CSSProperties): this.type = set("beforeStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def elementType(value: String): this.type = set("elementType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.materialUi.beforeAfterWrapperMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = BeforeAfterWrapperProps
+  
+  def withProps(p: BeforeAfterWrapperProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: BeforeAfterWrapper.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

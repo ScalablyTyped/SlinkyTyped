@@ -12,10 +12,8 @@ trait ExpandIconPosition extends js.Object
 
 object ExpandIconPosition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.antd.antdStrings.left = "left".asInstanceOf[typingsSlinky.antd.antdStrings.left]
   @scala.inline
-  def left: typingsSlinky.antd.antdStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.antd.antdStrings.right = this.cast("right")
+  def right: typingsSlinky.antd.antdStrings.right = "right".asInstanceOf[typingsSlinky.antd.antdStrings.right]
 }
 

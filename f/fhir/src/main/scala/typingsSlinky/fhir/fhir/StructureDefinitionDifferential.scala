@@ -7,32 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Differential view of the structure
   */
+@js.native
 trait StructureDefinitionDifferential extends BackboneElement {
   /**
     * Definition of elements in the resource (if no StructureDefinition)
     */
-  var element: js.Array[ElementDefinition]
+  var element: js.Array[ElementDefinition] = js.native
 }
 
 object StructureDefinitionDifferential {
   @scala.inline
-  def apply(
-    element: js.Array[ElementDefinition],
-    _fhir_comments: js.Array[Element] = null,
-    _id: Element = null,
-    extension: js.Array[Extension] = null,
-    fhir_comments: js.Array[String] = null,
-    id: String = null,
-    modifierExtension: js.Array[Extension] = null
-  ): StructureDefinitionDifferential = {
+  def apply(element: js.Array[ElementDefinition]): StructureDefinitionDifferential = {
     val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any])
-    if (_fhir_comments != null) __obj.updateDynamic("_fhir_comments")(_fhir_comments.asInstanceOf[js.Any])
-    if (_id != null) __obj.updateDynamic("_id")(_id.asInstanceOf[js.Any])
-    if (extension != null) __obj.updateDynamic("extension")(extension.asInstanceOf[js.Any])
-    if (fhir_comments != null) __obj.updateDynamic("fhir_comments")(fhir_comments.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (modifierExtension != null) __obj.updateDynamic("modifierExtension")(modifierExtension.asInstanceOf[js.Any])
     __obj.asInstanceOf[StructureDefinitionDifferential]
   }
+  @scala.inline
+  implicit class StructureDefinitionDifferentialOps[Self <: StructureDefinitionDifferential] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElement(value: js.Array[ElementDefinition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

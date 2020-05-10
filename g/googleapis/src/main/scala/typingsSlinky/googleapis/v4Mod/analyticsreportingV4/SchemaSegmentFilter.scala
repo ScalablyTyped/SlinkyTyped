@@ -39,16 +39,53 @@ trait SchemaSegmentFilter extends js.Object {
 
 object SchemaSegmentFilter {
   @scala.inline
-  def apply(
-    not: js.UndefOr[Boolean] = js.undefined,
-    sequenceSegment: SchemaSequenceSegment = null,
-    simpleSegment: SchemaSimpleSegment = null
-  ): SchemaSegmentFilter = {
+  def apply(): SchemaSegmentFilter = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(not)) __obj.updateDynamic("not")(not.asInstanceOf[js.Any])
-    if (sequenceSegment != null) __obj.updateDynamic("sequenceSegment")(sequenceSegment.asInstanceOf[js.Any])
-    if (simpleSegment != null) __obj.updateDynamic("simpleSegment")(simpleSegment.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSegmentFilter]
   }
+  @scala.inline
+  implicit class SchemaSegmentFilterOps[Self <: SchemaSegmentFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNot(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("not")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSequenceSegment(value: SchemaSequenceSegment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sequenceSegment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSequenceSegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sequenceSegment")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSimpleSegment(value: SchemaSimpleSegment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleSegment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSimpleSegment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simpleSegment")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

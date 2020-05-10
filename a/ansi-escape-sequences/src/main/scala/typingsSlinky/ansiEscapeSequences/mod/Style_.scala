@@ -42,70 +42,68 @@ trait Style_ extends js.Object
 
 object Style_ {
   @scala.inline
-  def `bg-black`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-black` = this.cast("bg-black")
+  def `bg-black`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-black` = "bg-black".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-black`]
   @scala.inline
-  def `bg-blue`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-blue` = this.cast("bg-blue")
+  def `bg-blue`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-blue` = "bg-blue".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-blue`]
   @scala.inline
-  def `bg-cyan`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-cyan` = this.cast("bg-cyan")
+  def `bg-cyan`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-cyan` = "bg-cyan".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-cyan`]
   @scala.inline
-  def `bg-gray`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-gray` = this.cast("bg-gray")
+  def `bg-gray`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-gray` = "bg-gray".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-gray`]
   @scala.inline
-  def `bg-green`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-green` = this.cast("bg-green")
+  def `bg-green`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-green` = "bg-green".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-green`]
   @scala.inline
-  def `bg-grey`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-grey` = this.cast("bg-grey")
+  def `bg-grey`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-grey` = "bg-grey".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-grey`]
   @scala.inline
-  def `bg-magenta`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-magenta` = this.cast("bg-magenta")
+  def `bg-magenta`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-magenta` = "bg-magenta".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-magenta`]
   @scala.inline
-  def `bg-red`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-red` = this.cast("bg-red")
+  def `bg-red`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-red` = "bg-red".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-red`]
   @scala.inline
-  def `bg-white`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-white` = this.cast("bg-white")
+  def `bg-white`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-white` = "bg-white".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-white`]
   @scala.inline
-  def `bg-yellow`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-yellow` = this.cast("bg-yellow")
+  def `bg-yellow`: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-yellow` = "bg-yellow".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.`bg-yellow`]
   @scala.inline
-  def black: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.black = this.cast("black")
+  def black: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.black = "black".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.black]
   @scala.inline
-  def blue: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.blue = this.cast("blue")
+  def blue: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.blue = "blue".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.blue]
   @scala.inline
-  def bold: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.bold = this.cast("bold")
+  def bold: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.bold = "bold".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.bold]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cyan: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.cyan = "cyan".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.cyan]
   @scala.inline
-  def cyan: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.cyan = this.cast("cyan")
+  def font2: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font2 = "font2".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font2]
   @scala.inline
-  def font2: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font2 = this.cast("font2")
+  def font3: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font3 = "font3".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font3]
   @scala.inline
-  def font3: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font3 = this.cast("font3")
+  def font4: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font4 = "font4".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font4]
   @scala.inline
-  def font4: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font4 = this.cast("font4")
+  def font5: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font5 = "font5".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font5]
   @scala.inline
-  def font5: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font5 = this.cast("font5")
+  def font6: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font6 = "font6".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font6]
   @scala.inline
-  def font6: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.font6 = this.cast("font6")
+  def fontDefault: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.fontDefault = "fontDefault".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.fontDefault]
   @scala.inline
-  def fontDefault: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.fontDefault = this.cast("fontDefault")
+  def gray: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.gray = "gray".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.gray]
   @scala.inline
-  def gray: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.gray = this.cast("gray")
+  def green: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.green = "green".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.green]
   @scala.inline
-  def green: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.green = this.cast("green")
+  def grey: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.grey = "grey".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.grey]
   @scala.inline
-  def grey: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.grey = this.cast("grey")
+  def imageNegative: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.imageNegative = "imageNegative".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.imageNegative]
   @scala.inline
-  def imageNegative: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.imageNegative = this.cast("imageNegative")
+  def imagePositive: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.imagePositive = "imagePositive".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.imagePositive]
   @scala.inline
-  def imagePositive: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.imagePositive = this.cast("imagePositive")
+  def italic: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.italic = "italic".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.italic]
   @scala.inline
-  def italic: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.italic = this.cast("italic")
+  def magenta: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.magenta = "magenta".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.magenta]
   @scala.inline
-  def magenta: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.magenta = this.cast("magenta")
+  def red: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.red = "red".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.red]
   @scala.inline
-  def red: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.red = this.cast("red")
+  def reset: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.reset = "reset".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.reset]
   @scala.inline
-  def reset: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.reset = this.cast("reset")
+  def underline: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.underline = "underline".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.underline]
   @scala.inline
-  def underline: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.underline = this.cast("underline")
+  def white: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.white = "white".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.white]
   @scala.inline
-  def white: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.white = this.cast("white")
-  @scala.inline
-  def yellow: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.yellow = this.cast("yellow")
+  def yellow: typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.yellow = "yellow".asInstanceOf[typingsSlinky.ansiEscapeSequences.ansiEscapeSequencesStrings.yellow]
 }
 

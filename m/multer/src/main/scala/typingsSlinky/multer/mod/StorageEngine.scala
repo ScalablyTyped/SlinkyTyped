@@ -2,6 +2,7 @@ package typingsSlinky.multer.mod
 
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.multer.PartialFile
 import typingsSlinky.multer.mod._Global_.Express.Multer.File
 import scala.scalajs.js
@@ -14,6 +15,7 @@ import scala.scalajs.js.annotation._
   * once stored. Implementations must also provide a method for removing
   * files in the event that an error occurs.
   */
+@js.native
 trait StorageEngine extends js.Object {
   /**
     * Store the file described by `file`, then invoke the callback with
@@ -28,10 +30,10 @@ trait StorageEngine extends js.Object {
     * @param callback Callback to specify file information.
     */
   def _handleFile(
-    req: Request_[ParamsDictionary],
+    req: Request_[ParamsDictionary, _, _, Query],
     file: File,
     callback: js.Function2[/* error */ js.UndefOr[js.Any], /* info */ js.UndefOr[PartialFile], Unit]
-  ): Unit
+  ): Unit = js.native
   /**
     * Remove the file described by `file`, then invoke the callback with.
     *
@@ -42,18 +44,45 @@ trait StorageEngine extends js.Object {
     * @param file Object containing information about the processed file.
     * @param callback Callback to indicate completion.
     */
-  def _removeFile(req: Request_[ParamsDictionary], file: File, callback: js.Function1[/* error */ js.Error, Unit]): Unit
+  def _removeFile(
+    req: Request_[ParamsDictionary, _, _, Query],
+    file: File,
+    callback: js.Function1[/* error */ js.Error, Unit]
+  ): Unit = js.native
 }
 
 object StorageEngine {
   @scala.inline
   def apply(
-    _handleFile: (Request_[ParamsDictionary], File, js.Function2[/* error */ js.UndefOr[js.Any], /* info */ js.UndefOr[PartialFile], Unit]) => Unit,
-    _removeFile: (Request_[ParamsDictionary], File, js.Function1[/* error */ js.Error, Unit]) => Unit
+    _handleFile: (Request_[ParamsDictionary, _, _, Query], File, js.Function2[/* error */ js.UndefOr[js.Any], /* info */ js.UndefOr[PartialFile], Unit]) => Unit,
+    _removeFile: (Request_[ParamsDictionary, _, _, Query], File, js.Function1[/* error */ js.Error, Unit]) => Unit
   ): StorageEngine = {
     val __obj = js.Dynamic.literal(_handleFile = js.Any.fromFunction3(_handleFile), _removeFile = js.Any.fromFunction3(_removeFile))
-  
     __obj.asInstanceOf[StorageEngine]
   }
+  @scala.inline
+  implicit class StorageEngineOps[Self <: StorageEngine] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_handleFile(
+      value: (Request_[ParamsDictionary, _, _, Query], File, js.Function2[/* error */ js.UndefOr[js.Any], /* info */ js.UndefOr[PartialFile], Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_handleFile")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def with_removeFile(
+      value: (Request_[ParamsDictionary, _, _, Query], File, js.Function1[/* error */ js.Error, Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_removeFile")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

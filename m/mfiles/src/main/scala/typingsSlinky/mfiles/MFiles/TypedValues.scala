@@ -1,7 +1,6 @@
 package typingsSlinky.mfiles.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.mfiles.ITypedValue
 import typingsSlinky.mfiles.ITypedValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,16 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.TypedValues")
 @js.native
-class TypedValues () extends ITypedValues {
-  /* CompleteClass */
-  override val Count: Double = js.native
-  /* CompleteClass */
-  override def Add(Index: Double, TypedValue: ITypedValue): Unit = js.native
-  /* CompleteClass */
-  override def Item(Index: Double): ITypedValue = js.native
-  /* CompleteClass */
-  override def Remove(Index: Double): Unit = js.native
-}
+class TypedValues () extends ITypedValues
 
 @JSGlobal("MFiles.TypedValues")
 @js.native

@@ -9,6 +9,25 @@ package object encodeMod {
   type AnchorValueRef = typingsSlinky.vegaTypings.encodeMod.ScaledValueRef[typingsSlinky.vegaTypings.titleMod.TitleAnchor]
   type ArbitraryValueRef = typingsSlinky.vegaTypings.encodeMod.NumericValueRef | typingsSlinky.vegaTypings.encodeMod.ColorValueRef | typingsSlinky.vegaTypings.encodeMod.ScaledValueRef[js.Any]
   type ArrayValueRef = typingsSlinky.vegaTypings.encodeMod.ScaledValueRef[js.Array[js.Any]]
+  /* Rewritten from type alias, can be one of: 
+    - scala.Null
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.multiply
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.screen
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.overlay
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.darken
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.lighten
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.`color-dodge`
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.`color-burn`
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.`hard-light`
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.`soft-light`
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.difference
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.exclusion
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.hue
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.saturation
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.color
+    - typingsSlinky.vegaTypings.vegaTypingsStrings.luminosity
+  */
+  type Blend = typingsSlinky.vegaTypings.encodeMod._Blend | scala.Null
   type BooleanValueRef = typingsSlinky.vegaTypings.encodeMod.ScaledValueRef[scala.Boolean]
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.vegaTypings.encodeMod.ScaledValueRef[typingsSlinky.vegaTypings.colorMod.Color]

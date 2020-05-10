@@ -18,14 +18,41 @@ trait ForwardActionConfig extends js.Object {
 
 object ForwardActionConfig {
   @scala.inline
-  def apply(
-    TargetGroupStickinessConfig: TargetGroupStickinessConfig = null,
-    TargetGroups: TargetGroupList = null
-  ): ForwardActionConfig = {
+  def apply(): ForwardActionConfig = {
     val __obj = js.Dynamic.literal()
-    if (TargetGroupStickinessConfig != null) __obj.updateDynamic("TargetGroupStickinessConfig")(TargetGroupStickinessConfig.asInstanceOf[js.Any])
-    if (TargetGroups != null) __obj.updateDynamic("TargetGroups")(TargetGroups.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForwardActionConfig]
   }
+  @scala.inline
+  implicit class ForwardActionConfigOps[Self <: ForwardActionConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTargetGroupStickinessConfig(value: TargetGroupStickinessConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroupStickinessConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetGroupStickinessConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroupStickinessConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetGroups(value: TargetGroupList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetGroups")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

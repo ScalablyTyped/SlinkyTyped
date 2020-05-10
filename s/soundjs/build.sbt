@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "soundjs"
-version := "0.6.0-dt-20200227Z-8c3431"
+version := "0.6.0-dt-20200227Z-0e4859"
 scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "createjs-lib" % "0.0-unknown-dt-20200226Z-f0da59",
-  "org.scalablytyped.slinky" %%% "preloadjs" % "0.6.2-dt-20200226Z-aa5a86",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "createjs-lib" % "0.0-unknown-dt-20200226Z-14bfb7",
+  "org.scalablytyped.slinky" %%% "preloadjs" % "0.6.2-dt-20200226Z-af85ef",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

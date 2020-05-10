@@ -16,61 +16,196 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options extends js.Object {
   /** the default input target when reading from `inputStream`. Default: `0`. */
-  var defaultInputTarget: js.UndefOr[Double] = js.undefined
+  var defaultInputTarget: js.UndefOr[Double] = js.native
   /** a Readable stream to read the input from, eg `process.stdin` */
-  var inputStream: js.UndefOr[ReadableStream] = js.undefined
+  var inputStream: js.UndefOr[ReadableStream] = js.native
   /** an array of exiting conditions that will cause a process to kill others. Can contain any of success or failure. */
-  var killOthers: js.UndefOr[js.Array[success | failure]] = js.undefined
+  var killOthers: js.UndefOr[js.Array[success | failure]] = js.native
+  /**
+    * how many processes should run at once
+    * @default 0
+    */
+  var maxProcesses: js.UndefOr[Double] = js.native
   /**  a Writable stream to write logs to. Default: `process.stdout` */
-  var outputStream: js.UndefOr[WritableStream] = js.undefined
+  var outputStream: js.UndefOr[WritableStream] = js.native
   /**
     * the prefix type to use when logging processes output.
     */
-  var prefix: js.UndefOr[index | pid | time | command | name | none | String] = js.undefined
+  var prefix: js.UndefOr[index | pid | time | command | name | none | String] = js.native
   /** how many characters to show when prefixing with `command`. Default: `10` */
-  var prefixLength: js.UndefOr[Double] = js.undefined
+  var prefixLength: js.UndefOr[Double] = js.native
   /** whether raw mode should be used, meaning strictly process output will be logged, without any prefixes, colouring or extra stuff. */
-  var raw: js.UndefOr[Boolean] = js.undefined
+  var raw: js.UndefOr[Boolean] = js.native
   /** how many milliseconds to wait between process restarts. Default: 0 */
-  var restartDelay: js.UndefOr[Double] = js.undefined
+  var restartDelay: js.UndefOr[Double] = js.native
   /** how many attempts to restart a process that dies will be made. Default: `0` */
-  var restartTries: js.UndefOr[Double] = js.undefined
+  var restartTries: js.UndefOr[Double] = js.native
   /** the condition to consider the run was successful. */
-  var successCondition: js.UndefOr[first | last] = js.undefined
+  var successCondition: js.UndefOr[first | last] = js.native
   /** a date-fns format to use when prefixing with time. Default: `yyyy-MM-dd HH:mm:ss.ZZZ` */
-  var timestampFormat: js.UndefOr[String] = js.undefined
+  var timestampFormat: js.UndefOr[String] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    defaultInputTarget: Int | Double = null,
-    inputStream: ReadableStream = null,
-    killOthers: js.Array[success | failure] = null,
-    outputStream: WritableStream = null,
-    prefix: index | pid | time | command | name | none | String = null,
-    prefixLength: Int | Double = null,
-    raw: js.UndefOr[Boolean] = js.undefined,
-    restartDelay: Int | Double = null,
-    restartTries: Int | Double = null,
-    successCondition: first | last = null,
-    timestampFormat: String = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (defaultInputTarget != null) __obj.updateDynamic("defaultInputTarget")(defaultInputTarget.asInstanceOf[js.Any])
-    if (inputStream != null) __obj.updateDynamic("inputStream")(inputStream.asInstanceOf[js.Any])
-    if (killOthers != null) __obj.updateDynamic("killOthers")(killOthers.asInstanceOf[js.Any])
-    if (outputStream != null) __obj.updateDynamic("outputStream")(outputStream.asInstanceOf[js.Any])
-    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
-    if (prefixLength != null) __obj.updateDynamic("prefixLength")(prefixLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(raw)) __obj.updateDynamic("raw")(raw.asInstanceOf[js.Any])
-    if (restartDelay != null) __obj.updateDynamic("restartDelay")(restartDelay.asInstanceOf[js.Any])
-    if (restartTries != null) __obj.updateDynamic("restartTries")(restartTries.asInstanceOf[js.Any])
-    if (successCondition != null) __obj.updateDynamic("successCondition")(successCondition.asInstanceOf[js.Any])
-    if (timestampFormat != null) __obj.updateDynamic("timestampFormat")(timestampFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultInputTarget(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultInputTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDefaultInputTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultInputTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputStream(value: ReadableStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputStream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKillOthers(value: js.Array[success | failure]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("killOthers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKillOthers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("killOthers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxProcesses(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxProcesses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxProcesses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxProcesses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputStream(value: WritableStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputStream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: index | pid | time | command | name | none | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRaw(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRaw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestartDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restartDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestartDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restartDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRestartTries(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restartTries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestartTries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restartTries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessCondition(value: first | last): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successCondition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessCondition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successCondition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestampFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestampFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestampFormat")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -22,12 +22,53 @@ trait PipelineMetadata extends js.Object {
 
 object PipelineMetadata {
   @scala.inline
-  def apply(created: js.Date = null, pipelineArn: PipelineArn = null, updated: js.Date = null): PipelineMetadata = {
+  def apply(): PipelineMetadata = {
     val __obj = js.Dynamic.literal()
-    if (created != null) __obj.updateDynamic("created")(created.asInstanceOf[js.Any])
-    if (pipelineArn != null) __obj.updateDynamic("pipelineArn")(pipelineArn.asInstanceOf[js.Any])
-    if (updated != null) __obj.updateDynamic("updated")(updated.asInstanceOf[js.Any])
     __obj.asInstanceOf[PipelineMetadata]
   }
+  @scala.inline
+  implicit class PipelineMetadataOps[Self <: PipelineMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreated(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPipelineArn(value: PipelineArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPipelineArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pipelineArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdated(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdated: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

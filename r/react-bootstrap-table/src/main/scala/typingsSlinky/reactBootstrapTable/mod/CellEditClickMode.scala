@@ -13,12 +13,10 @@ trait CellEditClickMode extends js.Object
 
 object CellEditClickMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def click: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.click = "click".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.click]
   @scala.inline
-  def click: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.click = this.cast("click")
+  def dbclick: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dbclick = "dbclick".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dbclick]
   @scala.inline
-  def dbclick: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.dbclick = this.cast("dbclick")
-  @scala.inline
-  def none: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.none = this.cast("none")
+  def none: typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.none = "none".asInstanceOf[typingsSlinky.reactBootstrapTable.reactBootstrapTableStrings.none]
 }
 

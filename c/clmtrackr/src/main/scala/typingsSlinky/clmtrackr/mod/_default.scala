@@ -1,6 +1,7 @@
 package typingsSlinky.clmtrackr.mod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
+import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.clmtrackr.clmtrackrBooleans.`false`
 import typingsSlinky.clmtrackr.clmtrackrStrings.blend
 import typingsSlinky.clmtrackr.clmtrackrStrings.cycle
@@ -8,7 +9,6 @@ import typingsSlinky.clmtrackr.clmtrackrStrings.lbp
 import typingsSlinky.clmtrackr.clmtrackrStrings.raw
 import typingsSlinky.clmtrackr.clmtrackrStrings.single
 import typingsSlinky.clmtrackr.clmtrackrStrings.sobel
-import typingsSlinky.std.HTMLVideoElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,9 +29,9 @@ object _default extends js.Object {
     def setResponseMode(`type`: blend, list: js.Array[raw | sobel | lbp]): Unit = js.native
     def setResponseMode(`type`: cycle, list: js.Array[raw | sobel | lbp]): Unit = js.native
     def setResponseMode(`type`: single, list: js.Array[raw | sobel | lbp]): Unit = js.native
-    def start(element: typingsSlinky.std.HTMLCanvasElement): Unit = js.native
+    def start(element: HTMLCanvasElement): Unit = js.native
     def start(element: HTMLVideoElement): Unit = js.native
-    def track(element: typingsSlinky.std.HTMLCanvasElement): js.Array[IPosition] | `false` = js.native
+    def track(element: HTMLCanvasElement): js.Array[IPosition] | `false` = js.native
     def track(element: HTMLVideoElement): js.Array[IPosition] | `false` = js.native
   }
   

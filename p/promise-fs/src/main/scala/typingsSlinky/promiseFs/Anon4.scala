@@ -1,21 +1,45 @@
 package typingsSlinky.promiseFs
 
-import typingsSlinky.promiseFs.promiseFsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Anon4 extends js.Object {
-  var encoding: js.UndefOr[String | Null] = js.undefined
-  var withFileTypes: `true`
+  var encoding: js.UndefOr[String | Null] = js.native
 }
 
 object Anon4 {
   @scala.inline
-  def apply(withFileTypes: `true`, encoding: String = null): Anon4 = {
-    val __obj = js.Dynamic.literal(withFileTypes = withFileTypes.asInstanceOf[js.Any])
-    if (encoding != null) __obj.updateDynamic("encoding")(encoding.asInstanceOf[js.Any])
+  def apply(): Anon4 = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Anon4]
   }
+  @scala.inline
+  implicit class Anon4Ops[Self <: Anon4] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEncoding(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncodingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(null)
+        ret
+    }
+  }
+  
 }
 

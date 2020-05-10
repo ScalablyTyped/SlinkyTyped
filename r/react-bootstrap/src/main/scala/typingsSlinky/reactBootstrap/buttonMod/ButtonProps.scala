@@ -8,39 +8,121 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ButtonProps
   extends AllHTMLAttributes[Button]
      with ClassAttributes[Button] {
-  var active: js.UndefOr[Boolean] = js.undefined
-  var block: js.UndefOr[Boolean] = js.undefined
-  var bsClass: js.UndefOr[String] = js.undefined
-  var bsSize: js.UndefOr[Sizes] = js.undefined
-  var bsStyle: js.UndefOr[String | Null] = js.undefined
-  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.undefined
+  var active: js.UndefOr[Boolean] = js.native
+  var block: js.UndefOr[Boolean] = js.native
+  var bsClass: js.UndefOr[String] = js.native
+  var bsSize: js.UndefOr[Sizes] = js.native
+  var bsStyle: js.UndefOr[String | Null] = js.native
+  var componentClass: js.UndefOr[ReactComponentClass[_]] = js.native
 }
 
 object ButtonProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[Button] = null,
-    ClassAttributes: ClassAttributes[Button] = null,
-    active: js.UndefOr[Boolean] = js.undefined,
-    block: js.UndefOr[Boolean] = js.undefined,
-    bsClass: String = null,
-    bsSize: Sizes = null,
-    bsStyle: String = null,
-    componentClass: ReactComponentClass[_] = null
-  ): ButtonProps = {
+  def apply(): ButtonProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
-    if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])
-    if (bsClass != null) __obj.updateDynamic("bsClass")(bsClass.asInstanceOf[js.Any])
-    if (bsSize != null) __obj.updateDynamic("bsSize")(bsSize.asInstanceOf[js.Any])
-    if (bsStyle != null) __obj.updateDynamic("bsStyle")(bsStyle.asInstanceOf[js.Any])
-    if (componentClass != null) __obj.updateDynamic("componentClass")(componentClass.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonProps]
   }
+  @scala.inline
+  implicit class ButtonPropsOps[Self <: ButtonProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutActive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlock(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("block")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBsClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBsClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBsSize(value: Sizes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBsSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBsStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBsStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBsStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bsStyle")(null)
+        ret
+    }
+    @scala.inline
+    def withComponentClassFunctionComponent(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponentClassComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponentClass(value: ReactComponentClass[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponentClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("componentClass")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

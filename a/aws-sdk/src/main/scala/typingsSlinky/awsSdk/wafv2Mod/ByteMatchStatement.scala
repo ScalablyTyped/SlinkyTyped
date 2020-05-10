@@ -33,8 +33,45 @@ object ByteMatchStatement {
     TextTransformations: TextTransformations
   ): ByteMatchStatement = {
     val __obj = js.Dynamic.literal(FieldToMatch = FieldToMatch.asInstanceOf[js.Any], PositionalConstraint = PositionalConstraint.asInstanceOf[js.Any], SearchString = SearchString.asInstanceOf[js.Any], TextTransformations = TextTransformations.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ByteMatchStatement]
   }
+  @scala.inline
+  implicit class ByteMatchStatementOps[Self <: ByteMatchStatement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFieldToMatch(value: FieldToMatch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FieldToMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPositionalConstraint(value: PositionalConstraint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PositionalConstraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSearchStringUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSearchString(value: SearchString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SearchString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextTransformations(value: TextTransformations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextTransformations")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

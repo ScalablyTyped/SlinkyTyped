@@ -31,7 +31,7 @@ import scala.scalajs.js.annotation._
   * @param params Hash of initialization parameters for widget, including scalar values (like title, duration etc.)and functions, typically callbacks like onClick.The hash can contain any of the widget's properties, excluding read-only properties.
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.dojo.dojox.form.manager.ClassMixin because Inheritance from two classes. Inlined addClass, gatherClassState, removeClass
 - typingsSlinky.dojo.dojox.form.manager.DisplayMixin because Inheritance from two classes. Inlined gatherDisplayState, hide, show
 - typingsSlinky.dojo.dojox.form.manager.EnableMixin because Inheritance from two classes. Inlined disable, enable, gatherEnableState
@@ -195,7 +195,7 @@ class Manager_ () extends Widget {
     * @param elem Form element's name, DOM node, or array or radio nodes.
     * @param value               OptionalOptional. The value to set.
     */
-  def formNodeValue(elem: typingsSlinky.std.HTMLElement, value: js.Object): js.Any = js.native
+  def formNodeValue(elem: HTMLElement, value: js.Object): js.Any = js.native
   /**
     * Set or get a node context by name (using dojoAttachPoint).
     *
@@ -476,7 +476,7 @@ class Manager_ () extends Widget {
     *
     * @param node A node, or its id
     */
-  def registerNode(node: typingsSlinky.std.HTMLElement): js.Any = js.native
+  def registerNode(node: HTMLElement): js.Any = js.native
   /**
     * Register node's descendants (form nodes) with the form manager
     *
@@ -498,7 +498,7 @@ class Manager_ () extends Widget {
     *
     * @param node A widget, or its widgetId, or its DOM node
     */
-  def registerNodeDescendants(node: typingsSlinky.std.HTMLElement): js.Any = js.native
+  def registerNodeDescendants(node: HTMLElement): js.Any = js.native
   /**
     * Register a widget with the form manager
     *
@@ -531,7 +531,7 @@ class Manager_ () extends Widget {
     *
     * @param widget A widget, or its widgetId, or its DOM node
     */
-  def registerWidget(widget: typingsSlinky.std.HTMLElement): js.Any = js.native
+  def registerWidget(widget: HTMLElement): js.Any = js.native
   /**
     * Register widget's descendants with the form manager
     *
@@ -564,7 +564,7 @@ class Manager_ () extends Widget {
     *
     * @param widget A widget, or its widgetId, or its DOM node
     */
-  def registerWidgetDescendants(widget: typingsSlinky.std.HTMLElement): js.Any = js.native
+  def registerWidgetDescendants(widget: HTMLElement): js.Any = js.native
   /**
     * Remove a class from nodes according to the supplied set of names
     *
@@ -680,7 +680,7 @@ class Manager_ () extends Widget {
     *
     * @param node A widget, or its widgetId, or its DOM node
     */
-  def unregisterNodeDescendants(node: typingsSlinky.std.HTMLElement): js.Any = js.native
+  def unregisterNodeDescendants(node: HTMLElement): js.Any = js.native
   /**
     * Removes the widget by name from internal tables unregistering
     * connected observers
@@ -726,7 +726,7 @@ class Manager_ () extends Widget {
     *
     * @param widget A widget, or its widgetId, or its DOM node
     */
-  def unregisterWidgetDescendants(widget: typingsSlinky.std.HTMLElement): js.Any = js.native
+  def unregisterWidgetDescendants(widget: HTMLElement): js.Any = js.native
   /**
     * validate() returns if the form is valid - same as isValid -
     * but provides a few additional (ui-specific) features: it

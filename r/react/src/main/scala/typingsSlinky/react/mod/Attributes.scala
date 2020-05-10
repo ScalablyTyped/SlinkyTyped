@@ -8,16 +8,36 @@ import scala.scalajs.js.annotation._
   * @internal You shouldn't need to use this type since you never see these attributes
   * inside your component or have to validate them.
   */
+@js.native
 trait Attributes extends js.Object {
-  var key: js.UndefOr[Key] = js.undefined
+  var key: js.UndefOr[Key] = js.native
 }
 
 object Attributes {
   @scala.inline
-  def apply(key: Key = null): Attributes = {
+  def apply(): Attributes = {
     val __obj = js.Dynamic.literal()
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
     __obj.asInstanceOf[Attributes]
   }
+  @scala.inline
+  implicit class AttributesOps[Self <: Attributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKey(value: Key): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

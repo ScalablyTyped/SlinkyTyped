@@ -1,16 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.fibjs.fibjsNumbers.`0`
-import typingsSlinky.fibjs.fibjsNumbers.`10`
-import typingsSlinky.fibjs.fibjsNumbers.`1`
-import typingsSlinky.fibjs.fibjsNumbers.`2`
-import typingsSlinky.fibjs.fibjsNumbers.`3`
-import typingsSlinky.fibjs.fibjsNumbers.`4`
-import typingsSlinky.fibjs.fibjsNumbers.`5`
-import typingsSlinky.fibjs.fibjsNumbers.`6`
-import typingsSlinky.fibjs.fibjsNumbers.`7`
-import typingsSlinky.fibjs.fibjsNumbers.`8`
-import typingsSlinky.fibjs.fibjsNumbers.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +15,16 @@ object zmqMod extends js.Object {
   @js.native
   class Socket () extends ClassZmqSocket
   
-  val DEALER: `5` = js.native
-  val PAIR: `0` = js.native
-  val PUB: `1` = js.native
-  val PULL: `7` = js.native
-  val PUSH: `8` = js.native
-  val REP: `4` = js.native
-  val REQ: `3` = js.native
-  val ROUTER: `6` = js.native
-  val SUB: `2` = js.native
-  val XPUB: `9` = js.native
-  val XSUB: `10` = js.native
+  val DEALER: /* 5 */ Double = js.native
+  val PAIR: /* 0 */ Double = js.native
+  val PUB: /* 1 */ Double = js.native
+  val PULL: /* 7 */ Double = js.native
+  val PUSH: /* 8 */ Double = js.native
+  val REP: /* 4 */ Double = js.native
+  val REQ: /* 3 */ Double = js.native
+  val ROUTER: /* 6 */ Double = js.native
+  val SUB: /* 2 */ Double = js.native
+  val XPUB: /* 9 */ Double = js.native
+  val XSUB: /* 10 */ Double = js.native
 }
 

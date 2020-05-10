@@ -15,6 +15,10 @@ trait DelayNode extends AudioNode {
 @JSGlobal("DelayNode")
 @js.native
 object DelayNode
-  extends Instantiable1[/* context */ BaseAudioContext, DelayNode]
-     with Instantiable2[/* context */ BaseAudioContext, /* options */ DelayOptions, DelayNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.DelayNode]
+     with Instantiable2[
+      /* context */ BaseAudioContext, 
+      /* options */ DelayOptions, 
+      org.scalajs.dom.raw.DelayNode
+    ]
 

@@ -4,69 +4,247 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DeckProps extends js.Object {
-  var autoplay: js.UndefOr[Boolean] = js.undefined
-  var autoplayDuration: js.UndefOr[Double] = js.undefined
-  var autoplayLoop: js.UndefOr[Boolean] = js.undefined
-  var autoplayOnStart: js.UndefOr[Boolean] = js.undefined
-  var contentHeight: js.UndefOr[String] = js.undefined
-  var contentWidth: js.UndefOr[String] = js.undefined
-  var controls: js.UndefOr[Boolean] = js.undefined
-  var disableKeyboardControls: js.UndefOr[Boolean] = js.undefined
-  var disableTouchControls: js.UndefOr[Boolean] = js.undefined
-  var globalStyles: js.UndefOr[Boolean] = js.undefined
-  var history: js.UndefOr[js.Any] = js.undefined
+  var autoplay: js.UndefOr[Boolean] = js.native
+  var autoplayDuration: js.UndefOr[Double] = js.native
+  var autoplayLoop: js.UndefOr[Boolean] = js.native
+  var autoplayOnStart: js.UndefOr[Boolean] = js.native
+  var contentHeight: js.UndefOr[String] = js.native
+  var contentWidth: js.UndefOr[String] = js.native
+  var controls: js.UndefOr[Boolean] = js.native
+  var disableKeyboardControls: js.UndefOr[Boolean] = js.native
+  var disableTouchControls: js.UndefOr[Boolean] = js.native
+  var globalStyles: js.UndefOr[Boolean] = js.native
+  var history: js.UndefOr[js.Any] = js.native
   var onStateChange: js.UndefOr[
     js.Function2[/* previousState */ js.UndefOr[String], /* nextState */ js.UndefOr[String], Unit]
-  ] = js.undefined
-  var progress: js.UndefOr[progressType] = js.undefined
+  ] = js.native
+  var progress: js.UndefOr[progressType] = js.native
    // Needs a type, see https://github.com/ReactTraining/history
-  var showFullscreenControl: js.UndefOr[Boolean] = js.undefined
-  var theme: js.UndefOr[Theme] = js.undefined
-  var transition: js.UndefOr[js.Array[transitionType]] = js.undefined
-  var transitionDuration: js.UndefOr[Double] = js.undefined
+  var showFullscreenControl: js.UndefOr[Boolean] = js.native
+  var theme: js.UndefOr[Theme] = js.native
+  var transition: js.UndefOr[js.Array[transitionType]] = js.native
+  var transitionDuration: js.UndefOr[Double] = js.native
 }
 
 object DeckProps {
   @scala.inline
-  def apply(
-    autoplay: js.UndefOr[Boolean] = js.undefined,
-    autoplayDuration: Int | Double = null,
-    autoplayLoop: js.UndefOr[Boolean] = js.undefined,
-    autoplayOnStart: js.UndefOr[Boolean] = js.undefined,
-    contentHeight: String = null,
-    contentWidth: String = null,
-    controls: js.UndefOr[Boolean] = js.undefined,
-    disableKeyboardControls: js.UndefOr[Boolean] = js.undefined,
-    disableTouchControls: js.UndefOr[Boolean] = js.undefined,
-    globalStyles: js.UndefOr[Boolean] = js.undefined,
-    history: js.Any = null,
-    onStateChange: (/* previousState */ js.UndefOr[String], /* nextState */ js.UndefOr[String]) => Unit = null,
-    progress: progressType = null,
-    showFullscreenControl: js.UndefOr[Boolean] = js.undefined,
-    theme: Theme = null,
-    transition: js.Array[transitionType] = null,
-    transitionDuration: Int | Double = null
-  ): DeckProps = {
+  def apply(): DeckProps = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
-    if (autoplayDuration != null) __obj.updateDynamic("autoplayDuration")(autoplayDuration.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplayLoop)) __obj.updateDynamic("autoplayLoop")(autoplayLoop.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoplayOnStart)) __obj.updateDynamic("autoplayOnStart")(autoplayOnStart.asInstanceOf[js.Any])
-    if (contentHeight != null) __obj.updateDynamic("contentHeight")(contentHeight.asInstanceOf[js.Any])
-    if (contentWidth != null) __obj.updateDynamic("contentWidth")(contentWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(controls)) __obj.updateDynamic("controls")(controls.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableKeyboardControls)) __obj.updateDynamic("disableKeyboardControls")(disableKeyboardControls.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableTouchControls)) __obj.updateDynamic("disableTouchControls")(disableTouchControls.asInstanceOf[js.Any])
-    if (!js.isUndefined(globalStyles)) __obj.updateDynamic("globalStyles")(globalStyles.asInstanceOf[js.Any])
-    if (history != null) __obj.updateDynamic("history")(history.asInstanceOf[js.Any])
-    if (onStateChange != null) __obj.updateDynamic("onStateChange")(js.Any.fromFunction2(onStateChange))
-    if (progress != null) __obj.updateDynamic("progress")(progress.asInstanceOf[js.Any])
-    if (!js.isUndefined(showFullscreenControl)) __obj.updateDynamic("showFullscreenControl")(showFullscreenControl.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeckProps]
   }
+  @scala.inline
+  implicit class DeckPropsOps[Self <: DeckProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoplay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplayDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplayDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplayLoop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayLoop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplayLoop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayLoop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAutoplayOnStart(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayOnStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoplayOnStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplayOnStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withControls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableKeyboardControls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableKeyboardControls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableKeyboardControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableKeyboardControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableTouchControls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTouchControls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableTouchControls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableTouchControls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGlobalStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalStyles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("globalStyles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHistory(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("history")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHistory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("history")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnStateChange(value: (/* previousState */ js.UndefOr[String], /* nextState */ js.UndefOr[String]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnStateChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProgress(value: progressType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowFullscreenControl(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFullscreenControl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowFullscreenControl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showFullscreenControl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTheme(value: Theme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTheme: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransition(value: js.Array[transitionType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

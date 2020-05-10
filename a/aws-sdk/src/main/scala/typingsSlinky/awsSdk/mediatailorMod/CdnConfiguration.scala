@@ -18,11 +18,41 @@ trait CdnConfiguration extends js.Object {
 
 object CdnConfiguration {
   @scala.inline
-  def apply(AdSegmentUrlPrefix: string = null, ContentSegmentUrlPrefix: string = null): CdnConfiguration = {
+  def apply(): CdnConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (AdSegmentUrlPrefix != null) __obj.updateDynamic("AdSegmentUrlPrefix")(AdSegmentUrlPrefix.asInstanceOf[js.Any])
-    if (ContentSegmentUrlPrefix != null) __obj.updateDynamic("ContentSegmentUrlPrefix")(ContentSegmentUrlPrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[CdnConfiguration]
   }
+  @scala.inline
+  implicit class CdnConfigurationOps[Self <: CdnConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdSegmentUrlPrefix(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdSegmentUrlPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdSegmentUrlPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdSegmentUrlPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentSegmentUrlPrefix(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentSegmentUrlPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentSegmentUrlPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContentSegmentUrlPrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

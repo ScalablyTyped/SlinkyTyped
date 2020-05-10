@@ -1,20 +1,19 @@
 package typingsSlinky.reactAlbus.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactAlbus.mod.StepProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Support for combinations of intersection and union types not implemented */
-object Step
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactAlbus.mod.Step] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Support for combinations of intersection and union types not implemented */
+object Step {
   @JSImport("react-albus", "Step")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = StepProps
+  def apply(p: StepProps): Default[tag.type, typingsSlinky.reactAlbus.mod.Step] = new Default[tag.type, typingsSlinky.reactAlbus.mod.Step](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Step.type): Default[tag.type, typingsSlinky.reactAlbus.mod.Step] = new Default[tag.type, typingsSlinky.reactAlbus.mod.Step](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -22,14 +22,41 @@ trait PutInsightRuleInput extends js.Object {
 
 object PutInsightRuleInput {
   @scala.inline
-  def apply(
-    RuleDefinition: InsightRuleDefinition,
-    RuleName: InsightRuleName,
-    RuleState: InsightRuleState = null
-  ): PutInsightRuleInput = {
+  def apply(RuleDefinition: InsightRuleDefinition, RuleName: InsightRuleName): PutInsightRuleInput = {
     val __obj = js.Dynamic.literal(RuleDefinition = RuleDefinition.asInstanceOf[js.Any], RuleName = RuleName.asInstanceOf[js.Any])
-    if (RuleState != null) __obj.updateDynamic("RuleState")(RuleState.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutInsightRuleInput]
   }
+  @scala.inline
+  implicit class PutInsightRuleInputOps[Self <: PutInsightRuleInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRuleDefinition(value: InsightRuleDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleDefinition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuleName(value: InsightRuleName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRuleState(value: InsightRuleState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRuleState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RuleState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

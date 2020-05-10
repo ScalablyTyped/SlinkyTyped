@@ -9,30 +9,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OptionalArgs extends js.Object {
-  var afterAll: js.UndefOr[AfterAll] = js.undefined
-  var afterEach: js.UndefOr[Errback] = js.undefined
-  var beforeEach: js.UndefOr[BeforeEach] = js.undefined
-  var evalScripts: js.UndefOr[EvalScripts] = js.undefined
-  var renumerateIRIElements: js.UndefOr[Boolean] = js.undefined
+  var afterAll: js.UndefOr[AfterAll] = js.native
+  var afterEach: js.UndefOr[Errback] = js.native
+  var beforeEach: js.UndefOr[BeforeEach] = js.native
+  var evalScripts: js.UndefOr[EvalScripts] = js.native
+  var renumerateIRIElements: js.UndefOr[Boolean] = js.native
 }
 
 object OptionalArgs {
   @scala.inline
-  def apply(
-    afterAll: /* elementsLoaded */ Double => Unit = null,
-    afterEach: (/* error */ js.Error | Null, /* svg */ js.UndefOr[Element]) => Unit = null,
-    beforeEach: /* svg */ Element => Unit = null,
-    evalScripts: EvalScripts = null,
-    renumerateIRIElements: js.UndefOr[Boolean] = js.undefined
-  ): OptionalArgs = {
+  def apply(): OptionalArgs = {
     val __obj = js.Dynamic.literal()
-    if (afterAll != null) __obj.updateDynamic("afterAll")(js.Any.fromFunction1(afterAll))
-    if (afterEach != null) __obj.updateDynamic("afterEach")(js.Any.fromFunction2(afterEach))
-    if (beforeEach != null) __obj.updateDynamic("beforeEach")(js.Any.fromFunction1(beforeEach))
-    if (evalScripts != null) __obj.updateDynamic("evalScripts")(evalScripts.asInstanceOf[js.Any])
-    if (!js.isUndefined(renumerateIRIElements)) __obj.updateDynamic("renumerateIRIElements")(renumerateIRIElements.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionalArgs]
   }
+  @scala.inline
+  implicit class OptionalArgsOps[Self <: OptionalArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterAll(value: /* elementsLoaded */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterAll")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterAll")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterEach(value: (/* error */ js.Error | Null, /* svg */ js.UndefOr[Element]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterEach")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterEach: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterEach")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeEach(value: /* svg */ Element => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeEach")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeEach: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeEach")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEvalScripts(value: EvalScripts): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evalScripts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEvalScripts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("evalScripts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRenumerateIRIElements(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renumerateIRIElements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRenumerateIRIElements: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renumerateIRIElements")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

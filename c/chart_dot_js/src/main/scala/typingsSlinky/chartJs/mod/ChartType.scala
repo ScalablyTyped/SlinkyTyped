@@ -19,24 +19,22 @@ trait ChartType extends js.Object
 
 object ChartType {
   @scala.inline
-  def bar: typingsSlinky.chartJs.chartJsStrings.bar = this.cast("bar")
+  def bar: typingsSlinky.chartJs.chartJsStrings.bar = "bar".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.bar]
   @scala.inline
-  def bubble: typingsSlinky.chartJs.chartJsStrings.bubble = this.cast("bubble")
+  def bubble: typingsSlinky.chartJs.chartJsStrings.bubble = "bubble".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.bubble]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def doughnut: typingsSlinky.chartJs.chartJsStrings.doughnut = "doughnut".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.doughnut]
   @scala.inline
-  def doughnut: typingsSlinky.chartJs.chartJsStrings.doughnut = this.cast("doughnut")
+  def horizontalBar: typingsSlinky.chartJs.chartJsStrings.horizontalBar = "horizontalBar".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.horizontalBar]
   @scala.inline
-  def horizontalBar: typingsSlinky.chartJs.chartJsStrings.horizontalBar = this.cast("horizontalBar")
+  def line: typingsSlinky.chartJs.chartJsStrings.line = "line".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.line]
   @scala.inline
-  def line: typingsSlinky.chartJs.chartJsStrings.line = this.cast("line")
+  def pie: typingsSlinky.chartJs.chartJsStrings.pie = "pie".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.pie]
   @scala.inline
-  def pie: typingsSlinky.chartJs.chartJsStrings.pie = this.cast("pie")
+  def polarArea: typingsSlinky.chartJs.chartJsStrings.polarArea = "polarArea".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.polarArea]
   @scala.inline
-  def polarArea: typingsSlinky.chartJs.chartJsStrings.polarArea = this.cast("polarArea")
+  def radar: typingsSlinky.chartJs.chartJsStrings.radar = "radar".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.radar]
   @scala.inline
-  def radar: typingsSlinky.chartJs.chartJsStrings.radar = this.cast("radar")
-  @scala.inline
-  def scatter: typingsSlinky.chartJs.chartJsStrings.scatter = this.cast("scatter")
+  def scatter: typingsSlinky.chartJs.chartJsStrings.scatter = "scatter".asInstanceOf[typingsSlinky.chartJs.chartJsStrings.scatter]
 }
 

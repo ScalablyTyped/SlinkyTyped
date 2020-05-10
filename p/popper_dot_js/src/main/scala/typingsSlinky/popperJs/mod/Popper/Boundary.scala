@@ -13,12 +13,10 @@ trait Boundary extends js.Object
 
 object Boundary {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def scrollParent: typingsSlinky.popperJs.popperJsStrings.scrollParent = "scrollParent".asInstanceOf[typingsSlinky.popperJs.popperJsStrings.scrollParent]
   @scala.inline
-  def scrollParent: typingsSlinky.popperJs.popperJsStrings.scrollParent = this.cast("scrollParent")
+  def viewport: typingsSlinky.popperJs.popperJsStrings.viewport = "viewport".asInstanceOf[typingsSlinky.popperJs.popperJsStrings.viewport]
   @scala.inline
-  def viewport: typingsSlinky.popperJs.popperJsStrings.viewport = this.cast("viewport")
-  @scala.inline
-  def window: typingsSlinky.popperJs.popperJsStrings.window = this.cast("window")
+  def window: typingsSlinky.popperJs.popperJsStrings.window = "window".asInstanceOf[typingsSlinky.popperJs.popperJsStrings.window]
 }
 

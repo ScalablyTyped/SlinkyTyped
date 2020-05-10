@@ -4,22 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BatteryData extends js.Object {
-  var acconnected: Boolean
-  var capacityUnit: String
-  var currentcapacity: Double
-  var cyclecount: Double
-  var designedcapacity: Double
-  var hasbattery: Boolean
-  var ischarging: Boolean
-  var manufacturer: String
-  var maxcapacity: Double
-  var model: String
-  var percent: Double
-  var serial: String
-  var timeremaining: Double
-  var `type`: String
-  var voltage: Double
+  var acconnected: Boolean = js.native
+  var capacityUnit: String = js.native
+  var currentcapacity: Double = js.native
+  var cyclecount: Double = js.native
+  var designedcapacity: Double = js.native
+  var hasbattery: Boolean = js.native
+  var ischarging: Boolean = js.native
+  var manufacturer: String = js.native
+  var maxcapacity: Double = js.native
+  var model: String = js.native
+  var percent: Double = js.native
+  var serial: String = js.native
+  var timeremaining: Double = js.native
+  var `type`: String = js.native
+  var voltage: Double = js.native
 }
 
 object BatteryData {
@@ -45,5 +46,103 @@ object BatteryData {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatteryData]
   }
+  @scala.inline
+  implicit class BatteryDataOps[Self <: BatteryData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcconnected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acconnected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCapacityUnit(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capacityUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentcapacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentcapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCyclecount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cyclecount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesignedcapacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("designedcapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHasbattery(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasbattery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIscharging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ischarging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManufacturer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxcapacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxcapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPercent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSerial(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeremaining(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeremaining")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVoltage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voltage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

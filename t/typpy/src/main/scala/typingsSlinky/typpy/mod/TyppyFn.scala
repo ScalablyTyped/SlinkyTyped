@@ -5,7 +5,6 @@ import typingsSlinky.std.BooleanConstructor
 import typingsSlinky.std.FunctionConstructor
 import typingsSlinky.std.NumberConstructor
 import typingsSlinky.std.ObjectConstructor
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.RegExpConstructor
 import typingsSlinky.std.StringConstructor
 import typingsSlinky.typpy.typpyBooleans.`false`
@@ -57,9 +56,9 @@ trait TyppyFn extends js.Object {
    // tslint:disable-line:ban-types
   def apply(input: Double, compareTo: number): Boolean = js.native
   def apply(input: Null, compareTo: `null`): `true` = js.native
-  def apply(input: RegExp): regexp = js.native
-  def apply(input: RegExp, compareTo: RegExpConstructor): `true` = js.native
-  def apply(input: RegExp, compareTo: regexp): `true` = js.native
+  def apply(input: js.RegExp): regexp = js.native
+  def apply(input: js.RegExp, compareTo: RegExpConstructor): `true` = js.native
+  def apply(input: js.RegExp, compareTo: regexp): `true` = js.native
   def get(): Null = js.native
   def get(input: String): StringConstructor = js.native
    // tslint:disable-line:ban-types
@@ -68,7 +67,7 @@ trait TyppyFn extends js.Object {
   def get(input: js.Function): FunctionConstructor = js.native
   def get(input: Boolean): BooleanConstructor = js.native
   def get(input: Double): NumberConstructor | Double = js.native
-  def get(input: RegExp): RegExpConstructor = js.native
+  def get(input: js.RegExp): RegExpConstructor = js.native
   @JSName("get")
   def get_Unit(): Unit = js.native
   @JSName("get")
@@ -88,7 +87,7 @@ trait TyppyFn extends js.Object {
   @JSName("get")
   def get_false(input: Null, asString: `false`): Null = js.native
   @JSName("get")
-  def get_false(input: RegExp, asString: `false`): RegExpConstructor = js.native
+  def get_false(input: js.RegExp, asString: `false`): RegExpConstructor = js.native
   @JSName("get")
   def get_true(input: js.UndefOr[scala.Nothing], asString: `true`): undefined = js.native
   @JSName("get")
@@ -107,7 +106,7 @@ trait TyppyFn extends js.Object {
   @JSName("get")
   def get_true(input: Null, asString: `true`): `null` = js.native
   @JSName("get")
-  def get_true(input: RegExp, asString: `true`): regexp = js.native
+  def get_true(input: js.RegExp, asString: `true`): regexp = js.native
   def is(): `true` = js.native
   def is(input: String, compareTo: StringConstructor): `true` = js.native
   def is(input: js.Any, compareTo: js.Any): Boolean = js.native
@@ -117,7 +116,7 @@ trait TyppyFn extends js.Object {
   def is(input: Boolean, compareTo: BooleanConstructor): `true` = js.native
   def is(input: Double, compareTo: Double): Boolean = js.native
   def is(input: Double, compareTo: NumberConstructor): Boolean = js.native
-  def is(input: RegExp, compareTo: RegExpConstructor): `true` = js.native
+  def is(input: js.RegExp, compareTo: RegExpConstructor): `true` = js.native
   @JSName("is")
   def is_array(input: js.Array[_], compareTo: array): `true` = js.native
   @JSName("is")

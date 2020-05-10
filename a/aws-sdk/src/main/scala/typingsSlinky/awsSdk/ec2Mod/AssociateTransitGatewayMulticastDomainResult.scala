@@ -14,10 +14,29 @@ trait AssociateTransitGatewayMulticastDomainResult extends js.Object {
 
 object AssociateTransitGatewayMulticastDomainResult {
   @scala.inline
-  def apply(Associations: TransitGatewayMulticastDomainAssociations = null): AssociateTransitGatewayMulticastDomainResult = {
+  def apply(): AssociateTransitGatewayMulticastDomainResult = {
     val __obj = js.Dynamic.literal()
-    if (Associations != null) __obj.updateDynamic("Associations")(Associations.asInstanceOf[js.Any])
     __obj.asInstanceOf[AssociateTransitGatewayMulticastDomainResult]
   }
+  @scala.inline
+  implicit class AssociateTransitGatewayMulticastDomainResultOps[Self <: AssociateTransitGatewayMulticastDomainResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociations(value: TransitGatewayMulticastDomainAssociations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Associations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Associations")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

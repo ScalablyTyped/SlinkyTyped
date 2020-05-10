@@ -22,14 +22,41 @@ trait ReferenceDataSource extends js.Object {
 
 object ReferenceDataSource {
   @scala.inline
-  def apply(
-    ReferenceSchema: SourceSchema,
-    TableName: InAppTableName,
-    S3ReferenceDataSource: S3ReferenceDataSource = null
-  ): ReferenceDataSource = {
+  def apply(ReferenceSchema: SourceSchema, TableName: InAppTableName): ReferenceDataSource = {
     val __obj = js.Dynamic.literal(ReferenceSchema = ReferenceSchema.asInstanceOf[js.Any], TableName = TableName.asInstanceOf[js.Any])
-    if (S3ReferenceDataSource != null) __obj.updateDynamic("S3ReferenceDataSource")(S3ReferenceDataSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReferenceDataSource]
   }
+  @scala.inline
+  implicit class ReferenceDataSourceOps[Self <: ReferenceDataSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReferenceSchema(value: SourceSchema): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReferenceSchema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTableName(value: InAppTableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withS3ReferenceDataSource(value: S3ReferenceDataSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3ReferenceDataSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3ReferenceDataSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3ReferenceDataSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

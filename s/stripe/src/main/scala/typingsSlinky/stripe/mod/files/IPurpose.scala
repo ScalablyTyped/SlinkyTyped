@@ -15,16 +15,14 @@ trait IPurpose extends js.Object
 
 object IPurpose {
   @scala.inline
-  def business_logo: typingsSlinky.stripe.stripeStrings.business_logo = this.cast("business_logo")
+  def business_logo: typingsSlinky.stripe.stripeStrings.business_logo = "business_logo".asInstanceOf[typingsSlinky.stripe.stripeStrings.business_logo]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dispute_evidence: typingsSlinky.stripe.stripeStrings.dispute_evidence = "dispute_evidence".asInstanceOf[typingsSlinky.stripe.stripeStrings.dispute_evidence]
   @scala.inline
-  def dispute_evidence: typingsSlinky.stripe.stripeStrings.dispute_evidence = this.cast("dispute_evidence")
+  def identity_document: typingsSlinky.stripe.stripeStrings.identity_document = "identity_document".asInstanceOf[typingsSlinky.stripe.stripeStrings.identity_document]
   @scala.inline
-  def identity_document: typingsSlinky.stripe.stripeStrings.identity_document = this.cast("identity_document")
+  def incorporation_article: typingsSlinky.stripe.stripeStrings.incorporation_article = "incorporation_article".asInstanceOf[typingsSlinky.stripe.stripeStrings.incorporation_article]
   @scala.inline
-  def incorporation_article: typingsSlinky.stripe.stripeStrings.incorporation_article = this.cast("incorporation_article")
-  @scala.inline
-  def incorporation_document: typingsSlinky.stripe.stripeStrings.incorporation_document = this.cast("incorporation_document")
+  def incorporation_document: typingsSlinky.stripe.stripeStrings.incorporation_document = "incorporation_document".asInstanceOf[typingsSlinky.stripe.stripeStrings.incorporation_document]
 }
 

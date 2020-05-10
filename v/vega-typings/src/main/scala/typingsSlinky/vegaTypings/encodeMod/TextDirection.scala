@@ -12,10 +12,8 @@ trait TextDirection extends js.Object
 
 object TextDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ltr: typingsSlinky.vegaTypings.vegaTypingsStrings.ltr = "ltr".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.ltr]
   @scala.inline
-  def ltr: typingsSlinky.vegaTypings.vegaTypingsStrings.ltr = this.cast("ltr")
-  @scala.inline
-  def rtl: typingsSlinky.vegaTypings.vegaTypingsStrings.rtl = this.cast("rtl")
+  def rtl: typingsSlinky.vegaTypings.vegaTypingsStrings.rtl = "rtl".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.rtl]
 }
 

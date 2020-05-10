@@ -14,14 +14,12 @@ trait Platform extends js.Object
 
 object Platform {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def linux: typingsSlinky.puppeteer.puppeteerStrings.linux = "linux".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.linux]
   @scala.inline
-  def linux: typingsSlinky.puppeteer.puppeteerStrings.linux = this.cast("linux")
+  def mac: typingsSlinky.puppeteer.puppeteerStrings.mac = "mac".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.mac]
   @scala.inline
-  def mac: typingsSlinky.puppeteer.puppeteerStrings.mac = this.cast("mac")
+  def win32: typingsSlinky.puppeteer.puppeteerStrings.win32 = "win32".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.win32]
   @scala.inline
-  def win32: typingsSlinky.puppeteer.puppeteerStrings.win32 = this.cast("win32")
-  @scala.inline
-  def win64: typingsSlinky.puppeteer.puppeteerStrings.win64 = this.cast("win64")
+  def win64: typingsSlinky.puppeteer.puppeteerStrings.win64 = "win64".asInstanceOf[typingsSlinky.puppeteer.puppeteerStrings.win64]
 }
 

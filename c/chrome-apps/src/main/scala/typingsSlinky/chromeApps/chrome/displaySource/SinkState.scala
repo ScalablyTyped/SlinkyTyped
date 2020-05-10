@@ -1,8 +1,8 @@
 package typingsSlinky.chromeApps.chrome.displaySource
 
-import typingsSlinky.chromeApps.chromeAppsStrings.Connected
-import typingsSlinky.chromeApps.chromeAppsStrings.Connecting
-import typingsSlinky.chromeApps.chromeAppsStrings.Disconnected
+import typingsSlinky.chromeApps.chromeAppsStrings.Connected_
+import typingsSlinky.chromeApps.chromeAppsStrings.Connecting_
+import typingsSlinky.chromeApps.chromeAppsStrings.Disconnected_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,8 +22,8 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.displaySource.SinkState")
 @js.native
 object SinkState extends js.Object {
-  var CONNECTED: Connected = js.native
-  var CONNECTING: Connecting = js.native
-  var DISCONNECTED: Disconnected = js.native
+  var CONNECTED: Connected_ = js.native
+  var CONNECTING: Connecting_ = js.native
+  var DISCONNECTED: Disconnected_ = js.native
 }
 

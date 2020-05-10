@@ -6,10 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait LocalizedCountries extends js.Object {
-  def array(): js.Array[AnonCode]
-  def get(code: String): String
-  def `object`(): StringDictionary[String]
+  def array(): js.Array[AnonCode] = js.native
+  def get(code: String): String = js.native
+  def `object`(): StringDictionary[String] = js.native
 }
 
 object LocalizedCountries {
@@ -19,5 +20,31 @@ object LocalizedCountries {
     __obj.updateDynamic("object")(js.Any.fromFunction0(`object`))
     __obj.asInstanceOf[LocalizedCountries]
   }
+  @scala.inline
+  implicit class LocalizedCountriesOps[Self <: LocalizedCountries] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArray(value: () => js.Array[AnonCode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("array")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withObject(value: () => StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("object")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

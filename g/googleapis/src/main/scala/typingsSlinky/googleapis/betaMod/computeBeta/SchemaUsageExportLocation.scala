@@ -31,11 +31,41 @@ trait SchemaUsageExportLocation extends js.Object {
 
 object SchemaUsageExportLocation {
   @scala.inline
-  def apply(bucketName: String = null, reportNamePrefix: String = null): SchemaUsageExportLocation = {
+  def apply(): SchemaUsageExportLocation = {
     val __obj = js.Dynamic.literal()
-    if (bucketName != null) __obj.updateDynamic("bucketName")(bucketName.asInstanceOf[js.Any])
-    if (reportNamePrefix != null) __obj.updateDynamic("reportNamePrefix")(reportNamePrefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaUsageExportLocation]
   }
+  @scala.inline
+  implicit class SchemaUsageExportLocationOps[Self <: SchemaUsageExportLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucketName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bucketName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportNamePrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportNamePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportNamePrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportNamePrefix")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

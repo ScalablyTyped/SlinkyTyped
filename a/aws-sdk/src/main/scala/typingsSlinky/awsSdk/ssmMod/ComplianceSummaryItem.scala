@@ -22,16 +22,53 @@ trait ComplianceSummaryItem extends js.Object {
 
 object ComplianceSummaryItem {
   @scala.inline
-  def apply(
-    ComplianceType: ComplianceTypeName = null,
-    CompliantSummary: CompliantSummary = null,
-    NonCompliantSummary: NonCompliantSummary = null
-  ): ComplianceSummaryItem = {
+  def apply(): ComplianceSummaryItem = {
     val __obj = js.Dynamic.literal()
-    if (ComplianceType != null) __obj.updateDynamic("ComplianceType")(ComplianceType.asInstanceOf[js.Any])
-    if (CompliantSummary != null) __obj.updateDynamic("CompliantSummary")(CompliantSummary.asInstanceOf[js.Any])
-    if (NonCompliantSummary != null) __obj.updateDynamic("NonCompliantSummary")(NonCompliantSummary.asInstanceOf[js.Any])
     __obj.asInstanceOf[ComplianceSummaryItem]
   }
+  @scala.inline
+  implicit class ComplianceSummaryItemOps[Self <: ComplianceSummaryItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplianceType(value: ComplianceTypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComplianceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCompliantSummary(value: CompliantSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompliantSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCompliantSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompliantSummary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNonCompliantSummary(value: NonCompliantSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NonCompliantSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNonCompliantSummary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NonCompliantSummary")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

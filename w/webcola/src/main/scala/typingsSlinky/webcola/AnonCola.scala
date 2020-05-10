@@ -5,17 +5,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCola extends js.Object {
-  var cola: Layout
-  var powerGraph: js.Any
+  var cola: Layout = js.native
+  var powerGraph: js.Any = js.native
 }
 
 object AnonCola {
   @scala.inline
   def apply(cola: Layout, powerGraph: js.Any): AnonCola = {
     val __obj = js.Dynamic.literal(cola = cola.asInstanceOf[js.Any], powerGraph = powerGraph.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonCola]
   }
+  @scala.inline
+  implicit class AnonColaOps[Self <: AnonCola] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCola(value: Layout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cola")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPowerGraph(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("powerGraph")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

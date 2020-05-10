@@ -1,6 +1,5 @@
 package typingsSlinky.chunkedDc
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +12,6 @@ trait DoneFn
   /** fails the spec and indicates that it has completed. If the message is an Error, Error.message is used */
   def fail(): Unit = js.native
   def fail(message: String): Unit = js.native
-  def fail(message: Error): Unit = js.native
+  def fail(message: js.Error): Unit = js.native
 }
 

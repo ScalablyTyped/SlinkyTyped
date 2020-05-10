@@ -4,26 +4,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SocketProtocolErrorStatuses_ extends js.Object {
-  var `1001`: String
-  var `1002`: String
-  var `1003`: String
-  var `1005`: String
-  var `1006`: String
-  var `1007`: String
-  var `1008`: String
-  var `1009`: String
-  var `1010`: String
-  var `1011`: String
-  var `4000`: String
-  var `4001`: String
-  var `4002`: String
-  var `4003`: String
-  var `4004`: String
-  var `4005`: String
-  var `4006`: String
-  var `4007`: String
-  var `4008`: String
+  var `1001`: String = js.native
+  var `1002`: String = js.native
+  var `1003`: String = js.native
+  var `1005`: String = js.native
+  var `1006`: String = js.native
+  var `1007`: String = js.native
+  var `1008`: String = js.native
+  var `1009`: String = js.native
+  var `1010`: String = js.native
+  var `1011`: String = js.native
+  var `4000`: String = js.native
+  var `4001`: String = js.native
+  var `4002`: String = js.native
+  var `4003`: String = js.native
+  var `4004`: String = js.native
+  var `4005`: String = js.native
+  var `4006`: String = js.native
+  var `4007`: String = js.native
+  var `4008`: String = js.native
 }
 
 object SocketProtocolErrorStatuses_ {
@@ -71,5 +72,127 @@ object SocketProtocolErrorStatuses_ {
     __obj.updateDynamic("4008")(`4008`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SocketProtocolErrorStatuses_]
   }
+  @scala.inline
+  implicit class SocketProtocolErrorStatuses_Ops[Self <: SocketProtocolErrorStatuses_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with1001(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1001")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1002(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1002")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1003(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1003")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1005(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1005")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1006(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1006")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1007(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1007")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1008(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1008")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1009(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1009")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1010(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1010")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with1011(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("1011")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4000(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4000")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4001(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4001")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4002(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4002")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4003(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4003")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4004(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4004")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4005(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4005")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4006(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4006")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4007(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4007")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with4008(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("4008")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

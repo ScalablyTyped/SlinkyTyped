@@ -1,34 +1,39 @@
 package typingsSlinky.reactCssCollapse.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactCssCollapse.mod.Props
 import typingsSlinky.reactCssCollapse.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactCssCollapse
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactCssCollapse {
   @JSImport("react-css-collapse", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    isOpen: Boolean,
-    onRest: () => Unit = null,
-    transition: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
-    if (onRest != null) __obj.updateDynamic("onRest")(js.Any.fromFunction0(onRest))
-    if (transition != null) __obj.updateDynamic("transition")(transition.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def classNameNull: this.type = set("className", null)
+    @scala.inline
+    def onRest(value: () => Unit): this.type = set("onRest", js.Any.fromFunction0(value))
+    @scala.inline
+    def transition(value: String): this.type = set("transition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionNull: this.type = set("transition", null)
   }
-  type Props = typingsSlinky.reactCssCollapse.mod.Props
+  
+  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(isOpen: Boolean): Builder = {
+    val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+  }
 }
 

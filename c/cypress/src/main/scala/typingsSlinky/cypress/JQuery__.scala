@@ -2,6 +2,9 @@ package typingsSlinky.cypress
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.Comment
+import org.scalajs.dom.raw.DocumentFragment
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Text
 import typingsSlinky.cypress.JQuery_.Ajax.TextStatus
 import typingsSlinky.cypress.JQuery_.AjaxSettings
@@ -46,10 +49,7 @@ import typingsSlinky.cypress.cypressStrings.scroll
 import typingsSlinky.cypress.cypressStrings.select
 import typingsSlinky.cypress.cypressStrings.submit
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.DocumentFragment
 import typingsSlinky.std.Document_
-import typingsSlinky.std.Element
-import typingsSlinky.std.HTMLElement
 import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -284,7 +284,7 @@ trait JQuery__[TElement]
     * @see \`{@link https://api.jquery.com/add/ }\`
     * @since 1.4
     */
-  def add(selector: Selector, context: org.scalajs.dom.raw.Element): this.type = js.native
+  def add(selector: Selector, context: Element): this.type = js.native
   /**
     * Add the previous set of elements on the stack to the current set, optionally filtered by a selector.
     * @param selector A string containing a selector expression to match the current set of elements against.
@@ -2152,7 +2152,7 @@ trait JQuery__[TElement]
     * @see \`{@link https://api.jquery.com/closest/ }\`
     * @since 1.4
     */
-  def closest(selector: Selector, context: org.scalajs.dom.raw.Element): this.type = js.native
+  def closest(selector: Selector, context: Element): this.type = js.native
   /**
     * Get the children of each element in the set of matched elements, including text and comment nodes.
     * @see \`{@link https://api.jquery.com/contents/ }\`
@@ -5756,8 +5756,8 @@ trait JQuery__[TElement]
   </html>
   ```
     */
-  def insertAfter(target: Selector | TypeOrArray[typingsSlinky.std.Node] | htmlString): this.type = js.native
-  def insertAfter(target: JQuery_[typingsSlinky.std.Node]): this.type = js.native
+  def insertAfter(target: Selector | TypeOrArray[org.scalajs.dom.raw.Node] | htmlString): this.type = js.native
+  def insertAfter(target: JQuery_[org.scalajs.dom.raw.Node]): this.type = js.native
   /**
     * Insert every element in the set of matched elements before the target.
     * @param target A selector, element, array of elements, HTML string, or jQuery object; the matched set of elements
@@ -5791,8 +5791,8 @@ trait JQuery__[TElement]
   </html>
   ```
     */
-  def insertBefore(target: Selector | TypeOrArray[typingsSlinky.std.Node] | htmlString): this.type = js.native
-  def insertBefore(target: JQuery_[typingsSlinky.std.Node]): this.type = js.native
+  def insertBefore(target: Selector | TypeOrArray[org.scalajs.dom.raw.Node] | htmlString): this.type = js.native
+  def insertBefore(target: JQuery_[org.scalajs.dom.raw.Node]): this.type = js.native
   def is(
     selector_function_selection_elements: js.ThisFunction2[/* this */ TElement, /* index */ Double, /* element */ TElement, Boolean]
   ): Boolean = js.native
@@ -9531,7 +9531,7 @@ trait JQuery__[TElement]
     .end();
   ```
     */
-  def pushStack(elements: ArrayLike[org.scalajs.dom.raw.Element]): this.type = js.native
+  def pushStack(elements: ArrayLike[Element]): this.type = js.native
   /**
     * Add a collection of DOM elements onto the jQuery stack.
     * @param elements An array of elements to push onto the stack and make into a new jQuery object.
@@ -9540,7 +9540,7 @@ trait JQuery__[TElement]
     * @see \`{@link https://api.jquery.com/pushStack/ }\`
     * @since 1.3
     */
-  def pushStack(elements: ArrayLike[org.scalajs.dom.raw.Element], name: String, args: js.Array[_]): this.type = js.native
+  def pushStack(elements: ArrayLike[Element], name: String, args: js.Array[_]): this.type = js.native
   /**
     * Show the queue of functions to be executed on the matched elements.
     * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.

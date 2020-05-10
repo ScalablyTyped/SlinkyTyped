@@ -13,25 +13,26 @@ import scala.scalajs.js.annotation._
   * 
   * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
   */
+@js.native
 trait PlusShareShareMessage extends js.Object {
   /**
     * 分享消息的文字内容
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var content: js.UndefOr[String] = js.undefined
+  var content: js.UndefOr[String] = js.native
   /**
     * 分享消息扩展参数
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var extra: js.UndefOr[PlusShareShareMessageExtra] = js.undefined
+  var extra: js.UndefOr[PlusShareShareMessageExtra] = js.native
   /**
     * 分享消息中包含的用户地理信息数据
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var geo: js.UndefOr[PlusShareGeoPosition] = js.undefined
+  var geo: js.UndefOr[PlusShareGeoPosition] = js.native
   /**
     * 分享独立的链接
     * 分享资源地址，仅支持网络地址（以http://或https://开头）。
@@ -39,7 +40,7 @@ trait PlusShareShareMessage extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var href: js.UndefOr[String] = js.undefined
+  var href: js.UndefOr[String] = js.native
   /**
     * 分享消息的模式
     * 可取值：
@@ -60,7 +61,7 @@ trait PlusShareShareMessage extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var interface: js.UndefOr[auto | slient | editable] = js.undefined
+  var interface: js.UndefOr[auto | slient | editable] = js.native
   /**
     * 分享的多媒体资源
     * 分享的多媒体资源地址，当type值为"music"、"video"时有效。
@@ -71,14 +72,14 @@ trait PlusShareShareMessage extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var media: js.UndefOr[String] = js.undefined
+  var media: js.UndefOr[String] = js.native
   /**
     * 分享微信小程序参数
     * 仅微信分享小程序类型时支持。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var miniProgram: js.UndefOr[PlusShareWeixinMiniProgramOptions] = js.undefined
+  var miniProgram: js.UndefOr[PlusShareWeixinMiniProgramOptions] = js.native
   /**
     * 分享消息的图片
     * 分享消息中包含的图片路径，仅支持本地路径。
@@ -87,7 +88,7 @@ trait PlusShareShareMessage extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var pictures: js.UndefOr[js.Array[_]] = js.undefined
+  var pictures: js.UndefOr[js.Array[_]] = js.native
   /**
     * 分享消息的缩略图
     * 分享消息中包含的缩略图路径，支持本地路径及网络路径。
@@ -97,51 +98,168 @@ trait PlusShareShareMessage extends js.Object {
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var thumbs: js.UndefOr[js.Array[_]] = js.undefined
+  var thumbs: js.UndefOr[js.Array[_]] = js.native
   /**
     * 分享消息的标题
     * 仅微信分享网页、音频、视频、小程序类型时支持。
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String] = js.native
   /**
     * 分享消息的类型
     * 
     * 
     * 参考: [http://www.html5plus.org/doc/zh_cn/share.html](http://www.html5plus.org/doc/zh_cn/share.html)
     */
-  var `type`: js.UndefOr[String] = js.undefined
+  var `type`: js.UndefOr[String] = js.native
 }
 
 object PlusShareShareMessage {
   @scala.inline
-  def apply(
-    content: String = null,
-    extra: PlusShareShareMessageExtra = null,
-    geo: PlusShareGeoPosition = null,
-    href: String = null,
-    interface: auto | slient | editable = null,
-    media: String = null,
-    miniProgram: PlusShareWeixinMiniProgramOptions = null,
-    pictures: js.Array[_] = null,
-    thumbs: js.Array[_] = null,
-    title: String = null,
-    `type`: String = null
-  ): PlusShareShareMessage = {
+  def apply(): PlusShareShareMessage = {
     val __obj = js.Dynamic.literal()
-    if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
-    if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
-    if (geo != null) __obj.updateDynamic("geo")(geo.asInstanceOf[js.Any])
-    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
-    if (interface != null) __obj.updateDynamic("interface")(interface.asInstanceOf[js.Any])
-    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
-    if (miniProgram != null) __obj.updateDynamic("miniProgram")(miniProgram.asInstanceOf[js.Any])
-    if (pictures != null) __obj.updateDynamic("pictures")(pictures.asInstanceOf[js.Any])
-    if (thumbs != null) __obj.updateDynamic("thumbs")(thumbs.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlusShareShareMessage]
   }
+  @scala.inline
+  implicit class PlusShareShareMessageOps[Self <: PlusShareShareMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtra(value: PlusShareShareMessageExtra): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtra: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGeo(value: PlusShareGeoPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGeo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHref(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("href")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterface(value: auto | slient | editable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interface")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterface: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interface")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedia(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedia: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMiniProgram(value: PlusShareWeixinMiniProgramOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("miniProgram")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMiniProgram: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("miniProgram")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPictures(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pictures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPictures: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pictures")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThumbs(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThumbs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

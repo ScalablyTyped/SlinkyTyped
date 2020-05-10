@@ -73,9 +73,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -97,9 +97,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -120,9 +120,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -145,9 +145,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -168,9 +168,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -192,9 +192,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -215,9 +215,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -239,9 +239,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -264,9 +264,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -291,9 +291,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -315,9 +315,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -340,9 +340,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -363,9 +363,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -387,9 +387,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -411,9 +411,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -431,13 +431,13 @@ trait TypeoffileSystemProvider extends js.Object {
   val onReadFileRequested: Event[
     js.Function3[
       /* options */ ReadFileRequestedEventOptions, 
-      /* successCallback */ js.Function2[/* data */ scala.scalajs.js.typedarray.ArrayBuffer, /* hasMore */ Boolean, Unit], 
+      /* successCallback */ js.Function2[/* data */ js.typedarray.ArrayBuffer, /* hasMore */ Boolean, Unit], 
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -459,9 +459,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -482,9 +482,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -509,9 +509,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 
@@ -531,9 +531,9 @@ trait TypeoffileSystemProvider extends js.Object {
       /* errorCallback */ js.Function1[
         /* error */ ToStringLiteral[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError */ js.Any, 
-          String, 
+          /* keyof typeof ProviderError */ String, 
           Exclude[
-            String, 
+            /* keyof typeof ProviderError */ String, 
             /* import warning: importer.ImportType#apply Failed type conversion: typeof ProviderError[keyof typeof ProviderError] */ js.Any
           ]
         ], 

@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonEnumValuesAnonExtensionFields extends js.Object {
-  var enumValues: AnonExtensionFields
+  var enumValues: AnonExtensionFields = js.native
 }
 
 object AnonEnumValuesAnonExtensionFields {
   @scala.inline
   def apply(enumValues: AnonExtensionFields): AnonEnumValuesAnonExtensionFields = {
     val __obj = js.Dynamic.literal(enumValues = enumValues.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonEnumValuesAnonExtensionFields]
   }
+  @scala.inline
+  implicit class AnonEnumValuesAnonExtensionFieldsOps[Self <: AnonEnumValuesAnonExtensionFields] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnumValues(value: AnonExtensionFields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

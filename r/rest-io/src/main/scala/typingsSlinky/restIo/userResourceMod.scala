@@ -3,6 +3,7 @@ package typingsSlinky.restIo
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +16,8 @@ object userResourceMod extends js.Object {
     extends typingsSlinky.restIo.authorizedResourceMod.default {
     def createRoleModel(): Unit = js.native
     def ensureBaseUserModel(model: js.Any): Unit = js.native
-    def isSelf(req: Request_[ParamsDictionary]): Boolean = js.native
-    def login(req: Request_[ParamsDictionary], res: Response_): Unit = js.native
+    def isSelf(req: Request_[ParamsDictionary, _, _, Query]): Boolean = js.native
+    def login(req: Request_[ParamsDictionary, _, _, Query], res: Response_[_]): Unit = js.native
   }
   
   @js.native

@@ -17,10 +17,29 @@ trait SchemaSendWorkerMessagesResponse extends js.Object {
 
 object SchemaSendWorkerMessagesResponse {
   @scala.inline
-  def apply(workerMessageResponses: js.Array[SchemaWorkerMessageResponse] = null): SchemaSendWorkerMessagesResponse = {
+  def apply(): SchemaSendWorkerMessagesResponse = {
     val __obj = js.Dynamic.literal()
-    if (workerMessageResponses != null) __obj.updateDynamic("workerMessageResponses")(workerMessageResponses.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSendWorkerMessagesResponse]
   }
+  @scala.inline
+  implicit class SchemaSendWorkerMessagesResponseOps[Self <: SchemaSendWorkerMessagesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWorkerMessageResponses(value: js.Array[SchemaWorkerMessageResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMessageResponses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkerMessageResponses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workerMessageResponses")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

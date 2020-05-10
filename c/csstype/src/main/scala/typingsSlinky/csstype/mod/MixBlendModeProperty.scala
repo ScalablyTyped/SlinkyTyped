@@ -31,48 +31,46 @@ trait MixBlendModeProperty extends js.Object
 
 object MixBlendModeProperty {
   @scala.inline
-  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = this.cast("-moz-initial")
+  def `-moz-initial`: typingsSlinky.csstype.csstypeStrings.`-moz-initial` = "-moz-initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`-moz-initial`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def color: typingsSlinky.csstype.csstypeStrings.color = "color".asInstanceOf[typingsSlinky.csstype.csstypeStrings.color]
   @scala.inline
-  def color: typingsSlinky.csstype.csstypeStrings.color = this.cast("color")
+  def `color-burn`: typingsSlinky.csstype.csstypeStrings.`color-burn` = "color-burn".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`color-burn`]
   @scala.inline
-  def `color-burn`: typingsSlinky.csstype.csstypeStrings.`color-burn` = this.cast("color-burn")
+  def `color-dodge`: typingsSlinky.csstype.csstypeStrings.`color-dodge` = "color-dodge".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`color-dodge`]
   @scala.inline
-  def `color-dodge`: typingsSlinky.csstype.csstypeStrings.`color-dodge` = this.cast("color-dodge")
+  def darken: typingsSlinky.csstype.csstypeStrings.darken = "darken".asInstanceOf[typingsSlinky.csstype.csstypeStrings.darken]
   @scala.inline
-  def darken: typingsSlinky.csstype.csstypeStrings.darken = this.cast("darken")
+  def difference: typingsSlinky.csstype.csstypeStrings.difference = "difference".asInstanceOf[typingsSlinky.csstype.csstypeStrings.difference]
   @scala.inline
-  def difference: typingsSlinky.csstype.csstypeStrings.difference = this.cast("difference")
+  def exclusion: typingsSlinky.csstype.csstypeStrings.exclusion = "exclusion".asInstanceOf[typingsSlinky.csstype.csstypeStrings.exclusion]
   @scala.inline
-  def exclusion: typingsSlinky.csstype.csstypeStrings.exclusion = this.cast("exclusion")
+  def `hard-light`: typingsSlinky.csstype.csstypeStrings.`hard-light` = "hard-light".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`hard-light`]
   @scala.inline
-  def `hard-light`: typingsSlinky.csstype.csstypeStrings.`hard-light` = this.cast("hard-light")
+  def hue: typingsSlinky.csstype.csstypeStrings.hue = "hue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.hue]
   @scala.inline
-  def hue: typingsSlinky.csstype.csstypeStrings.hue = this.cast("hue")
+  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.csstype.csstypeStrings.inherit]
   @scala.inline
-  def inherit: typingsSlinky.csstype.csstypeStrings.inherit = this.cast("inherit")
+  def initial: typingsSlinky.csstype.csstypeStrings.initial = "initial".asInstanceOf[typingsSlinky.csstype.csstypeStrings.initial]
   @scala.inline
-  def initial: typingsSlinky.csstype.csstypeStrings.initial = this.cast("initial")
+  def lighten: typingsSlinky.csstype.csstypeStrings.lighten = "lighten".asInstanceOf[typingsSlinky.csstype.csstypeStrings.lighten]
   @scala.inline
-  def lighten: typingsSlinky.csstype.csstypeStrings.lighten = this.cast("lighten")
+  def luminosity: typingsSlinky.csstype.csstypeStrings.luminosity = "luminosity".asInstanceOf[typingsSlinky.csstype.csstypeStrings.luminosity]
   @scala.inline
-  def luminosity: typingsSlinky.csstype.csstypeStrings.luminosity = this.cast("luminosity")
+  def multiply: typingsSlinky.csstype.csstypeStrings.multiply = "multiply".asInstanceOf[typingsSlinky.csstype.csstypeStrings.multiply]
   @scala.inline
-  def multiply: typingsSlinky.csstype.csstypeStrings.multiply = this.cast("multiply")
+  def normal: typingsSlinky.csstype.csstypeStrings.normal = "normal".asInstanceOf[typingsSlinky.csstype.csstypeStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.csstype.csstypeStrings.normal = this.cast("normal")
+  def overlay: typingsSlinky.csstype.csstypeStrings.overlay = "overlay".asInstanceOf[typingsSlinky.csstype.csstypeStrings.overlay]
   @scala.inline
-  def overlay: typingsSlinky.csstype.csstypeStrings.overlay = this.cast("overlay")
+  def revert: typingsSlinky.csstype.csstypeStrings.revert = "revert".asInstanceOf[typingsSlinky.csstype.csstypeStrings.revert]
   @scala.inline
-  def revert: typingsSlinky.csstype.csstypeStrings.revert = this.cast("revert")
+  def saturation: typingsSlinky.csstype.csstypeStrings.saturation = "saturation".asInstanceOf[typingsSlinky.csstype.csstypeStrings.saturation]
   @scala.inline
-  def saturation: typingsSlinky.csstype.csstypeStrings.saturation = this.cast("saturation")
+  def screen: typingsSlinky.csstype.csstypeStrings.screen = "screen".asInstanceOf[typingsSlinky.csstype.csstypeStrings.screen]
   @scala.inline
-  def screen: typingsSlinky.csstype.csstypeStrings.screen = this.cast("screen")
+  def `soft-light`: typingsSlinky.csstype.csstypeStrings.`soft-light` = "soft-light".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`soft-light`]
   @scala.inline
-  def `soft-light`: typingsSlinky.csstype.csstypeStrings.`soft-light` = this.cast("soft-light")
-  @scala.inline
-  def unset: typingsSlinky.csstype.csstypeStrings.unset = this.cast("unset")
+  def unset: typingsSlinky.csstype.csstypeStrings.unset = "unset".asInstanceOf[typingsSlinky.csstype.csstypeStrings.unset]
 }
 

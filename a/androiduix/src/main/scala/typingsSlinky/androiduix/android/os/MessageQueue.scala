@@ -1,6 +1,6 @@
 package typingsSlinky.androiduix.android.os
 
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`

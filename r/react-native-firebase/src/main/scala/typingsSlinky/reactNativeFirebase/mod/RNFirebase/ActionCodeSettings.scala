@@ -6,24 +6,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ActionCodeSettings extends js.Object {
-  var android: AnonInstallApp
-  var handleCodeInApp: js.UndefOr[Boolean] = js.undefined
-  var iOS: AnonBundleId
-  var url: String
+  var android: AnonInstallApp = js.native
+  var handleCodeInApp: js.UndefOr[Boolean] = js.native
+  var iOS: AnonBundleId = js.native
+  var url: String = js.native
 }
 
 object ActionCodeSettings {
   @scala.inline
-  def apply(
-    android: AnonInstallApp,
-    iOS: AnonBundleId,
-    url: String,
-    handleCodeInApp: js.UndefOr[Boolean] = js.undefined
-  ): ActionCodeSettings = {
+  def apply(android: AnonInstallApp, iOS: AnonBundleId, url: String): ActionCodeSettings = {
     val __obj = js.Dynamic.literal(android = android.asInstanceOf[js.Any], iOS = iOS.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    if (!js.isUndefined(handleCodeInApp)) __obj.updateDynamic("handleCodeInApp")(handleCodeInApp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionCodeSettings]
   }
+  @scala.inline
+  implicit class ActionCodeSettingsOps[Self <: ActionCodeSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAndroid(value: AnonInstallApp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIOS(value: AnonBundleId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iOS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHandleCodeInApp(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleCodeInApp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHandleCodeInApp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handleCodeInApp")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

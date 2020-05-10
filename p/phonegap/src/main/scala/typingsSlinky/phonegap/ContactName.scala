@@ -5,13 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ContactName extends js.Object {
-  var familyName: String
-  var formatted: String
-  var givenName: String
-  var honorificPrefix: String
-  var honorificSuffix: String
-  var middleName: String
+  var familyName: String = js.native
+  var formatted: String = js.native
+  var givenName: String = js.native
+  var honorificPrefix: String = js.native
+  var honorificSuffix: String = js.native
+  var middleName: String = js.native
 }
 
 @JSGlobal("ContactName")

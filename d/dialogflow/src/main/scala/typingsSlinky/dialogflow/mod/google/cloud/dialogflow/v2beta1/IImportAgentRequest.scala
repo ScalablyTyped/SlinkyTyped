@@ -5,27 +5,83 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Properties of an ImportAgentRequest. */
+@js.native
 trait IImportAgentRequest extends js.Object {
   /** ImportAgentRequest agentContent */
-  var agentContent: js.UndefOr[scala.scalajs.js.typedarray.Uint8Array | Null] = js.undefined
+  var agentContent: js.UndefOr[js.typedarray.Uint8Array | Null] = js.native
   /** ImportAgentRequest agentUri */
-  var agentUri: js.UndefOr[String | Null] = js.undefined
+  var agentUri: js.UndefOr[String | Null] = js.native
   /** ImportAgentRequest parent */
-  var parent: js.UndefOr[String | Null] = js.undefined
+  var parent: js.UndefOr[String | Null] = js.native
 }
 
 object IImportAgentRequest {
   @scala.inline
-  def apply(
-    agentContent: scala.scalajs.js.typedarray.Uint8Array = null,
-    agentUri: String = null,
-    parent: String = null
-  ): IImportAgentRequest = {
+  def apply(): IImportAgentRequest = {
     val __obj = js.Dynamic.literal()
-    if (agentContent != null) __obj.updateDynamic("agentContent")(agentContent.asInstanceOf[js.Any])
-    if (agentUri != null) __obj.updateDynamic("agentUri")(agentUri.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[IImportAgentRequest]
   }
+  @scala.inline
+  implicit class IImportAgentRequestOps[Self <: IImportAgentRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgentContent(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgentContent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentContent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAgentContentNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentContent")(null)
+        ret
+    }
+    @scala.inline
+    def withAgentUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgentUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAgentUriNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agentUri")(null)
+        ret
+    }
+    @scala.inline
+    def withParent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParentNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(null)
+        ret
+    }
+  }
+  
 }
 

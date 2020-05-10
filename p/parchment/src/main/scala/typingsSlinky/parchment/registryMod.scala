@@ -3,11 +3,10 @@ package typingsSlinky.parchment
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Node
 import typingsSlinky.parchment.attributorMod.default
 import typingsSlinky.parchment.blotMod.Blot
-import typingsSlinky.parchment.parchmentStrings.__blot
 import typingsSlinky.std.Error
-import typingsSlinky.std.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,17 +19,13 @@ object registryMod extends js.Object {
     extends Instantiable1[/* node */ Node, Blot]
        with Instantiable2[/* node */ Node, /* value */ js.Any, Blot] {
     var blotName: String = js.native
-    def create(): org.scalajs.dom.raw.Node = js.native
-    def create(value: js.Any): org.scalajs.dom.raw.Node = js.native
+    def create(): Node = js.native
+    def create(value: js.Any): Node = js.native
   }
   
   @js.native
   class ParchmentError protected () extends Error {
     def this(message: String) = this()
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
     @JSName("stack")
     var stack_ParchmentError: String = js.native
   }
@@ -38,7 +33,7 @@ object registryMod extends js.Object {
   @js.native
   sealed trait Scope extends js.Object
   
-  val DATA_KEY: __blot = js.native
+  val DATA_KEY: /* "__blot" */ String = js.native
   def create(input: String): Blot = js.native
   def create(input: String, value: js.Any): Blot = js.native
   def create(input: Scope): Blot = js.native

@@ -10,21 +10,22 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait toFrac_ extends js.Object {
   /**
     *
     */
-  def FuncGen(): Unit
+  def FuncGen(): Unit = js.native
   /**
     *
     */
-  def Grapher(): Unit
+  def Grapher(): Unit = js.native
   /**
     * Return a less exact approximation of r such that approx(r * (1 +- eps)) == approx(r)
     *
     * @param r
     */
-  def approx(r: Double): Double
+  def approx(r: Double): Double = js.native
   /**
     * graph a chart with the given function.
     *
@@ -32,7 +33,7 @@ trait toFrac_ extends js.Object {
     * @param functionToGraph Function with one numeric parameter (x or y typically)
     * @param params can contain the number of the graph in the chart it is (an integer), a boolean saying if the functionToGraph is a function of x (otherwise y)and the color, which is an object with a stroke with a color's name eg: color:{stroke:"black"}
     */
-  def draw(chart: Chart2D, functionToGraph: js.Function, params: js.Object): js.Any
+  def draw(chart: Chart2D, functionToGraph: js.Function, params: js.Object): js.Any = js.native
   /**
     * create the points with information about the graph.
     *
@@ -54,18 +55,18 @@ trait toFrac_ extends js.Object {
     maxX: Double,
     minY: Double,
     maxY: Double
-  ): js.Object
+  ): js.Object = js.native
   /**
     *
     * @param base
     * @param exponent
     */
-  def pow(base: js.Any, exponent: js.Any): js.Any
+  def pow(base: js.Any, exponent: js.Any): js.Any = js.native
   /**
     *
     * @param number
     */
-  def toFrac(number: js.Any): js.Any
+  def toFrac(number: js.Any): js.Any = js.native
 }
 
 object toFrac_ {
@@ -80,8 +81,57 @@ object toFrac_ {
     toFrac: js.Any => js.Any
   ): toFrac_ = {
     val __obj = js.Dynamic.literal(FuncGen = js.Any.fromFunction0(FuncGen), Grapher = js.Any.fromFunction0(Grapher), approx = js.Any.fromFunction1(approx), draw = js.Any.fromFunction3(draw), generatePoints = js.Any.fromFunction8(generatePoints), pow = js.Any.fromFunction2(pow), toFrac = js.Any.fromFunction1(toFrac))
-  
     __obj.asInstanceOf[toFrac_]
   }
+  @scala.inline
+  implicit class toFrac_Ops[Self <: toFrac_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFuncGen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FuncGen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGrapher(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Grapher")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withApprox(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("approx")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDraw(value: (Chart2D, js.Function, js.Object) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draw")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withGeneratePoints(value: (js.Function, String, String, Double, Double, Double, Double, Double) => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generatePoints")(js.Any.fromFunction8(value))
+        ret
+    }
+    @scala.inline
+    def withPow(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pow")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withToFrac(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toFrac")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

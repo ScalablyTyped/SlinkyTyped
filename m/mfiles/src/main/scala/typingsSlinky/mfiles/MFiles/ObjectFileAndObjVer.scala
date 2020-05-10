@@ -1,8 +1,6 @@
 package typingsSlinky.mfiles.MFiles
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.mfiles.IObjVer
-import typingsSlinky.mfiles.IObjectFile
 import typingsSlinky.mfiles.IObjectFileAndObjVer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,16 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("MFiles.ObjectFileAndObjVer")
 @js.native
-class ObjectFileAndObjVer () extends IObjectFileAndObjVer {
-  /* CompleteClass */
-  override val ObjVer: IObjVer = js.native
-  /* CompleteClass */
-  override val ObjectFile: IObjectFile = js.native
-  /* CompleteClass */
-  override def Clone(): IObjectFileAndObjVer = js.native
-  /* CompleteClass */
-  override def ToJSON(): String = js.native
-}
+class ObjectFileAndObjVer () extends IObjectFileAndObjVer
 
 @JSGlobal("MFiles.ObjectFileAndObjVer")
 @js.native

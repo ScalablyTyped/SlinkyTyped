@@ -5,16 +5,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonRenderer extends js.Object {
-  def renderer(context: TooltipContext): AnonInsert | AnonPreventDefault
+  def renderer(context: TooltipContext): AnonInsert | AnonPreventDefault = js.native
 }
 
 object AnonRenderer {
   @scala.inline
   def apply(renderer: TooltipContext => AnonInsert | AnonPreventDefault): AnonRenderer = {
     val __obj = js.Dynamic.literal(renderer = js.Any.fromFunction1(renderer))
-  
     __obj.asInstanceOf[AnonRenderer]
   }
+  @scala.inline
+  implicit class AnonRendererOps[Self <: AnonRenderer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRenderer(value: TooltipContext => AnonInsert | AnonPreventDefault): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

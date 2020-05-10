@@ -19,10 +19,29 @@ trait SchemaProvidedSoftwareCatalog extends js.Object {
 
 object SchemaProvidedSoftwareCatalog {
   @scala.inline
-  def apply(orchestratorVersion: String = null): SchemaProvidedSoftwareCatalog = {
+  def apply(): SchemaProvidedSoftwareCatalog = {
     val __obj = js.Dynamic.literal()
-    if (orchestratorVersion != null) __obj.updateDynamic("orchestratorVersion")(orchestratorVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaProvidedSoftwareCatalog]
   }
+  @scala.inline
+  implicit class SchemaProvidedSoftwareCatalogOps[Self <: SchemaProvidedSoftwareCatalog] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrchestratorVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orchestratorVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrchestratorVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orchestratorVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

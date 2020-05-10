@@ -1,7 +1,6 @@
 package typingsSlinky.codemirror.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +46,7 @@ trait StringStream extends js.Object {
     */
   def eat(`match`: String): String = js.native
   def eat(`match`: js.Function1[/* char */ String, Boolean]): String = js.native
-  def eat(`match`: RegExp): String = js.native
+  def eat(`match`: js.RegExp): String = js.native
   /**
     * Shortcut for eatWhile when matching white-space.
     */
@@ -57,7 +56,7 @@ trait StringStream extends js.Object {
     */
   def eatWhile(`match`: String): Boolean = js.native
   def eatWhile(`match`: js.Function1[/* char */ String, Boolean]): Boolean = js.native
-  def eatWhile(`match`: RegExp): Boolean = js.native
+  def eatWhile(`match`: js.RegExp): Boolean = js.native
   /**
     * Returns true only if the stream is at the end of the line.
     */
@@ -75,8 +74,8 @@ trait StringStream extends js.Object {
   def `match`(pattern: String): Boolean = js.native
   def `match`(pattern: String, consume: Boolean): Boolean = js.native
   def `match`(pattern: String, consume: Boolean, caseFold: Boolean): Boolean = js.native
-  def `match`(pattern: RegExp): js.Array[String] = js.native
-  def `match`(pattern: RegExp, consume: Boolean): js.Array[String] = js.native
+  def `match`(pattern: js.RegExp): js.Array[String] = js.native
+  def `match`(pattern: js.RegExp, consume: Boolean): js.Array[String] = js.native
   /**
     * Returns the next character in the stream and advances it. Also returns null when no more characters are available.
     */

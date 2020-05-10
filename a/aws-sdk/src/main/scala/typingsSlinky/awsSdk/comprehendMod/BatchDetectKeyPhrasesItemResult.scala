@@ -18,11 +18,41 @@ trait BatchDetectKeyPhrasesItemResult extends js.Object {
 
 object BatchDetectKeyPhrasesItemResult {
   @scala.inline
-  def apply(Index: Int | scala.Double = null, KeyPhrases: ListOfKeyPhrases = null): BatchDetectKeyPhrasesItemResult = {
+  def apply(): BatchDetectKeyPhrasesItemResult = {
     val __obj = js.Dynamic.literal()
-    if (Index != null) __obj.updateDynamic("Index")(Index.asInstanceOf[js.Any])
-    if (KeyPhrases != null) __obj.updateDynamic("KeyPhrases")(KeyPhrases.asInstanceOf[js.Any])
     __obj.asInstanceOf[BatchDetectKeyPhrasesItemResult]
   }
+  @scala.inline
+  implicit class BatchDetectKeyPhrasesItemResultOps[Self <: BatchDetectKeyPhrasesItemResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIndex(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeyPhrases(value: ListOfKeyPhrases): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPhrases")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeyPhrases: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPhrases")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,18 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SwitchMessages extends js.Object {
-  var checked: js.UndefOr[String] = js.undefined
-  var unchecked: js.UndefOr[String] = js.undefined
+  var checked: js.UndefOr[String] = js.native
+  var unchecked: js.UndefOr[String] = js.native
 }
 
 object SwitchMessages {
   @scala.inline
-  def apply(checked: String = null, unchecked: String = null): SwitchMessages = {
+  def apply(): SwitchMessages = {
     val __obj = js.Dynamic.literal()
-    if (checked != null) __obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
-    if (unchecked != null) __obj.updateDynamic("unchecked")(unchecked.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwitchMessages]
   }
+  @scala.inline
+  implicit class SwitchMessagesOps[Self <: SwitchMessages] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChecked(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnchecked(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unchecked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnchecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unchecked")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

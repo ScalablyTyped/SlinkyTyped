@@ -1,7 +1,6 @@
 package typingsSlinky.webdriverio.WebdriverIO
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.RegExp
 import typingsSlinky.webdriver.WebDriver.RectReturn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -364,14 +363,14 @@ trait Browser extends js.Object {
     * Switch focus to a particular tab / window.
     */
   def switchWindow(urlOrTitleToMatch: String): Unit = js.native
-  def switchWindow(urlOrTitleToMatch: RegExp): Unit = js.native
+  def switchWindow(urlOrTitleToMatch: js.RegExp): Unit = js.native
   /**
     * Switch focus to a particular tab / window.
     */
   @JSName("switchWindow")
   def switchWindow_Promise(urlOrTitleToMatch: String): js.Promise[Unit] = js.native
   @JSName("switchWindow")
-  def switchWindow_Promise(urlOrTitleToMatch: RegExp): js.Promise[Unit] = js.native
+  def switchWindow_Promise(urlOrTitleToMatch: js.RegExp): js.Promise[Unit] = js.native
   /**
     * [appium] The Touch Action API provides the basis of all gestures that can be automated in Appium.
     */

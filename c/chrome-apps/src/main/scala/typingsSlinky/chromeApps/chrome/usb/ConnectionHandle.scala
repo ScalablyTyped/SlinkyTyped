@@ -6,6 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Since Chrome 31. */
+@js.native
 trait ConnectionHandle extends js.Object {
   /**
     * An opaque handle representing this connection to the USB device
@@ -13,19 +14,44 @@ trait ConnectionHandle extends js.Object {
     * A new handle is created each time the device is opened.
     * The connection handle is different from Device.device.
     */
-  var handle: integer
+  var handle: integer = js.native
   /** The product ID. */
-  var productId: integer
+  var productId: integer = js.native
   /** The device vendor ID. */
-  var vendorId: integer
+  var vendorId: integer = js.native
 }
 
 object ConnectionHandle {
   @scala.inline
   def apply(handle: integer, productId: integer, vendorId: integer): ConnectionHandle = {
     val __obj = js.Dynamic.literal(handle = handle.asInstanceOf[js.Any], productId = productId.asInstanceOf[js.Any], vendorId = vendorId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ConnectionHandle]
   }
+  @scala.inline
+  implicit class ConnectionHandleOps[Self <: ConnectionHandle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHandle(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProductId(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("productId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVendorId(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vendorId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

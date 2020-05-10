@@ -1,8 +1,8 @@
 package typingsSlinky.kefir.mod
 
+import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.kefir.AnonOff
 import typingsSlinky.node.NodeJS.EventEmitter
-import typingsSlinky.std.EventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

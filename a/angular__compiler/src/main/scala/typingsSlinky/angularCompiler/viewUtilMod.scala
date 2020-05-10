@@ -1,12 +1,6 @@
 package typingsSlinky.angularCompiler
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angularCompiler.angularCompilerStrings.$implicit
-import typingsSlinky.angularCompiler.angularCompilerStrings._r
-import typingsSlinky.angularCompiler.angularCompilerStrings._t
-import typingsSlinky.angularCompiler.angularCompilerStrings.ctx
-import typingsSlinky.angularCompiler.angularCompilerStrings.ngNonBindable
-import typingsSlinky.angularCompiler.angularCompilerStrings.rf
 import typingsSlinky.angularCompiler.apiMod.R3QueryMetadata
 import typingsSlinky.angularCompiler.astMod.Interpolation
 import typingsSlinky.angularCompiler.constantPoolMod.ConstantPool
@@ -34,12 +28,12 @@ object viewUtilMod extends js.Object {
     def toLiteralMap(): LiteralMapExpr = js.native
   }
   
-  val CONTEXT_NAME: ctx = js.native
-  val IMPLICIT_REFERENCE: $implicit = js.native
-  val NON_BINDABLE_ATTR: ngNonBindable = js.native
-  val REFERENCE_PREFIX: _r = js.native
-  val RENDER_FLAGS: rf = js.native
-  val TEMPORARY_NAME: _t = js.native
+  val CONTEXT_NAME: /* "ctx" */ String = js.native
+  val IMPLICIT_REFERENCE: /* "$implicit" */ String = js.native
+  val NON_BINDABLE_ATTR: /* "ngNonBindable" */ String = js.native
+  val REFERENCE_PREFIX: /* "_r" */ String = js.native
+  val RENDER_FLAGS: /* "rf" */ String = js.native
+  val TEMPORARY_NAME: /* "_t" */ String = js.native
   def asLiteral(value: js.Any): Expression = js.native
   def chainedInstruction(reference: ExternalReference, calls: js.Array[js.Array[Expression]]): Expression = js.native
   def chainedInstruction(reference: ExternalReference, calls: js.Array[js.Array[Expression]], span: ParseSourceSpan): Expression = js.native

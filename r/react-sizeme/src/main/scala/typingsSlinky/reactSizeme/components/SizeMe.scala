@@ -1,10 +1,7 @@
 package typingsSlinky.reactSizeme.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSizeme.mod.SizeMeRenderProps
 import typingsSlinky.reactSizeme.reactSizemeStrings.debounce
 import typingsSlinky.reactSizeme.reactSizemeStrings.throttle
@@ -12,33 +9,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SizeMe
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactSizeme.mod.SizeMe] {
+object SizeMe {
   @JSImport("react-sizeme", "SizeMe")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    monitorHeight: js.UndefOr[Boolean] = js.undefined,
-    monitorPosition: js.UndefOr[Boolean] = js.undefined,
-    monitorWidth: js.UndefOr[Boolean] = js.undefined,
-    noPlaceholder: js.UndefOr[Boolean] = js.undefined,
-    refreshMode: throttle | debounce = null,
-    refreshRate: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactSizeme.mod.SizeMe] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(monitorHeight)) __obj.updateDynamic("monitorHeight")(monitorHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(monitorPosition)) __obj.updateDynamic("monitorPosition")(monitorPosition.asInstanceOf[js.Any])
-    if (!js.isUndefined(monitorWidth)) __obj.updateDynamic("monitorWidth")(monitorWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(noPlaceholder)) __obj.updateDynamic("noPlaceholder")(noPlaceholder.asInstanceOf[js.Any])
-    if (refreshMode != null) __obj.updateDynamic("refreshMode")(refreshMode.asInstanceOf[js.Any])
-    if (refreshRate != null) __obj.updateDynamic("refreshRate")(refreshRate.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactSizeme.mod.SizeMe] {
+    @scala.inline
+    def monitorHeight(value: Boolean): this.type = set("monitorHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def monitorPosition(value: Boolean): this.type = set("monitorPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def monitorWidth(value: Boolean): this.type = set("monitorWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noPlaceholder(value: Boolean): this.type = set("noPlaceholder", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refreshMode(value: throttle | debounce): this.type = set("refreshMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refreshRate(value: Double): this.type = set("refreshRate", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactSizeme.mod.SizeMe] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSizeme.mod.SizeMe](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SizeMeRenderProps
+  
+  def withProps(p: SizeMeRenderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SizeMe.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

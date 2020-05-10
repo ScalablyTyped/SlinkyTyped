@@ -6,7 +6,6 @@ import typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.IHTTP
 import typingsSlinky.apolloProtobufjs.mod.IConversionOptions
 import typingsSlinky.apolloProtobufjs.mod.Reader
 import typingsSlinky.apolloProtobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,8 +54,8 @@ object HTTP extends js.Object {
     */
   def decode(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP = js.native
   def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP = js.native
-  def decode(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP = js.native
-  def decode(reader: Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP = js.native
+  def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP = js.native
   /**
     * Decodes a HTTP message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -65,7 +64,7 @@ object HTTP extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP = js.native
-  def decodeDelimited(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP = js.native
   /**
     * Encodes the specified HTTP message. Does not implicitly {@link Trace.HTTP.verify|verify} messages.
     * @param message HTTP message or plain object to encode
@@ -144,8 +143,8 @@ object HTTP extends js.Object {
       */
     def decode(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP.Values = js.native
     def decode(reader: Reader, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP.Values = js.native
-    def decode(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP.Values = js.native
-    def decode(reader: Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP.Values = js.native
+    def decode(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP.Values = js.native
+    def decode(reader: js.typedarray.Uint8Array, length: Double): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP.Values = js.native
     /**
       * Decodes a Values message from the specified reader or buffer, length delimited.
       * @param reader Reader or buffer to decode from
@@ -154,7 +153,7 @@ object HTTP extends js.Object {
       * @throws {$protobuf.util.ProtocolError} If required fields are missing
       */
     def decodeDelimited(reader: Reader): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP.Values = js.native
-    def decodeDelimited(reader: Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP.Values = js.native
+    def decodeDelimited(reader: js.typedarray.Uint8Array): typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.HTTP.Values = js.native
     /**
       * Encodes the specified Values message. Does not implicitly {@link Trace.HTTP.Values.verify|verify} messages.
       * @param message Values message or plain object to encode

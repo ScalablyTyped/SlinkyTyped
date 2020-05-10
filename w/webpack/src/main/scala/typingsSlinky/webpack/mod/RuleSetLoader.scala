@@ -4,39 +4,87 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RuleSetLoader extends js.Object {
   /**
     * Unique loader identifier
     */
-  var ident: js.UndefOr[String] = js.undefined
+  var ident: js.UndefOr[String] = js.native
   /**
     * Loader name
     */
-  var loader: js.UndefOr[String] = js.undefined
+  var loader: js.UndefOr[String] = js.native
   /**
     * Loader options
     */
-  var options: js.UndefOr[RuleSetQuery] = js.undefined
+  var options: js.UndefOr[RuleSetQuery] = js.native
   /**
     * Loader query
     */
-  var query: js.UndefOr[RuleSetQuery] = js.undefined
+  var query: js.UndefOr[RuleSetQuery] = js.native
 }
 
 object RuleSetLoader {
   @scala.inline
-  def apply(
-    ident: String = null,
-    loader: String = null,
-    options: RuleSetQuery = null,
-    query: RuleSetQuery = null
-  ): RuleSetLoader = {
+  def apply(): RuleSetLoader = {
     val __obj = js.Dynamic.literal()
-    if (ident != null) __obj.updateDynamic("ident")(ident.asInstanceOf[js.Any])
-    if (loader != null) __obj.updateDynamic("loader")(loader.asInstanceOf[js.Any])
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleSetLoader]
   }
+  @scala.inline
+  implicit class RuleSetLoaderOps[Self <: RuleSetLoader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ident")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIdent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ident")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptions(value: RuleSetQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: RuleSetQuery): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

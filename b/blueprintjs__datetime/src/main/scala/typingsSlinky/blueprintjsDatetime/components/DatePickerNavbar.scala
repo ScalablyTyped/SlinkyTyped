@@ -1,9 +1,7 @@
 package typingsSlinky.blueprintjsDatetime.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsDatetime.datePickerNavbarMod.IDatePickerNavbarProps
 import typingsSlinky.reactDayPicker.AnonNextMonth
 import typingsSlinky.reactDayPicker.commonMod.ClassNames
@@ -11,14 +9,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DatePickerNavbar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.blueprintjsDatetime.datePickerNavbarMod.DatePickerNavbar] {
+object DatePickerNavbar {
   @JSImport("@blueprintjs/datetime/lib/esm/datePickerNavbar", "DatePickerNavbar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: dir */
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.datePickerNavbarMod.DatePickerNavbar] {
+    @scala.inline
+    def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideLeftNavButton(value: Boolean): this.type = set("hideLeftNavButton", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideRightNavButton(value: Boolean): this.type = set("hideRightNavButton", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: IDatePickerNavbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     className: String,
     classNames: ClassNames,
@@ -33,17 +42,10 @@ object DatePickerNavbar
     onPreviousClick: js.UndefOr[js.Function0[Unit]] => Unit,
     previousMonth: js.Date,
     showNextButton: Boolean,
-    showPreviousButton: Boolean,
-    hideLeftNavButton: js.UndefOr[Boolean] = js.undefined,
-    hideRightNavButton: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.blueprintjsDatetime.datePickerNavbarMod.DatePickerNavbar] = {
-    val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], classNames = classNames.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], localeUtils = localeUtils.asInstanceOf[js.Any], maxDate = maxDate.asInstanceOf[js.Any], minDate = minDate.asInstanceOf[js.Any], month = month.asInstanceOf[js.Any], nextMonth = nextMonth.asInstanceOf[js.Any], onNextClick = js.Any.fromFunction1(onNextClick), onPreviousClick = js.Any.fromFunction1(onPreviousClick), previousMonth = previousMonth.asInstanceOf[js.Any], showNextButton = showNextButton.asInstanceOf[js.Any], showPreviousButton = showPreviousButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideLeftNavButton)) __obj.updateDynamic("hideLeftNavButton")(hideLeftNavButton.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideRightNavButton)) __obj.updateDynamic("hideRightNavButton")(hideRightNavButton.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    showPreviousButton: Boolean
+  ): Builder = {
+    val __props = js.Dynamic.literal(className = className.asInstanceOf[js.Any], classNames = classNames.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], localeUtils = localeUtils.asInstanceOf[js.Any], maxDate = maxDate.asInstanceOf[js.Any], minDate = minDate.asInstanceOf[js.Any], month = month.asInstanceOf[js.Any], nextMonth = nextMonth.asInstanceOf[js.Any], onNextClick = js.Any.fromFunction1(onNextClick), onPreviousClick = js.Any.fromFunction1(onPreviousClick), previousMonth = previousMonth.asInstanceOf[js.Any], showNextButton = showNextButton.asInstanceOf[js.Any], showPreviousButton = showPreviousButton.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IDatePickerNavbarProps]))
   }
-  type Props = IDatePickerNavbarProps
 }
 

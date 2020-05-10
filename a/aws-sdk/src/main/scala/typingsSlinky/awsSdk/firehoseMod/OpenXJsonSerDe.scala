@@ -22,16 +22,53 @@ trait OpenXJsonSerDe extends js.Object {
 
 object OpenXJsonSerDe {
   @scala.inline
-  def apply(
-    CaseInsensitive: js.UndefOr[Boolean] = js.undefined,
-    ColumnToJsonKeyMappings: ColumnToJsonKeyMappings = null,
-    ConvertDotsInJsonKeysToUnderscores: js.UndefOr[Boolean] = js.undefined
-  ): OpenXJsonSerDe = {
+  def apply(): OpenXJsonSerDe = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(CaseInsensitive)) __obj.updateDynamic("CaseInsensitive")(CaseInsensitive.asInstanceOf[js.Any])
-    if (ColumnToJsonKeyMappings != null) __obj.updateDynamic("ColumnToJsonKeyMappings")(ColumnToJsonKeyMappings.asInstanceOf[js.Any])
-    if (!js.isUndefined(ConvertDotsInJsonKeysToUnderscores)) __obj.updateDynamic("ConvertDotsInJsonKeysToUnderscores")(ConvertDotsInJsonKeysToUnderscores.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenXJsonSerDe]
   }
+  @scala.inline
+  implicit class OpenXJsonSerDeOps[Self <: OpenXJsonSerDe] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaseInsensitive(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CaseInsensitive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCaseInsensitive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CaseInsensitive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColumnToJsonKeyMappings(value: ColumnToJsonKeyMappings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnToJsonKeyMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumnToJsonKeyMappings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnToJsonKeyMappings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConvertDotsInJsonKeysToUnderscores(value: BooleanObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConvertDotsInJsonKeysToUnderscores")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConvertDotsInJsonKeysToUnderscores: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConvertDotsInJsonKeysToUnderscores")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

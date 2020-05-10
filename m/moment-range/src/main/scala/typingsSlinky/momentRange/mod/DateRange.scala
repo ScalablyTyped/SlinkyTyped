@@ -8,7 +8,6 @@ import typingsSlinky.momentRange.AnonExcludeStart
 import typingsSlinky.momentRange.AnonExclusive
 import typingsSlinky.momentRange.AnonExclusiveBoolean
 import typingsSlinky.momentRange.AnonStep
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,9 +39,9 @@ class DateRange () extends js.Object {
   def contains(other: DateRange): Boolean = js.native
   def contains(other: DateRange, options: AnonExcludeStart): Boolean = js.native
   def contains(other: DateRange, options: AnonExclusiveBoolean): Boolean = js.native
-  def contains(other: Date): Boolean = js.native
-  def contains(other: Date, options: AnonExcludeStart): Boolean = js.native
-  def contains(other: Date, options: AnonExclusiveBoolean): Boolean = js.native
+  def contains(other: js.Date): Boolean = js.native
+  def contains(other: js.Date, options: AnonExcludeStart): Boolean = js.native
+  def contains(other: js.Date, options: AnonExclusiveBoolean): Boolean = js.native
   def diff(): Double = js.native
   def diff(unit: Diff): Double = js.native
   def diff(unit: Diff, precise: Boolean): Double = js.native

@@ -21,18 +21,16 @@ trait Kind extends js.Object
 
 object Kind {
   @scala.inline
-  def alternative: typingsSlinky.videoJs.videoJsStrings.alternative = this.cast("alternative")
+  def alternative: typingsSlinky.videoJs.videoJsStrings.alternative = "alternative".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.alternative]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def commentary: typingsSlinky.videoJs.videoJsStrings.commentary = "commentary".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.commentary]
   @scala.inline
-  def commentary: typingsSlinky.videoJs.videoJsStrings.commentary = this.cast("commentary")
+  def descriptions: typingsSlinky.videoJs.videoJsStrings.descriptions = "descriptions".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.descriptions]
   @scala.inline
-  def descriptions: typingsSlinky.videoJs.videoJsStrings.descriptions = this.cast("descriptions")
+  def main: typingsSlinky.videoJs.videoJsStrings.main = "main".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.main]
   @scala.inline
-  def main: typingsSlinky.videoJs.videoJsStrings.main = this.cast("main")
+  def `main-desc`: typingsSlinky.videoJs.videoJsStrings.`main-desc` = "main-desc".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.`main-desc`]
   @scala.inline
-  def `main-desc`: typingsSlinky.videoJs.videoJsStrings.`main-desc` = this.cast("main-desc")
-  @scala.inline
-  def translation: typingsSlinky.videoJs.videoJsStrings.translation = this.cast("translation")
+  def translation: typingsSlinky.videoJs.videoJsStrings.translation = "translation".asInstanceOf[typingsSlinky.videoJs.videoJsStrings.translation]
 }
 

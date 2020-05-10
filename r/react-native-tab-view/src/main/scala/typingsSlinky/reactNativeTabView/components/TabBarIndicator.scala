@@ -1,11 +1,10 @@
 package typingsSlinky.reactNativeTabView.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNativeTabView.tabBarIndicatorMod.Props
 import typingsSlinky.reactNativeTabView.tabBarIndicatorMod.default
 import typingsSlinky.reactNativeTabView.typesMod.Layout
 import typingsSlinky.reactNativeTabView.typesMod.NavigationState
@@ -14,30 +13,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabBarIndicator
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+object TabBarIndicator {
   @JSImport("react-native-tab-view/lib/typescript/src/TabBarIndicator", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T /* <: Route */](
+  @scala.inline
+  class Builder[T <: Route] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default[js.Any]] {
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+  }
+  
+  def withProps[T <: Route](p: Props[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply[T <: Route](
     getTabWidth: /* index */ Double => Double,
     jumpTo: String => Unit,
     layout: Layout,
     navigationState: NavigationState[T],
     position: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Animated.Node<number> */ js.Any,
-    width: String,
-    style: StyleProp[ViewStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any]] = {
-    val __obj = js.Dynamic.literal(getTabWidth = js.Any.fromFunction1(getTabWidth), jumpTo = js.Any.fromFunction1(jumpTo), layout = layout.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.reactNativeTabView.tabBarIndicatorMod.default[js.Any]]]
+    width: String
+  ): Builder[T] = {
+    val __props = js.Dynamic.literal(getTabWidth = js.Any.fromFunction1(getTabWidth), jumpTo = js.Any.fromFunction1(jumpTo), layout = layout.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T]]))
   }
-  type Props = typingsSlinky.reactNativeTabView.tabBarIndicatorMod.Props[js.Any]
 }
 

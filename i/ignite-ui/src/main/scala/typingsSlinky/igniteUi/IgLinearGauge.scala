@@ -6,9 +6,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgLinearGauge
   extends /**
-	 * Option for igLinearGauge
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
@@ -24,35 +25,35 @@ trait IgLinearGauge
   	 * Use ui.offsetX to obtain the X offset of the label on the gauge scale.
   	 * Use ui.offsetY to obtain the Y offset of the label on the gauge scale.
   	 */
-  var alignLabel: js.UndefOr[AlignLabelEvent] = js.undefined
+  var alignLabel: js.UndefOr[AlignLabelEvent] = js.native
   /**
   	 * Gets or sets the brush to use to fill the backing of the linear gauge.
   	 */
-  var backingBrush: js.UndefOr[String] = js.undefined
+  var backingBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the inner extent of the linear gauge backing.
   	 */
-  var backingInnerExtent: js.UndefOr[Double] = js.undefined
+  var backingInnerExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the outer extent of the linear gauge backing.
   	 */
-  var backingOuterExtent: js.UndefOr[Double] = js.undefined
+  var backingOuterExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use for the outline of the backing.
   	 */
-  var backingOutline: js.UndefOr[String] = js.undefined
+  var backingOutline: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the stroke thickness of the backing outline.
   	 */
-  var backingStrokeThickness: js.UndefOr[Double] = js.undefined
+  var backingStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the font.
   	 */
-  var font: js.UndefOr[String] = js.undefined
+  var font: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the brush to use for the label font.
   	 */
-  var fontBrush: js.UndefOr[String] = js.undefined
+  var fontBrush: js.UndefOr[String] = js.native
   /**
   	 * Event which is raised when a label of the the gauge is formatted.
   	 * Function takes first argument evt and second argument ui.
@@ -62,131 +63,131 @@ trait IgLinearGauge
   	 * Use ui.value to obtain the value on the the gauge scale associated with the label.
   	 * Use ui.label to obtain the string value of the label.
   	 */
-  var formatLabel: js.UndefOr[FormatLabelEvent] = js.undefined
+  var formatLabel: js.UndefOr[FormatLabelEvent] = js.native
   /**
   	 * The height of the gauge. It can be set as a number in pixels, string (px) or percentage (%).
   	 */
-  var height: js.UndefOr[String | Double] = js.undefined
+  var height: js.UndefOr[String | Double] = js.native
   /**
   	 * Gets or sets the interval to use for the scale.
   	 */
-  var interval: js.UndefOr[Double] = js.undefined
+  var interval: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets whether needle dragging is enabled or not.
   	 */
-  var isNeedleDraggingEnabled: js.UndefOr[Boolean] = js.undefined
+  var isNeedleDraggingEnabled: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets a value indicating whether the scale is inverted.
   	 * When the scale is inverted the direction in which the scale values increase is right to left.
   	 */
-  var isScaleInverted: js.UndefOr[Boolean] = js.undefined
+  var isScaleInverted: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets the position at which to put the labels as a value from 0 to 1, measured from the bottom of the scale.
   	 * Values further from zero than 1 can be used to hide the labels of the linear gauge.
   	 */
-  var labelExtent: js.UndefOr[Double] = js.undefined
+  var labelExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the interval to use for rendering labels. This defaults to be the same interval as the tickmarks on the scale.
   	 */
-  var labelInterval: js.UndefOr[Double] = js.undefined
+  var labelInterval: js.UndefOr[Double] = js.native
   /**
   	 * A value to start adding labels, added to the scale's MinimumValue.
   	 */
-  var labelsPostInitial: js.UndefOr[Double] = js.undefined
+  var labelsPostInitial: js.UndefOr[Double] = js.native
   /**
   	 * A value to stop adding labels, subtracted from the scale's MaximumValue.
   	 */
-  var labelsPreTerminal: js.UndefOr[Double] = js.undefined
+  var labelsPreTerminal: js.UndefOr[Double] = js.native
   /**
   	 * Set/Get the locale language setting for the widget.
   	 *
   	 */
-  var language: js.UndefOr[String] = js.undefined
+  var language: js.UndefOr[String] = js.native
   /**
   	 * Set/Get the locale setting for the widget.
   	 *
   	 */
-  var locale: js.UndefOr[js.Any] = js.undefined
+  var locale: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the maximum value of the scale.
   	 */
-  var maximumValue: js.UndefOr[Double] = js.undefined
+  var maximumValue: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the minimum value of the scale.
   	 */
-  var minimumValue: js.UndefOr[Double] = js.undefined
+  var minimumValue: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use for the minor tickmarks.
   	 */
-  var minorTickBrush: js.UndefOr[String] = js.undefined
+  var minorTickBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the number of minor tickmarks to place between major tickmarks.
   	 */
-  var minorTickCount: js.UndefOr[Double] = js.undefined
+  var minorTickCount: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the minor tickmarks as a value from 0 to 1, measured from the front/bottom of the linear gauge.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var minorTickEndExtent: js.UndefOr[Double] = js.undefined
+  var minorTickEndExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the minor tickmarks as a value from 0 to 1, measured from the front/bottom of the linear gauge.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var minorTickStartExtent: js.UndefOr[Double] = js.undefined
+  var minorTickStartExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the stroke thickness to use when rendering minor ticks.
   	 */
-  var minorTickStrokeThickness: js.UndefOr[Double] = js.undefined
+  var minorTickStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the needle breadth.
   	 */
-  var needleBreadth: js.UndefOr[Double] = js.undefined
+  var needleBreadth: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use for needle element.
   	 */
-  var needleBrush: js.UndefOr[String] = js.undefined
+  var needleBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the width of the needle's inner base.
   	 */
-  var needleInnerBaseWidth: js.UndefOr[Double] = js.undefined
+  var needleInnerBaseWidth: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the needle geometry, measured from the front/bottom of the linear gauge as a value from 0 to 1.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var needleInnerExtent: js.UndefOr[Double] = js.undefined
+  var needleInnerExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the extent of the needle's inner point.
   	 */
-  var needleInnerPointExtent: js.UndefOr[Double] = js.undefined
+  var needleInnerPointExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the width of the needle's inner point.
   	 */
-  var needleInnerPointWidth: js.UndefOr[Double] = js.undefined
+  var needleInnerPointWidth: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the name used for needle.
   	 */
-  var needleName: js.UndefOr[String] = js.undefined
+  var needleName: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the width of the needle's outer base.
   	 */
-  var needleOuterBaseWidth: js.UndefOr[Double] = js.undefined
+  var needleOuterBaseWidth: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the needle geometry as a value from 0 to 1 measured from the front/bottom of the linear gauge.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var needleOuterExtent: js.UndefOr[Double] = js.undefined
+  var needleOuterExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the extent of the needle's outer point.
   	 */
-  var needleOuterPointExtent: js.UndefOr[Double] = js.undefined
+  var needleOuterPointExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the width of the needle's outer point.
   	 */
-  var needleOuterPointWidth: js.UndefOr[Double] = js.undefined
+  var needleOuterPointWidth: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use for the outline of needle element.
   	 */
-  var needleOutline: js.UndefOr[String] = js.undefined
+  var needleOutline: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the shape to use when rendering the needle from a number of options.
   	 *
@@ -197,15 +198,15 @@ trait IgLinearGauge
   	 * "needle" A needle shaped like a needle.
   	 * "trapezoid" A needle shaped like a trapezoid.
   	 */
-  var needleShape: js.UndefOr[String] = js.undefined
+  var needleShape: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the stroke thickness to use when rendering single actual value element.
   	 */
-  var needleStrokeThickness: js.UndefOr[Double] = js.undefined
+  var needleStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the needle's tooltip template.
   	 */
-  var needleToolTipTemplate: js.UndefOr[String] = js.undefined
+  var needleToolTipTemplate: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the orientation of the scale.
   	 *
@@ -213,279 +214,971 @@ trait IgLinearGauge
   	 * "horizontal" The scale has a horizontal orientation.
   	 * "vertical" The scale has a vertical orientation.
   	 */
-  var orientation: js.UndefOr[String] = js.undefined
+  var orientation: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the scaling value used to affect the pixel density of the control.
   	 * A higher scaling ratio will produce crisper visuals at the expense of memory.  Lower values will cause the control
   	 * to appear blurry.
   	 */
-  var pixelScalingRatio: js.UndefOr[Double] = js.undefined
+  var pixelScalingRatio: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets a collection of brushes to be used as the palette for linear gauge ranges.
   	 * The value provided should be an array of css color strings or JavaScript objects defining gradients. Optionally the first element can be a string reading "RGB" or "HSV" to specify the interpolation mode of the collection.
   	 */
-  var rangeBrushes: js.UndefOr[js.Any] = js.undefined
+  var rangeBrushes: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the ranges, measured from the front/bottom of the control as a value from 0 to 1.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var rangeInnerExtent: js.UndefOr[Double] = js.undefined
+  var rangeInnerExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the range as a value from 0 to 1 measured from the front/bottom of the linear gauge.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var rangeOuterExtent: js.UndefOr[Double] = js.undefined
+  var rangeOuterExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets a collection of brushes to be used as the palette for linear gauge outlines.
   	 * The value provided should be an array of css color strings or JavaScript objects defining gradients. Optionally the first element can be a string reading "RGB" or "HSV" to specify the interpolation mode of the collection.
   	 */
-  var rangeOutlines: js.UndefOr[js.Any] = js.undefined
+  var rangeOutlines: js.UndefOr[js.Any] = js.native
   /**
   	 * Gets or sets the ranges' tooltip template.
   	 */
-  var rangeToolTipTemplate: js.UndefOr[String] = js.undefined
+  var rangeToolTipTemplate: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the scale ranges to render on the linear gauge.
   	 */
-  var ranges: js.UndefOr[js.Array[IgLinearGaugeRange]] = js.undefined
+  var ranges: js.UndefOr[js.Array[IgLinearGaugeRange]] = js.native
   /**
   	 * Set/Get the regional setting for the widget.
   	 *
   	 */
-  var regional: js.UndefOr[String | js.Object] = js.undefined
+  var regional: js.UndefOr[String | js.Object] = js.native
   /**
   	 * Gets or sets the brush to use to fill the scale of the linear gauge.
   	 */
-  var scaleBrush: js.UndefOr[String] = js.undefined
+  var scaleBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the scale as a value from 0 to 1, measured from the front/bottom of the linear gauge.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var scaleEndExtent: js.UndefOr[Double] = js.undefined
+  var scaleEndExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the scale, measured from the bottom/front (when orientation is horizontal/vertical) of the control as a value from 0 to 1.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var scaleInnerExtent: js.UndefOr[Double] = js.undefined
+  var scaleInnerExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the scale as a value from 0 to 1 measured from the bottom/front (when orientation is horizontal/vertical) of the linear gauge.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var scaleOuterExtent: js.UndefOr[Double] = js.undefined
+  var scaleOuterExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use for the outline of the scale.
   	 */
-  var scaleOutline: js.UndefOr[String] = js.undefined
+  var scaleOutline: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the scale, measured from the front/bottom of the linear gauge as a value from 0 to 1.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var scaleStartExtent: js.UndefOr[Double] = js.undefined
+  var scaleStartExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the stroke thickness of the scale outline.
   	 */
-  var scaleStrokeThickness: js.UndefOr[Double] = js.undefined
+  var scaleStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets a value indicating whether tooltips are enabled.
   	 */
-  var showToolTip: js.UndefOr[Boolean] = js.undefined
+  var showToolTip: js.UndefOr[Boolean] = js.native
   /**
   	 * Gets or sets the time in milliseconds that tooltip appearance is delayed with.
   	 */
-  var showToolTipTimeout: js.UndefOr[Double] = js.undefined
+  var showToolTipTimeout: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the brush to use for the major tickmarks.
   	 */
-  var tickBrush: js.UndefOr[String] = js.undefined
+  var tickBrush: js.UndefOr[String] = js.native
   /**
   	 * Gets or sets the position at which to stop rendering the major tickmarks as a value from 0 to 1, measured from the front/bottom of the linear gauge.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var tickEndExtent: js.UndefOr[Double] = js.undefined
+  var tickEndExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the position at which to start rendering the major tickmarks as a value from 0 to 1, measured from the front/bottom of the linear gauge.
   	 * Values further from zero than 1 can be used to make this extend further than the normal size of the linear gauge.
   	 */
-  var tickStartExtent: js.UndefOr[Double] = js.undefined
+  var tickStartExtent: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the stroke thickness to use when rendering ticks.
   	 */
-  var tickStrokeThickness: js.UndefOr[Double] = js.undefined
+  var tickStrokeThickness: js.UndefOr[Double] = js.native
   /**
   	 * A value to start adding tickmarks, added to the scale's MinimumValue.
   	 */
-  var ticksPostInitial: js.UndefOr[Double] = js.undefined
+  var ticksPostInitial: js.UndefOr[Double] = js.native
   /**
   	 * A value to stop adding tickmarks, subtracted from the scale's MaximumValue.
   	 */
-  var ticksPreTerminal: js.UndefOr[Double] = js.undefined
+  var ticksPreTerminal: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the number of milliseconds over which changes to the linear gauge should be animated.
   	 */
-  var transitionDuration: js.UndefOr[Double] = js.undefined
+  var transitionDuration: js.UndefOr[Double] = js.native
   /**
   	 * Gets or sets the value at which the needle is positioned.
   	 */
-  var value: js.UndefOr[Double] = js.undefined
+  var value: js.UndefOr[Double] = js.native
   /**
   	 * Occurs when the Value property changes.
   	 */
-  var valueChanged: js.UndefOr[ValueChangedEvent] = js.undefined
+  var valueChanged: js.UndefOr[ValueChangedEvent] = js.native
   /**
   	 * The width of the gauge. It can be set as a number in pixels, string (px) or percentage (%).
   	 */
-  var width: js.UndefOr[String | Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.native
 }
 
 object IgLinearGauge {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for igLinearGauge
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    alignLabel: (/* event */ Event_, /* ui */ AlignLabelEventUIParam) => Unit = null,
-    backingBrush: String = null,
-    backingInnerExtent: Int | Double = null,
-    backingOuterExtent: Int | Double = null,
-    backingOutline: String = null,
-    backingStrokeThickness: Int | Double = null,
-    font: String = null,
-    fontBrush: String = null,
-    formatLabel: (/* event */ Event_, /* ui */ FormatLabelEventUIParam) => Unit = null,
-    height: String | Double = null,
-    interval: Int | Double = null,
-    isNeedleDraggingEnabled: js.UndefOr[Boolean] = js.undefined,
-    isScaleInverted: js.UndefOr[Boolean] = js.undefined,
-    labelExtent: Int | Double = null,
-    labelInterval: Int | Double = null,
-    labelsPostInitial: Int | Double = null,
-    labelsPreTerminal: Int | Double = null,
-    language: String = null,
-    locale: js.Any = null,
-    maximumValue: Int | Double = null,
-    minimumValue: Int | Double = null,
-    minorTickBrush: String = null,
-    minorTickCount: Int | Double = null,
-    minorTickEndExtent: Int | Double = null,
-    minorTickStartExtent: Int | Double = null,
-    minorTickStrokeThickness: Int | Double = null,
-    needleBreadth: Int | Double = null,
-    needleBrush: String = null,
-    needleInnerBaseWidth: Int | Double = null,
-    needleInnerExtent: Int | Double = null,
-    needleInnerPointExtent: Int | Double = null,
-    needleInnerPointWidth: Int | Double = null,
-    needleName: String = null,
-    needleOuterBaseWidth: Int | Double = null,
-    needleOuterExtent: Int | Double = null,
-    needleOuterPointExtent: Int | Double = null,
-    needleOuterPointWidth: Int | Double = null,
-    needleOutline: String = null,
-    needleShape: String = null,
-    needleStrokeThickness: Int | Double = null,
-    needleToolTipTemplate: String = null,
-    orientation: String = null,
-    pixelScalingRatio: Int | Double = null,
-    rangeBrushes: js.Any = null,
-    rangeInnerExtent: Int | Double = null,
-    rangeOuterExtent: Int | Double = null,
-    rangeOutlines: js.Any = null,
-    rangeToolTipTemplate: String = null,
-    ranges: js.Array[IgLinearGaugeRange] = null,
-    regional: String | js.Object = null,
-    scaleBrush: String = null,
-    scaleEndExtent: Int | Double = null,
-    scaleInnerExtent: Int | Double = null,
-    scaleOuterExtent: Int | Double = null,
-    scaleOutline: String = null,
-    scaleStartExtent: Int | Double = null,
-    scaleStrokeThickness: Int | Double = null,
-    showToolTip: js.UndefOr[Boolean] = js.undefined,
-    showToolTipTimeout: Int | Double = null,
-    tickBrush: String = null,
-    tickEndExtent: Int | Double = null,
-    tickStartExtent: Int | Double = null,
-    tickStrokeThickness: Int | Double = null,
-    ticksPostInitial: Int | Double = null,
-    ticksPreTerminal: Int | Double = null,
-    transitionDuration: Int | Double = null,
-    value: Int | Double = null,
-    valueChanged: (/* event */ Event_, /* ui */ ValueChangedEventUIParam) => Unit = null,
-    width: String | Double = null
-  ): IgLinearGauge = {
+  def apply(): IgLinearGauge = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (alignLabel != null) __obj.updateDynamic("alignLabel")(js.Any.fromFunction2(alignLabel))
-    if (backingBrush != null) __obj.updateDynamic("backingBrush")(backingBrush.asInstanceOf[js.Any])
-    if (backingInnerExtent != null) __obj.updateDynamic("backingInnerExtent")(backingInnerExtent.asInstanceOf[js.Any])
-    if (backingOuterExtent != null) __obj.updateDynamic("backingOuterExtent")(backingOuterExtent.asInstanceOf[js.Any])
-    if (backingOutline != null) __obj.updateDynamic("backingOutline")(backingOutline.asInstanceOf[js.Any])
-    if (backingStrokeThickness != null) __obj.updateDynamic("backingStrokeThickness")(backingStrokeThickness.asInstanceOf[js.Any])
-    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
-    if (fontBrush != null) __obj.updateDynamic("fontBrush")(fontBrush.asInstanceOf[js.Any])
-    if (formatLabel != null) __obj.updateDynamic("formatLabel")(js.Any.fromFunction2(formatLabel))
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
-    if (!js.isUndefined(isNeedleDraggingEnabled)) __obj.updateDynamic("isNeedleDraggingEnabled")(isNeedleDraggingEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(isScaleInverted)) __obj.updateDynamic("isScaleInverted")(isScaleInverted.asInstanceOf[js.Any])
-    if (labelExtent != null) __obj.updateDynamic("labelExtent")(labelExtent.asInstanceOf[js.Any])
-    if (labelInterval != null) __obj.updateDynamic("labelInterval")(labelInterval.asInstanceOf[js.Any])
-    if (labelsPostInitial != null) __obj.updateDynamic("labelsPostInitial")(labelsPostInitial.asInstanceOf[js.Any])
-    if (labelsPreTerminal != null) __obj.updateDynamic("labelsPreTerminal")(labelsPreTerminal.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maximumValue != null) __obj.updateDynamic("maximumValue")(maximumValue.asInstanceOf[js.Any])
-    if (minimumValue != null) __obj.updateDynamic("minimumValue")(minimumValue.asInstanceOf[js.Any])
-    if (minorTickBrush != null) __obj.updateDynamic("minorTickBrush")(minorTickBrush.asInstanceOf[js.Any])
-    if (minorTickCount != null) __obj.updateDynamic("minorTickCount")(minorTickCount.asInstanceOf[js.Any])
-    if (minorTickEndExtent != null) __obj.updateDynamic("minorTickEndExtent")(minorTickEndExtent.asInstanceOf[js.Any])
-    if (minorTickStartExtent != null) __obj.updateDynamic("minorTickStartExtent")(minorTickStartExtent.asInstanceOf[js.Any])
-    if (minorTickStrokeThickness != null) __obj.updateDynamic("minorTickStrokeThickness")(minorTickStrokeThickness.asInstanceOf[js.Any])
-    if (needleBreadth != null) __obj.updateDynamic("needleBreadth")(needleBreadth.asInstanceOf[js.Any])
-    if (needleBrush != null) __obj.updateDynamic("needleBrush")(needleBrush.asInstanceOf[js.Any])
-    if (needleInnerBaseWidth != null) __obj.updateDynamic("needleInnerBaseWidth")(needleInnerBaseWidth.asInstanceOf[js.Any])
-    if (needleInnerExtent != null) __obj.updateDynamic("needleInnerExtent")(needleInnerExtent.asInstanceOf[js.Any])
-    if (needleInnerPointExtent != null) __obj.updateDynamic("needleInnerPointExtent")(needleInnerPointExtent.asInstanceOf[js.Any])
-    if (needleInnerPointWidth != null) __obj.updateDynamic("needleInnerPointWidth")(needleInnerPointWidth.asInstanceOf[js.Any])
-    if (needleName != null) __obj.updateDynamic("needleName")(needleName.asInstanceOf[js.Any])
-    if (needleOuterBaseWidth != null) __obj.updateDynamic("needleOuterBaseWidth")(needleOuterBaseWidth.asInstanceOf[js.Any])
-    if (needleOuterExtent != null) __obj.updateDynamic("needleOuterExtent")(needleOuterExtent.asInstanceOf[js.Any])
-    if (needleOuterPointExtent != null) __obj.updateDynamic("needleOuterPointExtent")(needleOuterPointExtent.asInstanceOf[js.Any])
-    if (needleOuterPointWidth != null) __obj.updateDynamic("needleOuterPointWidth")(needleOuterPointWidth.asInstanceOf[js.Any])
-    if (needleOutline != null) __obj.updateDynamic("needleOutline")(needleOutline.asInstanceOf[js.Any])
-    if (needleShape != null) __obj.updateDynamic("needleShape")(needleShape.asInstanceOf[js.Any])
-    if (needleStrokeThickness != null) __obj.updateDynamic("needleStrokeThickness")(needleStrokeThickness.asInstanceOf[js.Any])
-    if (needleToolTipTemplate != null) __obj.updateDynamic("needleToolTipTemplate")(needleToolTipTemplate.asInstanceOf[js.Any])
-    if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
-    if (pixelScalingRatio != null) __obj.updateDynamic("pixelScalingRatio")(pixelScalingRatio.asInstanceOf[js.Any])
-    if (rangeBrushes != null) __obj.updateDynamic("rangeBrushes")(rangeBrushes.asInstanceOf[js.Any])
-    if (rangeInnerExtent != null) __obj.updateDynamic("rangeInnerExtent")(rangeInnerExtent.asInstanceOf[js.Any])
-    if (rangeOuterExtent != null) __obj.updateDynamic("rangeOuterExtent")(rangeOuterExtent.asInstanceOf[js.Any])
-    if (rangeOutlines != null) __obj.updateDynamic("rangeOutlines")(rangeOutlines.asInstanceOf[js.Any])
-    if (rangeToolTipTemplate != null) __obj.updateDynamic("rangeToolTipTemplate")(rangeToolTipTemplate.asInstanceOf[js.Any])
-    if (ranges != null) __obj.updateDynamic("ranges")(ranges.asInstanceOf[js.Any])
-    if (regional != null) __obj.updateDynamic("regional")(regional.asInstanceOf[js.Any])
-    if (scaleBrush != null) __obj.updateDynamic("scaleBrush")(scaleBrush.asInstanceOf[js.Any])
-    if (scaleEndExtent != null) __obj.updateDynamic("scaleEndExtent")(scaleEndExtent.asInstanceOf[js.Any])
-    if (scaleInnerExtent != null) __obj.updateDynamic("scaleInnerExtent")(scaleInnerExtent.asInstanceOf[js.Any])
-    if (scaleOuterExtent != null) __obj.updateDynamic("scaleOuterExtent")(scaleOuterExtent.asInstanceOf[js.Any])
-    if (scaleOutline != null) __obj.updateDynamic("scaleOutline")(scaleOutline.asInstanceOf[js.Any])
-    if (scaleStartExtent != null) __obj.updateDynamic("scaleStartExtent")(scaleStartExtent.asInstanceOf[js.Any])
-    if (scaleStrokeThickness != null) __obj.updateDynamic("scaleStrokeThickness")(scaleStrokeThickness.asInstanceOf[js.Any])
-    if (!js.isUndefined(showToolTip)) __obj.updateDynamic("showToolTip")(showToolTip.asInstanceOf[js.Any])
-    if (showToolTipTimeout != null) __obj.updateDynamic("showToolTipTimeout")(showToolTipTimeout.asInstanceOf[js.Any])
-    if (tickBrush != null) __obj.updateDynamic("tickBrush")(tickBrush.asInstanceOf[js.Any])
-    if (tickEndExtent != null) __obj.updateDynamic("tickEndExtent")(tickEndExtent.asInstanceOf[js.Any])
-    if (tickStartExtent != null) __obj.updateDynamic("tickStartExtent")(tickStartExtent.asInstanceOf[js.Any])
-    if (tickStrokeThickness != null) __obj.updateDynamic("tickStrokeThickness")(tickStrokeThickness.asInstanceOf[js.Any])
-    if (ticksPostInitial != null) __obj.updateDynamic("ticksPostInitial")(ticksPostInitial.asInstanceOf[js.Any])
-    if (ticksPreTerminal != null) __obj.updateDynamic("ticksPreTerminal")(ticksPreTerminal.asInstanceOf[js.Any])
-    if (transitionDuration != null) __obj.updateDynamic("transitionDuration")(transitionDuration.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (valueChanged != null) __obj.updateDynamic("valueChanged")(js.Any.fromFunction2(valueChanged))
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgLinearGauge]
   }
+  @scala.inline
+  implicit class IgLinearGaugeOps[Self <: IgLinearGauge] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlignLabel(value: (/* event */ Event_, /* ui */ AlignLabelEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignLabel")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAlignLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingInnerExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingInnerExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingInnerExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingInnerExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingOuterExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingOuterExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingOuterExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingOuterExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingOutline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackingStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackingStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backingStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFont(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("font")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatLabel(value: (/* event */ Event_, /* ui */ FormatLabelEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatLabel")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutFormatLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsNeedleDraggingEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNeedleDraggingEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsNeedleDraggingEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNeedleDraggingEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsScaleInverted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isScaleInverted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsScaleInverted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isScaleInverted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelInterval")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelsPostInitial(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsPostInitial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelsPostInitial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsPostInitial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabelsPreTerminal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsPreTerminal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabelsPreTerminal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelsPreTerminal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocale(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimumValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimumValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickEndExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickEndExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickEndExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickEndExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickStartExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickStartExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickStartExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickStartExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinorTickStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinorTickStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorTickStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleBreadth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleBreadth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleBreadth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleBreadth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleInnerBaseWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleInnerBaseWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleInnerBaseWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleInnerBaseWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleInnerExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleInnerExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleInnerExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleInnerExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleInnerPointExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleInnerPointExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleInnerPointExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleInnerPointExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleInnerPointWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleInnerPointWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleInnerPointWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleInnerPointWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleOuterBaseWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleOuterBaseWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleOuterBaseWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleOuterBaseWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleOuterExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleOuterExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleOuterExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleOuterExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleOuterPointExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleOuterPointExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleOuterPointExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleOuterPointExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleOuterPointWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleOuterPointWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleOuterPointWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleOuterPointWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleOutline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleShape(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleShape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleShape: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleShape")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeedleToolTipTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleToolTipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeedleToolTipTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needleToolTipTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelScalingRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelScalingRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelScalingRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelScalingRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeBrushes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeBrushes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeBrushes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeBrushes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeInnerExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeInnerExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeInnerExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeInnerExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeOuterExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeOuterExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeOuterExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeOuterExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeOutlines(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeOutlines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeOutlines: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeOutlines")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangeToolTipTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeToolTipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangeToolTipTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangeToolTipTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRanges(value: js.Array[IgLinearGaugeRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRanges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegional(value: String | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleEndExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleEndExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleEndExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleEndExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleInnerExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleInnerExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleInnerExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleInnerExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleOuterExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleOuterExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleOuterExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleOuterExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleOutline(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleOutline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleOutline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleOutline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleStartExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleStartExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleStartExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleStartExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScaleStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScaleStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowToolTip(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolTip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowToolTip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolTip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowToolTipTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolTipTimeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowToolTipTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showToolTipTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickBrush(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickBrush")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickBrush: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickBrush")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickEndExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickEndExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickEndExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickEndExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickStartExtent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStartExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickStartExtent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStartExtent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickStrokeThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStrokeThickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickStrokeThickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickStrokeThickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTicksPostInitial(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksPostInitial")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicksPostInitial: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksPostInitial")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTicksPreTerminal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksPreTerminal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicksPreTerminal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksPreTerminal")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitionDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitionDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueChanged(value: (/* event */ Event_, /* ui */ ValueChangedEventUIParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutValueChanged: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueChanged")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

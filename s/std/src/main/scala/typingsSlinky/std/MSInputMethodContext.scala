@@ -86,7 +86,7 @@ trait MSInputMethodContext extends EventTarget {
   def removeEventListener_MSCandidateWindowHide(
     `type`: MSCandidateWindowHide,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_MSCandidateWindowShow(
@@ -103,7 +103,7 @@ trait MSInputMethodContext extends EventTarget {
   def removeEventListener_MSCandidateWindowShow(
     `type`: MSCandidateWindowShow,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_MSCandidateWindowUpdate(
@@ -120,7 +120,7 @@ trait MSInputMethodContext extends EventTarget {
   def removeEventListener_MSCandidateWindowUpdate(
     `type`: MSCandidateWindowUpdate,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

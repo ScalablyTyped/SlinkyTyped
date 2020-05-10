@@ -15,16 +15,14 @@ trait LogLevel extends js.Object
 
 object LogLevel {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def debug: typingsSlinky.audiosprite.audiospriteStrings.debug = "debug".asInstanceOf[typingsSlinky.audiosprite.audiospriteStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.audiosprite.audiospriteStrings.debug = this.cast("debug")
+  def error: typingsSlinky.audiosprite.audiospriteStrings.error = "error".asInstanceOf[typingsSlinky.audiosprite.audiospriteStrings.error]
   @scala.inline
-  def error: typingsSlinky.audiosprite.audiospriteStrings.error = this.cast("error")
+  def info: typingsSlinky.audiosprite.audiospriteStrings.info = "info".asInstanceOf[typingsSlinky.audiosprite.audiospriteStrings.info]
   @scala.inline
-  def info: typingsSlinky.audiosprite.audiospriteStrings.info = this.cast("info")
+  def notice: typingsSlinky.audiosprite.audiospriteStrings.notice = "notice".asInstanceOf[typingsSlinky.audiosprite.audiospriteStrings.notice]
   @scala.inline
-  def notice: typingsSlinky.audiosprite.audiospriteStrings.notice = this.cast("notice")
-  @scala.inline
-  def warning: typingsSlinky.audiosprite.audiospriteStrings.warning = this.cast("warning")
+  def warning: typingsSlinky.audiosprite.audiospriteStrings.warning = "warning".asInstanceOf[typingsSlinky.audiosprite.audiospriteStrings.warning]
 }
 

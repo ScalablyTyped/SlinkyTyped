@@ -20,8 +20,27 @@ object DkimSigningAttributes {
   @scala.inline
   def apply(DomainSigningPrivateKey: PrivateKey, DomainSigningSelector: Selector): DkimSigningAttributes = {
     val __obj = js.Dynamic.literal(DomainSigningPrivateKey = DomainSigningPrivateKey.asInstanceOf[js.Any], DomainSigningSelector = DomainSigningSelector.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DkimSigningAttributes]
   }
+  @scala.inline
+  implicit class DkimSigningAttributesOps[Self <: DkimSigningAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainSigningPrivateKey(value: PrivateKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainSigningPrivateKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDomainSigningSelector(value: Selector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainSigningSelector")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

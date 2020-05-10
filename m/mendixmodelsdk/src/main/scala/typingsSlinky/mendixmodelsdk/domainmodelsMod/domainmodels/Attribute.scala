@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://docs.mendix.com/refguide7/attributes relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -38,14 +38,6 @@ class Attribute protected ()
   @JSName("name")
   val name_FAttribute: String = js.native
   /**
-    * Returns the qualified name of this element, or
-    * null if this element is not a part of the model,
-    * or if it or one of its namespace containers does not have a
-    * valid name.
-    */
-  /* CompleteClass */
-  override val qualifiedName: String | Null = js.native
-  /**
     * This property is required and cannot be set to null.
     */
   @JSName("type")
@@ -57,21 +49,21 @@ class Attribute protected ()
     */
   @JSName("value")
   val value_FAttribute: IValueType = js.native
-  def containerAsEntity(): Entity = js.native
-  def dataStorageGuid(): String = js.native
+  def containerAsEntity: Entity = js.native
+  def dataStorageGuid: String = js.native
   def dataStorageGuid(newValue: String): js.Any = js.native
-  def documentation(): String = js.native
+  def documentation: String = js.native
   def documentation(newValue: String): js.Any = js.native
-  def name(): String = js.native
+  def name: String = js.native
   def name(newValue: String): js.Any = js.native
   @JSName("qualifiedName")
-  def qualifiedName_MAttribute(): String | Null = js.native
-  def `type`(): AttributeType = js.native
+  def qualifiedName_MAttribute: String | Null = js.native
+  def `type`: AttributeType = js.native
   def `type`(newValue: AttributeType): js.Any = js.native
   /**
     * In version 6.6.0: added public
     */
-  def value(): ValueType = js.native
+  def value: ValueType = js.native
   def value(newValue: ValueType): js.Any = js.native
 }
 

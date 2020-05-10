@@ -5,19 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait NumberSkeleton extends Skeleton {
-  var location: js.UndefOr[Location] = js.undefined
-  var tokens: js.Array[NumberSkeletonToken]
-  var `type`: `0`
+  var location: js.UndefOr[Location] = js.native
+  var tokens: js.Array[NumberSkeletonToken] = js.native
+  var `type`: `0` = js.native
 }
 
 object NumberSkeleton {
   @scala.inline
-  def apply(tokens: js.Array[NumberSkeletonToken], `type`: `0`, location: Location = null): NumberSkeleton = {
+  def apply(tokens: js.Array[NumberSkeletonToken], `type`: `0`): NumberSkeleton = {
     val __obj = js.Dynamic.literal(tokens = tokens.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberSkeleton]
   }
+  @scala.inline
+  implicit class NumberSkeletonOps[Self <: NumberSkeleton] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTokens(value: js.Array[NumberSkeletonToken]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: `0`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocation(value: Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

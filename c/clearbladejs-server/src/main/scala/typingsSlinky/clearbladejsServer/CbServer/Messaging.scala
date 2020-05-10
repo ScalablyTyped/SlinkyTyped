@@ -1,6 +1,5 @@
 package typingsSlinky.clearbladejsServer.CbServer
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +14,6 @@ trait Messaging extends js.Object {
   def getMessageHistory(topic: String, start: Double, count: Double, callback: CbCallback): Unit = js.native
   def getMessageHistoryWithTimeFrame(topic: String, count: Double, last: Double, start: Double, stop: Double, callback: CbCallback): Unit = js.native
   def publish(topic: String, payload: String): Unit = js.native
-  def publish(topic: String, payload: ArrayBuffer): Unit = js.native
+  def publish(topic: String, payload: js.typedarray.ArrayBuffer): Unit = js.native
 }
 

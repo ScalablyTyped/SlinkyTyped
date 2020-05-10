@@ -194,7 +194,7 @@ package object kendraMod {
   type ValueImportanceMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.kendraMod.Importance]
   type ValueImportanceMapKey = java.lang.String
   type VpcSecurityGroupId = java.lang.String
-  type _Blob = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.kendraMod.Blob | java.lang.String
+  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.kendraMod.Blob | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2019-02-03`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_

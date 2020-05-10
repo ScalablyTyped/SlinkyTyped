@@ -28,7 +28,7 @@ object Collapsible extends js.Object {
   /**
     * Init Collapsible
     */
-  def init(els: typingsSlinky.std.Element): typingsSlinky.materializeCss.M.Collapsible = js.native
-  def init(els: typingsSlinky.std.Element, options: PartialCollapsibleOptions): typingsSlinky.materializeCss.M.Collapsible = js.native
+  def init(els: Element): typingsSlinky.materializeCss.M.Collapsible = js.native
+  def init(els: Element, options: PartialCollapsibleOptions): typingsSlinky.materializeCss.M.Collapsible = js.native
 }
 

@@ -12,14 +12,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CoverageReporter extends BaseReporter {
-  var _addUntestedFiles: js.Any
-  var _checkThreshold: js.Any
-  var _coverageMap: js.Any
-  var _globalConfig: js.Any
-  var _options: js.Any
-  var _sourceMapStore: js.Any
-  def getCoverageMap(): CoverageMap
+  var _addUntestedFiles: js.Any = js.native
+  var _checkThreshold: js.Any = js.native
+  var _coverageMap: js.Any = js.native
+  var _globalConfig: js.Any = js.native
+  var _options: js.Any = js.native
+  var _sourceMapStore: js.Any = js.native
+  def getCoverageMap(): CoverageMap = js.native
 }
 
 object CoverageReporter {
@@ -38,12 +39,60 @@ object CoverageReporter {
     onRunComplete: (Set[Context], AggregatedResult) => js.Promise[Unit] | Unit,
     onRunStart: (AggregatedResult, ReporterOnStartOptions) => js.Promise[Unit] | Unit,
     onTestResult: (Test, TestResult, AggregatedResult) => js.Promise[Unit] | Unit,
-    onTestStart: Test => js.Promise[Unit] | Unit,
-    _error: js.Any = null
+    onTestStart: Test => js.Promise[Unit] | Unit
   ): CoverageReporter = {
     val __obj = js.Dynamic.literal(_addUntestedFiles = _addUntestedFiles.asInstanceOf[js.Any], _checkThreshold = _checkThreshold.asInstanceOf[js.Any], _coverageMap = _coverageMap.asInstanceOf[js.Any], _globalConfig = _globalConfig.asInstanceOf[js.Any], _options = _options.asInstanceOf[js.Any], _setError = js.Any.fromFunction1(_setError), _sourceMapStore = _sourceMapStore.asInstanceOf[js.Any], getCoverageMap = js.Any.fromFunction0(getCoverageMap), getLastError = js.Any.fromFunction0(getLastError), log = js.Any.fromFunction1(log), onRunComplete = js.Any.fromFunction2(onRunComplete), onRunStart = js.Any.fromFunction2(onRunStart), onTestResult = js.Any.fromFunction3(onTestResult), onTestStart = js.Any.fromFunction1(onTestStart))
-    if (_error != null) __obj.updateDynamic("_error")(_error.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoverageReporter]
   }
+  @scala.inline
+  implicit class CoverageReporterOps[Self <: CoverageReporter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_addUntestedFiles(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_addUntestedFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_checkThreshold(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_checkThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_coverageMap(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_coverageMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_globalConfig(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_globalConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_options(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_sourceMapStore(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sourceMapStore")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetCoverageMap(value: () => CoverageMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCoverageMap")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

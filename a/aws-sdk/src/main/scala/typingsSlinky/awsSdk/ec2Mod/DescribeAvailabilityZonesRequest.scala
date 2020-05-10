@@ -30,20 +30,77 @@ trait DescribeAvailabilityZonesRequest extends js.Object {
 
 object DescribeAvailabilityZonesRequest {
   @scala.inline
-  def apply(
-    AllAvailabilityZones: js.UndefOr[scala.Boolean] = js.undefined,
-    DryRun: js.UndefOr[scala.Boolean] = js.undefined,
-    Filters: FilterList = null,
-    ZoneIds: ZoneIdStringList = null,
-    ZoneNames: ZoneNameStringList = null
-  ): DescribeAvailabilityZonesRequest = {
+  def apply(): DescribeAvailabilityZonesRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(AllAvailabilityZones)) __obj.updateDynamic("AllAvailabilityZones")(AllAvailabilityZones.asInstanceOf[js.Any])
-    if (!js.isUndefined(DryRun)) __obj.updateDynamic("DryRun")(DryRun.asInstanceOf[js.Any])
-    if (Filters != null) __obj.updateDynamic("Filters")(Filters.asInstanceOf[js.Any])
-    if (ZoneIds != null) __obj.updateDynamic("ZoneIds")(ZoneIds.asInstanceOf[js.Any])
-    if (ZoneNames != null) __obj.updateDynamic("ZoneNames")(ZoneNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAvailabilityZonesRequest]
   }
+  @scala.inline
+  implicit class DescribeAvailabilityZonesRequestOps[Self <: DescribeAvailabilityZonesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllAvailabilityZones(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllAvailabilityZones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllAvailabilityZones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AllAvailabilityZones")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilters(value: FilterList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Filters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoneIds(value: ZoneIdStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoneIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoneNames(value: ZoneNameStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoneNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneNames")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

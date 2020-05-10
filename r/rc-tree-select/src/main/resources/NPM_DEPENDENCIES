@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "rc-tree-select" : "3.0.2"
+      "rc-tree-select" : "3.0.5"
     }
   ],
   "test-dependencies" : [
     {
-      "rc-tree-select" : "3.0.2"
+      "rc-tree-select" : "3.0.5"
     }
   ],
   "compile-devDependencies" : [

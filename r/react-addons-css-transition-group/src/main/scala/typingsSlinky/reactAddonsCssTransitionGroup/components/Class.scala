@@ -1,42 +1,41 @@
 package typingsSlinky.reactAddonsCssTransitionGroup.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactAddonsCssTransitionGroup.mod.reactAugmentingMod.CSSTransitionGroupProps
 import typingsSlinky.reactAddonsCssTransitionGroup.mod.reactAugmentingMod.CSSTransitionGroupTransitionName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Class
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactAddonsCssTransitionGroup.mod.Class] {
+object Class {
   @JSImport("react-addons-css-transition-group", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    transitionName: String | CSSTransitionGroupTransitionName,
-    transitionAppear: js.UndefOr[Boolean] = js.undefined,
-    transitionAppearTimeout: Int | Double = null,
-    transitionEnter: js.UndefOr[Boolean] = js.undefined,
-    transitionEnterTimeout: Int | Double = null,
-    transitionLeave: js.UndefOr[Boolean] = js.undefined,
-    transitionLeaveTimeout: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactAddonsCssTransitionGroup.mod.Class] = {
-    val __obj = js.Dynamic.literal(transitionName = transitionName.asInstanceOf[js.Any])
-    if (!js.isUndefined(transitionAppear)) __obj.updateDynamic("transitionAppear")(transitionAppear.asInstanceOf[js.Any])
-    if (transitionAppearTimeout != null) __obj.updateDynamic("transitionAppearTimeout")(transitionAppearTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(transitionEnter)) __obj.updateDynamic("transitionEnter")(transitionEnter.asInstanceOf[js.Any])
-    if (transitionEnterTimeout != null) __obj.updateDynamic("transitionEnterTimeout")(transitionEnterTimeout.asInstanceOf[js.Any])
-    if (!js.isUndefined(transitionLeave)) __obj.updateDynamic("transitionLeave")(transitionLeave.asInstanceOf[js.Any])
-    if (transitionLeaveTimeout != null) __obj.updateDynamic("transitionLeaveTimeout")(transitionLeaveTimeout.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactAddonsCssTransitionGroup.mod.Class] {
+    @scala.inline
+    def transitionAppear(value: Boolean): this.type = set("transitionAppear", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionAppearTimeout(value: Double): this.type = set("transitionAppearTimeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionEnter(value: Boolean): this.type = set("transitionEnter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionEnterTimeout(value: Double): this.type = set("transitionEnterTimeout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionLeave(value: Boolean): this.type = set("transitionLeave", value.asInstanceOf[js.Any])
+    @scala.inline
+    def transitionLeaveTimeout(value: Double): this.type = set("transitionLeaveTimeout", value.asInstanceOf[js.Any])
   }
-  type Props = CSSTransitionGroupProps
+  
+  def withProps(p: CSSTransitionGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(transitionName: String | CSSTransitionGroupTransitionName): Builder = {
+    val __props = js.Dynamic.literal(transitionName = transitionName.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[CSSTransitionGroupProps]))
+  }
 }
 

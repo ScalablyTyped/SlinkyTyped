@@ -19,10 +19,29 @@ trait SchemaAutoscalingPolicyLoadBalancingUtilization extends js.Object {
 
 object SchemaAutoscalingPolicyLoadBalancingUtilization {
   @scala.inline
-  def apply(utilizationTarget: Int | Double = null): SchemaAutoscalingPolicyLoadBalancingUtilization = {
+  def apply(): SchemaAutoscalingPolicyLoadBalancingUtilization = {
     val __obj = js.Dynamic.literal()
-    if (utilizationTarget != null) __obj.updateDynamic("utilizationTarget")(utilizationTarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAutoscalingPolicyLoadBalancingUtilization]
   }
+  @scala.inline
+  implicit class SchemaAutoscalingPolicyLoadBalancingUtilizationOps[Self <: SchemaAutoscalingPolicyLoadBalancingUtilization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUtilizationTarget(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUtilizationTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("utilizationTarget")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

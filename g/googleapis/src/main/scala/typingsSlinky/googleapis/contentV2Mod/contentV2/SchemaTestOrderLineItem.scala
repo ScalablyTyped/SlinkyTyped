@@ -30,20 +30,77 @@ trait SchemaTestOrderLineItem extends js.Object {
 
 object SchemaTestOrderLineItem {
   @scala.inline
-  def apply(
-    product: SchemaTestOrderLineItemProduct = null,
-    quantityOrdered: Int | Double = null,
-    returnInfo: SchemaOrderLineItemReturnInfo = null,
-    shippingDetails: SchemaOrderLineItemShippingDetails = null,
-    unitTax: SchemaPrice = null
-  ): SchemaTestOrderLineItem = {
+  def apply(): SchemaTestOrderLineItem = {
     val __obj = js.Dynamic.literal()
-    if (product != null) __obj.updateDynamic("product")(product.asInstanceOf[js.Any])
-    if (quantityOrdered != null) __obj.updateDynamic("quantityOrdered")(quantityOrdered.asInstanceOf[js.Any])
-    if (returnInfo != null) __obj.updateDynamic("returnInfo")(returnInfo.asInstanceOf[js.Any])
-    if (shippingDetails != null) __obj.updateDynamic("shippingDetails")(shippingDetails.asInstanceOf[js.Any])
-    if (unitTax != null) __obj.updateDynamic("unitTax")(unitTax.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTestOrderLineItem]
   }
+  @scala.inline
+  implicit class SchemaTestOrderLineItemOps[Self <: SchemaTestOrderLineItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProduct(value: SchemaTestOrderLineItemProduct): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProduct: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("product")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuantityOrdered(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityOrdered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuantityOrdered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quantityOrdered")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnInfo(value: SchemaOrderLineItemReturnInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnInfo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShippingDetails(value: SchemaOrderLineItemShippingDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingDetails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShippingDetails: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingDetails")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUnitTax(value: SchemaPrice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitTax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUnitTax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitTax")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

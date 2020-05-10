@@ -27,19 +27,71 @@ trait S3DataSourceConfiguration extends js.Object {
 
 object S3DataSourceConfiguration {
   @scala.inline
-  def apply(
-    BucketName: S3BucketName,
-    AccessControlListConfiguration: AccessControlListConfiguration = null,
-    DocumentsMetadataConfiguration: DocumentsMetadataConfiguration = null,
-    ExclusionPatterns: DataSourceInclusionsExclusionsStrings = null,
-    InclusionPrefixes: DataSourceInclusionsExclusionsStrings = null
-  ): S3DataSourceConfiguration = {
+  def apply(BucketName: S3BucketName): S3DataSourceConfiguration = {
     val __obj = js.Dynamic.literal(BucketName = BucketName.asInstanceOf[js.Any])
-    if (AccessControlListConfiguration != null) __obj.updateDynamic("AccessControlListConfiguration")(AccessControlListConfiguration.asInstanceOf[js.Any])
-    if (DocumentsMetadataConfiguration != null) __obj.updateDynamic("DocumentsMetadataConfiguration")(DocumentsMetadataConfiguration.asInstanceOf[js.Any])
-    if (ExclusionPatterns != null) __obj.updateDynamic("ExclusionPatterns")(ExclusionPatterns.asInstanceOf[js.Any])
-    if (InclusionPrefixes != null) __obj.updateDynamic("InclusionPrefixes")(InclusionPrefixes.asInstanceOf[js.Any])
     __obj.asInstanceOf[S3DataSourceConfiguration]
   }
+  @scala.inline
+  implicit class S3DataSourceConfigurationOps[Self <: S3DataSourceConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBucketName(value: S3BucketName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessControlListConfiguration(value: AccessControlListConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlListConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessControlListConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessControlListConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocumentsMetadataConfiguration(value: DocumentsMetadataConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentsMetadataConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocumentsMetadataConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentsMetadataConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclusionPatterns(value: DataSourceInclusionsExclusionsStrings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusionPatterns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusionPatterns: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExclusionPatterns")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInclusionPrefixes(value: DataSourceInclusionsExclusionsStrings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InclusionPrefixes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInclusionPrefixes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InclusionPrefixes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

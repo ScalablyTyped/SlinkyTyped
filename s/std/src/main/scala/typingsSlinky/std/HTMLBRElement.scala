@@ -17,5 +17,6 @@ trait HTMLBRElement extends HTMLElement {
 
 @JSGlobal("HTMLBRElement")
 @js.native
-object HTMLBRElement extends Instantiable0[HTMLBRElement]
+object HTMLBRElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLBRElement]
 

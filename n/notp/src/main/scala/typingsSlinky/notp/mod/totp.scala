@@ -1,7 +1,6 @@
 package typingsSlinky.notp.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +19,8 @@ object totp extends js.Object {
   def gen(key: String, opt: TOTPGenOpt): String = js.native
   def gen(key: Buffer): String = js.native
   def gen(key: Buffer, opt: TOTPGenOpt): String = js.native
-  def gen(key: Uint8Array): String = js.native
-  def gen(key: Uint8Array, opt: TOTPGenOpt): String = js.native
+  def gen(key: js.typedarray.Uint8Array): String = js.native
+  def gen(key: js.typedarray.Uint8Array, opt: TOTPGenOpt): String = js.native
   /**
     * Check a One Time Password based on a timer.
     * @param token Passcode to validate.
@@ -33,7 +32,7 @@ object totp extends js.Object {
   def verify(token: String, key: String, opt: TOTPVerifyOpt): VerifyResult | Null = js.native
   def verify(token: String, key: Buffer): VerifyResult | Null = js.native
   def verify(token: String, key: Buffer, opt: TOTPVerifyOpt): VerifyResult | Null = js.native
-  def verify(token: String, key: Uint8Array): VerifyResult | Null = js.native
-  def verify(token: String, key: Uint8Array, opt: TOTPVerifyOpt): VerifyResult | Null = js.native
+  def verify(token: String, key: js.typedarray.Uint8Array): VerifyResult | Null = js.native
+  def verify(token: String, key: js.typedarray.Uint8Array, opt: TOTPVerifyOpt): VerifyResult | Null = js.native
 }
 

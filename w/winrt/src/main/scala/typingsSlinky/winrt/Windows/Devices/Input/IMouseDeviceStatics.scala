@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IMouseDeviceStatics extends js.Object {
-  def getForCurrentView(): MouseDevice
+  def getForCurrentView(): MouseDevice = js.native
 }
 
 object IMouseDeviceStatics {
   @scala.inline
   def apply(getForCurrentView: () => MouseDevice): IMouseDeviceStatics = {
     val __obj = js.Dynamic.literal(getForCurrentView = js.Any.fromFunction0(getForCurrentView))
-  
     __obj.asInstanceOf[IMouseDeviceStatics]
   }
+  @scala.inline
+  implicit class IMouseDeviceStaticsOps[Self <: IMouseDeviceStatics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetForCurrentView(value: () => MouseDevice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getForCurrentView")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

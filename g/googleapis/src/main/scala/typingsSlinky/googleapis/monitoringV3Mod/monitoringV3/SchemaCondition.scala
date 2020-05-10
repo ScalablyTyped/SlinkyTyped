@@ -48,18 +48,65 @@ trait SchemaCondition extends js.Object {
 
 object SchemaCondition {
   @scala.inline
-  def apply(
-    conditionAbsent: SchemaMetricAbsence = null,
-    conditionThreshold: SchemaMetricThreshold = null,
-    displayName: String = null,
-    name: String = null
-  ): SchemaCondition = {
+  def apply(): SchemaCondition = {
     val __obj = js.Dynamic.literal()
-    if (conditionAbsent != null) __obj.updateDynamic("conditionAbsent")(conditionAbsent.asInstanceOf[js.Any])
-    if (conditionThreshold != null) __obj.updateDynamic("conditionThreshold")(conditionThreshold.asInstanceOf[js.Any])
-    if (displayName != null) __obj.updateDynamic("displayName")(displayName.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaCondition]
   }
+  @scala.inline
+  implicit class SchemaConditionOps[Self <: SchemaCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConditionAbsent(value: SchemaMetricAbsence): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditionAbsent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditionAbsent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditionAbsent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConditionThreshold(value: SchemaMetricThreshold): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditionThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConditionThreshold: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conditionThreshold")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

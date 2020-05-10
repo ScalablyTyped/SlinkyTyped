@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.AnimationEvent
 import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
@@ -77,7 +78,7 @@ import typingsSlinky.chromeApps.chromeAppsStrings.drop
 import typingsSlinky.chromeApps.chromeAppsStrings.durationchange
 import typingsSlinky.chromeApps.chromeAppsStrings.emptied
 import typingsSlinky.chromeApps.chromeAppsStrings.ended
-import typingsSlinky.chromeApps.chromeAppsStrings.error
+import typingsSlinky.chromeApps.chromeAppsStrings.error_
 import typingsSlinky.chromeApps.chromeAppsStrings.exit
 import typingsSlinky.chromeApps.chromeAppsStrings.findupdate
 import typingsSlinky.chromeApps.chromeAppsStrings.focus
@@ -123,7 +124,7 @@ import typingsSlinky.chromeApps.chromeAppsStrings.pointermove
 import typingsSlinky.chromeApps.chromeAppsStrings.pointerout
 import typingsSlinky.chromeApps.chromeAppsStrings.pointerover
 import typingsSlinky.chromeApps.chromeAppsStrings.pointerup
-import typingsSlinky.chromeApps.chromeAppsStrings.progress
+import typingsSlinky.chromeApps.chromeAppsStrings.progress_
 import typingsSlinky.chromeApps.chromeAppsStrings.ratechange
 import typingsSlinky.chromeApps.chromeAppsStrings.reset
 import typingsSlinky.chromeApps.chromeAppsStrings.resize
@@ -138,7 +139,7 @@ import typingsSlinky.chromeApps.chromeAppsStrings.selectstart
 import typingsSlinky.chromeApps.chromeAppsStrings.sizechanged
 import typingsSlinky.chromeApps.chromeAppsStrings.stalled
 import typingsSlinky.chromeApps.chromeAppsStrings.submit
-import typingsSlinky.chromeApps.chromeAppsStrings.suspend
+import typingsSlinky.chromeApps.chromeAppsStrings.suspend_
 import typingsSlinky.chromeApps.chromeAppsStrings.timeupdate
 import typingsSlinky.chromeApps.chromeAppsStrings.toggle
 import typingsSlinky.chromeApps.chromeAppsStrings.touchcancel
@@ -155,7 +156,6 @@ import typingsSlinky.chromeApps.chromeAppsStrings.waiting
 import typingsSlinky.chromeApps.chromeAppsStrings.wheel
 import typingsSlinky.chromeApps.chromeAppsStrings.zoomchange
 import typingsSlinky.std.AddEventListenerOptions
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.Event_
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
@@ -854,16 +854,16 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _]): Unit = js.native
+  def addEventListener_error(`type`: error_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
-    `type`: error,
+    `type`: error_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
-    `type`: error,
+    `type`: error_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
@@ -1491,16 +1491,16 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_progress(`type`: progress, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ProgressEvent, _]): Unit = js.native
+  def addEventListener_progress(`type`: progress_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ProgressEvent, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_progress(
-    `type`: progress,
+    `type`: progress_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ProgressEvent, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_progress(
-    `type`: progress,
+    `type`: progress_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ProgressEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
@@ -1710,16 +1710,16 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_suspend(`type`: suspend, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_suspend(`type`: suspend_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_suspend(
-    `type`: suspend,
+    `type`: suspend_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_suspend(
-    `type`: suspend,
+    `type`: suspend_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
@@ -2005,16 +2005,6 @@ class HTMLWebViewElement () extends HTMLElement {
     */
   def executeScript(details: InjectDetails): Unit = js.native
   def executeScript(details: InjectDetails, callback: js.Function1[/* result */ js.UndefOr[js.Array[_]], Unit]): Unit = js.native
-  /**
-    * @requires Permissions: 'pointerLock'
-    */
-  /* CompleteClass */
-  override def exitPointerLock(): Unit = js.native
-  /**
-    * ❗ Unprefixed version are not available as of Chrome 68, in Chrome apps ❗
-    */
-  /* CompleteClass */
-  override def exitrequestFullscreen(): Unit = js.native
   /**
     * Initiates a find-in-page request.
     * @param searchText The string to find in the page.
@@ -2601,16 +2591,16 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _]): Unit = js.native
+  def removeEventListener_error(`type`: error_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
-    `type`: error,
+    `type`: error_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
-    `type`: error,
+    `type`: error_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ErrorEvent, _],
     options: EventListenerOptions
   ): Unit = js.native
@@ -3238,16 +3228,16 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_progress(`type`: progress, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ProgressEvent, _]): Unit = js.native
+  def removeEventListener_progress(`type`: progress_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ProgressEvent, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(
-    `type`: progress,
+    `type`: progress_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ProgressEvent, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(
-    `type`: progress,
+    `type`: progress_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ProgressEvent, _],
     options: EventListenerOptions
   ): Unit = js.native
@@ -3457,16 +3447,16 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_suspend(`type`: suspend, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_suspend(`type`: suspend_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_suspend(
-    `type`: suspend,
+    `type`: suspend_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_suspend(
-    `type`: suspend,
+    `type`: suspend_,
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
@@ -3698,16 +3688,6 @@ class HTMLWebViewElement () extends HTMLElement {
     listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ZoomChangeEvent, _],
     options: EventListenerOptions
   ): Unit = js.native
-  /**
-    * ❗ Unprefixed version are not available as of Chrome 68, in Chrome apps ❗
-    */
-  /* CompleteClass */
-  override def requestFullscreen(): js.Promise[Unit] = js.native
-  /**
-    * @requires Permissions: 'pointerLock'
-    */
-  /* CompleteClass */
-  override def requestPointerLock(): Unit = js.native
   /** Set an attribute */
   def setAttribute(attributeName: String, value: String): Unit = js.native
   def setAttribute(attributeName: String, value: Boolean): Unit = js.native
@@ -3773,21 +3753,5 @@ class HTMLWebViewElement () extends HTMLElement {
     * but it will not affect webview tags in other apps.
     */
   def terminate(): Unit = js.native
-  /**
-    * @requires Permissions: 'app.window.fullscreen', 'app.window.fullscreen.overrideEsc'
-    * @description
-    * In Chrome Apps, fullscreen is entered without prompting the user or providing
-    * exit instructions. HTML5 fullscreen requires the app.window.fullscreen permission
-    * in the manifest. In normal webpages, the browser intercepts the ESC key to exit
-    * pointer lock ensuring a consistent escape method for users. That is also the
-    * behavior in Chrome Apps unless the app.window.fullscreen.overrideEsc permission
-    * is used to enable the app to call preventDefault on keydown and keyup events.
-    *
-    * Then to exit fullscreen, the document exposes a method for that:
-    * @example
-    * document.webkitExitFullscreen();
-    */
-  /* CompleteClass */
-  override def webkitRequestFullscreen(): Unit = js.native
 }
 

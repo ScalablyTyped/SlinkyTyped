@@ -1,13 +1,13 @@
 package typingsSlinky.officeUiFabricReact.mod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.checkboxTypesMod.ICheckboxProps
-import typingsSlinky.react.mod.FunctionComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("office-ui-fabric-react", "Checkbox")
 @js.native
-object Checkbox extends TopLevel[FunctionComponent[ICheckboxProps]]
+object Checkbox extends TopLevel[ReactComponentClass[ICheckboxProps]]
 

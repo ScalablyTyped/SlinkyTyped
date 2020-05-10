@@ -12,10 +12,8 @@ trait SeriesOrganizationNodesLayoutValue extends js.Object
 
 object SeriesOrganizationNodesLayoutValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hanging: typingsSlinky.highcharts.highchartsStrings.hanging = "hanging".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.hanging]
   @scala.inline
-  def hanging: typingsSlinky.highcharts.highchartsStrings.hanging = this.cast("hanging")
-  @scala.inline
-  def normal: typingsSlinky.highcharts.highchartsStrings.normal = this.cast("normal")
+  def normal: typingsSlinky.highcharts.highchartsStrings.normal = "normal".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.normal]
 }
 

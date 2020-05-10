@@ -18,10 +18,29 @@ trait SchemaGooglePrivacyDlpV2DocumentLocation extends js.Object {
 
 object SchemaGooglePrivacyDlpV2DocumentLocation {
   @scala.inline
-  def apply(fileOffset: String = null): SchemaGooglePrivacyDlpV2DocumentLocation = {
+  def apply(): SchemaGooglePrivacyDlpV2DocumentLocation = {
     val __obj = js.Dynamic.literal()
-    if (fileOffset != null) __obj.updateDynamic("fileOffset")(fileOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2DocumentLocation]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2DocumentLocationOps[Self <: SchemaGooglePrivacyDlpV2DocumentLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileOffset(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileOffset: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileOffset")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -7,5 +7,6 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("sessionStorage")
 @js.native
-object sessionStorage extends TopLevel[Storage]
+object sessionStorage
+  extends TopLevel[org.scalajs.dom.raw.Storage]
 

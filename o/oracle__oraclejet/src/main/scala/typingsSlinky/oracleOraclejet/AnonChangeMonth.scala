@@ -15,18 +15,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonChangeMonth extends js.Object {
-  var changeMonth: select | none
-  var changeYear: select | none
-  var currentMonthPos: Double
-  var daysOutsideMonth: hidden | visible | selectable
-  var footerLayout: _empty | today
-  var numberOfMonths: Double
-  var showOn: focus | image
-  var stepBigMonths: Double
-  var stepMonths: numberOfMonths | Double
-  var weekDisplay: number | none
-  var yearRange: String
+  var changeMonth: select | none = js.native
+  var changeYear: select | none = js.native
+  var currentMonthPos: Double = js.native
+  var daysOutsideMonth: hidden | visible | selectable = js.native
+  var footerLayout: _empty | today = js.native
+  var numberOfMonths: Double = js.native
+  var showOn: focus | image = js.native
+  var stepBigMonths: Double = js.native
+  var stepMonths: numberOfMonths | Double = js.native
+  var weekDisplay: number | none = js.native
+  var yearRange: String = js.native
 }
 
 object AnonChangeMonth {
@@ -45,8 +46,81 @@ object AnonChangeMonth {
     yearRange: String
   ): AnonChangeMonth = {
     val __obj = js.Dynamic.literal(changeMonth = changeMonth.asInstanceOf[js.Any], changeYear = changeYear.asInstanceOf[js.Any], currentMonthPos = currentMonthPos.asInstanceOf[js.Any], daysOutsideMonth = daysOutsideMonth.asInstanceOf[js.Any], footerLayout = footerLayout.asInstanceOf[js.Any], numberOfMonths = numberOfMonths.asInstanceOf[js.Any], showOn = showOn.asInstanceOf[js.Any], stepBigMonths = stepBigMonths.asInstanceOf[js.Any], stepMonths = stepMonths.asInstanceOf[js.Any], weekDisplay = weekDisplay.asInstanceOf[js.Any], yearRange = yearRange.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonChangeMonth]
   }
+  @scala.inline
+  implicit class AnonChangeMonthOps[Self <: AnonChangeMonth] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeMonth(value: select | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChangeYear(value: select | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeYear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentMonthPos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentMonthPos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDaysOutsideMonth(value: hidden | visible | selectable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("daysOutsideMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFooterLayout(value: _empty | today): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumberOfMonths(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfMonths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowOn(value: focus | image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStepBigMonths(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepBigMonths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStepMonths(value: numberOfMonths | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stepMonths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWeekDisplay(value: number | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weekDisplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withYearRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yearRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

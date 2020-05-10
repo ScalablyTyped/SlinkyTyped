@@ -1,7 +1,6 @@
 package typingsSlinky.firebaseApp
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebaseApp.firebaseAppStrings.`[DEFAULT]`
 import typingsSlinky.firebaseApp.firebaseAppStrings.`fire-analytics`
 import typingsSlinky.firebaseApp.firebaseAppStrings.`fire-auth`
 import typingsSlinky.firebaseApp.firebaseAppStrings.`fire-core`
@@ -21,7 +20,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@firebase/app/dist/packages/app/src/constants", JSImport.Namespace)
 @js.native
 object constantsMod extends js.Object {
-  val DEFAULT_ENTRY_NAME: `[DEFAULT]` = js.native
+  val DEFAULT_ENTRY_NAME: /* "[DEFAULT]" */ String = js.native
   @js.native
   object PLATFORM_LOG_STRING
     extends /* x */ StringDictionary[

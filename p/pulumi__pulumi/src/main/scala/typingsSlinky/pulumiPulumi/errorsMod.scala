@@ -16,20 +16,12 @@ object errorsMod extends js.Object {
     def this(message: String, resource: js.UndefOr[scala.Nothing], hideStack: Boolean) = this()
     def this(message: String, resource: Resource, hideStack: Boolean) = this()
     var hideStack: js.UndefOr[Boolean] = js.native
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
     var resource: js.UndefOr[Resource] = js.native
   }
   
   @js.native
   class RunError protected () extends Error {
     def this(message: String) = this()
-    /* CompleteClass */
-    override var message: String = js.native
-    /* CompleteClass */
-    override var name: String = js.native
   }
   
   /* static members */

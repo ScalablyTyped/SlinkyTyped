@@ -1,10 +1,7 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Table.TableProps
 import typingsSlinky.materialUi.materialUiStrings.all
 import typingsSlinky.materialUi.tableMod.default
@@ -13,54 +10,54 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Table
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object Table {
   @JSImport("material-ui/Table", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, style */
-  def apply(
-    allRowsSelected: js.UndefOr[Boolean] = js.undefined,
-    bodyStyle: CSSProperties = null,
-    fixedFooter: js.UndefOr[Boolean] = js.undefined,
-    fixedHeader: js.UndefOr[Boolean] = js.undefined,
-    footerStyle: CSSProperties = null,
-    headerStyle: CSSProperties = null,
-    height: String = null,
-    multiSelectable: js.UndefOr[Boolean] = js.undefined,
-    onCellClick: (/* row */ Double, /* column */ Double) => Unit = null,
-    onCellHover: (/* row */ Double, /* column */ Double) => Unit = null,
-    onCellHoverExit: (/* row */ Double, /* column */ Double) => Unit = null,
-    onRowHover: /* row */ Double => Unit = null,
-    onRowHoverExit: /* row */ Double => Unit = null,
-    onRowSelection: /* selectedRows */ js.Array[Double] | all => Unit = null,
-    selectable: js.UndefOr[Boolean] = js.undefined,
-    wrapperStyle: CSSProperties = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(allRowsSelected)) __obj.updateDynamic("allRowsSelected")(allRowsSelected.asInstanceOf[js.Any])
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedFooter)) __obj.updateDynamic("fixedFooter")(fixedFooter.asInstanceOf[js.Any])
-    if (!js.isUndefined(fixedHeader)) __obj.updateDynamic("fixedHeader")(fixedHeader.asInstanceOf[js.Any])
-    if (footerStyle != null) __obj.updateDynamic("footerStyle")(footerStyle.asInstanceOf[js.Any])
-    if (headerStyle != null) __obj.updateDynamic("headerStyle")(headerStyle.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (!js.isUndefined(multiSelectable)) __obj.updateDynamic("multiSelectable")(multiSelectable.asInstanceOf[js.Any])
-    if (onCellClick != null) __obj.updateDynamic("onCellClick")(js.Any.fromFunction2(onCellClick))
-    if (onCellHover != null) __obj.updateDynamic("onCellHover")(js.Any.fromFunction2(onCellHover))
-    if (onCellHoverExit != null) __obj.updateDynamic("onCellHoverExit")(js.Any.fromFunction2(onCellHoverExit))
-    if (onRowHover != null) __obj.updateDynamic("onRowHover")(js.Any.fromFunction1(onRowHover))
-    if (onRowHoverExit != null) __obj.updateDynamic("onRowHoverExit")(js.Any.fromFunction1(onRowHoverExit))
-    if (onRowSelection != null) __obj.updateDynamic("onRowSelection")(js.Any.fromFunction1(onRowSelection))
-    if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
-    if (wrapperStyle != null) __obj.updateDynamic("wrapperStyle")(wrapperStyle.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def allRowsSelected(value: Boolean): this.type = set("allRowsSelected", value.asInstanceOf[js.Any])
+    @scala.inline
+    def bodyStyle(value: CSSProperties): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixedFooter(value: Boolean): this.type = set("fixedFooter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fixedHeader(value: Boolean): this.type = set("fixedHeader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def footerStyle(value: CSSProperties): this.type = set("footerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def headerStyle(value: CSSProperties): this.type = set("headerStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: String): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiSelectable(value: Boolean): this.type = set("multiSelectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCellClick(value: (/* row */ Double, /* column */ Double) => Unit): this.type = set("onCellClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onCellHover(value: (/* row */ Double, /* column */ Double) => Unit): this.type = set("onCellHover", js.Any.fromFunction2(value))
+    @scala.inline
+    def onCellHoverExit(value: (/* row */ Double, /* column */ Double) => Unit): this.type = set("onCellHoverExit", js.Any.fromFunction2(value))
+    @scala.inline
+    def onRowHover(value: /* row */ Double => Unit): this.type = set("onRowHover", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRowHoverExit(value: /* row */ Double => Unit): this.type = set("onRowHoverExit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRowSelection(value: /* selectedRows */ js.Array[Double] | all => Unit): this.type = set("onRowSelection", js.Any.fromFunction1(value))
+    @scala.inline
+    def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def wrapperStyle(value: CSSProperties): this.type = set("wrapperStyle", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.tableMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TableProps
+  
+  def withProps(p: TableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Table.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

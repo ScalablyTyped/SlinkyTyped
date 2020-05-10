@@ -4,30 +4,88 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClientSessionRequestOptions extends js.Object {
-  var endStream: js.UndefOr[Boolean] = js.undefined
-  var exclusive: js.UndefOr[Boolean] = js.undefined
-  var parent: js.UndefOr[Double] = js.undefined
-  var waitForTrailers: js.UndefOr[Boolean] = js.undefined
-  var weight: js.UndefOr[Double] = js.undefined
+  var endStream: js.UndefOr[Boolean] = js.native
+  var exclusive: js.UndefOr[Boolean] = js.native
+  var parent: js.UndefOr[Double] = js.native
+  var waitForTrailers: js.UndefOr[Boolean] = js.native
+  var weight: js.UndefOr[Double] = js.native
 }
 
 object ClientSessionRequestOptions {
   @scala.inline
-  def apply(
-    endStream: js.UndefOr[Boolean] = js.undefined,
-    exclusive: js.UndefOr[Boolean] = js.undefined,
-    parent: Int | Double = null,
-    waitForTrailers: js.UndefOr[Boolean] = js.undefined,
-    weight: Int | Double = null
-  ): ClientSessionRequestOptions = {
+  def apply(): ClientSessionRequestOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(endStream)) __obj.updateDynamic("endStream")(endStream.asInstanceOf[js.Any])
-    if (!js.isUndefined(exclusive)) __obj.updateDynamic("exclusive")(exclusive.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (!js.isUndefined(waitForTrailers)) __obj.updateDynamic("waitForTrailers")(waitForTrailers.asInstanceOf[js.Any])
-    if (weight != null) __obj.updateDynamic("weight")(weight.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientSessionRequestOptions]
   }
+  @scala.inline
+  implicit class ClientSessionRequestOptionsOps[Self <: ClientSessionRequestOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndStream(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndStream: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endStream")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclusive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusive")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withParent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutParent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitForTrailers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForTrailers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitForTrailers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForTrailers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

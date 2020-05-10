@@ -18,18 +18,16 @@ trait InstallState extends js.Object
 
 object InstallState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def failed: failed_ = "failed".asInstanceOf[failed_]
   @scala.inline
-  def failed: failed_ = this.cast("failed")
+  def installed: typingsSlinky.microsoftGraph.microsoftGraphStrings.installed = "installed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.installed]
   @scala.inline
-  def installed: typingsSlinky.microsoftGraph.microsoftGraphStrings.installed = this.cast("installed")
+  def notApplicable: typingsSlinky.microsoftGraph.microsoftGraphStrings.notApplicable = "notApplicable".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notApplicable]
   @scala.inline
-  def notApplicable: typingsSlinky.microsoftGraph.microsoftGraphStrings.notApplicable = this.cast("notApplicable")
+  def notInstalled: typingsSlinky.microsoftGraph.microsoftGraphStrings.notInstalled = "notInstalled".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.notInstalled]
   @scala.inline
-  def notInstalled: typingsSlinky.microsoftGraph.microsoftGraphStrings.notInstalled = this.cast("notInstalled")
+  def uninstallFailed: typingsSlinky.microsoftGraph.microsoftGraphStrings.uninstallFailed = "uninstallFailed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.uninstallFailed]
   @scala.inline
-  def uninstallFailed: typingsSlinky.microsoftGraph.microsoftGraphStrings.uninstallFailed = this.cast("uninstallFailed")
-  @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
 }
 

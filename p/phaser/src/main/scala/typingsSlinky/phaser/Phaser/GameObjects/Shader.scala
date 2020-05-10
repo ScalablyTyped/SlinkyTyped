@@ -111,38 +111,7 @@ class Shader protected ()
   /**
     * Uint8 view to the vertex raw buffer. Used for uploading vertex buffer resources to the GPU.
     */
-  var bytes: scala.scalajs.js.typedarray.Uint8Array = js.native
-  /**
-    * The depth of this Game Object within the Scene.
-    * 
-    * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-    * of Game Objects, without actually moving their position in the display list.
-    * 
-    * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-    * value will always render in front of one with a lower value.
-    * 
-    * Setting the depth will queue a depth sort event within the Scene.
-    */
-  /* CompleteClass */
-  override var depth: Double = js.native
-  /**
-    * The displayed height of this Game Object.
-    * 
-    * This value takes into account the scale factor.
-    * 
-    * Setting this value will adjust the Game Object's scale property.
-    */
-  /* CompleteClass */
-  override var displayHeight: Double = js.native
-  /**
-    * The displayed width of this Game Object.
-    * 
-    * This value takes into account the scale factor.
-    * 
-    * Setting this value will adjust the Game Object's scale property.
-    */
-  /* CompleteClass */
-  override var displayWidth: Double = js.native
+  var bytes: js.typedarray.Uint8Array = js.native
   /**
     * A reference to the GL Frame Buffer this Shader is drawing to.
     * This property is only set if you have called `Shader.setRenderToTexture`.
@@ -158,15 +127,6 @@ class Shader protected ()
     */
   var glTexture: WebGLTexture = js.native
   /**
-    * The native (un-scaled) height of this Game Object.
-    * 
-    * Changing this value will not change the size that the Game Object is rendered in-game.
-    * For that you need to either set the scale of the Game Object (`setScale`) or use
-    * the `displayHeight` property.
-    */
-  /* CompleteClass */
-  override var height: Double = js.native
-  /**
     * The pointer bound to this shader, if any.
     * Set via the chainable `setPointer` method, or by modifying this property directly.
     */
@@ -178,7 +138,7 @@ class Shader protected ()
   /**
     * The projection matrix the shader uses during rendering.
     */
-  val projectionMatrix: scala.scalajs.js.typedarray.Float32Array = js.native
+  val projectionMatrix: js.typedarray.Float32Array = js.native
   /**
     * A flag that indicates if this Shader has been set to render to a texture instead of the display list.
     * 
@@ -224,31 +184,15 @@ class Shader protected ()
   /**
     * Raw byte buffer of vertices this Shader uses.
     */
-  var vertexData: scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  var vertexData: js.typedarray.ArrayBuffer = js.native
   /**
     * Float32 view of the array buffer containing the shaders vertices.
     */
-  var vertexViewF32: scala.scalajs.js.typedarray.Float32Array = js.native
+  var vertexViewF32: js.typedarray.Float32Array = js.native
   /**
     * The view matrix the shader uses during rendering.
     */
-  val viewMatrix: scala.scalajs.js.typedarray.Float32Array = js.native
-  /**
-    * The visible state of the Game Object.
-    * 
-    * An invisible Game Object will skip rendering, but will still process update logic.
-    */
-  /* CompleteClass */
-  override var visible: Boolean = js.native
-  /**
-    * The native (un-scaled) width of this Game Object.
-    * 
-    * Changing this value will not change the size that the Game Object is rendered in-game.
-    * For that you need to either set the scale of the Game Object (`setScale`) or use
-    * the `displayWidth` property.
-    */
-  /* CompleteClass */
-  override var width: Double = js.native
+  val viewMatrix: js.typedarray.Float32Array = js.native
   /**
     * Called automatically during render.
     * 
@@ -324,29 +268,6 @@ class Shader protected ()
     */
   def setChannel3(textureKey: String): this.type = js.native
   def setChannel3(textureKey: String, textureData: js.Any): this.type = js.native
-  /**
-    * The depth of this Game Object within the Scene.
-    * 
-    * The depth is also known as the 'z-index' in some environments, and allows you to change the rendering order
-    * of Game Objects, without actually moving their position in the display list.
-    * 
-    * The depth starts from zero (the default value) and increases from that point. A Game Object with a higher depth
-    * value will always render in front of one with a lower value.
-    * 
-    * Setting the depth will queue a depth sort event within the Scene.
-    * @param value The depth of this Game Object.
-    */
-  /* CompleteClass */
-  override def setDepth(value: integer): this.type = js.native
-  /**
-    * Sets the display size of this Game Object.
-    * 
-    * Calling this will adjust the scale.
-    * @param width The width of this Game Object.
-    * @param height The height of this Game Object.
-    */
-  /* CompleteClass */
-  override def setDisplaySize(width: Double, height: Double): this.type = js.native
   /**
     * Binds a Phaser Pointer object to this Shader.
     * 
@@ -457,21 +378,6 @@ class Shader protected ()
   def setShader(key: BaseShader, textures: js.Array[String]): this.type = js.native
   def setShader(key: BaseShader, textures: js.Array[String], textureData: js.Any): this.type = js.native
   /**
-    * Sets the internal size of this Game Object, as used for frame or physics body creation.
-    * 
-    * This will not change the size that the Game Object is rendered in-game.
-    * For that you need to either set the scale of the Game Object (`setScale`) or call the
-    * `setDisplaySize` method, which is the same thing as changing the scale but allows you
-    * to do so by giving pixel values.
-    * 
-    * If you have enabled this Game Object for input, changing the size will _not_ change the
-    * size of the hit area. To do this you should adjust the `input.hitArea` object directly.
-    * @param width The width of this Game Object.
-    * @param height The height of this Game Object.
-    */
-  /* CompleteClass */
-  override def setSize(width: Double, height: Double): this.type = js.native
-  /**
     * Sets a property of a uniform already present on this shader.
     * 
     * To modify the value of a uniform such as a 1f or 1i use the `value` property directly:
@@ -491,13 +397,5 @@ class Shader protected ()
     * @param value The value to set into the uniform.
     */
   def setUniform(key: String, value: js.Any): this.type = js.native
-  /**
-    * Sets the visibility of this Game Object.
-    * 
-    * An invisible Game Object will skip rendering, but will still process update logic.
-    * @param value The visible state of the Game Object.
-    */
-  /* CompleteClass */
-  override def setVisible(value: Boolean): this.type = js.native
 }
 

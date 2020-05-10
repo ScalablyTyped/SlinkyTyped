@@ -18,22 +18,20 @@ trait ColorActionName extends js.Object
 
 object ColorActionName {
   @scala.inline
-  def blue: typingsSlinky.jimp.jimpStrings.blue = this.cast("blue")
+  def blue: typingsSlinky.jimp.jimpStrings.blue = "blue".asInstanceOf[typingsSlinky.jimp.jimpStrings.blue]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def green: typingsSlinky.jimp.jimpStrings.green = "green".asInstanceOf[typingsSlinky.jimp.jimpStrings.green]
   @scala.inline
-  def green: typingsSlinky.jimp.jimpStrings.green = this.cast("green")
+  def hue: typingsSlinky.jimp.jimpStrings.hue = "hue".asInstanceOf[typingsSlinky.jimp.jimpStrings.hue]
   @scala.inline
-  def hue: typingsSlinky.jimp.jimpStrings.hue = this.cast("hue")
+  def mix: typingsSlinky.jimp.jimpStrings.mix = "mix".asInstanceOf[typingsSlinky.jimp.jimpStrings.mix]
   @scala.inline
-  def mix: typingsSlinky.jimp.jimpStrings.mix = this.cast("mix")
+  def red: typingsSlinky.jimp.jimpStrings.red = "red".asInstanceOf[typingsSlinky.jimp.jimpStrings.red]
   @scala.inline
-  def red: typingsSlinky.jimp.jimpStrings.red = this.cast("red")
+  def shade: typingsSlinky.jimp.jimpStrings.shade = "shade".asInstanceOf[typingsSlinky.jimp.jimpStrings.shade]
   @scala.inline
-  def shade: typingsSlinky.jimp.jimpStrings.shade = this.cast("shade")
+  def tint: typingsSlinky.jimp.jimpStrings.tint = "tint".asInstanceOf[typingsSlinky.jimp.jimpStrings.tint]
   @scala.inline
-  def tint: typingsSlinky.jimp.jimpStrings.tint = this.cast("tint")
-  @scala.inline
-  def xor: typingsSlinky.jimp.jimpStrings.xor = this.cast("xor")
+  def xor: typingsSlinky.jimp.jimpStrings.xor = "xor".asInstanceOf[typingsSlinky.jimp.jimpStrings.xor]
 }
 

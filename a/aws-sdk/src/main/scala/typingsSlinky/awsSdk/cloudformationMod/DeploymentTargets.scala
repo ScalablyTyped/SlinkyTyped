@@ -18,11 +18,41 @@ trait DeploymentTargets extends js.Object {
 
 object DeploymentTargets {
   @scala.inline
-  def apply(Accounts: AccountList = null, OrganizationalUnitIds: OrganizationalUnitIdList = null): DeploymentTargets = {
+  def apply(): DeploymentTargets = {
     val __obj = js.Dynamic.literal()
-    if (Accounts != null) __obj.updateDynamic("Accounts")(Accounts.asInstanceOf[js.Any])
-    if (OrganizationalUnitIds != null) __obj.updateDynamic("OrganizationalUnitIds")(OrganizationalUnitIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeploymentTargets]
   }
+  @scala.inline
+  implicit class DeploymentTargetsOps[Self <: DeploymentTargets] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccounts(value: AccountList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accounts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccounts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Accounts")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrganizationalUnitIds(value: OrganizationalUnitIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrganizationalUnitIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OrganizationalUnitIds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

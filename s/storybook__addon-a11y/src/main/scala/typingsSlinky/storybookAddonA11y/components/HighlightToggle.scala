@@ -1,22 +1,33 @@
 package typingsSlinky.storybookAddonA11y.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes
 import typingsSlinky.storybookAddonA11y.TypeofHighlightToggle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Could't extract props from TypeRef(QualifiedName(IArray(Name(slinky), Name(core), Name(ReactComponentClass))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(react), Name(mod), Name(_Global_), Name(JSX), Name(LibraryManagedAttributes))),IArray(TypeRef(QualifiedName(IArray(Name(typingsSlinky), Name(storybookAddonA11y), Name(TypeofHighlightToggle))),IArray(),NoComments), TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),NoComments)),NoComments)),NoComments) because couldn't resolve ClassTree. */
-object HighlightToggle
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object HighlightToggle {
   @JSImport("@storybook/addon-a11y/dist/components/Report/HighlightToggle", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = ReactComponentClass[LibraryManagedAttributes[TypeofHighlightToggle, js.Any]]
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def displayName(value: String): this.type = set("displayName", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: ReactComponentClass[LibraryManagedAttributes[TypeofHighlightToggle, js.Any]]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(DollarDollartypeof: js.Symbol): Builder = {
+    val __props = js.Dynamic.literal()
+    __props.updateDynamic("$$typeof")(DollarDollartypeof.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ReactComponentClass[LibraryManagedAttributes[TypeofHighlightToggle, js.Any]]]))
+  }
 }
 

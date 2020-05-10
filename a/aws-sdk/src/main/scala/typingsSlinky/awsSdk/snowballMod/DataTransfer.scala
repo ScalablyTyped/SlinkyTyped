@@ -26,18 +26,65 @@ trait DataTransfer extends js.Object {
 
 object DataTransfer {
   @scala.inline
-  def apply(
-    BytesTransferred: Int | Double = null,
-    ObjectsTransferred: Int | Double = null,
-    TotalBytes: Int | Double = null,
-    TotalObjects: Int | Double = null
-  ): DataTransfer = {
+  def apply(): DataTransfer = {
     val __obj = js.Dynamic.literal()
-    if (BytesTransferred != null) __obj.updateDynamic("BytesTransferred")(BytesTransferred.asInstanceOf[js.Any])
-    if (ObjectsTransferred != null) __obj.updateDynamic("ObjectsTransferred")(ObjectsTransferred.asInstanceOf[js.Any])
-    if (TotalBytes != null) __obj.updateDynamic("TotalBytes")(TotalBytes.asInstanceOf[js.Any])
-    if (TotalObjects != null) __obj.updateDynamic("TotalObjects")(TotalObjects.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataTransfer]
   }
+  @scala.inline
+  implicit class DataTransferOps[Self <: DataTransfer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBytesTransferred(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesTransferred")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesTransferred: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesTransferred")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withObjectsTransferred(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectsTransferred")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutObjectsTransferred: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectsTransferred")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalBytes(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTotalObjects(value: Long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalObjects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTotalObjects: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalObjects")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

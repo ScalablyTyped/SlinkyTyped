@@ -4,165 +4,423 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Tooltips extends js.Object {
   /**
     * Default: "Clear selection"
     */
-  var clear: js.UndefOr[String] = js.undefined
+  var clear: js.UndefOr[String] = js.native
   /**
     * Default: "Close the picker"
     */
-  var close: js.UndefOr[String] = js.undefined
+  var close: js.UndefOr[String] = js.native
   /**
     * Default: "Decrement Hour"
     */
-  var decrementHour: js.UndefOr[String] = js.undefined
+  var decrementHour: js.UndefOr[String] = js.native
   /**
     * Default: "Decrement Minute"
     */
-  var decrementMinute: js.UndefOr[String] = js.undefined
+  var decrementMinute: js.UndefOr[String] = js.native
   /**
     * Default: "Decrement Second"
     */
-  var decrementSecond: js.UndefOr[String] = js.undefined
+  var decrementSecond: js.UndefOr[String] = js.native
   /**
     * Default: "Increment Hour"
     */
-  var incrementHour: js.UndefOr[String] = js.undefined
+  var incrementHour: js.UndefOr[String] = js.native
   /**
     * Default: "Increment Minute"
     */
-  var incrementMinute: js.UndefOr[String] = js.undefined
+  var incrementMinute: js.UndefOr[String] = js.native
   /**
     * Default: "Increment Second"
     */
-  var incrementSecond: js.UndefOr[String] = js.undefined
+  var incrementSecond: js.UndefOr[String] = js.native
   /**
     * Default: "Next Century"
     */
-  var nextCentury: js.UndefOr[String] = js.undefined
+  var nextCentury: js.UndefOr[String] = js.native
   /**
     * Default: "Next Decade"
     */
-  var nextDecade: js.UndefOr[String] = js.undefined
+  var nextDecade: js.UndefOr[String] = js.native
   /**
     * Default: "Next Month"
     */
-  var nextMonth: js.UndefOr[String] = js.undefined
+  var nextMonth: js.UndefOr[String] = js.native
   /**
     * Default: "Next Year"
     */
-  var nextYear: js.UndefOr[String] = js.undefined
+  var nextYear: js.UndefOr[String] = js.native
   /**
     * Default: "Pick Hour"
     */
-  var pickHour: js.UndefOr[String] = js.undefined
+  var pickHour: js.UndefOr[String] = js.native
   /**
     * Default: "Pick Minute"
     */
-  var pickMinute: js.UndefOr[String] = js.undefined
+  var pickMinute: js.UndefOr[String] = js.native
   /**
     * Default: "Pick Second"
     */
-  var pickSecond: js.UndefOr[String] = js.undefined
+  var pickSecond: js.UndefOr[String] = js.native
   /**
     * Default: "Previous Century"
     */
-  var prevCentury: js.UndefOr[String] = js.undefined
+  var prevCentury: js.UndefOr[String] = js.native
   /**
     * Default: "Previous Decade"
     */
-  var prevDecade: js.UndefOr[String] = js.undefined
+  var prevDecade: js.UndefOr[String] = js.native
   /**
     * Default: "Previous Month"
     */
-  var prevMonth: js.UndefOr[String] = js.undefined
+  var prevMonth: js.UndefOr[String] = js.native
   /**
     * Default: "Previous Year"
     */
-  var prevYear: js.UndefOr[String] = js.undefined
+  var prevYear: js.UndefOr[String] = js.native
   /**
     * Default: "Select Decade"
     */
-  var selectDecade: js.UndefOr[String] = js.undefined
+  var selectDecade: js.UndefOr[String] = js.native
   /**
     * Default: "Select Month"
     */
-  var selectMonth: js.UndefOr[String] = js.undefined
+  var selectMonth: js.UndefOr[String] = js.native
   /**
     * Default: "Select Time"
     */
-  var selectTime: js.UndefOr[String] = js.undefined
+  var selectTime: js.UndefOr[String] = js.native
   /**
     * Default: "Select Year"
     */
-  var selectYear: js.UndefOr[String] = js.undefined
+  var selectYear: js.UndefOr[String] = js.native
   /**
     * Default: "Go to today"
     */
-  var today: js.UndefOr[String] = js.undefined
+  var today: js.UndefOr[String] = js.native
   /**
     * Default:  "Toggle Period"
     */
-  var togglePeriod: js.UndefOr[String] = js.undefined
+  var togglePeriod: js.UndefOr[String] = js.native
 }
 
 object Tooltips {
   @scala.inline
-  def apply(
-    clear: String = null,
-    close: String = null,
-    decrementHour: String = null,
-    decrementMinute: String = null,
-    decrementSecond: String = null,
-    incrementHour: String = null,
-    incrementMinute: String = null,
-    incrementSecond: String = null,
-    nextCentury: String = null,
-    nextDecade: String = null,
-    nextMonth: String = null,
-    nextYear: String = null,
-    pickHour: String = null,
-    pickMinute: String = null,
-    pickSecond: String = null,
-    prevCentury: String = null,
-    prevDecade: String = null,
-    prevMonth: String = null,
-    prevYear: String = null,
-    selectDecade: String = null,
-    selectMonth: String = null,
-    selectTime: String = null,
-    selectYear: String = null,
-    today: String = null,
-    togglePeriod: String = null
-  ): Tooltips = {
+  def apply(): Tooltips = {
     val __obj = js.Dynamic.literal()
-    if (clear != null) __obj.updateDynamic("clear")(clear.asInstanceOf[js.Any])
-    if (close != null) __obj.updateDynamic("close")(close.asInstanceOf[js.Any])
-    if (decrementHour != null) __obj.updateDynamic("decrementHour")(decrementHour.asInstanceOf[js.Any])
-    if (decrementMinute != null) __obj.updateDynamic("decrementMinute")(decrementMinute.asInstanceOf[js.Any])
-    if (decrementSecond != null) __obj.updateDynamic("decrementSecond")(decrementSecond.asInstanceOf[js.Any])
-    if (incrementHour != null) __obj.updateDynamic("incrementHour")(incrementHour.asInstanceOf[js.Any])
-    if (incrementMinute != null) __obj.updateDynamic("incrementMinute")(incrementMinute.asInstanceOf[js.Any])
-    if (incrementSecond != null) __obj.updateDynamic("incrementSecond")(incrementSecond.asInstanceOf[js.Any])
-    if (nextCentury != null) __obj.updateDynamic("nextCentury")(nextCentury.asInstanceOf[js.Any])
-    if (nextDecade != null) __obj.updateDynamic("nextDecade")(nextDecade.asInstanceOf[js.Any])
-    if (nextMonth != null) __obj.updateDynamic("nextMonth")(nextMonth.asInstanceOf[js.Any])
-    if (nextYear != null) __obj.updateDynamic("nextYear")(nextYear.asInstanceOf[js.Any])
-    if (pickHour != null) __obj.updateDynamic("pickHour")(pickHour.asInstanceOf[js.Any])
-    if (pickMinute != null) __obj.updateDynamic("pickMinute")(pickMinute.asInstanceOf[js.Any])
-    if (pickSecond != null) __obj.updateDynamic("pickSecond")(pickSecond.asInstanceOf[js.Any])
-    if (prevCentury != null) __obj.updateDynamic("prevCentury")(prevCentury.asInstanceOf[js.Any])
-    if (prevDecade != null) __obj.updateDynamic("prevDecade")(prevDecade.asInstanceOf[js.Any])
-    if (prevMonth != null) __obj.updateDynamic("prevMonth")(prevMonth.asInstanceOf[js.Any])
-    if (prevYear != null) __obj.updateDynamic("prevYear")(prevYear.asInstanceOf[js.Any])
-    if (selectDecade != null) __obj.updateDynamic("selectDecade")(selectDecade.asInstanceOf[js.Any])
-    if (selectMonth != null) __obj.updateDynamic("selectMonth")(selectMonth.asInstanceOf[js.Any])
-    if (selectTime != null) __obj.updateDynamic("selectTime")(selectTime.asInstanceOf[js.Any])
-    if (selectYear != null) __obj.updateDynamic("selectYear")(selectYear.asInstanceOf[js.Any])
-    if (today != null) __obj.updateDynamic("today")(today.asInstanceOf[js.Any])
-    if (togglePeriod != null) __obj.updateDynamic("togglePeriod")(togglePeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tooltips]
   }
+  @scala.inline
+  implicit class TooltipsOps[Self <: Tooltips] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClear(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClose(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecrementHour(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decrementHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecrementHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decrementHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecrementMinute(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decrementMinute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecrementMinute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decrementMinute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDecrementSecond(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decrementSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDecrementSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decrementSecond")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncrementHour(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncrementHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncrementMinute(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementMinute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncrementMinute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementMinute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncrementSecond(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncrementSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incrementSecond")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextCentury(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextCentury")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextCentury: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextCentury")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextDecade(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextDecade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextDecade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextDecade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextMonth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextYear(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextYear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextYear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextYear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPickHour(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPickHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPickMinute(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickMinute")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPickMinute: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickMinute")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPickSecond(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPickSecond: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickSecond")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevCentury(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevCentury")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevCentury: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevCentury")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevDecade(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevDecade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevDecade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevDecade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevMonth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevYear(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevYear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevYear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevYear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectDecade(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectDecade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectDecade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectDecade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectMonth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectMonth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectMonth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectMonth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectYear(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectYear")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectYear: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectYear")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToday(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToday: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("today")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTogglePeriod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("togglePeriod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTogglePeriod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("togglePeriod")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

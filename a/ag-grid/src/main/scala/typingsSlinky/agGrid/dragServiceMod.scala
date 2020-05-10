@@ -2,8 +2,8 @@ package typingsSlinky.agGrid
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.Touch
 import org.scalajs.dom.raw.TouchEvent
-import typingsSlinky.std.Touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,13 +20,13 @@ object dragServiceMod extends js.Object {
     /** Some places may wish to ignore certain events, eg range selection ignores shift clicks */
     var skipMouseEvent: js.UndefOr[js.Function1[/* mouseEvent */ MouseEvent, Boolean]] = js.native
     /** Callback for drag starting */
-    def onDragStart(mouseEvent: typingsSlinky.std.MouseEvent): Unit = js.native
+    def onDragStart(mouseEvent: MouseEvent): Unit = js.native
     def onDragStart(mouseEvent: Touch): Unit = js.native
     /** Callback for drag stopping */
-    def onDragStop(mouseEvent: typingsSlinky.std.MouseEvent): Unit = js.native
+    def onDragStop(mouseEvent: MouseEvent): Unit = js.native
     def onDragStop(mouseEvent: Touch): Unit = js.native
     /** Callback for mouse move while dragging */
-    def onDragging(mouseEvent: typingsSlinky.std.MouseEvent): Unit = js.native
+    def onDragging(mouseEvent: MouseEvent): Unit = js.native
     def onDragging(mouseEvent: Touch): Unit = js.native
   }
   
@@ -63,7 +63,7 @@ object dragServiceMod extends js.Object {
     /* private */ def onTouchMove(touchEvent: js.Any): js.Any = js.native
     /* private */ def onTouchStart(params: js.Any, touchEvent: js.Any): js.Any = js.native
     def onTouchUp(touchEvent: TouchEvent): Unit = js.native
-    def onUpCommon(eventOrTouch: typingsSlinky.std.MouseEvent): Unit = js.native
+    def onUpCommon(eventOrTouch: MouseEvent): Unit = js.native
     def onUpCommon(eventOrTouch: Touch): Unit = js.native
     def removeDragSource(params: DragListenerParams): Unit = js.native
     /* private */ def removeListener(dragSourceAndListener: js.Any): js.Any = js.native

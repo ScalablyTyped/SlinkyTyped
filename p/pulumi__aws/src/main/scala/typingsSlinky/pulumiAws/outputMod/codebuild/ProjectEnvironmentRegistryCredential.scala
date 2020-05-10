@@ -20,8 +20,27 @@ object ProjectEnvironmentRegistryCredential {
   @scala.inline
   def apply(credential: String, credentialProvider: String): ProjectEnvironmentRegistryCredential = {
     val __obj = js.Dynamic.literal(credential = credential.asInstanceOf[js.Any], credentialProvider = credentialProvider.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ProjectEnvironmentRegistryCredential]
   }
+  @scala.inline
+  implicit class ProjectEnvironmentRegistryCredentialOps[Self <: ProjectEnvironmentRegistryCredential] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCredential(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credential")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCredentialProvider(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentialProvider")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

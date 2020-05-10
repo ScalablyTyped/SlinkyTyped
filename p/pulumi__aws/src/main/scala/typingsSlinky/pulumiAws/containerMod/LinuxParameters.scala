@@ -13,16 +13,53 @@ trait LinuxParameters extends js.Object {
 
 object LinuxParameters {
   @scala.inline
-  def apply(
-    capabilities: KernelCapabilities = null,
-    devices: js.Array[Device] = null,
-    initProcessEnabled: js.UndefOr[Boolean] = js.undefined
-  ): LinuxParameters = {
+  def apply(): LinuxParameters = {
     val __obj = js.Dynamic.literal()
-    if (capabilities != null) __obj.updateDynamic("capabilities")(capabilities.asInstanceOf[js.Any])
-    if (devices != null) __obj.updateDynamic("devices")(devices.asInstanceOf[js.Any])
-    if (!js.isUndefined(initProcessEnabled)) __obj.updateDynamic("initProcessEnabled")(initProcessEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[LinuxParameters]
   }
+  @scala.inline
+  implicit class LinuxParametersOps[Self <: LinuxParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCapabilities(value: KernelCapabilities): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCapabilities: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDevices(value: js.Array[Device]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInitProcessEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initProcessEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitProcessEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initProcessEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

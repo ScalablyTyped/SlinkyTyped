@@ -22,22 +22,23 @@ import scala.scalajs.js.annotation._
 /**
   * Enum for storage constants
   */
+@js.native
 trait Constants extends js.Object {
-  var ACCESS_TOKEN: access_token
-  var ERROR_DESCRIPTION: error_description
-  var EXPIRES_IN: expires_in
-  var ID_TOKEN: id_token
-  var LEVEL_STRING_MAP: Anon0
-  var LOADFRAME_TIMEOUT: `6000`
-  var LOGGING_LEVEL: AnonERROR
-  var POPUP_HEIGHT: `600`
-  var POPUP_WIDTH: `483`
-  var RESOURCE_DELIMETER: Verticalline
-  var SESSION_STATE: session_state
-  var STORAGE: AnonACCESSTOKENKEY
-  var TOKEN_RENEW_STATUS_CANCELED: Canceled
-  var TOKEN_RENEW_STATUS_COMPLETED: Completed
-  var TOKEN_RENEW_STATUS_IN_PROGRESS: `In Progress`
+  var ACCESS_TOKEN: access_token = js.native
+  var ERROR_DESCRIPTION: error_description = js.native
+  var EXPIRES_IN: expires_in = js.native
+  var ID_TOKEN: id_token = js.native
+  var LEVEL_STRING_MAP: Anon0 = js.native
+  var LOADFRAME_TIMEOUT: `6000` = js.native
+  var LOGGING_LEVEL: AnonERROR = js.native
+  var POPUP_HEIGHT: `600` = js.native
+  var POPUP_WIDTH: `483` = js.native
+  var RESOURCE_DELIMETER: Verticalline = js.native
+  var SESSION_STATE: session_state = js.native
+  var STORAGE: AnonACCESSTOKENKEY = js.native
+  var TOKEN_RENEW_STATUS_CANCELED: Canceled = js.native
+  var TOKEN_RENEW_STATUS_COMPLETED: Completed = js.native
+  var TOKEN_RENEW_STATUS_IN_PROGRESS: `In Progress` = js.native
 }
 
 object Constants {
@@ -60,8 +61,105 @@ object Constants {
     TOKEN_RENEW_STATUS_IN_PROGRESS: `In Progress`
   ): Constants = {
     val __obj = js.Dynamic.literal(ACCESS_TOKEN = ACCESS_TOKEN.asInstanceOf[js.Any], ERROR_DESCRIPTION = ERROR_DESCRIPTION.asInstanceOf[js.Any], EXPIRES_IN = EXPIRES_IN.asInstanceOf[js.Any], ID_TOKEN = ID_TOKEN.asInstanceOf[js.Any], LEVEL_STRING_MAP = LEVEL_STRING_MAP.asInstanceOf[js.Any], LOADFRAME_TIMEOUT = LOADFRAME_TIMEOUT.asInstanceOf[js.Any], LOGGING_LEVEL = LOGGING_LEVEL.asInstanceOf[js.Any], POPUP_HEIGHT = POPUP_HEIGHT.asInstanceOf[js.Any], POPUP_WIDTH = POPUP_WIDTH.asInstanceOf[js.Any], RESOURCE_DELIMETER = RESOURCE_DELIMETER.asInstanceOf[js.Any], SESSION_STATE = SESSION_STATE.asInstanceOf[js.Any], STORAGE = STORAGE.asInstanceOf[js.Any], TOKEN_RENEW_STATUS_CANCELED = TOKEN_RENEW_STATUS_CANCELED.asInstanceOf[js.Any], TOKEN_RENEW_STATUS_COMPLETED = TOKEN_RENEW_STATUS_COMPLETED.asInstanceOf[js.Any], TOKEN_RENEW_STATUS_IN_PROGRESS = TOKEN_RENEW_STATUS_IN_PROGRESS.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Constants]
   }
+  @scala.inline
+  implicit class ConstantsOps[Self <: Constants] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withACCESS_TOKEN(value: access_token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ACCESS_TOKEN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withERROR_DESCRIPTION(value: error_description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ERROR_DESCRIPTION")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEXPIRES_IN(value: expires_in): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EXPIRES_IN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withID_TOKEN(value: id_token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ID_TOKEN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLEVEL_STRING_MAP(value: Anon0): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LEVEL_STRING_MAP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOADFRAME_TIMEOUT(value: `6000`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOADFRAME_TIMEOUT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOGGING_LEVEL(value: AnonERROR): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOGGING_LEVEL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPOPUP_HEIGHT(value: `600`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("POPUP_HEIGHT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPOPUP_WIDTH(value: `483`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("POPUP_WIDTH")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRESOURCE_DELIMETER(value: Verticalline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RESOURCE_DELIMETER")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSESSION_STATE(value: session_state): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SESSION_STATE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSTORAGE(value: AnonACCESSTOKENKEY): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("STORAGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTOKEN_RENEW_STATUS_CANCELED(value: Canceled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TOKEN_RENEW_STATUS_CANCELED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTOKEN_RENEW_STATUS_COMPLETED(value: Completed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TOKEN_RENEW_STATUS_COMPLETED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTOKEN_RENEW_STATUS_IN_PROGRESS(value: `In Progress`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TOKEN_RENEW_STATUS_IN_PROGRESS")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

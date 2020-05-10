@@ -18,8 +18,8 @@ trait Selection extends js.Object {
   def addRange(range: org.scalajs.dom.raw.Range): Unit = js.native
   def collapse(): Unit = js.native
   def collapse(node: Null, offset: Double): Unit = js.native
-  def collapse(node: Node): Unit = js.native
-  def collapse(node: Node, offset: Double): Unit = js.native
+  def collapse(node: org.scalajs.dom.raw.Node): Unit = js.native
+  def collapse(node: org.scalajs.dom.raw.Node, offset: Double): Unit = js.native
   def collapseToEnd(): Unit = js.native
   def collapseToStart(): Unit = js.native
   def containsNode(node: org.scalajs.dom.raw.Node): scala.Boolean = js.native
@@ -40,11 +40,12 @@ trait Selection extends js.Object {
   ): Unit = js.native
   def setPosition(): Unit = js.native
   def setPosition(node: Null, offset: Double): Unit = js.native
-  def setPosition(node: Node): Unit = js.native
-  def setPosition(node: Node, offset: Double): Unit = js.native
+  def setPosition(node: org.scalajs.dom.raw.Node): Unit = js.native
+  def setPosition(node: org.scalajs.dom.raw.Node, offset: Double): Unit = js.native
 }
 
 @JSGlobal("Selection")
 @js.native
-object Selection extends Instantiable0[Selection]
+object Selection
+  extends Instantiable0[org.scalajs.dom.raw.Selection]
 

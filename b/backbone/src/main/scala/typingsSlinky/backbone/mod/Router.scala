@@ -1,6 +1,5 @@
 package typingsSlinky.backbone.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,8 +33,8 @@ class Router () extends js.Object {
   def preinitialize(options: RouterOptions): Unit = js.native
   def route(route: String, name: String): Router = js.native
   def route(route: String, name: String, callback: js.Function): Router = js.native
-  def route(route: RegExp, name: String): Router = js.native
-  def route(route: RegExp, name: String, callback: js.Function): Router = js.native
+  def route(route: js.RegExp, name: String): Router = js.native
+  def route(route: js.RegExp, name: String, callback: js.Function): Router = js.native
 }
 
 /* static members */

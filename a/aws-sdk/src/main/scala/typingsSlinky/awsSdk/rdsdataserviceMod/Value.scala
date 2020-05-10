@@ -50,30 +50,143 @@ trait Value extends js.Object {
 
 object Value {
   @scala.inline
-  def apply(
-    arrayValues: ArrayValueList = null,
-    bigIntValue: Int | Double = null,
-    bitValue: js.UndefOr[scala.Boolean] = js.undefined,
-    blobValue: _Blob = null,
-    doubleValue: Int | Double = null,
-    intValue: Int | Double = null,
-    isNull: js.UndefOr[scala.Boolean] = js.undefined,
-    realValue: Int | Double = null,
-    stringValue: String = null,
-    structValue: StructValue = null
-  ): Value = {
+  def apply(): Value = {
     val __obj = js.Dynamic.literal()
-    if (arrayValues != null) __obj.updateDynamic("arrayValues")(arrayValues.asInstanceOf[js.Any])
-    if (bigIntValue != null) __obj.updateDynamic("bigIntValue")(bigIntValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(bitValue)) __obj.updateDynamic("bitValue")(bitValue.asInstanceOf[js.Any])
-    if (blobValue != null) __obj.updateDynamic("blobValue")(blobValue.asInstanceOf[js.Any])
-    if (doubleValue != null) __obj.updateDynamic("doubleValue")(doubleValue.asInstanceOf[js.Any])
-    if (intValue != null) __obj.updateDynamic("intValue")(intValue.asInstanceOf[js.Any])
-    if (!js.isUndefined(isNull)) __obj.updateDynamic("isNull")(isNull.asInstanceOf[js.Any])
-    if (realValue != null) __obj.updateDynamic("realValue")(realValue.asInstanceOf[js.Any])
-    if (stringValue != null) __obj.updateDynamic("stringValue")(stringValue.asInstanceOf[js.Any])
-    if (structValue != null) __obj.updateDynamic("structValue")(structValue.asInstanceOf[js.Any])
     __obj.asInstanceOf[Value]
   }
+  @scala.inline
+  implicit class ValueOps[Self <: Value] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayValues(value: ArrayValueList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBigIntValue(value: BoxedLong): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bigIntValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBigIntValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bigIntValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBitValue(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBitValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBlobValueUint8Array(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blobValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlobValue(value: _Blob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blobValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBlobValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blobValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoubleValue(value: BoxedDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoubleValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntValue(value: BoxedInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIsNull(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNull")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNull")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRealValue(value: BoxedFloat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRealValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("realValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStructValue(value: StructValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStructValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structValue")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

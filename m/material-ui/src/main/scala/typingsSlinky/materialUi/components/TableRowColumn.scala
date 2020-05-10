@@ -1,43 +1,45 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Table.TableRowColumnProps
 import typingsSlinky.materialUi.tableRowColumnMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableRowColumn
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object TableRowColumn {
   @JSImport("material-ui/Table/TableRowColumn", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, colSpan, rowSpan, style */
-  def apply(
-    columnNumber: Int | Double = null,
-    hoverable: js.UndefOr[Boolean] = js.undefined,
-    onClick: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit = null,
-    onHover: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit = null,
-    onHoverExit: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (columnNumber != null) __obj.updateDynamic("columnNumber")(columnNumber.asInstanceOf[js.Any])
-    if (!js.isUndefined(hoverable)) __obj.updateDynamic("hoverable")(hoverable.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction2(onHover))
-    if (onHoverExit != null) __obj.updateDynamic("onHoverExit")(js.Any.fromFunction2(onHoverExit))
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colSpan(value: Double): this.type = set("colSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def columnNumber(value: Double): this.type = set("columnNumber", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hoverable(value: Boolean): this.type = set("hoverable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onHover(value: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit): this.type = set("onHover", js.Any.fromFunction2(value))
+    @scala.inline
+    def onHoverExit(value: (/* e */ SyntheticMouseEvent[js.Object], /* column */ Double) => Unit): this.type = set("onHoverExit", js.Any.fromFunction2(value))
+    @scala.inline
+    def rowSpan(value: Double): this.type = set("rowSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.tableRowColumnMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TableRowColumnProps
+  
+  def withProps(p: TableRowColumnProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableRowColumn.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

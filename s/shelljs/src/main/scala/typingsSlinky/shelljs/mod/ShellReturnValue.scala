@@ -3,7 +3,6 @@ package typingsSlinky.shelljs.mod
 import typingsSlinky.node.childProcessMod.ChildProcess
 import typingsSlinky.shelljs.ExecOptionsasyncfalse
 import typingsSlinky.shelljs.ExecOptionsasynctrue
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -255,8 +254,8 @@ trait ShellReturnValue extends ExecOutputReturnValue {
   	 * @return Returns a string containing all lines of the file that match the given `regex_filter`.
   	 */
   def grep(options: String, regex_filter: String, files: js.Array[String]): ShellString = js.native
-  def grep(options: String, regex_filter: RegExp, files: String*): ShellString = js.native
-  def grep(options: String, regex_filter: RegExp, files: js.Array[String]): ShellString = js.native
+  def grep(options: String, regex_filter: js.RegExp, files: String*): ShellString = js.native
+  def grep(options: String, regex_filter: js.RegExp, files: js.Array[String]): ShellString = js.native
   /**
   	 * Reads input string from given files and returns a string containing all lines
   	 * of the file that match the given `regex_filter`. Wildcard `*` accepted.
@@ -289,8 +288,8 @@ trait ShellReturnValue extends ExecOutputReturnValue {
   	 * @return Returns a string containing all lines of the file that match the given `regex_filter`.
   	 */
   def grep(regex_filter: String, files: js.Array[String]): ShellString = js.native
-  def grep(regex_filter: RegExp, files: String*): ShellString = js.native
-  def grep(regex_filter: RegExp, files: js.Array[String]): ShellString = js.native
+  def grep(regex_filter: js.RegExp, files: String*): ShellString = js.native
+  def grep(regex_filter: js.RegExp, files: js.Array[String]): ShellString = js.native
   /**
   	 * Read the start of a pipeline input.
   	 */
@@ -340,8 +339,8 @@ trait ShellReturnValue extends ExecOutputReturnValue {
   	 * @return            The new string after replacement.
   	 */
   def sed(options: String, searchRegex: String, replacement: String, files: js.Array[String]): ShellString = js.native
-  def sed(options: String, searchRegex: RegExp, replacement: String, files: String*): ShellString = js.native
-  def sed(options: String, searchRegex: RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
+  def sed(options: String, searchRegex: js.RegExp, replacement: String, files: String*): ShellString = js.native
+  def sed(options: String, searchRegex: js.RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
   /**
   	 * Reads an input string from pipeline and performs a JavaScript `replace()`
   	 * on the input using the given search regex and replacement string or function.
@@ -373,8 +372,8 @@ trait ShellReturnValue extends ExecOutputReturnValue {
   	 * @return            The new string after replacement.
   	 */
   def sed(searchRegex: String, replacement: String, files: js.Array[String]): ShellString = js.native
-  def sed(searchRegex: RegExp, replacement: String, files: String*): ShellString = js.native
-  def sed(searchRegex: RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
+  def sed(searchRegex: js.RegExp, replacement: String, files: String*): ShellString = js.native
+  def sed(searchRegex: js.RegExp, replacement: String, files: js.Array[String]): ShellString = js.native
   /**
   	 * Return the contents of the pipeline, sorted line-by-line.
   	 *

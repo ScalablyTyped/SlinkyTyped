@@ -18,9 +18,6 @@ object matrixJsSdkStrings {
   sealed trait join extends _MembershipType
   
   @js.native
-  sealed trait joined extends _MembershipType
-  
-  @js.native
   sealed trait leave extends _MembershipType
   
   @js.native
@@ -40,6 +37,9 @@ object matrixJsSdkStrings {
   
   @js.native
   sealed trait mDotnotice extends _MsgType
+  
+  @js.native
+  sealed trait mDotpresence extends _EventType
   
   @js.native
   sealed trait mDotroomDotcanonical_alias extends _EventType
@@ -86,14 +86,18 @@ object matrixJsSdkStrings {
   @js.native
   sealed trait mDotvideo extends _MsgType
   
+  @js.native
+  sealed trait `private` extends js.Object
+  
+  @js.native
+  sealed trait public extends js.Object
+  
   @scala.inline
   def ban: ban = "ban".asInstanceOf[ban]
   @scala.inline
   def invite: invite = "invite".asInstanceOf[invite]
   @scala.inline
   def join: join = "join".asInstanceOf[join]
-  @scala.inline
-  def joined: joined = "joined".asInstanceOf[joined]
   @scala.inline
   def leave: leave = "leave".asInstanceOf[leave]
   @scala.inline
@@ -108,6 +112,8 @@ object matrixJsSdkStrings {
   def mDotimage: mDotimage = "m.image".asInstanceOf[mDotimage]
   @scala.inline
   def mDotnotice: mDotnotice = "m.notice".asInstanceOf[mDotnotice]
+  @scala.inline
+  def mDotpresence: mDotpresence = "m.presence".asInstanceOf[mDotpresence]
   @scala.inline
   def mDotroomDotcanonical_alias: mDotroomDotcanonical_alias = "m.room.canonical_alias".asInstanceOf[mDotroomDotcanonical_alias]
   @scala.inline
@@ -138,5 +144,9 @@ object matrixJsSdkStrings {
   def mDottext: mDottext = "m.text".asInstanceOf[mDottext]
   @scala.inline
   def mDotvideo: mDotvideo = "m.video".asInstanceOf[mDotvideo]
+  @scala.inline
+  def `private`: `private` = "private".asInstanceOf[`private`]
+  @scala.inline
+  def public: public = "public".asInstanceOf[public]
 }
 

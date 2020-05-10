@@ -1,32 +1,57 @@
 package typingsSlinky.reactTagsinput.mod
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.reactTagsinput.AnonValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait RenderInputProps extends InputProps {
+@js.native
+trait RenderInputProps[Tag] extends InputProps {
    // parameter is either a DOM element or a mounted React component
-  val value: Tag
-  def addTag(tag: Tag): Unit
-  def onChange(e: ChangeEvent[AnonValue]): Unit
-  def ref(r: js.Any): Unit
+  val value: Tag = js.native
+  def addTag(tag: Tag): Unit = js.native
+  def onChange(e: ChangeEvent[AnonValue]): Unit = js.native
+  def ref(r: js.Any): Unit = js.native
 }
 
 object RenderInputProps {
   @scala.inline
-  def apply(
-    addTag: Tag => Unit,
-    onChange: ChangeEvent[AnonValue] => Unit,
-    ref: js.Any => Unit,
-    value: Tag,
-    StringDictionary: StringDictionary[js.Any] = null
-  ): RenderInputProps = {
+  def apply[Tag](addTag: Tag => Unit, onChange: ChangeEvent[AnonValue] => Unit, ref: js.Any => Unit, value: Tag): RenderInputProps[Tag] = {
     val __obj = js.Dynamic.literal(addTag = js.Any.fromFunction1(addTag), onChange = js.Any.fromFunction1(onChange), ref = js.Any.fromFunction1(ref), value = value.asInstanceOf[js.Any])
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    __obj.asInstanceOf[RenderInputProps]
+    __obj.asInstanceOf[RenderInputProps[Tag]]
   }
+  @scala.inline
+  implicit class RenderInputPropsOps[Self[tag] <: RenderInputProps[tag], Tag] (val x: Self[Tag]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[Tag] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[Tag]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[Tag] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Tag] with Other]
+    @scala.inline
+    def withAddTag(value: Tag => Unit): Self[Tag] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addTag")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: ChangeEvent[AnonValue] => Unit): Self[Tag] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRef(value: js.Any => Unit): Self[Tag] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withValue(value: Tag): Self[Tag] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

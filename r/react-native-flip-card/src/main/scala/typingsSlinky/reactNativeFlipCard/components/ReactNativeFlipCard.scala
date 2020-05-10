@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeFlipCard.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeFlipCard.mod.FlipCardProps
@@ -13,45 +10,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeFlipCard
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeFlipCard {
   @JSImport("react-native-flip-card", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    alignHeight: js.UndefOr[Boolean] = js.undefined,
-    alignWidth: js.UndefOr[Boolean] = js.undefined,
-    clickable: js.UndefOr[Boolean] = js.undefined,
-    flip: js.UndefOr[Boolean] = js.undefined,
-    flipHorizontal: js.UndefOr[Boolean] = js.undefined,
-    flipVertical: js.UndefOr[Boolean] = js.undefined,
-    friction: Int | Double = null,
-    onFlipEnd: () => Unit = null,
-    onFlipStart: () => Unit = null,
-    perspective: Int | Double = null,
-    style: StyleProp[ViewStyle] = null,
-    useNativeDriver: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(alignHeight)) __obj.updateDynamic("alignHeight")(alignHeight.asInstanceOf[js.Any])
-    if (!js.isUndefined(alignWidth)) __obj.updateDynamic("alignWidth")(alignWidth.asInstanceOf[js.Any])
-    if (!js.isUndefined(clickable)) __obj.updateDynamic("clickable")(clickable.asInstanceOf[js.Any])
-    if (!js.isUndefined(flip)) __obj.updateDynamic("flip")(flip.asInstanceOf[js.Any])
-    if (!js.isUndefined(flipHorizontal)) __obj.updateDynamic("flipHorizontal")(flipHorizontal.asInstanceOf[js.Any])
-    if (!js.isUndefined(flipVertical)) __obj.updateDynamic("flipVertical")(flipVertical.asInstanceOf[js.Any])
-    if (friction != null) __obj.updateDynamic("friction")(friction.asInstanceOf[js.Any])
-    if (onFlipEnd != null) __obj.updateDynamic("onFlipEnd")(js.Any.fromFunction0(onFlipEnd))
-    if (onFlipStart != null) __obj.updateDynamic("onFlipStart")(js.Any.fromFunction0(onFlipStart))
-    if (perspective != null) __obj.updateDynamic("perspective")(perspective.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(useNativeDriver)) __obj.updateDynamic("useNativeDriver")(useNativeDriver.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def alignHeight(value: Boolean): this.type = set("alignHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def alignWidth(value: Boolean): this.type = set("alignWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clickable(value: Boolean): this.type = set("clickable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flip(value: Boolean): this.type = set("flip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flipHorizontal(value: Boolean): this.type = set("flipHorizontal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def flipVertical(value: Boolean): this.type = set("flipVertical", value.asInstanceOf[js.Any])
+    @scala.inline
+    def friction(value: Double): this.type = set("friction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onFlipEnd(value: () => Unit): this.type = set("onFlipEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onFlipStart(value: () => Unit): this.type = set("onFlipStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def perspective(value: Double): this.type = set("perspective", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def useNativeDriver(value: Boolean): this.type = set("useNativeDriver", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeFlipCard.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FlipCardProps
+  
+  def withProps(p: FlipCardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativeFlipCard.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

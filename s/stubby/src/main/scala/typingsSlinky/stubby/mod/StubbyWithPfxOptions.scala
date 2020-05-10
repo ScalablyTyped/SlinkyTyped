@@ -1,44 +1,43 @@
 package typingsSlinky.stubby.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.tlsMod.TlsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StubbyWithPfxOptions
   extends StubbyCommonOptions
      with StubbyOptions {
   /** pfx file contents (mutually exclusive with key/cert options) */
-  var pfx: js.UndefOr[String | Buffer | (js.Array[String | Buffer | js.Object])] = js.undefined
+  var pfx: js.UndefOr[String | Buffer | (js.Array[String | Buffer | js.Object])] = js.native
 }
 
 object StubbyWithPfxOptions {
   @scala.inline
-  def apply(
-    _httpsOptions: TlsOptions = null,
-    admin: Int | Double = null,
-    data: StubbyData | js.Array[StubbyData] = null,
-    datadir: String = null,
-    location: String = null,
-    pfx: String | Buffer | (js.Array[String | Buffer | js.Object]) = null,
-    quiet: js.UndefOr[Boolean] = js.undefined,
-    stubs: Int | Double = null,
-    tls: Int | Double = null,
-    watch: String = null
-  ): StubbyWithPfxOptions = {
+  def apply(): StubbyWithPfxOptions = {
     val __obj = js.Dynamic.literal()
-    if (_httpsOptions != null) __obj.updateDynamic("_httpsOptions")(_httpsOptions.asInstanceOf[js.Any])
-    if (admin != null) __obj.updateDynamic("admin")(admin.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (datadir != null) __obj.updateDynamic("datadir")(datadir.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (pfx != null) __obj.updateDynamic("pfx")(pfx.asInstanceOf[js.Any])
-    if (!js.isUndefined(quiet)) __obj.updateDynamic("quiet")(quiet.asInstanceOf[js.Any])
-    if (stubs != null) __obj.updateDynamic("stubs")(stubs.asInstanceOf[js.Any])
-    if (tls != null) __obj.updateDynamic("tls")(tls.asInstanceOf[js.Any])
-    if (watch != null) __obj.updateDynamic("watch")(watch.asInstanceOf[js.Any])
     __obj.asInstanceOf[StubbyWithPfxOptions]
   }
+  @scala.inline
+  implicit class StubbyWithPfxOptionsOps[Self <: StubbyWithPfxOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPfx(value: String | Buffer | (js.Array[String | Buffer | js.Object])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pfx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPfx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pfx")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

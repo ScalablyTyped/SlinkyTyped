@@ -62,36 +62,173 @@ trait ClientVpnConnection extends js.Object {
 
 object ClientVpnConnection {
   @scala.inline
-  def apply(
-    ClientIp: String = null,
-    ClientVpnEndpointId: String = null,
-    CommonName: String = null,
-    ConnectionEndTime: String = null,
-    ConnectionEstablishedTime: String = null,
-    ConnectionId: String = null,
-    EgressBytes: String = null,
-    EgressPackets: String = null,
-    IngressBytes: String = null,
-    IngressPackets: String = null,
-    Status: ClientVpnConnectionStatus = null,
-    Timestamp: String = null,
-    Username: String = null
-  ): ClientVpnConnection = {
+  def apply(): ClientVpnConnection = {
     val __obj = js.Dynamic.literal()
-    if (ClientIp != null) __obj.updateDynamic("ClientIp")(ClientIp.asInstanceOf[js.Any])
-    if (ClientVpnEndpointId != null) __obj.updateDynamic("ClientVpnEndpointId")(ClientVpnEndpointId.asInstanceOf[js.Any])
-    if (CommonName != null) __obj.updateDynamic("CommonName")(CommonName.asInstanceOf[js.Any])
-    if (ConnectionEndTime != null) __obj.updateDynamic("ConnectionEndTime")(ConnectionEndTime.asInstanceOf[js.Any])
-    if (ConnectionEstablishedTime != null) __obj.updateDynamic("ConnectionEstablishedTime")(ConnectionEstablishedTime.asInstanceOf[js.Any])
-    if (ConnectionId != null) __obj.updateDynamic("ConnectionId")(ConnectionId.asInstanceOf[js.Any])
-    if (EgressBytes != null) __obj.updateDynamic("EgressBytes")(EgressBytes.asInstanceOf[js.Any])
-    if (EgressPackets != null) __obj.updateDynamic("EgressPackets")(EgressPackets.asInstanceOf[js.Any])
-    if (IngressBytes != null) __obj.updateDynamic("IngressBytes")(IngressBytes.asInstanceOf[js.Any])
-    if (IngressPackets != null) __obj.updateDynamic("IngressPackets")(IngressPackets.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Timestamp != null) __obj.updateDynamic("Timestamp")(Timestamp.asInstanceOf[js.Any])
-    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientVpnConnection]
   }
+  @scala.inline
+  implicit class ClientVpnConnectionOps[Self <: ClientVpnConnection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientIp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientIp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientVpnEndpointId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpnEndpointId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientVpnEndpointId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpnEndpointId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommonName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommonName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommonName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommonName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionEndTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionEndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionEndTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionEndTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionEstablishedTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionEstablishedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionEstablishedTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionEstablishedTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEgressBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EgressBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEgressBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EgressBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEgressPackets(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EgressPackets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEgressPackets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EgressPackets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIngressBytes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngressBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIngressBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngressBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIngressPackets(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngressPackets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIngressPackets: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IngressPackets")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ClientVpnConnectionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimestamp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Timestamp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

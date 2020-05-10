@@ -12,10 +12,8 @@ trait SortDirectionType extends js.Object
 
 object SortDirectionType {
   @scala.inline
-  def ASC: typingsSlinky.reactVirtualized.reactVirtualizedStrings.ASC = this.cast("ASC")
+  def ASC: typingsSlinky.reactVirtualized.reactVirtualizedStrings.ASC = "ASC".asInstanceOf[typingsSlinky.reactVirtualized.reactVirtualizedStrings.ASC]
   @scala.inline
-  def DESC: typingsSlinky.reactVirtualized.reactVirtualizedStrings.DESC = this.cast("DESC")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def DESC: typingsSlinky.reactVirtualized.reactVirtualizedStrings.DESC = "DESC".asInstanceOf[typingsSlinky.reactVirtualized.reactVirtualizedStrings.DESC]
 }
 

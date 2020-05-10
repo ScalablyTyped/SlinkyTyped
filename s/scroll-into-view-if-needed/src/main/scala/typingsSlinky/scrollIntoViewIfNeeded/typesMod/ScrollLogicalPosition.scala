@@ -14,14 +14,12 @@ trait ScrollLogicalPosition extends js.Object
 
 object ScrollLogicalPosition {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.center = "center".asInstanceOf[typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.center]
   @scala.inline
-  def center: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.center = this.cast("center")
+  def end: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.end = "end".asInstanceOf[typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.end]
   @scala.inline
-  def end: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.end = this.cast("end")
+  def nearest: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.nearest = "nearest".asInstanceOf[typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.nearest]
   @scala.inline
-  def nearest: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.nearest = this.cast("nearest")
-  @scala.inline
-  def start: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.start = this.cast("start")
+  def start: typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.start = "start".asInstanceOf[typingsSlinky.scrollIntoViewIfNeeded.scrollIntoViewIfNeededStrings.start]
 }
 

@@ -81,7 +81,7 @@ class Marker () extends MVCObject {
     * `null`, the marker will be removed.
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#Marker.setMap Maps JavaScript API}
     */
-  def setMap(map: Map[typingsSlinky.std.Element]): Unit = js.native
+  def setMap(map: Map[Element]): Unit = js.native
   def setMap(map: StreetViewPanorama): Unit = js.native
   def setOpacity(): Unit = js.native
   /** @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#Marker.setOpacity Maps JavaScript API} */

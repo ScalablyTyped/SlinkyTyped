@@ -18,11 +18,41 @@ trait CreateVolumePermissionModifications extends js.Object {
 
 object CreateVolumePermissionModifications {
   @scala.inline
-  def apply(Add: CreateVolumePermissionList = null, Remove: CreateVolumePermissionList = null): CreateVolumePermissionModifications = {
+  def apply(): CreateVolumePermissionModifications = {
     val __obj = js.Dynamic.literal()
-    if (Add != null) __obj.updateDynamic("Add")(Add.asInstanceOf[js.Any])
-    if (Remove != null) __obj.updateDynamic("Remove")(Remove.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateVolumePermissionModifications]
   }
+  @scala.inline
+  implicit class CreateVolumePermissionModificationsOps[Self <: CreateVolumePermissionModifications] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: CreateVolumePermissionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Add")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Add")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemove(value: CreateVolumePermissionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Remove")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Remove")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -14,10 +14,29 @@ trait DescribeAvailabilityZonesResult extends js.Object {
 
 object DescribeAvailabilityZonesResult {
   @scala.inline
-  def apply(AvailabilityZones: AvailabilityZoneList = null): DescribeAvailabilityZonesResult = {
+  def apply(): DescribeAvailabilityZonesResult = {
     val __obj = js.Dynamic.literal()
-    if (AvailabilityZones != null) __obj.updateDynamic("AvailabilityZones")(AvailabilityZones.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeAvailabilityZonesResult]
   }
+  @scala.inline
+  implicit class DescribeAvailabilityZonesResultOps[Self <: DescribeAvailabilityZonesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAvailabilityZones(value: AvailabilityZoneList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAvailabilityZones: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AvailabilityZones")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

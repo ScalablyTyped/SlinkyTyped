@@ -34,22 +34,89 @@ trait WorkGroupConfigurationUpdates extends js.Object {
 
 object WorkGroupConfigurationUpdates {
   @scala.inline
-  def apply(
-    BytesScannedCutoffPerQuery: Int | Double = null,
-    EnforceWorkGroupConfiguration: js.UndefOr[scala.Boolean] = js.undefined,
-    PublishCloudWatchMetricsEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    RemoveBytesScannedCutoffPerQuery: js.UndefOr[scala.Boolean] = js.undefined,
-    RequesterPaysEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    ResultConfigurationUpdates: ResultConfigurationUpdates = null
-  ): WorkGroupConfigurationUpdates = {
+  def apply(): WorkGroupConfigurationUpdates = {
     val __obj = js.Dynamic.literal()
-    if (BytesScannedCutoffPerQuery != null) __obj.updateDynamic("BytesScannedCutoffPerQuery")(BytesScannedCutoffPerQuery.asInstanceOf[js.Any])
-    if (!js.isUndefined(EnforceWorkGroupConfiguration)) __obj.updateDynamic("EnforceWorkGroupConfiguration")(EnforceWorkGroupConfiguration.asInstanceOf[js.Any])
-    if (!js.isUndefined(PublishCloudWatchMetricsEnabled)) __obj.updateDynamic("PublishCloudWatchMetricsEnabled")(PublishCloudWatchMetricsEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(RemoveBytesScannedCutoffPerQuery)) __obj.updateDynamic("RemoveBytesScannedCutoffPerQuery")(RemoveBytesScannedCutoffPerQuery.asInstanceOf[js.Any])
-    if (!js.isUndefined(RequesterPaysEnabled)) __obj.updateDynamic("RequesterPaysEnabled")(RequesterPaysEnabled.asInstanceOf[js.Any])
-    if (ResultConfigurationUpdates != null) __obj.updateDynamic("ResultConfigurationUpdates")(ResultConfigurationUpdates.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkGroupConfigurationUpdates]
   }
+  @scala.inline
+  implicit class WorkGroupConfigurationUpdatesOps[Self <: WorkGroupConfigurationUpdates] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBytesScannedCutoffPerQuery(value: BytesScannedCutoffValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesScannedCutoffPerQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesScannedCutoffPerQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesScannedCutoffPerQuery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnforceWorkGroupConfiguration(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnforceWorkGroupConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnforceWorkGroupConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnforceWorkGroupConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPublishCloudWatchMetricsEnabled(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublishCloudWatchMetricsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPublishCloudWatchMetricsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PublishCloudWatchMetricsEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveBytesScannedCutoffPerQuery(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveBytesScannedCutoffPerQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveBytesScannedCutoffPerQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveBytesScannedCutoffPerQuery")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRequesterPaysEnabled(value: BoxedBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterPaysEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRequesterPaysEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequesterPaysEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResultConfigurationUpdates(value: ResultConfigurationUpdates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultConfigurationUpdates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResultConfigurationUpdates: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResultConfigurationUpdates")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

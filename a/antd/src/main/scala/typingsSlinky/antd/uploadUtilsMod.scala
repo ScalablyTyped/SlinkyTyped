@@ -1,9 +1,9 @@
 package typingsSlinky.antd
 
+import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.File
 import typingsSlinky.antd.uploadInterfaceMod.RcFile
 import typingsSlinky.antd.uploadInterfaceMod.UploadFile
-import typingsSlinky.std.Blob
-import typingsSlinky.std.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -164,7 +164,7 @@ package object sesMod {
   type PolicyMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.sesMod.Policy]
   type PolicyName = java.lang.String
   type PolicyNameList = js.Array[typingsSlinky.awsSdk.sesMod.PolicyName]
-  type RawMessageData = typingsSlinky.node.Buffer | scala.scalajs.js.typedarray.Uint8Array | typingsSlinky.awsSdk.sesMod.Blob | java.lang.String
+  type RawMessageData = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.sesMod.Blob | java.lang.String
   type ReceiptActionsList = js.Array[typingsSlinky.awsSdk.sesMod.ReceiptAction]
   type ReceiptFilterList = js.Array[typingsSlinky.awsSdk.sesMod.ReceiptFilter]
   type ReceiptFilterName = java.lang.String

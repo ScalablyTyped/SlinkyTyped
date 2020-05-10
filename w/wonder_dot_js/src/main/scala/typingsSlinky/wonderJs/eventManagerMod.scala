@@ -1,6 +1,6 @@
 package typingsSlinky.wonderJs
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.wonderFrp.streamFromEventPatternStreamMod.FromEventPatternStream
 import typingsSlinky.wonderJs.eengineeventMod.EEngineEvent
 import typingsSlinky.wonderJs.entityObjectMod.EntityObject

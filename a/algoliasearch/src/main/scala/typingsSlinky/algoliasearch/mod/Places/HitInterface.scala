@@ -12,67 +12,68 @@ import scala.scalajs.js.annotation._
   * Hit of search.
   * https://community.algolia.com/places/api-clients.html#api-suggestion-name
   */
+@js.native
 trait HitInterface extends js.Object {
   /**
     * Associated list of latitude and longitude.
     * https://community.algolia.com/places/api-clients.html#api-suggestion-latlng
     */
-  var _geoloc: AnonLat
+  var _geoloc: AnonLat = js.native
   /**
     * The associated highlighting information.
     * https://community.algolia.com/places/api-clients.html#api-suggestion-highlightResult
     */
-  var _highlightResult: AnonAdministrative
-  var _tags: js.Array[String]
-  var admin_level: Double
+  var _highlightResult: AnonAdministrative = js.native
+  var _tags: js.Array[String] = js.native
+  var admin_level: Double = js.native
   /**
     * List of associated administrative region names.
     * https://community.algolia.com/places/api-clients.html#api-suggestion-administrative
     */
-  var administrative: js.UndefOr[js.Array[String]] = js.undefined
+  var administrative: js.UndefOr[js.Array[String]] = js.native
   /**
     * https://community.algolia.com/places/api-clients.html#api-suggestion-city
     * List of the associated city names. If no language parameter is specified, retrieves all of them.
     */
-  var city: js.UndefOr[AnonDefault] = js.undefined
+  var city: js.UndefOr[AnonDefault] = js.native
   /**
     * Associated country name.
     * https://community.algolia.com/places/api-clients.html#api-suggestion-country
     */
-  var country: AnonDictkey
+  var country: AnonDictkey = js.native
   /**
     * Two letters country code (ISO 639-1).
     * https://community.algolia.com/places/api-clients.html#api-suggestion-countryCode
     */
-  var country_code: String
+  var country_code: String = js.native
   /**
     * List of the associated county names. If no language parameter is specified, retrieves all of them.
     * https://community.algolia.com/places/api-clients.html#api-suggestion-county
     */
-  var county: js.UndefOr[AnonDefault] = js.undefined
-  var district: js.UndefOr[String] = js.undefined
-  var importance: Double
-  var is_city: Boolean
-  var is_country: Boolean
-  var is_highway: Boolean
-  var is_popular: Boolean
-  var is_suburb: Boolean
+  var county: js.UndefOr[AnonDefault] = js.native
+  var district: js.UndefOr[String] = js.native
+  var importance: Double = js.native
+  var is_city: Boolean = js.native
+  var is_country: Boolean = js.native
+  var is_highway: Boolean = js.native
+  var is_popular: Boolean = js.native
+  var is_suburb: Boolean = js.native
   /**
     * https://community.algolia.com/places/api-clients.html#api-suggestion-name
     * List of names of the place. If no language parameter is specified, retrieves all of them.
     */
-  var locale_names: AnonDefault
-  var objectID: String
+  var locale_names: AnonDefault = js.native
+  var objectID: String = js.native
   /**
     * Associated population.
     * https://community.algolia.com/places/api-clients.html#api-suggestion-population
     */
-  var population: js.UndefOr[Double] = js.undefined
+  var population: js.UndefOr[Double] = js.native
   /**
     * List of associated postcodes.
     * https://community.algolia.com/places/api-clients.html#api-suggestion-postcode
     */
-  var postcode: js.UndefOr[js.Array[String]] = js.undefined
+  var postcode: js.UndefOr[js.Array[String]] = js.native
 }
 
 object HitInterface {
@@ -91,22 +92,174 @@ object HitInterface {
     is_popular: Boolean,
     is_suburb: Boolean,
     locale_names: AnonDefault,
-    objectID: String,
-    administrative: js.Array[String] = null,
-    city: AnonDefault = null,
-    county: AnonDefault = null,
-    district: String = null,
-    population: Int | Double = null,
-    postcode: js.Array[String] = null
+    objectID: String
   ): HitInterface = {
     val __obj = js.Dynamic.literal(_geoloc = _geoloc.asInstanceOf[js.Any], _highlightResult = _highlightResult.asInstanceOf[js.Any], _tags = _tags.asInstanceOf[js.Any], admin_level = admin_level.asInstanceOf[js.Any], country = country.asInstanceOf[js.Any], country_code = country_code.asInstanceOf[js.Any], importance = importance.asInstanceOf[js.Any], is_city = is_city.asInstanceOf[js.Any], is_country = is_country.asInstanceOf[js.Any], is_highway = is_highway.asInstanceOf[js.Any], is_popular = is_popular.asInstanceOf[js.Any], is_suburb = is_suburb.asInstanceOf[js.Any], locale_names = locale_names.asInstanceOf[js.Any], objectID = objectID.asInstanceOf[js.Any])
-    if (administrative != null) __obj.updateDynamic("administrative")(administrative.asInstanceOf[js.Any])
-    if (city != null) __obj.updateDynamic("city")(city.asInstanceOf[js.Any])
-    if (county != null) __obj.updateDynamic("county")(county.asInstanceOf[js.Any])
-    if (district != null) __obj.updateDynamic("district")(district.asInstanceOf[js.Any])
-    if (population != null) __obj.updateDynamic("population")(population.asInstanceOf[js.Any])
-    if (postcode != null) __obj.updateDynamic("postcode")(postcode.asInstanceOf[js.Any])
     __obj.asInstanceOf[HitInterface]
   }
+  @scala.inline
+  implicit class HitInterfaceOps[Self <: HitInterface] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_geoloc(value: AnonLat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_geoloc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_highlightResult(value: AnonAdministrative): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_highlightResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_tags(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdmin_level(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("admin_level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCountry(value: AnonDictkey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCountry_code(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country_code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImportance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("importance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_city(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_city")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_country(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_highway(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_highway")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_popular(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_popular")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIs_suburb(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("is_suburb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocale_names(value: AnonDefault): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale_names")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObjectID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("objectID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdministrative(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("administrative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAdministrative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("administrative")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCity(value: AnonDefault): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("city")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCounty(value: AnonDefault): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("county")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCounty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("county")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDistrict(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("district")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDistrict: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("district")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopulation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("population")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopulation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("population")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostcode(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postcode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostcode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postcode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

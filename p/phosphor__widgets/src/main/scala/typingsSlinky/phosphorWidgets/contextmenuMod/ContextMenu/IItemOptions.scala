@@ -1,8 +1,5 @@
 package typingsSlinky.phosphorWidgets.contextmenuMod.ContextMenu
 
-import typingsSlinky.phosphorCoreutils.jsonMod.ReadonlyJSONObject
-import typingsSlinky.phosphorWidgets.menuMod.Menu
-import typingsSlinky.phosphorWidgets.menuMod.Menu.ItemType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +7,7 @@ import scala.scalajs.js.annotation._
 /**
   * An options object for creating a context menu item.
   */
+@js.native
 trait IItemOptions
   extends typingsSlinky.phosphorWidgets.menuMod.Menu.IItemOptions {
   /**
@@ -24,7 +22,7 @@ trait IItemOptions
     *
     * The default rank is `Infinity`.
     */
-  var rank: js.UndefOr[Double] = js.undefined
+  var rank: js.UndefOr[Double] = js.native
   /**
     * The CSS selector for the context menu item.
     *
@@ -35,26 +33,40 @@ trait IItemOptions
     *
     * The selector must not contain commas.
     */
-  var selector: String
+  var selector: String = js.native
 }
 
 object IItemOptions {
   @scala.inline
-  def apply(
-    selector: String,
-    args: ReadonlyJSONObject = null,
-    command: String = null,
-    rank: Int | Double = null,
-    submenu: Menu = null,
-    `type`: ItemType = null
-  ): IItemOptions = {
+  def apply(selector: String): IItemOptions = {
     val __obj = js.Dynamic.literal(selector = selector.asInstanceOf[js.Any])
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (command != null) __obj.updateDynamic("command")(command.asInstanceOf[js.Any])
-    if (rank != null) __obj.updateDynamic("rank")(rank.asInstanceOf[js.Any])
-    if (submenu != null) __obj.updateDynamic("submenu")(submenu.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IItemOptions]
   }
+  @scala.inline
+  implicit class IItemOptionsOps[Self <: IItemOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSelector(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selector")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRank(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRank: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rank")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

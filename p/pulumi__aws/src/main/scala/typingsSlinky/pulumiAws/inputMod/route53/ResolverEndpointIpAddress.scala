@@ -20,11 +20,47 @@ trait ResolverEndpointIpAddress extends js.Object {
 
 object ResolverEndpointIpAddress {
   @scala.inline
-  def apply(subnetId: Input[String], ip: Input[String] = null, ipId: Input[String] = null): ResolverEndpointIpAddress = {
+  def apply(subnetId: Input[String]): ResolverEndpointIpAddress = {
     val __obj = js.Dynamic.literal(subnetId = subnetId.asInstanceOf[js.Any])
-    if (ip != null) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
-    if (ipId != null) __obj.updateDynamic("ipId")(ipId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolverEndpointIpAddress]
   }
+  @scala.inline
+  implicit class ResolverEndpointIpAddressOps[Self <: ResolverEndpointIpAddress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubnetId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subnetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIp(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIpId(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIpId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ipId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

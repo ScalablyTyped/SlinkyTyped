@@ -16,10 +16,8 @@ trait PositionDimension extends js.Object
 
 object PositionDimension {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def x: typingsSlinky.cytoscape.cytoscapeStrings.x = "x".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.x]
   @scala.inline
-  def x: typingsSlinky.cytoscape.cytoscapeStrings.x = this.cast("x")
-  @scala.inline
-  def y: typingsSlinky.cytoscape.cytoscapeStrings.y = this.cast("y")
+  def y: typingsSlinky.cytoscape.cytoscapeStrings.y = "y".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.y]
 }
 

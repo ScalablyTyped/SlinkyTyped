@@ -5,12 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VRDisplayCapabilities extends js.Object {
-  val canPresent: Boolean
-  val hasExternalDisplay: Boolean
-  val hasOrientation: Boolean
-  val hasPosition: Boolean
-  val maxLayers: Double
+  val canPresent: Boolean = js.native
+  val hasExternalDisplay: Boolean = js.native
+  val hasOrientation: Boolean = js.native
+  val hasPosition: Boolean = js.native
+  val maxLayers: Double = js.native
 }
 
 @JSGlobal("VRDisplayCapabilities")

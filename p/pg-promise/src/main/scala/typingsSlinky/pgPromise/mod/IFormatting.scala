@@ -3,7 +3,6 @@ package typingsSlinky.pgPromise.mod
 import typingsSlinky.pgPromise.AnonCapSQL
 import typingsSlinky.pgPromise.AnonRawType
 import typingsSlinky.std.BigInt
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,10 +26,10 @@ trait IFormatting extends js.Object {
   def buffer(obj: js.Object, raw: Boolean): String = js.native
   def csv(values: js.Any): String = js.native
   def csv(values: js.Function0[_]): String = js.native
-  def date(d: js.Function0[Date]): String = js.native
-  def date(d: js.Function0[Date], raw: Boolean): String = js.native
-  def date(d: Date): String = js.native
-  def date(d: Date, raw: Boolean): String = js.native
+  def date(d: js.Function0[js.Date]): String = js.native
+  def date(d: js.Function0[js.Date], raw: Boolean): String = js.native
+  def date(d: js.Date): String = js.native
+  def date(d: js.Date, raw: Boolean): String = js.native
   def format(query: String): String = js.native
   def format(query: String, values: js.Any): String = js.native
   def format(query: String, values: js.Any, options: IFormattingOptions): String = js.native

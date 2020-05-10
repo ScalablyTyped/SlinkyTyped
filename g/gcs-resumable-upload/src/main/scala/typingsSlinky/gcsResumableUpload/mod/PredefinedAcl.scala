@@ -16,18 +16,16 @@ trait PredefinedAcl extends js.Object
 
 object PredefinedAcl {
   @scala.inline
-  def authenticatedRead: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.authenticatedRead = this.cast("authenticatedRead")
+  def authenticatedRead: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.authenticatedRead = "authenticatedRead".asInstanceOf[typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.authenticatedRead]
   @scala.inline
-  def bucketOwnerFullControl: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.bucketOwnerFullControl = this.cast("bucketOwnerFullControl")
+  def bucketOwnerFullControl: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.bucketOwnerFullControl = "bucketOwnerFullControl".asInstanceOf[typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.bucketOwnerFullControl]
   @scala.inline
-  def bucketOwnerRead: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.bucketOwnerRead = this.cast("bucketOwnerRead")
+  def bucketOwnerRead: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.bucketOwnerRead = "bucketOwnerRead".asInstanceOf[typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.bucketOwnerRead]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `private`: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.`private` = "private".asInstanceOf[typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.`private`]
   @scala.inline
-  def `private`: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.`private` = this.cast("private")
+  def projectPrivate: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.projectPrivate = "projectPrivate".asInstanceOf[typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.projectPrivate]
   @scala.inline
-  def projectPrivate: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.projectPrivate = this.cast("projectPrivate")
-  @scala.inline
-  def publicRead: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.publicRead = this.cast("publicRead")
+  def publicRead: typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.publicRead = "publicRead".asInstanceOf[typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.publicRead]
 }
 

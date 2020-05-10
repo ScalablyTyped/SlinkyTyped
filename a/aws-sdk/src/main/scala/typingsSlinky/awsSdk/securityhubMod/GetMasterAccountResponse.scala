@@ -14,10 +14,29 @@ trait GetMasterAccountResponse extends js.Object {
 
 object GetMasterAccountResponse {
   @scala.inline
-  def apply(Master: Invitation = null): GetMasterAccountResponse = {
+  def apply(): GetMasterAccountResponse = {
     val __obj = js.Dynamic.literal()
-    if (Master != null) __obj.updateDynamic("Master")(Master.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMasterAccountResponse]
   }
+  @scala.inline
+  implicit class GetMasterAccountResponseOps[Self <: GetMasterAccountResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaster(value: Invitation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Master")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaster: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Master")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

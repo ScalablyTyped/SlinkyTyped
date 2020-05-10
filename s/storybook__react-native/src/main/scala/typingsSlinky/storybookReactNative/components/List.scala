@@ -1,32 +1,24 @@
 package typingsSlinky.storybookReactNative.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.storybookAddons.distMod.Collection
+import typingsSlinky.storybookReactNative.listMod.Props
 import typingsSlinky.storybookReactNative.listMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object List
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object List {
   @JSImport("@storybook/react-native/dist/preview/components/OnDeviceUI/addons/list", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    addonSelected: String,
-    onPressAddon: String => Unit,
-    panels: Collection,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(addonSelected = addonSelected.asInstanceOf[js.Any], onPressAddon = js.Any.fromFunction1(onPressAddon), panels = panels.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: Props): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(addonSelected: String, onPressAddon: String => Unit, panels: Collection): Default[tag.type, default] = {
+    val __props = js.Dynamic.literal(addonSelected = addonSelected.asInstanceOf[js.Any], onPressAddon = js.Any.fromFunction1(onPressAddon), panels = panels.asInstanceOf[js.Any])
+    new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[Props]))
   }
-  type Props = typingsSlinky.storybookReactNative.listMod.Props
 }
 

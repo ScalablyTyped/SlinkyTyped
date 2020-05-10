@@ -13,12 +13,10 @@ trait ProfilingLevel extends js.Object
 
 object ProfilingLevel {
   @scala.inline
-  def all: typingsSlinky.mongodb.mongodbStrings.all = this.cast("all")
+  def all: typingsSlinky.mongodb.mongodbStrings.all = "all".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.all]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def off: typingsSlinky.mongodb.mongodbStrings.off = "off".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.off]
   @scala.inline
-  def off: typingsSlinky.mongodb.mongodbStrings.off = this.cast("off")
-  @scala.inline
-  def slow_only: typingsSlinky.mongodb.mongodbStrings.slow_only = this.cast("slow_only")
+  def slow_only: typingsSlinky.mongodb.mongodbStrings.slow_only = "slow_only".asInstanceOf[typingsSlinky.mongodb.mongodbStrings.slow_only]
 }
 

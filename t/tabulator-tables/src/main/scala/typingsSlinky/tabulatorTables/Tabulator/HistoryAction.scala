@@ -14,14 +14,12 @@ trait HistoryAction extends js.Object
 
 object HistoryAction {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cellEdit: typingsSlinky.tabulatorTables.tabulatorTablesStrings.cellEdit = "cellEdit".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.cellEdit]
   @scala.inline
-  def cellEdit: typingsSlinky.tabulatorTables.tabulatorTablesStrings.cellEdit = this.cast("cellEdit")
+  def rowAdd: typingsSlinky.tabulatorTables.tabulatorTablesStrings.rowAdd = "rowAdd".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.rowAdd]
   @scala.inline
-  def rowAdd: typingsSlinky.tabulatorTables.tabulatorTablesStrings.rowAdd = this.cast("rowAdd")
+  def rowDelete: typingsSlinky.tabulatorTables.tabulatorTablesStrings.rowDelete = "rowDelete".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.rowDelete]
   @scala.inline
-  def rowDelete: typingsSlinky.tabulatorTables.tabulatorTablesStrings.rowDelete = this.cast("rowDelete")
-  @scala.inline
-  def rowMoved: typingsSlinky.tabulatorTables.tabulatorTablesStrings.rowMoved = this.cast("rowMoved")
+  def rowMoved: typingsSlinky.tabulatorTables.tabulatorTablesStrings.rowMoved = "rowMoved".asInstanceOf[typingsSlinky.tabulatorTables.tabulatorTablesStrings.rowMoved]
 }
 

@@ -33,18 +33,65 @@ trait SchemaAuthorizationInfo extends js.Object {
 
 object SchemaAuthorizationInfo {
   @scala.inline
-  def apply(
-    granted: js.UndefOr[Boolean] = js.undefined,
-    permission: String = null,
-    resource: String = null,
-    resourceAttributes: SchemaResource = null
-  ): SchemaAuthorizationInfo = {
+  def apply(): SchemaAuthorizationInfo = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(granted)) __obj.updateDynamic("granted")(granted.asInstanceOf[js.Any])
-    if (permission != null) __obj.updateDynamic("permission")(permission.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
-    if (resourceAttributes != null) __obj.updateDynamic("resourceAttributes")(resourceAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAuthorizationInfo]
   }
+  @scala.inline
+  implicit class SchemaAuthorizationInfoOps[Self <: SchemaAuthorizationInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGranted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGranted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPermission(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPermission: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permission")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceAttributes(value: SchemaResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAttributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

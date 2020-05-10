@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AlignSelfProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Object {
   /**
     * The align-self CSS property aligns flex items of the current flex line overriding the align-items value.
@@ -14,15 +15,40 @@ trait AlignSelfProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.O
     *
     * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
     */
-  var alignSelf: js.UndefOr[ResponsiveValue[AlignSelfProperty, ThemeType]] = js.undefined
+  var alignSelf: js.UndefOr[ResponsiveValue[AlignSelfProperty, ThemeType]] = js.native
 }
 
 object AlignSelfProps {
   @scala.inline
-  def apply[ThemeType /* <: Theme[TLengthStyledSystem] */](alignSelf: ResponsiveValue[AlignSelfProperty, ThemeType] = null): AlignSelfProps[ThemeType] = {
+  def apply[ThemeType](): AlignSelfProps[ThemeType] = {
     val __obj = js.Dynamic.literal()
-    if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlignSelfProps[ThemeType]]
   }
+  @scala.inline
+  implicit class AlignSelfPropsOps[Self[themetype] <: AlignSelfProps[themetype], ThemeType] (val x: Self[ThemeType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[ThemeType] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[ThemeType]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[ThemeType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ThemeType] with Other]
+    @scala.inline
+    def withAlignSelf(value: ResponsiveValue[AlignSelfProperty, ThemeType]): Self[ThemeType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlignSelf: Self[ThemeType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlignSelfNull: Self[ThemeType] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alignSelf")(null)
+        ret
+    }
+  }
+  
 }
 

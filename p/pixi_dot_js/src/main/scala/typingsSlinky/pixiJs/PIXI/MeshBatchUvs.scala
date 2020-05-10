@@ -19,7 +19,7 @@ class MeshBatchUvs protected () extends js.Object {
     * @member {Float32Array} PIXI.MeshBatchUvs#data
     * @readonly
     */
-  val data: scala.scalajs.js.typedarray.Float32Array = js.native
+  val data: js.typedarray.Float32Array = js.native
   /**
     * Buffer with normalized UV's
     * @member {PIXI.Buffer} PIXI.MeshBatchUvs#uvBuffer

@@ -1,5 +1,6 @@
 package typingsSlinky.stripe
 
+import typingsSlinky.stripe.mod.charges.IPaymentMethodType
 import typingsSlinky.stripe.mod.creditNotes.CreditNoteReason
 import typingsSlinky.stripe.mod.customerBalanceTransactions.CustomerBalanceTransactionType
 import typingsSlinky.stripe.mod.customerTaxIds.TaxIdType
@@ -26,6 +27,7 @@ import typingsSlinky.stripe.mod.paymentIntents.PaymentIntentPaymentMethodType
 import typingsSlinky.stripe.mod.paymentIntents.PaymentIntentStripeProvidedCancellationReason
 import typingsSlinky.stripe.mod.paymentIntents.PaymentIntentUserProvidedCancellationReason
 import typingsSlinky.stripe.mod.paymentMethods.CardBrand
+import typingsSlinky.stripe.mod.paymentMethods.CardWalletType
 import typingsSlinky.stripe.mod.payouts.PayoutMethods
 import typingsSlinky.stripe.mod.payouts.PayoutTypes
 import typingsSlinky.stripe.mod.plans.IntervalUnit
@@ -129,10 +131,10 @@ object stripeStrings {
   sealed trait account_inactive extends js.Object
   
   @js.native
-  sealed trait ach_credit_transfer extends js.Object
+  sealed trait ach_credit_transfer extends IPaymentMethodType
   
   @js.native
-  sealed trait ach_debit extends js.Object
+  sealed trait ach_debit extends IPaymentMethodType
   
   @js.native
   sealed trait active
@@ -144,7 +146,7 @@ object stripeStrings {
   sealed trait adjustment extends CustomerBalanceTransactionType
   
   @js.native
-  sealed trait alipay extends js.Object
+  sealed trait alipay extends IPaymentMethodType
   
   @js.native
   sealed trait alipay_account extends SourceTypes
@@ -159,10 +161,13 @@ object stripeStrings {
   sealed trait allowed_categories extends js.Object
   
   @js.native
+  sealed trait always_invoice extends js.Object
+  
+  @js.native
   sealed trait amex extends CardBrand
   
   @js.native
-  sealed trait amex_express_checkout extends js.Object
+  sealed trait amex_express_checkout extends CardWalletType
   
   @js.native
   sealed trait android_pay extends js.Object
@@ -174,7 +179,9 @@ object stripeStrings {
   sealed trait api_error extends RawType
   
   @js.native
-  sealed trait apple_pay extends WalletProvider
+  sealed trait apple_pay
+    extends CardWalletType
+       with WalletProvider
   
   @js.native
   sealed trait application extends js.Object
@@ -236,7 +243,7 @@ object stripeStrings {
   sealed trait balanceDotavailable extends EventType
   
   @js.native
-  sealed trait bancontact extends js.Object
+  sealed trait bancontact extends IPaymentMethodType
   
   @js.native
   sealed trait bank_account
@@ -288,7 +295,9 @@ object stripeStrings {
   
   @js.native
   sealed trait card
-    extends PaymentIntentPaymentMethodType
+    extends IPaymentMethodType
+       with typingsSlinky.stripe.mod.paymentMethods.IPaymentMethodType
+       with PaymentIntentPaymentMethodType
        with PayoutTypes
        with SourceTypes
   
@@ -302,7 +311,9 @@ object stripeStrings {
   sealed trait card_inactive extends js.Object
   
   @js.native
-  sealed trait card_present extends js.Object
+  sealed trait card_present
+    extends IPaymentMethodType
+       with typingsSlinky.stripe.mod.paymentMethods.IPaymentMethodType
   
   @js.native
   sealed trait cardholder extends js.Object
@@ -399,6 +410,9 @@ object stripeStrings {
   
   @js.native
   sealed trait couponDotupdated extends EventType
+  
+  @js.native
+  sealed trait create_prorations extends js.Object
   
   @js.native
   sealed trait created extends OrderStatus
@@ -578,7 +592,7 @@ object stripeStrings {
   sealed trait ephemeral_key extends js.Object
   
   @js.native
-  sealed trait eps extends js.Object
+  sealed trait eps extends IPaymentMethodType
   
   @js.native
   sealed trait errored extends js.Object
@@ -670,19 +684,23 @@ object stripeStrings {
   sealed trait general extends js.Object
   
   @js.native
-  sealed trait giropay extends js.Object
+  sealed trait giropay extends IPaymentMethodType
   
   @js.native
   sealed trait good extends ProductType
   
   @js.native
-  sealed trait google_pay extends WalletProvider
+  sealed trait google_pay
+    extends CardWalletType
+       with WalletProvider
   
   @js.native
   sealed trait graduated extends js.Object
   
   @js.native
-  sealed trait ideal extends PaymentIntentPaymentMethodType
+  sealed trait ideal
+    extends IPaymentMethodType
+       with PaymentIntentPaymentMethodType
   
   @js.native
   sealed trait idempotency_error extends RawType
@@ -879,7 +897,7 @@ object stripeStrings {
   sealed trait keyed_in extends AuthorizationMethod
   
   @js.native
-  sealed trait klarna extends js.Object
+  sealed trait klarna extends IPaymentMethodType
   
   @js.native
   sealed trait last_during_period extends js.Object
@@ -932,7 +950,7 @@ object stripeStrings {
   sealed trait mastercard_ extends CardBrand
   
   @js.native
-  sealed trait masterpass extends js.Object
+  sealed trait masterpass extends CardWalletType
   
   @js.native
   sealed trait `match` extends js.Object
@@ -1061,7 +1079,7 @@ object stripeStrings {
   sealed trait out_of_stock extends js.Object
   
   @js.native
-  sealed trait p24 extends js.Object
+  sealed trait p24 extends IPaymentMethodType
   
   @js.native
   sealed trait paid
@@ -1346,7 +1364,9 @@ object stripeStrings {
   sealed trait safe extends js.Object
   
   @js.native
-  sealed trait samsung_pay extends WalletProvider
+  sealed trait samsung_pay
+    extends CardWalletType
+       with WalletProvider
   
   @js.native
   sealed trait saturday extends js.Object
@@ -1412,7 +1432,7 @@ object stripeStrings {
   sealed trait skuDotupdated extends EventType
   
   @js.native
-  sealed trait sofort extends js.Object
+  sealed trait sofort extends IPaymentMethodType
   
   @js.native
   sealed trait source extends js.Object
@@ -1451,7 +1471,7 @@ object stripeStrings {
   sealed trait string extends js.Object
   
   @js.native
-  sealed trait stripe_account extends js.Object
+  sealed trait stripe_account extends IPaymentMethodType
   
   @js.native
   sealed trait stripe_fee extends js.Object
@@ -1666,7 +1686,7 @@ object stripeStrings {
   sealed trait visa_ extends CardBrand
   
   @js.native
-  sealed trait visa_checkout extends js.Object
+  sealed trait visa_checkout extends CardWalletType
   
   @js.native
   sealed trait void extends js.Object
@@ -1699,7 +1719,7 @@ object stripeStrings {
   sealed trait webhook_timeout extends js.Object
   
   @js.native
-  sealed trait wechat extends js.Object
+  sealed trait wechat extends IPaymentMethodType
   
   @js.native
   sealed trait wednesday extends js.Object
@@ -1723,11 +1743,11 @@ object stripeStrings {
   sealed trait zh extends js.Object
   
   @scala.inline
-  def `American Express`: `American Express` = "American Express".asInstanceOf[`American Express`]
+  def `American Express`: `American Express` = ("American Express").asInstanceOf[`American Express`]
   @scala.inline
   def Asterisk: Asterisk = "*".asInstanceOf[Asterisk]
   @scala.inline
-  def `Diners Club`: `Diners Club` = "Diners Club".asInstanceOf[`Diners Club`]
+  def `Diners Club`: `Diners Club` = ("Diners Club").asInstanceOf[`Diners Club`]
   @scala.inline
   def Discover: Discover = "Discover".asInstanceOf[Discover]
   @scala.inline
@@ -1796,6 +1816,8 @@ object stripeStrings {
   def all_time: all_time = "all_time".asInstanceOf[all_time]
   @scala.inline
   def allowed_categories: allowed_categories = "allowed_categories".asInstanceOf[allowed_categories]
+  @scala.inline
+  def always_invoice: always_invoice = "always_invoice".asInstanceOf[always_invoice]
   @scala.inline
   def amex: amex = "amex".asInstanceOf[amex]
   @scala.inline
@@ -1950,6 +1972,8 @@ object stripeStrings {
   def couponDotdeleted: couponDotdeleted = "coupon.deleted".asInstanceOf[couponDotdeleted]
   @scala.inline
   def couponDotupdated: couponDotupdated = "coupon.updated".asInstanceOf[couponDotupdated]
+  @scala.inline
+  def create_prorations: create_prorations = "create_prorations".asInstanceOf[create_prorations]
   @scala.inline
   def created: created = "created".asInstanceOf[created]
   @scala.inline

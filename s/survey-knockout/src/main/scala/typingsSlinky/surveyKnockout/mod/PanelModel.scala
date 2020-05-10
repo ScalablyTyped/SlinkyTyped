@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.surveyKnockout.mod.ISurveyElement because Already inherited
 - typingsSlinky.surveyKnockout.mod.IConditionRunner because Already inherited
 - typingsSlinky.surveyKnockout.mod.IElement because var conflicts: containsErrors, isPage, isPanel, isReadOnly, isVisible, name, parent, visible. Inlined renderWidth, width, rightIndent, startWithNewLine */ @JSImport("survey-knockout", "PanelModel")

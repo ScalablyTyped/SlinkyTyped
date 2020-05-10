@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   * @name umbraco.services.mediaHelper
   * @description A helper object used for dealing with media items
   */
+@js.native
 trait IMediaHelper extends js.Object {
   /**
     * @ngdoc function
@@ -21,7 +22,7 @@ trait IMediaHelper extends js.Object {
     *
     * @param {string} imagePath Image path, ex: /media/1234/my-image.jpg
     */
-  def detectIfImageByExtension(imagePath: String): Boolean
+  def detectIfImageByExtension(imagePath: String): Boolean = js.native
   /**
     * @ngdoc function
     * @name umbraco.services.mediaHelper#formatFileTypes
@@ -33,7 +34,7 @@ trait IMediaHelper extends js.Object {
     *
     * @param {string} file types, ex: jpg,png,tiff
     */
-  def formatFileTypes(file: String): String
+  def formatFileTypes(file: String): String = js.native
   /**
     * @ngdoc function
     * @name umbraco.services.mediaHelper#getImagePropertyValue
@@ -46,7 +47,7 @@ trait IMediaHelper extends js.Object {
     * @param {object} options Options object
     * @param {object} options.imageModel The media object to retrieve the image path from
     */
-  def getImagePropertyValue(options: IMediaOptions): String
+  def getImagePropertyValue(options: IMediaOptions): String = js.native
   /**
     * @ngdoc function
     * @name umbraco.services.mediaHelper#getMediaPropertyValue
@@ -60,7 +61,7 @@ trait IMediaHelper extends js.Object {
     * @param {object} options.mediaModel The media object to retrieve the image path from
     * @param {object} options.imageOnly Optional, if true then will only return a path if the media item is an image
     */
-  def getMediaPropertyValue(options: IMediaOptions): String
+  def getMediaPropertyValue(options: IMediaOptions): String = js.native
   /**
     * @ngdoc function
     * @name umbraco.services.mediaHelper#getThumbnail
@@ -73,7 +74,7 @@ trait IMediaHelper extends js.Object {
     * @param {object} options Options object
     * @param {object} options.imageModel The media object to retrieve the image path from
     */
-  def getThumbnail(options: IMediaOptions): String
+  def getThumbnail(options: IMediaOptions): String = js.native
   /**
     * @ngdoc function
     * @name umbraco.services.mediaHelper#getThumbnailFromPath
@@ -85,7 +86,7 @@ trait IMediaHelper extends js.Object {
     *
     * @param {string} imagePath Image path, ex: /media/1234/my-image.jpg
     */
-  def getThumbnailFromPath(imagePath: String): String
+  def getThumbnailFromPath(imagePath: String): String = js.native
   /**
     * @ngdoc function
     * @name umbraco.services.mediaHelper#resolveFile
@@ -98,7 +99,7 @@ trait IMediaHelper extends js.Object {
     * @param {object} mediaEntity A media Entity returned from the entityResource
     * @param {boolean} thumbnail Whether to return the thumbnail url or normal url
     */
-  def resolveFile(mediaItem: IMediaEntity, thumbnail: Boolean): String
+  def resolveFile(mediaItem: IMediaEntity, thumbnail: Boolean): String = js.native
   /**
     * @ngdoc function
     * @name umbraco.services.mediaHelper#resolveFileFromEntity
@@ -111,7 +112,7 @@ trait IMediaHelper extends js.Object {
     * @param {object} mediaEntity A media Entity returned from the entityResource
     * @param {boolean} thumbnail Whether to return the thumbnail url or normal url
     */
-  def resolveFileFromEntity(mediaEntity: IMediaEntity, thumbnail: Boolean): String
+  def resolveFileFromEntity(mediaEntity: IMediaEntity, thumbnail: Boolean): String = js.native
   /**
     * @ngdoc function
     * @name umbraco.services.mediaHelper#scaleToMaxSize
@@ -125,7 +126,7 @@ trait IMediaHelper extends js.Object {
     * @param {number} width Current width
     * @param {number} height Current height
     */
-  def scaleToMaxSize(maxSize: Double, width: Double, height: Double): js.Any
+  def scaleToMaxSize(maxSize: Double, width: Double, height: Double): js.Any = js.native
 }
 
 object IMediaHelper {
@@ -142,8 +143,69 @@ object IMediaHelper {
     scaleToMaxSize: (Double, Double, Double) => js.Any
   ): IMediaHelper = {
     val __obj = js.Dynamic.literal(detectIfImageByExtension = js.Any.fromFunction1(detectIfImageByExtension), formatFileTypes = js.Any.fromFunction1(formatFileTypes), getImagePropertyValue = js.Any.fromFunction1(getImagePropertyValue), getMediaPropertyValue = js.Any.fromFunction1(getMediaPropertyValue), getThumbnail = js.Any.fromFunction1(getThumbnail), getThumbnailFromPath = js.Any.fromFunction1(getThumbnailFromPath), resolveFile = js.Any.fromFunction2(resolveFile), resolveFileFromEntity = js.Any.fromFunction2(resolveFileFromEntity), scaleToMaxSize = js.Any.fromFunction3(scaleToMaxSize))
-  
     __obj.asInstanceOf[IMediaHelper]
   }
+  @scala.inline
+  implicit class IMediaHelperOps[Self <: IMediaHelper] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetectIfImageByExtension(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectIfImageByExtension")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFormatFileTypes(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatFileTypes")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetImagePropertyValue(value: IMediaOptions => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getImagePropertyValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMediaPropertyValue(value: IMediaOptions => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMediaPropertyValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetThumbnail(value: IMediaOptions => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getThumbnail")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetThumbnailFromPath(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getThumbnailFromPath")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withResolveFile(value: (IMediaEntity, Boolean) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveFile")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withResolveFileFromEntity(value: (IMediaEntity, Boolean) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveFileFromEntity")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withScaleToMaxSize(value: (Double, Double, Double) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleToMaxSize")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

@@ -13,11 +13,12 @@ import scala.scalajs.js.annotation._
   *
   *
   */
+@js.native
 trait common extends js.Object {
   /**
     *
     */
-  var createText: js.Object
+  var createText: js.Object = js.native
 }
 
 @JSGlobal("dojox.charting.axis2d.common")

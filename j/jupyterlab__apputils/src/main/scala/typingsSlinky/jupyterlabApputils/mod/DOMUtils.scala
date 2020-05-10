@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabApputils.mod
 
+import org.scalajs.dom.raw.HTMLCollection
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.HTMLCollection
 import typingsSlinky.std.HTMLCollectionOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ object DOMUtils extends js.Object {
   /**
     * Get the index of the node at a client position, or `-1`.
     */
-  def hitTestNodes(nodes: js.Array[typingsSlinky.std.HTMLElement], x: Double, y: Double): Double = js.native
+  def hitTestNodes(nodes: js.Array[HTMLElement], x: Double, y: Double): Double = js.native
   def hitTestNodes(nodes: HTMLCollection, x: Double, y: Double): Double = js.native
 }
 

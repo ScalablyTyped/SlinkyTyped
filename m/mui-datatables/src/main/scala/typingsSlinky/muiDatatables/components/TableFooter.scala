@@ -1,42 +1,36 @@
 package typingsSlinky.muiDatatables.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableFooter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TableFooter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object TableFooter {
   @JSImport("mui-datatables", "TableFooter")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    changePage: js.Any = null,
-    changeRowsPerPage: /* args */ js.Any => _ = null,
-    options: js.Object = null,
-    page: Int | Double = null,
-    rowCount: Int | Double = null,
-    rowsPerPage: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (changePage != null) __obj.updateDynamic("changePage")(changePage.asInstanceOf[js.Any])
-    if (changeRowsPerPage != null) __obj.updateDynamic("changeRowsPerPage")(js.Any.fromFunction1(changeRowsPerPage))
-    if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (rowCount != null) __obj.updateDynamic("rowCount")(rowCount.asInstanceOf[js.Any])
-    if (rowsPerPage != null) __obj.updateDynamic("rowsPerPage")(rowsPerPage.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def changePage(value: js.Any): this.type = set("changePage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def changeRowsPerPage(value: /* args */ js.Any => _): this.type = set("changeRowsPerPage", js.Any.fromFunction1(value))
+    @scala.inline
+    def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
+    @scala.inline
+    def page(value: Double): this.type = set("page", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowCount(value: Double): this.type = set("rowCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowsPerPage(value: Double): this.type = set("rowsPerPage", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MUIDataTableFooter
+  
+  def withProps(p: MUIDataTableFooter): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableFooter.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

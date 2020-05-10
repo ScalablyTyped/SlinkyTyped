@@ -10,123 +10,491 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IGesture extends js.Object {
-  var direction: js.UndefOr[all | vertical | horizontal] = js.undefined
-  var enablePinch: js.UndefOr[Boolean] = js.undefined
-  var enableRotate: js.UndefOr[Boolean] = js.undefined
-  var onPan: js.UndefOr[GestureHandler] = js.undefined
-  var onPanCancel: js.UndefOr[GestureHandler] = js.undefined
-  var onPanDown: js.UndefOr[GestureHandler] = js.undefined
-  var onPanEnd: js.UndefOr[GestureHandler] = js.undefined
-  var onPanLeft: js.UndefOr[GestureHandler] = js.undefined
-  var onPanMove: js.UndefOr[GestureHandler] = js.undefined
-  var onPanRight: js.UndefOr[GestureHandler] = js.undefined
-  var onPanStart: js.UndefOr[GestureHandler] = js.undefined
-  var onPanUp: js.UndefOr[GestureHandler] = js.undefined
-  var onPinch: js.UndefOr[GestureHandler] = js.undefined
-  var onPinchCancel: js.UndefOr[GestureHandler] = js.undefined
-  var onPinchEnd: js.UndefOr[GestureHandler] = js.undefined
-  var onPinchIn: js.UndefOr[GestureHandler] = js.undefined
-  var onPinchMove: js.UndefOr[GestureHandler] = js.undefined
-  var onPinchOut: js.UndefOr[GestureHandler] = js.undefined
-  var onPinchStart: js.UndefOr[GestureHandler] = js.undefined
-  var onPress: js.UndefOr[GestureHandler] = js.undefined
-  var onPressUp: js.UndefOr[GestureHandler] = js.undefined
-  var onRotate: js.UndefOr[GestureHandler] = js.undefined
-  var onRotateCancel: js.UndefOr[GestureHandler] = js.undefined
-  var onRotateEnd: js.UndefOr[GestureHandler] = js.undefined
-  var onRotateMove: js.UndefOr[GestureHandler] = js.undefined
-  var onRotateStart: js.UndefOr[GestureHandler] = js.undefined
-  var onSwipe: js.UndefOr[GestureHandler] = js.undefined
-  var onSwipeDown: js.UndefOr[GestureHandler] = js.undefined
-  var onSwipeLeft: js.UndefOr[GestureHandler] = js.undefined
-  var onSwipeRight: js.UndefOr[GestureHandler] = js.undefined
-  var onSwipeUp: js.UndefOr[GestureHandler] = js.undefined
-  var onTap: js.UndefOr[GestureHandler] = js.undefined
-  var onTouchCancel: js.UndefOr[TouchEventHandler[HTMLElement]] = js.undefined
-  var onTouchEnd: js.UndefOr[TouchEventHandler[HTMLElement]] = js.undefined
-  var onTouchMove: js.UndefOr[TouchEventHandler[HTMLElement]] = js.undefined
-  var onTouchStart: js.UndefOr[TouchEventHandler[HTMLElement]] = js.undefined
+  var direction: js.UndefOr[all | vertical | horizontal] = js.native
+  var enablePinch: js.UndefOr[Boolean] = js.native
+  var enableRotate: js.UndefOr[Boolean] = js.native
+  var onPan: js.UndefOr[GestureHandler] = js.native
+  var onPanCancel: js.UndefOr[GestureHandler] = js.native
+  var onPanDown: js.UndefOr[GestureHandler] = js.native
+  var onPanEnd: js.UndefOr[GestureHandler] = js.native
+  var onPanLeft: js.UndefOr[GestureHandler] = js.native
+  var onPanMove: js.UndefOr[GestureHandler] = js.native
+  var onPanRight: js.UndefOr[GestureHandler] = js.native
+  var onPanStart: js.UndefOr[GestureHandler] = js.native
+  var onPanUp: js.UndefOr[GestureHandler] = js.native
+  var onPinch: js.UndefOr[GestureHandler] = js.native
+  var onPinchCancel: js.UndefOr[GestureHandler] = js.native
+  var onPinchEnd: js.UndefOr[GestureHandler] = js.native
+  var onPinchIn: js.UndefOr[GestureHandler] = js.native
+  var onPinchMove: js.UndefOr[GestureHandler] = js.native
+  var onPinchOut: js.UndefOr[GestureHandler] = js.native
+  var onPinchStart: js.UndefOr[GestureHandler] = js.native
+  var onPress: js.UndefOr[GestureHandler] = js.native
+  var onPressUp: js.UndefOr[GestureHandler] = js.native
+  var onRotate: js.UndefOr[GestureHandler] = js.native
+  var onRotateCancel: js.UndefOr[GestureHandler] = js.native
+  var onRotateEnd: js.UndefOr[GestureHandler] = js.native
+  var onRotateMove: js.UndefOr[GestureHandler] = js.native
+  var onRotateStart: js.UndefOr[GestureHandler] = js.native
+  var onSwipe: js.UndefOr[GestureHandler] = js.native
+  var onSwipeDown: js.UndefOr[GestureHandler] = js.native
+  var onSwipeLeft: js.UndefOr[GestureHandler] = js.native
+  var onSwipeRight: js.UndefOr[GestureHandler] = js.native
+  var onSwipeUp: js.UndefOr[GestureHandler] = js.native
+  var onTap: js.UndefOr[GestureHandler] = js.native
+  var onTouchCancel: js.UndefOr[TouchEventHandler[HTMLElement]] = js.native
+  var onTouchEnd: js.UndefOr[TouchEventHandler[HTMLElement]] = js.native
+  var onTouchMove: js.UndefOr[TouchEventHandler[HTMLElement]] = js.native
+  var onTouchStart: js.UndefOr[TouchEventHandler[HTMLElement]] = js.native
 }
 
 object IGesture {
   @scala.inline
-  def apply(
-    direction: all | vertical | horizontal = null,
-    enablePinch: js.UndefOr[Boolean] = js.undefined,
-    enableRotate: js.UndefOr[Boolean] = js.undefined,
-    onPan: /* s */ IGestureStatus => Unit = null,
-    onPanCancel: /* s */ IGestureStatus => Unit = null,
-    onPanDown: /* s */ IGestureStatus => Unit = null,
-    onPanEnd: /* s */ IGestureStatus => Unit = null,
-    onPanLeft: /* s */ IGestureStatus => Unit = null,
-    onPanMove: /* s */ IGestureStatus => Unit = null,
-    onPanRight: /* s */ IGestureStatus => Unit = null,
-    onPanStart: /* s */ IGestureStatus => Unit = null,
-    onPanUp: /* s */ IGestureStatus => Unit = null,
-    onPinch: /* s */ IGestureStatus => Unit = null,
-    onPinchCancel: /* s */ IGestureStatus => Unit = null,
-    onPinchEnd: /* s */ IGestureStatus => Unit = null,
-    onPinchIn: /* s */ IGestureStatus => Unit = null,
-    onPinchMove: /* s */ IGestureStatus => Unit = null,
-    onPinchOut: /* s */ IGestureStatus => Unit = null,
-    onPinchStart: /* s */ IGestureStatus => Unit = null,
-    onPress: /* s */ IGestureStatus => Unit = null,
-    onPressUp: /* s */ IGestureStatus => Unit = null,
-    onRotate: /* s */ IGestureStatus => Unit = null,
-    onRotateCancel: /* s */ IGestureStatus => Unit = null,
-    onRotateEnd: /* s */ IGestureStatus => Unit = null,
-    onRotateMove: /* s */ IGestureStatus => Unit = null,
-    onRotateStart: /* s */ IGestureStatus => Unit = null,
-    onSwipe: /* s */ IGestureStatus => Unit = null,
-    onSwipeDown: /* s */ IGestureStatus => Unit = null,
-    onSwipeLeft: /* s */ IGestureStatus => Unit = null,
-    onSwipeRight: /* s */ IGestureStatus => Unit = null,
-    onSwipeUp: /* s */ IGestureStatus => Unit = null,
-    onTap: /* s */ IGestureStatus => Unit = null,
-    onTouchCancel: SyntheticTouchEvent[HTMLElement] => Unit = null,
-    onTouchEnd: SyntheticTouchEvent[HTMLElement] => Unit = null,
-    onTouchMove: SyntheticTouchEvent[HTMLElement] => Unit = null,
-    onTouchStart: SyntheticTouchEvent[HTMLElement] => Unit = null
-  ): IGesture = {
+  def apply(): IGesture = {
     val __obj = js.Dynamic.literal()
-    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
-    if (!js.isUndefined(enablePinch)) __obj.updateDynamic("enablePinch")(enablePinch.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableRotate)) __obj.updateDynamic("enableRotate")(enableRotate.asInstanceOf[js.Any])
-    if (onPan != null) __obj.updateDynamic("onPan")(js.Any.fromFunction1(onPan))
-    if (onPanCancel != null) __obj.updateDynamic("onPanCancel")(js.Any.fromFunction1(onPanCancel))
-    if (onPanDown != null) __obj.updateDynamic("onPanDown")(js.Any.fromFunction1(onPanDown))
-    if (onPanEnd != null) __obj.updateDynamic("onPanEnd")(js.Any.fromFunction1(onPanEnd))
-    if (onPanLeft != null) __obj.updateDynamic("onPanLeft")(js.Any.fromFunction1(onPanLeft))
-    if (onPanMove != null) __obj.updateDynamic("onPanMove")(js.Any.fromFunction1(onPanMove))
-    if (onPanRight != null) __obj.updateDynamic("onPanRight")(js.Any.fromFunction1(onPanRight))
-    if (onPanStart != null) __obj.updateDynamic("onPanStart")(js.Any.fromFunction1(onPanStart))
-    if (onPanUp != null) __obj.updateDynamic("onPanUp")(js.Any.fromFunction1(onPanUp))
-    if (onPinch != null) __obj.updateDynamic("onPinch")(js.Any.fromFunction1(onPinch))
-    if (onPinchCancel != null) __obj.updateDynamic("onPinchCancel")(js.Any.fromFunction1(onPinchCancel))
-    if (onPinchEnd != null) __obj.updateDynamic("onPinchEnd")(js.Any.fromFunction1(onPinchEnd))
-    if (onPinchIn != null) __obj.updateDynamic("onPinchIn")(js.Any.fromFunction1(onPinchIn))
-    if (onPinchMove != null) __obj.updateDynamic("onPinchMove")(js.Any.fromFunction1(onPinchMove))
-    if (onPinchOut != null) __obj.updateDynamic("onPinchOut")(js.Any.fromFunction1(onPinchOut))
-    if (onPinchStart != null) __obj.updateDynamic("onPinchStart")(js.Any.fromFunction1(onPinchStart))
-    if (onPress != null) __obj.updateDynamic("onPress")(js.Any.fromFunction1(onPress))
-    if (onPressUp != null) __obj.updateDynamic("onPressUp")(js.Any.fromFunction1(onPressUp))
-    if (onRotate != null) __obj.updateDynamic("onRotate")(js.Any.fromFunction1(onRotate))
-    if (onRotateCancel != null) __obj.updateDynamic("onRotateCancel")(js.Any.fromFunction1(onRotateCancel))
-    if (onRotateEnd != null) __obj.updateDynamic("onRotateEnd")(js.Any.fromFunction1(onRotateEnd))
-    if (onRotateMove != null) __obj.updateDynamic("onRotateMove")(js.Any.fromFunction1(onRotateMove))
-    if (onRotateStart != null) __obj.updateDynamic("onRotateStart")(js.Any.fromFunction1(onRotateStart))
-    if (onSwipe != null) __obj.updateDynamic("onSwipe")(js.Any.fromFunction1(onSwipe))
-    if (onSwipeDown != null) __obj.updateDynamic("onSwipeDown")(js.Any.fromFunction1(onSwipeDown))
-    if (onSwipeLeft != null) __obj.updateDynamic("onSwipeLeft")(js.Any.fromFunction1(onSwipeLeft))
-    if (onSwipeRight != null) __obj.updateDynamic("onSwipeRight")(js.Any.fromFunction1(onSwipeRight))
-    if (onSwipeUp != null) __obj.updateDynamic("onSwipeUp")(js.Any.fromFunction1(onSwipeUp))
-    if (onTap != null) __obj.updateDynamic("onTap")(js.Any.fromFunction1(onTap))
-    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
-    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
-    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
-    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
     __obj.asInstanceOf[IGesture]
   }
+  @scala.inline
+  implicit class IGestureOps[Self <: IGesture] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirection(value: all | vertical | horizontal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnablePinch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePinch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnablePinch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enablePinch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableRotate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRotate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPan(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPan")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPan: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPan")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPanCancel(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanCancel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPanCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanCancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPanDown(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPanDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPanEnd(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPanEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPanLeft(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanLeft")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPanLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPanMove(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanMove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPanMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPanRight(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanRight")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPanRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPanStart(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPanStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPanUp(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanUp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPanUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPanUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPinch(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPinch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPinchCancel(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchCancel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPinchCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchCancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPinchEnd(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPinchEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPinchIn(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchIn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPinchIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPinchMove(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchMove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPinchMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPinchOut(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchOut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPinchOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPinchStart(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPinchStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPinchStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPress(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPressUp(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressUp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPressUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPressUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRotate(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRotate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRotateCancel(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotateCancel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRotateCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotateCancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRotateEnd(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotateEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRotateEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotateEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRotateMove(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotateMove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRotateMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotateMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnRotateStart(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotateStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnRotateStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRotateStart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSwipe(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipe")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSwipe: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipe")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSwipeDown(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSwipeDown: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeDown")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSwipeLeft(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeLeft")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSwipeLeft: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeLeft")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSwipeRight(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeRight")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSwipeRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSwipeUp(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeUp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSwipeUp: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSwipeUp")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTap(value: /* s */ IGestureStatus => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTouchCancel(value: SyntheticTouchEvent[HTMLElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchCancel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTouchCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchCancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTouchEnd(value: SyntheticTouchEvent[HTMLElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTouchEnd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTouchMove(value: SyntheticTouchEvent[HTMLElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchMove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTouchMove: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchMove")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTouchStart(value: SyntheticTouchEvent[HTMLElement] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTouchStart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchStart")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

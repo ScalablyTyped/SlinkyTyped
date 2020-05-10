@@ -22,10 +22,41 @@ trait SourceSchema extends js.Object {
 
 object SourceSchema {
   @scala.inline
-  def apply(RecordColumns: RecordColumns, RecordFormat: RecordFormat, RecordEncoding: RecordEncoding = null): SourceSchema = {
+  def apply(RecordColumns: RecordColumns, RecordFormat: RecordFormat): SourceSchema = {
     val __obj = js.Dynamic.literal(RecordColumns = RecordColumns.asInstanceOf[js.Any], RecordFormat = RecordFormat.asInstanceOf[js.Any])
-    if (RecordEncoding != null) __obj.updateDynamic("RecordEncoding")(RecordEncoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceSchema]
   }
+  @scala.inline
+  implicit class SourceSchemaOps[Self <: SourceSchema] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecordColumns(value: RecordColumns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordColumns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecordFormat(value: RecordFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecordEncoding(value: RecordEncoding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordEncoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecordEncoding: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RecordEncoding")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

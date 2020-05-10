@@ -46,19 +46,91 @@ object ProjectEnvironment {
     computeType: String,
     environmentVariables: js.Array[ProjectEnvironmentEnvironmentVariable],
     image: String,
-    `type`: String,
-    certificate: String = null,
-    imagePullCredentialsType: String = null,
-    privilegedMode: js.UndefOr[Boolean] = js.undefined,
-    registryCredential: ProjectEnvironmentRegistryCredential = null
+    `type`: String
   ): ProjectEnvironment = {
     val __obj = js.Dynamic.literal(computeType = computeType.asInstanceOf[js.Any], environmentVariables = environmentVariables.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (certificate != null) __obj.updateDynamic("certificate")(certificate.asInstanceOf[js.Any])
-    if (imagePullCredentialsType != null) __obj.updateDynamic("imagePullCredentialsType")(imagePullCredentialsType.asInstanceOf[js.Any])
-    if (!js.isUndefined(privilegedMode)) __obj.updateDynamic("privilegedMode")(privilegedMode.asInstanceOf[js.Any])
-    if (registryCredential != null) __obj.updateDynamic("registryCredential")(registryCredential.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectEnvironment]
   }
+  @scala.inline
+  implicit class ProjectEnvironmentOps[Self <: ProjectEnvironment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComputeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("computeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnvironmentVariables(value: js.Array[ProjectEnvironmentEnvironmentVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCertificate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImagePullCredentialsType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePullCredentialsType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImagePullCredentialsType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePullCredentialsType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrivilegedMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilegedMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrivilegedMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privilegedMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegistryCredential(value: ProjectEnvironmentRegistryCredential): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryCredential")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegistryCredential: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registryCredential")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

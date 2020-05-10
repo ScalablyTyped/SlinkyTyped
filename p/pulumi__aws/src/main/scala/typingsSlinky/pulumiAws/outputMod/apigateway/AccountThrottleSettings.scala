@@ -20,8 +20,27 @@ object AccountThrottleSettings {
   @scala.inline
   def apply(burstLimit: Double, rateLimit: Double): AccountThrottleSettings = {
     val __obj = js.Dynamic.literal(burstLimit = burstLimit.asInstanceOf[js.Any], rateLimit = rateLimit.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AccountThrottleSettings]
   }
+  @scala.inline
+  implicit class AccountThrottleSettingsOps[Self <: AccountThrottleSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBurstLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("burstLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRateLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

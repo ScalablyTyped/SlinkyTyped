@@ -1,17 +1,15 @@
 package typingsSlinky.reactToastify.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
-import slinky.web.html.`*`.tag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Flip
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactToastify.mod.Flip] {
+object Flip {
   @JSImport("react-toastify", "Flip")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[typingsSlinky.reactToastify.mod.Flip] = new SharedBuilder_Object_159303587[typingsSlinky.reactToastify.mod.Flip](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Flip.type): SharedBuilder_Object_159303587[typingsSlinky.reactToastify.mod.Flip] = new SharedBuilder_Object_159303587[typingsSlinky.reactToastify.mod.Flip](js.Array(this.component, js.Dictionary.empty))()
 }
 

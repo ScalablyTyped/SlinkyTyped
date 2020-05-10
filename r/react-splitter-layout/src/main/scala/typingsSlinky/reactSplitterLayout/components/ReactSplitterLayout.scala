@@ -1,10 +1,7 @@
 package typingsSlinky.reactSplitterLayout.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSplitterLayout.mod.SplitterLayoutProps
 import typingsSlinky.reactSplitterLayout.mod.TPrimaryIndex
 import typingsSlinky.reactSplitterLayout.mod.default
@@ -12,41 +9,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactSplitterLayout
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactSplitterLayout {
   @JSImport("react-splitter-layout", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    customClassName: String = null,
-    onDragEnd: () => Unit = null,
-    onDragStart: () => Unit = null,
-    onSecondaryPaneSizeChange: /* value */ Double => Unit = null,
-    percentage: js.UndefOr[Boolean] = js.undefined,
-    primaryIndex: TPrimaryIndex = null,
-    primaryMinSize: Int | Double = null,
-    secondaryInitialSize: Int | Double = null,
-    secondaryMinSize: Int | Double = null,
-    vertical: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (customClassName != null) __obj.updateDynamic("customClassName")(customClassName.asInstanceOf[js.Any])
-    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction0(onDragEnd))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction0(onDragStart))
-    if (onSecondaryPaneSizeChange != null) __obj.updateDynamic("onSecondaryPaneSizeChange")(js.Any.fromFunction1(onSecondaryPaneSizeChange))
-    if (!js.isUndefined(percentage)) __obj.updateDynamic("percentage")(percentage.asInstanceOf[js.Any])
-    if (primaryIndex != null) __obj.updateDynamic("primaryIndex")(primaryIndex.asInstanceOf[js.Any])
-    if (primaryMinSize != null) __obj.updateDynamic("primaryMinSize")(primaryMinSize.asInstanceOf[js.Any])
-    if (secondaryInitialSize != null) __obj.updateDynamic("secondaryInitialSize")(secondaryInitialSize.asInstanceOf[js.Any])
-    if (secondaryMinSize != null) __obj.updateDynamic("secondaryMinSize")(secondaryMinSize.asInstanceOf[js.Any])
-    if (!js.isUndefined(vertical)) __obj.updateDynamic("vertical")(vertical.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def customClassName(value: String): this.type = set("customClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDragEnd(value: () => Unit): this.type = set("onDragEnd", js.Any.fromFunction0(value))
+    @scala.inline
+    def onDragStart(value: () => Unit): this.type = set("onDragStart", js.Any.fromFunction0(value))
+    @scala.inline
+    def onSecondaryPaneSizeChange(value: /* value */ Double => Unit): this.type = set("onSecondaryPaneSizeChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def percentage(value: Boolean): this.type = set("percentage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def primaryIndex(value: TPrimaryIndex): this.type = set("primaryIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def primaryMinSize(value: Double): this.type = set("primaryMinSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def secondaryInitialSize(value: Double): this.type = set("secondaryInitialSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def secondaryMinSize(value: Double): this.type = set("secondaryMinSize", value.asInstanceOf[js.Any])
+    @scala.inline
+    def vertical(value: Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactSplitterLayout.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SplitterLayoutProps
+  
+  def withProps(p: SplitterLayoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactSplitterLayout.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

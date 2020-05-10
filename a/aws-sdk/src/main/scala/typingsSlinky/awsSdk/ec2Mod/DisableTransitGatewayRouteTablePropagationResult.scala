@@ -14,10 +14,29 @@ trait DisableTransitGatewayRouteTablePropagationResult extends js.Object {
 
 object DisableTransitGatewayRouteTablePropagationResult {
   @scala.inline
-  def apply(Propagation: TransitGatewayPropagation = null): DisableTransitGatewayRouteTablePropagationResult = {
+  def apply(): DisableTransitGatewayRouteTablePropagationResult = {
     val __obj = js.Dynamic.literal()
-    if (Propagation != null) __obj.updateDynamic("Propagation")(Propagation.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisableTransitGatewayRouteTablePropagationResult]
   }
+  @scala.inline
+  implicit class DisableTransitGatewayRouteTablePropagationResultOps[Self <: DisableTransitGatewayRouteTablePropagationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPropagation(value: TransitGatewayPropagation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Propagation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPropagation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Propagation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

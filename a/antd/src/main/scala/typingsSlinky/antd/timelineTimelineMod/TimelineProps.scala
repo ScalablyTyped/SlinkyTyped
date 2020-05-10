@@ -1,6 +1,7 @@
 package typingsSlinky.antd.timelineTimelineMod
 
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.alternate
 import typingsSlinky.antd.antdStrings.left
 import typingsSlinky.antd.antdStrings.right
@@ -9,37 +10,127 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait TimelineProps extends js.Object {
-  var className: js.UndefOr[String] = js.undefined
-  var mode: js.UndefOr[left | alternate | right] = js.undefined
+  var className: js.UndefOr[String] = js.native
+  var mode: js.UndefOr[left | alternate | right] = js.native
   /** 指定最后一个幽灵节点是否存在或内容 */
-  var pending: js.UndefOr[TagMod[Any]] = js.undefined
-  var pendingDot: js.UndefOr[TagMod[Any]] = js.undefined
-  var prefixCls: js.UndefOr[String] = js.undefined
-  var reverse: js.UndefOr[Boolean] = js.undefined
-  var style: js.UndefOr[CSSProperties] = js.undefined
+  var pending: js.UndefOr[TagMod[Any]] = js.native
+  var pendingDot: js.UndefOr[TagMod[Any]] = js.native
+  var prefixCls: js.UndefOr[String] = js.native
+  var reverse: js.UndefOr[Boolean] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
 }
 
 object TimelineProps {
   @scala.inline
-  def apply(
-    className: String = null,
-    mode: left | alternate | right = null,
-    pending: TagMod[Any] = null,
-    pendingDot: TagMod[Any] = null,
-    prefixCls: String = null,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null
-  ): TimelineProps = {
+  def apply(): TimelineProps = {
     val __obj = js.Dynamic.literal()
-    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (pending != null) __obj.updateDynamic("pending")(pending.asInstanceOf[js.Any])
-    if (pendingDot != null) __obj.updateDynamic("pendingDot")(pendingDot.asInstanceOf[js.Any])
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimelineProps]
   }
+  @scala.inline
+  implicit class TimelinePropsOps[Self <: TimelineProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClassName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMode(value: left | alternate | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPendingReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPending(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPending: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pending")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPendingDotReactElement(value: ReactElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingDot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPendingDot(value: TagMod[Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingDot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPendingDot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingDot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReverse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReverse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyle(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

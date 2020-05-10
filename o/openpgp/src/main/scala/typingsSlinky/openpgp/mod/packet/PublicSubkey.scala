@@ -77,7 +77,7 @@ class PublicSubkey () extends js.Object {
     * Calculates the fingerprint of the key
     * @returns A Uint8Array containing the fingerprint
     */
-  def getFingerprintBytes(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def getFingerprintBytes(): js.typedarray.Uint8Array = js.native
   /**
     * Calculates the key id of the key
     * @returns A 8 byte key id
@@ -103,13 +103,13 @@ class PublicSubkey () extends js.Object {
     * @param bytes Input array to read the packet from
     * @returns This object with attributes set by the parser
     */
-  def read(bytes: scala.scalajs.js.typedarray.Uint8Array): js.Object = js.native
+  def read(bytes: js.typedarray.Uint8Array): js.Object = js.native
   /**
     * Same as write_private_key, but has less information because of
     * public key.
     * @returns OpenPGP packet body contents,
     */
-  def write(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def write(): js.typedarray.Uint8Array = js.native
   /**
     * Write an old version packet - it's used by some of the internal routines.
     */

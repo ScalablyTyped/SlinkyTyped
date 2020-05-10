@@ -23,32 +23,30 @@ trait RuleType extends js.Object
 
 object RuleType {
   @scala.inline
-  def boolean: typingsSlinky.rcFieldForm.rcFieldFormStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.rcFieldForm.rcFieldFormStrings.boolean = "boolean".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.rcFieldForm.rcFieldFormStrings.date = "date".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.date]
   @scala.inline
-  def date: typingsSlinky.rcFieldForm.rcFieldFormStrings.date = this.cast("date")
+  def email: typingsSlinky.rcFieldForm.rcFieldFormStrings.email = "email".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.email]
   @scala.inline
-  def email: typingsSlinky.rcFieldForm.rcFieldFormStrings.email = this.cast("email")
+  def enum: typingsSlinky.rcFieldForm.rcFieldFormStrings.enum = "enum".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.enum]
   @scala.inline
-  def enum: typingsSlinky.rcFieldForm.rcFieldFormStrings.enum = this.cast("enum")
+  def float: typingsSlinky.rcFieldForm.rcFieldFormStrings.float = "float".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.float]
   @scala.inline
-  def float: typingsSlinky.rcFieldForm.rcFieldFormStrings.float = this.cast("float")
+  def hex: typingsSlinky.rcFieldForm.rcFieldFormStrings.hex = "hex".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.hex]
   @scala.inline
-  def hex: typingsSlinky.rcFieldForm.rcFieldFormStrings.hex = this.cast("hex")
+  def integer: typingsSlinky.rcFieldForm.rcFieldFormStrings.integer = "integer".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.integer]
   @scala.inline
-  def integer: typingsSlinky.rcFieldForm.rcFieldFormStrings.integer = this.cast("integer")
+  def method: typingsSlinky.rcFieldForm.rcFieldFormStrings.method = "method".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.method]
   @scala.inline
-  def method: typingsSlinky.rcFieldForm.rcFieldFormStrings.method = this.cast("method")
+  def number: typingsSlinky.rcFieldForm.rcFieldFormStrings.number = "number".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.number]
   @scala.inline
-  def number: typingsSlinky.rcFieldForm.rcFieldFormStrings.number = this.cast("number")
+  def `object`: typingsSlinky.rcFieldForm.rcFieldFormStrings.`object` = "object".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.`object`]
   @scala.inline
-  def `object`: typingsSlinky.rcFieldForm.rcFieldFormStrings.`object` = this.cast("object")
+  def regexp: typingsSlinky.rcFieldForm.rcFieldFormStrings.regexp = "regexp".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.regexp]
   @scala.inline
-  def regexp: typingsSlinky.rcFieldForm.rcFieldFormStrings.regexp = this.cast("regexp")
+  def string: typingsSlinky.rcFieldForm.rcFieldFormStrings.string = "string".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.string]
   @scala.inline
-  def string: typingsSlinky.rcFieldForm.rcFieldFormStrings.string = this.cast("string")
-  @scala.inline
-  def url: typingsSlinky.rcFieldForm.rcFieldFormStrings.url = this.cast("url")
+  def url: typingsSlinky.rcFieldForm.rcFieldFormStrings.url = "url".asInstanceOf[typingsSlinky.rcFieldForm.rcFieldFormStrings.url]
 }
 

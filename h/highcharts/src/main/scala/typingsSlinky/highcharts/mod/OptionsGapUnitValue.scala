@@ -12,10 +12,8 @@ trait OptionsGapUnitValue extends js.Object
 
 object OptionsGapUnitValue {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def relative: typingsSlinky.highcharts.highchartsStrings.relative = "relative".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.relative]
   @scala.inline
-  def relative: typingsSlinky.highcharts.highchartsStrings.relative = this.cast("relative")
-  @scala.inline
-  def value: typingsSlinky.highcharts.highchartsStrings.value = this.cast("value")
+  def value: typingsSlinky.highcharts.highchartsStrings.value = "value".asInstanceOf[typingsSlinky.highcharts.highchartsStrings.value]
 }
 

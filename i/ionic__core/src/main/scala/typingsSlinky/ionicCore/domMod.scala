@@ -26,14 +26,9 @@ object domMod extends js.Object {
     index: Double,
     changed: Boolean
   ): js.Promise[Boolean] = js.native
+  def writeNavState(root: HTMLElement, chain: js.Array[RouteEntry], direction: RouterDirection, index: Double): js.Promise[Boolean] = js.native
   def writeNavState(
-    root: typingsSlinky.std.HTMLElement,
-    chain: js.Array[RouteEntry],
-    direction: RouterDirection,
-    index: Double
-  ): js.Promise[Boolean] = js.native
-  def writeNavState(
-    root: typingsSlinky.std.HTMLElement,
+    root: HTMLElement,
     chain: js.Array[RouteEntry],
     direction: RouterDirection,
     index: Double,

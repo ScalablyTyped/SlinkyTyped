@@ -12,10 +12,8 @@ trait LayzrEvents extends js.Object
 
 object LayzrEvents {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def srcColonafter: typingsSlinky.layzrJs.layzrJsStrings.srcColonafter = "src:after".asInstanceOf[typingsSlinky.layzrJs.layzrJsStrings.srcColonafter]
   @scala.inline
-  def srcColonafter: typingsSlinky.layzrJs.layzrJsStrings.srcColonafter = this.cast("src:after")
-  @scala.inline
-  def srcColonbefore: typingsSlinky.layzrJs.layzrJsStrings.srcColonbefore = this.cast("src:before")
+  def srcColonbefore: typingsSlinky.layzrJs.layzrJsStrings.srcColonbefore = "src:before".asInstanceOf[typingsSlinky.layzrJs.layzrJsStrings.srcColonbefore]
 }
 

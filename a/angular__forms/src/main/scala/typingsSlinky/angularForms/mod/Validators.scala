@@ -1,6 +1,5 @@
 package typingsSlinky.angularForms.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -210,7 +209,7 @@ object Validators extends js.Object {
     *
     */
   def pattern(pattern: String): ValidatorFn = js.native
-  def pattern(pattern: RegExp): ValidatorFn = js.native
+  def pattern(pattern: js.RegExp): ValidatorFn = js.native
   /**
     * @description
     * Validator that requires the control have a non-empty value.

@@ -26,18 +26,65 @@ trait SentimentScore extends js.Object {
 
 object SentimentScore {
   @scala.inline
-  def apply(
-    Mixed: Int | scala.Double = null,
-    Negative: Int | scala.Double = null,
-    Neutral: Int | scala.Double = null,
-    Positive: Int | scala.Double = null
-  ): SentimentScore = {
+  def apply(): SentimentScore = {
     val __obj = js.Dynamic.literal()
-    if (Mixed != null) __obj.updateDynamic("Mixed")(Mixed.asInstanceOf[js.Any])
-    if (Negative != null) __obj.updateDynamic("Negative")(Negative.asInstanceOf[js.Any])
-    if (Neutral != null) __obj.updateDynamic("Neutral")(Neutral.asInstanceOf[js.Any])
-    if (Positive != null) __obj.updateDynamic("Positive")(Positive.asInstanceOf[js.Any])
     __obj.asInstanceOf[SentimentScore]
   }
+  @scala.inline
+  implicit class SentimentScoreOps[Self <: SentimentScore] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMixed(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mixed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMixed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Mixed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNegative(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Negative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNegative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Negative")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNeutral(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Neutral")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNeutral: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Neutral")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPositive(value: Float): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Positive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPositive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Positive")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

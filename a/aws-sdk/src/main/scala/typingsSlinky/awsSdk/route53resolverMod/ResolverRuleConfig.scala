@@ -22,12 +22,53 @@ trait ResolverRuleConfig extends js.Object {
 
 object ResolverRuleConfig {
   @scala.inline
-  def apply(Name: Name = null, ResolverEndpointId: ResourceId = null, TargetIps: TargetList = null): ResolverRuleConfig = {
+  def apply(): ResolverRuleConfig = {
     val __obj = js.Dynamic.literal()
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (ResolverEndpointId != null) __obj.updateDynamic("ResolverEndpointId")(ResolverEndpointId.asInstanceOf[js.Any])
-    if (TargetIps != null) __obj.updateDynamic("TargetIps")(TargetIps.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolverRuleConfig]
   }
+  @scala.inline
+  implicit class ResolverRuleConfigOps[Self <: ResolverRuleConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: Name): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResolverEndpointId(value: ResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolverEndpointId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResolverEndpointId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResolverEndpointId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetIps(value: TargetList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetIps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetIps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TargetIps")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -26,17 +26,59 @@ trait Template extends js.Object {
 
 object Template {
   @scala.inline
-  def apply(
-    TemplateName: TemplateName,
-    HtmlPart: HtmlPart = null,
-    SubjectPart: SubjectPart = null,
-    TextPart: TextPart = null
-  ): Template = {
+  def apply(TemplateName: TemplateName): Template = {
     val __obj = js.Dynamic.literal(TemplateName = TemplateName.asInstanceOf[js.Any])
-    if (HtmlPart != null) __obj.updateDynamic("HtmlPart")(HtmlPart.asInstanceOf[js.Any])
-    if (SubjectPart != null) __obj.updateDynamic("SubjectPart")(SubjectPart.asInstanceOf[js.Any])
-    if (TextPart != null) __obj.updateDynamic("TextPart")(TextPart.asInstanceOf[js.Any])
     __obj.asInstanceOf[Template]
   }
+  @scala.inline
+  implicit class TemplateOps[Self <: Template] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTemplateName(value: TemplateName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlPart(value: HtmlPart): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HtmlPart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlPart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HtmlPart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubjectPart(value: SubjectPart): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectPart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubjectPart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubjectPart")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextPart(value: TextPart): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextPart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextPart: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextPart")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

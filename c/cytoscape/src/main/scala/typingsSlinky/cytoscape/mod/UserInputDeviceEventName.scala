@@ -24,24 +24,22 @@ trait UserInputDeviceEventName extends js.Object
 
 object UserInputDeviceEventName {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def click: typingsSlinky.cytoscape.cytoscapeStrings.click = "click".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.click]
   @scala.inline
-  def click: typingsSlinky.cytoscape.cytoscapeStrings.click = this.cast("click")
+  def mousedown: typingsSlinky.cytoscape.cytoscapeStrings.mousedown = "mousedown".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.mousedown]
   @scala.inline
-  def mousedown: typingsSlinky.cytoscape.cytoscapeStrings.mousedown = this.cast("mousedown")
+  def mousemove: typingsSlinky.cytoscape.cytoscapeStrings.mousemove = "mousemove".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.mousemove]
   @scala.inline
-  def mousemove: typingsSlinky.cytoscape.cytoscapeStrings.mousemove = this.cast("mousemove")
+  def mouseout: typingsSlinky.cytoscape.cytoscapeStrings.mouseout = "mouseout".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.mouseout]
   @scala.inline
-  def mouseout: typingsSlinky.cytoscape.cytoscapeStrings.mouseout = this.cast("mouseout")
+  def mouseover: typingsSlinky.cytoscape.cytoscapeStrings.mouseover = "mouseover".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.mouseover]
   @scala.inline
-  def mouseover: typingsSlinky.cytoscape.cytoscapeStrings.mouseover = this.cast("mouseover")
+  def mouseup: typingsSlinky.cytoscape.cytoscapeStrings.mouseup = "mouseup".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.mouseup]
   @scala.inline
-  def mouseup: typingsSlinky.cytoscape.cytoscapeStrings.mouseup = this.cast("mouseup")
+  def touchend: typingsSlinky.cytoscape.cytoscapeStrings.touchend = "touchend".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.touchend]
   @scala.inline
-  def touchend: typingsSlinky.cytoscape.cytoscapeStrings.touchend = this.cast("touchend")
+  def touchmove: typingsSlinky.cytoscape.cytoscapeStrings.touchmove = "touchmove".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.touchmove]
   @scala.inline
-  def touchmove: typingsSlinky.cytoscape.cytoscapeStrings.touchmove = this.cast("touchmove")
-  @scala.inline
-  def touchstart: typingsSlinky.cytoscape.cytoscapeStrings.touchstart = this.cast("touchstart")
+  def touchstart: typingsSlinky.cytoscape.cytoscapeStrings.touchstart = "touchstart".asInstanceOf[typingsSlinky.cytoscape.cytoscapeStrings.touchstart]
 }
 

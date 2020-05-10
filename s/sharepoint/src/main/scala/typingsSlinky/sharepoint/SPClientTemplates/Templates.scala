@@ -4,45 +4,159 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Templates extends js.Object {
    // TODO: determine appropriate context type and purpose of this template
-  var Body: js.UndefOr[RenderCallback | String] = js.undefined
+  var Body: js.UndefOr[RenderCallback | String] = js.native
   /** Defines templates for fields rendering. The field is specified by it's internal name. */
-  var Fields: js.UndefOr[FieldTemplates] = js.undefined
+  var Fields: js.UndefOr[FieldTemplates] = js.native
   /** Defines template for rendering list view footer.
     Can be either string or SingleTemplateCallback */
-  var Footer: js.UndefOr[SingleTemplateCallback | String] = js.undefined
+  var Footer: js.UndefOr[SingleTemplateCallback | String] = js.native
    // TODO: determine appropriate context type and purpose of this template
   /** Defines templates for rendering groups (aggregations). */
-  var Group: js.UndefOr[GroupCallback | String] = js.undefined
+  var Group: js.UndefOr[GroupCallback | String] = js.native
   /** Defines template for rendering list view header.
     Can be either string or SingleTemplateCallback */
-  var Header: js.UndefOr[SingleTemplateCallback | String] = js.undefined
+  var Header: js.UndefOr[SingleTemplateCallback | String] = js.native
   /** Defines templates for list items rendering. */
-  var Item: js.UndefOr[ItemCallback | String] = js.undefined
-  var View: js.UndefOr[RenderCallback | String] = js.undefined
+  var Item: js.UndefOr[ItemCallback | String] = js.native
+  var View: js.UndefOr[RenderCallback | String] = js.native
 }
 
 object Templates {
   @scala.inline
-  def apply(
-    Body: RenderCallback | String = null,
-    Fields: FieldTemplates = null,
-    Footer: SingleTemplateCallback | String = null,
-    Group: GroupCallback | String = null,
-    Header: SingleTemplateCallback | String = null,
-    Item: ItemCallback | String = null,
-    View: RenderCallback | String = null
-  ): Templates = {
+  def apply(): Templates = {
     val __obj = js.Dynamic.literal()
-    if (Body != null) __obj.updateDynamic("Body")(Body.asInstanceOf[js.Any])
-    if (Fields != null) __obj.updateDynamic("Fields")(Fields.asInstanceOf[js.Any])
-    if (Footer != null) __obj.updateDynamic("Footer")(Footer.asInstanceOf[js.Any])
-    if (Group != null) __obj.updateDynamic("Group")(Group.asInstanceOf[js.Any])
-    if (Header != null) __obj.updateDynamic("Header")(Header.asInstanceOf[js.Any])
-    if (Item != null) __obj.updateDynamic("Item")(Item.asInstanceOf[js.Any])
-    if (View != null) __obj.updateDynamic("View")(View.asInstanceOf[js.Any])
     __obj.asInstanceOf[Templates]
   }
+  @scala.inline
+  implicit class TemplatesOps[Self <: Templates] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBodyFunction1(value: /* ctx */ RenderContext => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBody(value: RenderCallback | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBody: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Body")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFields(value: FieldTemplates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooterFunction1(value: /* renderContext */ RenderContextInView => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Footer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFooter(value: SingleTemplateCallback | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Footer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Footer")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupFunction1(value: /* renderContext */ RenderContextGroupInView => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Group")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGroup(value: GroupCallback | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderFunction1(value: /* renderContext */ RenderContextInView => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHeader(value: SingleTemplateCallback | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeader: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Header")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemFunction1(value: /* renderContext */ RenderContext => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withItem(value: ItemCallback | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withViewFunction1(value: /* ctx */ RenderContext => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("View")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withView(value: RenderCallback | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("View")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutView: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("View")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

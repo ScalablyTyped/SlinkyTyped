@@ -13,12 +13,10 @@ trait TextType extends js.Object
 
 object TextType {
   @scala.inline
-  def BinaryString: typingsSlinky.broFs.broFsStrings.BinaryString = this.cast("BinaryString")
+  def BinaryString: typingsSlinky.broFs.broFsStrings.BinaryString = "BinaryString".asInstanceOf[typingsSlinky.broFs.broFsStrings.BinaryString]
   @scala.inline
-  def DataURL: typingsSlinky.broFs.broFsStrings.DataURL = this.cast("DataURL")
+  def DataURL: typingsSlinky.broFs.broFsStrings.DataURL = "DataURL".asInstanceOf[typingsSlinky.broFs.broFsStrings.DataURL]
   @scala.inline
-  def Text: typingsSlinky.broFs.broFsStrings.Text = this.cast("Text")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Text: typingsSlinky.broFs.broFsStrings.Text = "Text".asInstanceOf[typingsSlinky.broFs.broFsStrings.Text]
 }
 

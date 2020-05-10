@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("@jupyterlab/coreutils/lib/nbformat", "nbformat.MAJOR_VERSION")
 @js.native
-object MAJOR_VERSION extends TopLevel[Double]
+object MAJOR_VERSION extends TopLevel[/* 0 */ Double]
 

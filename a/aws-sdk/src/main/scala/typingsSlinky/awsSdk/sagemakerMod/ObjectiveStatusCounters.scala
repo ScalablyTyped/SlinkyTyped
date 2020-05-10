@@ -22,12 +22,53 @@ trait ObjectiveStatusCounters extends js.Object {
 
 object ObjectiveStatusCounters {
   @scala.inline
-  def apply(Failed: Int | Double = null, Pending: Int | Double = null, Succeeded: Int | Double = null): ObjectiveStatusCounters = {
+  def apply(): ObjectiveStatusCounters = {
     val __obj = js.Dynamic.literal()
-    if (Failed != null) __obj.updateDynamic("Failed")(Failed.asInstanceOf[js.Any])
-    if (Pending != null) __obj.updateDynamic("Pending")(Pending.asInstanceOf[js.Any])
-    if (Succeeded != null) __obj.updateDynamic("Succeeded")(Succeeded.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObjectiveStatusCounters]
   }
+  @scala.inline
+  implicit class ObjectiveStatusCountersOps[Self <: ObjectiveStatusCounters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailed(value: ObjectiveStatusCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Failed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Failed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPending(value: ObjectiveStatusCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPending: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pending")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSucceeded(value: ObjectiveStatusCounter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Succeeded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSucceeded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Succeeded")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

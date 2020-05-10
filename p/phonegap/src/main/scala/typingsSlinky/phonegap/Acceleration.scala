@@ -5,11 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Acceleration extends js.Object {
-  var timestamp: Double
-  var x: Double
-  var y: Double
-  var z: Double
+  var timestamp: Double = js.native
+  var x: Double = js.native
+  var y: Double = js.native
+  var z: Double = js.native
 }
 
 @JSGlobal("Acceleration")

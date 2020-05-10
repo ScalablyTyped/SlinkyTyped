@@ -18,11 +18,41 @@ trait RateIncreaseCriteria extends js.Object {
 
 object RateIncreaseCriteria {
   @scala.inline
-  def apply(numberOfNotifiedThings: Int | Double = null, numberOfSucceededThings: Int | Double = null): RateIncreaseCriteria = {
+  def apply(): RateIncreaseCriteria = {
     val __obj = js.Dynamic.literal()
-    if (numberOfNotifiedThings != null) __obj.updateDynamic("numberOfNotifiedThings")(numberOfNotifiedThings.asInstanceOf[js.Any])
-    if (numberOfSucceededThings != null) __obj.updateDynamic("numberOfSucceededThings")(numberOfSucceededThings.asInstanceOf[js.Any])
     __obj.asInstanceOf[RateIncreaseCriteria]
   }
+  @scala.inline
+  implicit class RateIncreaseCriteriaOps[Self <: RateIncreaseCriteria] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNumberOfNotifiedThings(value: NumberOfThings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfNotifiedThings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfNotifiedThings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfNotifiedThings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNumberOfSucceededThings(value: NumberOfThings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfSucceededThings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNumberOfSucceededThings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfSucceededThings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

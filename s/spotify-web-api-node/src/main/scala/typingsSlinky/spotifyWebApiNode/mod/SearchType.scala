@@ -14,14 +14,12 @@ trait SearchType extends js.Object
 
 object SearchType {
   @scala.inline
-  def album: typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.album = this.cast("album")
+  def album: typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.album = "album".asInstanceOf[typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.album]
   @scala.inline
-  def artist: typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.artist = this.cast("artist")
+  def artist: typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.artist = "artist".asInstanceOf[typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.artist]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def playlist: typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.playlist = "playlist".asInstanceOf[typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.playlist]
   @scala.inline
-  def playlist: typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.playlist = this.cast("playlist")
-  @scala.inline
-  def track: typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.track = this.cast("track")
+  def track: typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.track = "track".asInstanceOf[typingsSlinky.spotifyWebApiNode.spotifyWebApiNodeStrings.track]
 }
 

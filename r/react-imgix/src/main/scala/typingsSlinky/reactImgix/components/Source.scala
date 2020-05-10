@@ -1,15 +1,20 @@
 package typingsSlinky.reactImgix.components
 
+import typingsSlinky.reactImgix.mod.SharedImigixAndSourceProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Source
-  extends SharedApply_SharedImigixAndSourceProps_308637647[typingsSlinky.reactImgix.mod.Source] {
+object Source {
   @JSImport("react-imgix", "Source")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SharedImigixAndSourceProps): SharedBuilder_SharedImigixAndSourceProps_1406058917[typingsSlinky.reactImgix.mod.Source] = new SharedBuilder_SharedImigixAndSourceProps_1406058917[typingsSlinky.reactImgix.mod.Source](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(src: String): SharedBuilder_SharedImigixAndSourceProps_1406058917[typingsSlinky.reactImgix.mod.Source] = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new SharedBuilder_SharedImigixAndSourceProps_1406058917[typingsSlinky.reactImgix.mod.Source](js.Array(this.component, __props.asInstanceOf[SharedImigixAndSourceProps]))
+  }
 }
 

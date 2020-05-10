@@ -20,8 +20,27 @@ object ModifyWorkspacePropertiesRequest {
   @scala.inline
   def apply(WorkspaceId: WorkspaceId, WorkspaceProperties: WorkspaceProperties): ModifyWorkspacePropertiesRequest = {
     val __obj = js.Dynamic.literal(WorkspaceId = WorkspaceId.asInstanceOf[js.Any], WorkspaceProperties = WorkspaceProperties.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ModifyWorkspacePropertiesRequest]
   }
+  @scala.inline
+  implicit class ModifyWorkspacePropertiesRequestOps[Self <: ModifyWorkspacePropertiesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWorkspaceId(value: WorkspaceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorkspaceProperties(value: WorkspaceProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkspaceProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

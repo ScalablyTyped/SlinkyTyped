@@ -2,6 +2,7 @@ package typingsSlinky.peerDial.mod
 
 import typingsSlinky.express.mod.Express
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.expressServeStaticCore.mod.Response
 import typingsSlinky.node.httpMod.IncomingMessage
@@ -30,8 +31,8 @@ trait ServerOptions extends js.Object {
     * Express instance itself is a request handler, which could be invoked without
     * third argument.
     */
-  def expressApp(req: Request[ParamsDictionary, _, _], res: Response[_]): js.Any = js.native
-  def expressApp(req: Request[ParamsDictionary, _, _], res: ServerResponse): js.Any = js.native
+  def expressApp(req: Request[ParamsDictionary, _, _, Query], res: Response[_]): js.Any = js.native
+  def expressApp(req: Request[ParamsDictionary, _, _, Query], res: ServerResponse): js.Any = js.native
   def expressApp(req: IncomingMessage, res: Response[_]): js.Any = js.native
   def expressApp(req: IncomingMessage, res: ServerResponse): js.Any = js.native
 }

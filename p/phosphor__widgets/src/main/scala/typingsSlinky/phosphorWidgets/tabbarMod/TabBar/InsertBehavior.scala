@@ -16,12 +16,10 @@ trait InsertBehavior extends js.Object
 
 object InsertBehavior {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def none: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.none = "none".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.none]
   @scala.inline
-  def none: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.none = this.cast("none")
+  def `select-tab`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab` = "select-tab".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab`]
   @scala.inline
-  def `select-tab`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab` = this.cast("select-tab")
-  @scala.inline
-  def `select-tab-if-needed`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab-if-needed` = this.cast("select-tab-if-needed")
+  def `select-tab-if-needed`: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab-if-needed` = "select-tab-if-needed".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.`select-tab-if-needed`]
 }
 

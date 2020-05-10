@@ -5,22 +5,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IMouseEventData extends IEventData {
-  var button: Double
-  var clientX: Double
-  var clientY: Double
-  var currentTarget: HTMLElement
-  var detail: js.UndefOr[Double] = js.undefined
-  var movementX: js.UndefOr[Double] = js.undefined
-  var movementY: js.UndefOr[Double] = js.undefined
-  var mozMovementX: js.UndefOr[Double] = js.undefined
-  var mozMovementY: js.UndefOr[Double] = js.undefined
-  var pageX: Double
-  var pageY: Double
-  var target: HTMLElement
-  var webkitMovementX: js.UndefOr[Double] = js.undefined
-  var webkitMovementY: js.UndefOr[Double] = js.undefined
-  var wheelDelta: js.UndefOr[Double] = js.undefined
+  var button: Double = js.native
+  var clientX: Double = js.native
+  var clientY: Double = js.native
+  var currentTarget: HTMLElement = js.native
+  var detail: js.UndefOr[Double] = js.native
+  var movementX: js.UndefOr[Double] = js.native
+  var movementY: js.UndefOr[Double] = js.native
+  var mozMovementX: js.UndefOr[Double] = js.native
+  var mozMovementY: js.UndefOr[Double] = js.native
+  var pageX: Double = js.native
+  var pageY: Double = js.native
+  var target: HTMLElement = js.native
+  var webkitMovementX: js.UndefOr[Double] = js.native
+  var webkitMovementY: js.UndefOr[Double] = js.native
+  var wheelDelta: js.UndefOr[Double] = js.native
 }
 
 object IMouseEventData {
@@ -34,26 +35,156 @@ object IMouseEventData {
     pageY: Double,
     preventDefault: () => Unit,
     returnValue: Boolean,
-    target: HTMLElement,
-    detail: Int | Double = null,
-    movementX: Int | Double = null,
-    movementY: Int | Double = null,
-    mozMovementX: Int | Double = null,
-    mozMovementY: Int | Double = null,
-    webkitMovementX: Int | Double = null,
-    webkitMovementY: Int | Double = null,
-    wheelDelta: Int | Double = null
+    target: HTMLElement
   ): IMouseEventData = {
     val __obj = js.Dynamic.literal(button = button.asInstanceOf[js.Any], clientX = clientX.asInstanceOf[js.Any], clientY = clientY.asInstanceOf[js.Any], currentTarget = currentTarget.asInstanceOf[js.Any], pageX = pageX.asInstanceOf[js.Any], pageY = pageY.asInstanceOf[js.Any], preventDefault = js.Any.fromFunction0(preventDefault), returnValue = returnValue.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
-    if (detail != null) __obj.updateDynamic("detail")(detail.asInstanceOf[js.Any])
-    if (movementX != null) __obj.updateDynamic("movementX")(movementX.asInstanceOf[js.Any])
-    if (movementY != null) __obj.updateDynamic("movementY")(movementY.asInstanceOf[js.Any])
-    if (mozMovementX != null) __obj.updateDynamic("mozMovementX")(mozMovementX.asInstanceOf[js.Any])
-    if (mozMovementY != null) __obj.updateDynamic("mozMovementY")(mozMovementY.asInstanceOf[js.Any])
-    if (webkitMovementX != null) __obj.updateDynamic("webkitMovementX")(webkitMovementX.asInstanceOf[js.Any])
-    if (webkitMovementY != null) __obj.updateDynamic("webkitMovementY")(webkitMovementY.asInstanceOf[js.Any])
-    if (wheelDelta != null) __obj.updateDynamic("wheelDelta")(wheelDelta.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMouseEventData]
   }
+  @scala.inline
+  implicit class IMouseEventDataOps[Self <: IMouseEventData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButton(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentTarget(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetail(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMovementX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("movementX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMovementX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("movementX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMovementY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("movementY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMovementY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("movementY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozMovementX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mozMovementX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozMovementX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mozMovementX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMozMovementY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mozMovementY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMozMovementY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mozMovementY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMovementX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webkitMovementX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMovementX: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webkitMovementX")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebkitMovementY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webkitMovementY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebkitMovementY: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webkitMovementY")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWheelDelta(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelDelta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWheelDelta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelDelta")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

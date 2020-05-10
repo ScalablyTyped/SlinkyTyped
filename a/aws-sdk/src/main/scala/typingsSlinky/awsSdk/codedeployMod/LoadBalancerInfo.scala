@@ -22,16 +22,53 @@ trait LoadBalancerInfo extends js.Object {
 
 object LoadBalancerInfo {
   @scala.inline
-  def apply(
-    elbInfoList: ELBInfoList = null,
-    targetGroupInfoList: TargetGroupInfoList = null,
-    targetGroupPairInfoList: TargetGroupPairInfoList = null
-  ): LoadBalancerInfo = {
+  def apply(): LoadBalancerInfo = {
     val __obj = js.Dynamic.literal()
-    if (elbInfoList != null) __obj.updateDynamic("elbInfoList")(elbInfoList.asInstanceOf[js.Any])
-    if (targetGroupInfoList != null) __obj.updateDynamic("targetGroupInfoList")(targetGroupInfoList.asInstanceOf[js.Any])
-    if (targetGroupPairInfoList != null) __obj.updateDynamic("targetGroupPairInfoList")(targetGroupPairInfoList.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancerInfo]
   }
+  @scala.inline
+  implicit class LoadBalancerInfoOps[Self <: LoadBalancerInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElbInfoList(value: ELBInfoList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elbInfoList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElbInfoList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elbInfoList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetGroupInfoList(value: TargetGroupInfoList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroupInfoList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetGroupInfoList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroupInfoList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetGroupPairInfoList(value: TargetGroupPairInfoList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroupPairInfoList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetGroupPairInfoList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroupPairInfoList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

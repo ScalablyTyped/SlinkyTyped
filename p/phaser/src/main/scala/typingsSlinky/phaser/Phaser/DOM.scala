@@ -93,7 +93,7 @@ object DOM extends js.Object {
     */
   def AddToDOM(element: HTMLElement): HTMLElement = js.native
   def AddToDOM(element: HTMLElement, parent: String): HTMLElement = js.native
-  def AddToDOM(element: HTMLElement, parent: typingsSlinky.std.HTMLElement): HTMLElement = js.native
+  def AddToDOM(element: HTMLElement, parent: HTMLElement): HTMLElement = js.native
   /**
     * Inspects the readyState of the document. If the document is already complete then it invokes the given callback.
     * If not complete it sets up several event listeners such as `deviceready`, and once those fire, it invokes the callback.

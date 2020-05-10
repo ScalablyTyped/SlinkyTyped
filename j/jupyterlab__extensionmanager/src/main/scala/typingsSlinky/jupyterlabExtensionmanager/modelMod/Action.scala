@@ -14,14 +14,12 @@ trait Action extends js.Object
 
 object Action {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disable: typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.disable = "disable".asInstanceOf[typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.disable]
   @scala.inline
-  def disable: typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.disable = this.cast("disable")
+  def enable: typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.enable = "enable".asInstanceOf[typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.enable]
   @scala.inline
-  def enable: typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.enable = this.cast("enable")
+  def install: typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.install = "install".asInstanceOf[typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.install]
   @scala.inline
-  def install: typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.install = this.cast("install")
-  @scala.inline
-  def uninstall: typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.uninstall = this.cast("uninstall")
+  def uninstall: typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.uninstall = "uninstall".asInstanceOf[typingsSlinky.jupyterlabExtensionmanager.jupyterlabExtensionmanagerStrings.uninstall]
 }
 

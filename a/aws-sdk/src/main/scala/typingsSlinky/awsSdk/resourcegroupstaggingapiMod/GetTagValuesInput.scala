@@ -18,10 +18,35 @@ trait GetTagValuesInput extends js.Object {
 
 object GetTagValuesInput {
   @scala.inline
-  def apply(Key: TagKey, PaginationToken: PaginationToken = null): GetTagValuesInput = {
+  def apply(Key: TagKey): GetTagValuesInput = {
     val __obj = js.Dynamic.literal(Key = Key.asInstanceOf[js.Any])
-    if (PaginationToken != null) __obj.updateDynamic("PaginationToken")(PaginationToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTagValuesInput]
   }
+  @scala.inline
+  implicit class GetTagValuesInputOps[Self <: GetTagValuesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKey(value: TagKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaginationToken(value: PaginationToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPaginationToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaginationToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

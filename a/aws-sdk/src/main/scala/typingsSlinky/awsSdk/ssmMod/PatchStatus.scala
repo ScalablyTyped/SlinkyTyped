@@ -22,16 +22,53 @@ trait PatchStatus extends js.Object {
 
 object PatchStatus {
   @scala.inline
-  def apply(
-    ApprovalDate: js.Date = null,
-    ComplianceLevel: PatchComplianceLevel = null,
-    DeploymentStatus: PatchDeploymentStatus = null
-  ): PatchStatus = {
+  def apply(): PatchStatus = {
     val __obj = js.Dynamic.literal()
-    if (ApprovalDate != null) __obj.updateDynamic("ApprovalDate")(ApprovalDate.asInstanceOf[js.Any])
-    if (ComplianceLevel != null) __obj.updateDynamic("ComplianceLevel")(ComplianceLevel.asInstanceOf[js.Any])
-    if (DeploymentStatus != null) __obj.updateDynamic("DeploymentStatus")(DeploymentStatus.asInstanceOf[js.Any])
     __obj.asInstanceOf[PatchStatus]
   }
+  @scala.inline
+  implicit class PatchStatusOps[Self <: PatchStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApprovalDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovalDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApprovalDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApprovalDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComplianceLevel(value: PatchComplianceLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComplianceLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeploymentStatus(value: PatchDeploymentStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeploymentStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeploymentStatus")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

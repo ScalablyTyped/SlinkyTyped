@@ -14,14 +14,12 @@ trait Mode extends js.Object
 
 object Mode {
   @scala.inline
-  def Alphanumeric: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Alphanumeric = this.cast("Alphanumeric")
+  def Alphanumeric: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Alphanumeric = "Alphanumeric".asInstanceOf[typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Alphanumeric]
   @scala.inline
-  def Byte: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Byte = this.cast("Byte")
+  def Byte: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Byte = "Byte".asInstanceOf[typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Byte]
   @scala.inline
-  def Kanji: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Kanji = this.cast("Kanji")
+  def Kanji: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Kanji = "Kanji".asInstanceOf[typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Kanji]
   @scala.inline
-  def Numeric: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Numeric = this.cast("Numeric")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Numeric: typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Numeric = "Numeric".asInstanceOf[typingsSlinky.qrcodeGenerator.qrcodeGeneratorStrings.Numeric]
 }
 

@@ -16,5 +16,6 @@ trait HTMLQuoteElement extends HTMLElement {
 
 @JSGlobal("HTMLQuoteElement")
 @js.native
-object HTMLQuoteElement extends Instantiable0[HTMLQuoteElement]
+object HTMLQuoteElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLQuoteElement]
 

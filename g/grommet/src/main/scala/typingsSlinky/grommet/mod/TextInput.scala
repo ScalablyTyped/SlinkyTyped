@@ -1,17 +1,16 @@
 package typingsSlinky.grommet.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLInputElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.grommetStrings.onSelect
 import typingsSlinky.grommet.grommetStrings.placeholder
 import typingsSlinky.grommet.grommetStrings.size
 import typingsSlinky.grommet.textInputMod.TextInputProps
 import typingsSlinky.grommet.utilsMod.Omit
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.InputHTMLAttributes
-import typingsSlinky.std.HTMLInputElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,22 +23,16 @@ class TextInput protected ()
         DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
         onSelect | size | placeholder
       ]), 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
   def this(props: TextInputProps with (Omit[
-        DetailedHTMLProps[
-          InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement], 
-          org.scalajs.dom.raw.HTMLInputElement
-        ], 
+        DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
         onSelect | size | placeholder
       ])) = this()
   def this(
     props: TextInputProps with (Omit[
-        DetailedHTMLProps[
-          InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement], 
-          org.scalajs.dom.raw.HTMLInputElement
-        ], 
+        DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
         onSelect | size | placeholder
       ]),
     context: js.Any
@@ -49,12 +42,11 @@ class TextInput protected ()
 @JSImport("grommet", "TextInput")
 @js.native
 object TextInput extends TopLevel[
-      ComponentClass[
+      ReactComponentClass[
         TextInputProps with (Omit[
           DetailedHTMLProps[InputHTMLAttributes[HTMLInputElement], HTMLInputElement], 
           onSelect | size | placeholder
-        ]), 
-        ComponentState
+        ])
       ]
     ]
 

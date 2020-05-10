@@ -1,0 +1,40 @@
+package typingsSlinky.titanium.Titanium
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+	 * App received user info from apple watch in background. Will be called on startup if the user info finished
+	 * transferring when the receiver was not running.
+	 */
+@js.native
+trait WatchSessionReceiveuserinfoEvent extends WatchSessionBaseEvent {
+  /**
+  		 * The user info content
+  		 */
+  var userInfo: js.Any = js.native
+}
+
+object WatchSessionReceiveuserinfoEvent {
+  @scala.inline
+  def apply(source: WatchSession, userInfo: js.Any): WatchSessionReceiveuserinfoEvent = {
+    val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any], userInfo = userInfo.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WatchSessionReceiveuserinfoEvent]
+  }
+  @scala.inline
+  implicit class WatchSessionReceiveuserinfoEventOps[Self <: WatchSessionReceiveuserinfoEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserInfo(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

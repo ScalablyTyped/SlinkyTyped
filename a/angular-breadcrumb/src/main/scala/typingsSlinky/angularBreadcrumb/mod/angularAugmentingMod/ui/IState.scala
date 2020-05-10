@@ -5,24 +5,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IState extends js.Object {
-  var ncyBreadcrumb: js.UndefOr[AnonLabel] = js.undefined
-  var ncyBreadcrumbLabel: js.UndefOr[String] = js.undefined
-  var ncyBreadcrumbLink: js.UndefOr[String] = js.undefined
+  var ncyBreadcrumb: js.UndefOr[AnonLabel] = js.native
+  var ncyBreadcrumbLabel: js.UndefOr[String] = js.native
+  var ncyBreadcrumbLink: js.UndefOr[String] = js.native
 }
 
 object IState {
   @scala.inline
-  def apply(
-    ncyBreadcrumb: AnonLabel = null,
-    ncyBreadcrumbLabel: String = null,
-    ncyBreadcrumbLink: String = null
-  ): IState = {
+  def apply(): IState = {
     val __obj = js.Dynamic.literal()
-    if (ncyBreadcrumb != null) __obj.updateDynamic("ncyBreadcrumb")(ncyBreadcrumb.asInstanceOf[js.Any])
-    if (ncyBreadcrumbLabel != null) __obj.updateDynamic("ncyBreadcrumbLabel")(ncyBreadcrumbLabel.asInstanceOf[js.Any])
-    if (ncyBreadcrumbLink != null) __obj.updateDynamic("ncyBreadcrumbLink")(ncyBreadcrumbLink.asInstanceOf[js.Any])
     __obj.asInstanceOf[IState]
   }
+  @scala.inline
+  implicit class IStateOps[Self <: IState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNcyBreadcrumb(value: AnonLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ncyBreadcrumb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNcyBreadcrumb: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ncyBreadcrumb")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNcyBreadcrumbLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ncyBreadcrumbLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNcyBreadcrumbLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ncyBreadcrumbLabel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNcyBreadcrumbLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ncyBreadcrumbLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNcyBreadcrumbLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ncyBreadcrumbLink")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

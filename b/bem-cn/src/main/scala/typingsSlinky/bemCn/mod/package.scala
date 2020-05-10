@@ -11,7 +11,7 @@ package object mod {
     - js.Array[java.lang.String]
     - typingsSlinky.bemCn.mod.BemBlock
     - typingsSlinky.bemCn.AnonToString
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
   */
   type BemMix = js.UndefOr[typingsSlinky.bemCn.mod._BemMix | js.Array[java.lang.String] | java.lang.String]
   type BemMods = org.scalablytyped.runtime.StringDictionary[java.lang.String | scala.Boolean | js.Any]

@@ -24,8 +24,33 @@ object CancelTimerFailedEventAttributes {
   @scala.inline
   def apply(cause: CancelTimerFailedCause, decisionTaskCompletedEventId: EventId, timerId: TimerId): CancelTimerFailedEventAttributes = {
     val __obj = js.Dynamic.literal(cause = cause.asInstanceOf[js.Any], decisionTaskCompletedEventId = decisionTaskCompletedEventId.asInstanceOf[js.Any], timerId = timerId.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[CancelTimerFailedEventAttributes]
   }
+  @scala.inline
+  implicit class CancelTimerFailedEventAttributesOps[Self <: CancelTimerFailedEventAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCause(value: CancelTimerFailedCause): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDecisionTaskCompletedEventId(value: EventId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decisionTaskCompletedEventId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimerId(value: TimerId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

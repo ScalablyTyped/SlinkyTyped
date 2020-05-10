@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 /**
   * Provides members for a PageControl. You implement this interface when defining a new PageControl.
   **/
+@js.native
 trait IPageControlMembers extends js.Object {
   //#region Methods
   /**
@@ -17,34 +18,34 @@ trait IPageControlMembers extends js.Object {
     * @param err The error that occurred.
     * @returns Nothing if the error was handled, or an error promise if the error was not handled.
     **/
-  var error: js.UndefOr[js.Function1[/* err */ js.Any, _]] = js.undefined
+  var error: js.UndefOr[js.Function1[/* err */ js.Any, _]] = js.native
   /**
     * Initializes the control before the content of the control is set. Use the processed method for any initialization that should be done after the content of the control has been set.
     * @param element The DOM element that will contain all the content for the page.
     * @param options The options passed to the constructor of the page.
     * @returns A promise that is fulfilled when initialization is complete, if asynchronous processing is necessary. If not, returns nothing.
     **/
-  var init: js.UndefOr[js.Function2[/* element */ HTMLElement, /* options */ js.Any, _]] = js.undefined
+  var init: js.UndefOr[js.Function2[/* element */ HTMLElement, /* options */ js.Any, _]] = js.native
   /**
     * Creates DOM objects from the content in the specified URI. This method is called after the PageControl is defined and before the init method is called.
     * @param uri The URI from which to create DOM objects.
     * @returns A promise whose fulfilled value is the set of unparented DOM objects.
     **/
-  var load: js.UndefOr[js.Function1[/* uri */ String, _]] = js.undefined
+  var load: js.UndefOr[js.Function1[/* uri */ String, _]] = js.native
   /**
     * Initializes the control after the content of the control is set.
     * @param element The DOM element that will contain all the content for the page.
     * @param options The options that are to be passed to the constructor of the page.
     * @returns A promise that is fulfilled when initialization is complete, if asynchronous processing is necessary. If not, returns nothing.
     **/
-  var processed: js.UndefOr[js.Function2[/* element */ HTMLElement, /* options */ js.Any, _]] = js.undefined
+  var processed: js.UndefOr[js.Function2[/* element */ HTMLElement, /* options */ js.Any, _]] = js.native
   /**
     * Called after all initialization and rendering is complete. At this time, the element is ready for use.
     * @param element The DOM element that contains all the content for the page.
     * @param options An object that contains one or more property/value pairs to apply to the PageControl. How these property/value pairs are used (or not used) depends on the implementation of that particular PageControl.
     * @returns A promise that is fulfilled when the element is ready for use, if asynchronous processing is necessary. If not, returns nothing.
     **/
-  var ready: js.UndefOr[js.Function2[/* element */ HTMLElement, /* options */ js.Any, _]] = js.undefined
+  var ready: js.UndefOr[js.Function2[/* element */ HTMLElement, /* options */ js.Any, _]] = js.native
   /**
     * Takes the elements returned by the load method and attaches them to the specified element.
     * @param element The DOM element to which the loadResult elements are appended.
@@ -53,27 +54,94 @@ trait IPageControlMembers extends js.Object {
     **/
   var render: js.UndefOr[
     js.Function3[/* element */ HTMLElement, /* options */ js.Any, /* loadResult */ Promise[_], Unit]
-  ] = js.undefined
+  ] = js.native
 }
 
 object IPageControlMembers {
   @scala.inline
-  def apply(
-    error: /* err */ js.Any => _ = null,
-    init: (/* element */ HTMLElement, /* options */ js.Any) => _ = null,
-    load: /* uri */ String => _ = null,
-    processed: (/* element */ HTMLElement, /* options */ js.Any) => _ = null,
-    ready: (/* element */ HTMLElement, /* options */ js.Any) => _ = null,
-    render: (/* element */ HTMLElement, /* options */ js.Any, /* loadResult */ Promise[_]) => Unit = null
-  ): IPageControlMembers = {
+  def apply(): IPageControlMembers = {
     val __obj = js.Dynamic.literal()
-    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction1(error))
-    if (init != null) __obj.updateDynamic("init")(js.Any.fromFunction2(init))
-    if (load != null) __obj.updateDynamic("load")(js.Any.fromFunction1(load))
-    if (processed != null) __obj.updateDynamic("processed")(js.Any.fromFunction2(processed))
-    if (ready != null) __obj.updateDynamic("ready")(js.Any.fromFunction2(ready))
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction3(render))
     __obj.asInstanceOf[IPageControlMembers]
   }
+  @scala.inline
+  implicit class IPageControlMembersOps[Self <: IPageControlMembers] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: /* err */ js.Any => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInit(value: (/* element */ HTMLElement, /* options */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoad(value: /* uri */ String => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutLoad: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessed(value: (/* element */ HTMLElement, /* options */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processed")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutProcessed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReady(value: (/* element */ HTMLElement, /* options */ js.Any) => _): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutReady: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRender(value: (/* element */ HTMLElement, /* options */ js.Any, /* loadResult */ Promise[_]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

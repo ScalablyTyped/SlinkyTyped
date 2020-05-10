@@ -1,7 +1,6 @@
 package typingsSlinky.bunyan.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +25,7 @@ trait Logger extends EventEmitter {
     * (including the stack) and sets `msg` to the exception
     * message or you can specify the `msg`.
     */
-  def debug(error: Error, params: js.Any*): Unit = js.native
+  def debug(error: js.Error, params: js.Any*): Unit = js.native
   /**
     * Uses `util.format` for msg formatting.
     */
@@ -51,7 +50,7 @@ trait Logger extends EventEmitter {
     * (including the stack) and sets `msg` to the exception
     * message or you can specify the `msg`.
     */
-  def error(error: Error, params: js.Any*): Unit = js.native
+  def error(error: js.Error, params: js.Any*): Unit = js.native
   /**
     * Uses `util.format` for msg formatting.
     */
@@ -76,7 +75,7 @@ trait Logger extends EventEmitter {
     * (including the stack) and sets `msg` to the exception
     * message or you can specify the `msg`.
     */
-  def fatal(error: Error, params: js.Any*): Unit = js.native
+  def fatal(error: js.Error, params: js.Any*): Unit = js.native
   /**
     * Uses `util.format` for msg formatting.
     */
@@ -101,7 +100,7 @@ trait Logger extends EventEmitter {
     * (including the stack) and sets `msg` to the exception
     * message or you can specify the `msg`.
     */
-  def info(error: Error, params: js.Any*): Unit = js.native
+  def info(error: js.Error, params: js.Any*): Unit = js.native
   /**
     * Uses `util.format` for msg formatting.
     */
@@ -134,7 +133,7 @@ trait Logger extends EventEmitter {
     * (including the stack) and sets `msg` to the exception
     * message or you can specify the `msg`.
     */
-  def trace(error: Error, params: js.Any*): Unit = js.native
+  def trace(error: js.Error, params: js.Any*): Unit = js.native
   /**
     * Uses `util.format` for msg formatting.
     */
@@ -159,7 +158,7 @@ trait Logger extends EventEmitter {
     * (including the stack) and sets `msg` to the exception
     * message or you can specify the `msg`.
     */
-  def warn(error: Error, params: js.Any*): Unit = js.native
+  def warn(error: js.Error, params: js.Any*): Unit = js.native
   /**
     * Uses `util.format` for msg formatting.
     */

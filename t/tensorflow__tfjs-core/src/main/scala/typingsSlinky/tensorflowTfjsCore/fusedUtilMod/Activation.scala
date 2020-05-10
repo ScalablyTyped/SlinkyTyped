@@ -15,16 +15,14 @@ trait Activation extends js.Object
 
 object Activation {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def elu: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.elu = "elu".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.elu]
   @scala.inline
-  def elu: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.elu = this.cast("elu")
+  def linear: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.linear = "linear".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.linear]
   @scala.inline
-  def linear: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.linear = this.cast("linear")
+  def prelu: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.prelu = "prelu".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.prelu]
   @scala.inline
-  def prelu: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.prelu = this.cast("prelu")
+  def relu: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.relu = "relu".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.relu]
   @scala.inline
-  def relu: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.relu = this.cast("relu")
-  @scala.inline
-  def relu6: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.relu6 = this.cast("relu6")
+  def relu6: typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.relu6 = "relu6".asInstanceOf[typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.relu6]
 }
 

@@ -18,20 +18,18 @@ trait LogonType extends js.Object
 
 object LogonType {
   @scala.inline
-  def batch: typingsSlinky.microsoftGraph.microsoftGraphStrings.batch = this.cast("batch")
+  def batch: typingsSlinky.microsoftGraph.microsoftGraphStrings.batch = "batch".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.batch]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def interactive: typingsSlinky.microsoftGraph.microsoftGraphStrings.interactive = "interactive".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.interactive]
   @scala.inline
-  def interactive: typingsSlinky.microsoftGraph.microsoftGraphStrings.interactive = this.cast("interactive")
+  def network: typingsSlinky.microsoftGraph.microsoftGraphStrings.network = "network".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.network]
   @scala.inline
-  def network: typingsSlinky.microsoftGraph.microsoftGraphStrings.network = this.cast("network")
+  def remoteInteractive: typingsSlinky.microsoftGraph.microsoftGraphStrings.remoteInteractive = "remoteInteractive".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.remoteInteractive]
   @scala.inline
-  def remoteInteractive: typingsSlinky.microsoftGraph.microsoftGraphStrings.remoteInteractive = this.cast("remoteInteractive")
+  def service: typingsSlinky.microsoftGraph.microsoftGraphStrings.service = "service".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.service]
   @scala.inline
-  def service: typingsSlinky.microsoftGraph.microsoftGraphStrings.service = this.cast("service")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

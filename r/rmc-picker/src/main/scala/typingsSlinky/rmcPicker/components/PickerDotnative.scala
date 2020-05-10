@@ -1,52 +1,49 @@
 package typingsSlinky.rmcPicker.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.rmcPicker.pickerNativeMod.default
 import typingsSlinky.rmcPicker.pickerTypesMod.IPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PickerDotnative
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object PickerDotnative {
   @JSImport("rmc-picker/lib/Picker.native", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
-  def apply(
-    defaultSelectedValue: js.Any = null,
-    indicatorClassName: String = null,
-    indicatorStyle: js.Any = null,
-    itemStyle: js.Any = null,
-    noAnimate: js.UndefOr[Boolean] = js.undefined,
-    onScrollChange: /* value */ js.Any => Unit = null,
-    onValueChange: /* value */ js.Any => Unit = null,
-    prefixCls: String = null,
-    selectedValue: js.Any = null,
-    style: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (defaultSelectedValue != null) __obj.updateDynamic("defaultSelectedValue")(defaultSelectedValue.asInstanceOf[js.Any])
-    if (indicatorClassName != null) __obj.updateDynamic("indicatorClassName")(indicatorClassName.asInstanceOf[js.Any])
-    if (indicatorStyle != null) __obj.updateDynamic("indicatorStyle")(indicatorStyle.asInstanceOf[js.Any])
-    if (itemStyle != null) __obj.updateDynamic("itemStyle")(itemStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(noAnimate)) __obj.updateDynamic("noAnimate")(noAnimate.asInstanceOf[js.Any])
-    if (onScrollChange != null) __obj.updateDynamic("onScrollChange")(js.Any.fromFunction1(onScrollChange))
-    if (onValueChange != null) __obj.updateDynamic("onValueChange")(js.Any.fromFunction1(onValueChange))
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (selectedValue != null) __obj.updateDynamic("selectedValue")(selectedValue.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSelectedValue(value: js.Any): this.type = set("defaultSelectedValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorClassName(value: String): this.type = set("indicatorClassName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indicatorStyle(value: js.Any): this.type = set("indicatorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemStyle(value: js.Any): this.type = set("itemStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def noAnimate(value: Boolean): this.type = set("noAnimate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onScrollChange(value: /* value */ js.Any => Unit): this.type = set("onScrollChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onValueChange(value: /* value */ js.Any => Unit): this.type = set("onValueChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedValue(value: js.Any): this.type = set("selectedValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rmcPicker.pickerNativeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = IPickerProps
+  
+  def withProps(p: IPickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PickerDotnative.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

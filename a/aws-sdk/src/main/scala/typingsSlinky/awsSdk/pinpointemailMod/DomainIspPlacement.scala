@@ -30,20 +30,77 @@ trait DomainIspPlacement extends js.Object {
 
 object DomainIspPlacement {
   @scala.inline
-  def apply(
-    InboxPercentage: Int | Double = null,
-    InboxRawCount: Int | Double = null,
-    IspName: IspName = null,
-    SpamPercentage: Int | Double = null,
-    SpamRawCount: Int | Double = null
-  ): DomainIspPlacement = {
+  def apply(): DomainIspPlacement = {
     val __obj = js.Dynamic.literal()
-    if (InboxPercentage != null) __obj.updateDynamic("InboxPercentage")(InboxPercentage.asInstanceOf[js.Any])
-    if (InboxRawCount != null) __obj.updateDynamic("InboxRawCount")(InboxRawCount.asInstanceOf[js.Any])
-    if (IspName != null) __obj.updateDynamic("IspName")(IspName.asInstanceOf[js.Any])
-    if (SpamPercentage != null) __obj.updateDynamic("SpamPercentage")(SpamPercentage.asInstanceOf[js.Any])
-    if (SpamRawCount != null) __obj.updateDynamic("SpamRawCount")(SpamRawCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[DomainIspPlacement]
   }
+  @scala.inline
+  implicit class DomainIspPlacementOps[Self <: DomainIspPlacement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInboxPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInboxPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInboxRawCount(value: Volume): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxRawCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInboxRawCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InboxRawCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIspName(value: IspName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IspName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIspName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IspName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpamPercentage(value: Percentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpamPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpamPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpamPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpamRawCount(value: Volume): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpamRawCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpamRawCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SpamRawCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

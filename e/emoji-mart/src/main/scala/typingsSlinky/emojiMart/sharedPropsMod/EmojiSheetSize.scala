@@ -14,14 +14,12 @@ trait EmojiSheetSize extends js.Object
 
 object EmojiSheetSize {
   @scala.inline
-  def `16`: typingsSlinky.emojiMart.emojiMartNumbers.`16` = this.cast(16)
+  def `16`: typingsSlinky.emojiMart.emojiMartNumbers.`16` = 16.asInstanceOf[typingsSlinky.emojiMart.emojiMartNumbers.`16`]
   @scala.inline
-  def `20`: typingsSlinky.emojiMart.emojiMartNumbers.`20` = this.cast(20)
+  def `20`: typingsSlinky.emojiMart.emojiMartNumbers.`20` = 20.asInstanceOf[typingsSlinky.emojiMart.emojiMartNumbers.`20`]
   @scala.inline
-  def `32`: typingsSlinky.emojiMart.emojiMartNumbers.`32` = this.cast(32)
+  def `32`: typingsSlinky.emojiMart.emojiMartNumbers.`32` = 32.asInstanceOf[typingsSlinky.emojiMart.emojiMartNumbers.`32`]
   @scala.inline
-  def `64`: typingsSlinky.emojiMart.emojiMartNumbers.`64` = this.cast(64)
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `64`: typingsSlinky.emojiMart.emojiMartNumbers.`64` = 64.asInstanceOf[typingsSlinky.emojiMart.emojiMartNumbers.`64`]
 }
 

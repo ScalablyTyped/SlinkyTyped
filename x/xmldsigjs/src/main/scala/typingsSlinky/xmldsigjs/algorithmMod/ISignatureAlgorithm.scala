@@ -8,13 +8,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ISignatureAlgorithm extends IAlgorithm {
-  def Sign(signedInfo: String, signingKey: CryptoKey, algorithm: Algorithm): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
-  def Verify(signedInfo: String, key: CryptoKey, signatureValue: scala.scalajs.js.typedarray.Uint8Array): js.Promise[Boolean] = js.native
-  def Verify(
-    signedInfo: String,
-    key: CryptoKey,
-    signatureValue: scala.scalajs.js.typedarray.Uint8Array,
-    algorithm: Algorithm
-  ): js.Promise[Boolean] = js.native
+  def Sign(signedInfo: String, signingKey: CryptoKey, algorithm: Algorithm): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def Verify(signedInfo: String, key: CryptoKey, signatureValue: js.typedarray.Uint8Array): js.Promise[Boolean] = js.native
+  def Verify(signedInfo: String, key: CryptoKey, signatureValue: js.typedarray.Uint8Array, algorithm: Algorithm): js.Promise[Boolean] = js.native
 }
 

@@ -1,15 +1,16 @@
 package typingsSlinky.halogenium.components
 
+import typingsSlinky.halogenium.mod.MarginLoaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object RiseLoader
-  extends SharedApply_MarginLoaderProps_1324934918[typingsSlinky.halogenium.mod.RiseLoader] {
+object RiseLoader {
   @JSImport("halogenium", "RiseLoader")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: MarginLoaderProps): SharedBuilder_MarginLoaderProps_859607337[typingsSlinky.halogenium.mod.RiseLoader] = new SharedBuilder_MarginLoaderProps_859607337[typingsSlinky.halogenium.mod.RiseLoader](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: RiseLoader.type): SharedBuilder_MarginLoaderProps_859607337[typingsSlinky.halogenium.mod.RiseLoader] = new SharedBuilder_MarginLoaderProps_859607337[typingsSlinky.halogenium.mod.RiseLoader](js.Array(this.component, js.Dictionary.empty))()
 }
 

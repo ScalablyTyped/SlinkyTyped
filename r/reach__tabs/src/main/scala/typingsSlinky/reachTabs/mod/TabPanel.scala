@@ -1,12 +1,12 @@
 package typingsSlinky.reachTabs.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("@reach/tabs", "TabPanel")
 @js.native
-object TabPanel extends TopLevel[FC[TabPanelProps]]
+object TabPanel extends TopLevel[ReactComponentClass[TabPanelProps]]
 

@@ -1,6 +1,7 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`wire-frame`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`x-ray`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.solid
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
@@ -8,15 +9,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait BuildingFilterBlockFilterMode extends Object {
   /**
-    * Defines how features are drawn while the filter is active. The same filter mode type can only be used once in a filter. To filter multiple elements as solid, add them to a single filter block instead of creating several filter blocks that use the `solid` filter mode.
+    * Defines the type of edges used to display a [BuildingSceneLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html) filtered in `wire-frame` mode. This property can only be used with `filterMode` of type `wire-frame`.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-BuildingFilter.html#BuildingFilterBlock)
+    */
+  var edges: js.UndefOr[SolidEdges3D | SketchEdges3D] = js.native
+  /**
+    * Defines how features are drawn while the filter is active. `solid` mode renders the features with the original texture. With `wire-frame` mode, only the edges of the features are shown. `x-ray` renders elements semi-transparent with white color. To ensure performance on client applications, it is not recommended to declare multiple filter blocks with the same filter mode.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-BuildingFilter.html#BuildingFilterBlock)
     *
     * @default solid
     */
-  var `type`: js.UndefOr[solid | `wire-frame`] = js.undefined
+  var `type`: js.UndefOr[solid | `wire-frame` | `x-ray`] = js.native
 }
 
 object BuildingFilterBlockFilterMode {
@@ -24,12 +32,42 @@ object BuildingFilterBlockFilterMode {
   def apply(
     constructor: js.Function,
     hasOwnProperty: PropertyKey => Boolean,
-    propertyIsEnumerable: PropertyKey => Boolean,
-    `type`: solid | `wire-frame` = null
+    propertyIsEnumerable: PropertyKey => Boolean
   ): BuildingFilterBlockFilterMode = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildingFilterBlockFilterMode]
   }
+  @scala.inline
+  implicit class BuildingFilterBlockFilterModeOps[Self <: BuildingFilterBlockFilterMode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEdges(value: SolidEdges3D | SketchEdges3D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdges: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: solid | `wire-frame` | `x-ray`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

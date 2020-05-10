@@ -13,12 +13,10 @@ trait IXAlign extends js.Object
 
 object IXAlign {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.typesettable.typesettableStrings.center = "center".asInstanceOf[typingsSlinky.typesettable.typesettableStrings.center]
   @scala.inline
-  def center: typingsSlinky.typesettable.typesettableStrings.center = this.cast("center")
+  def left: typingsSlinky.typesettable.typesettableStrings.left = "left".asInstanceOf[typingsSlinky.typesettable.typesettableStrings.left]
   @scala.inline
-  def left: typingsSlinky.typesettable.typesettableStrings.left = this.cast("left")
-  @scala.inline
-  def right: typingsSlinky.typesettable.typesettableStrings.right = this.cast("right")
+  def right: typingsSlinky.typesettable.typesettableStrings.right = "right".asInstanceOf[typingsSlinky.typesettable.typesettableStrings.right]
 }
 

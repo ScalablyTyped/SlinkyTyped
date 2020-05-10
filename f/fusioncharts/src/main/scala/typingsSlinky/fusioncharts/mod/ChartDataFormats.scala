@@ -15,16 +15,14 @@ trait ChartDataFormats extends js.Object
 
 object ChartDataFormats {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def csv: typingsSlinky.fusioncharts.fusionchartsStrings.csv = "csv".asInstanceOf[typingsSlinky.fusioncharts.fusionchartsStrings.csv]
   @scala.inline
-  def csv: typingsSlinky.fusioncharts.fusionchartsStrings.csv = this.cast("csv")
+  def json: typingsSlinky.fusioncharts.fusionchartsStrings.json = "json".asInstanceOf[typingsSlinky.fusioncharts.fusionchartsStrings.json]
   @scala.inline
-  def json: typingsSlinky.fusioncharts.fusionchartsStrings.json = this.cast("json")
+  def jsonurl: typingsSlinky.fusioncharts.fusionchartsStrings.jsonurl = "jsonurl".asInstanceOf[typingsSlinky.fusioncharts.fusionchartsStrings.jsonurl]
   @scala.inline
-  def jsonurl: typingsSlinky.fusioncharts.fusionchartsStrings.jsonurl = this.cast("jsonurl")
+  def xml: typingsSlinky.fusioncharts.fusionchartsStrings.xml = "xml".asInstanceOf[typingsSlinky.fusioncharts.fusionchartsStrings.xml]
   @scala.inline
-  def xml: typingsSlinky.fusioncharts.fusionchartsStrings.xml = this.cast("xml")
-  @scala.inline
-  def xmlurl: typingsSlinky.fusioncharts.fusionchartsStrings.xmlurl = this.cast("xmlurl")
+  def xmlurl: typingsSlinky.fusioncharts.fusionchartsStrings.xmlurl = "xmlurl".asInstanceOf[typingsSlinky.fusioncharts.fusionchartsStrings.xmlurl]
 }
 

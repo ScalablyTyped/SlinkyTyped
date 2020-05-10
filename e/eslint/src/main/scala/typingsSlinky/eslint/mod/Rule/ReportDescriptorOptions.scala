@@ -1,28 +1,45 @@
 package typingsSlinky.eslint.mod.Rule
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait ReportDescriptorOptions extends js.Object {
-  var data: js.UndefOr[StringDictionary[String]] = js.undefined
-  var fix: js.UndefOr[
-    js.Function1[/* fixer */ RuleFixer, Null | Fix | IterableIterator[Fix] | js.Array[Fix]]
-  ] = js.undefined
+@js.native
+trait ReportDescriptorOptions extends ReportDescriptorOptionsBase {
+  var suggest: js.UndefOr[js.Array[SuggestionReportDescriptor] | Null] = js.native
 }
 
 object ReportDescriptorOptions {
   @scala.inline
-  def apply(
-    data: StringDictionary[String] = null,
-    fix: /* fixer */ RuleFixer => Null | Fix | IterableIterator[Fix] | js.Array[Fix] = null
-  ): ReportDescriptorOptions = {
+  def apply(): ReportDescriptorOptions = {
     val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (fix != null) __obj.updateDynamic("fix")(js.Any.fromFunction1(fix))
     __obj.asInstanceOf[ReportDescriptorOptions]
   }
+  @scala.inline
+  implicit class ReportDescriptorOptionsOps[Self <: ReportDescriptorOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSuggest(value: js.Array[SuggestionReportDescriptor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuggest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuggestNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggest")(null)
+        ret
+    }
+  }
+  
 }
 

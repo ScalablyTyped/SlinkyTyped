@@ -1,17 +1,17 @@
 package typingsSlinky.chromeApps.chrome.contextMenus
 
-import typingsSlinky.chromeApps.chromeAppsStrings.all_
-import typingsSlinky.chromeApps.chromeAppsStrings.audio
-import typingsSlinky.chromeApps.chromeAppsStrings.browser_action
-import typingsSlinky.chromeApps.chromeAppsStrings.editable
-import typingsSlinky.chromeApps.chromeAppsStrings.frame
-import typingsSlinky.chromeApps.chromeAppsStrings.image
-import typingsSlinky.chromeApps.chromeAppsStrings.launcher
-import typingsSlinky.chromeApps.chromeAppsStrings.link
-import typingsSlinky.chromeApps.chromeAppsStrings.page
-import typingsSlinky.chromeApps.chromeAppsStrings.page_action
-import typingsSlinky.chromeApps.chromeAppsStrings.selection
-import typingsSlinky.chromeApps.chromeAppsStrings.video
+import typingsSlinky.chromeApps.chromeAppsStrings.all__
+import typingsSlinky.chromeApps.chromeAppsStrings.audio_
+import typingsSlinky.chromeApps.chromeAppsStrings.browser_action_
+import typingsSlinky.chromeApps.chromeAppsStrings.editable_
+import typingsSlinky.chromeApps.chromeAppsStrings.frame_
+import typingsSlinky.chromeApps.chromeAppsStrings.image_
+import typingsSlinky.chromeApps.chromeAppsStrings.launcher_
+import typingsSlinky.chromeApps.chromeAppsStrings.link_
+import typingsSlinky.chromeApps.chromeAppsStrings.page_
+import typingsSlinky.chromeApps.chromeAppsStrings.page_action_
+import typingsSlinky.chromeApps.chromeAppsStrings.selection_
+import typingsSlinky.chromeApps.chromeAppsStrings.video_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,17 +25,17 @@ import scala.scalajs.js.annotation._
 @JSGlobal("chrome.contextMenus.ContextType")
 @js.native
 object ContextType extends js.Object {
-  var ALL: all_ = js.native
-  var AUDIO: audio = js.native
-  var BROWSER_ACTION: browser_action = js.native
-  var EDITABLE: editable = js.native
-  var FRAME: frame = js.native
-  var IMAGE: image = js.native
-  var LAUNCHER: launcher = js.native
-  var LINK: link = js.native
-  var PAGE: page = js.native
-  var PAGE_ACTION: page_action = js.native
-  var SELECTION: selection = js.native
-  var VIDEO: video = js.native
+  var ALL: all__ = js.native
+  var AUDIO: audio_ = js.native
+  var BROWSER_ACTION: browser_action_ = js.native
+  var EDITABLE: editable_ = js.native
+  var FRAME: frame_ = js.native
+  var IMAGE: image_ = js.native
+  var LAUNCHER: launcher_ = js.native
+  var LINK: link_ = js.native
+  var PAGE: page_ = js.native
+  var PAGE_ACTION: page_action_ = js.native
+  var SELECTION: selection_ = js.native
+  var VIDEO: video_ = js.native
 }
 

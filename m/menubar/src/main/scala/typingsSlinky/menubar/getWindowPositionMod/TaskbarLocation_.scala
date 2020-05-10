@@ -14,14 +14,12 @@ trait TaskbarLocation_ extends js.Object
 
 object TaskbarLocation_ {
   @scala.inline
-  def bottom: typingsSlinky.menubar.menubarStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.menubar.menubarStrings.bottom = "bottom".asInstanceOf[typingsSlinky.menubar.menubarStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.menubar.menubarStrings.left = "left".asInstanceOf[typingsSlinky.menubar.menubarStrings.left]
   @scala.inline
-  def left: typingsSlinky.menubar.menubarStrings.left = this.cast("left")
+  def right: typingsSlinky.menubar.menubarStrings.right = "right".asInstanceOf[typingsSlinky.menubar.menubarStrings.right]
   @scala.inline
-  def right: typingsSlinky.menubar.menubarStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.menubar.menubarStrings.top = this.cast("top")
+  def top: typingsSlinky.menubar.menubarStrings.top = "top".asInstanceOf[typingsSlinky.menubar.menubarStrings.top]
 }
 

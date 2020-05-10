@@ -4,51 +4,153 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VictoryBoxPlotStyleInterface extends VictoryStyleInterface {
-  var max: js.UndefOr[VictoryStyleObject] = js.undefined
-  var maxLabels: js.UndefOr[VictoryStyleObject] = js.undefined
-  var median: js.UndefOr[VictoryStyleObject] = js.undefined
-  var medianLabels: js.UndefOr[VictoryStyleObject] = js.undefined
-  var min: js.UndefOr[VictoryStyleObject] = js.undefined
-  var minLabels: js.UndefOr[VictoryStyleObject] = js.undefined
-  var q1: js.UndefOr[VictoryStyleObject] = js.undefined
-  var q1Labels: js.UndefOr[VictoryStyleObject] = js.undefined
-  var q3: js.UndefOr[VictoryStyleObject] = js.undefined
-  var q3Labels: js.UndefOr[VictoryStyleObject] = js.undefined
+  var max: js.UndefOr[VictoryStyleObject] = js.native
+  var maxLabels: js.UndefOr[VictoryStyleObject] = js.native
+  var median: js.UndefOr[VictoryStyleObject] = js.native
+  var medianLabels: js.UndefOr[VictoryStyleObject] = js.native
+  var min: js.UndefOr[VictoryStyleObject] = js.native
+  var minLabels: js.UndefOr[VictoryStyleObject] = js.native
+  var q1: js.UndefOr[VictoryStyleObject] = js.native
+  var q1Labels: js.UndefOr[VictoryStyleObject] = js.native
+  var q3: js.UndefOr[VictoryStyleObject] = js.native
+  var q3Labels: js.UndefOr[VictoryStyleObject] = js.native
 }
 
 object VictoryBoxPlotStyleInterface {
   @scala.inline
-  def apply(
-    data: VictoryStyleObject = null,
-    labels: VictoryStyleObject = null,
-    max: VictoryStyleObject = null,
-    maxLabels: VictoryStyleObject = null,
-    median: VictoryStyleObject = null,
-    medianLabels: VictoryStyleObject = null,
-    min: VictoryStyleObject = null,
-    minLabels: VictoryStyleObject = null,
-    parent: VictoryStyleObject = null,
-    q1: VictoryStyleObject = null,
-    q1Labels: VictoryStyleObject = null,
-    q3: VictoryStyleObject = null,
-    q3Labels: VictoryStyleObject = null
-  ): VictoryBoxPlotStyleInterface = {
+  def apply(): VictoryBoxPlotStyleInterface = {
     val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxLabels != null) __obj.updateDynamic("maxLabels")(maxLabels.asInstanceOf[js.Any])
-    if (median != null) __obj.updateDynamic("median")(median.asInstanceOf[js.Any])
-    if (medianLabels != null) __obj.updateDynamic("medianLabels")(medianLabels.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minLabels != null) __obj.updateDynamic("minLabels")(minLabels.asInstanceOf[js.Any])
-    if (parent != null) __obj.updateDynamic("parent")(parent.asInstanceOf[js.Any])
-    if (q1 != null) __obj.updateDynamic("q1")(q1.asInstanceOf[js.Any])
-    if (q1Labels != null) __obj.updateDynamic("q1Labels")(q1Labels.asInstanceOf[js.Any])
-    if (q3 != null) __obj.updateDynamic("q3")(q3.asInstanceOf[js.Any])
-    if (q3Labels != null) __obj.updateDynamic("q3Labels")(q3Labels.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictoryBoxPlotStyleInterface]
   }
+  @scala.inline
+  implicit class VictoryBoxPlotStyleInterfaceOps[Self <: VictoryBoxPlotStyleInterface] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMax(value: VictoryStyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxLabels(value: VictoryStyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedian(value: VictoryStyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("median")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedian: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("median")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMedianLabels(value: VictoryStyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medianLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMedianLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("medianLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: VictoryStyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinLabels(value: VictoryStyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ1(value: VictoryStyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ1Labels(value: VictoryStyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q1Labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ1Labels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q1Labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ3(value: VictoryStyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQ3Labels(value: VictoryStyleObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q3Labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQ3Labels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("q3Labels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

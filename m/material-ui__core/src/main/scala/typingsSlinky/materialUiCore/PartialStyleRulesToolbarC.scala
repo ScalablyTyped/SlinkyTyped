@@ -16,18 +16,65 @@ trait PartialStyleRulesToolbarC extends js.Object {
 
 object PartialStyleRulesToolbarC {
   @scala.inline
-  def apply(
-    dense: CSSProperties = null,
-    gutters: CSSProperties = null,
-    regular: CSSProperties = null,
-    root: CSSProperties = null
-  ): PartialStyleRulesToolbarC = {
+  def apply(): PartialStyleRulesToolbarC = {
     val __obj = js.Dynamic.literal()
-    if (dense != null) __obj.updateDynamic("dense")(dense.asInstanceOf[js.Any])
-    if (gutters != null) __obj.updateDynamic("gutters")(gutters.asInstanceOf[js.Any])
-    if (regular != null) __obj.updateDynamic("regular")(regular.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesToolbarC]
   }
+  @scala.inline
+  implicit class PartialStyleRulesToolbarCOps[Self <: PartialStyleRulesToolbarC] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDense(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dense")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDense: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dense")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGutters(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gutters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGutters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gutters")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegular(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regular")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegular: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regular")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

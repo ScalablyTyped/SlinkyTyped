@@ -1,39 +1,34 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.messagesMod.MessagesProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Messages
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactMessagesMod.Messages] {
+object Messages {
   @JSImport("primereact/messages", "Messages")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
-  def apply(
-    onClick: /* message */ typingsSlinky.primereact.messagesMod.Message => Unit = null,
-    onRemove: /* message */ typingsSlinky.primereact.messagesMod.Message => Unit = null,
-    style: js.Object = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactMessagesMod.Messages] = {
-    val __obj = js.Dynamic.literal()
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction1(onRemove))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactMessagesMod.Messages] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: /* message */ typingsSlinky.primereact.messagesMod.Message => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRemove(value: /* message */ typingsSlinky.primereact.messagesMod.Message => Unit): this.type = set("onRemove", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactMessagesMod.Messages] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.primereactMessagesMod.Messages](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = MessagesProps
+  
+  def withProps(p: MessagesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Messages.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

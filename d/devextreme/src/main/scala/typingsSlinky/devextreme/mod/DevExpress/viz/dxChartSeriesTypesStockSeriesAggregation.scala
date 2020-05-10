@@ -7,24 +7,38 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Configures data aggregation for the series. */
+@js.native
 trait dxChartSeriesTypesStockSeriesAggregation extends dxChartSeriesTypesCommonSeriesAggregation {
   /** Specifies how to aggregate series points. */
   @JSName("method")
-  var method_dxChartSeriesTypesStockSeriesAggregation: js.UndefOr[ohlc | custom] = js.undefined
+  var method_dxChartSeriesTypesStockSeriesAggregation: js.UndefOr[ohlc | custom] = js.native
 }
 
 object dxChartSeriesTypesStockSeriesAggregation {
   @scala.inline
-  def apply(
-    calculate: (/* aggregationInfo */ chartPointAggregationInfoObject, /* series */ chartSeriesObject) => _ | js.Array[_] = null,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    method: ohlc | custom = null
-  ): dxChartSeriesTypesStockSeriesAggregation = {
+  def apply(): dxChartSeriesTypesStockSeriesAggregation = {
     val __obj = js.Dynamic.literal()
-    if (calculate != null) __obj.updateDynamic("calculate")(js.Any.fromFunction2(calculate))
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxChartSeriesTypesStockSeriesAggregation]
   }
+  @scala.inline
+  implicit class dxChartSeriesTypesStockSeriesAggregationOps[Self <: dxChartSeriesTypesStockSeriesAggregation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMethod(value: ohlc | custom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

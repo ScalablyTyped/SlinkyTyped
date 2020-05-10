@@ -24,8 +24,33 @@ object PutProvisionedConcurrencyConfigRequest {
   @scala.inline
   def apply(FunctionName: FunctionName, ProvisionedConcurrentExecutions: PositiveInteger, Qualifier: Qualifier): PutProvisionedConcurrencyConfigRequest = {
     val __obj = js.Dynamic.literal(FunctionName = FunctionName.asInstanceOf[js.Any], ProvisionedConcurrentExecutions = ProvisionedConcurrentExecutions.asInstanceOf[js.Any], Qualifier = Qualifier.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[PutProvisionedConcurrencyConfigRequest]
   }
+  @scala.inline
+  implicit class PutProvisionedConcurrencyConfigRequestOps[Self <: PutProvisionedConcurrencyConfigRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFunctionName(value: FunctionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProvisionedConcurrentExecutions(value: PositiveInteger): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedConcurrentExecutions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQualifier(value: Qualifier): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Qualifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -20,10 +20,10 @@ trait DynamicsCompressorNode extends AudioNode {
 @JSGlobal("DynamicsCompressorNode")
 @js.native
 object DynamicsCompressorNode
-  extends Instantiable1[/* context */ BaseAudioContext, DynamicsCompressorNode]
+  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.DynamicsCompressorNode]
      with Instantiable2[
       /* context */ BaseAudioContext, 
       /* options */ DynamicsCompressorOptions, 
-      DynamicsCompressorNode
+      org.scalajs.dom.raw.DynamicsCompressorNode
     ]
 

@@ -20,26 +20,24 @@ trait Operator extends js.Object
 
 object Operator {
   @scala.inline
-  def Equalssign: typingsSlinky.semver.semverStrings.Equalssign = this.cast("=")
+  def Equalssign: typingsSlinky.semver.semverStrings.Equalssign = "=".asInstanceOf[typingsSlinky.semver.semverStrings.Equalssign]
   @scala.inline
-  def EqualssignEqualssign: typingsSlinky.semver.semverStrings.EqualssignEqualssign = this.cast("==")
+  def EqualssignEqualssign: typingsSlinky.semver.semverStrings.EqualssignEqualssign = "==".asInstanceOf[typingsSlinky.semver.semverStrings.EqualssignEqualssign]
   @scala.inline
-  def EqualssignEqualssignEqualssign: typingsSlinky.semver.semverStrings.EqualssignEqualssignEqualssign = this.cast("===")
+  def EqualssignEqualssignEqualssign: typingsSlinky.semver.semverStrings.EqualssignEqualssignEqualssign = "===".asInstanceOf[typingsSlinky.semver.semverStrings.EqualssignEqualssignEqualssign]
   @scala.inline
-  def ExclamationmarkEqualssign: typingsSlinky.semver.semverStrings.ExclamationmarkEqualssign = this.cast("!=")
+  def ExclamationmarkEqualssign: typingsSlinky.semver.semverStrings.ExclamationmarkEqualssign = "!=".asInstanceOf[typingsSlinky.semver.semverStrings.ExclamationmarkEqualssign]
   @scala.inline
-  def ExclamationmarkEqualssignEqualssign: typingsSlinky.semver.semverStrings.ExclamationmarkEqualssignEqualssign = this.cast("!==")
+  def ExclamationmarkEqualssignEqualssign: typingsSlinky.semver.semverStrings.ExclamationmarkEqualssignEqualssign = "!==".asInstanceOf[typingsSlinky.semver.semverStrings.ExclamationmarkEqualssignEqualssign]
   @scala.inline
-  def Greaterthansign: typingsSlinky.semver.semverStrings.Greaterthansign = this.cast(">")
+  def Greaterthansign: typingsSlinky.semver.semverStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.semver.semverStrings.Greaterthansign]
   @scala.inline
-  def GreaterthansignEqualssign: typingsSlinky.semver.semverStrings.GreaterthansignEqualssign = this.cast(">=")
+  def GreaterthansignEqualssign: typingsSlinky.semver.semverStrings.GreaterthansignEqualssign = ">=".asInstanceOf[typingsSlinky.semver.semverStrings.GreaterthansignEqualssign]
   @scala.inline
-  def Lessthansign: typingsSlinky.semver.semverStrings.Lessthansign = this.cast("<")
+  def Lessthansign: typingsSlinky.semver.semverStrings.Lessthansign = "<".asInstanceOf[typingsSlinky.semver.semverStrings.Lessthansign]
   @scala.inline
-  def LessthansignEqualssign: typingsSlinky.semver.semverStrings.LessthansignEqualssign = this.cast("<=")
+  def LessthansignEqualssign: typingsSlinky.semver.semverStrings.LessthansignEqualssign = "<=".asInstanceOf[typingsSlinky.semver.semverStrings.LessthansignEqualssign]
   @scala.inline
-  def _empty: typingsSlinky.semver.semverStrings._empty = this.cast("")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def _empty: typingsSlinky.semver.semverStrings._empty = "".asInstanceOf[typingsSlinky.semver.semverStrings._empty]
 }
 

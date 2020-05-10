@@ -6,9 +6,7 @@ import typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.GET
 import typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.PUT
 import typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.base64
 import typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.hex
-import typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.installerDotexe
 import typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.latin1
-import typingsSlinky.builderUtilRuntime.builderUtilRuntimeStrings.packageDot7z
 import typingsSlinky.builderUtilRuntime.progressCallbackTransformMod.ProgressInfo
 import typingsSlinky.builderUtilRuntime.publishOptionsMod.GithubOptions
 import typingsSlinky.builderUtilRuntime.publishOptionsMod.PublishConfiguration
@@ -80,8 +78,8 @@ object mod extends js.Object {
     def this(name: String) = this()
   }
   
-  val CURRENT_APP_INSTALLER_FILE_NAME: installerDotexe = js.native
-  val CURRENT_APP_PACKAGE_FILE_NAME: packageDot7z = js.native
+  val CURRENT_APP_INSTALLER_FILE_NAME: /* "installer.exe" */ String = js.native
+  val CURRENT_APP_PACKAGE_FILE_NAME: /* "package.7z" */ String = js.native
   def asArray[T](): js.Array[T] = js.native
   def asArray[T](v: T): js.Array[T] = js.native
   def asArray[T](v: js.Array[T]): js.Array[T] = js.native

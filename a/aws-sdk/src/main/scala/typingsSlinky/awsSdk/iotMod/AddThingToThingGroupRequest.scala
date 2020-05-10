@@ -30,20 +30,77 @@ trait AddThingToThingGroupRequest extends js.Object {
 
 object AddThingToThingGroupRequest {
   @scala.inline
-  def apply(
-    overrideDynamicGroups: js.UndefOr[scala.Boolean] = js.undefined,
-    thingArn: ThingArn = null,
-    thingGroupArn: ThingGroupArn = null,
-    thingGroupName: ThingGroupName = null,
-    thingName: ThingName = null
-  ): AddThingToThingGroupRequest = {
+  def apply(): AddThingToThingGroupRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(overrideDynamicGroups)) __obj.updateDynamic("overrideDynamicGroups")(overrideDynamicGroups.asInstanceOf[js.Any])
-    if (thingArn != null) __obj.updateDynamic("thingArn")(thingArn.asInstanceOf[js.Any])
-    if (thingGroupArn != null) __obj.updateDynamic("thingGroupArn")(thingGroupArn.asInstanceOf[js.Any])
-    if (thingGroupName != null) __obj.updateDynamic("thingGroupName")(thingGroupName.asInstanceOf[js.Any])
-    if (thingName != null) __obj.updateDynamic("thingName")(thingName.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddThingToThingGroupRequest]
   }
+  @scala.inline
+  implicit class AddThingToThingGroupRequestOps[Self <: AddThingToThingGroupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOverrideDynamicGroups(value: OverrideDynamicGroups): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideDynamicGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOverrideDynamicGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overrideDynamicGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingArn(value: ThingArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingGroupArn(value: ThingGroupArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingGroupArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingGroupName(value: ThingGroupName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingGroupName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingGroupName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThingName(value: ThingName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThingName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

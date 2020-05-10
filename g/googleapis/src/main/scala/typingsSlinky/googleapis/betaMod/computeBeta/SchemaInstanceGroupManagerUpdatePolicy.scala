@@ -50,20 +50,77 @@ trait SchemaInstanceGroupManagerUpdatePolicy extends js.Object {
 
 object SchemaInstanceGroupManagerUpdatePolicy {
   @scala.inline
-  def apply(
-    maxSurge: SchemaFixedOrPercent = null,
-    maxUnavailable: SchemaFixedOrPercent = null,
-    minReadySec: Int | Double = null,
-    minimalAction: String = null,
-    `type`: String = null
-  ): SchemaInstanceGroupManagerUpdatePolicy = {
+  def apply(): SchemaInstanceGroupManagerUpdatePolicy = {
     val __obj = js.Dynamic.literal()
-    if (maxSurge != null) __obj.updateDynamic("maxSurge")(maxSurge.asInstanceOf[js.Any])
-    if (maxUnavailable != null) __obj.updateDynamic("maxUnavailable")(maxUnavailable.asInstanceOf[js.Any])
-    if (minReadySec != null) __obj.updateDynamic("minReadySec")(minReadySec.asInstanceOf[js.Any])
-    if (minimalAction != null) __obj.updateDynamic("minimalAction")(minimalAction.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstanceGroupManagerUpdatePolicy]
   }
+  @scala.inline
+  implicit class SchemaInstanceGroupManagerUpdatePolicyOps[Self <: SchemaInstanceGroupManagerUpdatePolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxSurge(value: SchemaFixedOrPercent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSurge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSurge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSurge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxUnavailable(value: SchemaFixedOrPercent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUnavailable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxUnavailable: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUnavailable")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinReadySec(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReadySec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinReadySec: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minReadySec")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinimalAction(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimalAction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinimalAction: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimalAction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

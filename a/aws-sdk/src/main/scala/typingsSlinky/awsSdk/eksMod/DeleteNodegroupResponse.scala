@@ -14,10 +14,29 @@ trait DeleteNodegroupResponse extends js.Object {
 
 object DeleteNodegroupResponse {
   @scala.inline
-  def apply(nodegroup: Nodegroup = null): DeleteNodegroupResponse = {
+  def apply(): DeleteNodegroupResponse = {
     val __obj = js.Dynamic.literal()
-    if (nodegroup != null) __obj.updateDynamic("nodegroup")(nodegroup.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteNodegroupResponse]
   }
+  @scala.inline
+  implicit class DeleteNodegroupResponseOps[Self <: DeleteNodegroupResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNodegroup(value: Nodegroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodegroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNodegroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodegroup")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

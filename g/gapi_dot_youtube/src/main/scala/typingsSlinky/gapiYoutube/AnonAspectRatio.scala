@@ -4,39 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAspectRatio extends js.Object {
   /**
     * The video contents display aspect ratio, which specifies the aspect ratio in which the video should be displayed.
     */
-  var aspectRatio: Double
+  var aspectRatio: Double = js.native
   /**
     * The video streams bitrate, in bits per second.
     */
-  var bitrateBps: Double
+  var bitrateBps: Double = js.native
   /**
     * The video codec that the stream uses.
     */
-  var codec: String
+  var codec: String = js.native
   /**
     * The video streams frame rate, in frames per second.
     */
-  var frameRateFps: Double
+  var frameRateFps: Double = js.native
   /**
     * The encoded video contents height in pixels.
     */
-  var heightPixels: Double
+  var heightPixels: Double = js.native
   /**
     * The amount that YouTube needs to rotate the original source content to properly display the video.
     */
-  var rotation: String
+  var rotation: String = js.native
   /**
     * A value that uniquely identifies a video vendor. Typically, the value is a four-letter vendor code.
     */
-  var vender: String
+  var vender: String = js.native
   /**
     * The encoded video contents width in pixels.
     */
-  var widthPixels: Double
+  var widthPixels: Double = js.native
 }
 
 object AnonAspectRatio {
@@ -52,8 +53,63 @@ object AnonAspectRatio {
     widthPixels: Double
   ): AnonAspectRatio = {
     val __obj = js.Dynamic.literal(aspectRatio = aspectRatio.asInstanceOf[js.Any], bitrateBps = bitrateBps.asInstanceOf[js.Any], codec = codec.asInstanceOf[js.Any], frameRateFps = frameRateFps.asInstanceOf[js.Any], heightPixels = heightPixels.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], vender = vender.asInstanceOf[js.Any], widthPixels = widthPixels.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonAspectRatio]
   }
+  @scala.inline
+  implicit class AnonAspectRatioOps[Self <: AnonAspectRatio] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAspectRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aspectRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBitrateBps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrateBps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCodec(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codec")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrameRateFps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRateFps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeightPixels(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightPixels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRotation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVender(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidthPixels(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthPixels")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

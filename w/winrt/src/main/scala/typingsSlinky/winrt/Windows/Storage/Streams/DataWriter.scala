@@ -11,8 +11,6 @@ class DataWriter ()
   extends IDataWriter
      with IClosable {
   def this(outputStream: IOutputStream) = this()
-  /* CompleteClass */
-  override def close(): Unit = js.native
   def dispose(): Unit = js.native
 }
 

@@ -10,5 +10,6 @@ package object mod {
     typingsSlinky.reactCalendarTimeline.mod.ReactCalendarTimelineProps[CustomItem, CustomGroup]
   ]
   type TimelineGroup[CustomGroupFields] = typingsSlinky.reactCalendarTimeline.mod.TimelineGroupBase with CustomGroupFields
+  type TimelineHeaderProps = typingsSlinky.reactCalendarTimeline.mod.TimelineHeadersProps
   type TimelineItem[CustomItemFields, DateType] = typingsSlinky.reactCalendarTimeline.mod.TimelineItemBase[DateType] with CustomItemFields
 }

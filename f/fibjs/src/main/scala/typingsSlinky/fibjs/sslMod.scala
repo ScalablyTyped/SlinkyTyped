@@ -1,11 +1,5 @@
 package typingsSlinky.fibjs
 
-import typingsSlinky.fibjs.fibjsNumbers.`0`
-import typingsSlinky.fibjs.fibjsNumbers.`1`
-import typingsSlinky.fibjs.fibjsNumbers.`2`
-import typingsSlinky.fibjs.fibjsNumbers.`3`
-import typingsSlinky.fibjs.fibjsNumbers.`4`
-import typingsSlinky.fibjs.fibjsNumbers.`8`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,24 +21,24 @@ object sslMod extends js.Object {
   @js.native
   class Socket () extends ClassSslSocket
   
-  val BADCERT_CN_MISMATCH: `4` = js.native
-  val BADCERT_EXPIRED: `1` = js.native
-  val BADCERT_NOT_TRUSTED: `8` = js.native
-  val BADCERT_REVOKED: `2` = js.native
-  val VERIFY_NONE: `0` = js.native
-  val VERIFY_OPTIONAL: `1` = js.native
-  val VERIFY_REQUIRED: `2` = js.native
+  val BADCERT_CN_MISMATCH: /* 4 */ Double = js.native
+  val BADCERT_EXPIRED: /* 1 */ Double = js.native
+  val BADCERT_NOT_TRUSTED: /* 8 */ Double = js.native
+  val BADCERT_REVOKED: /* 2 */ Double = js.native
+  val VERIFY_NONE: /* 0 */ Double = js.native
+  val VERIFY_OPTIONAL: /* 1 */ Double = js.native
+  val VERIFY_REQUIRED: /* 2 */ Double = js.native
   val ca: ClassX509Cert = js.native
   @JSName("max_version")
   val maxVersion: Double = js.native
   @JSName("min_version")
   val minVersion: Double = js.native
-  val ssl3: `0` = js.native
-  val tls1: `1` = js.native
+  val ssl3: /* 0 */ Double = js.native
+  val tls1: /* 1 */ Double = js.native
   @JSName("tls1_1")
-  val tls11: `2` = js.native
+  val tls11: /* 2 */ Double = js.native
   @JSName("tls1_2")
-  val tls12: `3` = js.native
+  val tls12: /* 3 */ Double = js.native
   val verification: Double = js.native
   def connect(url: String): ClassStream = js.native
   def connect(url: String, timeout: Double): ClassStream = js.native

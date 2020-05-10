@@ -4,7 +4,6 @@ import typingsSlinky.backbone.mod.Parseable
 import typingsSlinky.backbone.mod.PersistenceOptions
 import typingsSlinky.backbone.mod.Silenceable
 import typingsSlinky.backbone.mod.Validable
-import typingsSlinky.jquery.JQueryXHR
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +13,7 @@ import scala.scalajs.js.annotation._
   * Collection #.fetch() method. Here are the options you can pass into that
   * method to get behaviour particular to Backbone Fetch Cache.
   */
+@js.native
 trait ModelFetchWithCacheOptions
   extends PersistenceOptions
      with Silenceable
@@ -24,14 +24,14 @@ trait ModelFetchWithCacheOptions
     * fulfilled from the cache (if possible) when cache: true is set in
     * the options hash.
     */
-  var cache: js.UndefOr[Boolean] = js.undefined
-  var context: js.UndefOr[js.Any] = js.undefined
+  var cache: js.UndefOr[Boolean] = js.native
+  var context: js.UndefOr[js.Any] = js.native
   /**
     * Cache values expire after 5 minutes by default. You can adjust this
     * by passing expires: <seconds> to the fetch call. Set to false to
     * never expire.
     */
-  var expires: js.UndefOr[Double] = js.undefined
+  var expires: js.UndefOr[Double] = js.native
   /**
     * This option allows the model/collection to be populated from the
     * cache immediately and then be updated once the call to fetch has
@@ -59,8 +59,8 @@ trait ModelFetchWithCacheOptions
     *  prefill expired, use the prefill callback and do a fetch (usual
     *  prefill behaviour)
     */
-  var prefill: js.UndefOr[Boolean] = js.undefined
-  var prefillExpires: js.UndefOr[Double] = js.undefined
+  var prefill: js.UndefOr[Boolean] = js.native
+  var prefillExpires: js.UndefOr[Double] = js.native
   var prefillSuccess: js.UndefOr[
     js.Function3[
       /* self */ js.Any, 
@@ -68,43 +68,94 @@ trait ModelFetchWithCacheOptions
       /* opts */ ModelFetchWithCacheOptions, 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object ModelFetchWithCacheOptions {
   @scala.inline
-  def apply(
-    beforeSend: /* jqxhr */ JQueryXHR => Unit = null,
-    cache: js.UndefOr[Boolean] = js.undefined,
-    context: js.Any = null,
-    data: js.Any = null,
-    error: (/* modelOrCollection */ js.UndefOr[js.Any], /* jqxhr */ js.UndefOr[JQueryXHR], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    expires: Int | Double = null,
-    parse: js.Any = null,
-    prefill: js.UndefOr[Boolean] = js.undefined,
-    prefillExpires: Int | Double = null,
-    prefillSuccess: (/* self */ js.Any, /* attributes */ js.Any, /* opts */ ModelFetchWithCacheOptions) => Unit = null,
-    silent: js.UndefOr[Boolean] = js.undefined,
-    success: (/* modelOrCollection */ js.UndefOr[js.Any], /* response */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    url: String = null,
-    validate: js.UndefOr[Boolean] = js.undefined
-  ): ModelFetchWithCacheOptions = {
+  def apply(): ModelFetchWithCacheOptions = {
     val __obj = js.Dynamic.literal()
-    if (beforeSend != null) __obj.updateDynamic("beforeSend")(js.Any.fromFunction1(beforeSend))
-    if (!js.isUndefined(cache)) __obj.updateDynamic("cache")(cache.asInstanceOf[js.Any])
-    if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(js.Any.fromFunction3(error))
-    if (expires != null) __obj.updateDynamic("expires")(expires.asInstanceOf[js.Any])
-    if (parse != null) __obj.updateDynamic("parse")(parse.asInstanceOf[js.Any])
-    if (!js.isUndefined(prefill)) __obj.updateDynamic("prefill")(prefill.asInstanceOf[js.Any])
-    if (prefillExpires != null) __obj.updateDynamic("prefillExpires")(prefillExpires.asInstanceOf[js.Any])
-    if (prefillSuccess != null) __obj.updateDynamic("prefillSuccess")(js.Any.fromFunction3(prefillSuccess))
-    if (!js.isUndefined(silent)) __obj.updateDynamic("silent")(silent.asInstanceOf[js.Any])
-    if (success != null) __obj.updateDynamic("success")(js.Any.fromFunction3(success))
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (!js.isUndefined(validate)) __obj.updateDynamic("validate")(validate.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModelFetchWithCacheOptions]
   }
+  @scala.inline
+  implicit class ModelFetchWithCacheOptionsOps[Self <: ModelFetchWithCacheOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCache(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCache: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContext(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpires(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expires")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpires: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expires")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefill(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefill: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefill")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefillExpires(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefillExpires")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefillExpires: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefillExpires")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefillSuccess(value: (/* self */ js.Any, /* attributes */ js.Any, /* opts */ ModelFetchWithCacheOptions) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefillSuccess")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutPrefillSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefillSuccess")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -46,8 +46,8 @@ class Overlay_ protected () extends Object {
     * @returns {H.map.Overlay} - the overlay itself
     */
   def setBitmap(bitmap: String): Overlay = js.native
-  def setBitmap(bitmap: typingsSlinky.std.HTMLCanvasElement): Overlay = js.native
-  def setBitmap(bitmap: typingsSlinky.std.HTMLImageElement): Overlay = js.native
+  def setBitmap(bitmap: HTMLCanvasElement): Overlay = js.native
+  def setBitmap(bitmap: HTMLImageElement): Overlay = js.native
   /**
     * This method sets the overlay's current bounds.
     * @param bounds {H.geo.Rect}

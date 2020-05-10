@@ -1,6 +1,5 @@
 package typingsSlinky.appBuilderLib
 
-import typingsSlinky.appBuilderLib.appBuilderLibStrings.S3
 import typingsSlinky.appBuilderLib.baseS3PublisherMod.BaseS3Publisher
 import typingsSlinky.builderUtilRuntime.publishOptionsMod.S3Options
 import typingsSlinky.electronPublish.mod.PublishContext
@@ -14,8 +13,6 @@ object s3PublisherMod extends js.Object {
   @js.native
   trait S3Publisher extends BaseS3Publisher {
     val info: js.Any = js.native
-    @JSName("providerName")
-    val providerName_S3Publisher: S3 = js.native
   }
   
   @js.native

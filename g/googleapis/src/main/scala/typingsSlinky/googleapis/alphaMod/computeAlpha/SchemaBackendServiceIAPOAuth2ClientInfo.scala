@@ -23,12 +23,53 @@ trait SchemaBackendServiceIAPOAuth2ClientInfo extends js.Object {
 
 object SchemaBackendServiceIAPOAuth2ClientInfo {
   @scala.inline
-  def apply(applicationName: String = null, clientName: String = null, developerEmailAddress: String = null): SchemaBackendServiceIAPOAuth2ClientInfo = {
+  def apply(): SchemaBackendServiceIAPOAuth2ClientInfo = {
     val __obj = js.Dynamic.literal()
-    if (applicationName != null) __obj.updateDynamic("applicationName")(applicationName.asInstanceOf[js.Any])
-    if (clientName != null) __obj.updateDynamic("clientName")(clientName.asInstanceOf[js.Any])
-    if (developerEmailAddress != null) __obj.updateDynamic("developerEmailAddress")(developerEmailAddress.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBackendServiceIAPOAuth2ClientInfo]
   }
+  @scala.inline
+  implicit class SchemaBackendServiceIAPOAuth2ClientInfoOps[Self <: SchemaBackendServiceIAPOAuth2ClientInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeveloperEmailAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("developerEmailAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeveloperEmailAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("developerEmailAddress")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

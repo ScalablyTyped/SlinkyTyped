@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * Deprecated, for back-compat, just loads top level module
   * 
   */
+@js.native
 trait typematic extends js.Object
 

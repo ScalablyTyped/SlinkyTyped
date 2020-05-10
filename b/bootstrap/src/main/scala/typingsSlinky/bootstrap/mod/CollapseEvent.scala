@@ -14,14 +14,12 @@ trait CollapseEvent extends js.Object
 
 object CollapseEvent {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def hiddenDotbsDotcollapse: typingsSlinky.bootstrap.bootstrapStrings.hiddenDotbsDotcollapse = "hidden.bs.collapse".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.hiddenDotbsDotcollapse]
   @scala.inline
-  def hiddenDotbsDotcollapse: typingsSlinky.bootstrap.bootstrapStrings.hiddenDotbsDotcollapse = this.cast("hidden.bs.collapse")
+  def hideDotbsDotcollapse: typingsSlinky.bootstrap.bootstrapStrings.hideDotbsDotcollapse = "hide.bs.collapse".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.hideDotbsDotcollapse]
   @scala.inline
-  def hideDotbsDotcollapse: typingsSlinky.bootstrap.bootstrapStrings.hideDotbsDotcollapse = this.cast("hide.bs.collapse")
+  def showDotbsDotcollapse: typingsSlinky.bootstrap.bootstrapStrings.showDotbsDotcollapse = "show.bs.collapse".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.showDotbsDotcollapse]
   @scala.inline
-  def showDotbsDotcollapse: typingsSlinky.bootstrap.bootstrapStrings.showDotbsDotcollapse = this.cast("show.bs.collapse")
-  @scala.inline
-  def shownDotbsDotcollapse: typingsSlinky.bootstrap.bootstrapStrings.shownDotbsDotcollapse = this.cast("shown.bs.collapse")
+  def shownDotbsDotcollapse: typingsSlinky.bootstrap.bootstrapStrings.shownDotbsDotcollapse = "shown.bs.collapse".asInstanceOf[typingsSlinky.bootstrap.bootstrapStrings.shownDotbsDotcollapse]
 }
 

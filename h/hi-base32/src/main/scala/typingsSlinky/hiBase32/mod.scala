@@ -28,6 +28,6 @@ object mod extends js.Object {
   var decode: Decode_ = js.native
   def encode(input: Input): String = js.native
   def encode(input: Input, asciiOnly: Boolean): String = js.native
-  type Input = String | js.Array[Double] | scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.Uint8Array
+  type Input = String | js.Array[Double] | js.typedarray.ArrayBuffer | js.typedarray.Uint8Array
 }
 

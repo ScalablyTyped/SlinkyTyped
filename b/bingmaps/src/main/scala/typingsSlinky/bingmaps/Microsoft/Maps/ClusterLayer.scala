@@ -15,9 +15,6 @@ class ClusterLayer protected () extends IDataLayer {
     */
   def this(pushpins: js.Array[Pushpin]) = this()
   def this(pushpins: js.Array[Pushpin], options: IClusterLayerOptions) = this()
-  /** Clears all data in the layer. */
-  /* CompleteClass */
-  override def clear(): Unit = js.native
   /**
     * Gets the pushpin in the specified cluster grid cell which can be either a ClusterPushpin if there are multiple pushpins in a cell or a single Pushpin.
     * @param The gridKey index to retrieve the pushpins for.

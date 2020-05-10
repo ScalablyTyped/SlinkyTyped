@@ -11,7 +11,12 @@ package object bearerStrategyMod {
     scala.Unit
   ]
   type VerifyBearerFunctionWithReq = js.Function3[
-    /* req */ typingsSlinky.express.mod.Request_[typingsSlinky.expressServeStaticCore.mod.ParamsDictionary], 
+    /* req */ typingsSlinky.express.mod.Request_[
+      typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
+      js.Any, 
+      js.Any, 
+      typingsSlinky.expressServeStaticCore.mod.Query
+    ], 
     /* token */ typingsSlinky.passportAzureAd.commonMod.ITokenPayload, 
     /* done */ typingsSlinky.passportAzureAd.commonMod.VerifyCallback, 
     scala.Unit

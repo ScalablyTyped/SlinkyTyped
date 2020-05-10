@@ -24,16 +24,53 @@ trait SchemaTransitTable extends js.Object {
 
 object SchemaTransitTable {
   @scala.inline
-  def apply(
-    postalCodeGroupNames: js.Array[String] = null,
-    rows: js.Array[SchemaTransitTableTransitTimeRow] = null,
-    transitTimeLabels: js.Array[String] = null
-  ): SchemaTransitTable = {
+  def apply(): SchemaTransitTable = {
     val __obj = js.Dynamic.literal()
-    if (postalCodeGroupNames != null) __obj.updateDynamic("postalCodeGroupNames")(postalCodeGroupNames.asInstanceOf[js.Any])
-    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
-    if (transitTimeLabels != null) __obj.updateDynamic("transitTimeLabels")(transitTimeLabels.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTransitTable]
   }
+  @scala.inline
+  implicit class SchemaTransitTableOps[Self <: SchemaTransitTable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPostalCodeGroupNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodeGroupNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostalCodeGroupNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCodeGroupNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[SchemaTransitTableTransitTimeRow]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRows: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransitTimeLabels(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitTimeLabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransitTimeLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transitTimeLabels")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

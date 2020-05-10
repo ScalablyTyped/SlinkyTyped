@@ -22,10 +22,41 @@ trait DescribeJobExecutionRequest extends js.Object {
 
 object DescribeJobExecutionRequest {
   @scala.inline
-  def apply(jobId: JobId, thingName: ThingName, executionNumber: Int | Double = null): DescribeJobExecutionRequest = {
+  def apply(jobId: JobId, thingName: ThingName): DescribeJobExecutionRequest = {
     val __obj = js.Dynamic.literal(jobId = jobId.asInstanceOf[js.Any], thingName = thingName.asInstanceOf[js.Any])
-    if (executionNumber != null) __obj.updateDynamic("executionNumber")(executionNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeJobExecutionRequest]
   }
+  @scala.inline
+  implicit class DescribeJobExecutionRequestOps[Self <: DescribeJobExecutionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withJobId(value: JobId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jobId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThingName(value: ThingName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thingName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExecutionNumber(value: ExecutionNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExecutionNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executionNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

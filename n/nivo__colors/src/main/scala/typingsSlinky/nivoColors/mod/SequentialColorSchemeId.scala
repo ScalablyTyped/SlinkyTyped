@@ -28,42 +28,40 @@ trait SequentialColorSchemeId extends js.Object
 
 object SequentialColorSchemeId {
   @scala.inline
-  def blue_green: typingsSlinky.nivoColors.nivoColorsStrings.blue_green = this.cast("blue_green")
+  def blue_green: typingsSlinky.nivoColors.nivoColorsStrings.blue_green = "blue_green".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.blue_green]
   @scala.inline
-  def blue_purple: typingsSlinky.nivoColors.nivoColorsStrings.blue_purple = this.cast("blue_purple")
+  def blue_purple: typingsSlinky.nivoColors.nivoColorsStrings.blue_purple = "blue_purple".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.blue_purple]
   @scala.inline
-  def blues: typingsSlinky.nivoColors.nivoColorsStrings.blues = this.cast("blues")
+  def blues: typingsSlinky.nivoColors.nivoColorsStrings.blues = "blues".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.blues]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def green_blue: typingsSlinky.nivoColors.nivoColorsStrings.green_blue = "green_blue".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.green_blue]
   @scala.inline
-  def green_blue: typingsSlinky.nivoColors.nivoColorsStrings.green_blue = this.cast("green_blue")
+  def greens: typingsSlinky.nivoColors.nivoColorsStrings.greens = "greens".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.greens]
   @scala.inline
-  def greens: typingsSlinky.nivoColors.nivoColorsStrings.greens = this.cast("greens")
+  def greys: typingsSlinky.nivoColors.nivoColorsStrings.greys = "greys".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.greys]
   @scala.inline
-  def greys: typingsSlinky.nivoColors.nivoColorsStrings.greys = this.cast("greys")
+  def orange_red: typingsSlinky.nivoColors.nivoColorsStrings.orange_red = "orange_red".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.orange_red]
   @scala.inline
-  def orange_red: typingsSlinky.nivoColors.nivoColorsStrings.orange_red = this.cast("orange_red")
+  def oranges: typingsSlinky.nivoColors.nivoColorsStrings.oranges = "oranges".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.oranges]
   @scala.inline
-  def oranges: typingsSlinky.nivoColors.nivoColorsStrings.oranges = this.cast("oranges")
+  def purple_blue: typingsSlinky.nivoColors.nivoColorsStrings.purple_blue = "purple_blue".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.purple_blue]
   @scala.inline
-  def purple_blue: typingsSlinky.nivoColors.nivoColorsStrings.purple_blue = this.cast("purple_blue")
+  def purple_blue_green: typingsSlinky.nivoColors.nivoColorsStrings.purple_blue_green = "purple_blue_green".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.purple_blue_green]
   @scala.inline
-  def purple_blue_green: typingsSlinky.nivoColors.nivoColorsStrings.purple_blue_green = this.cast("purple_blue_green")
+  def purple_red: typingsSlinky.nivoColors.nivoColorsStrings.purple_red = "purple_red".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.purple_red]
   @scala.inline
-  def purple_red: typingsSlinky.nivoColors.nivoColorsStrings.purple_red = this.cast("purple_red")
+  def purples: typingsSlinky.nivoColors.nivoColorsStrings.purples = "purples".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.purples]
   @scala.inline
-  def purples: typingsSlinky.nivoColors.nivoColorsStrings.purples = this.cast("purples")
+  def red_purple: typingsSlinky.nivoColors.nivoColorsStrings.red_purple = "red_purple".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.red_purple]
   @scala.inline
-  def red_purple: typingsSlinky.nivoColors.nivoColorsStrings.red_purple = this.cast("red_purple")
+  def reds: typingsSlinky.nivoColors.nivoColorsStrings.reds = "reds".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.reds]
   @scala.inline
-  def reds: typingsSlinky.nivoColors.nivoColorsStrings.reds = this.cast("reds")
+  def yellow_green: typingsSlinky.nivoColors.nivoColorsStrings.yellow_green = "yellow_green".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.yellow_green]
   @scala.inline
-  def yellow_green: typingsSlinky.nivoColors.nivoColorsStrings.yellow_green = this.cast("yellow_green")
+  def yellow_green_blue: typingsSlinky.nivoColors.nivoColorsStrings.yellow_green_blue = "yellow_green_blue".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.yellow_green_blue]
   @scala.inline
-  def yellow_green_blue: typingsSlinky.nivoColors.nivoColorsStrings.yellow_green_blue = this.cast("yellow_green_blue")
+  def yellow_orange_brown: typingsSlinky.nivoColors.nivoColorsStrings.yellow_orange_brown = "yellow_orange_brown".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.yellow_orange_brown]
   @scala.inline
-  def yellow_orange_brown: typingsSlinky.nivoColors.nivoColorsStrings.yellow_orange_brown = this.cast("yellow_orange_brown")
-  @scala.inline
-  def yellow_orange_red: typingsSlinky.nivoColors.nivoColorsStrings.yellow_orange_red = this.cast("yellow_orange_red")
+  def yellow_orange_red: typingsSlinky.nivoColors.nivoColorsStrings.yellow_orange_red = "yellow_orange_red".asInstanceOf[typingsSlinky.nivoColors.nivoColorsStrings.yellow_orange_red]
 }
 

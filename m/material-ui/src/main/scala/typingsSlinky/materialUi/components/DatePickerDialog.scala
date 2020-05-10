@@ -1,76 +1,77 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.AnonCall
 import typingsSlinky.materialUi.MaterialUI.DatePicker.DatePickerDialogProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
-import typingsSlinky.materialUi.MaterialUI.propTypes.utils
 import typingsSlinky.materialUi.datePickerDialogMod.default
 import typingsSlinky.materialUi.materialUiStrings.`inline`
 import typingsSlinky.materialUi.materialUiStrings.dialog
 import typingsSlinky.materialUi.materialUiStrings.landscape
 import typingsSlinky.materialUi.materialUiStrings.portrait
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object DatePickerDialog
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object DatePickerDialog {
   @JSImport("material-ui/DatePicker/DatePickerDialog", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: style */
-  def apply(
-    DateTimeFormat: AnonCall = null,
-    animation: ReactComponentClass[PopoverAnimationProps] = null,
-    autoOk: js.UndefOr[Boolean] = js.undefined,
-    cancelLabel: TagMod[Any] = null,
-    container: dialog | `inline` = null,
-    disableYearSelection: js.UndefOr[Boolean] = js.undefined,
-    firstDayOfWeek: Int | Double = null,
-    initialDate: js.Date = null,
-    locale: String = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    mode: portrait | landscape = null,
-    okLabel: TagMod[Any] = null,
-    onAccept: /* d */ js.Date => Unit = null,
-    onDismiss: () => Unit = null,
-    onShow: () => Unit = null,
-    shouldDisableDate: /* day */ js.Date => Boolean = null,
-    utils: utils = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (DateTimeFormat != null) __obj.updateDynamic("DateTimeFormat")(DateTimeFormat.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoOk)) __obj.updateDynamic("autoOk")(autoOk.asInstanceOf[js.Any])
-    if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
-    if (container != null) __obj.updateDynamic("container")(container.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableYearSelection)) __obj.updateDynamic("disableYearSelection")(disableYearSelection.asInstanceOf[js.Any])
-    if (firstDayOfWeek != null) __obj.updateDynamic("firstDayOfWeek")(firstDayOfWeek.asInstanceOf[js.Any])
-    if (initialDate != null) __obj.updateDynamic("initialDate")(initialDate.asInstanceOf[js.Any])
-    if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
-    if (okLabel != null) __obj.updateDynamic("okLabel")(okLabel.asInstanceOf[js.Any])
-    if (onAccept != null) __obj.updateDynamic("onAccept")(js.Any.fromFunction1(onAccept))
-    if (onDismiss != null) __obj.updateDynamic("onDismiss")(js.Any.fromFunction0(onDismiss))
-    if (onShow != null) __obj.updateDynamic("onShow")(js.Any.fromFunction0(onShow))
-    if (shouldDisableDate != null) __obj.updateDynamic("shouldDisableDate")(js.Any.fromFunction1(shouldDisableDate))
-    if (utils != null) __obj.updateDynamic("utils")(utils.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def DateTimeFormat(value: AnonCall): this.type = set("DateTimeFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animation(value: ReactComponentClass[PopoverAnimationProps]): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoOk(value: Boolean): this.type = set("autoOk", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelLabelReactElement(value: ReactElement): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cancelLabel(value: TagMod[Any]): this.type = set("cancelLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def container(value: dialog | `inline`): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableYearSelection(value: Boolean): this.type = set("disableYearSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def firstDayOfWeek(value: Double): this.type = set("firstDayOfWeek", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialDate(value: js.Date): this.type = set("initialDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def mode(value: portrait | landscape): this.type = set("mode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okLabelReactElement(value: ReactElement): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def okLabel(value: TagMod[Any]): this.type = set("okLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onAccept(value: /* d */ js.Date => Unit): this.type = set("onAccept", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDismiss(value: () => Unit): this.type = set("onDismiss", js.Any.fromFunction0(value))
+    @scala.inline
+    def onShow(value: () => Unit): this.type = set("onShow", js.Any.fromFunction0(value))
+    @scala.inline
+    def shouldDisableDate(value: /* day */ js.Date => Boolean): this.type = set("shouldDisableDate", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def utils(value: typingsSlinky.materialUi.MaterialUI.propTypes.utils): this.type = set("utils", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUi.datePickerDialogMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = DatePickerDialogProps
+  
+  def withProps(p: DatePickerDialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: DatePickerDialog.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

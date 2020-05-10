@@ -1,8 +1,8 @@
 package typingsSlinky.reduxLocalstorage
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Storage
 import typingsSlinky.reduxLocalstorage.mod.StorageAdapterCreator
-import typingsSlinky.std.Storage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

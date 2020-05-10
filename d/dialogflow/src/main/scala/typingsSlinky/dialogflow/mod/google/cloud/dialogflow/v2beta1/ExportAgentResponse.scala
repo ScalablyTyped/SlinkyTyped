@@ -6,7 +6,6 @@ import typingsSlinky.dialogflow.dialogflowStrings.agentUri
 import typingsSlinky.protobufjs.mod.IConversionOptions
 import typingsSlinky.protobufjs.mod.Reader
 import typingsSlinky.protobufjs.mod.Writer
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +23,7 @@ class ExportAgentResponse () extends IExportAgentResponse {
   var agent: js.UndefOr[agentUri | agentContent] = js.native
   /** ExportAgentResponse agentContent. */
   @JSName("agentContent")
-  var agentContent_ExportAgentResponse: scala.scalajs.js.typedarray.Uint8Array = js.native
+  var agentContent_ExportAgentResponse: js.typedarray.Uint8Array = js.native
   /** ExportAgentResponse agentUri. */
   @JSName("agentUri")
   var agentUri_ExportAgentResponse: String = js.native
@@ -56,8 +55,8 @@ object ExportAgentResponse extends js.Object {
     */
   def decode(reader: Reader): ExportAgentResponse = js.native
   def decode(reader: Reader, length: Double): ExportAgentResponse = js.native
-  def decode(reader: Uint8Array): ExportAgentResponse = js.native
-  def decode(reader: Uint8Array, length: Double): ExportAgentResponse = js.native
+  def decode(reader: js.typedarray.Uint8Array): ExportAgentResponse = js.native
+  def decode(reader: js.typedarray.Uint8Array, length: Double): ExportAgentResponse = js.native
   /**
     * Decodes an ExportAgentResponse message from the specified reader or buffer, length delimited.
     * @param reader Reader or buffer to decode from
@@ -66,7 +65,7 @@ object ExportAgentResponse extends js.Object {
     * @throws {$protobuf.util.ProtocolError} If required fields are missing
     */
   def decodeDelimited(reader: Reader): ExportAgentResponse = js.native
-  def decodeDelimited(reader: Uint8Array): ExportAgentResponse = js.native
+  def decodeDelimited(reader: js.typedarray.Uint8Array): ExportAgentResponse = js.native
   /**
     * Encodes the specified ExportAgentResponse message. Does not implicitly {@link google.cloud.dialogflow.v2beta1.ExportAgentResponse.verify|verify} messages.
     * @param message ExportAgentResponse message or plain object to encode

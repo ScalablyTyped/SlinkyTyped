@@ -1,10 +1,5 @@
 package typingsSlinky.scheduler
 
-import typingsSlinky.scheduler.schedulerNumbers.`1`
-import typingsSlinky.scheduler.schedulerNumbers.`2`
-import typingsSlinky.scheduler.schedulerNumbers.`3`
-import typingsSlinky.scheduler.schedulerNumbers.`4`
-import typingsSlinky.scheduler.schedulerNumbers.`5`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,15 +19,15 @@ object mod extends js.Object {
   }
   
   @JSName("unstable_IdlePriority")
-  val unstableIdlePriority: `5` = js.native
+  val unstableIdlePriority: /* 5 */ Double = js.native
   @JSName("unstable_ImmediatePriority")
-  val unstableImmediatePriority: `1` = js.native
+  val unstableImmediatePriority: /* 1 */ Double = js.native
   @JSName("unstable_LowPriority")
-  val unstableLowPriority: `4` = js.native
+  val unstableLowPriority: /* 4 */ Double = js.native
   @JSName("unstable_NormalPriority")
-  val unstableNormalPriority: `3` = js.native
+  val unstableNormalPriority: /* 3 */ Double = js.native
   @JSName("unstable_UserBlockingPriority")
-  val unstableUserBlockingPriority: `2` = js.native
+  val unstableUserBlockingPriority: /* 2 */ Double = js.native
   @JSName("unstable_cancelCallback")
   def unstableCancelCallback(callbackNode: CallbackNode): Unit = js.native
   @JSName("unstable_continueExecution")

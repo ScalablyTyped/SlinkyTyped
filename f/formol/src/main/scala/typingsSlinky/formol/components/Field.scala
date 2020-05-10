@@ -1,75 +1,98 @@
 package typingsSlinky.formol.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.formol.mod.FieldProps
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Field
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.formol.mod.Field] {
+object Field {
   @JSImport("formol", "Field")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, name, readOnly, required, size, title, type */
-  def apply(
-    TypeField: ReactComponentClass[js.Object] = null,
-    choices: js.Array[_] = null,
-    classNameModifiers: js.Any = null,
-    dangerousRawHTMLLabels: js.UndefOr[Boolean] = js.undefined,
-    error: TagMod[Any] = null,
-    extras: TagMod[Any] = null,
-    formatter: js.Any => js.Any = null,
-    handleChange: (/* name */ String, js.Any) => Unit = null,
-    handleEntered: (/* name */ String, js.Any) => Unit = null,
-    i18n: js.Any = null,
-    max: Int | Double = null,
-    minLength: Int | Double = null,
-    modified: js.UndefOr[Boolean] = js.undefined,
-    normalizer: js.Any => js.Any = null,
-    register: (/* name */ String, /* element */ Ref[_], /* validator */ js.Any, /* validityErrors */ js.Any) => Unit = null,
-    unformatter: js.Any => js.Any = null,
-    unit: TagMod[Any] = null,
-    unregister: /* name */ String => Unit = null,
-    validator: js.Any => String = null,
-    validityErrors: js.Any = null,
-    value: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.formol.mod.Field] = {
-    val __obj = js.Dynamic.literal()
-    if (TypeField != null) __obj.updateDynamic("TypeField")(TypeField.asInstanceOf[js.Any])
-    if (choices != null) __obj.updateDynamic("choices")(choices.asInstanceOf[js.Any])
-    if (classNameModifiers != null) __obj.updateDynamic("classNameModifiers")(classNameModifiers.asInstanceOf[js.Any])
-    if (!js.isUndefined(dangerousRawHTMLLabels)) __obj.updateDynamic("dangerousRawHTMLLabels")(dangerousRawHTMLLabels.asInstanceOf[js.Any])
-    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
-    if (extras != null) __obj.updateDynamic("extras")(extras.asInstanceOf[js.Any])
-    if (formatter != null) __obj.updateDynamic("formatter")(js.Any.fromFunction1(formatter))
-    if (handleChange != null) __obj.updateDynamic("handleChange")(js.Any.fromFunction2(handleChange))
-    if (handleEntered != null) __obj.updateDynamic("handleEntered")(js.Any.fromFunction2(handleEntered))
-    if (i18n != null) __obj.updateDynamic("i18n")(i18n.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(modified)) __obj.updateDynamic("modified")(modified.asInstanceOf[js.Any])
-    if (normalizer != null) __obj.updateDynamic("normalizer")(js.Any.fromFunction1(normalizer))
-    if (register != null) __obj.updateDynamic("register")(js.Any.fromFunction4(register))
-    if (unformatter != null) __obj.updateDynamic("unformatter")(js.Any.fromFunction1(unformatter))
-    if (unit != null) __obj.updateDynamic("unit")(unit.asInstanceOf[js.Any])
-    if (unregister != null) __obj.updateDynamic("unregister")(js.Any.fromFunction1(unregister))
-    if (validator != null) __obj.updateDynamic("validator")(js.Any.fromFunction1(validator))
-    if (validityErrors != null) __obj.updateDynamic("validityErrors")(validityErrors.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.formol.mod.Field] {
+    @scala.inline
+    def TypeFieldFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def TypeFieldComponentClass(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def TypeField(value: ReactComponentClass[js.Object]): this.type = set("TypeField", value.asInstanceOf[js.Any])
+    @scala.inline
+    def choices(value: js.Array[_]): this.type = set("choices", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def classNameModifiers(value: js.Any): this.type = set("classNameModifiers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dangerousRawHTMLLabels(value: Boolean): this.type = set("dangerousRawHTMLLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorReactElement(value: ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def error(value: TagMod[Any]): this.type = set("error", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extrasReactElement(value: ReactElement): this.type = set("extras", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extras(value: TagMod[Any]): this.type = set("extras", value.asInstanceOf[js.Any])
+    @scala.inline
+    def formatter(value: js.Any => js.Any): this.type = set("formatter", js.Any.fromFunction1(value))
+    @scala.inline
+    def handleChange(value: (/* name */ String, js.Any) => Unit): this.type = set("handleChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def handleEntered(value: (/* name */ String, js.Any) => Unit): this.type = set("handleEntered", js.Any.fromFunction2(value))
+    @scala.inline
+    def i18n(value: js.Any): this.type = set("i18n", value.asInstanceOf[js.Any])
+    @scala.inline
+    def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minLength(value: Double): this.type = set("minLength", value.asInstanceOf[js.Any])
+    @scala.inline
+    def modified(value: Boolean): this.type = set("modified", value.asInstanceOf[js.Any])
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def normalizer(value: js.Any => js.Any): this.type = set("normalizer", js.Any.fromFunction1(value))
+    @scala.inline
+    def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def register(
+      value: (/* name */ String, /* element */ Ref[_], /* validator */ js.Any, /* validityErrors */ js.Any) => Unit
+    ): this.type = set("register", js.Any.fromFunction4(value))
+    @scala.inline
+    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unformatter(value: js.Any => js.Any): this.type = set("unformatter", js.Any.fromFunction1(value))
+    @scala.inline
+    def unitReactElement(value: ReactElement): this.type = set("unit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unit(value: TagMod[Any]): this.type = set("unit", value.asInstanceOf[js.Any])
+    @scala.inline
+    def unregister(value: /* name */ String => Unit): this.type = set("unregister", js.Any.fromFunction1(value))
+    @scala.inline
+    def validator(value: js.Any => String): this.type = set("validator", js.Any.fromFunction1(value))
+    @scala.inline
+    def validityErrors(value: js.Any): this.type = set("validityErrors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.formol.mod.Field] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.formol.mod.Field](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FieldProps[js.Any]
+  
+  def withProps(p: FieldProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Field.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

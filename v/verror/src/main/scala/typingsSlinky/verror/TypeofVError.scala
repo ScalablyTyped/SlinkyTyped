@@ -1,7 +1,6 @@
 package typingsSlinky.verror
 
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.std.Error
 import typingsSlinky.verror.mod.Info
 import typingsSlinky.verror.mod.MultiError
 import typingsSlinky.verror.mod.Options
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TypeofVError
   extends Instantiable3[
-      (/* options */ Error) | (/* options */ Options), 
+      (/* options */ js.Error) | (/* options */ Options), 
       /* message */ String, 
       /* params (repeated) */ js.Any, 
       VError

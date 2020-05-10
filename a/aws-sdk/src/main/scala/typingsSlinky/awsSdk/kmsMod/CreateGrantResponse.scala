@@ -18,11 +18,41 @@ trait CreateGrantResponse extends js.Object {
 
 object CreateGrantResponse {
   @scala.inline
-  def apply(GrantId: GrantIdType = null, GrantToken: GrantTokenType = null): CreateGrantResponse = {
+  def apply(): CreateGrantResponse = {
     val __obj = js.Dynamic.literal()
-    if (GrantId != null) __obj.updateDynamic("GrantId")(GrantId.asInstanceOf[js.Any])
-    if (GrantToken != null) __obj.updateDynamic("GrantToken")(GrantToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateGrantResponse]
   }
+  @scala.inline
+  implicit class CreateGrantResponseOps[Self <: CreateGrantResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGrantId(value: GrantIdType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGrantToken(value: GrantTokenType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGrantToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

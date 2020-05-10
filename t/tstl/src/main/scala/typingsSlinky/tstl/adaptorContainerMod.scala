@@ -18,27 +18,9 @@ object adaptorContainerMod extends js.Object {
     protected def this(source: Source) = this()
     var source_ : Source = js.native
     /**
-      * Test whether container is empty.
-      */
-    /* CompleteClass */
-    override def empty(): Boolean = js.native
-    /**
       * Remove element.
       */
     def pop(): Unit = js.native
-    /**
-      * Insert items at the end.
-      *
-      * @param items Items to insert.
-      * @return Number of elements in the container after insertion.
-      */
-    /* CompleteClass */
-    override def push(items: T*): Double = js.native
-    /**
-      * Number of elements in the container.
-      */
-    /* CompleteClass */
-    override def size(): Double = js.native
     /**
       * Swap elements.
       *

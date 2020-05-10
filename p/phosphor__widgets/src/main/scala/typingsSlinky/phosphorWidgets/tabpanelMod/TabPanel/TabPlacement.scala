@@ -17,14 +17,12 @@ trait TabPlacement extends js.Object
 
 object TabPlacement {
   @scala.inline
-  def bottom: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def left: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.left = "left".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.left]
   @scala.inline
-  def left: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.left = this.cast("left")
+  def right: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.right = "right".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.right]
   @scala.inline
-  def right: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.top = this.cast("top")
+  def top: typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.top = "top".asInstanceOf[typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.top]
 }
 

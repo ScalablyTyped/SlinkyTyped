@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PolarViewBox extends js.Object {
-  var cx: js.UndefOr[Double] = js.undefined
-  var cy: js.UndefOr[Double] = js.undefined
-  var endAngle: js.UndefOr[Double] = js.undefined
-  var innerRadius: js.UndefOr[Double] = js.undefined
-  var outerRadius: js.UndefOr[Double] = js.undefined
-  var startAngle: js.UndefOr[Double] = js.undefined
+  var cx: js.UndefOr[Double] = js.native
+  var cy: js.UndefOr[Double] = js.native
+  var endAngle: js.UndefOr[Double] = js.native
+  var innerRadius: js.UndefOr[Double] = js.native
+  var outerRadius: js.UndefOr[Double] = js.native
+  var startAngle: js.UndefOr[Double] = js.native
 }
 
 object PolarViewBox {
   @scala.inline
-  def apply(
-    cx: Int | Double = null,
-    cy: Int | Double = null,
-    endAngle: Int | Double = null,
-    innerRadius: Int | Double = null,
-    outerRadius: Int | Double = null,
-    startAngle: Int | Double = null
-  ): PolarViewBox = {
+  def apply(): PolarViewBox = {
     val __obj = js.Dynamic.literal()
-    if (cx != null) __obj.updateDynamic("cx")(cx.asInstanceOf[js.Any])
-    if (cy != null) __obj.updateDynamic("cy")(cy.asInstanceOf[js.Any])
-    if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
-    if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
-    if (outerRadius != null) __obj.updateDynamic("outerRadius")(outerRadius.asInstanceOf[js.Any])
-    if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolarViewBox]
   }
+  @scala.inline
+  implicit class PolarViewBoxOps[Self <: PolarViewBox] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCx: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cx")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endAngle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInnerRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInnerRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOuterRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerRadius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOuterRadius: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outerRadius")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartAngle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

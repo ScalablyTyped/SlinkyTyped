@@ -22,6 +22,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Annotations extends Label {
   /**
   	 * Sets the horizontal alignment of the `text` within the box.
@@ -29,20 +30,20 @@ trait Annotations extends Label {
   	 * (i.e. `text` contains one or more <br> HTML tags) or if an
   	 * explicit width is set to override the text width.
   	 */
-  var align: left | center | right
+  var align: left | center | right = js.native
   /** Sets the color of the annotation arrow. */
-  var arrowcolor: String
+  var arrowcolor: String = js.native
   /** Sets the end annotation arrow head style. */
-  var arrowhead: Double
+  var arrowhead: Double = js.native
   /** Sets the annotation arrow head position. */
-  var arrowside: end | start
+  var arrowside: end | start = js.native
   /**
   	 * Sets the size of the end annotation arrow head, relative to `arrowwidth`.
   	 * A value of 1 (default) gives a head about 3x as wide as the line.
   	 */
-  var arrowsize: Double
+  var arrowsize: Double = js.native
   /** Sets the width (in px) of annotation arrow line. */
-  var arrowwidth: Double
+  var arrowwidth: Double = js.native
   /**
   	 * Sets the x component of the arrow tail about the arrow head.
   	 * If `axref` is `pixel`, a positive (negative)
@@ -51,7 +52,7 @@ trait Annotations extends Label {
   	 * If `axref` is an axis, this is an absolute value on that axis,
   	 * like `x`, NOT a relative value.
   	 */
-  var ax: Double
+  var ax: Double = js.native
   /**
   	 * Indicates in what terms the tail of the annotation (ax,ay)
   	 * is specified. If `pixel`, `ax` is a relative offset in pixels
@@ -60,7 +61,7 @@ trait Annotations extends Label {
   	 * for trendline annotations which should continue to indicate
   	 * the correct trend when zoomed.
   	 */
-  var axref: pixel
+  var axref: pixel = js.native
   /**
   	 * Sets the y component of the arrow tail about the arrow head.
   	 * If `ayref` is `pixel`, a positive (negative)
@@ -69,7 +70,7 @@ trait Annotations extends Label {
   	 * If `ayref` is an axis, this is an absolute value on that axis,
   	 * like `y`, NOT a relative value.
   	 */
-  var ay: Double
+  var ay: Double = js.native
   /**
   	 * Indicates in what terms the tail of the annotation (ax,ay)
   	 * is specified. If `pixel`, `ay` is a relative offset in pixels
@@ -78,11 +79,11 @@ trait Annotations extends Label {
   	 * for trendline annotations which should continue to indicate
   	 * the correct trend when zoomed.
   	 */
-  var ayref: pixel
+  var ayref: pixel = js.native
   /** Sets the padding (in px) between the `text` and the enclosing border. */
-  var borderpad: Double
+  var borderpad: Double = js.native
   /** Sets the width (in px) of the border enclosing the annotation `text`. */
-  var borderwidth: Double
+  var borderwidth: Double = js.native
   /**
   	 * Determines whether the annotation text box captures mouse move and click events,
   	 * or allows those events to pass through to data points in the plot that may be
@@ -90,7 +91,7 @@ trait Annotations extends Label {
   	 * is provided. If you use the event `plotly_clickannotation` without `hovertext`
   	 * you must explicitly enable `captureevents`.
   	 */
-  var captureevents: Boolean
+  var captureevents: Boolean = js.native
   /**
   	 * Makes this annotation respond to clicks on the plot.
   	 * If you click a data point that exactly matches the `x` and `y` values of this annotation,
@@ -101,26 +102,26 @@ trait Annotations extends Label {
   	 * `x` or `y` values, you can set `xclick` and/or `yclick`. This is useful for example to label
   	 * the side of a bar. To label markers though, `standoff` is preferred over `xclick` and `yclick`.
   	 */
-  var clicktoshow: `false` | onoff | onout
+  var clicktoshow: `false` | onoff | onout = js.native
   /**
   	 * Sets an explicit height for the text box. null (default) lets the
   	 * text set the box height. Taller text will be clipped.
   	 */
-  var height: Double
-  var hoverlabel: PartialHoverLabel
+  var height: Double = js.native
+  var hoverlabel: PartialHoverLabel = js.native
   /**
   	 * Sets text to appear when hovering over this annotation.
   	 * If omitted or blank, no hover label will appear.
   	 */
-  var hovertext: String
+  var hovertext: String = js.native
   /** Sets the opacity of the annotation (text + arrow). */
-  var opacity: Double
+  var opacity: Double = js.native
   /**
   	 * Determines whether or not the annotation is drawn with an arrow.
   	 * If *true*, `text` is placed near the arrow's tail.
   	 * If *false*, `text` lines up with the `x` and `y` provided.
   	 */
-  var showarrow: Boolean
+  var showarrow: Boolean = js.native
   /**
   	 * Sets a distance, in pixels, to move the end arrowhead away from the
   	 * position it is pointing at, for example to point at the edge of
@@ -128,14 +129,14 @@ trait Annotations extends Label {
   	 * from the `ax` / `ay` vector, in contrast to `xshift` / `yshift`
   	 * which moves everything by this amount.
   	 */
-  var standoff: Double
+  var standoff: Double = js.native
   /** Sets the start annotation arrow head style. */
-  var startarrowhead: Double
+  var startarrowhead: Double = js.native
   /**
   	 * Sets the size of the start annotation arrow head, relative to `arrowwidth`.
   	 * A value of 1 (default) gives a head about 3x as wide as the line.
   	 */
-  var startarrowsize: Double
+  var startarrowsize: Double = js.native
   /**
   	 * Sets a distance, in pixels, to move the start arrowhead away from the
   	 * position it is pointing at, for example to point at the edge of
@@ -143,7 +144,7 @@ trait Annotations extends Label {
   	 * from the `ax` / `ay` vector, in contrast to `xshift` / `yshift`
   	 * which moves everything by this amount.
   	 */
-  var startstandoff: Double
+  var startstandoff: Double = js.native
   /**
   	 * Sets the text associated with this annotation.
   	 * Plotly uses a subset of HTML tags to do things like
@@ -151,22 +152,22 @@ trait Annotations extends Label {
   	 * hyperlinks (<a href='...'></a>). Tags <em>, <sup>, <sub>
   	 * <span> are also supported.
   	 */
-  var text: String
+  var text: String = js.native
   /** Sets the angle at which the `text` is drawn with respect to the horizontal. */
-  var textangle: String
+  var textangle: String = js.native
   /**
   	 * Sets the vertical alignment of the `text` within the box.
   	 * Has an effect only if an explicit height is set to override the text height.
   	 */
-  var valign: top | middle | bottom
+  var valign: top | middle | bottom = js.native
   /** Determines whether or not this annotation is visible. */
-  var visible: Boolean
+  var visible: Boolean = js.native
   /**
   	 * Sets an explicit width for the text box. null (default) lets the
   	 * text set the box width. Wider text will be clipped.
   	 * There is no automatic wrapping; use <br> to start a new line.
   	 */
-  var width: Double
+  var width: Double = js.native
   /**
   	 * Sets the annotation's x position.
   	 * If the axis `type` is *log*, then you must take the log of your desired range.
@@ -175,7 +176,7 @@ trait Annotations extends Label {
   	 * If the axis `type` is *category*, it should be numbers, using the scale where each
   	 * category is assigned a serial number from zero in the order it appears.
   	 */
-  var x: Double | String
+  var x: Double | String = js.native
   /**
   	 * Sets the text box's horizontal position anchor
   	 * This anchor binds the `x` position to the *left*, *center* or *right* of the annotation.
@@ -184,12 +185,12 @@ trait Annotations extends Label {
   	 * If *auto*, the anchor is equivalent to *center* for data-referenced annotations or if there
   	 * is an arrow, whereas for paper-referenced with no arrow, the anchor picked corresponds to the closest side.
   	 */
-  var xanchor: auto | left | center | right
+  var xanchor: auto | left | center | right = js.native
   /**
   	 * Toggle this annotation when clicking a data point whose `x` value
   	 * is `xclick` rather than the annotation's `x` value.
   	 */
-  var xclick: js.Any
+  var xclick: js.Any = js.native
   /**
   	 * Sets the annotation's x coordinate axis.
   	 * If set to an x axis id (e.g. *x* or *x2*), the `x` position refers to an x coordinate
@@ -197,12 +198,12 @@ trait Annotations extends Label {
   	 * the left side of the plotting area in normalized coordinates
   	 * where 0 (1) corresponds to the left (right) side.
   	 */
-  var xref: paper | x
+  var xref: paper | x = js.native
   /**
   	 * Shifts the position of the whole annotation and arrow to the
   	 * right (positive) or left (negative) by this many pixels.
   	 */
-  var xshift: Double
+  var xshift: Double = js.native
   /**
   	 * Sets the annotation's y position.
   	 * If the axis `type` is *log*, then you must take the log of your desired range.
@@ -211,7 +212,7 @@ trait Annotations extends Label {
   	 * If the axis `type` is *category*, it should be numbers, using the scale where each
   	 * category is assigned a serial number from zero in the order it appears.
   	 */
-  var y: Double | String
+  var y: Double | String = js.native
   /**
   	 * Sets the text box's vertical position anchor
   	 * This anchor binds the `y` position to the *top*, *middle* or *bottom* of the annotation.
@@ -221,12 +222,12 @@ trait Annotations extends Label {
   	 * there is an arrow, whereas for paper-referenced with no arrow, the anchor picked
   	 * corresponds to the closest side.
   	 */
-  var yanchor: auto | top | middle | bottom
+  var yanchor: auto | top | middle | bottom = js.native
   /**
   	 * Toggle this annotation when clicking a data point whose `y` value
   	 * is `yclick` rather than the annotation's `y` value.
   	 */
-  var yclick: js.Any
+  var yclick: js.Any = js.native
   /**
   	 * Sets the annotation's y coordinate axis.
   	 * If set to an y axis id (e.g. *y* or *y2*), the `y` position refers to an y coordinate
@@ -234,12 +235,12 @@ trait Annotations extends Label {
   	 * the bottom of the plotting area in normalized coordinates
   	 * where 0 (1) corresponds to the bottom (top).
   	 */
-  var yref: paper | y
+  var yref: paper | y = js.native
   /**
   	 * Shifts the position of the whole annotation and arrow up
   	 * (positive) or down (negative) by this many pixels.
   	 */
-  var yshift: Double
+  var yshift: Double = js.native
 }
 
 object Annotations {
@@ -288,8 +289,243 @@ object Annotations {
     yshift: Double
   ): Annotations = {
     val __obj = js.Dynamic.literal(align = align.asInstanceOf[js.Any], arrowcolor = arrowcolor.asInstanceOf[js.Any], arrowhead = arrowhead.asInstanceOf[js.Any], arrowside = arrowside.asInstanceOf[js.Any], arrowsize = arrowsize.asInstanceOf[js.Any], arrowwidth = arrowwidth.asInstanceOf[js.Any], ax = ax.asInstanceOf[js.Any], axref = axref.asInstanceOf[js.Any], ay = ay.asInstanceOf[js.Any], ayref = ayref.asInstanceOf[js.Any], bgcolor = bgcolor.asInstanceOf[js.Any], bordercolor = bordercolor.asInstanceOf[js.Any], borderpad = borderpad.asInstanceOf[js.Any], borderwidth = borderwidth.asInstanceOf[js.Any], captureevents = captureevents.asInstanceOf[js.Any], clicktoshow = clicktoshow.asInstanceOf[js.Any], font = font.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], hoverlabel = hoverlabel.asInstanceOf[js.Any], hovertext = hovertext.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], showarrow = showarrow.asInstanceOf[js.Any], standoff = standoff.asInstanceOf[js.Any], startarrowhead = startarrowhead.asInstanceOf[js.Any], startarrowsize = startarrowsize.asInstanceOf[js.Any], startstandoff = startstandoff.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], textangle = textangle.asInstanceOf[js.Any], valign = valign.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], xanchor = xanchor.asInstanceOf[js.Any], xclick = xclick.asInstanceOf[js.Any], xref = xref.asInstanceOf[js.Any], xshift = xshift.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], yanchor = yanchor.asInstanceOf[js.Any], yclick = yclick.asInstanceOf[js.Any], yref = yref.asInstanceOf[js.Any], yshift = yshift.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Annotations]
   }
+  @scala.inline
+  implicit class AnnotationsOps[Self <: Annotations] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: left | center | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrowcolor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowcolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrowhead(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowhead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrowside(value: end | start): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowside")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrowsize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowsize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArrowwidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowwidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAxref(value: pixel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAyref(value: pixel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ayref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBorderpad(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderpad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBorderwidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("borderwidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaptureevents(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("captureevents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClicktoshow(value: `false` | onoff | onout): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clicktoshow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHoverlabel(value: PartialHoverLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverlabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHovertext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hovertext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowarrow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showarrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStandoff(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("standoff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartarrowhead(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startarrowhead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartarrowsize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startarrowsize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartstandoff(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startstandoff")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextangle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textangle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValign(value: top | middle | bottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valign")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withXanchor(value: auto | left | center | right): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xanchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withXclick(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xclick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withXref(value: paper | x): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withXshift(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xshift")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withYanchor(value: auto | top | middle | bottom): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yanchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withYclick(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yclick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withYref(value: paper | y): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withYshift(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("yshift")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

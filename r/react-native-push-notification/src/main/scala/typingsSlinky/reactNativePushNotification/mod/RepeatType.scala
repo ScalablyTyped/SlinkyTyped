@@ -15,16 +15,14 @@ trait RepeatType extends js.Object
 
 object RepeatType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.day = "day".asInstanceOf[typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.day]
   @scala.inline
-  def day: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.day = this.cast("day")
+  def hour: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.hour = "hour".asInstanceOf[typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.hour = this.cast("hour")
+  def minute: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.minute = "minute".asInstanceOf[typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.minute = this.cast("minute")
+  def time: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.time = "time".asInstanceOf[typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.time]
   @scala.inline
-  def time: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.time = this.cast("time")
-  @scala.inline
-  def week: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.week = this.cast("week")
+  def week: typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.week = "week".asInstanceOf[typingsSlinky.reactNativePushNotification.reactNativePushNotificationStrings.week]
 }
 

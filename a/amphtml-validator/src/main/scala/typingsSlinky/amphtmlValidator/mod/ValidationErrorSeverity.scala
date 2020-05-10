@@ -13,12 +13,10 @@ trait ValidationErrorSeverity extends js.Object
 
 object ValidationErrorSeverity {
   @scala.inline
-  def ERROR: typingsSlinky.amphtmlValidator.amphtmlValidatorStrings.ERROR = this.cast("ERROR")
+  def ERROR: typingsSlinky.amphtmlValidator.amphtmlValidatorStrings.ERROR = "ERROR".asInstanceOf[typingsSlinky.amphtmlValidator.amphtmlValidatorStrings.ERROR]
   @scala.inline
-  def UNKNOWN_SEVERITY: typingsSlinky.amphtmlValidator.amphtmlValidatorStrings.UNKNOWN_SEVERITY = this.cast("UNKNOWN_SEVERITY")
+  def UNKNOWN_SEVERITY: typingsSlinky.amphtmlValidator.amphtmlValidatorStrings.UNKNOWN_SEVERITY = "UNKNOWN_SEVERITY".asInstanceOf[typingsSlinky.amphtmlValidator.amphtmlValidatorStrings.UNKNOWN_SEVERITY]
   @scala.inline
-  def WARNING: typingsSlinky.amphtmlValidator.amphtmlValidatorStrings.WARNING = this.cast("WARNING")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WARNING: typingsSlinky.amphtmlValidator.amphtmlValidatorStrings.WARNING = "WARNING".asInstanceOf[typingsSlinky.amphtmlValidator.amphtmlValidatorStrings.WARNING]
 }
 

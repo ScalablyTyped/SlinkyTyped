@@ -22,11 +22,47 @@ trait CaptionSelector extends js.Object {
 
 object CaptionSelector {
   @scala.inline
-  def apply(Name: stringMin1, LanguageCode: string = null, SelectorSettings: CaptionSelectorSettings = null): CaptionSelector = {
+  def apply(Name: stringMin1): CaptionSelector = {
     val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
-    if (LanguageCode != null) __obj.updateDynamic("LanguageCode")(LanguageCode.asInstanceOf[js.Any])
-    if (SelectorSettings != null) __obj.updateDynamic("SelectorSettings")(SelectorSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[CaptionSelector]
   }
+  @scala.inline
+  implicit class CaptionSelectorOps[Self <: CaptionSelector] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: stringMin1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: string): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LanguageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectorSettings(value: CaptionSelectorSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectorSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectorSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectorSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

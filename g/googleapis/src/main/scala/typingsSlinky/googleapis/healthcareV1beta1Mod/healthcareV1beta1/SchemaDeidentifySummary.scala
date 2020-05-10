@@ -21,11 +21,41 @@ trait SchemaDeidentifySummary extends js.Object {
 
 object SchemaDeidentifySummary {
   @scala.inline
-  def apply(successResourceCount: String = null, successStoreCount: String = null): SchemaDeidentifySummary = {
+  def apply(): SchemaDeidentifySummary = {
     val __obj = js.Dynamic.literal()
-    if (successResourceCount != null) __obj.updateDynamic("successResourceCount")(successResourceCount.asInstanceOf[js.Any])
-    if (successStoreCount != null) __obj.updateDynamic("successStoreCount")(successStoreCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeidentifySummary]
   }
+  @scala.inline
+  implicit class SchemaDeidentifySummaryOps[Self <: SchemaDeidentifySummary] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSuccessResourceCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successResourceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessResourceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successResourceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuccessStoreCount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successStoreCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuccessStoreCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("successStoreCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

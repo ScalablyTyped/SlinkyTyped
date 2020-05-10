@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.documentCardLocationTypesMod.IDocumentCardLocationProps
-import typingsSlinky.officeUiFabricReact.utilitiesMod.BaseComponent
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 object documentCardLocationBaseMod extends js.Object {
   @js.native
-  class DocumentCardLocationBase ()
-    extends BaseComponent[IDocumentCardLocationProps, js.Any] {
+  class DocumentCardLocationBase protected ()
+    extends Component[IDocumentCardLocationProps, js.Any, js.Any] {
+    def this(props: IDocumentCardLocationProps) = this()
     var _classNames: js.Any = js.native
   }
   

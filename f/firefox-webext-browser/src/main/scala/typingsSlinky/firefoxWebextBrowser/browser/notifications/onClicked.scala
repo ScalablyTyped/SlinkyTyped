@@ -13,5 +13,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("browser.notifications.onClicked")
 @js.native
 object onClicked
-  extends TopLevel[WebExtEvent[js.Function1[/* notificationId */ String, Unit]]]
+  extends TopLevel[WebExtEvent[js.Function1[/* command */ String, Unit]]]
 

@@ -15,16 +15,14 @@ trait Str extends _Type
 
 object Str {
   @scala.inline
-  def bottom: typingsSlinky.echarts.echartsStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.echarts.echartsStrings.bottom = "bottom".asInstanceOf[typingsSlinky.echarts.echartsStrings.bottom]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def inside: typingsSlinky.echarts.echartsStrings.inside = "inside".asInstanceOf[typingsSlinky.echarts.echartsStrings.inside]
   @scala.inline
-  def inside: typingsSlinky.echarts.echartsStrings.inside = this.cast("inside")
+  def left: typingsSlinky.echarts.echartsStrings.left = "left".asInstanceOf[typingsSlinky.echarts.echartsStrings.left]
   @scala.inline
-  def left: typingsSlinky.echarts.echartsStrings.left = this.cast("left")
+  def right: typingsSlinky.echarts.echartsStrings.right = "right".asInstanceOf[typingsSlinky.echarts.echartsStrings.right]
   @scala.inline
-  def right: typingsSlinky.echarts.echartsStrings.right = this.cast("right")
-  @scala.inline
-  def top: typingsSlinky.echarts.echartsStrings.top = this.cast("top")
+  def top: typingsSlinky.echarts.echartsStrings.top = "top".asInstanceOf[typingsSlinky.echarts.echartsStrings.top]
 }
 

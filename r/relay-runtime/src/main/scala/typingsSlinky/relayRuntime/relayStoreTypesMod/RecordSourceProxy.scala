@@ -5,12 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RecordSourceProxy extends js.Object {
-  def create(dataID: DataID, typeName: String): RecordProxy[js.Object]
-  def delete(dataID: DataID): Unit
+  def create(dataID: DataID, typeName: String): RecordProxy[js.Object] = js.native
+  def delete(dataID: DataID): Unit = js.native
   // tslint:disable-next-line
-  def get[T](dataID: DataID): js.UndefOr[RecordProxy[T] | Null]
-  def getRoot(): RecordProxy[js.Object]
+  def get[T](dataID: DataID): js.UndefOr[RecordProxy[T] | Null] = js.native
+  def getRoot(): RecordProxy[js.Object] = js.native
 }
 
 object RecordSourceProxy {
@@ -22,8 +23,39 @@ object RecordSourceProxy {
     getRoot: () => RecordProxy[js.Object]
   ): RecordSourceProxy = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction2(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getRoot = js.Any.fromFunction0(getRoot))
-  
     __obj.asInstanceOf[RecordSourceProxy]
   }
+  @scala.inline
+  implicit class RecordSourceProxyOps[Self <: RecordSourceProxy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: (DataID, String) => RecordProxy[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: DataID => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: DataID => js.UndefOr[RecordProxy[js.Any] | Null]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetRoot(value: () => RecordProxy[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRoot")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -26,15 +26,15 @@ class PageVariable protected () extends Element {
   ) = this()
   @JSName("model")
   var model_FPageVariable: IModel = js.native
-  def containerAsMicroflowParameterMapping(): MicroflowParameterMapping = js.native
-  def containerAsNanoflowParameterMapping(): NanoflowParameterMapping = js.native
-  def useAllPages(): Boolean = js.native
+  def containerAsMicroflowParameterMapping: MicroflowParameterMapping = js.native
+  def containerAsNanoflowParameterMapping: NanoflowParameterMapping = js.native
+  def useAllPages: Boolean = js.native
   def useAllPages(newValue: Boolean): js.Any = js.native
   def widget(): js.Any = js.native
   def widget(newValue: Widget): js.Any = js.native
-  def widgetLocalName(): String | Null = js.native
+  def widgetLocalName: String | Null = js.native
   @JSName("widget")
-  def widget_Union(): Widget | Null = js.native
+  def widget_Union: Widget | Null = js.native
 }
 
 /* static members */

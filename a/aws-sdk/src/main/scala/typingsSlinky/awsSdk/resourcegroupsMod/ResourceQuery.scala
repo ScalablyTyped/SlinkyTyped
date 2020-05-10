@@ -20,8 +20,27 @@ object ResourceQuery {
   @scala.inline
   def apply(Query: Query, Type: QueryType): ResourceQuery = {
     val __obj = js.Dynamic.literal(Query = Query.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ResourceQuery]
   }
+  @scala.inline
+  implicit class ResourceQueryOps[Self <: ResourceQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQuery(value: Query): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: QueryType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -16,5 +16,6 @@ trait HTMLTitleElement extends HTMLElement {
 
 @JSGlobal("HTMLTitleElement")
 @js.native
-object HTMLTitleElement extends Instantiable0[HTMLTitleElement]
+object HTMLTitleElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLTitleElement]
 

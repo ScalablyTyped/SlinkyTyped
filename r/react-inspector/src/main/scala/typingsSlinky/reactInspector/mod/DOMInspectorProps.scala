@@ -1,34 +1,36 @@
 package typingsSlinky.reactInspector.mod
 
-import slinky.core.TagMod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DOMInspectorProps
   extends TreeViewProps
      with ThemedComponentProps {
   @JSName("data")
-  var data_DOMInspectorProps: js.Object
+  var data_DOMInspectorProps: js.Object = js.native
 }
 
 object DOMInspectorProps {
   @scala.inline
-  def apply(
-    data: js.Object,
-    expandLevel: Int | Double = null,
-    expandPaths: String | js.Array[String] = null,
-    name: String = null,
-    nodeRenderer: /* params */ InspectorNodeParams => TagMod[Any] = null,
-    theme: InspectorTheme = null
-  ): DOMInspectorProps = {
+  def apply(data: js.Object): DOMInspectorProps = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    if (expandLevel != null) __obj.updateDynamic("expandLevel")(expandLevel.asInstanceOf[js.Any])
-    if (expandPaths != null) __obj.updateDynamic("expandPaths")(expandPaths.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (nodeRenderer != null) __obj.updateDynamic("nodeRenderer")(js.Any.fromFunction1(nodeRenderer))
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[DOMInspectorProps]
   }
+  @scala.inline
+  implicit class DOMInspectorPropsOps[Self <: DOMInspectorProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

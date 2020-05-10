@@ -1,7 +1,5 @@
 package typingsSlinky.firebaseDatabase.completeChildSourceMod
 
-import typingsSlinky.firebaseDatabase.indexMod.Index
-import typingsSlinky.firebaseDatabase.nodeMod.NamedNode
 import typingsSlinky.firebaseDatabase.nodeMod.Node
 import typingsSlinky.firebaseDatabase.viewCacheMod.ViewCache
 import typingsSlinky.firebaseDatabase.writeTreeMod.WriteTreeRef
@@ -22,19 +20,5 @@ class WriteTreeCompleteChildSource protected () extends CompleteChildSource {
   var optCompleteServerCache_ : js.Any = js.native
   var viewCache_ : js.Any = js.native
   var writes_ : js.Any = js.native
-  /**
-    * @param {!Index} index
-    * @param {!NamedNode} child
-    * @param {boolean} reverse
-    * @return {?NamedNode}
-    */
-  /* CompleteClass */
-  override def getChildAfterChild(index: Index, child: NamedNode, reverse: Boolean): NamedNode | Null = js.native
-  /**
-    * @param {!string} childKey
-    * @return {?Node}
-    */
-  /* CompleteClass */
-  override def getCompleteChild(childKey: String): Node | Null = js.native
 }
 

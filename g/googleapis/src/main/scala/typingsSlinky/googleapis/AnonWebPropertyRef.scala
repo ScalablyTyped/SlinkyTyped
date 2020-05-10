@@ -12,10 +12,29 @@ trait AnonWebPropertyRef extends js.Object {
 
 object AnonWebPropertyRef {
   @scala.inline
-  def apply(webPropertyRef: SchemaWebPropertyRef = null): AnonWebPropertyRef = {
+  def apply(): AnonWebPropertyRef = {
     val __obj = js.Dynamic.literal()
-    if (webPropertyRef != null) __obj.updateDynamic("webPropertyRef")(webPropertyRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonWebPropertyRef]
   }
+  @scala.inline
+  implicit class AnonWebPropertyRefOps[Self <: AnonWebPropertyRef] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWebPropertyRef(value: SchemaWebPropertyRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebPropertyRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("webPropertyRef")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

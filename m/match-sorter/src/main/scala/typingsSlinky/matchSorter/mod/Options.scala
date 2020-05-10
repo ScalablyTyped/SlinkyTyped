@@ -4,24 +4,62 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Options[T] extends js.Object {
-  var keepDiacritics: js.UndefOr[Boolean] = js.undefined
-  var keys: js.UndefOr[js.Array[KeyOptions[T] | ExtendedKeyOptions[T]]] = js.undefined
-  var threshold: js.UndefOr[Double] = js.undefined
+  var keepDiacritics: js.UndefOr[Boolean] = js.native
+  var keys: js.UndefOr[js.Array[KeyOptions[T] | ExtendedKeyOptions[T]]] = js.native
+  var threshold: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply[T](
-    keepDiacritics: js.UndefOr[Boolean] = js.undefined,
-    keys: js.Array[KeyOptions[T] | ExtendedKeyOptions[T]] = null,
-    threshold: Int | Double = null
-  ): Options[T] = {
+  def apply[T](): Options[T] = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(keepDiacritics)) __obj.updateDynamic("keepDiacritics")(keepDiacritics.asInstanceOf[js.Any])
-    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
-    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options[T]]
   }
+  @scala.inline
+  implicit class OptionsOps[Self[t] <: Options[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withKeepDiacritics(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepDiacritics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeepDiacritics: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepDiacritics")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeys(value: js.Array[KeyOptions[T] | ExtendedKeyOptions[T]]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeys: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withThreshold(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThreshold: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threshold")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

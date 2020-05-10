@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
   *
   *
   **/
+@js.native
 trait IStylesheetResource extends js.Object {
   /**
     * @ngdoc method
@@ -32,7 +33,7 @@ trait IStylesheetResource extends js.Object {
     * @returns {Promise} resourcePromise object containing the stylesheets.
     *
     */
-  def getAll(): IPromise[IResourcePromise]
+  def getAll(): IPromise[IResourcePromise] = js.native
   /**
     * @ngdoc method
     * @name umbraco.resources.stylesheetResource#getRules
@@ -52,7 +53,7 @@ trait IStylesheetResource extends js.Object {
     * @returns {Promise} resourcePromise object containing the rules.
     *
     */
-  def getRules(id: Double): IPromise[IResourcePromise]
+  def getRules(id: Double): IPromise[IResourcePromise] = js.native
   /**
     * @ngdoc method
     * @name umbraco.resources.stylesheetResource#getRulesByName
@@ -72,7 +73,7 @@ trait IStylesheetResource extends js.Object {
     * @returns {Promise} resourcePromise object containing the rules.
     *
     */
-  def getRulesByName(name: String): IPromise[IResourcePromise]
+  def getRulesByName(name: String): IPromise[IResourcePromise] = js.native
 }
 
 object IStylesheetResource {
@@ -83,8 +84,33 @@ object IStylesheetResource {
     getRulesByName: String => IPromise[IResourcePromise]
   ): IStylesheetResource = {
     val __obj = js.Dynamic.literal(getAll = js.Any.fromFunction0(getAll), getRules = js.Any.fromFunction1(getRules), getRulesByName = js.Any.fromFunction1(getRulesByName))
-  
     __obj.asInstanceOf[IStylesheetResource]
   }
+  @scala.inline
+  implicit class IStylesheetResourceOps[Self <: IStylesheetResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAll(value: () => IPromise[IResourcePromise]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAll")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRules(value: Double => IPromise[IResourcePromise]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRules")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetRulesByName(value: String => IPromise[IResourcePromise]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRulesByName")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

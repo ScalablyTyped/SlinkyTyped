@@ -25,36 +25,34 @@ trait ConditionName extends js.Object
 
 object ConditionName {
   @scala.inline
-  def begins_with: typingsSlinky.handsontable.handsontableStrings.begins_with = this.cast("begins_with")
+  def begins_with: typingsSlinky.handsontable.handsontableStrings.begins_with = "begins_with".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.begins_with]
   @scala.inline
-  def between: typingsSlinky.handsontable.handsontableStrings.between = this.cast("between")
+  def between: typingsSlinky.handsontable.handsontableStrings.between = "between".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.between]
   @scala.inline
-  def by_value: typingsSlinky.handsontable.handsontableStrings.by_value = this.cast("by_value")
+  def by_value: typingsSlinky.handsontable.handsontableStrings.by_value = "by_value".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.by_value]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def contains: typingsSlinky.handsontable.handsontableStrings.contains = "contains".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.contains]
   @scala.inline
-  def contains: typingsSlinky.handsontable.handsontableStrings.contains = this.cast("contains")
+  def empty: typingsSlinky.handsontable.handsontableStrings.empty = "empty".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.empty]
   @scala.inline
-  def empty: typingsSlinky.handsontable.handsontableStrings.empty = this.cast("empty")
+  def ends_with: typingsSlinky.handsontable.handsontableStrings.ends_with = "ends_with".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.ends_with]
   @scala.inline
-  def ends_with: typingsSlinky.handsontable.handsontableStrings.ends_with = this.cast("ends_with")
+  def eq: typingsSlinky.handsontable.handsontableStrings.eq = "eq".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.eq]
   @scala.inline
-  def eq: typingsSlinky.handsontable.handsontableStrings.eq = this.cast("eq")
+  def gt: typingsSlinky.handsontable.handsontableStrings.gt = "gt".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.gt]
   @scala.inline
-  def gt: typingsSlinky.handsontable.handsontableStrings.gt = this.cast("gt")
+  def gte: typingsSlinky.handsontable.handsontableStrings.gte = "gte".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.gte]
   @scala.inline
-  def gte: typingsSlinky.handsontable.handsontableStrings.gte = this.cast("gte")
+  def lt: typingsSlinky.handsontable.handsontableStrings.lt = "lt".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.lt]
   @scala.inline
-  def lt: typingsSlinky.handsontable.handsontableStrings.lt = this.cast("lt")
+  def lte: typingsSlinky.handsontable.handsontableStrings.lte = "lte".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.lte]
   @scala.inline
-  def lte: typingsSlinky.handsontable.handsontableStrings.lte = this.cast("lte")
+  def neq: typingsSlinky.handsontable.handsontableStrings.neq = "neq".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.neq]
   @scala.inline
-  def neq: typingsSlinky.handsontable.handsontableStrings.neq = this.cast("neq")
+  def not_between: typingsSlinky.handsontable.handsontableStrings.not_between = "not_between".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.not_between]
   @scala.inline
-  def not_between: typingsSlinky.handsontable.handsontableStrings.not_between = this.cast("not_between")
+  def not_contains: typingsSlinky.handsontable.handsontableStrings.not_contains = "not_contains".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.not_contains]
   @scala.inline
-  def not_contains: typingsSlinky.handsontable.handsontableStrings.not_contains = this.cast("not_contains")
-  @scala.inline
-  def not_empty: typingsSlinky.handsontable.handsontableStrings.not_empty = this.cast("not_empty")
+  def not_empty: typingsSlinky.handsontable.handsontableStrings.not_empty = "not_empty".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.not_empty]
 }
 

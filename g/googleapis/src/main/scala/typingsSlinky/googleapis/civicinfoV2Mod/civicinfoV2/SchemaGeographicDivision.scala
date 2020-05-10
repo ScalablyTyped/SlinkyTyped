@@ -35,12 +35,53 @@ trait SchemaGeographicDivision extends js.Object {
 
 object SchemaGeographicDivision {
   @scala.inline
-  def apply(alsoKnownAs: js.Array[String] = null, name: String = null, officeIndices: js.Array[Double] = null): SchemaGeographicDivision = {
+  def apply(): SchemaGeographicDivision = {
     val __obj = js.Dynamic.literal()
-    if (alsoKnownAs != null) __obj.updateDynamic("alsoKnownAs")(alsoKnownAs.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (officeIndices != null) __obj.updateDynamic("officeIndices")(officeIndices.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGeographicDivision]
   }
+  @scala.inline
+  implicit class SchemaGeographicDivisionOps[Self <: SchemaGeographicDivision] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlsoKnownAs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alsoKnownAs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlsoKnownAs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alsoKnownAs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOfficeIndices(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("officeIndices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOfficeIndices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("officeIndices")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

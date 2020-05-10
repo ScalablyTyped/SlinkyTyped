@@ -4,21 +4,49 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DirectRepositoryRankedRecipientsResponseRankedRecipientsItem extends js.Object {
-  var thread: js.UndefOr[DirectRepositoryRankedRecipientsResponseThread] = js.undefined
-  var user: js.UndefOr[DirectRepositoryRankedRecipientsResponseUser] = js.undefined
+  var thread: js.UndefOr[DirectRepositoryRankedRecipientsResponseThread] = js.native
+  var user: js.UndefOr[DirectRepositoryRankedRecipientsResponseUser] = js.native
 }
 
 object DirectRepositoryRankedRecipientsResponseRankedRecipientsItem {
   @scala.inline
-  def apply(
-    thread: DirectRepositoryRankedRecipientsResponseThread = null,
-    user: DirectRepositoryRankedRecipientsResponseUser = null
-  ): DirectRepositoryRankedRecipientsResponseRankedRecipientsItem = {
+  def apply(): DirectRepositoryRankedRecipientsResponseRankedRecipientsItem = {
     val __obj = js.Dynamic.literal()
-    if (thread != null) __obj.updateDynamic("thread")(thread.asInstanceOf[js.Any])
-    if (user != null) __obj.updateDynamic("user")(user.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectRepositoryRankedRecipientsResponseRankedRecipientsItem]
   }
+  @scala.inline
+  implicit class DirectRepositoryRankedRecipientsResponseRankedRecipientsItemOps[Self <: DirectRepositoryRankedRecipientsResponseRankedRecipientsItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withThread(value: DirectRepositoryRankedRecipientsResponseThread): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thread")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutThread: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thread")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUser(value: DirectRepositoryRankedRecipientsResponseUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("user")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

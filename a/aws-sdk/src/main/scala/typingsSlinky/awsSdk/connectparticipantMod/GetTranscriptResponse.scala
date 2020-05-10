@@ -22,12 +22,53 @@ trait GetTranscriptResponse extends js.Object {
 
 object GetTranscriptResponse {
   @scala.inline
-  def apply(InitialContactId: ContactId = null, NextToken: NextToken = null, Transcript: Transcript = null): GetTranscriptResponse = {
+  def apply(): GetTranscriptResponse = {
     val __obj = js.Dynamic.literal()
-    if (InitialContactId != null) __obj.updateDynamic("InitialContactId")(InitialContactId.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (Transcript != null) __obj.updateDynamic("Transcript")(Transcript.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTranscriptResponse]
   }
+  @scala.inline
+  implicit class GetTranscriptResponseOps[Self <: GetTranscriptResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInitialContactId(value: ContactId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialContactId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInitialContactId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InitialContactId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTranscript(value: Transcript): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Transcript")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTranscript: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Transcript")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

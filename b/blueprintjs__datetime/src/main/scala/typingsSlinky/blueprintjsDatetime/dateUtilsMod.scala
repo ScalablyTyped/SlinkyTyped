@@ -1,7 +1,6 @@
 package typingsSlinky.blueprintjsDatetime
 
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`false`
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,8 +23,8 @@ object dateUtilsMod extends js.Object {
   def getDatePreviousMonth(date: js.Date): js.Date = js.native
   def getDateTime(): js.Date = js.native
   def getDateTime(date: Null, time: js.Date): js.Date = js.native
-  def getDateTime(date: Date): js.Date = js.native
-  def getDateTime(date: Date, time: js.Date): js.Date = js.native
+  def getDateTime(date: js.Date): js.Date = js.native
+  def getDateTime(date: js.Date, time: js.Date): js.Date = js.native
   def getIsPmFrom24Hour(hour: Double): Boolean = js.native
   def getTimeInRange(time: js.Date, minTime: js.Date, maxTime: js.Date): js.Date = js.native
   def isDateValid(): /* is std.Date */ Boolean = js.native

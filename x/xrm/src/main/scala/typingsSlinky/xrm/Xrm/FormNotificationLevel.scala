@@ -17,12 +17,10 @@ trait FormNotificationLevel extends js.Object
 
 object FormNotificationLevel {
   @scala.inline
-  def ERROR: typingsSlinky.xrm.xrmStrings.ERROR = this.cast("ERROR")
+  def ERROR: typingsSlinky.xrm.xrmStrings.ERROR = "ERROR".asInstanceOf[typingsSlinky.xrm.xrmStrings.ERROR]
   @scala.inline
-  def INFO: typingsSlinky.xrm.xrmStrings.INFO = this.cast("INFO")
+  def INFO: typingsSlinky.xrm.xrmStrings.INFO = "INFO".asInstanceOf[typingsSlinky.xrm.xrmStrings.INFO]
   @scala.inline
-  def WARNING: typingsSlinky.xrm.xrmStrings.WARNING = this.cast("WARNING")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def WARNING: typingsSlinky.xrm.xrmStrings.WARNING = "WARNING".asInstanceOf[typingsSlinky.xrm.xrmStrings.WARNING]
 }
 

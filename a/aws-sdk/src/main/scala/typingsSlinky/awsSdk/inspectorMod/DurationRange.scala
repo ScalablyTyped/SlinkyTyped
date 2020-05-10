@@ -18,11 +18,41 @@ trait DurationRange extends js.Object {
 
 object DurationRange {
   @scala.inline
-  def apply(maxSeconds: Int | Double = null, minSeconds: Int | Double = null): DurationRange = {
+  def apply(): DurationRange = {
     val __obj = js.Dynamic.literal()
-    if (maxSeconds != null) __obj.updateDynamic("maxSeconds")(maxSeconds.asInstanceOf[js.Any])
-    if (minSeconds != null) __obj.updateDynamic("minSeconds")(minSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[DurationRange]
   }
+  @scala.inline
+  implicit class DurationRangeOps[Self <: DurationRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxSeconds(value: AssessmentRunDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSeconds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinSeconds(value: AssessmentRunDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

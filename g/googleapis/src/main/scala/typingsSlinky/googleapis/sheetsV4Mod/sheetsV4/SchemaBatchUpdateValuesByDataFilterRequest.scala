@@ -45,20 +45,77 @@ trait SchemaBatchUpdateValuesByDataFilterRequest extends js.Object {
 
 object SchemaBatchUpdateValuesByDataFilterRequest {
   @scala.inline
-  def apply(
-    data: js.Array[SchemaDataFilterValueRange] = null,
-    includeValuesInResponse: js.UndefOr[Boolean] = js.undefined,
-    responseDateTimeRenderOption: String = null,
-    responseValueRenderOption: String = null,
-    valueInputOption: String = null
-  ): SchemaBatchUpdateValuesByDataFilterRequest = {
+  def apply(): SchemaBatchUpdateValuesByDataFilterRequest = {
     val __obj = js.Dynamic.literal()
-    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
-    if (!js.isUndefined(includeValuesInResponse)) __obj.updateDynamic("includeValuesInResponse")(includeValuesInResponse.asInstanceOf[js.Any])
-    if (responseDateTimeRenderOption != null) __obj.updateDynamic("responseDateTimeRenderOption")(responseDateTimeRenderOption.asInstanceOf[js.Any])
-    if (responseValueRenderOption != null) __obj.updateDynamic("responseValueRenderOption")(responseValueRenderOption.asInstanceOf[js.Any])
-    if (valueInputOption != null) __obj.updateDynamic("valueInputOption")(valueInputOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBatchUpdateValuesByDataFilterRequest]
   }
+  @scala.inline
+  implicit class SchemaBatchUpdateValuesByDataFilterRequestOps[Self <: SchemaBatchUpdateValuesByDataFilterRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: js.Array[SchemaDataFilterValueRange]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeValuesInResponse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeValuesInResponse")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeValuesInResponse: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeValuesInResponse")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseDateTimeRenderOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDateTimeRenderOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseDateTimeRenderOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseDateTimeRenderOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseValueRenderOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseValueRenderOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseValueRenderOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseValueRenderOption")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueInputOption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueInputOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValueInputOption: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueInputOption")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -15,7 +15,7 @@ trait EcsParameters extends js.Object {
     */
   var LaunchType: js.UndefOr[typingsSlinky.awsSdk.cloudwatcheventsMod.LaunchType] = js.native
   /**
-    * Use this structure if the ECS task uses the awsvpc network mode. This structure specifies the VPC subnets and security groups associated with the task and whether a public IP address is to be used. This structure is required if LaunchType is FARGATE because the awsvpc mode is required for Fargate tasks. If you specify NetworkConfiguration when the target ECS task doesn't use the awsvpc network mode, the task fails.
+    * Use this structure if the ECS task uses the awsvpc network mode. This structure specifies the VPC subnets and security groups associated with the task, and whether a public IP address is to be used. This structure is required if LaunchType is FARGATE because the awsvpc mode is required for Fargate tasks. If you specify NetworkConfiguration when the target ECS task does not use the awsvpc network mode, the task fails.
     */
   var NetworkConfiguration: js.UndefOr[typingsSlinky.awsSdk.cloudwatcheventsMod.NetworkConfiguration] = js.native
   /**
@@ -34,21 +34,83 @@ trait EcsParameters extends js.Object {
 
 object EcsParameters {
   @scala.inline
-  def apply(
-    TaskDefinitionArn: Arn,
-    Group: String = null,
-    LaunchType: LaunchType = null,
-    NetworkConfiguration: NetworkConfiguration = null,
-    PlatformVersion: String = null,
-    TaskCount: Int | Double = null
-  ): EcsParameters = {
+  def apply(TaskDefinitionArn: Arn): EcsParameters = {
     val __obj = js.Dynamic.literal(TaskDefinitionArn = TaskDefinitionArn.asInstanceOf[js.Any])
-    if (Group != null) __obj.updateDynamic("Group")(Group.asInstanceOf[js.Any])
-    if (LaunchType != null) __obj.updateDynamic("LaunchType")(LaunchType.asInstanceOf[js.Any])
-    if (NetworkConfiguration != null) __obj.updateDynamic("NetworkConfiguration")(NetworkConfiguration.asInstanceOf[js.Any])
-    if (PlatformVersion != null) __obj.updateDynamic("PlatformVersion")(PlatformVersion.asInstanceOf[js.Any])
-    if (TaskCount != null) __obj.updateDynamic("TaskCount")(TaskCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[EcsParameters]
   }
+  @scala.inline
+  implicit class EcsParametersOps[Self <: EcsParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTaskDefinitionArn(value: Arn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskDefinitionArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroup: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Group")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchType(value: LaunchType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNetworkConfiguration(value: NetworkConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNetworkConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatformVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatformVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlatformVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTaskCount(value: LimitMin1): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTaskCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TaskCount")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -6,44 +6,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VariableGroup extends js.Object {
   /**
     * Gets or sets the identity who created.
     */
-  var createdBy: IdentityRef
+  var createdBy: IdentityRef = js.native
   /**
     * Gets date on which it got created.
     */
-  var createdOn: js.Date
+  var createdOn: js.Date = js.native
   /**
     * Gets or sets description.
     */
-  var description: String
+  var description: String = js.native
   /**
     * Gets the unique identifier of this field.
     */
-  var id: Double
+  var id: Double = js.native
   /**
     * Gets or sets the identity who modified.
     */
-  var modifiedBy: IdentityRef
+  var modifiedBy: IdentityRef = js.native
   /**
     * Gets date on which it got modified.
     */
-  var modifiedOn: js.Date
+  var modifiedOn: js.Date = js.native
   /**
     * Gets or sets name.
     */
-  var name: String
+  var name: String = js.native
   /**
     * Gets or sets provider data.
     */
-  var providerData: VariableGroupProviderData
+  var providerData: VariableGroupProviderData = js.native
   /**
     * Gets or sets type.
     */
-  var `type`: String
-  var variables: StringDictionary[VariableValue]
+  var `type`: String = js.native
+  var variables: StringDictionary[VariableValue] = js.native
 }
 
 object VariableGroup {
@@ -64,5 +65,73 @@ object VariableGroup {
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VariableGroup]
   }
+  @scala.inline
+  implicit class VariableGroupOps[Self <: VariableGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatedBy(value: IdentityRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreatedOn(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createdOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModifiedBy(value: IdentityRef): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModifiedOn(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modifiedOn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProviderData(value: VariableGroupProviderData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("providerData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVariables(value: StringDictionary[VariableValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

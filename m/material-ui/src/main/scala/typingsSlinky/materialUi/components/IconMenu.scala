@@ -1,14 +1,12 @@
 package typingsSlinky.materialUi.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Menus.IconMenuProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
@@ -19,70 +17,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconMenu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object IconMenu {
   @JSImport("material-ui/IconMenu", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, multiple, open, style */
-  def apply(
-    iconButtonElement: ReactElement,
-    anchorOrigin: origin = null,
-    animated: js.UndefOr[Boolean] = js.undefined,
-    animation: ReactComponentClass[PopoverAnimationProps] = null,
-    autoWidth: js.UndefOr[Boolean] = js.undefined,
-    clickCloseDelay: Int | Double = null,
-    desktop: js.UndefOr[Boolean] = js.undefined,
-    disableAutoFocus: js.UndefOr[Boolean] = js.undefined,
-    iconStyle: CSSProperties = null,
-    initiallyKeyboardFocused: js.UndefOr[Boolean] = js.undefined,
-    listStyle: CSSProperties = null,
-    maxHeight: Int | Double = null,
-    menuStyle: CSSProperties = null,
-    onChange: (/* e */ SyntheticEvent[Event_, js.Object], /* itemValue */ js.Any | js.Array[_]) => Unit = null,
-    onClick: /* e */ SyntheticEvent[Event_, js.Object] => Unit = null,
-    onItemClick: (/* e */ SyntheticEvent[Event_, js.Object], /* item */ typingsSlinky.materialUi.MaterialUI.Menus.MenuItem) => Unit = null,
-    onKeyboardFocus: (/* e */ SyntheticFocusEvent[js.Object], /* isKeyboardFocused */ Boolean) => Unit = null,
-    onMouseDown: SyntheticMouseEvent[js.Object] => Unit = null,
-    onMouseEnter: SyntheticMouseEvent[js.Object] => Unit = null,
-    onMouseLeave: SyntheticMouseEvent[js.Object] => Unit = null,
-    onMouseUp: SyntheticMouseEvent[js.Object] => Unit = null,
-    onRequestChange: (/* opening */ Boolean, /* reason */ String) => Unit = null,
-    targetOrigin: origin = null,
-    useLayerForClickAway: js.UndefOr[Boolean] = js.undefined,
-    value: js.Any | js.Array[_] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(iconButtonElement = iconButtonElement.asInstanceOf[js.Any])
-    if (anchorOrigin != null) __obj.updateDynamic("anchorOrigin")(anchorOrigin.asInstanceOf[js.Any])
-    if (!js.isUndefined(animated)) __obj.updateDynamic("animated")(animated.asInstanceOf[js.Any])
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (!js.isUndefined(autoWidth)) __obj.updateDynamic("autoWidth")(autoWidth.asInstanceOf[js.Any])
-    if (clickCloseDelay != null) __obj.updateDynamic("clickCloseDelay")(clickCloseDelay.asInstanceOf[js.Any])
-    if (!js.isUndefined(desktop)) __obj.updateDynamic("desktop")(desktop.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableAutoFocus)) __obj.updateDynamic("disableAutoFocus")(disableAutoFocus.asInstanceOf[js.Any])
-    if (iconStyle != null) __obj.updateDynamic("iconStyle")(iconStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(initiallyKeyboardFocused)) __obj.updateDynamic("initiallyKeyboardFocused")(initiallyKeyboardFocused.asInstanceOf[js.Any])
-    if (listStyle != null) __obj.updateDynamic("listStyle")(listStyle.asInstanceOf[js.Any])
-    if (maxHeight != null) __obj.updateDynamic("maxHeight")(maxHeight.asInstanceOf[js.Any])
-    if (menuStyle != null) __obj.updateDynamic("menuStyle")(menuStyle.asInstanceOf[js.Any])
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction2(onChange))
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
-    if (onItemClick != null) __obj.updateDynamic("onItemClick")(js.Any.fromFunction2(onItemClick))
-    if (onKeyboardFocus != null) __obj.updateDynamic("onKeyboardFocus")(js.Any.fromFunction2(onKeyboardFocus))
-    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
-    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
-    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
-    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
-    if (onRequestChange != null) __obj.updateDynamic("onRequestChange")(js.Any.fromFunction2(onRequestChange))
-    if (targetOrigin != null) __obj.updateDynamic("targetOrigin")(targetOrigin.asInstanceOf[js.Any])
-    if (!js.isUndefined(useLayerForClickAway)) __obj.updateDynamic("useLayerForClickAway")(useLayerForClickAway.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def anchorOrigin(value: origin): this.type = set("anchorOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
+    @scala.inline
+    def animation(value: ReactComponentClass[PopoverAnimationProps]): this.type = set("animation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def autoWidth(value: Boolean): this.type = set("autoWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def clickCloseDelay(value: Double): this.type = set("clickCloseDelay", value.asInstanceOf[js.Any])
+    @scala.inline
+    def desktop(value: Boolean): this.type = set("desktop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disableAutoFocus(value: Boolean): this.type = set("disableAutoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def iconStyle(value: CSSProperties): this.type = set("iconStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initiallyKeyboardFocused(value: Boolean): this.type = set("initiallyKeyboardFocused", value.asInstanceOf[js.Any])
+    @scala.inline
+    def listStyle(value: CSSProperties): this.type = set("listStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxHeight(value: Double): this.type = set("maxHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def menuStyle(value: CSSProperties): this.type = set("menuStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: (/* e */ SyntheticEvent[Event_, js.Object], /* itemValue */ js.Any | js.Array[_]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def onClick(value: /* e */ SyntheticEvent[Event_, js.Object] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onItemClick(
+      value: (/* e */ SyntheticEvent[Event_, js.Object], /* item */ typingsSlinky.materialUi.MaterialUI.Menus.MenuItem) => Unit
+    ): this.type = set("onItemClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def onKeyboardFocus(value: (/* e */ SyntheticFocusEvent[js.Object], /* isKeyboardFocused */ Boolean) => Unit): this.type = set("onKeyboardFocus", js.Any.fromFunction2(value))
+    @scala.inline
+    def onMouseDown(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseEnter(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseLeave(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseUp(value: SyntheticMouseEvent[js.Object] => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRequestChange(value: (/* opening */ Boolean, /* reason */ String) => Unit): this.type = set("onRequestChange", js.Any.fromFunction2(value))
+    @scala.inline
+    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetOrigin(value: origin): this.type = set("targetOrigin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def useLayerForClickAway(value: Boolean): this.type = set("useLayerForClickAway", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: js.Any | js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  type Props = IconMenuProps
+  
+  def withProps(p: IconMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(iconButtonElement: ReactElement): Builder = {
+    val __props = js.Dynamic.literal(iconButtonElement = iconButtonElement.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[IconMenuProps]))
+  }
 }
 

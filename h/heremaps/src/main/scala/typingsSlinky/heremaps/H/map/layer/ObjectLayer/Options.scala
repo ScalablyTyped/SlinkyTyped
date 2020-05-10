@@ -11,27 +11,75 @@ import scala.scalajs.js.annotation._
   * @property dataCacheSize {number=} - the number of tiles to cache which have render data only, default is 512
   * @property pixelRatio {number=} - The pixelRatio to use for over-sampling in cases of high-resolution displays
   */
+@js.native
 trait Options extends js.Object {
-  var dataCacheSize: js.UndefOr[Double] = js.undefined
-  var pixelRatio: js.UndefOr[Double] = js.undefined
-  var tileCacheSize: js.UndefOr[Double] = js.undefined
-  var tileSize: js.UndefOr[Double] = js.undefined
+  var dataCacheSize: js.UndefOr[Double] = js.native
+  var pixelRatio: js.UndefOr[Double] = js.native
+  var tileCacheSize: js.UndefOr[Double] = js.native
+  var tileSize: js.UndefOr[Double] = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(
-    dataCacheSize: Int | Double = null,
-    pixelRatio: Int | Double = null,
-    tileCacheSize: Int | Double = null,
-    tileSize: Int | Double = null
-  ): Options = {
+  def apply(): Options = {
     val __obj = js.Dynamic.literal()
-    if (dataCacheSize != null) __obj.updateDynamic("dataCacheSize")(dataCacheSize.asInstanceOf[js.Any])
-    if (pixelRatio != null) __obj.updateDynamic("pixelRatio")(pixelRatio.asInstanceOf[js.Any])
-    if (tileCacheSize != null) __obj.updateDynamic("tileCacheSize")(tileCacheSize.asInstanceOf[js.Any])
-    if (tileSize != null) __obj.updateDynamic("tileSize")(tileSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
+  @scala.inline
+  implicit class OptionsOps[Self <: Options] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataCacheSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataCacheSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataCacheSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataCacheSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPixelRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPixelRatio: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelRatio")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileCacheSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileCacheSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileCacheSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileCacheSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTileSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTileSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileSize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

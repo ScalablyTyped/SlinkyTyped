@@ -22,12 +22,53 @@ trait InstanceStateChange extends js.Object {
 
 object InstanceStateChange {
   @scala.inline
-  def apply(CurrentState: InstanceState = null, InstanceId: String = null, PreviousState: InstanceState = null): InstanceStateChange = {
+  def apply(): InstanceStateChange = {
     val __obj = js.Dynamic.literal()
-    if (CurrentState != null) __obj.updateDynamic("CurrentState")(CurrentState.asInstanceOf[js.Any])
-    if (InstanceId != null) __obj.updateDynamic("InstanceId")(InstanceId.asInstanceOf[js.Any])
-    if (PreviousState != null) __obj.updateDynamic("PreviousState")(PreviousState.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceStateChange]
   }
+  @scala.inline
+  implicit class InstanceStateChangeOps[Self <: InstanceStateChange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentState(value: InstanceState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPreviousState(value: InstanceState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPreviousState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreviousState")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

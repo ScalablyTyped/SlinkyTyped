@@ -1,7 +1,7 @@
 package typingsSlinky.stylefire
 
-import typingsSlinky.std.SVGElement
-import typingsSlinky.std.SVGPathElement
+import org.scalajs.dom.raw.SVGElement
+import org.scalajs.dom.raw.SVGPathElement
 import typingsSlinky.stylefire.typesMod.Styler
 import scala.scalajs.js
 import scala.scalajs.js.`|`

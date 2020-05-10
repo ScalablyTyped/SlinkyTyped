@@ -23,9 +23,9 @@ class VideoTrack_ () extends Track {
   var mediaStreamTrack: MediaStreamTrack = js.native
   def attach(): HTMLVideoElement = js.native
   def attach(element: String): HTMLVideoElement = js.native
-  def attach(element: typingsSlinky.std.HTMLMediaElement): HTMLVideoElement = js.native
+  def attach(element: HTMLMediaElement): HTMLVideoElement = js.native
   def detach(): js.Array[HTMLMediaElement] = js.native
   def detach(element: String): js.Array[HTMLMediaElement] = js.native
-  def detach(element: typingsSlinky.std.HTMLMediaElement): js.Array[HTMLMediaElement] = js.native
+  def detach(element: HTMLMediaElement): js.Array[HTMLMediaElement] = js.native
 }
 

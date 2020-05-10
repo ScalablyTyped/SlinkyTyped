@@ -1,14 +1,23 @@
 package typingsSlinky.themeUi.components
 
+import org.scalajs.dom.raw.HTMLHeadingElement
+import typingsSlinky.react.mod.DetailedHTMLProps
+import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.react.mod.LegacyRef
+import typingsSlinky.themeUi.AnonAs
+import typingsSlinky.themeUi.mod.SxProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object StyledH3 extends `SharedApply_<intersection>_1364131170` {
+object StyledH3 {
   @JSImport("theme-ui", "Styled.h3")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(
+    p: (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with AnonAs
+  ): `SharedBuilder_<intersection>_93340326`[LegacyRef[js.Any] with js.Object] = new `SharedBuilder_<intersection>_93340326`[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StyledH3.type): `SharedBuilder_<intersection>_93340326`[LegacyRef[js.Any] with js.Object] = new `SharedBuilder_<intersection>_93340326`[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

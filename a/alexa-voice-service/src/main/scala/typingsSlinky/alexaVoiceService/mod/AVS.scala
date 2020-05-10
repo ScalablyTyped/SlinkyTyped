@@ -12,8 +12,8 @@ trait AVS extends js.Object {
   def on(eventType: EventTypes, callback: js.Function0[Unit]): Unit = js.native
   def refreshToken(): js.Promise[TokenResponse] = js.native
   def requestMic(): js.Promise[_] = js.native
-  def sendAudio(dataView: scala.scalajs.js.typedarray.DataView): js.Promise[AnonResponse] = js.native
+  def sendAudio(dataView: js.typedarray.DataView): js.Promise[AnonResponse] = js.native
   def startRecording(): js.Promise[Unit] = js.native
-  def stopRecording(): js.Promise[js.UndefOr[scala.scalajs.js.typedarray.DataView]] = js.native
+  def stopRecording(): js.Promise[js.UndefOr[js.typedarray.DataView]] = js.native
 }
 

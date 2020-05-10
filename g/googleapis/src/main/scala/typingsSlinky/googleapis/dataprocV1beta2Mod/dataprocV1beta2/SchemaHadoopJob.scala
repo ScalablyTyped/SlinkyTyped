@@ -63,26 +63,113 @@ trait SchemaHadoopJob extends js.Object {
 
 object SchemaHadoopJob {
   @scala.inline
-  def apply(
-    archiveUris: js.Array[String] = null,
-    args: js.Array[String] = null,
-    fileUris: js.Array[String] = null,
-    jarFileUris: js.Array[String] = null,
-    loggingConfig: SchemaLoggingConfig = null,
-    mainClass: String = null,
-    mainJarFileUri: String = null,
-    properties: StringDictionary[String] = null
-  ): SchemaHadoopJob = {
+  def apply(): SchemaHadoopJob = {
     val __obj = js.Dynamic.literal()
-    if (archiveUris != null) __obj.updateDynamic("archiveUris")(archiveUris.asInstanceOf[js.Any])
-    if (args != null) __obj.updateDynamic("args")(args.asInstanceOf[js.Any])
-    if (fileUris != null) __obj.updateDynamic("fileUris")(fileUris.asInstanceOf[js.Any])
-    if (jarFileUris != null) __obj.updateDynamic("jarFileUris")(jarFileUris.asInstanceOf[js.Any])
-    if (loggingConfig != null) __obj.updateDynamic("loggingConfig")(loggingConfig.asInstanceOf[js.Any])
-    if (mainClass != null) __obj.updateDynamic("mainClass")(mainClass.asInstanceOf[js.Any])
-    if (mainJarFileUri != null) __obj.updateDynamic("mainJarFileUri")(mainJarFileUri.asInstanceOf[js.Any])
-    if (properties != null) __obj.updateDynamic("properties")(properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaHadoopJob]
   }
+  @scala.inline
+  implicit class SchemaHadoopJobOps[Self <: SchemaHadoopJob] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArchiveUris(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveUris")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArchiveUris: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("archiveUris")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withArgs(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArgs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("args")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFileUris(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileUris")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFileUris: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileUris")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withJarFileUris(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jarFileUris")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutJarFileUris: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jarFileUris")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoggingConfig(value: SchemaLoggingConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoggingConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loggingConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMainClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMainClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMainJarFileUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainJarFileUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMainJarFileUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainJarFileUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProperties(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

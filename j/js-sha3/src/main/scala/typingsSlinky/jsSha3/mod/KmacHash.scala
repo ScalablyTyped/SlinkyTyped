@@ -32,7 +32,7 @@ trait KmacHash extends js.Object {
     * @param outputBits The length of output.
     * @param customization The customization string.
     */
-  def arrayBuffer(key: Message, message: Message, outputBits: Double, customization: Message): scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def arrayBuffer(key: Message, message: Message, outputBits: Double, customization: Message): js.typedarray.ArrayBuffer = js.native
   /**
     * Create a hash object.
     *

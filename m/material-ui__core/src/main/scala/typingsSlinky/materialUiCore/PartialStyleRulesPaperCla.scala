@@ -39,64 +39,341 @@ trait PartialStyleRulesPaperCla extends js.Object {
 
 object PartialStyleRulesPaperCla {
   @scala.inline
-  def apply(
-    elevation0: CSSProperties = null,
-    elevation1: CSSProperties = null,
-    elevation10: CSSProperties = null,
-    elevation11: CSSProperties = null,
-    elevation12: CSSProperties = null,
-    elevation13: CSSProperties = null,
-    elevation14: CSSProperties = null,
-    elevation15: CSSProperties = null,
-    elevation16: CSSProperties = null,
-    elevation17: CSSProperties = null,
-    elevation18: CSSProperties = null,
-    elevation19: CSSProperties = null,
-    elevation2: CSSProperties = null,
-    elevation20: CSSProperties = null,
-    elevation21: CSSProperties = null,
-    elevation22: CSSProperties = null,
-    elevation23: CSSProperties = null,
-    elevation24: CSSProperties = null,
-    elevation3: CSSProperties = null,
-    elevation4: CSSProperties = null,
-    elevation5: CSSProperties = null,
-    elevation6: CSSProperties = null,
-    elevation7: CSSProperties = null,
-    elevation8: CSSProperties = null,
-    elevation9: CSSProperties = null,
-    root: CSSProperties = null,
-    rounded: CSSProperties = null
-  ): PartialStyleRulesPaperCla = {
+  def apply(): PartialStyleRulesPaperCla = {
     val __obj = js.Dynamic.literal()
-    if (elevation0 != null) __obj.updateDynamic("elevation0")(elevation0.asInstanceOf[js.Any])
-    if (elevation1 != null) __obj.updateDynamic("elevation1")(elevation1.asInstanceOf[js.Any])
-    if (elevation10 != null) __obj.updateDynamic("elevation10")(elevation10.asInstanceOf[js.Any])
-    if (elevation11 != null) __obj.updateDynamic("elevation11")(elevation11.asInstanceOf[js.Any])
-    if (elevation12 != null) __obj.updateDynamic("elevation12")(elevation12.asInstanceOf[js.Any])
-    if (elevation13 != null) __obj.updateDynamic("elevation13")(elevation13.asInstanceOf[js.Any])
-    if (elevation14 != null) __obj.updateDynamic("elevation14")(elevation14.asInstanceOf[js.Any])
-    if (elevation15 != null) __obj.updateDynamic("elevation15")(elevation15.asInstanceOf[js.Any])
-    if (elevation16 != null) __obj.updateDynamic("elevation16")(elevation16.asInstanceOf[js.Any])
-    if (elevation17 != null) __obj.updateDynamic("elevation17")(elevation17.asInstanceOf[js.Any])
-    if (elevation18 != null) __obj.updateDynamic("elevation18")(elevation18.asInstanceOf[js.Any])
-    if (elevation19 != null) __obj.updateDynamic("elevation19")(elevation19.asInstanceOf[js.Any])
-    if (elevation2 != null) __obj.updateDynamic("elevation2")(elevation2.asInstanceOf[js.Any])
-    if (elevation20 != null) __obj.updateDynamic("elevation20")(elevation20.asInstanceOf[js.Any])
-    if (elevation21 != null) __obj.updateDynamic("elevation21")(elevation21.asInstanceOf[js.Any])
-    if (elevation22 != null) __obj.updateDynamic("elevation22")(elevation22.asInstanceOf[js.Any])
-    if (elevation23 != null) __obj.updateDynamic("elevation23")(elevation23.asInstanceOf[js.Any])
-    if (elevation24 != null) __obj.updateDynamic("elevation24")(elevation24.asInstanceOf[js.Any])
-    if (elevation3 != null) __obj.updateDynamic("elevation3")(elevation3.asInstanceOf[js.Any])
-    if (elevation4 != null) __obj.updateDynamic("elevation4")(elevation4.asInstanceOf[js.Any])
-    if (elevation5 != null) __obj.updateDynamic("elevation5")(elevation5.asInstanceOf[js.Any])
-    if (elevation6 != null) __obj.updateDynamic("elevation6")(elevation6.asInstanceOf[js.Any])
-    if (elevation7 != null) __obj.updateDynamic("elevation7")(elevation7.asInstanceOf[js.Any])
-    if (elevation8 != null) __obj.updateDynamic("elevation8")(elevation8.asInstanceOf[js.Any])
-    if (elevation9 != null) __obj.updateDynamic("elevation9")(elevation9.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (rounded != null) __obj.updateDynamic("rounded")(rounded.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialStyleRulesPaperCla]
   }
+  @scala.inline
+  implicit class PartialStyleRulesPaperClaOps[Self <: PartialStyleRulesPaperCla] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElevation0(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation0: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation0")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation1(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation1: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation1")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation10(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation10")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation10: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation10")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation11(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation11")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation11: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation11")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation12(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation12")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation12: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation12")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation13(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation13")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation13: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation13")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation14(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation14")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation14: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation14")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation15(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation15")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation15: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation15")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation16(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation16")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation16: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation16")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation17(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation17")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation17: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation17")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation18(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation18")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation18: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation18")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation19(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation19")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation19: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation19")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation2(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation2: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation2")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation20(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation20")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation20: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation20")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation21(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation21")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation21: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation21")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation22(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation22")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation22: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation22")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation23(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation23")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation23: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation23")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation24(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation24")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation24: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation24")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation3(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation3: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation3")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation4(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation4")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation4: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation4")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation5(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation5")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation5: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation5")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation6(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation6")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation6: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation6")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation7(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation7")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation7: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation7")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation8(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation8")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation8: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation8")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withElevation9(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation9")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutElevation9: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elevation9")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRoot(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("root")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRounded(value: CSSProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRounded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rounded")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

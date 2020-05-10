@@ -1,52 +1,38 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.AnonTarget
 import typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControlsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object PickListTransferControls
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControls
-    ] {
+object PickListTransferControls {
   @JSImport("primereact/components/picklist/PickListTransferControls", "PickListTransferControls")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    onTransfer: /* e */ AnonTarget => Unit = null,
-    source: js.Array[_] = null,
-    sourceSelection: js.Array[_] = null,
-    target: js.Array[_] = null,
-    targetSelection: js.Array[_] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControls
-  ] = {
-    val __obj = js.Dynamic.literal()
-    if (onTransfer != null) __obj.updateDynamic("onTransfer")(js.Any.fromFunction1(onTransfer))
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (sourceSelection != null) __obj.updateDynamic("sourceSelection")(sourceSelection.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (targetSelection != null) __obj.updateDynamic("targetSelection")(targetSelection.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[
+          tag.type, 
+          typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControls
+        ] {
+    @scala.inline
+    def onTransfer(value: /* e */ AnonTarget => Unit): this.type = set("onTransfer", js.Any.fromFunction1(value))
+    @scala.inline
+    def source(value: js.Array[_]): this.type = set("source", value.asInstanceOf[js.Any])
+    @scala.inline
+    def sourceSelection(value: js.Array[_]): this.type = set("sourceSelection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: js.Array[_]): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetSelection(value: js.Array[_]): this.type = set("targetSelection", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[
-    tag.type, 
-    typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControls
-  ] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControls](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = PickListTransferControlsProps
+  
+  def withProps(p: PickListTransferControlsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PickListTransferControls.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

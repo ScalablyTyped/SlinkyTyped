@@ -16,12 +16,10 @@ trait RadioType extends js.Object
 
 object RadioType {
   @scala.inline
-  def artist: typingsSlinky.deezerSdk.deezerSdkStrings.artist = this.cast("artist")
+  def artist: typingsSlinky.deezerSdk.deezerSdkStrings.artist = "artist".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.artist]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def radio: typingsSlinky.deezerSdk.deezerSdkStrings.radio = "radio".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.radio]
   @scala.inline
-  def radio: typingsSlinky.deezerSdk.deezerSdkStrings.radio = this.cast("radio")
-  @scala.inline
-  def user: typingsSlinky.deezerSdk.deezerSdkStrings.user = this.cast("user")
+  def user: typingsSlinky.deezerSdk.deezerSdkStrings.user = "user".asInstanceOf[typingsSlinky.deezerSdk.deezerSdkStrings.user]
 }
 

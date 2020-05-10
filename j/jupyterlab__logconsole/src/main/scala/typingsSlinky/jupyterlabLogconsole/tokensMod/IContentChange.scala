@@ -12,10 +12,8 @@ trait IContentChange extends js.Object
 
 object IContentChange {
   @scala.inline
-  def append: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.append = this.cast("append")
+  def append: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.append = "append".asInstanceOf[typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.append]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def clear: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.clear = this.cast("clear")
+  def clear: typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.clear = "clear".asInstanceOf[typingsSlinky.jupyterlabLogconsole.jupyterlabLogconsoleStrings.clear]
 }
 

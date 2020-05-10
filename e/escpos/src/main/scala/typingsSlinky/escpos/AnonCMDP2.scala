@@ -6,18 +6,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonCMDP2 extends js.Object {
   // Format= CMD_P1{LEN_2BYTE}CMD_P2
-  var CMD_P1: InformationseparatorthreeLeftparenthesisk
-  var CMD_P2: `1Q0`
+  var CMD_P1: InformationseparatorthreeLeftparenthesisk = js.native
+  var CMD_P2: `1Q0` = js.native
 }
 
 object AnonCMDP2 {
   @scala.inline
   def apply(CMD_P1: InformationseparatorthreeLeftparenthesisk, CMD_P2: `1Q0`): AnonCMDP2 = {
     val __obj = js.Dynamic.literal(CMD_P1 = CMD_P1.asInstanceOf[js.Any], CMD_P2 = CMD_P2.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[AnonCMDP2]
   }
+  @scala.inline
+  implicit class AnonCMDP2Ops[Self <: AnonCMDP2] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCMD_P1(value: InformationseparatorthreeLeftparenthesisk): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CMD_P1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCMD_P2(value: `1Q0`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CMD_P2")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

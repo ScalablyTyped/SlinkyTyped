@@ -25,6 +25,7 @@ package object mod {
     - typingsSlinky.matrixJsSdk.matrixJsSdkStrings.mDotroomDottombstone
     - typingsSlinky.matrixJsSdk.matrixJsSdkStrings.mDotroomDottopic
     - typingsSlinky.matrixJsSdk.matrixJsSdkStrings.mDotsticker
+    - typingsSlinky.matrixJsSdk.matrixJsSdkStrings.mDotpresence
   */
   type EventType = typingsSlinky.matrixJsSdk.mod._EventType | scala.Nothing
   type FilterComponent = js.Any
@@ -35,7 +36,6 @@ package object mod {
     - scala.Nothing
     - typingsSlinky.matrixJsSdk.matrixJsSdkStrings.ban
     - typingsSlinky.matrixJsSdk.matrixJsSdkStrings.invite
-    - typingsSlinky.matrixJsSdk.matrixJsSdkStrings.joined
     - typingsSlinky.matrixJsSdk.matrixJsSdkStrings.join
     - typingsSlinky.matrixJsSdk.matrixJsSdkStrings.leave
   */

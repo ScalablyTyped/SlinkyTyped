@@ -30,20 +30,77 @@ trait ESInstanceDetails extends js.Object {
 
 object ESInstanceDetails {
   @scala.inline
-  def apply(
-    CurrentGeneration: js.UndefOr[Boolean] = js.undefined,
-    InstanceClass: GenericString = null,
-    InstanceSize: GenericString = null,
-    Region: GenericString = null,
-    SizeFlexEligible: js.UndefOr[Boolean] = js.undefined
-  ): ESInstanceDetails = {
+  def apply(): ESInstanceDetails = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(CurrentGeneration)) __obj.updateDynamic("CurrentGeneration")(CurrentGeneration.asInstanceOf[js.Any])
-    if (InstanceClass != null) __obj.updateDynamic("InstanceClass")(InstanceClass.asInstanceOf[js.Any])
-    if (InstanceSize != null) __obj.updateDynamic("InstanceSize")(InstanceSize.asInstanceOf[js.Any])
-    if (Region != null) __obj.updateDynamic("Region")(Region.asInstanceOf[js.Any])
-    if (!js.isUndefined(SizeFlexEligible)) __obj.updateDynamic("SizeFlexEligible")(SizeFlexEligible.asInstanceOf[js.Any])
     __obj.asInstanceOf[ESInstanceDetails]
   }
+  @scala.inline
+  implicit class ESInstanceDetailsOps[Self <: ESInstanceDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentGeneration(value: GenericBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentGeneration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentGeneration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentGeneration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceClass(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceSize(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceSize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: GenericString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSizeFlexEligible(value: GenericBoolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeFlexEligible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSizeFlexEligible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SizeFlexEligible")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

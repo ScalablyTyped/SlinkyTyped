@@ -13,12 +13,10 @@ trait WindowsHelloForBusinessPinUsage extends js.Object
 
 object WindowsHelloForBusinessPinUsage {
   @scala.inline
-  def allowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allowed = this.cast("allowed")
+  def allowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.allowed = "allowed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.allowed]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def disallowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.disallowed = "disallowed".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.disallowed]
   @scala.inline
-  def disallowed: typingsSlinky.microsoftGraph.microsoftGraphStrings.disallowed = this.cast("disallowed")
-  @scala.inline
-  def required: typingsSlinky.microsoftGraph.microsoftGraphStrings.required = this.cast("required")
+  def required: typingsSlinky.microsoftGraph.microsoftGraphStrings.required = "required".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.required]
 }
 

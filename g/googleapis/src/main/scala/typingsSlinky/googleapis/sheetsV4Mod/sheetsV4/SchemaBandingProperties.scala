@@ -45,18 +45,65 @@ trait SchemaBandingProperties extends js.Object {
 
 object SchemaBandingProperties {
   @scala.inline
-  def apply(
-    firstBandColor: SchemaColor = null,
-    footerColor: SchemaColor = null,
-    headerColor: SchemaColor = null,
-    secondBandColor: SchemaColor = null
-  ): SchemaBandingProperties = {
+  def apply(): SchemaBandingProperties = {
     val __obj = js.Dynamic.literal()
-    if (firstBandColor != null) __obj.updateDynamic("firstBandColor")(firstBandColor.asInstanceOf[js.Any])
-    if (footerColor != null) __obj.updateDynamic("footerColor")(footerColor.asInstanceOf[js.Any])
-    if (headerColor != null) __obj.updateDynamic("headerColor")(headerColor.asInstanceOf[js.Any])
-    if (secondBandColor != null) __obj.updateDynamic("secondBandColor")(secondBandColor.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBandingProperties]
   }
+  @scala.inline
+  implicit class SchemaBandingPropertiesOps[Self <: SchemaBandingProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFirstBandColor(value: SchemaColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstBandColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstBandColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstBandColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFooterColor(value: SchemaColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFooterColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("footerColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeaderColor(value: SchemaColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeaderColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecondBandColor(value: SchemaColor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondBandColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecondBandColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondBandColor")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

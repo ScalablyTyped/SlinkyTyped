@@ -12,10 +12,8 @@ trait SuspenseListTailMode extends js.Object
 
 object SuspenseListTailMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def collapsed: typingsSlinky.react.reactStrings.collapsed = "collapsed".asInstanceOf[typingsSlinky.react.reactStrings.collapsed]
   @scala.inline
-  def collapsed: typingsSlinky.react.reactStrings.collapsed = this.cast("collapsed")
-  @scala.inline
-  def hidden: typingsSlinky.react.reactStrings.hidden = this.cast("hidden")
+  def hidden: typingsSlinky.react.reactStrings.hidden = "hidden".asInstanceOf[typingsSlinky.react.reactStrings.hidden]
 }
 

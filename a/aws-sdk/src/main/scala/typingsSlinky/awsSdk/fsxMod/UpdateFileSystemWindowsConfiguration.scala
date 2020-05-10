@@ -26,18 +26,65 @@ trait UpdateFileSystemWindowsConfiguration extends js.Object {
 
 object UpdateFileSystemWindowsConfiguration {
   @scala.inline
-  def apply(
-    AutomaticBackupRetentionDays: Int | Double = null,
-    DailyAutomaticBackupStartTime: DailyTime = null,
-    SelfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationUpdates = null,
-    WeeklyMaintenanceStartTime: WeeklyTime = null
-  ): UpdateFileSystemWindowsConfiguration = {
+  def apply(): UpdateFileSystemWindowsConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (AutomaticBackupRetentionDays != null) __obj.updateDynamic("AutomaticBackupRetentionDays")(AutomaticBackupRetentionDays.asInstanceOf[js.Any])
-    if (DailyAutomaticBackupStartTime != null) __obj.updateDynamic("DailyAutomaticBackupStartTime")(DailyAutomaticBackupStartTime.asInstanceOf[js.Any])
-    if (SelfManagedActiveDirectoryConfiguration != null) __obj.updateDynamic("SelfManagedActiveDirectoryConfiguration")(SelfManagedActiveDirectoryConfiguration.asInstanceOf[js.Any])
-    if (WeeklyMaintenanceStartTime != null) __obj.updateDynamic("WeeklyMaintenanceStartTime")(WeeklyMaintenanceStartTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFileSystemWindowsConfiguration]
   }
+  @scala.inline
+  implicit class UpdateFileSystemWindowsConfigurationOps[Self <: UpdateFileSystemWindowsConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutomaticBackupRetentionDays(value: AutomaticBackupRetentionDays): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticBackupRetentionDays")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutomaticBackupRetentionDays: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutomaticBackupRetentionDays")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDailyAutomaticBackupStartTime(value: DailyTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DailyAutomaticBackupStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDailyAutomaticBackupStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DailyAutomaticBackupStartTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfManagedActiveDirectoryConfiguration(value: SelfManagedActiveDirectoryConfigurationUpdates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelfManagedActiveDirectoryConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfManagedActiveDirectoryConfiguration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelfManagedActiveDirectoryConfiguration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWeeklyMaintenanceStartTime(value: WeeklyTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWeeklyMaintenanceStartTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WeeklyMaintenanceStartTime")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

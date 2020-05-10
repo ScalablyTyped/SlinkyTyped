@@ -8,5 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("onresize")
 @js.native
 object onresize
-  extends TopLevel[(js.ThisFunction1[/* this */ Window_, /* ev */ UIEvent, js.Any]) | Null]
+  extends TopLevel[
+      (js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any]) | Null
+    ]
 

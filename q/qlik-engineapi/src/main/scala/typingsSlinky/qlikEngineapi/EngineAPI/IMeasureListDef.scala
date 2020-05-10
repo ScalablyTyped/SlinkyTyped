@@ -8,16 +8,30 @@ import scala.scalajs.js.annotation._
 /**
   * IMeasureListDef
   */
+@js.native
 trait IMeasureListDef extends js.Object {
-  var qType: measure
+  var qType: measure = js.native
 }
 
 object IMeasureListDef {
   @scala.inline
   def apply(qType: measure): IMeasureListDef = {
     val __obj = js.Dynamic.literal(qType = qType.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IMeasureListDef]
   }
+  @scala.inline
+  implicit class IMeasureListDefOps[Self <: IMeasureListDef] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withQType(value: measure): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("qType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

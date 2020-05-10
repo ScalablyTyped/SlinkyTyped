@@ -1,6 +1,5 @@
 package typingsSlinky.bingmaps.Microsoft.Maps
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +14,11 @@ import scala.scalajs.js.annotation._
   */
 class GeoXmlLayer () extends CustomOverlay {
   def this(dataSource: String) = this()
-  def this(dataSource: scala.scalajs.js.typedarray.ArrayBuffer) = this()
+  def this(dataSource: js.typedarray.ArrayBuffer) = this()
   def this(dataSource: String, isUrl: Boolean) = this()
-  def this(dataSource: scala.scalajs.js.typedarray.ArrayBuffer, isUrl: Boolean) = this()
+  def this(dataSource: js.typedarray.ArrayBuffer, isUrl: Boolean) = this()
   def this(dataSource: String, isUrl: Boolean, options: IGeoXmlLayerOptions) = this()
-  def this(dataSource: scala.scalajs.js.typedarray.ArrayBuffer, isUrl: Boolean, options: IGeoXmlLayerOptions) = this()
+  def this(dataSource: js.typedarray.ArrayBuffer, isUrl: Boolean, options: IGeoXmlLayerOptions) = this()
   /** Optional property to store any additional metadata for this layer. */
   var metadata: js.Any = js.native
   /**
@@ -39,7 +38,7 @@ class GeoXmlLayer () extends CustomOverlay {
     * Returns the data source used by the layer.
     * @returns The data source used by the layer.
     */
-  def getDataSource(): String | scala.scalajs.js.typedarray.ArrayBuffer = js.native
+  def getDataSource(): String | js.typedarray.ArrayBuffer = js.native
   /**
     * Returns the options used by the GeoXmlLayer.
     * @returns The options used by the GeoXmlLayer.
@@ -56,7 +55,7 @@ class GeoXmlLayer () extends CustomOverlay {
     * @param isUrl Whether the dataSource provided is an URL. Default = true
     */
   def setDataSource(dataSource: String, isUrl: Boolean): Unit = js.native
-  def setDataSource(dataSource: ArrayBuffer, isUrl: Boolean): Unit = js.native
+  def setDataSource(dataSource: js.typedarray.ArrayBuffer, isUrl: Boolean): Unit = js.native
   /**
     * Sets the options used for loading and rendering data into the GeoXmlLayer.
     * @param options The options to use when loading and rendering data into the GeoXmlLayer.

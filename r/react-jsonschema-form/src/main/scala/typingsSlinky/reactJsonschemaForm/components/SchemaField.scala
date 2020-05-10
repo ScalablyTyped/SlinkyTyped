@@ -1,9 +1,7 @@
 package typingsSlinky.reactJsonschemaForm.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.jsonSchema.mod.JSONSchema6
 import typingsSlinky.reactJsonschemaForm.AnonDefinitions
 import typingsSlinky.reactJsonschemaForm.mod.ErrorSchema
@@ -15,13 +13,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object SchemaField
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object SchemaField {
   @JSImport("react-jsonschema-form/lib/components/fields/SchemaField", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: SchemaFieldProps[js.Any]): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     errorSchema: ErrorSchema,
     formContext: js.Any,
@@ -29,13 +27,10 @@ object SchemaField
     idSchema: IdSchema[_],
     registry: AnonDefinitions,
     schema: JSONSchema6,
-    uiSchema: UiSchema,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(errorSchema = errorSchema.asInstanceOf[js.Any], formContext = formContext.asInstanceOf[js.Any], formData = formData.asInstanceOf[js.Any], idSchema = idSchema.asInstanceOf[js.Any], registry = registry.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], uiSchema = uiSchema.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    uiSchema: UiSchema
+  ): Default[tag.type, default] = {
+    val __props = js.Dynamic.literal(errorSchema = errorSchema.asInstanceOf[js.Any], formContext = formContext.asInstanceOf[js.Any], formData = formData.asInstanceOf[js.Any], idSchema = idSchema.asInstanceOf[js.Any], registry = registry.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], uiSchema = uiSchema.asInstanceOf[js.Any])
+    new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[SchemaFieldProps[js.Any]]))
   }
-  type Props = SchemaFieldProps[js.Any]
 }
 

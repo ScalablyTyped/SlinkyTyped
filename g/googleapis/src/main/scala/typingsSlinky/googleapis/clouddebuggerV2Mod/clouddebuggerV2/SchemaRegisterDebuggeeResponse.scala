@@ -21,10 +21,29 @@ trait SchemaRegisterDebuggeeResponse extends js.Object {
 
 object SchemaRegisterDebuggeeResponse {
   @scala.inline
-  def apply(debuggee: SchemaDebuggee = null): SchemaRegisterDebuggeeResponse = {
+  def apply(): SchemaRegisterDebuggeeResponse = {
     val __obj = js.Dynamic.literal()
-    if (debuggee != null) __obj.updateDynamic("debuggee")(debuggee.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaRegisterDebuggeeResponse]
   }
+  @scala.inline
+  implicit class SchemaRegisterDebuggeeResponseOps[Self <: SchemaRegisterDebuggeeResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebuggee(value: SchemaDebuggee): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggee")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebuggee: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debuggee")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

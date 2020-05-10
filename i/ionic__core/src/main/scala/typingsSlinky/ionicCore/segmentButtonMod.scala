@@ -2,9 +2,6 @@ package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.elementInterfaceMod.ButtonInterface
-import typingsSlinky.ionicCore.ionicCoreStrings.button
-import typingsSlinky.ionicCore.ionicCoreStrings.reset
-import typingsSlinky.ionicCore.ionicCoreStrings.submit
 import typingsSlinky.ionicCore.segmentSegmentInterfaceMod.SegmentButtonLayout
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
@@ -23,8 +20,6 @@ object segmentButtonMod extends js.Object {
       * If `true`, the segment button is selected.
       */
     var checked: Boolean = js.native
-    /* CompleteClass */
-    override var disabled: Boolean = js.native
     var el: HTMLElement = js.native
     val hasIcon: js.Any = js.native
     val hasLabel: js.Any = js.native
@@ -37,8 +32,6 @@ object segmentButtonMod extends js.Object {
       */
     var layout: js.UndefOr[SegmentButtonLayout] = js.native
     var onClick: js.Any = js.native
-    /* CompleteClass */
-    override var `type`: submit | reset | button = js.native
     /**
       * The value of the segment button.
       */

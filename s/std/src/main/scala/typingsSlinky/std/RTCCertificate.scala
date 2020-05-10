@@ -5,9 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RTCCertificate extends js.Object {
-  val expires: Double
-  def getFingerprints(): js.Array[RTCDtlsFingerprint]
+  val expires: Double = js.native
+  def getFingerprints(): js.Array[RTCDtlsFingerprint] = js.native
 }
 
 @JSGlobal("RTCCertificate")

@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation._
   * Plugin that bridges the doh.robot and WebDriver APIs.
   *
   */
+@js.native
 trait remoteRobot extends js.Object
 

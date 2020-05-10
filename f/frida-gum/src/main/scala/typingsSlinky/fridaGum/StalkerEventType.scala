@@ -15,16 +15,14 @@ trait StalkerEventType extends js.Object
 
 object StalkerEventType {
   @scala.inline
-  def block: typingsSlinky.fridaGum.fridaGumStrings.block = this.cast("block")
+  def block: typingsSlinky.fridaGum.fridaGumStrings.block = "block".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.block]
   @scala.inline
-  def call: typingsSlinky.fridaGum.fridaGumStrings.call = this.cast("call")
+  def call: typingsSlinky.fridaGum.fridaGumStrings.call = "call".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.call]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def compile: typingsSlinky.fridaGum.fridaGumStrings.compile = "compile".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.compile]
   @scala.inline
-  def compile: typingsSlinky.fridaGum.fridaGumStrings.compile = this.cast("compile")
+  def exec: typingsSlinky.fridaGum.fridaGumStrings.exec = "exec".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.exec]
   @scala.inline
-  def exec: typingsSlinky.fridaGum.fridaGumStrings.exec = this.cast("exec")
-  @scala.inline
-  def ret: typingsSlinky.fridaGum.fridaGumStrings.ret = this.cast("ret")
+  def ret: typingsSlinky.fridaGum.fridaGumStrings.ret = "ret".asInstanceOf[typingsSlinky.fridaGum.fridaGumStrings.ret]
 }
 

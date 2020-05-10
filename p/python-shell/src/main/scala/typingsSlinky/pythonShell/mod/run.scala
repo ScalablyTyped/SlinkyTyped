@@ -1,6 +1,5 @@
 package typingsSlinky.pythonShell.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ object run extends js.Object {
   ): Unit = js.native
   def apply(
     scriptName: String,
-    callback: js.Function2[/* err */ Error, /* results */ js.UndefOr[js.Any], Unit]
+    callback: js.Function2[/* err */ js.Error, /* results */ js.UndefOr[js.Any], Unit]
   ): Unit = js.native
 }
 

@@ -4,35 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait URLFetchRequest extends URLFetchRequestOptions {
-  var url: String
+  var url: String = js.native
 }
 
 object URLFetchRequest {
   @scala.inline
-  def apply(
-    url: String,
-    contentType: String = null,
-    escaping: js.UndefOr[Boolean] = js.undefined,
-    followRedirects: js.UndefOr[Boolean] = js.undefined,
-    headers: HttpHeaders = null,
-    method: HttpMethod = null,
-    muteHttpExceptions: js.UndefOr[Boolean] = js.undefined,
-    payload: Payload = null,
-    useIntranet: js.UndefOr[Boolean] = js.undefined,
-    validateHttpsCertificates: js.UndefOr[Boolean] = js.undefined
-  ): URLFetchRequest = {
+  def apply(url: String): URLFetchRequest = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (!js.isUndefined(escaping)) __obj.updateDynamic("escaping")(escaping.asInstanceOf[js.Any])
-    if (!js.isUndefined(followRedirects)) __obj.updateDynamic("followRedirects")(followRedirects.asInstanceOf[js.Any])
-    if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
-    if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
-    if (!js.isUndefined(muteHttpExceptions)) __obj.updateDynamic("muteHttpExceptions")(muteHttpExceptions.asInstanceOf[js.Any])
-    if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
-    if (!js.isUndefined(useIntranet)) __obj.updateDynamic("useIntranet")(useIntranet.asInstanceOf[js.Any])
-    if (!js.isUndefined(validateHttpsCertificates)) __obj.updateDynamic("validateHttpsCertificates")(validateHttpsCertificates.asInstanceOf[js.Any])
     __obj.asInstanceOf[URLFetchRequest]
   }
+  @scala.inline
+  implicit class URLFetchRequestOps[Self <: URLFetchRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

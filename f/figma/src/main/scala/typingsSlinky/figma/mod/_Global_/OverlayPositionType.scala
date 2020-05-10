@@ -18,22 +18,20 @@ trait OverlayPositionType extends js.Object
 
 object OverlayPositionType {
   @scala.inline
-  def BOTTOM_CENTER: typingsSlinky.figma.figmaStrings.BOTTOM_CENTER = this.cast("BOTTOM_CENTER")
+  def BOTTOM_CENTER: typingsSlinky.figma.figmaStrings.BOTTOM_CENTER = "BOTTOM_CENTER".asInstanceOf[typingsSlinky.figma.figmaStrings.BOTTOM_CENTER]
   @scala.inline
-  def BOTTOM_LEFT: typingsSlinky.figma.figmaStrings.BOTTOM_LEFT = this.cast("BOTTOM_LEFT")
+  def BOTTOM_LEFT: typingsSlinky.figma.figmaStrings.BOTTOM_LEFT = "BOTTOM_LEFT".asInstanceOf[typingsSlinky.figma.figmaStrings.BOTTOM_LEFT]
   @scala.inline
-  def BOTTOM_RIGHT: typingsSlinky.figma.figmaStrings.BOTTOM_RIGHT = this.cast("BOTTOM_RIGHT")
+  def BOTTOM_RIGHT: typingsSlinky.figma.figmaStrings.BOTTOM_RIGHT = "BOTTOM_RIGHT".asInstanceOf[typingsSlinky.figma.figmaStrings.BOTTOM_RIGHT]
   @scala.inline
-  def CENTER: typingsSlinky.figma.figmaStrings.CENTER = this.cast("CENTER")
+  def CENTER: typingsSlinky.figma.figmaStrings.CENTER = "CENTER".asInstanceOf[typingsSlinky.figma.figmaStrings.CENTER]
   @scala.inline
-  def MANUAL: typingsSlinky.figma.figmaStrings.MANUAL = this.cast("MANUAL")
+  def MANUAL: typingsSlinky.figma.figmaStrings.MANUAL = "MANUAL".asInstanceOf[typingsSlinky.figma.figmaStrings.MANUAL]
   @scala.inline
-  def TOP_CENTER: typingsSlinky.figma.figmaStrings.TOP_CENTER = this.cast("TOP_CENTER")
+  def TOP_CENTER: typingsSlinky.figma.figmaStrings.TOP_CENTER = "TOP_CENTER".asInstanceOf[typingsSlinky.figma.figmaStrings.TOP_CENTER]
   @scala.inline
-  def TOP_LEFT: typingsSlinky.figma.figmaStrings.TOP_LEFT = this.cast("TOP_LEFT")
+  def TOP_LEFT: typingsSlinky.figma.figmaStrings.TOP_LEFT = "TOP_LEFT".asInstanceOf[typingsSlinky.figma.figmaStrings.TOP_LEFT]
   @scala.inline
-  def TOP_RIGHT: typingsSlinky.figma.figmaStrings.TOP_RIGHT = this.cast("TOP_RIGHT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def TOP_RIGHT: typingsSlinky.figma.figmaStrings.TOP_RIGHT = "TOP_RIGHT".asInstanceOf[typingsSlinky.figma.figmaStrings.TOP_RIGHT]
 }
 

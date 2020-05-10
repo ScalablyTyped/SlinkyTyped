@@ -21,12 +21,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait EventMap[I]
   extends typingsSlinky.amapJsApi.AMap.Overlay.EventMap[I] {
-  var change: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.change, AnonTargetI[I]]
-  var hide: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.hide, AnonTargetI[I]]
-  var options: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.options, js.UndefOr[scala.Nothing]]
-  var show: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.show, AnonTargetI[I]]
+  var change: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.change, AnonTargetI[I]] = js.native
+  var hide: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.hide, AnonTargetI[I]] = js.native
+  var options: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.options, js.UndefOr[scala.Nothing]] = js.native
+  var show: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.show, AnonTargetI[I]] = js.native
 }
 
 object EventMap {
@@ -48,8 +49,39 @@ object EventMap {
     touchstart: MapsEvent[touchstart, I]
   ): EventMap[I] = {
     val __obj = js.Dynamic.literal(change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], hide = hide.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], rightclick = rightclick.asInstanceOf[js.Any], show = show.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[EventMap[I]]
   }
+  @scala.inline
+  implicit class EventMapOps[Self[i] <: EventMap[i], I] (val x: Self[I]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[I] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[I]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[I] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[I] with Other]
+    @scala.inline
+    def withChange(value: Event_[change, AnonTargetI[I]]): Self[I] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("change")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHide(value: Event_[hide, AnonTargetI[I]]): Self[I] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptions(value: Event_[options, js.UndefOr[scala.Nothing]]): Self[I] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShow(value: Event_[show, AnonTargetI[I]]): Self[I] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

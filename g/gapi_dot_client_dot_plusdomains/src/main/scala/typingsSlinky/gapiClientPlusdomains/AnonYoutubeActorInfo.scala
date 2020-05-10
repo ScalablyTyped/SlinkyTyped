@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonYoutubeActorInfo extends js.Object {
   /** Actor info specific to YouTube clients. */
-  var youtubeActorInfo: js.UndefOr[AnonChannelId] = js.undefined
+  var youtubeActorInfo: js.UndefOr[AnonChannelId] = js.native
 }
 
 object AnonYoutubeActorInfo {
   @scala.inline
-  def apply(youtubeActorInfo: AnonChannelId = null): AnonYoutubeActorInfo = {
+  def apply(): AnonYoutubeActorInfo = {
     val __obj = js.Dynamic.literal()
-    if (youtubeActorInfo != null) __obj.updateDynamic("youtubeActorInfo")(youtubeActorInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonYoutubeActorInfo]
   }
+  @scala.inline
+  implicit class AnonYoutubeActorInfoOps[Self <: AnonYoutubeActorInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withYoutubeActorInfo(value: AnonChannelId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("youtubeActorInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutYoutubeActorInfo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("youtubeActorInfo")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

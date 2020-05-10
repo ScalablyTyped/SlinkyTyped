@@ -1,8 +1,8 @@
 package typingsSlinky.winjs.WinJS.UI
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.std.Event_
-import typingsSlinky.std.MouseEvent
 import typingsSlinky.winjs.AnonX
 import scala.scalajs.js
 import scala.scalajs.js.`|`

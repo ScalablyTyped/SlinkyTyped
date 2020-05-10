@@ -18,11 +18,41 @@ trait ListAvailableManagedRuleGroupsResponse extends js.Object {
 
 object ListAvailableManagedRuleGroupsResponse {
   @scala.inline
-  def apply(ManagedRuleGroups: ManagedRuleGroupSummaries = null, NextMarker: NextMarker = null): ListAvailableManagedRuleGroupsResponse = {
+  def apply(): ListAvailableManagedRuleGroupsResponse = {
     val __obj = js.Dynamic.literal()
-    if (ManagedRuleGroups != null) __obj.updateDynamic("ManagedRuleGroups")(ManagedRuleGroups.asInstanceOf[js.Any])
-    if (NextMarker != null) __obj.updateDynamic("NextMarker")(NextMarker.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListAvailableManagedRuleGroupsResponse]
   }
+  @scala.inline
+  implicit class ListAvailableManagedRuleGroupsResponseOps[Self <: ListAvailableManagedRuleGroupsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withManagedRuleGroups(value: ManagedRuleGroupSummaries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManagedRuleGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutManagedRuleGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ManagedRuleGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextMarker(value: NextMarker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextMarker")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

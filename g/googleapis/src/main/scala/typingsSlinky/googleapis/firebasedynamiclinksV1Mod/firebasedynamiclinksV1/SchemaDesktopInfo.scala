@@ -17,10 +17,29 @@ trait SchemaDesktopInfo extends js.Object {
 
 object SchemaDesktopInfo {
   @scala.inline
-  def apply(desktopFallbackLink: String = null): SchemaDesktopInfo = {
+  def apply(): SchemaDesktopInfo = {
     val __obj = js.Dynamic.literal()
-    if (desktopFallbackLink != null) __obj.updateDynamic("desktopFallbackLink")(desktopFallbackLink.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDesktopInfo]
   }
+  @scala.inline
+  implicit class SchemaDesktopInfoOps[Self <: SchemaDesktopInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesktopFallbackLink(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desktopFallbackLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesktopFallbackLink: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desktopFallbackLink")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

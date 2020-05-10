@@ -1,10 +1,7 @@
 package typingsSlinky.antDesignPro.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignPro.bizchartsMod.Guide.Text
 import typingsSlinky.antvG2.mod.Styles.text
 import typingsSlinky.bizcharts.mod.Guide.TextProps
@@ -12,32 +9,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object GuideText
-  extends ExternalComponentWithAttributesWithRefType[tag.type, Text] {
+object GuideText {
   @JSImport("ant-design-pro/lib/Charts/bizcharts", "Guide.Text")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: content */
-  def apply(
-    offsetX: Int | Double = null,
-    offsetY: Int | Double = null,
-    position: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _]) = null,
-    style: text = null,
-    top: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, Text] = {
-    val __obj = js.Dynamic.literal()
-    if (offsetX != null) __obj.updateDynamic("offsetX")(offsetX.asInstanceOf[js.Any])
-    if (offsetY != null) __obj.updateDynamic("offsetY")(offsetY.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (!js.isUndefined(top)) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Text] {
+    @scala.inline
+    def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetX(value: Double): this.type = set("offsetX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def offsetY(value: Double): this.type = set("offsetY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def positionFunction2(value: (/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any]) => _): this.type = set("position", js.Any.fromFunction2(value))
+    @scala.inline
+    def position(
+      value: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _])
+    ): this.type = set("position", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: text): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def top(value: Boolean): this.type = set("top", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Text] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antDesignPro.bizchartsMod.Guide.Text](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TextProps
+  
+  def withProps(p: TextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: GuideText.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

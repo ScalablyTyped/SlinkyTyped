@@ -4,33 +4,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ConnectorsShapeMultiplicitySource extends js.Object {
   /** Defines the source label to connector. Applicable, if the connector is of type &quot;UML&quot;
     * @Default {null}
     */
-  var lowerBounds: js.UndefOr[Double] = js.undefined
+  var lowerBounds: js.UndefOr[Double] = js.native
   /** Defines the source label to connector. Applicable, if the connector is of type &quot;UML&quot;
     * @Default {true}
     */
-  var optional: js.UndefOr[Boolean] = js.undefined
+  var optional: js.UndefOr[Boolean] = js.native
   /** Defines the source label to connector. Applicable, if the connector is of type &quot;UML&quot;
     * @Default {null}
     */
-  var upperBounds: js.UndefOr[Double] = js.undefined
+  var upperBounds: js.UndefOr[Double] = js.native
 }
 
 object ConnectorsShapeMultiplicitySource {
   @scala.inline
-  def apply(
-    lowerBounds: Int | Double = null,
-    optional: js.UndefOr[Boolean] = js.undefined,
-    upperBounds: Int | Double = null
-  ): ConnectorsShapeMultiplicitySource = {
+  def apply(): ConnectorsShapeMultiplicitySource = {
     val __obj = js.Dynamic.literal()
-    if (lowerBounds != null) __obj.updateDynamic("lowerBounds")(lowerBounds.asInstanceOf[js.Any])
-    if (!js.isUndefined(optional)) __obj.updateDynamic("optional")(optional.asInstanceOf[js.Any])
-    if (upperBounds != null) __obj.updateDynamic("upperBounds")(upperBounds.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectorsShapeMultiplicitySource]
   }
+  @scala.inline
+  implicit class ConnectorsShapeMultiplicitySourceOps[Self <: ConnectorsShapeMultiplicitySource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLowerBounds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLowerBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOptional(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOptional: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpperBounds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpperBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBounds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

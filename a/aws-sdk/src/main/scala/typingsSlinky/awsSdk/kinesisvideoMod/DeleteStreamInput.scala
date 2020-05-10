@@ -18,10 +18,35 @@ trait DeleteStreamInput extends js.Object {
 
 object DeleteStreamInput {
   @scala.inline
-  def apply(StreamARN: ResourceARN, CurrentVersion: Version = null): DeleteStreamInput = {
+  def apply(StreamARN: ResourceARN): DeleteStreamInput = {
     val __obj = js.Dynamic.literal(StreamARN = StreamARN.asInstanceOf[js.Any])
-    if (CurrentVersion != null) __obj.updateDynamic("CurrentVersion")(CurrentVersion.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteStreamInput]
   }
+  @scala.inline
+  implicit class DeleteStreamInputOps[Self <: DeleteStreamInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStreamARN(value: ResourceARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StreamARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentVersion(value: Version): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrentVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentVersion")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

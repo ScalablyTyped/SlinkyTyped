@@ -14,14 +14,12 @@ trait GroupAttributes extends js.Object
 
 object GroupAttributes {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cn: typingsSlinky.activedirectory2.activedirectory2Strings.cn = "cn".asInstanceOf[typingsSlinky.activedirectory2.activedirectory2Strings.cn]
   @scala.inline
-  def cn: typingsSlinky.activedirectory2.activedirectory2Strings.cn = this.cast("cn")
+  def description: typingsSlinky.activedirectory2.activedirectory2Strings.description = "description".asInstanceOf[typingsSlinky.activedirectory2.activedirectory2Strings.description]
   @scala.inline
-  def description: typingsSlinky.activedirectory2.activedirectory2Strings.description = this.cast("description")
+  def distinguishedName: typingsSlinky.activedirectory2.activedirectory2Strings.distinguishedName = "distinguishedName".asInstanceOf[typingsSlinky.activedirectory2.activedirectory2Strings.distinguishedName]
   @scala.inline
-  def distinguishedName: typingsSlinky.activedirectory2.activedirectory2Strings.distinguishedName = this.cast("distinguishedName")
-  @scala.inline
-  def objectCategory: typingsSlinky.activedirectory2.activedirectory2Strings.objectCategory = this.cast("objectCategory")
+  def objectCategory: typingsSlinky.activedirectory2.activedirectory2Strings.objectCategory = "objectCategory".asInstanceOf[typingsSlinky.activedirectory2.activedirectory2Strings.objectCategory]
 }
 

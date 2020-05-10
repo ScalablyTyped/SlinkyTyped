@@ -22,15 +22,47 @@ trait ModifyClusterIamRolesMessage extends js.Object {
 
 object ModifyClusterIamRolesMessage {
   @scala.inline
-  def apply(
-    ClusterIdentifier: String,
-    AddIamRoles: IamRoleArnList = null,
-    RemoveIamRoles: IamRoleArnList = null
-  ): ModifyClusterIamRolesMessage = {
+  def apply(ClusterIdentifier: String): ModifyClusterIamRolesMessage = {
     val __obj = js.Dynamic.literal(ClusterIdentifier = ClusterIdentifier.asInstanceOf[js.Any])
-    if (AddIamRoles != null) __obj.updateDynamic("AddIamRoles")(AddIamRoles.asInstanceOf[js.Any])
-    if (RemoveIamRoles != null) __obj.updateDynamic("RemoveIamRoles")(RemoveIamRoles.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyClusterIamRolesMessage]
   }
+  @scala.inline
+  implicit class ModifyClusterIamRolesMessageOps[Self <: ModifyClusterIamRolesMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddIamRoles(value: IamRoleArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddIamRoles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddIamRoles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddIamRoles")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveIamRoles(value: IamRoleArnList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveIamRoles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveIamRoles: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveIamRoles")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

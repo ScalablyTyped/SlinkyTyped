@@ -17,10 +17,29 @@ trait SchemaGetApkDetailsResponse extends js.Object {
 
 object SchemaGetApkDetailsResponse {
   @scala.inline
-  def apply(apkDetail: SchemaApkDetail = null): SchemaGetApkDetailsResponse = {
+  def apply(): SchemaGetApkDetailsResponse = {
     val __obj = js.Dynamic.literal()
-    if (apkDetail != null) __obj.updateDynamic("apkDetail")(apkDetail.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGetApkDetailsResponse]
   }
+  @scala.inline
+  implicit class SchemaGetApkDetailsResponseOps[Self <: SchemaGetApkDetailsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApkDetail(value: SchemaApkDetail): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apkDetail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApkDetail: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apkDetail")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

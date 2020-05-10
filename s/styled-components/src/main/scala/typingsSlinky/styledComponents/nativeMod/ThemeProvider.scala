@@ -1,10 +1,9 @@
 package typingsSlinky.styledComponents.nativeMod
 
 import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentState
 import typingsSlinky.styledComponents.styledComponentsMod.DefaultTheme
-import typingsSlinky.styledComponents.styledComponentsMod.ThemeProviderComponent
 import typingsSlinky.styledComponents.styledComponentsMod.ThemeProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +17,7 @@ class ThemeProvider protected ()
         typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[DefaultTheme]], 
         typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[DefaultTheme]]
       ], 
-      ComponentState, 
+      js.Object, 
       js.Any
     ] {
   def this(props: ThemeProviderProps[
@@ -38,9 +37,11 @@ class ThemeProvider protected ()
 @js.native
 object ThemeProvider
   extends TopLevel[
-      ThemeProviderComponent[
-        typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[DefaultTheme], 
-        typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[DefaultTheme]
+      ReactComponentClass[
+        ThemeProviderProps[
+          typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[DefaultTheme]], 
+          typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[DefaultTheme]]
+        ]
       ]
     ]
 

@@ -1,6 +1,5 @@
 package typingsSlinky.grammarkdown.coreMod
 
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +9,6 @@ import scala.scalajs.js.annotation._
 object last extends js.Object {
   def apply[T](): js.UndefOr[T] = js.native
   def apply[T](iterable: js.Array[T]): js.UndefOr[T] = js.native
-  def apply[T](iterable: Iterable[T]): js.UndefOr[T] = js.native
+  def apply[T](iterable: js.Iterable[T]): js.UndefOr[T] = js.native
 }
 

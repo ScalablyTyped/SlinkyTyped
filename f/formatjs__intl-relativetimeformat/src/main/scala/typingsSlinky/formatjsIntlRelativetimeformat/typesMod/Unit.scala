@@ -18,22 +18,20 @@ trait Unit extends js.Object
 
 object Unit {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def day: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.day = "day".asInstanceOf[typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.day]
   @scala.inline
-  def day: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.day = this.cast("day")
+  def hour: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.hour = "hour".asInstanceOf[typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.hour]
   @scala.inline
-  def hour: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.hour = this.cast("hour")
+  def minute: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.minute = "minute".asInstanceOf[typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.minute]
   @scala.inline
-  def minute: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.minute = this.cast("minute")
+  def month: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.month = "month".asInstanceOf[typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.month]
   @scala.inline
-  def month: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.month = this.cast("month")
+  def quarter: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.quarter = "quarter".asInstanceOf[typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.quarter]
   @scala.inline
-  def quarter: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.quarter = this.cast("quarter")
+  def second: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.second = "second".asInstanceOf[typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.second]
   @scala.inline
-  def second: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.second = this.cast("second")
+  def week: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.week = "week".asInstanceOf[typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.week]
   @scala.inline
-  def week: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.week = this.cast("week")
-  @scala.inline
-  def year: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.year = this.cast("year")
+  def year: typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.year = "year".asInstanceOf[typingsSlinky.formatjsIntlRelativetimeformat.formatjsIntlRelativetimeformatStrings.year]
 }
 

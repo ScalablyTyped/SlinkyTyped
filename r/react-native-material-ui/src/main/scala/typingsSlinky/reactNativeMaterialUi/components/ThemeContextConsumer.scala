@@ -1,18 +1,19 @@
 package typingsSlinky.reactNativeMaterialUi.components
 
-import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.reactNativeMaterialUi.mod.ThemeConsumerProps
 import typingsSlinky.reactNativeMaterialUi.mod.ThemeContext.Consumer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ThemeContextConsumer
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, Consumer] {
+object ThemeContextConsumer {
   @JSImport("react-native-material-ui", "ThemeContext.Consumer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ThemeConsumerProps): Default[tag.type, Consumer] = new Default[tag.type, Consumer](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ThemeContextConsumer.type): Default[tag.type, Consumer] = new Default[tag.type, Consumer](js.Array(this.component, js.Dictionary.empty))()
 }
 

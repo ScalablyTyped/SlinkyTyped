@@ -18,11 +18,41 @@ trait GetAccessKeyLastUsedResponse extends js.Object {
 
 object GetAccessKeyLastUsedResponse {
   @scala.inline
-  def apply(AccessKeyLastUsed: AccessKeyLastUsed = null, UserName: existingUserNameType = null): GetAccessKeyLastUsedResponse = {
+  def apply(): GetAccessKeyLastUsedResponse = {
     val __obj = js.Dynamic.literal()
-    if (AccessKeyLastUsed != null) __obj.updateDynamic("AccessKeyLastUsed")(AccessKeyLastUsed.asInstanceOf[js.Any])
-    if (UserName != null) __obj.updateDynamic("UserName")(UserName.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAccessKeyLastUsedResponse]
   }
+  @scala.inline
+  implicit class GetAccessKeyLastUsedResponseOps[Self <: GetAccessKeyLastUsedResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessKeyLastUsed(value: AccessKeyLastUsed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessKeyLastUsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessKeyLastUsed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessKeyLastUsed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUserName(value: existingUserNameType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUserName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

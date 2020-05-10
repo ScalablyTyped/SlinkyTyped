@@ -4,19 +4,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GetDomainsReturnType extends js.Object {
   /**
     * List of supported domains.
     */
-  var domains: js.Array[Domain]
+  var domains: js.Array[Domain] = js.native
 }
 
 object GetDomainsReturnType {
   @scala.inline
   def apply(domains: js.Array[Domain]): GetDomainsReturnType = {
     val __obj = js.Dynamic.literal(domains = domains.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[GetDomainsReturnType]
   }
+  @scala.inline
+  implicit class GetDomainsReturnTypeOps[Self <: GetDomainsReturnType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomains(value: js.Array[Domain]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domains")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RmDirOptions extends js.Object {
   /**
     * If `true`, perform a recursive directory removal. In
@@ -12,15 +13,34 @@ trait RmDirOptions extends js.Object {
     * @experimental
     * @default false
     */
-  var recursive: js.UndefOr[Boolean] = js.undefined
+  var recursive: js.UndefOr[Boolean] = js.native
 }
 
 object RmDirOptions {
   @scala.inline
-  def apply(recursive: js.UndefOr[Boolean] = js.undefined): RmDirOptions = {
+  def apply(): RmDirOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(recursive)) __obj.updateDynamic("recursive")(recursive.asInstanceOf[js.Any])
     __obj.asInstanceOf[RmDirOptions]
   }
+  @scala.inline
+  implicit class RmDirOptionsOps[Self <: RmDirOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecursive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRecursive: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recursive")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

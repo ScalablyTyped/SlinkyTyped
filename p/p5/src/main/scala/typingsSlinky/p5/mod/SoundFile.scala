@@ -112,8 +112,8 @@ trait SoundFile extends js.Object {
     *   Defaults to 5*width of the browser window.
     *   @return Array of peaks.
     */
-  def getPeaks(): scala.scalajs.js.typedarray.Float32Array = js.native
-  def getPeaks(length: Double): scala.scalajs.js.typedarray.Float32Array = js.native
+  def getPeaks(): js.typedarray.Float32Array = js.native
+  def getPeaks(length: Double): js.typedarray.Float32Array = js.native
   /**
     *   Returns true if the sound file finished loading
     *   successfully.

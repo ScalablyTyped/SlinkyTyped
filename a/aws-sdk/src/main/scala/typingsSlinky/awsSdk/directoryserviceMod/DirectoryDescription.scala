@@ -106,58 +106,305 @@ trait DirectoryDescription extends js.Object {
 
 object DirectoryDescription {
   @scala.inline
-  def apply(
-    AccessUrl: AccessUrl = null,
-    Alias: AliasName = null,
-    ConnectSettings: DirectoryConnectSettingsDescription = null,
-    Description: Description = null,
-    DesiredNumberOfDomainControllers: Int | Double = null,
-    DirectoryId: DirectoryId = null,
-    DnsIpAddrs: DnsIpAddrs = null,
-    Edition: DirectoryEdition = null,
-    LaunchTime: js.Date = null,
-    Name: DirectoryName = null,
-    OwnerDirectoryDescription: OwnerDirectoryDescription = null,
-    RadiusSettings: RadiusSettings = null,
-    RadiusStatus: RadiusStatus = null,
-    ShareMethod: ShareMethod = null,
-    ShareNotes: Notes = null,
-    ShareStatus: ShareStatus = null,
-    ShortName: DirectoryShortName = null,
-    Size: DirectorySize = null,
-    SsoEnabled: js.UndefOr[Boolean] = js.undefined,
-    Stage: DirectoryStage = null,
-    StageLastUpdatedDateTime: js.Date = null,
-    StageReason: StageReason = null,
-    Type: DirectoryType = null,
-    VpcSettings: DirectoryVpcSettingsDescription = null
-  ): DirectoryDescription = {
+  def apply(): DirectoryDescription = {
     val __obj = js.Dynamic.literal()
-    if (AccessUrl != null) __obj.updateDynamic("AccessUrl")(AccessUrl.asInstanceOf[js.Any])
-    if (Alias != null) __obj.updateDynamic("Alias")(Alias.asInstanceOf[js.Any])
-    if (ConnectSettings != null) __obj.updateDynamic("ConnectSettings")(ConnectSettings.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (DesiredNumberOfDomainControllers != null) __obj.updateDynamic("DesiredNumberOfDomainControllers")(DesiredNumberOfDomainControllers.asInstanceOf[js.Any])
-    if (DirectoryId != null) __obj.updateDynamic("DirectoryId")(DirectoryId.asInstanceOf[js.Any])
-    if (DnsIpAddrs != null) __obj.updateDynamic("DnsIpAddrs")(DnsIpAddrs.asInstanceOf[js.Any])
-    if (Edition != null) __obj.updateDynamic("Edition")(Edition.asInstanceOf[js.Any])
-    if (LaunchTime != null) __obj.updateDynamic("LaunchTime")(LaunchTime.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (OwnerDirectoryDescription != null) __obj.updateDynamic("OwnerDirectoryDescription")(OwnerDirectoryDescription.asInstanceOf[js.Any])
-    if (RadiusSettings != null) __obj.updateDynamic("RadiusSettings")(RadiusSettings.asInstanceOf[js.Any])
-    if (RadiusStatus != null) __obj.updateDynamic("RadiusStatus")(RadiusStatus.asInstanceOf[js.Any])
-    if (ShareMethod != null) __obj.updateDynamic("ShareMethod")(ShareMethod.asInstanceOf[js.Any])
-    if (ShareNotes != null) __obj.updateDynamic("ShareNotes")(ShareNotes.asInstanceOf[js.Any])
-    if (ShareStatus != null) __obj.updateDynamic("ShareStatus")(ShareStatus.asInstanceOf[js.Any])
-    if (ShortName != null) __obj.updateDynamic("ShortName")(ShortName.asInstanceOf[js.Any])
-    if (Size != null) __obj.updateDynamic("Size")(Size.asInstanceOf[js.Any])
-    if (!js.isUndefined(SsoEnabled)) __obj.updateDynamic("SsoEnabled")(SsoEnabled.asInstanceOf[js.Any])
-    if (Stage != null) __obj.updateDynamic("Stage")(Stage.asInstanceOf[js.Any])
-    if (StageLastUpdatedDateTime != null) __obj.updateDynamic("StageLastUpdatedDateTime")(StageLastUpdatedDateTime.asInstanceOf[js.Any])
-    if (StageReason != null) __obj.updateDynamic("StageReason")(StageReason.asInstanceOf[js.Any])
-    if (Type != null) __obj.updateDynamic("Type")(Type.asInstanceOf[js.Any])
-    if (VpcSettings != null) __obj.updateDynamic("VpcSettings")(VpcSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectoryDescription]
   }
+  @scala.inline
+  implicit class DirectoryDescriptionOps[Self <: DirectoryDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessUrl(value: AccessUrl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessUrl: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessUrl")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAlias(value: AliasName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Alias")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlias: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Alias")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectSettings(value: DirectoryConnectSettingsDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: Description): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDesiredNumberOfDomainControllers(value: DesiredNumberOfDomainControllers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredNumberOfDomainControllers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredNumberOfDomainControllers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredNumberOfDomainControllers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirectoryId(value: DirectoryId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirectoryId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DirectoryId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnsIpAddrs(value: DnsIpAddrs): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsIpAddrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsIpAddrs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsIpAddrs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEdition(value: DirectoryEdition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Edition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEdition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Edition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLaunchTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLaunchTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LaunchTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: DirectoryName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwnerDirectoryDescription(value: OwnerDirectoryDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerDirectoryDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwnerDirectoryDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OwnerDirectoryDescription")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadiusSettings(value: RadiusSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadiusSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusSettings")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRadiusStatus(value: RadiusStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRadiusStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RadiusStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShareMethod(value: ShareMethod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareMethod")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShareMethod: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareMethod")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShareNotes(value: Notes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareNotes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShareNotes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareNotes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShareStatus(value: ShareStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShareStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShareStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShortName(value: DirectoryShortName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShortName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShortName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: DirectorySize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSsoEnabled(value: SsoEnabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SsoEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSsoEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SsoEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStage(value: DirectoryStage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Stage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStageLastUpdatedDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StageLastUpdatedDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStageLastUpdatedDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StageLastUpdatedDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStageReason(value: StageReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StageReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStageReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StageReason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: DirectoryType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcSettings(value: DirectoryVpcSettingsDescription): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -17,12 +17,12 @@ object ecdhSymkey extends js.Object {
       * @param input Where to read the encoded symmetric key from
       * @returns Number of read bytes
       */
-    def read(input: scala.scalajs.js.typedarray.Uint8Array): Double = js.native
+    def read(input: js.typedarray.Uint8Array): Double = js.native
     /**
       * Write an ECDHSymmetricKey as an Uint8Array
       * @returns An array containing the value
       */
-    def write(): scala.scalajs.js.typedarray.Uint8Array = js.native
+    def write(): js.typedarray.Uint8Array = js.native
   }
   
 }

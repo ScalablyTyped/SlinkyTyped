@@ -47,6 +47,10 @@ trait ClientVpnEndpoint extends js.Object {
     */
   var DnsServers: js.UndefOr[ValueStringList] = js.native
   /**
+    * The IDs of the security groups for the target network.
+    */
+  var SecurityGroupIds: js.UndefOr[ClientVpnSecurityGroupIdSet] = js.native
+  /**
     * The ARN of the server certificate.
     */
   var ServerCertificateArn: js.UndefOr[String] = js.native
@@ -67,6 +71,10 @@ trait ClientVpnEndpoint extends js.Object {
     */
   var TransportProtocol: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.TransportProtocol] = js.native
   /**
+    * The ID of the VPC.
+    */
+  var VpcId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.VpcId] = js.native
+  /**
     * The port number for the Client VPN endpoint.
     */
   var VpnPort: js.UndefOr[Integer] = js.native
@@ -78,44 +86,245 @@ trait ClientVpnEndpoint extends js.Object {
 
 object ClientVpnEndpoint {
   @scala.inline
-  def apply(
-    AssociatedTargetNetworks: AssociatedTargetNetworkSet = null,
-    AuthenticationOptions: ClientVpnAuthenticationList = null,
-    ClientCidrBlock: String = null,
-    ClientVpnEndpointId: String = null,
-    ConnectionLogOptions: ConnectionLogResponseOptions = null,
-    CreationTime: String = null,
-    DeletionTime: String = null,
-    Description: String = null,
-    DnsName: String = null,
-    DnsServers: ValueStringList = null,
-    ServerCertificateArn: String = null,
-    SplitTunnel: js.UndefOr[scala.Boolean] = js.undefined,
-    Status: ClientVpnEndpointStatus = null,
-    Tags: TagList = null,
-    TransportProtocol: TransportProtocol = null,
-    VpnPort: Int | scala.Double = null,
-    VpnProtocol: VpnProtocol = null
-  ): ClientVpnEndpoint = {
+  def apply(): ClientVpnEndpoint = {
     val __obj = js.Dynamic.literal()
-    if (AssociatedTargetNetworks != null) __obj.updateDynamic("AssociatedTargetNetworks")(AssociatedTargetNetworks.asInstanceOf[js.Any])
-    if (AuthenticationOptions != null) __obj.updateDynamic("AuthenticationOptions")(AuthenticationOptions.asInstanceOf[js.Any])
-    if (ClientCidrBlock != null) __obj.updateDynamic("ClientCidrBlock")(ClientCidrBlock.asInstanceOf[js.Any])
-    if (ClientVpnEndpointId != null) __obj.updateDynamic("ClientVpnEndpointId")(ClientVpnEndpointId.asInstanceOf[js.Any])
-    if (ConnectionLogOptions != null) __obj.updateDynamic("ConnectionLogOptions")(ConnectionLogOptions.asInstanceOf[js.Any])
-    if (CreationTime != null) __obj.updateDynamic("CreationTime")(CreationTime.asInstanceOf[js.Any])
-    if (DeletionTime != null) __obj.updateDynamic("DeletionTime")(DeletionTime.asInstanceOf[js.Any])
-    if (Description != null) __obj.updateDynamic("Description")(Description.asInstanceOf[js.Any])
-    if (DnsName != null) __obj.updateDynamic("DnsName")(DnsName.asInstanceOf[js.Any])
-    if (DnsServers != null) __obj.updateDynamic("DnsServers")(DnsServers.asInstanceOf[js.Any])
-    if (ServerCertificateArn != null) __obj.updateDynamic("ServerCertificateArn")(ServerCertificateArn.asInstanceOf[js.Any])
-    if (!js.isUndefined(SplitTunnel)) __obj.updateDynamic("SplitTunnel")(SplitTunnel.asInstanceOf[js.Any])
-    if (Status != null) __obj.updateDynamic("Status")(Status.asInstanceOf[js.Any])
-    if (Tags != null) __obj.updateDynamic("Tags")(Tags.asInstanceOf[js.Any])
-    if (TransportProtocol != null) __obj.updateDynamic("TransportProtocol")(TransportProtocol.asInstanceOf[js.Any])
-    if (VpnPort != null) __obj.updateDynamic("VpnPort")(VpnPort.asInstanceOf[js.Any])
-    if (VpnProtocol != null) __obj.updateDynamic("VpnProtocol")(VpnProtocol.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientVpnEndpoint]
   }
+  @scala.inline
+  implicit class ClientVpnEndpointOps[Self <: ClientVpnEndpoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAssociatedTargetNetworks(value: AssociatedTargetNetworkSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociatedTargetNetworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAssociatedTargetNetworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AssociatedTargetNetworks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthenticationOptions(value: ClientVpnAuthenticationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthenticationOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthenticationOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientCidrBlock(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCidrBlock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientCidrBlock: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientCidrBlock")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClientVpnEndpointId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpnEndpointId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientVpnEndpointId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpnEndpointId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withConnectionLogOptions(value: ConnectionLogResponseOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionLogOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConnectionLogOptions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionLogOptions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreationTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreationTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDeletionTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeletionTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeletionTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDescription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnsName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDnsServers(value: ValueStringList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsServers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDnsServers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DnsServers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityGroupIds(value: ClientVpnSecurityGroupIdSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityGroupIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SecurityGroupIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerCertificateArn(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertificateArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerCertificateArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerCertificateArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSplitTunnel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplitTunnel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSplitTunnel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SplitTunnel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ClientVpnEndpointStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Status")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTags(value: TagList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransportProtocol(value: TransportProtocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransportProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTransportProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TransportProtocol")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpcId(value: VpcId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpcId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpcId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnPort(value: Integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnPort")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVpnProtocol(value: VpnProtocol): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnProtocol")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVpnProtocol: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VpnProtocol")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

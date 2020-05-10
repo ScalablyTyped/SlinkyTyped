@@ -78,22 +78,89 @@ trait SchemaWriteLogEntriesRequest extends js.Object {
 
 object SchemaWriteLogEntriesRequest {
   @scala.inline
-  def apply(
-    dryRun: js.UndefOr[Boolean] = js.undefined,
-    entries: js.Array[SchemaLogEntry] = null,
-    labels: StringDictionary[String] = null,
-    logName: String = null,
-    partialSuccess: js.UndefOr[Boolean] = js.undefined,
-    resource: SchemaMonitoredResource = null
-  ): SchemaWriteLogEntriesRequest = {
+  def apply(): SchemaWriteLogEntriesRequest = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(dryRun)) __obj.updateDynamic("dryRun")(dryRun.asInstanceOf[js.Any])
-    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
-    if (labels != null) __obj.updateDynamic("labels")(labels.asInstanceOf[js.Any])
-    if (logName != null) __obj.updateDynamic("logName")(logName.asInstanceOf[js.Any])
-    if (!js.isUndefined(partialSuccess)) __obj.updateDynamic("partialSuccess")(partialSuccess.asInstanceOf[js.Any])
-    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaWriteLogEntriesRequest]
   }
+  @scala.inline
+  implicit class SchemaWriteLogEntriesRequestOps[Self <: SchemaWriteLogEntriesRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDryRun(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dryRun")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDryRun: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dryRun")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntries(value: js.Array[SchemaLogEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLogName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLogName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPartialSuccess(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partialSuccess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPartialSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partialSuccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResource(value: SchemaMonitoredResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

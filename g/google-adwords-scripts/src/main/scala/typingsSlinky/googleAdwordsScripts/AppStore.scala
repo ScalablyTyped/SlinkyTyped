@@ -12,10 +12,8 @@ trait AppStore extends js.Object
 
 object AppStore {
   @scala.inline
-  def Android: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.Android = this.cast("Android")
+  def Android: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.Android = "Android".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.Android]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def iOS: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.iOS = this.cast("iOS")
+  def iOS: typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.iOS = "iOS".asInstanceOf[typingsSlinky.googleAdwordsScripts.googleAdwordsScriptsStrings.iOS]
 }
 

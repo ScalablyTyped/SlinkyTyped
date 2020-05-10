@@ -10,3 +10,31 @@ trait ParticipantMultiplicity extends BaseElement {
   var minimum: Double = js.native
 }
 
+object ParticipantMultiplicity {
+  @scala.inline
+  def apply($parent: TypeDerived, $type: ElementType, id: String, maximum: Double, minimum: Double): ParticipantMultiplicity = {
+    val __obj = js.Dynamic.literal($parent = $parent.asInstanceOf[js.Any], $type = $type.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], maximum = maximum.asInstanceOf[js.Any], minimum = minimum.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ParticipantMultiplicity]
+  }
+  @scala.inline
+  implicit class ParticipantMultiplicityOps[Self <: ParticipantMultiplicity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaximum(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinimum(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimum")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

@@ -6,7 +6,6 @@ import typingsSlinky.arangodb.AnonDomain
 import typingsSlinky.arangodb.AnonLastModified
 import typingsSlinky.arangodb.ArangoDB.HttpStatus
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,16 +40,16 @@ trait Response extends js.Object {
   def status(status: Double): this.type = js.native
   def status(status: HttpStatus): this.type = js.native
   def `throw`(status: Double): scala.Nothing = js.native
-  def `throw`(status: Double, error: Error): scala.Nothing = js.native
+  def `throw`(status: Double, error: js.Error): scala.Nothing = js.native
   def `throw`(status: Double, options: AnonCause): scala.Nothing = js.native
   def `throw`(status: Double, reason: String): scala.Nothing = js.native
-  def `throw`(status: Double, reason: String, error: Error): scala.Nothing = js.native
+  def `throw`(status: Double, reason: String, error: js.Error): scala.Nothing = js.native
   def `throw`(status: Double, reason: String, options: AnonCause): scala.Nothing = js.native
   def `throw`(status: HttpStatus): scala.Nothing = js.native
-  def `throw`(status: HttpStatus, error: Error): scala.Nothing = js.native
+  def `throw`(status: HttpStatus, error: js.Error): scala.Nothing = js.native
   def `throw`(status: HttpStatus, options: AnonCause): scala.Nothing = js.native
   def `throw`(status: HttpStatus, reason: String): scala.Nothing = js.native
-  def `throw`(status: HttpStatus, reason: String, error: Error): scala.Nothing = js.native
+  def `throw`(status: HttpStatus, reason: String, error: js.Error): scala.Nothing = js.native
   def `throw`(status: HttpStatus, reason: String, options: AnonCause): scala.Nothing = js.native
   def `type`(): String = js.native
   def `type`(`type`: String): String = js.native

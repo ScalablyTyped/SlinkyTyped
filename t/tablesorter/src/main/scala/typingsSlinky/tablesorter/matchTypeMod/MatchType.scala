@@ -12,10 +12,8 @@ trait MatchType extends js.Object
 
 object MatchType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def exact: typingsSlinky.tablesorter.tablesorterStrings.exact = "exact".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.exact]
   @scala.inline
-  def exact: typingsSlinky.tablesorter.tablesorterStrings.exact = this.cast("exact")
-  @scala.inline
-  def `match`: typingsSlinky.tablesorter.tablesorterStrings.`match` = this.cast("match")
+  def `match`: typingsSlinky.tablesorter.tablesorterStrings.`match` = "match".asInstanceOf[typingsSlinky.tablesorter.tablesorterStrings.`match`]
 }
 

@@ -19,11 +19,41 @@ trait FleetResourceCreationLimitPolicy extends js.Object {
 
 object FleetResourceCreationLimitPolicy {
   @scala.inline
-  def apply(newGameSessionsPerCreator: Input[Double] = null, policyPeriodInMinutes: Input[Double] = null): FleetResourceCreationLimitPolicy = {
+  def apply(): FleetResourceCreationLimitPolicy = {
     val __obj = js.Dynamic.literal()
-    if (newGameSessionsPerCreator != null) __obj.updateDynamic("newGameSessionsPerCreator")(newGameSessionsPerCreator.asInstanceOf[js.Any])
-    if (policyPeriodInMinutes != null) __obj.updateDynamic("policyPeriodInMinutes")(policyPeriodInMinutes.asInstanceOf[js.Any])
     __obj.asInstanceOf[FleetResourceCreationLimitPolicy]
   }
+  @scala.inline
+  implicit class FleetResourceCreationLimitPolicyOps[Self <: FleetResourceCreationLimitPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNewGameSessionsPerCreator(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newGameSessionsPerCreator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNewGameSessionsPerCreator: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newGameSessionsPerCreator")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPolicyPeriodInMinutes(value: Input[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyPeriodInMinutes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPolicyPeriodInMinutes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("policyPeriodInMinutes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

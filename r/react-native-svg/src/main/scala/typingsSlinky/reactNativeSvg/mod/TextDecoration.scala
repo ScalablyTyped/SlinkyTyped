@@ -15,16 +15,14 @@ trait TextDecoration extends js.Object
 
 object TextDecoration {
   @scala.inline
-  def blink: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.blink = this.cast("blink")
+  def blink: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.blink = "blink".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.blink]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `line-through`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`line-through` = "line-through".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`line-through`]
   @scala.inline
-  def `line-through`: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.`line-through` = this.cast("line-through")
+  def none: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.none = "none".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.none]
   @scala.inline
-  def none: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.none = this.cast("none")
+  def overline: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.overline = "overline".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.overline]
   @scala.inline
-  def overline: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.overline = this.cast("overline")
-  @scala.inline
-  def underline: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.underline = this.cast("underline")
+  def underline: typingsSlinky.reactNativeSvg.reactNativeSvgStrings.underline = "underline".asInstanceOf[typingsSlinky.reactNativeSvg.reactNativeSvgStrings.underline]
 }
 

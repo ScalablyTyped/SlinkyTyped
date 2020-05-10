@@ -24,6 +24,6 @@ object mod extends js.Object {
     shortDate: String,
     region: String,
     service: String
-  ): js.Promise[scala.scalajs.js.typedarray.Uint8Array] = js.native
+  ): js.Promise[js.typedarray.Uint8Array] = js.native
 }
 

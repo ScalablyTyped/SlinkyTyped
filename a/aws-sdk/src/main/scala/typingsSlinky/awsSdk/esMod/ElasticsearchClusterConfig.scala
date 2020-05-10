@@ -50,30 +50,137 @@ trait ElasticsearchClusterConfig extends js.Object {
 
 object ElasticsearchClusterConfig {
   @scala.inline
-  def apply(
-    DedicatedMasterCount: Int | scala.Double = null,
-    DedicatedMasterEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    DedicatedMasterType: ESPartitionInstanceType = null,
-    InstanceCount: Int | scala.Double = null,
-    InstanceType: ESPartitionInstanceType = null,
-    WarmCount: Int | scala.Double = null,
-    WarmEnabled: js.UndefOr[scala.Boolean] = js.undefined,
-    WarmType: ESWarmPartitionInstanceType = null,
-    ZoneAwarenessConfig: ZoneAwarenessConfig = null,
-    ZoneAwarenessEnabled: js.UndefOr[scala.Boolean] = js.undefined
-  ): ElasticsearchClusterConfig = {
+  def apply(): ElasticsearchClusterConfig = {
     val __obj = js.Dynamic.literal()
-    if (DedicatedMasterCount != null) __obj.updateDynamic("DedicatedMasterCount")(DedicatedMasterCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(DedicatedMasterEnabled)) __obj.updateDynamic("DedicatedMasterEnabled")(DedicatedMasterEnabled.asInstanceOf[js.Any])
-    if (DedicatedMasterType != null) __obj.updateDynamic("DedicatedMasterType")(DedicatedMasterType.asInstanceOf[js.Any])
-    if (InstanceCount != null) __obj.updateDynamic("InstanceCount")(InstanceCount.asInstanceOf[js.Any])
-    if (InstanceType != null) __obj.updateDynamic("InstanceType")(InstanceType.asInstanceOf[js.Any])
-    if (WarmCount != null) __obj.updateDynamic("WarmCount")(WarmCount.asInstanceOf[js.Any])
-    if (!js.isUndefined(WarmEnabled)) __obj.updateDynamic("WarmEnabled")(WarmEnabled.asInstanceOf[js.Any])
-    if (WarmType != null) __obj.updateDynamic("WarmType")(WarmType.asInstanceOf[js.Any])
-    if (ZoneAwarenessConfig != null) __obj.updateDynamic("ZoneAwarenessConfig")(ZoneAwarenessConfig.asInstanceOf[js.Any])
-    if (!js.isUndefined(ZoneAwarenessEnabled)) __obj.updateDynamic("ZoneAwarenessEnabled")(ZoneAwarenessEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElasticsearchClusterConfig]
   }
+  @scala.inline
+  implicit class ElasticsearchClusterConfigOps[Self <: ElasticsearchClusterConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDedicatedMasterCount(value: IntegerClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedMasterCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDedicatedMasterCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedMasterCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDedicatedMasterEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedMasterEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDedicatedMasterEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedMasterEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDedicatedMasterType(value: ESPartitionInstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedMasterType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDedicatedMasterType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DedicatedMasterType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceCount(value: IntegerClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInstanceType(value: ESPartitionInstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InstanceType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarmCount(value: IntegerClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WarmCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarmCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WarmCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarmEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WarmEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarmEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WarmEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarmType(value: ESWarmPartitionInstanceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WarmType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarmType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WarmType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoneAwarenessConfig(value: ZoneAwarenessConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneAwarenessConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoneAwarenessConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneAwarenessConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoneAwarenessEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneAwarenessEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoneAwarenessEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoneAwarenessEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

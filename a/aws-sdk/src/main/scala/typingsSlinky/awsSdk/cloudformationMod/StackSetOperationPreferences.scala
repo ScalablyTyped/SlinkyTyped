@@ -30,20 +30,77 @@ trait StackSetOperationPreferences extends js.Object {
 
 object StackSetOperationPreferences {
   @scala.inline
-  def apply(
-    FailureToleranceCount: Int | Double = null,
-    FailureTolerancePercentage: Int | Double = null,
-    MaxConcurrentCount: Int | Double = null,
-    MaxConcurrentPercentage: Int | Double = null,
-    RegionOrder: RegionList = null
-  ): StackSetOperationPreferences = {
+  def apply(): StackSetOperationPreferences = {
     val __obj = js.Dynamic.literal()
-    if (FailureToleranceCount != null) __obj.updateDynamic("FailureToleranceCount")(FailureToleranceCount.asInstanceOf[js.Any])
-    if (FailureTolerancePercentage != null) __obj.updateDynamic("FailureTolerancePercentage")(FailureTolerancePercentage.asInstanceOf[js.Any])
-    if (MaxConcurrentCount != null) __obj.updateDynamic("MaxConcurrentCount")(MaxConcurrentCount.asInstanceOf[js.Any])
-    if (MaxConcurrentPercentage != null) __obj.updateDynamic("MaxConcurrentPercentage")(MaxConcurrentPercentage.asInstanceOf[js.Any])
-    if (RegionOrder != null) __obj.updateDynamic("RegionOrder")(RegionOrder.asInstanceOf[js.Any])
     __obj.asInstanceOf[StackSetOperationPreferences]
   }
+  @scala.inline
+  implicit class StackSetOperationPreferencesOps[Self <: StackSetOperationPreferences] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFailureToleranceCount(value: FailureToleranceCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureToleranceCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureToleranceCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureToleranceCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureTolerancePercentage(value: FailureTolerancePercentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureTolerancePercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureTolerancePercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureTolerancePercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConcurrentCount(value: MaxConcurrentCount): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConcurrentCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxConcurrentPercentage(value: MaxConcurrentPercentage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentPercentage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxConcurrentPercentage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxConcurrentPercentage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegionOrder(value: RegionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegionOrder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionOrder")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

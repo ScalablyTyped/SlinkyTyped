@@ -18,11 +18,41 @@ trait DescribeClientVpnTargetNetworksResult extends js.Object {
 
 object DescribeClientVpnTargetNetworksResult {
   @scala.inline
-  def apply(ClientVpnTargetNetworks: TargetNetworkSet = null, NextToken: NextToken = null): DescribeClientVpnTargetNetworksResult = {
+  def apply(): DescribeClientVpnTargetNetworksResult = {
     val __obj = js.Dynamic.literal()
-    if (ClientVpnTargetNetworks != null) __obj.updateDynamic("ClientVpnTargetNetworks")(ClientVpnTargetNetworks.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeClientVpnTargetNetworksResult]
   }
+  @scala.inline
+  implicit class DescribeClientVpnTargetNetworksResultOps[Self <: DescribeClientVpnTargetNetworksResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClientVpnTargetNetworks(value: TargetNetworkSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpnTargetNetworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutClientVpnTargetNetworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClientVpnTargetNetworks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

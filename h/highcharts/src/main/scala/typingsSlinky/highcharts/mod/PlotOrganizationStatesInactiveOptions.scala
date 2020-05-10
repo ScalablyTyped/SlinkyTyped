@@ -4,35 +4,73 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PlotOrganizationStatesInactiveOptions extends js.Object {
   /**
     * (Highcharts) The animation for entering the inactive state.
     */
-  var animation: js.UndefOr[PlotOrganizationStatesInactiveAnimationOptions] = js.undefined
+  var animation: js.UndefOr[PlotOrganizationStatesInactiveAnimationOptions] = js.native
   /**
     * (Highcharts) Opacity for the links between nodes in the sankey diagram in
     * inactive mode.
     */
-  var linkOpacity: js.UndefOr[Double] = js.undefined
+  var linkOpacity: js.UndefOr[Double] = js.native
   /**
     * (Highcharts) Opacity of series elements (dataLabels, line, area). Set to
     * 1 to disable inactive state.
     */
-  var opacity: js.UndefOr[Double] = js.undefined
+  var opacity: js.UndefOr[Double] = js.native
 }
 
 object PlotOrganizationStatesInactiveOptions {
   @scala.inline
-  def apply(
-    animation: PlotOrganizationStatesInactiveAnimationOptions = null,
-    linkOpacity: Int | Double = null,
-    opacity: Int | Double = null
-  ): PlotOrganizationStatesInactiveOptions = {
+  def apply(): PlotOrganizationStatesInactiveOptions = {
     val __obj = js.Dynamic.literal()
-    if (animation != null) __obj.updateDynamic("animation")(animation.asInstanceOf[js.Any])
-    if (linkOpacity != null) __obj.updateDynamic("linkOpacity")(linkOpacity.asInstanceOf[js.Any])
-    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlotOrganizationStatesInactiveOptions]
   }
+  @scala.inline
+  implicit class PlotOrganizationStatesInactiveOptionsOps[Self <: PlotOrganizationStatesInactiveOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimation(value: PlotOrganizationStatesInactiveAnimationOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAnimation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinkOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOpacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinkOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkOpacity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOpacity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opacity")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

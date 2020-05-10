@@ -1,10 +1,10 @@
 package typingsSlinky.ngCordova.ngCordova
 
+import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.cordovaPluginFile.DirectoryEntry
 import typingsSlinky.cordovaPluginFile.FileEntry
-import typingsSlinky.std.Blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait IFileService extends js.Object {
   def moveDir(path: String, directory: String, newPath: String, newDirectory: String): IFilePromise[DirectoryEntry] = js.native
   def moveFile(path: String, file: String, newPath: String): IFilePromise[FileEntry] = js.native
   def moveFile(path: String, file: String, newPath: String, newFile: String): IFilePromise[FileEntry] = js.native
-  def readAsArrayBuffer(path: String, file: String): IPromise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def readAsArrayBuffer(path: String, file: String): IPromise[js.typedarray.ArrayBuffer] = js.native
   def readAsBinaryString(path: String, file: String): IPromise[String] = js.native
   def readAsDataURL(path: String, file: String): IPromise[String] = js.native
   def readAsText(path: String, file: String): IPromise[String] = js.native

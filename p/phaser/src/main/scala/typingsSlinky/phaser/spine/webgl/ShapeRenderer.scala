@@ -55,8 +55,6 @@ class ShapeRenderer protected () extends Disposable {
     segments: Double,
     color: Color
   ): Unit = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def end(): Unit = js.native
   def line(x: Double, y: Double, x2: Double, y2: Double): Unit = js.native
   def line(x: Double, y: Double, x2: Double, y2: Double, color: Color): Unit = js.native

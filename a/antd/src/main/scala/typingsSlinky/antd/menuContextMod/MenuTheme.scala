@@ -12,10 +12,8 @@ trait MenuTheme extends js.Object
 
 object MenuTheme {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dark: typingsSlinky.antd.antdStrings.dark = "dark".asInstanceOf[typingsSlinky.antd.antdStrings.dark]
   @scala.inline
-  def dark: typingsSlinky.antd.antdStrings.dark = this.cast("dark")
-  @scala.inline
-  def light: typingsSlinky.antd.antdStrings.light = this.cast("light")
+  def light: typingsSlinky.antd.antdStrings.light = "light".asInstanceOf[typingsSlinky.antd.antdStrings.light]
 }
 

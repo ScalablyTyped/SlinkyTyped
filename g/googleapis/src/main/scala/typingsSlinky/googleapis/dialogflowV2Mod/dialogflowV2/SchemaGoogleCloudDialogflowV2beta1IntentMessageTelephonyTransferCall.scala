@@ -19,10 +19,29 @@ trait SchemaGoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall exten
 
 object SchemaGoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall {
   @scala.inline
-  def apply(phoneNumber: String = null): SchemaGoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall = {
+  def apply(): SchemaGoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall = {
     val __obj = js.Dynamic.literal()
-    if (phoneNumber != null) __obj.updateDynamic("phoneNumber")(phoneNumber.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallOps[Self <: SchemaGoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPhoneNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPhoneNumber: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("phoneNumber")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

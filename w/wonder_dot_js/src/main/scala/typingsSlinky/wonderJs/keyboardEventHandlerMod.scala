@@ -1,6 +1,6 @@
 package typingsSlinky.wonderJs
 
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.wonderJs.domEventHandlerMod.DomEventHandler
 import typingsSlinky.wonderJs.eventNameHandlerMod.EEventName
 import typingsSlinky.wonderJs.ieventdataMod.IKeyboardEventData
@@ -22,7 +22,7 @@ object keyboardEventHandlerMod extends js.Object {
       priority: Double
     ): js.Any = js.native
     def on(eventName: EEventName, handler: js.Function1[/* event */ KeyboardEvent, Unit], priority: Double): js.Any = js.native
-    /* protected */ def triggerDomEvent(dom: org.scalajs.dom.raw.HTMLElement, event: IKeyboardEventData, eventName: EEventName): Unit = js.native
+    /* protected */ def triggerDomEvent(dom: HTMLElement, event: IKeyboardEventData, eventName: EEventName): Unit = js.native
   }
   
   /* static members */

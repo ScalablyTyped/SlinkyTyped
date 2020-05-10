@@ -20,8 +20,27 @@ object TypedLinkFacetAttributeUpdate {
   @scala.inline
   def apply(Action: UpdateActionType, Attribute: TypedLinkAttributeDefinition): TypedLinkFacetAttributeUpdate = {
     val __obj = js.Dynamic.literal(Action = Action.asInstanceOf[js.Any], Attribute = Attribute.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[TypedLinkFacetAttributeUpdate]
   }
+  @scala.inline
+  implicit class TypedLinkFacetAttributeUpdateOps[Self <: TypedLinkFacetAttributeUpdate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: UpdateActionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttribute(value: TypedLinkAttributeDefinition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attribute")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

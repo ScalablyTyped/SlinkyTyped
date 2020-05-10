@@ -1,14 +1,16 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import typingsSlinky.officeUiFabricReact.separatorTypesMod.ISeparatorProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Separator extends SharedApply_ISeparatorProps1388565982 {
+object Separator {
   @JSImport("office-ui-fabric-react", "Separator")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ISeparatorProps): SharedBuilder_ISeparatorProps286181022 = new SharedBuilder_ISeparatorProps286181022(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Separator.type): SharedBuilder_ISeparatorProps286181022 = new SharedBuilder_ISeparatorProps286181022(js.Array(this.component, js.Dictionary.empty))()
 }
 

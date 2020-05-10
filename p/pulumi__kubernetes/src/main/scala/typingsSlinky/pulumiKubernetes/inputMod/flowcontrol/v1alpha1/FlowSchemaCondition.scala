@@ -8,40 +8,88 @@ import scala.scalajs.js.annotation._
 /**
   * FlowSchemaCondition describes conditions for a FlowSchema.
   */
+@js.native
 trait FlowSchemaCondition extends js.Object {
   /**
     * `lastTransitionTime` is the last time the condition transitioned from one status to
     * another.
     */
-  var lastTransitionTime: js.UndefOr[Input[String]] = js.undefined
+  var lastTransitionTime: js.UndefOr[Input[String]] = js.native
   /**
     * `message` is a human-readable message indicating details about last transition.
     */
-  var message: js.UndefOr[Input[String]] = js.undefined
+  var message: js.UndefOr[Input[String]] = js.native
   /**
     * `reason` is a unique, one-word, CamelCase reason for the condition's last transition.
     */
-  var reason: js.UndefOr[Input[String]] = js.undefined
+  var reason: js.UndefOr[Input[String]] = js.native
   /**
     * `type` is the type of the condition. Required.
     */
-  var `type`: js.UndefOr[Input[String]] = js.undefined
+  var `type`: js.UndefOr[Input[String]] = js.native
 }
 
 object FlowSchemaCondition {
   @scala.inline
-  def apply(
-    lastTransitionTime: Input[String] = null,
-    message: Input[String] = null,
-    reason: Input[String] = null,
-    `type`: Input[String] = null
-  ): FlowSchemaCondition = {
+  def apply(): FlowSchemaCondition = {
     val __obj = js.Dynamic.literal()
-    if (lastTransitionTime != null) __obj.updateDynamic("lastTransitionTime")(lastTransitionTime.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (reason != null) __obj.updateDynamic("reason")(reason.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowSchemaCondition]
   }
+  @scala.inline
+  implicit class FlowSchemaConditionOps[Self <: FlowSchemaCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLastTransitionTime(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastTransitionTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastTransitionTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastTransitionTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMessage(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMessage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReason(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReason: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: Input[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

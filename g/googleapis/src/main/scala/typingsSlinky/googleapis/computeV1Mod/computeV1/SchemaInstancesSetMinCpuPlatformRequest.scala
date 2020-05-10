@@ -14,10 +14,29 @@ trait SchemaInstancesSetMinCpuPlatformRequest extends js.Object {
 
 object SchemaInstancesSetMinCpuPlatformRequest {
   @scala.inline
-  def apply(minCpuPlatform: String = null): SchemaInstancesSetMinCpuPlatformRequest = {
+  def apply(): SchemaInstancesSetMinCpuPlatformRequest = {
     val __obj = js.Dynamic.literal()
-    if (minCpuPlatform != null) __obj.updateDynamic("minCpuPlatform")(minCpuPlatform.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaInstancesSetMinCpuPlatformRequest]
   }
+  @scala.inline
+  implicit class SchemaInstancesSetMinCpuPlatformRequestOps[Self <: SchemaInstancesSetMinCpuPlatformRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinCpuPlatform(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minCpuPlatform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinCpuPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minCpuPlatform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

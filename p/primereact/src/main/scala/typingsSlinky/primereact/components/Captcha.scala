@@ -1,43 +1,42 @@
 package typingsSlinky.primereact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.captchaCaptchaMod.CaptchaProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Captcha
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.captchaMod.Captcha] {
+object Captcha {
   @JSImport("primereact/captcha", "Captcha")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id, tabIndex, type */
-  def apply(
-    language: String = null,
-    onExpire: () => Unit = null,
-    onResponse: /* response */ js.Any => Unit = null,
-    siteKey: String = null,
-    size: String = null,
-    theme: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.captchaMod.Captcha] = {
-    val __obj = js.Dynamic.literal()
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (onExpire != null) __obj.updateDynamic("onExpire")(js.Any.fromFunction0(onExpire))
-    if (onResponse != null) __obj.updateDynamic("onResponse")(js.Any.fromFunction1(onResponse))
-    if (siteKey != null) __obj.updateDynamic("siteKey")(siteKey.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.primereact.captchaMod.Captcha] {
+    @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def language(value: String): this.type = set("language", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onExpire(value: () => Unit): this.type = set("onExpire", js.Any.fromFunction0(value))
+    @scala.inline
+    def onResponse(value: /* response */ js.Any => Unit): this.type = set("onResponse", js.Any.fromFunction1(value))
+    @scala.inline
+    def siteKey(value: String): this.type = set("siteKey", value.asInstanceOf[js.Any])
+    @scala.inline
+    def size(value: String): this.type = set("size", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: String): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.captchaMod.Captcha] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.captchaMod.Captcha](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = CaptchaProps
+  
+  def withProps(p: CaptchaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Captcha.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

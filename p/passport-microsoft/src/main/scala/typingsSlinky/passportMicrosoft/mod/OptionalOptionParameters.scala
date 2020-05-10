@@ -16,14 +16,12 @@ trait OptionalOptionParameters extends js.Object
 
 object OptionalOptionParameters {
   @scala.inline
-  def authorizationURL: typingsSlinky.passportMicrosoft.passportMicrosoftStrings.authorizationURL = this.cast("authorizationURL")
+  def authorizationURL: typingsSlinky.passportMicrosoft.passportMicrosoftStrings.authorizationURL = "authorizationURL".asInstanceOf[typingsSlinky.passportMicrosoft.passportMicrosoftStrings.authorizationURL]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def customHeaders: typingsSlinky.passportMicrosoft.passportMicrosoftStrings.customHeaders = "customHeaders".asInstanceOf[typingsSlinky.passportMicrosoft.passportMicrosoftStrings.customHeaders]
   @scala.inline
-  def customHeaders: typingsSlinky.passportMicrosoft.passportMicrosoftStrings.customHeaders = this.cast("customHeaders")
+  def scopeSeparator: typingsSlinky.passportMicrosoft.passportMicrosoftStrings.scopeSeparator = "scopeSeparator".asInstanceOf[typingsSlinky.passportMicrosoft.passportMicrosoftStrings.scopeSeparator]
   @scala.inline
-  def scopeSeparator: typingsSlinky.passportMicrosoft.passportMicrosoftStrings.scopeSeparator = this.cast("scopeSeparator")
-  @scala.inline
-  def tokenURL: typingsSlinky.passportMicrosoft.passportMicrosoftStrings.tokenURL = this.cast("tokenURL")
+  def tokenURL: typingsSlinky.passportMicrosoft.passportMicrosoftStrings.tokenURL = "tokenURL".asInstanceOf[typingsSlinky.passportMicrosoft.passportMicrosoftStrings.tokenURL]
 }
 

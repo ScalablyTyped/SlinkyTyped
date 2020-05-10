@@ -32,7 +32,7 @@ trait Csv extends js.Object {
   /**
   	 * write to a buffer
   	 */
-  def writeBuffer(): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
+  def writeBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
   /**
   	 * write to a file
   	 */

@@ -18,11 +18,41 @@ trait SourceRegionMessage extends js.Object {
 
 object SourceRegionMessage {
   @scala.inline
-  def apply(Marker: String = null, SourceRegions: SourceRegionList = null): SourceRegionMessage = {
+  def apply(): SourceRegionMessage = {
     val __obj = js.Dynamic.literal()
-    if (Marker != null) __obj.updateDynamic("Marker")(Marker.asInstanceOf[js.Any])
-    if (SourceRegions != null) __obj.updateDynamic("SourceRegions")(SourceRegions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceRegionMessage]
   }
+  @scala.inline
+  implicit class SourceRegionMessageOps[Self <: SourceRegionMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMarker(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMarker: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Marker")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceRegions(value: SourceRegionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceRegions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceRegions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceRegions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

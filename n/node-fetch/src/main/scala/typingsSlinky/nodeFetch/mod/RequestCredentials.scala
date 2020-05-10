@@ -13,12 +13,10 @@ trait RequestCredentials extends js.Object
 
 object RequestCredentials {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def include: typingsSlinky.nodeFetch.nodeFetchStrings.include = "include".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.include]
   @scala.inline
-  def include: typingsSlinky.nodeFetch.nodeFetchStrings.include = this.cast("include")
+  def omit: typingsSlinky.nodeFetch.nodeFetchStrings.omit = "omit".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.omit]
   @scala.inline
-  def omit: typingsSlinky.nodeFetch.nodeFetchStrings.omit = this.cast("omit")
-  @scala.inline
-  def `same-origin`: typingsSlinky.nodeFetch.nodeFetchStrings.`same-origin` = this.cast("same-origin")
+  def `same-origin`: typingsSlinky.nodeFetch.nodeFetchStrings.`same-origin` = "same-origin".asInstanceOf[typingsSlinky.nodeFetch.nodeFetchStrings.`same-origin`]
 }
 

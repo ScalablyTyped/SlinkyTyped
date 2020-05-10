@@ -1,30 +1,44 @@
 package typingsSlinky.antdMobile.cardBodyMod
 
+import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CardBodyProps
   extends AllHTMLAttributes[HTMLDivElement]
      with ClassAttributes[HTMLDivElement] {
-  var prefixCls: js.UndefOr[String] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.native
 }
 
 object CardBodyProps {
   @scala.inline
-  def apply(
-    AllHTMLAttributes: AllHTMLAttributes[org.scalajs.dom.raw.HTMLDivElement] = null,
-    ClassAttributes: ClassAttributes[org.scalajs.dom.raw.HTMLDivElement] = null,
-    prefixCls: String = null
-  ): CardBodyProps = {
+  def apply(): CardBodyProps = {
     val __obj = js.Dynamic.literal()
-    if (AllHTMLAttributes != null) js.Dynamic.global.Object.assign(__obj, AllHTMLAttributes)
-    if (ClassAttributes != null) js.Dynamic.global.Object.assign(__obj, ClassAttributes)
-    if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[CardBodyProps]
   }
+  @scala.inline
+  implicit class CardBodyPropsOps[Self <: CardBodyProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPrefixCls(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixCls: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixCls")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

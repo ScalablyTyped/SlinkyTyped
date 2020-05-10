@@ -17,10 +17,29 @@ trait SchemaAnnotationSource extends js.Object {
 
 object SchemaAnnotationSource {
   @scala.inline
-  def apply(cloudHealthcareSource: SchemaCloudHealthcareSource = null): SchemaAnnotationSource = {
+  def apply(): SchemaAnnotationSource = {
     val __obj = js.Dynamic.literal()
-    if (cloudHealthcareSource != null) __obj.updateDynamic("cloudHealthcareSource")(cloudHealthcareSource.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAnnotationSource]
   }
+  @scala.inline
+  implicit class SchemaAnnotationSourceOps[Self <: SchemaAnnotationSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloudHealthcareSource(value: SchemaCloudHealthcareSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudHealthcareSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloudHealthcareSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloudHealthcareSource")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -21,14 +21,12 @@ trait ExtensionInstallType extends js.Object
 
 object ExtensionInstallType {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def development: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.development = "development".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.development]
   @scala.inline
-  def development: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.development = this.cast("development")
+  def normal: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal = "normal".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal]
   @scala.inline
-  def normal: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal = this.cast("normal")
+  def other: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.other = "other".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.other]
   @scala.inline
-  def other: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.other = this.cast("other")
-  @scala.inline
-  def sideload: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sideload = this.cast("sideload")
+  def sideload: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sideload = "sideload".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sideload]
 }
 

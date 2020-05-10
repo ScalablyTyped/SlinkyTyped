@@ -30,16 +30,53 @@ trait SchemaPullBatchRequest extends js.Object {
 
 object SchemaPullBatchRequest {
   @scala.inline
-  def apply(
-    maxEvents: Int | Double = null,
-    returnImmediately: js.UndefOr[Boolean] = js.undefined,
-    subscription: String = null
-  ): SchemaPullBatchRequest = {
+  def apply(): SchemaPullBatchRequest = {
     val __obj = js.Dynamic.literal()
-    if (maxEvents != null) __obj.updateDynamic("maxEvents")(maxEvents.asInstanceOf[js.Any])
-    if (!js.isUndefined(returnImmediately)) __obj.updateDynamic("returnImmediately")(returnImmediately.asInstanceOf[js.Any])
-    if (subscription != null) __obj.updateDynamic("subscription")(subscription.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPullBatchRequest]
   }
+  @scala.inline
+  implicit class SchemaPullBatchRequestOps[Self <: SchemaPullBatchRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxEvents(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxEvents: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxEvents")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReturnImmediately(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnImmediately")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReturnImmediately: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("returnImmediately")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSubscription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSubscription: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscription")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

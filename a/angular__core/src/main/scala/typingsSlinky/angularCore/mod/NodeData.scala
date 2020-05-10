@@ -15,16 +15,30 @@ import scala.scalajs.js.annotation._
   * This way, no usage site can get a `NodeData` from view.nodes and then use it for different
   * purposes.
   */
+@js.native
 trait NodeData extends js.Object {
-  var __brand: js.Any
+  var __brand: js.Any = js.native
 }
 
 object NodeData {
   @scala.inline
   def apply(__brand: js.Any): NodeData = {
     val __obj = js.Dynamic.literal(__brand = __brand.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[NodeData]
   }
+  @scala.inline
+  implicit class NodeDataOps[Self <: NodeData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with__brand(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("__brand")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

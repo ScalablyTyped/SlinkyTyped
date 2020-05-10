@@ -4,48 +4,166 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PagerMessages extends js.Object {
-  var allPages: js.UndefOr[String] = js.undefined
-  var display: js.UndefOr[String] = js.undefined
-  var empty: js.UndefOr[String] = js.undefined
-  var first: js.UndefOr[String] = js.undefined
-  var itemsPerPage: js.UndefOr[String] = js.undefined
-  var last: js.UndefOr[String] = js.undefined
-  var next: js.UndefOr[String] = js.undefined
-  var of: js.UndefOr[String] = js.undefined
-  var page: js.UndefOr[String] = js.undefined
-  var previous: js.UndefOr[String] = js.undefined
-  var refresh: js.UndefOr[String] = js.undefined
+  var allPages: js.UndefOr[String] = js.native
+  var display: js.UndefOr[String] = js.native
+  var empty: js.UndefOr[String] = js.native
+  var first: js.UndefOr[String] = js.native
+  var itemsPerPage: js.UndefOr[String] = js.native
+  var last: js.UndefOr[String] = js.native
+  var next: js.UndefOr[String] = js.native
+  var of: js.UndefOr[String] = js.native
+  var page: js.UndefOr[String] = js.native
+  var previous: js.UndefOr[String] = js.native
+  var refresh: js.UndefOr[String] = js.native
 }
 
 object PagerMessages {
   @scala.inline
-  def apply(
-    allPages: String = null,
-    display: String = null,
-    empty: String = null,
-    first: String = null,
-    itemsPerPage: String = null,
-    last: String = null,
-    next: String = null,
-    of: String = null,
-    page: String = null,
-    previous: String = null,
-    refresh: String = null
-  ): PagerMessages = {
+  def apply(): PagerMessages = {
     val __obj = js.Dynamic.literal()
-    if (allPages != null) __obj.updateDynamic("allPages")(allPages.asInstanceOf[js.Any])
-    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
-    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
-    if (first != null) __obj.updateDynamic("first")(first.asInstanceOf[js.Any])
-    if (itemsPerPage != null) __obj.updateDynamic("itemsPerPage")(itemsPerPage.asInstanceOf[js.Any])
-    if (last != null) __obj.updateDynamic("last")(last.asInstanceOf[js.Any])
-    if (next != null) __obj.updateDynamic("next")(next.asInstanceOf[js.Any])
-    if (of != null) __obj.updateDynamic("of")(of.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (previous != null) __obj.updateDynamic("previous")(previous.asInstanceOf[js.Any])
-    if (refresh != null) __obj.updateDynamic("refresh")(refresh.asInstanceOf[js.Any])
     __obj.asInstanceOf[PagerMessages]
   }
+  @scala.inline
+  implicit class PagerMessagesOps[Self <: PagerMessages] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllPages(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allPages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllPages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allPages")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplay(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("display")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmpty(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmpty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirst(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirst: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemsPerPage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsPerPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemsPerPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemsPerPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLast(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLast: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("last")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOf(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("of")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOf: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("of")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrevious(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrevious: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previous")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefresh(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefresh: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

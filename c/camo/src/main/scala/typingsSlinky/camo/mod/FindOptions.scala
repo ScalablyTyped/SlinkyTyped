@@ -4,48 +4,96 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait FindOptions extends js.Object {
   /**
   		 * Limits the number of documents returned.
   		 *
   		 * @type {number}
   		 */
-  var limit: js.UndefOr[Double] = js.undefined
+  var limit: js.UndefOr[Double] = js.native
   /**
   		 * Find all or no references.
   		 * Pass an array of field names to only populate the specified references.
   		 *
   		 * @type {(boolean | string[])}
   		 */
-  var populate: js.UndefOr[Boolean | js.Array[String]] = js.undefined
+  var populate: js.UndefOr[Boolean | js.Array[String]] = js.native
   /**
   		 * Skips the given number of documents and returns the rest.
   		 *
   		 * @type {number}
   		 */
-  var skip: js.UndefOr[Double] = js.undefined
+  var skip: js.UndefOr[Double] = js.native
   /**
   		 * Sort the documents by the given field(s).
   		 *
   		 * @type {TypeOrArrayOfType<string>}
   		 */
-  var sort: js.UndefOr[TypeOrArrayOfType[String]] = js.undefined
+  var sort: js.UndefOr[TypeOrArrayOfType[String]] = js.native
 }
 
 object FindOptions {
   @scala.inline
-  def apply(
-    limit: Int | Double = null,
-    populate: Boolean | js.Array[String] = null,
-    skip: Int | Double = null,
-    sort: TypeOrArrayOfType[String] = null
-  ): FindOptions = {
+  def apply(): FindOptions = {
     val __obj = js.Dynamic.literal()
-    if (limit != null) __obj.updateDynamic("limit")(limit.asInstanceOf[js.Any])
-    if (populate != null) __obj.updateDynamic("populate")(populate.asInstanceOf[js.Any])
-    if (skip != null) __obj.updateDynamic("skip")(skip.asInstanceOf[js.Any])
-    if (sort != null) __obj.updateDynamic("sort")(sort.asInstanceOf[js.Any])
     __obj.asInstanceOf[FindOptions]
   }
+  @scala.inline
+  implicit class FindOptionsOps[Self <: FindOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLimit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("limit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPopulate(value: Boolean | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("populate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPopulate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("populate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkip(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSort(value: TypeOrArrayOfType[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -44,24 +44,101 @@ trait SchemaDeviceInfo extends js.Object {
 
 object SchemaDeviceInfo {
   @scala.inline
-  def apply(
-    deviceModelName: String = null,
-    languageCode: String = null,
-    languageCodeFromWebview: String = null,
-    languageCodeRaw: String = null,
-    screenResolutionHeight: String = null,
-    screenResolutionWidth: String = null,
-    timezone: String = null
-  ): SchemaDeviceInfo = {
+  def apply(): SchemaDeviceInfo = {
     val __obj = js.Dynamic.literal()
-    if (deviceModelName != null) __obj.updateDynamic("deviceModelName")(deviceModelName.asInstanceOf[js.Any])
-    if (languageCode != null) __obj.updateDynamic("languageCode")(languageCode.asInstanceOf[js.Any])
-    if (languageCodeFromWebview != null) __obj.updateDynamic("languageCodeFromWebview")(languageCodeFromWebview.asInstanceOf[js.Any])
-    if (languageCodeRaw != null) __obj.updateDynamic("languageCodeRaw")(languageCodeRaw.asInstanceOf[js.Any])
-    if (screenResolutionHeight != null) __obj.updateDynamic("screenResolutionHeight")(screenResolutionHeight.asInstanceOf[js.Any])
-    if (screenResolutionWidth != null) __obj.updateDynamic("screenResolutionWidth")(screenResolutionWidth.asInstanceOf[js.Any])
-    if (timezone != null) __obj.updateDynamic("timezone")(timezone.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaDeviceInfo]
   }
+  @scala.inline
+  implicit class SchemaDeviceInfoOps[Self <: SchemaDeviceInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceModelName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceModelName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeviceModelName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceModelName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCodeFromWebview(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCodeFromWebview")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCodeFromWebview: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCodeFromWebview")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguageCodeRaw(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCodeRaw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguageCodeRaw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageCodeRaw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenResolutionHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenResolutionHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenResolutionHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenResolutionHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScreenResolutionWidth(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenResolutionWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScreenResolutionWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenResolutionWidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimezone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimezone: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timezone")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

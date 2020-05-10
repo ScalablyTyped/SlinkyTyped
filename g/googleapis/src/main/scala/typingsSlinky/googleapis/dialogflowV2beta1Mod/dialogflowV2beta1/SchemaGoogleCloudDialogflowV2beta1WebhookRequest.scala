@@ -40,20 +40,77 @@ trait SchemaGoogleCloudDialogflowV2beta1WebhookRequest extends js.Object {
 
 object SchemaGoogleCloudDialogflowV2beta1WebhookRequest {
   @scala.inline
-  def apply(
-    alternativeQueryResults: js.Array[SchemaGoogleCloudDialogflowV2beta1QueryResult] = null,
-    originalDetectIntentRequest: SchemaGoogleCloudDialogflowV2beta1OriginalDetectIntentRequest = null,
-    queryResult: SchemaGoogleCloudDialogflowV2beta1QueryResult = null,
-    responseId: String = null,
-    session: String = null
-  ): SchemaGoogleCloudDialogflowV2beta1WebhookRequest = {
+  def apply(): SchemaGoogleCloudDialogflowV2beta1WebhookRequest = {
     val __obj = js.Dynamic.literal()
-    if (alternativeQueryResults != null) __obj.updateDynamic("alternativeQueryResults")(alternativeQueryResults.asInstanceOf[js.Any])
-    if (originalDetectIntentRequest != null) __obj.updateDynamic("originalDetectIntentRequest")(originalDetectIntentRequest.asInstanceOf[js.Any])
-    if (queryResult != null) __obj.updateDynamic("queryResult")(queryResult.asInstanceOf[js.Any])
-    if (responseId != null) __obj.updateDynamic("responseId")(responseId.asInstanceOf[js.Any])
-    if (session != null) __obj.updateDynamic("session")(session.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGoogleCloudDialogflowV2beta1WebhookRequest]
   }
+  @scala.inline
+  implicit class SchemaGoogleCloudDialogflowV2beta1WebhookRequestOps[Self <: SchemaGoogleCloudDialogflowV2beta1WebhookRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlternativeQueryResults(value: js.Array[SchemaGoogleCloudDialogflowV2beta1QueryResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternativeQueryResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlternativeQueryResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternativeQueryResults")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOriginalDetectIntentRequest(value: SchemaGoogleCloudDialogflowV2beta1OriginalDetectIntentRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalDetectIntentRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOriginalDetectIntentRequest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalDetectIntentRequest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueryResult(value: SchemaGoogleCloudDialogflowV2beta1QueryResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryResult")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueryResult: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryResult")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSession(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSession: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("session")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

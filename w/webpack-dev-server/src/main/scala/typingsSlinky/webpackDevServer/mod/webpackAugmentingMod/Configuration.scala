@@ -4,20 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Configuration extends js.Object {
   /**
     * Can be used to configure the behaviour of webpack-dev-server when
     * the webpack config is passed to webpack-dev-server CLI.
     */
-  var devServer: js.UndefOr[Configuration] = js.undefined
+  var devServer: js.UndefOr[Configuration] = js.native
 }
 
 object Configuration {
   @scala.inline
-  def apply(devServer: Configuration = null): Configuration = {
+  def apply(): Configuration = {
     val __obj = js.Dynamic.literal()
-    if (devServer != null) __obj.updateDynamic("devServer")(devServer.asInstanceOf[js.Any])
     __obj.asInstanceOf[Configuration]
   }
+  @scala.inline
+  implicit class ConfigurationOps[Self <: Configuration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevServer(value: Configuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devServer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDevServer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("devServer")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

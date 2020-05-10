@@ -3,6 +3,8 @@ package typingsSlinky.plotlyJs
 import typingsSlinky.plotlyJs.mod.AxisType
 import typingsSlinky.plotlyJs.mod.Calendar
 import typingsSlinky.plotlyJs.mod.Color
+import typingsSlinky.plotlyJs.mod.DataTitle
+import typingsSlinky.plotlyJs.mod.Font
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`true`
 import typingsSlinky.plotlyJs.plotlyJsStrings.B
@@ -11,6 +13,18 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.SI
 import typingsSlinky.plotlyJs.plotlyJsStrings._empty
 import typingsSlinky.plotlyJs.plotlyJsStrings.`category ascending`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`category descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`max ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`max descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`mean ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`mean descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`median ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`median descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`min ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`min descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`sum ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`sum descending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`total ascending`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`total descending`
 import typingsSlinky.plotlyJs.plotlyJsStrings.all
 import typingsSlinky.plotlyJs.plotlyJsStrings.allticks
 import typingsSlinky.plotlyJs.plotlyJsStrings.array
@@ -29,170 +43,683 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.reversed
 import typingsSlinky.plotlyJs.plotlyJsStrings.ticks
 import typingsSlinky.plotlyJs.plotlyJsStrings.tozero
 import typingsSlinky.plotlyJs.plotlyJsStrings.trace
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<plotly.js.plotly.js.SceneAxis> */
+@js.native
 trait PartialSceneAxisAutorange extends js.Object {
-  var autorange: js.UndefOr[`true` | `false` | reversed] = js.undefined
-  var backgroundcolor: js.UndefOr[Color] = js.undefined
-  var calendar: js.UndefOr[Calendar] = js.undefined
-  var categoryarray: js.UndefOr[js.Array[_]] = js.undefined
-  var categoryorder: js.UndefOr[trace | (`category ascending`) | (`category descending`) | array] = js.undefined
-  var color: js.UndefOr[Color] = js.undefined
-  var dtick: js.UndefOr[Double | String] = js.undefined
-  var exponentformat: js.UndefOr[none | e_ | E | power | SI | B] = js.undefined
-  var gridcolor: js.UndefOr[Color] = js.undefined
-  var gridwidth: js.UndefOr[Double] = js.undefined
-  var hoverformat: js.UndefOr[String] = js.undefined
-  var linecolor: js.UndefOr[Color] = js.undefined
-  var linewidth: js.UndefOr[Double] = js.undefined
-  var mirror: js.UndefOr[`true` | ticks | `false` | all | allticks] = js.undefined
-  var nticks: js.UndefOr[Double] = js.undefined
-  var range: js.UndefOr[js.Array[_]] = js.undefined
-  var rangemode: js.UndefOr[normal | tozero | nonnegative] = js.undefined
-  var separatethousands: js.UndefOr[Boolean] = js.undefined
-  var showaxeslabels: js.UndefOr[Boolean] = js.undefined
-  var showbackground: js.UndefOr[Boolean] = js.undefined
-  var showexponent: js.UndefOr[all | first | last | none] = js.undefined
-  var showgrid: js.UndefOr[Boolean] = js.undefined
-  var showline: js.UndefOr[Boolean] = js.undefined
-  var showspikes: js.UndefOr[Boolean] = js.undefined
-  var showticklabels: js.UndefOr[Boolean] = js.undefined
-  var showtickprefix: js.UndefOr[all | first | last | none] = js.undefined
-  var showticksuffix: js.UndefOr[all | first | last | none] = js.undefined
-  var spikecolor: js.UndefOr[Color] = js.undefined
-  var spikesides: js.UndefOr[Boolean] = js.undefined
-  var spikethickness: js.UndefOr[Double] = js.undefined
-  var tick0: js.UndefOr[Double | String] = js.undefined
-  var tickangle: js.UndefOr[Double] = js.undefined
-  var tickcolor: js.UndefOr[Color] = js.undefined
-  var tickfont: js.UndefOr[PartialFont] = js.undefined
-  var tickformat: js.UndefOr[String] = js.undefined
-  var ticklen: js.UndefOr[Double] = js.undefined
-  var tickmode: js.UndefOr[auto | linear | array] = js.undefined
-  var tickprefix: js.UndefOr[String] = js.undefined
-  var ticks: js.UndefOr[outside | inside | _empty] = js.undefined
-  var ticksuffix: js.UndefOr[String] = js.undefined
-  var ticktext: js.UndefOr[js.Array[String]] = js.undefined
-  var tickvals: js.UndefOr[js.Array[_]] = js.undefined
-  var tickwidth: js.UndefOr[Double] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
-  var titlefont: js.UndefOr[PartialFont] = js.undefined
-  var `type`: js.UndefOr[AxisType] = js.undefined
-  var visible: js.UndefOr[Boolean] = js.undefined
-  var zeroline: js.UndefOr[Boolean] = js.undefined
-  var zerolinecolor: js.UndefOr[Color] = js.undefined
-  var zerolinewidth: js.UndefOr[Double] = js.undefined
+  var autorange: js.UndefOr[`true` | `false` | reversed] = js.native
+  var backgroundcolor: js.UndefOr[Color] = js.native
+  var calendar: js.UndefOr[Calendar] = js.native
+  var categoryarray: js.UndefOr[js.Array[_]] = js.native
+  var categoryorder: js.UndefOr[
+    trace | (`category ascending`) | (`category descending`) | array | (`total ascending`) | (`total descending`) | (`min ascending`) | (`min descending`) | (`max ascending`) | (`max descending`) | (`sum ascending`) | (`sum descending`) | (`mean ascending`) | (`mean descending`) | (`median ascending`) | (`median descending`)
+  ] = js.native
+  var color: js.UndefOr[Color] = js.native
+  var dtick: js.UndefOr[Double | String] = js.native
+  var exponentformat: js.UndefOr[none | e_ | E | power | SI | B] = js.native
+  var gridcolor: js.UndefOr[Color] = js.native
+  var gridwidth: js.UndefOr[Double] = js.native
+  var hoverformat: js.UndefOr[String] = js.native
+  var linecolor: js.UndefOr[Color] = js.native
+  var linewidth: js.UndefOr[Double] = js.native
+  var mirror: js.UndefOr[`true` | ticks | `false` | all | allticks] = js.native
+  var nticks: js.UndefOr[Double] = js.native
+  var range: js.UndefOr[js.Array[_]] = js.native
+  var rangemode: js.UndefOr[normal | tozero | nonnegative] = js.native
+  var separatethousands: js.UndefOr[Boolean] = js.native
+  var showaxeslabels: js.UndefOr[Boolean] = js.native
+  var showbackground: js.UndefOr[Boolean] = js.native
+  var showexponent: js.UndefOr[all | first | last | none] = js.native
+  var showgrid: js.UndefOr[Boolean] = js.native
+  var showline: js.UndefOr[Boolean] = js.native
+  var showspikes: js.UndefOr[Boolean] = js.native
+  var showticklabels: js.UndefOr[Boolean] = js.native
+  var showtickprefix: js.UndefOr[all | first | last | none] = js.native
+  var showticksuffix: js.UndefOr[all | first | last | none] = js.native
+  var spikecolor: js.UndefOr[Color] = js.native
+  var spikesides: js.UndefOr[Boolean] = js.native
+  var spikethickness: js.UndefOr[Double] = js.native
+  var tick0: js.UndefOr[Double | String] = js.native
+  var tickangle: js.UndefOr[Double] = js.native
+  var tickcolor: js.UndefOr[Color] = js.native
+  var tickfont: js.UndefOr[Partial[Font]] = js.native
+  var tickformat: js.UndefOr[String] = js.native
+  var ticklen: js.UndefOr[Double] = js.native
+  var tickmode: js.UndefOr[auto | linear | array] = js.native
+  var tickprefix: js.UndefOr[String] = js.native
+  var ticks: js.UndefOr[outside | inside | _empty] = js.native
+  var ticksuffix: js.UndefOr[String] = js.native
+  var ticktext: js.UndefOr[js.Array[String]] = js.native
+  var tickvals: js.UndefOr[js.Array[_]] = js.native
+  var tickwidth: js.UndefOr[Double] = js.native
+  var title: js.UndefOr[String | Partial[DataTitle]] = js.native
+  var titlefont: js.UndefOr[Partial[Font]] = js.native
+  var `type`: js.UndefOr[AxisType] = js.native
+  var visible: js.UndefOr[Boolean] = js.native
+  var zeroline: js.UndefOr[Boolean] = js.native
+  var zerolinecolor: js.UndefOr[Color] = js.native
+  var zerolinewidth: js.UndefOr[Double] = js.native
 }
 
 object PartialSceneAxisAutorange {
   @scala.inline
-  def apply(
-    autorange: `true` | `false` | reversed = null,
-    backgroundcolor: Color = null,
-    calendar: Calendar = null,
-    categoryarray: js.Array[_] = null,
-    categoryorder: trace | (`category ascending`) | (`category descending`) | array = null,
-    color: Color = null,
-    dtick: Double | String = null,
-    exponentformat: none | e_ | E | power | SI | B = null,
-    gridcolor: Color = null,
-    gridwidth: Int | Double = null,
-    hoverformat: String = null,
-    linecolor: Color = null,
-    linewidth: Int | Double = null,
-    mirror: `true` | ticks | `false` | all | allticks = null,
-    nticks: Int | Double = null,
-    range: js.Array[_] = null,
-    rangemode: normal | tozero | nonnegative = null,
-    separatethousands: js.UndefOr[Boolean] = js.undefined,
-    showaxeslabels: js.UndefOr[Boolean] = js.undefined,
-    showbackground: js.UndefOr[Boolean] = js.undefined,
-    showexponent: all | first | last | none = null,
-    showgrid: js.UndefOr[Boolean] = js.undefined,
-    showline: js.UndefOr[Boolean] = js.undefined,
-    showspikes: js.UndefOr[Boolean] = js.undefined,
-    showticklabels: js.UndefOr[Boolean] = js.undefined,
-    showtickprefix: all | first | last | none = null,
-    showticksuffix: all | first | last | none = null,
-    spikecolor: Color = null,
-    spikesides: js.UndefOr[Boolean] = js.undefined,
-    spikethickness: Int | Double = null,
-    tick0: Double | String = null,
-    tickangle: Int | Double = null,
-    tickcolor: Color = null,
-    tickfont: PartialFont = null,
-    tickformat: String = null,
-    ticklen: Int | Double = null,
-    tickmode: auto | linear | array = null,
-    tickprefix: String = null,
-    ticks: outside | inside | _empty = null,
-    ticksuffix: String = null,
-    ticktext: js.Array[String] = null,
-    tickvals: js.Array[_] = null,
-    tickwidth: Int | Double = null,
-    title: String = null,
-    titlefont: PartialFont = null,
-    `type`: AxisType = null,
-    visible: js.UndefOr[Boolean] = js.undefined,
-    zeroline: js.UndefOr[Boolean] = js.undefined,
-    zerolinecolor: Color = null,
-    zerolinewidth: Int | Double = null
-  ): PartialSceneAxisAutorange = {
+  def apply(): PartialSceneAxisAutorange = {
     val __obj = js.Dynamic.literal()
-    if (autorange != null) __obj.updateDynamic("autorange")(autorange.asInstanceOf[js.Any])
-    if (backgroundcolor != null) __obj.updateDynamic("backgroundcolor")(backgroundcolor.asInstanceOf[js.Any])
-    if (calendar != null) __obj.updateDynamic("calendar")(calendar.asInstanceOf[js.Any])
-    if (categoryarray != null) __obj.updateDynamic("categoryarray")(categoryarray.asInstanceOf[js.Any])
-    if (categoryorder != null) __obj.updateDynamic("categoryorder")(categoryorder.asInstanceOf[js.Any])
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (dtick != null) __obj.updateDynamic("dtick")(dtick.asInstanceOf[js.Any])
-    if (exponentformat != null) __obj.updateDynamic("exponentformat")(exponentformat.asInstanceOf[js.Any])
-    if (gridcolor != null) __obj.updateDynamic("gridcolor")(gridcolor.asInstanceOf[js.Any])
-    if (gridwidth != null) __obj.updateDynamic("gridwidth")(gridwidth.asInstanceOf[js.Any])
-    if (hoverformat != null) __obj.updateDynamic("hoverformat")(hoverformat.asInstanceOf[js.Any])
-    if (linecolor != null) __obj.updateDynamic("linecolor")(linecolor.asInstanceOf[js.Any])
-    if (linewidth != null) __obj.updateDynamic("linewidth")(linewidth.asInstanceOf[js.Any])
-    if (mirror != null) __obj.updateDynamic("mirror")(mirror.asInstanceOf[js.Any])
-    if (nticks != null) __obj.updateDynamic("nticks")(nticks.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (rangemode != null) __obj.updateDynamic("rangemode")(rangemode.asInstanceOf[js.Any])
-    if (!js.isUndefined(separatethousands)) __obj.updateDynamic("separatethousands")(separatethousands.asInstanceOf[js.Any])
-    if (!js.isUndefined(showaxeslabels)) __obj.updateDynamic("showaxeslabels")(showaxeslabels.asInstanceOf[js.Any])
-    if (!js.isUndefined(showbackground)) __obj.updateDynamic("showbackground")(showbackground.asInstanceOf[js.Any])
-    if (showexponent != null) __obj.updateDynamic("showexponent")(showexponent.asInstanceOf[js.Any])
-    if (!js.isUndefined(showgrid)) __obj.updateDynamic("showgrid")(showgrid.asInstanceOf[js.Any])
-    if (!js.isUndefined(showline)) __obj.updateDynamic("showline")(showline.asInstanceOf[js.Any])
-    if (!js.isUndefined(showspikes)) __obj.updateDynamic("showspikes")(showspikes.asInstanceOf[js.Any])
-    if (!js.isUndefined(showticklabels)) __obj.updateDynamic("showticklabels")(showticklabels.asInstanceOf[js.Any])
-    if (showtickprefix != null) __obj.updateDynamic("showtickprefix")(showtickprefix.asInstanceOf[js.Any])
-    if (showticksuffix != null) __obj.updateDynamic("showticksuffix")(showticksuffix.asInstanceOf[js.Any])
-    if (spikecolor != null) __obj.updateDynamic("spikecolor")(spikecolor.asInstanceOf[js.Any])
-    if (!js.isUndefined(spikesides)) __obj.updateDynamic("spikesides")(spikesides.asInstanceOf[js.Any])
-    if (spikethickness != null) __obj.updateDynamic("spikethickness")(spikethickness.asInstanceOf[js.Any])
-    if (tick0 != null) __obj.updateDynamic("tick0")(tick0.asInstanceOf[js.Any])
-    if (tickangle != null) __obj.updateDynamic("tickangle")(tickangle.asInstanceOf[js.Any])
-    if (tickcolor != null) __obj.updateDynamic("tickcolor")(tickcolor.asInstanceOf[js.Any])
-    if (tickfont != null) __obj.updateDynamic("tickfont")(tickfont.asInstanceOf[js.Any])
-    if (tickformat != null) __obj.updateDynamic("tickformat")(tickformat.asInstanceOf[js.Any])
-    if (ticklen != null) __obj.updateDynamic("ticklen")(ticklen.asInstanceOf[js.Any])
-    if (tickmode != null) __obj.updateDynamic("tickmode")(tickmode.asInstanceOf[js.Any])
-    if (tickprefix != null) __obj.updateDynamic("tickprefix")(tickprefix.asInstanceOf[js.Any])
-    if (ticks != null) __obj.updateDynamic("ticks")(ticks.asInstanceOf[js.Any])
-    if (ticksuffix != null) __obj.updateDynamic("ticksuffix")(ticksuffix.asInstanceOf[js.Any])
-    if (ticktext != null) __obj.updateDynamic("ticktext")(ticktext.asInstanceOf[js.Any])
-    if (tickvals != null) __obj.updateDynamic("tickvals")(tickvals.asInstanceOf[js.Any])
-    if (tickwidth != null) __obj.updateDynamic("tickwidth")(tickwidth.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titlefont != null) __obj.updateDynamic("titlefont")(titlefont.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (!js.isUndefined(zeroline)) __obj.updateDynamic("zeroline")(zeroline.asInstanceOf[js.Any])
-    if (zerolinecolor != null) __obj.updateDynamic("zerolinecolor")(zerolinecolor.asInstanceOf[js.Any])
-    if (zerolinewidth != null) __obj.updateDynamic("zerolinewidth")(zerolinewidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialSceneAxisAutorange]
   }
+  @scala.inline
+  implicit class PartialSceneAxisAutorangeOps[Self <: PartialSceneAxisAutorange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutorange(value: `true` | `false` | reversed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autorange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutorange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autorange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBackgroundcolor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundcolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundcolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundcolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCalendar(value: Calendar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCalendar: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategoryarray(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryarray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategoryarray: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryarray")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategoryorder(
+      value: trace | (`category ascending`) | (`category descending`) | array | (`total ascending`) | (`total descending`) | (`min ascending`) | (`min descending`) | (`max ascending`) | (`max descending`) | (`sum ascending`) | (`sum descending`) | (`mean ascending`) | (`mean descending`) | (`median ascending`) | (`median descending`)
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryorder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategoryorder: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryorder")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDtick(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDtick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dtick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExponentformat(value: none | e_ | E | power | SI | B): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exponentformat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExponentformat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exponentformat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridcolor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridcolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridcolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridcolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGridwidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridwidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGridwidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gridwidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHoverformat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverformat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHoverformat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hoverformat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinecolor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linecolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinecolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linecolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLinewidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linewidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLinewidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linewidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMirror(value: `true` | ticks | `false` | all | allticks): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mirror")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMirror: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mirror")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNticks(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nticks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNticks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nticks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRangemode(value: normal | tozero | nonnegative): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangemode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRangemode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rangemode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeparatethousands(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separatethousands")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeparatethousands: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("separatethousands")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowaxeslabels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showaxeslabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowaxeslabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showaxeslabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowbackground(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showbackground")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowbackground: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showbackground")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowexponent(value: all | first | last | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showexponent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowexponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showexponent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowgrid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showgrid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowgrid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showgrid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowspikes(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showspikes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowspikes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showspikes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowticklabels(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showticklabels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowticklabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showticklabels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowtickprefix(value: all | first | last | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showtickprefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowtickprefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showtickprefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowticksuffix(value: all | first | last | none): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showticksuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowticksuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showticksuffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpikecolor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spikecolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpikecolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spikecolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpikesides(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spikesides")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpikesides: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spikesides")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSpikethickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spikethickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSpikethickness: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spikethickness")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTick0(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tick0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTick0: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tick0")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickangle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickangle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickangle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickangle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickcolor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickcolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickcolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickcolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickfont(value: Partial[Font]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickfont")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickfont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickfont")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickformat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickformat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickformat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickformat")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTicklen(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticklen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicklen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticklen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickmode(value: auto | linear | array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickmode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickmode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickmode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickprefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickprefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickprefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickprefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTicks(value: outside | inside | _empty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTicksuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicksuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksuffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTicktext(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticktext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTicktext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticktext")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickvals(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickvals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickvals: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickvals")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTickwidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickwidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTickwidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tickwidth")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String | Partial[DataTitle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitlefont(value: Partial[Font]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titlefont")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitlefont: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titlefont")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: AxisType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZeroline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZeroline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zeroline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZerolinecolor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zerolinecolor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZerolinecolor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zerolinecolor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZerolinewidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zerolinewidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZerolinewidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zerolinewidth")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

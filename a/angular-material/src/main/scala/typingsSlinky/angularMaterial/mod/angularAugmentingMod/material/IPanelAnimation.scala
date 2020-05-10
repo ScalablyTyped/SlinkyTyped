@@ -1,9 +1,9 @@
 package typingsSlinky.angularMaterial.mod.angularAugmentingMod.material
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.angularMaterial.AnonClose
 import typingsSlinky.angularMaterial.AnonLeft
 import typingsSlinky.angularMaterial.AnonOpen
-import typingsSlinky.std.Element
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

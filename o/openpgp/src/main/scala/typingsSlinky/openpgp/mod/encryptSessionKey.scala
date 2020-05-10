@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object encryptSessionKey extends js.Object {
   def apply(
-    data: scala.scalajs.js.typedarray.Uint8Array,
+    data: js.typedarray.Uint8Array,
     algorithm: String,
     aeadAlgorithm: js.UndefOr[String],
     publicKeys: js.UndefOr[js.Array[Key] | Key],

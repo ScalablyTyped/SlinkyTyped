@@ -28,17 +28,59 @@ trait UpdateReplicationGroupMemberAction extends js.Object {
 
 object UpdateReplicationGroupMemberAction {
   @scala.inline
-  def apply(
-    RegionName: RegionName,
-    GlobalSecondaryIndexes: ReplicaGlobalSecondaryIndexList = null,
-    KMSMasterKeyId: KMSMasterKeyId = null,
-    ProvisionedThroughputOverride: ProvisionedThroughputOverride = null
-  ): UpdateReplicationGroupMemberAction = {
+  def apply(RegionName: RegionName): UpdateReplicationGroupMemberAction = {
     val __obj = js.Dynamic.literal(RegionName = RegionName.asInstanceOf[js.Any])
-    if (GlobalSecondaryIndexes != null) __obj.updateDynamic("GlobalSecondaryIndexes")(GlobalSecondaryIndexes.asInstanceOf[js.Any])
-    if (KMSMasterKeyId != null) __obj.updateDynamic("KMSMasterKeyId")(KMSMasterKeyId.asInstanceOf[js.Any])
-    if (ProvisionedThroughputOverride != null) __obj.updateDynamic("ProvisionedThroughputOverride")(ProvisionedThroughputOverride.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateReplicationGroupMemberAction]
   }
+  @scala.inline
+  implicit class UpdateReplicationGroupMemberActionOps[Self <: UpdateReplicationGroupMemberAction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegionName(value: RegionName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGlobalSecondaryIndexes(value: ReplicaGlobalSecondaryIndexList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGlobalSecondaryIndexes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalSecondaryIndexes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKMSMasterKeyId(value: KMSMasterKeyId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSMasterKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKMSMasterKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KMSMasterKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProvisionedThroughputOverride(value: ProvisionedThroughputOverride): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProvisionedThroughputOverride: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ProvisionedThroughputOverride")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

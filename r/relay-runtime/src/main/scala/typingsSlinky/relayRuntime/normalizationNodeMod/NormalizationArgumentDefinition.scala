@@ -18,9 +18,8 @@ object NormalizationArgumentDefinition {
     __obj.asInstanceOf[NormalizationArgumentDefinition]
   }
   @scala.inline
-  def NormalizationRootArgument(kind: String, name: String, `type`: String = null): NormalizationArgumentDefinition = {
+  def NormalizationRootArgument(kind: String, name: String): NormalizationArgumentDefinition = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NormalizationArgumentDefinition]
   }
 }

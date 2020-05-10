@@ -1,68 +1,195 @@
 package typingsSlinky.reactIntl
 
-import slinky.core.TagMod
-import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactIntl.reactIntlStrings.`best fit`
-import typingsSlinky.reactIntl.reactIntlStrings.cardinal
-import typingsSlinky.reactIntl.reactIntlStrings.lookup
-import typingsSlinky.reactIntl.reactIntlStrings.ordinal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Pick<react-intl.react-intl.Props_2, 'children' | 'other' | 'zero' | 'one' | 'two' | 'few' | 'many' | 'format' | 'localeMatcher' | 'type' | 'value'> & {  forwardedRef ? :(instance : any): void | react.react.RefObject<any> | null | undefined} & react.react.RefAttributes<any> */
+/* Inlined std.Pick<react-intl.react-intl.Props_2, 'children' | 'other' | 'zero' | 'one' | 'two' | 'few' | 'many' | 'localeMatcher' | 'format' | 'type' | 'value'> & {  forwardedRef ? :(instance : any): void | react.react.RefObject<any> | null | undefined} & react.react.RefAttributes<any> */
+@js.native
 trait PickProps2childrenotherze extends js.Object {
-  var children: js.UndefOr[js.Function1[/* value */ TagMod[Any], ReactElement | Null]] = js.undefined
-  var few: js.UndefOr[TagMod[Any]] = js.undefined
-  var format: js.UndefOr[String] = js.undefined
-  var forwardedRef: js.UndefOr[(js.Function1[/* instance */ js.Any, Unit]) | ReactRef[_] | Null] = js.undefined
-  var key: js.UndefOr[Key] = js.undefined
-  var localeMatcher: js.UndefOr[lookup | (`best fit`)] = js.undefined
-  var many: js.UndefOr[TagMod[Any]] = js.undefined
-  var one: js.UndefOr[TagMod[Any]] = js.undefined
-  var other: TagMod[Any]
-  var ref: js.UndefOr[Ref[_]] = js.undefined
-  var two: js.UndefOr[TagMod[Any]] = js.undefined
-  var `type`: js.UndefOr[cardinal | ordinal] = js.undefined
-  var value: Double
-  var zero: js.UndefOr[TagMod[Any]] = js.undefined
+  var children: js.Any = js.native
+  var few: js.Any = js.native
+  var format: js.Any = js.native
+  var forwardedRef: js.UndefOr[(js.Function1[/* instance */ js.Any, Unit]) | ReactRef[_] | Null] = js.native
+  var key: js.UndefOr[Key] = js.native
+  var localeMatcher: js.Any = js.native
+  var many: js.Any = js.native
+  var one: js.Any = js.native
+  var other: js.Any = js.native
+  var ref: js.UndefOr[Ref[_]] = js.native
+  var two: js.Any = js.native
+  var `type`: js.Any = js.native
+  var value: js.Any = js.native
+  var zero: js.Any = js.native
 }
 
 object PickProps2childrenotherze {
   @scala.inline
   def apply(
-    other: TagMod[Any],
-    value: Double,
-    children: /* value */ TagMod[Any] => ReactElement | Null = null,
-    few: TagMod[Any] = null,
-    format: String = null,
-    forwardedRef: (js.Function1[/* instance */ js.Any, Unit]) | ReactRef[_] = null,
-    key: Key = null,
-    localeMatcher: lookup | (`best fit`) = null,
-    many: TagMod[Any] = null,
-    one: TagMod[Any] = null,
-    ref: Ref[_] = null,
-    two: TagMod[Any] = null,
-    `type`: cardinal | ordinal = null,
-    zero: TagMod[Any] = null
+    children: js.Any,
+    few: js.Any,
+    format: js.Any,
+    localeMatcher: js.Any,
+    many: js.Any,
+    one: js.Any,
+    other: js.Any,
+    two: js.Any,
+    `type`: js.Any,
+    value: js.Any,
+    zero: js.Any
   ): PickProps2childrenotherze = {
-    val __obj = js.Dynamic.literal(other = other.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(js.Any.fromFunction1(children))
-    if (few != null) __obj.updateDynamic("few")(few.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (forwardedRef != null) __obj.updateDynamic("forwardedRef")(forwardedRef.asInstanceOf[js.Any])
-    if (key != null) __obj.updateDynamic("key")(key.asInstanceOf[js.Any])
-    if (localeMatcher != null) __obj.updateDynamic("localeMatcher")(localeMatcher.asInstanceOf[js.Any])
-    if (many != null) __obj.updateDynamic("many")(many.asInstanceOf[js.Any])
-    if (one != null) __obj.updateDynamic("one")(one.asInstanceOf[js.Any])
-    if (ref != null) __obj.updateDynamic("ref")(ref.asInstanceOf[js.Any])
-    if (two != null) __obj.updateDynamic("two")(two.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (zero != null) __obj.updateDynamic("zero")(zero.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], few = few.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], localeMatcher = localeMatcher.asInstanceOf[js.Any], many = many.asInstanceOf[js.Any], one = one.asInstanceOf[js.Any], other = other.asInstanceOf[js.Any], two = two.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], zero = zero.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PickProps2childrenotherze]
   }
+  @scala.inline
+  implicit class PickProps2childrenotherzeOps[Self <: PickProps2childrenotherze] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildren(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFew(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("few")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocaleMatcher(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localeMatcher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMany(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("many")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOne(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("one")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOther(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("other")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTwo(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("two")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZero(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zero")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForwardedRefRefObject(value: ReactRef[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardedRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForwardedRefFunction1(value: /* instance */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardedRef")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withForwardedRef(value: (js.Function1[/* instance */ js.Any, Unit]) | ReactRef[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardedRef")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutForwardedRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardedRef")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withForwardedRefNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forwardedRef")(null)
+        ret
+    }
+    @scala.inline
+    def withKey(value: Key): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefRefObject(value: ReactRef[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRefFunction1(value: /* instance */ _ | Null => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRef(value: Ref[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRef: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(null)
+        ret
+    }
+  }
+  
 }
 

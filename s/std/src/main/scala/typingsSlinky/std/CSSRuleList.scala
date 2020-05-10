@@ -8,8 +8,9 @@ import scala.scalajs.js.annotation._
 
 /** A CSSRuleList is an (indirect-modify only) array-like object containing an ordered collection of CSSRule objects. */
 @js.native
-trait CSSRuleList extends /* index */ NumberDictionary[CSSRule] {
-  @JSName(scala.scalajs.js.Symbol.iterator)
+trait CSSRuleList
+  extends /* index */ NumberDictionary[org.scalajs.dom.raw.CSSRule] {
+  @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.CSSRule]] = js.native
   val length: Double = js.native
   def item(index: Double): org.scalajs.dom.raw.CSSRule | Null = js.native
@@ -17,5 +18,6 @@ trait CSSRuleList extends /* index */ NumberDictionary[CSSRule] {
 
 @JSGlobal("CSSRuleList")
 @js.native
-object CSSRuleList extends Instantiable0[CSSRuleList]
+object CSSRuleList
+  extends Instantiable0[org.scalajs.dom.raw.CSSRuleList]
 

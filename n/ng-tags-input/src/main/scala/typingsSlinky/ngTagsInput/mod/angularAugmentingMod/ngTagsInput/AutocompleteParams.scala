@@ -4,51 +4,179 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AutocompleteParams extends js.Object {
-  var debounceDelay: js.UndefOr[Double | Boolean] = js.undefined
-  var displayProperty: js.UndefOr[String | Boolean] = js.undefined
-  var highlightMatchedText: js.UndefOr[Boolean] = js.undefined
-  var loadOnDownArrow: js.UndefOr[Boolean] = js.undefined
-  var loadOnEmpty: js.UndefOr[Boolean] = js.undefined
-  var loadOnFocus: js.UndefOr[Boolean] = js.undefined
-  var matchClass: js.UndefOr[js.Any] = js.undefined
-  var maxResultsToShow: js.UndefOr[Double | Boolean] = js.undefined
-  var minLength: js.UndefOr[Double | Boolean] = js.undefined
-  var selectFirstMatch: js.UndefOr[Boolean] = js.undefined
-  var source: js.UndefOr[js.Any] = js.undefined
-  var template: js.UndefOr[String | Boolean] = js.undefined
+  var debounceDelay: js.UndefOr[Double | Boolean] = js.native
+  var displayProperty: js.UndefOr[String | Boolean] = js.native
+  var highlightMatchedText: js.UndefOr[Boolean] = js.native
+  var loadOnDownArrow: js.UndefOr[Boolean] = js.native
+  var loadOnEmpty: js.UndefOr[Boolean] = js.native
+  var loadOnFocus: js.UndefOr[Boolean] = js.native
+  var matchClass: js.UndefOr[js.Any] = js.native
+  var maxResultsToShow: js.UndefOr[Double | Boolean] = js.native
+  var minLength: js.UndefOr[Double | Boolean] = js.native
+  var selectFirstMatch: js.UndefOr[Boolean] = js.native
+  var source: js.UndefOr[js.Any] = js.native
+  var template: js.UndefOr[String | Boolean] = js.native
 }
 
 object AutocompleteParams {
   @scala.inline
-  def apply(
-    debounceDelay: Double | Boolean = null,
-    displayProperty: String | Boolean = null,
-    highlightMatchedText: js.UndefOr[Boolean] = js.undefined,
-    loadOnDownArrow: js.UndefOr[Boolean] = js.undefined,
-    loadOnEmpty: js.UndefOr[Boolean] = js.undefined,
-    loadOnFocus: js.UndefOr[Boolean] = js.undefined,
-    matchClass: js.Any = null,
-    maxResultsToShow: Double | Boolean = null,
-    minLength: Double | Boolean = null,
-    selectFirstMatch: js.UndefOr[Boolean] = js.undefined,
-    source: js.Any = null,
-    template: String | Boolean = null
-  ): AutocompleteParams = {
+  def apply(): AutocompleteParams = {
     val __obj = js.Dynamic.literal()
-    if (debounceDelay != null) __obj.updateDynamic("debounceDelay")(debounceDelay.asInstanceOf[js.Any])
-    if (displayProperty != null) __obj.updateDynamic("displayProperty")(displayProperty.asInstanceOf[js.Any])
-    if (!js.isUndefined(highlightMatchedText)) __obj.updateDynamic("highlightMatchedText")(highlightMatchedText.asInstanceOf[js.Any])
-    if (!js.isUndefined(loadOnDownArrow)) __obj.updateDynamic("loadOnDownArrow")(loadOnDownArrow.asInstanceOf[js.Any])
-    if (!js.isUndefined(loadOnEmpty)) __obj.updateDynamic("loadOnEmpty")(loadOnEmpty.asInstanceOf[js.Any])
-    if (!js.isUndefined(loadOnFocus)) __obj.updateDynamic("loadOnFocus")(loadOnFocus.asInstanceOf[js.Any])
-    if (matchClass != null) __obj.updateDynamic("matchClass")(matchClass.asInstanceOf[js.Any])
-    if (maxResultsToShow != null) __obj.updateDynamic("maxResultsToShow")(maxResultsToShow.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
-    if (!js.isUndefined(selectFirstMatch)) __obj.updateDynamic("selectFirstMatch")(selectFirstMatch.asInstanceOf[js.Any])
-    if (source != null) __obj.updateDynamic("source")(source.asInstanceOf[js.Any])
-    if (template != null) __obj.updateDynamic("template")(template.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutocompleteParams]
   }
+  @scala.inline
+  implicit class AutocompleteParamsOps[Self <: AutocompleteParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDebounceDelay(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debounceDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDebounceDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("debounceDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisplayProperty(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayProperty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayProperty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayProperty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHighlightMatchedText(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightMatchedText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHighlightMatchedText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightMatchedText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadOnDownArrow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnDownArrow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadOnDownArrow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnDownArrow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadOnEmpty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnEmpty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadOnEmpty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnEmpty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLoadOnFocus(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLoadOnFocus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadOnFocus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMatchClass(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMatchClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matchClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxResultsToShow(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResultsToShow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxResultsToShow: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResultsToShow")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinLength(value: Double | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinLength: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minLength")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelectFirstMatch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectFirstMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelectFirstMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectFirstMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSource(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemplate(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

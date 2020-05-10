@@ -1,135 +1,257 @@
 package typingsSlinky.senchaTouch.Ext.device.geolocation
 
-import typingsSlinky.senchaTouch.Ext.Array
 import typingsSlinky.senchaTouch.Ext.IBase
-import typingsSlinky.senchaTouch.Ext.IClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IAbstract extends IBase {
   /** [Config Option] (Boolean) */
-  var allowHighAccuracy: js.UndefOr[Boolean] = js.undefined
+  var allowHighAccuracy: js.UndefOr[Boolean] = js.native
   /** [Method] If you are currently watching for the current position this will stop that task  */
-  var clearWatch: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var clearWatch: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Config Option] (Number) */
-  var frequency: js.UndefOr[Double] = js.undefined
+  var frequency: js.UndefOr[Double] = js.native
   /** [Method] Returns the value of allowHighAccuracy
   		* @returns Boolean
   		*/
-  var getAllowHighAccuracy: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var getAllowHighAccuracy: js.UndefOr[js.Function0[Boolean]] = js.native
   /** [Method] Attempts to get the current position of this device
   		* @param config Object An object which contains the following config options:
   		*/
-  var getCurrentPosition: js.UndefOr[js.Function1[/* config */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var getCurrentPosition: js.UndefOr[js.Function1[/* config */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Returns the value of frequency
   		* @returns Number
   		*/
-  var getFrequency: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getFrequency: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Returns the value of maximumAge
   		* @returns Number
   		*/
-  var getMaximumAge: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getMaximumAge: js.UndefOr[js.Function0[Double]] = js.native
   /** [Method] Returns the value of timeout
   		* @returns Number
   		*/
-  var getTimeout: js.UndefOr[js.Function0[Double]] = js.undefined
+  var getTimeout: js.UndefOr[js.Function0[Double]] = js.native
   /** [Config Option] (Number) */
-  var maximumAge: js.UndefOr[Double] = js.undefined
+  var maximumAge: js.UndefOr[Double] = js.native
   /** [Method] Sets the value of allowHighAccuracy
   		* @param allowHighAccuracy Boolean The new value.
   		*/
-  var setAllowHighAccuracy: js.UndefOr[js.Function1[/* allowHighAccuracy */ js.UndefOr[Boolean], Unit]] = js.undefined
+  var setAllowHighAccuracy: js.UndefOr[js.Function1[/* allowHighAccuracy */ js.UndefOr[Boolean], Unit]] = js.native
   /** [Method] Sets the value of frequency
   		* @param frequency Number The new value.
   		*/
-  var setFrequency: js.UndefOr[js.Function1[/* frequency */ js.UndefOr[Double], Unit]] = js.undefined
+  var setFrequency: js.UndefOr[js.Function1[/* frequency */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Sets the value of maximumAge
   		* @param maximumAge Number The new value.
   		*/
-  var setMaximumAge: js.UndefOr[js.Function1[/* maximumAge */ js.UndefOr[Double], Unit]] = js.undefined
+  var setMaximumAge: js.UndefOr[js.Function1[/* maximumAge */ js.UndefOr[Double], Unit]] = js.native
   /** [Method] Sets the value of timeout
   		* @param timeout Number The new value.
   		*/
-  var setTimeout: js.UndefOr[js.Function1[/* timeout */ js.UndefOr[Double], Unit]] = js.undefined
+  var setTimeout: js.UndefOr[js.Function1[/* timeout */ js.UndefOr[Double], Unit]] = js.native
   /** [Config Option] (Number) */
-  var timeout: js.UndefOr[Double] = js.undefined
+  var timeout: js.UndefOr[Double] = js.native
   /** [Method] Watches for the current position and calls the callback when successful depending on the specified frequency
   		* @param config Object An object which contains the following config options:
   		*/
-  var watchPosition: js.UndefOr[js.Function1[/* config */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var watchPosition: js.UndefOr[js.Function1[/* config */ js.UndefOr[js.Any], Unit]] = js.native
 }
 
 object IAbstract {
   @scala.inline
-  def apply(
-    alias: Array = null,
-    allowHighAccuracy: js.UndefOr[Boolean] = js.undefined,
-    alternateClassName: js.Any = null,
-    callOverridden: /* args */ js.UndefOr[js.Any] => _ = null,
-    callParent: /* args */ js.UndefOr[js.Any] => _ = null,
-    callSuper: /* args */ js.UndefOr[js.Any] => _ = null,
-    clearWatch: () => Unit = null,
-    config: js.Any = null,
-    destroy: () => Unit = null,
-    extend: String = null,
-    frequency: Int | Double = null,
-    getAllowHighAccuracy: () => Boolean = null,
-    getCurrentPosition: /* config */ js.UndefOr[js.Any] => Unit = null,
-    getFrequency: () => Double = null,
-    getInitialConfig: /* name */ js.UndefOr[String] => _ = null,
-    getMaximumAge: () => Double = null,
-    getTimeout: () => Double = null,
-    inheritableStatics: js.Any = null,
-    initConfig: /* instanceConfig */ js.UndefOr[js.Any] => _ = null,
-    maximumAge: Int | Double = null,
-    mixins: js.Any = null,
-    platformConfig: js.Any = null,
-    self: IClass = null,
-    setAllowHighAccuracy: /* allowHighAccuracy */ js.UndefOr[Boolean] => Unit = null,
-    setFrequency: /* frequency */ js.UndefOr[Double] => Unit = null,
-    setMaximumAge: /* maximumAge */ js.UndefOr[Double] => Unit = null,
-    setTimeout: /* timeout */ js.UndefOr[Double] => Unit = null,
-    singleton: js.UndefOr[Boolean] = js.undefined,
-    statics: js.Any = null,
-    timeout: Int | Double = null,
-    uses: Array = null,
-    watchPosition: /* config */ js.UndefOr[js.Any] => Unit = null
-  ): IAbstract = {
+  def apply(): IAbstract = {
     val __obj = js.Dynamic.literal()
-    if (alias != null) __obj.updateDynamic("alias")(alias.asInstanceOf[js.Any])
-    if (!js.isUndefined(allowHighAccuracy)) __obj.updateDynamic("allowHighAccuracy")(allowHighAccuracy.asInstanceOf[js.Any])
-    if (alternateClassName != null) __obj.updateDynamic("alternateClassName")(alternateClassName.asInstanceOf[js.Any])
-    if (callOverridden != null) __obj.updateDynamic("callOverridden")(js.Any.fromFunction1(callOverridden))
-    if (callParent != null) __obj.updateDynamic("callParent")(js.Any.fromFunction1(callParent))
-    if (callSuper != null) __obj.updateDynamic("callSuper")(js.Any.fromFunction1(callSuper))
-    if (clearWatch != null) __obj.updateDynamic("clearWatch")(js.Any.fromFunction0(clearWatch))
-    if (config != null) __obj.updateDynamic("config")(config.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
-    if (extend != null) __obj.updateDynamic("extend")(extend.asInstanceOf[js.Any])
-    if (frequency != null) __obj.updateDynamic("frequency")(frequency.asInstanceOf[js.Any])
-    if (getAllowHighAccuracy != null) __obj.updateDynamic("getAllowHighAccuracy")(js.Any.fromFunction0(getAllowHighAccuracy))
-    if (getCurrentPosition != null) __obj.updateDynamic("getCurrentPosition")(js.Any.fromFunction1(getCurrentPosition))
-    if (getFrequency != null) __obj.updateDynamic("getFrequency")(js.Any.fromFunction0(getFrequency))
-    if (getInitialConfig != null) __obj.updateDynamic("getInitialConfig")(js.Any.fromFunction1(getInitialConfig))
-    if (getMaximumAge != null) __obj.updateDynamic("getMaximumAge")(js.Any.fromFunction0(getMaximumAge))
-    if (getTimeout != null) __obj.updateDynamic("getTimeout")(js.Any.fromFunction0(getTimeout))
-    if (inheritableStatics != null) __obj.updateDynamic("inheritableStatics")(inheritableStatics.asInstanceOf[js.Any])
-    if (initConfig != null) __obj.updateDynamic("initConfig")(js.Any.fromFunction1(initConfig))
-    if (maximumAge != null) __obj.updateDynamic("maximumAge")(maximumAge.asInstanceOf[js.Any])
-    if (mixins != null) __obj.updateDynamic("mixins")(mixins.asInstanceOf[js.Any])
-    if (platformConfig != null) __obj.updateDynamic("platformConfig")(platformConfig.asInstanceOf[js.Any])
-    if (self != null) __obj.updateDynamic("self")(self.asInstanceOf[js.Any])
-    if (setAllowHighAccuracy != null) __obj.updateDynamic("setAllowHighAccuracy")(js.Any.fromFunction1(setAllowHighAccuracy))
-    if (setFrequency != null) __obj.updateDynamic("setFrequency")(js.Any.fromFunction1(setFrequency))
-    if (setMaximumAge != null) __obj.updateDynamic("setMaximumAge")(js.Any.fromFunction1(setMaximumAge))
-    if (setTimeout != null) __obj.updateDynamic("setTimeout")(js.Any.fromFunction1(setTimeout))
-    if (!js.isUndefined(singleton)) __obj.updateDynamic("singleton")(singleton.asInstanceOf[js.Any])
-    if (statics != null) __obj.updateDynamic("statics")(statics.asInstanceOf[js.Any])
-    if (timeout != null) __obj.updateDynamic("timeout")(timeout.asInstanceOf[js.Any])
-    if (uses != null) __obj.updateDynamic("uses")(uses.asInstanceOf[js.Any])
-    if (watchPosition != null) __obj.updateDynamic("watchPosition")(js.Any.fromFunction1(watchPosition))
     __obj.asInstanceOf[IAbstract]
   }
+  @scala.inline
+  implicit class IAbstractOps[Self <: IAbstract] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowHighAccuracy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHighAccuracy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAllowHighAccuracy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowHighAccuracy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClearWatch(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearWatch")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutClearWatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearWatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFrequency(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetAllowHighAccuracy(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllowHighAccuracy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetAllowHighAccuracy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllowHighAccuracy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetCurrentPosition(value: /* config */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentPosition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetCurrentPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetFrequency(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFrequency")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFrequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetMaximumAge(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaximumAge")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetMaximumAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaximumAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetTimeout(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTimeout")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withoutGetTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaximumAge(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumAge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaximumAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetAllowHighAccuracy(value: /* allowHighAccuracy */ js.UndefOr[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAllowHighAccuracy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetAllowHighAccuracy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAllowHighAccuracy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetFrequency(value: /* frequency */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFrequency")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetFrequency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFrequency")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetMaximumAge(value: /* maximumAge */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaximumAge")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetMaximumAge: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaximumAge")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSetTimeout(value: /* timeout */ js.UndefOr[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTimeout")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutSetTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTimeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWatchPosition(value: /* config */ js.UndefOr[js.Any] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watchPosition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutWatchPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watchPosition")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

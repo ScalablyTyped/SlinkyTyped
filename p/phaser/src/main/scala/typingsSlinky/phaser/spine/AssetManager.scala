@@ -16,8 +16,6 @@ class AssetManager protected () extends Disposable {
   var pathPrefix: js.Any = js.native
   var textureLoader: js.Any = js.native
   var toLoad: js.Any = js.native
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
   def get(path: String): js.Any = js.native
   def getErrors(): Map[String] = js.native
   def getLoaded(): Double = js.native
@@ -27,11 +25,11 @@ class AssetManager protected () extends Disposable {
   def loadBinary(path: String): Unit = js.native
   def loadBinary(
     path: String,
-    success: js.Function2[/* path */ String, /* binary */ scala.scalajs.js.typedarray.Uint8Array, Unit]
+    success: js.Function2[/* path */ String, /* binary */ js.typedarray.Uint8Array, Unit]
   ): Unit = js.native
   def loadBinary(
     path: String,
-    success: js.Function2[/* path */ String, /* binary */ scala.scalajs.js.typedarray.Uint8Array, Unit],
+    success: js.Function2[/* path */ String, /* binary */ js.typedarray.Uint8Array, Unit],
     error: js.Function2[/* path */ String, /* error */ String, Unit]
   ): Unit = js.native
   def loadText(path: String): Unit = js.native

@@ -14,10 +14,29 @@ trait GetPlatformApplicationAttributesResponse extends js.Object {
 
 object GetPlatformApplicationAttributesResponse {
   @scala.inline
-  def apply(Attributes: MapStringToString = null): GetPlatformApplicationAttributesResponse = {
+  def apply(): GetPlatformApplicationAttributesResponse = {
     val __obj = js.Dynamic.literal()
-    if (Attributes != null) __obj.updateDynamic("Attributes")(Attributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPlatformApplicationAttributesResponse]
   }
+  @scala.inline
+  implicit class GetPlatformApplicationAttributesResponseOps[Self <: GetPlatformApplicationAttributesResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: MapStringToString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

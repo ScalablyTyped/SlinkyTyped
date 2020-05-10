@@ -341,668 +341,666 @@ trait CSSPropertyNames extends js.Object
 
 object CSSPropertyNames {
   @scala.inline
-  def alignContent: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignContent = this.cast("alignContent")
+  def alignContent: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignContent = "alignContent".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignContent]
   @scala.inline
-  def alignItems: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignItems = this.cast("alignItems")
+  def alignItems: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignItems = "alignItems".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignItems]
   @scala.inline
-  def alignSelf: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignSelf = this.cast("alignSelf")
+  def alignSelf: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignSelf = "alignSelf".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignSelf]
   @scala.inline
-  def alignmentBaseline: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignmentBaseline = this.cast("alignmentBaseline")
+  def alignmentBaseline: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignmentBaseline = "alignmentBaseline".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.alignmentBaseline]
   @scala.inline
-  def animation: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animation = this.cast("animation")
+  def animation: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animation = "animation".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animation]
   @scala.inline
-  def animationDelay: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationDelay = this.cast("animationDelay")
+  def animationDelay: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationDelay = "animationDelay".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationDelay]
   @scala.inline
-  def animationDirection: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationDirection = this.cast("animationDirection")
+  def animationDirection: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationDirection = "animationDirection".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationDirection]
   @scala.inline
-  def animationDuration: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationDuration = this.cast("animationDuration")
+  def animationDuration: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationDuration = "animationDuration".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationDuration]
   @scala.inline
-  def animationFillMode: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationFillMode = this.cast("animationFillMode")
+  def animationFillMode: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationFillMode = "animationFillMode".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationFillMode]
   @scala.inline
-  def animationIterationCount: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationIterationCount = this.cast("animationIterationCount")
+  def animationIterationCount: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationIterationCount = "animationIterationCount".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationIterationCount]
   @scala.inline
-  def animationName: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationName = this.cast("animationName")
+  def animationName: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationName = "animationName".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationName]
   @scala.inline
-  def animationPlayState: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationPlayState = this.cast("animationPlayState")
+  def animationPlayState: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationPlayState = "animationPlayState".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationPlayState]
   @scala.inline
-  def animationTimingFunction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationTimingFunction = this.cast("animationTimingFunction")
+  def animationTimingFunction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationTimingFunction = "animationTimingFunction".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.animationTimingFunction]
   @scala.inline
-  def backfaceVisibility: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backfaceVisibility = this.cast("backfaceVisibility")
+  def backfaceVisibility: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backfaceVisibility = "backfaceVisibility".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backfaceVisibility]
   @scala.inline
-  def background: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.background = this.cast("background")
+  def background: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.background = "background".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.background]
   @scala.inline
-  def backgroundAttachment: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundAttachment = this.cast("backgroundAttachment")
+  def backgroundAttachment: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundAttachment = "backgroundAttachment".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundAttachment]
   @scala.inline
-  def backgroundClip: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundClip = this.cast("backgroundClip")
+  def backgroundClip: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundClip = "backgroundClip".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundClip]
   @scala.inline
-  def backgroundColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundColor = this.cast("backgroundColor")
+  def backgroundColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundColor = "backgroundColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundColor]
   @scala.inline
-  def backgroundImage: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundImage = this.cast("backgroundImage")
+  def backgroundImage: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundImage = "backgroundImage".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundImage]
   @scala.inline
-  def backgroundOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundOrigin = this.cast("backgroundOrigin")
+  def backgroundOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundOrigin = "backgroundOrigin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundOrigin]
   @scala.inline
-  def backgroundPosition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundPosition = this.cast("backgroundPosition")
+  def backgroundPosition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundPosition = "backgroundPosition".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundPosition]
   @scala.inline
-  def backgroundPositionX: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundPositionX = this.cast("backgroundPositionX")
+  def backgroundPositionX: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundPositionX = "backgroundPositionX".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundPositionX]
   @scala.inline
-  def backgroundPositionY: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundPositionY = this.cast("backgroundPositionY")
+  def backgroundPositionY: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundPositionY = "backgroundPositionY".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundPositionY]
   @scala.inline
-  def backgroundRepeat: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundRepeat = this.cast("backgroundRepeat")
+  def backgroundRepeat: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundRepeat = "backgroundRepeat".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundRepeat]
   @scala.inline
-  def backgroundSize: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundSize = this.cast("backgroundSize")
+  def backgroundSize: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundSize = "backgroundSize".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.backgroundSize]
   @scala.inline
-  def baselineShift: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.baselineShift = this.cast("baselineShift")
+  def baselineShift: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.baselineShift = "baselineShift".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.baselineShift]
   @scala.inline
-  def border: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.border = this.cast("border")
+  def border: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.border = "border".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.border]
   @scala.inline
-  def borderBottom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottom = this.cast("borderBottom")
+  def borderBottom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottom = "borderBottom".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottom]
   @scala.inline
-  def borderBottomColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomColor = this.cast("borderBottomColor")
+  def borderBottomColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomColor = "borderBottomColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomColor]
   @scala.inline
-  def borderBottomLeftRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomLeftRadius = this.cast("borderBottomLeftRadius")
+  def borderBottomLeftRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomLeftRadius = "borderBottomLeftRadius".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomLeftRadius]
   @scala.inline
-  def borderBottomRightRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomRightRadius = this.cast("borderBottomRightRadius")
+  def borderBottomRightRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomRightRadius = "borderBottomRightRadius".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomRightRadius]
   @scala.inline
-  def borderBottomStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomStyle = this.cast("borderBottomStyle")
+  def borderBottomStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomStyle = "borderBottomStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomStyle]
   @scala.inline
-  def borderBottomWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomWidth = this.cast("borderBottomWidth")
+  def borderBottomWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomWidth = "borderBottomWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderBottomWidth]
   @scala.inline
-  def borderCollapse: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderCollapse = this.cast("borderCollapse")
+  def borderCollapse: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderCollapse = "borderCollapse".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderCollapse]
   @scala.inline
-  def borderColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderColor = this.cast("borderColor")
+  def borderColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderColor = "borderColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderColor]
   @scala.inline
-  def borderImage: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImage = this.cast("borderImage")
+  def borderImage: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImage = "borderImage".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImage]
   @scala.inline
-  def borderImageOutset: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageOutset = this.cast("borderImageOutset")
+  def borderImageOutset: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageOutset = "borderImageOutset".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageOutset]
   @scala.inline
-  def borderImageRepeat: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageRepeat = this.cast("borderImageRepeat")
+  def borderImageRepeat: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageRepeat = "borderImageRepeat".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageRepeat]
   @scala.inline
-  def borderImageSlice: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageSlice = this.cast("borderImageSlice")
+  def borderImageSlice: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageSlice = "borderImageSlice".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageSlice]
   @scala.inline
-  def borderImageSource: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageSource = this.cast("borderImageSource")
+  def borderImageSource: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageSource = "borderImageSource".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageSource]
   @scala.inline
-  def borderImageWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageWidth = this.cast("borderImageWidth")
+  def borderImageWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageWidth = "borderImageWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderImageWidth]
   @scala.inline
-  def borderLeft: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeft = this.cast("borderLeft")
+  def borderLeft: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeft = "borderLeft".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeft]
   @scala.inline
-  def borderLeftColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeftColor = this.cast("borderLeftColor")
+  def borderLeftColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeftColor = "borderLeftColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeftColor]
   @scala.inline
-  def borderLeftStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeftStyle = this.cast("borderLeftStyle")
+  def borderLeftStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeftStyle = "borderLeftStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeftStyle]
   @scala.inline
-  def borderLeftWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeftWidth = this.cast("borderLeftWidth")
+  def borderLeftWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeftWidth = "borderLeftWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderLeftWidth]
   @scala.inline
-  def borderRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRadius = this.cast("borderRadius")
+  def borderRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRadius = "borderRadius".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRadius]
   @scala.inline
-  def borderRight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRight = this.cast("borderRight")
+  def borderRight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRight = "borderRight".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRight]
   @scala.inline
-  def borderRightColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRightColor = this.cast("borderRightColor")
+  def borderRightColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRightColor = "borderRightColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRightColor]
   @scala.inline
-  def borderRightStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRightStyle = this.cast("borderRightStyle")
+  def borderRightStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRightStyle = "borderRightStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRightStyle]
   @scala.inline
-  def borderRightWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRightWidth = this.cast("borderRightWidth")
+  def borderRightWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRightWidth = "borderRightWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderRightWidth]
   @scala.inline
-  def borderSpacing: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderSpacing = this.cast("borderSpacing")
+  def borderSpacing: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderSpacing = "borderSpacing".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderSpacing]
   @scala.inline
-  def borderStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderStyle = this.cast("borderStyle")
+  def borderStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderStyle = "borderStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderStyle]
   @scala.inline
-  def borderTop: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTop = this.cast("borderTop")
+  def borderTop: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTop = "borderTop".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTop]
   @scala.inline
-  def borderTopColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopColor = this.cast("borderTopColor")
+  def borderTopColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopColor = "borderTopColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopColor]
   @scala.inline
-  def borderTopLeftRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopLeftRadius = this.cast("borderTopLeftRadius")
+  def borderTopLeftRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopLeftRadius = "borderTopLeftRadius".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopLeftRadius]
   @scala.inline
-  def borderTopRightRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopRightRadius = this.cast("borderTopRightRadius")
+  def borderTopRightRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopRightRadius = "borderTopRightRadius".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopRightRadius]
   @scala.inline
-  def borderTopStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopStyle = this.cast("borderTopStyle")
+  def borderTopStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopStyle = "borderTopStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopStyle]
   @scala.inline
-  def borderTopWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopWidth = this.cast("borderTopWidth")
+  def borderTopWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopWidth = "borderTopWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderTopWidth]
   @scala.inline
-  def borderWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderWidth = this.cast("borderWidth")
+  def borderWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderWidth = "borderWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.borderWidth]
   @scala.inline
-  def bottom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.bottom = this.cast("bottom")
+  def bottom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.bottom = "bottom".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.bottom]
   @scala.inline
-  def boxShadow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.boxShadow = this.cast("boxShadow")
+  def boxShadow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.boxShadow = "boxShadow".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.boxShadow]
   @scala.inline
-  def boxSizing: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.boxSizing = this.cast("boxSizing")
+  def boxSizing: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.boxSizing = "boxSizing".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.boxSizing]
   @scala.inline
-  def breakAfter: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.breakAfter = this.cast("breakAfter")
+  def breakAfter: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.breakAfter = "breakAfter".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.breakAfter]
   @scala.inline
-  def breakBefore: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.breakBefore = this.cast("breakBefore")
+  def breakBefore: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.breakBefore = "breakBefore".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.breakBefore]
   @scala.inline
-  def breakInside: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.breakInside = this.cast("breakInside")
+  def breakInside: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.breakInside = "breakInside".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.breakInside]
   @scala.inline
-  def captionSide: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.captionSide = this.cast("captionSide")
+  def captionSide: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.captionSide = "captionSide".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.captionSide]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def clear: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clear = "clear".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clear]
   @scala.inline
-  def clear: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clear = this.cast("clear")
+  def clip: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clip = "clip".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clip]
   @scala.inline
-  def clip: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clip = this.cast("clip")
+  def clipPath: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clipPath = "clipPath".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clipPath]
   @scala.inline
-  def clipPath: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clipPath = this.cast("clipPath")
+  def clipRule: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clipRule = "clipRule".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clipRule]
   @scala.inline
-  def clipRule: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.clipRule = this.cast("clipRule")
+  def color: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.color = "color".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.color]
   @scala.inline
-  def color: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.color = this.cast("color")
+  def colorInterpolationFilters: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.colorInterpolationFilters = "colorInterpolationFilters".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.colorInterpolationFilters]
   @scala.inline
-  def colorInterpolationFilters: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.colorInterpolationFilters = this.cast("colorInterpolationFilters")
+  def columnCount: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnCount = "columnCount".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnCount]
   @scala.inline
-  def columnCount: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnCount = this.cast("columnCount")
+  def columnFill: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnFill = "columnFill".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnFill]
   @scala.inline
-  def columnFill: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnFill = this.cast("columnFill")
+  def columnGap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnGap = "columnGap".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnGap]
   @scala.inline
-  def columnGap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnGap = this.cast("columnGap")
+  def columnRule: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRule = "columnRule".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRule]
   @scala.inline
-  def columnRule: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRule = this.cast("columnRule")
+  def columnRuleColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRuleColor = "columnRuleColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRuleColor]
   @scala.inline
-  def columnRuleColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRuleColor = this.cast("columnRuleColor")
+  def columnRuleStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRuleStyle = "columnRuleStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRuleStyle]
   @scala.inline
-  def columnRuleStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRuleStyle = this.cast("columnRuleStyle")
+  def columnRuleWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRuleWidth = "columnRuleWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRuleWidth]
   @scala.inline
-  def columnRuleWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnRuleWidth = this.cast("columnRuleWidth")
+  def columnSpan: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnSpan = "columnSpan".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnSpan]
   @scala.inline
-  def columnSpan: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnSpan = this.cast("columnSpan")
+  def columnWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnWidth = "columnWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnWidth]
   @scala.inline
-  def columnWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columnWidth = this.cast("columnWidth")
+  def columns: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columns = "columns".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columns]
   @scala.inline
-  def columns: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.columns = this.cast("columns")
+  def content: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.content = "content".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.content]
   @scala.inline
-  def content: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.content = this.cast("content")
+  def counterIncrement: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.counterIncrement = "counterIncrement".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.counterIncrement]
   @scala.inline
-  def counterIncrement: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.counterIncrement = this.cast("counterIncrement")
+  def counterReset: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.counterReset = "counterReset".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.counterReset]
   @scala.inline
-  def counterReset: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.counterReset = this.cast("counterReset")
+  def cssFloat: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.cssFloat = "cssFloat".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.cssFloat]
   @scala.inline
-  def cssFloat: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.cssFloat = this.cast("cssFloat")
+  def cssText: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.cssText = "cssText".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.cssText]
   @scala.inline
-  def cssText: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.cssText = this.cast("cssText")
+  def cursor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.cursor = "cursor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.cursor]
   @scala.inline
-  def cursor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.cursor = this.cast("cursor")
+  def direction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.direction = "direction".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.direction]
   @scala.inline
-  def direction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.direction = this.cast("direction")
+  def display: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.display = "display".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.display]
   @scala.inline
-  def display: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.display = this.cast("display")
+  def dominantBaseline: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.dominantBaseline = "dominantBaseline".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.dominantBaseline]
   @scala.inline
-  def dominantBaseline: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.dominantBaseline = this.cast("dominantBaseline")
+  def emptyCells: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.emptyCells = "emptyCells".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.emptyCells]
   @scala.inline
-  def emptyCells: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.emptyCells = this.cast("emptyCells")
+  def enableBackground: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.enableBackground = "enableBackground".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.enableBackground]
   @scala.inline
-  def enableBackground: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.enableBackground = this.cast("enableBackground")
+  def fill: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fill = "fill".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fill]
   @scala.inline
-  def fill: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fill = this.cast("fill")
+  def fillOpacity: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fillOpacity = "fillOpacity".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fillOpacity]
   @scala.inline
-  def fillOpacity: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fillOpacity = this.cast("fillOpacity")
+  def fillRule: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fillRule = "fillRule".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fillRule]
   @scala.inline
-  def fillRule: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fillRule = this.cast("fillRule")
+  def filter: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.filter = "filter".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.filter]
   @scala.inline
-  def filter: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.filter = this.cast("filter")
+  def flex: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flex = "flex".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flex]
   @scala.inline
-  def flex: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flex = this.cast("flex")
+  def flexBasis: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexBasis = "flexBasis".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexBasis]
   @scala.inline
-  def flexBasis: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexBasis = this.cast("flexBasis")
+  def flexDirection: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexDirection = "flexDirection".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexDirection]
   @scala.inline
-  def flexDirection: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexDirection = this.cast("flexDirection")
+  def flexFlow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexFlow = "flexFlow".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexFlow]
   @scala.inline
-  def flexFlow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexFlow = this.cast("flexFlow")
+  def flexGrow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexGrow = "flexGrow".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexGrow]
   @scala.inline
-  def flexGrow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexGrow = this.cast("flexGrow")
+  def flexShrink: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexShrink = "flexShrink".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexShrink]
   @scala.inline
-  def flexShrink: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexShrink = this.cast("flexShrink")
+  def flexWrap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexWrap = "flexWrap".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexWrap]
   @scala.inline
-  def flexWrap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.flexWrap = this.cast("flexWrap")
+  def floodColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.floodColor = "floodColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.floodColor]
   @scala.inline
-  def floodColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.floodColor = this.cast("floodColor")
+  def floodOpacity: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.floodOpacity = "floodOpacity".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.floodOpacity]
   @scala.inline
-  def floodOpacity: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.floodOpacity = this.cast("floodOpacity")
+  def font: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.font = "font".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.font]
   @scala.inline
-  def font: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.font = this.cast("font")
+  def fontFamily: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontFamily = "fontFamily".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontFamily]
   @scala.inline
-  def fontFamily: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontFamily = this.cast("fontFamily")
+  def fontFeatureSettings: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontFeatureSettings = "fontFeatureSettings".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontFeatureSettings]
   @scala.inline
-  def fontFeatureSettings: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontFeatureSettings = this.cast("fontFeatureSettings")
+  def fontSize: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontSize = "fontSize".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontSize]
   @scala.inline
-  def fontSize: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontSize = this.cast("fontSize")
+  def fontSizeAdjust: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontSizeAdjust = "fontSizeAdjust".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontSizeAdjust]
   @scala.inline
-  def fontSizeAdjust: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontSizeAdjust = this.cast("fontSizeAdjust")
+  def fontStretch: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontStretch = "fontStretch".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontStretch]
   @scala.inline
-  def fontStretch: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontStretch = this.cast("fontStretch")
+  def fontStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontStyle = "fontStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontStyle]
   @scala.inline
-  def fontStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontStyle = this.cast("fontStyle")
+  def fontVariant: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontVariant = "fontVariant".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontVariant]
   @scala.inline
-  def fontVariant: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontVariant = this.cast("fontVariant")
+  def fontWeight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontWeight = "fontWeight".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontWeight]
   @scala.inline
-  def fontWeight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.fontWeight = this.cast("fontWeight")
+  def glyphOrientationHorizontal: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.glyphOrientationHorizontal = "glyphOrientationHorizontal".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.glyphOrientationHorizontal]
   @scala.inline
-  def glyphOrientationHorizontal: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.glyphOrientationHorizontal = this.cast("glyphOrientationHorizontal")
+  def glyphOrientationVertical: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.glyphOrientationVertical = "glyphOrientationVertical".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.glyphOrientationVertical]
   @scala.inline
-  def glyphOrientationVertical: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.glyphOrientationVertical = this.cast("glyphOrientationVertical")
+  def height: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.height = "height".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.height]
   @scala.inline
-  def height: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.height = this.cast("height")
+  def imeMode: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.imeMode = "imeMode".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.imeMode]
   @scala.inline
-  def imeMode: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.imeMode = this.cast("imeMode")
+  def justifyContent: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.justifyContent = "justifyContent".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.justifyContent]
   @scala.inline
-  def justifyContent: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.justifyContent = this.cast("justifyContent")
+  def kerning: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.kerning = "kerning".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.kerning]
   @scala.inline
-  def kerning: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.kerning = this.cast("kerning")
+  def left: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.left = "left".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.left]
   @scala.inline
-  def left: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.left = this.cast("left")
+  def letterSpacing: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.letterSpacing = "letterSpacing".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.letterSpacing]
   @scala.inline
-  def letterSpacing: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.letterSpacing = this.cast("letterSpacing")
+  def lightingColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.lightingColor = "lightingColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.lightingColor]
   @scala.inline
-  def lightingColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.lightingColor = this.cast("lightingColor")
+  def lineHeight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.lineHeight = "lineHeight".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.lineHeight]
   @scala.inline
-  def lineHeight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.lineHeight = this.cast("lineHeight")
+  def listStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStyle = "listStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStyle]
   @scala.inline
-  def listStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStyle = this.cast("listStyle")
+  def listStyleImage: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStyleImage = "listStyleImage".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStyleImage]
   @scala.inline
-  def listStyleImage: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStyleImage = this.cast("listStyleImage")
+  def listStylePosition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStylePosition = "listStylePosition".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStylePosition]
   @scala.inline
-  def listStylePosition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStylePosition = this.cast("listStylePosition")
+  def listStyleType: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStyleType = "listStyleType".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStyleType]
   @scala.inline
-  def listStyleType: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.listStyleType = this.cast("listStyleType")
+  def margin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.margin = "margin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.margin]
   @scala.inline
-  def margin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.margin = this.cast("margin")
+  def marginBottom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginBottom = "marginBottom".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginBottom]
   @scala.inline
-  def marginBottom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginBottom = this.cast("marginBottom")
+  def marginLeft: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginLeft = "marginLeft".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginLeft]
   @scala.inline
-  def marginLeft: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginLeft = this.cast("marginLeft")
+  def marginRight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginRight = "marginRight".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginRight]
   @scala.inline
-  def marginRight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginRight = this.cast("marginRight")
+  def marginTop: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginTop = "marginTop".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginTop]
   @scala.inline
-  def marginTop: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marginTop = this.cast("marginTop")
+  def marker: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marker = "marker".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marker]
   @scala.inline
-  def marker: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.marker = this.cast("marker")
+  def markerEnd: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.markerEnd = "markerEnd".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.markerEnd]
   @scala.inline
-  def markerEnd: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.markerEnd = this.cast("markerEnd")
+  def markerMid: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.markerMid = "markerMid".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.markerMid]
   @scala.inline
-  def markerMid: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.markerMid = this.cast("markerMid")
+  def markerStart: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.markerStart = "markerStart".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.markerStart]
   @scala.inline
-  def markerStart: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.markerStart = this.cast("markerStart")
+  def mask: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.mask = "mask".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.mask]
   @scala.inline
-  def mask: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.mask = this.cast("mask")
+  def maxHeight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.maxHeight = "maxHeight".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.maxHeight]
   @scala.inline
-  def maxHeight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.maxHeight = this.cast("maxHeight")
+  def maxWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.maxWidth = "maxWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.maxWidth]
   @scala.inline
-  def maxWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.maxWidth = this.cast("maxWidth")
+  def minHeight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.minHeight = "minHeight".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.minHeight]
   @scala.inline
-  def minHeight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.minHeight = this.cast("minHeight")
+  def minWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.minWidth = "minWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.minWidth]
   @scala.inline
-  def minWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.minWidth = this.cast("minWidth")
+  def msContentZoomChaining: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomChaining = "msContentZoomChaining".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomChaining]
   @scala.inline
-  def msContentZoomChaining: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomChaining = this.cast("msContentZoomChaining")
+  def msContentZoomLimit: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomLimit = "msContentZoomLimit".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomLimit]
   @scala.inline
-  def msContentZoomLimit: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomLimit = this.cast("msContentZoomLimit")
+  def msContentZoomLimitMax: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomLimitMax = "msContentZoomLimitMax".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomLimitMax]
   @scala.inline
-  def msContentZoomLimitMax: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomLimitMax = this.cast("msContentZoomLimitMax")
+  def msContentZoomLimitMin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomLimitMin = "msContentZoomLimitMin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomLimitMin]
   @scala.inline
-  def msContentZoomLimitMin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomLimitMin = this.cast("msContentZoomLimitMin")
+  def msContentZoomSnap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomSnap = "msContentZoomSnap".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomSnap]
   @scala.inline
-  def msContentZoomSnap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomSnap = this.cast("msContentZoomSnap")
+  def msContentZoomSnapPoints: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomSnapPoints = "msContentZoomSnapPoints".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomSnapPoints]
   @scala.inline
-  def msContentZoomSnapPoints: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomSnapPoints = this.cast("msContentZoomSnapPoints")
+  def msContentZoomSnapType: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomSnapType = "msContentZoomSnapType".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomSnapType]
   @scala.inline
-  def msContentZoomSnapType: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZoomSnapType = this.cast("msContentZoomSnapType")
+  def msContentZooming: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZooming = "msContentZooming".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZooming]
   @scala.inline
-  def msContentZooming: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msContentZooming = this.cast("msContentZooming")
+  def msFlowFrom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msFlowFrom = "msFlowFrom".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msFlowFrom]
   @scala.inline
-  def msFlowFrom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msFlowFrom = this.cast("msFlowFrom")
+  def msFlowInto: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msFlowInto = "msFlowInto".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msFlowInto]
   @scala.inline
-  def msFlowInto: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msFlowInto = this.cast("msFlowInto")
+  def msFontFeatureSettings: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msFontFeatureSettings = "msFontFeatureSettings".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msFontFeatureSettings]
   @scala.inline
-  def msFontFeatureSettings: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msFontFeatureSettings = this.cast("msFontFeatureSettings")
+  def msGridColumn: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumn = "msGridColumn".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumn]
   @scala.inline
-  def msGridColumn: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumn = this.cast("msGridColumn")
+  def msGridColumnAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumnAlign = "msGridColumnAlign".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumnAlign]
   @scala.inline
-  def msGridColumnAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumnAlign = this.cast("msGridColumnAlign")
+  def msGridColumnSpan: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumnSpan = "msGridColumnSpan".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumnSpan]
   @scala.inline
-  def msGridColumnSpan: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumnSpan = this.cast("msGridColumnSpan")
+  def msGridColumns: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumns = "msGridColumns".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumns]
   @scala.inline
-  def msGridColumns: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridColumns = this.cast("msGridColumns")
+  def msGridRow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRow = "msGridRow".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRow]
   @scala.inline
-  def msGridRow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRow = this.cast("msGridRow")
+  def msGridRowAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRowAlign = "msGridRowAlign".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRowAlign]
   @scala.inline
-  def msGridRowAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRowAlign = this.cast("msGridRowAlign")
+  def msGridRowSpan: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRowSpan = "msGridRowSpan".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRowSpan]
   @scala.inline
-  def msGridRowSpan: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRowSpan = this.cast("msGridRowSpan")
+  def msGridRows: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRows = "msGridRows".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRows]
   @scala.inline
-  def msGridRows: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msGridRows = this.cast("msGridRows")
+  def msHighContrastAdjust: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHighContrastAdjust = "msHighContrastAdjust".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHighContrastAdjust]
   @scala.inline
-  def msHighContrastAdjust: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHighContrastAdjust = this.cast("msHighContrastAdjust")
+  def msHyphenateLimitChars: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphenateLimitChars = "msHyphenateLimitChars".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphenateLimitChars]
   @scala.inline
-  def msHyphenateLimitChars: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphenateLimitChars = this.cast("msHyphenateLimitChars")
+  def msHyphenateLimitLines: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphenateLimitLines = "msHyphenateLimitLines".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphenateLimitLines]
   @scala.inline
-  def msHyphenateLimitLines: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphenateLimitLines = this.cast("msHyphenateLimitLines")
+  def msHyphenateLimitZone: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphenateLimitZone = "msHyphenateLimitZone".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphenateLimitZone]
   @scala.inline
-  def msHyphenateLimitZone: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphenateLimitZone = this.cast("msHyphenateLimitZone")
+  def msHyphens: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphens = "msHyphens".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphens]
   @scala.inline
-  def msHyphens: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msHyphens = this.cast("msHyphens")
+  def msImeAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msImeAlign = "msImeAlign".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msImeAlign]
   @scala.inline
-  def msImeAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msImeAlign = this.cast("msImeAlign")
+  def msOverflowStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msOverflowStyle = "msOverflowStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msOverflowStyle]
   @scala.inline
-  def msOverflowStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msOverflowStyle = this.cast("msOverflowStyle")
+  def msScrollChaining: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollChaining = "msScrollChaining".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollChaining]
   @scala.inline
-  def msScrollChaining: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollChaining = this.cast("msScrollChaining")
+  def msScrollLimit: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimit = "msScrollLimit".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimit]
   @scala.inline
-  def msScrollLimit: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimit = this.cast("msScrollLimit")
+  def msScrollLimitXMax: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitXMax = "msScrollLimitXMax".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitXMax]
   @scala.inline
-  def msScrollLimitXMax: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitXMax = this.cast("msScrollLimitXMax")
+  def msScrollLimitXMin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitXMin = "msScrollLimitXMin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitXMin]
   @scala.inline
-  def msScrollLimitXMin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitXMin = this.cast("msScrollLimitXMin")
+  def msScrollLimitYMax: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitYMax = "msScrollLimitYMax".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitYMax]
   @scala.inline
-  def msScrollLimitYMax: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitYMax = this.cast("msScrollLimitYMax")
+  def msScrollLimitYMin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitYMin = "msScrollLimitYMin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitYMin]
   @scala.inline
-  def msScrollLimitYMin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollLimitYMin = this.cast("msScrollLimitYMin")
+  def msScrollRails: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollRails = "msScrollRails".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollRails]
   @scala.inline
-  def msScrollRails: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollRails = this.cast("msScrollRails")
+  def msScrollSnapPointsX: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapPointsX = "msScrollSnapPointsX".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapPointsX]
   @scala.inline
-  def msScrollSnapPointsX: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapPointsX = this.cast("msScrollSnapPointsX")
+  def msScrollSnapPointsY: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapPointsY = "msScrollSnapPointsY".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapPointsY]
   @scala.inline
-  def msScrollSnapPointsY: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapPointsY = this.cast("msScrollSnapPointsY")
+  def msScrollSnapType: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapType = "msScrollSnapType".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapType]
   @scala.inline
-  def msScrollSnapType: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapType = this.cast("msScrollSnapType")
+  def msScrollSnapX: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapX = "msScrollSnapX".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapX]
   @scala.inline
-  def msScrollSnapX: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapX = this.cast("msScrollSnapX")
+  def msScrollSnapY: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapY = "msScrollSnapY".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapY]
   @scala.inline
-  def msScrollSnapY: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollSnapY = this.cast("msScrollSnapY")
+  def msScrollTranslation: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollTranslation = "msScrollTranslation".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollTranslation]
   @scala.inline
-  def msScrollTranslation: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msScrollTranslation = this.cast("msScrollTranslation")
+  def msTextCombineHorizontal: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTextCombineHorizontal = "msTextCombineHorizontal".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTextCombineHorizontal]
   @scala.inline
-  def msTextCombineHorizontal: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTextCombineHorizontal = this.cast("msTextCombineHorizontal")
+  def msTextSizeAdjust: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTextSizeAdjust = "msTextSizeAdjust".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTextSizeAdjust]
   @scala.inline
-  def msTextSizeAdjust: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTextSizeAdjust = this.cast("msTextSizeAdjust")
+  def msTouchAction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTouchAction = "msTouchAction".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTouchAction]
   @scala.inline
-  def msTouchAction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTouchAction = this.cast("msTouchAction")
+  def msTouchSelect: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTouchSelect = "msTouchSelect".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTouchSelect]
   @scala.inline
-  def msTouchSelect: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msTouchSelect = this.cast("msTouchSelect")
+  def msUserSelect: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msUserSelect = "msUserSelect".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msUserSelect]
   @scala.inline
-  def msUserSelect: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msUserSelect = this.cast("msUserSelect")
+  def msWrapFlow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msWrapFlow = "msWrapFlow".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msWrapFlow]
   @scala.inline
-  def msWrapFlow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msWrapFlow = this.cast("msWrapFlow")
+  def msWrapMargin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msWrapMargin = "msWrapMargin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msWrapMargin]
   @scala.inline
-  def msWrapMargin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msWrapMargin = this.cast("msWrapMargin")
+  def msWrapThrough: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msWrapThrough = "msWrapThrough".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msWrapThrough]
   @scala.inline
-  def msWrapThrough: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.msWrapThrough = this.cast("msWrapThrough")
+  def opacity: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.opacity = "opacity".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.opacity]
   @scala.inline
-  def opacity: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.opacity = this.cast("opacity")
+  def order: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.order = "order".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.order]
   @scala.inline
-  def order: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.order = this.cast("order")
+  def orphans: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.orphans = "orphans".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.orphans]
   @scala.inline
-  def orphans: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.orphans = this.cast("orphans")
+  def outline: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outline = "outline".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outline]
   @scala.inline
-  def outline: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outline = this.cast("outline")
+  def outlineColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outlineColor = "outlineColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outlineColor]
   @scala.inline
-  def outlineColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outlineColor = this.cast("outlineColor")
+  def outlineStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outlineStyle = "outlineStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outlineStyle]
   @scala.inline
-  def outlineStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outlineStyle = this.cast("outlineStyle")
+  def outlineWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outlineWidth = "outlineWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outlineWidth]
   @scala.inline
-  def outlineWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.outlineWidth = this.cast("outlineWidth")
+  def overflow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.overflow = "overflow".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.overflow]
   @scala.inline
-  def overflow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.overflow = this.cast("overflow")
+  def overflowX: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.overflowX = "overflowX".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.overflowX]
   @scala.inline
-  def overflowX: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.overflowX = this.cast("overflowX")
+  def overflowY: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.overflowY = "overflowY".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.overflowY]
   @scala.inline
-  def overflowY: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.overflowY = this.cast("overflowY")
+  def padding: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.padding = "padding".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.padding]
   @scala.inline
-  def padding: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.padding = this.cast("padding")
+  def paddingBottom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingBottom = "paddingBottom".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingBottom]
   @scala.inline
-  def paddingBottom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingBottom = this.cast("paddingBottom")
+  def paddingLeft: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingLeft = "paddingLeft".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingLeft]
   @scala.inline
-  def paddingLeft: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingLeft = this.cast("paddingLeft")
+  def paddingRight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingRight = "paddingRight".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingRight]
   @scala.inline
-  def paddingRight: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingRight = this.cast("paddingRight")
+  def paddingTop: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingTop = "paddingTop".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingTop]
   @scala.inline
-  def paddingTop: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.paddingTop = this.cast("paddingTop")
+  def pageBreakAfter: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pageBreakAfter = "pageBreakAfter".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pageBreakAfter]
   @scala.inline
-  def pageBreakAfter: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pageBreakAfter = this.cast("pageBreakAfter")
+  def pageBreakBefore: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pageBreakBefore = "pageBreakBefore".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pageBreakBefore]
   @scala.inline
-  def pageBreakBefore: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pageBreakBefore = this.cast("pageBreakBefore")
+  def pageBreakInside: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pageBreakInside = "pageBreakInside".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pageBreakInside]
   @scala.inline
-  def pageBreakInside: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pageBreakInside = this.cast("pageBreakInside")
+  def perspective: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.perspective = "perspective".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.perspective]
   @scala.inline
-  def perspective: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.perspective = this.cast("perspective")
+  def perspectiveOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.perspectiveOrigin = "perspectiveOrigin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.perspectiveOrigin]
   @scala.inline
-  def perspectiveOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.perspectiveOrigin = this.cast("perspectiveOrigin")
+  def pointerEvents: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pointerEvents = "pointerEvents".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pointerEvents]
   @scala.inline
-  def pointerEvents: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.pointerEvents = this.cast("pointerEvents")
+  def position: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.position = "position".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.position]
   @scala.inline
-  def position: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.position = this.cast("position")
+  def quotes: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.quotes = "quotes".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.quotes]
   @scala.inline
-  def quotes: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.quotes = this.cast("quotes")
+  def resize: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.resize = "resize".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.resize]
   @scala.inline
-  def resize: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.resize = this.cast("resize")
+  def right: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.right = "right".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.right]
   @scala.inline
-  def right: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.right = this.cast("right")
+  def rubyAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.rubyAlign = "rubyAlign".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.rubyAlign]
   @scala.inline
-  def rubyAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.rubyAlign = this.cast("rubyAlign")
+  def rubyOverhang: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.rubyOverhang = "rubyOverhang".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.rubyOverhang]
   @scala.inline
-  def rubyOverhang: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.rubyOverhang = this.cast("rubyOverhang")
+  def rubyPosition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.rubyPosition = "rubyPosition".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.rubyPosition]
   @scala.inline
-  def rubyPosition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.rubyPosition = this.cast("rubyPosition")
+  def stopColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.stopColor = "stopColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.stopColor]
   @scala.inline
-  def stopColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.stopColor = this.cast("stopColor")
+  def stopOpacity: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.stopOpacity = "stopOpacity".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.stopOpacity]
   @scala.inline
-  def stopOpacity: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.stopOpacity = this.cast("stopOpacity")
+  def stroke: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.stroke = "stroke".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.stroke]
   @scala.inline
-  def stroke: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.stroke = this.cast("stroke")
+  def strokeDasharray: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeDasharray = "strokeDasharray".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeDasharray]
   @scala.inline
-  def strokeDasharray: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeDasharray = this.cast("strokeDasharray")
+  def strokeDashoffset: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeDashoffset = "strokeDashoffset".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeDashoffset]
   @scala.inline
-  def strokeDashoffset: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeDashoffset = this.cast("strokeDashoffset")
+  def strokeLinecap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeLinecap = "strokeLinecap".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeLinecap]
   @scala.inline
-  def strokeLinecap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeLinecap = this.cast("strokeLinecap")
+  def strokeLinejoin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeLinejoin = "strokeLinejoin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeLinejoin]
   @scala.inline
-  def strokeLinejoin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeLinejoin = this.cast("strokeLinejoin")
+  def strokeMiterlimit: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeMiterlimit = "strokeMiterlimit".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeMiterlimit]
   @scala.inline
-  def strokeMiterlimit: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeMiterlimit = this.cast("strokeMiterlimit")
+  def strokeOpacity: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeOpacity = "strokeOpacity".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeOpacity]
   @scala.inline
-  def strokeOpacity: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeOpacity = this.cast("strokeOpacity")
+  def strokeWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeWidth = "strokeWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeWidth]
   @scala.inline
-  def strokeWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.strokeWidth = this.cast("strokeWidth")
+  def tableLayout: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.tableLayout = "tableLayout".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.tableLayout]
   @scala.inline
-  def tableLayout: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.tableLayout = this.cast("tableLayout")
+  def textAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textAlign = "textAlign".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textAlign]
   @scala.inline
-  def textAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textAlign = this.cast("textAlign")
+  def textAlignLast: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textAlignLast = "textAlignLast".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textAlignLast]
   @scala.inline
-  def textAlignLast: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textAlignLast = this.cast("textAlignLast")
+  def textAnchor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textAnchor = "textAnchor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textAnchor]
   @scala.inline
-  def textAnchor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textAnchor = this.cast("textAnchor")
+  def textDecoration: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textDecoration = "textDecoration".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textDecoration]
   @scala.inline
-  def textDecoration: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textDecoration = this.cast("textDecoration")
+  def textIndent: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textIndent = "textIndent".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textIndent]
   @scala.inline
-  def textIndent: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textIndent = this.cast("textIndent")
+  def textJustify: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textJustify = "textJustify".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textJustify]
   @scala.inline
-  def textJustify: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textJustify = this.cast("textJustify")
+  def textKashida: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textKashida = "textKashida".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textKashida]
   @scala.inline
-  def textKashida: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textKashida = this.cast("textKashida")
+  def textKashidaSpace: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textKashidaSpace = "textKashidaSpace".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textKashidaSpace]
   @scala.inline
-  def textKashidaSpace: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textKashidaSpace = this.cast("textKashidaSpace")
+  def textOverflow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textOverflow = "textOverflow".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textOverflow]
   @scala.inline
-  def textOverflow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textOverflow = this.cast("textOverflow")
+  def textShadow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textShadow = "textShadow".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textShadow]
   @scala.inline
-  def textShadow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textShadow = this.cast("textShadow")
+  def textTransform: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textTransform = "textTransform".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textTransform]
   @scala.inline
-  def textTransform: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textTransform = this.cast("textTransform")
+  def textUnderlinePosition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textUnderlinePosition = "textUnderlinePosition".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textUnderlinePosition]
   @scala.inline
-  def textUnderlinePosition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.textUnderlinePosition = this.cast("textUnderlinePosition")
+  def top: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.top = "top".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.top]
   @scala.inline
-  def top: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.top = this.cast("top")
+  def touchAction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.touchAction = "touchAction".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.touchAction]
   @scala.inline
-  def touchAction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.touchAction = this.cast("touchAction")
+  def transform: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transform = "transform".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transform]
   @scala.inline
-  def transform: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transform = this.cast("transform")
+  def transformOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transformOrigin = "transformOrigin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transformOrigin]
   @scala.inline
-  def transformOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transformOrigin = this.cast("transformOrigin")
+  def transformStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transformStyle = "transformStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transformStyle]
   @scala.inline
-  def transformStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transformStyle = this.cast("transformStyle")
+  def transition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transition = "transition".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transition]
   @scala.inline
-  def transition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transition = this.cast("transition")
+  def transitionDelay: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionDelay = "transitionDelay".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionDelay]
   @scala.inline
-  def transitionDelay: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionDelay = this.cast("transitionDelay")
+  def transitionDuration: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionDuration = "transitionDuration".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionDuration]
   @scala.inline
-  def transitionDuration: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionDuration = this.cast("transitionDuration")
+  def transitionProperty: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionProperty = "transitionProperty".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionProperty]
   @scala.inline
-  def transitionProperty: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionProperty = this.cast("transitionProperty")
+  def transitionTimingFunction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionTimingFunction = "transitionTimingFunction".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionTimingFunction]
   @scala.inline
-  def transitionTimingFunction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.transitionTimingFunction = this.cast("transitionTimingFunction")
+  def unicodeBidi: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.unicodeBidi = "unicodeBidi".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.unicodeBidi]
   @scala.inline
-  def unicodeBidi: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.unicodeBidi = this.cast("unicodeBidi")
+  def verticalAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.verticalAlign = "verticalAlign".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.verticalAlign]
   @scala.inline
-  def verticalAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.verticalAlign = this.cast("verticalAlign")
+  def visibility: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.visibility = "visibility".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.visibility]
   @scala.inline
-  def visibility: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.visibility = this.cast("visibility")
+  def webkitAlignContent: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAlignContent = "webkitAlignContent".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAlignContent]
   @scala.inline
-  def webkitAlignContent: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAlignContent = this.cast("webkitAlignContent")
+  def webkitAlignItems: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAlignItems = "webkitAlignItems".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAlignItems]
   @scala.inline
-  def webkitAlignItems: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAlignItems = this.cast("webkitAlignItems")
+  def webkitAlignSelf: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAlignSelf = "webkitAlignSelf".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAlignSelf]
   @scala.inline
-  def webkitAlignSelf: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAlignSelf = this.cast("webkitAlignSelf")
+  def webkitAnimation: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimation = "webkitAnimation".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimation]
   @scala.inline
-  def webkitAnimation: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimation = this.cast("webkitAnimation")
+  def webkitAnimationDelay: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationDelay = "webkitAnimationDelay".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationDelay]
   @scala.inline
-  def webkitAnimationDelay: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationDelay = this.cast("webkitAnimationDelay")
+  def webkitAnimationDirection: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationDirection = "webkitAnimationDirection".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationDirection]
   @scala.inline
-  def webkitAnimationDirection: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationDirection = this.cast("webkitAnimationDirection")
+  def webkitAnimationDuration: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationDuration = "webkitAnimationDuration".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationDuration]
   @scala.inline
-  def webkitAnimationDuration: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationDuration = this.cast("webkitAnimationDuration")
+  def webkitAnimationFillMode: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationFillMode = "webkitAnimationFillMode".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationFillMode]
   @scala.inline
-  def webkitAnimationFillMode: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationFillMode = this.cast("webkitAnimationFillMode")
+  def webkitAnimationIterationCount: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationIterationCount = "webkitAnimationIterationCount".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationIterationCount]
   @scala.inline
-  def webkitAnimationIterationCount: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationIterationCount = this.cast("webkitAnimationIterationCount")
+  def webkitAnimationName: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationName = "webkitAnimationName".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationName]
   @scala.inline
-  def webkitAnimationName: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationName = this.cast("webkitAnimationName")
+  def webkitAnimationPlayState: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationPlayState = "webkitAnimationPlayState".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationPlayState]
   @scala.inline
-  def webkitAnimationPlayState: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationPlayState = this.cast("webkitAnimationPlayState")
+  def webkitAnimationTimingFunction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationTimingFunction = "webkitAnimationTimingFunction".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationTimingFunction]
   @scala.inline
-  def webkitAnimationTimingFunction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAnimationTimingFunction = this.cast("webkitAnimationTimingFunction")
+  def webkitAppearance: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAppearance = "webkitAppearance".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAppearance]
   @scala.inline
-  def webkitAppearance: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitAppearance = this.cast("webkitAppearance")
+  def webkitBackfaceVisibility: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackfaceVisibility = "webkitBackfaceVisibility".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackfaceVisibility]
   @scala.inline
-  def webkitBackfaceVisibility: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackfaceVisibility = this.cast("webkitBackfaceVisibility")
+  def webkitBackgroundClip: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackgroundClip = "webkitBackgroundClip".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackgroundClip]
   @scala.inline
-  def webkitBackgroundClip: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackgroundClip = this.cast("webkitBackgroundClip")
+  def webkitBackgroundOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackgroundOrigin = "webkitBackgroundOrigin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackgroundOrigin]
   @scala.inline
-  def webkitBackgroundOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackgroundOrigin = this.cast("webkitBackgroundOrigin")
+  def webkitBackgroundSize: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackgroundSize = "webkitBackgroundSize".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackgroundSize]
   @scala.inline
-  def webkitBackgroundSize: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBackgroundSize = this.cast("webkitBackgroundSize")
+  def webkitBorderBottomLeftRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderBottomLeftRadius = "webkitBorderBottomLeftRadius".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderBottomLeftRadius]
   @scala.inline
-  def webkitBorderBottomLeftRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderBottomLeftRadius = this.cast("webkitBorderBottomLeftRadius")
+  def webkitBorderBottomRightRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderBottomRightRadius = "webkitBorderBottomRightRadius".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderBottomRightRadius]
   @scala.inline
-  def webkitBorderBottomRightRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderBottomRightRadius = this.cast("webkitBorderBottomRightRadius")
+  def webkitBorderImage: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderImage = "webkitBorderImage".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderImage]
   @scala.inline
-  def webkitBorderImage: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderImage = this.cast("webkitBorderImage")
+  def webkitBorderRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderRadius = "webkitBorderRadius".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderRadius]
   @scala.inline
-  def webkitBorderRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderRadius = this.cast("webkitBorderRadius")
+  def webkitBorderTopLeftRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderTopLeftRadius = "webkitBorderTopLeftRadius".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderTopLeftRadius]
   @scala.inline
-  def webkitBorderTopLeftRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderTopLeftRadius = this.cast("webkitBorderTopLeftRadius")
+  def webkitBorderTopRightRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderTopRightRadius = "webkitBorderTopRightRadius".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderTopRightRadius]
   @scala.inline
-  def webkitBorderTopRightRadius: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBorderTopRightRadius = this.cast("webkitBorderTopRightRadius")
+  def webkitBoxAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxAlign = "webkitBoxAlign".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxAlign]
   @scala.inline
-  def webkitBoxAlign: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxAlign = this.cast("webkitBoxAlign")
+  def webkitBoxDirection: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxDirection = "webkitBoxDirection".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxDirection]
   @scala.inline
-  def webkitBoxDirection: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxDirection = this.cast("webkitBoxDirection")
+  def webkitBoxFlex: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxFlex = "webkitBoxFlex".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxFlex]
   @scala.inline
-  def webkitBoxFlex: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxFlex = this.cast("webkitBoxFlex")
+  def webkitBoxOrdinalGroup: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxOrdinalGroup = "webkitBoxOrdinalGroup".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxOrdinalGroup]
   @scala.inline
-  def webkitBoxOrdinalGroup: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxOrdinalGroup = this.cast("webkitBoxOrdinalGroup")
+  def webkitBoxOrient: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxOrient = "webkitBoxOrient".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxOrient]
   @scala.inline
-  def webkitBoxOrient: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxOrient = this.cast("webkitBoxOrient")
+  def webkitBoxPack: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxPack = "webkitBoxPack".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxPack]
   @scala.inline
-  def webkitBoxPack: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxPack = this.cast("webkitBoxPack")
+  def webkitBoxSizing: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxSizing = "webkitBoxSizing".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxSizing]
   @scala.inline
-  def webkitBoxSizing: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitBoxSizing = this.cast("webkitBoxSizing")
+  def webkitColumnBreakAfter: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnBreakAfter = "webkitColumnBreakAfter".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnBreakAfter]
   @scala.inline
-  def webkitColumnBreakAfter: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnBreakAfter = this.cast("webkitColumnBreakAfter")
+  def webkitColumnBreakBefore: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnBreakBefore = "webkitColumnBreakBefore".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnBreakBefore]
   @scala.inline
-  def webkitColumnBreakBefore: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnBreakBefore = this.cast("webkitColumnBreakBefore")
+  def webkitColumnBreakInside: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnBreakInside = "webkitColumnBreakInside".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnBreakInside]
   @scala.inline
-  def webkitColumnBreakInside: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnBreakInside = this.cast("webkitColumnBreakInside")
+  def webkitColumnCount: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnCount = "webkitColumnCount".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnCount]
   @scala.inline
-  def webkitColumnCount: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnCount = this.cast("webkitColumnCount")
+  def webkitColumnGap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnGap = "webkitColumnGap".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnGap]
   @scala.inline
-  def webkitColumnGap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnGap = this.cast("webkitColumnGap")
+  def webkitColumnRule: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRule = "webkitColumnRule".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRule]
   @scala.inline
-  def webkitColumnRule: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRule = this.cast("webkitColumnRule")
+  def webkitColumnRuleColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRuleColor = "webkitColumnRuleColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRuleColor]
   @scala.inline
-  def webkitColumnRuleColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRuleColor = this.cast("webkitColumnRuleColor")
+  def webkitColumnRuleStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRuleStyle = "webkitColumnRuleStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRuleStyle]
   @scala.inline
-  def webkitColumnRuleStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRuleStyle = this.cast("webkitColumnRuleStyle")
+  def webkitColumnRuleWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRuleWidth = "webkitColumnRuleWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRuleWidth]
   @scala.inline
-  def webkitColumnRuleWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnRuleWidth = this.cast("webkitColumnRuleWidth")
+  def webkitColumnSpan: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnSpan = "webkitColumnSpan".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnSpan]
   @scala.inline
-  def webkitColumnSpan: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnSpan = this.cast("webkitColumnSpan")
+  def webkitColumnWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnWidth = "webkitColumnWidth".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnWidth]
   @scala.inline
-  def webkitColumnWidth: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumnWidth = this.cast("webkitColumnWidth")
+  def webkitColumns: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumns = "webkitColumns".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumns]
   @scala.inline
-  def webkitColumns: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitColumns = this.cast("webkitColumns")
+  def webkitFilter: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFilter = "webkitFilter".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFilter]
   @scala.inline
-  def webkitFilter: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFilter = this.cast("webkitFilter")
+  def webkitFlex: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlex = "webkitFlex".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlex]
   @scala.inline
-  def webkitFlex: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlex = this.cast("webkitFlex")
+  def webkitFlexBasis: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexBasis = "webkitFlexBasis".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexBasis]
   @scala.inline
-  def webkitFlexBasis: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexBasis = this.cast("webkitFlexBasis")
+  def webkitFlexDirection: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexDirection = "webkitFlexDirection".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexDirection]
   @scala.inline
-  def webkitFlexDirection: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexDirection = this.cast("webkitFlexDirection")
+  def webkitFlexFlow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexFlow = "webkitFlexFlow".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexFlow]
   @scala.inline
-  def webkitFlexFlow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexFlow = this.cast("webkitFlexFlow")
+  def webkitFlexGrow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexGrow = "webkitFlexGrow".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexGrow]
   @scala.inline
-  def webkitFlexGrow: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexGrow = this.cast("webkitFlexGrow")
+  def webkitFlexShrink: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexShrink = "webkitFlexShrink".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexShrink]
   @scala.inline
-  def webkitFlexShrink: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexShrink = this.cast("webkitFlexShrink")
+  def webkitFlexWrap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexWrap = "webkitFlexWrap".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexWrap]
   @scala.inline
-  def webkitFlexWrap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitFlexWrap = this.cast("webkitFlexWrap")
+  def webkitJustifyContent: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitJustifyContent = "webkitJustifyContent".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitJustifyContent]
   @scala.inline
-  def webkitJustifyContent: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitJustifyContent = this.cast("webkitJustifyContent")
+  def webkitOrder: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitOrder = "webkitOrder".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitOrder]
   @scala.inline
-  def webkitOrder: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitOrder = this.cast("webkitOrder")
+  def webkitPerspective: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitPerspective = "webkitPerspective".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitPerspective]
   @scala.inline
-  def webkitPerspective: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitPerspective = this.cast("webkitPerspective")
+  def webkitPerspectiveOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitPerspectiveOrigin = "webkitPerspectiveOrigin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitPerspectiveOrigin]
   @scala.inline
-  def webkitPerspectiveOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitPerspectiveOrigin = this.cast("webkitPerspectiveOrigin")
+  def webkitTapHighlightColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTapHighlightColor = "webkitTapHighlightColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTapHighlightColor]
   @scala.inline
-  def webkitTapHighlightColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTapHighlightColor = this.cast("webkitTapHighlightColor")
+  def webkitTextFillColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTextFillColor = "webkitTextFillColor".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTextFillColor]
   @scala.inline
-  def webkitTextFillColor: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTextFillColor = this.cast("webkitTextFillColor")
+  def webkitTextSizeAdjust: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTextSizeAdjust = "webkitTextSizeAdjust".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTextSizeAdjust]
   @scala.inline
-  def webkitTextSizeAdjust: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTextSizeAdjust = this.cast("webkitTextSizeAdjust")
+  def webkitTransform: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransform = "webkitTransform".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransform]
   @scala.inline
-  def webkitTransform: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransform = this.cast("webkitTransform")
+  def webkitTransformOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransformOrigin = "webkitTransformOrigin".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransformOrigin]
   @scala.inline
-  def webkitTransformOrigin: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransformOrigin = this.cast("webkitTransformOrigin")
+  def webkitTransformStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransformStyle = "webkitTransformStyle".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransformStyle]
   @scala.inline
-  def webkitTransformStyle: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransformStyle = this.cast("webkitTransformStyle")
+  def webkitTransition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransition = "webkitTransition".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransition]
   @scala.inline
-  def webkitTransition: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransition = this.cast("webkitTransition")
+  def webkitTransitionDelay: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionDelay = "webkitTransitionDelay".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionDelay]
   @scala.inline
-  def webkitTransitionDelay: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionDelay = this.cast("webkitTransitionDelay")
+  def webkitTransitionDuration: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionDuration = "webkitTransitionDuration".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionDuration]
   @scala.inline
-  def webkitTransitionDuration: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionDuration = this.cast("webkitTransitionDuration")
+  def webkitTransitionProperty: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionProperty = "webkitTransitionProperty".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionProperty]
   @scala.inline
-  def webkitTransitionProperty: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionProperty = this.cast("webkitTransitionProperty")
+  def webkitTransitionTimingFunction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionTimingFunction = "webkitTransitionTimingFunction".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionTimingFunction]
   @scala.inline
-  def webkitTransitionTimingFunction: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitTransitionTimingFunction = this.cast("webkitTransitionTimingFunction")
+  def webkitUserModify: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitUserModify = "webkitUserModify".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitUserModify]
   @scala.inline
-  def webkitUserModify: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitUserModify = this.cast("webkitUserModify")
+  def webkitUserSelect: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitUserSelect = "webkitUserSelect".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitUserSelect]
   @scala.inline
-  def webkitUserSelect: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitUserSelect = this.cast("webkitUserSelect")
+  def webkitWritingMode: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitWritingMode = "webkitWritingMode".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitWritingMode]
   @scala.inline
-  def webkitWritingMode: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.webkitWritingMode = this.cast("webkitWritingMode")
+  def whiteSpace: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.whiteSpace = "whiteSpace".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.whiteSpace]
   @scala.inline
-  def whiteSpace: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.whiteSpace = this.cast("whiteSpace")
+  def widows: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.widows = "widows".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.widows]
   @scala.inline
-  def widows: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.widows = this.cast("widows")
+  def width: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.width = "width".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.width]
   @scala.inline
-  def width: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.width = this.cast("width")
+  def wordBreak: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.wordBreak = "wordBreak".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.wordBreak]
   @scala.inline
-  def wordBreak: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.wordBreak = this.cast("wordBreak")
+  def wordSpacing: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.wordSpacing = "wordSpacing".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.wordSpacing]
   @scala.inline
-  def wordSpacing: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.wordSpacing = this.cast("wordSpacing")
+  def wordWrap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.wordWrap = "wordWrap".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.wordWrap]
   @scala.inline
-  def wordWrap: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.wordWrap = this.cast("wordWrap")
+  def writingMode: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.writingMode = "writingMode".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.writingMode]
   @scala.inline
-  def writingMode: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.writingMode = this.cast("writingMode")
+  def zIndex: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.zIndex = "zIndex".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.zIndex]
   @scala.inline
-  def zIndex: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.zIndex = this.cast("zIndex")
-  @scala.inline
-  def zoom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.zoom = this.cast("zoom")
+  def zoom: typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.zoom = "zoom".asInstanceOf[typingsSlinky.phosphorVirtualdom.phosphorVirtualdomStrings.zoom]
 }
 

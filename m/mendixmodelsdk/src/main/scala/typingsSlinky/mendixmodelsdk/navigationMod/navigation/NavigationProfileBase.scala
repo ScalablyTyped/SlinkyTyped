@@ -12,7 +12,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -38,28 +38,20 @@ abstract class NavigationProfileBase protected ()
     */
   @JSName("name")
   val name_FNavigationProfileBase: String = js.native
-  /**
-    * Returns the qualified name of this element, or
-    * null if this element is not a part of the model,
-    * or if it or one of its namespace containers does not have a
-    * valid name.
-    */
-  /* CompleteClass */
-  override val qualifiedName: String | Null = js.native
-  def containerAsNavigationDocument(): NavigationDocument = js.native
+  def containerAsNavigationDocument: NavigationDocument = js.native
   /**
     * In version 7.2.0: introduced
     */
-  def name(): String = js.native
+  def name: String = js.native
   def name(newValue: String): js.Any = js.native
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
     * In version 7.22.0: introduced
     */
-  def offlineEntityConfigs(): IList[OfflineEntityConfig] | Null = js.native
+  def offlineEntityConfigs: IList[OfflineEntityConfig] | Null = js.native
   @JSName("qualifiedName")
-  def qualifiedName_MNavigationProfileBase(): String | Null = js.native
+  def qualifiedName_MNavigationProfileBase: String | Null = js.native
 }
 
 /* static members */

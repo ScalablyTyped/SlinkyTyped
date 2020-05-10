@@ -17,20 +17,18 @@ trait UrlMatches extends Permission
 
 object UrlMatches {
   @scala.inline
-  def Lessthansignall_urlsGreaterthansign: typingsSlinky.chromeApps.chromeAppsStrings.Lessthansignall_urlsGreaterthansign = this.cast("<all_urls>")
+  def Lessthansignall_urlsGreaterthansign: typingsSlinky.chromeApps.chromeAppsStrings.Lessthansignall_urlsGreaterthansign = "<all_urls>".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.Lessthansignall_urlsGreaterthansign]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def chromeColonSlashSlashfaviconSlash: typingsSlinky.chromeApps.chromeAppsStrings.chromeColonSlashSlashfaviconSlash = "chrome://favicon/".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.chromeColonSlashSlashfaviconSlash]
   @scala.inline
-  def chromeColonSlashSlashfaviconSlash: typingsSlinky.chromeApps.chromeAppsStrings.chromeColonSlashSlashfaviconSlash = this.cast("chrome://favicon/")
+  def fileColonSlashSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.fileColonSlashSlashSlashAsteriskSlashAsterisk = "file:///*/*".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.fileColonSlashSlashSlashAsteriskSlashAsterisk]
   @scala.inline
-  def fileColonSlashSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.fileColonSlashSlashSlashAsteriskSlashAsterisk = this.cast("file:///*/*")
+  def httpColonSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpColonSlashSlashAsteriskSlashAsterisk = "http://*/*".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.httpColonSlashSlashAsteriskSlashAsterisk]
   @scala.inline
-  def httpColonSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpColonSlashSlashAsteriskSlashAsterisk = this.cast("http://*/*")
+  def httpsColonSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashAsteriskSlashAsterisk = "https://*/*".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashAsteriskSlashAsterisk]
   @scala.inline
-  def httpsColonSlashSlashAsteriskSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashAsteriskSlashAsterisk = this.cast("https://*/*")
+  def `httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk`: typingsSlinky.chromeApps.chromeAppsStrings.`httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk` = "https://www.google-analytics.com/*".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.`httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk`]
   @scala.inline
-  def `httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk`: typingsSlinky.chromeApps.chromeAppsStrings.`httpsColonSlashSlashwwwDotgoogle-analyticsDotcomSlashAsterisk` = this.cast("https://www.google-analytics.com/*")
-  @scala.inline
-  def httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk = this.cast("https://www.googleapis.com/*")
+  def httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk: typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk = "https://www.googleapis.com/*".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.httpsColonSlashSlashwwwDotgoogleapisDotcomSlashAsterisk]
 }
 

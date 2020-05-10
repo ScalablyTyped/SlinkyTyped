@@ -1,25 +1,39 @@
 package typingsSlinky.pouchdbCore.PouchDB.Core
 
-import org.scalajs.dom.experimental.Request
-import org.scalajs.dom.experimental.RequestInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CompactOptions extends Options {
-  var interval: js.UndefOr[Double] = js.undefined
+  var interval: js.UndefOr[Double] = js.native
 }
 
 object CompactOptions {
   @scala.inline
-  def apply(
-    fetch: (/* url */ String | Request, /* opts */ js.UndefOr[RequestInit]) => js.Promise[org.scalajs.dom.experimental.Response] = null,
-    interval: Int | Double = null
-  ): CompactOptions = {
+  def apply(): CompactOptions = {
     val __obj = js.Dynamic.literal()
-    if (fetch != null) __obj.updateDynamic("fetch")(js.Any.fromFunction2(fetch))
-    if (interval != null) __obj.updateDynamic("interval")(interval.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompactOptions]
   }
+  @scala.inline
+  implicit class CompactOptionsOps[Self <: CompactOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInterval: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

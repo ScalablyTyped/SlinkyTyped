@@ -4,28 +4,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait VastCreativeNonLinear extends VastCreative {
-  var variations: js.Array[VastNonLinearAd]
+  var variations: js.Array[VastNonLinearAd] = js.native
 }
 
 object VastCreativeNonLinear {
   @scala.inline
-  def apply(
-    trackingEvents: VastTrackingEvents,
-    `type`: String,
-    variations: js.Array[VastNonLinearAd],
-    adId: String = null,
-    apiFramework: String = null,
-    id: String = null,
-    sequence: String | Double = null
-  ): VastCreativeNonLinear = {
+  def apply(trackingEvents: VastTrackingEvents, `type`: String, variations: js.Array[VastNonLinearAd]): VastCreativeNonLinear = {
     val __obj = js.Dynamic.literal(trackingEvents = trackingEvents.asInstanceOf[js.Any], variations = variations.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (adId != null) __obj.updateDynamic("adId")(adId.asInstanceOf[js.Any])
-    if (apiFramework != null) __obj.updateDynamic("apiFramework")(apiFramework.asInstanceOf[js.Any])
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (sequence != null) __obj.updateDynamic("sequence")(sequence.asInstanceOf[js.Any])
     __obj.asInstanceOf[VastCreativeNonLinear]
   }
+  @scala.inline
+  implicit class VastCreativeNonLinearOps[Self <: VastCreativeNonLinear] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVariations(value: js.Array[VastNonLinearAd]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("variations")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

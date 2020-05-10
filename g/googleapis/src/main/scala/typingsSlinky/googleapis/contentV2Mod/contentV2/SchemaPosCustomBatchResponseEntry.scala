@@ -35,22 +35,89 @@ trait SchemaPosCustomBatchResponseEntry extends js.Object {
 
 object SchemaPosCustomBatchResponseEntry {
   @scala.inline
-  def apply(
-    batchId: Int | Double = null,
-    errors: SchemaErrors = null,
-    inventory: SchemaPosInventory = null,
-    kind: String = null,
-    sale: SchemaPosSale = null,
-    store: SchemaPosStore = null
-  ): SchemaPosCustomBatchResponseEntry = {
+  def apply(): SchemaPosCustomBatchResponseEntry = {
     val __obj = js.Dynamic.literal()
-    if (batchId != null) __obj.updateDynamic("batchId")(batchId.asInstanceOf[js.Any])
-    if (errors != null) __obj.updateDynamic("errors")(errors.asInstanceOf[js.Any])
-    if (inventory != null) __obj.updateDynamic("inventory")(inventory.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (sale != null) __obj.updateDynamic("sale")(sale.asInstanceOf[js.Any])
-    if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPosCustomBatchResponseEntry]
   }
+  @scala.inline
+  implicit class SchemaPosCustomBatchResponseEntryOps[Self <: SchemaPosCustomBatchResponseEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBatchId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withErrors(value: SchemaErrors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInventory(value: SchemaPosInventory): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inventory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInventory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inventory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSale(value: SchemaPosSale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSale: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sale")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStore(value: SchemaPosStore): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStore: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

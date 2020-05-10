@@ -36,20 +36,77 @@ trait SchemaAccountStatus extends js.Object {
 
 object SchemaAccountStatus {
   @scala.inline
-  def apply(
-    accountId: String = null,
-    accountLevelIssues: js.Array[SchemaAccountStatusAccountLevelIssue] = null,
-    kind: String = null,
-    products: js.Array[SchemaAccountStatusProducts] = null,
-    websiteClaimed: js.UndefOr[Boolean] = js.undefined
-  ): SchemaAccountStatus = {
+  def apply(): SchemaAccountStatus = {
     val __obj = js.Dynamic.literal()
-    if (accountId != null) __obj.updateDynamic("accountId")(accountId.asInstanceOf[js.Any])
-    if (accountLevelIssues != null) __obj.updateDynamic("accountLevelIssues")(accountLevelIssues.asInstanceOf[js.Any])
-    if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
-    if (products != null) __obj.updateDynamic("products")(products.asInstanceOf[js.Any])
-    if (!js.isUndefined(websiteClaimed)) __obj.updateDynamic("websiteClaimed")(websiteClaimed.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaAccountStatus]
   }
+  @scala.inline
+  implicit class SchemaAccountStatusOps[Self <: SchemaAccountStatus] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAccountLevelIssues(value: js.Array[SchemaAccountStatusAccountLevelIssue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountLevelIssues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccountLevelIssues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accountLevelIssues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKind: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProducts(value: js.Array[SchemaAccountStatusProducts]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("products")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProducts: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("products")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWebsiteClaimed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteClaimed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebsiteClaimed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("websiteClaimed")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -11,49 +11,50 @@ import scala.scalajs.js.annotation._
   * an action that triggers a watched DOM event that bubbles up to document.body, this will reset the
   * idle/warning state and start the process over again.
   */
+@js.native
 trait IIdleService extends js.Object {
   /**
     * Gets the current idle value
     */
-  def getIdle(): Double
+  def getIdle(): Double = js.native
   /**
     * Gets the current timeout value
     */
-  def getTimeout(): Double
+  def getTimeout(): Double = js.native
   /**
     * Whether or not the user appears to be idle.
     */
-  def idling(): Boolean
+  def idling(): Boolean = js.native
   /**
     * Manually trigger the idle interrupt that normally occurs during user activity.
     */
-  def interrupt(): js.Any
+  def interrupt(): js.Any = js.native
   /**
     * Whether user has timed out (meaning idleDuration + timeout has passed without any activity)
     */
-  def isExpired(): Boolean
+  def isExpired(): Boolean = js.native
   /**
     * Whether or not the watch() has been called and it is watching for idleness.
     */
-  def running(): Boolean
+  def running(): Boolean = js.native
   /**
     * Updates the idle value (see IdleProvider.idle()) and
     * restarts the watch if its running.
     */
-  def setIdle(idle: Double): Unit
+  def setIdle(idle: Double): Unit = js.native
   /**
     * Updates the timeout value (see IdleProvider.timeout()) and
     * restarts the watch if its running.
     */
-  def setTimeout(timeout: Double): Unit
+  def setTimeout(timeout: Double): Unit = js.native
   /**
     * Stops watching for idleness, and resets the idle/warning state.
     */
-  def unwatch(): Unit
+  def unwatch(): Unit = js.native
   /**
     * Starts watching for idleness, or resets the idle/warning state and continues watching.
     */
-  def watch(): Unit
+  def watch(): Unit = js.native
 }
 
 object IIdleService {
@@ -71,8 +72,75 @@ object IIdleService {
     watch: () => Unit
   ): IIdleService = {
     val __obj = js.Dynamic.literal(getIdle = js.Any.fromFunction0(getIdle), getTimeout = js.Any.fromFunction0(getTimeout), idling = js.Any.fromFunction0(idling), interrupt = js.Any.fromFunction0(interrupt), isExpired = js.Any.fromFunction0(isExpired), running = js.Any.fromFunction0(running), setIdle = js.Any.fromFunction1(setIdle), setTimeout = js.Any.fromFunction1(setTimeout), unwatch = js.Any.fromFunction0(unwatch), watch = js.Any.fromFunction0(watch))
-  
     __obj.asInstanceOf[IIdleService]
   }
+  @scala.inline
+  implicit class IIdleServiceOps[Self <: IIdleService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetIdle(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getIdle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTimeout(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTimeout")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIdling(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idling")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInterrupt(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interrupt")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsExpired(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpired")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRunning(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("running")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetIdle(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIdle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTimeout(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTimeout")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUnwatch(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unwatch")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWatch(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -19,36 +19,5 @@ class NativeFlowCls protected () extends NativeFlow {
     * @constructor
     */
   def this(options: js.Any) = this()
-  /**
-    * @param {String} code An authorization code obtained via `asanaAuthorizeUrl`.
-    * @return {Promise<Object>} The token, which will include the `access_token`
-    *     used for API access, as well as a `refresh_token` which can be stored
-    *     to get a new access token without going through the flow again.
-    * @param code
-    */
-  /* CompleteClass */
-  override def accessToken(code: String): Unit = js.native
-  /**
-    * @returns {String} The URL used to authorize the user for the app.
-    * @return
-    */
-  /* CompleteClass */
-  override def authorizeUrl(): String = js.native
-  /**
-    * @return {Promise} The access token, which will include a refresh token
-    *     that can be stored in the future to create a client without going
-    *     through the Oauth flow.
-    * @param url
-    * @return
-    */
-  /* CompleteClass */
-  override def promptForCode(url: String): js.Any = js.native
-  /**
-    * Run the appropriate parts of the Oauth flow, attempting to establish user
-    * authorization.
-    * @returns {Promise<Object>} A promise that resolves to the Oauth credentials.
-    */
-  /* CompleteClass */
-  override def run(): Unit = js.native
 }
 

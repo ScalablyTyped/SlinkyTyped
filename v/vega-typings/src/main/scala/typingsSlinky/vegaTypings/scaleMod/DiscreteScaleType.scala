@@ -13,12 +13,10 @@ trait DiscreteScaleType extends js.Object
 
 object DiscreteScaleType {
   @scala.inline
-  def band: typingsSlinky.vegaTypings.vegaTypingsStrings.band = this.cast("band")
+  def band: typingsSlinky.vegaTypings.vegaTypingsStrings.band = "band".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.band]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def ordinal: typingsSlinky.vegaTypings.vegaTypingsStrings.ordinal = "ordinal".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.ordinal]
   @scala.inline
-  def ordinal: typingsSlinky.vegaTypings.vegaTypingsStrings.ordinal = this.cast("ordinal")
-  @scala.inline
-  def point: typingsSlinky.vegaTypings.vegaTypingsStrings.point = this.cast("point")
+  def point: typingsSlinky.vegaTypings.vegaTypingsStrings.point = "point".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.point]
 }
 

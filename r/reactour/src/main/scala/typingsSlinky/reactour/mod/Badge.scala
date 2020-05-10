@@ -1,12 +1,12 @@
 package typingsSlinky.reactour.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.react.mod.FC
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("reactour", "Badge")
 @js.native
-object Badge extends TopLevel[FC[BadgeProps]]
+object Badge extends TopLevel[ReactComponentClass[BadgeProps]]
 

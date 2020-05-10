@@ -39,12 +39,60 @@ object PutComplianceItemsRequest {
     ExecutionSummary: ComplianceExecutionSummary,
     Items: ComplianceItemEntryList,
     ResourceId: ComplianceResourceId,
-    ResourceType: ComplianceResourceType,
-    ItemContentHash: ComplianceItemContentHash = null
+    ResourceType: ComplianceResourceType
   ): PutComplianceItemsRequest = {
     val __obj = js.Dynamic.literal(ComplianceType = ComplianceType.asInstanceOf[js.Any], ExecutionSummary = ExecutionSummary.asInstanceOf[js.Any], Items = Items.asInstanceOf[js.Any], ResourceId = ResourceId.asInstanceOf[js.Any], ResourceType = ResourceType.asInstanceOf[js.Any])
-    if (ItemContentHash != null) __obj.updateDynamic("ItemContentHash")(ItemContentHash.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutComplianceItemsRequest]
   }
+  @scala.inline
+  implicit class PutComplianceItemsRequestOps[Self <: PutComplianceItemsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplianceType(value: ComplianceTypeName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplianceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExecutionSummary(value: ComplianceExecutionSummary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExecutionSummary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItems(value: ComplianceItemEntryList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceId(value: ComplianceResourceId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceType(value: ComplianceResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemContentHash(value: ComplianceItemContentHash): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemContentHash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItemContentHash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemContentHash")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

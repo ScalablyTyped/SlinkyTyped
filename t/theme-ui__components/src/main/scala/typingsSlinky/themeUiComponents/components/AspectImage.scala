@@ -1,8 +1,8 @@
 package typingsSlinky.themeUiComponents.components
 
 import org.scalajs.dom.raw.HTMLImageElement
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.react.mod.PropsWithoutRef
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.themeUiComponents.mod.AspectImageProps
@@ -10,14 +10,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Support for combinations of intersection and union types not implemented */
-object AspectImage
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Support for combinations of intersection and union types not implemented */
+object AspectImage {
   @JSImport("@theme-ui/components", "AspectImage")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  type Props = PropsWithoutRef[AspectImageProps] with RefAttributes[HTMLImageElement]
+  def apply(p: PropsWithoutRef[AspectImageProps] with RefAttributes[HTMLImageElement]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AspectImage.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

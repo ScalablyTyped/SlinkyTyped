@@ -1,9 +1,7 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.view
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.Map
-import typingsSlinky.std.RegExp
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,10 +32,10 @@ class Element protected () extends Node {
   /* protected */ def _addClass(className: String): Unit = js.native
   /* protected */ def _addClass(className: js.Array[String]): Unit = js.native
   /* protected */ def _appendChild(items: Item): Double = js.native
-  /* protected */ def _appendChild(items: Iterable[Item]): Double = js.native
+  /* protected */ def _appendChild(items: js.Iterable[Item]): Double = js.native
   /* protected */ def _clone(deep: Boolean): Element = js.native
   /* protected */ def _insertChild(index: Double, items: Item): Double = js.native
-  /* protected */ def _insertChild(index: Double, items: Iterable[Item]): Double = js.native
+  /* protected */ def _insertChild(index: Double, items: js.Iterable[Item]): Double = js.native
   /* protected */ def _removeAttribute(key: String): Boolean = js.native
   def _removeChildren(index: Double): js.Array[Node] = js.native
   def _removeChildren(index: Double, howMany: Double): js.Array[Node] = js.native
@@ -57,7 +55,7 @@ class Element protected () extends Node {
   def findAncestor(patterns: String): Element | Null = js.native
   def findAncestor(patterns: js.Function): Element | Null = js.native
   def findAncestor(patterns: js.Object): Element | Null = js.native
-  def findAncestor(patterns: RegExp): Element | Null = js.native
+  def findAncestor(patterns: js.RegExp): Element | Null = js.native
   def getAttribute(key: String): js.UndefOr[String] = js.native
   def getAttributeKeys(): js.Iterable[String] = js.native
   def getAttributes(): js.Iterable[_] = js.native

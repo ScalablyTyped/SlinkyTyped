@@ -5,27 +5,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Creates a biskviit cookie jar for managing cookie values in memory */
+@js.native
 trait Cookies extends js.Object {
-  var cookies: js.Array[Cookie]
-  var options: Options
+  var cookies: js.Array[Cookie] = js.native
+  var options: Options = js.native
   /** Adds (or updates/removes if needed) a cookie object to the cookie storage */
-  def add(cookie: Cookie): Boolean
+  def add(cookie: Cookie): Boolean = js.native
   /** Checks if two cookie objects are the same */
-  def compare(a: Cookie, b: Cookie): Boolean
+  def compare(a: Cookie, b: Cookie): Boolean = js.native
   /** Returns cookie string for the 'Cookie:' header. */
-  def get(url: String): String
+  def get(url: String): String = js.native
   /** Returns normalized cookie path for an URL path argument */
-  def getPath(pathname: String): String
+  def getPath(pathname: String): String = js.native
   /** Checks if a cookie is expired */
-  def isExpired(cookie: Cookie): Boolean
+  def isExpired(cookie: Cookie): Boolean = js.native
   /** Lists all valied cookie objects for the specified URL */
-  def list(url: String): js.Array[Cookie]
+  def list(url: String): js.Array[Cookie] = js.native
   /** Checks if a cookie object is valid for a specified URL */
-  def `match`(cookie: Cookie, url: String): Boolean
+  def `match`(cookie: Cookie, url: String): Boolean = js.native
   /** Parses cookie string from the 'Set-Cookie:' header */
-  def parse(cookieStr: String): Cookie
+  def parse(cookieStr: String): Cookie = js.native
   /** Stores a cookie string to the cookie storage */
-  def set(cookieStr: String, url: String): Boolean
+  def set(cookieStr: String, url: String): Boolean = js.native
 }
 
 object Cookies {
@@ -47,5 +48,79 @@ object Cookies {
     __obj.updateDynamic("match")(js.Any.fromFunction2(`match`))
     __obj.asInstanceOf[Cookies]
   }
+  @scala.inline
+  implicit class CookiesOps[Self <: Cookies] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: Cookie => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCompare(value: (Cookie, Cookie) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCookies(value: js.Array[Cookie]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cookies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGet(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetPath(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPath")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsExpired(value: Cookie => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpired")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withList(value: String => js.Array[Cookie]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMatch(value: (Cookie, String) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("match")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOptions(value: Options): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParse(value: String => Cookie): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (String, String) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

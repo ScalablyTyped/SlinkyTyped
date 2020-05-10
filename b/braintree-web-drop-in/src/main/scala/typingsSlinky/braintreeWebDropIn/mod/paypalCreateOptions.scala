@@ -6,29 +6,82 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait paypalCreateOptions extends js.Object {
-  var amount: js.UndefOr[String | Double] = js.undefined
-  var buttonStyle: js.UndefOr[String] = js.undefined
-  var commit: js.UndefOr[Boolean] = js.undefined
-  var currency: js.UndefOr[String] = js.undefined
-  var flow: checkout | vault
+  var amount: js.UndefOr[String | Double] = js.native
+  var buttonStyle: js.UndefOr[String] = js.native
+  var commit: js.UndefOr[Boolean] = js.native
+  var currency: js.UndefOr[String] = js.native
+  var flow: checkout | vault = js.native
 }
 
 object paypalCreateOptions {
   @scala.inline
-  def apply(
-    flow: checkout | vault,
-    amount: String | Double = null,
-    buttonStyle: String = null,
-    commit: js.UndefOr[Boolean] = js.undefined,
-    currency: String = null
-  ): paypalCreateOptions = {
+  def apply(flow: checkout | vault): paypalCreateOptions = {
     val __obj = js.Dynamic.literal(flow = flow.asInstanceOf[js.Any])
-    if (amount != null) __obj.updateDynamic("amount")(amount.asInstanceOf[js.Any])
-    if (buttonStyle != null) __obj.updateDynamic("buttonStyle")(buttonStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(commit)) __obj.updateDynamic("commit")(commit.asInstanceOf[js.Any])
-    if (currency != null) __obj.updateDynamic("currency")(currency.asInstanceOf[js.Any])
     __obj.asInstanceOf[paypalCreateOptions]
   }
+  @scala.inline
+  implicit class paypalCreateOptionsOps[Self <: paypalCreateOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFlow(value: checkout | vault): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAmount(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAmount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonStyle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCommit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCommit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCurrency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCurrency: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

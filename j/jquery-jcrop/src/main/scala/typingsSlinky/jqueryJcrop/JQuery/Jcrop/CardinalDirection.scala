@@ -14,14 +14,12 @@ trait CardinalDirection extends js.Object
 
 object CardinalDirection {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def e: typingsSlinky.jqueryJcrop.jqueryJcropStrings.e = "e".asInstanceOf[typingsSlinky.jqueryJcrop.jqueryJcropStrings.e]
   @scala.inline
-  def e: typingsSlinky.jqueryJcrop.jqueryJcropStrings.e = this.cast("e")
+  def n: typingsSlinky.jqueryJcrop.jqueryJcropStrings.n = "n".asInstanceOf[typingsSlinky.jqueryJcrop.jqueryJcropStrings.n]
   @scala.inline
-  def n: typingsSlinky.jqueryJcrop.jqueryJcropStrings.n = this.cast("n")
+  def s: typingsSlinky.jqueryJcrop.jqueryJcropStrings.s = "s".asInstanceOf[typingsSlinky.jqueryJcrop.jqueryJcropStrings.s]
   @scala.inline
-  def s: typingsSlinky.jqueryJcrop.jqueryJcropStrings.s = this.cast("s")
-  @scala.inline
-  def w: typingsSlinky.jqueryJcrop.jqueryJcropStrings.w = this.cast("w")
+  def w: typingsSlinky.jqueryJcrop.jqueryJcropStrings.w = "w".asInstanceOf[typingsSlinky.jqueryJcrop.jqueryJcropStrings.w]
 }
 

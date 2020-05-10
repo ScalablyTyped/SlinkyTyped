@@ -17,20 +17,18 @@ trait ValueTransform extends js.Object
 
 object ValueTransform {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def colorSlashhex: typingsSlinky.theo.theoStrings.colorSlashhex = "color/hex".asInstanceOf[typingsSlinky.theo.theoStrings.colorSlashhex]
   @scala.inline
-  def colorSlashhex: typingsSlinky.theo.theoStrings.colorSlashhex = this.cast("color/hex")
+  def colorSlashhex8argb: typingsSlinky.theo.theoStrings.colorSlashhex8argb = "color/hex8argb".asInstanceOf[typingsSlinky.theo.theoStrings.colorSlashhex8argb]
   @scala.inline
-  def colorSlashhex8argb: typingsSlinky.theo.theoStrings.colorSlashhex8argb = this.cast("color/hex8argb")
+  def colorSlashhex8rgba: typingsSlinky.theo.theoStrings.colorSlashhex8rgba = "color/hex8rgba".asInstanceOf[typingsSlinky.theo.theoStrings.colorSlashhex8rgba]
   @scala.inline
-  def colorSlashhex8rgba: typingsSlinky.theo.theoStrings.colorSlashhex8rgba = this.cast("color/hex8rgba")
+  def colorSlashrgb: typingsSlinky.theo.theoStrings.colorSlashrgb = "color/rgb".asInstanceOf[typingsSlinky.theo.theoStrings.colorSlashrgb]
   @scala.inline
-  def colorSlashrgb: typingsSlinky.theo.theoStrings.colorSlashrgb = this.cast("color/rgb")
+  def percentageSlashfloat: typingsSlinky.theo.theoStrings.percentageSlashfloat = "percentage/float".asInstanceOf[typingsSlinky.theo.theoStrings.percentageSlashfloat]
   @scala.inline
-  def percentageSlashfloat: typingsSlinky.theo.theoStrings.percentageSlashfloat = this.cast("percentage/float")
+  def relativeSlashpixel: typingsSlinky.theo.theoStrings.relativeSlashpixel = "relative/pixel".asInstanceOf[typingsSlinky.theo.theoStrings.relativeSlashpixel]
   @scala.inline
-  def relativeSlashpixel: typingsSlinky.theo.theoStrings.relativeSlashpixel = this.cast("relative/pixel")
-  @scala.inline
-  def relativeSlashpixelValue: typingsSlinky.theo.theoStrings.relativeSlashpixelValue = this.cast("relative/pixelValue")
+  def relativeSlashpixelValue: typingsSlinky.theo.theoStrings.relativeSlashpixelValue = "relative/pixelValue".asInstanceOf[typingsSlinky.theo.theoStrings.relativeSlashpixelValue]
 }
 

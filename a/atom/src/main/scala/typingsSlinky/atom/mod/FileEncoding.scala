@@ -50,86 +50,84 @@ trait FileEncoding extends js.Object
 
 object FileEncoding {
   @scala.inline
-  def big5hkscs: typingsSlinky.atom.atomStrings.big5hkscs = this.cast("big5hkscs")
+  def big5hkscs: typingsSlinky.atom.atomStrings.big5hkscs = "big5hkscs".asInstanceOf[typingsSlinky.atom.atomStrings.big5hkscs]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cp437: typingsSlinky.atom.atomStrings.cp437 = "cp437".asInstanceOf[typingsSlinky.atom.atomStrings.cp437]
   @scala.inline
-  def cp437: typingsSlinky.atom.atomStrings.cp437 = this.cast("cp437")
+  def cp850: typingsSlinky.atom.atomStrings.cp850 = "cp850".asInstanceOf[typingsSlinky.atom.atomStrings.cp850]
   @scala.inline
-  def cp850: typingsSlinky.atom.atomStrings.cp850 = this.cast("cp850")
+  def cp866: typingsSlinky.atom.atomStrings.cp866 = "cp866".asInstanceOf[typingsSlinky.atom.atomStrings.cp866]
   @scala.inline
-  def cp866: typingsSlinky.atom.atomStrings.cp866 = this.cast("cp866")
+  def cp932: typingsSlinky.atom.atomStrings.cp932 = "cp932".asInstanceOf[typingsSlinky.atom.atomStrings.cp932]
   @scala.inline
-  def cp932: typingsSlinky.atom.atomStrings.cp932 = this.cast("cp932")
+  def cp950: typingsSlinky.atom.atomStrings.cp950 = "cp950".asInstanceOf[typingsSlinky.atom.atomStrings.cp950]
   @scala.inline
-  def cp950: typingsSlinky.atom.atomStrings.cp950 = this.cast("cp950")
+  def eucjp: typingsSlinky.atom.atomStrings.eucjp = "eucjp".asInstanceOf[typingsSlinky.atom.atomStrings.eucjp]
   @scala.inline
-  def eucjp: typingsSlinky.atom.atomStrings.eucjp = this.cast("eucjp")
+  def euckr: typingsSlinky.atom.atomStrings.euckr = "euckr".asInstanceOf[typingsSlinky.atom.atomStrings.euckr]
   @scala.inline
-  def euckr: typingsSlinky.atom.atomStrings.euckr = this.cast("euckr")
+  def gb18030: typingsSlinky.atom.atomStrings.gb18030 = "gb18030".asInstanceOf[typingsSlinky.atom.atomStrings.gb18030]
   @scala.inline
-  def gb18030: typingsSlinky.atom.atomStrings.gb18030 = this.cast("gb18030")
+  def gbk: typingsSlinky.atom.atomStrings.gbk = "gbk".asInstanceOf[typingsSlinky.atom.atomStrings.gbk]
   @scala.inline
-  def gbk: typingsSlinky.atom.atomStrings.gbk = this.cast("gbk")
+  def iso88591: typingsSlinky.atom.atomStrings.iso88591 = "iso88591".asInstanceOf[typingsSlinky.atom.atomStrings.iso88591]
   @scala.inline
-  def iso88591: typingsSlinky.atom.atomStrings.iso88591 = this.cast("iso88591")
+  def iso885910: typingsSlinky.atom.atomStrings.iso885910 = "iso885910".asInstanceOf[typingsSlinky.atom.atomStrings.iso885910]
   @scala.inline
-  def iso885910: typingsSlinky.atom.atomStrings.iso885910 = this.cast("iso885910")
+  def iso885913: typingsSlinky.atom.atomStrings.iso885913 = "iso885913".asInstanceOf[typingsSlinky.atom.atomStrings.iso885913]
   @scala.inline
-  def iso885913: typingsSlinky.atom.atomStrings.iso885913 = this.cast("iso885913")
+  def iso885914: typingsSlinky.atom.atomStrings.iso885914 = "iso885914".asInstanceOf[typingsSlinky.atom.atomStrings.iso885914]
   @scala.inline
-  def iso885914: typingsSlinky.atom.atomStrings.iso885914 = this.cast("iso885914")
+  def iso885915: typingsSlinky.atom.atomStrings.iso885915 = "iso885915".asInstanceOf[typingsSlinky.atom.atomStrings.iso885915]
   @scala.inline
-  def iso885915: typingsSlinky.atom.atomStrings.iso885915 = this.cast("iso885915")
+  def iso885916: typingsSlinky.atom.atomStrings.iso885916 = "iso885916".asInstanceOf[typingsSlinky.atom.atomStrings.iso885916]
   @scala.inline
-  def iso885916: typingsSlinky.atom.atomStrings.iso885916 = this.cast("iso885916")
+  def iso88592: typingsSlinky.atom.atomStrings.iso88592 = "iso88592".asInstanceOf[typingsSlinky.atom.atomStrings.iso88592]
   @scala.inline
-  def iso88592: typingsSlinky.atom.atomStrings.iso88592 = this.cast("iso88592")
+  def iso88593: typingsSlinky.atom.atomStrings.iso88593 = "iso88593".asInstanceOf[typingsSlinky.atom.atomStrings.iso88593]
   @scala.inline
-  def iso88593: typingsSlinky.atom.atomStrings.iso88593 = this.cast("iso88593")
+  def iso88594: typingsSlinky.atom.atomStrings.iso88594 = "iso88594".asInstanceOf[typingsSlinky.atom.atomStrings.iso88594]
   @scala.inline
-  def iso88594: typingsSlinky.atom.atomStrings.iso88594 = this.cast("iso88594")
+  def iso88595: typingsSlinky.atom.atomStrings.iso88595 = "iso88595".asInstanceOf[typingsSlinky.atom.atomStrings.iso88595]
   @scala.inline
-  def iso88595: typingsSlinky.atom.atomStrings.iso88595 = this.cast("iso88595")
+  def iso88596: typingsSlinky.atom.atomStrings.iso88596 = "iso88596".asInstanceOf[typingsSlinky.atom.atomStrings.iso88596]
   @scala.inline
-  def iso88596: typingsSlinky.atom.atomStrings.iso88596 = this.cast("iso88596")
+  def iso88597: typingsSlinky.atom.atomStrings.iso88597 = "iso88597".asInstanceOf[typingsSlinky.atom.atomStrings.iso88597]
   @scala.inline
-  def iso88597: typingsSlinky.atom.atomStrings.iso88597 = this.cast("iso88597")
+  def iso88598: typingsSlinky.atom.atomStrings.iso88598 = "iso88598".asInstanceOf[typingsSlinky.atom.atomStrings.iso88598]
   @scala.inline
-  def iso88598: typingsSlinky.atom.atomStrings.iso88598 = this.cast("iso88598")
+  def iso88599: typingsSlinky.atom.atomStrings.iso88599 = "iso88599".asInstanceOf[typingsSlinky.atom.atomStrings.iso88599]
   @scala.inline
-  def iso88599: typingsSlinky.atom.atomStrings.iso88599 = this.cast("iso88599")
+  def koi8r: typingsSlinky.atom.atomStrings.koi8r = "koi8r".asInstanceOf[typingsSlinky.atom.atomStrings.koi8r]
   @scala.inline
-  def koi8r: typingsSlinky.atom.atomStrings.koi8r = this.cast("koi8r")
+  def koi8u: typingsSlinky.atom.atomStrings.koi8u = "koi8u".asInstanceOf[typingsSlinky.atom.atomStrings.koi8u]
   @scala.inline
-  def koi8u: typingsSlinky.atom.atomStrings.koi8u = this.cast("koi8u")
+  def macroman: typingsSlinky.atom.atomStrings.macroman = "macroman".asInstanceOf[typingsSlinky.atom.atomStrings.macroman]
   @scala.inline
-  def macroman: typingsSlinky.atom.atomStrings.macroman = this.cast("macroman")
+  def shiftjis: typingsSlinky.atom.atomStrings.shiftjis = "shiftjis".asInstanceOf[typingsSlinky.atom.atomStrings.shiftjis]
   @scala.inline
-  def shiftjis: typingsSlinky.atom.atomStrings.shiftjis = this.cast("shiftjis")
+  def utf16be: typingsSlinky.atom.atomStrings.utf16be = "utf16be".asInstanceOf[typingsSlinky.atom.atomStrings.utf16be]
   @scala.inline
-  def utf16be: typingsSlinky.atom.atomStrings.utf16be = this.cast("utf16be")
+  def utf16le: typingsSlinky.atom.atomStrings.utf16le = "utf16le".asInstanceOf[typingsSlinky.atom.atomStrings.utf16le]
   @scala.inline
-  def utf16le: typingsSlinky.atom.atomStrings.utf16le = this.cast("utf16le")
+  def utf8: typingsSlinky.atom.atomStrings.utf8 = "utf8".asInstanceOf[typingsSlinky.atom.atomStrings.utf8]
   @scala.inline
-  def utf8: typingsSlinky.atom.atomStrings.utf8 = this.cast("utf8")
+  def windows1250: typingsSlinky.atom.atomStrings.windows1250 = "windows1250".asInstanceOf[typingsSlinky.atom.atomStrings.windows1250]
   @scala.inline
-  def windows1250: typingsSlinky.atom.atomStrings.windows1250 = this.cast("windows1250")
+  def windows1251: typingsSlinky.atom.atomStrings.windows1251 = "windows1251".asInstanceOf[typingsSlinky.atom.atomStrings.windows1251]
   @scala.inline
-  def windows1251: typingsSlinky.atom.atomStrings.windows1251 = this.cast("windows1251")
+  def windows1252: typingsSlinky.atom.atomStrings.windows1252 = "windows1252".asInstanceOf[typingsSlinky.atom.atomStrings.windows1252]
   @scala.inline
-  def windows1252: typingsSlinky.atom.atomStrings.windows1252 = this.cast("windows1252")
+  def windows1253: typingsSlinky.atom.atomStrings.windows1253 = "windows1253".asInstanceOf[typingsSlinky.atom.atomStrings.windows1253]
   @scala.inline
-  def windows1253: typingsSlinky.atom.atomStrings.windows1253 = this.cast("windows1253")
+  def windows1254: typingsSlinky.atom.atomStrings.windows1254 = "windows1254".asInstanceOf[typingsSlinky.atom.atomStrings.windows1254]
   @scala.inline
-  def windows1254: typingsSlinky.atom.atomStrings.windows1254 = this.cast("windows1254")
+  def windows1255: typingsSlinky.atom.atomStrings.windows1255 = "windows1255".asInstanceOf[typingsSlinky.atom.atomStrings.windows1255]
   @scala.inline
-  def windows1255: typingsSlinky.atom.atomStrings.windows1255 = this.cast("windows1255")
+  def windows1256: typingsSlinky.atom.atomStrings.windows1256 = "windows1256".asInstanceOf[typingsSlinky.atom.atomStrings.windows1256]
   @scala.inline
-  def windows1256: typingsSlinky.atom.atomStrings.windows1256 = this.cast("windows1256")
+  def windows1257: typingsSlinky.atom.atomStrings.windows1257 = "windows1257".asInstanceOf[typingsSlinky.atom.atomStrings.windows1257]
   @scala.inline
-  def windows1257: typingsSlinky.atom.atomStrings.windows1257 = this.cast("windows1257")
-  @scala.inline
-  def windows1258: typingsSlinky.atom.atomStrings.windows1258 = this.cast("windows1258")
+  def windows1258: typingsSlinky.atom.atomStrings.windows1258 = "windows1258".asInstanceOf[typingsSlinky.atom.atomStrings.windows1258]
 }
 

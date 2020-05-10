@@ -13,12 +13,10 @@ trait state extends js.Object
 
 object state {
   @scala.inline
-  def accepted: typingsSlinky.sarif.sarifStrings.accepted = this.cast("accepted")
+  def accepted: typingsSlinky.sarif.sarifStrings.accepted = "accepted".asInstanceOf[typingsSlinky.sarif.sarifStrings.accepted]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def rejected: typingsSlinky.sarif.sarifStrings.rejected = "rejected".asInstanceOf[typingsSlinky.sarif.sarifStrings.rejected]
   @scala.inline
-  def rejected: typingsSlinky.sarif.sarifStrings.rejected = this.cast("rejected")
-  @scala.inline
-  def underReview: typingsSlinky.sarif.sarifStrings.underReview = this.cast("underReview")
+  def underReview: typingsSlinky.sarif.sarifStrings.underReview = "underReview".asInstanceOf[typingsSlinky.sarif.sarifStrings.underReview]
 }
 

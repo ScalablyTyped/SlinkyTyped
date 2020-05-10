@@ -21,28 +21,26 @@ trait Style extends js.Object
 
 object Style {
   @scala.inline
-  def bigint: typingsSlinky.node.nodeStrings.bigint = this.cast("bigint")
+  def bigint: typingsSlinky.node.nodeStrings.bigint = "bigint".asInstanceOf[typingsSlinky.node.nodeStrings.bigint]
   @scala.inline
-  def boolean: typingsSlinky.node.nodeStrings.boolean = this.cast("boolean")
+  def boolean: typingsSlinky.node.nodeStrings.boolean = "boolean".asInstanceOf[typingsSlinky.node.nodeStrings.boolean]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def date: typingsSlinky.node.nodeStrings.date = "date".asInstanceOf[typingsSlinky.node.nodeStrings.date]
   @scala.inline
-  def date: typingsSlinky.node.nodeStrings.date = this.cast("date")
+  def module: typingsSlinky.node.nodeStrings.module = "module".asInstanceOf[typingsSlinky.node.nodeStrings.module]
   @scala.inline
-  def module: typingsSlinky.node.nodeStrings.module = this.cast("module")
+  def `null`: typingsSlinky.node.nodeStrings.`null` = "null".asInstanceOf[typingsSlinky.node.nodeStrings.`null`]
   @scala.inline
-  def `null`: typingsSlinky.node.nodeStrings.`null` = this.cast("null")
+  def number: typingsSlinky.node.nodeStrings.number = "number".asInstanceOf[typingsSlinky.node.nodeStrings.number]
   @scala.inline
-  def number: typingsSlinky.node.nodeStrings.number = this.cast("number")
+  def regexp: typingsSlinky.node.nodeStrings.regexp = "regexp".asInstanceOf[typingsSlinky.node.nodeStrings.regexp]
   @scala.inline
-  def regexp: typingsSlinky.node.nodeStrings.regexp = this.cast("regexp")
+  def special: typingsSlinky.node.nodeStrings.special = "special".asInstanceOf[typingsSlinky.node.nodeStrings.special]
   @scala.inline
-  def special: typingsSlinky.node.nodeStrings.special = this.cast("special")
+  def string: typingsSlinky.node.nodeStrings.string = "string".asInstanceOf[typingsSlinky.node.nodeStrings.string]
   @scala.inline
-  def string: typingsSlinky.node.nodeStrings.string = this.cast("string")
+  def symbol: typingsSlinky.node.nodeStrings.symbol = "symbol".asInstanceOf[typingsSlinky.node.nodeStrings.symbol]
   @scala.inline
-  def symbol: typingsSlinky.node.nodeStrings.symbol = this.cast("symbol")
-  @scala.inline
-  def undefined: typingsSlinky.node.nodeStrings.undefined = this.cast("undefined")
+  def undefined: typingsSlinky.node.nodeStrings.undefined = "undefined".asInstanceOf[typingsSlinky.node.nodeStrings.undefined]
 }
 

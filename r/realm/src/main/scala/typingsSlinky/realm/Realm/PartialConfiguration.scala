@@ -10,53 +10,201 @@ import scala.scalajs.js.annotation._
   * @see { @link https://realm.io/docs/javascript/latest/api/Realm.html#~Configuration }
   */
 /* Inlined parent std.Partial<realm.Realm.Configuration> */
+@js.native
 trait PartialConfiguration extends js.Object {
-  var deleteRealmIfMigrationNeeded: js.UndefOr[Boolean] = js.undefined
-  var disableFormatUpgrade: js.UndefOr[Boolean] = js.undefined
+  var deleteRealmIfMigrationNeeded: js.UndefOr[Boolean] = js.native
+  var disableFormatUpgrade: js.UndefOr[Boolean] = js.native
   var encryptionKey: js.UndefOr[
-    scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView | scala.scalajs.js.typedarray.Int8Array
-  ] = js.undefined
-  var fifoFilesFallbackPath: js.UndefOr[String] = js.undefined
-  var inMemory: js.UndefOr[Boolean] = js.undefined
-  var migration: js.UndefOr[MigrationCallback] = js.undefined
-  var path: js.UndefOr[String] = js.undefined
-  var readOnly: js.UndefOr[Boolean] = js.undefined
-  var schema: js.UndefOr[js.Array[ObjectClass | ObjectSchema]] = js.undefined
-  var schemaVersion: js.UndefOr[Double] = js.undefined
-  var shouldCompactOnLaunch: js.UndefOr[js.Function2[/* totalBytes */ Double, /* usedBytes */ Double, Boolean]] = js.undefined
-  var sync: js.UndefOr[PartialSyncConfiguration] = js.undefined
+    js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | js.typedarray.Int8Array
+  ] = js.native
+  var fifoFilesFallbackPath: js.UndefOr[String] = js.native
+  var inMemory: js.UndefOr[Boolean] = js.native
+  var migration: js.UndefOr[MigrationCallback] = js.native
+  var path: js.UndefOr[String] = js.native
+  var readOnly: js.UndefOr[Boolean] = js.native
+  var schema: js.UndefOr[js.Array[ObjectClass | ObjectSchema]] = js.native
+  var schemaVersion: js.UndefOr[Double] = js.native
+  var shouldCompactOnLaunch: js.UndefOr[js.Function2[/* totalBytes */ Double, /* usedBytes */ Double, Boolean]] = js.native
+  var sync: js.UndefOr[PartialSyncConfiguration] = js.native
 }
 
 object PartialConfiguration {
   @scala.inline
-  def apply(
-    deleteRealmIfMigrationNeeded: js.UndefOr[Boolean] = js.undefined,
-    disableFormatUpgrade: js.UndefOr[Boolean] = js.undefined,
-    encryptionKey: scala.scalajs.js.typedarray.ArrayBuffer | scala.scalajs.js.typedarray.ArrayBufferView | scala.scalajs.js.typedarray.Int8Array = null,
-    fifoFilesFallbackPath: String = null,
-    inMemory: js.UndefOr[Boolean] = js.undefined,
-    migration: (/* oldRealm */ typingsSlinky.realm.Realm, /* newRealm */ typingsSlinky.realm.Realm) => Unit = null,
-    path: String = null,
-    readOnly: js.UndefOr[Boolean] = js.undefined,
-    schema: js.Array[ObjectClass | ObjectSchema] = null,
-    schemaVersion: Int | Double = null,
-    shouldCompactOnLaunch: (/* totalBytes */ Double, /* usedBytes */ Double) => Boolean = null,
-    sync: PartialSyncConfiguration = null
-  ): PartialConfiguration = {
+  def apply(): PartialConfiguration = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(deleteRealmIfMigrationNeeded)) __obj.updateDynamic("deleteRealmIfMigrationNeeded")(deleteRealmIfMigrationNeeded.asInstanceOf[js.Any])
-    if (!js.isUndefined(disableFormatUpgrade)) __obj.updateDynamic("disableFormatUpgrade")(disableFormatUpgrade.asInstanceOf[js.Any])
-    if (encryptionKey != null) __obj.updateDynamic("encryptionKey")(encryptionKey.asInstanceOf[js.Any])
-    if (fifoFilesFallbackPath != null) __obj.updateDynamic("fifoFilesFallbackPath")(fifoFilesFallbackPath.asInstanceOf[js.Any])
-    if (!js.isUndefined(inMemory)) __obj.updateDynamic("inMemory")(inMemory.asInstanceOf[js.Any])
-    if (migration != null) __obj.updateDynamic("migration")(js.Any.fromFunction2(migration))
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
-    if (schema != null) __obj.updateDynamic("schema")(schema.asInstanceOf[js.Any])
-    if (schemaVersion != null) __obj.updateDynamic("schemaVersion")(schemaVersion.asInstanceOf[js.Any])
-    if (shouldCompactOnLaunch != null) __obj.updateDynamic("shouldCompactOnLaunch")(js.Any.fromFunction2(shouldCompactOnLaunch))
-    if (sync != null) __obj.updateDynamic("sync")(sync.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialConfiguration]
   }
+  @scala.inline
+  implicit class PartialConfigurationOps[Self <: PartialConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeleteRealmIfMigrationNeeded(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRealmIfMigrationNeeded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteRealmIfMigrationNeeded: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteRealmIfMigrationNeeded")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDisableFormatUpgrade(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFormatUpgrade")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisableFormatUpgrade: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableFormatUpgrade")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEncryptionKeyArrayBufferView(value: js.typedarray.ArrayBufferView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncryptionKeyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncryptionKeyInt8Array(value: js.typedarray.Int8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncryptionKey(value: js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | js.typedarray.Int8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEncryptionKey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionKey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFifoFilesFallbackPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fifoFilesFallbackPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFifoFilesFallbackPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fifoFilesFallbackPath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInMemory(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inMemory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInMemory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inMemory")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMigration(
+      value: (/* oldRealm */ typingsSlinky.realm.Realm, /* newRealm */ typingsSlinky.realm.Realm) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migration")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutMigration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("migration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReadOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readOnly")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchema(value: js.Array[ObjectClass | ObjectSchema]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchema: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schema")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSchemaVersion(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSchemaVersion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemaVersion")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShouldCompactOnLaunch(value: (/* totalBytes */ Double, /* usedBytes */ Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldCompactOnLaunch")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutShouldCompactOnLaunch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldCompactOnLaunch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSync(value: PartialSyncConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSync: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

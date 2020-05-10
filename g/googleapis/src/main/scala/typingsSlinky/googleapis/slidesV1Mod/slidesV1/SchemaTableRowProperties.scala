@@ -19,10 +19,29 @@ trait SchemaTableRowProperties extends js.Object {
 
 object SchemaTableRowProperties {
   @scala.inline
-  def apply(minRowHeight: SchemaDimension = null): SchemaTableRowProperties = {
+  def apply(): SchemaTableRowProperties = {
     val __obj = js.Dynamic.literal()
-    if (minRowHeight != null) __obj.updateDynamic("minRowHeight")(minRowHeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaTableRowProperties]
   }
+  @scala.inline
+  implicit class SchemaTableRowPropertiesOps[Self <: SchemaTableRowProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinRowHeight(value: SchemaDimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRowHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinRowHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minRowHeight")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

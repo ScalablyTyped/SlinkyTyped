@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait urlUtils extends js.Object {
   /**
     * Adds the given proxy rule to the proxy rules list: `esriConfig.request.proxyRules`.
@@ -16,7 +17,7 @@ trait urlUtils extends js.Object {
     * @param rule.urlPrefix The URL prefix of the resources that should be accessed through the given proxy.
     *
     */
-  def addProxyRule(rule: urlUtilsAddProxyRuleRule): Double
+  def addProxyRule(rule: urlUtilsAddProxyRuleRule): Double = js.native
   /**
     * Returns the proxy rule that matches the given URL.
     *
@@ -25,7 +26,7 @@ trait urlUtils extends js.Object {
     * @param url The URL of the resources accessed via proxy.
     *
     */
-  def getProxyRule(url: String): js.Any
+  def getProxyRule(url: String): js.Any = js.native
   /**
     * Converts the URL arguments to an object representation.
     *
@@ -34,7 +35,7 @@ trait urlUtils extends js.Object {
     * @param url The input URL.
     *
     */
-  def urlToObject(url: String): js.Any
+  def urlToObject(url: String): js.Any = js.native
 }
 
 @JSGlobal("__esri.urlUtils")

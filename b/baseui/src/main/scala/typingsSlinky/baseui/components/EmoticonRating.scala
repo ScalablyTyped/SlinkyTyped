@@ -1,10 +1,7 @@
 package typingsSlinky.baseui.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.AnonValueNumber
 import typingsSlinky.baseui.ratingMod.EmoticonRatingProps
 import typingsSlinky.baseui.ratingMod.RatingOverrides
@@ -12,27 +9,24 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object EmoticonRating
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.ratingMod.EmoticonRating] {
+object EmoticonRating {
   @JSImport("baseui/rating", "EmoticonRating")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    onChange: /* args */ AnonValueNumber => _ = null,
-    overrides: RatingOverrides = null,
-    value: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.ratingMod.EmoticonRating] = {
-    val __obj = js.Dynamic.literal()
-    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
-    if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.baseui.ratingMod.EmoticonRating] {
+    @scala.inline
+    def onChange(value: /* args */ AnonValueNumber => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def overrides(value: RatingOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    @scala.inline
+    def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.ratingMod.EmoticonRating] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.ratingMod.EmoticonRating](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = EmoticonRatingProps
+  
+  def withProps(p: EmoticonRatingProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: EmoticonRating.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

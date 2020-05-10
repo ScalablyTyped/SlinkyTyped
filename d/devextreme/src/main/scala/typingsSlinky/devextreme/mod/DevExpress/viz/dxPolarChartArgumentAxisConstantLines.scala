@@ -1,45 +1,89 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.devextremeStrings.dash
-import typingsSlinky.devextreme.devextremeStrings.dot
-import typingsSlinky.devextreme.devextremeStrings.longDash
-import typingsSlinky.devextreme.devextremeStrings.solid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait dxPolarChartArgumentAxisConstantLines extends dxPolarChartCommonAxisSettingsConstantLineStyle {
   /** Specifies whether to display the constant line behind or in front of the series. */
-  var displayBehindSeries: js.UndefOr[Boolean] = js.undefined
+  var displayBehindSeries: js.UndefOr[Boolean] = js.native
   /** Specifies whether to extend the axis to display the constant line. */
-  var extendAxis: js.UndefOr[Boolean] = js.undefined
+  var extendAxis: js.UndefOr[Boolean] = js.native
   /** An object defining constant line label options. */
   @JSName("label")
-  var label_dxPolarChartArgumentAxisConstantLines: js.UndefOr[dxPolarChartArgumentAxisConstantLinesLabel] = js.undefined
+  var label_dxPolarChartArgumentAxisConstantLines: js.UndefOr[dxPolarChartArgumentAxisConstantLinesLabel] = js.native
   /** Specifies a value to be displayed by a constant line. */
-  var value: js.UndefOr[Double | js.Date | String] = js.undefined
+  var value: js.UndefOr[Double | js.Date | String] = js.native
 }
 
 object dxPolarChartArgumentAxisConstantLines {
   @scala.inline
-  def apply(
-    color: String = null,
-    dashStyle: dash | dot | longDash | solid = null,
-    displayBehindSeries: js.UndefOr[Boolean] = js.undefined,
-    extendAxis: js.UndefOr[Boolean] = js.undefined,
-    label: dxPolarChartArgumentAxisConstantLinesLabel = null,
-    value: Double | js.Date | String = null,
-    width: Int | Double = null
-  ): dxPolarChartArgumentAxisConstantLines = {
+  def apply(): dxPolarChartArgumentAxisConstantLines = {
     val __obj = js.Dynamic.literal()
-    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
-    if (dashStyle != null) __obj.updateDynamic("dashStyle")(dashStyle.asInstanceOf[js.Any])
-    if (!js.isUndefined(displayBehindSeries)) __obj.updateDynamic("displayBehindSeries")(displayBehindSeries.asInstanceOf[js.Any])
-    if (!js.isUndefined(extendAxis)) __obj.updateDynamic("extendAxis")(extendAxis.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[dxPolarChartArgumentAxisConstantLines]
   }
+  @scala.inline
+  implicit class dxPolarChartArgumentAxisConstantLinesOps[Self <: dxPolarChartArgumentAxisConstantLines] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayBehindSeries(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayBehindSeries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDisplayBehindSeries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayBehindSeries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtendAxis(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendAxis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtendAxis: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendAxis")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: dxPolarChartArgumentAxisConstantLinesLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValueDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double | js.Date | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

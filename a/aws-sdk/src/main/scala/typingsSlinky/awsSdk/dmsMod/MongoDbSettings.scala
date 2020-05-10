@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MongoDbSettings extends js.Object {
   /**
-    *  The authentication mechanism you use to access the MongoDB source endpoint. Valid values: DEFAULT, MONGODB_CR, SCRAM_SHA_1  DEFAULT – For MongoDB version 2.x, use MONGODB_CR. For MongoDB version 3.x, use SCRAM_SHA_1. This setting is not used when authType=No.
+    *  The authentication mechanism you use to access the MongoDB source endpoint. Valid values: DEFAULT, MONGODB_CR, SCRAM_SHA_1  DEFAULT – For MongoDB version 2.x, use MONGODB_CR. For MongoDB version 3.x, use SCRAM_SHA_1. This setting isn't used when authType=No.
     */
   var AuthMechanism: js.UndefOr[AuthMechanismValue] = js.native
   /**
-    *  The MongoDB database name. This setting is not used when authType=NO.  The default is admin.
+    *  The MongoDB database name. This setting isn't used when authType=NO.  The default is admin.
     */
   var AuthSource: js.UndefOr[String] = js.native
   /**
@@ -58,34 +58,161 @@ trait MongoDbSettings extends js.Object {
 
 object MongoDbSettings {
   @scala.inline
-  def apply(
-    AuthMechanism: AuthMechanismValue = null,
-    AuthSource: String = null,
-    AuthType: AuthTypeValue = null,
-    DatabaseName: String = null,
-    DocsToInvestigate: String = null,
-    ExtractDocId: String = null,
-    KmsKeyId: String = null,
-    NestingLevel: NestingLevelValue = null,
-    Password: SecretString = null,
-    Port: Int | Double = null,
-    ServerName: String = null,
-    Username: String = null
-  ): MongoDbSettings = {
+  def apply(): MongoDbSettings = {
     val __obj = js.Dynamic.literal()
-    if (AuthMechanism != null) __obj.updateDynamic("AuthMechanism")(AuthMechanism.asInstanceOf[js.Any])
-    if (AuthSource != null) __obj.updateDynamic("AuthSource")(AuthSource.asInstanceOf[js.Any])
-    if (AuthType != null) __obj.updateDynamic("AuthType")(AuthType.asInstanceOf[js.Any])
-    if (DatabaseName != null) __obj.updateDynamic("DatabaseName")(DatabaseName.asInstanceOf[js.Any])
-    if (DocsToInvestigate != null) __obj.updateDynamic("DocsToInvestigate")(DocsToInvestigate.asInstanceOf[js.Any])
-    if (ExtractDocId != null) __obj.updateDynamic("ExtractDocId")(ExtractDocId.asInstanceOf[js.Any])
-    if (KmsKeyId != null) __obj.updateDynamic("KmsKeyId")(KmsKeyId.asInstanceOf[js.Any])
-    if (NestingLevel != null) __obj.updateDynamic("NestingLevel")(NestingLevel.asInstanceOf[js.Any])
-    if (Password != null) __obj.updateDynamic("Password")(Password.asInstanceOf[js.Any])
-    if (Port != null) __obj.updateDynamic("Port")(Port.asInstanceOf[js.Any])
-    if (ServerName != null) __obj.updateDynamic("ServerName")(ServerName.asInstanceOf[js.Any])
-    if (Username != null) __obj.updateDynamic("Username")(Username.asInstanceOf[js.Any])
     __obj.asInstanceOf[MongoDbSettings]
   }
+  @scala.inline
+  implicit class MongoDbSettingsOps[Self <: MongoDbSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthMechanism(value: AuthMechanismValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthMechanism")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthMechanism: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthMechanism")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthSource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthSource: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthSource")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuthType(value: AuthTypeValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuthType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDatabaseName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDatabaseName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DatabaseName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDocsToInvestigate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocsToInvestigate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDocsToInvestigate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocsToInvestigate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtractDocId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtractDocId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtractDocId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtractDocId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKmsKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKmsKeyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KmsKeyId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNestingLevel(value: NestingLevelValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NestingLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNestingLevel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NestingLevel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: SecretString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Password")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPort(value: IntegerOptional): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPort: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Port")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServerName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServerName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ServerName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUsername(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUsername: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Username")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

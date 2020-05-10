@@ -18,11 +18,41 @@ trait Position extends js.Object {
 
 object Position {
   @scala.inline
-  def apply(Column: Int | Double = null, Line: Int | Double = null): Position = {
+  def apply(): Position = {
     val __obj = js.Dynamic.literal()
-    if (Column != null) __obj.updateDynamic("Column")(Column.asInstanceOf[js.Any])
-    if (Line != null) __obj.updateDynamic("Line")(Line.asInstanceOf[js.Any])
     __obj.asInstanceOf[Position]
   }
+  @scala.inline
+  implicit class PositionOps[Self <: Position] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumn(value: ColumnNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColumn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Column")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLine(value: LineNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLine: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Line")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

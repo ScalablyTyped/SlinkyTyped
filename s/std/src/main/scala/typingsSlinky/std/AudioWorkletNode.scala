@@ -38,7 +38,7 @@ trait AudioWorkletNode extends AudioNode {
   def removeEventListener_processorerror(
     `type`: processorerror,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 

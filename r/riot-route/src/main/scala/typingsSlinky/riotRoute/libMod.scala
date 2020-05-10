@@ -1,7 +1,6 @@
 package typingsSlinky.riotRoute
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +32,7 @@ object libMod extends js.Object {
       */
     def base(): Unit = js.native
     def base(arg: String): Unit = js.native
-    def base(arg: RegExp): Unit = js.native
+    def base(arg: js.RegExp): Unit = js.native
     /**
       * Returns a new routing context.
       * @since v2.3

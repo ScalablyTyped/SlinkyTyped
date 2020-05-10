@@ -13,12 +13,10 @@ trait envVersion extends js.Object
 
 object envVersion {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def develop: typingsSlinky.weappApi.weappApiStrings.develop = "develop".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.develop]
   @scala.inline
-  def develop: typingsSlinky.weappApi.weappApiStrings.develop = this.cast("develop")
+  def release: typingsSlinky.weappApi.weappApiStrings.release = "release".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.release]
   @scala.inline
-  def release: typingsSlinky.weappApi.weappApiStrings.release = this.cast("release")
-  @scala.inline
-  def trial: typingsSlinky.weappApi.weappApiStrings.trial = this.cast("trial")
+  def trial: typingsSlinky.weappApi.weappApiStrings.trial = "trial".asInstanceOf[typingsSlinky.weappApi.weappApiStrings.trial]
 }
 

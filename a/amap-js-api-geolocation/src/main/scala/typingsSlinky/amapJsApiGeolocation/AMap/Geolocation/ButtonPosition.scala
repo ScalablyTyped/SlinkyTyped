@@ -14,14 +14,12 @@ trait ButtonPosition extends js.Object
 
 object ButtonPosition {
   @scala.inline
-  def LB: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.LB = this.cast("LB")
+  def LB: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.LB = "LB".asInstanceOf[typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.LB]
   @scala.inline
-  def LT: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.LT = this.cast("LT")
+  def LT: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.LT = "LT".asInstanceOf[typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.LT]
   @scala.inline
-  def RB: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.RB = this.cast("RB")
+  def RB: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.RB = "RB".asInstanceOf[typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.RB]
   @scala.inline
-  def RT: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.RT = this.cast("RT")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def RT: typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.RT = "RT".asInstanceOf[typingsSlinky.amapJsApiGeolocation.amapJsApiGeolocationStrings.RT]
 }
 

@@ -15,16 +15,14 @@ trait ParameterCollectionFormat extends js.Object
 
 object ParameterCollectionFormat {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def csv: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.csv = "csv".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.csv]
   @scala.inline
-  def csv: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.csv = this.cast("csv")
+  def multi: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.multi = "multi".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.multi]
   @scala.inline
-  def multi: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.multi = this.cast("multi")
+  def pipes: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.pipes = "pipes".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.pipes]
   @scala.inline
-  def pipes: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.pipes = this.cast("pipes")
+  def ssv: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.ssv = "ssv".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.ssv]
   @scala.inline
-  def ssv: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.ssv = this.cast("ssv")
-  @scala.inline
-  def tsv: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.tsv = this.cast("tsv")
+  def tsv: typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.tsv = "tsv".asInstanceOf[typingsSlinky.swaggerSchemaOfficial.swaggerSchemaOfficialStrings.tsv]
 }
 

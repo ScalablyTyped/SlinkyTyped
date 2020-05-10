@@ -157,9 +157,9 @@ trait Vue extends js.Object {
   @JSName("$mount")
   def $mount(elementOrSelector: String, hydrating: Boolean): this.type = js.native
   @JSName("$mount")
-  def $mount(elementOrSelector: typingsSlinky.std.Element): this.type = js.native
+  def $mount(elementOrSelector: Element): this.type = js.native
   @JSName("$mount")
-  def $mount(elementOrSelector: typingsSlinky.std.Element, hydrating: Boolean): this.type = js.native
+  def $mount(elementOrSelector: Element, hydrating: Boolean): this.type = js.native
   @JSName("$nextTick")
   def $nextTick(): js.Promise[Unit] = js.native
   @JSName("$nextTick")

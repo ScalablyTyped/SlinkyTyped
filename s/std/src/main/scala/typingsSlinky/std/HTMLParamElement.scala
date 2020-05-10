@@ -30,5 +30,6 @@ trait HTMLParamElement extends HTMLElement {
 
 @JSGlobal("HTMLParamElement")
 @js.native
-object HTMLParamElement extends Instantiable0[HTMLParamElement]
+object HTMLParamElement
+  extends Instantiable0[org.scalajs.dom.raw.HTMLParamElement]
 

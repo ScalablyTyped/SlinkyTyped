@@ -4,37 +4,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ListActiveBreakpointsResponse extends js.Object {
   /**
     * List of all active breakpoints.
     * The fields `id` and `location` are guaranteed to be set on each breakpoint.
     */
-  var breakpoints: js.UndefOr[js.Array[Breakpoint]] = js.undefined
+  var breakpoints: js.UndefOr[js.Array[Breakpoint]] = js.native
   /**
     * A token that can be used in the next method call to block until
     * the list of breakpoints changes.
     */
-  var nextWaitToken: js.UndefOr[String] = js.undefined
+  var nextWaitToken: js.UndefOr[String] = js.native
   /**
     * If set to `true`, indicates that there is no change to the
     * list of active breakpoints and the server-selected timeout has expired.
     * The `breakpoints` field would be empty and should be ignored.
     */
-  var waitExpired: js.UndefOr[Boolean] = js.undefined
+  var waitExpired: js.UndefOr[Boolean] = js.native
 }
 
 object ListActiveBreakpointsResponse {
   @scala.inline
-  def apply(
-    breakpoints: js.Array[Breakpoint] = null,
-    nextWaitToken: String = null,
-    waitExpired: js.UndefOr[Boolean] = js.undefined
-  ): ListActiveBreakpointsResponse = {
+  def apply(): ListActiveBreakpointsResponse = {
     val __obj = js.Dynamic.literal()
-    if (breakpoints != null) __obj.updateDynamic("breakpoints")(breakpoints.asInstanceOf[js.Any])
-    if (nextWaitToken != null) __obj.updateDynamic("nextWaitToken")(nextWaitToken.asInstanceOf[js.Any])
-    if (!js.isUndefined(waitExpired)) __obj.updateDynamic("waitExpired")(waitExpired.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListActiveBreakpointsResponse]
   }
+  @scala.inline
+  implicit class ListActiveBreakpointsResponseOps[Self <: ListActiveBreakpointsResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBreakpoints(value: js.Array[Breakpoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBreakpoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextWaitToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextWaitToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextWaitToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextWaitToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWaitExpired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitExpired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWaitExpired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitExpired")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

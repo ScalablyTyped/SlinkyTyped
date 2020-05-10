@@ -52,7 +52,7 @@ trait TDSLoader extends js.Object {
     * @param data Dataview.
     * @param chunk Data chunk.
     */
-  def nextChunk(data: scala.scalajs.js.typedarray.DataView, chunk: js.Object): Double = js.native
+  def nextChunk(data: js.typedarray.DataView, chunk: js.Object): Double = js.native
   /**
     * Parse arraybuffer data and load 3ds file.
     *
@@ -60,107 +60,107 @@ trait TDSLoader extends js.Object {
     * @param path Path for external resources.
     * @return Group loaded from 3ds file.
     */
-  def parse(arraybuffer: scala.scalajs.js.typedarray.ArrayBuffer, path: String): Object3D = js.native
+  def parse(arraybuffer: js.typedarray.ArrayBuffer, path: String): Object3D = js.native
   /**
     * Read byte value.
     *
     * @param data Dataview to read data from.
     * @return Data read from the dataview.
     */
-  def readByte(data: scala.scalajs.js.typedarray.DataView): Double = js.native
+  def readByte(data: js.typedarray.DataView): Double = js.native
   /**
     * Read next chunk of data.
     *
     * @param data Dataview.
     * @return Chunk of data read.
     */
-  def readChunk(data: scala.scalajs.js.typedarray.DataView): js.Object = js.native
+  def readChunk(data: js.typedarray.DataView): js.Object = js.native
   /**
     * Read a color value.
     *
     * @param data Dataview.
     * @return Color value read..
     */
-  def readColor(data: scala.scalajs.js.typedarray.DataView): Color = js.native
+  def readColor(data: js.typedarray.DataView): Color = js.native
   /**
     * Read 64 bit unsigned integer value.
     *
     * @param data Dataview to read data from.
     * @return Data read from the dataview.
     */
-  def readDWord(data: scala.scalajs.js.typedarray.DataView): Double = js.native
+  def readDWord(data: js.typedarray.DataView): Double = js.native
   /**
     * Read face array data chunk.
     *
     * @param data Dataview in use.
     * @param mesh Mesh to be filled with the data read.
     */
-  def readFaceArray(data: scala.scalajs.js.typedarray.DataView, mesh: Mesh): Unit = js.native
+  def readFaceArray(data: js.typedarray.DataView, mesh: Mesh): Unit = js.native
   /**
     * Decode file content to read 3ds data.
     *
     * @param arraybuffer Arraybuffer data to be loaded.
     */
-  def readFile(arraybuffer: scala.scalajs.js.typedarray.ArrayBuffer, path: String): Unit = js.native
+  def readFile(arraybuffer: js.typedarray.ArrayBuffer, path: String): Unit = js.native
   /**
     * Read 32 bit float value.
     *
     * @param data Dataview to read data from.
     * @return Data read from the dataview.
     */
-  def readFloat(data: scala.scalajs.js.typedarray.DataView): Double = js.native
+  def readFloat(data: js.typedarray.DataView): Double = js.native
   /**
     * Read 32 bit signed integer value.
     *
     * @param data Dataview to read data from.
     * @return Data read from the dataview.
     */
-  def readInt(data: scala.scalajs.js.typedarray.DataView): Double = js.native
+  def readInt(data: js.typedarray.DataView): Double = js.native
   /**
     * Read texture map data chunk.
     *
     * @param data Dataview in use.
     * @return Texture read from this data chunk.
     */
-  def readMap(data: scala.scalajs.js.typedarray.DataView, path: String): Texture = js.native
+  def readMap(data: js.typedarray.DataView, path: String): Texture = js.native
   /**
     * Read material data chunk and add it to the material list.
     *
     * @param data Dataview in use.
     */
-  def readMaterialEntry(data: scala.scalajs.js.typedarray.DataView, path: String): Unit = js.native
+  def readMaterialEntry(data: js.typedarray.DataView, path: String): Unit = js.native
   /**
     * Read material group data chunk.
     *
     * @param data Dataview in use.
     * @return object with name and index of the object.
     */
-  def readMaterialGroup(data: scala.scalajs.js.typedarray.DataView): js.Object = js.native
+  def readMaterialGroup(data: js.typedarray.DataView): js.Object = js.native
   /**
     * Read mesh data chunk.
     *
     * @param data Dataview in use.
     */
-  def readMesh(data: scala.scalajs.js.typedarray.DataView): Unit = js.native
+  def readMesh(data: js.typedarray.DataView): Unit = js.native
   /**
     * Read mesh data chunk.
     *
     * @param data Dataview in use.
     */
-  def readMeshData(data: scala.scalajs.js.typedarray.DataView, path: String): Unit = js.native
+  def readMeshData(data: js.typedarray.DataView, path: String): Unit = js.native
   /**
     * Read named object chunk.
     *
     * @param data Dataview in use.
     */
-  def readNamedobject(data: scala.scalajs.js.typedarray.DataView): Unit = js.native
+  def readNamedobject(data: js.typedarray.DataView): Unit = js.native
   /**
     * Read 16 bit signed integer value.
     *
     * @param data Dataview to read data from.
     * @return Data read from the dataview.
     */
-  def readShort(data: scala.scalajs.js.typedarray.DataView): Double = js.native
+  def readShort(data: js.typedarray.DataView): Double = js.native
   /**
     * Read string value.
     *
@@ -168,14 +168,14 @@ trait TDSLoader extends js.Object {
     * @param maxLength Max size of the string to be read.
     * @return Data read from the dataview.
     */
-  def readString(data: scala.scalajs.js.typedarray.DataView, maxLength: Double): String = js.native
+  def readString(data: js.typedarray.DataView, maxLength: Double): String = js.native
   /**
     * Read 32 bit unsigned integer value.
     *
     * @param data Dataview to read data from.
     * @return Data read from the dataview.
     */
-  def readWord(data: scala.scalajs.js.typedarray.DataView): Double = js.native
+  def readWord(data: js.typedarray.DataView): Double = js.native
   /**
     * Reset dataview position.
     */

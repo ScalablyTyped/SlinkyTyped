@@ -16,18 +16,16 @@ trait NotifyMode extends js.Object
 
 object NotifyMode {
   @scala.inline
-  def always: typingsSlinky.jestTypes.jestTypesStrings.always = this.cast("always")
+  def always: typingsSlinky.jestTypes.jestTypesStrings.always = "always".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.always]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def change: typingsSlinky.jestTypes.jestTypesStrings.change = "change".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.change]
   @scala.inline
-  def change: typingsSlinky.jestTypes.jestTypesStrings.change = this.cast("change")
+  def failure: typingsSlinky.jestTypes.jestTypesStrings.failure = "failure".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.failure]
   @scala.inline
-  def failure: typingsSlinky.jestTypes.jestTypesStrings.failure = this.cast("failure")
+  def `failure-change`: typingsSlinky.jestTypes.jestTypesStrings.`failure-change` = "failure-change".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.`failure-change`]
   @scala.inline
-  def `failure-change`: typingsSlinky.jestTypes.jestTypesStrings.`failure-change` = this.cast("failure-change")
+  def success: typingsSlinky.jestTypes.jestTypesStrings.success = "success".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.success]
   @scala.inline
-  def success: typingsSlinky.jestTypes.jestTypesStrings.success = this.cast("success")
-  @scala.inline
-  def `success-change`: typingsSlinky.jestTypes.jestTypesStrings.`success-change` = this.cast("success-change")
+  def `success-change`: typingsSlinky.jestTypes.jestTypesStrings.`success-change` = "success-change".asInstanceOf[typingsSlinky.jestTypes.jestTypesStrings.`success-change`]
 }
 

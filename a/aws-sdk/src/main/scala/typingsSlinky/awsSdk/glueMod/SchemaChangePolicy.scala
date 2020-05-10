@@ -18,11 +18,41 @@ trait SchemaChangePolicy extends js.Object {
 
 object SchemaChangePolicy {
   @scala.inline
-  def apply(DeleteBehavior: DeleteBehavior = null, UpdateBehavior: UpdateBehavior = null): SchemaChangePolicy = {
+  def apply(): SchemaChangePolicy = {
     val __obj = js.Dynamic.literal()
-    if (DeleteBehavior != null) __obj.updateDynamic("DeleteBehavior")(DeleteBehavior.asInstanceOf[js.Any])
-    if (UpdateBehavior != null) __obj.updateDynamic("UpdateBehavior")(UpdateBehavior.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaChangePolicy]
   }
+  @scala.inline
+  implicit class SchemaChangePolicyOps[Self <: SchemaChangePolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeleteBehavior(value: DeleteBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDeleteBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteBehavior")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUpdateBehavior(value: UpdateBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUpdateBehavior: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdateBehavior")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

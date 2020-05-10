@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("expo/build/takeSnapshotAsync/captureRef.web", JSImport.Namespace)
 @js.native
 object captureRefWebMod extends js.Object {
-  def default(component: Element): js.Promise[String | scala.scalajs.js.typedarray.Uint8ClampedArray | Blob] = js.native
-  def default(component: Element, options: CaptureOptions): js.Promise[String | scala.scalajs.js.typedarray.Uint8ClampedArray | Blob] = js.native
+  def default(component: Element): js.Promise[String | js.typedarray.Uint8ClampedArray | Blob] = js.native
+  def default(component: Element, options: CaptureOptions): js.Promise[String | js.typedarray.Uint8ClampedArray | Blob] = js.native
 }
 

@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AccessibilityFeaturesClearArg extends js.Object {
   /**
     * The scope of the ChromeSetting. One of
@@ -12,15 +13,34 @@ trait AccessibilityFeaturesClearArg extends js.Object {
     * • incognito_persistent: setting for the incognito profile that survives browser restarts (overrides regular preferences),
     * • incognito_session_only: setting for the incognito profile that can only be set during an incognito session and is deleted when the incognito session ends (overrides regular and incognito_persistent preferences).
     */
-  var scope: js.UndefOr[Scope] = js.undefined
+  var scope: js.UndefOr[Scope] = js.native
 }
 
 object AccessibilityFeaturesClearArg {
   @scala.inline
-  def apply(scope: Scope = null): AccessibilityFeaturesClearArg = {
+  def apply(): AccessibilityFeaturesClearArg = {
     val __obj = js.Dynamic.literal()
-    if (scope != null) __obj.updateDynamic("scope")(scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessibilityFeaturesClearArg]
   }
+  @scala.inline
+  implicit class AccessibilityFeaturesClearArgOps[Self <: AccessibilityFeaturesClearArg] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScope(value: Scope): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScope: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

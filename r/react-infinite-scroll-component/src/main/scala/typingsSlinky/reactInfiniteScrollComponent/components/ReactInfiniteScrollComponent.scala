@@ -1,61 +1,69 @@
 package typingsSlinky.reactInfiniteScrollComponent.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactInfiniteScrollComponent.mod.InfiniteScrollProps
 import typingsSlinky.reactInfiniteScrollComponent.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactInfiniteScrollComponent
-  extends ExternalComponentWithAttributesWithRefType[tag.type, ^] {
+object ReactInfiniteScrollComponent {
   @JSImport("react-infinite-scroll-component", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply(
-    dataLength: Double,
-    hasMore: Boolean,
-    loader: TagMod[Any],
-    next: () => Unit,
-    endMessage: TagMod[Any] = null,
-    hasChildren: js.UndefOr[Boolean] = js.undefined,
-    height: Int | Double = null,
-    initialScrollY: Int | Double = null,
-    onScroll: () => Unit = null,
-    pullDownToRefresh: js.UndefOr[Boolean] = js.undefined,
-    pullDownToRefreshContent: TagMod[Any] = null,
-    pullDownToRefreshThreshold: Int | Double = null,
-    refreshFunction: () => Unit = null,
-    releaseToRefreshContent: TagMod[Any] = null,
-    scrollThreshold: Double | String = null,
-    scrollableTarget: TagMod[Any] | String = null,
-    style: js.Any = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, ^] = {
-    val __obj = js.Dynamic.literal(dataLength = dataLength.asInstanceOf[js.Any], hasMore = hasMore.asInstanceOf[js.Any], loader = loader.asInstanceOf[js.Any], next = js.Any.fromFunction0(next))
-    if (endMessage != null) __obj.updateDynamic("endMessage")(endMessage.asInstanceOf[js.Any])
-    if (!js.isUndefined(hasChildren)) __obj.updateDynamic("hasChildren")(hasChildren.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (initialScrollY != null) __obj.updateDynamic("initialScrollY")(initialScrollY.asInstanceOf[js.Any])
-    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction0(onScroll))
-    if (!js.isUndefined(pullDownToRefresh)) __obj.updateDynamic("pullDownToRefresh")(pullDownToRefresh.asInstanceOf[js.Any])
-    if (pullDownToRefreshContent != null) __obj.updateDynamic("pullDownToRefreshContent")(pullDownToRefreshContent.asInstanceOf[js.Any])
-    if (pullDownToRefreshThreshold != null) __obj.updateDynamic("pullDownToRefreshThreshold")(pullDownToRefreshThreshold.asInstanceOf[js.Any])
-    if (refreshFunction != null) __obj.updateDynamic("refreshFunction")(js.Any.fromFunction0(refreshFunction))
-    if (releaseToRefreshContent != null) __obj.updateDynamic("releaseToRefreshContent")(releaseToRefreshContent.asInstanceOf[js.Any])
-    if (scrollThreshold != null) __obj.updateDynamic("scrollThreshold")(scrollThreshold.asInstanceOf[js.Any])
-    if (scrollableTarget != null) __obj.updateDynamic("scrollableTarget")(scrollableTarget.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, ^] {
+    @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endMessageReactElement(value: ReactElement): this.type = set("endMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def endMessage(value: TagMod[Any]): this.type = set("endMessage", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hasChildren(value: Boolean): this.type = set("hasChildren", value.asInstanceOf[js.Any])
+    @scala.inline
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    @scala.inline
+    def initialScrollY(value: Double): this.type = set("initialScrollY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def loader(value: TagMod[Any]): this.type = set("loader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onScroll(value: () => Unit): this.type = set("onScroll", js.Any.fromFunction0(value))
+    @scala.inline
+    def pullDownToRefresh(value: Boolean): this.type = set("pullDownToRefresh", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pullDownToRefreshContentReactElement(value: ReactElement): this.type = set("pullDownToRefreshContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pullDownToRefreshContent(value: TagMod[Any]): this.type = set("pullDownToRefreshContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pullDownToRefreshThreshold(value: Double): this.type = set("pullDownToRefreshThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def refreshFunction(value: () => Unit): this.type = set("refreshFunction", js.Any.fromFunction0(value))
+    @scala.inline
+    def releaseToRefreshContentReactElement(value: ReactElement): this.type = set("releaseToRefreshContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def releaseToRefreshContent(value: TagMod[Any]): this.type = set("releaseToRefreshContent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollThreshold(value: Double | String): this.type = set("scrollThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollableTargetReactElement(value: ReactElement): this.type = set("scrollableTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def scrollableTarget(value: TagMod[Any] | String): this.type = set("scrollableTarget", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
   }
-  type Props = InfiniteScrollProps
+  
+  def withProps(p: InfiniteScrollProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(dataLength: Double, hasMore: Boolean, next: () => Unit): Builder = {
+    val __props = js.Dynamic.literal(dataLength = dataLength.asInstanceOf[js.Any], hasMore = hasMore.asInstanceOf[js.Any], next = js.Any.fromFunction0(next))
+    new Builder(js.Array(this.component, __props.asInstanceOf[InfiniteScrollProps]))
+  }
 }
 

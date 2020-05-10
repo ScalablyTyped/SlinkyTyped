@@ -26,18 +26,65 @@ trait CustomCodeSigning extends js.Object {
 
 object CustomCodeSigning {
   @scala.inline
-  def apply(
-    certificateChain: CodeSigningCertificateChain = null,
-    hashAlgorithm: HashAlgorithm = null,
-    signature: CodeSigningSignature = null,
-    signatureAlgorithm: SignatureAlgorithm = null
-  ): CustomCodeSigning = {
+  def apply(): CustomCodeSigning = {
     val __obj = js.Dynamic.literal()
-    if (certificateChain != null) __obj.updateDynamic("certificateChain")(certificateChain.asInstanceOf[js.Any])
-    if (hashAlgorithm != null) __obj.updateDynamic("hashAlgorithm")(hashAlgorithm.asInstanceOf[js.Any])
-    if (signature != null) __obj.updateDynamic("signature")(signature.asInstanceOf[js.Any])
-    if (signatureAlgorithm != null) __obj.updateDynamic("signatureAlgorithm")(signatureAlgorithm.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomCodeSigning]
   }
+  @scala.inline
+  implicit class CustomCodeSigningOps[Self <: CustomCodeSigning] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificateChain(value: CodeSigningCertificateChain): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateChain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCertificateChain: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificateChain")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHashAlgorithm(value: HashAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHashAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hashAlgorithm")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignature(value: CodeSigningSignature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignature: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignatureAlgorithm(value: SignatureAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureAlgorithm")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignatureAlgorithm: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signatureAlgorithm")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

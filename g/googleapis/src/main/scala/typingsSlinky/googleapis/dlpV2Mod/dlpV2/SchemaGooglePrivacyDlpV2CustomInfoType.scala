@@ -58,26 +58,113 @@ trait SchemaGooglePrivacyDlpV2CustomInfoType extends js.Object {
 
 object SchemaGooglePrivacyDlpV2CustomInfoType {
   @scala.inline
-  def apply(
-    detectionRules: js.Array[SchemaGooglePrivacyDlpV2DetectionRule] = null,
-    dictionary: SchemaGooglePrivacyDlpV2Dictionary = null,
-    exclusionType: String = null,
-    infoType: SchemaGooglePrivacyDlpV2InfoType = null,
-    likelihood: String = null,
-    regex: SchemaGooglePrivacyDlpV2Regex = null,
-    storedType: SchemaGooglePrivacyDlpV2StoredType = null,
-    surrogateType: SchemaGooglePrivacyDlpV2SurrogateType = null
-  ): SchemaGooglePrivacyDlpV2CustomInfoType = {
+  def apply(): SchemaGooglePrivacyDlpV2CustomInfoType = {
     val __obj = js.Dynamic.literal()
-    if (detectionRules != null) __obj.updateDynamic("detectionRules")(detectionRules.asInstanceOf[js.Any])
-    if (dictionary != null) __obj.updateDynamic("dictionary")(dictionary.asInstanceOf[js.Any])
-    if (exclusionType != null) __obj.updateDynamic("exclusionType")(exclusionType.asInstanceOf[js.Any])
-    if (infoType != null) __obj.updateDynamic("infoType")(infoType.asInstanceOf[js.Any])
-    if (likelihood != null) __obj.updateDynamic("likelihood")(likelihood.asInstanceOf[js.Any])
-    if (regex != null) __obj.updateDynamic("regex")(regex.asInstanceOf[js.Any])
-    if (storedType != null) __obj.updateDynamic("storedType")(storedType.asInstanceOf[js.Any])
-    if (surrogateType != null) __obj.updateDynamic("surrogateType")(surrogateType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaGooglePrivacyDlpV2CustomInfoType]
   }
+  @scala.inline
+  implicit class SchemaGooglePrivacyDlpV2CustomInfoTypeOps[Self <: SchemaGooglePrivacyDlpV2CustomInfoType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetectionRules(value: js.Array[SchemaGooglePrivacyDlpV2DetectionRule]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectionRules")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDetectionRules: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detectionRules")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDictionary(value: SchemaGooglePrivacyDlpV2Dictionary): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDictionary: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dictionary")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExclusionType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExclusionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exclusionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInfoType(value: SchemaGooglePrivacyDlpV2InfoType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInfoType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("infoType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLikelihood(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("likelihood")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLikelihood: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("likelihood")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegex(value: SchemaGooglePrivacyDlpV2Regex): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegex: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStoredType(value: SchemaGooglePrivacyDlpV2StoredType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storedType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStoredType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storedType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSurrogateType(value: SchemaGooglePrivacyDlpV2SurrogateType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("surrogateType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSurrogateType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("surrogateType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

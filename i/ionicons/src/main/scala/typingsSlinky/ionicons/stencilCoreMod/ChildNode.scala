@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ChildNode extends js.Object {
-  var vattrs: js.UndefOr[js.Any] = js.undefined
-  var vchildren: js.UndefOr[js.Array[VNode]] = js.undefined
-  var vkey: js.UndefOr[String | Double] = js.undefined
-  var vname: js.UndefOr[String] = js.undefined
-  var vtag: js.UndefOr[String | Double | js.Function] = js.undefined
-  var vtext: js.UndefOr[String] = js.undefined
+  var vattrs: js.UndefOr[js.Any] = js.native
+  var vchildren: js.UndefOr[js.Array[VNode]] = js.native
+  var vkey: js.UndefOr[String | Double] = js.native
+  var vname: js.UndefOr[String] = js.native
+  var vtag: js.UndefOr[String | Double | js.Function] = js.native
+  var vtext: js.UndefOr[String] = js.native
 }
 
 object ChildNode {
   @scala.inline
-  def apply(
-    vattrs: js.Any = null,
-    vchildren: js.Array[VNode] = null,
-    vkey: String | Double = null,
-    vname: String = null,
-    vtag: String | Double | js.Function = null,
-    vtext: String = null
-  ): ChildNode = {
+  def apply(): ChildNode = {
     val __obj = js.Dynamic.literal()
-    if (vattrs != null) __obj.updateDynamic("vattrs")(vattrs.asInstanceOf[js.Any])
-    if (vchildren != null) __obj.updateDynamic("vchildren")(vchildren.asInstanceOf[js.Any])
-    if (vkey != null) __obj.updateDynamic("vkey")(vkey.asInstanceOf[js.Any])
-    if (vname != null) __obj.updateDynamic("vname")(vname.asInstanceOf[js.Any])
-    if (vtag != null) __obj.updateDynamic("vtag")(vtag.asInstanceOf[js.Any])
-    if (vtext != null) __obj.updateDynamic("vtext")(vtext.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChildNode]
   }
+  @scala.inline
+  implicit class ChildNodeOps[Self <: ChildNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVattrs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vattrs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVattrs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vattrs")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVchildren(value: js.Array[VNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vchildren")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVchildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vchildren")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVkey(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vkey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVkey: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vkey")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVname: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vname")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVtag(value: String | Double | js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vtag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vtag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVtext(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vtext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVtext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vtext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

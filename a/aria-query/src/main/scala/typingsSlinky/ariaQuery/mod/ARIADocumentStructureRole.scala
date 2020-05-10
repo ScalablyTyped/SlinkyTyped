@@ -35,56 +35,54 @@ trait ARIADocumentStructureRole extends js.Object
 
 object ARIADocumentStructureRole {
   @scala.inline
-  def article: typingsSlinky.ariaQuery.ariaQueryStrings.article = this.cast("article")
+  def article: typingsSlinky.ariaQuery.ariaQueryStrings.article = "article".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.article]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def cell: typingsSlinky.ariaQuery.ariaQueryStrings.cell = "cell".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.cell]
   @scala.inline
-  def cell: typingsSlinky.ariaQuery.ariaQueryStrings.cell = this.cast("cell")
+  def columnheader: typingsSlinky.ariaQuery.ariaQueryStrings.columnheader = "columnheader".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.columnheader]
   @scala.inline
-  def columnheader: typingsSlinky.ariaQuery.ariaQueryStrings.columnheader = this.cast("columnheader")
+  def definition: typingsSlinky.ariaQuery.ariaQueryStrings.definition = "definition".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.definition]
   @scala.inline
-  def definition: typingsSlinky.ariaQuery.ariaQueryStrings.definition = this.cast("definition")
+  def directory: typingsSlinky.ariaQuery.ariaQueryStrings.directory = "directory".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.directory]
   @scala.inline
-  def directory: typingsSlinky.ariaQuery.ariaQueryStrings.directory = this.cast("directory")
+  def document: typingsSlinky.ariaQuery.ariaQueryStrings.document = "document".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.document]
   @scala.inline
-  def document: typingsSlinky.ariaQuery.ariaQueryStrings.document = this.cast("document")
+  def feed: typingsSlinky.ariaQuery.ariaQueryStrings.feed = "feed".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.feed]
   @scala.inline
-  def feed: typingsSlinky.ariaQuery.ariaQueryStrings.feed = this.cast("feed")
+  def figure: typingsSlinky.ariaQuery.ariaQueryStrings.figure = "figure".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.figure]
   @scala.inline
-  def figure: typingsSlinky.ariaQuery.ariaQueryStrings.figure = this.cast("figure")
+  def group: typingsSlinky.ariaQuery.ariaQueryStrings.group = "group".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.group]
   @scala.inline
-  def group: typingsSlinky.ariaQuery.ariaQueryStrings.group = this.cast("group")
+  def heading: typingsSlinky.ariaQuery.ariaQueryStrings.heading = "heading".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.heading]
   @scala.inline
-  def heading: typingsSlinky.ariaQuery.ariaQueryStrings.heading = this.cast("heading")
+  def img: typingsSlinky.ariaQuery.ariaQueryStrings.img = "img".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.img]
   @scala.inline
-  def img: typingsSlinky.ariaQuery.ariaQueryStrings.img = this.cast("img")
+  def list: typingsSlinky.ariaQuery.ariaQueryStrings.list = "list".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.list]
   @scala.inline
-  def list: typingsSlinky.ariaQuery.ariaQueryStrings.list = this.cast("list")
+  def listitem: typingsSlinky.ariaQuery.ariaQueryStrings.listitem = "listitem".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.listitem]
   @scala.inline
-  def listitem: typingsSlinky.ariaQuery.ariaQueryStrings.listitem = this.cast("listitem")
+  def math: typingsSlinky.ariaQuery.ariaQueryStrings.math = "math".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.math]
   @scala.inline
-  def math: typingsSlinky.ariaQuery.ariaQueryStrings.math = this.cast("math")
+  def none: typingsSlinky.ariaQuery.ariaQueryStrings.none = "none".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.none]
   @scala.inline
-  def none: typingsSlinky.ariaQuery.ariaQueryStrings.none = this.cast("none")
+  def note: typingsSlinky.ariaQuery.ariaQueryStrings.note = "note".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.note]
   @scala.inline
-  def note: typingsSlinky.ariaQuery.ariaQueryStrings.note = this.cast("note")
+  def presentation: typingsSlinky.ariaQuery.ariaQueryStrings.presentation = "presentation".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.presentation]
   @scala.inline
-  def presentation: typingsSlinky.ariaQuery.ariaQueryStrings.presentation = this.cast("presentation")
+  def region: typingsSlinky.ariaQuery.ariaQueryStrings.region = "region".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.region]
   @scala.inline
-  def region: typingsSlinky.ariaQuery.ariaQueryStrings.region = this.cast("region")
+  def row: typingsSlinky.ariaQuery.ariaQueryStrings.row = "row".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.row]
   @scala.inline
-  def row: typingsSlinky.ariaQuery.ariaQueryStrings.row = this.cast("row")
+  def rowgroup: typingsSlinky.ariaQuery.ariaQueryStrings.rowgroup = "rowgroup".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.rowgroup]
   @scala.inline
-  def rowgroup: typingsSlinky.ariaQuery.ariaQueryStrings.rowgroup = this.cast("rowgroup")
+  def rowheader: typingsSlinky.ariaQuery.ariaQueryStrings.rowheader = "rowheader".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.rowheader]
   @scala.inline
-  def rowheader: typingsSlinky.ariaQuery.ariaQueryStrings.rowheader = this.cast("rowheader")
+  def separator: typingsSlinky.ariaQuery.ariaQueryStrings.separator = "separator".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.separator]
   @scala.inline
-  def separator: typingsSlinky.ariaQuery.ariaQueryStrings.separator = this.cast("separator")
+  def table: typingsSlinky.ariaQuery.ariaQueryStrings.table = "table".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.table]
   @scala.inline
-  def table: typingsSlinky.ariaQuery.ariaQueryStrings.table = this.cast("table")
+  def term: typingsSlinky.ariaQuery.ariaQueryStrings.term = "term".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.term]
   @scala.inline
-  def term: typingsSlinky.ariaQuery.ariaQueryStrings.term = this.cast("term")
-  @scala.inline
-  def toolbar: typingsSlinky.ariaQuery.ariaQueryStrings.toolbar = this.cast("toolbar")
+  def toolbar: typingsSlinky.ariaQuery.ariaQueryStrings.toolbar = "toolbar".asInstanceOf[typingsSlinky.ariaQuery.ariaQueryStrings.toolbar]
 }
 

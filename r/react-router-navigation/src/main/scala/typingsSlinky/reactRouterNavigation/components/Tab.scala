@@ -1,11 +1,9 @@
 package typingsSlinky.reactRouterNavigation.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -20,58 +18,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Tab
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object Tab {
   @JSImport("react-router-navigation", "Tab")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: label */
-  def apply(
-    component: ReactComponentClass[RouterProps] = null,
-    exact: js.UndefOr[Boolean] = js.undefined,
-    hideTabBar: js.UndefOr[Boolean] = js.undefined,
-    labelStyle: StyleProp[TextStyle] = null,
-    onIndexChange: /* index */ Double => Unit = null,
-    onReset: /* props */ TabBarProps with RouteProps => Unit = null,
-    path: String = null,
-    render: /* props */ RouterProps => TagMod[Any] = null,
-    renderLabel: /* props */ TabSubViewProps => TagMod[Any] = null,
-    renderTabBar: /* props */ TabSubViewProps => TagMod[Any] = null,
-    renderTabIcon: /* props */ TabSubViewProps => TagMod[Any] = null,
-    strict: js.UndefOr[Boolean] = js.undefined,
-    tabActiveTintColor: String = null,
-    tabBarIndicatorStyle: StyleProp[ViewStyle] = null,
-    tabBarPosition: top | bottom = null,
-    tabBarStyle: StyleProp[ViewStyle] = null,
-    tabStyle: StyleProp[ViewStyle] = null,
-    tabTintColor: String = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
-    if (!js.isUndefined(exact)) __obj.updateDynamic("exact")(exact.asInstanceOf[js.Any])
-    if (!js.isUndefined(hideTabBar)) __obj.updateDynamic("hideTabBar")(hideTabBar.asInstanceOf[js.Any])
-    if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
-    if (onIndexChange != null) __obj.updateDynamic("onIndexChange")(js.Any.fromFunction1(onIndexChange))
-    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
-    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
-    if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
-    if (renderLabel != null) __obj.updateDynamic("renderLabel")(js.Any.fromFunction1(renderLabel))
-    if (renderTabBar != null) __obj.updateDynamic("renderTabBar")(js.Any.fromFunction1(renderTabBar))
-    if (renderTabIcon != null) __obj.updateDynamic("renderTabIcon")(js.Any.fromFunction1(renderTabIcon))
-    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.asInstanceOf[js.Any])
-    if (tabActiveTintColor != null) __obj.updateDynamic("tabActiveTintColor")(tabActiveTintColor.asInstanceOf[js.Any])
-    if (tabBarIndicatorStyle != null) __obj.updateDynamic("tabBarIndicatorStyle")(tabBarIndicatorStyle.asInstanceOf[js.Any])
-    if (tabBarPosition != null) __obj.updateDynamic("tabBarPosition")(tabBarPosition.asInstanceOf[js.Any])
-    if (tabBarStyle != null) __obj.updateDynamic("tabBarStyle")(tabBarStyle.asInstanceOf[js.Any])
-    if (tabStyle != null) __obj.updateDynamic("tabStyle")(tabStyle.asInstanceOf[js.Any])
-    if (tabTintColor != null) __obj.updateDynamic("tabTintColor")(tabTintColor.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def component(value: ReactComponentClass[RouterProps]): this.type = set("component", value.asInstanceOf[js.Any])
+    @scala.inline
+    def exact(value: Boolean): this.type = set("exact", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hideTabBar(value: Boolean): this.type = set("hideTabBar", value.asInstanceOf[js.Any])
+    @scala.inline
+    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelStyle(value: StyleProp[TextStyle]): this.type = set("labelStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelStyleNull: this.type = set("labelStyle", null)
+    @scala.inline
+    def onIndexChange(value: /* index */ Double => Unit): this.type = set("onIndexChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onReset(value: /* props */ TabBarProps with RouteProps => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+    @scala.inline
+    def path(value: String): this.type = set("path", value.asInstanceOf[js.Any])
+    @scala.inline
+    def render(value: /* props */ RouterProps => TagMod[Any]): this.type = set("render", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderLabel(value: /* props */ TabSubViewProps => TagMod[Any]): this.type = set("renderLabel", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderTabBar(value: /* props */ TabSubViewProps => TagMod[Any]): this.type = set("renderTabBar", js.Any.fromFunction1(value))
+    @scala.inline
+    def renderTabIcon(value: /* props */ TabSubViewProps => TagMod[Any]): this.type = set("renderTabIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def strict(value: Boolean): this.type = set("strict", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabActiveTintColor(value: String): this.type = set("tabActiveTintColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarIndicatorStyle(value: StyleProp[ViewStyle]): this.type = set("tabBarIndicatorStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarIndicatorStyleNull: this.type = set("tabBarIndicatorStyle", null)
+    @scala.inline
+    def tabBarPosition(value: top | bottom): this.type = set("tabBarPosition", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarStyle(value: StyleProp[ViewStyle]): this.type = set("tabBarStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabBarStyleNull: this.type = set("tabBarStyle", null)
+    @scala.inline
+    def tabStyle(value: StyleProp[ViewStyle]): this.type = set("tabStyle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tabStyleNull: this.type = set("tabStyle", null)
+    @scala.inline
+    def tabTintColor(value: String): this.type = set("tabTintColor", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = TabProps
+  
+  def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Tab.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

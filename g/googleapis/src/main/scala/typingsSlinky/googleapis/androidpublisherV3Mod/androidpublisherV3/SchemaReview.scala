@@ -22,12 +22,53 @@ trait SchemaReview extends js.Object {
 
 object SchemaReview {
   @scala.inline
-  def apply(authorName: String = null, comments: js.Array[SchemaComment] = null, reviewId: String = null): SchemaReview = {
+  def apply(): SchemaReview = {
     val __obj = js.Dynamic.literal()
-    if (authorName != null) __obj.updateDynamic("authorName")(authorName.asInstanceOf[js.Any])
-    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (reviewId != null) __obj.updateDynamic("reviewId")(reviewId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReview]
   }
+  @scala.inline
+  implicit class SchemaReviewOps[Self <: SchemaReview] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthorName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuthorName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authorName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withComments(value: js.Array[SchemaComment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComments: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReviewId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReviewId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reviewId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

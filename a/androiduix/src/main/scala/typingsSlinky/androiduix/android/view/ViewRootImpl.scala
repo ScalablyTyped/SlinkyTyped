@@ -1,11 +1,10 @@
 package typingsSlinky.androiduix.android.view
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.androiduix.android.graphics.Point
 import typingsSlinky.androiduix.android.graphics.Rect
 import typingsSlinky.androiduix.android.os.Handler
 import typingsSlinky.androiduix.android.view.View.AttachInfo.InvalidateInfo
-import typingsSlinky.androiduix.java.lang.Runnable
+import typingsSlinky.androiduix.java_.lang.Runnable
 import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -53,17 +52,9 @@ class ViewRootImpl () extends ViewParent {
   var mWidth: js.Any = js.native
   var mWillDrawSoon: js.Any = js.native
   var mWinFrame: js.Any = js.native
-  /* CompleteClass */
-  override def bringChildToFront(child: View): js.Any = js.native
   def cancelInvalidate(view: View): Unit = js.native
   /* private */ def checkContinueTraversalsNextFrame(): js.Any = js.native
   /* private */ def checkForLeavingTouchModeAndConsume(event: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def childDrawableStateChanged(child: View): js.Any = js.native
-  /* CompleteClass */
-  override def childHasTransientStateChanged(child: View, hasTransientState: Boolean): js.Any = js.native
-  /* CompleteClass */
-  override def clearChildFocus(child: View): js.Any = js.native
   /* private */ def deliverInputEvent(event: js.Any): js.Any = js.native
   def dispatchInputEvent(event: KeyEvent): Boolean = js.native
   def dispatchInputEvent(event: MotionEvent): Boolean = js.native
@@ -79,27 +70,13 @@ class ViewRootImpl () extends ViewParent {
   def ensureTouchModeLocally(inTouchMode: Boolean): Boolean = js.native
   /* private */ def enterTouchMode(): js.Any = js.native
   /* private */ def finishInputEvent(event: js.Any): js.Any = js.native
-  /* CompleteClass */
-  override def focusSearch(v: View, direction: Double): View = js.native
-  /* CompleteClass */
-  override def focusableViewAvailable(v: View): js.Any = js.native
-  /* CompleteClass */
-  override def getChildVisibleRect(child: View, r: Rect, offset: Point): Boolean = js.native
   def getHostVisibility(): Double = js.native
-  /* CompleteClass */
-  override def getParent(): ViewParent = js.native
   /* private */ def getValidLayoutRequesters(layoutRequesters: js.Any, secondLayoutRequests: js.Any): js.Any = js.native
   def getView(): View = js.native
   def initSurface(canvasElement: HTMLCanvasElement): Unit = js.native
   def invalidate(): Unit = js.native
-  /* CompleteClass */
-  override def invalidateChild(child: View, r: Rect): js.Any = js.native
-  /* CompleteClass */
-  override def invalidateChildInParent(location: js.Array[Double], r: Rect): ViewParent = js.native
   def invalidateWorld(view: View): Unit = js.native
   def isInLayout(): Boolean = js.native
-  /* CompleteClass */
-  override def isLayoutRequested(): Boolean = js.native
   /* private */ def leaveTouchMode(): js.Any = js.native
   /* private */ def measureHierarchy(host: js.Any, lp: js.Any, desiredWindowWidth: js.Any, desiredWindowHeight: js.Any): js.Any = js.native
   def notifyResized(frame: Rect): Unit = js.native
@@ -107,14 +84,6 @@ class ViewRootImpl () extends ViewParent {
   /* private */ def performLayout(lp: js.Any, desiredWindowWidth: js.Any, desiredWindowHeight: js.Any): js.Any = js.native
   /* private */ def performMeasure(childWidthMeasureSpec: js.Any, childHeightMeasureSpec: js.Any): js.Any = js.native
   /* private */ def performTraversals(): js.Any = js.native
-  /* CompleteClass */
-  override def requestChildFocus(child: View, focused: View): js.Any = js.native
-  /* CompleteClass */
-  override def requestChildRectangleOnScreen(child: View, rectangle: Rect, immediate: Boolean): Boolean = js.native
-  /* CompleteClass */
-  override def requestDisallowInterceptTouchEvent(disallowIntercept: Boolean): js.Any = js.native
-  /* CompleteClass */
-  override def requestLayout(): js.Any = js.native
   def requestLayoutDuringLayout(view: View): Boolean = js.native
   /* private */ def scheduleTraversals(): js.Any = js.native
   def setView(view: View): Unit = js.native

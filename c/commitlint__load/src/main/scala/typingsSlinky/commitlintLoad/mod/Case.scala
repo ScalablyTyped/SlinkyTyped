@@ -23,30 +23,28 @@ trait Case extends js.Object
 
 object Case {
   @scala.inline
-  def `camel-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`camel-case` = this.cast("camel-case")
+  def `camel-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`camel-case` = "camel-case".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.`camel-case`]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def `kebab-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`kebab-case` = "kebab-case".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.`kebab-case`]
   @scala.inline
-  def `kebab-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`kebab-case` = this.cast("kebab-case")
+  def `lower-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`lower-case` = "lower-case".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.`lower-case`]
   @scala.inline
-  def `lower-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`lower-case` = this.cast("lower-case")
+  def lowerCase: typingsSlinky.commitlintLoad.commitlintLoadStrings.lowerCase = "lowerCase".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.lowerCase]
   @scala.inline
-  def lowerCase: typingsSlinky.commitlintLoad.commitlintLoadStrings.lowerCase = this.cast("lowerCase")
+  def lowercase: lowercase_ = "lowercase".asInstanceOf[lowercase_]
   @scala.inline
-  def lowercase: lowercase_ = this.cast("lowercase")
+  def `pascal-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`pascal-case` = "pascal-case".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.`pascal-case`]
   @scala.inline
-  def `pascal-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`pascal-case` = this.cast("pascal-case")
+  def `sentence-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`sentence-case` = "sentence-case".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.`sentence-case`]
   @scala.inline
-  def `sentence-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`sentence-case` = this.cast("sentence-case")
+  def sentencecase: typingsSlinky.commitlintLoad.commitlintLoadStrings.sentencecase = "sentencecase".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.sentencecase]
   @scala.inline
-  def sentencecase: typingsSlinky.commitlintLoad.commitlintLoadStrings.sentencecase = this.cast("sentencecase")
+  def `snake-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`snake-case` = "snake-case".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.`snake-case`]
   @scala.inline
-  def `snake-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`snake-case` = this.cast("snake-case")
+  def `start-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`start-case` = "start-case".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.`start-case`]
   @scala.inline
-  def `start-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`start-case` = this.cast("start-case")
+  def `upper-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`upper-case` = "upper-case".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.`upper-case`]
   @scala.inline
-  def `upper-case`: typingsSlinky.commitlintLoad.commitlintLoadStrings.`upper-case` = this.cast("upper-case")
-  @scala.inline
-  def uppercase: typingsSlinky.commitlintLoad.commitlintLoadStrings.uppercase = this.cast("uppercase")
+  def uppercase: typingsSlinky.commitlintLoad.commitlintLoadStrings.uppercase = "uppercase".asInstanceOf[typingsSlinky.commitlintLoad.commitlintLoadStrings.uppercase]
 }
 

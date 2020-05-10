@@ -9,33 +9,101 @@ import scala.scalajs.js.annotation._
 /**
   * {@link https://developer.here.com/documentation/maps/api_reference/H.map.ViewModel.html#.ILookAtData}
   */
+@js.native
 trait ILookAtData extends js.Object {
-  var bounds: js.UndefOr[AbstractGeometry] = js.undefined
-  var heading: js.UndefOr[Double] = js.undefined
-  var incline: js.UndefOr[Double] = js.undefined
-  var position: js.UndefOr[IPoint] = js.undefined
-  var tilt: js.UndefOr[Double] = js.undefined
-  var zoom: js.UndefOr[Double] = js.undefined
+  var bounds: js.UndefOr[AbstractGeometry] = js.native
+  var heading: js.UndefOr[Double] = js.native
+  var incline: js.UndefOr[Double] = js.native
+  var position: js.UndefOr[IPoint] = js.native
+  var tilt: js.UndefOr[Double] = js.native
+  var zoom: js.UndefOr[Double] = js.native
 }
 
 object ILookAtData {
   @scala.inline
-  def apply(
-    bounds: AbstractGeometry = null,
-    heading: Int | Double = null,
-    incline: Int | Double = null,
-    position: IPoint = null,
-    tilt: Int | Double = null,
-    zoom: Int | Double = null
-  ): ILookAtData = {
+  def apply(): ILookAtData = {
     val __obj = js.Dynamic.literal()
-    if (bounds != null) __obj.updateDynamic("bounds")(bounds.asInstanceOf[js.Any])
-    if (heading != null) __obj.updateDynamic("heading")(heading.asInstanceOf[js.Any])
-    if (incline != null) __obj.updateDynamic("incline")(incline.asInstanceOf[js.Any])
-    if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
-    if (tilt != null) __obj.updateDynamic("tilt")(tilt.asInstanceOf[js.Any])
-    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[ILookAtData]
   }
+  @scala.inline
+  implicit class ILookAtDataOps[Self <: ILookAtData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBounds(value: AbstractGeometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeading(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heading")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncline(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncline: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("incline")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(value: IPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTilt(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTilt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tilt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withZoom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutZoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

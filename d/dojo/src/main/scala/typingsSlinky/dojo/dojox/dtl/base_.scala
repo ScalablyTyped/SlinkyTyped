@@ -169,7 +169,7 @@ trait base_ extends js.Object {
     *
     * @param obj
     */
-  def DomTemplate(obj: typingsSlinky.std.HTMLElement): Unit = js.native
+  def DomTemplate(obj: HTMLElement): Unit = js.native
   /**
     *
     * @param args

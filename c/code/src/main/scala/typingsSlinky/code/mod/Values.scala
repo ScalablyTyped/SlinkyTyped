@@ -1,6 +1,5 @@
 package typingsSlinky.code.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -81,12 +80,12 @@ trait Values[T] extends js.Object {
   def reject(): AssertionChain[T] = js.native
   def reject(`type`: js.Any): AssertionChain[T] = js.native
   def reject(`type`: js.Any, message: String): AssertionChain[T] = js.native
-  def reject(`type`: js.Any, message: RegExp): AssertionChain[T] = js.native
+  def reject(`type`: js.Any, message: js.RegExp): AssertionChain[T] = js.native
   /** Asserts that the Promise reference value rejects with an exception when called */
   def rejects(): AssertionChain[T] = js.native
   def rejects(`type`: js.Any): AssertionChain[T] = js.native
   def rejects(`type`: js.Any, message: String): AssertionChain[T] = js.native
-  def rejects(`type`: js.Any, message: RegExp): AssertionChain[T] = js.native
+  def rejects(`type`: js.Any, message: js.RegExp): AssertionChain[T] = js.native
   /** Asserts that the reference value satisfies the provided validator function. */
   def satisfies(validator: js.Function1[/* value */ T, Boolean]): AssertionChain[T] = js.native
   /** Asserts that the reference value satisfies the provided validator function. */
@@ -99,12 +98,12 @@ trait Values[T] extends js.Object {
   def `throw`(): AssertionChain[T] = js.native
   def `throw`(`type`: js.Any): AssertionChain[T] = js.native
   def `throw`(`type`: js.Any, message: String): AssertionChain[T] = js.native
-  def `throw`(`type`: js.Any, message: RegExp): AssertionChain[T] = js.native
+  def `throw`(`type`: js.Any, message: js.RegExp): AssertionChain[T] = js.native
   /** Asserts that the function reference value throws an exception when called. */
   def throws(): AssertionChain[T] = js.native
   def throws(`type`: js.Any): AssertionChain[T] = js.native
   def throws(`type`: js.Any, message: String): AssertionChain[T] = js.native
-  def throws(`type`: js.Any, message: RegExp): AssertionChain[T] = js.native
+  def throws(`type`: js.Any, message: js.RegExp): AssertionChain[T] = js.native
   /** Asserts that the reference value is true. */
   def `true`(): AssertionChain[T] = js.native
   /** Asserts that the reference value is undefined. */

@@ -4,18 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SingleValueLegacyExtendedProperty extends Entity {
   // A property value.
-  var value: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[String] = js.native
 }
 
 object SingleValueLegacyExtendedProperty {
   @scala.inline
-  def apply(id: String = null, value: String = null): SingleValueLegacyExtendedProperty = {
+  def apply(): SingleValueLegacyExtendedProperty = {
     val __obj = js.Dynamic.literal()
-    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
-    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SingleValueLegacyExtendedProperty]
   }
+  @scala.inline
+  implicit class SingleValueLegacyExtendedPropertyOps[Self <: SingleValueLegacyExtendedProperty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

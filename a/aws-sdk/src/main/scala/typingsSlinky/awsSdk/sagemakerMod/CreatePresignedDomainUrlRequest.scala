@@ -22,14 +22,41 @@ trait CreatePresignedDomainUrlRequest extends js.Object {
 
 object CreatePresignedDomainUrlRequest {
   @scala.inline
-  def apply(
-    DomainId: DomainId,
-    UserProfileName: UserProfileName,
-    SessionExpirationDurationInSeconds: Int | Double = null
-  ): CreatePresignedDomainUrlRequest = {
+  def apply(DomainId: DomainId, UserProfileName: UserProfileName): CreatePresignedDomainUrlRequest = {
     val __obj = js.Dynamic.literal(DomainId = DomainId.asInstanceOf[js.Any], UserProfileName = UserProfileName.asInstanceOf[js.Any])
-    if (SessionExpirationDurationInSeconds != null) __obj.updateDynamic("SessionExpirationDurationInSeconds")(SessionExpirationDurationInSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreatePresignedDomainUrlRequest]
   }
+  @scala.inline
+  implicit class CreatePresignedDomainUrlRequestOps[Self <: CreatePresignedDomainUrlRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDomainId(value: DomainId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DomainId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserProfileName(value: UserProfileName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserProfileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSessionExpirationDurationInSeconds(value: SessionExpirationDurationInSeconds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionExpirationDurationInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSessionExpirationDurationInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SessionExpirationDurationInSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

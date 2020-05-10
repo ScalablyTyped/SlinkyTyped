@@ -28,15 +28,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAgendaDuration extends js.Object {
-  var agendaDuration: js.UndefOr[Double] = js.undefined
+  var agendaDuration: js.UndefOr[Double] = js.native
   var appointmentCollectorTemplate: js.UndefOr[
     template | (js.Function2[
       /* data */ AnonAppointmentCount, 
       /* collectorElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.undefined
+  ] = js.native
   var appointmentTemplate: js.UndefOr[
     template | (js.Function3[
       /* model */ AnonAppointmentData, 
@@ -44,7 +45,7 @@ trait AnonAgendaDuration extends js.Object {
       /* contentElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.undefined
+  ] = js.native
   var appointmentTooltipTemplate: js.UndefOr[
     template | (js.Function3[
       /* model */ AnonAppointmentData, 
@@ -52,8 +53,8 @@ trait AnonAgendaDuration extends js.Object {
       /* contentElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.undefined
-  var cellDuration: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var cellDuration: js.UndefOr[Double] = js.native
   var dataCellTemplate: js.UndefOr[
     template | (js.Function3[
       /* itemData */ js.Any, 
@@ -61,7 +62,7 @@ trait AnonAgendaDuration extends js.Object {
       /* itemElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.undefined
+  ] = js.native
   var dateCellTemplate: js.UndefOr[
     template | (js.Function3[
       /* itemData */ js.Any, 
@@ -69,7 +70,7 @@ trait AnonAgendaDuration extends js.Object {
       /* itemElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.undefined
+  ] = js.native
   var dropDownAppointmentTemplate: js.UndefOr[
     template | (js.Function3[
       /* itemData */ js.Any, 
@@ -77,15 +78,15 @@ trait AnonAgendaDuration extends js.Object {
       /* contentElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.undefined
-  var endDayHour: js.UndefOr[Double] = js.undefined
-  var firstDayOfWeek: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.undefined
-  var groupByDate: js.UndefOr[Boolean] = js.undefined
-  var groupOrientation: js.UndefOr[horizontal | vertical] = js.undefined
-  var groups: js.UndefOr[js.Array[String]] = js.undefined
-  var intervalCount: js.UndefOr[Double] = js.undefined
-  var maxAppointmentsPerCell: js.UndefOr[Double | auto | unlimited] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
+  ] = js.native
+  var endDayHour: js.UndefOr[Double] = js.native
+  var firstDayOfWeek: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.native
+  var groupByDate: js.UndefOr[Boolean] = js.native
+  var groupOrientation: js.UndefOr[horizontal | vertical] = js.native
+  var groups: js.UndefOr[js.Array[String]] = js.native
+  var intervalCount: js.UndefOr[Double] = js.native
+  var maxAppointmentsPerCell: js.UndefOr[Double | auto | unlimited] = js.native
+  var name: js.UndefOr[String] = js.native
   var resourceCellTemplate: js.UndefOr[
     template | (js.Function3[
       /* itemData */ js.Any, 
@@ -93,9 +94,9 @@ trait AnonAgendaDuration extends js.Object {
       /* itemElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.undefined
-  var startDate: js.UndefOr[js.Date | Double | String] = js.undefined
-  var startDayHour: js.UndefOr[Double] = js.undefined
+  ] = js.native
+  var startDate: js.UndefOr[js.Date | Double | String] = js.native
+  var startDayHour: js.UndefOr[Double] = js.native
   var timeCellTemplate: js.UndefOr[
     template | (js.Function3[
       /* itemData */ js.Any, 
@@ -103,99 +104,452 @@ trait AnonAgendaDuration extends js.Object {
       /* itemElement */ dxElement, 
       String | Element | JQuery
     ])
-  ] = js.undefined
+  ] = js.native
   var `type`: js.UndefOr[
     agenda | day | month | timelineDay | timelineMonth | timelineWeek | timelineWorkWeek | week | workWeek
-  ] = js.undefined
+  ] = js.native
 }
 
 object AnonAgendaDuration {
   @scala.inline
-  def apply(
-    agendaDuration: Int | Double = null,
-    appointmentCollectorTemplate: template | (js.Function2[
-      /* data */ AnonAppointmentCount, 
-      /* collectorElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    appointmentTemplate: template | (js.Function3[
-      /* model */ AnonAppointmentData, 
-      /* itemIndex */ Double, 
-      /* contentElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    appointmentTooltipTemplate: template | (js.Function3[
-      /* model */ AnonAppointmentData, 
-      /* itemIndex */ Double, 
-      /* contentElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    cellDuration: Int | Double = null,
-    dataCellTemplate: template | (js.Function3[
-      /* itemData */ js.Any, 
-      /* itemIndex */ Double, 
-      /* itemElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    dateCellTemplate: template | (js.Function3[
-      /* itemData */ js.Any, 
-      /* itemIndex */ Double, 
-      /* itemElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    dropDownAppointmentTemplate: template | (js.Function3[
-      /* itemData */ js.Any, 
-      /* itemIndex */ Double, 
-      /* contentElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    endDayHour: Int | Double = null,
-    firstDayOfWeek: `0` | `1` | `2` | `3` | `4` | `5` | `6` = null,
-    groupByDate: js.UndefOr[Boolean] = js.undefined,
-    groupOrientation: horizontal | vertical = null,
-    groups: js.Array[String] = null,
-    intervalCount: Int | Double = null,
-    maxAppointmentsPerCell: Double | auto | unlimited = null,
-    name: String = null,
-    resourceCellTemplate: template | (js.Function3[
-      /* itemData */ js.Any, 
-      /* itemIndex */ Double, 
-      /* itemElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    startDate: js.Date | Double | String = null,
-    startDayHour: Int | Double = null,
-    timeCellTemplate: template | (js.Function3[
-      /* itemData */ js.Any, 
-      /* itemIndex */ Double, 
-      /* itemElement */ dxElement, 
-      String | Element | JQuery
-    ]) = null,
-    `type`: agenda | day | month | timelineDay | timelineMonth | timelineWeek | timelineWorkWeek | week | workWeek = null
-  ): AnonAgendaDuration = {
+  def apply(): AnonAgendaDuration = {
     val __obj = js.Dynamic.literal()
-    if (agendaDuration != null) __obj.updateDynamic("agendaDuration")(agendaDuration.asInstanceOf[js.Any])
-    if (appointmentCollectorTemplate != null) __obj.updateDynamic("appointmentCollectorTemplate")(appointmentCollectorTemplate.asInstanceOf[js.Any])
-    if (appointmentTemplate != null) __obj.updateDynamic("appointmentTemplate")(appointmentTemplate.asInstanceOf[js.Any])
-    if (appointmentTooltipTemplate != null) __obj.updateDynamic("appointmentTooltipTemplate")(appointmentTooltipTemplate.asInstanceOf[js.Any])
-    if (cellDuration != null) __obj.updateDynamic("cellDuration")(cellDuration.asInstanceOf[js.Any])
-    if (dataCellTemplate != null) __obj.updateDynamic("dataCellTemplate")(dataCellTemplate.asInstanceOf[js.Any])
-    if (dateCellTemplate != null) __obj.updateDynamic("dateCellTemplate")(dateCellTemplate.asInstanceOf[js.Any])
-    if (dropDownAppointmentTemplate != null) __obj.updateDynamic("dropDownAppointmentTemplate")(dropDownAppointmentTemplate.asInstanceOf[js.Any])
-    if (endDayHour != null) __obj.updateDynamic("endDayHour")(endDayHour.asInstanceOf[js.Any])
-    if (firstDayOfWeek != null) __obj.updateDynamic("firstDayOfWeek")(firstDayOfWeek.asInstanceOf[js.Any])
-    if (!js.isUndefined(groupByDate)) __obj.updateDynamic("groupByDate")(groupByDate.asInstanceOf[js.Any])
-    if (groupOrientation != null) __obj.updateDynamic("groupOrientation")(groupOrientation.asInstanceOf[js.Any])
-    if (groups != null) __obj.updateDynamic("groups")(groups.asInstanceOf[js.Any])
-    if (intervalCount != null) __obj.updateDynamic("intervalCount")(intervalCount.asInstanceOf[js.Any])
-    if (maxAppointmentsPerCell != null) __obj.updateDynamic("maxAppointmentsPerCell")(maxAppointmentsPerCell.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (resourceCellTemplate != null) __obj.updateDynamic("resourceCellTemplate")(resourceCellTemplate.asInstanceOf[js.Any])
-    if (startDate != null) __obj.updateDynamic("startDate")(startDate.asInstanceOf[js.Any])
-    if (startDayHour != null) __obj.updateDynamic("startDayHour")(startDayHour.asInstanceOf[js.Any])
-    if (timeCellTemplate != null) __obj.updateDynamic("timeCellTemplate")(timeCellTemplate.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAgendaDuration]
   }
+  @scala.inline
+  implicit class AnonAgendaDurationOps[Self <: AnonAgendaDuration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAgendaDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agendaDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAgendaDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("agendaDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppointmentCollectorTemplateFunction2(
+      value: (/* data */ AnonAppointmentCount, /* collectorElement */ dxElement) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentCollectorTemplate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withAppointmentCollectorTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentCollectorTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppointmentCollectorTemplate(
+      value: template | (js.Function2[
+          /* data */ AnonAppointmentCount, 
+          /* collectorElement */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentCollectorTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppointmentCollectorTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentCollectorTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppointmentTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppointmentTemplateFunction3(
+      value: (/* model */ AnonAppointmentData, /* itemIndex */ Double, /* contentElement */ dxElement) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withAppointmentTemplate(
+      value: template | (js.Function3[
+          /* model */ AnonAppointmentData, 
+          /* itemIndex */ Double, 
+          /* contentElement */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppointmentTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppointmentTooltipTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentTooltipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppointmentTooltipTemplateFunction3(
+      value: (/* model */ AnonAppointmentData, /* itemIndex */ Double, /* contentElement */ dxElement) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentTooltipTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withAppointmentTooltipTemplate(
+      value: template | (js.Function3[
+          /* model */ AnonAppointmentData, 
+          /* itemIndex */ Double, 
+          /* contentElement */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentTooltipTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppointmentTooltipTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentTooltipTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCellDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCellDuration: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellDuration")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDataCellTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataCellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataCellTemplateFunction3(
+      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataCellTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDataCellTemplate(
+      value: template | (js.Function3[
+          /* itemData */ js.Any, 
+          /* itemIndex */ Double, 
+          /* itemElement */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataCellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDataCellTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataCellTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDateCellTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateCellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDateCellTemplateFunction3(
+      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateCellTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDateCellTemplate(
+      value: template | (js.Function3[
+          /* itemData */ js.Any, 
+          /* itemIndex */ Double, 
+          /* itemElement */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateCellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDateCellTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateCellTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDropDownAppointmentTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownAppointmentTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDropDownAppointmentTemplateFunction3(
+      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* contentElement */ dxElement) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownAppointmentTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDropDownAppointmentTemplate(
+      value: template | (js.Function3[
+          /* itemData */ js.Any, 
+          /* itemIndex */ Double, 
+          /* contentElement */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownAppointmentTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDropDownAppointmentTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownAppointmentTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndDayHour(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDayHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndDayHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDayHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFirstDayOfWeek(value: `0` | `1` | `2` | `3` | `4` | `5` | `6`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFirstDayOfWeek: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstDayOfWeek")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupByDate(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupByDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupByDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupByDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroupOrientation(value: horizontal | vertical): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroupOrientation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOrientation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGroups(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIntervalCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIntervalCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intervalCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxAppointmentsPerCell(value: Double | auto | unlimited): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAppointmentsPerCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxAppointmentsPerCell: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAppointmentsPerCell")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResourceCellTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceCellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceCellTemplateFunction3(
+      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceCellTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withResourceCellTemplate(
+      value: template | (js.Function3[
+          /* itemData */ js.Any, 
+          /* itemIndex */ Double, 
+          /* itemElement */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceCellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResourceCellTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceCellTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartDateDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartDate(value: js.Date | Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStartDayHour(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDayHour")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStartDayHour: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDayHour")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeCellTemplateElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeCellTemplateFunction3(
+      value: (/* itemData */ js.Any, /* itemIndex */ Double, /* itemElement */ dxElement) => String | Element | JQuery
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCellTemplate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withTimeCellTemplate(
+      value: template | (js.Function3[
+          /* itemData */ js.Any, 
+          /* itemIndex */ Double, 
+          /* itemElement */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCellTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeCellTemplate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeCellTemplate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(
+      value: agenda | day | month | timelineDay | timelineMonth | timelineWeek | timelineWorkWeek | week | workWeek
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

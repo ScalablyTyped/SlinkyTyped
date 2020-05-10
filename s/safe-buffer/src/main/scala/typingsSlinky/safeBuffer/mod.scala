@@ -1,6 +1,5 @@
 package typingsSlinky.safeBuffer
 
-import typingsSlinky.std.ArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,7 @@ object mod extends js.Object {
       *
       * @param arrayBuffer The ArrayBuffer with which to share memory.
       */
-    def this(arrayBuffer: scala.scalajs.js.typedarray.ArrayBuffer) = this()
+    def this(arrayBuffer: js.typedarray.ArrayBuffer) = this()
     /**
       * Allocates a new buffer containing the given {array} of octets.
       *
@@ -29,7 +28,7 @@ object mod extends js.Object {
       *
       * @param array The octets to store.
       */
-    def this(array: scala.scalajs.js.typedarray.Uint8Array) = this()
+    def this(array: js.typedarray.Uint8Array) = this()
     /**
       * Copies the passed {buffer} data onto a new {Buffer} instance.
       *
@@ -253,9 +252,9 @@ object mod extends js.Object {
       * @param byteOffset
       * @param length
       */
-    def from(arrayBuffer: ArrayBuffer): Buffer = js.native
-    def from(arrayBuffer: ArrayBuffer, byteOffset: Double): Buffer = js.native
-    def from(arrayBuffer: ArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
+    def from(arrayBuffer: js.typedarray.ArrayBuffer): Buffer = js.native
+    def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): Buffer = js.native
+    def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): Buffer = js.native
     /**
       * Allocates a new Buffer using an {array} of octets.
       *

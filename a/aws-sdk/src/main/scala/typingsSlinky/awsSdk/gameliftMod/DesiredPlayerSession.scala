@@ -18,11 +18,41 @@ trait DesiredPlayerSession extends js.Object {
 
 object DesiredPlayerSession {
   @scala.inline
-  def apply(PlayerData: PlayerData = null, PlayerId: NonZeroAndMaxString = null): DesiredPlayerSession = {
+  def apply(): DesiredPlayerSession = {
     val __obj = js.Dynamic.literal()
-    if (PlayerData != null) __obj.updateDynamic("PlayerData")(PlayerData.asInstanceOf[js.Any])
-    if (PlayerId != null) __obj.updateDynamic("PlayerId")(PlayerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[DesiredPlayerSession]
   }
+  @scala.inline
+  implicit class DesiredPlayerSessionOps[Self <: DesiredPlayerSession] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPlayerData(value: PlayerData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayerData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayerId(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayerId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

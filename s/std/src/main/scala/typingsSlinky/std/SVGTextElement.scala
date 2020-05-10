@@ -11,5 +11,6 @@ trait SVGTextElement extends SVGTextPositioningElement
 
 @JSGlobal("SVGTextElement")
 @js.native
-object SVGTextElement extends Instantiable0[SVGTextElement]
+object SVGTextElement
+  extends Instantiable0[org.scalajs.dom.raw.SVGTextElement]
 

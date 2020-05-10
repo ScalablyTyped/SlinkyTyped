@@ -5,24 +5,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait DuplexConnection extends js.Object {
   /**
     * Close the underlying connection, emitting `onComplete` on the receive()
     * Publisher.
     */
-  def close(): Unit
+  def close(): Unit = js.native
   /**
     * Open the underlying connection. Throws if the connection is already in
     * the CLOSED or ERROR state.
     */
-  def connect(): Unit
+  def connect(): Unit = js.native
   /**
     * Returns a Flowable that immediately publishes the current connection
     * status and thereafter updates as it changes. Once a connection is in
     * the CLOSED or ERROR state, it may not be connected again.
     * Implementations must publish values per the comments on ConnectionStatus.
     */
-  def connectionStatus(): Flowable[ConnectionStatus]
+  def connectionStatus(): Flowable[ConnectionStatus] = js.native
   /**
     * Returns a stream of all `Frame`s received on this connection.
     *
@@ -34,7 +35,7 @@ trait DuplexConnection extends js.Object {
     * - Implemenations may optionally support multi-cast receivers. Those that do
     *   not should throw if `receive` is called more than once.
     */
-  def receive(): Flowable[Frame]
+  def receive(): Flowable[Frame] = js.native
   /**
     * Send all the `input` frames on this connection.
     *
@@ -43,11 +44,11 @@ trait DuplexConnection extends js.Object {
     * - Implementations must signal any errors by calling `onError` on the
     *   `receive()` Publisher.
     */
-  def send(input: Flowable[Frame]): Unit
+  def send(input: Flowable[Frame]): Unit = js.native
   /**
     * Send a single frame on the connection.
     */
-  def sendOne(frame: Frame): Unit
+  def sendOne(frame: Frame): Unit = js.native
 }
 
 object DuplexConnection {
@@ -61,8 +62,51 @@ object DuplexConnection {
     sendOne: Frame => Unit
   ): DuplexConnection = {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), connect = js.Any.fromFunction0(connect), connectionStatus = js.Any.fromFunction0(connectionStatus), receive = js.Any.fromFunction0(receive), send = js.Any.fromFunction1(send), sendOne = js.Any.fromFunction1(sendOne))
-  
     __obj.asInstanceOf[DuplexConnection]
   }
+  @scala.inline
+  implicit class DuplexConnectionOps[Self <: DuplexConnection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withConnect(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connect")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withConnectionStatus(value: () => Flowable[ConnectionStatus]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionStatus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReceive(value: () => Flowable[Frame]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receive")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSend(value: Flowable[Frame] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSendOne(value: Frame => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendOne")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

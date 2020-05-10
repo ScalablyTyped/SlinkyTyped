@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeKeyboardSpacer.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeKeyboardSpacer.mod.KeyboardSpacerProps
@@ -13,27 +10,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeKeyboardSpacer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+object ReactNativeKeyboardSpacer {
   @JSImport("react-native-keyboard-spacer", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    onToggle: (/* keyboardIsOpen */ Boolean, /* keyboardSpace */ Double) => Unit = null,
-    style: StyleProp[ViewStyle] = null,
-    topSpacing: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal()
-    if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction2(onToggle))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (topSpacing != null) __obj.updateDynamic("topSpacing")(topSpacing.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def onToggle(value: (/* keyboardIsOpen */ Boolean, /* keyboardSpace */ Double) => Unit): this.type = set("onToggle", js.Any.fromFunction2(value))
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
+    @scala.inline
+    def topSpacing(value: Double): this.type = set("topSpacing", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactNativeKeyboardSpacer.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = KeyboardSpacerProps
+  
+  def withProps(p: KeyboardSpacerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativeKeyboardSpacer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -18,10 +18,35 @@ trait ForgetDeviceRequest extends js.Object {
 
 object ForgetDeviceRequest {
   @scala.inline
-  def apply(DeviceKey: DeviceKeyType, AccessToken: TokenModelType = null): ForgetDeviceRequest = {
+  def apply(DeviceKey: DeviceKeyType): ForgetDeviceRequest = {
     val __obj = js.Dynamic.literal(DeviceKey = DeviceKey.asInstanceOf[js.Any])
-    if (AccessToken != null) __obj.updateDynamic("AccessToken")(AccessToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForgetDeviceRequest]
   }
+  @scala.inline
+  implicit class ForgetDeviceRequestOps[Self <: ForgetDeviceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceKey(value: DeviceKeyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeviceKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAccessToken(value: TokenModelType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccessToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AccessToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

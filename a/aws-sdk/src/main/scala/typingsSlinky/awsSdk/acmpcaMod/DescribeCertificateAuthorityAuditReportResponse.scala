@@ -26,18 +26,65 @@ trait DescribeCertificateAuthorityAuditReportResponse extends js.Object {
 
 object DescribeCertificateAuthorityAuditReportResponse {
   @scala.inline
-  def apply(
-    AuditReportStatus: AuditReportStatus = null,
-    CreatedAt: js.Date = null,
-    S3BucketName: String = null,
-    S3Key: String = null
-  ): DescribeCertificateAuthorityAuditReportResponse = {
+  def apply(): DescribeCertificateAuthorityAuditReportResponse = {
     val __obj = js.Dynamic.literal()
-    if (AuditReportStatus != null) __obj.updateDynamic("AuditReportStatus")(AuditReportStatus.asInstanceOf[js.Any])
-    if (CreatedAt != null) __obj.updateDynamic("CreatedAt")(CreatedAt.asInstanceOf[js.Any])
-    if (S3BucketName != null) __obj.updateDynamic("S3BucketName")(S3BucketName.asInstanceOf[js.Any])
-    if (S3Key != null) __obj.updateDynamic("S3Key")(S3Key.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeCertificateAuthorityAuditReportResponse]
   }
+  @scala.inline
+  implicit class DescribeCertificateAuthorityAuditReportResponseOps[Self <: DescribeCertificateAuthorityAuditReportResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuditReportStatus(value: AuditReportStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuditReportStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuditReportStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AuditReportStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreatedAt(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCreatedAt: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreatedAt")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3BucketName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3BucketName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3BucketName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withS3Key(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutS3Key: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("S3Key")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

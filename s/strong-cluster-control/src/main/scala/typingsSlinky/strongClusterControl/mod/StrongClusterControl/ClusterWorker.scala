@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClusterWorker extends ClusterMaster {
-  var id: Double
+  var id: Double = js.native
 }
 
 object ClusterWorker {
   @scala.inline
-  def apply(id: Double, pid: Double, startTime: Double, setSize: Int | Double = null): ClusterWorker = {
+  def apply(id: Double, pid: Double, startTime: Double): ClusterWorker = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], pid = pid.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any])
-    if (setSize != null) __obj.updateDynamic("setSize")(setSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterWorker]
   }
+  @scala.inline
+  implicit class ClusterWorkerOps[Self <: ClusterWorker] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

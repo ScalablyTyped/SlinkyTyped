@@ -1,50 +1,92 @@
 package typingsSlinky.tarFs.mod
 
-import typingsSlinky.node.fsMod.ReadStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PackOptions extends Options {
-  var dereference: js.UndefOr[Boolean] = js.undefined
-  var entries: js.UndefOr[js.Array[String]] = js.undefined
+  var dereference: js.UndefOr[Boolean] = js.native
+  var entries: js.UndefOr[js.Array[String]] = js.native
   @JSName("finalize")
-  var finalize_FPackOptions: js.UndefOr[Boolean] = js.undefined
-  var finish: js.UndefOr[js.Function1[/* pack */ js.Any, Unit]] = js.undefined
+  var finalize_FPackOptions: js.UndefOr[Boolean] = js.native
+  var finish: js.UndefOr[js.Function1[/* pack */ typingsSlinky.tarStream.mod.Pack_, Unit]] = js.native
+  var pack: js.UndefOr[typingsSlinky.tarStream.mod.Pack_] = js.native
 }
 
 object PackOptions {
   @scala.inline
-  def apply(
-    dereference: js.UndefOr[Boolean] = js.undefined,
-    dmode: Int | Double = null,
-    entries: js.Array[String] = null,
-    filter: /* name */ String => Boolean = null,
-    finalize: js.UndefOr[Boolean] = js.undefined,
-    finish: /* pack */ js.Any => Unit = null,
-    fmode: Int | Double = null,
-    ignore: /* name */ String => Boolean = null,
-    map: /* header */ Headers => Headers = null,
-    mapStream: (/* fileStream */ ReadStream, /* header */ Headers) => ReadStream = null,
-    readable: js.UndefOr[Boolean] = js.undefined,
-    strict: js.UndefOr[Boolean] = js.undefined,
-    writable: js.UndefOr[Boolean] = js.undefined
-  ): PackOptions = {
+  def apply(): PackOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(dereference)) __obj.updateDynamic("dereference")(dereference.asInstanceOf[js.Any])
-    if (dmode != null) __obj.updateDynamic("dmode")(dmode.asInstanceOf[js.Any])
-    if (entries != null) __obj.updateDynamic("entries")(entries.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(js.Any.fromFunction1(filter))
-    if (!js.isUndefined(finalize)) __obj.updateDynamic("finalize")(finalize.asInstanceOf[js.Any])
-    if (finish != null) __obj.updateDynamic("finish")(js.Any.fromFunction1(finish))
-    if (fmode != null) __obj.updateDynamic("fmode")(fmode.asInstanceOf[js.Any])
-    if (ignore != null) __obj.updateDynamic("ignore")(js.Any.fromFunction1(ignore))
-    if (map != null) __obj.updateDynamic("map")(js.Any.fromFunction1(map))
-    if (mapStream != null) __obj.updateDynamic("mapStream")(js.Any.fromFunction2(mapStream))
-    if (!js.isUndefined(readable)) __obj.updateDynamic("readable")(readable.asInstanceOf[js.Any])
-    if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.asInstanceOf[js.Any])
-    if (!js.isUndefined(writable)) __obj.updateDynamic("writable")(writable.asInstanceOf[js.Any])
     __obj.asInstanceOf[PackOptions]
   }
+  @scala.inline
+  implicit class PackOptionsOps[Self <: PackOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDereference(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dereference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDereference: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dereference")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEntries(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEntries: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinalize(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFinalize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finalize")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFinish(value: /* pack */ typingsSlinky.tarStream.mod.Pack_ => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finish")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutFinish: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finish")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPack(value: typingsSlinky.tarStream.mod.Pack_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pack")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPack: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pack")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

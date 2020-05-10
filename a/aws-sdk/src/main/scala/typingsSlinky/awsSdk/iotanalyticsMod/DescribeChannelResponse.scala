@@ -18,11 +18,41 @@ trait DescribeChannelResponse extends js.Object {
 
 object DescribeChannelResponse {
   @scala.inline
-  def apply(channel: Channel = null, statistics: ChannelStatistics = null): DescribeChannelResponse = {
+  def apply(): DescribeChannelResponse = {
     val __obj = js.Dynamic.literal()
-    if (channel != null) __obj.updateDynamic("channel")(channel.asInstanceOf[js.Any])
-    if (statistics != null) __obj.updateDynamic("statistics")(statistics.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeChannelResponse]
   }
+  @scala.inline
+  implicit class DescribeChannelResponseOps[Self <: DescribeChannelResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannel(value: Channel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStatistics(value: ChannelStatistics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStatistics: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

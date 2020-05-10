@@ -17,12 +17,10 @@ trait NavBarDisplay extends js.Object
 
 object NavBarDisplay {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def entity: typingsSlinky.xrm.xrmStrings.entity = "entity".asInstanceOf[typingsSlinky.xrm.xrmStrings.entity]
   @scala.inline
-  def entity: typingsSlinky.xrm.xrmStrings.entity = this.cast("entity")
+  def off: typingsSlinky.xrm.xrmStrings.off = "off".asInstanceOf[typingsSlinky.xrm.xrmStrings.off]
   @scala.inline
-  def off: typingsSlinky.xrm.xrmStrings.off = this.cast("off")
-  @scala.inline
-  def on: typingsSlinky.xrm.xrmStrings.on = this.cast("on")
+  def on: typingsSlinky.xrm.xrmStrings.on = "on".asInstanceOf[typingsSlinky.xrm.xrmStrings.on]
 }
 

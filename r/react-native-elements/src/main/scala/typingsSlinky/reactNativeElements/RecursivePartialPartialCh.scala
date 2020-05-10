@@ -12,81 +12,309 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined react-native-elements.react-native-elements.RecursivePartial<std.Partial<react-native-elements.react-native-elements.CheckBoxProps>> */
+@js.native
 trait RecursivePartialPartialCh extends js.Object {
-  var Component: js.UndefOr[RecursivePartial[js.UndefOr[ReactComponentClass[js.Object]]]] = js.undefined
-  var center: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.undefined
-  var checked: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.undefined
-  var checkedColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.undefined
-  var checkedIcon: js.UndefOr[RecursivePartial[js.UndefOr[String | ReactElement]]] = js.undefined
-  var checkedTitle: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.undefined
-  var containerStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.undefined
-  var fontFamily: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.undefined
-  var iconRight: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.undefined
-  var iconType: js.UndefOr[RecursivePartial[js.UndefOr[IconType]]] = js.undefined
-  var onIconPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.undefined
-  var onLongIconPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.undefined
-  var onLongPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.undefined
-  var onPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.undefined
-  var right: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.undefined
-  var size: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.undefined
-  var textStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[TextStyle]]]] = js.undefined
-  var title: js.UndefOr[RecursivePartial[js.UndefOr[String | ReactElement]]] = js.undefined
-  var titleProps: js.UndefOr[RecursivePartial[js.UndefOr[PartialTextProperties]]] = js.undefined
-  var uncheckedColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.undefined
-  var uncheckedIcon: js.UndefOr[RecursivePartial[js.UndefOr[String | ReactElement]]] = js.undefined
-  var wrapperStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.undefined
+  var Component: js.UndefOr[RecursivePartial[js.UndefOr[ReactComponentClass[js.Object]]]] = js.native
+  var center: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  var checked: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  var checkedColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
+  var checkedIcon: js.UndefOr[RecursivePartial[js.UndefOr[String | ReactElement]]] = js.native
+  var checkedTitle: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
+  var containerStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.native
+  var fontFamily: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
+  var iconRight: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  var iconType: js.UndefOr[RecursivePartial[js.UndefOr[IconType]]] = js.native
+  var onIconPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
+  var onLongIconPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
+  var onLongPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
+  var onPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
+  var right: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  var size: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
+  var textStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[TextStyle]]]] = js.native
+  var title: js.UndefOr[RecursivePartial[js.UndefOr[String | ReactElement]]] = js.native
+  var titleProps: js.UndefOr[RecursivePartial[js.UndefOr[PartialTextProperties]]] = js.native
+  var uncheckedColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
+  var uncheckedIcon: js.UndefOr[RecursivePartial[js.UndefOr[String | ReactElement]]] = js.native
+  var wrapperStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.native
 }
 
 object RecursivePartialPartialCh {
   @scala.inline
-  def apply(
-    Component: RecursivePartial[js.UndefOr[ReactComponentClass[js.Object]]] = null,
-    center: RecursivePartial[js.UndefOr[Boolean]] = null,
-    checked: RecursivePartial[js.UndefOr[Boolean]] = null,
-    checkedColor: RecursivePartial[js.UndefOr[String]] = null,
-    checkedIcon: RecursivePartial[js.UndefOr[String | ReactElement]] = null,
-    checkedTitle: RecursivePartial[js.UndefOr[String]] = null,
-    containerStyle: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]] = null,
-    fontFamily: RecursivePartial[js.UndefOr[String]] = null,
-    iconRight: RecursivePartial[js.UndefOr[Boolean]] = null,
-    iconType: RecursivePartial[js.UndefOr[IconType]] = null,
-    onIconPress: RecursivePartial[js.UndefOr[js.Function0[Unit]]] = null,
-    onLongIconPress: RecursivePartial[js.UndefOr[js.Function0[Unit]]] = null,
-    onLongPress: RecursivePartial[js.UndefOr[js.Function0[Unit]]] = null,
-    onPress: RecursivePartial[js.UndefOr[js.Function0[Unit]]] = null,
-    right: RecursivePartial[js.UndefOr[Boolean]] = null,
-    size: RecursivePartial[js.UndefOr[Double]] = null,
-    textStyle: RecursivePartial[js.UndefOr[StyleProp[TextStyle]]] = null,
-    title: RecursivePartial[js.UndefOr[String | ReactElement]] = null,
-    titleProps: RecursivePartial[js.UndefOr[PartialTextProperties]] = null,
-    uncheckedColor: RecursivePartial[js.UndefOr[String]] = null,
-    uncheckedIcon: RecursivePartial[js.UndefOr[String | ReactElement]] = null,
-    wrapperStyle: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]] = null
-  ): RecursivePartialPartialCh = {
+  def apply(): RecursivePartialPartialCh = {
     val __obj = js.Dynamic.literal()
-    if (Component != null) __obj.updateDynamic("Component")(Component.asInstanceOf[js.Any])
-    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
-    if (checked != null) __obj.updateDynamic("checked")(checked.asInstanceOf[js.Any])
-    if (checkedColor != null) __obj.updateDynamic("checkedColor")(checkedColor.asInstanceOf[js.Any])
-    if (checkedIcon != null) __obj.updateDynamic("checkedIcon")(checkedIcon.asInstanceOf[js.Any])
-    if (checkedTitle != null) __obj.updateDynamic("checkedTitle")(checkedTitle.asInstanceOf[js.Any])
-    if (containerStyle != null) __obj.updateDynamic("containerStyle")(containerStyle.asInstanceOf[js.Any])
-    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
-    if (iconRight != null) __obj.updateDynamic("iconRight")(iconRight.asInstanceOf[js.Any])
-    if (iconType != null) __obj.updateDynamic("iconType")(iconType.asInstanceOf[js.Any])
-    if (onIconPress != null) __obj.updateDynamic("onIconPress")(onIconPress.asInstanceOf[js.Any])
-    if (onLongIconPress != null) __obj.updateDynamic("onLongIconPress")(onLongIconPress.asInstanceOf[js.Any])
-    if (onLongPress != null) __obj.updateDynamic("onLongPress")(onLongPress.asInstanceOf[js.Any])
-    if (onPress != null) __obj.updateDynamic("onPress")(onPress.asInstanceOf[js.Any])
-    if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (textStyle != null) __obj.updateDynamic("textStyle")(textStyle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
-    if (titleProps != null) __obj.updateDynamic("titleProps")(titleProps.asInstanceOf[js.Any])
-    if (uncheckedColor != null) __obj.updateDynamic("uncheckedColor")(uncheckedColor.asInstanceOf[js.Any])
-    if (uncheckedIcon != null) __obj.updateDynamic("uncheckedIcon")(uncheckedIcon.asInstanceOf[js.Any])
-    if (wrapperStyle != null) __obj.updateDynamic("wrapperStyle")(wrapperStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecursivePartialPartialCh]
   }
+  @scala.inline
+  implicit class RecursivePartialPartialChOps[Self <: RecursivePartialPartialCh] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComponent(value: RecursivePartial[js.UndefOr[ReactComponentClass[js.Object]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutComponent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Component")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCenter(value: RecursivePartial[js.UndefOr[Boolean]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCenter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChecked(value: RecursivePartial[js.UndefOr[Boolean]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChecked: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checked")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckedColor(value: RecursivePartial[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckedColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckedIcon(value: RecursivePartial[js.UndefOr[String | ReactElement]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckedIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCheckedTitle(value: RecursivePartial[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCheckedTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkedTitle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContainerStyle(value: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContainerStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containerStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: RecursivePartial[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFontFamily: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconRight(value: RecursivePartial[js.UndefOr[Boolean]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconRight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconRight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIconType(value: RecursivePartial[js.UndefOr[IconType]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIconType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnIconPress(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onIconPress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnIconPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onIconPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLongIconPress(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongIconPress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnLongIconPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongIconPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnLongPress(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnLongPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLongPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPress(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnPress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRight(value: RecursivePartial[js.UndefOr[Boolean]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: RecursivePartial[js.UndefOr[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTextStyle(value: RecursivePartial[js.UndefOr[StyleProp[TextStyle]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTextStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textStyle")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: RecursivePartial[js.UndefOr[String | ReactElement]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitleProps(value: RecursivePartial[js.UndefOr[PartialTextProperties]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleProps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitleProps: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleProps")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUncheckedColor(value: RecursivePartial[js.UndefOr[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncheckedColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUncheckedColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncheckedColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withUncheckedIcon(value: RecursivePartial[js.UndefOr[String | ReactElement]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncheckedIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutUncheckedIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uncheckedIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWrapperStyle(value: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperStyle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWrapperStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperStyle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

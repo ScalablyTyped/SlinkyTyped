@@ -46,26 +46,113 @@ trait CreateCaseRequest extends js.Object {
 
 object CreateCaseRequest {
   @scala.inline
-  def apply(
-    communicationBody: CommunicationBody,
-    subject: Subject,
-    attachmentSetId: AttachmentSetId = null,
-    categoryCode: CategoryCode = null,
-    ccEmailAddresses: CcEmailAddressList = null,
-    issueType: IssueType = null,
-    language: Language = null,
-    serviceCode: ServiceCode = null,
-    severityCode: SeverityCode = null
-  ): CreateCaseRequest = {
+  def apply(communicationBody: CommunicationBody, subject: Subject): CreateCaseRequest = {
     val __obj = js.Dynamic.literal(communicationBody = communicationBody.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    if (attachmentSetId != null) __obj.updateDynamic("attachmentSetId")(attachmentSetId.asInstanceOf[js.Any])
-    if (categoryCode != null) __obj.updateDynamic("categoryCode")(categoryCode.asInstanceOf[js.Any])
-    if (ccEmailAddresses != null) __obj.updateDynamic("ccEmailAddresses")(ccEmailAddresses.asInstanceOf[js.Any])
-    if (issueType != null) __obj.updateDynamic("issueType")(issueType.asInstanceOf[js.Any])
-    if (language != null) __obj.updateDynamic("language")(language.asInstanceOf[js.Any])
-    if (serviceCode != null) __obj.updateDynamic("serviceCode")(serviceCode.asInstanceOf[js.Any])
-    if (severityCode != null) __obj.updateDynamic("severityCode")(severityCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCaseRequest]
   }
+  @scala.inline
+  implicit class CreateCaseRequestOps[Self <: CreateCaseRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommunicationBody(value: CommunicationBody): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("communicationBody")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubject(value: Subject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttachmentSetId(value: AttachmentSetId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachmentSetId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentSetId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCategoryCode(value: CategoryCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCategoryCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categoryCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCcEmailAddresses(value: CcEmailAddressList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ccEmailAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCcEmailAddresses: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ccEmailAddresses")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIssueType(value: IssueType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issueType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIssueType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issueType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: Language): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLanguage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceCode(value: ServiceCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSeverityCode(value: SeverityCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("severityCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSeverityCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("severityCode")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

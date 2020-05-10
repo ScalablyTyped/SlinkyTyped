@@ -4,12 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait GoogleActionsV2OrdersGoogleProvidedPaymentOptions extends js.Object {
   /**
     * If true, billing address will be returned.
     * Deprecated: Use facilitation_specification field instead.
     */
-  var billingAddressRequired: js.UndefOr[Boolean] = js.undefined
+  var billingAddressRequired: js.UndefOr[Boolean] = js.native
   /**
     * This JSON blob captures the specification for how Google facilitates
     * the payment for integrators, which is the PaymentDataRequest object
@@ -47,19 +48,19 @@ trait GoogleActionsV2OrdersGoogleProvidedPaymentOptions extends js.Object {
     *  }
     *  }
     */
-  var facilitationSpecification: js.UndefOr[String] = js.undefined
+  var facilitationSpecification: js.UndefOr[String] = js.native
   /**
     * If true, disallow prepaid cards from being used in the transaction.
     * Deprecated: Use facilitation_specification field instead.
     */
-  var prepaidCardDisallowed: js.UndefOr[Boolean] = js.undefined
+  var prepaidCardDisallowed: js.UndefOr[Boolean] = js.native
   /**
     * The app allows cards from any card network listed here being used in
     * transaction.
     * By default, Amex, Visa, MC and Discover are supported.
     * Deprecated: Use facilitation_specification field instead.
     */
-  var supportedCardNetworks: js.UndefOr[js.Array[GoogleActionsV2OrdersGoogleProvidedPaymentOptionsSupportedCardNetworks]] = js.undefined
+  var supportedCardNetworks: js.UndefOr[js.Array[GoogleActionsV2OrdersGoogleProvidedPaymentOptionsSupportedCardNetworks]] = js.native
   /**
     * Required field for requesting Google provided payment instrument.
     * These tokenization parameters  will be used for generating payment token
@@ -67,25 +68,82 @@ trait GoogleActionsV2OrdersGoogleProvidedPaymentOptions extends js.Object {
     * payment gateway.
     * Deprecated: Use facilitation_specification field instead.
     */
-  var tokenizationParameters: js.UndefOr[GoogleActionsV2OrdersPaymentMethodTokenizationParameters] = js.undefined
+  var tokenizationParameters: js.UndefOr[GoogleActionsV2OrdersPaymentMethodTokenizationParameters] = js.native
 }
 
 object GoogleActionsV2OrdersGoogleProvidedPaymentOptions {
   @scala.inline
-  def apply(
-    billingAddressRequired: js.UndefOr[Boolean] = js.undefined,
-    facilitationSpecification: String = null,
-    prepaidCardDisallowed: js.UndefOr[Boolean] = js.undefined,
-    supportedCardNetworks: js.Array[GoogleActionsV2OrdersGoogleProvidedPaymentOptionsSupportedCardNetworks] = null,
-    tokenizationParameters: GoogleActionsV2OrdersPaymentMethodTokenizationParameters = null
-  ): GoogleActionsV2OrdersGoogleProvidedPaymentOptions = {
+  def apply(): GoogleActionsV2OrdersGoogleProvidedPaymentOptions = {
     val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(billingAddressRequired)) __obj.updateDynamic("billingAddressRequired")(billingAddressRequired.asInstanceOf[js.Any])
-    if (facilitationSpecification != null) __obj.updateDynamic("facilitationSpecification")(facilitationSpecification.asInstanceOf[js.Any])
-    if (!js.isUndefined(prepaidCardDisallowed)) __obj.updateDynamic("prepaidCardDisallowed")(prepaidCardDisallowed.asInstanceOf[js.Any])
-    if (supportedCardNetworks != null) __obj.updateDynamic("supportedCardNetworks")(supportedCardNetworks.asInstanceOf[js.Any])
-    if (tokenizationParameters != null) __obj.updateDynamic("tokenizationParameters")(tokenizationParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleActionsV2OrdersGoogleProvidedPaymentOptions]
   }
+  @scala.inline
+  implicit class GoogleActionsV2OrdersGoogleProvidedPaymentOptionsOps[Self <: GoogleActionsV2OrdersGoogleProvidedPaymentOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBillingAddressRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddressRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBillingAddressRequired: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddressRequired")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFacilitationSpecification(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("facilitationSpecification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFacilitationSpecification: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("facilitationSpecification")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrepaidCardDisallowed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prepaidCardDisallowed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrepaidCardDisallowed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prepaidCardDisallowed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSupportedCardNetworks(value: js.Array[GoogleActionsV2OrdersGoogleProvidedPaymentOptionsSupportedCardNetworks]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedCardNetworks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSupportedCardNetworks: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedCardNetworks")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTokenizationParameters(value: GoogleActionsV2OrdersPaymentMethodTokenizationParameters): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenizationParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTokenizationParameters: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tokenizationParameters")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

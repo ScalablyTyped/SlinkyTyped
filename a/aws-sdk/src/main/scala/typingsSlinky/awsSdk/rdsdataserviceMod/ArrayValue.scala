@@ -30,20 +30,77 @@ trait ArrayValue extends js.Object {
 
 object ArrayValue {
   @scala.inline
-  def apply(
-    arrayValues: ArrayOfArray = null,
-    booleanValues: BooleanArray = null,
-    doubleValues: DoubleArray = null,
-    longValues: LongArray = null,
-    stringValues: StringArray = null
-  ): ArrayValue = {
+  def apply(): ArrayValue = {
     val __obj = js.Dynamic.literal()
-    if (arrayValues != null) __obj.updateDynamic("arrayValues")(arrayValues.asInstanceOf[js.Any])
-    if (booleanValues != null) __obj.updateDynamic("booleanValues")(booleanValues.asInstanceOf[js.Any])
-    if (doubleValues != null) __obj.updateDynamic("doubleValues")(doubleValues.asInstanceOf[js.Any])
-    if (longValues != null) __obj.updateDynamic("longValues")(longValues.asInstanceOf[js.Any])
-    if (stringValues != null) __obj.updateDynamic("stringValues")(stringValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArrayValue]
   }
+  @scala.inline
+  implicit class ArrayValueOps[Self <: ArrayValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayValues(value: ArrayOfArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrayValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrayValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBooleanValues(value: BooleanArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBooleanValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDoubleValues(value: DoubleArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDoubleValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doubleValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLongValues(value: LongArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLongValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longValues")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStringValues(value: StringArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStringValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValues")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

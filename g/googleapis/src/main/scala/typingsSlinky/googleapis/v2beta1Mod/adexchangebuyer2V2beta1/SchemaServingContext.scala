@@ -38,22 +38,89 @@ trait SchemaServingContext extends js.Object {
 
 object SchemaServingContext {
   @scala.inline
-  def apply(
-    all: String = null,
-    appType: SchemaAppContext = null,
-    auctionType: SchemaAuctionContext = null,
-    location: SchemaLocationContext = null,
-    platform: SchemaPlatformContext = null,
-    securityType: SchemaSecurityContext = null
-  ): SchemaServingContext = {
+  def apply(): SchemaServingContext = {
     val __obj = js.Dynamic.literal()
-    if (all != null) __obj.updateDynamic("all")(all.asInstanceOf[js.Any])
-    if (appType != null) __obj.updateDynamic("appType")(appType.asInstanceOf[js.Any])
-    if (auctionType != null) __obj.updateDynamic("auctionType")(auctionType.asInstanceOf[js.Any])
-    if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
-    if (platform != null) __obj.updateDynamic("platform")(platform.asInstanceOf[js.Any])
-    if (securityType != null) __obj.updateDynamic("securityType")(securityType.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaServingContext]
   }
+  @scala.inline
+  implicit class SchemaServingContextOps[Self <: SchemaServingContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAll(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAll: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppType(value: SchemaAppContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAuctionType(value: SchemaAuctionContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auctionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAuctionType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("auctionType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocation(value: SchemaLocationContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: SchemaPlatformContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlatform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityType(value: SchemaSecurityContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityType")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -5,51 +5,193 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IOptions extends js.Object {
-  var addPrefix: js.UndefOr[String] = js.undefined
-  var addRootSlash: js.UndefOr[Boolean] = js.undefined
-  var addSuffix: js.UndefOr[String] = js.undefined
-  var empty: js.UndefOr[Boolean] = js.undefined
-  var endtag: js.UndefOr[String | ITagFunction] = js.undefined
-  var ignorePath: js.UndefOr[String | js.Array[String]] = js.undefined
-  var name: js.UndefOr[String] = js.undefined
-  var relative: js.UndefOr[Boolean] = js.undefined
-  var removeTags: js.UndefOr[Boolean] = js.undefined
-  var selfClosingTag: js.UndefOr[Boolean] = js.undefined
-  var starttag: js.UndefOr[String | ITagFunction] = js.undefined
-  var transform: js.UndefOr[ITransformFunction] = js.undefined
+  var addPrefix: js.UndefOr[String] = js.native
+  var addRootSlash: js.UndefOr[Boolean] = js.native
+  var addSuffix: js.UndefOr[String] = js.native
+  var empty: js.UndefOr[Boolean] = js.native
+  var endtag: js.UndefOr[String | ITagFunction] = js.native
+  var ignorePath: js.UndefOr[String | js.Array[String]] = js.native
+  var name: js.UndefOr[String] = js.native
+  var relative: js.UndefOr[Boolean] = js.native
+  var removeTags: js.UndefOr[Boolean] = js.native
+  var selfClosingTag: js.UndefOr[Boolean] = js.native
+  var starttag: js.UndefOr[String | ITagFunction] = js.native
+  var transform: js.UndefOr[ITransformFunction] = js.native
 }
 
 object IOptions {
   @scala.inline
-  def apply(
-    addPrefix: String = null,
-    addRootSlash: js.UndefOr[Boolean] = js.undefined,
-    addSuffix: String = null,
-    empty: js.UndefOr[Boolean] = js.undefined,
-    endtag: String | ITagFunction = null,
-    ignorePath: String | js.Array[String] = null,
-    name: String = null,
-    relative: js.UndefOr[Boolean] = js.undefined,
-    removeTags: js.UndefOr[Boolean] = js.undefined,
-    selfClosingTag: js.UndefOr[Boolean] = js.undefined,
-    starttag: String | ITagFunction = null,
-    transform: (/* filepath */ String, /* file */ js.UndefOr[File], /* index */ js.UndefOr[Double], /* length */ js.UndefOr[Double], /* targetFile */ js.UndefOr[File]) => String = null
-  ): IOptions = {
+  def apply(): IOptions = {
     val __obj = js.Dynamic.literal()
-    if (addPrefix != null) __obj.updateDynamic("addPrefix")(addPrefix.asInstanceOf[js.Any])
-    if (!js.isUndefined(addRootSlash)) __obj.updateDynamic("addRootSlash")(addRootSlash.asInstanceOf[js.Any])
-    if (addSuffix != null) __obj.updateDynamic("addSuffix")(addSuffix.asInstanceOf[js.Any])
-    if (!js.isUndefined(empty)) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
-    if (endtag != null) __obj.updateDynamic("endtag")(endtag.asInstanceOf[js.Any])
-    if (ignorePath != null) __obj.updateDynamic("ignorePath")(ignorePath.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (!js.isUndefined(relative)) __obj.updateDynamic("relative")(relative.asInstanceOf[js.Any])
-    if (!js.isUndefined(removeTags)) __obj.updateDynamic("removeTags")(removeTags.asInstanceOf[js.Any])
-    if (!js.isUndefined(selfClosingTag)) __obj.updateDynamic("selfClosingTag")(selfClosingTag.asInstanceOf[js.Any])
-    if (starttag != null) __obj.updateDynamic("starttag")(starttag.asInstanceOf[js.Any])
-    if (transform != null) __obj.updateDynamic("transform")(js.Any.fromFunction5(transform))
     __obj.asInstanceOf[IOptions]
   }
+  @scala.inline
+  implicit class IOptionsOps[Self <: IOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addPrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddPrefix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addPrefix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddRootSlash(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRootSlash")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddRootSlash: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRootSlash")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAddSuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSuffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAddSuffix: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSuffix")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEmpty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmpty: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEndtagFunction2(value: (/* targetExt */ String, /* sourceExt */ String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endtag")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withEndtag(value: String | ITagFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endtag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEndtag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endtag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIgnorePath(value: String | js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIgnorePath: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ignorePath")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRelative(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRelative: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relative")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRemoveTags(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRemoveTags: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTags")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSelfClosingTag(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfClosingTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSelfClosingTag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfClosingTag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStarttagFunction2(value: (/* targetExt */ String, /* sourceExt */ String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starttag")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withStarttag(value: String | ITagFunction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starttag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStarttag: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("starttag")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTransform(
+      value: (/* filepath */ String, /* file */ js.UndefOr[File], /* index */ js.UndefOr[Double], /* length */ js.UndefOr[Double], /* targetFile */ js.UndefOr[File]) => String
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withoutTransform: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

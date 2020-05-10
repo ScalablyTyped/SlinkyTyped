@@ -18,22 +18,20 @@ trait AndroidRequiredPasswordType extends js.Object
 
 object AndroidRequiredPasswordType {
   @scala.inline
-  def alphabetic: typingsSlinky.microsoftGraph.microsoftGraphStrings.alphabetic = this.cast("alphabetic")
+  def alphabetic: typingsSlinky.microsoftGraph.microsoftGraphStrings.alphabetic = "alphabetic".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.alphabetic]
   @scala.inline
-  def alphanumeric: typingsSlinky.microsoftGraph.microsoftGraphStrings.alphanumeric = this.cast("alphanumeric")
+  def alphanumeric: typingsSlinky.microsoftGraph.microsoftGraphStrings.alphanumeric = "alphanumeric".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.alphanumeric]
   @scala.inline
-  def alphanumericWithSymbols: typingsSlinky.microsoftGraph.microsoftGraphStrings.alphanumericWithSymbols = this.cast("alphanumericWithSymbols")
+  def alphanumericWithSymbols: typingsSlinky.microsoftGraph.microsoftGraphStrings.alphanumericWithSymbols = "alphanumericWithSymbols".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.alphanumericWithSymbols]
   @scala.inline
-  def any: typingsSlinky.microsoftGraph.microsoftGraphStrings.any = this.cast("any")
+  def any: typingsSlinky.microsoftGraph.microsoftGraphStrings.any = "any".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.any]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = "deviceDefault".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault]
   @scala.inline
-  def deviceDefault: typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceDefault = this.cast("deviceDefault")
+  def lowSecurityBiometric: typingsSlinky.microsoftGraph.microsoftGraphStrings.lowSecurityBiometric = "lowSecurityBiometric".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.lowSecurityBiometric]
   @scala.inline
-  def lowSecurityBiometric: typingsSlinky.microsoftGraph.microsoftGraphStrings.lowSecurityBiometric = this.cast("lowSecurityBiometric")
+  def numeric: typingsSlinky.microsoftGraph.microsoftGraphStrings.numeric = "numeric".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.numeric]
   @scala.inline
-  def numeric: typingsSlinky.microsoftGraph.microsoftGraphStrings.numeric = this.cast("numeric")
-  @scala.inline
-  def numericComplex: typingsSlinky.microsoftGraph.microsoftGraphStrings.numericComplex = this.cast("numericComplex")
+  def numericComplex: typingsSlinky.microsoftGraph.microsoftGraphStrings.numericComplex = "numericComplex".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.numericComplex]
 }
 

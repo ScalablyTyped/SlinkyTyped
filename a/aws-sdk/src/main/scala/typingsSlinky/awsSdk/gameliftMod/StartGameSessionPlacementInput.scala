@@ -45,20 +45,96 @@ object StartGameSessionPlacementInput {
   def apply(
     GameSessionQueueName: GameSessionQueueName,
     MaximumPlayerSessionCount: WholeNumber,
-    PlacementId: IdStringModel,
-    DesiredPlayerSessions: DesiredPlayerSessionList = null,
-    GameProperties: GamePropertyList = null,
-    GameSessionData: GameSessionData = null,
-    GameSessionName: NonZeroAndMaxString = null,
-    PlayerLatencies: PlayerLatencyList = null
+    PlacementId: IdStringModel
   ): StartGameSessionPlacementInput = {
     val __obj = js.Dynamic.literal(GameSessionQueueName = GameSessionQueueName.asInstanceOf[js.Any], MaximumPlayerSessionCount = MaximumPlayerSessionCount.asInstanceOf[js.Any], PlacementId = PlacementId.asInstanceOf[js.Any])
-    if (DesiredPlayerSessions != null) __obj.updateDynamic("DesiredPlayerSessions")(DesiredPlayerSessions.asInstanceOf[js.Any])
-    if (GameProperties != null) __obj.updateDynamic("GameProperties")(GameProperties.asInstanceOf[js.Any])
-    if (GameSessionData != null) __obj.updateDynamic("GameSessionData")(GameSessionData.asInstanceOf[js.Any])
-    if (GameSessionName != null) __obj.updateDynamic("GameSessionName")(GameSessionName.asInstanceOf[js.Any])
-    if (PlayerLatencies != null) __obj.updateDynamic("PlayerLatencies")(PlayerLatencies.asInstanceOf[js.Any])
     __obj.asInstanceOf[StartGameSessionPlacementInput]
   }
+  @scala.inline
+  implicit class StartGameSessionPlacementInputOps[Self <: StartGameSessionPlacementInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGameSessionQueueName(value: GameSessionQueueName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionQueueName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaximumPlayerSessionCount(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaximumPlayerSessionCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlacementId(value: IdStringModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlacementId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesiredPlayerSessions(value: DesiredPlayerSessionList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredPlayerSessions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredPlayerSessions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DesiredPlayerSessions")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGameProperties(value: GamePropertyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGameProperties: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameProperties")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGameSessionData(value: GameSessionData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGameSessionData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGameSessionName(value: NonZeroAndMaxString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGameSessionName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayerLatencies(value: PlayerLatencyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerLatencies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayerLatencies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerLatencies")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

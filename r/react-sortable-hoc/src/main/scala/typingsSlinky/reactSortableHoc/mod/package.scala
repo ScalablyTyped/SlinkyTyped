@@ -29,6 +29,6 @@ package object mod {
     /* event */ typingsSlinky.reactSortableHoc.mod.SortEvent, 
     scala.Unit
   ]
-  type WrappedComponent[P] = slinky.core.ReactComponentClass[P] | slinky.core.ReactComponentClass[P] | typingsSlinky.reactSortableHoc.mod.WrappedComponentFactory[P]
+  type WrappedComponent[P] = slinky.core.ReactComponentClass[P] | typingsSlinky.reactSortableHoc.mod.WrappedComponentFactory[P]
   type WrappedComponentFactory[P] = js.Function1[/* props */ P, slinky.core.facade.ReactElement]
 }

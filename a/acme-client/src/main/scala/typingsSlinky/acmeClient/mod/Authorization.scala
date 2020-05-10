@@ -12,9 +12,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Authorization
   extends typingsSlinky.acmeClient.rfc8555Mod.Authorization {
-  var url: String
+  var url: String = js.native
 }
 
 object Authorization {
@@ -23,14 +24,24 @@ object Authorization {
     challenges: js.Array[Challenge],
     identifier: Identifier,
     status: pending | valid | invalid | deactivated | expired | revoked,
-    url: String,
-    expires: String = null,
-    wildcard: js.UndefOr[Boolean] = js.undefined
+    url: String
   ): Authorization = {
     val __obj = js.Dynamic.literal(challenges = challenges.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    if (expires != null) __obj.updateDynamic("expires")(expires.asInstanceOf[js.Any])
-    if (!js.isUndefined(wildcard)) __obj.updateDynamic("wildcard")(wildcard.asInstanceOf[js.Any])
     __obj.asInstanceOf[Authorization]
   }
+  @scala.inline
+  implicit class AuthorizationOps[Self <: Authorization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

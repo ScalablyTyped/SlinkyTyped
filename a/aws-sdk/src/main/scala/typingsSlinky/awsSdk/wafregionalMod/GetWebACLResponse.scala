@@ -14,10 +14,29 @@ trait GetWebACLResponse extends js.Object {
 
 object GetWebACLResponse {
   @scala.inline
-  def apply(WebACL: WebACL = null): GetWebACLResponse = {
+  def apply(): GetWebACLResponse = {
     val __obj = js.Dynamic.literal()
-    if (WebACL != null) __obj.updateDynamic("WebACL")(WebACL.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetWebACLResponse]
   }
+  @scala.inline
+  implicit class GetWebACLResponseOps[Self <: GetWebACLResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWebACL(value: WebACL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebACL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWebACL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WebACL")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

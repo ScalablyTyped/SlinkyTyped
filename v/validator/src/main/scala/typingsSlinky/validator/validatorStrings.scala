@@ -4,31 +4,36 @@ import typingsSlinky.validator.mod.validator.AlphaLocale
 import typingsSlinky.validator.mod.validator.AlphanumericLocale
 import typingsSlinky.validator.mod.validator.FloatLocale
 import typingsSlinky.validator.mod.validator.HashAlgorithm
+import typingsSlinky.validator.mod.validator.IPVersion
+import typingsSlinky.validator.mod.validator.ISBNVersion
 import typingsSlinky.validator.mod.validator.IdentityCardLocale
 import typingsSlinky.validator.mod.validator.MobilePhoneLocale
 import typingsSlinky.validator.mod.validator.PostalCodeLocale
+import typingsSlinky.validator.mod.validator.UUIDVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object validatorStrings {
   @js.native
-  sealed trait `10` extends js.Object
+  sealed trait `10` extends ISBNVersion
   
   @js.native
-  sealed trait `13` extends js.Object
+  sealed trait `13` extends ISBNVersion
   
   @js.native
-  sealed trait `3` extends js.Object
+  sealed trait `3` extends UUIDVersion
   
   @js.native
-  sealed trait `4` extends js.Object
+  sealed trait `4`
+    extends IPVersion
+       with UUIDVersion
   
   @js.native
-  sealed trait `5` extends js.Object
+  sealed trait `5` extends UUIDVersion
   
   @js.native
-  sealed trait `6` extends js.Object
+  sealed trait `6` extends IPVersion
   
   @js.native
   sealed trait AD extends PostalCodeLocale
@@ -189,7 +194,7 @@ object validatorStrings {
   sealed trait ZM extends PostalCodeLocale
   
   @js.native
-  sealed trait all extends js.Object
+  sealed trait all extends UUIDVersion
   
   @js.native
   sealed trait any extends js.Object

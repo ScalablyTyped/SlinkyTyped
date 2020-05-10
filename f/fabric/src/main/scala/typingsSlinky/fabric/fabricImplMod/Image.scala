@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.fabric.fabricImplMod.IObjectOptions because Already inherited
 - typingsSlinky.fabric.fabricImplMod.IImageOptions because var conflicts: aCoords, absolutePositioned, angle, backgroundColor, borderColor, borderDashArray, borderOpacityWhenMoving, borderScaleFactor, cacheProperties, canvas, centeredRotation, centeredScaling, clipPath, clipTo, cornerColor, cornerDashArray, cornerSize, cornerStrokeColor, cornerStyle, data, dirty, evented, excludeFromExport, fill, fillRule, flipX, flipY, globalCompositeOperation, group, hasBorders, hasControls, hasRotatingPoint, height, hoverCursor, includeDefaultValues, inverted, left, lockMovementX, lockMovementY, lockRotation, lockScalingFlip, lockScalingX, lockScalingY, lockSkewingX, lockSkewingY, lockUniScaling, matrixCache, minScaleLimit, moveCursor, name, noScaleCache, oCoords, objectCaching, opacity, originX, originY, ownMatrixCache, padding, paintFirst, perPixelTargetFind, rotatingPointOffset, scaleX, scaleY, selectable, selectionBackgroundColor, shadow, skewX, skewY, snapAngle, snapThreshold, stateProperties, statefullCache, stroke, strokeDashArray, strokeDashOffset, strokeLineCap, strokeLineJoin, strokeMiterLimit, strokeUniform, strokeWidth, top, transformMatrix, transparentCorners, `type`, visible, width. Inlined crossOrigin, srcFromAttribute, minimumScaleTrigger, cacheKey, cropX, cropY, filters */ @JSImport("fabric/fabric-impl", "Image")
 @js.native
@@ -125,10 +125,10 @@ class Image () extends Object {
   	 * @param element image element
   	 * @param [options] Options object
   	 */
-  def setElement(element: typingsSlinky.std.HTMLImageElement): Image = js.native
-  def setElement(element: typingsSlinky.std.HTMLImageElement, options: IImageOptions): Image = js.native
-  def setElement(element: typingsSlinky.std.HTMLVideoElement): Image = js.native
-  def setElement(element: typingsSlinky.std.HTMLVideoElement, options: IImageOptions): Image = js.native
+  def setElement(element: HTMLImageElement): Image = js.native
+  def setElement(element: HTMLImageElement, options: IImageOptions): Image = js.native
+  def setElement(element: HTMLVideoElement): Image = js.native
+  def setElement(element: HTMLVideoElement, options: IImageOptions): Image = js.native
   /**
   	 * Sets source of an image
   	 * @param {String} src Source string (URL)

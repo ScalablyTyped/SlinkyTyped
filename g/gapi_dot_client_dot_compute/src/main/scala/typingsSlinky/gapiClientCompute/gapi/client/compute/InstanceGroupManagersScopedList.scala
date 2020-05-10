@@ -5,20 +5,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InstanceGroupManagersScopedList extends js.Object {
   /** [Output Only] The list of managed instance groups that are contained in the specified project and zone. */
-  var instanceGroupManagers: js.UndefOr[js.Array[InstanceGroupManager]] = js.undefined
+  var instanceGroupManagers: js.UndefOr[js.Array[InstanceGroupManager]] = js.native
   /** [Output Only] The warning that replaces the list of managed instance groups when the list is empty. */
-  var warning: js.UndefOr[AnonCode] = js.undefined
+  var warning: js.UndefOr[AnonCode] = js.native
 }
 
 object InstanceGroupManagersScopedList {
   @scala.inline
-  def apply(instanceGroupManagers: js.Array[InstanceGroupManager] = null, warning: AnonCode = null): InstanceGroupManagersScopedList = {
+  def apply(): InstanceGroupManagersScopedList = {
     val __obj = js.Dynamic.literal()
-    if (instanceGroupManagers != null) __obj.updateDynamic("instanceGroupManagers")(instanceGroupManagers.asInstanceOf[js.Any])
-    if (warning != null) __obj.updateDynamic("warning")(warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceGroupManagersScopedList]
   }
+  @scala.inline
+  implicit class InstanceGroupManagersScopedListOps[Self <: InstanceGroupManagersScopedList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceGroupManagers(value: js.Array[InstanceGroupManager]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceGroupManagers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInstanceGroupManagers: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceGroupManagers")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWarning(value: AnonCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWarning: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

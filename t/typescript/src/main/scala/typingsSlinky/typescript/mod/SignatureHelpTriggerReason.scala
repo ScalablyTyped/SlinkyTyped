@@ -16,21 +16,18 @@ trait SignatureHelpTriggerReason extends js.Object
 
 object SignatureHelpTriggerReason {
   @scala.inline
-  def SignatureHelpInvokedReason(kind: invoked, triggerCharacter: js.UndefOr[scala.Nothing] = js.undefined): SignatureHelpTriggerReason = {
+  def SignatureHelpInvokedReason(kind: invoked): SignatureHelpTriggerReason = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    if (!js.isUndefined(triggerCharacter)) __obj.updateDynamic("triggerCharacter")(triggerCharacter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignatureHelpTriggerReason]
   }
   @scala.inline
   def SignatureHelpCharacterTypedReason(kind: characterTyped, triggerCharacter: SignatureHelpTriggerCharacter): SignatureHelpTriggerReason = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], triggerCharacter = triggerCharacter.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[SignatureHelpTriggerReason]
   }
   @scala.inline
-  def SignatureHelpRetriggeredReason(kind: retrigger, triggerCharacter: SignatureHelpRetriggerCharacter = null): SignatureHelpTriggerReason = {
+  def SignatureHelpRetriggeredReason(kind: retrigger): SignatureHelpTriggerReason = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    if (triggerCharacter != null) __obj.updateDynamic("triggerCharacter")(triggerCharacter.asInstanceOf[js.Any])
     __obj.asInstanceOf[SignatureHelpTriggerReason]
   }
 }

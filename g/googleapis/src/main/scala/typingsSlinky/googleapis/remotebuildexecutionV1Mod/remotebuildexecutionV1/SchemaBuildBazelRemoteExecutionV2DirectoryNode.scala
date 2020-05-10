@@ -23,11 +23,41 @@ trait SchemaBuildBazelRemoteExecutionV2DirectoryNode extends js.Object {
 
 object SchemaBuildBazelRemoteExecutionV2DirectoryNode {
   @scala.inline
-  def apply(digest: SchemaBuildBazelRemoteExecutionV2Digest = null, name: String = null): SchemaBuildBazelRemoteExecutionV2DirectoryNode = {
+  def apply(): SchemaBuildBazelRemoteExecutionV2DirectoryNode = {
     val __obj = js.Dynamic.literal()
-    if (digest != null) __obj.updateDynamic("digest")(digest.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaBuildBazelRemoteExecutionV2DirectoryNode]
   }
+  @scala.inline
+  implicit class SchemaBuildBazelRemoteExecutionV2DirectoryNodeOps[Self <: SchemaBuildBazelRemoteExecutionV2DirectoryNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDigest(value: SchemaBuildBazelRemoteExecutionV2Digest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDigest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

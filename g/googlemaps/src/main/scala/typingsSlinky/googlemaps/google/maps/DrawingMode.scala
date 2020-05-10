@@ -13,12 +13,10 @@ trait DrawingMode extends js.Object
 
 object DrawingMode {
   @scala.inline
-  def LineString: typingsSlinky.googlemaps.googlemapsStrings.LineString = this.cast("LineString")
+  def LineString: typingsSlinky.googlemaps.googlemapsStrings.LineString = "LineString".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.LineString]
   @scala.inline
-  def Point: typingsSlinky.googlemaps.googlemapsStrings.Point = this.cast("Point")
+  def Point: typingsSlinky.googlemaps.googlemapsStrings.Point = "Point".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.Point]
   @scala.inline
-  def Polygon: typingsSlinky.googlemaps.googlemapsStrings.Polygon = this.cast("Polygon")
-  @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def Polygon: typingsSlinky.googlemaps.googlemapsStrings.Polygon = "Polygon".asInstanceOf[typingsSlinky.googlemaps.googlemapsStrings.Polygon]
 }
 

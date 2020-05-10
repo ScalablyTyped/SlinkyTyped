@@ -23,18 +23,65 @@ trait DescribeWorkingStorageOutput extends js.Object {
 
 object DescribeWorkingStorageOutput {
   @scala.inline
-  def apply(
-    DiskIds: DiskIds = null,
-    GatewayARN: GatewayARN = null,
-    WorkingStorageAllocatedInBytes: Int | Double = null,
-    WorkingStorageUsedInBytes: Int | Double = null
-  ): DescribeWorkingStorageOutput = {
+  def apply(): DescribeWorkingStorageOutput = {
     val __obj = js.Dynamic.literal()
-    if (DiskIds != null) __obj.updateDynamic("DiskIds")(DiskIds.asInstanceOf[js.Any])
-    if (GatewayARN != null) __obj.updateDynamic("GatewayARN")(GatewayARN.asInstanceOf[js.Any])
-    if (WorkingStorageAllocatedInBytes != null) __obj.updateDynamic("WorkingStorageAllocatedInBytes")(WorkingStorageAllocatedInBytes.asInstanceOf[js.Any])
-    if (WorkingStorageUsedInBytes != null) __obj.updateDynamic("WorkingStorageUsedInBytes")(WorkingStorageUsedInBytes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeWorkingStorageOutput]
   }
+  @scala.inline
+  implicit class DescribeWorkingStorageOutputOps[Self <: DescribeWorkingStorageOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiskIds(value: DiskIds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDiskIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGatewayARN(value: GatewayARN): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGatewayARN: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GatewayARN")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkingStorageAllocatedInBytes(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkingStorageAllocatedInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkingStorageAllocatedInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkingStorageAllocatedInBytes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWorkingStorageUsedInBytes(value: long): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkingStorageUsedInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWorkingStorageUsedInBytes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkingStorageUsedInBytes")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

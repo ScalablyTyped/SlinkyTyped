@@ -21,11 +21,41 @@ trait SchemaShieldedInstanceIdentityEntry extends js.Object {
 
 object SchemaShieldedInstanceIdentityEntry {
   @scala.inline
-  def apply(ekCert: String = null, ekPub: String = null): SchemaShieldedInstanceIdentityEntry = {
+  def apply(): SchemaShieldedInstanceIdentityEntry = {
     val __obj = js.Dynamic.literal()
-    if (ekCert != null) __obj.updateDynamic("ekCert")(ekCert.asInstanceOf[js.Any])
-    if (ekPub != null) __obj.updateDynamic("ekPub")(ekPub.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaShieldedInstanceIdentityEntry]
   }
+  @scala.inline
+  implicit class SchemaShieldedInstanceIdentityEntryOps[Self <: SchemaShieldedInstanceIdentityEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEkCert(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ekCert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEkCert: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ekCert")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEkPub(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ekPub")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEkPub: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ekPub")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

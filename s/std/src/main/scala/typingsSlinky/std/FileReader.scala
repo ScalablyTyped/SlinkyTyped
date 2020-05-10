@@ -24,7 +24,7 @@ trait FileReader extends EventTarget {
   var onloadstart: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]) | Null = js.native
   var onprogress: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]) | Null = js.native
   val readyState: Double = js.native
-  val result: java.lang.String | scala.scalajs.js.typedarray.ArrayBuffer | Null = js.native
+  val result: java.lang.String | js.typedarray.ArrayBuffer | Null = js.native
   def abort(): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_abort(
@@ -148,7 +148,7 @@ trait FileReader extends EventTarget {
   def removeEventListener_abort(
     `type`: abort,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
@@ -165,7 +165,7 @@ trait FileReader extends EventTarget {
   def removeEventListener_error(
     `type`: typingsSlinky.std.stdStrings.error,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
@@ -182,7 +182,7 @@ trait FileReader extends EventTarget {
   def removeEventListener_load(
     `type`: load,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadend(
@@ -199,7 +199,7 @@ trait FileReader extends EventTarget {
   def removeEventListener_loadend(
     `type`: loadend,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(
@@ -216,7 +216,7 @@ trait FileReader extends EventTarget {
   def removeEventListener_loadstart(
     `type`: loadstart,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(
@@ -233,13 +233,14 @@ trait FileReader extends EventTarget {
   def removeEventListener_progress(
     `type`: progress,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
 
 @JSGlobal("FileReader")
 @js.native
-object FileReader extends Instantiable0[FileReader] {
+object FileReader
+  extends Instantiable0[org.scalajs.dom.raw.FileReader] {
   val DONE: Double = js.native
   val EMPTY: Double = js.native
   val LOADING: Double = js.native

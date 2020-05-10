@@ -4,15 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Queue extends js.Object {
   /**
     * App Engine HTTP target.
     *
     * An App Engine queue is a queue that has an AppEngineHttpTarget.
     */
-  var appEngineHttpTarget: js.UndefOr[AppEngineHttpTarget] = js.undefined
+  var appEngineHttpTarget: js.UndefOr[AppEngineHttpTarget] = js.native
   /** Deprecated. Use Queue.app_engine_http_target. */
-  var appEngineQueueConfig: js.UndefOr[AppEngineQueueConfig] = js.undefined
+  var appEngineQueueConfig: js.UndefOr[AppEngineQueueConfig] = js.native
   /**
     * The queue name.
     *
@@ -30,15 +31,15 @@ trait Queue extends js.Object {
     * Caller-specified and required in CreateQueueRequest, after which
     * it becomes output only.
     */
-  var name: js.UndefOr[String] = js.undefined
+  var name: js.UndefOr[String] = js.native
   /** Deprecated. Use Queue.pull_target. */
-  var pullQueueConfig: js.UndefOr[js.Any] = js.undefined
+  var pullQueueConfig: js.UndefOr[js.Any] = js.native
   /**
     * Pull target.
     *
     * A pull queue is a queue that has a PullTarget.
     */
-  var pullTarget: js.UndefOr[js.Any] = js.undefined
+  var pullTarget: js.UndefOr[js.Any] = js.native
   /**
     * Output only.
     *
@@ -52,7 +53,7 @@ trait Queue extends js.Object {
     * Purge time will be truncated to the nearest microsecond. Purge
     * time will be zero if the queue has never been purged.
     */
-  var purgeTime: js.UndefOr[String] = js.undefined
+  var purgeTime: js.UndefOr[String] = js.native
   /**
     * Output only.
     *
@@ -63,7 +64,7 @@ trait Queue extends js.Object {
     * [queue.yaml](/appengine/docs/python/config/queueref).
     * CloudTasks.UpdateQueue cannot be used to change `queue_state`.
     */
-  var queueState: js.UndefOr[String] = js.undefined
+  var queueState: js.UndefOr[String] = js.native
   /**
     * Rate limits for task dispatches.
     *
@@ -78,7 +79,7 @@ trait Queue extends js.Object {
     * its first attempt fails. That is, Queue.retry_config controls task
     * retries (the second attempt, third attempt, etc).
     */
-  var rateLimits: js.UndefOr[RateLimits] = js.undefined
+  var rateLimits: js.UndefOr[RateLimits] = js.native
   /**
     * Settings that determine the retry behavior.
     *
@@ -90,33 +91,130 @@ trait Queue extends js.Object {
     * explicitly set on the task and were created by the App Engine SDK. See
     * [App Engine documentation](/appengine/docs/standard/python/taskqueue/push/retrying-tasks).
     */
-  var retryConfig: js.UndefOr[RetryConfig] = js.undefined
+  var retryConfig: js.UndefOr[RetryConfig] = js.native
 }
 
 object Queue {
   @scala.inline
-  def apply(
-    appEngineHttpTarget: AppEngineHttpTarget = null,
-    appEngineQueueConfig: AppEngineQueueConfig = null,
-    name: String = null,
-    pullQueueConfig: js.Any = null,
-    pullTarget: js.Any = null,
-    purgeTime: String = null,
-    queueState: String = null,
-    rateLimits: RateLimits = null,
-    retryConfig: RetryConfig = null
-  ): Queue = {
+  def apply(): Queue = {
     val __obj = js.Dynamic.literal()
-    if (appEngineHttpTarget != null) __obj.updateDynamic("appEngineHttpTarget")(appEngineHttpTarget.asInstanceOf[js.Any])
-    if (appEngineQueueConfig != null) __obj.updateDynamic("appEngineQueueConfig")(appEngineQueueConfig.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (pullQueueConfig != null) __obj.updateDynamic("pullQueueConfig")(pullQueueConfig.asInstanceOf[js.Any])
-    if (pullTarget != null) __obj.updateDynamic("pullTarget")(pullTarget.asInstanceOf[js.Any])
-    if (purgeTime != null) __obj.updateDynamic("purgeTime")(purgeTime.asInstanceOf[js.Any])
-    if (queueState != null) __obj.updateDynamic("queueState")(queueState.asInstanceOf[js.Any])
-    if (rateLimits != null) __obj.updateDynamic("rateLimits")(rateLimits.asInstanceOf[js.Any])
-    if (retryConfig != null) __obj.updateDynamic("retryConfig")(retryConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[Queue]
   }
+  @scala.inline
+  implicit class QueueOps[Self <: Queue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppEngineHttpTarget(value: AppEngineHttpTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineHttpTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppEngineHttpTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineHttpTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAppEngineQueueConfig(value: AppEngineQueueConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineQueueConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAppEngineQueueConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appEngineQueueConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPullQueueConfig(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullQueueConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPullQueueConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullQueueConfig")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPullTarget(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPullTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pullTarget")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPurgeTime(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purgeTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPurgeTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("purgeTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueueState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queueState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueueState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queueState")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRateLimits(value: RateLimits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRateLimits: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimits")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRetryConfig(value: RetryConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRetryConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retryConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

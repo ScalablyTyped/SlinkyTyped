@@ -18,18 +18,16 @@ trait ConnectionStatus extends js.Object
 
 object ConnectionStatus {
   @scala.inline
-  def attempted: typingsSlinky.microsoftGraph.microsoftGraphStrings.attempted = this.cast("attempted")
+  def attempted: typingsSlinky.microsoftGraph.microsoftGraphStrings.attempted = "attempted".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.attempted]
   @scala.inline
-  def blocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked = this.cast("blocked")
+  def blocked: typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked = "blocked".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.blocked]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def failed: failed_ = "failed".asInstanceOf[failed_]
   @scala.inline
-  def failed: failed_ = this.cast("failed")
+  def succeeded: typingsSlinky.microsoftGraph.microsoftGraphStrings.succeeded = "succeeded".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.succeeded]
   @scala.inline
-  def succeeded: typingsSlinky.microsoftGraph.microsoftGraphStrings.succeeded = this.cast("succeeded")
+  def unknown: unknown_ = "unknown".asInstanceOf[unknown_]
   @scala.inline
-  def unknown: unknown_ = this.cast("unknown")
-  @scala.inline
-  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = this.cast("unknownFutureValue")
+  def unknownFutureValue: typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue = "unknownFutureValue".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue]
 }
 

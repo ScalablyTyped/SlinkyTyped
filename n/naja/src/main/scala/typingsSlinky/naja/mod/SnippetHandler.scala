@@ -1,8 +1,8 @@
 package typingsSlinky.naja.mod
 
+import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.naja.najaStrings.afterUpdate
 import typingsSlinky.naja.najaStrings.beforeUpdate
-import typingsSlinky.std.EventListenerOptions
 import typingsSlinky.std.EventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`

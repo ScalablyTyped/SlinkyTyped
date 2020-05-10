@@ -1,15 +1,17 @@
 package typingsSlinky.reactMarkdown.components
 
+import typingsSlinky.reactMarkdown.mod.ReactMarkdownProps
 import typingsSlinky.reactMarkdown.withHtmlMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object WithHtml extends SharedApply_ReactMarkdownProps_161167655[^] {
+object WithHtml {
   @JSImport("react-markdown/with-html", JSImport.Namespace)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: ReactMarkdownProps): SharedBuilder_ReactMarkdownProps_1094156219[^] = new SharedBuilder_ReactMarkdownProps_1094156219[^](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: WithHtml.type): SharedBuilder_ReactMarkdownProps_1094156219[^] = new SharedBuilder_ReactMarkdownProps_1094156219[^](js.Array(this.component, js.Dictionary.empty))()
 }
 

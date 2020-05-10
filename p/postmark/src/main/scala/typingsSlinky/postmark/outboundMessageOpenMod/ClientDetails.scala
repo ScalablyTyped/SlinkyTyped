@@ -4,18 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ClientDetails extends js.Object {
-  var Company: String
-  var Family: String
-  var Name: String
+  var Company: String = js.native
+  var Family: String = js.native
+  var Name: String = js.native
 }
 
 object ClientDetails {
   @scala.inline
   def apply(Company: String, Family: String, Name: String): ClientDetails = {
     val __obj = js.Dynamic.literal(Company = Company.asInstanceOf[js.Any], Family = Family.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ClientDetails]
   }
+  @scala.inline
+  implicit class ClientDetailsOps[Self <: ClientDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompany(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Company")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Family")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

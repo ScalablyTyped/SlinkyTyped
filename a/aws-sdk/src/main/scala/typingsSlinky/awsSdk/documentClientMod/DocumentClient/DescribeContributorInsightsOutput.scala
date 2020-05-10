@@ -36,22 +36,89 @@ trait DescribeContributorInsightsOutput extends js.Object {
 
 object DescribeContributorInsightsOutput {
   @scala.inline
-  def apply(
-    ContributorInsightsRuleList: ContributorInsightsRuleList = null,
-    ContributorInsightsStatus: ContributorInsightsStatus = null,
-    FailureException: FailureException = null,
-    IndexName: IndexName = null,
-    LastUpdateDateTime: js.Date = null,
-    TableName: TableName = null
-  ): DescribeContributorInsightsOutput = {
+  def apply(): DescribeContributorInsightsOutput = {
     val __obj = js.Dynamic.literal()
-    if (ContributorInsightsRuleList != null) __obj.updateDynamic("ContributorInsightsRuleList")(ContributorInsightsRuleList.asInstanceOf[js.Any])
-    if (ContributorInsightsStatus != null) __obj.updateDynamic("ContributorInsightsStatus")(ContributorInsightsStatus.asInstanceOf[js.Any])
-    if (FailureException != null) __obj.updateDynamic("FailureException")(FailureException.asInstanceOf[js.Any])
-    if (IndexName != null) __obj.updateDynamic("IndexName")(IndexName.asInstanceOf[js.Any])
-    if (LastUpdateDateTime != null) __obj.updateDynamic("LastUpdateDateTime")(LastUpdateDateTime.asInstanceOf[js.Any])
-    if (TableName != null) __obj.updateDynamic("TableName")(TableName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeContributorInsightsOutput]
   }
+  @scala.inline
+  implicit class DescribeContributorInsightsOutputOps[Self <: DescribeContributorInsightsOutput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContributorInsightsRuleList(value: ContributorInsightsRuleList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContributorInsightsRuleList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContributorInsightsRuleList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContributorInsightsRuleList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContributorInsightsStatus(value: ContributorInsightsStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContributorInsightsStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContributorInsightsStatus: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ContributorInsightsStatus")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFailureException(value: FailureException): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureException")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFailureException: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FailureException")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndexName(value: IndexName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndexName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IndexName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLastUpdateDateTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdateDateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdateDateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTableName(value: TableName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTableName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableName")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,16 @@
 package typingsSlinky.spectacle.components
 
+import typingsSlinky.spectacle.mod.TextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Text
-  extends SharedApply_TextProps1428527421[typingsSlinky.spectacle.mod.Text] {
+object Text {
   @JSImport("spectacle", "Text")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  def withProps(p: TextProps): SharedBuilder_TextProps_1636630117[typingsSlinky.spectacle.mod.Text] = new SharedBuilder_TextProps_1636630117[typingsSlinky.spectacle.mod.Text](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Text.type): SharedBuilder_TextProps_1636630117[typingsSlinky.spectacle.mod.Text] = new SharedBuilder_TextProps_1636630117[typingsSlinky.spectacle.mod.Text](js.Array(this.component, js.Dictionary.empty))()
 }
 

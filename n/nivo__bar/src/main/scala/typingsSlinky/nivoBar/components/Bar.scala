@@ -1,12 +1,10 @@
 package typingsSlinky.nivoBar.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.SVGRectElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import slinky.web.svg.rect.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoBar.dataFromindexeskeysLegend
 import typingsSlinky.nivoBar.mod.AccessorFunc
 import typingsSlinky.nivoBar.mod.Axis
@@ -36,103 +34,116 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Bar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoBar.mod.Bar] {
+object Bar {
   @JSImport("@nivo/bar", "Bar")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    data: js.Array[js.Object],
-    height: Double,
-    width: Double,
-    animate: js.UndefOr[Boolean] = js.undefined,
-    axisBottom: Axis = null,
-    axisLeft: Axis = null,
-    axisRight: Axis = null,
-    axisTop: Axis = null,
-    barComponent: ReactComponentClass[BarItemProps] = null,
-    borderRadius: Int | Double = null,
-    borderWidth: Int | Double = null,
-    colors: OrdinalColorsInstruction[_] = null,
-    defs: js.Array[AnonDictkey] = null,
-    enableGridX: js.UndefOr[Boolean] = js.undefined,
-    enableGridY: js.UndefOr[Boolean] = js.undefined,
-    enableLabel: js.UndefOr[Boolean] = js.undefined,
-    fill: js.Array[AnonId[BarDatum]] = null,
-    groupMode: stacked | grouped = null,
-    indexBy: String | IndexByFunc = null,
-    innerPadding: Int | Double = null,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    keys: js.Array[String] = null,
-    label: String | AccessorFunc = null,
-    labelFormat: String | LabelFormatter = null,
-    labelLinkColor: InheritedColorProp[BarDatumWithColor] = null,
-    labelSkipHeight: Int | Double = null,
-    labelSkipWidth: Int | Double = null,
-    labelTextColor: InheritedColorProp[BarDatumWithColor] = null,
-    layers: js.Array[Layer] = null,
-    layout: horizontal | vertical = null,
-    legends: js.Array[dataFromindexeskeysLegend] = null,
-    margin: Box = null,
-    markers: js.Array[CartesianMarkerProps] = null,
-    maxValue: Double | auto = null,
-    minValue: Double | auto = null,
-    motionDamping: Int | Double = null,
-    motionStiffness: Int | Double = null,
-    onClick: (/* datum */ BarExtendedDatum, /* event */ SyntheticMouseEvent[SVGRectElement]) => Unit = null,
-    padding: Int | Double = null,
-    reverse: js.UndefOr[Boolean] = js.undefined,
-    theme: Theme = null,
-    tooltip: ReactComponentClass[BarExtendedDatum] = null,
-    tooltipFormat: String | ValueFormatter = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoBar.mod.Bar] = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    if (!js.isUndefined(animate)) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
-    if (axisBottom != null) __obj.updateDynamic("axisBottom")(axisBottom.asInstanceOf[js.Any])
-    if (axisLeft != null) __obj.updateDynamic("axisLeft")(axisLeft.asInstanceOf[js.Any])
-    if (axisRight != null) __obj.updateDynamic("axisRight")(axisRight.asInstanceOf[js.Any])
-    if (axisTop != null) __obj.updateDynamic("axisTop")(axisTop.asInstanceOf[js.Any])
-    if (barComponent != null) __obj.updateDynamic("barComponent")(barComponent.asInstanceOf[js.Any])
-    if (borderRadius != null) __obj.updateDynamic("borderRadius")(borderRadius.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (defs != null) __obj.updateDynamic("defs")(defs.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridX)) __obj.updateDynamic("enableGridX")(enableGridX.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableGridY)) __obj.updateDynamic("enableGridY")(enableGridY.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableLabel)) __obj.updateDynamic("enableLabel")(enableLabel.asInstanceOf[js.Any])
-    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
-    if (groupMode != null) __obj.updateDynamic("groupMode")(groupMode.asInstanceOf[js.Any])
-    if (indexBy != null) __obj.updateDynamic("indexBy")(indexBy.asInstanceOf[js.Any])
-    if (innerPadding != null) __obj.updateDynamic("innerPadding")(innerPadding.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (keys != null) __obj.updateDynamic("keys")(keys.asInstanceOf[js.Any])
-    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
-    if (labelFormat != null) __obj.updateDynamic("labelFormat")(labelFormat.asInstanceOf[js.Any])
-    if (labelLinkColor != null) __obj.updateDynamic("labelLinkColor")(labelLinkColor.asInstanceOf[js.Any])
-    if (labelSkipHeight != null) __obj.updateDynamic("labelSkipHeight")(labelSkipHeight.asInstanceOf[js.Any])
-    if (labelSkipWidth != null) __obj.updateDynamic("labelSkipWidth")(labelSkipWidth.asInstanceOf[js.Any])
-    if (labelTextColor != null) __obj.updateDynamic("labelTextColor")(labelTextColor.asInstanceOf[js.Any])
-    if (layers != null) __obj.updateDynamic("layers")(layers.asInstanceOf[js.Any])
-    if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
-    if (legends != null) __obj.updateDynamic("legends")(legends.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (markers != null) __obj.updateDynamic("markers")(markers.asInstanceOf[js.Any])
-    if (maxValue != null) __obj.updateDynamic("maxValue")(maxValue.asInstanceOf[js.Any])
-    if (minValue != null) __obj.updateDynamic("minValue")(minValue.asInstanceOf[js.Any])
-    if (motionDamping != null) __obj.updateDynamic("motionDamping")(motionDamping.asInstanceOf[js.Any])
-    if (motionStiffness != null) __obj.updateDynamic("motionStiffness")(motionStiffness.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (!js.isUndefined(reverse)) __obj.updateDynamic("reverse")(reverse.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(tooltipFormat.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.nivoBar.mod.Bar] {
+    @scala.inline
+    def animate(value: Boolean): this.type = set("animate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisBottom(value: Axis): this.type = set("axisBottom", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisLeft(value: Axis): this.type = set("axisLeft", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisRight(value: Axis): this.type = set("axisRight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def axisTop(value: Axis): this.type = set("axisTop", value.asInstanceOf[js.Any])
+    @scala.inline
+    def barComponent(value: ReactComponentClass[BarItemProps]): this.type = set("barComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderRadius(value: Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderWidth(value: Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorsFunction1(value: _ => String): this.type = set("colors", js.Any.fromFunction1(value))
+    @scala.inline
+    def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defs(value: js.Array[AnonDictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableGridX(value: Boolean): this.type = set("enableGridX", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableGridY(value: Boolean): this.type = set("enableGridY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableLabel(value: Boolean): this.type = set("enableLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fill(value: js.Array[AnonId[BarDatum]]): this.type = set("fill", value.asInstanceOf[js.Any])
+    @scala.inline
+    def groupMode(value: stacked | grouped): this.type = set("groupMode", value.asInstanceOf[js.Any])
+    @scala.inline
+    def indexByFunction1(value: /* datum */ BarDatum => String | Double): this.type = set("indexBy", js.Any.fromFunction1(value))
+    @scala.inline
+    def indexBy(value: String | IndexByFunc): this.type = set("indexBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def innerPadding(value: Double): this.type = set("innerPadding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def keys(value: js.Array[String]): this.type = set("keys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFunction1(value: /* datum */ BarDatum => String): this.type = set("label", js.Any.fromFunction1(value))
+    @scala.inline
+    def label(value: String | AccessorFunc): this.type = set("label", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelFormatFunction1(value: /* label */ String | Double => String | Double): this.type = set("labelFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelFormat(value: String | LabelFormatter): this.type = set("labelFormat", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelLinkColorFunction1(value: BarDatumWithColor => String): this.type = set("labelLinkColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelLinkColor(value: InheritedColorProp[BarDatumWithColor]): this.type = set("labelLinkColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelSkipHeight(value: Double): this.type = set("labelSkipHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelSkipWidth(value: Double): this.type = set("labelSkipWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def labelTextColorFunction1(value: BarDatumWithColor => String): this.type = set("labelTextColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def labelTextColor(value: InheritedColorProp[BarDatumWithColor]): this.type = set("labelTextColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layers(value: js.Array[Layer]): this.type = set("layers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def layout(value: horizontal | vertical): this.type = set("layout", value.asInstanceOf[js.Any])
+    @scala.inline
+    def legends(value: js.Array[dataFromindexeskeysLegend]): this.type = set("legends", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def markers(value: js.Array[CartesianMarkerProps]): this.type = set("markers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxValue(value: Double | auto): this.type = set("maxValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minValue(value: Double | auto): this.type = set("minValue", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motionDamping(value: Double): this.type = set("motionDamping", value.asInstanceOf[js.Any])
+    @scala.inline
+    def motionStiffness(value: Double): this.type = set("motionStiffness", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* datum */ BarExtendedDatum, /* event */ SyntheticMouseEvent[SVGRectElement]) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def padding(value: Double): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def reverse(value: Boolean): this.type = set("reverse", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: ReactComponentClass[BarExtendedDatum]): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipFormatFunction1(value: /* value */ Double => String | Double): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def tooltipFormat(value: String | ValueFormatter): this.type = set("tooltipFormat", value.asInstanceOf[js.Any])
   }
-  type Props = BarSvgProps with Dimensions
+  
+  def withProps(p: BarSvgProps with Dimensions): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(data: js.Array[js.Object], height: Double, width: Double): Builder = {
+    val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BarSvgProps with Dimensions]))
+  }
 }
 

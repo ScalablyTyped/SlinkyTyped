@@ -1,7 +1,6 @@
 package typingsSlinky.easyXapiSupertest.expressMod
 
 import typingsSlinky.easyXapiSupertest.httpMod.Server
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -206,7 +205,7 @@ trait Application
     * @param fn
     */
   def render(name: String): Unit = js.native
-  def render(name: String, callback: js.Function2[/* err */ Error, /* html */ String, Unit]): Unit = js.native
+  def render(name: String, callback: js.Function2[/* err */ js.Error, /* html */ String, Unit]): Unit = js.native
   def render(name: String, options: js.Object): Unit = js.native
   def render(
     name: String,

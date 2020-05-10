@@ -1,9 +1,9 @@
 package typingsSlinky.spectrogram.mod
 
+import org.scalajs.dom.raw.AnalyserNode
+import org.scalajs.dom.raw.AudioBuffer
 import org.scalajs.dom.raw.AudioContext
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import typingsSlinky.std.AnalyserNode
-import typingsSlinky.std.AudioBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

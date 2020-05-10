@@ -14,10 +14,29 @@ trait UpdateEmergencyContactSettingsRequest extends js.Object {
 
 object UpdateEmergencyContactSettingsRequest {
   @scala.inline
-  def apply(EmergencyContactList: EmergencyContactList = null): UpdateEmergencyContactSettingsRequest = {
+  def apply(): UpdateEmergencyContactSettingsRequest = {
     val __obj = js.Dynamic.literal()
-    if (EmergencyContactList != null) __obj.updateDynamic("EmergencyContactList")(EmergencyContactList.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateEmergencyContactSettingsRequest]
   }
+  @scala.inline
+  implicit class UpdateEmergencyContactSettingsRequestOps[Self <: UpdateEmergencyContactSettingsRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEmergencyContactList(value: EmergencyContactList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmergencyContactList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEmergencyContactList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EmergencyContactList")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

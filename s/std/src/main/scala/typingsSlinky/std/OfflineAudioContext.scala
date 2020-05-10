@@ -44,7 +44,7 @@ trait OfflineAudioContext extends BaseAudioContext {
   def removeEventListener_complete(
     `type`: complete,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.OfflineAudioCompletionEvent, _],
-    options: EventListenerOptions
+    options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def resume(): js.Promise[Unit] = js.native
   def startRendering(): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
@@ -54,11 +54,14 @@ trait OfflineAudioContext extends BaseAudioContext {
 @JSGlobal("OfflineAudioContext")
 @js.native
 object OfflineAudioContext
-  extends Instantiable1[/* contextOptions */ OfflineAudioContextOptions, OfflineAudioContext]
+  extends Instantiable1[
+      /* contextOptions */ OfflineAudioContextOptions, 
+      org.scalajs.dom.raw.OfflineAudioContext
+    ]
      with Instantiable3[
       /* numberOfChannels */ Double, 
       /* length */ Double, 
       /* sampleRate */ Double, 
-      OfflineAudioContext
+      org.scalajs.dom.raw.OfflineAudioContext
     ]
 

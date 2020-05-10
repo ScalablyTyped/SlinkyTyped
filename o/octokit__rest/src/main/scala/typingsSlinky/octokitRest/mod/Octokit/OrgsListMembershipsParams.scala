@@ -6,29 +6,71 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait OrgsListMembershipsParams extends js.Object {
   /**
     * Page number of the results to fetch.
     */
-  var page: js.UndefOr[Double] = js.undefined
+  var page: js.UndefOr[Double] = js.native
   /**
     * Results per page (max 100)
     */
-  var per_page: js.UndefOr[Double] = js.undefined
+  var per_page: js.UndefOr[Double] = js.native
   /**
     * Indicates the state of the memberships to return. Can be either `active` or `pending`. If not specified, the API returns both active and pending memberships.
     */
-  var state: js.UndefOr[active | pending] = js.undefined
+  var state: js.UndefOr[active | pending] = js.native
 }
 
 object OrgsListMembershipsParams {
   @scala.inline
-  def apply(page: Int | Double = null, per_page: Int | Double = null, state: active | pending = null): OrgsListMembershipsParams = {
+  def apply(): OrgsListMembershipsParams = {
     val __obj = js.Dynamic.literal()
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (per_page != null) __obj.updateDynamic("per_page")(per_page.asInstanceOf[js.Any])
-    if (state != null) __obj.updateDynamic("state")(state.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgsListMembershipsParams]
   }
+  @scala.inline
+  implicit class OrgsListMembershipsParamsOps[Self <: OrgsListMembershipsParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPer_page(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPer_page: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("per_page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withState(value: active | pending): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutState: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

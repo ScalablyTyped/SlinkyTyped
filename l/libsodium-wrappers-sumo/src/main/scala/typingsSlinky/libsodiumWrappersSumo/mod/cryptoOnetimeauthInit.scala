@@ -1,7 +1,6 @@
 package typingsSlinky.libsodiumWrappersSumo.mod
 
 import typingsSlinky.libsodiumWrappers.mod.StateAddress
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +10,6 @@ import scala.scalajs.js.annotation._
 object cryptoOnetimeauthInit extends js.Object {
   def apply(): StateAddress = js.native
   def apply(key: String): StateAddress = js.native
-  def apply(key: Uint8Array): StateAddress = js.native
+  def apply(key: js.typedarray.Uint8Array): StateAddress = js.native
 }
 

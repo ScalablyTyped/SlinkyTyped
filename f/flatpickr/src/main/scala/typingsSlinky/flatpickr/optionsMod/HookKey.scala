@@ -22,30 +22,28 @@ trait HookKey extends js.Object
 
 object HookKey {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def onChange: typingsSlinky.flatpickr.flatpickrStrings.onChange = "onChange".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onChange]
   @scala.inline
-  def onChange: typingsSlinky.flatpickr.flatpickrStrings.onChange = this.cast("onChange")
+  def onClose: typingsSlinky.flatpickr.flatpickrStrings.onClose = "onClose".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onClose]
   @scala.inline
-  def onClose: typingsSlinky.flatpickr.flatpickrStrings.onClose = this.cast("onClose")
+  def onDayCreate: typingsSlinky.flatpickr.flatpickrStrings.onDayCreate = "onDayCreate".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onDayCreate]
   @scala.inline
-  def onDayCreate: typingsSlinky.flatpickr.flatpickrStrings.onDayCreate = this.cast("onDayCreate")
+  def onDestroy: typingsSlinky.flatpickr.flatpickrStrings.onDestroy = "onDestroy".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onDestroy]
   @scala.inline
-  def onDestroy: typingsSlinky.flatpickr.flatpickrStrings.onDestroy = this.cast("onDestroy")
+  def onKeyDown: typingsSlinky.flatpickr.flatpickrStrings.onKeyDown = "onKeyDown".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onKeyDown]
   @scala.inline
-  def onKeyDown: typingsSlinky.flatpickr.flatpickrStrings.onKeyDown = this.cast("onKeyDown")
+  def onMonthChange: typingsSlinky.flatpickr.flatpickrStrings.onMonthChange = "onMonthChange".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onMonthChange]
   @scala.inline
-  def onMonthChange: typingsSlinky.flatpickr.flatpickrStrings.onMonthChange = this.cast("onMonthChange")
+  def onOpen: typingsSlinky.flatpickr.flatpickrStrings.onOpen = "onOpen".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onOpen]
   @scala.inline
-  def onOpen: typingsSlinky.flatpickr.flatpickrStrings.onOpen = this.cast("onOpen")
+  def onParseConfig: typingsSlinky.flatpickr.flatpickrStrings.onParseConfig = "onParseConfig".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onParseConfig]
   @scala.inline
-  def onParseConfig: typingsSlinky.flatpickr.flatpickrStrings.onParseConfig = this.cast("onParseConfig")
+  def onPreCalendarPosition: typingsSlinky.flatpickr.flatpickrStrings.onPreCalendarPosition = "onPreCalendarPosition".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onPreCalendarPosition]
   @scala.inline
-  def onPreCalendarPosition: typingsSlinky.flatpickr.flatpickrStrings.onPreCalendarPosition = this.cast("onPreCalendarPosition")
+  def onReady: typingsSlinky.flatpickr.flatpickrStrings.onReady = "onReady".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onReady]
   @scala.inline
-  def onReady: typingsSlinky.flatpickr.flatpickrStrings.onReady = this.cast("onReady")
+  def onValueUpdate: typingsSlinky.flatpickr.flatpickrStrings.onValueUpdate = "onValueUpdate".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onValueUpdate]
   @scala.inline
-  def onValueUpdate: typingsSlinky.flatpickr.flatpickrStrings.onValueUpdate = this.cast("onValueUpdate")
-  @scala.inline
-  def onYearChange: typingsSlinky.flatpickr.flatpickrStrings.onYearChange = this.cast("onYearChange")
+  def onYearChange: typingsSlinky.flatpickr.flatpickrStrings.onYearChange = "onYearChange".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.onYearChange]
 }
 

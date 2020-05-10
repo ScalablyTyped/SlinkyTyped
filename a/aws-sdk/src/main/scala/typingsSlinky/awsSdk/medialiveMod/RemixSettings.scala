@@ -23,15 +23,47 @@ trait RemixSettings extends js.Object {
 
 object RemixSettings {
   @scala.inline
-  def apply(
-    ChannelMappings: listOfAudioChannelMapping,
-    ChannelsIn: Int | Double = null,
-    ChannelsOut: Int | Double = null
-  ): RemixSettings = {
+  def apply(ChannelMappings: listOfAudioChannelMapping): RemixSettings = {
     val __obj = js.Dynamic.literal(ChannelMappings = ChannelMappings.asInstanceOf[js.Any])
-    if (ChannelsIn != null) __obj.updateDynamic("ChannelsIn")(ChannelsIn.asInstanceOf[js.Any])
-    if (ChannelsOut != null) __obj.updateDynamic("ChannelsOut")(ChannelsOut.asInstanceOf[js.Any])
     __obj.asInstanceOf[RemixSettings]
   }
+  @scala.inline
+  implicit class RemixSettingsOps[Self <: RemixSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannelMappings(value: listOfAudioChannelMapping): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelMappings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChannelsIn(value: integerMin1Max16): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelsIn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelsIn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelsIn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannelsOut(value: integerMin1Max8): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelsOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelsOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChannelsOut")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

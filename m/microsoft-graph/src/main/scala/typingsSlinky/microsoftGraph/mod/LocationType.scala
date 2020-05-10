@@ -20,26 +20,24 @@ trait LocationType extends js.Object
 
 object LocationType {
   @scala.inline
-  def businessAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.businessAddress = this.cast("businessAddress")
+  def businessAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.businessAddress = "businessAddress".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.businessAddress]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def conferenceRoom: typingsSlinky.microsoftGraph.microsoftGraphStrings.conferenceRoom = "conferenceRoom".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.conferenceRoom]
   @scala.inline
-  def conferenceRoom: typingsSlinky.microsoftGraph.microsoftGraphStrings.conferenceRoom = this.cast("conferenceRoom")
+  def default: typingsSlinky.microsoftGraph.microsoftGraphStrings.default = "default".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.default]
   @scala.inline
-  def default: typingsSlinky.microsoftGraph.microsoftGraphStrings.default = this.cast("default")
+  def geoCoordinates: typingsSlinky.microsoftGraph.microsoftGraphStrings.geoCoordinates = "geoCoordinates".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.geoCoordinates]
   @scala.inline
-  def geoCoordinates: typingsSlinky.microsoftGraph.microsoftGraphStrings.geoCoordinates = this.cast("geoCoordinates")
+  def homeAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.homeAddress = "homeAddress".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.homeAddress]
   @scala.inline
-  def homeAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.homeAddress = this.cast("homeAddress")
+  def hotel: typingsSlinky.microsoftGraph.microsoftGraphStrings.hotel = "hotel".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.hotel]
   @scala.inline
-  def hotel: typingsSlinky.microsoftGraph.microsoftGraphStrings.hotel = this.cast("hotel")
+  def localBusiness: typingsSlinky.microsoftGraph.microsoftGraphStrings.localBusiness = "localBusiness".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.localBusiness]
   @scala.inline
-  def localBusiness: typingsSlinky.microsoftGraph.microsoftGraphStrings.localBusiness = this.cast("localBusiness")
+  def postalAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.postalAddress = "postalAddress".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.postalAddress]
   @scala.inline
-  def postalAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.postalAddress = this.cast("postalAddress")
+  def restaurant: typingsSlinky.microsoftGraph.microsoftGraphStrings.restaurant = "restaurant".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.restaurant]
   @scala.inline
-  def restaurant: typingsSlinky.microsoftGraph.microsoftGraphStrings.restaurant = this.cast("restaurant")
-  @scala.inline
-  def streetAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.streetAddress = this.cast("streetAddress")
+  def streetAddress: typingsSlinky.microsoftGraph.microsoftGraphStrings.streetAddress = "streetAddress".asInstanceOf[typingsSlinky.microsoftGraph.microsoftGraphStrings.streetAddress]
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.svgJs.mod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.std.HTMLElement
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

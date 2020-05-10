@@ -1,7 +1,6 @@
 package typingsSlinky.mssql.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import typingsSlinky.std.TemplateStringsArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +19,7 @@ class ConnectionPool protected () extends EventEmitter {
   def batch(batch: String): js.Promise[IResult[_]] = js.native
   def batch(
     batch: String,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* recordset */ js.UndefOr[IResult[_]], Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* recordset */ js.UndefOr[IResult[_]], Unit]
   ): Unit = js.native
   def batch(strings: TemplateStringsArray, interpolations: js.Any*): js.Promise[IResult[_]] = js.native
   @JSName("batch")
@@ -35,7 +34,7 @@ class ConnectionPool protected () extends EventEmitter {
   def query(strings: TemplateStringsArray, interpolations: js.Any*): js.Promise[IResult[_]] = js.native
   def query[Entity](
     command: String,
-    callback: js.Function2[/* err */ js.UndefOr[Error], /* recordset */ js.UndefOr[IResult[Entity]], Unit]
+    callback: js.Function2[/* err */ js.UndefOr[js.Error], /* recordset */ js.UndefOr[IResult[Entity]], Unit]
   ): Unit = js.native
   @JSName("query")
   def query_Entity[Entity](command: String): js.Promise[IResult[Entity]] = js.native

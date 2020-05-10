@@ -4,14 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ReposUpdateBranchProtectionResponseRestrictions extends js.Object {
-  var apps: js.Array[ReposUpdateBranchProtectionResponseRestrictionsAppsItem]
-  var apps_url: String
-  var teams: js.Array[ReposUpdateBranchProtectionResponseRestrictionsTeamsItem]
-  var teams_url: String
-  var url: String
-  var users: js.Array[ReposUpdateBranchProtectionResponseRestrictionsUsersItem]
-  var users_url: String
+  var apps: js.Array[ReposUpdateBranchProtectionResponseRestrictionsAppsItem] = js.native
+  var apps_url: String = js.native
+  var teams: js.Array[ReposUpdateBranchProtectionResponseRestrictionsTeamsItem] = js.native
+  var teams_url: String = js.native
+  var url: String = js.native
+  var users: js.Array[ReposUpdateBranchProtectionResponseRestrictionsUsersItem] = js.native
+  var users_url: String = js.native
 }
 
 object ReposUpdateBranchProtectionResponseRestrictions {
@@ -26,8 +27,57 @@ object ReposUpdateBranchProtectionResponseRestrictions {
     users_url: String
   ): ReposUpdateBranchProtectionResponseRestrictions = {
     val __obj = js.Dynamic.literal(apps = apps.asInstanceOf[js.Any], apps_url = apps_url.asInstanceOf[js.Any], teams = teams.asInstanceOf[js.Any], teams_url = teams_url.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], users = users.asInstanceOf[js.Any], users_url = users_url.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[ReposUpdateBranchProtectionResponseRestrictions]
   }
+  @scala.inline
+  implicit class ReposUpdateBranchProtectionResponseRestrictionsOps[Self <: ReposUpdateBranchProtectionResponseRestrictions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApps(value: js.Array[ReposUpdateBranchProtectionResponseRestrictionsAppsItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApps_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apps_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTeams(value: js.Array[ReposUpdateBranchProtectionResponseRestrictionsTeamsItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teams")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTeams_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("teams_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsers(value: js.Array[ReposUpdateBranchProtectionResponseRestrictionsUsersItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("users")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsers_url(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("users_url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

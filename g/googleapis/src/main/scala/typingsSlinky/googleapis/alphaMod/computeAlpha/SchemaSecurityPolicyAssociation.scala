@@ -22,12 +22,53 @@ trait SchemaSecurityPolicyAssociation extends js.Object {
 
 object SchemaSecurityPolicyAssociation {
   @scala.inline
-  def apply(attachmentId: String = null, name: String = null, securityPolicyId: String = null): SchemaSecurityPolicyAssociation = {
+  def apply(): SchemaSecurityPolicyAssociation = {
     val __obj = js.Dynamic.literal()
-    if (attachmentId != null) __obj.updateDynamic("attachmentId")(attachmentId.asInstanceOf[js.Any])
-    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
-    if (securityPolicyId != null) __obj.updateDynamic("securityPolicyId")(securityPolicyId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaSecurityPolicyAssociation]
   }
+  @scala.inline
+  implicit class SchemaSecurityPolicyAssociationOps[Self <: SchemaSecurityPolicyAssociation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachmentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAttachmentId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentId")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSecurityPolicyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityPolicyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSecurityPolicyId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("securityPolicyId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

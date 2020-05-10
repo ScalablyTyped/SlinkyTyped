@@ -2,7 +2,6 @@ package typingsSlinky.bl.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Duplex
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,9 +33,9 @@ trait BufferList extends Duplex {
   def indexOf(value: Buffer): Double = js.native
   def indexOf(value: Buffer, byteOffset: Double): Double = js.native
   def indexOf(value: Buffer, byteOffset: Double, encoding: String): Double = js.native
-  def indexOf(value: Uint8Array): Double = js.native
-  def indexOf(value: Uint8Array, byteOffset: Double): Double = js.native
-  def indexOf(value: Uint8Array, byteOffset: Double, encoding: String): Double = js.native
+  def indexOf(value: js.typedarray.Uint8Array): Double = js.native
+  def indexOf(value: js.typedarray.Uint8Array, byteOffset: Double): Double = js.native
+  def indexOf(value: js.typedarray.Uint8Array, byteOffset: Double, encoding: String): Double = js.native
   def readDoubleBE(offset: Double): Double = js.native
   def readDoubleBE(offset: Double, noAssert: Boolean): Double = js.native
   def readDoubleLE(offset: Double): Double = js.native

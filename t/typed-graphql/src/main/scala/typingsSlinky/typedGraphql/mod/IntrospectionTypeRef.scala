@@ -17,19 +17,16 @@ object IntrospectionTypeRef {
   @scala.inline
   def IntrospectionNamedTypeRef(kind: String, name: String): IntrospectionTypeRef = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[IntrospectionTypeRef]
   }
   @scala.inline
-  def IntrospectionListTypeRef(kind: LIST, ofType: IntrospectionTypeRef = null): IntrospectionTypeRef = {
+  def IntrospectionListTypeRef(kind: LIST): IntrospectionTypeRef = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    if (ofType != null) __obj.updateDynamic("ofType")(ofType.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionTypeRef]
   }
   @scala.inline
-  def IntrospectionNonNullTypeRef(kind: NON_NULL, ofType: IntrospectionTypeRef = null): IntrospectionTypeRef = {
+  def IntrospectionNonNullTypeRef(kind: NON_NULL): IntrospectionTypeRef = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    if (ofType != null) __obj.updateDynamic("ofType")(ofType.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntrospectionTypeRef]
   }
 }

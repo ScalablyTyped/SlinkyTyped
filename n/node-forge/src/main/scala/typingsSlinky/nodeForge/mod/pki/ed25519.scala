@@ -6,8 +6,6 @@ import typingsSlinky.nodeForge.AnonPrivateKeyBinaryBuffer
 import typingsSlinky.nodeForge.AnonPublicKey
 import typingsSlinky.nodeForge.AnonSeed
 import typingsSlinky.nodeForge.mod.util.ByteBuffer
-import typingsSlinky.nodeForge.nodeForgeNumbers.`32`
-import typingsSlinky.nodeForge.nodeForgeNumbers.`64`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,16 +27,16 @@ object ed25519 extends js.Object {
   def verify(options: ToNativeBufferParameters with AnonPublicKey): Boolean = js.native
   @js.native
   object constants extends js.Object {
-    val HASH_BYTE_LENGTH: `64` = js.native
-    val PRIVATE_KEY_BYTE_LENGTH: `64` = js.native
-    val PUBLIC_KEY_BYTE_LENGTH: `32` = js.native
-    val SEED_BYTE_LENGTH: `32` = js.native
-    val SIGN_BYTE_LENGTH: `64` = js.native
+    val HASH_BYTE_LENGTH: /* 64 */ Double = js.native
+    val PRIVATE_KEY_BYTE_LENGTH: /* 64 */ Double = js.native
+    val PUBLIC_KEY_BYTE_LENGTH: /* 32 */ Double = js.native
+    val SEED_BYTE_LENGTH: /* 32 */ Double = js.native
+    val SIGN_BYTE_LENGTH: /* 64 */ Double = js.native
   }
   
   // `string`s will be converted by toNativeBuffer with `encoding: 'binary'`
   type BinaryBuffer = NativeBuffer | ByteBuffer | String
   type Key = NativeBuffer
-  type NativeBuffer = Buffer | scala.scalajs.js.typedarray.Uint8Array
+  type NativeBuffer = Buffer | js.typedarray.Uint8Array
 }
 

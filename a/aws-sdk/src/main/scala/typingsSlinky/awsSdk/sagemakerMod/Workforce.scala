@@ -19,23 +19,60 @@ trait Workforce extends js.Object {
     */
   var WorkforceArn: typingsSlinky.awsSdk.sagemakerMod.WorkforceArn = js.native
   /**
-    * The name of the private workforce whose access you want to restrict. WorkforceName is automatically set to "default" when a workforce is created and cannot be modified. 
+    * The name of the private workforce whose access you want to restrict. WorkforceName is automatically set to default when a workforce is created and cannot be modified. 
     */
   var WorkforceName: typingsSlinky.awsSdk.sagemakerMod.WorkforceName = js.native
 }
 
 object Workforce {
   @scala.inline
-  def apply(
-    WorkforceArn: WorkforceArn,
-    WorkforceName: WorkforceName,
-    LastUpdatedDate: js.Date = null,
-    SourceIpConfig: SourceIpConfig = null
-  ): Workforce = {
+  def apply(WorkforceArn: WorkforceArn, WorkforceName: WorkforceName): Workforce = {
     val __obj = js.Dynamic.literal(WorkforceArn = WorkforceArn.asInstanceOf[js.Any], WorkforceName = WorkforceName.asInstanceOf[js.Any])
-    if (LastUpdatedDate != null) __obj.updateDynamic("LastUpdatedDate")(LastUpdatedDate.asInstanceOf[js.Any])
-    if (SourceIpConfig != null) __obj.updateDynamic("SourceIpConfig")(SourceIpConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[Workforce]
   }
+  @scala.inline
+  implicit class WorkforceOps[Self <: Workforce] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWorkforceArn(value: WorkforceArn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkforceArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorkforceName(value: WorkforceName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WorkforceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLastUpdatedDate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LastUpdatedDate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSourceIpConfig(value: SourceIpConfig): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIpConfig")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSourceIpConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceIpConfig")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

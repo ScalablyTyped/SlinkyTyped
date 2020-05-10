@@ -1,6 +1,5 @@
 package typingsSlinky.utility.mod
 
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,7 @@ object replace extends js.Object {
     */
   def apply(str: String, substr: String, newSubstr: String): String = js.native
   def apply(str: String, substr: String, newSubstr: js.Function1[/* repeated */ js.Any, _]): String = js.native
-  def apply(str: String, substr: RegExp, newSubstr: String): String = js.native
-  def apply(str: String, substr: RegExp, newSubstr: js.Function1[/* repeated */ js.Any, _]): String = js.native
+  def apply(str: String, substr: js.RegExp, newSubstr: String): String = js.native
+  def apply(str: String, substr: js.RegExp, newSubstr: js.Function1[/* repeated */ js.Any, _]): String = js.native
 }
 

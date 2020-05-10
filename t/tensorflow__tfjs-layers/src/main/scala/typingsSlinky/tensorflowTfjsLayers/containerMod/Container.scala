@@ -3,10 +3,10 @@ package typingsSlinky.tensorflowTfjsLayers.containerMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Set
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.mod.Tensor_
 import typingsSlinky.tensorflowTfjsCore.mod.serialization.Serializable
 import typingsSlinky.tensorflowTfjsCore.serializationMod.ConfigDict
 import typingsSlinky.tensorflowTfjsCore.serializationMod.SerializableConstructor
+import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
@@ -100,8 +100,8 @@ abstract class Container protected () extends Layer {
     * @param masks List of masks (tensors or null).
     * @return Three lists: outputTensors, outputMasks, outputShapes
     */
-  /* protected */ def runInternalGraph(inputs: js.Array[Tensor_[Rank]]): js.Tuple3[js.Array[Tensor_[Rank]], js.Array[Tensor_[Rank]], js.Array[Shape]] = js.native
-  /* protected */ def runInternalGraph(inputs: js.Array[Tensor_[Rank]], masks: js.Array[Tensor_[Rank]]): js.Tuple3[js.Array[Tensor_[Rank]], js.Array[Tensor_[Rank]], js.Array[Shape]] = js.native
+  /* protected */ def runInternalGraph(inputs: js.Array[Tensor[Rank]]): js.Tuple3[js.Array[Tensor[Rank]], js.Array[Tensor[Rank]], js.Array[Shape]] = js.native
+  /* protected */ def runInternalGraph(inputs: js.Array[Tensor[Rank]], masks: js.Array[Tensor[Rank]]): js.Tuple3[js.Array[Tensor[Rank]], js.Array[Tensor[Rank]], js.Array[Shape]] = js.native
   /**
     * Returns a JSON string containing the network configuration.
     *

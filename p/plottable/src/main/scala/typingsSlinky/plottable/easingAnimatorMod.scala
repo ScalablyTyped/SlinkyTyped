@@ -1,9 +1,6 @@
 package typingsSlinky.plottable
 
-import typingsSlinky.d3Transition.mod.Transition_
 import typingsSlinky.plottable.animatorMod.IAnimator
-import typingsSlinky.plottable.interfacesMod.AttributeToAppliedProjector
-import typingsSlinky.plottable.interfacesMod.SimpleSelection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +8,47 @@ import scala.scalajs.js.annotation._
 @JSImport("plottable/build/src/animators/easingAnimator", JSImport.Namespace)
 @js.native
 object easingAnimatorMod extends js.Object {
+  /* keyof plottable.AnonBack */ /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.plottable.plottableStrings.circle
+    - typingsSlinky.plottable.plottableStrings.linear
+    - typingsSlinky.plottable.plottableStrings.quad
+    - typingsSlinky.plottable.plottableStrings.quadIn
+    - typingsSlinky.plottable.plottableStrings.quadOut
+    - typingsSlinky.plottable.plottableStrings.quadInOut
+    - typingsSlinky.plottable.plottableStrings.cubic
+    - typingsSlinky.plottable.plottableStrings.cubicIn
+    - typingsSlinky.plottable.plottableStrings.cubicOut
+    - typingsSlinky.plottable.plottableStrings.cubicInOut
+    - typingsSlinky.plottable.plottableStrings.poly
+    - typingsSlinky.plottable.plottableStrings.polyIn
+    - typingsSlinky.plottable.plottableStrings.polyOut
+    - typingsSlinky.plottable.plottableStrings.polyInOut
+    - typingsSlinky.plottable.plottableStrings.sin
+    - typingsSlinky.plottable.plottableStrings.sinIn
+    - typingsSlinky.plottable.plottableStrings.sinOut
+    - typingsSlinky.plottable.plottableStrings.sinInOut
+    - typingsSlinky.plottable.plottableStrings.exp
+    - typingsSlinky.plottable.plottableStrings.expIn
+    - typingsSlinky.plottable.plottableStrings.expOut
+    - typingsSlinky.plottable.plottableStrings.expInOut
+    - typingsSlinky.plottable.plottableStrings.circleIn
+    - typingsSlinky.plottable.plottableStrings.circleOut
+    - typingsSlinky.plottable.plottableStrings.circleInOut
+    - typingsSlinky.plottable.plottableStrings.bounce
+    - typingsSlinky.plottable.plottableStrings.bounceIn
+    - typingsSlinky.plottable.plottableStrings.bounceOut
+    - typingsSlinky.plottable.plottableStrings.bounceInOut
+    - typingsSlinky.plottable.plottableStrings.back
+    - typingsSlinky.plottable.plottableStrings.backIn
+    - typingsSlinky.plottable.plottableStrings.backOut
+    - typingsSlinky.plottable.plottableStrings.backInOut
+    - typingsSlinky.plottable.plottableStrings.elastic
+    - typingsSlinky.plottable.plottableStrings.elasticIn
+    - typingsSlinky.plottable.plottableStrings.elasticOut
+    - typingsSlinky.plottable.plottableStrings.elasticInOut
+  */
+  trait EaseName extends js.Object
+  
   @js.native
   /**
     * Constructs the default animator
@@ -28,18 +66,6 @@ object easingAnimatorMod extends js.Object {
       */
     /* private */ def _getAdjustedIterativeDelay(numberOfSteps: js.Any): js.Any = js.native
     /* protected */ def _getEaseFactory(): EaseFn = js.native
-    /**
-      * Applies the supplied attributes to a d3.Selection with some animation.
-      *
-      * @param {d3.Selection} selection The update selection or transition selection that we wish to animate.
-      * @param {AttributeToAppliedProjector} attrToAppliedProjector The set of
-      *     AppliedProjectors that we will use to set attributes on the selection.
-      * @return {any} Animators should return the selection or
-      *     transition object so that plots may chain the transitions between
-      *     animators.
-      */
-    /* CompleteClass */
-    override def animate(selection: SimpleSelection[_], attrToAppliedProjector: AttributeToAppliedProjector): SimpleSelection[_] | (Transition_[_, _, _, _]) = js.native
     /**
       * Gets the current easing mode of the animation.
       *
@@ -114,14 +140,6 @@ object easingAnimatorMod extends js.Object {
       * @returns {Easing} The calling Easing Animator.
       */
     def stepDuration(stepDuration: Double): this.type = js.native
-    /**
-      * Given the number of elements, return the total time the animation requires
-      *
-      * @param {number} numberofIterations The number of elements that will be drawn
-      * @returns {number}
-      */
-    /* CompleteClass */
-    override def totalTime(numberOfIterations: Double): Double = js.native
   }
   
   @js.native
@@ -191,6 +209,5 @@ object easingAnimatorMod extends js.Object {
   }
   
   type EaseFn = js.Function1[/* normalizedTime */ Double, Double]
-  type EaseName = String
 }
 

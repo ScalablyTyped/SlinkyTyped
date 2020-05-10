@@ -42,16 +42,78 @@ object IdentityNotificationAttributes {
     BounceTopic: NotificationTopic,
     ComplaintTopic: NotificationTopic,
     DeliveryTopic: NotificationTopic,
-    ForwardingEnabled: Enabled,
-    HeadersInBounceNotificationsEnabled: js.UndefOr[Boolean] = js.undefined,
-    HeadersInComplaintNotificationsEnabled: js.UndefOr[Boolean] = js.undefined,
-    HeadersInDeliveryNotificationsEnabled: js.UndefOr[Boolean] = js.undefined
+    ForwardingEnabled: Enabled
   ): IdentityNotificationAttributes = {
     val __obj = js.Dynamic.literal(BounceTopic = BounceTopic.asInstanceOf[js.Any], ComplaintTopic = ComplaintTopic.asInstanceOf[js.Any], DeliveryTopic = DeliveryTopic.asInstanceOf[js.Any], ForwardingEnabled = ForwardingEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(HeadersInBounceNotificationsEnabled)) __obj.updateDynamic("HeadersInBounceNotificationsEnabled")(HeadersInBounceNotificationsEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(HeadersInComplaintNotificationsEnabled)) __obj.updateDynamic("HeadersInComplaintNotificationsEnabled")(HeadersInComplaintNotificationsEnabled.asInstanceOf[js.Any])
-    if (!js.isUndefined(HeadersInDeliveryNotificationsEnabled)) __obj.updateDynamic("HeadersInDeliveryNotificationsEnabled")(HeadersInDeliveryNotificationsEnabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdentityNotificationAttributes]
   }
+  @scala.inline
+  implicit class IdentityNotificationAttributesOps[Self <: IdentityNotificationAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBounceTopic(value: NotificationTopic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BounceTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComplaintTopic(value: NotificationTopic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ComplaintTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeliveryTopic(value: NotificationTopic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeliveryTopic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForwardingEnabled(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForwardingEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeadersInBounceNotificationsEnabled(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HeadersInBounceNotificationsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeadersInBounceNotificationsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HeadersInBounceNotificationsEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeadersInComplaintNotificationsEnabled(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HeadersInComplaintNotificationsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeadersInComplaintNotificationsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HeadersInComplaintNotificationsEnabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeadersInDeliveryNotificationsEnabled(value: Enabled): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HeadersInDeliveryNotificationsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeadersInDeliveryNotificationsEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HeadersInDeliveryNotificationsEnabled")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

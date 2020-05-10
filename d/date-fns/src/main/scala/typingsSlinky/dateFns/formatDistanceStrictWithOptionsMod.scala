@@ -1,7 +1,6 @@
 package typingsSlinky.dateFns
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object formatDistanceStrictWithOptionsMod extends js.Object {
   @js.native
-  object default extends TopLevel[CurriedFn3[AnonAddSuffixLocale, Date | Double, Date | Double, String]]
+  object default
+    extends TopLevel[CurriedFn3[AnonAddSuffixLocale, js.Date | Double, js.Date | Double, String]]
   
 }
 

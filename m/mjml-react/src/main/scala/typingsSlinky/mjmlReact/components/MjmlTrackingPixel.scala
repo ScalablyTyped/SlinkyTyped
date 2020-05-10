@@ -1,26 +1,22 @@
 package typingsSlinky.mjmlReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.mjmlReact.AnonSrc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object MjmlTrackingPixel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlTrackingPixel] {
+object MjmlTrackingPixel {
   @JSImport("mjml-react/extensions", "MjmlTrackingPixel")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(src: String, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlTrackingPixel] = {
-    val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  def withProps(p: AnonSrc): Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlTrackingPixel] = new Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlTrackingPixel](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(src: String): Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlTrackingPixel] = {
+    val __props = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
+    new Default[tag.type, typingsSlinky.mjmlReact.extensionsMod.MjmlTrackingPixel](js.Array(this.component, __props.asInstanceOf[AnonSrc]))
   }
-  type Props = AnonSrc
 }
 

@@ -5,30 +5,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RESTDataSourceSettings
   extends /**
-	 * Option for RESTDataSourceSettings
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Settings related to REST compliant update routine
   	 */
-  var restSettings: js.UndefOr[RESTDataSourceSettingsRestSettings] = js.undefined
+  var restSettings: js.UndefOr[RESTDataSourceSettingsRestSettings] = js.native
 }
 
 object RESTDataSourceSettings {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for RESTDataSourceSettings
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    restSettings: RESTDataSourceSettingsRestSettings = null
-  ): RESTDataSourceSettings = {
+  def apply(): RESTDataSourceSettings = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (restSettings != null) __obj.updateDynamic("restSettings")(restSettings.asInstanceOf[js.Any])
     __obj.asInstanceOf[RESTDataSourceSettings]
   }
+  @scala.inline
+  implicit class RESTDataSourceSettingsOps[Self <: RESTDataSourceSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRestSettings(value: RESTDataSourceSettingsRestSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestSettings: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restSettings")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

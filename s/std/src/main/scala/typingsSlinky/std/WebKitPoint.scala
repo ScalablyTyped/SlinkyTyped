@@ -7,9 +7,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait WebKitPoint extends js.Object {
-  var x: Double
-  var y: Double
+  var x: Double = js.native
+  var y: Double = js.native
 }
 
 @JSGlobal("WebKitPoint")

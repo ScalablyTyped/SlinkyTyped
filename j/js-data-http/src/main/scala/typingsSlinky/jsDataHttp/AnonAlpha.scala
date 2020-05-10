@@ -4,33 +4,101 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonAlpha extends js.Object {
-  var alpha: js.UndefOr[String | Boolean] = js.undefined
-  var beta: js.UndefOr[String | Boolean] = js.undefined
-  var full: js.UndefOr[String] = js.undefined
-  var major: js.UndefOr[String] = js.undefined
-  var minor: js.UndefOr[String] = js.undefined
-  var patch: js.UndefOr[String] = js.undefined
+  var alpha: js.UndefOr[String | Boolean] = js.native
+  var beta: js.UndefOr[String | Boolean] = js.native
+  var full: js.UndefOr[String] = js.native
+  var major: js.UndefOr[String] = js.native
+  var minor: js.UndefOr[String] = js.native
+  var patch: js.UndefOr[String] = js.native
 }
 
 object AnonAlpha {
   @scala.inline
-  def apply(
-    alpha: String | Boolean = null,
-    beta: String | Boolean = null,
-    full: String = null,
-    major: String = null,
-    minor: String = null,
-    patch: String = null
-  ): AnonAlpha = {
+  def apply(): AnonAlpha = {
     val __obj = js.Dynamic.literal()
-    if (alpha != null) __obj.updateDynamic("alpha")(alpha.asInstanceOf[js.Any])
-    if (beta != null) __obj.updateDynamic("beta")(beta.asInstanceOf[js.Any])
-    if (full != null) __obj.updateDynamic("full")(full.asInstanceOf[js.Any])
-    if (major != null) __obj.updateDynamic("major")(major.asInstanceOf[js.Any])
-    if (minor != null) __obj.updateDynamic("minor")(minor.asInstanceOf[js.Any])
-    if (patch != null) __obj.updateDynamic("patch")(patch.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonAlpha]
   }
+  @scala.inline
+  implicit class AnonAlphaOps[Self <: AnonAlpha] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlpha(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAlpha: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeta(value: String | Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBeta: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beta")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFull(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("full")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("full")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMajor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("major")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMajor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("major")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMinor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMinor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPatch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

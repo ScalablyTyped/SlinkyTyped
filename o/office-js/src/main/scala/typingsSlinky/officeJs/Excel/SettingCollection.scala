@@ -7,7 +7,6 @@ import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.EventHandlers
 import typingsSlinky.officeJs.OfficeExtension.LoadOption
-import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +35,6 @@ class SettingCollection () extends ClientObject {
     */
   val onSettingsChanged: EventHandlers[SettingsChangedEventArgs] = js.native
   /**
-    *
     * Sets or adds the specified setting to the workbook.
     *
     * [Api set: ExcelApi 1.4]
@@ -49,16 +47,14 @@ class SettingCollection () extends ClientObject {
   def add(key: String, value: js.Array[_]): Setting = js.native
   def add(key: String, value: Boolean): Setting = js.native
   def add(key: String, value: Double): Setting = js.native
-  def add(key: String, value: Date): Setting = js.native
+  def add(key: String, value: js.Date): Setting = js.native
   /**
-    *
     * Gets the number of Settings in the collection.
     *
     * [Api set: ExcelApi 1.4]
     */
   def getCount(): ClientResult[Double] = js.native
   /**
-    *
     * Gets a Setting entry via the key.
     *
     * [Api set: ExcelApi 1.4]
@@ -67,7 +63,6 @@ class SettingCollection () extends ClientObject {
     */
   def getItem(key: String): Setting = js.native
   /**
-    *
     * Gets a Setting entry via the key. If the Setting does not exist, will return a null object.
     *
     * [Api set: ExcelApi 1.4]

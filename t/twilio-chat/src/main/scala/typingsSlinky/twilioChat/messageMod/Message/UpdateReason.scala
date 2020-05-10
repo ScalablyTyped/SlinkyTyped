@@ -16,18 +16,16 @@ trait UpdateReason extends js.Object
 
 object UpdateReason {
   @scala.inline
-  def attributes: typingsSlinky.twilioChat.twilioChatStrings.attributes = this.cast("attributes")
+  def attributes: typingsSlinky.twilioChat.twilioChatStrings.attributes = "attributes".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.attributes]
   @scala.inline
-  def author: typingsSlinky.twilioChat.twilioChatStrings.author = this.cast("author")
+  def author: typingsSlinky.twilioChat.twilioChatStrings.author = "author".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.author]
   @scala.inline
-  def body: typingsSlinky.twilioChat.twilioChatStrings.body = this.cast("body")
+  def body: typingsSlinky.twilioChat.twilioChatStrings.body = "body".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.body]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def dateUpdated: typingsSlinky.twilioChat.twilioChatStrings.dateUpdated = "dateUpdated".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.dateUpdated]
   @scala.inline
-  def dateUpdated: typingsSlinky.twilioChat.twilioChatStrings.dateUpdated = this.cast("dateUpdated")
+  def lastUpdatedBy: typingsSlinky.twilioChat.twilioChatStrings.lastUpdatedBy = "lastUpdatedBy".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.lastUpdatedBy]
   @scala.inline
-  def lastUpdatedBy: typingsSlinky.twilioChat.twilioChatStrings.lastUpdatedBy = this.cast("lastUpdatedBy")
-  @scala.inline
-  def timestamp: typingsSlinky.twilioChat.twilioChatStrings.timestamp = this.cast("timestamp")
+  def timestamp: typingsSlinky.twilioChat.twilioChatStrings.timestamp = "timestamp".asInstanceOf[typingsSlinky.twilioChat.twilioChatStrings.timestamp]
 }
 

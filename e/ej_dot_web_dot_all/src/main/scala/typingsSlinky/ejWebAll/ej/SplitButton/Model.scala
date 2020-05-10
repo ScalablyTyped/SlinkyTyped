@@ -9,156 +9,424 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Model extends js.Object {
   /** Specifies the arrowPosition of the Split or Dropdown Button.See arrowPosition
     * @Default {ej.ArrowPosition.Right}
     */
-  var arrowPosition: js.UndefOr[String | ArrowPosition] = js.undefined
+  var arrowPosition: js.UndefOr[String | ArrowPosition] = js.native
   /** Fires before menu of the split button control is opened.
     */
-  var beforeOpen: js.UndefOr[js.Function1[/* e */ BeforeOpenEventArgs, Unit]] = js.undefined
+  var beforeOpen: js.UndefOr[js.Function1[/* e */ BeforeOpenEventArgs, Unit]] = js.native
   /** Specifies the buttonMode like Split or Dropdown Button.See ButtonMode
     * @Default {ej.ButtonMode.Split}
     */
-  var buttonMode: js.UndefOr[String | ButtonMode] = js.undefined
+  var buttonMode: js.UndefOr[String | ButtonMode] = js.native
   /** Fires when Button control is clicked successfully
     */
-  var click: js.UndefOr[js.Function1[/* e */ ClickEventArgs, Unit]] = js.undefined
+  var click: js.UndefOr[js.Function1[/* e */ ClickEventArgs, Unit]] = js.native
   /** Fires before the list content of Button control is closed
     */
-  var close: js.UndefOr[js.Function1[/* e */ CloseEventArgs, Unit]] = js.undefined
+  var close: js.UndefOr[js.Function1[/* e */ CloseEventArgs, Unit]] = js.native
   /** Specifies the contentType of the Split Button.See ContentType
     * @Default {ej.ContentType.TextOnly}
     */
-  var contentType: js.UndefOr[String | ContentType] = js.undefined
+  var contentType: js.UndefOr[String | ContentType] = js.native
   /** Fires after Split Button control is created.
     */
-  var create: js.UndefOr[js.Function1[/* e */ CreateEventArgs, Unit]] = js.undefined
+  var create: js.UndefOr[js.Function1[/* e */ CreateEventArgs, Unit]] = js.native
   /** Set the root class for Split Button control theme
     */
-  var cssClass: js.UndefOr[String] = js.undefined
+  var cssClass: js.UndefOr[String] = js.native
   /** Fires when the Split Button is destroyed successfully
     */
-  var destroy: js.UndefOr[js.Function1[/* e */ DestroyEventArgs, Unit]] = js.undefined
+  var destroy: js.UndefOr[js.Function1[/* e */ DestroyEventArgs, Unit]] = js.native
   /** Specifies the enableRTL property for Split Button while initialization.
     * @Default {false}
     */
-  var enableRTL: js.UndefOr[Boolean] = js.undefined
+  var enableRTL: js.UndefOr[Boolean] = js.native
   /** Specifies the disabling of Split Button if enabled is set to false.
     * @Default {true}
     */
-  var enabled: js.UndefOr[Boolean] = js.undefined
+  var enabled: js.UndefOr[Boolean] = js.native
   /** Specifies the height of the Split Button.
     * @Default {â€œâ€}
     */
-  var height: js.UndefOr[String | Double] = js.undefined
+  var height: js.UndefOr[String | Double] = js.native
   /** Specifies the HTML Attributes of the Split Button.
     * @Default {{}}
     */
-  var htmlAttributes: js.UndefOr[js.Any] = js.undefined
+  var htmlAttributes: js.UndefOr[js.Any] = js.native
   /** Specifies the imagePosition of the Split Button.See imagePositions
     * @Default {ej.ImagePosition.ImageRight}
     */
-  var imagePosition: js.UndefOr[String | ImagePosition] = js.undefined
+  var imagePosition: js.UndefOr[String | ImagePosition] = js.native
   /** Fires when a menu item is Hovered out successfully
     */
-  var itemMouseOut: js.UndefOr[js.Function1[/* e */ ItemMouseOutEventArgs, Unit]] = js.undefined
+  var itemMouseOut: js.UndefOr[js.Function1[/* e */ ItemMouseOutEventArgs, Unit]] = js.native
   /** Fires when a menu item is Hovered in successfully
     */
-  var itemMouseOver: js.UndefOr[js.Function1[/* e */ ItemMouseOverEventArgs, Unit]] = js.undefined
+  var itemMouseOver: js.UndefOr[js.Function1[/* e */ ItemMouseOverEventArgs, Unit]] = js.native
   /** Fires when a menu item is clicked successfully
     */
-  var itemSelected: js.UndefOr[js.Function1[/* e */ ItemSelectedEventArgs, Unit]] = js.undefined
+  var itemSelected: js.UndefOr[js.Function1[/* e */ ItemSelectedEventArgs, Unit]] = js.native
   /** Fires before the list content of Button control is opened
     */
-  var open: js.UndefOr[js.Function1[/* e */ OpenEventArgs, Unit]] = js.undefined
+  var open: js.UndefOr[js.Function1[/* e */ OpenEventArgs, Unit]] = js.native
   /** Specifies the image content for Split Button while initialization.
     */
-  var prefixIcon: js.UndefOr[String] = js.undefined
+  var prefixIcon: js.UndefOr[String] = js.native
   /** Specifies the showRoundedCorner property for Split Button while initialization.
     * @Default {false}
     */
-  var showRoundedCorner: js.UndefOr[Boolean] = js.undefined
+  var showRoundedCorner: js.UndefOr[Boolean] = js.native
   /** Specifies the size of the Button. See ButtonSize
     * @Default {ej.ButtonSize.Normal}
     */
-  var size: js.UndefOr[String | ButtonSize] = js.undefined
+  var size: js.UndefOr[String | ButtonSize] = js.native
   /** Specifies the image content for Split Button while initialization.
     */
-  var suffixIcon: js.UndefOr[String] = js.undefined
+  var suffixIcon: js.UndefOr[String] = js.native
   /** Specifies the target of splitbutton menu while initialization with ID or class as a selector.
     */
-  var target: js.UndefOr[String] = js.undefined
+  var target: js.UndefOr[String] = js.native
   /** Specifies the list content for Split Button while initialization
     */
-  var targetID: js.UndefOr[String] = js.undefined
+  var targetID: js.UndefOr[String] = js.native
   /** Specifies the text content for Split Button while initialization.
     */
-  var text: js.UndefOr[String] = js.undefined
+  var text: js.UndefOr[String] = js.native
   /** Specifies the width of the Split Button.
     * @Default {â€œâ€}
     */
-  var width: js.UndefOr[String | Double] = js.undefined
+  var width: js.UndefOr[String | Double] = js.native
 }
 
 object Model {
   @scala.inline
-  def apply(
-    arrowPosition: String | ArrowPosition = null,
-    beforeOpen: /* e */ BeforeOpenEventArgs => Unit = null,
-    buttonMode: String | ButtonMode = null,
-    click: /* e */ ClickEventArgs => Unit = null,
-    close: /* e */ CloseEventArgs => Unit = null,
-    contentType: String | ContentType = null,
-    create: /* e */ CreateEventArgs => Unit = null,
-    cssClass: String = null,
-    destroy: /* e */ DestroyEventArgs => Unit = null,
-    enableRTL: js.UndefOr[Boolean] = js.undefined,
-    enabled: js.UndefOr[Boolean] = js.undefined,
-    height: String | Double = null,
-    htmlAttributes: js.Any = null,
-    imagePosition: String | ImagePosition = null,
-    itemMouseOut: /* e */ ItemMouseOutEventArgs => Unit = null,
-    itemMouseOver: /* e */ ItemMouseOverEventArgs => Unit = null,
-    itemSelected: /* e */ ItemSelectedEventArgs => Unit = null,
-    open: /* e */ OpenEventArgs => Unit = null,
-    prefixIcon: String = null,
-    showRoundedCorner: js.UndefOr[Boolean] = js.undefined,
-    size: String | ButtonSize = null,
-    suffixIcon: String = null,
-    target: String = null,
-    targetID: String = null,
-    text: String = null,
-    width: String | Double = null
-  ): Model = {
+  def apply(): Model = {
     val __obj = js.Dynamic.literal()
-    if (arrowPosition != null) __obj.updateDynamic("arrowPosition")(arrowPosition.asInstanceOf[js.Any])
-    if (beforeOpen != null) __obj.updateDynamic("beforeOpen")(js.Any.fromFunction1(beforeOpen))
-    if (buttonMode != null) __obj.updateDynamic("buttonMode")(buttonMode.asInstanceOf[js.Any])
-    if (click != null) __obj.updateDynamic("click")(js.Any.fromFunction1(click))
-    if (close != null) __obj.updateDynamic("close")(js.Any.fromFunction1(close))
-    if (contentType != null) __obj.updateDynamic("contentType")(contentType.asInstanceOf[js.Any])
-    if (create != null) __obj.updateDynamic("create")(js.Any.fromFunction1(create))
-    if (cssClass != null) __obj.updateDynamic("cssClass")(cssClass.asInstanceOf[js.Any])
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction1(destroy))
-    if (!js.isUndefined(enableRTL)) __obj.updateDynamic("enableRTL")(enableRTL.asInstanceOf[js.Any])
-    if (!js.isUndefined(enabled)) __obj.updateDynamic("enabled")(enabled.asInstanceOf[js.Any])
-    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
-    if (htmlAttributes != null) __obj.updateDynamic("htmlAttributes")(htmlAttributes.asInstanceOf[js.Any])
-    if (imagePosition != null) __obj.updateDynamic("imagePosition")(imagePosition.asInstanceOf[js.Any])
-    if (itemMouseOut != null) __obj.updateDynamic("itemMouseOut")(js.Any.fromFunction1(itemMouseOut))
-    if (itemMouseOver != null) __obj.updateDynamic("itemMouseOver")(js.Any.fromFunction1(itemMouseOver))
-    if (itemSelected != null) __obj.updateDynamic("itemSelected")(js.Any.fromFunction1(itemSelected))
-    if (open != null) __obj.updateDynamic("open")(js.Any.fromFunction1(open))
-    if (prefixIcon != null) __obj.updateDynamic("prefixIcon")(prefixIcon.asInstanceOf[js.Any])
-    if (!js.isUndefined(showRoundedCorner)) __obj.updateDynamic("showRoundedCorner")(showRoundedCorner.asInstanceOf[js.Any])
-    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (suffixIcon != null) __obj.updateDynamic("suffixIcon")(suffixIcon.asInstanceOf[js.Any])
-    if (target != null) __obj.updateDynamic("target")(target.asInstanceOf[js.Any])
-    if (targetID != null) __obj.updateDynamic("targetID")(targetID.asInstanceOf[js.Any])
-    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Model]
   }
+  @scala.inline
+  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrowPosition(value: String | ArrowPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutArrowPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowPosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeOpen(value: /* e */ BeforeOpenEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeOpen")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeOpen")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withButtonMode(value: String | ButtonMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutButtonMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClick(value: /* e */ ClickEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutClick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withClose(value: /* e */ CloseEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutClose: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContentType(value: String | ContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContentType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCreate(value: /* e */ CreateEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutCreate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCssClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCssClass: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cssClass")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: /* e */ DestroyEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnableRTL(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRTL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnableRTL: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableRTL")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnabled: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHtmlAttributes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHtmlAttributes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlAttributes")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withImagePosition(value: String | ImagePosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImagePosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imagePosition")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemMouseOut(value: /* e */ ItemMouseOutEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemMouseOut")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutItemMouseOut: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemMouseOut")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemMouseOver(value: /* e */ ItemMouseOverEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemMouseOver")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutItemMouseOver: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemMouseOver")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItemSelected(value: /* e */ ItemSelectedEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemSelected")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutItemSelected: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemSelected")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOpen(value: /* e */ OpenEventArgs => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOpen: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPrefixIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPrefixIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShowRoundedCorner(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showRoundedCorner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShowRoundedCorner: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showRoundedCorner")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSize(value: String | ButtonSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSuffixIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffixIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSuffixIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffixIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTarget(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTarget: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTargetID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTargetID: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetID")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWidth(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

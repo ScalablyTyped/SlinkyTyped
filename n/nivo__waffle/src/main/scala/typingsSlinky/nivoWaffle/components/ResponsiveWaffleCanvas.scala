@@ -1,12 +1,10 @@
 package typingsSlinky.nivoWaffle.components
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLCanvasElement
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.canvas.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.Colors
@@ -21,56 +19,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ResponsiveWaffleCanvas
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.nivoWaffle.mod.ResponsiveWaffleCanvas] {
+object ResponsiveWaffleCanvas {
   @JSImport("@nivo/waffle", "ResponsiveWaffleCanvas")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    columns: Double,
-    data: js.Array[js.Object],
-    rows: Double,
-    total: Double,
-    borderColor: InheritedColorProp[WaffleDatum] = null,
-    borderWidth: Int | Double = null,
-    colorBy: String | GetColor[WaffleDatum] = null,
-    colors: Colors = null,
-    emptyColor: String = null,
-    emptyOpacity: Int | Double = null,
-    enableLabels: js.UndefOr[Boolean] = js.undefined,
-    fillDirection: WaffleFillDirection = null,
-    isInteractive: js.UndefOr[Boolean] = js.undefined,
-    margin: Box = null,
-    onClick: (/* datum */ WaffleDatum, /* event */ SyntheticMouseEvent[HTMLCanvasElement]) => Unit = null,
-    padding: Int | Double = null,
-    pixelRatio: Int | Double = null,
-    theme: Theme = null,
-    tooltip: ReactComponentClass[WaffleTooltipData] = null,
-    tooltipFormat: String | ValueFormatter = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.nivoWaffle.mod.ResponsiveWaffleCanvas] = {
-    val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
-    if (borderColor != null) __obj.updateDynamic("borderColor")(borderColor.asInstanceOf[js.Any])
-    if (borderWidth != null) __obj.updateDynamic("borderWidth")(borderWidth.asInstanceOf[js.Any])
-    if (colorBy != null) __obj.updateDynamic("colorBy")(colorBy.asInstanceOf[js.Any])
-    if (colors != null) __obj.updateDynamic("colors")(colors.asInstanceOf[js.Any])
-    if (emptyColor != null) __obj.updateDynamic("emptyColor")(emptyColor.asInstanceOf[js.Any])
-    if (emptyOpacity != null) __obj.updateDynamic("emptyOpacity")(emptyOpacity.asInstanceOf[js.Any])
-    if (!js.isUndefined(enableLabels)) __obj.updateDynamic("enableLabels")(enableLabels.asInstanceOf[js.Any])
-    if (fillDirection != null) __obj.updateDynamic("fillDirection")(fillDirection.asInstanceOf[js.Any])
-    if (!js.isUndefined(isInteractive)) __obj.updateDynamic("isInteractive")(isInteractive.asInstanceOf[js.Any])
-    if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
-    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction2(onClick))
-    if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
-    if (pixelRatio != null) __obj.updateDynamic("pixelRatio")(pixelRatio.asInstanceOf[js.Any])
-    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
-    if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
-    if (tooltipFormat != null) __obj.updateDynamic("tooltipFormat")(tooltipFormat.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.nivoWaffle.mod.ResponsiveWaffleCanvas] {
+    @scala.inline
+    def borderColorFunction1(value: WaffleDatum => String): this.type = set("borderColor", js.Any.fromFunction1(value))
+    @scala.inline
+    def borderColor(value: InheritedColorProp[WaffleDatum]): this.type = set("borderColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def borderWidth(value: Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colorByFunction1(value: WaffleDatum => String): this.type = set("colorBy", js.Any.fromFunction1(value))
+    @scala.inline
+    def colorBy(value: String | GetColor[WaffleDatum]): this.type = set("colorBy", value.asInstanceOf[js.Any])
+    @scala.inline
+    def colors(value: Colors): this.type = set("colors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyColor(value: String): this.type = set("emptyColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def emptyOpacity(value: Double): this.type = set("emptyOpacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def enableLabels(value: Boolean): this.type = set("enableLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fillDirection(value: WaffleFillDirection): this.type = set("fillDirection", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isInteractive(value: Boolean): this.type = set("isInteractive", value.asInstanceOf[js.Any])
+    @scala.inline
+    def margin(value: Box): this.type = set("margin", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onClick(value: (/* datum */ WaffleDatum, /* event */ SyntheticMouseEvent[HTMLCanvasElement]) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    @scala.inline
+    def padding(value: Double): this.type = set("padding", value.asInstanceOf[js.Any])
+    @scala.inline
+    def pixelRatio(value: Double): this.type = set("pixelRatio", value.asInstanceOf[js.Any])
+    @scala.inline
+    def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltip(value: ReactComponentClass[WaffleTooltipData]): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tooltipFormatFunction1(value: /* value */ Double => String | Double): this.type = set("tooltipFormat", js.Any.fromFunction1(value))
+    @scala.inline
+    def tooltipFormat(value: String | ValueFormatter): this.type = set("tooltipFormat", value.asInstanceOf[js.Any])
   }
-  type Props = WaffleCanvasProps
+  
+  def withProps(p: WaffleCanvasProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(columns: Double, data: js.Array[js.Object], rows: Double, total: Double): Builder = {
+    val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[WaffleCanvasProps]))
+  }
 }
 

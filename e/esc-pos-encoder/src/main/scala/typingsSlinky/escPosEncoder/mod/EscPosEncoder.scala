@@ -2,7 +2,6 @@ package typingsSlinky.escPosEncoder.mod
 
 import typingsSlinky.escPosEncoder.escPosEncoderNumbers.`1`
 import typingsSlinky.escPosEncoder.escPosEncoderNumbers.`2`
-import typingsSlinky.std.Uint8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ trait EscPosEncoder extends js.Object {
   def codepage(value: codepageType): EscPosEncoder = js.native
   def cut(): EscPosEncoder = js.native
   def cut(value: cutType): EscPosEncoder = js.native
-  def encode(): scala.scalajs.js.typedarray.Uint8Array = js.native
+  def encode(): js.typedarray.Uint8Array = js.native
   def image(element: js.Any, width: Double, height: Double): EscPosEncoder = js.native
   def image(element: js.Any, width: Double, height: Double, algorithm: imgAlgType): EscPosEncoder = js.native
   def image(element: js.Any, width: Double, height: Double, algorithm: imgAlgType, threshold: Double): EscPosEncoder = js.native
@@ -40,7 +39,7 @@ trait EscPosEncoder extends js.Object {
   @JSName("qrcode")
   def qrcode_2(value: String, model: `2`, size: qrSizeType, errorLevel: qrErrorLevelType): EscPosEncoder = js.native
   def raw(data: js.Array[Double]): EscPosEncoder = js.native
-  def raw(data: Uint8Array): EscPosEncoder = js.native
+  def raw(data: js.typedarray.Uint8Array): EscPosEncoder = js.native
   def size(value: sizeType): EscPosEncoder = js.native
   def text(value: String): EscPosEncoder = js.native
   def text(value: String, wrap: Double): EscPosEncoder = js.native

@@ -1,7 +1,6 @@
 package typingsSlinky.vueI18n
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Date
 import typingsSlinky.vueI18n.mod.VueI18n.DateTimeFormatResult
 import typingsSlinky.vueI18n.mod.VueI18n.Locale
 import typingsSlinky.vueI18n.mod.VueI18n.Path
@@ -15,9 +14,9 @@ trait FnCallValueKeyLocale extends js.Object {
   def apply(value: Double, args: StringDictionary[String]): DateTimeFormatResult = js.native
   def apply(value: Double, key: Path): DateTimeFormatResult = js.native
   def apply(value: Double, key: Path, locale: Locale): DateTimeFormatResult = js.native
-  def apply(value: Date): DateTimeFormatResult = js.native
-  def apply(value: Date, args: StringDictionary[String]): DateTimeFormatResult = js.native
-  def apply(value: Date, key: Path): DateTimeFormatResult = js.native
-  def apply(value: Date, key: Path, locale: Locale): DateTimeFormatResult = js.native
+  def apply(value: js.Date): DateTimeFormatResult = js.native
+  def apply(value: js.Date, args: StringDictionary[String]): DateTimeFormatResult = js.native
+  def apply(value: js.Date, key: Path): DateTimeFormatResult = js.native
+  def apply(value: js.Date, key: Path, locale: Locale): DateTimeFormatResult = js.native
 }
 

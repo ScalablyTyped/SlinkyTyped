@@ -7,6 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait CoreEvents extends js.Object {
   /**
     * Called when all submitted items have reached a point of termination.
@@ -17,11 +18,11 @@ trait CoreEvents extends js.Object {
     *
     * This event will not be called if all files in the group have been cancelled or rejected (i.e. if none of the files have reached a status of `qq.status.UPLOAD_SUCCESSFUL` or `qq.status.UPLOAD_FAILED`)
     */
-  var onAllComplete: js.UndefOr[OnAllComplete] = js.undefined
+  var onAllComplete: js.UndefOr[OnAllComplete] = js.native
   /**
     * Called before each automatic retry attempt for a failed item
     */
-  var onAutoRetry: js.UndefOr[OnAutoRetry] = js.undefined
+  var onAutoRetry: js.UndefOr[OnAutoRetry] = js.native
   /**
     * Called when the item has been canceled. Return `false` to prevent the upload from being canceled.
     *
@@ -31,13 +32,13 @@ trait CoreEvents extends js.Object {
     *
     * Since there is no way to 'pause' the upload in progress while waiting for the promise to be fullfilled the upload may actually complete until the promise has actually be fullfilled
     */
-  var onCancel: js.UndefOr[OnCancel] = js.undefined
+  var onCancel: js.UndefOr[OnCancel] = js.native
   /**
     * Called when the item has finished uploading.
     *
     * The `responseJSON` will contain the raw response from the server including the 'success' property which indicates whether the upload succeeded.
     */
-  var onComplete: js.UndefOr[OnComplete] = js.undefined
+  var onComplete: js.UndefOr[OnComplete] = js.native
   /**
     * Called just before a delete request is sent for the associated item.
     *
@@ -45,21 +46,21 @@ trait CoreEvents extends js.Object {
     * This is not the correct callback to influence the delete request.
     * To do that, use the `onSubmitDelete` callback instead
     */
-  var onDelete: js.UndefOr[OnDelete] = js.undefined
+  var onDelete: js.UndefOr[OnDelete] = js.native
   /**
     * Called just after receiving a response from the server for a delete file request
     */
-  var onDeleteComplete: js.UndefOr[OnDeleteComplete] = js.undefined
+  var onDeleteComplete: js.UndefOr[OnDeleteComplete] = js.native
   /**
     * Called whenever an exceptional condition occurs
     */
-  var onError: js.UndefOr[OnError] = js.undefined
+  var onError: js.UndefOr[OnError] = js.native
   /**
     * Called before each manual retry attempt.
     *
     * Return `false` to prevent this and all future retry attempts on the associated item
     */
-  var onManualRetry: js.UndefOr[OnManualRetry] = js.undefined
+  var onManualRetry: js.UndefOr[OnManualRetry] = js.native
   /**
     * Called when a pasted image has been received (before upload).
     *
@@ -76,20 +77,20 @@ trait CoreEvents extends js.Object {
     *
     * If you are using Fine Uploader Core mode then you can display your own prompt for the name by overriding the default implementation of this callback
     */
-  var onPasteReceived: js.UndefOr[OnPasteReceived] = js.undefined
+  var onPasteReceived: js.UndefOr[OnPasteReceived] = js.native
   /**
     * Called during the upload, as it progresses, but only for the AJAX uploader.
     *
     * For chunked uploads, this will be called for each chunk.
     * Useful for implementing a progress bar
     */
-  var onProgress: js.UndefOr[OnProgress] = js.undefined
+  var onProgress: js.UndefOr[OnProgress] = js.native
   /**
     * Called just before an upload is resumed.
     *
     * See the `uploadChunk` event for more info on the `chunkData` object
     */
-  var onResume: js.UndefOr[OnResume] = js.undefined
+  var onResume: js.UndefOr[OnResume] = js.native
   /**
     * Invoked when a session request has completed.
     *
@@ -97,7 +98,7 @@ trait CoreEvents extends js.Object {
     *
     * The `success` parameter will be `false` if ANY of the file items represented in the response could not be parsed (due to bad syntax, missing name/UUID property, etc)
     */
-  var onSessionRequestComplete: js.UndefOr[OnSessionRequestComplete] = js.undefined
+  var onSessionRequestComplete: js.UndefOr[OnSessionRequestComplete] = js.native
   /**
     * Invoked whenever the status changes for any item submitted by the uploader.
     *
@@ -117,7 +118,7 @@ trait CoreEvents extends js.Object {
     * * `DELETE_FAILED`
     * * `PAUSED`
     */
-  var onStatusChange: js.UndefOr[OnStatusChange] = js.undefined
+  var onStatusChange: js.UndefOr[OnStatusChange] = js.native
   /**
     * Called when the item has been selected and is a candidate for uploading
     *
@@ -127,7 +128,7 @@ trait CoreEvents extends js.Object {
     *
     * If a promise is returned, a call to failure is the same as returning `false`
     */
-  var onSubmit: js.UndefOr[OnSubmit] = js.undefined
+  var onSubmit: js.UndefOr[OnSubmit] = js.native
   /**
     * Called before an item has been marked for deletion has been submitted to the uploader
     *
@@ -138,7 +139,7 @@ trait CoreEvents extends js.Object {
     * Use this callback to influence the delete request.
     * For example, you can change the custom parameters sent with the underlying delete request using the `setDeleteParams` API method
     */
-  var onSubmitDelete: js.UndefOr[OnSubmitDelete] = js.undefined
+  var onSubmitDelete: js.UndefOr[OnSubmitDelete] = js.native
   /**
     * Called when the item has been successfully submitted to the uploader.
     *
@@ -150,27 +151,27 @@ trait CoreEvents extends js.Object {
     *
     * In Fine Uploader Core mode it is usually safe to assume that the associated elements in the UI representing the associated file have already been added to the DOM immediately before this callback is invoked
     */
-  var onSubmitted: js.UndefOr[OnSubmitted] = js.undefined
+  var onSubmitted: js.UndefOr[OnSubmitted] = js.native
   /**
     * Called during a batch of uploads, as they progress, but only for the AJAX uploader.
     *
     * This represents the total progress of all files in the batch. Useful for implementing an aggregate progress bar.
     */
-  var onTotalProgress: js.UndefOr[OnTotalProgress] = js.undefined
+  var onTotalProgress: js.UndefOr[OnTotalProgress] = js.native
   /**
     * Called just before an item begins uploading to the server.
     */
-  var onUpload: js.UndefOr[OnUpload] = js.undefined
+  var onUpload: js.UndefOr[OnUpload] = js.native
   /**
     * Called just before a chunk request is sent.
     */
-  var onUploadChunk: js.UndefOr[OnUploadChunk] = js.undefined
+  var onUploadChunk: js.UndefOr[OnUploadChunk] = js.native
   /**
     * This is similar to the `complete` event, except it is invoked after each chunk has been successfully uploaded.
     *
     * See the `uploadChunk` event for more information on the `chunkData` object
     */
-  var onUploadChunkSuccess: js.UndefOr[OnUploadChunkSuccess] = js.undefined
+  var onUploadChunkSuccess: js.UndefOr[OnUploadChunkSuccess] = js.native
   /**
     * Called once for each selected, dropped, or `addFiles` submitted file.
     *
@@ -185,7 +186,7 @@ trait CoreEvents extends js.Object {
     *
     * The `blobData` object has two properties: `name` and `size`. The `size` property will be undefined for browsers without File API support.
     */
-  var onValidate: js.UndefOr[OnValidate] = js.undefined
+  var onValidate: js.UndefOr[OnValidate] = js.native
   /**
     * This callback is always invoked before the default Fine Uploader validators execute.
     *
@@ -197,59 +198,304 @@ trait CoreEvents extends js.Object {
     *
     * The `fileOrBlobDataArray` object has two properties: `name` and `size`. The `size` property will be undefined for browsers without File API support.
     */
-  var onValidateBatch: js.UndefOr[OnValidateBatch] = js.undefined
+  var onValidateBatch: js.UndefOr[OnValidateBatch] = js.native
 }
 
 object CoreEvents {
   @scala.inline
-  def apply(
-    onAllComplete: (/* succeeded */ js.Array[Double], /* failed */ js.Array[Double]) => Unit = null,
-    onAutoRetry: (/* id */ Double, /* name */ String, /* attemptNumber */ Double) => Unit = null,
-    onCancel: (/* id */ Double, /* name */ String) => Boolean | PromiseOptions | Unit = null,
-    onComplete: (/* id */ Double, /* name */ String, /* responseJSON */ js.Any, /* xhr */ XMLHttpRequest) => Unit = null,
-    onDelete: /* id */ Double => Unit = null,
-    onDeleteComplete: (/* id */ Double, /* xhr */ XMLHttpRequest, /* isError */ Boolean) => Unit = null,
-    onError: (/* id */ Double, /* name */ String, /* errorReason */ String, /* xhr */ XMLHttpRequest) => Unit = null,
-    onManualRetry: (/* id */ Double, /* name */ String) => Boolean | Unit = null,
-    onPasteReceived: /* blob */ Blob => PromiseOptions | Unit = null,
-    onProgress: (/* id */ Double, /* name */ String, /* uploadedBytes */ Double, /* totalBytes */ Double) => Unit = null,
-    onResume: (/* id */ Double, /* name */ String, /* chunkData */ js.Any, /* customResumeData */ js.Any) => Unit | js.Promise[js.Any] = null,
-    onSessionRequestComplete: (/* response */ js.Array[js.Any], /* success */ Boolean, /* xhrOrXdr */ XMLHttpRequest) => Unit = null,
-    onStatusChange: (/* id */ Double, /* oldStatus */ String, /* newStatus */ String) => Unit = null,
-    onSubmit: (/* id */ Double, /* name */ String) => Boolean | PromiseOptions | Unit = null,
-    onSubmitDelete: /* id */ Double => PromiseOptions | Unit = null,
-    onSubmitted: (/* id */ Double, /* name */ String) => Unit = null,
-    onTotalProgress: (/* totalUploadedBytes */ Double, /* totalBytes */ Double) => Unit = null,
-    onUpload: (/* id */ Double, /* name */ String) => Unit = null,
-    onUploadChunk: (/* id */ Double, /* name */ String, /* chunkData */ ChunkData) => Unit | js.Promise[js.Any] = null,
-    onUploadChunkSuccess: (/* id */ Double, /* chunkData */ ChunkData, /* responseJSON */ js.Any, /* xhr */ XMLHttpRequest) => Unit = null,
-    onValidate: (/* data */ BlobDataObject, /* buttonContainer */ js.UndefOr[HTMLElement]) => PromiseOptions | Unit = null,
-    onValidateBatch: (/* fileOrBlobDataArray */ js.Array[BlobDataObject], /* buttonContainer */ HTMLElement) => PromiseOptions | Unit = null
-  ): CoreEvents = {
+  def apply(): CoreEvents = {
     val __obj = js.Dynamic.literal()
-    if (onAllComplete != null) __obj.updateDynamic("onAllComplete")(js.Any.fromFunction2(onAllComplete))
-    if (onAutoRetry != null) __obj.updateDynamic("onAutoRetry")(js.Any.fromFunction3(onAutoRetry))
-    if (onCancel != null) __obj.updateDynamic("onCancel")(js.Any.fromFunction2(onCancel))
-    if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction4(onComplete))
-    if (onDelete != null) __obj.updateDynamic("onDelete")(js.Any.fromFunction1(onDelete))
-    if (onDeleteComplete != null) __obj.updateDynamic("onDeleteComplete")(js.Any.fromFunction3(onDeleteComplete))
-    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction4(onError))
-    if (onManualRetry != null) __obj.updateDynamic("onManualRetry")(js.Any.fromFunction2(onManualRetry))
-    if (onPasteReceived != null) __obj.updateDynamic("onPasteReceived")(js.Any.fromFunction1(onPasteReceived))
-    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction4(onProgress))
-    if (onResume != null) __obj.updateDynamic("onResume")(js.Any.fromFunction4(onResume))
-    if (onSessionRequestComplete != null) __obj.updateDynamic("onSessionRequestComplete")(js.Any.fromFunction3(onSessionRequestComplete))
-    if (onStatusChange != null) __obj.updateDynamic("onStatusChange")(js.Any.fromFunction3(onStatusChange))
-    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction2(onSubmit))
-    if (onSubmitDelete != null) __obj.updateDynamic("onSubmitDelete")(js.Any.fromFunction1(onSubmitDelete))
-    if (onSubmitted != null) __obj.updateDynamic("onSubmitted")(js.Any.fromFunction2(onSubmitted))
-    if (onTotalProgress != null) __obj.updateDynamic("onTotalProgress")(js.Any.fromFunction2(onTotalProgress))
-    if (onUpload != null) __obj.updateDynamic("onUpload")(js.Any.fromFunction2(onUpload))
-    if (onUploadChunk != null) __obj.updateDynamic("onUploadChunk")(js.Any.fromFunction3(onUploadChunk))
-    if (onUploadChunkSuccess != null) __obj.updateDynamic("onUploadChunkSuccess")(js.Any.fromFunction4(onUploadChunkSuccess))
-    if (onValidate != null) __obj.updateDynamic("onValidate")(js.Any.fromFunction2(onValidate))
-    if (onValidateBatch != null) __obj.updateDynamic("onValidateBatch")(js.Any.fromFunction2(onValidateBatch))
     __obj.asInstanceOf[CoreEvents]
   }
+  @scala.inline
+  implicit class CoreEventsOps[Self <: CoreEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnAllComplete(value: (/* succeeded */ js.Array[Double], /* failed */ js.Array[Double]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAllComplete")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAllComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAllComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnAutoRetry(value: (/* id */ Double, /* name */ String, /* attemptNumber */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAutoRetry")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnAutoRetry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onAutoRetry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnCancel(value: (/* id */ Double, /* name */ String) => Boolean | PromiseOptions | Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCancel")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnCancel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCancel")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnComplete(
+      value: (/* id */ Double, /* name */ String, /* responseJSON */ js.Any, /* xhr */ XMLHttpRequest) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDelete(value: /* id */ Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDelete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnDeleteComplete(value: (/* id */ Double, /* xhr */ XMLHttpRequest, /* isError */ Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeleteComplete")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnDeleteComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDeleteComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnError(
+      value: (/* id */ Double, /* name */ String, /* errorReason */ String, /* xhr */ XMLHttpRequest) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnError: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnManualRetry(value: (/* id */ Double, /* name */ String) => Boolean | Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onManualRetry")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnManualRetry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onManualRetry")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnPasteReceived(value: /* blob */ Blob => PromiseOptions | Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPasteReceived")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnPasteReceived: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPasteReceived")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnProgress(
+      value: (/* id */ Double, /* name */ String, /* uploadedBytes */ Double, /* totalBytes */ Double) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnResume(
+      value: (/* id */ Double, /* name */ String, /* chunkData */ js.Any, /* customResumeData */ js.Any) => Unit | js.Promise[js.Any]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResume")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnResume: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResume")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSessionRequestComplete(
+      value: (/* response */ js.Array[js.Any], /* success */ Boolean, /* xhrOrXdr */ XMLHttpRequest) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSessionRequestComplete")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSessionRequestComplete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSessionRequestComplete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnStatusChange(value: (/* id */ Double, /* oldStatus */ String, /* newStatus */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStatusChange")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnStatusChange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStatusChange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSubmit(value: (/* id */ Double, /* name */ String) => Boolean | PromiseOptions | Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSubmit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSubmitDelete(value: /* id */ Double => PromiseOptions | Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmitDelete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSubmitDelete: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmitDelete")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnSubmitted(value: (/* id */ Double, /* name */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmitted")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnSubmitted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmitted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnTotalProgress(value: (/* totalUploadedBytes */ Double, /* totalBytes */ Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTotalProgress")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnTotalProgress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTotalProgress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUpload(value: (/* id */ Double, /* name */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpload")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUpload: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpload")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUploadChunk(
+      value: (/* id */ Double, /* name */ String, /* chunkData */ ChunkData) => Unit | js.Promise[js.Any]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUploadChunk")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUploadChunk: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUploadChunk")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnUploadChunkSuccess(
+      value: (/* id */ Double, /* chunkData */ ChunkData, /* responseJSON */ js.Any, /* xhr */ XMLHttpRequest) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUploadChunkSuccess")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnUploadChunkSuccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUploadChunkSuccess")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnValidate(
+      value: (/* data */ BlobDataObject, /* buttonContainer */ js.UndefOr[HTMLElement]) => PromiseOptions | Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onValidate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnValidate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onValidate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOnValidateBatch(
+      value: (/* fileOrBlobDataArray */ js.Array[BlobDataObject], /* buttonContainer */ HTMLElement) => PromiseOptions | Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onValidateBatch")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutOnValidateBatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onValidateBatch")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

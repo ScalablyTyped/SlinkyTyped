@@ -26,38 +26,36 @@ trait DefaultMethods extends js.Object
 
 object DefaultMethods {
   @scala.inline
-  def await: typingsSlinky.signale.signaleStrings.await = this.cast("await")
+  def await: typingsSlinky.signale.signaleStrings.await = "await".asInstanceOf[typingsSlinky.signale.signaleStrings.await]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def complete: typingsSlinky.signale.signaleStrings.complete = "complete".asInstanceOf[typingsSlinky.signale.signaleStrings.complete]
   @scala.inline
-  def complete: typingsSlinky.signale.signaleStrings.complete = this.cast("complete")
+  def debug: typingsSlinky.signale.signaleStrings.debug = "debug".asInstanceOf[typingsSlinky.signale.signaleStrings.debug]
   @scala.inline
-  def debug: typingsSlinky.signale.signaleStrings.debug = this.cast("debug")
+  def error: typingsSlinky.signale.signaleStrings.error = "error".asInstanceOf[typingsSlinky.signale.signaleStrings.error]
   @scala.inline
-  def error: typingsSlinky.signale.signaleStrings.error = this.cast("error")
+  def fatal: typingsSlinky.signale.signaleStrings.fatal = "fatal".asInstanceOf[typingsSlinky.signale.signaleStrings.fatal]
   @scala.inline
-  def fatal: typingsSlinky.signale.signaleStrings.fatal = this.cast("fatal")
+  def fav: typingsSlinky.signale.signaleStrings.fav = "fav".asInstanceOf[typingsSlinky.signale.signaleStrings.fav]
   @scala.inline
-  def fav: typingsSlinky.signale.signaleStrings.fav = this.cast("fav")
+  def info: typingsSlinky.signale.signaleStrings.info = "info".asInstanceOf[typingsSlinky.signale.signaleStrings.info]
   @scala.inline
-  def info: typingsSlinky.signale.signaleStrings.info = this.cast("info")
+  def log: typingsSlinky.signale.signaleStrings.log = "log".asInstanceOf[typingsSlinky.signale.signaleStrings.log]
   @scala.inline
-  def log: typingsSlinky.signale.signaleStrings.log = this.cast("log")
+  def note: typingsSlinky.signale.signaleStrings.note = "note".asInstanceOf[typingsSlinky.signale.signaleStrings.note]
   @scala.inline
-  def note: typingsSlinky.signale.signaleStrings.note = this.cast("note")
+  def pause: typingsSlinky.signale.signaleStrings.pause = "pause".asInstanceOf[typingsSlinky.signale.signaleStrings.pause]
   @scala.inline
-  def pause: typingsSlinky.signale.signaleStrings.pause = this.cast("pause")
+  def pending: typingsSlinky.signale.signaleStrings.pending = "pending".asInstanceOf[typingsSlinky.signale.signaleStrings.pending]
   @scala.inline
-  def pending: typingsSlinky.signale.signaleStrings.pending = this.cast("pending")
+  def star: typingsSlinky.signale.signaleStrings.star = "star".asInstanceOf[typingsSlinky.signale.signaleStrings.star]
   @scala.inline
-  def star: typingsSlinky.signale.signaleStrings.star = this.cast("star")
+  def start: typingsSlinky.signale.signaleStrings.start = "start".asInstanceOf[typingsSlinky.signale.signaleStrings.start]
   @scala.inline
-  def start: typingsSlinky.signale.signaleStrings.start = this.cast("start")
+  def success: typingsSlinky.signale.signaleStrings.success = "success".asInstanceOf[typingsSlinky.signale.signaleStrings.success]
   @scala.inline
-  def success: typingsSlinky.signale.signaleStrings.success = this.cast("success")
+  def warn: typingsSlinky.signale.signaleStrings.warn = "warn".asInstanceOf[typingsSlinky.signale.signaleStrings.warn]
   @scala.inline
-  def warn: typingsSlinky.signale.signaleStrings.warn = this.cast("warn")
-  @scala.inline
-  def watch: typingsSlinky.signale.signaleStrings.watch = this.cast("watch")
+  def watch: typingsSlinky.signale.signaleStrings.watch = "watch".asInstanceOf[typingsSlinky.signale.signaleStrings.watch]
 }
 

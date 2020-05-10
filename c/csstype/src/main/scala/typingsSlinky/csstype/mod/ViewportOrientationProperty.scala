@@ -13,12 +13,10 @@ trait ViewportOrientationProperty extends js.Object
 
 object ViewportOrientationProperty {
   @scala.inline
-  def auto: typingsSlinky.csstype.csstypeStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.csstype.csstypeStrings.auto = "auto".asInstanceOf[typingsSlinky.csstype.csstypeStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def landscape: typingsSlinky.csstype.csstypeStrings.landscape = "landscape".asInstanceOf[typingsSlinky.csstype.csstypeStrings.landscape]
   @scala.inline
-  def landscape: typingsSlinky.csstype.csstypeStrings.landscape = this.cast("landscape")
-  @scala.inline
-  def portrait: typingsSlinky.csstype.csstypeStrings.portrait = this.cast("portrait")
+  def portrait: typingsSlinky.csstype.csstypeStrings.portrait = "portrait".asInstanceOf[typingsSlinky.csstype.csstypeStrings.portrait]
 }
 

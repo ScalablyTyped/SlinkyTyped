@@ -1,6 +1,5 @@
 package typingsSlinky.fsExtra.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object writeJSON_ extends js.Object {
   def apply(file: String, `object`: js.Any): js.Promise[Unit] = js.native
-  def apply(file: String, `object`: js.Any, callback: js.Function1[/* err */ Error, Unit]): Unit = js.native
+  def apply(file: String, `object`: js.Any, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def apply(file: String, `object`: js.Any, options: WriteOptions): js.Promise[Unit] = js.native
   def apply(
     file: String,

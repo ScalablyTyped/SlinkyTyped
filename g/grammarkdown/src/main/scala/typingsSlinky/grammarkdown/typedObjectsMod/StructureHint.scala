@@ -5,17 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait StructureHint
   extends /* key */ StringDictionary[TypeObject[TypeHint, TypeOfTypeHint[TypeHint]]]
      with TypeHint
 
 object StructureHint {
   @scala.inline
-  def apply(
-    StringDictionary: /* key */ StringDictionary[TypeObject[TypeHint, TypeOfTypeHint[TypeHint]]] = null
-  ): StructureHint = {
+  def apply(): StructureHint = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
     __obj.asInstanceOf[StructureHint]
   }
 }

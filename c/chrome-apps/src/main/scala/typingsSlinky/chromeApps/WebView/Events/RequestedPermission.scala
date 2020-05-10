@@ -1,6 +1,7 @@
 package typingsSlinky.chromeApps.WebView.Events
 
 import typingsSlinky.chromeApps.chromeAppsStrings.filesystem_
+import typingsSlinky.chromeApps.chromeAppsStrings.fullscreen_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,26 +13,24 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.chromeApps.chromeAppsStrings.download
   - typingsSlinky.chromeApps.chromeAppsStrings.loadplugin
   - typingsSlinky.chromeApps.chromeAppsStrings.filesystem_
-  - typingsSlinky.chromeApps.chromeAppsStrings.fullscreen
+  - typingsSlinky.chromeApps.chromeAppsStrings.fullscreen_
 */
 trait RequestedPermission extends js.Object
 
 object RequestedPermission {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def download: typingsSlinky.chromeApps.chromeAppsStrings.download = "download".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.download]
   @scala.inline
-  def download: typingsSlinky.chromeApps.chromeAppsStrings.download = this.cast("download")
+  def filesystem: filesystem_ = "filesystem".asInstanceOf[filesystem_]
   @scala.inline
-  def filesystem: filesystem_ = this.cast("filesystem")
+  def fullscreen: fullscreen_ = "fullscreen".asInstanceOf[fullscreen_]
   @scala.inline
-  def fullscreen: typingsSlinky.chromeApps.chromeAppsStrings.fullscreen = this.cast("fullscreen")
+  def geolocation: typingsSlinky.chromeApps.chromeAppsStrings.geolocation = "geolocation".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.geolocation]
   @scala.inline
-  def geolocation: typingsSlinky.chromeApps.chromeAppsStrings.geolocation = this.cast("geolocation")
+  def loadplugin: typingsSlinky.chromeApps.chromeAppsStrings.loadplugin = "loadplugin".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.loadplugin]
   @scala.inline
-  def loadplugin: typingsSlinky.chromeApps.chromeAppsStrings.loadplugin = this.cast("loadplugin")
+  def media: typingsSlinky.chromeApps.chromeAppsStrings.media = "media".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.media]
   @scala.inline
-  def media: typingsSlinky.chromeApps.chromeAppsStrings.media = this.cast("media")
-  @scala.inline
-  def pointerLock: typingsSlinky.chromeApps.chromeAppsStrings.pointerLock = this.cast("pointerLock")
+  def pointerLock: typingsSlinky.chromeApps.chromeAppsStrings.pointerLock = "pointerLock".asInstanceOf[typingsSlinky.chromeApps.chromeAppsStrings.pointerLock]
 }
 

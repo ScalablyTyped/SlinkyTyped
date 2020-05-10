@@ -26,6 +26,10 @@ trait CloseEvent extends Event_ {
 @JSGlobal("CloseEvent")
 @js.native
 object CloseEvent
-  extends Instantiable1[/* type */ java.lang.String, CloseEvent]
-     with Instantiable2[/* type */ java.lang.String, /* eventInitDict */ CloseEventInit, CloseEvent]
+  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.CloseEvent]
+     with Instantiable2[
+      /* type */ java.lang.String, 
+      /* eventInitDict */ CloseEventInit, 
+      org.scalajs.dom.raw.CloseEvent
+    ]
 

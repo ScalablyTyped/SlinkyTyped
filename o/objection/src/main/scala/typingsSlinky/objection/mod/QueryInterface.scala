@@ -200,7 +200,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def andHaving(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -208,18 +208,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def andHaving(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def andHaving(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def andHaving(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def andHaving(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def andHaving(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def andHaving(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def andHaving(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def andHaving(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def andHaving(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def andHaving(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -278,7 +278,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def andWhere(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -286,18 +286,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def andWhere(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def andWhere(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def andWhere(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def andWhere(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def andWhere(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def andWhere(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def andWhere(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def andWhere(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def andWhere(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def andWhere(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -357,7 +357,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def andWhereColumn(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -365,18 +365,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereColumn(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereColumn(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereColumn(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereColumn(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def andWhereColumn(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereColumn(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereColumn(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereColumn(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereColumn(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def andWhereColumn(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -435,7 +435,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def andWhereNot(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -443,18 +443,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereNot(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereNot(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereNot(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereNot(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def andWhereNot(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereNot(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereNot(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereNot(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereNot(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def andWhereNot(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -514,7 +514,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def andWhereNotColumn(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -522,18 +522,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereNotColumn(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereNotColumn(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereNotColumn(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereNotColumn(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def andWhereNotColumn(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereNotColumn(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def andWhereNotColumn(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereNotColumn(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def andWhereNotColumn(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def andWhereNotColumn(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -677,7 +677,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def having(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -685,20 +685,20 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def having(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def having(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
   // Having
-  def having(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def having(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def having(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def having(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def having(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
   // Having
-  def having(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def having(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   // Having
   def having(
     column: ColumnRef,
@@ -1112,7 +1112,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def orHaving(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -1120,18 +1120,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def orHaving(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def orHaving(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def orHaving(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def orHaving(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def orHaving(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def orHaving(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def orHaving(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def orHaving(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def orHaving(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def orHaving(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -1344,7 +1344,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def orWhere(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -1352,18 +1352,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def orWhere(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def orWhere(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def orWhere(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def orWhere(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def orWhere(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def orWhere(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def orWhere(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def orWhere(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def orWhere(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def orWhere(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -1423,7 +1423,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def orWhereColumn(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -1431,18 +1431,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereColumn(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereColumn(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereColumn(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereColumn(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def orWhereColumn(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereColumn(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereColumn(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereColumn(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereColumn(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def orWhereColumn(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -1574,7 +1574,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def orWhereNot(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -1582,18 +1582,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereNot(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereNot(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereNot(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereNot(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def orWhereNot(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereNot(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereNot(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereNot(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereNot(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def orWhereNot(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -1653,7 +1653,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def orWhereNotColumn(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -1661,18 +1661,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereNotColumn(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereNotColumn(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereNotColumn(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereNotColumn(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def orWhereNotColumn(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereNotColumn(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def orWhereNotColumn(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereNotColumn(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def orWhereNotColumn(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def orWhereNotColumn(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -2307,7 +2307,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def where(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -2315,20 +2315,20 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def where(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def where(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
   // Wheres
-  def where(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def where(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def where(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def where(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def where(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
   // Wheres
-  def where(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def where(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   // Wheres
   def where(
     column: ColumnRef,
@@ -2394,7 +2394,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def whereColumn(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -2402,18 +2402,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def whereColumn(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def whereColumn(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def whereColumn(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def whereColumn(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def whereColumn(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def whereColumn(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def whereColumn(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def whereColumn(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def whereColumn(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def whereColumn(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -2545,7 +2545,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def whereNot(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -2553,18 +2553,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def whereNot(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def whereNot(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def whereNot(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def whereNot(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def whereNot(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def whereNot(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def whereNot(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def whereNot(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def whereNot(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def whereNot(
     column: ColumnRef,
     callback: js.ThisFunction1[
@@ -2624,7 +2624,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
   def whereNotColumn(
-    column: String,
+    column: /* keyof QM */ String,
     operator: String,
     value: QueryBuilder[
       _, 
@@ -2632,18 +2632,18 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def whereNotColumn(column: String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def whereNotColumn(column: String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def whereNotColumn(column: /* keyof QM */ String, operator: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def whereNotColumn(column: /* keyof QM */ String, operator: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def whereNotColumn(
-    column: String,
+    column: /* keyof QM */ String,
     value: QueryBuilder[
       _, 
       js.Array[_], 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ _
     ]
   ): QueryBuilder[QM, RM, RV] = js.native
-  def whereNotColumn(column: String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
-  def whereNotColumn(column: String, value: Value): QueryBuilder[QM, RM, RV] = js.native
+  def whereNotColumn(column: /* keyof QM */ String, value: Reference): QueryBuilder[QM, RM, RV] = js.native
+  def whereNotColumn(column: /* keyof QM */ String, value: Value): QueryBuilder[QM, RM, RV] = js.native
   def whereNotColumn(
     column: ColumnRef,
     callback: js.ThisFunction1[

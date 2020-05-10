@@ -12,10 +12,8 @@ trait IUnitOfTime extends js.Object
 
 object IUnitOfTime {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def iMonth: typingsSlinky.momentHijri.momentHijriStrings.iMonth = "iMonth".asInstanceOf[typingsSlinky.momentHijri.momentHijriStrings.iMonth]
   @scala.inline
-  def iMonth: typingsSlinky.momentHijri.momentHijriStrings.iMonth = this.cast("iMonth")
-  @scala.inline
-  def iYear: typingsSlinky.momentHijri.momentHijriStrings.iYear = this.cast("iYear")
+  def iYear: typingsSlinky.momentHijri.momentHijriStrings.iYear = "iYear".asInstanceOf[typingsSlinky.momentHijri.momentHijriStrings.iYear]
 }
 

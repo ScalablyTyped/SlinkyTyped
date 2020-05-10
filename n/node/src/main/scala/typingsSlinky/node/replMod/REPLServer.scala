@@ -1,6 +1,6 @@
 package typingsSlinky.node.replMod
 
-import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.node.NodeJS.ReadOnlyDict
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.nodeStrings.exit
@@ -45,7 +45,7 @@ class REPLServer protected () extends Interface {
   /**
     * The commands registered via `replServer.defineCommand()`.
     */
-  val commands: StringDictionary[js.UndefOr[REPLCommand]] = js.native
+  val commands: ReadOnlyDict[REPLCommand] = js.native
   /**
     * Specified in the REPL options, this is the function to use for custom Tab auto-completion.
     */

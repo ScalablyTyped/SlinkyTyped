@@ -15,16 +15,14 @@ trait ImageResizeMode extends js.Object
 
 object ImageResizeMode {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def center: typingsSlinky.reactNative.reactNativeStrings.center = "center".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.center]
   @scala.inline
-  def center: typingsSlinky.reactNative.reactNativeStrings.center = this.cast("center")
+  def contain: typingsSlinky.reactNative.reactNativeStrings.contain = "contain".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.contain]
   @scala.inline
-  def contain: typingsSlinky.reactNative.reactNativeStrings.contain = this.cast("contain")
+  def cover: typingsSlinky.reactNative.reactNativeStrings.cover = "cover".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.cover]
   @scala.inline
-  def cover: typingsSlinky.reactNative.reactNativeStrings.cover = this.cast("cover")
+  def repeat: typingsSlinky.reactNative.reactNativeStrings.repeat = "repeat".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.repeat]
   @scala.inline
-  def repeat: typingsSlinky.reactNative.reactNativeStrings.repeat = this.cast("repeat")
-  @scala.inline
-  def stretch: typingsSlinky.reactNative.reactNativeStrings.stretch = this.cast("stretch")
+  def stretch: typingsSlinky.reactNative.reactNativeStrings.stretch = "stretch".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.stretch]
 }
 

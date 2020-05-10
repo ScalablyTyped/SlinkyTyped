@@ -1,6 +1,5 @@
 package typingsSlinky.pProgress.mod
 
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,6 +37,7 @@ class ^[ValueType] protected () extends PProgress[ValueType] {
   def this(/**
   		@param progress - Call this with progress updates. It expects a number between 0 and 1.
   		Multiple calls with the same number will result in only one `onProgress()` event.
+  		Calling with a number lower than previously will be ignored.
   		Progress percentage `1` is reported for you when the promise resolves. If you set it yourself, it will simply be ignored.
   		*/
   executor: js.Function3[
@@ -53,8 +53,8 @@ class ^[ValueType] protected () extends PProgress[ValueType] {
 object ^ extends js.Object {
   def all[ValueType1](promises: js.Array[js.Thenable[ValueType1] | PromiseFactory[ValueType1]]): PProgress[js.Array[ValueType1]] = js.native
   def all[ValueType1](promises: js.Array[PromiseFactory[ValueType1]], options: Options): PProgress[js.Array[ValueType1]] = js.native
-  def all[AllValuesType](promises: Iterable[js.Thenable[AllValuesType] | PromiseFactory[AllValuesType]]): PProgress[AllValuesType] = js.native
-  def all[AllValuesType](promises: Iterable[PromiseFactory[AllValuesType]], options: Options): PProgress[AllValuesType] = js.native
+  def all[AllValuesType](promises: js.Iterable[js.Thenable[AllValuesType] | PromiseFactory[AllValuesType]]): PProgress[AllValuesType] = js.native
+  def all[AllValuesType](promises: js.Iterable[PromiseFactory[AllValuesType]], options: Options): PProgress[AllValuesType] = js.native
   def all[ValueType1, ValueType2](
     promises: js.Tuple2[
       js.Thenable[ValueType1] | PromiseFactory[ValueType1], 

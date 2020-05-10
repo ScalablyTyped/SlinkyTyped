@@ -69,7 +69,7 @@ class TransformMatrix protected () extends js.Object {
   /**
     * The matrix values.
     */
-  var matrix: scala.scalajs.js.typedarray.Float32Array = js.native
+  var matrix: js.typedarray.Float32Array = js.native
   /**
     * The rotation of the Matrix. Value is in radians.
     */

@@ -1,11 +1,8 @@
 package typingsSlinky.reactHotLoader.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactHotLoader.mod.AppChildren
 import typingsSlinky.reactHotLoader.mod.AppContainerProps
 import typingsSlinky.reactHotLoader.mod.ErrorReporterProps
@@ -13,25 +10,26 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object AppContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactHotLoader.mod.AppContainer] {
+object AppContainer {
   @JSImport("react-hot-loader", "AppContainer")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    errorBoundary: js.UndefOr[Boolean] = js.undefined,
-    errorReporter: ReactComponentClass[ErrorReporterProps] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactHotLoader.mod.AppContainer] = {
-    val __obj = js.Dynamic.literal()
-    if (!js.isUndefined(errorBoundary)) __obj.updateDynamic("errorBoundary")(errorBoundary.asInstanceOf[js.Any])
-    if (errorReporter != null) __obj.updateDynamic("errorReporter")(errorReporter.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactHotLoader.mod.AppContainer] {
+    @scala.inline
+    def errorBoundary(value: Boolean): this.type = set("errorBoundary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorReporterFunctionComponent(value: ReactComponentClass[ErrorReporterProps]): this.type = set("errorReporter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorReporterComponentClass(value: ReactComponentClass[ErrorReporterProps]): this.type = set("errorReporter", value.asInstanceOf[js.Any])
+    @scala.inline
+    def errorReporter(value: ReactComponentClass[ErrorReporterProps]): this.type = set("errorReporter", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactHotLoader.mod.AppContainer] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactHotLoader.mod.AppContainer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = AppContainerProps with AppChildren
+  
+  def withProps(p: AppContainerProps with AppChildren): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: AppContainer.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

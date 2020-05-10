@@ -42,26 +42,113 @@ trait DescribeEnvironmentsMessage extends js.Object {
 
 object DescribeEnvironmentsMessage {
   @scala.inline
-  def apply(
-    ApplicationName: ApplicationName = null,
-    EnvironmentIds: EnvironmentIdList = null,
-    EnvironmentNames: EnvironmentNamesList = null,
-    IncludeDeleted: js.UndefOr[Boolean] = js.undefined,
-    IncludedDeletedBackTo: js.Date = null,
-    MaxRecords: Int | Double = null,
-    NextToken: Token = null,
-    VersionLabel: VersionLabel = null
-  ): DescribeEnvironmentsMessage = {
+  def apply(): DescribeEnvironmentsMessage = {
     val __obj = js.Dynamic.literal()
-    if (ApplicationName != null) __obj.updateDynamic("ApplicationName")(ApplicationName.asInstanceOf[js.Any])
-    if (EnvironmentIds != null) __obj.updateDynamic("EnvironmentIds")(EnvironmentIds.asInstanceOf[js.Any])
-    if (EnvironmentNames != null) __obj.updateDynamic("EnvironmentNames")(EnvironmentNames.asInstanceOf[js.Any])
-    if (!js.isUndefined(IncludeDeleted)) __obj.updateDynamic("IncludeDeleted")(IncludeDeleted.asInstanceOf[js.Any])
-    if (IncludedDeletedBackTo != null) __obj.updateDynamic("IncludedDeletedBackTo")(IncludedDeletedBackTo.asInstanceOf[js.Any])
-    if (MaxRecords != null) __obj.updateDynamic("MaxRecords")(MaxRecords.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (VersionLabel != null) __obj.updateDynamic("VersionLabel")(VersionLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeEnvironmentsMessage]
   }
+  @scala.inline
+  implicit class DescribeEnvironmentsMessageOps[Self <: DescribeEnvironmentsMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationName(value: ApplicationName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutApplicationName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ApplicationName")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentIds(value: EnvironmentIdList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentIds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentIds")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEnvironmentNames(value: EnvironmentNamesList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEnvironmentNames: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EnvironmentNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludeDeleted(value: IncludeDeleted): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeDeleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludeDeleted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeDeleted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIncludedDeletedBackTo(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludedDeletedBackTo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIncludedDeletedBackTo: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludedDeletedBackTo")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxRecords(value: MaxRecords): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxRecords: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxRecords")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: Token): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVersionLabel(value: VersionLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVersionLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VersionLabel")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

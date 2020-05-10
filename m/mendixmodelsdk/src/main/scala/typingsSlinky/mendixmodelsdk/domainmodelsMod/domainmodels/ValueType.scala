@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 /**
   * In version 6.6.0: added public
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
@@ -32,7 +32,7 @@ abstract class ValueType protected () extends Element {
   val containerAsAttribute_FValueType: IAttribute = js.native
   @JSName("model")
   var model_FValueType: IModel = js.native
-  def containerAsAttribute(): Attribute = js.native
+  def containerAsAttribute: Attribute = js.native
 }
 
 /* static members */

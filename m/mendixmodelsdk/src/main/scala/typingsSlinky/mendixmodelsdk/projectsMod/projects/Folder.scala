@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 /**
   * See: {@link https://world.mendix.com/display/howto50/Add+documents+to+a+module relevant section in reference guide}
   */
-/* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase because Already inherited
@@ -29,8 +29,8 @@ class Folder protected () extends FolderBase {
   @JSName("name")
   var name_FFolder: String = js.native
   @JSName("containerAsFolderBase")
-  def containerAsFolderBase_MFolder(): FolderBase = js.native
-  def name(): String = js.native
+  def containerAsFolderBase_MFolder: FolderBase = js.native
+  def name: String = js.native
   def name(newValue: String): js.Any = js.native
 }
 

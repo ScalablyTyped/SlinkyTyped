@@ -13,17 +13,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
+@js.native
 trait ComprehensionExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var blocks: js.Array[ComprehensionBlockKind]
-  var body: ExpressionKind
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var filter: ExpressionKind | Null
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ComprehensionExpression
+  var blocks: js.Array[ComprehensionBlockKind] = js.native
+  var body: ExpressionKind = js.native
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.native
+  var filter: ExpressionKind | Null = js.native
+  var loc: js.UndefOr[SourceLocationKind] = js.native
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ComprehensionExpression = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ComprehensionExpression")

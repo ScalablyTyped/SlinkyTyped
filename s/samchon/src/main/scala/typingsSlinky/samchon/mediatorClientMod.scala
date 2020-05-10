@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @JSImport("samchon/templates/parallel/derived/MediatorClient", JSImport.Namespace)
 @js.native
 object mediatorClientMod extends js.Object {
-  /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
   - typingsSlinky.samchon.iprotocolMod.IProtocol because Already inherited
   - typingsSlinky.samchon.slaveSystemMod.SlaveSystem because Already inherited
   - typingsSlinky.samchon.slaveClientMod.ISlaveClient because var conflicts: _Complete_process, communicator_. Inlined connect */ @js.native

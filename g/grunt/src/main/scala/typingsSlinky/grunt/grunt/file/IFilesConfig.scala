@@ -8,21 +8,22 @@ import scala.scalajs.js.annotation._
 /**
   * {@link http://gruntjs.com/configuring-tasks#files}
   */
+@js.native
 trait IFilesConfig extends IMinimatchOptions {
   /**
     * Patterns will be matched relative to this path, and all returned filepaths will
     * also be relative to this path.
     */
-  var cwd: js.UndefOr[String] = js.undefined
+  var cwd: js.UndefOr[String] = js.native
   /**
     * Destination path prefix.
     */
-  var dest: js.UndefOr[String] = js.undefined
+  var dest: js.UndefOr[String] = js.native
   /**
     * Process a dynamic src-dest file mapping,
     * @see {@link http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically for more information.
     */
-  var expand: js.UndefOr[Boolean] = js.undefined
+  var expand: js.UndefOr[Boolean] = js.native
    // = false
   /**
     * Either a valid fs.Stats method name:
@@ -41,51 +42,86 @@ trait IFilesConfig extends IMinimatchOptions {
     */
   // filter?: string
   // filter?: (src: string) => boolean
-  var filter: js.UndefOr[js.Any] = js.undefined
+  var filter: js.UndefOr[js.Any] = js.native
   /**
     * Pattern(s) to match, relative to the {@link IExpandedFilesConfig.cwd}.
     */
-  var src: js.UndefOr[js.Array[String]] = js.undefined
+  var src: js.UndefOr[js.Array[String]] = js.native
 }
 
 object IFilesConfig {
   @scala.inline
-  def apply(
-    cwd: String = null,
-    debug: js.UndefOr[Boolean] = js.undefined,
-    dest: String = null,
-    dot: js.UndefOr[Boolean] = js.undefined,
-    expand: js.UndefOr[Boolean] = js.undefined,
-    filter: js.Any = null,
-    flipNegate: js.UndefOr[Boolean] = js.undefined,
-    matchBase: js.UndefOr[Boolean] = js.undefined,
-    nobrace: js.UndefOr[Boolean] = js.undefined,
-    nocase: js.UndefOr[Boolean] = js.undefined,
-    nocomment: js.UndefOr[Boolean] = js.undefined,
-    noext: js.UndefOr[Boolean] = js.undefined,
-    noglobstar: js.UndefOr[Boolean] = js.undefined,
-    nonegate: js.UndefOr[Boolean] = js.undefined,
-    nonull: js.UndefOr[Boolean] = js.undefined,
-    src: js.Array[String] = null
-  ): IFilesConfig = {
+  def apply(): IFilesConfig = {
     val __obj = js.Dynamic.literal()
-    if (cwd != null) __obj.updateDynamic("cwd")(cwd.asInstanceOf[js.Any])
-    if (!js.isUndefined(debug)) __obj.updateDynamic("debug")(debug.asInstanceOf[js.Any])
-    if (dest != null) __obj.updateDynamic("dest")(dest.asInstanceOf[js.Any])
-    if (!js.isUndefined(dot)) __obj.updateDynamic("dot")(dot.asInstanceOf[js.Any])
-    if (!js.isUndefined(expand)) __obj.updateDynamic("expand")(expand.asInstanceOf[js.Any])
-    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
-    if (!js.isUndefined(flipNegate)) __obj.updateDynamic("flipNegate")(flipNegate.asInstanceOf[js.Any])
-    if (!js.isUndefined(matchBase)) __obj.updateDynamic("matchBase")(matchBase.asInstanceOf[js.Any])
-    if (!js.isUndefined(nobrace)) __obj.updateDynamic("nobrace")(nobrace.asInstanceOf[js.Any])
-    if (!js.isUndefined(nocase)) __obj.updateDynamic("nocase")(nocase.asInstanceOf[js.Any])
-    if (!js.isUndefined(nocomment)) __obj.updateDynamic("nocomment")(nocomment.asInstanceOf[js.Any])
-    if (!js.isUndefined(noext)) __obj.updateDynamic("noext")(noext.asInstanceOf[js.Any])
-    if (!js.isUndefined(noglobstar)) __obj.updateDynamic("noglobstar")(noglobstar.asInstanceOf[js.Any])
-    if (!js.isUndefined(nonegate)) __obj.updateDynamic("nonegate")(nonegate.asInstanceOf[js.Any])
-    if (!js.isUndefined(nonull)) __obj.updateDynamic("nonull")(nonull.asInstanceOf[js.Any])
-    if (src != null) __obj.updateDynamic("src")(src.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFilesConfig]
   }
+  @scala.inline
+  implicit class IFilesConfigOps[Self <: IFilesConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCwd(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCwd: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cwd")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDest(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDest: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExpand(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExpand: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSrc(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSrc: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

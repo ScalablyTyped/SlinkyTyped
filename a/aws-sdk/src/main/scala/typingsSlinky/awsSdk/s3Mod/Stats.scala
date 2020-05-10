@@ -22,16 +22,53 @@ trait Stats extends js.Object {
 
 object Stats {
   @scala.inline
-  def apply(
-    BytesProcessed: Int | Double = null,
-    BytesReturned: Int | Double = null,
-    BytesScanned: Int | Double = null
-  ): Stats = {
+  def apply(): Stats = {
     val __obj = js.Dynamic.literal()
-    if (BytesProcessed != null) __obj.updateDynamic("BytesProcessed")(BytesProcessed.asInstanceOf[js.Any])
-    if (BytesReturned != null) __obj.updateDynamic("BytesReturned")(BytesReturned.asInstanceOf[js.Any])
-    if (BytesScanned != null) __obj.updateDynamic("BytesScanned")(BytesScanned.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stats]
   }
+  @scala.inline
+  implicit class StatsOps[Self <: Stats] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBytesProcessed(value: BytesProcessed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesProcessed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesProcessed: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesProcessed")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesReturned(value: BytesReturned): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesReturned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesReturned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesReturned")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBytesScanned(value: BytesScanned): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesScanned")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBytesScanned: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BytesScanned")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

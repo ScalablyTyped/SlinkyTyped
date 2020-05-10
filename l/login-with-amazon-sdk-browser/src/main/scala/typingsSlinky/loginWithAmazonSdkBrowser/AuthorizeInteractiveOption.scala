@@ -13,12 +13,10 @@ trait AuthorizeInteractiveOption extends js.Object
 
 object AuthorizeInteractiveOption {
   @scala.inline
-  def always: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.always = this.cast("always")
+  def always: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.always = "always".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.always]
   @scala.inline
-  def auto: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.auto = this.cast("auto")
+  def auto: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.auto = "auto".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.auto]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
-  @scala.inline
-  def never: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.never = this.cast("never")
+  def never: typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.never = "never".asInstanceOf[typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.never]
 }
 

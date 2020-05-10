@@ -4,17 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait InstancesRestoreBackupRequest extends js.Object {
   /** Parameters required to perform the restore backup operation. */
-  var restoreBackupContext: js.UndefOr[RestoreBackupContext] = js.undefined
+  var restoreBackupContext: js.UndefOr[RestoreBackupContext] = js.native
 }
 
 object InstancesRestoreBackupRequest {
   @scala.inline
-  def apply(restoreBackupContext: RestoreBackupContext = null): InstancesRestoreBackupRequest = {
+  def apply(): InstancesRestoreBackupRequest = {
     val __obj = js.Dynamic.literal()
-    if (restoreBackupContext != null) __obj.updateDynamic("restoreBackupContext")(restoreBackupContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstancesRestoreBackupRequest]
   }
+  @scala.inline
+  implicit class InstancesRestoreBackupRequestOps[Self <: InstancesRestoreBackupRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRestoreBackupContext(value: RestoreBackupContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreBackupContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRestoreBackupContext: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("restoreBackupContext")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

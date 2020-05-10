@@ -12,10 +12,8 @@ trait IDBRequestReadyState extends js.Object
 
 object IDBRequestReadyState {
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def done: typingsSlinky.std.stdStrings.done = "done".asInstanceOf[typingsSlinky.std.stdStrings.done]
   @scala.inline
-  def done: typingsSlinky.std.stdStrings.done = this.cast("done")
-  @scala.inline
-  def pending: typingsSlinky.std.stdStrings.pending = this.cast("pending")
+  def pending: typingsSlinky.std.stdStrings.pending = "pending".asInstanceOf[typingsSlinky.std.stdStrings.pending]
 }
 

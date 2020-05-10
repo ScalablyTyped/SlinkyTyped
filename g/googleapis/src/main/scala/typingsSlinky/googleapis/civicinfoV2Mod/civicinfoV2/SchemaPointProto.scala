@@ -14,18 +14,65 @@ trait SchemaPointProto extends js.Object {
 
 object SchemaPointProto {
   @scala.inline
-  def apply(
-    latE7: Int | Double = null,
-    lngE7: Int | Double = null,
-    metadata: SchemaFieldMetadataProto = null,
-    temporaryData: SchemaMessageSet = null
-  ): SchemaPointProto = {
+  def apply(): SchemaPointProto = {
     val __obj = js.Dynamic.literal()
-    if (latE7 != null) __obj.updateDynamic("latE7")(latE7.asInstanceOf[js.Any])
-    if (lngE7 != null) __obj.updateDynamic("lngE7")(lngE7.asInstanceOf[js.Any])
-    if (metadata != null) __obj.updateDynamic("metadata")(metadata.asInstanceOf[js.Any])
-    if (temporaryData != null) __obj.updateDynamic("temporaryData")(temporaryData.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPointProto]
   }
+  @scala.inline
+  implicit class SchemaPointProtoOps[Self <: SchemaPointProto] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLatE7(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latE7")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLatE7: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latE7")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLngE7(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lngE7")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLngE7: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lngE7")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: SchemaFieldMetadataProto): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMetadata: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTemporaryData(value: SchemaMessageSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("temporaryData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTemporaryData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("temporaryData")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

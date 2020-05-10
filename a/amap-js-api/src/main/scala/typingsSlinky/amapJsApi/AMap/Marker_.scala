@@ -140,7 +140,7 @@ class Marker_[ExtraData] () extends Overlay[ExtraData] {
     * @param content 显示内容
     */
   def setContent(content: String): Unit = js.native
-  def setContent(content: typingsSlinky.std.HTMLElement): Unit = js.native
+  def setContent(content: HTMLElement): Unit = js.native
   /**
     * 设置鼠标悬停时的光标
     * @param cursor 光标

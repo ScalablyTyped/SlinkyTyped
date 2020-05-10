@@ -40,16 +40,53 @@ trait SchemaReportResponse extends js.Object {
 
 object SchemaReportResponse {
   @scala.inline
-  def apply(
-    reportErrors: js.Array[SchemaReportError] = null,
-    reportInfos: js.Array[SchemaReportInfo] = null,
-    serviceConfigId: String = null
-  ): SchemaReportResponse = {
+  def apply(): SchemaReportResponse = {
     val __obj = js.Dynamic.literal()
-    if (reportErrors != null) __obj.updateDynamic("reportErrors")(reportErrors.asInstanceOf[js.Any])
-    if (reportInfos != null) __obj.updateDynamic("reportInfos")(reportInfos.asInstanceOf[js.Any])
-    if (serviceConfigId != null) __obj.updateDynamic("serviceConfigId")(serviceConfigId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaReportResponse]
   }
+  @scala.inline
+  implicit class SchemaReportResponseOps[Self <: SchemaReportResponse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReportErrors(value: js.Array[SchemaReportError]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportErrors: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportErrors")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withReportInfos(value: js.Array[SchemaReportInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutReportInfos: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportInfos")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withServiceConfigId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutServiceConfigId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceConfigId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

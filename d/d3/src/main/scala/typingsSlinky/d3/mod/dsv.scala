@@ -1,9 +1,9 @@
 package typingsSlinky.d3.mod
 
+import org.scalajs.dom.experimental.RequestInit
 import typingsSlinky.d3Dsv.mod.DSVParsedArray
 import typingsSlinky.d3Dsv.mod.DSVRowArray
 import typingsSlinky.d3Dsv.mod.DSVRowString
-import typingsSlinky.std.RequestInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

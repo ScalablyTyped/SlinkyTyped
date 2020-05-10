@@ -1,9 +1,8 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.calendarMonthMod.ICalendarMonth
 import typingsSlinky.officeUiFabricReact.calendarMonthMod.ICalendarMonthProps
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarFormatDateCallbacks
@@ -14,13 +13,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object CalendarMonth
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.officeUiFabricReact.calendarMonthMod.CalendarMonth] {
+object CalendarMonth {
   @JSImport("office-ui-fabric-react/lib/components/Calendar/CalendarMonth", "CalendarMonth")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.calendarMonthMod.CalendarMonth] {
+    @scala.inline
+    def componentRefFunction1(value: /* ref */ ICalendarMonth | Null => Unit): this.type = set("componentRef", js.Any.fromFunction1(value))
+    @scala.inline
+    def componentRefRefObject(value: ReactRef[ICalendarMonth]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def componentRef(value: IRefObject[ICalendarMonth]): this.type = set("componentRef", value.asInstanceOf[js.Any])
+    @scala.inline
+    def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def minDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onHeaderSelect(value: /* focus */ Boolean => Unit): this.type = set("onHeaderSelect", js.Any.fromFunction1(value))
+    @scala.inline
+    def today(value: js.Date): this.type = set("today", value.asInstanceOf[js.Any])
+    @scala.inline
+    def yearPickerHidden(value: Boolean): this.type = set("yearPickerHidden", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: ICalendarMonthProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
   def apply(
     dateTimeFormatter: ICalendarFormatDateCallbacks,
     highlightCurrentMonth: Boolean,
@@ -29,25 +50,10 @@ object CalendarMonth
     navigationIcons: ICalendarIconStrings,
     onNavigateDate: (js.Date, Boolean) => Unit,
     selectedDate: js.Date,
-    strings: ICalendarStrings,
-    componentRef: IRefObject[ICalendarMonth] = null,
-    maxDate: js.Date = null,
-    minDate: js.Date = null,
-    onHeaderSelect: /* focus */ Boolean => Unit = null,
-    today: js.Date = null,
-    yearPickerHidden: js.UndefOr[Boolean] = js.undefined,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.calendarMonthMod.CalendarMonth] = {
-    val __obj = js.Dynamic.literal(dateTimeFormatter = dateTimeFormatter.asInstanceOf[js.Any], highlightCurrentMonth = highlightCurrentMonth.asInstanceOf[js.Any], highlightSelectedMonth = highlightSelectedMonth.asInstanceOf[js.Any], navigatedDate = navigatedDate.asInstanceOf[js.Any], navigationIcons = navigationIcons.asInstanceOf[js.Any], onNavigateDate = js.Any.fromFunction2(onNavigateDate), selectedDate = selectedDate.asInstanceOf[js.Any], strings = strings.asInstanceOf[js.Any])
-    if (componentRef != null) __obj.updateDynamic("componentRef")(componentRef.asInstanceOf[js.Any])
-    if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
-    if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
-    if (onHeaderSelect != null) __obj.updateDynamic("onHeaderSelect")(js.Any.fromFunction1(onHeaderSelect))
-    if (today != null) __obj.updateDynamic("today")(today.asInstanceOf[js.Any])
-    if (!js.isUndefined(yearPickerHidden)) __obj.updateDynamic("yearPickerHidden")(yearPickerHidden.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+    strings: ICalendarStrings
+  ): Builder = {
+    val __props = js.Dynamic.literal(dateTimeFormatter = dateTimeFormatter.asInstanceOf[js.Any], highlightCurrentMonth = highlightCurrentMonth.asInstanceOf[js.Any], highlightSelectedMonth = highlightSelectedMonth.asInstanceOf[js.Any], navigatedDate = navigatedDate.asInstanceOf[js.Any], navigationIcons = navigationIcons.asInstanceOf[js.Any], onNavigateDate = js.Any.fromFunction2(onNavigateDate), selectedDate = selectedDate.asInstanceOf[js.Any], strings = strings.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[ICalendarMonthProps]))
   }
-  type Props = ICalendarMonthProps
 }
 

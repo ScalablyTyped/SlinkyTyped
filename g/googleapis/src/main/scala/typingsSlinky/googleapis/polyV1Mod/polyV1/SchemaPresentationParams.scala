@@ -43,16 +43,53 @@ trait SchemaPresentationParams extends js.Object {
 
 object SchemaPresentationParams {
   @scala.inline
-  def apply(
-    backgroundColor: String = null,
-    colorSpace: String = null,
-    orientingRotation: SchemaQuaternion = null
-  ): SchemaPresentationParams = {
+  def apply(): SchemaPresentationParams = {
     val __obj = js.Dynamic.literal()
-    if (backgroundColor != null) __obj.updateDynamic("backgroundColor")(backgroundColor.asInstanceOf[js.Any])
-    if (colorSpace != null) __obj.updateDynamic("colorSpace")(colorSpace.asInstanceOf[js.Any])
-    if (orientingRotation != null) __obj.updateDynamic("orientingRotation")(orientingRotation.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaPresentationParams]
   }
+  @scala.inline
+  implicit class SchemaPresentationParamsOps[Self <: SchemaPresentationParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackgroundColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBackgroundColor: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withColorSpace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutColorSpace: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorSpace")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOrientingRotation(value: SchemaQuaternion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientingRotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOrientingRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientingRotation")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait Marker extends js.Object {
-  var pm: typingsSlinky.leafletPm.mod.PM.Edit.Marker
+  var pm: typingsSlinky.leafletPm.mod.PM.Edit.Marker = js.native
 }
 
 object Marker {
   @scala.inline
   def apply(pm: typingsSlinky.leafletPm.mod.PM.Edit.Marker): Marker = {
     val __obj = js.Dynamic.literal(pm = pm.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[Marker]
   }
+  @scala.inline
+  implicit class MarkerOps[Self <: Marker] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPm(value: typingsSlinky.leafletPm.mod.PM.Edit.Marker): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pm")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

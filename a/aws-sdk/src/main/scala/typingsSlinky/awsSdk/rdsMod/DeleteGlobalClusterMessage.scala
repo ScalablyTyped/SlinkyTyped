@@ -16,8 +16,21 @@ object DeleteGlobalClusterMessage {
   @scala.inline
   def apply(GlobalClusterIdentifier: String): DeleteGlobalClusterMessage = {
     val __obj = js.Dynamic.literal(GlobalClusterIdentifier = GlobalClusterIdentifier.asInstanceOf[js.Any])
-  
     __obj.asInstanceOf[DeleteGlobalClusterMessage]
   }
+  @scala.inline
+  implicit class DeleteGlobalClusterMessageOps[Self <: DeleteGlobalClusterMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGlobalClusterIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GlobalClusterIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

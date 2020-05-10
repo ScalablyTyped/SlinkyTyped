@@ -14,10 +14,29 @@ trait ExecutionSucceededEventDetails extends js.Object {
 
 object ExecutionSucceededEventDetails {
   @scala.inline
-  def apply(output: SensitiveData = null): ExecutionSucceededEventDetails = {
+  def apply(): ExecutionSucceededEventDetails = {
     val __obj = js.Dynamic.literal()
-    if (output != null) __obj.updateDynamic("output")(output.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecutionSucceededEventDetails]
   }
+  @scala.inline
+  implicit class ExecutionSucceededEventDetailsOps[Self <: ExecutionSucceededEventDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOutput(value: SensitiveData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutput: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("output")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -3,7 +3,6 @@ package typingsSlinky.slocket.mod
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,7 @@ trait Slocket
      with Instantiable1[/* lockFile */ String, Slocket]
      with Instantiable2[
       /* lockFile */ String, 
-      /* cb */ js.Function2[/* error */ Error | Null, /* lock */ Lock, Unit], 
+      /* cb */ js.Function2[/* error */ js.Error | Null, /* lock */ Lock, Unit], 
       Slocket
     ] {
   def apply(lockFile: String): Slocket = js.native

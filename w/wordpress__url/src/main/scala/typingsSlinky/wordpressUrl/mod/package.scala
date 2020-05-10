@@ -13,7 +13,7 @@ package object mod {
     - typingsSlinky.wordpressUrl.mod.InputArgsObject
     - typingsSlinky.wordpressUrl.mod.InputArgsArray
     - scala.Null
-    - `js.undefined`
+    - js.UndefOr[scala.Nothing]
   */
   type InputArgsValue = js.UndefOr[
     typingsSlinky.wordpressUrl.mod._InputArgsValue | java.lang.String | scala.Double | scala.Boolean | scala.Null

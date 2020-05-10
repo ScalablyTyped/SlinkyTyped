@@ -18,11 +18,41 @@ trait DescribeImagesResult extends js.Object {
 
 object DescribeImagesResult {
   @scala.inline
-  def apply(Images: ImageList = null, NextToken: String = null): DescribeImagesResult = {
+  def apply(): DescribeImagesResult = {
     val __obj = js.Dynamic.literal()
-    if (Images != null) __obj.updateDynamic("Images")(Images.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeImagesResult]
   }
+  @scala.inline
+  implicit class DescribeImagesResultOps[Self <: DescribeImagesResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImages(value: ImageList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Images")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutImages: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Images")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

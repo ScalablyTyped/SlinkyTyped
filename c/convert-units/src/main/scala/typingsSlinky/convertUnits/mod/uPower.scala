@@ -16,16 +16,14 @@ trait uPower extends js.Object
 
 object uPower {
   @scala.inline
-  def GW: typingsSlinky.convertUnits.convertUnitsStrings.GW = this.cast("GW")
+  def GW: typingsSlinky.convertUnits.convertUnitsStrings.GW = "GW".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.GW]
   @scala.inline
-  def MW: typingsSlinky.convertUnits.convertUnitsStrings.MW = this.cast("MW")
+  def MW: typingsSlinky.convertUnits.convertUnitsStrings.MW = "MW".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.MW]
   @scala.inline
-  def W: typingsSlinky.convertUnits.convertUnitsStrings.W = this.cast("W")
+  def W: typingsSlinky.convertUnits.convertUnitsStrings.W = "W".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.W]
   @scala.inline
-  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  def kM: typingsSlinky.convertUnits.convertUnitsStrings.kM = "kM".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kM]
   @scala.inline
-  def kM: typingsSlinky.convertUnits.convertUnitsStrings.kM = this.cast("kM")
-  @scala.inline
-  def mW: mW_ = this.cast("mW")
+  def mW: mW_ = "mW".asInstanceOf[mW_]
 }
 

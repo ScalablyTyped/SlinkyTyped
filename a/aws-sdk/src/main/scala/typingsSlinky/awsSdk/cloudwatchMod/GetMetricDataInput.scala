@@ -15,7 +15,7 @@ trait GetMetricDataInput extends js.Object {
     */
   var MaxDatapoints: js.UndefOr[GetMetricDataMaxDatapoints] = js.native
   /**
-    * The metric queries to be returned. A single GetMetricData call can include as many as 100 MetricDataQuery structures. Each of these structures can specify either a metric to retrieve, or a math expression to perform on retrieved data. 
+    * The metric queries to be returned. A single GetMetricData call can include as many as 500 MetricDataQuery structures. Each of these structures can specify either a metric to retrieve, or a math expression to perform on retrieved data. 
     */
   var MetricDataQueries: typingsSlinky.awsSdk.cloudwatchMod.MetricDataQueries = js.native
   /**
@@ -34,19 +34,71 @@ trait GetMetricDataInput extends js.Object {
 
 object GetMetricDataInput {
   @scala.inline
-  def apply(
-    EndTime: js.Date,
-    MetricDataQueries: MetricDataQueries,
-    StartTime: js.Date,
-    MaxDatapoints: Int | Double = null,
-    NextToken: NextToken = null,
-    ScanBy: ScanBy = null
-  ): GetMetricDataInput = {
+  def apply(EndTime: js.Date, MetricDataQueries: MetricDataQueries, StartTime: js.Date): GetMetricDataInput = {
     val __obj = js.Dynamic.literal(EndTime = EndTime.asInstanceOf[js.Any], MetricDataQueries = MetricDataQueries.asInstanceOf[js.Any], StartTime = StartTime.asInstanceOf[js.Any])
-    if (MaxDatapoints != null) __obj.updateDynamic("MaxDatapoints")(MaxDatapoints.asInstanceOf[js.Any])
-    if (NextToken != null) __obj.updateDynamic("NextToken")(NextToken.asInstanceOf[js.Any])
-    if (ScanBy != null) __obj.updateDynamic("ScanBy")(ScanBy.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetMetricDataInput]
   }
+  @scala.inline
+  implicit class GetMetricDataInputOps[Self <: GetMetricDataInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEndTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetricDataQueries(value: MetricDataQueries): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MetricDataQueries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxDatapoints(value: GetMetricDataMaxDatapoints): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxDatapoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxDatapoints: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MaxDatapoints")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withNextToken(value: NextToken): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNextToken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NextToken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withScanBy(value: ScanBy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScanBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScanBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScanBy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

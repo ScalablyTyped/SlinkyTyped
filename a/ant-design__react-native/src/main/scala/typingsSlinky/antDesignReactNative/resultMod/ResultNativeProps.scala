@@ -1,49 +1,52 @@
 package typingsSlinky.antDesignReactNative.resultMod
 
-import slinky.core.TagMod
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.ghost
-import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.primary
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import typingsSlinky.antDesignReactNative.resultPropsTypeMod.ResultPropsType
 import typingsSlinky.antDesignReactNative.resultStyleMod.ResultStyle
-import typingsSlinky.reactNative.mod.ImagePropertiesSourceOptions
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait ResultNativeProps
   extends ResultPropsType
      with WithThemeStyles[ResultStyle] {
-  var style: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
 object ResultNativeProps {
   @scala.inline
-  def apply(
-    buttonText: String = null,
-    buttonType: primary | ghost = null,
-    img: TagMod[Any] = null,
-    imgUrl: ImagePropertiesSourceOptions = null,
-    message: TagMod[Any] = null,
-    onButtonClick: /* e */ js.Any => Unit = null,
-    style: StyleProp[ViewStyle] = null,
-    styles: Partial[ResultStyle] = null,
-    title: TagMod[Any] = null
-  ): ResultNativeProps = {
+  def apply(): ResultNativeProps = {
     val __obj = js.Dynamic.literal()
-    if (buttonText != null) __obj.updateDynamic("buttonText")(buttonText.asInstanceOf[js.Any])
-    if (buttonType != null) __obj.updateDynamic("buttonType")(buttonType.asInstanceOf[js.Any])
-    if (img != null) __obj.updateDynamic("img")(img.asInstanceOf[js.Any])
-    if (imgUrl != null) __obj.updateDynamic("imgUrl")(imgUrl.asInstanceOf[js.Any])
-    if (message != null) __obj.updateDynamic("message")(message.asInstanceOf[js.Any])
-    if (onButtonClick != null) __obj.updateDynamic("onButtonClick")(js.Any.fromFunction1(onButtonClick))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultNativeProps]
   }
+  @scala.inline
+  implicit class ResultNativePropsOps[Self <: ResultNativeProps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStyle(value: StyleProp[ViewStyle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStyle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStyleNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(null)
+        ret
+    }
+  }
+  
 }
 

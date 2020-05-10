@@ -5,26 +5,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait PluginServiceRegistrationOptions extends js.Object {
   var afterDatasetDraw: js.UndefOr[
     js.Function3[/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
-  var afterDatasetUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
+  ] = js.native
+  var afterDatasetUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   var afterDatasetsDraw: js.UndefOr[
     js.Function3[/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
-  var afterDatasetsUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
+  ] = js.native
+  var afterDatasetsUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   var afterDraw: js.UndefOr[
     js.Function3[/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
+  ] = js.native
   var afterEvent: js.UndefOr[
     js.Function3[/* chartInstance */ Chart, /* event */ Event_, /* options */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
-  var afterInit: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
-  var afterLayout: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
-  var afterRender: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
+  ] = js.native
+  var afterInit: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
+  var afterLayout: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
+  var afterRender: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   /** @deprecated since version 2.5.0. Use `afterLayout` instead. */
-  var afterScaleUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var afterScaleUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   // Called after drawing the `tooltip`. Note that this hook will not,
   // be called if the tooltip drawing has been previously cancelled.
   var afterTooltipDraw: js.UndefOr[
@@ -34,30 +35,30 @@ trait PluginServiceRegistrationOptions extends js.Object {
       /* options */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
-  var afterUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
+  ] = js.native
+  var afterUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   var beforeDatasetDraw: js.UndefOr[
     js.Function3[/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
-  var beforeDatasetUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
+  ] = js.native
+  var beforeDatasetUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   // Before the datasets are drawn but after scales are drawn
   var beforeDatasetsDraw: js.UndefOr[
     js.Function3[/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
-  var beforeDatasetsUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
+  ] = js.native
+  var beforeDatasetsUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   // Easing is for animation
   var beforeDraw: js.UndefOr[
     js.Function3[/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
+  ] = js.native
   // Called when an event occurs on the chart
   var beforeEvent: js.UndefOr[
     js.Function3[/* chartInstance */ Chart, /* event */ Event_, /* options */ js.UndefOr[js.Any], Unit]
-  ] = js.undefined
-  var beforeInit: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
-  var beforeLayout: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
+  ] = js.native
+  var beforeInit: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
+  var beforeLayout: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   // This is called at the start of a render. It is only called once, even if the animation will run for a number of frames. Use beforeDraw or afterDraw
   // to do something on each animation frame
-  var beforeRender: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
+  var beforeRender: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   // Called before drawing the `tooltip`. If any plugin returns `false`,
   // the tooltip drawing is cancelled until another `render` is triggered.
   var beforeTooltipDraw: js.UndefOr[
@@ -67,9 +68,9 @@ trait PluginServiceRegistrationOptions extends js.Object {
       /* options */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
-  var beforeUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
-  var destroy: js.UndefOr[js.Function1[/* chartInstance */ Chart, Unit]] = js.undefined
+  ] = js.native
+  var beforeUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
+  var destroy: js.UndefOr[js.Function1[/* chartInstance */ Chart, Unit]] = js.native
   var resize: js.UndefOr[
     js.Function3[
       /* chartInstance */ Chart, 
@@ -77,65 +78,328 @@ trait PluginServiceRegistrationOptions extends js.Object {
       /* options */ js.UndefOr[js.Any], 
       Unit
     ]
-  ] = js.undefined
+  ] = js.native
 }
 
 object PluginServiceRegistrationOptions {
   @scala.inline
-  def apply(
-    afterDatasetDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterDatasetUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterDatasetsDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterDatasetsUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterEvent: (/* chartInstance */ Chart, /* event */ Event_, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterInit: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterLayout: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterRender: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterScaleUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterTooltipDraw: (/* chartInstance */ Chart, /* tooltipData */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    afterUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeDatasetDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeDatasetUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeDatasetsDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeDatasetsUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeDraw: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeEvent: (/* chartInstance */ Chart, /* event */ Event_, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeInit: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeLayout: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeRender: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeTooltipDraw: (/* chartInstance */ Chart, /* tooltipData */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit = null,
-    beforeUpdate: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit = null,
-    destroy: /* chartInstance */ Chart => Unit = null,
-    resize: (/* chartInstance */ Chart, /* newChartSize */ ChartSize, /* options */ js.UndefOr[js.Any]) => Unit = null
-  ): PluginServiceRegistrationOptions = {
+  def apply(): PluginServiceRegistrationOptions = {
     val __obj = js.Dynamic.literal()
-    if (afterDatasetDraw != null) __obj.updateDynamic("afterDatasetDraw")(js.Any.fromFunction3(afterDatasetDraw))
-    if (afterDatasetUpdate != null) __obj.updateDynamic("afterDatasetUpdate")(js.Any.fromFunction2(afterDatasetUpdate))
-    if (afterDatasetsDraw != null) __obj.updateDynamic("afterDatasetsDraw")(js.Any.fromFunction3(afterDatasetsDraw))
-    if (afterDatasetsUpdate != null) __obj.updateDynamic("afterDatasetsUpdate")(js.Any.fromFunction2(afterDatasetsUpdate))
-    if (afterDraw != null) __obj.updateDynamic("afterDraw")(js.Any.fromFunction3(afterDraw))
-    if (afterEvent != null) __obj.updateDynamic("afterEvent")(js.Any.fromFunction3(afterEvent))
-    if (afterInit != null) __obj.updateDynamic("afterInit")(js.Any.fromFunction2(afterInit))
-    if (afterLayout != null) __obj.updateDynamic("afterLayout")(js.Any.fromFunction2(afterLayout))
-    if (afterRender != null) __obj.updateDynamic("afterRender")(js.Any.fromFunction2(afterRender))
-    if (afterScaleUpdate != null) __obj.updateDynamic("afterScaleUpdate")(js.Any.fromFunction2(afterScaleUpdate))
-    if (afterTooltipDraw != null) __obj.updateDynamic("afterTooltipDraw")(js.Any.fromFunction3(afterTooltipDraw))
-    if (afterUpdate != null) __obj.updateDynamic("afterUpdate")(js.Any.fromFunction2(afterUpdate))
-    if (beforeDatasetDraw != null) __obj.updateDynamic("beforeDatasetDraw")(js.Any.fromFunction3(beforeDatasetDraw))
-    if (beforeDatasetUpdate != null) __obj.updateDynamic("beforeDatasetUpdate")(js.Any.fromFunction2(beforeDatasetUpdate))
-    if (beforeDatasetsDraw != null) __obj.updateDynamic("beforeDatasetsDraw")(js.Any.fromFunction3(beforeDatasetsDraw))
-    if (beforeDatasetsUpdate != null) __obj.updateDynamic("beforeDatasetsUpdate")(js.Any.fromFunction2(beforeDatasetsUpdate))
-    if (beforeDraw != null) __obj.updateDynamic("beforeDraw")(js.Any.fromFunction3(beforeDraw))
-    if (beforeEvent != null) __obj.updateDynamic("beforeEvent")(js.Any.fromFunction3(beforeEvent))
-    if (beforeInit != null) __obj.updateDynamic("beforeInit")(js.Any.fromFunction2(beforeInit))
-    if (beforeLayout != null) __obj.updateDynamic("beforeLayout")(js.Any.fromFunction2(beforeLayout))
-    if (beforeRender != null) __obj.updateDynamic("beforeRender")(js.Any.fromFunction2(beforeRender))
-    if (beforeTooltipDraw != null) __obj.updateDynamic("beforeTooltipDraw")(js.Any.fromFunction3(beforeTooltipDraw))
-    if (beforeUpdate != null) __obj.updateDynamic("beforeUpdate")(js.Any.fromFunction2(beforeUpdate))
-    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction1(destroy))
-    if (resize != null) __obj.updateDynamic("resize")(js.Any.fromFunction3(resize))
     __obj.asInstanceOf[PluginServiceRegistrationOptions]
   }
+  @scala.inline
+  implicit class PluginServiceRegistrationOptionsOps[Self <: PluginServiceRegistrationOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAfterDatasetDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDatasetDraw")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterDatasetDraw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDatasetDraw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterDatasetUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDatasetUpdate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterDatasetUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDatasetUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterDatasetsDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDatasetsDraw")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterDatasetsDraw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDatasetsDraw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterDatasetsUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDatasetsUpdate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterDatasetsUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDatasetsUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDraw")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterDraw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterDraw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterEvent(value: (/* chartInstance */ Chart, /* event */ Event_, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterEvent")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterInit(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterInit")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterInit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterLayout(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterLayout")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterRender(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRender")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterScaleUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterScaleUpdate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterScaleUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterScaleUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterTooltipDraw(
+      value: (/* chartInstance */ Chart, /* tooltipData */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTooltipDraw")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterTooltipDraw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterTooltipDraw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withAfterUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterUpdate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutAfterUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("afterUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeDatasetDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDatasetDraw")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeDatasetDraw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDatasetDraw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeDatasetUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDatasetUpdate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeDatasetUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDatasetUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeDatasetsDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDatasetsDraw")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeDatasetsDraw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDatasetsDraw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeDatasetsUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDatasetsUpdate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeDatasetsUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDatasetsUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeDraw(value: (/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDraw")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeDraw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDraw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeEvent(value: (/* chartInstance */ Chart, /* event */ Event_, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeEvent")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeEvent: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeEvent")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeInit(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeInit")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeInit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeInit")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeLayout(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeLayout")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeLayout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeLayout")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeRender(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeRender")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeRender: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeRender")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeTooltipDraw(
+      value: (/* chartInstance */ Chart, /* tooltipData */ js.UndefOr[js.Any], /* options */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeTooltipDraw")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeTooltipDraw: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeTooltipDraw")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withBeforeUpdate(value: (/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeUpdate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withoutBeforeUpdate: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beforeUpdate")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: /* chartInstance */ Chart => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withoutDestroy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResize(
+      value: (/* chartInstance */ Chart, /* newChartSize */ ChartSize, /* options */ js.UndefOr[js.Any]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withoutResize: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

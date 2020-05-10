@@ -1,9 +1,9 @@
 package typingsSlinky.pica
 
+import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.File
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.std.Blob
-import typingsSlinky.std.File
-import typingsSlinky.std.HTMLImageElement
+import org.scalajs.dom.raw.HTMLImageElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,8 +23,8 @@ class Pica () extends js.Object {
     * (!) If you need to process multiple images, do it sequentially to optimize CPU & memory use.
     * Pica already knows how to use multiple cores (if browser allows).
     */
-  def resize(from: typingsSlinky.std.HTMLCanvasElement, to: HTMLCanvasElement): js.Promise[HTMLCanvasElement] = js.native
-  def resize(from: typingsSlinky.std.HTMLCanvasElement, to: HTMLCanvasElement, options: PicaResizeOptions): js.Promise[HTMLCanvasElement] = js.native
+  def resize(from: HTMLCanvasElement, to: HTMLCanvasElement): js.Promise[HTMLCanvasElement] = js.native
+  def resize(from: HTMLCanvasElement, to: HTMLCanvasElement, options: PicaResizeOptions): js.Promise[HTMLCanvasElement] = js.native
   def resize(from: HTMLImageElement, to: HTMLCanvasElement): js.Promise[HTMLCanvasElement] = js.native
   def resize(from: HTMLImageElement, to: HTMLCanvasElement, options: PicaResizeOptions): js.Promise[HTMLCanvasElement] = js.native
   /**
@@ -36,7 +36,7 @@ class Pica () extends js.Object {
   /**
     * Convenience method, similar to canvas.toBlob(), but with promise interface & polyfill for old browsers.
     */
-  def toBlob(canvas: HTMLCanvasElement, mimeType: String): js.Promise[org.scalajs.dom.raw.Blob] = js.native
-  def toBlob(canvas: HTMLCanvasElement, mimeType: String, quality: Double): js.Promise[org.scalajs.dom.raw.Blob] = js.native
+  def toBlob(canvas: HTMLCanvasElement, mimeType: String): js.Promise[Blob] = js.native
+  def toBlob(canvas: HTMLCanvasElement, mimeType: String, quality: Double): js.Promise[Blob] = js.native
 }
 

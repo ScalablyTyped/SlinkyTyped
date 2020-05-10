@@ -30,20 +30,77 @@ trait GameSessionQueue extends js.Object {
 
 object GameSessionQueue {
   @scala.inline
-  def apply(
-    Destinations: GameSessionQueueDestinationList = null,
-    GameSessionQueueArn: ArnStringModel = null,
-    Name: GameSessionQueueName = null,
-    PlayerLatencyPolicies: PlayerLatencyPolicyList = null,
-    TimeoutInSeconds: Int | scala.Double = null
-  ): GameSessionQueue = {
+  def apply(): GameSessionQueue = {
     val __obj = js.Dynamic.literal()
-    if (Destinations != null) __obj.updateDynamic("Destinations")(Destinations.asInstanceOf[js.Any])
-    if (GameSessionQueueArn != null) __obj.updateDynamic("GameSessionQueueArn")(GameSessionQueueArn.asInstanceOf[js.Any])
-    if (Name != null) __obj.updateDynamic("Name")(Name.asInstanceOf[js.Any])
-    if (PlayerLatencyPolicies != null) __obj.updateDynamic("PlayerLatencyPolicies")(PlayerLatencyPolicies.asInstanceOf[js.Any])
-    if (TimeoutInSeconds != null) __obj.updateDynamic("TimeoutInSeconds")(TimeoutInSeconds.asInstanceOf[js.Any])
     __obj.asInstanceOf[GameSessionQueue]
   }
+  @scala.inline
+  implicit class GameSessionQueueOps[Self <: GameSessionQueue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestinations(value: GameSessionQueueDestinationList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destinations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDestinations: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Destinations")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGameSessionQueueArn(value: ArnStringModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionQueueArn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGameSessionQueueArn: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GameSessionQueueArn")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: GameSessionQueueName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPlayerLatencyPolicies(value: PlayerLatencyPolicyList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerLatencyPolicies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlayerLatencyPolicies: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PlayerLatencyPolicies")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimeoutInSeconds(value: WholeNumber): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutInSeconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeoutInSeconds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TimeoutInSeconds")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

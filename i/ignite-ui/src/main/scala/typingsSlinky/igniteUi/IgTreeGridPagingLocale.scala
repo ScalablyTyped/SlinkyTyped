@@ -5,38 +5,61 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait IgTreeGridPagingLocale
   extends /**
-	 * Option for IgTreeGridPagingLocale
+	 * Option for JSONPDataSourceSettings
 	 */
 /* optionName */ StringDictionary[js.Any] {
   /**
   	 * Sets/gets the text message shown while loading content of the context row(while processing breadcrumb/immediate parent row). It is set via $.html(). If set to null loading message is not shown.
   	 *
   	 */
-  var contextRowLoadingText: js.UndefOr[String] = js.undefined
+  var contextRowLoadingText: js.UndefOr[String] = js.native
   /**
   	 * Sets/gets the content of the context row when the first record in the page is root(hasn't ancestors) record. It is set via $.html()
   	 *
   	 */
-  var contextRowRootText: js.UndefOr[String] = js.undefined
+  var contextRowRootText: js.UndefOr[String] = js.native
 }
 
 object IgTreeGridPagingLocale {
   @scala.inline
-  def apply(
-    StringDictionary: /**
-  	 * Option for IgTreeGridPagingLocale
-  	 */
-  /* optionName */ StringDictionary[js.Any] = null,
-    contextRowLoadingText: String = null,
-    contextRowRootText: String = null
-  ): IgTreeGridPagingLocale = {
+  def apply(): IgTreeGridPagingLocale = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (contextRowLoadingText != null) __obj.updateDynamic("contextRowLoadingText")(contextRowLoadingText.asInstanceOf[js.Any])
-    if (contextRowRootText != null) __obj.updateDynamic("contextRowRootText")(contextRowRootText.asInstanceOf[js.Any])
     __obj.asInstanceOf[IgTreeGridPagingLocale]
   }
+  @scala.inline
+  implicit class IgTreeGridPagingLocaleOps[Self <: IgTreeGridPagingLocale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContextRowLoadingText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextRowLoadingText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextRowLoadingText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextRowLoadingText")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withContextRowRootText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextRowRootText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutContextRowRootText: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextRowRootText")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

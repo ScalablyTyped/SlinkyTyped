@@ -1,7 +1,6 @@
 package typingsSlinky.dojo.dojox.grid.enhanced.plugins
 
 import typingsSlinky.dojo.dojox.grid.enhanced.Plugin
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,6 +34,6 @@ class Search protected () extends Plugin {
     * @param searchArgs
     * @param onSearched
     */
-  def searchRow(searchArgs: RegExp, onSearched: js.Function2[/* index */ Double, /* item */ js.Object, _]): Unit = js.native
+  def searchRow(searchArgs: js.RegExp, onSearched: js.Function2[/* index */ Double, /* item */ js.Object, _]): Unit = js.native
 }
 

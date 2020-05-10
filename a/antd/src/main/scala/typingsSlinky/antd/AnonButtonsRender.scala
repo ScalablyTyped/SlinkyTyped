@@ -12,23 +12,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait AnonButtonsRender extends js.Object {
-  var placement: js.UndefOr[bottomRight | topLeft | topCenter | topRight | bottomLeft | bottomCenter] = js.undefined
-  var `type`: DropdownButtonType
-  def buttonsRender(buttons: js.Array[TagMod[Any]]): js.Array[TagMod[Any]]
+  var placement: js.UndefOr[bottomRight | topLeft | topCenter | topRight | bottomLeft | bottomCenter] = js.native
+  var `type`: DropdownButtonType = js.native
+  def buttonsRender(buttons: js.Array[TagMod[Any]]): js.Array[TagMod[Any]] = js.native
 }
 
 object AnonButtonsRender {
   @scala.inline
-  def apply(
-    buttonsRender: js.Array[TagMod[Any]] => js.Array[TagMod[Any]],
-    `type`: DropdownButtonType,
-    placement: bottomRight | topLeft | topCenter | topRight | bottomLeft | bottomCenter = null
-  ): AnonButtonsRender = {
+  def apply(buttonsRender: js.Array[TagMod[Any]] => js.Array[TagMod[Any]], `type`: DropdownButtonType): AnonButtonsRender = {
     val __obj = js.Dynamic.literal(buttonsRender = js.Any.fromFunction1(buttonsRender))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnonButtonsRender]
   }
+  @scala.inline
+  implicit class AnonButtonsRenderOps[Self <: AnonButtonsRender] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withButtonsRender(value: js.Array[TagMod[Any]] => js.Array[TagMod[Any]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buttonsRender")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withType(value: DropdownButtonType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlacement(value: bottomRight | topLeft | topCenter | topRight | bottomLeft | bottomCenter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPlacement: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

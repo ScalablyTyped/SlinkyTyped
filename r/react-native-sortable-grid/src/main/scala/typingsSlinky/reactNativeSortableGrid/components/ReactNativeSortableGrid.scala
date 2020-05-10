@@ -1,10 +1,7 @@
 package typingsSlinky.reactNativeSortableGrid.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeSortableGrid.AnonTransform
@@ -15,45 +12,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ReactNativeSortableGrid
-  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+object ReactNativeSortableGrid {
   @JSImport("react-native-sortable-grid", JSImport.Default)
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply(
-    activeBlockCenteringDuration: Int | Double = null,
-    blockTransitionDuration: Int | Double = null,
-    doubleTapTreshold: Int | Double = null,
-    dragActivationThreshold: Int | Double = null,
-    dragStartAnimation: AnonTransform = null,
-    itemHeight: Int | Double = null,
-    itemWidth: Int | Double = null,
-    itemsPerRow: Int | Double = null,
-    onDeleteItem: /* deletedItem */ OrderedItem => Unit = null,
-    onDragRelease: /* itemOrder */ ItemOrder => Unit = null,
-    onDragStart: /* item */ OrderedItem => Unit = null,
-    style: StyleProp[ViewStyle] = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, js.Object] = {
-    val __obj = js.Dynamic.literal()
-    if (activeBlockCenteringDuration != null) __obj.updateDynamic("activeBlockCenteringDuration")(activeBlockCenteringDuration.asInstanceOf[js.Any])
-    if (blockTransitionDuration != null) __obj.updateDynamic("blockTransitionDuration")(blockTransitionDuration.asInstanceOf[js.Any])
-    if (doubleTapTreshold != null) __obj.updateDynamic("doubleTapTreshold")(doubleTapTreshold.asInstanceOf[js.Any])
-    if (dragActivationThreshold != null) __obj.updateDynamic("dragActivationThreshold")(dragActivationThreshold.asInstanceOf[js.Any])
-    if (dragStartAnimation != null) __obj.updateDynamic("dragStartAnimation")(dragStartAnimation.asInstanceOf[js.Any])
-    if (itemHeight != null) __obj.updateDynamic("itemHeight")(itemHeight.asInstanceOf[js.Any])
-    if (itemWidth != null) __obj.updateDynamic("itemWidth")(itemWidth.asInstanceOf[js.Any])
-    if (itemsPerRow != null) __obj.updateDynamic("itemsPerRow")(itemsPerRow.asInstanceOf[js.Any])
-    if (onDeleteItem != null) __obj.updateDynamic("onDeleteItem")(js.Any.fromFunction1(onDeleteItem))
-    if (onDragRelease != null) __obj.updateDynamic("onDragRelease")(js.Any.fromFunction1(onDragRelease))
-    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    @scala.inline
+    def activeBlockCenteringDuration(value: Double): this.type = set("activeBlockCenteringDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def blockTransitionDuration(value: Double): this.type = set("blockTransitionDuration", value.asInstanceOf[js.Any])
+    @scala.inline
+    def doubleTapTreshold(value: Double): this.type = set("doubleTapTreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragActivationThreshold(value: Double): this.type = set("dragActivationThreshold", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dragStartAnimation(value: AnonTransform): this.type = set("dragStartAnimation", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemHeight(value: Double): this.type = set("itemHeight", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemWidth(value: Double): this.type = set("itemWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemsPerRow(value: Double): this.type = set("itemsPerRow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onDeleteItem(value: /* deletedItem */ OrderedItem => Unit): this.type = set("onDeleteItem", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragRelease(value: /* itemOrder */ ItemOrder => Unit): this.type = set("onDragRelease", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragStart(value: /* item */ OrderedItem => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def styleNull: this.type = set("style", null)
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = SortableGridProps
+  
+  def withProps(p: SortableGridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ReactNativeSortableGrid.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

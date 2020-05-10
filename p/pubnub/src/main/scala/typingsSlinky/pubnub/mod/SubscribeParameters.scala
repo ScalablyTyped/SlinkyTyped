@@ -5,27 +5,75 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // subscribe
+@js.native
 trait SubscribeParameters extends js.Object {
-  var channelGroups: js.UndefOr[js.Array[String]] = js.undefined
-  var channels: js.UndefOr[js.Array[String]] = js.undefined
-  var timetoken: js.UndefOr[Double] = js.undefined
-  var withPresence: js.UndefOr[Boolean] = js.undefined
+  var channelGroups: js.UndefOr[js.Array[String]] = js.native
+  var channels: js.UndefOr[js.Array[String]] = js.native
+  var timetoken: js.UndefOr[Double] = js.native
+  var withPresence: js.UndefOr[Boolean] = js.native
 }
 
 object SubscribeParameters {
   @scala.inline
-  def apply(
-    channelGroups: js.Array[String] = null,
-    channels: js.Array[String] = null,
-    timetoken: Int | Double = null,
-    withPresence: js.UndefOr[Boolean] = js.undefined
-  ): SubscribeParameters = {
+  def apply(): SubscribeParameters = {
     val __obj = js.Dynamic.literal()
-    if (channelGroups != null) __obj.updateDynamic("channelGroups")(channelGroups.asInstanceOf[js.Any])
-    if (channels != null) __obj.updateDynamic("channels")(channels.asInstanceOf[js.Any])
-    if (timetoken != null) __obj.updateDynamic("timetoken")(timetoken.asInstanceOf[js.Any])
-    if (!js.isUndefined(withPresence)) __obj.updateDynamic("withPresence")(withPresence.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubscribeParameters]
   }
+  @scala.inline
+  implicit class SubscribeParametersOps[Self <: SubscribeParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannelGroups(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannelGroups: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelGroups")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withChannels(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChannels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTimetoken(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timetoken")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimetoken: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timetoken")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withWithPresence(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withPresence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWithPresence: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("withPresence")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

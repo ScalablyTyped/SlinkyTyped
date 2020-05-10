@@ -1,7 +1,7 @@
 package typingsSlinky.three
 
+import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.std.WebGL2RenderingContext
-import typingsSlinky.std.WebGLRenderingContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

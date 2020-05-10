@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.powerAssert.AnonActual
 import typingsSlinky.powerAssert.FnCall
 import typingsSlinky.powerAssert.mod.Options
-import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,8 +28,8 @@ object ^ extends js.Object {
   def doesNotThrow(block: js.Function, error: js.Function1[/* err */ js.Any, Boolean]): Unit = js.native
   def doesNotThrow(block: js.Function, error: js.Function1[/* err */ js.Any, Boolean], message: String): Unit = js.native
   def doesNotThrow(block: js.Function, error: js.Function, message: String): Unit = js.native
-  def doesNotThrow(block: js.Function, error: RegExp): Unit = js.native
-  def doesNotThrow(block: js.Function, error: RegExp, message: String): Unit = js.native
+  def doesNotThrow(block: js.Function, error: js.RegExp): Unit = js.native
+  def doesNotThrow(block: js.Function, error: js.RegExp, message: String): Unit = js.native
   def doesNotThrow(block: js.Function, message: String): Unit = js.native
   def equal(actual: js.Any, expected: js.Any): Unit = js.native
   def equal(actual: js.Any, expected: js.Any, message: String): Unit = js.native
@@ -57,8 +56,8 @@ object ^ extends js.Object {
   def throws(block: js.Function, error: js.Function1[/* err */ js.Any, Boolean]): Unit = js.native
   def throws(block: js.Function, error: js.Function1[/* err */ js.Any, Boolean], message: String): Unit = js.native
   def throws(block: js.Function, error: js.Function, message: String): Unit = js.native
-  def throws(block: js.Function, error: RegExp): Unit = js.native
-  def throws(block: js.Function, error: RegExp, message: String): Unit = js.native
+  def throws(block: js.Function, error: js.RegExp): Unit = js.native
+  def throws(block: js.Function, error: js.RegExp, message: String): Unit = js.native
   def throws(block: js.Function, message: String): Unit = js.native
 }
 
